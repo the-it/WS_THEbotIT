@@ -1,0 +1,11 @@
+import requests
+import json
+import pprint
+
+if __name__ == "__main__":
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19'}
+    response = requests.get(url="http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&categories=Autoren&max_age=120&only_new=1&format=json&doit=1", headers = headers)
+    response_byte = response.content
+    json_dict = json.loads(response_byte.decode("ascii"))
+    pp = pprint.PrettyPrinter(indent=2)
+    pp.pprint(json_dict)
