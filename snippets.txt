@@ -3,9 +3,15 @@ import json
 import pprint
 
 if __name__ == "__main__":
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'}
-    response = requests.get(url="http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&categories=Autoren&max_age=120&only_new=1&format=json&doit=1", headers = headers)
-    response_byte = response.content
-    json_dict = json.loads(response_byte.decode("ascii"))
-    pp = pprint.PrettyPrinter(indent=2)
-    pp.pprint(json_dict)
+    try:
+        headers = {'User-Agent': 'Python-urllib/3.1'}
+        response = requests.get(url="http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&categories=Autoren&only_new=0&format=json&get_q=1&doit=1",
+                                headers = headers, timeout=100)
+        response_byte = response.content
+        json_dict = json.loads(response_byte.decode("utf8"))
+        pp = pprint.PrettyPrinter(indent=2)
+        json_dict_simple = json_dict['*'][0]['a']['*']
+        pp.pprint(json_dict_simple[1:10])
+        pass
+    except Exception as e:
+        print(e)
