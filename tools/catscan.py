@@ -1,6 +1,5 @@
 __author__ = 'Erik Sommer'
 
-import time
 import datetime
 
 namespace_mapping = {"Article": 0,
@@ -72,11 +71,11 @@ class CatScan:
     def deactivate_redirects(self):
         self.add_options({"show_redirects": "no"})
 
-    def last_change_before(self, year, month = 1, day = 1, hour = 0, minute = 0, second = 0):
+    def last_change_before(self, year, month=1, day=1, hour=0, minute=0, second=0):
         last_change = datetime.datetime(year, month, day, hour, minute, second)
         self.add_options({"before": last_change.strftime("%Y%m%d%H%M%S")})
 
-    def last_change_after(self, year, month = 1, day = 1, hour = 0, minute = 0, second = 0):
+    def last_change_after(self, year, month=1, day=1, hour=0, minute=0, second=0):
         last_change = datetime.datetime(year, month, day, hour, minute, second)
         self.add_options({"after": last_change.strftime("%Y%m%d%H%M%S")})
 
@@ -86,35 +85,38 @@ class CatScan:
     def only_new(self):
         self.add_options({"only_new": "1"})
 
-    def smaller_then(self, filesize):
-        self.add_options({"smaller": str(filesize)})
+    def smaller_then(self, file_size):
+        self.add_options({"smaller": str(file_size)})
 
-    def larger_then(self, filesize):
-        self.add_options({"larger": str(filesize)})
+    def larger_then(self, file_size):
+        self.add_options({"larger": str(file_size)})
 
     def get_wikidata(self):
         self.add_options({"get_q": "1"})
 
     def __construct_cat_string(self, cat_list):
+        cat_string = ""
         for i in cat_list:
-            if i == 0:
-                cat_string = ""
-            else:
-                cat_string.append("%0D%0A")
+            if i > 0:
+                cat_string.join("%0D%0A")
             string_item = cat_list[i]
             string_item.replace(" ", "+")
-            cat_string.append(string_item)
+            cat_string.join(string_item)
         return cat_string
 
     def __construct_options(self):
-        pass
+        opt_string = ""
+        for key in self.options:
+            opt_string.join("&" + key + "=" + self.options[key])
+        return opt_string
 
     def __construct_string(self):
         question_string = self.base_address
-        question_string.append("?language=" + self.language)
-        question_string.append("&project=" + self.project)
+        question_string.join("?language=" + self.language)
+        question_string.join("&project=" + self.project)
         if len(self.categories["positive"]) != 0:
-            question_string.append("&categories=".append(self.__construct_cat_string(self.categories["positive"])))
+            question_string.join("&categories=".join(self.__construct_cat_string(self.categories["positive"])))
         if len(self.categories["negative"]) != 0:
-            question_string.append("&categories=".append(self.__construct_cat_string(self.categories["negative"])))
-        question_string.append(self.__construct_options())
+            question_string.join("&categories=".join(self.__construct_cat_string(self.categories["negative"])))
+        if len(self.options) != 0:
+            question_string.join(self.__construct_options())
