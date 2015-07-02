@@ -1,6 +1,8 @@
 __author__ = 'Erik Sommer'
 
 import datetime
+import requests
+import json
 
 namespace_mapping = {"Article": 0,
                      "Diskussion": 1,
@@ -26,23 +28,37 @@ namespace_mapping = {"Article": 0,
                      "Modul Diskussion": 829,
                      }
 
+def listify(x):
+    """
+    If given a non-list, encapsulate in a single-element list.
+
+    @rtype: list
+    """
+    return x if isinstance(x, list) else [x]
 
 class CatScan:
     def __init__(self):
         self.header = {'User-Agent': 'Python-urllib/3.1'}
         self.base_address = "http://tools.wmflabs.org/catscan2/catscan2.php"
-        self.timeout = 15
-        self.options = {}
+        self.timeout = 30
+        self._options = {}
         self.categories = {"positive": [], "negative": []}
         self.language = "de"
         self.project = "wikisource"
 
+    def __str__(self):
+        return self._construct_string()
+
     def add_options(self, dict_options):
-        self.options.update(dict_options)
+        self._options.update(dict_options)
 
     def set_depth(self, depth):
-        self.options.pop("depth")
-        self.add_options({"depth": depth})
+        """
+            Defines the search depth for the query.
+
+            :param depth: Count of subcategories that will be searched.
+            """
+        self.add_options({"depth":depth})
 
     def add_positive_categoy(self, category):
         self.categories["positive"].append(category)
@@ -52,18 +68,13 @@ class CatScan:
 
     def add_namespace(self, namespace):
         # is there a list to process or only a single instance
-        if type(namespace) is list:
-            for i in namespace:
-                # is there a given integer or the string of a namespace
-                if type(namespace[i]) is int:
-                    self.add_options({"ns[" + str(namespace[i]) + "]": "1"})
-                else:
-                    self.add_options({"ns[" + str(namespace_mapping[namespace[i]]) + "]": "1"})
-        else:
-            if type(namespace) is int:
-                self.add_options({"ns[" + str(namespace) + "]": "1"})
+        namespace = listify(namespace)
+        for i in namespace:
+            # is there a given integer or the string of a namespace
+            if type(i) is int:
+                self.add_options({"ns[" + str(i) + "]": "1"})
             else:
-                self.add_options({"ns[" + str(namespace_mapping[namespace]) + "]": "1"})
+                self.add_options({"ns[" + str(namespace_mapping[i]) + "]": "1"})
 
     def activate_redirects(self):
         self.add_options({"show_redirects": "yes"})
@@ -94,29 +105,43 @@ class CatScan:
     def get_wikidata(self):
         self.add_options({"get_q": "1"})
 
-    def __construct_cat_string(self, cat_list):
+    def _construct_cat_string(self, cat_list):
         cat_string = ""
-        for i in cat_list:
+        i = 0
+        for cat in cat_list:
             if i > 0:
-                cat_string.join("%0D%0A")
-            string_item = cat_list[i]
+                cat_string += ("%0D%0A")
+            string_item = cat
             string_item.replace(" ", "+")
-            cat_string.join(string_item)
+            cat_string += string_item
+            i += 1
         return cat_string
 
-    def __construct_options(self):
+    def _construct_options(self):
         opt_string = ""
-        for key in self.options:
-            opt_string.join("&" + key + "=" + self.options[key])
+        for key in self._options:
+            opt_string += ("&" + key + "=" + str(self._options[key]))
         return opt_string
 
-    def __construct_string(self):
+    def _construct_string(self):
         question_string = self.base_address
-        question_string.join("?language=" + self.language)
-        question_string.join("&project=" + self.project)
+        question_string += ("?language=" + self.language)
+        question_string += ("&project=" + self.project)
         if len(self.categories["positive"]) != 0:
-            question_string.join("&categories=".join(self.__construct_cat_string(self.categories["positive"])))
+            question_string += ("&categories=" + (self._construct_cat_string(self.categories["positive"])))
         if len(self.categories["negative"]) != 0:
-            question_string.join("&categories=".join(self.__construct_cat_string(self.categories["negative"])))
-        if len(self.options) != 0:
-            question_string.join(self.__construct_options())
+            question_string += ("&negcats=" + (self._construct_cat_string(self.categories["negative"])))
+        if len(self._options) != 0:
+            question_string += (self._construct_options())
+        question_string += "&format=json&doit=1"
+        return question_string
+
+    def do(self):
+        try:
+            response = requests.get(url=self._construct_string(),
+                                    headers = self.header, timeout=self.timeout)
+            response_byte = response.content
+            json_dict = json.loads(response_byte.decode("utf8"))
+            return json_dict['*'][0]['a']['*']
+        except Exception as e:
+            print(e)
