@@ -1,4 +1,5 @@
 from unittest import TestCase
+import httpretty
 
 __author__ = 'eso'
 
@@ -81,5 +82,11 @@ class TestCatScan(TestCase):
         self.assertEqual("&get_q=1" in "&max_age=1234&get_q=1&show_redirects=yes", True)
         self.assertEqual("&show_redirects=yes" in "&max_age=1234&get_q=1&show_redirects=yes", True)
 
+    @httpretty.activate
     def test_do(self):
-        self.fail()
+        httpretty.register_uri(httpretty.GET, 'http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&categories=Autoren&get_q=1&show_redirects=no&ns[0]=1&max_age=48&format=json&doit=1',
+                      status=200,
+                      body='{"n":"result","a":{"querytime_sec":0.65997004508972},"*":[{"n":"combination","a":{"type":"subset","*":[{"n":"page","a":{"title":"Adam_Wolf","id":"26159","namespace":"0","len":"2122","touched":"20150702080634","q":"Q6245809","nstext":"(Article)"}},{"n":"page","a":{"title":"Victoria","id":"393175","namespace":"0","len":"1677","touched":"20150702092244","q":"Q9439","nstext":"(Article)"}}]}}]}',
+                      content_type='application/json')
+        self.assertEqual(self.catscan.do(), [{"n":"page","a":{"title":"Adam_Wolf","id":"26159","namespace":"0","len":"2122","touched":"20150702080634","q":"Q6245809","nstext":"(Article)"}},{"n":"page","a":{"title":"Victoria","id":"393175","namespace":"0","len":"1677","touched":"20150702092244","q":"Q9439","nstext":"(Article)"}}])
+
