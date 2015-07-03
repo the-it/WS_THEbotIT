@@ -144,4 +144,4 @@ class CatScan:
             json_dict = json.loads(response_byte.decode("utf8"))
             return json_dict['*'][0]['a']['*']
         except Exception as e:
-            print(e)
+            raise ConnectionError
