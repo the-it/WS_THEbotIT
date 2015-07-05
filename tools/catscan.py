@@ -37,6 +37,11 @@ def listify(x):
     return x if isinstance(x, list) else [x]
 
 class CatScan:
+    """
+    Encapsulate the catscan service, written by Markus Manske (http://tools.wmflabs.org/catscan2/catscan2.php).
+    It is possible to access all parameters by different setter functions. The function 'run' execute the server inquiry
+    with the set parameters. The answer is a list with the matching pages. The inquiry have a timeout by 30 seconds.
+    """
     def __init__(self):
         self.header = {'User-Agent': 'Python-urllib/3.1'}
         self.base_address = "http://tools.wmflabs.org/catscan2/catscan2.php"
@@ -49,6 +54,12 @@ class CatScan:
     def __str__(self):
         return self._construct_string()
 
+    def set_language(self, lang):
+        self.language = lang
+
+    def set_project(self, proj):
+        self.project = proj
+
     def add_options(self, dict_options):
         self._options.update(dict_options)
 
@@ -60,10 +71,14 @@ class CatScan:
             """
         self.add_options({"depth":depth})
 
-    def add_positive_categoy(self, category):
+    def add_positive_category(self, category):
+        """
+        Add category to the positive list
+        :param category: string with the category name
+        """
         self.categories["positive"].append(category)
 
-    def add_negative_categoy(self, category):
+    def add_negative_category(self, category):
         self.categories["negative"].append(category)
 
     def add_namespace(self, namespace):
@@ -136,12 +151,12 @@ class CatScan:
         question_string += "&format=json&doit=1"
         return question_string
 
-    def do(self):
+    def run(self):
         try:
             response = requests.get(url=self._construct_string(),
-                                    headers = self.header, timeout=self.timeout)
+                                    headers=self.header, timeout=self.timeout)
             response_byte = response.content
-            json_dict = json.loads(response_byte.decode("utf8"))
-            return json_dict['*'][0]['a']['*']
+            response_dict = json.loads(response_byte.decode("utf8"))
+            return response_dict['*'][0]['a']['*']
         except Exception as e:
             raise ConnectionError

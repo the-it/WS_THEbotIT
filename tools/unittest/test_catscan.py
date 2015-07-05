@@ -16,10 +16,10 @@ class TestCatScan(TestCase):
         self.assertDictEqual({"smaller": "300", "max_age": "45"}, self.catscan._options)
 
     def test_add_categoy(self):
-        self.catscan.add_positive_categoy("pos1")
-        self.catscan.add_positive_categoy("pos2")
-        self.catscan.add_negative_categoy("neg1")
-        self.catscan.add_negative_categoy("neg2")
+        self.catscan.add_positive_category("pos1")
+        self.catscan.add_positive_category("pos2")
+        self.catscan.add_negative_category("neg1")
+        self.catscan.add_negative_category("neg2")
         self.assertEqual(["pos1", "pos2"], self.catscan.categories["positive"])
         self.assertEqual(["neg1", "neg2"], self.catscan.categories["negative"])
 
@@ -66,11 +66,11 @@ class TestCatScan(TestCase):
         self.assertDictEqual({"get_q": "1"}, self.catscan._options)
 
     def test_contruct_cat_string(self):
-        self.catscan.add_positive_categoy("pos1")
-        self.catscan.add_positive_categoy("pos2")
-        self.catscan.add_negative_categoy("neg1")
-        self.catscan.add_negative_categoy("neg2")
-        self.catscan.add_negative_categoy("neg3")
+        self.catscan.add_positive_category("pos1")
+        self.catscan.add_positive_category("pos2")
+        self.catscan.add_negative_category("neg1")
+        self.catscan.add_negative_category("neg2")
+        self.catscan.add_negative_category("neg3")
         self.assertEqual("pos1%0D%0Apos2", self.catscan._construct_cat_string(self.catscan.categories["positive"]))
         self.assertEqual("neg1%0D%0Aneg2%0D%0Aneg3", self.catscan._construct_cat_string(self.catscan.categories["negative"]))
 
@@ -83,10 +83,15 @@ class TestCatScan(TestCase):
         self.assertEqual("&show_redirects=yes" in "&max_age=1234&get_q=1&show_redirects=yes", True)
 
     @httpretty.activate
-    def test_do(self):
+    def test_do_positive(self):
         httpretty.register_uri(httpretty.GET, 'http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&categories=Autoren&get_q=1&show_redirects=no&ns[0]=1&max_age=48&format=json&doit=1',
-                      status=200,
-                      body='{"n":"result","a":{"querytime_sec":0.65997004508972},"*":[{"n":"combination","a":{"type":"subset","*":[{"n":"page","a":{"title":"Adam_Wolf","id":"26159","namespace":"0","len":"2122","touched":"20150702080634","q":"Q6245809","nstext":"(Article)"}},{"n":"page","a":{"title":"Victoria","id":"393175","namespace":"0","len":"1677","touched":"20150702092244","q":"Q9439","nstext":"(Article)"}}]}}]}',
-                      content_type='application/json')
-        self.assertEqual(self.catscan.do(), [{"n":"page","a":{"title":"Adam_Wolf","id":"26159","namespace":"0","len":"2122","touched":"20150702080634","q":"Q6245809","nstext":"(Article)"}},{"n":"page","a":{"title":"Victoria","id":"393175","namespace":"0","len":"1677","touched":"20150702092244","q":"Q9439","nstext":"(Article)"}}])
+                               status=200,
+                               body='{"n":"result","a":{"querytime_sec":0.65997004508972},"*":[{"n":"combination","a":{"type":"subset","*":[{"n":"page","a":{"title":"Adam_Wolf","id":"26159","namespace":"0","len":"2122","touched":"20150702080634","q":"Q6245809","nstext":"(Article)"}},{"n":"page","a":{"title":"Victoria","id":"393175","namespace":"0","len":"1677","touched":"20150702092244","q":"Q9439","nstext":"(Article)"}}]}}]}',
+                               content_type='application/json')
+        self.assertEqual(self.catscan.run(), [{"n":"page","a":{"title":"Adam_Wolf","id":"26159","namespace":"0","len":"2122","touched":"20150702080634","q":"Q6245809","nstext":"(Article)"}},{"n":"page","a":{"title":"Victoria","id":"393175","namespace":"0","len":"1677","touched":"20150702092244","q":"Q9439","nstext":"(Article)"}}])
 
+    @httpretty.activate
+    def test_do_negative(self):
+        httpretty.register_uri(httpretty.GET, 'http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&categories=Autoren&get_q=1&show_redirects=no&ns[0]=1&max_age=48&format=json&doit=1',
+                               status=404)
+        self.assertRaises(ConnectionError)
