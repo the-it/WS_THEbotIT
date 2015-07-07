@@ -60,6 +60,9 @@ class CatScan:
     def set_project(self, proj):
         self.project = proj
 
+    def set_timeout(self, sec):
+        self.timeout = sec
+
     def add_options(self, dict_options):
         self._options.update(dict_options)
 

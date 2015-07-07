@@ -17,10 +17,13 @@ if __name__ == "__main__":
     catscan.max_age(120)
     catscan.get_wikidata()
     print(catscan)
-    dict = catscan.run()
+    t0 = time.time()
+    sites = catscan.run()
+    print(time.time()-t0)
     t0 = time.time()
     outfile = open("data.json", 'w')
-    json.dump(dict, outfile, ensure_ascii=True)
+    sites = sites
+    json.dump(sites, outfile, ensure_ascii=True)
     print(time.time()-t0)
     del outfile
     outfile = open('data.json', 'r')

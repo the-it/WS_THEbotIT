@@ -1,8 +1,7 @@
+__author__ = 'Erik Sommer'
+
 from unittest import TestCase
 import httpretty
-
-__author__ = 'eso'
-
 from tools.catscan import CatScan
 
 
@@ -78,9 +77,24 @@ class TestCatScan(TestCase):
         self.catscan._options = {"max_age": "1234",
                                  "get_q": "1",
                                  "show_redirects": "yes"}
-        self.assertEqual("&max_age=1234" in "&max_age=1234&get_q=1&show_redirects=yes", True)
-        self.assertEqual("&get_q=1" in "&max_age=1234&get_q=1&show_redirects=yes", True)
-        self.assertEqual("&show_redirects=yes" in "&max_age=1234&get_q=1&show_redirects=yes", True)
+        self.assertEqual("&max_age=1234" in str(self.catscan), True)
+        self.assertEqual("&get_q=1" in str(self.catscan), True)
+        self.assertEqual("&show_redirects=yes" in str(self.catscan), True)
+
+    def test_construct_string(self):
+        self.catscan.set_language("en")
+        self.catscan.set_project("wikipedia")
+        # only a positive category
+        self.catscan.add_positive_category("test")
+        self.assertEqual(str(self.catscan), 'http://tools.wmflabs.org/catscan2/catscan2.php?language=en&project=wikipedia&categories=test&format=json&doit=1')
+        # only a negative category
+        self.catscan.categories = {"positive": [], "negative": []}
+        self.catscan.add_negative_category('test')
+        self.assertEqual(str(self.catscan), 'http://tools.wmflabs.org/catscan2/catscan2.php?language=en&project=wikipedia&negcats=test&format=json&doit=1')
+        # only a option
+        self.catscan.categories = {"positive": [], "negative": []}
+        self.catscan.add_options({"max_age": '10'})
+        self.assertEqual(str(self.catscan), 'http://tools.wmflabs.org/catscan2/catscan2.php?language=en&project=wikipedia&max_age=10&format=json&doit=1')
 
     @httpretty.activate
     def test_do_positive(self):
