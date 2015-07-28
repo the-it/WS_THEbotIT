@@ -14,13 +14,10 @@ class TestSortFilter(TestCase):
                   {'a': {'title': 'Die_Amme_zu_Hirschstein_(Ziehnert)'}},
                   {'a': {'title': 'Die_Kirche_des_ehemaligen_Cistercienser_Nonnenklosters_Porta_Coeli_zu_Tišnowic'}},
                   {'a': {'title': 'Ein_Apostel_der_Volksaufklärung'}},
-                  {'a': {'title': 'Ein_Hort_des_evangelisch  en_Kirchengesanges'}},
+                  {'a': {'title': 'Ein_Hort_des_evangelischen_Kirchengesanges'}},
                   {'a': {'title': 'Fritz_von_der_Kerkhove_(Die_Gartenlaube_1877/44)'}}]
       filtered_list = ['Bestättigung_der_traurigen_Geschichte_des_P._Anians,_nebst_der_Kerkergeschichte_des_P._Mansuet_Oehningers,_Capuciners_zu_Wirzburg',
                        'Die_Kirche_des_ehemaligen_Cistercienser_Nonnenklosters_Porta_Coeli_zu_Tišnowic',
                        'Ein_Apostel_der_Volksaufklärung']
       result = self.sort_filter.filter(raw_list)
       self.assertEqual(filtered_list, result)
-
-
-

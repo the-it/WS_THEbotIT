@@ -73,6 +73,16 @@ class TestCatScan(TestCase):
         self.assertEqual("pos1%0D%0Apos2", self.catscan._construct_cat_string(self.catscan.categories["positive"]))
         self.assertEqual("neg1%0D%0Aneg2%0D%0Aneg3", self.catscan._construct_cat_string(self.catscan.categories["negative"]))
 
+    def test_construct_templates(self):
+        self.catscan.add_yes_template('yes1')
+        self.catscan.add_yes_template('yes2')
+        self.catscan.add_any_template('any1')
+        self.catscan.add_any_template('any2')
+        self.catscan.add_any_template('any3')
+        self.catscan.add_no_template('no1')
+        self.catscan.add_no_template('no2')
+        self.assertEqual(str(self.catscan), 'http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&templates_yes=yes1%0D%0Ayes2&templates_any=any1%0D%0Aany2%0D%0Aany3&templates_no=no1%0D%0Ano2&format=json&doit=1')
+
     def test_construct_options(self):
         self.catscan._options = {"max_age": "1234",
                                  "get_q": "1",

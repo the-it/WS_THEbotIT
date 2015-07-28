@@ -48,6 +48,7 @@ class CatScan:
         self.timeout = 30
         self._options = {}
         self.categories = {"positive": [], "negative": []}
+        self.templates = {'yes': [], 'any': [], 'no': []}
         self.language = "de"
         self.project = "wikisource"
 
@@ -100,6 +101,15 @@ class CatScan:
     def deactivate_redirects(self):
         self.add_options({"show_redirects": "no"})
 
+    def add_yes_template(self, template):
+        self.templates['yes'].append(template)
+
+    def add_any_template(self, template):
+        self.templates['any'].append(template)
+
+    def add_no_template(self, template):
+        self.templates['no'].append(template)
+
     def last_change_before(self, year, month=1, day=1, hour=0, minute=0, second=0):
         last_change = datetime.datetime(year, month, day, hour, minute, second)
         self.add_options({"before": last_change.strftime("%Y%m%d%H%M%S")})
@@ -145,10 +155,19 @@ class CatScan:
         question_string = self.base_address
         question_string += ("?language=" + self.language)
         question_string += ("&project=" + self.project)
+        #categories
         if len(self.categories["positive"]) != 0:
             question_string += ("&categories=" + (self._construct_cat_string(self.categories["positive"])))
         if len(self.categories["negative"]) != 0:
             question_string += ("&negcats=" + (self._construct_cat_string(self.categories["negative"])))
+        #templates
+        if len(self.templates["yes"]) != 0:
+            question_string += ("&templates_yes=" + (self._construct_cat_string(self.templates["yes"])))
+        if len(self.templates["any"]) != 0:
+            question_string += ("&templates_any=" + (self._construct_cat_string(self.templates["any"])))
+        if len(self.templates["no"]) != 0:
+            question_string += ("&templates_no=" + (self._construct_cat_string(self.templates["no"])))
+        #rest of the options
         if len(self._options) != 0:
             question_string += (self._construct_options())
         question_string += "&format=json&doit=1"
