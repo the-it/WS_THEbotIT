@@ -4,7 +4,7 @@ from tools.catscan import CatScan
 import re
 import pywikibot
 import sys
-sys.path.append("e:\off_work_programming\WS_THEbotIT")
+
 
 class SortFilter:
     def filter(self, list_to_process):
