@@ -27,20 +27,29 @@ class DateConversion:
 
     def  __str__(self):
         #chop the unused parts of the string
-        str_re_form = self._chop_ref(self, self.rawstring)
+        str_re_form = self._chop_ref(self.rawstring)
         #sort for structure of the information
         if re.match('\A\d\d\.? (\d\d?|Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez)\w* (\d{1,4})\Z', str_re_form):
-            # Fall 1
+            # Fall 1 complete date
             li_str = re.split(' ', str_re_form)
             li_str[0] = re.sub('\.', '', li_str[0]) # Punkt aus dem Tag entfernen
             li_str[1] = month_mapping[li_str[1]]  #Monat in Zahl verwandeln
             str_re_form = ''.join([li_str[2], '-', li_str[1], '-', li_str[0]])
+        elif re.match('\A(\d\d?|Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez)\w* (\d{1,4})\Z', str_re_form):
+            # Fall 2 only month and year
+            li_str = re.split(' ', str_re_form)
+            li_str[0] = month_mapping[li_str[0]]  #Monat in Zahl verwandeln
+            str_re_form = ''.join([li_str[1], '-', li_str[0], '-', '00'])
+        elif re.match('\A(\d{1,4})\Z', str_re_form):
+            # Fall 2 only year
+            li_str = re.split(' ', str_re_form)
+            str_re_form = ''.join([li_str[0], '-', '00', '-', '00'])
 
         #interpret the information
         return str_re_form
 
     @ staticmethod
-    def _chop_ref(self, rawstring):
+    def _chop_ref(rawstring):
         str_re_value = re.sub('<ref>.+</ref>', '', rawstring)
         str_re_value = re.sub('{{CRef\|.+}}', '', str_re_value)
         return str_re_value
