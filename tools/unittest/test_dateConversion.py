@@ -4,6 +4,7 @@ __author__ = 'eso'
 
 from tools.date_conversion import DateConversion
 
+
 class TestDateConversion(TestCase):
   def test_normal_date(self):
     converter = DateConversion('14.04.1850')
@@ -12,6 +13,14 @@ class TestDateConversion(TestCase):
 
     converter = DateConversion('14.04. 1850')
     self.assertEqual('1850-04-14', str(converter))
+    del converter
+
+    converter = DateConversion('25.Februar 1822')
+    self.assertEqual('1822-02-25', str(converter))
+    del converter
+
+    converter = DateConversion('26. Febr. 1828')
+    self.assertEqual('1828-02-26', str(converter))
     del converter
 
   def test__chop_ref(self):
@@ -85,7 +94,6 @@ class TestDateConversion(TestCase):
     converter = DateConversion('1234')
     self.assertEqual('1234-00-00', str(converter))
     del converter
-
 
   def test_century(self):
     converter = DateConversion('12. Jahrhundert')

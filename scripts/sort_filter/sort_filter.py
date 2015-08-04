@@ -3,7 +3,6 @@ __author__ = 'eso'
 from tools.catscan import CatScan
 import re
 import pywikibot
-import sys
 
 
 class SortFilter:
@@ -11,14 +10,15 @@ class SortFilter:
         titles = []
         for page in list_to_process:
             # searching for all special cases
-            match = re.search("[ÁáĆćÉéÍíŃńÓóŚśÚúÝýŹźǾǿÀàÈèÌìÒòÙùÂâĈĉÊêĜĝĤĥÎîĴĵÔôŝŜÛûÄäËëÏïÖöÜüÿÃãÑñÕõÅåÇçŞşǍǎČčĎďĚěǦǧǏǐĽľŇňǑǒŘřŠšŤťǓǔŽžŁłŐőŰűØøĀāĒēĪīŌōŪūȲȳĂăĔĕĞğĬĭŎŏŬŭßÆæŒœÐðÞþ]",page['a']["title"])
+            match = re.search("[ÁáĆćÉéÍíŃńÓóŚśÚúÝýŹźǾǿÀàÈèÌìÒòÙùÂâĈĉÊêĜĝĤĥÎîĴĵÔôŝŜÛûÄäËëÏïÖöÜüÿÃãÑñÕõÅåÇçŞşǍǎČčĎďĚěǦǧǏǐĽľŇňǑǒŘřŠšŤťǓǔŽžŁłŐőŰűØøĀāĒēĪīŌōŪūȲȳĂăĔĕĞğĬĭŎŏŬŭßÆæŒœÐðÞþ]", page['a']["title"])
             if match is not None:
                 titles.append(page['a']["title"])
         print('all pages for sort lockup')
         titles = self.search_for_sort(titles)
         return titles
 
-    def search_for_sort(self, title_of_pages):
+    @staticmethod
+    def search_for_sort(title_of_pages):
         site = pywikibot.Site('de', 'wikisource')
         result = []
         i = 1
@@ -30,12 +30,11 @@ class SortFilter:
             i += 1
             page = pywikibot.Page(site, title)
             text = page.text
-            match = re.search('{{SORTIERUNG:.*}}', text)
+            match = re.search(r"\{\{SORTIERUNG:.*\}\}", text)
             if match is None:
                 result.append(title)
                 j += 1
         return result
-
 
     def run(self):
         searcher = CatScan()

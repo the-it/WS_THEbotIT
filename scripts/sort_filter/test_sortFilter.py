@@ -3,6 +3,7 @@ __author__ = 'eso'
 from unittest import TestCase
 from scripts.sort_filter.sort_filter import SortFilter
 
+
 class TestSortFilter(TestCase):
     def setUp(self):
       self.sort_filter = SortFilter()

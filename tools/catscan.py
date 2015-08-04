@@ -28,6 +28,7 @@ namespace_mapping = {"Article": 0,
                      "Modul Diskussion": 829,
                      }
 
+
 def listify(x):
     """
     If given a non-list, encapsulate in a single-element list.
@@ -35,6 +36,7 @@ def listify(x):
     @rtype: list
     """
     return x if isinstance(x, list) else [x]
+
 
 class CatScan:
     """
@@ -133,12 +135,13 @@ class CatScan:
     def get_wikidata(self):
         self.add_options({"get_q": "1"})
 
-    def _construct_cat_string(self, cat_list):
+    @staticmethod
+    def _construct_cat_string(cat_list):
         cat_string = ""
         i = 0
         for cat in cat_list:
             if i > 0:
-                cat_string += ("%0D%0A")
+                cat_string += "%0D%0A"
             string_item = cat
             string_item.replace(" ", "+")
             cat_string += string_item
@@ -180,5 +183,5 @@ class CatScan:
             response_byte = response.content
             response_dict = json.loads(response_byte.decode("utf8"))
             return response_dict['*'][0]['a']['*']
-        except Exception as e:
+        except Exception:
             raise ConnectionError
