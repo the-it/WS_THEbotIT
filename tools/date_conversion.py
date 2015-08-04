@@ -49,7 +49,7 @@ class DateConversion:
         match_no_day = re.search('(\d{1,2}\.|Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez)\w*(\.|\. | )(\d{1,4})', str_re_form)
         match_only_year = re.search('\d{1,4}', str_re_form)
 
-        #sort for structure of the information
+        #sort for structure of the information and interpred it
         if str_re_form == '' or match_dont_known:
             # Case: empty rawstring
             str_re_form = '!-00-00'
@@ -65,10 +65,7 @@ class DateConversion:
             del year
         elif match_complete_date:
             # Case: complete date
-            if re.search(' ', match_complete_date.group()):
-                li_str = re.split(' ', match_complete_date.group())
-            else:
-                li_str = re.split('\.', match_complete_date.group())
+            li_str = re.split('\.?[ ]?', match_complete_date.group())
             li_str[0] = re.sub('\.', '', li_str[0]) # Punkt aus dem Tag entfernen
             li_str[1] = self._month_to_int(li_str[1])  #Monat in Zahl verwandeln
             li_str[2] = self._append_zeros_to_year(li_str[2]) #append zeros to the year
@@ -93,14 +90,12 @@ class DateConversion:
             converted_year = 9999 - year
             str_re_form = '-' + self._append_zeros_to_year(str(converted_year)) + str_re_form[4:]
 
-
-        #interpret the information
         return str_re_form
 
     @ staticmethod
     def _chop_ref(rawstring):
         str_re_value = re.sub('<ref>.+</ref>', '', rawstring)
-        str_re_value = re.sub('{{CRef\|.+}}', '', str_re_value)
+        str_re_value = re.sub(r'\{\{CRef\|.+\}\}', '', str_re_value)
         return str_re_value
 
     @ staticmethod
@@ -117,7 +112,7 @@ class DateConversion:
                 return '0' + str(month_int)
             else:
                 return str(month_int)
-        except:
+        except Exception:
             try:
                 return month_mapping[month]
             except:

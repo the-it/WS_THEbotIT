@@ -133,12 +133,13 @@ class CatScan:
     def get_wikidata(self):
         self.add_options({"get_q": "1"})
 
+    @staticmethod
     def _construct_cat_string(self, cat_list):
         cat_string = ""
         i = 0
         for cat in cat_list:
             if i > 0:
-                cat_string += ("%0D%0A")
+                cat_string += "%0D%0A"
             string_item = cat
             string_item.replace(" ", "+")
             cat_string += string_item

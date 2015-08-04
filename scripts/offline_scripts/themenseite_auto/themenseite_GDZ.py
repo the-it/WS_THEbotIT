@@ -6,13 +6,13 @@ import re
 def add_zeros(number, digits):
     number_str = str(number)
     if number < 10:
-        for i in range(digits-1):
+        for members in range(digits-1):
             number_str = "0" + number_str
     elif number < 100:
-        for i in range(digits-2):
+        for members in range(digits-2):
             number_str = "0" + number_str
     elif number < 1000:
-        for i in range(digits-3):
+        for members in range(digits-3):
             number_str = "0" + number_str
     return number_str
 
@@ -27,6 +27,6 @@ for i in range(1, 50):
         year = hit[0][1:5]
         print(':*{{Anker|Band'+str(i)+'}}Band '+str(i)+': '+year+' {{GDZ|599415665_'+add_zeros(i, 4)+'}}')
         #file.write('{{Vorlage:Journal für die reine und angewandte Mathematik/Eintrag|' + str(i) + '|' + year + "}}\n")
-    except:
+    except Exception:
         pass
-file.clos()
+file.close()

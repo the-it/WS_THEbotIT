@@ -33,13 +33,12 @@ class AuthorList:
             if going_on:
                 page = pywikibot.Page(site, i['a']['title'])
                 findings = re.search('\|[ ]?GEBURTSDATUM=.*\n', page.text)
-                print(findings.group())
                 converter = DateConversion(findings.group()[14:-1])
                 findings2 = re.search('\|[ ]?STERBEDATUM=.*\n', page.text)
-                converter2 = DateConversion(findings.group()[13:-1])
+                converter2 = DateConversion(findings2.group()[13:-1])
                 try:
-                    returner = str(converter)
-                    returner2 = str(converter2)
+                    str(converter)
+                    str(converter2)
                 except Exception as e:
                     with open('output.txt', 'a') as fobj:
                         fobj.write(i['a']['title'] + '\n')

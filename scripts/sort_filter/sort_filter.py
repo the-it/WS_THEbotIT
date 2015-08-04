@@ -3,7 +3,6 @@ __author__ = 'eso'
 from tools.catscan import CatScan
 import re
 import pywikibot
-import sys
 
 
 class SortFilter:
@@ -18,6 +17,7 @@ class SortFilter:
         titles = self.search_for_sort(titles)
         return titles
 
+    @staticmethod
     def search_for_sort(self, title_of_pages):
         site = pywikibot.Site('de', 'wikisource')
         result = []
@@ -30,7 +30,7 @@ class SortFilter:
             i += 1
             page = pywikibot.Page(site, title)
             text = page.text
-            match = re.search('{{SORTIERUNG:.*}}', text)
+            match = re.search(r"\{\{SORTIERUNG:.*\}\}", text)
             if match is None:
                 result.append(title)
                 j += 1
