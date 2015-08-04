@@ -36,6 +36,7 @@ class SortFilter:
                 j += 1
         return result
 
+
     def run(self):
         searcher = CatScan()
         searcher.add_positive_category("Werke")
