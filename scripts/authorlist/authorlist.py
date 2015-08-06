@@ -53,13 +53,14 @@ class AuthorList:
 
             #extract the Personendaten-block form the wikisource page
             page = pywikibot.Page(site, author['title'])
-            personendaten = re.search('\{\{Personendaten.*?\n\}\}\n', page.text, re.DOTALL).group()
+            personendaten = re.search('\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
             template_extractor = TemplateHandler(personendaten)
             dict_author.update({'name': template_extractor.get_parameter('NACHNAME')['value']})
             dict_author.update({'first_name': template_extractor.get_parameter('VORNAMEN')['value']})
             dict_author.update({'birth': template_extractor.get_parameter('GEBURTSDATUM')['value']})
             dict_author.update({'death': template_extractor.get_parameter('STERBEDATUM')['value']})
             dict_author.update({'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
+            dict_author.update({'synonyms': template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
 
             database.update({author['id']: dict_author})
         with open('data/raw_data.json', 'w') as raw_data_file:
