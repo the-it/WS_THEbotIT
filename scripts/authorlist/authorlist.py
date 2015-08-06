@@ -3,8 +3,10 @@ __author__ = 'erik'
 from tools.catscan import CatScan
 import os
 import pywikibot
+import json
 import re
 from tools.date_conversion import DateConversion
+from tools.template_handler import TemplateHandler
 
 
 class AuthorList:
@@ -12,38 +14,57 @@ class AuthorList:
         self.last_run = age
 
     def run(self):
+        # debug or not
+        debug = True
+
         searcher = CatScan()
         # is there pre rawdata?
-        if os.path.isfile('raw_data.json') is True:
-            #import database
+        if os.path.isfile('data/raw_data.json') is True:
+            # loading existing database
+            with open('data/raw_data.json', 'r') as raw_data_file:
+                database = json.load(raw_data_file)
             searcher.max_age(self.last_run + 1)  #all changes from age + 1 hour
         else:  #creating database
+            database = {}
             searcher.set_timeout(120)
-            pass
+
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category('Autoren')
         searcher.add_yes_template('Personendaten')
-        result = searcher.run()
-        pass
+        if debug:
+            with open('data/result.json', 'r') as result_file:
+                result = json.load(result_file)
+        else:
+            result = searcher.run()
         site = pywikibot.Site()
-        going_on = False
-        for i in result:
-            if i['a']['title'] == 'Friedrich_Koldewey':
-                going_on = True
-            print(i['a']['title'])
-            if going_on:
-                page = pywikibot.Page(site, i['a']['title'])
-                findings = re.search('\|[ ]?GEBURTSDATUM=.*\n', page.text)
-                converter = DateConversion(findings.group()[14:-1])
-                findings2 = re.search('\|[ ]?STERBEDATUM=.*\n', page.text)
-                converter2 = DateConversion(findings2.group()[13:-1])
-                try:
-                    str(converter)
-                    str(converter2)
-                except Exception as e:
-                    with open('output.txt', 'a') as fobj:
-                        fobj.write(i['a']['title'] + '\n')
-                        fobj.write(str(e) + '\n')
+        for author in result:
+            author = author['a']
+            if debug:
+                print(author['title'])
+            #delete preexisting data of this author
+            try:
+                database.pop(author['id'])
+            except:
+                pass
+
+            dict_author = {'title': author['title']}
+            if debug:
+                print(dict_author)
+
+            #extract the Personendaten-block form the wikisource page
+            page = pywikibot.Page(site, author['title'])
+            personendaten = re.search('\{\{Personendaten.*?\n\}\}\n', page.text, re.DOTALL).group()
+            template_extractor = TemplateHandler(personendaten)
+            dict_author.update({'name': template_extractor.get_parameter('NACHNAME')['value']})
+            dict_author.update({'first_name': template_extractor.get_parameter('VORNAMEN')['value']})
+            dict_author.update({'birth': template_extractor.get_parameter('GEBURTSDATUM')['value']})
+            dict_author.update({'death': template_extractor.get_parameter('STERBEDATUM')['value']})
+            dict_author.update({'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
+
+            database.update({author['id']: dict_author})
+        with open('data/raw_data.json', 'w') as raw_data_file:
+            json.dump(database, raw_data_file, indent=4, sort_keys=True)
+
 
 if __name__ == "__main__":
     run = AuthorList(1000000)

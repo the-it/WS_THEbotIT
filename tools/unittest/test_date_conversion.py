@@ -19,10 +19,6 @@ class TestDateConversion(TestCase):
     self.assertEqual('1822-02-25', str(converter))
     del converter
 
-    converter = DateConversion('26. Febr. 1828')
-    self.assertEqual('1828-02-26', str(converter))
-    del converter
-
   def test__chop_ref(self):
     converter = DateConversion('18. November 1856<ref>something</ref>')
     self.assertEqual('1856-11-18', str(converter))
