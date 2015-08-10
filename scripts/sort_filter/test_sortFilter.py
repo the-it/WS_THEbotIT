@@ -1,5 +1,7 @@
 __author__ = 'eso'
 
+import sys
+sys.path.append('../../')
 from unittest import TestCase
 from scripts.sort_filter.sort_filter import SortFilter
 
@@ -18,7 +20,7 @@ class TestSortFilter(TestCase):
                   {'a': {'title': 'Ein_Hort_des_evangelischen_Kirchengesanges'}},
                   {'a': {'title': 'Fritz_von_der_Kerkhove_(Die_Gartenlaube_1877/44)'}}]
       filtered_list = ['Bestättigung_der_traurigen_Geschichte_des_P._Anians,_nebst_der_Kerkergeschichte_des_P._Mansuet_Oehningers,_Capuciners_zu_Wirzburg',
-                       'Die_Kirche_des_ehemaligen_Cistercienser_Nonnenklosters_Porta_Coeli_zu_Tišnowic',
+                       #'Die_Kirche_des_ehemaligen_Cistercienser_Nonnenklosters_Porta_Coeli_zu_Tišnowic', #Seite enthält schon einen Sortkey
                        'Ein_Apostel_der_Volksaufklärung']
       result = self.sort_filter.filter(raw_list)
       self.assertEqual(filtered_list, result)

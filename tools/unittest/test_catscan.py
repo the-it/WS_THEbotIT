@@ -1,5 +1,7 @@
 __author__ = 'Erik Sommer'
 
+import sys
+sys.path.append('../../')
 from unittest import TestCase
 import httpretty
 from tools.catscan import CatScan

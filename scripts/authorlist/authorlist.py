@@ -1,12 +1,14 @@
 __author__ = 'erik'
 
+import sys
+sys.path.append('../../')
 from tools.catscan import CatScan
+from tools.date_conversion import DateConversion
+from tools.template_handler import TemplateHandler
 import os
 import pywikibot
 import json
 import re
-from tools.date_conversion import DateConversion
-from tools.template_handler import TemplateHandler
 
 
 class AuthorList:

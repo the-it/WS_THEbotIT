@@ -2,6 +2,8 @@ from unittest import TestCase
 
 __author__ = 'eso'
 
+import sys
+sys.path.append('../../')
 from tools.template_handler import TemplateHandler
 
 personendaten = '''{{Personendaten
