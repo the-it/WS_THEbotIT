@@ -3,6 +3,7 @@ __author__ = 'Erik Sommer'
 import datetime
 import requests
 import json
+import re
 
 namespace_mapping = {"Article": 0,
                      "Diskussion": 1,
@@ -65,6 +66,12 @@ class CatScan:
 
     def set_timeout(self, sec):
         self.timeout = sec
+
+    def set_logic(self, log_and = None, log_or = None):
+        if log_and and log_or:
+            self.add_options({"comb[subset]": "1", "comb[union]": "1"})
+        elif log_or:
+            self.add_options({"comb[union]": "1"})
 
     def add_options(self, dict_options):
         self._options.update(dict_options)
@@ -143,7 +150,7 @@ class CatScan:
             if i > 0:
                 cat_string += "%0D%0A"
             string_item = cat
-            string_item.replace(" ", "+")
+            string_item = re.sub(' ', '+', string_item)
             cat_string += string_item
             i += 1
         return cat_string

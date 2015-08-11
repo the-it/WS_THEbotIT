@@ -9,4 +9,5 @@ import re
 from tools.catscan import CatScan
 
 if __name__ == "__main__":
-    match = re.search('{{Personendaten.*?\n}}\n', '')
+    for idx, val in enumerate(range(0, 100, 11)):
+        print(idx, val)

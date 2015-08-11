@@ -66,14 +66,26 @@ class TestCatScan(TestCase):
         self.catscan.get_wikidata()
         self.assertDictEqual({"get_q": "1"}, self.catscan._options)
 
+    def test_set_logic_complete(self):
+        self.catscan.set_logic(log_and = True, log_or = True)
+        self.assertDictEqual({"comb[subset]": "1", "comb[union]": "1"}, self.catscan._options)
+
+    def test_set_logic_only_and(self):
+        self.catscan.set_logic(log_and = True)
+        self.assertDictEqual({}, self.catscan._options)
+
+    def test_set_logic_only_or(self):
+        self.catscan.set_logic(log_or = True)
+        self.assertDictEqual({"comb[union]": "1"}, self.catscan._options)
+
     def test_contruct_cat_string(self):
-        self.catscan.add_positive_category("pos1")
+        self.catscan.add_positive_category("pos 1")
         self.catscan.add_positive_category("pos2")
         self.catscan.add_negative_category("neg1")
-        self.catscan.add_negative_category("neg2")
+        self.catscan.add_negative_category("neg 2")
         self.catscan.add_negative_category("neg3")
-        self.assertEqual("pos1%0D%0Apos2", self.catscan._construct_cat_string(self.catscan.categories["positive"]))
-        self.assertEqual("neg1%0D%0Aneg2%0D%0Aneg3",
+        self.assertEqual("pos+1%0D%0Apos2", self.catscan._construct_cat_string(self.catscan.categories["positive"]))
+        self.assertEqual("neg1%0D%0Aneg+2%0D%0Aneg3",
                          self.catscan._construct_cat_string(self.catscan.categories["negative"]))
 
     def test_construct_templates(self):
