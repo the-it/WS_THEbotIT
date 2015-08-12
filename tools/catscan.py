@@ -52,6 +52,7 @@ class CatScan:
         self._options = {}
         self.categories = {"positive": [], "negative": []}
         self.templates = {'yes': [], 'any': [], 'no': []}
+        self.outlinks = {'yes': [], 'any': [], 'no': []}
         self.language = "de"
         self.project = "wikisource"
 
@@ -119,6 +120,15 @@ class CatScan:
     def add_no_template(self, template):
         self.templates['no'].append(template)
 
+    def add_yes_outlink(self, outlink):
+        self.outlinks['yes'].append(outlink)
+
+    def add_any_outlink(self, outlink):
+        self.outlinks['any'].append(outlink)
+
+    def add_no_outlink(self, outlink):
+        self.outlinks['no'].append(outlink)
+
     def last_change_before(self, year, month=1, day=1, hour=0, minute=0, second=0):
         last_change = datetime.datetime(year, month, day, hour, minute, second)
         self.add_options({"before": last_change.strftime("%Y%m%d%H%M%S")})
@@ -177,6 +187,13 @@ class CatScan:
             question_string += ("&templates_any=" + (self._construct_cat_string(self.templates["any"])))
         if len(self.templates["no"]) != 0:
             question_string += ("&templates_no=" + (self._construct_cat_string(self.templates["no"])))
+        #outlinks
+        if len(self.outlinks["yes"]) != 0:
+            question_string += ("&outlinks_yes=" + (self._construct_cat_string(self.outlinks["yes"])))
+        if len(self.outlinks["any"]) != 0:
+            question_string += ("&outlinks_any=" + (self._construct_cat_string(self.outlinks["any"])))
+        if len(self.outlinks["no"]) != 0:
+            question_string += ("&outlinks_no=" + (self._construct_cat_string(self.outlinks["no"])))
         #rest of the options
         if len(self._options) != 0:
             question_string += (self._construct_options())

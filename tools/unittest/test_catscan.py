@@ -99,6 +99,18 @@ class TestCatScan(TestCase):
         self.assertEqual(str(self.catscan),
                          'http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&templates_yes=yes1%0D%0Ayes2&templates_any=any1%0D%0Aany2%0D%0Aany3&templates_no=no1%0D%0Ano2&format=json&doit=1')
 
+    def test_construct_outlinks(self):
+        self.catscan.add_yes_outlink('yes1')
+        self.catscan.add_yes_outlink('yes2')
+        self.catscan.add_any_outlink('any1')
+        self.catscan.add_any_outlink('any2')
+        self.catscan.add_any_outlink('any3')
+        self.catscan.add_no_outlink('no1')
+        self.catscan.add_no_outlink('no2')
+        self.assertEqual(str(self.catscan),
+                         'http://tools.wmflabs.org/catscan2/catscan2.php?language=de&project=wikisource&outlinks_yes=yes1%0D%0Ayes2&outlinks_any=any1%0D%0Aany2%0D%0Aany3&outlinks_no=no1%0D%0Ano2&format=json&doit=1')
+
+
     def test_construct_options(self):
         self.catscan._options = {"max_age": "1234",
                                  "get_q": "1",
