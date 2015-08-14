@@ -7,7 +7,8 @@ import time
 import datetime
 import re
 from tools.catscan import CatScan
+from pywikibot import pagegenerators
 
 if __name__ == "__main__":
-    for idx, val in enumerate(range(0, 100, 11)):
-        print(idx, val)
+    list_of_pages = pagegenerators.AllpagesPageGenerator(namespace=102, content=True)
+    pass
