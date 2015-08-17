@@ -8,7 +8,12 @@ import datetime
 import re
 from tools.catscan import CatScan
 from pywikibot import pagegenerators
+import pywikibot
 
 if __name__ == "__main__":
-    list_of_pages = pagegenerators.AllpagesPageGenerator(namespace=102, content=True)
-    pass
+    wiki = pywikibot.Site()
+    for i in range(10):
+        seite = pywikibot.Page(wiki, title='THEbotIT/Test{}'.format(i+1), ns=2)
+        print('load the site{}'.format(seite.text))
+        seite.text = 'test'
+        seite.save('test{}'.format(i+1), minor=True, botflag=True)
