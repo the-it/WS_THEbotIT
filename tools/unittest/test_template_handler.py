@@ -38,6 +38,8 @@ template_in_template = '{{minimalvorlage|{{otherTemplate|other_argument}}|2=test
 
 template_in_template_with_key = '{{minimalvorlage|1={{otherTemplate|other_argument}}|2=test2}}'
 
+template_in_template_2 = '{{Sperrsatz|{{Kapitaelchen|Test}}}}'
+
 class TestTemplateHandler(TestCase):
   def test_template_from_page(self):
     handler = TemplateHandler(minimal_vorlage_complex)
@@ -75,3 +77,12 @@ class TestTemplateHandler(TestCase):
 
       handler = TemplateHandler(template_in_template_with_key)
       self.assertListEqual([{'key': '1', 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}], handler.get_parameterlist())
+      del handler
+
+      handler = TemplateHandler(template_in_template_2)
+      self.assertListEqual([{'key': None, 'value': '{{Kapitaelchen|Test}}'}], handler.get_parameterlist())
+
+  def test_set_title(self):
+      handler = TemplateHandler(minimal_vorlage_simple)
+      handler.set_title('testtitle')
+      self.assertEqual('{{testtitle|1=test1|2=test2}}', handler.get_str(str_complex=False))

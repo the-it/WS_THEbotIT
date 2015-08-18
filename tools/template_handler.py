@@ -21,7 +21,7 @@ class TemplateHandler:
             if template_str[0] == '{': #argument is a template itself
                 par_template = re.search('\A\{\{[^}]*\}\}', template_str).group()
                 self.parameters.append({'key': None, 'value': par_template})
-                template_str = re.sub('\A\{\{[^}]*\}\}\|', '', template_str)
+                template_str = re.sub('\A\{\{[^}]*\}\}\|?', '', template_str)
             elif re.match('\A[^\|]*\=[^\|]*', template_str):   #normal argument with a key
                 if re.match('\A[^\{\{\|]*\=\{\{.*?\}\}', template_str): #an embedded template with a key
                     par_template = re.search('\A[^\{\{\|]*\=\{\{.*?\}\}', template_str).group()
@@ -63,3 +63,6 @@ class TemplateHandler:
 
     def update_parameters(self, dict_parameters):
         self.parameters = dict_parameters
+
+    def set_title(self, title):
+        self.title = title
