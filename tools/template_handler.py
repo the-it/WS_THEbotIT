@@ -13,15 +13,32 @@ class TemplateHandler:
             self._process_template_str(template_str)
 
     def _process_template_str(self, template_str):
-        template_str = re.sub('[\{\}\n]', '', template_str)
-        parameter_list = re.split('\|', template_str)
-        self.title = parameter_list.pop(0)
-        for parameter in parameter_list:
-            data = re.split('=', parameter)
-            if len(data) == 1:
-                self.parameters.append({'key': None, 'value': data[0]})
-            else:
-                self.parameters.append({'key': data[0], 'value': data[1]})
+        template_str = re.sub('\n', '', template_str)
+        template_str = template_str[2:-2]
+        self.title = re.search('[^\|]*', template_str).group()
+        template_str = re.sub('\A[^\|]*\|', '', template_str)
+        while template_str:
+            if template_str[0] == '{': #argument is a template itself
+                par_template = re.search('\A\{\{[^}]*\}\}', template_str).group()
+                self.parameters.append({'key': None, 'value': par_template})
+                template_str = re.sub('\A\{\{[^}]*\}\}\|', '', template_str)
+            elif re.match('\A[^\|]*\=[^\|]*', template_str):   #normal argument with a key
+                if re.match('\A[^\{\{\|]*\=\{\{.*?\}\}', template_str): #an embedded template with a key
+                    par_template = re.search('\A[^\{\{\|]*\=\{\{.*?\}\}', template_str).group()
+                    par_template = re.split('=', par_template)
+                    self.parameters.append({'key': par_template[0], 'value': par_template[1]})
+                    template_str = re.sub('\A[^\{\{\|]*\=\{\{.*?\}\}\|?', '', template_str)
+                else:   # a normal argument
+                    par_template = re.search('\A[^\|]*\=[^\|]*', template_str).group()
+                    par_template = re.sub('\|', '', par_template)
+                    par_template = re.split('\=', par_template)
+                    self.parameters.append({'key': par_template[0], 'value': par_template[1]})
+                    template_str = re.sub('\A[^\|]*\=[^\|]*\|?', '', template_str)
+            else: # an argument without a key
+                par_template = re.search('\A[^\|]*', template_str).group()
+                par_template = re.sub('\|', '', par_template)
+                self.parameters.append({'key': None, 'value': par_template})
+                template_str = re.sub('\A[^\|]*\|?', '', template_str)
 
     def get_parameterlist(self):
         return self.parameters
