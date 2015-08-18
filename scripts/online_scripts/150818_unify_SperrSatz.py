@@ -20,6 +20,7 @@ def substitute_sperrsatz(template):
 searcher_catscan = CatScan()
 searcher_catscan.add_namespace(0)
 searcher_catscan.add_namespace('Seite')
+searcher_catscan.add_namespace('Index')
 searcher_catscan.add_yes_template('Sperrsatz')
 sites = searcher_catscan.run()
 site = pywikibot.Site()
@@ -31,5 +32,8 @@ for lemma in sites:
         page = pywikibot.Page(site, lemma['a']['nstext'] + ':' + lemma['a']['title'])
     test_for_fit = re.search('Sperrsatz', page.text)
     if test_for_fit:
-        page.text = re.sub('\{\{Sperrsatz(?:\{\{.*?\}\}|.)*?\}\}', substitute_sperrsatz, page.text)
-        page.save(summary='bot edit: Vereinheitlichung der Vorlage Sperrsatz zu SperrSchrift', botflag=True, )
+        try:
+            page.text = re.sub('\{\{Sperrsatz(?:\{\{.*?\}\}|.)*?\}\}', substitute_sperrsatz, page.text)
+            page.save(summary='bot edit: Vereinheitlichung der Vorlage Sperrsatz zu SperrSchrift', botflag=True, )
+        except:
+            print(lemma)
