@@ -22,13 +22,13 @@ class TemplateHandler:
                 par_template = re.search('\A\{\{[^}]*\}\}', template_str).group()
                 self.parameters.append({'key': None, 'value': par_template})
                 template_str = re.sub('\A\{\{[^}]*\}\}\|?', '', template_str)
-            elif re.match('\A[^\|]*\=[^\|]*', template_str):   #normal argument with a key
+            elif re.match('\A[^\|]*\=[^\|]*', template_str):   #argument with a key
                 if re.match('\A[^\{\{\|]*\=\{\{.*?\}\}', template_str): #an embedded template with a key
                     par_template = re.search('\A[^\{\{\|]*\=\{\{.*?\}\}', template_str).group()
                     par_template = re.split('=', par_template)
                     self.parameters.append({'key': par_template[0], 'value': par_template[1]})
                     template_str = re.sub('\A[^\{\{\|]*\=\{\{.*?\}\}\|?', '', template_str)
-                else:   # a normal argument
+                else:   # a normal argument with a key
                     par_template = re.search('\A[^\|]*\=[^\|]*', template_str).group()
                     par_template = re.sub('\|', '', par_template)
                     par_template = re.split('\=', par_template)

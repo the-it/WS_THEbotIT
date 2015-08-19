@@ -6,25 +6,6 @@ import sys
 sys.path.append('../../')
 from tools.template_handler import TemplateHandler
 
-personendaten = '''{{Personendaten
-|NACHNAME=Schopenhauer
-|VORNAMEN=Arthur
-|ALTERNATIVNAMEN=
-|SORTIERUNG=
-|PERSON=
-|KURZBESCHREIBUNG=deutscher Philosoph
-|SONSTIGES=Seine Mutter war die Schriftstellerin [[Johanna Schopenhauer]] und seine Schwester die Schriftstellerin [[Adele Schopenhauer]]
-|GEBURTSDATUM=22. Februar 1788
-|GEBURTSORT=Stutthof bei [[Danzig]]
-|STERBEDATUM=21. September 1860
-|STERBEORT=[[Frankfurt am Main]]
-|BILD=Schopenhauer.jpg
-|WIKIPEDIA=Arthur Schopenhauer
-|WIKIQUOTE=Arthur Schopenhauer
-|COMMONS=Arthur Schopenhauer
-|PND=118610465
-}}'''
-
 minimal_vorlage_complex = '''{{minimalvorlage
 |1=test1
 |2=test2
@@ -67,16 +48,21 @@ class TestTemplateHandler(TestCase):
   def test_update_parameters(self):
       handler = TemplateHandler(minimal_vorlage_simple)
       self.assertEqual('{{minimalvorlage|1=test1|2=test2}}', handler.get_str(str_complex=False))
-      handler.update_parameters([{'key': None, 'value': 'test3'}, {'key': '4', 'value': 'test4'}, {'key': '5', 'value': 'test5'}])
+      handler.update_parameters([{'key': None, 'value': 'test3'},
+                                 {'key': '4', 'value': 'test4'},
+                                 {'key': '5', 'value': 'test5'}])
       self.assertEqual('{{minimalvorlage|test3|4=test4|5=test5}}', handler.get_str(str_complex=False))
 
   def test_template_in_template(self):
       handler = TemplateHandler(template_in_template)
-      self.assertListEqual([{'key': None, 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}], handler.get_parameterlist())
+      self.assertListEqual([{'key': None, 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}],
+                           handler.get_parameterlist())
       del handler
 
       handler = TemplateHandler(template_in_template_with_key)
-      self.assertListEqual([{'key': '1', 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}], handler.get_parameterlist())
+      self.assertListEqual([{'key': '1', 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}], 
+                           handler.get_parameterlist())      self.assertListEqual([{'key': '1', 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}], 
+                           handler.get_parameterlist())
       del handler
 
       handler = TemplateHandler(template_in_template_2)
