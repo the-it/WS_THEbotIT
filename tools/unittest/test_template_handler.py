@@ -61,7 +61,8 @@ class TestTemplateHandler(TestCase):
 
       handler = TemplateHandler(template_in_template_with_key)
       self.assertListEqual([{'key': '1', 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}], 
-                           handler.get_parameterlist())      self.assertListEqual([{'key': '1', 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}], 
+                           handler.get_parameterlist())
+      self.assertListEqual([{'key': '1', 'value': '{{otherTemplate|other_argument}}'}, {'key': '2', 'value': 'test2'}],
                            handler.get_parameterlist())
       del handler
 

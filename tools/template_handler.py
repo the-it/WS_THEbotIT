@@ -7,6 +7,11 @@ class TemplateHandler:
 
     """
     def __init__(self, template_str = ''):
+        '''
+
+        :param template_str:
+        :return:
+        '''
         self.title = ''
         self.parameters = []
         if template_str:

@@ -15,6 +15,10 @@ class TestDateConversion(TestCase):
     self.assertEqual('1850-04-14', str(converter))
     del converter
 
+    converter = DateConversion('25. Februar 1822')
+    self.assertEqual('1822-02-25', str(converter))
+    del converter
+
     converter = DateConversion('25.Februar 1822')
     self.assertEqual('1822-02-25', str(converter))
     del converter
