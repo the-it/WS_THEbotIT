@@ -78,4 +78,4 @@ for lemma in lemmas:
             temp = fit.sub(lambda x: decide_REIA_or_REWL(x), page.text)
             page.text = temp
             test1 = 3
-            #page.save()
+            page.save(summary = 'Umwandlung von Scanlinks zu {{REIA}} und {{REWL}}', botflag = True)
