@@ -50,27 +50,27 @@ regex = r'''http:\/\/           # searching for a http://-address
             (wikilivres|archive)# hit(1) for deciding whether a wikilivre or an archive address
             .*?                 # some characters in between   UNGREEDY
             \/Pauly-Wissowa     #
-            _(S)?_?             # hit(2) for a possible subblement letter
+            [ _]?(S)?[ _]?      # hit(2) for a possible subblement letter
             ([IVX]{1,5}),?      # hit(3) for roman letters between one and 5 times
-            _?(A)?              # hit(4) for a possible append letter
+            [ _]?(A)?           # hit(4) for a possible append letter
             ([12])?,?           # hit(5) for a possible 1 or 2
-            _0{0,3}(\d{1,4})    # hit(6) for the page
+            [ _]0{0,3}(\d{1,4}) # hit(6) for the page
             \.(jpg|png)         # hit(7) for the picture typ'''
 
 fit = re.compile(regex, re.VERBOSE)
 
 lemma_searcher = CatScan()
 lemma_searcher.add_positive_category('Paulys Realencyclopädie der classischen Altertumswissenschaft')
-lemma_searcher.add_positive_category('RE:Band VI,2')
+#lemma_searcher.add_no_template('REIA') # sadly I have to look on all 18.000 RE-sites
 lemma_searcher.set_timeout(90)
 lemmas = lemma_searcher.run()
 
 for i in range(len(lemmas)):
     lemmas[i] = lemmas[i]['a']['title']
 
-for lemma in lemmas:
+for idx, lemma in enumerate(lemmas):
     if lemma[0:3] == 'RE:':
-        print(lemma)
+        print(idx, '/', len(lemmas), lemma)
         page = pywikibot.Page(wiki, lemma)
         searcher = fit.search(page.text)
         if searcher:
@@ -78,4 +78,4 @@ for lemma in lemmas:
             temp = fit.sub(lambda x: decide_REIA_or_REWL(x), page.text)
             page.text = temp
             test1 = 3
-            page.save(summary = 'Umwandlung von Scanlinks zu {{REIA}} und {{REWL}}', botflag = True)
+            page.save(summary = 'Umwandlung von Scanlinks zu {{REIA}} und {{REWL}}', botflag = True, async= True)
