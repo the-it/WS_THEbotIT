@@ -28,20 +28,20 @@ def decide_REIA_or_REWL(re_sub):
     searcher = fit.search(re_sub.group(0))
     (arg1, arg2, arg3) = build_arg(searcher)
     if searcher.group(1) == 'archive':  # archive
-        return '{{REIA|%s|%s|%s}}' % (arg1, arg2, arg3)
+        return '{{REIA|%s|%s}}' % (arg1, arg2)
     else: # wikilivre
         arabic = roman.fromRoman(searcher.group(3))
         subl = searcher.group(2)
         app = searcher.group(4)
         halfband = searcher.group(5)
         if  (app is None) and (subl is None) and (arabic < 12): # all between I and XI
-            return '{{REIA|%s|%s|%s}}' % (arg1, arg2, arg3)
+            return '{{REIA|%s|%s}}' % (arg1, arg2)
         elif (subl is None) and (app is 'A') and (arabic < 3) and (halfband is '1'): # I A,1 and II A,1
-            return '{{REIA|%s|%s|%s}}' % (arg1, arg2, arg3)
+            return '{{REIA|%s|%s}}' % (arg1, arg2)
         elif (subl is 'S') and (app is None) and (arabic < 4) and (halfband is None): # S I, S II, S III
-            return '{{REIA|%s|%s|%s}}' % (arg1, arg2, arg3)
+            return '{{REIA|%s|%s}}' % (arg1, arg2)
         else: # rest
-            return '{{REWL|%s|%s|%s}}' % (arg1, arg2, arg3)
+            return '{{REWL|%s|%s}}' % (arg1, arg2)
 
 wiki = pywikibot.Site()
 
