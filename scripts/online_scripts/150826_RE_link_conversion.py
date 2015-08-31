@@ -46,7 +46,8 @@ def decide_REIA_or_REWL(re_sub):
 wiki = pywikibot.Site()
 
 regex = r'''http:\/\/           # searching for a http://-address
-            .*?                 # some characters in between   UNGREEDY
+            .*?                 # some characters in between   UNGREEDY (hier kam es beim Durchlauf zu einem Error
+                                # beim nächsten mal die Anzahl der Zeichen begrenzen)
             (wikilivres|archive)# hit(1) for deciding whether a wikilivre or an archive address
             .*?                 # some characters in between   UNGREEDY
             \/Pauly-Wissowa     #
