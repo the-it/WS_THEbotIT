@@ -13,7 +13,9 @@ import pywikibot
 if __name__ == "__main__":
     wiki = pywikibot.Site()
     for i in range(10):
-        seite = pywikibot.Page(wiki, title='THEbotIT/Test{}'.format(i+1), ns=2)
+        seite = pywikibot.Page(wiki, title='Seite:Loos Sämtliche Schriften.pdf/62', ns=0)
+        list_ver = seite.getVersionHistory(reverse=True)
+        test = seite.backlinks()
+        for i in test:
+            print(i)
         print('load the site{}'.format(seite.text))
-        seite.text = 'test'
-        seite.save('test{}'.format(i+1), minor=True, botflag=True)
