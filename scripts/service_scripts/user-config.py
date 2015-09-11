@@ -3,3 +3,4 @@
 family = 'wikisource'
 mylang = 'de'
 usernames['wikisource']['de'] = 'THEbotIT'
+sysopnames['wikisource']['de'] = 'THE IT'
