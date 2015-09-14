@@ -8,6 +8,5 @@ import requests
 import pywikibot
 
 site = pywikibot.Site('de', 'wikisource')
-page = pywikibot.Page(site, title= 'Benutzer:THEbotIT/Test1')
-print(page.text)
+page = pywikibot.Page(site, 'Benutzer:THEbotIT/Test1')
 page.save()
