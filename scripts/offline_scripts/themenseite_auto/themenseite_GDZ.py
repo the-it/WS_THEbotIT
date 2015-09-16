@@ -19,14 +19,14 @@ def add_zeros(number, digits):
 
 file = open('themenseite.txt', 'w', encoding="utf-8")
 
-for i in range(1, 50):
+for i in range(1, 224):
     try:
-        response = requests.get(url="http://gdz.sub.uni-goettingen.de/dms/load/mod/?PPN=PPN599415665_"+add_zeros(i, 4),
+        response = requests.get(url="http://gdz.sub.uni-goettingen.de/dms/load/mod/?PPN=PPN266833020_"+add_zeros(i, 4),
                                 headers={'User-Agent': 'Python-urllib/3.1'}, timeout=2)
         response_str = str(response.content)
-        hit = re.findall(">18\d{2}<", response_str)
-        year = hit[0][1:5]
-        print(':*{{Anker|Band'+str(i)+'}}Band '+str(i)+': '+year+' {{GDZ|599415665_'+add_zeros(i, 4)+'}}')
+        hit = re.findall(">\d{4}<", response_str)
+        year = hit[2][1:5]
+        print(':*{{Anker|Band'+str(i)+'}}Band '+str(i)+': '+year+' {{GDZ|266833020_'+add_zeros(i, 4)+'}}')
         #file.write('{{Vorlage:Journal für die reine und angewandte Mathematik/Eintrag|' + str(i) + '|' + year + "}}\n")
     except Exception:
         pass
