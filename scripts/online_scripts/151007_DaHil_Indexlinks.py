@@ -119,9 +119,9 @@ regex = r'''(\d{1,3})([.,])'''
 
 fit = re.compile(regex, re.VERBOSE)
 
-
-page = pywikibot.Page(wiki, 'Seite:David Hilbert Gesammelte Abhandlungen Bd 1.djvu/553')
-temp = fit.sub(lambda x: build_arg(x), page.text)
-page.text = temp
-test1 = 3
-page.save(summary = 'setzen der Links auf die Seiten', botflag = True, async= True)
+for i in range(555, 557):
+    page = pywikibot.Page(wiki, 'Seite:David Hilbert Gesammelte Abhandlungen Bd 1.djvu/' + str(i))
+    temp = fit.sub(lambda x: build_arg(x), page.text)
+    page.text = temp
+    test1 = 3
+    page.save(summary = 'setzen der Links auf die Seiten', botflag = True, async= True)
