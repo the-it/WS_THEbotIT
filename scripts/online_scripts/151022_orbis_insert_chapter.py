@@ -2,7 +2,7 @@
 __author__ = 'eso'
 import sys
 sys.path.append('../../')
-from tools.catscan import CatScan
+#from tools.catscan import CatScan
 import re
 import requests
 import pywikibot
@@ -29,7 +29,7 @@ for i in range(6, 308):#467
     page = pywikibot.Page(site, 'Seite:OrbisPictus {}.jpg'.format(add_zeros(i, 3)))
     print(page.title())
     test = page.backlinks(namespaces=0)
-    #print(next(test))
+    print(next(test))
     try:
         test2 = next(test).title()
         is_there_match = re.search('\{\{Seitenstatus2\|\[\[Johann Amos Comenius\]\]\|\[\[Orbis sensualium pictus\]\]\|Orbis sensualium pictus\|\}\}', page.text)
