@@ -6,7 +6,6 @@ import pprint
 import time
 import datetime
 import re
-from tools.catscan import CatScan
 from pywikibot import pagegenerators
 import pywikibot
 
