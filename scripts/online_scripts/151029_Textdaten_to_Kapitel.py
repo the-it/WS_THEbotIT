@@ -11,77 +11,40 @@ import pywikibot
 import copy
 import roman
 
-lemmas = ["Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Anfang eines Einnahme-Verzeichnisses vom J. 1380",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Armenpflege",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1334",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1338",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1344",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1346",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1349",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1353",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1376",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1383",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1385",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1390",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Ausgabe-Rechnung vom J. 1394 (Auszug)",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage I.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage II.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage III.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage IV.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage IX.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage V.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage VI.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage VII.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage VIII.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage X.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XI.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XII.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XIII.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XIV.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XIX.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XV.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XVI.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XVII.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Beilage XVIII.",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Belagerung der Burg Reifenscheid",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Besoldungen",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Blide eine Wurfmaschine",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Chronologisches Verzeichniss der in den Rechnungen vorkommenden Geldsorten",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Das Aachener Contingent",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Einnahme-Rechnung vom J. 1344",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Einnahme-Rechnung vom J. 1373",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Einnahme-Rechnung vom J. 1385",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Einnahme-Rechnung vom J. 1387",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Einnahme-Rechnung vom J. 1391",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Einnahmen der Stadt Aachen",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Einzelne Monate der Ausgabe-Rechnung vom J. 1391",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Faustkaempfer",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Flagellanten Pest und Juden",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Geschenke an den Koenig",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Geschenke an hohe und hoechste Personen",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Glossar",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Kirchenfeste und Betheiligung",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Kroenung Karls IV",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Kroenung Wenzels",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Landfriedensbund Zerstoerung des Raubschlosses",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Lesung der heiligen Messe",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Meth",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Monatsrechnung aus dem J. 1384",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Monatsrechnungen vom J. 1386",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Nachtrag. Ausgabe-Rechnung vom J. 1333",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Pulvergeschosse",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Rathhausbau und Buergermeister Chorus",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Rechnung Belagerung des Schlosses Reiferscheid im J. 1385",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Rechnung Belagerung des Schlosses zur Dick im J. 1383",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Tagelohn und Preise der Lebensmittel",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Topographie von Aachen nach den Stadt-Rechnungen des 14. Jahrhunderts",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Verhalten der Stadt waehrend Ludwig",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Vollendung des Rathhauses",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Weinkultur und Weinverbrauch",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Zahl der Rechnungen. Sprache. Geldwerth",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Zerstoerung des Schlosses zur Dick",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Zoelle des Landfriedensbundes",
-"Aachener Stadtrechnungen aus dem XIV. Jahrhundert/Übergabe der Burg Reiferscheid"]
+lemmas = ["Der Todesgang des armenischen Volkes/Dritter Teil/Fünftes Kapitel",
+"Der Todesgang des armenischen Volkes/Dritter Teil/Viertes Kapitel",
+"Der Todesgang des armenischen Volkes/Dritter Teil/Zweites Kapitel",
+"Der Todesgang des armenischen Volkes/Erster Teil",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Dritter Teil",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Dritter Teil/Erster Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Dritter Teil/Zweiter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Erster Teil",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Erster Teil/Dritter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Erster Teil/Erster Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Erster Teil/Vierter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Erster Teil/Zweiter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil/Dritter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil/Erster Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil/Fünfter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil/Sechster Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil/Siebter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil/Vierter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Erstes Kapitel/Zweiter Teil/Zweiter Abschnitt",
+"Der Todesgang des armenischen Volkes/Erster Teil/Zweites Kapitel",
+"Der Todesgang des armenischen Volkes/Titel",
+"Der Todesgang des armenischen Volkes/Vorwort",
+"Der Todesgang des armenischen Volkes/Zweiter Teil",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Achtes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Drittes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Erstes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Fünftes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Neuntes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Sechstes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Siebtes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Viertes Kapitel",
+"Der Todesgang des armenischen Volkes/Zweiter Teil/Zweites Kapitel"]
 
 wiki = pywikibot.Site()
 
@@ -93,14 +56,19 @@ for lemma in lemmas:
     template_navigation = TemplateHandler()
     template_navigation.set_title('Kapitel')
 
+    counter = 0
+    for character in lemma:
+        if character is "/":
+            counter += 1
+
     list_navigation = []
-    list_navigation.append({'key': 'HERKUNFT', 'value': "Aachener Stadtrechnungen aus dem XIV. Jahrhundert"})
-    list_navigation.append({'key': 'VORIGER', 'value': re.sub('Aachener Stadtrechnungen aus dem XIV\. Jahrhundert/', '', template_handler_orig.get_parameter('VORIGER')['value'])})
-    list_navigation.append({'key': 'NÄCHSTER', 'value': re.sub('Aachener Stadtrechnungen aus dem XIV\. Jahrhundert/', '', template_handler_orig.get_parameter('NÄCHSTER')['value'])})
-    list_navigation.append({'key': 'TITELTEIL', 'value': '2'})
+    list_navigation.append({'key': 'HERKUNFT', 'value': "Der Todesgang des armenischen Volkes"})
+    list_navigation.append({'key': 'VORIGER', 'value': re.sub('Der Todesgang des armenischen Volkes/', '', template_handler_orig.get_parameter('VORIGER')['value'])})
+    list_navigation.append({'key': 'NÄCHSTER', 'value': re.sub('Der Todesgang des armenischen Volkes/', '', template_handler_orig.get_parameter('NÄCHSTER')['value'])})
+    list_navigation.append({'key': 'TITELTEIL', 'value': str(counter + 1)})
     list_navigation.append({'key': 'BILD', 'value': template_handler_orig.get_parameter('BILD')['value']})
     list_navigation.append({'key': 'BEARBEITUNGSSTAND', 'value': 'fertig'})
-    list_navigation.append({'key': 'KATEGORIE', 'value': 'Aachener Stadtrechnungen'})
+    list_navigation.append({'key': 'KATEGORIE', 'value': 'Kategorie:Der Todesgang des armenischen Volkes'})
 
     template_navigation.update_parameters(list_navigation)
 
