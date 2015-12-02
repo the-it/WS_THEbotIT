@@ -7,10 +7,15 @@ import re
 import pywikibot
 
 
-lemmas = ["De vulgari eloquentia/II. Buch – Vierzehntes Kapitel",
-"De vulgari eloquentia/II. Buch – Zehntes Kapitel",
-"De vulgari eloquentia/II. Buch – Zweites Kapitel",
-"De vulgari eloquentia/II. Buch – Zwölftes Kapitel"]
+lemmas = ["Der Vampir (Reymont)/Achtes Kapitel",
+"Der Vampir (Reymont)/Drittes Kapitel",
+"Der Vampir (Reymont)/Erstes Kapitel",
+"Der Vampir (Reymont)/Fünftes Kapitel",
+"Der Vampir (Reymont)/Neuntes Kapitel",
+"Der Vampir (Reymont)/Sechstes Kapitel",
+"Der Vampir (Reymont)/Siebentes Kapitel",
+"Der Vampir (Reymont)/Viertes Kapitel",
+"Der Vampir (Reymont)/Zweites Kapitel"]
 
 wiki = pywikibot.Site()
 
@@ -26,17 +31,17 @@ for lemma in lemmas:
     page_from_orig = re.search(r'\d{1,3}(?:–\d{1,3})?', page_from_orig).group()
 
     list_navigation = []
-    list_navigation.append({'key': 'HERKUNFT', 'value': "De vulgari eloquentia"})
+    list_navigation.append({'key': 'HERKUNFT', 'value': "Der Vampir (Reymont)"})
     list_navigation.append({'key': 'SEITE', 'value': page_from_orig})
     try:
-        list_navigation.append({'key': 'VORIGER', 'value': re.sub('De vulgari eloquentia/', '', template_handler_orig.get_parameter('VORIGER')['value'])})
-        list_navigation.append({'key': 'NÄCHSTER', 'value': re.sub('De vulgari eloquentia/', '', template_handler_orig.get_parameter('NÄCHSTER')['value'])})
+        list_navigation.append({'key': 'VORIGER', 'value': re.sub('Der Vampir (Reymont)/', '', template_handler_orig.get_parameter('VORIGER')['value'])})
+        list_navigation.append({'key': 'NÄCHSTER', 'value': re.sub('Der Vampir (Reymont)/', '', template_handler_orig.get_parameter('NÄCHSTER')['value'])})
     except:
         pass
     list_navigation.append({'key': 'TITELTEIL', 'value': "2"})
     #list_navigation.append({'key': 'BILD', 'value': template_handler_orig.get_parameter('BILD')['value']})
     list_navigation.append({'key': 'BEARBEITUNGSSTAND', 'value': template_handler_orig.get_parameter('BEARBEITUNGSSTAND')['value']})
-    list_navigation.append({'key': 'KATEGORIE', 'value': 'Dante Prosa (Kannegießer)'})
+    list_navigation.append({'key': 'KATEGORIE', 'value': 'Der Vampir (Reymont)'})
 
     template_navigation.update_parameters(list_navigation)
 
