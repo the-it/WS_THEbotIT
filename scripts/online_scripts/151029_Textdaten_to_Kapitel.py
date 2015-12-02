@@ -7,15 +7,12 @@ import re
 import pywikibot
 
 
-lemmas = ["Der Vampir (Reymont)/Achtes Kapitel",
-"Der Vampir (Reymont)/Drittes Kapitel",
-"Der Vampir (Reymont)/Erstes Kapitel",
-"Der Vampir (Reymont)/Fünftes Kapitel",
-"Der Vampir (Reymont)/Neuntes Kapitel",
-"Der Vampir (Reymont)/Sechstes Kapitel",
-"Der Vampir (Reymont)/Siebentes Kapitel",
-"Der Vampir (Reymont)/Viertes Kapitel",
-"Der Vampir (Reymont)/Zweites Kapitel"]
+lemmas = ["Die Edda (Simrock 1876)/Erläuterungen/Anmerkungen",
+"Die Edda (Simrock 1876)/Erläuterungen/Einleitung",
+"Die Edda (Simrock 1876)/Snorra-Edda/Aus der Skalda",
+"Die Edda (Simrock 1876)/Snorra-Edda/Bragarœdhur",
+"Die Edda (Simrock 1876)/Snorra-Edda/Gylfaginnîng",
+"Die Edda (Simrock 1876)/Snorra-Edda/Sôlarliôth"]
 
 wiki = pywikibot.Site()
 
@@ -31,17 +28,29 @@ for lemma in lemmas:
     page_from_orig = re.search(r'\d{1,3}(?:–\d{1,3})?', page_from_orig).group()
 
     list_navigation = []
-    list_navigation.append({'key': 'HERKUNFT', 'value': "Der Vampir (Reymont)"})
-    list_navigation.append({'key': 'SEITE', 'value': page_from_orig})
+    list_navigation.append({'key': 'HERKUNFT', 'value': "Die Edda (Simrock 1876)"})
     try:
-        list_navigation.append({'key': 'VORIGER', 'value': re.sub('Der Vampir (Reymont)/', '', template_handler_orig.get_parameter('VORIGER')['value'])})
-        list_navigation.append({'key': 'NÄCHSTER', 'value': re.sub('Der Vampir (Reymont)/', '', template_handler_orig.get_parameter('NÄCHSTER')['value'])})
+        list_navigation.append({'key': 'UNTERTITEL', 'value': template_handler_orig.get_parameter('SUBTITEL')['value']})
     except:
         pass
-    list_navigation.append({'key': 'TITELTEIL', 'value': "2"})
+    #list_navigation.append({'key': 'SEITE', 'value': page_from_orig})
+    try:
+        list_navigation.append({'key': 'VORIGER', 'value': re.sub('Die Edda \(Simrock 1876\)/', '', template_handler_orig.get_parameter('VORIGER')['value'])})
+    except:
+        pass
+    try:
+        list_navigation.append({'key': 'NÄCHSTER', 'value': re.sub('Die Edda \(Simrock 1876\)/', '', template_handler_orig.get_parameter('NÄCHSTER')['value'])})
+    except:
+        pass
+    list_navigation.append({'key': 'TITELTEIL', 'value': "3"})
+    list_navigation.append({'key': 'ZUSAMMENFASSUNG', 'value': template_handler_orig.get_parameter('KURZBESCHREIBUNG')['value']})
+    try:
+        list_navigation.append({'key': 'WIKIPEDIA', 'value': template_handler_orig.get_parameter('WIKIPEDIA')['value']})
+    except:
+        pass
     #list_navigation.append({'key': 'BILD', 'value': template_handler_orig.get_parameter('BILD')['value']})
     list_navigation.append({'key': 'BEARBEITUNGSSTAND', 'value': template_handler_orig.get_parameter('BEARBEITUNGSSTAND')['value']})
-    list_navigation.append({'key': 'KATEGORIE', 'value': 'Der Vampir (Reymont)'})
+    list_navigation.append({'key': 'KATEGORIE', 'value': 'Edda'})
 
     template_navigation.update_parameters(list_navigation)
 
