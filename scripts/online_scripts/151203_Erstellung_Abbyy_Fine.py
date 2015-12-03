@@ -8,9 +8,7 @@ import pywikibot
 
 wiki = pywikibot.Site()
 
-for i in range(493, 546):
-    if (i == 320) or (i == 336):
-        continue
+for i in range(577, 665):
     print(i)
     page = pywikibot.Page(wiki, 'Seite:Wackernagel Geschichte der Stadt Basel Band 3.pdf/' + str(i))
     if i < 100:
@@ -22,7 +20,7 @@ for i in range(493, 546):
 
         starter = '<noinclude><pagequality level="1" user="THEbotIT" /><div class="pagetext">{{Seitenstatus2|[[Rudolf Wackernagel]]|[[Geschichte der Stadt Basel. Dritter Band]]|Wackernagel Geschichte der Stadt Basel|}}{{BlockSatzStart}}\n\n\n</noinclude>'
 
-        finisher = "<noinclude>{{BlockSatzEnd}}{{Zitierempfehlung|Projekt=[[Rudolf Wackernagel]]: ''[[Geschichte der Stadt Basel. Dritter Band]]''. Helbing & Lichtenhahn, Basel 1924|Seite=%s}}</div></noinclude>\n" % (i-21)
+        finisher = "<noinclude>{{BlockSatzEnd}}{{Zitierempfehlung|Projekt=[[Rudolf Wackernagel]]: ''[[Geschichte der Stadt Basel. Dritter Band]]''. Helbing & Lichtenhahn, Basel 1924|Seite=%s*}}</div></noinclude>\n" % (i-545)
 
         page.text = starter + reader.getText() + finisher
         page.save(summary= 'automatische Seitenerstellung', botflag= True)
