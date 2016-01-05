@@ -7,16 +7,7 @@ import re
 import pywikibot
 
 
-lemmas = ["William Shakspeare's sämmtliche Gedichte/Einleitung",
-"William Shakspeare's sämmtliche Gedichte/Sonett C",
-"William Shakspeare's sämmtliche Gedichte/Sonett CI",
-"William Shakspeare's sämmtliche Gedichte/Sonett CII",
-"William Shakspeare's sämmtliche Gedichte/Sonett CIII",
-"William Shakspeare's sämmtliche Gedichte/Sonett CIV",
-"William Shakspeare's sämmtliche Gedichte/Sonett CIX",
-"William Shakspeare's sämmtliche Gedichte/Sonett CL",
-"William Shakspeare's sämmtliche Gedichte/Sonett CLI",
-"William Shakspeare's sämmtliche Gedichte/Sonett CLII",
+lemmas = ["William Shakspeare's sämmtliche Gedichte/Sonett CLII",
 "William Shakspeare's sämmtliche Gedichte/Sonett CLIII",
 "William Shakspeare's sämmtliche Gedichte/Sonett CLIV",
 "William Shakspeare's sämmtliche Gedichte/Sonett CV",
@@ -177,12 +168,13 @@ for lemma in lemmas:
 
     page_from_orig = template_handler_orig.get_parameter('HERKUNFT')['value']
     #page_from_orig = re.search(r'\d{1,3}(?:–\d{1,3})?', page_from_orig).group()
+    list_navigation = []
     try:
         page_from_orig = re.search(r'S. (\d{1,3}(?: ?–?-? ?\d{1,3})?)', page_from_orig).group(1)
         list_navigation.append({'key': 'SEITE', 'value': page_from_orig})
     except:
         pass
-    list_navigation = []
+
     list_navigation.append({'key': 'HERKUNFT', 'value': "William Shakspeare's sämmtliche Gedichte"})
     try:
         list_navigation.append({'key': 'UNTERTITEL', 'value': template_handler_orig.get_parameter('SUBTITEL')['value']})
