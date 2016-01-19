@@ -4,6 +4,7 @@ import os
 import subprocess
 import re
 import requests
+from PIL import Image
 
 def add_zeros(number, digits):
     number_str = str(number)
@@ -33,6 +34,9 @@ def main():
         fobj = open("pics_raw/{}".format(i_str) +".png", "wb")
         fobj.write(picture.content)
         fobj.close()
+
+        im = Image.open("pics_raw/{}".format(i_str) +".png")
+        print(list(im.getdata()))
 
         process = subprocess.Popen(['identify', 'pics_raw/{}.png'.format(i_str)], stdout=subprocess.PIPE)
         x = str(process.stdout.read())
