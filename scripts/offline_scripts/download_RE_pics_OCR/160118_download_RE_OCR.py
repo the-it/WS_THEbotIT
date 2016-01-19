@@ -20,39 +20,39 @@ def add_zeros(number, digits):
     return number_str
 
 def main():
-    for i in range(471,1441,2):
-        print(i)
-        try:
-            os.mkdir('pics_raw')
-            os.mkdir('pics_slice')
-            os.mkdir('pics_cut')
-            os.mkdir('ocr')
-        except:
-            pass
+    if not os.path.exists('pics_raw'):
+        os.mkdir('pics_raw')
+    if not os.path.exists('pics_cut'):
+        os.mkdir('pics_cut')
+    if not os.path.exists('ocr'):
+        os.mkdir('ocr')
+
+    for i in range(751,1441,2):
         i_str = add_zeros(i, 4)
-        picture = requests.get(url='http://ia601407.us.archive.org/34/items/PWRE05-06/Pauly-Wissowa_III1_{}.png'.format(i_str))
+        picture = requests.get(url='http://ia601407.us.archive.org/34/items/PWRE05-06/Pauly-Wissowa_III1_{}.png'.format(i_str)) #573, 749
         fobj = open("pics_raw/{}".format(i_str) +".png", "wb")
         fobj.write(picture.content)
         fobj.close()
 
         im = Image.open("pics_raw/{}".format(i_str) +".png")
-        print(list(im.getdata()))
-
-        process = subprocess.Popen(['identify', 'pics_raw/{}.png'.format(i_str)], stdout=subprocess.PIPE)
-        x = str(process.stdout.read())
-        result = re.search('(\d{1,4})x(\d{1,4})', x)
-        half = int(result.group(1))/2
-
+        (width, height) = im.size
         #calculate the real half
-        for j in range(-20, 22, 2):
-            process_string = 'convert pics_raw/{}.png -crop 1x{}+{}+0 pics_slice/b_{}.png'.format(add_zeros(i, 4), result.group(2), int(half + j), j)
-            print(process_string)
-            os.system(process_string)
+        half_width = int(width/2)
+        list_of_colorsums = []
+        counter = 0
+        range_slice = range(-200, 201, 1)
+        for k, j in enumerate(range_slice):
+            crop_image = im.crop((half_width+j, 0, half_width+j+1, height))
+            #crop_image.show()
+            list_of_colorsums.append(sum(list(crop_image.getdata()))/height)
+        first_max_index = list_of_colorsums.index(max(list_of_colorsums))
+        half = half_width+range_slice[first_max_index]
 
-
-        print(add_zeros(i, 4), int(half), result.group(2), add_zeros(i, 4))
-        os.system('convert pics_raw/{}.png -crop {}x{}+0+0 pics_cut/{}.png'.format(add_zeros(i, 4), int(half), result.group(2), add_zeros(i, 4)))
-        os.system('convert pics_raw/{}.png -crop {}x{}+{}+0 pics_cut/{}.png'.format(add_zeros(i, 4), int(half), result.group(2), int(half), add_zeros(i+1, 4)))
+        crop_image_1 = im.crop((0, 0, half, height))
+        crop_image_2 = im.crop((half, 0, width, height))
+        crop_image_1.save("pics_cut/{}.png".format(add_zeros(i, 4)), "PNG")
+        crop_image_2.save("pics_cut/{}.png".format(add_zeros(i+1, 4)), "PNG")
+        print(i, ",",i+1)
 
         os.system('tesseract pics_cut/{}.png ocr/{}.txt -l deu'.format(add_zeros(i, 4), add_zeros(i, 4)))
         os.system('tesseract pics_cut/{}.png ocr/{}.txt -l deu'.format(add_zeros(i+1, 4), add_zeros(i+1, 4)))
