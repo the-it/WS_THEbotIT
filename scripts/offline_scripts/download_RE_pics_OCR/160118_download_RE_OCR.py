@@ -20,6 +20,7 @@ def add_zeros(number, digits):
     return number_str
 
 def main():
+    # create the neccessary subfolders
     if not os.path.exists('pics_raw'):
         os.mkdir('pics_raw')
     if not os.path.exists('pics_cut'):
@@ -27,30 +28,43 @@ def main():
     if not os.path.exists('ocr'):
         os.mkdir('ocr')
 
-    for i in range(1, 1441, 2):
+    # iterating over all
+    for i in range(1803, 2909, 2):
         i_str = add_zeros(i, 4)
-        picture = requests.get(url='http://ia601407.us.archive.org/34/items/PWRE05-06/Pauly-Wissowa_III1_{}.png'.format(i_str)) #573, 749, 903, 1121, 1375 fehlen auf dem Server
+        picture = requests.get(url='http://ia801407.us.archive.org/34/items/PWRE05-06/Pauly-Wissowa_III2_{}.png'.format(i_str))
         print(picture.status_code)
-        if picture.status_code == 404:
-            fobj = open("pics_raw/{}".format(i_str) +".ERROR", "wb")
-            fobj.close()
-        else:
-            fobj = open("pics_raw/{}".format(i_str) +".png", "wb")
+        error_code = picture.status_code
+        ending = ".png"
+        # is there content?
+        if error_code == 404:
+            #errorhandling
+            picture = requests.get(url='http://ia801407.us.archive.org/34/items/PWRE05-06/Pauly-Wissowa_III2_{}.jpg'.format(i_str))
+            error_code = picture.status_code
+            ending = ".jpg"
+            if error_code == 404:
+                fobj = open("pics_raw/{}".format(i_str) +".ERROR", "wb")
+                fobj.close()
+        if error_code == 200:
+            #save the picture in the raw folder and start the conversion
+            fobj = open("pics_raw/{}".format(i_str) + ending, "wb")
             fobj.write(picture.content)
             fobj.close()
-        if picture.status_code != 404:
-            im = Image.open("pics_raw/{}".format(i_str) +".png")
-            im.save("pics_raw/{}.jpg".format(i_str), "JPEG", quality=80, optimize=True, progressive=True)
+
+            im = Image.open("pics_raw/{}".format(i_str) + ending)
+            #converting into JPG
+            if ending == ".png":
+                im.save("pics_raw/{}.jpg".format(i_str), "JPEG", quality=80, optimize=True, progressive=True)
+            #calculate the half between the columns
             (width, height) = im.size
-            #calculate the real half
             half_width = int(width/2)
             list_of_colorsums = []
-            counter = 0
             range_slice = range(-200, 201, 1)
+            #check every slice around the middle for the color value
             for k, j in enumerate(range_slice):
+                im = im.convert("L")
                 crop_image = im.crop((half_width+j, 0, half_width+j+1, height))
-                #crop_image.show()
                 list_of_colorsums.append(sum(list(crop_image.getdata()))/height)
+            # the slice with the highest colorvalue should
             first_max_index = list_of_colorsums.index(max(list_of_colorsums))
             half = half_width+range_slice[first_max_index]
 
