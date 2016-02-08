@@ -8,19 +8,15 @@ import pywikibot
 
 wiki = pywikibot.Site()
 
-for i in range(577, 665):
+for i in range(1, 673):
     print(i)
-    page = pywikibot.Page(wiki, 'Seite:Wackernagel Geschichte der Stadt Basel Band 3.pdf/' + str(i))
-    if i < 100:
+    if i < 10:
+        i_str = "00"+str(i)
+    elif i < 100:
         i_str = "0"+str(i)
     else:
         i_str = str(i)
-    with open("dump/xml_abbyy/BAU14A019930_00000{}.xml".format(i_str), encoding="utf8") as file_pointer:
+    with open("dump/xml_abbyy/BAU14A019910_00000{}.xml".format(i_str), encoding="utf8") as file_pointer:
         reader = AbbyyXML(file_pointer.read())
-
-        starter = '<noinclude><pagequality level="1" user="THEbotIT" /><div class="pagetext">{{Seitenstatus2|[[Rudolf Wackernagel]]|[[Geschichte der Stadt Basel. Dritter Band]]|Wackernagel Geschichte der Stadt Basel|}}{{BlockSatzStart}}\n\n\n</noinclude>'
-
-        finisher = "<noinclude>{{BlockSatzEnd}}{{Zitierempfehlung|Projekt=[[Rudolf Wackernagel]]: ''[[Geschichte der Stadt Basel. Dritter Band]]''. Helbing & Lichtenhahn, Basel 1924|Seite=%s*}}</div></noinclude>\n" % (i-545)
-
-        page.text = starter + reader.getText() + finisher
-        page.save(summary= 'automatische Seitenerstellung', botflag= True)
+        with open("dump/result/" + i_str + ".txt", "w", encoding='utf-8') as f:
+            f.write(reader.getText())

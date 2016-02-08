@@ -47,7 +47,7 @@ class AbbyyXML:
         formatting_string = []
         for formatting in formattings:
             formatting_string.append(self.processFormatting(formatting))
-        formatting_string.append("\n")
+        #formatting_string.append("\n")
         return "".join(formatting_string)
 
     def processFormatting(self, formatting_xml):
