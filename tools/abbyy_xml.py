@@ -21,11 +21,12 @@ class AbbyyXML:
         return "".join(blocks_string)
 
     def processBlock(self, block_xml):
-        try:
-            text = block_xml.getElementsByTagName("text")
-            return self.processText(text[0])+"\n"
-        except:
-            return ""
+        texts = block_xml.getElementsByTagName("text")
+        texts_string = []
+        for text in texts:
+            texts_string.append(self.processText(text))
+        texts_string.append("\n")
+        return "".join(texts_string)
 
     def processText(self, text_xml):
         pars = text_xml.getElementsByTagName("par")
