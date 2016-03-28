@@ -20,3 +20,4 @@ for i in range(1, 673):
         reader = AbbyyXML(file_pointer.read())
         with open("dump/result/" + i_str + ".txt", "w", encoding='utf-8') as f:
             f.write(reader.getText())
+
