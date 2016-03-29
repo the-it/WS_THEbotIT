@@ -18,23 +18,22 @@ def add_zeros(number, digits):
             number_str = "0" + number_str
     return number_str
 
-def fett_sperr(hit):
-    print("{{SperrSchrift|" + hit.group(0)[3:-3] + "}}")
-    return "{{SperrSchrift|" + hit.group(0)[3:-3] + "}}"
+def convert_template(hit):
+    number = hit.group(1)
+    return "{{NotizLinks|" + number + "|0|0|70}}{{Anker|" + number + "}}"
+
 
 site = pywikibot.Site()
 
-fit = re.compile("'''[^']{1,200}'''")
+fit = re.compile("\{\{Randnotiz rechts\|(\d{1,3})\}\}")
 
 for i in range(1, 425):
     page = pywikibot.Page(site, 'Seite:Ficker Vom Reichsfürstenstande {}.jpg'.format(add_zeros(i, 3)))
     print(i)
-    fit1 = re.search("'''[^']{1,200}'''", page.text)
-    fit2 = re.search("—", page.text)
-    if fit1 or fit2:
-        tempText = re.sub('—', '–', page.text)
-        if i > 143:
-            tempText = fit.sub(lambda x: fett_sperr(x), tempText)
+    fit1 = fit.search(page.text)
+    if fit1:
+        tempText = page.text
+        tempText = fit.sub(lambda x: convert_template(x), tempText)
         page.text = tempText
         #print(tempText)
-        page.save(summary='bot edit: — -> –, Fettdruck -> SperrSchrift', botflag=True, )
+        page.save(summary='bot edit: Neuausrichtung der Randnotizen', botflag=True, )
