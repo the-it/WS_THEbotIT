@@ -23,7 +23,7 @@ def crawler_cat_index_site():
     for item in watch_themes:
         searcher_werke.add_positive_category(item)
     searcher_werke.add_negative_category('Zeitschrift')
-    searcher_werke.set_depth(4)
+    searcher_werke.set_search_depth(4)
     searcher_werke.set_logic(log_or=True)
     list_werke = searcher_werke.run()
     for row in range(len(list_werke)):
@@ -75,7 +75,7 @@ def cat_crawler():
     for item in watch_themes:
         searcher_werke.add_positive_category(item)
         searcher_werke.set_logic(log_or=True)
-    searcher_werke.set_depth(4)
+    searcher_werke.set_search_depth(4)
     list_werke = searcher_werke.run()
     for row in range(len(list_werke)):
         list_werke[row] = list_werke[row]['a']['title']
