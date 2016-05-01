@@ -7,7 +7,7 @@ import pywikibot
 import time
 import json
 
-response = requests.get(url="https://petscan.wmflabs.org/?language=de&project=wikisource&combination=union&ns%5B102%5D=1&templates_yes=BlockSatzStart&output_compatability=quick-intersection&format=json&doit=1",
+response = requests.get(url="https://petscan.wmflabs.org/?language=de&project=wikisource&combination=union&ns%5B102%5D=1&templates_yes=BlockSatzStart&output_compatability=quick-intersection&sortorder=descending&format=json&doit=1",
                         headers={'User-Agent': 'Python-urllib/3.1'}, timeout=60)
 response_byte = response.content
 list_of_pages = json.loads(response_byte.decode("utf8"))['pages']
