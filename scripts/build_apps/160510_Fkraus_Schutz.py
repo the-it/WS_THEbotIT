@@ -11,27 +11,31 @@ from tools.catscan.catscan import CatScan
 
 
 def main():
-    first_re = re.compile(r'^\d{3}$')
-
     parser = optparse.OptionParser()
     parser.set_defaults(time=False)
     parser.add_option('--time', action='store_true', dest='time')
     (options, args) = parser.parse_args()
 
-    if len(args) == 1:
-        if first_re.match(args[0]):
-            print("Primary argument is : ", args[0])
-        else:
-            raise ValueError("First argument should be ...")
-    elif len(args) > 1:
-        raise ValueError("Too many command line arguments")
-
-    if options.time:
-        print('debug flag')
+    if len(args) > 4:
+        raise ValueError("Zu viele Kommandozeilenargumente.")
+    elif len(args) > 0:
+        try:
+            day = int(args[0])
+            month = int(args[1])
+            year = int(args[2])
+        except:
+            raise ValueError("Kommandozeilenargumente sind kein Datum.")
 
     scanner = CatScan()
     scanner.add_positive_category('Fertig')
-    scanner.last_change_after(2016, 5, 1)
+
+    if options.time:
+        scanner.last_change_after(year, month, day)
+        print('Es werden alle Seiten, die seit dem {}.{}.{} bearbeitet wurden und sich in der Kategorie "Fertig" befinden, dursucht'.format(day, month, year))
+    else:
+        print('Es werden alle Seiten, die sich in der Kategorie "Fertig" befinden, dursucht')
+
+
     lemmas = scanner.run()
 
 
