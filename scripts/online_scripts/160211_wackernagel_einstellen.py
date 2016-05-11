@@ -21,18 +21,18 @@ def add_zeros(number, digits):
 
 site = pywikibot.Site()
 
-for i in range(45, 673):
+for i in range(34, 651):
     try:
-        with open('dump/raw_wacker/' + str(add_zeros(i, 3)) +'.txt' ) as file_pointer:
+        with open('dump/' + str(add_zeros(i, 3)) +'.txt' ) as file_pointer:
             content = file_pointer.read()
         print(i)
-        page = pywikibot.Page(site, 'Seite:Wackernagel Geschichte der Stadt Basel Band 1.pdf/' + str(i))
+        page = pywikibot.Page(site, 'Seite:Wackernagel Geschichte der Stadt Basel Band 2,1.pdf/' + str(i))
 
-        starter = '<noinclude><pagequality level="1" user="THEbotIT" /><div class="pagetext">{{Seitenstatus2|[[Rudolf Wackernagel]]|[[Geschichte der Stadt Basel. Erster Band]]|Wackernagel Geschichte der Stadt Basel|}}{{BlockSatzStart}}\n\n\n</noinclude>'
+        starter = '<noinclude><pagequality level="1" user="THEbotIT" /><div class="pagetext">{{Seitenstatus2|[[Rudolf Wackernagel]]|[[Geschichte der Stadt Basel. Zweiten Bandes erster Teil]]|Wackernagel Geschichte der Stadt Basel|}}\n\n\n</noinclude>'
 
-        finisher = "<noinclude>{{BlockSatzEnd}}{{Zitierempfehlung|Projekt=[[Rudolf Wackernagel]]: ''[[Geschichte der Stadt Basel. Erster Band]]''. Helbing & Lichtenhahn, Basel 1907|Seite=%s}}</div></noinclude>\n" % (i-19)
+        finisher = "<noinclude>{{Zitierempfehlung|Projekt=[[Rudolf Wackernagel]]: ''[[Geschichte der Stadt Basel. Zweiten Bandes erster Teil]]''. Helbing & Lichtenhahn, Basel 1911|Seite=%s}}</div></noinclude>\n" % (i-21)
 
         page.text = starter + content + finisher
-        page.save(summary= 'automatische Seitenerstellung', botflag= True)
+        page.save(summary= 'automatische Seitenerstellung, bzw. Korrektur der Zitierempfehlung', botflag= True)
     except:
         pass
