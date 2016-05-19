@@ -59,7 +59,7 @@ for idx, page in enumerate(list_of_pages):
     temp_text = page.text
     regex_head = re.compile("\A<noinclude>.*?<\/noinclude>[^\Z]", re.DOTALL)
     regex_foot = re.compile("[^\A]<noinclude>.*?<\/noinclude>\Z", re.DOTALL)
-    regex_block_start = re.compile("\{\{BlockSatzStart\|?([^\|]{0,10})?\|?([^\|]{0,10})?\|?([^\|]{0,10})?\}\}")
+    regex_block_start = re.compile("\{\{BlockSatzStart\|?([^\|]{0,10})?\|?([^\|]{0,10})?\|?([^\|]{0,10})?\|?\}\}")
     regex_block_end = re.compile("\{\{BlockSatzEnd\}\}")
     if regex_head.search(temp_text) and regex_foot.search(temp_text):
         head = regex_head.search(temp_text).group(0)
