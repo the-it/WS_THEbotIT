@@ -4,6 +4,17 @@ import os
 import time
 import abc
 
+class Tee(object):
+    def __init__(self, *files):
+        self.files = files
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+            f.flush() # If you want the output to be visible immediately
+    def flush(self) :
+        for f in self.files:
+            f.flush()
+
 class BaseBot:
     def enter(self):
         self.logger_names = {}
@@ -18,7 +29,9 @@ class BaseBot:
             os.makedirs('logs')
         self.logger_names.update({'debug': 'logs/{}_DEBUG_{}.log'.format(os.path.basename(__file__), time.strftime('%y%m%d_%H%M%S', time.localtime()))})
         self.logger_names.update({'info': 'logs/{}_INFO_{}.log'.format(os.path.basename(__file__), time.strftime('%y%m%d_%H%M%S', time.localtime()))})
-        sys.stdout = open(self.logger_names['debug'], 'w')
+        #redirect the stdout to the terminal and a file
+        file = open(self.logger_names['debug'], 'w')
+        sys.stdout = Tee(sys.stdout, file)
 
         logger = logging.getLogger('multi logger')
         logger.setLevel(logging.DEBUG)
@@ -40,7 +53,7 @@ class BaseBot:
         #todo: sent it via email
         if os.path.isfile(self.logger_names['info']):
             os.remove(self.logger_names['info'])
-        sys.stdout.close()
+        sys.stdout.flush()
 
     def run(self):
         pass
