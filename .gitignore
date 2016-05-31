@@ -1,6 +1,9 @@
 test.py
 .idea
-scripts/authorlist/data/data.json
+WS_THEbotIT/*/data/*
+WS_THEbotIT/*/logs/*
+WS_THEbotIT/*/apicache/*
+*.lwp
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
