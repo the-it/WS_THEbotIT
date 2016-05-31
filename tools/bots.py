@@ -2,35 +2,52 @@ import logging
 import sys
 import os
 import time
-import abc
+import json
+import pywikibot
+import pickle
+
+class BotExeption(Exception):
+    pass
 
 class Tee(object):
     def __init__(self, *files):
         self.files = files
+
     def write(self, obj):
         for f in self.files:
             f.write(obj)
             f.flush() # If you want the output to be visible immediately
+
     def flush(self) :
         for f in self.files:
             f.flush()
 
-class BaseBot:
-    def enter(self):
+class BotLog(object):
+    def __enter__(self):
+        self.wiki = pywikibot.Site()
         self.logger_names = {}
+        self.timestamp_start = time.localtime()
+        self.timestamp_nice = time.strftime('%d.%m.%y um %H:%M:%S', self.timestamp_start)
         self.logger = self.set_up_logger()
-        self.logger.info('Start the bot {}'.format(os.path.basename(__file__)))
+        print("########################################################################################################################")
+        self.logger.info('Start the bot {}.'.format(os.path.basename(__file__)))
+        print("########################################################################################################################")
 
-    def exit(self):
+    def __exit__(self, exc_type , exc_val, exc_tb):
+        print("########################################################################################################################")
+        self.logger.info('Finish bot {}.'.format(os.path.basename(__file__)))
+        print("########################################################################################################################")
         self.tear_down_logger()
 
     def set_up_logger(self):
         if not os.path.exists('logs'):
             os.makedirs('logs')
-        self.logger_names.update({'debug': 'logs/{}_DEBUG_{}.log'.format(os.path.basename(__file__), time.strftime('%y%m%d_%H%M%S', time.localtime()))})
-        self.logger_names.update({'info': 'logs/{}_INFO_{}.log'.format(os.path.basename(__file__), time.strftime('%y%m%d_%H%M%S', time.localtime()))})
-        #redirect the stdout to the terminal and a file
-        file = open(self.logger_names['debug'], 'w')
+        self.logger_names.update({'debug': 'logs/{}_DEBUG.log'.format(os.path.basename(__file__))})
+        self.logger_names.update({'info': 'logs/{}_INFO_{}.log'.format(os.path.basename(__file__),
+                                                                       time.strftime('%y%m%d',
+                                                                                     time.localtime()))})
+        # redirect the stdout to the terminal and a file
+        file = open(self.logger_names['debug'], 'a')
         sys.stdout = Tee(sys.stdout, file)
 
         logger = logging.getLogger('multi logger')
@@ -49,34 +66,113 @@ class BaseBot:
     def tear_down_logger(self):
         for handler in self.logger.handlers:
             handler.close()
-
-        #todo: sent it via email
+        if not __debug__:
+            self.send_log_to_wiki()
         if os.path.isfile(self.logger_names['info']):
             os.remove(self.logger_names['info'])
+            pass
         sys.stdout.flush()
 
-    def run(self):
+    def send_log_to_wiki(self):
         pass
 
+    def dump_log_lines(self, page):
+        with open(self.logger_names['info']) as filepointer:
+            temptext = page.text
+            temptext =   temptext \
+                       + '\n\n' \
+                       + '==Log of {}=='.format(self.timestamp_nice) \
+                       + '\n\n' \
+                       +  filepointer.read().replace('\n', '\n\n')
+            page.text = temptext
+            page.save('Update the Logpage')
+
+class BotData(object):
+    def __enter__(self, logger):
+        self.logger = logger
+        self.last_run = {}
+        self.data_filename = 'data/{}.json'.format(os.path.basename(__file__))
+        self.timestamp_filename = 'data/{}.time.pickle'.format(os.path.basename(__file__))
+        try:
+            with open(self.timestamp_filename, 'rb') as filepointer:
+                self.last_run = pickle.load(filepointer)
+            self.logger.info("Open existing timestamp.")
+            try:
+                os.remove(self.timestamp_filename)
+            except:
+                pass
+        except:
+            self.logger.warning("it wasn't possible to retrieve a existing timestamp.")
+            self.last_run = None
+        try:
+            with open(self.data_filename) as filepointer:
+                self.data = json.load(filepointer)
+            self.logger.info("Open existing data.")
+            try:
+                os.rename(self.data_filename, self.data_filename + ".deprecated")
+            except:
+                pass
+        except:
+            self.data = {}
+            self.logger.info("No existing data avaiable.")
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if not exc_type:
+            if not os.path.isdir("data"):
+                os.mkdir("data")
+            with open(self.data_filename, "w") as filepointer:
+                json.dump(self.data, filepointer)
+                if os.path.exists(self.data_filename + ".deprecated"):
+                    os.remove(self.data_filename + ".deprecated")
+            with open(self.timestamp_filename, "wb") as filepointer:
+                pickle.dump({'succes': True, 'timestamp':self.timestamp_start}, filepointer)
+            self.logger.info("Data succesfully stored.")
+        else:
+            self.logger.critical("There was an error in the general procedure. No data will be kept. Timestamp will be kept.")
+            with open(self.timestamp_filename, "wb") as filepointer:
+                pickle.dump({'succes': False, 'timestamp':self.timestamp_start}, filepointer)
+
+class BaseBot(BotLog, BotData):
+
+    def __enter__(self):
+        BotLog.__enter__(self)
+        BotData.__enter__(self, self.logger)
+        #put here the not inherited commands
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        BotData.__exit__(self, exc_type, exc_val, exc_tb)
+        BotLog.__exit__(self, exc_type, exc_val, exc_tb)
+
+    def run(self):
+        self.logger.critical("You should really functionality here.")
+        raise BotExeption
+
 class OneTimeBot(BaseBot):
-    pass
+    def send_log_to_wiki(self):
+        wiki_log_page = 'Benutzer:THEbotIT/Logs'
+        page = pywikibot.Page(self.wiki, wiki_log_page)
+        self.dump_log_lines(page)
 
 class CanonicalBot(BaseBot):
-    pass
+    def send_log_to_wiki(self):
+        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(os.path.basename(__file__))
+        page = pywikibot.Page(self.wiki, wiki_log_page)
+        self.dump_log_lines(page)
 
-class SaveExecution():
+
+class save_execution():
     def __init__(self, bot: BaseBot):
         self.bot = bot
 
     def __enter__(self):
-        self.bot.enter()
+        self.bot.__enter__()
         return self.bot
 
     def __exit__(self, type, value, traceback):
-        self.bot.exit()
+        self.bot.__exit__(type, value, traceback)
 
 if __name__ == "__main__":
     bot = OneTimeBot()
-    with SaveExecution(bot):
+    with save_execution(bot):
         bot.run()
 

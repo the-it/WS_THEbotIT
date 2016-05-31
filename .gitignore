@@ -1,9 +1,10 @@
 test.py
 .idea
-WS_THEbotIT/*/data/*
-WS_THEbotIT/*/logs/*
-WS_THEbotIT/*/apicache/*
+**/data/*
+**/logs/*
+**/apicache/*
 *.lwp
+*.ctrl
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -63,5 +64,3 @@ docs/_build/
 
 # PyBuilder
 target/
-
-
