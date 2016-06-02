@@ -190,10 +190,10 @@ for idx, i in enumerate(range(6, 297, 2)):
     else:
         status = "Korrigiert"
 
-    print(status_1, status_2, status)
+    print('Vorhandene Statis:', status_1, status_2,'->', status)
     tempstatus = re.search("(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", page.text)
-    print(tempstatus.group())
+    print('Ist:',tempstatus.group())
     if tempstatus.group() != status:
-        temptext = re.sub("\|STATUS=(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", "|STATUS={}".format(status), page.text)
+        temptext = re.sub("\|STATUS=(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", status, page.text)
         page.text = temptext
         page.save(summary= "automatische Setzung des Seitenstatus", botflag= True)
