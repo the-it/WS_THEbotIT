@@ -12,14 +12,14 @@ fit_keyword = re.compile("^(?:''')?(?:\[\[RE:)?(?:''')?([A-Za-z][äÄöÖüÜßa
 fit_keyword_not_linked = re.compile("^(?:''')?([A-Za-z][äÄöÖüÜßa-z\(\)\?]{1,20})(?:''')?")
 
 def convert_one_link(hit, keyword):
-    return '[[RE:' + keyword + '|' + hit + ']]'
+    return '[[RE:' + keyword + '|' + hit.group(1) + ']]'
 
 def convert_numbers(hit, keyword):
-    return '[[RE:' + keyword + ' ' + '' +'|' + hit + ']]'
+    return '[[RE:' + keyword + ' ' + '' +'|' + hit.group(1) + ']]'
 
 def convert_line(line):
     if fit_keyword.search(line):
-        keyword = fit_keyword.find(line).group(1)
+        keyword = fit_keyword.search(line).group(1)
         count =  fit_numbers.findall(line)
         if len(count) <= 1:
             line = fit_keyword_not_linked.sub(lambda x: convert_one_link(x, keyword), line)
