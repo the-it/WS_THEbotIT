@@ -22,6 +22,7 @@ class AuthorList(CanonicalBot):
         self.botname = 'AuthorList'
         self.searcher = CatScan()
         self.wiki = pywikibot.Site()
+        self.string_list = []
 
     def __dig_up_data(self):
         self.timestamp = None
@@ -29,6 +30,7 @@ class AuthorList(CanonicalBot):
     def run(self):
         lemma_list = self.run_searcher()
         self.build_database(lemma_list)
+        self.convert_to_table()
 
     def run_searcher(self):
         # was the last run successful
@@ -85,6 +87,24 @@ class AuthorList(CanonicalBot):
                 self.logger.error('author {} have a problem'.format(author['title']))
             self.data.update({author['id']: dict_author})
 
+    def convert_to_table(self):
+        self.string_list.append('Diese Liste der Autoren enthält alle {}<ref>Stand: {} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'.format(len(self.data), datetime.datetime.now().strftime( '%-d. %-m. %Y, %-H:%M')))
+        self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften nach der jeweiligen Spalte sortiert werden.')
+        self.string_list.append('<!--')
+        self.string_list.append('Diese Liste wurde durch ein Computerprogramm erstellt, das die Daten verwendet, die aus den Infoboxen auf den Autorenseiten stammen.')
+        self.string_list.append('Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werden.')
+        self.string_list.append('-->')
+        self.string_list.append('{| class="wikitable sortable"')
+        self.string_list.append('! Name')
+        self.string_list.append('! data-sort-type="text" | Geb.-datum')
+        self.string_list.append('! data-sort-type="text" | Tod.-datum')
+        self.string_list.append('! Beschreibung')
+        for item in self.data:
+            self.string_list.append('|-')
+            self.string_list.append('| data-sort-value="Aakjaer, Jeppe" | [[Jeppe Aakjær|Aakjær, Jeppe]]')
+            self.string_list.append('| data-sort-value="1866-09-10" | 10. September 1866')
+            self.string_list.append('| data-sort-value="1930-04-22" | 22. April 1930')
+            self.string_list.append('| [[Dänemark|dänischer]] Schriftsteller')
 
 if __name__ == "__main__":
     bot = AuthorList()
