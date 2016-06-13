@@ -2,6 +2,7 @@ import logging
 import sys
 import os
 import time
+import datetime
 import json
 import pywikibot
 import pickle
@@ -30,9 +31,11 @@ class BotLog(object):
     def __enter__(self):
         self.wiki = pywikibot.Site()
         self.logger_names = {}
-        self.timestamp_start = time.localtime()
-        self.timestamp_nice = time.strftime('%d.%m.%y um %H:%M:%S', self.timestamp_start)
+        self.timestamp_start = datetime.datetime.now()
+        print(self.timestamp_start)
+        self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
         self.logger = self.set_up_logger()
+        sys.excepthook = self.my_excepthook
         print("########################################################################################################################")
         self.logger.info('Start the bot {}.'.format(self.botname))
         print("########################################################################################################################")
@@ -43,6 +46,10 @@ class BotLog(object):
         print("########################################################################################################################")
         self.tear_down_logger()
 
+    def my_excepthook(self, excType, excValue, traceback):
+        self.logger.error("Logging an uncaught exception",
+                     exc_info=(excType, excValue, traceback))
+
     def set_up_logger(self):
         if not os.path.exists('data'):
             os.makedirs('data')
@@ -51,12 +58,12 @@ class BotLog(object):
                                                                        time.strftime('%y%m%d',
                                                                                      time.localtime()))})
         # redirect the stdout to the terminal and a file
-        file = open(self.logger_names['debug'], 'a')
+        file = open(self.logger_names['debug'], 'a', encoding='utf8')
         sys.stdout = Tee(sys.stdout, file)
 
         logger = logging.getLogger('multi logger')
         logger.setLevel(logging.DEBUG)
-        error_log = logging.FileHandler(self.logger_names['info'])
+        error_log = logging.FileHandler(self.logger_names['info'], encoding='utf8')
         error_log.setLevel(logging.INFO)
         debug_stream = logging.StreamHandler(sys.stdout)
         debug_stream.setLevel(logging.DEBUG)
@@ -97,7 +104,6 @@ class BotData(object):
 
     def __enter__(self, logger):
         self.logger = logger
-        self.last_run = {}
         self.data_filename = 'data/{}.json'.format(self.botname)
         try:
             with open(self.data_filename) as filepointer:
@@ -109,7 +115,7 @@ class BotData(object):
                 pass
         except:
             self.data = {}
-            self.logger.info("No existing data avaiable.")
+            self.logger.warning("No existing data avaiable.")
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if not exc_type:
@@ -119,24 +125,24 @@ class BotData(object):
                 json.dump(self.data, filepointer)
                 if os.path.exists(self.data_filename + ".deprecated"):
                     os.remove(self.data_filename + ".deprecated")
-            self.logger.info("Data succesfully stored.")
+            self.logger.info("Data successfully stored.")
         else:
             self.logger.critical("There was an error in the general procedure. No data will be kept. A backup copy was produced.")
 
 class BotTimestamp(object):
     def __init__(self):
         self.botname =  'BotTimestamp'
+        self.last_run = {}
 
     def __enter__(self, logger):
         self.logger = logger
-        self.last_run = {}
-        self.timestamp_filename = 'data/{}.time.pickle'.format(self.botname)
+        self.filename = 'data/{}.time.pickle'.format(self.botname)
         try:
-            with open(self.timestamp_filename, 'rb') as filepointer:
+            with open(self.filename, 'rb') as filepointer:
                 self.last_run = pickle.load(filepointer)
             self.logger.info("Open existing timestamp.")
             try:
-                os.remove(self.timestamp_filename)
+                os.remove(self.filename)
             except:
                 pass
         except:
@@ -147,11 +153,12 @@ class BotTimestamp(object):
         if not exc_type:
             if not os.path.isdir("data"):
                 os.mkdir("data")
-            with open(self.timestamp_filename, "wb") as filepointer:
+            with open(self.filename, "wb") as filepointer:
                 pickle.dump({'succes': True, 'timestamp':self.timestamp_start}, filepointer)
+            self.logger.info("Timestamp successfully kept.")
         else:
             self.logger.critical("There was an error in the general procedure. Timestamp will be kept.")
-            with open(self.timestamp_filename, "wb") as filepointer:
+            with open(self.filename, "wb") as filepointer:
                 pickle.dump({'succes': False, 'timestamp':self.timestamp_start}, filepointer)
 
 class BaseBot(BotLog, BotTimestamp):
@@ -205,7 +212,7 @@ class CanonicalBot(BaseBot, BotData):
         self.dump_log_lines(page)
 
 
-class save_execution():
+class SaveExecution():
     def __init__(self, bot: BaseBot):
         self.bot = bot
 
@@ -218,6 +225,6 @@ class save_execution():
 
 if __name__ == "__main__":
     bot = CanonicalBot()
-    with save_execution(bot):
+    with SaveExecution(bot):
         bot.run()
 
