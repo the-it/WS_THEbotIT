@@ -65,7 +65,7 @@ class DateConversion:
         elif match_complete_date:
             # Case: complete date
             li_str = re.split('\.?[ ]?', match_complete_date.group())
-            li_str[0] = re.sub('\.', '', li_str[0]) # Punkt aus dem Tag entfernen
+            li_str[0] = self._day_to_int(re.sub('\.', '', li_str[0])) # Punkt aus dem Tag entfernen
             li_str[1] = self._month_to_int(li_str[1])  #Monat in Zahl verwandeln
             li_str[2] = self._append_zeros_to_year(li_str[2]) #append zeros to the year
             str_re_form = ''.join([li_str[2], '-', li_str[1], '-', li_str[0]])
@@ -116,3 +116,14 @@ class DateConversion:
                 return month_mapping[month]
             except:
                 raise ValueError(month)
+
+    @staticmethod
+    def _day_to_int(day):
+        try:
+            day_int = int(day)
+            if day_int < 10:
+                return '0' + str(day_int)
+            else:
+                return str(day_int)
+        except Exception:
+            raise ValueError(day)

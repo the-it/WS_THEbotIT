@@ -30,7 +30,9 @@ class AuthorList(CanonicalBot):
     def run(self):
         lemma_list = self.run_searcher()
         self.build_database(lemma_list)
-        self.convert_to_table()
+        dump = pywikibot.Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
+        dump.text =  self.convert_to_table()
+        dump.save('die Liste wurde auf den aktuellen Stand gebracht.', botflag=True)
 
     def run_searcher(self):
         # was the last run successful
@@ -40,8 +42,9 @@ class AuthorList(CanonicalBot):
                                             int(start_of_search.strftime('%m')),
                                             int(start_of_search.strftime('%d')) )
             self.logger.info('The date {} is set to the argument "after".'.format(start_of_search.strftime("%d.%m.%Y")))
-        elif __debug__:
-            yesterday = datetime.datetime.now() - timedelta(days=1)
+        #elif __debug__:
+        elif False:
+            yesterday = datetime.datetime.now() - timedelta(days=20)
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
                                             int(yesterday.strftime('%d')) )
@@ -52,7 +55,7 @@ class AuthorList(CanonicalBot):
         self.searcher.add_yes_template('Personendaten')
         self.searcher.get_wikidata_items()
 
-        print(self.searcher)
+        self.logger.debug(self.searcher)
 
         return self.searcher.run()
 
@@ -70,7 +73,11 @@ class AuthorList(CanonicalBot):
             # extract the Personendaten-block form the wikisource page
             page = pywikibot.Page(self.wiki, author['title'])
             try:
-                personendaten = re.search('\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
+                try:
+                    personendaten = re.search('\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
+                except:
+                    self.logger.error('No valid block "Personendaten" was found.')
+                    personendaten = None
                 if personendaten:
                     template_extractor = TemplateHandler(personendaten)
                     dict_author.update({'name': template_extractor.get_parameter('NACHNAME')['value']})
@@ -79,16 +86,52 @@ class AuthorList(CanonicalBot):
                     dict_author.update({'death': template_extractor.get_parameter('STERBEDATUM')['value']})
                     dict_author.update({'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
                     dict_author.update({'synonyms': template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
+                    try:
+                        dict_author.update({'sortkey': template_extractor.get_parameter('SORTIERUNG')['value']})
+                        if dict_author['sortkey'] == '':
+                            raise ValueError
+                    except:
+                        self.logger.debug('there is no sortkey for {}.'.format(author['title']))
+                        # make a dummy key
+                        dict_author['sortkey'] = dict_author['name'] + ', ' + dict_author['first_name']
                     dict_author.update({'wikidata' : author['q']})
-                else:
-                    self.logger.error('No valid block "Personendaten" was found.')
+                    self.data.update({author['id']: dict_author})
             except Exception as e:
                 self.logger.error(traceback.format_exc())
                 self.logger.error('author {} have a problem'.format(author['title']))
-            self.data.update({author['id']: dict_author})
+
 
     def convert_to_table(self):
-        self.string_list.append('Diese Liste der Autoren enthält alle {}<ref>Stand: {} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'.format(len(self.data), datetime.datetime.now().strftime( '%-d. %-m. %Y, %-H:%M')))
+        # make a list of lists
+        self.logger.info('Start compiling.')
+        list_authors = []
+        for key in self.data:
+            author_dict = self.data[key]
+            list_author = []
+            list_author.append(author_dict['sortkey']) #0
+            list_author.append(author_dict['title'].replace('_', ' ')) #1
+            list_author.append(author_dict['name'])#2
+            list_author.append(author_dict['first_name'])#3
+            list_author.append(author_dict['birth'])#4
+            try:
+                list_author.append(str(DateConversion(author_dict['birth'])))#5
+            except:
+                self.logger.error('Can´t compile sort key for birth: {}'.format(author_dict['birth']))
+                list_author.append('!-00-00')  # 5
+            list_author.append(author_dict['death']) #6
+            try:
+                list_author.append(str(DateConversion(author_dict['death'])))#7
+            except:
+                self.logger.error('Can´t compile sort key for death: {}'.format(author_dict['death']))
+                list_author.append('!-00-00')  # 7
+            list_author.append(author_dict['description'])#8
+            list_authors.append(list_author)
+        # sorting the list
+        self.logger.info('Start sorting.')
+        list_authors.sort(key = lambda x: x[0])
+
+        self.logger.info('Start printing.')
+        self.string_list.append('Diese Liste der Autoren enthält alle {}<ref>Stand: {dt.day}.{dt.month}.{dt.year}, {dt.hour}:{dt.minute} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'.format(len(self.data), dt = datetime.datetime.now()))
         self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften nach der jeweiligen Spalte sortiert werden.')
         self.string_list.append('<!--')
         self.string_list.append('Diese Liste wurde durch ein Computerprogramm erstellt, das die Daten verwendet, die aus den Infoboxen auf den Autorenseiten stammen.')
@@ -96,15 +139,32 @@ class AuthorList(CanonicalBot):
         self.string_list.append('-->')
         self.string_list.append('{| class="wikitable sortable"')
         self.string_list.append('! Name')
+        self.string_list.append('! Name -Sortkey')
         self.string_list.append('! data-sort-type="text" | Geb.-datum')
+        self.string_list.append('! data-sort-type="text" | Geb.-Sortkey')
         self.string_list.append('! data-sort-type="text" | Tod.-datum')
+        self.string_list.append('! data-sort-type="text" | Tod.-Sortkey')
         self.string_list.append('! Beschreibung')
-        for item in self.data:
+        for list_author in list_authors:
             self.string_list.append('|-')
-            self.string_list.append('| data-sort-value="Aakjaer, Jeppe" | [[Jeppe Aakjær|Aakjær, Jeppe]]')
-            self.string_list.append('| data-sort-value="1866-09-10" | 10. September 1866')
-            self.string_list.append('| data-sort-value="1930-04-22" | 22. April 1930')
-            self.string_list.append('| [[Dänemark|dänischer]] Schriftsteller')
+            self.string_list.append('|{}, {}'.format(list_author[2], list_author[3]))
+            self.string_list.append('| {}'.format(list_author[0]))
+            self.string_list.append('| {}'.format(list_author[4]))
+            self.string_list.append('| {}'.format(list_author[5]))
+            self.string_list.append('| {}'.format(list_author[6]))
+            self.string_list.append('| {}'.format(list_author[7]))
+            #self.string_list.append('| {}'.format(list_author[8]))
+        self.string_list.append('|}')
+        self.string_list.append('')
+        self.string_list.append('== Anmerkungen ==')
+        self.string_list.append('<references/>')
+        self.string_list.append('')
+        self.string_list.append('{{SORTIERUNG: Autoren  # Liste der}}')
+        self.string_list.append('[[Kategorie:Listen]]')
+        self.string_list.append('[[Kategorie:Autoren |!]]')
+
+        return '\n'.join(self.string_list)
+
 
 if __name__ == "__main__":
     bot = AuthorList()

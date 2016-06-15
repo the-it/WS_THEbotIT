@@ -207,7 +207,7 @@ class CanonicalBot(BaseBot, BotData):
         pass
 
     def send_log_to_wiki(self):
-        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(os.path.basename(__file__))
+        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.botname)
         page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
 
