@@ -5,11 +5,11 @@ import time
 import datetime
 import json
 import pywikibot
-import pickle
-from dill.source import getname
+
 
 class BotExeption(Exception):
     pass
+
 
 class Tee(object):
     def __init__(self, *files):
@@ -18,15 +18,16 @@ class Tee(object):
     def write(self, obj):
         for f in self.files:
             f.write(obj)
-            f.flush() # If you want the output to be visible immediately
+            f.flush()  # If you want the output to be visible immediately
 
-    def flush(self) :
+    def flush(self):
         for f in self.files:
             f.flush()
 
+
 class BotLog(object):
     def __init__(self):
-        self.botname = 'Botlog'
+        self.botname = 'BotLog'
 
     def __enter__(self):
         self.wiki = pywikibot.Site()
@@ -40,15 +41,14 @@ class BotLog(object):
         self.logger.info('Start the bot {}.'.format(self.botname))
         print("########################################################################################################################")
 
-    def __exit__(self, exc_type , exc_val, exc_tb):
+    def __exit__(self, exc_type, exc_val, exc_tb):
         print("########################################################################################################################")
         self.logger.info('Finish bot {}.'.format(self.botname))
         print("########################################################################################################################")
         self.tear_down_logger()
 
     def my_excepthook(self, excType, excValue, traceback):
-        self.logger.error("Logging an uncaught exception",
-                     exc_info=(excType, excValue, traceback))
+        self.logger.error("Logging an uncaught exception", exc_info=(excType, excValue, traceback))
 
     def set_up_logger(self):
         if not os.path.exists('data'):
@@ -90,13 +90,14 @@ class BotLog(object):
     def dump_log_lines(self, page):
         with open(self.logger_names['info']) as filepointer:
             temptext = page.text
-            temptext =   temptext \
-                       + '\n\n' \
-                       + '==Log of {}=='.format(self.timestamp_nice) \
-                       + '\n\n' \
-                       +  filepointer.read().replace('\n', '\n\n')
+            temptext = temptext \
+                + '\n\n' \
+                + '==Log of {}=='.format(self.timestamp_nice) \
+                + '\n\n' \
+                + filepointer.read().replace('\n', '\n\n')
             page.text = temptext
-            page.save('Update the Logpage')
+            page.save('Update of Bot {}'.format(self.botname), botflag=True)
+
 
 class BotData(object):
     def __init__(self):
@@ -129,6 +130,7 @@ class BotData(object):
         else:
             self.logger.critical("There was an error in the general procedure. No data will be kept. A backup copy was produced.")
 
+
 class BotTimestamp(object):
     def __init__(self):
         self.botname =  'BotTimestamp'
@@ -156,16 +158,18 @@ class BotTimestamp(object):
             if not os.path.isdir("data"):
                 os.mkdir("data")
             with open(self.filename, "w") as filepointer:
-                json.dump({'succes': True, 'timestamp':self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
+                json.dump({'succes': True, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
             self.logger.info("Timestamp successfully kept.")
         else:
             self.logger.critical("There was an error in the general procedure. Timestamp will be kept.")
             with open(self.filename, "w") as filepointer:
-                json.dump({'succes': False, 'timestamp':self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
+                json.dump({'succes': False, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
 
 
 class BaseBot(BotLog, BotTimestamp):
     def __init__(self):
+        BotLog.__init__(self)
+        BotTimestamp.__init__(self)
         self.botname =  'BaseBot'
 
     def __enter__(self):
@@ -181,8 +185,10 @@ class BaseBot(BotLog, BotTimestamp):
         self.logger.critical("You should really functionality here.")
         raise BotExeption
 
+
 class OneTimeBot(BaseBot):
     def __init__(self):
+        BaseBot.__init__(self)
         self.botname = 'OneTimeBot'
 
     def run(self):
@@ -193,8 +199,11 @@ class OneTimeBot(BaseBot):
         page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
 
+
 class CanonicalBot(BaseBot, BotData):
     def __init__(self):
+        BaseBot.__init__(self)
+        BotData.__init__(self)
         self.botname = 'CanonicalBot'
 
     def __enter__(self):
@@ -213,6 +222,15 @@ class CanonicalBot(BaseBot, BotData):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.botname)
         page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
+
+
+class PingBot(CanonicalBot):
+    def __init__(self):
+        CanonicalBot.__init__(self)
+        self.botname = 'PingBot'
+
+    def run(self):
+        self.logger.info('Ping')
 
 
 class SaveExecution():
