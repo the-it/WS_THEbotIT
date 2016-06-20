@@ -15,6 +15,17 @@ month_mapping = {"Januar":    '01',
                  "Oktober":   '10',
                  "November":  '11',
                  "Dezember":  '12',
+                 "Jan":       '01',
+                 "Feb":       '02',
+                 "Mär":       '03',
+                 "Apr":       '04',
+                 "Jun":       '06',
+                 "Jul":       '07',
+                 "Aug":       '08',
+                 "Sept":      '09',
+                 "Okt":       '10',
+                 "Nov":       '11',
+                 "Dez":       '12',
                  "1.":        '01',
                  "2.":        '02',
                  "3.":        '03',
@@ -41,17 +52,17 @@ class DateConversion:
         str_re_form = self._chop_ref(self.rawstring)
 
         #inspect the string
-        match_dont_known = re.search('(unbekannt|Unbekannt)', str_re_form)
+        match_dont_known = re.search('(unbekannt|Unbekannt|\?)', str_re_form)
+        match_preset = re.search('<!--(\d{4}-\d{2}-\d{2})-->', str_re_form)
         match_before_domino = re.search('v. Chr', str_re_form)
-        match_only_century = re.search('\d{1,2}\. Jahrhundert', str_re_form)
+        match_only_century = re.search('\d{1,2}\. (Jahrhundert|Jh.)', str_re_form)
         match_complete_date = re.search('\d{1,2}(\.|\. | )(\d\d?|Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez)\w*(\.|\. | )(\d{1,4})', str_re_form)
         match_no_day = re.search('(\d{1,2}\.|Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez)\w*(\.|\. | )(\d{1,4})', str_re_form)
         match_only_year = re.search('\d{1,4}', str_re_form)
 
         #sort for structure of the information and interpred it
-        if str_re_form == '' or match_dont_known:
-            # Case: empty rawstring
-            str_re_form = '!-00-00'
+        if match_preset:
+            str_re_form = match_preset.group(1)
         elif match_only_century:
             # Case: only a century given
             century = re.search('\d{1,2}', match_only_century.group())
@@ -80,6 +91,9 @@ class DateConversion:
             li_str = re.split(' ', match_only_year.group())
             li_str[0] = self._append_zeros_to_year(li_str[0]) #append zeros to the year
             str_re_form = ''.join([li_str[0], '-', '00', '-', '00'])
+        elif str_re_form == '' or match_dont_known:
+            # Case: empty rawstring
+            str_re_form = '!-00-00'
         else:
             raise ValueError(str_re_form)
 

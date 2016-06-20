@@ -104,7 +104,7 @@ class BotData(object):
 
     def __enter__(self, logger):
         self.logger = logger
-        self.data_filename = 'data/{}.json'.format(self.botname)
+        self.data_filename = 'data/{}.data.json'.format(self.botname)
         try:
             with open(self.data_filename) as filepointer:
                 self.data = json.load(filepointer)
@@ -136,30 +136,33 @@ class BotTimestamp(object):
 
     def __enter__(self, logger):
         self.logger = logger
-        self.filename = 'data/{}.time.pickle'.format(self.botname)
+        self.filename = 'data/{}.last_run.json'.format(self.botname)
+        self.timeformat = '%Y-%m-%d_%H:%M:%S'
         try:
-            with open(self.filename, 'rb') as filepointer:
-                self.last_run = pickle.load(filepointer)
+            with open(self.filename, 'r') as filepointer:
+                self.last_run = json.load(filepointer)
+                self.last_run['timestamp'] = datetime.datetime.strptime(self.last_run['timestamp'], self.timeformat)
             self.logger.info("Open existing timestamp.")
             try:
                 os.remove(self.filename)
             except:
                 pass
         except:
-            self.logger.warning("it wasn't possible to retrieve a existing timestamp.")
+            self.logger.warning("it wasn't possible to retrieve an existing timestamp.")
             self.last_run = None
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if not exc_type:
             if not os.path.isdir("data"):
                 os.mkdir("data")
-            with open(self.filename, "wb") as filepointer:
-                pickle.dump({'succes': True, 'timestamp':self.timestamp_start}, filepointer)
+            with open(self.filename, "w") as filepointer:
+                json.dump({'succes': True, 'timestamp':self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
             self.logger.info("Timestamp successfully kept.")
         else:
             self.logger.critical("There was an error in the general procedure. Timestamp will be kept.")
-            with open(self.filename, "wb") as filepointer:
-                pickle.dump({'succes': False, 'timestamp':self.timestamp_start}, filepointer)
+            with open(self.filename, "w") as filepointer:
+                json.dump({'succes': False, 'timestamp':self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
+
 
 class BaseBot(BotLog, BotTimestamp):
     def __init__(self):

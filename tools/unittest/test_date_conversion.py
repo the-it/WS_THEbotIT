@@ -102,6 +102,10 @@ class TestDateConversion(TestCase):
     self.assertEqual('1100-00-00', str(converter))
     del converter
 
+    converter = DateConversion('lebte im 4. Jh. v. Chr.')
+    self.assertEqual('-9599-00-00', str(converter))
+    del converter
+
     converter = DateConversion('1. Jahrhundert')
     self.assertEqual('0000-00-00', str(converter))
     del converter
@@ -163,6 +167,24 @@ class TestDateConversion(TestCase):
 
     converter = DateConversion('Unbekannt')
     self.assertEqual('!-00-00', str(converter))
+    del converter
+
+    converter = DateConversion('?')
+    self.assertEqual('!-00-00', str(converter))
+    del converter
+
+    converter = DateConversion('unbekannt (getauft 25. Dezember 1616)')
+    self.assertEqual('1616-12-25', str(converter))
+    del converter
+
+  def test_authorlist(self):
+    converter = DateConversion('20. Nov. 1815')
+    self.assertEqual('1815-11-20', str(converter))
+    del converter
+
+  def preset_for_date(self):
+    converter = DateConversion('Mitte 15. Jh.<!--1450-00-00-->')
+    self.assertEqual('1450-00-00', str(converter))
     del converter
 
   @unittest.skip("full Test... only when necessary")

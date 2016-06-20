@@ -3,51 +3,64 @@ __author__ = 'erik'
 import sys
 import os
 import pywikibot
-import json
 import re
 import traceback
-import time
 import datetime
 from datetime import timedelta
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
-from tools.catscan.catscan import CatScan
+from tools.catscan import CatScan
 from tools.date_conversion import DateConversion
-from tools.wiki_template_handler.template_handler import TemplateHandler
+from tools.template_handler import TemplateHandler
 from tools.bots import CanonicalBot, SaveExecution
+
+match_property = re.compile('\{\{#property:P(\d{1,4})\}\}')
+number_to_month = { '1': 'Januar',
+                    '2': 'Februar',
+                    '3': 'März',
+                    '4': 'April',
+                    '5': 'Mai',
+                    '6': 'Juni',
+                    '7': 'Juli',
+                    '8': 'August',
+                    '9': 'September',
+                    '10': 'Oktober',
+                    '11': 'November',
+                    '12': 'Dezember',}
 
 class AuthorList(CanonicalBot):
     def __init__(self):
         self.botname = 'AuthorList'
         self.searcher = CatScan()
         self.wiki = pywikibot.Site()
+        self.repo = self.wiki.data_repository()  # this is a DataSite object
         self.string_list = []
 
-    def __dig_up_data(self):
-        self.timestamp = None
-
     def run(self):
-        lemma_list = self.run_searcher()
-        self.build_database(lemma_list)
-        dump = pywikibot.Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
-        dump.text =  self.convert_to_table()
+        lemma_list = self._run_searcher()
+        self._build_database(lemma_list)
+        if __debug__:
+            dump = pywikibot.Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
+        else:
+            dump = pywikibot.Page(self.wiki, 'Liste der Autoren')
+        dump.text =  self._convert_to_table()
         dump.save('die Liste wurde auf den aktuellen Stand gebracht.', botflag=True)
 
-    def run_searcher(self):
+    def _run_searcher(self):
         # was the last run successful
-        if self.last_run and self.last_run['succes'] and self.data:
+        #if __debug__:
+        if False:
+            yesterday = datetime.datetime.now() - timedelta(days=30)
+            self.searcher.last_change_after(int(yesterday.strftime('%Y')),
+                                            int(yesterday.strftime('%m')),
+                                            int(yesterday.strftime('%d')))
+        elif self.last_run and self.last_run['succes'] and self.data:
             start_of_search = self.last_run['timestamp'] - timedelta(days=1)
             self.searcher.last_change_after(int(start_of_search.strftime('%Y')),
                                             int(start_of_search.strftime('%m')),
                                             int(start_of_search.strftime('%d')) )
             self.logger.info('The date {} is set to the argument "after".'.format(start_of_search.strftime("%d.%m.%Y")))
-        #elif __debug__:
-        elif False:
-            yesterday = datetime.datetime.now() - timedelta(days=20)
-            self.searcher.last_change_after(int(yesterday.strftime('%Y')),
-                                            int(yesterday.strftime('%m')),
-                                            int(yesterday.strftime('%d')) )
         else:
             self.logger.warning('There was no timestamp found of the last run, so the argument "after" is not set.')
         self.searcher.add_namespace(0)  # search in main namespace
@@ -59,7 +72,7 @@ class AuthorList(CanonicalBot):
 
         return self.searcher.run()
 
-    def build_database(self, lemma_list):
+    def _build_database(self, lemma_list):
         for idx, author in enumerate(lemma_list):
             self.logger.debug('{}/{} {}'.format(idx + 1, len(lemma_list), author['title']))
             # delete preexisting data of this author
@@ -79,6 +92,8 @@ class AuthorList(CanonicalBot):
                     self.logger.error('No valid block "Personendaten" was found.')
                     personendaten = None
                 if personendaten:
+                    personendaten = re.sub('<ref.*?>.*?<\/ref>|<ref.*?\/>', '', personendaten)
+                    personendaten = re.sub('\{\{CRef|.*?(?:\{\{.*?\}\})?}}', '', personendaten)
                     template_extractor = TemplateHandler(personendaten)
                     dict_author.update({'name': template_extractor.get_parameter('NACHNAME')['value']})
                     dict_author.update({'first_name': template_extractor.get_parameter('VORNAMEN')['value']})
@@ -94,14 +109,17 @@ class AuthorList(CanonicalBot):
                         self.logger.debug('there is no sortkey for {}.'.format(author['title']))
                         # make a dummy key
                         dict_author['sortkey'] = dict_author['name'] + ', ' + dict_author['first_name']
-                    dict_author.update({'wikidata' : author['q']})
+                    try:
+                        dict_author.update({'wikidata' : author['q']})
+                    except:
+                        self.logger.warning('The autor {} has no wikidata_item'.format(author['title']))
                     self.data.update({author['id']: dict_author})
             except Exception as e:
                 self.logger.error(traceback.format_exc())
                 self.logger.error('author {} have a problem'.format(author['title']))
 
 
-    def convert_to_table(self):
+    def _convert_to_table(self):
         # make a list of lists
         self.logger.info('Start compiling.')
         list_authors = []
@@ -112,18 +130,14 @@ class AuthorList(CanonicalBot):
             list_author.append(author_dict['title'].replace('_', ' ')) #1
             list_author.append(author_dict['name'])#2
             list_author.append(author_dict['first_name'])#3
-            list_author.append(author_dict['birth'])#4
-            try:
-                list_author.append(str(DateConversion(author_dict['birth'])))#5
-            except:
-                self.logger.error('Can´t compile sort key for birth: {}'.format(author_dict['birth']))
-                list_author.append('!-00-00')  # 5
-            list_author.append(author_dict['death']) #6
-            try:
-                list_author.append(str(DateConversion(author_dict['death'])))#7
-            except:
-                self.logger.error('Can´t compile sort key for death: {}'.format(author_dict['death']))
-                list_author.append('!-00-00')  # 7
+
+            for event in ['birth', 'death']:
+                list_author.append(self._handle_birth_and_death(event, author_dict)) #4,6
+                try:
+                    list_author.append(str(DateConversion(list_author[-1])))#5,7
+                except:
+                    self.logger.error('Can´t compile sort key for {}: {}'.format(event, author_dict[event]))
+                    list_author.append('!-00-00')  # 5,7
             list_author.append(author_dict['description'])#8
             list_authors.append(list_author)
         # sorting the list
@@ -139,21 +153,20 @@ class AuthorList(CanonicalBot):
         self.string_list.append('-->')
         self.string_list.append('{| class="wikitable sortable"')
         self.string_list.append('! Name')
-        self.string_list.append('! Name -Sortkey')
         self.string_list.append('! data-sort-type="text" | Geb.-datum')
-        self.string_list.append('! data-sort-type="text" | Geb.-Sortkey')
         self.string_list.append('! data-sort-type="text" | Tod.-datum')
-        self.string_list.append('! data-sort-type="text" | Tod.-Sortkey')
         self.string_list.append('! Beschreibung')
         for list_author in list_authors:
             self.string_list.append('|-')
-            self.string_list.append('|{}, {}'.format(list_author[2], list_author[3]))
-            self.string_list.append('| {}'.format(list_author[0]))
-            self.string_list.append('| {}'.format(list_author[4]))
-            self.string_list.append('| {}'.format(list_author[5]))
-            self.string_list.append('| {}'.format(list_author[6]))
-            self.string_list.append('| {}'.format(list_author[7]))
-            #self.string_list.append('| {}'.format(list_author[8]))
+            if list_author[2] and list_author[3]:
+                self.string_list.append('|data-sort-value="{}"|[[{}|{}, {}]]'.format(list_author[0], list_author[1], list_author[2],list_author[3]))
+            elif list_author[3]:
+                self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'.format(list_author[0], list_author[1], list_author[3]))
+            else:
+                self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'.format(list_author[0], list_author[1], list_author[2]))
+            self.string_list.append('|data-sort-value="{}"|{}'.format(list_author[5], list_author[4]))
+            self.string_list.append('|data-sort-value="{}"|{}'.format(list_author[7], list_author[6]))
+            self.string_list.append('| {}'.format(list_author[8]))
         self.string_list.append('|}')
         self.string_list.append('')
         self.string_list.append('== Anmerkungen ==')
@@ -164,6 +177,36 @@ class AuthorList(CanonicalBot):
         self.string_list.append('[[Kategorie:Autoren |!]]')
 
         return '\n'.join(self.string_list)
+
+    def _handle_birth_and_death(self, event, author_dict):
+        if author_dict[event] == '' or match_property.search(author_dict[event]):
+            self.logger.debug('No valid entry in {} for {} ... Fallback to wikidata'.format(event, author_dict['title']))
+            try:
+                item = pywikibot.ItemPage(self.repo, author_dict['wikidata'])
+                item.get()
+                if event == 'birth':
+                    claim = 'P569'
+                else:
+                    claim = 'P570'
+                date_from_data = item.claims[claim][0].getTarget()
+                if date_from_data.day == 1 and date_from_data.month == 1:
+                    date_from_data = str(date_from_data.year)
+                elif date_from_data.day == 0:
+                    if date_from_data.month == 0:
+                        date_from_data = str(date_from_data.year)
+                    else:
+                        date_from_data = number_to_month[date_from_data.month] + '.' + str(date_from_data.year)
+                else:
+                    date_from_data = str(date_from_data.day) + '.' + number_to_month[date_from_data.month] + '.' + str(date_from_data.year)
+                if re.search('-', date_from_data):
+                    date_from_data = date_from_data.replace('-', '') + ' v. Chr.'
+                self.logger.debug('Found {} @ wikidata for {}'.format(date_from_data, event))
+                return(date_from_data)  # 4,6
+            except:
+                self.logger.debug("Wasn't able to ge any data from wikidata")
+                return('')  # 4,6
+        else:
+            return(author_dict[event])  # 4,6
 
 
 if __name__ == "__main__":
