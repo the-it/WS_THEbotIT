@@ -133,3 +133,22 @@ class TestTemplateHandler(TestCase):
         handler = TemplateHandler(test_string_bug)
         real_dict = handler.get_parameterlist()
         self.assertEqual(test_list_bug, real_dict)
+
+        test_string_argument_bug = 'GEBURTSORT=Klein Flottbek (heute zu [[Hamburg]])|STERBEDATUM=28. Oktober 1929|STERBEORT=[[Rom]]'
+        test_string_bug = "{{" + test_title_test + "|" + test_string_argument_1 + "|" + test_string_argument_bug + "}}"
+        test_dict_bug_1 = {"key": "GEBURTSORT", "value": 'Klein Flottbek (heute zu [[Hamburg]])'}
+        test_dict_bug_2 = {"key": "STERBEDATUM", "value": '28. Oktober 1929'}
+        test_dict_bug_3 = {"key": "STERBEORT", "value": '[[Rom]]'}
+        test_list_bug = [test_dict_argument_1, test_dict_bug_1, test_dict_bug_2, test_dict_bug_3]
+        handler = TemplateHandler(test_string_bug)
+        real_dict = handler.get_parameterlist()
+        self.assertEqual(test_list_bug, real_dict)
+
+        test_string_argument_bug = 'ALTERNATIVNAMEN = Carl Biedermann; Friedrich Karl Biedermann; Karl Friedrich 4[Pseudonym]|SONSTIGES=[http://gso.gbv.de/DB=1.28/REL?PPN=004072189&RELTYPE=TT Martin Opitz im VD 17]'
+        test_string_bug = "{{" + test_title_test + "|" + test_string_argument_1 + "|" + test_string_argument_bug + "}}"
+        test_dict_bug_1 = {"key": "ALTERNATIVNAMEN", "value": 'Carl Biedermann; Friedrich Karl Biedermann; Karl Friedrich 4[Pseudonym]'}
+        test_dict_bug_2 = {"key": "SONSTIGES", "value": '[http://gso.gbv.de/DB=1.28/REL?PPN=004072189&RELTYPE=TT Martin Opitz im VD 17]'}
+        test_list_bug = [test_dict_argument_1, test_dict_bug_1, test_dict_bug_2]
+        handler = TemplateHandler(test_string_bug)
+        real_dict = handler.get_parameterlist()
+        self.assertEqual(test_list_bug, real_dict)
