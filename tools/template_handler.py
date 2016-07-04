@@ -6,9 +6,8 @@ regex_title = '\A[^\|]*'
 regex_no_key = '\A[^\|]*'
 regex_template = '\A\{\{.*?\}\}'
 regex_interwiki = '\A\[\[.*?\]\][^|\}]*'
-regex_key = '\A[^\|=]*=[^\|]*'
-regex_key_embedded_template = '\A[^\{\{\|=]*=\{\{.*?\}\}'
-regex_key_interwikilink = '\A[^\|=]*=[ ]?\[\[.*?\]\][^|\}]*'
+regex_key = '\A[^\|=\.\{]*=[^\|]*'
+regex_key_embedded_template_or_link = '''\A([^\|=]*) ?= ?([^\|\[\{]|(\[\[)[^\|]*(\|.*?)*?(\]\])|(\{\{)[^\|]*(\|.*?)*?(\}\}))*'''
 
 
 class TemplateHandler:
@@ -38,10 +37,8 @@ class TemplateHandler:
             elif template_str[0] == '[':  #argument is a link in the wiki
                 template_str = self._save_argument(regex_interwiki, template_str, False)
             elif re.match(regex_key, template_str):  #argument with a key
-                if re.match(regex_key_embedded_template, template_str): #an embedded template with a key
-                    template_str = self._save_argument(regex_key_embedded_template, template_str, True)
-                elif re.match(regex_key_interwikilink, template_str):  # an interwikilink
-                    template_str = self._save_argument(regex_key_interwikilink, template_str, True)
+                if re.match(regex_key_embedded_template_or_link, template_str): #an embedded template with a key
+                    template_str = self._save_argument(regex_key_embedded_template_or_link, template_str, True)
                 else:  # a normal argument with a key
                     template_str = self._save_argument(regex_key, template_str, True)
             else:  # an argument without a key

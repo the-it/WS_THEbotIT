@@ -16,18 +16,18 @@ from tools.template_handler import TemplateHandler
 from tools.bots import CanonicalBot, SaveExecution
 
 match_property = re.compile('\{\{#property:P(\d{1,4})\}\}')
-number_to_month = { '1': 'Januar',
-                    '2': 'Februar',
-                    '3': 'März',
-                    '4': 'April',
-                    '5': 'Mai',
-                    '6': 'Juni',
-                    '7': 'Juli',
-                    '8': 'August',
-                    '9': 'September',
-                    '10': 'Oktober',
-                    '11': 'November',
-                    '12': 'Dezember',}
+number_to_month = { 1: 'Januar',
+                    2: 'Februar',
+                    3: 'März',
+                    4: 'April',
+                    5: 'Mai',
+                    6: 'Juni',
+                    7: 'Juli',
+                    8: 'August',
+                    9: 'September',
+                    10: 'Oktober',
+                    11: 'November',
+                    12: 'Dezember'}
 
 class AuthorList(CanonicalBot):
     def __init__(self):
@@ -51,7 +51,7 @@ class AuthorList(CanonicalBot):
         # was the last run successful
         #if __debug__:
         if False:
-            yesterday = datetime.datetime.now() - timedelta(days=30)
+            yesterday = datetime.datetime.now() - timedelta(days=2)
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
                                             int(yesterday.strftime('%d')))
@@ -70,7 +70,11 @@ class AuthorList(CanonicalBot):
 
         self.logger.debug(self.searcher)
 
-        return self.searcher.run()
+        entries_to_search = self.searcher.run()
+        #following entries are ignored by petscan
+        entries_to_search.append({'title': "Karl_Löffler", 'q': 'Q1732245', 'id':'413038'})
+        entries_to_search.append({'title': "Adolf_Wüllner", 'q': 'Q106820', 'id':'413022'})
+        return entries_to_search
 
     def _build_database(self, lemma_list):
         for idx, author in enumerate(lemma_list):
@@ -80,7 +84,7 @@ class AuthorList(CanonicalBot):
                 del self.data[str(author['id'])]
             except:
                 if self.last_run and self.last_run['succes']:
-                    self.logger.warning("Can't delete old entry of {}".format(author['title']))
+                    self.logger.info("Can't delete old entry of {}".format(author['title']))
 
             dict_author = {'title': author['title']}
             # extract the Personendaten-block form the wikisource page
@@ -97,10 +101,26 @@ class AuthorList(CanonicalBot):
                     template_extractor = TemplateHandler(personendaten)
                     dict_author.update({'name': template_extractor.get_parameter('NACHNAME')['value']})
                     dict_author.update({'first_name': template_extractor.get_parameter('VORNAMEN')['value']})
-                    dict_author.update({'birth': template_extractor.get_parameter('GEBURTSDATUM')['value']})
-                    dict_author.update({'death': template_extractor.get_parameter('STERBEDATUM')['value']})
-                    dict_author.update({'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
-                    dict_author.update({'synonyms': template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
+                    try:
+                        dict_author.update({'birth': template_extractor.get_parameter('GEBURTSDATUM')['value']})
+                    except:
+                        dict_author.update({'birth': ""})
+                        self.logger.warning("Templatehandler couldn't find a birthdate for: {}".format(author['title']))
+                    try:
+                        dict_author.update({'death': template_extractor.get_parameter('STERBEDATUM')['value']})
+                    except:
+                        dict_author.update({'death': ""})
+                        self.logger.warning("Templatehandler couldn't find a deathdate for: {}".format(author['title']))
+                    try:
+                        dict_author.update({'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
+                    except:
+                        dict_author.update({'description': ""})
+                        self.logger.warning("Templatehandler couldn't find a description for: {}".format(author['title']))
+                    try:
+                        dict_author.update({'synonyms': template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
+                    except:
+                        dict_author.update({'synonyms': ""})
+                        self.logger.warning("Templatehandler couldn't find synonyms for: {}".format(author['title']))
                     try:
                         dict_author.update({'sortkey': template_extractor.get_parameter('SORTIERUNG')['value']})
                         if dict_author['sortkey'] == '':
@@ -151,11 +171,11 @@ class AuthorList(CanonicalBot):
         self.string_list.append('Diese Liste wurde durch ein Computerprogramm erstellt, das die Daten verwendet, die aus den Infoboxen auf den Autorenseiten stammen.')
         self.string_list.append('Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werden.')
         self.string_list.append('-->')
-        self.string_list.append('{| class="wikitable sortable"')
-        self.string_list.append('! Name')
-        self.string_list.append('! data-sort-type="text" | Geb.-datum')
-        self.string_list.append('! data-sort-type="text" | Tod.-datum')
-        self.string_list.append('! Beschreibung')
+        self.string_list.append('{|class="wikitable sortable"')
+        self.string_list.append('!style="width:20%"| Name')
+        self.string_list.append('!data-sort-type="text" style="width:15%"| Geb.-datum')
+        self.string_list.append('!data-sort-type="text" style="width:15%"| Tod.-datum')
+        self.string_list.append('!class="unsortable" style="width:50%"| Beschreibung')
         for list_author in list_authors:
             self.string_list.append('|-')
             if list_author[2] and list_author[3]:
@@ -189,15 +209,17 @@ class AuthorList(CanonicalBot):
                 else:
                     claim = 'P570'
                 date_from_data = item.claims[claim][0].getTarget()
-                if date_from_data.day == 1 and date_from_data.month == 1:
+                if date_from_data.precision < 7:
+                    self.logger.error('Precison is to low')
+                    raise
+                elif date_from_data.precision < 8:
+                    date_from_data = str(date_from_data.year[0:2] + ' Jh.')
+                elif date_from_data.precision < 10:
                     date_from_data = str(date_from_data.year)
-                elif date_from_data.day == 0:
-                    if date_from_data.month == 0:
-                        date_from_data = str(date_from_data.year)
-                    else:
-                        date_from_data = number_to_month[date_from_data.month] + '.' + str(date_from_data.year)
+                elif date_from_data.precision < 11:
+                    date_from_data = number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
                 else:
-                    date_from_data = str(date_from_data.day) + '.' + number_to_month[date_from_data.month] + '.' + str(date_from_data.year)
+                    date_from_data = str(date_from_data.day) + '. ' + number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
                 if re.search('-', date_from_data):
                     date_from_data = date_from_data.replace('-', '') + ' v. Chr.'
                 self.logger.debug('Found {} @ wikidata for {}'.format(date_from_data, event))

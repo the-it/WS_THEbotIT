@@ -118,18 +118,18 @@ class TestTemplateHandler(TestCase):
         self.assertEqual(test_list_second_equal, handler.get_parameterlist())
 
     def test_bug_authorlist(self):
-        test_string_argument_bug = '| STERBEDATUM = 2. Januar < ref name = "adp" / > oder 31. Januar < ref > 49. Jahres - Bericht d.Schles.Ges.für vaterländische Cultur, S. 317, Nekrolog {{GBS|hP1DAAAAIAAJ|PA317}} < / ref > 1871'
+        test_string_argument_bug = 'STERBEDATUM = 2. Januar < ref name = "adp" / > oder 31. Januar < ref > 49. Jahres - Bericht d.Schles.Ges.für vaterländische Cultur, S. 317, Nekrolog {{GBS|hP1DAAAAIAAJ|PA317}} < / ref > 1871'
         test_string_bug = "{{" + test_title_test + "|" + test_string_argument_1 + "|" + test_string_argument_bug + "}}"
         test_dict_bug = {"key": "STERBEDATUM", "value": '2. Januar < ref name = "adp" / > oder 31. Januar < ref > 49. Jahres - Bericht d.Schles.Ges.für vaterländische Cultur, S. 317, Nekrolog {{GBS|hP1DAAAAIAAJ|PA317}} < / ref > 1871'}
         test_list_bug = [test_dict_argument_1, test_dict_bug]
         handler = TemplateHandler(test_string_bug)
-        #self.assertEqual(test_list_bug, handler.get_parameterlist())
+        real_dict = handler.get_parameterlist()
+        self.assertEqual(test_list_bug, real_dict)
 
-        test_string_argument_bug = '|GEBURTSDATUM=1783 < ref name = "EB" >  Encyclopaedia Britannica.  11. Auflage(1911), Bd. 1, S.[[:en:Page:EB1911 - Volume 01. djvu / 792 | 748]] {{an | englisch, im Artikel}} < / ref >'
+        test_string_argument_bug = 'GEBURTSDATUM=1783 < ref name = "EB" >  Encyclopaedia Britannica.  11. Auflage(1911), Bd. 1, S.[[:en:Page:EB1911 - Volume 01. djvu / 792 | 748]] {{an | englisch, im Artikel}} < / ref >'
         test_string_bug = "{{" + test_title_test + "|" + test_string_argument_1 + "|" + test_string_argument_bug + "}}"
         test_dict_bug = {"key": "GEBURTSDATUM", "value": '1783 < ref name = "EB" >  Encyclopaedia Britannica.  11. Auflage(1911), Bd. 1, S.[[:en:Page:EB1911 - Volume 01. djvu / 792 | 748]] {{an | englisch, im Artikel}} < / ref >'}
         test_list_bug = [test_dict_argument_1, test_dict_bug]
         handler = TemplateHandler(test_string_bug)
-        print(test_list_bug)
-        print(handler.get_parameterlist())
-        self.assertEqual(test_list_bug, handler.get_parameterlist())
+        real_dict = handler.get_parameterlist()
+        self.assertEqual(test_list_bug, real_dict)
