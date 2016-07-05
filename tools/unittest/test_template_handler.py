@@ -152,3 +152,11 @@ class TestTemplateHandler(TestCase):
         handler = TemplateHandler(test_string_bug)
         real_dict = handler.get_parameterlist()
         self.assertEqual(test_list_bug, real_dict)
+
+        test_string_argument_bug = 'SONSTIGES=Pächter der [[w:Harste|Domäne Harste]], Vater von [[w:Karl Henrici|Karl Henrici]]<ref>''Zeitschrift des Vereins für Hamburgische Geschichte.'' Band 42. 1953, S. 135 [http://books.google.de/books?id=1XISAAAAIAAJ&q=%2B%22henrici%22+%2B%221885%22+%2B%22harste%22&dq=%2B%22henrici%22+%2B%221885%22+%2B%22harste%22 Google]</ref>'
+        test_string_bug = "{{" + test_title_test + "|" + test_string_argument_1 + "|" + test_string_argument_bug + "}}"
+        test_dict_bug = {"key": "SONSTIGES", "value": 'Pächter der [[w:Harste|Domäne Harste]], Vater von [[w:Karl Henrici|Karl Henrici]]<ref>''Zeitschrift des Vereins für Hamburgische Geschichte.'' Band 42. 1953, S. 135 [http://books.google.de/books?id=1XISAAAAIAAJ&q=%2B%22henrici%22+%2B%221885%22+%2B%22harste%22&dq=%2B%22henrici%22+%2B%221885%22+%2B%22harste%22 Google]</ref>'}
+        test_list_bug = [test_dict_argument_1, test_dict_bug]
+        handler = TemplateHandler(test_string_bug)
+        real_dict = handler.get_parameterlist()
+        self.assertEqual(test_list_bug, real_dict)

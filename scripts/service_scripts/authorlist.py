@@ -96,8 +96,8 @@ class AuthorList(CanonicalBot):
                     self.logger.error('No valid block "Personendaten" was found.')
                     personendaten = None
                 if personendaten:
-                    personendaten = re.sub('<ref.*?>.*?<\/ref>|<ref.*?\/>', '', personendaten)
-                    personendaten = re.sub('\{\{CRef|.*?(?:\{\{.*?\}\})?}}', '', personendaten)
+                    #personendaten = re.sub('<ref.*?>.*?<\/ref>|<ref.*?\/>', '', personendaten)
+                    #personendaten = re.sub('\{\{CRef|.*?(?:\{\{.*?\}\})?}}', '', personendaten)
                     template_extractor = TemplateHandler(personendaten)
                     dict_author.update({'name': template_extractor.get_parameter('NACHNAME')['value']})
                     dict_author.update({'first_name': template_extractor.get_parameter('VORNAMEN')['value']})
@@ -186,7 +186,7 @@ class AuthorList(CanonicalBot):
                 self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'.format(list_author[0], list_author[1], list_author[2]))
             self.string_list.append('|data-sort-value="{}"|{}'.format(list_author[5], list_author[4]))
             self.string_list.append('|data-sort-value="{}"|{}'.format(list_author[7], list_author[6]))
-            self.string_list.append('| {}'.format(list_author[8]))
+            self.string_list.append('|{}'.format(list_author[8]))
         self.string_list.append('|}')
         self.string_list.append('')
         self.string_list.append('== Anmerkungen ==')
@@ -213,7 +213,7 @@ class AuthorList(CanonicalBot):
                     self.logger.error('Precison is to low')
                     raise
                 elif date_from_data.precision < 8:
-                    date_from_data = str(date_from_data.year[0:2] + ' Jh.')
+                    date_from_data = str(date_from_data.year)[0:2] + '. Jh.'
                 elif date_from_data.precision < 10:
                     date_from_data = str(date_from_data.year)
                 elif date_from_data.precision < 11:
