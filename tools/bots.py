@@ -26,11 +26,11 @@ class Tee(object):
 
 
 class BotLog(object):
-    def __init__(self):
+    def __init__(self, wiki):
         self.botname = 'BotLog'
+        self.wiki = pywikibot.Site()
 
     def __enter__(self):
-        self.wiki = pywikibot.Site()
         self.logger_names = {}
         self.timestamp_start = datetime.datetime.now()
         print(self.timestamp_start)
@@ -167,8 +167,8 @@ class BotTimestamp(object):
 
 
 class BaseBot(BotLog, BotTimestamp):
-    def __init__(self):
-        BotLog.__init__(self)
+    def __init__(self, wiki):
+        BotLog.__init__(self, wiki)
         BotTimestamp.__init__(self)
         self.botname =  'BaseBot'
 
@@ -187,8 +187,8 @@ class BaseBot(BotLog, BotTimestamp):
 
 
 class OneTimeBot(BaseBot):
-    def __init__(self):
-        BaseBot.__init__(self)
+    def __init__(self, wiki):
+        BaseBot.__init__(self, wiki)
         self.botname = 'OneTimeBot'
 
     def run(self):
@@ -201,8 +201,8 @@ class OneTimeBot(BaseBot):
 
 
 class CanonicalBot(BaseBot, BotData):
-    def __init__(self):
-        BaseBot.__init__(self)
+    def __init__(self, wiki):
+        BaseBot.__init__(self, wiki)
         BotData.__init__(self)
         self.botname = 'CanonicalBot'
 
@@ -225,8 +225,8 @@ class CanonicalBot(BaseBot, BotData):
 
 
 class PingBot(CanonicalBot):
-    def __init__(self):
-        CanonicalBot.__init__(self)
+    def __init__(self, wiki):
+        CanonicalBot.__init__(self, wiki)
         self.botname = 'PingBot'
 
     def run(self):

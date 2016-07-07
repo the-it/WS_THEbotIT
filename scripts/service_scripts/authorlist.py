@@ -30,10 +30,10 @@ number_to_month = { 1: 'Januar',
                     12: 'Dezember'}
 
 class AuthorList(CanonicalBot):
-    def __init__(self):
+    def __init__(self, wiki):
+        CanonicalBot.__init__(wiki)
         self.botname = 'AuthorList'
         self.searcher = CatScan()
-        self.wiki = pywikibot.Site()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
         self.string_list = []
 
