@@ -203,7 +203,6 @@ class AuthorList(CanonicalBot):
             self.logger.debug('No valid entry in {} for {} ... Fallback to wikidata'.format(event, author_dict['title']))
             try:
                 item = pywikibot.ItemPage(self.repo, author_dict['wikidata'])
-                print(item.get())
                 if event == 'birth':
                     claim = 'P569'
                 else:
