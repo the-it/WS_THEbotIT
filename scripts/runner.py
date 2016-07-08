@@ -22,8 +22,10 @@ if __name__ == "__main__":
     with SaveExecution(bot):
         bot.run()
 
+    bot = AuthorList(wiki)
+    with SaveExecution(bot):
+        bot.run()
+
     if datetime.now().weekday() == 6:
         #tasks for sunday
-        bot = AuthorList(wiki)
-        with SaveExecution(bot):
-            bot.run()
+        pass

@@ -28,12 +28,11 @@ class Tee(object):
 class BotLog(object):
     def __init__(self, wiki):
         self.botname = 'BotLog'
-        self.wiki = pywikibot.Site()
+        self.wiki = wiki
 
     def __enter__(self):
         self.logger_names = {}
         self.timestamp_start = datetime.datetime.now()
-        print(self.timestamp_start)
         self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
         self.logger = self.set_up_logger()
         sys.excepthook = self.my_excepthook
@@ -61,7 +60,7 @@ class BotLog(object):
         file = open(self.logger_names['debug'], 'a', encoding='utf8')
         sys.stdout = Tee(sys.stdout, file)
 
-        logger = logging.getLogger('multi logger')
+        logger = logging.getLogger(self.botname)
         logger.setLevel(logging.DEBUG)
         error_log = logging.FileHandler(self.logger_names['info'], encoding='utf8')
         error_log.setLevel(logging.INFO)
@@ -83,12 +82,13 @@ class BotLog(object):
             os.remove(self.logger_names['info'])
             pass
         sys.stdout.flush()
+        logging.shutdown()
 
     def send_log_to_wiki(self):
         pass
 
     def dump_log_lines(self, page):
-        with open(self.logger_names['info']) as filepointer:
+        with open(self.logger_names['info'], encoding='utf8') as filepointer:
             temptext = page.text
             temptext = temptext \
                 + '\n\n' \

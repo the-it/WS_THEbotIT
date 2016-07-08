@@ -31,7 +31,7 @@ number_to_month = { 1: 'Januar',
 
 class AuthorList(CanonicalBot):
     def __init__(self, wiki):
-        CanonicalBot.__init__(wiki)
+        CanonicalBot.__init__(self, wiki)
         self.botname = 'AuthorList'
         self.searcher = CatScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
@@ -203,17 +203,20 @@ class AuthorList(CanonicalBot):
             self.logger.debug('No valid entry in {} for {} ... Fallback to wikidata'.format(event, author_dict['title']))
             try:
                 item = pywikibot.ItemPage(self.repo, author_dict['wikidata'])
-                item.get()
+                print(item.get())
                 if event == 'birth':
                     claim = 'P569'
                 else:
                     claim = 'P570'
                 date_from_data = item.claims[claim][0].getTarget()
-                if date_from_data.precision < 7:
+                if date_from_data.precision < 9:
                     self.logger.error('Precison is to low')
                     raise
-                elif date_from_data.precision < 8:
-                    date_from_data = str(date_from_data.year)[0:2] + '. Jh.'
+                #elif date_from_data.precision < 8:
+                #    if date_from_data.year < 1000:
+                #        date_from_data = str(date_from_data.year)[0:1] + '. Jh.'
+                #    else:
+                #        date_from_data = str(date_from_data.year)[0:2] + '. Jh.'
                 elif date_from_data.precision < 10:
                     date_from_data = str(date_from_data.year)
                 elif date_from_data.precision < 11:
