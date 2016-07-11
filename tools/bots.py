@@ -26,13 +26,13 @@ class Tee(object):
 
 
 class BotLog(object):
-    def __init__(self, wiki):
+    def __init__(self, wiki, timestamp_start):
         self.botname = 'BotLog'
         self.wiki = wiki
+        self.timestamp_start = timestamp_start
 
     def __enter__(self):
         self.logger_names = {}
-        self.timestamp_start = datetime.datetime.now()
         self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
         self.logger = self.set_up_logger()
         sys.excepthook = self.my_excepthook
@@ -42,7 +42,7 @@ class BotLog(object):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         print("########################################################################################################################")
-        self.logger.info('Finish bot {}.'.format(self.botname))
+        self.logger.info('Finish bot {} in {}.'.format(self.botname, datetime.datetime.now()-self.timestamp_start))
         print("########################################################################################################################")
         self.tear_down_logger()
 
@@ -132,8 +132,9 @@ class BotData(object):
 
 
 class BotTimestamp(object):
-    def __init__(self):
+    def __init__(self, timestamp_start):
         self.botname =  'BotTimestamp'
+        self.timestamp_start = timestamp_start
         self.last_run = {}
 
     def __enter__(self, logger):
@@ -168,8 +169,9 @@ class BotTimestamp(object):
 
 class BaseBot(BotLog, BotTimestamp):
     def __init__(self, wiki):
-        BotLog.__init__(self, wiki)
-        BotTimestamp.__init__(self)
+        timestamp_start = datetime.datetime.now()
+        BotLog.__init__(self, wiki, timestamp_start)
+        BotTimestamp.__init__(self, timestamp_start)
         self.botname =  'BaseBot'
 
     def __enter__(self):
