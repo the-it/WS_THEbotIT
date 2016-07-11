@@ -7,6 +7,7 @@ import re
 import traceback
 import datetime
 from datetime import timedelta
+from pywikibot.data.api import LoginManager
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
@@ -51,7 +52,7 @@ class AuthorList(CanonicalBot):
         # was the last run successful
         #if __debug__:
         if False:
-            yesterday = datetime.datetime.now() - timedelta(days=2)
+            yesterday = datetime.datetime.now() - timedelta(days=5)
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
                                             int(yesterday.strftime('%d')))
@@ -160,9 +161,21 @@ class AuthorList(CanonicalBot):
                     list_author.append('!-00-00')  # 5,7
             list_author.append(author_dict['description'])#8
             list_authors.append(list_author)
+
         # sorting the list
         self.logger.info('Start sorting.')
         list_authors.sort(key = lambda x: x[0])
+        for i in range(len(list_authors) - 1):
+            if list_authors[i][0] == list_authors[i+1][0]:
+                equal_count = 2
+                while True:
+                    if i+equal_count <= len(list_authors):
+                        if list_authors[i][0] != list_authors[i+equal_count][0]:
+                            break
+                        equal_count += 1
+                temp_list = list_authors[i:i+equal_count]
+                temp_list.sort(key=lambda x: x[5])
+                list_authors[i:i + equal_count] = temp_list
 
         self.logger.info('Start printing.')
         self.string_list.append('Diese Liste der Autoren enthält alle {}<ref>Stand: {dt.day}.{dt.month}.{dt.year}, {dt.hour}:{dt.minute} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'.format(len(self.data), dt = datetime.datetime.now()))
@@ -204,12 +217,13 @@ class AuthorList(CanonicalBot):
             try:
                 item = pywikibot.ItemPage(self.repo, author_dict['wikidata'])
                 if event == 'birth':
-                    claim = 'P569'
+                    property_label = 'P569'
                 else:
-                    claim = 'P570'
-                date_from_data = item.claims[claim][0].getTarget()
+                    property_label = 'P570'
+                claim = item.text['claims'][property_label][0]
+                date_from_data = claim.getTarget()
                 if date_from_data.precision < 9:
-                    self.logger.error('Precison is to low')
+                    self.logger.error('Precison is to low for {}'.format(author_dict['title']))
                     raise
                 #elif date_from_data.precision < 8:
                 #    if date_from_data.year < 1000:
@@ -234,6 +248,11 @@ class AuthorList(CanonicalBot):
 
 
 if __name__ == "__main__":
-    bot = AuthorList()
+    with open('../password.pwd') as password:
+        wiki = pywikibot.Site(code= 'de', fam= 'wikisource', user='THEbotIT')
+        login = LoginManager(site=wiki, password=password.read())
+        login.login()
+
+    bot = AuthorList(wiki)
     with SaveExecution(bot):
         bot.run()
