@@ -23,7 +23,15 @@ class REStatus(CanonicalBot):
         fertig = self.get_sum_of_cat(['Fertig RE'])
         korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'])
         unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE'])
-        page = pywikibot.Page(wiki, 'f')
+        page = pywikibot.Page(self.wiki, 'Benutzer:THEbotIT/' + self.botname)
+        temp_text = page.text
+        composed_text = ''.join(['|-\n', '|', self.timestamp_start.strftime('%Y%m%d-%H%M'),
+                         '||', str(unkorrigiert[1]), '||', str(unkorrigiert[0]),
+                         '||', str(korrigiert[1]), '||', str(korrigiert[0]),
+                         '||', str(fertig[1]), '||', str(fertig[0]), '\n<!--new line-->'])
+        temp_text = re.sub('<!--new line-->', composed_text, temp_text)
+        page.text = temp_text
+        page.save('new dataset', botflag=True)
 
     def get_sum_of_cat(self, cats):
         list_of_lemmas = self.petscan(cats)

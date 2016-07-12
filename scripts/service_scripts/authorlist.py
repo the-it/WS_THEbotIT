@@ -61,7 +61,8 @@ class AuthorList(CanonicalBot):
             self.searcher.last_change_after(int(start_of_search.strftime('%Y')),
                                             int(start_of_search.strftime('%m')),
                                             int(start_of_search.strftime('%d')) )
-            self.logger.info('The date {} is set to the argument "after".'.format(start_of_search.strftime("%d.%m.%Y")))
+            self.logger.info('The date {} is set to the argument "after".'
+                             .format(start_of_search.strftime("%d.%m.%Y")))
         else:
             self.logger.warning('There was no timestamp found of the last run, so the argument "after" is not set.')
         self.searcher.add_namespace(0)  # search in main namespace
@@ -139,7 +140,6 @@ class AuthorList(CanonicalBot):
                 self.logger.error(traceback.format_exc())
                 self.logger.error('author {} have a problem'.format(author['title']))
 
-
     def _convert_to_table(self):
         # make a list of lists
         self.logger.info('Start compiling.')
@@ -178,7 +178,10 @@ class AuthorList(CanonicalBot):
                 list_authors[i:i + equal_count] = temp_list
 
         self.logger.info('Start printing.')
-        self.string_list.append('Diese Liste der Autoren enthält alle {}<ref>Stand: {dt.day}.{dt.month}.{dt.year}, {dt.hour}:{dt.minute} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'.format(len(self.data), dt = datetime.datetime.now()))
+        self.string_list.append('Diese Liste der Autoren enthält alle {count}<ref>Stand: {dt.day}.{dt.month}.{dt.year}, {dt.hour}:{minute} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'
+                                .format(count = len(self.data),
+                                        minute = datetime.datetime.now().strftime('%M'),
+                                        dt = datetime.datetime.now()))
         self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften nach der jeweiligen Spalte sortiert werden.')
         self.string_list.append('<!--')
         self.string_list.append('Diese Liste wurde durch ein Computerprogramm erstellt, das die Daten verwendet, die aus den Infoboxen auf den Autorenseiten stammen.')
@@ -192,13 +195,18 @@ class AuthorList(CanonicalBot):
         for list_author in list_authors:
             self.string_list.append('|-')
             if list_author[2] and list_author[3]:
-                self.string_list.append('|data-sort-value="{}"|[[{}|{}, {}]]'.format(list_author[0], list_author[1], list_author[2],list_author[3]))
+                self.string_list.append('|data-sort-value="{}"|[[{}|{}, {}]]'
+                                        .format(list_author[0], list_author[1], list_author[2],list_author[3]))
             elif list_author[3]:
-                self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'.format(list_author[0], list_author[1], list_author[3]))
+                self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'
+                                        .format(list_author[0], list_author[1], list_author[3]))
             else:
-                self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'.format(list_author[0], list_author[1], list_author[2]))
-            self.string_list.append('|data-sort-value="{}"|{}'.format(list_author[5], list_author[4]))
-            self.string_list.append('|data-sort-value="{}"|{}'.format(list_author[7], list_author[6]))
+                self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'
+                                        .format(list_author[0], list_author[1], list_author[2]))
+            self.string_list.append('|data-sort-value="{}"|{}'
+                                    .format(list_author[5], list_author[4]))
+            self.string_list.append('|data-sort-value="{}"|{}'
+                                    .format(list_author[7], list_author[6]))
             self.string_list.append('|{}'.format(list_author[8]))
         self.string_list.append('|}')
         self.string_list.append('')
@@ -245,7 +253,6 @@ class AuthorList(CanonicalBot):
                 return('')  # 4,6
         else:
             return(author_dict[event])  # 4,6
-
 
 if __name__ == "__main__":
     with open('../password.pwd') as password:
