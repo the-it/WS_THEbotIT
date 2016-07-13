@@ -21,7 +21,7 @@ if __name__ == "__main__":
         login.login()
 
     # daily bots
-    run_bot(PingBot(wiki))
+    # run_bot(PingBot(wiki))
     run_bot(AuthorList(wiki))
     run_bot(REStatus(wiki))
 

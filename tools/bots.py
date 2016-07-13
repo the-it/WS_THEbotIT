@@ -184,7 +184,7 @@ class BaseBot(BotLog, BotTimestamp):
         BotLog.__exit__(self, exc_type, exc_val, exc_tb)
 
     def run(self):
-        self.logger.critical("You should really functionality here.")
+        self.logger.critical("You should really add functionality here.")
         raise BotExeption
 
 
@@ -192,9 +192,6 @@ class OneTimeBot(BaseBot):
     def __init__(self, wiki):
         BaseBot.__init__(self, wiki)
         self.botname = 'OneTimeBot'
-
-    def run(self):
-        pass
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs'
@@ -216,9 +213,6 @@ class CanonicalBot(BaseBot, BotData):
     def __exit__(self, exc_type, exc_val, exc_tb):
         BotData.__exit__(self, exc_type, exc_val, exc_tb)
         BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
-
-    def run(self):
-        pass
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.botname)

@@ -1,5 +1,3 @@
-__author__ = 'erik'
-
 import sys
 import os
 import pywikibot
@@ -16,19 +14,6 @@ from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
 from tools.bots import CanonicalBot, SaveExecution
 
-match_property = re.compile('\{\{#property:P(\d{1,4})\}\}')
-number_to_month = { 1: 'Januar',
-                    2: 'Februar',
-                    3: 'März',
-                    4: 'April',
-                    5: 'Mai',
-                    6: 'Juni',
-                    7: 'Juli',
-                    8: 'August',
-                    9: 'September',
-                    10: 'Oktober',
-                    11: 'November',
-                    12: 'Dezember'}
 
 class AuthorList(CanonicalBot):
     def __init__(self, wiki):
@@ -37,6 +22,19 @@ class AuthorList(CanonicalBot):
         self.searcher = CatScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
         self.string_list = []
+        self.match_property = re.compile('\{\{#property:P(\d{1,4})\}\}')
+        self.number_to_month = {1: 'Januar',
+                           2: 'Februar',
+                           3: 'März',
+                           4: 'April',
+                           5: 'Mai',
+                           6: 'Juni',
+                           7: 'Juli',
+                           8: 'August',
+                           9: 'September',
+                           10: 'Oktober',
+                           11: 'November',
+                           12: 'Dezember'}
 
     def run(self):
         lemma_list = self._run_searcher()
@@ -220,7 +218,7 @@ class AuthorList(CanonicalBot):
         return '\n'.join(self.string_list)
 
     def _handle_birth_and_death(self, event, author_dict):
-        if author_dict[event] == '' or match_property.search(author_dict[event]):
+        if author_dict[event] == '' or self.match_property.search(author_dict[event]):
             self.logger.debug('No valid entry in {} for {} ... Fallback to wikidata'.format(event, author_dict['title']))
             try:
                 item = pywikibot.ItemPage(self.repo, author_dict['wikidata'])
@@ -241,9 +239,9 @@ class AuthorList(CanonicalBot):
                 elif date_from_data.precision < 10:
                     date_from_data = str(date_from_data.year)
                 elif date_from_data.precision < 11:
-                    date_from_data = number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
+                    date_from_data = self.number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
                 else:
-                    date_from_data = str(date_from_data.day) + '. ' + number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
+                    date_from_data = str(date_from_data.day) + '. ' + self.number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
                 if re.search('-', date_from_data):
                     date_from_data = date_from_data.replace('-', '') + ' v. Chr.'
                 self.logger.debug('Found {} @ wikidata for {}'.format(date_from_data, event))
