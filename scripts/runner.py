@@ -3,11 +3,11 @@ import os
 import pywikibot
 from datetime import datetime
 from pywikibot.data.api import LoginManager
+
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
+
 from scripts.service_scripts.authorlist import AuthorList
 from scripts.service_scripts.project_status_RE import REStatus
-
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep)
-
 from tools.bots import PingBot, SaveExecution
 
 def run_bot(bot):
