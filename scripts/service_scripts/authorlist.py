@@ -13,7 +13,7 @@ from tools.catscan import CatScan
 from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
 from tools.bots import CanonicalBot, SaveExecution
-
+from tools.little_helpers import load_password
 
 class AuthorList(CanonicalBot):
     def __init__(self, wiki):
@@ -253,9 +253,10 @@ class AuthorList(CanonicalBot):
             return(author_dict[event])  # 4,6
 
 if __name__ == "__main__":
-    with open('../password.pwd') as password:
+    with open('../password.pwd') as password_file:
+        password = load_password(password_file)
         wiki = pywikibot.Site(code= 'de', fam= 'wikisource', user='THEbotIT')
-        login = LoginManager(site=wiki, password=password.read())
+        login = LoginManager(site=wiki, password=password)
         login.login()
 
     bot = AuthorList(wiki)
