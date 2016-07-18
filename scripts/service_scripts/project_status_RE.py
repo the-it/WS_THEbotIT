@@ -34,6 +34,9 @@ class REStatus(CanonicalBot):
         page.text = temp_text
         page.save('new dataset', botflag=True)
 
+    def send_log_to_wiki(self):
+        pass
+
     def get_sum_of_cat(self, cats):
         list_of_lemmas = self.petscan(cats)
         byte_sum = 0

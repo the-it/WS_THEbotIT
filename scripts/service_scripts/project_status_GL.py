@@ -39,6 +39,9 @@ class GLStatus(CanonicalBot):
         page.text = temp_text
         page.save('new dataset', botflag=True)
 
+    def send_log_to_wiki(self):
+        pass
+
     def petscan(self, categories, pages=False):
         self.searcher = CatScan()
         if pages:
