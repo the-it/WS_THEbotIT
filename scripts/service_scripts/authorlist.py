@@ -84,7 +84,7 @@ class AuthorList(CanonicalBot):
                 del self.data[str(author['id'])]
             except:
                 if self.last_run and self.last_run['succes']:
-                    self.logger.info("Can't delete old entry of {}".format(author['title']))
+                    self.logger.info("Can't delete old entry of [[{}]]".format(author['title']))
 
             dict_author = {'title': author['title']}
             # extract the Personendaten-block form the wikisource page
@@ -93,7 +93,7 @@ class AuthorList(CanonicalBot):
                 try:
                     personendaten = re.search('\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
                 except:
-                    self.logger.error('No valid block "Personendaten" was found.')
+                    self.logger.error('No valid block "Personendaten" was found for [[{}]].'.format(author['title']))
                     personendaten = None
                 if personendaten:
                     #personendaten = re.sub('<ref.*?>.*?<\/ref>|<ref.*?\/>', '', personendaten)
@@ -105,34 +105,34 @@ class AuthorList(CanonicalBot):
                         dict_author.update({'birth': template_extractor.get_parameter('GEBURTSDATUM')['value']})
                     except:
                         dict_author.update({'birth': ""})
-                        self.logger.warning("Templatehandler couldn't find a birthdate for: {}".format(author['title']))
+                        self.logger.warning("Templatehandler couldn't find a birthdate for: [[{}]]".format(author['title']))
                     try:
                         dict_author.update({'death': template_extractor.get_parameter('STERBEDATUM')['value']})
                     except:
                         dict_author.update({'death': ""})
-                        self.logger.warning("Templatehandler couldn't find a deathdate for: {}".format(author['title']))
+                        self.logger.warning("Templatehandler couldn't find a deathdate for: [[{}]]".format(author['title']))
                     try:
                         dict_author.update({'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
                     except:
                         dict_author.update({'description': ""})
-                        self.logger.warning("Templatehandler couldn't find a description for: {}".format(author['title']))
+                        self.logger.warning("Templatehandler couldn't find a description for: [[{}]]".format(author['title']))
                     try:
                         dict_author.update({'synonyms': template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
                     except:
                         dict_author.update({'synonyms': ""})
-                        self.logger.warning("Templatehandler couldn't find synonyms for: {}".format(author['title']))
+                        self.logger.warning("Templatehandler couldn't find synonyms for: [[{}]]".format(author['title']))
                     try:
                         dict_author.update({'sortkey': template_extractor.get_parameter('SORTIERUNG')['value']})
                         if dict_author['sortkey'] == '':
                             raise ValueError
                     except:
-                        self.logger.debug('there is no sortkey for {}.'.format(author['title']))
+                        self.logger.debug('there is no sortkey for [[{}]].'.format(author['title']))
                         # make a dummy key
                         dict_author['sortkey'] = dict_author['name'] + ', ' + dict_author['first_name']
                     try:
                         dict_author.update({'wikidata' : author['q']})
                     except:
-                        self.logger.warning('The autor {} has no wikidata_item'.format(author['title']))
+                        self.logger.warning('The autor [[{}]] has no wikidata_item'.format(author['title']))
                     self.data.update({author['id']: dict_author})
             except Exception as e:
                 self.logger.error(traceback.format_exc())
@@ -219,7 +219,7 @@ class AuthorList(CanonicalBot):
 
     def _handle_birth_and_death(self, event, author_dict):
         if author_dict[event] == '' or self.match_property.search(author_dict[event]):
-            self.logger.debug('No valid entry in {} for {} ... Fallback to wikidata'.format(event, author_dict['title']))
+            self.logger.debug('No valid entry in {} for [[{}]] ... Fallback to wikidata'.format(event, author_dict['title']))
             try:
                 item = pywikibot.ItemPage(self.repo, author_dict['wikidata'])
                 if event == 'birth':
@@ -229,7 +229,7 @@ class AuthorList(CanonicalBot):
                 claim = item.text['claims'][property_label][0]
                 date_from_data = claim.getTarget()
                 if date_from_data.precision < 9:
-                    self.logger.error('Precison is to low for {}'.format(author_dict['title']))
+                    self.logger.error('Precison is to low for [[{}]]'.format(author_dict['title']))
                     raise
                 #elif date_from_data.precision < 8:
                 #    if date_from_data.year < 1000:
