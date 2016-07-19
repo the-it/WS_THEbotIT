@@ -9,7 +9,8 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir
 from scripts.service_scripts.authorlist import AuthorList
 from scripts.service_scripts.project_status_RE import REStatus
 from scripts.service_scripts.project_status_GL import GLStatus
-from tools.bots import PingBot, SaveExecution
+from scripts.service_scripts.touch_all_index import TouchIndex
+from tools.bots import SaveExecution
 from tools.little_helpers import load_password
 
 def run_bot(bot):
@@ -25,6 +26,7 @@ if __name__ == "__main__":
 
     # daily bots
     run_bot(AuthorList(wiki))
+    run_bot(TouchIndex(wiki))
 
     # tasks for sunday
     if datetime.now().weekday() == 6:

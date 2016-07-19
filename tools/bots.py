@@ -169,10 +169,11 @@ class BotTimestamp(object):
 
 class BaseBot(BotLog, BotTimestamp):
     def __init__(self, wiki):
-        timestamp_start = datetime.datetime.now()
-        BotLog.__init__(self, wiki, timestamp_start)
-        BotTimestamp.__init__(self, timestamp_start)
+        self.timestamp_start = datetime.datetime.now()
+        BotLog.__init__(self, wiki, self.timestamp_start)
+        BotTimestamp.__init__(self, self.timestamp_start)
         self.botname =  'BaseBot'
+        self.timeout = datetime.timedelta(minutes=60)
 
     def __enter__(self):
         BotLog.__enter__(self)
@@ -187,6 +188,13 @@ class BaseBot(BotLog, BotTimestamp):
         self.logger.critical("You should really add functionality here.")
         raise BotExeption
 
+    def _watchdog(self):
+        diff = datetime.datetime.now() - self.timestamp_start
+        if diff > self.timeout:
+            self.logger.info('Bot finished by timeout.')
+            return True
+        else:
+            return False
 
 class OneTimeBot(BaseBot):
     def __init__(self, wiki):
