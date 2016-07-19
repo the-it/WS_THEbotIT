@@ -2,7 +2,7 @@
 __author__ = 'eso'
 import sys
 sys.path.append('../../')
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 import re
 import pywikibot
 
@@ -39,7 +39,7 @@ class SortFilter:
 
 
     def run(self):
-        searcher = CatScan()
+        searcher = PetScan()
         searcher.add_positive_category("Werke")
         searcher.set_timeout(240)
         print('start catscan')

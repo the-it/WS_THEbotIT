@@ -9,7 +9,7 @@ from pywikibot.data.api import LoginManager
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
 from tools.bots import CanonicalBot, SaveExecution
@@ -19,7 +19,7 @@ class AuthorList(CanonicalBot):
     def __init__(self, wiki):
         CanonicalBot.__init__(self, wiki)
         self.botname = 'AuthorList'
-        self.searcher = CatScan()
+        self.searcher = PetScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
         self.string_list = []
         self.match_property = re.compile('\{\{#property:P(\d{1,4})\}\}')

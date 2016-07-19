@@ -2,12 +2,12 @@
 __author__ = 'eso'
 import sys
 sys.path.append('../../')
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 import re
 import requests
 import pywikibot
 
-searcher_catscan = CatScan()
+searcher_catscan = PetScan()
 searcher_catscan.add_positive_category('Nicolaus Coppernicus aus Thorn über die Kreisbewegungen der Weltkörper')
 searcher_catscan.add_namespace('Seite')
 sites = searcher_catscan.run()

@@ -2,7 +2,7 @@
 __author__ = 'eso'
 import sys
 sys.path.append('../../')
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 from tools.template_handler import TemplateHandler
 import re
 import requests
@@ -17,7 +17,7 @@ def substitute_sperrsatz(template):
     return handler.get_str(str_complex=False)
 
 
-searcher_catscan = CatScan()
+searcher_catscan = PetScan()
 searcher_catscan.add_namespace(0)
 searcher_catscan.add_namespace('Seite')
 searcher_catscan.add_namespace('Index')

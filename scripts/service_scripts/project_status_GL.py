@@ -8,7 +8,7 @@ import re
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
 
@@ -43,7 +43,7 @@ class GLStatus(CanonicalBot):
         pass
 
     def petscan(self, categories, pages=False):
-        self.searcher = CatScan()
+        self.searcher = PetScan()
         if pages:
             self.searcher.add_namespace('Seite')
         else:

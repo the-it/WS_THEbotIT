@@ -2,7 +2,7 @@
 __author__ = 'eso'
 import sys
 sys.path.append('../../')
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 from tools.template_handler import TemplateHandler
 import re
 import requests
@@ -60,7 +60,7 @@ regex = r'''http:\/\/           # searching for a http://-address
 
 fit = re.compile(regex, re.VERBOSE)
 
-lemma_searcher = CatScan()
+lemma_searcher = PetScan()
 lemma_searcher.add_positive_category('Paulys Realencyclopädie der classischen Altertumswissenschaft')
 #lemma_searcher.add_no_template('REIA') # sadly I have to look on all 18.000 RE-sites
 lemma_searcher.set_timeout(90)

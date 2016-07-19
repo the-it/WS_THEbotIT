@@ -1,6 +1,6 @@
 __author__ = 'eso'
 
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 import re
 
 watch_themes = ['Allgemeines, Informations-, Buch- und Bibliothekswesen',
@@ -19,7 +19,7 @@ watch_themes = ['Allgemeines, Informations-, Buch- und Bibliothekswesen',
                 'Wirtschaftswissenschaften']
 
 def crawler_cat_index_site():
-    searcher_werke  =CatScan()
+    searcher_werke  =PetScan()
     for item in watch_themes:
         searcher_werke.add_positive_category(item)
     searcher_werke.add_negative_category('Zeitschrift')
@@ -32,7 +32,7 @@ def crawler_cat_index_site():
     all_sites = set([])
     counter = 1
     for werk in list_werke:
-        searcher_sites = CatScan()
+        searcher_sites = PetScan()
         searcher_sites.add_namespace('Seite')
         searcher_sites.add_positive_category('Fertig')
         searcher_sites.add_positive_category('Korrigiert')
@@ -47,13 +47,13 @@ def crawler_cat_index_site():
                 sites[row] = sites[row]['a']['title']
             all_sites = all_sites | set(sites)
         else:
-            searcher_index = CatScan()
+            searcher_index = PetScan()
             searcher_index.add_any_outlink(werk)
             searcher_index.add_namespace('Index')
             searcher_index.add_positive_category('Index')
             index = searcher_index.run()
             if index:
-                searcher_sites = CatScan()
+                searcher_sites = PetScan()
                 searcher_sites.add_namespace('Seite')
                 searcher_sites.add_positive_category('Fertig')
                 searcher_sites.add_positive_category('Korrigiert')
@@ -71,7 +71,7 @@ def crawler_cat_index_site():
         f.writelines(["Seite:%s\n" % item  for item in all_sites])
 
 def cat_crawler():
-    searcher_werke = CatScan()
+    searcher_werke = PetScan()
     for item in watch_themes:
         searcher_werke.add_positive_category(item)
         searcher_werke.set_logic(log_or=True)

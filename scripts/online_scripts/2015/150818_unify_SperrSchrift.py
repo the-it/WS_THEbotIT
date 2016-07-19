@@ -2,12 +2,12 @@
 __author__ = 'eso'
 import sys
 sys.path.append('../../')
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 import re
 import requests
 import pywikibot
 
-searcher_catscan = CatScan()
+searcher_catscan = PetScan()
 searcher_catscan.add_namespace('Seite')
 searcher_catscan.add_namespace(0)
 searcher_catscan.add_yes_template('Sperrschrift')

@@ -9,7 +9,7 @@ from pywikibot.data.api import LoginManager
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
 from tools.bots import OneTimeBot, SaveExecution

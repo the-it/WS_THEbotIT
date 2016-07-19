@@ -11,7 +11,7 @@ from datetime import timedelta
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
 
@@ -45,7 +45,7 @@ class REStatus(CanonicalBot):
         return byte_sum, len(list_of_lemmas)
 
     def petscan(self, categories):
-        self.searcher = CatScan()
+        self.searcher = PetScan()
         for category in categories:
             self.searcher.add_positive_category(category)
         self.searcher.set_logic_union()

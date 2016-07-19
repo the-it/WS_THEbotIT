@@ -5,9 +5,9 @@ sys.path.append('../../')
 import re
 import pywikibot
 import datetime
-from tools.catscan import CatScan
+from tools.catscan import PetScan
 
-searcher = CatScan()
+searcher = PetScan()
 searcher.add_positive_category('Werke')
 searcher.add_positive_category('Unkorrigiert')
 lemmas = searcher.run()

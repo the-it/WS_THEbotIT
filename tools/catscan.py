@@ -5,6 +5,7 @@ import requests
 import json
 import re
 from urllib.parse import quote
+from tools.tools import ToolExeption
 
 namespace_mapping = {"Article": 0,
                      "Diskussion": 1,
@@ -73,8 +74,11 @@ def listify(x)->list:
     """
     return x if isinstance(x, list) else [x]
 
+class PetScanException(ToolExeption):
+    pass
 
-class CatScan:
+
+class PetScan:
     """
     Encapsulate the catscan service, written by Markus Manske (https://petscan.wmflabs.org/).
     It is possible to access all parameters by different setter functions. The function 'run' execute the server inquiry
@@ -213,6 +217,17 @@ class CatScan:
         else:
             self.add_options({"edits[{}]".format(type): "no"})
 
+    sort_criteria = ['title', 'ns_title', 'size', 'date', 'incoming_links', 'random']
+
+    def set_sort_criteria(self, criteria):
+        if criteria in self.sort_criteria:
+            self.add_options({'sortby': criteria})
+        else:
+            raise PetScanException("{} isn't a valid sort criteria".format(criteria))
+
+    def set_sortorder_decending(self):
+        self.add_options({'sortorder': 'descending'})
+
     def _construct_list_argument(self, cat_list):
         cat_string = ""
         i = 0
@@ -273,11 +288,8 @@ class CatScan:
         @return: list of result dicionaries.
         @rtype: list
         """
-        try:
-            response = requests.get(url=self._construct_string(),
-                                    headers=self.header, timeout=self.timeout)
-            response_byte = response.content
-            response_dict = json.loads(response_byte.decode("utf8"))
-            return response_dict['*'][0]['a']['*']
-        except Exception:
-            raise ConnectionError
+        response = requests.get(url=self._construct_string(),
+                                headers=self.header, timeout=self.timeout)
+        response_byte = response.content
+        response_dict = json.loads(response_byte.decode("utf8"))
+        return response_dict['*'][0]['a']['*']
