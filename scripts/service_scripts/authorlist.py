@@ -48,8 +48,8 @@ class AuthorList(CanonicalBot):
 
     def _run_searcher(self):
         # was the last run successful
-        #if __debug__:
-        if False:
+        if __debug__:
+        #if False:
             yesterday = datetime.datetime.now() - timedelta(days=5)
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
@@ -176,9 +176,9 @@ class AuthorList(CanonicalBot):
                 list_authors[i:i + equal_count] = temp_list
 
         self.logger.info('Start printing.')
-        self.string_list.append('Diese Liste der Autoren enthält alle {count}<ref>Stand: {dt.day}.{dt.month}.{dt.year}, {dt.hour}:{minute} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'
+        self.string_list.append('Diese Liste der Autoren enthält alle {count}<ref>Stand: {dt.day}.{dt.month}.{dt.year}, {clock} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'
                                 .format(count = len(self.data),
-                                        minute = datetime.datetime.now().strftime('%M'),
+                                        clock = datetime.datetime.now().strftime('%H:%M'),
                                         dt = datetime.datetime.now()))
         self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften nach der jeweiligen Spalte sortiert werden.')
         self.string_list.append('<!--')
