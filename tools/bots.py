@@ -30,20 +30,22 @@ class BotLog(object):
         self.botname = 'BotLog'
         self.wiki = wiki
         self.timestamp_start = timestamp_start
+        self.barstring = '{:#^120}'.format('')
+        self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
 
     def __enter__(self):
         self.logger_names = {}
         self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
         self.logger = self.set_up_logger()
         sys.excepthook = self.my_excepthook
-        print("########################################################################################################################")
+        print(self.barstring)
         self.logger.info('Start the bot {}.'.format(self.botname))
-        print("########################################################################################################################")
+        print(self.barstring)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        print("########################################################################################################################")
+        print(self.barstring)
         self.logger.info('Finish bot {} in {}.'.format(self.botname, datetime.datetime.now()-self.timestamp_start))
-        print("########################################################################################################################")
+        print(self.barstring)
         self.tear_down_logger()
 
     def my_excepthook(self, excType, excValue, traceback):
@@ -66,7 +68,7 @@ class BotLog(object):
         error_log.setLevel(logging.INFO)
         debug_stream = logging.StreamHandler(sys.stdout)
         debug_stream.setLevel(logging.DEBUG)
-        formatter = logging.Formatter('[%(asctime)s] [%(levelname)-8s] [%(message)s]')
+        formatter = logging.Formatter(self.logger_format)
         error_log.setFormatter(formatter)
         debug_stream.setFormatter(formatter)
         logger.addHandler(error_log)
