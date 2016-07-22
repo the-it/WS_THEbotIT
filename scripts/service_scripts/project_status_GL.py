@@ -79,15 +79,16 @@ class GLStatus(CanonicalBot):
         alle = fertig + korrigiert + rest
         regex = re.compile('<!--GLStatus:' + str(year) + '-->.*?<!---->')
         if rest > 0:
-            temp_text = regex.sub(''.join(['<!--GLStatus:', str(year), '-->', 'ca. ',
-                                          str(round(((fertig + korrigiert) / alle) * 100, 1)).replace('.', ','),
-                                          ' % korrigiert oder fertig', '<!---->']), temp_text)
+            temp_text = regex.sub('<!--GLStatus:{year}-->|span style="background-color:#4876FF; font-weight: bold"|ca. {percent} % korrigiert oder fertig<!---->'
+                                  .format(year=year,
+                                          percent=str(round(((fertig + korrigiert) / alle) * 100, 1)).replace('.', ',')), temp_text)
         elif korrigiert > 0:
-            temp_text = regex.sub(''.join(['<!--GLStatus:', str(year), '-->', 'ca. ',
-                                          str(round(((fertig) / alle) * 100, 1)).replace('.', ','),
-                                          ' % fertig, Rest korrigiert', '<!---->']), temp_text)
+            temp_text = regex.sub('<!--GLStatus:{year}-->|span style="background-color:#F7D700; font-weight: bold"|{percent_fertig} % fertig, Rest korrigiert<!---->'
+                                  .format(year=year,
+                                          percent_fertig = str(round(((fertig) / alle) * 100, 1)).replace('.', ',')), temp_text)
         else:
-            temp_text = regex.sub(''.join(['<!--GLStatus:', str(year), '-->', 'Fertig', '<!---->']), temp_text)
+            temp_text = regex.sub('<!--GLStatus:{year}-->|span style="background-color:#00FF00; font-weight: bold"|Fertig<!---->'
+                                  .format(year = year), temp_text)
         return temp_text
 
     def petscan(self, categories, not_categories = [], article=False, year=None):
