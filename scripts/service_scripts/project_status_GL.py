@@ -45,7 +45,7 @@ class GLStatus(CanonicalBot):
         pass
 
     def to_percent(self, counter, denominator):
-        return ''.join([' (', str(round((counter/denominator)*100, 2)).replace('.', ','), ' %)'])
+        return ' ({0:.2f} %)'.format(round((counter/denominator)*100, 2)).replace('.', ',')
 
     def projektstand(self, temp_text, all, fertig, korrigiert, unkorrigiert, articles):
         composed_text = ''.join(['<!--new line: Liste wird von einem Bot aktuell gehalten.-->\n|-\n', '|', self.timestamp_start.strftime('%d.%m.%Y'),
