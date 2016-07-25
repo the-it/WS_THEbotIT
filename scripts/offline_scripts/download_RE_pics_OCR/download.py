@@ -30,7 +30,7 @@ def get_archives_and_unzip():
        os.makedirs(os.getcwd() + os.sep + 'archives')
    if os.path.exists(os.getcwd() + os.sep + 'rawdata'):
        shutil.rmtree(os.getcwd() + os.sep + 'rawdata')
-   os.makedirs(os.getcwd() + os.sep + 'rawdata1')
+   os.makedirs(os.getcwd() + os.sep + 'rawdata')
    for item in list_of_archives:
        get_archive(item[0], item[1])
        unrar(item[0])
