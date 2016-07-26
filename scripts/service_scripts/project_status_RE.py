@@ -34,9 +34,6 @@ class REStatus(CanonicalBot):
         page.text = temp_text
         page.save('new dataset', botflag=True)
 
-    def send_log_to_wiki(self):
-        pass
-
     def get_sum_of_cat(self, cats):
         list_of_lemmas = self.petscan(cats)
         byte_sum = 0
@@ -49,6 +46,7 @@ class REStatus(CanonicalBot):
         for category in categories:
             self.searcher.add_positive_category(category)
         self.searcher.set_logic_union()
+        self.logger.debug(self.searcher)
         return self.searcher.run()
 
 if __name__ == "__main__":

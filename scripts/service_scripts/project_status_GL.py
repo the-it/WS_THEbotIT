@@ -41,9 +41,6 @@ class GLStatus(CanonicalBot):
         page.text = temp_text
         page.save('new dataset', botflag=True)
 
-    def send_log_to_wiki(self):
-        pass
-
     def to_percent(self, counter, denominator):
         return ' ({0:.2f} %)'.format(round((counter/denominator)*100, 2)).replace('.', ',')
 
