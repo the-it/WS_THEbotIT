@@ -11,8 +11,6 @@ list_of_archives = [['Pauly Supp.rar', 'PaulySupp'],
                     ['Pauly-Wissowa_11-20.rar', 'PaulyWissowa1120'],
                     ['Pauly-Wissowa_1-10.rar', 'PaulyWissowa110']]
 
-symlink_list = [['']]
-
 def get_archive(filename, item):
     archivename = os.getcwd() + os.sep + 'archives' + os.sep + filename
     if not os.path.isfile(archivename):
@@ -38,5 +36,3 @@ def get_archives_and_unzip():
 
 if __name__ == "__main__":
     get_archives_and_unzip()
-    for item in symlink_list:
-        os.symlink(item)
