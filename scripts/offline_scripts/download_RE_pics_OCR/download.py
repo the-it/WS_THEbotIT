@@ -12,11 +12,9 @@ list_of_archives = [['Pauly Supp.rar', 'PaulySupp'],
                     ['Pauly-Wissowa_1-10.rar', 'PaulyWissowa110']]
 
 def get_archive(filename, item):
-    archivename = os.getcwd() + os.sep + 'archives' + os.sep + filename
-    if not os.path.isfile(archivename):
-        session = internetarchive.ArchiveSession()
-        download = session.get_item(item).get_file(filename)
-        download.download(archivename)
+    session = internetarchive.ArchiveSession()
+    download = session.get_item(item).get_file(filename)
+    download.download(os.getcwd() + os.sep + 'archives' + os.sep + filename)
 
 def unrar(item):
     patoolib.extract_archive(os.getcwd() + os.sep + 'archives' + os.sep + item,
@@ -26,12 +24,12 @@ def unrar(item):
 def get_archives_and_unzip():
    if not os.path.exists(os.getcwd() + os.sep + 'archives'):
        os.makedirs(os.getcwd() + os.sep + 'archives')
-   if os.path.exists(os.getcwd() + os.sep + 'rawdata'):
-       shutil.rmtree(os.getcwd() + os.sep + 'rawdata')
-   os.makedirs(os.getcwd() + os.sep + 'rawdata')
+   if not os.path.exists(os.getcwd() + os.sep + 'rawdata'):
+       os.makedirs(os.getcwd() + os.sep + 'rawdata')
    for item in list_of_archives:
-       get_archive(item[0], item[1])
-       unrar(item[0])
+       if not os.path.isfile(os.getcwd() + os.sep + 'archives' + os.sep + item[0]):
+           get_archive(item[0], item[1])
+           unrar(item[0])
 
 
 if __name__ == "__main__":
