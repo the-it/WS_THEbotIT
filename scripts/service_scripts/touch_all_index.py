@@ -17,6 +17,7 @@ class TouchIndex(CanonicalBot):
         CanonicalBot.__init__(self, wiki)
         self.botname = 'PingIndex'
         self.searcher = PetScan()
+        self.timeout = timedelta(hours=4)
 
     def run(self):
         indexes = self.petscan()
@@ -50,6 +51,6 @@ if __name__ == "__main__":
         wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
-    bot = PingIndex(wiki)
+    bot = TouchIndex(wiki)
     with SaveExecution(bot):
         bot.run()
