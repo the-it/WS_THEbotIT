@@ -2,27 +2,32 @@ import os
 import requests
 import internetarchive
 
+folder = 'pages'
 
+def from_IA(book, item, filepattern, start, steps, finish):
+    if not os.path.exists(os.getcwd() + os.sep + folder + os.sep + book):
+        os.makedirs(os.getcwd() + os.sep + folder + os.sep + book)
 
-def from_IA(book, pattern, start, steps, finish):
-    if not os.path.exists(os.getcwd() + os.sep + 'pages' + os.sep + book):
-        os.makedirs(os.getcwd() + os.sep + 'pages' + os.sep + book)
-    for i in range(start, finish+steps, steps):
-        print(pattern.format(i))
+    session = internetarchive.ArchiveSession()
+    re_item = session.get_item(item)
+    list_of_pages = range(start, finish + steps, steps)
+    for idx, i in enumerate(list_of_pages):
+        print('Band: {}, Seite:{}/{}, {}'.format(book, idx, len(list_of_pages), filepattern.format(i)))
+        file_on_harddisk = os.getcwd() + os.sep + folder + os.sep + book + os.sep + '{0:04d}.png'.format(i)
+        if not os.path.isfile(file_on_harddisk):
+            try:
+                re_file = re_item.get_file(filepattern.format(i))
+                re_file.download(file_on_harddisk, silent = True)
+            except:
+                print('{} is not an item'.format(filepattern.format(i)))
 
-        if not os.path.exists(os.getcwd() + os.sep + 'pages' + os.sep + book + os.sep + '{0:04d}.png'.format(i)):
-            response = requests.get(url=pattern.format(i), headers={'User-Agent': 'Python-urllib/3.1'}, timeout=1000)
-            if response.status_code == 200:
-                with open(os.getcwd() + os.sep + 'pages' + os.sep + book + os.sep + '{0:04d}.png'.format(i), 'wb') as filehandler:
-                    filehandler.write(response.content)
-            else:
-                raise ConnectionError(response.status_code)
 
 
 def make_single_pages():
-    if not os.path.exists(os.getcwd() + os.sep + 'pages'):
-        os.makedirs(os.getcwd() + os.sep + 'pages')
-    from_IA(book='I,1', pattern='http://ia800202.us.archive.org/2/items/PWRE01-02/Pauly-Wissowa_I1_{0:04d}.png', start=1, steps=2, finish=1439)
+    if not os.path.exists(os.getcwd() + os.sep + folder):
+        os.makedirs(os.getcwd() + os.sep + folder)
+    from_IA(book='I,1', item='PWRE01-02', filepattern='Pauly-Wissowa_I1_{0:04d}.png', start=1, steps=2, finish=1439)
+    from_IA(book='I,2', item='PWRE01-02', filepattern='Pauly-Wissowa_I2_{0:04d}.png', start=1441, steps=2, finish=2901)
 
 
 if __name__ == "__main__":
