@@ -43,8 +43,13 @@ class AuthorList(CanonicalBot):
             dump = pywikibot.Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
         else:
             dump = pywikibot.Page(self.wiki, 'Liste der Autoren')
-        dump.text =  self._convert_to_table()
-        dump.save('die Liste wurde auf den aktuellen Stand gebracht.', botflag=True)
+        old_text = dump.text
+        new_text = self._convert_to_table()
+        if new_text[150:] != old_text[150:]: #compare all but the date
+            dump.text =  new_text
+            dump.save('die Liste wurde auf den aktuellen Stand gebracht.', botflag=True)
+        else:
+            self.logger.info('Heute gab es keine Änderungen, daher wird die Seite nicht überschrieben.')
 
     def _run_searcher(self):
         # was the last run successful
