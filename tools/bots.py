@@ -229,6 +229,17 @@ class CanonicalBot(BaseBot, BotData):
         page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
 
+    def create_timestamp_for_search(self, searcher, days_in_past=1):
+        if self.last_run:
+            start_of_search = self.last_run['timestamp'] - datetime.timedelta(days=days_in_past)
+        else:
+            start_of_search = self.timestamp_start - datetime.timedelta(days=days_in_past)
+        searcher.last_change_after(int(start_of_search.strftime('%Y')),
+                                   int(start_of_search.strftime('%m')),
+                                   int(start_of_search.strftime('%d')))
+        self.logger.info('The date {} is set to the argument "after".'
+                         .format(start_of_search.strftime("%d.%m.%Y")))
+
 
 class PingBot(CanonicalBot):
     def __init__(self, wiki):
