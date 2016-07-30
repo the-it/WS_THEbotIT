@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     # daily bots
     run_bot(AuthorList(wiki))
-    run_bot(TouchIndex(wiki))
+    #run_bot(TouchIndex(wiki)) #pause because of bug fixing
 
     # tasks for sunday
     if datetime.now().weekday() == 6:
