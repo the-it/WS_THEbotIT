@@ -1,11 +1,11 @@
 import sys
 import os
-import pywikibot
 from datetime import datetime
-from pywikibot.data.api import LoginManager
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
+from pywikibot import Site
+from pywikibot.data.api import LoginManager
 from scripts.service_scripts.authorlist import AuthorList
 from scripts.service_scripts.project_status_RE import REStatus
 from scripts.service_scripts.project_status_GL import GLStatus
@@ -20,7 +20,7 @@ def run_bot(bot):
 if __name__ == "__main__":
     with open('password.pwd') as password_file:
         password = load_password(password_file)
-        wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
+        wiki = Site(code='de', fam='wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
 

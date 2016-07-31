@@ -2,12 +2,12 @@ __author__ = 'erik'
 
 import sys
 import os
-from pywikibot.data.api import LoginManager
-import pywikibot
 import re
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
+from pywikibot import Page, Site
+from pywikibot.data.api import LoginManager
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
@@ -22,7 +22,7 @@ class GLStatus(CanonicalBot):
             lemma = 'Benutzer:THEbotIT/' + self.botname
         else:
             lemma = 'Die Gartenlaube'
-        page = pywikibot.Page(self.wiki, lemma)
+        page = Page(self.wiki, lemma)
         temp_text = page.text
 
         all = self.petscan([])
@@ -109,7 +109,7 @@ class GLStatus(CanonicalBot):
 if __name__ == "__main__":
     with open('../password.pwd') as password_file:
         password = load_password(password_file)
-        wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
+        wiki = Site(code='de', fam='wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
     bot = GLStatus(wiki)

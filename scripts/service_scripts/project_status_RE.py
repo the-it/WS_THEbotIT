@@ -2,8 +2,6 @@ __author__ = 'erik'
 
 import sys
 import os
-import pywikibot
-from pywikibot.data.api import LoginManager
 import re
 import traceback
 import datetime
@@ -11,6 +9,8 @@ from datetime import timedelta
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
+from pywikibot import Page, Site
+from pywikibot.data.api import LoginManager
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
@@ -24,7 +24,7 @@ class REStatus(CanonicalBot):
         fertig = self.get_sum_of_cat(['Fertig RE'])
         korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'])
         unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE'])
-        page = pywikibot.Page(self.wiki, 'Benutzer:THEbotIT/' + self.botname)
+        page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.botname)
         temp_text = page.text
         composed_text = ''.join(['|-\n', '|', self.timestamp_start.strftime('%Y%m%d-%H%M'),
                          '||', str(unkorrigiert[1]), '||', str(unkorrigiert[0]),
@@ -52,7 +52,7 @@ class REStatus(CanonicalBot):
 if __name__ == "__main__":
     with open('../password.pwd') as password_file:
         password = load_password(password_file)
-        wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
+        wiki = Site(code='de', fam='wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
     bot = REStatus(wiki)

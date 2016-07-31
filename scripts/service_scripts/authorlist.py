@@ -1,14 +1,15 @@
 import sys
 import os
-import pywikibot
 import re
 import traceback
 import datetime
 from datetime import timedelta
-from pywikibot.data.api import LoginManager
+
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
+from pywikibot import ItemPage, Page, Site
+from pywikibot.data.api import LoginManager
 from tools.catscan import PetScan
 from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
@@ -40,9 +41,9 @@ class AuthorList(CanonicalBot):
         lemma_list = self._run_searcher()
         self._build_database(lemma_list)
         if __debug__:
-            dump = pywikibot.Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
+            dump = Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
         else:
-            dump = pywikibot.Page(self.wiki, 'Liste der Autoren')
+            dump = Page(self.wiki, 'Liste der Autoren')
         old_text = dump.text
         new_text = self._convert_to_table()
         if new_text[150:] != old_text[150:]: #compare all but the date
@@ -88,7 +89,7 @@ class AuthorList(CanonicalBot):
 
             dict_author = {'title': author['title']}
             # extract the Personendaten-block form the wikisource page
-            page = pywikibot.Page(self.wiki, author['title'])
+            page = Page(self.wiki, author['title'])
             try:
                 try:
                     personendaten = re.search('\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
@@ -221,7 +222,7 @@ class AuthorList(CanonicalBot):
         if author_dict[event] == '' or self.match_property.search(author_dict[event]):
             self.logger.debug('No valid entry in {} for [[{}]] ... Fallback to wikidata'.format(event, author_dict['title']))
             try:
-                item = pywikibot.ItemPage(self.repo, author_dict['wikidata'])
+                item = ItemPage(self.repo, author_dict['wikidata'])
                 if event == 'birth':
                     property_label = 'P569'
                 else:
@@ -255,7 +256,7 @@ class AuthorList(CanonicalBot):
 if __name__ == "__main__":
     with open('../password.pwd') as password_file:
         password = load_password(password_file)
-        wiki = pywikibot.Site(code= 'de', fam= 'wikisource', user='THEbotIT')
+        wiki = Site(code= 'de', fam= 'wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
 
