@@ -26,12 +26,13 @@ class Tee(object):
 
 
 class BotLog(object):
-    def __init__(self, wiki, timestamp_start):
+    def __init__(self, wiki, timestamp_start, debug):
         self.botname = 'BotLog'
         self.wiki = wiki
         self.timestamp_start = timestamp_start
         self.barstring = '{:#^120}'.format('')
         self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
+        self.debug = debug
 
     def __enter__(self):
         self.logger_names = {}
@@ -78,7 +79,7 @@ class BotLog(object):
     def tear_down_logger(self):
         for handler in self.logger.handlers:
             handler.close()
-        if not __debug__:
+        if not self.debug:
             self.send_log_to_wiki()
         if os.path.isfile(self.logger_names['info']):
             os.remove(self.logger_names['info'])
@@ -170,9 +171,9 @@ class BotTimestamp(object):
 
 
 class BaseBot(BotLog, BotTimestamp):
-    def __init__(self, wiki):
+    def __init__(self, wiki, debug):
         self.timestamp_start = datetime.datetime.now()
-        BotLog.__init__(self, wiki, self.timestamp_start)
+        BotLog.__init__(self, wiki, self.timestamp_start, debug)
         BotTimestamp.__init__(self, self.timestamp_start)
         self.botname =  'BaseBot'
         self.timeout = datetime.timedelta(minutes=60)
@@ -199,8 +200,8 @@ class BaseBot(BotLog, BotTimestamp):
             return False
 
 class OneTimeBot(BaseBot):
-    def __init__(self, wiki):
-        BaseBot.__init__(self, wiki)
+    def __init__(self, wiki, debug):
+        BaseBot.__init__(self, wiki, debug)
         self.botname = 'OneTimeBot'
 
     def send_log_to_wiki(self):
@@ -210,8 +211,8 @@ class OneTimeBot(BaseBot):
 
 
 class CanonicalBot(BaseBot, BotData):
-    def __init__(self, wiki):
-        BaseBot.__init__(self, wiki)
+    def __init__(self, wiki, debug):
+        BaseBot.__init__(self, wiki, debug)
         BotData.__init__(self)
         self.botname = 'CanonicalBot'
 
@@ -239,15 +240,6 @@ class CanonicalBot(BaseBot, BotData):
                                    int(start_of_search.strftime('%d')))
         self.logger.info('The date {} is set to the argument "after".'
                          .format(start_of_search.strftime("%d.%m.%Y")))
-
-
-class PingBot(CanonicalBot):
-    def __init__(self, wiki):
-        CanonicalBot.__init__(self, wiki)
-        self.botname = 'PingBot'
-
-    def run(self):
-        self.logger.info('Ping')
 
 
 class SaveExecution():

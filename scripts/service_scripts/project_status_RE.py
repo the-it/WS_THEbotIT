@@ -16,8 +16,8 @@ from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
 
 class REStatus(CanonicalBot):
-    def __init__(self, wiki):
-        CanonicalBot.__init__(self, wiki)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'REStatus'
 
     def run(self):
@@ -55,6 +55,6 @@ if __name__ == "__main__":
         wiki = Site(code='de', fam='wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
-    bot = REStatus(wiki)
+    bot = REStatus(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()

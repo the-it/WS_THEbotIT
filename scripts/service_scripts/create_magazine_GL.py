@@ -12,8 +12,8 @@ from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
 
 class MagazinesGL(CanonicalBot):
-    def __init__(self, wiki):
-        CanonicalBot.__init__(self, wiki)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'MagazinesGL'
         self.searcher_pages = PetScan()
         self.searcher_indexes = PetScan()
@@ -54,8 +54,7 @@ class MagazinesGL(CanonicalBot):
         self.searcher_pages.set_search_depth(1)
         if self.last_run and self.last_run['succes'] and self.data:
             self.create_timestamp_for_search(self.searcher_pages)
-        elif __debug__:
-        #elif False:
+        elif False: # activate for debugging
             self.create_timestamp_for_search(self.searcher_pages, 5)
         return self.searcher_pages.run()
 
@@ -67,6 +66,6 @@ if __name__ == "__main__":
         login = LoginManager(site=wiki, password=password)
         login.login()
 
-    bot = MagazinesGL(wiki)
+    bot = MagazinesGL(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()

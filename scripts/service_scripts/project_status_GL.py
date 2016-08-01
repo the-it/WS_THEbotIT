@@ -13,12 +13,12 @@ from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
 
 class GLStatus(CanonicalBot):
-    def __init__(self, wiki):
-        CanonicalBot.__init__(self, wiki)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'GLStatus'
 
     def run(self):
-        if __debug__:
+        if False: #activate for debug purpose
             lemma = 'Benutzer:THEbotIT/' + self.botname
         else:
             lemma = 'Die Gartenlaube'
@@ -112,6 +112,6 @@ if __name__ == "__main__":
         wiki = Site(code='de', fam='wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
-    bot = GLStatus(wiki)
+    bot = GLStatus(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()

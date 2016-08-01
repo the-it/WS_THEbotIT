@@ -13,8 +13,8 @@ from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
 
 class TouchIndex(CanonicalBot):
-    def __init__(self, wiki):
-        CanonicalBot.__init__(self, wiki)
+    def __init__(self, wiki, debug=True):
+        CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'PingIndex'
         self.searcher = PetScan()
         self.timeout = timedelta(hours=4)
@@ -51,6 +51,6 @@ if __name__ == "__main__":
         wiki = Site(code='de', fam='wikisource', user='THEbotIT')
         login = LoginManager(site=wiki, password=password)
         login.login()
-    bot = TouchIndex(wiki)
+    bot = TouchIndex(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()

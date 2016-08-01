@@ -17,8 +17,8 @@ from tools.bots import CanonicalBot, SaveExecution
 from tools.little_helpers import load_password
 
 class AuthorList(CanonicalBot):
-    def __init__(self, wiki):
-        CanonicalBot.__init__(self, wiki)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'AuthorList'
         self.searcher = PetScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
@@ -40,7 +40,7 @@ class AuthorList(CanonicalBot):
     def run(self):
         lemma_list = self._run_searcher()
         self._build_database(lemma_list)
-        if __debug__:
+        if self.debug:
             dump = Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
         else:
             dump = Page(self.wiki, 'Liste der Autoren')
@@ -54,8 +54,8 @@ class AuthorList(CanonicalBot):
 
     def _run_searcher(self):
         # was the last run successful
-        if __debug__:
-        #if False:
+        if self.debug:
+        #if False
             yesterday = datetime.datetime.now() - timedelta(days=5)
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
@@ -260,6 +260,6 @@ if __name__ == "__main__":
         login = LoginManager(site=wiki, password=password)
         login.login()
 
-    bot = AuthorList(wiki)
+    bot = AuthorList(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()
