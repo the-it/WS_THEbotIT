@@ -7,9 +7,9 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir
 from pywikibot import Site, Page
 from pywikibot.data.api import LoginManager
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
-from tools.catscan import PetScan
-from tools.bots import CanonicalBot, SaveExecution
-from tools.little_helpers import load_password
+from bot_tools.catscan import PetScan
+from bot_tools.bots import CanonicalBot, SaveExecution
+from bot_tools.little_helpers import load_password
 
 class MagazinesGL(CanonicalBot):
     def __init__(self, wiki, debug):
@@ -32,9 +32,10 @@ class MagazinesGL(CanonicalBot):
         self.indexes = self.search_indexes()
         self.lemmas = self.search_pages()
         tempdata_pages = {'1897': ['556', '805'], '1884': ['504'], '1888': ['861', '862', '863', '866', '867', '878', '879'], '1881': ['440'], '1882': ['398'], '1869': ['630'], '1876': ['355', '398', '572'], '1868': ['555'], '1870': ['718'], '1858': ['111'], '1886': ['288'], '1875': ['325', '326', '327', '328', '335', '338', '339', '340', '341', '342', '639', '843'], '1856': ['003', '047', '065', '103', '124', '148', '149', '155', '161', '109', '110', '179'], '1892': ['725'], '1879': ['031'], '1862': ['800'], '1880': ['640'], '1864': ['062', 'p_5', '064'], '1863': ['485']}
-        #self.process_pages(tempdata_pages)
+        self.process_pages(tempdata_pages)
         self.process_indexes()
         tempdata_magzines = self.process_actual_pages(tempdata_pages)
+        self.make_magazines(tempdata_magzines)
         wait = 0
 
     def process_pages(self, tempdata):
@@ -53,7 +54,8 @@ class MagazinesGL(CanonicalBot):
                                           year=year,
                                           level=proofread_lemma.quality_level,
                                           title=lemma['title']))
-                self.data['pages'][year][page] = proofread_lemma.quality_level
+                ref = self.search_for_refs(proofread_lemma.text)
+                self.data['pages'][year][page] = [proofread_lemma.quality_level, ref[0], ref[1]]
                 if not year in tempdata.keys():
                     tempdata[year] = []
                 tempdata[year].append(page)
@@ -91,15 +93,67 @@ class MagazinesGL(CanonicalBot):
         return tempdata_magzines
 
     def make_magazines(self, dictionary_of_magazines_by_year):
-        for year in dictionary_of_magazines_by_year:
+        for idx_year, year in enumerate(dictionary_of_magazines_by_year):
             magazines = dictionary_of_magazines_by_year[year]
-            for magazine in magazines:
-                lemma = Page(self.wiki, 'Benutzer:THEbotIT/Test')
-                #test if magazine is the last in the year
+            self.logger.info('make_mag_year {idx}/{len}'.format(idx=idx_year + 1,
+                                                                len=len(dictionary_of_magazines_by_year)))
+            for idx_mag, magazine in enumerate(magazines):
+                self.logger.info('make_mag_mag {idx}/{len} ... issue:{year}/{mag}'.format(idx=idx_mag + 1,
+                                                                                          len=len(magazines),
+                                                                                          year=year,
+                                                                                          mag=magazine))
+                if self.debug:
+                    lemma = Page(self.wiki, 'Benutzer:THEbotIT/Test')
+                else:
+                    lemma = Page(self.wiki, 'Die Gartenlaube ({year})/Heft {magazine:d}'.format(year=year,
+                                                                                                magazine=int(magazine)))
                 new_text = self.make_magazine(year, magazine)
+                if new_text != lemma.text:
+                    lemma.text = new_text
+                    #lemma.save('automatische Hefterstellung', botflag=True)
 
-    def make_magazine(self, year, magazine, quality, list_of_pages, last=False):
+    def make_magazine(self, year, magazine):
+        last_magazine = True
+        for key in self.data['indexes'][year].keys():
+            if int(key) > int(magazine):
+                last_magazine = False
+                break
+        list_of_pages = self.data['indexes'][year][magazine]
+        quality = 4
+        for page in list_of_pages:
+            if self.data['pages'][year][page][0] < quality:
+                quality = self.data['pages'][year][page][0]
+                if quality < 3:
+                    self.logger.info('The quality of {year}/{magazine} is too poor.'.format(year=year, magazine=magazine))
+                    return None
+        return self.make_magazine_text(year, magazine, quality, list_of_pages, last_magazine)
+
+    def convert_page_no(self, page:str):
+        while True:
+            if page[0] == "0":
+                page = page[1:]
+            else:
+                break
+        return page.replace('_', ' ')
+
+    def search_for_refs(self, text):
+        ref = 0
+        ref_WS = 0
+        if re.search('<ref>', text):
+            ref = 1
+        elif re.search('\{\{CRef\|\|', text):
+            ref = 1
+        if re.search('<ref group="WS">', text):
+            ref_WS = 1
+        elif re.search('\{\{CRef\|WS\|', text):
+            ref_WS = 1
+        return [ref, ref_WS]
+
+    def make_magazine_text(self, year, magazine, quality, list_of_pages, last):
+        magazine = int(magazine)
+        year = int(year)
         string_list = []
+        string_list.append('<!--Diese Seite wurde automatisch durch einen Bot erstellt. Wenn du einen Fehler findest oder eine Änderung wünscht, benachrichtige bitte den Betreiber, THE IT, des Bots.-->\n')
         string_list.append('{{Textdaten\n')
         if magazine > 1:
             string_list.append('|VORIGER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
@@ -111,9 +165,55 @@ class MagazinesGL(CanonicalBot):
         else:
             string_list.append('|NÄCHSTER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
                                                                                                 magazine=magazine+1))
-        string_list.append("|AUTOR=Verschiedene\n|TITEL=[[Die Gartenlaube]]\n|SUBTITEL=''Illustrirtes Familienblatt''\n|HERKUNFT=off\n")
-        if year < 1962:
+        string_list.append("|AUTOR=Verschiedene\n")
+        string_list.append("|TITEL=[[Die Gartenlaube]]\n")
+        string_list.append("|SUBTITEL=''Illustrirtes Familienblatt''\n")
+        string_list.append("|HERKUNFT=off\n")
+        if year < 1957:
             string_list.append('|HERAUSGEBER=[[Ernst Keil]]\n')
+        else:
+            string_list.append('|HERAUSGEBER=[[Ernst Keil]], Ernst Keil’s Nachfolger\n')
+        string_list.append('|ENTSTEHUNGSJAHR={year:d}\n'.format(year=year))
+        string_list.append('|ERSCHEINUNGSJAHR={year:d}\n'.format(year=year))
+        string_list.append('|ERSCHEINUNGSORT=Leipzig\n')
+        string_list.append('|VERLAG=Ernst Keil\n')
+        string_list.append('|WIKIPEDIA=Die Gartenlaube\n')
+        string_list.append('|BILD=Die Gartenlaube ({year:d}) {page1}.jpg\n'.format(year=year, page1=list_of_pages[0]))
+        string_list.append('|QUELLE=[[commons:category:Gartenlaube ({year})|commons]]\n'.format(year=year))
+        if quality == 4:
+            string_list.append('|BEARBEITUNGSSTAND=fertig\n')
+        else:
+            string_list.append('|BEARBEITUNGSSTAND=korrigiert\n')
+        string_list.append('|INDEXSEITE=Die Gartenlaube ({year})\n'.format(year=year))
+        string_list.append('}}\n\n')
+        string_list.append('{{BlockSatzStart}}\n')
+        string_list.append('__TOC__\n')
+        ref = False
+        ref_WS = False
+        for page in list_of_pages:
+            page_format = self.convert_page_no(page)
+            string_list.append('{{{{SeitePR|{page_format}|Die Gartenlaube ({year}) {page}.jpg}}}}\n'
+                               .format(year=year,
+                                       page_format=page_format,
+                                       page=page))
+            if not ref:
+                if self.data['pages'][year][page][1]:
+                    ref = True
+            if not ref_WS:
+                if self.data['pages'][year][page][2]:
+                    ref_WS = True
+        if ref:
+            string_list.append('{{references|x}}\n')
+        if ref_WS:
+            string_list.append('{{references|TIT|WS}}\n')
+        string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n')
+        string_list.append('[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year, magazine=magazine))
+        string_list.append('[[Kategorie:{year}0er Jahre]]\n'.format(year=str(year)[0:2]))
+        string_list.append('\n')
+
+        return ''.join(string_list)
+
+
 
     def search_indexes(self):
         self.searcher_indexes.add_positive_category('Die Gartenlaube')
@@ -146,6 +246,6 @@ if __name__ == "__main__":
         login = LoginManager(site=wiki, password=password)
         login.login()
 
-    bot = MagazinesGL(wiki=wiki, debug=True)
+    bot = MagazinesGL(wiki=wiki, debug=False)
     with SaveExecution(bot):
         bot.run()
