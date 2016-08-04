@@ -180,12 +180,12 @@ for idx, i in enumerate(range(6, 297, 2)):
     first_page = proofreadpage.ProofreadPage(site, "Seite:OrbisPictus {}.jpg".format(add_zeros(i, 3)))
     second_page = proofreadpage.ProofreadPage(site, "Seite:OrbisPictus {}.jpg".format(add_zeros(i + 1, 3)))
 
-    status_1 = first_page.status
-    status_2 = second_page.status
+    status_1 = first_page.quality_level
+    status_2 = second_page.quality_level
 
-    if status_1 == "Fertig" and status_2 == "Fertig":
+    if status_1 == 4 and status_2 == 4:
         status = "Fertig"
-    elif status_1 == "Unkorrigiert" or status_2 == "Unkorrigiert":
+    elif status_1 == 1 or status_2 == 1:
         status = "Unkorrigiert"
     else:
         status = "Korrigiert"
@@ -194,6 +194,6 @@ for idx, i in enumerate(range(6, 297, 2)):
     tempstatus = re.search("(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", page.text)
     print('Ist:',tempstatus.group())
     if tempstatus.group() != status:
-        temptext = re.sub("\|STATUS=(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", status, page.text)
+        temptext = re.sub("\|STATUS=(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", '|STATUS=' + status, page.text)
         page.text = temptext
         page.save(summary= "automatische Setzung des Seitenstatus", botflag= True)
