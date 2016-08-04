@@ -18,10 +18,7 @@ def run_bot(bot):
         bot.run()
 
 if __name__ == "__main__":
-    with open('password.pwd') as password_file:
-        wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-        login = LoginManager(site=wiki, password=load_password(password_file))
-        login.login()
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
     # daily bots
     run_bot(AuthorList(wiki=wiki, debug=False))

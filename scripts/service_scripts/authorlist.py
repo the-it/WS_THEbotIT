@@ -254,12 +254,7 @@ class AuthorList(CanonicalBot):
             return(author_dict[event])  # 4,6
 
 if __name__ == "__main__":
-    with open('../password.pwd') as password_file:
-        password = load_password(password_file)
-        wiki = Site(code= 'de', fam= 'wikisource', user='THEbotIT')
-        login = LoginManager(site=wiki, password=password)
-        login.login()
-
+    wiki = Site(code= 'de', fam= 'wikisource', user='THEbotIT')
     bot = AuthorList(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()
