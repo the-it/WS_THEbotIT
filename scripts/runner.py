@@ -5,13 +5,11 @@ from datetime import datetime
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
 from pywikibot import Site
-from pywikibot.data.api import LoginManager
 from scripts.service_scripts.authorlist import AuthorList
 from scripts.service_scripts.project_status_RE import REStatus
 from scripts.service_scripts.project_status_GL import GLStatus
 from scripts.service_scripts.touch_all_index import TouchIndex
 from tools.bots import SaveExecution
-from tools.little_helpers import load_password
 
 def run_bot(bot):
     with SaveExecution(bot):

@@ -7,10 +7,8 @@ import re
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
 from pywikibot import Page, Site
-from pywikibot.data.api import LoginManager
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot, SaveExecution
-from tools.little_helpers import load_password
 
 class GLStatus(CanonicalBot):
     def __init__(self, wiki, debug):
