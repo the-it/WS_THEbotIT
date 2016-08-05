@@ -1,12 +1,7 @@
-import sys
-import os
 import re
 import traceback
 import datetime
 from datetime import timedelta
-
-
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
 from pywikibot import ItemPage, Page, Site
 from tools.catscan import PetScan
@@ -250,9 +245,3 @@ class AuthorList(CanonicalBot):
                 return('')  # 4,6
         else:
             return(author_dict[event])  # 4,6
-
-if __name__ == "__main__":
-    wiki = Site(code= 'de', fam= 'wikisource', user='THEbotIT')
-    bot = AuthorList(wiki=wiki, debug=True)
-    with SaveExecution(bot):
-        bot.run()

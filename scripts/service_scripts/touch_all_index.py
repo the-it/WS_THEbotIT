@@ -1,14 +1,8 @@
-__author__ = 'erik'
-
-import sys
-import os
 from datetime import datetime, timedelta
 
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
-
-from pywikibot import Page, Site
+from pywikibot import Page
 from tools.catscan import PetScan
-from tools.bots import CanonicalBot, SaveExecution
+from tools.bots import CanonicalBot
 
 class TouchIndex(CanonicalBot):
     def __init__(self, wiki, debug=True):
@@ -42,9 +36,3 @@ class TouchIndex(CanonicalBot):
         self.searcher.set_sort_criteria('date')
         self.searcher.add_namespace('Index')
         return self.searcher.run()
-
-if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = TouchIndex(wiki=wiki, debug=True)
-    with SaveExecution(bot):
-        bot.run()

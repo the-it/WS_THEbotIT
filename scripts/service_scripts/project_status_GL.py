@@ -1,10 +1,4 @@
-__author__ = 'erik'
-
-import sys
-import os
 import re
-
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
 from pywikibot import Page, Site
 from tools.catscan import PetScan
@@ -103,9 +97,3 @@ class GLStatus(CanonicalBot):
             searcher.add_negative_category(category)
         self.logger.debug(str(searcher))
         return len(searcher.run())
-
-if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = GLStatus(wiki=wiki, debug=True)
-    with SaveExecution(bot):
-        bot.run()

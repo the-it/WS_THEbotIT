@@ -1,8 +1,4 @@
-import sys
-import os
 import re
-
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
 
 from pywikibot import Site, Page
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
@@ -275,10 +271,3 @@ class MagazinesGL(CanonicalBot):
         #elif False:
             self.create_timestamp_for_search(self.searcher_pages, 0)
         return self.searcher_pages.run()
-
-
-if __name__ == "__main__":
-    wiki = Site(code= 'de', fam= 'wikisource', user='THEbotIT')
-    bot = MagazinesGL(wiki=wiki, debug=True)
-    with SaveExecution(bot):
-        bot.run()

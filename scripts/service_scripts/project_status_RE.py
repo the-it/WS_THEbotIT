@@ -1,17 +1,8 @@
-__author__ = 'erik'
-
-import sys
-import os
 import re
-import traceback
-import datetime
-from datetime import timedelta
 
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep + os.pardir + os.sep )
-
-from pywikibot import Page, Site
+from pywikibot import Page
 from tools.catscan import PetScan
-from tools.bots import CanonicalBot, SaveExecution
+from tools.bots import CanonicalBot
 
 class REStatus(CanonicalBot):
     def __init__(self, wiki, debug):
@@ -46,9 +37,3 @@ class REStatus(CanonicalBot):
         self.searcher.set_logic_union()
         self.logger.debug(self.searcher)
         return self.searcher.run()
-
-if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = REStatus(wiki=wiki, debug=True)
-    with SaveExecution(bot):
-        bot.run()
