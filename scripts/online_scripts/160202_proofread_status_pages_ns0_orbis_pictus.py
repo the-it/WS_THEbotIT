@@ -194,6 +194,6 @@ for idx, i in enumerate(range(6, 297, 2)):
     tempstatus = re.search("(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", page.text)
     print('Ist:',tempstatus.group())
     if tempstatus.group() != status:
-        temptext = re.sub("\|STATUS=(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig)", '|STATUS=' + status, page.text)
+        temptext = re.sub("\|STATUS=(?:(?:[Uu]nkorrigiert)|(?:[Kk]orrigiert)|(?:[Ff]ertig)|(?:[Uu]nvollständig))", '|STATUS=' + status, page.text)
         page.text = temptext
         page.save(summary= "automatische Setzung des Seitenstatus", botflag= True)

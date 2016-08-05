@@ -45,7 +45,7 @@ class MagazinesGL(CanonicalBot):
                     self.data['pages'][year] = {}
                 proofread_lemma = ProofreadPage(self.wiki, 'Seite:{}'.format(lemma['title']))
                 self.logger.debug('{idx}/{sum} Page {page}({year}) has quality level {level} _ Seite:{title}'
-                                  .format(idx=idx,
+                                  .format(idx=idx + 1,
                                           sum=len(self.lemmas),
                                           page=page,
                                           year=year,
@@ -232,18 +232,19 @@ class MagazinesGL(CanonicalBot):
             for idx, ref_type in enumerate(ref):
                 if not ref_type:
                     try:
-                        if self.data['pages'][year][page][idx]:
+                        if self.data['pages'][str(year)][page][idx + 1]:
                             ref[idx] = True
                     except KeyError:
-                        raise BotExeption('The list of pages is incorrect, year:{year} or page:{page} is missing.'
+                        self.logger.error('The list of pages is incorrect, year:{year} or page:{page} is missing.'
                                           .format(year=year, page=page))
+                        return None
         if ref[0]:
             string_list.append('{{references|x}}\n')
         if ref[1]:
             string_list.append('{{references|TIT|WS}}\n')
         string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n')
         string_list.append('[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year, magazine=magazine))
-        string_list.append('[[Kategorie:{year}0er Jahre]]\n'.format(year=str(year)[0:2]))
+        string_list.append('[[Kategorie:{year}0er Jahre]]\n'.format(year=str(year)[0:3]))
         string_list.append('\n')
         return ''.join(string_list)
 
@@ -252,11 +253,12 @@ class MagazinesGL(CanonicalBot):
         self.searcher_indexes.add_positive_category('Index')
         self.searcher_indexes.set_regex_filter('.*Die Gartenlaube \(\d{4}\)')
         self.searcher_indexes.set_timeout(60)
-        #if self.last_run and self.last_run['succes'] and self.data:
-        if False:
-            self.create_timestamp_for_search(self.searcher_indexes)
-        #elif self.debug:
-        elif False:
+        if self.last_run and self.last_run['succes'] and self.data:
+        #if False:
+            delta = (self.timestamp_start - self.last_run['timestamp']).days
+            self.create_timestamp_for_search(self.searcher_indexes, delta)
+        elif self.debug:
+        #elif False:
             self.create_timestamp_for_search(self.searcher_indexes, 5)
         return self.searcher_indexes.run()
 
@@ -265,11 +267,12 @@ class MagazinesGL(CanonicalBot):
         self.searcher_pages.add_namespace('Seite')
         self.searcher_pages.set_search_depth(1)
         self.searcher_pages.set_timeout(60)
-        #if self.last_run and self.last_run['succes'] and self.data:
-        if False:
-            self.create_timestamp_for_search(self.searcher_pages)
-        #elif self.debug:
-        elif False:
+        if self.last_run and self.last_run['succes'] and self.data:
+        #if False:
+            delta = (self.timestamp_start - self.last_run['timestamp']).days
+            self.create_timestamp_for_search(self.searcher_pages, delta)
+        elif self.debug:
+        #elif False:
             self.create_timestamp_for_search(self.searcher_pages, 0)
         return self.searcher_pages.run()
 

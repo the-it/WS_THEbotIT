@@ -4,7 +4,7 @@ import sys
 sys.path.append('../../')
 import optparse
 import pywikibot
-from tools.catscan.catscan import CatScan
+from tools.catscan import PetScan
 import time
 
 
@@ -28,8 +28,10 @@ def main():
         except:
             raise ValueError("Kommandozeilenargumente sind kein Datum.")
 
-    scanner = CatScan()
+    scanner = PetScan()
     scanner.add_positive_category('Fertig')
+    scanner.add_namespace(0)
+    scanner.add_namespace(120)
 
     if options.bots:
         print("Edits von Bots werden berücksichtigt")
@@ -49,10 +51,10 @@ def main():
 
 
     for idx, lemma in enumerate(lemmas):
-        if lemma["page_namespace"] == 102:
+        if lemma["namespace"] == 102:
             lemma_title = "Seite:" + lemma["page_title"]
         else:
-            lemma_title = lemma["page_title"]
+            lemma_title = lemma["title"]
         page = pywikibot.Page(wiki, lemma_title)
 
         if not page.protection():
