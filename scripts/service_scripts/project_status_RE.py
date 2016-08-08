@@ -16,9 +16,9 @@ class REStatus(CanonicalBot):
         page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.botname)
         temp_text = page.text
         composed_text = ''.join(['|-\n', '|', self.timestamp_start.strftime('%Y%m%d-%H%M'),
-                         '||', str(unkorrigiert[1]), '||', str(unkorrigiert[0]),
-                         '||', str(korrigiert[1]), '||', str(korrigiert[0]),
-                         '||', str(fertig[1]), '||', str(fertig[0]), '\n<!--new line-->'])
+                         '||', str(unkorrigiert[1]), '||', str(unkorrigiert[0]), '||', str(int(unkorrigiert[0]/unkorrigiert[1])),
+                         '||', str(korrigiert[1]), '||', str(korrigiert[0]), '||', str(int(korrigiert[0]/korrigiert[1])),
+                         '||', str(fertig[1]), '||', str(fertig[0]), '||', str(int(fertig[0]/fertig[1])), '\n<!--new line-->'])
         temp_text = re.sub('<!--new line-->', composed_text, temp_text)
         page.text = temp_text
         page.save('new dataset', botflag=True)
