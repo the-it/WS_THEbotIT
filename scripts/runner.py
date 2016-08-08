@@ -9,6 +9,7 @@ from scripts.service_scripts.authorlist import AuthorList
 from scripts.service_scripts.project_status_RE import REStatus
 from scripts.service_scripts.project_status_GL import GLStatus
 from scripts.service_scripts.touch_all_index import TouchIndex
+from scripts.service_scripts.create_magazine_GL import MagazinesGL
 from tools.bots import SaveExecution
 
 def run_bot(bot):
@@ -21,6 +22,10 @@ if __name__ == "__main__":
     # daily bots
     run_bot(AuthorList(wiki=wiki, debug=False))
     #run_bot(TouchIndex(wiki)) #pause because of bug fixing
+
+    # tasks for monday
+    if datetime.now().weekday() == 0:
+        run_bot(MagazinesGL(wiki=wiki, debug=False))
 
     # tasks for sunday
     if datetime.now().weekday() == 6:
