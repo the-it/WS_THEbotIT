@@ -141,10 +141,12 @@ class MagazinesGL(CanonicalBot):
         quality = 4
         for page in list_of_pages:
             try:
-                if (self.data['pages'][year][page][0] == 0) and quality == 4:
-                    quality = 4
-                elif self.data['pages'][year][page][0] < quality:
-                    quality = self.data['pages'][year][page][0]
+                if self.data['pages'][year][page][0] == 0:
+                    page_quality = 4
+                else:
+                    page_quality = self.data['pages'][year][page][0] 
+                if page_quality < quality:
+                    quality = page_quality
                 if quality < 3:
                     self.logger.info('The quality of {year}/{magazine} is too poor.'.format(year=year, magazine=magazine))
                     return None
