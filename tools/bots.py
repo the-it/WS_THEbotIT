@@ -219,6 +219,7 @@ class CanonicalBot(BaseBot, BotData):
         BaseBot.__init__(self, wiki, debug)
         BotData.__init__(self)
         self.botname = 'CanonicalBot'
+        self.new_data_model = None
 
     def __enter__(self):
         BaseBot.__enter__(self)
@@ -245,6 +246,13 @@ class CanonicalBot(BaseBot, BotData):
         self.logger.info('The date {} is set to the argument "after".'
                          .format(start_of_search.strftime("%d.%m.%Y")))
 
+    def data_outdated(self):
+        outdated = False
+        if self.new_data_model and self.last_run:
+            if self.last_run['timestamp'] < self.new_data_model:
+                outdated = True
+                self.last_run = None
+        return outdated
 
 class SaveExecution():
     def __init__(self, bot: BaseBot):

@@ -1,9 +1,10 @@
 import re
 
-from pywikibot import Site, Page
+from pywikibot import Page
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
 from tools.catscan import PetScan
-from tools.bots import CanonicalBot, SaveExecution, BotExeption
+from tools.bots import CanonicalBot, BotExeption
+from datetime import datetime
 
 class MagazinesGL(CanonicalBot):
     def __init__(self, wiki, debug):
@@ -16,9 +17,13 @@ class MagazinesGL(CanonicalBot):
         self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:?.*?(?:\n\n|\Z))', re.DOTALL)
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
+        self.new_data_model = datetime(year=2016, month=8, day=15, hour=20)
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
+        if self.data_outdated():
+            self.data = None
+            self.logger.warning('The data is thrown away. It is out of date')
         if not self.data:
             self.data = {'pages':{}, 'indexes':{}}
 
@@ -40,28 +45,34 @@ class MagazinesGL(CanonicalBot):
                 if not year in self.data['pages'].keys():
                     self.data['pages'][year] = {}
                 proofread_lemma = ProofreadPage(self.wiki, 'Seite:{}'.format(lemma['title']))
-                self.logger.debug('{idx}/{sum} Page {page}({year}) has quality level {level} _ Seite:{title}'
-                                  .format(idx=idx + 1,
-                                          sum=len(self.lemmas),
-                                          page=page,
-                                          year=year,
-                                          level=proofread_lemma.quality_level,
-                                          title=lemma['title']))
+                if self.debug:
+                    self.logger.debug('{idx}/{sum} Page {page}({year}) has quality level {level} _ Seite:{title}'
+                                      .format(idx=idx + 1,
+                                              sum=len(self.lemmas),
+                                              page=page,
+                                              year=year,
+                                              level=proofread_lemma.quality_level,
+                                              title=lemma['title']))
+                else:
+                    self.logger.info('{idx}/{sum} Page {page}({year})'
+                                      .format(idx=idx + 1,
+                                              sum=len(self.lemmas),
+                                              page=page,
+                                              year=year))
                 ref = self.search_for_refs(proofread_lemma.text)
-                if ref[0]:
-                    self.logger.debug('There are refs on Page {page}({year})'
-                                      .format(page=page,
+                page_dict = {'q': proofread_lemma.quality_level}
+                if ref:
+                    self.logger.info('There are refs ({refs})'
+                                      .format(refs = ref,
+                                              page=page,
                                               year=year))
-                if ref[1]:
-                    self.logger.debug('There are refs(WS) on Page {page}({year})'
-                                      .format(page=page,
-                                              year=year))
-                self.data['pages'][year][page] = [proofread_lemma.quality_level, ref[0], ref[1]]
+                    page_dict.update({'r': ref})
+                self.data['pages'][year][page] = page_dict
                 if not year in tempdata.keys():
                     tempdata[year] = []
                 tempdata[year].append(page)
-            except:
-                self.logger.error("wasn't able to process {}".format(lemma['title']))
+            except Exception as error:
+                self.logger.error("wasn't able to process {}, error: {}".format(lemma['title'], error))
 
     def process_indexes(self):
         for idx, index in enumerate(self.indexes):
@@ -114,6 +125,8 @@ class MagazinesGL(CanonicalBot):
                 new_text = self.make_magazine(year, magazine)
                 if new_text:
                     if new_text != lemma.text:
+                        self.logger.info('Print [[Die Gartenlaube ({year})/Heft {magazine}]].'.format(year=year,
+                                                                                                      magazine=magazine))
                         if lemma.text != '':
                             lemma.text = new_text
                             lemma.save('automatisches Update des Heftes', botflag=True)
@@ -141,10 +154,10 @@ class MagazinesGL(CanonicalBot):
         quality = 4
         for page in list_of_pages:
             try:
-                if self.data['pages'][year][page][0] == 0:
+                if self.data['pages'][year][page]['q'] == 0:
                     page_quality = 4
                 else:
-                    page_quality = self.data['pages'][year][page][0] 
+                    page_quality = self.data['pages'][year][page]['q']
                 if page_quality < quality:
                     quality = page_quality
                 if quality < 3:
@@ -165,17 +178,22 @@ class MagazinesGL(CanonicalBot):
         return page.replace('_', ' ')
 
     def search_for_refs(self, text):
-        ref = 0
-        ref_WS = 0
+        ref = []
         if re.search('<ref>', text):
-            ref = 1
+            ref.append('ref')
         elif re.search('\{\{CRef\|\|', text):
-            ref = 1
-        if re.search('<ref .*?WS', text):
-            ref_WS = 1
-        elif re.search('\{\{CRef\|WS\|', text):
-            ref_WS = 1
-        return [ref, ref_WS]
+            ref.append('ref')
+        hit = re.search('group\="(\w{1,3})"', text)
+        if hit:
+            for entry in hit:
+                if entry not in ref:
+                    ref.append(entry)
+        hit = re.findall('\{\{CRef\|(\w{1,3})\|', text)
+        if hit:
+            for entry in hit:
+                if entry not in ref:
+                    ref.append(entry)
+        return ref
 
     def make_magazine_text(self, year, magazine, quality, list_of_pages, last):
         magazine = int(magazine)
@@ -220,38 +238,44 @@ class MagazinesGL(CanonicalBot):
         string_list.append('}}\n\n')
         string_list.append('{{BlockSatzStart}}\n')
         string_list.append('__TOC__\n')
-        ref = [False, False]
+        ref = []
         for page in list_of_pages:
             page_format = self.convert_page_no(page)
             string_list.append('{{{{SeitePR|{page_format}|Die Gartenlaube ({year}) {page}.jpg}}}}\n'
                                .format(year=year,
                                        page_format=page_format,
                                        page=page))
-            for idx, ref_type in enumerate(ref):
-                if not ref_type:
-                    try:
-                        if self.data['pages'][str(year)][page][idx + 1]:
-                            ref[idx] = True
-                    except KeyError:
-                        self.logger.error('The list of pages is incorrect, year:{year} or page:{page} is missing.'
-                                          .format(year=year, page=page))
-                        return None
-        if ref[0]:
-            string_list.append('{{references|x}}\n')
-        if ref[1]:
-            string_list.append('{{references|TIT|WS}}\n')
+            try:
+                page_dict = self.data['pages'][str(year)][page]
+                if 'r' in page_dict.keys():
+                    if 'ref' in page_dict['r']:
+                        if 'ref' not in ref:
+                            ref.append('ref')
+                    for ref_type in page_dict['r']:
+                        if (ref_type != 'ref') and (ref_type not in ref):
+                            ref.append(ref_type)
+            except KeyError:
+                self.logger.error('The list of pages is incorrect, year:{year} or page:{page} is missing.'
+                                  .format(year=year, page=page))
+                return None
+        for ref_type in ref:
+            if ref_type == 'ref':
+                string_list.append('{{references|x}}\n')
+            else:
+                string_list.append('{{{{references|TIT|{ref}}}}}\n'.format(ref=ref_type))
         string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n')
         string_list.append('[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year, magazine=magazine))
         string_list.append('[[Kategorie:{year}0er Jahre]]\n'.format(year=str(year)[0:3]))
         string_list.append('\n')
         return ''.join(string_list)
 
+
     def search_indexes(self):
         self.searcher_indexes.add_positive_category('Die Gartenlaube')
         self.searcher_indexes.add_positive_category('Index')
         self.searcher_indexes.set_regex_filter('.*Die Gartenlaube \(\d{4}\)')
         self.searcher_indexes.set_timeout(60)
-        if self.last_run and self.last_run['succes'] and self.data:
+        if self.last_run and self.last_run['succes']:
         #if False:
             delta = (self.timestamp_start - self.last_run['timestamp']).days
             self.create_timestamp_for_search(self.searcher_indexes, delta)
@@ -265,11 +289,11 @@ class MagazinesGL(CanonicalBot):
         self.searcher_pages.add_namespace('Seite')
         self.searcher_pages.set_search_depth(1)
         self.searcher_pages.set_timeout(60)
-        if self.last_run and self.last_run['succes'] and self.data:
-        #if False:
+        #if self.last_run and self.last_run['succes']:
+        if False:
             delta = (self.timestamp_start - self.last_run['timestamp']).days
             self.create_timestamp_for_search(self.searcher_pages, delta)
         elif self.debug:
         #elif False:
-            self.create_timestamp_for_search(self.searcher_pages, 0)
+            self.create_timestamp_for_search(self.searcher_pages, 2)
         return self.searcher_pages.run()
