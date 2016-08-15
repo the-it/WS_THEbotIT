@@ -127,11 +127,15 @@ class BotData(object):
                 os.mkdir("data")
             with open(self.data_filename, "w") as filepointer:
                 json.dump(self.data, filepointer)
-                if os.path.exists(self.data_filename + ".deprecated"):
-                    os.remove(self.data_filename + ".deprecated")
+            if os.path.exists(self.data_filename + ".deprecated"):
+                os.remove(self.data_filename + ".deprecated")
+            if os.path.exists(self.data_filename + ".broken"):
+                os.remove(self.data_filename + ".broken")
             self.logger.info("Data successfully stored.")
         else:
-            self.logger.critical("There was an error in the general procedure. No data will be kept. A backup copy was produced.")
+            with open(self.data_filename + '.broken', "w") as filepointer:
+                json.dump(self.data, filepointer)
+            self.logger.critical("There was an error in the general procedure. The broken date and a backup of the old will be keept.")
 
 
 class BotTimestamp(object):
