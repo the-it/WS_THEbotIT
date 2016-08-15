@@ -2,6 +2,7 @@ import re
 import traceback
 import datetime
 from datetime import timedelta
+from math import ceil
 
 from pywikibot import ItemPage, Page, Site
 from tools.catscan import PetScan
@@ -222,14 +223,15 @@ class AuthorList(CanonicalBot):
                     property_label = 'P570'
                 claim = item.text['claims'][property_label][0]
                 date_from_data = claim.getTarget()
-                if date_from_data.precision < 9:
+                if date_from_data.precision < 7:
                     self.logger.error('Precison is to low for [[{}]]'.format(author_dict['title']))
                     raise
-                #elif date_from_data.precision < 8:
-                #    if date_from_data.year < 1000:
-                #        date_from_data = str(date_from_data.year)[0:1] + '. Jh.'
-                #    else:
-                #        date_from_data = str(date_from_data.year)[0:2] + '. Jh.'
+                elif date_from_data.precision < 8:
+                    date_from_data = int(ceil(float(date_from_data.year) / 100.0) * 100)
+                    if date_from_data < 1000:
+                        date_from_data = str(date_from_data)[0:1] + '. Jh.'
+                    else:
+                        date_from_data = str(date_from_data)[0:2] + '. Jh.'
                 elif date_from_data.precision < 10:
                     date_from_data = str(date_from_data.year)
                 elif date_from_data.precision < 11:
