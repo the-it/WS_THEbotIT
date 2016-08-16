@@ -17,7 +17,7 @@ class MagazinesGL(CanonicalBot):
         self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:?.*?(?:\n\n|\Z))', re.DOTALL)
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
-        self.new_data_model = datetime(year=2016, month=8, day=15, hour=20)
+        self.new_data_model = datetime(year=2016, month=8, day=16, hour=20)
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
@@ -53,16 +53,10 @@ class MagazinesGL(CanonicalBot):
                                               year=year,
                                               level=proofread_lemma.quality_level,
                                               title=lemma['title']))
-                else:
-                    self.logger.info('{idx}/{sum} Page {page}({year})'
-                                      .format(idx=idx + 1,
-                                              sum=len(self.lemmas),
-                                              page=page,
-                                              year=year))
                 ref = self.search_for_refs(proofread_lemma.text)
                 page_dict = {'q': proofread_lemma.quality_level}
                 if ref:
-                    self.logger.info('There are refs ({refs})'
+                    self.logger.info('There are refs ({refs}) @ {year}, {page}'
                                       .format(refs = ref,
                                               page=page,
                                               year=year))
@@ -183,12 +177,12 @@ class MagazinesGL(CanonicalBot):
             ref.append('ref')
         elif re.search('\{\{CRef\|\|', text):
             ref.append('ref')
-        hit = re.search('group\="(\w{1,3})"', text)
+        hit = re.findall('group\="([^"]{1,10})"', text)
         if hit:
             for entry in hit:
                 if entry not in ref:
                     ref.append(entry)
-        hit = re.findall('\{\{CRef\|(\w{1,3})\|', text)
+        hit = re.findall('\{\{CRef\|([^\|]{1,10})\|', text)
         if hit:
             for entry in hit:
                 if entry not in ref:
@@ -258,10 +252,10 @@ class MagazinesGL(CanonicalBot):
                 self.logger.error('The list of pages is incorrect, year:{year} or page:{page} is missing.'
                                   .format(year=year, page=page))
                 return None
+        if 'ref' in ref:
+            string_list.append('{{references|x}}\n')
         for ref_type in ref:
-            if ref_type == 'ref':
-                string_list.append('{{references|x}}\n')
-            else:
+            if ref_type != 'ref':
                 string_list.append('{{{{references|TIT|{ref}}}}}\n'.format(ref=ref_type))
         string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n')
         string_list.append('[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year, magazine=magazine))
@@ -289,11 +283,11 @@ class MagazinesGL(CanonicalBot):
         self.searcher_pages.add_namespace('Seite')
         self.searcher_pages.set_search_depth(1)
         self.searcher_pages.set_timeout(60)
-        #if self.last_run and self.last_run['succes']:
-        if False:
+        if self.last_run and self.last_run['succes']:
+        #if False:
             delta = (self.timestamp_start - self.last_run['timestamp']).days
             self.create_timestamp_for_search(self.searcher_pages, delta)
         elif self.debug:
         #elif False:
-            self.create_timestamp_for_search(self.searcher_pages, 2)
+            self.create_timestamp_for_search(self.searcher_pages, 0)
         return self.searcher_pages.run()
