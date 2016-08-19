@@ -23,9 +23,9 @@ if __name__ == "__main__":
     run_bot(AuthorList(wiki=wiki, debug=False))
     #run_bot(TouchIndex(wiki)) #pause because of bug fixing
 
-    # tasks for monday
-    #if datetime.now().weekday() == 0:
-    run_bot(MagazinesGL(wiki=wiki, debug=False))
+    # tasks for saturday
+    if datetime.now().weekday() == 5:
+        run_bot(MagazinesGL(wiki=wiki, debug=False))
 
     # tasks for sunday
     if datetime.now().weekday() == 6:
