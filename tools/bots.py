@@ -32,6 +32,7 @@ class BotLog(object):
         self.timestamp_start = timestamp_start
         self.barstring = '{:#^120}'.format('')
         self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
+        self.logger_date_format = "%H:%M:%S"
         self.debug = debug
 
     def __enter__(self):
@@ -69,7 +70,7 @@ class BotLog(object):
         error_log.setLevel(logging.INFO)
         debug_stream = logging.StreamHandler(sys.stdout)
         debug_stream.setLevel(logging.DEBUG)
-        formatter = logging.Formatter(self.logger_format)
+        formatter = logging.Formatter(self.logger_format, datefmt=self.logger_date_format)
         error_log.setFormatter(formatter)
         debug_stream.setFormatter(formatter)
         logger.addHandler(error_log)
@@ -266,7 +267,7 @@ class SaveExecution():
         self.bot.__exit__(type, value, traceback)
 
 if __name__ == "__main__":
-    bot = CanonicalBot("hello")
+    bot = CanonicalBot("hello", debug=True)
     with SaveExecution(bot):
         bot.run()
 
