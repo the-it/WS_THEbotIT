@@ -24,3 +24,4 @@ for letter in letters:
 
         except:
             print("{} doesnt exist".format(match))
+    print(dict_for_symbols)
