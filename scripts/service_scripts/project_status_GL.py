@@ -21,7 +21,7 @@ class GLStatus(CanonicalBot):
         fertig = self.petscan(['Fertig'])
         korrigiert = self.petscan(['Korrigiert'])
         unkorrigiert = self.petscan(['Unkorrigiert'])
-        articles = self.petscan([], article=True)
+        articles = self.petscan([], article=True, not_categories=['Die Gartenlaube Hefte'])
 
         temp_text = self.projektstand(temp_text, all, fertig, korrigiert, unkorrigiert, articles)
         temp_text = self.alle_seiten(temp_text, all)
