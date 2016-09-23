@@ -4,7 +4,7 @@ from pywikibot import Page, Site
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot, SaveExecution
 
-class GLStatus(CanonicalBot):
+class GlStatus(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'GLStatus'

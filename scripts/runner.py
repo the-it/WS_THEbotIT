@@ -5,11 +5,10 @@ from datetime import datetime
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
 from pywikibot import Site
-from scripts.service_scripts.authorlist import AuthorList
-from scripts.service_scripts.project_status_RE import REStatus
-from scripts.service_scripts.project_status_GL import GLStatus
-from scripts.service_scripts.touch_all_index import TouchIndex
-from scripts.service_scripts.create_magazine_GL import MagazinesGL
+from scripts.service_scripts.ACTIVE_author_list import AuthorList
+from scripts.service_scripts.ACTIVE_re_status import ReStatus
+from scripts.service_scripts.ACTIVE_gl_status import GlStatus
+from scripts.service_scripts.ACTIVE_gl_create_magazine import GlCreateMagazine
 from tools.bots import SaveExecution
 
 def run_bot(bot):
@@ -19,18 +18,44 @@ def run_bot(bot):
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
-    # daily bots
-    run_bot(AuthorList(wiki=wiki, debug=False))
-    #run_bot(TouchIndex(wiki)) #pause because of bug fixing
+    daily_list = [AuthorList]
 
-    # tasks for saturday
-    if datetime.now().weekday() == 5:
-        run_bot(MagazinesGL(wiki=wiki, debug=False))
+    weekly_list = [[],#monday
+                   [],
+                   [],
+                   [],
+                   [],
+                   [GlCreateMagazine],
+                   [ReStatus]]#sunday
 
-    # tasks for sunday
-    if datetime.now().weekday() == 6:
-        run_bot(REStatus(wiki=wiki, debug=False))
+    monthly_list = [[GlStatus]]
 
-    # tasks for the first day of the month
-    if datetime.now().day == 1:
-        run_bot(GLStatus(wiki=wiki, debug=False))
+    #daily tasks
+    for bot in daily_list:
+        run_bot(bot(wiki=wiki, debug=True))
+
+    # weekly tasks
+    for bot in weekly_list[datetime.now().weekday()]:
+        run_bot(bot(wiki=wiki, debug=True))
+
+    # monthly tasks
+    try:
+        for bot in monthly_list[datetime.now().day]:
+            run_bot(bot(wiki=wiki, debug=True))
+    except IndexError:
+        pass
+
+#todo: dynamic import
+#files_in_dir = os.listdir('service_scripts')
+#active_files = []
+#for files in files_in_dir:
+#    if regex_active.search(files):
+#        active_files.append(files.replace('ACTIVE_', '').replace('.py', ''))
+#for file in active_files:
+#    word_list = file.split('_')
+#    word_list = [x.capitalize() for x in word_list]
+#    class_name = ''.join(word_list)
+#    __import__('scripts.service_scripts.ACTIVE_{}'.format(file), globals(), locals(), class_name, 0)
+#wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+#run_bot(AuthorList(wiki=wiki, debug=True))
+

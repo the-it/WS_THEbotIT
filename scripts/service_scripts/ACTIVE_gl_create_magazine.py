@@ -6,7 +6,7 @@ from tools.catscan import PetScan
 from tools.bots import CanonicalBot, BotExeption
 from datetime import datetime
 
-class MagazinesGL(CanonicalBot):
+class GlCreateMagazine(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'MagazinesGL'

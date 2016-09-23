@@ -4,7 +4,7 @@ from pywikibot import Page
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot
 
-class REStatus(CanonicalBot):
+class ReStatus(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'REStatus'
