@@ -17,7 +17,7 @@ class GlCreateMagazine(CanonicalBot):
         self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:?.*?(?:\n\n|\Z))', re.DOTALL)
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
-        self.new_data_model = datetime(year=2016, month=8, day=16, hour=20)
+        self.new_data_model = datetime(year=2016, month=9, day=25, hour=22)
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
@@ -177,7 +177,7 @@ class GlCreateMagazine(CanonicalBot):
             ref.append('ref')
         elif re.search('\{\{CRef\|\|', text):
             ref.append('ref')
-        hit = re.findall('group\="([^"]{1,10})"', text)
+        hit = re.findall('[Gg]roup ?\= ?"?([^">]{1,10})"?', text)
         if hit:
             for entry in hit:
                 if entry not in ref:
