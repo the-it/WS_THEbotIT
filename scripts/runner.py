@@ -32,16 +32,16 @@ if __name__ == "__main__":
 
     #daily tasks
     for bot in daily_list:
-        run_bot(bot(wiki=wiki, debug=True))
+        run_bot(bot(wiki=wiki, debug=False))
 
     # weekly tasks
     for bot in weekly_list[datetime.now().weekday()]:
-        run_bot(bot(wiki=wiki, debug=True))
+        run_bot(bot(wiki=wiki, debug=False))
 
     # monthly tasks
     try:
         for bot in monthly_list[datetime.now().day]:
-            run_bot(bot(wiki=wiki, debug=True))
+            run_bot(bot(wiki=wiki, debug=False))
     except IndexError:
         pass
 
