@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     # monthly tasks
     try:
-        for bot in monthly_list[datetime.now().day]:
+        for bot in monthly_list[datetime.now().day - 1]:
             run_bot(bot(wiki=wiki, debug=False))
     except IndexError:
         pass
