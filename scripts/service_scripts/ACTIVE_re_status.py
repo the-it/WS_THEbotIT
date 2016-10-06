@@ -17,26 +17,30 @@ class ReStatus(CanonicalBot):
         self.userpage_THE_IT(korrigiert)
         self.history(fertig, korrigiert, unkorrigiert)
 
+    def make_color(self, min, max, value):
+        if value > min:
+            if value < max:
+                color = (1 - (value - min)/(max - min)) * 255
+            else:
+                color = 0
+        else:
+            color = 255
+        return str(hex(int(color)))[2:].zfill(2)
+
     def userpage_THE_IT(self, korrigiert):
         status_string = []
 
-        if korrigiert[0] > 15e6:
-            status_string.append('<span style="background:red">{:,}</span>'.format(korrigiert[0]))
-        else:
-            status_string.append('{:,}'.format(korrigiert[0]))
-        if korrigiert[1] > 4e3:
-            status_string.append('<span style="background:red">{:,}</span>'.format(korrigiert[1]))
-        else:
-            status_string.append('{:,}'.format(korrigiert[1]))
+        color = self.make_color(15e6, 16e6, korrigiert[0])
+        status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[0]))
+        color = self.make_color(4e3, 4.25e3, korrigiert[1])
+        status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[1]))
 
         list_of_lemmas = self.petscan(['Teilkorrigiert RE', 'Korrigiert RE'])
         date_page = Page(self.wiki, list_of_lemmas[0]['title'])
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
         gap = datetime.now() - datetime.strptime(date_of_first, '%Y-%m-%d')
-        if gap > timedelta(days = 2*365):
-            status_string.append('<span style="background:red">{}</span>'.format(date_of_first))
-        else:
-            status_string.append('{}'.format(date_of_first))
+        color = self.make_color(2*365, 2.25*365, gap.days)
+        status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, date_of_first))
 
         user_page = Page(self.wiki, 'Benutzer:THE IT/Werkstatt')
         temp_text = user_page.text
