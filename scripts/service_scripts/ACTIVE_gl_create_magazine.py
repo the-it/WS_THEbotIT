@@ -14,10 +14,10 @@ class GlCreateMagazine(CanonicalBot):
         self.searcher_indexes = PetScan()
         self.regex_page = re.compile('Die_Gartenlaube_\((\d{4})\)_([^\.]*?)\.(?:jpg|JPG)')
         self.regex_index = re.compile('Die_Gartenlaube_\((\d{4})\)')
-        self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:?.*?(?:\n\n|\Z))', re.DOTALL)
+        self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))', re.DOTALL)
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
-        self.new_data_model = datetime(year=2016, month=9, day=25, hour=22)
+        self.new_data_model = datetime(year=2016, month=10, day=17, hour=11)
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
@@ -269,12 +269,12 @@ class GlCreateMagazine(CanonicalBot):
         self.searcher_indexes.add_positive_category('Index')
         self.searcher_indexes.set_regex_filter('.*Die Gartenlaube \(\d{4}\)')
         self.searcher_indexes.set_timeout(60)
-        if self.last_run and self.last_run['succes']:
-        #if False:
+        #if self.last_run and self.last_run['succes']:
+        if False:
             delta = (self.timestamp_start - self.last_run['timestamp']).days
             self.create_timestamp_for_search(self.searcher_indexes, delta)
-        elif self.debug:
-        #elif False:
+        #elif self.debug:
+        elif False:
             self.create_timestamp_for_search(self.searcher_indexes, 5)
         return self.searcher_indexes.run()
 
