@@ -97,7 +97,7 @@ class PetScan:
         self.project = "wikisource"
 
     def __str__(self):
-        return self._construct_string().replace('&format=json&doit=1', '')
+        return quote(self._construct_string().replace('&format=json&doit=1', ''), safe='/&:=?')
 
     def set_language(self, lang:str):
         self.language = lang
@@ -233,7 +233,7 @@ class PetScan:
         i = 0
         for cat in cat_list:
             if i > 0:
-                cat_string += " \n"
+                cat_string += "%0D%0A"
             string_item = cat
             string_item = re.sub(' ', '+', string_item)
             cat_string += string_item
@@ -280,7 +280,7 @@ class PetScan:
         if len(self.options) != 0:
             question_string.append(self._construct_options())
         question_string.append("&format=json&doit=1")
-        return quote("".join(question_string), safe='/&:=?')
+        return "".join(question_string)
 
     def run(self):
         """
