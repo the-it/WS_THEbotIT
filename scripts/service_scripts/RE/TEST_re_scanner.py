@@ -13,6 +13,14 @@ class ReScanner(CanonicalBot):
         self.new_data_model = datetime(year=2016, month=10, day=24, hour=23)
         self.timeout = timedelta(seconds=4)
 
+    def __enter__(self):
+        CanonicalBot.__enter__(self)
+        if self.data_outdated():
+            self.data = None
+            self.logger.warning('The data is thrown away. It is out of date')
+        if not self.data:
+            self.data = {}
+
     def compile_lemma_list(self):
         searcher = PetScan()
         searcher.add_any_template('RE')
