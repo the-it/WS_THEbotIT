@@ -229,16 +229,8 @@ class PetScan:
         self.add_options({'sortorder': 'descending'})
 
     def _construct_list_argument(self, cat_list):
-        cat_string = ""
-        i = 0
-        for cat in cat_list:
-            if i > 0:
-                cat_string += "%0D%0A"
-            string_item = cat
-            string_item = re.sub(' ', '+', string_item)
-            cat_string += string_item
-            i += 1
-        return cat_string
+        string = "\r\n".join(cat_list).replace(' ', '+')
+        return string
 
     def _construct_options(self):
         opt_string = ""
@@ -290,6 +282,8 @@ class PetScan:
         """
         response = requests.get(url=self._construct_string(),
                                 headers=self.header, timeout=self.timeout)
+        if response.status_code != 200:
+            raise ConnectionError
         response_byte = response.content
         response_dict = json.loads(response_byte.decode("utf8"))
         return response_dict['*'][0]['a']['*']
