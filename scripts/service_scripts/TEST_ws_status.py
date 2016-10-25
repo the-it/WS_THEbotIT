@@ -10,12 +10,30 @@ class RowBasic():
     def __str__(self):
         return self.build_row()
 
-    def __init__(self, wiki):
+    def __init__(self, wiki, logger):
         self.wiki = wiki
+        self.logger = logger
         self.today = datetime.datetime.now()
 
     def build_row(self):
         raise BotExeption
+
+    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template=[], union=False):
+        searcher = PetScan()
+        for cat in list_of_cat:
+            searcher.add_positive_category(cat)
+        for cat in any_template:
+            searcher.add_any_template(cat)
+        if union:
+            searcher.set_logic_union()
+        if namespace:
+            searcher.add_namespace(namespace)
+        if depth:
+            searcher.set_search_depth(depth)
+        self.logger.info(searcher)
+        list_of_lemmas = searcher.run()
+        del searcher
+        return '{0:,}'.format(len(list_of_lemmas)).replace(',', '.')
 
 class RowBearbeitungen(RowBasic):
     def build_row(self):
@@ -32,42 +50,30 @@ class RowBearbeitungen(RowBasic):
 
 class RowSeitenstatistik(RowBasic):
     def build_row(self):
+        self.logger.info('Searchstrings for genre')
         list_sites_stats = []
         list_sites_stats.append(self.get_all_sites())
         list_sites_stats.append(self.get_sites_in_cat(
                 ['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
-                namespace='Seite'))
+                namespace='Seite', union=True))
         list_sites_stats.append(self.get_sites_in_cat(
                 ['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
-                namespace='Article'))
+                namespace='Article', union=True))
+        list_sites_stats.append(self.get_sites_in_cat(['Werke']))
+        list_sites_stats.append(self.get_sites_in_cat(['Zeitschriftenartikel']))
+        list_sites_stats.append(self.get_sites_in_cat(['Gedicht'], depth=4))
         list_sites_stats.append(self.get_sites_in_cat(
-                ['Werke']))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Zeitschriftenartikel']))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Gedicht'], depth=4))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Märchen', 'Kunstmärchen', 'Sage', 'Fabel', 'Sagenballade', 'Reimfabel', 'Schwank'], depth=4))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Rechtstext'], depth=2))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Darstellung'], depth=0))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Brief'], depth=2))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Biographie', 'Autobiographie', 'Tagebuch'], depth=0))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Lexikon'], depth=0))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Drama'], depth=1))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Roman'], depth=1))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Reisebericht'], depth=0))
-        list_sites_stats.append(self.get_sites_in_cat(
-                [], any_template=['Themendaten', 'Ortsdaten']))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Autoren'], namespace='Article', any_template=['Personendaten']))
+                ['Märchen', 'Sage', 'Fabel', 'Sagenballade', 'Reimfabel', 'Schwank'], depth=4, union=True))
+        list_sites_stats.append(self.get_sites_in_cat(['Rechtstext'], depth=2))
+        list_sites_stats.append(self.get_sites_in_cat(['Darstellung'], depth=0))
+        list_sites_stats.append(self.get_sites_in_cat(['Brief'], depth=2))
+        list_sites_stats.append(self.get_sites_in_cat(['Biographie', 'Autobiographie', 'Tagebuch'], depth=0, union=True))
+        list_sites_stats.append(self.get_sites_in_cat(['Lexikon'], depth=0))
+        list_sites_stats.append(self.get_sites_in_cat(['Drama'], depth=1))
+        list_sites_stats.append(self.get_sites_in_cat(['Roman'], depth=1))
+        list_sites_stats.append(self.get_sites_in_cat(['Reisebericht'], depth=0))
+        list_sites_stats.append(self.get_sites_in_cat([], any_template=['Themendaten', 'Ortsdaten']))
+        list_sites_stats.append(self.get_sites_in_cat(['Autoren'], namespace='Article', any_template=['Personendaten']))
         return '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) + ' || '.join(list_sites_stats)
 
     def get_all_sites(self):
@@ -78,19 +84,40 @@ class RowSeitenstatistik(RowBasic):
         dummypage = Page(self.wiki, 'Benutzer:THEbotIT/dummy')
         return '{}'.format(dummypage.text)
 
-    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template=[]):
-        searcher = PetScan()
-        for cat in list_of_cat:
-            searcher.add_positive_category(cat)
-        for cat in any_template:
-            searcher.add_any_template(cat)
-        searcher.set_logic_union()
-        if namespace:
-            searcher.add_namespace(namespace)
-        if depth:
-            searcher.set_search_depth(depth)
-        list_of_lemmas = searcher.run()
-        return '{0:,}'.format(len(list_of_lemmas)).replace(',', '.')
+
+class RowBearbeitungsstand(RowBasic):
+    def build_row(self):
+        self.logger.info('Searchstrings for Bearbeitungsstand')
+        list_sites_stats = []
+        # Werke
+        counter_werke = self.get_sites_in_cat(['Werke'])
+        list_sites_stats.append(counter_werke)
+        for cat in [['Fertig'], ['Korrigiert'], ['Teilkorrigiert'], ['Unkorrigiert'], ['Unvollständig']]:
+            counter_werke_sub = self.get_sites_in_cat(['Werke'] + cat)
+            list_sites_stats.append(counter_werke_sub)
+            list_sites_stats.append(self.make_percent(counter_werke_sub, counter_werke))
+        counter_werke_sub = int(self.get_sites_in_cat(['Werke', 'Korrekturprobleme']).replace('.', ''))
+        counter_werke_sub += int(self.get_sites_in_cat(['Werke', 'Scanfehler']).replace('.', ''))
+        counter_werke_sub += int(self.get_sites_in_cat(['Werke', 'Ohne Quelle']).replace('.', ''))
+        list_sites_stats.append('{0:,}'.format(counter_werke_sub).replace(',', '.'))
+        list_sites_stats.append(self.make_percent(str(counter_werke_sub), counter_werke))
+        # Seite
+        all_sites = self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert',
+                                           'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
+                                          namespace='Seite', union=True)
+        list_sites_stats.append(all_sites)
+        for cat in [['Fertig'], ['Korrigiert'], ['Unkorrigiert']]:
+            counter_site_sub = self.get_sites_in_cat(cat, namespace='Seite')
+            list_sites_stats.append(counter_site_sub)
+            list_sites_stats.append(self.make_percent(str(counter_site_sub), all_sites))
+
+        return '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) + ' || '.join(list_sites_stats)
+
+    def make_percent(self, counter:str, denominator:str):
+        counter = float(counter.replace('.', ''))
+        denominator = float(denominator.replace('.', ''))
+        return "{:10.2f}".format(counter/denominator * 100.0)
+
 
 class WsStatus(CanonicalBot):
     def __init__(self, wiki, debug):
@@ -105,8 +132,8 @@ class WsStatus(CanonicalBot):
         else:
             lemma = 'WS:Statistik'
         self.load_text_from_site(lemma)
-        #self.new_row(str(RowBearbeitungen(self.wiki)), 'BEARBEITUNGEN')
-        self.new_row(str(RowSeitenstatistik(self.wiki)), 'SEITENSTATISTIK')
+        #self.new_row(str(RowSeitenstatistik(self.wiki, self.logger)), 'SEITENSTATISTIK')
+        self.new_row(str(RowBearbeitungsstand(self.wiki, self.logger)), 'BEARBEITUNGSSTAND')
         self.save_text_to_site()
 
     def new_row(self, row, placeholder):

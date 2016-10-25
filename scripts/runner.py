@@ -1,6 +1,7 @@
 import sys
 import os
 from datetime import datetime
+import calendar
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
@@ -30,6 +31,8 @@ if __name__ == "__main__":
 
     monthly_list = [[GlStatus]]
 
+    last_day_of_month = []
+
     #daily tasks
     for bot in daily_list:
         run_bot(bot(wiki=wiki, debug=False))
@@ -45,17 +48,8 @@ if __name__ == "__main__":
     except IndexError:
         pass
 
-#todo: dynamic import
-#files_in_dir = os.listdir('service_scripts')
-#active_files = []
-#for files in files_in_dir:
-#    if regex_active.search(files):
-#        active_files.append(files.replace('ACTIVE_', '').replace('.py', ''))
-#for file in active_files:
-#    word_list = file.split('_')
-#    word_list = [x.capitalize() for x in word_list]
-#    class_name = ''.join(word_list)
-#    __import__('scripts.service_scripts.ACTIVE_{}'.format(file), globals(), locals(), class_name, 0)
-#wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-#run_bot(AuthorList(wiki=wiki, debug=True))
-
+    # last day of the month
+    now = datetime.now()
+    if now.day == calendar.monthrange(now.year, now.month)[1]:
+        for bot in last_day_of_month:
+            run_bot(bot(wiki=wiki, debug=False))
