@@ -10,6 +10,7 @@ from scripts.service_scripts.ACTIVE_author_list import AuthorList
 from scripts.service_scripts.ACTIVE_re_status import ReStatus
 from scripts.service_scripts.ACTIVE_gl_status import GlStatus
 from scripts.service_scripts.ACTIVE_gl_create_magazine import GlCreateMagazine
+from scripts.service_scripts.RE.ACTIVE_re_scanner import ReScanner
 from tools.bots import SaveExecution
 
 def run_bot(bot):
@@ -19,7 +20,7 @@ def run_bot(bot):
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
-    daily_list = [AuthorList]
+    daily_list = [AuthorList, ReScanner]
 
     weekly_list = [[],#monday
                    [],
