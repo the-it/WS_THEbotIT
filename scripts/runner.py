@@ -20,7 +20,7 @@ def run_bot(bot):
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
-    daily_list = [AuthorList, ReScanner]
+    daily_list = [AuthorList]
 
     weekly_list = [[],#monday
                    [],
