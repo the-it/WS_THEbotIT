@@ -96,10 +96,8 @@ class RERE_Task(ReScannerTask):
         new_parameters.append(self.get_parameter_if_possible('WIKISOURCE', old_parameters, 9))
         new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 10))
         self.devalidate_ext_scan(new_parameters)
-        self.set_off(new_parameters)
         new_parameters.append(self.get_parameter_if_possible('EXTSCAN_END', old_parameters, 11))
         self.devalidate_ext_scan(new_parameters)
-        self.set_off(new_parameters)
         new_parameters.append(self.get_parameter_if_possible('GND', old_parameters, 12))
         new_template = TemplateHandler()
         new_template.set_title('REDaten')
@@ -118,6 +116,7 @@ class RERE_Task(ReScannerTask):
 
     def devalidate_ext_scan(self, template_list):
         if not re.search(r'\{\{RE(?:IA|WL)[^\}]*?\}\}', template_list[-1]['value']):
+            self.logger.error('Extern Scan devalidated: {}'.format(template_list[-1]['value']))
             template_list[-1]['value'] = 'OFF'
 
 
