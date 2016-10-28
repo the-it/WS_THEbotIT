@@ -1,14 +1,13 @@
 import re
 import traceback
-import datetime
-from datetime import timedelta
+from datetime import timedelta, datetime
 from math import ceil
 
-from pywikibot import ItemPage, Page, Site
+from pywikibot import ItemPage, Page
 from tools.catscan import PetScan
 from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
-from tools.bots import CanonicalBot, SaveExecution
+from tools.bots import CanonicalBot
 
 class AuthorList(CanonicalBot):
     def __init__(self, wiki, debug):
@@ -19,17 +18,25 @@ class AuthorList(CanonicalBot):
         self.string_list = []
         self.match_property = re.compile('\{\{#property:P(\d{1,4})\}\}')
         self.number_to_month = {1: 'Januar',
-                           2: 'Februar',
-                           3: 'März',
-                           4: 'April',
-                           5: 'Mai',
-                           6: 'Juni',
-                           7: 'Juli',
-                           8: 'August',
-                           9: 'September',
-                           10: 'Oktober',
-                           11: 'November',
-                           12: 'Dezember'}
+                                2: 'Februar',
+                                3: 'März',
+                                4: 'April',
+                                5: 'Mai',
+                                6: 'Juni',
+                                7: 'Juli',
+                                8: 'August',
+                                9: 'September',
+                                10: 'Oktober',
+                                11: 'November',
+                                12: 'Dezember'}
+
+    def __enter__(self):
+        CanonicalBot.__enter__(self)
+        if 1 == datetime.now().day:
+            self.data = None
+            self.logger.warning('The data is thrown away. It is the first of the month')
+        if not self.data:
+            self.data = {}
 
     def run(self):
         lemma_list = self._run_searcher()
@@ -50,7 +57,7 @@ class AuthorList(CanonicalBot):
         # was the last run successful
         if self.debug:
         #if False
-            yesterday = datetime.datetime.now() - timedelta(days=5)
+            yesterday = datetime.now() - timedelta(days=5)
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
                                             int(yesterday.strftime('%d')))
@@ -173,8 +180,8 @@ class AuthorList(CanonicalBot):
         self.logger.info('Start printing.')
         self.string_list.append('Diese Liste der Autoren enthält alle {count}<ref>Stand: {dt.day}.{dt.month}.{dt.year}, {clock} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'
                                 .format(count = len(self.data),
-                                        clock = datetime.datetime.now().strftime('%H:%M'),
-                                        dt = datetime.datetime.now()))
+                                        clock = datetime.now().strftime('%H:%M'),
+                                        dt = datetime.now()))
         self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften nach der jeweiligen Spalte sortiert werden.')
         self.string_list.append('<!--')
         self.string_list.append('Diese Liste wurde durch ein Computerprogramm erstellt, das die Daten verwendet, die aus den Infoboxen auf den Autorenseiten stammen.')
