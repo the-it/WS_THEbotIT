@@ -77,7 +77,9 @@ class RERE_Task(ReScannerTask):
     def process_lemma(self, page:Page):
         self.preprocess_lemma(page)
         self.text = re.sub(r'\{\{RE\|.*\}\}\n', lambda x: self.replace_re_redaten(x), self.text)
+        self.text = re.sub(r'\{\{RE/Platzhalter\|.*\}\}\n', lambda x: self.replace_replatz_redatenplatz(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag\|.*\}\}[ \n]*', lambda x: self.replace_renachtrag(x), self.text)
+        self.text = re.sub(r'\{\{RENachtrag unfrei\|.*\}\}[ \n]*', lambda x: self.replace_renachtrag_unfrei(x), self.text)
         self.postprocess_lemma(page)
         return self.text_changed()
 
@@ -96,7 +98,6 @@ class RERE_Task(ReScannerTask):
             new_parameters.append(self.get_parameter_if_possible('VORGÄNGER', old_parameters, 3))
             new_parameters.append(self.get_parameter_if_possible('NACHFOLGER', old_parameters, 4))
         new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 6))
-        self.set_off(new_parameters)
         new_parameters.append(self.get_parameter_if_possible('KORREKTURSTAND', old_parameters, 7))
         new_parameters.append(self.get_parameter_if_possible('WIKIPEDIA', old_parameters, 8))
         new_parameters.append(self.get_parameter_if_possible('WIKISOURCE', old_parameters, 9))
@@ -110,6 +111,34 @@ class RERE_Task(ReScannerTask):
         new_template.update_parameters(new_parameters)
         return new_template.get_str(str_complex=True)
 
+    def replace_replatz_redatenplatz(self, hit:re):
+        old_template = TemplateHandler(hit.group(0))
+        old_parameters = old_template.get_parameterlist()
+        new_parameters = []
+        new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
+        new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
+        new_parameters.append(self.get_parameter_if_possible('SPALTE_END', old_parameters, 2))
+        self.set_off(new_parameters)
+        if old_parameters[0]['value'][0] == 'S':
+            new_parameters.append({'VORGÄNGER': ''})
+            new_parameters.append({'NACHFOLGER': ''})
+        else:
+            new_parameters.append(self.get_parameter_if_possible('VORGÄNGER', old_parameters, 3))
+            new_parameters.append(self.get_parameter_if_possible('NACHFOLGER', old_parameters, 4))
+        new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 6))
+        new_parameters.append(self.get_parameter_if_possible('GEMEINFREI', old_parameters, 7))
+        new_parameters.append(self.get_parameter_if_possible('WIKIPEDIA', old_parameters, 8))
+        new_parameters.append(self.get_parameter_if_possible('WIKISOURCE', old_parameters, 9))
+        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 10))
+        self.devalidate_ext_scan(new_parameters)
+        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_END', old_parameters, 11))
+        self.devalidate_ext_scan(new_parameters)
+        new_parameters.append(self.get_parameter_if_possible('GND', old_parameters, 12))
+        new_template = TemplateHandler()
+        new_template.set_title('REDaten/Platzhalter')
+        new_template.update_parameters(new_parameters)
+        return new_template.get_str(str_complex=True)
+
     def replace_renachtrag(self, hit:re):
         old_template = TemplateHandler(hit.group(0).strip())
         old_parameters = old_template.get_parameterlist()
@@ -120,7 +149,6 @@ class RERE_Task(ReScannerTask):
         new_parameters.append({'key':'VORGÄNGER', 'value':''})
         new_parameters.append({'key':'NACHFOLGER', 'value':''})
         new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 3))
-        self.set_off(new_parameters)
         new_parameters.append({'key':'KORREKTURSTAND', 'value':''})
         new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 2))
         self.devalidate_ext_scan(new_parameters)
@@ -130,6 +158,32 @@ class RERE_Task(ReScannerTask):
             new_parameters[-1]['value'] = 'ON'
         new_template = TemplateHandler()
         new_template.set_title('RENachtrag')
+        new_template.update_parameters(new_parameters)
+        return new_template.get_str(str_complex=True)
+
+    def replace_renachtrag_unfrei(self, hit:re):
+        old_template = TemplateHandler(hit.group(0).strip())
+        old_parameters = old_template.get_parameterlist()
+        new_parameters = []
+        new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
+        new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
+        new_parameters.append({'key':'SPALTE_END', 'value':''})
+        new_parameters.append({'key':'VORGÄNGER', 'value':''})
+        new_parameters.append({'key':'NACHFOLGER', 'value':''})
+        new_parameters.append({'key': 'SORTIERUNG', 'value': ''})
+        try:
+            deathyear = int(old_parameters[4]['value'])
+            new_parameters.append({'key': 'GEMEINFREI', 'value': str(deathyear+71)})
+        except:
+            new_parameters.append({'key':'GEMEINFREI', 'value':''})
+        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 2))
+        self.devalidate_ext_scan(new_parameters)
+        new_parameters.append({'key':'EXTSCAN_END', 'value':''})
+        new_parameters.append(self.get_parameter_if_possible('ÜBERSCHRIFT', old_parameters, 5))
+        if new_parameters[-1]['value'] == 'Ü':
+            new_parameters[-1]['value'] = 'ON'
+        new_template = TemplateHandler()
+        new_template.set_title('RENachtrag/Platzhalter')
         new_template.update_parameters(new_parameters)
         return new_template.get_str(str_complex=True)
 
@@ -147,7 +201,7 @@ class RERE_Task(ReScannerTask):
         if not re.search(r'\{\{RE(?:IA|WL)[^\}]*?\}\}', template_list[-1]['value']):
             if template_list[-1]['value'] != '':
                 self.logger.error('Extern Scan devalidated: {}'.format(template_list[-1]['value']))
-            template_list[-1]['value'] = 'OFF'
+            template_list[-1]['value'] = ''
 
 
 class ReScanner(CanonicalBot):
@@ -155,8 +209,8 @@ class ReScanner(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'ReScanner'
         self.lemma_list = None
-        self.new_data_model = datetime(year=2016, month=10, day=24, hour=23)
-        self.timeout = timedelta(seconds=60)
+        self.new_data_model = datetime(year=2016, month=10, day=31, hour=22)
+        self.timeout = timedelta(seconds=100)
         self.tasks = [RERE_Task,
                       ENÜU_Task]
         if self.debug:
@@ -174,7 +228,10 @@ class ReScanner(CanonicalBot):
         self.logger.info('Compile the lemma list')
         searcher = PetScan()
         searcher.add_any_template('RE')
+        searcher.add_any_template('RE/Platzhalter')
         searcher.add_any_template('REDaten')
+        searcher.add_any_template('REDaten/Nachtrag')
+
         if self.debug:
             searcher.add_namespace(2)
         else:
