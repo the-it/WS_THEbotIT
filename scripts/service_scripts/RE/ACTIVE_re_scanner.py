@@ -92,8 +92,8 @@ class RERE_Task(ReScannerTask):
         new_parameters.append(self.get_parameter_if_possible('SPALTE_END', old_parameters, 2))
         self.set_off(new_parameters)
         if old_parameters[0]['value'][0] == 'S':
-            new_parameters.append({'VORGÄNGER': ''})
-            new_parameters.append({'NACHFOLGER': ''})
+            new_parameters.append({'key':'VORGÄNGER','value': ''})
+            new_parameters.append({'key':'NACHFOLGER','value': ''})
         else:
             new_parameters.append(self.get_parameter_if_possible('VORGÄNGER', old_parameters, 3))
             new_parameters.append(self.get_parameter_if_possible('NACHFOLGER', old_parameters, 4))
@@ -210,7 +210,7 @@ class ReScanner(CanonicalBot):
         self.botname = 'ReScanner'
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=10, day=31, hour=22)
-        self.timeout = timedelta(seconds=100)
+        self.timeout = timedelta(seconds=1000)
         self.tasks = [RERE_Task,
                       ENÜU_Task]
         if self.debug:
@@ -239,7 +239,7 @@ class ReScanner(CanonicalBot):
             searcher.add_positive_category('Fertig RE')
             searcher.add_positive_category('Korrigiert RE')
             searcher.set_logic_union()
-        self.logger.info(searcher)
+        self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
         # all items which wasn't process before
         new_lemma_list = [x['nstext'] + ':' + x['title'] for x in raw_lemma_list if x['nstext'] + ':' + x['title'] not in list(self.data.keys())]
@@ -264,7 +264,8 @@ class ReScanner(CanonicalBot):
             self.data[lemma] = datetime.now().strftime('%Y%m%d%H%M%S')
             if changed:
                 self.logger.info('Änderungen auf der Seite {} durchgeführt'.format(page))
-                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)))
+                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)),
+                          botflag=True)
             if self._watchdog():
                 break
         for task in self.tasks:
