@@ -21,14 +21,13 @@ class ReScannerTask():
         self.finish_task()
 
     def preprocess_lemma(self, page:Page):
-        self.logger.info('process {} with task {}'.format(page, self.task_name))
+        self.logger.info('task {}'.format(self.task_name))
         self.text = page.text
         self.pretext = page.text
         self.changed = False
 
     def postprocess_lemma(self, page:Page):
         page.text = self.text
-        self.logger.info('processing {} with task {} finished'.format(page, self.task_name))
 
     def load_task(self):
         self.logger.info('opening {}'.format(self.task_name))
@@ -76,10 +75,10 @@ class RERE_Task(ReScannerTask):
 
     def process_lemma(self, page:Page):
         self.preprocess_lemma(page)
-        self.text = re.sub(r'\{\{RE\|.*\}\}\n', lambda x: self.replace_re_redaten(x), self.text)
-        self.text = re.sub(r'\{\{RE/Platzhalter\|.*\}\}\n', lambda x: self.replace_replatz_redatenplatz(x), self.text)
-        self.text = re.sub(r'\{\{RENachtrag\|.*\}\}[ \n]*', lambda x: self.replace_renachtrag(x), self.text)
-        self.text = re.sub(r'\{\{RENachtrag unfrei\|.*\}\}[ \n]*', lambda x: self.replace_renachtrag_unfrei(x), self.text)
+        self.text = re.sub(r'\{\{RE\|.{0,150}\}\}\n', lambda x: self.replace_re_redaten(x), self.text)
+        self.text = re.sub(r'\{\{RE/Platzhalter\|.{0,150}\}\}\n', lambda x: self.replace_replatz_redatenplatz(x), self.text)
+        self.text = re.sub(r'\{\{RENachtrag\|.{0,100}\}\}[ \n]*', lambda x: self.replace_renachtrag(x), self.text)
+        self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,100}\}\}[ \n]*', lambda x: self.replace_renachtrag_unfrei(x), self.text)
         self.postprocess_lemma(page)
         return self.text_changed()
 
@@ -112,6 +111,7 @@ class RERE_Task(ReScannerTask):
         return new_template.get_str(str_complex=True)
 
     def replace_replatz_redatenplatz(self, hit:re):
+        self.logger.info('Found RE/Platzhalter')
         old_template = TemplateHandler(hit.group(0))
         old_parameters = old_template.get_parameterlist()
         new_parameters = []
@@ -140,6 +140,7 @@ class RERE_Task(ReScannerTask):
         return new_template.get_str(str_complex=True)
 
     def replace_renachtrag(self, hit:re):
+        self.logger.info('Found RENachtrag')
         old_template = TemplateHandler(hit.group(0).strip())
         old_parameters = old_template.get_parameterlist()
         new_parameters = []
@@ -149,7 +150,10 @@ class RERE_Task(ReScannerTask):
         new_parameters.append({'key':'VORGÄNGER', 'value':''})
         new_parameters.append({'key':'NACHFOLGER', 'value':''})
         new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 3))
-        new_parameters.append({'key':'KORREKTURSTAND', 'value':''})
+        if re.search('\|KORREKTURSTAND=[Ff]ertig', self.text):
+            new_parameters.append({'key':'KORREKTURSTAND', 'value':'fertig'})
+        else:
+            new_parameters.append({'key': 'KORREKTURSTAND', 'value': ''})
         new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 2))
         self.devalidate_ext_scan(new_parameters)
         new_parameters.append({'key':'EXTSCAN_END', 'value':''})
@@ -162,6 +166,7 @@ class RERE_Task(ReScannerTask):
         return new_template.get_str(str_complex=True)
 
     def replace_renachtrag_unfrei(self, hit:re):
+        self.logger.info('Found RENachtrag unfrei')
         old_template = TemplateHandler(hit.group(0).strip())
         old_parameters = old_template.get_parameterlist()
         new_parameters = []
@@ -209,8 +214,8 @@ class ReScanner(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'ReScanner'
         self.lemma_list = None
-        self.new_data_model = datetime(year=2016, month=10, day=31, hour=22)
-        self.timeout = timedelta(seconds=1000)
+        self.new_data_model = datetime(year=2016, month=11, day=1, hour=15)
+        self.timeout = timedelta(seconds=20000)
         self.tasks = [RERE_Task,
                       ENÜU_Task]
         if self.debug:
@@ -230,7 +235,7 @@ class ReScanner(CanonicalBot):
         searcher.add_any_template('RE')
         searcher.add_any_template('RE/Platzhalter')
         searcher.add_any_template('REDaten')
-        searcher.add_any_template('REDaten/Nachtrag')
+        searcher.add_any_template('REDaten/Platzhalter')
 
         if self.debug:
             searcher.add_namespace(2)
@@ -257,6 +262,7 @@ class ReScanner(CanonicalBot):
             changed = False
             list_of_done_tasks = []
             page = Page(self.wiki, lemma)
+            self.logger.info('Process {}'.format(page))
             for task in active_tasks:
                 if task.process_lemma(page):
                     changed = True
@@ -264,8 +270,7 @@ class ReScanner(CanonicalBot):
             self.data[lemma] = datetime.now().strftime('%Y%m%d%H%M%S')
             if changed:
                 self.logger.info('Änderungen auf der Seite {} durchgeführt'.format(page))
-                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)),
-                          botflag=True)
+                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)), botflag=True)
             if self._watchdog():
                 break
         for task in self.tasks:
