@@ -243,6 +243,7 @@ class ReScanner(CanonicalBot):
             searcher.add_namespace(0)
             searcher.add_positive_category('Fertig RE')
             searcher.add_positive_category('Korrigiert RE')
+            searcher.add_positive_category('RE:Platzhalter')
             searcher.set_logic_union()
         self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
