@@ -75,7 +75,7 @@ class RERE_Task(ReScannerTask):
 
     def process_lemma(self, page:Page):
         self.preprocess_lemma(page)
-        self.text = re.sub(r'\{\{RE\|.{0,200}\}\}\n', lambda x: self.replace_re_redaten(x), self.text)
+        self.text = re.sub(r'\{\{RE\|.{0,200}\}\}(?:\n|\[\[)', lambda x: self.replace_re_redaten(x), self.text)
         self.text = re.sub(r'\{\{RE/Platzhalter\|.{0,200}\}\}\n', lambda x: self.replace_replatz_redatenplatz(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}[ \n]*', lambda x: self.replace_renachtrag(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}[ \n]*', lambda x: self.replace_renachtrag_unfrei(x), self.text)
