@@ -13,4 +13,4 @@ def run_bot(bot):
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    run_bot(ReScanner(wiki=wiki, debug=True))
+    run_bot(ReScanner(wiki=wiki, debug=False))

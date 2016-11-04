@@ -75,10 +75,10 @@ class RERE_Task(ReScannerTask):
 
     def process_lemma(self, page:Page):
         self.preprocess_lemma(page)
-        self.text = re.sub(r'\{\{RE\|.{0,150}\}\}\n', lambda x: self.replace_re_redaten(x), self.text)
-        self.text = re.sub(r'\{\{RE/Platzhalter\|.{0,150}\}\}\n', lambda x: self.replace_replatz_redatenplatz(x), self.text)
-        self.text = re.sub(r'\{\{RENachtrag\|.{0,100}\}\}[ \n]*', lambda x: self.replace_renachtrag(x), self.text)
-        self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,100}\}\}[ \n]*', lambda x: self.replace_renachtrag_unfrei(x), self.text)
+        self.text = re.sub(r'\{\{RE\|.{0,200}\}\}\n', lambda x: self.replace_re_redaten(x), self.text)
+        self.text = re.sub(r'\{\{RE/Platzhalter\|.{0,200}\}\}\n', lambda x: self.replace_replatz_redatenplatz(x), self.text)
+        self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}[ \n]*', lambda x: self.replace_renachtrag(x), self.text)
+        self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}[ \n]*', lambda x: self.replace_renachtrag_unfrei(x), self.text)
         self.postprocess_lemma(page)
         return self.text_changed()
 
@@ -215,7 +215,7 @@ class ReScanner(CanonicalBot):
         self.botname = 'ReScanner'
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=11, day=1, hour=15)
-        self.timeout = timedelta(seconds=20000)
+        self.timeout = timedelta(seconds=40000)
         self.tasks = [RERE_Task,
                       ENÜU_Task]
         if self.debug:
@@ -234,17 +234,18 @@ class ReScanner(CanonicalBot):
         searcher = PetScan()
         searcher.add_any_template('RE')
         searcher.add_any_template('RE/Platzhalter')
-        searcher.add_any_template('REDaten')
-        searcher.add_any_template('REDaten/Platzhalter')
+        #searcher.add_any_template('REDaten')
+        #searcher.add_any_template('REDaten/Platzhalter')
+        #searcher.add_any_template('RENachtrag unfrei')
 
         if self.debug:
             searcher.add_namespace(2)
         else:
             searcher.add_namespace(0)
-            searcher.add_positive_category('Fertig RE')
-            searcher.add_positive_category('Korrigiert RE')
-            searcher.add_positive_category('RE:Platzhalter')
-            searcher.set_logic_union()
+            #searcher.add_positive_category('Fertig RE')
+            #searcher.add_positive_category('Korrigiert RE')
+            #searcher.add_positive_category('RE:Platzhalter')
+            #searcher.set_logic_union()
         self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
         # all items which wasn't process before
@@ -259,7 +260,7 @@ class ReScanner(CanonicalBot):
             active_tasks.append(task(self.wiki, self.debug, self.logger))
         self.lemma_list = self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
-        for lemma in self.lemma_list:
+        for lemma in set(self.lemma_list):
             changed = False
             list_of_done_tasks = []
             page = Page(self.wiki, lemma)
