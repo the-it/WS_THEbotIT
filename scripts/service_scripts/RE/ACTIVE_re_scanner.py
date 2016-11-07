@@ -75,7 +75,7 @@ class RERE_Task(ReScannerTask):
 
     def process_lemma(self, page:Page):
         self.preprocess_lemma(page)
-        self.text = re.sub(r'\{\{RE\|.{0,200}\}\}(?:\n|\[\[)', lambda x: self.replace_re_redaten(x), self.text)
+        self.text = re.sub(r'\{\{RE\|.{0,200}\}\}(?:\n| )', lambda x: self.replace_re_redaten(x), self.text)
         self.text = re.sub(r'\{\{RE/Platzhalter\|.{0,200}\}\}\n', lambda x: self.replace_replatz_redatenplatz(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}[ \n]*', lambda x: self.replace_renachtrag(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}[ \n]*', lambda x: self.replace_renachtrag_unfrei(x), self.text)
@@ -120,8 +120,8 @@ class RERE_Task(ReScannerTask):
         new_parameters.append(self.get_parameter_if_possible('SPALTE_END', old_parameters, 2))
         self.set_off(new_parameters)
         if old_parameters[0]['value'][0] == 'S':
-            new_parameters.append({'VORGÄNGER': ''})
-            new_parameters.append({'NACHFOLGER': ''})
+            new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
+            new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
         else:
             new_parameters.append(self.get_parameter_if_possible('VORGÄNGER', old_parameters, 3))
             new_parameters.append(self.get_parameter_if_possible('NACHFOLGER', old_parameters, 4))
