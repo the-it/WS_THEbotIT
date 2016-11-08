@@ -10,7 +10,7 @@ class GlStatus(CanonicalBot):
         self.botname = 'GLStatus'
 
     def run(self):
-        if False: #activate for debug purpose
+        if self.debug: #activate for debug purpose
             lemma = 'Benutzer:THEbotIT/' + self.botname
         else:
             lemma = 'Die Gartenlaube'

@@ -7,20 +7,22 @@ from tools.bots import CanonicalBot
 from tools.catscan import PetScan
 from tools.template_handler import TemplateHandler
 
-class ReScannerTask():
-    def __init__(self, wiki:Site, debug:bool, logger:Logger):
+
+class ReScannerTask:
+    def __init__(self, wiki: Site, debug: bool, logger: Logger):
         self.reporter_page = None
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
         self.text = ''
+        self.pretext = ''
         self.task_name = 'basic_task'
         self.changed = False
 
     def __del__(self):
         self.finish_task()
 
-    def preprocess_lemma(self, page:Page):
+    def preprocess_lemma(self, page: Page):
         self.logger.info('task {}'.format(self.task_name))
         self.text = page.text
         self.pretext = page.text
@@ -42,13 +44,13 @@ class ReScannerTask():
         return self.task_name
 
 
-class ENÜU_Task(ReScannerTask):
+class ENÜUTask(ReScannerTask):
     def __init__(self, wiki:Site, debug:bool, logger:Logger):
         ReScannerTask.__init__(self, wiki, debug, logger)
         self.task_name = 'ENÜU'
         self.load_task()
 
-    def process_lemma(self, page:Page):
+    def process_lemma(self, page: Page):
         self.preprocess_lemma(page)
         self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\n*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
         self.text = re.sub(r'\n*\{\{RENachtrag.*?\n\}\}\n*', lambda x: self.replace_re(x, True), self.text,
@@ -61,7 +63,8 @@ class ENÜU_Task(ReScannerTask):
         self.postprocess_lemma(page)
         return self.text_changed()
 
-    def replace_re(self, hit:re, leading_lf:bool=False):
+    @staticmethod
+    def replace_re(hit:re, leading_lf:bool=False):
         if leading_lf:
             return '\n' + hit.group(0).strip() + '\n'
         else:
@@ -214,10 +217,9 @@ class ReScanner(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
         self.botname = 'ReScanner'
         self.lemma_list = None
-        self.new_data_model = datetime(year=2016, month=11, day=1, hour=15)
-        self.timeout = timedelta(seconds=40000)
-        self.tasks = [RERE_Task,
-                      ENÜU_Task]
+        self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
+        self.timeout = timedelta(seconds=1800)  # bot should run for half an hour (to reduce errors)
+        self.tasks = [ENÜUTask]
         if self.debug:
             self.tasks = self.tasks + []
 
@@ -232,35 +234,31 @@ class ReScanner(CanonicalBot):
     def compile_lemma_list(self):
         self.logger.info('Compile the lemma list')
         searcher = PetScan()
-        searcher.add_any_template('RE')
-        searcher.add_any_template('RE/Platzhalter')
-        #searcher.add_any_template('REDaten')
-        #searcher.add_any_template('REDaten/Platzhalter')
-        #searcher.add_any_template('RENachtrag unfrei')
+        searcher.add_any_template('REDaten')
 
         if self.debug:
             searcher.add_namespace(2)
         else:
             searcher.add_namespace(0)
-            #searcher.add_positive_category('Fertig RE')
-            #searcher.add_positive_category('Korrigiert RE')
-            #searcher.add_positive_category('RE:Platzhalter')
-            #searcher.set_logic_union()
+            searcher.add_positive_category('Fertig RE')
+            searcher.add_positive_category('Korrigiert RE')
+            searcher.add_positive_category('RE:Platzhalter')
+            searcher.set_logic_union()
         self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
         # all items which wasn't process before
         new_lemma_list = [x['nstext'] + ':' + x['title'] for x in raw_lemma_list if x['nstext'] + ':' + x['title'] not in list(self.data.keys())]
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
-        return new_lemma_list + old_lemma_list
+        self.lemma_list = new_lemma_list + old_lemma_list #first iterate new items then the old ones (oldest first)
 
     def run(self):
         active_tasks = []
         for task in self.tasks:
             active_tasks.append(task(self.wiki, self.debug, self.logger))
-        self.lemma_list = self.compile_lemma_list()
+        self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
-        for lemma in set(self.lemma_list):
+        for lemma in self.lemma_list:
             changed = False
             list_of_done_tasks = []
             page = Page(self.wiki, lemma)

@@ -57,9 +57,9 @@ class BotLog(object):
         if not os.path.exists('data'):
             os.makedirs('data')
         self.logger_names.update({'debug': 'data/{}_DEBUG_{}.log'.format(self.botname,
-                                                                       time.strftime('%y%m', time.localtime()))})
+                                                                       time.strftime('%y%m%d%H%M%S', time.localtime()))})
         self.logger_names.update({'info': 'data/{}_INFO_{}.log'.format(self.botname,
-                                                                       time.strftime('%y%m%d', time.localtime()))})
+                                                                       time.strftime('%y%m%d%H%M%S', time.localtime()))})
         # redirect the stdout to the terminal and a file
         file = open(self.logger_names['debug'], 'a', encoding='utf8')
         sys.stdout = Tee(sys.stdout, file)
