@@ -30,15 +30,13 @@ class ReScannerTask:
 
     def postprocess_lemma(self, page:Page):
         page.text = self.text
+        return self.text != self.pretext
 
     def load_task(self):
         self.logger.info('opening {}'.format(self.task_name))
 
     def finish_task(self):
         self.logger.info('closing {}'.format(self.task_name))
-
-    def text_changed(self):
-        return self.text != self.pretext
 
     def get_name(self):
         return self.task_name
@@ -53,20 +51,17 @@ class ENÜUTask(ReScannerTask):
     def process_lemma(self, page: Page):
         self.preprocess_lemma(page)
         self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', lambda x: self.replace_re(x, True), self.text,
-                           flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', lambda x: self.replace_re(x, True), self.text,
-                           flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
         self.text = self.text.rstrip()
-        self.postprocess_lemma(page)
-        return self.text_changed()
+        if self.text[0] == '\n':
+            self.text = self.text[1:]
+        return self.postprocess_lemma(page)
 
     @staticmethod
-    def replace_re(hit:re, leading_lf:bool=False):
-        if leading_lf:
-            return '\n' + hit.group(0).strip() + '\n'
-        else:
-            return hit.group(0).strip() + '\n'
+    def replace_re(hit:re):
+        return '\n' + hit.group(0).strip() + '\n'
+
 
 class RERE_Task(ReScannerTask):
     def __init__(self, wiki:Site, debug:bool, logger:Logger):
@@ -80,8 +75,7 @@ class RERE_Task(ReScannerTask):
         self.text = re.sub(r'\{\{RE\/Platzhalter\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_replatz_redatenplatz(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag_unfrei(x), self.text)
-        self.postprocess_lemma(page)
-        return self.text_changed()
+        return self.postprocess_lemma(page)
 
     def replace_re_redaten(self, hit:re):
         old_template = TemplateHandler(hit.group(0))
