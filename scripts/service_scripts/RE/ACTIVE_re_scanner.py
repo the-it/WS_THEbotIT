@@ -52,12 +52,10 @@ class ENÜUTask(ReScannerTask):
 
     def process_lemma(self, page: Page):
         self.preprocess_lemma(page)
-        self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\n*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{RENachtrag.*?\n\}\}\n*', lambda x: self.replace_re(x, True), self.text,
+        self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', lambda x: self.replace_re(x, True), self.text,
                            flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\n*', lambda x: self.replace_re(x, True), self.text,
-                           flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\n*', lambda x: self.replace_re(x, True), self.text,
+        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', lambda x: self.replace_re(x, True), self.text,
                            flags=re.DOTALL)
         self.text = self.text.rstrip()
         self.postprocess_lemma(page)
@@ -218,7 +216,7 @@ class ReScanner(CanonicalBot):
         self.botname = 'ReScanner'
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
-        self.timeout = timedelta(seconds=1800)  # bot should run for half an hour (to reduce errors)
+        self.timeout = timedelta(seconds=60)  # bot should run only one minute ... don't do anything at the moment
         self.tasks = [ENÜUTask]
         if self.debug:
             self.tasks = self.tasks + []
