@@ -11,9 +11,9 @@ class ReStatus(CanonicalBot):
         self.botname = 'REStatus'
 
     def run(self):
-        fertig = self.get_sum_of_cat(['Fertig RE'])
-        korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'])
-        unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE'])
+        fertig = self.get_sum_of_cat(['Fertig RE'], ['Teilkorrigiert RE', 'Korrigiert RE', 'Unkorrigiert RE', 'Unvollständig RE'])
+        korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'], ['Unkorrigiert RE', 'Unvollständig RE'])
+        unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE', 'Unvollständig RE'], [])
         self.userpage_THE_IT(korrigiert)
         self.history(fertig, korrigiert, unkorrigiert)
 
@@ -30,12 +30,12 @@ class ReStatus(CanonicalBot):
     def userpage_THE_IT(self, korrigiert):
         status_string = []
 
-        color = self.make_color(15e6, 16e6, korrigiert[0])
+        color = self.make_color(18e6, 19e6, korrigiert[0])
         status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[0]))
-        color = self.make_color(4e3, 4.25e3, korrigiert[1])
+        color = self.make_color(4.5e3, 4.75e3, korrigiert[1])
         status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[1]))
 
-        list_of_lemmas = self.petscan(['Teilkorrigiert RE', 'Korrigiert RE'])
+        list_of_lemmas = self.petscan(['Teilkorrigiert RE', 'Korrigiert RE'], ['Unkorrigiert RE', 'Unvollständig RE'])
         date_page = Page(self.wiki, list_of_lemmas[0]['title'])
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
         gap = datetime.now() - datetime.strptime(date_of_first, '%Y-%m-%d')
@@ -62,17 +62,19 @@ class ReStatus(CanonicalBot):
         page.text = temp_text
         page.save('new dataset', botflag=True)
 
-    def get_sum_of_cat(self, cats):
-        list_of_lemmas = self.petscan(cats)
+    def get_sum_of_cat(self, cats, negacats):
+        list_of_lemmas = self.petscan(cats, negacats)
         byte_sum = 0
         for lemma in list_of_lemmas:
             byte_sum += int(lemma['len'])
         return byte_sum, len(list_of_lemmas)
 
-    def petscan(self, categories):
+    def petscan(self, categories, negative_categories):
         self.searcher = PetScan()
         for category in categories:
             self.searcher.add_positive_category(category)
+        for neg_category in negative_categories:
+            self.searcher.add_negative_category(neg_category)
         self.searcher.set_logic_union()
         self.logger.debug(self.searcher)
         return self.searcher.run()
