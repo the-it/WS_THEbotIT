@@ -99,7 +99,7 @@ class BotLog(object):
                 + '==Log of {}=='.format(self.timestamp_nice) \
                 + '\n\n' \
                 + filepointer.read().replace('\n', '\n\n')
-            page.text = temptext
+            page.text = temptext + '\n\n--~~~~'
             page.save('Update of Bot {}'.format(self.botname), botflag=True)
 
 
