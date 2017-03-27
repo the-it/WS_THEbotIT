@@ -1,16 +1,16 @@
-import sys
-import os
-from datetime import datetime
 import calendar
+import os
+import sys
+from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
 from pywikibot import Site
-from scripts.service_scripts.ACTIVE_author_list import AuthorList
-from scripts.service_scripts.ACTIVE_re_status import ReStatus
-from scripts.service_scripts.ACTIVE_gl_status import GlStatus
-from scripts.service_scripts.ACTIVE_gl_create_magazine import GlCreateMagazine
-from scripts.service_scripts.RE.ACTIVE_re_scanner import ReScanner
+from scripts.service.author_list import AuthorList
+from scripts.service.re.status import ReStatus
+from scripts.service.gl.status import GlStatus
+from scripts.service.gl.create_magazine import GlCreateMagazine
+from scripts.service.re.scanner import ReScanner
 from tools.bots import SaveExecution
 
 def run_bot(bot):
@@ -43,6 +43,8 @@ if __name__ == "__main__":
     # weekly tasks
     for bot in weekly_list[now.weekday()]:
         run_bot(bot(wiki=wiki, debug=False))
+
+    print(datetime.now().weekday())
 
     # monthly tasks
     try:

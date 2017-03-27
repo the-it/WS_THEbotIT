@@ -11,9 +11,9 @@ class ReStatus(CanonicalBot):
         self.botname = 'REStatus'
 
     def run(self):
-        fertig = self.get_sum_of_cat(['Fertig RE'], ['Teilkorrigiert RE', 'Korrigiert RE', 'Unkorrigiert RE', 'Unvollständig RE'])
-        korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'], ['Unkorrigiert RE', 'Unvollständig RE'])
-        unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE', 'Unvollständig RE'], [])
+        fertig = self.get_sum_of_cat(['Fertig re'], ['Teilkorrigiert re', 'Korrigiert re', 'Unkorrigiert re', 'Unvollständig re'])
+        korrigiert = self.get_sum_of_cat(['Teilkorrigiert re', 'Korrigiert re'], ['Unkorrigiert re', 'Unvollständig re'])
+        unkorrigiert = self.get_sum_of_cat(['Unkorrigiert re', 'Unvollständig re'], [])
         self.userpage_THE_IT(korrigiert)
         self.history(fertig, korrigiert, unkorrigiert)
 
@@ -35,7 +35,7 @@ class ReStatus(CanonicalBot):
         color = self.make_color(5.0e3, 5.25e3, korrigiert[1])
         status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[1]))
 
-        list_of_lemmas = self.petscan(['Teilkorrigiert RE', 'Korrigiert RE'], ['Unkorrigiert RE', 'Unvollständig RE'])
+        list_of_lemmas = self.petscan(['Teilkorrigiert re', 'Korrigiert re'], ['Unkorrigiert re', 'Unvollständig re'])
         date_page = Page(self.wiki, list_of_lemmas[0]['title'])
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
         gap = datetime.now() - datetime.strptime(date_of_first, '%Y-%m-%d')
@@ -44,9 +44,9 @@ class ReStatus(CanonicalBot):
 
         user_page = Page(self.wiki, 'Benutzer:THE IT/Werkstatt')
         temp_text = user_page.text
-        temp_text = re.sub("<!--RE-->.*<!--RE-->", '<!--RE-->{}<!--RE-->'.format(' ■ '.join(status_string)), temp_text)
+        temp_text = re.sub("<!--re-->.*<!--re-->", '<!--re-->{}<!--re-->'.format(' ■ '.join(status_string)), temp_text)
         user_page.text = temp_text
-        user_page.save('todo RE aktualisiert')
+        user_page.save('todo re aktualisiert')
 
     def history(self, fertig, korrigiert, unkorrigiert):
         page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.botname)

@@ -18,7 +18,7 @@ regex_nach = re.compile("\|NACHFOLGER=")
 
 for i in range(67, 113):
     print(i)
-    page = pywikibot.Page(wiki, 'RE:Archias {}'.format(i))
+    page = pywikibot.Page(wiki, 're:Archias {}'.format(i))
     temp_text = page.text
     temp_text = regex_vor.sub(lambda x: convert_vor(x, i), temp_text)
     page.text = regex_nach.sub(lambda x: convert_nach(x, i), temp_text)

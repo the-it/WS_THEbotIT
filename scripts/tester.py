@@ -1,11 +1,11 @@
-import sys
 import os
+import sys
 
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep)
+sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir + os.sep))
 
 from pywikibot import Site
-from scripts.service_scripts.RE.ACTIVE_re_scanner import ReScanner
-from scripts.service_scripts.ACTIVE_gl_status import GlStatus
+from scripts.service.re.scanner import ReScanner
+from scripts.service.gl.status import GlStatus
 from tools.bots import SaveExecution
 
 def run_bot(bot):
@@ -14,4 +14,4 @@ def run_bot(bot):
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    run_bot(ReStatus(wiki=wiki, debug=False))
+    run_bot(GlStatus(wiki=wiki, debug=False))

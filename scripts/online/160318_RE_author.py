@@ -23,6 +23,6 @@ for item in finding:
 raw_list = "".join(newstring)
 fit = re.compile("\d{4}")
 temp = fit.sub(lambda x: frame_year(x), raw_list)
-page = pywikibot.Page(wiki, "Benutzer:THE IT/RE author")
+page = pywikibot.Page(wiki, "Benutzer:THE IT/re author")
 page.text = '<div style="-moz-column-count:10; -webkit-column-count:10; column-count:10; -moz-column-width: 250px; -webkit-column-width:250px; column-width:250px;">\n' + temp + "</div>"
 page.save()

@@ -62,7 +62,7 @@ fit = re.compile(regex, re.VERBOSE)
 
 lemma_searcher = PetScan()
 lemma_searcher.add_positive_category('Paulys Realencyclopädie der classischen Altertumswissenschaft')
-#lemma_searcher.add_no_template('REIA') # sadly I have to look on all 18.000 RE-sites
+#lemma_searcher.add_no_template('REIA') # sadly I have to look on all 18.000 re-sites
 lemma_searcher.set_timeout(90)
 lemmas = lemma_searcher.run()
 
@@ -70,7 +70,7 @@ for i in range(len(lemmas)):
     lemmas[i] = lemmas[i]['a']['title']
 
 for idx, lemma in enumerate(lemmas):
-    if lemma[0:3] == 'RE:':
+    if lemma[0:3] == 're:':
         print(idx, '/', len(lemmas), lemma)
         page = pywikibot.Page(wiki, lemma)
         searcher = fit.search(page.text)

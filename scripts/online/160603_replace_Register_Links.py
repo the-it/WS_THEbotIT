@@ -8,19 +8,19 @@ import re
 
 fit_numbers = re.compile("(?:''')?(\d{1,3}[a-z]?\))") #matches all numbers
 fit_numbers_not_linked = re.compile(" (?:''')?(\d{1,3}[a-z]?\))") #matches only the numbers no already linked
-fit_keyword = re.compile("^(?:''')?(?:\[\[RE:)?(?:''')?([A-Za-z][äÄöÖüÜßa-zè\(\)\?]{1,20})(?:''')?[,\| ]?")  #matches all keywords
+fit_keyword = re.compile("^(?:''')?(?:\[\[re:)?(?:''')?([A-Za-z][äÄöÖüÜßa-zè\(\)\?]{1,20})(?:''')?[,\| ]?")  #matches all keywords
 fit_keyword_not_linked = re.compile("^(?:''')?([A-Za-z][äÄöÖüÜßa-zè\(\)\?]{1,20})(?:''')?")
 
 def convert_one_link(hit, keyword):
     if re.search("'''.*'''", hit.group(0)):
-        return "'''" + '[[RE:' + keyword + '|' + hit.group(1) + ']]' + "'''"
+        return "'''" + '[[re:' + keyword + '|' + hit.group(1) + ']]' + "'''"
     else:
-        return '[[RE:' + keyword + '|' + hit.group(1) + ']]'
+        return '[[re:' + keyword + '|' + hit.group(1) + ']]'
 
 def convert_numbers(hit, keyword):
     offset = len(hit.group(0)) - len(hit.group(1))
 
-    return hit.group(0)[0:offset] + '[[RE:' + keyword + ' ' + hit.group(1)[0:-1] +'|' + hit.group(1) + ']]'
+    return hit.group(0)[0:offset] + '[[re:' + keyword + ' ' + hit.group(1)[0:-1] +'|' + hit.group(1) + ']]'
 
 def convert_line(line):
     if fit_keyword.search(line):
