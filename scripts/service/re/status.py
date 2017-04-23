@@ -44,9 +44,9 @@ class ReStatus(CanonicalBot):
 
         user_page = Page(self.wiki, 'Benutzer:THE IT/Werkstatt')
         temp_text = user_page.text
-        temp_text = re.sub("<!--re-->.*<!--re-->", '<!--re-->{}<!--re-->'.format(' ■ '.join(status_string)), temp_text)
+        temp_text = re.sub("<!--RE-->.*<!--RE-->", '<!--RE-->{}<!--RE-->'.format(' ■ '.join(status_string)), temp_text)
         user_page.text = temp_text
-        user_page.save('todo re aktualisiert')
+        user_page.save('todo RE aktualisiert')
 
     def history(self, fertig, korrigiert, unkorrigiert):
         page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.botname)
