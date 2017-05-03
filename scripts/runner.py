@@ -44,8 +44,6 @@ if __name__ == "__main__":
     for bot in weekly_list[now.weekday()]:
         run_bot(bot(wiki=wiki, debug=False))
 
-    print(datetime.now().weekday())
-
     # monthly tasks
     try:
         for bot in monthly_list[now.day]:
