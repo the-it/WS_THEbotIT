@@ -111,6 +111,9 @@ class GlCreateMagazine(CanonicalBot):
                                                                                           len=len(magazines),
                                                                                           year=year,
                                                                                           mag=magazine))
+                if year == '1986' and magazine == '31':
+                    self.logger.warning('There is magazine 1986, 31, this is special, no creating here')
+                    break
                 if self.debug:
                     lemma = Page(self.wiki, 'Benutzer:THEbotIT/Test')
                 else:
