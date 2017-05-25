@@ -71,8 +71,8 @@ class RERE_Task(ReScannerTask):
 
     def process_lemma(self, page:Page):
         self.preprocess_lemma(page)
-        self.text = re.sub(r'\{\{re\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_re_redaten(x), self.text)
-        self.text = re.sub(r'\{\{re\/Platzhalter\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_replatz_redatenplatz(x), self.text)
+        self.text = re.sub(r'\{\{RE\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_re_redaten(x), self.text)
+        self.text = re.sub(r'\{\{RE\/Platzhalter\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_replatz_redatenplatz(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag_unfrei(x), self.text)
         return self.postprocess_lemma(page)
@@ -198,7 +198,7 @@ class RERE_Task(ReScannerTask):
             template_list[-1]['value'] = 'OFF'
 
     def devalidate_ext_scan(self, template_list):
-        if not re.search(r'\{\{re(?:IA|WL)[^\}]*?\}\}', template_list[-1]['value']):
+        if not re.search(r'\{\{RE(?:IA|WL)[^\}]*?\}\}', template_list[-1]['value']):
             if template_list[-1]['value'] != '':
                 self.logger.error('Extern Scan devalidated: {}'.format(template_list[-1]['value']))
             template_list[-1]['value'] = ''
@@ -232,9 +232,9 @@ class ReScanner(CanonicalBot):
             searcher.add_namespace(2)
         else:
             searcher.add_namespace(0)
-            searcher.add_positive_category('Fertig re')
-            searcher.add_positive_category('Korrigiert re')
-            searcher.add_positive_category('re:Platzhalter')
+            searcher.add_positive_category('Fertig RE')
+            searcher.add_positive_category('Korrigiert RE')
+            searcher.add_positive_category('RE:Platzhalter')
             searcher.set_logic_union()
         self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
@@ -262,7 +262,7 @@ class ReScanner(CanonicalBot):
             self.data[lemma] = datetime.now().strftime('%Y%m%d%H%M%S')
             if changed:
                 self.logger.info('Änderungen auf der Seite {} durchgeführt'.format(page))
-                page.save('re Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)), botflag=True)
+                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)), botflag=True)
             if self._watchdog():
                 break
         for task in self.tasks:
