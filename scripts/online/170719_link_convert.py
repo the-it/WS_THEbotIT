@@ -26,13 +26,3 @@ for idx, lemma in enumerate(lemma_list):
         link_page.text = temp_text
         link_page.save(botflag=True, summary='Biel -> Bielefeld')
 
-#report_page = Page(wiki, 'Benutzer:THEbotIT/List_for_Pfaerrich')
-
-#header = '{|class="wikitable sortable"\n! Lemma\n! Größe\n! geändert von dir'
-#text = []
-#for line in list_for_pfaerrich:
-#    text.append('|-\n|[[{lemma}]]\n|{size}\n|{changes}'.format(lemma=line[0], size=line[2], changes=line[1]))
-#text = '\n'.join(text)
-#text = '{header}\n{text}\n|}}'.format(header=header, text=text)
-#report_page.text = text
-#report_page.save(botflag=True, summary='blub')
