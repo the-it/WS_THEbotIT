@@ -8,7 +8,7 @@ from pywikibot.pagegenerators import LinksearchPageGenerator, SearchPageGenerato
 
 wiki = Site()
 
-searcher = SearchPageGenerator('insource:http://www.ub.uni-bielefeld.de/diglib', site=wiki)
+searcher = SearchPageGenerator('insource:http://www.ub.uni-bielefeld.de/diglib', site=wiki, namespaces=[0, 104])
 
 print(type(searcher))
 
