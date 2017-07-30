@@ -7,11 +7,11 @@ from tools.bots import CanonicalBot, SaveExecution
 class GlStatus(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
-        self.botname = 'GLStatus'
+        self.bot_name = 'GLStatus'
 
     def run(self):
         if self.debug: #activate for debug purpose
-            lemma = 'Benutzer:THEbotIT/' + self.botname
+            lemma = 'Benutzer:THEbotIT/' + self.bot_name
         else:
             lemma = 'Die Gartenlaube'
         page = Page(self.wiki, lemma)

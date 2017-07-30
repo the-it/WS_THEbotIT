@@ -8,7 +8,7 @@ from tools.bots import CanonicalBot
 class ReStatus(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
-        self.botname = 'REStatus'
+        self.bot_name = 'REStatus'
 
     def run(self):
         fertig = self.get_sum_of_cat(['Fertig RE'], ['Teilkorrigiert RE', 'Korrigiert RE', 'Unkorrigiert RE', 'Unvollständig RE'])
@@ -49,7 +49,7 @@ class ReStatus(CanonicalBot):
         user_page.save('todo RE aktualisiert')
 
     def history(self, fertig, korrigiert, unkorrigiert):
-        page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.botname)
+        page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.bot_name)
         temp_text = page.text
         composed_text = ''.join(['|-\n', '|', self.timestamp_start.strftime('%Y%m%d-%H%M'),
                                  '||', str(unkorrigiert[1]), '||', str(unkorrigiert[0]), '||',

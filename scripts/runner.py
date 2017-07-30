@@ -16,7 +16,7 @@ from tools.bots import SaveExecution, CanonicalBot
 class Ping(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
-        self.botname = 'Ping'
+        self.bot_name = 'Ping'
 
     def run(self):
         self.logger.info('Ping')
@@ -25,7 +25,7 @@ class Ping(CanonicalBot):
 class DailyRunner(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
-        self.botname = 'DailyRunner'
+        self.bot_name = 'DailyRunner'
 
     def run(self):
         self.run_bot(Ping(wiki=self.wiki, debug=False))

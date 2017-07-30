@@ -12,7 +12,7 @@ from tools.bots import CanonicalBot
 class AuthorList(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
-        self.botname = 'AuthorList'
+        self.bot_name = 'AuthorList'
         self.searcher = PetScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
         self.string_list = []
@@ -42,7 +42,7 @@ class AuthorList(CanonicalBot):
         lemma_list = self._run_searcher()
         self._build_database(lemma_list)
         if self.debug:
-            dump = Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.botname))
+            dump = Page(self.wiki, 'Benutzer:THEbotIT/{}'.format(self.bot_name))
         else:
             dump = Page(self.wiki, 'Liste der Autoren')
         old_text = dump.text
