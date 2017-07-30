@@ -244,9 +244,22 @@ class CanonicalBot(DataBot):
         return outdated
 
 
-class PingBot(CanonicalBot):
+class PingOneTime(OneTimeBot):
+    def __init__(self, wiki, debug):
+        OneTimeBot.__init__(self, wiki, debug)
+        self.bot_name = 'PingOneTime'
+
     def run(self):
-        self.logger.info('Ping Bot is here')
+        self.logger.info('PingOneTime')
+
+
+class PingCanonical(CanonicalBot):
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
+        self.bot_name = 'PingCanonical'
+
+    def run(self):
+        self.logger.info('PingCanonical')
 
 
 class SaveExecution:
@@ -262,6 +275,6 @@ class SaveExecution:
 
 if __name__ == "__main__":
     wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = PingBot(wiki=wiki, debug=False)
+    bot = PingCanonical(wiki=wiki, debug=False)
     with SaveExecution(bot):
         bot.run()
