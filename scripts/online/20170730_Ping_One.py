@@ -15,6 +15,7 @@ class PingOne(OneTimeBot):
 
     def run(self):
         self.logger.info('20170730_Ping_One')
+        return True
 
 
 if __name__ == "__main__":
