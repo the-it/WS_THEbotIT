@@ -2,7 +2,6 @@ import re
 import traceback
 from datetime import timedelta, datetime
 from math import ceil
-import icu
 
 from pywikibot import ItemPage, Page
 from tools.catscan import PetScan
@@ -165,8 +164,7 @@ class AuthorList(CanonicalBot):
 
         # sorting the list
         self.logger.info('Start sorting.')
-        collator = icu.Collator.createInstance(icu.Locale('de_DE.UTF-8'))
-        list_authors.sort(key=lambda x: collator.getSortKey(x[0]))
+        list_authors.sort(key = lambda x: x[0])
         for i in range(len(list_authors) - 1):
             if list_authors[i][0] == list_authors[i+1][0]:
                 equal_count = 2
