@@ -122,13 +122,13 @@ class RowBearbeitungsstand(RowBasic):
 class WsStatus(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
-        self.botname = 'WsStatus'
+        self.bot_name = 'WsStatus'
         self.text = None
         self.stat_page = None
 
     def run(self):
         if self.debug:
-            lemma = 'Benutzer:THEbotIT/' + self.botname
+            lemma = 'Benutzer:THEbotIT/' + self.bot_name
         else:
             lemma = 'WS:Statistik'
         self.load_text_from_site(lemma)

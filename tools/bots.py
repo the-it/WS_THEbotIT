@@ -25,29 +25,34 @@ class Tee(object):
             f.flush()
 
 
-class BotLog(object):
-    def __init__(self, wiki, timestamp_start, debug):
-        self.botname = 'BotLog'
+class BotTimeStart(object):
+    def __init__(self):
+        self.timestamp_start = datetime.datetime.now()
+        self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
+
+
+class BotLog(BotTimeStart):
+    def __init__(self, wiki, debug):
+        BotTimeStart.__init__(self)
+        self.bot_name = 'BotLog'
         self.wiki = wiki
-        self.timestamp_start = timestamp_start
-        self.barstring = '{:#^120}'.format('')
+        self.bar_string = '{:#^120}'.format('')
         self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
         self.logger_date_format = "%H:%M:%S"
         self.debug = debug
 
     def __enter__(self):
         self.logger_names = {}
-        self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
         self.logger = self.set_up_logger()
         sys.excepthook = self.my_excepthook
-        print(self.barstring)
-        self.logger.info('Start the bot {}.'.format(self.botname))
-        print(self.barstring)
+        print(self.bar_string)
+        self.logger.info('Start the bot {}.'.format(self.bot_name))
+        print(self.bar_string)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        print(self.barstring)
-        self.logger.info('Finish bot {} in {}.'.format(self.botname, datetime.datetime.now()-self.timestamp_start))
-        print(self.barstring)
+        print(self.bar_string)
+        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.datetime.now() - self.timestamp_start))
+        print(self.bar_string)
         self.tear_down_logger()
 
     def my_excepthook(self, excType, excValue, traceback):
@@ -56,15 +61,15 @@ class BotLog(object):
     def set_up_logger(self):
         if not os.path.exists('data'):
             os.makedirs('data')
-        self.logger_names.update({'debug': 'data/{}_DEBUG_{}.log'.format(self.botname,
-                                                                       time.strftime('%y%m%d%H%M%S', time.localtime()))})
-        self.logger_names.update({'info': 'data/{}_INFO_{}.log'.format(self.botname,
+        self.logger_names.update({'debug': 'data/{}_DEBUG_{}.log'.format(self.bot_name,
+                                                                         time.strftime('%y%m%d%H%M%S', time.localtime()))})
+        self.logger_names.update({'info': 'data/{}_INFO_{}.log'.format(self.bot_name,
                                                                        time.strftime('%y%m%d%H%M%S', time.localtime()))})
         # redirect the stdout to the terminal and a file
         file = open(self.logger_names['debug'], 'a', encoding='utf8')
         sys.stdout = Tee(sys.stdout, file)
 
-        logger = logging.getLogger(self.botname)
+        logger = logging.getLogger(self.bot_name)
         logger.setLevel(logging.DEBUG)
         error_log = logging.FileHandler(self.logger_names['info'], encoding='utf8')
         error_log.setLevel(logging.INFO)
@@ -100,54 +105,18 @@ class BotLog(object):
                 + '\n\n' \
                 + filepointer.read().replace('\n', '\n\n')
             page.text = temptext + '\n--~~~~'
-            page.save('Update of Bot {}'.format(self.botname), botflag=True)
+            page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
 
 
-class BotData(object):
-    def __init__(self):
-        self.botname =  'BotData'
-
-    def __enter__(self, logger):
-        self.logger = logger
-        self.data_filename = 'data/{}.data.json'.format(self.botname)
-        try:
-            with open(self.data_filename) as filepointer:
-                self.data = json.load(filepointer)
-            self.logger.info("Open existing data.")
-            try:
-                os.rename(self.data_filename, self.data_filename + ".deprecated")
-            except:
-                pass
-        except:
-            self.data = {}
-            self.logger.warning("No existing data avaiable.")
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        if not exc_type:
-            if not os.path.isdir("data"):
-                os.mkdir("data")
-            with open(self.data_filename, "w") as filepointer:
-                json.dump(self.data, filepointer)
-            if os.path.exists(self.data_filename + ".deprecated"):
-                os.remove(self.data_filename + ".deprecated")
-            if os.path.exists(self.data_filename + ".broken"):
-                os.remove(self.data_filename + ".broken")
-            self.logger.info("Data successfully stored.")
-        else:
-            with open(self.data_filename + '.broken', "w") as filepointer:
-                json.dump(self.data, filepointer)
-            self.logger.critical("There was an error in the general procedure. The broken date and a backup of the old will be keept.")
-
-
-class BotTimestamp(object):
-    def __init__(self, timestamp_start):
-        self.botname =  'BotTimestamp'
-        self.timestamp_start = timestamp_start
+class BotTimestamp(BotLog):
+    def __init__(self, wiki, debug):
+        BotLog.__init__(self, wiki, debug)
+        self.bot_name = 'BotTimestamp'
         self.last_run = {}
 
-    def __enter__(self, logger):
-        self.logger = logger
-        self.filename = 'data/{}.last_run.json'.format(self.botname)
+    def __enter__(self):
+        BotLog.__enter__(self)
+        self.filename = 'data/{}.last_run.json'.format(self.bot_name)
         self.timeformat = '%Y-%m-%d_%H:%M:%S'
         try:
             with open(self.filename, 'r') as filepointer:
@@ -173,24 +142,14 @@ class BotTimestamp(object):
             self.logger.critical("There was an error in the general procedure. Timestamp will be kept.")
             with open(self.filename, "w") as filepointer:
                 json.dump({'succes': False, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
-
-
-class BaseBot(BotLog, BotTimestamp):
-    def __init__(self, wiki, debug):
-        self.timestamp_start = datetime.datetime.now()
-        BotLog.__init__(self, wiki, self.timestamp_start, debug)
-        BotTimestamp.__init__(self, self.timestamp_start)
-        self.botname =  'BaseBot'
-        self.timeout = datetime.timedelta(minutes=60)
-
-    def __enter__(self):
-        BotLog.__enter__(self)
-        BotTimestamp.__enter__(self, self.logger)
-        #put here the not inherited commands
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        BotTimestamp.__exit__(self, exc_type, exc_val, exc_tb)
         BotLog.__exit__(self, exc_type, exc_val, exc_tb)
+
+
+class BaseBot(BotTimestamp):
+    def __init__(self, wiki, debug):
+        BotTimestamp.__init__(self, wiki, debug)
+        self.bot_name = 'BaseBot'
+        self.timeout = datetime.timedelta(minutes=60)
 
     def run(self):
         self.logger.critical("You should really add functionality here.")
@@ -204,35 +163,64 @@ class BaseBot(BotLog, BotTimestamp):
         else:
             return False
 
+
 class OneTimeBot(BaseBot):
     def __init__(self, wiki, debug):
         BaseBot.__init__(self, wiki, debug)
-        self.botname = 'OneTimeBot'
+        self.bot_name = 'OneTimeBot'
 
     def send_log_to_wiki(self):
-        wiki_log_page = 'Benutzer:THEbotIT/Logs'
+        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
         page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
 
 
-class CanonicalBot(BaseBot, BotData):
+class DataBot(BaseBot):
     def __init__(self, wiki, debug):
         BaseBot.__init__(self, wiki, debug)
-        BotData.__init__(self)
-        self.botname = 'CanonicalBot'
-        self.new_data_model = None
+        self.bot_name = 'DataBot'
 
     def __enter__(self):
         BaseBot.__enter__(self)
-        BotData.__enter__(self, self.logger)
-        # put here the not inherited commands
+        self.data_filename = 'data/{}.data.json'.format(self.bot_name)
+        try:
+            with open(self.data_filename) as filepointer:
+                self.data = json.load(filepointer)
+            self.logger.info("Open existing data.")
+            try:
+                os.rename(self.data_filename, self.data_filename + ".deprecated")
+            except:
+                pass
+        except IOError:
+            self.data = {}
+            self.logger.warning("No existing data avaiable.")
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        BotData.__exit__(self, exc_type, exc_val, exc_tb)
+        if not exc_type:
+            if not os.path.isdir("data"):
+                os.mkdir("data")
+            with open(self.data_filename, "w") as filepointer:
+                json.dump(self.data, filepointer)
+            if os.path.exists(self.data_filename + ".deprecated"):
+                os.remove(self.data_filename + ".deprecated")
+            if os.path.exists(self.data_filename + ".broken"):
+                os.remove(self.data_filename + ".broken")
+            self.logger.info("Data successfully stored.")
+        else:
+            with open(self.data_filename + '.broken', "w") as filepointer:
+                json.dump(self.data, filepointer)
+            self.logger.critical("There was an error in the general procedure. The broken date and a backup of the old will be keept.")
         BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
 
+
+class CanonicalBot(DataBot):
+    def __init__(self, wiki, debug):
+        DataBot.__init__(self, wiki, debug)
+        self.bot_name = 'CanonicalBot'
+        self.new_data_model = None
+
     def send_log_to_wiki(self):
-        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.botname)
+        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
         page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
 
@@ -255,7 +243,26 @@ class CanonicalBot(BaseBot, BotData):
                 self.last_run = None
         return outdated
 
-class SaveExecution():
+
+class PingOneTime(OneTimeBot):
+    def __init__(self, wiki, debug):
+        OneTimeBot.__init__(self, wiki, debug)
+        self.bot_name = 'PingOneTime'
+
+    def run(self):
+        self.logger.info('PingOneTime')
+
+
+class PingCanonical(CanonicalBot):
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
+        self.bot_name = 'PingCanonical'
+
+    def run(self):
+        self.logger.info('PingCanonical')
+
+
+class SaveExecution:
     def __init__(self, bot: BaseBot):
         self.bot = bot
 
@@ -267,7 +274,7 @@ class SaveExecution():
         self.bot.__exit__(type, value, traceback)
 
 if __name__ == "__main__":
-    bot = CanonicalBot("hello", debug=True)
+    wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
+    bot = PingCanonical(wiki=wiki, debug=False)
     with SaveExecution(bot):
         bot.run()
-
