@@ -30,15 +30,15 @@ class DailyRunner(CanonicalBot):
         self.logger.info('One timers to run: {}'.format(one_timers))
         for one_timer in one_timers:
             self.logger.info('Run {}'.format(one_timer))
-            module = importlib.import_module('online.{}'.format(one_timer.replace('.py', '')))
-            attributes = tuple(a for a in dir(module) if not a.startswith('__'))
+            onetime_module = importlib.import_module('online.{}'.format(one_timer.replace('.py', '')))
+            attributes = tuple(a for a in dir(onetime_module) if not a.startswith('__'))
             success = False
             for attribute in attributes:
-                object = getattr(module, attribute)
-                if inspect.isclass(object):
-                    if 'OneTimeBot' in str(object.__bases__):
-                        with SaveExecution(object(wiki=self.wiki, debug=self.debug)) as bot:
-                            success = bot.run()
+                module_attr = getattr(onetime_module, attribute)
+                if inspect.isclass(module_attr):
+                    if 'OneTimeBot' in str(module_attr.__bases__):
+                        with SaveExecution(module_attr(wiki=self.wiki, debug=self.debug)) as onetime_bot:
+                            success = onetime_bot.run()
             if success:
                 # move the file to the archives if it was successful
                 self.logger.info('{} finished the work successful'.format(one_timer))
@@ -51,11 +51,10 @@ class DailyRunner(CanonicalBot):
                 origin = repo.remote('origin')
                 origin.push()
 
-
     def run_dailys(self):
         daily_list = [AuthorList, ReScanner]
-        for bot in daily_list:
-            self.run_bot(bot(wiki=self.wiki, debug=False))
+        for daily_bot in daily_list:
+            self.run_bot(daily_bot(wiki=self.wiki, debug=False))
 
     def run_weeklys(self):
         weekly_list = {0: [],  # monday
@@ -65,26 +64,27 @@ class DailyRunner(CanonicalBot):
                        4: [],
                        5: [GlCreateMagazine],
                        6: [ReStatus]}  # sunday
-        for bot in weekly_list[self.now.weekday()]:
-            self.run_bot(bot(wiki=self.wiki, debug=False))
+        for weekly_bot in weekly_list[self.now.weekday()]:
+            self.run_bot(weekly_bot(wiki=self.wiki, debug=False))
 
     def run_monthly(self):
         monthly_list = {1: [GlStatus]}
         last_day_of_month = []
         try:
-            for bot in monthly_list[self.now.day]:
-                self.run_bot(bot(wiki=self.wiki, debug=False))
+            for monthly_bot in monthly_list[self.now.day]:
+                self.run_bot(monthly_bot(wiki=self.wiki, debug=False))
         except KeyError:
             pass
 
         # last day of the month
         if self.now.day == calendar.monthrange(self.now.year, self.now.month)[1]:
-            for bot in last_day_of_month:
-                self.run_bot(bot(wiki=self.wiki, debug=False))
+            for last_day_monthly_bot in last_day_of_month:
+                self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=False))
 
-    def run_bot(self, bot):
-        with SaveExecution(bot) as bot:
-            bot.run()
+    @staticmethod
+    def run_bot(bot_to_run):
+        with SaveExecution(bot_to_run) as bot_to_run:
+            bot_to_run.run()
 
 
 if __name__ == "__main__":
