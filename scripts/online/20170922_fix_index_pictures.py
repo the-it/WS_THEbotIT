@@ -15,7 +15,7 @@ regex_picture = re.compile('\|BILD=\[\[(.*?)\]\]')
 class PingOne(OneTimeBot):
     def __init__(self, wiki, debug):
         OneTimeBot.__init__(self, wiki, debug)
-        self.bot_name = '20170730_Ping_One'
+        self.bot_name = '20170922_Ping_One'
         self.searcher = PetScan()
 
     def _search(self):

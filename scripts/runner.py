@@ -25,7 +25,7 @@ class DailyRunner(CanonicalBot):
         self.now = datetime.now()
         self.regex_one_timer = re.compile('(\d{4})\d{4}')
 
-    def run(self):
+    def run_one_timers(self):
         one_timers = tuple(file for file in os.listdir('online') if self.regex_one_timer.search(file))
         self.logger.info('One timers to run: {}'.format(one_timers))
         for one_timer in one_timers:
@@ -86,11 +86,17 @@ class DailyRunner(CanonicalBot):
         with SaveExecution(bot_to_run) as bot_to_run:
             bot_to_run.run()
 
+    def run(self):
+        self.run_dailys()
+        self.run_weeklys()
+        self.run_monthly()
+        self.run_one_timers()
+
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
-    with SaveExecution(DailyRunner(wiki=wiki, debug=True)) as bot:
+    with SaveExecution(DailyRunner(wiki=wiki, debug=False)) as bot:
         bot.run()
 
 
