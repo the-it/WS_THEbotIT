@@ -260,6 +260,7 @@ class PingCanonical(CanonicalBot):
 
     def run(self):
         self.logger.info('PingCanonical')
+        self.logger.info('äüö')
 
 
 class SaveExecution:
