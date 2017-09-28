@@ -229,18 +229,20 @@ class CanonicalBot(BaseBot):
 
 
 class PingOneTime(OneTimeBot):
+    bot_name = 'PingOneTime'
+
     def __init__(self, main_wiki, debug):
         OneTimeBot.__init__(self, main_wiki, debug)
-        self.bot_name = 'PingOneTime'
 
     def task(self):
         self.logger.info('PingOneTime')
 
 
 class PingCanonical(CanonicalBot):
+    bot_name = 'PingCanonical'
+
     def __init__(self, main_wiki, debug):
         CanonicalBot.__init__(self, main_wiki, debug)
-        self.bot_name = 'PingCanonical'
 
     def task(self):
         self.logger.info('PingCanonical')

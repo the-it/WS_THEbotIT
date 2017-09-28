@@ -120,9 +120,10 @@ class RowBearbeitungsstand(RowBasic):
 
 
 class WsStatus(CanonicalBot):
+    bot_name = 'WsStatus'
+
     def __init__(self, main_wiki, debug):
         CanonicalBot.__init__(self, main_wiki, debug)
-        self.bot_name = 'WsStatus'
         self.text = None
         self.stat_page = None
 

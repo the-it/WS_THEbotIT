@@ -19,9 +19,11 @@ from tools.bots import SaveExecution, CanonicalBot, OneTimeBot
 
 
 class DailyRunner(CanonicalBot):
+    bot_name = 'DailyRunner'
+
     def __init__(self, main_wiki, debug):
         CanonicalBot.__init__(self, main_wiki, debug)
-        self.bot_name = 'DailyRunner'
+
         self.now = datetime.now()
         self.regex_one_timer = re.compile('(\d{4})\d{4}')
 

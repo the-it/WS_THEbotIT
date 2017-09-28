@@ -9,9 +9,10 @@ from tools.bots import OneTimeBot, SaveExecution
 
 
 class PingTwo(OneTimeBot):
+    bot_name = '20170730_Ping_Two'
+
     def __init__(self, main_wiki, debug):
         OneTimeBot.__init__(self, main_wiki, debug)
-        self.bot_name = '20170730_Ping_Two'
 
     def task(self):
         self.logger.info('20170730_Ping_Two')

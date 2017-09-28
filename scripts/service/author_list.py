@@ -9,10 +9,12 @@ from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
 from tools.bots import CanonicalBot
 
+
 class AuthorList(CanonicalBot):
+    bot_name = 'AuthorList'
+
     def __init__(self, main_wiki, debug):
         CanonicalBot.__init__(self, main_wiki, debug)
-        self.bot_name = 'AuthorList'
         self.searcher = PetScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
         self.string_list = []

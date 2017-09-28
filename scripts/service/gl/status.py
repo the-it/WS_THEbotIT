@@ -5,9 +5,10 @@ from tools.catscan import PetScan
 from tools.bots import CanonicalBot, SaveExecution
 
 class GlStatus(CanonicalBot):
+    bot_name = 'GLStatus'
+
     def __init__(self, main_wiki, debug):
         CanonicalBot.__init__(self, main_wiki, debug)
-        self.bot_name = 'GLStatus'
 
     def task(self):
         if self.debug: #activate for debug purpose

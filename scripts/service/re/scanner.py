@@ -205,9 +205,10 @@ class RERE_Task(ReScannerTask):
 
 
 class ReScanner(CanonicalBot):
+    bot_name = 'ReScanner'
+
     def __init__(self, main_wiki, debug):
         CanonicalBot.__init__(self, main_wiki, debug)
-        self.bot_name = 'ReScanner'
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
         self.timeout = timedelta(seconds=60)  # bot should run only one minute ... don't do anything at the moment

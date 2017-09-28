@@ -13,9 +13,10 @@ regex_picture = re.compile('\|BILD=\[\[(.*?)\]\]')
 
 
 class FixIndex(OneTimeBot):
+    bot_name = '20170922_FixIndex'
+
     def __init__(self, main_wiki, debug):
         OneTimeBot.__init__(self, main_wiki, debug)
-        self.bot_name = '20170922_FixIndex'
         self.searcher = PetScan()
 
     def _search(self):
