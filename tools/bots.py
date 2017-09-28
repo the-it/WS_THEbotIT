@@ -64,10 +64,11 @@ class BaseBot(object):
 
     def run(self):
         try:
-            self.task()
+            success = self.task()
         except Exception as e:
             self.logger.exception("Logging an uncaught exception", exc_info=e)
             raise BotExeption('There was a not handled Exception.')
+        return success
 
     def _watchdog(self):
         diff = datetime.now() - self.timestamp_start
@@ -263,6 +264,6 @@ class SaveExecution:
 
 if __name__ == "__main__":
     wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = PingCanonical(main_wiki=wiki, debug=False)
+    bot = PingCanonical(main_wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()
