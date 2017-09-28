@@ -3,7 +3,7 @@ __author__ = 'eso'
 import sys
 sys.path.append('../../')
 from unittest import TestCase
-from scripts.sort_filter.sort_filter import SortFilter
+from scripts.service.sort_filter import SortFilter
 
 
 class TestSortFilter(TestCase):

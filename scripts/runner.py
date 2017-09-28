@@ -6,10 +6,10 @@ import re
 import sys
 from datetime import datetime
 import git
+from pywikibot import Site
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
-from pywikibot import Site
 from scripts.service.author_list import AuthorList
 from scripts.service.re.status import ReStatus
 from scripts.service.gl.status import GlStatus
@@ -89,9 +89,9 @@ class DailyRunner(CanonicalBot):
             bot_to_run.run()
 
     def task(self):
-        #self.run_dailys()
-        #self.run_weeklys()
-        #self.run_monthly()
+        self.run_dailys()
+        self.run_weeklys()
+        self.run_monthly()
         self.run_one_timers()
 
 

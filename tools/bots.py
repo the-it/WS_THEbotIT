@@ -33,7 +33,7 @@ class BaseBot(object):
     def __init__(self, main_wiki, debug):
         self.timestamp_start = datetime.now()
         self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
-        self.wiki = main_wiki
+        self.main_wiki = main_wiki
         self.bar_string = '{:#^120}'.format('')
         self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
         self.logger_date_format = "%H:%M:%S"
@@ -160,7 +160,7 @@ class BaseBot(object):
 class OneTimeBot(BaseBot):
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
-        page = pywikibot.Page(self.wiki, wiki_log_page)
+        page = pywikibot.Page(self.main_wiki, wiki_log_page)
         self.dump_log_lines(page)
 
 
@@ -178,7 +178,7 @@ class CanonicalBot(BaseBot):
             self.logger.info("Open existing data.")
             try:
                 os.rename(self.data_filename, self.data_filename + ".deprecated")
-            except:
+            except OSError:
                 pass
         except IOError:
             self.data = {}
@@ -201,12 +201,13 @@ class CanonicalBot(BaseBot):
         else:
             with open(self.data_filename + '.broken', "w") as filepointer:
                 json.dump(self.data, filepointer)
-            self.logger.critical("There was an error in the general procedure. The broken date and a backup of the old will be keept.")
+            self.logger.critical("There was an error in the general procedure. "
+                                 "The broken date and a backup of the old will be keept.")
         BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
-        page = pywikibot.Page(self.wiki, wiki_log_page)
+        page = pywikibot.Page(self.main_wiki, wiki_log_page)
         self.dump_log_lines(page)
 
     def create_timestamp_for_search(self, searcher, days_in_past=1):

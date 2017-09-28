@@ -4,7 +4,7 @@ import sys
 sys.path.append('../')
 from unittest import TestCase
 import httpretty
-from ..catscan import PetScan
+from tools.catscan import PetScan
 
 
 class TestCatScan(TestCase):
@@ -164,9 +164,32 @@ class TestCatScan(TestCase):
     @httpretty.activate
     def test_do_positive(self):
         httpretty.register_uri(httpretty.GET,
-                               'https://petscan.wmflabs.org/?language=de&project=wikisource&categories=Autoren&get_q=1&show_redirects=no&ns[0]=1&max_age=48&format=json&doit=1',
+                               'https://petscan.wmflabs.org/'
+                               '?language=de'
+                               '&project=wikisource'
+                               '&categories=Autoren'
+                               '&get_q=1'
+                               '&show_redirects=no'
+                               '&ns[0]=1'
+                               '&max_age=4'
+                               '8&format=json'
+                               '&doit=1',
                                status=200,
-                               body='{"n": "result","a": {"querytime_sec": 1.572163,"query": "https://petscan.wmflabs.org/?language=de&project=wikisource&categories=Autoren&get_q=1&show_redirects=no&ns[0]=1&max_age=48&format=json&doit=1"},"*": [{"n": "combination","a": {"type": "subset","*": [{"id": 3279,"len": 10197,"n": "page","namespace": 0,"nstext": "","q": "Q60644","title": "Friedrich_Rückert","touched": "20161024211701"}]}}]}',
+                               body='{"n": "result","a": {"querytime_sec": 1.572163,'
+                                    '"query": "https://petscan.wmflabs.org/?language=de'
+                                    '&project=wikisource&categories=Autoren&get_q=1'
+                                    '&show_redirects=no&ns[0]=1&max_age=48'
+                                    '&format=json&doit=1"},'
+                                    '"*": [{"n": "combination",'
+                                    '"a": {"type": "subset",'
+                                    '"*": [{"id": 3279,'
+                                    '"len": 10197,'
+                                    '"n": "page",'
+                                    '"namespace": 0,'
+                                    '"nstext": "",'
+                                    '"q": "Q60644",'
+                                    '"title": "Friedrich_Rückert",'
+                                    '"touched": "20161024211701"}]}}]}',
                                content_type='application/json')
         self.assertEqual(self.petscan.run(), [{"id": 3279,
                                                "len": 10197,
@@ -180,7 +203,16 @@ class TestCatScan(TestCase):
     @httpretty.activate
     def test_do_negative(self):
         httpretty.register_uri(httpretty.GET,
-                               'https://petscan.wmflabs.org/?language=de&project=wikisource&categories=Autoren&get_q=1&show_redirects=no&ns[0]=1&max_age=48&format=json&doit=1',
+                               'https://petscan.wmflabs.org/'
+                               '?language=de'
+                               '&project=wikisource'
+                               '&categories=Autoren'
+                               '&get_q=1'
+                               '&show_redirects=no'
+                               '&ns[0]=1'
+                               '&max_age=48'
+                               '&format=json'
+                               '&doit=1',
                                status=404)
         with self.assertRaises(ConnectionError):
             self.petscan.run()
