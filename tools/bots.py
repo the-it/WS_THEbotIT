@@ -108,11 +108,13 @@ class BotLog(BotTimeStart):
             page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
 
 
-class BotTimestamp(BotLog):
+class BaseBot(BotLog):
     def __init__(self, wiki, debug):
         BotLog.__init__(self, wiki, debug)
         self.bot_name = 'BotTimestamp'
         self.last_run = {}
+        self.bot_name = 'BaseBot'
+        self.timeout = datetime.timedelta(minutes=60)
 
     def __enter__(self):
         BotLog.__enter__(self)
@@ -143,13 +145,6 @@ class BotTimestamp(BotLog):
             with open(self.filename, "w") as filepointer:
                 json.dump({'succes': False, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime.datetime) else obj)
         BotLog.__exit__(self, exc_type, exc_val, exc_tb)
-
-
-class BaseBot(BotTimestamp):
-    def __init__(self, wiki, debug):
-        BotTimestamp.__init__(self, wiki, debug)
-        self.bot_name = 'BaseBot'
-        self.timeout = datetime.timedelta(minutes=60)
 
     def run(self):
         self.logger.critical("You should really add functionality here.")
@@ -276,6 +271,6 @@ class SaveExecution:
 
 if __name__ == "__main__":
     wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = PingCanonical(wiki=wiki, debug=False)
+    bot = PingCanonical(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()
