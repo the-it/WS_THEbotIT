@@ -10,8 +10,8 @@ from tools.template_handler import TemplateHandler
 from tools.bots import CanonicalBot
 
 class AuthorList(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
+    def __init__(self, main_wiki, debug):
+        CanonicalBot.__init__(self, main_wiki, debug)
         self.bot_name = 'AuthorList'
         self.searcher = PetScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
@@ -38,7 +38,7 @@ class AuthorList(CanonicalBot):
         if not self.data:
             self.data = {}
 
-    def run(self):
+    def task(self):
         lemma_list = self._run_searcher()
         self._build_database(lemma_list)
         if self.debug:

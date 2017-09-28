@@ -6,11 +6,11 @@ from tools.catscan import PetScan
 from tools.bots import CanonicalBot
 
 class ReStatus(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
+    def __init__(self, main_wiki, debug):
+        CanonicalBot.__init__(self, main_wiki, debug)
         self.bot_name = 'REStatus'
 
-    def run(self):
+    def task(self):
         fertig = self.get_sum_of_cat(['Fertig RE'], ['Teilkorrigiert RE', 'Korrigiert RE', 'Unkorrigiert RE', 'Unvollständig RE'])
         korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'], ['Unkorrigiert RE', 'Unvollständig RE'])
         unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE', 'Unvollständig RE'], [])

@@ -19,8 +19,8 @@ from tools.bots import SaveExecution, CanonicalBot, OneTimeBot
 
 
 class DailyRunner(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
+    def __init__(self, main_wiki, debug):
+        CanonicalBot.__init__(self, main_wiki, debug)
         self.bot_name = 'DailyRunner'
         self.now = datetime.now()
         self.regex_one_timer = re.compile('(\d{4})\d{4}')
@@ -86,17 +86,17 @@ class DailyRunner(CanonicalBot):
         with SaveExecution(bot_to_run) as bot_to_run:
             bot_to_run.run()
 
-    def run(self):
-        self.run_dailys()
-        self.run_weeklys()
-        self.run_monthly()
+    def task(self):
+        #self.run_dailys()
+        #self.run_weeklys()
+        #self.run_monthly()
         self.run_one_timers()
 
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
-    with SaveExecution(DailyRunner(wiki=wiki, debug=False)) as bot:
+    with SaveExecution(DailyRunner(main_wiki=wiki, debug=False)) as bot:
         bot.run()
 
 

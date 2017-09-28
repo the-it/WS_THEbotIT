@@ -205,8 +205,8 @@ class RERE_Task(ReScannerTask):
 
 
 class ReScanner(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
+    def __init__(self, main_wiki, debug):
+        CanonicalBot.__init__(self, main_wiki, debug)
         self.bot_name = 'ReScanner'
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
@@ -217,9 +217,6 @@ class ReScanner(CanonicalBot):
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
-        if self.data_outdated():
-            self.data = None
-            self.logger.warning('The data is thrown away. It is out of date')
         if not self.data:
             self.data = {}
 
@@ -244,7 +241,7 @@ class ReScanner(CanonicalBot):
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
         self.lemma_list = new_lemma_list + old_lemma_list #first iterate new items then the old ones (oldest first)
 
-    def run(self):
+    def task(self):
         active_tasks = []
         for task in self.tasks:
             active_tasks.append(task(self.wiki, self.debug, self.logger))

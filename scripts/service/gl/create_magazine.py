@@ -6,9 +6,10 @@ from tools.catscan import PetScan
 from tools.bots import CanonicalBot, BotExeption
 from datetime import datetime
 
+
 class GlCreateMagazine(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
+    def __init__(self, main_wiki, debug):
+        CanonicalBot.__init__(self, main_wiki, debug)
         self.bot_name = 'MagazinesGL'
         self.searcher_pages = PetScan()
         self.searcher_indexes = PetScan()
@@ -18,31 +19,30 @@ class GlCreateMagazine(CanonicalBot):
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
         self.new_data_model = datetime(year=2016, month=10, day=23, hour=19)
+        self.indexes = None
+        self.lemmas = None
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
-        if self.data_outdated():
-            self.data = None
-            self.logger.warning('The data is thrown away. It is out of date')
         if not self.data:
-            self.data = {'pages':{}, 'indexes':{}}
+            self.data = {'pages': {}, 'indexes': {}}
 
-    def run(self):
+    def task(self):
         self.indexes = self.search_indexes()
         self.lemmas = self.search_pages()
-        tempdata_pages = {}
+        temp_data_pages = {}
         self.process_indexes()
-        self.process_pages(tempdata_pages)
-        tempdata_magzines = self.process_actual_pages(tempdata_pages)
-        self.make_magazines(tempdata_magzines)
+        self.process_pages(temp_data_pages)
+        temp_data_magazines = self.process_actual_pages(temp_data_pages)
+        self.make_magazines(temp_data_magazines)
 
-    def process_pages(self, tempdata):
+    def process_pages(self, temp_data):
         for idx, lemma in enumerate(self.lemmas):
             try:
                 hit = self.regex_page.search(lemma['title'])
                 year = hit.group(1)
                 page = hit.group(2)
-                if not year in self.data['pages'].keys():
+                if year not in self.data['pages'].keys():
                     self.data['pages'][year] = {}
                 proofread_lemma = ProofreadPage(self.wiki, 'Seite:{}'.format(lemma['title']))
                 if self.debug:
@@ -56,29 +56,27 @@ class GlCreateMagazine(CanonicalBot):
                 ref = self.search_for_refs(proofread_lemma.text)
                 page_dict = {'q': proofread_lemma.quality_level}
                 if ref:
-                    self.logger.info('There are refs ({refs}) @ {year}, {page}'
-                                      .format(refs = ref,
-                                              page=page,
-                                              year=year))
+                    self.logger.info('There are refs ({refs}) @ {year}, {page}'.format(refs=ref,
+                                                                                       page=page,
+                                                                                       year=year))
                     page_dict.update({'r': ref})
                 self.data['pages'][year][page] = page_dict
-                if not year in tempdata.keys():
-                    tempdata[year] = []
-                tempdata[year].append(page)
+                if year not in temp_data.keys():
+                    temp_data[year] = []
+                temp_data[year].append(page)
             except Exception as error:
                 self.logger.error("wasn't able to process {}, error: {}".format(lemma['title'], error))
 
     def process_indexes(self):
         for idx, index in enumerate(self.indexes):
             index_lemma = IndexPage(self.wiki, 'Index:{}'.format(index['title']))
-            self.logger.info('{idx}/{sum} [[Index:{index}]]'
-                              .format(idx=idx + 1,
-                                      sum=len(self.indexes),
-                                      index=index['title']))
+            self.logger.info('{idx}/{sum} [[Index:{index}]]'.format(idx=idx + 1,
+                                                                    sum=len(self.indexes),
+                                                                    index=index['title']))
             magazines = self.regex_magazine_in_index.findall(index_lemma.text)
             hit_year = self.regex_index.search(index['title'])
             year = hit_year.group(1)
-            if not year in self.data['indexes'].keys():
+            if year not in self.data['indexes'].keys():
                 self.data['indexes'][year] = {}
             for magazine in magazines:
                 pages = self.regex_page_in_magazine.findall(magazine)
@@ -122,8 +120,8 @@ class GlCreateMagazine(CanonicalBot):
                 new_text = self.make_magazine(year, magazine)
                 if new_text:
                     if new_text != lemma.text:
-                        self.logger.info('Print [[Die Gartenlaube ({year})/Heft {magazine}]].'.format(year=year,
-                                                                                                      magazine=magazine))
+                        self.logger.info('Print [[Die Gartenlaube ({year})/Heft {magazine}]].'
+                                         .format(year=year, magazine=magazine))
                         if lemma.text != '':
                             lemma.text = new_text
                             lemma.save('automatisches Update des Heftes', botflag=True)
@@ -158,7 +156,8 @@ class GlCreateMagazine(CanonicalBot):
                 if page_quality < quality:
                     quality = page_quality
                 if quality < 3:
-                    self.logger.info('The quality of {year}/{magazine} is too poor.'.format(year=year, magazine=magazine))
+                    self.logger.info('The quality of {year}/{magazine} is too poor.'.format(year=year,
+                                                                                            magazine=magazine))
                     return None
             except KeyError:
                 self.logger.warning('The list of pages is incorrect, year:{year} or page:{page} is missing.'
@@ -166,7 +165,8 @@ class GlCreateMagazine(CanonicalBot):
                 return None
         return self.make_magazine_text(year, magazine, quality, list_of_pages, last_magazine)
 
-    def convert_page_no(self, page:str):
+    @staticmethod
+    def convert_page_no(page: str):
         while True:
             if page[0] == "0":
                 page = page[1:]
@@ -174,13 +174,14 @@ class GlCreateMagazine(CanonicalBot):
                 break
         return page.replace('_', ' ')
 
-    def search_for_refs(self, text):
+    @staticmethod
+    def search_for_refs(text):
         ref = []
         if re.search('<ref>', text):
             ref.append('ref')
         elif re.search('\{\{CRef\|\|', text):
             ref.append('ref')
-        hit = re.findall('[Gg]roup ?\= ?"?([^">]{1,10})"?', text)
+        hit = re.findall('[Gg]roup ?= ?"?([^">]{1,10})"?', text)
         if hit:
             for entry in hit:
                 if entry not in ref:
@@ -195,8 +196,10 @@ class GlCreateMagazine(CanonicalBot):
     def make_magazine_text(self, year, magazine, quality, list_of_pages, last):
         magazine = int(magazine)
         year = int(year)
-        string_list = []
-        string_list.append('<!--Diese Seite wurde automatisch durch einen Bot erstellt. Wenn du einen Fehler findest oder eine Änderung wünscht, benachrichtige bitte den Betreiber, THE IT, des Bots.-->\n')
+        string_list = list()
+        string_list.append('<!--Diese Seite wurde automatisch durch einen Bot erstellt. '
+                           'Wenn du einen Fehler findest oder eine Änderung wünscht, '
+                           'benachrichtige bitte den Betreiber, THE IT, des Bots.-->\n')
         string_list.append('{{Textdaten\n')
         if magazine > 1:
             string_list.append('|VORIGER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
@@ -207,7 +210,7 @@ class GlCreateMagazine(CanonicalBot):
             string_list.append('|NÄCHSTER=\n')
         else:
             string_list.append('|NÄCHSTER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
-                                                                                                magazine=magazine+1))
+                                                                                                 magazine=magazine+1))
         string_list.append("|AUTOR=Verschiedene\n")
         string_list.append("|TITEL=[[Die Gartenlaube]]\n")
         string_list.append("|SUBTITEL=''Illustrirtes Familienblatt''\n")
@@ -216,7 +219,7 @@ class GlCreateMagazine(CanonicalBot):
             string_list.append('|HERAUSGEBER=[[Ferdinand Stolle]]\n')
         elif (year < 1878) or (year == 1878 and magazine < 14):
             string_list.append('|HERAUSGEBER=[[Ernst Keil]]\n')
-        elif year < 1885 :
+        elif year < 1885:
             string_list.append('|HERAUSGEBER=Ernst Ziel\n')
         else:
             string_list.append('|HERAUSGEBER=Adolf Kröner\n')
@@ -260,25 +263,19 @@ class GlCreateMagazine(CanonicalBot):
         for ref_type in ref:
             if ref_type != 'ref':
                 string_list.append('{{{{references|TIT|{ref}}}}}\n'.format(ref=ref_type))
-        string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n')
-        string_list.append('[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year, magazine=magazine))
+        string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n'
+                           '[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n')
+        string_list.append('[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year,
+                                                                                                     magazine=magazine))
         string_list.append('[[Kategorie:{year}0er Jahre]]\n'.format(year=str(year)[0:3]))
         string_list.append('\n')
         return ''.join(string_list)
-
 
     def search_indexes(self):
         self.searcher_indexes.add_positive_category('Die Gartenlaube')
         self.searcher_indexes.add_positive_category('Index')
         self.searcher_indexes.set_regex_filter('.*Die Gartenlaube \(\d{4}\)')
         self.searcher_indexes.set_timeout(60)
-        #if self.last_run and self.last_run['succes']:
-        if False:
-            delta = (self.timestamp_start - self.last_run['timestamp']).days
-            self.create_timestamp_for_search(self.searcher_indexes, delta)
-        #elif self.debug:
-        elif False:
-            self.create_timestamp_for_search(self.searcher_indexes, 5)
         return self.searcher_indexes.run()
 
     def search_pages(self):
@@ -287,10 +284,8 @@ class GlCreateMagazine(CanonicalBot):
         self.searcher_pages.set_search_depth(1)
         self.searcher_pages.set_timeout(60)
         if self.last_run and self.last_run['succes']:
-        #if False:
             delta = (self.timestamp_start - self.last_run['timestamp']).days
             self.create_timestamp_for_search(self.searcher_pages, delta)
         elif self.debug:
-        #elif False:
             self.create_timestamp_for_search(self.searcher_pages, 0)
         return self.searcher_pages.run()

@@ -13,8 +13,8 @@ regex_picture = re.compile('\|BILD=\[\[(.*?)\]\]')
 
 
 class FixIndex(OneTimeBot):
-    def __init__(self, wiki, debug):
-        OneTimeBot.__init__(self, wiki, debug)
+    def __init__(self, main_wiki, debug):
+        OneTimeBot.__init__(self, main_wiki, debug)
         self.bot_name = '20170922_FixIndex'
         self.searcher = PetScan()
 
@@ -22,7 +22,7 @@ class FixIndex(OneTimeBot):
         self.searcher.add_positive_category('Index')
         return self.searcher.run()
 
-    def run(self):
+    def task(self):
         lemma_list = self._search()
         for idx, lemma in enumerate(lemma_list):
             page = Page(self.wiki, title='Index:{}'.format(lemma['title']))
@@ -46,6 +46,6 @@ class FixIndex(OneTimeBot):
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = FixIndex(wiki=wiki, debug=True)
+    bot = FixIndex(main_wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()
