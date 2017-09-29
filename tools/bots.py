@@ -1,3 +1,4 @@
+import codecs
 import logging
 import sys
 import os
@@ -109,6 +110,7 @@ class BaseBot(object):
         logger.setLevel(logging.DEBUG)
         error_log = logging.FileHandler(self.logger_names['info'], encoding='utf8')
         error_log.setLevel(logging.INFO)
+        sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
         debug_stream = logging.StreamHandler(sys.stdout)
         debug_stream.setLevel(logging.DEBUG)
         debug_log = logging.FileHandler(self.logger_names['debug'], encoding='utf8')
