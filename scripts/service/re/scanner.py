@@ -28,7 +28,7 @@ class ReScannerTask:
         self.pretext = page.text
         self.changed = False
 
-    def postprocess_lemma(self, page:Page):
+    def postprocess_lemma(self, page: Page):
         page.text = self.text
         return self.text != self.pretext
 
@@ -43,7 +43,7 @@ class ReScannerTask:
 
 
 class ENÜUTask(ReScannerTask):
-    def __init__(self, wiki:Site, debug:bool, logger:Logger):
+    def __init__(self, wiki: Site, debug: bool, logger: Logger):
         ReScannerTask.__init__(self, wiki, debug, logger)
         self.task_name = 'ENÜU'
         self.load_task()
@@ -59,35 +59,37 @@ class ENÜUTask(ReScannerTask):
         return self.postprocess_lemma(page)
 
     @staticmethod
-    def replace_re(hit:re):
+    def replace_re(hit: re):
         return '\n' + hit.group(0).strip() + '\n'
 
 
 class RERE_Task(ReScannerTask):
-    def __init__(self, wiki:Site, debug:bool, logger:Logger):
+    def __init__(self, wiki: Site, debug: bool, logger: Logger):
         ReScannerTask.__init__(self, wiki, debug, logger)
         self.task_name = 'RERE'
         self.load_task()
 
-    def process_lemma(self, page:Page):
+    def process_lemma(self, page: Page):
         self.preprocess_lemma(page)
         self.text = re.sub(r'\{\{RE\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_re_redaten(x), self.text)
-        self.text = re.sub(r'\{\{RE\/Platzhalter\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_replatz_redatenplatz(x), self.text)
+        self.text = re.sub(r'\{\{RE\/Platzhalter\|.{0,200}\}\}(?=\n| |\[)',
+                           lambda x: self.replace_replatz_redatenplatz(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag(x), self.text)
-        self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag_unfrei(x), self.text)
+        self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}(?=\n| |\[)',
+                           lambda x: self.replace_renachtrag_unfrei(x), self.text)
         return self.postprocess_lemma(page)
 
-    def replace_re_redaten(self, hit:re):
+    def replace_re_redaten(self, hit: re):
         old_template = TemplateHandler(hit.group(0))
         old_parameters = old_template.get_parameterlist()
-        new_parameters = []
+        new_parameters = list()
         new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
         new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
         new_parameters.append(self.get_parameter_if_possible('SPALTE_END', old_parameters, 2))
         self.set_off(new_parameters)
         if old_parameters[0]['value'][0] == 'S':
-            new_parameters.append({'key':'VORGÄNGER','value': ''})
-            new_parameters.append({'key':'NACHFOLGER','value': ''})
+            new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
+            new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
         else:
             new_parameters.append(self.get_parameter_if_possible('VORGÄNGER', old_parameters, 3))
             new_parameters.append(self.get_parameter_if_possible('NACHFOLGER', old_parameters, 4))
@@ -105,11 +107,11 @@ class RERE_Task(ReScannerTask):
         new_template.update_parameters(new_parameters)
         return new_template.get_str(str_complex=True)
 
-    def replace_replatz_redatenplatz(self, hit:re):
+    def replace_replatz_redatenplatz(self, hit: re):
         self.logger.info('Found re/Platzhalter')
         old_template = TemplateHandler(hit.group(0))
         old_parameters = old_template.get_parameterlist()
-        new_parameters = []
+        new_parameters = list()
         new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
         new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
         new_parameters.append(self.get_parameter_if_possible('SPALTE_END', old_parameters, 2))
@@ -134,24 +136,24 @@ class RERE_Task(ReScannerTask):
         new_template.update_parameters(new_parameters)
         return new_template.get_str(str_complex=True)
 
-    def replace_renachtrag(self, hit:re):
+    def replace_renachtrag(self, hit: re):
         self.logger.info('Found RENachtrag')
         old_template = TemplateHandler(hit.group(0).strip())
         old_parameters = old_template.get_parameterlist()
-        new_parameters = []
+        new_parameters = list()
         new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
         new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
-        new_parameters.append({'key':'SPALTE_END', 'value':''})
-        new_parameters.append({'key':'VORGÄNGER', 'value':''})
-        new_parameters.append({'key':'NACHFOLGER', 'value':''})
+        new_parameters.append({'key': 'SPALTE_END', 'value': ''})
+        new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
+        new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
         new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 3))
         if re.search('\|KORREKTURSTAND=[Ff]ertig', self.text):
-            new_parameters.append({'key':'KORREKTURSTAND', 'value':'fertig'})
+            new_parameters.append({'key': 'KORREKTURSTAND', 'value': 'fertig'})
         else:
             new_parameters.append({'key': 'KORREKTURSTAND', 'value': ''})
         new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 2))
         self.devalidate_ext_scan(new_parameters)
-        new_parameters.append({'key':'EXTSCAN_END', 'value':''})
+        new_parameters.append({'key': 'EXTSCAN_END', 'value': ''})
         new_parameters.append(self.get_parameter_if_possible('ÜBERSCHRIFT', old_parameters, 4))
         if new_parameters[-1]['value'] == 'Ü':
             new_parameters[-1]['value'] = 'ON'
@@ -160,25 +162,25 @@ class RERE_Task(ReScannerTask):
         new_template.update_parameters(new_parameters)
         return new_template.get_str(str_complex=True)
 
-    def replace_renachtrag_unfrei(self, hit:re):
+    def replace_renachtrag_unfrei(self, hit: re):
         self.logger.info('Found RENachtrag unfrei')
         old_template = TemplateHandler(hit.group(0).strip())
         old_parameters = old_template.get_parameterlist()
-        new_parameters = []
+        new_parameters = list()
         new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
         new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
-        new_parameters.append({'key':'SPALTE_END', 'value':''})
-        new_parameters.append({'key':'VORGÄNGER', 'value':''})
-        new_parameters.append({'key':'NACHFOLGER', 'value':''})
+        new_parameters.append({'key': 'SPALTE_END', 'value': ''})
+        new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
+        new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
         new_parameters.append({'key': 'SORTIERUNG', 'value': ''})
         try:
             deathyear = int(old_parameters[4]['value'])
-            new_parameters.append({'key': 'GEMEINFREI', 'value': str(deathyear+71)})
+            new_parameters.append({'key': 'GEMEINFREI', 'value': str(deathyear + 71)})
         except:
-            new_parameters.append({'key':'GEMEINFREI', 'value':''})
+            new_parameters.append({'key': 'GEMEINFREI', 'value': ''})
         new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 2))
         self.devalidate_ext_scan(new_parameters)
-        new_parameters.append({'key':'EXTSCAN_END', 'value':''})
+        new_parameters.append({'key': 'EXTSCAN_END', 'value': ''})
         new_parameters.append(self.get_parameter_if_possible('ÜBERSCHRIFT', old_parameters, 5))
         if new_parameters[-1]['value'] == 'Ü':
             new_parameters[-1]['value'] = 'ON'
@@ -187,13 +189,15 @@ class RERE_Task(ReScannerTask):
         new_template.update_parameters(new_parameters)
         return new_template.get_str(str_complex=True)
 
-    def get_parameter_if_possible(self, name, old_parameters, old_position):
+    @staticmethod
+    def get_parameter_if_possible(name, old_parameters, old_position):
         if len(old_parameters) >= old_position + 1:
-            return{'key': name, 'value': old_parameters[old_position]['value']}
+            return {'key': name, 'value': old_parameters[old_position]['value']}
         else:
             return {'key': name, 'value': ''}
 
-    def set_off(self, template_list):
+    @staticmethod
+    def set_off(template_list):
         if template_list[-1]['value'] == '':
             template_list[-1]['value'] = 'OFF'
 
@@ -237,10 +241,11 @@ class ReScanner(CanonicalBot):
         self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
         # all items which wasn't process before
-        new_lemma_list = [x['nstext'] + ':' + x['title'] for x in raw_lemma_list if x['nstext'] + ':' + x['title'] not in list(self.data.keys())]
+        new_lemma_list = [x['nstext'] + ':' + x['title'] for x in raw_lemma_list if
+                          x['nstext'] + ':' + x['title'] not in list(self.data.keys())]
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
-        self.lemma_list = new_lemma_list + old_lemma_list #first iterate new items then the old ones (oldest first)
+        self.lemma_list = new_lemma_list + old_lemma_list  # first iterate new items then the old ones (oldest first)
 
     def task(self):
         active_tasks = []
@@ -260,8 +265,10 @@ class ReScanner(CanonicalBot):
             self.data[lemma] = datetime.now().strftime('%Y%m%d%H%M%S')
             if changed:
                 self.logger.info('Änderungen auf der Seite {} durchgeführt'.format(page))
-                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)), botflag=True)
+                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)),
+                          botflag=True)
             if self._watchdog():
                 break
         for task in self.tasks:
             del task
+        return True

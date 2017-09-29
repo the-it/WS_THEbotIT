@@ -53,7 +53,7 @@ class RowBearbeitungen(RowBasic):
 class RowSeitenstatistik(RowBasic):
     def build_row(self):
         self.logger.info('Searchstrings for genre')
-        list_sites_stats = []
+        list_sites_stats = list()
         list_sites_stats.append(self.get_all_sites())
         list_sites_stats.append(self.get_sites_in_cat(
                 ['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
@@ -115,7 +115,8 @@ class RowBearbeitungsstand(RowBasic):
 
         return '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) + ' || '.join(list_sites_stats)
 
-    def make_percent(self, counter:str, denominator:str):
+    @staticmethod
+    def make_percent(counter:str, denominator:str):
         counter = float(counter.replace('.', ''))
         denominator = float(denominator.replace('.', ''))
         return "{:10.2f}".format(counter/denominator * 100.0)
@@ -138,6 +139,7 @@ class WsStatus(CanonicalBot):
         #self.new_row(str(RowSeitenstatistik(self.wiki, self.logger)), 'SEITENSTATISTIK')
         self.new_row(str(RowBearbeitungsstand(self.wiki, self.logger)), 'BEARBEITUNGSSTAND')
         self.save_text_to_site()
+        return True
 
     def new_row(self, row, placeholder):
         self.text = re.sub('<!--BOT:{}-->'.format(placeholder), '<!--BOT:{}-->\n{}'.format(placeholder, row), self.text)

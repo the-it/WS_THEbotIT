@@ -1,8 +1,8 @@
 import os
-import requests
 import internetarchive
 
 folder = 'pages'
+
 
 def from_IA(book, item, filepattern, start, steps, finish):
     if not os.path.exists(os.getcwd() + os.sep + folder + os.sep + book):
@@ -17,10 +17,9 @@ def from_IA(book, item, filepattern, start, steps, finish):
         if not os.path.isfile(file_on_harddisk):
             try:
                 re_file = re_item.get_file(filepattern.format(i))
-                re_file.download(file_on_harddisk, silent = True)
+                re_file.download(file_on_harddisk, silent=True)
             except:
                 print('{} is not an item'.format(filepattern.format(i)))
-
 
 
 def make_single_pages():

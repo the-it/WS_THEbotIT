@@ -228,7 +228,8 @@ class PetScan:
     def set_sortorder_decending(self):
         self.add_options({'sortorder': 'descending'})
 
-    def _construct_list_argument(self, cat_list):
+    @staticmethod
+    def _construct_list_argument(cat_list):
         string = "\r\n".join(cat_list).replace(' ', '+')
         return string
 
@@ -239,7 +240,7 @@ class PetScan:
         return opt_string
 
     def _construct_string(self):
-        question_string = [self.base_address]
+        question_string = list(self.base_address)
         question_string.append("?language=" + self.language)
         question_string.append("&project=" + self.project)
         #categories

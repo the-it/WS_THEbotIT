@@ -5,6 +5,7 @@ from pywikibot import Page
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot
 
+
 class ReStatus(CanonicalBot):
     bot_name = 'REStatus'
 
@@ -12,16 +13,20 @@ class ReStatus(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
 
     def task(self):
-        fertig = self.get_sum_of_cat(['Fertig RE'], ['Teilkorrigiert RE', 'Korrigiert RE', 'Unkorrigiert RE', 'Unvollständig RE'])
-        korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'], ['Unkorrigiert RE', 'Unvollständig RE'])
+        fertig = self.get_sum_of_cat(['Fertig RE'],
+                                     ['Teilkorrigiert RE', 'Korrigiert RE', 'Unkorrigiert RE', 'Unvollständig RE'])
+        korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'],
+                                         ['Unkorrigiert RE', 'Unvollständig RE'])
         unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE', 'Unvollständig RE'], [])
         self.userpage_THE_IT(korrigiert)
         self.history(fertig, korrigiert, unkorrigiert)
+        return True
 
-    def make_color(self, min, max, value):
+    @staticmethod
+    def make_color(min, max, value):
         if value > min:
             if value < max:
-                color = (1 - (value - min)/(max - min)) * 255
+                color = (1 - (value - min) / (max - min)) * 255
             else:
                 color = 0
         else:
@@ -40,7 +45,7 @@ class ReStatus(CanonicalBot):
         date_page = Page(self.wiki, list_of_lemmas[0]['title'])
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
         gap = datetime.now() - datetime.strptime(date_of_first, '%Y-%m-%d')
-        color = self.make_color(3*365, 3.5*365, gap.days)
+        color = self.make_color(3 * 365, 3.5 * 365, gap.days)
         status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, date_of_first))
 
         user_page = Page(self.wiki, 'Benutzer:THE IT/Werkstatt')
@@ -71,11 +76,11 @@ class ReStatus(CanonicalBot):
         return byte_sum, len(list_of_lemmas)
 
     def petscan(self, categories, negative_categories):
-        self.searcher = PetScan()
+        searcher = PetScan()
         for category in categories:
-            self.searcher.add_positive_category(category)
+            searcher.add_positive_category(category)
         for neg_category in negative_categories:
-            self.searcher.add_negative_category(neg_category)
-        self.searcher.set_logic_union()
-        self.logger.debug(self.searcher)
-        return self.searcher.run()
+            searcher.add_negative_category(neg_category)
+        searcher.set_logic_union()
+        self.logger.debug(searcher)
+        return searcher.run()

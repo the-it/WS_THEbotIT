@@ -36,6 +36,7 @@ class GlCreateMagazine(CanonicalBot):
         self.process_pages(temp_data_pages)
         temp_data_magazines = self.process_actual_pages(temp_data_pages)
         self.make_magazines(temp_data_magazines)
+        return True
 
     def process_pages(self, temp_data):
         for idx, lemma in enumerate(self.lemmas):

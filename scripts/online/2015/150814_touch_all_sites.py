@@ -3,8 +3,6 @@ __author__ = 'eso'
 import sys
 sys.path.append('../../')
 from tools.catscan import PetScan
-import re
-import requests
 import pywikibot
 
 searcher_index = PetScan()
@@ -23,8 +21,8 @@ for idx, index in enumerate(list_of_indexes):
     searcher_sites_of_index.add_positive_category('Unkorrigiert')
     searcher_sites_of_index.set_logic(log_or=True)
     list_of_sites = searcher_sites_of_index.run()
-    for idx, site in enumerate(list_of_sites):
-        print('\t{}/{} {}'.format(idx + 1, len(list_of_sites), site['a']['nstext'] + ':' + site['a']['title']))
-        touchpage = pywikibot.Page(wiki, title =site['a']['nstext'] + ':' + site['a']['title'])
+    for idx_, site in enumerate(list_of_sites):
+        print('\t{}/{} {}'.format(idx_ + 1, len(list_of_sites), site['a']['nstext'] + ':' + site['a']['title']))
+        touchpage = pywikibot.Page(wiki, title=site['a']['nstext'] + ':' + site['a']['title'])
         touchpage.touch()
     del searcher_sites_of_index

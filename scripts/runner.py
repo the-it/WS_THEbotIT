@@ -15,7 +15,7 @@ from scripts.service.re.status import ReStatus
 from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.re.scanner import ReScanner
-from tools.bots import CanonicalBot, OneTimeBot
+from tools.bots import CanonicalBot, OneTimeBot, PingCanonical
 
 
 class DailyRunner(CanonicalBot):
@@ -56,7 +56,7 @@ class DailyRunner(CanonicalBot):
     def run_dailys(self):
         daily_list = [AuthorList, ReScanner]
         for daily_bot in daily_list:
-            self.run_bot(daily_bot(wiki=self.wiki, debug=False))
+            self.run_bot(daily_bot(wiki=self.wiki, debug=self.debug))
 
     def run_weeklys(self):
         weekly_list = {0: [],  # monday
@@ -67,21 +67,21 @@ class DailyRunner(CanonicalBot):
                        5: [GlCreateMagazine],
                        6: [ReStatus]}  # sunday
         for weekly_bot in weekly_list[self.now.weekday()]:
-            self.run_bot(weekly_bot(wiki=self.wiki, debug=False))
+            self.run_bot(weekly_bot(wiki=self.wiki, debug=self.debug))
 
     def run_monthly(self):
         monthly_list = {1: [GlStatus]}
         last_day_of_month = []
         try:
             for monthly_bot in monthly_list[self.now.day]:
-                self.run_bot(monthly_bot(wiki=self.wiki, debug=False))
+                self.run_bot(monthly_bot(wiki=self.wiki, debug=self.debug))
         except KeyError:
             pass
 
         # last day of the month
         if self.now.day == calendar.monthrange(self.now.year, self.now.month)[1]:
             for last_day_monthly_bot in last_day_of_month:
-                self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=False))
+                self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=self.debug))
 
     @staticmethod
     def run_bot(bot_to_run):
@@ -93,6 +93,7 @@ class DailyRunner(CanonicalBot):
         self.run_weeklys()
         self.run_monthly()
         self.run_one_timers()
+        return True
 
 
 if __name__ == "__main__":

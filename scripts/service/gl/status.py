@@ -4,6 +4,7 @@ from pywikibot import Page, Site
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot
 
+
 class GlStatus(CanonicalBot):
     bot_name = 'GLStatus'
 
@@ -11,7 +12,7 @@ class GlStatus(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
 
     def task(self):
-        if self.debug: #activate for debug purpose
+        if self.debug:  # activate for debug purpose
             lemma = 'Benutzer:THEbotIT/' + self.bot_name
         else:
             lemma = 'Die Gartenlaube'
@@ -33,17 +34,20 @@ class GlStatus(CanonicalBot):
 
         page.text = temp_text
         page.save('new dataset', botflag=True)
+        return True
 
-    def to_percent(self, counter, denominator):
-        return ' ({0:.2f} %)'.format(round((counter/denominator)*100, 2)).replace('.', ',')
+    @staticmethod
+    def to_percent(counter, denominator):
+        return ' ({0:.2f} %)'.format(round((counter / denominator) * 100, 2)).replace('.', ',')
 
     def projektstand(self, temp_text, all, fertig, korrigiert, unkorrigiert, articles):
-        composed_text = ''.join(['<!--new line: Liste wird von einem Bot aktuell gehalten.-->\n|-\n', '|', self.timestamp_start.strftime('%d.%m.%Y'),
-                         '|| ', str(all),
-                         ' || ', str(korrigiert), self.to_percent(korrigiert, all),
-                         ' || ', str(fertig), self.to_percent(fertig, all),
-                         ' || ', str(unkorrigiert), self.to_percent(unkorrigiert, all),
-                         ' || ', str(articles)+'/19900', self.to_percent(articles, 19900), ' ||'])
+        composed_text = ''.join(['<!--new line: Liste wird von einem Bot aktuell gehalten.-->\n|-\n', '|',
+                                 self.timestamp_start.strftime('%d.%m.%Y'),
+                                 '|| ', str(all),
+                                 ' || ', str(korrigiert), self.to_percent(korrigiert, all),
+                                 ' || ', str(fertig), self.to_percent(fertig, all),
+                                 ' || ', str(unkorrigiert), self.to_percent(unkorrigiert, all),
+                                 ' || ', str(articles) + '/19900', self.to_percent(articles, 19900), ' ||'])
         return re.sub('<!--new line: Liste wird von einem Bot aktuell gehalten.-->', composed_text, temp_text)
 
     def alle_seiten(self, temp_text, all):
@@ -52,12 +56,14 @@ class GlStatus(CanonicalBot):
         temp_text = re.sub('<!--GLStatus:alle_Seiten-->\d{5}<!---->', composed_text, temp_text)
         return temp_text
 
-    def korrigierte_seiten(self, temp_text, korrigiert):
+    @staticmethod
+    def korrigierte_seiten(temp_text, korrigiert):
         composed_text = ''.join(['<!--GLStatus:korrigierte_Seiten-->', str(korrigiert), '<!---->'])
         temp_text = re.sub('<!--GLStatus:korrigierte_Seiten-->\d{5}<!---->', composed_text, temp_text)
         return temp_text
 
-    def fertige_seiten(self, temp_text, fertig):
+    @staticmethod
+    def fertige_seiten(temp_text, fertig):
         composed_text = ''.join(['<!--GLStatus:fertige_Seiten-->', str(fertig), '<!---->'])
         temp_text = re.sub('<!--GLStatus:fertige_Seiten-->\d{4,5}<!---->', composed_text, temp_text)
         return temp_text
@@ -69,19 +75,26 @@ class GlStatus(CanonicalBot):
         alle = fertig + korrigiert + rest
         regex = re.compile('<!--GLStatus:' + str(year) + '-->.*?<!---->')
         if rest > 0:
-            temp_text = regex.sub('<!--GLStatus:{year}-->|span style="background-color:#4876FF; font-weight: bold"|ca. {percent} % korrigiert oder fertig<!---->'
-                                  .format(year=year,
-                                          percent=str(round(((fertig + korrigiert) / alle) * 100, 1)).replace('.', ',')), temp_text)
+            temp_text = regex.sub(
+                '<!--GLStatus:{year}-->'
+                '|span style="background-color:#4876FF; font-weight: bold"|ca. {percent} % korrigiert oder fertig'
+                '<!---->'
+                .format(year=year,
+                        percent=str(round(((fertig + korrigiert) / alle) * 100, 1)).replace('.', ',')), temp_text)
         elif korrigiert > 0:
-            temp_text = regex.sub('<!--GLStatus:{year}-->|span style="background-color:#F7D700; font-weight: bold"|{percent_fertig} % fertig, Rest korrigiert<!---->'
-                                  .format(year=year,
-                                          percent_fertig = str(round(((fertig) / alle) * 100, 1)).replace('.', ',')), temp_text)
+            temp_text = regex.sub(
+                '<!--GLStatus:{year}-->'
+                '|span style="background-color:#F7D700; font-weight: bold"|{percent_fertig} % fertig, Rest korrigiert'
+                '<!---->'
+                .format(year=year,
+                        percent_fertig=str(round(((fertig) / alle) * 100, 1)).replace('.', ',')), temp_text)
         else:
-            temp_text = regex.sub('<!--GLStatus:{year}-->|span style="background-color:#00FF00; font-weight: bold"|Fertig<!---->'
-                                  .format(year = year), temp_text)
+            temp_text = regex.sub(
+                '<!--GLStatus:{year}-->|span style="background-color:#00FF00; font-weight: bold"|Fertig<!---->'
+                .format(year=year), temp_text)
         return temp_text
 
-    def petscan(self, categories, not_categories = [], article=False, year=None):
+    def petscan(self, categories, not_categories=None, article=False, year=None):
         searcher = PetScan()
         if article:
             searcher.add_namespace('Article')
@@ -89,12 +102,13 @@ class GlStatus(CanonicalBot):
             searcher.add_namespace('Seite')
         searcher.set_search_depth(5)
         if year:
-            searcher.add_positive_category('Die Gartenlaube (' + str(year) +')' )
+            searcher.add_positive_category('Die Gartenlaube (' + str(year) + ')')
         else:
             searcher.add_positive_category('Die Gartenlaube')
         for category in categories:
             searcher.add_positive_category(category)
-        for category in not_categories:
-            searcher.add_negative_category(category)
+        if not_categories:
+            for category in not_categories:
+                searcher.add_negative_category(category)
         self.logger.debug(str(searcher))
         return len(searcher.run())

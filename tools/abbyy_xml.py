@@ -1,6 +1,5 @@
-__author__ = 'erik'
-
 from xml.dom import minidom
+
 
 class AbbyyXML:
     def __init__(self, xml_string):
@@ -48,17 +47,18 @@ class AbbyyXML:
         formatting_string = []
         for formatting in formattings:
             formatting_string.append(self.processFormatting(formatting))
-        #formatting_string.append("\n")
+        # formatting_string.append("\n")
         return "".join(formatting_string)
 
     def processFormatting(self, formatting_xml):
         char_params = formatting_xml.getElementsByTagName("charParams")
         chars_string = []
         for char_param in char_params:
-            chars_string.append(self.processChar(char_param))
+            chars_string.append(self.process_char(char_param))
         return "".join(chars_string)
 
-    def processChar(self, char_xml):
+    @staticmethod
+    def process_char(char_xml):
         return char_xml.childNodes[0].data
 
 

@@ -1,5 +1,3 @@
-__author__ = 'Erik Sommer'
-
 import re
 
 regex_title = '\A[^\|]*'
@@ -15,6 +13,7 @@ class TemplateHandler:
     """
 
     """
+
     def __init__(self, template_str=''):
         '''
 
@@ -27,18 +26,18 @@ class TemplateHandler:
             self._process_template_str(template_str)
 
     def _process_template_str(self, template_str):
-        template_str = re.sub('\n', '', template_str)  #get rid of all linebreaks
-        template_str = template_str[2:-2]  #get rid of the surrounding brackets
-        self.title = re.search(regex_title, template_str).group()  #extract the title
-        template_str = re.sub(regex_title +'\|', '', template_str)  #get rid of the title
+        template_str = re.sub('\n', '', template_str)  # get rid of all linebreaks
+        template_str = template_str[2:-2]  # get rid of the surrounding brackets
+        self.title = re.search(regex_title, template_str).group()  # extract the title
+        template_str = re.sub(regex_title + '\|', '', template_str)  # get rid of the title
 
-        while template_str:  #analyse the arguments
-            if template_str[0] == '{':  #argument is a template itself
+        while template_str:  # analyse the arguments
+            if template_str[0] == '{':  # argument is a template itself
                 template_str = self._save_argument(regex_template, template_str, False)
-            elif template_str[0] == '[':  #argument is a link in the wiki
+            elif template_str[0] == '[':  # argument is a link in the wiki
                 template_str = self._save_argument(regex_interwiki, template_str, False)
-            elif re.match(regex_key, template_str):  #argument with a key
-                if re.match(regex_template_link, template_str): #an embedded template or link with a key
+            elif re.match(regex_key, template_str):  # argument with a key
+                if re.match(regex_template_link, template_str):  # an embedded template or link with a key
                     template_str = self._save_argument(regex_key_embedded_template_or_link, template_str, True)
                 else:  # a normal argument with a key
                     template_str = self._save_argument(regex_key, template_str, True)
@@ -51,7 +50,7 @@ class TemplateHandler:
     def get_parameter(self, key):
         return [item for item in self.parameters if item["key"] == key][0]
 
-    def get_str(self, str_complex = True):
+    def get_str(self, str_complex=True):
         list_for_template = ['{{' + self.title]
         for parameter in self.parameters:
             if parameter['key']:

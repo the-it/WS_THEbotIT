@@ -50,7 +50,7 @@ template_navigation1.set_title('Navigation2')
 template_navigation2 = TemplateHandler()
 template_navigation2.set_title('Navigation2')
 
-list_navigation = []
+list_navigation = list()
 list_navigation.append({'key': 'AUTOR', 'value': '[[Basilius von Ramdohr]]'})
 list_navigation.append({'key': 'ARTIKEL', 'value': '[[Venus Urania. Ueber die Natur der Liebe, über ihre Veredelung und Verschönerung|Venus Urania]]'})
 list_navigation.append({'key': 'KAPITEL', 'value': list_textdaten[3]['value']})
