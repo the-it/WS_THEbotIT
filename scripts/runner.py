@@ -21,8 +21,8 @@ from tools.bots import SaveExecution, CanonicalBot, OneTimeBot
 class DailyRunner(CanonicalBot):
     bot_name = 'DailyRunner'
 
-    def __init__(self, main_wiki, debug):
-        CanonicalBot.__init__(self, main_wiki, debug)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
 
         self.now = datetime.now()
         self.regex_one_timer = re.compile('(\d{4})\d{4}')
@@ -39,7 +39,7 @@ class DailyRunner(CanonicalBot):
                 module_attr = getattr(onetime_module, attribute)
                 if inspect.isclass(module_attr):
                     if 'OneTimeBot' in str(module_attr.__bases__):
-                        with SaveExecution(module_attr(main_wiki=self.wiki, debug=self.debug)) as onetime_bot:
+                        with SaveExecution(module_attr(wiki=self.wiki, debug=self.debug)) as onetime_bot:
                             success = onetime_bot.run()
             if success:
                 # move the file to the archives if it was successful
@@ -56,7 +56,7 @@ class DailyRunner(CanonicalBot):
     def run_dailys(self):
         daily_list = [AuthorList, ReScanner]
         for daily_bot in daily_list:
-            self.run_bot(daily_bot(main_wiki=self.main_wiki, debug=False))
+            self.run_bot(daily_bot(wiki=self.wiki, debug=False))
 
     def run_weeklys(self):
         weekly_list = {0: [],  # monday
@@ -67,21 +67,21 @@ class DailyRunner(CanonicalBot):
                        5: [GlCreateMagazine],
                        6: [ReStatus]}  # sunday
         for weekly_bot in weekly_list[self.now.weekday()]:
-            self.run_bot(weekly_bot(main_wiki=self.main_wiki, debug=False))
+            self.run_bot(weekly_bot(wiki=self.wiki, debug=False))
 
     def run_monthly(self):
         monthly_list = {1: [GlStatus]}
         last_day_of_month = []
         try:
             for monthly_bot in monthly_list[self.now.day]:
-                self.run_bot(monthly_bot(main_wiki=self.main_wiki, debug=False))
+                self.run_bot(monthly_bot(wiki=self.wiki, debug=False))
         except KeyError:
             pass
 
         # last day of the month
         if self.now.day == calendar.monthrange(self.now.year, self.now.month)[1]:
             for last_day_monthly_bot in last_day_of_month:
-                self.run_bot(last_day_monthly_bot(main_wiki=self.main_wiki, debug=False))
+                self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=False))
 
     @staticmethod
     def run_bot(bot_to_run):
@@ -96,9 +96,9 @@ class DailyRunner(CanonicalBot):
 
 
 if __name__ == "__main__":
-    main_wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
-    with SaveExecution(DailyRunner(main_wiki=main_wiki, debug=False)) as bot:
+    with SaveExecution(DailyRunner(wiki=wiki, debug=False)) as bot:
         bot.run()
 
 

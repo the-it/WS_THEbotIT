@@ -15,4 +15,4 @@ def run_bot(bot):
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    run_bot(ReStatus(main_wiki=wiki, debug=False))
+    run_bot(ReStatus(wiki=wiki, debug=False))

@@ -18,12 +18,13 @@ class RowBasic():
     def build_row(self):
         raise BotExeption
 
-    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template=[], union=False):
+    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list=None, union=False):
         searcher = PetScan()
         for cat in list_of_cat:
             searcher.add_positive_category(cat)
-        for cat in any_template:
-            searcher.add_any_template(cat)
+        if any_template:
+            for cat in any_template:
+                searcher.add_any_template(cat)
         if union:
             searcher.set_logic_union()
         if namespace:
@@ -122,8 +123,8 @@ class RowBearbeitungsstand(RowBasic):
 class WsStatus(CanonicalBot):
     bot_name = 'WsStatus'
 
-    def __init__(self, main_wiki, debug):
-        CanonicalBot.__init__(self, main_wiki, debug)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
         self.text = None
         self.stat_page = None
 

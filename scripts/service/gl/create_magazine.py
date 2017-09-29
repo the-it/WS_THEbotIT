@@ -10,8 +10,8 @@ from datetime import datetime
 class GlCreateMagazine(CanonicalBot):
     bot_name = 'MagazinesGL'
 
-    def __init__(self, main_wiki, debug):
-        CanonicalBot.__init__(self, main_wiki, debug)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
         self.searcher_pages = PetScan()
         self.searcher_indexes = PetScan()
         self.regex_page = re.compile('Die_Gartenlaube_\((\d{4})\)_([^\.]*?)\.(?:jpg|JPG)')

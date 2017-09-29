@@ -30,10 +30,10 @@ class BaseBot(object):
     __metaclass__ = ABCMeta
     bot_name = None
 
-    def __init__(self, main_wiki, debug):
+    def __init__(self, wiki, debug):
         self.timestamp_start = datetime.now()
         self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
-        self.main_wiki = main_wiki
+        self.wiki = wiki
         self.bar_string = '{:#^120}'.format('')
         self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
         self.logger_date_format = "%H:%M:%S"
@@ -160,13 +160,13 @@ class BaseBot(object):
 class OneTimeBot(BaseBot):
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
-        page = pywikibot.Page(self.main_wiki, wiki_log_page)
+        page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
 
 
 class CanonicalBot(BaseBot):
-    def __init__(self, main_wiki, debug):
-        BaseBot.__init__(self, main_wiki, debug)
+    def __init__(self, wiki, debug):
+        BaseBot.__init__(self, wiki, debug)
         self.new_data_model = None
 
     def __enter__(self):
@@ -207,7 +207,7 @@ class CanonicalBot(BaseBot):
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
-        page = pywikibot.Page(self.main_wiki, wiki_log_page)
+        page = pywikibot.Page(self.wiki, wiki_log_page)
         self.dump_log_lines(page)
 
     def create_timestamp_for_search(self, searcher, days_in_past=1):
@@ -233,8 +233,8 @@ class CanonicalBot(BaseBot):
 class PingOneTime(OneTimeBot):
     bot_name = 'PingOneTime'
 
-    def __init__(self, main_wiki, debug):
-        OneTimeBot.__init__(self, main_wiki, debug)
+    def __init__(self, wiki, debug):
+        OneTimeBot.__init__(self, wiki, debug)
 
     def task(self):
         self.logger.info('PingOneTime')
@@ -243,8 +243,8 @@ class PingOneTime(OneTimeBot):
 class PingCanonical(CanonicalBot):
     bot_name = 'PingCanonical'
 
-    def __init__(self, main_wiki, debug):
-        CanonicalBot.__init__(self, main_wiki, debug)
+    def __init__(self, wiki, debug):
+        CanonicalBot.__init__(self, wiki, debug)
 
     def task(self):
         self.logger.info('PingCanonical')
@@ -265,6 +265,6 @@ class SaveExecution:
 
 if __name__ == "__main__":
     wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = PingCanonical(main_wiki=wiki, debug=True)
+    bot = PingCanonical(wiki=wiki, debug=True)
     with SaveExecution(bot):
         bot.run()
