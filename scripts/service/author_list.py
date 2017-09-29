@@ -64,7 +64,7 @@ class AuthorList(CanonicalBot):
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
                                             int(yesterday.strftime('%d')))
-        elif self.last_run and self.last_run['succes'] and self.data:
+        elif self.last_run and self.last_run['success'] and self.data:
             self.create_timestamp_for_search(self.searcher)
         else:
             self.logger.warning('There was no timestamp found of the last run, so the argument "after" is not set.')
