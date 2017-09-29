@@ -88,7 +88,7 @@ class AuthorList(CanonicalBot):
             try:
                 del self.data[str(author['id'])]
             except:
-                if self.last_run and self.last_run['succes']:
+                if self.last_run and self.last_run['success']:
                     self.logger.info("Can't delete old entry of [[{}]]".format(author['title']))
 
             dict_author = {'title': author['title']}
