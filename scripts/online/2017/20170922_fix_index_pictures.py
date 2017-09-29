@@ -6,7 +6,7 @@ sys.path.append('../../')
 
 from pywikibot import Site
 from pywikibot import Page
-from tools.bots import OneTimeBot, SaveExecution
+from tools.bots import OneTimeBot
 from tools.catscan import PetScan
 
 regex_picture = re.compile('\|BILD=\[\[(.*?)\]\]')
@@ -47,6 +47,5 @@ class FixIndex(OneTimeBot):
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = FixIndex(wiki=wiki, debug=True)
-    with SaveExecution(bot):
+    with FixIndex(wiki=wiki, debug=True) as bot:
         bot.run()

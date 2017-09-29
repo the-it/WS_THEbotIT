@@ -5,7 +5,7 @@ sys.path.append('../../')
 
 import pywikibot
 
-from tools.bots import OneTimeBot, SaveExecution
+from tools.bots import OneTimeBot
 
 
 class PingTwo(OneTimeBot):
@@ -20,6 +20,5 @@ class PingTwo(OneTimeBot):
 
 if __name__ == "__main__":
     wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
-    bot = PingTwo(wiki=wiki, debug=True)
-    with SaveExecution(bot):
+    with PingTwo(wiki=wiki, debug=True) as bot:
         bot.run()

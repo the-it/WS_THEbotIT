@@ -3,8 +3,9 @@ import datetime
 
 from pywikibot import Page
 from tools.catscan import PetScan
-from tools.bots import CanonicalBot, SaveExecution
+from tools.bots import CanonicalBot
 from tools.bots import BotExeption
+
 
 class RowBasic():
     def __str__(self):

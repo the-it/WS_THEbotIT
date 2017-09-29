@@ -12,22 +12,7 @@ class BotExeption(Exception):
     pass
 
 
-class Tee(object):
-    def __init__(self, *files):
-        self.files = files
-
-    def write(self, obj):
-        for f in self.files:
-            f.write(obj)
-            f.flush()  # If you want the output to be visible immediately
-
-    def flush(self):
-        for f in self.files:
-            f.flush()
-
-
 class BaseBot(object):
-    __metaclass__ = ABCMeta
     bot_name = None
 
     def __init__(self, wiki, debug):
@@ -50,6 +35,7 @@ class BaseBot(object):
         self.logger.info('Start the bot {}.'.format(self.bot_name))
         print(self.bar_string)
         self.set_up_timestamp()
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.tear_down_timestamp(exc_type)
@@ -67,13 +53,13 @@ class BaseBot(object):
             success = self.task()
         except Exception as e:
             self.logger.exception("Logging an uncaught exception", exc_info=e)
-            raise BotExeption('There was a not handled Exception.')
+            raise BotExeption('Exception during the bot run.')
         return success
 
     def _watchdog(self):
         diff = datetime.now() - self.timestamp_start
         if diff > self.timeout:
-            self.logger.info('Bot finished by timeout.')
+            self.logger.warning('Bot finished by timeout.')
             return True
         else:
             return False
@@ -99,12 +85,12 @@ class BaseBot(object):
             if not os.path.isdir("data"):
                 os.mkdir("data")
             with open(self.filename, "w") as filepointer:
-                json.dump({'succes': True, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
+                json.dump({'success': True, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
             self.logger.info("Timestamp successfully kept.")
         else:
             self.logger.critical("There was an error in the general procedure. Timestamp will be kept.")
             with open(self.filename, "w") as filepointer:
-                json.dump({'succes': False, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
+                json.dump({'success': False, 'timestamp': self.timestamp_start}, filepointer, default=lambda obj:obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
 
     def set_up_logger(self):
         if not os.path.exists('data'):
@@ -113,21 +99,21 @@ class BaseBot(object):
                                                                          time.strftime('%y%m%d%H%M%S', time.localtime()))})
         self.logger_names.update({'info': 'data/{}_INFO_{}.log'.format(self.bot_name,
                                                                        time.strftime('%y%m%d%H%M%S', time.localtime()))})
-        # redirect the stdout to the terminal and a file
-        file = open(self.logger_names['debug'], 'a', encoding='utf8')
-        sys.stdout = Tee(sys.stdout, file)
-
         logger = logging.getLogger(self.bot_name)
         logger.setLevel(logging.DEBUG)
         error_log = logging.FileHandler(self.logger_names['info'], encoding='utf8')
         error_log.setLevel(logging.INFO)
         debug_stream = logging.StreamHandler(sys.stdout)
         debug_stream.setLevel(logging.DEBUG)
+        debug_log = logging.FileHandler(self.logger_names['debug'], encoding='utf8')
+        debug_log.setLevel(logging.DEBUG)
         formatter = logging.Formatter(self.logger_format, datefmt=self.logger_date_format)
         error_log.setFormatter(formatter)
         debug_stream.setFormatter(formatter)
+        debug_log.setFormatter(formatter)
         logger.addHandler(error_log)
         logger.addHandler(debug_stream)
+        logger.addHandler(debug_log)
         return logger
 
     def tear_down_logger(self):
@@ -141,9 +127,10 @@ class BaseBot(object):
         sys.stdout.flush()
         logging.shutdown()
 
-    @abstractmethod
     def send_log_to_wiki(self):
-        pass
+        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
+        page = pywikibot.Page(self.wiki, wiki_log_page)
+        self.dump_log_lines(page)
 
     def dump_log_lines(self, page):
         with open(self.logger_names['info'], encoding='utf8') as filepointer:
@@ -158,10 +145,7 @@ class BaseBot(object):
 
 
 class OneTimeBot(BaseBot):
-    def send_log_to_wiki(self):
-        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
-        page = pywikibot.Page(self.wiki, wiki_log_page)
-        self.dump_log_lines(page)
+    pass
 
 
 class CanonicalBot(BaseBot):
@@ -173,19 +157,24 @@ class CanonicalBot(BaseBot):
         BaseBot.__enter__(self)
         self.data_filename = 'data/{}.data.json'.format(self.bot_name)
         try:
-            with open(self.data_filename) as filepointer:
-                self.data = json.load(filepointer)
-            self.logger.info("Open existing data.")
-            try:
-                os.rename(self.data_filename, self.data_filename + ".deprecated")
-            except OSError:
-                pass
+            if self.data_outdated():
+                self.data = {}
+                self.logger.warning('The data is thrown away. It is out of date')
+            elif (self.last_run == None) or (self.last_run['success'] == False):
+                self.data = {}
+                self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
+            else:
+                with open(self.data_filename) as filepointer:
+                    self.data = json.load(filepointer)
+                self.logger.info("Open existing data.")
+                try:
+                    os.rename(self.data_filename, self.data_filename + ".deprecated")
+                except OSError:
+                    self.logger.error("It wasn't possible to move the data to .deprecated")
         except IOError:
             self.data = {}
             self.logger.warning("No existing data available.")
-        if self.data_outdated():
-            self.data = {}
-            self.logger.warning('The data is thrown away. It is out of date')
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if not exc_type:
@@ -202,13 +191,8 @@ class CanonicalBot(BaseBot):
             with open(self.data_filename + '.broken', "w") as filepointer:
                 json.dump(self.data, filepointer)
             self.logger.critical("There was an error in the general procedure. "
-                                 "The broken date and a backup of the old will be keept.")
+                                 "The broken data and a backup of the old will be keept.")
         BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
-
-    def send_log_to_wiki(self):
-        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
-        page = pywikibot.Page(self.wiki, wiki_log_page)
-        self.dump_log_lines(page)
 
     def create_timestamp_for_search(self, searcher, days_in_past=1):
         if self.last_run:
@@ -248,23 +232,12 @@ class PingCanonical(CanonicalBot):
 
     def task(self):
         self.logger.info('PingCanonical')
-        self.logger.info('äüö')
-        raise Exception('wuhahaha')
+        self.logger.debug('äüö')
+        raise Exception
 
-
-class SaveExecution:
-    def __init__(self, bot: BaseBot):
-        self.bot = bot
-
-    def __enter__(self):
-        self.bot.__enter__()
-        return self.bot
-
-    def __exit__(self, type, value, traceback):
-        self.bot.__exit__(type, value, traceback)
 
 if __name__ == "__main__":
     wiki = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
     bot = PingCanonical(wiki=wiki, debug=True)
-    with SaveExecution(bot):
+    with PingCanonical(wiki=wiki, debug=True) as bot:
         bot.run()

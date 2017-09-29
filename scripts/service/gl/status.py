@@ -2,7 +2,7 @@ import re
 
 from pywikibot import Page, Site
 from tools.catscan import PetScan
-from tools.bots import CanonicalBot, SaveExecution
+from tools.bots import CanonicalBot
 
 class GlStatus(CanonicalBot):
     bot_name = 'GLStatus'

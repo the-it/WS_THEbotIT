@@ -7,10 +7,9 @@ from pywikibot import Site
 from scripts.service.re.scanner import ReScanner
 from scripts.service.re.status import ReStatus
 from scripts.service.gl.status import GlStatus
-from tools.bots import SaveExecution
 
 def run_bot(bot):
-    with SaveExecution(bot):
+    with bot:
         bot.run()
 
 if __name__ == "__main__":

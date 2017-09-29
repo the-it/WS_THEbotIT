@@ -15,7 +15,7 @@ from scripts.service.re.status import ReStatus
 from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.re.scanner import ReScanner
-from tools.bots import SaveExecution, CanonicalBot, OneTimeBot
+from tools.bots import CanonicalBot, OneTimeBot
 
 
 class DailyRunner(CanonicalBot):
@@ -39,7 +39,7 @@ class DailyRunner(CanonicalBot):
                 module_attr = getattr(onetime_module, attribute)
                 if inspect.isclass(module_attr):
                     if 'OneTimeBot' in str(module_attr.__bases__):
-                        with SaveExecution(module_attr(wiki=self.wiki, debug=self.debug)) as onetime_bot:
+                        with module_attr(wiki=self.wiki, debug=self.debug) as onetime_bot:
                             success = onetime_bot.run()
             if success:
                 # move the file to the archives if it was successful
@@ -85,7 +85,7 @@ class DailyRunner(CanonicalBot):
 
     @staticmethod
     def run_bot(bot_to_run):
-        with SaveExecution(bot_to_run) as bot_to_run:
+        with bot_to_run:
             bot_to_run.run()
 
     def task(self):
@@ -98,8 +98,5 @@ class DailyRunner(CanonicalBot):
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
 
-    with SaveExecution(DailyRunner(wiki=wiki, debug=False)) as bot:
+    with DailyRunner(wiki=wiki, debug=False) as bot:
         bot.run()
-
-
-
