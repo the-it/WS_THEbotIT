@@ -76,9 +76,6 @@ class AuthorList(CanonicalBot):
         self.logger.debug(self.searcher)
 
         entries_to_search = self.searcher.run()
-        # following entries are ignored by petscan
-        entries_to_search.append({'title': "Karl_Löffler", 'q': 'Q1732245', 'id': '413038'})
-        entries_to_search.append({'title': "Adolf_Wüllner", 'q': 'Q106820', 'id': '413022'})
         return entries_to_search
 
     def _build_database(self, lemma_list):
