@@ -43,7 +43,13 @@ class DailyRunner(CanonicalBot):
                 if inspect.isclass(module_attr):
                     if 'OneTimeBot' in str(module_attr.__bases__):
                         with module_attr(wiki=self.wiki, debug=self.debug) as onetime_bot:
-                            success = onetime_bot.run()
+                            try:
+                                success = onetime_bot.run()
+                            except Exception as e:
+                                self.logger.exception("The bot {name} encountered an exception."
+                                                      .format(name=onetime_bot.bot_name),
+                                                      exc_info=e)
+                                success = False
             if success:
                 # move the file to the archives if it was successful
                 self.logger.info('{} finished the work successful'.format(one_timer))
@@ -101,5 +107,5 @@ class DailyRunner(CanonicalBot):
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with DailyRunner(wiki=wiki, debug=True) as bot:
+    with DailyRunner(wiki=wiki, debug=False) as bot:
         bot.run()
