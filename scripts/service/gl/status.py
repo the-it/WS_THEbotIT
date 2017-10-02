@@ -112,3 +112,8 @@ class GlStatus(CanonicalBot):
                 searcher.add_negative_category(category)
         self.logger.debug(str(searcher))
         return len(searcher.run())
+
+if __name__ == "__main__":
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with GlStatus(wiki=wiki, debug=False) as bot:
+        bot.run()

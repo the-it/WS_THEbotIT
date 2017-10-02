@@ -1,4 +1,5 @@
 import calendar
+import codecs
 import importlib
 import inspect
 import os
@@ -15,7 +16,9 @@ from scripts.service.re.status import ReStatus
 from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.re.scanner import ReScanner
-from tools.bots import CanonicalBot, OneTimeBot, PingCanonical
+from tools.bots import CanonicalBot
+
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 
 class DailyRunner(CanonicalBot):
@@ -98,6 +101,5 @@ class DailyRunner(CanonicalBot):
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-
-    with DailyRunner(wiki=wiki, debug=False) as bot:
+    with DailyRunner(wiki=wiki, debug=True) as bot:
         bot.run()
