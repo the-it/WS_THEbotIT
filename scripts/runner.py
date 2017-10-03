@@ -43,13 +43,7 @@ class DailyRunner(CanonicalBot):
                 if inspect.isclass(module_attr):
                     if 'OneTimeBot' in str(module_attr.__bases__):
                         with module_attr(wiki=self.wiki, debug=self.debug) as onetime_bot:
-                            try:
-                                success = onetime_bot.run()
-                            except Exception as e:
-                                self.logger.exception("The bot {name} encountered an exception."
-                                                      .format(name=onetime_bot.bot_name),
-                                                      exc_info=e)
-                                success = False
+                            success = self.run_bot(onetime_bot)
             if success:
                 # move the file to the archives if it was successful
                 self.logger.info('{} finished the work successful'.format(one_timer))
@@ -92,10 +86,16 @@ class DailyRunner(CanonicalBot):
             for last_day_monthly_bot in last_day_of_month:
                 self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=self.debug))
 
-    @staticmethod
-    def run_bot(bot_to_run):
-        with bot_to_run:
-            bot_to_run.run()
+    def run_bot(self, bot_to_run):
+        self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
+        try:
+            success = bot_to_run.run()
+        except Exception as e:
+            self.logger.exception("The bot {name} encountered an exception."
+                                  .format(name=bot_to_run.bot_name),
+                                  exc_info=e)
+            success = False
+        return success
 
     def task(self):
         self.run_dailys()
