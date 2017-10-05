@@ -22,6 +22,7 @@ class BaseBot(object):
         self.bar_string = '{:#^120}'.format('')
         self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
         self.logger_date_format = "%H:%M:%S"
+        self.logger_names = {}
         self.debug = debug
         self.last_run = {}
         self.filename = 'data/{}.last_run.json'.format(self.bot_name)
@@ -31,7 +32,6 @@ class BaseBot(object):
         self.timeout = timedelta(minutes=60)
 
     def __enter__(self):
-        self.logger_names = {}
         self.logger = self.set_up_logger()
         print(self.bar_string)
         self.logger.info('Start the bot {}.'.format(self.bot_name))

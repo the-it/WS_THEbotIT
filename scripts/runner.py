@@ -89,7 +89,8 @@ class DailyRunner(CanonicalBot):
     def run_bot(self, bot_to_run):
         self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
         try:
-            success = bot_to_run.run()
+            with bot_to_run:
+                success = bot_to_run.run()
         except Exception as e:
             self.logger.exception("The bot {name} encountered an exception."
                                   .format(name=bot_to_run.bot_name),
