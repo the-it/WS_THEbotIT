@@ -1,9 +1,8 @@
 import re
-import traceback
 from datetime import timedelta, datetime
 from math import ceil
 
-from pywikibot import ItemPage, Page
+from pywikibot import ItemPage, Page, Site
 from tools.catscan import PetScan
 from tools.date_conversion import DateConversion
 from tools.template_handler import TemplateHandler
@@ -39,6 +38,7 @@ class AuthorList(CanonicalBot):
             self.logger.warning('The data is thrown away. It is the first of the month')
         if not self.data:
             self.data = {}
+        return self
 
     def task(self):
         lemma_list = self._run_searcher()
@@ -78,6 +78,11 @@ class AuthorList(CanonicalBot):
         entries_to_search = self.searcher.run()
         return entries_to_search
 
+    _space_regex = re.compile('\s+')
+
+    def _strip_spaces(self, raw_string: str):
+        return self._space_regex.subn(raw_string.strip(), ' ')[0]
+
     def _build_database(self, lemma_list):
         for idx, author in enumerate(lemma_list):
             self.logger.debug('{}/{} {}'.format(idx + 1, len(lemma_list), author['title']))
@@ -101,16 +106,20 @@ class AuthorList(CanonicalBot):
                     # personendaten = re.sub('<ref.*?>.*?<\/ref>|<ref.*?\/>', '', personendaten)
                     # personendaten = re.sub('\{\{CRef|.*?(?:\{\{.*?\}\})?}}', '', personendaten)
                     template_extractor = TemplateHandler(personendaten)
-                    dict_author.update({'name': template_extractor.get_parameter('NACHNAME')['value']})
-                    dict_author.update({'first_name': template_extractor.get_parameter('VORNAMEN')['value']})
+                    dict_author.update({'name': self._strip_spaces(
+                        template_extractor.get_parameter('NACHNAME')['value'])})
+                    dict_author.update({'first_name': self._strip_spaces(
+                        template_extractor.get_parameter('VORNAMEN')['value'])})
                     try:
-                        dict_author.update({'birth': template_extractor.get_parameter('GEBURTSDATUM')['value']})
+                        dict_author.update({'birth': self._strip_spaces(
+                            template_extractor.get_parameter('GEBURTSDATUM')['value'])})
                     except:
                         dict_author.update({'birth': ""})
                         self.logger.warning("Templatehandler couldn't find a birthdate for: [[{}]]"
                                             .format(author['title']))
                     try:
-                        dict_author.update({'death': template_extractor.get_parameter('STERBEDATUM')['value']})
+                        dict_author.update({'death': self._strip_spaces(
+                            template_extractor.get_parameter('STERBEDATUM')['value'])})
                     except:
                         dict_author.update({'death': ""})
                         self.logger.warning("Templatehandler couldn't find a deathdate for: [[{}]]"
@@ -134,14 +143,21 @@ class AuthorList(CanonicalBot):
                     except:
                         self.logger.debug('there is no sortkey for [[{}]].'.format(author['title']))
                         # make a dummy key
-                        dict_author['sortkey'] = dict_author['name'] + ', ' + dict_author['first_name']
+                        if not dict_author['name']:
+                            dict_author['sortkey'] = dict_author['first_name']
+                            self.logger.warning("Author has no last name.")
+                        elif not dict_author['first_name']:
+                            dict_author['sortkey'] = dict_author['name']
+                            self.logger.warning("Author has no last first_name.")
+                        else:
+                            dict_author['sortkey'] = dict_author['name'] + ', ' + dict_author['first_name']
                     try:
                         dict_author.update({'wikidata': author['q']})
                     except:
                         self.logger.warning('The autor [[{}]] has no wikidata_item'.format(author['title']))
                     self.data.update({author['id']: dict_author})
             except Exception as e:
-                self.logger.error(traceback.format_exc())
+                self.logger.exception(exc_info=e)
                 self.logger.error('author {} have a problem'.format(author['title']))
 
     def _convert_to_table(self):
@@ -201,29 +217,31 @@ class AuthorList(CanonicalBot):
         self.string_list.append('!data-sort-type="text" style="width:15%"| Tod.-datum')
         self.string_list.append('!class="unsortable" style="width:50%"| Beschreibung')
         for list_author in list_authors:
+            aut_sort, aut_page, aut_sur, aut_pre, birth_str, birth_sort, death_str, death_sort, description = \
+                list_author
             self.string_list.append('|-')
-            if list_author[2] and list_author[3]:
+            if aut_sur and aut_pre:
                 self.string_list.append('|data-sort-value="{}"|[[{}|{}, {}]]'
-                                        .format(list_author[0], list_author[1], list_author[2], list_author[3]))
-            elif list_author[3]:
+                                        .format(aut_sort, aut_page, aut_sur, aut_pre))
+            elif aut_pre:
                 self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'
-                                        .format(list_author[0], list_author[1], list_author[3]))
+                                        .format(aut_sort, aut_page, aut_pre))
             else:
                 self.string_list.append('|data-sort-value="{}"|[[{}|{}]]'
-                                        .format(list_author[0], list_author[1], list_author[2]))
+                                        .format(aut_sort, aut_page, aut_sur))
             self.string_list.append('|data-sort-value="{}"|{}'
-                                    .format(list_author[5], list_author[4]))
+                                    .format(birth_sort, birth_str))
             self.string_list.append('|data-sort-value="{}"|{}'
-                                    .format(list_author[7], list_author[6]))
-            self.string_list.append('|{}'.format(list_author[8]))
+                                    .format(death_sort, death_str))
+            self.string_list.append('|{}'.format(description))
         self.string_list.append('|}')
         self.string_list.append('')
         self.string_list.append('== Anmerkungen ==')
         self.string_list.append('<references/>')
         self.string_list.append('')
-        self.string_list.append('{{SORTIERUNG: Autoren  # Liste der}}')
+        self.string_list.append('{{SORTIERUNG:Autoren #Liste der}}')
         self.string_list.append('[[Kategorie:Listen]]')
-        self.string_list.append('[[Kategorie:Autoren |!]]')
+        self.string_list.append('[[Kategorie:Autoren|!]]')
 
         return '\n'.join(self.string_list)
 
@@ -267,3 +285,9 @@ class AuthorList(CanonicalBot):
                 return ''  # 4,6
         else:
             return(author_dict[event])  # 4,6
+
+
+if __name__ == "__main__":
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with AuthorList(wiki=wiki, debug=True) as bot:
+        bot.run()

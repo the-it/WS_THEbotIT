@@ -12,10 +12,10 @@ from pywikibot import Site
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
 from scripts.service.author_list import AuthorList
-from scripts.service.re.status import ReStatus
+from scripts.service.ws_re.status import ReStatus
 from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
-from scripts.service.re.scanner import ReScanner
+from scripts.service.ws_re.scanner import ReScanner
 from tools.bots import CanonicalBot
 
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
