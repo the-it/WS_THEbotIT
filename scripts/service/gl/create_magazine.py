@@ -285,7 +285,7 @@ class GlCreateMagazine(CanonicalBot):
         self.searcher_pages.add_namespace('Seite')
         self.searcher_pages.set_search_depth(1)
         self.searcher_pages.set_timeout(60)
-        if self.last_run and self.last_run['succes']:
+        if self.last_run and self.last_run['success']:
             delta = (self.timestamp_start - self.last_run['timestamp']).days
             self.create_timestamp_for_search(self.searcher_pages, delta)
         elif self.debug:
