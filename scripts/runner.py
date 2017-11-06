@@ -18,8 +18,6 @@ from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.ws_re.scanner import ReScanner
 from tools.bots import CanonicalBot
 
-sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
-
 
 class DailyRunner(CanonicalBot):
     bot_name = 'DailyRunner'
@@ -107,6 +105,7 @@ class DailyRunner(CanonicalBot):
 
 
 if __name__ == "__main__":
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
     with DailyRunner(wiki=wiki, debug=False) as bot:
         bot.run()
