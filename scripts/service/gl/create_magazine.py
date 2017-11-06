@@ -19,7 +19,7 @@ class GlCreateMagazine(CanonicalBot):
         self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))', re.DOTALL)
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
-        self.new_data_model = datetime(year=2016, month=10, day=23, hour=19)
+        self.new_data_model = datetime(year=2017, month=11, day=6, hour=17)
         self.indexes = None
         self.lemmas = None
 
@@ -230,7 +230,13 @@ class GlCreateMagazine(CanonicalBot):
         string_list.append('|ERSCHEINUNGSORT=Leipzig\n')
         string_list.append('|VERLAG=Ernst Keil\n')
         string_list.append('|WIKIPEDIA=Die Gartenlaube\n')
-        string_list.append('|BILD=Die Gartenlaube ({year:d}) {page1}.jpg\n'.format(year=year, page1=list_of_pages[0]))
+        if year == 1973:
+            extension = "JPG"
+        else:
+            extension = "jpg"
+        string_list.append('|BILD=Die Gartenlaube ({year:d}) {page1}.{extension}\n'.format(year=year,
+                                                                                           page1=list_of_pages[0],
+                                                                                           extension=extension))
         string_list.append('|QUELLE=[[commons:category:Gartenlaube ({year})|commons]]\n'.format(year=year))
         if quality == 4:
             string_list.append('|BEARBEITUNGSSTAND=fertig\n')
@@ -243,10 +249,11 @@ class GlCreateMagazine(CanonicalBot):
         ref = []
         for page in list_of_pages:
             page_format = self.convert_page_no(page)
-            string_list.append('{{{{SeitePR|{page_format}|Die Gartenlaube ({year}) {page}.jpg}}}}\n'
+            string_list.append('{{{{SeitePR|{page_format}|Die Gartenlaube ({year}) {page}.{extension}}}}}\n'
                                .format(year=year,
                                        page_format=page_format,
-                                       page=page))
+                                       page=page,
+                                       extension=extension))
             try:
                 page_dict = self.data['pages'][str(year)][page]
                 if 'r' in page_dict.keys():
