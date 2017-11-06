@@ -16,7 +16,6 @@ class ReScannerTask:
         self.logger = logger
         self.text = ''
         self.pretext = ''
-        self.task_name = 'basic_task'
         self.changed = False
 
     def __del__(self):
@@ -39,7 +38,7 @@ class ReScannerTask:
         self.logger.info('closing {}'.format(self.task_name))
 
     def get_name(self):
-        return self.task_name
+        return re.search("<class \'(.*)Task\'>", str(self.__class__)).group(1)
 
 
 class ENÜUTask(ReScannerTask):
@@ -60,7 +59,7 @@ class ENÜUTask(ReScannerTask):
 
     @staticmethod
     def replace_re(hit: re):
-        return '\n' + hit.group(0).strip() + '\n'
+        return '\n' + hit.group(0).strip(" \n\t") + '\n'
 
 
 class RERE_Task(ReScannerTask):
