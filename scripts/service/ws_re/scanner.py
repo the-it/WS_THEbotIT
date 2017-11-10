@@ -1,4 +1,5 @@
 import re
+from abc import abstractmethod
 from datetime import datetime, timedelta
 from logging import Logger
 from operator import itemgetter
@@ -14,15 +15,14 @@ class ReScannerTask:
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
-        self.text = ''
-        self.pretext = ''
+        self.text = ''  # type: str
+        self.pretext = ''  # type: str
         self.changed = False
 
     def __del__(self):
         self.finish_task()
 
     def preprocess_lemma(self, page: Page):
-        self.logger.info('task {}'.format(self.task_name))
         self.text = page.text
         self.pretext = page.text
         self.changed = False
@@ -31,31 +31,37 @@ class ReScannerTask:
         page.text = self.text
         return self.text != self.pretext
 
-    def load_task(self):
-        self.logger.info('opening {}'.format(self.task_name))
-
-    def finish_task(self):
-        self.logger.info('closing {}'.format(self.task_name))
-
-    def get_name(self):
-        return re.search("<class \'(.*)Task\'>", str(self.__class__)).group(1)
-
-
-class ENÜUTask(ReScannerTask):
-    def __init__(self, wiki: Site, debug: bool, logger: Logger):
-        ReScannerTask.__init__(self, wiki, debug, logger)
-        self.task_name = 'ENÜU'
-        self.load_task()
+    @abstractmethod
+    def task(self):
+        pass
 
     def process_lemma(self, page: Page):
         self.preprocess_lemma(page)
+        self.task()
+        return self.postprocess_lemma(page)
+
+    def load_task(self):
+        self.logger.info('opening task {}'.format(self.get_name()))
+
+    def finish_task(self):
+        self.logger.info('closing task {}'.format(self.get_name()))
+
+    def get_name(self):
+        return re.search("(.{4})Task", str(self.__class__)).group(1)
+
+
+class ENUUTask(ReScannerTask):
+    def __init__(self, wiki: Site, debug: bool, logger: Logger):
+        ReScannerTask.__init__(self, wiki, debug, logger)
+        self.load_task()
+
+    def task(self):
         self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
         self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
         self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
         self.text = self.text.rstrip()
         if self.text[0] == '\n':
             self.text = self.text[1:]
-        return self.postprocess_lemma(page)
 
     @staticmethod
     def replace_re(hit: re):
@@ -65,18 +71,15 @@ class ENÜUTask(ReScannerTask):
 class RERE_Task(ReScannerTask):
     def __init__(self, wiki: Site, debug: bool, logger: Logger):
         ReScannerTask.__init__(self, wiki, debug, logger)
-        self.task_name = 'RERE'
         self.load_task()
 
-    def process_lemma(self, page: Page):
-        self.preprocess_lemma(page)
+    def task(self):
         self.text = re.sub(r'\{\{RE\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_re_redaten(x), self.text)
         self.text = re.sub(r'\{\{RE\/Platzhalter\|.{0,200}\}\}(?=\n| |\[)',
                            lambda x: self.replace_replatz_redatenplatz(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag(x), self.text)
         self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}(?=\n| |\[)',
                            lambda x: self.replace_renachtrag_unfrei(x), self.text)
-        return self.postprocess_lemma(page)
 
     def replace_re_redaten(self, hit: re):
         old_template = TemplateHandler(hit.group(0))
@@ -223,6 +226,7 @@ class ReScanner(CanonicalBot):
         CanonicalBot.__enter__(self)
         if not self.data:
             self.data = {}
+        return self
 
     def compile_lemma_list(self):
         self.logger.info('Compile the lemma list')
@@ -253,21 +257,24 @@ class ReScanner(CanonicalBot):
         self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
         for lemma in self.lemma_list:
-            changed = False
             list_of_done_tasks = []
             page = Page(self.wiki, lemma)
             self.logger.info('Process {}'.format(page))
             for task in active_tasks:
                 if task.process_lemma(page):
-                    changed = True
                     list_of_done_tasks.append(task.get_name())
+                    self.logger.info('Änderungen durch Task {} durchgeführt'.format(task.get_name()))
+                    page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)),
+                              botflag=True)
             self.data[lemma] = datetime.now().strftime('%Y%m%d%H%M%S')
-            if changed:
-                self.logger.info('Änderungen auf der Seite {} durchgeführt'.format(page))
-                page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)),
-                          botflag=True)
             if self._watchdog():
                 break
         for task in self.tasks:
             del task
         return True
+
+
+if __name__ == "__main__":
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with ReScanner(wiki=wiki, debug=True) as bot:
+        bot.run()
