@@ -19,7 +19,7 @@ class GlCreateMagazine(CanonicalBot):
         self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))', re.DOTALL)
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
-        self.new_data_model = datetime(year=2017, month=11, day=6, hour=17)
+        self.new_data_model = datetime(year=2017, month=11, day=11, hour=12)
         self.indexes = None
         self.lemmas = None
 
@@ -217,7 +217,7 @@ class GlCreateMagazine(CanonicalBot):
         string_list.append("|TITEL=[[Die Gartenlaube]]\n")
         string_list.append("|SUBTITEL=''Illustrirtes Familienblatt''\n")
         string_list.append("|HERKUNFT=off\n")
-        if year < 1963:
+        if year < 1863:
             string_list.append('|HERAUSGEBER=[[Ferdinand Stolle]]\n')
         elif (year < 1878) or (year == 1878 and magazine < 14):
             string_list.append('|HERAUSGEBER=[[Ernst Keil]]\n')
@@ -230,7 +230,7 @@ class GlCreateMagazine(CanonicalBot):
         string_list.append('|ERSCHEINUNGSORT=Leipzig\n')
         string_list.append('|VERLAG=Ernst Keil\n')
         string_list.append('|WIKIPEDIA=Die Gartenlaube\n')
-        if year == 1973:
+        if year == 1873:
             extension = "JPG"
         else:
             extension = "jpg"
