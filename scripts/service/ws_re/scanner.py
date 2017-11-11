@@ -9,25 +9,33 @@ from tools.catscan import PetScan
 from tools.template_handler import TemplateHandler
 
 
-class ReScannerTask:
+class RePage(object):
+    def __init__(self, wiki_page: Page):
+        self.page = wiki_page
+        self.pre_text = self.page.text
+        self.page_dict = list()
+
+        self._init_page_dict()
+
+    def _init_page_dict(self):
+        pass
+
+
+class ReScannerTask(object):
     def __init__(self, wiki: Site, debug: bool, logger: Logger):
         self.reporter_page = None
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
-        self.text = ''  # type: str
-        self.pretext = ''  # type: str
-        self.changed = False
 
     def __del__(self):
         self.finish_task()
 
-    def preprocess_lemma(self, page: Page):
+    def preprocess_lemma(self, re_page: RePage):
         self.text = page.text
         self.pretext = page.text
-        self.changed = False
 
-    def postprocess_lemma(self, page: Page):
+    def postprocess_lemma(self, re_page: RePage):
         page.text = self.text
         return self.text != self.pretext
 
@@ -35,10 +43,10 @@ class ReScannerTask:
     def task(self):
         pass
 
-    def process_lemma(self, page: Page):
-        self.preprocess_lemma(page)
+    def process_lemma(self, re_page: RePage):
+        self.preprocess_lemma(re_page)
         self.task()
-        return self.postprocess_lemma(page)
+        return self.postprocess_lemma(re_page)
 
     def load_task(self):
         self.logger.info('opening task {}'.format(self.get_name()))

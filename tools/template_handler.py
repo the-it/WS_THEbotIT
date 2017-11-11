@@ -83,3 +83,45 @@ class TemplateHandler:
         else:
             self.parameters.append({'key': None, 'value': self._cut_spaces(par_template)})
         return re.sub(search_pattern + "\|?", "", template_str)
+
+
+class TemplateFinderException(Exception):
+    pass
+
+
+class TemplateFinder(object):
+    def __init__(self, text_to_search: str):
+        self.text = text_to_search
+
+    def get_positions(self, template_name: str):
+        templates = list()
+        for start_position_template in self.get_start_positions_of_regex("\{\{" + template_name, self.text):
+            pos_start_brackets = self.get_start_positions_of_regex("\{\{", self.text[start_position_template + 2:])
+            pos_start_brackets.reverse()
+            pos_end_brackets = self.get_start_positions_of_regex("\}\}", self.text[start_position_template + 2:])
+            pos_end_brackets.reverse()
+            open_brackets = 1
+            while pos_end_brackets:
+                if pos_start_brackets and (pos_end_brackets[-1] > pos_start_brackets[-1]):
+                    open_brackets += 1
+                    pos_start_brackets.pop(-1)
+                else:
+                    open_brackets -= 1
+                    if open_brackets == 0:
+                        end_position_template = pos_end_brackets[-1]  # detected end of the template
+                        end_position_template += 4  # add offset for start and end brackets
+                        end_position_template += start_position_template  # add start position (end only searched after)
+                        templates.append({"pos": (start_position_template, end_position_template),
+                                          "text": self.text[start_position_template:end_position_template]})
+                        break
+                    pos_end_brackets.pop(-1)
+            else:
+                raise TemplateFinderException("No end of the template found for {}".format(template_name))
+        return templates
+
+    @staticmethod
+    def get_start_positions_of_regex(regex_pattern: str, text: str):
+        list_of_positions = list()
+        for match in re.finditer(regex_pattern, text):
+            list_of_positions.append(match.regs[0][0])
+        return list_of_positions
