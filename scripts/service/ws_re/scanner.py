@@ -6,7 +6,7 @@ from operator import itemgetter
 from pywikibot import Page, Site
 from tools.bots import CanonicalBot
 from tools.catscan import PetScan
-from tools.template_handler import TemplateHandler
+from tools.template_handler import TemplateHandler, TemplateFinder
 
 
 class RePage(object):
@@ -18,7 +18,9 @@ class RePage(object):
         self._init_page_dict()
 
     def _init_page_dict(self):
-        pass
+        template_finder = TemplateFinder(self.pre_text)
+        re_daten_pos = template_finder.get_positions("REDaten")
+        re_autor_pos = template_finder.get_positions("REAutor")
 
 
 class ReScannerTask(object):

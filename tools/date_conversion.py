@@ -77,7 +77,7 @@ class DateConversion:
             del year
         elif match_complete_date:
             # Case: complete date
-            li_str = re.split('\.?[ ]?', match_complete_date.group())
+            li_str = re.split('[\. ]{1,2}', match_complete_date.group())
             li_str[0] = self._day_to_int(re.sub('\.', '', li_str[0]))  # Punkt aus dem Tag entfernen
             li_str[1] = self._month_to_int(li_str[1])  # Monat in Zahl verwandeln
             li_str[2] = self._append_zeros_to_year(li_str[2])  # append zeros to the year

@@ -186,12 +186,3 @@ class TestDateConversion(TestCase):
     converter = DateConversion('Mitte 15. Jh.<!--1450-00-00-->')
     self.assertEqual('1450-00-00', str(converter))
     del converter
-
-  @unittest.skip("full Test... only when necessary")
-  def test_all(self):
-    with open('date_conversion_examples.json') as linestore:
-      list_of_tests = json.load(linestore)
-      for test in list_of_tests:
-        converter = DateConversion(test['string'])
-        self.assertEqual(test['result'], str(converter))
-        del converter
