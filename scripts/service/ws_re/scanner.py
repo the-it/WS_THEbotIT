@@ -3,24 +3,13 @@ from abc import abstractmethod
 from datetime import datetime, timedelta
 from logging import Logger
 from operator import itemgetter
+
 from pywikibot import Page, Site
+
+from scripts.service.ws_re.data_types import RePage
 from tools.bots import CanonicalBot
 from tools.catscan import PetScan
-from tools.template_handler import TemplateHandler, TemplateFinder
-
-
-class RePage(object):
-    def __init__(self, wiki_page: Page):
-        self.page = wiki_page
-        self.pre_text = self.page.text
-        self.page_dict = list()
-
-        self._init_page_dict()
-
-    def _init_page_dict(self):
-        template_finder = TemplateFinder(self.pre_text)
-        re_daten_pos = template_finder.get_positions("REDaten")
-        re_autor_pos = template_finder.get_positions("REAutor")
+from tools.template_handler import TemplateHandler
 
 
 class ReScannerTask(object):
