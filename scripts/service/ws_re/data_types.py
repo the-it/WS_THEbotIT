@@ -4,7 +4,7 @@ from typing import Union
 
 from pywikibot import Page
 
-from tools.template_handler import TemplateFinder
+from tools.template_handler import TemplateFinder, TemplateHandler
 
 
 class ReDatenException(Exception):
@@ -48,6 +48,9 @@ class ReProperty(object):
 
     def __str__(self):
         return self._return_by_type(self.value)
+
+    def __hash__(self):
+        return hash(self.name) + hash(self.value)
 
 
 class ReArticle(Mapping):
@@ -129,9 +132,41 @@ class ReArticle(Mapping):
                 if item[0] in self:
                     self[item[0]].value = item[1]
 
+    def __hash__(self):
+        return hash(self._article_type) \
+               + (hash(self._properties) << 1) \
+               + (hash(self._text) << 2) \
+               + (hash(self._author) << 3)
+
     @classmethod
-    def from_text(cls):
-        pass
+    def from_text(cls, article_text):
+        """
+        main parser function for initiating a ReArticle from a given piece of text.
+
+        :param article_text: text that represent a valid ReArticle
+        :rtype: ReArticle
+        """
+        finder = TemplateFinder(article_text)
+        find_re_daten = finder.get_positions("REDaten")
+        if len(find_re_daten) != 1:
+            raise ReDatenException("Article has the wrong structure. There must one start template")
+        find_re_author = finder.get_positions("REAutor")
+        if len(find_re_author) != 1:
+            raise ReDatenException("Article has the wrong structure. There must one stop template")
+        if find_re_daten[0]["pos"][0] > find_re_author[0]["pos"][0]:
+            raise ReDatenException("Article has the wrong structure. Wrong order of templates.")
+        re_daten = TemplateHandler(find_re_daten[0]["text"])
+        re_author = TemplateHandler(find_re_author[0]["text"])
+        properties_dict = {}
+        for property in re_daten.parameters:
+            if property["key"]:
+                properties_dict.update({property["key"]: property["value"]})
+            else:
+                raise ReDatenException("REDaten has property without a key word. --> {}".format(property))
+        return ReArticle(article_type="REDaten",
+                         re_daten_properties=properties_dict,
+                         text=article_text[find_re_daten[0]["pos"][1]:find_re_author[0]["pos"][0]],
+                         author=re_author.parameters[0]["value"][0:-1])  # last character is everytime a point
 
 
 class RePage(Sequence):

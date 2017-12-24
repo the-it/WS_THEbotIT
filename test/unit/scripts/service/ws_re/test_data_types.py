@@ -90,6 +90,51 @@ class TestReArticle(TestCase):
         self.assertEqual(str(article["BAND"]), "I 1")
         self.assertEqual(str(article["NACHTRAG"]), "ON")
 
+    def test_from_text(self):
+        article_text = "{{REDaten\n|BAND=III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
+        article = ReArticle.from_text(article_text)
+        self.assertEqual(article.author, "Some Author")
+        self.assertEqual(article.text, "\ntext\n")
+        self.assertEqual(article.article_type, "REDaten")
+        self.assertEqual(article["BAND"].value, "III")
+        self.assertEqual(article["SPALTE_START"].value, "1")
+
+    def test_wrong_property_in_REDaten(self):
+        article_text = "{{REDaten\n|III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "REDaten has property without a key word. --> {.*?}"):
+            article = ReArticle.from_text((article_text))
+
+    def test_two_REDaten_templates(self):
+        article_text = "{{REDaten}}{{REDaten}}\ntext\n{{REAutor|Some Author.}}"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "Article has the wrong structure. There must one start template"):
+            article = ReArticle.from_text((article_text))
+
+    def test_no_REDaten_templates(self):
+        article_text = "\ntext\n{{REAutor|Some Author.}}"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "Article has the wrong structure. There must one start template"):
+            article = ReArticle.from_text((article_text))
+
+    def test_two_REAuthor_templates(self):
+        article_text = "{{REDaten}}\ntext\n{{REAutor|Some Author.}}{{REAutor}}"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "Article has the wrong structure. There must one stop template"):
+            article = ReArticle.from_text((article_text))
+
+    def test_no_REAuthor_templates(self):
+        article_text = "{{REDaten}}\ntext\n"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "Article has the wrong structure. There must one stop template"):
+            article = ReArticle.from_text((article_text))
+
+    def test_wrong_order_of_templates(self):
+        article_text = "{{REAutor}}{{REDaten}}\ntext"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "Article has the wrong structure. Wrong order of templates."):
+            article = ReArticle.from_text((article_text))
+
 
 class TestRePage(TestCase):
     def setUp(self):
