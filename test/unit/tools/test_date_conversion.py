@@ -1,6 +1,4 @@
 from unittest import TestCase
-import unittest
-import json
 
 __author__ = 'eso'
 
@@ -8,181 +6,72 @@ from tools.date_conversion import DateConversion
 
 
 class TestDateConversion(TestCase):
-  def test_normal_date(self):
-    converter = DateConversion('14.04.1850')
-    self.assertEqual('1850-04-14', str(converter))
-    del converter
+    def assert_for_equal(self, input_str:str, output_str:str):
+        converter = DateConversion(input_str)
+        self.assertEqual(output_str, str(converter))
 
-    converter = DateConversion('14.04. 1850')
-    self.assertEqual('1850-04-14', str(converter))
-    del converter
+    def test_normal_date(self):
+        self.assert_for_equal('14.04.1850', '1850-04-14')
+        self.assert_for_equal('14.04. 1850', '1850-04-14')
+        self.assert_for_equal('25. Februar 1822', '1822-02-25')
+        self.assert_for_equal('25.Februar 1822', '1822-02-25')
 
-    converter = DateConversion('25. Februar 1822')
-    self.assertEqual('1822-02-25', str(converter))
-    del converter
+    def test__chop_ref(self):
+        self.assert_for_equal('18. November 1856<ref>something</ref>', '1856-11-18')
+        self.assert_for_equal('18. November 1856{{CRef||something}}', '1856-11-18')
 
-    converter = DateConversion('25.Februar 1822')
-    self.assertEqual('1822-02-25', str(converter))
-    del converter
+    def test_missing_day_and_month(self):
+        self.assert_for_equal('November 1856', '1856-11-00')
+        self.assert_for_equal('11. 1856', '1856-11-00')
+        self.assert_for_equal('1856', '1856-00-00')
 
-  def test__chop_ref(self):
-    converter = DateConversion('18. November 1856<ref>something</ref>')
-    self.assertEqual('1856-11-18', str(converter))
-    del converter
+    def test_empty_date(self):
+        self.assert_for_equal('', '!-00-00')
 
-    converter = DateConversion('18. November 1856{{CRef||something}}')
-    self.assertEqual('1856-11-18', str(converter))
+    def test_unimportent_words(self):
+        self.assert_for_equal('nach 1856', '1856-00-00')
+        self.assert_for_equal('um 536', '0536-00-00')
+        self.assert_for_equal('vor 1187?', '1187-00-00')
+        self.assert_for_equal('13. Jahrhundert (?)', '1200-00-00')
+        self.assert_for_equal('vermutlich zwischen 260 u. 275', '0260-00-00')
+        self.assert_for_equal('Winter 1939/40', '1939-00-00')
+        self.assert_for_equal('18. September 1908 <!-- oder 15.? 16.? -->', '1908-09-18')
 
-  def test_missing_day_and_month(self):
-    converter = DateConversion('November 1856')
-    self.assertEqual('1856-11-00', str(converter))
-    del converter
+    def test_append_zeros(self):
+        self.assert_for_equal('1', '0001-00-00')
+        self.assert_for_equal('12', '0012-00-00')
+        self.assert_for_equal('123', '0123-00-00')
+        self.assert_for_equal('1234', '1234-00-00')
 
-    converter = DateConversion('11. 1856')
-    self.assertEqual('1856-11-00', str(converter))
-    del converter
+    def test_century(self):
+        self.assert_for_equal('12. Jahrhundert', '1100-00-00')
+        self.assert_for_equal('lebte im 4. Jh. v. Chr.', '-9599-00-00')
+        self.assert_for_equal('1. Jahrhundert', '0000-00-00')
 
-    converter = DateConversion('1856')
-    self.assertEqual('1856-00-00', str(converter))
-    del converter
+    def test_two_dates(self):
+        self.assert_for_equal('1081/1085', '1081-00-00')
+        self.assert_for_equal('2./3. Jahrhundert', '0200-00-00')
+        self.assert_for_equal('nach 120/119 v. Chr', '-9879-00-00')
+        self.assert_for_equal('zwischen 475 und 480 n. Chr.', '0475-00-00')
+        self.assert_for_equal('25. oder 26. Februar 1820', '1820-02-26')
+        self.assert_for_equal('zwischen Oktober 1509 und Januar 1510', '1509-10-00')
 
-  def test_empty_date(self):
-    converter = DateConversion('')
-    self.assertEqual('!-00-00', str(converter))
-    del converter
+    def test_before_domini(self):
+        self.assert_for_equal('1. Jahrhundert n. Chr.', '0000-00-00')
+        self.assert_for_equal('430 v. Chr.', '-9569-00-00')
+        self.assert_for_equal('um 430 v. Chr.', '-9569-00-00')
+        self.assert_for_equal('um 500 n. Chr.', '0500-00-00')
+        self.assert_for_equal('2. Jahrhundert v. Chr.', '-9799-00-00')
+        self.assert_for_equal('unsicher: 13. Juli 100 v. Chr.', '-9899-07-13')
 
-  def test_unimportent_words(self):
-    converter = DateConversion('nach 1856')
-    self.assertEqual('1856-00-00', str(converter))
-    del converter
+    def test_date_dont_known(self):
+        self.assert_for_equal('unbekannt', '!-00-00')
+        self.assert_for_equal('Unbekannt', '!-00-00')
+        self.assert_for_equal('?', '!-00-00')
+        self.assert_for_equal('unbekannt (getauft 25. Dezember 1616)', '1616-12-25')
 
-    converter = DateConversion('um 536')
-    self.assertEqual('0536-00-00', str(converter))
-    del converter
+    def test_authorlist(self):
+        self.assert_for_equal('20. Nov. 1815', '1815-11-20')
 
-    converter = DateConversion('vor 1187?')
-    self.assertEqual('1187-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('13. Jahrhundert (?)')
-    self.assertEqual('1200-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('vermutlich zwischen 260 u. 275')
-    self.assertEqual('0260-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('Winter 1939/40')
-    self.assertEqual('1939-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('18. September 1908 <!-- oder 15.? 16.? -->')
-    self.assertEqual('1908-09-18', str(converter))
-    del converter
-
-  def test_append_zeros(self):
-    converter = DateConversion('1')
-    self.assertEqual('0001-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('12')
-    self.assertEqual('0012-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('123')
-    self.assertEqual('0123-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('1234')
-    self.assertEqual('1234-00-00', str(converter))
-    del converter
-
-  def test_century(self):
-    converter = DateConversion('12. Jahrhundert')
-    self.assertEqual('1100-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('lebte im 4. Jh. v. Chr.')
-    self.assertEqual('-9599-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('1. Jahrhundert')
-    self.assertEqual('0000-00-00', str(converter))
-    del converter
-
-  def test_two_dates(self):
-    converter = DateConversion('1081/1085')
-    self.assertEqual('1081-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('2./3. Jahrhundert')
-    self.assertEqual('0200-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('nach 120/119 v. Chr')
-    self.assertEqual('-9879-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('zwischen 475 und 480 n. Chr.')
-    self.assertEqual('0475-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('25. oder 26. Februar 1820')
-    self.assertEqual('1820-02-26', str(converter))
-    del converter
-
-    converter = DateConversion('zwischen Oktober 1509 und Januar 1510')
-    self.assertEqual('1509-10-00', str(converter))
-    del converter
-
-  def test_before_domini(self):
-    converter = DateConversion('1. Jahrhundert n. Chr.')
-    self.assertEqual('0000-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('430 v. Chr.')
-    self.assertEqual('-9569-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('um 430 v. Chr.')
-    self.assertEqual('-9569-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('um 500 n. Chr.')
-    self.assertEqual('0500-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('2. Jahrhundert v. Chr.')
-    self.assertEqual('-9799-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('unsicher: 13. Juli 100 v. Chr.')
-    self.assertEqual('-9899-07-13', str(converter))
-    del converter
-
-  def test_date_dont_known(self):
-    converter = DateConversion('unbekannt')
-    self.assertEqual('!-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('Unbekannt')
-    self.assertEqual('!-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('?')
-    self.assertEqual('!-00-00', str(converter))
-    del converter
-
-    converter = DateConversion('unbekannt (getauft 25. Dezember 1616)')
-    self.assertEqual('1616-12-25', str(converter))
-    del converter
-
-  def test_authorlist(self):
-    converter = DateConversion('20. Nov. 1815')
-    self.assertEqual('1815-11-20', str(converter))
-    del converter
-
-  def preset_for_date(self):
-    converter = DateConversion('Mitte 15. Jh.<!--1450-00-00-->')
-    self.assertEqual('1450-00-00', str(converter))
-    del converter
+    def preset_for_date(self):
+        self.assert_for_equal('Mitte 15. Jh.<!--1450-00-00-->', '1450-00-00')
