@@ -25,11 +25,11 @@ class TemplateHandler:
         if template_str:
             self._process_template_str(template_str)
 
-    def _process_template_str(self, template_str):
+    def _process_template_str(self, template_str: str):
         template_str = re.sub('\n', '', template_str)  # get rid of all linebreaks
         template_str = template_str[2:-2]  # get rid of the surrounding brackets
         self.title = re.search(regex_title, template_str).group()  # extract the title
-        template_str = re.sub(regex_title + '\|', '', template_str)  # get rid of the title
+        template_str = re.sub(self.title + '\|?', '', template_str)  # get rid of the title
 
         while template_str:  # analyse the arguments
             if template_str[0] == '{':  # argument is a template itself

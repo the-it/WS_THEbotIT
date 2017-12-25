@@ -117,6 +117,11 @@ class TestTemplateHandler(TestCase):
         handler = TemplateHandler(test_string_second_equal)
         self.assertEqual(test_list_second_equal, handler.get_parameterlist())
 
+    def test_bug_no_arguments(self):
+        test_string = "{{just_this}}"
+        handler = TemplateHandler(test_string)
+        self.assertListEqual([], handler.get_parameterlist())
+
     def test_bug_authorlist(self):
         test_string_argument_bug = 'STERBEDATUM = 2. Januar < ref name = "adp" / > oder 31. Januar < ref > 49. Jahres - Bericht d.Schles.Ges.für vaterländische Cultur, S. 317, Nekrolog {{GBS|hP1DAAAAIAAJ|PA317}} < / ref > 1871'
         test_string_bug = "{{" + test_title_test + "|" + test_string_argument_1 + "|" + test_string_argument_bug + "}}"

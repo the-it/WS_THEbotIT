@@ -148,25 +148,34 @@ class ReArticle(Mapping):
         """
         finder = TemplateFinder(article_text)
         find_re_daten = finder.get_positions("REDaten")
-        if len(find_re_daten) != 1:
+        find_re_abschnitt = finder.get_positions("REAbschnitt")
+        # only one start template can be present
+        if len(find_re_daten) + len(find_re_abschnitt) != 1:
             raise ReDatenException("Article has the wrong structure. There must one start template")
+        if len(find_re_daten):
+            find_re_start = find_re_daten
+        else:
+            find_re_start = find_re_abschnitt
         find_re_author = finder.get_positions("REAutor")
+        # only one end template can be present
         if len(find_re_author) != 1:
             raise ReDatenException("Article has the wrong structure. There must one stop template")
-        if find_re_daten[0]["pos"][0] > find_re_author[0]["pos"][0]:
+        # the templates must have the right order
+        if find_re_start[0]["pos"][0] > find_re_author[0]["pos"][0]:
             raise ReDatenException("Article has the wrong structure. Wrong order of templates.")
-        re_daten = TemplateHandler(find_re_daten[0]["text"])
+        re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
         properties_dict = {}
-        for property in re_daten.parameters:
-            if property["key"]:
-                properties_dict.update({property["key"]: property["value"]})
+        # initialise all properties from the template handler to the article dict
+        for template_property in re_start.parameters:
+            if template_property["key"]:
+                properties_dict.update({template_property["key"]: template_property["value"]})
             else:
-                raise ReDatenException("REDaten has property without a key word. --> {}".format(property))
-        return ReArticle(article_type="REDaten",
+                raise ReDatenException("REDaten has property without a key word. --> {}".format(template_property))
+        return ReArticle(article_type=re_start.title,
                          re_daten_properties=properties_dict,
-                         text=article_text[find_re_daten[0]["pos"][1]:find_re_author[0]["pos"][0]],
-                         author=re_author.parameters[0]["value"][0:-1])  # last character is everytime a point
+                         text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]],
+                         author=re_author.parameters[0]["value"][0:-1])  # last character is every time a point
 
 
 class RePage(Sequence):
