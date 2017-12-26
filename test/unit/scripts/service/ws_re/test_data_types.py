@@ -94,7 +94,7 @@ class TestReArticle(TestCase):
         article_text = "{{REDaten\n|BAND=III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
         self.assertEqual(article.author, "Some Author")
-        self.assertEqual(article.text, "\ntext\n")
+        self.assertEqual(article.text, "text")
         self.assertEqual(article.article_type, "REDaten")
         self.assertEqual(article["BAND"].value, "III")
         self.assertEqual(article["SPALTE_START"].value, "1")
@@ -139,6 +139,53 @@ class TestReArticle(TestCase):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
         self.assertEqual(article.article_type, "REAbschnitt")
+
+    article_template = """{{REDaten
+|BAND=
+|SPALTE_START=
+|SPALTE_END=
+|VORGÄNGER=
+|NACHFOLGER=
+|SORTIERUNG=
+|KORREKTURSTATUS=
+|WIKIPEDIA=
+|WIKISOURCE=
+|EXTSCAN_START=
+|EXTSCAN_END=
+|GND=
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=
+|ÜBERSCHRIFT=OFF
+|VERWEIS=OFF
+|NACHTRAG=OFF
+}}
+text
+{{REAutor|Autor.}}"""
+
+    def test_to_text_simple(self):
+        self.article.author = "Autor"
+        self.article.text = "text"
+        self.assertEqual(self.article_template, self.article.to_text())
+
+    def test_to_text_REAbschnitt(self):
+        text = """{{REAbschnitt}}
+text
+{{REAutor|Autor.}}"""
+        self.article.author = "Autor"
+        self.article.text = "text"
+        self.article.article_type = "REAbschnitt"
+        self.assertEqual(text, self.article.to_text())
+
+    def test_to_text_changed_properties(self):
+        text = self.article_template.replace("BAND=", "BAND=II")\
+                                    .replace("SPALTE_START=", "SPALTE_START=1000")\
+                                    .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
+        self.article.text = "text"
+        self.article.author = "Autor"
+        self.article["BAND"].value = "II"
+        self.article["SPALTE_START"].value = "1000"
+        self.article["WIKIPEDIA"].value = "Test"
+        self.assertEqual(text, self.article.to_text())
 
 
 class TestRePage(TestCase):

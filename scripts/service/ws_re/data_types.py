@@ -52,9 +52,12 @@ class ReProperty(object):
     def __hash__(self):
         return hash(self.name) + hash(self.value)
 
+RE_DATEN = "REDaten"
+RE_ABSCHNITT = "REAbschnitt"
+RE_AUTOR = "REAutor"
 
 class ReArticle(Mapping):
-    def __init__(self, article_type: str="REDaten", re_daten_properties: dict=None, text: str="", author: str=""):
+    def __init__(self, article_type: str=RE_DATEN, re_daten_properties: dict=None, text: str="", author: str=""):
         self._article_type = None
         self.article_type = article_type
         self._text = None
@@ -86,7 +89,7 @@ class ReArticle(Mapping):
 
     @article_type.setter
     def article_type(self, new_value: str):
-        if new_value in ("REDaten", "REAbschnitt"):
+        if new_value in (RE_DATEN, RE_ABSCHNITT):
             self._article_type = new_value
         else:
             raise ReDatenException("{} is not a permitted article type.".format(new_value))
@@ -138,8 +141,8 @@ class ReArticle(Mapping):
                + (hash(self._text) << 2) \
                + (hash(self._author) << 3)
 
-    @classmethod
-    def from_text(cls, article_text):
+    @staticmethod
+    def from_text(article_text):
         """
         main parser function for initiating a ReArticle from a given piece of text.
 
@@ -147,8 +150,8 @@ class ReArticle(Mapping):
         :rtype: ReArticle
         """
         finder = TemplateFinder(article_text)
-        find_re_daten = finder.get_positions("REDaten")
-        find_re_abschnitt = finder.get_positions("REAbschnitt")
+        find_re_daten = finder.get_positions(RE_DATEN)
+        find_re_abschnitt = finder.get_positions(RE_ABSCHNITT)
         # only one start template can be present
         if len(find_re_daten) + len(find_re_abschnitt) != 1:
             raise ReDatenException("Article has the wrong structure. There must one start template")
@@ -156,7 +159,7 @@ class ReArticle(Mapping):
             find_re_start = find_re_daten
         else:
             find_re_start = find_re_abschnitt
-        find_re_author = finder.get_positions("REAutor")
+        find_re_author = finder.get_positions(RE_AUTOR)
         # only one end template can be present
         if len(find_re_author) != 1:
             raise ReDatenException("Article has the wrong structure. There must one stop template")
@@ -174,8 +177,27 @@ class ReArticle(Mapping):
                 raise ReDatenException("REDaten has property without a key word. --> {}".format(template_property))
         return ReArticle(article_type=re_start.title,
                          re_daten_properties=properties_dict,
-                         text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]],
+                         text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]].strip(),
                          author=re_author.parameters[0]["value"][0:-1])  # last character is every time a point
+
+    def _get_pre_text(self):
+        template_handler = TemplateHandler()
+        template_handler.title = RE_DATEN
+        list_of_properties = []
+        for re_property in self._properties:
+            list_of_properties.append({"key": re_property.name, "value": str(re_property)})
+        template_handler.update_parameters(list_of_properties)
+        return template_handler.get_str(str_complex=True)
+
+    def to_text(self):
+        content = list()
+        if self.article_type == RE_DATEN:
+            content.append(self._get_pre_text())
+        else:
+            content.append("{{{{{}}}}}".format(RE_ABSCHNITT))
+        content.append(self.text)
+        content.append("{{{{{}|{}.}}}}".format(RE_AUTOR, self.author))
+        return "\n".join(content)
 
 
 class RePage(Sequence):
