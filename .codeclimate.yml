@@ -1,4 +1,24 @@
-## other configuration excluded from example...
+version: "2"
+checks: Configuration of maintainability checks
+  similar-code:
+    config:
+      threshold: 4
+  identical-code:
+    config:
+      threshold: 4
+plugins:
+  radon:
+    enabled: true
+  pep8:
+    enabled: true
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - python:
+        mass_threshold: 4
+
 exclude_patterns:
-- "scripts/online/"
-- "scripts/offline/"
+  "scripts/online/"
+  "scripts/offline/"
