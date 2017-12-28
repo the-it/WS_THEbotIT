@@ -1,4 +1,16 @@
-## other configuration excluded from example...
+version: "2"
+checks:
+  similar-code:
+    config:
+      threshold: 4
+  identical-code:
+    config:
+      threshold: 4
+plugins:
+  radon:
+    enabled: true
+  pep8:
+    enabled: true
 exclude_patterns:
-- "scripts/online/"
-- "scripts/offline/"
+  - "scripts/online/"
+  - "scripts/offline/"

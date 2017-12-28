@@ -46,71 +46,68 @@ class DateConversion:
     def __init__(self, rawstring):
         self.rawstring = rawstring
 
+    _months = "Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez"
+    regex_dont_know = re.compile('(unbekannt|Unbekannt|\?)')
+    regex_preset = re.compile('<!--(\d{4}-\d{2}-\d{2})-->')
+    regex_before_domino = re.compile('v. Chr')
+    regex_only_century = re.compile('\d{1,2}\. (Jahrhundert|Jh.)')
+    regex_complete_date = re.compile('\d{1,2}(\.|\. | )(\d\d?|' + _months + ')\w*(\.|\. | )(\d{1,4})')
+    regex_no_day = re.compile('(\d{1,2}\.|' + _months + ')\w*(\.|\. | )(\d{1,4})')
+    regex_only_year = re.compile('\d{1,4}')
+
     def __str__(self):
         # chop the unused parts of the string
         str_re_form = self._chop_ref(self.rawstring)
 
-        # inspect the string
-        match_dont_known = re.search('(unbekannt|Unbekannt|\?)', str_re_form)
-        match_preset = re.search('<!--(\d{4}-\d{2}-\d{2})-->', str_re_form)
-        match_before_domino = re.search('v. Chr', str_re_form)
-        match_only_century = re.search('\d{1,2}\. (Jahrhundert|Jh.)', str_re_form)
-        match_complete_date = re.search('\d{1,2}(\.|\. | )'
-                                        '(\d\d?|Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez)'
-                                        '\w*(\.|\. | )(\d{1,4})', str_re_form)
-        match_no_day = re.search('(\d{1,2}\.|Jan|Jän|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez)'
-                                 '\w*(\.|\. | )(\d{1,4})', str_re_form)
-        match_only_year = re.search('\d{1,4}', str_re_form)
-
         # sort for structure of the information and interpred it
-        if match_preset:
-            str_re_form = match_preset.group(1)
-        elif match_only_century:
+        if self.regex_preset.search(str_re_form):
+            return_str = self.regex_preset.search(str_re_form).group(1)
+        elif self.regex_only_century.search(str_re_form):
             # Case: only a century given
-            century = re.search('\d{1,2}', match_only_century.group())
-            if match_before_domino:
+            century = re.search('\d{1,2}', self.regex_only_century.search(str_re_form).group())
+            if self.regex_before_domino.search(str_re_form):
                 century = int(century.group())
             else:
                 century = int(century.group()) - 1
             year = self._append_zeros_to_year(str(century) + '00')
-            str_re_form = ''.join([year, '-', '00', '-', '00'])
+            return_str = ''.join([year, '-', '00', '-', '00'])
             del year
-        elif match_complete_date:
+        elif self.regex_complete_date.search(str_re_form):
             # Case: complete date
-            li_str = re.split('[\. ]{1,2}', match_complete_date.group())
+            li_str = re.split('[. ]{1,2}', self.regex_complete_date.search(str_re_form).group())
             li_str[0] = self._day_to_int(re.sub('\.', '', li_str[0]))  # Punkt aus dem Tag entfernen
             li_str[1] = self._month_to_int(li_str[1])  # Monat in Zahl verwandeln
             li_str[2] = self._append_zeros_to_year(li_str[2])  # append zeros to the year
-            str_re_form = ''.join([li_str[2], '-', li_str[1], '-', li_str[0]])
-        elif match_no_day:
+            return_str = ''.join([li_str[2], '-', li_str[1], '-', li_str[0]])
+        elif self.regex_no_day.search(str_re_form):
             # Case: only month and year
-            li_str = re.split(' ', match_no_day.group())
+            li_str = re.split(' ', self.regex_no_day.search(str_re_form).group())
             li_str[0] = self._month_to_int(li_str[0])  # Monat in Zahl verwandeln
             li_str[1] = self._append_zeros_to_year(li_str[1])  # append zeros to the year
-            str_re_form = ''.join([li_str[1], '-', li_str[0], '-', '00'])
-        elif match_only_year:
+            return_str = ''.join([li_str[1], '-', li_str[0], '-', '00'])
+        elif self.regex_only_year.search(str_re_form):
             # Case: only year
-            li_str = re.split(' ', match_only_year.group())
+            li_str = re.split(' ', self.regex_only_year.search(str_re_form).group())
             li_str[0] = self._append_zeros_to_year(li_str[0])  # append zeros to the year
-            str_re_form = ''.join([li_str[0], '-', '00', '-', '00'])
-        elif str_re_form == '' or match_dont_known:
+            return_str = ''.join([li_str[0], '-', '00', '-', '00'])
+        elif str_re_form == '' or self.regex_dont_know.search(str_re_form):
             # Case: empty rawstring
-            str_re_form = '!-00-00'
+            return_str = '!-00-00'
         else:
             raise ValueError(str_re_form)
 
         # interpret the information of v. Chr.
-        if match_before_domino:
-            year = int(str_re_form[0:4])
+        if self.regex_before_domino.search(str_re_form):
+            year = int(return_str[0:4])
             converted_year = 9999 - year
-            str_re_form = '-' + self._append_zeros_to_year(str(converted_year)) + str_re_form[4:]
+            return_str = '-' + self._append_zeros_to_year(str(converted_year)) + return_str[4:]
 
-        return str_re_form
+        return return_str
 
     @staticmethod
     def _chop_ref(rawstring):
         str_re_value = re.sub('<ref>.+</ref>', '', rawstring)
-        str_re_value = re.sub(r'\{\{CRef\|.+\}\}', '', str_re_value)
+        str_re_value = re.sub(r'{{CRef\|.+}}', '', str_re_value)
         return str_re_value
 
     @staticmethod
