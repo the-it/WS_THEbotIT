@@ -1,11 +1,4 @@
 version: "2"
-checks:
-  similar-code:
-    config:
-      threshold: 4
-  identical-code:
-    config:
-      threshold: 4
 plugins:
   radon:
     enabled: true
