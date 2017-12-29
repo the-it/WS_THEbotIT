@@ -5,61 +5,46 @@ class AbbyyXML:
     def __init__(self, xml_string):
         self.dom_obj = minidom.parseString(xml_string)
 
-    def getText(self):
-        return self.processDocument()
+    def get_text(self):
+        return self.process_document()
 
-    def processDocument(self):
+    def process_document(self):
         page = self.dom_obj.getElementsByTagName("page")
-        return self.processPage(page[0])
+        return self.process_page(page[0])
 
-    def processPage(self, page_xml):
-        blocks = page_xml.getElementsByTagName("block")
-        blocks_string = []
-        for block in blocks:
-            blocks_string.append(self.processBlock(block))
-        return "".join(blocks_string)
+    @staticmethod
+    def _process_child_items_with_function(child_name: str,
+                                           child_xml,
+                                           child_handler_function,
+                                           append_new_line: bool=True):
+        childes = child_xml.getElementsByTagName(child_name)
+        childes_string = []
+        for child in childes:
+            childes_string.append(child_handler_function(child))
+        if append_new_line:
+            childes_string.append("\n")
+        return "".join(childes_string)
 
-    def processBlock(self, block_xml):
-        texts = block_xml.getElementsByTagName("text")
-        texts_string = []
-        for text in texts:
-            texts_string.append(self.processText(text))
-        texts_string.append("\n")
-        return "".join(texts_string)
+    def process_page(self, page_xml):
+        return self._process_child_items_with_function("block", page_xml, self.process_block, append_new_line=False)
 
-    def processText(self, text_xml):
-        pars = text_xml.getElementsByTagName("par")
-        pars_string = []
-        for par in pars:
-            pars_string.append(self.processPar(par))
-        return "".join(pars_string)
+    def process_block(self, block_xml):
+        return self._process_child_items_with_function("text", block_xml, self.process_text, append_new_line=True)
 
-    def processPar(self, par_xml):
-        lines = par_xml.getElementsByTagName("line")
-        line_string = []
-        for line in lines:
-            line_string.append(self.processLine(line))
-        line_string.append("\n")
-        return "".join(line_string)
+    def process_text(self, text_xml):
+        return self._process_child_items_with_function("par", text_xml, self.process_par, append_new_line=False)
 
-    def processLine(self, line_xml):
-        formattings = line_xml.getElementsByTagName("formatting")
-        formatting_string = []
-        for formatting in formattings:
-            formatting_string.append(self.processFormatting(formatting))
-        # formatting_string.append("\n")
-        return "".join(formatting_string)
+    def process_par(self, par_xml):
+        return self._process_child_items_with_function("line", par_xml, self.process_line, append_new_line=True)
 
-    def processFormatting(self, formatting_xml):
-        char_params = formatting_xml.getElementsByTagName("charParams")
-        chars_string = []
-        for char_param in char_params:
-            chars_string.append(self.process_char(char_param))
-        return "".join(chars_string)
+    def process_line(self, line_xml):
+        return self._process_child_items_with_function("formatting", line_xml,
+                                                       self.process_formatting, append_new_line=False)
+
+    def process_formatting(self, formatting_xml):
+        return self._process_child_items_with_function("charParams", formatting_xml,
+                                                       self.process_char, append_new_line=False)
 
     @staticmethod
     def process_char(char_xml):
         return char_xml.childNodes[0].data
-
-
-
