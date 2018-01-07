@@ -13,11 +13,10 @@ install:
 before_script:
   - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/pre_script_code_climate.sh; fi
 script:
-  - python -m unittest
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/build.sh; else python -m unittest; fi
 after_script:
   - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/post_script_code_climate.sh; fi
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then pep8; fi
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then flake8; fi
+
 env:
   - PYWIKIBOT2_NO_USER_CONFIG=1
 matrix:
