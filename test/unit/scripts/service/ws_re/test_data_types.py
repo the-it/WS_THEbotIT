@@ -2,6 +2,8 @@ from collections.abc import Sequence
 from unittest import TestCase
 import unittest.mock as mock
 
+import pywikibot
+
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException
 
 
@@ -135,6 +137,10 @@ class TestReArticle(TestCase):
                                     "Article has the wrong structure. Wrong order of templates."):
             article = ReArticle.from_text((article_text))
 
+    def test_simple_article(self):
+        article_text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        article = ReArticle.from_text(article_text)
+
     def test_from_text_REAbschnitt(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
@@ -189,14 +195,53 @@ text
 
 
 class TestRePage(TestCase):
-    def setUp(self):
-        self.page_mock = mock.MagicMock()
-        self.text_mock = mock.PropertyMock(return_value="{{REDaten}}{{REAutor}}")
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
+    def setUp(self, text_mock, page_mock):
+        self.page_mock = page_mock
+        self.text_mock = text_mock
         type(self.page_mock).text = self.text_mock
 
-    def test_initialize(self):
-        self.text_mock.return_value = "2"
-        RePage(self.page_mock)
-
-    def test_ist_list(self):
+    def test_is_list(self):
         self.assertTrue(issubclass(RePage, Sequence))
+
+    def test_simple_RePage_with_one_article(self):
+        test_text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.text_mock.return_value = test_text
+        re_page = RePage(self.page_mock)
+        self.assertEqual(1, len(re_page))
+        re_article = re_page[0]
+        self.assertTrue(isinstance(re_article, ReArticle))
+        self.assertEqual("text", re_article.text)
+        self.assertEqual("REDaten", re_article.article_type)
+        self.assertEqual("Autor", re_article.author)
+
+    def test_double_article(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\ntext1\n{{REAutor|Autor1.}}"
+        re_page = RePage(self.page_mock)
+        re_article_0 = re_page[0]
+        re_article_1 = re_page[1]
+        self.assertEqual("text0", re_article_0.text)
+        self.assertEqual("text1", re_article_1.text)
+
+    def test_combined_article_with_abschnitt(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}" \
+                                      "\n{{REAbschnitt}}\ntext1\n{{REAutor|Autor1.}}"
+        re_page = RePage(self.page_mock)
+        re_article_0 = re_page[0]
+        re_article_1 = re_page[1]
+        self.assertEqual("text0", re_article_0.text)
+        self.assertEqual("text1", re_article_1.text)
+        self.assertEqual("REAbschnitt", re_article_1.article_type)
+
+    def test_combined_article_with_abschnitt_and_normal_article(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}" \
+                                      "\n{{REAbschnitt}}\ntext1\n{{REAutor|Autor1.}}" \
+                                      "\n{{REDaten}}\ntext2\n{{REAutor|Autor2.}}"
+        re_page = RePage(self.page_mock)
+        re_article_0 = re_page[0]
+        re_article_1 = re_page[1]
+        re_article_2 = re_page[2]
+        self.assertEqual("text0", re_article_0.text)
+        self.assertEqual("text1", re_article_1.text)
+        self.assertEqual("text2", re_article_2.text)

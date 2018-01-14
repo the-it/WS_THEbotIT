@@ -2,7 +2,7 @@ from collections import Mapping
 from collections.abc import Sequence
 from typing import Union
 
-from pywikibot import Page
+import pywikibot
 
 from tools.template_handler import TemplateFinder, TemplateHandler
 
@@ -54,7 +54,7 @@ class ReProperty(object):
 
 RE_DATEN = "REDaten"
 RE_ABSCHNITT = "REAbschnitt"
-RE_AUTOR = "REAutor"
+RE_AUTHOR = "REAutor"
 
 class ReArticle(Mapping):
     def __init__(self, article_type: str=RE_DATEN, re_daten_properties: dict=None, text: str="", author: str=""):
@@ -159,7 +159,7 @@ class ReArticle(Mapping):
             find_re_start = find_re_daten
         else:
             find_re_start = find_re_abschnitt
-        find_re_author = finder.get_positions(RE_AUTOR)
+        find_re_author = finder.get_positions(RE_AUTHOR)
         # only one end template can be present
         if len(find_re_author) != 1:
             raise ReDatenException("Article has the wrong structure. There must one stop template")
@@ -196,25 +196,32 @@ class ReArticle(Mapping):
         else:
             content.append("{{{{{}}}}}".format(RE_ABSCHNITT))
         content.append(self.text)
-        content.append("{{{{{}|{}.}}}}".format(RE_AUTOR, self.author))
+        content.append("{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author))
         return "\n".join(content)
 
 
 class RePage(Sequence):
-    def __init__(self, wiki_page: Page):
+    def __init__(self, wiki_page: pywikibot.Page):
         self.page = wiki_page
         self.pre_text = self.page.text
-        self.page_dict = list()
+        self.page_list = list()
 
         self._init_page_dict()
 
     def _init_page_dict(self):
+        # find the positions of all key templates
         template_finder = TemplateFinder(self.pre_text)
-        re_daten_pos = template_finder.get_positions("REDaten")
-        re_autor_pos = template_finder.get_positions("REAutor")
+        re_daten_pos = template_finder.get_positions(RE_DATEN)
+        re_abschnitt_pos = template_finder.get_positions(RE_ABSCHNITT)
+        re_author_pos = template_finder.get_positions(RE_AUTHOR)
+        re_starts = re_daten_pos + re_abschnitt_pos
+        re_starts.sort(key=lambda x: x["pos"][0])
+        # iterate over start and end templates of the articles and create ReArticles of them
+        for pos_daten, pos_author in zip(re_starts, re_author_pos):
+            self.page_list.append(ReArticle.from_text(self.pre_text[pos_daten["pos"][0]:pos_author["pos"][1]]))
 
-    def __getitem__(self, item):
-        pass
+    def __getitem__(self, item: int) -> ReArticle:
+        return self.page_list[item]
 
-    def __len__(self):
-        pass
+    def __len__(self) -> int:
+        return len(self.page_list)
