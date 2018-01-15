@@ -7,6 +7,28 @@ import pywikibot
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException
 
 
+article_template = """{{REDaten
+|BAND=
+|SPALTE_START=
+|SPALTE_END=
+|VORGÄNGER=
+|NACHFOLGER=
+|SORTIERUNG=
+|KORREKTURSTAND=
+|WIKIPEDIA=
+|WIKISOURCE=
+|EXTSCAN_START=
+|EXTSCAN_END=
+|GND=
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=
+|ÜBERSCHRIFT=OFF
+|VERWEIS=OFF
+|NACHTRAG=OFF
+}}
+text
+{{REAutor|Autor.}}"""
+
 class TestReProperty(TestCase):
     def test_init(self):
         re_property = ReProperty(name="Test", default=False)
@@ -26,6 +48,24 @@ class TestReProperty(TestCase):
         with self.assertRaises(TypeError):
             re_property = ReProperty(name="Test", default=1)
             str(re_property)
+
+    def test_set_bool_with_ON_and_OFF(self):
+        re_property = ReProperty(name="Test", default=False)
+        re_property.value = "ON"
+        self.assertTrue(re_property.value)
+        re_property.value = "OFF"
+        self.assertFalse(re_property.value)
+
+    def test_hash(self):
+        re_property = ReProperty(name="Test", default=False)
+        pre_hash = hash(re_property)
+        re_property.value = True
+        self.assertNotEqual(pre_hash, hash(re_property))
+
+        re_property = ReProperty(name="Test", default="")
+        pre_hash = hash(re_property)
+        re_property.value = "value"
+        self.assertNotEqual(pre_hash, hash(re_property))
 
 
 class TestReArticle(TestCase):
@@ -101,6 +141,36 @@ class TestReArticle(TestCase):
         self.assertEqual(article["BAND"].value, "III")
         self.assertEqual(article["SPALTE_START"].value, "1")
 
+    def test_from_text_wrong_keywords(self):
+        article_text = "{{REDaten|WHATEVER=I}}" \
+                       "\ntext\n{{REAutor|Some Author.}}"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "REDaten has wrong key word. --> {.*?}"):
+            article = ReArticle.from_text((article_text))
+
+    def test_from_text_short_keywords(self):
+        article_text = "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB|XS={{START}}" \
+                       "|XE={{END}}|GND=1234|SCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
+                       "\ntext\n{{REAutor|Some Author.}}"
+        article = ReArticle.from_text(article_text)
+        self.assertEqual("I", article["BAND"].value)
+        self.assertEqual("1", article["SPALTE_START"].value)
+        self.assertEqual("2", article["SPALTE_END"].value)
+        self.assertEqual("A", article["VORGÄNGER"].value)
+        self.assertEqual("B", article["NACHFOLGER"].value)
+        self.assertEqual("TADA", article["SORTIERUNG"].value)
+        self.assertEqual("fertig", article["KORREKTURSTAND"].value)
+        self.assertEqual("BLUB", article["WIKISOURCE"].value)
+        self.assertEqual("BLAB", article["WIKIPEDIA"].value)
+        self.assertEqual("{{START}}", article["EXTSCAN_START"].value)
+        self.assertEqual("{{END}}", article["EXTSCAN_END"].value)
+        self.assertEqual("1234", article["GND"].value)
+        self.assertEqual("1949", article["TODESJAHR"].value)
+        self.assertFalse(article["KEINE_SCHÖPFUNGSHÖHE"].value)
+        self.assertTrue(article["ÜBERSCHRIFT"].value)
+        self.assertFalse(article["VERWEIS"].value)
+        self.assertTrue(article["NACHTRAG"].value)
+
     def test_from_text_wrong_property_in_REDaten(self):
         article_text = "{{REDaten\n|III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException,
@@ -141,37 +211,19 @@ class TestReArticle(TestCase):
         article_text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         article = ReArticle.from_text(article_text)
 
+    def test_complete_article(self):
+        article_text = article_template
+        article = ReArticle.from_text(article_text)
+
     def test_from_text_REAbschnitt(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
         self.assertEqual(article.article_type, "REAbschnitt")
 
-    article_template = """{{REDaten
-|BAND=
-|SPALTE_START=
-|SPALTE_END=
-|VORGÄNGER=
-|NACHFOLGER=
-|SORTIERUNG=
-|KORREKTURSTATUS=
-|WIKIPEDIA=
-|WIKISOURCE=
-|EXTSCAN_START=
-|EXTSCAN_END=
-|GND=
-|KEINE_SCHÖPFUNGSHÖHE=OFF
-|TODESJAHR=
-|ÜBERSCHRIFT=OFF
-|VERWEIS=OFF
-|NACHTRAG=OFF
-}}
-text
-{{REAutor|Autor.}}"""
-
     def test_to_text_simple(self):
         self.article.author = "Autor"
         self.article.text = "text"
-        self.assertEqual(self.article_template, self.article.to_text())
+        self.assertEqual(article_template, self.article.to_text())
 
     def test_to_text_REAbschnitt(self):
         text = """{{REAbschnitt}}
@@ -183,15 +235,23 @@ text
         self.assertEqual(text, self.article.to_text())
 
     def test_to_text_changed_properties(self):
-        text = self.article_template.replace("BAND=", "BAND=II")\
-                                    .replace("SPALTE_START=", "SPALTE_START=1000")\
-                                    .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
+        text = article_template.replace("BAND=", "BAND=II")\
+                               .replace("SPALTE_START=", "SPALTE_START=1000")\
+                               .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
         self.article.text = "text"
         self.article.author = "Autor"
         self.article["BAND"].value = "II"
         self.article["SPALTE_START"].value = "1000"
         self.article["WIKIPEDIA"].value = "Test"
         self.assertEqual(text, self.article.to_text())
+
+    def test_hash(self):
+        pre_hash = hash(self.article)
+        self.article["BAND"].value = "II"
+        self.assertNotEqual(pre_hash, hash(self.article))
+        pre_hash = hash(self.article)
+        self.article["SPALTE_START"].value = "1000"
+        self.assertNotEqual(pre_hash, hash(self.article))
 
 
 class TestRePage(TestCase):
@@ -245,3 +305,41 @@ class TestRePage(TestCase):
         self.assertEqual("text0", re_article_0.text)
         self.assertEqual("text1", re_article_1.text)
         self.assertEqual("text2", re_article_2.text)
+
+    def test_wrong_structure_too_much_REAutor(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}" \
+                                      "\ntext1\n{{REAutor|Autor1.}}"
+        with self.assertRaises(ReDatenException):
+            RePage(self.page_mock)
+
+    def test_wrong_structure_order_of_templates_not_correct(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REDaten}}\n{{REAutor|Autor0.}}" \
+                                      "\ntext1\n{{REAutor|Autor1.}}"
+        with self.assertRaises(ReDatenException):
+            RePage(self.page_mock)
+
+    def test_back_to_str(self):
+        before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.text_mock.return_value = before
+        after = article_template
+        self.assertEqual(after, str(RePage(self.page_mock)))
+
+    def test_back_to_str_combined(self):
+        before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}{{REDaten}}\ntext1\n{{REAutor|Autor1.}}"
+        self.text_mock.return_value = before
+        after = article_template + "\n" + article_template.replace("text", "text1").replace("Autor.", "Autor1.")
+        self.assertEqual(after, str(RePage(self.page_mock)))
+
+    def test_save_because_of_changes(self):
+        before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.text_mock.return_value = before
+        re_page = RePage(self.page_mock)
+        re_page.save("reason")
+        self.text_mock.assert_called_with(article_template)
+        self.page_mock.save.assert_called_once_with(summary="reason", botflag=True)
+
+    def test_dont_save_because_no_changes(self):
+        self.text_mock.return_value = article_template
+        re_page = RePage(self.page_mock)
+        re_page.save("reason")
+        self.assertFalse(self.page_mock.save.mock_calls)

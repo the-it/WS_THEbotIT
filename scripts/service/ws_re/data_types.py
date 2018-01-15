@@ -28,6 +28,12 @@ class ReProperty(object):
         else:
             raise TypeError("Default value ({}) is invalid".format(self._default))
 
+    def _set_bool_by_str(self, on_off: str):
+        if on_off == "ON":
+            return True
+        else:
+            return False
+
     @property
     def value(self):
         if self._value:
@@ -39,6 +45,8 @@ class ReProperty(object):
     def value(self, new_value: Union[str, bool]):
         if isinstance(new_value, type(self._default)):
             self._value = new_value
+        elif new_value in ("ON", "OFF") and type(self._default) == bool:
+            self._value = self._set_bool_by_str(new_value)
         else:
             raise TypeError("Value ({}) is not the type of default value ({})".format(new_value, self._default))
 
@@ -56,7 +64,27 @@ RE_DATEN = "REDaten"
 RE_ABSCHNITT = "REAbschnitt"
 RE_AUTHOR = "REAutor"
 
+
 class ReArticle(Mapping):
+    keywords = {
+        "BD": "BAND",
+        "SS": "SPALTE_START",
+        "SE": "SPALTE_END",
+        "VG": "VORGÄNGER",
+        "NF": "NACHFOLGER",
+        "SRT": "SORTIERUNG",
+        "KOR": "KORREKTURSTAND",
+        "WS": "WIKISOURCE",
+        "WP": "WIKIPEDIA",
+        "XS": "EXTSCAN_START",
+        "XE": "EXTSCAN_END",
+        "GND": "GND",
+        "SCH": "KEINE_SCHÖPFUNGSHÖHE",
+        "TJ": "TODESJAHR",
+        "ÜB": "ÜBERSCHRIFT",
+        "VW": "VERWEIS",
+        "NT": "NACHTRAG"}
+
     def __init__(self, article_type: str=RE_DATEN, re_daten_properties: dict=None, text: str="", author: str=""):
         self._article_type = None
         self.article_type = article_type
@@ -70,7 +98,7 @@ class ReArticle(Mapping):
                             ReProperty("VORGÄNGER", ""),
                             ReProperty("NACHFOLGER", ""),
                             ReProperty("SORTIERUNG", ""),
-                            ReProperty("KORREKTURSTATUS", ""),
+                            ReProperty("KORREKTURSTAND", ""),
                             ReProperty("WIKIPEDIA", ""),
                             ReProperty("WIKISOURCE", ""),
                             ReProperty("EXTSCAN_START", ""),
@@ -141,8 +169,8 @@ class ReArticle(Mapping):
                + (hash(self._text) << 2) \
                + (hash(self._author) << 3)
 
-    @staticmethod
-    def from_text(article_text):
+    @classmethod
+    def from_text(cls, article_text):
         """
         main parser function for initiating a ReArticle from a given piece of text.
 
@@ -172,7 +200,14 @@ class ReArticle(Mapping):
         # initialise all properties from the template handler to the article dict
         for template_property in re_start.parameters:
             if template_property["key"]:
-                properties_dict.update({template_property["key"]: template_property["value"]})
+                keyword = template_property["key"]
+                if keyword in cls.keywords.values():
+                    pass
+                elif keyword in cls.keywords.keys():
+                    keyword = cls.keywords[keyword]
+                else:
+                    raise ReDatenException("REDaten has wrong key word. --> {}".format(template_property))
+                properties_dict.update({keyword: template_property["value"]})
             else:
                 raise ReDatenException("REDaten has property without a key word. --> {}".format(template_property))
         return ReArticle(article_type=re_start.title,
@@ -204,7 +239,7 @@ class RePage(Sequence):
     def __init__(self, wiki_page: pywikibot.Page):
         self.page = wiki_page
         self.pre_text = self.page.text
-        self.page_list = list()
+        self._article_list = list()
 
         self._init_page_dict()
 
@@ -216,12 +251,25 @@ class RePage(Sequence):
         re_author_pos = template_finder.get_positions(RE_AUTHOR)
         re_starts = re_daten_pos + re_abschnitt_pos
         re_starts.sort(key=lambda x: x["pos"][0])
+        if len(re_starts) != len(re_author_pos):
+            raise ReDatenException("The count of start templates doesn't match the count of end templates.")
         # iterate over start and end templates of the articles and create ReArticles of them
         for pos_daten, pos_author in zip(re_starts, re_author_pos):
-            self.page_list.append(ReArticle.from_text(self.pre_text[pos_daten["pos"][0]:pos_author["pos"][1]]))
+            self._article_list.append(ReArticle.from_text(self.pre_text[pos_daten["pos"][0]:pos_author["pos"][1]]))
 
     def __getitem__(self, item: int) -> ReArticle:
-        return self.page_list[item]
+        return self._article_list[item]
 
     def __len__(self) -> int:
-        return len(self.page_list)
+        return len(self._article_list)
+
+    def __str__(self) -> str:
+        articles = []
+        for article in self._article_list:
+            articles.append(article.to_text())
+        return "\n".join(articles)
+
+    def save(self, reason: str):
+        if self.pre_text != str(self):
+            self.page.text = str(self)
+            self.page.save(summary=reason, botflag=True)
