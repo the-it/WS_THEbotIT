@@ -9,7 +9,6 @@ from pywikibot import Page, Site
 from scripts.service.ws_re.data_types import RePage
 from tools.bots import CanonicalBot
 from tools.catscan import PetScan
-from tools.template_handler import TemplateHandler
 
 
 class ReScannerTask(object):
@@ -18,26 +17,27 @@ class ReScannerTask(object):
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
+        self.hash = None
+        self.re_page = None
 
     def __del__(self):
         self.finish_task()
 
-    def preprocess_lemma(self, re_page: RePage):
-        self.text = page.text
-        self.pretext = page.text
+    def pre_process_lemma(self, re_page: RePage):
+        self.re_page = re_page
+        self.pre_process_hash = hash(re_page)
 
-    def postprocess_lemma(self, re_page: RePage):
-        page.text = self.text
-        return self.text != self.pretext
+    def post_process_lemma(self, re_page: RePage):
+        return self.pre_process_hash != hash(self.re_page)
 
     @abstractmethod
     def task(self):
         pass
 
     def process_lemma(self, re_page: RePage):
-        self.preprocess_lemma(re_page)
+        self.pre_process_lemma(re_page)
         self.task()
-        return self.postprocess_lemma(re_page)
+        return self.post_process_lemma(re_page)
 
     def load_task(self):
         self.logger.info('opening task {}'.format(self.get_name()))
@@ -67,148 +67,6 @@ class ENUUTask(ReScannerTask):
         return '\n' + hit.group(0).strip(" \n\t") + '\n'
 
 
-class RERE_Task(ReScannerTask):
-    def __init__(self, wiki: Site, debug: bool, logger: Logger):
-        ReScannerTask.__init__(self, wiki, debug, logger)
-        self.load_task()
-
-    def task(self):
-        self.text = re.sub(r'\{\{RE\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_re_redaten(x), self.text)
-        self.text = re.sub(r'\{\{RE\/Platzhalter\|.{0,200}\}\}(?=\n| |\[)',
-                           lambda x: self.replace_replatz_redatenplatz(x), self.text)
-        self.text = re.sub(r'\{\{RENachtrag\|.{0,200}\}\}(?=\n| |\[)', lambda x: self.replace_renachtrag(x), self.text)
-        self.text = re.sub(r'\{\{RENachtrag unfrei\|.{0,200}\}\}(?=\n| |\[)',
-                           lambda x: self.replace_renachtrag_unfrei(x), self.text)
-
-    def replace_re_redaten(self, hit: re):
-        old_template = TemplateHandler(hit.group(0))
-        old_parameters = old_template.get_parameterlist()
-        new_parameters = list()
-        new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
-        new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
-        new_parameters.append(self.get_parameter_if_possible('SPALTE_END', old_parameters, 2))
-        self.set_off(new_parameters)
-        if old_parameters[0]['value'][0] == 'S':
-            new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
-            new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
-        else:
-            new_parameters.append(self.get_parameter_if_possible('VORGÄNGER', old_parameters, 3))
-            new_parameters.append(self.get_parameter_if_possible('NACHFOLGER', old_parameters, 4))
-        new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 6))
-        new_parameters.append(self.get_parameter_if_possible('KORREKTURSTAND', old_parameters, 7))
-        new_parameters.append(self.get_parameter_if_possible('WIKIPEDIA', old_parameters, 8))
-        new_parameters.append(self.get_parameter_if_possible('WIKISOURCE', old_parameters, 9))
-        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 10))
-        self.devalidate_ext_scan(new_parameters)
-        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_END', old_parameters, 11))
-        self.devalidate_ext_scan(new_parameters)
-        new_parameters.append(self.get_parameter_if_possible('GND', old_parameters, 12))
-        new_template = TemplateHandler()
-        new_template.set_title('REDaten')
-        new_template.update_parameters(new_parameters)
-        return new_template.get_str(str_complex=True)
-
-    def replace_replatz_redatenplatz(self, hit: re):
-        self.logger.info('Found re/Platzhalter')
-        old_template = TemplateHandler(hit.group(0))
-        old_parameters = old_template.get_parameterlist()
-        new_parameters = list()
-        new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
-        new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
-        new_parameters.append(self.get_parameter_if_possible('SPALTE_END', old_parameters, 2))
-        self.set_off(new_parameters)
-        if old_parameters[0]['value'][0] == 'S':
-            new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
-            new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
-        else:
-            new_parameters.append(self.get_parameter_if_possible('VORGÄNGER', old_parameters, 3))
-            new_parameters.append(self.get_parameter_if_possible('NACHFOLGER', old_parameters, 4))
-        new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 6))
-        new_parameters.append(self.get_parameter_if_possible('GEMEINFREI', old_parameters, 7))
-        new_parameters.append(self.get_parameter_if_possible('WIKIPEDIA', old_parameters, 8))
-        new_parameters.append(self.get_parameter_if_possible('WIKISOURCE', old_parameters, 9))
-        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 10))
-        self.devalidate_ext_scan(new_parameters)
-        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_END', old_parameters, 11))
-        self.devalidate_ext_scan(new_parameters)
-        new_parameters.append(self.get_parameter_if_possible('GND', old_parameters, 12))
-        new_template = TemplateHandler()
-        new_template.set_title('REDaten/Platzhalter')
-        new_template.update_parameters(new_parameters)
-        return new_template.get_str(str_complex=True)
-
-    def replace_renachtrag(self, hit: re):
-        self.logger.info('Found RENachtrag')
-        old_template = TemplateHandler(hit.group(0).strip())
-        old_parameters = old_template.get_parameterlist()
-        new_parameters = list()
-        new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
-        new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
-        new_parameters.append({'key': 'SPALTE_END', 'value': ''})
-        new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
-        new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
-        new_parameters.append(self.get_parameter_if_possible('SORTIERUNG', old_parameters, 3))
-        if re.search('\|KORREKTURSTAND=[Ff]ertig', self.text):
-            new_parameters.append({'key': 'KORREKTURSTAND', 'value': 'fertig'})
-        else:
-            new_parameters.append({'key': 'KORREKTURSTAND', 'value': ''})
-        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 2))
-        self.devalidate_ext_scan(new_parameters)
-        new_parameters.append({'key': 'EXTSCAN_END', 'value': ''})
-        new_parameters.append(self.get_parameter_if_possible('ÜBERSCHRIFT', old_parameters, 4))
-        if new_parameters[-1]['value'] == 'Ü':
-            new_parameters[-1]['value'] = 'ON'
-        new_template = TemplateHandler()
-        new_template.set_title('RENachtrag')
-        new_template.update_parameters(new_parameters)
-        return new_template.get_str(str_complex=True)
-
-    def replace_renachtrag_unfrei(self, hit: re):
-        self.logger.info('Found RENachtrag unfrei')
-        old_template = TemplateHandler(hit.group(0).strip())
-        old_parameters = old_template.get_parameterlist()
-        new_parameters = list()
-        new_parameters.append(self.get_parameter_if_possible('BAND', old_parameters, 0))
-        new_parameters.append(self.get_parameter_if_possible('SPALTE_START', old_parameters, 1))
-        new_parameters.append({'key': 'SPALTE_END', 'value': ''})
-        new_parameters.append({'key': 'VORGÄNGER', 'value': ''})
-        new_parameters.append({'key': 'NACHFOLGER', 'value': ''})
-        new_parameters.append({'key': 'SORTIERUNG', 'value': ''})
-        try:
-            deathyear = int(old_parameters[4]['value'])
-            new_parameters.append({'key': 'GEMEINFREI', 'value': str(deathyear + 71)})
-        except:
-            new_parameters.append({'key': 'GEMEINFREI', 'value': ''})
-        new_parameters.append(self.get_parameter_if_possible('EXTSCAN_START', old_parameters, 2))
-        self.devalidate_ext_scan(new_parameters)
-        new_parameters.append({'key': 'EXTSCAN_END', 'value': ''})
-        new_parameters.append(self.get_parameter_if_possible('ÜBERSCHRIFT', old_parameters, 5))
-        if new_parameters[-1]['value'] == 'Ü':
-            new_parameters[-1]['value'] = 'ON'
-        new_template = TemplateHandler()
-        new_template.set_title('RENachtrag/Platzhalter')
-        new_template.update_parameters(new_parameters)
-        return new_template.get_str(str_complex=True)
-
-    @staticmethod
-    def get_parameter_if_possible(name, old_parameters, old_position):
-        if len(old_parameters) >= old_position + 1:
-            return {'key': name, 'value': old_parameters[old_position]['value']}
-        else:
-            return {'key': name, 'value': ''}
-
-    @staticmethod
-    def set_off(template_list):
-        if template_list[-1]['value'] == '':
-            template_list[-1]['value'] = 'OFF'
-
-    def devalidate_ext_scan(self, template_list):
-        if not re.search(r'\{\{RE(?:IA|WL)[^\}]*?\}\}', template_list[-1]['value']):
-            if template_list[-1]['value'] != '':
-                self.logger.error('Extern Scan devalidated: {}'.format(template_list[-1]['value']))
-            template_list[-1]['value'] = ''
-
-
 class ReScanner(CanonicalBot):
     bot_name = 'ReScanner'
 
@@ -217,7 +75,7 @@ class ReScanner(CanonicalBot):
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
         self.timeout = timedelta(seconds=60)  # bot should run only one minute ... don't do anything at the moment
-        self.tasks = [ENÜUTask]
+        self.tasks = [ENUUTask]
         if self.debug:
             self.tasks = self.tasks + []
 
