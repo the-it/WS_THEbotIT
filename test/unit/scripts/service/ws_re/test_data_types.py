@@ -132,6 +132,16 @@ class TestReArticle(TestCase):
         self.assertEqual(str(article["BAND"]), "I 1")
         self.assertEqual(str(article["NACHTRAG"]), "ON")
 
+    def test_simple_article(self):
+        article_text = "{{REDaten}}text{{REAutor|Autor.}}"
+        article = ReArticle.from_text(article_text)
+        self.assertEqual("text", article.text)
+
+    def test_simple_article_with_whitespaces(self):
+        article_text = "{{REDaten}}\n\n\t   text\t   {{REAutor|Autor.}}"
+        article = ReArticle.from_text(article_text)
+        self.assertEqual("text", article.text)
+
     def test_from_text(self):
         article_text = "{{REDaten\n|BAND=III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
@@ -207,10 +217,6 @@ class TestReArticle(TestCase):
                                     "Article has the wrong structure. Wrong order of templates."):
             article = ReArticle.from_text((article_text))
 
-    def test_simple_article(self):
-        article_text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
-        article = ReArticle.from_text(article_text)
-
     def test_complete_article(self):
         article_text = article_template
         article = ReArticle.from_text(article_text)
@@ -219,6 +225,18 @@ class TestReArticle(TestCase):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
         self.assertEqual(article.article_type, "REAbschnitt")
+
+    def test_from_text_text_in_front_of_article(self):
+        article_text = "text{{REDaten}}text{{REAutor}}"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "Article has the wrong structure. There is text in front of the article."):
+            article = ReArticle.from_text((article_text))
+
+    def test_from_text_text_after_article(self):
+        article_text = "{{REDaten}}text{{REAutor}}text"
+        with self.assertRaisesRegex(ReDatenException,
+                                    "Article has the wrong structure. There is text after the article."):
+            article = ReArticle.from_text((article_text))
 
     def test_to_text_simple(self):
         self.article.author = "Autor"
@@ -328,6 +346,15 @@ class TestRePage(TestCase):
         before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}{{REDaten}}\ntext1\n{{REAutor|Autor1.}}"
         self.text_mock.return_value = before
         after = article_template + "\n" + article_template.replace("text", "text1").replace("Autor.", "Autor1.")
+        self.assertEqual(after, str(RePage(self.page_mock)))
+
+    def test_back_to_str_combined_with_additional_text(self):
+        before = "1{{REDaten}}\ntext\n{{REAutor|Autor.}}2{{REDaten}}\ntext1\n{{REAutor|Autor1.}}3"
+        self.text_mock.return_value = before
+        after = "1\n" + article_template + \
+                "\n2\n" + article_template.replace("text", "text1").replace("Autor.", "Autor1.") + \
+                "\n3"
+
         self.assertEqual(after, str(RePage(self.page_mock)))
 
     def test_save_because_of_changes(self):

@@ -194,11 +194,31 @@ class ReArticle(Mapping):
         # the templates must have the right order
         if find_re_start[0]["pos"][0] > find_re_author[0]["pos"][0]:
             raise ReDatenException("Article has the wrong structure. Wrong order of templates.")
+        # it can only exists text between the start and the end template.
+        if find_re_start[0]["pos"][0] != 0:
+            raise ReDatenException("Article has the wrong structure. There is text in front of the article.")
+        if find_re_author[0]["pos"][1] != len(article_text):
+            raise ReDatenException("Article has the wrong structure. There is text after the article.")
         re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
+        properties_dict = cls._extract_properties(re_start.parameters)
+        return ReArticle(article_type=re_start.title,
+                         re_daten_properties=properties_dict,
+                         text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]].strip(),
+                         author=re_author.parameters[0]["value"][0:-1])  # last character is every time a point
+
+    @classmethod
+    def _extract_properties(cls, parameters: list) -> dict:
+        """
+        initialise all properties from the template handler to the article dict. If a wrong parameter is in the list
+        the function will raise a ReDatenException.
+
+        :param parameters: a list of parameters extracted by the TemplateHandler.
+        :return: complete list of extracted parameters
+        """
         properties_dict = {}
-        # initialise all properties from the template handler to the article dict
-        for template_property in re_start.parameters:
+        #
+        for template_property in parameters:
             if template_property["key"]:
                 keyword = template_property["key"]
                 if keyword in cls.keywords.values():
@@ -210,10 +230,7 @@ class ReArticle(Mapping):
                 properties_dict.update({keyword: template_property["value"]})
             else:
                 raise ReDatenException("REDaten has property without a key word. --> {}".format(template_property))
-        return ReArticle(article_type=re_start.title,
-                         re_daten_properties=properties_dict,
-                         text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]].strip(),
-                         author=re_author.parameters[0]["value"][0:-1])  # last character is every time a point
+        return properties_dict
 
     def _get_pre_text(self):
         template_handler = TemplateHandler()
@@ -254,8 +271,19 @@ class RePage(Sequence):
         if len(re_starts) != len(re_author_pos):
             raise ReDatenException("The count of start templates doesn't match the count of end templates.")
         # iterate over start and end templates of the articles and create ReArticles of them
+        last_handled_char = 0
         for pos_daten, pos_author in zip(re_starts, re_author_pos):
+            if last_handled_char < pos_daten["pos"][0]:
+                # there is plain text in front of the article
+                text_to_handle = self.pre_text[last_handled_char:pos_daten["pos"][0]].strip()
+                if text_to_handle:
+                    # not just whitespaces
+                    self._article_list.append(text_to_handle)
             self._article_list.append(ReArticle.from_text(self.pre_text[pos_daten["pos"][0]:pos_author["pos"][1]]))
+            last_handled_char = pos_author["pos"][1]
+        # handle text after the last complete article
+        if last_handled_char < len(self.pre_text):
+            self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)])
 
     def __getitem__(self, item: int) -> ReArticle:
         return self._article_list[item]
@@ -266,7 +294,10 @@ class RePage(Sequence):
     def __str__(self) -> str:
         articles = []
         for article in self._article_list:
-            articles.append(article.to_text())
+            if isinstance(article, ReArticle):
+                articles.append(article.to_text())
+            else:  # it is only a string
+                articles.append(article)
         return "\n".join(articles)
 
     def save(self, reason: str):
