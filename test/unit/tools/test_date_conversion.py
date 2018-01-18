@@ -73,5 +73,5 @@ class TestDateConversion(TestCase):
     def test_authorlist(self):
         self.assert_for_equal('20. Nov. 1815', '1815-11-20')
 
-    def preset_for_date(self):
+    def test_preset_for_date(self):
         self.assert_for_equal('Mitte 15. Jh.<!--1450-00-00-->', '1450-00-00')
