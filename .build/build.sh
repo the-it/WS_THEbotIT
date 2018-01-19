@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+export PYWIKIBOT2_NO_USER_CONFIG=1
 echo "########### COVERAGE ###########"
 coverage run test/all_test.py
 echo "########## PYCODESTYLE #########"
