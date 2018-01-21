@@ -13,12 +13,10 @@ install:
 before_script:
   - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/pre_script_code_climate.sh; fi
 script:
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/build.sh; else python -m unittest; fi
+  - .build/build.sh
 after_script:
   - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/post_script_code_climate.sh; fi
 
-env:
-  - PYWIKIBOT2_NO_USER_CONFIG=1
 matrix:
   allow_failures:
     - python: pypy
