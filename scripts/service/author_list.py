@@ -59,7 +59,7 @@ class AuthorList(CanonicalBot):
     def _run_searcher(self):
         # was the last run successful
         if self.debug:
-        # if False
+            # if False
             yesterday = datetime.now() - timedelta(days=5)
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
@@ -89,7 +89,7 @@ class AuthorList(CanonicalBot):
             # delete preexisting data of this author
             try:
                 del self.data[str(author['id'])]
-            except:
+            except KeyError:
                 if self.last_run and self.last_run['success']:
                     self.logger.info("Can't delete old entry of [[{}]]".format(author['title']))
 
@@ -125,7 +125,8 @@ class AuthorList(CanonicalBot):
                         self.logger.warning("Templatehandler couldn't find a deathdate for: [[{}]]"
                                             .format(author['title']))
                     try:
-                        dict_author.update({'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
+                        dict_author.update(
+                            {'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
                     except:
                         dict_author.update({'description': ""})
                         self.logger.warning("Templatehandler couldn't find a description for: [[{}]]"
@@ -184,16 +185,16 @@ class AuthorList(CanonicalBot):
 
         # sorting the list
         self.logger.info('Start sorting.')
-        list_authors.sort(key = lambda x: x[0])
+        list_authors.sort(key=lambda x: x[0])
         for i in range(len(list_authors) - 1):
-            if list_authors[i][0] == list_authors[i+1][0]:
+            if list_authors[i][0] == list_authors[i + 1][0]:
                 equal_count = 2
                 while True:
-                    if i+equal_count <= len(list_authors):
-                        if list_authors[i][0] != list_authors[i+equal_count][0]:
+                    if i + equal_count <= len(list_authors):
+                        if list_authors[i][0] != list_authors[i + equal_count][0]:
                             break
                         equal_count += 1
-                temp_list = list_authors[i:i+equal_count]
+                temp_list = list_authors[i:i + equal_count]
                 temp_list.sort(key=lambda x: x[5])
                 list_authors[i:i + equal_count] = temp_list
 
@@ -201,9 +202,9 @@ class AuthorList(CanonicalBot):
         self.string_list.append('Diese Liste der Autoren enthält alle {count}<ref>Stand: '
                                 '{dt.day}.{dt.month}.{dt.year}, '
                                 '{clock} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'
-                                .format(count = len(self.data),
-                                        clock = datetime.now().strftime('%H:%M'),
-                                        dt = datetime.now()))
+                                .format(count=len(self.data),
+                                        clock=datetime.now().strftime('%H:%M'),
+                                        dt=datetime.now()))
         self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften'
                                 ' nach der jeweiligen Spalte sortiert werden.')
         self.string_list.append('<!--')
@@ -283,7 +284,7 @@ class AuthorList(CanonicalBot):
                 self.logger.debug("Wasn't able to ge any data from wikidata")
                 return ''  # 4,6
         else:
-            return(author_dict[event])  # 4,6
+            return (author_dict[event])  # 4,6
 
 
 if __name__ == "__main__":

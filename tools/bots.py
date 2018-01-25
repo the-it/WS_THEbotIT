@@ -80,31 +80,34 @@ class BaseBot(object):
             self.logger.warning("it wasn't possible to retrieve an existing timestamp.")
             self.last_run = None
 
+    def _dumb_timestamp(self, success: bool):
+        with open(self.filename, "w") as file_pointer:
+            json.dump({'success': success, 'timestamp': self.timestamp_start},
+                      file_pointer,
+                      default=lambda obj: obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
+
     def tear_down_timestamp(self):
         if self.success:
             if not os.path.isdir("data"):
                 os.mkdir("data")
-            with open(self.filename, "w") as file_pointer:
-                json.dump({'success': True, 'timestamp': self.timestamp_start},
-                          file_pointer,
-                          default=lambda obj: obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
+                self._dumb_timestamp(True)
             self.logger.info("Timestamp successfully kept.")
         else:
             self.logger.warning("The bot run was\'t successful. Timestamp will be kept.")
             with open(self.filename, "w") as file_pointer:
-                json.dump({'success': False, 'timestamp': self.timestamp_start},
-                          file_pointer,
-                          default=lambda obj: obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
+                self._dumb_timestamp(False)
+
+    def _update_logger_name(self, log_type: str):
+        self.logger_names.update({'debug': 'data/{name}_{log_type}_{timestamp}.log'
+                                               .format(name = self.bot_name,
+                                                       log_type = log_type.capitalize(),
+                                                       timestamp = time.strftime('%y%m%d%H%M%S', time.localtime()))})
 
     def set_up_logger(self):
         if not os.path.exists('data'):
             os.makedirs('data')
-        self.logger_names.update({'debug': 'data/{}_DEBUG_{}.log'.format(self.bot_name,
-                                                                         time.strftime('%y%m%d%H%M%S',
-                                                                                       time.localtime()))})
-        self.logger_names.update({'info': 'data/{}_INFO_{}.log'.format(self.bot_name,
-                                                                       time.strftime('%y%m%d%H%M%S',
-                                                                                     time.localtime()))})
+        self._update_logger_name("debug")
+        self._update_logger_name("info")
         logger = logging.getLogger(self.bot_name)
         logger.setLevel(logging.DEBUG)
         error_log = logging.FileHandler(self.logger_names['info'], encoding='utf8')
@@ -163,6 +166,15 @@ class CanonicalBot(BaseBot):
         BaseBot.__init__(self, wiki, debug)
         self.new_data_model = None
 
+    def _open_data_file(self):
+        with open(self.data_filename) as filepointer:
+            self.data = json.load(filepointer)
+        self.logger.info("Open existing data.")
+        try:
+            os.rename(self.data_filename, self.data_filename + ".deprecated")
+        except OSError:
+            self.logger.error("It wasn't possible to move the data to .deprecated")
+
     def __enter__(self):
         BaseBot.__enter__(self)
         self.data_filename = 'data/{}.data.json'.format(self.bot_name)
@@ -174,17 +186,16 @@ class CanonicalBot(BaseBot):
                 self.data = {}
                 self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
             else:
-                with open(self.data_filename) as filepointer:
-                    self.data = json.load(filepointer)
-                self.logger.info("Open existing data.")
-                try:
-                    os.rename(self.data_filename, self.data_filename + ".deprecated")
-                except OSError:
-                    self.logger.error("It wasn't possible to move the data to .deprecated")
+                self._open_data_file()
         except IOError:
             self.data = {}
             self.logger.warning("No existing data available.")
         return self
+
+    @staticmethod
+    def _remove_file_if_exists(file_name):
+        if os.path.exists(file_name):
+            os.remove(file_name)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if not exc_type:
@@ -192,10 +203,8 @@ class CanonicalBot(BaseBot):
                 os.mkdir("data")
             with open(self.data_filename, "w") as filepointer:
                 json.dump(self.data, filepointer)
-            if os.path.exists(self.data_filename + ".deprecated"):
-                os.remove(self.data_filename + ".deprecated")
-            if os.path.exists(self.data_filename + ".broken"):
-                os.remove(self.data_filename + ".broken")
+            self._remove_file_if_exists(self.data_filename + ".deprecated")
+            self._remove_file_if_exists(self.data_filename + ".broken")
             self.logger.info("Data successfully stored.")
         else:
             with open(self.data_filename + '.broken', "w") as filepointer:
@@ -242,9 +251,3 @@ class PingCanonical(CanonicalBot):
         self.logger.info('PingCanonical')
         self.logger.debug('äüö')
         return True
-
-
-if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with PingCanonical(wiki=wiki, debug=False) as bot:
-        bot.run()

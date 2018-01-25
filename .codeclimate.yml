@@ -1,0 +1,13 @@
+version: "2"
+plugins:
+  radon:
+    enabled: true
+  pep8:
+    enabled: true
+exclude_patterns:
+  - "scripts/online/"
+  - "scripts/offline/"
+  - "test/"
+  - "scripts/service/sort_filter.py" #not maintained at the moment
+  - "tools/abbyy_xml.py" #not maintained at the moment
+  - "**/__init__.py"
