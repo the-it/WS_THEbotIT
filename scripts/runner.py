@@ -55,7 +55,7 @@ class DailyRunner(CanonicalBot):
                 origin.push()
 
     def run_dailys(self):
-        daily_list = [AuthorList, ReScanner]
+        daily_list = [AuthorList]#, ReScanner]
         for daily_bot in daily_list:
             self.run_bot(daily_bot(wiki=self.wiki, debug=self.debug))
 
