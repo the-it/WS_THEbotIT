@@ -18,7 +18,7 @@ class FixReStructure(OneTimeBot):
     def __init__(self, wiki, debug):
         OneTimeBot.__init__(self, wiki, debug)
         self.searcher = PetScan()
-        self.timeout = timedelta(hours=2)
+        self.timeout = timedelta(hours=5)
 
     def get_lemmas(self):
         self.searcher.add_positive_category("RE:Verweisung")
