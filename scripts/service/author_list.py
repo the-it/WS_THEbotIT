@@ -260,7 +260,6 @@ class AuthorList(CanonicalBot):
                 date_from_data = claim.getTarget()
                 if date_from_data.precision < 7:
                     self.logger.error('Precison is to low for [[{}]]'.format(author_dict['title']))
-                    raise
                 elif date_from_data.precision < 8:
                     date_from_data = int(ceil(float(date_from_data.year) / 100.0) * 100)
                     if date_from_data < 1000:
