@@ -2,7 +2,7 @@
  WS_THEbotIT
 ============
 
-|travis-badge|_ |license-badge|_ |pyup-badge|_ |code-climate-maintain|_ |code-climate-coverage|_ |code-cov|_ |circleci|_
+|travis-badge|_ |circleci|_ |license-badge|_ |pyup-badge|_ |code-climate-maintain|_ |code-climate-coverage|_ |code-cov|_
 
 .. |travis-badge| image:: https://travis-ci.org/the-it/WS_THEbotIT.svg?branch=master
 .. _travis-badge: https://travis-ci.org/the-it/WS_THEbotIT
@@ -22,5 +22,5 @@
 .. |code-cov| image:: https://img.shields.io/codecov/c/github/codecov/WS_THEbotIT/dev/re_scanner.svg
 .. _code-cov: https://codecov.io/gh/the-it/WS_THEbotIT
 
-.. |circleci| image:: https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg
+.. |circleci| image:: https://circleci.com/gh/the-it/WS_THEbotIT.svg?style=svg
 .. _circleci: https://circleci.com/gh/the-it/WS_THEbotIT
