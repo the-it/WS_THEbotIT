@@ -52,59 +52,20 @@ class FixReStructure(OneTimeBot):
 
 class TestConverter(TestCase):
     def test_parse_text_without_comment(self):
-        text = """{{REDaten
-|BAND=I A,1
-}}
-Abba.
-
-[[Kategorie:RE:Verweisung]]"""
-        expected_text = """{{REDaten
-|BAND=I A,1
-}}
-Abba.
-
-[[Kategorie:RE:Verweisung]]
-{{REAutor|OFF}}"""
+        text = "{{REDaten\n|BAND=I A,1\n}}\nAbba.\n\n[[Kategorie:RE:Verweisung]]"
+        expected_text = "{{REDaten\n|BAND=I A,1\n}}\nAbba.\n\n[[Kategorie:RE:Verweisung]]\n{{REAutor|OFF}}"
         self.assertEqual(expected_text, FixReStructure.process_text(text))
 
     def test_parse_text_with_whitspace(self):
-        text = """{{REDaten
-|BAND=I A,1
-}}
-Abba.
-
-[[Kategorie:RE:Verweisung]]
-
-"""
-        expected_text = """{{REDaten
-|BAND=I A,1
-}}
-Abba.
-
-[[Kategorie:RE:Verweisung]]
-{{REAutor|OFF}}"""
+        text = "{{REDaten\n|BAND=I A,1\n}}\nAbba.\n\n[[Kategorie:RE:Verweisung]]\n\n"
+        expected_text = "{{REDaten\n|BAND=I A,1\n}}\nAbba.\n\n[[Kategorie:RE:Verweisung]]\n{{REAutor|OFF}}"
         self.assertEqual(expected_text, FixReStructure.process_text(text))
 
     def test_parse_text_with_comment(self):
-        text = """{{REDaten
-|BAND=I A,1
-}}
-Abba.
-
-[[Kategorie:RE:Verweisung]]
-
-== Anmerkungen (Wikisource) ==
-{{References||WS}}
-"""
-        expected_text = """{{REDaten
-|BAND=I A,1
-}}
-Abba.
-
-[[Kategorie:RE:Verweisung]]
-{{REAutor|OFF}}
-== Anmerkungen (Wikisource) ==
-{{References||WS}}"""
+        text = "{{REDaten\n|BAND=I A,1\n}}\nAbba.\n\n[[Kategorie:RE:Verweisung]]\n\n== Anmerkungen (Wikisource) ==\n" \
+               "{{References||WS}}"
+        expected_text = "{{REDaten\n|BAND=I A,1\n}}\nAbba.\n\n[[Kategorie:RE:Verweisung]]\n{{REAutor|OFF}}\n" \
+                        "== Anmerkungen (Wikisource) ==\n{{References||WS}}"
         self.assertEqual(expected_text, FixReStructure.process_text(text))
 
 
@@ -112,4 +73,3 @@ if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
     with FixReStructure(wiki=wiki, debug=True) as bot:
         bot.run()
-        
