@@ -98,7 +98,7 @@ class BaseBot(object):
                 self._dumb_timestamp(False)
 
     def _update_logger_name(self, log_type: str):
-        self.logger_names.update({'debug': 'data/{name}_{log_type}_{timestamp}.log'
+        self.logger_names.update({log_type: 'data/{name}_{log_type}_{timestamp}.log'
                                                .format(name = self.bot_name,
                                                        log_type = log_type.capitalize(),
                                                        timestamp = time.strftime('%y%m%d%H%M%S', time.localtime()))})
