@@ -1,10 +1,11 @@
+from datetime import datetime
 import re
+from typing import Iterator
 
-from pywikibot import Page
+from pywikibot import Page, Site
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot, BotExeption
-from datetime import datetime
 
 
 class GlCreateMagazine(CanonicalBot):
@@ -20,16 +21,15 @@ class GlCreateMagazine(CanonicalBot):
         self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
         self.new_data_model = datetime(year=2017, month=11, day=11, hour=12)
-        self.indexes = None
         self.lemmas = None
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
         if not self.data:
             self.data = {'pages': {}, 'indexes': {}}
+        return self
 
     def task(self):
-        self.indexes = self.search_indexes()
         self.lemmas = self.search_pages()
         temp_data_pages = {}
         self.process_indexes()
@@ -70,13 +70,10 @@ class GlCreateMagazine(CanonicalBot):
                 self.logger.error("wasn't able to process {}, error: {}".format(lemma['title'], error))
 
     def process_indexes(self):
-        for idx, index in enumerate(self.indexes):
-            index_lemma = IndexPage(self.wiki, 'Index:{}'.format(index['title']))
-            self.logger.info('{idx}/{sum} [[Index:{index}]]'.format(idx=idx + 1,
-                                                                    sum=len(self.indexes),
-                                                                    index=index['title']))
-            magazines = self.regex_magazine_in_index.findall(index_lemma.text)
-            hit_year = self.regex_index.search(index['title'])
+        for index_lemma, index_page in self._get_indexes():
+            self.logger.info("[[Index:{}]]".format(index_lemma))
+            magazines = self.regex_magazine_in_index.findall(index_page.text)
+            hit_year = self.regex_index.search(index_lemma)
             year = hit_year.group(1)
             if year not in self.data['indexes'].keys():
                 self.data['indexes'][year] = {}
@@ -280,12 +277,13 @@ class GlCreateMagazine(CanonicalBot):
         string_list.append('\n')
         return ''.join(string_list)
 
-    def search_indexes(self):
+    def _get_indexes(self) -> Iterator[IndexPage]:
         self.searcher_indexes.add_positive_category('Die Gartenlaube')
         self.searcher_indexes.add_positive_category('Index')
         self.searcher_indexes.set_regex_filter('.*Die Gartenlaube \(\d{4}\)')
         self.searcher_indexes.set_timeout(60)
-        return self.searcher_indexes.run()
+        for index in self.searcher_indexes.run():
+            yield index["title"], IndexPage(self.wiki, 'Index:{}'.format(index['title']))
 
     def search_pages(self):
         self.searcher_pages.add_positive_category('Die Gartenlaube')
@@ -296,5 +294,11 @@ class GlCreateMagazine(CanonicalBot):
             delta = (self.timestamp_start - self.last_run['timestamp']).days
             self.create_timestamp_for_search(self.searcher_pages, delta)
         elif self.debug:
-            self.create_timestamp_for_search(self.searcher_pages, 0)
+            self.create_timestamp_for_search(self.searcher_pages, 10)
         return self.searcher_pages.run()
+
+
+if __name__ == "__main__":
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with GlCreateMagazine(wiki=wiki, debug=True) as bot:
+        bot.run()
