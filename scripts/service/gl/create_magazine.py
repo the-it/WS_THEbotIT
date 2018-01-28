@@ -8,7 +8,6 @@ from tools.catscan import PetScan
 from tools.bots import CanonicalBot, BotExeption
 
 
-
 class GlCreateMagazine(CanonicalBot):
     bot_name = 'MagazinesGL'
 
