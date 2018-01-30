@@ -25,7 +25,7 @@ class BaseBot(object):
         self.logger_names = {}
         self.debug = debug
         self.last_run = {}
-        self.filename = 'data/{}.last_run.json'.format(self.bot_name)
+        self.filename_timestamp = 'data/{}.last_run.json'.format(self.bot_name)
         self.timeformat = '%Y-%m-%d_%H:%M:%S'
         if not self.bot_name:
             raise NotImplementedError('The class variable bot_name is not implemented. Implement the variable.')
@@ -68,12 +68,12 @@ class BaseBot(object):
 
     def set_up_timestamp(self):
         try:
-            with open(self.filename, 'r') as filepointer:
+            with open(self.filename_timestamp, 'r') as filepointer:
                 self.last_run = json.load(filepointer)
                 self.last_run['timestamp'] = datetime.strptime(self.last_run['timestamp'], self.timeformat)
             self.logger.info("Open existing timestamp.")
             try:
-                os.remove(self.filename)
+                os.remove(self.filename_timestamp)
             except OSError:
                 pass
         except:
@@ -81,7 +81,7 @@ class BaseBot(object):
             self.last_run = None
 
     def _dumb_timestamp(self, success: bool):
-        with open(self.filename, "w") as file_pointer:
+        with open(self.filename_timestamp, "w") as file_pointer:
             json.dump({'success': success, 'timestamp': self.timestamp_start},
                       file_pointer,
                       default=lambda obj: obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
@@ -90,12 +90,11 @@ class BaseBot(object):
         if self.success:
             if not os.path.isdir("data"):
                 os.mkdir("data")
-                self._dumb_timestamp(True)
+            self._dumb_timestamp(True)
             self.logger.info("Timestamp successfully kept.")
         else:
+            self._dumb_timestamp(False)
             self.logger.warning("The bot run was\'t successful. Timestamp will be kept.")
-            with open(self.filename, "w") as file_pointer:
-                self._dumb_timestamp(False)
 
     def _update_logger_name(self, log_type: str):
         self.logger_names.update({log_type: 'data/{name}_{log_type}_{timestamp}.log'
