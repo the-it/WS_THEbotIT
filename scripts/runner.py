@@ -16,7 +16,7 @@ from scripts.service.ws_re.status import ReStatus
 from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.ws_re.scanner import ReScanner
-from tools.bots import CanonicalBot, PingCanonical
+from tools.bots import CanonicalBot
 
 
 class DailyRunner(CanonicalBot):
@@ -29,7 +29,8 @@ class DailyRunner(CanonicalBot):
         self.regex_one_timer = re.compile('(\d{4})\d{4}')
 
     def run_one_timers(self):
-        one_timers = tuple(file for file in os.listdir('~/WS_THEbotIT/scripts/online') if self.regex_one_timer.search(file))
+        path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts, online"])
+        one_timers = tuple(file for file in os.listdir(path_to_online) if self.regex_one_timer.search(file))
         self.logger.info('One timers to run: {}'.format(one_timers))
         for one_timer in one_timers:
             self.logger.info('Run {}'.format(one_timer))
@@ -46,16 +47,16 @@ class DailyRunner(CanonicalBot):
                 # move the file to the archives if it was successful
                 self.logger.info('{} finished the work successful'.format(one_timer))
                 year = self.regex_one_timer.match(one_timer).group(1)
-                os.rename('online' + os.sep + one_timer, 'online' + os.sep + year + os.sep + one_timer)
+                os.rename(path_to_online + os.sep + one_timer, path_to_online + os.sep + year + os.sep + one_timer)
                 repo = git.Repo(search_parent_directories=True)
-                repo.index.add(['scripts' + os.sep + 'online' + os.sep + year + os.sep + one_timer])
-                repo.index.remove(['scripts' + os.sep + 'online' + os.sep + one_timer])
+                repo.index.add([path_to_online + os.sep + year + os.sep + one_timer])
+                repo.index.remove([path_to_online + os.sep + one_timer])
                 repo.index.commit('move successful bot script')
                 origin = repo.remote('origin')
                 origin.push()
 
     def run_dailys(self):
-        daily_list = [PingCanonical]#AuthorList]#, ReScanner]
+        daily_list = [AuthorList]#, ReScanner]
         for daily_bot in daily_list:
             self.run_bot(daily_bot(wiki=self.wiki, debug=self.debug))
 
