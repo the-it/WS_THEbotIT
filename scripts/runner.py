@@ -29,7 +29,7 @@ class DailyRunner(CanonicalBot):
         self.regex_one_timer = re.compile('(\d{4})\d{4}')
 
     def run_one_timers(self):
-        path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts, online"])
+        path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts", "online"])
         one_timers = tuple(file for file in os.listdir(path_to_online) if self.regex_one_timer.search(file))
         self.logger.info('One timers to run: {}'.format(one_timers))
         for one_timer in one_timers:
