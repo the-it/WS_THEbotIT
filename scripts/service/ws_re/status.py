@@ -1,7 +1,7 @@
 import re
 from datetime import datetime, timedelta
 
-from pywikibot import Page
+from pywikibot import Page, Site
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot
 
@@ -13,11 +13,11 @@ class ReStatus(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
 
     def task(self):
-        fertig = self.get_sum_of_cat(['Fertig RE'],
-                                     ['Teilkorrigiert RE', 'Korrigiert RE', 'Unkorrigiert RE', 'Unvollständig RE'])
-        korrigiert = self.get_sum_of_cat(['Teilkorrigiert RE', 'Korrigiert RE'],
-                                         ['Unkorrigiert RE', 'Unvollständig RE'])
-        unkorrigiert = self.get_sum_of_cat(['Unkorrigiert RE', 'Unvollständig RE'], [])
+        fertig = self.get_sum_of_cat(['RE:Fertig'],
+                                     ['RE:Teilkorrigiert', 'RE:Korrigiert', 'RE:Unkorrigiert', 'RE:Unvollständig'])
+        korrigiert = self.get_sum_of_cat(['RE:Teilkorrigiert', 'RE:Korrigiert'],
+                                         ['RE:Unkorrigiert', 'RE:Unvollständig'])
+        unkorrigiert = self.get_sum_of_cat(['RE:Unkorrigiert', 'RE:Unvollständig'], [])
         self.userpage_THE_IT(korrigiert)
         self.history(fertig, korrigiert, unkorrigiert)
         return True
@@ -41,7 +41,7 @@ class ReStatus(CanonicalBot):
         color = self.make_color(5.0e3, 5.25e3, korrigiert[1])
         status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[1]))
 
-        list_of_lemmas = self.petscan(['Teilkorrigiert RE', 'Korrigiert RE'], ['Unkorrigiert RE', 'Unvollständig RE'])
+        list_of_lemmas = self.petscan(['RE:Teilkorrigiert', 'RE:Korrigiert'], ['RE:Unkorrigiert', 'RE:Unvollständig'])
         date_page = Page(self.wiki, list_of_lemmas[0]['title'])
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
         gap = datetime.now() - datetime.strptime(date_of_first, '%Y-%m-%d')
@@ -84,3 +84,9 @@ class ReStatus(CanonicalBot):
         searcher.set_logic_union()
         self.logger.debug(searcher)
         return searcher.run()
+
+
+if __name__ == "__main__":
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with ReStatus(wiki=wiki, debug=True) as bot:
+        bot.run()
