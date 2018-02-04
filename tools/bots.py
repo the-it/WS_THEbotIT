@@ -1,10 +1,12 @@
-import logging
-import sys
-import os
-import time
+from collections import Mapping
 from datetime import datetime, timedelta
 import json
-from pywikibot import Page, Site
+import logging
+import os
+import sys
+import time
+
+from pywikibot import Page
 
 
 class BotExeption(Exception):
@@ -156,8 +158,46 @@ class BaseBot(object):
 
 
 class OneTimeBot(BaseBot):
-    def __init__(self, wiki, debug):
-        BaseBot.__init__(self, wiki, debug)
+    pass
+
+
+class PersistedData(Mapping):
+    def __init__(self, botname: str):
+        self.data = {}
+        self.botname = botname
+        self.data_folder = os.getcwd() + os.sep + "data"
+        self.file_name = self.data_folder + os.sep + botname + ".data.json"
+
+    def __getitem__(self, item):
+        return self.data[item]
+
+    def __setitem__(self, key, value):
+        self.data[key] = value
+
+    def __len__(self):
+        return len(self.data)
+
+    def __iter__(self):
+        return iter(self.data)
+
+    def assign_dict(self, new_dict: dict):
+        if type(new_dict) is dict:
+            self.data = new_dict
+        else:
+            raise BotExeption("{} has the wrong type. It must be a dictionary.".format(new_dict))
+
+    def dump(self):
+        if not os.path.exists(self.data_folder):
+            os.mkdir(self.data_folder)
+        with open(self.data_folder + os.sep + self.botname + ".json", mode="w") as json_file:
+            json.dump(self.data, json_file)
+
+    def load(self):
+        if os.path.exists(self.file_name):
+            with open(self.file_name, mode="r") as json_file:
+                self.data = json.load(json_file)
+        else:
+            logging.warning("No existing data available.")
 
 
 class CanonicalBot(BaseBot):
