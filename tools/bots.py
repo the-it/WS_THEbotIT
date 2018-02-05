@@ -162,11 +162,11 @@ class OneTimeBot(BaseBot):
 
 
 class PersistedData(Mapping):
-    def __init__(self, botname: str):
+    def __init__(self, bot_name: str):
         self.data = {}
-        self.botname = botname
+        self.botname = bot_name
         self.data_folder = os.getcwd() + os.sep + "data"
-        self.file_name = self.data_folder + os.sep + botname + ".data.json"
+        self.file_name = self.data_folder + os.sep + bot_name + ".data.json"
 
     def __getitem__(self, item):
         return self.data[item]
@@ -186,49 +186,43 @@ class PersistedData(Mapping):
         else:
             raise BotExeption("{} has the wrong type. It must be a dictionary.".format(new_dict))
 
-    def dump(self):
+    def dump(self, success=True):
         if not os.path.exists(self.data_folder):
             os.mkdir(self.data_folder)
-        with open(self.data_folder + os.sep + self.botname + ".json", mode="w") as json_file:
-            json.dump(self.data, json_file)
+        if success:
+            with open(self.file_name, mode="w") as json_file:
+                json.dump(self.data, json_file)
+            if os.path.isfile(self.file_name + ".deprecated"):
+                os.remove(self.file_name + ".deprecated")
+        else:
+            with open(self.file_name + ".broken", mode="w") as json_file:
+                json.dump(self.data, json_file)
 
     def load(self):
         if os.path.exists(self.file_name):
             with open(self.file_name, mode="r") as json_file:
                 self.data = json.load(json_file)
+            os.rename(self.file_name, self.file_name + ".deprecated")
         else:
-            logging.warning("No existing data available.")
+            raise BotExeption("Not data to load.")
 
 
 class CanonicalBot(BaseBot):
     def __init__(self, wiki, debug):
         BaseBot.__init__(self, wiki, debug)
+        self.data = PersistedData(bot_name=self.bot_name)
         self.new_data_model = None
-
-    def _open_data_file(self):
-        with open(self.data_filename) as filepointer:
-            self.data = json.load(filepointer)
-        self.logger.info("Open existing data.")
-        try:
-            os.rename(self.data_filename, self.data_filename + ".deprecated")
-        except OSError:
-            self.logger.error("It wasn't possible to move the data to .deprecated")
 
     def __enter__(self):
         BaseBot.__enter__(self)
-        self.data_filename = 'data/{}.data.json'.format(self.bot_name)
-        try:
-            if self.data_outdated():
-                self.data = {}
-                self.logger.warning('The data is thrown away. It is out of date')
-            elif (self.last_run is None) or (self.last_run['success'] == False):
-                self.data = {}
-                self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
-            else:
-                self._open_data_file()
-        except IOError:
-            self.data = {}
-            self.logger.warning("No existing data available.")
+        if self.data_outdated():
+            self.data.assign_dict({})
+            self.logger.warning('The data is thrown away. It is out of date')
+        elif (self.last_run is None) or (self.last_run['success'] == False):
+            self.data.assign_dict({})
+            self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
+        else:
+            self.data.load()
         return self
 
     @staticmethod
@@ -238,16 +232,9 @@ class CanonicalBot(BaseBot):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if not exc_type:
-            if not os.path.isdir("data"):
-                os.mkdir("data")
-            with open(self.data_filename, "w") as filepointer:
-                json.dump(self.data, filepointer)
-            self._remove_file_if_exists(self.data_filename + ".deprecated")
-            self._remove_file_if_exists(self.data_filename + ".broken")
-            self.logger.info("Data successfully stored.")
+            self.data.dump(success=True)
         else:
-            with open(self.data_filename + '.broken', "w") as filepointer:
-                json.dump(self.data, filepointer)
+            self.data.dump(success=False)
             self.logger.critical("There was an error in the general procedure. "
                                  "The broken data and a backup of the old will be keept.")
         BaseBot.__exit__(self, exc_type, exc_val, exc_tb)

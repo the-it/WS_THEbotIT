@@ -1,4 +1,5 @@
 from collections import Mapping
+import json
 import os
 from shutil import rmtree
 from unittest import TestCase, mock, skip
@@ -19,10 +20,12 @@ class TestPersistedData(TestCase):
         if os.path.exists(self.data_path):
             rmtree(self.data_path)
 
-    def _make_json_file(self):
+    def _make_json_file(self, filename: str="TestBot.data.json", data: str=None):
         os.mkdir(self.data_path)
-        with open(self.data_path + os.sep + "TestBot.data.json", mode="w") as data_file:
-            data_file.write(self.json_test)
+        with open(self.data_path + os.sep + filename, mode="w") as data_file:
+            if not data:
+                data = self.json_test
+            data_file.write(data)
 
     def setUp(self):
         self._remove_data_folder()
@@ -57,13 +60,13 @@ class TestPersistedData(TestCase):
     def test_dump(self):
         os.mkdir(os.getcwd() + os.sep + "data")
         self.data.dump()
-        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.json"))
+        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
 
     def test_dump_value_is_correct(self):
         self.data.assign_dict(self.data_test)
         os.mkdir(os.getcwd() + os.sep + "data")
         self.data.dump()
-        with open(self.data_path + os.sep + "TestBot.json", mode="r") as file:
+        with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
             self.assertEqual(self.json_test, file.read())
 
     def test_dump_and_create_folder(self):
@@ -74,15 +77,24 @@ class TestPersistedData(TestCase):
         self.data.load()
         self.assertEqual([1, 2], self.data["a"])
 
-    @mock.patch("tools.bots.logging")
-    def test_no_data_to_load(self, mock_logging):
-        self.data.load()
-        self.assertEqual({}, self.data)
-        mock_logging.warning.assert_called_once_with("No existing data available.")
+    def test_no_data_to_load(self):
+        with self.assertRaises(BotExeption):
+            self.data.load()
+        self.assertFalse(self.data.keys())
 
-    @skip
     def test_flag_old_file_as_deprecated(self):
         self._make_json_file()
         self.data.load()
-        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.json.deprecated"))
-        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.json"))
+        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
+        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
+
+    def test_flag_data_as_broken(self):
+        self._make_json_file()
+        self.data.load()
+        self.data["b"] = 2
+        self.data.dump(success=False)
+        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
+        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.broken"))
+        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
+            json_dict = json.load(json_file)
+        self.assertEqual(2, json_dict["b"])
