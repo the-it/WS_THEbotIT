@@ -1,9 +1,4 @@
-from unittest import TestCase
-
-__author__ = 'eso'
-
-import sys
-sys.path.append('../../')
+from test import *
 from tools.template_handler import TemplateHandler, TemplateFinder, TemplateFinderException
 
 test_title = "vorlage"

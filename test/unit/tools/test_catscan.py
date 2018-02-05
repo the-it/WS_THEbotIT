@@ -1,7 +1,6 @@
-import sys
-sys.path.append('../')
-from unittest import TestCase
 import httpretty
+
+from test import *
 from tools.catscan import PetScan
 
 
