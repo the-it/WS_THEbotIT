@@ -8,9 +8,16 @@ import time
 
 from pywikibot import Page
 
+_data_folder = os.getcwd() + os.sep + "data"
+
 
 class BotExeption(Exception):
     pass
+
+
+class WikiLogger(object):
+    def __init__(self):
+        pass
 
 
 class BaseBot(object):
@@ -165,7 +172,7 @@ class PersistedData(Mapping):
     def __init__(self, bot_name: str):
         self.data = {}
         self.botname = bot_name
-        self.data_folder = os.getcwd() + os.sep + "data"
+        self.data_folder = _data_folder
         self.file_name = self.data_folder + os.sep + bot_name + ".data.json"
 
     def __getitem__(self, item):

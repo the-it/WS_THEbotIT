@@ -98,3 +98,6 @@ class TestPersistedData(TestCase):
         with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
             json_dict = json.load(json_file)
         self.assertEqual(2, json_dict["b"])
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+            json_dict = json.load(json_file)
+        self.assertEqual(["a"], list(json_dict.keys()))
