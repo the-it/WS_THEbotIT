@@ -2,23 +2,48 @@ from collections import Mapping
 import json
 import os
 from shutil import rmtree
-from unittest import TestCase, mock, skip
 
-from tools.bots import BotExeption, PersistedData
+from test import *
+from tools.bots import BotExeption, PersistedData, WikiLogger, get_data_path
+
+_data_path = os.getcwd() + os.sep + "data"
+
+
+def _remove_data_folder():
+    if os.path.exists(_data_path):
+        rmtree(_data_path)
+
+
+class TestGetDataPath(TestCase):
+    def setUp(self):
+        _remove_data_folder()
+
+    def test_folder_exist(self):
+        os.mkdir(_data_path)
+        with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
+            self.assertEqual(_data_path, get_data_path())
+            mock_mkdir.assert_not_called()
+
+    def test_make_folder(self):
+        with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
+            self.assertEqual(_data_path, get_data_path())
+            mock_mkdir.assert_called_once()
+
+class TestWikilogger(TestCase):
+    def setUp(self):
+        self.logger = WikiLogger()
+
+
 
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
         super(TestPersistedData, self).__init__(*args, **kwargs)
-        self.data_path = os.getcwd() + os.sep + "data"
+        self.data_path = _data_path
         self.json_test = "{\"a\": [1, 2]}"
         self.json_test_extend = "{\"a\": [1, 2], \"b\": 1}"
         self.data_test = {"a": [1, 2]}
         self.data_test_extend = {"a": [1, 2], "b": 1}
-
-    def _remove_data_folder(self):
-        if os.path.exists(self.data_path):
-            rmtree(self.data_path)
 
     def _make_json_file(self, filename: str="TestBot.data.json", data: str=None):
         os.mkdir(self.data_path)
@@ -28,11 +53,11 @@ class TestPersistedData(TestCase):
             data_file.write(data)
 
     def setUp(self):
-        self._remove_data_folder()
+        _remove_data_folder()
         self.data = PersistedData("TestBot")
 
     def tearDown(self):
-        self._remove_data_folder()
+        _remove_data_folder()
 
     def test_is_mapping(self):
         self.assertTrue(isinstance(self.data, Mapping))

@@ -8,11 +8,16 @@ import time
 
 from pywikibot import Page
 
-_data_folder = os.getcwd() + os.sep + "data"
-
 
 class BotExeption(Exception):
     pass
+
+
+def get_data_path():
+    data_path = os.getcwd() + os.sep + "data"
+    if not os.path.exists(data_path):
+        os.mkdir(data_path)
+    return data_path
 
 
 class WikiLogger(object):
