@@ -93,7 +93,6 @@ class TestCatScan(TestCase):
         self.petscan.add_negative_category("neg1")
         self.petscan.add_negative_category("neg 2")
         self.petscan.add_negative_category("neg3")
-        print(self.petscan._construct_list_argument(self.petscan.categories["positive"]))
         self.assertEqual("pos+1\r\npos2", self.petscan._construct_list_argument(self.petscan.categories["positive"]))
         self.assertEqual("neg1\r\nneg+2\r\nneg3",
                          self.petscan._construct_list_argument(self.petscan.categories["negative"]))
