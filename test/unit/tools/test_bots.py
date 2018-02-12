@@ -1,10 +1,13 @@
 from collections import Mapping
+from contextlib import redirect_stdout
+from datetime import datetime
+import io
 import json
 import os
 from shutil import rmtree
 
 from test import *
-from tools.bots import BotExeption, PersistedData, WikiLogger, get_data_path
+from tools.bots import BotExeption, PersistedData, WikiLogger, _get_data_path
 
 _data_path = os.getcwd() + os.sep + "data"
 
@@ -21,18 +24,55 @@ class TestGetDataPath(TestCase):
     def test_folder_exist(self):
         os.mkdir(_data_path)
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
-            self.assertEqual(_data_path, get_data_path())
+            self.assertEqual(_data_path, _get_data_path())
             mock_mkdir.assert_not_called()
 
     def test_make_folder(self):
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
-            self.assertEqual(_data_path, get_data_path())
+            self.assertEqual(_data_path, _get_data_path())
             mock_mkdir.assert_called_once()
+
 
 class TestWikilogger(TestCase):
     def setUp(self):
-        self.logger = WikiLogger()
+        _remove_data_folder()
+        self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1))
 
+    def tearDown(self):
+        self.logger.tear_down()
+        _remove_data_folder()
+
+    def test_logfile_names(self):
+        self.assertDictEqual({"debug": "test_bot_DEBUG_000101000000.log", "info": "test_bot_INFO_000101000000.log"},
+                             self.logger._get_logger_names())
+
+    def test_log_message(self):
+        self.logger.debug("debug")
+        self.logger.info("info")
+        with open("data/test_bot_INFO_000101000000.log") as info_file:
+            self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
+        with open("data/test_bot_DEBUG_000101000000.log") as info_file:
+            self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[DEBUG\s*?\]\s\[debug\]\n"
+                                               r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
+
+    def test_tear_down(self):
+        self.logger.debug("debug")
+        self.logger.info("info")
+        self.assertTrue(os.path.isfile("data/test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile("data/test_bot_DEBUG_000101000000.log"))
+        self.logger.tear_down()
+        self.assertFalse(os.path.isfile("data/test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile("data/test_bot_DEBUG_000101000000.log"))
+
+    def test_format_log_lines_for_wiki(self):
+        self.logger.info("info")
+        self.logger.warning("warning")
+        self.logger.error("error")
+        expected_output = r"==Log of 01\.01\.00 um 00:00:00==\n\n" \
+                          r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n\n" \
+                          r"\[\d\d:\d\d:\d\d\]\s\[WARNING\s*?\]\s\[warning\]\n\n" \
+                          r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[error\]\n--~~~~"
+        self.assertRegex(self.logger.create_wiki_log_lines(datetime(year=2000, month=1, day=1)), expected_output)
 
 
 
@@ -46,7 +86,6 @@ class TestPersistedData(TestCase):
         self.data_test_extend = {"a": [1, 2], "b": 1}
 
     def _make_json_file(self, filename: str="TestBot.data.json", data: str=None):
-        os.mkdir(self.data_path)
         with open(self.data_path + os.sep + filename, mode="w") as data_file:
             if not data:
                 data = self.json_test
@@ -83,13 +122,11 @@ class TestPersistedData(TestCase):
             self.data.assign_dict(1)
 
     def test_dump(self):
-        os.mkdir(os.getcwd() + os.sep + "data")
         self.data.dump()
         self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
 
     def test_dump_value_is_correct(self):
         self.data.assign_dict(self.data_test)
-        os.mkdir(os.getcwd() + os.sep + "data")
         self.data.dump()
         with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
             self.assertEqual(self.json_test, file.read())

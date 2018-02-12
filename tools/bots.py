@@ -6,14 +6,14 @@ import os
 import sys
 import time
 
-from pywikibot import Page
+from pywikibot import Page, Site
 
 
 class BotExeption(Exception):
     pass
 
 
-def get_data_path():
+def _get_data_path():
     data_path = os.getcwd() + os.sep + "data"
     if not os.path.exists(data_path):
         os.mkdir(data_path)
@@ -21,19 +21,93 @@ def get_data_path():
 
 
 class WikiLogger(object):
-    def __init__(self):
-        pass
+    _logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
+    _logger_date_format = "%H:%M:%S"
+    _wiki_timestamp_format = '%d.%m.%y um %H:%M:%S'
+
+    def __init__(self, bot_name: str, start_time: datetime):
+        self._bot_name = bot_name
+        self._start_time = start_time
+        self._data_path = _get_data_path()
+        self._logger = logging.getLogger(self._bot_name)
+        self._logger_names = self._get_logger_names()
+        self._setup_logger_properties()
+
+    def _get_logger_names(self):
+        log_file_names = {}
+        for log_type in ("info", "debug"):
+            log_file_names.update({log_type: '{name}_{log_type}_{timestamp}.log'
+                                  .format(name=self._bot_name,
+                                          log_type=log_type.upper(),
+                                          timestamp=self._start_time.strftime('%y%m%d%H%M%S'))})
+        return log_file_names
+
+    def _setup_logger_properties(self):
+        self._logger.setLevel(logging.DEBUG)
+        error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['info'], encoding='utf8')
+        error_log.setLevel(logging.INFO)
+        debug_stream = logging.StreamHandler(sys.stdout)
+        debug_stream.setLevel(logging.DEBUG)
+        debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['debug'], encoding='utf8')
+        debug_log.setLevel(logging.DEBUG)
+        formatter = logging.Formatter(self._logger_format, datefmt=self._logger_date_format)
+        error_log.setFormatter(formatter)
+        debug_stream.setFormatter(formatter)
+        debug_log.setFormatter(formatter)
+        self._logger.addHandler(error_log)
+        self._logger.addHandler(debug_stream)
+        self._logger.addHandler(debug_log)
+
+    def tear_down(self):
+        for handler in self._logger.handlers:
+            handler.close()
+        if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
+            os.remove(self._data_path + os.sep + self._logger_names['info'])
+        sys.stdout.flush()
+        logging.shutdown()
+
+    def debug(self, msg: str):
+        self._logger.debug(msg=msg)
+
+    def info(self, msg: str):
+        self._logger.info(msg=msg)
+
+    def warning(self, msg: str):
+        self._logger.warning(msg=msg)
+
+    def error(self, msg: str):
+        self._logger.error(msg=msg)
+
+    def critical(self, msg: str):
+        self._logger.critical(msg=msg)
+
+    def exception(self, msg: str, exc_info):
+        self._logger.exception(msg=msg, exc_info=exc_info)
+
+    def create_wiki_log_lines(self):
+        with open(self._data_path + os.sep + self._logger_names['info'], encoding='utf8') as filepointer:
+            line_list = list()
+            for line in filepointer:
+                line_list.append(line.strip())
+            log_lines = ""
+            log_lines = log_lines \
+                + '\n\n' \
+                + '==Log of {}=='.format(self._start_time.strftime(self._wiki_timestamp_format)) \
+                + '\n\n' \
+                + '\n\n'.join(line_list) \
+                + '\n--~~~~'
+            return log_lines
 
 
 class BaseBot(object):
     bot_name = None
+    bar_string = 120 * "#"
 
     def __init__(self, wiki, debug):
         self.success = False
         self.timestamp_start = datetime.now()
         self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
         self.wiki = wiki
-        self.bar_string = '{:#^120}'.format('')
         self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
         self.logger_date_format = "%H:%M:%S"
         self.logger_names = {}
@@ -46,11 +120,11 @@ class BaseBot(object):
         self.timeout = timedelta(minutes=60)
 
     def __enter__(self):
-        self.logger = self.set_up_logger()
+        self.set_up_timestamp()
+        self.logger = WikiLogger(self.bot_name, self.timestamp_start)
         print(self.bar_string)
         self.logger.info('Start the bot {}.'.format(self.bot_name))
         print(self.bar_string)
-        self.set_up_timestamp()
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -58,7 +132,8 @@ class BaseBot(object):
         print(self.bar_string)
         self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp_start))
         print(self.bar_string)
-        self.tear_down_logger()
+        self.send_log_to_wiki()
+        self.logger.tear_down()
 
     def task(self):
         self.logger.critical("You should really add functionality here.")
@@ -110,63 +185,11 @@ class BaseBot(object):
             self._dumb_timestamp(False)
             self.logger.warning("The bot run was\'t successful. Timestamp will be kept.")
 
-    def _update_logger_name(self, log_type: str):
-        self.logger_names.update({log_type: 'data/{name}_{log_type}_{timestamp}.log'
-                                               .format(name = self.bot_name,
-                                                       log_type = log_type.capitalize(),
-                                                       timestamp = time.strftime('%y%m%d%H%M%S', time.localtime()))})
-
-    def set_up_logger(self):
-        if not os.path.exists('data'):
-            os.makedirs('data')
-        self._update_logger_name("debug")
-        self._update_logger_name("info")
-        logger = logging.getLogger(self.bot_name)
-        logger.setLevel(logging.DEBUG)
-        error_log = logging.FileHandler(self.logger_names['info'], encoding='utf8')
-        error_log.setLevel(logging.INFO)
-        debug_stream = logging.StreamHandler(sys.stdout)
-        debug_stream.setLevel(logging.DEBUG)
-        debug_log = logging.FileHandler(self.logger_names['debug'], encoding='utf8')
-        debug_log.setLevel(logging.DEBUG)
-        formatter = logging.Formatter(self.logger_format, datefmt=self.logger_date_format)
-        error_log.setFormatter(formatter)
-        debug_stream.setFormatter(formatter)
-        debug_log.setFormatter(formatter)
-        logger.addHandler(error_log)
-        logger.addHandler(debug_stream)
-        logger.addHandler(debug_log)
-        return logger
-
-    def tear_down_logger(self):
-        for handler in self.logger.handlers:
-            handler.close()
-        if not self.debug:
-            self.send_log_to_wiki()
-        if os.path.isfile(self.logger_names['info']):
-            os.remove(self.logger_names['info'])
-            pass
-        sys.stdout.flush()
-        logging.shutdown()
-
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
         page = Page(self.wiki, wiki_log_page)
-        self.dump_log_lines(page)
-
-    def dump_log_lines(self, page):
-        with open(self.logger_names['info'], encoding='utf8') as filepointer:
-            line_list = list()
-            for line in filepointer:
-                line_list.append(line.strip())
-            temptext = page.text
-            temptext = temptext \
-                + '\n\n' \
-                + '==Log of {}=='.format(self.timestamp_nice) \
-                + '\n\n' \
-                + '\n\n'.join(line_list)
-            page.text = temptext + '\n--~~~~'
-            page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
+        page.text += self.logger.create_wiki_log_lines()
+        page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
 
 
 class OneTimeBot(BaseBot):
@@ -177,7 +200,7 @@ class PersistedData(Mapping):
     def __init__(self, bot_name: str):
         self.data = {}
         self.botname = bot_name
-        self.data_folder = _data_folder
+        self.data_folder = _get_data_path()
         self.file_name = self.data_folder + os.sep + bot_name + ".data.json"
 
     def __getitem__(self, item):
@@ -199,8 +222,6 @@ class PersistedData(Mapping):
             raise BotExeption("{} has the wrong type. It must be a dictionary.".format(new_dict))
 
     def dump(self, success=True):
-        if not os.path.exists(self.data_folder):
-            os.mkdir(self.data_folder)
         if success:
             with open(self.file_name, mode="w") as json_file:
                 json.dump(self.data, json_file)
@@ -289,3 +310,8 @@ class PingCanonical(CanonicalBot):
         self.logger.info('PingCanonical')
         self.logger.debug('äüö')
         return True
+
+if __name__ == "__main__":
+    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with PingOneTime(wiki=wiki, debug=False) as bot:
+        bot.run()
