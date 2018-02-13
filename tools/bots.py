@@ -4,7 +4,6 @@ import json
 import logging
 import os
 import sys
-import time
 
 from pywikibot import Page, Site
 
@@ -99,6 +98,35 @@ class WikiLogger(object):
             return log_lines
 
 
+class PersistedTimestamp(object):
+    _timeformat = '%Y-%m-%d_%H:%M:%S'
+    _last_run = None
+
+    def __init__(self, bot_name: str):
+        self._start = datetime.now()
+        self._data_path = _get_data_path()
+        self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
+        self._load()
+
+    def persist(self):
+        with open(self._full_filename, mode="w") as persist_json:
+            json.dump({"last_run": self._start.strftime(self._timeformat)}, persist_json)
+
+    def _load(self):
+        with open(self._full_filename, mode="r") as persist_json:
+            last_run_dict = json.load(persist_json)
+            self._last_run = datetime.strptime(last_run_dict["last_run"], self._timeformat)
+        os.remove(self._full_filename)
+
+    @property
+    def last_run(self):
+        return self._last_run
+
+    @property
+    def start(self):
+        return self._start
+
+
 class BaseBot(object):
     bot_name = None
     bar_string = 120 * "#"
@@ -106,11 +134,7 @@ class BaseBot(object):
     def __init__(self, wiki, debug):
         self.success = False
         self.timestamp_start = datetime.now()
-        self.timestamp_nice = self.timestamp_start.strftime('%d.%m.%y um %H:%M:%S')
         self.wiki = wiki
-        self.logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
-        self.logger_date_format = "%H:%M:%S"
-        self.logger_names = {}
         self.debug = debug
         self.last_run = {}
         self.filename_timestamp = 'data/{}.last_run.json'.format(self.bot_name)
@@ -161,11 +185,8 @@ class BaseBot(object):
                 self.last_run = json.load(filepointer)
                 self.last_run['timestamp'] = datetime.strptime(self.last_run['timestamp'], self.timeformat)
             self.logger.info("Open existing timestamp.")
-            try:
-                os.remove(self.filename_timestamp)
-            except OSError:
-                pass
-        except:
+            os.remove(self.filename_timestamp)
+        except OSError:
             self.logger.warning("it wasn't possible to retrieve an existing timestamp.")
             self.last_run = None
 

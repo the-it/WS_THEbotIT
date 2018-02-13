@@ -1,13 +1,12 @@
 from collections import Mapping
-from contextlib import redirect_stdout
 from datetime import datetime
-import io
 import json
 import os
 from shutil import rmtree
+import time
 
 from test import *
-from tools.bots import BotExeption, PersistedData, WikiLogger, _get_data_path
+from tools.bots import BotExeption, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
 
 _data_path = os.getcwd() + os.sep + "data"
 
@@ -72,8 +71,32 @@ class TestWikilogger(TestCase):
                           r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[WARNING\s*?\]\s\[warning\]\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[error\]\n--~~~~"
-        self.assertRegex(self.logger.create_wiki_log_lines(datetime(year=2000, month=1, day=1)), expected_output)
+        self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
 
+
+class TestPersistedTimestamp(TestCase):
+    _precision = 0.001
+
+    def setUp(self):
+        _remove_data_folder()
+        os.mkdir("data")
+        with open("data/test_bot.last_run.json", mode="w") as persist_json:
+            json.dump({"last_run": '2000-01-01_00:00:00'}, persist_json)
+        self.reference = datetime.now()
+        self.timestamp = PersistedTimestamp("test_bot")
+
+    def tearDown(self):
+        _remove_data_folder()
+
+    def test_start_timestamp(self):
+        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta= self._precision)
+
+    def test_last_run_timestamp(self):
+        self.assertFalse(os.path.isfile("data/test_bot.last_run.json"))
+        self.assertAlmostEqual(datetime(year=2000, month=1, day=1).timestamp(),
+                               self.timestamp.last_run.timestamp(),
+                               delta=self._precision)
+        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta=self._precision)
 
 
 class TestPersistedData(TestCase):
