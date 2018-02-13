@@ -101,6 +101,7 @@ class WikiLogger(object):
 class PersistedTimestamp(object):
     _timeformat = '%Y-%m-%d_%H:%M:%S'
     _last_run = None
+    _success = False
 
     def __init__(self, bot_name: str):
         self._start = datetime.now()
@@ -108,14 +109,15 @@ class PersistedTimestamp(object):
         self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
         self._load()
 
-    def persist(self):
+    def persist(self, success: bool):
         with open(self._full_filename, mode="w") as persist_json:
-            json.dump({"last_run": self._start.strftime(self._timeformat)}, persist_json)
+            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": success}, persist_json)
 
     def _load(self):
         with open(self._full_filename, mode="r") as persist_json:
             last_run_dict = json.load(persist_json)
-            self._last_run = datetime.strptime(last_run_dict["last_run"], self._timeformat)
+            self._last_run = datetime.strptime(last_run_dict["timestamp"], self._timeformat)
+            self._success = last_run_dict["success"]
         os.remove(self._full_filename)
 
     @property
@@ -126,6 +128,10 @@ class PersistedTimestamp(object):
     def start(self):
         return self._start
 
+    @property
+    def success(self):
+        return self._success
+
 
 class BaseBot(object):
     bot_name = None
@@ -133,28 +139,25 @@ class BaseBot(object):
 
     def __init__(self, wiki, debug):
         self.success = False
-        self.timestamp_start = datetime.now()
-        self.wiki = wiki
-        self.debug = debug
-        self.last_run = {}
-        self.filename_timestamp = 'data/{}.last_run.json'.format(self.bot_name)
-        self.timeformat = '%Y-%m-%d_%H:%M:%S'
         if not self.bot_name:
             raise NotImplementedError('The class variable bot_name is not implemented. Implement the variable.')
+        self.timestamp = None
+        self.wiki = wiki
+        self.debug = debug
         self.timeout = timedelta(minutes=60)
 
     def __enter__(self):
-        self.set_up_timestamp()
-        self.logger = WikiLogger(self.bot_name, self.timestamp_start)
+        self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start)
         print(self.bar_string)
         self.logger.info('Start the bot {}.'.format(self.bot_name))
         print(self.bar_string)
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.tear_down_timestamp()
+        self.timestamp.persist(self.success)
         print(self.bar_string)
-        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp_start))
+        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start))
         print(self.bar_string)
         self.send_log_to_wiki()
         self.logger.tear_down()
@@ -172,39 +175,12 @@ class BaseBot(object):
         return self.success
 
     def _watchdog(self):
-        diff = datetime.now() - self.timestamp_start
+        diff = datetime.now() - self.timestamp.start
         if diff > self.timeout:
             self.logger.warning('Bot finished by timeout.')
             return True
         else:
             return False
-
-    def set_up_timestamp(self):
-        try:
-            with open(self.filename_timestamp, 'r') as filepointer:
-                self.last_run = json.load(filepointer)
-                self.last_run['timestamp'] = datetime.strptime(self.last_run['timestamp'], self.timeformat)
-            self.logger.info("Open existing timestamp.")
-            os.remove(self.filename_timestamp)
-        except OSError:
-            self.logger.warning("it wasn't possible to retrieve an existing timestamp.")
-            self.last_run = None
-
-    def _dumb_timestamp(self, success: bool):
-        with open(self.filename_timestamp, "w") as file_pointer:
-            json.dump({'success': success, 'timestamp': self.timestamp_start},
-                      file_pointer,
-                      default=lambda obj: obj.strftime(self.timeformat) if isinstance(obj, datetime) else obj)
-
-    def tear_down_timestamp(self):
-        if self.success:
-            if not os.path.isdir("data"):
-                os.mkdir("data")
-            self._dumb_timestamp(True)
-            self.logger.info("Timestamp successfully kept.")
-        else:
-            self._dumb_timestamp(False)
-            self.logger.warning("The bot run was\'t successful. Timestamp will be kept.")
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
@@ -311,6 +287,10 @@ class CanonicalBot(BaseBot):
                 outdated = True
                 self.last_run = None
         return outdated
+
+    @property
+    def last_run_successful(self) -> bool:
+        return self.timestamp.last_run and self.timestamp.success
 
 
 class PingOneTime(OneTimeBot):

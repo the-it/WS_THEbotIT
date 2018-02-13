@@ -67,10 +67,25 @@ class TestWikilogger(TestCase):
         self.logger.info("info")
         self.logger.warning("warning")
         self.logger.error("error")
+        self.logger.critical("critical")
         expected_output = r"==Log of 01\.01\.00 um 00:00:00==\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[WARNING\s*?\]\s\[warning\]\n\n" \
-                          r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[error\]\n--~~~~"
+                          r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[error\]\n\n" \
+                          r"\[\d\d:\d\d:\d\d\]\s\[CRITICAL\s*?\]\s\[critical\]\n--~~~~"
+        self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
+
+    def test_exception(self):
+        try:
+            raise Exception("test")
+        except Exception as e:
+            self.logger.exception("exception", e)
+        expected_output = r"==Log of 01\.01\.00 um 00:00:00==\n\n" \
+                          r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[exception\]\n\n" \
+                          r"Traceback \(most recent call last\):\n\n" \
+                          r"File \".*?\", line \d{1,3}, in test_exception\n\n" \
+                          r"raise Exception\(\"test\"\)\n\n" \
+                          r"Exception: test\n--~~~~"
         self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
 
 
@@ -81,7 +96,7 @@ class TestPersistedTimestamp(TestCase):
         _remove_data_folder()
         os.mkdir("data")
         with open("data/test_bot.last_run.json", mode="w") as persist_json:
-            json.dump({"last_run": '2000-01-01_00:00:00'}, persist_json)
+            json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
         self.reference = datetime.now()
         self.timestamp = PersistedTimestamp("test_bot")
 
@@ -97,6 +112,17 @@ class TestPersistedTimestamp(TestCase):
                                self.timestamp.last_run.timestamp(),
                                delta=self._precision)
         self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta=self._precision)
+
+    def test_persist_timestamp(self):
+        self.timestamp.persist(success=True)
+        with open("data/test_bot.last_run.json", mode="r") as filepointer:
+            timestamp_dict = json.load(filepointer)
+            self.assertTrue(timestamp_dict["success"])
+
+    def test_persist_timestamp_false(self):
+        self.timestamp.persist(success=False)
+        timestamp = PersistedTimestamp("test_bot")
+        self.assertFalse(timestamp.success)
 
 
 class TestPersistedData(TestCase):
@@ -172,6 +198,32 @@ class TestPersistedData(TestCase):
         self.data.load()
         self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
+
+    def test_delete_old_data_file(self):
+        self._make_json_file()
+        self.data.load()
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+            self.assertDictEqual(self.data_test, json.load(json_file))
+        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
+        self.data["b"] = 1
+        self.data.dump(True)
+        with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as json_file:
+            self.assertDictEqual(self.data_test_extend, json.load(json_file))
+        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
+
+    def test_flag_old_file_as_deprecated_keep_broken_file(self):
+        self._make_json_file()
+        self.data.load()
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+            self.assertDictEqual(self.data_test, json.load(json_file))
+        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
+        self.data["b"] = 1
+        self.data.dump(False)
+        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+            self.assertDictEqual(self.data_test, json.load(json_file))
+        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
+            self.assertDictEqual(self.data_test_extend, json.load(json_file))
 
     def test_flag_data_as_broken(self):
         self._make_json_file()
