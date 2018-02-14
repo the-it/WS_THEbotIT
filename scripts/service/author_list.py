@@ -64,7 +64,7 @@ class AuthorList(CanonicalBot):
             self.searcher.last_change_after(int(yesterday.strftime('%Y')),
                                             int(yesterday.strftime('%m')),
                                             int(yesterday.strftime('%d')))
-        elif self.last_run and self.last_run['success'] and self.data:
+        elif self.last_run_successful and self.data:
             self.create_timestamp_for_search(self.searcher)
         else:
             self.logger.warning('There was no timestamp found of the last run, so the argument "after" is not set.')
@@ -90,7 +90,7 @@ class AuthorList(CanonicalBot):
             try:
                 del self.data[str(author['id'])]
             except KeyError:
-                if self.last_run and self.last_run['success']:
+                if self.last_run_successful:
                     self.logger.info("Can't delete old entry of [[{}]]".format(author['title']))
 
             dict_author = {'title': author['title']}

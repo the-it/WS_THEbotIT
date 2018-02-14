@@ -108,5 +108,5 @@ class DailyRunner(CanonicalBot):
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with DailyRunner(wiki=wiki, debug=False) as bot:
+    with DailyRunner(wiki=wiki, debug=True) as bot:
         bot.run()

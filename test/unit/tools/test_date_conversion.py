@@ -1,7 +1,4 @@
-from unittest import TestCase
-
-__author__ = 'eso'
-
+from test import *
 from tools.date_conversion import DateConversion
 
 

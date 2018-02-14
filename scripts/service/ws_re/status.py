@@ -57,7 +57,7 @@ class ReStatus(CanonicalBot):
     def history(self, fertig, korrigiert, unkorrigiert):
         page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.bot_name)
         temp_text = page.text
-        composed_text = ''.join(['|-\n', '|', self.timestamp_start.strftime('%Y%m%d-%H%M'),
+        composed_text = ''.join(['|-\n', '|', self.timestamp.start.strftime('%Y%m%d-%H%M'),
                                  '||', str(unkorrigiert[1]), '||', str(unkorrigiert[0]), '||',
                                  str(int(unkorrigiert[0] / unkorrigiert[1])),
                                  '||', str(korrigiert[1]), '||', str(korrigiert[0]), '||',
