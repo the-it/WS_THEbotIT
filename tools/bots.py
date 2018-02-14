@@ -60,6 +60,7 @@ class WikiLogger(object):
     def tear_down(self):
         for handler in self._logger.handlers:
             handler.close()
+            self._logger.removeHandler(handler)
         if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
             os.remove(self._data_path + os.sep + self._logger_names['info'])
         sys.stdout.flush()

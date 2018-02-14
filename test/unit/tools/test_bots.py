@@ -3,7 +3,6 @@ from datetime import datetime
 import json
 import os
 from shutil import rmtree
-import time
 
 from test import *
 from tools.bots import BotExeption, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
@@ -29,7 +28,7 @@ class TestGetDataPath(TestCase):
     def test_make_folder(self):
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
             self.assertEqual(_data_path, _get_data_path())
-            mock_mkdir.assert_called_once()
+            self.assertEqual(1, mock_mkdir.call_count)
 
 
 class TestWikilogger(TestCase):
@@ -104,7 +103,7 @@ class TestPersistedTimestamp(TestCase):
         _remove_data_folder()
 
     def test_start_timestamp(self):
-        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta= self._precision)
+        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta=self._precision)
 
     def test_last_run_timestamp(self):
         self.assertFalse(os.path.isfile("data/test_bot.last_run.json"))
@@ -154,9 +153,11 @@ class TestPersistedData(TestCase):
         self.data["a"] = [1, 2]
         self.data["b"] = 2
         iterator_over_keys = iter(self.data)
-        self.assertEqual("a", next(iterator_over_keys))
+        test_set = set()
+        test_set.add(next(iterator_over_keys))
+        test_set.add(next(iterator_over_keys))
+        self.assertSetEqual({"a", "b"}, test_set)
         self.assertEqual([1, 2], self.data["a"])
-        self.assertEqual("b", next(iterator_over_keys))
         self.assertEqual(2, self.data["b"])
 
     def test_assign_complete_dict(self):
