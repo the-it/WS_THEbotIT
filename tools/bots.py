@@ -253,7 +253,7 @@ class CanonicalBot(BaseBot):
         if self.data_outdated():
             self.data.assign_dict({})
             self.logger.warning('The data is thrown away. It is out of date')
-        elif (self.last_run is None) or (self.last_run['success'] == False):
+        elif (self.timestamp.last_run is None) or (self.timestamp.success == False):
             self.data.assign_dict({})
             self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
         else:
