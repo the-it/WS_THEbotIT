@@ -60,6 +60,7 @@ class WikiLogger(object):
     def tear_down(self):
         for handler in self._logger.handlers:
             handler.close()
+            self._logger.removeHandler(handler)
         if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
             os.remove(self._data_path + os.sep + self._logger_names['info'])
         sys.stdout.flush()
@@ -114,11 +115,15 @@ class PersistedTimestamp(object):
             json.dump({"timestamp": self._start.strftime(self._timeformat), "success": success}, persist_json)
 
     def _load(self):
-        with open(self._full_filename, mode="r") as persist_json:
-            last_run_dict = json.load(persist_json)
-            self._last_run = datetime.strptime(last_run_dict["timestamp"], self._timeformat)
-            self._success = last_run_dict["success"]
-        os.remove(self._full_filename)
+        try:
+            with open(self._full_filename, mode="r") as persist_json:
+                last_run_dict = json.load(persist_json)
+                self._last_run = datetime.strptime(last_run_dict["timestamp"], self._timeformat)
+                self._success = last_run_dict["success"]
+            os.remove(self._full_filename)
+        except FileNotFoundError:
+            self._success = False
+            self._last_run = None
 
     @property
     def last_run(self):
