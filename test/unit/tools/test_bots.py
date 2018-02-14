@@ -123,6 +123,14 @@ class TestPersistedTimestamp(TestCase):
         timestamp = PersistedTimestamp("test_bot")
         self.assertFalse(timestamp.success)
 
+    def test_no_timestamp_there(self):
+        os.mkdir("data/test_bot.last_run.json")
+        reference = datetime.now()
+        timestamp = PersistedTimestamp("other_bot")
+        self.assertFalse(timestamp.success)
+        self.assertAlmostEqual(reference.timestamp(), timestamp.start.timestamp(), delta=self._precision)
+        self.assertIsNone(timestamp.last_run)
+
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
