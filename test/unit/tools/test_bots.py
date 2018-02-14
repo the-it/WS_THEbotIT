@@ -157,6 +157,10 @@ class TestPersistedData(TestCase):
     def test_is_mapping(self):
         self.assertTrue(isinstance(self.data, Mapping))
 
+    def test_delete_key(self):
+        self.data["a"] = 1
+        del self.data["a"]
+
     def test_iter_over_keys(self):
         self.data["a"] = [1, 2]
         self.data["b"] = 2

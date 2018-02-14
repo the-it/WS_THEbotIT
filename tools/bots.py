@@ -211,6 +211,9 @@ class PersistedData(Mapping):
     def __setitem__(self, key, value):
         self.data[key] = value
 
+    def __delitem__(self, key):
+        del self.data[key]
+
     def __len__(self):
         return len(self.data)
 
