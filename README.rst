@@ -16,7 +16,7 @@
 .. |code-climate-maintain| image:: https://codeclimate.com/github/the-it/WS_THEbotIT/badges/gpa.svg
 .. _code-climate-maintain: https://codeclimate.com/github/the-it/WS_THEbotIT
 
-.. |code-cov| image:: https://img.shields.io/codecov/c/github/codecov/WS_THEbotIT/master.svg
+.. |code-cov| image:: https://codecov.io/gh/the-it/WS_THEbotIT/branch/master/graph/badge.svg
 .. _code-cov: https://codecov.io/gh/the-it/WS_THEbotIT
 
 .. |circleci| image:: https://circleci.com/gh/the-it/WS_THEbotIT.svg?style=shield
