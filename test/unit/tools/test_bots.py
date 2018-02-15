@@ -137,13 +137,12 @@ class TestPersistedTimestamp(TestCase):
         self.timestamp.last_run = None
 
 
-
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
         super(TestPersistedData, self).__init__(*args, **kwargs)
         self.data_path = _data_path
-        self.json_test = "{\"a\": [1, 2]}"
-        self.json_test_extend = "{\"a\": [1, 2], \"b\": 1}"
+        self.json_test = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
+        self.json_test_extend = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
         self.data_test = {"a": [1, 2]}
         self.data_test_extend = {"a": [1, 2], "b": 1}
 
@@ -197,13 +196,18 @@ class TestPersistedData(TestCase):
         self.data.assign_dict(self.data_test)
         self.data.dump()
         with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
-            self.assertEqual(self.json_test, file.read())
+            self.assertRegex(file.read(), "{\n  \"a\": \[\n    1, ?\n    2\n  \]\n}")
 
     def test_dump_and_create_folder(self):
         self.data.dump()
 
     def test_load_data_from_file(self):
         self._make_json_file()
+        self.data.load()
+        self.assertEqual([1, 2], self.data["a"])
+
+    def test_load_data_from_old_file(self):
+        self._make_json_file(data="{\"a\": [1, 2]}")
         self.data.load()
         self.assertEqual([1, 2], self.data["a"])
 

@@ -234,12 +234,12 @@ class PersistedData(Mapping):
     def dump(self, success=True):
         if success:
             with open(self.file_name, mode="w") as json_file:
-                json.dump(self.data, json_file)
+                json.dump(self.data, json_file, indent=2, sort_keys=True)
             if os.path.isfile(self.file_name + ".deprecated"):
                 os.remove(self.file_name + ".deprecated")
         else:
             with open(self.file_name + ".broken", mode="w") as json_file:
-                json.dump(self.data, json_file)
+                json.dump(self.data, json_file, indent=2, sort_keys=True)
 
     def load(self):
         if os.path.exists(self.file_name):
