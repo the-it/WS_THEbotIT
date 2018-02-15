@@ -263,3 +263,8 @@ class TestPersistedData(TestCase):
         self.assertTrue(self.data)
         del self.data[1]
         self.assertFalse(self.data)
+
+    def test_update_data(self):
+        self.data["a"] = 1
+        self.data.update({"b": 2})
+        self.assertDictEqual({"a": 1, "b": 2}, self.data.data)

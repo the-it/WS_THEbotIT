@@ -82,7 +82,7 @@ class ReScanner(CanonicalBot):
     def __enter__(self):
         CanonicalBot.__enter__(self)
         if not self.data:
-            self.data = {}
+            self.data.assign_dict(dict())
         return self
 
     def compile_lemma_list(self):

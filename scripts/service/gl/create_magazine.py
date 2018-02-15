@@ -26,7 +26,7 @@ class GlCreateMagazine(CanonicalBot):
     def __enter__(self):
         CanonicalBot.__enter__(self)
         if not self.data:
-            self.data = {'pages': {}, 'indexes': {}}
+            self.data.assign_dict({'pages': {}, 'indexes': {}})
         return self
 
     def task(self):

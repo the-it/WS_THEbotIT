@@ -249,6 +249,9 @@ class PersistedData(Mapping):
         else:
             raise BotExeption("Not data to load.")
 
+    def update(self, dict_to_update: dict):
+        self.data.update(dict_to_update)
+
 
 class CanonicalBot(BaseBot):
     def __init__(self, wiki, debug):
