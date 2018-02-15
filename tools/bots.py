@@ -286,7 +286,7 @@ class CanonicalBot(BaseBot):
         BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
 
     def create_timestamp_for_search(self, searcher, days_in_past=1):
-        if self.timestamp.last_run:
+        if self.last_run_successful:
             start_of_search = self.timestamp.last_run - timedelta(days=days_in_past)
         else:
             start_of_search = self.timestamp.start - timedelta(days=days_in_past)
