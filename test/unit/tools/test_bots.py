@@ -2,12 +2,14 @@ from collections import Mapping
 from datetime import datetime
 import json
 import os
+import pwd
 from shutil import rmtree
 
 from test import *
 from tools.bots import BotExeption, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
 
-_data_path = os.getcwd() + os.sep + "data"
+_data_path = pwd.getpwuid(os.getuid()).pw_dir + os.sep + ".THEbotIT"
+print(_data_path)
 
 
 def _remove_data_folder():
@@ -47,20 +49,20 @@ class TestWikilogger(TestCase):
     def test_log_message(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        with open("data/test_bot_INFO_000101000000.log") as info_file:
+        with open(_data_path + os.sep + "test_bot_INFO_000101000000.log") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
-        with open("data/test_bot_DEBUG_000101000000.log") as info_file:
+        with open(_data_path + os.sep + "test_bot_DEBUG_000101000000.log") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[DEBUG\s*?\]\s\[debug\]\n"
                                                r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
 
     def test_tear_down(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        self.assertTrue(os.path.isfile("data/test_bot_INFO_000101000000.log"))
-        self.assertTrue(os.path.isfile("data/test_bot_DEBUG_000101000000.log"))
+        self.assertTrue(os.path.isfile(_data_path + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile(_data_path + os.sep + "test_bot_DEBUG_000101000000.log"))
         self.logger.tear_down()
-        self.assertFalse(os.path.isfile("data/test_bot_INFO_000101000000.log"))
-        self.assertTrue(os.path.isfile("data/test_bot_DEBUG_000101000000.log"))
+        self.assertFalse(os.path.isfile(_data_path + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile(_data_path + os.sep + "test_bot_DEBUG_000101000000.log"))
 
     def test_format_log_lines_for_wiki(self):
         self.logger.info("info")
@@ -93,8 +95,8 @@ class TestPersistedTimestamp(TestCase):
 
     def setUp(self):
         _remove_data_folder()
-        os.mkdir("data")
-        with open("data/test_bot.last_run.json", mode="w") as persist_json:
+        os.mkdir(_data_path)
+        with open(_data_path + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
         self.reference = datetime.now()
         self.timestamp = PersistedTimestamp("test_bot")
@@ -106,7 +108,7 @@ class TestPersistedTimestamp(TestCase):
         self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta=self._precision)
 
     def test_last_run_timestamp(self):
-        self.assertFalse(os.path.isfile("data/test_bot.last_run.json"))
+        self.assertFalse(os.path.isfile(_data_path + os.sep + "test_bot.last_run.json"))
         self.assertAlmostEqual(datetime(year=2000, month=1, day=1).timestamp(),
                                self.timestamp.last_run.timestamp(),
                                delta=self._precision)
@@ -114,7 +116,7 @@ class TestPersistedTimestamp(TestCase):
 
     def test_persist_timestamp(self):
         self.timestamp.persist(success=True)
-        with open("data/test_bot.last_run.json", mode="r") as filepointer:
+        with open(_data_path + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
             timestamp_dict = json.load(filepointer)
             self.assertTrue(timestamp_dict["success"])
 
@@ -124,7 +126,7 @@ class TestPersistedTimestamp(TestCase):
         self.assertFalse(timestamp.success)
 
     def test_no_timestamp_there(self):
-        os.mkdir("data/test_bot.last_run.json")
+        os.mkdir(_data_path + os.sep + "test_bot.last_run.json")
         reference = datetime.now()
         timestamp = PersistedTimestamp("other_bot")
         self.assertFalse(timestamp.success)

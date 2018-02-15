@@ -13,7 +13,7 @@ class BotExeption(Exception):
 
 
 def _get_data_path():
-    data_path = os.getcwd() + os.sep + "data"
+    data_path = os.path.expanduser("~") + os.sep + ".THEbotIT"
     if not os.path.exists(data_path):
         os.mkdir(data_path)
     return data_path
