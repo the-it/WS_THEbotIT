@@ -33,11 +33,9 @@ class AuthorList(CanonicalBot):
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
-        if 1 == datetime.now().day:
-            self.data = None
+        if 1 == self.timestamp.start.day:
+            self.data.assign_dict(dict())
             self.logger.warning('The data is thrown away. It is the first of the month')
-        if not self.data:
-            self.data = {}
         return self
 
     def task(self):
@@ -203,8 +201,8 @@ class AuthorList(CanonicalBot):
                                 '{dt.day}.{dt.month}.{dt.year}, '
                                 '{clock} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'
                                 .format(count=len(self.data),
-                                        clock=datetime.now().strftime('%H:%M'),
-                                        dt=datetime.now()))
+                                        clock=self.timestamp.start.strftime('%H:%M'),
+                                        dt=self.timestamp.start))
         self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften'
                                 ' nach der jeweiligen Spalte sortiert werden.')
         self.string_list.append('<!--')

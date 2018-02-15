@@ -131,6 +131,10 @@ class TestPersistedTimestamp(TestCase):
         self.assertAlmostEqual(reference.timestamp(), timestamp.start.timestamp(), delta=self._precision)
         self.assertIsNone(timestamp.last_run)
 
+    def test_devalidate_timestamp_of_last_run(self):
+        self.timestamp.last_run = None
+
+
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
@@ -251,3 +255,11 @@ class TestPersistedData(TestCase):
         with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
             json_dict = json.load(json_file)
         self.assertEqual(["a"], list(json_dict.keys()))
+
+    def test_for_boolean_value(self):
+        self.data.assign_dict(dict())
+        self.assertFalse(self.data)
+        self.data[1]=1
+        self.assertTrue(self.data)
+        del self.data[1]
+        self.assertFalse(self.data)

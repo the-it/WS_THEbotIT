@@ -58,7 +58,7 @@ class WikiLogger(object):
         self._logger.addHandler(debug_log)
 
     def tear_down(self):
-        for handler in self._logger.handlers:
+        for handler in self._logger.handlers[:]:
             handler.close()
             self._logger.removeHandler(handler)
         if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
@@ -128,6 +128,11 @@ class PersistedTimestamp(object):
     @property
     def last_run(self):
         return self._last_run
+
+    @last_run.setter
+    def last_run(self, value):
+        if value is None:
+            self._last_run = value
 
     @property
     def start(self):
@@ -278,10 +283,10 @@ class CanonicalBot(BaseBot):
         BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
 
     def create_timestamp_for_search(self, searcher, days_in_past=1):
-        if self.last_run:
-            start_of_search = self.last_run['timestamp'] - timedelta(days=days_in_past)
+        if self.timestamp.last_run:
+            start_of_search = self.timestamp.last_run - timedelta(days=days_in_past)
         else:
-            start_of_search = self.timestamp_start - timedelta(days=days_in_past)
+            start_of_search = self.timestamp.start - timedelta(days=days_in_past)
         searcher.last_change_after(int(start_of_search.strftime('%Y')),
                                    int(start_of_search.strftime('%m')),
                                    int(start_of_search.strftime('%d')))
@@ -290,10 +295,10 @@ class CanonicalBot(BaseBot):
 
     def data_outdated(self):
         outdated = False
-        if self.new_data_model and self.last_run:
-            if self.last_run['timestamp'] < self.new_data_model:
+        if self.new_data_model and self.timestamp.last_run:
+            if self.timestamp.last_run < self.new_data_model:
                 outdated = True
-                self.last_run = None
+                self.timestamp.last_run = None
         return outdated
 
     @property
