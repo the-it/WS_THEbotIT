@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 echo "########## PYCODESTYLE #########"
-pep8
+pycodestyle
 echo "############ FLAKE8 ############"
 flake8 --exit-zero
 export PYWIKIBOT2_NO_USER_CONFIG=1
