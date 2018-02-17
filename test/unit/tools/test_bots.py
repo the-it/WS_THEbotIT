@@ -196,7 +196,7 @@ class TestPersistedData(TestCase):
         self.data.assign_dict(self.data_test)
         self.data.dump()
         with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
-            self.assertRegex(file.read(), "{\n  \"a\": \[\n    1, ?\n    2\n  \]\n}")
+            self.assertEqual(self.json_test, file.read())
 
     def test_dump_and_create_folder(self):
         self.data.dump()
