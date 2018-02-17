@@ -5,7 +5,7 @@ import requests
 import json
 import re
 from urllib.parse import quote
-from tools.tools import ToolExeption
+from tools import ToolException
 
 namespace_mapping = {"Article": 0,
                      "Diskussion": 1,
@@ -75,7 +75,7 @@ def listify(x) -> list:
     return x if isinstance(x, list) else [x]
 
 
-class PetScanException(ToolExeption):
+class PetScanException(ToolException):
     pass
 
 

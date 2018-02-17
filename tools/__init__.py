@@ -1,1 +1,5 @@
-__all__ = ['catscan', 'wiki_template_handler', 'abbyy_xml', 'bots', 'date_converter', 'sort_converter']
+class ToolException(Exception):
+    pass
+
+
+__all__ = ['ToolException', 'catscan', 'template_handler', 'abbyy_xml', 'bots', 'date_conversion']
