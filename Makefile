@@ -16,7 +16,7 @@ pycodestyle :
 
 pylint : 
 	echo "############ PYLINT ############"
-	pylint scripts tools  || :
+	pylint --rcfile .pylintrc scripts tools || :
 
 flake8 :
 	echo "############ FLAKE8 ############"
