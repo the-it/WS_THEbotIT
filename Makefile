@@ -56,8 +56,7 @@ codecov :
 
 codacy : 
 	echo "########### CODACY #############"
-	export CODACY_PROJECT_TOKEN=cb7b5f010e8f4a35abb2d5fcd6a30fb6 && \
-	python-codacy-coverage -r coverage.xml
+	CODACY_PROJECT_TOKEN=cb7b5f010e8f4a35abb2d5fcd6a30fb6 python-codacy-coverage -r coverage.xml
 
 clean : clean-pyc clean-coverage clean-code-climate
 

@@ -56,6 +56,13 @@ jobs:
             . venv/bin/activate
             make pycodestyle
 
+      - run:
+          name: report coverage
+          command: |
+            . venv/bin/activate
+            make codacy
+
+
       - store_artifacts:
           path: test-reports
           destination: test-reports

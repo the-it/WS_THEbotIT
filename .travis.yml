@@ -12,7 +12,7 @@ install:
 script:
   - make quality
 after_script:
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then make code-climate codecov codacy; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then make code-climate codecov; fi
 
 matrix:
   allow_failures:
