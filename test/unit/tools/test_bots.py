@@ -9,7 +9,6 @@ from test import *
 from tools.bots import BotExeption, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
 
 _data_path = pwd.getpwuid(os.getuid()).pw_dir + os.sep + ".THEbotIT"
-print(_data_path)
 
 
 def _remove_data_folder():
@@ -36,7 +35,7 @@ class TestGetDataPath(TestCase):
 class TestWikilogger(TestCase):
     def setUp(self):
         _remove_data_folder()
-        self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1))
+        self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), silence=True)
 
     def tearDown(self):
         self.logger.tear_down()
@@ -90,6 +89,16 @@ class TestWikilogger(TestCase):
         self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
 
 
+class TestBaseBot(TestCase):
+    def setUp(self):
+        self.addCleanup(patch.stopall)
+        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
+        self.wiki_logger_mock = self.log_patcher.start()
+
+    def test_dfghj(self):
+        pass
+
+
 class TestPersistedTimestamp(TestCase):
     _precision = 0.001
 
@@ -137,13 +146,12 @@ class TestPersistedTimestamp(TestCase):
         self.timestamp.last_run = None
 
 
-
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
         super(TestPersistedData, self).__init__(*args, **kwargs)
         self.data_path = _data_path
-        self.json_test = "{\"a\": [1, 2]}"
-        self.json_test_extend = "{\"a\": [1, 2], \"b\": 1}"
+        self.json_test = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
+        self.json_test_extend = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
         self.data_test = {"a": [1, 2]}
         self.data_test_extend = {"a": [1, 2], "b": 1}
 
@@ -204,6 +212,11 @@ class TestPersistedData(TestCase):
 
     def test_load_data_from_file(self):
         self._make_json_file()
+        self.data.load()
+        self.assertEqual([1, 2], self.data["a"])
+
+    def test_load_data_from_old_file(self):
+        self._make_json_file(data="{\"a\": [1, 2]}")
         self.data.load()
         self.assertEqual([1, 2], self.data["a"])
 

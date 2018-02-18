@@ -6,14 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.6.1
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
+      - image: circleci/python:3.6.3
 
     working_directory: ~/repo
 
@@ -32,29 +25,36 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r requirements.txt
+            make pip3-all
 
       - save_cache:
           paths:
             - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
+          key: v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
 
       - run:
-          name: show structure
-          command: |
-            ls
-
-
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
-      - run:
-          name: run tests
+          name: run test coverage
           command: |
             . venv/bin/activate
-            .build/build.sh
+            make coverage
+
+      - run:
+          name: run pylint
+          command: |
+            . venv/bin/activate
+            make pylint
+
+      - run:
+          name: run flake8
+          command: |
+            . venv/bin/activate
+            make flake8
+
+      - run:
+          name: run pycodestyle
+          command: |
+            . venv/bin/activate
+            make pycodestyle
 
       - store_artifacts:
           path: test-reports

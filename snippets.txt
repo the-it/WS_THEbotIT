@@ -1,7 +1,0 @@
-{{Personendaten.*?\n}}\n - re expression for matching Personendaten
-
-https://regex101.com/#python
-
-http:\/\/\w*?\.us\.archive\.org\/[\w\/]*?\/Pauly-Wissowa_((?:S_)?[IVX]{1,5}[12]?)_0{0,3}(\d{1,4})\.(jpg|png)
-
-http://ia700105.us.archive.org/11/items/PWRE17/Pauly-Wissowa_IX1_0031.jpg
