@@ -32,8 +32,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r requirements.txt
-            pip install -r requirements_dev.txt
+            make pip3-all
 
       - save_cache:
           paths:
@@ -47,10 +46,28 @@ jobs:
       # https://pytest.org
       # https://nose.readthedocs.io
       - run:
-          name: run tests
+          name: run test coverage
           command: |
             . venv/bin/activate
-            .build/build.sh
+            make coverage
+
+      - run:
+          name: run pylint
+          command: |
+            . venv/bin/activate
+            make pylint
+
+      - run:
+          name: run flake8
+          command: |
+            . venv/bin/activate
+            make flake8
+
+      - run:
+          name: run pycodestyle
+          command: |
+            . venv/bin/activate
+            make pycodestyle
 
       - store_artifacts:
           path: test-reports

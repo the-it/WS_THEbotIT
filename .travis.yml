@@ -8,14 +8,11 @@ python:
   - nightly
 # command to install dependencies
 install:
-  - pip install -r requirements.txt
-  - pip install -r requirements_dev.txt
-before_script:
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/pre_script_code_climate.sh; fi
+  - make pip3-all
 script:
-  - .build/build.sh
+  - make quality
 after_script:
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then .build/post_script_code_climate.sh; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then make code-climate codecov; fi
 
 matrix:
   allow_failures:
