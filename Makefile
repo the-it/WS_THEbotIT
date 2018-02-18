@@ -34,23 +34,31 @@ clean-coverage :
 
 code-climate-pre :
 	echo "####### CODE CLIMATE PRE #######"
-	curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-	chmod +x ./cc-test-reporter
+	curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && \
+	chmod +x ./cc-test-reporter && \
 	./cc-test-reporter before-build
 
 code-climate-post :
 	echo "####### CODE CLIMATE POST ######"
-	export CC_TEST_REPORTER_ID=f3b7cf9220d85b6dde901a10d6f18747720138f87ed4f648bb7364d52f5310bb
-	./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
-	./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+	export CC_TEST_REPORTER_ID=f3b7cf9220d85b6dde901a10d6f18747720138f87ed4f648bb7364d52f5310bb && \
+	./cc-test-reporter format-coverage --output "coverage/codeclimate.${N}.json" && \
+	./cc-test-reporter after-build --exit-code ${TRAVIS_TEST_RESULT}
 
 clean-code-climate : 
+	echo "###### CLEAN CODE CLIMATE ######"
 	rm -rf cc-test-reporter coverage || :
 
 code-climate : clean-code-climate code-climate-pre coverage code-climate-post
 
-codecov : coverage
+codecov : 
+	echo "########### CODECOV ############"
 	codecov --token=bb224da4-b91a-4080-b106-cb7bb5d84595
+
+codacy : 
+	echo "########### CODACY #############"
+	cat coverage.xml
+	export CODACY_PROJECT_TOKEN=b8d56b8ac4c34f0d962efd405a00303d && \
+	python-codacy-coverage -r coverage.xml
 
 clean : clean-pyc clean-coverage clean-code-climate
 
