@@ -24,12 +24,13 @@ class WikiLogger(object):
     _logger_date_format = "%H:%M:%S"
     _wiki_timestamp_format = '%d.%m.%y um %H:%M:%S'
 
-    def __init__(self, bot_name: str, start_time: datetime):
+    def __init__(self, bot_name: str, start_time: datetime, silence=False):
         self._bot_name = bot_name
         self._start_time = start_time
         self._data_path = _get_data_path()
         self._logger = logging.getLogger(self._bot_name)
         self._logger_names = self._get_logger_names()
+        self._silence = silence
         self._setup_logger_properties()
 
     def _get_logger_names(self):
@@ -45,17 +46,19 @@ class WikiLogger(object):
         self._logger.setLevel(logging.DEBUG)
         error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['info'], encoding='utf8')
         error_log.setLevel(logging.INFO)
-        debug_stream = logging.StreamHandler(sys.stdout)
-        debug_stream.setLevel(logging.DEBUG)
         debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['debug'], encoding='utf8')
         debug_log.setLevel(logging.DEBUG)
         formatter = logging.Formatter(self._logger_format, datefmt=self._logger_date_format)
         error_log.setFormatter(formatter)
-        debug_stream.setFormatter(formatter)
         debug_log.setFormatter(formatter)
         self._logger.addHandler(error_log)
-        self._logger.addHandler(debug_stream)
         self._logger.addHandler(debug_log)
+        if not self._silence:
+            # this activates the output of the logger
+            debug_stream = logging.StreamHandler(sys.stdout)
+            debug_stream.setLevel(logging.DEBUG)
+            debug_stream.setFormatter(formatter)
+            self._logger.addHandler(debug_stream)
 
     def tear_down(self):
         for handler in self._logger.handlers[:]:
@@ -67,19 +70,19 @@ class WikiLogger(object):
         logging.shutdown()
 
     def debug(self, msg: str):
-        self._logger.debug(msg=msg)
+        self._logger.log(logging.DEBUG, msg)
 
     def info(self, msg: str):
-        self._logger.info(msg=msg)
+        self._logger.log(logging.INFO, msg)
 
     def warning(self, msg: str):
-        self._logger.warning(msg=msg)
+        self._logger.log(logging.WARNING, msg)
 
     def error(self, msg: str):
-        self._logger.error(msg=msg)
+        self._logger.log(logging.ERROR, msg)
 
     def critical(self, msg: str):
-        self._logger.critical(msg=msg)
+        self._logger.log(logging.CRITICAL, msg)
 
     def exception(self, msg: str, exc_info):
         self._logger.exception(msg=msg, exc_info=exc_info)
@@ -327,6 +330,7 @@ class PingCanonical(CanonicalBot):
         self.logger.info('PingCanonical')
         self.logger.debug('äüö')
         return True
+
 
 if __name__ == "__main__":
     wiki = Site(code='de', fam='wikisource', user='THEbotIT')

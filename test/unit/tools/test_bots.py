@@ -9,7 +9,6 @@ from test import *
 from tools.bots import BotExeption, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
 
 _data_path = pwd.getpwuid(os.getuid()).pw_dir + os.sep + ".THEbotIT"
-print(_data_path)
 
 
 def _remove_data_folder():
@@ -36,7 +35,7 @@ class TestGetDataPath(TestCase):
 class TestWikilogger(TestCase):
     def setUp(self):
         _remove_data_folder()
-        self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1))
+        self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), silence=True)
 
     def tearDown(self):
         self.logger.tear_down()
@@ -88,6 +87,16 @@ class TestWikilogger(TestCase):
                           r"raise Exception\(\"test\"\)\n\n" \
                           r"Exception: test\n--~~~~"
         self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
+
+
+class TestBaseBot(TestCase):
+    def setUp(self):
+        self.addCleanup(patch.stopall)
+        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
+        self.wiki_logger_mock = self.log_patcher.start()
+
+    def test_dfghj(self):
+        pass
 
 
 class TestPersistedTimestamp(TestCase):
