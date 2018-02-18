@@ -1,10 +1,12 @@
 __author__ = 'Erik Sommer'
 
 import datetime
-import requests
 import json
 import re
 from urllib.parse import quote
+
+import requests
+
 from tools import ToolException
 
 namespace_mapping = {"Article": 0,

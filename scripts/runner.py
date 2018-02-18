@@ -90,10 +90,10 @@ class DailyRunner(CanonicalBot):
         try:
             with bot_to_run:
                 success = bot_to_run.run()
-        except Exception as e:
+        except Exception as thrown_exception:
             self.logger.exception("The bot {name} encountered an exception."
                                   .format(name=bot_to_run.bot_name),
-                                  exc_info=e)
+                                  exc_info=thrown_exception)
             success = False
         return success
 
