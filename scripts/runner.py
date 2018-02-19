@@ -10,10 +10,13 @@ import sys
 import git
 from pywikibot import Site
 
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
+
 from scripts.service.author_list import AuthorList
 from scripts.service.ws_re.status import ReStatus
 from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
+from scripts.service.ws_re.scanner import ReScanner
 from tools.bots import CanonicalBot
 
 
@@ -88,10 +91,10 @@ class DailyRunner(CanonicalBot):
         try:
             with bot_to_run:
                 success = bot_to_run.run()
-        except Exception as exception:
+        except Exception as thrown_exception:
             self.logger.exception("The bot {name} encountered an exception."
                                   .format(name=bot_to_run.bot_name),
-                                  exc_info=exception)
+                                  exc_info=thrown_exception)
             success = False
         return success
 
