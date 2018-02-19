@@ -1,10 +1,11 @@
 __author__ = 'Erik Sommer'
 
 import datetime
-import requests
 import json
-import re
 from urllib.parse import quote
+
+import requests
+
 from tools import ToolException
 
 namespace_mapping = {"Article": 0,
@@ -248,33 +249,33 @@ class PetScan:
         question_string.append("?language=" + self.language)
         question_string.append("&project=" + self.project)
         # categories
-        if len(self.categories["positive"]) != 0:
+        if self.categories["positive"]:
             question_string.append("&categories=" + (self._construct_list_argument(self.categories["positive"])))
-        if len(self.categories["negative"]) != 0:
+        if self.categories["negative"]:
             question_string.append("&negcats=" + (self._construct_list_argument(self.categories["negative"])))
         # templates
-        if len(self.templates["yes"]) != 0:
+        if self.templates["yes"]:
             question_string.append("&templates_yes=" + (self._construct_list_argument(self.templates["yes"])))
-        if len(self.templates["any"]) != 0:
+        if self.templates["any"]:
             question_string.append("&templates_any=" + (self._construct_list_argument(self.templates["any"])))
-        if len(self.templates["no"]) != 0:
+        if self.templates["no"]:
             question_string.append("&templates_no=" + (self._construct_list_argument(self.templates["no"])))
         # outlinks
-        if len(self.outlinks["yes"]) != 0:
+        if self.outlinks["yes"]:
             question_string.append("&outlinks_yes=" + (self._construct_list_argument(self.outlinks["yes"])))
-        if len(self.outlinks["any"]) != 0:
+        if self.outlinks["any"]:
             question_string.append("&outlinks_any=" + (self._construct_list_argument(self.outlinks["any"])))
-        if len(self.outlinks["no"]) != 0:
+        if self.outlinks["no"]:
             question_string.append("&outlinks_no=" + (self._construct_list_argument(self.outlinks["no"])))
         # links_to
-        if len(self.links_to["yes"]) != 0:
+        if self.links_to["yes"]:
             question_string.append("&links_to_all=" + (self._construct_list_argument(self.links_to["yes"])))
-        if len(self.links_to["any"]) != 0:
+        if self.links_to["any"]:
             question_string.append("&links_to_any=" + (self._construct_list_argument(self.links_to["any"])))
-        if len(self.links_to["no"]) != 0:
+        if self.links_to["no"]:
             question_string.append("&links_to_no=" + (self._construct_list_argument(self.links_to["no"])))
         # rest of the options
-        if len(self.options) != 0:
+        if self.options:
             question_string.append(self._construct_options())
         question_string.append("&format=json&doit=1")
         return "".join(question_string)

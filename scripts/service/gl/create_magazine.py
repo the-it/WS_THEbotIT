@@ -15,11 +15,11 @@ class GlCreateMagazine(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
         self.searcher_pages = PetScan()
         self.searcher_indexes = PetScan()
-        self.regex_page = re.compile('Die_Gartenlaube_\((\d{4})\)_([^\.]*?)\.(?:jpg|JPG)')
-        self.regex_index = re.compile('Die_Gartenlaube_\((\d{4})\)')
-        self.regex_magazine_in_index = re.compile('((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))', re.DOTALL)
-        self.regex_page_in_magazine = re.compile('_([_\w]{1,9}).(?:jpg|JPG)')
-        self.regex_magazine_number_in_magazine = re.compile('(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
+        self.regex_page = re.compile(r'Die_Gartenlaube_\((\d{4})\)_([^\.]*?)\.(?:jpg|JPG)')
+        self.regex_index = re.compile(r'Die_Gartenlaube_\((\d{4})\)')
+        self.regex_magazine_in_index = re.compile(r'((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))', re.DOTALL)
+        self.regex_page_in_magazine = re.compile(r'_([_\w]{1,9}).(?:jpg|JPG)')
+        self.regex_magazine_number_in_magazine = re.compile(r'(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
         self.new_data_model = datetime(year=2017, month=11, day=11, hour=12)
         self.lemmas = None
 
@@ -176,16 +176,16 @@ class GlCreateMagazine(CanonicalBot):
     @staticmethod
     def search_for_refs(text):
         ref = []
-        if re.search('<ref>', text):
+        if re.search(r'<ref>', text):
             ref.append('ref')
-        elif re.search('\{\{CRef\|\|', text):
+        elif re.search(r'\{\{CRef\|\|', text):
             ref.append('ref')
-        hit = re.findall('[Gg]roup ?= ?"?([^">]{1,10})"?', text)
+        hit = re.findall(r'[Gg]roup ?= ?"?([^">]{1,10})"?', text)
         if hit:
             for entry in hit:
                 if entry not in ref:
                     ref.append(entry)
-        hit = re.findall('\{\{CRef\|([^\|]{1,10})\|', text)
+        hit = re.findall(r'\{\{CRef\|([^\|]{1,10})\|', text)
         if hit:
             for entry in hit:
                 if entry not in ref:
@@ -280,7 +280,7 @@ class GlCreateMagazine(CanonicalBot):
     def _get_indexes(self) -> Iterator[IndexPage]:
         self.searcher_indexes.add_positive_category('Die Gartenlaube')
         self.searcher_indexes.add_positive_category('Index')
-        self.searcher_indexes.set_regex_filter('.*Die Gartenlaube \(\d{4}\)')
+        self.searcher_indexes.set_regex_filter(r'.*Die Gartenlaube \(\d{4}\)')
         self.searcher_indexes.set_timeout(60)
         for index in self.searcher_indexes.run():
             yield index["title"], IndexPage(self.wiki, 'Index:{}'.format(index['title']))

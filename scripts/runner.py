@@ -1,21 +1,19 @@
 import calendar
 import codecs
+from datetime import datetime
 import importlib
 import inspect
 import os
 import re
 import sys
-from datetime import datetime
+
 import git
 from pywikibot import Site
-
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
 
 from scripts.service.author_list import AuthorList
 from scripts.service.ws_re.status import ReStatus
 from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
-from scripts.service.ws_re.scanner import ReScanner
 from tools.bots import CanonicalBot
 
 
@@ -90,10 +88,10 @@ class DailyRunner(CanonicalBot):
         try:
             with bot_to_run:
                 success = bot_to_run.run()
-        except Exception as e:
+        except Exception as exception:
             self.logger.exception("The bot {name} encountered an exception."
                                   .format(name=bot_to_run.bot_name),
-                                  exc_info=e)
+                                  exc_info=exception)
             success = False
         return success
 
@@ -107,6 +105,6 @@ class DailyRunner(CanonicalBot):
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with DailyRunner(wiki=wiki, debug=False) as bot:
+    ws_wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with DailyRunner(wiki=ws_wiki, debug=False) as bot:
         bot.run()

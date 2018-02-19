@@ -1,20 +1,16 @@
 import re
 
-regex_title = '\A[^\|]*'
-regex_no_key = '\A[^\|]*'
-regex_template = '\A\{\{.*?\}\}'
-regex_interwiki = '\A\[\[.*?\]\][^|\}]*'
-regex_key = '\A[^\|=\.\{]*=[^\|]*'
-regex_key_embedded_template_or_link = \
-    '\A([^\|=]*) ?= ?([^\|\[\{]|(\[\[)[^\|\]]*(\|.*?)*?(\]\])|(\{\{)[^\|\}]*(\|.*?)*?(\}\})|(\[.*?\]))*'
-regex_template_link = '\A[^\|]*(\{\{|\[\[)[^\|]*\|'
+REGEX_TITLE = r'\A[^\|]*'
+REGEX_NO_KEY = r'\A[^\|]*'
+REGEX_TEMPLATE = r'\A\{\{.*?\}\}'
+REGEX_INTERWIKI = r'\A\[\[.*?\]\][^|\}]*'
+REGEX_KEY = r'\A[^\|=\.\{]*=[^\|]*'
+REGEX_KEY_EMBEDDED_TEMPLATE_OR_LINK = \
+    r'\A([^\|=]*) ?= ?([^\|\[\{]|(\[\[)[^\|\]]*(\|.*?)*?(\]\])|(\{\{)[^\|\}]*(\|.*?)*?(\}\})|(\[.*?\]))*'
+REGEX_TEMPLATE_LINK = r'\A[^\|]*(\{\{|\[\[)[^\|]*\|'
 
 
 class TemplateHandler:
-    """
-
-    """
-
     def __init__(self, template_str=''):
         '''
 
@@ -29,21 +25,21 @@ class TemplateHandler:
     def _process_template_str(self, template_str: str):
         template_str = re.sub('\n', '', template_str)  # get rid of all linebreaks
         template_str = template_str[2:-2]  # get rid of the surrounding brackets
-        self.title = re.search(regex_title, template_str).group()  # extract the title
-        template_str = re.sub(self.title + '\|?', '', template_str)  # get rid of the title
+        self.title = re.search(REGEX_TITLE, template_str).group()  # extract the title
+        template_str = re.sub(self.title + r'\|?', '', template_str)  # get rid of the title
 
         while template_str:  # analyse the arguments
             if template_str[0] == '{':  # argument is a template itself
-                template_str = self._save_argument(regex_template, template_str, False)
+                template_str = self._save_argument(REGEX_TEMPLATE, template_str, False)
             elif template_str[0] == '[':  # argument is a link in the wiki
-                template_str = self._save_argument(regex_interwiki, template_str, False)
-            elif re.match(regex_key, template_str):  # argument with a key
-                if re.match(regex_template_link, template_str):  # an embedded template or link with a key
-                    template_str = self._save_argument(regex_key_embedded_template_or_link, template_str, True)
+                template_str = self._save_argument(REGEX_INTERWIKI, template_str, False)
+            elif re.match(REGEX_KEY, template_str):  # argument with a key
+                if re.match(REGEX_TEMPLATE_LINK, template_str):  # an embedded template or link with a key
+                    template_str = self._save_argument(REGEX_KEY_EMBEDDED_TEMPLATE_OR_LINK, template_str, True)
                 else:  # a normal argument with a key
-                    template_str = self._save_argument(regex_key, template_str, True)
+                    template_str = self._save_argument(REGEX_KEY, template_str, True)
             else:  # an argument without a key
-                template_str = self._save_argument(regex_no_key, template_str, False)
+                template_str = self._save_argument(REGEX_NO_KEY, template_str, False)
 
     def get_parameterlist(self):
         return self.parameters
@@ -73,17 +69,17 @@ class TemplateHandler:
 
     @staticmethod
     def _cut_spaces(raw_string):
-        return re.sub("(\A[ ]|[ ]\Z)", "", raw_string)
+        return re.sub(r"(\A[ ]|[ ]\Z)", "", raw_string)
 
     def _save_argument(self, search_pattern, template_str, has_key):
         par_template = re.search(search_pattern, template_str).group()
         if has_key is True:
-            par_template = re.search("\A([^\=]*)[ ]?=[ ]?(.*)\Z", par_template)
+            par_template = re.search(r"\A([^\=]*)[ ]?=[ ]?(.*)\Z", par_template)
             self.parameters.append({'key': self._cut_spaces(par_template.group(1)),
                                     'value': self._cut_spaces(par_template.group(2))})
         else:
             self.parameters.append({'key': None, 'value': self._cut_spaces(par_template)})
-        return re.sub(search_pattern + "\|?", "", template_str)
+        return re.sub(search_pattern + r"\|?", "", template_str)
 
 
 class TemplateFinderException(Exception):
@@ -96,10 +92,10 @@ class TemplateFinder(object):
 
     def get_positions(self, template_name: str):
         templates = list()
-        for start_position_template in self.get_start_positions_of_regex("\{\{" + template_name, self.text):
-            pos_start_brackets = self.get_start_positions_of_regex("\{\{", self.text[start_position_template + 2:])
+        for start_position_template in self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
+            pos_start_brackets = self.get_start_positions_of_regex(r"\{\{", self.text[start_position_template + 2:])
             pos_start_brackets.reverse()
-            pos_end_brackets = self.get_start_positions_of_regex("\}\}", self.text[start_position_template + 2:])
+            pos_end_brackets = self.get_start_positions_of_regex(r"\}\}", self.text[start_position_template + 2:])
             pos_end_brackets.reverse()
             open_brackets = 1
             while pos_end_brackets:

@@ -17,7 +17,7 @@ class AuthorList(CanonicalBot):
         self.searcher = PetScan()
         self.repo = self.wiki.data_repository()  # this is a DataSite object
         self.string_list = []
-        self.match_property = re.compile('\{\{#property:P(\d{1,4})\}\}')
+        self.match_property = re.compile(r'\{\{#property:P(\d{1,4})\}\}')
         self.number_to_month = {1: 'Januar',
                                 2: 'Februar',
                                 3: 'März',
@@ -33,7 +33,7 @@ class AuthorList(CanonicalBot):
 
     def __enter__(self):
         CanonicalBot.__enter__(self)
-        if 1 == self.timestamp.start.day:
+        if self.timestamp.start.day == 1:
             self.data.assign_dict(dict())
             self.logger.warning('The data is thrown away. It is the first of the month')
         return self
@@ -76,7 +76,7 @@ class AuthorList(CanonicalBot):
         entries_to_search = self.searcher.run()
         return entries_to_search
 
-    _space_regex = re.compile('\s+')
+    _space_regex = re.compile(r'\s+')
 
     def _strip_spaces(self, raw_string: str):
         return self._space_regex.subn(raw_string.strip(), ' ')[0]
@@ -96,7 +96,7 @@ class AuthorList(CanonicalBot):
             page = Page(self.wiki, author['title'])
             try:
                 try:
-                    personendaten = re.search('\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
+                    personendaten = re.search(r'\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
                 except:
                     self.logger.error('No valid block "Personendaten" was found for [[{}]].'.format(author['title']))
                     personendaten = None
@@ -155,8 +155,8 @@ class AuthorList(CanonicalBot):
                     except:
                         self.logger.warning('The autor [[{}]] has no wikidata_item'.format(author['title']))
                     self.data.update({author['id']: dict_author})
-            except Exception as e:
-                self.logger.exception(exc_info=e)
+            except Exception as exception:
+                self.logger.exception("Exception not catched: ", exc_info=exception)
                 self.logger.error('author {} have a problem'.format(author['title']))
 
     def _convert_to_table(self):
@@ -282,10 +282,10 @@ class AuthorList(CanonicalBot):
                 self.logger.debug("Wasn't able to ge any data from wikidata")
                 return ''  # 4,6
         else:
-            return (author_dict[event])  # 4,6
+            return author_dict[event]  # 4,6
 
 
 if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with AuthorList(wiki=wiki, debug=True) as bot:
+    ws_wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with AuthorList(wiki=ws_wiki, debug=True) as bot:
         bot.run()
