@@ -10,13 +10,10 @@ import sys
 import git
 from pywikibot import Site
 
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.pardir + os.sep)
-
 from scripts.service.author_list import AuthorList
-from scripts.service.ws_re.status import ReStatus
-from scripts.service.gl.status import GlStatus
 from scripts.service.gl.create_magazine import GlCreateMagazine
-from scripts.service.ws_re.scanner import ReScanner
+from scripts.service.gl.status import GlStatus
+from scripts.service.ws_re.status import ReStatus
 from tools.bots import CanonicalBot
 
 

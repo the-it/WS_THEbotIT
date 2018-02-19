@@ -69,7 +69,7 @@ class DateConversion:
                 century = int(century.group())
             else:
                 century = int(century.group()) - 1
-            year = self._append_zeros_to_year(str(century) + '00')
+            year = (str(century) + '00').zfill(4)
             return_str = ''.join([year, '-', '00', '-', '00'])
             del year
         elif self.regex_complete_date.search(str_re_form):
@@ -77,18 +77,18 @@ class DateConversion:
             li_str = re.split('[. ]{1,2}', self.regex_complete_date.search(str_re_form).group())
             li_str[0] = self._day_to_int(re.sub('\.', '', li_str[0]))  # Punkt aus dem Tag entfernen
             li_str[1] = self._month_to_int(li_str[1])  # Monat in Zahl verwandeln
-            li_str[2] = self._append_zeros_to_year(li_str[2])  # append zeros to the year
+            li_str[2] = li_str[2].zfill(4)  # append zeros to the year
             return_str = ''.join([li_str[2], '-', li_str[1], '-', li_str[0]])
         elif self.regex_no_day.search(str_re_form):
             # Case: only month and year
             li_str = re.split(' ', self.regex_no_day.search(str_re_form).group())
             li_str[0] = self._month_to_int(li_str[0])  # Monat in Zahl verwandeln
-            li_str[1] = self._append_zeros_to_year(li_str[1])  # append zeros to the year
+            li_str[1] = li_str[1].zfill(4)  # append zeros to the year
             return_str = ''.join([li_str[1], '-', li_str[0], '-', '00'])
         elif self.regex_only_year.search(str_re_form):
             # Case: only year
             li_str = re.split(' ', self.regex_only_year.search(str_re_form).group())
-            li_str[0] = self._append_zeros_to_year(li_str[0])  # append zeros to the year
+            li_str[0] = li_str[0].zfill(4)  # append zeros to the year
             return_str = ''.join([li_str[0], '-', '00', '-', '00'])
         elif str_re_form == '' or self.regex_dont_know.search(str_re_form):
             # Case: empty rawstring
@@ -100,7 +100,7 @@ class DateConversion:
         if self.regex_before_domino.search(str_re_form):
             year = int(return_str[0:4])
             converted_year = 9999 - year
-            return_str = '-' + self._append_zeros_to_year(str(converted_year)) + return_str[4:]
+            return_str = '-' + str(converted_year).zfill(4) + return_str[4:]
 
         return return_str
 
@@ -109,12 +109,6 @@ class DateConversion:
         str_re_value = re.sub('<ref>.+</ref>', '', rawstring)
         str_re_value = re.sub(r'{{CRef\|.+}}', '', str_re_value)
         return str_re_value
-
-    @staticmethod
-    def _append_zeros_to_year(year):
-        for i in range((4 - len(year))):
-            year = '0' + year
-        return year
 
     @staticmethod
     def _month_to_int(month):

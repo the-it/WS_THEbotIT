@@ -85,7 +85,7 @@ class GlCreateMagazine(CanonicalBot):
 
     def process_actual_pages(self, dictionary_of_new_pages):
         tempdata_magzines = {}
-        for idx, year in enumerate(dictionary_of_new_pages):
+        for year in dictionary_of_new_pages:
             set_of_pages = set(dictionary_of_new_pages[year])
             tempdata_magzines[year] = set()
             try:

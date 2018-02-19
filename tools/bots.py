@@ -36,10 +36,10 @@ class WikiLogger(object):
     def _get_logger_names(self):
         log_file_names = {}
         for log_type in ("info", "debug"):
-            log_file_names.update({log_type: '{name}_{log_type}_{timestamp}.log'
-                                  .format(name=self._bot_name,
-                                          log_type=log_type.upper(),
-                                          timestamp=self._start_time.strftime('%y%m%d%H%M%S'))})
+            log_file_names.update({log_type: '{name}_{log_type}_{timestamp}.log'.format(
+                name=self._bot_name,
+                log_type=log_type.upper(),
+                timestamp=self._start_time.strftime('%y%m%d%H%M%S'))})
         return log_file_names
 
     def _setup_logger_properties(self):
@@ -158,6 +158,7 @@ class BaseBot(object):
         self.wiki = wiki
         self.debug = debug
         self.timeout = timedelta(minutes=60)
+        self.logger = None
 
     def __enter__(self):
         self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
@@ -333,6 +334,6 @@ class PingCanonical(CanonicalBot):
 
 
 if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with PingOneTime(wiki=wiki, debug=False) as bot:
+    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with PingOneTime(wiki=WS_WIKI, debug=False) as bot:
         bot.run()
