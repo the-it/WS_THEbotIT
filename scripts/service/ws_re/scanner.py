@@ -19,6 +19,8 @@ class ReScannerTask(object):
         self.logger = logger
         self.hash = None
         self.re_page = None
+        self.pre_process_hash = None
+        self.text = None
 
     def __del__(self):
         self.finish_task()
@@ -132,6 +134,6 @@ class ReScanner(CanonicalBot):
 
 
 if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with ReScanner(wiki=wiki, debug=True) as bot:
+    ws_wiki = Site(code='de', fam='wikisource', user='THEbotIT')
+    with ReScanner(wiki=ws_wiki, debug=True) as bot:
         bot.run()

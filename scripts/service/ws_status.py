@@ -17,9 +17,9 @@ class RowBasic():
         self.today = datetime.datetime.now()
 
     def build_row(self):
-        raise BotExeption
+        raise BotExeption("Class {} should implement the method build_row()".format(self))
 
-    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list=None, union=False):
+    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list= None, union=False):
         searcher = PetScan()
         for cat in list_of_cat:
             searcher.add_positive_category(cat)
@@ -40,7 +40,7 @@ class RowBasic():
 class RowBearbeitungen(RowBasic):
     def build_row(self):
         return '|-\n| {} || {} ||  ||  ||  ||'.format(self.today.strftime('%Y-%m-%d'),
-                                                                      self.get_wiki_bearbeitungen())
+                                                      self.get_wiki_bearbeitungen())
 
     def get_wiki_bearbeitungen(self):
         dummypage = Page(self.wiki, 'Benutzer:THEbotIT/dummy')
@@ -55,21 +55,23 @@ class RowSeitenstatistik(RowBasic):
         self.logger.info('Searchstrings for genre')
         list_sites_stats = list()
         list_sites_stats.append(self.get_all_sites())
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
-                namespace='Seite', union=True))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
-                namespace='Article', union=True))
+        list_sites_stats.append(self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert',
+                                                       'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
+                                                      namespace='Seite', union=True))
+        list_sites_stats.append(self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert',
+                                                       'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
+                                                      namespace='Article', union=True))
         list_sites_stats.append(self.get_sites_in_cat(['Werke']))
         list_sites_stats.append(self.get_sites_in_cat(['Zeitschriftenartikel']))
         list_sites_stats.append(self.get_sites_in_cat(['Gedicht'], depth=4))
-        list_sites_stats.append(self.get_sites_in_cat(
-                ['Märchen', 'Sage', 'Fabel', 'Sagenballade', 'Reimfabel', 'Schwank'], depth=4, union=True))
+        list_sites_stats.append(self.get_sites_in_cat(['Märchen', 'Sage', 'Fabel',
+                                                       'Sagenballade', 'Reimfabel', 'Schwank'],
+                                                      depth=4, union=True))
         list_sites_stats.append(self.get_sites_in_cat(['Rechtstext'], depth=2))
         list_sites_stats.append(self.get_sites_in_cat(['Darstellung'], depth=0))
         list_sites_stats.append(self.get_sites_in_cat(['Brief'], depth=2))
-        list_sites_stats.append(self.get_sites_in_cat(['Biographie', 'Autobiographie', 'Tagebuch'], depth=0, union=True))
+        list_sites_stats.append(self.get_sites_in_cat(['Biographie', 'Autobiographie', 'Tagebuch'],
+                                                      depth=0, union=True))
         list_sites_stats.append(self.get_sites_in_cat(['Lexikon'], depth=0))
         list_sites_stats.append(self.get_sites_in_cat(['Drama'], depth=1))
         list_sites_stats.append(self.get_sites_in_cat(['Roman'], depth=1))
@@ -116,7 +118,7 @@ class RowBearbeitungsstand(RowBasic):
         return '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) + ' || '.join(list_sites_stats)
 
     @staticmethod
-    def make_percent(counter:str, denominator:str):
+    def make_percent(counter: str, denominator: str):
         counter = float(counter.replace('.', ''))
         denominator = float(denominator.replace('.', ''))
         return "{:10.2f}".format(counter/denominator * 100.0)
@@ -152,4 +154,3 @@ class WsStatus(CanonicalBot):
     def save_text_to_site(self):
         self.stat_page.text = self.text
         self.stat_page.save('new dataset', botflag=True)
-

@@ -85,7 +85,7 @@ class ReArticle(Mapping):
         "VW": "VERWEIS",
         "NT": "NACHTRAG"}
 
-    def __init__(self, article_type: str=RE_DATEN, re_daten_properties: dict=None, text: str="", author: str=""):
+    def __init__(self, article_type: str =RE_DATEN, re_daten_properties: dict =None, text: str ="", author: str =""):
         self._article_type = None
         self.article_type = article_type
         self._text = None
