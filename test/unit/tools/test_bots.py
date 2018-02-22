@@ -2,13 +2,12 @@ from collections import Mapping
 from datetime import datetime
 import json
 import os
-import pwd
 from shutil import rmtree
 
 from test import *
 from tools.bots import BotExeption, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
 
-_data_path = pwd.getpwuid(os.getuid()).pw_dir + os.sep + ".THEbotIT"
+_data_path = os.path.expanduser("~") + os.sep + ".THEbotIT"
 
 
 def _remove_data_folder():
@@ -207,7 +206,9 @@ class TestPersistedData(TestCase):
         with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
             self.assertEqual(self.json_test, file.read())
 
-    def test_dump_and_create_folder(self):
+    def test_dump_different_keys(self):
+        self.data[1] = 1
+        self.data["2"] = "2"
         self.data.dump()
 
     def test_load_data_from_file(self):
