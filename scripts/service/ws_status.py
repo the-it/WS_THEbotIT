@@ -19,7 +19,8 @@ class RowBasic():
     def build_row(self):
         raise BotExeption("Class {} should implement the method build_row()".format(self))
 
-    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list= None, union=False):
+    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list = None, union=False):
+        # pylint: disable=too-many-arguments
         searcher = PetScan()
         for cat in list_of_cat:
             searcher.add_positive_category(cat)

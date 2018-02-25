@@ -1,4 +1,5 @@
 import defusedxml
+# pylint: disable=unused-import
 from defusedxml import minidom
 
 
@@ -18,7 +19,7 @@ class AbbyyXML:
     def _process_child_items_with_function(child_name: str,
                                            child_xml,
                                            child_handler_function,
-                                           append_new_line: bool=True):
+                                           append_new_line: bool = True):
         childes = child_xml.getElementsByTagName(child_name)
         childes_string = []
         for child in childes:

@@ -16,7 +16,7 @@ pycodestyle :
 
 pylint : 
 	echo "############ PYLINT ############"
-	pylint --rcfile .pylintrc scripts tools
+	pylint -j2 --rcfile .pylintrc scripts tools
 
 bandit :
 	echo "############ BANDIT ############"
@@ -24,7 +24,7 @@ bandit :
 
 flake8 :
 	echo "############ FLAKE8 ############"
-	flake8 --exit-zero --benchmark
+	flake8 --benchmark
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"

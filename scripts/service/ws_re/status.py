@@ -1,5 +1,5 @@
 import re
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from pywikibot import Page, Site
 from tools.catscan import PetScan
@@ -18,22 +18,22 @@ class ReStatus(CanonicalBot):
         korrigiert = self.get_sum_of_cat(['RE:Teilkorrigiert', 'RE:Korrigiert'],
                                          ['RE:Unkorrigiert', 'RE:Unvollständig'])
         unkorrigiert = self.get_sum_of_cat(['RE:Unkorrigiert', 'RE:Unvollständig'], [])
-        self.userpage_THE_IT(korrigiert)
+        self.user_page_the_it(korrigiert)
         self.history(fertig, korrigiert, unkorrigiert)
         return True
 
     @staticmethod
-    def make_color(min, max, value):
-        if value > min:
-            if value < max:
-                color = (1 - (value - min) / (max - min)) * 255
+    def make_color(min_value, max_value, value):
+        if value > min_value:
+            if value < max_value:
+                color = (1 - (value - min_value) / (max_value - min_value)) * 255
             else:
                 color = 0
         else:
             color = 255
         return str(hex(int(color)))[2:].zfill(2)
 
-    def userpage_THE_IT(self, korrigiert):
+    def user_page_the_it(self, korrigiert):
         status_string = []
 
         color = self.make_color(20e6, 22e6, korrigiert[0])
@@ -87,6 +87,6 @@ class ReStatus(CanonicalBot):
 
 
 if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with ReStatus(wiki=wiki, debug=True) as bot:
+    WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with ReStatus(wiki=WIKI, debug=True) as bot:
         bot.run()
