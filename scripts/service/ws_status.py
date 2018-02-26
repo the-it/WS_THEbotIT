@@ -38,6 +38,7 @@ class RowBasic():
         del searcher
         return '{0:,}'.format(len(list_of_lemmas)).replace(',', '.')
 
+
 class RowBearbeitungen(RowBasic):
     def build_row(self):
         return '|-\n| {} || {} ||  ||  ||  ||'.format(self.today.strftime('%Y-%m-%d'),
@@ -50,6 +51,7 @@ class RowBearbeitungen(RowBasic):
         del dummypage
         dummypage = Page(self.wiki, 'Benutzer:THEbotIT/dummy')
         return dummypage.text
+
 
 class RowSeitenstatistik(RowBasic):
     def build_row(self):
@@ -122,7 +124,7 @@ class RowBearbeitungsstand(RowBasic):
     def make_percent(counter: str, denominator: str):
         counter = float(counter.replace('.', ''))
         denominator = float(denominator.replace('.', ''))
-        return "{:10.2f}".format(counter/denominator * 100.0)
+        return "{:10.2f}".format(counter / denominator * 100.0)
 
 
 class WsStatus(CanonicalBot):
@@ -139,7 +141,7 @@ class WsStatus(CanonicalBot):
         else:
             lemma = 'WS:Statistik'
         self.load_text_from_site(lemma)
-        #self.new_row(str(RowSeitenstatistik(self.wiki, self.logger)), 'SEITENSTATISTIK')
+        # self.new_row(str(RowSeitenstatistik(self.wiki, self.logger)), 'SEITENSTATISTIK')
         self.new_row(str(RowBearbeitungsstand(self.wiki, self.logger)), 'BEARBEITUNGSSTAND')
         self.save_text_to_site()
         return True

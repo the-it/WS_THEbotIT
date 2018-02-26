@@ -67,7 +67,7 @@ class GlCreateMagazine(CanonicalBot):
                 if year not in temp_data.keys():
                     temp_data[year] = []
                 temp_data[year].append(page)
-            except Exception as error: # pylint: disable=broad-except
+            except Exception as error:  # pylint: disable=broad-except
                 self.logger.error("wasn't able to process {}, error: {}".format(lemma['title'], error))
 
     def process_indexes(self):
@@ -204,14 +204,14 @@ class GlCreateMagazine(CanonicalBot):
                            '{{Textdaten\n')
         if magazine > 1:
             string_list.append('|VORIGER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
-                                                                                                magazine=magazine-1))
+                                                                                                magazine=magazine - 1))
         else:
             string_list.append('|VORIGER=\n')
         if last:
             string_list.append('|NÄCHSTER=\n')
         else:
             string_list.append('|NÄCHSTER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
-                                                                                                 magazine=magazine+1))
+                                                                                                 magazine=magazine + 1))
         string_list.append("|AUTOR=Verschiedene\n|TITEL=[[Die Gartenlaube]]\n"
                            "|SUBTITEL=''Illustrirtes Familienblatt''\n|HERKUNFT=off\n")
         if year < 1863:

@@ -1,12 +1,11 @@
 import defusedxml
-# pylint: disable=unused-import
 from defusedxml import minidom
 
 
 class AbbyyXML:
     def __init__(self, xml_string):
         defusedxml.defuse_stdlib()
-        self.dom_obj = defusedxml.minidom.parseString(xml_string)
+        self.dom_obj = minidom.parseString(xml_string)
 
     def get_text(self):
         return self.process_document()

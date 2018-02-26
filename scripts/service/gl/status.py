@@ -114,6 +114,7 @@ class GlStatus(CanonicalBot):
         self.logger.debug(str(searcher))
         return len(searcher.run())
 
+
 if __name__ == "__main__":
     WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
     with GlStatus(wiki=WIKI, debug=False) as bot:

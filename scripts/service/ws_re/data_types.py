@@ -62,6 +62,7 @@ class ReProperty(object):
     def __hash__(self):
         return hash(self.name) + hash(self.value)
 
+
 RE_DATEN = "REDaten"
 RE_ABSCHNITT = "REAbschnitt"
 RE_AUTHOR = "REAutor"
@@ -170,9 +171,9 @@ class ReArticle(Mapping):
 
     def __hash__(self):
         return hash(self._article_type) \
-               + (hash(self._properties) << 1) \
-               + (hash(self._text) << 2) \
-               + (hash(self._author) << 3)
+            + (hash(self._properties) << 1) \
+            + (hash(self._text) << 2) \
+            + (hash(self._author) << 3)
 
     @classmethod
     def from_text(cls, article_text):

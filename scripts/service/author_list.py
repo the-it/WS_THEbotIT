@@ -99,7 +99,7 @@ class AuthorList(CanonicalBot):
             try:
                 try:
                     personendaten = re.search(r'\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
-                except:
+                except Exception:
                     self.logger.error('No valid block "Personendaten" was found for [[{}]].'.format(author['title']))
                     personendaten = None
                 if personendaten:
@@ -113,27 +113,27 @@ class AuthorList(CanonicalBot):
                     try:
                         dict_author.update({'birth': self._strip_spaces(
                             template_extractor.get_parameter('GEBURTSDATUM')['value'])})
-                    except:
+                    except Exception:
                         dict_author.update({'birth': ""})
                         self.logger.warning("Templatehandler couldn't find a birthdate for: [[{}]]"
                                             .format(author['title']))
                     try:
                         dict_author.update({'death': self._strip_spaces(
                             template_extractor.get_parameter('STERBEDATUM')['value'])})
-                    except:
+                    except Exception:
                         dict_author.update({'death': ""})
                         self.logger.warning("Templatehandler couldn't find a deathdate for: [[{}]]"
                                             .format(author['title']))
                     try:
                         dict_author.update(
                             {'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
-                    except:
+                    except Exception:
                         dict_author.update({'description': ""})
                         self.logger.warning("Templatehandler couldn't find a description for: [[{}]]"
                                             .format(author['title']))
                     try:
                         dict_author.update({'synonyms': template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
-                    except:
+                    except Exception:
                         dict_author.update({'synonyms': ""})
                         self.logger.warning("Templatehandler couldn't find synonyms for: [[{}]]"
                                             .format(author['title']))
@@ -141,7 +141,7 @@ class AuthorList(CanonicalBot):
                         dict_author.update({'sortkey': template_extractor.get_parameter('SORTIERUNG')['value']})
                         if dict_author['sortkey'] == '':
                             raise ValueError
-                    except:
+                    except Exception:
                         self.logger.debug('there is no sortkey for [[{}]].'.format(author['title']))
                         # make a dummy key
                         if not dict_author['name']:
@@ -154,7 +154,7 @@ class AuthorList(CanonicalBot):
                             dict_author['sortkey'] = dict_author['name'] + ', ' + dict_author['first_name']
                     try:
                         dict_author.update({'wikidata': author['q']})
-                    except:
+                    except KeyError:
                         self.logger.warning('The autor [[{}]] has no wikidata_item'.format(author['title']))
                     self.data.update({author['id']: dict_author})
             except Exception as exception:
@@ -173,7 +173,7 @@ class AuthorList(CanonicalBot):
                             break
                         equal_count += 1
                 temp_list = list_authors[i:i + equal_count]
-                temp_list.sort(key=lambda x: x[5]) # sort by birth date
+                temp_list.sort(key=lambda x: x[5])  # sort by birth date
                 list_authors[i:i + equal_count] = temp_list
 
     def _convert_to_table(self):
@@ -193,7 +193,7 @@ class AuthorList(CanonicalBot):
                 list_author.append(self._handle_birth_and_death(event, author_dict))  # 4,6
                 try:
                     list_author.append(str(DateConversion(list_author[-1])))  # 5,7
-                except:
+                except Exception:
                     self.logger.error('Can´t compile sort key for {}: {}'.format(event, author_dict[event]))
                     list_author.append('!-00-00')  # 5,7
             list_author.append(author_dict['description'])  # 8
@@ -274,16 +274,14 @@ class AuthorList(CanonicalBot):
                 elif date_from_data.precision < 11:
                     date_from_data = self.number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
                 else:
-                    date_from_data = str(date_from_data.day) \
-                                     + '. ' \
-                                     + self.number_to_month[date_from_data.month] \
-                                     + ' ' \
-                                     + str(date_from_data.year)
+                    date_from_data = "{day}. {month} {year}".format(day=date_from_data.day,
+                                                                    month=self.number_to_month[date_from_data.month],
+                                                                    year=date_from_data.year)
                 if re.search('-', date_from_data):
                     date_from_data = date_from_data.replace('-', '') + ' v. Chr.'
                 self.logger.debug('Found {} @ wikidata for {}'.format(date_from_data, event))
                 return date_from_data  # 4,6
-            except:
+            except Exception:
                 self.logger.debug("Wasn't able to ge any data from wikidata")
                 return ''  # 4,6
         else:
