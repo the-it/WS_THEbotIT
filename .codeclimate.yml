@@ -5,8 +5,7 @@ plugins:
   pep8:
     enabled: true
 exclude_patterns:
-  - "scripts/online/"
-  - "scripts/offline/"
+  - "archive/"
   - "test/"
   - "scripts/service/sort_filter.py" #not maintained at the moment
   - "tools/abbyy_xml.py" #not maintained at the moment
