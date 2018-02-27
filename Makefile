@@ -12,15 +12,19 @@ pip3-all : pip3
 
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
-	pycodestyle --show-source --statistics --count  || :
+	pycodestyle --show-source --statistics --count
 
 pylint : 
 	echo "############ PYLINT ############"
-	pylint --rcfile .pylintrc scripts tools || :
+	pylint -j2 --rcfile .pylintrc scripts tools
+
+bandit :
+	echo "############ BANDIT ############"
+	bandit -r .
 
 flake8 :
 	echo "############ FLAKE8 ############"
-	flake8 --exit-zero --benchmark  || :
+	flake8 --benchmark
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
@@ -56,6 +60,6 @@ codecov :
 
 clean : clean-pyc clean-coverage clean-code-climate
 
-quality : pycodestyle flake8 pylint coverage
+quality : bandit coverage flake8 pycodestyle pylint
 
 .PHONY : clean, code-climate, quality
