@@ -32,9 +32,14 @@ coverage : clean-coverage
 	coverage run test/all_test.py && \
 	coverage xml
 
+coverage_html : coverage
+	echo "######### COVERAGE HTML ########"
+	coverage html -d .coverage_html
+	python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
+
 clean-coverage :
 	echo "######## CLEAN COVERAGE ########"
-	rm .coverage coverage.xml || :
+	rm -rf .coverage coverage.xml .coverage_html || :
 
 code-climate-pre :
 	echo "####### CODE CLIMATE PRE #######"
