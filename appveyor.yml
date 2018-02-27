@@ -1,0 +1,39 @@
+# AppVeyor CI
+# https://www.appveyor.com/docs
+
+environment:
+  matrix:
+    # For Python versions available on AppVeyor, see
+    # http://www.appveyor.com/docs/installed-software#python
+    - PYTHON: "C:\\Python34"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+    - PYTHON: "C:\\Python35"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+    - PYTHON: "C:\\Python36"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+    - PYTHON: "C:\\Python36-x64"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+
+install:
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "python -c \"import sys; print(sys.prefix)\""
+  - "python -c \"import sys; print(sys.exec_prefix)\""
+  - "python -c \"import sys; print(sys.executable)\""
+  - "python -V -V"
+  # Twisted requires pywin32 on Windows in order to spawn processes.
+  # - "python -m pip install pypiwin32"
+
+  # TODO: There is no binary wheel for pysqlite and building on Windows is
+  # painful. Let's just substitute sqlite3.dll with never version.
+  - "python -m pip install -U pip"
+  - "python -m pip install -r requirements.txt"
+  - "python -m pip install -r requirements_dev.txt"
+  - "python -m pip list"
+build: false
+
+test_script:
+  - "coverage run test/all_test.py"
+
+on_success:
+  #- "coverage xml --rcfile=common/coveragerc -o coverage.xml -i"
+  #- "codecov"
