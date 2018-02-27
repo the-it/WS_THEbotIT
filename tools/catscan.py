@@ -8,7 +8,7 @@ import requests
 
 from tools import ToolException
 
-namespace_mapping = {"Article": 0,
+NAMESPACE_MAPPING = {"Article": 0,
                      "Diskussion": 1,
                      "Benutzer": 2,
                      "Benutzer Diskussion": 3,
@@ -69,11 +69,11 @@ namespace_mapping = {"Article": 0,
                      "Thema": 2600}
 
 
-def listify(x) -> list:
+def listify(item) -> list:
     """
     If given a non-list, encapsulate in a single-element list.
     """
-    return x if isinstance(x, list) else [x]
+    return item if isinstance(item, list) else [item]
 
 
 class PetScanException(ToolException):
@@ -81,6 +81,7 @@ class PetScanException(ToolException):
 
 
 class PetScan:
+    # pylint: disable=too-many-public-methods, too-many-instance-attributes
     """
     Encapsulate the catscan service, written by Markus Manske (https://petscan.wmflabs.org/).
     It is possible to access all parameters by different setter functions. The function 'run' execute the server inquiry
@@ -90,7 +91,7 @@ class PetScan:
     def __init__(self):
         self.header = {'User-Agent': 'Python-urllib/3.1'}
         self.base_address = "https://petscan.wmflabs.org/"
-        self.timeout = 30
+        self._timeout = 30
         self.options = {}
         self.categories = {"positive": [], "negative": []}
         self.templates = {'yes': [], 'any': [], 'no': []}
@@ -109,7 +110,7 @@ class PetScan:
         self.project = proj
 
     def set_timeout(self, sec: int):
-        self.timeout = sec
+        self._timeout = sec
 
     def add_options(self, dict_options: dict):
         self.options.update(dict_options)
@@ -135,10 +136,10 @@ class PetScan:
         namespace = listify(namespace)
         for i in namespace:
             # is there a given integer or the string of a namespace
-            if type(i) is int:
+            if isinstance(i, int):
                 self.add_options({"ns[" + str(i) + "]": "1"})
             else:
-                self.add_options({"ns[" + str(namespace_mapping[i]) + "]": "1"})
+                self.add_options({"ns[" + str(NAMESPACE_MAPPING[i]) + "]": "1"})
 
     def activate_redirects(self):
         self.add_options({"show_redirects": "yes"})
@@ -173,14 +174,10 @@ class PetScan:
     def add_no_links_to(self, page: str):
         self.links_to['no'].append(page)
 
-    def last_change_before(self, year: int, month: int = 1, day: int = 1, hour: int = 0, minute: int = 0,
-                           second: int = 0):
-        last_change = datetime.datetime(year, month, day, hour, minute, second)
+    def last_change_before(self, last_change: datetime):
         self.add_options({"before": last_change.strftime("%Y%m%d%H%M%S")})
 
-    def last_change_after(self, year: int, month: int = 1, day: int = 1, hour: int = 0, minute: int = 0,
-                          second: int = 0):
-        last_change = datetime.datetime(year, month, day, hour, minute, second)
+    def last_change_after(self, last_change: datetime):
         self.add_options({"after": last_change.strftime("%Y%m%d%H%M%S")})
 
     def max_age(self, hours: int):
@@ -198,10 +195,10 @@ class PetScan:
     def get_wikidata_items(self):
         self.add_options({"wikidata_item": "any"})
 
-    def get_pages_with_wikidata_items(self):
+    def get_pages_with_wd_items(self):
         self.add_options({"wikidata_item": "with"})
 
-    def get_pages_without_wikidata_items(self):
+    def get_pages_without_wd_items(self):
         self.add_options({"wikidata_item": "without"})
 
     def set_regex_filter(self, regex: str):
@@ -216,11 +213,11 @@ class PetScan:
     def set_last_edit_anons(self, allowed=True):
         self._set_last_edit("anons", allowed)
 
-    def _set_last_edit(self, type, allowed):
+    def _set_last_edit(self, type_of_user, allowed):
         if allowed:
-            self.add_options({"edits[{}]".format(type): "yes"})
+            self.add_options({"edits[{}]".format(type_of_user): "yes"})
         else:
-            self.add_options({"edits[{}]".format(type): "no"})
+            self.add_options({"edits[{}]".format(type_of_user): "no"})
 
     sort_criteria = ['title', 'ns_title', 'size', 'date', 'incoming_links', 'random']
 
@@ -287,7 +284,7 @@ class PetScan:
         @rtype: list
         """
         response = requests.get(url=self._construct_string(),
-                                headers=self.header, timeout=self.timeout)
+                                headers=self.header, timeout=self._timeout)
         if response.status_code != 200:
             raise ConnectionError
         response_byte = response.content

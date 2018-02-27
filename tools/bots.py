@@ -183,18 +183,18 @@ class BaseBot(object):
     def run(self):
         try:
             self.success = bool(self.task())
-        except Exception as e:
-            self.logger.exception("Logging an uncaught exception", exc_info=e)
+        except Exception as catched_exception:  # pylint: disable=broad-except
+            self.logger.exception("Logging an uncaught exception", exc_info=catched_exception)
             self.success = False
         return self.success
 
     def _watchdog(self):
         diff = datetime.now() - self.timestamp.start
+        time_over = False
         if diff > self.timeout:
             self.logger.warning('Bot finished by timeout.')
-            return True
-        else:
-            return False
+            time_over = True
+        return time_over
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
@@ -230,7 +230,7 @@ class PersistedData(Mapping):
         return iter(self.data)
 
     def assign_dict(self, new_dict: dict):
-        if type(new_dict) is dict:
+        if isinstance(new_dict, dict):
             self.data = new_dict
         else:
             raise BotExeption("{} has the wrong type. It must be a dictionary.".format(new_dict))
@@ -268,7 +268,7 @@ class CanonicalBot(BaseBot):
         if self.data_outdated():
             self.data.assign_dict({})
             self.logger.warning('The data is thrown away. It is out of date')
-        elif (self.timestamp.last_run is None) or (self.timestamp.success == False):
+        elif (self.timestamp.last_run is None) or not self.timestamp.success:
             self.data.assign_dict({})
             self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
         else:
