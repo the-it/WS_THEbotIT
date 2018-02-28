@@ -6,8 +6,6 @@ from tools.bots import CanonicalBot
 
 
 class GlStatus(CanonicalBot):
-    bot_name = 'GLStatus'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
 

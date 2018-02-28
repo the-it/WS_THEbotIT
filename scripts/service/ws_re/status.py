@@ -7,8 +7,6 @@ from tools.bots import CanonicalBot
 
 
 class ReStatus(CanonicalBot):
-    bot_name = 'REStatus'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
 

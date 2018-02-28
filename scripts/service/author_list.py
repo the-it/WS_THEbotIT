@@ -11,8 +11,6 @@ from tools.bots import CanonicalBot
 
 class AuthorList(CanonicalBot):
     # pylint: disable=bare-except,too-many-branches,broad-except
-    bot_name = 'AuthorList'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.searcher = PetScan()

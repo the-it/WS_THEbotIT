@@ -9,8 +9,6 @@ from tools.bots import CanonicalBot, BotExeption
 
 
 class GlCreateMagazine(CanonicalBot):
-    bot_name = 'MagazinesGL'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.searcher_pages = PetScan()

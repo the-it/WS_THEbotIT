@@ -128,8 +128,6 @@ class RowBearbeitungsstand(RowBasic):
 
 
 class WsStatus(CanonicalBot):
-    bot_name = 'WsStatus'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.text = None

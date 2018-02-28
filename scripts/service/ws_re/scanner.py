@@ -70,8 +70,6 @@ class ENUUTask(ReScannerTask):
 
 
 class ReScanner(CanonicalBot):
-    bot_name = 'ReScanner'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.lemma_list = None

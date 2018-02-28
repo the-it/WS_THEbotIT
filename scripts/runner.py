@@ -18,8 +18,6 @@ from tools.bots import CanonicalBot
 
 
 class DailyRunner(CanonicalBot):
-    bot_name = 'DailyRunner'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
 

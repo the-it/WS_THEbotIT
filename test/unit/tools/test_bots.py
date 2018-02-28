@@ -5,7 +5,7 @@ import os
 from shutil import rmtree
 
 from test import *
-from tools.bots import BotExeption, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
+from tools.bots import BotExeption, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
 
 _data_path = os.path.expanduser("~") + os.sep + ".THEbotIT"
 
@@ -145,6 +145,34 @@ class TestPersistedTimestamp(TestCase):
         self.timestamp.last_run = None
 
 
+class TestOneTimeBot(TestCase):
+    def setUp(self):
+        _remove_data_folder()
+
+    def tearDown(self):
+        _remove_data_folder()
+
+    class NoTaskBot(OneTimeBot):
+        pass
+
+    class MinimalBot(OneTimeBot):
+        def task(self):
+            pass
+
+    def test_get_bot_name(self):
+        self.assertEqual("MinimalBot", self.MinimalBot.get_bot_name())
+        self.assertEqual("MinimalBot", self.MinimalBot().bot_name)
+
+    def test_not_implemented(self):
+        with self.assertRaises(NotImplementedError):
+            self.NoTaskBot()
+
+    def test_basic_run(self):
+        with self.MinimalBot(silence=True) as bot:
+            bot.run()
+
+
+
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
         super(TestPersistedData, self).__init__(*args, **kwargs)
@@ -173,6 +201,8 @@ class TestPersistedData(TestCase):
     def test_delete_key(self):
         self.data["a"] = 1
         del self.data["a"]
+        with self.assertRaises(KeyError):
+            dummy = self.data["a"]
 
     def test_iter_over_keys(self):
         self.data["a"] = [1, 2]
