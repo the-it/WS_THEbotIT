@@ -35,23 +35,11 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
-          name: bandit
-          when: always
-          command: |
-            . venv/bin/activate
-            make bandit
-      - run:
           name: flake8
           when: always
           command: |
             . venv/bin/activate
             make flake8
-      - run:
-          name: pycodestyle
-          when: always
-          command: |
-            . venv/bin/activate
-            make pycodestyle
       - run:
           name: pylint
           when: always

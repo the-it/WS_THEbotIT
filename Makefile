@@ -24,7 +24,7 @@ bandit :
 
 flake8 :
 	echo "############ FLAKE8 ############"
-	flake8 --benchmark
+	flake8
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
