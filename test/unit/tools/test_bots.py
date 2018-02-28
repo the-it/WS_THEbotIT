@@ -3,6 +3,7 @@ from datetime import datetime
 import json
 import os
 from shutil import rmtree
+import time
 
 from test import *
 from tools.bots import BotExeption, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
@@ -88,16 +89,6 @@ class TestWikilogger(TestCase):
         self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
 
 
-class TestBaseBot(TestCase):
-    def setUp(self):
-        self.addCleanup(patch.stopall)
-        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
-        self.wiki_logger_mock = self.log_patcher.start()
-
-    def test_dfghj(self):
-        pass
-
-
 class TestPersistedTimestamp(TestCase):
     _precision = 0.001
 
@@ -147,13 +138,14 @@ class TestPersistedTimestamp(TestCase):
 
 class TestOneTimeBot(TestCase):
     def setUp(self):
+        self.addCleanup(patch.stopall)
+        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
+        self.timestamp_patcher = patch.object(PersistedTimestamp, 'debug', autospec=True)
+        self.wiki_logger_mock = self.log_patcher.start()
         _remove_data_folder()
 
     def tearDown(self):
         _remove_data_folder()
-
-    class NoTaskBot(OneTimeBot):
-        pass
 
     class MinimalBot(OneTimeBot):
         def task(self):
@@ -163,6 +155,9 @@ class TestOneTimeBot(TestCase):
         self.assertEqual("MinimalBot", self.MinimalBot.get_bot_name())
         self.assertEqual("MinimalBot", self.MinimalBot().bot_name)
 
+    class NoTaskBot(OneTimeBot):
+        pass
+
     def test_not_implemented(self):
         with self.assertRaises(NotImplementedError):
             self.NoTaskBot()
@@ -171,6 +166,19 @@ class TestOneTimeBot(TestCase):
         with self.MinimalBot(silence=True) as bot:
             bot.run()
 
+    class LogBot(OneTimeBot):
+        def task(self):
+            self.logger.info("Test")
+            time.sleep(0.1)
+
+    def test_logging(self):
+        with LogCapture() as l:
+            with self.LogBot(silence=True) as bot:
+                bot.run()
+                l.check(('LogBot', 'INFO', 'Start the bot LogBot.'),
+                        ('LogBot', 'INFO', 'Test'))
+                l.flush()
+            self.assertRegex(str(l), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.1\d{5}.")
 
 
 class TestPersistedData(TestCase):
