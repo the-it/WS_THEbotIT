@@ -5,7 +5,7 @@ from defusedxml import minidom
 class AbbyyXML:
     def __init__(self, xml_string):
         defusedxml.defuse_stdlib()
-        self.dom_obj = defusedxml.minidom.parseString(xml_string)
+        self.dom_obj = minidom.parseString(xml_string)
 
     def get_text(self):
         return self.process_document()
@@ -18,7 +18,7 @@ class AbbyyXML:
     def _process_child_items_with_function(child_name: str,
                                            child_xml,
                                            child_handler_function,
-                                           append_new_line: bool=True):
+                                           append_new_line: bool = True):
         childes = child_xml.getElementsByTagName(child_name)
         childes_string = []
         for child in childes:

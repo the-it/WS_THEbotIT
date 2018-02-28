@@ -6,8 +6,6 @@ from tools.bots import CanonicalBot
 
 
 class GlStatus(CanonicalBot):
-    bot_name = 'GLStatus'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
 
@@ -19,14 +17,14 @@ class GlStatus(CanonicalBot):
         page = Page(self.wiki, lemma)
         temp_text = page.text
 
-        all = self.petscan([])
+        alle = self.petscan([])
         fertig = self.petscan(['Fertig'])
         korrigiert = self.petscan(['Korrigiert'])
         unkorrigiert = self.petscan(['Unkorrigiert'])
         articles = self.petscan([], article=True, not_categories=['Die Gartenlaube Hefte'])
 
-        temp_text = self.projektstand(temp_text, all, fertig, korrigiert, unkorrigiert, articles)
-        temp_text = self.alle_seiten(temp_text, all)
+        temp_text = self.projektstand(temp_text, alle, fertig, korrigiert, unkorrigiert, articles)
+        temp_text = self.alle_seiten(temp_text, alle)
         temp_text = self.korrigierte_seiten(temp_text, korrigiert)
         temp_text = self.fertige_seiten(temp_text, fertig)
         for year in range(1853, 1900):
@@ -40,32 +38,33 @@ class GlStatus(CanonicalBot):
     def to_percent(counter, denominator):
         return ' ({0:.2f} %)'.format(round((counter / denominator) * 100, 2)).replace('.', ',')
 
-    def projektstand(self, temp_text, all, fertig, korrigiert, unkorrigiert, articles):
+    def projektstand(self, temp_text, alle, fertig, korrigiert, unkorrigiert, articles):
+        # pylint: disable=too-many-arguments
         composed_text = ''.join(['<!--new line: Liste wird von einem Bot aktuell gehalten.-->\n|-\n', '|',
                                  self.timestamp.start.strftime('%d.%m.%Y'),
-                                 '|| ', str(all),
-                                 ' || ', str(korrigiert), self.to_percent(korrigiert, all),
-                                 ' || ', str(fertig), self.to_percent(fertig, all),
-                                 ' || ', str(unkorrigiert), self.to_percent(unkorrigiert, all),
+                                 '|| ', str(alle),
+                                 ' || ', str(korrigiert), self.to_percent(korrigiert, alle),
+                                 ' || ', str(fertig), self.to_percent(fertig, alle),
+                                 ' || ', str(unkorrigiert), self.to_percent(unkorrigiert, alle),
                                  ' || ', str(articles) + '/19900', self.to_percent(articles, 19900), ' ||'])
         return re.sub('<!--new line: Liste wird von einem Bot aktuell gehalten.-->', composed_text, temp_text)
 
-    def alle_seiten(self, temp_text, all):
-        all = self.petscan([''])
-        composed_text = ''.join(['<!--GLStatus:alle_Seiten-->', str(all), '<!---->'])
-        temp_text = re.sub('<!--GLStatus:alle_Seiten-->\d{5}<!---->', composed_text, temp_text)
+    @staticmethod
+    def alle_seiten(temp_text, all_lemmas):
+        composed_text = ''.join(['<!--GLStatus:alle_Seiten-->', str(all_lemmas), '<!---->'])
+        temp_text = re.sub(r'<!--GLStatus:alle_Seiten-->\d{5}<!---->', composed_text, temp_text)
         return temp_text
 
     @staticmethod
     def korrigierte_seiten(temp_text, korrigiert):
         composed_text = ''.join(['<!--GLStatus:korrigierte_Seiten-->', str(korrigiert), '<!---->'])
-        temp_text = re.sub('<!--GLStatus:korrigierte_Seiten-->\d{5}<!---->', composed_text, temp_text)
+        temp_text = re.sub(r'<!--GLStatus:korrigierte_Seiten-->\d{5}<!---->', composed_text, temp_text)
         return temp_text
 
     @staticmethod
     def fertige_seiten(temp_text, fertig):
         composed_text = ''.join(['<!--GLStatus:fertige_Seiten-->', str(fertig), '<!---->'])
-        temp_text = re.sub('<!--GLStatus:fertige_Seiten-->\d{4,5}<!---->', composed_text, temp_text)
+        temp_text = re.sub(r'<!--GLStatus:fertige_Seiten-->\d{4,5}<!---->', composed_text, temp_text)
         return temp_text
 
     def year(self, year, temp_text):
@@ -113,7 +112,8 @@ class GlStatus(CanonicalBot):
         self.logger.debug(str(searcher))
         return len(searcher.run())
 
+
 if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with GlStatus(wiki=wiki, debug=False) as bot:
+    WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with GlStatus(wiki=WIKI, debug=False) as bot:
         bot.run()

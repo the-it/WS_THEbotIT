@@ -18,13 +18,11 @@ from tools.bots import CanonicalBot
 
 
 class DailyRunner(CanonicalBot):
-    bot_name = 'DailyRunner'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
 
         self.now = datetime.now()
-        self.regex_one_timer = re.compile('(\d{4})\d{4}')
+        self.regex_one_timer = re.compile(r'(\d{4})\d{4}')
 
     def run_one_timers(self):
         path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts", "online"])
@@ -54,7 +52,7 @@ class DailyRunner(CanonicalBot):
                 origin.push()
 
     def run_dailys(self):
-        daily_list = [AuthorList]#, ReScanner]
+        daily_list = [AuthorList]
         for daily_bot in daily_list:
             self.run_bot(daily_bot(wiki=self.wiki, debug=self.debug))
 
@@ -88,7 +86,7 @@ class DailyRunner(CanonicalBot):
         try:
             with bot_to_run:
                 success = bot_to_run.run()
-        except Exception as thrown_exception:
+        except Exception as thrown_exception:  # pylint: disable=broad-except
             self.logger.exception("The bot {name} encountered an exception."
                                   .format(name=bot_to_run.bot_name),
                                   exc_info=thrown_exception)
@@ -105,6 +103,6 @@ class DailyRunner(CanonicalBot):
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
-    ws_wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with DailyRunner(wiki=ws_wiki, debug=False) as bot:
+    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with DailyRunner(wiki=WS_WIKI, debug=False) as bot:
         bot.run()

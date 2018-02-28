@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from test import *
 from tools.catscan import PetScan
 
@@ -36,11 +38,11 @@ class TestCatScan(TestCase):
         self.assertDictEqual({"show_redirects": "no"}, self.petscan.options)
 
     def test_last_change_before(self):
-        self.petscan.last_change_before(1234, 1, 1, 2, 2, 42)
+        self.petscan.last_change_before(datetime(year=1234, month=1, day=1, hour=2, minute=2, second=42))
         self.assertDictEqual({"before": "12340101020242"}, self.petscan.options)
 
     def test_last_change_after(self):
-        self.petscan.last_change_after(1234, 1, 1, 2, 2, 42)
+        self.petscan.last_change_after(datetime(year=1234, month=1, day=1, hour=2, minute=2, second=42))
         self.assertDictEqual({"after": "12340101020242"}, self.petscan.options)
 
     def test_max_age(self):
@@ -64,11 +66,11 @@ class TestCatScan(TestCase):
         self.assertDictEqual({"wikidata_item": "any"}, self.petscan.options)
 
     def test_get_Pages_with_wikidata(self):
-        self.petscan.get_pages_with_wikidata_items()
+        self.petscan.get_pages_with_wd_items()
         self.assertDictEqual({"wikidata_item": "with"}, self.petscan.options)
 
     def test_get_Pages_without_wikidata(self):
-        self.petscan.get_pages_without_wikidata_items()
+        self.petscan.get_pages_without_wd_items()
         self.assertDictEqual({"wikidata_item": "without"}, self.petscan.options)
 
     def test_set_or(self):

@@ -29,7 +29,7 @@ class ReScannerTask(object):
         self.re_page = re_page
         self.pre_process_hash = hash(re_page)
 
-    def post_process_lemma(self, re_page: RePage):
+    def post_process_lemma(self):
         return self.pre_process_hash != hash(self.re_page)
 
     @abstractmethod
@@ -39,7 +39,7 @@ class ReScannerTask(object):
     def process_lemma(self, re_page: RePage):
         self.pre_process_lemma(re_page)
         self.task()
-        return self.post_process_lemma(re_page)
+        return self.post_process_lemma()
 
     def load_task(self):
         self.logger.info('opening task {}'.format(self.get_name()))
@@ -57,9 +57,9 @@ class ENUUTask(ReScannerTask):
         self.load_task()
 
     def task(self):
-        self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', lambda x: self.replace_re(x), self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', self.replace_re, self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', self.replace_re, self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', self.replace_re, self.text, flags=re.DOTALL)
         self.text = self.text.rstrip()
         if self.text[0] == '\n':
             self.text = self.text[1:]
@@ -70,8 +70,6 @@ class ENUUTask(ReScannerTask):
 
 
 class ReScanner(CanonicalBot):
-    bot_name = 'ReScanner'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.lemma_list = None
@@ -134,6 +132,6 @@ class ReScanner(CanonicalBot):
 
 
 if __name__ == "__main__":
-    ws_wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with ReScanner(wiki=ws_wiki, debug=True) as bot:
+    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with ReScanner(wiki=WS_WIKI, debug=True) as bot:
         bot.run()

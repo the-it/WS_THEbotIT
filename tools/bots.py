@@ -146,14 +146,18 @@ class PersistedTimestamp(object):
         return self._success
 
 
-class BaseBot(object):
-    bot_name = None
-    bar_string = 120 * "#"
+class OneTimeBot(object):
+    task = None
 
-    def __init__(self, wiki, debug):
+    def __init__(self, wiki=None, debug=True, silence=False):
         self.success = False
-        if not self.bot_name:
-            raise NotImplementedError('The class variable bot_name is not implemented. Implement the variable.')
+        self._silence = silence
+        if not self.task:
+            raise NotImplementedError('The class function \"task\" must be implemented!\n'
+                                      'Example:\n'
+                                      'class DoSomethingBot(OneTimeBot):\n'
+                                      '    def task(self):\n'
+                                      '        pass')
         self.timestamp = None
         self.wiki = wiki
         self.debug = debug
@@ -162,49 +166,54 @@ class BaseBot(object):
 
     def __enter__(self):
         self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start)
-        print(self.bar_string)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start, silence=self._silence)
+        self._print_bar_string()
         self.logger.info('Start the bot {}.'.format(self.bot_name))
-        print(self.bar_string)
+        self._print_bar_string()
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.timestamp.persist(self.success)
-        print(self.bar_string)
+        self._print_bar_string()
         self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start))
-        print(self.bar_string)
-        self.send_log_to_wiki()
+        self._print_bar_string()
+        if not self._silence:
+            self.send_log_to_wiki()
         self.logger.tear_down()
 
-    def task(self):
-        self.logger.critical("You should really add functionality here.")
-        raise BotExeption
+    def _print_bar_string(self):
+        if not self._silence:
+            print(120 * "#")
+
+    @classmethod
+    def get_bot_name(cls):
+        return cls.__name__
+
+    @property
+    def bot_name(self):
+        return self.get_bot_name()
 
     def run(self):
         try:
-            self.success = bool(self.task())
-        except Exception as e:
-            self.logger.exception("Logging an uncaught exception", exc_info=e)
+            self.success = bool(self.task())  # pylint: disable=not-callable
+        except Exception as catched_exception:  # pylint: disable=broad-except
+            self.logger.exception("Logging an uncaught exception", exc_info=catched_exception)
             self.success = False
         return self.success
 
     def _watchdog(self):
         diff = datetime.now() - self.timestamp.start
+        time_over = False
         if diff > self.timeout:
             self.logger.warning('Bot finished by timeout.')
-            return True
-        else:
-            return False
+            time_over = True
+        return time_over
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
         page = Page(self.wiki, wiki_log_page)
         page.text += self.logger.create_wiki_log_lines()
         page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
-
-
-class OneTimeBot(BaseBot):
-    pass
 
 
 class PersistedData(Mapping):
@@ -230,7 +239,7 @@ class PersistedData(Mapping):
         return iter(self.data)
 
     def assign_dict(self, new_dict: dict):
-        if type(new_dict) is dict:
+        if isinstance(new_dict, dict):
             self.data = new_dict
         else:
             raise BotExeption("{} has the wrong type. It must be a dictionary.".format(new_dict))
@@ -257,18 +266,18 @@ class PersistedData(Mapping):
         self.data.update(dict_to_update)
 
 
-class CanonicalBot(BaseBot):
+class CanonicalBot(OneTimeBot):
     def __init__(self, wiki, debug):
-        BaseBot.__init__(self, wiki, debug)
+        OneTimeBot.__init__(self, wiki, debug)
         self.data = PersistedData(bot_name=self.bot_name)
         self.new_data_model = None
 
     def __enter__(self):
-        BaseBot.__enter__(self)
+        OneTimeBot.__enter__(self)
         if self.data_outdated():
             self.data.assign_dict({})
             self.logger.warning('The data is thrown away. It is out of date')
-        elif (self.timestamp.last_run is None) or (self.timestamp.success == False):
+        elif (self.timestamp.last_run is None) or not self.timestamp.success:
             self.data.assign_dict({})
             self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
         else:
@@ -287,7 +296,7 @@ class CanonicalBot(BaseBot):
             self.data.dump(success=False)
             self.logger.critical("There was an error in the general procedure. "
                                  "The broken data and a backup of the old will be keept.")
-        BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
+        OneTimeBot.__exit__(self, exc_type, exc_val, exc_tb)
 
     def create_timestamp_for_search(self, searcher, days_in_past=1):
         if self.last_run_successful:
@@ -314,8 +323,6 @@ class CanonicalBot(BaseBot):
 
 
 class PingOneTime(OneTimeBot):
-    bot_name = 'PingOneTime'
-
     def __init__(self, wiki, debug):
         OneTimeBot.__init__(self, wiki, debug)
 
@@ -325,11 +332,8 @@ class PingOneTime(OneTimeBot):
 
 
 class PingCanonical(CanonicalBot):
-    bot_name = 'PingCanonical'
-
     def task(self):
         self.logger.info('PingCanonical')
-        self.logger.debug('äüö')
         return True
 
 

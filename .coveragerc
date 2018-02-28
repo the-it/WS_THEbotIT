@@ -1,3 +1,3 @@
 [run]
-omit = scripts/online/*, scripts/offline/*,venv
+omit = archive/*,venv/*
 source = .

@@ -1,61 +1,73 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
 version: 2
 jobs:
-  build:
+  pip3:
     docker:
       - image: circleci/python:3.6.3
-
     working_directory: ~/repo
-
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+          - v1-dependencies-{{ checksum "requirements.txt" }}-
           - v1-dependencies-
-
       - run:
           name: install dependencies
           command: |
             python3 -m venv venv
             . venv/bin/activate
             make pip3-all
-
       - save_cache:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
-
       - run:
-          name: run test coverage
+          name: show workspace
           command: |
-            . venv/bin/activate
-            make coverage
-
+            ls -all
+  static quality:
+    docker:
+      - image: circleci/python:3.6.3
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
-          name: run pylint
-          command: |
-            . venv/bin/activate
-            make pylint
-
-      - run:
-          name: run flake8
+          name: flake8
+          when: always
           command: |
             . venv/bin/activate
             make flake8
-
       - run:
-          name: run pycodestyle
+          name: pylint
+          when: always
           command: |
             . venv/bin/activate
-            make pycodestyle
-
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+            make pylint
+  coverage:
+    docker:
+      - image: circleci/python:3.6.3
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+      - run:
+          name: run coverage
+          command: |
+            . venv/bin/activate
+            make coverage
+workflows:
+  version: 2
+  test-and-quality:
+    jobs:
+      - pip3
+      - coverage:
+          requires:
+            - pip3
+      - static quality:
+          requires:
+            - pip3

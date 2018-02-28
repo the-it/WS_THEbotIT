@@ -1,0 +1,23 @@
+environment:
+  matrix:
+    - PYTHON: "C:\\Python34"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+    - PYTHON: "C:\\Python35"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+    - PYTHON: "C:\\Python36"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+    - PYTHON: "C:\\Python36-x64"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
+install:
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "python -c \"import sys; print(sys.prefix)\""
+  - "python -c \"import sys; print(sys.exec_prefix)\""
+  - "python -c \"import sys; print(sys.executable)\""
+  - "python -V -V"
+  - "python -m pip install -U pip"
+  - "python -m pip install -r requirements.txt"
+  - "python -m pip install -r requirements_dev.txt"
+  - "python -m pip list"
+build: false
+test_script:
+  - "coverage run test/all_test.py"

@@ -18,34 +18,36 @@ class ReProperty(object):
         self._value = None
 
     def _return_by_type(self, value):
+        ret = value
+        if not isinstance(self._default, (bool, str)):
+            raise TypeError("Default value ({}) is invalid".format(self._default))
         if isinstance(self._default, bool):
             if value:
-                return "ON"
+                ret = "ON"
             else:
-                return "OFF"
-        elif isinstance(self._default, str):
-            return value
-        else:
-            raise TypeError("Default value ({}) is invalid".format(self._default))
+                ret = "OFF"
+        return ret
 
-    def _set_bool_by_str(self, on_off: str):
+    @staticmethod
+    def _set_bool_by_str(on_off: str):
+        ret = False
         if on_off == "ON":
             return True
-        else:
-            return False
+        return ret
 
     @property
     def value(self):
         if self._value:
-            return self._value
+            ret = self._value
         else:
-            return self._default
+            ret = self._default
+        return ret
 
     @value.setter
     def value(self, new_value: Union[str, bool]):
         if isinstance(new_value, type(self._default)):
             self._value = new_value
-        elif new_value in ("ON", "OFF") and type(self._default) == bool:
+        elif new_value in ("ON", "OFF") and isinstance(self._default, bool):
             self._value = self._set_bool_by_str(new_value)
         else:
             raise TypeError("Value ({}) is not the type of default value ({})".format(new_value, self._default))
@@ -59,6 +61,7 @@ class ReProperty(object):
 
     def __hash__(self):
         return hash(self.name) + hash(self.value)
+
 
 RE_DATEN = "REDaten"
 RE_ABSCHNITT = "REAbschnitt"
@@ -85,7 +88,10 @@ class ReArticle(Mapping):
         "VW": "VERWEIS",
         "NT": "NACHTRAG"}
 
-    def __init__(self, article_type: str =RE_DATEN, re_daten_properties: dict =None, text: str ="", author: str =""):
+    def __init__(self, article_type: str = RE_DATEN,
+                 re_daten_properties: dict = None,
+                 text: str = "",
+                 author: str = ""):
         self._article_type = None
         self.article_type = article_type
         self._text = None
@@ -165,9 +171,9 @@ class ReArticle(Mapping):
 
     def __hash__(self):
         return hash(self._article_type) \
-               + (hash(self._properties) << 1) \
-               + (hash(self._text) << 2) \
-               + (hash(self._author) << 3)
+            + (hash(self._properties) << 1) \
+            + (hash(self._text) << 2) \
+            + (hash(self._author) << 3)
 
     @classmethod
     def from_text(cls, article_text):
@@ -183,7 +189,7 @@ class ReArticle(Mapping):
         # only one start template can be present
         if len(find_re_daten) + len(find_re_abschnitt) != 1:
             raise ReDatenException("Article has the wrong structure. There must one start template")
-        if len(find_re_daten):
+        if find_re_daten:
             find_re_start = find_re_daten
         else:
             find_re_start = find_re_abschnitt
