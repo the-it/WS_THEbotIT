@@ -12,13 +12,13 @@ class BotExeption(Exception):
     pass
 
 
-_data_path = os.path.expanduser("~") + os.sep + ".wiki_bot"
+_DATA_PATH = os.path.expanduser("~") + os.sep + ".wiki_bot"
 
 
 def _get_data_path():
-    if not os.path.exists(_data_path):
-        os.mkdir(_data_path)
-    return _data_path
+    if not os.path.exists(_DATA_PATH):
+        os.mkdir(_DATA_PATH)
+    return _DATA_PATH
 
 
 class WikiLogger(object):
@@ -140,7 +140,7 @@ class PersistedTimestamp(object):
             self._last_run = value
 
     @property
-    def start(self):
+    def start_of_run(self):
         return self._start
 
     @property
@@ -168,7 +168,7 @@ class OneTimeBot(object):
 
     def __enter__(self):
         self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start, silence=self._silence)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence=self._silence)
         self._print_bar_string()
         self.logger.info('Start the bot {}.'.format(self.bot_name))
         self._print_bar_string()
@@ -177,7 +177,7 @@ class OneTimeBot(object):
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.timestamp.persist(self.success)
         self._print_bar_string()
-        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start))
+        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
         self._print_bar_string()
         if not self._silence:
             self.send_log_to_wiki()
@@ -204,7 +204,7 @@ class OneTimeBot(object):
         return self.success
 
     def _watchdog(self):
-        diff = datetime.now() - self.timestamp.start
+        diff = datetime.now() - self.timestamp.start_of_run
         time_over = False
         if diff > self.timeout:
             self.logger.warning('Bot finished by timeout.')
@@ -304,7 +304,7 @@ class CanonicalBot(OneTimeBot):
         if self.last_run_successful:
             start_of_search = self.timestamp.last_run - timedelta(days=days_in_past)
         else:
-            start_of_search = self.timestamp.start - timedelta(days=days_in_past)
+            start_of_search = self.timestamp.start_of_run - timedelta(days=days_in_past)
         searcher.last_change_after(int(start_of_search.strftime('%Y')),
                                    int(start_of_search.strftime('%m')),
                                    int(start_of_search.strftime('%d')))

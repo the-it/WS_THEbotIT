@@ -6,19 +6,20 @@ from shutil import rmtree
 import time
 
 from test import *
-from tools.bots import BotExeption, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path, _data_path
+from tools.bots import BotExeption, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
+    _DATA_PATH, _get_data_path
 
-_data_path_test = _data_path + "_test"
+_DATA_PATH_TEST = _DATA_PATH + "_test"
 
 
 def _remove_data_folder():
-    if os.path.exists(_data_path_test):
-        rmtree(_data_path_test)
+    if os.path.exists(_DATA_PATH_TEST):
+        rmtree(_DATA_PATH_TEST)
 
 
 def _setup_data_path(test_class: TestCase):
     test_class.addCleanup(patch.stopall)
-    patch("tools.bots._data_path", _data_path_test).start()
+    patch("tools.bots._DATA_PATH", _DATA_PATH_TEST).start()
     _remove_data_folder()
 
 
@@ -34,14 +35,14 @@ class TestGetDataPath(TestCase):
         _teardown_data_path()
 
     def test_folder_exist(self):
-        os.mkdir(_data_path_test)
+        os.mkdir(_DATA_PATH_TEST)
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
-            self.assertEqual(_data_path_test, _get_data_path())
+            self.assertEqual(_DATA_PATH_TEST, _get_data_path())
             mock_mkdir.assert_not_called()
 
     def test_make_folder(self):
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
-            self.assertEqual(_data_path_test, _get_data_path())
+            self.assertEqual(_DATA_PATH_TEST, _get_data_path())
             self.assertEqual(1, mock_mkdir.call_count)
 
 
@@ -61,20 +62,20 @@ class TestWikilogger(TestCase):
     def test_log_message(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        with open(_data_path_test + os.sep + "test_bot_INFO_000101000000.log") as info_file:
+        with open(_DATA_PATH_TEST + os.sep + "test_bot_INFO_000101000000.log") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
-        with open(_data_path_test + os.sep + "test_bot_DEBUG_000101000000.log") as info_file:
+        with open(_DATA_PATH_TEST + os.sep + "test_bot_DEBUG_000101000000.log") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[DEBUG\s*?\]\s\[debug\]\n"
                                                r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
 
     def test_tear_down(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        self.assertTrue(os.path.isfile(_data_path_test + os.sep + "test_bot_INFO_000101000000.log"))
-        self.assertTrue(os.path.isfile(_data_path_test + os.sep + "test_bot_DEBUG_000101000000.log"))
+        self.assertTrue(os.path.isfile(_DATA_PATH_TEST + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile(_DATA_PATH_TEST + os.sep + "test_bot_DEBUG_000101000000.log"))
         self.logger.tear_down()
-        self.assertFalse(os.path.isfile(_data_path_test + os.sep + "test_bot_INFO_000101000000.log"))
-        self.assertTrue(os.path.isfile(_data_path_test + os.sep + "test_bot_DEBUG_000101000000.log"))
+        self.assertFalse(os.path.isfile(_DATA_PATH_TEST + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile(_DATA_PATH_TEST + os.sep + "test_bot_DEBUG_000101000000.log"))
 
     def test_format_log_lines_for_wiki(self):
         self.logger.info("info")
@@ -107,8 +108,8 @@ class TestPersistedTimestamp(TestCase):
 
     def setUp(self):
         _setup_data_path(self)
-        os.mkdir(_data_path_test)
-        with open(_data_path_test + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
+        os.mkdir(_DATA_PATH_TEST)
+        with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
         self.reference = datetime.now()
         self.timestamp = PersistedTimestamp("test_bot")
@@ -117,18 +118,18 @@ class TestPersistedTimestamp(TestCase):
         _teardown_data_path()
 
     def test_start_timestamp(self):
-        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta=self._precision)
+        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
 
     def test_last_run_timestamp(self):
-        self.assertFalse(os.path.isfile(_data_path_test + os.sep + "test_bot.last_run.json"))
+        self.assertFalse(os.path.isfile(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json"))
         self.assertAlmostEqual(datetime(year=2000, month=1, day=1).timestamp(),
                                self.timestamp.last_run.timestamp(),
                                delta=self._precision)
-        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta=self._precision)
+        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
 
     def test_persist_timestamp(self):
         self.timestamp.persist(success=True)
-        with open(_data_path_test + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
+        with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
             timestamp_dict = json.load(filepointer)
             self.assertTrue(timestamp_dict["success"])
 
@@ -138,11 +139,11 @@ class TestPersistedTimestamp(TestCase):
         self.assertFalse(timestamp.success)
 
     def test_no_timestamp_there(self):
-        os.mkdir(_data_path_test + os.sep + "test_bot.last_run.json")
+        os.mkdir(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json")
         reference = datetime.now()
         timestamp = PersistedTimestamp("other_bot")
         self.assertFalse(timestamp.success)
-        self.assertAlmostEqual(reference.timestamp(), timestamp.start.timestamp(), delta=self._precision)
+        self.assertAlmostEqual(reference.timestamp(), timestamp.start_of_run.timestamp(), delta=self._precision)
         self.assertIsNone(timestamp.last_run)
 
     def test_devalidate_timestamp_of_last_run(self):
@@ -159,9 +160,6 @@ class TestOneTimeBot(TestCase):
 
     def tearDown(self):
         _teardown_data_path()
-
-    class NoTaskBot(OneTimeBot):
-        pass
 
     class MinimalBot(OneTimeBot):
         def task(self):
@@ -188,23 +186,81 @@ class TestOneTimeBot(TestCase):
             time.sleep(0.1)
 
     def test_logging(self):
-        with LogCapture() as l:
+        with LogCapture() as log_catcher:
             with self.LogBot(silence=True) as bot:
                 # logging on enter
-                l.check(('LogBot', 'INFO', 'Start the bot LogBot.'))
-                l.clear()
+                log_catcher.check(('LogBot', 'INFO', 'Start the bot LogBot.'))
+                log_catcher.clear()
                 bot.run()
                 # logging on run
-                l.check(('LogBot', 'INFO', 'Test'))
-                l.clear()
+                log_catcher.check(('LogBot', 'INFO', 'Test'))
+                log_catcher.clear()
             # logging on exit
-            self.assertRegex(str(l), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.1\d{5}.")
+            self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.1\d{5}.")
+
+    #https://stackoverflow.com/questions/37553552/assert-that-a-propertymock-was-called-on-a-specific-instance
+
+    # from mock import PropertyMock, patch
+    #
+    # class Foo(object):
+    #     def __init__(self, size):
+    #         self.size = size
+    #
+    #     @property
+    #     def is_big(self):
+    #         return self.size > 5
+    #
+    # class PropertyInstanceMock(PropertyMock):
+    #     """ Like PropertyMock, but records the instance that was called.
+    #     """
+    #
+    #     def __get__(self, obj, obj_type):
+    #         return self(obj)
+    #
+    #     def __set__(self, obj, val):
+    #         self(obj, val)
+    #
+    # with patch('__main__.Foo.is_big', new_callable=PropertyInstanceMock) as mock_is_big:
+    #     mock_is_big.return_value = True
+    #     foo1 = Foo(4)
+    #     foo2 = Foo(9)
+    #
+    #     should_pass = False
+    #     if should_pass:
+    #         is_big = foo1.is_big
+    #     else:
+    #         is_big = foo2.is_big
+    #     assert is_big
+    #     # Now this passes when should_pass is True, and fails otherwise.
+    #     mock_is_big.assert_called_once_with(foo1)
+
+    # @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
+    # @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
+    # def setUp(self, text_mock, page_mock):
+    #     self.page_mock = page_mock
+    #     self.text_mock = text_mock
+    #     type(self.page_mock).text = self.text_mock
+
+
+    @mock.patch("tools.bots.PersistedTimestamp.start_of_run", new_callable=mock.PropertyMock(return_value=datetime(2000, 1, 1)))
+    def test_timestamp_return_start_time(self, mock_timestamp_start):
+        with self.MinimalBot(silence=True) as bot:
+            self.assertEqual(datetime(2000, 1, 1), bot.timestamp.start_of_run)
+            bot.run()
+        # mock_timestamp_start.assert_called_once()
+
+    # def test_timestamp_set_up(self):
+    #     with mock.patch("tools.bots.PersistedTimestamp", mock.Mock(spec=PersistedTimestamp)) as mock_timestamp:
+    #         with self.MinimalBot(silence=True) as bot:
+    #             mock_timestamp.assert_called_once()
+    #             bot.run()
+
 
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
         super(TestPersistedData, self).__init__(*args, **kwargs)
-        self.data_path = _data_path_test
+        self.data_path = _DATA_PATH_TEST
         self.json_test = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
         self.json_test_extend = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
         self.data_test = {"a": [1, 2]}
@@ -333,7 +389,7 @@ class TestPersistedData(TestCase):
     def test_for_boolean_value(self):
         self.data.assign_dict(dict())
         self.assertFalse(self.data)
-        self.data[1]=1
+        self.data[1] = 1
         self.assertTrue(self.data)
         del self.data[1]
         self.assertFalse(self.data)

@@ -41,7 +41,7 @@ class GlStatus(CanonicalBot):
     def projektstand(self, temp_text, alle, fertig, korrigiert, unkorrigiert, articles):
         # pylint: disable=too-many-arguments
         composed_text = ''.join(['<!--new line: Liste wird von einem Bot aktuell gehalten.-->\n|-\n', '|',
-                                 self.timestamp.start.strftime('%d.%m.%Y'),
+                                 self.timestamp.start_of_run.strftime('%d.%m.%Y'),
                                  '|| ', str(alle),
                                  ' || ', str(korrigiert), self.to_percent(korrigiert, alle),
                                  ' || ', str(fertig), self.to_percent(fertig, alle),
