@@ -6,40 +6,53 @@ from shutil import rmtree
 import time
 
 from test import *
-from tools.bots import BotExeption, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path
+from tools.bots import BotExeption, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, _get_data_path, _data_path
 
-_data_path = os.path.expanduser("~") + os.sep + ".THEbotIT"
+_data_path_test = _data_path + "_test"
 
 
 def _remove_data_folder():
-    if os.path.exists(_data_path):
-        rmtree(_data_path)
+    if os.path.exists(_data_path_test):
+        rmtree(_data_path_test)
+
+
+def _setup_data_path(test_class: TestCase):
+    test_class.addCleanup(patch.stopall)
+    patch("tools.bots._data_path", _data_path_test).start()
+    _remove_data_folder()
+
+
+def _teardown_data_path():
+    _remove_data_folder()
 
 
 class TestGetDataPath(TestCase):
     def setUp(self):
-        _remove_data_folder()
+        _setup_data_path(self)
+
+    def tearDown(self):
+        _teardown_data_path()
 
     def test_folder_exist(self):
-        os.mkdir(_data_path)
+        os.mkdir(_data_path_test)
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
-            self.assertEqual(_data_path, _get_data_path())
+            self.assertEqual(_data_path_test, _get_data_path())
             mock_mkdir.assert_not_called()
 
     def test_make_folder(self):
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
-            self.assertEqual(_data_path, _get_data_path())
+            self.assertEqual(_data_path_test, _get_data_path())
             self.assertEqual(1, mock_mkdir.call_count)
 
 
 class TestWikilogger(TestCase):
     def setUp(self):
-        _remove_data_folder()
+        _setup_data_path(self)
         self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), silence=True)
 
     def tearDown(self):
         self.logger.tear_down()
-        _remove_data_folder()
+        _teardown_data_path()
 
     def test_logfile_names(self):
         self.assertDictEqual({"debug": "test_bot_DEBUG_000101000000.log", "info": "test_bot_INFO_000101000000.log"},
@@ -48,20 +61,20 @@ class TestWikilogger(TestCase):
     def test_log_message(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        with open(_data_path + os.sep + "test_bot_INFO_000101000000.log") as info_file:
+        with open(_data_path_test + os.sep + "test_bot_INFO_000101000000.log") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
-        with open(_data_path + os.sep + "test_bot_DEBUG_000101000000.log") as info_file:
+        with open(_data_path_test + os.sep + "test_bot_DEBUG_000101000000.log") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[DEBUG\s*?\]\s\[debug\]\n"
                                                r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
 
     def test_tear_down(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        self.assertTrue(os.path.isfile(_data_path + os.sep + "test_bot_INFO_000101000000.log"))
-        self.assertTrue(os.path.isfile(_data_path + os.sep + "test_bot_DEBUG_000101000000.log"))
+        self.assertTrue(os.path.isfile(_data_path_test + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile(_data_path_test + os.sep + "test_bot_DEBUG_000101000000.log"))
         self.logger.tear_down()
-        self.assertFalse(os.path.isfile(_data_path + os.sep + "test_bot_INFO_000101000000.log"))
-        self.assertTrue(os.path.isfile(_data_path + os.sep + "test_bot_DEBUG_000101000000.log"))
+        self.assertFalse(os.path.isfile(_data_path_test + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile(_data_path_test + os.sep + "test_bot_DEBUG_000101000000.log"))
 
     def test_format_log_lines_for_wiki(self):
         self.logger.info("info")
@@ -93,21 +106,21 @@ class TestPersistedTimestamp(TestCase):
     _precision = 0.001
 
     def setUp(self):
-        _remove_data_folder()
-        os.mkdir(_data_path)
-        with open(_data_path + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
+        _setup_data_path(self)
+        os.mkdir(_data_path_test)
+        with open(_data_path_test + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
         self.reference = datetime.now()
         self.timestamp = PersistedTimestamp("test_bot")
 
     def tearDown(self):
-        _remove_data_folder()
+        _teardown_data_path()
 
     def test_start_timestamp(self):
         self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start.timestamp(), delta=self._precision)
 
     def test_last_run_timestamp(self):
-        self.assertFalse(os.path.isfile(_data_path + os.sep + "test_bot.last_run.json"))
+        self.assertFalse(os.path.isfile(_data_path_test + os.sep + "test_bot.last_run.json"))
         self.assertAlmostEqual(datetime(year=2000, month=1, day=1).timestamp(),
                                self.timestamp.last_run.timestamp(),
                                delta=self._precision)
@@ -115,7 +128,7 @@ class TestPersistedTimestamp(TestCase):
 
     def test_persist_timestamp(self):
         self.timestamp.persist(success=True)
-        with open(_data_path + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
+        with open(_data_path_test + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
             timestamp_dict = json.load(filepointer)
             self.assertTrue(timestamp_dict["success"])
 
@@ -125,7 +138,7 @@ class TestPersistedTimestamp(TestCase):
         self.assertFalse(timestamp.success)
 
     def test_no_timestamp_there(self):
-        os.mkdir(_data_path + os.sep + "test_bot.last_run.json")
+        os.mkdir(_data_path_test + os.sep + "test_bot.last_run.json")
         reference = datetime.now()
         timestamp = PersistedTimestamp("other_bot")
         self.assertFalse(timestamp.success)
@@ -138,14 +151,14 @@ class TestPersistedTimestamp(TestCase):
 
 class TestOneTimeBot(TestCase):
     def setUp(self):
+        _setup_data_path(self)
         self.addCleanup(patch.stopall)
         self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
         self.timestamp_patcher = patch.object(PersistedTimestamp, 'debug', autospec=True)
         self.wiki_logger_mock = self.log_patcher.start()
-        _remove_data_folder()
 
     def tearDown(self):
-        _remove_data_folder()
+        _teardown_data_path()
 
     class NoTaskBot(OneTimeBot):
         pass
@@ -191,7 +204,7 @@ class TestOneTimeBot(TestCase):
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
         super(TestPersistedData, self).__init__(*args, **kwargs)
-        self.data_path = _data_path
+        self.data_path = _data_path_test
         self.json_test = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
         self.json_test_extend = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
         self.data_test = {"a": [1, 2]}
@@ -204,11 +217,11 @@ class TestPersistedData(TestCase):
             data_file.write(data)
 
     def setUp(self):
-        _remove_data_folder()
+        _setup_data_path(self)
         self.data = PersistedData("TestBot")
 
     def tearDown(self):
-        _remove_data_folder()
+        _teardown_data_path()
 
     def test_is_mapping(self):
         self.assertTrue(isinstance(self.data, Mapping))

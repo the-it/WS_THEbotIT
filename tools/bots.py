@@ -12,11 +12,13 @@ class BotExeption(Exception):
     pass
 
 
+_data_path = os.path.expanduser("~") + os.sep + ".wiki_bot"
+
+
 def _get_data_path():
-    data_path = os.path.expanduser("~") + os.sep + ".THEbotIT"
-    if not os.path.exists(data_path):
-        os.mkdir(data_path)
-    return data_path
+    if not os.path.exists(_data_path):
+        os.mkdir(_data_path)
+    return _data_path
 
 
 class WikiLogger(object):
