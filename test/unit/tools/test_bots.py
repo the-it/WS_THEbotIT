@@ -147,6 +147,9 @@ class TestOneTimeBot(TestCase):
     def tearDown(self):
         _remove_data_folder()
 
+    class NoTaskBot(OneTimeBot):
+        pass
+
     class MinimalBot(OneTimeBot):
         def task(self):
             pass
@@ -169,7 +172,7 @@ class TestOneTimeBot(TestCase):
     class LogBot(OneTimeBot):
         def task(self):
             self.logger.info("Test")
-            time.sleep(0.5)
+            time.sleep(0.1)
 
     def test_logging(self):
         with LogCapture() as l:
@@ -177,9 +180,8 @@ class TestOneTimeBot(TestCase):
                 bot.run()
                 l.check(('LogBot', 'INFO', 'Start the bot LogBot.'),
                         ('LogBot', 'INFO', 'Test'))
-            self.assertRegex(str(l),r"LogBot INFO\n  Start the bot LogBot.\n"
-                                    r"LogBot INFO\n  Test\n"
-                                    r"LogBot INFO\n  Finish bot LogBot in 0:00:00.5\d{5}.")
+                l.flush()
+            self.assertRegex(str(l), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.1\d{5}.")
 
 
 class TestPersistedData(TestCase):
