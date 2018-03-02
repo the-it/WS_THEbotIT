@@ -177,10 +177,14 @@ class TestOneTimeBot(TestCase):
     def test_logging(self):
         with LogCapture() as l:
             with self.LogBot(silence=True) as bot:
+                # logging on enter
+                l.check(('LogBot', 'INFO', 'Start the bot LogBot.'))
+                l.clear()
                 bot.run()
-                l.check(('LogBot', 'INFO', 'Start the bot LogBot.'),
-                        ('LogBot', 'INFO', 'Test'))
-                l.flush()
+                # logging on run
+                l.check(('LogBot', 'INFO', 'Test'))
+                l.clear()
+            # logging on exit
             self.assertRegex(str(l), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.1\d{5}.")
 
 
