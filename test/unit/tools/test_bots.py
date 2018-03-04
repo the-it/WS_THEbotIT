@@ -1,5 +1,5 @@
 from collections import Mapping
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import os
 from shutil import rmtree
@@ -185,6 +185,53 @@ class TestOneTimeBot(TestCase):
             self.logger.info("Test")
             time.sleep(0.1)
 
+    @mock.patch("tools.bots.PersistedTimestamp.start_of_run", new_callable=mock.PropertyMock(return_value=datetime(2000, 1, 1)))
+    def test_timestamp_return_start_time(self, mock_timestamp_start):
+        with self.MinimalBot(silence=True) as bot:
+            self.assertEqual(datetime(2000, 1, 1), bot.timestamp.start_of_run)
+            bot.run()
+
+    def test_timestamp_load_last_run(self):
+        os.mkdir(_DATA_PATH_TEST)
+        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="x", ) as persist_json:
+            json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
+        with self.MinimalBot(silence=True) as bot:
+            self.assertEqual(datetime(2000, 1, 1), bot.timestamp.last_run)
+            self.assertTrue(bot.timestamp.success)
+
+        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="w") as persist_json:
+            json.dump({"timestamp": '2000-01-01_00:00:00', "success": False}, persist_json)
+        with self.MinimalBot(silence=True) as bot:
+            self.assertFalse(bot.timestamp.success)
+
+    class SuccessBot(OneTimeBot):
+        def __init__(self, success=True, **kwargs):
+            super().__init__(**kwargs)
+            self.success_to_return = success
+
+        def task(self):
+            return self.success_to_return
+
+    def test_timestamp_tear_down(self):
+        with self.MinimalBot(silence=True) as bot:
+            bot.run()
+        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="r") as persist_json:
+            run_dict = json.load(persist_json)
+            self.assertFalse(run_dict["success"])
+
+        with self.SuccessBot(success=True, silence=True) as bot:
+            bot.run()
+        with open(_DATA_PATH_TEST + os.sep + "SuccessBot.last_run.json", mode="r") as persist_json:
+            run_dict = json.load(persist_json)
+            self.assertTrue(run_dict["success"])
+
+    def test_return_value_run(self):
+        with self.SuccessBot(success=True, silence=True) as bot:
+            self.assertTrue(bot.run())
+
+        with self.SuccessBot(success=False, silence=True) as bot:
+            self.assertFalse(bot.run())
+
     def test_logging(self):
         with LogCapture() as log_catcher:
             with self.LogBot(silence=True) as bot:
@@ -198,62 +245,23 @@ class TestOneTimeBot(TestCase):
             # logging on exit
             self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.1\d{5}.")
 
-    #https://stackoverflow.com/questions/37553552/assert-that-a-propertymock-was-called-on-a-specific-instance
+    class WatchdogBot(OneTimeBot):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.timeout = timedelta(seconds=0.05)
 
-    # from mock import PropertyMock, patch
-    #
-    # class Foo(object):
-    #     def __init__(self, size):
-    #         self.size = size
-    #
-    #     @property
-    #     def is_big(self):
-    #         return self.size > 5
-    #
-    # class PropertyInstanceMock(PropertyMock):
-    #     """ Like PropertyMock, but records the instance that was called.
-    #     """
-    #
-    #     def __get__(self, obj, obj_type):
-    #         return self(obj)
-    #
-    #     def __set__(self, obj, val):
-    #         self(obj, val)
-    #
-    # with patch('__main__.Foo.is_big', new_callable=PropertyInstanceMock) as mock_is_big:
-    #     mock_is_big.return_value = True
-    #     foo1 = Foo(4)
-    #     foo2 = Foo(9)
-    #
-    #     should_pass = False
-    #     if should_pass:
-    #         is_big = foo1.is_big
-    #     else:
-    #         is_big = foo2.is_big
-    #     assert is_big
-    #     # Now this passes when should_pass is True, and fails otherwise.
-    #     mock_is_big.assert_called_once_with(foo1)
+        def task(self):
+            while(True):
+                if self._watchdog():
+                    raise Exception("watchdog must not fire")
+                time.sleep(0.1)
+                if self._watchdog():
+                    return True
+                raise Exception("watchdog must fire")
 
-    # @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
-    # @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
-    # def setUp(self, text_mock, page_mock):
-    #     self.page_mock = page_mock
-    #     self.text_mock = text_mock
-    #     type(self.page_mock).text = self.text_mock
-
-
-    @mock.patch("tools.bots.PersistedTimestamp.start_of_run", new_callable=mock.PropertyMock(return_value=datetime(2000, 1, 1)))
-    def test_timestamp_return_start_time(self, mock_timestamp_start):
-        with self.MinimalBot(silence=True) as bot:
-            self.assertEqual(datetime(2000, 1, 1), bot.timestamp.start_of_run)
-            bot.run()
-        # mock_timestamp_start.assert_called_once()
-
-    # def test_timestamp_set_up(self):
-    #     with mock.patch("tools.bots.PersistedTimestamp", mock.Mock(spec=PersistedTimestamp)) as mock_timestamp:
-    #         with self.MinimalBot(silence=True) as bot:
-    #             mock_timestamp.assert_called_once()
-    #             bot.run()
+    def test_watchdog(self):
+        with self.WatchdogBot(silence=True) as bot:
+            self.assertTrue(bot.run())
 
 
 

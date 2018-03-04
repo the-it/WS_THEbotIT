@@ -163,7 +163,7 @@ class OneTimeBot(object):
         self.timestamp = None
         self.wiki = wiki
         self.debug = debug
-        self.timeout = timedelta(minutes=60)
+        self.timeout = None
         self.logger = None
 
     def __enter__(self):
@@ -204,11 +204,12 @@ class OneTimeBot(object):
         return self.success
 
     def _watchdog(self):
-        diff = datetime.now() - self.timestamp.start_of_run
         time_over = False
-        if diff > self.timeout:
-            self.logger.warning('Bot finished by timeout.')
-            time_over = True
+        if self.timeout:
+            diff = datetime.now() - self.timestamp.start_of_run
+            if diff > self.timeout:
+                self.logger.warning('Bot finished by timeout.')
+                time_over = True
         return time_over
 
     def send_log_to_wiki(self):
