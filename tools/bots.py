@@ -33,6 +33,8 @@ class WikiLogger(object):
         self._logger = logging.getLogger(self._bot_name)
         self._logger_names = self._get_logger_names()
         self._silence = silence
+
+    def __enter__(self):
         self._setup_logger_properties()
 
     def _get_logger_names(self):
@@ -62,7 +64,7 @@ class WikiLogger(object):
             debug_stream.setFormatter(formatter)
             self._logger.addHandler(debug_stream)
 
-    def tear_down(self):
+    def __exit__(self, exc_type, exc_val, exc_tb):
         for handler in self._logger.handlers[:]:
             handler.close()
             self._logger.removeHandler(handler)
@@ -113,13 +115,8 @@ class PersistedTimestamp(object):
         self._start = datetime.now()
         self._data_path = _get_data_path()
         self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
-        self._load()
 
-    def persist(self, success: bool):
-        with open(self._full_filename, mode="w") as persist_json:
-            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": success}, persist_json)
-
-    def _load(self):
+    def __enter__(self):
         try:
             with open(self._full_filename, mode="r") as persist_json:
                 last_run_dict = json.load(persist_json)
@@ -129,6 +126,10 @@ class PersistedTimestamp(object):
         except FileNotFoundError:
             self._success = False
             self._last_run = None
+
+    def __exit__(self, exc_type, exc_val, exc_tb, success: bool):
+        with open(self._full_filename, mode="w") as persist_json:
+            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": success}, persist_json)
 
     @property
     def last_run(self):
@@ -151,7 +152,7 @@ class PersistedTimestamp(object):
 class OneTimeBot(object):
     task = None
 
-    def __init__(self, wiki=None, debug=True, silence=False):
+    def __init__(self, wiki: Site =None, debug: bool =True, silence: bool =False):
         self.success = False
         self._silence = silence
         if not self.task:
@@ -159,29 +160,29 @@ class OneTimeBot(object):
                                       'Example:\n'
                                       'class DoSomethingBot(OneTimeBot):\n'
                                       '    def task(self):\n'
-                                      '        pass')
-        self.timestamp = None
+                                      '        do_stuff()')
+        self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
         self.wiki = wiki
         self.debug = debug
-        self.timeout = None
-        self.logger = None
+        self.timeout = timedelta(days=1)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence=self._silence)
 
     def __enter__(self):
-        self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence=self._silence)
+        self.timestamp.__enter__()
+        self.logger.__enter__()
         self._print_bar_string()
         self.logger.info('Start the bot {}.'.format(self.bot_name))
         self._print_bar_string()
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.timestamp.persist(self.success)
+        self.timestamp.__exit__(exc_type, exc_val, exc_tb, self.success)
         self._print_bar_string()
         self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
         self._print_bar_string()
         if not self._silence:
             self.send_log_to_wiki()
-        self.logger.tear_down()
+        self.logger.__exit__(exc_type, exc_val, exc_tb)
 
     def _print_bar_string(self):
         if not self._silence:
