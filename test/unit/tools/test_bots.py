@@ -50,6 +50,7 @@ class TestWikilogger(TestCase):
     def setUp(self):
         _setup_data_path(self)
         self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), silence=True)
+        self.logger._setup_logger_properties()
 
     def tearDown(self):
         self.logger.tear_down()
@@ -121,6 +122,7 @@ class TestPersistedTimestamp(TestCase):
         self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
 
     def test_last_run_timestamp(self):
+        self.timestamp.set_up()
         self.assertFalse(os.path.isfile(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json"))
         self.assertAlmostEqual(datetime(year=2000, month=1, day=1).timestamp(),
                                self.timestamp.last_run.timestamp(),
@@ -128,17 +130,18 @@ class TestPersistedTimestamp(TestCase):
         self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
 
     def test_persist_timestamp(self):
-        self.timestamp.persist(success=True)
+        self.timestamp.tear_down(success=True)
         with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
             timestamp_dict = json.load(filepointer)
             self.assertTrue(timestamp_dict["success"])
 
     def test_persist_timestamp_false(self):
-        self.timestamp.persist(success=False)
+        self.timestamp.tear_down(success=False)
         timestamp = PersistedTimestamp("test_bot")
         self.assertFalse(timestamp.success)
 
     def test_no_timestamp_there(self):
+        self.timestamp.set_up()
         os.mkdir(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json")
         reference = datetime.now()
         timestamp = PersistedTimestamp("other_bot")

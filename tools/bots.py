@@ -37,6 +37,18 @@ class WikiLogger(object):
     def __enter__(self):
         self._setup_logger_properties()
 
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.tear_down()
+
+    def tear_down(self):
+        for handler in self._logger.handlers[:]:
+            handler.close()
+            self._logger.removeHandler(handler)
+        if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
+            os.remove(self._data_path + os.sep + self._logger_names['info'])
+        sys.stdout.flush()
+        logging.shutdown()
+
     def _get_logger_names(self):
         log_file_names = {}
         for log_type in ("info", "debug"):
@@ -63,15 +75,6 @@ class WikiLogger(object):
             debug_stream.setLevel(logging.DEBUG)
             debug_stream.setFormatter(formatter)
             self._logger.addHandler(debug_stream)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        for handler in self._logger.handlers[:]:
-            handler.close()
-            self._logger.removeHandler(handler)
-        if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
-            os.remove(self._data_path + os.sep + self._logger_names['info'])
-        sys.stdout.flush()
-        logging.shutdown()
 
     def debug(self, msg: str):
         self._logger.log(logging.DEBUG, msg)
@@ -117,6 +120,12 @@ class PersistedTimestamp(object):
         self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
 
     def __enter__(self):
+        self.set_up()
+
+    def __exit__(self, exc_type, exc_val, exc_tb, success: bool):
+        self.tear_down(success)
+
+    def set_up(self):
         try:
             with open(self._full_filename, mode="r") as persist_json:
                 last_run_dict = json.load(persist_json)
@@ -127,7 +136,7 @@ class PersistedTimestamp(object):
             self._success = False
             self._last_run = None
 
-    def __exit__(self, exc_type, exc_val, exc_tb, success: bool):
+    def tear_down(self, success: bool):
         with open(self._full_filename, mode="w") as persist_json:
             json.dump({"timestamp": self._start.strftime(self._timeformat), "success": success}, persist_json)
 
