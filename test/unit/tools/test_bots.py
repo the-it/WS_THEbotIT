@@ -130,27 +130,33 @@ class TestPersistedTimestamp(TestCase):
         self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
 
     def test_persist_timestamp(self):
-        self.timestamp.tear_down(success=True)
+        self.timestamp.success_this_run = True
+        self.timestamp.tear_down()
         with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
             timestamp_dict = json.load(filepointer)
             self.assertTrue(timestamp_dict["success"])
 
     def test_persist_timestamp_false(self):
-        self.timestamp.tear_down(success=False)
+        self.timestamp.success_this_run = False
+        self.timestamp.tear_down()
         timestamp = PersistedTimestamp("test_bot")
-        self.assertFalse(timestamp.success)
+        self.assertFalse(timestamp.success_last_run)
 
     def test_no_timestamp_there(self):
         self.timestamp.set_up()
         os.mkdir(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json")
         reference = datetime.now()
         timestamp = PersistedTimestamp("other_bot")
-        self.assertFalse(timestamp.success)
+        self.assertFalse(timestamp.success_last_run)
         self.assertAlmostEqual(reference.timestamp(), timestamp.start_of_run.timestamp(), delta=self._precision)
         self.assertIsNone(timestamp.last_run)
 
     def test_devalidate_timestamp_of_last_run(self):
         self.timestamp.last_run = None
+
+    def test_wrong_value_of_success_this_run(self):
+        with self.assertRaises(TypeError):
+            self.timestamp.success_this_run = 1
 
 
 class TestOneTimeBot(TestCase):
@@ -200,12 +206,12 @@ class TestOneTimeBot(TestCase):
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
         with self.MinimalBot(silence=True) as bot:
             self.assertEqual(datetime(2000, 1, 1), bot.timestamp.last_run)
-            self.assertTrue(bot.timestamp.success)
+            self.assertTrue(bot.timestamp.success_last_run)
 
         with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="w") as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": False}, persist_json)
         with self.MinimalBot(silence=True) as bot:
-            self.assertFalse(bot.timestamp.success)
+            self.assertFalse(bot.timestamp.success_last_run)
 
     class SuccessBot(OneTimeBot):
         def __init__(self, success=True, **kwargs):
@@ -257,16 +263,36 @@ class TestOneTimeBot(TestCase):
             def task(self):
                 while (True):
                     if self._watchdog():
-                        raise Exception("watchdog must not fire")
+                        raise Exception("watchdog must not fire")  # pragma: no cover
                     time.sleep(0.1)
                     if self._watchdog():
                         return True
-                    raise Exception("watchdog must fire")
+                    raise Exception("watchdog must fire")  # pragma: no cover
 
         with WatchdogBot(silence=True) as bot:
             self.assertTrue(bot.run())
 
+    def test_send_log_to_wiki(self):
+        with self.MinimalBot(silence=True) as bot:
+            with patch.object(bot, "_silence", new_callable=mock.PropertyMock(return_value=False)):
+                with patch("tools.bots.Page") as mock_page:
+                    bot.run()
+                    bot.__exit__(None, None, None)
+                    self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
+                    self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])
+                    self.assertEqual(mock.call().save('Update of Bot MinimalBot', botflag=True), mock_page.mock_calls[2])
 
+    class ExceptionBot(OneTimeBot):
+        def task(self):
+            raise Exception("Exception")
+
+    def test_throw_exception_in_task(self):
+        with LogCapture() as log_catcher:
+            with self.ExceptionBot(silence=True) as bot:
+                log_catcher.clear()
+                bot.run()
+                log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
+                self.assertFalse(bot.success)
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):

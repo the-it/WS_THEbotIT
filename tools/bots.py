@@ -71,10 +71,10 @@ class WikiLogger(object):
         self._logger.addHandler(debug_log)
         if not self._silence:
             # this activates the output of the logger
-            debug_stream = logging.StreamHandler(sys.stdout)
-            debug_stream.setLevel(logging.DEBUG)
-            debug_stream.setFormatter(formatter)
-            self._logger.addHandler(debug_stream)
+            debug_stream = logging.StreamHandler(sys.stdout)  # pragma: no cover
+            debug_stream.setLevel(logging.DEBUG)  # pragma: no cover
+            debug_stream.setFormatter(formatter)  # pragma: no cover
+            self._logger.addHandler(debug_stream)  # pragma: no cover
 
     def debug(self, msg: str):
         self._logger.log(logging.DEBUG, msg)
@@ -111,10 +111,11 @@ class WikiLogger(object):
 
 class PersistedTimestamp(object):
     _timeformat = '%Y-%m-%d_%H:%M:%S'
-    _last_run = None
-    _success = False
 
     def __init__(self, bot_name: str):
+        self._last_run = None
+        self._success_last_run = False
+        self._success_this_run = False
         self._start = datetime.now()
         self._data_path = _get_data_path()
         self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
@@ -122,23 +123,24 @@ class PersistedTimestamp(object):
     def __enter__(self):
         self.set_up()
 
-    def __exit__(self, exc_type, exc_val, exc_tb, success: bool):
-        self.tear_down(success)
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.tear_down()
 
     def set_up(self):
         try:
             with open(self._full_filename, mode="r") as persist_json:
                 last_run_dict = json.load(persist_json)
                 self._last_run = datetime.strptime(last_run_dict["timestamp"], self._timeformat)
-                self._success = last_run_dict["success"]
+                self._success_last_run = last_run_dict["success"]
             os.remove(self._full_filename)
         except FileNotFoundError:
-            self._success = False
+            self._success_last_run = False
             self._last_run = None
 
-    def tear_down(self, success: bool):
+    def tear_down(self):
         with open(self._full_filename, mode="w") as persist_json:
-            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": success}, persist_json)
+            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": self.success_this_run},
+                      persist_json)
 
     @property
     def last_run(self):
@@ -154,14 +156,25 @@ class PersistedTimestamp(object):
         return self._start
 
     @property
-    def success(self):
-        return self._success
+    def success_last_run(self):
+        return self._success_last_run
+
+    @property
+    def success_this_run(self):
+        return self._success_this_run
+
+    @success_this_run.setter
+    def success_this_run(self, new_value: bool):
+        if isinstance(new_value, bool):
+            self._success_this_run = new_value
+        else:
+            raise TypeError("success_this_run is a boolean value.")
 
 
 class OneTimeBot(object):
     task = None
 
-    def __init__(self, wiki: Site =None, debug: bool =True, silence: bool =False):
+    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
         self.success = False
         self._silence = silence
         if not self.task:
@@ -179,23 +192,16 @@ class OneTimeBot(object):
     def __enter__(self):
         self.timestamp.__enter__()
         self.logger.__enter__()
-        self._print_bar_string()
         self.logger.info('Start the bot {}.'.format(self.bot_name))
-        self._print_bar_string()
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.timestamp.__exit__(exc_type, exc_val, exc_tb, self.success)
-        self._print_bar_string()
+        self.timestamp.success_this_run = self.success
+        self.timestamp.__exit__(exc_type, exc_val, exc_tb)
         self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
-        self._print_bar_string()
         if not self._silence:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
-
-    def _print_bar_string(self):
-        if not self._silence:
-            print(120 * "#")
 
     @classmethod
     def get_bot_name(cls):
@@ -283,24 +289,19 @@ class CanonicalBot(OneTimeBot):
     def __init__(self, wiki, debug):
         OneTimeBot.__init__(self, wiki, debug)
         self.data = PersistedData(bot_name=self.bot_name)
-        self.new_data_model = None
+        self.new_data_model = datetime.fromtimestamp(0)
 
     def __enter__(self):
         OneTimeBot.__enter__(self)
         if self.data_outdated():
             self.data.assign_dict({})
             self.logger.warning('The data is thrown away. It is out of date')
-        elif (self.timestamp.last_run is None) or not self.timestamp.success:
+        elif (self.timestamp.last_run is None) or not self.timestamp.success_last_run:
             self.data.assign_dict({})
             self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
         else:
             self.data.load()
         return self
-
-    @staticmethod
-    def _remove_file_if_exists(file_name):
-        if os.path.exists(file_name):
-            os.remove(file_name)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if not exc_type:
@@ -332,7 +333,7 @@ class CanonicalBot(OneTimeBot):
 
     @property
     def last_run_successful(self) -> bool:
-        return self.timestamp.last_run and self.timestamp.success
+        return self.timestamp.last_run and self.timestamp.success_last_run
 
 
 class PingOneTime(OneTimeBot):
