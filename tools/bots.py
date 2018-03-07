@@ -286,8 +286,8 @@ class PersistedData(Mapping):
 
 
 class CanonicalBot(OneTimeBot):
-    def __init__(self, wiki, debug):
-        OneTimeBot.__init__(self, wiki, debug)
+    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
+        OneTimeBot.__init__(self, wiki, debug, silence)
         self.data = PersistedData(bot_name=self.bot_name)
         self.new_data_model = datetime.fromtimestamp(0)
 
@@ -304,7 +304,7 @@ class CanonicalBot(OneTimeBot):
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        if not exc_type:
+        if self.success:
             self.data.dump(success=True)
         else:
             self.data.dump(success=False)
@@ -312,16 +312,12 @@ class CanonicalBot(OneTimeBot):
                                  "The broken data and a backup of the old will be keept.")
         OneTimeBot.__exit__(self, exc_type, exc_val, exc_tb)
 
-    def create_timestamp_for_search(self, searcher, days_in_past=1):
+    def create_timestamp_for_search(self, days_in_past=1) -> datetime:
         if self.last_run_successful:
             start_of_search = self.timestamp.last_run - timedelta(days=days_in_past)
         else:
             start_of_search = self.timestamp.start_of_run - timedelta(days=days_in_past)
-        searcher.last_change_after(int(start_of_search.strftime('%Y')),
-                                   int(start_of_search.strftime('%m')),
-                                   int(start_of_search.strftime('%d')))
-        self.logger.info('The date {} is set to the argument "after".'
-                         .format(start_of_search.strftime("%d.%m.%Y")))
+        return start_of_search
 
     def data_outdated(self):
         outdated = False

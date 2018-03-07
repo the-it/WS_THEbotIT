@@ -62,7 +62,9 @@ class AuthorList(CanonicalBot):
                                                      month=int(yesterday.strftime('%m')),
                                                      day=int(yesterday.strftime('%d'))))
         elif self.last_run_successful and self.data:
-            self.create_timestamp_for_search(self.searcher)
+            start_of_search = self.create_timestamp_for_search()
+            self.searcher.last_change_after(start_of_search)
+            self.logger.info('The date {} is set to the argument "after".'.format(start_of_search.strftime("%d.%m.%Y")))
         else:
             self.logger.warning('There was no timestamp found of the last run, so the argument "after" is not set.')
         self.searcher.add_namespace(0)  # search in main namespace

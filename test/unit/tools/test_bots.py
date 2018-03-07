@@ -6,7 +6,7 @@ from shutil import rmtree
 import time
 
 from test import *
-from tools.bots import BotExeption, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
+from tools.bots import BotExeption, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
     _DATA_PATH, _get_data_path
 
 _DATA_PATH_TEST = _DATA_PATH + "_test"
@@ -261,7 +261,7 @@ class TestOneTimeBot(TestCase):
                 self.timeout = timedelta(seconds=0.05)
 
             def task(self):
-                while (True):
+                while True:
                     if self._watchdog():
                         raise Exception("watchdog must not fire")  # pragma: no cover
                     time.sleep(0.1)
@@ -280,7 +280,8 @@ class TestOneTimeBot(TestCase):
                     bot.__exit__(None, None, None)
                     self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
                     self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])
-                    self.assertEqual(mock.call().save('Update of Bot MinimalBot', botflag=True), mock_page.mock_calls[2])
+                    self.assertEqual(mock.call().save('Update of Bot MinimalBot', botflag=True),
+                                     mock_page.mock_calls[2])
 
     class ExceptionBot(OneTimeBot):
         def task(self):
@@ -293,6 +294,7 @@ class TestOneTimeBot(TestCase):
                 bot.run()
                 log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
                 self.assertFalse(bot.success)
+
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
@@ -435,3 +437,94 @@ class TestPersistedData(TestCase):
         self.data["a"] = 1
         self.data.update({"b": 2})
         self.assertDictEqual({"a": 1, "b": 2}, self.data.data)
+
+
+class TestCanonicalBot(TestCase):
+    def setUp(self):
+        _setup_data_path(self)
+        os.mkdir(_DATA_PATH_TEST)
+        self.addCleanup(patch.stopall)
+        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
+        self.timestamp_patcher = patch.object(PersistedTimestamp, 'debug', autospec=True)
+        self.wiki_logger_mock = self.log_patcher.start()
+
+    def tearDown(self):
+        _teardown_data_path()
+
+    @staticmethod
+    def create_timestamp(bot_name, date=datetime(2000, 1, 1), success=True):
+        with open(_DATA_PATH_TEST + os.sep + "{}.last_run.json".format(bot_name), mode="w") as persist_json:
+            json.dump({"timestamp": date.strftime('%Y-%m-%d_%H:%M:%S'), "success": success}, persist_json)
+
+    @staticmethod
+    def create_data(bot_name, data=None):
+        if not data:
+            data = {"a": 1}
+        with open(_DATA_PATH_TEST + os.sep + "{}.data.json".format(bot_name), mode="w") as persist_json:
+            json.dump(data, persist_json)
+
+    class MinimalCanonicalBot(CanonicalBot):
+        def task(self):
+            return True
+
+    def test_basic_run(self):
+        self.create_data("MinimalCanonicalBot")
+        self.create_timestamp("MinimalCanonicalBot")
+        with self.MinimalCanonicalBot(silence=True) as bot:
+            bot.run()
+
+    def test_load_and_store_data(self):
+        self.create_data("MinimalCanonicalBot")
+        self.create_timestamp("MinimalCanonicalBot")
+        with self.MinimalCanonicalBot(silence=True) as bot:
+            self.assertDictEqual({"a": 1}, bot.data.data)
+            bot.run()
+            bot.data["b"] = 2
+
+        with self.MinimalCanonicalBot(silence=True) as bot:
+            self.assertDictEqual({"a": 1, "b": 2}, bot.data.data)
+
+    def test_last_run_failure(self):
+        self.create_data("MinimalCanonicalBot")
+        self.create_timestamp("MinimalCanonicalBot", success=False)
+        with self.MinimalCanonicalBot(silence=True) as bot:
+            self.assertDictEqual({}, bot.data.data)
+
+    class DataOutdatedBot(CanonicalBot):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.new_data_model = datetime(2001, 1, 1)
+
+        def task(self):
+            return True
+
+    def test_no_load_model_outdated(self):
+        self.create_data("DataOutdatedBot")
+        self.create_timestamp("DataOutdatedBot")
+        with LogCapture() as log_catcher:
+            with self.DataOutdatedBot(silence=True) as bot:
+                log_catcher.check(('DataOutdatedBot', 'INFO', 'Start the bot DataOutdatedBot.'),
+                                  ("DataOutdatedBot", "WARNING", "The data is thrown away. It is out of date"))
+                self.assertDictEqual({}, bot.data.data)
+                bot.run()
+
+    class DataThrowException(CanonicalBot):
+        def task(self):
+            raise Exception
+
+    def test_keep_broken_data(self):
+        self.create_data("DataThrowException")
+        self.create_timestamp("DataThrowException")
+        with LogCapture() as log_catcher:
+            with patch("tools.bots.PersistedData.dump") as mock_dump:
+                with self.DataThrowException(silence=True) as bot:
+                    log_catcher.clear()
+                    bot.run()
+                mock_dump.assert_called_once_with(success=False)
+                self.assertIn("DataThrowException CRITICAL\n"
+                              "  There was an error in the general procedure. "
+                              "The broken data and a backup of the old will be keept.",
+                              str(log_catcher))
+
+    def test_set_timestamp_for_searcher(self):
+        pass
