@@ -289,7 +289,7 @@ class CanonicalBot(OneTimeBot):
     def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
         OneTimeBot.__init__(self, wiki, debug, silence)
         self.data = PersistedData(bot_name=self.bot_name)
-        self.new_data_model = datetime.fromtimestamp(0)
+        self.new_data_model = datetime.min
 
     def __enter__(self):
         OneTimeBot.__enter__(self)
@@ -330,24 +330,3 @@ class CanonicalBot(OneTimeBot):
     @property
     def last_run_successful(self) -> bool:
         return self.timestamp.last_run and self.timestamp.success_last_run
-
-
-class PingOneTime(OneTimeBot):
-    def __init__(self, wiki, debug):
-        OneTimeBot.__init__(self, wiki, debug)
-
-    def task(self):
-        self.logger.info('PingOneTime')
-        return True
-
-
-class PingCanonical(CanonicalBot):
-    def task(self):
-        self.logger.info('PingCanonical')
-        return True
-
-
-if __name__ == "__main__":
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    with PingOneTime(wiki=WS_WIKI, debug=False) as bot:
-        bot.run()
