@@ -63,6 +63,10 @@ codecov :
 	echo "########### CODECOV ############"
 	codecov --token=bb224da4-b91a-4080-b106-cb7bb5d84595
 
+codacy :
+	echo "############ CODACY ############"
+	python-codacy-coverage -r coverage.xml
+
 clean : clean-pyc clean-coverage clean-code-climate
 
 quality : bandit coverage flake8 pycodestyle pylint

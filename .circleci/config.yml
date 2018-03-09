@@ -60,6 +60,11 @@ jobs:
           command: |
             . venv/bin/activate
             make coverage
+      - run:
+          name: run codacy
+          command: |
+            . venv/bin/activate
+            make codacy
 workflows:
   version: 2
   test-and-quality:
