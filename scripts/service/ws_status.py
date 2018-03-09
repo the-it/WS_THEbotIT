@@ -19,7 +19,8 @@ class RowBasic():
     def build_row(self):
         raise BotExeption("Class {} should implement the method build_row()".format(self))
 
-    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list= None, union=False):
+    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list = None, union=False):
+        # pylint: disable=too-many-arguments
         searcher = PetScan()
         for cat in list_of_cat:
             searcher.add_positive_category(cat)
@@ -37,6 +38,7 @@ class RowBasic():
         del searcher
         return '{0:,}'.format(len(list_of_lemmas)).replace(',', '.')
 
+
 class RowBearbeitungen(RowBasic):
     def build_row(self):
         return '|-\n| {} || {} ||  ||  ||  ||'.format(self.today.strftime('%Y-%m-%d'),
@@ -49,6 +51,7 @@ class RowBearbeitungen(RowBasic):
         del dummypage
         dummypage = Page(self.wiki, 'Benutzer:THEbotIT/dummy')
         return dummypage.text
+
 
 class RowSeitenstatistik(RowBasic):
     def build_row(self):
@@ -121,12 +124,10 @@ class RowBearbeitungsstand(RowBasic):
     def make_percent(counter: str, denominator: str):
         counter = float(counter.replace('.', ''))
         denominator = float(denominator.replace('.', ''))
-        return "{:10.2f}".format(counter/denominator * 100.0)
+        return "{:10.2f}".format(counter / denominator * 100.0)
 
 
 class WsStatus(CanonicalBot):
-    bot_name = 'WsStatus'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.text = None
@@ -138,7 +139,7 @@ class WsStatus(CanonicalBot):
         else:
             lemma = 'WS:Statistik'
         self.load_text_from_site(lemma)
-        #self.new_row(str(RowSeitenstatistik(self.wiki, self.logger)), 'SEITENSTATISTIK')
+        # self.new_row(str(RowSeitenstatistik(self.wiki, self.logger)), 'SEITENSTATISTIK')
         self.new_row(str(RowBearbeitungsstand(self.wiki, self.logger)), 'BEARBEITUNGSSTAND')
         self.save_text_to_site()
         return True

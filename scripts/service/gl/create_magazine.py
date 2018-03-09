@@ -9,17 +9,16 @@ from tools.bots import CanonicalBot, BotExeption
 
 
 class GlCreateMagazine(CanonicalBot):
-    bot_name = 'MagazinesGL'
-
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
         self.searcher_pages = PetScan()
         self.searcher_indexes = PetScan()
         self.regex_page = re.compile(r'Die_Gartenlaube_\((\d{4})\)_([^\.]*?)\.(?:jpg|JPG)')
         self.regex_index = re.compile(r'Die_Gartenlaube_\((\d{4})\)')
-        self.regex_magazine_in_index = re.compile(r'((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))', re.DOTALL)
+        self.regex_magazine_in_index = re.compile(r'((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))',
+                                                  re.DOTALL)
         self.regex_page_in_magazine = re.compile(r'_([_\w]{1,9}).(?:jpg|JPG)')
-        self.regex_magazine_number_in_magazine = re.compile(r'(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
+        self.regex_number_in_index = re.compile(r'(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
         self.new_data_model = datetime(year=2017, month=11, day=11, hour=12)
         self.lemmas = None
 
@@ -66,7 +65,7 @@ class GlCreateMagazine(CanonicalBot):
                 if year not in temp_data.keys():
                     temp_data[year] = []
                 temp_data[year].append(page)
-            except Exception as error:
+            except Exception as error:  # pylint: disable=broad-except
                 self.logger.error("wasn't able to process {}, error: {}".format(lemma['title'], error))
 
     def process_indexes(self):
@@ -79,7 +78,7 @@ class GlCreateMagazine(CanonicalBot):
                 self.data['indexes'][year] = {}
             for magazine in magazines:
                 pages = self.regex_page_in_magazine.findall(magazine)
-                hit_number = self.regex_magazine_number_in_magazine.findall(magazine)
+                hit_number = self.regex_number_in_index.findall(magazine)
                 number = int(hit_number[0])
                 self.data['indexes'][year][number] = pages
 
@@ -193,27 +192,26 @@ class GlCreateMagazine(CanonicalBot):
         return ref
 
     def make_magazine_text(self, year, magazine, quality, list_of_pages, last):
+        # pylint: disable=too-many-arguments,too-many-branches
         magazine = int(magazine)
         year = int(year)
         string_list = list()
         string_list.append('<!--Diese Seite wurde automatisch durch einen Bot erstellt. '
                            'Wenn du einen Fehler findest oder eine Änderung wünscht, '
-                           'benachrichtige bitte den Betreiber, THE IT, des Bots.-->\n')
-        string_list.append('{{Textdaten\n')
+                           'benachrichtige bitte den Betreiber, THE IT, des Bots.-->\n'
+                           '{{Textdaten\n')
         if magazine > 1:
             string_list.append('|VORIGER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
-                                                                                                magazine=magazine-1))
+                                                                                                magazine=magazine - 1))
         else:
             string_list.append('|VORIGER=\n')
         if last:
             string_list.append('|NÄCHSTER=\n')
         else:
             string_list.append('|NÄCHSTER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n'.format(year=year,
-                                                                                                 magazine=magazine+1))
-        string_list.append("|AUTOR=Verschiedene\n")
-        string_list.append("|TITEL=[[Die Gartenlaube]]\n")
-        string_list.append("|SUBTITEL=''Illustrirtes Familienblatt''\n")
-        string_list.append("|HERKUNFT=off\n")
+                                                                                                 magazine=magazine + 1))
+        string_list.append("|AUTOR=Verschiedene\n|TITEL=[[Die Gartenlaube]]\n"
+                           "|SUBTITEL=''Illustrirtes Familienblatt''\n|HERKUNFT=off\n")
         if year < 1863:
             string_list.append('|HERAUSGEBER=[[Ferdinand Stolle]]\n')
         elif (year < 1878) or (year == 1878 and magazine < 14):
@@ -222,11 +220,8 @@ class GlCreateMagazine(CanonicalBot):
             string_list.append('|HERAUSGEBER=Ernst Ziel\n')
         else:
             string_list.append('|HERAUSGEBER=Adolf Kröner\n')
-        string_list.append('|ENTSTEHUNGSJAHR={year:d}\n'.format(year=year))
-        string_list.append('|ERSCHEINUNGSJAHR={year:d}\n'.format(year=year))
-        string_list.append('|ERSCHEINUNGSORT=Leipzig\n')
-        string_list.append('|VERLAG=Ernst Keil\n')
-        string_list.append('|WIKIPEDIA=Die Gartenlaube\n')
+        string_list.append('|ENTSTEHUNGSJAHR={year:d}\n|ERSCHEINUNGSJAHR={year:d}\n|ERSCHEINUNGSORT=Leipzig\n'
+                           '|VERLAG=Ernst Keil\n|WIKIPEDIA=Die Gartenlaube\n'.format(year=year))
         if year == 1873:
             extension = "JPG"
         else:
@@ -239,10 +234,8 @@ class GlCreateMagazine(CanonicalBot):
             string_list.append('|BEARBEITUNGSSTAND=fertig\n')
         else:
             string_list.append('|BEARBEITUNGSSTAND=korrigiert\n')
-        string_list.append('|INDEXSEITE=Die Gartenlaube ({year})\n'.format(year=year))
-        string_list.append('}}\n\n')
-        string_list.append('{{BlockSatzStart}}\n')
-        string_list.append('__TOC__\n')
+        string_list.append('|INDEXSEITE=Die Gartenlaube ({year})\n}}\n\n'
+                           '{{BlockSatzStart}}\n__TOC__\n'.format(year=year))
         ref = []
         for page in list_of_pages:
             page_format = self.convert_page_no(page)
@@ -270,11 +263,10 @@ class GlCreateMagazine(CanonicalBot):
             if ref_type != 'ref':
                 string_list.append('{{{{references|TIT|{ref}}}}}\n'.format(ref=ref_type))
         string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n'
-                           '[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n')
-        string_list.append('[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year,
+                           '[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n'
+                           '[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year,
                                                                                                      magazine=magazine))
-        string_list.append('[[Kategorie:{year}0er Jahre]]\n'.format(year=str(year)[0:3]))
-        string_list.append('\n')
+        string_list.append('[[Kategorie:{year}0er Jahre]]\n\n'.format(year=str(year)[0:3]))
         return ''.join(string_list)
 
     def _get_indexes(self) -> Iterator[IndexPage]:
@@ -290,15 +282,18 @@ class GlCreateMagazine(CanonicalBot):
         self.searcher_pages.add_namespace('Seite')
         self.searcher_pages.set_search_depth(1)
         self.searcher_pages.set_timeout(60)
-        if self.last_run_successful:
-            delta = (self.timestamp.start - self.timestamp.last_run).days
-            self.create_timestamp_for_search(self.searcher_pages, delta)
-        elif self.debug:
-            self.create_timestamp_for_search(self.searcher_pages, 10)
+        if self.last_run_successful or self.debug:
+            delta = (self.timestamp.start_of_run - self.timestamp.last_run).days
+            if self.debug:
+                delta = 10
+            start_of_search = self.create_timestamp_for_search(delta)
+            self.searcher_pages.last_change_after(start_of_search)
+            self.logger.info('The date {} is set to the argument "after".'
+                             .format(start_of_search.strftime("%d.%m.%Y")))
         return self.searcher_pages.run()
 
 
 if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with GlCreateMagazine(wiki=wiki, debug=True) as bot:
+    WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with GlCreateMagazine(wiki=WIKI, debug=True) as bot:
         bot.run()

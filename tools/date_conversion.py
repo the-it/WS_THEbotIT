@@ -1,6 +1,6 @@
 import re
 
-month_mapping = {"Januar": '01',
+MONTH_MAPPING = {"Januar": '01',
                  "Jänner": '01',
                  "Februar": '02',
                  "März": '03',
@@ -39,10 +39,7 @@ month_mapping = {"Januar": '01',
 
 
 class DateConversion:
-    """
-
-    """
-
+    # pylint: disable=too-few-public-methods
     def __init__(self, rawstring):
         self.rawstring = rawstring
 
@@ -64,7 +61,7 @@ class DateConversion:
             return_str = self.regex_preset.search(str_re_form).group(1)
         elif self.regex_only_century.search(str_re_form):
             # Case: only a century given
-            century = re.search('\d{1,2}', self.regex_only_century.search(str_re_form).group())
+            century = re.search(r'\d{1,2}', self.regex_only_century.search(str_re_form).group())
             if self.regex_before_domino.search(str_re_form):
                 century = int(century.group())
             else:
@@ -75,7 +72,7 @@ class DateConversion:
         elif self.regex_complete_date.search(str_re_form):
             # Case: complete date
             li_str = re.split('[. ]{1,2}', self.regex_complete_date.search(str_re_form).group())
-            li_str[0] = self._day_to_int(re.sub('\.', '', li_str[0]))  # Punkt aus dem Tag entfernen
+            li_str[0] = self._day_to_int(re.sub(r'\.', '', li_str[0]))  # Punkt aus dem Tag entfernen
             li_str[1] = self._month_to_int(li_str[1])  # Monat in Zahl verwandeln
             li_str[2] = li_str[2].zfill(4)  # append zeros to the year
             return_str = ''.join([li_str[2], '-', li_str[1], '-', li_str[0]])
@@ -114,23 +111,14 @@ class DateConversion:
     def _month_to_int(month):
         try:
             month_int = int(month)
-            if month_int < 10:
-                return '0' + str(month_int)
-            else:
-                return str(month_int)
-        except Exception:
+            return str(month_int).zfill(2)
+        except ValueError:
             try:
-                return month_mapping[month]
-            except:
+                return MONTH_MAPPING[month]
+            except IndexError:
                 raise ValueError(month)
 
     @staticmethod
     def _day_to_int(day):
-        try:
-            day_int = int(day)
-            if day_int < 10:
-                return '0' + str(day_int)
-            else:
-                return str(day_int)
-        except Exception:
-            raise ValueError(day)
+        day_int = int(day)
+        return str(day_int).zfill(2)

@@ -12,11 +12,13 @@ class BotExeption(Exception):
     pass
 
 
+_DATA_PATH = os.path.expanduser("~") + os.sep + ".wiki_bot"
+
+
 def _get_data_path():
-    data_path = os.path.expanduser("~") + os.sep + ".THEbotIT"
-    if not os.path.exists(data_path):
-        os.mkdir(data_path)
-    return data_path
+    if not os.path.exists(_DATA_PATH):
+        os.mkdir(_DATA_PATH)
+    return _DATA_PATH
 
 
 class WikiLogger(object):
@@ -31,7 +33,21 @@ class WikiLogger(object):
         self._logger = logging.getLogger(self._bot_name)
         self._logger_names = self._get_logger_names()
         self._silence = silence
+
+    def __enter__(self):
         self._setup_logger_properties()
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.tear_down()
+
+    def tear_down(self):
+        for handler in self._logger.handlers[:]:
+            handler.close()
+            self._logger.removeHandler(handler)
+        if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
+            os.remove(self._data_path + os.sep + self._logger_names['info'])
+        sys.stdout.flush()
+        logging.shutdown()
 
     def _get_logger_names(self):
         log_file_names = {}
@@ -55,19 +71,10 @@ class WikiLogger(object):
         self._logger.addHandler(debug_log)
         if not self._silence:
             # this activates the output of the logger
-            debug_stream = logging.StreamHandler(sys.stdout)
-            debug_stream.setLevel(logging.DEBUG)
-            debug_stream.setFormatter(formatter)
-            self._logger.addHandler(debug_stream)
-
-    def tear_down(self):
-        for handler in self._logger.handlers[:]:
-            handler.close()
-            self._logger.removeHandler(handler)
-        if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
-            os.remove(self._data_path + os.sep + self._logger_names['info'])
-        sys.stdout.flush()
-        logging.shutdown()
+            debug_stream = logging.StreamHandler(sys.stdout)  # pragma: no cover
+            debug_stream.setLevel(logging.DEBUG)  # pragma: no cover
+            debug_stream.setFormatter(formatter)  # pragma: no cover
+            self._logger.addHandler(debug_stream)  # pragma: no cover
 
     def debug(self, msg: str):
         self._logger.log(logging.DEBUG, msg)
@@ -104,29 +111,36 @@ class WikiLogger(object):
 
 class PersistedTimestamp(object):
     _timeformat = '%Y-%m-%d_%H:%M:%S'
-    _last_run = None
-    _success = False
 
     def __init__(self, bot_name: str):
+        self._last_run = None
+        self._success_last_run = False
+        self._success_this_run = False
         self._start = datetime.now()
         self._data_path = _get_data_path()
         self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
-        self._load()
 
-    def persist(self, success: bool):
-        with open(self._full_filename, mode="w") as persist_json:
-            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": success}, persist_json)
+    def __enter__(self):
+        self.set_up()
 
-    def _load(self):
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.tear_down()
+
+    def set_up(self):
         try:
             with open(self._full_filename, mode="r") as persist_json:
                 last_run_dict = json.load(persist_json)
                 self._last_run = datetime.strptime(last_run_dict["timestamp"], self._timeformat)
-                self._success = last_run_dict["success"]
+                self._success_last_run = last_run_dict["success"]
             os.remove(self._full_filename)
         except FileNotFoundError:
-            self._success = False
+            self._success_last_run = False
             self._last_run = None
+
+    def tear_down(self):
+        with open(self._full_filename, mode="w") as persist_json:
+            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": self.success_this_run},
+                      persist_json)
 
     @property
     def last_run(self):
@@ -138,73 +152,87 @@ class PersistedTimestamp(object):
             self._last_run = value
 
     @property
-    def start(self):
+    def start_of_run(self):
         return self._start
 
     @property
-    def success(self):
-        return self._success
+    def success_last_run(self):
+        return self._success_last_run
+
+    @property
+    def success_this_run(self):
+        return self._success_this_run
+
+    @success_this_run.setter
+    def success_this_run(self, new_value: bool):
+        if isinstance(new_value, bool):
+            self._success_this_run = new_value
+        else:
+            raise TypeError("success_this_run is a boolean value.")
 
 
-class BaseBot(object):
-    bot_name = None
-    bar_string = 120 * "#"
+class OneTimeBot(object):
+    task = None
 
-    def __init__(self, wiki, debug):
+    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
         self.success = False
-        if not self.bot_name:
-            raise NotImplementedError('The class variable bot_name is not implemented. Implement the variable.')
-        self.timestamp = None
+        self._silence = silence
+        if not self.task:
+            raise NotImplementedError('The class function \"task\" must be implemented!\n'
+                                      'Example:\n'
+                                      'class DoSomethingBot(OneTimeBot):\n'
+                                      '    def task(self):\n'
+                                      '        do_stuff()')
+        self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
         self.wiki = wiki
         self.debug = debug
-        self.timeout = timedelta(minutes=60)
-        self.logger = None
+        self.timeout = timedelta(days=1)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence=self._silence)
 
     def __enter__(self):
-        self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start)
-        print(self.bar_string)
+        self.timestamp.__enter__()
+        self.logger.__enter__()
         self.logger.info('Start the bot {}.'.format(self.bot_name))
-        print(self.bar_string)
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.timestamp.persist(self.success)
-        print(self.bar_string)
-        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start))
-        print(self.bar_string)
-        self.send_log_to_wiki()
-        self.logger.tear_down()
+        self.timestamp.success_this_run = self.success
+        self.timestamp.__exit__(exc_type, exc_val, exc_tb)
+        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
+        if not self._silence:
+            self.send_log_to_wiki()
+        self.logger.__exit__(exc_type, exc_val, exc_tb)
 
-    def task(self):
-        self.logger.critical("You should really add functionality here.")
-        raise BotExeption
+    @classmethod
+    def get_bot_name(cls):
+        return cls.__name__
+
+    @property
+    def bot_name(self):
+        return self.get_bot_name()
 
     def run(self):
         try:
-            self.success = bool(self.task())
-        except Exception as e:
-            self.logger.exception("Logging an uncaught exception", exc_info=e)
+            self.success = bool(self.task())  # pylint: disable=not-callable
+        except Exception as catched_exception:  # pylint: disable=broad-except
+            self.logger.exception("Logging an uncaught exception", exc_info=catched_exception)
             self.success = False
         return self.success
 
     def _watchdog(self):
-        diff = datetime.now() - self.timestamp.start
-        if diff > self.timeout:
-            self.logger.warning('Bot finished by timeout.')
-            return True
-        else:
-            return False
+        time_over = False
+        if self.timeout:
+            diff = datetime.now() - self.timestamp.start_of_run
+            if diff > self.timeout:
+                self.logger.warning('Bot finished by timeout.')
+                time_over = True
+        return time_over
 
     def send_log_to_wiki(self):
         wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
         page = Page(self.wiki, wiki_log_page)
         page.text += self.logger.create_wiki_log_lines()
         page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
-
-
-class OneTimeBot(BaseBot):
-    pass
 
 
 class PersistedData(Mapping):
@@ -230,7 +258,7 @@ class PersistedData(Mapping):
         return iter(self.data)
 
     def assign_dict(self, new_dict: dict):
-        if type(new_dict) is dict:
+        if isinstance(new_dict, dict):
             self.data = new_dict
         else:
             raise BotExeption("{} has the wrong type. It must be a dictionary.".format(new_dict))
@@ -257,48 +285,39 @@ class PersistedData(Mapping):
         self.data.update(dict_to_update)
 
 
-class CanonicalBot(BaseBot):
-    def __init__(self, wiki, debug):
-        BaseBot.__init__(self, wiki, debug)
+class CanonicalBot(OneTimeBot):
+    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
+        OneTimeBot.__init__(self, wiki, debug, silence)
         self.data = PersistedData(bot_name=self.bot_name)
-        self.new_data_model = None
+        self.new_data_model = datetime.min
 
     def __enter__(self):
-        BaseBot.__enter__(self)
+        OneTimeBot.__enter__(self)
         if self.data_outdated():
             self.data.assign_dict({})
             self.logger.warning('The data is thrown away. It is out of date')
-        elif (self.timestamp.last_run is None) or (self.timestamp.success == False):
+        elif (self.timestamp.last_run is None) or not self.timestamp.success_last_run:
             self.data.assign_dict({})
             self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
         else:
             self.data.load()
         return self
 
-    @staticmethod
-    def _remove_file_if_exists(file_name):
-        if os.path.exists(file_name):
-            os.remove(file_name)
-
     def __exit__(self, exc_type, exc_val, exc_tb):
-        if not exc_type:
+        if self.success:
             self.data.dump(success=True)
         else:
             self.data.dump(success=False)
             self.logger.critical("There was an error in the general procedure. "
                                  "The broken data and a backup of the old will be keept.")
-        BaseBot.__exit__(self, exc_type, exc_val, exc_tb)
+        OneTimeBot.__exit__(self, exc_type, exc_val, exc_tb)
 
-    def create_timestamp_for_search(self, searcher, days_in_past=1):
+    def create_timestamp_for_search(self, days_in_past=1) -> datetime:
         if self.last_run_successful:
             start_of_search = self.timestamp.last_run - timedelta(days=days_in_past)
         else:
-            start_of_search = self.timestamp.start - timedelta(days=days_in_past)
-        searcher.last_change_after(int(start_of_search.strftime('%Y')),
-                                   int(start_of_search.strftime('%m')),
-                                   int(start_of_search.strftime('%d')))
-        self.logger.info('The date {} is set to the argument "after".'
-                         .format(start_of_search.strftime("%d.%m.%Y")))
+            start_of_search = self.timestamp.start_of_run - timedelta(days=days_in_past)
+        return start_of_search
 
     def data_outdated(self):
         outdated = False
@@ -310,30 +329,4 @@ class CanonicalBot(BaseBot):
 
     @property
     def last_run_successful(self) -> bool:
-        return self.timestamp.last_run and self.timestamp.success
-
-
-class PingOneTime(OneTimeBot):
-    bot_name = 'PingOneTime'
-
-    def __init__(self, wiki, debug):
-        OneTimeBot.__init__(self, wiki, debug)
-
-    def task(self):
-        self.logger.info('PingOneTime')
-        return True
-
-
-class PingCanonical(CanonicalBot):
-    bot_name = 'PingCanonical'
-
-    def task(self):
-        self.logger.info('PingCanonical')
-        self.logger.debug('äüö')
-        return True
-
-
-if __name__ == "__main__":
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    with PingOneTime(wiki=WS_WIKI, debug=False) as bot:
-        bot.run()
+        return self.timestamp.last_run and self.timestamp.success_last_run
