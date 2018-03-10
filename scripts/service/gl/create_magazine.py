@@ -234,8 +234,8 @@ class GlCreateMagazine(CanonicalBot):
             string_list.append('|BEARBEITUNGSSTAND=fertig\n')
         else:
             string_list.append('|BEARBEITUNGSSTAND=korrigiert\n')
-        string_list.append('|INDEXSEITE=Die Gartenlaube ({year})\n}}\n\n'
-                           '{{BlockSatzStart}}\n__TOC__\n'.format(year=year))
+        string_list.append('|INDEXSEITE=Die Gartenlaube ({year})\n}}}}\n\n'
+                           '{{{{BlockSatzStart}}}}\n__TOC__\n'.format(year=year))
         ref = []
         for page in list_of_pages:
             page_format = self.convert_page_no(page)
@@ -262,7 +262,7 @@ class GlCreateMagazine(CanonicalBot):
         for ref_type in ref:
             if ref_type != 'ref':
                 string_list.append('{{{{references|TIT|{ref}}}}}\n'.format(ref=ref_type))
-        string_list.append('{{BlockSatzEnd}}\n\n[[Kategorie:Deutschland]]\n'
+        string_list.append('{{{{BlockSatzEnd}}}}\n\n[[Kategorie:Deutschland]]\n'
                            '[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n'
                            '[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n'.format(year=year,
                                                                                                      magazine=magazine))

@@ -62,8 +62,8 @@ class DailyRunner(CanonicalBot):
                        2: [],
                        3: [],
                        4: [],
-                       5: [GlCreateMagazine],
-                       6: [ReStatus]}  # sunday
+                       5: [],
+                       6: [ReStatus, GlCreateMagazine]}  # sunday
         for weekly_bot in weekly_list[self.now.weekday()]:
             self.run_bot(weekly_bot(wiki=self.wiki, debug=self.debug))
 
