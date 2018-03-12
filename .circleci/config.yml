@@ -21,6 +21,11 @@ jobs:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+      - run:
+          name: run unittest
+          command: |
+            . venv/bin/activate
+            make unittest
   static quality:
     docker:
       - image: circleci/python:3.6.3
@@ -58,18 +63,27 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
+          name: pre target code climate
+          command: |
+            . venv/bin/activate
+            make code-climate-pre
+      - run:
           name: run coverage
           command: |
             . venv/bin/activate
             make coverage
       - run:
-          name: run codacy
+          name: report code climate
+          command: |
+            . venv/bin/activate
+            make code-climate-post
+      - run:
+          name: report codacy
           command: |
             . venv/bin/activate
             make codacy
-
       - run:
-          name: run codecov
+          name: report codecov
           command: |
             . venv/bin/activate
             make codecov
