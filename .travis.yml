@@ -11,8 +11,6 @@ install:
   - make pip3-all
 script:
   - make coverage
-after_script:
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then make code-climate codecov; fi
 
 matrix:
   allow_failures:

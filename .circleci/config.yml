@@ -22,9 +22,10 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
-          name: show workspace
+          name: run unittest
           command: |
-            ls -all
+            . venv/bin/activate
+            make unittest
   static quality:
     docker:
       - image: circleci/python:3.6.3
@@ -46,6 +47,12 @@ jobs:
           command: |
             . venv/bin/activate
             make pylint
+      - run:
+          name: safety
+          when: always
+          command: |
+            . venv/bin/activate
+            make safety
   coverage:
     docker:
       - image: circleci/python:3.6.3
@@ -56,10 +63,30 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
+          name: pre target code climate
+          command: |
+            . venv/bin/activate
+            make code-climate-pre
+      - run:
           name: run coverage
           command: |
             . venv/bin/activate
             make coverage
+      - run:
+          name: report code climate
+          command: |
+            . venv/bin/activate
+            make code-climate-post
+      - run:
+          name: report codacy
+          command: |
+            . venv/bin/activate
+            make codacy
+      - run:
+          name: report codecov
+          command: |
+            . venv/bin/activate
+            make codecov
 workflows:
   version: 2
   test-and-quality:

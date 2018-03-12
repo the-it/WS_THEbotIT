@@ -22,9 +22,18 @@ bandit :
 	echo "############ BANDIT ############"
 	bandit -r .
 
+safety :
+	echo "############ SAFETY ############"
+	safety check
+
 flake8 :
 	echo "############ FLAKE8 ############"
 	flake8
+
+unittest :
+	echo "########### UNITTEST ###########"
+	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
+	python -m unittest test/all_test.py
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
@@ -49,9 +58,8 @@ code-climate-pre :
 
 code-climate-post :
 	echo "####### CODE CLIMATE POST ######"
-	export CC_TEST_REPORTER_ID=f3b7cf9220d85b6dde901a10d6f18747720138f87ed4f648bb7364d52f5310bb && \
 	./cc-test-reporter format-coverage --output "coverage/codeclimate.${N}.json" && \
-	./cc-test-reporter after-build --exit-code ${TRAVIS_TEST_RESULT}
+	./cc-test-reporter after-build --exit-code 0
 
 clean-code-climate : 
 	echo "###### CLEAN CODE CLIMATE ######"
@@ -61,7 +69,11 @@ code-climate : clean-code-climate code-climate-pre coverage code-climate-post
 
 codecov : 
 	echo "########### CODECOV ############"
-	codecov --token=bb224da4-b91a-4080-b106-cb7bb5d84595
+	codecov
+
+codacy :
+	echo "############ CODACY ############"
+	python-codacy-coverage -r coverage.xml
 
 clean : clean-pyc clean-coverage clean-code-climate
 
