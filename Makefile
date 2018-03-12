@@ -22,6 +22,10 @@ bandit :
 	echo "############ BANDIT ############"
 	bandit -r .
 
+safety :
+	echo "############ SAFETY ############"
+	safety check
+
 flake8 :
 	echo "############ FLAKE8 ############"
 	flake8

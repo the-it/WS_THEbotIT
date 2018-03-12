@@ -21,10 +21,6 @@ jobs:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
-      - run:
-          name: show workspace
-          command: |
-            ls -all
   static quality:
     docker:
       - image: circleci/python:3.6.3
@@ -46,6 +42,12 @@ jobs:
           command: |
             . venv/bin/activate
             make pylint
+      - run:
+          name: safety
+          when: always
+          command: |
+            . venv/bin/activate
+            make safety
   coverage:
     docker:
       - image: circleci/python:3.6.3
