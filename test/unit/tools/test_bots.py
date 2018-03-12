@@ -252,19 +252,19 @@ class TestOneTimeBot(TestCase):
                 log_catcher.check(('LogBot', 'INFO', 'Test'))
                 log_catcher.clear()
             # logging on exit
-            self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.1\d{5}.")
+            self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.\d{6}.")
 
     def test_watchdog(self):
         class WatchdogBot(OneTimeBot):
             def __init__(self, **kwargs):
                 super().__init__(**kwargs)
-                self.timeout = timedelta(seconds=0.05)
+                self.timeout = timedelta(seconds=0.2)
 
             def task(self):
                 while True:
                     if self._watchdog():
                         raise Exception("watchdog must not fire")  # pragma: no cover
-                    time.sleep(0.1)
+                    time.sleep(0.4)
                     if self._watchdog():
                         return True
                     raise Exception("watchdog must fire")  # pragma: no cover
