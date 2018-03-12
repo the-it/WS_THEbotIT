@@ -1,10 +1,20 @@
-from collections.abc import Sequence
-
-import pywikibot
+from datetime import datetime
 
 from scripts.service.ws_re.scanner import ReScannerTask
+from tools.bots import WikiLogger
 from test import *
 
 class TestReScannerTask(TestCase):
-    def test_init(self):
-        pass
+    class NAMETask(ReScannerTask):
+        def task(self):
+            pass
+
+    class NAMEMoreExplanationTask(ReScannerTask):
+        def task(self):
+            pass
+
+    def test_name(self):
+        bot = self.NAMETask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True))
+        self.assertEqual("NAME", bot.get_name())
+        bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True))
+        self.assertEqual("NAME", bot.get_name())

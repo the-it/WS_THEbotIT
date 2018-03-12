@@ -7,12 +7,12 @@ from operator import itemgetter
 from pywikibot import Page, Site
 
 from scripts.service.ws_re.data_types import RePage
-from tools.bots import CanonicalBot
+from tools.bots import CanonicalBot, WikiLogger
 from tools.catscan import PetScan
 
 
 class ReScannerTask(object):
-    def __init__(self, wiki: Site, debug: bool, logger: Logger):
+    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
         self.reporter_page = None
         self.wiki = wiki
         self.debug = debug
@@ -30,6 +30,7 @@ class ReScannerTask(object):
         self.pre_process_hash = hash(re_page)
 
     def post_process_lemma(self):
+
         return self.pre_process_hash != hash(self.re_page)
 
     @abstractmethod
@@ -48,7 +49,7 @@ class ReScannerTask(object):
         self.logger.info('closing task {}'.format(self.get_name()))
 
     def get_name(self):
-        return re.search("(.{4})Task", str(self.__class__)).group(1)
+        return re.search("([A-Z]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
 
 
 class ENUUTask(ReScannerTask):

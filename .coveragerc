@@ -1,3 +1,7 @@
 [run]
 omit = archive/*,venv/*
 source = .
+[report]
+exclude_lines =
+    pragma: no cover
+    pass
