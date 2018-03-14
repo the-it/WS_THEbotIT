@@ -6,7 +6,8 @@ REGEX_TEMPLATE = r'\A\{\{.*?\}\}'
 REGEX_INTERWIKI = r'\A\[\[.*?\]\][^|\}]*'
 REGEX_KEY = r'\A[^\|=\.\{]*=[^\|]*'
 REGEX_KEY_EMBEDDED_TEMPLATE_OR_LINK = \
-    r'\A([^\|=]*) ?= ?([^\|\[\{]|(\[\[)[^\|\]]*(\|.*?)*?(\]\])|(\{\{)[^\|\}]*(\|.*?)*?(\}\})|(\[.*?\]))*'
+    r'\A([^\|=]*) ?= ' \
+    r'?([^\|\[\{]|(\[\[)[^\|\]]*(\|.*?)*?(\]\])|(\{\{)[^\|\}]*(\|.*?)*?(\}\})|(\[.*?\]))*'
 REGEX_TEMPLATE_LINK = r'\A[^\|]*(\{\{|\[\[)[^\|]*\|'
 
 
@@ -34,8 +35,10 @@ class TemplateHandler:
             elif template_str[0] == '[':  # argument is a link in the wiki
                 template_str = self._save_argument(REGEX_INTERWIKI, template_str, False)
             elif re.match(REGEX_KEY, template_str):  # argument with a key
-                if re.match(REGEX_TEMPLATE_LINK, template_str):  # an embedded template or link with a key
-                    template_str = self._save_argument(REGEX_KEY_EMBEDDED_TEMPLATE_OR_LINK, template_str, True)
+                # an embedded template or link with a key
+                if re.match(REGEX_TEMPLATE_LINK, template_str):
+                    template_str = self._save_argument(REGEX_KEY_EMBEDDED_TEMPLATE_OR_LINK,
+                                                       template_str, True)
                 else:  # a normal argument with a key
                     template_str = self._save_argument(REGEX_KEY, template_str, True)
             else:  # an argument without a key
@@ -92,10 +95,13 @@ class TemplateFinder(object):
 
     def get_positions(self, template_name: str):
         templates = list()
-        for start_position_template in self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
-            pos_start_brackets = self.get_start_positions_of_regex(r"\{\{", self.text[start_position_template + 2:])
+        for start_position_template in \
+                self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
+            pos_start_brackets = \
+                self.get_start_positions_of_regex(r"\{\{", self.text[start_position_template + 2:])
             pos_start_brackets.reverse()
-            pos_end_brackets = self.get_start_positions_of_regex(r"\}\}", self.text[start_position_template + 2:])
+            pos_end_brackets = \
+                self.get_start_positions_of_regex(r"\}\}", self.text[start_position_template + 2:])
             pos_end_brackets.reverse()
             open_brackets = 1
             while pos_end_brackets:
@@ -105,15 +111,20 @@ class TemplateFinder(object):
                 else:
                     open_brackets -= 1
                     if open_brackets == 0:
-                        end_position_template = pos_end_brackets[-1]  # detected end of the template
-                        end_position_template += 4  # add offset for start and end brackets
-                        end_position_template += start_position_template  # add start position (end only searched after)
+                        # detected end of the template
+                        end_position_template = pos_end_brackets[-1]
+                        # add offset for start and end brackets
+                        end_position_template += 4
+                        # add start position (end only searched after)
+                        end_position_template += start_position_template
                         templates.append({"pos": (start_position_template, end_position_template),
-                                          "text": self.text[start_position_template:end_position_template]})
+                                          "text": self.text[start_position_template:
+                                                            end_position_template]})
                         break
                     pos_end_brackets.pop(-1)
             else:
-                raise TemplateFinderException("No end of the template found for {}".format(template_name))
+                raise TemplateFinderException("No end of the template found for {}"
+                                              .format(template_name))
         return templates
 
     @staticmethod

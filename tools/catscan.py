@@ -84,8 +84,9 @@ class PetScan:
     # pylint: disable=too-many-public-methods, too-many-instance-attributes
     """
     Encapsulate the catscan service, written by Markus Manske (https://petscan.wmflabs.org/).
-    It is possible to access all parameters by different setter functions. The function 'run' execute the server inquiry
-    with the set parameters. The answer is a list with the matching pages. The inquiry have a timeout by 30 seconds.
+    It is possible to access all parameters by different setter functions.
+    The function 'run' execute the server inquiry with the set parameters.
+    The answer is a list with the matching pages. The inquiry have a timeout by 30 seconds.
     """
 
     def __init__(self):
@@ -247,30 +248,41 @@ class PetScan:
         question_string.append("&project=" + self.project)
         # categories
         if self.categories["positive"]:
-            question_string.append("&categories=" + (self._construct_list_argument(self.categories["positive"])))
+            question_string.append("&categories=" +
+                                   (self._construct_list_argument(self.categories["positive"])))
         if self.categories["negative"]:
-            question_string.append("&negcats=" + (self._construct_list_argument(self.categories["negative"])))
+            question_string.append("&negcats=" +
+                                   (self._construct_list_argument(self.categories["negative"])))
         # templates
         if self.templates["yes"]:
-            question_string.append("&templates_yes=" + (self._construct_list_argument(self.templates["yes"])))
+            question_string.append("&templates_yes=" +
+                                   (self._construct_list_argument(self.templates["yes"])))
         if self.templates["any"]:
-            question_string.append("&templates_any=" + (self._construct_list_argument(self.templates["any"])))
+            question_string.append("&templates_any=" +
+                                   (self._construct_list_argument(self.templates["any"])))
         if self.templates["no"]:
-            question_string.append("&templates_no=" + (self._construct_list_argument(self.templates["no"])))
+            question_string.append("&templates_no=" +
+                                   (self._construct_list_argument(self.templates["no"])))
         # outlinks
         if self.outlinks["yes"]:
-            question_string.append("&outlinks_yes=" + (self._construct_list_argument(self.outlinks["yes"])))
+            question_string.append("&outlinks_yes=" +
+                                   (self._construct_list_argument(self.outlinks["yes"])))
         if self.outlinks["any"]:
-            question_string.append("&outlinks_any=" + (self._construct_list_argument(self.outlinks["any"])))
+            question_string.append("&outlinks_any=" +
+                                   (self._construct_list_argument(self.outlinks["any"])))
         if self.outlinks["no"]:
-            question_string.append("&outlinks_no=" + (self._construct_list_argument(self.outlinks["no"])))
+            question_string.append("&outlinks_no=" +
+                                   (self._construct_list_argument(self.outlinks["no"])))
         # links_to
         if self.links_to["yes"]:
-            question_string.append("&links_to_all=" + (self._construct_list_argument(self.links_to["yes"])))
+            question_string.append("&links_to_all=" +
+                                   (self._construct_list_argument(self.links_to["yes"])))
         if self.links_to["any"]:
-            question_string.append("&links_to_any=" + (self._construct_list_argument(self.links_to["any"])))
+            question_string.append("&links_to_any=" +
+                                   (self._construct_list_argument(self.links_to["any"])))
         if self.links_to["no"]:
-            question_string.append("&links_to_no=" + (self._construct_list_argument(self.links_to["no"])))
+            question_string.append("&links_to_no=" +
+                                   (self._construct_list_argument(self.links_to["no"])))
         # rest of the options
         if self.options:
             question_string.append(self._construct_options())

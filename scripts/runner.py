@@ -26,11 +26,13 @@ class DailyRunner(CanonicalBot):
 
     def run_one_timers(self):
         path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts", "online"])
-        one_timers = tuple(file for file in os.listdir(path_to_online) if self.regex_one_timer.search(file))
+        one_timers = \
+            tuple(file for file in os.listdir(path_to_online) if self.regex_one_timer.search(file))
         self.logger.info('One timers to run: {}'.format(one_timers))
         for one_timer in one_timers:
             self.logger.info('Run {}'.format(one_timer))
-            onetime_module = importlib.import_module('online.{}'.format(one_timer.replace('.py', '')))
+            onetime_module = \
+                importlib.import_module('online.{}'.format(one_timer.replace('.py', '')))
             attributes = tuple(a for a in dir(onetime_module) if not a.startswith('__'))
             success = False
             for attribute in attributes:
@@ -43,7 +45,8 @@ class DailyRunner(CanonicalBot):
                 # move the file to the archives if it was successful
                 self.logger.info('{} finished the work successful'.format(one_timer))
                 year = self.regex_one_timer.match(one_timer).group(1)
-                os.rename(path_to_online + os.sep + one_timer, path_to_online + os.sep + year + os.sep + one_timer)
+                os.rename(path_to_online + os.sep + one_timer,
+                          path_to_online + os.sep + year + os.sep + one_timer)
                 repo = git.Repo(search_parent_directories=True)
                 repo.index.add([path_to_online + os.sep + year + os.sep + one_timer])
                 repo.index.remove([path_to_online + os.sep + one_timer])

@@ -58,9 +58,12 @@ class ENUUTask(ReScannerTask):
         self.load_task()
 
     def task(self):
-        self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', self.replace_re, self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', self.replace_re, self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', self.replace_re, self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', self.replace_re,
+                           self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', self.replace_re,
+                           self.text, flags=re.DOTALL)
+        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', self.replace_re,
+                           self.text, flags=re.DOTALL)
         self.text = self.text.rstrip()
         if self.text[0] == '\n':
             self.text = self.text[1:]
@@ -75,7 +78,8 @@ class ReScanner(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
-        self.timeout = timedelta(seconds=60)  # bot should run only one minute ... don't do anything at the moment
+        # bot should run only one minute ... don't do anything at the moment
+        self.timeout = timedelta(seconds=60)
         self.tasks = [ENUUTask]
         if self.debug:
             self.tasks = self.tasks + []
@@ -106,7 +110,8 @@ class ReScanner(CanonicalBot):
                           x['nstext'] + ':' + x['title'] not in list(self.data.keys())]
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
-        self.lemma_list = new_lemma_list + old_lemma_list  # first iterate new items then the old ones (oldest first)
+        # first iterate new items then the old ones (oldest first)
+        self.lemma_list = new_lemma_list + old_lemma_list
 
     def task(self):
         active_tasks = []
@@ -121,8 +126,10 @@ class ReScanner(CanonicalBot):
             for task in active_tasks:
                 if task.process_lemma(page):
                     list_of_done_tasks.append(task.get_name())
-                    self.logger.info('Änderungen durch Task {} durchgeführt'.format(task.get_name()))
-                    page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'.format(', '.join(list_of_done_tasks)),
+                    self.logger.info('Änderungen durch Task {} durchgeführt'
+                                     .format(task.get_name()))
+                    page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'
+                              .format(', '.join(list_of_done_tasks)),
                               botflag=True)
             self.data[lemma] = datetime.now().strftime('%Y%m%d%H%M%S')
             if self._watchdog():

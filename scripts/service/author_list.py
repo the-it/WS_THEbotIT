@@ -50,7 +50,8 @@ class AuthorList(CanonicalBot):
             dump.text = new_text
             dump.save('die Liste wurde auf den aktuellen Stand gebracht.', botflag=True)
         else:
-            self.logger.info('Heute gab es keine Änderungen, daher wird die Seite nicht überschrieben.')
+            self.logger.info('Heute gab es keine Änderungen, '
+                             'daher wird die Seite nicht überschrieben.')
         return True
 
     def _run_searcher(self):
@@ -64,9 +65,11 @@ class AuthorList(CanonicalBot):
         elif self.last_run_successful and self.data:
             start_of_search = self.create_timestamp_for_search()
             self.searcher.last_change_after(start_of_search)
-            self.logger.info('The date {} is set to the argument "after".'.format(start_of_search.strftime("%d.%m.%Y")))
+            self.logger.info('The date {} is set to the argument "after".'
+                             .format(start_of_search.strftime("%d.%m.%Y")))
         else:
-            self.logger.warning('There was no timestamp found of the last run, so the argument "after" is not set.')
+            self.logger.warning('There was no timestamp found of the last run, '
+                                'so the argument "after" is not set.')
         self.searcher.add_namespace(0)  # search in main namespace
         self.searcher.add_positive_category('Autoren')
         self.searcher.add_yes_template('Personendaten')
@@ -98,9 +101,11 @@ class AuthorList(CanonicalBot):
             page = Page(self.wiki, author['title'])
             try:
                 try:
-                    personendaten = re.search(r'\{\{Personendaten(?:.|\n)*?\n\}\}\n', page.text).group()
+                    personendaten = re.search(r'\{\{Personendaten(?:.|\n)*?\n\}\}\n',
+                                              page.text).group()
                 except Exception:
-                    self.logger.error('No valid block "Personendaten" was found for [[{}]].'.format(author['title']))
+                    self.logger.error('No valid block "Personendaten" was found for [[{}]].'
+                                      .format(author['title']))
                     personendaten = None
                 if personendaten:
                     # personendaten = re.sub('<ref.*?>.*?<\/ref>|<ref.*?\/>', '', personendaten)
@@ -126,19 +131,24 @@ class AuthorList(CanonicalBot):
                                             .format(author['title']))
                     try:
                         dict_author.update(
-                            {'description': template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
+                            {'description':
+                             template_extractor.get_parameter('KURZBESCHREIBUNG')['value']})
                     except Exception:
                         dict_author.update({'description': ""})
-                        self.logger.warning("Templatehandler couldn't find a description for: [[{}]]"
-                                            .format(author['title']))
+                        self.logger.warning(
+                            "Templatehandler couldn't find a description for: [[{}]]"
+                            .format(author['title']))
                     try:
-                        dict_author.update({'synonyms': template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
+                        dict_author.update(
+                            {'synonyms':
+                             template_extractor.get_parameter('ALTERNATIVNAMEN')['value']})
                     except Exception:
                         dict_author.update({'synonyms': ""})
                         self.logger.warning("Templatehandler couldn't find synonyms for: [[{}]]"
                                             .format(author['title']))
                     try:
-                        dict_author.update({'sortkey': template_extractor.get_parameter('SORTIERUNG')['value']})
+                        dict_author.update(
+                            {'sortkey': template_extractor.get_parameter('SORTIERUNG')['value']})
                         if dict_author['sortkey'] == '':
                             raise ValueError
                     except Exception:
@@ -151,11 +161,13 @@ class AuthorList(CanonicalBot):
                             dict_author['sortkey'] = dict_author['name']
                             self.logger.warning("Author has no last first_name.")
                         else:
-                            dict_author['sortkey'] = dict_author['name'] + ', ' + dict_author['first_name']
+                            dict_author['sortkey'] = \
+                                dict_author['name'] + ', ' + dict_author['first_name']
                     try:
                         dict_author.update({'wikidata': author['q']})
                     except KeyError:
-                        self.logger.warning('The autor [[{}]] has no wikidata_item'.format(author['title']))
+                        self.logger.warning('The autor [[{}]] has no wikidata_item'
+                                            .format(author['title']))
                     self.data.update({author['id']: dict_author})
             except Exception as exception:
                 self.logger.exception("Exception not catched: ", exc_info=exception)
@@ -194,7 +206,8 @@ class AuthorList(CanonicalBot):
                 try:
                     list_author.append(str(DateConversion(list_author[-1])))  # 5,7
                 except Exception:
-                    self.logger.error('Can´t compile sort key for {}: {}'.format(event, author_dict[event]))
+                    self.logger.error('Can´t compile sort key for {}: {}'
+                                      .format(event, author_dict[event]))
                     list_author.append('!-00-00')  # 5,7
             list_author.append(author_dict['description'])  # 8
             list_authors.append(list_author)
@@ -206,16 +219,19 @@ class AuthorList(CanonicalBot):
         self.logger.info('Start printing.')
         self.string_list.append('Diese Liste der Autoren enthält alle {count}<ref>Stand: '
                                 '{dt.day}.{dt.month}.{dt.year}, '
-                                '{clock} (UTC)</ref> Autoren, zu denen in Wikisource eine Autorenseite existiert.'
+                                '{clock} (UTC)</ref> Autoren, '
+                                'zu denen in Wikisource eine Autorenseite existiert.'
                                 .format(count=len(self.data),
                                         clock=self.timestamp.start_of_run.strftime('%H:%M'),
                                         dt=self.timestamp.start_of_run))
         self.string_list.append('Die Liste kann mit den Buttons neben den Spaltenüberschriften'
                                 ' nach der jeweiligen Spalte sortiert werden.')
         self.string_list.append('<!--')
-        self.string_list.append('Diese Liste wurde durch ein Computerprogramm erstellt, das die Daten verwendet, '
+        self.string_list.append('Diese Liste wurde durch ein Computerprogramm erstellt, '
+                                'das die Daten verwendet, '
                                 'die aus den Infoboxen auf den Autorenseiten stammen.')
-        self.string_list.append('Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werden.')
+        self.string_list.append('Sollten daher Fehler vorhanden sein, '
+                                'sollten diese jeweils dort korrigiert werden.')
         self.string_list.append('-->')
         self.string_list.append('{|class="wikitable sortable"')
         self.string_list.append('!style="width:20%"| Name')
@@ -223,7 +239,8 @@ class AuthorList(CanonicalBot):
         self.string_list.append('!data-sort-type="text" style="width:15%"| Tod.-datum')
         self.string_list.append('!class="unsortable" style="width:50%"| Beschreibung')
         for list_author in list_authors:
-            aut_sort, aut_page, aut_sur, aut_pre, birth_str, birth_sort, death_str, death_sort, description = \
+            aut_sort, aut_page, aut_sur, aut_pre, birth_str, \
+                birth_sort, death_str, death_sort, description = \
                 list_author
             self.string_list.append('|-')
             if aut_sur and aut_pre:
@@ -272,11 +289,13 @@ class AuthorList(CanonicalBot):
                 elif date_from_data.precision < 10:
                     date_from_data = str(date_from_data.year)
                 elif date_from_data.precision < 11:
-                    date_from_data = self.number_to_month[date_from_data.month] + ' ' + str(date_from_data.year)
+                    date_from_data = self.number_to_month[date_from_data.month] + ' ' + \
+                        str(date_from_data.year)
                 else:
-                    date_from_data = "{day}. {month} {year}".format(day=date_from_data.day,
-                                                                    month=self.number_to_month[date_from_data.month],
-                                                                    year=date_from_data.year)
+                    date_from_data = "{day}. {month} {year}"\
+                        .format(day=date_from_data.day,
+                                month=self.number_to_month[date_from_data.month],
+                                year=date_from_data.year)
                 if re.search('-', date_from_data):
                     date_from_data = date_from_data.replace('-', '') + ' v. Chr.'
                 self.logger.debug('Found {} @ wikidata for {}'.format(date_from_data, event))
