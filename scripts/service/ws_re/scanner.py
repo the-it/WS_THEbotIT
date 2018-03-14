@@ -1,7 +1,6 @@
 import re
 from abc import abstractmethod
 from datetime import datetime, timedelta
-from logging import Logger
 from operator import itemgetter
 
 from pywikibot import Page, Site
@@ -21,6 +20,7 @@ class ReScannerTask(object):
         self.re_page = None
         self.pre_process_hash = None
         self.text = None
+        self.load_task()
 
     def __del__(self):
         self.finish_task()
@@ -30,7 +30,6 @@ class ReScannerTask(object):
         self.pre_process_hash = hash(re_page)
 
     def post_process_lemma(self):
-
         return self.pre_process_hash != hash(self.re_page)
 
     @abstractmethod
@@ -52,27 +51,6 @@ class ReScannerTask(object):
         return re.search("([A-Z]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
 
 
-class ENUUTask(ReScannerTask):
-    def __init__(self, wiki: Site, debug: bool, logger: Logger):
-        ReScannerTask.__init__(self, wiki, debug, logger)
-        self.load_task()
-
-    def task(self):
-        self.text = re.sub(r'\n*\{\{REDaten.*?\n\}\}\s*', self.replace_re,
-                           self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAutor.*?\}\}\s*', self.replace_re,
-                           self.text, flags=re.DOTALL)
-        self.text = re.sub(r'\n*\{\{REAbschnitt.*?\}\}\s*', self.replace_re,
-                           self.text, flags=re.DOTALL)
-        self.text = self.text.rstrip()
-        if self.text[0] == '\n':
-            self.text = self.text[1:]
-
-    @staticmethod
-    def replace_re(hit: re):
-        return '\n' + hit.group(0).strip(" \n\t") + '\n'
-
-
 class ReScanner(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
@@ -80,7 +58,7 @@ class ReScanner(CanonicalBot):
         self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
         # bot should run only one minute ... don't do anything at the moment
         self.timeout = timedelta(seconds=60)
-        self.tasks = [ENUUTask]
+        self.tasks = []
         if self.debug:
             self.tasks = self.tasks + []
 
@@ -137,9 +115,3 @@ class ReScanner(CanonicalBot):
         for task in self.tasks:
             del task
         return True
-
-
-if __name__ == "__main__":
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    with ReScanner(wiki=WS_WIKI, debug=True) as bot:
-        bot.run()
