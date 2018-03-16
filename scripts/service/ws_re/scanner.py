@@ -9,6 +9,9 @@ from scripts.service.ws_re.data_types import RePage
 from tools.bots import CanonicalBot, WikiLogger
 from tools.catscan import PetScan
 
+SUCCESS = "success"
+CHANGED = "changed"
+
 
 class ReScannerTask(object):
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
@@ -19,27 +22,34 @@ class ReScannerTask(object):
         self.hash = None
         self.re_page = None
         self.pre_process_hash = None
-        self.text = None
         self.load_task()
+        self.result = {SUCCESS: False, CHANGED: False}
+        self.processed_pages = []
 
     def __del__(self):
         self.finish_task()
 
-    def pre_process_lemma(self, re_page: RePage):
-        self.re_page = re_page
-        self.pre_process_hash = hash(re_page)
+    def __enter__(self):
+        self.pre_process_hash = hash(self.re_page)
+        return self
 
-    def post_process_lemma(self):
-        return self.pre_process_hash != hash(self.re_page)
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
+    def __hash__(self):
+        return hash(len(self.processed_pages)) + hash(self.re_page)
 
     @abstractmethod
     def task(self):
         pass
 
-    def process_lemma(self, re_page: RePage):
-        self.pre_process_lemma(re_page)
-        self.task()
-        return self.post_process_lemma()
+    def run(self, re_page: RePage):
+        self.re_page = re_page
+        try:
+            self.task()
+        except Exception as exception:  # pylint: disable=broad-except
+            self.logger.exception("Logging a caught exception", exception)
+        return self.pre_process_hash != hash(self.re_page)
 
     def load_task(self):
         self.logger.info('opening task {}'.format(self.get_name()))
