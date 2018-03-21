@@ -21,7 +21,6 @@ class ReScannerTask(object):
         self.logger = logger
         self.hash = None
         self.re_page = None
-        self.pre_process_hash = None
         self.load_task()
         self.result = {SUCCESS: False, CHANGED: False}
         self.processed_pages = []
@@ -30,14 +29,10 @@ class ReScannerTask(object):
         self.finish_task()
 
     def __enter__(self):
-        self.pre_process_hash = hash(self.re_page)
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         pass
-
-    def __hash__(self):
-        return hash(len(self.processed_pages)) + hash(self.re_page)
 
     @abstractmethod
     def task(self):
@@ -45,11 +40,16 @@ class ReScannerTask(object):
 
     def run(self, re_page: RePage):
         self.re_page = re_page
+        preprocessed_hash = hash(self.re_page)
         try:
             self.task()
+            if preprocessed_hash != hash(self.re_page):
+                self.result[CHANGED] = True
         except Exception as exception:  # pylint: disable=broad-except
             self.logger.exception("Logging a caught exception", exception)
-        return self.pre_process_hash != hash(self.re_page)
+        else:
+            self.result[SUCCESS] = True
+        return self.result
 
     def load_task(self):
         self.logger.info('opening task {}'.format(self.get_name()))
