@@ -7,6 +7,7 @@ from tools.bots import WikiLogger
 from scripts.service.ws_re.data_types import RePage
 from test import *
 
+
 class TestReScannerTask(TestCase):
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
@@ -46,22 +47,9 @@ class TestReScannerTask(TestCase):
         self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page = RePage(self.page_mock)
         with self.MINITask(None, self.logger) as task:
-            task.run(re_page)
-
-    def test_hash(self):
-        task = self.MINITask(None, self.logger)
-        pre_hash = hash(task)
-        task.processed_pages.append("RE:Blub")
-        self.assertNotEqual(pre_hash, hash(task))
-
-    def test_hash_manipulate_page(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
-        re_page = RePage(self.page_mock)
-        task = self.MINITask(None, self.logger)
-        pre_hash = hash(task)
-        task.run(re_page)
-        task.re_page._article_list[0].text = "new text"
-        self.assertNotEqual(pre_hash, hash(task))
+            result = task.run(re_page)
+            self.assertTrue(result["success"])
+            self.assertFalse(result["changed"])
 
     class EXCETask(ReScannerTask):
         def task(self):
@@ -72,6 +60,9 @@ class TestReScannerTask(TestCase):
         re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
             with self.EXCETask(None, self.logger) as task:
-                task.run(re_page)
+                result = task.run(re_page)
+            self.assertFalse(result["success"])
+            self.assertFalse(result["changed"])
             log_catcher.check(("Test", "INFO", 'opening task EXCE'),
                               ("Test", "ERROR", 'Logging a caught exception'))
+
