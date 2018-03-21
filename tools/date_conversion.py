@@ -48,7 +48,9 @@ class DateConversion:
     regex_preset = re.compile(r'<!--(\d{4}-\d{2}-\d{2})-->')
     regex_before_domino = re.compile(r'v. Chr')
     regex_only_century = re.compile(r'\d{1,2}\. (Jahrhundert|Jh.)')
-    regex_complete_date = re.compile(r'\d{1,2}(\.|\. | )(\d\d?|' + _months + r')\w*(\.|\. | )(\d{1,4})')
+    regex_complete_date = re.compile(r'\d{1,2}(\.|\. | )(\d\d?|' +
+                                     _months +
+                                     r')\w*(\.|\. | )(\d{1,4})')
     regex_no_day = re.compile(r'(\d{1,2}\.|' + _months + r')\w*(\.|\. | )(\d{1,4})')
     regex_only_year = re.compile(r'\d{1,4}')
 
@@ -72,7 +74,7 @@ class DateConversion:
         elif self.regex_complete_date.search(str_re_form):
             # Case: complete date
             li_str = re.split('[. ]{1,2}', self.regex_complete_date.search(str_re_form).group())
-            li_str[0] = self._day_to_int(re.sub(r'\.', '', li_str[0]))  # Punkt aus dem Tag entfernen
+            li_str[0] = self._day_to_int(re.sub(r'\.', '', li_str[0]))  # remove dot from day
             li_str[1] = self._month_to_int(li_str[1])  # Monat in Zahl verwandeln
             li_str[2] = li_str[2].zfill(4)  # append zeros to the year
             return_str = ''.join([li_str[2], '-', li_str[1], '-', li_str[0]])

@@ -40,14 +40,18 @@ class GlStatus(CanonicalBot):
 
     def projektstand(self, temp_text, alle, fertig, korrigiert, unkorrigiert, articles):
         # pylint: disable=too-many-arguments
-        composed_text = ''.join(['<!--new line: Liste wird von einem Bot aktuell gehalten.-->\n|-\n', '|',
+        composed_text = ''.join(['<!--new line: '
+                                 'Liste wird von einem Bot aktuell gehalten.-->\n|-\n',
+                                 '|',
                                  self.timestamp.start_of_run.strftime('%d.%m.%Y'),
                                  '|| ', str(alle),
                                  ' || ', str(korrigiert), self.to_percent(korrigiert, alle),
                                  ' || ', str(fertig), self.to_percent(fertig, alle),
                                  ' || ', str(unkorrigiert), self.to_percent(unkorrigiert, alle),
-                                 ' || ', str(articles) + '/19900', self.to_percent(articles, 19900), ' ||'])
-        return re.sub('<!--new line: Liste wird von einem Bot aktuell gehalten.-->', composed_text, temp_text)
+                                 ' || ', str(articles) + '/19900', self.to_percent(articles, 19900),
+                                 ' ||'])
+        return re.sub('<!--new line: Liste wird von einem Bot aktuell gehalten.-->',
+                      composed_text, temp_text)
 
     @staticmethod
     def alle_seiten(temp_text, all_lemmas):
@@ -58,13 +62,15 @@ class GlStatus(CanonicalBot):
     @staticmethod
     def korrigierte_seiten(temp_text, korrigiert):
         composed_text = ''.join(['<!--GLStatus:korrigierte_Seiten-->', str(korrigiert), '<!---->'])
-        temp_text = re.sub(r'<!--GLStatus:korrigierte_Seiten-->\d{5}<!---->', composed_text, temp_text)
+        temp_text = \
+            re.sub(r'<!--GLStatus:korrigierte_Seiten-->\d{5}<!---->', composed_text, temp_text)
         return temp_text
 
     @staticmethod
     def fertige_seiten(temp_text, fertig):
         composed_text = ''.join(['<!--GLStatus:fertige_Seiten-->', str(fertig), '<!---->'])
-        temp_text = re.sub(r'<!--GLStatus:fertige_Seiten-->\d{4,5}<!---->', composed_text, temp_text)
+        temp_text = \
+            re.sub(r'<!--GLStatus:fertige_Seiten-->\d{4,5}<!---->', composed_text, temp_text)
         return temp_text
 
     def year(self, year, temp_text):
@@ -76,20 +82,25 @@ class GlStatus(CanonicalBot):
         if rest > 0:
             temp_text = regex.sub(
                 '<!--GLStatus:{year}-->'
-                '|span style="background-color:#4876FF; font-weight: bold"|ca. {percent} % korrigiert oder fertig'
+                '|span style="background-color:#4876FF; '
+                'font-weight: bold"|ca. {percent} % korrigiert oder fertig'
                 '<!---->'
                 .format(year=year,
-                        percent=str(round(((fertig + korrigiert) / alle) * 100, 1)).replace('.', ',')), temp_text)
+                        percent=str(round(((fertig + korrigiert) / alle) * 100, 1))
+                        .replace('.', ',')), temp_text)
         elif korrigiert > 0:
             temp_text = regex.sub(
                 '<!--GLStatus:{year}-->'
-                '|span style="background-color:#F7D700; font-weight: bold"|{percent_fertig} % fertig, Rest korrigiert'
+                '|span style="background-color:#F7D700; '
+                'font-weight: bold"|{percent_fertig} % fertig, Rest korrigiert'
                 '<!---->'
                 .format(year=year,
-                        percent_fertig=str(round(((fertig) / alle) * 100, 1)).replace('.', ',')), temp_text)
+                        percent_fertig=str(round(((fertig) / alle) * 100, 1))
+                        .replace('.', ',')), temp_text)
         else:
             temp_text = regex.sub(
-                '<!--GLStatus:{year}-->|span style="background-color:#00FF00; font-weight: bold"|Fertig<!---->'
+                '<!--GLStatus:{year}-->|span style="background-color:#00FF00; '
+                'font-weight: bold"|Fertig<!---->'
                 .format(year=year), temp_text)
         return temp_text
 

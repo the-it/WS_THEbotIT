@@ -27,6 +27,7 @@ article_template = """{{REDaten
 text
 {{REAutor|Autor.}}"""
 
+
 class TestReProperty(TestCase):
     def test_init(self):
         re_property = ReProperty(name="Test", default=False)
@@ -154,11 +155,11 @@ class TestReArticle(TestCase):
                        "\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException,
                                     "REDaten has wrong key word. --> {.*?}"):
-            article = ReArticle.from_text((article_text))
+            ReArticle.from_text(article_text)
 
     def test_from_text_short_keywords(self):
-        article_text = "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB|XS={{START}}" \
-                       "|XE={{END}}|GND=1234|SCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
+        article_text = "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB" \
+                       "|XS={{START}}|XE={{END}}|GND=1234|SCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
                        "\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
         self.assertEqual("I", article["BAND"].value)
@@ -183,41 +184,41 @@ class TestReArticle(TestCase):
         article_text = "{{REDaten\n|III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException,
                                     "REDaten has property without a key word. --> {.*?}"):
-            article = ReArticle.from_text((article_text))
+            ReArticle.from_text(article_text)
 
     def test_from_text_two_REDaten_templates(self):
         article_text = "{{REDaten}}{{REDaten}}\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. There must one start template"):
-            article = ReArticle.from_text((article_text))
+        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+                                                      "There must one start template"):
+            ReArticle.from_text(article_text)
 
     def test_from_text_no_REDaten_templates(self):
         article_text = "\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. There must one start template"):
-            article = ReArticle.from_text((article_text))
+        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+                                                      "There must one start template"):
+            ReArticle.from_text(article_text)
 
     def test_from_text_two_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n{{REAutor|Some Author.}}{{REAutor}}"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. There must one stop template"):
-            article = ReArticle.from_text((article_text))
+        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+                                                      "There must one stop template"):
+            ReArticle.from_text(article_text)
 
     def test_from_text_no_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. There must one stop template"):
-            article = ReArticle.from_text((article_text))
+        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+                                                      "There must one stop template"):
+            ReArticle.from_text(article_text)
 
     def test_from_text_wrong_order_of_templates(self):
         article_text = "{{REAutor}}{{REDaten}}\ntext"
         with self.assertRaisesRegex(ReDatenException,
                                     "Article has the wrong structure. Wrong order of templates."):
-            article = ReArticle.from_text((article_text))
+            ReArticle.from_text(article_text)
 
     def test_complete_article(self):
         article_text = article_template
-        article = ReArticle.from_text(article_text)
+        ReArticle.from_text(article_text)
 
     def test_from_text_REAbschnitt(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
@@ -227,14 +228,16 @@ class TestReArticle(TestCase):
     def test_from_text_text_in_front_of_article(self):
         article_text = "text{{REDaten}}text{{REAutor}}"
         with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. There is text in front of the article."):
-            article = ReArticle.from_text((article_text))
+                                    "Article has the wrong structure. "
+                                    "There is text in front of the article."):
+            ReArticle.from_text(article_text)
 
     def test_from_text_text_after_article(self):
         article_text = "{{REDaten}}text{{REAutor}}text"
         with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. There is text after the article."):
-            article = ReArticle.from_text((article_text))
+                                    "Article has the wrong structure. "
+                                    "There is text after the article."):
+            ReArticle.from_text(article_text)
 
     def test_to_text_simple(self):
         self.article.author = "Autor"
@@ -272,7 +275,8 @@ text
 
 class TestRePage(TestCase):
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
-    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", 
+                new_callable=mock.PropertyMock)
     def setUp(self, text_mock, page_mock):
         self.page_mock = page_mock
         self.text_mock = text_mock
@@ -293,7 +297,8 @@ class TestRePage(TestCase):
         self.assertEqual("Autor", re_article.author)
 
     def test_double_article(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\ntext1\n{{REAutor|Autor1.}}"
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\n" \
+                                      "text1\n{{REAutor|Autor1.}}"
         re_page = RePage(self.page_mock)
         re_article_0 = re_page[0]
         re_article_1 = re_page[1]
@@ -343,16 +348,16 @@ class TestRePage(TestCase):
     def test_back_to_str_combined(self):
         before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}{{REDaten}}\ntext1\n{{REAutor|Autor1.}}"
         self.text_mock.return_value = before
-        after = article_template + "\n" + article_template.replace("text", "text1").replace("Autor.", "Autor1.")
+        after = article_template + "\n" \
+                + article_template.replace("text", "text1").replace("Autor.", "Autor1.")
         self.assertEqual(after, str(RePage(self.page_mock)))
 
     def test_back_to_str_combined_with_additional_text(self):
         before = "1{{REDaten}}\ntext\n{{REAutor|Autor.}}2{{REDaten}}\ntext1\n{{REAutor|Autor1.}}3"
         self.text_mock.return_value = before
-        after = "1\n" + article_template + \
-                "\n2\n" + article_template.replace("text", "text1").replace("Autor.", "Autor1.") + \
-                "\n3"
-
+        after = "1\n" + article_template \
+                + "\n2\n" + article_template.replace("text", "text1").replace("Autor.", "Autor1.") \
+                + "\n3"
         self.assertEqual(after, str(RePage(self.page_mock)))
 
     def test_save_because_of_changes(self):

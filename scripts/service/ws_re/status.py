@@ -12,7 +12,8 @@ class ReStatus(CanonicalBot):
 
     def task(self):
         fertig = self.get_sum_of_cat(['RE:Fertig'],
-                                     ['RE:Teilkorrigiert', 'RE:Korrigiert', 'RE:Unkorrigiert', 'RE:Unvollständig'])
+                                     ['RE:Teilkorrigiert', 'RE:Korrigiert',
+                                      'RE:Unkorrigiert', 'RE:Unvollständig'])
         korrigiert = self.get_sum_of_cat(['RE:Teilkorrigiert', 'RE:Korrigiert'],
                                          ['RE:Unkorrigiert', 'RE:Unvollständig'])
         unkorrigiert = self.get_sum_of_cat(['RE:Unkorrigiert', 'RE:Unvollständig'], [])
@@ -35,20 +36,25 @@ class ReStatus(CanonicalBot):
         status_string = []
 
         color = self.make_color(20e6, 22e6, korrigiert[0])
-        status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[0]))
+        status_string.append('<span style="background:#FF{}{}">{}</span>'
+                             .format(color, color, korrigiert[0]))
         color = self.make_color(5.0e3, 5.25e3, korrigiert[1])
-        status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, korrigiert[1]))
+        status_string.append('<span style="background:#FF{}{}">{}</span>'
+                             .format(color, color, korrigiert[1]))
 
-        list_of_lemmas = self.petscan(['RE:Teilkorrigiert', 'RE:Korrigiert'], ['RE:Unkorrigiert', 'RE:Unvollständig'])
+        list_of_lemmas = self.petscan(['RE:Teilkorrigiert', 'RE:Korrigiert'],
+                                      ['RE:Unkorrigiert', 'RE:Unvollständig'])
         date_page = Page(self.wiki, list_of_lemmas[0]['title'])
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
         gap = datetime.now() - datetime.strptime(date_of_first, '%Y-%m-%d')
         color = self.make_color(3 * 365, 3.5 * 365, gap.days)
-        status_string.append('<span style="background:#FF{}{}">{}</span>'.format(color, color, date_of_first))
+        status_string.append('<span style="background:#FF{}{}">{}</span>'
+                             .format(color, color, date_of_first))
 
         user_page = Page(self.wiki, 'Benutzer:THE IT/Werkstatt')
         temp_text = user_page.text
-        temp_text = re.sub("<!--RE-->.*<!--RE-->", '<!--RE-->{}<!--RE-->'.format(' ■ '.join(status_string)), temp_text)
+        temp_text = re.sub("<!--RE-->.*<!--RE-->", '<!--RE-->{}<!--RE-->'
+                           .format(' ■ '.join(status_string)), temp_text)
         user_page.text = temp_text
         user_page.save('todo RE aktualisiert')
 
@@ -60,7 +66,8 @@ class ReStatus(CanonicalBot):
                                  str(int(unkorrigiert[0] / unkorrigiert[1])),
                                  '||', str(korrigiert[1]), '||', str(korrigiert[0]), '||',
                                  str(int(korrigiert[0] / korrigiert[1])),
-                                 '||', str(fertig[1]), '||', str(fertig[0]), '||', str(int(fertig[0] / fertig[1])),
+                                 '||', str(fertig[1]), '||', str(fertig[0]), '||',
+                                 str(int(fertig[0] / fertig[1])),
                                  '\n<!--new line-->'])
         temp_text = re.sub('<!--new line-->', composed_text, temp_text)
         page.text = temp_text

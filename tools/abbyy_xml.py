@@ -28,20 +28,25 @@ class AbbyyXML:
         return "".join(childes_string)
 
     def process_page(self, page_xml):
-        return self._process_child_items_with_function("block", page_xml, self.process_block, append_new_line=False)
+        return self._process_child_items_with_function("block", page_xml, self.process_block,
+                                                       append_new_line=False)
 
     def process_block(self, block_xml):
-        return self._process_child_items_with_function("text", block_xml, self.process_text, append_new_line=True)
+        return self._process_child_items_with_function("text", block_xml, self.process_text,
+                                                       append_new_line=True)
 
     def process_text(self, text_xml):
-        return self._process_child_items_with_function("par", text_xml, self.process_par, append_new_line=False)
+        return self._process_child_items_with_function("par", text_xml, self.process_par,
+                                                       append_new_line=False)
 
     def process_par(self, par_xml):
-        return self._process_child_items_with_function("line", par_xml, self.process_line, append_new_line=True)
+        return self._process_child_items_with_function("line", par_xml, self.process_line,
+                                                       append_new_line=True)
 
     def process_line(self, line_xml):
         return self._process_child_items_with_function("formatting", line_xml,
-                                                       self.process_formatting, append_new_line=False)
+                                                       self.process_formatting,
+                                                       append_new_line=False)
 
     def process_formatting(self, formatting_xml):
         return self._process_child_items_with_function("charParams", formatting_xml,

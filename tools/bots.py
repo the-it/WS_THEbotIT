@@ -60,9 +60,11 @@ class WikiLogger(object):
 
     def _setup_logger_properties(self):
         self._logger.setLevel(logging.DEBUG)
-        error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['info'], encoding='utf8')
+        error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['info'],
+                                        encoding='utf8')
         error_log.setLevel(logging.INFO)
-        debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['debug'], encoding='utf8')
+        debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['debug'],
+                                        encoding='utf8')
         debug_log.setLevel(logging.DEBUG)
         formatter = logging.Formatter(self._logger_format, datefmt=self._logger_date_format)
         error_log.setFormatter(formatter)
@@ -95,7 +97,8 @@ class WikiLogger(object):
         self._logger.exception(msg=msg, exc_info=exc_info)
 
     def create_wiki_log_lines(self):
-        with open(self._data_path + os.sep + self._logger_names['info'], encoding='utf8') as filepointer:
+        with open(self._data_path + os.sep + self._logger_names['info'], encoding='utf8') \
+                as filepointer:
             line_list = list()
             for line in filepointer:
                 line_list.append(line.strip())
@@ -139,7 +142,8 @@ class PersistedTimestamp(object):
 
     def tear_down(self):
         with open(self._full_filename, mode="w") as persist_json:
-            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": self.success_this_run},
+            json.dump({"timestamp": self._start.strftime(self._timeformat),
+                       "success": self.success_this_run},
                       persist_json)
 
     @property
@@ -198,7 +202,8 @@ class OneTimeBot(object):
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.timestamp.success_this_run = self.success
         self.timestamp.__exit__(exc_type, exc_val, exc_tb)
-        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
+        self.logger.info('Finish bot {} in {}.'
+                         .format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
         if not self._silence:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)

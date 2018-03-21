@@ -95,6 +95,7 @@ workflows:
       - coverage:
           requires:
             - pip3
+            - static quality
       - static quality:
           requires:
             - pip3
