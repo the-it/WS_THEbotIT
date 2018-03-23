@@ -373,3 +373,38 @@ class TestRePage(TestCase):
         re_page = RePage(self.page_mock)
         re_page.save("reason")
         self.assertFalse(self.page_mock.save.mock_calls)
+
+    def test_append(self):
+        self.text_mock.return_value = article_template
+        re_page = RePage(self.page_mock)
+        self.assertEqual(1, len(re_page))
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
+        article = ReArticle.from_text(article_text)
+        re_page.append(article)
+        self.assertEqual(2, len(re_page))
+        with self.assertRaises(TypeError):
+            re_page.append(1)
+
+    def test_hash(self):
+        self.text_mock.return_value = article_template
+        re_page = RePage(self.page_mock)
+
+        pre_hash = hash(re_page)
+        re_page[0].text = "bada"
+        self.assertNotEqual(pre_hash, hash(re_page))
+
+        pre_hash = hash(re_page)
+        re_page[0]["BAND"].value = "tada"
+        self.assertNotEqual(pre_hash, hash(re_page))
+
+        pre_hash = hash(re_page)
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
+        article = ReArticle.from_text(article_text)
+        re_page.append(article)
+        self.assertNotEqual(pre_hash, hash(re_page))
+
+    def test_lemma(self):
+        self.page_mock.title.return_value = "RE:Page"
+        self.text_mock.return_value = article_template
+        re_page = RePage(self.page_mock)
+        self.assertEqual("RE:Page", re_page.lemma)

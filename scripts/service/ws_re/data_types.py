@@ -319,3 +319,19 @@ class RePage(Sequence):
         if self.pre_text != str(self):
             self.page.text = str(self)
             self.page.save(summary=reason, botflag=True)
+
+    def append(self, new_article: ReArticle):
+        if isinstance(new_article, ReArticle):
+            self._article_list.append(new_article)
+        else:
+            raise TypeError("You can only append Elements of the type ReArticle")
+
+    def __hash__(self):
+        hash_value = 0
+        for counter, article in enumerate(self._article_list):
+            hash_value += hash(article) << counter
+        return hash_value
+
+    @property
+    def lemma(self):
+        return self.page.title()

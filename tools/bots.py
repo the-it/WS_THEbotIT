@@ -284,7 +284,7 @@ class PersistedData(Mapping):
                 self.data = json.load(json_file)
             os.rename(self.file_name, self.file_name + ".deprecated")
         else:
-            raise BotExeption("Not data to load.")
+            raise BotExeption("No data to load.")
 
     def update(self, dict_to_update: dict):
         self.data.update(dict_to_update)

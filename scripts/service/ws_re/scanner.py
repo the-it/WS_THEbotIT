@@ -43,12 +43,13 @@ class ReScannerTask(object):
         preprocessed_hash = hash(self.re_page)
         try:
             self.task()
-            if preprocessed_hash != hash(self.re_page):
-                self.result[CHANGED] = True
         except Exception as exception:  # pylint: disable=broad-except
             self.logger.exception("Logging a caught exception", exception)
         else:
             self.result[SUCCESS] = True
+            self.processed_pages.append(re_page.lemma)
+        if preprocessed_hash != hash(self.re_page):
+            self.result[CHANGED] = True
         return self.result
 
     def load_task(self):
@@ -71,12 +72,6 @@ class ReScanner(CanonicalBot):
         self.tasks = []
         if self.debug:
             self.tasks = self.tasks + []
-
-    def __enter__(self):
-        CanonicalBot.__enter__(self)
-        if not self.data:
-            self.data.assign_dict(dict())
-        return self
 
     def compile_lemma_list(self):
         self.logger.info('Compile the lemma list')

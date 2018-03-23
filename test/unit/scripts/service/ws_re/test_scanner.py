@@ -48,8 +48,20 @@ class TestReScannerTask(TestCase):
         re_page = RePage(self.page_mock)
         with self.MINITask(None, self.logger) as task:
             result = task.run(re_page)
-            self.assertTrue(result["success"])
-            self.assertFalse(result["changed"])
+        self.assertTrue(result["success"])
+        self.assertFalse(result["changed"])
+
+    class MINIAlterTask(ReScannerTask):
+        def task(self):
+            self.re_page[0].text = "text2"
+
+    def test_process_task_alter_text(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        re_page = RePage(self.page_mock)
+        with self.MINIAlterTask(None, self.logger) as task:
+            result = task.run(re_page)
+        self.assertTrue(result["success"])
+        self.assertTrue(result["changed"])
 
     class EXCETask(ReScannerTask):
         def task(self):
@@ -61,8 +73,37 @@ class TestReScannerTask(TestCase):
         with LogCapture() as log_catcher:
             with self.EXCETask(None, self.logger) as task:
                 result = task.run(re_page)
-            self.assertFalse(result["success"])
-            self.assertFalse(result["changed"])
             log_catcher.check(("Test", "INFO", 'opening task EXCE'),
                               ("Test", "ERROR", 'Logging a caught exception'))
+        self.assertFalse(result["success"])
+        self.assertFalse(result["changed"])
 
+    class EXCEAlteredTask(ReScannerTask):
+        def task(self):
+            self.re_page[0].text = "text2"
+            raise Exception("Buuuh")
+
+    def test_execute_with_exception_altered(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            with self.EXCEAlteredTask(None, self.logger) as task:
+                result = task.run(re_page)
+        self.assertFalse(result["success"])
+        self.assertTrue(result["changed"])
+
+    def test_register_processed_title(self):
+        self.page_mock.title.return_value = "RE:Page"
+        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            # page successful processed
+            with self.MINITask(None, self.logger) as task:
+                self.assertEqual([], task.processed_pages)
+                task.run(re_page)
+            self.assertEqual(["RE:Page"], task.processed_pages)
+            # page not complete processed
+            with self.EXCETask(None, self.logger) as task:
+                self.assertEqual([], task.processed_pages)
+                task.run(re_page)
+            self.assertEqual([], task.processed_pages)
