@@ -63,8 +63,8 @@ class ReScannerTask(object):
 
 
 class ReScanner(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
+    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
+        CanonicalBot.__init__(self, wiki, debug, silence)
         self.lemma_list = None
         self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
         # bot should run only one minute ... don't do anything at the moment

@@ -2,13 +2,16 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner import ReScannerTask, ReScanner
 from tools.bots import WikiLogger
+from tools.catscan import PetScan
 from scripts.service.ws_re.data_types import RePage
 from test import *
+from test.unit.tools.test_bots import setup_data_path, teardown_data_path
 
 
 class TestReScannerTask(TestCase):
+    # todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs some investigation
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
     def setUp(self, text_mock, page_mock):
@@ -107,3 +110,25 @@ class TestReScannerTask(TestCase):
                 self.assertEqual([], task.processed_pages)
                 task.run(re_page)
             self.assertEqual([], task.processed_pages)
+
+class TestReScanner(TestCase):
+    def setUp(self):
+        self.petscan_patcher = patch("scripts.service.ws_re.scanner.PetScan", autospec=PetScan)
+        self.petscan_mock = self.petscan_patcher.start()
+        self.run_mock = mock.Mock()
+        self.petscan_mock.return_value = mock.Mock(run=self.run_mock)
+        setup_data_path(self)
+        self.addCleanup(patch.stopall)
+        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
+        self.wiki_logger_mock = self.log_patcher.start()
+
+    def tearDown(self):
+        teardown_data_path()
+        mock.patch.stopall()
+
+    def test_first(self):
+        self.run_mock.return_value = 1
+        with ReScanner(silence=True) as bot:
+            bot.run()
+
+

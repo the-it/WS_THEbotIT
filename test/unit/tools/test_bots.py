@@ -17,30 +17,31 @@ def _remove_data_folder():
         rmtree(_DATA_PATH_TEST)
 
 
-def _setup_data_path(test_class: TestCase):
+def setup_data_path(test_class: TestCase):
     test_class.addCleanup(patch.stopall)
     patch("tools.bots._DATA_PATH", _DATA_PATH_TEST).start()
     _remove_data_folder()
+    os.mkdir(_DATA_PATH_TEST)
 
 
-def _teardown_data_path():
+def teardown_data_path():
     _remove_data_folder()
 
 
 class TestGetDataPath(TestCase):
     def setUp(self):
-        _setup_data_path(self)
+        setup_data_path(self)
 
     def tearDown(self):
-        _teardown_data_path()
+        teardown_data_path()
 
     def test_folder_exist(self):
-        os.mkdir(_DATA_PATH_TEST)
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
             self.assertEqual(_DATA_PATH_TEST, _get_data_path())
             mock_mkdir.assert_not_called()
 
     def test_make_folder(self):
+        os.rmdir(_DATA_PATH_TEST)
         with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
             self.assertEqual(_DATA_PATH_TEST, _get_data_path())
             self.assertEqual(1, mock_mkdir.call_count)
@@ -48,13 +49,13 @@ class TestGetDataPath(TestCase):
 
 class TestWikilogger(TestCase):
     def setUp(self):
-        _setup_data_path(self)
+        setup_data_path(self)
         self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), silence=True)
         self.logger._setup_logger_properties()
 
     def tearDown(self):
         self.logger.tear_down()
-        _teardown_data_path()
+        teardown_data_path()
 
     def test_logfile_names(self):
         self.assertDictEqual({"debug": "test_bot_DEBUG_000101000000.log", "info": "test_bot_INFO_000101000000.log"},
@@ -108,15 +109,14 @@ class TestPersistedTimestamp(TestCase):
     _precision = 0.001
 
     def setUp(self):
-        _setup_data_path(self)
-        os.mkdir(_DATA_PATH_TEST)
+        setup_data_path(self)
         with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
         self.reference = datetime.now()
         self.timestamp = PersistedTimestamp("test_bot")
 
     def tearDown(self):
-        _teardown_data_path()
+        teardown_data_path()
 
     def test_start_timestamp(self):
         self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
@@ -161,14 +161,14 @@ class TestPersistedTimestamp(TestCase):
 
 class TestOneTimeBot(TestCase):
     def setUp(self):
-        _setup_data_path(self)
+        setup_data_path(self)
         self.addCleanup(patch.stopall)
         self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
         self.timestamp_patcher = patch.object(PersistedTimestamp, 'debug', autospec=True)
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
-        _teardown_data_path()
+        teardown_data_path()
 
     class MinimalBot(OneTimeBot):
         def task(self):
@@ -201,7 +201,6 @@ class TestOneTimeBot(TestCase):
             bot.run()
 
     def test_timestamp_load_last_run(self):
-        os.mkdir(_DATA_PATH_TEST)
         with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="x", ) as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
         with self.MinimalBot(silence=True) as bot:
@@ -312,11 +311,11 @@ class TestPersistedData(TestCase):
             data_file.write(data)
 
     def setUp(self):
-        _setup_data_path(self)
+        setup_data_path(self)
         self.data = PersistedData("TestBot")
 
     def tearDown(self):
-        _teardown_data_path()
+        teardown_data_path()
 
     def test_is_mapping(self):
         self.assertTrue(isinstance(self.data, Mapping))
@@ -441,15 +440,14 @@ class TestPersistedData(TestCase):
 
 class TestCanonicalBot(TestCase):
     def setUp(self):
-        _setup_data_path(self)
-        os.mkdir(_DATA_PATH_TEST)
+        setup_data_path(self)
         self.addCleanup(patch.stopall)
         self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
         self.timestamp_patcher = patch.object(PersistedTimestamp, 'debug', autospec=True)
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
-        _teardown_data_path()
+        teardown_data_path()
 
     @staticmethod
     def create_timestamp(bot_name, date=datetime(2000, 1, 1), success=True):
