@@ -275,7 +275,7 @@ text
 
 class TestRePage(TestCase):
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
-    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", 
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text",
                 new_callable=mock.PropertyMock)
     def setUp(self, text_mock, page_mock):
         self.page_mock = page_mock
@@ -408,3 +408,13 @@ class TestRePage(TestCase):
         self.text_mock.return_value = article_template
         re_page = RePage(self.page_mock)
         self.assertEqual("RE:Page", re_page.lemma)
+
+    def test_has_changed(self):
+        self.text_mock.return_value = "{{REDaten}}text{{REAutor|Autor.}}"
+        re_page = RePage(self.page_mock)
+        self.assertTrue(re_page.has_changed())
+
+    def test_has_not_changed(self):
+        self.text_mock.return_value = article_template
+        re_page = RePage(self.page_mock)
+        self.assertFalse(re_page.has_changed())

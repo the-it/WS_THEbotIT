@@ -315,8 +315,11 @@ class RePage(Sequence):
                 articles.append(article)
         return "\n".join(articles)
 
+    def has_changed(self) -> bool:
+        return self.pre_text != str(self)
+
     def save(self, reason: str):
-        if self.pre_text != str(self):
+        if self.has_changed():
             self.page.text = str(self)
             self.page.save(summary=reason, botflag=True)
 
