@@ -65,16 +65,12 @@ class ReScannerTask(object):
 class ReScanner(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
         CanonicalBot.__init__(self, wiki, debug, silence)
-        self.lemma_list = None
-        self.new_data_model = datetime(year=2016, month=11, day=8, hour=11)
-        # bot should run only one minute ... don't do anything at the moment
         self.timeout = timedelta(seconds=60)
         self.tasks = []
         if self.debug:
             self.tasks = self.tasks + []
 
-    def compile_lemma_list(self):
-        self.logger.info('Compile the lemma list')
+    def _prepare_searcher(self):
         searcher = PetScan()
         searcher.add_any_template('REDaten')
 
@@ -86,6 +82,13 @@ class ReScanner(CanonicalBot):
             searcher.add_positive_category('Korrigiert RE')
             searcher.add_positive_category('RE:Platzhalter')
             searcher.set_logic_union()
+            searcher.set_sort_criteria("date")
+            searcher.set_sortorder_decending()
+        return searcher
+
+    def compile_lemma_list(self):
+        self.logger.info('Compile the lemma list')
+        searcher = self._prepare_searcher()
         self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
         # all items which wasn't process before
@@ -94,15 +97,18 @@ class ReScanner(CanonicalBot):
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
         # first iterate new items then the old ones (oldest first)
-        self.lemma_list = new_lemma_list + old_lemma_list
+        return new_lemma_list + old_lemma_list
 
     def task(self):
+        pass
+
+    def old_task(self):
         active_tasks = []
         for task in self.tasks:
             active_tasks.append(task(self.wiki, self.debug, self.logger))
-        self.compile_lemma_list()
+        lemma_list = self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
-        for lemma in self.lemma_list:
+        for lemma in lemma_list:
             list_of_done_tasks = []
             page = Page(self.wiki, lemma)
             self.logger.info('Process {}'.format(page))
@@ -120,3 +126,9 @@ class ReScanner(CanonicalBot):
         for task in self.tasks:
             del task
         return True
+
+
+if __name__ == "__main__":
+    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with ReScanner(wiki=WS_WIKI, debug=False) as bot:
+        bot.run()

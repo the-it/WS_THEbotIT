@@ -24,6 +24,10 @@ class TestReScannerTask(TestCase):
         def task(self):
             pass
 
+    class NAM1Task(ReScannerTask):
+        def task(self):
+            pass
+
     class NAMEMoreExplanationTask(ReScannerTask):
         def task(self):
             pass
@@ -33,6 +37,8 @@ class TestReScannerTask(TestCase):
         self.assertEqual("NAME", bot.get_name())
         bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True))
         self.assertEqual("NAME", bot.get_name())
+        bot = self.NAM1Task(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True))
+        self.assertEqual("NAM1", bot.get_name())
 
     class MINITask(ReScannerTask):
         def task(self):
@@ -111,6 +117,7 @@ class TestReScannerTask(TestCase):
                 task.run(re_page)
             self.assertEqual([], task.processed_pages)
 
+
 class TestReScanner(TestCase):
     def setUp(self):
         self.petscan_patcher = patch("scripts.service.ws_re.scanner.PetScan", autospec=PetScan)
@@ -126,9 +133,61 @@ class TestReScanner(TestCase):
         teardown_data_path()
         mock.patch.stopall()
 
-    def test_first(self):
-        self.run_mock.return_value = 1
+    class SearchStringChecker(object):
+        def __init__(self, search_string: str):
+            self.search_string = search_string
+
+        def is_part_of_searchstring(self, part: str):
+            pre_length = len(self.search_string)
+            self.search_string = "".join(self.search_string.split(part))
+            return pre_length != len(self.search_string)
+
+        def is_empty(self):
+            return len(self.search_string) == 0
+
+    def test_search_prepare_debug(self):
+        mock.patch.stopall()
         with ReScanner(silence=True) as bot:
-            bot.run()
+            checker = self.SearchStringChecker(str(bot._prepare_searcher()))
+            self.assertTrue(checker.is_part_of_searchstring(
+                r"https://petscan.wmflabs.org/?language=de&project=wikisource"))
+            self.assertTrue(checker.is_part_of_searchstring("&templates_any=REDaten"))
+            self.assertTrue(checker.is_part_of_searchstring("&ns%5B2%5D=1"))
+            self.assertTrue(checker.is_empty())
 
+    def test_search_prepare(self):
+        mock.patch.stopall()
+        with ReScanner(silence=True, debug=False) as bot:
+            checker = self.SearchStringChecker(str(bot._prepare_searcher()))
+            self.assertTrue(checker.is_part_of_searchstring(
+                "https://petscan.wmflabs.org/?language=de&project=wikisource"))
+            self.assertTrue(checker.is_part_of_searchstring(
+                "&categories=Fertig%2BRE%0D%0AKorrigiert%2BRE%0D%0ARE:Platzhalter"))
+            self.assertTrue(checker.is_part_of_searchstring("&templates_any=REDaten"))
+            self.assertTrue(checker.is_part_of_searchstring("&ns%5B0%5D=1"))
+            self.assertTrue(checker.is_part_of_searchstring("&combination=union"))
+            self.assertTrue(checker.is_part_of_searchstring("&sortby=date"))
+            self.assertTrue(checker.is_part_of_searchstring("&sortorder=descending"))
+            self.assertTrue(checker.is_empty())
 
+    result_of_searcher = [{'id': 42, 'len': 42, 'n': 'page', 'namespace': 0, 'nstext': '',
+                           'title': 'RE:Lemma1', 'touched': '20010101232359'},
+                          {'id': 42, 'len': 42, 'n': 'page', 'namespace': 0, 'nstext': '',
+                           'title': 'RE:Lemma2', 'touched': '20000101232359'},
+                          {'id': 42, 'len': 42, 'n': 'page', 'namespace': 0, 'nstext': '',
+                           'title': 'RE:Lemma3', 'touched': '19990101232359'}
+                          ]
+
+    def test_compile_lemmas_no_old_lemmas(self):
+        self.run_mock.return_value = self.result_of_searcher
+        with ReScanner(silence=True) as bot:
+            self.assertEqual([':RE:Lemma1', ':RE:Lemma2', ':RE:Lemma3'], bot.compile_lemma_list())
+
+    def test_compile_lemmas_old_lemmas(self):
+        self.run_mock.return_value = self.result_of_searcher
+        with ReScanner(silence=True) as bot:
+            with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101232359'}):
+                self.assertEqual([':RE:Lemma2', ':RE:Lemma3', ':RE:Lemma1'], bot.compile_lemma_list())
+            with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101232359',
+                                            ":RE:Lemma3": '20020101232359'}):
+                self.assertEqual([':RE:Lemma2', ':RE:Lemma1', ':RE:Lemma3'], bot.compile_lemma_list())
