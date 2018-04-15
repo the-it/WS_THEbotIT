@@ -324,7 +324,7 @@ class CanonicalBot(OneTimeBot):
             start_of_search = self.timestamp.start_of_run - timedelta(days=days_in_past)
         return start_of_search
 
-    def data_outdated(self):
+    def data_outdated(self) -> bool:
         outdated = False
         if self.new_data_model and self.timestamp.last_run:
             if self.timestamp.last_run < self.new_data_model:

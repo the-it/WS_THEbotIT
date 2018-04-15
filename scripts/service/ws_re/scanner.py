@@ -2,6 +2,7 @@ import re
 from abc import abstractmethod
 from datetime import datetime, timedelta
 from operator import itemgetter
+from typing import List
 
 from pywikibot import Page, Site
 
@@ -19,8 +20,7 @@ class ReScannerTask(object):
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
-        self.hash = None
-        self.re_page = None
+        self.re_page = None  # type: RePage
         self.load_task()
         self.result = {SUCCESS: False, CHANGED: False}
         self.processed_pages = []
@@ -59,18 +59,18 @@ class ReScannerTask(object):
         self.logger.info('closing task {}'.format(self.get_name()))
 
     def get_name(self):
-        return re.search("([A-Z]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
+        return re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
 
 
 class ReScanner(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
         CanonicalBot.__init__(self, wiki, debug, silence)
         self.timeout = timedelta(seconds=60)
-        self.tasks = []
+        self.tasks = []  # type: List[type(ReScannerTask)]
         if self.debug:
             self.tasks = self.tasks + []
 
-    def _prepare_searcher(self):
+    def _prepare_searcher(self) -> PetScan:
         searcher = PetScan()
         searcher.add_any_template('REDaten')
 
@@ -86,7 +86,7 @@ class ReScanner(CanonicalBot):
             searcher.set_sortorder_decending()
         return searcher
 
-    def compile_lemma_list(self):
+    def compile_lemma_list(self) -> List[str]:
         self.logger.info('Compile the lemma list')
         searcher = self._prepare_searcher()
         self.logger.info('[{url} {url}]'.format(url=searcher))
@@ -99,13 +99,19 @@ class ReScanner(CanonicalBot):
         # first iterate new items then the old ones (oldest first)
         return new_lemma_list + old_lemma_list
 
-    def task(self):
-        pass
+    def _activate_tasks(self) -> List[ReScannerTask]:
+        active_tasks = []
+        for task in self.tasks:
+            active_tasks.append(task(wiki=self.wiki, debug=self.debug, logger=self.logger))
+        return active_tasks
+
+    def task(self) -> bool:
+        # active_tasks = self._activate_tasks()
+        # lemma_list = self.compile_lemma_list()
+        self.logger.info('Start processing the lemmas.')
 
     def old_task(self):
         active_tasks = []
-        for task in self.tasks:
-            active_tasks.append(task(self.wiki, self.debug, self.logger))
         lemma_list = self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
         for lemma in lemma_list:

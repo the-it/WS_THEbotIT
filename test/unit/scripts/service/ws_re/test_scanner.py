@@ -1,4 +1,5 @@
 from datetime import datetime
+import re
 
 import pywikibot
 
@@ -179,6 +180,7 @@ class TestReScanner(TestCase):
                           ]
 
     def test_compile_lemmas_no_old_lemmas(self):
+
         self.run_mock.return_value = self.result_of_searcher
         with ReScanner(silence=True) as bot:
             self.assertEqual([':RE:Lemma1', ':RE:Lemma2', ':RE:Lemma3'], bot.compile_lemma_list())
@@ -191,3 +193,34 @@ class TestReScanner(TestCase):
             with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101232359',
                                             ":RE:Lemma3": '20020101232359'}):
                 self.assertEqual([':RE:Lemma2', ':RE:Lemma1', ':RE:Lemma3'], bot.compile_lemma_list())
+
+    class ONE1Task(ReScannerTask):
+        def task(self):
+            self.logger.info("I")
+
+    class TWO2Task(ReScannerTask):
+        def task(self):
+            self.logger.info("II")
+
+    def test_activate_tasks(self):
+        with ReScanner(silence=True) as bot:
+            bot.tasks = [self.ONE1Task, self.TWO2Task]
+            tasks_to_run = bot._activate_tasks()
+            self.assertEqual(2, len(tasks_to_run))
+            for item in tasks_to_run:
+                self.assertEqual(ReScannerTask, type(item).__bases__[0])
+
+    def _mock_surroundings(self):
+        self.lemma_patcher = patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
+                                   mock.Mock(return_value=[':RE:Lemma1', ':RE:Lemma2']))
+        self.lemma_mock = self.lemma_patcher.start()
+
+    def test_two_tasks_two_lemmas(self):
+        self._mock_surroundings()
+        with LogCapture() as log_catcher:
+            with ReScanner(silence=True) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task, self.TWO2Task]
+                bot.run()
+                # log_catcher.check(("Test", "INFO", 'opening task EXCE'),
+                #                   ("Test", "ERROR", 'Logging a caught exception'))
