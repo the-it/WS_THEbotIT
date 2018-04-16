@@ -35,7 +35,7 @@ class TestReProperty(TestCase):
         re_property.value = True
         self.assertTrue(re_property.value)
         with self.assertRaises(TypeError):
-            re_property.value = ""
+            re_property.value = "other"
 
     def test_format_bool(self):
         re_property = ReProperty(name="Test", default=False)
@@ -53,6 +53,8 @@ class TestReProperty(TestCase):
         re_property.value = "ON"
         self.assertTrue(re_property.value)
         re_property.value = "OFF"
+        self.assertFalse(re_property.value)
+        re_property.value = ""
         self.assertFalse(re_property.value)
 
     def test_hash(self):

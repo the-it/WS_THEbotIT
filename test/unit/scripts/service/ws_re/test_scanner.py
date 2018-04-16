@@ -1,5 +1,4 @@
 from datetime import datetime
-import re
 
 import pywikibot
 
@@ -120,7 +119,12 @@ class TestReScannerTask(TestCase):
 
 
 class TestReScanner(TestCase):
-    def setUp(self):
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
+    def setUp(self, text_mock, page_mock):
+        self.page_mock = page_mock
+        self.text_mock = text_mock
+        type(self.page_mock).text = self.text_mock
         self.petscan_patcher = patch("scripts.service.ws_re.scanner.PetScan", autospec=PetScan)
         self.petscan_mock = self.petscan_patcher.start()
         self.run_mock = mock.Mock()
@@ -215,12 +219,16 @@ class TestReScanner(TestCase):
                                    mock.Mock(return_value=[':RE:Lemma1', ':RE:Lemma2']))
         self.lemma_mock = self.lemma_patcher.start()
 
+    @ skip
     def test_two_tasks_two_lemmas(self):
         self._mock_surroundings()
+        self.page_mock.title.return_value = "RE:Page"
+        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         with LogCapture() as log_catcher:
             with ReScanner(silence=True) as bot:
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task, self.TWO2Task]
                 bot.run()
+                print(log_catcher)
                 # log_catcher.check(("Test", "INFO", 'opening task EXCE'),
                 #                   ("Test", "ERROR", 'Logging a caught exception'))

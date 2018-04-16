@@ -47,7 +47,9 @@ class ReProperty(object):
     def value(self, new_value: Union[str, bool]):
         if isinstance(new_value, type(self._default)):
             self._value = new_value
-        elif new_value in ("ON", "OFF") and isinstance(self._default, bool):
+        elif new_value in ("ON", "OFF", "") and isinstance(self._default, bool):
+            if new_value == "":
+                self._value = self._default
             self._value = self._set_bool_by_str(new_value)
         else:
             raise TypeError("Value ({}) is not the type of default value ({})"
@@ -116,7 +118,10 @@ class ReArticle(Mapping):
                             ReProperty("ÜBERSCHRIFT", False),
                             ReProperty("VERWEIS", False),
                             ReProperty("NACHTRAG", False))
-        self._init_properties(re_daten_properties)
+        try:
+            self._init_properties(re_daten_properties)
+        except (ValueError, TypeError) as init_error:
+            raise ReDatenException("Something wrong with the arguments.") from init_error
 
     @property
     def article_type(self):

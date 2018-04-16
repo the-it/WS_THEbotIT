@@ -1,12 +1,12 @@
 import re
 from abc import abstractmethod
-from datetime import datetime, timedelta
+from datetime import timedelta
 from operator import itemgetter
 from typing import List
 
 from pywikibot import Page, Site
 
-from scripts.service.ws_re.data_types import RePage
+from scripts.service.ws_re.data_types import RePage, ReDatenException
 from tools.bots import CanonicalBot, WikiLogger
 from tools.catscan import PetScan
 
@@ -106,27 +106,38 @@ class ReScanner(CanonicalBot):
         return active_tasks
 
     def task(self) -> bool:
-        # active_tasks = self._activate_tasks()
-        # lemma_list = self.compile_lemma_list()
-        self.logger.info('Start processing the lemmas.')
-
-    def old_task(self):
-        active_tasks = []
+        active_tasks = self._activate_tasks()
         lemma_list = self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
         for lemma in lemma_list:
+            self.logger.info('Process [https://de.wikisource.org/wiki/{lemma} {lemma}]'
+                             .format(lemma=lemma))
             list_of_done_tasks = []
-            page = Page(self.wiki, lemma)
-            self.logger.info('Process {}'.format(page))
+            try:
+                re_page = RePage(Page(self.wiki, lemma))
+            except ReDatenException as initial_exception:
+                self.logger.exception("The initiation of {} went wrong".format(lemma),
+                                      initial_exception)
+                continue
+            if re_page.has_changed():
+                list_of_done_tasks.append("BASE")
             for task in active_tasks:
-                if task.process_lemma(page):
-                    list_of_done_tasks.append(task.get_name())
-                    self.logger.info('Änderungen durch Task {} durchgeführt'
-                                     .format(task.get_name()))
-                    page.save('RE Scanner hat folgende Aufgaben bearbeitet: {}'
-                              .format(', '.join(list_of_done_tasks)),
-                              botflag=True)
-            self.data[lemma] = datetime.now().strftime('%Y%m%d%H%M%S')
+                with task:
+                    result = task.run(re_page)
+                    if result["success"]:
+                        if result["changed"]:
+                            list_of_done_tasks.append(task.get_name())
+                    else:
+                        if result["changed"]:
+                            raise RuntimeError("Error in {}/{}, but altered the page ... critical"
+                                               .format(task.get_name(), re_page.page.title()))
+                            # maybe roleback the data
+                        else:
+                            self.logger.error("Error in {}/{}, no data where altered."
+                                              .format(task.get_name(), re_page.page.title()))
+            if list_of_done_tasks:
+                re_page.save('ReScanner processed this taks: {}'
+                             .format(', '.join(list_of_done_tasks)))
             if self._watchdog():
                 break
         for task in self.tasks:
@@ -136,5 +147,5 @@ class ReScanner(CanonicalBot):
 
 if __name__ == "__main__":
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    with ReScanner(wiki=WS_WIKI, debug=False) as bot:
+    with ReScanner(wiki=WS_WIKI, debug=True) as bot:
         bot.run()
