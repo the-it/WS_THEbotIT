@@ -1,6 +1,6 @@
 from collections import Mapping
 from collections.abc import Sequence
-from typing import Union
+from typing import Union, Generator
 
 import pywikibot
 
@@ -12,12 +12,12 @@ class ReDatenException(Exception):
 
 
 class ReProperty(object):
-    def __init__(self, name, default):
+    def __init__(self, name: str, default: Union[str, bool]):
         self._name = name
         self._default = default
         self._value = None
 
-    def _return_by_type(self, value):
+    def _return_by_type(self, value: Union[str, bool]) -> str:
         ret = value
         if not isinstance(self._default, (bool, str)):
             raise TypeError("Default value ({}) is invalid".format(self._default))
@@ -29,14 +29,14 @@ class ReProperty(object):
         return ret
 
     @staticmethod
-    def _set_bool_by_str(on_off: str):
+    def _set_bool_by_str(on_off: str) -> bool:
         ret = False
         if on_off == "ON":
             return True
         return ret
 
     @property
-    def value(self):
+    def value(self) -> Union[str, bool]:
         if self._value:
             ret = self._value
         else:
@@ -53,7 +53,7 @@ class ReProperty(object):
             raise TypeError("Value ({}) is not the type of default value ({})".format(new_value, self._default))
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self._name
 
     def __str__(self):
@@ -150,10 +150,10 @@ class ReArticle(Mapping):
         else:
             raise ReDatenException("Property author must be a string.")
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self._properties)
 
-    def __iter__(self):
+    def __iter__(self) -> Generator[ReProperty, None, None]:
         for re_property in self._properties:
             yield re_property
 
