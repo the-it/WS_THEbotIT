@@ -2,10 +2,6 @@ environment:
   matrix:
     - PYTHON: "C:\\Python34"
       PYWIKIBOT2_NO_USER_CONFIG: "1"
-    - PYTHON: "C:\\Python35"
-      PYWIKIBOT2_NO_USER_CONFIG: "1"
-    - PYTHON: "C:\\Python36"
-      PYWIKIBOT2_NO_USER_CONFIG: "1"
     - PYTHON: "C:\\Python36-x64"
       PYWIKIBOT2_NO_USER_CONFIG: "1"
 install:
