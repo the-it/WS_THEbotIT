@@ -136,8 +136,9 @@ class ReScanner(CanonicalBot):
                             self.logger.error("Error in {}/{}, no data where altered."
                                               .format(task.get_name(), re_page.page.title()))
             if list_of_done_tasks:
-                re_page.save('ReScanner processed this taks: {}'
-                             .format(', '.join(list_of_done_tasks)))
+                if not self.debug:
+                    re_page.save('ReScanner processed this task: {}'
+                                 .format(', '.join(list_of_done_tasks)))
             if self._watchdog():
                 break
         for task in self.tasks:

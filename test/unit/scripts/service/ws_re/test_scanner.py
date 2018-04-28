@@ -119,12 +119,7 @@ class TestReScannerTask(TestCase):
 
 
 class TestReScanner(TestCase):
-    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
-    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
-    def setUp(self, text_mock, page_mock):
-        self.page_mock = page_mock
-        self.text_mock = text_mock
-        type(self.page_mock).text = self.text_mock
+    def setUp(self):
         self.petscan_patcher = patch("scripts.service.ws_re.scanner.PetScan", autospec=PetScan)
         self.petscan_mock = self.petscan_patcher.start()
         self.run_mock = mock.Mock()
@@ -214,20 +209,30 @@ class TestReScanner(TestCase):
             for item in tasks_to_run:
                 self.assertEqual(ReScannerTask, type(item).__bases__[0])
 
-    def _mock_surroundings(self):
+    def _mock_surroundings(self, lemmas, ):
         self.lemma_patcher = patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
-                                   mock.Mock(return_value=[':RE:Lemma1', ':RE:Lemma2']))
+                                   mock.Mock(return_value=lemmas))
+        self.page_patcher = patch("scripts.service.ws_re.scanner.Page", autospec=pywikibot.Page)
+        self.re_page_patcher = patch("scripts.service.ws_re.scanner.RePage", autospec=RePage)
+
+
         self.lemma_mock = self.lemma_patcher.start()
 
+        @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
+        @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text",
+                    new_callable=mock.PropertyMock)
+        def setUp(self, text_mock, page_mock):
+            type(self.page_mock).text = self.text_mock
+
     @ skip
-    def test_two_tasks_two_lemmas(self):
-        self._mock_surroundings()
-        self.page_mock.title.return_value = "RE:Page"
+    def test_one_tasks_one_lemma(self):
+        self._mock_surroundings([':RE:Lemma1'])
+        self.page_mock.title.return_value = "RE:Lemma1"
         self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         with LogCapture() as log_catcher:
-            with ReScanner(silence=True) as bot:
+            with ReScanner(silence=False) as bot:
                 log_catcher.clear()
-                bot.tasks = [self.ONE1Task, self.TWO2Task]
+                bot.tasks = [self.ONE1Task]
                 bot.run()
                 print(log_catcher)
                 # log_catcher.check(("Test", "INFO", 'opening task EXCE'),

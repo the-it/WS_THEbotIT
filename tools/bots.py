@@ -178,9 +178,11 @@ class PersistedTimestamp(object):
 class OneTimeBot(object):
     task = None
 
-    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
+    def __init__(self, wiki: Site = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
         self.success = False
-        self._silence = silence
+        self.log_to_screen = log_to_screen
+        self.log_to_wiki = log_to_wiki
         if not self.task:
             raise NotImplementedError('The class function \"task\" must be implemented!\n'
                                       'Example:\n'
@@ -191,7 +193,7 @@ class OneTimeBot(object):
         self.wiki = wiki
         self.debug = debug
         self.timeout = timedelta(days=1)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence=self._silence)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence= not self.log_to_screen)
 
     def __enter__(self):
         self.timestamp.__enter__()
@@ -204,7 +206,7 @@ class OneTimeBot(object):
         self.timestamp.__exit__(exc_type, exc_val, exc_tb)
         self.logger.info('Finish bot {} in {}.'
                          .format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
-        if not self._silence:
+        if self.log_to_wiki:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
 
