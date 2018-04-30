@@ -18,7 +18,7 @@ class TestReScannerTask(TestCase):
         self.page_mock = page_mock
         self.text_mock = text_mock
         type(self.page_mock).text = self.text_mock
-        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True)
+        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
 
     class NAMETask(ReScannerTask):
         def task(self):
@@ -33,11 +33,11 @@ class TestReScannerTask(TestCase):
             pass
 
     def test_name(self):
-        bot = self.NAMETask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True))
+        bot = self.NAMETask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAME", bot.get_name())
-        bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True))
+        bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAME", bot.get_name())
-        bot = self.NAM1Task(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), silence=True))
+        bot = self.NAM1Task(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAM1", bot.get_name())
 
     class MINITask(ReScannerTask):
@@ -147,7 +147,7 @@ class TestReScanner(TestCase):
 
     def test_search_prepare_debug(self):
         mock.patch.stopall()
-        with ReScanner(silence=True) as bot:
+        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             checker = self.SearchStringChecker(str(bot._prepare_searcher()))
             self.assertTrue(checker.is_part_of_searchstring(
                 r"https://petscan.wmflabs.org/?language=de&project=wikisource"))
@@ -157,7 +157,7 @@ class TestReScanner(TestCase):
 
     def test_search_prepare(self):
         mock.patch.stopall()
-        with ReScanner(silence=True, debug=False) as bot:
+        with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
             checker = self.SearchStringChecker(str(bot._prepare_searcher()))
             self.assertTrue(checker.is_part_of_searchstring(
                 "https://petscan.wmflabs.org/?language=de&project=wikisource"))
@@ -181,12 +181,12 @@ class TestReScanner(TestCase):
     def test_compile_lemmas_no_old_lemmas(self):
 
         self.run_mock.return_value = self.result_of_searcher
-        with ReScanner(silence=True) as bot:
+        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual([':RE:Lemma1', ':RE:Lemma2', ':RE:Lemma3'], bot.compile_lemma_list())
 
     def test_compile_lemmas_old_lemmas(self):
         self.run_mock.return_value = self.result_of_searcher
-        with ReScanner(silence=True) as bot:
+        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101232359'}):
                 self.assertEqual([':RE:Lemma2', ':RE:Lemma3', ':RE:Lemma1'], bot.compile_lemma_list())
             with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101232359',
@@ -202,7 +202,7 @@ class TestReScanner(TestCase):
             self.logger.info("II")
 
     def test_activate_tasks(self):
-        with ReScanner(silence=True) as bot:
+        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             bot.tasks = [self.ONE1Task, self.TWO2Task]
             tasks_to_run = bot._activate_tasks()
             self.assertEqual(2, len(tasks_to_run))

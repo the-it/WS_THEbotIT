@@ -5,6 +5,8 @@ import os
 from shutil import rmtree
 import time
 
+from pywikibot import Page, Site
+
 from test import *
 from tools.bots import BotExeption, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
     _DATA_PATH, _get_data_path
@@ -50,7 +52,7 @@ class TestGetDataPath(TestCase):
 class TestWikilogger(TestCase):
     def setUp(self):
         setup_data_path(self)
-        self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), silence=True)
+        self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), log_to_screen=False)
         self.logger._setup_logger_properties()
 
     def tearDown(self):
@@ -186,7 +188,7 @@ class TestOneTimeBot(TestCase):
             self.NoTaskBot()
 
     def test_basic_run(self):
-        with self.MinimalBot(silence=True) as bot:
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             bot.run()
 
     class LogBot(OneTimeBot):
@@ -196,20 +198,20 @@ class TestOneTimeBot(TestCase):
 
     @mock.patch("tools.bots.PersistedTimestamp.start_of_run", new_callable=mock.PropertyMock(return_value=datetime(2000, 1, 1)))
     def test_timestamp_return_start_time(self, mock_timestamp_start):
-        with self.MinimalBot(silence=True) as bot:
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(2000, 1, 1), bot.timestamp.start_of_run)
             bot.run()
 
     def test_timestamp_load_last_run(self):
         with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="x", ) as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
-        with self.MinimalBot(silence=True) as bot:
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(2000, 1, 1), bot.timestamp.last_run)
             self.assertTrue(bot.timestamp.success_last_run)
 
         with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="w") as persist_json:
             json.dump({"timestamp": '2000-01-01_00:00:00', "success": False}, persist_json)
-        with self.MinimalBot(silence=True) as bot:
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertFalse(bot.timestamp.success_last_run)
 
     class SuccessBot(OneTimeBot):
@@ -221,28 +223,28 @@ class TestOneTimeBot(TestCase):
             return self.success_to_return
 
     def test_timestamp_tear_down(self):
-        with self.MinimalBot(silence=True) as bot:
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             bot.run()
         with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="r") as persist_json:
             run_dict = json.load(persist_json)
             self.assertFalse(run_dict["success"])
 
-        with self.SuccessBot(success=True, silence=True) as bot:
+        with self.SuccessBot(success=True, log_to_screen=False, log_to_wiki=False) as bot:
             bot.run()
         with open(_DATA_PATH_TEST + os.sep + "SuccessBot.last_run.json", mode="r") as persist_json:
             run_dict = json.load(persist_json)
             self.assertTrue(run_dict["success"])
 
     def test_return_value_run(self):
-        with self.SuccessBot(success=True, silence=True) as bot:
+        with self.SuccessBot(success=True, log_to_screen=False, log_to_wiki=False) as bot:
             self.assertTrue(bot.run())
 
-        with self.SuccessBot(success=False, silence=True) as bot:
+        with self.SuccessBot(success=False, log_to_screen=False, log_to_wiki=False) as bot:
             self.assertFalse(bot.run())
 
     def test_logging(self):
         with LogCapture() as log_catcher:
-            with self.LogBot(silence=True) as bot:
+            with self.LogBot(log_to_screen=False, log_to_wiki=False) as bot:
                 # logging on enter
                 log_catcher.check(('LogBot', 'INFO', 'Start the bot LogBot.'))
                 log_catcher.clear()
@@ -268,19 +270,17 @@ class TestOneTimeBot(TestCase):
                         return True
                     raise Exception("watchdog must fire")  # pragma: no cover
 
-        with WatchdogBot(silence=True) as bot:
+        with WatchdogBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertTrue(bot.run())
 
     def test_send_log_to_wiki(self):
-        with self.MinimalBot(silence=True) as bot:
-            with patch.object(bot, "_silence", new_callable=mock.PropertyMock(return_value=False)):
-                with patch("tools.bots.Page") as mock_page:
-                    bot.run()
-                    bot.__exit__(None, None, None)
-                    self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
-                    self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])
-                    self.assertEqual(mock.call().save('Update of Bot MinimalBot', botflag=True),
-                                     mock_page.mock_calls[2])
+        with patch("tools.bots.Page", autospec=Page) as mock_page:
+            with self.MinimalBot(wiki=None, log_to_screen=False) as bot:
+                bot.run()
+            self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
+            self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])
+            self.assertEqual(mock.call().save('Update of Bot MinimalBot', botflag=True),
+                             mock_page.mock_calls[2])
 
     class ExceptionBot(OneTimeBot):
         def task(self):
@@ -288,7 +288,7 @@ class TestOneTimeBot(TestCase):
 
     def test_throw_exception_in_task(self):
         with LogCapture() as log_catcher:
-            with self.ExceptionBot(silence=True) as bot:
+            with self.ExceptionBot(log_to_screen=False, log_to_wiki=False) as bot:
                 log_catcher.clear()
                 bot.run()
                 log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
@@ -468,24 +468,24 @@ class TestCanonicalBot(TestCase):
     def test_basic_run(self):
         self.create_data("MinimalCanonicalBot")
         self.create_timestamp("MinimalCanonicalBot")
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             bot.run()
 
     def test_load_and_store_data(self):
         self.create_data("MinimalCanonicalBot")
         self.create_timestamp("MinimalCanonicalBot")
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertDictEqual({"a": 1}, bot.data.data)
             bot.run()
             bot.data["b"] = 2
 
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertDictEqual({"a": 1, "b": 2}, bot.data.data)
 
     def test_last_run_failure(self):
         self.create_data("MinimalCanonicalBot")
         self.create_timestamp("MinimalCanonicalBot", success=False)
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertDictEqual({}, bot.data.data)
 
     class DataOutdatedBot(CanonicalBot):
@@ -500,7 +500,7 @@ class TestCanonicalBot(TestCase):
         self.create_data("DataOutdatedBot")
         self.create_timestamp("DataOutdatedBot")
         with LogCapture() as log_catcher:
-            with self.DataOutdatedBot(silence=True) as bot:
+            with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
                 log_catcher.check(('DataOutdatedBot', 'INFO', 'Start the bot DataOutdatedBot.'),
                                   ("DataOutdatedBot", "WARNING", "The data is thrown away. It is out of date"))
                 self.assertDictEqual({}, bot.data.data)
@@ -515,7 +515,7 @@ class TestCanonicalBot(TestCase):
         self.create_timestamp("DataThrowException")
         with LogCapture() as log_catcher:
             with patch("tools.bots.PersistedData.dump") as mock_dump:
-                with self.DataThrowException(silence=True) as bot:
+                with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
                     log_catcher.clear()
                     bot.run()
                 mock_dump.assert_called_once_with(success=False)
@@ -527,48 +527,48 @@ class TestCanonicalBot(TestCase):
     def test_set_timestamp_for_searcher(self):
         self.create_timestamp("MinimalCanonicalBot")
         self.create_data("MinimalCanonicalBot")
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(1999, 12, 31), bot.create_timestamp_for_search(1))
 
     def test_set_timestamp_for_searcher_no_successful_run(self):
         self.create_timestamp("MinimalCanonicalBot", success=False)
         self.create_data("MinimalCanonicalBot")
         with patch("tools.bots.PersistedTimestamp.start_of_run", mock.PropertyMock(return_value=datetime(2001, 1, 1))):
-            with self.MinimalCanonicalBot(silence=True) as bot:
+            with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
                 self.assertEqual(datetime(2001, 1, 1)-timedelta(days=10), bot.create_timestamp_for_search(10))
 
     def test_last_run_successful_true(self):
         self.create_timestamp("MinimalCanonicalBot", success=True)
         self.create_data("MinimalCanonicalBot")
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertTrue(bot.last_run_successful)
 
     def test_last_run_successful_false_1(self):
         self.create_timestamp("MinimalCanonicalBot", success=False)
         self.create_data("MinimalCanonicalBot")
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertFalse(bot.last_run_successful)
 
     def test_last_run_successful_false_2(self):
-        with self.MinimalCanonicalBot(silence=True) as bot:
+        with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertFalse(bot.last_run_successful)
 
     def test_data_outdated(self):
         self.create_timestamp("DataOutdatedBot", date=datetime(2000, 12, 31))
         self.create_data("DataOutdatedBot")
-        with self.DataOutdatedBot(silence=True) as bot:
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertIsNone(bot.timestamp.last_run)  # indicator for a successful run of the data_outdated function
             self.assertDictEqual({}, bot.data.data)
 
     def test_data_outdated_not_outdated_1(self):
         self.create_timestamp("DataOutdatedBot", date=datetime(2001, 12, 31))
         self.create_data("DataOutdatedBot")
-        with self.DataOutdatedBot(silence=True) as bot:
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(2001, 12, 31), bot.timestamp.last_run)
             self.assertDictEqual({"a": 1}, bot.data.data)
 
     def test_data_outdated_not_outdated_2(self):
         self.create_data("DataOutdatedBot")
-        with self.DataOutdatedBot(silence=True) as bot:
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertIsNone(bot.timestamp.last_run)
             self.assertDictEqual({}, bot.data.data)

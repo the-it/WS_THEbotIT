@@ -63,8 +63,9 @@ class ReScannerTask(object):
 
 
 class ReScanner(CanonicalBot):
-    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
-        CanonicalBot.__init__(self, wiki, debug, silence)
+    def __init__(self, wiki: Site = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
+        CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(seconds=60)
         self.tasks = []  # type: List[type(ReScannerTask)]
         if self.debug:

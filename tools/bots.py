@@ -26,13 +26,13 @@ class WikiLogger(object):
     _logger_date_format = "%H:%M:%S"
     _wiki_timestamp_format = '%d.%m.%y um %H:%M:%S'
 
-    def __init__(self, bot_name: str, start_time: datetime, silence=False):
+    def __init__(self, bot_name: str, start_time: datetime, log_to_screen=True):
         self._bot_name = bot_name
         self._start_time = start_time
         self._data_path = _get_data_path()
         self._logger = logging.getLogger(self._bot_name)
         self._logger_names = self._get_logger_names()
-        self._silence = silence
+        self._log_to_screen = log_to_screen
 
     def __enter__(self):
         self._setup_logger_properties()
@@ -71,7 +71,7 @@ class WikiLogger(object):
         debug_log.setFormatter(formatter)
         self._logger.addHandler(error_log)
         self._logger.addHandler(debug_log)
-        if not self._silence:
+        if self._log_to_screen:
             # this activates the output of the logger
             debug_stream = logging.StreamHandler(sys.stdout)  # pragma: no cover
             debug_stream.setLevel(logging.DEBUG)  # pragma: no cover
@@ -193,7 +193,8 @@ class OneTimeBot(object):
         self.wiki = wiki
         self.debug = debug
         self.timeout = timedelta(days=1)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence= not self.log_to_screen)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run,
+                                 log_to_screen=self.log_to_screen)
 
     def __enter__(self):
         self.timestamp.__enter__()
@@ -293,8 +294,9 @@ class PersistedData(Mapping):
 
 
 class CanonicalBot(OneTimeBot):
-    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
-        OneTimeBot.__init__(self, wiki, debug, silence)
+    def __init__(self, wiki: Site = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
+        OneTimeBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.data = PersistedData(bot_name=self.bot_name)
         self.new_data_model = datetime.min
 
