@@ -43,5 +43,5 @@ class HilbertTimer(OneTimeBot):
 
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    with HilbertTimer(wiki=WS_WIKI, debug=False, silence=True) as bot:
+    with HilbertTimer(wiki=WS_WIKI, debug=False, log_to_screen=False, log_to_wiki=False) as bot:
         bot.run()

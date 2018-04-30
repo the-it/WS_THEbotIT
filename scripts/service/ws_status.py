@@ -19,7 +19,8 @@ class RowBasic():
     def build_row(self):
         raise BotExeption("Class {} should implement the method build_row()".format(self))
 
-    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list = None, union=False):
+    def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list = None,
+                         union=False):
         # pylint: disable=too-many-arguments
         searcher = PetScan()
         for cat in list_of_cat:
@@ -58,12 +59,14 @@ class RowSeitenstatistik(RowBasic):
         self.logger.info('Searchstrings for genre')
         list_sites_stats = list()
         list_sites_stats.append(self.get_all_sites())
-        list_sites_stats.append(self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert',
-                                                       'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
-                                                      namespace='Seite', union=True))
-        list_sites_stats.append(self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert',
-                                                       'Unvollständig', 'Teilkorrigiert', 'Sofort fertig'],
-                                                      namespace='Article', union=True))
+        list_sites_stats.append(
+            self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig',
+                                   'Teilkorrigiert', 'Sofort fertig'],
+                                  namespace='Seite', union=True))
+        list_sites_stats.append(
+            self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig',
+                                   'Teilkorrigiert', 'Sofort fertig'],
+                                  namespace='Article', union=True))
         list_sites_stats.append(self.get_sites_in_cat(['Werke']))
         list_sites_stats.append(self.get_sites_in_cat(['Zeitschriftenartikel']))
         list_sites_stats.append(self.get_sites_in_cat(['Gedicht'], depth=4))
@@ -79,9 +82,12 @@ class RowSeitenstatistik(RowBasic):
         list_sites_stats.append(self.get_sites_in_cat(['Drama'], depth=1))
         list_sites_stats.append(self.get_sites_in_cat(['Roman'], depth=1))
         list_sites_stats.append(self.get_sites_in_cat(['Reisebericht'], depth=0))
-        list_sites_stats.append(self.get_sites_in_cat([], any_template=['Themendaten', 'Ortsdaten']))
-        list_sites_stats.append(self.get_sites_in_cat(['Autoren'], namespace='Article', any_template=['Personendaten']))
-        return '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) + ' || '.join(list_sites_stats)
+        list_sites_stats.append(
+            self.get_sites_in_cat([], any_template=['Themendaten', 'Ortsdaten']))
+        list_sites_stats.append(
+            self.get_sites_in_cat(['Autoren'], namespace='Article', any_template=['Personendaten']))
+        return '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) +\
+               ' || '.join(list_sites_stats)
 
     def get_all_sites(self):
         dummypage = Page(self.wiki, 'Benutzer:THEbotIT/dummy')
@@ -99,11 +105,13 @@ class RowBearbeitungsstand(RowBasic):
         # Werke
         counter_werke = self.get_sites_in_cat(['Werke'])
         list_sites_stats.append(counter_werke)
-        for cat in [['Fertig'], ['Korrigiert'], ['Teilkorrigiert'], ['Unkorrigiert'], ['Unvollständig']]:
+        for cat in [['Fertig'], ['Korrigiert'], ['Teilkorrigiert'],
+                    ['Unkorrigiert'], ['Unvollständig']]:
             counter_werke_sub = self.get_sites_in_cat(['Werke'] + cat)
             list_sites_stats.append(counter_werke_sub)
             list_sites_stats.append(self.make_percent(counter_werke_sub, counter_werke))
-        counter_werke_sub = int(self.get_sites_in_cat(['Werke', 'Korrekturprobleme']).replace('.', ''))
+        counter_werke_sub = \
+            int(self.get_sites_in_cat(['Werke', 'Korrekturprobleme']).replace('.', ''))
         counter_werke_sub += int(self.get_sites_in_cat(['Werke', 'Scanfehler']).replace('.', ''))
         counter_werke_sub += int(self.get_sites_in_cat(['Werke', 'Ohne Quelle']).replace('.', ''))
         list_sites_stats.append('{0:,}'.format(counter_werke_sub).replace(',', '.'))
@@ -118,7 +126,8 @@ class RowBearbeitungsstand(RowBasic):
             list_sites_stats.append(counter_site_sub)
             list_sites_stats.append(self.make_percent(str(counter_site_sub), all_sites))
 
-        return '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) + ' || '.join(list_sites_stats)
+        return \
+            '|-\n| {} || '.format(self.today.strftime('%Y-%m-%d')) + ' || '.join(list_sites_stats)
 
     @staticmethod
     def make_percent(counter: str, denominator: str):
@@ -145,7 +154,8 @@ class WsStatus(CanonicalBot):
         return True
 
     def new_row(self, row, placeholder):
-        self.text = re.sub('<!--BOT:{}-->'.format(placeholder), '<!--BOT:{}-->\n{}'.format(placeholder, row), self.text)
+        self.text = re.sub('<!--BOT:{}-->'.format(placeholder), '<!--BOT:{}-->\n{}'
+                           .format(placeholder, row), self.text)
 
     def load_text_from_site(self, lemma):
         self.logger.info('Load text from {}'.format(lemma))

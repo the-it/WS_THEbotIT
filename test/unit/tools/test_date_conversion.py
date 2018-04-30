@@ -8,5 +8,6 @@ class TestDateConversion(TestCase):
     def test_data_provider(self, value):
         for item in value:
             converter = DateConversion(item[0])
-            self.assertEqual(item[1], str(converter), "\"{}\" should convert to \"{}\"".format(item[0], item[1]))
+            self.assertEqual(item[1], str(converter),
+                             "\"{}\" should convert to \"{}\"".format(item[0], item[1]))
             del converter

@@ -26,13 +26,13 @@ class WikiLogger(object):
     _logger_date_format = "%H:%M:%S"
     _wiki_timestamp_format = '%d.%m.%y um %H:%M:%S'
 
-    def __init__(self, bot_name: str, start_time: datetime, silence=False):
+    def __init__(self, bot_name: str, start_time: datetime, log_to_screen=True):
         self._bot_name = bot_name
         self._start_time = start_time
         self._data_path = _get_data_path()
         self._logger = logging.getLogger(self._bot_name)
         self._logger_names = self._get_logger_names()
-        self._silence = silence
+        self._log_to_screen = log_to_screen
 
     def __enter__(self):
         self._setup_logger_properties()
@@ -60,16 +60,18 @@ class WikiLogger(object):
 
     def _setup_logger_properties(self):
         self._logger.setLevel(logging.DEBUG)
-        error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['info'], encoding='utf8')
+        error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['info'],
+                                        encoding='utf8')
         error_log.setLevel(logging.INFO)
-        debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['debug'], encoding='utf8')
+        debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['debug'],
+                                        encoding='utf8')
         debug_log.setLevel(logging.DEBUG)
         formatter = logging.Formatter(self._logger_format, datefmt=self._logger_date_format)
         error_log.setFormatter(formatter)
         debug_log.setFormatter(formatter)
         self._logger.addHandler(error_log)
         self._logger.addHandler(debug_log)
-        if not self._silence:
+        if self._log_to_screen:
             # this activates the output of the logger
             debug_stream = logging.StreamHandler(sys.stdout)  # pragma: no cover
             debug_stream.setLevel(logging.DEBUG)  # pragma: no cover
@@ -95,7 +97,8 @@ class WikiLogger(object):
         self._logger.exception(msg=msg, exc_info=exc_info)
 
     def create_wiki_log_lines(self):
-        with open(self._data_path + os.sep + self._logger_names['info'], encoding='utf8') as filepointer:
+        with open(self._data_path + os.sep + self._logger_names['info'], encoding='utf8') \
+                as filepointer:
             line_list = list()
             for line in filepointer:
                 line_list.append(line.strip())
@@ -139,7 +142,8 @@ class PersistedTimestamp(object):
 
     def tear_down(self):
         with open(self._full_filename, mode="w") as persist_json:
-            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": self.success_this_run},
+            json.dump({"timestamp": self._start.strftime(self._timeformat),
+                       "success": self.success_this_run},
                       persist_json)
 
     @property
@@ -174,9 +178,11 @@ class PersistedTimestamp(object):
 class OneTimeBot(object):
     task = None
 
-    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
+    def __init__(self, wiki: Site = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
         self.success = False
-        self._silence = silence
+        self.log_to_screen = log_to_screen
+        self.log_to_wiki = log_to_wiki
         if not self.task:
             raise NotImplementedError('The class function \"task\" must be implemented!\n'
                                       'Example:\n'
@@ -187,7 +193,8 @@ class OneTimeBot(object):
         self.wiki = wiki
         self.debug = debug
         self.timeout = timedelta(days=1)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run, silence=self._silence)
+        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run,
+                                 log_to_screen=self.log_to_screen)
 
     def __enter__(self):
         self.timestamp.__enter__()
@@ -198,8 +205,9 @@ class OneTimeBot(object):
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.timestamp.success_this_run = self.success
         self.timestamp.__exit__(exc_type, exc_val, exc_tb)
-        self.logger.info('Finish bot {} in {}.'.format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
-        if not self._silence:
+        self.logger.info('Finish bot {} in {}.'
+                         .format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
+        if self.log_to_wiki:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
 
@@ -279,15 +287,16 @@ class PersistedData(Mapping):
                 self.data = json.load(json_file)
             os.rename(self.file_name, self.file_name + ".deprecated")
         else:
-            raise BotExeption("Not data to load.")
+            raise BotExeption("No data to load.")
 
     def update(self, dict_to_update: dict):
         self.data.update(dict_to_update)
 
 
 class CanonicalBot(OneTimeBot):
-    def __init__(self, wiki: Site = None, debug: bool = True, silence: bool = False):
-        OneTimeBot.__init__(self, wiki, debug, silence)
+    def __init__(self, wiki: Site = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
+        OneTimeBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.data = PersistedData(bot_name=self.bot_name)
         self.new_data_model = datetime.min
 
@@ -319,7 +328,7 @@ class CanonicalBot(OneTimeBot):
             start_of_search = self.timestamp.start_of_run - timedelta(days=days_in_past)
         return start_of_search
 
-    def data_outdated(self):
+    def data_outdated(self) -> bool:
         outdated = False
         if self.new_data_model and self.timestamp.last_run:
             if self.timestamp.last_run < self.new_data_model:
