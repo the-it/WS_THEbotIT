@@ -275,7 +275,6 @@ class RePage(Sequence):
         self.page = wiki_page
         self.pre_text = self.page.text
         self._article_list = list()
-
         self._init_page_dict()
 
     def _init_page_dict(self):

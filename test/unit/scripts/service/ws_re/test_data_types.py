@@ -133,6 +133,10 @@ class TestReArticle(TestCase):
         self.assertEqual(str(article["BAND"]), "I 1")
         self.assertEqual(str(article["NACHTRAG"]), "ON")
 
+    def test_properties_exception(self):
+        with self.assertRaises(ReDatenException):
+            ReArticle(re_daten_properties={"BAND": 1})
+
     def test_simple_article(self):
         article_text = "{{REDaten}}text{{REAutor|Autor.}}"
         article = ReArticle.from_text(article_text)

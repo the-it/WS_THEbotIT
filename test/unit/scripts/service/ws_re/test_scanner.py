@@ -1,11 +1,11 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import pywikibot
 
 from scripts.service.ws_re.scanner import ReScannerTask, ReScanner
 from tools.bots import WikiLogger
 from tools.catscan import PetScan
-from scripts.service.ws_re.data_types import RePage
+from scripts.service.ws_re.data_types import RePage, ReDatenException
 from test import *
 from test.unit.tools.test_bots import setup_data_path, teardown_data_path
 
@@ -49,7 +49,7 @@ class TestReScannerTask(TestCase):
             task = self.MINITask(None, self.logger)
             log_catcher.check(("Test", "INFO", 'opening task MINI'))
             log_catcher.clear()
-            del task
+            task.finish_task()
             log_catcher.check(("Test", "INFO", "closing task MINI"))
 
     def test_process_task(self):
@@ -209,31 +209,162 @@ class TestReScanner(TestCase):
             for item in tasks_to_run:
                 self.assertEqual(ReScannerTask, type(item).__bases__[0])
 
-    def _mock_surroundings(self, lemmas, ):
-        self.lemma_patcher = patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
-                                   mock.Mock(return_value=lemmas))
-        self.page_patcher = patch("scripts.service.ws_re.scanner.Page", autospec=pywikibot.Page)
-        self.re_page_patcher = patch("scripts.service.ws_re.scanner.RePage", autospec=RePage)
+    def _mock_surroundings(self):
+        lemma_patcher = patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
+                                   mock.Mock())
+        page_patcher = patch("scripts.service.ws_re.scanner.Page", autospec=pywikibot.Page)
+        re_page_patcher = patch("scripts.service.ws_re.scanner.RePage", autospec=RePage)
+        self.lemma_mock = lemma_patcher.start()
+        self.page_mock = page_patcher.start()
+        self.re_page_mock = re_page_patcher.start()
 
+    def _mock_task(self):
+        task_patcher = patch("scripts.service.ws_re.scanner.ReScannerTask.run",
+                             autospec=ReScannerTask.run)
+        self.task_mock = task_patcher.start()
 
-        self.lemma_mock = self.lemma_patcher.start()
-
-        @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
-        @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text",
-                    new_callable=mock.PropertyMock)
-        def setUp(self, text_mock, page_mock):
-            type(self.page_mock).text = self.text_mock
-
-    @ skip
     def test_one_tasks_one_lemma(self):
-        self._mock_surroundings([':RE:Lemma1'])
-        self.page_mock.title.return_value = "RE:Lemma1"
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1']
         with LogCapture() as log_catcher:
-            with ReScanner(silence=False) as bot:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                print(log_catcher)
-                # log_catcher.check(("Test", "INFO", 'opening task EXCE'),
-                #                   ("Test", "ERROR", 'Logging a caught exception'))
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "INFO", 'I'),
+                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
+
+    def test_two_tasks_one_lemma(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task, self.TWO2Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'opening task TWO2'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "INFO", 'I'),
+                                  ("ReScanner", "INFO", 'II'),
+                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'),
+                                  ("ReScanner", "INFO", 'closing task TWO2'))
+
+    def test_lemma_raise_exception(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        self.re_page_mock.side_effect = ReDatenException
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
+
+    def test_lemma_raise_exception_second_not(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1', ':RE:Lemma2']
+        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT]
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]'),
+                                  ("ReScanner", "INFO", 'I'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
+
+    def test_re_page_return_success_nothing_changed(self):
+        self._mock_surroundings()
+        self._mock_task()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        self.task_mock.return_value = {"success": True, "changed": False}
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
+
+    def test_re_page_return_success_text_changed(self):
+        self._mock_surroundings()
+        self._mock_task()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        self.task_mock.return_value = {"success": True, "changed": True}
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE, ONE1'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
+
+    def test_re_page_return_no_success_nothing_changed(self):
+        self._mock_surroundings()
+        self._mock_task()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        self.task_mock.return_value = {"success": False, "changed": False}
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "ERROR", 'Error in ONE1/:RE:Lemma1, no data where altered.'),
+                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
+
+    def test_re_page_return_no_success_but_text_has_changed(self):
+        self._mock_surroundings()
+        self._mock_task()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        self.task_mock.return_value = {"success": False, "changed": True}
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "CRITICAL", 'Error in ONE1/:RE:Lemma1, but altered the page ... critical'),
+                                  ("ReScanner", "ERROR", 'Logging an uncaught exception'))
+
+    def test_watchdog(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1', ':RE:Lemma2']
+        with mock.patch("scripts.service.ws_re.scanner.ReScanner._watchdog", mock.Mock(return_value=True)):
+            with LogCapture() as log_catcher:
+                with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                    log_catcher.clear()
+                    bot.tasks = [self.ONE1Task]
+                    bot.run()
+                    log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                      ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                      ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                      ('ReScanner', 'INFO', 'I'),
+                                      ('ReScanner', 'INFO','ReScanner processed this task: BASE'),
+                                      ('ReScanner', 'INFO', 'closing task ONE1'))

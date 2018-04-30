@@ -25,9 +25,6 @@ class ReScannerTask(object):
         self.result = {SUCCESS: False, CHANGED: False}
         self.processed_pages = []
 
-    def __del__(self):
-        self.finish_task()
-
     def __enter__(self):
         return self
 
@@ -130,24 +127,27 @@ class ReScanner(CanonicalBot):
                             list_of_done_tasks.append(task.get_name())
                     else:
                         if result["changed"]:
-                            raise RuntimeError("Error in {}/{}, but altered the page ... critical"
-                                               .format(task.get_name(), re_page.page.title()))
-                            # maybe roleback the data
+                            error_message = "Error in {}/{}, but altered the page ... critical"\
+                                .format(task.get_name(), lemma)
+                            self.logger.critical(error_message)
+                            raise RuntimeError(error_message)
                         else:
                             self.logger.error("Error in {}/{}, no data where altered."
-                                              .format(task.get_name(), re_page.page.title()))
+                                              .format(task.get_name(), lemma))
             if list_of_done_tasks:
                 if not self.debug:
-                    re_page.save('ReScanner processed this task: {}'
-                                 .format(', '.join(list_of_done_tasks)))
+                    save_message = 'ReScanner processed this task: {}'\
+                        .format(', '.join(list_of_done_tasks))
+                    self.logger.info(save_message)
+                    re_page.save(save_message)
             if self._watchdog():
                 break
-        for task in self.tasks:
-            del task
+        for task in active_tasks:
+            task.finish_task()
         return True
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
     with ReScanner(wiki=WS_WIKI, debug=True) as bot:
         bot.run()
