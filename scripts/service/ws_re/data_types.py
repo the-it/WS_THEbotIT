@@ -31,7 +31,7 @@ class ReProperty(object):
     @staticmethod
     def _set_bool_by_str(on_off: str) -> bool:
         ret = False
-        if on_off == "ON":
+        if on_off in ("ON", "on"):
             return True
         return ret
 
@@ -47,7 +47,7 @@ class ReProperty(object):
     def value(self, new_value: Union[str, bool]):
         if isinstance(new_value, type(self._default)):
             self._value = new_value
-        elif new_value in ("ON", "OFF", "") and isinstance(self._default, bool):
+        elif new_value in ("ON", "OFF", "", "on", "off") and isinstance(self._default, bool):
             if new_value == "":
                 self._value = self._default
             self._value = self._set_bool_by_str(new_value)
@@ -85,7 +85,7 @@ class ReArticle(Mapping):
         "XS": "EXTSCAN_START",
         "XE": "EXTSCAN_END",
         "GND": "GND",
-        "SCH": "KEINE_SCHÖPFUNGSHÖHE",
+        "KSCH": "KEINE_SCHÖPFUNGSHÖHE",
         "TJ": "TODESJAHR",
         "ÜB": "ÜBERSCHRIFT",
         "VW": "VERWEIS",
@@ -325,7 +325,10 @@ class RePage(Sequence):
     def save(self, reason: str):
         if self.has_changed():
             self.page.text = str(self)
-            self.page.save(summary=reason, botflag=True)
+            try:
+                self.page.save(summary=reason, botflag=True)
+            except pywikibot.exceptions.LockedPage:
+                raise ReDatenException("Page is locked, it can't be saved.")
 
     def append(self, new_article: ReArticle):
         if isinstance(new_article, ReArticle):

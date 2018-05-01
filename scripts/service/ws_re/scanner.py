@@ -24,6 +24,7 @@ class ReScannerTask(object):
         self.load_task()
         self.result = {SUCCESS: False, CHANGED: False}
         self.processed_pages = []
+        self.timeout = timedelta(minutes=1)
 
     def __enter__(self):
         return self
@@ -103,6 +104,16 @@ class ReScanner(CanonicalBot):
             active_tasks.append(task(wiki=self.wiki, debug=self.debug, logger=self.logger))
         return active_tasks
 
+    def _save_re_page(self, re_page: RePage, list_of_done_tasks: list):
+        if not self.debug:
+            save_message = 'ReScanner processed this task: {}' \
+                .format(', '.join(list_of_done_tasks))
+            self.logger.info(save_message)
+            try:
+                re_page.save(save_message)
+            except ReDatenException:
+                self.logger.error("RePage can't be saved.")
+
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
         lemma_list = self.compile_lemma_list()
@@ -135,11 +146,7 @@ class ReScanner(CanonicalBot):
                             self.logger.error("Error in {}/{}, no data where altered."
                                               .format(task.get_name(), lemma))
             if list_of_done_tasks:
-                if not self.debug:
-                    save_message = 'ReScanner processed this task: {}'\
-                        .format(', '.join(list_of_done_tasks))
-                    self.logger.info(save_message)
-                    re_page.save(save_message)
+                self._save_re_page(re_page, list_of_done_tasks)
             if self._watchdog():
                 break
         for task in active_tasks:
@@ -149,5 +156,5 @@ class ReScanner(CanonicalBot):
 
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    with ReScanner(wiki=WS_WIKI, debug=True) as bot:
+    with ReScanner(wiki=WS_WIKI, debug=False) as bot:
         bot.run()

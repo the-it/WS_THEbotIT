@@ -57,6 +57,10 @@ class TestReProperty(TestCase):
         re_property.value = ""
         self.assertFalse(re_property.value)
 
+    def test_set_bool_bug_non_capitalized(self):
+        re_property = ReProperty(name="Test", default=False)
+        re_property.value = "on"
+
     def test_hash(self):
         re_property = ReProperty(name="Test", default=False)
         pre_hash = hash(re_property)
@@ -165,7 +169,7 @@ class TestReArticle(TestCase):
 
     def test_from_text_short_keywords(self):
         article_text = "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB" \
-                       "|XS={{START}}|XE={{END}}|GND=1234|SCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
+                       "|XS={{START}}|XE={{END}}|GND=1234|KSCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
                        "\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
         self.assertEqual("I", article["BAND"].value)
@@ -277,6 +281,50 @@ text
         pre_hash = hash(self.article)
         self.article["SPALTE_START"].value = "1000"
         self.assertNotEqual(pre_hash, hash(self.article))
+
+    def test_bug_1(self):
+        test_string = """{{REDaten
+|BAND=IV,1
+|SPALTE_START=610
+|SPALTE_END=OFF
+|VORGÄNGER=Cominius 23
+|NACHFOLGER=Cominius 25
+|SORTIERUNG=
+|KORREKTURSTAND=Platzhalter
+|KSCH=OFF
+|TJ=1950
+|WIKIPEDIA=
+|WIKISOURCE=
+|EXTSCAN_START={{REIA|IV,1|607}}
+|EXTSCAN_END=
+|VW=
+}} 
+'''24)''' ''L. Cominius Vipsanius Salutaris, domo Roma, subproc(urator) ludi magni, proc(urator) alimentor(um) per Apuliam Calabriam Lucaniam Bruttios, proc. prov(inciae) Sicil(iae), proc. capiend(orum) vec(tigalium) (?), proc. prov. Baet(icae), a cognitionib(us) domini n(ostri) Imp(eratoris) etc. etc. <!-- L. Septimi Severi Pertinac(is) Augusti, p(erfectissimus) v(ir), optimus vir et integrissimus'', CIL II 1085 = [[Hermann Dessau|{{SperrSchrift|Dessau}}]] 1406 (Ilipa); die Ehrung durch einen Untergebenen in der Baetica erfolgte bei seinem Abgang aus der Provinz, als er zu den Cognitiones des Kaisers berufen wurde. Die ''Cominia L. fil. Vipsania Dignitas c(larissima)f(emina)'', CIL IX 2336, könnte seine Tochter sein. -->
+
+{{REAutor|Stein.}}"""
+        ReArticle.from_text(test_string)
+
+    def test_bug_2(self):
+        test_string = """{{REDaten
+|BAND=XIV,1
+|SPALTE_START=46
+|SPALTE_END=
+|VORGÄNGER=Lysippe 7
+|NACHFOLGER=Lysippos 2
+|SORTIERUNG=
+|KORREKTURSTAND=unkorrigiert
+|KSCH=on
+|TJ=1962
+|WIKIPEDIA=
+|WIKISOURCE=
+|EXTSCAN_START={{REWL|XIV,1|45}}
+|EXTSCAN_END=
+|GND=
+}}
+'''Lysippos. 1)''' Spartaner, führt unter König Agis und als sein Nachfolger Truppen gegen Elis (400/399): Xen. hell. IH 2 29f.
+{{REAutor|Kahrstedt.}}"""
+        ReArticle.from_text(test_string)
+
 
 
 class TestRePage(TestCase):
