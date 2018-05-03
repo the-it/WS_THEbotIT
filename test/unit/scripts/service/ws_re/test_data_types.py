@@ -326,7 +326,6 @@ text
         ReArticle.from_text(test_string)
 
 
-
 class TestRePage(TestCase):
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text",
@@ -472,3 +471,16 @@ class TestRePage(TestCase):
         self.text_mock.return_value = article_template
         re_page = RePage(self.page_mock)
         self.assertFalse(re_page.has_changed())
+
+    def test_page_is_locked(self):
+        self.text_mock.return_value = article_template
+
+        def side_effect(summary, botflag):
+            raise pywikibot.exceptions.LockedPage(self.page_mock)
+        self.page_mock.save.side_effect = side_effect
+        re_page = RePage(self.page_mock)
+        re_page[0].text = "bla"
+        with self.assertRaises(ReDatenException):
+            re_page.save("reason")
+
+

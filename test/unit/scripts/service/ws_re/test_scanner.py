@@ -214,6 +214,7 @@ class TestReScanner(TestCase):
                                    mock.Mock())
         page_patcher = patch("scripts.service.ws_re.scanner.Page", autospec=pywikibot.Page)
         re_page_patcher = patch("scripts.service.ws_re.scanner.RePage", autospec=RePage)
+        self.save_patcher = patch("scripts.service.ws_re.scanner.RePage.save", mock.Mock(side_effect=ReDatenException))
         self.lemma_mock = lemma_patcher.start()
         self.page_mock = page_patcher.start()
         self.re_page_mock = re_page_patcher.start()
@@ -368,3 +369,20 @@ class TestReScanner(TestCase):
                                       ('ReScanner', 'INFO', 'I'),
                                       ('ReScanner', 'INFO','ReScanner processed this task: BASE'),
                                       ('ReScanner', 'INFO', 'closing task ONE1'))
+
+    def test_save_going_wrong(self):
+        self._mock_surroundings()
+        type(self.re_page_mock).save = self.save_patcher.start()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "INFO", 'I'),
+                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "ERROR", 'RePage can\'t be saved.'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
