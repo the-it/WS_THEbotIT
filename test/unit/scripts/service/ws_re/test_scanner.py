@@ -1,4 +1,7 @@
 from datetime import datetime, timedelta
+import time
+import json
+import os
 
 import pywikibot
 
@@ -368,3 +371,56 @@ class TestReScanner(TestCase):
                                       ('ReScanner', 'INFO', 'I'),
                                       ('ReScanner', 'INFO','ReScanner processed this task: BASE'),
                                       ('ReScanner', 'INFO', 'closing task ONE1'))
+
+    @skip("I quit this task for the moment")
+    def test_save_going_wrong(self):
+        self._mock_surroundings()
+        def side_effect(*args, **kwargs):
+            raise ReDatenException
+        save_mock = mock.patch("scripts.service.ws_re.scanner.RePage.save",
+                    new_callable=mock.Mock()).start()
+        type(self.re_page_mock).save = save_mock.start()
+        save_mock.side_effect=side_effect
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.clear()
+                bot.tasks = [self.ONE1Task]
+                bot.run()
+                log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
+                                  ("ReScanner", "INFO", 'Start processing the lemmas.'),
+                                  ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
+                                  ("ReScanner", "INFO", 'I'),
+                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "ERROR", 'RePage can\'t be saved.'),
+                                  ("ReScanner", "INFO", 'closing task ONE1'))
+
+    class WAITTask(ReScannerTask):
+        def task(self):
+            time.sleep(0.4)
+
+    def test_lemma_processed_are_saved(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1', ':RE:Lemma2']
+        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
+        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
+            bot.tasks = [self.WAITTask]
+            bot.run()
+            bot.__exit__(None, None, None)
+            with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+                data = json.load(data_file)
+                self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
+                                 data)
+                self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                                     datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+            self.lemma_mock.return_value = [':RE:Lemma3', ':RE:Lemma4']
+            bot.__enter__()
+            bot.run()
+            bot.__exit__(None, None, None)
+            with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+                data = json.load(data_file)
+                self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
+                                  ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
+                                 data)
+                self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                                datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))

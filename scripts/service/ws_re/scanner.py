@@ -1,6 +1,6 @@
 import re
 from abc import abstractmethod
-from datetime import timedelta
+from datetime import timedelta, datetime
 from operator import itemgetter
 from typing import List
 
@@ -24,6 +24,7 @@ class ReScannerTask(object):
         self.load_task()
         self.result = {SUCCESS: False, CHANGED: False}
         self.processed_pages = []
+        self.timeout = timedelta(minutes=1)
 
     def __enter__(self):
         return self
@@ -103,6 +104,19 @@ class ReScanner(CanonicalBot):
             active_tasks.append(task(wiki=self.wiki, debug=self.debug, logger=self.logger))
         return active_tasks
 
+    def _save_re_page(self, re_page: RePage, list_of_done_tasks: list):
+        if not self.debug:
+            save_message = 'ReScanner processed this task: {}' \
+                .format(', '.join(list_of_done_tasks))
+            self.logger.info(save_message)
+            try:
+                re_page.save(save_message)
+            except ReDatenException:
+                self.logger.error("RePage can't be saved.")
+
+    def _add_lemma_to_data(self, lemma):
+        self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
+
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
         lemma_list = self.compile_lemma_list()
@@ -116,6 +130,7 @@ class ReScanner(CanonicalBot):
             except ReDatenException as initial_exception:
                 self.logger.exception("The initiation of {} went wrong".format(lemma),
                                       initial_exception)
+                self._add_lemma_to_data(lemma)
                 continue
             if re_page.has_changed():
                 list_of_done_tasks.append("BASE")
@@ -135,11 +150,8 @@ class ReScanner(CanonicalBot):
                             self.logger.error("Error in {}/{}, no data where altered."
                                               .format(task.get_name(), lemma))
             if list_of_done_tasks:
-                if not self.debug:
-                    save_message = 'ReScanner processed this task: {}'\
-                        .format(', '.join(list_of_done_tasks))
-                    self.logger.info(save_message)
-                    re_page.save(save_message)
+                self._save_re_page(re_page, list_of_done_tasks)
+            self._add_lemma_to_data(lemma)
             if self._watchdog():
                 break
         for task in active_tasks:
