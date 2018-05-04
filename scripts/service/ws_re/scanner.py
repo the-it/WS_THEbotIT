@@ -1,6 +1,6 @@
 import re
 from abc import abstractmethod
-from datetime import timedelta
+from datetime import timedelta, datetime
 from operator import itemgetter
 from typing import List
 
@@ -114,6 +114,9 @@ class ReScanner(CanonicalBot):
             except ReDatenException:
                 self.logger.error("RePage can't be saved.")
 
+    def _add_lemma_to_data(self, lemma):
+        self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
+
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
         lemma_list = self.compile_lemma_list()
@@ -127,6 +130,7 @@ class ReScanner(CanonicalBot):
             except ReDatenException as initial_exception:
                 self.logger.exception("The initiation of {} went wrong".format(lemma),
                                       initial_exception)
+                self._add_lemma_to_data(lemma)
                 continue
             if re_page.has_changed():
                 list_of_done_tasks.append("BASE")
@@ -147,6 +151,7 @@ class ReScanner(CanonicalBot):
                                               .format(task.get_name(), lemma))
             if list_of_done_tasks:
                 self._save_re_page(re_page, list_of_done_tasks)
+            self._add_lemma_to_data(lemma)
             if self._watchdog():
                 break
         for task in active_tasks:
@@ -156,5 +161,5 @@ class ReScanner(CanonicalBot):
 
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    with ReScanner(wiki=WS_WIKI, debug=False) as bot:
+    with ReScanner(wiki=WS_WIKI, debug=True) as bot:
         bot.run()

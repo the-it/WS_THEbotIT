@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+import time
 import json
 import os
 
@@ -394,16 +395,32 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "ERROR", 'RePage can\'t be saved.'),
                                   ("ReScanner", "INFO", 'closing task ONE1'))
 
+    class WAITTask(ReScannerTask):
+        def task(self):
+            time.sleep(0.4)
+
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [':RE:Lemma1', ':RE:Lemma2']
-        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT]
-        with LogCapture() as log_catcher:
-            with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
-                log_catcher.clear()
-                bot.tasks = [self.ONE1Task]
-                bot.run()
+        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
+        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
+            bot.tasks = [self.WAITTask]
+            bot.run()
+            bot.__exit__(None, None, None)
             with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+                data = json.load(data_file)
                 self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
-                                 {":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY})
-                                 #json.load(data_file))
+                                 data)
+                self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                                     datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+            self.lemma_mock.return_value = [':RE:Lemma3', ':RE:Lemma4']
+            bot.__enter__()
+            bot.run()
+            bot.__exit__(None, None, None)
+            with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+                data = json.load(data_file)
+                self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
+                                  ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
+                                 data)
+                self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                                datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))

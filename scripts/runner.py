@@ -14,6 +14,7 @@ from scripts.service.author_list import AuthorList
 from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.gl.status import GlStatus
 from scripts.service.little_tasks.hilbert_timer import HilbertTimer
+from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.status import ReStatus
 from tools.bots import CanonicalBot
 
@@ -56,7 +57,7 @@ class DailyRunner(CanonicalBot):
                 origin.push()
 
     def run_dailys(self):
-        daily_list = [AuthorList, HilbertTimer]
+        daily_list = [AuthorList, HilbertTimer, ReScanner]
         for daily_bot in daily_list:
             self.run_bot(daily_bot(wiki=self.wiki, debug=self.debug))
 
