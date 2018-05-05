@@ -1,6 +1,6 @@
 import re
 from abc import abstractmethod
-from datetime import timedelta
+from datetime import timedelta, datetime
 
 from pywikibot import Site
 
@@ -13,15 +13,14 @@ CHANGED = "changed"
 
 class ReScannerTask(object):
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
-        self.reporter_page = None
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
         self.re_page = None  # type: RePage
-        self.load_task()
         self.result = {SUCCESS: False, CHANGED: False}
         self.processed_pages = []
         self.timeout = timedelta(minutes=1)
+        self.load_task()
 
     def __enter__(self):
         return self
@@ -55,3 +54,21 @@ class ReScannerTask(object):
 
     def get_name(self):
         return re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
+
+
+class ERROTask(ReScannerTask):
+    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+        super().__init__(wiki, logger, debug)
+        self.data = []
+
+    def task(self, lemma: str):  # pylint: disable=arguments-differ
+        self.logger.error("Lemma {} is registered, because the structure was wrong.".format(lemma))
+        self.data.append(lemma)
+
+    def _build_entry(self) -> str:
+        caption = "=={}==\n\n".format(datetime.now().strftime("%Y-%m-%d"))
+        body = "* [[" + "]]\n* [[".join(self.data) + "]]\n"
+        return caption + body
+
+    # def finish_task(self):
+    #     super().finish_task()

@@ -68,7 +68,7 @@ class ReScanner(CanonicalBot):
     def _add_lemma_to_data(self, lemma):
         self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
 
-    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str):
+    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> str:
         task_name = None
         with task:
             result = task.run(re_page)

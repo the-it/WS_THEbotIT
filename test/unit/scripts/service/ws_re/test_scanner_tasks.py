@@ -3,7 +3,7 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.scanner_tasks import ReScannerTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask
 from tools.bots import WikiLogger
 from test import *
 
@@ -114,3 +114,16 @@ class TestReScannerTask(TestCase):
                 self.assertEqual([], task.processed_pages)
                 task.run(re_page)
             self.assertEqual([], task.processed_pages)
+
+
+class TestERROTask(TestCase):
+    def setUp(self):
+        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
+
+    def test_prcess(self):
+        with LogCapture():
+            task = ERROTask(None, self.logger)
+            task.task(":RE:Lemma1")
+            task.task(":RE:Lemma2")
+            self.assertRegex(task._build_entry(), "==\\d{4}-\\d{2}-\\d{2}==\n\n"
+                                                  "\* \[\[:RE:Lemma1\]\]\n\* \[\[:RE:Lemma2\]\]\n")
