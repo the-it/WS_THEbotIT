@@ -117,6 +117,24 @@ class ReScanner(CanonicalBot):
     def _add_lemma_to_data(self, lemma):
         self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
 
+    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str):
+        task_name = None
+        with task:
+            result = task.run(re_page)
+            if result["success"]:
+                if result["changed"]:
+                    task_name = task.get_name()
+            else:
+                if result["changed"]:
+                    error_message = "Error in {}/{}, but altered the page ... critical" \
+                        .format(task.get_name(), lemma)
+                    self.logger.critical(error_message)
+                    raise RuntimeError(error_message)
+                else:
+                    self.logger.error("Error in {}/{}, no data where altered."
+                                      .format(task.get_name(), lemma))
+        return task_name
+
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
         lemma_list = self.compile_lemma_list()
@@ -135,20 +153,9 @@ class ReScanner(CanonicalBot):
             if re_page.has_changed():
                 list_of_done_tasks.append("BASE")
             for task in active_tasks:
-                with task:
-                    result = task.run(re_page)
-                    if result["success"]:
-                        if result["changed"]:
-                            list_of_done_tasks.append(task.get_name())
-                    else:
-                        if result["changed"]:
-                            error_message = "Error in {}/{}, but altered the page ... critical"\
-                                .format(task.get_name(), lemma)
-                            self.logger.critical(error_message)
-                            raise RuntimeError(error_message)
-                        else:
-                            self.logger.error("Error in {}/{}, no data where altered."
-                                              .format(task.get_name(), lemma))
+                processed_task = self._process_task(task, re_page, lemma)
+                if processed_task:
+                    list_of_done_tasks.append(processed_task)
             if list_of_done_tasks:
                 self._save_re_page(re_page, list_of_done_tasks)
             self._add_lemma_to_data(lemma)
