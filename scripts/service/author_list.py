@@ -48,7 +48,7 @@ class AuthorList(CanonicalBot):
         new_text = self._convert_to_table()
         if new_text[150:] != old_text[150:]:  # compare all but the date
             dump.text = new_text
-            dump.save('die Liste wurde auf den aktuellen Stand gebracht.', botflag=True)
+            dump.save('Die Liste wurde auf den aktuellen Stand gebracht.', botflag=True)
         else:
             self.logger.info('Heute gab es keine Änderungen, '
                              'daher wird die Seite nicht überschrieben.')

@@ -238,7 +238,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "INFO", 'I'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'))
 
     def test_two_tasks_one_lemma(self):
@@ -255,7 +255,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "INFO", 'I'),
                                   ("ReScanner", "INFO", 'II'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ("ReScanner", "INFO", 'closing task TWO2'))
 
@@ -304,7 +304,7 @@ class TestReScanner(TestCase):
                 log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'))
 
     def test_re_page_return_success_text_changed(self):
@@ -320,7 +320,7 @@ class TestReScanner(TestCase):
                 log_catcher.check(("ReScanner", "INFO", 'opening task ONE1'),
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE, ONE1'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1'),
                                   ("ReScanner", "INFO", 'closing task ONE1'))
 
     def test_re_page_return_no_success_nothing_changed(self):
@@ -337,7 +337,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "ERROR", 'Error in ONE1/:RE:Lemma1, no data where altered.'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'))
 
     def test_re_page_return_no_success_but_text_has_changed(self):
@@ -369,7 +369,7 @@ class TestReScanner(TestCase):
                                       ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                       ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                       ('ReScanner', 'INFO', 'I'),
-                                      ('ReScanner', 'INFO','ReScanner processed this task: BASE'),
+                                      ('ReScanner', 'INFO','ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                       ('ReScanner', 'INFO', 'closing task ONE1'))
 
     @skip("I quit this task for the moment")
@@ -391,7 +391,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "INFO", 'I'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "ERROR", 'RePage can\'t be saved.'),
                                   ("ReScanner", "INFO", 'closing task ONE1'))
 

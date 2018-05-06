@@ -125,10 +125,10 @@ class GlCreateMagazine(CanonicalBot):
                                          .format(year=year, magazine=magazine))
                         if lemma.text != '':
                             lemma.text = new_text
-                            lemma.save('automatisches Update des Heftes', botflag=True)
+                            lemma.save('Automatische Aktualisierung des Heftes', botflag=True)
                         else:
                             lemma.text = new_text
-                            lemma.save('automatisches Hefterstellung', botflag=True)
+                            lemma.save('automatische Hefterstellung', botflag=True)
                     else:
                         self.logger.info('Keine Änderung im Text ({year}/{magazine}).'
                                          .format(year=year, magazine=magazine))

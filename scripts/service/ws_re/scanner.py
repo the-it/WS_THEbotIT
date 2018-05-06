@@ -106,7 +106,7 @@ class ReScanner(CanonicalBot):
 
     def _save_re_page(self, re_page: RePage, list_of_done_tasks: list):
         if not self.debug:
-            save_message = 'ReScanner processed this task: {}' \
+            save_message = 'ReScanner hat folgende Aufgaben bearbeitet: {}' \
                 .format(', '.join(list_of_done_tasks))
             self.logger.info(save_message)
             try:
