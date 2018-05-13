@@ -12,7 +12,7 @@ def search_for_refs(text):
     ref = []
     if re.search(r'<ref>', text):
         ref.append('ref')
-    elif re.search('\{\{CRef\|\|', text):
+    elif re.search(r'\{\{CRef\|\|', text):
         ref.append('ref')
     hit = re.findall('[Gg]roup ?= ?(\"[^\"]*\"|[^\"> ]{1,10})', text)
     if hit:
