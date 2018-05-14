@@ -1,11 +1,12 @@
 from datetime import timedelta, datetime
 from operator import itemgetter
+import traceback
 from typing import List
 
 from pywikibot import Page, Site
 
 from scripts.service.ws_re.data_types import RePage, ReDatenException
-from scripts.service.ws_re.scanner_tasks import ReScannerTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask
 from tools.bots import CanonicalBot
 from tools.catscan import PetScan
 
@@ -88,6 +89,7 @@ class ReScanner(CanonicalBot):
 
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
+        error_task = ERROTask(wiki=self.wiki, debug=self.debug, logger=self.logger)
         lemma_list = self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
         for lemma in lemma_list:
@@ -96,9 +98,10 @@ class ReScanner(CanonicalBot):
             list_of_done_tasks = []
             try:
                 re_page = RePage(Page(self.wiki, lemma))
-            except ReDatenException as initial_exception:
-                self.logger.exception("The initiation of {} went wrong".format(lemma),
-                                      initial_exception)
+            except ReDatenException:
+                error = traceback.format_exc().splitlines()[-1]
+                self.logger.error("The initiation of {} went wrong:\n{}".format(lemma, error))
+                error_task.task(lemma, error)
                 self._add_lemma_to_data(lemma)
                 continue
             if re_page.has_changed():
@@ -108,12 +111,14 @@ class ReScanner(CanonicalBot):
                 if processed_task:
                     list_of_done_tasks.append(processed_task)
             if list_of_done_tasks:
-                self._save_re_page(re_page, list_of_done_tasks)
+                if not self.debug:
+                    self._save_re_page(re_page, list_of_done_tasks)
             self._add_lemma_to_data(lemma)
             if self._watchdog():
                 break
         for task in active_tasks:
             task.finish_task()
+        error_task.finish_task()
         return True
 
 

@@ -120,10 +120,18 @@ class TestERROTask(TestCase):
     def setUp(self):
         self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
 
-    def test_prcess(self):
+    def test_process(self):
         with LogCapture():
             task = ERROTask(None, self.logger)
-            task.task(":RE:Lemma1")
-            task.task(":RE:Lemma2")
+            task.task(":RE:Lemma1", "scripts.service.ws_re.data_types.ReDatenException: "
+                                    "The count of start templates doesn't match the count of end templates.")
+            task.task(":RE:Lemma2", "scripts.service.ws_re.data_types.ReDatenException: "
+                                    "REDaten has wrong key word. --> {'key': 'GEMEINFREI', 'value': '2024'}")
             self.assertRegex(task._build_entry(), "==\\d{4}-\\d{2}-\\d{2}==\n\n"
-                                                  "\* \[\[:RE:Lemma1\]\]\n\* \[\[:RE:Lemma2\]\]\n")
+                                                  "\\* \\[\\[:RE:Lemma1\\]\\]\n"
+                                                  "\\*\\* scripts\\.service\\.ws_re\\.data_types\\.ReDatenException: "
+                                                  "The count of start templates doesn't match the count of end templates.\n"
+                                                  "\\* \\[\\[:RE:Lemma2\\]\\]\n"
+                                                  "\\*\\* scripts\\.service\\.ws_re\\.data_types\\.ReDatenException: "
+                                                  "REDaten has wrong key word. --> \\{'key': 'GEMEINFREI', 'value': '2024'\\}"
+                             )

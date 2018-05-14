@@ -2,7 +2,7 @@ import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
 
-from pywikibot import Site
+from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage
 from tools.bots import WikiLogger
@@ -61,14 +61,20 @@ class ERROTask(ReScannerTask):
         super().__init__(wiki, logger, debug)
         self.data = []
 
-    def task(self, lemma: str):  # pylint: disable=arguments-differ
-        self.logger.error("Lemma {} is registered, because the structure was wrong.".format(lemma))
-        self.data.append(lemma)
+    def task(self, lemma: str, reason: str):  # pylint: disable=arguments-differ
+        self.data.append((lemma, reason))
 
     def _build_entry(self) -> str:
         caption = "=={}==\n\n".format(datetime.now().strftime("%Y-%m-%d"))
-        body = "* [[" + "]]\n* [[".join(self.data) + "]]\n"
+        entries = []
+        for item in self.data:
+            entries.append("* [[{lemma}]]\n** {reason}".format(lemma=item[0], reason=item[1]))
+        body = "\n".join(entries)
         return caption + body
 
-    # def finish_task(self):
-    #     super().finish_task()
+    def finish_task(self):
+        if not self.debug:
+            page = Page(self.wiki, "Benutzer:THEbotIT/Logs/ReScanner/Errors")
+            page.text = page.text + self._build_entry()
+            page.save("Neue Fehlermeldungen", botflag=True)
+        super().finish_task()
