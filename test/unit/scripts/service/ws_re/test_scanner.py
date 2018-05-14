@@ -136,7 +136,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "INFO", 'I'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ('ReScanner', 'INFO', 'closing task ERRO'))
 
@@ -155,7 +155,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "INFO", 'I'),
                                   ("ReScanner", "INFO", 'II'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ("ReScanner", "INFO", 'closing task TWO2'),
                                   ('ReScanner', 'INFO', 'closing task ERRO'))
@@ -210,7 +210,7 @@ class TestReScanner(TestCase):
                                   ('ReScanner', 'INFO', 'opening task ERRO'),
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ('ReScanner', 'INFO', 'closing task ERRO'))
 
@@ -228,7 +228,7 @@ class TestReScanner(TestCase):
                                   ('ReScanner', 'INFO', 'opening task ERRO'),
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE, ONE1'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ('ReScanner', 'INFO', 'closing task ERRO'))
 
@@ -247,7 +247,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "ERROR", 'Error in ONE1/:RE:Lemma1, no data where altered.'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ('ReScanner', 'INFO', 'closing task ERRO'))
 
@@ -282,7 +282,7 @@ class TestReScanner(TestCase):
                                       ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                       ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                       ('ReScanner', 'INFO', 'I'),
-                                      ('ReScanner', 'INFO','ReScanner processed this task: BASE'),
+                                      ('ReScanner', 'INFO','ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                       ('ReScanner', 'INFO', 'closing task ONE1'),
                                       ('ReScanner', 'INFO', 'closing task ERRO'))
 
@@ -306,7 +306,7 @@ class TestReScanner(TestCase):
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                   ("ReScanner", "INFO", 'I'),
-                                  ("ReScanner", "INFO", 'ReScanner processed this task: BASE'),
+                                  ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                   ("ReScanner", "ERROR", 'RePage can\'t be saved.'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ('ReScanner', 'INFO', 'closing task ERRO'))

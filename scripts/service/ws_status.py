@@ -164,4 +164,4 @@ class WsStatus(CanonicalBot):
 
     def save_text_to_site(self):
         self.stat_page.text = self.text
-        self.stat_page.save('new dataset', botflag=True)
+        self.stat_page.save('Statistik wurde aktualisiert.', botflag=True)

@@ -8,6 +8,26 @@ from tools.catscan import PetScan
 from tools.bots import CanonicalBot, BotExeption
 
 
+def search_for_refs(text):
+    ref = []
+    if re.search(r'<ref>', text):
+        ref.append('ref')
+    elif re.search(r'\{\{CRef\|\|', text):
+        ref.append('ref')
+    hit = re.findall('[Gg]roup ?= ?(\"[^\"]*\"|[^\"> ]{1,10})', text)
+    if hit:
+        for entry in hit:
+            group = entry.strip("\"")
+            if group not in ref:
+                ref.append(group)
+    hit = re.findall(r'\{\{CRef\|([^\|]{1,10})\|', text)
+    if hit:
+        for entry in hit:
+            if entry not in ref:
+                ref.append(entry)
+    return ref
+
+
 class GlCreateMagazine(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug)
@@ -55,7 +75,7 @@ class GlCreateMagazine(CanonicalBot):
                                               year=year,
                                               level=proofread_lemma.quality_level,
                                               title=lemma['title']))
-                ref = self.search_for_refs(proofread_lemma.text)
+                ref = search_for_refs(proofread_lemma.text)
                 page_dict = {'q': proofread_lemma.quality_level}
                 if ref:
                     self.logger.info('There are refs ({refs}) @ {year}, {page}'.format(refs=ref,
@@ -125,10 +145,10 @@ class GlCreateMagazine(CanonicalBot):
                                          .format(year=year, magazine=magazine))
                         if lemma.text != '':
                             lemma.text = new_text
-                            lemma.save('automatisches Update des Heftes', botflag=True)
+                            lemma.save('Automatische Aktualisierung des Heftes', botflag=True)
                         else:
                             lemma.text = new_text
-                            lemma.save('automatisches Hefterstellung', botflag=True)
+                            lemma.save('automatische Hefterstellung', botflag=True)
                     else:
                         self.logger.info('Keine Änderung im Text ({year}/{magazine}).'
                                          .format(year=year, magazine=magazine))
@@ -177,25 +197,6 @@ class GlCreateMagazine(CanonicalBot):
             else:
                 break
         return page.replace('_', ' ')
-
-    @staticmethod
-    def search_for_refs(text):
-        ref = []
-        if re.search(r'<ref>', text):
-            ref.append('ref')
-        elif re.search(r'\{\{CRef\|\|', text):
-            ref.append('ref')
-        hit = re.findall(r'[Gg]roup ?= ?"?([^">]{1,10})"?', text)
-        if hit:
-            for entry in hit:
-                if entry not in ref:
-                    ref.append(entry)
-        hit = re.findall(r'\{\{CRef\|([^\|]{1,10})\|', text)
-        if hit:
-            for entry in hit:
-                if entry not in ref:
-                    ref.append(entry)
-        return ref
 
     def make_magazine_text(self, year, magazine, quality, list_of_pages, last):
         # pylint: disable=too-many-arguments,too-many-branches
