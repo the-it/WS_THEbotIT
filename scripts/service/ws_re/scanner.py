@@ -15,7 +15,7 @@ class ReScanner(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(seconds=60)
+        self.timeout = timedelta(minutes=10)
         self.tasks = []  # type: List[type(ReScannerTask)]
         if self.debug:
             self.tasks = self.tasks + []
@@ -100,7 +100,7 @@ class ReScanner(CanonicalBot):
                 re_page = RePage(Page(self.wiki, lemma))
             except ReDatenException:
                 error = traceback.format_exc().splitlines()[-1]
-                self.logger.error("The initiation of {} went wrong:\n{}".format(lemma, error))
+                self.logger.error("The initiation of {} went wrong: {}".format(lemma, error))
                 error_task.task(lemma, error)
                 self._add_lemma_to_data(lemma)
                 continue

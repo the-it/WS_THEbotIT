@@ -173,7 +173,7 @@ class TestReScanner(TestCase):
                                   ('ReScanner', 'INFO', 'opening task ERRO'),
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                  ("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong:\nscripts.service.ws_re.data_types.ReDatenException'),
+                                  ("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.data_types.ReDatenException'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
                                   ('ReScanner', 'INFO', 'closing task ERRO'))
 
@@ -190,7 +190,7 @@ class TestReScanner(TestCase):
                                   ('ReScanner', 'INFO', 'opening task ERRO'),
                                   ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                  ("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong:\nscripts.service.ws_re.data_types.ReDatenException'),
+                                  ("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.data_types.ReDatenException'),
                                   ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]'),
                                   ("ReScanner", "INFO", 'I'),
                                   ("ReScanner", "INFO", 'closing task ONE1'),
