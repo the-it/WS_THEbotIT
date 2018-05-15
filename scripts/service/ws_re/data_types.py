@@ -88,9 +88,9 @@ class ReArticle(Mapping):
         "GND": "GND",
         "KSCH": "KEINE_SCHÖPFUNGSHÖHE",
         "TJ": "TODESJAHR",
+        "NT": "NACHTRAG",
         "ÜB": "ÜBERSCHRIFT",
-        "VW": "VERWEIS",
-        "NT": "NACHTRAG"}
+        "VW": "VERWEIS"}
 
     def __init__(self,
                  article_type: str = RE_DATEN,
@@ -117,9 +117,9 @@ class ReArticle(Mapping):
                             ReProperty("GND", ""),
                             ReProperty("KEINE_SCHÖPFUNGSHÖHE", False),
                             ReProperty("TODESJAHR", ""),
+                            ReProperty("NACHTRAG", False),
                             ReProperty("ÜBERSCHRIFT", False),
-                            ReProperty("VERWEIS", False),
-                            ReProperty("NACHTRAG", False))
+                            ReProperty("VERWEIS", False))
         try:
             self._init_properties(re_daten_properties)
         except (ValueError, TypeError) as init_error:

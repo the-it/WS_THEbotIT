@@ -20,9 +20,9 @@ article_template = """{{REDaten
 |GND=
 |KEINE_SCHÖPFUNGSHÖHE=OFF
 |TODESJAHR=
+|NACHTRAG=OFF
 |ÜBERSCHRIFT=OFF
 |VERWEIS=OFF
-|NACHTRAG=OFF
 }}
 text
 {{REAutor|Autor.}}"""
@@ -127,9 +127,9 @@ class TestReArticle(TestCase):
         self.assertEqual(next(iterator).name, "WIKISOURCE")
         for i in range(5):
             next(iterator)
+        self.assertEqual(next(iterator).name, "NACHTRAG")
         self.assertEqual(next(iterator).name, "ÜBERSCHRIFT")
         self.assertEqual(next(iterator).name, "VERWEIS")
-        self.assertEqual(next(iterator).name, "NACHTRAG")
         self.assertEqual(len(self.article), 17)
 
     def test_properties_init(self):
