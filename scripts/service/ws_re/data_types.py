@@ -1,6 +1,6 @@
 from collections import Mapping
 from collections.abc import Sequence
-from typing import Union, Generator
+from typing import Union, Generator, Tuple
 
 import pywikibot
 
@@ -91,19 +91,17 @@ class ReArticle(Mapping):
         "VW": "VERWEIS",
         "NT": "NACHTRAG"}
 
-    def __init__(self, article_type: str = RE_DATEN,
+    def __init__(self,
+                 article_type: str = RE_DATEN,
                  re_daten_properties: dict = None,
                  text: str = "",
-                 author: str = "",
-                 author_issue: str = ""):
+                 author: Tuple[str, str] = ("", "")):
         self._article_type = None
         self.article_type = article_type
         self._text = None
         self.text = text
         self._author = None
         self.author = author
-        self._author_issue = None
-        self.author_issue = author_issue
         self._properties = (ReProperty("BAND", ""),
                             ReProperty("SPALTE_START", ""),
                             ReProperty("SPALTE_END", ""),
@@ -153,22 +151,14 @@ class ReArticle(Mapping):
         return self._author
 
     @author.setter
-    def author(self, new_value: str):
+    def author(self, new_value: Union[Tuple[str, str], str]):
         if isinstance(new_value, str):
+            self._author = (new_value, "")
+        elif isinstance(new_value, tuple) and (len(new_value) == 2) and \
+                isinstance(new_value[0], str) and isinstance(new_value[1], str):
             self._author = new_value
         else:
-            raise ReDatenException("Property author must be a string.")
-
-    @property
-    def author_issue(self):
-        return self._author_issue
-
-    @author_issue.setter
-    def author_issue(self, new_value: str):
-        if isinstance(new_value, str):
-            self._author_issue = new_value
-        else:
-            raise ReDatenException("Property author_issue must be a string.")
+            raise ReDatenException("Property author must be a tuple of strings or one string.")
 
     def __len__(self) -> int:
         return len(self._properties)
@@ -230,17 +220,17 @@ class ReArticle(Mapping):
         re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
         properties_dict = cls._extract_properties(re_start.parameters)
+        # last character is every time a point
+        author_name = re_author.parameters[0]["value"][0:-1]
         try:
-            re_author_issue = re_author.parameters[1]["value"]
+            author_issue = re_author.parameters[1]["value"]
         except IndexError:
-            re_author_issue = ""
+            author_issue = ""
         return ReArticle(article_type=re_start.title,
                          re_daten_properties=properties_dict,
                          text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]]
                          .strip(),
-                         # last character is every time a point
-                         author=re_author.parameters[0]["value"][0:-1],
-                         author_issue=re_author_issue)
+                         author=(author_name, author_issue))
 
     @classmethod
     def _extract_properties(cls, parameters: list) -> dict:
@@ -285,10 +275,10 @@ class ReArticle(Mapping):
         else:
             content.append("{{{{{}}}}}".format(RE_ABSCHNITT))
         content.append(self.text)
-        if self.author_issue:
-            content.append("{{{{{}|{}.|{}}}}}".format(RE_AUTHOR, self.author, self.author_issue))
+        if self.author[1]:
+            content.append("{{{{{}|{}.|{}}}}}".format(RE_AUTHOR, self.author[0], self.author[1]))
         else:
-            content.append("{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author))
+            content.append("{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author[0]))
         return "\n".join(content)
 
 

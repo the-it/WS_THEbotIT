@@ -100,14 +100,14 @@ class TestReArticle(TestCase):
             ReArticle(text=1)
 
     def test_set_author(self):
-        self.assertEqual(self.article.author, "")
+        self.assertEqual(self.article.author, ("", ""))
         self.article.author = "bla"
-        self.assertEqual(self.article.author, "bla")
-        article = ReArticle(author="blub")
-        self.assertEqual(article.author, "blub")
+        self.assertEqual(self.article.author, ("bla", ""))
+        article = ReArticle(author=("blub", "II,2"))
+        self.assertEqual(article.author, ("blub", "II,2"))
 
     def test_wrong_type_author(self):
-        with self.assertRaisesRegex(ReDatenException, "Property author must be a string."):
+        with self.assertRaises(ReDatenException):
             ReArticle(author=1)
 
     def test_properties_access(self):
@@ -154,7 +154,7 @@ class TestReArticle(TestCase):
     def test_from_text(self):
         article_text = "{{REDaten\n|BAND=III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
-        self.assertEqual(article.author, "Some Author")
+        self.assertEqual(article.author, ("Some Author", ""))
         self.assertEqual(article.text, "text")
         self.assertEqual(article.article_type, "REDaten")
         self.assertEqual(article["BAND"].value, "III")
@@ -347,7 +347,7 @@ class TestRePage(TestCase):
         self.assertTrue(isinstance(re_article, ReArticle))
         self.assertEqual("text", re_article.text)
         self.assertEqual("REDaten", re_article.article_type)
-        self.assertEqual("Autor", re_article.author)
+        self.assertEqual(("Autor", ""), re_article.author)
 
     def test_double_article(self):
         self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\n" \
