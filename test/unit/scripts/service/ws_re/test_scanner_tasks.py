@@ -133,5 +133,5 @@ class TestERROTask(TestCase):
                                                   "The count of start templates doesn't match the count of end templates.\n"
                                                   "\\* \\[\\[:RE:Lemma2\\]\\]\n"
                                                   "\\*\\* scripts\\.service\\.ws_re\\.data_types\\.ReDatenException: "
-                                                  "REDaten has wrong key word. --> \\{'key': 'GEMEINFREI', 'value': '2024'\\}"
+                                                  "REDaten has wrong key word. --> \\{'key': 'GEMEINFREI', 'value': '2024'\\}\n"
                              )

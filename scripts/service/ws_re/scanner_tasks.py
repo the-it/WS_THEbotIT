@@ -70,7 +70,7 @@ class ERROTask(ReScannerTask):
         for item in self.data:
             entries.append("* [[{lemma}]]\n** {reason}".format(lemma=item[0], reason=item[1]))
         body = "\n".join(entries)
-        return caption + body
+        return caption + body + "\n"
 
     def finish_task(self):
         if not self.debug:
