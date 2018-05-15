@@ -1,5 +1,6 @@
 from collections import Mapping
 from collections.abc import Sequence
+import re
 from typing import Union, Generator, Tuple
 
 import pywikibot
@@ -95,7 +96,7 @@ class ReArticle(Mapping):
                  article_type: str = RE_DATEN,
                  re_daten_properties: dict = None,
                  text: str = "",
-                 author: Tuple[str, str] = ("", "")):
+                 author: Union[Tuple[str, str], str] = ("", "")):
         self._article_type = None
         self.article_type = article_type
         self._text = None
@@ -220,8 +221,7 @@ class ReArticle(Mapping):
         re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
         properties_dict = cls._extract_properties(re_start.parameters)
-        # last character is every time a point
-        author_name = re_author.parameters[0]["value"][0:-1]
+        author_name = re.search(r"([^\.]*)\.?", re_author.parameters[0]["value"]).group(1)
         try:
             author_issue = re_author.parameters[1]["value"]
         except IndexError:
@@ -275,10 +275,13 @@ class ReArticle(Mapping):
         else:
             content.append("{{{{{}}}}}".format(RE_ABSCHNITT))
         content.append(self.text)
-        if self.author[1]:
-            content.append("{{{{{}|{}.|{}}}}}".format(RE_AUTHOR, self.author[0], self.author[1]))
+        if self.author[0] == "OFF":
+            author = "{{{{{}|{}}}}}".format(RE_AUTHOR, self.author[0])
+        elif self.author[1]:
+            author = "{{{{{}|{}.|{}}}}}".format(RE_AUTHOR, self.author[0], self.author[1])
         else:
-            content.append("{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author[0]))
+            author = "{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author[0])
+        content.append(author)
         return "\n".join(content)
 
 

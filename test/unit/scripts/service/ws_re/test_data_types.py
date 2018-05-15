@@ -488,4 +488,7 @@ class TestRePage(TestCase):
         article = ReArticle.from_text(article_text)
         self.assertIn("{{REAutor|Some Author.|I,1}}", article.to_text())
 
-
+    def test_bug_issue_OFF_deleted_from_author(self):
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|OFF}}"
+        article = ReArticle.from_text(article_text)
+        self.assertIn("{{REAutor|OFF}}", article.to_text())
