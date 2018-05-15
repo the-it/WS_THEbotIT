@@ -221,7 +221,7 @@ class ReArticle(Mapping):
         re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
         properties_dict = cls._extract_properties(re_start.parameters)
-        author_name = re.search(r"([^\.]*)\.?", re_author.parameters[0]["value"]).group(1)
+        author_name = re.search(r"^(.*?)\.?$", re_author.parameters[0]["value"]).group(1)
         try:
             author_issue = re_author.parameters[1]["value"]
         except IndexError:
