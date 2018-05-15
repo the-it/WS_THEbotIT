@@ -94,13 +94,16 @@ class ReArticle(Mapping):
     def __init__(self, article_type: str = RE_DATEN,
                  re_daten_properties: dict = None,
                  text: str = "",
-                 author: str = ""):
+                 author: str = "",
+                 author_issue: str = ""):
         self._article_type = None
         self.article_type = article_type
         self._text = None
         self.text = text
         self._author = None
         self.author = author
+        self._author_issue = None
+        self.author_issue = author_issue
         self._properties = (ReProperty("BAND", ""),
                             ReProperty("SPALTE_START", ""),
                             ReProperty("SPALTE_END", ""),
@@ -155,6 +158,17 @@ class ReArticle(Mapping):
             self._author = new_value
         else:
             raise ReDatenException("Property author must be a string.")
+
+    @property
+    def author_issue(self):
+        return self._author_issue
+
+    @author_issue.setter
+    def author_issue(self, new_value: str):
+        if isinstance(new_value, str):
+            self._author_issue = new_value
+        else:
+            raise ReDatenException("Property author_issue must be a string.")
 
     def __len__(self) -> int:
         return len(self._properties)
@@ -216,12 +230,17 @@ class ReArticle(Mapping):
         re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
         properties_dict = cls._extract_properties(re_start.parameters)
+        try:
+            re_author_issue = re_author.parameters[1]["value"]
+        except IndexError:
+            re_author_issue = ""
         return ReArticle(article_type=re_start.title,
                          re_daten_properties=properties_dict,
                          text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]]
                          .strip(),
                          # last character is every time a point
-                         author=re_author.parameters[0]["value"][0:-1])
+                         author=re_author.parameters[0]["value"][0:-1],
+                         author_issue=re_author_issue)
 
     @classmethod
     def _extract_properties(cls, parameters: list) -> dict:
@@ -266,7 +285,10 @@ class ReArticle(Mapping):
         else:
             content.append("{{{{{}}}}}".format(RE_ABSCHNITT))
         content.append(self.text)
-        content.append("{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author))
+        if self.author_issue:
+            content.append("{{{{{}|{}.|{}}}}}".format(RE_AUTHOR, self.author, self.author_issue))
+        else:
+            content.append("{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author))
         return "\n".join(content)
 
 

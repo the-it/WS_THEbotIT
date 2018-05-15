@@ -483,4 +483,9 @@ class TestRePage(TestCase):
         with self.assertRaises(ReDatenException):
             re_page.save("reason")
 
+    def test_bug_issue_number_deleted_from_author(self):
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.|I,1}}"
+        article = ReArticle.from_text(article_text)
+        self.assertIn("{{REAutor|Some Author.|I,1}}", article.to_text())
+
 
