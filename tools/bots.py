@@ -292,6 +292,14 @@ class PersistedData(Mapping):
     def update(self, dict_to_update: dict):
         self.data.update(dict_to_update)
 
+    def get_broken(self):
+        with open(self.file_name + ".broken", mode="r") as json_file:
+            self.assign_dict(json.load(json_file))
+
+    def get_deprecated(self):
+        with open(self.file_name + ".deprecated", mode="r") as json_file:
+            self.assign_dict(json.load(json_file))
+
 
 class CanonicalBot(OneTimeBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
