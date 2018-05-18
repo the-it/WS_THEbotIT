@@ -35,6 +35,7 @@ class ReScanner(CanonicalBot):
             searcher.set_logic_union()
             searcher.set_sort_criteria("date")
             searcher.set_sortorder_decending()
+            searcher.set_timeout(60)
         return searcher
 
     def compile_lemma_list(self) -> List[str]:
