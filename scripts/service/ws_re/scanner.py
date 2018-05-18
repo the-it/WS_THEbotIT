@@ -20,6 +20,13 @@ class ReScanner(CanonicalBot):
         if self.debug:
             self.tasks = self.tasks + []
 
+    def __enter__(self):
+        super().__enter__()
+        if not self.data:
+            self.logger.error()
+            self.data.get_deprecated()
+        return self
+
     def _prepare_searcher(self) -> PetScan:
         searcher = PetScan()
         searcher.add_any_template('REDaten')
