@@ -437,6 +437,31 @@ class TestPersistedData(TestCase):
         self.data.update({"b": 2})
         self.assertDictEqual({"a": 1, "b": 2}, self.data.data)
 
+    def test_get_back_from_broken(self):
+        self._make_json_file()
+        self.data.load()
+        self.data["b"] = 2
+        self.data.dump(success=False)
+        new_run_data = PersistedData("TestBot")
+        self.assertDictEqual({}, new_run_data.data)
+        new_run_data.get_broken()
+        self.assertDictEqual({"a": [1, 2], "b": 2}, new_run_data.data)
+
+    def test_get_back_from_deprecated(self):
+        self._make_json_file()
+        self.data.load()
+        self.data["b"] = 2
+        self.data.dump(success=False)
+        new_run_data = PersistedData("TestBot")
+        self.assertDictEqual({}, new_run_data.data)
+        new_run_data.get_deprecated()
+        self.assertDictEqual({"a": [1, 2]}, new_run_data.data)
+
+    def test_get_back_data_no_data_there(self):
+        self._make_json_file()
+        with self.assertRaises(BotExeption):
+            self.data.get_deprecated()
+
 
 class TestCanonicalBot(TestCase):
     def setUp(self):

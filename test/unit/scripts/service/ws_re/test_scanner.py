@@ -11,7 +11,7 @@ from tools.bots import WikiLogger
 from tools.catscan import PetScan
 from scripts.service.ws_re.data_types import RePage, ReDatenException
 from test import *
-from test.unit.tools.test_bots import setup_data_path, teardown_data_path
+from test.unit.tools.test_bots import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 
 
 class TestReScanner(TestCase):
@@ -340,3 +340,24 @@ class TestReScanner(TestCase):
                                  data)
                 self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
                                 datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
+
+    def test_reload_deprecated_lemma_data_none_there(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.check(('ReScanner', 'INFO', 'Start the bot ReScanner.'),
+                                  ('ReScanner', 'WARNING', "The last run wasn't successful. The data is thrown away."),
+                                  ('ReScanner', 'WARNING', 'Try to get the deprecated data back.'),
+                                  ('ReScanner', 'WARNING', "There isn't deprecated data to reload."))
+
+    def test_reload_deprecated_lemma_data(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [':RE:Lemma1']
+        with open(_DATA_PATH_TEST + os.sep + "{}.data.json.deprecated".format("ReScanner"), mode="w") as persist_json:
+            json.dump({":RE:Lemma1": "20000101000000"}, persist_json)
+        with LogCapture() as log_catcher:
+            with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+                log_catcher.check(('ReScanner', 'INFO', 'Start the bot ReScanner.'),
+                                  ('ReScanner', 'WARNING', "The last run wasn't successful. The data is thrown away."),
+                                  ('ReScanner', 'WARNING', 'Try to get the deprecated data back.'))

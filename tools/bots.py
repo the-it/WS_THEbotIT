@@ -292,6 +292,19 @@ class PersistedData(Mapping):
     def update(self, dict_to_update: dict):
         self.data.update(dict_to_update)
 
+    def _recover_data(self, type_of_data: str):
+        try:
+            with open("{}.{}".format(self.file_name, type_of_data), mode="r") as json_file:
+                self.assign_dict(json.load(json_file))
+        except FileNotFoundError:
+            raise BotExeption("There is no {} data to load.".format(type_of_data))
+
+    def get_broken(self):
+        self._recover_data("broken")
+
+    def get_deprecated(self):
+        self._recover_data("deprecated")
+
 
 class CanonicalBot(OneTimeBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
