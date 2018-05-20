@@ -457,6 +457,11 @@ class TestPersistedData(TestCase):
         new_run_data.get_deprecated()
         self.assertDictEqual({"a": [1, 2]}, new_run_data.data)
 
+    def test_get_back_data_no_data_there(self):
+        self._make_json_file()
+        with self.assertRaises(BotExeption):
+            self.data.get_deprecated()
+
 
 class TestCanonicalBot(TestCase):
     def setUp(self):
