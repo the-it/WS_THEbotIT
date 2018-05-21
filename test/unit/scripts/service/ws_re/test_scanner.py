@@ -139,7 +139,7 @@ class TestReScanner(TestCase):
                                     ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                     ("ReScanner", "INFO", 'closing task ONE1'),
                                     ('ReScanner', 'INFO', 'closing task ERRO'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_two_tasks_one_lemma(self):
         self._mock_surroundings()
@@ -160,7 +160,7 @@ class TestReScanner(TestCase):
                                     ("ReScanner", "INFO", 'closing task ONE1'),
                                     ("ReScanner", "INFO", 'closing task TWO2'),
                                     ('ReScanner', 'INFO', 'closing task ERRO'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_lemma_raise_exception(self):
         self._mock_surroundings()
@@ -172,7 +172,7 @@ class TestReScanner(TestCase):
                 bot.tasks = [self.ONE1Task]
                 bot.run()
                 expected_logging = (("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.data_types.ReDatenException'),)
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_lemma_raise_exception_second_not(self):
         self._mock_surroundings()
@@ -187,7 +187,7 @@ class TestReScanner(TestCase):
                                     ("ReScanner", "ERROR", 'The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.data_types.ReDatenException'),
                                     ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]'),
                                     ("ReScanner", "INFO", 'I'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_success_nothing_changed(self):
         self._mock_surroundings()
@@ -201,7 +201,7 @@ class TestReScanner(TestCase):
                 bot.run()
                 expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                     ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_success_text_changed(self):
         self._mock_surroundings()
@@ -215,7 +215,7 @@ class TestReScanner(TestCase):
                 bot.run()
                 expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                     ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_no_success_nothing_changed(self):
         self._mock_surroundings()
@@ -230,7 +230,7 @@ class TestReScanner(TestCase):
                 expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                     ("ReScanner", "ERROR", 'Error in ONE1/:RE:Lemma1, no data where altered.'),
                                     ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_no_success_but_text_has_changed(self):
         self._mock_surroundings()
@@ -244,7 +244,7 @@ class TestReScanner(TestCase):
                 bot.run()
                 expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                     ("ReScanner", "CRITICAL", 'Error in ONE1/:RE:Lemma1, but altered the page ... critical'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_watchdog(self):
         self._mock_surroundings()
@@ -259,7 +259,7 @@ class TestReScanner(TestCase):
                                         ('ReScanner', 'INFO', 'I'),
                                         ('ReScanner', 'INFO','ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                         ('ReScanner', 'INFO', 'closing task ONE1'))
-                    self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                    log_catcher.check_present(*expected_logging, order_matters=True)
 
     @skip("I quit this task for the moment")
     def test_save_going_wrong(self):
@@ -280,7 +280,7 @@ class TestReScanner(TestCase):
                                     ("ReScanner", "INFO", 'I'),
                                     ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                     ("ReScanner", "ERROR", 'RePage can\'t be saved.'))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     class WAITTask(ReScannerTask):
         def task(self):
@@ -321,7 +321,7 @@ class TestReScanner(TestCase):
                                     ('ReScanner', 'WARNING', "The last run wasn't successful. The data is thrown away."),
                                     ('ReScanner', 'WARNING', 'Try to get the deprecated data back.'),
                                     ('ReScanner', 'WARNING', "There isn't deprecated data to reload."))
-                self.assertTrue(is_subtuple(expected_logging, tuple(log_catcher.actual())))
+                log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_reload_deprecated_lemma_data(self):
         self._mock_surroundings()
