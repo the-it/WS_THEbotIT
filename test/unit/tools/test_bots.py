@@ -5,7 +5,7 @@ import os
 from shutil import rmtree
 import time
 
-from pywikibot import Page, Site
+from pywikibot import Page
 
 from test import *
 from tools.bots import BotExeption, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \

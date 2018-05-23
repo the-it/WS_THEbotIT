@@ -22,6 +22,10 @@ bandit :
 	echo "############ BANDIT ############"
 	bandit -r .
 
+mypy :
+	echo "############# MYPY #############"
+	mypy .
+
 safety :
 	echo "############ SAFETY ############"
 	safety check
