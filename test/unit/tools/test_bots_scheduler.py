@@ -42,9 +42,9 @@ class TestBotScheduler(TestCase):
         bot_mock = mock.MagicMock(spec_set=OneTimeBot)
         bot_mock.run.return_value = True
         self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
-        bot_mock.__enter__.assert_called_once()
-        bot_mock.run.assert_called_once()
-        bot_mock.__exit__.assert_called_once()
+        compare(1, bot_mock.__enter__.call_count)
+        compare(1, bot_mock.run.call_count)
+        compare(1, bot_mock.__exit__.call_count)
 
         bot_mock.run.return_value = False
         self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
