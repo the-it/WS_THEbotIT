@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from test import *
+from tools.bots import OneTimeBot, BotExeption
 from tools.bot_scheduler import BotScheduler
 
 class TestBotScheduler(TestCase):
@@ -36,3 +37,77 @@ class TestBotScheduler(TestCase):
         for date in dates:
             self.now_mock.return_value = date
             self.assertFalse(self.bot_scheduler._last_day_of_month())
+
+    def test_bot_run(self):
+        bot_mock = mock.MagicMock(spec_set=OneTimeBot)
+        bot_mock.run.return_value = True
+        self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
+        bot_mock.__enter__.assert_called_once()
+        bot_mock.run.assert_called_once()
+        bot_mock.__exit__.assert_called_once()
+
+        bot_mock.run.return_value = False
+        self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
+
+    def test_wrong_type_runner(self):
+        bot = list()
+        with self.assertRaises(BotExeption):
+            self.bot_scheduler.run_bot(bot)
+
+    class Bot1(OneTimeBot):
+        def task(self):
+            pass
+
+    class Bot2(OneTimeBot):
+        def task(self):
+            pass
+
+    def test_run_daily(self):
+        self.bot_scheduler.daily_bots = [self.Bot1, self.Bot2]
+        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+            self.bot_scheduler.run_dailys()
+            compare(2, run_mock.call_count)
+            self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot1))
+            self.assertTrue(isinstance(run_mock.mock_calls[1][1][0], self.Bot2))
+
+    def test_run_weekly(self):
+        self.bot_scheduler.weekly_bots = {0: [self.Bot1], 1: [self.Bot2]}
+        self.now_mock.return_value = datetime(year=2010, month=1, day=4)  # monday
+        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+            self.bot_scheduler.run_weeklys()
+            compare(1, run_mock.call_count)
+            self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot1))
+
+    def test_run_weekly_nothing_to_do(self):
+        self.bot_scheduler.weekly_bots = {0: [self.Bot1], 1: [self.Bot2]}
+        self.now_mock.return_value = datetime(year=2010, month=1, day=6)  # wednesday
+        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+            self.bot_scheduler.run_weeklys()
+            compare(0, run_mock.call_count)
+
+    def test_run_monthly(self):
+        self.bot_scheduler.monthly_bots = {1: [self.Bot1], 2: [self.Bot2]}
+        self.now_mock.return_value = datetime(year=2010, month=1, day=2)
+        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+            self.bot_scheduler.run_monthlys()
+            compare(1, run_mock.call_count)
+            self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot2))
+
+    def test_run_monthly_nothing_to_do(self):
+        self.bot_scheduler.monthly_bots = {1: [self.Bot1], 2: [self.Bot2]}
+        self.now_mock.return_value = datetime(year=2010, month=1, day=3)
+        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+            self.bot_scheduler.run_monthlys()
+            compare(0, run_mock.call_count)
+
+    def test_run_last_day_of_month(self):
+        self.bot_scheduler.bots_on_last_day_of_month = [self.Bot1, self.Bot2]
+        self.now_mock.return_value = datetime(year=2010, month=1, day=31)
+        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+            self.bot_scheduler.run_monthlys()
+            compare(2, run_mock.call_count)
+            self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot1))
+            self.assertTrue(isinstance(run_mock.mock_calls[1][1][0], self.Bot2))
+
+    def test_empty_run(self):
+        self.bot_scheduler.task()
