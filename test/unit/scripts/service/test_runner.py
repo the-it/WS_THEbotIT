@@ -31,8 +31,8 @@ class TestBotScheduler(TestCase):
         self._create_dir_and_init(self._get_one_time_run_test())
 
     def tearDown(self):
-        rmtree(self._get_archive_test())
-        rmtree(self._get_one_time_run_test())
+        rmtree(str(self._get_archive_test()))
+        rmtree(str(self._get_one_time_run_test()))
 
     def test_1(self):
         pass
