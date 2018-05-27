@@ -1,8 +1,9 @@
 from datetime import datetime
 
 from test import *
-from tools.bots import OneTimeBot, BotExeption
+from tools.bots import CanonicalBot, BotExeption
 from tools.bot_scheduler import BotScheduler
+
 
 class TestBotScheduler(TestCase):
     def setUp(self):
@@ -39,7 +40,7 @@ class TestBotScheduler(TestCase):
             self.assertFalse(self.bot_scheduler._last_day_of_month())
 
     def test_bot_run(self):
-        bot_mock = mock.MagicMock(spec_set=OneTimeBot)
+        bot_mock = mock.MagicMock(spec_set=CanonicalBot)
         bot_mock.run.return_value = True
         self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
         compare(1, bot_mock.__enter__.call_count)
@@ -54,11 +55,11 @@ class TestBotScheduler(TestCase):
         with self.assertRaises(BotExeption):
             self.bot_scheduler.run_bot(bot)
 
-    class Bot1(OneTimeBot):
+    class Bot1(CanonicalBot):
         def task(self):
             pass
 
-    class Bot2(OneTimeBot):
+    class Bot2(CanonicalBot):
         def task(self):
             pass
 
