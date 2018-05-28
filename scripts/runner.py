@@ -1,4 +1,6 @@
 import codecs
+import os
+from pathlib import Path
 import sys
 
 from pywikibot import Site
@@ -13,7 +15,19 @@ from tools.bot_scheduler import BotScheduler
 
 
 class TheBotItScheduler(BotScheduler):
-    pass
+    folder_one_time = "one_time_run"
+    folder_archive = "archive"
+
+    @property
+    def path_one_time(self) -> Path:
+        return Path(__file__).parent.joinpath(self.folder_one_time)
+
+    @property
+    def path_archive(self) -> Path:
+        return Path(__file__).parent.joinpath(self.folder_archive)
+
+    def _get_files_to_run(self):
+        return os.listdir(self.path_one_time)
 
     # def run_one_timers(self):
     #     path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts", "online"])
