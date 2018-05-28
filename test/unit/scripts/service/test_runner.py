@@ -50,6 +50,6 @@ class TestBotScheduler(TestCase):
         self._copy_bot_to_run_dir("test_bot_1")
         self._copy_bot_to_run_dir("test_bot_2")
         print(self.bot_it_scheduler.path_one_time)
+        # self.assertEqual(2, len(self.bot_it_scheduler._get_files_to_run()))
         self.assertIn("test_bot_1.py", self.bot_it_scheduler._get_files_to_run())
         self.assertIn("test_bot_2.py", self.bot_it_scheduler._get_files_to_run())
-        pass

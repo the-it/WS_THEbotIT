@@ -27,7 +27,7 @@ class TheBotItScheduler(BotScheduler):
         return Path(__file__).parent.joinpath(self.folder_archive)
 
     def _get_files_to_run(self):
-        return os.listdir(self.path_one_time)
+        return os.listdir(str(self.path_one_time))
 
     # def run_one_timers(self):
     #     path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts", "online"])
