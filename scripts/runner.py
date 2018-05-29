@@ -1,4 +1,6 @@
 import codecs
+import importlib
+import inspect
 import os
 from pathlib import Path
 import sys
@@ -27,7 +29,24 @@ class TheBotItScheduler(BotScheduler):
         return Path(__file__).parent.joinpath(self.folder_archive)
 
     def _get_files_to_run(self):
-        return os.listdir(str(self.path_one_time))
+        file_list = os.listdir(str(self.path_one_time))
+        file_list.remove("init.py")
+        return file_list
+
+    def run_bot_from_file(self, file: str) -> bool:
+        self.logger.info('Run {}'.format(file))
+        onetime_module = \
+            importlib.import_module('scripts.{}.{}'
+                                    .format(self.folder_one_time, file.replace('.py', '')))
+        attributes = tuple(a for a in dir(onetime_module) if not a.startswith('__'))
+        success = False
+        for attribute in attributes:
+            module_attr = getattr(onetime_module, attribute)
+            if inspect.isclass(module_attr):
+                if 'OneTimeBot' in str(module_attr.__bases__):
+                    with module_attr(wiki=self.wiki, debug=self.debug) as onetime_bot:
+                        success = self.run_bot(onetime_bot)
+        return success
 
     # def run_one_timers(self):
     #     path_to_online = os.sep.join(["/home", "pi", "WS_THEbotIT", "scripts", "online"])
