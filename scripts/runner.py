@@ -44,8 +44,7 @@ class TheBotItScheduler(BotScheduler):
             module_attr = getattr(onetime_module, attribute)
             if inspect.isclass(module_attr):
                 if 'OneTimeBot' in str(module_attr.__bases__):
-                    with module_attr(wiki=self.wiki, debug=self.debug) as onetime_bot:
-                        success = self.run_bot(onetime_bot)
+                    success = self.run_bot(module_attr(wiki=self.wiki, debug=self.debug))
         return success
 
     # def run_one_timers(self):

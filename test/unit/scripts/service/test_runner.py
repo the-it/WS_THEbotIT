@@ -3,7 +3,6 @@ from pathlib import Path
 from shutil import rmtree, copy
 
 from test import *
-from test.unit.scripts.service.bots_for_scheduler.test_bot_1 import TestBot1
 from scripts.runner import TheBotItScheduler
 
 
@@ -58,7 +57,17 @@ class TestBotScheduler(TestCase):
 
     def test_run_one_bot_from_file(self):
         self._copy_bot_to_run_dir("test_bot_1")
-        with patch("scripts.runner.TheBotItScheduler.run_bot", new_callable=mock.Mock()) as run_mock:
+        from scripts.one_time_run_test.test_bot_1 import TestBot1
+        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
             self.assertTrue(self.bot_it_scheduler.run_bot_from_file("test_bot_1.py"))
             compare(1, run_mock.call_count)
             self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], TestBot1))
+
+    def test_run_two_bots_from_file(self):
+        self._copy_bot_to_run_dir("test_bot_34")
+        from scripts.one_time_run_test.test_bot_34 import TestBot3, TestBot4
+        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
+            self.assertTrue(self.bot_it_scheduler.run_bot_from_file("test_bot_34.py"))
+            compare(2, run_mock.call_count)
+            self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], TestBot3))
+            self.assertTrue(isinstance(run_mock.mock_calls[1][1][0], TestBot4))
