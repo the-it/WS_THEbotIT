@@ -1,6 +1,9 @@
+from datetime import datetime
 import os
 from pathlib import Path
 from shutil import rmtree, copy
+
+from git import Repo
 
 from test import *
 from scripts.runner import TheBotItScheduler
@@ -28,6 +31,10 @@ class TestBotScheduler(TestCase):
     def _copy_bot_to_run_dir(self, name: str):
         copy(str(Path(__file__).parent.joinpath("bots_for_scheduler", "{}.py".format(name))),
              str(self._get_one_time_run_test()))
+
+    def _copy_bot_to_archive_dir(self, name: str):
+        copy(str(Path(__file__).parent.joinpath("bots_for_scheduler", "{}.py".format(name))),
+             str(self._get_archive_test()))
 
     def _remove_temp_folder(self):
         if os.path.exists(str(self._get_archive_test())):
@@ -59,7 +66,7 @@ class TestBotScheduler(TestCase):
         self._copy_bot_to_run_dir("test_bot_1")
         from scripts.one_time_run_test.test_bot_1 import TestBot1
         with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
-            self.assertTrue(self.bot_it_scheduler.run_bot_from_file("test_bot_1.py"))
+            self.assertTrue(self.bot_it_scheduler._run_bot_from_file("test_bot_1.py"))
             compare(1, run_mock.call_count)
             self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], TestBot1))
 
@@ -67,7 +74,56 @@ class TestBotScheduler(TestCase):
         self._copy_bot_to_run_dir("test_bot_34")
         from scripts.one_time_run_test.test_bot_34 import TestBot3, TestBot4
         with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
-            self.assertTrue(self.bot_it_scheduler.run_bot_from_file("test_bot_34.py"))
+            self.assertTrue(self.bot_it_scheduler._run_bot_from_file("test_bot_34.py"))
             compare(2, run_mock.call_count)
             self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], TestBot3))
             self.assertTrue(isinstance(run_mock.mock_calls[1][1][0], TestBot4))
+
+    def test_run_two_bots_from_file_one_went_wrong(self):
+        self._copy_bot_to_run_dir("test_bot_34")
+        from scripts.one_time_run_test.test_bot_34 import TestBot3, TestBot4
+        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(side_effect=[True, False])) as run_mock:
+            self.assertFalse(self.bot_it_scheduler._run_bot_from_file("test_bot_34.py"))
+            compare(2, run_mock.call_count)
+            self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], TestBot3))
+            self.assertTrue(isinstance(run_mock.mock_calls[1][1][0], TestBot4))
+        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(side_effect=[False, True])) as run_mock:
+            self.assertFalse(self.bot_it_scheduler._run_bot_from_file("test_bot_34.py"))
+            compare(2, run_mock.call_count)
+            self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], TestBot3))
+            self.assertTrue(isinstance(run_mock.mock_calls[1][1][0], TestBot4))
+
+    def test_move_file_folder_exists(self):
+        self._copy_bot_to_run_dir("test_bot_1")
+        now = datetime.today()
+        path_to_current_archive = str(self._get_archive_test().joinpath(str(now.year)))
+        os.mkdir(path_to_current_archive)
+        self.bot_it_scheduler._move_file_to_archive("test_bot_1.py")
+        self.assertIn("test_bot_1.py", os.listdir(path_to_current_archive))
+        with open(path_to_current_archive + os.sep + "test_bot_1.py", "r") as bot_file:
+            compare(StringComparison("\# successful processed on {}".format(now.strftime("%Y-%m-%d"))), bot_file.readline())
+
+    def test_move_file_folder_not_exists(self):
+        self._copy_bot_to_run_dir("test_bot_1")
+        path_to_current_archive = str(self._get_archive_test().joinpath(str(datetime.today().year)))
+        # os.mkdir(path_to_current_archive), don't create the folder
+        self.bot_it_scheduler._move_file_to_archive("test_bot_1.py")
+        self.assertIn("test_bot_1.py", os.listdir(path_to_current_archive))
+
+    def test_change_repo(self):
+        self._copy_bot_to_archive_dir("test_bot_1")
+        with patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
+            self.bot_it_scheduler._push_files(["test_bot_1"])
+            file_add = str(self._get_archive_test().joinpath(str(datetime.today().year), "test_bot_1"))
+            file_remove = str(self._get_one_time_run_test().joinpath("test_bot_1"))
+            compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[0])
+            print(str(repo_mock.mock_calls[1][1][0][0]))
+            compare("().index.add", repo_mock.mock_calls[1][0])
+            compare([file_add], repo_mock.mock_calls[1][1][0])
+            compare("().index.remove", repo_mock.mock_calls[2][0])
+            compare([file_remove], repo_mock.mock_calls[2][1][0])
+            compare("().index.commit", repo_mock.mock_calls[3][0])
+            compare("move successful bot scripts: test_bot_1", repo_mock.mock_calls[3][1][0])
+            compare("().remote", repo_mock.mock_calls[4][0])
+            compare("origin", repo_mock.mock_calls[4][1][0])
+            compare("().remote().push", repo_mock.mock_calls[5][0])
