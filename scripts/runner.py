@@ -45,7 +45,7 @@ class TheBotItScheduler(BotScheduler):
     def _get_files_to_run(self) -> List[str]:
         file_list = os.listdir(str(self.path_one_time))
         file_list.remove("init.py")
-        return file_list
+        return sorted(file_list)
 
     def _run_bot_from_file(self, file: str) -> bool:
         self.logger.info('Run {}'.format(file))
