@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  pip3:
+  quality:
     docker:
       - image: circleci/python:3.6.3
     working_directory: ~/repo
@@ -23,18 +23,10 @@ jobs:
           key: v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
           name: run unittest
+          when: always
           command: |
             . venv/bin/activate
-            make unittest
-  static quality:
-    docker:
-      - image: circleci/python:3.6.3
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+            make coverage
       - run:
           name: flake8
           when: always
@@ -97,11 +89,7 @@ workflows:
   version: 2
   test-and-quality:
     jobs:
-      - pip3
+      - quality
       - coverage:
           requires:
-            - pip3
-            - static quality
-      - static quality:
-          requires:
-            - pip3
+            - quality
