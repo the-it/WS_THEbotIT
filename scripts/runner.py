@@ -90,10 +90,10 @@ class TheBotItScheduler(BotScheduler):
         self._push_files(list_of_successful_files)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
+    SCHEDULER = TheBotItScheduler(wiki=WS_WIKI, debug=False)
     SCHEDULER.daily_bots = [AuthorList, ReScanner]
     SCHEDULER.weekly_bots = {0: [],  # monday
                              1: [],

@@ -66,7 +66,6 @@ class TestBotScheduler(TestCase):
 
     def test_run_one_bot_from_file(self):
         self._copy_bot_to_run_dir("test_bot_1")
-        TestBot1 = getattr(import_module('scripts.one_time_run_test.test_bot_1'), "TestBot1")
         with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
             self.assertTrue(self.bot_it_scheduler._run_bot_from_file("test_bot_1.py"))
             compare(1, run_mock.call_count)
@@ -146,3 +145,17 @@ class TestBotScheduler(TestCase):
             compare("().remote", repo_mock.mock_calls[4][0])
             compare("origin", repo_mock.mock_calls[4][1][0])
             compare("().remote().push", repo_mock.mock_calls[5][0])
+
+    def test_complete_task(self):
+        self._copy_bot_to_run_dir("test_bot_1")
+        self._copy_bot_to_run_dir("test_bot_2")
+        with patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
+            with patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
+                with patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
+                    self.bot_it_scheduler.task()
+                    compare(1, super_mock.call_count)
+                    compare(2, run_mock.call_count)
+                    compare(run_mock.mock_calls[0][1][0], "test_bot_1.py")
+                    compare(run_mock.mock_calls[1][1][0], "test_bot_2.py")
+                    compare(1, push_mock.call_count)
+                    compare(push_mock.mock_calls[0][1][0], ["test_bot_1.py"])
