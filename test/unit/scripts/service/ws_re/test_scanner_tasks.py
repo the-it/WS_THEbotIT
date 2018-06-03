@@ -144,7 +144,7 @@ class TestERROTask(TestCase):
                     task.task(":RE:Lemma1", "scripts.service.ws_re.data_types.ReDatenException: "
                                             "The count of start templates doesn't match the count of end templates.")
                     task.finish_task()
-                    page_mock.assert_called_once()
+                    self.assertEqual(1, page_mock.call_count)
 
     def test_finish_up_no_errors(self):
         with patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
@@ -153,4 +153,4 @@ class TestERROTask(TestCase):
                 with LogCapture():
                     task = ERROTask(None, self.logger, debug=False)
                     task.finish_task()
-                    page_mock.assert_not_called()
+                    self.assertEqual(0, page_mock.call_count)
