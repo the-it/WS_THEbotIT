@@ -78,7 +78,7 @@ class GlCreateMagazine(CanonicalBot):
                 ref = search_for_refs(proofread_lemma.text)
                 page_dict = {'q': proofread_lemma.quality_level}
                 if ref:
-                    self.logger.info('There are refs ({refs}) @ {year}, {page}'.format(refs=ref,
+                    self.logger.debug('There are refs ({refs}) @ {year}, {page}'.format(refs=ref,
                                                                                        page=page,
                                                                                        year=year))
                     page_dict.update({'r': ref})
@@ -92,7 +92,7 @@ class GlCreateMagazine(CanonicalBot):
 
     def process_indexes(self):
         for index_lemma, index_page in self._get_indexes():
-            self.logger.info("[[Index:{}]]".format(index_lemma))
+            self.logger.debug("[[Index:{}]]".format(index_lemma))
             magazines = self.regex_magazine_in_index.findall(index_page.text)
             hit_year = self.regex_index.search(index_lemma)
             year = hit_year.group(1)
@@ -123,10 +123,10 @@ class GlCreateMagazine(CanonicalBot):
     def make_magazines(self, dictionary_of_magazines_by_year):
         for idx_year, year in enumerate(dictionary_of_magazines_by_year):
             magazines = dictionary_of_magazines_by_year[year]
-            self.logger.info('make_mag_year {idx}/{len}'
+            self.logger.debug('make_mag_year {idx}/{len}'
                              .format(idx=idx_year + 1, len=len(dictionary_of_magazines_by_year)))
             for idx_mag, magazine in enumerate(magazines):
-                self.logger.info('make_mag_mag {idx}/{len} ... issue:{year}/{mag}'
+                self.logger.debug('make_mag_mag {idx}/{len} ... issue:{year}/{mag}'
                                  .format(idx=idx_mag + 1, len=len(magazines),
                                          year=year, mag=magazine))
                 if year == '1986' and magazine == '31':
@@ -141,7 +141,7 @@ class GlCreateMagazine(CanonicalBot):
                 new_text = self.make_magazine(year, magazine)
                 if new_text:
                     if new_text != lemma.text:
-                        self.logger.info('Print [[Die Gartenlaube ({year})/Heft {magazine}]].'
+                        self.logger.debug('Print [[Die Gartenlaube ({year})/Heft {magazine}]].'
                                          .format(year=year, magazine=magazine))
                         if lemma.text != '':
                             lemma.text = new_text
@@ -150,7 +150,7 @@ class GlCreateMagazine(CanonicalBot):
                             lemma.text = new_text
                             lemma.save('automatische Hefterstellung', botflag=True)
                     else:
-                        self.logger.info('Keine Änderung im Text ({year}/{magazine}).'
+                        self.logger.debug('Keine Änderung im Text ({year}/{magazine}).'
                                          .format(year=year, magazine=magazine))
 
     def make_magazine(self, year, magazine):
@@ -167,7 +167,7 @@ class GlCreateMagazine(CanonicalBot):
             list_of_pages = self.data['indexes'][year][magazine]
         except KeyError:
             raise BotException('The list of indexes is incorrect, '
-                              'year:{year} or mag:{mag} is missing.'
+                               'year:{year} or mag:{mag} is missing.'
                                .format(year=year, mag=magazine))
         quality = 4
         for page in list_of_pages:
@@ -179,7 +179,7 @@ class GlCreateMagazine(CanonicalBot):
                 if page_quality < quality:
                     quality = page_quality
                 if quality < 3:
-                    self.logger.info('The quality of {year}/{magazine} is too poor.'
+                    self.logger.debug('The quality of {year}/{magazine} is too poor.'
                                      .format(year=year, magazine=magazine))
                     return None
             except KeyError:
