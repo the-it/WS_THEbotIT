@@ -118,7 +118,8 @@ class TestReScannerTask(TestCase):
 
 class TestERROTask(TestCase):
     def setUp(self):
-        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
+        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
+                                 log_to_screen=False)
 
     def test_process(self):
         with LogCapture():
@@ -127,11 +128,29 @@ class TestERROTask(TestCase):
                                     "The count of start templates doesn't match the count of end templates.")
             task.task(":RE:Lemma2", "scripts.service.ws_re.data_types.ReDatenException: "
                                     "REDaten has wrong key word. --> {'key': 'GEMEINFREI', 'value': '2024'}")
-            self.assertRegex(task._build_entry(), "==\\d{4}-\\d{2}-\\d{2}==\n\n"
+            self.assertRegex(task._build_entry(), "\n\n==\\d{4}-\\d{2}-\\d{2}==\n\n"
                                                   "\\* \\[\\[:RE:Lemma1\\]\\]\n"
-                                                  "\\*\\* scripts\\.service\\.ws_re\\.data_types\\.ReDatenException: "
-                                                  "The count of start templates doesn't match the count of end templates.\n"
+                                                  "\\*\\* scripts\\.service\\.ws_re\\.data_types\\.ReDatenException: The count of start templates doesn't match the count of end templates.\n"
                                                   "\\* \\[\\[:RE:Lemma2\\]\\]\n"
-                                                  "\\*\\* scripts\\.service\\.ws_re\\.data_types\\.ReDatenException: "
-                                                  "REDaten has wrong key word. --> \\{'key': 'GEMEINFREI', 'value': '2024'\\}\n"
+                                                  "\\*\\* scripts\\.service\\.ws_re\\.data_types\\.ReDatenException: REDaten has wrong key word. --> \\{'key': 'GEMEINFREI', 'value': '2024'\\}"
                              )
+
+    def test_finish_up(self):
+        with patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
+            with patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
+                type(page_mock).text = text_mock
+                with LogCapture():
+                    task = ERROTask(None, self.logger, debug=False)
+                    task.task(":RE:Lemma1", "scripts.service.ws_re.data_types.ReDatenException: "
+                                            "The count of start templates doesn't match the count of end templates.")
+                    task.finish_task()
+                    self.assertEqual(1, page_mock.call_count)
+
+    def test_finish_up_no_errors(self):
+        with patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
+            with patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
+                type(page_mock).text = text_mock
+                with LogCapture():
+                    task = ERROTask(None, self.logger, debug=False)
+                    task.finish_task()
+                    self.assertEqual(0, page_mock.call_count)

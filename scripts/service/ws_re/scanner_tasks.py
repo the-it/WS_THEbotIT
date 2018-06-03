@@ -65,16 +65,17 @@ class ERROTask(ReScannerTask):
         self.data.append((lemma, reason))
 
     def _build_entry(self) -> str:
-        caption = "=={}==\n\n".format(datetime.now().strftime("%Y-%m-%d"))
+        caption = "\n\n=={}==\n\n".format(datetime.now().strftime("%Y-%m-%d"))
         entries = []
         for item in self.data:
             entries.append("* [[{lemma}]]\n** {reason}".format(lemma=item[0], reason=item[1]))
         body = "\n".join(entries)
-        return caption + body + "\n"
+        return caption + body
 
     def finish_task(self):
-        if not self.debug:
-            page = Page(self.wiki, "Benutzer:THEbotIT/Logs/ReScanner/Errors")
-            page.text = page.text + self._build_entry()
-            page.save("Neue Fehlermeldungen", botflag=True)
+        if self.data:
+            if not self.debug:
+                page = Page(self.wiki, "Benutzer:THEbotIT/Logs/ReScanner/Errors")
+                page.text = page.text + self._build_entry()
+                page.save("Neue Fehlermeldungen", botflag=True)
         super().finish_task()
