@@ -71,12 +71,12 @@ class WikiLogger(object):
         debug_log.setFormatter(formatter)
         self._logger.addHandler(error_log)
         self._logger.addHandler(debug_log)
-        if self._log_to_screen:
+        if self._log_to_screen:  # pragma: no cover
             # this activates the output of the logger
-            debug_stream = logging.StreamHandler(sys.stdout)  # pragma: no cover
-            debug_stream.setLevel(logging.DEBUG)  # pragma: no cover
-            debug_stream.setFormatter(formatter)  # pragma: no cover
-            self._logger.addHandler(debug_stream)  # pragma: no cover
+            debug_stream = logging.StreamHandler(sys.stdout)
+            debug_stream.setLevel(logging.DEBUG)
+            debug_stream.setFormatter(formatter)
+            self._logger.addHandler(debug_stream)
 
     def debug(self, msg: str):
         self._logger.log(logging.DEBUG, msg)
