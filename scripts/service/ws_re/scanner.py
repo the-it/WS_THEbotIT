@@ -7,7 +7,7 @@ from pywikibot import Page, Site
 
 from scripts.service.ws_re.data_types import RePage, ReDatenException
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask
-from tools.bots import CanonicalBot, BotExeption
+from tools.bots import CanonicalBot, BotException
 from tools.catscan import PetScan
 
 
@@ -26,7 +26,7 @@ class ReScanner(CanonicalBot):
             self.logger.warning("Try to get the deprecated data back.")
             try:
                 self.data.get_deprecated()
-            except BotExeption:
+            except BotException:
                 self.logger.warning("There isn't deprecated data to reload.")
         return self
 

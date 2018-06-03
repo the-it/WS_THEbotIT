@@ -8,7 +8,7 @@ import time
 from pywikibot import Page
 
 from test import *
-from tools.bots import BotExeption, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
+from tools.bots import BotException, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
     _DATA_PATH, _get_data_path
 
 _DATA_PATH_TEST = _DATA_PATH + "_test"
@@ -345,7 +345,7 @@ class TestPersistedData(TestCase):
         self.assertEqual({}, self.data)
 
     def test_assign_complete_dict_wrong_type(self):
-        with self.assertRaises(BotExeption):
+        with self.assertRaises(BotException):
             self.data.assign_dict(1)
 
     def test_dump(self):
@@ -374,7 +374,7 @@ class TestPersistedData(TestCase):
         self.assertEqual([1, 2], self.data["a"])
 
     def test_no_data_to_load(self):
-        with self.assertRaises(BotExeption):
+        with self.assertRaises(BotException):
             self.data.load()
         self.assertFalse(self.data.keys())
 
@@ -459,7 +459,7 @@ class TestPersistedData(TestCase):
 
     def test_get_back_data_no_data_there(self):
         self._make_json_file()
-        with self.assertRaises(BotExeption):
+        with self.assertRaises(BotException):
             self.data.get_deprecated()
 
 

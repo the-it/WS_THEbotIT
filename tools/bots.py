@@ -8,7 +8,7 @@ import sys
 from pywikibot import Page, Site
 
 
-class BotExeption(Exception):
+class BotException(Exception):
     pass
 
 
@@ -269,7 +269,7 @@ class PersistedData(Mapping):
         if isinstance(new_dict, dict):
             self.data = new_dict
         else:
-            raise BotExeption("{} has the wrong type. It must be a dictionary.".format(new_dict))
+            raise BotException("{} has the wrong type. It must be a dictionary.".format(new_dict))
 
     def dump(self, success=True):
         if success:
@@ -287,7 +287,7 @@ class PersistedData(Mapping):
                 self.data = json.load(json_file)
             os.rename(self.file_name, self.file_name + ".deprecated")
         else:
-            raise BotExeption("No data to load.")
+            raise BotException("No data to load.")
 
     def update(self, dict_to_update: dict):
         self.data.update(dict_to_update)
@@ -297,7 +297,7 @@ class PersistedData(Mapping):
             with open("{}.{}".format(self.file_name, type_of_data), mode="r") as json_file:
                 self.assign_dict(json.load(json_file))
         except FileNotFoundError:
-            raise BotExeption("There is no {} data to load.".format(type_of_data))
+            raise BotException("There is no {} data to load.".format(type_of_data))
 
     def get_broken(self):
         self._recover_data("broken")

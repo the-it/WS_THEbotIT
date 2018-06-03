@@ -5,7 +5,7 @@ from typing import Iterator
 from pywikibot import Page, Site
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
 from tools.catscan import PetScan
-from tools.bots import CanonicalBot, BotExeption
+from tools.bots import CanonicalBot, BotException
 
 
 def search_for_refs(text):
@@ -112,8 +112,8 @@ class GlCreateMagazine(CanonicalBot):
             try:
                 dictionary_of_magazines = self.data['indexes'][year]
             except KeyError:
-                raise BotExeption('The list of indexes is incorrect, {year} is missing.'
-                                  .format(year=year))
+                raise BotException('The list of indexes is incorrect, {year} is missing.'
+                                   .format(year=year))
             for magazine in dictionary_of_magazines:
                 set_of_potential_pages = set(dictionary_of_magazines[magazine])
                 if set_of_potential_pages.intersection(set_of_pages):
@@ -161,14 +161,14 @@ class GlCreateMagazine(CanonicalBot):
                     last_magazine = False
                     break
         except KeyError:
-            raise BotExeption('The list of indexes is incorrect, {year} is missing.'
-                              .format(year=year))
+            raise BotException('The list of indexes is incorrect, {year} is missing.'
+                               .format(year=year))
         try:
             list_of_pages = self.data['indexes'][year][magazine]
         except KeyError:
-            raise BotExeption('The list of indexes is incorrect, '
+            raise BotException('The list of indexes is incorrect, '
                               'year:{year} or mag:{mag} is missing.'
-                              .format(year=year, mag=magazine))
+                               .format(year=year, mag=magazine))
         quality = 4
         for page in list_of_pages:
             try:
