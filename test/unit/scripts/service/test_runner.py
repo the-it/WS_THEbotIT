@@ -59,6 +59,7 @@ class TestBotScheduler(TestCase):
     def test_detect_files_to_run(self):
         self._copy_bot_to_run_dir("test_bot_1")
         self._copy_bot_to_run_dir("test_bot_2")
+        os.mkdir(str(self._get_one_time_run_test().joinpath("testfolder")))
         file_list = self.bot_it_scheduler._get_files_to_run()
         self.assertEqual(2, len(file_list))
         self.assertIn("test_bot_1.py", file_list)
