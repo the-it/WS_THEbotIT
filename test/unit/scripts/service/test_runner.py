@@ -31,7 +31,6 @@ class TestBotScheduler(TestCase):
         os.mkdir(str(path))
         open(str(path.joinpath("__init__.py")), 'w').close()
 
-    @skipIf(sys.platform.startswith("win"), "I don't know what is wrong here ... but windows is unable to find this file.")
     def _copy_bot_to_run_dir(self, name: str):
         copy(str(Path(__file__).parent.joinpath("bots_for_scheduler", "{}.py".format(name))),
              str(self._get_one_time_run_test()))
@@ -74,6 +73,7 @@ class TestBotScheduler(TestCase):
             compare(1, run_mock.call_count)
             compare(type(run_mock.mock_calls[0][1][0]).__name__, "TestBot1")
 
+    @skipIf(sys.platform.startswith("win"), "I don't know what is wrong here ... but windows is unable to find this file.")
     def test_run_two_bots_from_file(self):
         self._copy_bot_to_run_dir("test_bot_34")
         # both runs successfule
