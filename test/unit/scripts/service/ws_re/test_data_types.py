@@ -497,3 +497,15 @@ class TestRePage(TestCase):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|A. Author.}}"
         article = ReArticle.from_text(article_text)
         self.assertIn("{{REAutor|A. Author.}}", article.to_text())
+
+    def test_bug_too_much_blanks(self):
+        before = """{{REAbschnitt}}
+text
+{{REAutor|Oberhummer.}}
+<u>Anmerkung WS:</u><br /><references/>"""
+        self.text_mock.return_value = before
+        after = """{{REAbschnitt}}
+text
+{{REAutor|Oberhummer.}}
+<u>Anmerkung WS:</u><br /><references/>"""
+        self.assertEqual(after, str(RePage(self.page_mock)))
