@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from test import *
-from tools.bots import CanonicalBot, BotExeption
+from tools.bots import CanonicalBot, BotException
 from tools.bot_scheduler import BotScheduler
 
 
@@ -52,7 +52,7 @@ class TestBotScheduler(TestCase):
 
     def test_wrong_type_runner(self):
         bot = list()
-        with self.assertRaises(BotExeption):
+        with self.assertRaises(BotException):
             self.bot_scheduler.run_bot(bot)
 
     class Bot1(CanonicalBot):

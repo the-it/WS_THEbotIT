@@ -4,7 +4,7 @@ import datetime
 from pywikibot import Page
 from tools.catscan import PetScan
 from tools.bots import CanonicalBot
-from tools.bots import BotExeption
+from tools.bots import BotException
 
 
 class RowBasic():
@@ -17,7 +17,7 @@ class RowBasic():
         self.today = datetime.datetime.now()
 
     def build_row(self):
-        raise BotExeption("Class {} should implement the method build_row()".format(self))
+        raise BotException("Class {} should implement the method build_row()".format(self))
 
     def get_sites_in_cat(self, list_of_cat, namespace=None, depth=None, any_template: list = None,
                          union=False):

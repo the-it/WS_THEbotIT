@@ -22,8 +22,6 @@ class TestReScanner(TestCase):
         self.petscan_mock.return_value = mock.Mock(run=self.run_mock)
         setup_data_path(self)
         self.addCleanup(patch.stopall)
-        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
-        self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
         teardown_data_path()
@@ -136,7 +134,7 @@ class TestReScanner(TestCase):
                                     ("ReScanner", "INFO", 'Start processing the lemmas.'),
                                     ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                     ("ReScanner", "INFO", 'I'),
-                                    ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
+                                    ("ReScanner", "DEBUG", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                     ("ReScanner", "INFO", 'closing task ONE1'),
                                     ('ReScanner', 'INFO', 'closing task ERRO'))
                 log_catcher.check_present(*expected_logging, order_matters=True)
@@ -156,7 +154,7 @@ class TestReScanner(TestCase):
                                     ("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                     ("ReScanner", "INFO", 'I'),
                                     ("ReScanner", "INFO", 'II'),
-                                    ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
+                                    ("ReScanner", "DEBUG", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                     ("ReScanner", "INFO", 'closing task ONE1'),
                                     ("ReScanner", "INFO", 'closing task TWO2'),
                                     ('ReScanner', 'INFO', 'closing task ERRO'))
@@ -200,7 +198,7 @@ class TestReScanner(TestCase):
                 bot.tasks = [self.ONE1Task]
                 bot.run()
                 expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                    ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'))
+                                    ("ReScanner", "DEBUG", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_success_text_changed(self):
@@ -208,13 +206,13 @@ class TestReScanner(TestCase):
         self._mock_task()
         self.lemma_mock.return_value = [':RE:Lemma1']
         self.task_mock.return_value = {"success": True, "changed": True}
-        with LogCapture() as log_catcher:
+        with LogCapture(level=0) as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
                 expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
-                                    ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1'))
+                                    ("ReScanner", "DEBUG", 'ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1'))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_no_success_nothing_changed(self):
@@ -229,7 +227,7 @@ class TestReScanner(TestCase):
                 bot.run()
                 expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                     ("ReScanner", "ERROR", 'Error in ONE1/:RE:Lemma1, no data where altered.'),
-                                    ("ReScanner", "INFO", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'))
+                                    ("ReScanner", "DEBUG", 'ReScanner hat folgende Aufgaben bearbeitet: BASE'))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_no_success_but_text_has_changed(self):
@@ -257,7 +255,7 @@ class TestReScanner(TestCase):
                     bot.run()
                     expected_logging = (("ReScanner", "INFO", 'Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]'),
                                         ('ReScanner', 'INFO', 'I'),
-                                        ('ReScanner', 'INFO','ReScanner hat folgende Aufgaben bearbeitet: BASE'),
+                                        ('ReScanner', 'DEBUG','ReScanner hat folgende Aufgaben bearbeitet: BASE'),
                                         ('ReScanner', 'INFO', 'closing task ONE1'))
                     log_catcher.check_present(*expected_logging, order_matters=True)
 
