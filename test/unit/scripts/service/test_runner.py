@@ -28,7 +28,7 @@ class TestBotScheduler(TestCase):
     @staticmethod
     def _create_dir_and_init(path: Path):
         os.mkdir(str(path))
-        open(str(path.joinpath("init.py")), 'w').close()
+        open(str(path.joinpath("__init__.py")), 'w').close()
 
     def _copy_bot_to_run_dir(self, name: str):
         copy(str(Path(__file__).parent.joinpath("bots_for_scheduler", "{}.py".format(name))),
@@ -159,3 +159,12 @@ class TestBotScheduler(TestCase):
                     compare(run_mock.mock_calls[1][1][0], "test_bot_2.py")
                     compare(1, push_mock.call_count)
                     compare(push_mock.mock_calls[0][1][0], ["test_bot_1.py"])
+
+    def test_complete_task_no_files_to_process(self):
+        with patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
+            with patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
+                with patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
+                    self.bot_it_scheduler.task()
+                    compare(1, super_mock.call_count)
+                    compare(0, run_mock.call_count)
+                    compare(0, push_mock.call_count)

@@ -43,8 +43,10 @@ class TheBotItScheduler(BotScheduler):
         return path_to_archive
 
     def _get_files_to_run(self) -> List[str]:
-        file_list = os.listdir(str(self.path_one_time))
-        file_list.remove("init.py")
+        file_list = [file for file in os.listdir(str(self.path_one_time))
+                     if os.path.isfile(os.path.join(self.path_one_time, file))]
+        file_list.remove("__init__.py")
+        self.logger.info("Files in one_time directory: {}".format(file_list))
         return sorted(file_list)
 
     def _run_bot_from_file(self, file: str) -> bool:
@@ -87,7 +89,10 @@ class TheBotItScheduler(BotScheduler):
             if self._run_bot_from_file(file):
                 self._move_file_to_archive(file)
                 list_of_successful_files.append(file)
-        self._push_files(list_of_successful_files)
+        if list_of_successful_files:
+            self.logger.info("This files were successful: {}".format(list_of_successful_files))
+            self._push_files(list_of_successful_files)
+        return True
 
 
 if __name__ == "__main__":  # pragma: no cover
