@@ -3,7 +3,7 @@ from typing import Dict, Tuple
 
 from pywikibot import Site
 
-from tools.bots import CanonicalBot, BotException
+from tools.bots import BotException, CanonicalBot, OneTimeBot
 
 
 class BotScheduler(CanonicalBot):
@@ -53,9 +53,9 @@ class BotScheduler(CanonicalBot):
     def bots_on_last_day_of_month(self, new_config: Tuple[type(CanonicalBot)]):
         self._bots_on_last_day_of_month = new_config
 
-    def run_bot(self, bot_to_run: CanonicalBot) -> bool:
-        if not isinstance(bot_to_run, CanonicalBot):
-            raise BotException("{} is not an instance of CanonicalBot".format(bot_to_run))
+    def run_bot(self, bot_to_run: OneTimeBot) -> bool:
+        if not isinstance(bot_to_run, OneTimeBot):
+            raise BotException("{} is not an instance of CanonicalBot or OneTimeBot".format(bot_to_run))
         self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
         with bot_to_run:
             success = bot_to_run.run()
