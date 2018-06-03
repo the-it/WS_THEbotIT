@@ -76,7 +76,6 @@ class ERROTask(ReScannerTask):
         if self.data:
             if not self.debug:
                 page = Page(self.wiki, "Benutzer:THEbotIT/Logs/ReScanner/Errors")
-                print(page.text)
                 page.text = page.text + self._build_entry()
                 page.save("Neue Fehlermeldungen", botflag=True)
         super().finish_task()
