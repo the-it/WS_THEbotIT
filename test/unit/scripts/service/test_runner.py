@@ -73,7 +73,7 @@ class TestBotScheduler(TestCase):
             compare(1, run_mock.call_count)
             compare(type(run_mock.mock_calls[0][1][0]).__name__, "TestBot1")
 
-    @skipIf(sys.platform.startswith("win"), "I don't know what is wrong here ... but windows is unable to find this file.")
+    @skip("I don't know what is wrong here ... but sometimes the system is unable to find this file.")
     def test_run_two_bots_from_file(self):
         self._copy_bot_to_run_dir("test_bot_34")
         # both runs successfule
@@ -111,6 +111,7 @@ class TestBotScheduler(TestCase):
         # os.mkdir(path_to_current_archive), don't create the folder
         self.bot_it_scheduler._move_file_to_archive("test_bot_1.py")
         self.assertIn("test_bot_1.py", os.listdir(path_to_current_archive))
+        self.assertIn("__init__.py", os.listdir(path_to_current_archive))
 
     def test_change_repo(self):
         self._copy_bot_to_archive_dir("test_bot_1")

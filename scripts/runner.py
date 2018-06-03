@@ -40,6 +40,7 @@ class TheBotItScheduler(BotScheduler):
         path_for_creation = str(path_to_archive)
         if not os.path.exists(path_for_creation):
             os.mkdir(path_for_creation)
+            open(str(path_to_archive.joinpath("__init__.py")), "w").close()
         return path_to_archive
 
     def _get_files_to_run(self) -> List[str]:
