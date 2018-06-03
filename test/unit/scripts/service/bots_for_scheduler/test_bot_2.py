@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from pywikibot import Site
 
 from tools.bots import OneTimeBot
@@ -10,6 +9,6 @@ class TestBot2(OneTimeBot):
 
 
 if __name__ == "__main__":
-    wiki = Site(code='de', fam='wikisource', user='THEbotIT')
-    with TestBot2(wiki=wiki, debug=True) as bot:
+    WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    with TestBot2(wiki=WIKI, debug=True) as bot:
         bot.run()

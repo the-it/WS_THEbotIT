@@ -55,7 +55,8 @@ class BotScheduler(CanonicalBot):
 
     def run_bot(self, bot_to_run: OneTimeBot) -> bool:
         if not isinstance(bot_to_run, OneTimeBot):
-            raise BotException("{} is not an instance of CanonicalBot or OneTimeBot".format(bot_to_run))
+            raise BotException("{} is not an instance of CanonicalBot or OneTimeBot"
+                               .format(bot_to_run))
         self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
         with bot_to_run:
             success = bot_to_run.run()
