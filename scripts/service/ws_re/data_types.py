@@ -317,7 +317,7 @@ class RePage(Sequence):
             last_handled_char = pos_author["pos"][1]
         # handle text after the last complete article
         if last_handled_char < len(self.pre_text):
-            self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)])
+            self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)].strip())
 
     def __getitem__(self, item: int) -> ReArticle:
         return self._article_list[item]
