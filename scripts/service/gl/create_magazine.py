@@ -79,8 +79,8 @@ class GlCreateMagazine(CanonicalBot):
                 page_dict = {'q': proofread_lemma.quality_level}
                 if ref:
                     self.logger.debug('There are refs ({refs}) @ {year}, {page}'.format(refs=ref,
-                                                                                       page=page,
-                                                                                       year=year))
+                                                                                        page=page,
+                                                                                        year=year))
                     page_dict.update({'r': ref})
                 self.data['pages'][year][page] = page_dict
                 if year not in temp_data.keys():
@@ -124,11 +124,11 @@ class GlCreateMagazine(CanonicalBot):
         for idx_year, year in enumerate(dictionary_of_magazines_by_year):
             magazines = dictionary_of_magazines_by_year[year]
             self.logger.debug('make_mag_year {idx}/{len}'
-                             .format(idx=idx_year + 1, len=len(dictionary_of_magazines_by_year)))
+                              .format(idx=idx_year + 1, len=len(dictionary_of_magazines_by_year)))
             for idx_mag, magazine in enumerate(magazines):
                 self.logger.debug('make_mag_mag {idx}/{len} ... issue:{year}/{mag}'
-                                 .format(idx=idx_mag + 1, len=len(magazines),
-                                         year=year, mag=magazine))
+                                  .format(idx=idx_mag + 1, len=len(magazines),
+                                          year=year, mag=magazine))
                 if year == '1986' and magazine == '31':
                     self.logger.warning('There is magazine 1986, 31, '
                                         'this is special, no creating here')
@@ -142,7 +142,7 @@ class GlCreateMagazine(CanonicalBot):
                 if new_text:
                     if new_text != lemma.text:
                         self.logger.debug('Print [[Die Gartenlaube ({year})/Heft {magazine}]].'
-                                         .format(year=year, magazine=magazine))
+                                          .format(year=year, magazine=magazine))
                         if lemma.text != '':
                             lemma.text = new_text
                             lemma.save('Automatische Aktualisierung des Heftes', botflag=True)
@@ -151,7 +151,7 @@ class GlCreateMagazine(CanonicalBot):
                             lemma.save('automatische Hefterstellung', botflag=True)
                     else:
                         self.logger.debug('Keine Änderung im Text ({year}/{magazine}).'
-                                         .format(year=year, magazine=magazine))
+                                          .format(year=year, magazine=magazine))
 
     def make_magazine(self, year, magazine):
         last_magazine = True
@@ -180,7 +180,7 @@ class GlCreateMagazine(CanonicalBot):
                     quality = page_quality
                 if quality < 3:
                     self.logger.debug('The quality of {year}/{magazine} is too poor.'
-                                     .format(year=year, magazine=magazine))
+                                      .format(year=year, magazine=magazine))
                     return None
             except KeyError:
                 self.logger.warning('The list of pages is incorrect, '
