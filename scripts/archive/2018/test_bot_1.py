@@ -1,3 +1,4 @@
+# successful processed on 2018-06-03
 from pywikibot import Site
 
 from tools.bots import OneTimeBot
