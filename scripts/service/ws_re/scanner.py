@@ -71,7 +71,7 @@ class ReScanner(CanonicalBot):
         if not self.debug:
             save_message = 'ReScanner hat folgende Aufgaben bearbeitet: {}' \
                 .format(', '.join(list_of_done_tasks))
-            self.logger.info(save_message)
+            self.logger.debug(save_message)
             try:
                 re_page.save(save_message)
             except ReDatenException:
