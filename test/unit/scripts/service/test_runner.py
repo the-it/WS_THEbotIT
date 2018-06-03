@@ -111,6 +111,7 @@ class TestBotScheduler(TestCase):
         # os.mkdir(path_to_current_archive), don't create the folder
         self.bot_it_scheduler._move_file_to_archive("test_bot_1.py")
         self.assertIn("test_bot_1.py", os.listdir(path_to_current_archive))
+        self.assertIn("__init__.py", os.listdir(path_to_current_archive))
 
     def test_change_repo(self):
         self._copy_bot_to_archive_dir("test_bot_1")
