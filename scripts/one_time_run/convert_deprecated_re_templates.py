@@ -1,9 +1,7 @@
 from pywikibot import Site
 
-from test import *
 from tools.bots import OneTimeBot
-from tools.template_handler import TemplateFinder, TemplateHandler
-
+from tools.template_handler import TemplateHandler
 
 
 class ConvertDeprecatedReTemplates(OneTimeBot):
@@ -19,45 +17,9 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
         return template_daten.get_str()
 
     def task(self):
+        print(self)
         return True
 
-
-class TestConvertDeprecatedReTemplates(TestCase):
-    def test_convert_nachtrag(self):
-        pre_text = """{{RENachtrag
-|BAND=S I
-|SPALTE_START=267
-|SPALTE_END=OFF
-|VORGÄNGER=Caecilius 42
-|NACHFOLGER=Caecilius 54a
-|SORTIERUNG=
-|KORREKTURSTAND=korrigiert
-|KEINE_SCHÖPFUNGSHÖHE=
-|TODESJAHR=
-|WIKIPEDIA=
-|WIKISOURCE=
-|EXTSCAN_START={{REIA|S I|267}}
-|EXTSCAN_END=
-|ÜBERSCHRIFT=ON
-}}"""
-        post_text = """{{REDaten
-|BAND=S I
-|SPALTE_START=267
-|SPALTE_END=OFF
-|VORGÄNGER=Caecilius 42
-|NACHFOLGER=Caecilius 54a
-|SORTIERUNG=
-|KORREKTURSTAND=korrigiert
-|KEINE_SCHÖPFUNGSHÖHE=
-|TODESJAHR=
-|WIKIPEDIA=
-|WIKISOURCE=
-|EXTSCAN_START={{REIA|S I|267}}
-|EXTSCAN_END=
-|ÜBERSCHRIFT=ON
-|NACHTRAG=ON
-}}"""
-        compare(post_text, ConvertDeprecatedReTemplates.convet_re_nachtrag(pre_text))
 
 if __name__ == "__main__":
     WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
