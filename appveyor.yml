@@ -16,4 +16,4 @@ install:
   - "python -m pip list"
 build: false
 test_script:
-  - "make unittest"
+  - "python -m unittest test/all_test.py"
