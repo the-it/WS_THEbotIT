@@ -5,6 +5,7 @@ from tools.bots import OneTimeBot
 
 class TestBot1(OneTimeBot):
     def task(self):
+        self.logger.info(self.bot_name)
         return True
 
 

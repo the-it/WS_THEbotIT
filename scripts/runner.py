@@ -4,6 +4,7 @@ import importlib
 import inspect
 import os
 from pathlib import Path
+import re
 import sys
 from typing import List
 
@@ -72,6 +73,10 @@ class TheBotItScheduler(BotScheduler):
             moved_bot_file.seek(0, 0)
             moved_bot_file.write("# successful processed on {}\n{}"
                                  .format(self.timestamp.start_of_run.strftime("%Y-%m-%d"), pretext))
+        for file_name in os.listdir(str(self.path_one_time)):
+            if re.search(file.split(".")[0], file_name):
+                os.rename(str(self.path_one_time.joinpath(file_name)),
+                          str(self.path_archive.joinpath(file_name)))
 
     def _push_files(self, files: List[str]):
         repo = git.Repo(search_parent_directories=True)

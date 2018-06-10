@@ -6,7 +6,7 @@ omit =
     venv/*,
     # the runner suite copies test modules temporary to a directory, ignore this files
     scripts/one_time_run_test/*,
-    test/unit/scripts/service/bots_for_scheduler/*
+    scripts/bots_for_scheduler/*
 source = .
 [report]
 exclude_lines =

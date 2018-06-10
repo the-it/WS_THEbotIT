@@ -16,4 +16,4 @@ install:
   - "python -m pip list"
 build: false
 test_script:
-  - "coverage run test/all_test.py"
+  - "python -m unittest test/test_project.py"

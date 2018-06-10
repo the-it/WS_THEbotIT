@@ -46,6 +46,8 @@ class ReProperty(object):
 
     @value.setter
     def value(self, new_value: Union[str, bool]):
+        if isinstance(new_value, str):
+            new_value = new_value.strip()
         if isinstance(new_value, type(self._default)):
             self._value = new_value
         elif new_value in ("ON", "OFF", "", "on", "off") and isinstance(self._default, bool):
@@ -122,10 +124,7 @@ class ReArticle(Mapping):
                             ReProperty("NACHTRAG", False),
                             ReProperty("ÜBERSCHRIFT", False),
                             ReProperty("VERWEIS", False))
-        try:
-            self._init_properties(re_daten_properties)
-        except (ValueError, TypeError) as init_error:
-            raise ReDatenException("Something wrong with the arguments.") from init_error
+        self._init_properties(re_daten_properties)
 
     @property
     def article_type(self):
@@ -180,7 +179,11 @@ class ReArticle(Mapping):
         if properties_dict:
             for item in properties_dict.items():
                 if item[0] in self:
-                    self[item[0]].value = item[1]
+                    try:
+                        self[item[0]].value = item[1]
+                    except (ValueError, TypeError) as property_error:
+                        raise ReDatenException(
+                            "Keypair {} is not permitted.".format(item)) from property_error
 
     def __hash__(self):
         return hash(self._article_type) \

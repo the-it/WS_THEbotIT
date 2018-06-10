@@ -1,4 +1,4 @@
 ---
 exclude_paths:
   - archive/**
-  - test/**
+  - **/*_test.py

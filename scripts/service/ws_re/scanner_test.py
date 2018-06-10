@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 import time
 import json
 import os
@@ -7,11 +7,10 @@ import pywikibot
 
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.scanner_tasks import ReScannerTask
-from tools.bots import WikiLogger
 from tools.catscan import PetScan
 from scripts.service.ws_re.data_types import RePage, ReDatenException
 from test import *
-from test.unit.tools.test_bots import setup_data_path, teardown_data_path, _DATA_PATH_TEST
+from tools.bots_test import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 
 
 class TestReScanner(TestCase):
