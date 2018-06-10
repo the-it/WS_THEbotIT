@@ -88,6 +88,7 @@ class ReArticle(Mapping):
         "GND": "GND",
         "KSCH": "KEINE_SCHÖPFUNGSHÖHE",
         "TJ": "TODESJAHR",
+        "GJ": "GEBURTSJAHR",
         "NT": "NACHTRAG",
         "ÜB": "ÜBERSCHRIFT",
         "VW": "VERWEIS"}
@@ -117,6 +118,7 @@ class ReArticle(Mapping):
                             ReProperty("GND", ""),
                             ReProperty("KEINE_SCHÖPFUNGSHÖHE", False),
                             ReProperty("TODESJAHR", ""),
+                            ReProperty("GEBURTSJAHR", ""),
                             ReProperty("NACHTRAG", False),
                             ReProperty("ÜBERSCHRIFT", False),
                             ReProperty("VERWEIS", False))
