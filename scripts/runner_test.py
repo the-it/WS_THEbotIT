@@ -14,8 +14,7 @@ from scripts.runner import TheBotItScheduler
 
 class TestBotScheduler(TestCase):
     def _get_path_for_scripts(self) -> Path:
-        path = Path(__file__)
-        repo_root = path.parent.parent.parent.parent.parent
+        repo_root = Path(__file__).parent.parent
         scripts = repo_root.joinpath("scripts")
         self.assertTrue(os.path.isdir(str(scripts)))
         return scripts

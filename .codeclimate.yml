@@ -6,4 +6,4 @@ plugins:
     enabled: true
 exclude_patterns:
   - "archive/"
-  - "test/"
+  - ".*_test.py"
