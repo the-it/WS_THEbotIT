@@ -1,10 +1,17 @@
-from pywikibot import Site
+import traceback
 
+from pywikibot import Site, Page
+
+from scripts.service.ws_re.data_types import RePage, ReDatenException
+from scripts.service.ws_re.scanner_tasks import ERROTask
 from tools.bots import OneTimeBot
 from tools.template_handler import TemplateHandler, TemplateFinder
+from tools.catscan import PetScan
 
 
 class ConvertDeprecatedReTemplates(OneTimeBot):
+    _templates = ("RENachtrag/Platzhalter", "RENachtrag", "REDaten/Platzhalter")
+
     @staticmethod
     def convert_re_nachtrag(template: str):
         template_nachtrag = TemplateHandler(template)
@@ -54,7 +61,7 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
         return template_daten.get_str()
 
     def convert_all(self, article_text: str):
-        for template in ("RENachtrag/Platzhalter", "RENachtrag", "REDaten/Platzhalter"):
+        for template in self._templates:
             position = TemplateFinder(article_text).get_positions(template)
             while position:
                 length_article = len(article_text)
@@ -75,12 +82,39 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
                 position = TemplateFinder(article_text).get_positions(template)
         return article_text
 
-    def task(self):
-        print(self)
+    def search_pages(self):  # pragma: no cover
+        searcher = PetScan()
+        for template in self._templates:
+            searcher.add_any_template(template)
+        searcher.add_namespace(0)
+        self.logger.info(str(searcher))
+        lemmas = searcher.run()
+        self.logger.info("{} to process.".format(len(lemmas)))
+        return lemmas
+
+    def task(self):  # pragma: no cover
+        error_task = ERROTask(wiki=self.wiki, debug=False, logger=self.logger)
+        for idx, lemma in enumerate(self.search_pages()):
+            page = Page(self.wiki, lemma["title"])
+            temp_text = page.text
+            try:
+                temp_text = self.convert_all(temp_text)
+                page.text = temp_text
+                re_page = RePage(page)
+                if not self.debug:
+                    re_page.save("Entfernen veralteter Vorlagen.")
+            except (ReDatenException, ValueError):
+                error = traceback.format_exc().splitlines()[-1]
+                error_task.task(lemma["title"], error)
+            if idx > 100:
+                break
+        error_task.finish_task()
+        if self.search_pages():
+            return False
         return True
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
     with ConvertDeprecatedReTemplates(wiki=WIKI, debug=True) as bot:
         bot.run()

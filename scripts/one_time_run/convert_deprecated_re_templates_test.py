@@ -191,5 +191,4 @@ text4
 |TODESJAHR=2010
 |NACHTRAG=ON
 }}"""
-        #print(ConvertDeprecatedReTemplates().convert_all(pre_text))
         compare(post_text, ConvertDeprecatedReTemplates().convert_all(pre_text))

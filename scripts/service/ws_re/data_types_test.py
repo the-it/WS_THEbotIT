@@ -61,6 +61,15 @@ class TestReProperty(TestCase):
     def test_set_bool_bug_non_capitalized(self):
         re_property = ReProperty(name="Test", default=False)
         re_property.value = "on"
+        self.assertTrue(re_property)
+
+    def test_set_value_not_stripped(self):
+        re_property = ReProperty(name="Test", default=False)
+        re_property.value = "ON         "
+        self.assertTrue(re_property)
+        re_property_text = ReProperty(name="Text", default="")
+        re_property_text.value = "foo              "
+        compare("foo", re_property_text.value)
 
     def test_hash(self):
         re_property = ReProperty(name="Test", default=False)
