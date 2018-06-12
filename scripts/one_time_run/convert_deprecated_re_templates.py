@@ -106,7 +106,7 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
             except (ReDatenException, ValueError):
                 error = traceback.format_exc().splitlines()[-1]
                 error_task.task(lemma["title"], error)
-            if idx > 100:
+            if idx > 600:
                 break
         error_task.finish_task()
         if self.search_pages():
