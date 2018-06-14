@@ -94,7 +94,7 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
 
     def task(self):  # pragma: no cover
         error_task = ERROTask(wiki=self.wiki, debug=False, logger=self.logger)
-        for idx, lemma in enumerate(self.search_pages()):
+        for lemma in self.search_pages():
             page = Page(self.wiki, lemma["title"])
             temp_text = page.text
             try:
