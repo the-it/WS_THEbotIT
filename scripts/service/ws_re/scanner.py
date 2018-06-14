@@ -104,8 +104,8 @@ class ReScanner(CanonicalBot):
         lemma_list = self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
         for lemma in lemma_list:
-            self.logger.info('Process [https://de.wikisource.org/wiki/{lemma} {lemma}]'
-                             .format(lemma=lemma))
+            self.logger.debug('Process [https://de.wikisource.org/wiki/{lemma} {lemma}]'
+                              .format(lemma=lemma))
             list_of_done_tasks = []
             try:
                 re_page = RePage(Page(self.wiki, lemma))
