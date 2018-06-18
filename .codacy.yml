@@ -1,4 +1,7 @@
 ---
+duplication:
+  enabled: true
+  exclude_paths:
+    - '**/**_test.py'
 exclude_paths:
-  - archive/**
-  - **/*_test.py
+  - 'archive/**/*'

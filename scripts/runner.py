@@ -45,8 +45,11 @@ class TheBotItScheduler(BotScheduler):
         return path_to_archive
 
     def _get_files_to_run(self) -> List[str]:
-        file_list = [file for file in os.listdir(str(self.path_one_time))
-                     if os.path.isfile(str(self.path_one_time.joinpath(file)))]
+        file_list = []
+        for file_name in os.listdir(str(self.path_one_time)):
+            if not re.search("test", file_name):
+                if os.path.isfile(str(self.path_one_time.joinpath(file_name))):
+                    file_list.append(file_name)
         file_list.remove("__init__.py")
         self.logger.info("Files in one_time directory: {}".format(file_list))
         return sorted(file_list)
