@@ -58,15 +58,21 @@ class TestBotScheduler(TestCase):
 
     def test_detect_files_to_run(self):
         self._copy_bot_to_run_dir("bot_1")
+        os.mkdir(str(self._get_one_time_run_test().joinpath("some_folder")))
+        open(str(self._get_one_time_run_test().joinpath("bot_1_test.py")), 'w').close()
+        with open(str(self._get_one_time_run_test().joinpath("bot_1_test.py")), 'w') as file_pointer:
+            file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         self._copy_bot_to_run_dir("bot_2")
         os.mkdir(str(self._get_one_time_run_test().joinpath("testfolder")))
         file_list = self.bot_it_scheduler._get_files_to_run()
-        self.assertEqual(2, len(file_list))
+        compare(2, len(file_list))
         self.assertIn("bot_1.py", file_list)
         self.assertIn("bot_2.py", file_list)
 
     def test_run_one_bot_from_file(self):
         self._copy_bot_to_run_dir("bot_1")
+        with open(str(self._get_one_time_run_test().joinpath("bot_1_test.py")), 'w') as file_pointer:
+            file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
             self.assertTrue(self.bot_it_scheduler._run_bot_from_file("bot_1.py"))
             compare(1, run_mock.call_count)
@@ -171,6 +177,8 @@ class TestBotScheduler(TestCase):
 
     def test_complete_task(self):
         self._copy_bot_to_run_dir("bot_1")
+        with open(str(self._get_one_time_run_test().joinpath("bot_1_test.py")), 'w') as file_pointer:
+            file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         self._copy_bot_to_run_dir("bot_2")
         with patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
             with patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
