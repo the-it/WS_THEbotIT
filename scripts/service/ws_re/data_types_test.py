@@ -335,6 +335,11 @@ text
 {{REAutor|Kahrstedt.}}"""
         ReArticle.from_text(test_string)
 
+    def test_correct_case(self):
+        article_text = "{{REDaten\n|Nachtrag=OFF|Ksch=OFF\n}}\ntext\n{{REAutor|Autor.}}"
+        article = ReArticle.from_text(article_text)
+        self.assertEqual(article_template, article.to_text())
+
 
 class TestRePage(TestCase):
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
