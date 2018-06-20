@@ -250,7 +250,7 @@ class ReArticle(Mapping):
         #
         for template_property in parameters:
             if template_property["key"]:
-                keyword = template_property["key"]
+                keyword = template_property["key"].upper()
                 if keyword in cls.keywords.values():
                     pass
                 elif keyword in cls.keywords.keys():

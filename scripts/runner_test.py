@@ -124,7 +124,6 @@ class TestBotScheduler(TestCase):
         self.assertTrue(os.path.exists(str(path_to_current_archive.joinpath("bot_1.py"))))
         self.assertTrue(os.path.exists(str(path_to_current_archive.joinpath("bot_1_test_data.txt"))))
 
-
     def test_move_file_folder_not_exists(self):
         self._copy_bot_to_run_dir("bot_1")
         path_to_current_archive = str(self._get_archive_test().joinpath(str(datetime.today().year)))
