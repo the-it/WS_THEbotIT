@@ -83,21 +83,17 @@ class TheBotItScheduler(BotScheduler):
 
     def _push_files(self, files: List[str]):
         repo = git.Repo(search_parent_directories=True)
-        files_to_add = [str(self.path_archive.joinpath(file)) for file in files]
-        repo.index.add(files_to_add)
-        files_to_remove = [str(self.path_one_time.joinpath(file)) for file in files]
-        repo.index.remove(files_to_remove)
-        additional_files_add = []
-        additional_files_remove = []
+        files_add = []
+        files_remove = []
         for file in files:
-            for file_name in os.listdir(str(self.path_one_time)):
+            for file_name in os.listdir(str(self.path_archive)):
                 if re.search(file.split(".")[0], file_name):
-                    additional_files_add.append(str(self.path_archive.joinpath(file_name)))
-                    additional_files_remove.append(str(self.path_one_time.joinpath(file_name)))
-        if additional_files_add:
-            repo.index.add(additional_files_add)
-        if additional_files_remove:
-            repo.index.remove(additional_files_remove)
+                    files_add.append(str(self.path_archive.joinpath(file_name)))
+                    files_remove.append(str(self.path_one_time.joinpath(file_name)))
+        if files_add:
+            repo.index.add(files_add)
+        if files_remove:
+            repo.index.remove(files_remove)
         repo.index.commit('move successful bot scripts: {}'.format(", ".join(files)))
         origin = repo.remote('origin')
         origin.push()
