@@ -15,7 +15,7 @@ class ReScanner(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(hours=1)
+        self.timeout = timedelta(hours=2)
         self.tasks = []  # type: List[type[ReScannerTask]]
         if self.debug:
             self.tasks = self.tasks + []
@@ -103,7 +103,7 @@ class ReScanner(CanonicalBot):
         error_task = ERROTask(wiki=self.wiki, debug=self.debug, logger=self.logger)
         lemma_list = self.compile_lemma_list()
         self.logger.info('Start processing the lemmas.')
-        for lemma in lemma_list:
+        for idx, lemma in enumerate(lemma_list):
             self.logger.debug('Process [https://de.wikisource.org/wiki/{lemma} {lemma}]'
                               .format(lemma=lemma))
             list_of_done_tasks = []
@@ -126,6 +126,7 @@ class ReScanner(CanonicalBot):
                     self._save_re_page(re_page, list_of_done_tasks)
             self._add_lemma_to_data(lemma)
             if self._watchdog():
+                self.logger.info("{} Lemmas processed.".format(idx))
                 break
         for task in active_tasks:
             task.finish_task()
