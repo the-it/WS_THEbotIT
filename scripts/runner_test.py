@@ -32,12 +32,12 @@ class TestBotScheduler(TestCase):
         open(str(path.joinpath("__init__.py")), 'w').close()
 
     def _copy_bot_to_run_dir(self, name: str):
-        copy(str(Path(__file__).parent.joinpath("bots_for_scheduler", "{}.py".format(name))),
+        copy(str(Path(__file__).parent.joinpath("test_bots_for_scheduler", "{}.py".format(name))),
              str(self._get_one_time_run_test()))
         time.sleep(0.1)
 
     def _copy_bot_to_archive_dir(self, name: str):
-        copy(str(Path(__file__).parent.joinpath("bots_for_scheduler", "{}.py".format(name))),
+        copy(str(Path(__file__).parent.joinpath("test_bots_for_scheduler", "{}.py".format(name))),
              str(self._get_archive_test()))
 
     def _remove_temp_folder(self):
