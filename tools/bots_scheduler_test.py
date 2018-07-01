@@ -42,13 +42,15 @@ class TestBotScheduler(TestCase):
     def test_bot_run(self):
         bot_mock = mock.MagicMock(spec_set=CanonicalBot)
         bot_mock.run.return_value = True
-        self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
+        with LogCapture():
+            self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
         compare(1, bot_mock.__enter__.call_count)
         compare(1, bot_mock.run.call_count)
         compare(1, bot_mock.__exit__.call_count)
 
         bot_mock.run.return_value = False
-        self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
+        with LogCapture():
+            self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
 
     def test_wrong_type_runner(self):
         bot = list()
