@@ -39,7 +39,7 @@ class GlCreateMagazine(CanonicalBot):
             re.compile(r'((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))', re.DOTALL)
         self.regex_page_in_magazine = re.compile(r'_([_\w]{1,9}).(?:jpg|JPG)')
         self.regex_number_in_index = re.compile(r'(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?')
-        self.new_data_model = datetime(year=2017, month=11, day=11, hour=12)
+        self.new_data_model = datetime(year=2018, month=7, day=1, hour=14)
         self.lemmas = None
 
     def __enter__(self):
@@ -76,7 +76,7 @@ class GlCreateMagazine(CanonicalBot):
                                               level=proofread_lemma.quality_level,
                                               title=lemma['title']))
                 ref = search_for_refs(proofread_lemma.text)
-                page_dict = {'q': proofread_lemma.quality_level}
+                page_dict = {'q': int(proofread_lemma.quality_level)}
                 if ref:
                     self.logger.debug('There are refs ({refs}) @ {year}, {page}'.format(refs=ref,
                                                                                         page=page,
@@ -140,7 +140,7 @@ class GlCreateMagazine(CanonicalBot):
                                  .format(year=year, magazine=int(magazine)))
                 new_text = self.make_magazine(year, magazine)
                 if new_text:
-                    if new_text != lemma.text:
+                    if hash(new_text.strip()) != hash(lemma.text.strip()):
                         self.logger.debug('Print [[Die Gartenlaube ({year})/Heft {magazine}]].'
                                           .format(year=year, magazine=magazine))
                         if lemma.text != '':
