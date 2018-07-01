@@ -57,7 +57,9 @@ class BotScheduler(CanonicalBot):
         if not isinstance(bot_to_run, OneTimeBot):
             raise BotException("{} is not an instance of CanonicalBot or OneTimeBot"
                                .format(bot_to_run))
-        self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
+        self.logger.info("The bot {name} is scheduled for start. Log @ "
+                         "[https://de.wikisource.org/wiki/Benutzer:{user}/Logs/{name} Logfile]"
+                         .format(name=bot_to_run.bot_name, user=self.wiki.username))
         with bot_to_run:
             success = bot_to_run.run()
         if not success:

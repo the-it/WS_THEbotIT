@@ -1,5 +1,7 @@
 from datetime import datetime
 
+from pywikibot import Site
+
 from test import *
 from tools.bots import CanonicalBot, BotException
 from tools.bot_scheduler import BotScheduler
@@ -10,7 +12,9 @@ class TestBotScheduler(TestCase):
         self.addCleanup(patch.stopall)
         self.now_patcher = patch("tools.bot_scheduler.BotScheduler.now", new_callable=mock.Mock())
         self.now_mock = self.now_patcher.start()
-        self.bot_scheduler = BotScheduler(None, True)
+        site_mock = mock.Mock()
+        site_mock.username = "THEbotIT"
+        self.bot_scheduler = BotScheduler(site_mock, True)
 
     def test_get_weekday(self):
         expectation = (4, 5, 6, 0, 1, 2, 3, 4)
@@ -44,9 +48,9 @@ class TestBotScheduler(TestCase):
         bot_mock.run.return_value = True
         with LogCapture():
             self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
-        compare(1, bot_mock.__enter__.call_count)
-        compare(1, bot_mock.run.call_count)
-        compare(1, bot_mock.__exit__.call_count)
+            compare(1, bot_mock.__enter__.call_count)
+            compare(1, bot_mock.run.call_count)
+            compare(1, bot_mock.__exit__.call_count)
 
         bot_mock.run.return_value = False
         with LogCapture():
