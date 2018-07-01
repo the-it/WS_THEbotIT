@@ -60,6 +60,8 @@ class BotScheduler(CanonicalBot):
         self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
         with bot_to_run:
             success = bot_to_run.run()
+        if not success:
+            self.logger.error("The bot {name} wasn't successful.".format(name=bot_to_run.bot_name))
         return success
 
     def run_dailys(self):
