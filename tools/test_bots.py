@@ -86,7 +86,7 @@ class TestWikilogger(TestCase):
         self.logger.warning("warning")
         self.logger.error("error")
         self.logger.critical("critical")
-        expected_output = r"==Log of 01\.01\.00 um 00:00:00==\n\n" \
+        expected_output = r"==00-01-01_00:00:00==\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[WARNING\s*?\]\s\[warning\]\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[error\]\n\n" \
@@ -98,7 +98,7 @@ class TestWikilogger(TestCase):
             raise Exception("test")
         except Exception as e:
             self.logger.exception("exception", e)
-        expected_output = r"==Log of 01\.01\.00 um 00:00:00==\n\n" \
+        expected_output = r"==00-01-01_00:00:00==\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[exception\]\n\n" \
                           r"Traceback \(most recent call last\):\n\n" \
                           r"File \".*?\", line \d{1,3}, in test_exception\n\n" \
