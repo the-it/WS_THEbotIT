@@ -24,7 +24,7 @@ def _get_data_path():
 class WikiLogger(object):
     _logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
     _logger_date_format = "%H:%M:%S"
-    _wiki_timestamp_format = '%d.%m.%y um %H:%M:%S'
+    _wiki_timestamp_format = '%y-%m-%d_%H:%M:%S'
 
     def __init__(self, bot_name: str, start_time: datetime, log_to_screen=True):
         self._bot_name = bot_name
@@ -105,7 +105,7 @@ class WikiLogger(object):
             log_lines = ""
             log_lines = log_lines \
                 + '\n\n' \
-                + '==Log of {}=='.format(self._start_time.strftime(self._wiki_timestamp_format)) \
+                + '=={}=='.format(self._start_time.strftime(self._wiki_timestamp_format)) \
                 + '\n\n' \
                 + '\n\n'.join(line_list) \
                 + '\n--~~~~'

@@ -57,11 +57,15 @@ class BotScheduler(CanonicalBot):
         if not isinstance(bot_to_run, OneTimeBot):
             raise BotException("{} is not an instance of CanonicalBot or OneTimeBot"
                                .format(bot_to_run))
-        self.logger.info("The bot {name} is scheduled for start. Log @ "
-                         "[https://de.wikisource.org/wiki/Benutzer:{user}/Logs/{name} Logfile]"
-                         .format(name=bot_to_run.bot_name, user=self.wiki.username))
+        self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
         with bot_to_run:
             success = bot_to_run.run()
+        link_to_log = "https://de.wikisource.org/wiki/Benutzer:{user}/Logs/{name}"\
+            .format(name=bot_to_run.bot_name, user=self.wiki.username())
+        self.logger.info("Log @ [{link}#{headline} {link}]"
+                         .format(link=link_to_log,
+                                 headline=bot_to_run.timestamp.start_of_run
+                                 .strftime("%y-%m-%d_%H:%M:%S")))
         if not success:
             self.logger.error("The bot {name} wasn't successful.".format(name=bot_to_run.bot_name))
         return success
@@ -95,3 +99,17 @@ class BotScheduler(CanonicalBot):
         self.run_dailys()
         self.run_weeklys()
         self.run_monthlys()
+
+
+if __name__ == "__main__":  # pragma: no cover
+    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    BOT_SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=True)
+
+    class TestBot(OneTimeBot):
+        def task(self):
+            self.logger.info("TestBot")
+            return True
+
+    BOT_SCHEDULER.daily_bots = [TestBot]
+    with BOT_SCHEDULER as bot:
+        bot.run()

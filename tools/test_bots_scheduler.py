@@ -1,9 +1,7 @@
 from datetime import datetime
 
-from pywikibot import Site
-
 from test import *
-from tools.bots import CanonicalBot, BotException
+from tools.bots import CanonicalBot, BotException, PersistedTimestamp
 from tools.bot_scheduler import BotScheduler
 
 
@@ -13,7 +11,7 @@ class TestBotScheduler(TestCase):
         self.now_patcher = patch("tools.bot_scheduler.BotScheduler.now", new_callable=mock.Mock())
         self.now_mock = self.now_patcher.start()
         site_mock = mock.Mock()
-        site_mock.username = "THEbotIT"
+        site_mock.username = mock.Mock(return_value="THEbotIT")
         self.bot_scheduler = BotScheduler(site_mock, True)
 
     def test_get_weekday(self):
@@ -44,8 +42,9 @@ class TestBotScheduler(TestCase):
             self.assertFalse(self.bot_scheduler._last_day_of_month())
 
     def test_bot_run(self):
-        bot_mock = mock.MagicMock(spec_set=CanonicalBot)
+        bot_mock = mock.MagicMock(spec=CanonicalBot)
         bot_mock.run.return_value = True
+        bot_mock.timestamp = PersistedTimestamp("")
         with LogCapture():
             self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
             compare(1, bot_mock.__enter__.call_count)
