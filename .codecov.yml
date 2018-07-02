@@ -1,0 +1,10 @@
+coverage:
+  precision: 4
+  status:
+    project: yes
+    patch: yes
+    changes: yes
+
+codecov:
+  notify:
+    require_ci_to_pass: no
