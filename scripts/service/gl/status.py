@@ -48,7 +48,7 @@ class GlStatus(CanonicalBot):
                                  ' || ', str(korrigiert), self.to_percent(korrigiert, alle),
                                  ' || ', str(fertig), self.to_percent(fertig, alle),
                                  ' || ', str(unkorrigiert), self.to_percent(unkorrigiert, alle),
-                                 ' || ', str(articles) + '/19900', self.to_percent(articles, 19900),
+                                 ' || ', str(articles) + '/18500', self.to_percent(articles, 18500),
                                  ' ||'])
         return re.sub('<!--new line: Liste wird von einem Bot aktuell gehalten.-->',
                       composed_text, temp_text)
