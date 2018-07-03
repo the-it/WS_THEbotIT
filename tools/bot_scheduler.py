@@ -60,10 +60,10 @@ class BotScheduler(CanonicalBot):
         self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
         with bot_to_run:
             success = bot_to_run.run()
-        link_to_log = "https://de.wikisource.org/wiki/Benutzer:{user}/Logs/{name}"\
+        path_to_log = "{user}/Logs/{name}"\
             .format(name=bot_to_run.bot_name, user=self.wiki.username())
-        self.logger.info("Log @ [{link}#{headline} {link}]"
-                         .format(link=link_to_log,
+        self.logger.info("Log @ [https://de.wikisource.org/wiki/Benutzer:{link}#{headline} {link}]"
+                         .format(link=path_to_log,
                                  headline=bot_to_run.timestamp.start_of_run
                                  .strftime("%y-%m-%d_%H:%M:%S")))
         if not success:
