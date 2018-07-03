@@ -81,6 +81,6 @@ codacy :
 
 clean : clean-pyc clean-coverage clean-code-climate
 
-quality : bandit coverage flake8 pycodestyle pylint
+quality : bandit flake8 pycodestyle pylint
 
 .PHONY : clean, code-climate, quality
