@@ -206,8 +206,8 @@ class AuthorList(CanonicalBot):
                 try:
                     list_author.append(str(DateConversion(list_author[-1])))  # 5,7
                 except Exception:
-                    self.logger.error('Can´t compile sort key for {}: {}'
-                                      .format(event, author_dict[event]))
+                    self.logger.error('Can´t compile sort key for {}: {}/{}'
+                                      .format(author_dict["title"], event, author_dict[event]))
                     list_author.append('!-00-00')  # 5,7
             list_author.append(author_dict['description'])  # 8
             list_authors.append(list_author)
