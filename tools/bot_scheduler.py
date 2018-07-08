@@ -67,7 +67,9 @@ class BotScheduler(CanonicalBot):
                                  headline=bot_to_run.timestamp.start_of_run
                                  .strftime("%y-%m-%d_%H:%M:%S")))
         if not success:
-            self.logger.error("The bot {name} wasn't successful.".format(name=bot_to_run.bot_name))
+            self.logger.error("<span style=\"background:#FF0000\">"
+                              "The bot {name} wasn't successful.</span>"
+                              .format(name=bot_to_run.bot_name))
         return success
 
     def run_dailys(self):
