@@ -1,10 +1,12 @@
-from collections import Mapping
+from collections import Mapping, OrderedDict
 from collections.abc import Sequence
 from enum import Enum
+from pathlib import Path
 import re
 from typing import Union, Generator, Tuple
 
 import pywikibot
+import yaml
 
 from tools.template_handler import TemplateFinder, TemplateHandler
 
@@ -375,40 +377,66 @@ class ReVolumeType(Enum):
     REGISTER = 3
 
 
-class ReVolume(object):
-    _basic_regex = r"[IVX]{1,5}"
-    _regex_first_series = re.compile("^" + _basic_regex + r"(?:,[1234])?$")
-    _regex_second_series = re.compile("^" + _basic_regex + r" A(?:,[12])?$")
-    _regex_supplements = re.compile(r"^S " + _basic_regex + "$")
-    _regex_register = re.compile(r"^R$")
+_BASIC_REGEX = r"[IVX]{1,5}"
+_REGEX_FIRST_SERIES = re.compile("^" + _BASIC_REGEX + r"(?:,[1234])?$")
+_REGEX_SECOND_SERIES = re.compile("^" + _BASIC_REGEX + r" A(?:,[12])?$")
+_REGEX_SUPPLEMENTS = re.compile(r"^S " + _BASIC_REGEX + "$")
+_REGEX_REGISTER = re.compile(r"^R$")
 
+
+class ReVolume(object):
     def __init__(self, name, year, start=None, end=None):
-        self._name = None
-        self._year = None
-        self._start = None
-        self._end = None
-        self.name = name
-        self.year = year
-        self.start = start
-        self.end = end
+        self._name = name
+        self._year = str(year)
+        self._start = start
+        self._end = end
+
+    @property
+    def name(self):
+        return self._name
 
     @property
     def year(self):
         return self._year
 
-    @year.setter
-    def year(self, year):
-        self._year = str(year)
+    @property
+    def start(self):
+        return self._start
+
+    @property
+    def end(self):
+        return self._end
 
     @property
     def type(self):
-        if self._regex_first_series.match(self.name):
+        if _REGEX_FIRST_SERIES.match(self.name):
             return ReVolumeType.FIRST_SERIES
-        elif self._regex_second_series.match(self.name):
+        elif _REGEX_SECOND_SERIES.match(self.name):
             return ReVolumeType.SECOND_SERIES
-        elif self._regex_supplements.match(self.name):
+        elif _REGEX_SUPPLEMENTS.match(self.name):
             return ReVolumeType.SUPPLEMENTS
-        elif self._regex_register.match(self.name):
+        elif _REGEX_REGISTER.match(self.name):
             return ReVolumeType.REGISTER
         else:
             raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
+
+
+class ReVolumes(Mapping):
+    def __init__(self):
+        path_to_file = Path(__file__).parent.joinpath("volumes.yaml")
+        with open(str(path_to_file)) as yaml_file:
+            _volume_list = yaml.safe_load(yaml_file.read())
+        _volume_mapping = OrderedDict()
+        for item in _volume_list:
+            _volume_mapping[item["name"]] = ReVolume(**item)
+        self._volume_mapping = _volume_mapping
+
+    def __getitem__(self, item):
+        return self._volume_mapping[item]
+
+    def __len__(self):
+        return len(self._volume_mapping.keys())
+
+    def __iter__(self) -> ReVolume:
+        for key in self._volume_mapping:
+            yield self[key]

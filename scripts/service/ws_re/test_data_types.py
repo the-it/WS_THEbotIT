@@ -2,7 +2,7 @@ from collections.abc import Sequence
 
 import pywikibot
 
-from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, ReVolume, ReVolumeType
+from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, ReVolume, ReVolumeType, ReVolumes
 from test import *
 
 article_template = """{{REDaten
@@ -565,3 +565,16 @@ class TestReVolume(TestCase):
             volume = ReVolume("R I", "1900", "Aal", "Bethel").type
 
 
+class TestReVolumes(TestCase):
+    def setUp(self):
+        self.re_volumes = ReVolumes()
+
+    def test_len(self):
+        self.assertEqual(4, len(self.re_volumes))
+
+    def test_iter(self):
+        iterator = iter(self.re_volumes)
+        self.assertEqual("I,1", iterator.__next__().name)
+        self.assertEqual("I A,1", iterator.__next__().name)
+        self.assertEqual("S I", iterator.__next__().name)
+        self.assertEqual("R", iterator.__next__().name)
