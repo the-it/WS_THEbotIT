@@ -2,7 +2,7 @@ from collections.abc import Sequence
 
 import pywikibot
 
-from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException
+from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, ReVolume, ReVolumeType
 from test import *
 
 article_template = """{{REDaten
@@ -524,3 +524,44 @@ text
 {{REAutor|Oberhummer.}}
 <u>Anmerkung WS:</u><br /><references/>"""
         self.assertEqual(after, str(RePage(self.page_mock)))
+
+class TestReVolume(TestCase):
+    def test_init(self):
+        volume = ReVolume("I,1", "1900", "Aal", "Bethel")
+        compare("I,1", volume.name)
+        compare("1900", volume.year)
+        compare("Aal", volume.start)
+        compare("Bethel", volume.end)
+
+    def test_init_by_name(self):
+        volume = ReVolume(name="I,1", year="1900", start="Aal", end="Bethel")
+        compare("I,1", volume.name)
+        compare("1900", volume.year)
+        compare("Aal", volume.start)
+        compare("Bethel", volume.end)
+
+    def test_init_supp_or_register(self):
+        volume = ReVolume(name="S I", year="1900")
+        compare("S I", volume.name)
+        compare("1900", volume.year)
+        self.assertIsNone(volume.start)
+        self.assertIsNone(volume.end)
+
+    def test_init_year_as_int(self):
+        volume = ReVolume(name="S I", year=1900)
+        compare("S I", volume.name)
+        compare("1900", volume.year)
+
+    def test_volume_type(self):
+        volume = ReVolume("I,1", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.FIRST_SERIES, volume.type)
+        volume = ReVolume("I A,1", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.SECOND_SERIES, volume.type)
+        volume = ReVolume("S II", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.SUPPLEMENTS, volume.type)
+        volume = ReVolume("R", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.REGISTER, volume.type)
+        with self.assertRaises(ReDatenException):
+            volume = ReVolume("R I", "1900", "Aal", "Bethel").type
+
+

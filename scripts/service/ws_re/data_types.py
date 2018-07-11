@@ -1,5 +1,6 @@
 from collections import Mapping
 from collections.abc import Sequence
+from enum import Enum
 import re
 from typing import Union, Generator, Tuple
 
@@ -365,3 +366,49 @@ class RePage(Sequence):
     @property
     def lemma(self):
         return self.page.title()
+
+
+class ReVolumeType(Enum):
+    FIRST_SERIES = 0
+    SECOND_SERIES = 1
+    SUPPLEMENTS = 2
+    REGISTER = 3
+
+
+class ReVolume(object):
+    _basic_regex = r"[IVX]{1,5}"
+    _regex_first_series = re.compile("^" + _basic_regex + r"(?:,[1234])?$")
+    _regex_second_series = re.compile("^" + _basic_regex + r" A(?:,[12])?$")
+    _regex_supplements = re.compile(r"^S " + _basic_regex + "$")
+    _regex_register = re.compile(r"^R$")
+
+    def __init__(self, name, year, start=None, end=None):
+        self._name = None
+        self._year = None
+        self._start = None
+        self._end = None
+        self.name = name
+        self.year = year
+        self.start = start
+        self.end = end
+
+    @property
+    def year(self):
+        return self._year
+
+    @year.setter
+    def year(self, year):
+        self._year = str(year)
+
+    @property
+    def type(self):
+        if self._regex_first_series.match(self.name):
+            return ReVolumeType.FIRST_SERIES
+        elif self._regex_second_series.match(self.name):
+            return ReVolumeType.SECOND_SERIES
+        elif self._regex_supplements.match(self.name):
+            return ReVolumeType.SUPPLEMENTS
+        elif self._regex_register.match(self.name):
+            return ReVolumeType.REGISTER
+        else:
+            raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
