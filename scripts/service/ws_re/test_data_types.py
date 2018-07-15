@@ -578,3 +578,30 @@ class TestReVolumes(TestCase):
         self.assertEqual("I A,1", iterator.__next__().name)
         self.assertEqual("S I", iterator.__next__().name)
         self.assertEqual("R", iterator.__next__().name)
+
+    def test_iter_first_series(self):
+        counter = 0
+        for volume in self.re_volumes.first_series:
+            compare(ReVolumeType.FIRST_SERIES, volume.type)
+            counter =+ 1
+        compare(1, counter)
+
+    def test_iter_second_series(self):
+        for volume in self.re_volumes.second_series:
+            compare(ReVolumeType.SECOND_SERIES, volume.type)
+            counter =+ 1
+        compare(1, counter)
+
+    def test_iter_supplements(self):
+        counter = 0
+        for volume in self.re_volumes.supplements:
+            compare(ReVolumeType.SUPPLEMENTS, volume.type)
+            counter =+ 1
+        compare(1, counter)
+
+    def test_iter_register(self):
+        counter = 0
+        for volume in self.re_volumes.register:
+            compare(ReVolumeType.REGISTER, volume.type)
+            counter =+ 1
+        compare(1, counter)

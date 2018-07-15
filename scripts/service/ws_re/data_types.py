@@ -431,12 +431,37 @@ class ReVolumes(Mapping):
             _volume_mapping[item["name"]] = ReVolume(**item)
         self._volume_mapping = _volume_mapping
 
-    def __getitem__(self, item):
+    def __getitem__(self, item: str) -> ReVolume:
         return self._volume_mapping[item]
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self._volume_mapping.keys())
 
-    def __iter__(self) -> ReVolume:
+    def __iter__(self) -> Generator[ReVolume, None, None]:
         for key in self._volume_mapping:
             yield self[key]
+
+    def special_volume_iterator(self, volume_type: ReVolumeType) -> Generator[ReVolume, None, None]:
+        for volume in self:
+            if volume.type == volume_type:
+                yield volume
+
+    @property
+    def first_series(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.FIRST_SERIES):
+            yield volume
+
+    @property
+    def second_series(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.SECOND_SERIES):
+            yield volume
+
+    @property
+    def supplements(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.SUPPLEMENTS):
+            yield volume
+
+    @property
+    def register(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.REGISTER):
+            yield volume
