@@ -574,34 +574,53 @@ class TestReVolumes(TestCase):
 
     def test_iter(self):
         iterator = iter(self.re_volumes)
-        self.assertEqual("I,1", iterator.__next__().name)
-        self.assertEqual("I A,1", iterator.__next__().name)
-        self.assertEqual("S I", iterator.__next__().name)
-        self.assertEqual("R", iterator.__next__().name)
+        self.assertEqual("I,1", iterator.__next__())
+        self.assertEqual("I A,1", iterator.__next__())
+        self.assertEqual("S I", iterator.__next__())
+        self.assertEqual("R", iterator.__next__())
 
     def test_iter_first_series(self):
         counter = 0
         for volume in self.re_volumes.first_series:
             compare(ReVolumeType.FIRST_SERIES, volume.type)
-            counter =+ 1
+            counter += 1
         compare(1, counter)
 
     def test_iter_second_series(self):
+        counter = 0
         for volume in self.re_volumes.second_series:
             compare(ReVolumeType.SECOND_SERIES, volume.type)
-            counter =+ 1
+            counter += 1
         compare(1, counter)
 
     def test_iter_supplements(self):
         counter = 0
         for volume in self.re_volumes.supplements:
             compare(ReVolumeType.SUPPLEMENTS, volume.type)
-            counter =+ 1
+            counter += 1
         compare(1, counter)
 
     def test_iter_register(self):
         counter = 0
         for volume in self.re_volumes.register:
             compare(ReVolumeType.REGISTER, volume.type)
-            counter =+ 1
+            counter += 1
         compare(1, counter)
+
+    def test_iter_all_volumes(self):
+        counter = 0
+        current_type = ReVolumeType.FIRST_SERIES
+        following_types = [ReVolumeType.SECOND_SERIES,
+                           ReVolumeType.SUPPLEMENTS,
+                           ReVolumeType.REGISTER]
+        for volume in self.re_volumes.all_volumes:
+            compare(ReVolume, type(volume))
+            if volume.type == current_type:
+                pass
+            elif volume.type == following_types[0]:
+                current_type = following_types[0]
+                del following_types[0]
+            else:  # pragma: no cover
+                raise TypeError("The types hasn't the right order. This section should never reached")
+            counter += 1
+        compare(4, counter)

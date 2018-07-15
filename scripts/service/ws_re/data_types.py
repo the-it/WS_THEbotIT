@@ -378,10 +378,10 @@ class ReVolumeType(Enum):
 
 
 _BASIC_REGEX = r"[IVX]{1,5}"
-_REGEX_FIRST_SERIES = re.compile("^" + _BASIC_REGEX + r"(?:,[1234])?$")
-_REGEX_SECOND_SERIES = re.compile("^" + _BASIC_REGEX + r" A(?:,[12])?$")
-_REGEX_SUPPLEMENTS = re.compile(r"^S " + _BASIC_REGEX + "$")
-_REGEX_REGISTER = re.compile(r"^R$")
+_REGEX_MAPPING = {ReVolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,[1234])?$"),
+                  ReVolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,[12])?$"),
+                  ReVolumeType.SUPPLEMENTS: re.compile(r"^S " + _BASIC_REGEX + "$"),
+                  ReVolumeType.REGISTER: re.compile(r"^R$")}
 
 
 class ReVolume(object):
@@ -409,14 +409,9 @@ class ReVolume(object):
 
     @property
     def type(self):
-        if _REGEX_FIRST_SERIES.match(self.name):
-            return ReVolumeType.FIRST_SERIES
-        elif _REGEX_SECOND_SERIES.match(self.name):
-            return ReVolumeType.SECOND_SERIES
-        elif _REGEX_SUPPLEMENTS.match(self.name):
-            return ReVolumeType.SUPPLEMENTS
-        elif _REGEX_REGISTER.match(self.name):
-            return ReVolumeType.REGISTER
+        for re_volume_type in _REGEX_MAPPING:
+            if _REGEX_MAPPING[re_volume_type].match(self.name):
+                return re_volume_type
         else:
             raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
 
@@ -439,10 +434,11 @@ class ReVolumes(Mapping):
 
     def __iter__(self) -> Generator[ReVolume, None, None]:
         for key in self._volume_mapping:
-            yield self[key]
+            yield key
 
     def special_volume_iterator(self, volume_type: ReVolumeType) -> Generator[ReVolume, None, None]:
-        for volume in self:
+        for volume_key in self:
+            volume = self[volume_key]
             if volume.type == volume_type:
                 yield volume
 
@@ -465,3 +461,8 @@ class ReVolumes(Mapping):
     def register(self) -> Generator[ReVolume, None, None]:
         for volume in self.special_volume_iterator(ReVolumeType.REGISTER):
             yield volume
+
+    @property
+    def all_volumes(self) -> Generator[ReVolume, None, None]:
+        for volume_key in self:
+            yield self[volume_key]
