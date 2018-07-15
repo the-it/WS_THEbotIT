@@ -17,6 +17,6 @@ matrix:
   allow_failures:
     - python: 3.6-dev
     - python: 3.7
-    - python: 3.7-dev
+    #- python: 3.7-dev python 3.7 finally fixed :-)
     - python: nightly
 cache: pip
