@@ -11,7 +11,7 @@ python:
 install:
   - make pip3-all
 script:
-  - make coverage
+  - make unittest
 
 matrix:
   allow_failures:
