@@ -412,8 +412,7 @@ class ReVolume(object):
         for re_volume_type in _REGEX_MAPPING:
             if _REGEX_MAPPING[re_volume_type].match(self.name):
                 return re_volume_type
-        else:
-            raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
+        raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
 
 
 class ReVolumes(Mapping):
