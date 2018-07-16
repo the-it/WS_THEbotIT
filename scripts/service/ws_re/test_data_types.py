@@ -570,13 +570,22 @@ class TestReVolumes(TestCase):
         self.re_volumes = ReVolumes()
 
     def test_len(self):
-        self.assertEqual(4, len(self.re_volumes))
+        self.assertEqual(84, len(self.re_volumes))
 
     def test_iter(self):
         iterator = iter(self.re_volumes)
         self.assertEqual("I,1", iterator.__next__())
+        for i in range(0, 47):
+            iterator.__next__()
+        self.assertEqual("XXIV", iterator.__next__())
         self.assertEqual("I A,1", iterator.__next__())
+        for i in range(0, 17):
+            iterator.__next__()
+        self.assertEqual("X A", iterator.__next__())
         self.assertEqual("S I", iterator.__next__())
+        for i in range(0, 13):
+            iterator.__next__()
+        self.assertEqual("S XV", iterator.__next__())
         self.assertEqual("R", iterator.__next__())
 
     def test_iter_first_series(self):
@@ -584,21 +593,21 @@ class TestReVolumes(TestCase):
         for volume in self.re_volumes.first_series:
             compare(ReVolumeType.FIRST_SERIES, volume.type)
             counter += 1
-        compare(1, counter)
+        compare(49, counter)
 
     def test_iter_second_series(self):
         counter = 0
         for volume in self.re_volumes.second_series:
             compare(ReVolumeType.SECOND_SERIES, volume.type)
             counter += 1
-        compare(1, counter)
+        compare(19, counter)
 
     def test_iter_supplements(self):
         counter = 0
         for volume in self.re_volumes.supplements:
             compare(ReVolumeType.SUPPLEMENTS, volume.type)
             counter += 1
-        compare(1, counter)
+        compare(15, counter)
 
     def test_iter_register(self):
         counter = 0
@@ -623,4 +632,4 @@ class TestReVolumes(TestCase):
             else:  # pragma: no cover
                 raise TypeError("The types hasn't the right order. This section should never reached")
             counter += 1
-        compare(4, counter)
+        compare(84, counter)
