@@ -2,7 +2,7 @@ from collections.abc import Sequence
 
 import pywikibot
 
-from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException
+from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, ReVolume, ReVolumeType, ReVolumes
 from test import *
 
 article_template = """{{REDaten
@@ -524,3 +524,112 @@ text
 {{REAutor|Oberhummer.}}
 <u>Anmerkung WS:</u><br /><references/>"""
         self.assertEqual(after, str(RePage(self.page_mock)))
+
+class TestReVolume(TestCase):
+    def test_init(self):
+        volume = ReVolume("I,1", "1900", "Aal", "Bethel")
+        compare("I,1", volume.name)
+        compare("1900", volume.year)
+        compare("Aal", volume.start)
+        compare("Bethel", volume.end)
+
+    def test_init_by_name(self):
+        volume = ReVolume(name="I,1", year="1900", start="Aal", end="Bethel")
+        compare("I,1", volume.name)
+        compare("1900", volume.year)
+        compare("Aal", volume.start)
+        compare("Bethel", volume.end)
+
+    def test_init_supp_or_register(self):
+        volume = ReVolume(name="S I", year="1900")
+        compare("S I", volume.name)
+        compare("1900", volume.year)
+        self.assertIsNone(volume.start)
+        self.assertIsNone(volume.end)
+
+    def test_init_year_as_int(self):
+        volume = ReVolume(name="S I", year=1900)
+        compare("S I", volume.name)
+        compare("1900", volume.year)
+
+    def test_volume_type(self):
+        volume = ReVolume("I,1", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.FIRST_SERIES, volume.type)
+        volume = ReVolume("I A,1", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.SECOND_SERIES, volume.type)
+        volume = ReVolume("S II", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.SUPPLEMENTS, volume.type)
+        volume = ReVolume("R", "1900", "Aal", "Bethel")
+        compare(ReVolumeType.REGISTER, volume.type)
+        with self.assertRaises(ReDatenException):
+            volume = ReVolume("R I", "1900", "Aal", "Bethel").type
+
+
+class TestReVolumes(TestCase):
+    def setUp(self):
+        self.re_volumes = ReVolumes()
+
+    def test_len(self):
+        self.assertEqual(84, len(self.re_volumes))
+
+    def test_iter(self):
+        iterator = iter(self.re_volumes)
+        self.assertEqual("I,1", iterator.__next__())
+        for i in range(0, 47):
+            iterator.__next__()
+        self.assertEqual("XXIV", iterator.__next__())
+        self.assertEqual("I A,1", iterator.__next__())
+        for i in range(0, 17):
+            iterator.__next__()
+        self.assertEqual("X A", iterator.__next__())
+        self.assertEqual("S I", iterator.__next__())
+        for i in range(0, 13):
+            iterator.__next__()
+        self.assertEqual("S XV", iterator.__next__())
+        self.assertEqual("R", iterator.__next__())
+
+    def test_iter_first_series(self):
+        counter = 0
+        for volume in self.re_volumes.first_series:
+            compare(ReVolumeType.FIRST_SERIES, volume.type)
+            counter += 1
+        compare(49, counter)
+
+    def test_iter_second_series(self):
+        counter = 0
+        for volume in self.re_volumes.second_series:
+            compare(ReVolumeType.SECOND_SERIES, volume.type)
+            counter += 1
+        compare(19, counter)
+
+    def test_iter_supplements(self):
+        counter = 0
+        for volume in self.re_volumes.supplements:
+            compare(ReVolumeType.SUPPLEMENTS, volume.type)
+            counter += 1
+        compare(15, counter)
+
+    def test_iter_register(self):
+        counter = 0
+        for volume in self.re_volumes.register:
+            compare(ReVolumeType.REGISTER, volume.type)
+            counter += 1
+        compare(1, counter)
+
+    def test_iter_all_volumes(self):
+        counter = 0
+        current_type = ReVolumeType.FIRST_SERIES
+        following_types = [ReVolumeType.SECOND_SERIES,
+                           ReVolumeType.SUPPLEMENTS,
+                           ReVolumeType.REGISTER]
+        for volume in self.re_volumes.all_volumes:
+            compare(ReVolume, type(volume))
+            if volume.type == current_type:
+                pass
+            elif volume.type == following_types[0]:
+                current_type = following_types[0]
+                del following_types[0]
+            else:  # pragma: no cover
+                raise TypeError("The types hasn't the right order. This section should never reached")
+            counter += 1
+        compare(84, counter)

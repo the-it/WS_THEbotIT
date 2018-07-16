@@ -16,7 +16,7 @@ pycodestyle :
 
 pylint : 
 	echo "############ PYLINT ############"
-	pylint -j2 --rcfile .pylintrc scripts tools
+	pylint -j4 --rcfile .pylintrc scripts tools
 
 bandit :
 	echo "############ BANDIT ############"

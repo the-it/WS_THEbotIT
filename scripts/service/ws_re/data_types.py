@@ -1,9 +1,12 @@
-from collections import Mapping
+from collections import Mapping, OrderedDict
 from collections.abc import Sequence
+from enum import Enum
+from pathlib import Path
 import re
 from typing import Union, Generator, Tuple
 
 import pywikibot
+import yaml
 
 from tools.template_handler import TemplateFinder, TemplateHandler
 
@@ -365,3 +368,100 @@ class RePage(Sequence):
     @property
     def lemma(self):
         return self.page.title()
+
+
+class ReVolumeType(Enum):
+    FIRST_SERIES = 0
+    SECOND_SERIES = 1
+    SUPPLEMENTS = 2
+    REGISTER = 3
+
+
+_BASIC_REGEX = r"[IVX]{1,5}"
+_REGEX_MAPPING = {ReVolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,[1234])?$"),
+                  ReVolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,[12])?$"),
+                  ReVolumeType.SUPPLEMENTS: re.compile(r"^S " + _BASIC_REGEX + "$"),
+                  ReVolumeType.REGISTER: re.compile(r"^R$")}
+
+
+class ReVolume(object):
+    def __init__(self, name, year, start=None, end=None):
+        self._name = name
+        self._year = str(year)
+        self._start = start
+        self._end = end
+
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def year(self):
+        return self._year
+
+    @property
+    def start(self):
+        return self._start
+
+    @property
+    def end(self):
+        return self._end
+
+    @property
+    def type(self):
+        for re_volume_type in _REGEX_MAPPING:
+            if _REGEX_MAPPING[re_volume_type].match(self.name):
+                return re_volume_type
+        raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
+
+
+class ReVolumes(Mapping):
+    def __init__(self):
+        path_to_file = Path(__file__).parent.joinpath("volumes.yaml")
+        with open(str(path_to_file)) as yaml_file:
+            _volume_list = yaml.safe_load(yaml_file.read())
+        _volume_mapping = OrderedDict()
+        for item in _volume_list:
+            _volume_mapping[item["name"]] = ReVolume(**item)
+        self._volume_mapping = _volume_mapping
+
+    def __getitem__(self, item: str) -> ReVolume:
+        return self._volume_mapping[item]
+
+    def __len__(self) -> int:
+        return len(self._volume_mapping.keys())
+
+    def __iter__(self) -> Generator[ReVolume, None, None]:
+        for key in self._volume_mapping:
+            yield key
+
+    def special_volume_iterator(self, volume_type: ReVolumeType) -> Generator[ReVolume, None, None]:
+        for volume_key in self:
+            volume = self[volume_key]
+            if volume.type == volume_type:
+                yield volume
+
+    @property
+    def first_series(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.FIRST_SERIES):
+            yield volume
+
+    @property
+    def second_series(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.SECOND_SERIES):
+            yield volume
+
+    @property
+    def supplements(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.SUPPLEMENTS):
+            yield volume
+
+    @property
+    def register(self) -> Generator[ReVolume, None, None]:
+        for volume in self.special_volume_iterator(ReVolumeType.REGISTER):
+            yield volume
+
+    @property
+    def all_volumes(self) -> Generator[ReVolume, None, None]:
+        for volume_key in self:
+            yield self[volume_key]
