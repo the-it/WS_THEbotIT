@@ -21,7 +21,7 @@ def _get_data_path():
     return _DATA_PATH
 
 
-class WikiLogger(object):
+class WikiLogger():
     _logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
     _logger_date_format = "%H:%M:%S"
     _wiki_timestamp_format = '%y-%m-%d_%H:%M:%S'
@@ -112,7 +112,7 @@ class WikiLogger(object):
             return log_lines
 
 
-class PersistedTimestamp(object):
+class PersistedTimestamp():
     _timeformat = '%Y-%m-%d_%H:%M:%S'
 
     def __init__(self, bot_name: str):
@@ -175,7 +175,7 @@ class PersistedTimestamp(object):
             raise TypeError("success_this_run is a boolean value.")
 
 
-class OneTimeBot(object):
+class OneTimeBot():
     task = None
 
     def __init__(self, wiki: Site = None, debug: bool = True,

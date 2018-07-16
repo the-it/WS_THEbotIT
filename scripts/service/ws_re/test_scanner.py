@@ -26,7 +26,7 @@ class TestReScanner(TestCase):
         teardown_data_path()
         mock.patch.stopall()
 
-    class SearchStringChecker(object):
+    class SearchStringChecker():
         def __init__(self, search_string: str):
             self.search_string = search_string
 
