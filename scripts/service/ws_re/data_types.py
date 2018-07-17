@@ -15,7 +15,7 @@ class ReDatenException(Exception):
     pass
 
 
-class ReProperty(object):
+class ReProperty():
     def __init__(self, name: str, default: Union[str, bool]):
         self._name = name
         self._default = default
@@ -384,7 +384,7 @@ _REGEX_MAPPING = {ReVolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(
                   ReVolumeType.REGISTER: re.compile(r"^R$")}
 
 
-class ReVolume(object):
+class ReVolume():
     def __init__(self, name, year, start=None, end=None):
         self._name = name
         self._year = str(year)

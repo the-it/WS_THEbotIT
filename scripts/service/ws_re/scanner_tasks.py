@@ -11,7 +11,7 @@ SUCCESS = "success"
 CHANGED = "changed"
 
 
-class ReScannerTask(object):
+class ReScannerTask():
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
         self.wiki = wiki
         self.debug = debug

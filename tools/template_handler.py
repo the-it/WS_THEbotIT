@@ -89,7 +89,7 @@ class TemplateFinderException(Exception):
     pass
 
 
-class TemplateFinder(object):
+class TemplateFinder():
     def __init__(self, text_to_search: str):
         self.text = text_to_search
 
