@@ -39,6 +39,7 @@ class HilbertTimer(OneTimeBot):
         page.text = new_text
         if not self.debug:
             page.save("Time is ticking")
+        return True
 
 
 if __name__ == "__main__":  # pragma: no cover
