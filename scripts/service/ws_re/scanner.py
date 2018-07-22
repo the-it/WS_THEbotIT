@@ -19,6 +19,7 @@ class ReScanner(CanonicalBot):
         self.tasks = []  # type: List[type[ReScannerTask]]
         if self.debug:
             self.tasks = self.tasks + []
+        self.statistic = {}
 
     def __enter__(self):
         super().__enter__()
@@ -50,15 +51,25 @@ class ReScanner(CanonicalBot):
 
     def compile_lemma_list(self) -> List[str]:
         self.logger.info('Compile the lemma list')
+        self.logger.info('Searching for lemmas')
         searcher = self._prepare_searcher()
         self.logger.info('[{url} {url}]'.format(url=searcher))
         raw_lemma_list = searcher.run()
+        self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
+        self.logger.info("Filter new_lemma_list")
         # all items which wasn't process before
         new_lemma_list = [x['nstext'] + ':' + x['title'] for x in raw_lemma_list if
                           x['nstext'] + ':' + x['title'] not in list(self.data.keys())]
+        self.statistic["len_new_lemma_list"] = len(new_lemma_list)
+        self.logger.info("Sort old_lemma_list")
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
         # first iterate new items then the old ones (oldest first)
+        self.logger.info("Add the two lists")
+        self.statistic["len_old_lemma_list"] = len(old_lemma_list)
+        self.logger.info("raw: {}, new: {}, old: {}".format(self.statistic["len_raw_lemma_list"],
+                                                            self.statistic["len_new_lemma_list"],
+                                                            self.statistic["len_old_lemma_list"]))
         return new_lemma_list + old_lemma_list
 
     def _activate_tasks(self) -> List[ReScannerTask]:
