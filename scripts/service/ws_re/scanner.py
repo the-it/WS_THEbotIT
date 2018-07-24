@@ -67,7 +67,7 @@ class ReScanner(CanonicalBot):
             lemma = item['nstext'] + ':' + item['title']
             try:
                 self.data[lemma]
-            except:
+            except KeyError:
                 newer_lemma_list.append(lemma)
         self.logger.info("Sort old_lemma_list")
         # before processed lemmas ordered by last process time
@@ -89,8 +89,8 @@ class ReScanner(CanonicalBot):
         for item in raw_lemma_list:
             lemma = item['nstext'] + ':' + item['title']
             try:
-                date = self.data[lemma]
-            except:
+                self.data[lemma]
+            except KeyError:
                 new_lemma_list.append(lemma)
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
