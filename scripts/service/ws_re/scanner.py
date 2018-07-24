@@ -15,7 +15,7 @@ class ReScanner(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(hours=5)
+        self.timeout = timedelta(hours=2)
         self.tasks = []  # type: List[type[ReScannerTask]]
         if self.debug:
             self.tasks = self.tasks + []
@@ -61,6 +61,14 @@ class ReScanner(CanonicalBot):
         new_lemma_list = [x['nstext'] + ':' + x['title'] for x in raw_lemma_list if
                           x['nstext'] + ':' + x['title'] not in list(self.data.keys())]
         self.statistic["len_new_lemma_list"] = len(new_lemma_list)
+        self.logger.info("Filter newer_lemma_list")
+        newer_lemma_list = []
+        for item in raw_lemma_list:
+            lemma = item['nstext'] + ':' + item['title']
+            try:
+                self.data[lemma]
+            except KeyError:
+                newer_lemma_list.append(lemma)
         self.logger.info("Sort old_lemma_list")
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
@@ -70,6 +78,22 @@ class ReScanner(CanonicalBot):
         self.logger.info("raw: {}, new: {}, old: {}".format(self.statistic["len_raw_lemma_list"],
                                                             self.statistic["len_new_lemma_list"],
                                                             self.statistic["len_old_lemma_list"]))
+        return new_lemma_list + old_lemma_list
+
+    def compile_lemma_list_2(self) -> List[str]:
+        searcher = self._prepare_searcher()
+        raw_lemma_list = searcher.run()
+        self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
+        # all items which wasn't process before
+        new_lemma_list = []
+        for item in raw_lemma_list:
+            lemma = item['nstext'] + ':' + item['title']
+            try:
+                self.data[lemma]
+            except KeyError:
+                new_lemma_list.append(lemma)
+        # before processed lemmas ordered by last process time
+        old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
         return new_lemma_list + old_lemma_list
 
     def _activate_tasks(self) -> List[ReScannerTask]:
