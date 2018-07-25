@@ -77,7 +77,6 @@ class TestReScanner(TestCase):
         self.run_mock.return_value = self.result_of_searcher
         with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual([':RE:Lemma1', ':RE:Lemma2', ':RE:Lemma3'], bot.compile_lemma_list())
-            self.assertEqual([':RE:Lemma1', ':RE:Lemma2', ':RE:Lemma3'], bot.compile_lemma_list_2())
 
     def test_compile_lemmas_old_lemmas(self):
         self.run_mock.return_value = self.result_of_searcher
@@ -85,14 +84,10 @@ class TestReScanner(TestCase):
             with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101232359'}):
                 self.assertEqual([':RE:Lemma2', ':RE:Lemma3', ':RE:Lemma1'],
                                  bot.compile_lemma_list())
-                self.assertEqual([':RE:Lemma2', ':RE:Lemma3', ':RE:Lemma1'],
-                                 bot.compile_lemma_list_2())
             with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101232359',
                                             ":RE:Lemma3": '20020101232359'}):
                 self.assertEqual([':RE:Lemma2', ':RE:Lemma1', ':RE:Lemma3'],
                                  bot.compile_lemma_list())
-                self.assertEqual([':RE:Lemma2', ':RE:Lemma1', ':RE:Lemma3'],
-                                 bot.compile_lemma_list_2())
 
     class ONE1Task(ReScannerTask):
         def task(self):
