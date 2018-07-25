@@ -4,7 +4,7 @@ from tools.date_conversion import DateConversion
 
 @ddt
 class TestDateConversion(TestCase):
-    @file_data("date_conversion.json")
+    @file_data("test_date_conversion.json")
     def test_data_provider(self, value):
         for item in value:
             converter = DateConversion(item[0])

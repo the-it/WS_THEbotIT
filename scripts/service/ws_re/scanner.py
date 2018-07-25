@@ -69,6 +69,8 @@ class ReScanner(CanonicalBot):
                 self.data[lemma]
             except KeyError:
                 newer_lemma_list.append(lemma)
+        self.logger.info("new_lemma_list: {}".format(new_lemma_list))
+        self.logger.info("newer_lemma_list: {}".format(newer_lemma_list))
         self.logger.info("Sort old_lemma_list")
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
