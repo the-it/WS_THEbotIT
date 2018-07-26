@@ -1,7 +1,6 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
-from typing import List
 
 from pywikibot import Site, Page
 
@@ -22,6 +21,12 @@ class ReScannerTask():
         self.processed_pages = []  # type: List[str]
         self.timeout = timedelta(minutes=1)
         self.load_task()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
 
     @abstractmethod
     def task(self):
