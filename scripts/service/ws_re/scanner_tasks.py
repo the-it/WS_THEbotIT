@@ -1,6 +1,7 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
+from typing import List
 
 from pywikibot import Site, Page
 
@@ -18,15 +19,9 @@ class ReScannerTask():
         self.logger = logger
         self.re_page = None  # type: RePage
         self.result = {SUCCESS: False, CHANGED: False}
-        self.processed_pages = []
+        self.processed_pages = []  # type: List[str]
         self.timeout = timedelta(minutes=1)
         self.load_task()
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        pass
 
     @abstractmethod
     def task(self):
@@ -75,7 +70,7 @@ class ERROTask(ReScannerTask):
     def finish_task(self):
         if self.data:
             if not self.debug:
-                page = Page(self.wiki, "Benutzer:THEbotIT/Logs/ReScanner/Errors")
+                page = Page(self.wiki, "RE:Wartung:Strukturfehler")
                 page.text = page.text + self._build_entry()
                 page.save("Neue Fehlermeldungen", botflag=True)
         super().finish_task()
