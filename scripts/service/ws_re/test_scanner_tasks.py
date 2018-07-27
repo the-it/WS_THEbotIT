@@ -3,21 +3,25 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask
 from tools.bots import WikiLogger
 from test import *
 
 
-class TestReScannerTask(TestCase):
+class TaskTestCase(TestCase):
     # todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs some investigation
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
-    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text",
+                new_callable=mock.PropertyMock)
     def setUp(self, text_mock, page_mock):
         self.page_mock = page_mock
         self.text_mock = text_mock
         type(self.page_mock).text = self.text_mock
-        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
+        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
+                                 log_to_screen=False)
 
+
+class TestReScannerTask(TaskTestCase):
     class NAMETask(ReScannerTask):
         def task(self):
             pass
@@ -154,3 +158,33 @@ class TestERROTask(TestCase):
                     task = ERROTask(None, self.logger, debug=False)
                     task.finish_task()
                     self.assertEqual(0, page_mock.call_count)
+
+
+class TestKSCHTask(TaskTestCase):
+    def test_process(self):
+        self.text_mock.return_value = """{{REDaten
+}}
+{{RE keine Schöpfungshöhe|1950}}
+text
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = KSCHTask(None, self.logger)
+            task.run(re_page)
+            compare("1950", re_page[0]["TODESJAHR"].value)
+            compare(True, re_page[0]["KEINE_SCHÖPFUNGSHÖHE"].value)
+            compare("text", re_page[0].text)
+
+    def test_process_error(self):
+        self.text_mock.return_value = """{{REDaten
+}}
+{{RE keine Schöpfungshöhe|tada}}
+text
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = KSCHTask(None, self.logger)
+            task.run(re_page)
+            compare("", re_page[0]["TODESJAHR"].value)
+            compare(False, re_page[0]["KEINE_SCHÖPFUNGSHÖHE"].value)
+            compare("{{RE keine Schöpfungshöhe|tada}}\ntext", re_page[0].text)

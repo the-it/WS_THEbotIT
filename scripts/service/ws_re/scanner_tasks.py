@@ -79,3 +79,15 @@ class ERROTask(ReScannerTask):
                 page.text = page.text + self._build_entry()
                 page.save("Neue Fehlermeldungen", botflag=True)
         super().finish_task()
+
+
+class KSCHTask(ReScannerTask):
+    _regex_template = re.compile(r"{{RE keine Schöpfungshöhe\|(\d\d\d\d)}}")
+
+    def task(self):
+        for re_article in self.re_page:
+            template_match = self._regex_template.search(re_article.text)
+            if template_match:
+                re_article["TODESJAHR"].value = template_match.group(1)
+                re_article["KEINE_SCHÖPFUNGSHÖHE"].value = True
+                re_article.text = self._regex_template.sub("", re_article.text).strip()
