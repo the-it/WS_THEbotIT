@@ -82,6 +82,10 @@ class TestReProperty(TestCase):
         re_property.value = "value"
         self.assertNotEqual(pre_hash, hash(re_property))
 
+    def test_repr(self):
+        re_property = ReProperty(name="Test", default=False)
+        compare("<ReProperty> (name: Test, value: False, type: <class 'bool'>)", repr(re_property))
+
 
 class TestReArticle(TestCase):
     def setUp(self):
