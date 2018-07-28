@@ -65,11 +65,15 @@ class ReProperty():
     def name(self) -> str:
         return self._name
 
-    def __str__(self):
+    def value_to_string(self):
         return self._return_by_type(self.value)
 
     def __hash__(self):
         return hash(self.name) + hash(self.value)
+
+    def __repr__(self):
+        return "<ReProperty> (name: {}, value: {}, type: {})"\
+            .format(self.name, self.value, type(self._default))
 
 
 RE_DATEN = "REDaten"
@@ -272,7 +276,8 @@ class ReArticle(Mapping):
         template_handler.title = RE_DATEN
         list_of_properties = []
         for re_property in self._properties:
-            list_of_properties.append({"key": re_property.name, "value": str(re_property)})
+            list_of_properties.append({"key": re_property.name,
+                                       "value": re_property.value_to_string()})
         template_handler.update_parameters(list_of_properties)
         return template_handler.get_str(str_complex=True)
 

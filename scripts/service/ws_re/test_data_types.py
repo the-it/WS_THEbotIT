@@ -40,14 +40,14 @@ class TestReProperty(TestCase):
 
     def test_format_bool(self):
         re_property = ReProperty(name="Test", default=False)
-        self.assertEqual(str(re_property), "OFF")
+        self.assertEqual(re_property.value_to_string(), "OFF")
         re_property.value = True
-        self.assertEqual(str(re_property), "ON")
+        self.assertEqual(re_property.value_to_string(), "ON")
 
     def test_wrong_default(self):
         with self.assertRaises(TypeError):
             re_property = ReProperty(name="Test", default=1)
-            str(re_property)
+            re_property.value_to_string()
 
     def test_set_bool_with_ON_and_OFF(self):
         re_property = ReProperty(name="Test", default=False)
@@ -144,8 +144,8 @@ class TestReArticle(TestCase):
 
     def test_properties_init(self):
         article = ReArticle(re_daten_properties={"BAND": "I 1", "NACHTRAG": True})
-        self.assertEqual(str(article["BAND"]), "I 1")
-        self.assertEqual(str(article["NACHTRAG"]), "ON")
+        self.assertEqual(article["BAND"].value_to_string(), "I 1")
+        self.assertEqual(article["NACHTRAG"].value_to_string(), "ON")
 
     def test_properties_exception(self):
         with self.assertRaises(ReDatenException):
