@@ -17,7 +17,6 @@ class ReScannerTask():
         self.debug = debug
         self.logger = logger
         self.re_page = None  # type: RePage
-        self.result = {SUCCESS: False, CHANGED: False}
         self.processed_pages = []  # type: List[str]
         self.timeout = timedelta(minutes=1)
         self.load_task()
@@ -35,16 +34,17 @@ class ReScannerTask():
     def run(self, re_page: RePage):
         self.re_page = re_page
         preprocessed_hash = hash(self.re_page)
+        result = {SUCCESS: False, CHANGED: False}
         try:
             self.task()
         except Exception as exception:  # pylint: disable=broad-except
             self.logger.exception("Logging a caught exception", exception)
         else:
-            self.result[SUCCESS] = True
+            result[SUCCESS] = True
             self.processed_pages.append(re_page.lemma)
         if preprocessed_hash != hash(self.re_page):
-            self.result[CHANGED] = True
-        return self.result
+            result[CHANGED] = True
+        return result
 
     def load_task(self):
         self.logger.info('opening task {}'.format(self.get_name()))

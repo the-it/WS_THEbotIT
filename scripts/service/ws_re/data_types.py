@@ -134,7 +134,7 @@ class ReArticle(Mapping):
         self._init_properties(re_daten_properties)
 
     @property
-    def article_type(self):
+    def article_type(self) -> str:
         return self._article_type
 
     @article_type.setter
@@ -145,7 +145,7 @@ class ReArticle(Mapping):
             raise ReDatenException("{} is not a permitted article type.".format(new_value))
 
     @property
-    def text(self):
+    def text(self) -> str:
         return self._text
 
     @text.setter
@@ -156,7 +156,7 @@ class ReArticle(Mapping):
             raise ReDatenException("Property text must be a string.")
 
     @property
-    def author(self):
+    def author(self) -> Tuple[str, str]:
         return self._author
 
     @author.setter

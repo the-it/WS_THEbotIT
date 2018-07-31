@@ -119,6 +119,20 @@ class TestReScannerTask(TaskTestCase):
                 task.run(re_page)
             self.assertEqual([], task.processed_pages)
 
+    class ALNAAltereNotAllTask(ReScannerTask):
+        def task(self):
+            self.re_page[0].text = self.re_page[0].text.replace("text", "other stuff")
+
+    def test_process_two_tasks_alter_one(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        re_page1 = RePage(self.page_mock)
+        self.text_mock.return_value = "{{REDaten}}\nother stuff\n{{REAutor|Autor.}}"
+        re_page2 = RePage(self.page_mock)
+        with LogCapture():
+            with self.ALNAAltereNotAllTask(None, self.logger) as task:
+                compare({"success": True, "changed": True}, task.run(re_page1))
+                compare({"success": True, "changed": False}, task.run(re_page2))
+
 
 class TestERROTask(TestCase):
     def setUp(self):
