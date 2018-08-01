@@ -233,7 +233,7 @@ class ReArticle(Mapping):
         re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
         properties_dict = cls._extract_properties(re_start.parameters)
-        author_name = re.search(r"^(.*?)\.?$", re_author.parameters[0]["value"]).group(1)
+        author_name = re_author.parameters[0]["value"]
         try:
             author_issue = re_author.parameters[1]["value"]
         except IndexError:
@@ -291,9 +291,9 @@ class ReArticle(Mapping):
         if self.author[0] == "OFF":
             author = "{{{{{}|{}}}}}".format(RE_AUTHOR, self.author[0])
         elif self.author[1]:
-            author = "{{{{{}|{}.|{}}}}}".format(RE_AUTHOR, self.author[0], self.author[1])
+            author = "{{{{{}|{}|{}}}}}".format(RE_AUTHOR, self.author[0], self.author[1])
         else:
-            author = "{{{{{}|{}.}}}}".format(RE_AUTHOR, self.author[0])
+            author = "{{{{{}|{}}}}}".format(RE_AUTHOR, self.author[0])
         content.append(author)
         return "\n".join(content)
 

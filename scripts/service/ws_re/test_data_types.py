@@ -168,7 +168,7 @@ class TestReArticle(TestCase):
     def test_from_text(self):
         article_text = "{{REDaten\n|BAND=III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         article = ReArticle.from_text(article_text)
-        self.assertEqual(article.author, ("Some Author", ""))
+        self.assertEqual(article.author, ("Some Author.", ""))
         self.assertEqual(article.text, "text")
         self.assertEqual(article.article_type, "REDaten")
         self.assertEqual(article["BAND"].value, "III")
@@ -264,7 +264,7 @@ class TestReArticle(TestCase):
             ReArticle.from_text(article_text)
 
     def test_to_text_simple(self):
-        self.article.author = "Autor"
+        self.article.author = "Autor."
         self.article.text = "text"
         self.assertEqual(article_template, self.article.to_text())
 
@@ -272,7 +272,7 @@ class TestReArticle(TestCase):
         text = """{{REAbschnitt}}
 text
 {{REAutor|Autor.}}"""
-        self.article.author = "Autor"
+        self.article.author = "Autor."
         self.article.text = "text"
         self.article.article_type = "REAbschnitt"
         self.assertEqual(text, self.article.to_text())
@@ -282,7 +282,7 @@ text
                                .replace("SPALTE_START=", "SPALTE_START=1000")\
                                .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
         self.article.text = "text"
-        self.article.author = "Autor"
+        self.article.author = "Autor."
         self.article["BAND"].value = "II"
         self.article["SPALTE_START"].value = "1000"
         self.article["WIKIPEDIA"].value = "Test"
@@ -344,6 +344,27 @@ text
         article = ReArticle.from_text(article_text)
         self.assertEqual(article_template, article.to_text())
 
+    def test_bug_dot_added_to_author(self):
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|S.A.†}}"
+        article = ReArticle.from_text(article_text)
+        self.assertIn("{{REAutor|S.A.†}}", article.to_text())
+
+    def test_bug_issue_number_deleted_from_author(self):
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.|I,1}}"
+        article = ReArticle.from_text(article_text)
+        compare("I,1", article.author[1])
+        self.assertIn("{{REAutor|Some Author.|I,1}}", article.to_text())
+
+    def test_bug_issue_OFF_deleted_from_author(self):
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|OFF}}"
+        article = ReArticle.from_text(article_text)
+        self.assertIn("{{REAutor|OFF}}", article.to_text())
+
+    def test_bug_issue_OFF_deleted_from_author_no_OFF(self):
+        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|A. Author.}}"
+        article = ReArticle.from_text(article_text)
+        self.assertIn("{{REAutor|A. Author.}}", article.to_text())
+
 
 class TestRePage(TestCase):
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
@@ -366,7 +387,7 @@ class TestRePage(TestCase):
         self.assertTrue(isinstance(re_article, ReArticle))
         self.assertEqual("text", re_article.text)
         self.assertEqual("REDaten", re_article.article_type)
-        self.assertEqual(("Autor", ""), re_article.author)
+        self.assertEqual(("Autor.", ""), re_article.author)
 
     def test_double_article(self):
         self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\n" \
@@ -501,21 +522,6 @@ class TestRePage(TestCase):
         re_page[0].text = "bla"
         with self.assertRaises(ReDatenException):
             re_page.save("reason")
-
-    def test_bug_issue_number_deleted_from_author(self):
-        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.|I,1}}"
-        article = ReArticle.from_text(article_text)
-        self.assertIn("{{REAutor|Some Author.|I,1}}", article.to_text())
-
-    def test_bug_issue_OFF_deleted_from_author(self):
-        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|OFF}}"
-        article = ReArticle.from_text(article_text)
-        self.assertIn("{{REAutor|OFF}}", article.to_text())
-
-    def test_bug_issue_OFF_deleted_from_author_no_OFF(self):
-        article_text = "{{REAbschnitt}}\ntext\n{{REAutor|A. Author.}}"
-        article = ReArticle.from_text(article_text)
-        self.assertIn("{{REAutor|A. Author.}}", article.to_text())
 
     def test_bug_too_much_blanks(self):
         before = """{{REAbschnitt}}
