@@ -8,7 +8,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v2-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+          - v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
           name: install dependencies
           command: |
@@ -18,7 +18,7 @@ jobs:
       - save_cache:
           paths:
             - ./venv
-          key: v2-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+          key: v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
           name: run unittest
           when: always
@@ -57,7 +57,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v2-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+          - v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
       - run:
           name: pre target code climate
           command: |
