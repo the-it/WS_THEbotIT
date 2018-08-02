@@ -4,6 +4,8 @@ environment:
       PYWIKIBOT2_NO_USER_CONFIG: "1"
     - PYTHON: "C:\\Python36-x64"
       PYWIKIBOT2_NO_USER_CONFIG: "1"
+    - PYTHON: "C:\\Python37-x64"
+      PYWIKIBOT2_NO_USER_CONFIG: "1"
 install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python -c \"import sys; print(sys.prefix)\""
