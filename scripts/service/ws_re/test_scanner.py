@@ -89,6 +89,14 @@ class TestReScanner(TestCase):
                 self.assertEqual([':RE:Lemma2', ':RE:Lemma1', ':RE:Lemma3'],
                                  bot.compile_lemma_list())
 
+    def test_get_oldest_processed(self):
+        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
+            with mock.patch.dict(bot.data, {":RE:Lemma1": '20010101000000',
+                                            ":RE:Lemma2": '20080101232359',
+                                            ":RE:Lemma3": '20020101232359'}):
+                self.assertEqual(datetime(year=2001, month=1, day=1),
+                                 bot.get_oldest_datetime())
+
     class ONE1Task(ReScannerTask):
         def task(self):
             self.logger.info("I")

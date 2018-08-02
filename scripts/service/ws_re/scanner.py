@@ -114,6 +114,10 @@ class ReScanner(CanonicalBot):
                                       .format(task.get_name(), lemma))
         return task_name
 
+    def get_oldest_datetime(self):
+        datetime_str = min(self.data.values())
+        return datetime.strptime(datetime_str, "%Y%m%d%H%M%S")
+
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
         error_task = ERROTask(wiki=self.wiki, debug=self.debug, logger=self.logger)
@@ -145,6 +149,8 @@ class ReScanner(CanonicalBot):
             self._add_lemma_to_data(lemma)
             if self._watchdog():
                 self.logger.info("{} Lemmas processed, {} changed.".format(idx, processed_lemmas))
+                self.logger.info("Oldest processed item: {}"
+                                 .format(str(datetime.now()-self.get_oldest_datetime())))
                 break
         for task in active_tasks:
             task.finish_task()
