@@ -150,7 +150,7 @@ class ReScanner(CanonicalBot):
             if self._watchdog():
                 self.logger.info("{} Lemmas processed, {} changed.".format(idx, processed_lemmas))
                 self.logger.info("Oldest processed item: {}"
-                                 .format(str(datetime.now()-self.get_oldest_datetime())))
+                                 .format(str(datetime.now() - self.get_oldest_datetime())))
                 break
         for task in active_tasks:
             task.finish_task()

@@ -1,5 +1,5 @@
-from collections import Mapping, OrderedDict
-from collections.abc import Sequence
+from collections import OrderedDict
+from collections.abc import Mapping, Sequence
 from enum import Enum
 from pathlib import Path
 import re
