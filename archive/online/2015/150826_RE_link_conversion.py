@@ -3,11 +3,8 @@ __author__ = 'eso'
 import sys
 sys.path.append('../../')
 from tools.catscan import PetScan
-from tools.template_handler import TemplateHandler
 import re
-import requests
 import pywikibot
-import copy
 import roman
 
 def build_arg(searcher):
@@ -25,7 +22,7 @@ def build_arg(searcher):
 
 def decide_REIA_or_REWL(re_sub):
     test1 = re_sub.group(0)
-    searcher = fit.search(re_sub.group(0))
+    searcher = FIT.search(re_sub.group(0))
     (arg1, arg2, arg3) = build_arg(searcher)
     if searcher.group(1) == 'archive':  # archive
         return '{{REIA|%s|%s}}' % (arg1, arg2)
@@ -36,16 +33,18 @@ def decide_REIA_or_REWL(re_sub):
         halfband = searcher.group(5)
         if  (app is None) and (subl is None) and (arabic < 12): # all between I and XI
             return '{{REIA|%s|%s}}' % (arg1, arg2)
-        elif (subl is None) and (app is 'A') and (arabic < 3) and (halfband is '1'): # I A,1 and II A,1
+        # I A,1 and II A,1
+        elif (subl is None) and (app == 'A') and (arabic < 3) and (halfband == '1'):
             return '{{REIA|%s|%s}}' % (arg1, arg2)
-        elif (subl is 'S') and (app is None) and (arabic < 4) and (halfband is None): # S I, S II, S III
+        # S I, S II, S III
+        elif (subl == 'S') and (app is None) and (arabic < 4) and (halfband is None):
             return '{{REIA|%s|%s}}' % (arg1, arg2)
         else: # rest
             return '{{REWL|%s|%s}}' % (arg1, arg2)
 
-wiki = pywikibot.Site()
+WIKI = pywikibot.Site()
 
-regex = r'''http:\/\/           # searching for a http://-address
+REGEX = r'''http:\/\/           # searching for a http://-address
             .*?                 # some characters in between   UNGREEDY (hier kam es beim Durchlauf zu einem Error
                                 # beim nächsten mal die Anzahl der Zeichen begrenzen)
             (wikilivres|archive)# hit(1) for deciding whether a wikilivre or an archive address
@@ -58,25 +57,26 @@ regex = r'''http:\/\/           # searching for a http://-address
             [ _]0{0,3}(\d{1,4}) # hit(6) for the page
             \.(jpg|png)         # hit(7) for the picture typ'''
 
-fit = re.compile(regex, re.VERBOSE)
+FIT = re.compile(REGEX, re.VERBOSE)
 
-lemma_searcher = PetScan()
-lemma_searcher.add_positive_category('Paulys Realencyclopädie der classischen Altertumswissenschaft')
+LEMMA_SEARCHER = PetScan()
+LEMMA_SEARCHER.add_positive_category('Paulys Realencyclopädie der classischen Altertumswissenschaft')
 #lemma_searcher.add_no_template('REIA') # sadly I have to look on all 18.000 re-sites
-lemma_searcher.set_timeout(90)
-lemmas = lemma_searcher.run()
+LEMMA_SEARCHER.set_timeout(90)
+lemmas = LEMMA_SEARCHER.run()
 
-for i in range(len(lemmas)):
+for i, _ in enumerate(lemmas):
     lemmas[i] = lemmas[i]['a']['title']
 
 for idx, lemma in enumerate(lemmas):
     if lemma[0:3] == 're:':
         print(idx, '/', len(lemmas), lemma)
-        page = pywikibot.Page(wiki, lemma)
-        searcher = fit.search(page.text)
+        page = pywikibot.Page(WIKI, lemma)
+        searcher = FIT.search(page.text)
         if searcher:
             print('#######', lemma)
-            temp = fit.sub(lambda x: decide_REIA_or_REWL(x), page.text)
+            temp = FIT.sub(lambda x: decide_REIA_or_REWL(x), page.text)
             page.text = temp
             test1 = 3
-            page.save(summary = 'Umwandlung von Scanlinks zu {{REIA}} und {{REWL}}', botflag = True, async= True)
+            page.save(summary='Umwandlung von Scanlinks zu {{REIA}} und {{REWL}}',
+                      botflag=True, asynchronous=True)
