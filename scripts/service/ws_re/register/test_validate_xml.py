@@ -1,7 +1,9 @@
 from os import listdir
 from pathlib import Path
+from io import StringIO
 
 from lxml import etree
+import requests
 
 from test import *
 from tools import path_to_str
@@ -15,10 +17,11 @@ def _get_all_xml_files():
 
 @ddt
 class TestValidateXml(TestCase):
-    @staticmethod
-    def _get_register_xml():
-        path_to_xsd = Path(__file__).parent.joinpath("register.xsd")
-        with open(path_to_str(path_to_xsd)) as xsd_file:
+    path_to_xsd = Path(__file__).parent.joinpath("register.xsd")
+
+    @classmethod
+    def _get_register_xml(cls):
+        with open(path_to_str(cls.path_to_xsd)) as xsd_file:
             return etree.XMLSchema(etree.parse(xsd_file))
 
     @classmethod
@@ -31,3 +34,11 @@ class TestValidateXml(TestCase):
         with open(path_to_str(path_to_xml)) as xml:
             doc_to_check = etree.parse(xml)
             self.register_xsd.assertValid(doc_to_check)
+
+    @skip("Takes way too much time.")
+    def test_check_xsd(self):
+        r = requests.get('https://www.w3.org/2009/XMLSchema/XMLSchema.xsd')
+        xsd_for_xsd = StringIO(r.text)
+        xsd_schema = etree.XMLSchema(etree.parse(xsd_for_xsd))
+        with open(path_to_str(self.path_to_xsd)) as register_xsd:
+            xsd_schema.assertValid(etree.parse(register_xsd))
