@@ -1,3 +1,4 @@
+from os import listdir
 from pathlib import Path
 
 from lxml import etree
@@ -8,7 +9,8 @@ from tools import path_to_str
 
 def _get_all_xml_files():
     path_to_register = Path(__file__).parent
-    return ("file1.xml",)
+    list_of_files = [x for x in listdir(path_to_str(path_to_register)) if x.split(".")[-1] == "xml"]
+    return list_of_files
 
 
 @ddt
