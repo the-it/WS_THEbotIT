@@ -8,7 +8,7 @@ from tools import path_to_str
 
 def _get_all_xml_files():
     path_to_register = Path(__file__).parent
-    return ("file1.xml", "file2.xml")
+    return ("file1.xml",)
 
 
 @ddt

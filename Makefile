@@ -37,15 +37,17 @@ flake8 :
 unittest :
 	echo "########### UNITTEST ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
+	export PYTHONPATH=$(CURDIR) && \
 	python -m unittest test/all_tests.py
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
+	export PYTHONPATH=$(CURDIR) && \
 	coverage run test/all_tests.py && \
 	coverage xml
 
-coverage_html : coverage
+coverage-html : coverage
 	echo "######### COVERAGE HTML ########"
 	coverage html -d .coverage_html
 	python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
