@@ -8,6 +8,7 @@ from typing import Union, Generator, Tuple
 import pywikibot
 import yaml
 
+from tools import path_to_str
 from tools.template_handler import TemplateFinder, TemplateHandler
 
 
@@ -423,7 +424,7 @@ class ReVolume():
 class ReVolumes(Mapping):
     def __init__(self):
         path_to_file = Path(__file__).parent.joinpath("volumes.yaml")
-        with open(str(path_to_file)) as yaml_file:
+        with open(path_to_str(path_to_file)) as yaml_file:
             _volume_list = yaml.safe_load(yaml_file.read())
         _volume_mapping = OrderedDict()
         for item in _volume_list:

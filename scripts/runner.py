@@ -18,10 +18,7 @@ from scripts.service.little_tasks.hilbert_timer import HilbertTimer
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.status import ReStatus
 from tools.bot_scheduler import BotScheduler
-
-if datetime.now() > datetime(year=2020, month=9, day=13):  # pragma: no cover
-    raise DeprecationWarning("Python 3.5 has reached end of live. "
-                             "Consider removing all the casts Path -> str.")
+from tools import path_to_str
 
 
 class TheBotItScheduler(BotScheduler):
@@ -37,18 +34,17 @@ class TheBotItScheduler(BotScheduler):
         path_to_archive = Path(__file__)\
             .parent\
             .joinpath(self.folder_archive)\
-            .joinpath(str(datetime.today().year))
-        path_for_creation = str(path_to_archive)
-        if not os.path.exists(path_for_creation):
-            os.mkdir(path_for_creation)
-            open(str(path_to_archive.joinpath("__init__.py")), "w").close()
+            .joinpath(path_to_str(datetime.today().year))
+        if not os.path.exists(path_to_str(path_to_archive)):
+            os.mkdir(path_to_str(path_to_archive))
+            open(path_to_str(path_to_archive.joinpath("__init__.py")), "w").close()
         return path_to_archive
 
     def _get_files_to_run(self) -> List[str]:
         file_list = []
-        for file_name in os.listdir(str(self.path_one_time)):
+        for file_name in os.listdir(path_to_str(self.path_one_time)):
             if not re.search("test", file_name):
-                if os.path.isfile(str(self.path_one_time.joinpath(file_name))):
+                if os.path.isfile(path_to_str(self.path_one_time.joinpath(file_name))):
                     file_list.append(file_name)
         file_list.remove("__init__.py")
         self.logger.info("Files in one_time directory: {}".format(file_list))
@@ -70,26 +66,27 @@ class TheBotItScheduler(BotScheduler):
         return success
 
     def _move_file_to_archive(self, file: str):
-        os.rename(str(self.path_one_time.joinpath(file)), str(self.path_archive.joinpath(file)))
-        with open(str(self.path_archive.joinpath(file)), "r+") as moved_bot_file:
+        os.rename(path_to_str(self.path_one_time.joinpath(file)),
+                  path_to_str(self.path_archive.joinpath(file)))
+        with open(path_to_str(self.path_archive.joinpath(file)), "r+") as moved_bot_file:
             pretext = moved_bot_file.read()
             moved_bot_file.seek(0, 0)
             moved_bot_file.write("# successful processed on {}\n{}"
                                  .format(self.timestamp.start_of_run.strftime("%Y-%m-%d"), pretext))
-        for file_name in os.listdir(str(self.path_one_time)):
+        for file_name in os.listdir(path_to_str(self.path_one_time)):
             if re.search(file.split(".")[0], file_name):
-                os.rename(str(self.path_one_time.joinpath(file_name)),
-                          str(self.path_archive.joinpath(file_name)))
+                os.rename(path_to_str(self.path_one_time.joinpath(file_name)),
+                          path_to_str(self.path_archive.joinpath(file_name)))
 
     def _push_files(self, files: List[str]):
         repo = git.Repo(search_parent_directories=True)
         files_add = []
         files_remove = []
         for file in files:
-            for file_name in os.listdir(str(self.path_archive)):
+            for file_name in os.listdir(path_to_str(self.path_archive)):
                 if re.search(file.split(".")[0], file_name):
-                    files_add.append(str(self.path_archive.joinpath(file_name)))
-                    files_remove.append(str(self.path_one_time.joinpath(file_name)))
+                    files_add.append(path_to_str(self.path_archive.joinpath(file_name)))
+                    files_remove.append(path_to_str(self.path_one_time.joinpath(file_name)))
         if files_add:
             repo.index.add(files_add)
         if files_remove:
