@@ -34,7 +34,7 @@ class TheBotItScheduler(BotScheduler):
         path_to_archive = Path(__file__)\
             .parent\
             .joinpath(self.folder_archive)\
-            .joinpath(path_to_str(datetime.today().year))
+            .joinpath(str(datetime.today().year))
         if not os.path.exists(path_to_str(path_to_archive)):
             os.mkdir(path_to_str(path_to_archive))
             open(path_to_str(path_to_archive.joinpath("__init__.py")), "w").close()

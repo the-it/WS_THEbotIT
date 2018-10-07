@@ -105,10 +105,10 @@ class TestBotScheduler(TestCase):
     def test_move_file_folder_exists(self):
         self._copy_bot_to_run_dir("bot_1")
         now = datetime.today()
-        path_to_current_archive = path_to_str(self._get_archive_test())
+        path_to_current_archive = self._get_archive_test()
         self.bot_it_scheduler._move_file_to_archive("bot_1.py")
-        self.assertIn("bot_1.py", os.listdir(path_to_current_archive))
-        with open(path_to_current_archive + os.sep + "bot_1.py", "r") as bot_file:
+        self.assertIn("bot_1.py", os.listdir(path_to_str(path_to_current_archive)))
+        with open(path_to_str(path_to_current_archive.joinpath("bot_1.py")), "r") as bot_file:
             compare(StringComparison("\# successful processed on {}".format(now.strftime("%Y-%m-%d"))), bot_file.readline())
 
     def test_move_file_with_test(self):
@@ -136,8 +136,8 @@ class TestBotScheduler(TestCase):
         self._copy_bot_to_archive_dir("bot_1")
         with patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
             self.bot_it_scheduler._push_files(["bot_1.py"])
-            file_add = [str(self._get_archive_test().joinpath("bot_1.py"))]
-            file_remove = [str(self._get_one_time_run_test().joinpath("bot_1.py"))]
+            file_add = [path_to_str(self._get_archive_test().joinpath("bot_1.py"))]
+            file_remove = [path_to_str(self._get_one_time_run_test().joinpath("bot_1.py"))]
             compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[0])
             compare("().index.add", repo_mock.mock_calls[1][0])
             compare(file_add, repo_mock.mock_calls[1][1][0])
@@ -155,12 +155,12 @@ class TestBotScheduler(TestCase):
         self._copy_bot_to_archive_dir("bot_2")
         with patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
             self.bot_it_scheduler._push_files(["bot_1.py", "bot_2.py"])
-            file_add = [str(self._get_archive_test().joinpath("bot_1.py")),
-                        str(self._get_archive_test().joinpath("bot_1_test.py")),
-                        str(self._get_archive_test().joinpath("bot_2.py"))]
-            file_remove = [str(self._get_one_time_run_test().joinpath("bot_1.py")),
-                           str(self._get_one_time_run_test().joinpath("bot_1_test.py")),
-                           str(self._get_one_time_run_test().joinpath("bot_2.py"))]
+            file_add = [path_to_str(self._get_archive_test().joinpath("bot_1.py")),
+                        path_to_str(self._get_archive_test().joinpath("bot_1_test.py")),
+                        path_to_str(self._get_archive_test().joinpath("bot_2.py"))]
+            file_remove = [path_to_str(self._get_one_time_run_test().joinpath("bot_1.py")),
+                           path_to_str(self._get_one_time_run_test().joinpath("bot_1_test.py")),
+                           path_to_str(self._get_one_time_run_test().joinpath("bot_2.py"))]
             compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[0])
             compare("().index.add", repo_mock.mock_calls[1][0])
             compare(set(file_add), set(repo_mock.mock_calls[1][1][0]))

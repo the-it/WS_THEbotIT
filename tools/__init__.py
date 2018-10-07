@@ -24,5 +24,5 @@ def path_to_str(path: Path) -> Union[str, Path]:
         raise DeprecationWarning("Python 3.5 has reached end of live. "
                                  "Consider removing all the casts Path -> str.")
     if sys.version_info < (3, 6):
-        return str(path)
+        return str(path)  # pragma: no cover
     return path
