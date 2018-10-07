@@ -15,13 +15,15 @@ def _get_all_xml_files():
 
 @ddt
 class TestValidateXml(TestCase):
-    def _get_register_xml(self):
+    @staticmethod
+    def _get_register_xml():
         path_to_xsd = Path(__file__).parent.joinpath("register.xsd")
         with open(path_to_str(path_to_xsd)) as xsd_file:
             return etree.XMLSchema(etree.parse(xsd_file))
 
-    def setUp(self):
-        self.register_xsd = self._get_register_xml()
+    @classmethod
+    def setUpClass(cls):
+        cls.register_xsd = cls._get_register_xml()
 
     @idata(_get_all_xml_files())
     def test_register_xml(self, file):
