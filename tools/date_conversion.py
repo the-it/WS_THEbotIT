@@ -48,9 +48,8 @@ class DateConversion:
     regex_preset = re.compile(r'<!--(\d{4}-\d{2}-\d{2})-->')
     regex_before_domino = re.compile(r'v. Chr')
     regex_only_century = re.compile(r'\d{1,2}\. (Jahrhundert|Jh.)')
-    regex_complete_date = re.compile(r'\d{1,2}(\.|\. | )(\d\d?|' +
-                                     _months +
-                                     r')\w*(\.|\. | )(\d{1,4})')
+    regex_complete_date = \
+        re.compile(r'\d{1,2}(\.|\. | )(\d\d?|' + _months + r')\w*(\.|\. | )(\d{1,4})')
     regex_no_day = re.compile(r'(\d{1,2}\.|' + _months + r')\w*(\.|\. | )(\d{1,4})')
     regex_only_year = re.compile(r'\d{1,4}')
 
