@@ -102,17 +102,10 @@ show_python_version: &show_python_version
     command: |
       python --version
 
-show_container_version: &show_container_version
-  run:
-    name: container version
-    command: |
-      echo $DOCKER_IMAGE
-
 quality_steps: &quality_steps
   steps:
     - checkout
     - <<: *show_python_version
-    - <<: *show_container_version
     - <<: *restore_cache
     - <<: *install_dependencies
     - <<: *save_cache
@@ -126,7 +119,6 @@ version_steps: &version_steps
   steps:
     - checkout
     - <<: *show_python_version
-    - <<: *show_container_version
     - <<: *restore_cache
     - <<: *install_dependencies
     - <<: *save_cache
@@ -136,7 +128,6 @@ coverage_steps: &coverage_steps
   steps:
     - checkout
     - <<: *show_python_version
-    - <<: *show_container_version
     - <<: *restore_cache
     - <<: *pre_code_climate
     - <<: *run_coverage
@@ -150,32 +141,24 @@ jobs:
   quality:
     docker:
       - image: circleci/python:3.7
-        environment:
-          DOCKER_IMAGE: python37
     working_directory: ~/repo
     <<: *quality_steps
 
   version34:
     docker:
       - image: circleci/python:3.4
-        environment:
-          DOCKER_IMAGE: python34
     working_directory: ~/repo
     <<: *version_steps
 
   version35:
     docker:
       - image: circleci/python:3.5
-        environment:
-          DOCKER_IMAGE: python35
     working_directory: ~/repo
     <<: *version_steps
 
   version36:
     docker:
       - image: circleci/python:3.6
-        environment:
-          DOCKER_IMAGE: python36
     working_directory: ~/repo
     <<: *version_steps
 
@@ -199,20 +182,26 @@ workflows:
   version: 2
   test-and-quality:
     jobs:
-      - quality
+      - quality:
+          context: python37
       - version34:
+          context: python34
           requires:
             - quality
       - version35:
+          context: python35
           requires:
             - quality
       - version36:
+          context: python36
           requires:
             - quality
       - version37:
+          context: python37
           requires:
             - quality
       - coverage:
+          context: python37
           requires:
             - version34
             - version35
