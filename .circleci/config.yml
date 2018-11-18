@@ -5,13 +5,13 @@ version: 2
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+      - v4-dependencies-{{ .Environment.DOCKER_IMAGE }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+    key: v4-dependencies-{{ .Environment.DOCKER_IMAGE }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
 
 install_dependencies: &install_dependencies
   run:
@@ -96,35 +96,84 @@ report_codecov: &report_codecov
       . venv/bin/activate
       make codecov
 
+quality_steps: &quality_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
+    - <<: *install_dependencies
+    - <<: *save_cache
+    - <<: *run_unittest
+    - <<: *flake8
+    - <<: *pycodestyle
+    - <<: *pylint
+    - <<: *safety
+
+version_steps: &version_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
+    - <<: *install_dependencies
+    - <<: *save_cache
+    - <<: *run_unittest
+
+coverage_steps: &coverage_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
+    - <<: *pre_code_climate
+    - <<: *run_coverage
+    - <<: *report_code_climate
+    - <<: *report_codacy
+    - <<: *report_codecov
+
 # job definitions
 
 jobs:
   quality:
     docker:
       - image: circleci/python:3.7
+        environment:
+          DOCKER_IMAGE: python37
     working_directory: ~/repo
-    steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *install_dependencies
-      - <<: *save_cache
-      - <<: *run_unittest
-      - <<: *flake8
-      - <<: *pycodestyle
-      - <<: *pylint
-      - <<: *safety
+    <<: *quality_steps
+
+  version34:
+    docker:
+      - image: circleci/python:3.4
+        environment:
+          DOCKER_IMAGE: python34
+    working_directory: ~/repo
+    <<: *version_steps
+
+  version35:
+    docker:
+      - image: circleci/python:3.5
+        environment:
+          DOCKER_IMAGE: python35
+    working_directory: ~/repo
+    <<: *version_steps
+
+  version36:
+    docker:
+      - image: circleci/python:3.6
+        environment:
+          DOCKER_IMAGE: python36
+    working_directory: ~/repo
+    <<: *version_steps
+
+  version37:
+    docker:
+      - image: circleci/python:3.7
+        environment:
+          DOCKER_IMAGE: python37
+    working_directory: ~/repo
+    <<: *version_steps
+
   coverage:
     docker:
       - image: circleci/python:3.7
     working_directory: ~/repo
-    steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *pre_code_climate
-      - <<: *run_coverage
-      - <<: *report_code_climate
-      - <<: *report_codacy
-      - <<: *report_codecov
+    <<: *coverage_steps
 
 # dependencies for the workflow
 
@@ -133,6 +182,21 @@ workflows:
   test-and-quality:
     jobs:
       - quality
-      - coverage:
+      - version34:
           requires:
             - quality
+      - version35:
+          requires:
+            - quality
+      - version36:
+          requires:
+            - quality
+      - version37:
+          requires:
+            - quality
+      - coverage:
+          requires:
+            - version34
+            - version35
+            - version36
+            - version37
