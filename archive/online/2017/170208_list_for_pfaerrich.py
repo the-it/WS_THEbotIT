@@ -9,7 +9,7 @@ from tools.catscan import PetScan
 wiki = Site()
 
 searcher = PetScan()
-searcher.add_positive_category("Korrigiert re")
+searcher.add_positive_category("RE:Korrigiert")
 lemma_list = searcher.run()
 
 list_for_pfaerrich = []
