@@ -1,93 +1,209 @@
 version: 2
+
+# define first all the single commands ... for reuse
+
+restore_cache: &restore_cache
+  restore_cache:
+    keys:
+      - v4-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+
+save_cache: &save_cache
+  save_cache:
+    paths:
+      - ./venv
+    key: v4-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+
+install_dependencies: &install_dependencies
+  run:
+    name: install dependencies
+    command: |
+      python3 -m venv venv
+      . venv/bin/activate
+      make pip3-all
+
+run_unittest: &run_unittest
+  run:
+    name: run unittest
+    when: always
+    command: |
+      . venv/bin/activate
+      make coverage
+
+flake8: &flake8
+  run:
+    name: flake8
+    when: always
+    command: |
+      . venv/bin/activate
+      make flake8
+
+pycodestyle: &pycodestyle
+  run:
+    name: pycodestyle
+    when: always
+    command: |
+      . venv/bin/activate
+      make pycodestyle
+
+pylint: &pylint
+  run:
+    name: pylint
+    when: always
+    command: |
+      . venv/bin/activate
+      make pylint
+
+safety: &safety
+  run:
+    name: safety
+    when: always
+    command: |
+      . venv/bin/activate
+      make safety
+
+pre_code_climate: &pre_code_climate
+  run:
+    name: pre target code climate
+    command: |
+      . venv/bin/activate
+      make code-climate-pre
+
+run_coverage: &run_coverage
+  run:
+    name: run coverage
+    command: |
+      . venv/bin/activate
+      make coverage
+
+report_code_climate: &report_code_climate
+  run:
+    name: report code climate
+    command: |
+      . venv/bin/activate
+      make code-climate-post
+
+report_codacy: &report_codacy
+  run:
+    name: report codacy
+    command: |
+      . venv/bin/activate
+      make codacy
+
+report_codecov: &report_codecov
+  run:
+    name: report codecov
+    command: |
+      . venv/bin/activate
+      make codecov
+
+show_python_version: &show_python_version
+  run:
+    name: python version
+    command: |
+      python --version
+
+quality_steps: &quality_steps
+  steps:
+    - checkout
+    - <<: *show_python_version
+    - <<: *restore_cache
+    - <<: *install_dependencies
+    - <<: *save_cache
+    - <<: *run_unittest
+    - <<: *flake8
+    - <<: *pycodestyle
+    - <<: *pylint
+    - <<: *safety
+
+version_steps: &version_steps
+  steps:
+    - checkout
+    - <<: *show_python_version
+    - <<: *restore_cache
+    - <<: *install_dependencies
+    - <<: *save_cache
+    - <<: *run_unittest
+
+coverage_steps: &coverage_steps
+  steps:
+    - checkout
+    - <<: *show_python_version
+    - <<: *restore_cache
+    - <<: *pre_code_climate
+    - <<: *run_coverage
+    - <<: *report_code_climate
+    - <<: *report_codacy
+    - <<: *report_codecov
+
+# job definitions
+
 jobs:
   quality:
     docker:
       - image: circleci/python:3.7
     working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
-      - run:
-          name: install dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            make pip3-all
-      - save_cache:
-          paths:
-            - ./venv
-          key: v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
-      - run:
-          name: run unittest
-          when: always
-          command: |
-            . venv/bin/activate
-            make coverage
-      - run:
-          name: flake8
-          when: always
-          command: |
-            . venv/bin/activate
-            make flake8
-      - run:
-          name: pycodestyle
-          when: always
-          command: |
-            . venv/bin/activate
-            make pycodestyle
-      - run:
-          name: pylint
-          when: always
-          command: |
-            . venv/bin/activate
-            make pylint
-      - run:
-          name: safety
-          when: always
-          command: |
-            . venv/bin/activate
-            make safety
+    <<: *quality_steps
+
+  version34:
+    docker:
+      - image: circleci/python:3.4
+    working_directory: ~/repo
+    <<: *version_steps
+
+  version35:
+    docker:
+      - image: circleci/python:3.5
+    working_directory: ~/repo
+    <<: *version_steps
+
+  version36:
+    docker:
+      - image: circleci/python:3.6
+    working_directory: ~/repo
+    <<: *version_steps
+
+  version37:
+    docker:
+      - image: circleci/python:3.7
+        environment:
+          DOCKER_IMAGE: python37
+    working_directory: ~/repo
+    <<: *version_steps
+
   coverage:
     docker:
       - image: circleci/python:3.7
     working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
-      - run:
-          name: pre target code climate
-          command: |
-            . venv/bin/activate
-            make code-climate-pre
-      - run:
-          name: run coverage
-          command: |
-            . venv/bin/activate
-            make coverage
-      - run:
-          name: report code climate
-          command: |
-            . venv/bin/activate
-            make code-climate-post
-      - run:
-          name: report codacy
-          command: |
-            . venv/bin/activate
-            make codacy
-      - run:
-          name: report codecov
-          command: |
-            . venv/bin/activate
-            make codecov
+    <<: *coverage_steps
+
+# dependencies for the workflow
+
 workflows:
   version: 2
   test-and-quality:
     jobs:
-      - quality
-      - coverage:
+      - quality:
+          context: python37
+      - version34:
+          context: python34
           requires:
             - quality
+      - version35:
+          context: python35
+          requires:
+            - quality
+      - version36:
+          context: python36
+          requires:
+            - quality
+      - version37:
+          context: python37
+          requires:
+            - quality
+      - coverage:
+          context: python37
+          requires:
+            - version34
+            - version35
+            - version36
+            - version37
