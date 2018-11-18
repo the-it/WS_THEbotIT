@@ -6,6 +6,8 @@ restore_cache: &restore_cache
   restore_cache:
     keys:
       - v4-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+      - v4-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ checksum "requirements.txt" }}-
+      - v4-dependencies-{{ .Environment.PYTHON_VERSION }}-
 
 save_cache: &save_cache
   save_cache:
