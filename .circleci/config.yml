@@ -96,9 +96,23 @@ report_codecov: &report_codecov
       . venv/bin/activate
       make codecov
 
+show_python_version: &show_python_version
+  run:
+    name: python version
+    command: |
+      python --version
+
+show_container_version: &show_container_version
+  run:
+    name: container version
+    command: |
+      echo $DOCKER_IMAGE
+
 quality_steps: &quality_steps
   steps:
     - checkout
+    - <<: *show_python_version
+    - <<: *show_container_version
     - <<: *restore_cache
     - <<: *install_dependencies
     - <<: *save_cache
@@ -111,6 +125,8 @@ quality_steps: &quality_steps
 version_steps: &version_steps
   steps:
     - checkout
+    - <<: *show_python_version
+    - <<: *show_container_version
     - <<: *restore_cache
     - <<: *install_dependencies
     - <<: *save_cache
@@ -119,6 +135,8 @@ version_steps: &version_steps
 coverage_steps: &coverage_steps
   steps:
     - checkout
+    - <<: *show_python_version
+    - <<: *show_container_version
     - <<: *restore_cache
     - <<: *pre_code_climate
     - <<: *run_coverage
