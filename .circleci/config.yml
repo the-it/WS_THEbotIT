@@ -1,5 +1,7 @@
 version: 2
 
+# define first all the single commands ... for reuse
+
 restore_cache: &restore_cache
   restore_cache:
     keys:
@@ -11,6 +13,91 @@ save_cache: &save_cache
       - ./venv
     key: v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
 
+install_dependencies: &install_dependencies
+  run:
+    name: install dependencies
+    command: |
+      python3 -m venv venv
+      . venv/bin/activate
+      make pip3-all
+
+run_unittest: &run_unittest
+  run:
+    name: run unittest
+    when: always
+    command: |
+      . venv/bin/activate
+      make coverage
+
+flake8: &flake8
+  run:
+    name: flake8
+    when: always
+    command: |
+      . venv/bin/activate
+      make flake8
+
+pycodestyle: &pycodestyle
+  run:
+    name: pycodestyle
+    when: always
+    command: |
+      . venv/bin/activate
+      make pycodestyle
+
+pylint: &pylint
+  run:
+    name: pylint
+    when: always
+    command: |
+      . venv/bin/activate
+      make pylint
+
+safety: &safety
+  run:
+    name: safety
+    when: always
+    command: |
+      . venv/bin/activate
+      make safety
+
+pre_code_climate: &pre_code_climate
+  run:
+    name: pre target code climate
+    command: |
+      . venv/bin/activate
+      make code-climate-pre
+
+run_coverage: &run_coverage
+  run:
+    name: run coverage
+    command: |
+      . venv/bin/activate
+      make coverage
+
+report_code_climate: &report_code_climate
+  run:
+    name: report code climate
+    command: |
+      . venv/bin/activate
+      make code-climate-post
+
+report_codacy: &report_codacy
+  run:
+    name: report codacy
+    command: |
+      . venv/bin/activate
+      make codacy
+
+report_codecov: &report_codecov
+  run:
+    name: report codecov
+    command: |
+      . venv/bin/activate
+      make codecov
+
+# job definitions
+
 jobs:
   quality:
     docker:
@@ -19,43 +106,13 @@ jobs:
     steps:
       - checkout
       - <<: *restore_cache
-      - run:
-          name: install dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            make pip3-all
+      - <<: *install_dependencies
       - <<: *save_cache
-      - run:
-          name: run unittest
-          when: always
-          command: |
-            . venv/bin/activate
-            make coverage
-      - run:
-          name: flake8
-          when: always
-          command: |
-            . venv/bin/activate
-            make flake8
-      - run:
-          name: pycodestyle
-          when: always
-          command: |
-            . venv/bin/activate
-            make pycodestyle
-      - run:
-          name: pylint
-          when: always
-          command: |
-            . venv/bin/activate
-            make pylint
-      - run:
-          name: safety
-          when: always
-          command: |
-            . venv/bin/activate
-            make safety
+      - <<: *run_unittest
+      - <<: *flake8
+      - <<: *pycodestyle
+      - <<: *pylint
+      - <<: *safety
   coverage:
     docker:
       - image: circleci/python:3.7
@@ -63,31 +120,14 @@ jobs:
     steps:
       - checkout
       - <<: *restore_cache
-      - run:
-          name: pre target code climate
-          command: |
-            . venv/bin/activate
-            make code-climate-pre
-      - run:
-          name: run coverage
-          command: |
-            . venv/bin/activate
-            make coverage
-      - run:
-          name: report code climate
-          command: |
-            . venv/bin/activate
-            make code-climate-post
-      - run:
-          name: report codacy
-          command: |
-            . venv/bin/activate
-            make codacy
-      - run:
-          name: report codecov
-          command: |
-            . venv/bin/activate
-            make codecov
+      - <<: *pre_code_climate
+      - <<: *run_coverage
+      - <<: *report_code_climate
+      - <<: *report_codacy
+      - <<: *report_codecov
+
+# dependencies for the workflow
+
 workflows:
   version: 2
   test-and-quality:
