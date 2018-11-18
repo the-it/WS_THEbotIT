@@ -5,13 +5,13 @@ version: 2
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v4-dependencies-{{ .Environment.DOCKER_IMAGE }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+      - v4-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v4-dependencies-{{ .Environment.DOCKER_IMAGE }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+    key: v4-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
 
 install_dependencies: &install_dependencies
   run:
