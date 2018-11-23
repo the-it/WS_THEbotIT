@@ -2,7 +2,7 @@
 __author__ = 'eso'
 import sys
 sys.path.append('../../')
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 import re
 import requests
 import pywikibot

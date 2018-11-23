@@ -5,7 +5,7 @@ sys.path.append('../../')
 import re
 import pywikibot
 import datetime
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 
 searcher = PetScan()
 searcher.add_positive_category('Werke')

@@ -1,4 +1,4 @@
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 from scripts.service.little_tasks.hilbert_timer import HilbertTimer
 from test import *
 

@@ -8,7 +8,7 @@ from scripts.service.ws_re.data_types import RePage, ReDatenException
 from scripts.service.ws_re.scanner_tasks import ERROTask
 from tools.bots import OneTimeBot
 from tools.template_handler import TemplateHandler, TemplateFinder
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 
 
 class ConvertDeprecatedReTemplates(OneTimeBot):

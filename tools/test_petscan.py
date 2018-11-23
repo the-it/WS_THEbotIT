@@ -2,7 +2,7 @@ from datetime import datetime
 import requests_mock
 
 from test import *
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 
 
 class TestCatScan(TestCase):

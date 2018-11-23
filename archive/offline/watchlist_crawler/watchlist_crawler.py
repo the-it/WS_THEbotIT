@@ -1,6 +1,6 @@
 __author__ = 'eso'
 
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 import re
 
 watch_themes = ['Allgemeines, Informations-, Buch- und Bibliothekswesen',

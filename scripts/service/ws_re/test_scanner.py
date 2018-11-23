@@ -7,7 +7,7 @@ import pywikibot
 
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.scanner_tasks import ReScannerTask
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 from scripts.service.ws_re.data_types import RePage, ReDatenException
 from test import *
 from tools.test_bots import setup_data_path, teardown_data_path, _DATA_PATH_TEST
