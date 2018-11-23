@@ -3,7 +3,7 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask
 from tools.bots import WikiLogger
 from test import *
 
@@ -203,3 +203,52 @@ text
             compare("", re_page[0]["TODESJAHR"].value)
             compare(False, re_page[0]["KEINE_SCHÖPFUNGSHÖHE"].value)
             compare("{{RE keine Schöpfungshöhe|tada}}\ntext", re_page[0].text)
+
+
+class TestVERWTask(TaskTestCase):
+    def test_process(self):
+        self.text_mock.return_value = """pre
+{{REDaten
+}}
+[[Kategorie:RE:Verweisung|Lemma]]
+text.
+{{REAutor|OFF}}
+post"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = VERWTask(None, self.logger)
+            compare({'success': True, 'changed': True}, task.run(re_page))
+            compare(True, re_page[1]["VERWEIS"].value)
+            compare("text.", re_page[1].text)
+
+    def test_no_sort(self):
+        self.text_mock.return_value = """pre
+{{REDaten
+}}
+[[Kategorie:RE:Verweisung]]
+text.
+[[Kategorie:RE:Verweisung]]lala
+{{REAutor|OFF}}
+post"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = VERWTask(None, self.logger)
+            compare({'success': True, 'changed': True}, task.run(re_page))
+            compare(True, re_page[1]["VERWEIS"].value)
+            compare("text.\nlala", re_page[1].text)
+
+    def test_no_replace_if_no_clear_connection(self):
+        self.text_mock.return_value = """[[Kategorie:RE:Verweisung]]
+{{REDaten
+}}
+text.
+{{REAutor|OFF}}
+[[Kategorie:RE:Verweisung]]lala"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = VERWTask(None, self.logger)
+            compare({'success': True, 'changed': False}, task.run(re_page))
+            compare(False, re_page[1]["VERWEIS"].value)
+            compare("text.", re_page[1].text)
+            compare("[[Kategorie:RE:Verweisung]]", re_page[0])
+            compare("[[Kategorie:RE:Verweisung]]lala", re_page[2])
