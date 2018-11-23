@@ -92,3 +92,15 @@ class KSCHTask(ReScannerTask):
                     re_article["TODESJAHR"].value = template_match.group(1)
                     re_article["KEINE_SCHÖPFUNGSHÖHE"].value = True
                     re_article.text = self._regex_template.sub("", re_article.text).strip()
+
+
+class VERWTask(ReScannerTask):
+    _regex_template = re.compile(r"\[\[Kategorie:RE:Verweisung\|?[^\]]*\]\]")
+
+    def task(self):
+        for re_article in self.re_page:
+            if isinstance(re_article, ReArticle):
+                template_match = self._regex_template.search(re_article.text)
+                if template_match:
+                    re_article["VERWEIS"].value = True
+                    re_article.text = self._regex_template.sub("", re_article.text).strip()
