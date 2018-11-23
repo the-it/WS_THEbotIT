@@ -3,7 +3,7 @@ from datetime import datetime
 
 from pywikibot import Page, Site
 from tools import make_html_color
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 from tools.bots import OneTimeBot
 
 

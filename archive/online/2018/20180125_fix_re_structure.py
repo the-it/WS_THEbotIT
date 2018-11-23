@@ -9,7 +9,7 @@ from unittest import TestCase
 from pywikibot import Page, Site
 
 from tools.bots import OneTimeBot
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 
 
 class FixReStructure(OneTimeBot):

@@ -1,7 +1,7 @@
 import re
 
 from pywikibot import Page, Site
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 from tools.bots import CanonicalBot
 
 

@@ -7,7 +7,7 @@ sys.path.append('../../')
 from pywikibot import Site
 from pywikibot import Page
 from tools.bots import OneTimeBot
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 
 regex_picture = re.compile('\|BILD=\[\[(.*?)\]\]')
 

@@ -6,7 +6,7 @@ import re
 import requests
 import pywikibot
 from pywikibot import proofreadpage
-from tools.catscan.catscan import CatScan
+from tools.petscan.catscan import CatScan
 
 scanner = CatScan()
 scanner.add_positive_category("Das Newe Testament Deutzsch (Septembertestament)")

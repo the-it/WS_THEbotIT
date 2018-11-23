@@ -4,7 +4,7 @@ import sys
 sys.path.append('../../')
 import re
 import pywikibot
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 
 wiki = pywikibot.Site()
 

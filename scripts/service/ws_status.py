@@ -2,7 +2,7 @@ import re
 import datetime
 
 from pywikibot import Page
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 from tools.bots import CanonicalBot
 from tools.bots import BotException
 

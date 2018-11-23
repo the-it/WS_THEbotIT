@@ -5,7 +5,7 @@ sys.path.append('../../')
 import re
 import pywikibot
 from pywikibot import proofreadpage
-from tools.catscan.catscan import CatScan
+from tools.petscan.catscan import CatScan
 
 searcher_index = CatScan()
 searcher_index.add_namespace(0)

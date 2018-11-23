@@ -4,7 +4,7 @@ from typing import Iterator
 
 from pywikibot import Page, Site
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 from tools.bots import CanonicalBot, BotException
 
 

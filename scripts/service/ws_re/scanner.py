@@ -8,7 +8,7 @@ from pywikibot import Page, Site
 from scripts.service.ws_re.data_types import RePage, ReDatenException
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask
 from tools.bots import CanonicalBot, BotException
-from tools.catscan import PetScan
+from tools.petscan import PetScan
 
 
 class ReScanner(CanonicalBot):
