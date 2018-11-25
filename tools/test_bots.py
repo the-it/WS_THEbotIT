@@ -4,10 +4,11 @@ import json
 import os
 from shutil import rmtree
 import time
+from unittest import TestCase, mock
 
 from pywikibot import Page
+from testfixtures import LogCapture
 
-from test import *
 from tools.bots import BotException, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
     _DATA_PATH, _get_data_path
 
@@ -20,8 +21,8 @@ def _remove_data_folder():
 
 
 def setup_data_path(test_class: TestCase):
-    test_class.addCleanup(patch.stopall)
-    patch("tools.bots._DATA_PATH", _DATA_PATH_TEST).start()
+    test_class.addCleanup(mock.patch.stopall)
+    mock.patch("tools.bots._DATA_PATH", _DATA_PATH_TEST).start()
     _remove_data_folder()
     os.mkdir(_DATA_PATH_TEST)
 
@@ -164,9 +165,9 @@ class TestPersistedTimestamp(TestCase):
 class TestOneTimeBot(TestCase):
     def setUp(self):
         setup_data_path(self)
-        self.addCleanup(patch.stopall)
-        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
-        self.timestamp_patcher = patch.object(PersistedTimestamp, 'debug', autospec=True)
+        self.addCleanup(mock.patch.stopall)
+        self.log_patcher = mock.patch.object(WikiLogger, 'debug', autospec=True)
+        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, 'debug', autospec=True)
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
@@ -274,7 +275,7 @@ class TestOneTimeBot(TestCase):
             self.assertTrue(bot.run())
 
     def test_send_log_to_wiki(self):
-        with patch("tools.bots.Page", autospec=Page) as mock_page:
+        with mock.patch("tools.bots.Page", autospec=Page) as mock_page:
             with self.MinimalBot(wiki=None, log_to_screen=False) as bot:
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
@@ -466,9 +467,9 @@ class TestPersistedData(TestCase):
 class TestCanonicalBot(TestCase):
     def setUp(self):
         setup_data_path(self)
-        self.addCleanup(patch.stopall)
-        self.log_patcher = patch.object(WikiLogger, 'debug', autospec=True)
-        self.timestamp_patcher = patch.object(PersistedTimestamp, 'debug', autospec=True)
+        self.addCleanup(mock.patch.stopall)
+        self.log_patcher = mock.patch.object(WikiLogger, 'debug', autospec=True)
+        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, 'debug', autospec=True)
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
@@ -539,7 +540,7 @@ class TestCanonicalBot(TestCase):
         self.create_data("DataThrowException")
         self.create_timestamp("DataThrowException")
         with LogCapture() as log_catcher:
-            with patch("tools.bots.PersistedData.dump") as mock_dump:
+            with mock.patch("tools.bots.PersistedData.dump") as mock_dump:
                 with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
                     log_catcher.clear()
                     bot.run()
@@ -558,7 +559,7 @@ class TestCanonicalBot(TestCase):
     def test_set_timestamp_for_searcher_no_successful_run(self):
         self.create_timestamp("MinimalCanonicalBot", success=False)
         self.create_data("MinimalCanonicalBot")
-        with patch("tools.bots.PersistedTimestamp.start_of_run", mock.PropertyMock(return_value=datetime(2001, 1, 1))):
+        with mock.patch("tools.bots.PersistedTimestamp.start_of_run", mock.PropertyMock(return_value=datetime(2001, 1, 1))):
             with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
                 self.assertEqual(datetime(2001, 1, 1)-timedelta(days=10), bot.create_timestamp_for_search(10))
 

@@ -1,6 +1,8 @@
-from scripts.service.gl.create_magazine import search_for_refs
-from test import *
+from unittest import TestCase
 
+from ddt import ddt, file_data
+
+from scripts.service.gl.create_magazine import search_for_refs
 
 @ddt
 class TestSearchForRefs(TestCase):

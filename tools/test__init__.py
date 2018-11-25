@@ -1,4 +1,4 @@
-from test import *
+from unittest import TestCase
 
 from tools import make_html_color
 

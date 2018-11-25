@@ -1,7 +1,8 @@
 from datetime import datetime
+from unittest import TestCase
+
 import requests_mock
 
-from test import *
 from tools.petscan import PetScan
 
 

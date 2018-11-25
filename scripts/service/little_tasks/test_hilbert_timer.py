@@ -1,6 +1,7 @@
+from unittest import TestCase, mock
+
 from tools.petscan import PetScan
 from scripts.service.little_tasks.hilbert_timer import HilbertTimer
-from test import *
 
 
 class TestHilbertTimer(TestCase):

@@ -1,14 +1,16 @@
 from datetime import datetime
+from unittest import TestCase, mock
 
-from test import *
+from testfixtures import LogCapture, compare
+
 from tools.bots import CanonicalBot, BotException, PersistedTimestamp
 from tools.bot_scheduler import BotScheduler
 
 
 class TestBotScheduler(TestCase):
     def setUp(self):
-        self.addCleanup(patch.stopall)
-        self.now_patcher = patch("tools.bot_scheduler.BotScheduler.now", new_callable=mock.Mock())
+        self.addCleanup(mock.patch.stopall)
+        self.now_patcher = mock.patch("tools.bot_scheduler.BotScheduler.now", new_callable=mock.Mock())
         self.now_mock = self.now_patcher.start()
         site_mock = mock.Mock()
         site_mock.username = mock.Mock(return_value="THEbotIT")
@@ -70,7 +72,7 @@ class TestBotScheduler(TestCase):
 
     def test_run_daily(self):
         self.bot_scheduler.daily_bots = [self.Bot1, self.Bot2]
-        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+        with mock.patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
             self.bot_scheduler.run_dailys()
             compare(2, run_mock.call_count)
             self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot1))
@@ -79,7 +81,7 @@ class TestBotScheduler(TestCase):
     def test_run_weekly(self):
         self.bot_scheduler.weekly_bots = {0: [self.Bot1], 1: [self.Bot2]}
         self.now_mock.return_value = datetime(year=2010, month=1, day=4)  # monday
-        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+        with mock.patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
             self.bot_scheduler.run_weeklys()
             compare(1, run_mock.call_count)
             self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot1))
@@ -87,14 +89,14 @@ class TestBotScheduler(TestCase):
     def test_run_weekly_nothing_to_do(self):
         self.bot_scheduler.weekly_bots = {0: [self.Bot1], 1: [self.Bot2]}
         self.now_mock.return_value = datetime(year=2010, month=1, day=6)  # wednesday
-        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+        with mock.patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
             self.bot_scheduler.run_weeklys()
             compare(0, run_mock.call_count)
 
     def test_run_monthly(self):
         self.bot_scheduler.monthly_bots = {1: [self.Bot1], 2: [self.Bot2]}
         self.now_mock.return_value = datetime(year=2010, month=1, day=2)
-        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+        with mock.patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
             self.bot_scheduler.run_monthlys()
             compare(1, run_mock.call_count)
             self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot2))
@@ -102,14 +104,14 @@ class TestBotScheduler(TestCase):
     def test_run_monthly_nothing_to_do(self):
         self.bot_scheduler.monthly_bots = {1: [self.Bot1], 2: [self.Bot2]}
         self.now_mock.return_value = datetime(year=2010, month=1, day=3)
-        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+        with mock.patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
             self.bot_scheduler.run_monthlys()
             compare(0, run_mock.call_count)
 
     def test_run_last_day_of_month(self):
         self.bot_scheduler.bots_on_last_day_of_month = [self.Bot1, self.Bot2]
         self.now_mock.return_value = datetime(year=2010, month=1, day=31)
-        with patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
+        with mock.patch.object(self.bot_scheduler, "run_bot", mock.Mock()) as run_mock:
             self.bot_scheduler.run_monthlys()
             compare(2, run_mock.call_count)
             self.assertTrue(isinstance(run_mock.mock_calls[0][1][0], self.Bot1))

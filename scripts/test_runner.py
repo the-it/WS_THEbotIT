@@ -1,14 +1,13 @@
 from datetime import datetime
-from importlib import import_module
 import os
 from pathlib import Path
 from shutil import rmtree, copy
-import sys
 import time
+from unittest import TestCase, mock, skip
 
 from git import Repo
+from testfixtures import StringComparison, compare
 
-from test import *
 from scripts.runner import TheBotItScheduler
 
 
@@ -74,7 +73,7 @@ class TestBotScheduler(TestCase):
         self._copy_bot_to_run_dir("bot_1")
         with open(str(self._get_one_time_run_test().joinpath("bot_1_test.py")), 'w') as file_pointer:
             file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
-        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
+        with mock.patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
             self.assertTrue(self.bot_it_scheduler._run_bot_from_file("bot_1.py"))
             compare(1, run_mock.call_count)
             compare(type(run_mock.mock_calls[0][1][0]).__name__, "TestBot1")
@@ -83,19 +82,19 @@ class TestBotScheduler(TestCase):
     def test_run_two_bots_from_file(self):
         self._copy_bot_to_run_dir("bot_34")
         # both runs successfule
-        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
+        with mock.patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
             self.assertTrue(self.bot_it_scheduler._run_bot_from_file("bot_34.py"))
             compare(2, run_mock.call_count)
             compare(type(run_mock.mock_calls[0][1][0]).__name__, "TestBot3")
             compare(type(run_mock.mock_calls[1][1][0]).__name__, "TestBot4")
         # second run with errors
-        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(side_effect=[True, False])) as run_mock:
+        with mock.patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(side_effect=[True, False])) as run_mock:
             self.assertFalse(self.bot_it_scheduler._run_bot_from_file("bot_34.py"))
             compare(2, run_mock.call_count)
             compare(type(run_mock.mock_calls[0][1][0]).__name__, "TestBot3")
             compare(type(run_mock.mock_calls[1][1][0]).__name__, "TestBot4")
         # first run with errors
-        with patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(side_effect=[False, True])) as run_mock:
+        with mock.patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(side_effect=[False, True])) as run_mock:
             self.assertFalse(self.bot_it_scheduler._run_bot_from_file("bot_34.py"))
             compare(2, run_mock.call_count)
             compare(type(run_mock.mock_calls[0][1][0]).__name__, "TestBot3")
@@ -133,7 +132,7 @@ class TestBotScheduler(TestCase):
 
     def test_change_repo(self):
         self._copy_bot_to_archive_dir("bot_1")
-        with patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
+        with mock.patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
             self.bot_it_scheduler._push_files(["bot_1.py"])
             file_add = [str(self._get_archive_test().joinpath("bot_1.py"))]
             file_remove = [str(self._get_one_time_run_test().joinpath("bot_1.py"))]
@@ -152,7 +151,7 @@ class TestBotScheduler(TestCase):
         self._copy_bot_to_archive_dir("bot_1")
         open(str(self._get_archive_test().joinpath("bot_1_test.py")), 'w').close()
         self._copy_bot_to_archive_dir("bot_2")
-        with patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
+        with mock.patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
             self.bot_it_scheduler._push_files(["bot_1.py", "bot_2.py"])
             file_add = [str(self._get_archive_test().joinpath("bot_1.py")),
                         str(self._get_archive_test().joinpath("bot_1_test.py")),
@@ -176,9 +175,9 @@ class TestBotScheduler(TestCase):
         with open(str(self._get_one_time_run_test().joinpath("bot_1_test.py")), 'w') as file_pointer:
             file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         self._copy_bot_to_run_dir("bot_2")
-        with patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
-            with patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
-                with patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
+        with mock.patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
+            with mock.patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
+                with mock.patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
                     self.bot_it_scheduler.task()
                     compare(1, super_mock.call_count)
                     compare(2, run_mock.call_count)
@@ -188,9 +187,9 @@ class TestBotScheduler(TestCase):
                     compare(push_mock.mock_calls[0][1][0], ["bot_1.py"])
 
     def test_complete_task_no_files_to_process(self):
-        with patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
-            with patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
-                with patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
+        with mock.patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
+            with mock.patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
+                with mock.patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
                     self.bot_it_scheduler.task()
                     compare(1, super_mock.call_count)
                     compare(0, run_mock.call_count)
