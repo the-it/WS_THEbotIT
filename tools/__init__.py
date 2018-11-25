@@ -1,3 +1,9 @@
+from datetime import datetime
+from pathlib import Path
+import sys
+from typing import Union
+
+
 class ToolException(Exception):
     pass
 
@@ -9,3 +15,14 @@ def make_html_color(min_value, max_value, value):
         color = ((value - max_value) / (min_value - max_value)) * 255
     color = max(0, min(255, color))
     return str(hex(round(color)))[2:].zfill(2).upper()
+
+
+if datetime.now() > datetime(year=2020, month=9, day=13):  # pragma: no cover
+    raise DeprecationWarning("Python 3.5 has reached end of live. "
+                             "Consider removing all the casts Path -> str.")
+
+
+def path_or_str(path: Path) -> Union[Path, str]:
+    if sys.version_info[1] < 6:
+        return str(path)
+    return path

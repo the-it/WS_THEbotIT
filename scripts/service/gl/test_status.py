@@ -1,7 +1,9 @@
 from datetime import datetime
+from unittest import TestCase
+
+from testfixtures import compare
 
 from scripts.service.gl.status import GlStatus
-from test import *
 
 class TestGlStatus(TestCase):
     def test_projektstand(self):

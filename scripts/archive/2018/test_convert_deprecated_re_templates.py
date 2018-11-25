@@ -1,4 +1,7 @@
-from test import *
+from unittest import TestCase
+
+from testfixtures import compare
+
 from .convert_deprecated_re_templates import ConvertDeprecatedReTemplates
 
 

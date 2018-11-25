@@ -1,9 +1,10 @@
 from collections.abc import Sequence
+from unittest import TestCase, mock
 
 import pywikibot
+from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, ReVolume, ReVolumeType, ReVolumes
-from test import *
 
 article_template = """{{REDaten
 |BAND=

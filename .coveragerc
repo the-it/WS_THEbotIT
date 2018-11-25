@@ -4,8 +4,6 @@ omit =
     archive/*,
     # potential python virtual env
     venv/*,
-    # only some basic test files
-    test/*,
     # the runner suite copies test modules temporary to a directory, ignore this files
     scripts/one_time_run_test/*,
     scripts/test_bots_for_scheduler/*

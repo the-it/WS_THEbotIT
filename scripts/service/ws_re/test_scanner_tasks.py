@@ -1,15 +1,16 @@
 from scripts.service.ws_re.data_types import RePage
 from datetime import datetime
+from unittest import TestCase, mock
 
 import pywikibot
+from testfixtures import LogCapture, compare
 
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask
 from tools.bots import WikiLogger
-from test import *
 
 
 class TaskTestCase(TestCase):
-    # todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs some investigation
+    # Todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs some investigation
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text",
                 new_callable=mock.PropertyMock)
@@ -154,8 +155,8 @@ class TestERROTask(TestCase):
                              )
 
     def test_finish_up(self):
-        with patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
-            with patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
+        with mock.patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
+            with mock.patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
                 type(page_mock).text = text_mock
                 with LogCapture():
                     task = ERROTask(None, self.logger, debug=False)
@@ -165,8 +166,8 @@ class TestERROTask(TestCase):
                     self.assertEqual(1, page_mock.call_count)
 
     def test_finish_up_no_errors(self):
-        with patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
-            with patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
+        with mock.patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
+            with mock.patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
                 type(page_mock).text = text_mock
                 with LogCapture():
                     task = ERROTask(None, self.logger, debug=False)
@@ -252,3 +253,30 @@ text.
             compare("text.", re_page[1].text)
             compare("[[Kategorie:RE:Verweisung]]", re_page[0])
             compare("[[Kategorie:RE:Verweisung]]lala", re_page[2])
+
+    def test_three(self):
+        self.text_mock.return_value = """{{REDaten
+}}
+text.
+[[Kategorie:RE:Verweisung]]
+{{REAutor|OFF}}
+{{REDaten
+}}
+text.
+{{REAutor|OFF}}
+tada
+{{REDaten
+}}
+text.
+[[Kategorie:RE:Verweisung]]
+{{REAutor|OFF}}
+lala"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = VERWTask(None, self.logger)
+            compare({'success': True, 'changed': True}, task.run(re_page))
+            self.assertTrue(re_page[0]["VERWEIS"].value)
+            self.assertTrue(re_page[3]["VERWEIS"].value)
+            compare("text.", re_page[0].text)
+            compare("text.", re_page[1].text)
+            compare("text.", re_page[3].text)

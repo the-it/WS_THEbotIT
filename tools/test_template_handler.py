@@ -1,4 +1,5 @@
-from test import *
+from unittest import TestCase
+
 from tools.template_handler import TemplateHandler, TemplateFinder, TemplateFinderException
 
 test_title = "vorlage"
