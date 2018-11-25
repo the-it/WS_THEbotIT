@@ -253,3 +253,30 @@ text.
             compare("text.", re_page[1].text)
             compare("[[Kategorie:RE:Verweisung]]", re_page[0])
             compare("[[Kategorie:RE:Verweisung]]lala", re_page[2])
+
+    def test_three(self):
+        self.text_mock.return_value = """{{REDaten
+}}
+text.
+[[Kategorie:RE:Verweisung]]
+{{REAutor|OFF}}
+{{REDaten
+}}
+text.
+{{REAutor|OFF}}
+tada
+{{REDaten
+}}
+text.
+[[Kategorie:RE:Verweisung]]
+{{REAutor|OFF}}
+lala"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = VERWTask(None, self.logger)
+            compare({'success': True, 'changed': True}, task.run(re_page))
+            self.assertTrue(re_page[0]["VERWEIS"].value)
+            self.assertTrue(re_page[3]["VERWEIS"].value)
+            compare("text.", re_page[0].text)
+            compare("text.", re_page[1].text)
+            compare("text.", re_page[3].text)
