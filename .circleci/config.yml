@@ -204,33 +204,29 @@ workflows:
           context: python37
       - version34:
           context: python34
-          requires:
-            - quality
       - version35:
           context: python35
-          requires:
-            - quality
       - version36:
           context: python36
-          requires:
-            - quality
       - version37:
           context: python37
-          requires:
-            - quality
       - coverage34:
           context: python34
           requires:
             - version34
+            - quality
       - coverage35:
           context: python35
           requires:
             - version35
+            - quality
       - coverage36:
           context: python36
           requires:
             - version36
+            - quality
       - coverage37:
           context: python37
           requires:
             - version37
+            - quality
