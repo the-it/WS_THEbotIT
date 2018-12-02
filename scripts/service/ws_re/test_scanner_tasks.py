@@ -1,3 +1,6 @@
+import importlib
+import inspect
+
 from scripts.service.ws_re.data_types import RePage
 from datetime import datetime
 from unittest import TestCase, mock
@@ -133,6 +136,18 @@ class TestReScannerTask(TaskTestCase):
             with self.ALNAAltereNotAllTask(None, self.logger) as task:
                 compare({"success": True, "changed": True}, task.run(re_page1))
                 compare({"success": True, "changed": False}, task.run(re_page2))
+
+    def test_no_dublicate_names(self):
+        scanner_task_module = importlib.import_module("scripts.service.ws_re.scanner_tasks")
+        attributes = tuple(a for a in dir(scanner_task_module) if not a.startswith('__'))
+        task_names = list()
+        for attribute in attributes:
+            module_attr = getattr(scanner_task_module, attribute)
+            if inspect.isclass(module_attr):
+                if 'ReScannerTask' in str(module_attr.__bases__):
+                    task_names.append(attribute[0:4])
+        # every 4 letter start of a ScannerTask class must be unique
+        compare(len(task_names), len(set(task_names)))
 
 
 class TestERROTask(TestCase):

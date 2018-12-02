@@ -42,7 +42,7 @@ class ReScanner(CanonicalBot):
             searcher.add_positive_category('RE:Fertig')
             searcher.add_positive_category('RE:Korrigiert')
             searcher.add_positive_category('RE:Platzhalter')
-            searcher.add_negative_category("Wikisource:Gemeinfreiheit|2")
+            # searcher.add_negative_category("Wikisource:Gemeinfreiheit|2")
             searcher.set_logic_union()
             searcher.set_sort_criteria("date")
             searcher.set_sortorder_decending()

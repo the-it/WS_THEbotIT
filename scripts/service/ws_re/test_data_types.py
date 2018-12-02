@@ -1,5 +1,5 @@
 from collections.abc import Sequence
-from unittest import TestCase, mock
+from unittest import TestCase, mock, skip
 
 import pywikibot
 from testfixtures import compare
@@ -535,6 +535,7 @@ text
 {{REAutor|Oberhummer.}}
 <u>Anmerkung WS:</u><br /><references/>"""
         self.assertEqual(after, str(RePage(self.page_mock)))
+
 
 class TestReVolume(TestCase):
     def test_init(self):
