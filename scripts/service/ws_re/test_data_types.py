@@ -536,10 +536,6 @@ text
 <u>Anmerkung WS:</u><br /><references/>"""
         self.assertEqual(after, str(RePage(self.page_mock)))
 
-    @skip("Just a test to look into page attributes")
-    def test_locked_page(self):
-        page = pywikibot.Page(pywikibot.Site(code='de', fam='wikisource', user='THEbotIT'), "RE:Amelas")
-
 
 class TestReVolume(TestCase):
     def test_init(self):
