@@ -433,6 +433,14 @@ class TestRePage(TestCase):
         with self.assertRaises(ReDatenException):
             RePage(self.page_mock)
 
+    def test_wrong_structure_corrupt_template(self):
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor1."
+        with self.assertRaises(ReDatenException):
+            RePage(self.page_mock)
+        self.text_mock.return_value = "{{REDaten\ntext0\n{{REAutor|Autor1.}}"
+        with self.assertRaises(ReDatenException):
+            RePage(self.page_mock)
+
     def test_back_to_str(self):
         before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         self.text_mock.return_value = before

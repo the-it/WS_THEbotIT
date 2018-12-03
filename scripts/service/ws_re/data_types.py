@@ -8,7 +8,7 @@ from typing import Union, Generator, Tuple
 import pywikibot
 import yaml
 
-from tools.template_handler import TemplateFinder, TemplateHandler
+from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
 
 
 class ReDatenException(Exception):
@@ -308,9 +308,12 @@ class RePage(Sequence):
     def _init_page_dict(self):
         # find the positions of all key templates
         template_finder = TemplateFinder(self.pre_text)
-        re_daten_pos = template_finder.get_positions(RE_DATEN)
-        re_abschnitt_pos = template_finder.get_positions(RE_ABSCHNITT)
-        re_author_pos = template_finder.get_positions(RE_AUTHOR)
+        try:
+            re_daten_pos = template_finder.get_positions(RE_DATEN)
+            re_abschnitt_pos = template_finder.get_positions(RE_ABSCHNITT)
+            re_author_pos = template_finder.get_positions(RE_AUTHOR)
+        except TemplateFinderException:
+            raise ReDatenException("There are corrupt templates.")
         re_starts = re_daten_pos + re_abschnitt_pos
         re_starts.sort(key=lambda x: x["pos"][0])
         if len(re_starts) != len(re_author_pos):
