@@ -356,10 +356,15 @@ class RePage(Sequence):
     def save(self, reason: str):
         if self.has_changed():
             self.page.text = str(self)
-            try:
-                self.page.save(summary=reason, botflag=True)
-            except pywikibot.exceptions.LockedPage:
-                raise ReDatenException("Page is locked, it can't be saved.")
+            if self.page.protection()["edit"][0] != "sysop":
+                try:
+                    self.page.save(summary=reason, botflag=True)
+                except pywikibot.exceptions.LockedPage:
+                    raise ReDatenException("Page {} is locked, it can't be saved."
+                                           .format(self.page.title))
+            else:
+                raise ReDatenException("Page {} is protected for normal users, it can't be saved."
+                                       .format(self.page.title))
 
     def append(self, new_article: ReArticle):
         if isinstance(new_article, ReArticle):
