@@ -359,7 +359,7 @@ class RePage(Sequence):
             try:
                 self.page.save(summary=reason, botflag=True)
             except pywikibot.exceptions.LockedPage:
-                raise ReDatenException("Page is locked, it can't be saved.")
+                raise ReDatenException("Page {} is locked, it can't be saved.".format(self.page.title))
 
     def append(self, new_article: ReArticle):
         if isinstance(new_article, ReArticle):
