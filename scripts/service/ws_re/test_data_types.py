@@ -542,6 +542,14 @@ class TestRePage(TestCase):
         with self.assertRaises(ReDatenException):
             re_page.save("reason")
 
+    def test_page_no_lock(self):
+        self.text_mock.return_value = article_template
+
+        self.page_mock.protection.return_value = {}
+        re_page = RePage(self.page_mock)
+        re_page[0].text = "bla"
+        re_page.save("reason")
+
     def test_bug_too_much_blanks(self):
         before = """{{REAbschnitt}}
 text
