@@ -353,7 +353,8 @@ class RePage(Sequence):
     def has_changed(self) -> bool:
         return self.pre_text != str(self)
 
-    def _is_wirtable(self) -> bool:
+    @property
+    def is_wirtable(self) -> bool:
         protection_dict = self.page.protection()
         if "edit" in protection_dict.keys():
             if protection_dict["edit"][0] == "sysop":
@@ -363,7 +364,7 @@ class RePage(Sequence):
     def save(self, reason: str):
         if self.has_changed():
             self.page.text = str(self)
-            if self._is_wirtable():
+            if self.is_wirtable:
                 try:
                     self.page.save(summary=reason, botflag=True)
                 except pywikibot.exceptions.LockedPage:
