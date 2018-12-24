@@ -55,3 +55,9 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
                        "|1\n|2\n|3\n|4",
                        "|5\n|6\n|7\n|8"]
         compare(expectation, result)
+
+    def test_first_column(self):
+        content = "[[RE:Herodes 14]]{{Anker|Herodes 14}}"
+        result = self.re_importer._analyse_first_column(content)
+        compare({"lemma": "Herodes 14"}, result)
+

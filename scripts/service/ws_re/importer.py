@@ -1,5 +1,5 @@
 import re
-from typing import Sequence
+from typing import Sequence, Mapping
 
 from pywikibot import Site
 
@@ -28,3 +28,25 @@ class ReImporter(CanonicalBot):
         for idx, line in enumerate(lines):
             lines[idx] = line.strip()
         return lines
+
+    @staticmethod
+    def _analyse_first_column(content: str) -> Mapping:
+        mapping = dict()
+        match = re.search("\[\[RE:(.*?)\]\]", content)
+        mapping["lemma"] = match.group(1)
+        return mapping
+
+    @staticmethod
+    def _analyse_second_column(content: str) -> Mapping:
+        mapping = dict()
+        return mapping
+
+    @staticmethod
+    def _analyse_third_column(content: str) -> Mapping:
+        mapping = dict()
+        return mapping
+
+    @staticmethod
+    def _analyse_fourth_column(content: str) -> Mapping:
+        mapping = dict()
+        return mapping
