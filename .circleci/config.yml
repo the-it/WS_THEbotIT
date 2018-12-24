@@ -111,7 +111,6 @@ quality_steps: &quality_steps
     - <<: *restore_cache
     - <<: *install_dependencies
     - <<: *save_cache
-    - <<: *run_unittest
     - <<: *flake8
     - <<: *pycodestyle
     - <<: *pylint

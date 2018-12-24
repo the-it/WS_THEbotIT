@@ -14,6 +14,7 @@ from pywikibot import Site
 from scripts.service.author_list import AuthorList
 from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.gl.status import GlStatus
+from scripts.service.ws_re.importer import ReImporter
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.status import ReStatus
 from tools import path_or_str
@@ -112,7 +113,7 @@ if __name__ == "__main__":  # pragma: no cover
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
     SCHEDULER = TheBotItScheduler(wiki=WS_WIKI, debug=False)
-    SCHEDULER.daily_bots = [AuthorList, ReScanner, GlCreateMagazine]
+    SCHEDULER.daily_bots = [AuthorList, ReScanner, GlCreateMagazine, ReImporter]
     SCHEDULER.weekly_bots = {0: [],  # monday
                              1: [],
                              2: [],

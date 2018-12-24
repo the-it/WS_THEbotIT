@@ -45,7 +45,7 @@ coverage : clean-coverage
 	coverage run all_tests.py && \
 	coverage xml
 
-coverage_html : coverage
+coverage-html : coverage
 	echo "######### COVERAGE HTML ########"
 	coverage html -d .coverage_html
 	python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
@@ -81,6 +81,8 @@ codacy :
 
 clean : clean-pyc clean-coverage clean-code-climate
 
+pre-commit : quality unittest
+
 quality : bandit flake8 pycodestyle pylint
 
-.PHONY : clean, code-climate, quality
+.PHONY : clean, code-climate, quality, pre-commit

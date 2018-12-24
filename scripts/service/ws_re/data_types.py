@@ -452,7 +452,7 @@ class ReVolumes(Mapping):
     def __len__(self) -> int:
         return len(self._volume_mapping.keys())
 
-    def __iter__(self) -> Generator[ReVolume, None, None]:
+    def __iter__(self) -> str:
         for key in self._volume_mapping:
             yield key
 
