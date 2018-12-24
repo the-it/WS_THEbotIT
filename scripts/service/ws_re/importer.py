@@ -39,14 +39,14 @@ class ReImporter(CanonicalBot):
     @staticmethod
     def _analyse_second_column(content: str) -> Mapping:
         mapping = dict()
+        match = re.search(r"\[\[Spe.*?\|[S IXV,]*?(\d{1,4})\]\].*?\](?:-(\d{1,4}))?", content)
+        mapping["start"] = int(match.group(1))
+        end = match.group(2)
+        mapping["end"] = end
+        if end:
+            mapping["end"] = int(end)
+        else:
+            mapping["end"] = mapping["start"]
         return mapping
 
-    @staticmethod
-    def _analyse_third_column(content: str) -> Mapping:
-        mapping = dict()
-        return mapping
 
-    @staticmethod
-    def _analyse_fourth_column(content: str) -> Mapping:
-        mapping = dict()
-        return mapping

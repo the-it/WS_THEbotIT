@@ -61,3 +61,12 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         result = self.re_importer._analyse_first_column(content)
         compare({"lemma": "Herodes 14"}, result)
 
+    def test_second_column(self):
+        content = "[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158"
+        result = self.re_importer._analyse_second_column(content)
+        compare({"start": 1, "end": 158}, result)
+
+    def test_second_column_same_column(self):
+        content = "[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]"
+        result = self.re_importer._analyse_second_column(content)
+        compare({"start": 1, "end": 1}, result)
