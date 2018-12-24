@@ -14,11 +14,13 @@ class ReImporter(CanonicalBot):
     def task(self):
         pass
 
-    @staticmethod
-    def _split_line(register_line: str) -> Sequence[str]:
+    def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)
         for idx, line in enumerate(splitted_lines):
             splitted_lines[idx] = line.strip("|")
+        if not len(splitted_lines) == 4:
+            self.logger.critical(register_line)
+            raise ValueError("The split of the line went wrong")
         return splitted_lines
 
     @staticmethod
@@ -32,7 +34,7 @@ class ReImporter(CanonicalBot):
     @staticmethod
     def _analyse_first_column(content: str) -> Mapping:
         mapping = dict()
-        match = re.search("\[\[RE:(.*?)\]\]", content)
+        match = re.search(r"\[\[RE:(.*?)\]\]", content)
         mapping["lemma"] = match.group(1)
         return mapping
 
@@ -49,4 +51,22 @@ class ReImporter(CanonicalBot):
             mapping["end"] = mapping["start"]
         return mapping
 
-
+    def _build_lemma_from_line(self, line: str) -> Mapping:
+        splitted_line = self._split_line(line)
+        mapping_1 = self._analyse_first_column(splitted_line[0])
+        mapping_2 = self._analyse_second_column(splitted_line[1])
+        author = splitted_line[2]
+        lemma_dict = {}
+        lemma_dict["lemma"] = mapping_1["lemma"]
+        lemma_dict["next"] = ""
+        lemma_dict["previous"] = ""
+        lemma_dict["redirect"] = False
+        chapter_dict = {"author": author, "start": mapping_2["start"], "end": mapping_2["end"]}
+        if author == "X":
+            lemma_dict["redirect"] = True
+            chapter_dict["author"] = ""
+        if author == "?":
+            chapter_dict["author"] = ""
+        lemma_dict["chapters"] = list()
+        lemma_dict["chapters"].append(chapter_dict)
+        return lemma_dict

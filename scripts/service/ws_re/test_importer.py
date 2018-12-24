@@ -70,3 +70,36 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         content = "[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]"
         result = self.re_importer._analyse_second_column(content)
         compare({"start": 1, "end": 1}, result)
+
+    def test_build_normal_line(self):
+        line = """|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|Otto, Walter
+|1941"""
+        lemma = self.re_importer._build_lemma_from_line(line)
+        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "", "redirect": False,
+                          "chapters": list()}
+        expected_lemma["chapters"].append(dict({"author": "Otto, Walter", "start": 1, "end": 158}))
+        compare(expected_lemma, lemma)
+
+    def test_build_redirect_line(self):
+        line = """|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|X
+|1941"""
+        lemma = self.re_importer._build_lemma_from_line(line)
+        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "", "redirect": True,
+                          "chapters": list()}
+        expected_lemma["chapters"].append(dict({"author": "", "start": 1, "end": 158}))
+        compare(expected_lemma, lemma)
+
+    def test_build_strange_line(self):
+        line = """|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|?
+|1941"""
+        lemma = self.re_importer._build_lemma_from_line(line)
+        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "", "redirect": False,
+                          "chapters": list()}
+        expected_lemma["chapters"].append(dict({"author": "", "start": 1, "end": 158}))
+        compare(expected_lemma, lemma)
