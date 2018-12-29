@@ -406,7 +406,7 @@ _REGEX_MAPPING = {ReVolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(
 
 
 class ReVolume():
-    def __init__(self, name: str, year: Union[str,int], start:str=None, end:str=None):
+    def __init__(self, name: str, year: Union[str, int], start: str = None, end: str = None):
         self._name = name
         self._year = str(year)
         self._start = start

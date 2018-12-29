@@ -7,13 +7,14 @@ from pywikibot import Site, Page
 import yaml
 import yamlordereddictloader
 
-from scripts.service.ws_re.data_types import ReVolumes, ReVolume
+from scripts.service.ws_re.data_types import ReVolumes
 from tools import path_or_str
 from tools.bots import CanonicalBot
 
 
 class ReImporter(CanonicalBot):
     _register_folder = "register"
+
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
@@ -29,8 +30,8 @@ class ReImporter(CanonicalBot):
 
     def _dump_register(self, volume: str, old_register: str):
         new_register = self._build_register(old_register)
-        file = path_or_str(Path(__file__).parent.joinpath(self._register_folder) \
-            .joinpath("{}.yaml".format(volume)))
+        file = path_or_str(Path(__file__).parent
+                           .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
         with open(file, mode="w") as yaml_file:
             yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
                       default_flow_style=False, allow_unicode=True)
