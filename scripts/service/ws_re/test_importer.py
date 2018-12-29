@@ -1,3 +1,6 @@
+import os
+import shutil
+from pathlib import Path
 from unittest import TestCase
 
 from testfixtures import compare, LogCapture
@@ -6,8 +9,15 @@ from scripts.service.ws_re.importer import ReImporter
 
 
 class TestReImporter(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        shutil.rmtree(Path(__file__).parent.joinpath("test_register"))
+        os.mkdir(Path(__file__).parent.joinpath("test_register"))
+
     def setUp(self):
         self.re_importer = ReImporter(log_to_screen=False, log_to_wiki=False, debug=False)
+        self.re_importer._register_folder = "test_register"
+
 
     def test_split_line(self):
         line = """|[[RE:Herodes 14]]{{Anker|Herodes 14}}
@@ -168,3 +178,38 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         expected_lemma["chapters"].append(dict({"author": "Otto, Walter", "start": 158, "end": 161}))
         expectation.append(expected_lemma)
         compare(expectation, register)
+
+    def test_dump_register(self):
+        lemma_text = """{|
+|-
+|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|Otto, Walter
+|1941
+|-
+|[[RE:Herodes 15]]{{Anker|Herodes 15}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0157.jpg|S II, 158]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0157.png IA]-161
+|Otto, Walter
+|1941
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        self.re_importer._dump_register("I_1", lemma_text)
+        expected = """- lemma: Herodes 14
+  next: ''
+  previous: ''
+  redirect: false
+  chapters:
+  - start: 1
+    end: 158
+    author: Otto, Walter
+- lemma: Herodes 15
+  next: ''
+  previous: ''
+  redirect: false
+  chapters:
+  - start: 158
+    end: 161
+    author: Otto, Walter"""
+        with open(Path(__file__).parent.joinpath("test_register").joinpath("I_1.yaml"), "r") as yaml_file:
+            compare(expected, yaml_file.read())
