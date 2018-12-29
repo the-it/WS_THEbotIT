@@ -1,3 +1,4 @@
+from collections import OrderedDict
 import re
 from pathlib import Path
 from typing import Sequence, Mapping
@@ -79,12 +80,12 @@ class ReImporter(CanonicalBot):
         mapping_1 = self._analyse_first_column(splitted_line[0])
         mapping_2 = self._analyse_second_column(splitted_line[1])
         author = splitted_line[2]
-        lemma_dict = {}
+        lemma_dict = OrderedDict()
         lemma_dict["lemma"] = mapping_1["lemma"]
         lemma_dict["next"] = ""
         lemma_dict["previous"] = ""
         lemma_dict["redirect"] = False
-        chapter_dict = {"author": author, "start": mapping_2["start"], "end": mapping_2["end"]}
+        chapter_dict = OrderedDict([("author", author), ("start", mapping_2["start"]), ("end", mapping_2["end"])])
         if author == "X":
             lemma_dict["redirect"] = True
             chapter_dict["author"] = ""
