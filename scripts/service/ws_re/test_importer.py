@@ -210,6 +210,7 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
   chapters:
   - start: 158
     end: 161
-    author: Otto, Walter"""
+    author: Otto, Walter
+"""
         with open(Path(__file__).parent.joinpath("test_register").joinpath("I_1.yaml"), "r") as yaml_file:
             compare(expected, yaml_file.read())

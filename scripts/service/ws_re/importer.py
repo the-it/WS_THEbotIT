@@ -5,6 +5,7 @@ from typing import Sequence, Mapping
 
 from pywikibot import Site, Page
 import yaml
+import yamlordereddictloader
 
 from scripts.service.ws_re.data_types import ReVolumes, ReVolume
 from tools import path_or_str
@@ -31,7 +32,8 @@ class ReImporter(CanonicalBot):
         file = path_or_str(Path(__file__).parent.joinpath(self._register_folder) \
             .joinpath("{}.yaml".format(volume)))
         with open(file, mode="w") as yaml_file:
-            yaml.dump(new_register, yaml_file, default_flow_style=False, allow_unicode=True)
+            yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
+                      default_flow_style=False, allow_unicode=True)
 
     def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)
@@ -85,7 +87,9 @@ class ReImporter(CanonicalBot):
         lemma_dict["next"] = ""
         lemma_dict["previous"] = ""
         lemma_dict["redirect"] = False
-        chapter_dict = OrderedDict([("author", author), ("start", mapping_2["start"]), ("end", mapping_2["end"])])
+        chapter_dict = OrderedDict([("start", mapping_2["start"]),
+                                    ("end", mapping_2["end"]),
+                                    ("author", author)])
         if author == "X":
             lemma_dict["redirect"] = True
             chapter_dict["author"] = ""
