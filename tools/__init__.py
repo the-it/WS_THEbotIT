@@ -22,7 +22,9 @@ if datetime.now() > datetime(year=2020, month=9, day=13):  # pragma: no cover
                              "Consider removing all the casts Path -> str.")
 
 
-def path_or_str(path: Path) -> Union[Path, str]:
-    if sys.version_info[1] < 6:
+if sys.version_info < (3, 6):
+    def path_or_str(path: Path) -> Union[Path, str]:
         return str(path)
-    return path
+else:
+    def path_or_str(path: Path) -> Union[Path, str]:
+        return path

@@ -1,33 +1,40 @@
+from collections import OrderedDict
 import re
 from pathlib import Path
 from typing import Sequence, Mapping
 
 from pywikibot import Site, Page
 import yaml
+import yamlordereddictloader
 
 from scripts.service.ws_re.data_types import ReVolumes
+from tools import path_or_str
 from tools.bots import CanonicalBot
 
 
 class ReImporter(CanonicalBot):
+    _register_folder = "register"
+
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
 
-    def task(self):  # pragma: no cover
+    def task(self):
         re_volumes = ReVolumes()
         for volume in re_volumes.all_volumes:
-            volume_name = volume.name
-            self.logger.info("Dumping Register for {}".format(volume_name))
+            self.logger.info("Dumping Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
-                                           "Altertumswissenschaft/Register/{}".format(volume_name))
-            new_register = self._build_register(old_register.text)
-            file = Path(__file__).parent.joinpath("register")\
-                .joinpath("{}.yaml".format(volume_name.replace(",", "_")))
-            with open(file, mode="w") \
-                    as yaml_file:
-                yaml.dump(new_register, yaml_file, default_flow_style=False, allow_unicode=True)
+                                           "Altertumswissenschaft/Register/{}".format(volume.name))
+            self._dump_register(volume.file_name, old_register.text)
         return True
+
+    def _dump_register(self, volume: str, old_register: str):
+        new_register = self._build_register(old_register)
+        file = path_or_str(Path(__file__).parent
+                           .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
+        with open(file, mode="w") as yaml_file:
+            yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
+                      default_flow_style=False, allow_unicode=True)
 
     def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)
@@ -76,12 +83,14 @@ class ReImporter(CanonicalBot):
         mapping_1 = self._analyse_first_column(splitted_line[0])
         mapping_2 = self._analyse_second_column(splitted_line[1])
         author = splitted_line[2]
-        lemma_dict = {}
+        lemma_dict = OrderedDict()
         lemma_dict["lemma"] = mapping_1["lemma"]
         lemma_dict["next"] = ""
         lemma_dict["previous"] = ""
         lemma_dict["redirect"] = False
-        chapter_dict = {"author": author, "start": mapping_2["start"], "end": mapping_2["end"]}
+        chapter_dict = OrderedDict([("start", mapping_2["start"]),
+                                    ("end", mapping_2["end"]),
+                                    ("author", author)])
         if author == "X":
             lemma_dict["redirect"] = True
             chapter_dict["author"] = ""

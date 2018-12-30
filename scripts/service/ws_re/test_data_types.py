@@ -567,6 +567,7 @@ class TestReVolume(TestCase):
     def test_init(self):
         volume = ReVolume("I,1", "1900", "Aal", "Bethel")
         compare("I,1", volume.name)
+        compare("I_1", volume.file_name)
         compare("1900", volume.year)
         compare("Aal", volume.start)
         compare("Bethel", volume.end)
@@ -574,6 +575,7 @@ class TestReVolume(TestCase):
     def test_init_by_name(self):
         volume = ReVolume(name="I,1", year="1900", start="Aal", end="Bethel")
         compare("I,1", volume.name)
+        compare("I_1", volume.file_name)
         compare("1900", volume.year)
         compare("Aal", volume.start)
         compare("Bethel", volume.end)

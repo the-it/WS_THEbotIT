@@ -406,15 +406,19 @@ _REGEX_MAPPING = {ReVolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(
 
 
 class ReVolume():
-    def __init__(self, name, year, start=None, end=None):
+    def __init__(self, name: str, year: Union[str, int], start: str = None, end: str = None):
         self._name = name
         self._year = str(year)
         self._start = start
         self._end = end
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self._name
+
+    @property
+    def file_name(self) -> str:
+        return self.name.replace(",", "_")
 
     @property
     def year(self):
