@@ -32,7 +32,7 @@ class ReImporter(CanonicalBot):
         new_register = self._build_register(old_register)
         file = path_or_str(Path(__file__).parent
                            .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
-        with open(file, mode="w") as yaml_file:
+        with open(file, mode="w", encoding="utf-8") as yaml_file:
             yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
                       default_flow_style=False, allow_unicode=True)
 
