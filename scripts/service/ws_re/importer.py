@@ -22,9 +22,10 @@ class ReImporter(CanonicalBot):
     def task(self):
         re_volumes = ReVolumes()
         for volume in re_volumes.all_volumes:
-            self.logger.info("Dumping Register for {}".format(volume.name))
+            self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
+            self.logger.info("Dumping Register for {}".format(volume.name))
             self._dump_register(volume.file_name, old_register.text)
         return True
 
@@ -32,7 +33,7 @@ class ReImporter(CanonicalBot):
         new_register = self._build_register(old_register)
         file = path_or_str(Path(__file__).parent
                            .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
-        with open(file, mode="w") as yaml_file:
+        with open(file, mode="w", encoding="utf-8") as yaml_file:
             yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
                       default_flow_style=False, allow_unicode=True)
 

@@ -443,7 +443,7 @@ class ReVolume():
 class ReVolumes(Mapping):
     def __init__(self):
         path_to_file = Path(__file__).parent.joinpath("volumes.yaml")
-        with open(str(path_to_file)) as yaml_file:
+        with open(str(path_to_file), encoding="utf-8") as yaml_file:
             _volume_list = yaml.safe_load(yaml_file.read())
         _volume_mapping = OrderedDict()
         for item in _volume_list:
