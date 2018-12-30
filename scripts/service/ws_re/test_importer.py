@@ -6,16 +6,23 @@ from unittest import TestCase
 from testfixtures import compare, LogCapture
 
 from scripts.service.ws_re.importer import ReImporter
+from tools import path_or_str
 
 
 class TestReImporter(TestCase):
-    @classmethod
-    def setUpClass(cls):
-        shutil.rmtree(Path(__file__).parent.joinpath("test_register"))
-        os.mkdir(Path(__file__).parent.joinpath("test_register"))
+    _TEST_FOLDER_PATH = Path(__file__).parent.joinpath("test_register")
+
+    def _set_up_test_folder(self):
+        try:
+            shutil.rmtree(path_or_str(self._TEST_FOLDER_PATH))
+        except FileNotFoundError:
+            pass
+        finally:
+            os.mkdir(path_or_str(self._TEST_FOLDER_PATH))
 
     def setUp(self):
         self.re_importer = ReImporter(log_to_screen=False, log_to_wiki=False, debug=False)
+        self._set_up_test_folder()
         self.re_importer._register_folder = "test_register"
 
 
@@ -212,5 +219,5 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
     end: 161
     author: Otto, Walter
 """
-        with open(Path(__file__).parent.joinpath("test_register").joinpath("I_1.yaml"), "r") as yaml_file:
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yaml")), "r") as yaml_file:
             compare(expected, yaml_file.read())
