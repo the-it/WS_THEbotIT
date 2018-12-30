@@ -22,9 +22,10 @@ class ReImporter(CanonicalBot):
     def task(self):
         re_volumes = ReVolumes()
         for volume in re_volumes.all_volumes:
-            self.logger.info("Dumping Register for {}".format(volume.name))
+            self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
+            self.logger.info("Dumping Register for {}".format(volume.name))
             self._dump_register(volume.file_name, old_register.text)
         return True
 
