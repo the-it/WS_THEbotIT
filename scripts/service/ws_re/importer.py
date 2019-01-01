@@ -1,6 +1,9 @@
 from collections import OrderedDict
-import re
+from datetime import datetime
+import os
 from pathlib import Path
+import re
+import shutil
 from typing import Sequence, Mapping
 
 from pywikibot import Site, Page
@@ -18,9 +21,12 @@ class ReImporter(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
+        self.new_data_model = datetime(year=2019, month=1, day=1, hour=17)
+        self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
 
     def task(self):
         re_volumes = ReVolumes()
+        self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
@@ -29,13 +35,31 @@ class ReImporter(CanonicalBot):
             self._dump_register(volume.file_name, old_register.text)
         return True
 
+    def clean_deprecated_register(self):
+        if not self.timestamp.last_run:
+            self.remove_all_register()
+        try:
+            os.mkdir(self.folder)
+        except FileExistsError:
+            pass
+
+    def remove_all_register(self):
+        self.logger.warning("The dumped registers are outdated and must be replaced.")
+        try:
+            shutil.rmtree(self.folder)
+        except FileNotFoundError:
+            pass
+
     def _dump_register(self, volume: str, old_register: str):
-        new_register = self._build_register(old_register)
         file = path_or_str(Path(__file__).parent
                            .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
-        with open(file, mode="w", encoding="utf-8") as yaml_file:
-            yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
-                      default_flow_style=False, allow_unicode=True)
+        if not os.path.isfile(file):
+            new_register = self._build_register(old_register)
+            with open(file, mode="w", encoding="utf-8") as yaml_file:
+                yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
+                          default_flow_style=False, allow_unicode=True)
+        else:
+            self.logger.info("file already there and up to date.")
 
     def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)

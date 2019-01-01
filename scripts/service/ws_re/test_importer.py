@@ -24,7 +24,7 @@ class TestReImporter(TestCase):
         self.re_importer = ReImporter(log_to_screen=False, log_to_wiki=False, debug=False)
         self._set_up_test_folder()
         self.re_importer._register_folder = "test_register"
-
+        self.re_importer.folder = path_or_str(Path(__file__).parent.joinpath(self.re_importer._register_folder))
 
     def test_split_line(self):
         line = """|[[RE:Herodes 14]]{{Anker|Herodes 14}}
@@ -221,3 +221,42 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 """
         with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yaml")), "r") as yaml_file:
             compare(expected, yaml_file.read())
+
+    def test_register_already_there(self):
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yaml")), "w") as yaml_file:
+            yaml_file.write("test")
+        lemma_text = """{|
+    |-
+    |[[RE:Herodes 14]]{{Anker|Herodes 14}}
+    |[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+    |Otto, Walter
+    |1941
+    |-
+    |[[RE:Herodes 15]]{{Anker|Herodes 15}}
+    |[[Special:Filepath/Pauly-Wissowa_S_II,_0157.jpg|S II, 158]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0157.png IA]-161
+    |Otto, Walter
+    |1941
+    |}
+    [[Kategorie:RE:Register|!]]
+    Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        self.re_importer._dump_register("I_1", lemma_text)
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yaml")), "r") as yaml_file:
+            compare("test", yaml_file.read())
+
+    def test_make_dir(self):
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yaml")), "w") as yaml_file:
+            yaml_file.write("test")
+        self.re_importer.timestamp._last_run = True
+        with LogCapture():
+            self.re_importer.clean_deprecated_register()
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yaml")), "r") as yaml_file:
+            compare("test", yaml_file.read())
+        self.re_importer.timestamp.last_run = None
+        with LogCapture():
+            self.re_importer.clean_deprecated_register()
+        self.assertFalse(os.path.exists(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yaml"))))
+        self.assertTrue(os.path.exists(path_or_str(self._TEST_FOLDER_PATH)))
+        os.removedirs(path_or_str(self._TEST_FOLDER_PATH))
+        with LogCapture():
+            self.re_importer.clean_deprecated_register()
+        self.assertTrue(os.path.exists(path_or_str(self._TEST_FOLDER_PATH)))
