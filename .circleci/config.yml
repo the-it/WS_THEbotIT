@@ -23,6 +23,7 @@ install_dependencies: &install_dependencies
       python3 -m venv venv
       . venv/bin/activate
       make pip3-all
+      pip list
 
 run_unittest: &run_unittest
   run:
