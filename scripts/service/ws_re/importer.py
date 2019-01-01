@@ -1,9 +1,9 @@
-import os
-import shutil
 from collections import OrderedDict
-import re
 from datetime import datetime
+import os
 from pathlib import Path
+import re
+import shutil
 from typing import Sequence, Mapping
 
 from pywikibot import Site, Page
@@ -26,12 +26,7 @@ class ReImporter(CanonicalBot):
 
     def task(self):
         re_volumes = ReVolumes()
-        if not self.timestamp.last_run:
-            self.remove_all_register()
-        try:
-            os.mkdir(self.folder)
-        except FileExistsError:
-            pass
+        self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
@@ -40,9 +35,16 @@ class ReImporter(CanonicalBot):
             self._dump_register(volume.file_name, old_register.text)
         return True
 
+    def clean_deprecated_register(self):
+        if not self.timestamp.last_run:
+            self.remove_all_register()
+        try:
+            os.mkdir(self.folder)
+        except FileExistsError:
+            pass
+
     def remove_all_register(self):
         self.logger.warning("The dumped registers are outdated and must be replaced.")
-
         try:
             shutil.rmtree(self.folder)
         except FileNotFoundError:
