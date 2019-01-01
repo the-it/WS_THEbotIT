@@ -21,7 +21,7 @@ class ReImporter(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(year=2018, month=12, day=31, hour=10)
+        self.new_data_model = datetime(year=2019, month=1, day=1, hour=17)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
 
     def task(self):
