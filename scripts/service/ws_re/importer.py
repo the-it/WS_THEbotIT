@@ -31,7 +31,6 @@ class ReImporter(CanonicalBot):
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
-            self.logger.info("Dumping Register for {}".format(volume.name))
             self._dump_register(volume.file_name, old_register.text)
         return True
 
@@ -50,11 +49,28 @@ class ReImporter(CanonicalBot):
         except FileNotFoundError:
             pass
 
+    @staticmethod
+    def _optimize_register(raw_register: Sequence) -> Sequence:
+        new_register = list()
+        entry_before = raw_register[0]
+        for entry in raw_register[1:]:
+            if entry_before:
+                if entry["lemma"] == entry_before["lemma"]:
+                    entry_before["chapters"].append(entry["chapters"][0])
+                    continue
+                else:
+                    if entry_before:
+                        new_register.append(entry_before)
+            entry_before = entry
+        new_register.append(entry_before)  # add last entry
+        return new_register
+
     def _dump_register(self, volume: str, old_register: str):
         file = path_or_str(Path(__file__).parent
                            .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
         if not os.path.isfile(file):
-            new_register = self._build_register(old_register)
+            self.logger.info("Dumping Register for {}".format(volume))
+            new_register = self._optimize_register(self._build_register(old_register))
             with open(file, mode="w", encoding="utf-8") as yaml_file:
                 yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
                           default_flow_style=False, allow_unicode=True)
