@@ -65,12 +65,29 @@ class ReImporter(CanonicalBot):
         new_register.append(entry_before)  # add last entry
         return new_register
 
+    @staticmethod
+    def _add_pre_post_register(raw_register: Sequence) -> Sequence:
+        new_register = list()
+        len_raw_register = len(raw_register)
+
+        for idx, entry in enumerate(raw_register):
+            if idx > 0:
+                entry["previous"] = raw_register[idx - 1]["lemma"]
+            if idx < len_raw_register - 1:
+                entry["next"] = raw_register[idx + 1]["lemma"]
+            new_register.append(entry)
+
+        return new_register
+
     def _dump_register(self, volume: str, old_register: str):
         file = path_or_str(Path(__file__).parent
                            .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
         if not os.path.isfile(file):
             self.logger.info("Dumping Register for {}".format(volume))
-            new_register = self._optimize_register(self._build_register(old_register))
+            new_register = \
+                self._add_pre_post_register(
+                    self._optimize_register(
+                        self._build_register(old_register)))
             with open(file, mode="w", encoding="utf-8") as yaml_file:
                 yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
                           default_flow_style=False, allow_unicode=True)
