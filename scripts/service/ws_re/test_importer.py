@@ -204,16 +204,16 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         self.re_importer._dump_register("I_1", lemma_text)
         expected = """- lemma: Herodes 14
-  next: Herodes 15
   previous: ''
+  next: Herodes 15
   redirect: false
   chapters:
   - start: 1
     end: 158
     author: Otto, Walter
 - lemma: Herodes 15
-  next: ''
   previous: Herodes 14
+  next: ''
   redirect: false
   chapters:
   - start: 158

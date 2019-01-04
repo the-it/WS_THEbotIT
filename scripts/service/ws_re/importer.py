@@ -21,7 +21,7 @@ class ReImporter(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(year=2019, month=1, day=1, hour=17)
+        self.new_data_model = datetime(year=2019, month=1, day=4, hour=23)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
 
     def task(self):
@@ -140,8 +140,8 @@ class ReImporter(CanonicalBot):
         author = splitted_line[2]
         lemma_dict = OrderedDict()
         lemma_dict["lemma"] = mapping_1["lemma"]
-        lemma_dict["next"] = ""
         lemma_dict["previous"] = ""
+        lemma_dict["next"] = ""
         lemma_dict["redirect"] = False
         chapter_dict = OrderedDict([("start", mapping_2["start"]),
                                     ("end", mapping_2["end"]),
