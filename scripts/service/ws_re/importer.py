@@ -54,14 +54,11 @@ class ReImporter(CanonicalBot):
         new_register = list()
         entry_before = raw_register[0]
         for entry in raw_register[1:]:
-            if entry_before:
-                if entry["lemma"] == entry_before["lemma"]:
-                    entry_before["chapters"].append(entry["chapters"][0])
-                    continue
-                else:
-                    if entry_before:
-                        new_register.append(entry_before)
-            entry_before = entry
+            if entry["lemma"] == entry_before["lemma"]:
+                entry_before["chapters"].append(entry["chapters"][0])
+            else:
+                new_register.append(entry_before)
+                entry_before = entry
         new_register.append(entry_before)  # add last entry
         return new_register
 
