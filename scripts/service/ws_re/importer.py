@@ -23,6 +23,7 @@ class ReImporter(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(year=2019, month=1, day=4, hour=23)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
+        self.authors = {}
 
     def task(self):
         re_volumes = ReVolumes()
@@ -35,6 +36,7 @@ class ReImporter(CanonicalBot):
         return True
 
     def clean_deprecated_register(self):
+        # this indicates that the data was older then the timestamp in self.new_data_model
         if not self.timestamp.last_run:
             self.remove_all_register()
         try:
@@ -91,6 +93,31 @@ class ReImporter(CanonicalBot):
         else:
             self.logger.info("file already there and up to date.")
 
+    def _dump_authors(self):
+        mapping_dict = {}
+        details_dict = {}
+        for author in self.authors:
+            mapping_dict[author] = author
+            details_dict[author] = {"death": self.authors[author]}
+        path = Path(__file__).parent.joinpath(self._register_folder)
+        mapping_file = path.joinpath("authors_mapping.yaml")
+        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yaml_file:
+            yaml.dump(mapping_dict, yaml_file, default_flow_style=False, allow_unicode=True)
+        details_file = path.joinpath("authors.yaml")
+        with open(path_or_str(details_file), mode="w", encoding="utf-8") as yaml_file:
+            yaml.dump(details_dict, yaml_file, default_flow_style=False, allow_unicode=True)
+
+    def _register_author(self, author: str, death_year: str):
+        if author not in self.authors.keys():
+            if death_year:
+                self.authors[author] = int(death_year)
+            else:
+                self.authors[author] = ""
+        elif int(death_year) != self.authors[author]:
+            self.logger.error("first author: {}, {}".format(author, self.authors[author]))
+            self.logger.error("second author: {}, {}".format(author, death_year))
+            raise ValueError("We have a serious problem. There are two authors with the same name")
+
     def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)
         for idx, line in enumerate(splitted_lines):
@@ -138,6 +165,7 @@ class ReImporter(CanonicalBot):
         mapping_1 = self._analyse_first_column(splitted_line[0])
         mapping_2 = self._analyse_second_column(splitted_line[1])
         author = splitted_line[2]
+        year = splitted_line[3]
         lemma_dict = OrderedDict()
         lemma_dict["lemma"] = mapping_1["lemma"]
         lemma_dict["previous"] = ""
@@ -151,6 +179,12 @@ class ReImporter(CanonicalBot):
             chapter_dict["author"] = ""
         if author == "?":
             chapter_dict["author"] = ""
+        if chapter_dict["author"]:
+            try:
+                self._register_author(chapter_dict["author"], year)
+            except ValueError as original:
+                self.logger.error("author: {}, year: {}".format(chapter_dict["author"], year))
+                raise original
         lemma_dict["chapters"] = list()
         lemma_dict["chapters"].append(chapter_dict)
         return lemma_dict

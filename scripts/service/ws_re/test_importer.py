@@ -341,3 +341,31 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         compare("Aquilinus 5", register[1]["previous"])
         compare("", register[2]["next"])
         compare("Aquilinus 6", register[2]["previous"])
+
+    def test_dump_authors(self):
+        lemma_text = """{|
+|-
+|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|Otto, Walter
+|1941
+|-
+|[[RE:Herodes 15]]{{Anker|Herodes 15}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0157.jpg|S II, 158]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0157.png IA]-161
+|Otto, Walter
+|1941
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        self.re_importer._dump_register("I_1", lemma_text)
+        self.re_importer._dump_authors()
+        expected = """Otto, Walter:
+  death: 1941
+"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.yaml")), "r") as yaml_file:
+            compare(expected, yaml_file.read())
+
+        expected = """Otto, Walter: Otto, Walter
+"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.yaml")), "r") as yaml_file:
+            compare(expected, yaml_file.read())
