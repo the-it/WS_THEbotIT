@@ -24,11 +24,13 @@ class ReImporter(CanonicalBot):
         self.new_data_model = datetime(year=2019, month=1, day=4, hour=23)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
         self.authors = {}
+        self.current_volume = None
 
     def task(self):
         re_volumes = ReVolumes()
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
+            self.current_volume = volume
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
@@ -110,9 +112,10 @@ class ReImporter(CanonicalBot):
     def _register_author(self, author: str, death_year: str):
         if author not in self.authors.keys():
             if death_year:
-                self.authors[author] = int(death_year)
+                death_year = int(death_year)
             else:
-                self.authors[author] = ""
+                death_year = 0
+            self.authors[author] = death_year
         elif int(death_year) != self.authors[author]:
             self.logger.error("first author: {}, {}".format(author, self.authors[author]))
             self.logger.error("second author: {}, {}".format(author, death_year))

@@ -365,7 +365,8 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.yaml")), "r") as yaml_file:
             compare(expected, yaml_file.read())
 
-        expected = """Otto, Walter: Otto, Walter
+        expected = """Otto, Walter: 
+  "": Otto, Walter
 """
         with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.yaml")), "r") as yaml_file:
             compare(expected, yaml_file.read())
