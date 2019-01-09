@@ -274,7 +274,6 @@ class TestOneTimeBot(TestCase):
         with WatchdogBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertTrue(bot.run())
 
-    @skip("Skip this as long the bugfix for testfixtures is pending: https://github.com/Simplistix/testfixtures/issues/102")
     def test_send_log_to_wiki(self):
         with mock.patch("tools.bots.Page", autospec=Page) as mock_page:
             with self.MinimalBot(wiki=None, log_to_screen=False) as bot:

@@ -132,7 +132,6 @@ class TestBotScheduler(TestCase):
         self.assertIn("bot_1.py", os.listdir(path_to_current_archive))
         self.assertIn("__init__.py", os.listdir(path_to_current_archive))
 
-    @skip("Skip this as long the bugfix for testfixtures is pending: https://github.com/Simplistix/testfixtures/issues/102")
     def test_change_repo(self):
         self._copy_bot_to_archive_dir("bot_1")
         with mock.patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
@@ -150,7 +149,6 @@ class TestBotScheduler(TestCase):
             compare("origin", repo_mock.mock_calls[4][1][0])
             compare("().remote().push", repo_mock.mock_calls[5][0])
 
-    @skip("Skip this as long the bugfix for testfixtures is pending: https://github.com/Simplistix/testfixtures/issues/102")
     def test_change_repo_two_bots(self):
         self._copy_bot_to_archive_dir("bot_1")
         open(path_or_str(self._get_archive_test().joinpath("bot_1_test.py")), 'w').close()
