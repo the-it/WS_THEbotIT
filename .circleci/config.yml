@@ -31,7 +31,7 @@ run_unittest: &run_unittest
     when: always
     command: |
       . venv/bin/activate
-      make coverage
+      make unittest
 
 flake8: &flake8
   run:
