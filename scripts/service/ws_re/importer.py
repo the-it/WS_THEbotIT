@@ -111,15 +111,13 @@ class ReImporter(CanonicalBot):
 
     def _register_author(self, author: str, death_year: str):
         if author not in self.authors.keys():
-            if death_year:
-                death_year = int(death_year)
-            else:
-                death_year = 0
-            self.authors[author] = death_year
-        elif int(death_year) != self.authors[author]:
+            self.authors[author] = {}
+        if self.current_volume not in self.authors[author].keys():
+            self.authors[author][self.current_volume] = death_year
+        elif death_year != self.authors[author][self.current_volume]:
             self.logger.error("first author: {}, {}".format(author, self.authors[author]))
             self.logger.error("second author: {}, {}".format(author, death_year))
-            raise ValueError("We have a serious problem. There are two authors with the same name")
+            raise ValueError("We have a serious problem. There are two authors with the same name in one register.")
 
     def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)
