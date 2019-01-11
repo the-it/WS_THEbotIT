@@ -1,4 +1,5 @@
 language: python
+dist: xenial
 python:
   - nightly
 # command to install dependencies
