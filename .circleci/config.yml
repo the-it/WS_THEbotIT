@@ -98,7 +98,7 @@ report_codecov: &report_codecov
     name: report codecov
     command: |
       . venv/bin/activate
-      make codecov
+      codecov -F $PYTHON_VERSION
 
 show_python_version: &show_python_version
   run:
