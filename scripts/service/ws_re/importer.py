@@ -101,22 +101,7 @@ class ReImporter(CanonicalBot):
         details_dict = {}
         for author in self.authors:
             mapping_dict[author] = author
-            author_detail = {}
-            author_years = set(self.authors[author].values())
-            if len(author_years) == 1:
-                year = author_years.pop()
-                if year:
-                    author_detail["*"] = {"death": int(year)}
-                else:
-                    author_detail["*"] = {}
-            else:
-                for register in self.authors[author].keys():
-                    death_year = self.authors[author][register]
-                    if death_year:
-                        death = {"death": int(death_year)}
-                    else:
-                        death = {}
-                    author_detail[register] = death
+            author_detail = self._create_author_detail(author)
             details_dict[author] = author_detail
         path = Path(__file__).parent.joinpath(self._register_folder)
         mapping_file = path.joinpath("authors_mapping.yaml")
@@ -125,6 +110,19 @@ class ReImporter(CanonicalBot):
         details_file = path.joinpath("authors.yaml")
         with open(path_or_str(details_file), mode="w", encoding="utf-8") as yaml_file:
             yaml.dump(details_dict, yaml_file, default_flow_style=False, allow_unicode=True)
+
+    def _create_author_detail(self, author):
+        author_detail = {}
+        author_years = set(self.authors[author].values())
+        if len(author_years) == 1:
+            year = author_years.pop()
+            author_detail["*"] = {"death": int(year)} if year else {}
+        else:
+            for register in self.authors[author].keys():
+                death_year = self.authors[author][register]
+                death = {"death": int(death_year)} if death_year else {}
+                author_detail[register] = death
+        return author_detail
 
     def _register_author(self, author: str, death_year: str):
         if author not in self.authors.keys():
