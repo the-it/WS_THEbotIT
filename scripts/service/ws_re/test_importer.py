@@ -1,5 +1,6 @@
 import os
 import shutil
+from collections import OrderedDict
 from pathlib import Path
 from unittest import TestCase
 
@@ -203,16 +204,16 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         self.re_importer._dump_register("I_1", lemma_text)
         expected = """- lemma: Herodes 14
-  next: ''
   previous: ''
+  next: Herodes 15
   redirect: false
   chapters:
   - start: 1
     end: 158
     author: Otto, Walter
 - lemma: Herodes 15
+  previous: Herodes 14
   next: ''
-  previous: ''
   redirect: false
   chapters:
   - start: 158
@@ -260,3 +261,172 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         with LogCapture():
             self.re_importer.clean_deprecated_register()
         self.assertTrue(os.path.exists(path_or_str(self._TEST_FOLDER_PATH)))
+
+    def test_optimize_register(self):
+        lemma_text = """{|
+|-
+|[[RE:Aquilinus 5]]{{Anker|Aquilinus 5}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]
+|Seeck
+|1921
+|-
+|[[RE:Aquilinus 6]]{{Anker|Aquilinus 6}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]
+|Freudenthal
+|1907
+|-
+|[[RE:Aquilinus 6]]{{Anker|Aquilinus 6}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]
+|Rohden
+|1939
+|-
+|[[RE:Aquilinus 6]]{{Anker|Aquilinus 6}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]-324
+|AHörnchen
+|1939
+|-
+|[[RE:Aquilinus 6]]{{Anker|Aquilinus 6}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 324]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]-329
+|BHörnchen
+|1939
+|-
+|[[RE:Aquilius]]{{Anker|Aquilius}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]
+|
+|
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        register = self.re_importer._build_register(lemma_text)
+        compare(6, len(register))
+        register = self.re_importer._optimize_register(register)
+        compare(3, len(register))
+        compare(4, len(register[1]["chapters"]))
+        compare(OrderedDict((("start", 322), ("end", 322), ("author", "Freudenthal"))), register[1]["chapters"][0])
+        compare(OrderedDict((("start", 322), ("end", 322), ("author", "Rohden"))),register[1]["chapters"][1])
+        compare(OrderedDict((("start", 322), ("end", 324), ("author", "AHörnchen"))), register[1]["chapters"][2])
+        compare(OrderedDict((("start", 324), ("end", 329), ("author", "BHörnchen"))),register[1]["chapters"][3])
+
+    def test_pre_post_register(self):
+        lemma_text = """{|
+|-
+|[[RE:Aquilinus 5]]{{Anker|Aquilinus 5}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]
+|Seeck
+|1921
+|-
+|[[RE:Aquilinus 6]]{{Anker|Aquilinus 6}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]
+|Freudenthal
+|1907
+|-
+|[[RE:Aquilius]]{{Anker|Aquilius}}
+|[[Special:Filepath/Pauly-Wissowa_II,1,_0321.jpg|II,1, 322]] : [http://www.archive.org/download/PWRE03-04/Pauly-Wissowa_II1_0321.png IA]
+|
+|
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        register = self.re_importer._build_register(lemma_text)
+        compare("", register[0]["next"])
+        compare("", register[0]["previous"])
+        compare("", register[1]["next"])
+        compare("", register[1]["previous"])
+        compare("", register[2]["next"])
+        compare("", register[2]["previous"])
+        register = self.re_importer._add_pre_post_register(register)
+        compare("Aquilinus 6", register[0]["next"])
+        compare("", register[0]["previous"])
+        compare("Aquilius", register[1]["next"])
+        compare("Aquilinus 5", register[1]["previous"])
+        compare("", register[2]["next"])
+        compare("Aquilinus 6", register[2]["previous"])
+
+    def test_register_authors(self):
+        self.re_importer.current_volume = "I,1"
+        lemma_text = """{|
+|-
+|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|Otto, Walter
+|1941
+|-
+|[[RE:Herodes 15]]{{Anker|Herodes 15}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0157.jpg|S II, 158]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0157.png IA]-161
+|Otto, Walter
+|1941
+|-
+|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|B, A
+|1941
+|-
+|[[RE:Herodes 15]]{{Anker|Herodes 15}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0157.jpg|S II, 158]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0157.png IA]-161
+|C, D
+|
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        self.re_importer._dump_register("I_1", lemma_text)
+        self.re_importer.current_volume = "II,1"
+        lemma_text = """{|
+|-
+|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|Otto, Walter
+|1940
+|-
+|[[RE:Herodes 15]]{{Anker|Herodes 15}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0157.jpg|S II, 158]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0157.png IA]-161
+|Otto, Walter
+|1940
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        self.re_importer._dump_register("II_1", lemma_text)
+        compare({"Otto, Walter": {"I,1": "1941", "II,1": "1940"}, "B, A": {"I,1": "1941"}, "C, D": {"I,1": ""}}, self.re_importer.authors)
+        self.re_importer.current_volume = "III,1"
+        lemma_text = """{|
+|-
+|[[RE:Herodes 14]]{{Anker|Herodes 14}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158
+|Otto, Walter
+|1940
+|-
+|[[RE:Herodes 15]]{{Anker|Herodes 15}}
+|[[Special:Filepath/Pauly-Wissowa_S_II,_0157.jpg|S II, 158]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0157.png IA]-161
+|Otto, Walter
+|1941
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
+        with LogCapture():
+            with self.assertRaises(ValueError):
+                self.re_importer._dump_register("III_1", lemma_text)
+
+    def test_dump_authors(self):
+        self.re_importer.authors = {"Otto, Walter": {"I,1": "1941", "II,1": ""},
+                                    "B, A": {"I,1": "1941"},
+                                    "C, D": {"I,1": ""}}
+        self.re_importer._dump_authors()
+        expected = """B, A: B, A
+C, D: C, D
+Otto, Walter: Otto, Walter
+"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.yaml")), "r") as yaml_file:
+            compare(expected, yaml_file.read())
+
+        expected = """B, A:
+  '*':
+    death: 1941
+C, D:
+  '*': {}
+Otto, Walter:
+  I,1:
+    death: 1941
+  II,1: {}
+"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.yaml")), "r") as yaml_file:
+            compare(expected, yaml_file.read())
+

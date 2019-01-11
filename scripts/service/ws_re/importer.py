@@ -21,21 +21,25 @@ class ReImporter(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(year=2019, month=1, day=1, hour=17)
+        self.new_data_model = datetime(year=2019, month=1, day=11, hour=19)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
+        self.authors = {}  # type: Mapping[Mapping[Mapping]]
+        self.current_volume = ""
 
     def task(self):
         re_volumes = ReVolumes()
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
+            self.current_volume = volume.name
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
-            self.logger.info("Dumping Register for {}".format(volume.name))
             self._dump_register(volume.file_name, old_register.text)
+        self._dump_authors()
         return True
 
     def clean_deprecated_register(self):
+        # this indicates that the data was older then the timestamp in self.new_data_model
         if not self.timestamp.last_run:
             self.remove_all_register()
         try:
@@ -50,16 +54,88 @@ class ReImporter(CanonicalBot):
         except FileNotFoundError:
             pass
 
+    @staticmethod
+    def _optimize_register(raw_register: Sequence) -> Sequence:
+        new_register = list()
+        entry_before = raw_register[0]
+        for entry in raw_register[1:]:
+            if entry["lemma"] == entry_before["lemma"]:
+                entry_before["chapters"].append(entry["chapters"][0])
+            else:
+                new_register.append(entry_before)
+                entry_before = entry
+        new_register.append(entry_before)  # add last entry
+        return new_register
+
+    @staticmethod
+    def _add_pre_post_register(raw_register: Sequence) -> Sequence:
+        new_register = list()
+        len_raw_register = len(raw_register)
+
+        for idx, entry in enumerate(raw_register):
+            if idx > 0:
+                entry["previous"] = raw_register[idx - 1]["lemma"]
+            if idx < len_raw_register - 1:
+                entry["next"] = raw_register[idx + 1]["lemma"]
+            new_register.append(entry)
+
+        return new_register
+
     def _dump_register(self, volume: str, old_register: str):
         file = path_or_str(Path(__file__).parent
                            .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
         if not os.path.isfile(file):
-            new_register = self._build_register(old_register)
+            self.logger.info("Dumping Register for {}".format(volume))
+            new_register = \
+                self._add_pre_post_register(
+                    self._optimize_register(
+                        self._build_register(old_register)))
             with open(file, mode="w", encoding="utf-8") as yaml_file:
                 yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
                           default_flow_style=False, allow_unicode=True)
         else:
             self.logger.info("file already there and up to date.")
+
+    def _dump_authors(self):
+        mapping_dict = {}
+        details_dict = {}
+        for author in self.authors:
+            mapping_dict[author] = author
+            author_detail = self._create_author_detail(author)
+            details_dict[author] = author_detail
+        path = Path(__file__).parent.joinpath(self._register_folder)
+        mapping_file = path.joinpath("authors_mapping.yaml")
+        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yaml_file:
+            yaml.dump(mapping_dict, yaml_file, default_flow_style=False, allow_unicode=True)
+        details_file = path.joinpath("authors.yaml")
+        with open(path_or_str(details_file), mode="w", encoding="utf-8") as yaml_file:
+            yaml.dump(details_dict, yaml_file, default_flow_style=False, allow_unicode=True)
+
+    def _create_author_detail(self, author):
+        author_detail = {}
+        author_years = set(self.authors[author].values())
+        if len(author_years) == 1:
+            year = author_years.pop()
+            author_detail["*"] = {"death": int(year)} if year else {}
+        else:
+            for register in self.authors[author].keys():
+                death_year = self.authors[author][register]
+                death = {"death": int(death_year)} if death_year else {}
+                author_detail[register] = death
+        return author_detail
+
+    def _register_author(self, author: str, death_year: str):
+        if author not in self.authors.keys():
+            self.authors[author] = {}
+        if self.current_volume not in self.authors[author].keys():
+            self.authors[author][self.current_volume] = death_year
+        elif death_year != self.authors[author][self.current_volume]:
+            if author == "Thomsen" and death_year == "4444":
+                return
+            self.logger.error("first author: {}, {}".format(author, self.authors[author]))
+            self.logger.error("second author: {}, {}".format(author, death_year))
+            raise ValueError("We have a serious problem. "
+                             "There are two authors with the same name in one register.")
 
     def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)
@@ -108,10 +184,11 @@ class ReImporter(CanonicalBot):
         mapping_1 = self._analyse_first_column(splitted_line[0])
         mapping_2 = self._analyse_second_column(splitted_line[1])
         author = splitted_line[2]
+        year = splitted_line[3]
         lemma_dict = OrderedDict()
         lemma_dict["lemma"] = mapping_1["lemma"]
-        lemma_dict["next"] = ""
         lemma_dict["previous"] = ""
+        lemma_dict["next"] = ""
         lemma_dict["redirect"] = False
         chapter_dict = OrderedDict([("start", mapping_2["start"]),
                                     ("end", mapping_2["end"]),
@@ -121,6 +198,12 @@ class ReImporter(CanonicalBot):
             chapter_dict["author"] = ""
         if author == "?":
             chapter_dict["author"] = ""
+        if chapter_dict["author"]:
+            try:
+                self._register_author(chapter_dict["author"], year)
+            except ValueError as original:
+                self.logger.error("author: {}, year: {}".format(chapter_dict["author"], year))
+                raise original
         lemma_dict["chapters"] = list()
         lemma_dict["chapters"].append(chapter_dict)
         return lemma_dict
