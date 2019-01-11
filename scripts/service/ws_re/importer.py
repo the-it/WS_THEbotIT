@@ -83,15 +83,15 @@ class ReImporter(CanonicalBot):
 
     def _dump_register(self, volume: str, old_register: str):
         file = path_or_str(Path(__file__).parent
-                           .joinpath(self._register_folder).joinpath("{}.yaml".format(volume)))
+                           .joinpath(self._register_folder).joinpath("{}.yml".format(volume)))
         if not os.path.isfile(file):
             self.logger.info("Dumping Register for {}".format(volume))
             new_register = \
                 self._add_pre_post_register(
                     self._optimize_register(
                         self._build_register(old_register)))
-            with open(file, mode="w", encoding="utf-8") as yaml_file:
-                yaml.dump(new_register, yaml_file, Dumper=yamlordereddictloader.Dumper,
+            with open(file, mode="w", encoding="utf-8") as yml_file:
+                yaml.dump(new_register, yml_file, Dumper=yamlordereddictloader.Dumper,
                           default_flow_style=False, allow_unicode=True)
         else:
             self.logger.info("file already there and up to date.")
@@ -104,12 +104,12 @@ class ReImporter(CanonicalBot):
             author_detail = self._create_author_detail(author)
             details_dict[author] = author_detail
         path = Path(__file__).parent.joinpath(self._register_folder)
-        mapping_file = path.joinpath("authors_mapping.yaml")
-        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yaml_file:
-            yaml.dump(mapping_dict, yaml_file, default_flow_style=False, allow_unicode=True)
-        details_file = path.joinpath("authors.yaml")
-        with open(path_or_str(details_file), mode="w", encoding="utf-8") as yaml_file:
-            yaml.dump(details_dict, yaml_file, default_flow_style=False, allow_unicode=True)
+        mapping_file = path.joinpath("authors_mapping.yml")
+        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yml_file:
+            yaml.dump(mapping_dict, yml_file, default_flow_style=False, allow_unicode=True)
+        details_file = path.joinpath("authors.yml")
+        with open(path_or_str(details_file), mode="w", encoding="utf-8") as yml_file:
+            yaml.dump(details_dict, yml_file, default_flow_style=False, allow_unicode=True)
 
     def _create_author_detail(self, author):
         author_detail = {}
