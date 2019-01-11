@@ -21,20 +21,21 @@ class ReImporter(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(year=2019, month=1, day=4, hour=23)
+        self.new_data_model = datetime(year=2019, month=1, day=11, hour=19)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
-        self.authors = {}
-        self.current_volume = None
+        self.authors = {}  # type: Mapping[Mapping[Mapping]]
+        self.current_volume = ""
 
     def task(self):
         re_volumes = ReVolumes()
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
-            self.current_volume = volume
+            self.current_volume = volume.name
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
             self._dump_register(volume.file_name, old_register.text)
+        self._dump_authors()
         return True
 
     def clean_deprecated_register(self):
@@ -100,7 +101,23 @@ class ReImporter(CanonicalBot):
         details_dict = {}
         for author in self.authors:
             mapping_dict[author] = author
-            details_dict[author] = {"death": self.authors[author]}
+            author_detail = {}
+            author_years = set(self.authors[author].values())
+            if len(author_years) == 1:
+                year = author_years.pop()
+                if year:
+                    author_detail["*"] = {"death": int(year)}
+                else:
+                    author_detail["*"] = {}
+            else:
+                for register in self.authors[author].keys():
+                    death_year = self.authors[author][register]
+                    if death_year:
+                        death = {"death": int(death_year)}
+                    else:
+                        death = {}
+                    author_detail[register] = death
+            details_dict[author] = author_detail
         path = Path(__file__).parent.joinpath(self._register_folder)
         mapping_file = path.joinpath("authors_mapping.yaml")
         with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yaml_file:
@@ -115,9 +132,12 @@ class ReImporter(CanonicalBot):
         if self.current_volume not in self.authors[author].keys():
             self.authors[author][self.current_volume] = death_year
         elif death_year != self.authors[author][self.current_volume]:
+            if author == "Thomsen" and death_year == "4444":
+                return
             self.logger.error("first author: {}, {}".format(author, self.authors[author]))
             self.logger.error("second author: {}, {}".format(author, death_year))
-            raise ValueError("We have a serious problem. There are two authors with the same name in one register.")
+            raise ValueError("We have a serious problem. "
+                             "There are two authors with the same name in one register.")
 
     def _split_line(self, register_line: str) -> Sequence[str]:
         splitted_lines = re.split(r"\n\|", register_line)
