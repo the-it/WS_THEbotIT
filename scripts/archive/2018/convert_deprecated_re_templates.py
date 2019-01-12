@@ -4,7 +4,7 @@ import traceback
 
 from pywikibot import Site, Page
 
-from scripts.service.ws_re.data_types import RePage, ReDatenException
+from scripts.service.ws_re.data_types import RePage, ReDataException
 from scripts.service.ws_re.scanner_tasks import ERROTask
 from tools.bots import OneTimeBot
 from tools.template_handler import TemplateHandler, TemplateFinder
@@ -105,7 +105,7 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
                 re_page = RePage(page)
                 if not self.debug:
                     re_page.save("Entfernen veralteter Vorlagen.")
-            except (ReDatenException, ValueError):
+            except (ReDataException, ValueError):
                 error = traceback.format_exc().splitlines()[-1]
                 error_task.task(lemma["title"], error)
         error_task.finish_task()

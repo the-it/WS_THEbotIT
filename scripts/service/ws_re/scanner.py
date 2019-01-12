@@ -5,7 +5,7 @@ from typing import List
 
 from pywikibot import Page, Site
 
-from scripts.service.ws_re.data_types import RePage, ReDatenException
+from scripts.service.ws_re.data_types import RePage, ReDataException
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask
 from tools.bots import CanonicalBot, BotException
 from tools.petscan import PetScan
@@ -90,7 +90,7 @@ class ReScanner(CanonicalBot):
             self.logger.debug(save_message)
             try:
                 re_page.save(save_message)
-            except ReDatenException:
+            except ReDataException:
                 self.logger.error("RePage can't be saved.")
 
     def _add_lemma_to_data(self, lemma):
@@ -130,7 +130,7 @@ class ReScanner(CanonicalBot):
             list_of_done_tasks = []
             try:
                 re_page = RePage(Page(self.wiki, lemma))
-            except ReDatenException:
+            except ReDataException:
                 error = traceback.format_exc().splitlines()[-1]
                 self.logger.error("The initiation of {} went wrong: {}".format(lemma, error))
                 error_task.task(lemma, error)

@@ -11,11 +11,11 @@ import yaml
 from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
 
 
-class ReDatenException(Exception):
+class ReDataException(Exception):
     pass
 
 
-class ReProperty():
+class ReProperty:
     def __init__(self, name: str, default: Union[str, bool]):
         self._name = name
         self._default = default
@@ -142,7 +142,7 @@ class ReArticle(Mapping):
         if new_value in (RE_DATEN, RE_ABSCHNITT):
             self._article_type = new_value
         else:
-            raise ReDatenException("{} is not a permitted article type.".format(new_value))
+            raise ReDataException("{} is not a permitted article type.".format(new_value))
 
     @property
     def text(self) -> str:
@@ -153,7 +153,7 @@ class ReArticle(Mapping):
         if isinstance(new_value, str):
             self._text = new_value
         else:
-            raise ReDatenException("Property text must be a string.")
+            raise ReDataException("Property text must be a string.")
 
     @property
     def author(self) -> Tuple[str, str]:
@@ -167,7 +167,7 @@ class ReArticle(Mapping):
                 isinstance(new_value[0], str) and isinstance(new_value[1], str):
             self._author = new_value
         else:
-            raise ReDatenException("Property author must be a tuple of strings or one string.")
+            raise ReDataException("Property author must be a tuple of strings or one string.")
 
     def __len__(self) -> int:
         return len(self._properties)
@@ -189,7 +189,7 @@ class ReArticle(Mapping):
                     try:
                         self[item[0]].value = item[1]
                     except (ValueError, TypeError) as property_error:
-                        raise ReDatenException(
+                        raise ReDataException(
                             "Keypair {} is not permitted.".format(item)) from property_error
 
     def __hash__(self):
@@ -211,7 +211,7 @@ class ReArticle(Mapping):
         find_re_abschnitt = finder.get_positions(RE_ABSCHNITT)
         # only one start template can be present
         if len(find_re_daten) + len(find_re_abschnitt) != 1:
-            raise ReDatenException("Article has the wrong structure. There must one start template")
+            raise ReDataException("Article has the wrong structure. There must one start template")
         if find_re_daten:
             find_re_start = find_re_daten
         else:
@@ -219,16 +219,16 @@ class ReArticle(Mapping):
         find_re_author = finder.get_positions(RE_AUTHOR)
         # only one end template can be present
         if len(find_re_author) != 1:
-            raise ReDatenException("Article has the wrong structure. There must one stop template")
+            raise ReDataException("Article has the wrong structure. There must one stop template")
         # the templates must have the right order
         if find_re_start[0]["pos"][0] > find_re_author[0]["pos"][0]:
-            raise ReDatenException("Article has the wrong structure. Wrong order of templates.")
+            raise ReDataException("Article has the wrong structure. Wrong order of templates.")
         # it can only exists text between the start and the end template.
         if find_re_start[0]["pos"][0] != 0:
-            raise ReDatenException("Article has the wrong structure. "
+            raise ReDataException("Article has the wrong structure. "
                                    "There is text in front of the article.")
         if find_re_author[0]["pos"][1] != len(article_text):
-            raise ReDatenException("Article has the wrong structure. "
+            raise ReDataException("Article has the wrong structure. "
                                    "There is text after the article.")
         re_start = TemplateHandler(find_re_start[0]["text"])
         re_author = TemplateHandler(find_re_author[0]["text"])
@@ -263,12 +263,12 @@ class ReArticle(Mapping):
                 elif keyword in cls.keywords.keys():
                     keyword = cls.keywords[keyword]
                 else:
-                    raise ReDatenException("REDaten has wrong key word. --> {}"
-                                           .format(template_property))
+                    raise ReDataException("REDaten has wrong key word. --> {}"
+                                          .format(template_property))
                 properties_dict.update({keyword: template_property["value"]})
             else:
-                raise ReDatenException("REDaten has property without a key word. --> {}"
-                                       .format(template_property))
+                raise ReDataException("REDaten has property without a key word. --> {}"
+                                      .format(template_property))
         return properties_dict
 
     def _get_pre_text(self):
@@ -313,11 +313,11 @@ class RePage(Sequence):
             re_abschnitt_pos = template_finder.get_positions(RE_ABSCHNITT)
             re_author_pos = template_finder.get_positions(RE_AUTHOR)
         except TemplateFinderException:
-            raise ReDatenException("There are corrupt templates.")
+            raise ReDataException("There are corrupt templates.")
         re_starts = re_daten_pos + re_abschnitt_pos
         re_starts.sort(key=lambda x: x["pos"][0])
         if len(re_starts) != len(re_author_pos):
-            raise ReDatenException(
+            raise ReDataException(
                 "The count of start templates doesn't match the count of end templates.")
         # iterate over start and end templates of the articles and create ReArticles of them
         last_handled_char = 0
@@ -368,11 +368,11 @@ class RePage(Sequence):
                 try:
                     self.page.save(summary=reason, botflag=True)
                 except pywikibot.exceptions.LockedPage:
-                    raise ReDatenException("Page {} is locked, it can't be saved."
-                                           .format(self.page.title))
+                    raise ReDataException("Page {} is locked, it can't be saved."
+                                          .format(self.page.title))
             else:
-                raise ReDatenException("Page {} is protected for normal users, it can't be saved."
-                                       .format(self.page.title))
+                raise ReDataException("Page {} is protected for normal users, it can't be saved."
+                                      .format(self.page.title))
 
     def append(self, new_article: ReArticle):
         if isinstance(new_article, ReArticle):
@@ -405,7 +405,7 @@ _REGEX_MAPPING = {ReVolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(
                   ReVolumeType.REGISTER: re.compile(r"^R$")}
 
 
-class ReVolume():
+class ReVolume:
     def __init__(self, name: str, year: Union[str, int], start: str = None, end: str = None):
         self._name = name
         self._year = str(year)
@@ -437,7 +437,7 @@ class ReVolume():
         for re_volume_type in _REGEX_MAPPING:
             if _REGEX_MAPPING[re_volume_type].match(self.name):
                 return re_volume_type
-        raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
+        raise ReDataException("Name of Volume {} is malformed.".format(self.name))
 
 
 class ReVolumes(Mapping):

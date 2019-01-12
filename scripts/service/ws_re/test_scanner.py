@@ -10,7 +10,7 @@ from testfixtures import LogCapture
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.scanner_tasks import ReScannerTask
 from tools.petscan import PetScan
-from scripts.service.ws_re.data_types import RePage, ReDatenException
+from scripts.service.ws_re.data_types import RePage, ReDataException
 from tools.test_bots import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 
 
@@ -172,7 +172,7 @@ class TestReScanner(TestCase):
     def test_lemma_raise_exception(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [':RE:Lemma1']
-        self.re_page_mock.side_effect = ReDatenException
+        self.re_page_mock.side_effect = ReDataException
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
                 log_catcher.clear()
@@ -184,7 +184,7 @@ class TestReScanner(TestCase):
     def test_lemma_raise_exception_second_not(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [':RE:Lemma1', ':RE:Lemma2']
-        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT]
+        self.re_page_mock.side_effect = [ReDataException, mock.DEFAULT]
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
                 log_catcher.clear()
@@ -272,7 +272,7 @@ class TestReScanner(TestCase):
     def test_save_going_wrong(self):
         self._mock_surroundings()
         def side_effect(*args, **kwargs):
-            raise ReDatenException
+            raise ReDataException
         save_mock = mock.patch("scripts.service.ws_re.scanner.RePage.save",
                     new_callable=mock.Mock()).start()
         type(self.re_page_mock).save = save_mock.start()
@@ -296,7 +296,7 @@ class TestReScanner(TestCase):
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [':RE:Lemma1', ':RE:Lemma2']
-        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
+        self.re_page_mock.side_effect = [ReDataException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
         with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             bot.tasks = [self.WAITTask]
             bot.run()

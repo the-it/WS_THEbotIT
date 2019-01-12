@@ -4,7 +4,7 @@ from unittest import TestCase, mock, skip
 import pywikibot
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, ReVolume, ReVolumeType, ReVolumes
+from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDataException, ReVolume, ReVolumeType, ReVolumes
 
 article_template = """{{REDaten
 |BAND=
@@ -100,7 +100,7 @@ class TestReArticle(TestCase):
         self.assertEqual(article.article_type, "REAbschnitt")
 
     def test_wrong_article_type(self):
-        with self.assertRaisesRegex(ReDatenException, "ReStuff is not a permitted article type."):
+        with self.assertRaisesRegex(ReDataException, "ReStuff is not a permitted article type."):
             ReArticle(article_type="ReStuff")
 
     def test_set_text(self):
@@ -111,7 +111,7 @@ class TestReArticle(TestCase):
         self.assertEqual(article.text, "blub")
 
     def test_wrong_type_text(self):
-        with self.assertRaisesRegex(ReDatenException, "Property text must be a string."):
+        with self.assertRaisesRegex(ReDataException, "Property text must be a string."):
             ReArticle(text=1)
 
     def test_set_author(self):
@@ -122,7 +122,7 @@ class TestReArticle(TestCase):
         self.assertEqual(article.author, ("blub", "II,2"))
 
     def test_wrong_type_author(self):
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             ReArticle(author=1)
 
     def test_properties_access(self):
@@ -153,7 +153,7 @@ class TestReArticle(TestCase):
         self.assertEqual(article["NACHTRAG"].value_to_string(), "ON")
 
     def test_properties_exception(self):
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             ReArticle(re_daten_properties={"BAND": 1})
 
     def test_simple_article(self):
@@ -178,7 +178,7 @@ class TestReArticle(TestCase):
     def test_from_text_wrong_keywords(self):
         article_text = "{{REDaten|WHATEVER=I}}" \
                        "\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException,
+        with self.assertRaisesRegex(ReDataException,
                                     "REDaten has wrong key word. --> {.*?}"):
             ReArticle.from_text(article_text)
 
@@ -207,37 +207,37 @@ class TestReArticle(TestCase):
 
     def test_from_text_wrong_property_in_REDaten(self):
         article_text = "{{REDaten\n|III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException,
+        with self.assertRaisesRegex(ReDataException,
                                     "REDaten has property without a key word. --> {.*?}"):
             ReArticle.from_text(article_text)
 
     def test_from_text_two_REDaten_templates(self):
         article_text = "{{REDaten}}{{REDaten}}\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+        with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
                                                       "There must one start template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_no_REDaten_templates(self):
         article_text = "\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+        with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
                                                       "There must one start template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_two_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n{{REAutor|Some Author.}}{{REAutor}}"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+        with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
                                                       "There must one stop template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_no_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
+        with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
                                                       "There must one stop template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_wrong_order_of_templates(self):
         article_text = "{{REAutor}}{{REDaten}}\ntext"
-        with self.assertRaisesRegex(ReDatenException,
+        with self.assertRaisesRegex(ReDataException,
                                     "Article has the wrong structure. Wrong order of templates."):
             ReArticle.from_text(article_text)
 
@@ -252,14 +252,14 @@ class TestReArticle(TestCase):
 
     def test_from_text_text_in_front_of_article(self):
         article_text = "text{{REDaten}}text{{REAutor}}"
-        with self.assertRaisesRegex(ReDatenException,
+        with self.assertRaisesRegex(ReDataException,
                                     "Article has the wrong structure. "
                                     "There is text in front of the article."):
             ReArticle.from_text(article_text)
 
     def test_from_text_text_after_article(self):
         article_text = "{{REDaten}}text{{REAutor}}text"
-        with self.assertRaisesRegex(ReDatenException,
+        with self.assertRaisesRegex(ReDataException,
                                     "Article has the wrong structure. "
                                     "There is text after the article."):
             ReArticle.from_text(article_text)
@@ -424,21 +424,21 @@ class TestRePage(TestCase):
     def test_wrong_structure_too_much_REAutor(self):
         self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}" \
                                       "\ntext1\n{{REAutor|Autor1.}}"
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             RePage(self.page_mock)
 
     def test_wrong_structure_order_of_templates_not_correct(self):
         self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REDaten}}\n{{REAutor|Autor0.}}" \
                                       "\ntext1\n{{REAutor|Autor1.}}"
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             RePage(self.page_mock)
 
     def test_wrong_structure_corrupt_template(self):
         self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor1."
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             RePage(self.page_mock)
         self.text_mock.return_value = "{{REDaten\ntext0\n{{REAutor|Autor1.}}"
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             RePage(self.page_mock)
 
     def test_back_to_str(self):
@@ -529,7 +529,7 @@ class TestRePage(TestCase):
         self.page_mock.save.side_effect = side_effect
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             re_page.save("reason")
 
     def test_page_is_locked_detect_it(self):
@@ -539,7 +539,7 @@ class TestRePage(TestCase):
                                                   'move': ('sysop', 'infinity')}
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             re_page.save("reason")
 
     def test_page_no_lock(self):
@@ -601,7 +601,7 @@ class TestReVolume(TestCase):
         compare(ReVolumeType.SUPPLEMENTS, volume.type)
         volume = ReVolume("R", "1900", "Aal", "Bethel")
         compare(ReVolumeType.REGISTER, volume.type)
-        with self.assertRaises(ReDatenException):
+        with self.assertRaises(ReDataException):
             volume = ReVolume("R I", "1900", "Aal", "Bethel").type
 
 
