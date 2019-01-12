@@ -3,7 +3,7 @@ from collections.abc import Mapping, Sequence
 from enum import Enum
 from pathlib import Path
 import re
-from typing import Union, Generator, Tuple
+from typing import Union, Generator, Tuple, Dict
 
 import pywikibot
 import yaml
@@ -490,3 +490,32 @@ class ReVolumes(Mapping):
     def all_volumes(self) -> Generator[ReVolume, None, None]:
         for volume_key in self:
             yield self[volume_key]
+
+
+class ReRegisterLemma:
+    def __init__(self,
+                 lemma: str,
+                 previous: str,
+                 next: str,
+                 redirect: bool,
+                 chapters: Sequence):
+        if lemma:
+            self.lemma = lemma
+        else:
+            raise ReDataException("Error init RegisterLemma. Lemma missing")
+        self.previous = previous
+        self.next = next
+        self.redirect = redirect
+        self.chapters = chapters
+
+    @staticmethod
+    def from_dict(lemma_dict: Dict):
+        lemma = lemma_dict["lemma"] if "lemma" in lemma_dict.keys() else ""
+        previous = lemma_dict["previous"] if "previous" in lemma_dict.keys() else ""
+        next = lemma_dict["next"] if "next" in lemma_dict.keys() else ""
+        redirect = lemma_dict["redirect"] if "redirect" in lemma_dict.keys() else False
+        chapters = lemma_dict["chapters"] if "chapters" in lemma_dict.keys() else []
+
+        return ReRegisterLemma(lemma=lemma, previous=previous, next=next,
+                               redirect=redirect, chapters=chapters)
+

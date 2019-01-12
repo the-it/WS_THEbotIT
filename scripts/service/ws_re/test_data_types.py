@@ -1,10 +1,12 @@
+import copy
 from collections.abc import Sequence
 from unittest import TestCase, mock, skip
 
 import pywikibot
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDataException, ReVolume, ReVolumeType, ReVolumes
+from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDataException, \
+    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma
 
 article_template = """{{REDaten
 |BAND=
@@ -214,25 +216,25 @@ class TestReArticle(TestCase):
     def test_from_text_two_REDaten_templates(self):
         article_text = "{{REDaten}}{{REDaten}}\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
-                                                      "There must one start template"):
+                                                     "There must one start template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_no_REDaten_templates(self):
         article_text = "\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
-                                                      "There must one start template"):
+                                                     "There must one start template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_two_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n{{REAutor|Some Author.}}{{REAutor}}"
         with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
-                                                      "There must one stop template"):
+                                                     "There must one stop template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_no_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n"
         with self.assertRaisesRegex(ReDataException, "Article has the wrong structure. "
-                                                      "There must one stop template"):
+                                                     "There must one stop template"):
             ReArticle.from_text(article_text)
 
     def test_from_text_wrong_order_of_templates(self):
@@ -279,9 +281,9 @@ text
         self.assertEqual(text, self.article.to_text())
 
     def test_to_text_changed_properties(self):
-        text = article_template.replace("BAND=", "BAND=II")\
-                               .replace("SPALTE_START=", "SPALTE_START=1000")\
-                               .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
+        text = article_template.replace("BAND=", "BAND=II") \
+            .replace("SPALTE_START=", "SPALTE_START=1000") \
+            .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
         self.article.text = "text"
         self.article.author = "Autor."
         self.article["BAND"].value = "II"
@@ -526,6 +528,7 @@ class TestRePage(TestCase):
 
         def side_effect(summary, botflag):
             raise pywikibot.exceptions.LockedPage(self.page_mock)
+
         self.page_mock.save.side_effect = side_effect
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"
@@ -670,6 +673,23 @@ class TestReVolumes(TestCase):
                 current_type = following_types[0]
                 del following_types[0]
             else:  # pragma: no cover
-                raise TypeError("The types hasn't the right order. This section should never reached")
+                raise TypeError(
+                    "The types hasn't the right order. This section should never reached")
             counter += 1
         compare(84, counter)
+
+
+class TestReRegisterLemma(TestCase):
+    def assert_init_raise_error(self, lemma_dict):
+        with self.assertRaises(ReDataException):
+            ReRegisterLemma.from_dict(lemma_dict)
+
+    def test_from_dict_errors(self):
+        basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                      "redirect": True, "chapters": [1, 2]}
+
+        test_dict = copy.deepcopy(basic_dict)
+        test_dict["lemma"] = ""
+        self.assert_init_raise_error(test_dict)
+        del test_dict["lemma"]
+        self.assert_init_raise_error(test_dict)
