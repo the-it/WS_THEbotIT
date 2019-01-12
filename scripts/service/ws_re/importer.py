@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import re
 import shutil
-from typing import Sequence, Mapping
+from typing import Sequence, Dict
 
 from pywikibot import Site, Page
 import yaml
@@ -23,7 +23,7 @@ class ReImporter(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(year=2019, month=1, day=11, hour=19)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
-        self.authors = {}  # type: Mapping[Mapping[Mapping]]
+        self.authors = {}  # type: Dict[str, Dict[str, Dict[str, str]]]
         self.current_volume = ""
 
     def task(self):
