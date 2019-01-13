@@ -79,6 +79,8 @@ class ReImporter(CanonicalBot):
                 entry["next"] = raw_register[idx + 1]["lemma"]
             new_register.append(entry)
 
+        del raw_register[0]["previous"]
+        del raw_register[-1]["next"]
         return new_register
 
     def _dump_register(self, volume: str, old_register: str):
@@ -204,6 +206,10 @@ class ReImporter(CanonicalBot):
             except ValueError as original:
                 self.logger.error("author: {}, year: {}".format(chapter_dict["author"], year))
                 raise original
+        else:
+            del chapter_dict["author"]
+        if not lemma_dict["redirect"]:
+            del lemma_dict["redirect"]
         lemma_dict["chapters"] = list()
         lemma_dict["chapters"].append(chapter_dict)
         return lemma_dict
