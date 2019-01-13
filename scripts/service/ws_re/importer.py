@@ -155,13 +155,13 @@ class ReImporter(CanonicalBot):
         return lines
 
     @staticmethod
-    def _analyse_first_column(content: str) -> Mapping:
+    def _analyse_first_column(content: str) -> Dict:
         mapping = dict()
         match = re.search(r"\[\[RE:(.*?)\]\]", content)
         mapping["lemma"] = match.group(1)
         return mapping
 
-    def _analyse_second_column(self, content: str) -> Mapping:
+    def _analyse_second_column(self, content: str) -> Dict:
         mapping = dict()
         match = re.search(r"\[\[Spe.*?\|[SR AIXV1234,]*?(\d{1,4})\]\](?:.*?\])?(?:-(\d{1,4}))?",
                           content)
@@ -179,7 +179,7 @@ class ReImporter(CanonicalBot):
             mapping["end"] = mapping["start"]
         return mapping
 
-    def _build_lemma_from_line(self, line: str) -> Mapping:
+    def _build_lemma_from_line(self, line: str) -> Dict:
         splitted_line = self._split_line(line)
         mapping_1 = self._analyse_first_column(splitted_line[0])
         mapping_2 = self._analyse_second_column(splitted_line[1])

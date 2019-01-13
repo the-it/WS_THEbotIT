@@ -1,10 +1,12 @@
+import copy
 from collections.abc import Sequence
 from unittest import TestCase, mock, skip
 
 import pywikibot
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, ReVolume, ReVolumeType, ReVolumes
+from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
+    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma
 
 article_template = """{{REDaten
 |BAND=
@@ -673,3 +675,28 @@ class TestReVolumes(TestCase):
                 raise TypeError("The types hasn't the right order. This section should never reached")
             counter += 1
         compare(84, counter)
+
+
+class TestReRegisterLemma(TestCase):
+    def test_from_dict_errors(self):
+        basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                      "redirect": True, "chapters": [1, 2]}
+
+        for entry in ["lemma", "chapters"]:
+            test_dict = copy.deepcopy(basic_dict)
+            del test_dict[entry]
+            with self.assertRaises(ReDatenException):
+                ReRegisterLemma(test_dict)
+
+        for entry in ["previous", "next", "redirect"]:
+            test_dict = copy.deepcopy(basic_dict)
+            del test_dict[entry]
+            self.assertIsNone(ReRegisterLemma(test_dict)[entry])
+
+        re_register_lemma = ReRegisterLemma(basic_dict)
+        compare("lemma", re_register_lemma["lemma"])
+        compare("previous", re_register_lemma["previous"])
+        compare("next", re_register_lemma["next"])
+        compare(True, re_register_lemma["redirect"])
+        compare([1, 2], re_register_lemma["chapters"])
+        compare(5, len(re_register_lemma))

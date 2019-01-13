@@ -492,30 +492,30 @@ class ReVolumes(Mapping):
             yield self[volume_key]
 
 
-class ReRegisterLemma:
-    def __init__(self,
-                 lemma: str,
-                 previous: str,
-                 next: str,
-                 redirect: bool,
-                 chapters: Sequence):
-        if lemma:
-            self.lemma = lemma
-        else:
-            raise ReDataException("Error init RegisterLemma. Lemma missing")
-        self.previous = previous
-        self.next = next
-        self.redirect = redirect
-        self.chapters = chapters
+class ReRegisterLemma(Mapping):
+    def __init__(self, lemma_dict: Dict[str, Union[str, list]]):
+        self._lemma_dict = lemma_dict
+        if not self.is_valid():
+            raise ReDatenException("Error init RegisterLemma. Key missing in {}"
+                                   .format(self._lemma_dict))
 
-    @staticmethod
-    def from_dict(lemma_dict: Dict):
-        lemma = lemma_dict["lemma"] if "lemma" in lemma_dict.keys() else ""
-        previous = lemma_dict["previous"] if "previous" in lemma_dict.keys() else ""
-        next = lemma_dict["next"] if "next" in lemma_dict.keys() else ""
-        redirect = lemma_dict["redirect"] if "redirect" in lemma_dict.keys() else False
-        chapters = lemma_dict["chapters"] if "chapters" in lemma_dict.keys() else []
+    def __getitem__(self, item):
+        try:
+            return self._lemma_dict[item]
+        except KeyError:
+            return None
 
-        return ReRegisterLemma(lemma=lemma, previous=previous, next=next,
-                               redirect=redirect, chapters=chapters)
+    def __iter__(self):
+        return iter(self._lemma_dict)
 
+    def __len__(self):
+        return len(self._lemma_dict)
+
+    def keys(self):
+        return self._lemma_dict.keys()
+
+    def is_valid(self) -> bool:
+        if "lemma" not in self.keys() \
+                or "chapters" not in self.keys():
+            return False
+        return True
