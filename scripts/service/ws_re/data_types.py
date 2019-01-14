@@ -451,7 +451,10 @@ class ReVolumes(Mapping):
         self._volume_mapping = _volume_mapping
 
     def __getitem__(self, item: str) -> ReVolume:
-        return self._volume_mapping[item]
+        try:
+            return self._volume_mapping[item]
+        except ValueError:
+            raise ReDatenException("Register {} doesn't exists".format(item))
 
     def __len__(self) -> int:
         return len(self._volume_mapping.keys())
@@ -493,8 +496,9 @@ class ReVolumes(Mapping):
 
 
 class ReRegisterLemma(Mapping):
-    def __init__(self, lemma_dict: Dict[str, Union[str, list]]):
+    def __init__(self, lemma_dict: Dict[str, Union[str, list]], issue: str):
         self._lemma_dict = lemma_dict
+        self.issue = ReVolumes()[issue]
         if not self.is_valid():
             raise ReDatenException("Error init RegisterLemma. Key missing in {}"
                                    .format(self._lemma_dict))
@@ -519,3 +523,14 @@ class ReRegisterLemma(Mapping):
                 or "chapters" not in self.keys():
             return False
         return True
+
+    def get_old_table_row(self) -> str:
+        return ""
+
+    def _get_link(self) -> str:
+        return "[[RE:{lemma}]]{{{{Anker|{lemma}}}}}".format(lemma=self["lemma"])
+
+
+class ReRegisterAuthors:
+    def __init__(self):
+        pass

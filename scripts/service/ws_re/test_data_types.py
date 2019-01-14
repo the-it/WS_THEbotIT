@@ -700,3 +700,9 @@ class TestReRegisterLemma(TestCase):
         compare(True, re_register_lemma["redirect"])
         compare([1, 2], re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
+
+    def test_get_old_row(self):
+        basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                      "redirect": True, "chapters": [1, 2]}
+        re_register_lemma = ReRegisterLemma(basic_dict, "I,1")
+        compare("[[RE:lemma]]{{Anker|lemma}}", re_register_lemma._get_link())

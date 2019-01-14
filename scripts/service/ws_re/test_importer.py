@@ -404,13 +404,16 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
                 self.re_importer._dump_register("III_1", lemma_text)
 
     def test_dump_authors(self):
-        self.re_importer.authors = {"Otto, Walter": {"I,1": "1941", "II,1": ""},
+        self.re_importer.authors = {"Otto, Walter": {"I,1": "1941", "II,1": "", "III,1": "1941"},
                                     "B, A": {"I,1": "1941"},
                                     "C, D": {"I,1": ""}}
         self.re_importer._dump_authors()
         expected = """B, A: B, A
 C, D: C, D
-Otto, Walter: Otto, Walter
+Otto, Walter: 
+    I,1: Otto, Walter_I,1
+    II,1: Otto, Walter_II,1
+    III,1: Otto, Walter_III,1
 """
         with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.yml")), "r") as yml_file:
             compare(expected, yml_file.read())
@@ -420,10 +423,11 @@ Otto, Walter: Otto, Walter
     death: 1941
 C, D:
   '*': {}
-Otto, Walter:
-  I,1:
+Otto, Walter_I,1:
     death: 1941
-  II,1: {}
+Otto, Walter_II,1: {}
+Otto, Walter_III,1:
+    death: 1941
 """
         with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.yml")), "r") as yml_file:
             compare(expected, yml_file.read())
