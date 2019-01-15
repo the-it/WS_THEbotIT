@@ -1,4 +1,6 @@
 import copy
+import os
+import shutil
 from collections.abc import Sequence
 from pathlib import Path
 from unittest import TestCase, mock
@@ -7,10 +9,11 @@ import pywikibot
 from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
-    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor
+    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors
+from tools import path_or_str
 
-register_path_patcher = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
-                                   Path(__file__).parent.joinpath("test_register"))
+patch_register_path = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
+                                 Path(__file__).parent.joinpath("test_register"))
 
 article_template = """{{REDaten
 |BAND=
@@ -34,6 +37,21 @@ article_template = """{{REDaten
 }}
 text
 {{REAutor|Autor.}}"""
+
+def copy_test_data(source: str, destination: str):
+    base_path = Path(__file__).parent
+    shutil.copy(base_path.joinpath("test_data_register").joinpath(source + ".yml"),
+                base_path.joinpath("test_register").joinpath(destination + ".yml"))
+
+
+def clear_test_path():
+    _TEST_FOLDER_PATH = Path(__file__).parent.joinpath("test_register")
+    try:
+        shutil.rmtree(path_or_str(_TEST_FOLDER_PATH))
+    except FileNotFoundError:
+        pass
+    finally:
+        os.mkdir(path_or_str(_TEST_FOLDER_PATH))
 
 
 class TestReProperty(TestCase):
@@ -722,3 +740,15 @@ class TestRegisterAuthor(TestCase):
         register_author = RegisterAuthor("Test Name", {"birth": 1999})
         compare(None, register_author.death)
         compare(1999, register_author.birth)
+
+
+@patch_register_path
+class TestAuthor(TestCase):
+    def setUp(self):
+        clear_test_path()
+
+    def test_load_data(self):
+        copy_test_data("authors", "authors")
+        copy_test_data("authors_mapping", "authors_mapping")
+        authors = RegisterAuthors()
+        authors.get_author_by_mapping("Abel", "I,1")

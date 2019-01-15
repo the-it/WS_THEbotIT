@@ -8,6 +8,7 @@ from typing import Union, Generator, Tuple, Dict
 import pywikibot
 import yaml
 
+from tools import path_or_str
 from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
 
 _REGISTER_PATH = Path(__file__).parent.joinpath("register")
@@ -540,17 +541,31 @@ class RegisterAuthor:
         self._name = name
 
     @property
-    def death(self):
+    def death(self) -> Union[int, None]:
         if "death" in self._dict.keys():
             return self._dict["death"]
         return None
 
     @property
-    def birth(self):
+    def birth(self) -> Union[int, None]:
         if "birth" in self._dict.keys():
             return self._dict["birth"]
         return None
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self._name
+
+
+class RegisterAuthors:
+    def __init__(self):
+        with open(path_or_str(_REGISTER_PATH.joinpath("authors_mapping.yml")), "r") as yml_file:
+            self._mapping = yaml.load(yml_file)
+        self._authors = {}
+        with open(path_or_str(_REGISTER_PATH.joinpath("authors.yml")), "r") as yml_file:
+            yml_dict = yaml.load(yml_file)
+            for author in yml_dict:
+                self._authors[author] = RegisterAuthor(author, yml_dict[author])
+
+    def get_author_by_mapping(self, name: str, issue: str) -> RegisterAuthor:
+        return ""
