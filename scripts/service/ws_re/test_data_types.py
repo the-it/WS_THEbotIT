@@ -686,14 +686,14 @@ class TestReRegisterLemma(TestCase):
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
             with self.assertRaises(ReDatenException):
-                ReRegisterLemma(test_dict)
+                ReRegisterLemma(test_dict, "I,1")
 
         for entry in ["previous", "next", "redirect"]:
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
-            self.assertIsNone(ReRegisterLemma(test_dict)[entry])
+            self.assertIsNone(ReRegisterLemma(test_dict, "I,1")[entry])
 
-        re_register_lemma = ReRegisterLemma(basic_dict)
+        re_register_lemma = ReRegisterLemma(basic_dict, "I,1")
         compare("lemma", re_register_lemma["lemma"])
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])

@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import re
 import shutil
-from typing import Sequence, Dict
+from typing import Sequence, Dict, Tuple
 
 from pywikibot import Site, Page
 import yaml
@@ -102,9 +102,9 @@ class ReImporter(CanonicalBot):
         mapping_dict = {}
         details_dict = {}
         for author in self.authors:
-            mapping_dict[author] = author
-            author_detail = self._create_author_detail(author)
-            details_dict[author] = author_detail
+            details, mapping = self._create_author_detail(author)
+            mapping_dict[author] = mapping
+            details_dict.update(details)
         path = Path(__file__).parent.joinpath(self._register_folder)
         mapping_file = path.joinpath("authors_mapping.yml")
         with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yml_file:
@@ -113,18 +113,42 @@ class ReImporter(CanonicalBot):
         with open(path_or_str(details_file), mode="w", encoding="utf-8") as yml_file:
             yaml.dump(details_dict, yml_file, default_flow_style=False, allow_unicode=True)
 
-    def _create_author_detail(self, author):
+    def _create_author_detail(self, author: str) -> Tuple[Dict, Dict]:
         author_detail = {}
-        author_years = set(self.authors[author].values())
+        author_mapping = {}
+        author_years = self._convert_author(author)
         if len(author_years) == 1:
-            year = author_years.pop()
-            author_detail["*"] = {"death": int(year)} if year else {}
+            year = next(iter(author_years))
+            author_detail = {author: {}}
+            if year:
+                author_detail[author].update({"death": int(year)})
+            author_mapping = author
         else:
-            for register in self.authors[author].keys():
-                death_year = self.authors[author][register]
-                death = {"death": int(death_year)} if death_year else {}
-                author_detail[register] = death
-        return author_detail
+            count = ("year", 0)
+            for year in author_years:
+                if len(author_years[year]) > count[1]:
+                    count = (year, len(author_years[year]))
+            author_detail[author] = {"death": int(count[0])}
+            author_mapping["*"] = author
+            del author_years[count[0]]
+            for year in author_years:
+                for issue in author_years[year]:
+                    extended_author = "{}_{}".format(author, issue)
+                    author_detail[extended_author] = {}
+                    author_mapping[issue] = extended_author
+                    if year:
+                        author_detail[extended_author].update({"death": int(year)})
+        return author_detail, author_mapping
+
+    def _convert_author(self, author: str) -> Dict:
+        new_dict = {}
+        for issue in self.authors[author]:
+            year = self.authors[author][issue]
+            if year in new_dict:
+                new_dict[year].add(issue)
+            else:
+                new_dict[year] = set([issue])
+        return new_dict
 
     def _register_author(self, author: str, death_year: str):
         if author not in self.authors.keys():

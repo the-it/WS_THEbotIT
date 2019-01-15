@@ -524,13 +524,9 @@ class ReRegisterLemma(Mapping):
             return False
         return True
 
-    def get_old_table_row(self) -> str:
+    @staticmethod
+    def get_old_table_row() -> str:
         return ""
 
     def _get_link(self) -> str:
         return "[[RE:{lemma}]]{{{{Anker|{lemma}}}}}".format(lemma=self["lemma"])
-
-
-class ReRegisterAuthors:
-    def __init__(self):
-        pass
