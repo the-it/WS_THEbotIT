@@ -65,26 +65,12 @@ safety: &safety
       . venv/bin/activate
       make safety
 
-pre_code_climate: &pre_code_climate
-  run:
-    name: pre target code climate
-    command: |
-      . venv/bin/activate
-      make code-climate-pre
-
 run_coverage: &run_coverage
   run:
     name: run coverage
     command: |
       . venv/bin/activate
       make coverage
-
-report_code_climate: &report_code_climate
-  run:
-    name: report code climate
-    command: |
-      . venv/bin/activate
-      make code-climate-post
 
 report_codacy: &report_codacy
   run:
@@ -132,9 +118,7 @@ coverage_steps: &coverage_steps
     - checkout
     - <<: *show_python_version
     - <<: *restore_cache
-    - <<: *pre_code_climate
     - <<: *run_coverage
-    - <<: *report_code_climate
     - <<: *report_codacy
     - <<: *report_codecov
 
