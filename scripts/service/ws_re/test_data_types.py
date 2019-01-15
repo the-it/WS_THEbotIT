@@ -1,12 +1,16 @@
 import copy
 from collections.abc import Sequence
-from unittest import TestCase, mock, skip
+from pathlib import Path
+from unittest import TestCase, mock
 
 import pywikibot
 from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
-    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma
+    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor
+
+register_path_patcher = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
+                                   Path(__file__).parent.joinpath("test_register"))
 
 article_template = """{{REDaten
 |BAND=
@@ -706,3 +710,15 @@ class TestReRegisterLemma(TestCase):
                       "redirect": True, "chapters": [1, 2]}
         re_register_lemma = ReRegisterLemma(basic_dict, "I,1")
         compare("[[RE:lemma]]{{Anker|lemma}}", re_register_lemma._get_link())
+
+
+class TestRegisterAuthor(TestCase):
+    def test_author(self):
+        register_author = RegisterAuthor("Test Name", {"death": 1999})
+        compare("Test Name", register_author.name)
+        compare(1999, register_author.death)
+        compare(None, register_author.birth)
+
+        register_author = RegisterAuthor("Test Name", {"birth": 1999})
+        compare(None, register_author.death)
+        compare(1999, register_author.birth)

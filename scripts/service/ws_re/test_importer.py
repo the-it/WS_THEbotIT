@@ -2,7 +2,7 @@ import os
 import shutil
 from collections import OrderedDict
 from pathlib import Path
-from unittest import TestCase
+from unittest import TestCase, mock
 
 from testfixtures import compare, LogCapture
 
@@ -431,4 +431,5 @@ Otto, Walter_IV,1:
 """
         with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.yml")), "r") as yml_file:
             compare(expected, yml_file.read())
+
 

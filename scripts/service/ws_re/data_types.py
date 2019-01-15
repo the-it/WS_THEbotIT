@@ -10,6 +10,8 @@ import yaml
 
 from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
 
+_REGISTER_PATH = Path(__file__).parent.joinpath("register")
+
 
 class ReDatenException(Exception):
     pass
@@ -530,3 +532,25 @@ class ReRegisterLemma(Mapping):
 
     def _get_link(self) -> str:
         return "[[RE:{lemma}]]{{{{Anker|{lemma}}}}}".format(lemma=self["lemma"])
+
+
+class RegisterAuthor:
+    def __init__(self, name: str, author_dict: Dict[str, int]):
+        self._dict = author_dict
+        self._name = name
+
+    @property
+    def death(self):
+        if "death" in self._dict.keys():
+            return self._dict["death"]
+        return None
+
+    @property
+    def birth(self):
+        if "birth" in self._dict.keys():
+            return self._dict["birth"]
+        return None
+
+    @property
+    def name(self):
+        return self._name
