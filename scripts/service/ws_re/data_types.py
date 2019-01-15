@@ -498,10 +498,99 @@ class ReVolumes(Mapping):
             yield self[volume_key]
 
 
+class RegisterAuthor:
+    def __init__(self, name: str, author_dict: Dict[str, int]):
+        self._dict = author_dict
+        if "_" in name:
+            name = name.split("_")[0]
+        self._name = name
+
+    @property
+    def death(self) -> Union[int, None]:
+        if "death" in self._dict.keys():
+            return self._dict["death"]
+        return None
+
+    @property
+    def birth(self) -> Union[int, None]:
+        if "birth" in self._dict.keys():
+            return self._dict["birth"]
+        return None
+
+    @property
+    def name(self) -> str:
+        return self._name
+
+
+class RegisterAuthors:
+    def __init__(self):
+        with open(path_or_str(_REGISTER_PATH.joinpath("authors_mapping.yml")), "r") as yml_file:
+            self._mapping = yaml.safe_load(yml_file)
+        self._authors = {}
+        with open(path_or_str(_REGISTER_PATH.joinpath("authors.yml")), "r") as yml_file:
+            yml_dict = yaml.safe_load(yml_file)
+            for author in yml_dict:
+                self._authors[author] = RegisterAuthor(author, yml_dict[author])
+
+    def get_author_by_mapping(self, name: str, issue: str) -> Union[RegisterAuthor, None]:
+        author = None
+        try:
+            mapping = self._mapping[name]
+            if isinstance(mapping, dict):
+                try:
+                    mapping = mapping[issue]
+                except KeyError:
+                    mapping = mapping["*"]
+            author = self.get_author(mapping)
+        except KeyError:
+            pass
+        return author
+
+    def get_author(self, mapping: str):
+        return self._authors[mapping]
+
+
+class LemmaChapter:
+    def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
+        self._dict = chapter_dict
+
+    def is_valid(self) -> bool:
+        try:
+            if "start" in self._dict and "end" in self._dict:
+                return True
+        except (KeyError, TypeError):
+            pass
+        return False
+
+    @property
+    def start(self) -> int:
+        return self._dict["start"]
+
+    @property
+    def end(self) -> int:
+        return self._dict["end"]
+
+    @property
+    def name(self) -> Union[str, None]:
+        if "author" in self._dict.keys():
+            return self._dict["author"]
+        return None
+
+
 class ReRegisterLemma(Mapping):
-    def __init__(self, lemma_dict: Dict[str, Union[str, list]], issue: str):
+    def __init__(self,
+                 lemma_dict: Dict[str, Union[str, list]],
+                 issue: str,
+                 authors: RegisterAuthors):
         self._lemma_dict = lemma_dict
-        self.issue = ReVolumes()[issue]
+        self._authors = authors
+        self._issue = ReVolumes()[issue]
+        self._chapters = []
+        try:
+            for chapter in self._lemma_dict["chapters"]:
+                self._chapters.append(LemmaChapter(chapter))
+        except KeyError:
+            pass
         if not self.is_valid():
             raise ReDatenException("Error init RegisterLemma. Key missing in {}"
                                    .format(self._lemma_dict))
@@ -525,47 +614,16 @@ class ReRegisterLemma(Mapping):
         if "lemma" not in self.keys() \
                 or "chapters" not in self.keys():
             return False
+        if len(self._chapters) == 0:
+            return False
+        for chapter in self._chapters:
+            if not chapter.is_valid():
+                return False
         return True
 
     @staticmethod
-    def get_old_table_row() -> str:
+    def get_table_row() -> str:
         return ""
 
     def _get_link(self) -> str:
         return "[[RE:{lemma}]]{{{{Anker|{lemma}}}}}".format(lemma=self["lemma"])
-
-
-class RegisterAuthor:
-    def __init__(self, name: str, author_dict: Dict[str, int]):
-        self._dict = author_dict
-        self._name = name
-
-    @property
-    def death(self) -> Union[int, None]:
-        if "death" in self._dict.keys():
-            return self._dict["death"]
-        return None
-
-    @property
-    def birth(self) -> Union[int, None]:
-        if "birth" in self._dict.keys():
-            return self._dict["birth"]
-        return None
-
-    @property
-    def name(self) -> str:
-        return self._name
-
-
-class RegisterAuthors:
-    def __init__(self):
-        with open(path_or_str(_REGISTER_PATH.joinpath("authors_mapping.yml")), "r") as yml_file:
-            self._mapping = yaml.load(yml_file)
-        self._authors = {}
-        with open(path_or_str(_REGISTER_PATH.joinpath("authors.yml")), "r") as yml_file:
-            yml_dict = yaml.load(yml_file)
-            for author in yml_dict:
-                self._authors[author] = RegisterAuthor(author, yml_dict[author])
-
-    def get_author_by_mapping(self, name: str, issue: str) -> RegisterAuthor:
-        return ""

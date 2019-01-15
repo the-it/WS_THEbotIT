@@ -698,35 +698,44 @@ class TestReVolumes(TestCase):
             counter += 1
         compare(84, counter)
 
-
+@patch_register_path
 class TestReRegisterLemma(TestCase):
+    def setUp(self):
+        copy_test_data("authors", "authors")
+        copy_test_data("authors_mapping", "authors_mapping")
+        self.authors = RegisterAuthors()
+
     def test_from_dict_errors(self):
         basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                      "redirect": True, "chapters": [1, 2]}
+                      "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                     {"start": 1, "end": 2, "author": "Abbott"}]}
 
         for entry in ["lemma", "chapters"]:
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
             with self.assertRaises(ReDatenException):
-                ReRegisterLemma(test_dict, "I,1")
+                ReRegisterLemma(test_dict, "I,1", self.authors)
 
         for entry in ["previous", "next", "redirect"]:
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
-            self.assertIsNone(ReRegisterLemma(test_dict, "I,1")[entry])
+            self.assertIsNone(ReRegisterLemma(test_dict, "I,1", self.authors)[entry])
 
-        re_register_lemma = ReRegisterLemma(basic_dict, "I,1")
+        re_register_lemma = ReRegisterLemma(basic_dict, "I,1", self.authors)
         compare("lemma", re_register_lemma["lemma"])
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])
         compare(True, re_register_lemma["redirect"])
-        compare([1, 2], re_register_lemma["chapters"])
+        compare([{"start": 1, "end": 1, "author": "Abel"},
+                 {"start": 1, "end": 2, "author": "Abbott"}],
+                re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
 
     def test_get_old_row(self):
         basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                      "redirect": True, "chapters": [1, 2]}
-        re_register_lemma = ReRegisterLemma(basic_dict, "I,1")
+                      "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                     {"start": 1, "end": 2, "author": "Abbott"}]}
+        re_register_lemma = ReRegisterLemma(basic_dict, "I,1", self.authors)
         compare("[[RE:lemma]]{{Anker|lemma}}", re_register_lemma._get_link())
 
 
@@ -743,7 +752,7 @@ class TestRegisterAuthor(TestCase):
 
 
 @patch_register_path
-class TestAuthor(TestCase):
+class TestRegisterAuthors(TestCase):
     def setUp(self):
         clear_test_path()
 
@@ -751,4 +760,13 @@ class TestAuthor(TestCase):
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
         authors = RegisterAuthors()
-        authors.get_author_by_mapping("Abel", "I,1")
+        author = authors.get_author_by_mapping("Abbott", "I,1")
+        compare("Abbott", author.name)
+        compare(1988, author.death)
+        author = authors.get_author_by_mapping("Abel", "I,1")
+        compare("Abel", author.name)
+        compare(1998, author.death)
+        author = authors.get_author_by_mapping("Abel", "XVI,1")
+        compare("Abel", author.name)
+        compare(1987, author.death)
+        compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
