@@ -628,4 +628,23 @@ class ReRegisterLemma(Mapping):
         return ""
 
     def _get_link(self) -> str:
-        return "[[RE:{lemma}]]{{{{Anker|{lemma}}}}}".format(lemma=self["lemma"])
+        return "[[RE:{lemma}|{{{{Anker|{lemma}}}}}]]".format(lemma=self["lemma"])
+
+    def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
+        start_page_scan = lemma_chapter.start
+        if start_page_scan % 2 == 0:
+            start_page_scan -= 1
+        pages_str = "[[Special:Filepath/Pauly-Wissowa_{issue},_{start_page_scan:04d}.jpg|" \
+                    "{issue}, {start_page}]]"\
+            .format(issue=self._issue.name,
+                    start_page=lemma_chapter.start,
+                    start_page_scan=start_page_scan)
+        if lemma_chapter.start != lemma_chapter.end:
+            pages_str += "-{}".format(lemma_chapter.end)
+        return pages_str
+
+    def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
+        return self._authors.get_author_by_mapping(lemma_chapter.name, self._issue.name).name
+
+    def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
+        return str(self._authors.get_author_by_mapping(lemma_chapter.name, self._issue.name).death)

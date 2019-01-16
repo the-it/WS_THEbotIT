@@ -9,7 +9,8 @@ import pywikibot
 from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
-    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors
+    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors, \
+    LemmaChapter
 from tools import path_or_str
 
 # patch_register_path = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
@@ -736,12 +737,35 @@ class TestReRegisterLemma(TestCase):
                 re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
 
-    def test_get_old_row(self):
-        basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                      "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
-                                                     {"start": 1, "end": 2, "author": "Abbott"}]}
-        re_register_lemma = ReRegisterLemma(basic_dict, "I,1", self.authors)
-        compare("[[RE:lemma]]{{Anker|lemma}}", re_register_lemma._get_link())
+    basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                  "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                 {"start": 1, "end": 2, "author": "Abbott"}]}
+
+    def test_get_link(self):
+        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
+        compare("[[RE:lemma|{{Anker|lemma}}]]", re_register_lemma._get_link())
+
+    def test_get_pages(self):
+        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]",
+                re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|I,1, 18]]",
+                re_register_lemma._get_pages(LemmaChapter({"start": 18, "end": 18, "author": "Abel"})))
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|I,1, 198]]-200",
+                re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
+
+    def test_get_author(self):
+        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
+        compare("Abert", re_register_lemma._get_author_str(
+            LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
+        compare("1927", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
+
+        compare("1998", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "Abel"})))
+        re_register_lemma = ReRegisterLemma(self.basic_dict, "XVI,1", self.authors)
+        compare("1987", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "Abel"})))
 
 
 class TestRegisterAuthor(TestCase):

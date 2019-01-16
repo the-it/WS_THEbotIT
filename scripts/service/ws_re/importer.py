@@ -26,7 +26,7 @@ class ReImporter(CanonicalBot):
         self.authors = {}  # type: Dict[str, Dict[str, Dict[str, str]]]
         self.current_volume = ""
 
-    def task(self):
+    def task(self):  # pragma: no cover
         re_volumes = ReVolumes()
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
