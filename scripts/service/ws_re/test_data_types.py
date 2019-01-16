@@ -12,8 +12,12 @@ from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDa
     ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors
 from tools import path_or_str
 
-patch_register_path = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
-                                 Path(__file__).parent.joinpath("test_register"))
+# patch_register_path = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
+#                                  Path(__file__).parent.joinpath("test_register"))
+
+_TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
+
+RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
 
 article_template = """{{REDaten
 |BAND=
@@ -40,8 +44,8 @@ text
 
 def copy_test_data(source: str, destination: str):
     base_path = Path(__file__).parent
-    shutil.copy(base_path.joinpath("test_data_register").joinpath(source + ".yml"),
-                base_path.joinpath("test_register").joinpath(destination + ".yml"))
+    shutil.copy(str(base_path.joinpath("test_data_register").joinpath(source + ".yml")),
+                str(base_path.joinpath("test_register").joinpath(destination + ".yml")))
 
 
 def clear_test_path():
@@ -698,9 +702,10 @@ class TestReVolumes(TestCase):
             counter += 1
         compare(84, counter)
 
-@patch_register_path
+
 class TestReRegisterLemma(TestCase):
     def setUp(self):
+        clear_test_path()
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
         self.authors = RegisterAuthors()
@@ -751,14 +756,15 @@ class TestRegisterAuthor(TestCase):
         compare(1999, register_author.birth)
 
 
-@patch_register_path
 class TestRegisterAuthors(TestCase):
     def setUp(self):
         clear_test_path()
-
-    def test_load_data(self):
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
+
+    def test_load_data(self):
+
+        # RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
         authors = RegisterAuthors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
         compare("Abbott", author.name)

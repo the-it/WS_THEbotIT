@@ -523,12 +523,14 @@ class RegisterAuthor:
 
 
 class RegisterAuthors:
+    _REGISTER_PATH = _REGISTER_PATH
+
     def __init__(self):
-        with open(path_or_str(_REGISTER_PATH.joinpath("authors_mapping.yml")), "r") as yml_file:
-            self._mapping = yaml.safe_load(yml_file)
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.yml")), "r") as yml:
+            self._mapping = yaml.safe_load(yml)
         self._authors = {}
-        with open(path_or_str(_REGISTER_PATH.joinpath("authors.yml")), "r") as yml_file:
-            yml_dict = yaml.safe_load(yml_file)
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.yml")), "r") as yml:
+            yml_dict = yaml.safe_load(yml)
             for author in yml_dict:
                 self._authors[author] = RegisterAuthor(author, yml_dict[author])
 
@@ -614,7 +616,7 @@ class ReRegisterLemma(Mapping):
         if "lemma" not in self.keys() \
                 or "chapters" not in self.keys():
             return False
-        if len(self._chapters) == 0:
+        if not self._chapters:
             return False
         for chapter in self._chapters:
             if not chapter.is_valid():
