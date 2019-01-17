@@ -703,6 +703,23 @@ class TestReVolumes(TestCase):
             counter += 1
         compare(84, counter)
 
+    def test_get(self):
+        with self.assertRaises(ReDatenException):
+            test = self.re_volumes["tada"]
+        with self.assertRaises(ReDatenException):
+            test = self.re_volumes[1]
+        compare("I,1", self.re_volumes["I,1"].name)
+
+
+class TestLemmaChapter(TestCase):
+    def test_error_in_is_valid(self):
+        lemma_chapter = LemmaChapter(1)
+        compare(False, lemma_chapter.is_valid())
+
+    def test_no_author(self):
+        lemma_chapter = LemmaChapter({"start": 1, "end": 2})
+        compare(None, lemma_chapter.author)
+
 
 class TestReRegisterLemma(TestCase):
     def setUp(self):
@@ -766,6 +783,14 @@ class TestReRegisterLemma(TestCase):
         re_register_lemma = ReRegisterLemma(self.basic_dict, "XVI,1", self.authors)
         compare("1987", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "Abel"})))
+
+    def test_is_valid(self):
+        no_chapter_dict = {"lemma": "lemma", "chapters": []}
+        with self.assertRaises(ReDatenException):
+            re_register_lemma = ReRegisterLemma(no_chapter_dict, "I,1", self.authors)
+        no_chapter_dict = {"lemma": "lemma", "chapters": [{"start": 1}]}
+        with self.assertRaises(ReDatenException):
+            re_register_lemma = ReRegisterLemma(no_chapter_dict, "I,1", self.authors)
 
 
 class TestRegisterAuthor(TestCase):

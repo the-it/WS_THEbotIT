@@ -456,7 +456,7 @@ class ReVolumes(Mapping):
     def __getitem__(self, item: str) -> ReVolume:
         try:
             return self._volume_mapping[item]
-        except ValueError:
+        except KeyError:
             raise ReDatenException("Register {} doesn't exists".format(item))
 
     def __len__(self) -> int:
@@ -560,7 +560,7 @@ class LemmaChapter:
         try:
             if "start" in self._dict and "end" in self._dict:
                 return True
-        except (KeyError, TypeError):
+        except TypeError:
             pass
         return False
 
@@ -573,7 +573,7 @@ class LemmaChapter:
         return self._dict["end"]
 
     @property
-    def name(self) -> Union[str, None]:
+    def author(self) -> Union[str, None]:
         if "author" in self._dict.keys():
             return self._dict["author"]
         return None
@@ -644,7 +644,8 @@ class ReRegisterLemma(Mapping):
         return pages_str
 
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
-        return self._authors.get_author_by_mapping(lemma_chapter.name, self._issue.name).name
+        return self._authors.get_author_by_mapping(lemma_chapter.author, self._issue.name).name
 
     def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
-        return str(self._authors.get_author_by_mapping(lemma_chapter.name, self._issue.name).death)
+        return str(self._authors.get_author_by_mapping(lemma_chapter.author,
+                                                       self._issue.name).death)

@@ -16,8 +16,6 @@ class TestReImporter(TestCase):
     def _set_up_test_folder(self):
         try:
             shutil.rmtree(path_or_str(self._TEST_FOLDER_PATH))
-        except FileNotFoundError:
-            pass
         finally:
             os.mkdir(path_or_str(self._TEST_FOLDER_PATH))
 
