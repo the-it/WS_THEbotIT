@@ -792,6 +792,31 @@ class TestReRegisterLemma(TestCase):
         with self.assertRaises(ReDatenException):
             re_register_lemma = ReRegisterLemma(no_chapter_dict, "I,1", self.authors)
 
+    def test_get_row(self):
+        one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                         "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
+        re_register_lemma = ReRegisterLemma(one_line_dict, "I,1", self.authors)
+        expected_row = """|-
+|[[RE:lemma|{{Anker|lemma}}]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
+|Abel
+|1998"""
+        compare(expected_row, re_register_lemma.get_table_row())
+        two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                         "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                         {"start": 1, "end": 4, "author": "Abbott"}]}
+        re_register_lemma = ReRegisterLemma(two_line_dict, "I,1", self.authors)
+        expected_row = """|-
+|rowspan=2|[[RE:lemma|{{Anker|lemma}}]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
+|Abel
+|1998
+|-
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
+|Abbott
+|1988"""
+        compare(expected_row, re_register_lemma.get_table_row())
+
 
 class TestRegisterAuthor(TestCase):
     def test_author(self):

@@ -623,9 +623,20 @@ class ReRegisterLemma(Mapping):
                 return False
         return True
 
-    @staticmethod
-    def get_table_row() -> str:
-        return ""
+    def get_table_row(self) -> str:
+        row_string = ["|-"]
+        if len(self._chapters) > 1:
+            row_string.append("rowspan={}|{}".format(len(self._chapters), self._get_link()))
+        else:
+            row_string.append(self._get_link())
+        for chapter in self._chapters:
+            row_string.append(self._get_pages(chapter))
+            row_string.append(self._get_author_str(chapter))
+            row_string.append(self._get_death_year(chapter))
+            row_string.append("-")
+        # remove the last entry again because the row separator only needed between rows
+        row_string.pop(-1)
+        return "\n|".join(row_string)
 
     def _get_link(self) -> str:
         return "[[RE:{lemma}|{{{{Anker|{lemma}}}}}]]".format(lemma=self["lemma"])
