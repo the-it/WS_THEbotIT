@@ -3,20 +3,17 @@ import os
 import shutil
 from collections.abc import Sequence
 from pathlib import Path
-from unittest import TestCase, mock
+from unittest import TestCase, mock, skipUnless, skip
 
 import pywikibot
 from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
     ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors, \
-    LemmaChapter, ReRegister
-from tools import path_or_str
+    LemmaChapter, ReRegister, _REGISTER_PATH
+from tools import path_or_str, INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
-
-RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
-ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
 article_template = """{{REDaten
 |BAND=
@@ -833,10 +830,10 @@ class TestRegisterAuthors(TestCase):
         clear_test_path()
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
+        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
+        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
     def test_load_data(self):
-
-        # RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
         authors = RegisterAuthors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
         compare("Abbott", author.name)
@@ -855,6 +852,8 @@ class TestReRegister(TestCase):
         clear_test_path()
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
+        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
+        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
     def test_init(self):
         copy_test_data("I_1_base", "I_1")
@@ -883,3 +882,12 @@ class TestReRegister(TestCase):
         expected_footer = """[[Kategorie:RE:Register|!]]
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
         compare(expected_footer, register.get_footer())
+
+    #@skipUnless(INTEGRATION_TEST, "Execute only in integration test.")
+    @skip("activate later")
+    def test_init_all_registers(self):
+        RegisterAuthors._REGISTER_PATH = _REGISTER_PATH
+        ReRegister._REGISTER_PATH = _REGISTER_PATH
+        authors = RegisterAuthors()
+        for volume in ReVolumes().all_volumes:
+            ReRegister(volume, authors)
