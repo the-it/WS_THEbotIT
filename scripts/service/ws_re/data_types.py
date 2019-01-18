@@ -526,7 +526,8 @@ class RegisterAuthors:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self):
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r") as json_file:
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r") \
+                as json_file:
             self._mapping = json.load(json_file)
         self._authors = {}
         with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r") as json_file:
@@ -664,12 +665,26 @@ class ReRegisterLemma(Mapping):
 class ReRegister:
     _REGISTER_PATH = _REGISTER_PATH
 
-    def __init__(self, volume: ReVolume, authors:RegisterAuthors):
+    def __init__(self, volume: ReVolume, authors: RegisterAuthors):
         self._authors = authors
         self._volume = volume
-        with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))), "r")\
-                as json_file:
+        with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))),
+                  "r") as json_file:
             self._dict = json.load(json_file)
         self._lemmas = []
         for lemma in self._dict:
             self._lemmas.append(ReRegisterLemma(lemma, self._volume.name, self._authors))
+
+    def get_table(self):
+        table = ["{|"]
+        for lemma in self._lemmas:
+            table.append(lemma.get_table_row())
+        table.append("|}")
+        return "\n".join(table)
+
+    def get_footer(self):
+        return "[[Kategorie:RE:Register|!]]\n" \
+               "Zahl der Artikel: {count_lemma}, " \
+               "davon [[:Kategorie:RE:Band {volume}" \
+               "|{{{{PAGESINCATEGORY:RE:Band {volume}|pages}}}} in Volltext]]."\
+            .format(count_lemma=len(self._lemmas), volume=self._volume.name)

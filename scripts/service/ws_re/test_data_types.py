@@ -13,9 +13,6 @@ from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDa
     LemmaChapter, ReRegister
 from tools import path_or_str
 
-# patch_register_path = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
-#                                  Path(__file__).parent.joinpath("test_register"))
-
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
 RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
@@ -858,7 +855,31 @@ class TestReRegister(TestCase):
         clear_test_path()
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
-        copy_test_data("I_1_base", "I_1")
 
     def test_init(self):
+        copy_test_data("I_1_base", "I_1")
         ReRegister(ReVolumes()["I,1"], RegisterAuthors())
+
+    def test_get_table(self):
+        copy_test_data("I_1_two_entries", "I_1")
+        register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
+        expected_table = """{|
+|-
+|[[RE:Aal|{{Anker|Aal}}]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
+|Abel
+|1998
+|-
+|[[RE:Aarassos|{{Anker|Aarassos}}]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|I,1, 4]]
+|Abert
+|1927
+|}"""
+        compare(expected_table, register.get_table())
+
+    def test_get_footer(self):
+        copy_test_data("I_1_two_entries", "I_1")
+        register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
+        expected_footer = """[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
+        compare(expected_footer, register.get_footer())
