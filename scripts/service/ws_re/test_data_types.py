@@ -10,7 +10,7 @@ from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
     ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors, \
-    LemmaChapter
+    LemmaChapter, ReRegister
 from tools import path_or_str
 
 # patch_register_path = mock.patch("scripts.service.ws_re.data_types._REGISTER_PATH",
@@ -19,6 +19,7 @@ from tools import path_or_str
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
 RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
+ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
 article_template = """{{REDaten
 |BAND=
@@ -45,8 +46,8 @@ text
 
 def copy_test_data(source: str, destination: str):
     base_path = Path(__file__).parent
-    shutil.copy(str(base_path.joinpath("test_data_register").joinpath(source + ".yml")),
-                str(base_path.joinpath("test_register").joinpath(destination + ".yml")))
+    shutil.copy(str(base_path.joinpath("test_data_register").joinpath(source + ".json")),
+                str(base_path.joinpath("test_register").joinpath(destination + ".json")))
 
 
 def clear_test_path():
@@ -737,14 +738,14 @@ class TestReRegisterLemma(TestCase):
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
             with self.assertRaises(ReDatenException):
-                ReRegisterLemma(test_dict, "I,1", self.authors)
+                ReRegisterLemma(test_dict, ReVolumes()["I,1"], self.authors)
 
         for entry in ["previous", "next", "redirect"]:
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
-            self.assertIsNone(ReRegisterLemma(test_dict, "I,1", self.authors)[entry])
+            self.assertIsNone(ReRegisterLemma(test_dict, ReVolumes()["I,1"], self.authors)[entry])
 
-        re_register_lemma = ReRegisterLemma(basic_dict, "I,1", self.authors)
+        re_register_lemma = ReRegisterLemma(basic_dict, ReVolumes()["I,1"], self.authors)
         compare("lemma", re_register_lemma["lemma"])
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])
@@ -850,3 +851,14 @@ class TestRegisterAuthors(TestCase):
         compare("Abel", author.name)
         compare(1987, author.death)
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
+
+
+class TestReRegister(TestCase):
+    def setUp(self):
+        clear_test_path()
+        copy_test_data("authors", "authors")
+        copy_test_data("authors_mapping", "authors_mapping")
+        copy_test_data("I_1_base", "I_1")
+
+    def test_init(self):
+        ReRegister(ReVolumes()["I,1"], RegisterAuthors())

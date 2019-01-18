@@ -1,3 +1,4 @@
+import json
 from collections import OrderedDict
 from collections.abc import Mapping, Sequence
 from enum import Enum
@@ -6,7 +7,6 @@ import re
 from typing import Union, Generator, Tuple, Dict
 
 import pywikibot
-import yaml
 
 from tools import path_or_str
 from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
@@ -445,9 +445,9 @@ class ReVolume():
 
 class ReVolumes(Mapping):
     def __init__(self):
-        path_to_file = Path(__file__).parent.joinpath("volumes.yaml")
-        with open(str(path_to_file), encoding="utf-8") as yaml_file:
-            _volume_list = yaml.safe_load(yaml_file.read())
+        path_to_file = Path(__file__).parent.joinpath("volumes.json")
+        with open(str(path_to_file), encoding="utf-8") as json_file:
+            _volume_list = json.load(json_file)
         _volume_mapping = OrderedDict()
         for item in _volume_list:
             _volume_mapping[item["name"]] = ReVolume(**item)
@@ -526,13 +526,13 @@ class RegisterAuthors:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self):
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.yml")), "r") as yml:
-            self._mapping = yaml.safe_load(yml)
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r") as json_file:
+            self._mapping = json.load(json_file)
         self._authors = {}
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.yml")), "r") as yml:
-            yml_dict = yaml.safe_load(yml)
-            for author in yml_dict:
-                self._authors[author] = RegisterAuthor(author, yml_dict[author])
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r") as json_file:
+            json_dict = json.load(json_file)
+            for author in json_dict:
+                self._authors[author] = RegisterAuthor(author, json_dict[author])
 
     def get_author_by_mapping(self, name: str, issue: str) -> Union[RegisterAuthor, None]:
         author = None
@@ -582,11 +582,11 @@ class LemmaChapter:
 class ReRegisterLemma(Mapping):
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
-                 issue: str,
+                 volume: str,
                  authors: RegisterAuthors):
         self._lemma_dict = lemma_dict
         self._authors = authors
-        self._issue = ReVolumes()[issue]
+        self._volume = volume
         self._chapters = []
         try:
             for chapter in self._lemma_dict["chapters"]:
@@ -647,7 +647,7 @@ class ReRegisterLemma(Mapping):
             start_page_scan -= 1
         pages_str = "[[Special:Filepath/Pauly-Wissowa_{issue},_{start_page_scan:04d}.jpg|" \
                     "{issue}, {start_page}]]"\
-            .format(issue=self._issue.name,
+            .format(issue=self._volume,
                     start_page=lemma_chapter.start,
                     start_page_scan=start_page_scan)
         if lemma_chapter.start != lemma_chapter.end:
@@ -655,8 +655,21 @@ class ReRegisterLemma(Mapping):
         return pages_str
 
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
-        return self._authors.get_author_by_mapping(lemma_chapter.author, self._issue.name).name
+        return self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).name
 
     def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
-        return str(self._authors.get_author_by_mapping(lemma_chapter.author,
-                                                       self._issue.name).death)
+        return str(self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).death)
+
+
+class ReRegister:
+    _REGISTER_PATH = _REGISTER_PATH
+
+    def __init__(self, volume: ReVolume, authors:RegisterAuthors):
+        self._authors = authors
+        self._volume = volume
+        with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))), "r")\
+                as json_file:
+            self._dict = json.load(json_file)
+        self._lemmas = []
+        for lemma in self._dict:
+            self._lemmas.append(ReRegisterLemma(lemma, self._volume.name, self._authors))
