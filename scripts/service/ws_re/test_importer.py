@@ -201,25 +201,36 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 [[Kategorie:RE:Register|!]]
 Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         self.re_importer._dump_register("I_1", lemma_text)
-        expected = """- lemma: Herodes 14
-  next: Herodes 15
-  chapters:
-  - start: 1
-    end: 158
-    author: Otto, Walter
-- lemma: Herodes 15
-  previous: Herodes 14
-  chapters:
-  - start: 158
-    end: 161
-    author: Otto, Walter
-"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "r") as yml_file:
-            compare(expected, yml_file.read())
+        expected = """[
+  {
+    "lemma": "Herodes 14",
+    "next": "Herodes 15",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 158,
+        "author": "Otto, Walter"
+      }
+    ]
+  },
+  {
+    "lemma": "Herodes 15",
+    "previous": "Herodes 14",
+    "chapters": [
+      {
+        "start": 158,
+        "end": 161,
+        "author": "Otto, Walter"
+      }
+    ]
+  }
+]"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+            compare(expected, json_file.read())
 
     def test_register_already_there(self):
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "w") as yml_file:
-            yml_file.write("test")
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "w") as json_file:
+            json_file.write("test")
         lemma_text = """{|
     |-
     |[[RE:Herodes 14]]{{Anker|Herodes 14}}
@@ -235,21 +246,21 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
     [[Kategorie:RE:Register|!]]
     Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         self.re_importer._dump_register("I_1", lemma_text)
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "r") as yml_file:
-            compare("test", yml_file.read())
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+            compare("test", json_file.read())
 
     def test_make_dir(self):
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "w") as yml_file:
-            yml_file.write("test")
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "w") as json_file:
+            json_file.write("test")
         self.re_importer.timestamp._last_run = True
         with LogCapture():
             self.re_importer.clean_deprecated_register()
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "r") as yml_file:
-            compare("test", yml_file.read())
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+            compare("test", json_file.read())
         self.re_importer.timestamp.last_run = None
         with LogCapture():
             self.re_importer.clean_deprecated_register()
-        self.assertFalse(os.path.exists(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml"))))
+        self.assertFalse(os.path.exists(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json"))))
         self.assertTrue(os.path.exists(path_or_str(self._TEST_FOLDER_PATH)))
         os.removedirs(path_or_str(self._TEST_FOLDER_PATH))
         with LogCapture():
@@ -408,26 +419,32 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         compare({"1941": {"I,1", "III,1"}, "": {"II,1"}, "1942": {"IV,1"}},
                 self.re_importer._convert_author("Otto, Walter"))
         self.re_importer._dump_authors()
-        expected = """B, A: B, A
-C, D: C, D
-Otto, Walter:
-  '*': Otto, Walter
-  II,1: Otto, Walter_II,1
-  IV,1: Otto, Walter_IV,1
-"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.yml")), "r") as yml_file:
-            compare(expected, yml_file.read())
+        expected = """{
+  "B, A": "B, A",
+  "C, D": "C, D",
+  "Otto, Walter": {
+    "*": "Otto, Walter",
+    "II,1": "Otto, Walter_II,1",
+    "IV,1": "Otto, Walter_IV,1"
+  }
+}"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.json")), "r") as json_file:
+            compare(expected, json_file.read())
 
-        expected = """B, A:
-  death: 1941
-C, D: {}
-Otto, Walter:
-  death: 1941
-Otto, Walter_II,1: {}
-Otto, Walter_IV,1:
-  death: 1942
-"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.yml")), "r") as yml_file:
-            compare(expected, yml_file.read())
+        expected = """{
+  "B, A": {
+    "death": 1941
+  },
+  "C, D": {},
+  "Otto, Walter": {
+    "death": 1941
+  },
+  "Otto, Walter_II,1": {},
+  "Otto, Walter_IV,1": {
+    "death": 1942
+  }
+}"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.json")), "r") as json_file:
+            compare(expected, json_file.read())
 
 

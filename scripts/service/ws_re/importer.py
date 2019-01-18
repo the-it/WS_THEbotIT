@@ -1,3 +1,4 @@
+import json
 from collections import OrderedDict
 from datetime import datetime
 import os
@@ -7,8 +8,6 @@ import shutil
 from typing import Sequence, Dict, Tuple
 
 from pywikibot import Site, Page
-import yaml
-import yamlordereddictloader
 
 from scripts.service.ws_re.data_types import ReVolumes
 from tools import path_or_str
@@ -85,16 +84,15 @@ class ReImporter(CanonicalBot):
 
     def _dump_register(self, volume: str, old_register: str):
         file = path_or_str(Path(__file__).parent
-                           .joinpath(self._register_folder).joinpath("{}.yml".format(volume)))
+                           .joinpath(self._register_folder).joinpath("{}.json".format(volume)))
         if not os.path.isfile(file):
             self.logger.info("Dumping Register for {}".format(volume))
             new_register = \
                 self._add_pre_post_register(
                     self._optimize_register(
                         self._build_register(old_register)))
-            with open(file, mode="w", encoding="utf-8") as yml_file:
-                yaml.dump(new_register, yml_file, Dumper=yamlordereddictloader.Dumper,
-                          default_flow_style=False, allow_unicode=True)
+            with open(file, mode="w", encoding="utf-8") as json_file:
+                json.dump(new_register, json_file, indent=2, ensure_ascii=False)
         else:
             self.logger.info("file already there and up to date.")
 
@@ -106,12 +104,12 @@ class ReImporter(CanonicalBot):
             mapping_dict[author] = mapping
             details_dict.update(details)
         path = Path(__file__).parent.joinpath(self._register_folder)
-        mapping_file = path.joinpath("authors_mapping.yml")
-        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yml_file:
-            yaml.dump(mapping_dict, yml_file, default_flow_style=False, allow_unicode=True)
-        details_file = path.joinpath("authors.yml")
-        with open(path_or_str(details_file), mode="w", encoding="utf-8") as yml_file:
-            yaml.dump(details_dict, yml_file, default_flow_style=False, allow_unicode=True)
+        mapping_file = path.joinpath("authors_mapping.json")
+        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as json_file:
+            json.dump(mapping_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
+        details_file = path.joinpath("authors.json")
+        with open(path_or_str(details_file), mode="w", encoding="utf-8") as json_file:
+            json.dump(details_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
 
     def _create_author_detail(self, author: str) -> Tuple[Dict, Dict]:
         author_detail = {}
