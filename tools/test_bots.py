@@ -7,7 +7,7 @@ import time
 from unittest import TestCase, mock, skip
 
 from pywikibot import Page
-from testfixtures import LogCapture
+from testfixtures import LogCapture, compare
 
 from tools.bots import BotException, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
     _DATA_PATH, _get_data_path
@@ -282,6 +282,22 @@ class TestOneTimeBot(TestCase):
             self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])
             self.assertEqual(mock.call().save('Update of Bot MinimalBot', botflag=True),
                              mock_page.mock_calls[2])
+
+    @mock.patch("tools.test_bots.Page", autospec=Page)
+    @mock.patch("tools.test_bots.Page.text", new_callable=mock.PropertyMock)
+    def test_save_if_changed_positive(self, text_mock, page_mock):
+        type(page_mock).text = text_mock
+        text_mock.return_value = "2"
+        self.MinimalBot.save_if_changed(page_mock, "1", "changed")
+        compare(mock.call.save('changed', botflag=True), page_mock.mock_calls[0])
+
+    @mock.patch("tools.test_bots.Page", autospec=Page)
+    @mock.patch("tools.test_bots.Page.text", new_callable=mock.PropertyMock)
+    def test_save_if_changed_negativ(self, text_mock, page_mock):
+        type(page_mock).text = text_mock
+        text_mock.return_value = "1"
+        self.MinimalBot.save_if_changed(page_mock, "1", "changed")
+        compare(0, len(page_mock.mock_calls))
 
     class ExceptionBot(OneTimeBot):
         def task(self):
