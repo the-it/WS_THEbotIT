@@ -20,7 +20,7 @@ class ReImporter(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(year=2019, month=1, day=14, hour=12)
+        self.new_data_model = datetime(year=2019, month=1, day=19, hour=18)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
         self.authors = {}  # type: Dict[str, Dict[str, Dict[str, str]]]
         self.current_volume = ""
