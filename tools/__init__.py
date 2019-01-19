@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from pathlib import Path
 import sys
@@ -28,3 +29,5 @@ if sys.version_info < (3, 6):
 else:
     def path_or_str(path: Path) -> Union[Path, str]:
         return path
+
+INTEGRATION_TEST = "INTEGRATION" in os.environ

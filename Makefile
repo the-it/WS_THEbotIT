@@ -37,7 +37,7 @@ flake8 :
 unittest :
 	echo "########### UNITTEST ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
-	python -m unittest all_tests.py
+	python all_tests.py
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"

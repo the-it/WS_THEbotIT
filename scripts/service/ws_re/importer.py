@@ -1,14 +1,13 @@
+import json
 from collections import OrderedDict
 from datetime import datetime
 import os
 from pathlib import Path
 import re
 import shutil
-from typing import Sequence, Mapping
+from typing import Sequence, Dict, Tuple
 
 from pywikibot import Site, Page
-import yaml
-import yamlordereddictloader
 
 from scripts.service.ws_re.data_types import ReVolumes
 from tools import path_or_str
@@ -21,12 +20,12 @@ class ReImporter(CanonicalBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(year=2019, month=1, day=11, hour=19)
+        self.new_data_model = datetime(year=2019, month=1, day=19, hour=18)
         self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
-        self.authors = {}  # type: Mapping[Mapping[Mapping]]
+        self.authors = {}  # type: Dict[str, Dict[str, Dict[str, str]]]
         self.current_volume = ""
 
-    def task(self):
+    def task(self):  # pragma: no cover
         re_volumes = ReVolumes()
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
@@ -79,20 +78,21 @@ class ReImporter(CanonicalBot):
                 entry["next"] = raw_register[idx + 1]["lemma"]
             new_register.append(entry)
 
+        del raw_register[0]["previous"]
+        del raw_register[-1]["next"]
         return new_register
 
     def _dump_register(self, volume: str, old_register: str):
         file = path_or_str(Path(__file__).parent
-                           .joinpath(self._register_folder).joinpath("{}.yml".format(volume)))
+                           .joinpath(self._register_folder).joinpath("{}.json".format(volume)))
         if not os.path.isfile(file):
             self.logger.info("Dumping Register for {}".format(volume))
             new_register = \
                 self._add_pre_post_register(
                     self._optimize_register(
                         self._build_register(old_register)))
-            with open(file, mode="w", encoding="utf-8") as yml_file:
-                yaml.dump(new_register, yml_file, Dumper=yamlordereddictloader.Dumper,
-                          default_flow_style=False, allow_unicode=True)
+            with open(file, mode="w", encoding="utf-8") as json_file:
+                json.dump(new_register, json_file, indent=2, ensure_ascii=False)
         else:
             self.logger.info("file already there and up to date.")
 
@@ -100,29 +100,53 @@ class ReImporter(CanonicalBot):
         mapping_dict = {}
         details_dict = {}
         for author in self.authors:
-            mapping_dict[author] = author
-            author_detail = self._create_author_detail(author)
-            details_dict[author] = author_detail
+            details, mapping = self._create_author_detail(author)
+            mapping_dict[author] = mapping
+            details_dict.update(details)
         path = Path(__file__).parent.joinpath(self._register_folder)
-        mapping_file = path.joinpath("authors_mapping.yml")
-        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as yml_file:
-            yaml.dump(mapping_dict, yml_file, default_flow_style=False, allow_unicode=True)
-        details_file = path.joinpath("authors.yml")
-        with open(path_or_str(details_file), mode="w", encoding="utf-8") as yml_file:
-            yaml.dump(details_dict, yml_file, default_flow_style=False, allow_unicode=True)
+        mapping_file = path.joinpath("authors_mapping.json")
+        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as json_file:
+            json.dump(mapping_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
+        details_file = path.joinpath("authors.json")
+        with open(path_or_str(details_file), mode="w", encoding="utf-8") as json_file:
+            json.dump(details_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
 
-    def _create_author_detail(self, author):
+    def _create_author_detail(self, author: str) -> Tuple[Dict, Dict]:
         author_detail = {}
-        author_years = set(self.authors[author].values())
+        author_mapping = {}
+        author_years = self._convert_author(author)
         if len(author_years) == 1:
-            year = author_years.pop()
-            author_detail["*"] = {"death": int(year)} if year else {}
+            year = next(iter(author_years))
+            author_detail = {author: {}}
+            if year:
+                author_detail[author].update({"death": int(year)})
+            author_mapping = author
         else:
-            for register in self.authors[author].keys():
-                death_year = self.authors[author][register]
-                death = {"death": int(death_year)} if death_year else {}
-                author_detail[register] = death
-        return author_detail
+            count = ("year", 0)
+            for year in author_years:
+                if len(author_years[year]) > count[1]:
+                    count = (year, len(author_years[year]))
+            author_detail[author] = {"death": int(count[0])}
+            author_mapping["*"] = author
+            del author_years[count[0]]
+            for year in author_years:
+                for issue in author_years[year]:
+                    extended_author = "{}_{}".format(author, issue)
+                    author_detail[extended_author] = {}
+                    author_mapping[issue] = extended_author
+                    if year:
+                        author_detail[extended_author].update({"death": int(year)})
+        return author_detail, author_mapping
+
+    def _convert_author(self, author: str) -> Dict:
+        new_dict = {}
+        for issue in self.authors[author]:
+            year = self.authors[author][issue]
+            if year in new_dict:
+                new_dict[year].add(issue)
+            else:
+                new_dict[year] = set([issue])
+        return new_dict
 
     def _register_author(self, author: str, death_year: str):
         if author not in self.authors.keys():
@@ -155,13 +179,13 @@ class ReImporter(CanonicalBot):
         return lines
 
     @staticmethod
-    def _analyse_first_column(content: str) -> Mapping:
+    def _analyse_first_column(content: str) -> Dict:
         mapping = dict()
         match = re.search(r"\[\[RE:(.*?)\]\]", content)
         mapping["lemma"] = match.group(1)
         return mapping
 
-    def _analyse_second_column(self, content: str) -> Mapping:
+    def _analyse_second_column(self, content: str) -> Dict:
         mapping = dict()
         match = re.search(r"\[\[Spe.*?\|[SR AIXV1234,]*?(\d{1,4})\]\](?:.*?\])?(?:-(\d{1,4}))?",
                           content)
@@ -179,7 +203,7 @@ class ReImporter(CanonicalBot):
             mapping["end"] = mapping["start"]
         return mapping
 
-    def _build_lemma_from_line(self, line: str) -> Mapping:
+    def _build_lemma_from_line(self, line: str) -> Dict:
         splitted_line = self._split_line(line)
         mapping_1 = self._analyse_first_column(splitted_line[0])
         mapping_2 = self._analyse_second_column(splitted_line[1])
@@ -204,6 +228,10 @@ class ReImporter(CanonicalBot):
             except ValueError as original:
                 self.logger.error("author: {}, year: {}".format(chapter_dict["author"], year))
                 raise original
+        else:
+            del chapter_dict["author"]
+        if not lemma_dict["redirect"]:
+            del lemma_dict["redirect"]
         lemma_dict["chapters"] = list()
         lemma_dict["chapters"].append(chapter_dict)
         return lemma_dict

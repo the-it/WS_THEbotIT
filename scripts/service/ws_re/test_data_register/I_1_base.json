@@ -1,0 +1,96 @@
+[
+  {
+    "lemma": "Aal",
+    "next": "Aarassos",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 4,
+        "author": "Oder"
+      }
+    ]
+  },
+  {
+    "lemma": "Aarassos",
+    "previous": "Aal",
+    "next": "Aba 1",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Hirschfeld"
+      }
+    ]
+  },
+  {
+    "lemma": "Aba 1",
+    "previous": "Aarassos",
+    "next": "Aba 2",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Hirschfeld"
+      }
+    ]
+  },
+  {
+    "lemma": "Aba 2",
+    "previous": "Aba 1",
+    "next": "Aba 3",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Toepffer"
+      }
+    ]
+  },
+  {
+    "lemma": "Aba 3",
+    "previous": "Aba 2",
+    "next": "Aba 4",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Toepffer"
+      }
+    ]
+  },
+  {
+    "lemma": "Aba 4",
+    "previous": "Aba 3",
+    "next": "Ababa",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Toepffer"
+      }
+    ]
+  },
+  {
+    "lemma": "Ababa",
+    "previous": "Aba 4",
+    "next": "Abacti magistratus",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Rohden"
+      }
+    ]
+  },
+  {
+    "lemma": "Abacti magistratus",
+    "previous": "Ababa",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Habel"
+      }
+    ]
+  }
+]

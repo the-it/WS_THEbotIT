@@ -2,7 +2,7 @@ import os
 import shutil
 from collections import OrderedDict
 from pathlib import Path
-from unittest import TestCase
+from unittest import TestCase, mock
 
 from testfixtures import compare, LogCapture
 
@@ -16,8 +16,6 @@ class TestReImporter(TestCase):
     def _set_up_test_folder(self):
         try:
             shutil.rmtree(path_or_str(self._TEST_FOLDER_PATH))
-        except FileNotFoundError:
-            pass
         finally:
             os.mkdir(path_or_str(self._TEST_FOLDER_PATH))
 
@@ -133,7 +131,7 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 |Otto, Walter
 |1941"""
         lemma = self.re_importer._build_lemma_from_line(line)
-        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "", "redirect": False,
+        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "",
                           "chapters": list()}
         expected_lemma["chapters"].append(dict({"author": "Otto, Walter", "start": 1, "end": 158}))
         compare(expected_lemma, lemma)
@@ -146,7 +144,7 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         lemma = self.re_importer._build_lemma_from_line(line)
         expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "", "redirect": True,
                           "chapters": list()}
-        expected_lemma["chapters"].append(dict({"author": "", "start": 1, "end": 158}))
+        expected_lemma["chapters"].append(dict({"start": 1, "end": 158}))
         compare(expected_lemma, lemma)
 
     def test_build_strange_line(self):
@@ -155,9 +153,9 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 |?
 |1941"""
         lemma = self.re_importer._build_lemma_from_line(line)
-        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "", "redirect": False,
+        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "",
                           "chapters": list()}
-        expected_lemma["chapters"].append(dict({"author": "", "start": 1, "end": 158}))
+        expected_lemma["chapters"].append(dict({"start": 1, "end": 158}))
         compare(expected_lemma, lemma)
 
     def test_build_register(self):
@@ -177,11 +175,11 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         register = self.re_importer._build_register(text)
         expectation = list()
-        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "", "redirect": False,
+        expected_lemma = {"lemma": "Herodes 14", "next": "", "previous": "",
                           "chapters": list()}
         expected_lemma["chapters"].append(dict({"author": "Otto, Walter", "start": 1, "end": 158}))
         expectation.append(expected_lemma)
-        expected_lemma = {"lemma": "Herodes 15", "next": "", "previous": "", "redirect": False,
+        expected_lemma = {"lemma": "Herodes 15", "next": "", "previous": "",
                           "chapters": list()}
         expected_lemma["chapters"].append(dict({"author": "Otto, Walter", "start": 158, "end": 161}))
         expectation.append(expected_lemma)
@@ -203,29 +201,36 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
 [[Kategorie:RE:Register|!]]
 Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         self.re_importer._dump_register("I_1", lemma_text)
-        expected = """- lemma: Herodes 14
-  previous: ''
-  next: Herodes 15
-  redirect: false
-  chapters:
-  - start: 1
-    end: 158
-    author: Otto, Walter
-- lemma: Herodes 15
-  previous: Herodes 14
-  next: ''
-  redirect: false
-  chapters:
-  - start: 158
-    end: 161
-    author: Otto, Walter
-"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "r") as yml_file:
-            compare(expected, yml_file.read())
+        expected = """[
+  {
+    "lemma": "Herodes 14",
+    "next": "Herodes 15",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 158,
+        "author": "Otto, Walter"
+      }
+    ]
+  },
+  {
+    "lemma": "Herodes 15",
+    "previous": "Herodes 14",
+    "chapters": [
+      {
+        "start": 158,
+        "end": 161,
+        "author": "Otto, Walter"
+      }
+    ]
+  }
+]"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+            compare(expected, json_file.read())
 
     def test_register_already_there(self):
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "w") as yml_file:
-            yml_file.write("test")
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "w") as json_file:
+            json_file.write("test")
         lemma_text = """{|
     |-
     |[[RE:Herodes 14]]{{Anker|Herodes 14}}
@@ -241,21 +246,21 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
     [[Kategorie:RE:Register|!]]
     Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         self.re_importer._dump_register("I_1", lemma_text)
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "r") as yml_file:
-            compare("test", yml_file.read())
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+            compare("test", json_file.read())
 
     def test_make_dir(self):
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "w") as yml_file:
-            yml_file.write("test")
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "w") as json_file:
+            json_file.write("test")
         self.re_importer.timestamp._last_run = True
         with LogCapture():
             self.re_importer.clean_deprecated_register()
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml")), "r") as yml_file:
-            compare("test", yml_file.read())
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+            compare("test", json_file.read())
         self.re_importer.timestamp.last_run = None
         with LogCapture():
             self.re_importer.clean_deprecated_register()
-        self.assertFalse(os.path.exists(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.yml"))))
+        self.assertFalse(os.path.exists(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json"))))
         self.assertTrue(os.path.exists(path_or_str(self._TEST_FOLDER_PATH)))
         os.removedirs(path_or_str(self._TEST_FOLDER_PATH))
         with LogCapture():
@@ -336,10 +341,12 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         compare("", register[2]["previous"])
         register = self.re_importer._add_pre_post_register(register)
         compare("Aquilinus 6", register[0]["next"])
-        compare("", register[0]["previous"])
+        with self.assertRaises(KeyError):
+            item = register[0]["previous"]
         compare("Aquilius", register[1]["next"])
         compare("Aquilinus 5", register[1]["previous"])
-        compare("", register[2]["next"])
+        with self.assertRaises(KeyError):
+            item = register[2]["next"]
         compare("Aquilinus 6", register[2]["previous"])
 
     def test_register_authors(self):
@@ -406,27 +413,38 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
                 self.re_importer._dump_register("III_1", lemma_text)
 
     def test_dump_authors(self):
-        self.re_importer.authors = {"Otto, Walter": {"I,1": "1941", "II,1": ""},
+        self.re_importer.authors = {"Otto, Walter": {"I,1": "1941", "II,1": "", "III,1": "1941", "IV,1": "1942"},
                                     "B, A": {"I,1": "1941"},
                                     "C, D": {"I,1": ""}}
+        compare({"1941": {"I,1", "III,1"}, "": {"II,1"}, "1942": {"IV,1"}},
+                self.re_importer._convert_author("Otto, Walter"))
         self.re_importer._dump_authors()
-        expected = """B, A: B, A
-C, D: C, D
-Otto, Walter: Otto, Walter
-"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.yml")), "r") as yml_file:
-            compare(expected, yml_file.read())
+        expected = """{
+  "B, A": "B, A",
+  "C, D": "C, D",
+  "Otto, Walter": {
+    "*": "Otto, Walter",
+    "II,1": "Otto, Walter_II,1",
+    "IV,1": "Otto, Walter_IV,1"
+  }
+}"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.json")), "r") as json_file:
+            compare(expected, json_file.read())
 
-        expected = """B, A:
-  '*':
-    death: 1941
-C, D:
-  '*': {}
-Otto, Walter:
-  I,1:
-    death: 1941
-  II,1: {}
-"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.yml")), "r") as yml_file:
-            compare(expected, yml_file.read())
+        expected = """{
+  "B, A": {
+    "death": 1941
+  },
+  "C, D": {},
+  "Otto, Walter": {
+    "death": 1941
+  },
+  "Otto, Walter_II,1": {},
+  "Otto, Walter_IV,1": {
+    "death": 1942
+  }
+}"""
+        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.json")), "r") as json_file:
+            compare(expected, json_file.read())
+
 

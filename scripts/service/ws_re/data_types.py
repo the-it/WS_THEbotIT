@@ -1,14 +1,17 @@
+import json
 from collections import OrderedDict
 from collections.abc import Mapping, Sequence
 from enum import Enum
 from pathlib import Path
 import re
-from typing import Union, Generator, Tuple
+from typing import Union, Generator, Tuple, Dict
 
 import pywikibot
-import yaml
 
+from tools import path_or_str
 from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
+
+_REGISTER_PATH = Path(__file__).parent.joinpath("register")
 
 
 class ReDatenException(Exception):
@@ -442,16 +445,19 @@ class ReVolume():
 
 class ReVolumes(Mapping):
     def __init__(self):
-        path_to_file = Path(__file__).parent.joinpath("volumes.yaml")
-        with open(str(path_to_file), encoding="utf-8") as yaml_file:
-            _volume_list = yaml.safe_load(yaml_file.read())
+        path_to_file = Path(__file__).parent.joinpath("volumes.json")
+        with open(str(path_to_file), encoding="utf-8") as json_file:
+            _volume_list = json.load(json_file)
         _volume_mapping = OrderedDict()
         for item in _volume_list:
             _volume_mapping[item["name"]] = ReVolume(**item)
         self._volume_mapping = _volume_mapping
 
     def __getitem__(self, item: str) -> ReVolume:
-        return self._volume_mapping[item]
+        try:
+            return self._volume_mapping[item]
+        except KeyError:
+            raise ReDatenException("Register {} doesn't exists".format(item))
 
     def __len__(self) -> int:
         return len(self._volume_mapping.keys())
@@ -490,3 +496,195 @@ class ReVolumes(Mapping):
     def all_volumes(self) -> Generator[ReVolume, None, None]:
         for volume_key in self:
             yield self[volume_key]
+
+
+class RegisterAuthor:
+    def __init__(self, name: str, author_dict: Dict[str, int]):
+        self._dict = author_dict
+        if "_" in name:
+            name = name.split("_")[0]
+        self._name = name
+
+    @property
+    def death(self) -> Union[int, None]:
+        if "death" in self._dict.keys():
+            return self._dict["death"]
+        return None
+
+    @property
+    def birth(self) -> Union[int, None]:
+        if "birth" in self._dict.keys():
+            return self._dict["birth"]
+        return None
+
+    @property
+    def name(self) -> str:
+        return self._name
+
+
+class RegisterAuthors:
+    _REGISTER_PATH = _REGISTER_PATH
+
+    def __init__(self):
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r") \
+                as json_file:
+            self._mapping = json.load(json_file)
+        self._authors = {}
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r") as json_file:
+            json_dict = json.load(json_file)
+            for author in json_dict:
+                self._authors[author] = RegisterAuthor(author, json_dict[author])
+
+    def get_author_by_mapping(self, name: str, issue: str) -> Union[RegisterAuthor, None]:
+        author = None
+        try:
+            mapping = self._mapping[name]
+            if isinstance(mapping, dict):
+                try:
+                    mapping = mapping[issue]
+                except KeyError:
+                    mapping = mapping["*"]
+            author = self.get_author(mapping)
+        except KeyError:
+            pass
+        return author
+
+    def get_author(self, mapping: str):
+        return self._authors[mapping]
+
+
+class LemmaChapter:
+    def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
+        self._dict = chapter_dict
+
+    def is_valid(self) -> bool:
+        try:
+            if "start" in self._dict and "end" in self._dict:
+                return True
+        except TypeError:
+            pass
+        return False
+
+    @property
+    def start(self) -> int:
+        return self._dict["start"]
+
+    @property
+    def end(self) -> int:
+        return self._dict["end"]
+
+    @property
+    def author(self) -> Union[str, None]:
+        if "author" in self._dict.keys():
+            return self._dict["author"]
+        return None
+
+
+class ReRegisterLemma(Mapping):
+    def __init__(self,
+                 lemma_dict: Dict[str, Union[str, list]],
+                 volume: str,
+                 authors: RegisterAuthors):
+        self._lemma_dict = lemma_dict
+        self._authors = authors
+        self._volume = volume
+        self._chapters = []
+        try:
+            for chapter in self._lemma_dict["chapters"]:
+                self._chapters.append(LemmaChapter(chapter))
+        except KeyError:
+            pass
+        if not self.is_valid():
+            raise ReDatenException("Error init RegisterLemma. Key missing in {}"
+                                   .format(self._lemma_dict))
+
+    def __getitem__(self, item):
+        try:
+            return self._lemma_dict[item]
+        except KeyError:
+            return None
+
+    def __iter__(self):
+        return iter(self._lemma_dict)
+
+    def __len__(self):
+        return len(self._lemma_dict)
+
+    def keys(self):
+        return self._lemma_dict.keys()
+
+    def is_valid(self) -> bool:
+        if "lemma" not in self.keys() \
+                or "chapters" not in self.keys():
+            return False
+        if not self._chapters:
+            return False
+        for chapter in self._chapters:
+            if not chapter.is_valid():
+                return False
+        return True
+
+    def get_table_row(self) -> str:
+        row_string = ["|-"]
+        if len(self._chapters) > 1:
+            row_string.append("rowspan={}|{}".format(len(self._chapters), self._get_link()))
+        else:
+            row_string.append(self._get_link())
+        for chapter in self._chapters:
+            row_string.append(self._get_pages(chapter))
+            row_string.append(self._get_author_str(chapter))
+            row_string.append(self._get_death_year(chapter))
+            row_string.append("-")
+        # remove the last entry again because the row separator only needed between rows
+        row_string.pop(-1)
+        return "\n|".join(row_string)
+
+    def _get_link(self) -> str:
+        return "[[RE:{lemma}|{{{{Anker|{lemma}}}}}]]".format(lemma=self["lemma"])
+
+    def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
+        start_page_scan = lemma_chapter.start
+        if start_page_scan % 2 == 0:
+            start_page_scan -= 1
+        pages_str = "[[Special:Filepath/Pauly-Wissowa_{issue},_{start_page_scan:04d}.jpg|" \
+                    "{issue}, {start_page}]]"\
+            .format(issue=self._volume,
+                    start_page=lemma_chapter.start,
+                    start_page_scan=start_page_scan)
+        if lemma_chapter.start != lemma_chapter.end:
+            pages_str += "-{}".format(lemma_chapter.end)
+        return pages_str
+
+    def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
+        return self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).name
+
+    def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
+        return str(self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).death)
+
+
+class ReRegister:
+    _REGISTER_PATH = _REGISTER_PATH
+
+    def __init__(self, volume: ReVolume, authors: RegisterAuthors):
+        self._authors = authors
+        self._volume = volume
+        with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))),
+                  "r") as json_file:
+            self._dict = json.load(json_file)
+        self._lemmas = []
+        for lemma in self._dict:
+            self._lemmas.append(ReRegisterLemma(lemma, self._volume.name, self._authors))
+
+    def get_table(self):
+        table = ["{|"]
+        for lemma in self._lemmas:
+            table.append(lemma.get_table_row())
+        table.append("|}")
+        return "\n".join(table)
+
+    def get_footer(self):
+        return "[[Kategorie:RE:Register|!]]\n" \
+               "Zahl der Artikel: {count_lemma}, " \
+               "davon [[:Kategorie:RE:Band {volume}" \
+               "|{{{{PAGESINCATEGORY:RE:Band {volume}|pages}}}} in Volltext]]."\
+            .format(count_lemma=len(self._lemmas), volume=self._volume.name)
