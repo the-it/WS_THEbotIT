@@ -30,4 +30,4 @@ else:
     def path_or_str(path: Path) -> Union[Path, str]:
         return path
 
-INTEGRATION_TEST = True if "INTEGRATION" in os.environ else False
+INTEGRATION_TEST = "INTEGRATION" in os.environ
