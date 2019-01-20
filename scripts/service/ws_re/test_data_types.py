@@ -872,7 +872,11 @@ class TestReRegister(BaseTestRegister):
     def test_get_table(self):
         copy_test_data("I_1_two_entries", "I_1")
         register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
-        expected_table = """{|
+        expected_table = """{|class="wikitable sortable"
+!Artikel
+!Seite
+!Autor
+!Sterbejahr
 |-
 |[[RE:Aal|{{Anker2|Aal}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
@@ -883,15 +887,10 @@ class TestReRegister(BaseTestRegister):
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|I,1, 4]]
 |Abert
 |1927
-|}"""
-        compare(expected_table, register._get_table())
-
-    def test_get_footer(self):
-        copy_test_data("I_1_two_entries", "I_1")
-        register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
-        expected_footer = """[[Kategorie:RE:Register|!]]
+|}
+[[Kategorie:RE:Register|!]]
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
-        compare(expected_footer, register._get_footer())
+        compare(expected_table, register.get_register_str())
 
     #@skipUnless(INTEGRATION_TEST, "Execute only in integration test.")
     @skip("activate later")

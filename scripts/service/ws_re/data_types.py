@@ -694,7 +694,12 @@ class ReRegister:
         return self._volume
 
     def _get_table(self):
-        table = ["{|"]
+        header = """{|class="wikitable sortable"
+!Artikel
+!Seite
+!Autor
+!Sterbejahr"""
+        table = [header]
         for lemma in self._lemmas:
             table.append(lemma.get_table_row())
         table.append("|}")
