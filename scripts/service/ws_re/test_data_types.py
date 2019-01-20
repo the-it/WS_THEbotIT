@@ -10,7 +10,7 @@ from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
     ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors, \
-    LemmaChapter, ReRegister, _REGISTER_PATH
+    LemmaChapter, ReRegister, _REGISTER_PATH, ReRegisters
 from tools import path_or_str, INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
@@ -716,11 +716,27 @@ class TestLemmaChapter(TestCase):
         compare(None, lemma_chapter.author)
 
 
-class TestReRegisterLemma(TestCase):
-    def setUp(self):
+class BaseTestRegister(TestCase):
+    @classmethod
+    def setUpClass(cls):
         clear_test_path()
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
+        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
+        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
+
+    @classmethod
+    def tearDownClass(cls):
+        RegisterAuthors._REGISTER_PATH = _REGISTER_PATH
+        ReRegister._REGISTER_PATH = _REGISTER_PATH
+
+
+class TestReRegisterLemma(BaseTestRegister):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+
+    def setUp(self):
         self.authors = RegisterAuthors()
 
     def test_from_dict_errors(self):
@@ -825,14 +841,7 @@ class TestRegisterAuthor(TestCase):
         compare(1999, register_author.birth)
 
 
-class TestRegisterAuthors(TestCase):
-    def setUp(self):
-        clear_test_path()
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
-        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
-        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
-
+class TestRegisterAuthors(BaseTestRegister):
     def test_load_data(self):
         authors = RegisterAuthors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
@@ -847,14 +856,7 @@ class TestRegisterAuthors(TestCase):
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
 
 
-class TestReRegister(TestCase):
-    def setUp(self):
-        clear_test_path()
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
-        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
-        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
-
+class TestReRegister(BaseTestRegister):
     def test_init(self):
         copy_test_data("I_1_base", "I_1")
         ReRegister(ReVolumes()["I,1"], RegisterAuthors())
@@ -891,3 +893,17 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         authors = RegisterAuthors()
         for volume in ReVolumes().all_volumes:
             ReRegister(volume, authors)
+
+
+class TestReRegisters(BaseTestRegister):
+    def test_init(self):
+        for volume in ReVolumes().all_volumes:
+            copy_test_data("I_1_base", volume.file_name)
+        registers = ReRegisters()
+        iterator = iter(registers)
+        compare("I,1", next(iterator).volume.name)
+        for i in range(83):
+            last = next(iterator)
+        compare("R", last.volume.name)
+        compare(84, len(registers))
+        compare("IV,1", registers["IV,1"].volume.name)

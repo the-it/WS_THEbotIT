@@ -675,6 +675,10 @@ class ReRegister:
         for lemma in self._dict:
             self._lemmas.append(ReRegisterLemma(lemma, self._volume.name, self._authors))
 
+    @property
+    def volume(self):
+        return self._volume
+
     def get_table(self):
         table = ["{|"]
         for lemma in self._lemmas:
@@ -688,3 +692,21 @@ class ReRegister:
                "davon [[:Kategorie:RE:Band {volume}" \
                "|{{{{PAGESINCATEGORY:RE:Band {volume}|pages}}}} in Volltext]]."\
             .format(count_lemma=len(self._lemmas), volume=self._volume.name)
+
+
+class ReRegisters(Mapping):
+    def __init__(self):
+        self._authors = RegisterAuthors()
+        self._registers = {}
+        for volume in ReVolumes().all_volumes:
+            self._registers[volume.name] = ReRegister(volume, self._authors)
+
+    def __len__(self):
+        return len(self._registers)
+
+    def __iter__(self) -> Generator[ReRegister, None, None]:
+        for volume in self._registers:
+            yield self._registers[volume]
+
+    def __getitem__(self, item) -> ReRegister:
+        return self._registers[item]
