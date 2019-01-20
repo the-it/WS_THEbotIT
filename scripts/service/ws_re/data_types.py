@@ -418,7 +418,7 @@ class Volume():
         self._end = end
         self._sortkey = self._compute_sortkey()
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return "<VOLUME - name:{}, year:{}, start:{}, end:{}, sort:{}>".format(self.name,
                                                                                self.year,
                                                                                self.start,
@@ -530,7 +530,7 @@ class Author:
             name = name.split("_")[0]
         self._name = name
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return "<AUTHOR - name:{}, birth:{}, death:{}>".format(self.name, self.birth, self.death)
 
     @property
@@ -585,7 +585,7 @@ class LemmaChapter:
     def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
         self._dict = chapter_dict
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return "<LEMMA CHAPTER - start:{}, end:{}, author:{}>".format(self.start,
                                                                       self.end,
                                                                       self.author)
@@ -631,7 +631,7 @@ class Lemma(Mapping):
             raise ReDatenException("Error init RegisterLemma. Key missing in {}"
                                    .format(self._lemma_dict))
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return "<LEMMA - lemma:{}, previous:{}, next:{}, chapters:{}>".format(self["lemma"],
                                                                               self["previous"],
                                                                               self["next"],
@@ -814,7 +814,7 @@ class AlphabeticRegister:
         self._lemmas = []
         self._init_lemmas()
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return "<ALPHABETIC REGISTER - start:{}, end:{}>".format(self._start, self._end)
 
     def __len__(self):
