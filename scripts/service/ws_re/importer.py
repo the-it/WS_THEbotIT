@@ -9,7 +9,7 @@ from typing import Sequence, Dict, Tuple
 
 from pywikibot import Site, Page
 
-from scripts.service.ws_re.data_types import ReVolumes
+from scripts.service.ws_re.data_types import Volumes
 from tools import path_or_str
 from tools.bots import CanonicalBot
 
@@ -26,7 +26,7 @@ class ReImporter(CanonicalBot):
         self.current_volume = ""
 
     def task(self):  # pragma: no cover
-        re_volumes = ReVolumes()
+        re_volumes = Volumes()
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
             self.current_volume = volume.name

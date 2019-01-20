@@ -1,12 +1,12 @@
 from pywikibot import Site, Page
 
-from scripts.service.ws_re.data_types import ReRegisters
+from scripts.service.ws_re.data_types import Registers
 from tools.bots import CanonicalBot
 
 
 class ReRegisterPrinter(CanonicalBot):
     def task(self):  # pragma: no cover
-        for idx, register in enumerate(ReRegisters()):
+        for idx, register in enumerate(Registers()):
             self.logger.info("Print Register {}.".format(register.volume.name))
             self.save_if_changed(Page(self.wiki,
                                       "Paulys Realencyclopädie der classischen "

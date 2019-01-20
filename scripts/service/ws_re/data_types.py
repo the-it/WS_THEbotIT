@@ -19,7 +19,7 @@ class ReDatenException(Exception):
     pass
 
 
-class ReProperty():
+class Property():
     def __init__(self, name: str, default: Union[str, bool]):
         self._name = name
         self._default = default
@@ -85,7 +85,7 @@ RE_ABSCHNITT = "REAbschnitt"
 RE_AUTHOR = "REAutor"
 
 
-class ReArticle(Mapping):
+class Article(Mapping):
     keywords = {
         "BD": "BAND",
         "SS": "SPALTE_START",
@@ -117,24 +117,24 @@ class ReArticle(Mapping):
         self.text = text
         self._author = None
         self.author = author
-        self._properties = (ReProperty("BAND", ""),
-                            ReProperty("SPALTE_START", ""),
-                            ReProperty("SPALTE_END", ""),
-                            ReProperty("VORGÄNGER", ""),
-                            ReProperty("NACHFOLGER", ""),
-                            ReProperty("SORTIERUNG", ""),
-                            ReProperty("KORREKTURSTAND", ""),
-                            ReProperty("WIKIPEDIA", ""),
-                            ReProperty("WIKISOURCE", ""),
-                            ReProperty("EXTSCAN_START", ""),
-                            ReProperty("EXTSCAN_END", ""),
-                            ReProperty("GND", ""),
-                            ReProperty("KEINE_SCHÖPFUNGSHÖHE", False),
-                            ReProperty("TODESJAHR", ""),
-                            ReProperty("GEBURTSJAHR", ""),
-                            ReProperty("NACHTRAG", False),
-                            ReProperty("ÜBERSCHRIFT", False),
-                            ReProperty("VERWEIS", False))
+        self._properties = (Property("BAND", ""),
+                            Property("SPALTE_START", ""),
+                            Property("SPALTE_END", ""),
+                            Property("VORGÄNGER", ""),
+                            Property("NACHFOLGER", ""),
+                            Property("SORTIERUNG", ""),
+                            Property("KORREKTURSTAND", ""),
+                            Property("WIKIPEDIA", ""),
+                            Property("WIKISOURCE", ""),
+                            Property("EXTSCAN_START", ""),
+                            Property("EXTSCAN_END", ""),
+                            Property("GND", ""),
+                            Property("KEINE_SCHÖPFUNGSHÖHE", False),
+                            Property("TODESJAHR", ""),
+                            Property("GEBURTSJAHR", ""),
+                            Property("NACHTRAG", False),
+                            Property("ÜBERSCHRIFT", False),
+                            Property("VERWEIS", False))
         self._init_properties(re_daten_properties)
 
     @property
@@ -176,7 +176,7 @@ class ReArticle(Mapping):
     def __len__(self) -> int:
         return len(self._properties)
 
-    def __iter__(self) -> Generator[ReProperty, None, None]:
+    def __iter__(self) -> Generator[Property, None, None]:
         for re_property in self._properties:
             yield re_property
 
@@ -208,7 +208,7 @@ class ReArticle(Mapping):
         main parser function for initiating a ReArticle from a given piece of text.
 
         :param article_text: text that represent a valid ReArticle
-        :rtype: ReArticle
+        :rtype: Article
         """
         finder = TemplateFinder(article_text)
         find_re_daten = finder.get_positions(RE_DATEN)
@@ -242,11 +242,11 @@ class ReArticle(Mapping):
             author_issue = re_author.parameters[1]["value"]
         except IndexError:
             author_issue = ""
-        return ReArticle(article_type=re_start.title,
-                         re_daten_properties=properties_dict,
-                         text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]]
-                         .strip(),
-                         author=(author_name, author_issue))
+        return Article(article_type=re_start.title,
+                       re_daten_properties=properties_dict,
+                       text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]]
+                       .strip(),
+                       author=(author_name, author_issue))
 
     @classmethod
     def _extract_properties(cls, parameters: list) -> dict:
@@ -333,13 +333,13 @@ class RePage(Sequence):
                     # not just whitespaces
                     self._article_list.append(text_to_handle)
             self._article_list.append(
-                ReArticle.from_text(self.pre_text[pos_daten["pos"][0]:pos_author["pos"][1]]))
+                Article.from_text(self.pre_text[pos_daten["pos"][0]:pos_author["pos"][1]]))
             last_handled_char = pos_author["pos"][1]
         # handle text after the last complete article
         if last_handled_char < len(self.pre_text):
             self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)].strip())
 
-    def __getitem__(self, item: int) -> ReArticle:
+    def __getitem__(self, item: int) -> Article:
         return self._article_list[item]
 
     def __len__(self) -> int:
@@ -348,7 +348,7 @@ class RePage(Sequence):
     def __str__(self) -> str:
         articles = []
         for article in self._article_list:
-            if isinstance(article, ReArticle):
+            if isinstance(article, Article):
                 articles.append(article.to_text())
             else:  # it is only a string
                 articles.append(article)
@@ -378,8 +378,8 @@ class RePage(Sequence):
                 raise ReDatenException("Page {} is protected for normal users, it can't be saved."
                                        .format(self.page.title))
 
-    def append(self, new_article: ReArticle):
-        if isinstance(new_article, ReArticle):
+    def append(self, new_article: Article):
+        if isinstance(new_article, Article):
             self._article_list.append(new_article)
         else:
             raise TypeError("You can only append Elements of the type ReArticle")
@@ -395,7 +395,7 @@ class RePage(Sequence):
         return self.page.title()
 
 
-class ReVolumeType(Enum):
+class VolumeType(Enum):
     FIRST_SERIES = 0
     SECOND_SERIES = 1
     SUPPLEMENTS = 2
@@ -403,13 +403,13 @@ class ReVolumeType(Enum):
 
 
 _BASIC_REGEX = r"[IVX]{1,5}"
-_REGEX_MAPPING = {ReVolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,[1234])?$"),
-                  ReVolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,[12])?$"),
-                  ReVolumeType.SUPPLEMENTS: re.compile(r"^S " + _BASIC_REGEX + "$"),
-                  ReVolumeType.REGISTER: re.compile(r"^R$")}
+_REGEX_MAPPING = {VolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,[1234])?$"),
+                  VolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,[12])?$"),
+                  VolumeType.SUPPLEMENTS: re.compile(r"^S " + _BASIC_REGEX + "$"),
+                  VolumeType.REGISTER: re.compile(r"^R$")}
 
 
-class ReVolume():
+class Volume():
     def __init__(self, name: str, year: Union[str, int], start: str = None, end: str = None):
         self._name = name
         self._year = str(year)
@@ -444,17 +444,17 @@ class ReVolume():
         raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
 
 
-class ReVolumes(Mapping):
+class Volumes(Mapping):
     def __init__(self):
         path_to_file = Path(__file__).parent.joinpath("volumes.json")
         with open(str(path_to_file), encoding="utf-8") as json_file:
             _volume_list = json.load(json_file)
         _volume_mapping = OrderedDict()
         for item in _volume_list:
-            _volume_mapping[item["name"]] = ReVolume(**item)
+            _volume_mapping[item["name"]] = Volume(**item)
         self._volume_mapping = _volume_mapping
 
-    def __getitem__(self, item: str) -> ReVolume:
+    def __getitem__(self, item: str) -> Volume:
         try:
             return self._volume_mapping[item]
         except KeyError:
@@ -467,39 +467,39 @@ class ReVolumes(Mapping):
         for key in self._volume_mapping:
             yield key
 
-    def special_volume_iterator(self, volume_type: ReVolumeType) -> Generator[ReVolume, None, None]:
+    def special_volume_iterator(self, volume_type: VolumeType) -> Generator[Volume, None, None]:
         for volume_key in self:
             volume = self[volume_key]
             if volume.type == volume_type:
                 yield volume
 
     @property
-    def first_series(self) -> Generator[ReVolume, None, None]:
-        for volume in self.special_volume_iterator(ReVolumeType.FIRST_SERIES):
+    def first_series(self) -> Generator[Volume, None, None]:
+        for volume in self.special_volume_iterator(VolumeType.FIRST_SERIES):
             yield volume
 
     @property
-    def second_series(self) -> Generator[ReVolume, None, None]:
-        for volume in self.special_volume_iterator(ReVolumeType.SECOND_SERIES):
+    def second_series(self) -> Generator[Volume, None, None]:
+        for volume in self.special_volume_iterator(VolumeType.SECOND_SERIES):
             yield volume
 
     @property
-    def supplements(self) -> Generator[ReVolume, None, None]:
-        for volume in self.special_volume_iterator(ReVolumeType.SUPPLEMENTS):
+    def supplements(self) -> Generator[Volume, None, None]:
+        for volume in self.special_volume_iterator(VolumeType.SUPPLEMENTS):
             yield volume
 
     @property
-    def register(self) -> Generator[ReVolume, None, None]:
-        for volume in self.special_volume_iterator(ReVolumeType.REGISTER):
+    def register(self) -> Generator[Volume, None, None]:
+        for volume in self.special_volume_iterator(VolumeType.REGISTER):
             yield volume
 
     @property
-    def all_volumes(self) -> Generator[ReVolume, None, None]:
+    def all_volumes(self) -> Generator[Volume, None, None]:
         for volume_key in self:
             yield self[volume_key]
 
 
-class RegisterAuthor:
+class Author:
     def __init__(self, name: str, author_dict: Dict[str, int]):
         self._dict = author_dict
         if "_" in name:
@@ -523,7 +523,7 @@ class RegisterAuthor:
         return self._name
 
 
-class RegisterAuthors:
+class Authors:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self):
@@ -534,9 +534,9 @@ class RegisterAuthors:
         with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r") as json_file:
             json_dict = json.load(json_file)
             for author in json_dict:
-                self._authors[author] = RegisterAuthor(author, json_dict[author])
+                self._authors[author] = Author(author, json_dict[author])
 
-    def get_author_by_mapping(self, name: str, issue: str) -> Union[RegisterAuthor, None]:
+    def get_author_by_mapping(self, name: str, issue: str) -> Union[Author, None]:
         author = None
         try:
             mapping = self._mapping[name]
@@ -581,11 +581,11 @@ class LemmaChapter:
         return None
 
 
-class ReRegisterLemma(Mapping):
+class Lemma(Mapping):
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
                  volume: str,
-                 authors: RegisterAuthors):
+                 authors: Authors):
         self._lemma_dict = lemma_dict
         self._authors = authors
         self._volume = volume
@@ -697,10 +697,10 @@ class ReRegisterLemma(Mapping):
         return year_format
 
 
-class ReRegister:
+class Register:
     _REGISTER_PATH = _REGISTER_PATH
 
-    def __init__(self, volume: ReVolume, authors: RegisterAuthors):
+    def __init__(self, volume: Volume, authors: Authors):
         self._authors = authors
         self._volume = volume
         with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))),
@@ -708,7 +708,7 @@ class ReRegister:
             self._dict = json.load(json_file)
         self._lemmas = []
         for lemma in self._dict:
-            self._lemmas.append(ReRegisterLemma(lemma, self._volume.name, self._authors))
+            self._lemmas.append(Lemma(lemma, self._volume.name, self._authors))
 
     @property
     def volume(self):
@@ -737,19 +737,19 @@ class ReRegister:
         return "{}\n{}".format(self._get_table(), self._get_footer())
 
 
-class ReRegisters(Mapping):
+class Registers(Mapping):
     def __init__(self):
-        self._authors = RegisterAuthors()
+        self._authors = Authors()
         self._registers = OrderedDict()
-        for volume in ReVolumes().all_volumes:
-            self._registers[volume.name] = ReRegister(volume, self._authors)
+        for volume in Volumes().all_volumes:
+            self._registers[volume.name] = Register(volume, self._authors)
 
     def __len__(self):
         return len(self._registers)
 
-    def __iter__(self) -> Generator[ReRegister, None, None]:
+    def __iter__(self) -> Generator[Register, None, None]:
         for volume in self._registers:
             yield self._registers[volume]
 
-    def __getitem__(self, item) -> ReRegister:
+    def __getitem__(self, item) -> Register:
         return self._registers[item]
