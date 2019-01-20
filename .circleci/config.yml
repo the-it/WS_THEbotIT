@@ -90,6 +90,7 @@ show_python_version: &show_python_version
   run:
     name: python version
     command: |
+      . venv/bin/activate
       python --version
 
 quality_steps: &quality_steps
