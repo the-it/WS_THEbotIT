@@ -8,6 +8,7 @@ import re
 from typing import Union, Generator, Tuple, Dict
 
 import pywikibot
+import roman
 
 from tools import path_or_str
 from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
@@ -402,9 +403,9 @@ class VolumeType(Enum):
     REGISTER = 3
 
 
-_BASIC_REGEX = r"[IVX]{1,5}"
-_REGEX_MAPPING = {VolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,[1234])?$"),
-                  VolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,[12])?$"),
+_BASIC_REGEX = r"([IVX]{1,5})"
+_REGEX_MAPPING = {VolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,([1234]))?$"),
+                  VolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,([12]))?$"),
                   VolumeType.SUPPLEMENTS: re.compile(r"^S " + _BASIC_REGEX + "$"),
                   VolumeType.REGISTER: re.compile(r"^R$")}
 
@@ -415,6 +416,14 @@ class Volume():
         self._year = str(year)
         self._start = start
         self._end = end
+        self._sortkey = self._compute_sortkey()
+
+    def __repr__(self):
+        return "<VOLUME - name:{}, year:{}, start:{}, end:{}, sort:{}>".format(self.name,
+                                                                               self.year,
+                                                                               self.start,
+                                                                               self.end,
+                                                                               self.sortkey)
 
     @property
     def name(self) -> str:
@@ -442,6 +451,21 @@ class Volume():
             if _REGEX_MAPPING[re_volume_type].match(self.name):
                 return re_volume_type
         raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
+
+    def _compute_sortkey(self):
+        match = _REGEX_MAPPING[self.type].search(self.name)
+        key = "4"
+        if self.type == VolumeType.FIRST_SERIES:
+            key = "1_{:02d}_{}".format(roman.fromRoman(match.group(1)), match.group(2))
+        elif self.type == VolumeType.SECOND_SERIES:
+            key = "2_{:02d}_{}".format(roman.fromRoman(match.group(1)), match.group(2))
+        elif self.type == VolumeType.SUPPLEMENTS:
+            key = "3_{:02d}".format(roman.fromRoman(match.group(1)))
+        return key
+
+    @property
+    def sortkey(self) -> str:
+        return self._sortkey
 
 
 class Volumes(Mapping):
@@ -506,6 +530,9 @@ class Author:
             name = name.split("_")[0]
         self._name = name
 
+    def __repr__(self):
+        return "<AUTHOR - name:{}, birth:{}, death:{}>".format(self.name, self.birth, self.death)
+
     @property
     def death(self) -> Union[int, None]:
         if "death" in self._dict.keys():
@@ -558,6 +585,11 @@ class LemmaChapter:
     def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
         self._dict = chapter_dict
 
+    def __repr__(self):
+        return "<LEMMA CHAPTER - start:{}, end:{}, author:{}>".format(self.start,
+                                                                      self.end,
+                                                                      self.author)
+
     def is_valid(self) -> bool:
         try:
             if "start" in self._dict and "end" in self._dict:
@@ -584,7 +616,7 @@ class LemmaChapter:
 class Lemma(Mapping):
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
-                 volume: str,
+                 volume: Volume,
                  authors: Authors):
         self._lemma_dict = lemma_dict
         self._authors = authors
@@ -599,6 +631,12 @@ class Lemma(Mapping):
             raise ReDatenException("Error init RegisterLemma. Key missing in {}"
                                    .format(self._lemma_dict))
 
+    def __repr__(self):
+        return "<LEMMA - lemma:{}, previous:{}, next:{}, chapters:{}>".format(self["lemma"],
+                                                                              self["previous"],
+                                                                              self["next"],
+                                                                              len(self._chapters))
+
     def __getitem__(self, item):
         try:
             return self._lemma_dict[item]
@@ -610,6 +648,10 @@ class Lemma(Mapping):
 
     def __len__(self):
         return len(self._lemma_dict)
+
+    @property
+    def volume(self):
+        return self._volume
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -650,7 +692,7 @@ class Lemma(Mapping):
             start_page_scan -= 1
         pages_str = "[[Special:Filepath/Pauly-Wissowa_{issue},_{start_page_scan:04d}.jpg|" \
                     "{issue}, {start_page}]]"\
-            .format(issue=self._volume,
+            .format(issue=self._volume.name,
                     start_page=lemma_chapter.start,
                     start_page_scan=start_page_scan)
         if lemma_chapter.start != lemma_chapter.end:
@@ -660,7 +702,8 @@ class Lemma(Mapping):
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
         author_str = ""
         if lemma_chapter.author:
-            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author, self._volume)
+            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
+                                                                self._volume.name)
             if mapped_author:
                 author_str = mapped_author.name
             else:
@@ -670,7 +713,8 @@ class Lemma(Mapping):
     def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
         year = ""
         if self._get_author_str(lemma_chapter):
-            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author, self._volume)
+            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
+                                                                self._volume.name)
             if mapped_author:
                 year = str(mapped_author.death) if mapped_author.death else ""
             else:
@@ -708,11 +752,18 @@ class Register:
             self._dict = json.load(json_file)
         self._lemmas = []
         for lemma in self._dict:
-            self._lemmas.append(Lemma(lemma, self._volume.name, self._authors))
+            self._lemmas.append(Lemma(lemma, self._volume, self._authors))
+
+    def __repr__(self):
+        return "<REGISTER - volume:{}, lemmas:{}>".format(self.volume.name, len(self.lemmas))
 
     @property
     def volume(self):
         return self._volume
+
+    @property
+    def lemmas(self):
+        return self._lemmas
 
     def _get_table(self):
         header = """{|class="wikitable sortable"
@@ -753,3 +804,38 @@ class Registers(Mapping):
 
     def __getitem__(self, item) -> Register:
         return self._registers[item]
+
+
+class AlphabeticRegister:
+    def __init__(self, start: Union[str, None], end: Union[str, None], registers: OrderedDict):
+        self._start = start
+        self._end = end
+        self._registers = registers
+        self._lemmas = []
+        self._init_lemmas()
+
+    def __repr__(self):
+        return "<ALPHABETIC REGISTER - start:{}, end:{}>".format(self._start, self._end)
+
+    def __len__(self):
+        return len(self._lemmas)
+
+    def _init_lemmas(self):
+        lemmas = []
+        for volume_str in self._registers:
+            for lemma in self._registers[volume_str].lemmas:
+                if self.is_lemma_in_range(lemma):
+                    lemmas.append(lemma)
+        self._lemmas = sorted(lemmas, key=lambda k: (k['lemma'], k.volume.sortkey))
+
+    def is_lemma_in_range(self, lemma):
+        append = True
+        if self._start:
+            # include start
+            if lemma["lemma"] < self._start:
+                append = False
+        if self._end:
+            # exclude end
+            if lemma["lemma"] >= self._end:
+                append = False
+        return append
