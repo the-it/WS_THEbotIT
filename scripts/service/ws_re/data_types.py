@@ -672,7 +672,7 @@ class ReRegisterLemma(Mapping):
         if self._get_author_str(lemma_chapter):
             mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author, self._volume)
             if mapped_author:
-                year = str(mapped_author.death)
+                year = str(mapped_author.death) if mapped_author.death else ""
             else:
                 year = "????"
         return year
@@ -691,7 +691,7 @@ class ReRegisterLemma(Mapping):
                     year_format = green
                 else:
                     year_format = red
-            except ValueError:
+            except (TypeError, ValueError):
                 year_format = red
         return year_format
 

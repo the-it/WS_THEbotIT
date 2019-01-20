@@ -789,6 +789,8 @@ class TestReRegisterLemma(BaseTestRegister):
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
         compare("1927", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
+        compare("", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "Abbott"})))
 
         # check if author not there
         compare("????", re_register_lemma._get_death_year(
@@ -807,6 +809,7 @@ class TestReRegisterLemma(BaseTestRegister):
         compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format(str(year_free_content + 1)))
         compare("", ReRegisterLemma._get_year_format(""))
         compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format("????"))
+        compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format(None))
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
@@ -838,7 +841,7 @@ class TestReRegisterLemma(BaseTestRegister):
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
 |Abbott
-|style="background:#FFCBCB"|1988"""
+|style="background:#FFCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
 
 
@@ -859,7 +862,7 @@ class TestRegisterAuthors(BaseTestRegister):
         authors = RegisterAuthors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
         compare("Abbott", author.name)
-        compare(1988, author.death)
+        compare(None, author.death)
         author = authors.get_author_by_mapping("Abel", "I,1")
         compare("Abel", author.name)
         compare(1998, author.death)
