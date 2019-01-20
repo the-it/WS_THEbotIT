@@ -807,7 +807,7 @@ class TestReRegisterLemma(BaseTestRegister):
         year_free_content = datetime.now().year - 71
         compare("style=\"background:#B9FFC5\"", ReRegisterLemma._get_year_format(str(year_free_content)))
         compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format(str(year_free_content + 1)))
-        compare("", ReRegisterLemma._get_year_format(""))
+        compare("style=\"background:#CBCBCB\"", ReRegisterLemma._get_year_format(""))
         compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format("????"))
         compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format(None))
 
@@ -841,7 +841,7 @@ class TestReRegisterLemma(BaseTestRegister):
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
 |Abbott
-|style="background:#FFCBCB"|"""
+|style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
 
 

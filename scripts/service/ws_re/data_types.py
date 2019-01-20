@@ -681,8 +681,9 @@ class ReRegisterLemma(Mapping):
     def _get_year_format(year: str) -> str:
         green = "style=\"background:#B9FFC5\""
         red = "style=\"background:#FFCBCB\""
+        gray = "style=\"background:#CBCBCB\""
         if year == "":
-            year_format = ""
+            year_format = gray
         else:
             try:
                 year = int(year)
