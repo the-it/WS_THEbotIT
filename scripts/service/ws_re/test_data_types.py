@@ -1,4 +1,5 @@
 import copy
+from datetime import datetime
 import os
 import shutil
 from collections.abc import Sequence
@@ -800,8 +801,12 @@ class TestReRegisterLemma(BaseTestRegister):
         compare("", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2})))
 
-
-        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
+    def test_year_format(self):
+        year_free_content = datetime.now().year - 71
+        compare("style=\"background:#B9FFC5\"", ReRegisterLemma._get_year_format(str(year_free_content)))
+        compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format(str(year_free_content + 1)))
+        compare("", ReRegisterLemma._get_year_format(""))
+        compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format("????"))
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
@@ -819,7 +824,7 @@ class TestReRegisterLemma(BaseTestRegister):
 |[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
 |Abel
-|1998"""
+|style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
         two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
@@ -829,11 +834,11 @@ class TestReRegisterLemma(BaseTestRegister):
 |rowspan=2|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
 |Abel
-|1998
+|style="background:#FFCBCB"|1998
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
 |Abbott
-|1988"""
+|style="background:#FFCBCB"|1988"""
         compare(expected_row, re_register_lemma.get_table_row())
 
 
@@ -881,12 +886,12 @@ class TestReRegister(BaseTestRegister):
 |[[RE:Aal|{{Anker2|Aal}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
 |Abel
-|1998
+|style="background:#FFCBCB"|1998
 |-
 |[[RE:Aarassos|{{Anker2|Aarassos}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|I,1, 4]]
 |Abert
-|1927
+|style="background:#B9FFC5"|1927
 |}
 [[Kategorie:RE:Register|!]]
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
