@@ -640,7 +640,7 @@ class ReRegisterLemma(Mapping):
         return "\n|".join(row_string)
 
     def _get_link(self) -> str:
-        return "[[RE:{lemma}|{{{{Anker|{lemma}}}}}]]".format(lemma=self["lemma"])
+        return "[[RE:{lemma}|{{{{Anker2|{lemma}}}}}]]".format(lemma=self["lemma"])
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
         start_page_scan = lemma_chapter.start

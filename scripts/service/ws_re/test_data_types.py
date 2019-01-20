@@ -771,7 +771,7 @@ class TestReRegisterLemma(BaseTestRegister):
 
     def test_get_link(self):
         re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
-        compare("[[RE:lemma|{{Anker|lemma}}]]", re_register_lemma._get_link())
+        compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma._get_link())
 
     def test_get_pages(self):
         re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
@@ -816,7 +816,7 @@ class TestReRegisterLemma(BaseTestRegister):
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = ReRegisterLemma(one_line_dict, "I,1", self.authors)
         expected_row = """|-
-|[[RE:lemma|{{Anker|lemma}}]]
+|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
 |Abel
 |1998"""
@@ -826,7 +826,7 @@ class TestReRegisterLemma(BaseTestRegister):
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = ReRegisterLemma(two_line_dict, "I,1", self.authors)
         expected_row = """|-
-|rowspan=2|[[RE:lemma|{{Anker|lemma}}]]
+|rowspan=2|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
 |Abel
 |1998
@@ -874,12 +874,12 @@ class TestReRegister(BaseTestRegister):
         register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
         expected_table = """{|
 |-
-|[[RE:Aal|{{Anker|Aal}}]]
+|[[RE:Aal|{{Anker2|Aal}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
 |Abel
 |1998
 |-
-|[[RE:Aarassos|{{Anker|Aarassos}}]]
+|[[RE:Aarassos|{{Anker2|Aarassos}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|I,1, 4]]
 |Abert
 |1927
