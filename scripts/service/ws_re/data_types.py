@@ -1,6 +1,7 @@
 import json
 from collections import OrderedDict
 from collections.abc import Mapping, Sequence
+from datetime import datetime
 from enum import Enum
 from pathlib import Path
 import re
@@ -633,7 +634,8 @@ class ReRegisterLemma(Mapping):
         for chapter in self._chapters:
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))
-            row_string.append(self._get_death_year(chapter))
+            year = self._get_death_year(chapter)
+            row_string.append("{}|{}".format(self._get_year_format(year), year))
             row_string.append("-")
         # remove the last entry again because the row separator only needed between rows
         row_string.pop(-1)
@@ -674,6 +676,24 @@ class ReRegisterLemma(Mapping):
             else:
                 year = "????"
         return year
+
+    @staticmethod
+    def _get_year_format(year: str) -> str:
+        green = "style=\"background:#B9FFC5\""
+        red = "style=\"background:#FFCBCB\""
+        if year == "":
+            year_format = ""
+        else:
+            try:
+                year = int(year)
+                content_free_year = datetime.now().year - 71
+                if year <= content_free_year:
+                    year_format = green
+                else:
+                    year_format = red
+            except ValueError:
+                year_format = red
+        return year_format
 
 
 class ReRegister:
