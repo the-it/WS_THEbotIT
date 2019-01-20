@@ -782,18 +782,26 @@ class TestReRegisterLemma(BaseTestRegister):
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|I,1, 198]]-200",
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
-    def test_get_author(self):
+    def test_get_author_and_year(self):
         re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
         compare("Abert", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
         compare("1927", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
 
-        compare("1998", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "Abel"})))
-        re_register_lemma = ReRegisterLemma(self.basic_dict, "XVI,1", self.authors)
-        compare("1987", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "Abel"})))
+        # check if author not there
+        compare("????", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "Tada"})))
+        compare("Tada", re_register_lemma._get_author_str(
+            LemmaChapter({"start": 1, "end": 2, "author": "Tada"})))
+
+        compare("", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2})))
+        compare("", re_register_lemma._get_author_str(
+            LemmaChapter({"start": 1, "end": 2})))
+
+
+        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}

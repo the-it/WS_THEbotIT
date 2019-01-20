@@ -656,10 +656,24 @@ class ReRegisterLemma(Mapping):
         return pages_str
 
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
-        return self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).name
+        author_str = ""
+        if lemma_chapter.author:
+            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author, self._volume)
+            if mapped_author:
+                author_str = mapped_author.name
+            else:
+                author_str = lemma_chapter.author
+        return author_str
 
     def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
-        return str(self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).death)
+        year = ""
+        if self._get_author_str(lemma_chapter):
+            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author, self._volume)
+            if mapped_author:
+                year = str(mapped_author.death)
+            else:
+                year = "????"
+        return year
 
 
 class ReRegister:
