@@ -242,6 +242,12 @@ class OneTimeBot():
         page.text += self.logger.create_wiki_log_lines()
         page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
 
+    @staticmethod
+    def save_if_changed(page: Page, text: str, change_msg: str):
+        if text != page.text:
+            page.text = text
+            page.save(change_msg, botflag=True)
+
 
 class PersistedData(Mapping):
     def __init__(self, bot_name: str):

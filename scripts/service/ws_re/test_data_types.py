@@ -10,7 +10,7 @@ from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
     ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors, \
-    LemmaChapter, ReRegister, _REGISTER_PATH
+    LemmaChapter, ReRegister, _REGISTER_PATH, ReRegisters
 from tools import path_or_str, INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
@@ -716,11 +716,27 @@ class TestLemmaChapter(TestCase):
         compare(None, lemma_chapter.author)
 
 
-class TestReRegisterLemma(TestCase):
-    def setUp(self):
+class BaseTestRegister(TestCase):
+    @classmethod
+    def setUpClass(cls):
         clear_test_path()
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
+        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
+        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
+
+    @classmethod
+    def tearDownClass(cls):
+        RegisterAuthors._REGISTER_PATH = _REGISTER_PATH
+        ReRegister._REGISTER_PATH = _REGISTER_PATH
+
+
+class TestReRegisterLemma(BaseTestRegister):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+
+    def setUp(self):
         self.authors = RegisterAuthors()
 
     def test_from_dict_errors(self):
@@ -755,7 +771,7 @@ class TestReRegisterLemma(TestCase):
 
     def test_get_link(self):
         re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
-        compare("[[RE:lemma|{{Anker|lemma}}]]", re_register_lemma._get_link())
+        compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma._get_link())
 
     def test_get_pages(self):
         re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
@@ -766,18 +782,26 @@ class TestReRegisterLemma(TestCase):
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|I,1, 198]]-200",
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
-    def test_get_author(self):
+    def test_get_author_and_year(self):
         re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
         compare("Abert", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
         compare("1927", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
 
-        compare("1998", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "Abel"})))
-        re_register_lemma = ReRegisterLemma(self.basic_dict, "XVI,1", self.authors)
-        compare("1987", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "Abel"})))
+        # check if author not there
+        compare("????", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "Tada"})))
+        compare("Tada", re_register_lemma._get_author_str(
+            LemmaChapter({"start": 1, "end": 2, "author": "Tada"})))
+
+        compare("", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2})))
+        compare("", re_register_lemma._get_author_str(
+            LemmaChapter({"start": 1, "end": 2})))
+
+
+        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
@@ -792,7 +816,7 @@ class TestReRegisterLemma(TestCase):
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = ReRegisterLemma(one_line_dict, "I,1", self.authors)
         expected_row = """|-
-|[[RE:lemma|{{Anker|lemma}}]]
+|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
 |Abel
 |1998"""
@@ -802,7 +826,7 @@ class TestReRegisterLemma(TestCase):
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = ReRegisterLemma(two_line_dict, "I,1", self.authors)
         expected_row = """|-
-|rowspan=2|[[RE:lemma|{{Anker|lemma}}]]
+|rowspan=2|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
 |Abel
 |1998
@@ -825,14 +849,7 @@ class TestRegisterAuthor(TestCase):
         compare(1999, register_author.birth)
 
 
-class TestRegisterAuthors(TestCase):
-    def setUp(self):
-        clear_test_path()
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
-        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
-        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
-
+class TestRegisterAuthors(BaseTestRegister):
     def test_load_data(self):
         authors = RegisterAuthors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
@@ -847,14 +864,7 @@ class TestRegisterAuthors(TestCase):
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
 
 
-class TestReRegister(TestCase):
-    def setUp(self):
-        clear_test_path()
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
-        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
-        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
-
+class TestReRegister(BaseTestRegister):
     def test_init(self):
         copy_test_data("I_1_base", "I_1")
         ReRegister(ReVolumes()["I,1"], RegisterAuthors())
@@ -862,26 +872,25 @@ class TestReRegister(TestCase):
     def test_get_table(self):
         copy_test_data("I_1_two_entries", "I_1")
         register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
-        expected_table = """{|
+        expected_table = """{|class="wikitable sortable"
+!Artikel
+!Seite
+!Autor
+!Sterbejahr
 |-
-|[[RE:Aal|{{Anker|Aal}}]]
+|[[RE:Aal|{{Anker2|Aal}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
 |Abel
 |1998
 |-
-|[[RE:Aarassos|{{Anker|Aarassos}}]]
+|[[RE:Aarassos|{{Anker2|Aarassos}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|I,1, 4]]
 |Abert
 |1927
-|}"""
-        compare(expected_table, register.get_table())
-
-    def test_get_footer(self):
-        copy_test_data("I_1_two_entries", "I_1")
-        register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
-        expected_footer = """[[Kategorie:RE:Register|!]]
+|}
+[[Kategorie:RE:Register|!]]
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
-        compare(expected_footer, register.get_footer())
+        compare(expected_table, register.get_register_str())
 
     #@skipUnless(INTEGRATION_TEST, "Execute only in integration test.")
     @skip("activate later")
@@ -891,3 +900,17 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         authors = RegisterAuthors()
         for volume in ReVolumes().all_volumes:
             ReRegister(volume, authors)
+
+
+class TestReRegisters(BaseTestRegister):
+    def test_init(self):
+        for volume in ReVolumes().all_volumes:
+            copy_test_data("I_1_base", volume.file_name)
+        registers = ReRegisters()
+        iterator = iter(registers)
+        compare("I,1", next(iterator).volume.name)
+        for i in range(83):
+            last = next(iterator)
+        compare("R", last.volume.name)
+        compare(84, len(registers))
+        compare("IV,1", registers["IV,1"].volume.name)

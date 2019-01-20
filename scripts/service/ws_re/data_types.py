@@ -640,7 +640,7 @@ class ReRegisterLemma(Mapping):
         return "\n|".join(row_string)
 
     def _get_link(self) -> str:
-        return "[[RE:{lemma}|{{{{Anker|{lemma}}}}}]]".format(lemma=self["lemma"])
+        return "[[RE:{lemma}|{{{{Anker2|{lemma}}}}}]]".format(lemma=self["lemma"])
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
         start_page_scan = lemma_chapter.start
@@ -656,10 +656,24 @@ class ReRegisterLemma(Mapping):
         return pages_str
 
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
-        return self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).name
+        author_str = ""
+        if lemma_chapter.author:
+            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author, self._volume)
+            if mapped_author:
+                author_str = mapped_author.name
+            else:
+                author_str = lemma_chapter.author
+        return author_str
 
     def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
-        return str(self._authors.get_author_by_mapping(lemma_chapter.author, self._volume).death)
+        year = ""
+        if self._get_author_str(lemma_chapter):
+            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author, self._volume)
+            if mapped_author:
+                year = str(mapped_author.death)
+            else:
+                year = "????"
+        return year
 
 
 class ReRegister:
@@ -675,16 +689,46 @@ class ReRegister:
         for lemma in self._dict:
             self._lemmas.append(ReRegisterLemma(lemma, self._volume.name, self._authors))
 
-    def get_table(self):
-        table = ["{|"]
+    @property
+    def volume(self):
+        return self._volume
+
+    def _get_table(self):
+        header = """{|class="wikitable sortable"
+!Artikel
+!Seite
+!Autor
+!Sterbejahr"""
+        table = [header]
         for lemma in self._lemmas:
             table.append(lemma.get_table_row())
         table.append("|}")
         return "\n".join(table)
 
-    def get_footer(self):
+    def _get_footer(self):
         return "[[Kategorie:RE:Register|!]]\n" \
                "Zahl der Artikel: {count_lemma}, " \
                "davon [[:Kategorie:RE:Band {volume}" \
                "|{{{{PAGESINCATEGORY:RE:Band {volume}|pages}}}} in Volltext]]."\
             .format(count_lemma=len(self._lemmas), volume=self._volume.name)
+
+    def get_register_str(self):
+        return "{}\n{}".format(self._get_table(), self._get_footer())
+
+
+class ReRegisters(Mapping):
+    def __init__(self):
+        self._authors = RegisterAuthors()
+        self._registers = OrderedDict()
+        for volume in ReVolumes().all_volumes:
+            self._registers[volume.name] = ReRegister(volume, self._authors)
+
+    def __len__(self):
+        return len(self._registers)
+
+    def __iter__(self) -> Generator[ReRegister, None, None]:
+        for volume in self._registers:
+            yield self._registers[volume]
+
+    def __getitem__(self, item) -> ReRegister:
+        return self._registers[item]
