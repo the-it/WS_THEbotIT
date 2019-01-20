@@ -719,7 +719,7 @@ class ReRegister:
 class ReRegisters(Mapping):
     def __init__(self):
         self._authors = RegisterAuthors()
-        self._registers = {}
+        self._registers = OrderedDict()
         for volume in ReVolumes().all_volumes:
             self._registers[volume.name] = ReRegister(volume, self._authors)
 
