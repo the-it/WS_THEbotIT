@@ -679,19 +679,22 @@ class ReRegister:
     def volume(self):
         return self._volume
 
-    def get_table(self):
+    def _get_table(self):
         table = ["{|"]
         for lemma in self._lemmas:
             table.append(lemma.get_table_row())
         table.append("|}")
         return "\n".join(table)
 
-    def get_footer(self):
+    def _get_footer(self):
         return "[[Kategorie:RE:Register|!]]\n" \
                "Zahl der Artikel: {count_lemma}, " \
                "davon [[:Kategorie:RE:Band {volume}" \
                "|{{{{PAGESINCATEGORY:RE:Band {volume}|pages}}}} in Volltext]]."\
             .format(count_lemma=len(self._lemmas), volume=self._volume.name)
+
+    def get_register_str(self):
+        return "{}\n{}".format(self._get_table(), self._get_footer())
 
 
 class ReRegisters(Mapping):

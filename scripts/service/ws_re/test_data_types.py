@@ -876,14 +876,14 @@ class TestReRegister(BaseTestRegister):
 |Abert
 |1927
 |}"""
-        compare(expected_table, register.get_table())
+        compare(expected_table, register._get_table())
 
     def test_get_footer(self):
         copy_test_data("I_1_two_entries", "I_1")
         register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
         expected_footer = """[[Kategorie:RE:Register|!]]
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
-        compare(expected_footer, register.get_footer())
+        compare(expected_footer, register._get_footer())
 
     #@skipUnless(INTEGRATION_TEST, "Execute only in integration test.")
     @skip("activate later")
