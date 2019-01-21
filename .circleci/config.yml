@@ -95,8 +95,8 @@ show_python_version: &show_python_version
 quality_steps: &quality_steps
   steps:
     - checkout
-    - <<: *show_python_version
     - <<: *restore_cache
+    - <<: *show_python_version
     - <<: *install_dependencies
     - <<: *save_cache
     - <<: *flake8
@@ -107,8 +107,8 @@ quality_steps: &quality_steps
 version_steps: &version_steps
   steps:
     - checkout
-    - <<: *show_python_version
     - <<: *restore_cache
+    - <<: *show_python_version
     - <<: *install_dependencies
     - <<: *save_cache
     - <<: *run_unittest
@@ -116,8 +116,8 @@ version_steps: &version_steps
 coverage_steps: &coverage_steps
   steps:
     - checkout
-    - <<: *show_python_version
     - <<: *restore_cache
+    - <<: *show_python_version
     - <<: *run_coverage
     - <<: *report_codacy
     - <<: *report_codecov

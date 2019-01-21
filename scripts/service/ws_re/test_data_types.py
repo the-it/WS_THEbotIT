@@ -1,4 +1,5 @@
 import copy
+from collections import OrderedDict
 from datetime import datetime
 import os
 import shutil
@@ -9,9 +10,9 @@ from unittest import TestCase, mock, skipUnless, skip
 import pywikibot
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import RePage, ReArticle, ReProperty, ReDatenException, \
-    ReVolume, ReVolumeType, ReVolumes, ReRegisterLemma, RegisterAuthor, RegisterAuthors, \
-    LemmaChapter, ReRegister, _REGISTER_PATH, ReRegisters
+from scripts.service.ws_re.data_types import RePage, Article, Property, ReDatenException, \
+    Volume, VolumeType, Volumes, Lemma, Author, Authors, \
+    LemmaChapter, Register, _REGISTER_PATH, Registers, AlphabeticRegister
 from tools import path_or_str, INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
@@ -57,7 +58,7 @@ def clear_test_path():
 
 class TestReProperty(TestCase):
     def test_init(self):
-        re_property = ReProperty(name="Test", default=False)
+        re_property = Property(name="Test", default=False)
         self.assertFalse(re_property.value)
         re_property.value = True
         self.assertTrue(re_property.value)
@@ -65,18 +66,18 @@ class TestReProperty(TestCase):
             re_property.value = "other"
 
     def test_format_bool(self):
-        re_property = ReProperty(name="Test", default=False)
+        re_property = Property(name="Test", default=False)
         self.assertEqual(re_property.value_to_string(), "OFF")
         re_property.value = True
         self.assertEqual(re_property.value_to_string(), "ON")
 
     def test_wrong_default(self):
         with self.assertRaises(TypeError):
-            re_property = ReProperty(name="Test", default=1)
+            re_property = Property(name="Test", default=1)
             re_property.value_to_string()
 
     def test_set_bool_with_ON_and_OFF(self):
-        re_property = ReProperty(name="Test", default=False)
+        re_property = Property(name="Test", default=False)
         re_property.value = "ON"
         self.assertTrue(re_property.value)
         re_property.value = "OFF"
@@ -85,70 +86,70 @@ class TestReProperty(TestCase):
         self.assertFalse(re_property.value)
 
     def test_set_bool_bug_non_capitalized(self):
-        re_property = ReProperty(name="Test", default=False)
+        re_property = Property(name="Test", default=False)
         re_property.value = "on"
         self.assertTrue(re_property)
 
     def test_set_value_not_stripped(self):
-        re_property = ReProperty(name="Test", default=False)
+        re_property = Property(name="Test", default=False)
         re_property.value = "ON         "
         self.assertTrue(re_property)
-        re_property_text = ReProperty(name="Text", default="")
+        re_property_text = Property(name="Text", default="")
         re_property_text.value = "foo              "
         compare("foo", re_property_text.value)
 
     def test_hash(self):
-        re_property = ReProperty(name="Test", default=False)
+        re_property = Property(name="Test", default=False)
         pre_hash = hash(re_property)
         re_property.value = True
         self.assertNotEqual(pre_hash, hash(re_property))
 
-        re_property = ReProperty(name="Test", default="")
+        re_property = Property(name="Test", default="")
         pre_hash = hash(re_property)
         re_property.value = "value"
         self.assertNotEqual(pre_hash, hash(re_property))
 
     def test_repr(self):
-        re_property = ReProperty(name="Test", default=False)
+        re_property = Property(name="Test", default=False)
         compare("<ReProperty> (name: Test, value: False, type: <class 'bool'>)", repr(re_property))
 
 
 class TestReArticle(TestCase):
     def setUp(self):
-        self.article = ReArticle()
+        self.article = Article()
 
     def test_article_type(self):
         self.assertEqual(self.article.article_type, "REDaten")
         self.article.article_type = "REAbschnitt"
         self.assertEqual(self.article.article_type, "REAbschnitt")
-        article = ReArticle(article_type="REAbschnitt")
+        article = Article(article_type="REAbschnitt")
         self.assertEqual(article.article_type, "REAbschnitt")
 
     def test_wrong_article_type(self):
         with self.assertRaisesRegex(ReDatenException, "ReStuff is not a permitted article type."):
-            ReArticle(article_type="ReStuff")
+            Article(article_type="ReStuff")
 
     def test_set_text(self):
         self.assertEqual(self.article.text, "")
         self.article.text = "bla"
         self.assertEqual(self.article.text, "bla")
-        article = ReArticle(text="blub")
+        article = Article(text="blub")
         self.assertEqual(article.text, "blub")
 
     def test_wrong_type_text(self):
         with self.assertRaisesRegex(ReDatenException, "Property text must be a string."):
-            ReArticle(text=1)
+            Article(text=1)
 
     def test_set_author(self):
         self.assertEqual(self.article.author, ("", ""))
         self.article.author = "bla"
         self.assertEqual(self.article.author, ("bla", ""))
-        article = ReArticle(author=("blub", "II,2"))
+        article = Article(author=("blub", "II,2"))
         self.assertEqual(article.author, ("blub", "II,2"))
 
     def test_wrong_type_author(self):
         with self.assertRaises(ReDatenException):
-            ReArticle(author=1)
+            Article(author=1)
 
     def test_properties_access(self):
         self.assertFalse(self.article["NACHTRAG"].value)
@@ -173,27 +174,27 @@ class TestReArticle(TestCase):
         self.assertEqual(len(self.article), 18)
 
     def test_properties_init(self):
-        article = ReArticle(re_daten_properties={"BAND": "I 1", "NACHTRAG": True})
+        article = Article(re_daten_properties={"BAND": "I 1", "NACHTRAG": True})
         self.assertEqual(article["BAND"].value_to_string(), "I 1")
         self.assertEqual(article["NACHTRAG"].value_to_string(), "ON")
 
     def test_properties_exception(self):
         with self.assertRaises(ReDatenException):
-            ReArticle(re_daten_properties={"BAND": 1})
+            Article(re_daten_properties={"BAND": 1})
 
     def test_simple_article(self):
         article_text = "{{REDaten}}text{{REAutor|Autor.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertEqual("text", article.text)
 
     def test_simple_article_with_whitespaces(self):
         article_text = "{{REDaten}}\n\n\t   text\t   {{REAutor|Autor.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertEqual("text", article.text)
 
     def test_from_text(self):
         article_text = "{{REDaten\n|BAND=III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertEqual(article.author, ("Some Author.", ""))
         self.assertEqual(article.text, "text")
         self.assertEqual(article.article_type, "REDaten")
@@ -205,13 +206,13 @@ class TestReArticle(TestCase):
                        "\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException,
                                     "REDaten has wrong key word. --> {.*?}"):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_from_text_short_keywords(self):
         article_text = "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB" \
                        "|XS={{START}}|XE={{END}}|GND=1234|KSCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
                        "\ntext\n{{REAutor|Some Author.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertEqual("I", article["BAND"].value)
         self.assertEqual("1", article["SPALTE_START"].value)
         self.assertEqual("2", article["SPALTE_END"].value)
@@ -234,45 +235,45 @@ class TestReArticle(TestCase):
         article_text = "{{REDaten\n|III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException,
                                     "REDaten has property without a key word. --> {.*?}"):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_from_text_two_REDaten_templates(self):
         article_text = "{{REDaten}}{{REDaten}}\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
                                                       "There must one start template"):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_from_text_no_REDaten_templates(self):
         article_text = "\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
                                                       "There must one start template"):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_from_text_two_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n{{REAutor|Some Author.}}{{REAutor}}"
         with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
                                                       "There must one stop template"):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_from_text_no_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n"
         with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
                                                       "There must one stop template"):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_from_text_wrong_order_of_templates(self):
         article_text = "{{REAutor}}{{REDaten}}\ntext"
         with self.assertRaisesRegex(ReDatenException,
                                     "Article has the wrong structure. Wrong order of templates."):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_complete_article(self):
         article_text = article_template
-        ReArticle.from_text(article_text)
+        Article.from_text(article_text)
 
     def test_from_text_REAbschnitt(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertEqual(article.article_type, "REAbschnitt")
 
     def test_from_text_text_in_front_of_article(self):
@@ -280,14 +281,14 @@ class TestReArticle(TestCase):
         with self.assertRaisesRegex(ReDatenException,
                                     "Article has the wrong structure. "
                                     "There is text in front of the article."):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_from_text_text_after_article(self):
         article_text = "{{REDaten}}text{{REAutor}}text"
         with self.assertRaisesRegex(ReDatenException,
                                     "Article has the wrong structure. "
                                     "There is text after the article."):
-            ReArticle.from_text(article_text)
+            Article.from_text(article_text)
 
     def test_to_text_simple(self):
         self.article.author = "Autor."
@@ -342,7 +343,7 @@ text
 '''24)''' ''L. Cominius Vipsanius Salutaris, domo Roma, subproc(urator) ludi magni, proc(urator) alimentor(um) per Apuliam Calabriam Lucaniam Bruttios, proc. prov(inciae) Sicil(iae), proc. capiend(orum) vec(tigalium) (?), proc. prov. Baet(icae), a cognitionib(us) domini n(ostri) Imp(eratoris) etc. etc. <!-- L. Septimi Severi Pertinac(is) Augusti, p(erfectissimus) v(ir), optimus vir et integrissimus'', CIL II 1085 = [[Hermann Dessau|{{SperrSchrift|Dessau}}]] 1406 (Ilipa); die Ehrung durch einen Untergebenen in der Baetica erfolgte bei seinem Abgang aus der Provinz, als er zu den Cognitiones des Kaisers berufen wurde. Die ''Cominia L. fil. Vipsania Dignitas c(larissima)f(emina)'', CIL IX 2336, könnte seine Tochter sein. -->
 
 {{REAutor|Stein.}}"""
-        ReArticle.from_text(test_string)
+        Article.from_text(test_string)
 
     def test_bug_2(self):
         test_string = """{{REDaten
@@ -363,32 +364,32 @@ text
 }}
 '''Lysippos. 1)''' Spartaner, führt unter König Agis und als sein Nachfolger Truppen gegen Elis (400/399): Xen. hell. IH 2 29f.
 {{REAutor|Kahrstedt.}}"""
-        ReArticle.from_text(test_string)
+        Article.from_text(test_string)
 
     def test_correct_case(self):
         article_text = "{{REDaten\n|Nachtrag=OFF|Ksch=OFF\n}}\ntext\n{{REAutor|Autor.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertEqual(article_template, article.to_text())
 
     def test_bug_dot_added_to_author(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|S.A.†}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertIn("{{REAutor|S.A.†}}", article.to_text())
 
     def test_bug_issue_number_deleted_from_author(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.|I,1}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         compare("I,1", article.author[1])
         self.assertIn("{{REAutor|Some Author.|I,1}}", article.to_text())
 
     def test_bug_issue_OFF_deleted_from_author(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|OFF}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertIn("{{REAutor|OFF}}", article.to_text())
 
     def test_bug_issue_OFF_deleted_from_author_no_OFF(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|A. Author.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         self.assertIn("{{REAutor|A. Author.}}", article.to_text())
 
 
@@ -410,7 +411,7 @@ class TestRePage(TestCase):
         re_page = RePage(self.page_mock)
         self.assertEqual(1, len(re_page))
         re_article = re_page[0]
-        self.assertTrue(isinstance(re_article, ReArticle))
+        self.assertTrue(isinstance(re_article, Article))
         self.assertEqual("text", re_article.text)
         self.assertEqual("REDaten", re_article.article_type)
         self.assertEqual(("Autor.", ""), re_article.author)
@@ -506,7 +507,7 @@ class TestRePage(TestCase):
         re_page = RePage(self.page_mock)
         self.assertEqual(1, len(re_page))
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         re_page.append(article)
         self.assertEqual(2, len(re_page))
         with self.assertRaises(TypeError):
@@ -526,7 +527,7 @@ class TestRePage(TestCase):
 
         pre_hash = hash(re_page)
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}"
-        article = ReArticle.from_text(article_text)
+        article = Article.from_text(article_text)
         re_page.append(article)
         self.assertNotEqual(pre_hash, hash(re_page))
 
@@ -588,9 +589,9 @@ text
         self.assertEqual(after, str(RePage(self.page_mock)))
 
 
-class TestReVolume(TestCase):
+class TestVolume(TestCase):
     def test_init(self):
-        volume = ReVolume("I,1", "1900", "Aal", "Bethel")
+        volume = Volume("I,1", "1900", "Aal", "Bethel")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
         compare("1900", volume.year)
@@ -598,7 +599,7 @@ class TestReVolume(TestCase):
         compare("Bethel", volume.end)
 
     def test_init_by_name(self):
-        volume = ReVolume(name="I,1", year="1900", start="Aal", end="Bethel")
+        volume = Volume(name="I,1", year="1900", start="Aal", end="Bethel")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
         compare("1900", volume.year)
@@ -606,33 +607,46 @@ class TestReVolume(TestCase):
         compare("Bethel", volume.end)
 
     def test_init_supp_or_register(self):
-        volume = ReVolume(name="S I", year="1900")
+        volume = Volume(name="S I", year="1900")
         compare("S I", volume.name)
         compare("1900", volume.year)
         self.assertIsNone(volume.start)
         self.assertIsNone(volume.end)
 
     def test_init_year_as_int(self):
-        volume = ReVolume(name="S I", year=1900)
+        volume = Volume(name="S I", year=1900)
         compare("S I", volume.name)
         compare("1900", volume.year)
 
     def test_volume_type(self):
-        volume = ReVolume("I,1", "1900", "Aal", "Bethel")
-        compare(ReVolumeType.FIRST_SERIES, volume.type)
-        volume = ReVolume("I A,1", "1900", "Aal", "Bethel")
-        compare(ReVolumeType.SECOND_SERIES, volume.type)
-        volume = ReVolume("S II", "1900", "Aal", "Bethel")
-        compare(ReVolumeType.SUPPLEMENTS, volume.type)
-        volume = ReVolume("R", "1900", "Aal", "Bethel")
-        compare(ReVolumeType.REGISTER, volume.type)
+        volume = Volume("I,1", "1900", "Aal", "Bethel")
+        compare(VolumeType.FIRST_SERIES, volume.type)
+        volume = Volume("I A,1", "1900", "Aal", "Bethel")
+        compare(VolumeType.SECOND_SERIES, volume.type)
+        volume = Volume("S II", "1900", "Aal", "Bethel")
+        compare(VolumeType.SUPPLEMENTS, volume.type)
+        volume = Volume("R", "1900", "Aal", "Bethel")
+        compare(VolumeType.REGISTER, volume.type)
         with self.assertRaises(ReDatenException):
-            volume = ReVolume("R I", "1900", "Aal", "Bethel").type
+            volume = Volume("R I", "1900", "Aal", "Bethel").type
+
+    def test_sortkey(self):
+        volume = Volume("I,1", "1900", "Aal", "Bethel")
+        compare("1_01_1", volume.sortkey)
+        volume = Volume("IX A,2", "1900", "Aal", "Bethel")
+        compare("2_09_2", volume.sortkey)
+        volume = Volume("X A", "1900", "Aal", "Bethel")
+        compare("2_10_None", volume.sortkey)
+        volume = Volume("S IV", "1900", "Aal", "Bethel")
+        compare("3_04", volume.sortkey)
+        volume = Volume("R", "1900", "Aal", "Bethel")
+        compare("4", volume.sortkey)
 
 
-class TestReVolumes(TestCase):
+
+class TestVolumes(TestCase):
     def setUp(self):
-        self.re_volumes = ReVolumes()
+        self.re_volumes = Volumes()
 
     def test_len(self):
         self.assertEqual(84, len(self.re_volumes))
@@ -656,39 +670,39 @@ class TestReVolumes(TestCase):
     def test_iter_first_series(self):
         counter = 0
         for volume in self.re_volumes.first_series:
-            compare(ReVolumeType.FIRST_SERIES, volume.type)
+            compare(VolumeType.FIRST_SERIES, volume.type)
             counter += 1
         compare(49, counter)
 
     def test_iter_second_series(self):
         counter = 0
         for volume in self.re_volumes.second_series:
-            compare(ReVolumeType.SECOND_SERIES, volume.type)
+            compare(VolumeType.SECOND_SERIES, volume.type)
             counter += 1
         compare(19, counter)
 
     def test_iter_supplements(self):
         counter = 0
         for volume in self.re_volumes.supplements:
-            compare(ReVolumeType.SUPPLEMENTS, volume.type)
+            compare(VolumeType.SUPPLEMENTS, volume.type)
             counter += 1
         compare(15, counter)
 
     def test_iter_register(self):
         counter = 0
         for volume in self.re_volumes.register:
-            compare(ReVolumeType.REGISTER, volume.type)
+            compare(VolumeType.REGISTER, volume.type)
             counter += 1
         compare(1, counter)
 
     def test_iter_all_volumes(self):
         counter = 0
-        current_type = ReVolumeType.FIRST_SERIES
-        following_types = [ReVolumeType.SECOND_SERIES,
-                           ReVolumeType.SUPPLEMENTS,
-                           ReVolumeType.REGISTER]
+        current_type = VolumeType.FIRST_SERIES
+        following_types = [VolumeType.SECOND_SERIES,
+                           VolumeType.SUPPLEMENTS,
+                           VolumeType.REGISTER]
         for volume in self.re_volumes.all_volumes:
-            compare(ReVolume, type(volume))
+            compare(Volume, type(volume))
             if volume.type == current_type:
                 pass
             elif volume.type == following_types[0]:
@@ -707,6 +721,48 @@ class TestReVolumes(TestCase):
         compare("I,1", self.re_volumes["I,1"].name)
 
 
+class TestAuthor(TestCase):
+    def test_author(self):
+        register_author = Author("Test Name", {"death": 1999})
+        compare("Test Name", register_author.name)
+        compare(1999, register_author.death)
+        compare(None, register_author.birth)
+
+        register_author = Author("Test Name", {"birth": 1999})
+        compare(None, register_author.death)
+        compare(1999, register_author.birth)
+
+
+class BaseTestRegister(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        clear_test_path()
+        copy_test_data("authors", "authors")
+        copy_test_data("authors_mapping", "authors_mapping")
+        Authors._REGISTER_PATH = _TEST_REGISTER_PATH
+        Register._REGISTER_PATH = _TEST_REGISTER_PATH
+
+    @classmethod
+    def tearDownClass(cls):
+        Authors._REGISTER_PATH = _REGISTER_PATH
+        Register._REGISTER_PATH = _REGISTER_PATH
+
+
+class TestAuthors(BaseTestRegister):
+    def test_load_data(self):
+        authors = Authors()
+        author = authors.get_author_by_mapping("Abbott", "I,1")
+        compare("Abbott", author.name)
+        compare(None, author.death)
+        author = authors.get_author_by_mapping("Abel", "I,1")
+        compare("Abel", author.name)
+        compare(1998, author.death)
+        author = authors.get_author_by_mapping("Abel", "XVI,1")
+        compare("Abel", author.name)
+        compare(1987, author.death)
+        compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
+
+
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)
@@ -717,28 +773,14 @@ class TestLemmaChapter(TestCase):
         compare(None, lemma_chapter.author)
 
 
-class BaseTestRegister(TestCase):
-    @classmethod
-    def setUpClass(cls):
-        clear_test_path()
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
-        RegisterAuthors._REGISTER_PATH = _TEST_REGISTER_PATH
-        ReRegister._REGISTER_PATH = _TEST_REGISTER_PATH
-
-    @classmethod
-    def tearDownClass(cls):
-        RegisterAuthors._REGISTER_PATH = _REGISTER_PATH
-        ReRegister._REGISTER_PATH = _REGISTER_PATH
-
-
-class TestReRegisterLemma(BaseTestRegister):
+class TestLemma(BaseTestRegister):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
 
     def setUp(self):
-        self.authors = RegisterAuthors()
+        self.authors = Authors()
+        self.volumes = Volumes()
 
     def test_from_dict_errors(self):
         basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
@@ -749,14 +791,14 @@ class TestReRegisterLemma(BaseTestRegister):
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
             with self.assertRaises(ReDatenException):
-                ReRegisterLemma(test_dict, ReVolumes()["I,1"], self.authors)
+                Lemma(test_dict, Volumes()["I,1"], self.authors)
 
         for entry in ["previous", "next", "redirect"]:
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
-            self.assertIsNone(ReRegisterLemma(test_dict, ReVolumes()["I,1"], self.authors)[entry])
+            self.assertIsNone(Lemma(test_dict, Volumes()["I,1"], self.authors)[entry])
 
-        re_register_lemma = ReRegisterLemma(basic_dict, ReVolumes()["I,1"], self.authors)
+        re_register_lemma = Lemma(basic_dict, Volumes()["I,1"], self.authors)
         compare("lemma", re_register_lemma["lemma"])
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])
@@ -771,11 +813,11 @@ class TestReRegisterLemma(BaseTestRegister):
                                                  {"start": 1, "end": 2, "author": "Abbott"}]}
 
     def test_get_link(self):
-        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
+        re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma._get_link())
 
     def test_get_pages(self):
-        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
+        re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|I,1, 18]]",
@@ -784,11 +826,13 @@ class TestReRegisterLemma(BaseTestRegister):
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
     def test_get_author_and_year(self):
-        re_register_lemma = ReRegisterLemma(self.basic_dict, "I,1", self.authors)
+        re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("Abert", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
         compare("1927", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
+        compare("", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "Abbott"})))
 
         # check if author not there
         compare("????", re_register_lemma._get_death_year(
@@ -803,23 +847,24 @@ class TestReRegisterLemma(BaseTestRegister):
 
     def test_year_format(self):
         year_free_content = datetime.now().year - 71
-        compare("style=\"background:#B9FFC5\"", ReRegisterLemma._get_year_format(str(year_free_content)))
-        compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format(str(year_free_content + 1)))
-        compare("", ReRegisterLemma._get_year_format(""))
-        compare("style=\"background:#FFCBCB\"", ReRegisterLemma._get_year_format("????"))
+        compare("style=\"background:#B9FFC5\"", Lemma._get_year_format(str(year_free_content)))
+        compare("style=\"background:#FFCBCB\"", Lemma._get_year_format(str(year_free_content + 1)))
+        compare("style=\"background:#CBCBCB\"", Lemma._get_year_format(""))
+        compare("style=\"background:#FFCBCB\"", Lemma._get_year_format("????"))
+        compare("style=\"background:#FFCBCB\"", Lemma._get_year_format(None))
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
         with self.assertRaises(ReDatenException):
-            re_register_lemma = ReRegisterLemma(no_chapter_dict, "I,1", self.authors)
+            re_register_lemma = Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
         no_chapter_dict = {"lemma": "lemma", "chapters": [{"start": 1}]}
         with self.assertRaises(ReDatenException):
-            re_register_lemma = ReRegisterLemma(no_chapter_dict, "I,1", self.authors)
+            re_register_lemma = Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
 
     def test_get_row(self):
         one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
-        re_register_lemma = ReRegisterLemma(one_line_dict, "I,1", self.authors)
+        re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
@@ -829,7 +874,7 @@ class TestReRegisterLemma(BaseTestRegister):
         two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
-        re_register_lemma = ReRegisterLemma(two_line_dict, "I,1", self.authors)
+        re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |rowspan=2|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
@@ -838,45 +883,18 @@ class TestReRegisterLemma(BaseTestRegister):
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
 |Abbott
-|style="background:#FFCBCB"|1988"""
+|style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
 
 
-class TestRegisterAuthor(TestCase):
-    def test_author(self):
-        register_author = RegisterAuthor("Test Name", {"death": 1999})
-        compare("Test Name", register_author.name)
-        compare(1999, register_author.death)
-        compare(None, register_author.birth)
-
-        register_author = RegisterAuthor("Test Name", {"birth": 1999})
-        compare(None, register_author.death)
-        compare(1999, register_author.birth)
-
-
-class TestRegisterAuthors(BaseTestRegister):
-    def test_load_data(self):
-        authors = RegisterAuthors()
-        author = authors.get_author_by_mapping("Abbott", "I,1")
-        compare("Abbott", author.name)
-        compare(1988, author.death)
-        author = authors.get_author_by_mapping("Abel", "I,1")
-        compare("Abel", author.name)
-        compare(1998, author.death)
-        author = authors.get_author_by_mapping("Abel", "XVI,1")
-        compare("Abel", author.name)
-        compare(1987, author.death)
-        compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
-
-
-class TestReRegister(BaseTestRegister):
+class TestRegister(BaseTestRegister):
     def test_init(self):
         copy_test_data("I_1_base", "I_1")
-        ReRegister(ReVolumes()["I,1"], RegisterAuthors())
+        Register(Volumes()["I,1"], Authors())
 
     def test_get_table(self):
         copy_test_data("I_1_two_entries", "I_1")
-        register = ReRegister(ReVolumes()["I,1"], RegisterAuthors())
+        register = Register(Volumes()["I,1"], Authors())
         expected_table = """{|class="wikitable sortable"
 !Artikel
 !Seite
@@ -900,18 +918,18 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     #@skipUnless(INTEGRATION_TEST, "Execute only in integration test.")
     @skip("activate later")
     def test_init_all_registers(self):
-        RegisterAuthors._REGISTER_PATH = _REGISTER_PATH
-        ReRegister._REGISTER_PATH = _REGISTER_PATH
-        authors = RegisterAuthors()
-        for volume in ReVolumes().all_volumes:
-            ReRegister(volume, authors)
+        Authors._REGISTER_PATH = _REGISTER_PATH
+        Register._REGISTER_PATH = _REGISTER_PATH
+        authors = Authors()
+        for volume in Volumes().all_volumes:
+            Register(volume, authors)
 
 
-class TestReRegisters(BaseTestRegister):
+class TestRegisters(BaseTestRegister):
     def test_init(self):
-        for volume in ReVolumes().all_volumes:
+        for volume in Volumes().all_volumes:
             copy_test_data("I_1_base", volume.file_name)
-        registers = ReRegisters()
+        registers = Registers()
         iterator = iter(registers)
         compare("I,1", next(iterator).volume.name)
         for i in range(83):
@@ -919,3 +937,21 @@ class TestReRegisters(BaseTestRegister):
         compare("R", last.volume.name)
         compare(84, len(registers))
         compare("IV,1", registers["IV,1"].volume.name)
+
+
+class TestAlphabeticRegister(BaseTestRegister):
+    def setUp(self):
+        copy_test_data("I_1_alpha", "I_1")
+        copy_test_data("III_1_alpha", "III_1")
+        self.authors = Authors()
+        self.volumes = Volumes()
+        self.registers = OrderedDict()
+        self.registers["I,1"] = Register(self.volumes["I,1"], self.authors)
+        self.registers["III,1"] = Register(self.volumes["III,1"], self.authors)
+
+
+    def test_init(self):
+        register = AlphabeticRegister(None, "Be", self.registers)
+        register = AlphabeticRegister("Be", None, self.registers)
+        i = 1
+

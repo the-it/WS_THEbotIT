@@ -1,0 +1,59 @@
+[
+  {
+    "lemma": "Aal",
+    "next": "Aba 1",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 4,
+        "author": "Abbott"
+      }
+    ]
+  },
+  {
+    "lemma": "Aba 1",
+    "previous": "Aal",
+    "next": "Aba 2",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abel"
+      }
+    ]
+  },
+  {
+    "lemma": "Aba 2",
+    "previous": "Aba 1",
+    "next": "Baaba",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abel"
+      }
+    ]
+  },
+  {
+    "lemma": "Baaba",
+    "previous": "Aba 2",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abert"
+      }
+    ]
+  },
+  {
+    "lemma": "Beta",
+    "previous": "Baaba",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abert"
+      }
+    ]
+  }
+]

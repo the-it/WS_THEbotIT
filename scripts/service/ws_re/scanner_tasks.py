@@ -4,7 +4,7 @@ from datetime import timedelta, datetime
 
 from pywikibot import Site, Page
 
-from scripts.service.ws_re.data_types import RePage, ReArticle
+from scripts.service.ws_re.data_types import RePage, Article
 from tools.bots import WikiLogger
 
 SUCCESS = "success"
@@ -86,7 +86,7 @@ class KSCHTask(ReScannerTask):
 
     def task(self):
         for re_article in self.re_page:
-            if isinstance(re_article, ReArticle):
+            if isinstance(re_article, Article):
                 template_match = self._regex_template.search(re_article.text)
                 if template_match:
                     re_article["TODESJAHR"].value = template_match.group(1)
@@ -99,7 +99,7 @@ class VERWTask(ReScannerTask):
 
     def task(self):
         for re_article in self.re_page:
-            if isinstance(re_article, ReArticle):
+            if isinstance(re_article, Article):
                 template_match = self._regex_template.search(re_article.text)
                 if template_match:
                     re_article["VERWEIS"].value = True
