@@ -14,7 +14,7 @@ class ReRegisterPrinter(CanonicalBot):
                                       .format(register.volume.name)),
                                  register.get_register_str(),
                                  "Register aktualisiert")
-            if idx > 4:
+            if idx > 6:
                 break
         return True
 
