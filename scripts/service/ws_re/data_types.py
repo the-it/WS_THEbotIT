@@ -554,11 +554,12 @@ class Authors:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self):
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r") \
-                as json_file:
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r",
+                  encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors = {}
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r") as json_file:
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r",
+                  encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
             for author in json_dict:
                 self._authors[author] = Author(author, json_dict[author])
@@ -748,7 +749,7 @@ class Register:
         self._authors = authors
         self._volume = volume
         with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))),
-                  "r") as json_file:
+                  "r", encoding="utf-8") as json_file:
             self._dict = json.load(json_file)
         self._lemmas = []
         for lemma in self._dict:
@@ -788,24 +789,6 @@ class Register:
         return "{}\n{}".format(self._get_table(), self._get_footer())
 
 
-class Registers(Mapping):
-    def __init__(self):
-        self._authors = Authors()
-        self._registers = OrderedDict()
-        for volume in Volumes().all_volumes:
-            self._registers[volume.name] = Register(volume, self._authors)
-
-    def __len__(self):
-        return len(self._registers)
-
-    def __iter__(self) -> Generator[Register, None, None]:
-        for volume in self._registers:
-            yield self._registers[volume]
-
-    def __getitem__(self, item) -> Register:
-        return self._registers[item]
-
-
 class AlphabeticRegister:
     def __init__(self, start: Union[str, None], end: Union[str, None], registers: OrderedDict):
         self._start = start
@@ -824,11 +807,11 @@ class AlphabeticRegister:
         lemmas = []
         for volume_str in self._registers:
             for lemma in self._registers[volume_str].lemmas:
-                if self.is_lemma_in_range(lemma):
+                if self._is_lemma_in_range(lemma):
                     lemmas.append(lemma)
         self._lemmas = sorted(lemmas, key=lambda k: (k['lemma'], k.volume.sortkey))
 
-    def is_lemma_in_range(self, lemma):
+    def _is_lemma_in_range(self, lemma):
         append = True
         if self._start:
             # include start
@@ -839,3 +822,21 @@ class AlphabeticRegister:
             if lemma["lemma"] >= self._end:
                 append = False
         return append
+
+
+class Registers(Mapping):
+    def __init__(self):
+        self._authors = Authors()
+        self._registers = OrderedDict()
+        for volume in Volumes().all_volumes:
+            self._registers[volume.name] = Register(volume, self._authors)
+
+    def __len__(self):
+        return len(self._registers)
+
+    def __iter__(self) -> Generator[Register, None, None]:
+        for volume in self._registers:
+            yield self._registers[volume]
+
+    def __getitem__(self, item) -> Register:
+        return self._registers[item]
