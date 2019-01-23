@@ -925,20 +925,6 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
             Register(volume, authors)
 
 
-class TestRegisters(BaseTestRegister):
-    def test_init(self):
-        for volume in Volumes().all_volumes:
-            copy_test_data("I_1_base", volume.file_name)
-        registers = Registers()
-        iterator = iter(registers)
-        compare("I,1", next(iterator).volume.name)
-        for i in range(83):
-            last = next(iterator)
-        compare("R", last.volume.name)
-        compare(84, len(registers))
-        compare("IV,1", registers["IV,1"].volume.name)
-
-
 class TestAlphabeticRegister(BaseTestRegister):
     def setUp(self):
         copy_test_data("I_1_alpha", "I_1")
@@ -954,4 +940,18 @@ class TestAlphabeticRegister(BaseTestRegister):
         register = AlphabeticRegister(None, "Be", self.registers)
         register = AlphabeticRegister("Be", None, self.registers)
         i = 1
+
+
+class TestRegisters(BaseTestRegister):
+    def test_init(self):
+        for volume in Volumes().all_volumes:
+            copy_test_data("I_1_base", volume.file_name)
+        registers = Registers()
+        iterator = iter(registers)
+        compare("I,1", next(iterator).volume.name)
+        for i in range(83):
+            last = next(iterator)
+        compare("R", last.volume.name)
+        compare(84, len(registers))
+        compare("IV,1", registers["IV,1"].volume.name)
 
