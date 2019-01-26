@@ -12,7 +12,7 @@ from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, Article, Property, ReDatenException, \
     Volume, VolumeType, Volumes, Lemma, Author, Authors, \
-    LemmaChapter, Register, _REGISTER_PATH, Registers, AlphabeticRegister
+    LemmaChapter, VolumeRegister, _REGISTER_PATH, Registers, AlphabeticRegister
 from tools import path_or_str, INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
@@ -740,12 +740,12 @@ class BaseTestRegister(TestCase):
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
         Authors._REGISTER_PATH = _TEST_REGISTER_PATH
-        Register._REGISTER_PATH = _TEST_REGISTER_PATH
+        VolumeRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
     @classmethod
     def tearDownClass(cls):
         Authors._REGISTER_PATH = _REGISTER_PATH
-        Register._REGISTER_PATH = _REGISTER_PATH
+        VolumeRegister._REGISTER_PATH = _REGISTER_PATH
 
 
 class TestAuthors(BaseTestRegister):
@@ -892,11 +892,11 @@ class TestLemma(BaseTestRegister):
 class TestRegister(BaseTestRegister):
     def test_init(self):
         copy_test_data("I_1_base", "I_1")
-        Register(Volumes()["I,1"], Authors())
+        VolumeRegister(Volumes()["I,1"], Authors())
 
     def test_get_table(self):
         copy_test_data("I_1_two_entries", "I_1")
-        register = Register(Volumes()["I,1"], Authors())
+        register = VolumeRegister(Volumes()["I,1"], Authors())
         expected_table = """{|class="wikitable sortable"
 !Artikel
 !Seite
@@ -921,10 +921,10 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     @skip("activate later")
     def test_init_all_registers(self):
         Authors._REGISTER_PATH = _REGISTER_PATH
-        Register._REGISTER_PATH = _REGISTER_PATH
+        VolumeRegister._REGISTER_PATH = _REGISTER_PATH
         authors = Authors()
         for volume in Volumes().all_volumes:
-            Register(volume, authors)
+            VolumeRegister(volume, authors)
 
 
 class TestAlphabeticRegister(BaseTestRegister):
@@ -934,8 +934,8 @@ class TestAlphabeticRegister(BaseTestRegister):
         self.authors = Authors()
         self.volumes = Volumes()
         self.registers = OrderedDict()
-        self.registers["I,1"] = Register(self.volumes["I,1"], self.authors)
-        self.registers["III,1"] = Register(self.volumes["III,1"], self.authors)
+        self.registers["I,1"] = VolumeRegister(self.volumes["I,1"], self.authors)
+        self.registers["III,1"] = VolumeRegister(self.volumes["III,1"], self.authors)
 
 
     def test_init(self):

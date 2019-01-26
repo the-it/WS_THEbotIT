@@ -743,7 +743,7 @@ class Lemma(Mapping):
         return year_format
 
 
-class Register:
+class VolumeRegister:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self, volume: Volume, authors: Authors):
@@ -831,14 +831,14 @@ class Registers(Mapping):
         self._authors = Authors()
         self._registers = OrderedDict()
         for volume in Volumes().all_volumes:
-            self._registers[volume.name] = Register(volume, self._authors)
+            self._registers[volume.name] = VolumeRegister(volume, self._authors)
 
     def __len__(self):
         return len(self._registers)
 
-    def __iter__(self) -> Generator[Register, None, None]:
+    def __iter__(self) -> Generator[VolumeRegister, None, None]:
         for volume in self._registers:
             yield self._registers[volume]
 
-    def __getitem__(self, item) -> Register:
+    def __getitem__(self, item) -> VolumeRegister:
         return self._registers[item]
