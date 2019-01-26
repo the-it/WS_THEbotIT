@@ -885,6 +885,8 @@ class TestLemma(BaseTestRegister):
 |Abbott
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
+        expected_row = expected_row.replace("[[RE:lemma|{{Anker2|lemma}}]]", "I,1")
+        compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
 
 class TestRegister(BaseTestRegister):

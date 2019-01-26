@@ -668,10 +668,11 @@ class Lemma(Mapping):
                 return False
         return True
 
-    def get_table_row(self) -> str:
+    def get_table_row(self, print_volume:bool = False) -> str:
         row_string = ["|-"]
         if len(self._chapters) > 1:
-            row_string.append("rowspan={}|{}".format(len(self._chapters), self._get_link()))
+            content = self.volume.name if print_volume else self._get_link()
+            row_string.append("rowspan={}|{}".format(len(self._chapters), content))
         else:
             row_string.append(self._get_link())
         for chapter in self._chapters:
@@ -798,7 +799,8 @@ class AlphabeticRegister:
         self._init_lemmas()
 
     def __repr__(self):  # pragma: no cover
-        return "<ALPHABETIC REGISTER - start:{}, end:{}>".format(self._start, self._end)
+        return "<ALPHABETIC REGISTER - start:{}, end:{}, lemmas:{}>"\
+            .format(self._start, self._end, len(self._lemmas))
 
     def __len__(self):
         return len(self._lemmas)
