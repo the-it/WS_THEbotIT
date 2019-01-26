@@ -654,6 +654,10 @@ class Lemma(Mapping):
     def volume(self):
         return self._volume
 
+    @property
+    def sort_key(self):
+        return self["lemma"].lower().replace("v", "u").replace("w", "u").replace("j", "i")
+
     def keys(self):
         return self._lemma_dict.keys()
 
@@ -668,7 +672,7 @@ class Lemma(Mapping):
                 return False
         return True
 
-    def get_table_row(self, print_volume:bool = False) -> str:
+    def get_table_row(self, print_volume: bool = False) -> str:
         row_string = ["|-"]
         if len(self._chapters) > 1:
             content = self.volume.name if print_volume else self._get_link()
@@ -791,6 +795,11 @@ class VolumeRegister:
 
 
 class AlphabeticRegister:
+    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "ea", "er", "f", "g",
+                    "ha", "hi", "i", "k", "kl", "la", "li", "ma", "me", "mi", "n", "o", "p", "pe",
+                    "pi", "po", "pr", "q", "r", "sa", "se", "so", "ta", "th", "ti", "u", "uf", "x"
+                    "x", "y", "z"]
+
     def __init__(self, start: Union[str, None], end: Union[str, None], registers: OrderedDict):
         self._start = start
         self._end = end
@@ -805,23 +814,27 @@ class AlphabeticRegister:
     def __len__(self):
         return len(self._lemmas)
 
+    def __getitem__(self, item: int) -> Lemma:
+        return self._lemmas[item]
+
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
             for lemma in self._registers[volume_str].lemmas:
                 if self._is_lemma_in_range(lemma):
                     lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k['lemma'], k.volume.sortkey))
+        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sortkey))
+        i = 1
 
     def _is_lemma_in_range(self, lemma):
         append = True
         if self._start:
             # include start
-            if lemma["lemma"] < self._start:
+            if lemma.sort_key < self._start:
                 append = False
         if self._end:
             # exclude end
-            if lemma["lemma"] >= self._end:
+            if lemma.sort_key >= self._end:
                 append = False
         return append
 

@@ -888,6 +888,12 @@ class TestLemma(BaseTestRegister):
         expected_row = expected_row.replace("[[RE:lemma|{{Anker2|lemma}}]]", "I,1")
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
+    def test_sort_key(self):
+        uvwij_dict = copy.deepcopy(self.basic_dict)
+        uvwij_dict["lemma"] = "UvWij"
+        uvwij_lemma = Lemma(uvwij_dict, self.volumes["I,1"], self.authors)
+        compare("uuuii", uvwij_lemma.sort_key)
+
 
 class TestRegister(BaseTestRegister):
     def test_init(self):
@@ -939,9 +945,16 @@ class TestAlphabeticRegister(BaseTestRegister):
 
 
     def test_init(self):
-        register = AlphabeticRegister(None, "Be", self.registers)
-        register = AlphabeticRegister("Be", None, self.registers)
-        i = 1
+        a_register = AlphabeticRegister("a", "be", self.registers)
+        b_register = AlphabeticRegister("be", None, self.registers)
+        compare(5, len(a_register))
+        compare(6, len(b_register))
+        compare("Aal", a_register[0]["lemma"])
+        compare("Baaba", a_register[4]["lemma"])
+        compare("Beta", b_register[0]["lemma"])
+        compare("Vaaa", b_register[4]["lemma"])
+        compare("Ueee", b_register[5]["lemma"])
+
 
 
 class TestRegisters(BaseTestRegister):
