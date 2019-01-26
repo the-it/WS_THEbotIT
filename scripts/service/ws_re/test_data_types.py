@@ -818,11 +818,11 @@ class TestLemma(BaseTestRegister):
 
     def test_get_pages(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]",
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|I,1, 18]]",
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|18]]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 18, "end": 18, "author": "Abel"})))
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|I,1, 198]]-200",
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|198]]-200",
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
     def test_get_author_and_year(self):
@@ -867,7 +867,7 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |[[RE:lemma|{{Anker2|lemma}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
@@ -877,11 +877,11 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |rowspan=2|[[RE:lemma|{{Anker2|lemma}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
 |Abbott
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
@@ -892,7 +892,7 @@ class TestLemma(BaseTestRegister):
         uvwij_dict = copy.deepcopy(self.basic_dict)
         uvwij_dict["lemma"] = "UvWij"
         uvwij_lemma = Lemma(uvwij_dict, self.volumes["I,1"], self.authors)
-        compare("uuuii", uvwij_lemma.sort_key)
+        compare("uuuii", uvwij_lemma.sortkey)
 
 
 class TestRegister(BaseTestRegister):
@@ -910,12 +910,12 @@ class TestRegister(BaseTestRegister):
 !Sterbejahr
 |-
 |[[RE:Aal|{{Anker2|Aal}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
 |Abel
 |style="background:#FFCBCB"|1998
 |-
 |[[RE:Aarassos|{{Anker2|Aarassos}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|I,1, 4]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
 |}
@@ -943,7 +943,6 @@ class TestAlphabeticRegister(BaseTestRegister):
         self.registers["I,1"] = VolumeRegister(self.volumes["I,1"], self.authors)
         self.registers["III,1"] = VolumeRegister(self.volumes["III,1"], self.authors)
 
-
     def test_init(self):
         a_register = AlphabeticRegister("a", "be", self.registers)
         b_register = AlphabeticRegister("be", None, self.registers)
@@ -955,6 +954,57 @@ class TestAlphabeticRegister(BaseTestRegister):
         compare("Vaaa", b_register[4]["lemma"])
         compare("Ueee", b_register[5]["lemma"])
 
+    def test_make_table(self):
+        b_register = AlphabeticRegister("be", None, self.registers)
+        expected_table = """{|class="wikitable sortable"
+!Artikel
+!Band
+!Seite
+!Autor
+!Sterbejahr
+|-
+|rowspan=3|[[RE:Beta|{{Anker2|Beta}}]]
+|rowspan=2|I,1
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|-
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]-5
+|Abel
+|style="background:#FFCBCB"|1998
+|-
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abbott
+|
+|-
+|[[RE:Charlie|{{Anker2|Charlie}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abel
+|style="background:#FFCBCB"|1998
+|-
+|[[RE:Delta|{{Anker2|Delta}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|-
+|[[RE:Vaaa|{{Anker2|Vaaa}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|-
+|[[RE:Ueee|{{Anker2|Ueee}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
+        compare(expected_table, b_register.get_register_str())
 
 
 class TestRegisters(BaseTestRegister):

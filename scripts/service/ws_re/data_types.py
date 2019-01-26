@@ -655,8 +655,12 @@ class Lemma(Mapping):
         return self._volume
 
     @property
-    def sort_key(self):
-        return self["lemma"].lower().replace("v", "u").replace("w", "u").replace("j", "i")
+    def sortkey(self):
+        return self["lemma"]\
+            .lower()\
+            .replace("v", "u")\
+            .replace("w", "u")\
+            .replace("j", "i")
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -697,7 +701,7 @@ class Lemma(Mapping):
         if start_page_scan % 2 == 0:
             start_page_scan -= 1
         pages_str = "[[Special:Filepath/Pauly-Wissowa_{issue},_{start_page_scan:04d}.jpg|" \
-                    "{issue}, {start_page}]]"\
+                    "{start_page}]]"\
             .format(issue=self._volume.name,
                     start_page=lemma_chapter.start,
                     start_page_scan=start_page_scan)
@@ -823,20 +827,38 @@ class AlphabeticRegister:
             for lemma in self._registers[volume_str].lemmas:
                 if self._is_lemma_in_range(lemma):
                     lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sortkey))
-        i = 1
+        self._lemmas = sorted(lemmas, key=lambda k: (k.sortkey, k.volume.sortkey))
 
     def _is_lemma_in_range(self, lemma):
         append = True
         if self._start:
             # include start
-            if lemma.sort_key < self._start:
+            if lemma.sortkey < self._start:
                 append = False
         if self._end:
             # exclude end
-            if lemma.sort_key >= self._end:
+            if lemma.sortkey >= self._end:
                 append = False
         return append
+
+    def _get_table(self):
+        header = """{|class="wikitable sortable"
+!Artikel
+!Seite
+!Autor
+!Sterbejahr"""
+        table = [header]
+        for lemma in self._lemmas:
+            table.append(lemma.get_table_row())
+        table.append("|}")
+        return "\n".join(table)
+
+    def _get_footer(self):
+        return "[[Kategorie:RE:Register|!]]\n" \
+               "Zahl der Artikel: {count_lemma}, ".format(count_lemma=len(self._lemmas))
+
+    def get_register_str(self):
+        return "{}\n{}".format(self._get_table(), self._get_footer())
 
 
 class Registers(Mapping):
