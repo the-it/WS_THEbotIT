@@ -33,6 +33,10 @@ class ReImporter(CanonicalBot):
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
+            file = path_or_str(Path(__file__).parent.joinpath(self._register_folder)
+                               .joinpath("original_{}.txt".format(volume.file_name)))
+            with open(file, mode="w", encoding="utf-8") as original:
+                original.write(old_register.text)
             self._dump_register(volume.file_name, old_register.text)
         self._dump_authors()
         return True

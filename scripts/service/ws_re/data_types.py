@@ -761,7 +761,7 @@ class Lemma(Mapping):
         return year_format
 
 
-class Register(ABC):
+class Register(ABC):  # pylint: disable=too-few-public-methods
     @staticmethod
     def squash_lemmas(lemmas):
         return_lemmas = []
@@ -880,6 +880,7 @@ class AlphabeticRegister(Register):
         for lemmas in self.squash_lemmas(self._lemmas):
             chapter_sum = 0
             table_rows = []
+            lemma = None
             for lemma in lemmas:
                 chapter_sum += len(lemma.chapters)
                 table_rows.append(lemma.get_table_row(print_volume=True))
