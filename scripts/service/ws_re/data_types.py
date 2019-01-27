@@ -845,6 +845,10 @@ class AlphabeticRegister(Register):
     def __getitem__(self, item: int) -> Lemma:
         return self._lemmas[item]
 
+    @property
+    def start(self):
+        return self._start
+
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
@@ -937,5 +941,5 @@ class Registers(Mapping):
         return self._registers[item]
 
     @property
-    def alphabetic_registers(self):
+    def alphabetic(self):
         return self._alphabetic_registers
