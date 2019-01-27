@@ -12,7 +12,7 @@ from testfixtures import compare
 
 from scripts.service.ws_re.data_types import RePage, Article, Property, ReDatenException, \
     Volume, VolumeType, Volumes, Lemma, Author, Authors, \
-    LemmaChapter, Register, _REGISTER_PATH, Registers, AlphabeticRegister
+    LemmaChapter, VolumeRegister, _REGISTER_PATH, Registers, AlphabeticRegister
 from tools import path_or_str, INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
@@ -740,12 +740,12 @@ class BaseTestRegister(TestCase):
         copy_test_data("authors", "authors")
         copy_test_data("authors_mapping", "authors_mapping")
         Authors._REGISTER_PATH = _TEST_REGISTER_PATH
-        Register._REGISTER_PATH = _TEST_REGISTER_PATH
+        VolumeRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
     @classmethod
     def tearDownClass(cls):
         Authors._REGISTER_PATH = _REGISTER_PATH
-        Register._REGISTER_PATH = _REGISTER_PATH
+        VolumeRegister._REGISTER_PATH = _REGISTER_PATH
 
 
 class TestAuthors(BaseTestRegister):
@@ -814,15 +814,15 @@ class TestLemma(BaseTestRegister):
 
     def test_get_link(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
-        compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma._get_link())
+        compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma.get_link())
 
     def test_get_pages(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]",
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|I,1, 18]]",
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|18]]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 18, "end": 18, "author": "Abel"})))
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|I,1, 198]]-200",
+        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|198]]-200",
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
     def test_get_author_and_year(self):
@@ -867,7 +867,7 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |[[RE:lemma|{{Anker2|lemma}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
@@ -877,24 +877,32 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |rowspan=2|[[RE:lemma|{{Anker2|lemma}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
 |Abbott
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
+        expected_row = expected_row.replace("[[RE:lemma|{{Anker2|lemma}}]]", "I,1")
+        compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
+
+    def test_sort_key(self):
+        uvwij_dict = copy.deepcopy(self.basic_dict)
+        uvwij_dict["lemma"] = "UvWij"
+        uvwij_lemma = Lemma(uvwij_dict, self.volumes["I,1"], self.authors)
+        compare("uuuii", uvwij_lemma.sortkey)
 
 
 class TestRegister(BaseTestRegister):
     def test_init(self):
         copy_test_data("I_1_base", "I_1")
-        Register(Volumes()["I,1"], Authors())
+        VolumeRegister(Volumes()["I,1"], Authors())
 
     def test_get_table(self):
         copy_test_data("I_1_two_entries", "I_1")
-        register = Register(Volumes()["I,1"], Authors())
+        register = VolumeRegister(Volumes()["I,1"], Authors())
         expected_table = """{|class="wikitable sortable"
 !Artikel
 !Seite
@@ -902,12 +910,12 @@ class TestRegister(BaseTestRegister):
 !Sterbejahr
 |-
 |[[RE:Aal|{{Anker2|Aal}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|I,1, 1]]-4
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
 |Abel
 |style="background:#FFCBCB"|1998
 |-
 |[[RE:Aarassos|{{Anker2|Aarassos}}]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|I,1, 4]]
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
 |}
@@ -915,14 +923,99 @@ class TestRegister(BaseTestRegister):
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
         compare(expected_table, register.get_register_str())
 
-    #@skipUnless(INTEGRATION_TEST, "Execute only in integration test.")
-    @skip("activate later")
-    def test_init_all_registers(self):
-        Authors._REGISTER_PATH = _REGISTER_PATH
-        Register._REGISTER_PATH = _REGISTER_PATH
-        authors = Authors()
-        for volume in Volumes().all_volumes:
-            Register(volume, authors)
+
+class TestAlphabeticRegister(BaseTestRegister):
+    def setUp(self):
+        copy_test_data("I_1_alpha", "I_1")
+        copy_test_data("III_1_alpha", "III_1")
+        self.authors = Authors()
+        self.volumes = Volumes()
+        self.registers = OrderedDict()
+        self.registers["I,1"] = VolumeRegister(self.volumes["I,1"], self.authors)
+        self.registers["III,1"] = VolumeRegister(self.volumes["III,1"], self.authors)
+
+    def test_init(self):
+        a_register = AlphabeticRegister("a", "be", self.registers)
+        b_register = AlphabeticRegister("be", None, self.registers)
+        compare(5, len(a_register))
+        compare(5, len(b_register))
+        compare("Aal", a_register[0]["lemma"])
+        compare("Baaba", a_register[4]["lemma"])
+        compare("Beta", b_register[0]["lemma"])
+        compare("Vaaa", b_register[4]["lemma"])
+        compare("Ueee", b_register[5]["lemma"])
+
+    def test_squash_lemmas(self):
+        register = AlphabeticRegister(None, "Be", OrderedDict())
+        lemma1 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+                        Volumes()["I,1"],
+                        self.authors)
+        lemma2 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+                        Volumes()["III,1"],
+                        self.authors)
+        lemma3 = Lemma({"lemma": "lemma2", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+                        Volumes()["III,1"],
+                        self.authors)
+        lemmas = [lemma1, lemma2, lemma3]
+        expection = [[lemma1, lemma2], [lemma3]]
+        compare(expection, register.squash_lemmas(lemmas))
+
+    def test_squash_lemmas_empty(self):
+        register = AlphabeticRegister(None, "Be", OrderedDict())
+        expection = []
+        compare(expection, register.squash_lemmas([]))
+
+    def test_make_table(self):
+        b_register = AlphabeticRegister("be", None, self.registers)
+        expected_table = """{|class="wikitable sortable"
+!Artikel
+!Band
+!Seite
+!Autor
+!Sterbejahr
+|-
+|rowspan=3|[[RE:Beta|{{Anker2|Beta}}]]
+|rowspan=2|I,1
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|-
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]-5
+|Abel
+|style="background:#FFCBCB"|1998
+|-
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abbott
+|style="background:#CBCBCB"|
+|-
+|[[RE:Charlie|{{Anker2|Charlie}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abel
+|style="background:#FFCBCB"|1998
+|-
+|[[RE:Delta|{{Anker2|Delta}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|-
+|[[RE:Vaaa|{{Anker2|Vaaa}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|-
+|[[RE:Ueee|{{Anker2|Ueee}}]]
+|III,1
+|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|Abert
+|style="background:#B9FFC5"|1927
+|}
+[[Kategorie:RE:Register|!]]
+Zahl der Artikel: 6, """
+        compare(expected_table, b_register.get_register_str())
 
 
 class TestRegisters(BaseTestRegister):
@@ -938,20 +1031,18 @@ class TestRegisters(BaseTestRegister):
         compare(84, len(registers))
         compare("IV,1", registers["IV,1"].volume.name)
 
+    def test_not_all_there(self):
+        copy_test_data("I_1_base", "I_1")
+        registers = Registers()
 
-class TestAlphabeticRegister(BaseTestRegister):
-    def setUp(self):
+    def test_alphabetic(self):
         copy_test_data("I_1_alpha", "I_1")
         copy_test_data("III_1_alpha", "III_1")
-        self.authors = Authors()
-        self.volumes = Volumes()
-        self.registers = OrderedDict()
-        self.registers["I,1"] = Register(self.volumes["I,1"], self.authors)
-        self.registers["III,1"] = Register(self.volumes["III,1"], self.authors)
-
-
-    def test_init(self):
-        register = AlphabeticRegister(None, "Be", self.registers)
-        register = AlphabeticRegister("Be", None, self.registers)
-        i = 1
+        registers = Registers()
+        compare(44, len(registers.alphabetic))
+        compare(4, len(registers.alphabetic["a"]))
+        compare(2, len(registers.alphabetic["b"]))
+        compare(1, len(registers.alphabetic["ch"]))
+        compare(1, len(registers.alphabetic["da"]))
+        compare(2, len(registers.alphabetic["u"]))
 

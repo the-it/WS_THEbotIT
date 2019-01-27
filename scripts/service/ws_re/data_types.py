@@ -1,4 +1,5 @@
 import json
+from abc import ABC
 from collections import OrderedDict
 from collections.abc import Mapping, Sequence
 from datetime import datetime
@@ -554,11 +555,12 @@ class Authors:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self):
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r") \
-                as json_file:
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r",
+                  encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors = {}
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r") as json_file:
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r",
+                  encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
             for author in json_dict:
                 self._authors[author] = Author(author, json_dict[author])
@@ -632,10 +634,12 @@ class Lemma(Mapping):
                                    .format(self._lemma_dict))
 
     def __repr__(self):  # pragma: no cover
-        return "<LEMMA - lemma:{}, previous:{}, next:{}, chapters:{}>".format(self["lemma"],
-                                                                              self["previous"],
-                                                                              self["next"],
-                                                                              len(self._chapters))
+        return "<LEMMA - lemma:{}, previous:{}, next:{}, chapters:{}, volume:{}>"\
+            .format(self["lemma"],
+                    self["previous"],
+                    self["next"],
+                    len(self._chapters),
+                    self._volume.name)
 
     def __getitem__(self, item):
         try:
@@ -653,6 +657,18 @@ class Lemma(Mapping):
     def volume(self):
         return self._volume
 
+    @property
+    def chapters(self):
+        return self._chapters
+
+    @property
+    def sortkey(self):
+        return self["lemma"]\
+            .lower()\
+            .replace("v", "u")\
+            .replace("w", "u")\
+            .replace("j", "i")
+
     def keys(self):
         return self._lemma_dict.keys()
 
@@ -667,12 +683,13 @@ class Lemma(Mapping):
                 return False
         return True
 
-    def get_table_row(self) -> str:
+    def get_table_row(self, print_volume: bool = False) -> str:
         row_string = ["|-"]
+        link_or_volume = self.volume.name if print_volume else self.get_link()
         if len(self._chapters) > 1:
-            row_string.append("rowspan={}|{}".format(len(self._chapters), self._get_link()))
+            row_string.append("rowspan={}|{}".format(len(self._chapters), link_or_volume))
         else:
-            row_string.append(self._get_link())
+            row_string.append(link_or_volume)
         for chapter in self._chapters:
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))
@@ -681,9 +698,12 @@ class Lemma(Mapping):
             row_string.append("-")
         # remove the last entry again because the row separator only needed between rows
         row_string.pop(-1)
+        # if print_volume:
+        #     row_string.pop(0)
+        #     row_string[0] = "|" + row_string[0]
         return "\n|".join(row_string)
 
-    def _get_link(self) -> str:
+    def get_link(self) -> str:
         return "[[RE:{lemma}|{{{{Anker2|{lemma}}}}}]]".format(lemma=self["lemma"])
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
@@ -691,7 +711,7 @@ class Lemma(Mapping):
         if start_page_scan % 2 == 0:
             start_page_scan -= 1
         pages_str = "[[Special:Filepath/Pauly-Wissowa_{issue},_{start_page_scan:04d}.jpg|" \
-                    "{issue}, {start_page}]]"\
+                    "{start_page}]]"\
             .format(issue=self._volume.name,
                     start_page=lemma_chapter.start,
                     start_page_scan=start_page_scan)
@@ -741,21 +761,40 @@ class Lemma(Mapping):
         return year_format
 
 
-class Register:
+class Register(ABC):  # pylint: disable=too-few-public-methods
+    @staticmethod
+    def squash_lemmas(lemmas):
+        return_lemmas = []
+        last_lemmas = []
+        for lemma in lemmas:
+            if last_lemmas:
+                if lemma["lemma"] == last_lemmas[-1]["lemma"]:
+                    last_lemmas.append(lemma)
+                    continue
+                else:
+                    return_lemmas.append(last_lemmas)
+                    last_lemmas = []
+            last_lemmas.append(lemma)
+        if last_lemmas:
+            return_lemmas.append(last_lemmas)
+        return return_lemmas
+
+
+class VolumeRegister(Register):
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self, volume: Volume, authors: Authors):
         self._authors = authors
         self._volume = volume
         with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))),
-                  "r") as json_file:
+                  "r", encoding="utf-8") as json_file:
             self._dict = json.load(json_file)
         self._lemmas = []
         for lemma in self._dict:
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
-    def __repr__(self):
-        return "<REGISTER - volume:{}, lemmas:{}>".format(self.volume.name, len(self.lemmas))
+    def __repr__(self):  # pragma: no cover
+        return "<VOLUME REGISTER - volume:{}, lemmas:{}>".format(self.volume.name, len(self.lemmas))
 
     @property
     def volume(self):
@@ -788,25 +827,7 @@ class Register:
         return "{}\n{}".format(self._get_table(), self._get_footer())
 
 
-class Registers(Mapping):
-    def __init__(self):
-        self._authors = Authors()
-        self._registers = OrderedDict()
-        for volume in Volumes().all_volumes:
-            self._registers[volume.name] = Register(volume, self._authors)
-
-    def __len__(self):
-        return len(self._registers)
-
-    def __iter__(self) -> Generator[Register, None, None]:
-        for volume in self._registers:
-            yield self._registers[volume]
-
-    def __getitem__(self, item) -> Register:
-        return self._registers[item]
-
-
-class AlphabeticRegister:
+class AlphabeticRegister(Register):
     def __init__(self, start: Union[str, None], end: Union[str, None], registers: OrderedDict):
         self._start = start
         self._end = end
@@ -815,27 +836,111 @@ class AlphabeticRegister:
         self._init_lemmas()
 
     def __repr__(self):  # pragma: no cover
-        return "<ALPHABETIC REGISTER - start:{}, end:{}>".format(self._start, self._end)
+        return "<ALPHABETIC REGISTER - start:{}, end:{}, lemmas:{}>"\
+            .format(self._start, self._end, len(self))
 
     def __len__(self):
-        return len(self._lemmas)
+        return len(self.squash_lemmas(self._lemmas))
+
+    def __getitem__(self, item: int) -> Lemma:
+        return self._lemmas[item]
+
+    @property
+    def start(self):
+        return self._start
 
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
             for lemma in self._registers[volume_str].lemmas:
-                if self.is_lemma_in_range(lemma):
+                if self._is_lemma_in_range(lemma):
                     lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k['lemma'], k.volume.sortkey))
+        self._lemmas = sorted(lemmas, key=lambda k: (k.sortkey, k.volume.sortkey))
 
-    def is_lemma_in_range(self, lemma):
+    def _is_lemma_in_range(self, lemma):
         append = True
         if self._start:
             # include start
-            if lemma["lemma"] < self._start:
+            if lemma.sortkey < self._start:
                 append = False
         if self._end:
             # exclude end
-            if lemma["lemma"] >= self._end:
+            if lemma.sortkey >= self._end:
                 append = False
         return append
+
+    def _get_table(self):
+        header = """{|class="wikitable sortable"
+!Artikel
+!Band
+!Seite
+!Autor
+!Sterbejahr"""
+        table = [header]
+        for lemmas in self.squash_lemmas(self._lemmas):
+            chapter_sum = 0
+            table_rows = []
+            lemma = None
+            for lemma in lemmas:
+                chapter_sum += len(lemma.chapters)
+                table_rows.append(lemma.get_table_row(print_volume=True))
+            # strip |-/n form the first line it is later replaced by the lemma line
+            table_rows[0] = table_rows[0][3:]
+            if chapter_sum > 1:
+                table.append("|-\n|rowspan={}|{}".format(chapter_sum, lemma.get_link()))
+            else:
+                table.append("|-\n|{}".format(lemma.get_link()))
+            table += table_rows
+        table.append("|}")
+        return "\n".join(table)
+
+    def _get_footer(self):
+        return "[[Kategorie:RE:Register|!]]\n" \
+               "Zahl der Artikel: {count_lemma}, ".format(count_lemma=len(self._lemmas))
+
+    def get_register_str(self):
+        return "{}\n{}".format(self._get_table(), self._get_footer())
+
+
+class Registers(Mapping):
+    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "ea", "er", "f", "g",
+                    "ha", "hi", "i", "k", "kl", "la", "li", "ma", "me", "mi", "n", "o", "p", "pe",
+                    "pi", "po", "pr", "q", "r", "sa", "se", "so", "ta", "th", "ti", "u", "uf", "x",
+                    "y", "z"]
+
+    def __init__(self):
+        self._authors = Authors()
+        self._registers = OrderedDict()
+        self._alphabetic_registers = OrderedDict()
+        for volume in Volumes().all_volumes:
+            try:
+                self._registers[volume.name] = VolumeRegister(volume, self._authors)
+            except FileNotFoundError:
+                pass
+        self._init_alphabetic_registers()
+
+    def _init_alphabetic_registers(self):
+        for idx, start in enumerate(self._RE_ALPHABET):
+            end = None
+            try:
+                end = self._RE_ALPHABET[idx + 1]
+            except IndexError:
+                pass
+            finally:
+                self._alphabetic_registers[start] = AlphabeticRegister(start,
+                                                                       end,
+                                                                       self._registers)
+
+    def __len__(self):
+        return len(self._registers)
+
+    def __iter__(self) -> Generator[VolumeRegister, None, None]:
+        for volume in self._registers:
+            yield self._registers[volume]
+
+    def __getitem__(self, item) -> VolumeRegister:
+        return self._registers[item]
+
+    @property
+    def alphabetic(self):
+        return self._alphabetic_registers

@@ -37,6 +37,30 @@
   {
     "lemma": "Delta",
     "previous": "Charlie",
+    "next": "Vaaa",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abert"
+      }
+    ]
+  },
+  {
+    "lemma": "Vaaa",
+    "previous": "Delta",
+    "next": "Ueee",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abert"
+      }
+    ]
+  },
+  {
+    "lemma": "Ueee",
+    "previous": "Vaaa",
     "chapters": [
       {
         "start": 4,
