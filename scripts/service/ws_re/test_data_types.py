@@ -814,7 +814,7 @@ class TestLemma(BaseTestRegister):
 
     def test_get_link(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
-        compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma._get_link())
+        compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma.get_link())
 
     def test_get_pages(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
@@ -923,15 +923,6 @@ class TestRegister(BaseTestRegister):
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
         compare(expected_table, register.get_register_str())
 
-    #@skipUnless(INTEGRATION_TEST, "Execute only in integration test.")
-    @skip("activate later")
-    def test_init_all_registers(self):
-        Authors._REGISTER_PATH = _REGISTER_PATH
-        VolumeRegister._REGISTER_PATH = _REGISTER_PATH
-        authors = Authors()
-        for volume in Volumes().all_volumes:
-            VolumeRegister(volume, authors)
-
 
 class TestAlphabeticRegister(BaseTestRegister):
     def setUp(self):
@@ -947,12 +938,32 @@ class TestAlphabeticRegister(BaseTestRegister):
         a_register = AlphabeticRegister("a", "be", self.registers)
         b_register = AlphabeticRegister("be", None, self.registers)
         compare(5, len(a_register))
-        compare(6, len(b_register))
+        compare(5, len(b_register))
         compare("Aal", a_register[0]["lemma"])
         compare("Baaba", a_register[4]["lemma"])
         compare("Beta", b_register[0]["lemma"])
         compare("Vaaa", b_register[4]["lemma"])
         compare("Ueee", b_register[5]["lemma"])
+
+    def test_squash_lemmas(self):
+        register = AlphabeticRegister(None, "Be", OrderedDict())
+        lemma1 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+                        Volumes()["I,1"],
+                        self.authors)
+        lemma2 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+                        Volumes()["III,1"],
+                        self.authors)
+        lemma3 = Lemma({"lemma": "lemma2", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+                        Volumes()["III,1"],
+                        self.authors)
+        lemmas = [lemma1, lemma2, lemma3]
+        expection = [[lemma1, lemma2], [lemma3]]
+        compare(expection, register.squash_lemmas(lemmas))
+
+    def test_squash_lemmas_empty(self):
+        register = AlphabeticRegister(None, "Be", OrderedDict())
+        expection = []
+        compare(expection, register.squash_lemmas([]))
 
     def test_make_table(self):
         b_register = AlphabeticRegister("be", None, self.registers)
@@ -976,7 +987,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abbott
-|
+|style="background:#CBCBCB"|
 |-
 |[[RE:Charlie|{{Anker2|Charlie}}]]
 |III,1
@@ -1003,7 +1014,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |style="background:#B9FFC5"|1927
 |}
 [[Kategorie:RE:Register|!]]
-Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
+Zahl der Artikel: 6, """
         compare(expected_table, b_register.get_register_str())
 
 
@@ -1019,4 +1030,19 @@ class TestRegisters(BaseTestRegister):
         compare("R", last.volume.name)
         compare(84, len(registers))
         compare("IV,1", registers["IV,1"].volume.name)
+
+    def test_not_all_there(self):
+        copy_test_data("I_1_base", "I_1")
+        registers = Registers()
+
+    def test_alphabetic(self):
+        copy_test_data("I_1_alpha", "I_1")
+        copy_test_data("III_1_alpha", "III_1")
+        registers = Registers()
+        compare(44, len(registers.alphabetic_registers))
+        compare(4, len(registers.alphabetic_registers["a"]))
+        compare(2, len(registers.alphabetic_registers["b"]))
+        compare(1, len(registers.alphabetic_registers["ch"]))
+        compare(1, len(registers.alphabetic_registers["da"]))
+        compare(2, len(registers.alphabetic_registers["u"]))
 
