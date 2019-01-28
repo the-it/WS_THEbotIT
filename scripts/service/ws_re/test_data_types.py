@@ -890,7 +890,7 @@ class TestLemma(BaseTestRegister):
 
     def test_sort_key(self):
         uvwij_dict = copy.deepcopy(self.basic_dict)
-        uvwij_dict["lemma"] = "UvWij"
+        uvwij_dict["lemma"] = "Uv(Wij)?"
         uvwij_lemma = Lemma(uvwij_dict, self.volumes["I,1"], self.authors)
         compare("uuuii", uvwij_lemma.sortkey)
 

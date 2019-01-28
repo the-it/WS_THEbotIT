@@ -663,11 +663,13 @@ class Lemma(Mapping):
 
     @property
     def sortkey(self):
-        return self["lemma"]\
-            .lower()\
-            .replace("v", "u")\
-            .replace("w", "u")\
-            .replace("j", "i")
+        translation_dict = str.maketrans({"v": "u",
+                                          "w": "u",
+                                          "j": "i",
+                                          "(": "",
+                                          ")": "",
+                                          "?": ""})
+        return self["lemma"].lower().translate(translation_dict)
 
     def keys(self):
         return self._lemma_dict.keys()
