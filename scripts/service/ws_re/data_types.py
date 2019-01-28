@@ -923,8 +923,7 @@ class Registers(Mapping):
             end = None
             try:
                 end = self._RE_ALPHABET[idx + 1]
-            except IndexError:
-                pass
+            except IndexError: ...
             finally:
                 self._alphabetic_registers[start] = AlphabeticRegister(start,
                                                                        end,
