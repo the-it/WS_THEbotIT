@@ -700,9 +700,6 @@ class Lemma(Mapping):
             row_string.append("-")
         # remove the last entry again because the row separator only needed between rows
         row_string.pop(-1)
-        # if print_volume:
-        #     row_string.pop(0)
-        #     row_string[0] = "|" + row_string[0]
         return "\n|".join(row_string)
 
     def get_link(self) -> str:
