@@ -424,7 +424,7 @@ class Volume():
                                                                                self.year,
                                                                                self.start,
                                                                                self.end,
-                                                                               self.sortkey)
+                                                                               self.sort_key)
 
     @property
     def name(self) -> str:
@@ -465,7 +465,7 @@ class Volume():
         return key
 
     @property
-    def sortkey(self) -> str:
+    def sort_key(self) -> str:
         return self._sortkey
 
 
@@ -615,6 +615,14 @@ class LemmaChapter:
         return None
 
 
+_TRANSLATION_DICT = str.maketrans({"v": "u",
+                                   "w": "u",
+                                   "j": "i",
+                                   "(": "",
+                                   ")": "",
+                                   "?": ""})
+
+
 class Lemma(Mapping):
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
@@ -632,6 +640,7 @@ class Lemma(Mapping):
         if not self.is_valid():
             raise ReDatenException("Error init RegisterLemma. Key missing in {}"
                                    .format(self._lemma_dict))
+        self._sort_key = self._make_sort_key()
 
     def __repr__(self):  # pragma: no cover
         return "<LEMMA - lemma:{}, previous:{}, next:{}, chapters:{}, volume:{}>"\
@@ -662,14 +671,11 @@ class Lemma(Mapping):
         return self._chapters
 
     @property
-    def sortkey(self):
-        translation_dict = str.maketrans({"v": "u",
-                                          "w": "u",
-                                          "j": "i",
-                                          "(": "",
-                                          ")": "",
-                                          "?": ""})
-        return self["lemma"].lower().translate(translation_dict)
+    def sort_key(self):
+        return self._sort_key
+
+    def _make_sort_key(self):
+        return self["lemma"].lower().translate(_TRANSLATION_DICT)
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -854,17 +860,17 @@ class AlphabeticRegister(Register):
             for lemma in self._registers[volume_str].lemmas:
                 if self._is_lemma_in_range(lemma):
                     lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k.sortkey, k.volume.sortkey))
+        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
 
     def _is_lemma_in_range(self, lemma):
         append = True
         if self._start:
             # include start
-            if lemma.sortkey < self._start:
+            if lemma.sort_key < self._start:
                 append = False
-        if self._end:
+        if append and self._end:
             # exclude end
-            if lemma.sortkey >= self._end:
+            if lemma.sort_key >= self._end:
                 append = False
         return append
 
@@ -923,7 +929,8 @@ class Registers(Mapping):
             end = None
             try:
                 end = self._RE_ALPHABET[idx + 1]
-            except IndexError: ...
+            except IndexError:
+                pass
             finally:
                 self._alphabetic_registers[start] = AlphabeticRegister(start,
                                                                        end,

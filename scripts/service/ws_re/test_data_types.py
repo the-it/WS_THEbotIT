@@ -630,17 +630,17 @@ class TestVolume(TestCase):
         with self.assertRaises(ReDatenException):
             volume = Volume("R I", "1900", "Aal", "Bethel").type
 
-    def test_sortkey(self):
+    def test_sort_key(self):
         volume = Volume("I,1", "1900", "Aal", "Bethel")
-        compare("1_01_1", volume.sortkey)
+        compare("1_01_1", volume.sort_key)
         volume = Volume("IX A,2", "1900", "Aal", "Bethel")
-        compare("2_09_2", volume.sortkey)
+        compare("2_09_2", volume.sort_key)
         volume = Volume("X A", "1900", "Aal", "Bethel")
-        compare("2_10_None", volume.sortkey)
+        compare("2_10_None", volume.sort_key)
         volume = Volume("S IV", "1900", "Aal", "Bethel")
-        compare("3_04", volume.sortkey)
+        compare("3_04", volume.sort_key)
         volume = Volume("R", "1900", "Aal", "Bethel")
-        compare("4", volume.sortkey)
+        compare("4", volume.sort_key)
 
 
 
@@ -892,7 +892,7 @@ class TestLemma(BaseTestRegister):
         uvwij_dict = copy.deepcopy(self.basic_dict)
         uvwij_dict["lemma"] = "Uv(Wij)?"
         uvwij_lemma = Lemma(uvwij_dict, self.volumes["I,1"], self.authors)
-        compare("uuuii", uvwij_lemma.sortkey)
+        compare("uuuii", uvwij_lemma.sort_key)
 
 
 class TestRegister(BaseTestRegister):
@@ -1045,4 +1045,14 @@ class TestRegisters(BaseTestRegister):
         compare(1, len(registers.alphabetic["ch"]))
         compare(1, len(registers.alphabetic["da"]))
         compare(2, len(registers.alphabetic["u"]))
+
+
+@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+class TestIntegrationRegister(TestCase):
+    def setUp(self):
+        self.registers = Registers()
+
+    def test_length_of_alphabetic(self):
+        for register in self.registers.alphabetic.values():
+            self.assertGreater(2000000, len(register.get_register_str()))
 
