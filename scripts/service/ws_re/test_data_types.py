@@ -1071,7 +1071,7 @@ class TestRegisters(BaseTestRegister):
         compare(2, len(registers.alphabetic["u"]))
 
 
-_MAX_SIZE_WIKI_PAGE = 2_098_175
+_MAX_SIZE_WIKI_PAGE = 2098175
 
 
 @skipUnless(INTEGRATION_TEST, "only execute in integration test")
