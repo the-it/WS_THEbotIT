@@ -630,17 +630,17 @@ class TestVolume(TestCase):
         with self.assertRaises(ReDatenException):
             volume = Volume("R I", "1900", "Aal", "Bethel").type
 
-    def test_sortkey(self):
+    def test_sort_key(self):
         volume = Volume("I,1", "1900", "Aal", "Bethel")
-        compare("1_01_1", volume.sortkey)
+        compare("1_01_1", volume.sort_key)
         volume = Volume("IX A,2", "1900", "Aal", "Bethel")
-        compare("2_09_2", volume.sortkey)
+        compare("2_09_2", volume.sort_key)
         volume = Volume("X A", "1900", "Aal", "Bethel")
-        compare("2_10_None", volume.sortkey)
+        compare("2_10_None", volume.sort_key)
         volume = Volume("S IV", "1900", "Aal", "Bethel")
-        compare("3_04", volume.sortkey)
+        compare("3_04", volume.sort_key)
         volume = Volume("R", "1900", "Aal", "Bethel")
-        compare("4", volume.sortkey)
+        compare("4", volume.sort_key)
 
 
 
@@ -889,10 +889,34 @@ class TestLemma(BaseTestRegister):
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
     def test_sort_key(self):
-        uvwij_dict = copy.deepcopy(self.basic_dict)
-        uvwij_dict["lemma"] = "UvWij"
-        uvwij_lemma = Lemma(uvwij_dict, self.volumes["I,1"], self.authors)
-        compare("uuuii", uvwij_lemma.sortkey)
+        sort_dict = copy.deepcopy(self.basic_dict)
+        sort_dict["lemma"] = "Uv(Wij)?"
+        sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("uuuii", sort_lemma.sort_key)
+
+        sort_dict["lemma"] = "ad Flexum 1"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("flexum 1", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "ab epistulis"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("epistulis", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "a memoria"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("memoria", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "aabaa abfl"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("aabaa abfl", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "aabab abfl"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("aabab abfl", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "aabad abfl"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("aabad abfl", uvwij_lemma.sort_key)
 
 
 class TestRegister(BaseTestRegister):
@@ -936,7 +960,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 
     def test_init(self):
         a_register = AlphabeticRegister("a", "be", self.registers)
-        b_register = AlphabeticRegister("be", None, self.registers)
+        b_register = AlphabeticRegister("be", "zzzzzz", self.registers)
         compare(5, len(a_register))
         compare(5, len(b_register))
         compare("Aal", a_register[0]["lemma"])
@@ -946,7 +970,7 @@ class TestAlphabeticRegister(BaseTestRegister):
         compare("Ueee", b_register[5]["lemma"])
 
     def test_squash_lemmas(self):
-        register = AlphabeticRegister(None, "Be", OrderedDict())
+        register = AlphabeticRegister("a", "be", OrderedDict())
         lemma1 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
                         Volumes()["I,1"],
                         self.authors)
@@ -961,12 +985,12 @@ class TestAlphabeticRegister(BaseTestRegister):
         compare(expection, register.squash_lemmas(lemmas))
 
     def test_squash_lemmas_empty(self):
-        register = AlphabeticRegister(None, "Be", OrderedDict())
+        register = AlphabeticRegister("a", "be", OrderedDict())
         expection = []
         compare(expection, register.squash_lemmas([]))
 
     def test_make_table(self):
-        b_register = AlphabeticRegister("be", None, self.registers)
+        b_register = AlphabeticRegister("be", "zzzzzz", self.registers)
         expected_table = """{|class="wikitable sortable"
 !Artikel
 !Band
@@ -1045,4 +1069,17 @@ class TestRegisters(BaseTestRegister):
         compare(1, len(registers.alphabetic["ch"]))
         compare(1, len(registers.alphabetic["da"]))
         compare(2, len(registers.alphabetic["u"]))
+
+
+_MAX_SIZE_WIKI_PAGE = 2098175
+
+
+@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+class TestIntegrationRegister(TestCase):
+    def setUp(self):
+        self.registers = Registers()
+
+    def test_length_of_alphabetic(self):
+        for register in self.registers.alphabetic.values():
+            self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()))
 

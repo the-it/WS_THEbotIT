@@ -424,7 +424,7 @@ class Volume():
                                                                                self.year,
                                                                                self.start,
                                                                                self.end,
-                                                                               self.sortkey)
+                                                                               self.sort_key)
 
     @property
     def name(self) -> str:
@@ -465,7 +465,7 @@ class Volume():
         return key
 
     @property
-    def sortkey(self) -> str:
+    def sort_key(self) -> str:
         return self._sortkey
 
 
@@ -615,6 +615,14 @@ class LemmaChapter:
         return None
 
 
+_TRANSLATION_DICT = str.maketrans({"v": "u",
+                                   "w": "u",
+                                   "j": "i",
+                                   "(": "",
+                                   ")": "",
+                                   "?": ""})
+
+
 class Lemma(Mapping):
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
@@ -632,6 +640,7 @@ class Lemma(Mapping):
         if not self.is_valid():
             raise ReDatenException("Error init RegisterLemma. Key missing in {}"
                                    .format(self._lemma_dict))
+        self._sort_key = self._make_sort_key()
 
     def __repr__(self):  # pragma: no cover
         return "<LEMMA - lemma:{}, previous:{}, next:{}, chapters:{}, volume:{}>"\
@@ -662,12 +671,14 @@ class Lemma(Mapping):
         return self._chapters
 
     @property
-    def sortkey(self):
-        return self["lemma"]\
-            .lower()\
-            .replace("v", "u")\
-            .replace("w", "u")\
-            .replace("j", "i")
+    def sort_key(self):
+        return self._sort_key
+
+    def _make_sort_key(self):
+        # simple replacement of single characters
+        lemma = self["lemma"].lower().translate(_TRANSLATION_DICT)
+        # catching of "a ...", "ab ..." and "ad ..."
+        return re.sub(r"^a(?:d|b)? ", "", lemma)
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -698,9 +709,6 @@ class Lemma(Mapping):
             row_string.append("-")
         # remove the last entry again because the row separator only needed between rows
         row_string.pop(-1)
-        # if print_volume:
-        #     row_string.pop(0)
-        #     row_string[0] = "|" + row_string[0]
         return "\n|".join(row_string)
 
     def get_link(self) -> str:
@@ -828,7 +836,7 @@ class VolumeRegister(Register):
 
 
 class AlphabeticRegister(Register):
-    def __init__(self, start: Union[str, None], end: Union[str, None], registers: OrderedDict):
+    def __init__(self, start: str, end: str, registers: OrderedDict):
         self._start = start
         self._end = end
         self._registers = registers
@@ -855,18 +863,16 @@ class AlphabeticRegister(Register):
             for lemma in self._registers[volume_str].lemmas:
                 if self._is_lemma_in_range(lemma):
                     lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k.sortkey, k.volume.sortkey))
+        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
 
     def _is_lemma_in_range(self, lemma):
         append = True
-        if self._start:
-            # include start
-            if lemma.sortkey < self._start:
-                append = False
-        if self._end:
-            # exclude end
-            if lemma.sortkey >= self._end:
-                append = False
+        # include start
+        if lemma.sort_key < self._start:
+            append = False
+        # exclude end
+        elif lemma.sort_key >= self._end:
+            append = False
         return append
 
     def _get_table(self):
@@ -921,7 +927,7 @@ class Registers(Mapping):
 
     def _init_alphabetic_registers(self):
         for idx, start in enumerate(self._RE_ALPHABET):
-            end = None
+            end = "zzzzzz"
             try:
                 end = self._RE_ALPHABET[idx + 1]
             except IndexError:
