@@ -833,7 +833,7 @@ class VolumeRegister(Register):
 
 
 class AlphabeticRegister(Register):
-    def __init__(self, start: Union[str, None], end: Union[str, None], registers: OrderedDict):
+    def __init__(self, start: str, end: str, registers: OrderedDict):
         self._start = start
         self._end = end
         self._registers = registers
@@ -864,14 +864,12 @@ class AlphabeticRegister(Register):
 
     def _is_lemma_in_range(self, lemma):
         append = True
-        if self._start:
-            # include start
-            if lemma.sort_key < self._start:
-                append = False
-        if append and self._end:
-            # exclude end
-            if lemma.sort_key >= self._end:
-                append = False
+        # include start
+        if lemma.sort_key < self._start:
+            append = False
+        # exclude end
+        elif lemma.sort_key >= self._end:
+            append = False
         return append
 
     def _get_table(self):
@@ -926,7 +924,7 @@ class Registers(Mapping):
 
     def _init_alphabetic_registers(self):
         for idx, start in enumerate(self._RE_ALPHABET):
-            end = None
+            end = "zzzzzz"
             try:
                 end = self._RE_ALPHABET[idx + 1]
             except IndexError:

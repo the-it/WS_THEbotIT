@@ -936,7 +936,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 
     def test_init(self):
         a_register = AlphabeticRegister("a", "be", self.registers)
-        b_register = AlphabeticRegister("be", None, self.registers)
+        b_register = AlphabeticRegister("be", "zzzzzz", self.registers)
         compare(5, len(a_register))
         compare(5, len(b_register))
         compare("Aal", a_register[0]["lemma"])
@@ -946,7 +946,7 @@ class TestAlphabeticRegister(BaseTestRegister):
         compare("Ueee", b_register[5]["lemma"])
 
     def test_squash_lemmas(self):
-        register = AlphabeticRegister(None, "Be", OrderedDict())
+        register = AlphabeticRegister("a", "be", OrderedDict())
         lemma1 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
                         Volumes()["I,1"],
                         self.authors)
@@ -961,12 +961,12 @@ class TestAlphabeticRegister(BaseTestRegister):
         compare(expection, register.squash_lemmas(lemmas))
 
     def test_squash_lemmas_empty(self):
-        register = AlphabeticRegister(None, "Be", OrderedDict())
+        register = AlphabeticRegister("a", "be", OrderedDict())
         expection = []
         compare(expection, register.squash_lemmas([]))
 
     def test_make_table(self):
-        b_register = AlphabeticRegister("be", None, self.registers)
+        b_register = AlphabeticRegister("be", "zzzzzz", self.registers)
         expected_table = """{|class="wikitable sortable"
 !Artikel
 !Band
@@ -1047,6 +1047,9 @@ class TestRegisters(BaseTestRegister):
         compare(2, len(registers.alphabetic["u"]))
 
 
+_MAX_SIZE_WIKI_PAGE = 2_098_175
+
+
 @skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestIntegrationRegister(TestCase):
     def setUp(self):
@@ -1054,5 +1057,5 @@ class TestIntegrationRegister(TestCase):
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
-            self.assertGreater(2000000, len(register.get_register_str()))
+            self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()))
 
