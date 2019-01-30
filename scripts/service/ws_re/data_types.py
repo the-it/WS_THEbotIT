@@ -675,7 +675,10 @@ class Lemma(Mapping):
         return self._sort_key
 
     def _make_sort_key(self):
-        return self["lemma"].lower().translate(_TRANSLATION_DICT)
+        # simple replacement of single characters
+        lemma = self["lemma"].lower().translate(_TRANSLATION_DICT)
+        # catching of "a ...", "ab ..." and "ad ..."
+        return re.sub(r"^a(?:d|b)? ", "", lemma)
 
     def keys(self):
         return self._lemma_dict.keys()

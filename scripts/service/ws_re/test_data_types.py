@@ -889,10 +889,34 @@ class TestLemma(BaseTestRegister):
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
     def test_sort_key(self):
-        uvwij_dict = copy.deepcopy(self.basic_dict)
-        uvwij_dict["lemma"] = "Uv(Wij)?"
-        uvwij_lemma = Lemma(uvwij_dict, self.volumes["I,1"], self.authors)
-        compare("uuuii", uvwij_lemma.sort_key)
+        sort_dict = copy.deepcopy(self.basic_dict)
+        sort_dict["lemma"] = "Uv(Wij)?"
+        sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("uuuii", sort_lemma.sort_key)
+
+        sort_dict["lemma"] = "ad Flexum 1"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("flexum 1", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "ab epistulis"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("epistulis", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "a memoria"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("memoria", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "aabaa abfl"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("aabaa abfl", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "aabab abfl"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("aabab abfl", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "aabad abfl"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("aabad abfl", uvwij_lemma.sort_key)
 
 
 class TestRegister(BaseTestRegister):
