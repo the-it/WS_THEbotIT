@@ -1,6 +1,6 @@
 from pywikibot import Site, Page
 
-from scripts.service.ws_re.data_types import Registers
+from scripts.service.ws_re.register import Registers
 from tools.bots import CanonicalBot
 
 
