@@ -127,6 +127,10 @@ class TestAuthorCrawler(TestCase):
 }"""
         compare(expect, splitted_mapping[5])
 
+    def test_extract_mapping(self):
+        expect = {"K A.": "Karlhans Abel"}
+        compare(expect, self.crawler._extract_mapping("[\"K A.\"]     = 	\"Karlhans Abel\""))
+
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)

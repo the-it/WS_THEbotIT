@@ -69,8 +69,9 @@ class Authors:
 
 
 class AuthorCrawler:
-    @staticmethod
-    def get_mapping():
+    _simple_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
+
+    def get_mapping(self):
         pass
 
     @staticmethod
@@ -78,8 +79,15 @@ class AuthorCrawler:
         mapping = re.sub(r"^return \{\n", "", mapping)
         mapping = re.sub(r"\}\s?$", "", mapping)
         splitted_mapping =  mapping.split("\n[")
-        splitted_mapping = ["[" + mapping.strip().strip(",").lstrip("[") for mapping in splitted_mapping]
+        splitted_mapping = ["[" + mapping.strip().strip(",").lstrip("[")
+                            for mapping in splitted_mapping]
         return splitted_mapping
+
+    @classmethod
+    def _extract_mapping(cls, single_mapping: str) -> Dict[str, str]:
+        hit = cls._simple_mapping_regex.search(single_mapping)
+        return {hit.group(1): hit.group(2)}
+
 
 
 class LemmaChapter:
