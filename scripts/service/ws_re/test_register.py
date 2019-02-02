@@ -10,7 +10,7 @@ from testfixtures import compare
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes, ReDatenException
 from scripts.service.ws_re.register import Author, Authors, VolumeRegister, LemmaChapter, Lemma, \
-    AlphabeticRegister, Registers
+    AlphabeticRegister, Registers, AuthorCrawler
 from tools import INTEGRATION_TEST, path_or_str
 
 
@@ -74,6 +74,58 @@ class TestAuthors(BaseTestRegister):
         compare(1987, author.death)
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
 
+
+class TestAuthorCrawler(TestCase):
+    def setUp(self):
+        self.crawler = AuthorCrawler()
+
+    def test_split_mappings(self):
+        test_str = """return {
+["Karlhans Abel."] = "Karlhans Abel",
+
+["Aly."] = "Wolfgang Aly",
+["Wolf Aly."] = "Wolfgang Aly",
+
+["Wünsch."] = {
+	"Richard Wünsch",
+	["R"] = "Albert Wünsch"
+},
+
+["Wolf."] = {
+	["IX,2"] = "Karl Wolf",
+	"? Wolf"
+},
+
+["Schwabe."] = {
+	"Ernst Schwabe",
+	["II,1"] = "Ludwig Schwabe",
+	["IV,1"] = "Ludwig Schwabe",
+	["VI,2"] = "Ludwig Schwabe"
+},
+
+["Zwicker."] = "Johannes Zwicker"
+}
+"""
+        splitted_mapping = self.crawler._split_mappings(test_str)
+        compare("[\"Karlhans Abel.\"] = \"Karlhans Abel\"", splitted_mapping[0])
+        compare(7, len(splitted_mapping))
+        expect = """["Wünsch."] = {
+	"Richard Wünsch",
+	["R"] = "Albert Wünsch"
+}"""
+        compare(expect, splitted_mapping[3])
+        expect = """["Wolf."] = {
+	["IX,2"] = "Karl Wolf",
+	"? Wolf"
+}"""
+        compare(expect, splitted_mapping[4])
+        expect = """["Schwabe."] = {
+	"Ernst Schwabe",
+	["II,1"] = "Ludwig Schwabe",
+	["IV,1"] = "Ludwig Schwabe",
+	["VI,2"] = "Ludwig Schwabe"
+}"""
+        compare(expect, splitted_mapping[5])
 
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
@@ -359,12 +411,12 @@ class TestRegisters(BaseTestRegister):
         for volume in Volumes().all_volumes:
             copy_test_data("I_1_base", volume.file_name)
         registers = Registers()
-        iterator = iter(registers)
+        iterator = iter(registers.volumes.values())
         compare("I,1", next(iterator).volume.name)
         for i in range(83):
             last = next(iterator)
         compare("R", last.volume.name)
-        compare(84, len(registers))
+        compare(84, len(registers.volumes))
         compare("IV,1", registers["IV,1"].volume.name)
 
     def test_not_all_there(self):

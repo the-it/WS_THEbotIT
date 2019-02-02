@@ -3,7 +3,7 @@ import re
 from abc import ABC
 from collections import OrderedDict
 from datetime import datetime
-from typing import Dict, Union, Generator
+from typing import Dict, Union, Sequence
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, ReDatenException, Volumes
 from tools import path_or_str
@@ -66,6 +66,20 @@ class Authors:
 
     def get_author(self, mapping: str):
         return self._authors[mapping]
+
+
+class AuthorCrawler:
+    @staticmethod
+    def get_mapping():
+        pass
+
+    @staticmethod
+    def _split_mappings(mapping: str) -> Sequence[str]:
+        mapping = re.sub(r"^return \{\n", "", mapping)
+        mapping = re.sub(r"\}\s?$", "", mapping)
+        splitted_mapping =  mapping.split("\n[")
+        splitted_mapping = ["[" + mapping.strip().strip(",").lstrip("[") for mapping in splitted_mapping]
+        return splitted_mapping
 
 
 class LemmaChapter:
@@ -419,16 +433,13 @@ class Registers:
                                                                        end,
                                                                        self._registers)
 
-    def __len__(self):
-        return len(self._registers)
-
-    def __iter__(self) -> Generator[VolumeRegister, None, None]:
-        for volume in self._registers:
-            yield self._registers[volume]
-
     def __getitem__(self, item) -> VolumeRegister:
         return self._registers[item]
 
     @property
     def alphabetic(self):
         return self._alphabetic_registers
+
+    @property
+    def volumes(self):
+        return self._registers
