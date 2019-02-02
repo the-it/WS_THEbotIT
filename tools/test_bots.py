@@ -299,6 +299,9 @@ class TestOneTimeBot(TestCase):
         self.MinimalBot.save_if_changed(page_mock, "1", "changed")
         compare(0, len(page_mock.mock_calls))
 
+        self.MinimalBot.save_if_changed(page_mock, "1 ", "changed")
+        compare(0, len(page_mock.mock_calls))
+
     class ExceptionBot(OneTimeBot):
         def task(self):
             raise Exception("Exception")
