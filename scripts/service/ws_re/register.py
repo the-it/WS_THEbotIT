@@ -2,11 +2,16 @@ import json
 import re
 from abc import ABC
 from collections import OrderedDict
+from collections.abc import Mapping
 from datetime import datetime
 from typing import Dict, Union, Sequence
 
-from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, ReDatenException, Volumes
+from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, Volumes
 from tools import path_or_str
+
+
+class RegisterException(Exception):
+    pass
 
 
 class Author:
@@ -70,24 +75,45 @@ class Authors:
 
 class AuthorCrawler:
     _simple_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
+    _complex_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\{([^\}]*)\}")
 
-    def get_mapping(self):
-        pass
+    def get_mapping(self, mapping: str) -> Dict[str, Union[str, Dict[str, str]]]:
+        mapping_dict = {}
+        for single_mapping in self._split_mappings(mapping):
+            mapping_dict.update(self._extract_mapping(single_mapping))
+        return mapping_dict
 
     @staticmethod
     def _split_mappings(mapping: str) -> Sequence[str]:
         mapping = re.sub(r"^return \{\n", "", mapping)
         mapping = re.sub(r"\}\s?$", "", mapping)
-        splitted_mapping =  mapping.split("\n[")
+        splitted_mapping = mapping.split("\n[")
         splitted_mapping = ["[" + mapping.strip().strip(",").lstrip("[")
                             for mapping in splitted_mapping]
         return splitted_mapping
 
     @classmethod
-    def _extract_mapping(cls, single_mapping: str) -> Dict[str, str]:
+    def _extract_mapping(cls, single_mapping: str) -> Dict[str, Union[str, Dict[str, str]]]:
+        if "{" in single_mapping:
+            return cls._extract_complex_mapping(single_mapping)
         hit = cls._simple_mapping_regex.search(single_mapping)
         return {hit.group(1): hit.group(2)}
 
+    @classmethod
+    def _extract_complex_mapping(cls, single_mapping: str) -> Dict[str, Dict[str, str]]:
+        hit = cls._complex_mapping_regex.search(single_mapping)
+        sub_dict = {}
+        for sub_mapping in hit.group(2).split(",\n"):
+            sub_hit = cls._simple_mapping_regex.search(sub_mapping)
+            if sub_hit:
+                sub_dict[sub_hit.group(1)] = sub_hit.group(2)
+            else:
+
+                sub_dict["*"] = sub_mapping.strip().strip("\"")
+        return {hit.group(1): sub_dict}
+
+    def get_authors(self, text: str):
+        pass
 
 
 class LemmaChapter:
@@ -130,7 +156,7 @@ _TRANSLATION_DICT = str.maketrans({"v": "u",
                                    "?": ""})
 
 
-class Lemma:
+class Lemma(Mapping):
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
                  volume: Volume,
@@ -145,8 +171,8 @@ class Lemma:
         except KeyError:
             pass
         if not self.is_valid():
-            raise ReDatenException("Error init RegisterLemma. Key missing in {}"
-                                   .format(self._lemma_dict))
+            raise RegisterException("Error init RegisterLemma. Key missing in {}"
+                                    .format(self._lemma_dict))
         self._sort_key = self._make_sort_key()
 
     def __repr__(self):  # pragma: no cover
@@ -165,6 +191,9 @@ class Lemma:
 
     def __len__(self):
         return len(self._lemma_dict)
+
+    def __iter__(self):
+        return iter(self._lemma_dict)
 
     @property
     def volume(self):
