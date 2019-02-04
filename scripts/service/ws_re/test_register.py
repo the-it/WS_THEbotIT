@@ -185,6 +185,7 @@ class TestAuthorCrawler(TestCase):
         compare(("Hermann", "Abert"), self.crawler._extract_author_name("'''[[Hermann Abert|Abert, [Hermann]]]"))
         compare(("Martin", "Bang"), self.crawler._extract_author_name("Bang, [Martin]{{Anker | B}}"))
 
+
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)

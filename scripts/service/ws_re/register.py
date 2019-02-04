@@ -4,7 +4,7 @@ from abc import ABC
 from collections import OrderedDict
 from collections.abc import Mapping
 from datetime import datetime
-from typing import Dict, Union, Sequence
+from typing import Dict, Union, Sequence, Tuple
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, Volumes
 from tools import path_or_str
@@ -115,8 +115,14 @@ class AuthorCrawler:
     def get_authors(self, text: str):
         pass
 
-    def _extract_author_name(self, author: str) -> str:
-        pass
+    def _extract_author_name(self, author: str) -> Tuple[str, str]:
+        author = re.sub(r"\{\{[^\}]*\}\}", "", author)
+        if re.search(r"\[\[", author):
+            author = author.split("|")[1]
+        translation_dict = str.maketrans({"[": "", "]": "", "'": ""})
+        names = author.translate(translation_dict).split(",")
+        return (names[1].strip(), names[0].strip())
+
 
 class LemmaChapter:
     def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
