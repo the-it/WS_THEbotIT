@@ -115,13 +115,14 @@ class AuthorCrawler:
     def get_authors(self, text: str):
         pass
 
-    def _extract_author_name(self, author: str) -> Tuple[str, str]:
+    @staticmethod
+    def _extract_author_name(author: str) -> Tuple[str, str]:
         author = re.sub(r"\{\{[^\}]*\}\}", "", author)
         if re.search(r"\[\[", author):
             author = author.split("|")[1]
         translation_dict = str.maketrans({"[": "", "]": "", "'": ""})
         names = author.translate(translation_dict).split(",")
-        return (names[1].strip(), names[0].strip())
+        return names[1].strip(), names[0].strip()
 
 
 class LemmaChapter:
@@ -219,7 +220,7 @@ class Lemma(Mapping):
         # simple replacement of single characters
         lemma = self["lemma"].lower().translate(_TRANSLATION_DICT)
         # catching of "a ...", "ab ..." and "ad ..."
-        return re.sub(r"^a(?:d|b)? ", "", lemma)
+        return re.sub(r"^a[db]? ", "", lemma)
 
     def keys(self):
         return self._lemma_dict.keys()
