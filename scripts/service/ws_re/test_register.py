@@ -177,6 +177,14 @@ class TestAuthorCrawler(TestCase):
                   "Zwicker.": "Johannes Zwicker"}
         compare(expect, self.crawler.get_mapping(test_str))
 
+    def test_extract_author_name(self):
+        compare(("Klaus", "Alpers"), self.crawler._extract_author_name("Alpers, Klaus"))
+        compare(("Franz", "Altheim"), self.crawler._extract_author_name("Altheim, [Franz]"))
+        compare(("Wolfgang", "Aly"), self.crawler._extract_author_name("[[Wolfgang Aly|Aly, Wolf[gang]]]"))
+        compare(("Walter", "Amelung"), self.crawler._extract_author_name("'''[[Walter Amelung|Amelung, [Walter]]]'''"))
+        compare(("Hermann", "Abert"), self.crawler._extract_author_name("'''[[Hermann Abert|Abert, [Hermann]]]"))
+        compare(("Martin", "Bang"), self.crawler._extract_author_name("Bang, [Martin]{{Anker | B}}"))
+
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)

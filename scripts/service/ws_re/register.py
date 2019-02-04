@@ -115,6 +115,8 @@ class AuthorCrawler:
     def get_authors(self, text: str):
         pass
 
+    def _extract_author_name(self, author: str) -> str:
+        pass
 
 class LemmaChapter:
     def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
