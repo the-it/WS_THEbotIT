@@ -149,7 +149,7 @@ class ReImporter(CanonicalBot):
             if year in new_dict:
                 new_dict[year].add(issue)
             else:
-                new_dict[year] = set([issue])
+                new_dict[year] = {issue}
         return new_dict
 
     def _register_author(self, author: str, death_year: str):
