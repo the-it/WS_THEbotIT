@@ -8,7 +8,7 @@ from unittest import TestCase, skipUnless
 
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes, ReDatenException
+from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes
 from scripts.service.ws_re.register import Author, Authors, VolumeRegister, LemmaChapter, Lemma, \
     AlphabeticRegister, Registers, AuthorCrawler, RegisterException
 from tools import INTEGRATION_TEST, path_or_str
@@ -279,10 +279,10 @@ class TestLemma(BaseTestRegister):
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
         with self.assertRaises(RegisterException):
-            re_register_lemma = Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
+            print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
         no_chapter_dict = {"lemma": "lemma", "chapters": [{"start": 1}]}
         with self.assertRaises(RegisterException):
-            re_register_lemma = Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
+            print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
 
     def test_get_row(self):
         one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
@@ -480,7 +480,7 @@ class TestRegisters(BaseTestRegister):
 
     def test_not_all_there(self):
         copy_test_data("I_1_base", "I_1")
-        registers = Registers()
+        Registers()
 
     def test_alphabetic(self):
         copy_test_data("I_1_alpha", "I_1")

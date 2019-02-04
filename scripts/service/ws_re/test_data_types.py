@@ -603,7 +603,7 @@ class TestVolume(TestCase):
         volume = Volume("R", "1900", "Aal", "Bethel")
         compare(VolumeType.REGISTER, volume.type)
         with self.assertRaises(ReDatenException):
-            volume = Volume("R I", "1900", "Aal", "Bethel").type
+            print(Volume("R I", "1900", "Aal", "Bethel").type)
 
     def test_sort_key(self):
         volume = Volume("I,1", "1900", "Aal", "Bethel")
@@ -690,9 +690,9 @@ class TestVolumes(TestCase):
 
     def test_get(self):
         with self.assertRaises(ReDatenException):
-            test = self.re_volumes["tada"]
+            print(self.re_volumes["tada"])
         with self.assertRaises(ReDatenException):
-            test = self.re_volumes[1]
+            print(self.re_volumes[1])
         compare("I,1", self.re_volumes["I,1"].name)
 
 

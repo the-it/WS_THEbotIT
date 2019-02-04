@@ -103,7 +103,7 @@ class AuthorList(CanonicalBot):
                 try:
                     personendaten = re.search(r'\{\{Personendaten(?:.|\n)*?\n\}\}\n',
                                               page.text).group()
-                except Exception:
+                except AttributeError:
                     self.logger.error('No valid block "Personendaten" was found for [[{}]].'
                                       .format(author['title']))
                     personendaten = None
@@ -205,7 +205,7 @@ class AuthorList(CanonicalBot):
                 list_author.append(self._handle_birth_and_death(event, author_dict))  # 4,6
                 try:
                     list_author.append(str(DateConversion(list_author[-1])))  # 5,7
-                except Exception:
+                except ValueError:
                     self.logger.error('Can´t compile sort key for {}: {}/{}'
                                       .format(author_dict["title"], event, author_dict[event]))
                     list_author.append('!-00-00')  # 5,7

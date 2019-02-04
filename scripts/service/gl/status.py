@@ -95,7 +95,7 @@ class GlStatus(CanonicalBot):
                 'font-weight: bold"|{percent_fertig} % fertig, Rest korrigiert'
                 '<!---->'
                 .format(year=year,
-                        percent_fertig=str(round(((fertig) / alle) * 100, 1))
+                        percent_fertig=str(round((fertig / alle) * 100, 1))
                         .replace('.', ',')), temp_text)
         else:
             temp_text = regex.sub(
