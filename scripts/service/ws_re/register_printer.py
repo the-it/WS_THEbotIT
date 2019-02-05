@@ -7,7 +7,7 @@ from tools.bots import CanonicalBot
 class ReRegisterPrinter(CanonicalBot):
     def task(self):  # pragma: no cover
         registers = Registers()
-        for idx, register in enumerate(registers):
+        for idx, register in enumerate(registers.volumes.values()):
             self.logger.info("Print Register {}.".format(register.volume.name))
             self.save_if_changed(Page(self.wiki,
                                       "Paulys Realencyclopädie der classischen "

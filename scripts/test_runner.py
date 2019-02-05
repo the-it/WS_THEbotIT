@@ -42,8 +42,8 @@ class TestBotScheduler(TestCase):
              path_or_str(self._get_archive_test()))
 
     def _remove_temp_folder(self):
-        if os.path.exists(path_or_str(self._get_archive_test())):
-            rmtree(path_or_str(self._get_archive_test()))
+        if os.path.exists(path_or_str(self._get_path_for_scripts().joinpath("archive_test"))):
+            rmtree(path_or_str(self._get_path_for_scripts().joinpath("archive_test")))
         if os.path.exists(path_or_str(self._get_one_time_run_test())):
             rmtree(path_or_str(self._get_one_time_run_test()))
 

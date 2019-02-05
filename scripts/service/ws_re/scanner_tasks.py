@@ -11,13 +11,13 @@ SUCCESS = "success"
 CHANGED = "changed"
 
 
-class ReScannerTask():
+class ReScannerTask:
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
         self.re_page = None  # type: RePage
-        self.processed_pages = []  # type: List[str]
+        self.processed_pages = []
         self.timeout = timedelta(minutes=1)
         self.load_task()
 

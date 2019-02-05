@@ -8,9 +8,9 @@ from unittest import TestCase, skipUnless
 
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes, ReDatenException
+from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes
 from scripts.service.ws_re.register import Author, Authors, VolumeRegister, LemmaChapter, Lemma, \
-    AlphabeticRegister, Registers
+    AlphabeticRegister, Registers, AuthorCrawler, RegisterException
 from tools import INTEGRATION_TEST, path_or_str
 
 
@@ -75,6 +75,123 @@ class TestAuthors(BaseTestRegister):
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
 
 
+class TestAuthorCrawler(TestCase):
+    def setUp(self):
+        self.crawler = AuthorCrawler()
+
+    def test_split_mappings(self):
+        test_str = """return {
+["Karlhans Abel."] = "Karlhans Abel",
+
+["Aly."] = "Wolfgang Aly",
+["Wolf Aly."] = "Wolfgang Aly",
+
+["Wünsch."] = {
+	"Richard Wünsch",
+	["R"] = "Albert Wünsch"
+},
+
+["Wolf."] = {
+	["IX,2"] = "Karl Wolf",
+	"? Wolf"
+},
+
+["Schwabe."] = {
+	"Ernst Schwabe",
+	["II,1"] = "Ludwig Schwabe",
+	["IV,1"] = "Ludwig Schwabe",
+	["VI,2"] = "Ludwig Schwabe"
+},
+
+["Zwicker."] = "Johannes Zwicker"
+}
+"""
+        splitted_mapping = self.crawler._split_mappings(test_str)
+        compare("[\"Karlhans Abel.\"] = \"Karlhans Abel\"", splitted_mapping[0])
+        compare(7, len(splitted_mapping))
+        expect = """["Wünsch."] = {
+	"Richard Wünsch",
+	["R"] = "Albert Wünsch"
+}"""
+        compare(expect, splitted_mapping[3])
+        expect = """["Wolf."] = {
+	["IX,2"] = "Karl Wolf",
+	"? Wolf"
+}"""
+        compare(expect, splitted_mapping[4])
+        expect = """["Schwabe."] = {
+	"Ernst Schwabe",
+	["II,1"] = "Ludwig Schwabe",
+	["IV,1"] = "Ludwig Schwabe",
+	["VI,2"] = "Ludwig Schwabe"
+}"""
+        compare(expect, splitted_mapping[5])
+
+    def test_extract_mapping(self):
+        expect = {"K A.": "Karlhans Abel"}
+        compare(expect, self.crawler._extract_mapping("[\"K A.\"]     = 	\"Karlhans Abel\""))
+
+        mapping_text = """["Schwabe."] = {
+	"Ernst Schwabe",
+	["II,1"] = "Ludwig Schwabe",
+	["IV,1"] = "Ludwig Schwabe",
+	["VI,2"] = "Ludwig Schwabe"
+}"""
+        expect = {"Schwabe.": {"*": "Ernst Schwabe",
+                               "II,1": "Ludwig Schwabe",
+                               "IV,1": "Ludwig Schwabe",
+                               "VI,2": "Ludwig Schwabe"}}
+        compare(expect, self.crawler._extract_mapping(mapping_text))
+
+        mapping_text = """["Wolf."] = {
+	["IX,2"] = "Karl Wolf",
+	"? Wolf"
+}"""
+        expect = {"Wolf.": {"*": "? Wolf",
+                            "IX,2": "Karl Wolf"}}
+        compare(expect, self.crawler._extract_mapping(mapping_text))
+
+        mapping_text = """["Wünsch."] = {
+	"Richard Wünsch",
+	["R"] = "Albert Wünsch"
+}"""
+        expect = {"Wünsch.": {"*": "Richard Wünsch",
+                            "R": "Albert Wünsch"}}
+        compare(expect, self.crawler._extract_mapping(mapping_text))
+
+    def test_get_mapping(self):
+        test_str = """return {
+["Karlhans Abel."] = "Karlhans Abel",
+
+["Wünsch."] = {
+	"Richard Wünsch",
+	["R"] = "Albert Wünsch"
+},
+
+["Zwicker."] = "Johannes Zwicker"
+}
+"""
+        expect = {"Karlhans Abel.": "Karlhans Abel",
+                  "Wünsch.": {"*": "Richard Wünsch",
+                              "R": "Albert Wünsch"},
+                  "Zwicker.": "Johannes Zwicker"}
+        compare(expect, self.crawler.get_mapping(test_str))
+
+    def test_extract_author_name(self):
+        compare(("Klaus", "Alpers"), self.crawler._extract_author_name("Alpers, Klaus"))
+        compare(("Franz", "Altheim"), self.crawler._extract_author_name("Altheim, [Franz]"))
+        compare(("Wolfgang", "Aly"), self.crawler._extract_author_name("[[Wolfgang Aly|Aly, Wolf[gang]]]"))
+        compare(("Walter", "Amelung"), self.crawler._extract_author_name("'''[[Walter Amelung|Amelung, [Walter]]]'''"))
+        compare(("Hermann", "Abert"), self.crawler._extract_author_name("'''[[Hermann Abert|Abert, [Hermann]]]"))
+        compare(("Martin", "Bang"), self.crawler._extract_author_name("Bang, [Martin]{{Anker | B}}"))
+
+    def test_extract_years(self):
+        compare((1906, 1988), self.crawler._extract_years("1906–1988"))
+        compare((1908, None), self.crawler._extract_years("1908–?"))
+        compare((1933, None), self.crawler._extract_years("* 1933"))
+        compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" |* 1933"))
+
+
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)
@@ -102,7 +219,7 @@ class TestLemma(BaseTestRegister):
         for entry in ["lemma", "chapters"]:
             test_dict = copy.deepcopy(basic_dict)
             del test_dict[entry]
-            with self.assertRaises(ReDatenException):
+            with self.assertRaises(RegisterException):
                 Lemma(test_dict, Volumes()["I,1"], self.authors)
 
         for entry in ["previous", "next", "redirect"]:
@@ -167,11 +284,11 @@ class TestLemma(BaseTestRegister):
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
-        with self.assertRaises(ReDatenException):
-            re_register_lemma = Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
+        with self.assertRaises(RegisterException):
+            print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
         no_chapter_dict = {"lemma": "lemma", "chapters": [{"start": 1}]}
-        with self.assertRaises(ReDatenException):
-            re_register_lemma = Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
+        with self.assertRaises(RegisterException):
+            print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
 
     def test_get_row(self):
         one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
@@ -359,17 +476,17 @@ class TestRegisters(BaseTestRegister):
         for volume in Volumes().all_volumes:
             copy_test_data("I_1_base", volume.file_name)
         registers = Registers()
-        iterator = iter(registers)
+        iterator = iter(registers.volumes.values())
         compare("I,1", next(iterator).volume.name)
         for i in range(83):
             last = next(iterator)
         compare("R", last.volume.name)
-        compare(84, len(registers))
+        compare(84, len(registers.volumes))
         compare("IV,1", registers["IV,1"].volume.name)
 
     def test_not_all_there(self):
         copy_test_data("I_1_base", "I_1")
-        registers = Registers()
+        Registers()
 
     def test_alphabetic(self):
         copy_test_data("I_1_alpha", "I_1")
