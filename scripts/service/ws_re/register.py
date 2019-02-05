@@ -124,6 +124,11 @@ class AuthorCrawler:
         names = author.translate(translation_dict).split(",")
         return names[1].strip(), names[0].strip()
 
+    @staticmethod
+    def _extract_years(years: str) -> Tuple[int, Union[int, None]]:
+        hit = re.search(r"(?<!\")(\d{4})–?(\d{4})?", years)
+        return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
+
 
 class LemmaChapter:
     def __init__(self, chapter_dict: Dict[str, Union[str, int]]):

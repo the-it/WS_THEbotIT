@@ -185,6 +185,12 @@ class TestAuthorCrawler(TestCase):
         compare(("Hermann", "Abert"), self.crawler._extract_author_name("'''[[Hermann Abert|Abert, [Hermann]]]"))
         compare(("Martin", "Bang"), self.crawler._extract_author_name("Bang, [Martin]{{Anker | B}}"))
 
+    def test_extract_years(self):
+        compare((1906, 1988), self.crawler._extract_years("1906–1988"))
+        compare((1908, None), self.crawler._extract_years("1908–?"))
+        compare((1933, None), self.crawler._extract_years("* 1933"))
+        compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" |* 1933"))
+
 
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
