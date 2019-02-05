@@ -4,7 +4,7 @@ from abc import ABC
 from collections import OrderedDict
 from collections.abc import Mapping
 from datetime import datetime
-from typing import Dict, Union, Sequence, Tuple
+from typing import Dict, Union, Sequence, Tuple, List
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, Volumes
 from tools import path_or_str
@@ -116,7 +116,20 @@ class AuthorCrawler:
         pass
 
     @staticmethod
+    def _split_author_table(raw_table: str) -> List[str]:
+        table = re.search(r"\{\|class=\"wikitable sortable\"\s+\|-\s+(.*)\s+\|\}",
+                          raw_table, re.DOTALL).group(1)
+        splitted_table = table.split("\n|-\n")
+        del splitted_table[0]
+        return splitted_table
+
+    @staticmethod
+    def _split_author(author_sub_table: str) -> List[str]:
+        return author_sub_table.split("\n|")
+
+    @staticmethod
     def _extract_author_name(author: str) -> Tuple[str, str]:
+        author = author.lstrip("|")
         author = re.sub(r"\{\{[^\}]*\}\}", "", author)
         if re.search(r"\[\[", author):
             author = author.split("|")[1]
