@@ -5,16 +5,15 @@ version: 2
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v6-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
-      - v6-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-
-      - v6-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
-      - v6-dependencies-{{ .Environment.PYTHON_VERSION }}-
+      - v7-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+      - v7-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
+      - v7-dependencies-{{ .Environment.PYTHON_VERSION }}-
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v6-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ checksum "requirements_dev.txt" }}
+    key: v7-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
 
 install_dependencies: &install_dependencies
   run:
@@ -22,7 +21,7 @@ install_dependencies: &install_dependencies
     command: |
       python3 -m venv venv
       . venv/bin/activate
-      make pip3-all
+      make pip3
       pip list
 
 run_unittest: &run_unittest

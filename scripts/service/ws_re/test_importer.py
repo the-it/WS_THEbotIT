@@ -2,7 +2,7 @@ import os
 import shutil
 from collections import OrderedDict
 from pathlib import Path
-from unittest import TestCase, mock
+from unittest import TestCase
 
 from testfixtures import compare, LogCapture
 
@@ -49,7 +49,7 @@ class TestReImporter(TestCase):
 |bla"""
         with LogCapture():
             with self.assertRaises(ValueError):
-                result = self.re_importer._split_line(line)
+                self.re_importer._split_line(line)
 
 
     def test_split_table(self):
@@ -120,7 +120,7 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         content = "[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|bubu, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]-158"
         with LogCapture():
             with self.assertRaises(AttributeError):
-                result = self.re_importer._analyse_second_column(content)
+                self.re_importer._analyse_second_column(content)
 
     def test_second_column_same_column(self):
         content = "[[Special:Filepath/Pauly-Wissowa_S_II,_0001.jpg|S II, 1]] : [http://www.archive.org/download/PWRE68/Pauly-Wissowa_S_II_0001.png IA]"
@@ -344,11 +344,11 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
         register = self.re_importer._add_pre_post_register(register)
         compare("Aquilinus 6", register[0]["next"])
         with self.assertRaises(KeyError):
-            item = register[0]["previous"]
+            print(register[0]["previous"])
         compare("Aquilius", register[1]["next"])
         compare("Aquilinus 5", register[1]["previous"])
         with self.assertRaises(KeyError):
-            item = register[2]["next"]
+            print(register[2]["next"])
         compare("Aquilinus 6", register[2]["previous"])
 
     def test_register_authors(self):

@@ -6,10 +6,6 @@ pip3 :
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt
 
-pip3-all : pip3
-	echo "### INSTALL ALL REQUIREMENTS ###"
-	pip3 install -r requirements_dev.txt
-
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
 	pycodestyle --show-source --statistics --count
