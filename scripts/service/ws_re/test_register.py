@@ -23,14 +23,15 @@ def copy_test_data(source: str, destination: str):
                 str(base_path.joinpath("test_register").joinpath(destination + ".json")))
 
 
-def clear_test_path():
+def clear_test_path(renew_path=True):
     _TEST_FOLDER_PATH = Path(__file__).parent.joinpath("test_register")
     try:
         shutil.rmtree(path_or_str(_TEST_FOLDER_PATH))
     except FileNotFoundError:
         pass
     finally:
-        os.mkdir(path_or_str(_TEST_FOLDER_PATH))
+        if renew_path:
+            os.mkdir(path_or_str(_TEST_FOLDER_PATH))
 
 
 class TestAuthor(TestCase):
@@ -58,6 +59,7 @@ class BaseTestRegister(TestCase):
     def tearDownClass(cls):
         Authors._REGISTER_PATH = _REGISTER_PATH
         VolumeRegister._REGISTER_PATH = _REGISTER_PATH
+        clear_test_path(renew_path=False)
 
 
 class TestAuthors(BaseTestRegister):
