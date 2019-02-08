@@ -1,15 +1,16 @@
-from collections import Mapping
-from datetime import datetime, timedelta
 import json
 import os
-from shutil import rmtree
 import time
-from unittest import TestCase, mock, skip
+from collections import Mapping
+from datetime import datetime, timedelta
+from shutil import rmtree
+from unittest import TestCase, mock
 
 from pywikibot import Page
 from testfixtures import LogCapture, compare
 
-from tools.bots import BotException, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, WikiLogger, \
+from tools.bots import BotException, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, \
+    WikiLogger, \
     _DATA_PATH, _get_data_path
 
 _DATA_PATH_TEST = _DATA_PATH + "_test"

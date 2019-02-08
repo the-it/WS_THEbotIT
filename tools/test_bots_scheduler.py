@@ -3,8 +3,8 @@ from unittest import TestCase, mock
 
 from testfixtures import LogCapture, compare
 
-from tools.bots import CanonicalBot, BotException, PersistedTimestamp
 from tools.bot_scheduler import BotScheduler
+from tools.bots import CanonicalBot, BotException, PersistedTimestamp
 
 
 class TestBotScheduler(TestCase):

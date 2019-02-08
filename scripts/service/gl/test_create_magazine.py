@@ -4,6 +4,7 @@ from ddt import ddt, file_data
 
 from scripts.service.gl.create_magazine import search_for_refs
 
+
 @ddt
 class TestSearchForRefs(TestCase):
     @file_data("scan_for_refs.json")

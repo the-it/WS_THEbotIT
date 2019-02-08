@@ -1,11 +1,12 @@
-from datetime import datetime
 import re
+from datetime import datetime
 from typing import Iterator
 
 from pywikibot import Page, Site
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
-from tools.petscan import PetScan
+
 from tools.bots import CanonicalBot, BotException
+from tools.petscan import PetScan
 
 
 def search_for_refs(text):
