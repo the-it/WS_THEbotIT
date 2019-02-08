@@ -192,6 +192,7 @@ class TestAuthorCrawler(TestCase):
         compare((1908, None), self.crawler._extract_years("1908–?"))
         compare((1933, None), self.crawler._extract_years("* 1933"))
         compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" |* 1933"))
+        compare((None, None), self.crawler._extract_years(""))
 
     def test_split_author_table(self):
         author_table = """Das '''Autorenverzeichnis''' für ''[[Paulys Realencyclopädie der classischen Altertumswissenschaft]]'' basiert auf dem ''Verzeichnis der Autoren'' im Registerband 1980 (S. 235–250), enthält aber anders als dieses biografische Angaben und Verweise zu ggf. existierenden Wikipedia-Artikeln. Die Autoren, deren Werke gemeinfrei sind, werden '''fett''' hervorgehoben.

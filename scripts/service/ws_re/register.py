@@ -138,9 +138,13 @@ class AuthorCrawler:
         return names[1].strip(), names[0].strip()
 
     @staticmethod
-    def _extract_years(years: str) -> Tuple[int, Union[int, None]]:
+    def _extract_years(years: str) -> Tuple[Union[int, None], Union[int, None]]:
         hit = re.search(r"(?<!\")(\d{4})–?(\d{4})?", years)
-        return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
+        if hit:
+            return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
+        return None, None
+
+    # next function author-> to mapping ... to test special authors, after that get complete mapping
 
 
 class LemmaChapter:
