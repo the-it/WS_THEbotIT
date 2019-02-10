@@ -162,9 +162,14 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = {"u": "vw",
+_TRANSLATION_DICT = {"a": "ä",
+                     "c": "ç",
+                     "e": "ëê",
                      "i": "jï",
-                     "": "()?"}
+                     "o": "öô",
+                     "s": "ś",
+                     "u": "vwü",
+                     "": "()?\'"}
 
 _TMP_DICT = {}
 for key in _TRANSLATION_DICT:
@@ -226,9 +231,17 @@ class Lemma(Mapping):
 
     def _make_sort_key(self):
         # simple replacement of single characters
-        lemma = self["lemma"].lower().translate(_TRANSLATION_DICT)
+        lemma = self["lemma"].casefold().translate(_TRANSLATION_DICT)
         # catching of "a ...", "ab ..." and "ad ..."
-        return re.sub(r"^a[db]? ", "", lemma)
+        lemma = re.sub(r"^a[db]? ", "", lemma)
+        # catching of "X. ..."
+        lemma = re.sub(r"^[a-z]?\. ", "", lemma)
+        # unify numbers
+        lemma = re.sub(r"(?<!\d)(\d)(?!\d)", r"00\g<1>", lemma)
+        lemma = re.sub(r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>", lemma)
+        # delete dots at last
+        lemma = re.sub(r"\.", " ", lemma)
+        return lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -459,7 +472,7 @@ class AlphabeticRegister(Register):
 
 
 class Registers:
-    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "ea", "er", "f", "g",
+    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "e", "er", "f", "g",
                     "ha", "hi", "i", "k", "kj", "la", "lf", "ma", "mb", "mi", "n", "o", "p", "pe",
                     "pi", "po", "pr", "q", "r", "sa", "se", "so", "ta", "th", "ti", "u", "uf", "x",
                     "y", "z"]
