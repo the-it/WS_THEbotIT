@@ -162,12 +162,15 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = str.maketrans({"v": "u",
-                                   "w": "u",
-                                   "j": "i",
-                                   "(": "",
-                                   ")": "",
-                                   "?": ""})
+_TRANSLATION_DICT = {"u": "vw",
+                     "i": "jï",
+                     "": "()?"}
+
+_TMP_DICT = {}
+for key in _TRANSLATION_DICT:
+    for character in _TRANSLATION_DICT[key]:
+        _TMP_DICT[character] = key
+_TRANSLATION_DICT = str.maketrans(_TMP_DICT)
 
 
 class Lemma(Mapping):
@@ -457,7 +460,7 @@ class AlphabeticRegister(Register):
 
 class Registers:
     _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "ea", "er", "f", "g",
-                    "ha", "hi", "i", "k", "kl", "la", "li", "ma", "me", "mi", "n", "o", "p", "pe",
+                    "ha", "hi", "i", "k", "kj", "la", "lf", "ma", "mb", "mi", "n", "o", "p", "pe",
                     "pi", "po", "pr", "q", "r", "sa", "se", "so", "ta", "th", "ti", "u", "uf", "x",
                     "y", "z"]
 
