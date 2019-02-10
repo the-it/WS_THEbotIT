@@ -510,3 +510,10 @@ class Registers:
     @property
     def volumes(self):
         return self._registers
+
+
+
+
+registers = Registers()
+for single_volume in registers.volumes:
+    print(single_volume)
