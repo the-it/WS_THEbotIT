@@ -165,6 +165,7 @@ class LemmaChapter:
 _TRANSLATION_DICT = str.maketrans({"v": "u",
                                    "w": "u",
                                    "j": "i",
+                                   "ï": "i",
                                    "(": "",
                                    ")": "",
                                    "?": ""})
