@@ -162,9 +162,12 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = {"c": "ç",
+_TRANSLATION_DICT = {"a": "ä",
+                     "c": "ç",
+                     "e": "ë",
                      "i": "jï",
-                     "u": "vw",
+                     "o": "ö",
+                     "u": "vwü",
                      "": "()?\'"}
 
 _TMP_DICT = {}
@@ -235,6 +238,8 @@ class Lemma(Mapping):
         # unify numbers
         lemma = re.sub(r"(?<!\d)(\d)(?!\d)", "00\g<1>", lemma)
         lemma = re.sub(r"(?<!\d)(\d\d)(?!\d)", "0\g<1>", lemma)
+        # delete dots at last
+        lemma = re.sub(r"\.", " ", lemma)
         return lemma.strip()
 
     def keys(self):

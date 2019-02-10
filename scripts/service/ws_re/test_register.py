@@ -319,9 +319,9 @@ class TestLemma(BaseTestRegister):
 
     def test_sort_key(self):
         sort_dict = copy.deepcopy(self.basic_dict)
-        sort_dict["lemma"] = "Uv(Wij)'ï?ßç"
+        sort_dict["lemma"] = "Uv(Wij)'ï?ßçëäöü"
         sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("uuuiiissc", sort_lemma.sort_key)
+        compare("uuuiiissceaou", sort_lemma.sort_key)
 
         sort_dict["lemma"] = "ad Flexum"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
@@ -358,6 +358,10 @@ class TestLemma(BaseTestRegister):
         sort_dict["lemma"] = "Abd 1 11 230"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
         compare("abd 001 011 230", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "E....orceni"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("e    orceni", uvwij_lemma.sort_key)
 
 
 class TestRegister(BaseTestRegister):
