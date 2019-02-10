@@ -164,7 +164,7 @@ class LemmaChapter:
 
 _TRANSLATION_DICT = {"a": "ä",
                      "c": "ç",
-                     "e": "ë",
+                     "e": "ëê",
                      "i": "jï",
                      "o": "ö",
                      "u": "vwü",
