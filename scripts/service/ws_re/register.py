@@ -162,13 +162,16 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = str.maketrans({"v": "u",
-                                   "w": "u",
-                                   "j": "i",
-                                   "ï": "i",
-                                   "(": "",
-                                   ")": "",
-                                   "?": ""})
+_TRANSLATION_DICT = {"u": "vw",
+                     "i": "jï",
+                     "": "()?"}
+
+_TMP_DICT = {}
+for key in _TRANSLATION_DICT:
+    for character in _TRANSLATION_DICT[key]:
+        _TMP_DICT[character] = key
+
+_TRANSLATION_DICT = str.maketrans(_TMP_DICT)
 
 
 class Lemma(Mapping):
