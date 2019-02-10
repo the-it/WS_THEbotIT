@@ -471,7 +471,7 @@ class AlphabeticRegister(Register):
 
 
 class Registers:
-    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "ea", "er", "f", "g",
+    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "e", "er", "f", "g",
                     "ha", "hi", "i", "k", "kj", "la", "lf", "ma", "mb", "mi", "n", "o", "p", "pe",
                     "pi", "po", "pr", "q", "r", "sa", "se", "so", "ta", "th", "ti", "u", "uf", "x",
                     "y", "z"]
