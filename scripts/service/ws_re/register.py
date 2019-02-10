@@ -162,9 +162,10 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = {"u": "vw",
+_TRANSLATION_DICT = {"c": "ç",
                      "i": "jï",
-                     "": "()?"}
+                     "u": "vw",
+                     "": "()?\'"}
 
 _TMP_DICT = {}
 for key in _TRANSLATION_DICT:
@@ -226,9 +227,15 @@ class Lemma(Mapping):
 
     def _make_sort_key(self):
         # simple replacement of single characters
-        lemma = self["lemma"].lower().translate(_TRANSLATION_DICT)
+        lemma = self["lemma"].casefold().translate(_TRANSLATION_DICT)
         # catching of "a ...", "ab ..." and "ad ..."
-        return re.sub(r"^a[db]? ", "", lemma)
+        lemma = re.sub(r"^a[db]? ", "", lemma)
+        # catching of "X. ..."
+        lemma = re.sub(r"^[a-z]?\. ", "", lemma)
+        # unify numbers
+        lemma = re.sub(r"(?<!\d)(\d)(?!\d)", "00\g<1>", lemma)
+        lemma = re.sub(r"(?<!\d)(\d\d)(?!\d)", "0\g<1>", lemma)
+        return lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
