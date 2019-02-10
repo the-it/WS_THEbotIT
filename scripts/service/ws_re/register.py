@@ -236,8 +236,8 @@ class Lemma(Mapping):
         # catching of "X. ..."
         lemma = re.sub(r"^[a-z]?\. ", "", lemma)
         # unify numbers
-        lemma = re.sub(r"(?<!\d)(\d)(?!\d)", "00\g<1>", lemma)
-        lemma = re.sub(r"(?<!\d)(\d\d)(?!\d)", "0\g<1>", lemma)
+        lemma = re.sub(r"(?<!\d)(\d)(?!\d)", r"00\g<1>", lemma)
+        lemma = re.sub(r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>", lemma)
         # delete dots at last
         lemma = re.sub(r"\.", " ", lemma)
         return lemma.strip()
