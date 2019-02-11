@@ -162,14 +162,14 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = {"a": "ä",
+_TRANSLATION_DICT = {"a": "äâ",
                      "c": "ç",
-                     "e": "ëê",
-                     "i": "jï",
+                     "e": "èéêë",
+                     "i": "jïî",
                      "o": "öô",
                      "s": "ś",
-                     "u": "vwü",
-                     "": "()?\'"}
+                     "u": "vwüûū",
+                     "": "()?\'ʾʿ"}
 
 _TMP_DICT = {}
 for key in _TRANSLATION_DICT:
@@ -510,10 +510,3 @@ class Registers:
     @property
     def volumes(self):
         return self._registers
-
-
-
-
-registers = Registers()
-for single_volume in registers.volumes:
-    print(single_volume)
