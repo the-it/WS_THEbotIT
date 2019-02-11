@@ -179,12 +179,34 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = str.maketrans({"v": "u",
-                                   "w": "u",
-                                   "j": "i",
-                                   "(": "",
-                                   ")": "",
-                                   "?": ""})
+_TRANSLATION_DICT = {"a": "äâ",
+                     "c": "ç",
+                     "e": "èéêë",
+                     "i": "jïî",
+                     "o": "öô",
+                     "s": "ś",
+                     "u": "vwüûū",
+                     "": "()?\'ʾʿ"}
+
+_TMP_DICT = {}
+for key in _TRANSLATION_DICT:
+    for character in _TRANSLATION_DICT[key]:
+        _TMP_DICT[character] = key
+_TRANSLATION_DICT = str.maketrans(_TMP_DICT)
+
+
+_REGEX_RAW_LIST = [
+    # catching of "a ...", "ab ..." and "ad ..."
+    (r"^a[db]? ", ""),
+    # catching of "X. ..."
+    (r"^[a-z]?\. ", ""),
+    # unify numbers
+    (r"(?<!\d)(\d)(?!\d)", r"00\g<1>"),
+    (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>")]
+
+_REGEX_LIST = []
+for regex_pair in _REGEX_RAW_LIST:
+    _REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
 
 
 class Lemma(Mapping):
@@ -239,10 +261,16 @@ class Lemma(Mapping):
         return self._sort_key
 
     def _make_sort_key(self):
+        lemma = self["lemma"]
         # simple replacement of single characters
-        lemma = self["lemma"].lower().translate(_TRANSLATION_DICT)
-        # catching of "a ...", "ab ..." and "ad ..."
-        return re.sub(r"^a[db]? ", "", lemma)
+        lemma = lemma.casefold().translate(_TRANSLATION_DICT)
+
+        for regex in _REGEX_LIST:
+            lemma = regex[0].sub(regex[1], lemma)
+
+        # delete dots at last
+        lemma = lemma.replace(".", " ")
+        return lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -473,8 +501,8 @@ class AlphabeticRegister(Register):
 
 
 class Registers:
-    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "ea", "er", "f", "g",
-                    "ha", "hi", "i", "k", "kl", "la", "li", "ma", "me", "mi", "n", "o", "p", "pe",
+    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "ca", "ch", "da", "di", "e", "er", "f", "g",
+                    "ha", "hi", "i", "k", "kj", "la", "lf", "ma", "mb", "mi", "n", "o", "p", "pe",
                     "pi", "po", "pr", "q", "r", "sa", "se", "so", "ta", "th", "ti", "u", "uf", "x",
                     "y", "z"]
 

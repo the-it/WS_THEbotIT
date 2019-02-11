@@ -387,13 +387,14 @@ class TestLemma(BaseTestRegister):
 
     def test_sort_key(self):
         sort_dict = copy.deepcopy(self.basic_dict)
-        sort_dict["lemma"] = "Uv(Wij)?"
+        "ßâçèéêëîïôöûüśūʾʿ"
+        sort_dict["lemma"] = "Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"
         sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("uuuii", sort_lemma.sort_key)
+        compare("uuuiiissceaouesoaceeeeiioouusu", sort_lemma.sort_key)
 
-        sort_dict["lemma"] = "ad Flexum 1"
+        sort_dict["lemma"] = "ad Flexum"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("flexum 1", uvwij_lemma.sort_key)
+        compare("flexum", uvwij_lemma.sort_key)
 
         sort_dict["lemma"] = "ab epistulis"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
@@ -414,6 +415,22 @@ class TestLemma(BaseTestRegister):
         sort_dict["lemma"] = "aabad abfl"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
         compare("aabad abfl", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "G. abfl"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("abfl", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "Abdigildus (?)"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("abdigildus", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "Abd 1 11 230"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("abd 001 011 230", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "E....orceni"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("e    orceni", uvwij_lemma.sort_key)
 
 
 class TestRegister(BaseTestRegister):
@@ -571,10 +588,11 @@ class TestRegisters(BaseTestRegister):
 _MAX_SIZE_WIKI_PAGE = 2098175
 
 
-@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+#@skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestIntegrationRegister(TestCase):
-    def setUp(self):
-        self.registers = Registers()
+    @classmethod
+    def setUpClass(cls):
+        cls.registers = Registers()
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
