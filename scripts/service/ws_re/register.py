@@ -249,7 +249,7 @@ class Lemma(Mapping):
         lemma = lemma.casefold().translate(_TRANSLATION_DICT)
 
         for regex in _REGEX_LIST:
-            regex[0].sub(regex[1], lemma)
+            lemma = regex[0].sub(regex[1], lemma)
 
         # delete dots at last
         lemma = lemma.replace(".", " ")
