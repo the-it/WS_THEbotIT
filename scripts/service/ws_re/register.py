@@ -162,20 +162,34 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = {"a": "ä",
+_TRANSLATION_DICT = {"a": "äâ",
                      "c": "ç",
-                     "e": "ëê",
-                     "i": "jï",
+                     "e": "èéêë",
+                     "i": "jïî",
                      "o": "öô",
                      "s": "ś",
-                     "u": "vwü",
-                     "": "()?\'"}
+                     "u": "vwüûū",
+                     "": "()?\'ʾʿ"}
 
 _TMP_DICT = {}
 for key in _TRANSLATION_DICT:
     for character in _TRANSLATION_DICT[key]:
         _TMP_DICT[character] = key
 _TRANSLATION_DICT = str.maketrans(_TMP_DICT)
+
+
+_REGEX_RAW_LIST = [
+    # catching of "a ...", "ab ..." and "ad ..."
+    (r"^a[db]? ", ""),
+    # catching of "X. ..."
+    (r"^[a-z]?\. ", ""),
+    # unify numbers
+    (r"(?<!\d)(\d)(?!\d)", r"00\g<1>"),
+    (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>")]
+
+_REGEX_LIST = []
+for regex_pair in _REGEX_RAW_LIST:
+    _REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
 
 
 class Lemma(Mapping):
@@ -230,17 +244,15 @@ class Lemma(Mapping):
         return self._sort_key
 
     def _make_sort_key(self):
+        lemma = self["lemma"]
         # simple replacement of single characters
-        lemma = self["lemma"].casefold().translate(_TRANSLATION_DICT)
-        # catching of "a ...", "ab ..." and "ad ..."
-        lemma = re.sub(r"^a[db]? ", "", lemma)
-        # catching of "X. ..."
-        lemma = re.sub(r"^[a-z]?\. ", "", lemma)
-        # unify numbers
-        lemma = re.sub(r"(?<!\d)(\d)(?!\d)", r"00\g<1>", lemma)
-        lemma = re.sub(r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>", lemma)
+        lemma = lemma.casefold().translate(_TRANSLATION_DICT)
+
+        for regex in _REGEX_LIST:
+            lemma = regex[0].sub(regex[1], lemma)
+
         # delete dots at last
-        lemma = re.sub(r"\.", " ", lemma)
+        lemma = lemma.replace(".", " ")
         return lemma.strip()
 
     def keys(self):

@@ -319,9 +319,10 @@ class TestLemma(BaseTestRegister):
 
     def test_sort_key(self):
         sort_dict = copy.deepcopy(self.basic_dict)
-        sort_dict["lemma"] = "Uv(Wij)'ï?ßçëäöüêśô"
+        "ßâçèéêëîïôöûüśūʾʿ"
+        sort_dict["lemma"] = "Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"
         sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("uuuiiissceaoueso", sort_lemma.sort_key)
+        compare("uuuiiissceaouesoaceeeeiioouusu", sort_lemma.sort_key)
 
         sort_dict["lemma"] = "ad Flexum"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
@@ -519,10 +520,11 @@ class TestRegisters(BaseTestRegister):
 _MAX_SIZE_WIKI_PAGE = 2098175
 
 
-@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+#@skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestIntegrationRegister(TestCase):
-    def setUp(self):
-        self.registers = Registers()
+    @classmethod
+    def setUpClass(cls):
+        cls.registers = Registers()
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
