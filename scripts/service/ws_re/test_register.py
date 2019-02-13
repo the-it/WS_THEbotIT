@@ -186,6 +186,9 @@ class TestAuthorCrawler(TestCase):
         compare(("Walter", "Amelung"), self.crawler._extract_author_name("|'''[[Walter Amelung|Amelung, [Walter]]]'''"))
         compare(("Hermann", "Abert"), self.crawler._extract_author_name("|'''[[Hermann Abert|Abert, [Hermann]]]"))
         compare(("Martin", "Bang"), self.crawler._extract_author_name("Bang, [Martin]{{Anker | B}}"))
+        compare(("Johannes", "Zwicker"), self.crawler._extract_author_name("Zwicker, Joh[annes = Hanns]"))
+        compare(("Friedrich Walter", "Lenz"), self.crawler._extract_author_name("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
+        compare(("Eduard", "Thraemer"), self.crawler._extract_author_name("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
 
     def test_extract_years(self):
         compare((1906, 1988), self.crawler._extract_years("1906–1988"))
@@ -194,8 +197,7 @@ class TestAuthorCrawler(TestCase):
         compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" |* 1933"))
         compare((None, None), self.crawler._extract_years(""))
 
-    def test_split_author_table(self):
-        author_table = """Das '''Autorenverzeichnis''' für ''[[Paulys Realencyclopädie der classischen Altertumswissenschaft]]'' basiert auf dem ''Verzeichnis der Autoren'' im Registerband 1980 (S. 235–250), enthält aber anders als dieses biografische Angaben und Verweise zu ggf. existierenden Wikipedia-Artikeln. Die Autoren, deren Werke gemeinfrei sind, werden '''fett''' hervorgehoben.
+    author_table = """Das '''Autorenverzeichnis''' für ''[[Paulys Realencyclopädie der classischen Altertumswissenschaft]]'' basiert auf dem ''Verzeichnis der Autoren'' im Registerband 1980 (S. 235–250), enthält aber anders als dieses biografische Angaben und Verweise zu ggf. existierenden Wikipedia-Artikeln. Die Autoren, deren Werke gemeinfrei sind, werden '''fett''' hervorgehoben.
 
 Die Redaktion der RE fügte ihrem Registerband ein Verzeichnis mit 1096 Autorennamen an (die 119 Autoren des ersten Bandes sind hervorgehoben), das von Gerhard Winkler erstellt wurde. Die Identifizierungen sind teilweise falsch, darum ist weitere Recherche empfohlen. Darüber hinaus tauchen manche Autoren, die nachweislich Beiträge erstellt haben, gar nicht auf. Auch in den Vorreden werden Personen als Beiträger genannt, die in Winklers Verzeichnis fehlen. Ob diese Personen tatsächlich Artikel verfasst oder der Redaktion nur Hinweise gegeben haben, bleibt zu untersuchen.
 
@@ -239,7 +241,10 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 |}
 
 [[Kategorie:RE:Autoren|!]]"""
-        splitted_table = self.crawler._split_author_table(author_table)
+
+    def test_split_author_table(self):
+
+        splitted_table = self.crawler._split_author_table(self.author_table)
         compare(4, len(splitted_table))
         expected_entry = """|Abbott, K[enneth] M[organ]{{Anker|A}}
 |1906–1988
@@ -274,6 +279,13 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
         expect = {"Kenneth Morgan Abbott": {}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "")))
 
+    def test_get_complete_authors(self):
+        author_mapping = self.crawler.get_authors(self.author_table)
+        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988},
+                  "Karlhans Abel": {"birth": 1919, "death": 1998},
+                  "Walther Abel": {"birth": 1906, "death": 1987},
+                  "Johannes Zwicker": {"birth": 1881, "death": 1969}}
+        compare(expect, author_mapping)
 
 
 class TestLemmaChapter(TestCase):

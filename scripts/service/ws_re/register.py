@@ -77,10 +77,11 @@ class AuthorCrawler:
     _simple_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
     _complex_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\{([^\}]*)\}")
 
-    def get_mapping(self, mapping: str) -> Dict[str, Union[str, Dict[str, str]]]:
+    @classmethod
+    def get_mapping(cls, mapping: str) -> Dict[str, Union[str, Dict[str, str]]]:
         mapping_dict = {}
-        for single_mapping in self._split_mappings(mapping):
-            mapping_dict.update(self._extract_mapping(single_mapping))
+        for single_mapping in cls._split_mappings(mapping):
+            mapping_dict.update(cls._extract_mapping(single_mapping))
         return mapping_dict
 
     @staticmethod
@@ -113,7 +114,11 @@ class AuthorCrawler:
         return {hit.group(1): sub_dict}
 
     def get_authors(self, text: str):
-        pass
+        return_dict = {}
+        author_list = self._split_author_table(text)
+        for author_sub_table in author_list:
+            return_dict.update(self._get_author(author_sub_table))
+        return return_dict
 
     @staticmethod
     def _split_author_table(raw_table: str) -> List[str]:
@@ -130,11 +135,19 @@ class AuthorCrawler:
     @staticmethod
     def _extract_author_name(author: str) -> Tuple[str, str]:
         author = author.lstrip("|")
+        # replace all templates
         author = re.sub(r"\{\{[^\}]*\}\}", "", author)
+        # if it's a link use only the second part
         if re.search(r"\[\[", author):
             author = author.split("|")[1]
         translation_dict = str.maketrans({"[": "", "]": "", "'": ""})
-        names = author.translate(translation_dict).split(",")
+        author = author.translate(translation_dict)
+        names = author.split(",")
+        # handle funky things with a "="-character
+        if "=" in names[0]:
+            names[0] = names[0].split("=")[0].strip()
+        if "=" in names[1]:
+            names[1] = names[1].split("=")[0].strip()
         return names[1].strip(), names[0].strip()
 
     @staticmethod
