@@ -259,6 +259,22 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
         compare("XIX,2", splitted_author[2])
         compare("[[w:Kenneth Morgan Abbott|Wikipedia]]", splitted_author[3])
 
+    def test_get_author_mapping(self):
+        author_sub_table = """|Abbott, K[enneth] M[organ]{{Anker|A}}
+|##date##
+|XIX,2
+|[[w:Kenneth Morgan Abbott|Wikipedia]]"""
+
+        expect = {"Kenneth Morgan Abbott": {"death": 1988, "birth": 1906}}
+        compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906–1988")))
+
+        expect = {"Kenneth Morgan Abbott": {"birth": 1906}}
+        compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906")))
+
+        expect = {"Kenneth Morgan Abbott": {}}
+        compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "")))
+
+
 
 class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
@@ -588,7 +604,7 @@ class TestRegisters(BaseTestRegister):
 _MAX_SIZE_WIKI_PAGE = 2098175
 
 
-#@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+@skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestIntegrationRegister(TestCase):
     @classmethod
     def setUpClass(cls):

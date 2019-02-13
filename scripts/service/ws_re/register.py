@@ -144,7 +144,19 @@ class AuthorCrawler:
             return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
         return None, None
 
-    # next function author-> to mapping ... to test special authors, after that get complete mapping
+    def _get_author(self, author_lines: str) -> Mapping:
+        lines = self._split_author(author_lines)
+        author_tuple = self._extract_author_name(lines[0])
+        years = self._extract_years(lines[1])
+        author = "{} {}".format(author_tuple[0], author_tuple[1])
+        author_dict = {author: {}}
+        if years[0]:
+            author_dict[author]["birth"] = years[0]
+        if years[1]:
+            author_dict[author]["death"] = years[1]
+        return author_dict
+
+    # after that get complete mapping
 
 
 class LemmaChapter:
