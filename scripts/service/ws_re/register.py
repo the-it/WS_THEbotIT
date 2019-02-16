@@ -40,6 +40,9 @@ class Author:
     def name(self) -> str:
         return self._name
 
+    def update_internal_dict(self, author_dict: Dict):
+        self._dict.update(author_dict)
+
 
 class Authors:
     _REGISTER_PATH = _REGISTER_PATH
@@ -69,8 +72,18 @@ class Authors:
             pass
         return author
 
-    def get_author(self, mapping: str):
-        return self._authors[mapping]
+    def get_author(self, author_key: str):
+        return self._authors[author_key]
+
+    def set_mappings(self, mapping: Dict):
+        self._mapping.update(mapping)
+
+    def set_author(self, mapping: Dict):
+        for author_key in mapping:
+            if author_key in self._authors:
+                self._authors[author_key].update_internal_dict(mapping[author_key])
+            else:
+                self._authors[author_key] = Author(author_key, mapping[author_key])
 
 
 class AuthorCrawler:

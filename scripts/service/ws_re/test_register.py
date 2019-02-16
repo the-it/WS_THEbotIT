@@ -76,6 +76,32 @@ class TestAuthors(BaseTestRegister):
         compare(1987, author.death)
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
 
+    def test_set_mapping(self):
+        authors = Authors()
+        compare("Abbott", authors._mapping["Abbott"])
+        self.assertFalse("New" in authors._mapping)
+        authors.set_mappings({"Abbott": "Abbott_new", "New": "New"})
+        compare("Abbott_new", authors._mapping["Abbott"])
+        compare("New", authors._mapping["New"])
+
+    def test_set_author(self):
+        authors = Authors()
+
+        author = authors.get_author_by_mapping("Abel", "I,1")
+        compare("Abel", author.name)
+        compare(1998, author.death)
+        compare(None, author.birth)
+        authors.set_author({"Abel": {"birth": 1900, "death": 1990}})
+        author = authors.get_author_by_mapping("Abel", "I,1")
+        compare("Abel", author.name)
+        compare(1990, author.death)
+        compare(1900, author.birth)
+
+        authors.set_author({"Abel2": {"birth": 1950}})
+        author = authors._authors["Abel2"]
+        compare("Abel2", author.name)
+        compare(1950, author.birth)
+
 
 class TestAuthorCrawler(TestCase):
     def setUp(self):
