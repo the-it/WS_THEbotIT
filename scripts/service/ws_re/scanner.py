@@ -109,9 +109,8 @@ class ReScanner(CanonicalBot):
                         .format(task.get_name(), lemma)
                     self.logger.critical(error_message)
                     raise RuntimeError(error_message)
-                else:
-                    self.logger.error("Error in {}/{}, no data where altered."
-                                      .format(task.get_name(), lemma))
+                self.logger.error("Error in {}/{}, no data where altered."
+                                  .format(task.get_name(), lemma))
         return task_name
 
     def get_oldest_datetime(self):
