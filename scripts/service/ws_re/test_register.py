@@ -635,7 +635,7 @@ class TestRegisters(BaseTestRegister):
         compare(4, len(registers.alphabetic["a"]))
         compare(2, len(registers.alphabetic["b"]))
         compare(1, len(registers.alphabetic["ch"]))
-        compare(1, len(registers.alphabetic["da"]))
+        compare(1, len(registers.alphabetic["d"]))
         compare(2, len(registers.alphabetic["u"]))
 
 
