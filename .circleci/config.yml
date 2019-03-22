@@ -83,7 +83,7 @@ report_codecov: &report_codecov
     name: report codecov
     command: |
       . venv/bin/activate
-      codecov -F `python -c 'import sys; print("{}.{}.{}".format(*sys.version_info[:3]))'`
+      codecov -F $PYTHON_VERSION
 
 show_python_version: &show_python_version
   run:
@@ -145,12 +145,16 @@ jobs:
   coverage35:
     docker:
       - image: circleci/python:3.5
+    environment:
+      PYTHON_VERSION: 3.5
     working_directory: ~/repo
     <<: *coverage_steps
 
   coverage37:
     docker:
       - image: circleci/python:3.7
+    environment:
+      PYTHON_VERSION: 3.7
     working_directory: ~/repo
     <<: *coverage_steps
 
