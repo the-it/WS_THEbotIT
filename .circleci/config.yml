@@ -83,7 +83,7 @@ report_codecov: &report_codecov
     name: report codecov
     command: |
       . venv/bin/activate
-      codecov -F `python --version`
+      codecov -F `python -c 'import sys; print("{}.{}.{}".format(*sys.version_info[:3]))'`
 
 show_python_version: &show_python_version
   run:
@@ -160,9 +160,9 @@ workflows:
   version: 2
   test-and-quality:
     jobs:
-      - quality:
-      - version35:
-      - version37:
+      - quality
+      - version35
+      - version37
       - coverage35:
           requires:
             - version35
