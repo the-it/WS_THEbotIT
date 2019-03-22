@@ -83,7 +83,7 @@ report_codecov: &report_codecov
     name: report codecov
     command: |
       . venv/bin/activate
-      codecov -F $PYTHON_VERSION
+      codecov -F `python --version`
 
 show_python_version: &show_python_version
   run:
@@ -161,18 +161,13 @@ workflows:
   test-and-quality:
     jobs:
       - quality:
-          context: python37
       - version35:
-          context: python35
       - version37:
-          context: python37
       - coverage35:
-          context: python35
           requires:
             - version35
             - quality
       - coverage37:
-          context: python37
           requires:
             - version37
             - quality
