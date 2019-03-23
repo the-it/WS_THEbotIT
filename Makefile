@@ -20,7 +20,7 @@ bandit :
 
 mypy :
 	echo "############# MYPY #############"
-	mypy .
+	mypy tools
 
 safety :
 	echo "############ SAFETY ############"
