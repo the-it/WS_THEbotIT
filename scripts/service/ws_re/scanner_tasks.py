@@ -2,8 +2,10 @@ import logging
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
+from pathlib import Path
 from typing import Mapping
 
+import git
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
@@ -139,8 +141,21 @@ class SCANTask(ReScannerTask):
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
+    def _push_changes(self):
+        repo = git.Repo(search_parent_directories=True)
+        master = repo.active_branch
+        print(repo.active_branch)
+        now = datetime.now().strftime("%y%m%d_%H%M%S")
+        repo.git.checkout("-b",
+                          "{}_updating_registers".format(now))
+        repo.git.add(str(Path(__file__).parent.joinpath("register")))
+        repo.index.commit("Updating the register on {}".format(now))
+        repo.git.push("origin", repo.active_branch.name)
+        repo.git.checkout(master.name)
+        print(repo.active_branch)
+
 
 if __name__ == "__main__":
     WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
     LOGGER = logging.getLogger("test")
-    SCANTask(WS_WIKI, LOGGER).finish_task()
+    SCANTask(WS_WIKI, LOGGER)._push_changes()
