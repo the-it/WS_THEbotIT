@@ -1,8 +1,10 @@
 import os
+import sys
 from datetime import datetime
 from pathlib import Path
-import sys
 from typing import Union
+
+from pywikibot import Site, Page
 
 
 class ToolException(Exception):
@@ -16,6 +18,13 @@ def make_html_color(min_value, max_value, value):
         color = ((value - max_value) / (min_value - max_value)) * 255
     color = max(0, min(255, color))
     return str(hex(round(color)))[2:].zfill(2).upper()
+
+
+def fetch_text_from_wiki_site(wiki: Site, lemma: str) -> str:  # pragma: no cover
+    text = Page(wiki, lemma).text
+    if not text:
+        raise ToolException("The lemma {} is empty.".format(lemma))
+    return text
 
 
 if datetime.now() > datetime(year=2020, month=9, day=13):  # pragma: no cover

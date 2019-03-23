@@ -78,10 +78,10 @@ class Authors:
     def get_author(self, author_key: str):
         return self._authors[author_key]
 
-    def set_mappings(self, mapping: Dict):
+    def set_mappings(self, mapping: Mapping):
         self._mapping.update(mapping)
 
-    def set_author(self, mapping: Dict):
+    def set_author(self, mapping: Mapping):
         for author_key in mapping:
             if author_key in self._authors:
                 self._authors[author_key].update_internal_dict(mapping[author_key])
@@ -97,10 +97,10 @@ class Authors:
     def persist(self):
         with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "w",
                   encoding="utf-8") as json_file:
-            json.dump(self._mapping, json_file, sort_keys=True, indent=2)
+            json.dump(self._mapping, json_file, sort_keys=True, indent=2, ensure_ascii=False)
         with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "w",
                   encoding="utf-8") as json_file:
-            json.dump(self._to_dict(), json_file, sort_keys=True, indent=2)
+            json.dump(self._to_dict(), json_file, sort_keys=True, indent=2, ensure_ascii=False)
 
 
 class AuthorCrawler:
@@ -143,11 +143,12 @@ class AuthorCrawler:
                 sub_dict["*"] = sub_mapping.strip().strip("\"")
         return {hit.group(1): sub_dict}
 
-    def get_authors(self, text: str):
+    @classmethod
+    def get_authors(cls, text: str):
         return_dict = {}
-        author_list = self._split_author_table(text)
+        author_list = cls._split_author_table(text)
         for author_sub_table in author_list:
-            return_dict.update(self._get_author(author_sub_table))
+            return_dict.update(cls._get_author(author_sub_table))
         return return_dict
 
     @staticmethod
@@ -174,10 +175,13 @@ class AuthorCrawler:
         author = author.translate(translation_dict)
         names = author.split(",")
         # handle funky things with a "="-character
-        if "=" in names[0]:
-            names[0] = names[0].split("=")[0].strip()
-        if "=" in names[1]:
-            names[1] = names[1].split("=")[0].strip()
+        try:
+            if "=" in names[0]:
+                names[0] = names[0].split("=")[0].strip()
+            if "=" in names[1]:
+                names[1] = names[1].split("=")[0].strip()
+        except IndexError:
+            return names[0].strip(), ""
         return names[1].strip(), names[0].strip()
 
     @staticmethod
@@ -187,10 +191,11 @@ class AuthorCrawler:
             return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
         return None, None
 
-    def _get_author(self, author_lines: str) -> Mapping:
-        lines = self._split_author(author_lines)
-        author_tuple = self._extract_author_name(lines[0])
-        years = self._extract_years(lines[1])
+    @classmethod
+    def _get_author(cls, author_lines: str) -> Mapping:
+        lines = cls._split_author(author_lines)
+        author_tuple = cls._extract_author_name(lines[0])
+        years = cls._extract_years(lines[1])
         author = "{} {}".format(author_tuple[0], author_tuple[1])
         author_dict = {author: {}}
         if years[0]:

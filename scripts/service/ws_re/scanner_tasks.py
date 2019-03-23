@@ -1,10 +1,14 @@
+import logging
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
+from typing import Mapping
 
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
+from scripts.service.ws_re.register import Registers, Authors, AuthorCrawler
+from tools import fetch_text_from_wiki_site
 from tools.bots import WikiLogger
 
 SUCCESS = "success"
@@ -104,3 +108,39 @@ class VERWTask(ReScannerTask):
                 if template_match:
                     re_article["VERWEIS"].value = True
                     re_article.text = self._regex_template.sub("", re_article.text).strip()
+
+
+class SCANTask(ReScannerTask):
+    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+        super().__init__(wiki, logger, debug)
+        self.registers = None  # type: Registers
+
+    def task(self):
+        pass
+
+    def load_task(self):
+        super().load_task()
+        self.logger.info("Loading special task")
+
+    def finish_task(self):
+        super().finish_task()
+        authors = Authors()
+        authors.set_mappings(self._fetch_mapping())
+        authors.set_author(self._fetch_author_infos())
+        authors.persist()
+
+    def _fetch_author_infos(self) -> Mapping:
+        text = fetch_text_from_wiki_site(self.wiki,
+                                         "Paulys Realencyclopädie der classischen "
+                                         "Altertumswissenschaft/Autoren")
+        return AuthorCrawler.get_authors(text)
+
+    def _fetch_mapping(self) -> Mapping:
+        text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
+        return AuthorCrawler.get_mapping(text)
+
+
+if __name__ == "__main__":
+    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    LOGGER = logging.getLogger("test")
+    SCANTask(WS_WIKI, LOGGER).finish_task()
