@@ -1,13 +1,12 @@
 import importlib
 import inspect
-
-from scripts.service.ws_re.data_types import RePage
 from datetime import datetime
 from unittest import TestCase, mock
 
 import pywikibot
 from testfixtures import LogCapture, compare
 
+from scripts.service.ws_re.data_types import RePage
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask
 from tools.bots import WikiLogger
 
@@ -295,3 +294,8 @@ lala"""
             compare("text.", re_page[0].text)
             compare("text.", re_page[1].text)
             compare("text.", re_page[3].text)
+
+
+class TestSCANTask(TestCase):
+    def test_fetch_author_mappings(self):
+        pass

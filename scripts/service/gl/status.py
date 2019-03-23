@@ -1,8 +1,9 @@
 import re
 
 from pywikibot import Page, Site
-from tools.petscan import PetScan
+
 from tools.bots import CanonicalBot
+from tools.petscan import PetScan
 
 
 class GlStatus(CanonicalBot):

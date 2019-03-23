@@ -5,6 +5,7 @@ from testfixtures import compare
 
 from scripts.service.gl.status import GlStatus
 
+
 class TestGlStatus(TestCase):
     def test_projektstand(self):
         given_file = """aaa

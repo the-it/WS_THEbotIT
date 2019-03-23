@@ -1,9 +1,9 @@
 import json
+import re
 from collections import OrderedDict
 from collections.abc import Mapping, Sequence
 from enum import Enum
 from pathlib import Path
-import re
 from typing import Union, Generator, Tuple
 
 import pywikibot

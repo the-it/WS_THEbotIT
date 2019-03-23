@@ -1,11 +1,11 @@
 import codecs
-from datetime import datetime
 import importlib
 import inspect
 import os
-from pathlib import Path
 import re
 import sys
+from datetime import datetime
+from pathlib import Path
 from typing import List
 
 import git

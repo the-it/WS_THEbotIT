@@ -1,9 +1,9 @@
-from collections.abc import Mapping
-from datetime import datetime, timedelta
 import json
 import logging
 import os
 import sys
+from collections.abc import Mapping
+from datetime import datetime, timedelta
 
 from pywikibot import Page, Site
 

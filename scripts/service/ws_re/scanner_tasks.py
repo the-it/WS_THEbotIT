@@ -1,10 +1,15 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
+from pathlib import Path
+from typing import Mapping
 
+import git
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
+from scripts.service.ws_re.register import Registers, Authors, AuthorCrawler
+from tools import fetch_text_from_wiki_site
 from tools.bots import WikiLogger
 
 SUCCESS = "success"
@@ -104,3 +109,45 @@ class VERWTask(ReScannerTask):
                 if template_match:
                     re_article["VERWEIS"].value = True
                     re_article.text = self._regex_template.sub("", re_article.text).strip()
+
+
+class SCANTask(ReScannerTask):
+    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+        super().__init__(wiki, logger, debug)
+        self.registers = None  # type: Registers
+
+    def task(self):
+        pass
+
+    def load_task(self):
+        super().load_task()
+        self.logger.info("Loading special task")
+
+    def finish_task(self):
+        super().finish_task()
+        authors = Authors()
+        authors.set_mappings(self._fetch_mapping())
+        authors.set_author(self._fetch_author_infos())
+        authors.persist()
+        self._push_changes()
+
+    def _fetch_author_infos(self) -> Mapping:
+        text = fetch_text_from_wiki_site(self.wiki,
+                                         "Paulys Realencyclopädie der classischen "
+                                         "Altertumswissenschaft/Autoren")
+        return AuthorCrawler.get_authors(text)
+
+    def _fetch_mapping(self) -> Mapping:
+        text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
+        return AuthorCrawler.get_mapping(text)
+
+    @staticmethod
+    def _push_changes():
+        repo = git.Repo(search_parent_directories=True)
+        master = repo.active_branch
+        now = datetime.now().strftime("%y%m%d_%H%M%S")
+        repo.git.checkout("-b", "{}_updating_registers".format(now))
+        repo.git.add(str(Path(__file__).parent.joinpath("register")))
+        repo.index.commit("Updating the register at {}".format(now))
+        repo.git.push("origin", repo.active_branch.name)
+        repo.git.checkout(master.name)
