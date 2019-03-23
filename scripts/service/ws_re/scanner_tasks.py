@@ -1,4 +1,3 @@
-import logging
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
@@ -130,6 +129,7 @@ class SCANTask(ReScannerTask):
         authors.set_mappings(self._fetch_mapping())
         authors.set_author(self._fetch_author_infos())
         authors.persist()
+        self._push_changes()
 
     def _fetch_author_infos(self) -> Mapping:
         text = fetch_text_from_wiki_site(self.wiki,
@@ -141,21 +141,13 @@ class SCANTask(ReScannerTask):
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
-    def _push_changes(self):
+    @staticmethod
+    def _push_changes():
         repo = git.Repo(search_parent_directories=True)
         master = repo.active_branch
-        print(repo.active_branch)
         now = datetime.now().strftime("%y%m%d_%H%M%S")
-        repo.git.checkout("-b",
-                          "{}_updating_registers".format(now))
+        repo.git.checkout("-b", "{}_updating_registers".format(now))
         repo.git.add(str(Path(__file__).parent.joinpath("register")))
-        repo.index.commit("Updating the register on {}".format(now))
+        repo.index.commit("Updating the register at {}".format(now))
         repo.git.push("origin", repo.active_branch.name)
         repo.git.checkout(master.name)
-        print(repo.active_branch)
-
-
-if __name__ == "__main__":
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    LOGGER = logging.getLogger("test")
-    SCANTask(WS_WIKI, LOGGER)._push_changes()
