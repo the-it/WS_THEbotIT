@@ -13,7 +13,6 @@ from scripts.service.ws_re.register import Author, Authors, VolumeRegister, Lemm
     AlphabeticRegister, Registers, AuthorCrawler, RegisterException
 from tools import INTEGRATION_TEST, path_or_str
 
-
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
 
@@ -101,6 +100,17 @@ class TestAuthors(BaseTestRegister):
         author = authors._authors["Abel2"]
         compare("Abel2", author.name)
         compare(1950, author.birth)
+
+    def test_persist(self):
+        authors = Authors()
+        authors.set_mappings({"Foo": "Bar"})
+        authors.set_author({"Foo Bar": {"birth": 1234}})
+        authors.persist()
+        base_path = Path(__file__).parent.joinpath("test_register")
+        with open(str(base_path.joinpath("authors_mapping.json")), mode="r", encoding="utf8") as mapping:
+            compare(True, "\"Foo\": \"Bar\"" in mapping.read())
+        with open(str(base_path.joinpath("authors.json")), mode="r", encoding="utf8") as authors:
+            compare(True, "  \"Foo Bar\": {\n    \"birth\": 1234\n  }" in authors.read())
 
 
 class TestAuthorCrawler(TestCase):

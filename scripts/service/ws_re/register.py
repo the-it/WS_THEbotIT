@@ -43,6 +43,9 @@ class Author:
     def update_internal_dict(self, author_dict: Dict):
         self._dict.update(author_dict)
 
+    def to_dict(self):
+        return self._dict
+
 
 class Authors:
     _REGISTER_PATH = _REGISTER_PATH
@@ -84,6 +87,20 @@ class Authors:
                 self._authors[author_key].update_internal_dict(mapping[author_key])
             else:
                 self._authors[author_key] = Author(author_key, mapping[author_key])
+
+    def _to_dict(self):
+        author_dict = dict()
+        for dict_key in sorted(self._authors.keys()):
+            author_dict[dict_key] = self._authors[dict_key].to_dict()
+        return author_dict
+
+    def persist(self):
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "w",
+                  encoding="utf-8") as json_file:
+            json.dump(self._mapping, json_file, sort_keys=True, indent=2)
+        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "w",
+                  encoding="utf-8") as json_file:
+            json.dump(self._to_dict(), json_file, sort_keys=True, indent=2)
 
 
 class AuthorCrawler:
