@@ -1,3 +1,4 @@
+import logging
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
@@ -141,13 +142,22 @@ class SCANTask(ReScannerTask):
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
-    @staticmethod
-    def _push_changes():
+    def _push_changes(self):
         repo = git.Repo(search_parent_directories=True)
-        master = repo.active_branch
-        now = datetime.now().strftime("%y%m%d_%H%M%S")
-        repo.git.checkout("-b", "{}_updating_registers".format(now))
-        repo.git.add(str(Path(__file__).parent.joinpath("register")))
-        repo.index.commit("Updating the register at {}".format(now))
-        repo.git.push("origin", repo.active_branch.name)
-        repo.git.checkout(master.name)
+        if repo.index.diff(None):
+            master = repo.active_branch
+            now = datetime.now().strftime("%y%m%d_%H%M%S")
+            branch_name = "{}_updating_registers".format(now)
+            self.logger.info("Pushing changes to \"{}\"".format(branch_name))
+            repo.git.checkout("-b", branch_name)
+            repo.git.add(str(Path(__file__).parent.joinpath("register")))
+            repo.index.commit("Updating the register at {}".format(now))
+            repo.git.push("origin", repo.active_branch.name)
+            repo.git.checkout(master.name)
+        else:
+            self.logger.info("No Changes to push today.")
+
+
+if __name__ == "__main__":  # pylint: disable-all
+    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    SCANTask(WS_WIKI, logging.getLogger("test"))._push_changes()
