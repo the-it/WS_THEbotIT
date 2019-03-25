@@ -5,7 +5,7 @@ from datetime import timedelta, datetime
 from pathlib import Path
 from typing import Mapping
 
-import git
+from git import Repo
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
@@ -143,7 +143,7 @@ class SCANTask(ReScannerTask):
         return AuthorCrawler.get_mapping(text)
 
     def _push_changes(self):
-        repo = git.Repo(search_parent_directories=True)
+        repo = Repo(search_parent_directories=True)
         if repo.index.diff(None):
             master = repo.active_branch
             now = datetime.now().strftime("%y%m%d_%H%M%S")
