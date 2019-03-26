@@ -1,4 +1,5 @@
 import logging
+import os
 import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
@@ -154,6 +155,7 @@ class SCANTask(ReScannerTask):
             repo.index.commit("Updating the register at {}".format(now))
             repo.git.push("origin", repo.active_branch.name)
             repo.git.checkout(master.name)
+            print(os.environ["GITHUB_USER"], os.environ["GITHUB_PASSWORD"])
         else:
             self.logger.info("No Changes to push today.")
 
