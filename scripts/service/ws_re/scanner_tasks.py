@@ -101,15 +101,23 @@ class KSCHTask(ReScannerTask):
 
 
 class VERWTask(ReScannerTask):
-    _regex_template = re.compile(r"\[\[Kategorie:RE:Verweisung\|?[^\]]*\]\]")
+    _basic_regex = r"\[\[Kategorie:RE:Verweisung\|?[^\]]*\]\]"
+    _regex_template = re.compile(_basic_regex)
+    _regex_only_template = re.compile(r"^" + _basic_regex + r"$")
 
     def task(self):
-        for re_article in self.re_page:
+        for idx, re_article in enumerate(self.re_page):
             if isinstance(re_article, Article):
                 template_match = self._regex_template.search(re_article.text)
                 if template_match:
                     re_article["VERWEIS"].value = True
                     re_article.text = self._regex_template.sub("", re_article.text).strip()
+            elif isinstance(re_article, str):
+                template_match = self._regex_only_template.search(re_article)
+                if template_match and idx > 0:
+                    self.re_page[idx - 1]["VERWEIS"].value = True
+                    self.re_page[idx] = ""
+        self.re_page.clean_articles()
 
 
 class SCANTask(ReScannerTask):

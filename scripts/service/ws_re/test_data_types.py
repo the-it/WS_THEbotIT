@@ -488,6 +488,25 @@ class TestRePage(TestCase):
         with self.assertRaises(TypeError):
             re_page.append(1)
 
+    def test_delete(self):
+        self.text_mock.return_value = article_template \
+                                      + article_template.replace("text.", "tada.") \
+                                      + article_template
+        re_page = RePage(self.page_mock)
+        self.assertEqual(3, len(re_page))
+        del re_page[1]
+        self.assertEqual(2, len(re_page))
+        self.assertFalse("tada" in str(re_page))
+
+    def test_clean_article_list(self):
+        self.text_mock.return_value = article_template + "tada." + article_template
+        re_page = RePage(self.page_mock)
+        self.assertEqual(3, len(re_page))
+        re_page[1] = ""
+        re_page.clean_articles()
+        self.assertEqual(2, len(re_page))
+        self.assertFalse("tada" in str(re_page))
+
     def test_hash(self):
         self.text_mock.return_value = article_template
         re_page = RePage(self.page_mock)

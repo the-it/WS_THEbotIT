@@ -295,6 +295,44 @@ lala"""
             compare("text.", re_page[1].text)
             compare("text.", re_page[3].text)
 
+    def test_verweis_next(self):
+        self.text_mock.return_value = """{{REDaten
+}}
+text.
+[[Kategorie:RE:Verweisung]]
+{{REAutor|OFF}}
+
+{{REDaten
+}}
+text.
+{{REAutor|OFF}}
+
+[[Kategorie:RE:Verweisung]]
+
+{{REDaten
+}}
+text.
+[[Kategorie:RE:Verweisung]]
+{{REAutor|OFF}}
+
+{{REDaten
+}}
+text.
+{{REAutor|OFF}}
+
+[[Kategorie:RE:Verweisung]] tada"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = VERWTask(None, self.logger)
+            compare({'success': True, 'changed': True}, task.run(re_page))
+            for i in range(4):
+                compare("text.", re_page[i].text)
+            self.assertTrue(re_page[0]["VERWEIS"].value)
+            self.assertTrue(re_page[1]["VERWEIS"].value)
+            self.assertTrue(re_page[2]["VERWEIS"].value)
+            self.assertFalse(re_page[3]["VERWEIS"].value)
+            compare(5, len(re_page))
+
 
 class TestSCANTask(TestCase):
     def test_fetch_author_mappings(self):
