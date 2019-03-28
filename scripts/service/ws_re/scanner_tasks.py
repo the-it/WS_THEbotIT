@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Mapping
 
 from git import Repo
+from github import Github
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
@@ -163,9 +164,21 @@ class SCANTask(ReScannerTask):
             repo.index.commit("Updating the register at {}".format(now))
             repo.git.push("origin", repo.active_branch.name)
             repo.git.checkout(master.name)
-            print(os.environ["GITHUB_USER"], os.environ["GITHUB_PASSWORD"])
+            if "GITHUB_USER" in os.environ:
+                self.logger.info("Opening Pullrequest for \"{}\"".format(branch_name))
+                self._open_pullrequest(branch_name)
         else:
             self.logger.info("No Changes to push today.")
+
+    @staticmethod
+    def _open_pullrequest(branch_name: str):
+        github = Github(os.environ["GITHUB_USER"], os.environ["GITHUB_PASSWORD"])
+        github_repo = github.get_repo("the-it/WS_THEbotIT")
+        github_repo.create_pull(title=branch_name,
+                                head=branch_name,
+                                base="master",
+                                body="Update registers",
+                                maintainer_can_modify=True)
 
 
 if __name__ == "__main__":  # pylint: disable-all
