@@ -338,11 +338,17 @@ class RePage(Sequence):
         if last_handled_char < len(self.pre_text):
             self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)].strip())
 
-    def __getitem__(self, item: int) -> Article:
-        return self._article_list[item]
+    def __getitem__(self, idx: int) -> Union[Article, str]:
+        return self._article_list[idx]
 
     def __len__(self) -> int:
         return len(self._article_list)
+
+    def __delitem__(self, idx: int):
+        del self._article_list[idx]
+
+    def __setitem__(self, idx: int, item: Union[Article, str]):
+        self._article_list[idx] = item
 
     def __str__(self) -> str:
         articles = []
@@ -352,6 +358,13 @@ class RePage(Sequence):
             else:  # it is only a string
                 articles.append(article)
         return "\n".join(articles)
+
+    def clean_articles(self):
+        new_list = []
+        for article in self._article_list:
+            if article:
+                new_list.append(article)
+        self._article_list = new_list
 
     def has_changed(self) -> bool:
         return self.pre_text != str(self)
