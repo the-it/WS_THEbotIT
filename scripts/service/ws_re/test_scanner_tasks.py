@@ -1,13 +1,17 @@
 import importlib
 import inspect
+import logging
 from datetime import datetime
+from pathlib import Path
 from unittest import TestCase, mock
 
 import pywikibot
-from testfixtures import LogCapture, compare
+from git import Repo
+from testfixtures import LogCapture, compare, StringComparison
 
 from scripts.service.ws_re.data_types import RePage
-from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
+    SCANTask
 from tools.bots import WikiLogger
 
 
@@ -335,5 +339,30 @@ text.
 
 
 class TestSCANTask(TestCase):
-    def test_fetch_author_mappings(self):
-        pass
+    def setUp(self):
+        self.task = SCANTask(None, logging.getLogger("tada"))
+
+    def test_pushing_nothing_to_push(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.Repo", mock.Mock(spec=Repo)) as repo_mock:
+            repo_mock().index.diff.return_value = []
+            self.task._push_changes()
+            compare(3, len(repo_mock.mock_calls))
+            compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[1])
+            compare("().index.diff", repo_mock.mock_calls[2][0])
+
+    def test_pushing_changes(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.Repo", mock.Mock(spec=Repo)) as repo_mock:
+            repo_mock().index.diff.return_value = ["Something has changed"]
+            self.task._push_changes()
+            compare(8, len(repo_mock.mock_calls))
+            compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[1])
+            compare("().index.diff", repo_mock.mock_calls[2][0])
+            compare("().git.checkout", repo_mock.mock_calls[3][0])
+            compare("-b", repo_mock.mock_calls[3][1][0])
+            compare(StringComparison("\d{6}_\d{6}_updating_registers"), repo_mock.mock_calls[3][1][1])
+            compare("().git.add", repo_mock.mock_calls[4][0])
+            compare(str(Path(__file__).parent.joinpath("register")), repo_mock.mock_calls[4][1][0])
+            compare("().index.commit", repo_mock.mock_calls[5][0])
+            compare(StringComparison("Updating the register at \d{6}_\d{6}"), repo_mock.mock_calls[5][1][0])
+            compare("().git.push", repo_mock.mock_calls[6][0])
+            compare("().git.checkout", repo_mock.mock_calls[7][0])
