@@ -89,7 +89,7 @@ show_python_version: &show_python_version
   run:
     name: python version
     command: |
-      python --version
+      python -c "import sys; print (sys.version)"
 
 quality_steps: &quality_steps
   steps:
