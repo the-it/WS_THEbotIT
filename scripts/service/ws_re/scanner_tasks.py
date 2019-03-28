@@ -1,4 +1,3 @@
-import logging
 import os
 import re
 from abc import abstractmethod
@@ -164,14 +163,14 @@ class SCANTask(ReScannerTask):
             repo.index.commit("Updating the register at {}".format(now))
             repo.git.push("origin", repo.active_branch.name)
             repo.git.checkout(master.name)
-            if "GITHUB_USER" in os.environ:
+            if "GITHUB_USER" in os.environ:  # pragma: no cover
                 self.logger.info("Opening Pullrequest for \"{}\"".format(branch_name))
                 self._open_pullrequest(branch_name)
         else:
             self.logger.info("No Changes to push today.")
 
     @staticmethod
-    def _open_pullrequest(branch_name: str):
+    def _open_pullrequest(branch_name: str):  # pragma: no cover
         github = Github(os.environ["GITHUB_USER"], os.environ["GITHUB_PASSWORD"])
         github_repo = github.get_repo("the-it/WS_THEbotIT")
         github_repo.create_pull(title=branch_name,
@@ -179,8 +178,3 @@ class SCANTask(ReScannerTask):
                                 base="master",
                                 body="Update registers",
                                 maintainer_can_modify=True)
-
-
-if __name__ == "__main__":  # pylint: disable-all
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
-    SCANTask(WS_WIKI, logging.getLogger("test"))._push_changes()
