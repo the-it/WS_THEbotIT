@@ -8,6 +8,6 @@ cd ${BASE_DIR}
 git checkout master
 git pull
 git reset --hard master
-sudo pip3 install -r requirements.txt
+python3.7 -m pip install -r requirements.txt
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
-python3 scripts/runner.py
+python3.7 scripts/runner.py
