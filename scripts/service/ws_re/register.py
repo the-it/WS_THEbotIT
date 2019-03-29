@@ -486,6 +486,12 @@ class VolumeRegister(Register):
     def get_register_str(self):
         return "{}\n{}".format(self._get_table(), self._get_footer())
 
+    def persist(self):
+        with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(
+                self._volume.file_name))),
+                  "r", encoding="utf-8") as json_file:
+            self._dict = json.load(json_file)
+
 
 class AlphabeticRegister(Register):
     def __init__(self, start: str, end: str, registers: OrderedDict):

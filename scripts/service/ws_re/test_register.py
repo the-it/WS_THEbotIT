@@ -526,6 +526,38 @@ class TestRegister(BaseTestRegister):
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
         compare(expected_table, register.get_register_str())
 
+    def test_persist(self):
+        copy_test_data("I_1_two_entries", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        register.lemmas[1].chapters[0]._author = "Siegfried"
+        register.persist()
+        expect = """[
+  {
+    "lemma": "Aal",
+    "next": "Aarassos",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 4,
+        "author": "Siegfried"
+      }
+    ]
+  },
+  {
+    "lemma": "Aarassos",
+    "previous": "Aal",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abert"
+      }
+    ]
+  }
+]"""
+        with open(path_or_str(_TEST_REGISTER_PATH.joinpath("I_1.json")), mode="r") as register_file:
+            compare(expect, register_file.read())
+
 
 class TestAlphabeticRegister(BaseTestRegister):
     def setUp(self):
