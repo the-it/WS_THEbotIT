@@ -489,8 +489,8 @@ class VolumeRegister(Register):
     def persist(self):
         with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(
                 self._volume.file_name))),
-                  "r", encoding="utf-8") as json_file:
-            self._dict = json.load(json_file)
+                  "w", encoding="utf-8") as json_file:
+            json.dump(self._dict, json_file, indent=2)
 
 
 class AlphabeticRegister(Register):

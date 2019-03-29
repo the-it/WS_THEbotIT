@@ -529,7 +529,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     def test_persist(self):
         copy_test_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        register.lemmas[1].chapters[0]._author = "Siegfried"
+        register._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
         register.persist()
         expect = """[
   {
@@ -557,6 +557,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
 ]"""
         with open(path_or_str(_TEST_REGISTER_PATH.joinpath("I_1.json")), mode="r") as register_file:
             compare(expect, register_file.read())
+        raise AssertionError("So funktioniert das nicht ... ich brauche eine Dict function in Lemmas")
 
 
 class TestAlphabeticRegister(BaseTestRegister):
