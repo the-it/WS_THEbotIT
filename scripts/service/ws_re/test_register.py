@@ -11,7 +11,7 @@ from testfixtures import compare
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes
 from scripts.service.ws_re.register import Author, Authors, VolumeRegister, LemmaChapter, Lemma, \
     AlphabeticRegister, Registers, AuthorCrawler, RegisterException
-from tools import INTEGRATION_TEST, path_or_str
+from tools import INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
@@ -25,12 +25,12 @@ def copy_test_data(source: str, destination: str):
 def clear_test_path(renew_path=True):
     _TEST_FOLDER_PATH = Path(__file__).parent.joinpath("test_register")
     try:
-        shutil.rmtree(path_or_str(_TEST_FOLDER_PATH))
+        shutil.rmtree(_TEST_FOLDER_PATH)
     except FileNotFoundError:
         pass
     finally:
         if renew_path:
-            os.mkdir(path_or_str(_TEST_FOLDER_PATH))
+            os.mkdir(_TEST_FOLDER_PATH)
 
 
 class TestAuthor(TestCase):

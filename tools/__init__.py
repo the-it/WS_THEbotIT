@@ -1,8 +1,4 @@
 import os
-import sys
-from datetime import datetime
-from pathlib import Path
-from typing import Union
 
 from pywikibot import Site, Page
 
@@ -26,17 +22,5 @@ def fetch_text_from_wiki_site(wiki: Site, lemma: str) -> str:  # pragma: no cove
         raise ToolException("The lemma {} is empty.".format(lemma))
     return text
 
-
-if datetime.now() > datetime(year=2020, month=9, day=13):  # pragma: no cover
-    raise DeprecationWarning("Python 3.5 has reached end of live. "
-                             "Consider removing all the casts Path -> str.")
-
-
-if sys.version_info < (3, 6):
-    def path_or_str(path: Path) -> Union[Path, str]:
-        return str(path)
-else:
-    def path_or_str(path: Path) -> Union[Path, str]:
-        return path
 
 INTEGRATION_TEST = "INTEGRATION" in os.environ

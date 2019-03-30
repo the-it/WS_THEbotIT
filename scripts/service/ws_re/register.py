@@ -7,7 +7,6 @@ from datetime import datetime
 from typing import Dict, Union, Sequence, Tuple, List
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, Volumes
-from tools import path_or_str
 
 
 class RegisterException(Exception):
@@ -51,11 +50,11 @@ class Authors:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self):
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "r",
+        with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "r",
                   encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors = {}
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "r",
+        with open(self._REGISTER_PATH.joinpath("authors.json"), "r",
                   encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
             for author in json_dict:
@@ -95,10 +94,10 @@ class Authors:
         return author_dict
 
     def persist(self):
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors_mapping.json")), "w",
+        with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "w",
                   encoding="utf-8") as json_file:
             json.dump(self._mapping, json_file, sort_keys=True, indent=2, ensure_ascii=False)
-        with open(path_or_str(self._REGISTER_PATH.joinpath("authors.json")), "w",
+        with open(self._REGISTER_PATH.joinpath("authors.json"), "w",
                   encoding="utf-8") as json_file:
             json.dump(self._to_dict(), json_file, sort_keys=True, indent=2, ensure_ascii=False)
 
@@ -446,7 +445,7 @@ class VolumeRegister(Register):
     def __init__(self, volume: Volume, authors: Authors):
         self._authors = authors
         self._volume = volume
-        with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name))),
+        with open(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name)),
                   "r", encoding="utf-8") as json_file:
             self._dict = json.load(json_file)
         self._lemmas = []

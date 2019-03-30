@@ -10,7 +10,6 @@ from typing import Sequence, Dict, Tuple
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import Volumes
-from tools import path_or_str
 from tools.bots import CanonicalBot
 
 
@@ -21,7 +20,7 @@ class ReImporter(CanonicalBot):
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(year=2019, month=1, day=21, hour=10)
-        self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
+        self.folder = Path(__file__).parent.joinpath(self._register_folder)
         self.authors = {}  # type: Dict[str, Dict[str, Dict[str, str]]]
         self.current_volume = ""
 
@@ -33,7 +32,7 @@ class ReImporter(CanonicalBot):
             self.logger.info("Reading Register for {}".format(volume.name))
             old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
                                            "Altertumswissenschaft/Register/{}".format(volume.name))
-            file = path_or_str(Path(__file__).parent.joinpath(self._register_folder)
+            file = Path(__file__).parent.joinpath(self._register_folder
                                .joinpath("original_{}.txt".format(volume.file_name)))
             with open(file, mode="w", encoding="utf-8") as original:
                 original.write(old_register.text)
@@ -87,8 +86,10 @@ class ReImporter(CanonicalBot):
         return new_register
 
     def _dump_register(self, volume: str, old_register: str):
-        file = path_or_str(Path(__file__).parent
-                           .joinpath(self._register_folder).joinpath("{}.json".format(volume)))
+        file = Path(__file__)\
+            .parent\
+            .joinpath(self._register_folder)\
+            .joinpath("{}.json".format(volume))
         if not os.path.isfile(file):
             self.logger.info("Dumping Register for {}".format(volume))
             new_register = \
@@ -109,10 +110,10 @@ class ReImporter(CanonicalBot):
             details_dict.update(details)
         path = Path(__file__).parent.joinpath(self._register_folder)
         mapping_file = path.joinpath("authors_mapping.json")
-        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as json_file:
+        with open(mapping_file, mode="w", encoding="utf-8") as json_file:
             json.dump(mapping_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
         details_file = path.joinpath("authors.json")
-        with open(path_or_str(details_file), mode="w", encoding="utf-8") as json_file:
+        with open(details_file, mode="w", encoding="utf-8") as json_file:
             json.dump(details_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
 
     def _create_author_detail(self, author: str) -> Tuple[Dict, Dict]:
