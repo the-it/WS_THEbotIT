@@ -18,9 +18,8 @@ class ReRegisterPrinter(CanonicalBot):
         self.logger.info("Print alphabetic register register.")
         for register in registers.alphabetic.values():
             self.save_if_changed(Page(self.wiki,
-                                      "Paulys Realencyclopädie der classischen "
-                                      "Altertumswissenschaft/Register/{}"
-                                      .format(register.start)),
+                                      f"Paulys Realencyclopädie der classischen "
+                                      f"Altertumswissenschaft/Register/{register.start}"),
                                  register.get_register_str(),
                                  "Register aktualisiert")
 

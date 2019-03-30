@@ -195,7 +195,7 @@ class AuthorCrawler:
         lines = cls._split_author(author_lines)
         author_tuple = cls._extract_author_name(lines[0])
         years = cls._extract_years(lines[1])
-        author = "{} {}".format(author_tuple[0], author_tuple[1])
+        author = f"{author_tuple[0]} {author_tuple[1]}"
         author_dict = {author: {}}
         if years[0]:
             author_dict[author]["birth"] = years[0]
@@ -281,8 +281,7 @@ class Lemma(Mapping):
         except KeyError:
             pass
         if not self.is_valid():
-            raise RegisterException("Error init RegisterLemma. Key missing in {}"
-                                    .format(self._lemma_dict))
+            raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
         self._sort_key = self._make_sort_key()
 
     def __repr__(self):  # pragma: no cover
@@ -343,7 +342,7 @@ class Lemma(Mapping):
         row_string = ["|-"]
         link_or_volume = self.volume.name if print_volume else self.get_link()
         if len(self._chapters) > 1:
-            row_string.append("rowspan={}|{}".format(len(self._chapters), link_or_volume))
+            row_string.append(f"rowspan={len(self._chapters)}|{link_or_volume}")
         else:
             row_string.append(link_or_volume)
         for chapter in self._chapters:
@@ -357,7 +356,7 @@ class Lemma(Mapping):
         return "\n|".join(row_string)
 
     def get_link(self) -> str:
-        return "[[RE:{lemma}|{{{{Anker2|{lemma}}}}}]]".format(lemma=self["lemma"])
+        return f"[[RE:{self['lemma']}|{{{{Anker2|{self['lemma']}}}}}]]"
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
         start_page_scan = lemma_chapter.start
@@ -366,7 +365,7 @@ class Lemma(Mapping):
         pages_str = f"[[Special:Filepath/Pauly-Wissowa_{self._volume.name}," \
             f"_{start_page_scan:04d}.jpg|{lemma_chapter.start}]]"
         if lemma_chapter.start != lemma_chapter.end:
-            pages_str += "-{}".format(lemma_chapter.end)
+            pages_str += f"-{lemma_chapter.end}"
         return pages_str
 
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
@@ -444,7 +443,7 @@ class VolumeRegister(Register):
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
     def __repr__(self):  # pragma: no cover
-        return "<VOLUME REGISTER - volume:{}, lemmas:{}>".format(self.volume.name, len(self.lemmas))
+        return f"<VOLUME REGISTER - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
 
     @property
     def volume(self):
@@ -473,7 +472,7 @@ class VolumeRegister(Register):
                f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
 
     def get_register_str(self):
-        return "{}\n{}".format(self._get_table(), self._get_footer())
+        return f"{self._get_table()}\n{self._get_footer()}"
 
 
 class AlphabeticRegister(Register):
@@ -533,7 +532,7 @@ class AlphabeticRegister(Register):
             # strip |-/n form the first line it is later replaced by the lemma line
             table_rows[0] = table_rows[0][3:]
             if chapter_sum > 1:
-                table.append("|-\n|rowspan={}|{}".format(chapter_sum, lemma.get_link()))
+                table.append(f"|-\n|rowspan={chapter_sum}|{lemma.get_link()}")
             else:
                 table.append(f"|-\n|{lemma.get_link()}")
             table += table_rows
@@ -542,7 +541,7 @@ class AlphabeticRegister(Register):
 
     def _get_footer(self):
         return "[[Kategorie:RE:Register|!]]\n" \
-               "Zahl der Artikel: {count_lemma}, ".format(count_lemma=len(self._lemmas))
+               f"Zahl der Artikel: {len(self._lemmas)}, "
 
     def get_register_str(self):
         return f"{self._get_table()}\n{self._get_footer()}"

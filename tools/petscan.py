@@ -124,12 +124,12 @@ class PetScan:
 
     def add_positive_category(self, category: str, search_depth: int = 1):
         if search_depth > 1:
-            category = category + "|{}".format(search_depth)
+            category = f"{category}|{search_depth}"
         self.categories["positive"].append(category)
 
     def add_negative_category(self, category: str, search_depth: int = 1):
         if search_depth > 1:
-            category = category + "|{}".format(search_depth)
+            category = f"{category}|{search_depth}"
         self.categories["negative"].append(category)
 
     def add_namespace(self, namespace):
@@ -216,9 +216,9 @@ class PetScan:
 
     def _set_last_edit(self, type_of_user, allowed):
         if allowed:
-            self.add_options({"edits[{}]".format(type_of_user): "yes"})
+            self.add_options({f"edits[{type_of_user}]": "yes"})
         else:
-            self.add_options({"edits[{}]".format(type_of_user): "no"})
+            self.add_options({f"edits[{type_of_user}]": "no"})
 
     sort_criteria = ["title", "ns_title", "size", "date", "incoming_links", "random"]
 
@@ -226,7 +226,7 @@ class PetScan:
         if criteria in self.sort_criteria:
             self.add_options({"sortby": criteria})
         else:
-            raise PetScanException("{} isn't a valid sort criteria".format(criteria))
+            raise PetScanException(f"{criteria} isn't a valid sort criteria")
 
     def set_sortorder_decending(self):
         self.add_options({"sortorder": "descending"})

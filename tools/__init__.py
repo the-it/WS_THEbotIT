@@ -19,7 +19,7 @@ def make_html_color(min_value, max_value, value):
 def fetch_text_from_wiki_site(wiki: Site, lemma: str) -> str:  # pragma: no cover
     text = Page(wiki, lemma).text
     if not text:
-        raise ToolException("The lemma {} is empty.".format(lemma))
+        raise ToolException(f"The lemma {lemma} is empty.")
     return text
 
 

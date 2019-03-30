@@ -27,11 +27,9 @@ class ReStatus(CanonicalBot):
         status_string = []
 
         color = make_html_color(20e6, 22e6, korrigiert[0])
-        status_string.append("<span style=\"background:#FF{color}{color}\">{count}</span>"
-                             .format(color=color, count=korrigiert[0]))
+        status_string.append(f"<span style=\"background:#FF{color}{color}\">{korrigiert[0]}</span>")
         color = make_html_color(5.0e3, 5.25e3, korrigiert[1])
-        status_string.append("<span style=\"background:#FF{color}{color}\">{count}</span>"
-                             .format(color=color, count=korrigiert[1]))
+        status_string.append(f"<span style=\"background:#FF{color}{color}\">{korrigiert[1]}</span>")
 
         list_of_lemmas = self.petscan(["RE:Teilkorrigiert", "RE:Korrigiert"],
                                       ["RE:Unkorrigiert", "RE:Unvollständig"])
@@ -39,13 +37,13 @@ class ReStatus(CanonicalBot):
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
         gap = datetime.now() - datetime.strptime(date_of_first, "%Y-%m-%d")
         color = make_html_color(3 * 365, 3.5 * 365, gap.days)
-        status_string.append("<span style=\"background:#FF{color}{color}\">{date}</span>"
-                             .format(color=color, date=date_of_first))
+        status_string.append(f"<span style=\"background:#FF{color}{color}\">{date_of_first}</span>")
 
         user_page = Page(self.wiki, "Benutzer:THE IT/Werkstatt")
         temp_text = user_page.text
-        temp_text = re.sub("<!--RE-->.*<!--RE-->", "<!--RE-->{}<!--RE-->"
-                           .format(" ■ ".join(status_string)), temp_text)
+        temp_text = re.sub(r"<!--RE-->.*<!--RE-->",
+                           f"<!--RE-->{' ■ '.join(status_string)}<!--RE-->",
+                           temp_text)
         user_page.text = temp_text
         user_page.save("todo RE aktualisiert")
 

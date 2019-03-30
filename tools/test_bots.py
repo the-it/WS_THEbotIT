@@ -497,14 +497,14 @@ class TestCanonicalBot(TestCase):
 
     @staticmethod
     def create_timestamp(bot_name, date=datetime(2000, 1, 1), success=True):
-        with open(_DATA_PATH_TEST + os.sep + "{}.last_run.json".format(bot_name), mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + f"{bot_name}.last_run.json", mode="w") as persist_json:
             json.dump({"timestamp": date.strftime("%Y-%m-%d_%H:%M:%S"), "success": success}, persist_json)
 
     @staticmethod
     def create_data(bot_name, data=None):
         if not data:
             data = {"a": 1}
-        with open(_DATA_PATH_TEST + os.sep + "{}.data.json".format(bot_name), mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + f"{bot_name}.data.json", mode="w") as persist_json:
             json.dump(data, persist_json)
 
     class MinimalCanonicalBot(CanonicalBot):

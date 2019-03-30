@@ -52,10 +52,8 @@ class WikiLogger():
     def _get_logger_names(self):
         log_file_names = {}
         for log_type in ("info", "debug"):
-            log_file_names.update({log_type: "{name}_{log_type}_{timestamp}.log".format(
-                name=self._bot_name,
-                log_type=log_type.upper(),
-                timestamp=self._start_time.strftime("%y%m%d%H%M%S"))})
+            log_file_names.update({log_type: f"{self._bot_name}_{log_type.upper()}_"
+                                             f"{self._start_time.strftime('%y%m%d%H%M%S')}.log"})
         return log_file_names
 
     def _setup_logger_properties(self):
@@ -105,7 +103,7 @@ class WikiLogger():
             log_lines = ""
             log_lines = log_lines \
                 + "\n\n" \
-                + "=={}==".format(self._start_time.strftime(self._wiki_timestamp_format)) \
+                + f"=={self._start_time.strftime(self._wiki_timestamp_format)}==" \
                 + "\n\n" \
                 + "\n\n".join(line_list) \
                 + "\n--~~~~"
@@ -121,7 +119,7 @@ class PersistedTimestamp():
         self._success_this_run = False
         self._start = datetime.now()
         self._data_path = _get_data_path()
-        self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
+        self._full_filename = self._data_path + os.sep + f"{bot_name}.last_run.json"
 
     def __enter__(self):
         self.set_up()
@@ -199,14 +197,14 @@ class OneTimeBot():
     def __enter__(self):
         self.timestamp.__enter__()
         self.logger.__enter__()
-        self.logger.info("Start the bot {}.".format(self.bot_name))
+        self.logger.info(f"Start the bot {self.bot_name}.")
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.timestamp.success_this_run = self.success
         self.timestamp.__exit__(exc_type, exc_val, exc_tb)
-        self.logger.info("Finish bot {} in {}."
-                         .format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
+        self.logger.info(f"Finish bot {self.bot_name} in "
+                         f"{datetime.now() - self.timestamp.start_of_run}.")
         if self.log_to_wiki:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
@@ -237,10 +235,10 @@ class OneTimeBot():
         return time_over
 
     def send_log_to_wiki(self):
-        wiki_log_page = "Benutzer:THEbotIT/Logs/{}".format(self.bot_name)
+        wiki_log_page = f"Benutzer:THEbotIT/Logs/{self.bot_name}"
         page = Page(self.wiki, wiki_log_page)
         page.text += self.logger.create_wiki_log_lines()
-        page.save("Update of Bot {}".format(self.bot_name), botflag=True)
+        page.save(f"Update of Bot {self.bot_name}", botflag=True)
 
     @staticmethod
     def save_if_changed(page: Page, text: str, change_msg: str):
@@ -275,7 +273,7 @@ class PersistedData(Mapping):
         if isinstance(new_dict, dict):
             self.data = new_dict
         else:
-            raise BotException("{} has the wrong type. It must be a dictionary.".format(new_dict))
+            raise BotException(f"{new_dict} has the wrong type. It must be a dictionary.")
 
     def dump(self, success=True):
         if success:
@@ -300,10 +298,10 @@ class PersistedData(Mapping):
 
     def _recover_data(self, type_of_data: str):
         try:
-            with open("{}.{}".format(self.file_name, type_of_data), mode="r") as json_file:
+            with open(f"{self.file_name}.{type_of_data}", mode="r") as json_file:
                 self.assign_dict(json.load(json_file))
         except FileNotFoundError:
-            raise BotException("There is no {} data to load.".format(type_of_data))
+            raise BotException(f"There is no {type_of_data} data to load.")
 
     def get_broken(self):
         self._recover_data("broken")

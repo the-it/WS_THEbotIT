@@ -75,8 +75,7 @@ class Property:
         return hash(self.name) + hash(self.value)
 
     def __repr__(self):
-        return "<ReProperty> (name: {}, value: {}, type: {})"\
-            .format(self.name, self.value, type(self._default))
+        return f"<ReProperty> (name: {self.name}, value: {self.value}, type: {type(self._default)})"
 
 
 RE_DATEN = "REDaten"
@@ -183,7 +182,7 @@ class Article(Mapping):
         for re_property in self._properties:
             if item == re_property.name:
                 return re_property
-        raise KeyError("Key {} not found in self._properties".format(item))
+        raise KeyError(f"Key {item} not found in self._properties")
 
     def _init_properties(self, properties_dict: dict):
         if properties_dict:
@@ -266,8 +265,7 @@ class Article(Mapping):
                 elif keyword in cls.keywords.keys():
                     keyword = cls.keywords[keyword]
                 else:
-                    raise ReDatenException("REDaten has wrong key word. --> {}"
-                                           .format(template_property))
+                    raise ReDatenException(f"REDaten has wrong key word. --> {template_property}")
                 properties_dict.update({keyword: template_property["value"]})
             else:
                 raise ReDatenException(f"REDaten has property without a key word. --> "
@@ -289,7 +287,7 @@ class Article(Mapping):
         if self.article_type == RE_DATEN:
             content.append(self._get_pre_text())
         else:
-            content.append("{{{{{}}}}}".format(RE_ABSCHNITT))
+            content.append(f"{{{{{RE_ABSCHNITT}}}}}")
         content.append(self.text)
         if self.author[0] == "OFF":
             author = f"{{{{{RE_AUTHOR}|{self.author[0]}}}}}"
@@ -384,8 +382,7 @@ class RePage(Sequence):
                 try:
                     self.page.save(summary=reason, botflag=True)
                 except pywikibot.exceptions.LockedPage:
-                    raise ReDatenException("Page {} is locked, it can't be saved."
-                                           .format(self.page.title))
+                    raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.")
             else:
                 raise ReDatenException(f"Page {self.page.title} is protected for normal users, "
                                        f"it can't be saved.")
@@ -430,11 +427,8 @@ class Volume:
         self._sortkey = self._compute_sortkey()
 
     def __repr__(self):  # pragma: no cover
-        return "<VOLUME - name:{}, year:{}, start:{}, end:{}, sort:{}>".format(self.name,
-                                                                               self.year,
-                                                                               self.start,
-                                                                               self.end,
-                                                                               self.sort_key)
+        return f"<VOLUME - name:{self.name}, year:{self.year}, start:{self.start}, " \
+               f"end:{self.end}, sort:{self.sort_key}>"
 
     @property
     def name(self) -> str:
@@ -496,7 +490,7 @@ class Volumes(Mapping):
         try:
             return self._volume_mapping[item]
         except KeyError:
-            raise ReDatenException("Register {} doesn't exists".format(item))
+            raise ReDatenException(f"Register {item} doesn't exists")
 
     def __len__(self) -> int:
         return len(self._volume_mapping.keys())

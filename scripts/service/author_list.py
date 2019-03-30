@@ -153,7 +153,7 @@ class AuthorList(CanonicalBot):
                         if dict_author["sortkey"] == "":
                             raise ValueError
                     except Exception:
-                        self.logger.debug("there is no sortkey for [[{}]].".format(author["title"]))
+                        self.logger.debug(f"there is no sortkey for [[{author['title']}]].")
                         # make a dummy key
                         if not dict_author["name"]:
                             dict_author["sortkey"] = dict_author["first_name"]
@@ -275,7 +275,7 @@ class AuthorList(CanonicalBot):
                 claim = item.text["claims"][property_label][0]
                 date_from_data = claim.getTarget()
                 if date_from_data.precision < 7:
-                    self.logger.error("Precison is to low for [[{}]]".format(author_dict['title']))
+                    self.logger.error(f"Precison is to low for [[{author_dict['title']}]]")
                 elif date_from_data.precision < 8:
                     date_from_data = int(ceil(float(date_from_data.year) / 100.0) * 100)
                     if date_from_data < 1000:

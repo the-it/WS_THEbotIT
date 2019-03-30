@@ -73,9 +73,9 @@ class ReScanner(CanonicalBot):
         # first iterate new items then the old ones (oldest first)
         self.logger.info("Add the two lists")
         self.statistic["len_old_lemma_list"] = len(old_lemma_list)
-        self.logger.info("raw: {}, new: {}, old: {}".format(self.statistic["len_raw_lemma_list"],
-                                                            self.statistic["len_new_lemma_list"],
-                                                            self.statistic["len_old_lemma_list"]))
+        self.logger.info(f"raw: {self.statistic['len_raw_lemma_list']}, "
+                         f"new: {self.statistic['len_new_lemma_list']}, "
+                         f"old: {self.statistic['len_old_lemma_list']}")
         return new_lemma_list + old_lemma_list
 
     def _activate_tasks(self) -> List[ReScannerTask]:
@@ -106,8 +106,8 @@ class ReScanner(CanonicalBot):
                     task_name = task.name
             else:
                 if result["changed"]:
-                    error_message = "Error in {}/{}, but altered the page ... critical" \
-                        .format(task.name, lemma)
+                    error_message = f"Error in {task.name}/{lemma}, " \
+                                    f"but altered the page ... critical"
                     self.logger.critical(error_message)
                     raise RuntimeError(error_message)
                 self.logger.error(f"Error in {task.name}/{lemma}, no data where altered.")
@@ -124,8 +124,7 @@ class ReScanner(CanonicalBot):
         self.logger.info("Start processing the lemmas.")
         processed_lemmas = 0
         for idx, lemma in enumerate(lemma_list):
-            self.logger.debug("Process [https://de.wikisource.org/wiki/{lemma} {lemma}]"
-                              .format(lemma=lemma))
+            self.logger.debug(f"Process [https://de.wikisource.org/wiki/{lemma} {lemma}]")
             list_of_done_tasks = []
             try:
                 re_page = RePage(Page(self.wiki, lemma))
@@ -147,7 +146,7 @@ class ReScanner(CanonicalBot):
                     self._save_re_page(re_page, list_of_done_tasks)
             self._add_lemma_to_data(lemma)
             if self._watchdog():
-                self.logger.info("{} Lemmas processed, {} changed.".format(idx, processed_lemmas))
+                self.logger.info(f"{idx} Lemmas processed, {processed_lemmas} changed.")
                 self.logger.info(f"Oldest processed item: {datetime.now() - self.get_oldest_datetime()}")
                 break
         for task in active_tasks:

@@ -123,8 +123,7 @@ class TemplateFinder():
                         break
                     pos_end_brackets.pop(-1)
             else:
-                raise TemplateFinderException("No end of the template found for {}"
-                                              .format(template_name))
+                raise TemplateFinderException(f"No end of the template found for {template_name}")
         return templates
 
     @staticmethod

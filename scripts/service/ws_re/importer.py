@@ -138,7 +138,7 @@ class ReImporter(CanonicalBot):
             del author_years[count[0]]
             for year in author_years:
                 for issue in author_years[year]:
-                    extended_author = "{}_{}".format(author, issue)
+                    extended_author = f"{author}_{issue}"
                     author_detail[extended_author] = {}
                     author_mapping[issue] = extended_author
                     if year:
@@ -233,7 +233,7 @@ class ReImporter(CanonicalBot):
             try:
                 self._register_author(chapter_dict["author"], year)
             except ValueError as original:
-                self.logger.error("author: {}, year: {}".format(chapter_dict["author"], year))
+                self.logger.error(f"author: {chapter_dict['author']}, year: {year}")
                 raise original
         else:
             del chapter_dict["author"]

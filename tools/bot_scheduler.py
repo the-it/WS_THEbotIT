@@ -55,21 +55,16 @@ class BotScheduler(CanonicalBot):
 
     def run_bot(self, bot_to_run: OneTimeBot) -> bool:
         if not isinstance(bot_to_run, OneTimeBot):
-            raise BotException("{} is not an instance of CanonicalBot or OneTimeBot"
-                               .format(bot_to_run))
-        self.logger.info("The bot {name} is scheduled for start.".format(name=bot_to_run.bot_name))
+            raise BotException(f"{bot_to_run} is not an instance of CanonicalBot or OneTimeBot")
+        self.logger.info(f"The bot {bot_to_run.bot_name} is scheduled for start.")
         with bot_to_run:
             success = bot_to_run.run()
-        path_to_log = "{user}/Logs/{name}"\
-            .format(name=bot_to_run.bot_name, user=self.wiki.username())
-        self.logger.info("Log @ [https://de.wikisource.org/wiki/Benutzer:{link}#{headline} {link}]"
-                         .format(link=path_to_log,
-                                 headline=bot_to_run.timestamp.start_of_run
-                                 .strftime("%y-%m-%d_%H:%M:%S")))
+        path_to_log = f"{self.wiki.username()}/Logs/{bot_to_run.bot_name}"
+        self.logger.info(f"Log @ [https://de.wikisource.org/wiki/Benutzer:{path_to_log}"
+                         f"#{bot_to_run.timestamp.start_of_run:%y-%m-%d_%H:%M:%S} {path_to_log}]")
         if not success:
-            self.logger.error("<span style=\"background:#FF0000\">"
-                              "The bot {name} wasn't successful.</span>"
-                              .format(name=bot_to_run.bot_name))
+            self.logger.error(f"<span style=\"background:#FF0000\">"
+                              f"The bot {bot_to_run.bot_name} wasn't successful.</span>")
         return success
 
     def run_dailys(self):

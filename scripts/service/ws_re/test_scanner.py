@@ -333,7 +333,7 @@ class TestReScanner(TestCase):
     def test_reload_deprecated_lemma_data(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [":RE:Lemma1"]
-        with open(_DATA_PATH_TEST + os.sep + "{}.data.json.deprecated".format("ReScanner"), mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + "ReScanner.data.json.deprecated", mode="w") as persist_json:
             json.dump({":RE:Lemma1": "20000101000000"}, persist_json)
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False):
