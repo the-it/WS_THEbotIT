@@ -207,6 +207,8 @@ class AuthorCrawler:
 
 
 class LemmaChapter:
+    _keys = ["start", "end", "author"]
+
     def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
         self._dict = chapter_dict
 
@@ -220,6 +222,13 @@ class LemmaChapter:
         except TypeError:
             pass
         return False
+
+    def get_dict(self):
+        return_dict = OrderedDict()
+        for key in self._keys:
+            if key in self._dict:
+                return_dict[key] = self._dict[key]
+        return return_dict
 
     @property
     def start(self) -> int:
@@ -437,9 +446,9 @@ class VolumeRegister(Register):
         self._volume = volume
         with open(self._REGISTER_PATH.joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
-            self._dict = json.load(json_file)
+            lemma_list = json.load(json_file)
         self._lemmas = []
-        for lemma in self._dict:
+        for lemma in lemma_list:
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
     def __repr__(self):  # pragma: no cover
@@ -475,8 +484,8 @@ class VolumeRegister(Register):
         return f"{self._get_table()}\n{self._get_footer()}"
 
     def persist(self):
-        with open(path_or_str(self._REGISTER_PATH.joinpath("{}.json".format(
-                self._volume.file_name))),
+        with open(self._REGISTER_PATH.joinpath("{}.json".format(
+                self._volume.file_name)),
                   "w", encoding="utf-8") as json_file:
             json.dump(self._dict, json_file, indent=2)
 

@@ -329,10 +329,20 @@ class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)
         compare(False, lemma_chapter.is_valid())
+        lemma_chapter = LemmaChapter({"end": 2})
+        compare(False, lemma_chapter.is_valid())
+        lemma_chapter = LemmaChapter({"start": 2})
+        compare(False, lemma_chapter.is_valid())
+        lemma_chapter = LemmaChapter({"start": 1, "end": 2})
+        compare(True, lemma_chapter.is_valid())
 
     def test_no_author(self):
         lemma_chapter = LemmaChapter({"start": 1, "end": 2})
         compare(None, lemma_chapter.author)
+
+    def test_return_dict(self):
+        lemma_chapter = LemmaChapter({"author": "bla", "end": 2, "start": 1})
+        compare(OrderedDict((("start", 1), ("end", 2), ("author", "bla"))), lemma_chapter.get_dict())
 
 
 class TestLemma(BaseTestRegister):
@@ -555,7 +565,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     ]
   }
 ]"""
-        with open(path_or_str(_TEST_REGISTER_PATH.joinpath("I_1.json")), mode="r") as register_file:
+        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r") as register_file:
             compare(expect, register_file.read())
         raise AssertionError("So funktioniert das nicht ... ich brauche eine Dict function in Lemmas")
 
