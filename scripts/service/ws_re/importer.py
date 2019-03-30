@@ -29,11 +29,13 @@ class ReImporter(CanonicalBot):
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
             self.current_volume = volume.name
-            self.logger.info("Reading Register for {}".format(volume.name))
-            old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
-                                           "Altertumswissenschaft/Register/{}".format(volume.name))
-            file = Path(__file__).parent.joinpath(self._register_folder
-                               .joinpath("original_{}.txt".format(volume.file_name)))
+            self.logger.info(f"Reading Register for {volume.name}")
+            old_register = Page(self.wiki, f"Paulys Realencyclopädie der classischen "
+                                           f"Altertumswissenschaft/Register/{volume.name}")
+            file = Path(__file__)\
+                .parent\
+                .joinpath(self._register_folder)\
+                .joinpath(f"original_{volume.file_name}.txt")
             with open(file, mode="w", encoding="utf-8") as original:
                 original.write(old_register.text)
             self._dump_register(volume.file_name, old_register.text)
@@ -251,6 +253,6 @@ class ReImporter(CanonicalBot):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReImporter(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
         bot.run()

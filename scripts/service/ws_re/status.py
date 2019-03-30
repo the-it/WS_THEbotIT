@@ -2,9 +2,10 @@ import re
 from datetime import datetime
 
 from pywikibot import Page, Site
+
 from tools import make_html_color
-from tools.petscan import PetScan
 from tools.bots import CanonicalBot
+from tools.petscan import PetScan
 
 
 class ReStatus(CanonicalBot):
@@ -12,12 +13,12 @@ class ReStatus(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug)
 
     def task(self):
-        fertig = self.get_sum_of_cat(['RE:Fertig'],
-                                     ['RE:Teilkorrigiert', 'RE:Korrigiert',
-                                      'RE:Unkorrigiert', 'RE:Unvollständig'])
-        korrigiert = self.get_sum_of_cat(['RE:Teilkorrigiert', 'RE:Korrigiert'],
-                                         ['RE:Unkorrigiert', 'RE:Unvollständig'])
-        unkorrigiert = self.get_sum_of_cat(['RE:Unkorrigiert', 'RE:Unvollständig'], [])
+        fertig = self.get_sum_of_cat(["RE:Fertig"],
+                                     ["RE:Teilkorrigiert", "RE:Korrigiert",
+                                      "RE:Unkorrigiert", "RE:Unvollständig"])
+        korrigiert = self.get_sum_of_cat(["RE:Teilkorrigiert", "RE:Korrigiert"],
+                                         ["RE:Unkorrigiert", "RE:Unvollständig"])
+        unkorrigiert = self.get_sum_of_cat(["RE:Unkorrigiert", "RE:Unvollständig"], [])
         self.user_page_the_it(korrigiert)
         self.history(fertig, korrigiert, unkorrigiert)
         return True
@@ -26,48 +27,48 @@ class ReStatus(CanonicalBot):
         status_string = []
 
         color = make_html_color(20e6, 22e6, korrigiert[0])
-        status_string.append('<span style="background:#FF{color}{color}">{count}</span>'
+        status_string.append("<span style=\"background:#FF{color}{color}\">{count}</span>"
                              .format(color=color, count=korrigiert[0]))
         color = make_html_color(5.0e3, 5.25e3, korrigiert[1])
-        status_string.append('<span style="background:#FF{color}{color}">{count}</span>'
+        status_string.append("<span style=\"background:#FF{color}{color}\">{count}</span>"
                              .format(color=color, count=korrigiert[1]))
 
-        list_of_lemmas = self.petscan(['RE:Teilkorrigiert', 'RE:Korrigiert'],
-                                      ['RE:Unkorrigiert', 'RE:Unvollständig'])
-        date_page = Page(self.wiki, list_of_lemmas[0]['title'])
+        list_of_lemmas = self.petscan(["RE:Teilkorrigiert", "RE:Korrigiert"],
+                                      ["RE:Unkorrigiert", "RE:Unvollständig"])
+        date_page = Page(self.wiki, list_of_lemmas[0]["title"])
         date_of_first = str(date_page.oldest_revision.timestamp)[0:10]
-        gap = datetime.now() - datetime.strptime(date_of_first, '%Y-%m-%d')
+        gap = datetime.now() - datetime.strptime(date_of_first, "%Y-%m-%d")
         color = make_html_color(3 * 365, 3.5 * 365, gap.days)
-        status_string.append('<span style="background:#FF{color}{color}">{date}</span>'
+        status_string.append("<span style=\"background:#FF{color}{color}\">{date}</span>"
                              .format(color=color, date=date_of_first))
 
-        user_page = Page(self.wiki, 'Benutzer:THE IT/Werkstatt')
+        user_page = Page(self.wiki, "Benutzer:THE IT/Werkstatt")
         temp_text = user_page.text
-        temp_text = re.sub("<!--RE-->.*<!--RE-->", '<!--RE-->{}<!--RE-->'
-                           .format(' ■ '.join(status_string)), temp_text)
+        temp_text = re.sub("<!--RE-->.*<!--RE-->", "<!--RE-->{}<!--RE-->"
+                           .format(" ■ ".join(status_string)), temp_text)
         user_page.text = temp_text
-        user_page.save('todo RE aktualisiert')
+        user_page.save("todo RE aktualisiert")
 
     def history(self, fertig, korrigiert, unkorrigiert):
-        page = Page(self.wiki, 'Benutzer:THEbotIT/' + self.bot_name)
+        page = Page(self.wiki, "Benutzer:THEbotIT/" + self.bot_name)
         temp_text = page.text
-        composed_text = ''.join(['|-\n', '|', self.timestamp.start_of_run.strftime('%Y%m%d-%H%M'),
-                                 '||', str(unkorrigiert[1]), '||', str(unkorrigiert[0]),
-                                 '||', str(int(unkorrigiert[0] / unkorrigiert[1])),
-                                 '||', str(korrigiert[1]), '||', str(korrigiert[0]),
-                                 '||', str(int(korrigiert[0] / korrigiert[1])),
-                                 '||', str(fertig[1]), '||', str(fertig[0]),
-                                 '||', str(int(fertig[0] / fertig[1])),
-                                 '\n<!--new line-->'])
-        temp_text = re.sub('<!--new line-->', composed_text, temp_text)
+        composed_text = "".join(["|-\n", "|", self.timestamp.start_of_run.strftime("%Y%m%d-%H%M"),
+                                 "||", str(unkorrigiert[1]), "||", str(unkorrigiert[0]),
+                                 "||", str(int(unkorrigiert[0] / unkorrigiert[1])),
+                                 "||", str(korrigiert[1]), "||", str(korrigiert[0]),
+                                 "||", str(int(korrigiert[0] / korrigiert[1])),
+                                 "||", str(fertig[1]), "||", str(fertig[0]),
+                                 "||", str(int(fertig[0] / fertig[1])),
+                                 "\n<!--new line-->"])
+        temp_text = re.sub("<!--new line-->", composed_text, temp_text)
         page.text = temp_text
-        page.save('RE Statistik aktualisiert', botflag=True)
+        page.save("RE Statistik aktualisiert", botflag=True)
 
     def get_sum_of_cat(self, cats, negacats):
         list_of_lemmas = self.petscan(cats, negacats)
         byte_sum = 0
         for lemma in list_of_lemmas:
-            byte_sum += int(lemma['len'])
+            byte_sum += int(lemma["len"])
         return byte_sum, len(list_of_lemmas)
 
     def petscan(self, categories, negative_categories):
@@ -82,6 +83,6 @@ class ReStatus(CanonicalBot):
 
 
 if __name__ == "__main__":
-    WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReStatus(wiki=WIKI, debug=True) as bot:
         bot.run()

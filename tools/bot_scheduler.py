@@ -104,7 +104,7 @@ class BotScheduler(CanonicalBot):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     BOT_SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=True)
 
     class TestBot(OneTimeBot):

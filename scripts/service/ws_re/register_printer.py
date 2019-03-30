@@ -29,6 +29,6 @@ class ReRegisterPrinter(CanonicalBot):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReRegisterPrinter(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
         bot.run()

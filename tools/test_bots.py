@@ -115,7 +115,7 @@ class TestPersistedTimestamp(TestCase):
     def setUp(self):
         setup_data_path(self)
         with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
-            json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
+            json.dump({"timestamp": "2000-01-01_00:00:00", "success": True}, persist_json)
         self.reference = datetime.now()
         self.timestamp = PersistedTimestamp("test_bot")
 
@@ -167,8 +167,8 @@ class TestOneTimeBot(TestCase):
     def setUp(self):
         setup_data_path(self)
         self.addCleanup(mock.patch.stopall)
-        self.log_patcher = mock.patch.object(WikiLogger, 'debug', autospec=True)
-        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, 'debug', autospec=True)
+        self.log_patcher = mock.patch.object(WikiLogger, "debug", autospec=True)
+        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, "debug", autospec=True)
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
@@ -206,13 +206,13 @@ class TestOneTimeBot(TestCase):
 
     def test_timestamp_load_last_run(self):
         with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="x", ) as persist_json:
-            json.dump({"timestamp": '2000-01-01_00:00:00', "success": True}, persist_json)
+            json.dump({"timestamp": "2000-01-01_00:00:00", "success": True}, persist_json)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(2000, 1, 1), bot.timestamp.last_run)
             self.assertTrue(bot.timestamp.success_last_run)
 
         with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="w") as persist_json:
-            json.dump({"timestamp": '2000-01-01_00:00:00', "success": False}, persist_json)
+            json.dump({"timestamp": "2000-01-01_00:00:00", "success": False}, persist_json)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertFalse(bot.timestamp.success_last_run)
 
@@ -248,11 +248,11 @@ class TestOneTimeBot(TestCase):
         with LogCapture() as log_catcher:
             with self.LogBot(log_to_screen=False, log_to_wiki=False) as bot:
                 # logging on enter
-                log_catcher.check(('LogBot', 'INFO', 'Start the bot LogBot.'))
+                log_catcher.check(("LogBot", "INFO", "Start the bot LogBot."))
                 log_catcher.clear()
                 bot.run()
                 # logging on run
-                log_catcher.check(('LogBot', 'INFO', 'Test'))
+                log_catcher.check(("LogBot", "INFO", "Test"))
                 log_catcher.clear()
             # logging on exit
             self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.\d{6}.")
@@ -281,7 +281,7 @@ class TestOneTimeBot(TestCase):
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
             self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])
-            self.assertEqual(mock.call().save('Update of Bot MinimalBot', botflag=True),
+            self.assertEqual(mock.call().save("Update of Bot MinimalBot", botflag=True),
                              mock_page.mock_calls[2])
 
     @mock.patch("tools.test_bots.Page", autospec=Page)
@@ -290,7 +290,7 @@ class TestOneTimeBot(TestCase):
         type(page_mock).text = text_mock
         text_mock.return_value = "2"
         self.MinimalBot.save_if_changed(page_mock, "1", "changed")
-        compare(mock.call.save('changed', botflag=True), page_mock.mock_calls[0])
+        compare(mock.call.save("changed", botflag=True), page_mock.mock_calls[0])
 
     @mock.patch("tools.test_bots.Page", autospec=Page)
     @mock.patch("tools.test_bots.Page.text", new_callable=mock.PropertyMock)
@@ -488,8 +488,8 @@ class TestCanonicalBot(TestCase):
     def setUp(self):
         setup_data_path(self)
         self.addCleanup(mock.patch.stopall)
-        self.log_patcher = mock.patch.object(WikiLogger, 'debug', autospec=True)
-        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, 'debug', autospec=True)
+        self.log_patcher = mock.patch.object(WikiLogger, "debug", autospec=True)
+        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, "debug", autospec=True)
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
@@ -498,7 +498,7 @@ class TestCanonicalBot(TestCase):
     @staticmethod
     def create_timestamp(bot_name, date=datetime(2000, 1, 1), success=True):
         with open(_DATA_PATH_TEST + os.sep + "{}.last_run.json".format(bot_name), mode="w") as persist_json:
-            json.dump({"timestamp": date.strftime('%Y-%m-%d_%H:%M:%S'), "success": success}, persist_json)
+            json.dump({"timestamp": date.strftime("%Y-%m-%d_%H:%M:%S"), "success": success}, persist_json)
 
     @staticmethod
     def create_data(bot_name, data=None):
@@ -547,7 +547,7 @@ class TestCanonicalBot(TestCase):
         self.create_timestamp("DataOutdatedBot")
         with LogCapture() as log_catcher:
             with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
-                log_catcher.check(('DataOutdatedBot', 'INFO', 'Start the bot DataOutdatedBot.'),
+                log_catcher.check(("DataOutdatedBot", "INFO", "Start the bot DataOutdatedBot."),
                                   ("DataOutdatedBot", "WARNING", "The data is thrown away. It is out of date"))
                 self.assertDictEqual({}, bot.data.data)
                 bot.run()

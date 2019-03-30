@@ -47,20 +47,19 @@ class TheBotItScheduler(BotScheduler):
                 if os.path.isfile(self.path_one_time.joinpath(file_name)):
                     file_list.append(file_name)
         file_list.remove("__init__.py")
-        self.logger.info("Files in one_time directory: {}".format(file_list))
+        self.logger.info(f"Files in one_time directory: {file_list}")
         return sorted(file_list)
 
     def _run_bot_from_file(self, file: str) -> bool:
-        self.logger.info('Run {}'.format(file))
+        self.logger.info("Run {}".format(file))
         onetime_module = \
-            importlib.import_module('scripts.{}.{}'
-                                    .format(self.folder_one_time, file.replace('.py', '')))
-        attributes = tuple(a for a in dir(onetime_module) if not a.startswith('__'))
+            importlib.import_module(f"scripts.{self.folder_one_time}.{file.replace('.py', '')}")
+        attributes = tuple(a for a in dir(onetime_module) if not a.startswith("__"))
         success = True
         for attribute in attributes:
             module_attr = getattr(onetime_module, attribute)
             if inspect.isclass(module_attr):
-                if 'OneTimeBot' in str(module_attr.__bases__):
+                if "OneTimeBot" in str(module_attr.__bases__):
                     success = \
                         self.run_bot(module_attr(wiki=self.wiki, debug=self.debug)) and success
         return success
@@ -91,8 +90,8 @@ class TheBotItScheduler(BotScheduler):
             repo.index.add(files_add)
         if files_remove:
             repo.index.remove(files_remove)
-        repo.index.commit('move successful bot scripts: {}'.format(", ".join(files)))
-        origin = repo.remote('origin')
+        repo.index.commit(f"move successful bot scripts: {', '.join(files)}")
+        origin = repo.remote("origin")
         origin.push()
 
     def task(self):
@@ -110,7 +109,7 @@ class TheBotItScheduler(BotScheduler):
 
 if __name__ == "__main__":  # pragma: no cover
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = TheBotItScheduler(wiki=WS_WIKI, debug=False)
     SCHEDULER.daily_bots = [AuthorList, ReScanner, GlCreateMagazine, ReRegisterPrinter]
     SCHEDULER.weekly_bots = {0: [],  # monday

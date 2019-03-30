@@ -34,15 +34,15 @@ class ReScanner(CanonicalBot):
 
     def _prepare_searcher(self) -> PetScan:
         searcher = PetScan()
-        searcher.add_any_template('REDaten')
+        searcher.add_any_template("REDaten")
 
         if self.debug:
             searcher.add_namespace(2)
         else:
             searcher.add_namespace(0)
-            searcher.add_positive_category('RE:Fertig')
-            searcher.add_positive_category('RE:Korrigiert')
-            searcher.add_positive_category('RE:Platzhalter')
+            searcher.add_positive_category("RE:Fertig")
+            searcher.add_positive_category("RE:Korrigiert")
+            searcher.add_positive_category("RE:Platzhalter")
             # searcher.add_negative_category("Wikisource:Gemeinfreiheit|2")
             searcher.set_logic_union()
             searcher.set_sort_criteria("date")
@@ -51,17 +51,17 @@ class ReScanner(CanonicalBot):
         return searcher
 
     def compile_lemma_list(self) -> List[str]:
-        self.logger.info('Compile the lemma list')
-        self.logger.info('Searching for lemmas')
+        self.logger.info("Compile the lemma list")
+        self.logger.info("Searching for lemmas")
         searcher = self._prepare_searcher()
-        self.logger.info('[{url} {url}]'.format(url=searcher))
+        self.logger.info("[{url} {url}]".format(url=searcher))
         raw_lemma_list = searcher.run()
         self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
         self.logger.info("Filter new_lemma_list")
         # all items which wasn't process before
         new_lemma_list = []
         for item in raw_lemma_list:
-            lemma = item['nstext'] + ':' + item['title']
+            lemma = item["nstext"] + ":" + item["title"]
             try:
                 self.data[lemma]
             except KeyError:
@@ -86,8 +86,8 @@ class ReScanner(CanonicalBot):
 
     def _save_re_page(self, re_page: RePage, list_of_done_tasks: list):
         if not self.debug:
-            save_message = 'ReScanner hat folgende Aufgaben bearbeitet: {}' \
-                .format(', '.join(list_of_done_tasks))
+            save_message = "ReScanner hat folgende Aufgaben bearbeitet: {}" \
+                .format(", ".join(list_of_done_tasks))
             self.logger.debug(save_message)
             try:
                 re_page.save(save_message)
@@ -122,10 +122,10 @@ class ReScanner(CanonicalBot):
         active_tasks = self._activate_tasks()
         error_task = ERROTask(wiki=self.wiki, debug=self.debug, logger=self.logger)
         lemma_list = self.compile_lemma_list()
-        self.logger.info('Start processing the lemmas.')
+        self.logger.info("Start processing the lemmas.")
         processed_lemmas = 0
         for idx, lemma in enumerate(lemma_list):
-            self.logger.debug('Process [https://de.wikisource.org/wiki/{lemma} {lemma}]'
+            self.logger.debug("Process [https://de.wikisource.org/wiki/{lemma} {lemma}]"
                               .format(lemma=lemma))
             list_of_done_tasks = []
             try:
@@ -159,6 +159,6 @@ class ReScanner(CanonicalBot):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReScanner(wiki=WS_WIKI, debug=True) as bot:
         bot.run()

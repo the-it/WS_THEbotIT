@@ -28,15 +28,15 @@ class TestBotScheduler(TestCase):
     @staticmethod
     def _create_dir_and_init(path: Path):
         os.makedirs(path)
-        open(path.joinpath("__init__.py"), 'w').close()
+        open(path.joinpath("__init__.py"), "w").close()
 
     def _copy_bot_to_run_dir(self, name: str):
-        copy(Path(__file__).parent.joinpath("test_bots_for_scheduler", "{}.py".format(name)),
+        copy(Path(__file__).parent.joinpath("test_bots_for_scheduler", f"{name}.py"),
              self._get_one_time_run_test())
         time.sleep(0.1)
 
     def _copy_bot_to_archive_dir(self, name: str):
-        copy(Path(__file__).parent.joinpath("test_bots_for_scheduler", "{}.py".format(name)),
+        copy(Path(__file__).parent.joinpath("test_bots_for_scheduler", f"{name}.py"),
              self._get_archive_test())
 
     def _remove_temp_folder(self):
@@ -59,8 +59,8 @@ class TestBotScheduler(TestCase):
     def test_detect_files_to_run(self):
         self._copy_bot_to_run_dir("bot_1")
         os.mkdir(self._get_one_time_run_test().joinpath("some_folder"))
-        open(self._get_one_time_run_test().joinpath("bot_1_test.py"), 'w').close()
-        with open(self._get_one_time_run_test().joinpath("bot_1_test.py"), 'w') as file_pointer:
+        open(self._get_one_time_run_test().joinpath("bot_1_test.py"), "w").close()
+        with open(self._get_one_time_run_test().joinpath("bot_1_test.py"), "w") as file_pointer:
             file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         self._copy_bot_to_run_dir("bot_2")
         os.mkdir(self._get_one_time_run_test().joinpath("testfolder"))
@@ -71,7 +71,7 @@ class TestBotScheduler(TestCase):
 
     def test_run_one_bot_from_file(self):
         self._copy_bot_to_run_dir("bot_1")
-        with open(self._get_one_time_run_test().joinpath("bot_1_test.py"), 'w') as file_pointer:
+        with open(self._get_one_time_run_test().joinpath("bot_1_test.py"), "w") as file_pointer:
             file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         with mock.patch.object(self.bot_it_scheduler, "run_bot", mock.Mock(return_value=True)) as run_mock:
             self.assertTrue(self.bot_it_scheduler._run_bot_from_file("bot_1.py"))
@@ -111,14 +111,14 @@ class TestBotScheduler(TestCase):
 
     def test_move_file_with_test(self):
         self._copy_bot_to_run_dir("bot_1")
-        open(self._get_one_time_run_test().joinpath("bot_1_test.py"), 'w').close()
-        open(self._get_one_time_run_test().joinpath("bot_1_test_data.txt"), 'w').close()
+        open(self._get_one_time_run_test().joinpath("bot_1_test.py"), "w").close()
+        open(self._get_one_time_run_test().joinpath("bot_1_test_data.txt"), "w").close()
         now = datetime.today()
         path_to_current_archive = self._get_archive_test()
         self.bot_it_scheduler._move_file_to_archive("bot_1.py")
         self.assertIn("bot_1.py", os.listdir(path_to_current_archive))
         with open(path_to_current_archive.joinpath("bot_1.py"), "r") as bot_file:
-            compare(StringComparison("# successful processed on {}".format(now.strftime("%Y-%m-%d"))), bot_file.readline())
+            compare(StringComparison(f"# successful processed on {now.strftime('%Y-%m-%d')}"), bot_file.readline())
         self.assertTrue(os.path.exists(path_to_current_archive.joinpath("bot_1.py")))
         self.assertTrue(os.path.exists(path_to_current_archive.joinpath("bot_1_test_data.txt")))
 
@@ -149,7 +149,7 @@ class TestBotScheduler(TestCase):
 
     def test_change_repo_two_bots(self):
         self._copy_bot_to_archive_dir("bot_1")
-        open(self._get_archive_test().joinpath("bot_1_test.py"), 'w').close()
+        open(self._get_archive_test().joinpath("bot_1_test.py"), "w").close()
         self._copy_bot_to_archive_dir("bot_2")
         with mock.patch("scripts.runner.git.Repo", mock.Mock(spec=Repo)) as repo_mock:
             self.bot_it_scheduler._push_files(["bot_1.py", "bot_2.py"])
@@ -172,7 +172,7 @@ class TestBotScheduler(TestCase):
 
     def test_complete_task(self):
         self._copy_bot_to_run_dir("bot_1")
-        with open(self._get_one_time_run_test().joinpath("bot_1_test.py"), 'w') as file_pointer:
+        with open(self._get_one_time_run_test().joinpath("bot_1_test.py"), "w") as file_pointer:
             file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         self._copy_bot_to_run_dir("bot_2")
         with mock.patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
