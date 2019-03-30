@@ -217,9 +217,9 @@ class AuthorList(CanonicalBot):
         self._sort_author_list(list_authors)
 
         self.logger.info("Start printing.")
-        dt = self.timestamp.start_of_run
+        start_of_run = self.timestamp.start_of_run
         self.string_list.append(f"Diese Liste der Autoren enthält alle {len(self.data)}<ref>Stand: "
-                                f"{dt.day}.{dt.month}.{dt.year}, "
+                                f"{start_of_run.day}.{start_of_run.month}.{start_of_run.year}, "
                                 f"{self.timestamp.start_of_run.strftime('%H:%M')} (UTC)</ref> Autoren, "
                                 f"zu denen in Wikisource eine Autorenseite existiert.")
         self.string_list.append("Die Liste kann mit den Buttons neben den Spaltenüberschriften"
