@@ -555,8 +555,8 @@ class TestRePage(TestCase):
     def test_page_is_locked_detect_it(self):
         self.text_mock.return_value = article_template
 
-        self.page_mock.protection.return_value = {'edit': ('sysop', 'infinity'),
-                                                  'move': ('sysop', 'infinity')}
+        self.page_mock.protection.return_value = {"edit": ("sysop", "infinity"),
+                                                  "move": ("sysop", "infinity")}
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"
         with self.assertRaises(ReDatenException):

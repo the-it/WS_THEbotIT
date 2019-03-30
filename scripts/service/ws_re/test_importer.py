@@ -7,7 +7,6 @@ from unittest import TestCase
 from testfixtures import compare, LogCapture
 
 from scripts.service.ws_re.importer import ReImporter
-from tools import path_or_str
 
 
 class TestReImporter(TestCase):
@@ -15,17 +14,17 @@ class TestReImporter(TestCase):
 
     def _set_up_test_folder(self):
         try:
-            shutil.rmtree(path_or_str(self._TEST_FOLDER_PATH))
+            shutil.rmtree(self._TEST_FOLDER_PATH)
         except FileNotFoundError:
             pass
         finally:
-            os.mkdir(path_or_str(self._TEST_FOLDER_PATH))
+            os.mkdir(self._TEST_FOLDER_PATH)
 
     def setUp(self):
         self.re_importer = ReImporter(log_to_screen=False, log_to_wiki=False, debug=False)
         self._set_up_test_folder()
         self.re_importer._register_folder = "test_register"
-        self.re_importer.folder = path_or_str(Path(__file__).parent.joinpath(self.re_importer._register_folder))
+        self.re_importer.folder = Path(__file__).parent.joinpath(self.re_importer._register_folder)
 
     def test_split_line(self):
         line = """|[[RE:Herodes 14]]{{Anker|Herodes 14}}
@@ -227,11 +226,11 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
     ]
   }
 ]"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+        with open(self._TEST_FOLDER_PATH.joinpath("I_1.json"), "r") as json_file:
             compare(expected, json_file.read())
 
     def test_register_already_there(self):
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "w") as json_file:
+        with open(self._TEST_FOLDER_PATH.joinpath("I_1.json"), "w") as json_file:
             json_file.write("test")
         lemma_text = """{|
     |-
@@ -248,26 +247,26 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
     [[Kategorie:RE:Register|!]]
     Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band S II|pages}} in Volltext]]."""
         self.re_importer._dump_register("I_1", lemma_text)
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+        with open(self._TEST_FOLDER_PATH.joinpath("I_1.json"), "r") as json_file:
             compare("test", json_file.read())
 
     def test_make_dir(self):
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "w") as json_file:
+        with open(self._TEST_FOLDER_PATH.joinpath("I_1.json"), "w") as json_file:
             json_file.write("test")
         self.re_importer.timestamp._last_run = True
         with LogCapture():
             self.re_importer.clean_deprecated_register()
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json")), "r") as json_file:
+        with open(self._TEST_FOLDER_PATH.joinpath("I_1.json"), "r") as json_file:
             compare("test", json_file.read())
         self.re_importer.timestamp.last_run = None
         with LogCapture():
             self.re_importer.clean_deprecated_register()
-        self.assertFalse(os.path.exists(path_or_str(self._TEST_FOLDER_PATH.joinpath("I_1.json"))))
-        self.assertTrue(os.path.exists(path_or_str(self._TEST_FOLDER_PATH)))
-        os.removedirs(path_or_str(self._TEST_FOLDER_PATH))
+        self.assertFalse(os.path.exists(self._TEST_FOLDER_PATH.joinpath("I_1.json")))
+        self.assertTrue(os.path.exists(self._TEST_FOLDER_PATH))
+        os.removedirs(self._TEST_FOLDER_PATH)
         with LogCapture():
             self.re_importer.clean_deprecated_register()
-        self.assertTrue(os.path.exists(path_or_str(self._TEST_FOLDER_PATH)))
+        self.assertTrue(os.path.exists(self._TEST_FOLDER_PATH))
 
     def test_optimize_register(self):
         lemma_text = """{|
@@ -430,7 +429,7 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
     "IV,1": "Otto, Walter_IV,1"
   }
 }"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors_mapping.json")), "r") as json_file:
+        with open(self._TEST_FOLDER_PATH.joinpath("authors_mapping.json"), "r") as json_file:
             compare(expected, json_file.read())
 
         expected = """{
@@ -446,7 +445,7 @@ Zahl der Artikel: 15, davon [[:Kategorie:RE:Band S II|{{PAGESINCATEGORY:RE:Band 
     "death": 1942
   }
 }"""
-        with open(path_or_str(self._TEST_FOLDER_PATH.joinpath("authors.json")), "r") as json_file:
+        with open(self._TEST_FOLDER_PATH.joinpath("authors.json"), "r") as json_file:
             compare(expected, json_file.read())
 
 

@@ -11,4 +11,4 @@ class TestSearchForRefs(TestCase):
     def test_data_provider(self, value):
         for item in value:
             self.assertEqual(item[1], search_for_refs(item[0]),
-                             "\"{}\" should convert to \"{}\"".format(item[0], item[1]))
+                             f"\"{item[0]}\" should convert to \"{item[1]}\"")

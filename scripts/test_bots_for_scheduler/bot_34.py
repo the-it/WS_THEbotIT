@@ -16,6 +16,6 @@ class TestBot4(OneTimeBot):
 
 
 if __name__ == "__main__":
-    WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with TestBot3(wiki=WIKI, debug=True) as bot:
         bot.run()

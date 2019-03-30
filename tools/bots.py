@@ -22,9 +22,9 @@ def _get_data_path():
 
 
 class WikiLogger():
-    _logger_format = '[%(asctime)s] [%(levelname)-8s] [%(message)s]'
+    _logger_format = "[%(asctime)s] [%(levelname)-8s] [%(message)s]"
     _logger_date_format = "%H:%M:%S"
-    _wiki_timestamp_format = '%y-%m-%d_%H:%M:%S'
+    _wiki_timestamp_format = "%y-%m-%d_%H:%M:%S"
 
     def __init__(self, bot_name: str, start_time: datetime, log_to_screen=True):
         self._bot_name = bot_name
@@ -44,27 +44,25 @@ class WikiLogger():
         for handler in self._logger.handlers[:]:
             handler.close()
             self._logger.removeHandler(handler)
-        if os.path.isfile(self._data_path + os.sep + self._logger_names['info']):
-            os.remove(self._data_path + os.sep + self._logger_names['info'])
+        if os.path.isfile(self._data_path + os.sep + self._logger_names["info"]):
+            os.remove(self._data_path + os.sep + self._logger_names["info"])
         sys.stdout.flush()
         logging.shutdown()
 
     def _get_logger_names(self):
         log_file_names = {}
         for log_type in ("info", "debug"):
-            log_file_names.update({log_type: '{name}_{log_type}_{timestamp}.log'.format(
-                name=self._bot_name,
-                log_type=log_type.upper(),
-                timestamp=self._start_time.strftime('%y%m%d%H%M%S'))})
+            log_file_names.update({log_type: f"{self._bot_name}_{log_type.upper()}_"
+                                             f"{self._start_time.strftime('%y%m%d%H%M%S')}.log"})
         return log_file_names
 
     def _setup_logger_properties(self):
         self._logger.setLevel(logging.DEBUG)
-        error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['info'],
-                                        encoding='utf8')
+        error_log = logging.FileHandler(self._data_path + os.sep + self._logger_names["info"],
+                                        encoding="utf8")
         error_log.setLevel(logging.INFO)
-        debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names['debug'],
-                                        encoding='utf8')
+        debug_log = logging.FileHandler(self._data_path + os.sep + self._logger_names["debug"],
+                                        encoding="utf8")
         debug_log.setLevel(logging.DEBUG)
         formatter = logging.Formatter(self._logger_format, datefmt=self._logger_date_format)
         error_log.setFormatter(formatter)
@@ -97,23 +95,23 @@ class WikiLogger():
         self._logger.exception(msg=msg, exc_info=exc_info)
 
     def create_wiki_log_lines(self):
-        with open(self._data_path + os.sep + self._logger_names['info'], encoding='utf8') \
+        with open(self._data_path + os.sep + self._logger_names["info"], encoding="utf8") \
                 as filepointer:
             line_list = list()
             for line in filepointer:
                 line_list.append(line.strip())
             log_lines = ""
             log_lines = log_lines \
-                + '\n\n' \
-                + '=={}=='.format(self._start_time.strftime(self._wiki_timestamp_format)) \
-                + '\n\n' \
-                + '\n\n'.join(line_list) \
-                + '\n--~~~~'
+                + "\n\n" \
+                + f"=={self._start_time.strftime(self._wiki_timestamp_format)}==" \
+                + "\n\n" \
+                + "\n\n".join(line_list) \
+                + "\n--~~~~"
             return log_lines
 
 
 class PersistedTimestamp():
-    _timeformat = '%Y-%m-%d_%H:%M:%S'
+    _timeformat = "%Y-%m-%d_%H:%M:%S"
 
     def __init__(self, bot_name: str):
         self._last_run = None
@@ -121,7 +119,7 @@ class PersistedTimestamp():
         self._success_this_run = False
         self._start = datetime.now()
         self._data_path = _get_data_path()
-        self._full_filename = self._data_path + os.sep + "{}.last_run.json".format(bot_name)
+        self._full_filename = self._data_path + os.sep + f"{bot_name}.last_run.json"
 
     def __enter__(self):
         self.set_up()
@@ -184,11 +182,11 @@ class OneTimeBot():
         self.log_to_screen = log_to_screen
         self.log_to_wiki = log_to_wiki
         if not self.task:
-            raise NotImplementedError('The class function \"task\" must be implemented!\n'
-                                      'Example:\n'
-                                      'class DoSomethingBot(OneTimeBot):\n'
-                                      '    def task(self):\n'
-                                      '        do_stuff()')
+            raise NotImplementedError("The class function \"task\" must be implemented!\n"
+                                      "Example:\n"
+                                      "class DoSomethingBot(OneTimeBot):\n"
+                                      "    def task(self):\n"
+                                      "        do_stuff()")
         self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
         self.wiki = wiki
         self.debug = debug
@@ -199,14 +197,14 @@ class OneTimeBot():
     def __enter__(self):
         self.timestamp.__enter__()
         self.logger.__enter__()
-        self.logger.info('Start the bot {}.'.format(self.bot_name))
+        self.logger.info(f"Start the bot {self.bot_name}.")
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.timestamp.success_this_run = self.success
         self.timestamp.__exit__(exc_type, exc_val, exc_tb)
-        self.logger.info('Finish bot {} in {}.'
-                         .format(self.bot_name, datetime.now() - self.timestamp.start_of_run))
+        self.logger.info(f"Finish bot {self.bot_name} in "
+                         f"{datetime.now() - self.timestamp.start_of_run}.")
         if self.log_to_wiki:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
@@ -232,15 +230,15 @@ class OneTimeBot():
         if self.timeout:
             diff = datetime.now() - self.timestamp.start_of_run
             if diff > self.timeout:
-                self.logger.warning('Bot finished by timeout.')
+                self.logger.warning("Bot finished by timeout.")
                 time_over = True
         return time_over
 
     def send_log_to_wiki(self):
-        wiki_log_page = 'Benutzer:THEbotIT/Logs/{}'.format(self.bot_name)
+        wiki_log_page = f"Benutzer:THEbotIT/Logs/{self.bot_name}"
         page = Page(self.wiki, wiki_log_page)
         page.text += self.logger.create_wiki_log_lines()
-        page.save('Update of Bot {}'.format(self.bot_name), botflag=True)
+        page.save(f"Update of Bot {self.bot_name}", botflag=True)
 
     @staticmethod
     def save_if_changed(page: Page, text: str, change_msg: str):
@@ -275,7 +273,7 @@ class PersistedData(Mapping):
         if isinstance(new_dict, dict):
             self.data = new_dict
         else:
-            raise BotException("{} has the wrong type. It must be a dictionary.".format(new_dict))
+            raise BotException(f"{new_dict} has the wrong type. It must be a dictionary.")
 
     def dump(self, success=True):
         if success:
@@ -300,10 +298,10 @@ class PersistedData(Mapping):
 
     def _recover_data(self, type_of_data: str):
         try:
-            with open("{}.{}".format(self.file_name, type_of_data), mode="r") as json_file:
+            with open(f"{self.file_name}.{type_of_data}", mode="r") as json_file:
                 self.assign_dict(json.load(json_file))
         except FileNotFoundError:
-            raise BotException("There is no {} data to load.".format(type_of_data))
+            raise BotException(f"There is no {type_of_data} data to load.")
 
     def get_broken(self):
         self._recover_data("broken")
@@ -323,10 +321,10 @@ class CanonicalBot(OneTimeBot):
         OneTimeBot.__enter__(self)
         if self.data_outdated():
             self.data.assign_dict({})
-            self.logger.warning('The data is thrown away. It is out of date')
+            self.logger.warning("The data is thrown away. It is out of date")
         elif (self.timestamp.last_run is None) or not self.timestamp.success_last_run:
             self.data.assign_dict({})
-            self.logger.warning('The last run wasn\'t successful. The data is thrown away.')
+            self.logger.warning("The last run wasn\'t successful. The data is thrown away.")
         else:
             self.data.load()
         return self
