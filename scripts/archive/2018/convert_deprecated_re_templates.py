@@ -7,8 +7,8 @@ from pywikibot import Site, Page
 from scripts.service.ws_re.data_types import RePage, ReDatenException
 from scripts.service.ws_re.scanner_tasks import ERROTask
 from tools.bots import OneTimeBot
-from tools.template_handler import TemplateHandler, TemplateFinder
 from tools.petscan import PetScan
+from tools.template_handler import TemplateHandler, TemplateFinder
 
 
 class ConvertDeprecatedReTemplates(OneTimeBot):
@@ -91,7 +91,7 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
         searcher.add_namespace(0)
         self.logger.info(str(searcher))
         lemmas = searcher.run()
-        self.logger.info("{} to process.".format(len(lemmas)))
+        self.logger.info(f"{len(lemmas)} to process.")
         return lemmas
 
     def task(self):  # pragma: no cover
@@ -115,6 +115,6 @@ class ConvertDeprecatedReTemplates(OneTimeBot):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ConvertDeprecatedReTemplates(wiki=WIKI, debug=True) as bot:
         bot.run()

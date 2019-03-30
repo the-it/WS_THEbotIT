@@ -100,37 +100,37 @@ class TestCatScan(TestCase):
                          self.petscan._construct_list_argument(self.petscan.categories["negative"]))
 
     def test_construct_templates(self):
-        self.petscan.add_yes_template('yes1')
-        self.petscan.add_yes_template('yes2')
-        self.petscan.add_any_template('any1')
-        self.petscan.add_any_template('any2')
-        self.petscan.add_any_template('any3')
-        self.petscan.add_no_template('no1')
-        self.petscan.add_no_template('no2')
+        self.petscan.add_yes_template("yes1")
+        self.petscan.add_yes_template("yes2")
+        self.petscan.add_any_template("any1")
+        self.petscan.add_any_template("any2")
+        self.petscan.add_any_template("any3")
+        self.petscan.add_no_template("no1")
+        self.petscan.add_no_template("no2")
         self.assertEqual(str(self.petscan),
-                         'https://petscan.wmflabs.org/?language=de&project=wikisource&templates_yes=yes1%0D%0Ayes2&templates_any=any1%0D%0Aany2%0D%0Aany3&templates_no=no1%0D%0Ano2')
+                         "https://petscan.wmflabs.org/?language=de&project=wikisource&templates_yes=yes1%0D%0Ayes2&templates_any=any1%0D%0Aany2%0D%0Aany3&templates_no=no1%0D%0Ano2")
 
     def test_construct_outlinks(self):
-        self.petscan.add_yes_outlink('yes1')
-        self.petscan.add_yes_outlink('yes2')
-        self.petscan.add_any_outlink('any1')
-        self.petscan.add_any_outlink('any2')
-        self.petscan.add_any_outlink('any3')
-        self.petscan.add_no_outlink('no1')
-        self.petscan.add_no_outlink('no2')
+        self.petscan.add_yes_outlink("yes1")
+        self.petscan.add_yes_outlink("yes2")
+        self.petscan.add_any_outlink("any1")
+        self.petscan.add_any_outlink("any2")
+        self.petscan.add_any_outlink("any3")
+        self.petscan.add_no_outlink("no1")
+        self.petscan.add_no_outlink("no2")
         self.assertEqual(str(self.petscan),
-                         'https://petscan.wmflabs.org/?language=de&project=wikisource&outlinks_yes=yes1%0D%0Ayes2&outlinks_any=any1%0D%0Aany2%0D%0Aany3&outlinks_no=no1%0D%0Ano2')
+                         "https://petscan.wmflabs.org/?language=de&project=wikisource&outlinks_yes=yes1%0D%0Ayes2&outlinks_any=any1%0D%0Aany2%0D%0Aany3&outlinks_no=no1%0D%0Ano2")
 
     def test_construct_links_to(self):
-        self.petscan.add_yes_links_to('yes1')
-        self.petscan.add_yes_links_to('yes2')
-        self.petscan.add_any_links_to('any1')
-        self.petscan.add_any_links_to('any2')
-        self.petscan.add_any_links_to('any3')
-        self.petscan.add_no_links_to('no1')
-        self.petscan.add_no_links_to('no2')
+        self.petscan.add_yes_links_to("yes1")
+        self.petscan.add_yes_links_to("yes2")
+        self.petscan.add_any_links_to("any1")
+        self.petscan.add_any_links_to("any2")
+        self.petscan.add_any_links_to("any3")
+        self.petscan.add_no_links_to("no1")
+        self.petscan.add_no_links_to("no2")
         self.assertEqual(str(self.petscan),
-                         'https://petscan.wmflabs.org/?language=de&project=wikisource&links_to_all=yes1%0D%0Ayes2&links_to_any=any1%0D%0Aany2%0D%0Aany3&links_to_no=no1%0D%0Ano2')
+                         "https://petscan.wmflabs.org/?language=de&project=wikisource&links_to_all=yes1%0D%0Ayes2&links_to_any=any1%0D%0Aany2%0D%0Aany3&links_to_no=no1%0D%0Ano2")
 
 
     def test_construct_options(self):
@@ -147,17 +147,17 @@ class TestCatScan(TestCase):
         # only a positive category
         self.petscan.add_positive_category("test")
         self.assertEqual(str(self.petscan),
-                         'https://petscan.wmflabs.org/?language=en&project=wikipedia&categories=test')
+                         "https://petscan.wmflabs.org/?language=en&project=wikipedia&categories=test")
         # only a negative category
         self.petscan.categories = {"positive": [], "negative": []}
-        self.petscan.add_negative_category('test')
+        self.petscan.add_negative_category("test")
         self.assertEqual(str(self.petscan),
-                         'https://petscan.wmflabs.org/?language=en&project=wikipedia&negcats=test')
+                         "https://petscan.wmflabs.org/?language=en&project=wikipedia&negcats=test")
         # only a option
         self.petscan.categories = {"positive": [], "negative": []}
-        self.petscan.add_options({"max_age": '10'})
+        self.petscan.add_options({"max_age": "10"})
         self.assertEqual(str(self.petscan),
-                         'https://petscan.wmflabs.org/?language=en&project=wikipedia&max_age=10')
+                         "https://petscan.wmflabs.org/?language=en&project=wikipedia&max_age=10")
 
     def test_do_positive(self):
         with requests_mock.mock() as mock:

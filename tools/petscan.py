@@ -1,4 +1,4 @@
-__author__ = 'Erik Sommer'
+__author__ = "Erik Sommer"
 
 import datetime
 import json
@@ -90,19 +90,19 @@ class PetScan:
     """
 
     def __init__(self):
-        self.header = {'User-Agent': 'Python-urllib/3.1'}
+        self.header = {"User-Agent": "Python-urllib/3.1"}
         self.base_address = "https://petscan.wmflabs.org/"
         self._timeout = 30
         self.options = {}
         self.categories = {"positive": [], "negative": []}
-        self.templates = {'yes': [], 'any': [], 'no': []}
-        self.outlinks = {'yes': [], 'any': [], 'no': []}
-        self.links_to = {'yes': [], 'any': [], 'no': []}
+        self.templates = {"yes": [], "any": [], "no": []}
+        self.outlinks = {"yes": [], "any": [], "no": []}
+        self.links_to = {"yes": [], "any": [], "no": []}
         self.language = "de"
         self.project = "wikisource"
 
     def __str__(self):
-        return quote(self._construct_string().replace('&format=json&doit=1', ''), safe='/&:=?')
+        return quote(self._construct_string().replace("&format=json&doit=1", ""), safe="/&:=?")
 
     def set_language(self, lang: str):
         self.language = lang
@@ -124,12 +124,12 @@ class PetScan:
 
     def add_positive_category(self, category: str, search_depth: int = 1):
         if search_depth > 1:
-            category = category + "|{}".format(search_depth)
+            category = f"{category}|{search_depth}"
         self.categories["positive"].append(category)
 
     def add_negative_category(self, category: str, search_depth: int = 1):
         if search_depth > 1:
-            category = category + "|{}".format(search_depth)
+            category = f"{category}|{search_depth}"
         self.categories["negative"].append(category)
 
     def add_namespace(self, namespace):
@@ -149,31 +149,31 @@ class PetScan:
         self.add_options({"show_redirects": "no"})
 
     def add_yes_template(self, template: str):
-        self.templates['yes'].append(template)
+        self.templates["yes"].append(template)
 
     def add_any_template(self, template: str):
-        self.templates['any'].append(template)
+        self.templates["any"].append(template)
 
     def add_no_template(self, template: str):
-        self.templates['no'].append(template)
+        self.templates["no"].append(template)
 
     def add_yes_outlink(self, outlink: str):
-        self.outlinks['yes'].append(outlink)
+        self.outlinks["yes"].append(outlink)
 
     def add_any_outlink(self, outlink: str):
-        self.outlinks['any'].append(outlink)
+        self.outlinks["any"].append(outlink)
 
     def add_no_outlink(self, outlink: str):
-        self.outlinks['no'].append(outlink)
+        self.outlinks["no"].append(outlink)
 
     def add_yes_links_to(self, page: str):
-        self.links_to['yes'].append(page)
+        self.links_to["yes"].append(page)
 
     def add_any_links_to(self, page: str):
-        self.links_to['any'].append(page)
+        self.links_to["any"].append(page)
 
     def add_no_links_to(self, page: str):
-        self.links_to['no'].append(page)
+        self.links_to["no"].append(page)
 
     def last_change_before(self, last_change: datetime):
         self.add_options({"before": last_change.strftime("%Y%m%d%H%M%S")})
@@ -216,24 +216,24 @@ class PetScan:
 
     def _set_last_edit(self, type_of_user, allowed):
         if allowed:
-            self.add_options({"edits[{}]".format(type_of_user): "yes"})
+            self.add_options({f"edits[{type_of_user}]": "yes"})
         else:
-            self.add_options({"edits[{}]".format(type_of_user): "no"})
+            self.add_options({f"edits[{type_of_user}]": "no"})
 
-    sort_criteria = ['title', 'ns_title', 'size', 'date', 'incoming_links', 'random']
+    sort_criteria = ["title", "ns_title", "size", "date", "incoming_links", "random"]
 
     def set_sort_criteria(self, criteria):
         if criteria in self.sort_criteria:
-            self.add_options({'sortby': criteria})
+            self.add_options({"sortby": criteria})
         else:
-            raise PetScanException("{} isn't a valid sort criteria".format(criteria))
+            raise PetScanException(f"{criteria} isn't a valid sort criteria")
 
     def set_sortorder_decending(self):
-        self.add_options({'sortorder': 'descending'})
+        self.add_options({"sortorder": "descending"})
 
     @staticmethod
     def _construct_list_argument(cat_list):
-        string = "\r\n".join(cat_list).replace(' ', '+')
+        string = "\r\n".join(cat_list).replace(" ", "+")
         return string
 
     def _construct_options(self):
@@ -301,4 +301,4 @@ class PetScan:
             raise ConnectionError
         response_byte = response.content
         response_dict = json.loads(response_byte.decode("utf8"))
-        return response_dict['*'][0]['a']['*']
+        return response_dict["*"][0]["a"]["*"]

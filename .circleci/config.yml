@@ -130,12 +130,6 @@ jobs:
     working_directory: ~/repo
     <<: *quality_steps
 
-  version35:
-    docker:
-      - image: circleci/python:3.5
-    working_directory: ~/repo
-    <<: *version_steps
-
   version37:
     docker:
       - image: circleci/python:3.7
@@ -148,15 +142,15 @@ jobs:
     working_directory: ~/repo
     <<: *version_steps
 
-  coverage35:
-    docker:
-      - image: circleci/python:3.5
-    working_directory: ~/repo
-    <<: *coverage_steps
-
   coverage37:
     docker:
       - image: circleci/python:3.7
+    working_directory: ~/repo
+    <<: *coverage_steps
+
+  coverage38:
+    docker:
+      - image: circleci/python:3.8-rc
     working_directory: ~/repo
     <<: *coverage_steps
 
@@ -168,16 +162,14 @@ workflows:
     jobs:
       - quality:
           context: python37
-      - version35:
-          context: python35
       - version37:
           context: python37
       - version38:
           context: python38
-      - coverage35:
-          context: python35
+      - coverage38:
+          context: python38
           requires:
-            - version35
+            - version38
             - quality
       - coverage37:
           context: python37

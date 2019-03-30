@@ -54,12 +54,13 @@ class ReScannerTask:
         return result
 
     def load_task(self):
-        self.logger.info('opening task {}'.format(self.get_name()))
+        self.logger.info(f"opening task {self.name}")
 
     def finish_task(self):
-        self.logger.info('closing task {}'.format(self.get_name()))
+        self.logger.info(f"closing task {self.name}")
 
-    def get_name(self):
+    @property
+    def name(self):
         return re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
 
 
@@ -72,10 +73,10 @@ class ERROTask(ReScannerTask):
         self.data.append((lemma, reason))
 
     def _build_entry(self) -> str:
-        caption = "\n\n=={}==\n\n".format(datetime.now().strftime("%Y-%m-%d"))
+        caption = f"\n\n=={datetime.now():%Y-%m-%d}==\n\n"
         entries = []
         for item in self.data:
-            entries.append("* [[{lemma}]]\n** {reason}".format(lemma=item[0], reason=item[1]))
+            entries.append(f"* [[{item[0]}]]\n** {item[1]}")
         body = "\n".join(entries)
         return caption + body
 
@@ -156,15 +157,15 @@ class SCANTask(ReScannerTask):
         if repo.index.diff(None):
             master = repo.active_branch
             now = datetime.now().strftime("%y%m%d_%H%M%S")
-            branch_name = "{}_updating_registers".format(now)
-            self.logger.info("Pushing changes to \"{}\"".format(branch_name))
+            branch_name = f"{now}_updating_registers"
+            self.logger.info(f"Pushing changes to \"{branch_name}\"")
             repo.git.checkout("-b", branch_name)
             repo.git.add(str(Path(__file__).parent.joinpath("register")))
-            repo.index.commit("Updating the register at {}".format(now))
+            repo.index.commit(f"Updating the register at {now}")
             repo.git.push("origin", repo.active_branch.name)
             repo.git.checkout(master.name)
             if "GITHUB_USER" in os.environ:  # pragma: no cover
-                self.logger.info("Opening Pullrequest for \"{}\"".format(branch_name))
+                self.logger.info(f"Opening Pullrequest for \"{branch_name}\"")
                 self._open_pullrequest(branch_name)
         else:
             self.logger.info("No Changes to push today.")

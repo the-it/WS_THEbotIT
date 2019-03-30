@@ -10,7 +10,6 @@ from typing import Sequence, Dict, Tuple
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import Volumes
-from tools import path_or_str
 from tools.bots import CanonicalBot
 
 
@@ -21,7 +20,7 @@ class ReImporter(CanonicalBot):
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(year=2019, month=1, day=21, hour=10)
-        self.folder = path_or_str(Path(__file__).parent.joinpath(self._register_folder))
+        self.folder = Path(__file__).parent.joinpath(self._register_folder)
         self.authors = {}  # type: Dict[str, Dict[str, Dict[str, str]]]
         self.current_volume = ""
 
@@ -30,11 +29,13 @@ class ReImporter(CanonicalBot):
         self.clean_deprecated_register()
         for volume in re_volumes.all_volumes:
             self.current_volume = volume.name
-            self.logger.info("Reading Register for {}".format(volume.name))
-            old_register = Page(self.wiki, "Paulys Realencyclopädie der classischen "
-                                           "Altertumswissenschaft/Register/{}".format(volume.name))
-            file = path_or_str(Path(__file__).parent.joinpath(self._register_folder)
-                               .joinpath("original_{}.txt".format(volume.file_name)))
+            self.logger.info(f"Reading Register for {volume.name}")
+            old_register = Page(self.wiki, f"Paulys Realencyclopädie der classischen "
+                                           f"Altertumswissenschaft/Register/{volume.name}")
+            file = Path(__file__)\
+                .parent\
+                .joinpath(self._register_folder)\
+                .joinpath(f"original_{volume.file_name}.txt")
             with open(file, mode="w", encoding="utf-8") as original:
                 original.write(old_register.text)
             self._dump_register(volume.file_name, old_register.text)
@@ -87,10 +88,12 @@ class ReImporter(CanonicalBot):
         return new_register
 
     def _dump_register(self, volume: str, old_register: str):
-        file = path_or_str(Path(__file__).parent
-                           .joinpath(self._register_folder).joinpath("{}.json".format(volume)))
+        file = Path(__file__)\
+            .parent\
+            .joinpath(self._register_folder)\
+            .joinpath(f"{volume}.json")
         if not os.path.isfile(file):
-            self.logger.info("Dumping Register for {}".format(volume))
+            self.logger.info(f"Dumping Register for {volume}")
             new_register = \
                 self._add_pre_post_register(
                     self._optimize_register(
@@ -109,10 +112,10 @@ class ReImporter(CanonicalBot):
             details_dict.update(details)
         path = Path(__file__).parent.joinpath(self._register_folder)
         mapping_file = path.joinpath("authors_mapping.json")
-        with open(path_or_str(mapping_file), mode="w", encoding="utf-8") as json_file:
+        with open(mapping_file, mode="w", encoding="utf-8") as json_file:
             json.dump(mapping_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
         details_file = path.joinpath("authors.json")
-        with open(path_or_str(details_file), mode="w", encoding="utf-8") as json_file:
+        with open(details_file, mode="w", encoding="utf-8") as json_file:
             json.dump(details_dict, json_file, indent=2, sort_keys=True, ensure_ascii=False)
 
     def _create_author_detail(self, author: str) -> Tuple[Dict, Dict]:
@@ -135,7 +138,7 @@ class ReImporter(CanonicalBot):
             del author_years[count[0]]
             for year in author_years:
                 for issue in author_years[year]:
-                    extended_author = "{}_{}".format(author, issue)
+                    extended_author = f"{author}_{issue}"
                     author_detail[extended_author] = {}
                     author_mapping[issue] = extended_author
                     if year:
@@ -160,8 +163,8 @@ class ReImporter(CanonicalBot):
         elif death_year != self.authors[author][self.current_volume]:
             if author == "Thomsen" and death_year == "4444":
                 return
-            self.logger.error("first author: {}, {}".format(author, self.authors[author]))
-            self.logger.error("second author: {}, {}".format(author, death_year))
+            self.logger.error(f"first author: {author}, {self.authors[author]}")
+            self.logger.error(f"second author: {author}, {death_year}")
             raise ValueError("We have a serious problem. "
                              "There are two authors with the same name in one register.")
 
@@ -230,7 +233,7 @@ class ReImporter(CanonicalBot):
             try:
                 self._register_author(chapter_dict["author"], year)
             except ValueError as original:
-                self.logger.error("author: {}, year: {}".format(chapter_dict["author"], year))
+                self.logger.error(f"author: {chapter_dict['author']}, year: {year}")
                 raise original
         else:
             del chapter_dict["author"]
@@ -250,6 +253,6 @@ class ReImporter(CanonicalBot):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WS_WIKI = Site(code='de', fam='wikisource', user='THEbotIT')
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReImporter(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
         bot.run()
