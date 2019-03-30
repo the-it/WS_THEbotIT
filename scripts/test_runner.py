@@ -107,7 +107,7 @@ class TestBotScheduler(TestCase):
         self.bot_it_scheduler._move_file_to_archive("bot_1.py")
         self.assertIn("bot_1.py", os.listdir(path_to_current_archive))
         with open(path_to_current_archive.joinpath("bot_1.py"), "r") as bot_file:
-            compare(StringComparison("# successful processed on {}".format(now.strftime("%Y-%m-%d"))), bot_file.readline())
+            compare(StringComparison(f"# successful processed on {now.strftime('%Y-%m-%d')}"), bot_file.readline())
 
     def test_move_file_with_test(self):
         self._copy_bot_to_run_dir("bot_1")

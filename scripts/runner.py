@@ -51,7 +51,7 @@ class TheBotItScheduler(BotScheduler):
         return sorted(file_list)
 
     def _run_bot_from_file(self, file: str) -> bool:
-        self.logger.info("Run {}".format(file))
+        self.logger.info(f"Run {file}")
         onetime_module = \
             importlib.import_module(f"scripts.{self.folder_one_time}.{file.replace('.py', '')}")
         attributes = tuple(a for a in dir(onetime_module) if not a.startswith("__"))
@@ -70,8 +70,8 @@ class TheBotItScheduler(BotScheduler):
         with open(self.path_archive.joinpath(file), "r+") as moved_bot_file:
             pretext = moved_bot_file.read()
             moved_bot_file.seek(0, 0)
-            moved_bot_file.write("# successful processed on {}\n{}"
-                                 .format(self.timestamp.start_of_run.strftime("%Y-%m-%d"), pretext))
+            moved_bot_file.write(f"# successful processed on "
+                                 f"{self.timestamp.start_of_run.strftime('%Y-%m-%d')}\n{pretext}")
         for file_name in os.listdir(self.path_one_time):
             if re.search(file.split(".")[0], file_name):
                 os.rename(self.path_one_time.joinpath(file_name),
@@ -102,7 +102,7 @@ class TheBotItScheduler(BotScheduler):
                 self._move_file_to_archive(file)
                 list_of_successful_files.append(file)
         if list_of_successful_files:
-            self.logger.info("This files were successful: {}".format(list_of_successful_files))
+            self.logger.info(f"This files were successful: {list_of_successful_files}")
             self._push_files(list_of_successful_files)
         return True
 

@@ -74,9 +74,7 @@ class GlCreateMagazine(CanonicalBot):
                 ref = search_for_refs(proofread_lemma.text)
                 page_dict = {"q": int(proofread_lemma.quality_level)}
                 if ref:
-                    self.logger.debug("There are refs ({refs}) @ {year}, {page}".format(refs=ref,
-                                                                                        page=page,
-                                                                                        year=year))
+                    self.logger.debug(f"There are refs ({ref}) @ {year}, {page}")
                     page_dict.update({"r": ref})
                 self.data["pages"][year][page] = page_dict
                 if year not in temp_data.keys():
@@ -117,8 +115,8 @@ class GlCreateMagazine(CanonicalBot):
     def make_magazines(self, dictionary_of_magazines_by_year):
         for idx_year, year in enumerate(dictionary_of_magazines_by_year):
             magazines = dictionary_of_magazines_by_year[year]
-            self.logger.debug("make_mag_year {idx}/{len}"
-                              .format(idx=idx_year + 1, len=len(dictionary_of_magazines_by_year)))
+            self.logger.debug(f"make_mag_year {idx_year + 1}/"
+                              f"{len(dictionary_of_magazines_by_year)}")
             for idx_mag, magazine in enumerate(magazines):
                 self.logger.debug("make_mag_mag {idx}/{len} ... issue:{year}/{mag}"
                                   .format(idx=idx_mag + 1, len=len(magazines),
@@ -130,8 +128,7 @@ class GlCreateMagazine(CanonicalBot):
                 if self.debug:
                     lemma = Page(self.wiki, "Benutzer:THEbotIT/Test")
                 else:
-                    lemma = Page(self.wiki, "Die Gartenlaube ({year})/Heft {magazine:d}"
-                                 .format(year=year, magazine=int(magazine)))
+                    lemma = Page(self.wiki, f"Die Gartenlaube ({year})/Heft {int(magazine):d}")
                 new_text = self.make_magazine(year, magazine)
                 if new_text:
                     if hash(new_text.strip()) != hash(lemma.text.strip()):

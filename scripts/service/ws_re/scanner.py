@@ -54,7 +54,7 @@ class ReScanner(CanonicalBot):
         self.logger.info("Compile the lemma list")
         self.logger.info("Searching for lemmas")
         searcher = self._prepare_searcher()
-        self.logger.info("[{url} {url}]".format(url=searcher))
+        self.logger.info(f"[{searcher} {searcher}]")
         raw_lemma_list = searcher.run()
         self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
         self.logger.info("Filter new_lemma_list")
@@ -86,8 +86,8 @@ class ReScanner(CanonicalBot):
 
     def _save_re_page(self, re_page: RePage, list_of_done_tasks: list):
         if not self.debug:
-            save_message = "ReScanner hat folgende Aufgaben bearbeitet: {}" \
-                .format(", ".join(list_of_done_tasks))
+            save_message = f"ReScanner hat folgende Aufgaben bearbeitet: " \
+                f"{', '.join(list_of_done_tasks)}"
             self.logger.debug(save_message)
             try:
                 re_page.save(save_message)
@@ -103,15 +103,14 @@ class ReScanner(CanonicalBot):
             result = task.run(re_page)
             if result["success"]:
                 if result["changed"]:
-                    task_name = task.get_name()
+                    task_name = task.name
             else:
                 if result["changed"]:
                     error_message = "Error in {}/{}, but altered the page ... critical" \
-                        .format(task.get_name(), lemma)
+                        .format(task.name, lemma)
                     self.logger.critical(error_message)
                     raise RuntimeError(error_message)
-                self.logger.error("Error in {}/{}, no data where altered."
-                                  .format(task.get_name(), lemma))
+                self.logger.error(f"Error in {task.name}/{lemma}, no data where altered.")
         return task_name
 
     def get_oldest_datetime(self):
@@ -132,7 +131,7 @@ class ReScanner(CanonicalBot):
                 re_page = RePage(Page(self.wiki, lemma))
             except ReDatenException:
                 error = traceback.format_exc().splitlines()[-1]
-                self.logger.error("The initiation of {} went wrong: {}".format(lemma, error))
+                self.logger.error(f"The initiation of {lemma} went wrong: {error}")
                 error_task.task(lemma, error)
                 self._add_lemma_to_data(lemma)
                 continue
@@ -149,8 +148,7 @@ class ReScanner(CanonicalBot):
             self._add_lemma_to_data(lemma)
             if self._watchdog():
                 self.logger.info("{} Lemmas processed, {} changed.".format(idx, processed_lemmas))
-                self.logger.info("Oldest processed item: {}"
-                                 .format(str(datetime.now() - self.get_oldest_datetime())))
+                self.logger.info(f"Oldest processed item: {datetime.now() - self.get_oldest_datetime()}")
                 break
         for task in active_tasks:
             task.finish_task()

@@ -10,9 +10,8 @@ class ReRegisterPrinter(CanonicalBot):
         self.logger.info("Print volume register.")
         for register in registers.volumes.values():
             self.save_if_changed(Page(self.wiki,
-                                      "Paulys Realencyclopädie der classischen "
-                                      "Altertumswissenschaft/Register/{}"
-                                      .format(register.volume.name)),
+                                      f"Paulys Realencyclopädie der classischen "
+                                      f"Altertumswissenschaft/Register/{register.volume.name}"),
                                  register.get_register_str(),
                                  "Register aktualisiert")
 

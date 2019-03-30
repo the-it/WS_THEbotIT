@@ -66,8 +66,8 @@ class AuthorList(CanonicalBot):
         elif self.last_run_successful and self.data:
             start_of_search = self.create_timestamp_for_search()
             self.searcher.last_change_after(start_of_search)
-            self.logger.info("The date {} is set to the argument \"after\"."
-                             .format(start_of_search.strftime("%d.%m.%Y")))
+            self.logger.info(f"The date {start_of_search.strftime('%d.%m.%Y')} "
+                             f"is set to the argument \"after\".")
         else:
             self.logger.warning("There was no timestamp found of the last run, "
                                 "so the argument \"after\" is not set.")
@@ -95,7 +95,7 @@ class AuthorList(CanonicalBot):
                 del self.data[str(author["id"])]
             except KeyError:
                 if self.last_run_successful:
-                    self.logger.info("Can't delete old entry of [[{}]]".format(author['title']))
+                    self.logger.info(f"Can't delete old entry of [[{author['title']}]]")
 
             dict_author = {"title": author["title"]}
             # extract the Personendaten-block form the wikisource page
@@ -137,8 +137,8 @@ class AuthorList(CanonicalBot):
                     except Exception:
                         dict_author.update({"description": ""})
                         self.logger.warning(
-                            "Templatehandler couldn't find a description for: [[{}]]"
-                            .format(author["title"]))
+                            f"Templatehandler couldn't find a description for: "
+                            f"[[{author['title']}]]")
                     try:
                         dict_author.update(
                             {"synonyms":
@@ -171,7 +171,7 @@ class AuthorList(CanonicalBot):
                     self.data.update({author["id"]: dict_author})
             except Exception as exception:
                 self.logger.exception("Exception not catched: ", exc_info=exception)
-                self.logger.error("author {} have a problem".format(author["title"]))
+                self.logger.error(f"author {author['title']} have a problem")
 
     @staticmethod
     def _sort_author_list(list_authors):
@@ -217,13 +217,11 @@ class AuthorList(CanonicalBot):
         self._sort_author_list(list_authors)
 
         self.logger.info("Start printing.")
-        self.string_list.append("Diese Liste der Autoren enthält alle {count}<ref>Stand: "
-                                "{dt.day}.{dt.month}.{dt.year}, "
-                                "{clock} (UTC)</ref> Autoren, "
-                                "zu denen in Wikisource eine Autorenseite existiert."
-                                .format(count=len(self.data),
-                                        clock=self.timestamp.start_of_run.strftime('%H:%M'),
-                                        dt=self.timestamp.start_of_run))
+        dt = self.timestamp.start_of_run
+        self.string_list.append(f"Diese Liste der Autoren enthält alle {len(self.data)}<ref>Stand: "
+                                f"{dt.day}.{dt.month}.{dt.year}, "
+                                f"{self.timestamp.start_of_run.strftime('%H:%M')} (UTC)</ref> Autoren, "
+                                f"zu denen in Wikisource eine Autorenseite existiert.")
         self.string_list.append("Die Liste kann mit den Buttons neben den Spaltenüberschriften"
                                 " nach der jeweiligen Spalte sortiert werden.")
         self.string_list.append("<!--")
@@ -252,7 +250,7 @@ class AuthorList(CanonicalBot):
                 self.string_list.append(f"|data-sort-value=\"{aut_sort}\"|[[{aut_page}|{aut_sur}]]")
             self.string_list.append(f"|data-sort-value=\"{birth_sort}\"|{birth_str}")
             self.string_list.append(f"|data-sort-value=\"{death_sort}\"|{death_str}")
-            self.string_list.append("|{}".format(description))
+            self.string_list.append(f"|{description}")
         self.string_list.append("|}")
         self.string_list.append('')
         self.string_list.append("== Anmerkungen ==")
@@ -295,7 +293,7 @@ class AuthorList(CanonicalBot):
                         f"{date_from_data.year}"
                 if re.search("-", date_from_data):
                     date_from_data = date_from_data.replace("-", "") + " v. Chr."
-                self.logger.debug("Found {} @ wikidata for {}".format(date_from_data, event))
+                self.logger.debug(f"Found {date_from_data} @ wikidata for {event}")
                 return date_from_data  # 4,6
             except Exception:
                 self.logger.debug("Wasn't able to ge any data from wikidata")

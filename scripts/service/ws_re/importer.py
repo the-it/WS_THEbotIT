@@ -91,9 +91,9 @@ class ReImporter(CanonicalBot):
         file = Path(__file__)\
             .parent\
             .joinpath(self._register_folder)\
-            .joinpath("{}.json".format(volume))
+            .joinpath(f"{volume}.json")
         if not os.path.isfile(file):
-            self.logger.info("Dumping Register for {}".format(volume))
+            self.logger.info(f"Dumping Register for {volume}")
             new_register = \
                 self._add_pre_post_register(
                     self._optimize_register(
@@ -163,8 +163,8 @@ class ReImporter(CanonicalBot):
         elif death_year != self.authors[author][self.current_volume]:
             if author == "Thomsen" and death_year == "4444":
                 return
-            self.logger.error("first author: {}, {}".format(author, self.authors[author]))
-            self.logger.error("second author: {}, {}".format(author, death_year))
+            self.logger.error(f"first author: {author}, {self.authors[author]}")
+            self.logger.error(f"second author: {author}, {death_year}")
             raise ValueError("We have a serious problem. "
                              "There are two authors with the same name in one register.")
 

@@ -100,9 +100,9 @@ class GlStatus(CanonicalBot):
                         .replace(".", ",")), temp_text)
         else:
             temp_text = regex.sub(
-                "<!--GLStatus:{year}-->|span style=\"background-color:#00FF00; "
-                "font-weight: bold\"|Fertig<!---->"
-                .format(year=year), temp_text)
+                f"<!--GLStatus:{year}-->|span style=\"background-color:#00FF00; "
+                f"font-weight: bold\"|Fertig<!---->",
+                temp_text)
         return temp_text
 
     def petscan(self, categories, not_categories=None, article=False, year=None):

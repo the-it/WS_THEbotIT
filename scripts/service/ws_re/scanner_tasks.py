@@ -54,12 +54,13 @@ class ReScannerTask:
         return result
 
     def load_task(self):
-        self.logger.info("opening task {}".format(self.get_name()))
+        self.logger.info(f"opening task {self.name}")
 
     def finish_task(self):
-        self.logger.info("closing task {}".format(self.get_name()))
+        self.logger.info(f"closing task {self.name}")
 
-    def get_name(self):
+    @property
+    def name(self):
         return re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
 
 

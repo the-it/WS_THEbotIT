@@ -43,11 +43,11 @@ class TestReScannerTask(TaskTestCase):
 
     def test_name(self):
         bot = self.NAMETask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
-        self.assertEqual("NAME", bot.get_name())
+        self.assertEqual("NAME", bot.name)
         bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
-        self.assertEqual("NAME", bot.get_name())
+        self.assertEqual("NAME", bot.name)
         bot = self.NAM1Task(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
-        self.assertEqual("NAM1", bot.get_name())
+        self.assertEqual("NAM1", bot.name)
 
     class MINITask(ReScannerTask):
         def task(self):

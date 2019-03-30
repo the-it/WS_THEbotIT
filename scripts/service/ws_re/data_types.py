@@ -27,7 +27,7 @@ class Property:
     def _return_by_type(self, value: Union[str, bool]) -> str:
         ret = value
         if not isinstance(self._default, (bool, str)):
-            raise TypeError("Default value ({}) is invalid".format(self._default))
+            raise TypeError(f"Default value ({self._default}) is invalid")
         if isinstance(self._default, bool):
             if value:
                 ret = "ON"
@@ -61,8 +61,8 @@ class Property:
                 self._value = self._default
             self._value = self._set_bool_by_str(new_value)
         else:
-            raise TypeError("Value ({}) is not the type of default value ({})"
-                            .format(new_value, self._default))
+            raise TypeError(f"Value ({new_value}) is not the type "
+                            f"of default value ({self._default})")
 
     @property
     def name(self) -> str:
@@ -145,7 +145,7 @@ class Article(Mapping):
         if new_value in (RE_DATEN, RE_ABSCHNITT):
             self._article_type = new_value
         else:
-            raise ReDatenException("{} is not a permitted article type.".format(new_value))
+            raise ReDatenException(f"{new_value} is not a permitted article type.")
 
     @property
     def text(self) -> str:
@@ -192,8 +192,8 @@ class Article(Mapping):
                     try:
                         self[item[0]].value = item[1]
                     except (ValueError, TypeError) as property_error:
-                        raise ReDatenException(
-                            "Keypair {} is not permitted.".format(item)) from property_error
+                        raise ReDatenException(f"Keypair {item} is not permitted.") \
+                            from property_error
 
     def __hash__(self):
         return hash(self._article_type) \
@@ -270,8 +270,8 @@ class Article(Mapping):
                                            .format(template_property))
                 properties_dict.update({keyword: template_property["value"]})
             else:
-                raise ReDatenException("REDaten has property without a key word. --> {}"
-                                       .format(template_property))
+                raise ReDatenException(f"REDaten has property without a key word. --> "
+                                       f"{template_property}")
         return properties_dict
 
     def _get_pre_text(self):
@@ -292,11 +292,11 @@ class Article(Mapping):
             content.append("{{{{{}}}}}".format(RE_ABSCHNITT))
         content.append(self.text)
         if self.author[0] == "OFF":
-            author = "{{{{{}|{}}}}}".format(RE_AUTHOR, self.author[0])
+            author = f"{{{{{RE_AUTHOR}|{self.author[0]}}}}}"
         elif self.author[1]:
-            author = "{{{{{}|{}|{}}}}}".format(RE_AUTHOR, self.author[0], self.author[1])
+            author = f"{{{{{RE_AUTHOR}|{self.author[0]}|{self.author[1]}}}}}"
         else:
-            author = "{{{{{}|{}}}}}".format(RE_AUTHOR, self.author[0])
+            author = f"{{{{{RE_AUTHOR}|{self.author[0]}}}}}"
         content.append(author)
         return "\n".join(content)
 
@@ -387,8 +387,8 @@ class RePage(Sequence):
                     raise ReDatenException("Page {} is locked, it can't be saved."
                                            .format(self.page.title))
             else:
-                raise ReDatenException("Page {} is protected for normal users, it can't be saved."
-                                       .format(self.page.title))
+                raise ReDatenException(f"Page {self.page.title} is protected for normal users, "
+                                       f"it can't be saved.")
 
     def append(self, new_article: Article):
         if isinstance(new_article, Article):
@@ -461,17 +461,20 @@ class Volume:
         for re_volume_type in _REGEX_MAPPING:
             if _REGEX_MAPPING[re_volume_type].match(self.name):
                 return re_volume_type
-        raise ReDatenException("Name of Volume {} is malformed.".format(self.name))
+        raise ReDatenException(f"Name of Volume {self.name} is malformed.")
 
     def _compute_sortkey(self):
         match = _REGEX_MAPPING[self.type].search(self.name)
         key = "4"
+        latin_number = 0
+        if self.name != "R":
+            latin_number = roman.fromRoman(match.group(1))
         if self.type == VolumeType.FIRST_SERIES:
-            key = "1_{:02d}_{}".format(roman.fromRoman(match.group(1)), match.group(2))
+            key = f"1_{latin_number:02d}_{match.group(2)}"
         elif self.type == VolumeType.SECOND_SERIES:
-            key = "2_{:02d}_{}".format(roman.fromRoman(match.group(1)), match.group(2))
+            key = f"2_{latin_number:02d}_{match.group(2)}"
         elif self.type == VolumeType.SUPPLEMENTS:
-            key = "3_{:02d}".format(roman.fromRoman(match.group(1)))
+            key = f"3_{latin_number:02d}"
         return key
 
     @property

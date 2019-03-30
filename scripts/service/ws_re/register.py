@@ -21,7 +21,7 @@ class Author:
         self._name = name
 
     def __repr__(self):  # pragma: no cover
-        return "<AUTHOR - name:{}, birth:{}, death:{}>".format(self.name, self.birth, self.death)
+        return f"<AUTHOR - name:{self.name}, birth:{self.birth}, death:{self.death}>"
 
     @property
     def death(self) -> Union[int, None]:
@@ -211,9 +211,7 @@ class LemmaChapter:
         self._dict = chapter_dict
 
     def __repr__(self):  # pragma: no cover
-        return "<LEMMA CHAPTER - start:{}, end:{}, author:{}>".format(self.start,
-                                                                      self.end,
-                                                                      self.author)
+        return f"<LEMMA CHAPTER - start:{self.start}, end:{self.end}, author:{self.author}>"
 
     def is_valid(self) -> bool:
         try:
@@ -288,12 +286,8 @@ class Lemma(Mapping):
         self._sort_key = self._make_sort_key()
 
     def __repr__(self):  # pragma: no cover
-        return "<LEMMA - lemma:{}, previous:{}, next:{}, chapters:{}, volume:{}>"\
-            .format(self["lemma"],
-                    self["previous"],
-                    self["next"],
-                    len(self._chapters),
-                    self._volume.name)
+        return f"<LEMMA - lemma:{self['lemma']}, previous:{self['previous']}, next:{self['next']}, " \
+            f"chapters:{len(self._chapters)}, volume:{self._volume.name}>"
 
     def __getitem__(self, item):
         try:
@@ -356,7 +350,7 @@ class Lemma(Mapping):
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))
             year = self._get_death_year(chapter)
-            row_string.append("{}|{}".format(self._get_year_format(year), year))
+            row_string.append(f"{self._get_year_format(year)}|{year}")
             row_string.append("-")
         # remove the last entry again because the row separator only needed between rows
         row_string.pop(-1)
@@ -369,11 +363,8 @@ class Lemma(Mapping):
         start_page_scan = lemma_chapter.start
         if start_page_scan % 2 == 0:
             start_page_scan -= 1
-        pages_str = "[[Special:Filepath/Pauly-Wissowa_{issue},_{start_page_scan:04d}.jpg|" \
-                    "{start_page}]]"\
-            .format(issue=self._volume.name,
-                    start_page=lemma_chapter.start,
-                    start_page_scan=start_page_scan)
+        pages_str = f"[[Special:Filepath/Pauly-Wissowa_{self._volume.name}," \
+            f"_{start_page_scan:04d}.jpg|{lemma_chapter.start}]]"
         if lemma_chapter.start != lemma_chapter.end:
             pages_str += "-{}".format(lemma_chapter.end)
         return pages_str
@@ -445,7 +436,7 @@ class VolumeRegister(Register):
     def __init__(self, volume: Volume, authors: Authors):
         self._authors = authors
         self._volume = volume
-        with open(self._REGISTER_PATH.joinpath("{}.json".format(volume.file_name)),
+        with open(self._REGISTER_PATH.joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
             self._dict = json.load(json_file)
         self._lemmas = []
@@ -476,11 +467,10 @@ class VolumeRegister(Register):
         return "\n".join(table)
 
     def _get_footer(self):
-        return "[[Kategorie:RE:Register|!]]\n" \
-               "Zahl der Artikel: {count_lemma}, " \
-               "davon [[:Kategorie:RE:Band {volume}" \
-               "|{{{{PAGESINCATEGORY:RE:Band {volume}|pages}}}} in Volltext]]."\
-            .format(count_lemma=len(self._lemmas), volume=self._volume.name)
+        return f"[[Kategorie:RE:Register|!]]\n" \
+               f"Zahl der Artikel: {len(self._lemmas)}, " \
+               f"davon [[:Kategorie:RE:Band {self._volume.name}" \
+               f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
 
     def get_register_str(self):
         return "{}\n{}".format(self._get_table(), self._get_footer())
@@ -495,8 +485,7 @@ class AlphabeticRegister(Register):
         self._init_lemmas()
 
     def __repr__(self):  # pragma: no cover
-        return "<ALPHABETIC REGISTER - start:{}, end:{}, lemmas:{}>"\
-            .format(self._start, self._end, len(self))
+        return f"<ALPHABETIC REGISTER - start:{self._start}, end:{self._end}, lemmas:{len(self)}>"
 
     def __len__(self):
         return len(self.squash_lemmas(self._lemmas))
@@ -546,7 +535,7 @@ class AlphabeticRegister(Register):
             if chapter_sum > 1:
                 table.append("|-\n|rowspan={}|{}".format(chapter_sum, lemma.get_link()))
             else:
-                table.append("|-\n|{}".format(lemma.get_link()))
+                table.append(f"|-\n|{lemma.get_link()}")
             table += table_rows
         table.append("|}")
         return "\n".join(table)
@@ -556,7 +545,7 @@ class AlphabeticRegister(Register):
                "Zahl der Artikel: {count_lemma}, ".format(count_lemma=len(self._lemmas))
 
     def get_register_str(self):
-        return "{}\n{}".format(self._get_table(), self._get_footer())
+        return f"{self._get_table()}\n{self._get_footer()}"
 
 
 class Registers:
