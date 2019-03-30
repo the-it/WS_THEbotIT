@@ -507,6 +507,32 @@ class TestLemma(BaseTestRegister):
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
         compare("e    orceni", uvwij_lemma.sort_key)
 
+    def test_return_dict(self):
+        reverse_dict = {"chapters": [{"start": 1, "author": "Abel", "end": 1},
+                                     {"start": 1, "end": 2, "author": "Abbott"}],
+                        "redirect": True,
+                        "next": "next",
+                        "previous": "previous",
+                        "lemma": "lemma"}
+        dict_lemma = Lemma(reverse_dict, self.volumes["I,1"], self.authors)
+        chapter_dict_1 = OrderedDict((("start", 1), ("end", 1), ("author", "Abel")))
+        chapter_dict_2 = OrderedDict((("start", 1), ("end", 2), ("author", "Abbott")))
+        expected_dict = OrderedDict([("lemma", "lemma"),
+                                     ("previous", "previous"),
+                                     ("next", "next"),
+                                     ("redirect", True),
+                                     ("chapters", [chapter_dict_1, chapter_dict_2])])
+        compare(expected_dict, dict_lemma.get_dict())
+
+        missing_dict = copy.deepcopy(reverse_dict)
+        del missing_dict["next"]
+        del missing_dict["redirect"]
+        missing_expected_dict = copy.deepcopy(expected_dict)
+        del missing_expected_dict["next"]
+        del missing_expected_dict["redirect"]
+        missing_dict_lemma = Lemma(missing_dict, self.volumes["I,1"], self.authors)
+        compare(missing_expected_dict, missing_dict_lemma.get_dict())
+
 
 class TestRegister(BaseTestRegister):
     def test_init(self):

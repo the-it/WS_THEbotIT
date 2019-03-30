@@ -223,7 +223,7 @@ class LemmaChapter:
             pass
         return False
 
-    def get_dict(self):
+    def get_dict(self) -> Dict[str, str]:
         return_dict = OrderedDict()
         for key in self._keys:
             if key in self._dict:
@@ -276,6 +276,8 @@ for regex_pair in _REGEX_RAW_LIST:
 
 
 class Lemma(Mapping):
+    _keys = ["lemma", "previous", "next", "redirect", "chapters"]
+
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
                  volume: Volume,
@@ -335,6 +337,23 @@ class Lemma(Mapping):
 
     def keys(self):
         return self._lemma_dict.keys()
+
+    def get_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
+        return_dict = OrderedDict()
+        for key in self._keys:
+            if key in self.keys():
+                if key == "chapters":
+                    value = self._get_chapter_dicts()
+                else:
+                    value = self._lemma_dict[key]
+                return_dict[key] = value
+        return return_dict
+
+    def _get_chapter_dicts(self) -> List[Dict[str, str]]:
+        chapter_list = []
+        for chapter in self.chapters:
+            chapter_list.append(chapter.get_dict())
+        return chapter_list
 
     def is_valid(self) -> bool:
         if "lemma" not in self.keys() \
