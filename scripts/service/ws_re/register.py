@@ -494,8 +494,7 @@ class VolumeRegister(Register):
         return "\n".join(table)
 
     def _get_footer(self):
-        return f"[[Kategorie:RE:Register|!]]\n" \
-               f"Zahl der Artikel: {len(self._lemmas)}, " \
+        return f"[[Kategorie:RE:Register|!]]\nZahl der Artikel: {len(self._lemmas)}, " \
                f"davon [[:Kategorie:RE:Band {self._volume.name}" \
                f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
 
@@ -585,10 +584,9 @@ class AlphabeticRegister(Register):
 
 
 class Registers:
-    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g",
-                    "h", "hi", "i", "k", "kl", "l", "lf", "m", "mb", "mi", "n", "o", "p", "pe",
-                    "pi", "po", "pr", "q", "r", "s", "se", "so", "t", "th", "ti", "u", "uf", "x",
-                    "y", "z"]
+    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g", "h", "hi", "i", "k",
+                    "kl", "l", "lf", "m", "mb", "mi", "n", "o", "p", "pe", "pi", "po", "pr", "q", "r", "s", "se", "so",
+                    "t", "th", "ti", "u", "uf", "x", "y", "z"]
 
     def __init__(self):
         self._authors = Authors()
@@ -609,9 +607,7 @@ class Registers:
             except IndexError:
                 pass
             finally:
-                self._alphabetic_registers[start] = AlphabeticRegister(start,
-                                                                       end,
-                                                                       self._registers)
+                self._alphabetic_registers[start] = AlphabeticRegister(start, end, self._registers)
 
     def __getitem__(self, item) -> VolumeRegister:
         return self._registers[item]
