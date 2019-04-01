@@ -1,3 +1,4 @@
+import sys
 from datetime import datetime, timedelta
 from typing import Dict, Tuple
 
@@ -93,6 +94,7 @@ class BotScheduler(CanonicalBot):
                     self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=self.debug))
 
     def task(self):
+        self.logger.info(f"Running on Python Version: {sys.version}")
         self.run_dailys()
         self.run_weeklys()
         self.run_monthlys()
