@@ -503,10 +503,13 @@ class VolumeRegister(Register):
         return f"{self._get_table()}\n{self._get_footer()}"
 
     def persist(self):
+        persist_list = []
+        for lemma in self.lemmas:
+            persist_list.append(lemma.get_dict())
         with open(self._REGISTER_PATH.joinpath("{}.json".format(
                 self._volume.file_name)),
                   "w", encoding="utf-8") as json_file:
-            json.dump(self._dict, json_file, indent=2)
+            json.dump(persist_list, json_file, indent=2)
 
 
 class AlphabeticRegister(Register):

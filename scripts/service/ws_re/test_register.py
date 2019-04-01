@@ -593,7 +593,6 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
 ]"""
         with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r") as register_file:
             compare(expect, register_file.read())
-        raise AssertionError("So funktioniert das nicht ... ich brauche eine Dict function in Lemmas")
 
 
 class TestAlphabeticRegister(BaseTestRegister):
