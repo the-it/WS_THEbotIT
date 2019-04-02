@@ -329,10 +329,20 @@ class TestLemmaChapter(TestCase):
     def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)
         compare(False, lemma_chapter.is_valid())
+        lemma_chapter = LemmaChapter({"end": 2})
+        compare(False, lemma_chapter.is_valid())
+        lemma_chapter = LemmaChapter({"start": 2})
+        compare(False, lemma_chapter.is_valid())
+        lemma_chapter = LemmaChapter({"start": 1, "end": 2})
+        compare(True, lemma_chapter.is_valid())
 
     def test_no_author(self):
         lemma_chapter = LemmaChapter({"start": 1, "end": 2})
         compare(None, lemma_chapter.author)
+
+    def test_return_dict(self):
+        lemma_chapter = LemmaChapter({"author": "bla", "end": 2, "start": 1})
+        compare(OrderedDict((("start", 1), ("end", 2), ("author", "bla"))), lemma_chapter.get_dict())
 
 
 class TestLemma(BaseTestRegister):
@@ -497,6 +507,32 @@ class TestLemma(BaseTestRegister):
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
         compare("e    orceni", uvwij_lemma.sort_key)
 
+    def test_return_dict(self):
+        reverse_dict = {"chapters": [{"start": 1, "author": "Abel", "end": 1},
+                                     {"start": 1, "end": 2, "author": "Abbott"}],
+                        "redirect": True,
+                        "next": "next",
+                        "previous": "previous",
+                        "lemma": "lemma"}
+        dict_lemma = Lemma(reverse_dict, self.volumes["I,1"], self.authors)
+        chapter_dict_1 = OrderedDict((("start", 1), ("end", 1), ("author", "Abel")))
+        chapter_dict_2 = OrderedDict((("start", 1), ("end", 2), ("author", "Abbott")))
+        expected_dict = OrderedDict([("lemma", "lemma"),
+                                     ("previous", "previous"),
+                                     ("next", "next"),
+                                     ("redirect", True),
+                                     ("chapters", [chapter_dict_1, chapter_dict_2])])
+        compare(expected_dict, dict_lemma.get_dict())
+
+        missing_dict = copy.deepcopy(reverse_dict)
+        del missing_dict["next"]
+        del missing_dict["redirect"]
+        missing_expected_dict = copy.deepcopy(expected_dict)
+        del missing_expected_dict["next"]
+        del missing_expected_dict["redirect"]
+        missing_dict_lemma = Lemma(missing_dict, self.volumes["I,1"], self.authors)
+        compare(missing_expected_dict, missing_dict_lemma.get_dict())
+
 
 class TestRegister(BaseTestRegister):
     def test_init(self):
@@ -525,6 +561,38 @@ class TestRegister(BaseTestRegister):
 [[Kategorie:RE:Register|!]]
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
         compare(expected_table, register.get_register_str())
+
+    def test_persist(self):
+        copy_test_data("I_1_two_entries", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        register._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        register.persist()
+        expect = """[
+  {
+    "lemma": "Aal",
+    "next": "Aarassos",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 4,
+        "author": "Siegfried"
+      }
+    ]
+  },
+  {
+    "lemma": "Aarassos",
+    "previous": "Aal",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abert"
+      }
+    ]
+  }
+]"""
+        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r") as register_file:
+            compare(expect, register_file.read())
 
 
 class TestAlphabeticRegister(BaseTestRegister):
@@ -648,6 +716,20 @@ class TestRegisters(BaseTestRegister):
         compare(1, len(registers.alphabetic["ch"]))
         compare(1, len(registers.alphabetic["d"]))
         compare(2, len(registers.alphabetic["u"]))
+
+    def test_alphabetic_persist(self):
+        copy_test_data("I_1_alpha", "I_1")
+        copy_test_data("III_1_alpha", "III_1")
+        registers = Registers()
+        register_I_1 = registers["I,1"]
+        register_I_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        register_III_1 = registers["III,1"]
+        register_III_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        registers.persist()
+        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r") as register_file:
+            self.assertTrue("Siegfried" in register_file.read())
+        with open(_TEST_REGISTER_PATH.joinpath("III_1.json"), mode="r") as register_file:
+            self.assertTrue("Siegfried" in register_file.read())
 
 
 _MAX_SIZE_WIKI_PAGE = 2098175

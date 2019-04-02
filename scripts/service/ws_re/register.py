@@ -207,6 +207,8 @@ class AuthorCrawler:
 
 
 class LemmaChapter:
+    _keys = ["start", "end", "author"]
+
     def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
         self._dict = chapter_dict
 
@@ -220,6 +222,13 @@ class LemmaChapter:
         except TypeError:
             pass
         return False
+
+    def get_dict(self) -> Dict[str, str]:
+        return_dict = OrderedDict()
+        for property_key in self._keys:
+            if property_key in self._dict:
+                return_dict[property_key] = self._dict[property_key]
+        return return_dict
 
     @property
     def start(self) -> int:
@@ -267,6 +276,8 @@ for regex_pair in _REGEX_RAW_LIST:
 
 
 class Lemma(Mapping):
+    _keys = ["lemma", "previous", "next", "redirect", "chapters"]
+
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
                  volume: Volume,
@@ -326,6 +337,23 @@ class Lemma(Mapping):
 
     def keys(self):
         return self._lemma_dict.keys()
+
+    def get_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
+        return_dict = OrderedDict()
+        for property_key in self._keys:
+            if property_key in self.keys():
+                if property_key == "chapters":
+                    value = self._get_chapter_dicts()
+                else:
+                    value = self._lemma_dict[property_key]
+                return_dict[property_key] = value
+        return return_dict
+
+    def _get_chapter_dicts(self) -> List[Dict[str, str]]:
+        chapter_list = []
+        for chapter in self.chapters:
+            chapter_list.append(chapter.get_dict())
+        return chapter_list
 
     def is_valid(self) -> bool:
         if "lemma" not in self.keys() \
@@ -437,9 +465,9 @@ class VolumeRegister(Register):
         self._volume = volume
         with open(self._REGISTER_PATH.joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
-            self._dict = json.load(json_file)
+            lemma_list = json.load(json_file)
         self._lemmas = []
-        for lemma in self._dict:
+        for lemma in lemma_list:
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
     def __repr__(self):  # pragma: no cover
@@ -466,13 +494,20 @@ class VolumeRegister(Register):
         return "\n".join(table)
 
     def _get_footer(self):
-        return f"[[Kategorie:RE:Register|!]]\n" \
-               f"Zahl der Artikel: {len(self._lemmas)}, " \
+        return f"[[Kategorie:RE:Register|!]]\nZahl der Artikel: {len(self._lemmas)}, " \
                f"davon [[:Kategorie:RE:Band {self._volume.name}" \
                f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
 
     def get_register_str(self):
         return f"{self._get_table()}\n{self._get_footer()}"
+
+    def persist(self):
+        persist_list = []
+        for lemma in self.lemmas:
+            persist_list.append(lemma.get_dict())
+        with open(self._REGISTER_PATH.joinpath("{}.json".format(self._volume.file_name)),
+                  "w", encoding="utf-8") as json_file:
+            json.dump(persist_list, json_file, indent=2)
 
 
 class AlphabeticRegister(Register):
@@ -548,10 +583,9 @@ class AlphabeticRegister(Register):
 
 
 class Registers:
-    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g",
-                    "h", "hi", "i", "k", "kl", "l", "lf", "m", "mb", "mi", "n", "o", "p", "pe",
-                    "pi", "po", "pr", "q", "r", "s", "se", "so", "t", "th", "ti", "u", "uf", "x",
-                    "y", "z"]
+    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g", "h", "hi", "i", "k",
+                    "kl", "l", "lf", "m", "mb", "mi", "n", "o", "p", "pe", "pi", "po", "pr", "q", "r", "s", "se", "so",
+                    "t", "th", "ti", "u", "uf", "x", "y", "z"]
 
     def __init__(self):
         self._authors = Authors()
@@ -572,9 +606,7 @@ class Registers:
             except IndexError:
                 pass
             finally:
-                self._alphabetic_registers[start] = AlphabeticRegister(start,
-                                                                       end,
-                                                                       self._registers)
+                self._alphabetic_registers[start] = AlphabeticRegister(start, end, self._registers)
 
     def __getitem__(self, item) -> VolumeRegister:
         return self._registers[item]
@@ -586,3 +618,11 @@ class Registers:
     @property
     def volumes(self):
         return self._registers
+
+    @property
+    def authors(self):
+        return self._authors
+
+    def persist(self):
+        for register in self._registers.values():
+            register.persist()
