@@ -225,9 +225,9 @@ class LemmaChapter:
 
     def get_dict(self) -> Dict[str, str]:
         return_dict = OrderedDict()
-        for key in self._keys:
-            if key in self._dict:
-                return_dict[key] = self._dict[key]
+        for property_key in self._keys:
+            if property_key in self._dict:
+                return_dict[property_key] = self._dict[property_key]
         return return_dict
 
     @property
@@ -340,13 +340,13 @@ class Lemma(Mapping):
 
     def get_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
         return_dict = OrderedDict()
-        for key in self._keys:
-            if key in self.keys():
-                if key == "chapters":
+        for property_key in self._keys:
+            if property_key in self.keys():
+                if property_key == "chapters":
                     value = self._get_chapter_dicts()
                 else:
-                    value = self._lemma_dict[key]
-                return_dict[key] = value
+                    value = self._lemma_dict[property_key]
+                return_dict[property_key] = value
         return return_dict
 
     def _get_chapter_dicts(self) -> List[Dict[str, str]]:
@@ -505,8 +505,7 @@ class VolumeRegister(Register):
         persist_list = []
         for lemma in self.lemmas:
             persist_list.append(lemma.get_dict())
-        with open(self._REGISTER_PATH.joinpath("{}.json".format(
-                self._volume.file_name)),
+        with open(self._REGISTER_PATH.joinpath("{}.json".format(self._volume.file_name)),
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2)
 
@@ -625,5 +624,5 @@ class Registers:
         return self._authors
 
     def persist(self):
-        for key in self._registers:
-            self._registers[key].persist()
+        for register in self._registers.values():
+            register.persist()
