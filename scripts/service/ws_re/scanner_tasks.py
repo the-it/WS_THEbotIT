@@ -130,16 +130,15 @@ class SCANTask(ReScannerTask):
     def task(self):
         pass
 
-    def load_task(self):
-        super().load_task()
-        self.logger.info("Loading special task")
-
     def finish_task(self):
         super().finish_task()
+        self.logger.info("Fetch changes for the authors.")
         authors = self.registers.authors
         authors.set_mappings(self._fetch_mapping())
         authors.set_author(self._fetch_author_infos())
+        self.logger.info("Persist the register data.")
         self.registers.persist()
+        self.logger.info("Pushing the changes upstream.")
         self._push_changes()
 
     def _fetch_author_infos(self) -> Mapping:
