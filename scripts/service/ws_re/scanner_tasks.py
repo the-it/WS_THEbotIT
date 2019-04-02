@@ -10,7 +10,7 @@ from github import Github
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
-from scripts.service.ws_re.register import Registers, Authors, AuthorCrawler
+from scripts.service.ws_re.register import Registers, AuthorCrawler
 from tools import fetch_text_from_wiki_site
 from tools.bots import WikiLogger
 
@@ -125,7 +125,7 @@ class VERWTask(ReScannerTask):
 class SCANTask(ReScannerTask):
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
-        self.registers = None  # type: Registers
+        self.registers = Registers()
 
     def task(self):
         pass
@@ -136,10 +136,10 @@ class SCANTask(ReScannerTask):
 
     def finish_task(self):
         super().finish_task()
-        authors = Authors()
+        authors = self.registers.authors
         authors.set_mappings(self._fetch_mapping())
         authors.set_author(self._fetch_author_infos())
-        authors.persist()
+        self.registers.persist()
         self._push_changes()
 
     def _fetch_author_infos(self) -> Mapping:

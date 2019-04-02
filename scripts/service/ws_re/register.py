@@ -619,3 +619,11 @@ class Registers:
     @property
     def volumes(self):
         return self._registers
+
+    @property
+    def authors(self):
+        return self._authors
+
+    def persist(self):
+        for key in self._registers:
+            self._registers[key].persist()

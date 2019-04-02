@@ -717,6 +717,20 @@ class TestRegisters(BaseTestRegister):
         compare(1, len(registers.alphabetic["d"]))
         compare(2, len(registers.alphabetic["u"]))
 
+    def test_alphabetic_persist(self):
+        copy_test_data("I_1_alpha", "I_1")
+        copy_test_data("III_1_alpha", "III_1")
+        registers = Registers()
+        register_I_1 = registers["I,1"]
+        register_I_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        register_III_1 = registers["III,1"]
+        register_III_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        registers.persist()
+        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r") as register_file:
+            self.assertTrue("Siegfried" in register_file.read())
+        with open(_TEST_REGISTER_PATH.joinpath("III_1.json"), mode="r") as register_file:
+            self.assertTrue("Siegfried" in register_file.read())
+
 
 _MAX_SIZE_WIKI_PAGE = 2098175
 
