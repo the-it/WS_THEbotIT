@@ -507,7 +507,7 @@ class VolumeRegister(Register):
             persist_list.append(lemma.get_dict())
         with open(self._REGISTER_PATH.joinpath("{}.json".format(self._volume.file_name)),
                   "w", encoding="utf-8") as json_file:
-            json.dump(persist_list, json_file, indent=2)
+            json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
 
 
 class AlphabeticRegister(Register):
