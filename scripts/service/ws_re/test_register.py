@@ -565,7 +565,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     def test_persist(self):
         copy_test_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        register._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        register._lemmas[0]._chapters[0]._dict["author"] = "ÄäÖöÜüß"
         register.persist()
         expect = """[
   {
@@ -575,7 +575,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
       {
         "start": 1,
         "end": 4,
-        "author": "Siegfried"
+        "author": "ÄäÖöÜüß"
       }
     ]
   },
@@ -591,7 +591,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     ]
   }
 ]"""
-        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r") as register_file:
+        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             compare(expect, register_file.read())
 
 
