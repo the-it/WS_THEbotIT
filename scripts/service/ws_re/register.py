@@ -286,6 +286,11 @@ class Lemma(Mapping):
         self._authors = authors
         self._volume = volume
         self._chapters = []
+        self._sort_key = ""
+        self._init_chapters()
+        self._make_sort_key()
+
+    def _init_chapters(self):
         try:
             for chapter in self._lemma_dict["chapters"]:
                 self._chapters.append(LemmaChapter(chapter))
@@ -293,7 +298,6 @@ class Lemma(Mapping):
             pass
         if not self.is_valid():
             raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
-        self._sort_key = self._make_sort_key()
 
     def __repr__(self):  # pragma: no cover
         return f"<LEMMA - lemma:{self['lemma']}, previous:{self['previous']}, next:{self['next']}, " \
@@ -323,7 +327,7 @@ class Lemma(Mapping):
     def sort_key(self):
         return self._sort_key
 
-    def _make_sort_key(self):
+    def _make_sort_key(self) -> str:
         lemma = self["lemma"]
         # simple replacement of single characters
         lemma = lemma.casefold().translate(_TRANSLATION_DICT)
@@ -333,12 +337,13 @@ class Lemma(Mapping):
 
         # delete dots at last
         lemma = lemma.replace(".", " ")
-        return lemma.strip()
+        self._sort_key =  lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
 
-    def get_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
+    @property
+    def lemma_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
         return_dict = OrderedDict()
         for property_key in self._keys:
             if property_key in self.keys():
@@ -504,7 +509,7 @@ class VolumeRegister(Register):
     def persist(self):
         persist_list = []
         for lemma in self.lemmas:
-            persist_list.append(lemma.get_dict())
+            persist_list.append(lemma.lemma_dict)
         with open(self._REGISTER_PATH.joinpath("{}.json".format(self._volume.file_name)),
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)

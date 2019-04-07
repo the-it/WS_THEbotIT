@@ -522,7 +522,7 @@ class TestLemma(BaseTestRegister):
                                      ("next", "next"),
                                      ("redirect", True),
                                      ("chapters", [chapter_dict_1, chapter_dict_2])])
-        compare(expected_dict, dict_lemma.get_dict())
+        compare(expected_dict, dict_lemma.lemma_dict)
 
         missing_dict = copy.deepcopy(reverse_dict)
         del missing_dict["next"]
@@ -531,7 +531,7 @@ class TestLemma(BaseTestRegister):
         del missing_expected_dict["next"]
         del missing_expected_dict["redirect"]
         missing_dict_lemma = Lemma(missing_dict, self.volumes["I,1"], self.authors)
-        compare(missing_expected_dict, missing_dict_lemma.get_dict())
+        compare(missing_expected_dict, missing_dict_lemma.lemma_dict)
 
 
 class TestRegister(BaseTestRegister):
