@@ -328,7 +328,7 @@ class Lemma(Mapping):
     def sort_key(self):
         return self._sort_key
 
-    def _make_sort_key(self) -> str:
+    def _make_sort_key(self):
         lemma = self["lemma"]
         # simple replacement of single characters
         lemma = lemma.casefold().translate(_TRANSLATION_DICT)

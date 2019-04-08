@@ -618,6 +618,12 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             compare(expect, register_file.read())
 
+    def test_get_lemma_by_name(self):
+        copy_test_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        lemma = register.get_lemma("Aba 1")
+        compare("Aarassos", lemma["previous"])
+
 
 class TestAlphabeticRegister(BaseTestRegister):
     def setUp(self):
