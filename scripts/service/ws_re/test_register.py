@@ -533,6 +533,30 @@ class TestLemma(BaseTestRegister):
         missing_dict_lemma = Lemma(missing_dict, self.volumes["I,1"], self.authors)
         compare(missing_expected_dict, missing_dict_lemma.lemma_dict)
 
+    def test_set_lemma_dict(self):
+        update_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
+        update_dict = {"lemma": "lemma2", "previous": "previous1", "next": "next",
+                       "chapters": [{"start": 1, "end": 3, "author": "Abel"},
+                                    {"start": 3, "end": 3, "author": "Abbott"}]}
+        remove_item = ["redirect", "some_bla"]
+        update_lemma.update_lemma_dict(update_dict)
+        compare("lemma2", update_lemma["lemma"])
+        compare("lemma002", update_lemma.sort_key)
+        compare("previous1", update_lemma["previous"])
+        compare("next", update_lemma["next"])
+        self.assertTrue(update_lemma["redirect"])
+        compare([{"start": 1, "end": 3, "author": "Abel"},
+                 {"start": 3, "end": 3, "author": "Abbott"}],
+                update_lemma.lemma_dict["chapters"])
+        update_lemma.update_lemma_dict(update_dict, remove_items= remove_item)
+        compare("lemma2", update_lemma["lemma"])
+        compare("previous1", update_lemma["previous"])
+        compare("next", update_lemma["next"])
+        self.assertIsNone(update_lemma["redirect"])
+        compare([{"start": 1, "end": 3, "author": "Abel"},
+                 {"start": 3, "end": 3, "author": "Abbott"}],
+                update_lemma.lemma_dict["chapters"])
+
 
 class TestRegister(BaseTestRegister):
     def test_init(self):

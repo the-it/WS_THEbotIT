@@ -291,6 +291,7 @@ class Lemma(Mapping):
         self._make_sort_key()
 
     def _init_chapters(self):
+        self._chapters = []
         try:
             for chapter in self._lemma_dict["chapters"]:
                 self._chapters.append(LemmaChapter(chapter))
@@ -337,7 +338,7 @@ class Lemma(Mapping):
 
         # delete dots at last
         lemma = lemma.replace(".", " ")
-        self._sort_key =  lemma.strip()
+        self._sort_key = lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -441,6 +442,16 @@ class Lemma(Mapping):
             except (TypeError, ValueError):
                 year_format = red
         return year_format
+
+    def update_lemma_dict(self, update_dict: Dict, remove_items: List = None):
+        for item_key in update_dict:
+            self._lemma_dict[item_key] = update_dict[item_key]
+        if remove_items:
+            for item in remove_items:
+                if item in self._lemma_dict:
+                    del self._lemma_dict[item]
+        self._init_chapters()
+        self._make_sort_key()
 
 
 class Register(ABC):  # pylint: disable=too-few-public-methods
