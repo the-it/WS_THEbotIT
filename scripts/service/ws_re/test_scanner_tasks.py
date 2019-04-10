@@ -1,6 +1,5 @@
 import importlib
 import inspect
-import logging
 from datetime import datetime
 from pathlib import Path
 from unittest import TestCase, mock
@@ -9,9 +8,11 @@ import pywikibot
 from git import Repo
 from testfixtures import LogCapture, compare, StringComparison
 
-from scripts.service.ws_re.data_types import RePage
+from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
+from scripts.service.ws_re.register import Authors, VolumeRegister
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
     SCANTask
+from scripts.service.ws_re.test_register import clear_test_path, copy_test_data, _TEST_REGISTER_PATH
 from tools.bots import WikiLogger
 
 
@@ -338,9 +339,25 @@ text.
             compare(5, len(re_page))
 
 
-class TestSCANTask(TestCase):
+class TestSCANTask(TaskTestCase):
+    @classmethod
+    def setUpClass(cls):
+        clear_test_path()
+        copy_test_data("authors", "authors")
+        copy_test_data("authors_mapping", "authors_mapping")
+        Authors._REGISTER_PATH = _TEST_REGISTER_PATH
+        VolumeRegister._REGISTER_PATH = _TEST_REGISTER_PATH
+
+    @classmethod
+    def tearDownClass(cls):
+        Authors._REGISTER_PATH = _REGISTER_PATH
+        VolumeRegister._REGISTER_PATH = _REGISTER_PATH
+        clear_test_path(renew_path=False)
+
     def setUp(self):
-        self.task = SCANTask(None, logging.getLogger("tada"))
+        super().setUp()
+        self.task = SCANTask(None, self.logger)
+        copy_test_data("I_1_base", "I_1")
 
     def test_pushing_nothing_to_push(self):
         with mock.patch("scripts.service.ws_re.scanner_tasks.Repo", mock.Mock(spec=Repo)) as repo_mock:
@@ -367,3 +384,16 @@ class TestSCANTask(TestCase):
                 compare(StringComparison(r"Updating the register at \d{6}_\d{6}"), repo_mock.mock_calls[5][1][0])
                 compare("().git.push", repo_mock.mock_calls[6][0])
                 compare("().git.checkout", repo_mock.mock_calls[7][0])
+
+    def test_fetch_wikipedia_link(self):
+        self.text_mock.return_value = """[[Kategorie:RE:Verweisung]]
+{{REDaten
+}}
+text.
+{{REAutor|OFF}}
+[[Kategorie:RE:Verweisung]]lala"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            register = task.registers.volumes["I,1"]
+            raise AssertionError
