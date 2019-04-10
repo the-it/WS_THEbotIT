@@ -623,6 +623,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma("Aba 1")
         compare("Aarassos", lemma["previous"])
+        self.assertIsNone(register.get_lemma("Abracadabra"))
 
 
 class TestAlphabeticRegister(BaseTestRegister):

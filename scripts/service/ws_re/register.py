@@ -525,6 +525,12 @@ class VolumeRegister(Register):
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
 
+    def get_lemma(self, lemma_name: str) -> Union[Lemma, None]:
+        for lemma in self.lemmas:
+            if lemma["lemma"] == lemma_name:
+                return lemma
+        return None
+
 
 class AlphabeticRegister(Register):
     def __init__(self, start: str, end: str, registers: OrderedDict):
