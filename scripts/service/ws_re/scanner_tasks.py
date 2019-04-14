@@ -143,12 +143,21 @@ class TJGJTask(ReScannerTask):
 
 
 class SCANTask(ReScannerTask):
+    _LEMMAS_MAX = 200
+
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers()
+        self._register_lemmas = True
+        self._lemmas_registered = 0
 
     def task(self):
-        pass
+        if self._register_lemmas:
+            if self._lemmas_registered < self._LEMMAS_MAX:
+                self._lemmas_registered += 1
+                # here future content
+            else:
+                self.logger.warning(f"SCANTask reached the max lemmas to process with lemma {self.re_page.lemma}.")
 
     def finish_task(self):
         super().finish_task()
