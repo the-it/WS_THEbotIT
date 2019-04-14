@@ -23,14 +23,13 @@ def copy_test_data(source: str, destination: str):
 
 
 def clear_test_path(renew_path=True):
-    _TEST_FOLDER_PATH = Path(__file__).parent.joinpath("test_register")
     try:
-        shutil.rmtree(_TEST_FOLDER_PATH)
+        shutil.rmtree(_TEST_REGISTER_PATH)
     except FileNotFoundError:
         pass
     finally:
         if renew_path:
-            os.mkdir(_TEST_FOLDER_PATH)
+            os.mkdir(_TEST_REGISTER_PATH)
 
 
 class TestAuthor(TestCase):

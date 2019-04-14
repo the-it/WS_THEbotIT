@@ -178,7 +178,7 @@ class Article(Mapping):
         for re_property in self._properties:
             yield re_property
 
-    def __getitem__(self, item: str):
+    def __getitem__(self, item: Property):
         for re_property in self._properties:
             if item == re_property.name:
                 return re_property

@@ -11,7 +11,7 @@ from testfixtures import LogCapture, compare, StringComparison
 from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
 from scripts.service.ws_re.register import Authors, VolumeRegister
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
-    SCANTask
+    SCANTask, TJGJTask
 from scripts.service.ws_re.test_register import clear_test_path, copy_test_data, _TEST_REGISTER_PATH
 from tools.bots import WikiLogger
 
@@ -339,12 +339,10 @@ text.
             compare(5, len(re_page))
 
 
-class TestSCANTask(TaskTestCase):
+class TaskTestWithRegister(TaskTestCase):
     @classmethod
     def setUpClass(cls):
         clear_test_path()
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
         Authors._REGISTER_PATH = _TEST_REGISTER_PATH
         VolumeRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
@@ -354,10 +352,57 @@ class TestSCANTask(TaskTestCase):
         VolumeRegister._REGISTER_PATH = _REGISTER_PATH
         clear_test_path(renew_path=False)
 
+
+class TestTJGJTask(TaskTestWithRegister):
     def setUp(self):
         super().setUp()
-        self.task = SCANTask(None, self.logger)
+        copy_test_data("authors_mapping", "authors_mapping")
         copy_test_data("I_1_base", "I_1")
+        copy_test_data("authors_birth_3333", "authors")
+        self.task = TJGJTask(None, self.logger)
+
+    def test_move_tj_3333(self):
+        self.text_mock.return_value = """{{REDaten
+|TJ=3333
+}}
+text.
+{{REAutor|Abbott}}"""
+        re_page = RePage(self.page_mock)
+        compare({"success": True, "changed": True}, self.task.run(re_page))
+        compare("", re_page[0]["TODESJAHR"].value)
+        compare("1900", re_page[0]["GEBURTSJAHR"].value)
+
+    def test_no_birth_date(self):
+        self.text_mock.return_value = """{{REDaten
+|TJ=3333
+}}
+text.
+{{REAutor|Abel}}"""
+        re_page = RePage(self.page_mock)
+        compare({"success": True, "changed": False}, self.task.run(re_page))
+        compare("3333", re_page[0]["TODESJAHR"].value)
+        compare("", re_page[0]["GEBURTSJAHR"].value)
+
+    def test_no_author(self):
+        self.text_mock.return_value = """{{REDaten
+|TJ=3333
+}}
+text.
+{{REAutor|Rumpelstilzchen}}"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            compare({"success": True, "changed": False}, self.task.run(re_page))
+            compare("3333", re_page[0]["TODESJAHR"].value)
+            compare("", re_page[0]["GEBURTSJAHR"].value)
+
+
+class TestSCANTask(TaskTestWithRegister):
+    def setUp(self):
+        super().setUp()
+        copy_test_data("I_1_base", "I_1")
+        copy_test_data("authors", "authors")
+        copy_test_data("authors_mapping", "authors_mapping")
+        self.task = SCANTask(None, self.logger)
 
     def test_pushing_nothing_to_push(self):
         with mock.patch("scripts.service.ws_re.scanner_tasks.Repo", mock.Mock(spec=Repo)) as repo_mock:
@@ -396,4 +441,3 @@ text.
         with LogCapture():
             task = SCANTask(None, self.logger)
             register = task.registers.volumes["I,1"]
-            raise AssertionError
