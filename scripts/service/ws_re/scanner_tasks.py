@@ -122,13 +122,42 @@ class VERWTask(ReScannerTask):
         self.re_page.clean_articles()
 
 
-class SCANTask(ReScannerTask):
+class TJGJTask(ReScannerTask):
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers()
 
     def task(self):
-        pass
+        for article_list in self.re_page.splitted_article_list:
+            article = article_list[0]
+            if article["TODESJAHR"].value == "3333":
+                author = self.registers.authors.get_author_by_mapping(article.author[0], article["BAND"].value)
+                if author:
+                    if author.birth:
+                        article["GEBURTSJAHR"].value = str(author.birth)
+                        article["TODESJAHR"].value = ""
+                else:
+                    self.logger.error(f"TJGJ: No author registered for {article.author[0]} "
+                                      f"in lemma {self.re_page.lemma}")
+        return True
+
+
+class SCANTask(ReScannerTask):
+    _LEMMAS_MAX = 200
+
+    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+        super().__init__(wiki, logger, debug)
+        self.registers = Registers()
+        self._register_lemmas = True
+        self._lemmas_registered = 0
+
+    def task(self):
+        if self._register_lemmas:
+            if self._lemmas_registered < self._LEMMAS_MAX:
+                self._lemmas_registered += 1
+                # here future content
+            else:
+                self.logger.warning(f"SCANTask reached the max lemmas to process with lemma {self.re_page.lemma}.")
 
     def finish_task(self):
         super().finish_task()

@@ -286,6 +286,12 @@ class Lemma(Mapping):
         self._authors = authors
         self._volume = volume
         self._chapters = []
+        self._sort_key = ""
+        self._init_chapters()
+        self._make_sort_key()
+
+    def _init_chapters(self):
+        self._chapters = []
         try:
             for chapter in self._lemma_dict["chapters"]:
                 self._chapters.append(LemmaChapter(chapter))
@@ -293,7 +299,6 @@ class Lemma(Mapping):
             pass
         if not self.is_valid():
             raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
-        self._sort_key = self._make_sort_key()
 
     def __repr__(self):  # pragma: no cover
         return f"<LEMMA - lemma:{self['lemma']}, previous:{self['previous']}, next:{self['next']}, " \
@@ -333,12 +338,13 @@ class Lemma(Mapping):
 
         # delete dots at last
         lemma = lemma.replace(".", " ")
-        return lemma.strip()
+        self._sort_key = lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
 
-    def get_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
+    @property
+    def lemma_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
         return_dict = OrderedDict()
         for property_key in self._keys:
             if property_key in self.keys():
@@ -437,6 +443,16 @@ class Lemma(Mapping):
                 year_format = red
         return year_format
 
+    def update_lemma_dict(self, update_dict: Dict, remove_items: List = None):
+        for item_key in update_dict:
+            self._lemma_dict[item_key] = update_dict[item_key]
+        if remove_items:
+            for item in remove_items:
+                if item in self._lemma_dict:
+                    del self._lemma_dict[item]
+        self._init_chapters()
+        self._make_sort_key()
+
 
 class Register(ABC):  # pylint: disable=too-few-public-methods
     @staticmethod
@@ -504,10 +520,16 @@ class VolumeRegister(Register):
     def persist(self):
         persist_list = []
         for lemma in self.lemmas:
-            persist_list.append(lemma.get_dict())
+            persist_list.append(lemma.lemma_dict)
         with open(self._REGISTER_PATH.joinpath("{}.json".format(self._volume.file_name)),
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
+
+    def get_lemma(self, lemma_name: str) -> Union[Lemma, None]:
+        for lemma in self.lemmas:
+            if lemma["lemma"] == lemma_name:
+                return lemma
+        return None
 
 
 class AlphabeticRegister(Register):

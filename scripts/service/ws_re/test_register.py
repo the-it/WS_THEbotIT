@@ -23,14 +23,13 @@ def copy_test_data(source: str, destination: str):
 
 
 def clear_test_path(renew_path=True):
-    _TEST_FOLDER_PATH = Path(__file__).parent.joinpath("test_register")
     try:
-        shutil.rmtree(_TEST_FOLDER_PATH)
+        shutil.rmtree(_TEST_REGISTER_PATH)
     except FileNotFoundError:
         pass
     finally:
         if renew_path:
-            os.mkdir(_TEST_FOLDER_PATH)
+            os.mkdir(_TEST_REGISTER_PATH)
 
 
 class TestAuthor(TestCase):
@@ -522,7 +521,7 @@ class TestLemma(BaseTestRegister):
                                      ("next", "next"),
                                      ("redirect", True),
                                      ("chapters", [chapter_dict_1, chapter_dict_2])])
-        compare(expected_dict, dict_lemma.get_dict())
+        compare(expected_dict, dict_lemma.lemma_dict)
 
         missing_dict = copy.deepcopy(reverse_dict)
         del missing_dict["next"]
@@ -531,7 +530,31 @@ class TestLemma(BaseTestRegister):
         del missing_expected_dict["next"]
         del missing_expected_dict["redirect"]
         missing_dict_lemma = Lemma(missing_dict, self.volumes["I,1"], self.authors)
-        compare(missing_expected_dict, missing_dict_lemma.get_dict())
+        compare(missing_expected_dict, missing_dict_lemma.lemma_dict)
+
+    def test_set_lemma_dict(self):
+        update_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
+        update_dict = {"lemma": "lemma2", "previous": "previous1", "next": "next",
+                       "chapters": [{"start": 1, "end": 3, "author": "Abel"},
+                                    {"start": 3, "end": 3, "author": "Abbott"}]}
+        remove_item = ["redirect", "some_bla"]
+        update_lemma.update_lemma_dict(update_dict)
+        compare("lemma2", update_lemma["lemma"])
+        compare("lemma002", update_lemma.sort_key)
+        compare("previous1", update_lemma["previous"])
+        compare("next", update_lemma["next"])
+        self.assertTrue(update_lemma["redirect"])
+        compare([{"start": 1, "end": 3, "author": "Abel"},
+                 {"start": 3, "end": 3, "author": "Abbott"}],
+                update_lemma.lemma_dict["chapters"])
+        update_lemma.update_lemma_dict(update_dict, remove_items= remove_item)
+        compare("lemma2", update_lemma["lemma"])
+        compare("previous1", update_lemma["previous"])
+        compare("next", update_lemma["next"])
+        self.assertIsNone(update_lemma["redirect"])
+        compare([{"start": 1, "end": 3, "author": "Abel"},
+                 {"start": 3, "end": 3, "author": "Abbott"}],
+                update_lemma.lemma_dict["chapters"])
 
 
 class TestRegister(BaseTestRegister):
@@ -593,6 +616,13 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
 ]"""
         with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             compare(expect, register_file.read())
+
+    def test_get_lemma_by_name(self):
+        copy_test_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        lemma = register.get_lemma("Aba 1")
+        compare("Aarassos", lemma["previous"])
+        self.assertIsNone(register.get_lemma("Abracadabra"))
 
 
 class TestAlphabeticRegister(BaseTestRegister):

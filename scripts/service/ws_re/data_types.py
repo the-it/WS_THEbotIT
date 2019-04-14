@@ -4,7 +4,7 @@ from collections import OrderedDict
 from collections.abc import Mapping, Sequence
 from enum import Enum
 from pathlib import Path
-from typing import Union, Generator, Tuple
+from typing import Union, Generator, Tuple, List
 
 import pywikibot
 import roman
@@ -178,7 +178,7 @@ class Article(Mapping):
         for re_property in self._properties:
             yield re_property
 
-    def __getitem__(self, item: str):
+    def __getitem__(self, item: Property):
         for re_property in self._properties:
             if item == re_property.name:
                 return re_property
@@ -402,6 +402,16 @@ class RePage(Sequence):
     @property
     def lemma(self):
         return self.page.title()
+
+    @property
+    def splitted_article_list(self) -> List[List[Union[Article, str]]]:
+        splitted_list = list()
+        for article in self._article_list:
+            if isinstance(article, Article) and article.article_type == RE_DATEN:
+                splitted_list.append([article])
+            else:
+                splitted_list[-1].append(article)
+        return splitted_list
 
 
 class VolumeType(Enum):

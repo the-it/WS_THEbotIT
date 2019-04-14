@@ -582,6 +582,21 @@ text
 <u>Anmerkung WS:</u><br /><references/>"""
         self.assertEqual(after, str(RePage(self.page_mock)))
 
+    def test_get_splitted_article_list(self):
+        before = """{{REDaten}}\ntext\n{{REAutor|Some Author.}}
+{{REDaten}}\ntext\n{{REAutor|Some Author.}}text{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}
+{{REDaten}}\ntext\n{{REAutor|Some Author.}}text{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}text"""
+        self.text_mock.return_value = before
+        re_page = RePage(self.page_mock)
+        splitted_list = re_page.splitted_article_list
+        compare(3, len(splitted_list))
+        compare(1, len(splitted_list[0]))
+        compare(3, len(splitted_list[1]))
+        compare(4, len(splitted_list[2]))
+        self.assertTrue(isinstance(splitted_list[1][1], str))
+        self.assertTrue(isinstance(splitted_list[2][1], str))
+        self.assertTrue(isinstance(splitted_list[2][3], str))
+
 
 class TestVolume(TestCase):
     def test_init(self):
