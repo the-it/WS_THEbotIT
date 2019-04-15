@@ -181,6 +181,9 @@ class SCANTask(ReScannerTask):
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
+    def _fetch_wp_link(self, re_page: RePage):
+        pass
+
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
         if repo.index.diff(None):

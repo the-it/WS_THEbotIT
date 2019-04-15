@@ -435,10 +435,13 @@ class TestSCANTask(TaskTestWithRegister):
     def test_fetch_wikipedia_link(self):
         self.title_mock.return_value = "Lemma"
         self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|WP=Lemma
 }}
 text.
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
         with LogCapture():
             task = SCANTask(None, self.logger)
-            register = task.registers.volumes["I,1"]
+            task.
+            compare({"success": True, "changed": False}, self.task.run(re_page))
