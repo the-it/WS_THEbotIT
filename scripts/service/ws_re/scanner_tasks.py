@@ -3,7 +3,7 @@ import re
 from abc import abstractmethod
 from datetime import timedelta, datetime
 from pathlib import Path
-from typing import Mapping
+from typing import Mapping, Tuple, Any, Dict, List
 
 from git import Repo
 from github import Github
@@ -181,8 +181,8 @@ class SCANTask(ReScannerTask):
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
-    def _fetch_wp_link(self, re_page: RePage):
-        pass
+    def _fetch_wp_link(self) -> Tuple[Dict[str, Any], List[str]]:
+        return {"bla": "bla"}, []
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
