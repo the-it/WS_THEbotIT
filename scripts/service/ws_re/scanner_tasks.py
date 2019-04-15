@@ -158,6 +158,7 @@ class SCANTask(ReScannerTask):
                 # here future content
             else:
                 self.logger.warning(f"SCANTask reached the max lemmas to process with lemma {self.re_page.lemma}.")
+                self._register_lemmas = False
 
     def finish_task(self):
         super().finish_task()
