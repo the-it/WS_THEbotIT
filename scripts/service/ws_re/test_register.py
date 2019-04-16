@@ -352,24 +352,23 @@ class TestLemma(BaseTestRegister):
     def setUp(self):
         self.authors = Authors()
         self.volumes = Volumes()
+        self.basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                           "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                          {"start": 1, "end": 2, "author": "Abbott"}]}
 
     def test_from_dict_errors(self):
-        basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                      "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
-                                                     {"start": 1, "end": 2, "author": "Abbott"}]}
-
         for entry in ["lemma", "chapters"]:
-            test_dict = copy.deepcopy(basic_dict)
+            test_dict = copy.deepcopy(self.basic_dict)
             del test_dict[entry]
             with self.assertRaises(RegisterException):
                 Lemma(test_dict, Volumes()["I,1"], self.authors)
 
         for entry in ["previous", "next", "redirect"]:
-            test_dict = copy.deepcopy(basic_dict)
+            test_dict = copy.deepcopy(self.basic_dict)
             del test_dict[entry]
             self.assertIsNone(Lemma(test_dict, Volumes()["I,1"], self.authors)[entry])
 
-        re_register_lemma = Lemma(basic_dict, Volumes()["I,1"], self.authors)
+        re_register_lemma = Lemma(self.basic_dict, Volumes()["I,1"], self.authors)
         compare("lemma", re_register_lemma["lemma"])
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])
@@ -379,9 +378,7 @@ class TestLemma(BaseTestRegister):
                 re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
 
-    basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                  "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
-                                                 {"start": 1, "end": 2, "author": "Abbott"}]}
+
 
     def test_get_link(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
@@ -533,7 +530,8 @@ class TestLemma(BaseTestRegister):
         compare(missing_expected_dict, missing_dict_lemma.lemma_dict)
 
     def test_set_lemma_dict(self):
-        update_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
+        update_basic_dict = copy.deepcopy(self.basic_dict)
+        update_lemma = Lemma(update_basic_dict, self.volumes["I,1"], self.authors)
         update_dict = {"lemma": "lemma2", "previous": "previous1", "next": "next",
                        "chapters": [{"start": 1, "end": 3, "author": "Abel"},
                                     {"start": 3, "end": 3, "author": "Abbott"}]}
