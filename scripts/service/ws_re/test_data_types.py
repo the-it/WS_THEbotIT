@@ -597,6 +597,17 @@ text
         self.assertTrue(isinstance(splitted_list[2][1], str))
         self.assertTrue(isinstance(splitted_list[2][3], str))
 
+    def test_get_splitted_article_list_pre_text(self):
+        before = """text{{REDaten}}\ntext\n{{REAutor|Some Author.}}text"""
+        self.text_mock.return_value = before
+        re_page = RePage(self.page_mock)
+        splitted_list = re_page.splitted_article_list
+        compare(2, len(splitted_list))
+        compare(1, len(splitted_list[0]))
+        compare(2, len(splitted_list[1]))
+        self.assertTrue(isinstance(splitted_list[0][0], str))
+        self.assertTrue(isinstance(splitted_list[1][1], str))
+
 
 class TestVolume(TestCase):
     def test_init(self):

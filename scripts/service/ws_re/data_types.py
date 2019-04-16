@@ -410,7 +410,10 @@ class RePage(Sequence):
             if isinstance(article, Article) and article.article_type == RE_DATEN:
                 splitted_list.append([article])
             else:
-                splitted_list[-1].append(article)
+                try:
+                    splitted_list[-1].append(article)
+                except IndexError:
+                    splitted_list.append([article])
         return splitted_list
 
 
