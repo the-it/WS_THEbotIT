@@ -129,16 +129,17 @@ class TJGJTask(ReScannerTask):
 
     def task(self):
         for article_list in self.re_page.splitted_article_list:
-            article = article_list[0]
-            if article["TODESJAHR"].value == "3333":
-                author = self.registers.authors.get_author_by_mapping(article.author[0], article["BAND"].value)
-                if author:
-                    if author.birth:
-                        article["GEBURTSJAHR"].value = str(author.birth)
-                        article["TODESJAHR"].value = ""
-                else:
-                    self.logger.error(f"TJGJ: No author registered for {article.author[0]} "
-                                      f"in lemma {self.re_page.lemma}")
+            if not isinstance(article_list[0], str):
+                article = article_list[0]
+                if article["TODESJAHR"].value == "3333":
+                    author = self.registers.authors.get_author_by_mapping(article.author[0], article["BAND"].value)
+                    if author:
+                        if author.birth:
+                            article["GEBURTSJAHR"].value = str(author.birth)
+                            article["TODESJAHR"].value = ""
+                    else:
+                        self.logger.error(f"TJGJ: No author registered for {article.author[0]} "
+                                          f"in lemma {self.re_page.lemma}")
         return True
 
 
