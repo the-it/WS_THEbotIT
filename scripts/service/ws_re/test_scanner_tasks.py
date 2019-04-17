@@ -19,12 +19,14 @@ from tools.bots import WikiLogger
 class TaskTestCase(TestCase):
     # Todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs some investigation
     @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page", autospec=pywikibot.Page)
-    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text",
-                new_callable=mock.PropertyMock)
-    def setUp(self, text_mock, page_mock):
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.text", new_callable=mock.PropertyMock)
+    @mock.patch("scripts.service.ws_re.data_types.pywikibot.Page.title", new_callable=mock.Mock)
+    def setUp(self, title_mock, text_mock, page_mock):
         self.page_mock = page_mock
         self.text_mock = text_mock
+        self.title_mock = title_mock
         type(self.page_mock).text = self.text_mock
+        type(self.page_mock).title = self.title_mock
         self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
                                  log_to_screen=False)
 
@@ -431,13 +433,34 @@ class TestSCANTask(TaskTestWithRegister):
                 compare("().git.checkout", repo_mock.mock_calls[7][0])
 
     def test_fetch_wikipedia_link(self):
-        self.text_mock.return_value = """[[Kategorie:RE:Verweisung]]
-{{REDaten
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|WP=Lemma
 }}
 text.
-{{REAutor|OFF}}
-[[Kategorie:RE:Verweisung]]lala"""
-        re_page = RePage(self.page_mock)
-        with LogCapture():
-            task = SCANTask(None, self.logger)
-            register = task.registers.volumes["I,1"]
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"wp_link": "Lemma"}, []), SCANTask._fetch_wp_link(article))
+
+    def test_fetch_wikipedia_link_no_link(self):
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({}, ["wp_link"]), SCANTask._fetch_wp_link(article))
+
+    def test_fetch_from_properties(self):
+        self.title_mock.return_value = "Aal"
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|WP=Aal_wp_link
+}}
+text.
+{{REAutor|OFF}}"""
+        task = SCANTask(None, self.logger)
+        task.re_page = RePage(self.page_mock)
+        task._fetch_from_article_list()
+        post_lemma = task.registers["I,1"].get_lemma("Aal")
+        compare("Aal_wp_link", post_lemma.lemma_dict["wp_link"])

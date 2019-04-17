@@ -509,6 +509,7 @@ class TestLemma(BaseTestRegister):
     def test_return_dict(self):
         reverse_dict = {"chapters": [{"start": 1, "author": "Abel", "end": 1},
                                      {"start": 1, "end": 2, "author": "Abbott"}],
+                        "wp_link": "tada",
                         "redirect": True,
                         "next": "next",
                         "previous": "previous",
@@ -520,6 +521,7 @@ class TestLemma(BaseTestRegister):
                                      ("previous", "previous"),
                                      ("next", "next"),
                                      ("redirect", True),
+                                     ("wp_link", "tada"),
                                      ("chapters", [chapter_dict_1, chapter_dict_2])])
         compare(expected_dict, dict_lemma.lemma_dict)
 
