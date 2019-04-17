@@ -24,14 +24,6 @@ install_dependencies: &install_dependencies
       make pip3
       pip list
 
-run_unittest: &run_unittest
-  run:
-    name: run unittest
-    when: always
-    command: |
-      . venv/bin/activate
-      make unittest
-
 flake8: &flake8
   run:
     name: flake8
@@ -103,20 +95,13 @@ quality_steps: &quality_steps
     - <<: *pylint
     - <<: *safety
 
-version_steps: &version_steps
+coverage_steps: &coverage_steps
   steps:
     - checkout
     - <<: *restore_cache
     - <<: *show_python_version
     - <<: *install_dependencies
     - <<: *save_cache
-    - <<: *run_unittest
-
-coverage_steps: &coverage_steps
-  steps:
-    - checkout
-    - <<: *restore_cache
-    - <<: *show_python_version
     - <<: *run_coverage
     - <<: *report_codacy
     - <<: *report_codecov
@@ -129,18 +114,6 @@ jobs:
       - image: circleci/python:3.7
     working_directory: ~/repo
     <<: *quality_steps
-
-  version37:
-    docker:
-      - image: circleci/python:3.7
-    working_directory: ~/repo
-    <<: *version_steps
-
-  version38:
-    docker:
-      - image: circleci/python:3.8-rc
-    working_directory: ~/repo
-    <<: *version_steps
 
   coverage37:
     docker:
@@ -162,17 +135,11 @@ workflows:
     jobs:
       - quality:
           context: python37
-      - version37:
-          context: python37
-      - version38:
-          context: python38
       - coverage38:
           context: python38
           requires:
-            - version38
             - quality
       - coverage37:
           context: python37
           requires:
-            - version37
             - quality

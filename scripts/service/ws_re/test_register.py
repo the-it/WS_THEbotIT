@@ -16,13 +16,13 @@ from tools import INTEGRATION_TEST
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
 
-def copy_test_data(source: str, destination: str):
+def copy_tst_data(source: str, destination: str):
     base_path = Path(__file__).parent
     shutil.copy(str(base_path.joinpath("test_data_register").joinpath(source + ".json")),
                 str(base_path.joinpath("test_register").joinpath(destination + ".json")))
 
 
-def clear_test_path(renew_path=True):
+def clear_tst_path(renew_path=True):
     try:
         shutil.rmtree(_TEST_REGISTER_PATH)
     except FileNotFoundError:
@@ -47,9 +47,9 @@ class TestAuthor(TestCase):
 class BaseTestRegister(TestCase):
     @classmethod
     def setUpClass(cls):
-        clear_test_path()
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
+        clear_tst_path()
+        copy_tst_data("authors", "authors")
+        copy_tst_data("authors_mapping", "authors_mapping")
         Authors._REGISTER_PATH = _TEST_REGISTER_PATH
         VolumeRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
@@ -57,7 +57,7 @@ class BaseTestRegister(TestCase):
     def tearDownClass(cls):
         Authors._REGISTER_PATH = _REGISTER_PATH
         VolumeRegister._REGISTER_PATH = _REGISTER_PATH
-        clear_test_path(renew_path=False)
+        clear_tst_path(renew_path=False)
 
 
 class TestAuthors(BaseTestRegister):
@@ -352,24 +352,23 @@ class TestLemma(BaseTestRegister):
     def setUp(self):
         self.authors = Authors()
         self.volumes = Volumes()
+        self.basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                           "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                          {"start": 1, "end": 2, "author": "Abbott"}]}
 
     def test_from_dict_errors(self):
-        basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                      "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
-                                                     {"start": 1, "end": 2, "author": "Abbott"}]}
-
         for entry in ["lemma", "chapters"]:
-            test_dict = copy.deepcopy(basic_dict)
+            test_dict = copy.deepcopy(self.basic_dict)
             del test_dict[entry]
             with self.assertRaises(RegisterException):
                 Lemma(test_dict, Volumes()["I,1"], self.authors)
 
         for entry in ["previous", "next", "redirect"]:
-            test_dict = copy.deepcopy(basic_dict)
+            test_dict = copy.deepcopy(self.basic_dict)
             del test_dict[entry]
             self.assertIsNone(Lemma(test_dict, Volumes()["I,1"], self.authors)[entry])
 
-        re_register_lemma = Lemma(basic_dict, Volumes()["I,1"], self.authors)
+        re_register_lemma = Lemma(self.basic_dict, Volumes()["I,1"], self.authors)
         compare("lemma", re_register_lemma["lemma"])
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])
@@ -379,9 +378,7 @@ class TestLemma(BaseTestRegister):
                 re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
 
-    basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                  "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
-                                                 {"start": 1, "end": 2, "author": "Abbott"}]}
+
 
     def test_get_link(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
@@ -535,7 +532,8 @@ class TestLemma(BaseTestRegister):
         compare(missing_expected_dict, missing_dict_lemma.lemma_dict)
 
     def test_set_lemma_dict(self):
-        update_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
+        update_basic_dict = copy.deepcopy(self.basic_dict)
+        update_lemma = Lemma(update_basic_dict, self.volumes["I,1"], self.authors)
         update_dict = {"lemma": "lemma2", "previous": "previous1", "next": "next",
                        "chapters": [{"start": 1, "end": 3, "author": "Abel"},
                                     {"start": 3, "end": 3, "author": "Abbott"}]}
@@ -561,11 +559,11 @@ class TestLemma(BaseTestRegister):
 
 class TestRegister(BaseTestRegister):
     def test_init(self):
-        copy_test_data("I_1_base", "I_1")
+        copy_tst_data("I_1_base", "I_1")
         VolumeRegister(Volumes()["I,1"], Authors())
 
     def test_get_table(self):
-        copy_test_data("I_1_two_entries", "I_1")
+        copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         expected_table = """{|class="wikitable sortable"
 !Artikel
@@ -588,7 +586,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         compare(expected_table, register.get_register_str())
 
     def test_persist(self):
-        copy_test_data("I_1_two_entries", "I_1")
+        copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         register._lemmas[0]._chapters[0]._dict["author"] = "ÄäÖöÜüß"
         register.persist()
@@ -620,7 +618,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
             compare(expect, register_file.read())
 
     def test_get_lemma_by_name(self):
-        copy_test_data("I_1_base", "I_1")
+        copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma("Aba 1")
         compare("Aarassos", lemma["previous"])
@@ -629,8 +627,8 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
 
 class TestAlphabeticRegister(BaseTestRegister):
     def setUp(self):
-        copy_test_data("I_1_alpha", "I_1")
-        copy_test_data("III_1_alpha", "III_1")
+        copy_tst_data("I_1_alpha", "I_1")
+        copy_tst_data("III_1_alpha", "III_1")
         self.authors = Authors()
         self.volumes = Volumes()
         self.registers = OrderedDict()
@@ -724,7 +722,7 @@ Zahl der Artikel: 6, """
 class TestRegisters(BaseTestRegister):
     def test_init(self):
         for volume in Volumes().all_volumes:
-            copy_test_data("I_1_base", volume.file_name)
+            copy_tst_data("I_1_base", volume.file_name)
         registers = Registers()
         iterator = iter(registers.volumes.values())
         compare("I,1", next(iterator).volume.name)
@@ -735,12 +733,12 @@ class TestRegisters(BaseTestRegister):
         compare("IV,1", registers["IV,1"].volume.name)
 
     def test_not_all_there(self):
-        copy_test_data("I_1_base", "I_1")
+        copy_tst_data("I_1_base", "I_1")
         Registers()
 
     def test_alphabetic(self):
-        copy_test_data("I_1_alpha", "I_1")
-        copy_test_data("III_1_alpha", "III_1")
+        copy_tst_data("I_1_alpha", "I_1")
+        copy_tst_data("III_1_alpha", "III_1")
         registers = Registers()
         compare(44, len(registers.alphabetic))
         compare(4, len(registers.alphabetic["a"]))
@@ -750,8 +748,8 @@ class TestRegisters(BaseTestRegister):
         compare(2, len(registers.alphabetic["u"]))
 
     def test_alphabetic_persist(self):
-        copy_test_data("I_1_alpha", "I_1")
-        copy_test_data("III_1_alpha", "III_1")
+        copy_tst_data("I_1_alpha", "I_1")
+        copy_tst_data("III_1_alpha", "III_1")
         registers = Registers()
         register_I_1 = registers["I,1"]
         register_I_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
