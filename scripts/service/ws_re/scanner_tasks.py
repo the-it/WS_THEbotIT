@@ -144,7 +144,7 @@ class TJGJTask(ReScannerTask):
 
 
 class SCANTask(ReScannerTask):
-    _LEMMAS_MAX = 200
+    _LEMMAS_MAX = 500
 
     def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
