@@ -432,15 +432,17 @@ class TestSCANTask(TaskTestWithRegister):
                 compare("().git.push", repo_mock.mock_calls[6][0])
                 compare("().git.checkout", repo_mock.mock_calls[7][0])
 
-    def test_fetch_wikipedia_link(self):
+    def test_fetch_wikipedia_wikisource_link(self):
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |WP=Lemma
+|WS=WsLemma
 }}
 text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"wp_link": "Lemma"}, []), SCANTask._fetch_wp_link(article))
+        compare(({"wp_link": "w:de:Lemma"}, []), SCANTask._fetch_wp_link(article))
+        compare(({"ws_link": "s:de:WsLemma"}, []), SCANTask._fetch_ws_link(article))
 
     def test_fetch_wikipedia_link_no_link(self):
         self.text_mock.return_value = """{{REDaten
@@ -450,12 +452,14 @@ text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({}, ["wp_link"]), SCANTask._fetch_wp_link(article))
+        compare(({}, ["ws_link"]), SCANTask._fetch_ws_link(article))
 
     def test_fetch_from_properties(self):
         self.title_mock.return_value = "Aal"
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |WP=Aal_wp_link
+|WS=Aal_ws_link
 }}
 text.
 {{REAutor|OFF}}"""
@@ -463,4 +467,5 @@ text.
         task.re_page = RePage(self.page_mock)
         task._fetch_from_article_list()
         post_lemma = task.registers["I,1"].get_lemma("Aal")
-        compare("Aal_wp_link", post_lemma.lemma_dict["wp_link"])
+        compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
+        compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
