@@ -190,8 +190,16 @@ class SCANTask(ReScannerTask):
             return {"wp_link": f"w:de:{wp_link}"}, []
         return {}, ["wp_link"]
 
+    @staticmethod
+    def _fetch_ws_link(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        wp_link = article["WIKISOURCE"].value
+        if wp_link:
+            return {"ws_link": f"s:de:{wp_link}"}, []
+        return {}, ["ws_link"]
+
     def _fetch_from_article_list(self):
-        function_list_properties = (self._fetch_wp_link,)
+        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link)
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):

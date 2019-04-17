@@ -276,7 +276,7 @@ for regex_pair in _REGEX_RAW_LIST:
 
 
 class Lemma(Mapping):
-    _keys = ["lemma", "previous", "next", "redirect", "wp_link", "chapters"]
+    _keys = ["lemma", "previous", "next", "redirect", "wp_link", "ws_link", "chapters"]
 
     def __init__(self,
                  lemma_dict: Dict[str, Union[str, list]],
