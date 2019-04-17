@@ -155,7 +155,7 @@ class SCANTask(ReScannerTask):
         if self._register_lemmas:
             if self._lemmas_registered < self._LEMMAS_MAX:
                 self._lemmas_registered += 1
-                # here future content
+                self._fetch_from_article_list()
             else:
                 self.logger.warning(f"SCANTask reached the max lemmas to process with lemma {self.re_page.lemma}.")
                 self._register_lemmas = False
@@ -181,8 +181,29 @@ class SCANTask(ReScannerTask):
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
-    def _fetch_wp_link(self) -> Tuple[Dict[str, Any], List[str]]:
-        return {"bla": "bla"}, []
+    @staticmethod
+    def _fetch_wp_link(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        wp_link = article["WIKIPEDIA"].value
+        if wp_link:
+            return {"wp_link": wp_link}, []
+        return {}, ["wp_link"]
+
+    def _fetch_from_article_list(self):
+        function_list_properties = (self._fetch_wp_link,)
+        for article_list in self.re_page.splitted_article_list:
+            # fetch from properties
+            if isinstance(article_list[0], Article):
+                update_dict = {}
+                delete_list = []
+                for fetch_function in function_list_properties:
+                    function_dict, function_list = fetch_function(article_list)
+                    update_dict.update(function_dict)
+                    delete_list += function_list
+                band_info = article_list[0]["BAND"].value
+                register = self.registers.volumes[band_info]
+                lemma = register.get_lemma(self.re_page.lemma)
+                lemma.update_lemma_dict(update_dict, delete_list)
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
