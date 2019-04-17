@@ -440,7 +440,7 @@ class TestSCANTask(TaskTestWithRegister):
 text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"wp_link": "Lemma"}, []), SCANTask._fetch_wp_link(article))
+        compare(({"wp_link": "w:de:Lemma"}, []), SCANTask._fetch_wp_link(article))
 
     def test_fetch_wikipedia_link_no_link(self):
         self.text_mock.return_value = """{{REDaten
@@ -463,4 +463,4 @@ text.
         task.re_page = RePage(self.page_mock)
         task._fetch_from_article_list()
         post_lemma = task.registers["I,1"].get_lemma("Aal")
-        compare("Aal_wp_link", post_lemma.lemma_dict["wp_link"])
+        compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])

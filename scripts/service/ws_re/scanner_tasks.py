@@ -187,7 +187,7 @@ class SCANTask(ReScannerTask):
         article = article_list[0]
         wp_link = article["WIKIPEDIA"].value
         if wp_link:
-            return {"wp_link": wp_link}, []
+            return {"wp_link": f"w:de:{wp_link}"}, []
         return {}, ["wp_link"]
 
     def _fetch_from_article_list(self):
