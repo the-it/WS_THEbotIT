@@ -12,7 +12,7 @@ from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
 from scripts.service.ws_re.register import Authors, VolumeRegister
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
     SCANTask, TJGJTask
-from scripts.service.ws_re.test_register import clear_test_path, copy_test_data, _TEST_REGISTER_PATH
+from scripts.service.ws_re.test_register import clear_tst_path, copy_tst_data, _TEST_REGISTER_PATH
 from tools.bots import WikiLogger
 
 
@@ -342,7 +342,7 @@ text.
 class TaskTestWithRegister(TaskTestCase):
     @classmethod
     def setUpClass(cls):
-        clear_test_path()
+        clear_tst_path()
         Authors._REGISTER_PATH = _TEST_REGISTER_PATH
         VolumeRegister._REGISTER_PATH = _TEST_REGISTER_PATH
 
@@ -350,15 +350,15 @@ class TaskTestWithRegister(TaskTestCase):
     def tearDownClass(cls):
         Authors._REGISTER_PATH = _REGISTER_PATH
         VolumeRegister._REGISTER_PATH = _REGISTER_PATH
-        clear_test_path(renew_path=False)
+        clear_tst_path(renew_path=False)
 
 
 class TestTJGJTask(TaskTestWithRegister):
     def setUp(self):
         super().setUp()
-        copy_test_data("authors_mapping", "authors_mapping")
-        copy_test_data("I_1_base", "I_1")
-        copy_test_data("authors_birth_3333", "authors")
+        copy_tst_data("authors_mapping", "authors_mapping")
+        copy_tst_data("I_1_base", "I_1")
+        copy_tst_data("authors_birth_3333", "authors")
         self.task = TJGJTask(None, self.logger)
 
     def test_move_tj_3333(self):
@@ -399,9 +399,9 @@ text.
 class TestSCANTask(TaskTestWithRegister):
     def setUp(self):
         super().setUp()
-        copy_test_data("I_1_base", "I_1")
-        copy_test_data("authors", "authors")
-        copy_test_data("authors_mapping", "authors_mapping")
+        copy_tst_data("I_1_base", "I_1")
+        copy_tst_data("authors", "authors")
+        copy_tst_data("authors_mapping", "authors_mapping")
         self.task = SCANTask(None, self.logger)
 
     def test_pushing_nothing_to_push(self):
