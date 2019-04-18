@@ -404,6 +404,10 @@ class RePage(Sequence):
         return self.page.title()
 
     @property
+    def lemma_without_prefix(self):
+        return self.lemma[3:]
+
+    @property
     def splitted_article_list(self) -> List[List[Union[Article, str]]]:
         splitted_list = list()
         for article in self._article_list:

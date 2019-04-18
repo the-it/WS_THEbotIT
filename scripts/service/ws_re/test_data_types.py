@@ -529,7 +529,8 @@ class TestRePage(TestCase):
         self.page_mock.title.return_value = "RE:Page"
         self.text_mock.return_value = article_template
         re_page = RePage(self.page_mock)
-        self.assertEqual("RE:Page", re_page.lemma)
+        compare("RE:Page", re_page.lemma)
+        compare("Page", re_page.lemma_without_prefix)
 
     def test_has_changed(self):
         self.text_mock.return_value = "{{REDaten}}text{{REAutor|Autor.}}"
