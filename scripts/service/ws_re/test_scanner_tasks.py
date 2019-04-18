@@ -455,7 +455,7 @@ text.
         compare(({}, ["ws_link"]), SCANTask._fetch_ws_link(article))
 
     def test_fetch_from_properties(self):
-        self.title_mock.return_value = "Aal"
+        self.title_mock.return_value = "Re:Aal"
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |WP=Aal_wp_link
@@ -469,3 +469,18 @@ text.
         post_lemma = task.registers["I,1"].get_lemma("Aal")
         compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
+
+    def test_fetch_from_properties_lemma_not_found(self):
+        self.title_mock.return_value = "Re:Aas"
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|WP=Aal_wp_link
+|WS=Aal_ws_link
+}}
+text.
+{{REAutor|OFF}}"""
+        task = SCANTask(None, self.logger)
+        task.re_page = RePage(self.page_mock)
+        with LogCapture() as log_catcher:
+            task._fetch_from_article_list()
+            log_catcher.check(("Test", "ERROR", "No available Lemma in Registers for issue I,1 and lemma Aas"))

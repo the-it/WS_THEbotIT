@@ -211,8 +211,13 @@ class SCANTask(ReScannerTask):
                     delete_list += function_list
                 band_info = article_list[0]["BAND"].value
                 register = self.registers.volumes[band_info]
-                lemma = register.get_lemma(self.re_page.lemma)
-                lemma.update_lemma_dict(update_dict, delete_list)
+                if register:
+                    lemma = register.get_lemma(self.re_page.lemma_without_prefix)
+                    if lemma:
+                        lemma.update_lemma_dict(update_dict, delete_list)
+                        continue
+                self.logger.error(f"No available Lemma in Registers for issue {band_info} "
+                                  f"and lemma {self.re_page.lemma_without_prefix}")
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
