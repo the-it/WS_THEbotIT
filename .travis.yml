@@ -7,5 +7,6 @@ install:
   - make pip3
 script:
   - make integrationtest
+  - codecov -F INTEGRATION
 
 cache: pip

@@ -39,7 +39,8 @@ integrationtest :
 	echo "######## INTEGRATIONTEST #######"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
 	export INTEGRATION=1 && \
-	python all_tests.py
+	coverage run all_tests.py && \
+	coverage xml
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
