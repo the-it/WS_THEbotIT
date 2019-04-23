@@ -197,8 +197,16 @@ class SCANTask(ReScannerTask):
             return {"ws_link": f"s:de:{wp_link}"}, []
         return {}, ["ws_link"]
 
+    @staticmethod
+    def _fetch_sort_key(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        sort_key = article["SORTIERUNG"].value
+        if sort_key:
+            return {"sort_key": sort_key}, []
+        return {}, ["sort_key"]
+
     def _fetch_from_article_list(self):
-        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link)
+        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key)
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):
