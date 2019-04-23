@@ -531,6 +531,7 @@ class TestRePage(TestCase):
         re_page = RePage(self.page_mock)
         compare("RE:Page", re_page.lemma)
         compare("Page", re_page.lemma_without_prefix)
+        compare("[[RE:Page|Page]]", re_page.lemma_as_link)
 
     def test_has_changed(self):
         self.text_mock.return_value = "{{REDaten}}text{{REAutor|Autor.}}"
