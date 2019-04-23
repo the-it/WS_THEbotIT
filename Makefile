@@ -35,6 +35,13 @@ unittest :
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
 	nosetests
 
+integrationtest :
+	echo "######## INTEGRATIONTEST #######"
+	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
+	export INTEGRATION=1 && \
+	coverage run all_tests.py && \
+	coverage xml
+
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \

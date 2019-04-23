@@ -408,6 +408,10 @@ class RePage(Sequence):
         return self.lemma[3:]
 
     @property
+    def lemma_as_link(self):
+        return f"[[{self.lemma}|{self.lemma_without_prefix}]]"
+
+    @property
     def splitted_article_list(self) -> List[List[Union[Article, str]]]:
         splitted_list = list()
         for article in self._article_list:

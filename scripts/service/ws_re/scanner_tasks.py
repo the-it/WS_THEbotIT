@@ -169,7 +169,6 @@ class SCANTask(ReScannerTask):
         authors.set_author(self._fetch_author_infos())
         self.logger.info("Persist the register data.")
         self.registers.persist()
-        self.logger.info("Pushing the changes upstream.")
         self._push_changes()
 
     def _fetch_author_infos(self) -> Mapping:
@@ -217,7 +216,7 @@ class SCANTask(ReScannerTask):
                         lemma.update_lemma_dict(update_dict, delete_list)
                         continue
                 self.logger.error(f"No available Lemma in Registers for issue {band_info} "
-                                  f"and lemma {self.re_page.lemma_without_prefix}")
+                                  f"and lemma {self.re_page.lemma_as_link}")
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)

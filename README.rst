@@ -2,7 +2,7 @@
 WS_THEbotIT
 ===========
 
-|travis-badge|_ |circleci|_ |appveyor|_ |license-badge|_ |pyup-badge|_ |codacy|_ |code-cov|_
+|travis-badge|_ |circleci|_ |license-badge|_ |pyup-badge|_ |codacy|_ |code-cov|_
 
 .. |travis-badge| image:: https://travis-ci.org/the-it/WS_THEbotIT.svg?branch=master
 .. _travis-badge: https://travis-ci.org/the-it/WS_THEbotIT
