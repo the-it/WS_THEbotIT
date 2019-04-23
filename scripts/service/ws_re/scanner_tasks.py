@@ -197,8 +197,20 @@ class SCANTask(ReScannerTask):
             return {"ws_link": f"s:de:{wp_link}"}, []
         return {}, ["ws_link"]
 
+    @staticmethod
+    def _fetch_sort_key(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        sort_key = article["SORTIERUNG"].value
+        if sort_key:
+            return {"sort_key": sort_key}, []
+        return {}, ["sort_key"]
+
+    def _fetch_lemma(self, _) -> Tuple[Dict[str, Any], List[str]]:  # pylint: disable=unused-argument
+        return {"lemma": self.re_page.lemma_without_prefix}, []
+
     def _fetch_from_article_list(self):
-        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link)
+        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key,
+                                    self._fetch_lemma)
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):
@@ -211,7 +223,7 @@ class SCANTask(ReScannerTask):
                 band_info = article_list[0]["BAND"].value
                 register = self.registers.volumes[band_info]
                 if register:
-                    lemma = register.get_lemma(self.re_page.lemma_without_prefix)
+                    lemma = register.get_lemma(update_dict["lemma"])
                     if lemma:
                         lemma.update_lemma_dict(update_dict, delete_list)
                         continue

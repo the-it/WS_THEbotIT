@@ -454,12 +454,44 @@ text.
         compare(({}, ["wp_link"]), SCANTask._fetch_wp_link(article))
         compare(({}, ["ws_link"]), SCANTask._fetch_ws_link(article))
 
+    def test_sortkey(self):
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|SORTIERUNG=Abalas limen
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"sort_key": "Abalas limen"}, []), SCANTask._fetch_sort_key(article))
+
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({}, ["sort_key"]), SCANTask._fetch_sort_key(article))
+
+    def test_lemma(self):
+        self.title_mock.return_value = "RE:Aal"
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        article = re_page.splitted_article_list[0]
+        task = SCANTask(None, self.logger)
+        task.re_page =  re_page
+        compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
+
     def test_fetch_from_properties(self):
         self.title_mock.return_value = "RE:Aal"
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |WP=Aal_wp_link
 |WS=Aal_ws_link
+|SORTIERUNG=Aal
 }}
 text.
 {{REAutor|OFF}}"""
@@ -469,6 +501,7 @@ text.
         post_lemma = task.registers["I,1"].get_lemma("Aal")
         compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
+        compare("Aal", post_lemma.lemma_dict["sort_key"])
 
     def test_fetch_from_properties_lemma_not_found(self):
         self.title_mock.return_value = "RE:Aas"

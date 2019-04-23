@@ -507,6 +507,8 @@ class TestLemma(BaseTestRegister):
         reverse_dict = {"chapters": [{"start": 1, "author": "Abel", "end": 1},
                                      {"start": 1, "end": 2, "author": "Abbott"}],
                         "wp_link": "tada",
+                        "ws_link": "tadü",
+                        "sort_key": "something",
                         "redirect": True,
                         "next": "next",
                         "previous": "previous",
@@ -517,8 +519,10 @@ class TestLemma(BaseTestRegister):
         expected_dict = OrderedDict([("lemma", "lemma"),
                                      ("previous", "previous"),
                                      ("next", "next"),
+                                     ("sort_key", "something"),
                                      ("redirect", True),
                                      ("wp_link", "tada"),
+                                     ("ws_link", "tadü"),
                                      ("chapters", [chapter_dict_1, chapter_dict_2])])
         compare(expected_dict, dict_lemma.lemma_dict)
 
