@@ -472,6 +472,19 @@ text.
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({}, ["sort_key"]), SCANTask._fetch_sort_key(article))
 
+    def test_lemma(self):
+        self.title_mock.return_value = "RE:Aal"
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        article = re_page.splitted_article_list[0]
+        task = SCANTask(None, self.logger)
+        task.re_page =  re_page
+        compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
+
     def test_fetch_from_properties(self):
         self.title_mock.return_value = "RE:Aal"
         self.text_mock.return_value = """{{REDaten
