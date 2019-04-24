@@ -208,9 +208,17 @@ class SCANTask(ReScannerTask):
     def _fetch_lemma(self, _) -> Tuple[Dict[str, Any], List[str]]:  # pylint: disable=unused-argument
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
+    @staticmethod
+    def _fetch_redirect(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        redirect = article["VERWEIS"].value
+        if redirect:
+            return {"redirect": redirect}, []
+        return {}, ["redirect"]
+
     def _fetch_from_article_list(self):
         function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key,
-                                    self._fetch_lemma)
+                                    self._fetch_lemma, self._fetch_redirect)
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):
