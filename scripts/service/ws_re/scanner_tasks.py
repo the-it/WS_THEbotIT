@@ -10,7 +10,7 @@ from github import Github
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
-from scripts.service.ws_re.register import Registers, AuthorCrawler
+from scripts.service.ws_re.register import Registers, AuthorCrawler, RegisterException
 from tools import fetch_text_from_wiki_site
 from tools.bots import WikiLogger
 
@@ -208,9 +208,17 @@ class SCANTask(ReScannerTask):
     def _fetch_lemma(self, _) -> Tuple[Dict[str, Any], List[str]]:  # pylint: disable=unused-argument
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
+    @staticmethod
+    def _fetch_redirect(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        redirect = article["VERWEIS"].value
+        if redirect:
+            return {"redirect": redirect}, []
+        return {}, ["redirect"]
+
     def _fetch_from_article_list(self):
         function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key,
-                                    self._fetch_lemma)
+                                    self._fetch_lemma, self._fetch_redirect)
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):
@@ -223,12 +231,12 @@ class SCANTask(ReScannerTask):
                 band_info = article_list[0]["BAND"].value
                 register = self.registers.volumes[band_info]
                 if register:
-                    lemma = register.get_lemma(update_dict["lemma"])
-                    if lemma:
-                        lemma.update_lemma_dict(update_dict, delete_list)
+                    try:
+                        register.update_lemma(update_dict, delete_list)
                         continue
-                self.logger.error(f"No available Lemma in Registers for issue {band_info} "
-                                  f"and lemma {self.re_page.lemma_as_link}")
+                    except RegisterException:
+                        self.logger.error(f"No available Lemma in Registers for issue {band_info} "
+                                          f"and lemma {self.re_page.lemma_as_link}")
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)

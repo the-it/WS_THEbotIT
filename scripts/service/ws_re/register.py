@@ -525,11 +525,23 @@ class VolumeRegister(Register):
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
 
-    def get_lemma(self, lemma_name: str) -> Union[Lemma, None]:
+    def __getitem__(self, lemma_name: str) -> Union[Lemma, None]:
         for lemma in self.lemmas:
             if lemma["lemma"] == lemma_name:
                 return lemma
         return None
+
+    def __contains__(self, lemma_name: str) -> bool:
+        return bool(self[lemma_name])
+
+    def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List):
+        if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
+            self[lemma_dict["lemma"]].update_lemma_dict(lemma_dict, remove_items)
+        elif "sort_key" in lemma_dict and lemma_dict["sort_key"] in self:
+            self[lemma_dict["sort_key"]].update_lemma_dict(lemma_dict, remove_items)
+        else:
+            raise RegisterException(f"The update of the register {self.volume} "
+                                    f"with the dict {lemma_dict} is not possible")
 
 
 class AlphabeticRegister(Register):

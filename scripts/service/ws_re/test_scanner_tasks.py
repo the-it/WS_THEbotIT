@@ -485,6 +485,25 @@ text.
         task.re_page =  re_page
         compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
 
+    def test_redirect(self):
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|VERWEIS=ON
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"redirect": True}, []), SCANTask._fetch_redirect(article))
+
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|VERWEIS=OFF
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({}, ["redirect"]), SCANTask._fetch_redirect(article))
+
     def test_fetch_from_properties(self):
         self.title_mock.return_value = "RE:Aal"
         self.text_mock.return_value = """{{REDaten
@@ -492,16 +511,18 @@ text.
 |WP=Aal_wp_link
 |WS=Aal_ws_link
 |SORTIERUNG=Aal
+|VERWEIS=ON
 }}
 text.
 {{REAutor|OFF}}"""
         task = SCANTask(None, self.logger)
         task.re_page = RePage(self.page_mock)
         task._fetch_from_article_list()
-        post_lemma = task.registers["I,1"].get_lemma("Aal")
+        post_lemma = task.registers["I,1"]["Aal"]
         compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
         compare("Aal", post_lemma.lemma_dict["sort_key"])
+        compare(True, post_lemma.lemma_dict["redirect"])
 
     def test_fetch_from_properties_lemma_not_found(self):
         self.title_mock.return_value = "RE:Aas"

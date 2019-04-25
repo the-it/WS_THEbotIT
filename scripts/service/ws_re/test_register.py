@@ -624,9 +624,34 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     def test_get_lemma_by_name(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        lemma = register.get_lemma("Aba 1")
+        lemma = register["Aba 1"]
         compare("Aarassos", lemma["previous"])
-        self.assertIsNone(register.get_lemma("Abracadabra"))
+        self.assertIsNone(register["Abracadabra"])
+
+    def test_update_lemma(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Aal", "redirect": True}
+        register.update_lemma(update_dict, ["next"])
+        post_lemma = register["Aal"]
+        self.assertTrue(post_lemma["redirect"])
+        self.assertIsNone(post_lemma["next"])
+
+    def test_update_lemma_by_sortkey(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Äal", "redirect": True, "sort_key": "Aal"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register["Äal"]
+        compare(True, post_lemma["redirect"])
+        compare("Aal", post_lemma["sort_key"])
+
+    def test_update_no_update_possible(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam"}
+        with self.assertRaises(RegisterException):
+            register.update_lemma(update_dict, [])
 
 
 class TestAlphabeticRegister(BaseTestRegister):
