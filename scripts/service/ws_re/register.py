@@ -329,16 +329,19 @@ class Lemma(Mapping):
         return self._sort_key
 
     def _make_sort_key(self):
-        lemma = self["lemma"]
-        # simple replacement of single characters
-        lemma = lemma.casefold().translate(_TRANSLATION_DICT)
+        if self["sort_key"]:
+            self._sort_key = self["sort_key"].casefold()
+        else:
+            lemma = self["lemma"]
+            # simple replacement of single characters
+            lemma = lemma.casefold().translate(_TRANSLATION_DICT)
 
-        for regex in _REGEX_LIST:
-            lemma = regex[0].sub(regex[1], lemma)
+            for regex in _REGEX_LIST:
+                lemma = regex[0].sub(regex[1], lemma)
 
-        # delete dots at last
-        lemma = lemma.replace(".", " ")
-        self._sort_key = lemma.strip()
+            # delete dots at last
+            lemma = lemma.replace(".", " ")
+            self._sort_key = lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
