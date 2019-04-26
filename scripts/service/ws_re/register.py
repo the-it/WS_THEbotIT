@@ -330,18 +330,18 @@ class Lemma(Mapping):
 
     def _make_sort_key(self):
         if self["sort_key"]:
-            self._sort_key = self["sort_key"].casefold()
+            lemma = self["sort_key"]
         else:
             lemma = self["lemma"]
-            # simple replacement of single characters
-            lemma = lemma.casefold().translate(_TRANSLATION_DICT)
+        # simple replacement of single characters
+        lemma = lemma.casefold().translate(_TRANSLATION_DICT)
 
-            for regex in _REGEX_LIST:
-                lemma = regex[0].sub(regex[1], lemma)
+        for regex in _REGEX_LIST:
+            lemma = regex[0].sub(regex[1], lemma)
 
-            # delete dots at last
-            lemma = lemma.replace(".", " ")
-            self._sort_key = lemma.strip()
+        # delete dots at last
+        lemma = lemma.replace(".", " ")
+        self._sort_key = lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -377,11 +377,16 @@ class Lemma(Mapping):
 
     def get_table_row(self, print_volume: bool = False) -> str:
         row_string = ["|-"]
-        link_or_volume = self.volume.name if print_volume else self.get_link()
-        if len(self._chapters) > 1:
-            row_string.append(f"rowspan={len(self._chapters)}|{link_or_volume}")
+        if print_volume:
+            link_or_volume = self.volume.name
+            sort_value = ""
         else:
-            row_string.append(link_or_volume)
+            link_or_volume = self.get_link()
+            sort_value = f"data-sort-value=\"{self.sort_key}\""
+        if len(self._chapters) > 1:
+            row_string.append(f"rowspan={len(self._chapters)} {sort_value}|{link_or_volume}")
+        else:
+            row_string.append(f"{sort_value}|{link_or_volume}")
         for chapter in self._chapters:
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))
@@ -604,9 +609,9 @@ class AlphabeticRegister(Register):
             # strip |-/n form the first line it is later replaced by the lemma line
             table_rows[0] = table_rows[0][3:]
             if chapter_sum > 1:
-                table.append(f"|-\n|rowspan={chapter_sum}|{lemma.get_link()}")
+                table.append(f"|-\n|rowspan={chapter_sum} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}")
             else:
-                table.append(f"|-\n|{lemma.get_link()}")
+                table.append(f"|-\n|data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}")
             table += table_rows
         table.append("|}")
         return "\n".join(table)
