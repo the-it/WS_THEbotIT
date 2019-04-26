@@ -507,7 +507,11 @@ class TestLemma(BaseTestRegister):
         sort_dict["lemma"] = "Lemma"
         sort_dict["sort_key"] = "WasAnderes"
         sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("wasanderes", sort_lemma.sort_key)
+        compare("uasanderes", sort_lemma.sort_key)
+
+        sort_dict["sort_key"] = "WasAnderes 02"
+        sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("uasanderes 002", sort_lemma.sort_key)
 
     def test_return_dict(self):
         reverse_dict = {"chapters": [{"start": 1, "author": "Abel", "end": 1},
