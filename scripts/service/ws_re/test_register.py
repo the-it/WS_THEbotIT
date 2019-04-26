@@ -434,7 +434,7 @@ class TestLemma(BaseTestRegister):
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|[[RE:lemma|{{Anker2|lemma}}]]
+|data-sort-value="lemma"|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998"""
@@ -444,7 +444,7 @@ class TestLemma(BaseTestRegister):
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|rowspan=2|[[RE:lemma|{{Anker2|lemma}}]]
+|rowspan=2 data-sort-value="lemma"|[[RE:lemma|{{Anker2|lemma}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998
@@ -453,7 +453,7 @@ class TestLemma(BaseTestRegister):
 |Abbott
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
-        expected_row = expected_row.replace("[[RE:lemma|{{Anker2|lemma}}]]", "I,1")
+        expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|{{Anker2|lemma}}]]", "|I,1")
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
     def test_sort_key(self):
@@ -585,12 +585,12 @@ class TestRegister(BaseTestRegister):
 !Autor
 !Sterbejahr
 |-
-|[[RE:Aal|{{Anker2|Aal}}]]
+|data-sort-value="aal"|[[RE:Aal|{{Anker2|Aal}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-|[[RE:Aarassos|{{Anker2|Aarassos}}]]
+|data-sort-value="aarassos"|[[RE:Aarassos|{{Anker2|Aarassos}}]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
@@ -714,8 +714,8 @@ class TestAlphabeticRegister(BaseTestRegister):
 !Autor
 !Sterbejahr
 |-
-|rowspan=3|[[RE:Beta|{{Anker2|Beta}}]]
-|rowspan=2|I,1
+|rowspan=3 data-sort-value="beta"|[[RE:Beta|{{Anker2|Beta}}]]
+|rowspan=2 |I,1
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
@@ -724,31 +724,31 @@ class TestAlphabeticRegister(BaseTestRegister):
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-|III,1
+||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abbott
 |style="background:#CBCBCB"|
 |-
-|[[RE:Charlie|{{Anker2|Charlie}}]]
-|III,1
+|data-sort-value="charlie"|[[RE:Charlie|{{Anker2|Charlie}}]]
+||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-|[[RE:Delta|{{Anker2|Delta}}]]
-|III,1
+|data-sort-value="delta"|[[RE:Delta|{{Anker2|Delta}}]]
+||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
 |-
-|[[RE:Vaaa|{{Anker2|Vaaa}}]]
-|III,1
+|data-sort-value="uaaa"|[[RE:Vaaa|{{Anker2|Vaaa}}]]
+||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
 |-
-|[[RE:Ueee|{{Anker2|Ueee}}]]
-|III,1
+|data-sort-value="ueee"|[[RE:Ueee|{{Anker2|Ueee}}]]
+||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
