@@ -7115,6 +7115,7 @@
     "lemma": "Cypsaria",
     "previous": "Cyprusa",
     "next": "Cypsela",
+    "redirect": true,
     "chapters": [
       {
         "start": 1942,
@@ -7305,6 +7306,7 @@
     "lemma": "Dabeira",
     "previous": "Dabausa",
     "next": "Dabelli",
+    "redirect": true,
     "chapters": [
       {
         "start": 1947,
@@ -8735,9 +8737,10 @@
     ]
   },
   {
-    "lemma": "Daktylodochme",
+    "lemma": "Δακτυλοδόχμη",
     "previous": "Daktyliotheke",
     "next": "Daktyloi",
+    "sort_key": "Daktylodochme",
     "chapters": [
       {
         "start": 2017,
@@ -8759,9 +8762,11 @@
     ]
   },
   {
-    "lemma": "Daktyloi Idaioi",
+    "lemma": "Δάκτυλοι Ἰδαῖοι",
     "previous": "Daktyloi",
     "next": "Daktylos 1",
+    "sort_key": "Daktyloi Idaioi",
+    "redirect": true,
     "chapters": [
       {
         "start": 2020,
@@ -8809,6 +8814,7 @@
     "lemma": "Daktylos 4",
     "previous": "Daktylos 3",
     "next": "Daktyloton",
+    "redirect": true,
     "chapters": [
       {
         "start": 2021,
@@ -8829,9 +8835,10 @@
     ]
   },
   {
-    "lemma": "Daktylou mnema",
+    "lemma": "Δακτύλου μνῆμα",
     "previous": "Daktyloton",
     "next": "Daldiaios",
+    "sort_key": "Daktylou mnema",
     "chapters": [
       {
         "start": 2021,
@@ -19328,6 +19335,7 @@
     "lemma": "Q. Dellius",
     "previous": "Delli",
     "next": "Delmatae",
+    "sort_key": "Dellius Q.",
     "chapters": [
       {
         "start": 2447,
