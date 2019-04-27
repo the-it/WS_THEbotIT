@@ -335,10 +335,8 @@ class Lemma(Mapping):
             lemma = self["lemma"]
         # simple replacement of single characters
         lemma = lemma.casefold().translate(_TRANSLATION_DICT)
-
         for regex in _REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
-
         # delete dots at last
         lemma = lemma.replace(".", " ")
         self._sort_key = lemma.strip()
@@ -533,20 +531,27 @@ class VolumeRegister(Register):
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
 
-    def __getitem__(self, lemma_name: str) -> Union[Lemma, None]:
+    def __getitem__(self, idx: int) -> Lemma:
+        return self.lemmas[idx]
+
+    def get_lemma_by_name(self, lemma_name: str, self_supplement: bool = False) -> Union[Lemma, None]:
+        found_before = False
         for lemma in self.lemmas:
             if lemma["lemma"] == lemma_name:
-                return lemma
+                if found_before or not self_supplement:
+                    return lemma
+                found_before = True
         return None
 
     def __contains__(self, lemma_name: str) -> bool:
-        return bool(self[lemma_name])
+        return bool(self.get_lemma_by_name(lemma_name))
 
     def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List):
         if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
-            self[lemma_dict["lemma"]].update_lemma_dict(lemma_dict, remove_items)
+            self.get_lemma_by_name(lemma_dict["lemma"]).update_lemma_dict(lemma_dict, remove_items)
         elif "sort_key" in lemma_dict and lemma_dict["sort_key"] in self:
-            self[lemma_dict["sort_key"]].update_lemma_dict(lemma_dict, remove_items)
+            self.get_lemma_by_name(lemma_dict["sort_key"])\
+                .update_lemma_dict(lemma_dict, remove_items)
         else:
             raise RegisterException(f"The update of the register {self.volume} "
                                     f"with the dict {lemma_dict} is not possible")

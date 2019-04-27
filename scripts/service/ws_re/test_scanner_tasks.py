@@ -518,7 +518,7 @@ text.
         task = SCANTask(None, self.logger)
         task.re_page = RePage(self.page_mock)
         task._fetch_from_article_list()
-        post_lemma = task.registers["I,1"]["Aal"]
+        post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
         compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
         compare("Aal", post_lemma.lemma_dict["sort_key"])
