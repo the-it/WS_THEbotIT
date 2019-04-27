@@ -656,6 +656,16 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         with self.assertRaises(IndexError):
             register[8]
 
+    def test_get_id_of_lemma(self):
+        copy_tst_data("I_1_self_append", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        compare(0, register.get_index_of_lemma("Aal"))
+        compare(2, register.get_index_of_lemma("Something"))
+        compare(3, register.get_index_of_lemma("Aal", self_supplement=True))
+        lemma = register.get_lemma_by_name("Aal", self_supplement=True)
+        compare(3, register.get_index_of_lemma(lemma))
+        compare(None, register.get_index_of_lemma("Lemma not there"))
+
     def test_update_lemma(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
