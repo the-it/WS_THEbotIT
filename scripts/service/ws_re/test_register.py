@@ -4,7 +4,7 @@ import shutil
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
-from unittest import TestCase, skipUnless
+from unittest import TestCase, skipUnless, skip
 
 from testfixtures import compare
 
@@ -634,33 +634,104 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     def test_get_lemma_by_name(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        lemma = register["Aba 1"]
+        lemma = register.get_lemma_by_name("Aba 1")
         compare("Aarassos", lemma["previous"])
-        self.assertIsNone(register["Abracadabra"])
+        self.assertIsNone(register.get_lemma_by_name("Abracadabra"))
+
+    def test_get_lemma_self_append(self):
+        copy_tst_data("I_1_self_append", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        lemma = register.get_lemma_by_name("Aal")
+        compare(None, lemma["previous"])
+        lemma = register.get_lemma_by_name("Aal", self_supplement=True)
+        compare("Something", lemma["previous"])
+        lemma = register.get_lemma_by_name("Something", self_supplement=True)
+        compare(None, lemma)
+
+    def test_get_lemma_by_id(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        lemma = register[2]
+        compare("Aarassos", lemma["previous"])
+        with self.assertRaises(IndexError):
+            register[8]
+
+    def test_get_id_of_lemma(self):
+        copy_tst_data("I_1_self_append", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        compare(0, register.get_index_of_lemma("Aal"))
+        compare(2, register.get_index_of_lemma("Something"))
+        compare(3, register.get_index_of_lemma("Aal", self_supplement=True))
+        lemma = register.get_lemma_by_name("Aal", self_supplement=True)
+        compare(3, register.get_index_of_lemma(lemma))
+        compare(None, register.get_index_of_lemma("Lemma not there"))
 
     def test_update_lemma(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Aal", "redirect": True}
         register.update_lemma(update_dict, ["next"])
-        post_lemma = register["Aal"]
+        post_lemma = register.get_lemma_by_name("Aal")
         self.assertTrue(post_lemma["redirect"])
         self.assertIsNone(post_lemma["next"])
 
     def test_update_lemma_by_sortkey(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        update_dict = {"lemma": "Äal", "redirect": True, "sort_key": "Aal"}
+        update_dict = {"lemma": "Äal", "redirect": True, "sort_key": "Aal", "next": "Aarassos"}
         register.update_lemma(update_dict, [])
-        post_lemma = register["Äal"]
+        post_lemma = register.get_lemma_by_name("Äal")
         compare(True, post_lemma["redirect"])
         compare("Aal", post_lemma["sort_key"])
+        post_lemma_next = register.get_lemma_by_name("Aarassos")
+        compare("Äal", post_lemma_next["previous"])
+
+    def test_update_lemma_by_sortkey_pre_and_post(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal", "next": "Aba 1"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("Äarassos")
+        compare("Aarassos", post_lemma["sort_key"])
+        post_lemma_previous = register.get_lemma_by_name("Aal")
+        compare("Äarassos", post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("Aba 1")
+        compare("Äarassos", post_lemma_next["previous"])
+
+    def test_update_by_sortkey_raise_error(self):
+        copy_tst_data("I_1_update_previous_wrong", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Äarassos", "previous": "Aal", "next": "Aba 1", "sort_key": "Aarassos"}
+        with self.assertRaisesRegex(RegisterException, "doesn't match Ab 1 of next lemma"):
+            register.update_lemma(update_dict, [])
+        previous_lemma = register.get_lemma_by_name("Aal")
+        compare("Aarassos", previous_lemma["next"])
+        next_lemma = register.get_lemma_by_name("Ab 1")
+        compare("Aarassos", next_lemma["previous"])
+
+    def test_update_by_sortkey_raise_error_missing_key(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos"}
+        with self.assertRaisesRegex(RegisterException, "doesn't match Aal of previous lemma"):
+            register.update_lemma(update_dict, [])
+        previous_lemma = register.get_lemma_by_name("Aal")
+        compare("Aarassos", previous_lemma["next"])
+        next_lemma = register.get_lemma_by_name("Aba 1")
+        compare("Aarassos", next_lemma["previous"])
+        update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal"}
+        with self.assertRaisesRegex(RegisterException, "doesn't match Aba 1 of next lemma"):
+            register.update_lemma(update_dict, [])
+        previous_lemma = register.get_lemma_by_name("Aal")
+        compare("Aarassos", previous_lemma["next"])
+        next_lemma = register.get_lemma_by_name("Aba 1")
+        compare("Aarassos", next_lemma["previous"])
 
     def test_update_no_update_possible(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam"}
-        with self.assertRaises(RegisterException):
+        with self.assertRaisesRegex(RegisterException, "No strategy available"):
             register.update_lemma(update_dict, [])
 
 
@@ -813,3 +884,13 @@ class TestIntegrationRegister(TestCase):
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
             self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()))
+
+    @skip("only for analysis")
+    def test_no_double_lemma(self):  # pragma: no cover
+        for register in self.registers.volumes.values():
+            unique_lemmas = set()
+            for lemma in register.lemmas:
+                lemma_name = lemma["lemma"]
+                if lemma_name in unique_lemmas:
+                    print(f"Lemma {lemma_name} is not unique in register {register.volume.name}")
+                unique_lemmas.add(lemma_name)

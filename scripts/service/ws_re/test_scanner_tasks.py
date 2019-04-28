@@ -504,10 +504,62 @@ text.
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({}, ["redirect"]), SCANTask._fetch_redirect(article))
 
+    def test_previous(self):
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|VG=Lemma Previous
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"previous": "Lemma Previous"}, []), SCANTask._fetch_previous(article))
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|VG=OFF
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({}, ["previous"]), SCANTask._fetch_previous(article))
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({}, ["previous"]), SCANTask._fetch_previous(article))
+
+    def test_next(self):
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|NF=Lemma Next
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"next": "Lemma Next"}, []), SCANTask._fetch_next(article))
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|NF=OFF
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({}, ["next"]), SCANTask._fetch_next(article))
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+}}
+text.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({}, ["next"]), SCANTask._fetch_next(article))
+
     def test_fetch_from_properties(self):
         self.title_mock.return_value = "RE:Aal"
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
+|VORGÄNGER=Lemma Previous
+|NACHFOLGER=Lemma Next
 |WP=Aal_wp_link
 |WS=Aal_ws_link
 |SORTIERUNG=Aal
@@ -518,11 +570,13 @@ text.
         task = SCANTask(None, self.logger)
         task.re_page = RePage(self.page_mock)
         task._fetch_from_article_list()
-        post_lemma = task.registers["I,1"]["Aal"]
+        post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
         compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
         compare("Aal", post_lemma.lemma_dict["sort_key"])
         compare(True, post_lemma.lemma_dict["redirect"])
+        compare("Lemma Previous", post_lemma.lemma_dict["previous"])
+        compare("Lemma Next", post_lemma.lemma_dict["next"])
 
     def test_fetch_from_properties_lemma_not_found(self):
         self.title_mock.return_value = "RE:Aas"
@@ -537,4 +591,4 @@ text.
         task.re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
             task._fetch_from_article_list()
-            log_catcher.check(("Test", "ERROR", "No available Lemma in Registers for issue I,1 and lemma [[RE:Aas|Aas]]"))
+            log_catcher.check(("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")))

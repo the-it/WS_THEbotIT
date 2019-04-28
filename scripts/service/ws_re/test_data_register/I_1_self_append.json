@@ -1,0 +1,48 @@
+[
+  {
+    "lemma": "Aal",
+    "next": "Aarassos",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 4,
+        "author": "Abel"
+      }
+    ]
+  },
+  {
+    "lemma": "Aarassos",
+    "previous": "Aal",
+    "next": "Something",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abert"
+      }
+    ]
+  },
+  {
+    "lemma": "Something",
+    "previous": "Aarassos",
+    "next": "Aal",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 5,
+        "author": "Abert"
+      }
+    ]
+  },
+  {
+    "lemma": "Aal",
+    "previous": "Something",
+    "chapters": [
+      {
+        "start": 5,
+        "end": 6,
+        "author": "Abel"
+      }
+    ]
+  }
+]

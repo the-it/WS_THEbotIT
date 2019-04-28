@@ -216,9 +216,25 @@ class SCANTask(ReScannerTask):
             return {"redirect": redirect}, []
         return {}, ["redirect"]
 
+    @staticmethod
+    def _fetch_previous(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        previous = article["VORGÄNGER"].value
+        if previous and previous != "OFF":
+            return {"previous": previous}, []
+        return {}, ["previous"]
+
+    @staticmethod
+    def _fetch_next(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        next_lemma = article["NACHFOLGER"].value
+        if next_lemma and next_lemma != "OFF":
+            return {"next": next_lemma}, []
+        return {}, ["next"]
+
     def _fetch_from_article_list(self):
-        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key,
-                                    self._fetch_lemma, self._fetch_redirect)
+        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key, self._fetch_lemma,
+                                    self._fetch_redirect, self._fetch_previous, self._fetch_next)
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):
@@ -234,9 +250,10 @@ class SCANTask(ReScannerTask):
                     try:
                         register.update_lemma(update_dict, delete_list)
                         continue
-                    except RegisterException:
+                    except RegisterException as error:
                         self.logger.error(f"No available Lemma in Registers for issue {band_info} "
-                                          f"and lemma {self.re_page.lemma_as_link}")
+                                          f"and lemma {self.re_page.lemma_as_link}. "
+                                          f"Reason is: {error.args[0]}")
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
