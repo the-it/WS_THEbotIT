@@ -558,11 +558,42 @@ class VolumeRegister(Register):
         if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
             self.get_lemma_by_name(lemma_dict["lemma"]).update_lemma_dict(lemma_dict, remove_items)
         elif "sort_key" in lemma_dict and lemma_dict["sort_key"] in self:
-            self.get_lemma_by_name(lemma_dict["sort_key"])\
-                .update_lemma_dict(lemma_dict, remove_items)
+            self._update_by_sortkey(lemma_dict, remove_items)
         else:
             raise RegisterException(f"The update of the register {self.volume} "
-                                    f"with the dict {lemma_dict} is not possible")
+                                    f"with the dict {lemma_dict} is not possible. "
+                                    f"No strategy available")
+
+    def _update_by_sortkey(self, lemma_dict, remove_items):
+        lemma_to_update = self.get_lemma_by_name(lemma_dict["sort_key"])
+        idx = self.get_index_of_lemma(lemma_to_update)
+        previous_test = False
+        if lemma_to_update["previous"]:
+            pre_lemma = self[idx - 1]
+            try:
+                previous_test = \
+                    lemma_to_update["previous"] == pre_lemma["lemma"] == lemma_dict["previous"]
+            except KeyError:
+                pass
+            if not previous_test:
+                raise RegisterException(f"{lemma_to_update['previous']} "
+                                        f"doesn't match {pre_lemma['lemma']} of previous lemma")
+        next_test = False
+        if lemma_to_update["next"]:
+            next_lemma = self[idx + 1]
+            try:
+                next_test = \
+                    lemma_to_update["next"] == next_lemma["lemma"] == lemma_dict["next"]
+            except KeyError:
+                pass
+            if not next_test:
+                raise RegisterException(f"{lemma_to_update['next']} "
+                                        f"doesn't match {next_lemma['lemma']} of next lemma")
+        if previous_test:
+            pre_lemma.update_lemma_dict({"next": lemma_dict["lemma"]})
+        if next_test:
+            next_lemma.update_lemma_dict({"previous": lemma_dict["lemma"]})
+        lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
 
 
 class AlphabeticRegister(Register):

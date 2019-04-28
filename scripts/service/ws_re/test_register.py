@@ -678,17 +678,60 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     def test_update_lemma_by_sortkey(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        update_dict = {"lemma": "Äal", "redirect": True, "sort_key": "Aal"}
+        update_dict = {"lemma": "Äal", "redirect": True, "sort_key": "Aal", "next": "Aarassos"}
         register.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Äal")
         compare(True, post_lemma["redirect"])
         compare("Aal", post_lemma["sort_key"])
+        post_lemma_next = register.get_lemma_by_name("Aarassos")
+        compare("Äal", post_lemma_next["previous"])
+
+    def test_update_lemma_by_sortkey_pre_and_post(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal", "next": "Aba 1"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("Äarassos")
+        compare("Aarassos", post_lemma["sort_key"])
+        post_lemma_previous = register.get_lemma_by_name("Aal")
+        compare("Äarassos", post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("Aba 1")
+        compare("Äarassos", post_lemma_next["previous"])
+
+    def test_update_by_sortkey_raise_error(self):
+        copy_tst_data("I_1_update_previous_wrong", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Äarassos", "previous": "Aal", "next": "Aba 1", "sort_key": "Aarassos"}
+        with self.assertRaisesRegex(RegisterException, "doesn't match Ab 1 of next lemma"):
+            register.update_lemma(update_dict, [])
+        previous_lemma = register.get_lemma_by_name("Aal")
+        compare("Aarassos", previous_lemma["next"])
+        next_lemma = register.get_lemma_by_name("Ab 1")
+        compare("Aarassos", next_lemma["previous"])
+
+    def test_update_by_sortkey_raise_error_missing_key(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos"}
+        with self.assertRaisesRegex(RegisterException, "doesn't match Aal of previous lemma"):
+            register.update_lemma(update_dict, [])
+        previous_lemma = register.get_lemma_by_name("Aal")
+        compare("Aarassos", previous_lemma["next"])
+        next_lemma = register.get_lemma_by_name("Aba 1")
+        compare("Aarassos", next_lemma["previous"])
+        update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal"}
+        with self.assertRaisesRegex(RegisterException, "doesn't match Aba 1 of next lemma"):
+            register.update_lemma(update_dict, [])
+        previous_lemma = register.get_lemma_by_name("Aal")
+        compare("Aarassos", previous_lemma["next"])
+        next_lemma = register.get_lemma_by_name("Aba 1")
+        compare("Aarassos", next_lemma["previous"])
 
     def test_update_no_update_possible(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam"}
-        with self.assertRaises(RegisterException):
+        with self.assertRaisesRegex(RegisterException, "No strategy available"):
             register.update_lemma(update_dict, [])
 
 

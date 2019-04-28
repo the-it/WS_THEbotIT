@@ -227,9 +227,9 @@ class SCANTask(ReScannerTask):
     @staticmethod
     def _fetch_next(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
         article = article_list[0]
-        next = article["NACHFOLGER"].value
-        if next and next != "OFF":
-            return {"next": next}, []
+        next_lemma = article["NACHFOLGER"].value
+        if next_lemma and next_lemma != "OFF":
+            return {"next": next_lemma}, []
         return {}, ["next"]
 
     def _fetch_from_article_list(self):
