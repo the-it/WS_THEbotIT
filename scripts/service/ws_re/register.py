@@ -560,7 +560,7 @@ class VolumeRegister(Register):
         elif "sort_key" in lemma_dict and lemma_dict["sort_key"] in self:
             self._update_by_sortkey(lemma_dict, remove_items)
         else:
-            raise RegisterException(f"The update of the register {self.volume} "
+            raise RegisterException(f"The update of the register {self.volume.name} "
                                     f"with the dict {lemma_dict} is not possible. "
                                     f"No strategy available")
 

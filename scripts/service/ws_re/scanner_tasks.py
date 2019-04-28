@@ -250,9 +250,10 @@ class SCANTask(ReScannerTask):
                     try:
                         register.update_lemma(update_dict, delete_list)
                         continue
-                    except RegisterException:
+                    except RegisterException as error:
                         self.logger.error(f"No available Lemma in Registers for issue {band_info} "
-                                          f"and lemma {self.re_page.lemma_as_link}")
+                                          f"and lemma {self.re_page.lemma_as_link}. "
+                                          f"Reason is: {error.args[0]}")
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
