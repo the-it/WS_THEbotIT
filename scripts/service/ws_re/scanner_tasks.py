@@ -216,9 +216,25 @@ class SCANTask(ReScannerTask):
             return {"redirect": redirect}, []
         return {}, ["redirect"]
 
+    @staticmethod
+    def _fetch_previous(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        previous = article["VORGÄNGER"].value
+        if previous and previous != "OFF":
+            return {"previous": previous}, []
+        return {}, ["previous"]
+
+    @staticmethod
+    def _fetch_next(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+        article = article_list[0]
+        next = article["NACHFOLGER"].value
+        if next and next != "OFF":
+            return {"next": next}, []
+        return {}, ["next"]
+
     def _fetch_from_article_list(self):
-        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key,
-                                    self._fetch_lemma, self._fetch_redirect)
+        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key, self._fetch_lemma,
+                                    self._fetch_redirect, self._fetch_previous, self._fetch_next)
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):
