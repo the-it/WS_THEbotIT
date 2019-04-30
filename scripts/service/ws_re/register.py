@@ -450,6 +450,10 @@ class Lemma(Mapping):
         return year_format
 
     def update_lemma_dict(self, update_dict: Dict, remove_items: List = None):
+        print("this is a workaround remove it sometime soon please")
+        if "previous" in update_dict.keys() and "next" in update_dict.keys():
+            del update_dict["previous"]
+            del update_dict["next"]
         for item_key in update_dict:
             self._lemma_dict[item_key] = update_dict[item_key]
         if remove_items:
