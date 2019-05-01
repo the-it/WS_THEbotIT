@@ -914,6 +914,7 @@
     "lemma": "Golgotha",
     "previous": "Golgos",
     "next": "Gomadeorum insulae",
+    "wp_link": "w:de:Golgota",
     "chapters": [
       {
         "start": 1581,
@@ -16049,7 +16050,7 @@
   {
     "lemma": "Heleon",
     "previous": "Helenus 8",
-    "next": "Helepolis",
+    "next": "Ἑλέπολις",
     "chapters": [
       {
         "start": 2848,
@@ -16059,9 +16060,11 @@
     ]
   },
   {
-    "lemma": "Helepolis",
+    "lemma": "Ἑλέπολις",
     "previous": "Heleon",
     "next": "Helgas",
+    "sort_key": "Helepolis",
+    "wp_link": "w:de:Helepolis",
     "chapters": [
       {
         "start": 2849,
@@ -16072,7 +16075,7 @@
   },
   {
     "lemma": "Helgas",
-    "previous": "Helepolis",
+    "previous": "Ἑλέπολις",
     "next": "Heliadai",
     "chapters": [
       {

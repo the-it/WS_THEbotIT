@@ -5027,6 +5027,7 @@
     "lemma": "Achates 2",
     "previous": "Achates 1",
     "next": "Achates 3",
+    "wp_link": "w:de:Achat",
     "chapters": [
       {
         "start": 211,
@@ -5453,6 +5454,7 @@
     "lemma": "Acherusia 5",
     "previous": "Acherusia 4",
     "next": "Achilides Cherronesoi",
+    "wp_link": "w:de:Ägypten",
     "chapters": [
       {
         "start": 219,
@@ -5477,6 +5479,7 @@
     "lemma": "Achillas 1",
     "previous": "Achilides Cherronesoi",
     "next": "Achillas 2",
+    "wp_link": "w:de:Achillas",
     "chapters": [
       {
         "start": 220,
@@ -5562,6 +5565,7 @@
     "lemma": "Achilleion 4",
     "previous": "Achilleion 3",
     "next": "Achilleios charax",
+    "redirect": true,
     "chapters": [
       {
         "start": 220,
@@ -5743,6 +5747,7 @@
     "lemma": "Achilleus 7",
     "previous": "Achilleus 6",
     "next": "Achilleus Tatios 1",
+    "wp_link": "w:de:Aurelius Achilleus",
     "chapters": [
       {
         "start": 245,
@@ -7948,6 +7953,7 @@
     "lemma": "Adada 1",
     "previous": "Adad",
     "next": "Adada 2",
+    "wp_link": "w:de:Adada",
     "chapters": [
       {
         "start": 339,
@@ -29277,6 +29283,7 @@
     "lemma": "Aigisthos",
     "previous": "Aigisteos",
     "next": "Aigithallos",
+    "wp_link": "w:de:Aigisthos",
     "chapters": [
       {
         "start": 972,
@@ -33700,6 +33707,7 @@
     "lemma": "Akamas 3",
     "previous": "Akamas 2",
     "next": "Akamas 4",
+    "wp_link": "w:de:Akamas (Sohn des Eussoros)",
     "chapters": [
       {
         "start": 1143,
@@ -33712,6 +33720,7 @@
     "lemma": "Akamas 4",
     "previous": "Akamas 3",
     "next": "Akamas 5",
+    "wp_link": "w:de:Akamas (Sohn des Theseus)",
     "chapters": [
       {
         "start": 1143,
@@ -33723,7 +33732,7 @@
   {
     "lemma": "Akamas 5",
     "previous": "Akamas 4",
-    "next": "Akampion",
+    "next": "Ἀκάμπιον",
     "chapters": [
       {
         "start": 1145,
@@ -33733,9 +33742,11 @@
     ]
   },
   {
-    "lemma": "Akampion",
+    "lemma": "Ἀκάμπιον",
     "previous": "Akamas 5",
     "next": "Akampsis",
+    "sort_key": "Akampion",
+    "wp_link": "w:de:Wagenrennen",
     "chapters": [
       {
         "start": 1145,
@@ -33746,8 +33757,9 @@
   },
   {
     "lemma": "Akampsis",
-    "previous": "Akampion",
+    "previous": "Ἀκάμπιον",
     "next": "Akannai",
+    "wp_link": "w:de:Çoruh",
     "chapters": [
       {
         "start": 1146,
@@ -36699,6 +36711,7 @@
     "lemma": "Aktion",
     "previous": "Aktias",
     "next": "Aktios 1",
+    "wp_link": "w:de:Actium",
     "chapters": [
       {
         "start": 1214,
@@ -41609,6 +41622,8 @@
     "lemma": "Alexandreia 1",
     "previous": "Alexandra 3",
     "next": "Alexandreia 2",
+    "sort_key": "Alexandreia 01",
+    "wp_link": "w:de:Alexandria in der Antike",
     "chapters": [
       {
         "start": 1376,
@@ -41621,6 +41636,7 @@
     "lemma": "Alexandreia 2",
     "previous": "Alexandreia 1",
     "next": "Alexandreia 3",
+    "sort_key": "Alexandreia 02",
     "chapters": [
       {
         "start": 1388,
@@ -41633,6 +41649,7 @@
     "lemma": "Alexandreia 3",
     "previous": "Alexandreia 2",
     "next": "Alexandreia 4",
+    "sort_key": "Alexandreia 03",
     "chapters": [
       {
         "start": 1389,
@@ -41645,6 +41662,7 @@
     "lemma": "Alexandreia 4",
     "previous": "Alexandreia 3",
     "next": "Alexandreia 5",
+    "sort_key": "Alexandreia 04",
     "chapters": [
       {
         "start": 1389,
@@ -41669,6 +41687,8 @@
     "lemma": "Alexandreia 6",
     "previous": "Alexandreia 5",
     "next": "Alexandreia 7",
+    "sort_key": "Alexandreia 06",
+    "wp_link": "w:de:Ghazna",
     "chapters": [
       {
         "start": 1389,
@@ -41681,6 +41701,7 @@
     "lemma": "Alexandreia 7",
     "previous": "Alexandreia 6",
     "next": "Alexandreia 8",
+    "sort_key": "Alexandreia 07",
     "chapters": [
       {
         "start": 1390,
@@ -41693,6 +41714,7 @@
     "lemma": "Alexandreia 8",
     "previous": "Alexandreia 7",
     "next": "Alexandreia 9",
+    "sort_key": "Alexandreia 08",
     "chapters": [
       {
         "start": 1390,
@@ -41705,6 +41727,7 @@
     "lemma": "Alexandreia 9",
     "previous": "Alexandreia 8",
     "next": "Alexandreia 10",
+    "sort_key": "Alexandreia 09",
     "chapters": [
       {
         "start": 1390,
@@ -41717,6 +41740,7 @@
     "lemma": "Alexandreia 10",
     "previous": "Alexandreia 9",
     "next": "Alexandreia 11",
+    "sort_key": "Alexandreia 10",
     "chapters": [
       {
         "start": 1390,
@@ -41779,6 +41803,7 @@
     "lemma": "Alexandreia 15",
     "previous": "Alexandreia 14",
     "next": "Alexandreia 16",
+    "wp_link": "w:de:İskenderun",
     "chapters": [
       {
         "start": 1395,
@@ -41791,6 +41816,7 @@
     "lemma": "Alexandreia 16",
     "previous": "Alexandreia 15",
     "next": "Alexandreia 17",
+    "wp_link": "w:de:Alexandria Troas",
     "chapters": [
       {
         "start": 1396,
@@ -41827,6 +41853,7 @@
     "lemma": "Alexandreia 19",
     "previous": "Alexandreia 18",
     "next": "Alexandreia 20",
+    "redirect": true,
     "chapters": [
       {
         "start": 1396,
