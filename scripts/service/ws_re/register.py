@@ -257,7 +257,7 @@ _TRANSLATION_DICT = {"a": "α",
                      "l": "λ",
                      "m": "μ",
                      "n": "ν",
-                     "o": "ωο", #  don't get confused this is an omikron
+                     "o": "ωο",  # don't get confused this is an omikron
                      "p": "π",
                      "ph": "φ",
                      "ps": "ψ",
@@ -313,7 +313,7 @@ class Lemma(Mapping):
         self._chapters = []
         self._sort_key = ""
         self._init_chapters()
-        self.sort_key = self._make_sort_key()
+        self._set_sort_key()
 
     def _init_chapters(self):
         self._chapters = []
@@ -353,22 +353,22 @@ class Lemma(Mapping):
     def sort_key(self):
         return self._sort_key
 
-    @sort_key.setter
-    def sort_key(self, new_sort_key: str):
-        self._sort_key = new_sort_key
+    def _set_sort_key(self):
+        if self["sort_key"]:
+            lemma = self["sort_key"]
+        else:
+            lemma = self["lemma"]
+        self._sort_key = self._make_sort_key(lemma)
 
     @staticmethod
     def _strip_accents(s):
         return ''.join(c for c in unicodedata.normalize('NFD', s)
                        if unicodedata.category(c) != 'Mn')
 
-    def _make_sort_key(self):
-        if self["sort_key"]:
-            lemma = self["sort_key"]
-        else:
-            lemma = self["lemma"]
+    @classmethod
+    def _make_sort_key(cls, lemma: str):
         # remove all accents
-        lemma = self._strip_accents(lemma)
+        lemma = cls._strip_accents(lemma)
         for regex in _PRE_REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
         # simple replacement of single characters
@@ -499,7 +499,7 @@ class Lemma(Mapping):
                 if item in self._lemma_dict:
                     del self._lemma_dict[item]
         self._init_chapters()
-        self.sort_key = self._make_sort_key()
+        self._set_sort_key()
 
 
 class Register(ABC):  # pylint: disable=too-few-public-methods
