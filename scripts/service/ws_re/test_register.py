@@ -1,6 +1,7 @@
 import copy
 import os
 import shutil
+import time
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
@@ -456,51 +457,22 @@ class TestLemma(BaseTestRegister):
         expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|{{Anker2|lemma}}]]", "|I,1")
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
+    def test_strip_accents(self):
+        compare("Αβαλας λιμηνaoueeeec", Lemma._strip_accents("Ἀβάλας λιμήνäöüèéêëç"))
+
     def test_sort_key(self):
-        sort_dict = copy.deepcopy(self.basic_dict)
-        sort_dict["lemma"] = "Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"
-        sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("uuuiiissceaouesoaceeeeiioouusu", sort_lemma.sort_key)
-
-        sort_dict["lemma"] = "ad Flexum"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("flexum", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "ab epistulis"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("epistulis", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "a memoria"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("memoria", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "aabaa abfl"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("aabaa abfl", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "aabab abfl"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("aabab abfl", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "aabad abfl"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("aabad abfl", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "G. abfl"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("abfl", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "Abdigildus (?)"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("abdigildus", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "Abd 1 11 230"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("abd 001 011 230", uvwij_lemma.sort_key)
-
-        sort_dict["lemma"] = "E....orceni"
-        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
-        compare("e    orceni", uvwij_lemma.sort_key)
+        compare("uuuiiissceaouesoaceeeeiioouusu", Lemma._make_sort_key("Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"))
+        compare("flexum", Lemma._make_sort_key("ad Flexum"))
+        compare("epistulis", Lemma._make_sort_key("ab epistulis"))
+        compare("memoria", Lemma._make_sort_key("a memoria"))
+        compare("aabaa abfl", Lemma._make_sort_key("aabaa abfl"))
+        compare("aabab abfl", Lemma._make_sort_key("aabab abfl"))
+        compare("aabad abfl", Lemma._make_sort_key("aabad abfl"))
+        compare("abfl", Lemma._make_sort_key("G. abfl"))
+        compare("abdigildus", Lemma._make_sort_key("Abdigildus (?)"))
+        compare("abd 001 011 230", Lemma._make_sort_key("Abd 1 11 230"))
+        compare("e    orceni", Lemma._make_sort_key("E....orceni"))
+        compare("abalas limenu", Lemma._make_sort_key("Ἀβάλας λιμήνου"))
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)
@@ -879,7 +851,13 @@ _MAX_SIZE_WIKI_PAGE = 2098175
 class TestIntegrationRegister(TestCase):
     @classmethod
     def setUpClass(cls):
+        start = time.time()
         cls.registers = Registers()
+        end = time.time()
+        init_time = end - start
+        if (init_time) > 15:
+            raise AssertionError(f"Register take to long to initiate ... {init_time} s. "
+                                 "It should initiate in 15 seconds.")
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
