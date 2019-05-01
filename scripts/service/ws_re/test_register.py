@@ -1,6 +1,7 @@
 import copy
 import os
 import shutil
+import time
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
@@ -456,11 +457,15 @@ class TestLemma(BaseTestRegister):
         expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|{{Anker2|lemma}}]]", "|I,1")
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
+    def test_strip_accents(self):
+        compare("Αβαλας λιμηνaoueeeec", Lemma._strip_accents("Ἀβάλας λιμήνäöüèéêëç"))
+
     def test_sort_key(self):
         sort_dict = copy.deepcopy(self.basic_dict)
         sort_dict["lemma"] = "Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"
         sort_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
         compare("uuuiiissceaouesoaceeeeiioouusu", sort_lemma.sort_key)
+
 
         sort_dict["lemma"] = "ad Flexum"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
@@ -501,6 +506,10 @@ class TestLemma(BaseTestRegister):
         sort_dict["lemma"] = "E....orceni"
         uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
         compare("e    orceni", uvwij_lemma.sort_key)
+
+        sort_dict["lemma"] = "Ἀβάλας λιμήνου"
+        uvwij_lemma = Lemma(sort_dict, self.volumes["I,1"], self.authors)
+        compare("abalas limenu", uvwij_lemma.sort_key)
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)
@@ -879,7 +888,13 @@ _MAX_SIZE_WIKI_PAGE = 2098175
 class TestIntegrationRegister(TestCase):
     @classmethod
     def setUpClass(cls):
+        start = time.time()
         cls.registers = Registers()
+        end = time.time()
+        init_time = end - start
+        if (init_time) > 15:
+            raise AssertionError(f"Register take to long to initiate ... {init_time} s. "
+                                 "It should initiate in 15 seconds.")
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():

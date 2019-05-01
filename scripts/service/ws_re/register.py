@@ -1,5 +1,6 @@
 import json
 import re
+import unicodedata
 from abc import ABC
 from collections import OrderedDict
 from collections.abc import Mapping
@@ -245,13 +246,29 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = {"a": "äâ",
-                     "c": "ç",
-                     "e": "èéêë",
-                     "i": "jïî",
-                     "o": "öô",
-                     "s": "ś",
-                     "u": "vwüûū",
+_TRANSLATION_DICT = {"a": "α",
+                     "b": "β",
+                     "ch": "χ",
+                     "d": "δ",
+                     "e": "εη",
+                     "g": "γ",
+                     "i": "jι",
+                     "k": "κ",
+                     "l": "λ",
+                     "m": "μ",
+                     "n": "ν",
+                     "o": "ωο", #  don't get confused this is an omikron
+                     "p": "π",
+                     "ph": "φ",
+                     "ps": "ψ",
+                     "r": "ρ",
+                     "s": "σ",
+                     "t": "τ",
+                     "th": "θ",
+                     "u": "vw",
+                     "x": "ξ",
+                     "y": "υ",
+                     "z": "ζ",
                      "": "()?\'ʾʿ"}
 
 _TMP_DICT = {}
@@ -260,8 +277,7 @@ for key in _TRANSLATION_DICT:
         _TMP_DICT[character] = key
 _TRANSLATION_DICT = str.maketrans(_TMP_DICT)
 
-
-_REGEX_RAW_LIST = [
+_POST_REGEX_RAW_LIST = [
     # catching of "a ...", "ab ..." and "ad ..."
     (r"^a[db]? ", ""),
     # catching of "X. ..."
@@ -270,9 +286,18 @@ _REGEX_RAW_LIST = [
     (r"(?<!\d)(\d)(?!\d)", r"00\g<1>"),
     (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>")]
 
-_REGEX_LIST = []
-for regex_pair in _REGEX_RAW_LIST:
-    _REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
+_POST_REGEX_LIST = []
+for regex_pair in _POST_REGEX_RAW_LIST:
+    _POST_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
+
+# some regex actions must performed before the TRANSLATION_DICT replacement
+
+_PRE_REGEX_RAW_LIST = [
+    (r"ου", "u")]
+
+_PRE_REGEX_LIST = []
+for regex_pair in _PRE_REGEX_RAW_LIST:
+    _PRE_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
 
 
 class Lemma(Mapping):
@@ -288,7 +313,7 @@ class Lemma(Mapping):
         self._chapters = []
         self._sort_key = ""
         self._init_chapters()
-        self._make_sort_key()
+        self.sort_key = self._make_sort_key()
 
     def _init_chapters(self):
         self._chapters = []
@@ -328,18 +353,31 @@ class Lemma(Mapping):
     def sort_key(self):
         return self._sort_key
 
+    @sort_key.setter
+    def sort_key(self, new_sort_key: str):
+        self._sort_key = new_sort_key
+
+    @staticmethod
+    def _strip_accents(s):
+        return ''.join(c for c in unicodedata.normalize('NFD', s)
+                       if unicodedata.category(c) != 'Mn')
+
     def _make_sort_key(self):
         if self["sort_key"]:
             lemma = self["sort_key"]
         else:
             lemma = self["lemma"]
+        # remove all accents
+        lemma = self._strip_accents(lemma)
+        for regex in _PRE_REGEX_LIST:
+            lemma = regex[0].sub(regex[1], lemma)
         # simple replacement of single characters
         lemma = lemma.casefold().translate(_TRANSLATION_DICT)
-        for regex in _REGEX_LIST:
+        for regex in _POST_REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
         # delete dots at last
         lemma = lemma.replace(".", " ")
-        self._sort_key = lemma.strip()
+        return lemma.strip()
 
     def keys(self):
         return self._lemma_dict.keys()
@@ -461,7 +499,7 @@ class Lemma(Mapping):
                 if item in self._lemma_dict:
                     del self._lemma_dict[item]
         self._init_chapters()
-        self._make_sort_key()
+        self.sort_key = self._make_sort_key()
 
 
 class Register(ABC):  # pylint: disable=too-few-public-methods
