@@ -361,9 +361,9 @@ class Lemma(Mapping):
         self._sort_key = self._make_sort_key(lemma)
 
     @staticmethod
-    def _strip_accents(s):
-        return ''.join(c for c in unicodedata.normalize('NFD', s)
-                       if unicodedata.category(c) != 'Mn')
+    def _strip_accents(accent_string):
+        return ''.join(character for character in unicodedata.normalize('NFD', accent_string)
+                       if unicodedata.category(character) != 'Mn')
 
     @classmethod
     def _make_sort_key(cls, lemma: str):
