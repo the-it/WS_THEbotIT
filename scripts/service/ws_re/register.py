@@ -358,7 +358,7 @@ class Lemma(Mapping):
             lemma = self["sort_key"]
         else:
             lemma = self["lemma"]
-        self._sort_key = self._make_sort_key(lemma)
+        self._sort_key = self.make_sort_key(lemma)
 
     @staticmethod
     def _strip_accents(accent_string):
@@ -366,7 +366,7 @@ class Lemma(Mapping):
                        if unicodedata.category(character) != 'Mn')
 
     @classmethod
-    def _make_sort_key(cls, lemma: str):
+    def make_sort_key(cls, lemma: str):
         # remove all accents
         lemma = cls._strip_accents(lemma)
         for regex in _PRE_REGEX_LIST:
