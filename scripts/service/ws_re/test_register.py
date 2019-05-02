@@ -461,18 +461,18 @@ class TestLemma(BaseTestRegister):
         compare("Αβαλας λιμηνaoueeeec", Lemma._strip_accents("Ἀβάλας λιμήνäöüèéêëç"))
 
     def test_sort_key(self):
-        compare("uuuiiissceaouesoaceeeeiioouusu", Lemma._make_sort_key("Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"))
-        compare("flexum", Lemma._make_sort_key("ad Flexum"))
-        compare("epistulis", Lemma._make_sort_key("ab epistulis"))
-        compare("memoria", Lemma._make_sort_key("a memoria"))
-        compare("aabaa abfl", Lemma._make_sort_key("aabaa abfl"))
-        compare("aabab abfl", Lemma._make_sort_key("aabab abfl"))
-        compare("aabad abfl", Lemma._make_sort_key("aabad abfl"))
-        compare("abfl", Lemma._make_sort_key("G. abfl"))
-        compare("abdigildus", Lemma._make_sort_key("Abdigildus (?)"))
-        compare("abd 001 011 230", Lemma._make_sort_key("Abd 1 11 230"))
-        compare("e    orceni", Lemma._make_sort_key("E....orceni"))
-        compare("abalas limenu", Lemma._make_sort_key("Ἀβάλας λιμήνου"))
+        compare("uuuiiissceaouesoaceeeeiioouusu", Lemma.make_sort_key("Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"))
+        compare("flexum", Lemma.make_sort_key("ad Flexum"))
+        compare("epistulis", Lemma.make_sort_key("ab epistulis"))
+        compare("memoria", Lemma.make_sort_key("a memoria"))
+        compare("aabaa abfl", Lemma.make_sort_key("aabaa abfl"))
+        compare("aabab abfl", Lemma.make_sort_key("aabab abfl"))
+        compare("aabad abfl", Lemma.make_sort_key("aabad abfl"))
+        compare("abfl", Lemma.make_sort_key("G. abfl"))
+        compare("abdigildus", Lemma.make_sort_key("Abdigildus (?)"))
+        compare("abd 001 011 230", Lemma.make_sort_key("Abd 1 11 230"))
+        compare("e    orceni", Lemma.make_sort_key("E....orceni"))
+        compare("abalas limenu", Lemma.make_sort_key("Ἀβάλας λιμήνου"))
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)
@@ -674,7 +674,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         copy_tst_data("I_1_update_previous_wrong", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "previous": "Aal", "next": "Aba 1", "sort_key": "Aarassos"}
-        with self.assertRaisesRegex(RegisterException, "doesn't match Ab 1 of next lemma"):
+        with self.assertRaisesRegex(RegisterException, "!= next lemma name \"Ab 1\""):
             register.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma["next"])
@@ -685,14 +685,14 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos"}
-        with self.assertRaisesRegex(RegisterException, "doesn't match Aal of previous lemma"):
+        with self.assertRaisesRegex(RegisterException, "!= previous lemma name \"Aal\""):
             register.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma["next"])
         next_lemma = register.get_lemma_by_name("Aba 1")
         compare("Aarassos", next_lemma["previous"])
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal"}
-        with self.assertRaisesRegex(RegisterException, "doesn't match Aba 1 of next lemma"):
+        with self.assertRaisesRegex(RegisterException, "!= next lemma name \"Aba 1\""):
             register.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma["next"])
