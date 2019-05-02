@@ -618,8 +618,9 @@ class VolumeRegister(Register):
             except KeyError:
                 pass
             if not previous_test:
-                raise RegisterException(f"{lemma_to_update['previous']} "
-                                        f"doesn't match {pre_lemma['lemma']} of previous lemma")
+                raise RegisterException(f"Current Lemma previous: \"{lemma_to_update['previous']}\""
+                                        f" != previous lemma name \"{pre_lemma['lemma']}\" "
+                                        f"!= new lemma value previous \"{lemma_dict.get('previous', 'no key')}\"")
         next_test = False
         if lemma_to_update["next"]:
             next_lemma = self[idx + 1]
@@ -629,8 +630,9 @@ class VolumeRegister(Register):
             except KeyError:
                 pass
             if not next_test:
-                raise RegisterException(f"{lemma_to_update['next']} "
-                                        f"doesn't match {next_lemma['lemma']} of next lemma")
+                raise RegisterException(f"Current Lemma next: \"{lemma_to_update['next']}\" "
+                                        f"!= next lemma name \"{next_lemma['lemma']}\" "
+                                        f"!= new lemma value next \"{lemma_dict.get('next', 'no key')}\"")
         if previous_test:
             pre_lemma.update_lemma_dict({"next": lemma_dict["lemma"]})
         if next_test:
