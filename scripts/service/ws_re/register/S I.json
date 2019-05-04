@@ -12581,6 +12581,7 @@
     "lemma": "Caesius 3a",
     "previous": "Caementarius",
     "next": "Caldis",
+    "sort_key": "Caesius 03a",
     "chapters": [
       {
         "start": 270,
@@ -12640,7 +12641,7 @@
   {
     "lemma": "Calpurnius 131a",
     "previous": "Calpurnius 53a",
-    "next": "Calventius 1",
+    "next": "L. Calventius",
     "chapters": [
       {
         "start": 272,
@@ -12650,9 +12651,10 @@
     ]
   },
   {
-    "lemma": "Calventius 1",
+    "lemma": "L. Calventius",
     "previous": "Calpurnius 131a",
     "next": "Calvisius 3a",
+    "sort_key": "Calventius 1",
     "chapters": [
       {
         "start": 272,
@@ -12663,7 +12665,7 @@
   },
   {
     "lemma": "Calvisius 3a",
-    "previous": "Calventius 1",
+    "previous": "L. Calventius",
     "next": "Calvisius 9",
     "chapters": [
       {
@@ -12737,6 +12739,7 @@
     "lemma": "Campi Cauchi",
     "previous": "Camogenis",
     "next": "Camulatus 1",
+    "sort_key": "Campicauchi",
     "chapters": [
       {
         "start": 273,
