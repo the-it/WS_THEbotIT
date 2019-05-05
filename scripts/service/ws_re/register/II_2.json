@@ -304,6 +304,7 @@
     "lemma": "Artemon 1",
     "previous": "Artemius 5",
     "next": "Artemon 2",
+    "sort_key": "Artemon 01",
     "chapters": [
       {
         "start": 1445,
@@ -316,6 +317,7 @@
     "lemma": "Artemon 2",
     "previous": "Artemon 1",
     "next": "Artemon 3",
+    "sort_key": "Artemon 02",
     "chapters": [
       {
         "start": 1445,
@@ -328,6 +330,7 @@
     "lemma": "Artemon 3",
     "previous": "Artemon 2",
     "next": "Artemon 4",
+    "sort_key": "Artemon 03",
     "chapters": [
       {
         "start": 1445,
@@ -340,6 +343,7 @@
     "lemma": "Artemon 4",
     "previous": "Artemon 3",
     "next": "Artemon 5",
+    "sort_key": "Artemon 04",
     "chapters": [
       {
         "start": 1445,
@@ -352,6 +356,7 @@
     "lemma": "Artemon 5",
     "previous": "Artemon 4",
     "next": "Artemon 6",
+    "sort_key": "Artemon 05",
     "chapters": [
       {
         "start": 1445,
@@ -364,6 +369,7 @@
     "lemma": "Artemon 6",
     "previous": "Artemon 5",
     "next": "Artemon 7",
+    "sort_key": "Artemon 06",
     "chapters": [
       {
         "start": 1445,
@@ -376,6 +382,7 @@
     "lemma": "Artemon 7",
     "previous": "Artemon 6",
     "next": "Artemon 8",
+    "sort_key": "Artemon 07",
     "chapters": [
       {
         "start": 1445,
@@ -388,6 +395,7 @@
     "lemma": "Artemon 8",
     "previous": "Artemon 7",
     "next": "Artemon 9",
+    "sort_key": "Artemon 08",
     "chapters": [
       {
         "start": 1445,
@@ -400,6 +408,7 @@
     "lemma": "Artemon 9",
     "previous": "Artemon 8",
     "next": "Artemon 10",
+    "sort_key": "Artemon 09",
     "chapters": [
       {
         "start": 1445,
@@ -712,7 +721,7 @@
   {
     "lemma": "Artiaca",
     "previous": "Arthmios",
-    "next": "Artiazein",
+    "next": "Ἀρτιάζειν",
     "redirect": true,
     "chapters": [
       {
@@ -722,9 +731,10 @@
     ]
   },
   {
-    "lemma": "Artiazein",
+    "lemma": "Ἀρτιάζειν",
     "previous": "Artiaca",
     "next": "Articabe",
+    "sort_key": "Artiazein",
     "chapters": [
       {
         "start": 1449,
@@ -735,7 +745,7 @@
   },
   {
     "lemma": "Articabe",
-    "previous": "Artiazein",
+    "previous": "Ἀρτιάζειν",
     "next": "Articula",
     "chapters": [
       {
@@ -1003,7 +1013,7 @@
   {
     "lemma": "Artonis",
     "previous": "Artona vicus",
-    "next": "Artophoron",
+    "next": "Ἀρτοφόρον",
     "wp_link": "w:de:Artonis",
     "chapters": [
       {
@@ -1014,9 +1024,10 @@
     ]
   },
   {
-    "lemma": "Artophoron",
+    "lemma": "Ἀρτοφόρον",
     "previous": "Artonis",
     "next": "Artopta",
+    "sort_key": "Artophoron",
     "chapters": [
       {
         "start": 1460,
@@ -1027,7 +1038,7 @@
   },
   {
     "lemma": "Artopta",
-    "previous": "Artophoron",
+    "previous": "Ἀρτοφόρον",
     "next": "Artorius 1",
     "chapters": [
       {
@@ -1065,6 +1076,7 @@
     "lemma": "Artorius 3",
     "previous": "Artorius 2",
     "next": "Artorius 4",
+    "sort_key": "Artorius 03",
     "chapters": [
       {
         "start": 1461,
@@ -1077,6 +1089,7 @@
     "lemma": "Artorius 4",
     "previous": "Artorius 3",
     "next": "Artorius 5",
+    "sort_key": "Artorius 04",
     "wp_link": "w:de:Artorius",
     "chapters": [
       {
@@ -1233,7 +1246,7 @@
   {
     "lemma": "Artymnesos",
     "previous": "Artylaos",
-    "next": "Artynai",
+    "next": "Ἀρτῦναι",
     "chapters": [
       {
         "start": 1462,
@@ -1243,9 +1256,10 @@
     ]
   },
   {
-    "lemma": "Artynai",
+    "lemma": "Ἀρτῦναι",
     "previous": "Artymnesos",
     "next": "Artynia",
+    "sort_key": "Artynai",
     "chapters": [
       {
         "start": 1462,
@@ -1256,7 +1270,7 @@
   },
   {
     "lemma": "Artynia",
-    "previous": "Artynai",
+    "previous": "Ἀρτῦναι",
     "next": "Artystone",
     "chapters": [
       {
@@ -3792,6 +3806,7 @@
     "lemma": "Asia 5",
     "previous": "Asia 4",
     "next": "Asia 6",
+    "sort_key": "Asia 05",
     "chapters": [
       {
         "start": 1563,
@@ -3803,6 +3818,7 @@
     "lemma": "Asia 6",
     "previous": "Asia 5",
     "next": "Asia 7",
+    "sort_key": "Asia 06",
     "chapters": [
       {
         "start": 1563,
@@ -3840,6 +3856,7 @@
     "lemma": "Asia 9",
     "previous": "Asia 8",
     "next": "Asia 10",
+    "sort_key": "Asia 09",
     "chapters": [
       {
         "start": 1563,
@@ -4524,6 +4541,7 @@
     "lemma": "Asinius 6",
     "previous": "Asinius 5",
     "next": "Asinius 7",
+    "sort_key": "Asinius 06",
     "chapters": [
       {
         "start": 1583,
@@ -4536,6 +4554,7 @@
     "lemma": "Asinius 7",
     "previous": "Asinius 6",
     "next": "Asinius 8",
+    "sort_key": "Asinius 07",
     "chapters": [
       {
         "start": 1584,
@@ -5541,7 +5560,7 @@
   {
     "lemma": "Askaules",
     "previous": "Askatakas",
-    "next": "Askera",
+    "next": "Ἀσκέρα",
     "chapters": [
       {
         "start": 1615,
@@ -5551,9 +5570,10 @@
     ]
   },
   {
-    "lemma": "Askera",
+    "lemma": "Ἀσκέρα",
     "previous": "Askaules",
     "next": "Askerris",
+    "sort_key": "Askera",
     "chapters": [
       {
         "start": 1615,
@@ -5564,7 +5584,7 @@
   },
   {
     "lemma": "Askerris",
-    "previous": "Askera",
+    "previous": "Ἀσκέρα",
     "next": "Asketades",
     "chapters": [
       {
@@ -20049,6 +20069,7 @@
     "lemma": "Attikos 11",
     "previous": "Attikos 10a-f",
     "next": "Attikos 12",
+    "redirect": true,
     "chapters": [
       {
         "start": 2240,
