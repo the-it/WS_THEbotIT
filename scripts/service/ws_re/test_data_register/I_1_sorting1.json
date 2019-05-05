@@ -1,0 +1,30 @@
+[
+  {
+    "lemma": "A",
+    "next": "B"
+  },
+  {
+    "lemma": "B",
+    "previous": "A",
+    "next": "C"
+  },
+  {
+    "lemma": "C",
+    "previous": "B",
+    "next": "D"
+  },
+  {
+    "lemma": "D",
+    "previous": "C",
+    "next": "E"
+  },
+  {
+    "lemma": "E",
+    "previous": "D",
+    "next": "F"
+  },
+  {
+    "lemma": "F",
+    "previous": "E"
+  }
+]
