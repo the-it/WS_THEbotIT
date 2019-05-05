@@ -337,6 +337,7 @@
     "lemma": "Lollius 2",
     "previous": "Lollius 1",
     "next": "Lollius 3",
+    "sort_key": "Lollius 02",
     "chapters": [
       {
         "start": 1376,
@@ -349,6 +350,7 @@
     "lemma": "Lollius 3",
     "previous": "Lollius 2",
     "next": "Lollius 4",
+    "sort_key": "Lollius 03",
     "chapters": [
       {
         "start": 1376,
@@ -361,6 +363,7 @@
     "lemma": "Lollius 4",
     "previous": "Lollius 3",
     "next": "Lollius 5",
+    "sort_key": "Lollius 04",
     "chapters": [
       {
         "start": 1376,
@@ -409,6 +412,7 @@
     "lemma": "Lollius 8",
     "previous": "Lollius 7",
     "next": "Lollius 9",
+    "sort_key": "Lollius 08",
     "chapters": [
       {
         "start": 1377,
@@ -421,6 +425,7 @@
     "lemma": "Lollius 9",
     "previous": "Lollius 8",
     "next": "Lollius 10",
+    "sort_key": "Lollius 09",
     "chapters": [
       {
         "start": 1377,
@@ -683,7 +688,7 @@
   {
     "lemma": "Lollius 31",
     "previous": "Lollius 30",
-    "next": "Lombroteron",
+    "next": "Λομβρότερον",
     "chapters": [
       {
         "start": 1395,
@@ -693,9 +698,10 @@
     ]
   },
   {
-    "lemma": "Lombroteron",
+    "lemma": "Λομβρότερον",
     "previous": "Lollius 31",
     "next": "Lomentum 1",
+    "sort_key": "Lombroteron",
     "chapters": [
       {
         "start": 1395,
@@ -706,7 +712,7 @@
   },
   {
     "lemma": "Lomentum 1",
-    "previous": "Lombroteron",
+    "previous": "Λομβρότερον",
     "next": "Lomentum 2",
     "chapters": [
       {
