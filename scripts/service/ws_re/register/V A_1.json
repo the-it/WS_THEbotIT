@@ -902,7 +902,7 @@
   {
     "lemma": "Tauti",
     "previous": "Tauthe",
-    "next": "Tautike",
+    "next": "Ταυτίκη",
     "chapters": [
       {
         "start": 73,
@@ -911,9 +911,10 @@
     ]
   },
   {
-    "lemma": "Tautike",
+    "lemma": "Ταυτίκη",
     "previous": "Tauti",
     "next": "Tautomedes",
+    "sort_key": "Tautike",
     "chapters": [
       {
         "start": 73,
@@ -924,7 +925,7 @@
   },
   {
     "lemma": "Tautomedes",
-    "previous": "Tautike",
+    "previous": "Ταυτίκη",
     "next": "Taxatio",
     "chapters": [
       {
@@ -2133,6 +2134,7 @@
     "lemma": "Teisamenos 1",
     "previous": "Teisamenos",
     "next": "Teisamenos 2",
+    "sort_key": "Teisamenos 01",
     "wp_link": "w:de:Tisamenos (Sohn des Orestes)",
     "chapters": [
       {
@@ -2159,6 +2161,7 @@
     "lemma": "Teisamenos 3",
     "previous": "Teisamenos 2",
     "next": "Teisamenos 4",
+    "sort_key": "Teisamenos 03",
     "chapters": [
       {
         "start": 135,
@@ -11292,7 +11295,7 @@
   {
     "lemma": "Teuranus ager",
     "previous": "Teupalos",
-    "next": "Teuriochaimai",
+    "next": "Τευριοχαῖμαι",
     "chapters": [
       {
         "start": 1135,
@@ -11302,9 +11305,11 @@
     ]
   },
   {
-    "lemma": "Teuriochaimai",
+    "lemma": "Τευριοχαῖμαι",
     "previous": "Teuranus ager",
     "next": "Teurisker",
+    "sort_key": "Teuriochaimai",
+    "wp_link": "w:de:Teuriochaimai",
     "chapters": [
       {
         "start": 1135,
@@ -11315,7 +11320,7 @@
   },
   {
     "lemma": "Teurisker",
-    "previous": "Teuriochaimai",
+    "previous": "Τευριοχαῖμαι",
     "next": "Teuristae",
     "wp_link": "w:de:Taurisker",
     "chapters": [
