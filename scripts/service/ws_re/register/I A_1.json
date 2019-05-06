@@ -194,7 +194,7 @@
   {
     "lemma": "Rabilos",
     "previous": "Rabe 2",
-    "next": "Rabinthios",
+    "next": "Ῥαβίνθιος",
     "chapters": [
       {
         "start": 23,
@@ -204,9 +204,10 @@
     ]
   },
   {
-    "lemma": "Rabinthios",
+    "lemma": "Ῥαβίνθιος",
     "previous": "Rabilos",
     "next": "Rabirius 1",
+    "sort_key": "Rabinthios",
     "chapters": [
       {
         "start": 23,
@@ -217,7 +218,7 @@
   },
   {
     "lemma": "Rabirius 1",
-    "previous": "Rabinthios",
+    "previous": "Ῥαβίνθιος",
     "next": "Rabirius 2",
     "chapters": [
       {
@@ -375,6 +376,7 @@
     "lemma": "Racetiu(s)",
     "previous": "Rabuleius 2",
     "next": "Rachias",
+    "sort_key": "Racetius",
     "chapters": [
       {
         "start": 29,
@@ -386,7 +388,7 @@
   {
     "lemma": "Rachias",
     "previous": "Racetiu(s)",
-    "next": "Rachoi",
+    "next": "Ῥαχοί",
     "chapters": [
       {
         "start": 29,
@@ -396,9 +398,10 @@
     ]
   },
   {
-    "lemma": "Rachoi",
+    "lemma": "Ῥαχοί",
     "previous": "Rachias",
     "next": "Rachusoi",
+    "sort_key": "Rachoi",
     "chapters": [
       {
         "start": 30,
@@ -409,7 +412,7 @@
   },
   {
     "lemma": "Rachusoi",
-    "previous": "Rachoi",
+    "previous": "Ῥαχοί",
     "next": "Racilius 1",
     "chapters": [
       {
@@ -16589,7 +16592,7 @@
   {
     "lemma": "Ryndacus",
     "previous": "Rymmos",
-    "next": "Ryndakos",
+    "next": "Ῥύνδακος",
     "chapters": [
       {
         "start": 1286,
@@ -16599,9 +16602,10 @@
     ]
   },
   {
-    "lemma": "Ryndakos",
+    "lemma": "Ῥύνδακος",
     "previous": "Ryndacus",
     "next": "Ryndakos 1",
+    "sort_key": "Ryndakos",
     "chapters": [
       {
         "start": 1286,
@@ -16612,8 +16616,8 @@
   },
   {
     "lemma": "Ryndakos 1",
-    "previous": "Ryndakos",
-    "next": "Ryndakos 2",
+    "previous": "Ῥύνδακος",
+    "next": "Ῥύνδακος 2",
     "chapters": [
       {
         "start": 1286,
@@ -16623,9 +16627,10 @@
     ]
   },
   {
-    "lemma": "Ryndakos 2",
+    "lemma": "Ῥύνδακος 2",
     "previous": "Ryndakos 1",
     "next": "Rypara",
+    "sort_key": "Ryndakos 2",
     "chapters": [
       {
         "start": 1287,
@@ -16636,7 +16641,7 @@
   },
   {
     "lemma": "Rypara",
-    "previous": "Ryndakos 2",
+    "previous": "Ῥύνδακος 2",
     "next": "Ryparographos",
     "chapters": [
       {

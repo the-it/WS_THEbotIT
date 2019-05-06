@@ -146,6 +146,7 @@
     "lemma": "Demokles 2",
     "previous": "Demokles 1",
     "next": "Demokles 3",
+    "sort_key": "Demokles 02",
     "chapters": [
       {
         "start": 132,
@@ -158,6 +159,7 @@
     "lemma": "Demokles 3",
     "previous": "Demokles 2",
     "next": "Demokles 4",
+    "sort_key": "Demokles 03",
     "chapters": [
       {
         "start": 132,
@@ -170,6 +172,7 @@
     "lemma": "Demokles 4",
     "previous": "Demokles 3",
     "next": "Demokles 5",
+    "sort_key": "Demokles 04",
     "chapters": [
       {
         "start": 132,
@@ -182,6 +185,7 @@
     "lemma": "Demokles 5",
     "previous": "Demokles 4",
     "next": "Demokles 6",
+    "sort_key": "Demokles 05",
     "chapters": [
       {
         "start": 133,
@@ -194,6 +198,7 @@
     "lemma": "Demokles 6",
     "previous": "Demokles 5",
     "next": "Demokles 7",
+    "sort_key": "Demokles 06",
     "chapters": [
       {
         "start": 133,
@@ -206,6 +211,7 @@
     "lemma": "Demokles 7",
     "previous": "Demokles 6",
     "next": "Demokles 8",
+    "sort_key": "Demokles 07",
     "chapters": [
       {
         "start": 133,
@@ -218,6 +224,7 @@
     "lemma": "Demokles 8",
     "previous": "Demokles 7",
     "next": "Demokles 9",
+    "sort_key": "Demokles 08",
     "chapters": [
       {
         "start": 133,
@@ -230,6 +237,7 @@
     "lemma": "Demokles 9",
     "previous": "Demokles 8",
     "next": "Demokles 10",
+    "sort_key": "Demokles 09",
     "chapters": [
       {
         "start": 133,
@@ -338,6 +346,7 @@
     "lemma": "Demokrates 1",
     "previous": "Demokopos",
     "next": "Demokrates 2",
+    "sort_key": "Demokrates 01",
     "chapters": [
       {
         "start": 133,
@@ -350,6 +359,7 @@
     "lemma": "Demokrates 2",
     "previous": "Demokrates 1",
     "next": "Demokrates 3",
+    "sort_key": "Demokrates 02",
     "chapters": [
       {
         "start": 134,
@@ -362,6 +372,7 @@
     "lemma": "Demokrates 3",
     "previous": "Demokrates 2",
     "next": "Demokrates 4",
+    "sort_key": "Demokrates 03",
     "chapters": [
       {
         "start": 134,
@@ -374,6 +385,7 @@
     "lemma": "Demokrates 4",
     "previous": "Demokrates 3",
     "next": "Demokrates 5",
+    "sort_key": "Demokrates 04",
     "chapters": [
       {
         "start": 134,
@@ -386,6 +398,7 @@
     "lemma": "Demokrates 5",
     "previous": "Demokrates 4",
     "next": "Demokrates 6",
+    "sort_key": "Demokrates 05",
     "chapters": [
       {
         "start": 134,
@@ -398,6 +411,7 @@
     "lemma": "Demokrates 6",
     "previous": "Demokrates 5",
     "next": "Demokrates 7",
+    "sort_key": "Demokrates 06",
     "chapters": [
       {
         "start": 134,
@@ -410,6 +424,7 @@
     "lemma": "Demokrates 7",
     "previous": "Demokrates 6",
     "next": "Demokrates 8",
+    "sort_key": "Demokrates 07",
     "chapters": [
       {
         "start": 134,
@@ -422,6 +437,7 @@
     "lemma": "Demokrates 8",
     "previous": "Demokrates 7",
     "next": "Demokrates 9",
+    "sort_key": "Demokrates 08",
     "chapters": [
       {
         "start": 134,
@@ -434,6 +450,7 @@
     "lemma": "Demokrates 9",
     "previous": "Demokrates 8",
     "next": "Demokrates 10",
+    "sort_key": "Demokrates 09",
     "chapters": [
       {
         "start": 134,
@@ -565,6 +582,7 @@
     "lemma": "Demokritos 6",
     "previous": "Demokritos 5",
     "next": "Demokritos 7",
+    "wp_link": "w:de:Demokrit",
     "chapters": [
       {
         "start": 135,
@@ -18475,7 +18493,7 @@
   {
     "lemma": "Dipolis 2",
     "previous": "Dipolis 1",
-    "next": "Diproros",
+    "next": "Δίπρῳρος",
     "chapters": [
       {
         "start": 1161,
@@ -18484,9 +18502,10 @@
     ]
   },
   {
-    "lemma": "Diproros",
+    "lemma": "Δίπρῳρος",
     "previous": "Dipolis 2",
     "next": "Diprymnos",
+    "sort_key": "Diproros",
     "chapters": [
       {
         "start": 1161,
@@ -18497,7 +18516,7 @@
   },
   {
     "lemma": "Diprymnos",
-    "previous": "Diproros",
+    "previous": "Δίπρῳρος",
     "next": "Dipsakos 1",
     "chapters": [
       {
