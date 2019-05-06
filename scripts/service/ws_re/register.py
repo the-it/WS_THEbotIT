@@ -614,7 +614,9 @@ class VolumeRegister(Register):
             pre_lemma = self[idx - 1]
             try:
                 previous_test = \
-                    lemma_to_update["previous"] == pre_lemma["lemma"] == lemma_dict["previous"]
+                    Lemma.make_sort_key(lemma_to_update["previous"]) == \
+                    Lemma.make_sort_key(pre_lemma["lemma"]) == \
+                    Lemma.make_sort_key(lemma_dict["previous"])
             except KeyError:
                 pass
             if not previous_test:
@@ -626,7 +628,9 @@ class VolumeRegister(Register):
             next_lemma = self[idx + 1]
             try:
                 next_test = \
-                    lemma_to_update["next"] == next_lemma["lemma"] == lemma_dict["next"]
+                    Lemma.make_sort_key(lemma_to_update["next"]) == \
+                    Lemma.make_sort_key(next_lemma["lemma"]) == \
+                    Lemma.make_sort_key(lemma_dict["next"])
             except KeyError:
                 pass
             if not next_test:

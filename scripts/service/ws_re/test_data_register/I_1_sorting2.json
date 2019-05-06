@@ -1,36 +1,24 @@
 [
   {
     "lemma": "A",
-    "next": "B",
+    "next": "O",
     "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
   },
   {
-    "lemma": "B",
+    "lemma": "O",
     "previous": "A",
-    "next": "C",
+    "next": "U",
     "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
   },
   {
-    "lemma": "C",
-    "previous": "B",
+    "lemma": "U",
+    "previous": "O",
     "next": "D",
     "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
   },
   {
     "lemma": "D",
     "previous": "C",
-    "next": "E",
-    "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
-  },
-  {
-    "lemma": "E",
-    "previous": "D",
-    "next": "F",
-    "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
-  },
-  {
-    "lemma": "F",
-    "previous": "E",
     "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
   }
 ]
