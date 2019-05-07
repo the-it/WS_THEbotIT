@@ -3271,7 +3271,7 @@
   {
     "lemma": "Desmontes",
     "previous": "Desilaus",
-    "next": "Desmoterion",
+    "next": "Δεσμωτήριον",
     "chapters": [
       {
         "start": 250,
@@ -3281,9 +3281,10 @@
     ]
   },
   {
-    "lemma": "Desmoterion",
+    "lemma": "Δεσμωτήριον",
     "previous": "Desmontes",
     "next": "Desos",
+    "sort_key": "Desmoterion",
     "chapters": [
       {
         "start": 251,
@@ -3294,7 +3295,7 @@
   },
   {
     "lemma": "Desos",
-    "previous": "Desmoterion",
+    "previous": "Δεσμωτήριον",
     "next": "Despoina",
     "chapters": [
       {
@@ -4619,6 +4620,7 @@
     "lemma": "Dextrale",
     "previous": "Dexterati",
     "next": "Dextratum iunctio",
+    "redirect": true,
     "chapters": [
       {
         "start": 297,
@@ -4641,6 +4643,7 @@
     "lemma": "Dextrianus",
     "previous": "Dextratum iunctio",
     "next": "Dexu(v)iates",
+    "redirect": true,
     "chapters": [
       {
         "start": 297,
@@ -4652,6 +4655,7 @@
     "lemma": "Dexu(v)iates",
     "previous": "Dextrianus",
     "next": "Deision",
+    "wp_link": "w:de:fr:Dexcivate",
     "chapters": [
       {
         "start": 297,
@@ -7989,6 +7993,7 @@
     "lemma": "Dikaiarcheia",
     "previous": "Dikai apo symbolon",
     "next": "Dikaiarchos 1",
+    "wp_link": "w:de:Pozzuoli",
     "chapters": [
       {
         "start": 546,
@@ -12972,6 +12977,7 @@
     "lemma": "Dion 5",
     "previous": "Dion 4",
     "next": "Dion 6",
+    "sort_key": "Dion 05",
     "chapters": [
       {
         "start": 847,
@@ -18398,7 +18404,7 @@
   {
     "lemma": "Diphros",
     "previous": "Diphroi",
-    "next": "Diphthera",
+    "next": "Διφθέρα",
     "chapters": [
       {
         "start": 1157,
@@ -18407,9 +18413,10 @@
     ]
   },
   {
-    "lemma": "Diphthera",
+    "lemma": "Διφθέρα",
     "previous": "Diphros",
     "next": "Diplasiasmoi",
+    "sort_key": "Diphthera",
     "chapters": [
       {
         "start": 1157,
@@ -18420,7 +18427,7 @@
   },
   {
     "lemma": "Diplasiasmoi",
-    "previous": "Diphthera",
+    "previous": "Διφθέρα",
     "next": "Diploma",
     "chapters": [
       {
@@ -19546,6 +19553,7 @@
     "lemma": "Divortium",
     "previous": "Divona 3",
     "next": "Diur 1",
+    "wp_link": "w:de:Ehescheidung",
     "chapters": [
       {
         "start": 1241,
