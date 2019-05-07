@@ -8547,6 +8547,7 @@
     "lemma": "ad Amadum",
     "previous": "Amadokos 3",
     "next": "Amaesia",
+    "sort_key": "Amadum",
     "chapters": [
       {
         "start": 1713,
@@ -11397,6 +11398,7 @@
     "lemma": "Ameinias 6",
     "previous": "Ameinias 5",
     "next": "Ameinias 7",
+    "sort_key": "Ameinias 06",
     "chapters": [
       {
         "start": 1818,
@@ -11409,6 +11411,7 @@
     "lemma": "Ameinias 7",
     "previous": "Ameinias 6",
     "next": "Ameinias 8",
+    "sort_key": "Ameinias 07",
     "chapters": [
       {
         "start": 1818,
@@ -12430,6 +12433,7 @@
     "lemma": "Amida",
     "previous": "Amicus 3",
     "next": "Amigas",
+    "sort_key": "Amida",
     "wp_link": "w:de:Diyarbakır",
     "chapters": [
       {
@@ -13408,6 +13412,7 @@
     "lemma": "Ammonios 1",
     "previous": "Ammonides",
     "next": "Ammonios 2",
+    "sort_key": "Ammonios 01",
     "chapters": [
       {
         "start": 1861,
@@ -13456,6 +13461,7 @@
     "lemma": "Ammonios 5",
     "previous": "Ammonios 4",
     "next": "Ammonios 6",
+    "sort_key": "Ammonios 05",
     "chapters": [
       {
         "start": 1862,
@@ -13468,6 +13474,7 @@
     "lemma": "Ammonios 6",
     "previous": "Ammonios 5",
     "next": "Ammonios 7",
+    "sort_key": "Ammonios 06",
     "chapters": [
       {
         "start": 1862,
@@ -13975,7 +13982,7 @@
   {
     "lemma": "Amnos",
     "previous": "Amnius 2",
-    "next": "Amnoskopia",
+    "next": "Ἀμνοσκοπία",
     "chapters": [
       {
         "start": 1872,
@@ -13985,9 +13992,10 @@
     ]
   },
   {
-    "lemma": "Amnoskopia",
+    "lemma": "Ἀμνοσκοπία",
     "previous": "Amnos",
     "next": "Amnum",
+    "sort_key": "Amnoskopia",
     "chapters": [
       {
         "start": 1872,
@@ -13998,7 +14006,7 @@
   },
   {
     "lemma": "Amnum",
-    "previous": "Amnoskopia",
+    "previous": "Ἀμνοσκοπία",
     "next": "Amoca",
     "chapters": [
       {
@@ -14395,7 +14403,7 @@
   {
     "lemma": "Ampechonion",
     "previous": "Ampe",
-    "next": "Ampechonon",
+    "next": "Ἀμπέχονον",
     "chapters": [
       {
         "start": 1880,
@@ -14405,9 +14413,10 @@
     ]
   },
   {
-    "lemma": "Ampechonon",
+    "lemma": "Ἀμπέχονον",
     "previous": "Ampechonion",
     "next": "Ampeliotai",
+    "sort_key": "Ampechonon",
     "chapters": [
       {
         "start": 1880,
@@ -14418,7 +14427,7 @@
   },
   {
     "lemma": "Ampeliotai",
-    "previous": "Ampechonon",
+    "previous": "Ἀμπέχονον",
     "next": "Ampelius 1",
     "chapters": [
       {
@@ -14469,6 +14478,7 @@
     "lemma": "Ampeloëssa",
     "previous": "Ampelius 3",
     "next": "Ampelon",
+    "sort_key": "Ampeloessa",
     "chapters": [
       {
         "start": 1881,
@@ -17467,7 +17477,7 @@
   {
     "lemma": "Amydon",
     "previous": "Amutrium",
-    "next": "Amyetos",
+    "next": "Ἀμύητος",
     "chapters": [
       {
         "start": 1990,
@@ -17477,9 +17487,10 @@
     ]
   },
   {
-    "lemma": "Amyetos",
+    "lemma": "Ἀμύητος",
     "previous": "Amydon",
     "next": "Amygdale",
+    "sort_key": "Amyetos",
     "chapters": [
       {
         "start": 1990,
@@ -17490,7 +17501,7 @@
   },
   {
     "lemma": "Amygdale",
-    "previous": "Amyetos",
+    "previous": "Ἀμύητος",
     "next": "Amygdalon",
     "chapters": [
       {
@@ -17720,7 +17731,7 @@
   {
     "lemma": "Amykos 7",
     "previous": "Amykos 6",
-    "next": "Amylon",
+    "next": "Ἄμυλον",
     "chapters": [
       {
         "start": 2001,
@@ -17730,9 +17741,11 @@
     ]
   },
   {
-    "lemma": "Amylon",
+    "lemma": "Ἄμυλον",
     "previous": "Amykos 7",
     "next": "Amymnoi",
+    "sort_key": "Amylon",
+    "wp_link": "w:de:Stärke",
     "chapters": [
       {
         "start": 2001,
@@ -17743,7 +17756,7 @@
   },
   {
     "lemma": "Amymnoi",
-    "previous": "Amylon",
+    "previous": "Ἄμυλον",
     "next": "Amymone 1",
     "chapters": [
       {
@@ -18271,6 +18284,7 @@
     "lemma": "Amyntor 2",
     "previous": "Amyntor 1",
     "next": "Amyntor 3",
+    "sort_key": "Amyntor 02",
     "wp_link": "w:de:Amyntor (Sohn des Ormenos)",
     "chapters": [
       {
@@ -19332,7 +19346,7 @@
   {
     "lemma": "Anaideias choros",
     "previous": "Anaideia",
-    "next": "Anaireisthai",
+    "next": "Ἀναιρεῖσθαι",
     "chapters": [
       {
         "start": 2029,
@@ -19342,9 +19356,10 @@
     ]
   },
   {
-    "lemma": "Anaireisthai",
+    "lemma": "Ἀναιρεῖσθαι",
     "previous": "Anaideias choros",
     "next": "Anaischyntographoi",
+    "sort_key": "Anaireisthai",
     "chapters": [
       {
         "start": 2029,
@@ -19355,7 +19370,7 @@
   },
   {
     "lemma": "Anaischyntographoi",
-    "previous": "Anaireisthai",
+    "previous": "Ἀναιρεῖσθαι",
     "next": "Anaïtica regio",
     "chapters": [
       {
