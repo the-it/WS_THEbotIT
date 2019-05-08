@@ -527,7 +527,7 @@ class TestLemma(BaseTestRegister):
         update_lemma.update_lemma_dict(update_dict)
         compare("lemma2", update_lemma["lemma"])
         compare("lemma002", update_lemma.sort_key)
-        # compare("previous1", update_lemma["previous"]) temporarly workaround update of previous and next is not ready
+        compare("previous1", update_lemma["previous"])
         compare("next", update_lemma["next"])
         self.assertTrue(update_lemma["redirect"])
         compare([{"start": 1, "end": 3, "author": "Abel"},
@@ -535,7 +535,7 @@ class TestLemma(BaseTestRegister):
                 update_lemma.lemma_dict["chapters"])
         update_lemma.update_lemma_dict(update_dict, remove_items= remove_item)
         compare("lemma2", update_lemma["lemma"])
-        # compare("previous1", update_lemma["previous"])  temporarly workaround update of previous and next is not ready
+        compare("previous1", update_lemma["previous"])
         compare("next", update_lemma["next"])
         self.assertIsNone(update_lemma["redirect"])
         compare([{"start": 1, "end": 3, "author": "Abel"},
@@ -717,6 +717,19 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam"}
         with self.assertRaisesRegex(RegisterException, "No strategy available"):
             register.update_lemma(update_dict, [])
+
+    def test_update_next_and_previous(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("O")
+        compare("Ä", post_lemma["previous"])
+        compare("Ü", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("Ä")
+        compare("O", post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("Ü")
+        compare("O", post_lemma_next["previous"])
 
 
 class TestAlphabeticRegister(BaseTestRegister):
