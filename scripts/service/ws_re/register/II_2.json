@@ -2301,7 +2301,7 @@
   {
     "lemma": "Asabe",
     "previous": "Asabaia",
-    "next": "Asabon ore",
+    "next": "Ἀσαβῶν ὄρη",
     "chapters": [
       {
         "start": 1513,
@@ -2310,9 +2310,10 @@
     ]
   },
   {
-    "lemma": "Asabon ore",
+    "lemma": "Ἀσαβῶν ὄρη",
     "previous": "Asabe",
     "next": "Asacaricus",
+    "sort_key": "Asabon ore",
     "chapters": [
       {
         "start": 1513,
@@ -2323,8 +2324,9 @@
   },
   {
     "lemma": "Asacaricus",
-    "previous": "Asabon ore",
+    "previous": "Ἀσαβῶν ὄρη",
     "next": "Asachaei",
+    "sort_key": "Ascarius",
     "wp_link": "w:de:Ascaricus",
     "chapters": [
       {
@@ -6651,6 +6653,7 @@
     "lemma": "Asklepiodotos 9",
     "previous": "Asklepiodotos 8",
     "next": "Asklepiodotos 10",
+    "sort_key": "Asklepiodotos 09",
     "chapters": [
       {
         "start": 1637,
@@ -24392,6 +24395,7 @@
     "lemma": "Avia",
     "previous": "Auha",
     "next": "Aviaitinehae",
+    "sort_key": "Auia",
     "chapters": [
       {
         "start": 2372,
@@ -25362,7 +25366,7 @@
   {
     "lemma": "Aulia",
     "previous": "Auleu",
-    "next": "Aulideia",
+    "next": "Αὐλίδεια",
     "chapters": [
       {
         "start": 2409,
@@ -25371,9 +25375,10 @@
     ]
   },
   {
-    "lemma": "Aulideia",
+    "lemma": "Αὐλίδεια",
     "previous": "Aulia",
     "next": "Aulienus",
+    "sort_key": "Aulideia",
     "chapters": [
       {
         "start": 2409,
@@ -25384,7 +25389,7 @@
   },
   {
     "lemma": "Aulienus",
-    "previous": "Aulideia",
+    "previous": "Αὐλίδεια",
     "next": "Aulindenos",
     "chapters": [
       {
@@ -26021,6 +26026,7 @@
     "lemma": "Avo",
     "previous": "Aunobaris",
     "next": "Avobriga",
+    "sort_key": "Auo",
     "chapters": [
       {
         "start": 2423,
@@ -26129,7 +26135,7 @@
   {
     "lemma": "Auraei",
     "previous": "Auradis",
-    "next": "Aurai",
+    "next": "Αὖραι",
     "chapters": [
       {
         "start": 2425,
@@ -26139,9 +26145,10 @@
     ]
   },
   {
-    "lemma": "Aurai",
+    "lemma": "Αὖραι",
     "previous": "Auraei",
     "next": "Aurakleia",
+    "sort_key": "Aurai",
     "chapters": [
       {
         "start": 2425,
@@ -26152,7 +26159,7 @@
   },
   {
     "lemma": "Aurakleia",
-    "previous": "Aurai",
+    "previous": "Αὖραι",
     "next": "Aurana",
     "chapters": [
       {

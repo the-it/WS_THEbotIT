@@ -485,7 +485,7 @@
   {
     "lemma": "Bardio",
     "previous": "Bardines",
-    "next": "Barditon oros",
+    "next": "Βάρδιτον ὄρος",
     "chapters": [
       {
         "start": 10,
@@ -495,9 +495,10 @@
     ]
   },
   {
-    "lemma": "Barditon oros",
+    "lemma": "Βάρδιτον ὄρος",
     "previous": "Bardio",
     "next": "Barditus",
+    "sort_key": "Barditon oros",
     "chapters": [
       {
         "start": 10,
@@ -508,7 +509,7 @@
   },
   {
     "lemma": "Barditus",
-    "previous": "Barditon oros",
+    "previous": "Βάρδιτον ὄρος",
     "next": "Bardocucullus",
     "chapters": [
       {
@@ -2169,7 +2170,7 @@
   {
     "lemma": "Basaro",
     "previous": "Basapare",
-    "next": "Basaronagos basileion",
+    "next": "Βασαρώναγος βασίλειον",
     "chapters": [
       {
         "start": 40,
@@ -2179,9 +2180,10 @@
     ]
   },
   {
-    "lemma": "Basaronagos basileion",
+    "lemma": "Βασαρώναγος βασίλειον",
     "previous": "Basaro",
     "next": "Bascanon",
+    "sort_key": "Basaronagos basileion",
     "chapters": [
       {
         "start": 40,
@@ -2192,7 +2194,7 @@
   },
   {
     "lemma": "Bascanon",
-    "previous": "Basaronagos basileion",
+    "previous": "Βασαρώναγος βασίλειον",
     "next": "Bascauda",
     "chapters": [
       {
@@ -2946,6 +2948,7 @@
     "lemma": "Ad Basilicam",
     "previous": "Basilica",
     "next": "Ad Basilicam Diadumeni",
+    "sort_key": "Basilicam, Ad",
     "chapters": [
       {
         "start": 96,
@@ -4042,6 +4045,7 @@
     "lemma": "Bassus 24",
     "previous": "Bassus 23",
     "next": "Bassus 25",
+    "redirect": true,
     "chapters": [
       {
         "start": 108,
@@ -4421,6 +4425,7 @@
     "lemma": "Bata 3",
     "previous": "Bata 2",
     "next": "Batakes",
+    "redirect": true,
     "chapters": [
       {
         "start": 114,
@@ -4530,6 +4535,7 @@
     "lemma": "Batava",
     "previous": "Batankaissara",
     "next": "Batavi",
+    "sort_key": "Bataua",
     "wp_link": "w:de:Passau",
     "chapters": [
       {
@@ -4543,6 +4549,7 @@
     "lemma": "Batavi",
     "previous": "Batava",
     "next": "Batavia",
+    "sort_key": "Bataui",
     "wp_link": "w:de:Bataver",
     "chapters": [
       {
@@ -5209,7 +5216,7 @@
   {
     "lemma": "Batiai",
     "previous": "Bati",
-    "next": "Batiake",
+    "next": "Βατιάκη",
     "redirect": true,
     "chapters": [
       {
@@ -5219,9 +5226,10 @@
     ]
   },
   {
-    "lemma": "Batiake",
+    "lemma": "Βατιάκη",
     "previous": "Batiai",
     "next": "Batiana",
+    "sort_key": "Batiake",
     "chapters": [
       {
         "start": 139,
@@ -5232,7 +5240,7 @@
   },
   {
     "lemma": "Batiana",
-    "previous": "Batiake",
+    "previous": "Βατιάκη",
     "next": "Batieia",
     "chapters": [
       {
@@ -5566,7 +5574,7 @@
   {
     "lemma": "Batrachos 2",
     "previous": "Batrachos 1",
-    "next": "Batrachos limen",
+    "next": "Βάτραχος λιμήν",
     "chapters": [
       {
         "start": 145,
@@ -5576,9 +5584,10 @@
     ]
   },
   {
-    "lemma": "Batrachos limen",
+    "lemma": "Βάτραχος λιμήν",
     "previous": "Batrachos 2",
     "next": "Batrachu",
+    "sort_key": "Batrachos limen",
     "chapters": [
       {
         "start": 145,
@@ -5589,7 +5598,7 @@
   },
   {
     "lemma": "Batrachu",
-    "previous": "Batrachos limen",
+    "previous": "Βάτραχος λιμήν",
     "next": "Batrasabbes",
     "chapters": [
       {
@@ -5744,6 +5753,7 @@
     "lemma": "Battos 1",
     "previous": "Battiadai",
     "next": "Battos 2",
+    "sort_key": "Battos 01",
     "chapters": [
       {
         "start": 146,
@@ -5756,6 +5766,7 @@
     "lemma": "Battos 2",
     "previous": "Battos 1",
     "next": "Battos 3",
+    "sort_key": "Battos 02",
     "chapters": [
       {
         "start": 146,
@@ -5780,6 +5791,7 @@
     "lemma": "Battos 4",
     "previous": "Battos 3",
     "next": "Battos 5",
+    "sort_key": "Battos 04",
     "wp_link": "w:de:Battos II.",
     "chapters": [
       {
@@ -5793,6 +5805,7 @@
     "lemma": "Battos 5",
     "previous": "Battos 4",
     "next": "Battos 6",
+    "sort_key": "Battos 05",
     "wp_link": "w:de:Battos III.",
     "chapters": [
       {
@@ -5806,6 +5819,7 @@
     "lemma": "Battos 6",
     "previous": "Battos 5",
     "next": "Battos 7",
+    "sort_key": "Battos 06",
     "wp_link": "w:de:Battos IV.",
     "chapters": [
       {
@@ -5819,6 +5833,7 @@
     "lemma": "Battos 7",
     "previous": "Battos 6",
     "next": "Battos 8",
+    "sort_key": "Battos 07",
     "chapters": [
       {
         "start": 148,
@@ -5937,6 +5952,7 @@
     "lemma": "Bavares",
     "previous": "Baua",
     "next": "Baubo 1",
+    "sort_key": "Bauares",
     "chapters": [
       {
         "start": 149,
@@ -6105,7 +6121,7 @@
   {
     "lemma": "Baukis 3",
     "previous": "Baukis 2",
-    "next": "Baukismos",
+    "next": "Βαυκισμός",
     "chapters": [
       {
         "start": 154,
@@ -6115,9 +6131,10 @@
     ]
   },
   {
-    "lemma": "Baukismos",
+    "lemma": "Βαυκισμός",
     "previous": "Baukis 3",
     "next": "Bauli",
+    "sort_key": "Baukismos",
     "chapters": [
       {
         "start": 154,
@@ -6128,7 +6145,7 @@
   },
   {
     "lemma": "Bauli",
-    "previous": "Baukismos",
+    "previous": "Βαυκισμός",
     "next": "Baumai",
     "chapters": [
       {
@@ -6202,6 +6219,8 @@
     "lemma": "Bavo",
     "previous": "Baunonia",
     "next": "Bausiona",
+    "sort_key": "Bauo",
+    "redirect": true,
     "chapters": [
       {
         "start": 174,
@@ -6299,6 +6318,7 @@
     "lemma": "Bauvarii",
     "previous": "Bauto",
     "next": "Bauxare",
+    "sort_key": "Bauuarii",
     "chapters": [
       {
         "start": 176,
@@ -6417,7 +6437,7 @@
   {
     "lemma": "Bazinos",
     "previous": "Bazigraban",
-    "next": "Bazion akron",
+    "next": "Βάζιον ἄκρον",
     "chapters": [
       {
         "start": 177,
@@ -6427,9 +6447,10 @@
     ]
   },
   {
-    "lemma": "Bazion akron",
+    "lemma": "Βάζιον ἄκρον",
     "previous": "Bazinos",
     "next": "Bazira",
+    "sort_key": "Bazion akron",
     "chapters": [
       {
         "start": 177,
@@ -6440,7 +6461,7 @@
   },
   {
     "lemma": "Bazira",
-    "previous": "Bazion akron",
+    "previous": "Βάζιον ἄκρον",
     "next": "Bazis",
     "chapters": [
       {
@@ -10076,6 +10097,7 @@
     "lemma": "Berenike 6",
     "previous": "Berenike 5",
     "next": "Berenike 7",
+    "sort_key": "Berenike 06",
     "chapters": [
       {
         "start": 281,
@@ -23703,6 +23725,7 @@
     "lemma": "Bovallica",
     "previous": "Botulus",
     "next": "Boudicca",
+    "sort_key": "Bouallica",
     "chapters": [
       {
         "start": 796,
