@@ -13086,7 +13086,7 @@
   {
     "lemma": "Ekdosis",
     "previous": "Ekdippa",
-    "next": "Ekdysia",
+    "next": "Ἐκδύσια",
     "chapters": [
       {
         "start": 2162,
@@ -13096,9 +13096,10 @@
     ]
   },
   {
-    "lemma": "Ekdysia",
+    "lemma": "Ἐκδύσια",
     "previous": "Ekdosis",
     "next": "Ekebolios",
+    "sort_key": "Ekdysia",
     "chapters": [
       {
         "start": 2162,
@@ -13109,8 +13110,8 @@
   },
   {
     "lemma": "Ekebolios",
-    "previous": "Ekdysia",
-    "next": "Ekecheiria",
+    "previous": "Ἐκδύσια",
+    "next": "Ἐκεχειρία",
     "redirect": true,
     "chapters": [
       {
@@ -13120,9 +13121,10 @@
     ]
   },
   {
-    "lemma": "Ekecheiria",
+    "lemma": "Ἐκεχειρία",
     "previous": "Ekebolios",
     "next": "Ekephylos",
+    "sort_key": "Ekecheiria",
     "chapters": [
       {
         "start": 2162,
@@ -13133,7 +13135,7 @@
   },
   {
     "lemma": "Ekephylos",
-    "previous": "Ekecheiria",
+    "previous": "Ἐκεχειρία",
     "next": "Ekineia",
     "chapters": [
       {

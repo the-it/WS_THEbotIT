@@ -8711,7 +8711,7 @@
   {
     "lemma": "Adeba",
     "previous": "Adeas",
-    "next": "Adedu",
+    "next": "Ἀδήδου",
     "chapters": [
       {
         "start": 353,
@@ -8721,9 +8721,10 @@
     ]
   },
   {
-    "lemma": "Adedu",
+    "lemma": "Ἀδήδου",
     "previous": "Adeba",
-    "next": "Adeia",
+    "next": "Ἄδεια",
+    "sort_key": "Adedu",
     "chapters": [
       {
         "start": 354,
@@ -8733,9 +8734,10 @@
     ]
   },
   {
-    "lemma": "Adeia",
-    "previous": "Adedu",
+    "lemma": "Ἄδεια",
+    "previous": "Ἀδήδου",
     "next": "Adeiganes",
+    "sort_key": "Adeia",
     "chapters": [
       {
         "start": 354,
@@ -8746,7 +8748,7 @@
   },
   {
     "lemma": "Adeiganes",
-    "previous": "Adeia",
+    "previous": "Ἄδεια",
     "next": "Adeimantos 1",
     "chapters": [
       {
@@ -8784,6 +8786,8 @@
     "lemma": "Adeimantos 3",
     "previous": "Adeimantos 2",
     "next": "Adeimantos 4",
+    "sort_key": "Adeimantos 03",
+    "wp_link": "w:de:Adeimantos (Athener)",
     "chapters": [
       {
         "start": 355,
@@ -8796,6 +8800,8 @@
     "lemma": "Adeimantos 4",
     "previous": "Adeimantos 3",
     "next": "Adeimantos 5",
+    "sort_key": "Adeimantos 04",
+    "wp_link": "w:de:Adeimantos",
     "chapters": [
       {
         "start": 355,
@@ -8808,6 +8814,8 @@
     "lemma": "Adeimantos 5",
     "previous": "Adeimantos 4",
     "next": "Adeimantos 6",
+    "sort_key": "Adeimantos 05",
+    "wp_link": "w:de:Adeimantos (Platon)",
     "chapters": [
       {
         "start": 355,
@@ -8820,6 +8828,8 @@
     "lemma": "Adeimantos 6",
     "previous": "Adeimantos 5",
     "next": "Adeimantos 7",
+    "sort_key": "Adeimantos 06",
+    "wp_link": "w:de:Adeimantos",
     "chapters": [
       {
         "start": 355,
@@ -8832,6 +8842,8 @@
     "lemma": "Adeimantos 7",
     "previous": "Adeimantos 6",
     "next": "Adeimantos 8",
+    "sort_key": "Adeimantos 07",
+    "wp_link": "w:de:Adeimantos",
     "chapters": [
       {
         "start": 355,
@@ -8844,6 +8856,8 @@
     "lemma": "Adeimantos 8",
     "previous": "Adeimantos 7",
     "next": "Adeimantos 9",
+    "sort_key": "Adeimantos 08",
+    "wp_link": "w:de:Adeimantos",
     "chapters": [
       {
         "start": 355,
@@ -8856,6 +8870,8 @@
     "lemma": "Adeimantos 9",
     "previous": "Adeimantos 8",
     "next": "Adeimantos 10",
+    "sort_key": "Adeimantos 09",
+    "wp_link": "w:de:Adeimantos",
     "chapters": [
       {
         "start": 356,
@@ -19383,6 +19399,7 @@
     "lemma": "Affe",
     "previous": "Afer 2",
     "next": "Afilae",
+    "wp_link": "w:de:Affen",
     "chapters": [
       {
         "start": 706,
@@ -20010,7 +20027,7 @@
   {
     "lemma": "Agallis 2",
     "previous": "Agallis 1",
-    "next": "Agalma",
+    "next": "Ἄγαλμα",
     "chapters": [
       {
         "start": 718,
@@ -20020,9 +20037,10 @@
     ]
   },
   {
-    "lemma": "Agalma",
+    "lemma": "Ἄγαλμα",
     "previous": "Agallis 2",
     "next": "Agalumnus",
+    "sort_key": "Agalma",
     "chapters": [
       {
         "start": 718,
@@ -20033,7 +20051,7 @@
   },
   {
     "lemma": "Agalumnus",
-    "previous": "Agalma",
+    "previous": "Ἄγαλμα",
     "next": "Agamathae",
     "chapters": [
       {
@@ -21407,6 +21425,7 @@
     "lemma": "Agathinos 5",
     "previous": "Agathinos 4",
     "next": "Agathinos 6",
+    "sort_key": "Agathinos 05",
     "chapters": [
       {
         "start": 745,
@@ -21700,6 +21719,7 @@
     "lemma": "Agathokles 8",
     "previous": "Agathokles 7",
     "next": "Agathokles 9",
+    "sort_key": "Agathokles 08",
     "chapters": [
       {
         "start": 748,
@@ -22103,6 +22123,7 @@
     "lemma": "Agathon 7",
     "previous": "Agathon 6",
     "next": "Agathon 8",
+    "sort_key": "Agathon 07",
     "chapters": [
       {
         "start": 760,
@@ -22416,6 +22437,7 @@
     "lemma": "Agathyrsos",
     "previous": "Agathyrsoi",
     "next": "Agaua kome",
+    "wp_link": "w:de:Agathyrsos",
     "chapters": [
       {
         "start": 765,
@@ -22439,6 +22461,7 @@
     "lemma": "Agaue 1",
     "previous": "Agaua kome",
     "next": "Agaue 2",
+    "wp_link": "w:de:Agaue (Nereide)",
     "chapters": [
       {
         "start": 765,
@@ -22534,6 +22557,7 @@
     "lemma": "Agbia",
     "previous": "Agbatana",
     "next": "Agdamu",
+    "wp_link": "w:de:Agbia",
     "chapters": [
       {
         "start": 766,
@@ -22690,7 +22714,7 @@
   {
     "lemma": "Agedincum",
     "previous": "Agedana",
-    "next": "Agein",
+    "next": "Ἄγειν",
     "wp_link": "w:de:Sens (Yonne)",
     "chapters": [
       {
@@ -22701,9 +22725,10 @@
     ]
   },
   {
-    "lemma": "Agein",
+    "lemma": "Ἄγειν",
     "previous": "Agedincum",
     "next": "Ageio",
+    "sort_key": "Agein",
     "chapters": [
       {
         "start": 768,
@@ -22714,7 +22739,7 @@
   },
   {
     "lemma": "Ageio",
-    "previous": "Agein",
+    "previous": "Ἄγειν",
     "next": "Ageisinikos",
     "chapters": [
       {
@@ -22751,7 +22776,7 @@
   {
     "lemma": "Ageladas 2",
     "previous": "Ageladas 1",
-    "next": "Agelai",
+    "next": "Ἀγέλαι",
     "redirect": true,
     "chapters": [
       {
@@ -22761,9 +22786,10 @@
     ]
   },
   {
-    "lemma": "Agelai",
+    "lemma": "Ἀγέλαι",
     "previous": "Ageladas 2",
     "next": "Agelaos 1",
+    "sort_key": "Agelai",
     "chapters": [
       {
         "start": 769,
@@ -22774,7 +22800,7 @@
   },
   {
     "lemma": "Agelaos 1",
-    "previous": "Agelai",
+    "previous": "Ἀγέλαι",
     "next": "Agelaos 2",
     "sort_key": "Agelaos 01",
     "wp_link": "w:de:Agelaos (Sohn des Herakles)",
@@ -22790,6 +22816,8 @@
     "lemma": "Agelaos 2",
     "previous": "Agelaos 1",
     "next": "Agelaos 3",
+    "sort_key": "Agelaos 02",
+    "wp_link": "w:de:Agelaos (Sohn des Temenos)",
     "chapters": [
       {
         "start": 770,
@@ -22802,6 +22830,8 @@
     "lemma": "Agelaos 3",
     "previous": "Agelaos 2",
     "next": "Agelaos 4",
+    "sort_key": "Agelaos 03",
+    "wp_link": "w:de:Agelaos (Sohn des Oineus)",
     "chapters": [
       {
         "start": 770,
@@ -22814,6 +22844,7 @@
     "lemma": "Agelaos 4",
     "previous": "Agelaos 3",
     "next": "Agelaos 5",
+    "sort_key": "Agelaos 04",
     "chapters": [
       {
         "start": 770,
@@ -22851,6 +22882,8 @@
     "lemma": "Agelaos 7",
     "previous": "Agelaos 6",
     "next": "Agelaos 8",
+    "sort_key": "Agelaos 07",
+    "wp_link": "w:de:Agelaos (Sklave des Priamos)",
     "chapters": [
       {
         "start": 770,
@@ -22922,7 +22955,7 @@
   {
     "lemma": "Agelas",
     "previous": "Agelaos 12",
-    "next": "Agelastos",
+    "next": "Ἀγέλαστος",
     "chapters": [
       {
         "start": 771,
@@ -22932,9 +22965,10 @@
     ]
   },
   {
-    "lemma": "Agelastos",
+    "lemma": "Ἀγέλαστος",
     "previous": "Agelas",
     "next": "Ageles",
+    "sort_key": "Agelastos",
     "chapters": [
       {
         "start": 771,
@@ -22945,8 +22979,9 @@
   },
   {
     "lemma": "Ageles",
-    "previous": "Agelastos",
+    "previous": "Ἀγέλαστος",
     "next": "Agellys",
+    "wp_link": "w:de:Ageles aus Chios",
     "chapters": [
       {
         "start": 771,
@@ -23114,7 +23149,7 @@
   {
     "lemma": "Agendicum",
     "previous": "Agemortos",
-    "next": "Ageneioi",
+    "next": "Ἀγένειοι",
     "redirect": true,
     "chapters": [
       {
@@ -23124,9 +23159,10 @@
     ]
   },
   {
-    "lemma": "Ageneioi",
+    "lemma": "Ἀγένειοι",
     "previous": "Agendicum",
     "next": "Agenius Urbicus",
+    "sort_key": "Ageneioi",
     "chapters": [
       {
         "start": 772,
@@ -23137,7 +23173,7 @@
   },
   {
     "lemma": "Agenius Urbicus",
-    "previous": "Ageneioi",
+    "previous": "Ἀγένειοι",
     "next": "Agennum",
     "chapters": [
       {
@@ -23151,6 +23187,7 @@
     "lemma": "Agennum",
     "previous": "Agenius Urbicus",
     "next": "Agenor 1",
+    "wp_link": "w:de:Agen",
     "chapters": [
       {
         "start": 773,
@@ -23308,6 +23345,7 @@
     "lemma": "L. Agerinus",
     "previous": "Ager",
     "next": "A. Agerius",
+    "sort_key": "Agerinus",
     "chapters": [
       {
         "start": 794,
@@ -23320,6 +23358,7 @@
     "lemma": "A. Agerius",
     "previous": "L. Agerinus",
     "next": "Agermos",
+    "sort_key": "Agerius",
     "chapters": [
       {
         "start": 794,
@@ -23525,7 +23564,6 @@
     "lemma": "Agesidamos 3",
     "previous": "Agesidamos 2",
     "next": "Agesikrates",
-    "redirect": true,
     "chapters": [
       {
         "start": 796,
@@ -23719,6 +23757,7 @@
     "lemma": "Agesipolis 2",
     "previous": "Agesipolis 1",
     "next": "Agesipolis 3",
+    "wp_link": "w:de:Agesipolis II.",
     "chapters": [
       {
         "start": 806,
@@ -23731,6 +23770,7 @@
     "lemma": "Agesipolis 3",
     "previous": "Agesipolis 2",
     "next": "Agesipolis 4",
+    "wp_link": "w:de:Agesipolis (Sohn von Kleombrotos II.)",
     "chapters": [
       {
         "start": 806,
@@ -23743,6 +23783,7 @@
     "lemma": "Agesipolis 4",
     "previous": "Agesipolis 3",
     "next": "Agesippidas",
+    "wp_link": "w:de:Agesipolis III.",
     "chapters": [
       {
         "start": 806,
@@ -23876,6 +23917,7 @@
     "lemma": "Agetor 1",
     "previous": "Agetas",
     "next": "Agetor 2",
+    "wp_link": "w:de:Agetor",
     "chapters": [
       {
         "start": 807,
@@ -23996,6 +24038,7 @@
     "lemma": "Aggarsel Nepte",
     "previous": "Aggarsel 2",
     "next": "Aggrammes",
+    "wp_link": "w:de:Nefta",
     "chapters": [
       {
         "start": 807,
@@ -24419,6 +24462,8 @@
     "lemma": "Agis 2",
     "previous": "Agis 1",
     "next": "Agis 3",
+    "sort_key": "Agis 02",
+    "wp_link": "w:de:Agis II.",
     "chapters": [
       {
         "start": 817,
@@ -24455,6 +24500,7 @@
     "lemma": "Agis 5",
     "previous": "Agis 4",
     "next": "Agis 6",
+    "sort_key": "Agis 05",
     "chapters": [
       {
         "start": 821,
@@ -24479,6 +24525,7 @@
     "lemma": "Agis 7",
     "previous": "Agis 6",
     "next": "Agis 8",
+    "sort_key": "Agis 07",
     "chapters": [
       {
         "start": 821,
@@ -24491,6 +24538,7 @@
     "lemma": "Agis 8",
     "previous": "Agis 7",
     "next": "Agis 9",
+    "sort_key": "Agis 08",
     "chapters": [
       {
         "start": 821,
@@ -24503,6 +24551,7 @@
     "lemma": "Agis 9",
     "previous": "Agis 8",
     "next": "Agis 10",
+    "sort_key": "Agis 09",
     "chapters": [
       {
         "start": 822,
@@ -24527,6 +24576,7 @@
     "lemma": "Agisymba",
     "previous": "Agis 10",
     "next": "Agitator",
+    "wp_link": "w:de:Agisymba",
     "chapters": [
       {
         "start": 822,
@@ -24562,7 +24612,7 @@
   {
     "lemma": "Aglaia 1",
     "previous": "Agiulf, Agivulf",
-    "next": "Aglaia 2",
+    "next": "Aglaïa 2",
     "chapters": [
       {
         "start": 823,
@@ -24572,9 +24622,11 @@
     ]
   },
   {
-    "lemma": "Aglaia 2",
+    "lemma": "Aglaïa 2",
     "previous": "Aglaia 1",
-    "next": "Aglaia 3",
+    "next": "Aglaïa 3",
+    "sort_key": "Aglaia 2",
+    "wp_link": "w:de:Aglaia (Gattin des Charopos)",
     "chapters": [
       {
         "start": 823,
@@ -24584,9 +24636,11 @@
     ]
   },
   {
-    "lemma": "Aglaia 3",
-    "previous": "Aglaia 2",
-    "next": "Aglaia 4",
+    "lemma": "Aglaïa 3",
+    "previous": "Aglaïa 2",
+    "next": "Aglaïa 4",
+    "sort_key": "Aglaia 3",
+    "wp_link": "w:de:Aglaia (Tochter des Mantineus)",
     "chapters": [
       {
         "start": 824,
@@ -24596,9 +24650,11 @@
     ]
   },
   {
-    "lemma": "Aglaia 4",
-    "previous": "Aglaia 3",
-    "next": "Aglaia 5",
+    "lemma": "Aglaïa 4",
+    "previous": "Aglaïa 3",
+    "next": "Aglaïa 5",
+    "sort_key": "Aglaia 4",
+    "wp_link": "w:de:Aglaia (Gattin des Amythaon)",
     "chapters": [
       {
         "start": 824,
@@ -24608,9 +24664,11 @@
     ]
   },
   {
-    "lemma": "Aglaia 5",
-    "previous": "Aglaia 4",
+    "lemma": "Aglaïa 5",
+    "previous": "Aglaïa 4",
     "next": "Aglaïas",
+    "sort_key": "Aglaia 5",
+    "wp_link": "w:de:Aglaia (Charis)",
     "chapters": [
       {
         "start": 824,
@@ -24621,8 +24679,9 @@
   },
   {
     "lemma": "Aglaïas",
-    "previous": "Aglaia 5",
+    "previous": "Aglaïa 5",
     "next": "Aglais",
+    "sort_key": "Aglaias",
     "chapters": [
       {
         "start": 824,
@@ -24647,6 +24706,7 @@
     "lemma": "Agla minor",
     "previous": "Aglais",
     "next": "Aglaon",
+    "sort_key": "Aglaminor",
     "chapters": [
       {
         "start": 824,
@@ -24744,6 +24804,7 @@
     "lemma": "Aglaophon",
     "previous": "Aglaopheme",
     "next": "Aglaophonos",
+    "wp_link": "w:de:Aglaophon der Ältere",
     "chapters": [
       {
         "start": 824,
@@ -28028,6 +28089,7 @@
     "lemma": "Aiatos",
     "previous": "Aiathuri",
     "next": "Aibyrobisingysia",
+    "wp_link": "w:de:Aiatos",
     "chapters": [
       {
         "start": 940,
@@ -28256,6 +28318,7 @@
     "lemma": "Aïdoneus 1",
     "previous": "Aidoingos",
     "next": "Aïdoneus 2",
+    "sort_key": "Aidoneus 1",
     "chapters": [
       {
         "start": 942,
