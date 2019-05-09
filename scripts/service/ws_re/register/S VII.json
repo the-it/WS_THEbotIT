@@ -122,6 +122,7 @@
     "lemma": "Aqua, Aquae 77a",
     "previous": "Apomoira",
     "next": "Archisomatophylakes",
+    "sort_key": "Aqua, Aquae 077a",
     "chapters": [
       {
         "start": 45,
@@ -205,7 +206,7 @@
   {
     "lemma": "Askese",
     "previous": "Asidonia",
-    "next": "Asklepiais",
+    "next": "Ἀσκληπιαις",
     "wp_link": "w:de:Askese",
     "chapters": [
       {
@@ -216,9 +217,10 @@
     ]
   },
   {
-    "lemma": "Asklepiais",
+    "lemma": "Ἀσκληπιαις",
     "previous": "Askese",
     "next": "Attributio",
+    "sort_key": "Asklepiais",
     "chapters": [
       {
         "start": 64,
@@ -229,7 +231,7 @@
   },
   {
     "lemma": "Attributio",
-    "previous": "Asklepiais",
+    "previous": "Ἀσκληπιαις",
     "next": "Aurelius 39a",
     "chapters": [
       {
@@ -243,6 +245,7 @@
     "lemma": "Aurelius 39a",
     "previous": "Attributio",
     "next": "Aurelius 63a",
+    "sort_key": "Aurelius 039a",
     "chapters": [
       {
         "start": 72,
