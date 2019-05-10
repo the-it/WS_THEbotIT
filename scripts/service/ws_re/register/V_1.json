@@ -1378,7 +1378,7 @@
   {
     "lemma": "Demophoon",
     "previous": "Demophontidai",
-    "next": "Demopoietos",
+    "next": "Δημοποίητος",
     "chapters": [
       {
         "start": 153,
@@ -1388,9 +1388,10 @@
     ]
   },
   {
-    "lemma": "Demopoietos",
+    "lemma": "Δημοποίητος",
     "previous": "Demophoon",
     "next": "Demoptolemos",
+    "sort_key": "Demopoietos",
     "chapters": [
       {
         "start": 153,
@@ -1401,7 +1402,7 @@
   },
   {
     "lemma": "Demoptolemos",
-    "previous": "Demopoietos",
+    "previous": "Δημοποίητος",
     "next": "Demos 1",
     "chapters": [
       {
@@ -1438,7 +1439,7 @@
   {
     "lemma": "Demos 3",
     "previous": "Demos 2",
-    "next": "Demosioi",
+    "next": "Δημόσιοι",
     "chapters": [
       {
         "start": 161,
@@ -1448,9 +1449,10 @@
     ]
   },
   {
-    "lemma": "Demosioi",
+    "lemma": "Δημόσιοι",
     "previous": "Demos 3",
     "next": "Demosios",
+    "sort_key": "Demosioi",
     "chapters": [
       {
         "start": 161,
@@ -1461,7 +1463,7 @@
   },
   {
     "lemma": "Demosios",
-    "previous": "Demosioi",
+    "previous": "Δημόσιοι",
     "next": "Demosthenes 1",
     "chapters": [
       {
@@ -1658,6 +1660,7 @@
     "lemma": "Demostratos 1",
     "previous": "Demosthenes 15",
     "next": "Demostratos 2",
+    "sort_key": "Demostratos 01",
     "chapters": [
       {
         "start": 191,
@@ -1670,6 +1673,7 @@
     "lemma": "Demostratos 2",
     "previous": "Demostratos 1",
     "next": "Demostratos 3",
+    "sort_key": "Demostratos 02",
     "chapters": [
       {
         "start": 191,
@@ -1682,6 +1686,7 @@
     "lemma": "Demostratos 3",
     "previous": "Demostratos 2",
     "next": "Demostratos 4",
+    "sort_key": "Demostratos 03",
     "chapters": [
       {
         "start": 191,
@@ -1694,6 +1699,7 @@
     "lemma": "Demostratos 4",
     "previous": "Demostratos 3",
     "next": "Demostratos 5",
+    "sort_key": "Demostratos 04",
     "chapters": [
       {
         "start": 191,
@@ -1706,6 +1712,7 @@
     "lemma": "Demostratos 5",
     "previous": "Demostratos 4",
     "next": "Demostratos 6",
+    "sort_key": "Demostratos 05",
     "chapters": [
       {
         "start": 191,
@@ -1718,6 +1725,7 @@
     "lemma": "Demostratos 6",
     "previous": "Demostratos 5",
     "next": "Demostratos 7",
+    "sort_key": "Demostratos 06",
     "chapters": [
       {
         "start": 191,
@@ -1730,6 +1738,7 @@
     "lemma": "Demostratos 7",
     "previous": "Demostratos 6",
     "next": "Demostratos 8",
+    "sort_key": "Demostratos 07",
     "chapters": [
       {
         "start": 191,
@@ -1742,6 +1751,7 @@
     "lemma": "Demostratos 8",
     "previous": "Demostratos 7",
     "next": "Demostratos 9",
+    "sort_key": "Demostratos 08",
     "chapters": [
       {
         "start": 191,
@@ -1754,6 +1764,7 @@
     "lemma": "Demostratos 9",
     "previous": "Demostratos 8",
     "next": "Demostratos 10",
+    "sort_key": "Demostratos 09",
     "chapters": [
       {
         "start": 191,
@@ -1790,6 +1801,7 @@
     "lemma": "Demostratos 12",
     "previous": "Demostratos 11",
     "next": "Demostratos 13",
+    "redirect": true,
     "chapters": [
       {
         "start": 191,
