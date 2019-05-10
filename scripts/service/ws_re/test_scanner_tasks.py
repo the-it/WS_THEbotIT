@@ -11,7 +11,7 @@ from testfixtures import LogCapture, compare, StringComparison
 from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
 from scripts.service.ws_re.register import Authors, VolumeRegister
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
-    SCANTask, TJGJTask
+    SCANTask, TJGJTask, DEALTask
 from scripts.service.ws_re.test_register import clear_tst_path, copy_tst_data, _TEST_REGISTER_PATH
 from tools.bots import WikiLogger
 
@@ -176,8 +176,8 @@ class TestERROTask(TestCase):
                              )
 
     def test_finish_up(self):
-        with mock.patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
-            with mock.patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page", autospec=pywikibot.Page) as page_mock:
+            with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
                 type(page_mock).text = text_mock
                 with LogCapture():
                     task = ERROTask(None, self.logger, debug=False)
@@ -187,13 +187,49 @@ class TestERROTask(TestCase):
                     self.assertEqual(1, page_mock.call_count)
 
     def test_finish_up_no_errors(self):
-        with mock.patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page) as page_mock:
-            with mock.patch("scripts.service.ws_re.scanner_tasks.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page", autospec=pywikibot.Page) as page_mock:
+            with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
                 type(page_mock).text = text_mock
                 with LogCapture():
                     task = ERROTask(None, self.logger, debug=False)
                     task.finish_task()
                     self.assertEqual(0, page_mock.call_count)
+
+
+class TestDEALTask(TaskTestCase):
+    def test_process_next_previous(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+|VG=Bla
+|NF=Blub
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [True, False]
+            re_page = RePage(self.page_mock)
+            task = DEALTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Blub", "Title")], task.data)
+
+            self.text_mock.return_value = """{{REDaten
+|VG=Bla
+|NF=Blub
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title2"
+            page_mock.return_value.exists.side_effect = [False, True]
+            re_page = RePage(self.page_mock)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Blub", "Title"), ("Bla", "Title2")], task.data)
+
+    def test_build_entries(self):
+        task = DEALTask(None, self.logger)
+        task.data = [("One", "First_Lemma"), ("Two", "Second_Lemma")]
+        expect = ["* [[RE:One]] verlinkt von [[RE:First_Lemma]]",
+                  "* [[RE:Two]] verlinkt von [[RE:Second_Lemma]]"]
+        compare(expect, task._build_entry().split("\n")[-2:])
+
 
 
 class TestKSCHTask(TaskTestCase):

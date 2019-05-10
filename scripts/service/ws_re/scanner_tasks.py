@@ -5,9 +5,9 @@ from datetime import timedelta, datetime
 from pathlib import Path
 from typing import Mapping, Tuple, Any, Dict, List
 
+import pywikibot
 from git import Repo
 from github import Github
-from pywikibot import Site, Page
 
 from scripts.service.ws_re.data_types import RePage, Article
 from scripts.service.ws_re.register import Registers, AuthorCrawler, RegisterException
@@ -19,7 +19,7 @@ CHANGED = "changed"
 
 
 class ReScannerTask:
-    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
@@ -65,7 +65,10 @@ class ReScannerTask:
 
 
 class ERROTask(ReScannerTask):
-    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+    _wiki_page = "RE:Wartung:Strukturfehler"
+    _reason = "Neue Fehlermeldungen"
+
+    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.data = []
 
@@ -83,10 +86,31 @@ class ERROTask(ReScannerTask):
     def finish_task(self):
         if self.data:
             if not self.debug:
-                page = Page(self.wiki, "RE:Wartung:Strukturfehler")
+                page = pywikibot.Page(self.wiki, self._wiki_page)
                 page.text = page.text + self._build_entry()
-                page.save("Neue Fehlermeldungen", botflag=True)
+                page.save(self._reason, botflag=True)
         super().finish_task()
+
+
+class DEALTask(ERROTask):
+    _wiki_page = "RE:Wartung:Tote Links"
+    _reason = "Neue tote Links"
+
+    def task(self):  # pylint: disable=arguments-differ
+        for article in self.re_page:
+            for prop in ["VORGÄNGER", "NACHFOLGER"]:
+                if article[prop].value:
+                    if not pywikibot.Page(self.wiki, f"RE:{article[prop].value}").exists():
+                        self.data.append((article[prop].value, self.re_page.lemma_without_prefix))
+        return True
+
+    def _build_entry(self) -> str:
+        caption = f"\n\n=={datetime.now():%Y-%m-%d}==\n\n"
+        entries = []
+        for item in self.data:
+            entries.append(f"* [[RE:{item[0]}]] verlinkt von [[RE:{item[1]}]]")
+        body = "\n".join(entries)
+        return caption + body
 
 
 class KSCHTask(ReScannerTask):
@@ -123,7 +147,7 @@ class VERWTask(ReScannerTask):
 
 
 class TJGJTask(ReScannerTask):
-    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers()
 
@@ -146,7 +170,7 @@ class TJGJTask(ReScannerTask):
 class SCANTask(ReScannerTask):
     _LEMMAS_MAX = 500
 
-    def __init__(self, wiki: Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers()
         self._register_lemmas = True

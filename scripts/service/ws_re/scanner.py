@@ -3,21 +3,21 @@ from datetime import timedelta, datetime
 from operator import itemgetter
 from typing import List
 
-from pywikibot import Page, Site
+import pywikibot
 
 from scripts.service.ws_re.data_types import RePage, ReDatenException
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
-    SCANTask, TJGJTask
+    SCANTask, DEALTask
 from tools.bots import CanonicalBot, BotException
 from tools.petscan import PetScan
 
 
 class ReScanner(CanonicalBot):
-    def __init__(self, wiki: Site = None, debug: bool = True,
+    def __init__(self, wiki: pywikibot.Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(minutes=60)
-        self.tasks = [KSCHTask, VERWTask, TJGJTask, SCANTask]  # type: List[type[ReScannerTask]]
+        self.tasks = [KSCHTask, VERWTask, DEALTask, SCANTask]  # type: List[type[ReScannerTask]]
         if self.debug:
             self.tasks = self.tasks + []
         self.statistic = {}
@@ -127,7 +127,7 @@ class ReScanner(CanonicalBot):
             self.logger.debug(f"Process [https://de.wikisource.org/wiki/{lemma} {lemma}]")
             list_of_done_tasks = []
             try:
-                re_page = RePage(Page(self.wiki, lemma))
+                re_page = RePage(pywikibot.Page(self.wiki, lemma))
             except ReDatenException:
                 error = traceback.format_exc().splitlines()[-1]
                 self.logger.error(f"The initiation of {lemma} went wrong: {error}")
@@ -156,6 +156,6 @@ class ReScanner(CanonicalBot):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
+    WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
     with ReScanner(wiki=WS_WIKI, debug=True) as bot:
         bot.run()
