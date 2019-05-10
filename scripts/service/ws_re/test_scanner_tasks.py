@@ -223,6 +223,36 @@ class TestDEALTask(TaskTestCase):
             compare({"success": True, "changed": False}, task.run(re_page))
             compare([("Blub", "Title"), ("Bla", "Title2")], task.data)
 
+    def test_process_next_previous_wrong_start_letter(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+|VG=Bla
+|NF=Episch
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.return_value = False
+            re_page = RePage(self.page_mock)
+            task = DEALTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Bla", "Title")], task.data)
+
+    def test_find_links_in_text(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+}}
+{{RE siehe|Aal}}
+{{RE siehe|Anderer Quatsch}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [True, False]
+            re_page = RePage(self.page_mock)
+            task = DEALTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Anderer Quatsch", "Title")], task.data)
+
     def test_build_entries(self):
         task = DEALTask(None, self.logger)
         task.data = [("One", "First_Lemma"), ("Two", "Second_Lemma")]

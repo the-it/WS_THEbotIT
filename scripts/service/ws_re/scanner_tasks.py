@@ -96,12 +96,27 @@ class DEALTask(ERROTask):
     _wiki_page = "RE:Wartung:Tote Links"
     _reason = "Neue tote Links"
 
+    _start_characters = ("a",
+                         "b",
+                         "c",
+                         "d",
+                         )
+    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger):
+        super().__init__(wiki, logger)
+        self.re_siehe_regex = re.compile(r"\{\{RE siehe\|([{characters}][^\|\}]+)"
+                                         .format(characters="".join(self._start_characters)))
+
     def task(self):  # pylint: disable=arguments-differ
         for article in self.re_page:
+            # check properties of REDaten Block first
             for prop in ["VORGÄNGER", "NACHFOLGER"]:
-                if article[prop].value:
-                    if not pywikibot.Page(self.wiki, f"RE:{article[prop].value}").exists():
-                        self.data.append((article[prop].value, self.re_page.lemma_without_prefix))
+                link_to_check = article[prop].value
+                if link_to_check:
+                    if link_to_check[0].lower() in self._start_characters:
+                        if not pywikibot.Page(self.wiki, f"RE:{link_to_check}").exists():
+                            self.data.append((link_to_check, self.re_page.lemma_without_prefix))
+            # then links in text
+
         return True
 
     def _build_entry(self) -> str:
