@@ -10373,6 +10373,7 @@
     "lemma": "Damiatrix",
     "previous": "Damianos 3",
     "next": "Damigeron",
+    "redirect": true,
     "chapters": [
       {
         "start": 2055,
@@ -10408,6 +10409,7 @@
     "lemma": "Damion",
     "previous": "Damindas",
     "next": "Damios",
+    "redirect": true,
     "chapters": [
       {
         "start": 2056,
@@ -10908,6 +10910,7 @@
     "lemma": "Damokrates 2",
     "previous": "Damokrates 1",
     "next": "Damokrates 3",
+    "sort_key": "Damokrates 02",
     "chapters": [
       {
         "start": 2068,
@@ -11184,6 +11187,7 @@
     "lemma": "Damon 8",
     "previous": "Damon 7",
     "next": "Damon 9",
+    "sort_key": "Damon 08",
     "chapters": [
       {
         "start": 2071,
@@ -11196,6 +11200,7 @@
     "lemma": "Damon 9",
     "previous": "Damon 8",
     "next": "Damon 10",
+    "sort_key": "Damon 09",
     "chapters": [
       {
         "start": 2071,
@@ -12827,7 +12832,7 @@
   {
     "lemma": "Daphnites",
     "previous": "Daphnitae",
-    "next": "Daphnoeides",
+    "next": "Δαφνοειδές",
     "chapters": [
       {
         "start": 2147,
@@ -12837,9 +12842,10 @@
     ]
   },
   {
-    "lemma": "Daphnoeides",
+    "lemma": "Δαφνοειδές",
     "previous": "Daphnites",
     "next": "Daphnon",
+    "sort_key": "Daphnoeides",
     "chapters": [
       {
         "start": 2147,
@@ -12850,8 +12856,9 @@
   },
   {
     "lemma": "Daphnon",
-    "previous": "Daphnoeides",
+    "previous": "Δαφνοειδές",
     "next": "Daphnos",
+    "redirect": true,
     "chapters": [
       {
         "start": 2148,
@@ -12935,6 +12942,7 @@
     "lemma": "Daphnusia",
     "previous": "Daphnusa",
     "next": "Daphnusion",
+    "redirect": true,
     "chapters": [
       {
         "start": 2149,
