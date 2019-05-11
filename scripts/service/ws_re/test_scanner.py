@@ -117,8 +117,8 @@ class TestReScanner(TestCase):
     def _mock_surroundings(self):
         lemma_patcher = mock.patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
                                    mock.Mock())
-        page_patcher = mock.patch("scripts.service.ws_re.scanner.Page", autospec=pywikibot.Page)
-        page_patcher_error = mock.patch("scripts.service.ws_re.scanner_tasks.Page", autospec=pywikibot.Page)
+        page_patcher = mock.patch("scripts.service.ws_re.scanner.pywikibot.Page", autospec=pywikibot.Page)
+        page_patcher_error = mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page", autospec=pywikibot.Page)
         re_page_patcher = mock.patch("scripts.service.ws_re.scanner.RePage", autospec=RePage)
         self.lemma_mock = lemma_patcher.start()
         self.page_mock = page_patcher.start()
