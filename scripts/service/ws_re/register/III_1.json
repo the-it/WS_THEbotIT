@@ -19819,6 +19819,7 @@
     "lemma": "Boibe 3",
     "previous": "Boibe 2",
     "next": "Boibe 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 628,
@@ -19831,6 +19832,7 @@
     "lemma": "Boibe 4",
     "previous": "Boibe 3",
     "next": "Boibeïs 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 628,
@@ -19855,6 +19857,7 @@
     "lemma": "Boibeïs 2",
     "previous": "Boibeïs 1",
     "next": "Boibos",
+    "sort_key": "Boibeis 2",
     "chapters": [
       {
         "start": 629,
@@ -21944,7 +21947,7 @@
   {
     "lemma": "Boon 2",
     "previous": "Boon 1",
-    "next": "Boonai",
+    "next": "Βοῶναι",
     "chapters": [
       {
         "start": 716,
@@ -21954,9 +21957,10 @@
     ]
   },
   {
-    "lemma": "Boonai",
+    "lemma": "Βοῶναι",
     "previous": "Boon 2",
     "next": "Booneta",
+    "sort_key": "Boonai",
     "chapters": [
       {
         "start": 716,
@@ -21967,8 +21971,8 @@
   },
   {
     "lemma": "Booneta",
-    "previous": "Boonai",
-    "next": "Boos aule",
+    "previous": "Βοῶναι",
+    "next": "Βοὸς αὐλή",
     "chapters": [
       {
         "start": 717,
@@ -21978,9 +21982,10 @@
     ]
   },
   {
-    "lemma": "Boos aule",
+    "lemma": "Βοὸς αὐλή",
     "previous": "Booneta",
     "next": "Booscoete",
+    "sort_key": "Boos aule",
     "chapters": [
       {
         "start": 717,
@@ -21991,7 +21996,7 @@
   },
   {
     "lemma": "Booscoete",
-    "previous": "Boos aule",
+    "previous": "Βοὸς αὐλή",
     "next": "Boos kephalai",
     "chapters": [
       {
@@ -22004,7 +22009,7 @@
   {
     "lemma": "Boos kephalai",
     "previous": "Booscoete",
-    "next": "Boos ura 1",
+    "next": "Βοὸς οὐρά 1",
     "chapters": [
       {
         "start": 717,
@@ -22014,9 +22019,10 @@
     ]
   },
   {
-    "lemma": "Boos ura 1",
+    "lemma": "Βοὸς οὐρά 1",
     "previous": "Boos kephalai",
-    "next": "Boos ura 2",
+    "next": "Βοὸς οὐρά 2",
+    "sort_key": "Boos ura 1",
     "chapters": [
       {
         "start": 717,
@@ -22026,9 +22032,10 @@
     ]
   },
   {
-    "lemma": "Boos ura 2",
-    "previous": "Boos ura 1",
+    "lemma": "Βοὸς οὐρά 2",
+    "previous": "Βοὸς οὐρά 1",
     "next": "Bootes 1",
+    "sort_key": "Boos ura 2",
     "chapters": [
       {
         "start": 717,
@@ -22039,7 +22046,7 @@
   },
   {
     "lemma": "Bootes 1",
-    "previous": "Boos ura 2",
+    "previous": "Βοὸς οὐρά 2",
     "next": "Bootes 2",
     "wp_link": "w:de:Bärenhüter",
     "chapters": [
@@ -23156,7 +23163,7 @@
   {
     "lemma": "Bosporion",
     "previous": "Bosporeichos",
-    "next": "Bosporios akra",
+    "next": "Βοσπόριος ἄκρα",
     "chapters": [
       {
         "start": 741,
@@ -23166,9 +23173,10 @@
     ]
   },
   {
-    "lemma": "Bosporios akra",
+    "lemma": "Βοσπόριος ἄκρα",
     "previous": "Bosporion",
     "next": "Bosporos",
+    "sort_key": "Bosporios akra",
     "chapters": [
       {
         "start": 741,
@@ -23179,7 +23187,7 @@
   },
   {
     "lemma": "Bosporos",
-    "previous": "Bosporios akra",
+    "previous": "Βοσπόριος ἄκρα",
     "next": "Bosporos 1",
     "chapters": [
       {
@@ -30435,7 +30443,7 @@
   {
     "lemma": "Bulbus",
     "previous": "Bularchos 3",
-    "next": "Bule",
+    "next": "Βουλή",
     "chapters": [
       {
         "start": 1020,
@@ -30444,9 +30452,10 @@
     ]
   },
   {
-    "lemma": "Bule",
+    "lemma": "Βουλή",
     "previous": "Bulbus",
     "next": "Buleia, Bulia",
+    "sort_key": "Bule",
     "chapters": [
       {
         "start": 1020,
@@ -30457,7 +30466,7 @@
   },
   {
     "lemma": "Buleia, Bulia",
-    "previous": "Bule",
+    "previous": "Βουλή",
     "next": "Buleides",
     "chapters": [
       {
@@ -30637,7 +30646,7 @@
   {
     "lemma": "Bulikas",
     "previous": "Bulidai",
-    "next": "Bulimu exelasis",
+    "next": "Βουλίμου ἐξέλασις",
     "chapters": [
       {
         "start": 1045,
@@ -30647,9 +30656,10 @@
     ]
   },
   {
-    "lemma": "Bulimu exelasis",
+    "lemma": "Βουλίμου ἐξέλασις",
     "previous": "Bulikas",
     "next": "Bulini",
+    "sort_key": "Bulimu exelasis",
     "chapters": [
       {
         "start": 1046,
@@ -30660,7 +30670,7 @@
   },
   {
     "lemma": "Bulini",
-    "previous": "Bulimu exelasis",
+    "previous": "Βουλίμου ἐξέλασις",
     "next": "Bulis 1",
     "chapters": [
       {
@@ -31081,6 +31091,7 @@
     "lemma": "Bunomeia",
     "previous": "Bunobora",
     "next": "Bunomos",
+    "wp_link": "w:de:Pella (Pella)",
     "chapters": [
       {
         "start": 1053,
@@ -31188,6 +31199,7 @@
     "lemma": "Buphagos 2",
     "previous": "Buphagos 1",
     "next": "Buphagos 3",
+    "wp_link": "w:de:Buphagos",
     "chapters": [
       {
         "start": 1054,
@@ -31442,6 +31454,7 @@
     "lemma": "Buraïkos 2",
     "previous": "Buraïkos 1",
     "next": "Buraios",
+    "wp_link": "w:de:Herakleshöhle bei Bura",
     "chapters": [
       {
         "start": 1060,
@@ -31736,7 +31749,7 @@
   {
     "lemma": "Burgiones",
     "previous": "Burginatium",
-    "next": "Burgon alton",
+    "next": "Βοῦργον ἄλτον",
     "chapters": [
       {
         "start": 1063,
@@ -31746,9 +31759,10 @@
     ]
   },
   {
-    "lemma": "Burgon alton",
+    "lemma": "Βοῦργον ἄλτον",
     "previous": "Burgiones",
     "next": "Burgonobore",
+    "sort_key": "Burgon alton",
     "chapters": [
       {
         "start": 1063,
@@ -31759,7 +31773,7 @@
   },
   {
     "lemma": "Burgonobore",
-    "previous": "Burgon alton",
+    "previous": "Βοῦργον ἄλτον",
     "next": "Burgundio 1",
     "chapters": [
       {
@@ -32956,7 +32970,7 @@
   {
     "lemma": "Buthysia",
     "previous": "Buthuris",
-    "next": "Butike limne",
+    "next": "Βουτικὴ λίμνη",
     "chapters": [
       {
         "start": 1085,
@@ -32966,9 +32980,10 @@
     ]
   },
   {
-    "lemma": "Butike limne",
+    "lemma": "Βουτικὴ λίμνη",
     "previous": "Buthysia",
     "next": "Butikos nomos",
+    "sort_key": "Butike limne",
     "chapters": [
       {
         "start": 1085,
@@ -32979,7 +32994,7 @@
   },
   {
     "lemma": "Butikos nomos",
-    "previous": "Butike limne",
+    "previous": "Βουτικὴ λίμνη",
     "next": "Butilinus",
     "chapters": [
       {
@@ -33975,6 +33990,7 @@
     "lemma": "Byzas",
     "previous": "Byzantion 3",
     "next": "Byze 1",
+    "wp_link": "w:de:Byzas",
     "chapters": [
       {
         "start": 1158,
@@ -34527,6 +34543,8 @@
     "lemma": "Cad(enus?)",
     "previous": "Caddarenses",
     "next": "Cadeum",
+    "sort_key": "Cadenus",
+    "wp_link": "w:de:Mogon",
     "chapters": [
       {
         "start": 1170,
@@ -34551,6 +34569,7 @@
     "lemma": "Cadianum",
     "previous": "Cadeum",
     "next": "Cadicianus",
+    "wp_link": "w:de:Cazzano di Tramigna",
     "chapters": [
       {
         "start": 1170,
@@ -34728,6 +34747,7 @@
     "lemma": "Caecilianus 2",
     "previous": "Caecilianus 1",
     "next": "Caecilianus 3",
+    "sort_key": "Caecilianus 02",
     "chapters": [
       {
         "start": 1172,
@@ -34778,6 +34798,7 @@
     "lemma": "Caecilianus 6",
     "previous": "Caecilianus 5",
     "next": "Caecilianus 7",
+    "sort_key": "Caecilianus 06",
     "chapters": [
       {
         "start": 1172,
@@ -34790,6 +34811,7 @@
     "lemma": "Caecilianus 7",
     "previous": "Caecilianus 6",
     "next": "Caecilianus 8",
+    "sort_key": "Caecilianus 07",
     "chapters": [
       {
         "start": 1173,
@@ -34802,6 +34824,7 @@
     "lemma": "Caecilianus 8",
     "previous": "Caecilianus 7",
     "next": "Caecilianus 9",
+    "sort_key": "Caecilianus 08",
     "chapters": [
       {
         "start": 1173,
@@ -34908,6 +34931,7 @@
     "lemma": "Caecilius 4",
     "previous": "Caecilius 3",
     "next": "Caecilius 5",
+    "sort_key": "Caecilius 004",
     "chapters": [
       {
         "start": 1188,
@@ -34956,6 +34980,7 @@
     "lemma": "Caecilius 8",
     "previous": "Caecilius 7",
     "next": "Caecilius 9",
+    "sort_key": "Caecilius 008",
     "chapters": [
       {
         "start": 1188,
@@ -35018,6 +35043,7 @@
     "lemma": "Caecilius 13",
     "previous": "Caecilius 12",
     "next": "Caecilius 14",
+    "sort_key": "Caecilius 013",
     "chapters": [
       {
         "start": 1188,
@@ -35054,6 +35080,7 @@
     "lemma": "Caecilius 16",
     "previous": "Caecilius 15",
     "next": "Caecilius 17",
+    "sort_key": "Caecilius 016",
     "chapters": [
       {
         "start": 1188,
@@ -35066,6 +35093,7 @@
     "lemma": "Caecilius 17",
     "previous": "Caecilius 16",
     "next": "Caecilius 18",
+    "sort_key": "Caecilius 017",
     "chapters": [
       {
         "start": 1188,
@@ -35078,6 +35106,7 @@
     "lemma": "Caecilius 18",
     "previous": "Caecilius 17",
     "next": "Caecilius 19",
+    "sort_key": "Caecilius 018",
     "chapters": [
       {
         "start": 1188,
@@ -35102,6 +35131,7 @@
     "lemma": "Caecilius 20",
     "previous": "Caecilius 19",
     "next": "Caecilius 21",
+    "sort_key": "Caecilius 020",
     "chapters": [
       {
         "start": 1189,
@@ -35114,6 +35144,7 @@
     "lemma": "Caecilius 21",
     "previous": "Caecilius 20",
     "next": "Caecilius 22",
+    "sort_key": "Caecilius 021",
     "chapters": [
       {
         "start": 1189,
@@ -35516,6 +35547,7 @@
     "lemma": "Caecilius 54",
     "previous": "Caecilius 53",
     "next": "Caecilius 55",
+    "sort_key": "Caecilius 054",
     "chapters": [
       {
         "start": 1201,
@@ -35600,6 +35632,7 @@
     "lemma": "Caecilius 61",
     "previous": "Caecilius 60",
     "next": "Caecilius 62",
+    "sort_key": "Caecilius 061",
     "chapters": [
       {
         "start": 1202,
@@ -35622,6 +35655,7 @@
     "lemma": "Caecilius 63",
     "previous": "Caecilius 62",
     "next": "Caecilius 64",
+    "sort_key": "Caecilius 063",
     "chapters": [
       {
         "start": 1202,
@@ -35680,6 +35714,7 @@
     "lemma": "Caecilius 68",
     "previous": "Caecilius 67",
     "next": "Caecilius 69ff.",
+    "sort_key": "Caecilius 068",
     "chapters": [
       {
         "start": 1202,
@@ -35932,6 +35967,7 @@
     "lemma": "Caecilius 89",
     "previous": "Caecilius 88",
     "next": "Caecilius 90",
+    "sort_key": "Caecilius 089",
     "chapters": [
       {
         "start": 1212,

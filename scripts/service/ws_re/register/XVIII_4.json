@@ -486,7 +486,7 @@
   {
     "lemma": "Paredron",
     "previous": "Paredroi",
-    "next": "Paredros 1",
+    "next": "Πάρεδρος 1",
     "chapters": [
       {
         "start": 1428,
@@ -496,9 +496,10 @@
     ]
   },
   {
-    "lemma": "Paredros 1",
+    "lemma": "Πάρεδρος 1",
     "previous": "Paredron",
     "next": "Paredros 2",
+    "sort_key": "Paredros 1",
     "chapters": [
       {
         "start": 1428,
@@ -509,7 +510,7 @@
   },
   {
     "lemma": "Paredros 2",
-    "previous": "Paredros 1",
+    "previous": "Πάρεδρος 1",
     "next": "Paredros 3",
     "chapters": [
       {
@@ -5255,6 +5256,7 @@
     "lemma": "(Domitius) Patruinus",
     "previous": "Patruinus",
     "next": "Patulcius 1",
+    "sort_key": "Patruinus 2",
     "chapters": [
       {
         "start": 2307,

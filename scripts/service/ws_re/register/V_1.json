@@ -2042,7 +2042,7 @@
   {
     "lemma": "Dendrobosa",
     "previous": "Dendrobatai",
-    "next": "Dendroeides",
+    "next": "Δενδροειδής",
     "chapters": [
       {
         "start": 215,
@@ -2052,9 +2052,11 @@
     ]
   },
   {
-    "lemma": "Dendroeides",
+    "lemma": "Δενδροειδής",
     "previous": "Dendrobosa",
     "next": "Dendrolibanos",
+    "sort_key": "Dendroeides",
+    "redirect": true,
     "chapters": [
       {
         "start": 216,
@@ -2064,8 +2066,9 @@
   },
   {
     "lemma": "Dendrolibanos",
-    "previous": "Dendroeides",
+    "previous": "Δενδροειδής",
     "next": "Dendrophori",
+    "redirect": true,
     "chapters": [
       {
         "start": 216,

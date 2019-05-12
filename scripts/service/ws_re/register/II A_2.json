@@ -16095,6 +16095,7 @@
     "lemma": "Sicalonia",
     "previous": "Sica",
     "next": "Sicambri",
+    "redirect": true,
     "chapters": [
       {
         "start": 2185,
@@ -16106,6 +16107,7 @@
     "lemma": "Sicambri",
     "previous": "Sicalonia",
     "next": "Sicana",
+    "redirect": true,
     "chapters": [
       {
         "start": 2185,
@@ -16141,6 +16143,7 @@
     "lemma": "Sicani 1",
     "previous": "Sicandrus",
     "next": "Sicani 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 2185,
@@ -16152,6 +16155,7 @@
     "lemma": "Sicani 2",
     "previous": "Sicani 1",
     "next": "Sicarius",
+    "redirect": true,
     "chapters": [
       {
         "start": 2185,
@@ -17733,7 +17737,7 @@
   {
     "lemma": "Siga",
     "previous": "Sifonarius",
-    "next": "Sigal",
+    "next": "Σιγάλ",
     "chapters": [
       {
         "start": 2274,
@@ -17743,9 +17747,10 @@
     ]
   },
   {
-    "lemma": "Sigal",
+    "lemma": "Σιγάλ",
     "previous": "Siga",
     "next": "Sigala",
+    "sort_key": "Sigal",
     "chapters": [
       {
         "start": 2275,
@@ -17756,7 +17761,7 @@
   },
   {
     "lemma": "Sigala",
-    "previous": "Sigal",
+    "previous": "Σιγάλ",
     "next": "Sigambri",
     "chapters": [
       {
@@ -17769,7 +17774,7 @@
   {
     "lemma": "Sigambri",
     "previous": "Sigala",
-    "next": "Sigara",
+    "next": "Σιγάρα",
     "chapters": [
       {
         "start": 2275,
@@ -17778,9 +17783,10 @@
     ]
   },
   {
-    "lemma": "Sigara",
+    "lemma": "Σιγάρα",
     "previous": "Sigambri",
     "next": "Sigarra 1",
+    "sort_key": "Sigara",
     "chapters": [
       {
         "start": 2275,
@@ -17791,7 +17797,7 @@
   },
   {
     "lemma": "Sigarra 1",
-    "previous": "Sigara",
+    "previous": "Σιγάρα",
     "next": "Sigarra 2",
     "chapters": [
       {
