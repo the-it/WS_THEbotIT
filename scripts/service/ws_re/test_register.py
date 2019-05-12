@@ -867,7 +867,7 @@ class TestIntegrationRegister(TestCase):
         cls.registers = Registers()
         end = time.time()
         init_time = end - start
-        if (init_time) > 15:
+        if init_time > 15:
             raise AssertionError(f"Register take to long to initiate ... {init_time} s. "
                                  "It should initiate in 15 seconds.")
 

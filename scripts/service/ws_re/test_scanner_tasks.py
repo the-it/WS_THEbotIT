@@ -284,9 +284,12 @@ class TestDEALTask(TaskTestCase):
 {{REAutor|Autor.}}
 {{REDaten}}
 {{RE siehe|Besserer Quatsch}}
+{{REAutor|Autor.}}
+{{REDaten}}
+{{RE siehe|Nicht hiernach suchen}}
 {{REAutor|Autor.}}"""
             self.title_mock.return_value = "Re:Title"
-            page_mock.return_value.exists.side_effect = [False, True, False]
+            page_mock.return_value.exists.side_effect = [False, True, False, False]
             re_page = RePage(self.page_mock)
             task = DEALTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
@@ -313,6 +316,23 @@ class TestDEALTask(TaskTestCase):
             task = DEALTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
             compare([("Aal", "Title"), ("Anderer Quatsch", "Title")], task.data)
+
+    def test_value_exception_bug(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            with open(Path(__file__).parent.joinpath("test_data_scanner/bug_value_error_DEAL_task.txt"), encoding="utf-8") as bug_file:
+                self.text_mock.return_value = bug_file.read()
+            self.title_mock.return_value = "Re:Caecilius 54a"
+            page_mock.return_value.exists.return_value = False
+            re_page = RePage(self.page_mock)
+            task = DEALTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            expection = [('Caecilius 44', 'Caecilius 54a'),
+                         ('Caecilius 57', 'Caecilius 54a'),
+                         ('Arabia 1', 'Caecilius 54a'),
+                         ('Aurelius 221', 'Caecilius 54a'),
+                         ('Caecilius 54', 'Caecilius 54a')]
+            compare(expection, task.data)
 
 
 
