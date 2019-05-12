@@ -9855,6 +9855,7 @@
     "lemma": "Herminius 2",
     "previous": "Herminius 1",
     "next": "Herminius mons",
+    "wp_link": "w:de:Titus Herminius",
     "chapters": [
       {
         "start": 834,
@@ -9867,6 +9868,7 @@
     "lemma": "Herminius mons",
     "previous": "Herminius 2",
     "next": "Herminones",
+    "wp_link": "w:de:Serra da Estrela",
     "chapters": [
       {
         "start": 834,
@@ -10033,7 +10035,8 @@
   {
     "lemma": "Hermionilla",
     "previous": "Hermione 8",
-    "next": "Hermion pedion",
+    "next": "Ἕρμιον πεδίον",
+    "redirect": true,
     "chapters": [
       {
         "start": 844,
@@ -10042,9 +10045,10 @@
     ]
   },
   {
-    "lemma": "Hermion pedion",
+    "lemma": "Ἕρμιον πεδίον",
     "previous": "Hermionilla",
     "next": "Hermios",
+    "sort_key": "Hermion pedion",
     "chapters": [
       {
         "start": 844,
@@ -10055,7 +10059,7 @@
   },
   {
     "lemma": "Hermios",
-    "previous": "Hermion pedion",
+    "previous": "Ἕρμιον πεδίον",
     "next": "Hermippos 1",
     "chapters": [
       {
@@ -10069,6 +10073,7 @@
     "lemma": "Hermippos 1",
     "previous": "Hermios",
     "next": "Hermippos 2",
+    "sort_key": "Hermippos 01",
     "chapters": [
       {
         "start": 844,
@@ -10081,6 +10086,7 @@
     "lemma": "Hermippos 2",
     "previous": "Hermippos 1",
     "next": "Hermippos 3",
+    "sort_key": "Hermippos 02",
     "chapters": [
       {
         "start": 844,
@@ -10093,6 +10099,7 @@
     "lemma": "Hermippos 3",
     "previous": "Hermippos 2",
     "next": "Hermippos 4",
+    "sort_key": "Hermippos 03",
     "chapters": [
       {
         "start": 844,
@@ -10105,6 +10112,7 @@
     "lemma": "Hermippos 4",
     "previous": "Hermippos 3",
     "next": "Hermippos 5",
+    "sort_key": "Hermippos 04",
     "chapters": [
       {
         "start": 844,
@@ -10117,6 +10125,8 @@
     "lemma": "Hermippos 5",
     "previous": "Hermippos 4",
     "next": "Hermippos 6",
+    "sort_key": "Hermippos 05",
+    "wp_link": "w:de:Hermippos (Athen)",
     "chapters": [
       {
         "start": 844,
@@ -10141,6 +10151,7 @@
     "lemma": "Hermippos 7",
     "previous": "Hermippos 6",
     "next": "Hermippos 8",
+    "sort_key": "Hermippos 07",
     "chapters": [
       {
         "start": 853,
