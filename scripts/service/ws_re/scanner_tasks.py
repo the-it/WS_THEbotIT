@@ -112,14 +112,20 @@ class DEALTask(ERROTask):
     def task(self):  # pylint: disable=arguments-differ
         for article in self.re_page:
             # check properties of REDaten Block first
-            for prop in ["VORGÄNGER", "NACHFOLGER"]:
-                link_to_check = article[prop].value
-                if link_to_check:
-                    if link_to_check[0].lower() in self._start_characters:
-                        self._check_link(link_to_check)
-            # then links in text
-            for potential_link in self.re_siehe_regex.findall(article.text):
-                self._check_link(potential_link)
+            if isinstance(article, Article):
+                for prop in ["VORGÄNGER", "NACHFOLGER"]:
+                    link_to_check = article[prop].value
+                    if link_to_check:
+                        if link_to_check[0].lower() in self._start_characters:
+                            self._check_link(link_to_check)
+                # then links in text
+                for potential_link in self.re_siehe_regex.findall(article.text):
+                    if potential_link[0].lower() in self._start_characters:
+                        self._check_link(potential_link)
+            elif isinstance(article, str):
+                for potential_link in self.re_siehe_regex.findall(article):
+                    if potential_link[0].lower() in self._start_characters:
+                        self._check_link(potential_link)
 
         return True
 
