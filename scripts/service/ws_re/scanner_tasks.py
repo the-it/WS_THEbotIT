@@ -99,7 +99,6 @@ class DEALTask(ERROTask):
     _start_characters = ("a",
                          "b",
                          "c",
-                         "d",
                          )
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
