@@ -29149,6 +29149,7 @@
     "lemma": "Aurelius 203",
     "previous": "Aurelius 202",
     "next": "Aurelius 204",
+    "redirect": true,
     "chapters": [
       {
         "start": 2524,
@@ -32270,7 +32271,7 @@
   {
     "lemma": "Autonoe 7",
     "previous": "Autonoe 6",
-    "next": "Autonomia",
+    "next": "Αὐτονομία",
     "chapters": [
       {
         "start": 2606,
@@ -32280,9 +32281,11 @@
     ]
   },
   {
-    "lemma": "Autonomia",
+    "lemma": "Αὐτονομία",
     "previous": "Autonoe 7",
     "next": "Autonomos",
+    "sort_key": "Autonomia",
+    "wp_link": "w:de:Autonomie",
     "chapters": [
       {
         "start": 2606,
@@ -32293,7 +32296,7 @@
   },
   {
     "lemma": "Autonomos",
-    "previous": "Autonomia",
+    "previous": "Αὐτονομία",
     "next": "Autonoos 1",
     "chapters": [
       {
@@ -37099,6 +37102,7 @@
     "lemma": "Bäckerei",
     "previous": "Baebulus",
     "next": "Baecor",
+    "sort_key": "Backerei",
     "chapters": [
       {
         "start": 2734,
