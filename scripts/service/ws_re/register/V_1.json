@@ -1002,6 +1002,7 @@
     "lemma": "Demonstratio 2",
     "previous": "Demonstratio 1",
     "next": "Demophanes 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 145,
@@ -1037,6 +1038,7 @@
     "lemma": "Demophanes 3",
     "previous": "Demophanes 2",
     "next": "Demophantos",
+    "redirect": true,
     "chapters": [
       {
         "start": 145,
@@ -1072,6 +1074,7 @@
     "lemma": "Demophilos 1",
     "previous": "Demophile",
     "next": "Demophilos 2",
+    "sort_key": "Demophilos 01",
     "chapters": [
       {
         "start": 146,
@@ -1084,6 +1087,7 @@
     "lemma": "Demophilos 2",
     "previous": "Demophilos 1",
     "next": "Demophilos 3",
+    "sort_key": "Demophilos 02",
     "chapters": [
       {
         "start": 146,
@@ -1096,6 +1100,7 @@
     "lemma": "Demophilos 3",
     "previous": "Demophilos 2",
     "next": "Demophilos 4",
+    "sort_key": "Demophilos 03",
     "chapters": [
       {
         "start": 146,
@@ -1108,6 +1113,7 @@
     "lemma": "Demophilos 4",
     "previous": "Demophilos 3",
     "next": "Demophilos 5",
+    "sort_key": "Demophilos 04",
     "chapters": [
       {
         "start": 146,
@@ -1120,6 +1126,7 @@
     "lemma": "Demophilos 5",
     "previous": "Demophilos 4",
     "next": "Demophilos 6",
+    "sort_key": "Demophilos 05",
     "chapters": [
       {
         "start": 146,
@@ -1132,6 +1139,7 @@
     "lemma": "Demophilos 6",
     "previous": "Demophilos 5",
     "next": "Demophilos 7",
+    "sort_key": "Demophilos 06",
     "chapters": [
       {
         "start": 146,
@@ -1144,6 +1152,7 @@
     "lemma": "Demophilos 7",
     "previous": "Demophilos 6",
     "next": "Demophilos 8",
+    "sort_key": "Demophilos 07",
     "chapters": [
       {
         "start": 146,
@@ -1156,6 +1165,7 @@
     "lemma": "Demophilos 8",
     "previous": "Demophilos 7",
     "next": "Demophilos 9",
+    "sort_key": "Demophilos 08",
     "chapters": [
       {
         "start": 146,
@@ -1168,6 +1178,7 @@
     "lemma": "Demophilos 9",
     "previous": "Demophilos 8",
     "next": "Demophilos 10",
+    "sort_key": "Demophilos 09",
     "chapters": [
       {
         "start": 146,
@@ -1240,6 +1251,7 @@
     "lemma": "Demophon 1",
     "previous": "Demophilos 14",
     "next": "Demophon 2",
+    "sort_key": "Demophon 01",
     "chapters": [
       {
         "start": 148,
@@ -1252,6 +1264,8 @@
     "lemma": "Demophon 2",
     "previous": "Demophon 1",
     "next": "Demophon 3",
+    "sort_key": "Demophon 02",
+    "wp_link": "w:de:Demophon von Athen",
     "chapters": [
       {
         "start": 149,
@@ -1264,6 +1278,8 @@
     "lemma": "Demophon 3",
     "previous": "Demophon 2",
     "next": "Demophon 4",
+    "sort_key": "Demophon 03",
+    "redirect": true,
     "chapters": [
       {
         "start": 152,
@@ -1275,6 +1291,7 @@
     "lemma": "Demophon 4",
     "previous": "Demophon 3",
     "next": "Demophon 5",
+    "sort_key": "Demophon 04",
     "chapters": [
       {
         "start": 152,
@@ -1287,6 +1304,7 @@
     "lemma": "Demophon 5",
     "previous": "Demophon 4",
     "next": "Demophon 6",
+    "sort_key": "Demophon 05",
     "chapters": [
       {
         "start": 152,
@@ -1299,6 +1317,7 @@
     "lemma": "Demophon 6",
     "previous": "Demophon 5",
     "next": "Demophon 7",
+    "sort_key": "Demophon 06",
     "chapters": [
       {
         "start": 152,
@@ -1311,6 +1330,7 @@
     "lemma": "Demophon 7",
     "previous": "Demophon 6",
     "next": "Demophon 8",
+    "sort_key": "Demophon 07",
     "chapters": [
       {
         "start": 152,
@@ -1323,6 +1343,7 @@
     "lemma": "Demophon 8",
     "previous": "Demophon 7",
     "next": "Demophon 9",
+    "sort_key": "Demophon 08",
     "chapters": [
       {
         "start": 152,
@@ -1335,6 +1356,7 @@
     "lemma": "Demophon 9",
     "previous": "Demophon 8",
     "next": "Demophontidai",
+    "sort_key": "Demophon 09",
     "chapters": [
       {
         "start": 153,
@@ -1358,7 +1380,7 @@
   {
     "lemma": "Demophoon",
     "previous": "Demophontidai",
-    "next": "Demopoietos",
+    "next": "Δημοποίητος",
     "chapters": [
       {
         "start": 153,
@@ -1368,9 +1390,10 @@
     ]
   },
   {
-    "lemma": "Demopoietos",
+    "lemma": "Δημοποίητος",
     "previous": "Demophoon",
     "next": "Demoptolemos",
+    "sort_key": "Demopoietos",
     "chapters": [
       {
         "start": 153,
@@ -1381,7 +1404,7 @@
   },
   {
     "lemma": "Demoptolemos",
-    "previous": "Demopoietos",
+    "previous": "Δημοποίητος",
     "next": "Demos 1",
     "chapters": [
       {
@@ -1418,7 +1441,7 @@
   {
     "lemma": "Demos 3",
     "previous": "Demos 2",
-    "next": "Demosioi",
+    "next": "Δημόσιοι",
     "chapters": [
       {
         "start": 161,
@@ -1428,9 +1451,10 @@
     ]
   },
   {
-    "lemma": "Demosioi",
+    "lemma": "Δημόσιοι",
     "previous": "Demos 3",
     "next": "Demosios",
+    "sort_key": "Demosioi",
     "chapters": [
       {
         "start": 161,
@@ -1441,7 +1465,7 @@
   },
   {
     "lemma": "Demosios",
-    "previous": "Demosioi",
+    "previous": "Δημόσιοι",
     "next": "Demosthenes 1",
     "chapters": [
       {
@@ -1638,6 +1662,7 @@
     "lemma": "Demostratos 1",
     "previous": "Demosthenes 15",
     "next": "Demostratos 2",
+    "sort_key": "Demostratos 01",
     "chapters": [
       {
         "start": 191,
@@ -1650,6 +1675,7 @@
     "lemma": "Demostratos 2",
     "previous": "Demostratos 1",
     "next": "Demostratos 3",
+    "sort_key": "Demostratos 02",
     "chapters": [
       {
         "start": 191,
@@ -1662,6 +1688,7 @@
     "lemma": "Demostratos 3",
     "previous": "Demostratos 2",
     "next": "Demostratos 4",
+    "sort_key": "Demostratos 03",
     "chapters": [
       {
         "start": 191,
@@ -1674,6 +1701,7 @@
     "lemma": "Demostratos 4",
     "previous": "Demostratos 3",
     "next": "Demostratos 5",
+    "sort_key": "Demostratos 04",
     "chapters": [
       {
         "start": 191,
@@ -1686,6 +1714,7 @@
     "lemma": "Demostratos 5",
     "previous": "Demostratos 4",
     "next": "Demostratos 6",
+    "sort_key": "Demostratos 05",
     "chapters": [
       {
         "start": 191,
@@ -1698,6 +1727,7 @@
     "lemma": "Demostratos 6",
     "previous": "Demostratos 5",
     "next": "Demostratos 7",
+    "sort_key": "Demostratos 06",
     "chapters": [
       {
         "start": 191,
@@ -1710,6 +1740,7 @@
     "lemma": "Demostratos 7",
     "previous": "Demostratos 6",
     "next": "Demostratos 8",
+    "sort_key": "Demostratos 07",
     "chapters": [
       {
         "start": 191,
@@ -1722,6 +1753,7 @@
     "lemma": "Demostratos 8",
     "previous": "Demostratos 7",
     "next": "Demostratos 9",
+    "sort_key": "Demostratos 08",
     "chapters": [
       {
         "start": 191,
@@ -1734,6 +1766,7 @@
     "lemma": "Demostratos 9",
     "previous": "Demostratos 8",
     "next": "Demostratos 10",
+    "sort_key": "Demostratos 09",
     "chapters": [
       {
         "start": 191,
@@ -1770,6 +1803,7 @@
     "lemma": "Demostratos 12",
     "previous": "Demostratos 11",
     "next": "Demostratos 13",
+    "redirect": true,
     "chapters": [
       {
         "start": 191,
@@ -1912,6 +1946,7 @@
     "lemma": "Demotionidai",
     "previous": "Demotion",
     "next": "Demouchoi",
+    "wp_link": "w:de:Phratrie",
     "chapters": [
       {
         "start": 194,
@@ -2007,7 +2042,7 @@
   {
     "lemma": "Dendrobosa",
     "previous": "Dendrobatai",
-    "next": "Dendroeides",
+    "next": "Δενδροειδής",
     "chapters": [
       {
         "start": 215,
@@ -2017,9 +2052,11 @@
     ]
   },
   {
-    "lemma": "Dendroeides",
+    "lemma": "Δενδροειδής",
     "previous": "Dendrobosa",
     "next": "Dendrolibanos",
+    "sort_key": "Dendroeides",
+    "redirect": true,
     "chapters": [
       {
         "start": 216,
@@ -2029,8 +2066,9 @@
   },
   {
     "lemma": "Dendrolibanos",
-    "previous": "Dendroeides",
+    "previous": "Δενδροειδής",
     "next": "Dendrophori",
+    "redirect": true,
     "chapters": [
       {
         "start": 216,
@@ -2626,6 +2664,7 @@
     "lemma": "Derdas 1",
     "previous": "Dercius",
     "next": "Derdas 2",
+    "wp_link": "w:de:Derdas I. von Elimiotis",
     "chapters": [
       {
         "start": 239,
@@ -2638,6 +2677,7 @@
     "lemma": "Derdas 2",
     "previous": "Derdas 1",
     "next": "Derdas 3",
+    "wp_link": "w:de:Derdas II. von Elimiotis",
     "chapters": [
       {
         "start": 239,
@@ -2650,6 +2690,7 @@
     "lemma": "Derdas 3",
     "previous": "Derdas 2",
     "next": "Dereatis",
+    "wp_link": "w:de:Derdas III. von Elimiotis",
     "chapters": [
       {
         "start": 239,
@@ -3271,7 +3312,7 @@
   {
     "lemma": "Desmontes",
     "previous": "Desilaus",
-    "next": "Desmoterion",
+    "next": "Δεσμωτήριον",
     "chapters": [
       {
         "start": 250,
@@ -3281,9 +3322,10 @@
     ]
   },
   {
-    "lemma": "Desmoterion",
+    "lemma": "Δεσμωτήριον",
     "previous": "Desmontes",
     "next": "Desos",
+    "sort_key": "Desmoterion",
     "chapters": [
       {
         "start": 251,
@@ -3294,7 +3336,7 @@
   },
   {
     "lemma": "Desos",
-    "previous": "Desmoterion",
+    "previous": "Δεσμωτήριον",
     "next": "Despoina",
     "chapters": [
       {
@@ -4619,6 +4661,7 @@
     "lemma": "Dextrale",
     "previous": "Dexterati",
     "next": "Dextratum iunctio",
+    "redirect": true,
     "chapters": [
       {
         "start": 297,
@@ -4641,6 +4684,7 @@
     "lemma": "Dextrianus",
     "previous": "Dextratum iunctio",
     "next": "Dexu(v)iates",
+    "redirect": true,
     "chapters": [
       {
         "start": 297,
@@ -4652,6 +4696,7 @@
     "lemma": "Dexu(v)iates",
     "previous": "Dextrianus",
     "next": "Deision",
+    "wp_link": "w:de:fr:Dexcivate",
     "chapters": [
       {
         "start": 297,
@@ -7989,6 +8034,7 @@
     "lemma": "Dikaiarcheia",
     "previous": "Dikai apo symbolon",
     "next": "Dikaiarchos 1",
+    "wp_link": "w:de:Pozzuoli",
     "chapters": [
       {
         "start": 546,
@@ -12972,6 +13018,7 @@
     "lemma": "Dion 5",
     "previous": "Dion 4",
     "next": "Dion 6",
+    "sort_key": "Dion 05",
     "chapters": [
       {
         "start": 847,
@@ -18398,7 +18445,7 @@
   {
     "lemma": "Diphros",
     "previous": "Diphroi",
-    "next": "Diphthera",
+    "next": "Διφθέρα",
     "chapters": [
       {
         "start": 1157,
@@ -18407,9 +18454,10 @@
     ]
   },
   {
-    "lemma": "Diphthera",
+    "lemma": "Διφθέρα",
     "previous": "Diphros",
     "next": "Diplasiasmoi",
+    "sort_key": "Diphthera",
     "chapters": [
       {
         "start": 1157,
@@ -18420,7 +18468,7 @@
   },
   {
     "lemma": "Diplasiasmoi",
-    "previous": "Diphthera",
+    "previous": "Διφθέρα",
     "next": "Diploma",
     "chapters": [
       {
@@ -19546,6 +19594,7 @@
     "lemma": "Divortium",
     "previous": "Divona 3",
     "next": "Diur 1",
+    "wp_link": "w:de:Ehescheidung",
     "chapters": [
       {
         "start": 1241,
@@ -21345,6 +21394,7 @@
     "lemma": "Domitianus 7",
     "previous": "Domitianus 6",
     "next": "Domitianus 8",
+    "sort_key": "Domitianus 07",
     "chapters": [
       {
         "start": 1312,
@@ -21357,6 +21407,7 @@
     "lemma": "Domitianus 8",
     "previous": "Domitianus 7",
     "next": "Domitianus 9",
+    "sort_key": "Domitianus 08",
     "chapters": [
       {
         "start": 1313,

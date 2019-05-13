@@ -135,6 +135,10 @@ workflows:
     jobs:
       - quality:
           context: python37
+          filters:
+            branches:
+              ignore:
+                - /.*updating_registers.*/
       - coverage38:
           context: python38
           requires:

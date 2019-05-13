@@ -2301,7 +2301,7 @@
   {
     "lemma": "Asabe",
     "previous": "Asabaia",
-    "next": "Asabon ore",
+    "next": "Ἀσαβῶν ὄρη",
     "chapters": [
       {
         "start": 1513,
@@ -2310,9 +2310,10 @@
     ]
   },
   {
-    "lemma": "Asabon ore",
+    "lemma": "Ἀσαβῶν ὄρη",
     "previous": "Asabe",
     "next": "Asacaricus",
+    "sort_key": "Asabon ore",
     "chapters": [
       {
         "start": 1513,
@@ -2323,8 +2324,9 @@
   },
   {
     "lemma": "Asacaricus",
-    "previous": "Asabon ore",
+    "previous": "Ἀσαβῶν ὄρη",
     "next": "Asachaei",
+    "sort_key": "Ascarius",
     "wp_link": "w:de:Ascaricus",
     "chapters": [
       {
@@ -2849,6 +2851,7 @@
     "lemma": "Asbolos 1",
     "previous": "Asbetos",
     "next": "Asbolos 2",
+    "wp_link": "w:de:Asbolos",
     "chapters": [
       {
         "start": 1519,
@@ -3591,6 +3594,8 @@
     "lemma": "Aseneth",
     "previous": "Asemus",
     "next": "Aseni",
+    "wp_link": "w:de:Aseneth",
+    "ws_link": "s:de:Joseph und Asenath",
     "chapters": [
       {
         "start": 1533,
@@ -6651,6 +6656,7 @@
     "lemma": "Asklepiodotos 9",
     "previous": "Asklepiodotos 8",
     "next": "Asklepiodotos 10",
+    "sort_key": "Asklepiodotos 09",
     "chapters": [
       {
         "start": 1637,
@@ -8401,7 +8407,7 @@
     "lemma": "Aspis 11",
     "previous": "Aspis 10",
     "next": "Aspis 12",
-    "sort_key": "Aspis",
+    "sort_key": "Aspis 11",
     "chapters": [
       {
         "start": 1734,
@@ -21202,6 +21208,7 @@
     "lemma": "Avares",
     "previous": "Auara",
     "next": "Avaricum",
+    "wp_link": "w:de:Awaren",
     "chapters": [
       {
         "start": 2264,
@@ -22031,6 +22038,7 @@
     "lemma": "Avennio",
     "previous": "Avendon",
     "next": "Avens",
+    "wp_link": "w:de:Avignon",
     "chapters": [
       {
         "start": 2281,
@@ -22103,6 +22111,7 @@
     "lemma": "Aventinus 1",
     "previous": "Aventinensis pagus",
     "next": "Aventinus 2",
+    "wp_link": "w:de:Aventin",
     "chapters": [
       {
         "start": 2282,
@@ -22200,6 +22209,7 @@
     "lemma": "Avernus lacus",
     "previous": "Avernus",
     "next": "Auerochs",
+    "wp_link": "w:de:Lago d'Averno",
     "chapters": [
       {
         "start": 2286,
@@ -24392,6 +24402,7 @@
     "lemma": "Avia",
     "previous": "Auha",
     "next": "Aviaitinehae",
+    "sort_key": "Auia",
     "chapters": [
       {
         "start": 2372,
@@ -24463,6 +24474,7 @@
     "lemma": "Avianius 5",
     "previous": "Avianius 4",
     "next": "Avianius 6",
+    "sort_key": "Auianius 05",
     "chapters": [
       {
         "start": 2372,
@@ -24487,6 +24499,7 @@
     "lemma": "Avianius 7",
     "previous": "Avianius 6",
     "next": "Avianius 8",
+    "sort_key": "Auianius 07",
     "chapters": [
       {
         "start": 2373,
@@ -24544,6 +24557,8 @@
     "lemma": "Avianus",
     "previous": "Avianius 11",
     "next": "Aviarium",
+    "wp_link": "w:de:Avianus",
+    "ws_link": "s:de:Avianus",
     "chapters": [
       {
         "start": 2373,
@@ -24640,6 +24655,7 @@
     "lemma": "Avidius 3",
     "previous": "Avidius 2",
     "next": "Avidius 4",
+    "sort_key": "Avidius 03",
     "chapters": [
       {
         "start": 2383,
@@ -24664,6 +24680,7 @@
     "lemma": "Avidius 5",
     "previous": "Avidius 4",
     "next": "Avidius 6",
+    "sort_key": "Avidius 05",
     "chapters": [
       {
         "start": 2384,
@@ -24676,6 +24693,7 @@
     "lemma": "Avidius 6",
     "previous": "Avidius 5",
     "next": "Avidius 7",
+    "sort_key": "Avidius 06",
     "chapters": [
       {
         "start": 2384,
@@ -24688,6 +24706,7 @@
     "lemma": "Avidius 7",
     "previous": "Avidius 6",
     "next": "Avidius 8",
+    "sort_key": "Avidius 07",
     "chapters": [
       {
         "start": 2384,
@@ -24748,6 +24767,7 @@
     "lemma": "Avidius 9",
     "previous": "Avienus 2",
     "next": "Avidius 10",
+    "sort_key": "Avidius 09",
     "chapters": [
       {
         "start": 2386,
@@ -24772,6 +24792,7 @@
     "lemma": "Avienus 3",
     "previous": "Avidius 10",
     "next": "Avienus 4",
+    "wp_link": "w:de:Avienus",
     "chapters": [
       {
         "start": 2386,
@@ -25060,6 +25081,8 @@
     "lemma": "Avitus 5",
     "previous": "Avitus 4",
     "next": "Avitus 6",
+    "sort_key": "Avitus 05",
+    "wp_link": "w:de:Avitus",
     "chapters": [
       {
         "start": 2395,
@@ -25362,7 +25385,7 @@
   {
     "lemma": "Aulia",
     "previous": "Auleu",
-    "next": "Aulideia",
+    "next": "Αὐλίδεια",
     "chapters": [
       {
         "start": 2409,
@@ -25371,9 +25394,10 @@
     ]
   },
   {
-    "lemma": "Aulideia",
+    "lemma": "Αὐλίδεια",
     "previous": "Aulia",
     "next": "Aulienus",
+    "sort_key": "Aulideia",
     "chapters": [
       {
         "start": 2409,
@@ -25384,7 +25408,7 @@
   },
   {
     "lemma": "Aulienus",
-    "previous": "Aulideia",
+    "previous": "Αὐλίδεια",
     "next": "Aulindenos",
     "chapters": [
       {
@@ -26021,6 +26045,7 @@
     "lemma": "Avo",
     "previous": "Aunobaris",
     "next": "Avobriga",
+    "sort_key": "Auo",
     "chapters": [
       {
         "start": 2423,
@@ -26129,7 +26154,7 @@
   {
     "lemma": "Auraei",
     "previous": "Auradis",
-    "next": "Aurai",
+    "next": "Αὖραι",
     "chapters": [
       {
         "start": 2425,
@@ -26139,9 +26164,10 @@
     ]
   },
   {
-    "lemma": "Aurai",
+    "lemma": "Αὖραι",
     "previous": "Auraei",
     "next": "Aurakleia",
+    "sort_key": "Aurai",
     "chapters": [
       {
         "start": 2425,
@@ -26152,7 +26178,7 @@
   },
   {
     "lemma": "Aurakleia",
-    "previous": "Aurai",
+    "previous": "Αὖραι",
     "next": "Aurana",
     "chapters": [
       {
@@ -26676,6 +26702,7 @@
     "lemma": "Aurelius",
     "previous": "Aureliupolis",
     "next": "Aurelius 1",
+    "wp_link": "w:de:Aurelius",
     "chapters": [
       {
         "start": 2431,
@@ -27233,6 +27260,8 @@
     "lemma": "Aurelius 46",
     "previous": "Aurelius 45",
     "next": "Aurelius 47",
+    "sort_key": "Aurelius 046",
+    "wp_link": "w:de:Caracalla",
     "chapters": [
       {
         "start": 2434,
@@ -27665,6 +27694,8 @@
     "lemma": "Aurelius 82",
     "previous": "Aurelius 81",
     "next": "Aurelius 83",
+    "sort_key": "Aurelius 082",
+    "wp_link": "w:de:Claudius Gothicus",
     "chapters": [
       {
         "start": 2458,
@@ -27749,6 +27780,8 @@
     "lemma": "Aurelius 89",
     "previous": "Aurelius 88",
     "next": "Aurelius 90",
+    "sort_key": "Aurelius 089",
+    "wp_link": "w:de:Commodus",
     "chapters": [
       {
         "start": 2464,
@@ -27859,6 +27892,7 @@
     "lemma": "Aurelius 98",
     "previous": "Aurelius 97",
     "next": "Aurelius 99",
+    "sort_key": "Aurelius 098",
     "chapters": [
       {
         "start": 2484,
@@ -29007,6 +29041,7 @@
     "lemma": "Aurelius 194",
     "previous": "Aurelius 193",
     "next": "Aurelius 195",
+    "wp_link": "w:de:Probus (Kaiser)",
     "chapters": [
       {
         "start": 2516,
@@ -29114,6 +29149,7 @@
     "lemma": "Aurelius 203",
     "previous": "Aurelius 202",
     "next": "Aurelius 204",
+    "redirect": true,
     "chapters": [
       {
         "start": 2524,
@@ -29869,6 +29905,7 @@
     "lemma": "Aureolus",
     "previous": "Aurelius vicus",
     "next": "Aures",
+    "wp_link": "w:de:Aureolus",
     "chapters": [
       {
         "start": 2545,
@@ -30000,6 +30037,7 @@
     "lemma": "Aurifex 2",
     "previous": "Aurifex 1",
     "next": "Auriga",
+    "wp_link": "w:de:Goldschmied",
     "chapters": [
       {
         "start": 2548,
@@ -31018,6 +31056,7 @@
     "lemma": "Auspicium",
     "previous": "A)uspicatus",
     "next": "Auspicius",
+    "wp_link": "w:de:Auspizien",
     "chapters": [
       {
         "start": 2580,
@@ -31088,6 +31127,7 @@
     "lemma": "Austern",
     "previous": "Auster",
     "next": "Austeravia",
+    "wp_link": "w:de:Austern",
     "chapters": [
       {
         "start": 2589,
@@ -31857,6 +31897,7 @@
     "lemma": "Autolykos 2",
     "previous": "Autolykos 1",
     "next": "Autolykos 3",
+    "wp_link": "w:de:Autolykos (Sohn des Deimachos)",
     "chapters": [
       {
         "start": 2601,
@@ -31881,6 +31922,7 @@
     "lemma": "Autolykos 4",
     "previous": "Autolykos 3",
     "next": "Autolykos 5",
+    "wp_link": "w:de:Autolykos (Athlet)",
     "chapters": [
       {
         "start": 2601,
@@ -31941,6 +31983,7 @@
     "lemma": "Autolykos 9",
     "previous": "Autolykos 8",
     "next": "Autolyte",
+    "wp_link": "w:de:Autolykos von Pitane",
     "chapters": [
       {
         "start": 2602,
@@ -32228,7 +32271,7 @@
   {
     "lemma": "Autonoe 7",
     "previous": "Autonoe 6",
-    "next": "Autonomia",
+    "next": "Αὐτονομία",
     "chapters": [
       {
         "start": 2606,
@@ -32238,9 +32281,11 @@
     ]
   },
   {
-    "lemma": "Autonomia",
+    "lemma": "Αὐτονομία",
     "previous": "Autonoe 7",
     "next": "Autonomos",
+    "sort_key": "Autonomia",
+    "wp_link": "w:de:Autonomie",
     "chapters": [
       {
         "start": 2606,
@@ -32251,7 +32296,7 @@
   },
   {
     "lemma": "Autonomos",
-    "previous": "Autonomia",
+    "previous": "Αὐτονομία",
     "next": "Autonoos 1",
     "chapters": [
       {
@@ -32337,6 +32382,7 @@
     "lemma": "Autophradates 1",
     "previous": "ep' autophoro",
     "next": "Autophradates 2",
+    "sort_key": "Autophoro",
     "chapters": [
       {
         "start": 2607,
@@ -35305,6 +35351,8 @@
     "lemma": "Babrios",
     "previous": "Babras",
     "next": "Babullius",
+    "wp_link": "w:de:Babrios",
+    "ws_link": "s:de:Babrios",
     "chapters": [
       {
         "start": 2655,
@@ -37054,6 +37102,7 @@
     "lemma": "Bäckerei",
     "previous": "Baebulus",
     "next": "Baecor",
+    "sort_key": "Backerei",
     "chapters": [
       {
         "start": 2734,
@@ -39116,7 +39165,7 @@
   {
     "lemma": "Bakcho",
     "previous": "Bakchis 4",
-    "next": "Bakchoi",
+    "next": "Βάκχοι",
     "chapters": [
       {
         "start": 2792,
@@ -39126,9 +39175,10 @@
     ]
   },
   {
-    "lemma": "Bakchoi",
+    "lemma": "Βάκχοι",
     "previous": "Bakcho",
     "next": "Bakchon",
+    "sort_key": "Bakchoi",
     "chapters": [
       {
         "start": 2792,
@@ -39139,7 +39189,7 @@
   },
   {
     "lemma": "Bakchon",
-    "previous": "Bakchoi",
+    "previous": "Βάκχοι",
     "next": "Bakchos 1",
     "chapters": [
       {
@@ -39619,6 +39669,7 @@
     "lemma": "Balanaia",
     "previous": "Balamber",
     "next": "Balanos",
+    "wp_link": "w:de:Baniyas",
     "chapters": [
       {
         "start": 2816,

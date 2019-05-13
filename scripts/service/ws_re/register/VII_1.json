@@ -7164,7 +7164,7 @@
   {
     "lemma": "Fuvius",
     "previous": "Futius",
-    "next": "Gaala, Galla",
+    "next": "Γαάλα, Γάλλα",
     "chapters": [
       {
         "start": 407,
@@ -7174,9 +7174,10 @@
     ]
   },
   {
-    "lemma": "Gaala, Galla",
+    "lemma": "Γαάλα, Γάλλα",
     "previous": "Fuvius",
     "next": "Gaana",
+    "sort_key": "Gaala, Galla",
     "chapters": [
       {
         "start": 409,
@@ -7187,7 +7188,7 @@
   },
   {
     "lemma": "Gaana",
-    "previous": "Gaala, Galla",
+    "previous": "Γαάλα, Γάλλα",
     "next": "Gaba",
     "chapters": [
       {
@@ -10533,6 +10534,7 @@
     "lemma": "Galla 1",
     "previous": "Galinthias, Galanthis",
     "next": "Galla 2",
+    "sort_key": "Galla 01",
     "chapters": [
       {
         "start": 608,
@@ -10557,6 +10559,8 @@
     "lemma": "Galla 3",
     "previous": "Galla 2",
     "next": "Galla 4",
+    "sort_key": "Galla 03",
+    "redirect": true,
     "chapters": [
       {
         "start": 608,
@@ -10568,6 +10572,7 @@
     "lemma": "Galla 4",
     "previous": "Galla 3",
     "next": "Galla 5",
+    "sort_key": "Galla 04",
     "chapters": [
       {
         "start": 608,
@@ -10580,6 +10585,7 @@
     "lemma": "Galla 5",
     "previous": "Galla 4",
     "next": "Galla 6",
+    "sort_key": "Galla 05",
     "chapters": [
       {
         "start": 608,
@@ -21403,6 +21409,7 @@
     "lemma": "Geth 1",
     "previous": "Getae",
     "next": "Geth 2",
+    "wp_link": "w:de:Gat (Bibel)",
     "chapters": [
       {
         "start": 1334,

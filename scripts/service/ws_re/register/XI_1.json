@@ -8325,6 +8325,7 @@
     "lemma": "Kitharistes",
     "previous": "Kitharephoroi",
     "next": "Kitharizon",
+    "wp_link": "w:de:La Ciotat",
     "chapters": [
       {
         "start": 529,
@@ -8336,7 +8337,7 @@
   {
     "lemma": "Kitharizon",
     "previous": "Kitharistes",
-    "next": "Kitharodia",
+    "next": "Κιθαρῳδία",
     "chapters": [
       {
         "start": 530,
@@ -8346,9 +8347,11 @@
     ]
   },
   {
-    "lemma": "Kitharodia",
+    "lemma": "Κιθαρῳδία",
     "previous": "Kitharizon",
     "next": "Kithibanitai",
+    "sort_key": "Kitharodia",
+    "wp_link": "w:de:Kitharöde",
     "chapters": [
       {
         "start": 530,
@@ -8359,7 +8362,7 @@
   },
   {
     "lemma": "Kithibanitai",
-    "previous": "Kitharodia",
+    "previous": "Κιθαρῳδία",
     "next": "Kithinas",
     "chapters": [
       {
@@ -14718,7 +14721,7 @@
   {
     "lemma": "Kobe",
     "previous": "Kobaloi",
-    "next": "Kobenkiles",
+    "next": "Κοβέγκιλες",
     "chapters": [
       {
         "start": 931,
@@ -14728,9 +14731,10 @@
     ]
   },
   {
-    "lemma": "Kobenkiles",
+    "lemma": "Κοβέγκιλες",
     "previous": "Kobe",
     "next": "Kobiu",
+    "sort_key": "Kobenkiles",
     "chapters": [
       {
         "start": 932,
@@ -14741,7 +14745,7 @@
   },
   {
     "lemma": "Kobiu",
-    "previous": "Kobenkiles",
+    "previous": "Κοβέγκιλες",
     "next": "Koblanos",
     "chapters": [
       {
@@ -14779,6 +14783,8 @@
     "lemma": "Kochbücher",
     "previous": "Kobrys",
     "next": "Koche",
+    "wp_link": "w:de:Kochbücher",
+    "ws_link": "s:de:Kochbücher",
     "chapters": [
       {
         "start": 932,

@@ -2454,6 +2454,7 @@
     "lemma": "Crematio",
     "previous": "Credulitas",
     "next": "Cremera",
+    "wp_link": "w:de:Feuertod",
     "chapters": [
       {
         "start": 1700,
@@ -6025,6 +6026,7 @@
     "lemma": "Curtius 9",
     "previous": "Curtius 8",
     "next": "Curtius 10",
+    "sort_key": "Curtius 09",
     "chapters": [
       {
         "start": 1865,
@@ -10372,6 +10374,7 @@
     "lemma": "Damiatrix",
     "previous": "Damianos 3",
     "next": "Damigeron",
+    "redirect": true,
     "chapters": [
       {
         "start": 2055,
@@ -10407,6 +10410,7 @@
     "lemma": "Damion",
     "previous": "Damindas",
     "next": "Damios",
+    "redirect": true,
     "chapters": [
       {
         "start": 2056,
@@ -10907,6 +10911,7 @@
     "lemma": "Damokrates 2",
     "previous": "Damokrates 1",
     "next": "Damokrates 3",
+    "sort_key": "Damokrates 02",
     "chapters": [
       {
         "start": 2068,
@@ -11183,6 +11188,7 @@
     "lemma": "Damon 8",
     "previous": "Damon 7",
     "next": "Damon 9",
+    "sort_key": "Damon 08",
     "chapters": [
       {
         "start": 2071,
@@ -11195,6 +11201,7 @@
     "lemma": "Damon 9",
     "previous": "Damon 8",
     "next": "Damon 10",
+    "sort_key": "Damon 09",
     "chapters": [
       {
         "start": 2071,
@@ -11916,6 +11923,7 @@
     "lemma": "Dan",
     "previous": "Damysos",
     "next": "Dana",
+    "wp_link": "w:de:Tel Dan",
     "chapters": [
       {
         "start": 2082,
@@ -12825,7 +12833,7 @@
   {
     "lemma": "Daphnites",
     "previous": "Daphnitae",
-    "next": "Daphnoeides",
+    "next": "Δαφνοειδές",
     "chapters": [
       {
         "start": 2147,
@@ -12835,9 +12843,10 @@
     ]
   },
   {
-    "lemma": "Daphnoeides",
+    "lemma": "Δαφνοειδές",
     "previous": "Daphnites",
     "next": "Daphnon",
+    "sort_key": "Daphnoeides",
     "chapters": [
       {
         "start": 2147,
@@ -12848,8 +12857,9 @@
   },
   {
     "lemma": "Daphnon",
-    "previous": "Daphnoeides",
+    "previous": "Δαφνοειδές",
     "next": "Daphnos",
+    "redirect": true,
     "chapters": [
       {
         "start": 2148,
@@ -12933,6 +12943,7 @@
     "lemma": "Daphnusia",
     "previous": "Daphnusa",
     "next": "Daphnusion",
+    "redirect": true,
     "chapters": [
       {
         "start": 2149,
@@ -16752,6 +16763,7 @@
     "lemma": "Decuria",
     "previous": "Decunx",
     "next": "Decurialis",
+    "wp_link": "w:de:Decurie",
     "chapters": [
       {
         "start": 2316,
@@ -19711,6 +19723,7 @@
     "lemma": "Delphini portus",
     "previous": "Delphinios 2",
     "next": "Delphinium L.",
+    "sort_key": "Delphiniportus",
     "chapters": [
       {
         "start": 2516,
@@ -19723,6 +19736,7 @@
     "lemma": "Delphinium L.",
     "previous": "Delphini portus",
     "next": "Delphion 1",
+    "wp_link": "w:de:Rittersporne",
     "chapters": [
       {
         "start": 2516,
@@ -20502,7 +20516,8 @@
   {
     "lemma": "Demetrias 9",
     "previous": "Demetrias 8",
-    "next": "Demetriastai",
+    "next": "Δημητριασταί",
+    "wp_link": "w:de:en:Demetrias (daughter of Anicius Hermogenianus Olybrius)",
     "chapters": [
       {
         "start": 2767,
@@ -20512,9 +20527,10 @@
     ]
   },
   {
-    "lemma": "Demetriastai",
+    "lemma": "Δημητριασταί",
     "previous": "Demetrias 9",
     "next": "Demetrion 1",
+    "sort_key": "Demetriastai",
     "chapters": [
       {
         "start": 2767,
@@ -20525,7 +20541,7 @@
   },
   {
     "lemma": "Demetrion 1",
-    "previous": "Demetriastai",
+    "previous": "Δημητριασταί",
     "next": "Demetrion 2",
     "chapters": [
       {
@@ -20576,6 +20592,7 @@
     "lemma": "Demetrios 2",
     "previous": "Demetrios 1",
     "next": "Demetrios 3",
+    "sort_key": "Demetrios 002",
     "chapters": [
       {
         "start": 2767,
@@ -20600,6 +20617,8 @@
     "lemma": "Demetrios 4",
     "previous": "Demetrios 3",
     "next": "Demetrios 5",
+    "sort_key": "Demetrios 004",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2768,
@@ -20612,6 +20631,8 @@
     "lemma": "Demetrios 5",
     "previous": "Demetrios 4",
     "next": "Demetrios 6",
+    "sort_key": "Demetrios 005",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2768,
@@ -20638,6 +20659,8 @@
     "lemma": "Demetrios 7",
     "previous": "Demetrios 6",
     "next": "Demetrios 8",
+    "sort_key": "Demetrios 007",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2768,
@@ -20718,6 +20741,8 @@
     "lemma": "Demetrios 13",
     "previous": "Demetrios 12",
     "next": "Demetrios 14",
+    "sort_key": "Demetrios 013",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2768,
@@ -20730,6 +20755,8 @@
     "lemma": "Demetrios 14",
     "previous": "Demetrios 13",
     "next": "Demetrios 15",
+    "sort_key": "Demetrios 014",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2768,
@@ -20756,6 +20783,8 @@
     "lemma": "Demetrios 16",
     "previous": "Demetrios 15",
     "next": "Demetrios 17",
+    "sort_key": "Demetrios 016",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2768,
@@ -20808,6 +20837,8 @@
     "lemma": "Demetrios 20",
     "previous": "Demetrios 19",
     "next": "Demetrios 21",
+    "sort_key": "Demetrios 020",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2768,
@@ -21191,6 +21222,7 @@
     "lemma": "Demetrios 51",
     "previous": "Demetrios 50",
     "next": "Demetrios 52",
+    "sort_key": "Demetrios 051",
     "chapters": [
       {
         "start": 2803,
@@ -21216,6 +21248,8 @@
     "lemma": "Demetrios 53",
     "previous": "Demetrios 52",
     "next": "Demetrios 54",
+    "sort_key": "Demetrios 053",
+    "redirect": true,
     "chapters": [
       {
         "start": 2803,
@@ -21242,6 +21276,7 @@
     "lemma": "Demetrios 55",
     "previous": "Demetrios 54",
     "next": "Demetrios 56",
+    "sort_key": "Demetrios 055",
     "chapters": [
       {
         "start": 2803,
@@ -21254,6 +21289,7 @@
     "lemma": "Demetrios 56",
     "previous": "Demetrios 55",
     "next": "Demetrios 57",
+    "sort_key": "Demetrios 056",
     "chapters": [
       {
         "start": 2803,
@@ -21292,6 +21328,7 @@
     "lemma": "Demetrios 59",
     "previous": "Demetrios 58",
     "next": "Demetrios 60",
+    "sort_key": "Demetrios 059",
     "chapters": [
       {
         "start": 2803,
@@ -21304,6 +21341,7 @@
     "lemma": "Demetrios 60",
     "previous": "Demetrios 59",
     "next": "Demetrios 61",
+    "sort_key": "Demetrios 060",
     "chapters": [
       {
         "start": 2804,
@@ -21316,6 +21354,7 @@
     "lemma": "Demetrios 61",
     "previous": "Demetrios 60",
     "next": "Demetrios 62",
+    "sort_key": "Demetrios 061",
     "chapters": [
       {
         "start": 2804,
@@ -21365,6 +21404,7 @@
     "lemma": "Demetrios 65",
     "previous": "Demetrios 64",
     "next": "Demetrios 66",
+    "sort_key": "Demetrios 065",
     "chapters": [
       {
         "start": 2804,
@@ -21377,6 +21417,7 @@
     "lemma": "Demetrios 66",
     "previous": "Demetrios 65",
     "next": "Demetrios 67",
+    "sort_key": "Demetrios 066",
     "chapters": [
       {
         "start": 2804,
@@ -21415,6 +21456,8 @@
     "lemma": "Demetrios 69",
     "previous": "Demetrios 68",
     "next": "Demetrios 70",
+    "sort_key": "Demetrios 069",
+    "wp_link": "w:de:Demetrius von Alexandria",
     "chapters": [
       {
         "start": 2805,
@@ -21505,6 +21548,8 @@
     "lemma": "Demetrios 76",
     "previous": "Demetrios 75",
     "next": "Demetrios 77",
+    "sort_key": "Demetrios 076",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2806,
@@ -21541,6 +21586,9 @@
     "lemma": "Demetrios 79",
     "previous": "Demetrios 78",
     "next": "Demetrios 80",
+    "sort_key": "Demetrios 079",
+    "wp_link": "w:de:Demetrios",
+    "ws_link": "s:de:Demetrius (Geschichte Israels)",
     "chapters": [
       {
         "start": 2813,
@@ -21553,6 +21601,8 @@
     "lemma": "Demetrios 80",
     "previous": "Demetrios 79",
     "next": "Demetrios 81",
+    "sort_key": "Demetrios 080",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2814,
@@ -21593,6 +21643,8 @@
     "lemma": "Demetrios 83",
     "previous": "Demetrios 82",
     "next": "Demetrios 84",
+    "sort_key": "Demetrios 083",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2817,
@@ -21605,6 +21657,8 @@
     "lemma": "Demetrios 84",
     "previous": "Demetrios 83",
     "next": "Demetrios 85",
+    "sort_key": "Demetrios 084",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2817,
@@ -21683,6 +21737,8 @@
     "lemma": "Demetrios 90",
     "previous": "Demetrios 89",
     "next": "Demetrios 91",
+    "sort_key": "Demetrios 090",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2843,
@@ -21695,6 +21751,8 @@
     "lemma": "Demetrios 91",
     "previous": "Demetrios 90",
     "next": "Demetrios 92",
+    "sort_key": "Demetrios 091",
+    "wp_link": "w:de:Demetrios (Kyniker)",
     "chapters": [
       {
         "start": 2843,
@@ -21707,6 +21765,8 @@
     "lemma": "Demetrios 92",
     "previous": "Demetrios 91",
     "next": "Demetrios 93",
+    "sort_key": "Demetrios 092",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2844,
@@ -21821,6 +21881,7 @@
     "lemma": "Demetrios 101",
     "previous": "Demetrios 100",
     "next": "Demetrios 102",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2845,
@@ -21885,6 +21946,7 @@
     "lemma": "Demetrios 106",
     "previous": "Demetrios 105",
     "next": "Demetrios 107",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2847,
@@ -21897,6 +21959,7 @@
     "lemma": "Demetrios 107",
     "previous": "Demetrios 106",
     "next": "Demetrios 108",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2847,
@@ -21909,6 +21972,7 @@
     "lemma": "Demetrios 108",
     "previous": "Demetrios 107",
     "next": "Demetrios 109",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2847,
@@ -21972,6 +22036,7 @@
     "lemma": "Demetrios 113",
     "previous": "Demetrios 112",
     "next": "Demetrios 114",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2848,
@@ -21984,6 +22049,7 @@
     "lemma": "Demetrios 114",
     "previous": "Demetrios 113",
     "next": "Demetrios 115",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2849,
