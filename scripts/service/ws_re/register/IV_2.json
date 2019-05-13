@@ -314,6 +314,7 @@
     "lemma": "Corpus iuris civilis",
     "previous": "Corpus",
     "next": "Correa",
+    "redirect": true,
     "chapters": [
       {
         "start": 1645,
@@ -14907,6 +14908,7 @@
     "lemma": "Davares",
     "previous": "Davara",
     "next": "Dauchis",
+    "redirect": true,
     "chapters": [
       {
         "start": 2230,
@@ -15013,7 +15015,7 @@
   {
     "lemma": "David",
     "previous": "Davianum",
-    "next": "Daukos",
+    "next": "Δαῦκος",
     "chapters": [
       {
         "start": 2232,
@@ -15023,9 +15025,11 @@
     ]
   },
   {
-    "lemma": "Daukos",
+    "lemma": "Δαῦκος",
     "previous": "David",
     "next": "Daulieus",
+    "sort_key": "Daukos",
+    "redirect": true,
     "chapters": [
       {
         "start": 2233,
@@ -15035,7 +15039,7 @@
   },
   {
     "lemma": "Daulieus",
-    "previous": "Daukos",
+    "previous": "Δαῦκος",
     "next": "Daulis 1",
     "chapters": [
       {
@@ -17297,7 +17301,7 @@
   {
     "lemma": "Deiectio gradus",
     "previous": "Deïdameia 5",
-    "next": "Deigma",
+    "next": "Δεῖγμα",
     "chapters": [
       {
         "start": 2383,
@@ -17307,9 +17311,10 @@
     ]
   },
   {
-    "lemma": "Deigma",
+    "lemma": "Δεῖγμα",
     "previous": "Deiectio gradus",
-    "next": "Deikeliktas",
+    "next": "Δεικηλίκτας",
+    "sort_key": "Deigma",
     "chapters": [
       {
         "start": 2383,
@@ -17319,9 +17324,10 @@
     ]
   },
   {
-    "lemma": "Deikeliktas",
-    "previous": "Deigma",
+    "lemma": "Δεικηλίκτας",
+    "previous": "Δεῖγμα",
     "next": "Deïkoon 1",
+    "sort_key": "Deikeliktas",
     "chapters": [
       {
         "start": 2384,
@@ -17332,7 +17338,7 @@
   },
   {
     "lemma": "Deïkoon 1",
-    "previous": "Deikeliktas",
+    "previous": "Δεικηλίκτας",
     "next": "Deïkoon 2",
     "chapters": [
       {
@@ -17381,7 +17387,7 @@
   {
     "lemma": "Deïleon 2",
     "previous": "Deïleon 1",
-    "next": "Deilias graphe",
+    "next": "Δειλίας γραφή",
     "chapters": [
       {
         "start": 2384,
@@ -17391,9 +17397,10 @@
     ]
   },
   {
-    "lemma": "Deilias graphe",
+    "lemma": "Δειλίας γραφή",
     "previous": "Deïleon 2",
     "next": "Deïlochos",
+    "sort_key": "Deilias graphe",
     "chapters": [
       {
         "start": 2384,
@@ -17404,8 +17411,9 @@
   },
   {
     "lemma": "Deïlochos",
-    "previous": "Deilias graphe",
+    "previous": "Δειλίας γραφή",
     "next": "Deïlyke",
+    "redirect": true,
     "chapters": [
       {
         "start": 2384,
@@ -18809,7 +18817,7 @@
   {
     "lemma": "Dekapolis 2",
     "previous": "Dekapolis 1",
-    "next": "Dekaprotoi",
+    "next": "Δεκάπρωτοι",
     "chapters": [
       {
         "start": 2415,
@@ -18819,9 +18827,11 @@
     ]
   },
   {
-    "lemma": "Dekaprotoi",
+    "lemma": "Δεκάπρωτοι",
     "previous": "Dekapolis 2",
     "next": "Dekargyros",
+    "sort_key": "Dekaprotoi",
+    "wp_link": "w:de:Dekaprotoi",
     "chapters": [
       {
         "start": 2417,
@@ -18832,7 +18842,7 @@
   },
   {
     "lemma": "Dekargyros",
-    "previous": "Dekaprotoi",
+    "previous": "Δεκάπρωτοι",
     "next": "Dekas",
     "chapters": [
       {
@@ -18856,7 +18866,7 @@
   {
     "lemma": "Dekasmu graphe",
     "previous": "Dekas",
-    "next": "Dekate",
+    "next": "Δεκάτη",
     "chapters": [
       {
         "start": 2422,
@@ -18866,9 +18876,11 @@
     ]
   },
   {
-    "lemma": "Dekate",
+    "lemma": "Δεκάτη",
     "previous": "Dekasmu graphe",
     "next": "Dekatephoros",
+    "sort_key": "Dekate",
+    "wp_link": "w:de:Zehnt",
     "chapters": [
       {
         "start": 2423,
@@ -18879,7 +18891,7 @@
   },
   {
     "lemma": "Dekatephoros",
-    "previous": "Dekate",
+    "previous": "Δεκάτη",
     "next": "Dekeleia",
     "chapters": [
       {
@@ -18978,6 +18990,7 @@
     "lemma": "Delectus",
     "previous": "Deldo",
     "next": "Deleda",
+    "redirect": true,
     "chapters": [
       {
         "start": 2429,
