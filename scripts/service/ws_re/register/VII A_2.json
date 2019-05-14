@@ -1849,6 +1849,7 @@
     "lemma": "Turpilius 1",
     "previous": "Turpilio",
     "next": "Turpilius 2",
+    "sort_key": "Turpilius 01",
     "chapters": [
       {
         "start": 1428,
@@ -1861,6 +1862,7 @@
     "lemma": "Turpilius 2",
     "previous": "Turpilius 1",
     "next": "Turpilius 3",
+    "sort_key": "Turpilius 02",
     "chapters": [
       {
         "start": 1428,
@@ -1873,6 +1875,7 @@
     "lemma": "Turpilius 3",
     "previous": "Turpilius 2",
     "next": "Turpilius 4",
+    "sort_key": "Turpilius 03",
     "chapters": [
       {
         "start": 1428,
@@ -1897,6 +1900,7 @@
     "lemma": "Turpilius 5",
     "previous": "Turpilius 4",
     "next": "Turpilius 6",
+    "sort_key": "Turpilius 05",
     "chapters": [
       {
         "start": 1428,
@@ -1909,6 +1913,7 @@
     "lemma": "Turpilius 6",
     "previous": "Turpilius 5",
     "next": "Turpilius 7",
+    "sort_key": "Turpilius 06",
     "chapters": [
       {
         "start": 1428,
@@ -1934,6 +1939,7 @@
     "lemma": "Turpilius 8",
     "previous": "Turpilius 7",
     "next": "Turpilius 9",
+    "sort_key": "Turpilius 08",
     "chapters": [
       {
         "start": 1430,
@@ -1946,6 +1952,7 @@
     "lemma": "Turpilius 9",
     "previous": "Turpilius 8",
     "next": "Turpilius 10",
+    "sort_key": "Turpilius 09",
     "chapters": [
       {
         "start": 1430,
@@ -2281,6 +2288,7 @@
     "lemma": "Turres 2",
     "previous": "Turres 1",
     "next": "Turres 3",
+    "sort_key": "Turres 02",
     "chapters": [
       {
         "start": 1445,
@@ -3667,6 +3675,7 @@
     "lemma": "Tutula",
     "previous": "Tutugi",
     "next": "Tutulus",
+    "redirect": true,
     "chapters": [
       {
         "start": 1627,
@@ -4404,7 +4413,7 @@
   {
     "lemma": "Tymphrestos",
     "previous": "Tymphe",
-    "next": "Tynadeis",
+    "next": "Τυναδεῖς",
     "chapters": [
       {
         "start": 1756,
@@ -4413,9 +4422,10 @@
     ]
   },
   {
-    "lemma": "Tynadeis",
+    "lemma": "Τυναδεῖς",
     "previous": "Tymphrestos",
     "next": "Tynchanios",
+    "sort_key": "Tynadeis",
     "chapters": [
       {
         "start": 1756,
@@ -4426,7 +4436,7 @@
   },
   {
     "lemma": "Tynchanios",
-    "previous": "Tynadeis",
+    "previous": "Τυναδεῖς",
     "next": "Tynchanius",
     "chapters": [
       {

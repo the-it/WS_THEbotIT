@@ -1840,7 +1840,7 @@
   {
     "lemma": "Kyru Pedion",
     "previous": "Kyrtos 2",
-    "next": "Kys",
+    "next": "Κῦς",
     "chapters": [
       {
         "start": 206,
@@ -1850,9 +1850,10 @@
     ]
   },
   {
-    "lemma": "Kys",
+    "lemma": "Κῦς",
     "previous": "Kyru Pedion",
-    "next": "Kysa",
+    "next": "Κύσα",
+    "sort_key": "Kys",
     "chapters": [
       {
         "start": 206,
@@ -1862,9 +1863,10 @@
     ]
   },
   {
-    "lemma": "Kysa",
-    "previous": "Kys",
-    "next": "Kysera",
+    "lemma": "Κύσα",
+    "previous": "Κῦς",
+    "next": "Κύσηρα",
+    "sort_key": "Kysa",
     "chapters": [
       {
         "start": 206,
@@ -1874,9 +1876,10 @@
     ]
   },
   {
-    "lemma": "Kysera",
-    "previous": "Kysa",
+    "lemma": "Κύσηρα",
+    "previous": "Κύσα",
     "next": "Kysis",
+    "sort_key": "Kysera",
     "chapters": [
       {
         "start": 206,
@@ -1887,7 +1890,7 @@
   },
   {
     "lemma": "Kysis",
-    "previous": "Kysera",
+    "previous": "Κύσηρα",
     "next": "Kysselis",
     "chapters": [
       {
@@ -18902,6 +18905,7 @@
     "lemma": "Leder",
     "previous": "Leda",
     "next": "Lederata",
+    "redirect": true,
     "chapters": [
       {
         "start": 1125,

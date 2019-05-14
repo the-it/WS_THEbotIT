@@ -9857,6 +9857,7 @@
     "lemma": "Asteria 3",
     "previous": "Asteria 2",
     "next": "Asteria 4",
+    "sort_key": "Asteria 03",
     "chapters": [
       {
         "start": 1781,
@@ -10861,7 +10862,7 @@
   {
     "lemma": "Astike",
     "previous": "Astigi 2",
-    "next": "Astikton chorion",
+    "next": "Ἄστικτον χωρίον",
     "chapters": [
       {
         "start": 1791,
@@ -10870,9 +10871,10 @@
     ]
   },
   {
-    "lemma": "Astikton chorion",
+    "lemma": "Ἄστικτον χωρίον",
     "previous": "Astike",
     "next": "Astingi",
+    "sort_key": "Astikton chorion",
     "chapters": [
       {
         "start": 1791,
@@ -10883,7 +10885,7 @@
   },
   {
     "lemma": "Astingi",
-    "previous": "Astikton chorion",
+    "previous": "Ἄστικτον χωρίον",
     "next": "Astoa",
     "chapters": [
       {
@@ -11300,7 +11302,7 @@
   {
     "lemma": "Astrateia",
     "previous": "Astrassos",
-    "next": "Astrateias graphe",
+    "next": "Ἀστρατείας γραφή",
     "chapters": [
       {
         "start": 1797,
@@ -11310,9 +11312,10 @@
     ]
   },
   {
-    "lemma": "Astrateias graphe",
+    "lemma": "Ἀστρατείας γραφή",
     "previous": "Astrateia",
     "next": "Astrenos",
+    "sort_key": "Astrateias graphe",
     "chapters": [
       {
         "start": 1797,
@@ -11323,7 +11326,7 @@
   },
   {
     "lemma": "Astrenos",
-    "previous": "Astrateias graphe",
+    "previous": "Ἀστρατείας γραφή",
     "next": "Astreus",
     "chapters": [
       {
@@ -13618,6 +13621,7 @@
     "lemma": "Ateius 1",
     "previous": "Ategua",
     "next": "Ateius 2",
+    "sort_key": "Ateius 01",
     "chapters": [
       {
         "start": 1902,
@@ -13642,6 +13646,7 @@
     "lemma": "Ateius 3",
     "previous": "Ateius 2",
     "next": "Ateius 4",
+    "sort_key": "Ateius 03",
     "chapters": [
       {
         "start": 1902,
@@ -13654,6 +13659,7 @@
     "lemma": "Ateius 4",
     "previous": "Ateius 3",
     "next": "Ateius 5",
+    "sort_key": "Ateius 04",
     "chapters": [
       {
         "start": 1903,
@@ -13666,6 +13672,7 @@
     "lemma": "Ateius 5",
     "previous": "Ateius 4",
     "next": "Ateius 6",
+    "sort_key": "Ateius 05",
     "chapters": [
       {
         "start": 1903,
@@ -13678,6 +13685,7 @@
     "lemma": "Ateius 6",
     "previous": "Ateius 5",
     "next": "Ateius 7",
+    "sort_key": "Ateius 06",
     "chapters": [
       {
         "start": 1903,
@@ -13690,6 +13698,7 @@
     "lemma": "Ateius 7",
     "previous": "Ateius 6",
     "next": "Ateius 8",
+    "sort_key": "Ateius 07",
     "chapters": [
       {
         "start": 1903,
@@ -13716,6 +13725,7 @@
     "lemma": "Ateius 9",
     "previous": "Ateius 8",
     "next": "Ateius 10",
+    "sort_key": "Ateius 09",
     "chapters": [
       {
         "start": 1910,
@@ -13751,7 +13761,7 @@
   {
     "lemma": "Ateius 12",
     "previous": "Ateius 11",
-    "next": "Ateleia",
+    "next": "Ἀτέλεια",
     "chapters": [
       {
         "start": 1911,
@@ -13761,9 +13771,11 @@
     ]
   },
   {
-    "lemma": "Ateleia",
+    "lemma": "Ἀτέλεια",
     "previous": "Ateius 12",
     "next": "Ateleta",
+    "sort_key": "Ateleia",
+    "wp_link": "w:de:Ateleia",
     "chapters": [
       {
         "start": 1911,
@@ -13774,7 +13786,7 @@
   },
   {
     "lemma": "Ateleta",
-    "previous": "Ateleia",
+    "previous": "Ἀτέλεια",
     "next": "Atella",
     "chapters": [
       {
@@ -18931,7 +18943,7 @@
   {
     "lemma": "Attabas",
     "previous": "Atta 2",
-    "next": "Attabokaoi",
+    "next": "Ἀτταβοκαοί",
     "chapters": [
       {
         "start": 2152,
@@ -18941,9 +18953,10 @@
     ]
   },
   {
-    "lemma": "Attabokaoi",
+    "lemma": "Ἀτταβοκαοί",
     "previous": "Attabas",
     "next": "Attachas",
+    "sort_key": "Attabokaoi",
     "chapters": [
       {
         "start": 2153,
@@ -18954,7 +18967,7 @@
   },
   {
     "lemma": "Attachas",
-    "previous": "Attabokaoi",
+    "previous": "Ἀτταβοκαοί",
     "next": "Attacori",
     "chapters": [
       {
@@ -19254,6 +19267,7 @@
     "lemma": "Attalos 1",
     "previous": "Attalistai",
     "next": "Attalos 2",
+    "sort_key": "Attalos 01",
     "chapters": [
       {
         "start": 2157,
@@ -19266,6 +19280,7 @@
     "lemma": "Attalos 2",
     "previous": "Attalos 1",
     "next": "Attalos 3",
+    "sort_key": "Attalos 02",
     "chapters": [
       {
         "start": 2157,
@@ -19278,6 +19293,7 @@
     "lemma": "Attalos 3",
     "previous": "Attalos 2",
     "next": "Attalos 4",
+    "sort_key": "Attalos 03",
     "chapters": [
       {
         "start": 2158,
@@ -19316,6 +19332,7 @@
     "lemma": "Attalos 6",
     "previous": "Attalos 5",
     "next": "Attalos 7",
+    "sort_key": "Attalos 06",
     "chapters": [
       {
         "start": 2158,
@@ -19328,6 +19345,7 @@
     "lemma": "Attalos 7",
     "previous": "Attalos 6",
     "next": "Attalos 8",
+    "sort_key": "Attalos 07",
     "chapters": [
       {
         "start": 2158,

@@ -7567,7 +7567,7 @@
   {
     "lemma": "Melitonus",
     "previous": "Melitone",
-    "next": "Melitta",
+    "next": "Μέλιττα",
     "chapters": [
       {
         "start": 554,
@@ -7577,9 +7577,10 @@
     ]
   },
   {
-    "lemma": "Melitta",
+    "lemma": "Μέλιττα",
     "previous": "Melitonus",
-    "next": "Melitusaios",
+    "next": "Μελιτουσαῖος",
+    "sort_key": "Melitta",
     "chapters": [
       {
         "start": 554,
@@ -7589,9 +7590,10 @@
     ]
   },
   {
-    "lemma": "Melitusaios",
-    "previous": "Melitta",
-    "next": "Melitusios",
+    "lemma": "Μελιτουσαῖος",
+    "previous": "Μέλιττα",
+    "next": "Μελιτούσιος",
+    "sort_key": "Melitusaios",
     "chapters": [
       {
         "start": 554,
@@ -7601,9 +7603,10 @@
     ]
   },
   {
-    "lemma": "Melitusios",
-    "previous": "Melitusaios",
+    "lemma": "Μελιτούσιος",
+    "previous": "Μελιτουσαῖος",
     "next": "Melitussa",
+    "sort_key": "Melitusios",
     "chapters": [
       {
         "start": 554,
@@ -7614,7 +7617,7 @@
   },
   {
     "lemma": "Melitussa",
-    "previous": "Melitusios",
+    "previous": "Μελιτούσιος",
     "next": "Meliuchos",
     "chapters": [
       {
