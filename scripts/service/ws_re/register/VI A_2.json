@@ -2295,6 +2295,7 @@
     "lemma": "Tiridates 1",
     "previous": "Tirida",
     "next": "Tiridates 2",
+    "sort_key": "Tiridates 01",
     "chapters": [
       {
         "start": 1437,
@@ -2383,6 +2384,7 @@
     "lemma": "Tiridates 8",
     "previous": "Tiridates 7",
     "next": "Tiridates 9",
+    "sort_key": "Tiridates 08",
     "chapters": [
       {
         "start": 1444,
@@ -2443,7 +2445,7 @@
   {
     "lemma": "Tirinus",
     "previous": "Tirinadi",
-    "next": "Tiripangalida",
+    "next": "Τιριπαγγαλίδα",
     "chapters": [
       {
         "start": 1445,
@@ -2453,9 +2455,10 @@
     ]
   },
   {
-    "lemma": "Tiripangalida",
+    "lemma": "Τιριπαγγαλίδα",
     "previous": "Tirinus",
     "next": "Tiris",
+    "sort_key": "Tiripangalida",
     "chapters": [
       {
         "start": 1445,
@@ -2466,7 +2469,7 @@
   },
   {
     "lemma": "Tiris",
-    "previous": "Tiripangalida",
+    "previous": "Τιριπαγγαλίδα",
     "next": "Tiriskon",
     "redirect": true,
     "chapters": [
