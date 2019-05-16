@@ -154,7 +154,7 @@
   {
     "lemma": "Sabaei",
     "previous": "Sabae",
-    "next": "Sabagena",
+    "next": "Σαβάγηνα",
     "chapters": [
       {
         "start": 1515,
@@ -163,9 +163,10 @@
     ]
   },
   {
-    "lemma": "Sabagena",
+    "lemma": "Σαβάγηνα",
     "previous": "Sabaei",
     "next": "Sabai 1",
+    "sort_key": "Sabagena",
     "chapters": [
       {
         "start": 1515,
@@ -176,7 +177,7 @@
   },
   {
     "lemma": "Sabai 1",
-    "previous": "Sabagena",
+    "previous": "Σαβάγηνα",
     "next": "Sabai 2",
     "chapters": [
       {
@@ -331,7 +332,7 @@
   {
     "lemma": "Sabalaessa",
     "previous": "Sabaktes",
-    "next": "Sabalassos",
+    "next": "Σαβαλασσός",
     "chapters": [
       {
         "start": 1532,
@@ -341,9 +342,10 @@
     ]
   },
   {
-    "lemma": "Sabalassos",
+    "lemma": "Σαβαλασσός",
     "previous": "Sabalaessa",
     "next": "Sabalia",
+    "sort_key": "Sabalassos",
     "chapters": [
       {
         "start": 1532,
@@ -354,8 +356,8 @@
   },
   {
     "lemma": "Sabalia",
-    "previous": "Sabalassos",
-    "next": "Sabalingioi",
+    "previous": "Σαβαλασσός",
+    "next": "Σαβαλίγγιοι",
     "chapters": [
       {
         "start": 1532,
@@ -365,9 +367,10 @@
     ]
   },
   {
-    "lemma": "Sabalingioi",
+    "lemma": "Σαβαλίγγιοι",
     "previous": "Sabalia",
     "next": "Sabana 1",
+    "sort_key": "Sabalingioi",
     "chapters": [
       {
         "start": 1532,
@@ -378,7 +381,7 @@
   },
   {
     "lemma": "Sabana 1",
-    "previous": "Sabalingioi",
+    "previous": "Σαβαλίγγιοι",
     "next": "Sabana 2",
     "chapters": [
       {
@@ -390,7 +393,7 @@
   {
     "lemma": "Sabana 2",
     "previous": "Sabana 1",
-    "next": "Sabanis",
+    "next": "Σαβανίς",
     "chapters": [
       {
         "start": 1532,
@@ -400,9 +403,10 @@
     ]
   },
   {
-    "lemma": "Sabanis",
+    "lemma": "Σαβανίς",
     "previous": "Sabana 2",
     "next": "Sabanum",
+    "sort_key": "Sabanis",
     "chapters": [
       {
         "start": 1532,
@@ -413,7 +417,7 @@
   },
   {
     "lemma": "Sabanum",
-    "previous": "Sabanis",
+    "previous": "Σαβανίς",
     "next": "Sabaoth",
     "chapters": [
       {
