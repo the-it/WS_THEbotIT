@@ -10,8 +10,7 @@ from testfixtures import LogCapture, compare, StringComparison
 
 from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
 from scripts.service.ws_re.register import Authors, VolumeRegister
-from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
-    SCANTask, TJGJTask, DEALTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, SCANTask, DEALTask, DEWPTask
 from scripts.service.ws_re.test_register import clear_tst_path, copy_tst_data, _TEST_REGISTER_PATH
 from tools.bots import WikiLogger
 
@@ -335,6 +334,68 @@ class TestDEALTask(TaskTestCase):
             compare(expection, task.data)
 
 
+class TestDEWPTask(TaskTestCase):
+    def test_link_is_missing(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+|WP=Bla
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [False]
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Bla", "Title")], task.data)
+
+    def test_link_is_existend(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+|WP=Bla
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [True]
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([], task.data)
+
+    def test_link_several_links(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten|WP=Bla}}
+{{REAutor|Autor.}}
+{{REDaten|WP=Blub}}
+{{REAutor|Autor.}}
+{{REDaten}}
+{{REAutor|Autor.}}
+{{REDaten|WP=Blab}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [True, False, False]
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Blub", "Title"), ("Blab", "Title")], task.data)
+
+            self.text_mock.return_value = """{{REDaten|WP=Bli}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title2"
+            page_mock.return_value.exists.side_effect = [False]
+            re_page = RePage(self.page_mock)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Blub", "Title"), ("Blab", "Title"), ("Bli", "Title2")], task.data)
+
+    def test_build_entries(self):
+        task = DEWPTask(None, self.logger)
+        task.data = [("One", "First_Lemma"), ("Two", "Second_Lemma")]
+        expect = ["* Wikpedia Artikel: [[wp:One]] verlinkt von [[RE:First_Lemma]] existiert nicht",
+                  "* Wikpedia Artikel: [[wp:Two]] verlinkt von [[RE:Second_Lemma]] existiert nicht"]
+        compare(expect, task._build_entry().split("\n")[-2:])
+
 
 class TestKSCHTask(TaskTestCase):
     def test_process(self):
@@ -367,120 +428,6 @@ text
             compare("{{RE keine Schöpfungshöhe|tada}}\ntext", re_page[0].text)
 
 
-class TestVERWTask(TaskTestCase):
-    def test_process(self):
-        self.text_mock.return_value = """pre
-{{REDaten
-}}
-[[Kategorie:RE:Verweisung|Lemma]]
-text.
-{{REAutor|OFF}}
-post"""
-        re_page = RePage(self.page_mock)
-        with LogCapture():
-            task = VERWTask(None, self.logger)
-            compare({"success": True, "changed": True}, task.run(re_page))
-            compare(True, re_page[1]["VERWEIS"].value)
-            compare("text.", re_page[1].text)
-
-    def test_no_sort(self):
-        self.text_mock.return_value = """pre
-{{REDaten
-}}
-[[Kategorie:RE:Verweisung]]
-text.
-[[Kategorie:RE:Verweisung]]lala
-{{REAutor|OFF}}
-post"""
-        re_page = RePage(self.page_mock)
-        with LogCapture():
-            task = VERWTask(None, self.logger)
-            compare({"success": True, "changed": True}, task.run(re_page))
-            compare(True, re_page[1]["VERWEIS"].value)
-            compare("text.\nlala", re_page[1].text)
-
-    def test_no_replace_if_no_clear_connection(self):
-        self.text_mock.return_value = """[[Kategorie:RE:Verweisung]]
-{{REDaten
-}}
-text.
-{{REAutor|OFF}}
-[[Kategorie:RE:Verweisung]]lala"""
-        re_page = RePage(self.page_mock)
-        with LogCapture():
-            task = VERWTask(None, self.logger)
-            compare({"success": True, "changed": False}, task.run(re_page))
-            compare(False, re_page[1]["VERWEIS"].value)
-            compare("text.", re_page[1].text)
-            compare("[[Kategorie:RE:Verweisung]]", re_page[0])
-            compare("[[Kategorie:RE:Verweisung]]lala", re_page[2])
-
-    def test_three(self):
-        self.text_mock.return_value = """{{REDaten
-}}
-text.
-[[Kategorie:RE:Verweisung]]
-{{REAutor|OFF}}
-{{REDaten
-}}
-text.
-{{REAutor|OFF}}
-tada
-{{REDaten
-}}
-text.
-[[Kategorie:RE:Verweisung]]
-{{REAutor|OFF}}
-lala"""
-        re_page = RePage(self.page_mock)
-        with LogCapture():
-            task = VERWTask(None, self.logger)
-            compare({"success": True, "changed": True}, task.run(re_page))
-            self.assertTrue(re_page[0]["VERWEIS"].value)
-            self.assertTrue(re_page[3]["VERWEIS"].value)
-            compare("text.", re_page[0].text)
-            compare("text.", re_page[1].text)
-            compare("text.", re_page[3].text)
-
-    def test_verweis_next(self):
-        self.text_mock.return_value = """{{REDaten
-}}
-text.
-[[Kategorie:RE:Verweisung]]
-{{REAutor|OFF}}
-
-{{REDaten
-}}
-text.
-{{REAutor|OFF}}
-
-[[Kategorie:RE:Verweisung]]
-
-{{REDaten
-}}
-text.
-[[Kategorie:RE:Verweisung]]
-{{REAutor|OFF}}
-
-{{REDaten
-}}
-text.
-{{REAutor|OFF}}
-
-[[Kategorie:RE:Verweisung]] tada"""
-        re_page = RePage(self.page_mock)
-        with LogCapture():
-            task = VERWTask(None, self.logger)
-            compare({"success": True, "changed": True}, task.run(re_page))
-            for i in range(4):
-                compare("text.", re_page[i].text)
-            self.assertTrue(re_page[0]["VERWEIS"].value)
-            self.assertTrue(re_page[1]["VERWEIS"].value)
-            self.assertTrue(re_page[2]["VERWEIS"].value)
-            self.assertFalse(re_page[3]["VERWEIS"].value)
-            compare(5, len(re_page))
-
-
 class TaskTestWithRegister(TaskTestCase):
     @classmethod
     def setUpClass(cls):
@@ -493,49 +440,6 @@ class TaskTestWithRegister(TaskTestCase):
         Authors._REGISTER_PATH = _REGISTER_PATH
         VolumeRegister._REGISTER_PATH = _REGISTER_PATH
         clear_tst_path(renew_path=False)
-
-
-class TestTJGJTask(TaskTestWithRegister):
-    def setUp(self):
-        super().setUp()
-        copy_tst_data("authors_mapping", "authors_mapping")
-        copy_tst_data("I_1_base", "I_1")
-        copy_tst_data("authors_birth_3333", "authors")
-        self.task = TJGJTask(None, self.logger)
-
-    def test_move_tj_3333(self):
-        self.text_mock.return_value = """{{REDaten
-|TJ=3333
-}}
-text.
-{{REAutor|Abbott}}"""
-        re_page = RePage(self.page_mock)
-        compare({"success": True, "changed": True}, self.task.run(re_page))
-        compare("", re_page[0]["TODESJAHR"].value)
-        compare("1900", re_page[0]["GEBURTSJAHR"].value)
-
-    def test_no_birth_date(self):
-        self.text_mock.return_value = """{{REDaten
-|TJ=3333
-}}
-text.
-{{REAutor|Abel}}"""
-        re_page = RePage(self.page_mock)
-        compare({"success": True, "changed": False}, self.task.run(re_page))
-        compare("3333", re_page[0]["TODESJAHR"].value)
-        compare("", re_page[0]["GEBURTSJAHR"].value)
-
-    def test_no_author(self):
-        self.text_mock.return_value = """{{REDaten
-|TJ=3333
-}}
-text.
-{{REAutor|Rumpelstilzchen}}"""
-        re_page = RePage(self.page_mock)
-        with LogCapture():
-            compare({"success": True, "changed": False}, self.task.run(re_page))
-            compare("3333", re_page[0]["TODESJAHR"].value)
-            compare("", re_page[0]["GEBURTSJAHR"].value)
 
 
 class TestSCANTask(TaskTestWithRegister):
