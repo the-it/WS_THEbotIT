@@ -6,8 +6,7 @@ from typing import List
 import pywikibot
 
 from scripts.service.ws_re.data_types import RePage, ReDatenException
-from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
-    SCANTask, DEALTask, DEWPTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, SCANTask, DEALTask, DEWPTask
 from tools.bots import CanonicalBot, BotException
 from tools.petscan import PetScan
 
@@ -17,7 +16,7 @@ class ReScanner(CanonicalBot):
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(minutes=60)
-        self.tasks = [KSCHTask, VERWTask, DEALTask, DEWPTask, SCANTask]  # type: List[type[ReScannerTask]]
+        self.tasks = [KSCHTask, DEALTask, DEWPTask, SCANTask]  # type: List[type[ReScannerTask]]
         if self.debug:
             self.tasks = self.tasks + []
         self.statistic = {}

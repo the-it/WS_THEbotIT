@@ -179,47 +179,6 @@ class KSCHTask(ReScannerTask):
                     re_article.text = self._regex_template.sub("", re_article.text).strip()
 
 
-class VERWTask(ReScannerTask):
-    _basic_regex = r"\[\[Kategorie:RE:Verweisung\|?[^\]]*\]\]"
-    _regex_template = re.compile(_basic_regex)
-    _regex_only_template = re.compile(r"^" + _basic_regex + r"$")
-
-    def task(self):
-        for idx, re_article in enumerate(self.re_page):
-            if isinstance(re_article, Article):
-                template_match = self._regex_template.search(re_article.text)
-                if template_match:
-                    re_article["VERWEIS"].value = True
-                    re_article.text = self._regex_template.sub("", re_article.text).strip()
-            elif isinstance(re_article, str):
-                template_match = self._regex_only_template.search(re_article)
-                if template_match and idx > 0:
-                    self.re_page[idx - 1]["VERWEIS"].value = True
-                    self.re_page[idx] = ""
-        self.re_page.clean_articles()
-
-
-class TJGJTask(ReScannerTask):
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
-        super().__init__(wiki, logger, debug)
-        self.registers = Registers()
-
-    def task(self):
-        for article_list in self.re_page.splitted_article_list:
-            if not isinstance(article_list[0], str):
-                article = article_list[0]
-                if article["TODESJAHR"].value == "3333":
-                    author = self.registers.authors.get_author_by_mapping(article.author[0], article["BAND"].value)
-                    if author:
-                        if author.birth:
-                            article["GEBURTSJAHR"].value = str(author.birth)
-                            article["TODESJAHR"].value = ""
-                    else:
-                        self.logger.error(f"TJGJ: No author registered for {article.author[0]} "
-                                          f"in lemma {self.re_page.lemma}")
-        return True
-
-
 class SCANTask(ReScannerTask):
     _LEMMAS_MAX = 500
 
