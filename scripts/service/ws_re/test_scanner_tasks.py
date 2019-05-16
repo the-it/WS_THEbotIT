@@ -11,7 +11,7 @@ from testfixtures import LogCapture, compare, StringComparison
 from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
 from scripts.service.ws_re.register import Authors, VolumeRegister
 from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, VERWTask, \
-    SCANTask, TJGJTask, DEALTask
+    SCANTask, TJGJTask, DEALTask, DEWPTask
 from scripts.service.ws_re.test_register import clear_tst_path, copy_tst_data, _TEST_REGISTER_PATH
 from tools.bots import WikiLogger
 
@@ -334,6 +334,68 @@ class TestDEALTask(TaskTestCase):
                          ('Caecilius 54', 'Caecilius 54a')]
             compare(expection, task.data)
 
+
+class TestDEWPTask(TaskTestCase):
+    def test_link_is_missing(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+|WP=Bla
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [False]
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Bla", "Title")], task.data)
+
+    def test_link_is_existend(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+|WP=Bla
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [True]
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([], task.data)
+
+    def test_link_several_links(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten|WP=Bla}}
+{{REAutor|Autor.}}
+{{REDaten|WP=Blub}}
+{{REAutor|Autor.}}
+{{REDaten}}
+{{REAutor|Autor.}}
+{{REDaten|WP=Blab}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [True, False, False]
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Blub", "Title"), ("Blab", "Title")], task.data)
+
+            self.text_mock.return_value = """{{REDaten|WP=Bli}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title2"
+            page_mock.return_value.exists.side_effect = [False]
+            re_page = RePage(self.page_mock)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Blub", "Title"), ("Blab", "Title"), ("Bli", "Title2")], task.data)
+
+    def test_build_entries(self):
+        task = DEWPTask(None, self.logger)
+        task.data = [("One", "First_Lemma"), ("Two", "Second_Lemma")]
+        expect = ["* Wikpedia Artikel: [[wp:One]] verlinkt von [[RE:First_Lemma]] existiert nicht",
+                  "* Wikpedia Artikel: [[wp:Two]] verlinkt von [[RE:Second_Lemma]] existiert nicht"]
+        compare(expect, task._build_entry().split("\n")[-2:])
 
 
 class TestKSCHTask(TaskTestCase):
