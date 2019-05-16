@@ -844,6 +844,7 @@
     "lemma": "Aelius 28a",
     "previous": "Aelius 27a",
     "next": "Aelius 32a",
+    "sort_key": "Aelius 028a",
     "chapters": [
       {
         "start": 13,
@@ -856,6 +857,7 @@
     "lemma": "Aelius 32a",
     "previous": "Aelius 28a",
     "next": "Aelius 34a",
+    "sort_key": "Aelius 032a",
     "chapters": [
       {
         "start": 13,
@@ -1845,6 +1847,7 @@
     "lemma": "Agrai 2",
     "previous": "Agonaces",
     "next": "Agraulia",
+    "sort_key": "Agrai 2",
     "chapters": [
       {
         "start": 31,
@@ -3141,6 +3144,7 @@
     "lemma": "Alastos 1a",
     "previous": "Alassenses",
     "next": "Alazeir",
+    "sort_key": "Alastos 1a",
     "chapters": [
       {
         "start": 50,
@@ -3441,6 +3445,7 @@
     "lemma": "Aleximachos a",
     "previous": "Alexikles 2",
     "next": "Alexinos a",
+    "sort_key": "Aleximachos 0a",
     "chapters": [
       {
         "start": 56,
@@ -5075,7 +5080,7 @@
   {
     "lemma": "Androna 2",
     "previous": "Andron 9a",
-    "next": "Androneioi",
+    "next": "Ἀνδρώνειοι",
     "chapters": [
       {
         "start": 81,
@@ -5085,9 +5090,10 @@
     ]
   },
   {
-    "lemma": "Androneioi",
+    "lemma": "Ἀνδρώνειοι",
     "previous": "Androna 2",
     "next": "Andronides",
+    "sort_key": "Androneioi",
     "chapters": [
       {
         "start": 81,
@@ -5098,7 +5104,7 @@
   },
   {
     "lemma": "Andronides",
-    "previous": "Androneioi",
+    "previous": "Ἀνδρώνειοι",
     "next": "Andronikopolis",
     "chapters": [
       {
@@ -8212,6 +8218,7 @@
     "lemma": "Aristokritos 6",
     "previous": "Aristokrates 20a",
     "next": "Aristomachos 13a",
+    "sort_key": "Aristokritos",
     "chapters": [
       {
         "start": 134,
@@ -10118,6 +10125,7 @@
     "lemma": "Avidius 9a",
     "previous": "Avida",
     "next": "Avillius 2a",
+    "sort_key": "Avidius 09a",
     "chapters": [
       {
         "start": 228,
@@ -10225,6 +10233,7 @@
     "lemma": "Aurelius 27a",
     "previous": "Aurelianoi",
     "next": "Aurelius 35a",
+    "sort_key": "Aurelius 027a",
     "chapters": [
       {
         "start": 229,
