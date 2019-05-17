@@ -2,11 +2,12 @@ language: python
 dist: xenial
 python:
   - "3.7"
+  - "3.8-dev"
 # command to install dependencies
 install:
   - make pip3
 script:
   - make integrationtest
-  - codecov -F INTEGRATION
+  - codecov -F "INTEGRATION_${TRAVIS_JOB_ID}"
 
 cache: pip
