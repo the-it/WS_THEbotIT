@@ -2821,6 +2821,7 @@
     "lemma": "Taberna 2",
     "previous": "Taberna 1",
     "next": "Tabernaculum 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1872,
@@ -3066,7 +3067,7 @@
   {
     "lemma": "Tabia 2",
     "previous": "Tabia 1",
-    "next": "Tabiana",
+    "next": "Ταβιάνα",
     "chapters": [
       {
         "start": 1878,
@@ -3075,9 +3076,10 @@
     ]
   },
   {
-    "lemma": "Tabiana",
+    "lemma": "Ταβιάνα",
     "previous": "Tabia 2",
     "next": "Tabidium",
+    "sort_key": "Tabiana",
     "chapters": [
       {
         "start": 1878,
@@ -3088,8 +3090,8 @@
   },
   {
     "lemma": "Tabidium",
-    "previous": "Tabiana",
-    "next": "Tabiene",
+    "previous": "Ταβιάνα",
+    "next": "Ταβιηνή",
     "chapters": [
       {
         "start": 1878,
@@ -3099,9 +3101,10 @@
     ]
   },
   {
-    "lemma": "Tabiene",
+    "lemma": "Ταβιηνή",
     "previous": "Tabidium",
     "next": "Tabienoi 1",
+    "sort_key": "Tabiene",
     "chapters": [
       {
         "start": 1878,
@@ -3112,7 +3115,7 @@
   },
   {
     "lemma": "Tabienoi 1",
-    "previous": "Tabiene",
+    "previous": "Ταβιηνή",
     "next": "Tabienoi 2",
     "chapters": [
       {
@@ -7625,7 +7628,7 @@
   {
     "lemma": "Tarba 2",
     "previous": "Tarba 1",
-    "next": "Tarbakana",
+    "next": "Ταρβακάνα",
     "chapters": [
       {
         "start": 2292,
@@ -7634,9 +7637,10 @@
     ]
   },
   {
-    "lemma": "Tarbakana",
+    "lemma": "Ταρβακάνα",
     "previous": "Tarba 2",
-    "next": "Tarbanes",
+    "next": "Ταρβανῆς",
+    "sort_key": "Tarbakana",
     "chapters": [
       {
         "start": 2292,
@@ -7646,9 +7650,10 @@
     ]
   },
   {
-    "lemma": "Tarbanes",
-    "previous": "Tarbakana",
+    "lemma": "Ταρβανῆς",
+    "previous": "Ταρβακάνα",
     "next": "Tarbassos",
+    "sort_key": "Tarbanes",
     "chapters": [
       {
         "start": 2292,
@@ -7659,7 +7664,7 @@
   },
   {
     "lemma": "Tarbassos",
-    "previous": "Tarbanes",
+    "previous": "Ταρβανῆς",
     "next": "Tarbasthena",
     "chapters": [
       {
@@ -7883,7 +7888,7 @@
   {
     "lemma": "Tardequeia",
     "previous": "Tarcondimotus",
-    "next": "Tareiana",
+    "next": "Ταρειάνα",
     "chapters": [
       {
         "start": 2299,
@@ -7893,9 +7898,10 @@
     ]
   },
   {
-    "lemma": "Tareiana",
+    "lemma": "Ταρειάνα",
     "previous": "Tardequeia",
     "next": "Tareina",
+    "sort_key": "Tareiana",
     "chapters": [
       {
         "start": 2299,
@@ -7906,7 +7912,7 @@
   },
   {
     "lemma": "Tareina",
-    "previous": "Tareiana",
+    "previous": "Ταρειάνα",
     "next": "Tarelyi",
     "chapters": [
       {
@@ -8467,7 +8473,7 @@
   {
     "lemma": "Taron",
     "previous": "Tarodunum",
-    "next": "Tarona",
+    "next": "Ταρῶνα",
     "chapters": [
       {
         "start": 2329,
@@ -8477,9 +8483,10 @@
     ]
   },
   {
-    "lemma": "Tarona",
+    "lemma": "Ταρῶνα",
     "previous": "Taron",
     "next": "Taronitis",
+    "sort_key": "Tarona",
     "chapters": [
       {
         "start": 2330,
@@ -8490,7 +8497,7 @@
   },
   {
     "lemma": "Taronitis",
-    "previous": "Tarona",
+    "previous": "Ταρῶνα",
     "next": "Tarpe",
     "chapters": [
       {
@@ -10046,7 +10053,7 @@
   {
     "lemma": "Tasitia",
     "previous": "Tasinemeti",
-    "next": "Taska",
+    "next": "Τάσκα",
     "chapters": [
       {
         "start": 2461,
@@ -10056,9 +10063,10 @@
     ]
   },
   {
-    "lemma": "Taska",
+    "lemma": "Τάσκα",
     "previous": "Tasitia",
     "next": "Taskoi",
+    "sort_key": "Taska",
     "chapters": [
       {
         "start": 2461,
@@ -10069,8 +10077,8 @@
   },
   {
     "lemma": "Taskoi",
-    "previous": "Taska",
-    "next": "Tasopion",
+    "previous": "Τάσκα",
+    "next": "Τασόπιον",
     "chapters": [
       {
         "start": 2461,
@@ -10079,9 +10087,11 @@
     ]
   },
   {
-    "lemma": "Tasopion",
+    "lemma": "Τασόπιον",
     "previous": "Taskoi",
     "next": "Taspa",
+    "sort_key": "Tasopion",
+    "redirect": true,
     "chapters": [
       {
         "start": 2461,
@@ -10092,8 +10102,8 @@
   },
   {
     "lemma": "Taspa",
-    "previous": "Tasopion",
-    "next": "Tasta",
+    "previous": "Τασόπιον",
+    "next": "Τάστα",
     "chapters": [
       {
         "start": 2461,
@@ -10103,9 +10113,10 @@
     ]
   },
   {
-    "lemma": "Tasta",
+    "lemma": "Τάστα",
     "previous": "Taspa",
-    "next": "Tastache",
+    "next": "Ταστάχη",
+    "sort_key": "Tasta",
     "chapters": [
       {
         "start": 2462,
@@ -10115,9 +10126,10 @@
     ]
   },
   {
-    "lemma": "Tastache",
-    "previous": "Tasta",
+    "lemma": "Ταστάχη",
+    "previous": "Τάστα",
     "next": "Tastina",
+    "sort_key": "Tastache",
     "chapters": [
       {
         "start": 2462,
@@ -10128,7 +10140,7 @@
   },
   {
     "lemma": "Tastina",
-    "previous": "Tastache",
+    "previous": "Ταστάχη",
     "next": "Tastleda",
     "chapters": [
       {

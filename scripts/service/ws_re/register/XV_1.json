@@ -7793,7 +7793,7 @@
   {
     "lemma": "Melleiren",
     "previous": "Mellaria 4",
-    "next": "Mellephebos",
+    "next": "Μελλέφηβος",
     "redirect": true,
     "chapters": [
       {
@@ -7803,9 +7803,10 @@
     ]
   },
   {
-    "lemma": "Mellephebos",
+    "lemma": "Μελλέφηβος",
     "previous": "Melleiren",
     "next": "Mellesa",
+    "sort_key": "Mellephebos",
     "chapters": [
       {
         "start": 557,
@@ -7816,7 +7817,7 @@
   },
   {
     "lemma": "Mellesa",
-    "previous": "Mellephebos",
+    "previous": "Μελλέφηβος",
     "next": "Mellodunum",
     "chapters": [
       {
@@ -16418,6 +16419,7 @@
     "lemma": "Mescheta",
     "previous": "Meschela",
     "next": "Mescianus",
+    "sort_key": "Mescheta",
     "chapters": [
       {
         "start": 1076,

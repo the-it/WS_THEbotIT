@@ -9828,6 +9828,7 @@
     "lemma": "Noiodunum",
     "previous": "Nohodares",
     "next": "Nol",
+    "redirect": true,
     "chapters": [
       {
         "start": 811,
@@ -9897,7 +9898,7 @@
   {
     "lemma": "Nomai 2",
     "previous": "Nomai 1",
-    "next": "Nomarches",
+    "next": "Νομάρχης",
     "chapters": [
       {
         "start": 815,
@@ -9907,9 +9908,11 @@
     ]
   },
   {
-    "lemma": "Nomarches",
+    "lemma": "Νομάρχης",
     "previous": "Nomai 2",
     "next": "Nomasus",
+    "sort_key": "Nomarches",
+    "wp_link": "w:de:Gaufürst",
     "chapters": [
       {
         "start": 815,
@@ -9920,7 +9923,7 @@
   },
   {
     "lemma": "Nomasus",
-    "previous": "Nomarches",
+    "previous": "Νομάρχης",
     "next": "Nomba",
     "chapters": [
       {
