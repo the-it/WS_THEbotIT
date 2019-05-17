@@ -1086,7 +1086,7 @@
   {
     "lemma": "Raikes",
     "previous": "Raida",
-    "next": "Raikoi",
+    "next": "Ῥαικοί",
     "chapters": [
       {
         "start": 131,
@@ -1096,9 +1096,10 @@
     ]
   },
   {
-    "lemma": "Raikoi",
+    "lemma": "Ῥαικοί",
     "previous": "Raikes",
     "next": "Raita",
+    "sort_key": "Raikoi",
     "chapters": [
       {
         "start": 131,
@@ -1109,7 +1110,7 @@
   },
   {
     "lemma": "Raita",
-    "previous": "Raikoi",
+    "previous": "Ῥαικοί",
     "next": "Raiteai",
     "chapters": [
       {
@@ -16606,7 +16607,7 @@
   {
     "lemma": "Ῥύνδακος",
     "previous": "Ryndacus",
-    "next": "Ryndakos 1",
+    "next": "Ῥύνδακος 1",
     "sort_key": "Ryndakos",
     "chapters": [
       {
@@ -16617,9 +16618,11 @@
     ]
   },
   {
-    "lemma": "Ryndakos 1",
+    "lemma": "Ῥύνδακος 1",
     "previous": "Ῥύνδακος",
     "next": "Ῥύνδακος 2",
+    "sort_key": "Ryndakos 1",
+    "wp_link": "w:de:Rhyndakos",
     "chapters": [
       {
         "start": 1286,
@@ -16630,7 +16633,7 @@
   },
   {
     "lemma": "Ῥύνδακος 2",
-    "previous": "Ryndakos 1",
+    "previous": "Ῥύνδακος 1",
     "next": "Rypara",
     "sort_key": "Ryndakos 2",
     "chapters": [
