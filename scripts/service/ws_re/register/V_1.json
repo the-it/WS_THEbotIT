@@ -2896,6 +2896,7 @@
     "lemma": "Derkylidas 1",
     "previous": "Derkos",
     "next": "Derkylidas 2",
+    "wp_link": "w:de:Derkylidas",
     "chapters": [
       {
         "start": 240,
@@ -2955,7 +2956,7 @@
   {
     "lemma": "Dermatikon",
     "previous": "Derkynos",
-    "next": "Dermeithon kome",
+    "next": "Δερμειθῶν κόμη",
     "chapters": [
       {
         "start": 243,
@@ -2965,9 +2966,10 @@
     ]
   },
   {
-    "lemma": "Dermeithon kome",
+    "lemma": "Δερμειθῶν κόμη",
     "previous": "Dermatikon",
     "next": "Dermones",
+    "sort_key": "Dermeithon kome",
     "chapters": [
       {
         "start": 244,
@@ -2978,7 +2980,7 @@
   },
   {
     "lemma": "Dermones",
-    "previous": "Dermeithon kome",
+    "previous": "Δερμειθῶν κόμη",
     "next": "Derreatis",
     "chapters": [
       {
@@ -2992,6 +2994,7 @@
     "lemma": "Derreatis",
     "previous": "Dermones",
     "next": "Derrii",
+    "redirect": true,
     "chapters": [
       {
         "start": 244,
@@ -3111,6 +3114,7 @@
     "lemma": "Dertosa",
     "previous": "Dertona",
     "next": "Dertum",
+    "wp_link": "w:de:Tortosa",
     "chapters": [
       {
         "start": 246,
@@ -19562,6 +19566,7 @@
     "lemma": "Divodurum 3",
     "previous": "Divodurum 2",
     "next": "Divona 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1241,
