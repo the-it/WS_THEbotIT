@@ -533,6 +533,9 @@ class VolumeRegister(Register):
     def __repr__(self):  # pragma: no cover
         return f"<VOLUME REGISTER - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
 
+    def __len__(self):
+        return len(self._lemmas)
+
     @property
     def volume(self):
         return self._volume
