@@ -603,10 +603,21 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             compare(expect, register_file.read())
 
+    def test_normalize_sort_key(self):
+        compare("aaa", VolumeRegister.normalize_sort_key({"lemma": "ååå"}))
+        compare("bbb", VolumeRegister.normalize_sort_key({"lemma": "ååå", "sort_key": "bbb"}))
+
     def test_get_lemma_by_name(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma_by_name("Aba 1")
+        compare("Aarassos", lemma["previous"])
+        self.assertIsNone(register.get_lemma_by_name("Abracadabra"))
+
+    def test_get_lemma_by_sort_key(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        lemma = register.get_lemma_by_sort_key("äbÄ 1")
         compare("Aarassos", lemma["previous"])
         self.assertIsNone(register.get_lemma_by_name("Abracadabra"))
 
@@ -616,6 +627,8 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         lemma = register.get_lemma_by_name("Aal")
         compare(None, lemma["previous"])
         lemma = register.get_lemma_by_name("Aal", self_supplement=True)
+        compare("Something", lemma["previous"])
+        lemma = register.get_lemma_by_sort_key("AAL", self_supplement=True)
         compare("Something", lemma["previous"])
         lemma = register.get_lemma_by_name("Something", self_supplement=True)
         compare(None, lemma)
@@ -677,10 +690,14 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         register.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Ö")
         compare("O", post_lemma["sort_key"])
-        post_lemma_previous = register.get_lemma_by_name("A")
+        post_lemma_previous = register.get_lemma_by_name("Ä")
         compare("Ö", post_lemma_previous["next"])
-        post_lemma_next = register.get_lemma_by_name("U")
+        post_lemma_next = register.get_lemma_by_name("Ü")
         compare("Ö", post_lemma_next["previous"])
+        post_lemma_start = register.get_lemma_by_name("Vor A")
+        compare("Ä", post_lemma_start["next"])
+        post_lemma_end = register.get_lemma_by_name("D")
+        compare("Ü", post_lemma_end["previous"])
 
     def test_update_by_sortkey_raise_error(self):
         copy_tst_data("I_1_update_previous_wrong", "I_1")
@@ -722,6 +739,16 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
+        register.try_update_next_and_previous(update_dict, register.get_lemma_by_name("O"))
+        post_lemma_previous = register.get_lemma_by_name("Ä")
+        compare("O", post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("Ü")
+        compare("O", post_lemma_next["previous"])
+
+    def test_update_next_and_previous_in_normal_update(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
         register.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
         compare("Ä", post_lemma["previous"])
@@ -730,6 +757,19 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         compare("O", post_lemma_previous["next"])
         post_lemma_next = register.get_lemma_by_name("Ü")
         compare("O", post_lemma_next["previous"])
+
+    def test_update_next_and_previous_in_update_by_sortkey(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "Ö", "previous": "Ä", "next": "Ü"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("Ö")
+        compare("Ä", post_lemma["previous"])
+        compare("Ü", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("Ä")
+        compare("Ö", post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("Ü")
+        compare("Ö", post_lemma_next["previous"])
 
 
 class TestAlphabeticRegister(BaseTestRegister):
