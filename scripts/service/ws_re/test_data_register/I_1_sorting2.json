@@ -1,6 +1,18 @@
 [
   {
+    "lemma": "Start",
+    "next": "Vor A",
+    "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
+  },
+  {
+    "lemma": "Vor A",
+    "previous": "Start",
+    "next": "A",
+    "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
+  },
+  {
     "lemma": "A",
+    "previous": "Vor A",
     "next": "O",
     "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
   },
@@ -18,7 +30,13 @@
   },
   {
     "lemma": "D",
-    "previous": "C",
+    "previous": "U",
+    "next": "Ende",
+    "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
+  },
+  {
+    "lemma": "Ende",
+    "previous": "D",
     "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
   }
 ]

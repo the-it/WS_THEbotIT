@@ -5,7 +5,7 @@ from abc import ABC
 from collections import OrderedDict
 from collections.abc import Mapping
 from datetime import datetime
-from typing import Dict, Union, Sequence, Tuple, List
+from typing import Dict, Union, Sequence, Tuple, List, Any
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, Volumes
 
@@ -488,10 +488,6 @@ class Lemma(Mapping):
         return year_format
 
     def update_lemma_dict(self, update_dict: Dict, remove_items: List = None):
-        print("this is a workaround remove it sometime soon please")
-        if "previous" in update_dict.keys() and "next" in update_dict.keys():
-            del update_dict["previous"]
-            del update_dict["next"]
         for item_key in update_dict:
             self._lemma_dict[item_key] = update_dict[item_key]
         if remove_items:
@@ -536,6 +532,9 @@ class VolumeRegister(Register):
 
     def __repr__(self):  # pragma: no cover
         return f"<VOLUME REGISTER - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
+
+    def __len__(self):
+        return len(self._lemmas)
 
     @property
     def volume(self):
@@ -585,6 +584,17 @@ class VolumeRegister(Register):
                 found_before = True
         return None
 
+    def get_lemma_by_sort_key(self, sort_key: str, self_supplement: bool = False) -> Union[Lemma, None]:
+        # normalize it
+        sort_key = Lemma.make_sort_key(sort_key)
+        found_before = False
+        for lemma in self.lemmas:
+            if lemma.sort_key == sort_key:
+                if found_before or not self_supplement:
+                    return lemma
+                found_before = True
+        return None
+
     def get_index_of_lemma(self, lemma: Union[str, Lemma],
                            self_supplement: bool = False) -> Union[int, None]:
         if isinstance(lemma, str):
@@ -596,18 +606,59 @@ class VolumeRegister(Register):
     def __contains__(self, lemma_name: str) -> bool:
         return bool(self.get_lemma_by_name(lemma_name))
 
+    @staticmethod
+    def normalize_sort_key(lemma_dict: Dict[str, str]) -> str:
+        if "sort_key" in lemma_dict:
+            return Lemma.make_sort_key(lemma_dict["sort_key"])
+        return Lemma.make_sort_key(lemma_dict["lemma"])
+
     def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List):
+        sort_key = self.normalize_sort_key(lemma_dict)
+
         if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
-            self.get_lemma_by_name(lemma_dict["lemma"]).update_lemma_dict(lemma_dict, remove_items)
-        elif "sort_key" in lemma_dict and lemma_dict["sort_key"] in self:
+            lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
+            lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
+            self.try_update_next_and_previous(lemma_dict, lemma_to_update)
+        elif self.get_lemma_by_sort_key(sort_key):
             self._update_by_sortkey(lemma_dict, remove_items)
         else:
             raise RegisterException(f"The update of the register {self.volume.name} "
                                     f"with the dict {lemma_dict} is not possible. "
                                     f"No strategy available")
 
-    def _update_by_sortkey(self, lemma_dict, remove_items):
-        lemma_to_update = self.get_lemma_by_name(lemma_dict["sort_key"])
+    def try_update_next_and_previous(self, new_lemma_dict: Dict[str, Any], lemma_to_update: Lemma):
+        idx = self.get_index_of_lemma(lemma_to_update)
+        if "previous" in new_lemma_dict:
+            pre_lemma = self[idx - 1]
+            pre_lemma_dict = {"lemma": new_lemma_dict["previous"],
+                              "previous": pre_lemma["previous"],
+                              "next": pre_lemma["next"]}
+            if Lemma.make_sort_key(pre_lemma_dict["lemma"]) == pre_lemma.sort_key:
+                pre_lemma.update_lemma_dict(pre_lemma_dict)
+                try:
+                    self.try_update_previous_next_of_surrounding_lemmas(pre_lemma_dict, pre_lemma)
+                except RegisterException:
+                    pass
+        if "next" in new_lemma_dict:
+            next_lemma = self[idx + 1]
+            next_lemma_dict = {"lemma": new_lemma_dict["next"],
+                               "previous": next_lemma["previous"],
+                               "next": next_lemma["next"]}
+            if Lemma.make_sort_key(next_lemma_dict["lemma"]) == next_lemma.sort_key:
+                next_lemma.update_lemma_dict(next_lemma_dict)
+                try:
+                    self.try_update_previous_next_of_surrounding_lemmas(next_lemma_dict, next_lemma)
+                except RegisterException:
+                    pass
+
+    def _update_by_sortkey(self, lemma_dict: Dict[str, Any], remove_items: List[str]):
+        lemma_to_update = self.get_lemma_by_sort_key(self.normalize_sort_key(lemma_dict))
+
+        self.try_update_previous_next_of_surrounding_lemmas(lemma_dict, lemma_to_update)
+        lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
+        self.try_update_next_and_previous(lemma_dict, lemma_to_update)
+
+    def try_update_previous_next_of_surrounding_lemmas(self, lemma_dict, lemma_to_update):
         idx = self.get_index_of_lemma(lemma_to_update)
         previous_test = False
         if lemma_to_update["previous"]:
@@ -641,7 +692,6 @@ class VolumeRegister(Register):
             pre_lemma.update_lemma_dict({"next": lemma_dict["lemma"]})
         if next_test:
             next_lemma.update_lemma_dict({"previous": lemma_dict["lemma"]})
-        lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
 
 
 class AlphabeticRegister(Register):

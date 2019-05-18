@@ -619,9 +619,8 @@ text.
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
         compare("Aal", post_lemma.lemma_dict["sort_key"])
         compare(True, post_lemma.lemma_dict["redirect"])
-        print("workaround")
-        # compare("Lemma Previous", post_lemma.lemma_dict["previous"])
-        # compare("Lemma Next", post_lemma.lemma_dict["next"])
+        compare("Lemma Previous", post_lemma.lemma_dict["previous"])
+        compare("Lemma Next", post_lemma.lemma_dict["next"])
 
     def test_fetch_from_properties_lemma_not_found(self):
         self.title_mock.return_value = "RE:Aas"
