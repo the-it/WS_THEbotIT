@@ -107,7 +107,7 @@
   {
     "lemma": "Saba 3",
     "previous": "Saba 2",
-    "next": "Sabadeibai nesoi",
+    "next": "Σαβαδεῖβαι νῆσοι",
     "chapters": [
       {
         "start": 1514,
@@ -117,9 +117,10 @@
     ]
   },
   {
-    "lemma": "Sabadeibai nesoi",
+    "lemma": "Σαβαδεῖβαι νῆσοι",
     "previous": "Saba 3",
-    "next": "Sabadioi",
+    "next": "Σαβάδιοι",
+    "sort_key": "Sabadeibai nesoi",
     "chapters": [
       {
         "start": 1515,
@@ -129,9 +130,10 @@
     ]
   },
   {
-    "lemma": "Sabadioi",
-    "previous": "Sabadeibai nesoi",
+    "lemma": "Σαβάδιοι",
+    "previous": "Σαβαδεῖβαι νῆσοι",
     "next": "Sabae",
+    "sort_key": "Sabadioi",
     "chapters": [
       {
         "start": 1515,
@@ -142,7 +144,7 @@
   },
   {
     "lemma": "Sabae",
-    "previous": "Sabadioi",
+    "previous": "Σαβάδιοι",
     "next": "Sabaei",
     "chapters": [
       {
@@ -215,6 +217,7 @@
     "lemma": "Sabai 4",
     "previous": "Sabai 3",
     "next": "Sabaia, sabaium",
+    "wp_link": "w:de:Sabha",
     "chapters": [
       {
         "start": 1521,
@@ -226,7 +229,7 @@
   {
     "lemma": "Sabaia, sabaium",
     "previous": "Sabai 4",
-    "next": "Sabaioi bomoi",
+    "next": "Σαβαῖοι βωμοί",
     "chapters": [
       {
         "start": 1521,
@@ -236,9 +239,9 @@
     ]
   },
   {
-    "lemma": "Sabaioi bomoi",
+    "lemma": "Σαβαῖοι βωμοί",
     "previous": "Sabaia, sabaium",
-    "next": "Sabaion",
+    "next": "Σαβαιῶν",
     "chapters": [
       {
         "start": 1522,
@@ -248,8 +251,8 @@
     ]
   },
   {
-    "lemma": "Sabaion",
-    "previous": "Sabaioi bomoi",
+    "lemma": "Σαβαιῶν",
+    "previous": "Σαβαῖοι βωμοί",
     "next": "Sabaitikon stoma",
     "chapters": [
       {
@@ -260,7 +263,7 @@
   },
   {
     "lemma": "Sabaitikon stoma",
-    "previous": "Sabaion",
+    "previous": "Σαβαιῶν",
     "next": "Sabaium",
     "chapters": [
       {
@@ -3762,7 +3765,7 @@
   {
     "lemma": "Safran",
     "previous": "Safrac",
-    "next": "Safronius Rufus",
+    "next": "Safronius",
     "wp_link": "w:de:Safran",
     "chapters": [
       {

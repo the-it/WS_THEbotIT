@@ -197,6 +197,7 @@
     "lemma": "Alexandros 41",
     "previous": "Alexandros 40",
     "next": "Alexandros 42",
+    "sort_key": "Alexandros 041",
     "chapters": [
       {
         "start": 1443,
@@ -369,6 +370,7 @@
     "lemma": "Alexandros 55",
     "previous": "Alexandros 54",
     "next": "Alexandros 56",
+    "sort_key": "Alexandros 055",
     "chapters": [
       {
         "start": 1444,
@@ -417,6 +419,7 @@
     "lemma": "Alexandros 59",
     "previous": "Alexandros 58",
     "next": "Alexandros 60",
+    "sort_key": "Alexandros 059",
     "chapters": [
       {
         "start": 1444,
@@ -479,6 +482,7 @@
     "lemma": "Alexandros 64",
     "previous": "Alexandros 63",
     "next": "Alexandros 65",
+    "sort_key": "Alexandros 064",
     "chapters": [
       {
         "start": 1444,
@@ -5877,6 +5881,7 @@
     "lemma": "Allius 6",
     "previous": "Allius 5",
     "next": "Allius 7",
+    "sort_key": "Allius 06",
     "chapters": [
       {
         "start": 1586,
@@ -5902,6 +5907,7 @@
     "lemma": "Allius 8",
     "previous": "Allius 7",
     "next": "Allix",
+    "sort_key": "Allius 08",
     "chapters": [
       {
         "start": 1586,
@@ -11103,6 +11109,7 @@
     "lemma": "Ambrosios 5",
     "previous": "Ambrosios 4",
     "next": "Ambrosios 6",
+    "redirect": true,
     "wp_link": "w:de:Ambrosius Aurelianus",
     "chapters": [
       {
@@ -12287,6 +12294,7 @@
     "lemma": "Amethystos",
     "previous": "Amestris",
     "next": "Ametor",
+    "wp_link": "w:de:Amethyst",
     "chapters": [
       {
         "start": 1828,
@@ -18844,7 +18852,7 @@
   {
     "lemma": "Anabis 2",
     "previous": "Anabis 1",
-    "next": "Anaboleus",
+    "next": "Ἀναβολεύς",
     "chapters": [
       {
         "start": 2015,
@@ -18854,9 +18862,10 @@
     ]
   },
   {
-    "lemma": "Anaboleus",
+    "lemma": "Ἀναβολεύς",
     "previous": "Anabis 2",
     "next": "Anabolicarii",
+    "sort_key": "Anaboleus",
     "chapters": [
       {
         "start": 2015,
@@ -18867,7 +18876,7 @@
   },
   {
     "lemma": "Anabolicarii",
-    "previous": "Anaboleus",
+    "previous": "Ἀναβολεύς",
     "next": "Anabolium",
     "chapters": [
       {
@@ -19184,7 +19193,7 @@
   {
     "lemma": "Anagnostes",
     "previous": "Anagnis",
-    "next": "Anagnostikoi",
+    "next": "Ἀναγνωστικοί",
     "chapters": [
       {
         "start": 2025,
@@ -19194,9 +19203,10 @@
     ]
   },
   {
-    "lemma": "Anagnostikoi",
+    "lemma": "Ἀναγνωστικοί",
     "previous": "Anagnostes",
     "next": "Anagnutes",
+    "sort_key": "Anagnostikoi",
     "chapters": [
       {
         "start": 2025,
@@ -19207,7 +19217,7 @@
   },
   {
     "lemma": "Anagnutes",
-    "previous": "Anagnostikoi",
+    "previous": "Ἀναγνωστικοί",
     "next": "Anagoge",
     "chapters": [
       {
@@ -19511,7 +19521,7 @@
   {
     "lemma": "Anakeion",
     "previous": "Anakeia",
-    "next": "Anakes",
+    "next": "Ἄνακες",
     "wp_link": "w:de:Anakion",
     "chapters": [
       {
@@ -19522,9 +19532,10 @@
     ]
   },
   {
-    "lemma": "Anakes",
+    "lemma": "Ἄνακες",
     "previous": "Anakeion",
     "next": "Anakles",
+    "sort_key": "Anakes",
     "chapters": [
       {
         "start": 2033,
@@ -19535,7 +19546,7 @@
   },
   {
     "lemma": "Anakles",
-    "previous": "Anakes",
+    "previous": "Ἄνακες",
     "next": "Anakleteria",
     "wp_link": "w:de:Anakles (Töpfer)",
     "chapters": [
@@ -19961,7 +19972,7 @@
   {
     "lemma": "Anaone",
     "previous": "Anaolsus",
-    "next": "Anapale",
+    "next": "Ἀναπάλη",
     "chapters": [
       {
         "start": 2060,
@@ -19971,7 +19982,7 @@
     ]
   },
   {
-    "lemma": "Anapale",
+    "lemma": "Ἀναπάλη",
     "previous": "Anaone",
     "next": "Anaphaios",
     "chapters": [
@@ -19984,7 +19995,7 @@
   },
   {
     "lemma": "Anaphaios",
-    "previous": "Anapale",
+    "previous": "Ἀναπάλη",
     "next": "Anaphas",
     "chapters": [
       {
@@ -20434,6 +20445,7 @@
     "lemma": "Anastasios 5",
     "previous": "Anastasios 4",
     "next": "Anastasios 6",
+    "wp_link": "w:de:Anastasius I.",
     "chapters": [
       {
         "start": 2068,
@@ -20483,6 +20495,7 @@
     "lemma": "Anastasios 9",
     "previous": "Anastasios 8",
     "next": "Anastasiopolis",
+    "wp_link": "w:de:Anastasios Sinaites",
     "chapters": [
       {
         "start": 2068,
@@ -20629,6 +20642,7 @@
     "lemma": "Anatolius 1",
     "previous": "Anatole",
     "next": "Anatolius 2",
+    "sort_key": "Anatolius 01",
     "chapters": [
       {
         "start": 2071,
@@ -20641,6 +20655,7 @@
     "lemma": "Anatolius 2",
     "previous": "Anatolius 1",
     "next": "Anatolius 3",
+    "sort_key": "Anatolius 02",
     "chapters": [
       {
         "start": 2072,
@@ -20653,6 +20668,7 @@
     "lemma": "Anatolius 3",
     "previous": "Anatolius 2",
     "next": "Anatolius 4",
+    "sort_key": "Anatolius 03",
     "chapters": [
       {
         "start": 2072,
@@ -20677,6 +20693,7 @@
     "lemma": "Anatolius 5",
     "previous": "Anatolius 4",
     "next": "Anatolius 6",
+    "sort_key": "Anatolius 05",
     "chapters": [
       {
         "start": 2072,
@@ -20689,6 +20706,7 @@
     "lemma": "Anatolius 6",
     "previous": "Anatolius 5",
     "next": "Anatolius 7",
+    "sort_key": "Anatolius 06",
     "chapters": [
       {
         "start": 2072,
@@ -20701,6 +20719,7 @@
     "lemma": "Anatolius 7",
     "previous": "Anatolius 6",
     "next": "Anatolius 8",
+    "sort_key": "Anatolius 07",
     "chapters": [
       {
         "start": 2072,
@@ -20713,6 +20732,7 @@
     "lemma": "Anatolius 8",
     "previous": "Anatolius 7",
     "next": "Anatolius 9",
+    "sort_key": "Anatolius 08",
     "chapters": [
       {
         "start": 2072,
@@ -20725,6 +20745,7 @@
     "lemma": "Anatolius 9",
     "previous": "Anatolius 8",
     "next": "Anatolius 10",
+    "sort_key": "Anatolius 09",
     "chapters": [
       {
         "start": 2072,
@@ -20844,7 +20865,7 @@
   {
     "lemma": "Anauchidas",
     "previous": "Anaua 2",
-    "next": "Anaumachiu graphe",
+    "next": "Ἀναυμαχίου γραφή",
     "chapters": [
       {
         "start": 2075,
@@ -20867,7 +20888,7 @@
   },
   {
     "lemma": "Anauni",
-    "previous": "Anaumachiu graphe",
+    "previous": "Ἀναυμαχίου γραφή",
     "next": "Anaunium",
     "chapters": [
       {
@@ -21950,7 +21971,7 @@
   {
     "lemma": "Anaxum",
     "previous": "Anaxo 2",
-    "next": "Anaxyrides",
+    "next": "Ἀναξυρίδες",
     "chapters": [
       {
         "start": 2100,
@@ -21960,7 +21981,7 @@
     ]
   },
   {
-    "lemma": "Anaxyrides",
+    "lemma": "Ἀναξυρίδες",
     "previous": "Anaxum",
     "next": "Anazarba",
     "chapters": [
@@ -21973,7 +21994,7 @@
   },
   {
     "lemma": "Anazarba",
-    "previous": "Anaxyrides",
+    "previous": "Ἀναξυρίδες",
     "next": "Ancalites",
     "wp_link": "w:de:Anazarbos",
     "chapters": [
@@ -36234,6 +36255,7 @@
     "lemma": "Antinoupolis 2",
     "previous": "Antinoupolis 1",
     "next": "Antinum",
+    "wp_link": "w:de:Antinoupolis",
     "chapters": [
       {
         "start": 2442,

@@ -3995,7 +3995,7 @@
   {
     "lemma": "Asiarches",
     "previous": "Asiani",
-    "next": "Asias phyle",
+    "next": "Ἀσιὰς φυλή",
     "wp_link": "w:de:Asiarch",
     "chapters": [
       {
@@ -4006,7 +4006,7 @@
     ]
   },
   {
-    "lemma": "Asias phyle",
+    "lemma": "Ἀσιὰς φυλή",
     "previous": "Asiarches",
     "next": "Asiaticus 1",
     "chapters": [
@@ -4018,7 +4018,7 @@
   },
   {
     "lemma": "Asiaticus 1",
-    "previous": "Asias phyle",
+    "previous": "Ἀσιὰς φυλή",
     "next": "Asiaticus 2",
     "chapters": [
       {
@@ -12875,7 +12875,7 @@
   {
     "lemma": "Asylaios",
     "previous": "Asyla",
-    "next": "Asylia",
+    "next": "Ἀσυλία",
     "chapters": [
       {
         "start": 1879,
@@ -12885,9 +12885,11 @@
     ]
   },
   {
-    "lemma": "Asylia",
+    "lemma": "Ἀσυλία",
     "previous": "Asylaios",
     "next": "Asylon",
+    "sort_key": "Asylia",
+    "wp_link": "w:de:Asylie",
     "chapters": [
       {
         "start": 1879,
@@ -12898,7 +12900,7 @@
   },
   {
     "lemma": "Asylon",
-    "previous": "Asylia",
+    "previous": "Ἀσυλία",
     "next": "Asylos 1",
     "wp_link": "w:de:Asylie",
     "chapters": [
@@ -14299,7 +14301,7 @@
   },
   {
     "lemma": "Athanias 1",
-    "previous": "Athanodoros",
+    "previous": "Athaneatis",
     "next": "Athanias 2",
     "chapters": [
       {
@@ -24143,6 +24145,7 @@
     "lemma": "Augusti vicus 1",
     "previous": "Augusti turris",
     "next": "Augusti vicus 2",
+    "sort_key": "Augustivicus 1",
     "chapters": [
       {
         "start": 2367,
@@ -24975,7 +24978,6 @@
     "previous": "Aviones",
     "next": "Avisio portus",
     "sort_key": "Auircius",
-    "wp_link": "w:de:Abercius",
     "chapters": [
       {
         "start": 2393,
@@ -26525,6 +26527,8 @@
     "lemma": "Aurelianus 7",
     "previous": "Aurelianus 6",
     "next": "Aurelianus 8",
+    "sort_key": "Aurelianus 07",
+    "wp_link": "w:de:Aurelian",
     "chapters": [
       {
         "start": 2427,
@@ -31005,7 +31009,7 @@
   },
   {
     "lemma": "Ausonios",
-    "previous": "Ausonia",
+    "previous": "Ausones",
     "next": "Ausonium mare",
     "chapters": [
       {

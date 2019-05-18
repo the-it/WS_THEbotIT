@@ -5132,8 +5132,8 @@
   },
   {
     "lemma": "a Cura",
-    "previous": "Cura 3",
-    "next": "Cura 4",
+    "previous": "Cura 4",
+    "next": "Curagendarius",
     "sort_key": "Cura a",
     "chapters": [
       {
@@ -5157,8 +5157,9 @@
   },
   {
     "lemma": "Curagendarius",
-    "previous": "Cura 4",
+    "previous": "a Cura",
     "next": "Curatio",
+    "redirect": true,
     "chapters": [
       {
         "start": 1773,
@@ -5170,6 +5171,7 @@
     "lemma": "Curatio",
     "previous": "Curagendarius",
     "next": "Curatores",
+    "redirect": true,
     "chapters": [
       {
         "start": 1773,
@@ -7644,7 +7646,7 @@
   {
     "lemma": "Daduchos 1",
     "previous": "Dados 2",
-    "next": "Daduchos 2",
+    "next": "Dadouchos 2",
     "chapters": [
       {
         "start": 1979,
@@ -7655,7 +7657,7 @@
   },
   {
     "lemma": "Daduchos 2",
-    "previous": "Daduchos 1",
+    "previous": "Dadouchos 1",
     "next": "Dadybra",
     "chapters": [
       {
@@ -15652,6 +15654,7 @@
     "lemma": "Decemviri 5",
     "previous": "Decemviri 4",
     "next": "Decennalia",
+    "redirect": true,
     "chapters": [
       {
         "start": 2265,

@@ -494,7 +494,7 @@
   {
     "lemma": "Koniupolis",
     "previous": "Konistra 4",
-    "next": "Konkaru",
+    "next": "Κονκάρου",
     "chapters": [
       {
         "start": 1317,
@@ -504,7 +504,7 @@
     ]
   },
   {
-    "lemma": "Konkaru",
+    "lemma": "Κονκάρου",
     "previous": "Koniupolis",
     "next": "Konkatis",
     "chapters": [
@@ -517,8 +517,8 @@
   },
   {
     "lemma": "Konkatis",
-    "previous": "Konkaru",
-    "next": "Konkobar",
+    "previous": "Κονκάρου",
+    "next": "Κογκοβάρ",
     "chapters": [
       {
         "start": 1317,
@@ -651,6 +651,7 @@
     "lemma": "Konon 4",
     "previous": "Konon 3",
     "next": "Konon 5",
+    "sort_key": "Konon 04",
     "chapters": [
       {
         "start": 1334,
@@ -807,7 +808,7 @@
   {
     "lemma": "Konop(e)ion",
     "previous": "Konopeion",
-    "next": "Konos",
+    "next": "Κῶνος",
     "chapters": [
       {
         "start": 1342,
@@ -817,9 +818,10 @@
     ]
   },
   {
-    "lemma": "Konos",
+    "lemma": "Κῶνος",
     "previous": "Konop(e)ion",
     "next": "Konstanz",
+    "sort_key": "Konos",
     "chapters": [
       {
         "start": 1342,
@@ -830,7 +832,7 @@
   },
   {
     "lemma": "Konstanz",
-    "previous": "Konos",
+    "previous": "Κῶνος",
     "next": "Konsuantai",
     "wp_link": "w:de:Konstanz",
     "chapters": [
@@ -975,7 +977,7 @@
   {
     "lemma": "Koos",
     "previous": "Koon Thalassa",
-    "next": "Kopadon",
+    "next": "Κοπάδον",
     "chapters": [
       {
         "start": 1345,
@@ -984,9 +986,10 @@
     ]
   },
   {
-    "lemma": "Kopadon",
+    "lemma": "Κοπάδον",
     "previous": "Koos",
     "next": "Kopai",
+    "sort_key": "Kopadon",
     "chapters": [
       {
         "start": 1345,
@@ -997,7 +1000,7 @@
   },
   {
     "lemma": "Kopai",
-    "previous": "Kopadon",
+    "previous": "Κοπάδον",
     "next": "Kopais",
     "chapters": [
       {
@@ -1285,7 +1288,7 @@
   {
     "lemma": "Koptos",
     "previous": "Koptites",
-    "next": "Kopustoros",
+    "next": "Κοπούστορος",
     "chapters": [
       {
         "start": 1367,
@@ -1295,9 +1298,10 @@
     ]
   },
   {
-    "lemma": "Kopustoros",
+    "lemma": "Κοπούστορος",
     "previous": "Koptos",
     "next": "Kora",
+    "sort_key": "Kopustoros",
     "chapters": [
       {
         "start": 1369,
@@ -1308,7 +1312,7 @@
   },
   {
     "lemma": "Kora",
-    "previous": "Kopustoros",
+    "previous": "Κοπούστορος",
     "next": "Koradea",
     "redirect": true,
     "chapters": [
@@ -1418,7 +1422,7 @@
   {
     "lemma": "Korakesion 2",
     "previous": "Korakesion 1",
-    "next": "Korakioi",
+    "next": "Κοράκιοι",
     "redirect": true,
     "chapters": [
       {
@@ -1428,9 +1432,9 @@
     ]
   },
   {
-    "lemma": "Korakioi",
+    "lemma": "Κοράκιοι",
     "previous": "Korakesion 2",
-    "next": "Korakion",
+    "next": "Κοράκιον",
     "chapters": [
       {
         "start": 1371,
@@ -1440,9 +1444,11 @@
     ]
   },
   {
-    "lemma": "Korakion",
-    "previous": "Korakioi",
-    "next": "Korakiu chora",
+    "lemma": "Κοράκιον",
+    "previous": "Κοράκιοι",
+    "next": "Κορακίου χώρα",
+    "sort_key": "Korakion",
+    "wp_link": "w:de:Ionien",
     "chapters": [
       {
         "start": 1371,
@@ -1452,8 +1458,8 @@
     ]
   },
   {
-    "lemma": "Korakiu chora",
-    "previous": "Korakion",
+    "lemma": "Κορακίου χώρα",
+    "previous": "Κοράκιον",
     "next": "Korakodes limen",
     "chapters": [
       {
@@ -1465,7 +1471,7 @@
   },
   {
     "lemma": "Korakodes limen",
-    "previous": "Korakiu chora",
+    "previous": "Κορακίου χώρα",
     "next": "Korakon nasos",
     "chapters": [
       {
@@ -1761,7 +1767,7 @@
   {
     "lemma": "Korbeuntos",
     "previous": "Korbasa",
-    "next": "Korbiane",
+    "next": "Κορβιανή",
     "chapters": [
       {
         "start": 1382,
@@ -1770,7 +1776,7 @@
     ]
   },
   {
-    "lemma": "Korbiane",
+    "lemma": "Κορβιανή",
     "previous": "Korbeuntos",
     "next": "Kordaka",
     "chapters": [
@@ -1783,7 +1789,7 @@
   },
   {
     "lemma": "Kordaka",
-    "previous": "Korbiane",
+    "previous": "Κορβιανή",
     "next": "Kordax",
     "chapters": [
       {
