@@ -920,9 +920,9 @@ class TestIntegrationRegister(TestCase):
         cls.registers = Registers()
         end = time.time()
         init_time = end - start
-        #if init_time > 15:
-        #    raise AssertionError(f"Register take to long to initiate ... {init_time} s. "
-        #                         "It should initiate in 15 seconds.")
+        if init_time > 15:
+            raise AssertionError(f"Register take to long to initiate ... {init_time} s. "
+                                 "It should initiate in 15 seconds.")
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
@@ -937,10 +937,6 @@ class TestIntegrationRegister(TestCase):
                 post_lemma = register[i + 1]
                 if not pre_lemma["next"] == lemma["lemma"] == post_lemma["previous"]:
                     errors.append(f"LEMMA lemma name {lemma['lemma']}/{i} in register {register} not the same as pre or post lemma")
-                if not lemma["previous"] == pre_lemma["lemma"]:
-                    errors.append(f"PREVIOUS lemma name {lemma['lemma']}/{i} in register {register} wrong value ({lemma['previous']}/{pre_lemma['lemma']}) for previous")
-                if not lemma["next"] == post_lemma["lemma"]:
-                    errors.append(f"NEXT lemma name {lemma['lemma']}/{i} in register {register} wrong value ({lemma['previous']}/{post_lemma['lemma']}) for next")
         if errors:
             raise AssertionError("\n".join(errors))
 
