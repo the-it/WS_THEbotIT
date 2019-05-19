@@ -5,14 +5,13 @@ import time
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
-from unittest import TestCase, skip, skipUnless
+from unittest import TestCase, skip
 
 from testfixtures import compare
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes
 from scripts.service.ws_re.register import Author, Authors, VolumeRegister, LemmaChapter, Lemma, \
     AlphabeticRegister, Registers, AuthorCrawler, RegisterException
-from tools import INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
@@ -473,6 +472,7 @@ class TestLemma(BaseTestRegister):
         compare("abd 001 011 230", Lemma.make_sort_key("Abd 1 11 230"))
         compare("e    orceni", Lemma.make_sort_key("E....orceni"))
         compare("abalas limenu", Lemma.make_sort_key("Ἀβάλας λιμήνου"))
+        compare("hestiasis", Lemma.make_sort_key("Ἑστίασις"))
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)
@@ -912,7 +912,7 @@ class TestRegisters(BaseTestRegister):
 _MAX_SIZE_WIKI_PAGE = 2_098_175
 
 
-@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+#@skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestIntegrationRegister(TestCase):
     @classmethod
     def setUpClass(cls):

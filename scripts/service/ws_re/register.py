@@ -293,7 +293,9 @@ for regex_pair in _POST_REGEX_RAW_LIST:
 # some regex actions must performed before the TRANSLATION_DICT replacement
 
 _PRE_REGEX_RAW_LIST = [
-    (r"ου", "u")]
+    (r"ου", "u"),
+    (r"Ἑ", "he"),
+]
 
 _PRE_REGEX_LIST = []
 for regex_pair in _PRE_REGEX_RAW_LIST:
@@ -368,9 +370,9 @@ class Lemma(Mapping):
     @classmethod
     def make_sort_key(cls, lemma: str):
         # remove all accents
-        lemma = cls._strip_accents(lemma)
         for regex in _PRE_REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
+        lemma = cls._strip_accents(lemma)
         # simple replacement of single characters
         lemma = lemma.casefold().translate(_TRANSLATION_DICT)
         for regex in _POST_REGEX_LIST:
