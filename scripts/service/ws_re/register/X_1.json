@@ -110,7 +110,7 @@
   {
     "lemma": "Iulia Augusta Taurinorum",
     "previous": "Iulia Aquiliana basilica",
-    "next": "Iuliacus, -um",
+    "next": "Iulia Libica",
     "chapters": [
       {
         "start": 8,
@@ -119,8 +119,20 @@
     ]
   },
   {
-    "lemma": "Iuliacus, -um",
+    "lemma": "Iulia Libica",
     "previous": "Iulia Augusta Taurinorum",
+    "next": "Iuliacus, -um",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 8,
+        "author": "Hübner"
+      }
+    ]
+  },
+  {
+    "lemma": "Iuliacus, -um",
+    "previous": "Iulia Libica",
     "next": "Iuliacus, -um 1",
     "chapters": [
       {
@@ -140,18 +152,6 @@
         "start": 8,
         "end": 9,
         "author": "Keune"
-      }
-    ]
-  },
-  {
-    "lemma": "Iulia Libica",
-    "previous": "Iulia Augusta Taurinorum",
-    "next": "Iuliacus, -um",
-    "chapters": [
-      {
-        "start": 8,
-        "end": 8,
-        "author": "Hübner"
       }
     ]
   },

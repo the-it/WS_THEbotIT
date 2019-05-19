@@ -295,6 +295,7 @@ for regex_pair in _POST_REGEX_RAW_LIST:
 _PRE_REGEX_RAW_LIST = [
     (r"ου", "u"),
     (r"Ἑ", "he"),
+    (r"Ἱ", "hi"),
 ]
 
 _PRE_REGEX_LIST = []

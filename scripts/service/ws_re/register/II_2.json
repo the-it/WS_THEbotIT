@@ -14242,7 +14242,7 @@
   {
     "lemma": "Athanasios 1",
     "previous": "Athanaricus",
-    "next": "Athanadotos",
+    "next": "Athanasios 2",
     "chapters": [
       {
         "start": 1935,
@@ -14252,21 +14252,9 @@
     ]
   },
   {
-    "lemma": "Athanadotos",
-    "previous": "Athanasios 1",
-    "next": "Athanasios 2",
-    "chapters": [
-      {
-        "start": 1938,
-        "end": 1938,
-        "author": "Kirchner"
-      }
-    ]
-  },
-  {
     "lemma": "Athanasios 2",
-    "previous": "Athanadotos",
-    "next": "Athaneatis",
+    "previous": "Athanasios 1",
+    "next": "Athanodoros",
     "chapters": [
       {
         "start": 1938,
@@ -14276,26 +14264,38 @@
     ]
   },
   {
-    "lemma": "Athaneatis",
-    "previous": "Athanasios 2",
-    "next": "Athanodoros",
-    "chapters": [
-      {
-        "start": 1938,
-        "end": 1939,
-        "author": "Szanto"
-      }
-    ]
-  },
-  {
     "lemma": "Athanodoros",
-    "previous": "Athaneatis",
-    "next": "Athanias 1",
+    "previous": "Athanasios 2",
+    "next": "Athanadotos",
     "chapters": [
       {
         "start": 1938,
         "end": 1938,
         "author": "Kirchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Athanadotos",
+    "previous": "Athanodoros",
+    "next": "Athaneatis",
+    "chapters": [
+      {
+        "start": 1938,
+        "end": 1938,
+        "author": "Kirchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Athaneatis",
+    "previous": "Athanadotos",
+    "next": "Athanias 1",
+    "chapters": [
+      {
+        "start": 1938,
+        "end": 1939,
+        "author": "Szanto"
       }
     ]
   },
@@ -31009,7 +31009,7 @@
   },
   {
     "lemma": "Ausonios",
-    "previous": "Ausones",
+    "previous": "Ausonia",
     "next": "Ausonium mare",
     "chapters": [
       {

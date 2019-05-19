@@ -3169,7 +3169,6 @@
   {
     "lemma": "Alazoneia",
     "previous": "Alazeir",
-    "next": "Alba Docilia",
     "chapters": [
       {
         "start": 50,
@@ -3179,8 +3178,19 @@
     ]
   },
   {
+    "lemma": "Albius deus",
+    "next": "Albius 6a",
+    "chapters": [
+      {
+        "start": 51,
+        "end": 51,
+        "author": "Ihm"
+      }
+    ]
+  },
+  {
     "lemma": "Albius 6a",
-    "previous": "Alazoneia",
+    "previous": "Albius deus",
     "next": "Albius 7a",
     "chapters": [
       {
@@ -3193,7 +3203,7 @@
   {
     "lemma": "Albius 7a",
     "previous": "Albius 6a",
-    "next": "Albius deus",
+    "next": "Albocelus (?)",
     "chapters": [
       {
         "start": 51,
@@ -3203,20 +3213,8 @@
     ]
   },
   {
-    "lemma": "Albius deus",
-    "previous": "Albius 7a",
-    "next": "Albocelus (?)",
-    "chapters": [
-      {
-        "start": 51,
-        "end": 51,
-        "author": "Ihm"
-      }
-    ]
-  },
-  {
     "lemma": "Albocelus (?)",
-    "previous": "Albius deus",
+    "previous": "Albius 7a",
     "next": "Alektoria",
     "chapters": [
       {

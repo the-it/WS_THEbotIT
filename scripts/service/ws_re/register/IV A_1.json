@@ -9004,13 +9004,49 @@
     ]
   },
   {
-    "lemma": "Sura 5",
+    "lemma": "Sura 4a",
     "previous": "Sura 4",
-    "next": "Sura 6",
+    "next": "Sura 4b",
+    "chapters": [
+      {
+        "start": 961,
+        "end": 962,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sura 4b",
+    "previous": "Sura 4a",
+    "next": "Sura 4c",
     "chapters": [
       {
         "start": 962,
         "end": 962,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sura 4c",
+    "previous": "Sura 4b",
+    "next": "Sura 5",
+    "chapters": [
+      {
+        "start": 962,
+        "end": 962,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sura 5",
+    "previous": "Sura 4c",
+    "next": "Sura 6",
+    "chapters": [
+      {
+        "start": 962,
+        "end": 963,
         "author": "Münzer"
       }
     ]

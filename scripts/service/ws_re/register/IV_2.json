@@ -5121,12 +5121,24 @@
   {
     "lemma": "Cura 3",
     "previous": "Cura 2d",
-    "next": "a Cura",
+    "next": "Cura 4",
     "chapters": [
       {
         "start": 1771,
         "end": 1773,
         "author": "Leonhard"
+      }
+    ]
+  },
+  {
+    "lemma": "Cura 4",
+    "previous": "Cura 3",
+    "next": "a Cura",
+    "chapters": [
+      {
+        "start": 1773,
+        "end": 1773,
+        "author": "Aust"
       }
     ]
   },
@@ -5140,18 +5152,6 @@
         "start": 1773,
         "end": 1773,
         "author": "Kornemann"
-      }
-    ]
-  },
-  {
-    "lemma": "Cura 4",
-    "previous": "a Cura",
-    "next": "Curagendarius",
-    "chapters": [
-      {
-        "start": 1773,
-        "end": 1773,
-        "author": "Aust"
       }
     ]
   },
@@ -7646,7 +7646,7 @@
   {
     "lemma": "Daduchos 1",
     "previous": "Dados 2",
-    "next": "Dadouchos 2",
+    "next": "Daduchos 2",
     "chapters": [
       {
         "start": 1979,
@@ -7657,7 +7657,7 @@
   },
   {
     "lemma": "Daduchos 2",
-    "previous": "Dadouchos 1",
+    "previous": "Daduchos 1",
     "next": "Dadybra",
     "chapters": [
       {
