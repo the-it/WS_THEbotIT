@@ -937,12 +937,14 @@ class TestIntegrationRegister(TestCase):
                 pre_lemma = register[i -1]
                 lemma = register[i]
                 post_lemma = register[i + 1]
-                if not pre_lemma["next"] == lemma["lemma"] == post_lemma["previous"]:
-                    errors.append(f"LEMMA lemma name {lemma['lemma']}/{i} in register {register} not the same as pre or post lemma")
+                if pre_lemma["next"]:
+                    if not pre_lemma["next"] == lemma["lemma"]:
+                        errors.append(f"PRE lemma name {lemma['lemma']}/{i} in register {register} not the same as pre lemma")
+                if post_lemma["previous"]:
+                     if not post_lemma["previous"] == lemma["lemma"]:
+                        errors.append(f"POST lemma name {lemma['lemma']}/{i} in register {register} not the same as post lemma")
         if errors:
             raise AssertionError("\n".join(errors))
-
-
 
     @skip("only for analysis")
     def test_no_double_lemma(self):  # pragma: no cover
