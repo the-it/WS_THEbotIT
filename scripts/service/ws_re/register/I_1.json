@@ -11005,23 +11005,12 @@
   {
     "lemma": "Ἄδρου",
     "previous": "Adrotta",
-    "next": "Adrumetum",
+    "next": "ad Adrum flumen",
     "chapters": [
       {
         "start": 421,
         "end": 421,
         "author": "Müller, D.H."
-      }
-    ]
-  },
-  {
-    "lemma": "Adrumetum",
-    "previous": "Ἄδρου",
-    "next": "ad Adrum flumen",
-    "chapters": [
-      {
-        "start": 421,
-        "end": 421
       }
     ]
   },
@@ -11035,6 +11024,17 @@
         "start": 421,
         "end": 421,
         "author": "Hübner"
+      }
+    ]
+  },
+  {
+    "lemma": "Adrumetum",
+    "previous": "ad Adrum flumen",
+    "next": "Adryades",
+    "chapters": [
+      {
+        "start": 421,
+        "end": 421
       }
     ]
   },
@@ -12502,8 +12502,21 @@
     ]
   },
   {
-    "lemma": "Aelianus 1",
+    "lemma": "Aelianus",
     "previous": "Aeliae",
+    "next": "Aelianus 1",
+    "sort_key": "Aelianus",
+    "chapters": [
+      {
+        "start": 482,
+        "end": 482,
+        "author": "Rohden"
+      }
+    ]
+  },
+  {
+    "lemma": "Aelianus 1",
+    "previous": "Aelianus",
     "next": "Aelianus 2",
     "sort_key": "Aelianus 01",
     "chapters": [
@@ -18394,7 +18407,7 @@
   },
   {
     "lemma": "Aeria 5",
-    "previous": "Aeria 2–4",
+    "previous": "Aeria 4",
     "next": "Aeria 6",
     "chapters": [
       {
@@ -22137,7 +22150,7 @@
   {
     "lemma": "Agathokles 26",
     "previous": "Agathokles 25",
-    "next": "Agathokles 29",
+    "next": "Agathokles 27",
     "chapters": [
       {
         "start": 759,
@@ -22172,7 +22185,7 @@
   },
   {
     "lemma": "Agathokles 29",
-    "previous": "Agathokles 26",
+    "previous": "Agathokles 28",
     "next": "Agathokles 30",
     "chapters": [
       {
@@ -27051,7 +27064,7 @@
   {
     "lemma": "Agrippiniana horrea",
     "previous": "Agrippinenses",
-    "next": "Agrippinus",
+    "next": "Agrippinus 1",
     "chapters": [
       {
         "start": 901,
@@ -30213,6 +30226,18 @@
   {
     "lemma": "Ailana",
     "previous": "Aïklos",
+    "next": "Ailu kome",
+    "chapters": [
+      {
+        "start": 1008,
+        "end": 1008,
+        "author": "Müller, D.H."
+      }
+    ]
+  },
+  {
+    "lemma": "Ailu kome",
+    "previous": "Ailana",
     "next": "Ailinos",
     "chapters": [
       {
@@ -30224,25 +30249,13 @@
   },
   {
     "lemma": "Ailinos",
-    "previous": "Ailana",
-    "next": "Ailu kome",
+    "previous": "Ailu kome",
+    "next": "Aimathe",
     "chapters": [
       {
         "start": 1008,
         "end": 1009,
         "author": "Crusius"
-      }
-    ]
-  },
-  {
-    "lemma": "Ailu kome",
-    "previous": "Ailinos",
-    "next": "Aimathe",
-    "chapters": [
-      {
-        "start": 1008,
-        "end": 1008,
-        "author": "Müller, D.H."
       }
     ]
   },
@@ -38686,7 +38699,7 @@
   {
     "lemma": "Alassa",
     "previous": "Alaron",
-    "next": "Alastor",
+    "next": "Alastor 1",
     "chapters": [
       {
         "start": 1292,

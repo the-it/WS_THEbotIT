@@ -8319,7 +8319,7 @@
   {
     "lemma": "Loebasius",
     "previous": "Lodone",
-    "next": "Löffel",
+    "next": "Loesius",
     "chapters": [
       {
         "start": 965,
@@ -8329,20 +8329,8 @@
     ]
   },
   {
-    "lemma": "Löffel",
-    "previous": "Loebasius",
-    "next": "Loesius",
-    "chapters": [
-      {
-        "start": 965,
-        "end": 965,
-        "author": "Hug"
-      }
-    ]
-  },
-  {
     "lemma": "Loesius",
-    "previous": "Löffel",
+    "previous": "Loebasius",
     "next": "Loesius 1",
     "chapters": [
       {
@@ -8367,12 +8355,24 @@
   {
     "lemma": "Loesius 2",
     "previous": "Loesius 1",
-    "next": "Löwe",
+    "next": "Löffel",
     "chapters": [
       {
         "start": 965,
         "end": 965,
         "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Löffel",
+    "previous": "Loesius 2",
+    "next": "Löwe",
+    "chapters": [
+      {
+        "start": 965,
+        "end": 965,
+        "author": "Hug"
       }
     ]
   },

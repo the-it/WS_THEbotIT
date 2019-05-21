@@ -26300,8 +26300,20 @@
     ]
   },
   {
-    "lemma": "Aneristos 1",
+    "lemma": "Aneritai",
     "previous": "Ἀνεψιῶν παῖδες",
+    "next": "Aneristos 1",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 2183,
+        "end": 2183
+      }
+    ]
+  },
+  {
+    "lemma": "Aneristos 1",
+    "previous": "Aneritai",
     "next": "Aneristos 2",
     "chapters": [
       {
@@ -26314,7 +26326,7 @@
   {
     "lemma": "Aneristos 2",
     "previous": "Aneristos 1",
-    "next": "Aneritai",
+    "next": "Aneroestus",
     "chapters": [
       {
         "start": 2183,
@@ -26324,20 +26336,8 @@
     ]
   },
   {
-    "lemma": "Aneritai",
-    "previous": "Aneristos 2",
-    "next": "Aneroestus",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 2183,
-        "end": 2183
-      }
-    ]
-  },
-  {
     "lemma": "Aneroestus",
-    "previous": "Aneritai",
+    "previous": "Aneristos 2",
     "next": "Anesaminehae",
     "chapters": [
       {
