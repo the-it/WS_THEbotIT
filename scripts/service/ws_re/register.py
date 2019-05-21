@@ -624,6 +624,13 @@ class VolumeRegister(Register):
             self.try_update_next_and_previous(lemma_dict, lemma_to_update)
         elif self.get_lemma_by_sort_key(sort_key):
             self._update_by_sortkey(lemma_dict, remove_items)
+        elif self.get_lemma_by_name(lemma_dict["previous"]) and self.get_lemma_by_name(lemma_dict["next"]):
+            pre_lemma = self.get_lemma_by_name(lemma_dict["previous"])
+            post_lemma = self.get_lemma_by_name(lemma_dict["next"])
+            post_idx = self.get_index_of_lemma(post_lemma)
+            pre_idx = self.get_index_of_lemma(pre_lemma)
+            if post_idx - pre_idx == 1:
+                assert False
         else:
             raise RegisterException(f"The update of the register {self.volume.name} "
                                     f"with the dict {lemma_dict} is not possible. "

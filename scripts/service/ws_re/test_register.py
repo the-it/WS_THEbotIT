@@ -773,6 +773,19 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         post_lemma_next = register.get_lemma_by_name("Ü")
         compare("Ö", post_lemma_next["previous"])
 
+    def test_update_by_insert(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "A", "next": "O"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("B")
+        compare("A", post_lemma["previous"])
+        compare("U", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("A")
+        compare("B", post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("U")
+        compare("B", post_lemma_next["previous"])
+
 
 class TestAlphabeticRegister(BaseTestRegister):
     def setUp(self):
