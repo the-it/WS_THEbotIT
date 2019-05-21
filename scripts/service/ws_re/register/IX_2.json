@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Imperium",
+    "previous": null,
     "next": "Imperium merum",
     "chapters": [
       {
@@ -13,7 +14,7 @@
   {
     "lemma": "Imperium merum",
     "previous": "Imperium",
-    "next": "Impheis",
+    "next": "Ἰμφεῖς",
     "chapters": [
       {
         "start": 1211,
@@ -23,9 +24,10 @@
     ]
   },
   {
-    "lemma": "Impheis",
+    "lemma": "Ἰμφεῖς",
     "previous": "Imperium merum",
     "next": "Impluvium",
+    "sort_key": "Impheis",
     "chapters": [
       {
         "start": 1212,
@@ -36,7 +38,7 @@
   },
   {
     "lemma": "Impluvium",
-    "previous": "Impheis",
+    "previous": "Ἰμφεῖς",
     "next": "Imporcitor",
     "chapters": [
       {
@@ -321,7 +323,7 @@
   {
     "lemma": "Incestus",
     "previous": "Incensus",
-    "next": "In cilissa",
+    "next": "Incia",
     "wp_link": "w:de:Inzest",
     "chapters": [
       {
@@ -332,21 +334,9 @@
     ]
   },
   {
-    "lemma": "In cilissa",
-    "previous": "Incestus",
-    "next": "Incia",
-    "chapters": [
-      {
-        "start": 1249,
-        "end": 1249,
-        "author": "Ruge"
-      }
-    ]
-  },
-  {
     "lemma": "Incia",
-    "previous": "In cilissa",
-    "next": "Incitaria portus",
+    "previous": "Incestus",
+    "next": "In cilissa",
     "chapters": [
       {
         "start": 1249,
@@ -356,8 +346,21 @@
     ]
   },
   {
-    "lemma": "Incitaria portus",
+    "lemma": "In cilissa",
     "previous": "Incia",
+    "next": "Incitaria portus",
+    "sort_key": "Incilissa",
+    "chapters": [
+      {
+        "start": 1249,
+        "end": 1249,
+        "author": "Ruge"
+      }
+    ]
+  },
+  {
+    "lemma": "Incitaria portus",
+    "previous": "In cilissa",
     "next": "ad incitas",
     "chapters": [
       {
@@ -8733,6 +8736,7 @@
     "lemma": "Isyllos",
     "previous": "Isurium Brigantum",
     "next": "Itabyrion",
+    "wp_link": "w:de:Isyllos",
     "chapters": [
       {
         "start": 2283,
@@ -8745,6 +8749,7 @@
     "lemma": "Itabyrion",
     "previous": "Isyllos",
     "next": "Italica",
+    "redirect": true,
     "chapters": [
       {
         "start": 2283,

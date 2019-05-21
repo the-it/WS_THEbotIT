@@ -8909,7 +8909,7 @@
   {
     "lemma": "Suppostor",
     "previous": "Suppositio partus",
-    "next": "Suptu",
+    "next": "Σούπτου",
     "chapters": [
       {
         "start": 952,
@@ -8919,7 +8919,7 @@
     ]
   },
   {
-    "lemma": "Suptu",
+    "lemma": "Σούπτου",
     "previous": "Suppostor",
     "next": "Supunna",
     "chapters": [
@@ -8932,7 +8932,7 @@
   },
   {
     "lemma": "Supunna",
-    "previous": "Suptu",
+    "previous": "Σούπτου",
     "next": "Sur.",
     "chapters": [
       {
@@ -8994,7 +8994,7 @@
   {
     "lemma": "Sura 4",
     "previous": "Sura 3",
-    "next": "Sura 5",
+    "next": "Sura 4a",
     "chapters": [
       {
         "start": 961,
@@ -9004,13 +9004,49 @@
     ]
   },
   {
-    "lemma": "Sura 5",
+    "lemma": "Sura 4a",
     "previous": "Sura 4",
-    "next": "Sura 6",
+    "next": "Sura 4b",
+    "chapters": [
+      {
+        "start": 961,
+        "end": 962,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sura 4b",
+    "previous": "Sura 4a",
+    "next": "Sura 4c",
     "chapters": [
       {
         "start": 962,
         "end": 962,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sura 4c",
+    "previous": "Sura 4b",
+    "next": "Sura 5",
+    "chapters": [
+      {
+        "start": 962,
+        "end": 962,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sura 5",
+    "previous": "Sura 4c",
+    "next": "Sura 6",
+    "chapters": [
+      {
+        "start": 962,
+        "end": 963,
         "author": "Münzer"
       }
     ]

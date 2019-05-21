@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Iugurtha",
+    "previous": "Jublains",
     "next": "Iviacus",
     "wp_link": "w:de:Jugurtha",
     "chapters": [
@@ -109,7 +110,7 @@
   {
     "lemma": "Iulia Augusta Taurinorum",
     "previous": "Iulia Aquiliana basilica",
-    "next": "Iuliacus, -um",
+    "next": "Iulia Libica",
     "chapters": [
       {
         "start": 8,
@@ -118,8 +119,20 @@
     ]
   },
   {
-    "lemma": "Iuliacus, -um",
+    "lemma": "Iulia Libica",
     "previous": "Iulia Augusta Taurinorum",
+    "next": "Iuliacus, -um",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 8,
+        "author": "Hübner"
+      }
+    ]
+  },
+  {
+    "lemma": "Iuliacus, -um",
+    "previous": "Iulia Libica",
     "next": "Iuliacus, -um 1",
     "chapters": [
       {
@@ -132,7 +145,7 @@
   {
     "lemma": "Iuliacus, -um 1",
     "previous": "Iuliacus, -um",
-    "next": "Iulia Libica",
+    "next": "Iuliacus, -um 2",
     "wp_link": "w:de:Jülich",
     "chapters": [
       {
@@ -143,20 +156,8 @@
     ]
   },
   {
-    "lemma": "Iulia Libica",
-    "previous": "Iuliacus, -um 1",
-    "next": "Iuliacus, -um 2",
-    "chapters": [
-      {
-        "start": 8,
-        "end": 8,
-        "author": "Hübner"
-      }
-    ]
-  },
-  {
     "lemma": "Iuliacus, -um 2",
-    "previous": "Iulia Libica",
+    "previous": "Iuliacus, -um 1",
     "next": "Iuliacus, -um 3",
     "chapters": [
       {
@@ -194,6 +195,7 @@
     "lemma": "Iulia Gordos",
     "previous": "Iuliacus, -um 4",
     "next": "Iuliana 1",
+    "sort_key": "Iuliag",
     "chapters": [
       {
         "start": 9,
@@ -242,6 +244,7 @@
     "lemma": "Iulianos 1",
     "previous": "Iuliana 3",
     "next": "Iulianos 2",
+    "sort_key": "Iulianos 01",
     "chapters": [
       {
         "start": 9,
@@ -302,6 +305,7 @@
     "lemma": "Iulianos 6",
     "previous": "Iulianos 5",
     "next": "Iulianos 7",
+    "sort_key": "Iulianos 06",
     "chapters": [
       {
         "start": 12,
@@ -314,6 +318,7 @@
     "lemma": "Iulianos 7",
     "previous": "Iulianos 6",
     "next": "Iulianos 8",
+    "sort_key": "Iulianos 07",
     "chapters": [
       {
         "start": 13,
@@ -326,6 +331,7 @@
     "lemma": "Iulianos 8",
     "previous": "Iulianos 7",
     "next": "Iulianos 9",
+    "sort_key": "Iulianos 08",
     "chapters": [
       {
         "start": 15,
@@ -9595,6 +9601,7 @@
     "lemma": "Iunius 74",
     "previous": "Iunius 73",
     "next": "Iunius 75",
+    "sort_key": "Iunius 074",
     "chapters": [
       {
         "start": 1034,
@@ -9669,6 +9676,7 @@
     "lemma": "Iunius 80",
     "previous": "Iunius 79",
     "next": "Iunius 81",
+    "sort_key": "Iunius 080",
     "chapters": [
       {
         "start": 1039,
@@ -9705,6 +9713,7 @@
     "lemma": "Iunius 83",
     "previous": "Iunius 82",
     "next": "Iunius 84",
+    "sort_key": "Iunius 083",
     "chapters": [
       {
         "start": 1040,
@@ -9810,6 +9819,7 @@
     "lemma": "Iunius 92",
     "previous": "Iunius 91",
     "next": "Iunius 93",
+    "sort_key": "Iunius 092",
     "chapters": [
       {
         "start": 1050,

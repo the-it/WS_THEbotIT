@@ -5121,7 +5121,7 @@
   {
     "lemma": "Cura 3",
     "previous": "Cura 2d",
-    "next": "a Cura",
+    "next": "Cura 4",
     "chapters": [
       {
         "start": 1771,
@@ -5131,9 +5131,21 @@
     ]
   },
   {
-    "lemma": "a Cura",
+    "lemma": "Cura 4",
     "previous": "Cura 3",
-    "next": "Cura 4",
+    "next": "a Cura",
+    "chapters": [
+      {
+        "start": 1773,
+        "end": 1773,
+        "author": "Aust"
+      }
+    ]
+  },
+  {
+    "lemma": "a Cura",
+    "previous": "Cura 4",
+    "next": "Curagendarius",
     "sort_key": "Cura a",
     "chapters": [
       {
@@ -5144,21 +5156,10 @@
     ]
   },
   {
-    "lemma": "Cura 4",
-    "previous": "a Cura",
-    "next": "Curagendarius",
-    "chapters": [
-      {
-        "start": 1773,
-        "end": 1773,
-        "author": "Aust"
-      }
-    ]
-  },
-  {
     "lemma": "Curagendarius",
-    "previous": "Cura 4",
+    "previous": "a Cura",
     "next": "Curatio",
+    "redirect": true,
     "chapters": [
       {
         "start": 1773,
@@ -5170,6 +5171,7 @@
     "lemma": "Curatio",
     "previous": "Curagendarius",
     "next": "Curatores",
+    "redirect": true,
     "chapters": [
       {
         "start": 1773,
@@ -15652,6 +15654,7 @@
     "lemma": "Decemviri 5",
     "previous": "Decemviri 4",
     "next": "Decennalia",
+    "redirect": true,
     "chapters": [
       {
         "start": 2265,

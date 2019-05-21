@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Hyaia",
+    "previous": null,
     "next": "Hyaioi",
     "redirect": true,
     "chapters": [
@@ -13,7 +14,7 @@
   {
     "lemma": "Hyaioi",
     "previous": "Hyaia",
-    "next": "Hyakinthia",
+    "next": "Ὑακίνθια",
     "chapters": [
       {
         "start": 1,
@@ -23,9 +24,11 @@
     ]
   },
   {
-    "lemma": "Hyakinthia",
+    "lemma": "Ὑακίνθια",
     "previous": "Hyaioi",
     "next": "Hyakinthides",
+    "sort_key": "Hyakinthia",
+    "wp_link": "w:de:Hyakinthia",
     "chapters": [
       {
         "start": 1,
@@ -36,7 +39,7 @@
   },
   {
     "lemma": "Hyakinthides",
-    "previous": "Hyakinthia",
+    "previous": "Ὑακίνθια",
     "next": "Hyakinthikon Oion",
     "chapters": [
       {
@@ -338,7 +341,7 @@
   {
     "lemma": "Hyarotis",
     "previous": "Hyarbesytai",
-    "next": "Hyas 1",
+    "next": "Hyas",
     "chapters": [
       {
         "start": 23,
@@ -348,8 +351,20 @@
     ]
   },
   {
-    "lemma": "Hyas 1",
+    "lemma": "Hyas",
     "previous": "Hyarotis",
+    "next": "Hyas 1",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24,
+        "author": "Gundel, Wilhelm"
+      }
+    ]
+  },
+  {
+    "lemma": "Hyas 1",
+    "previous": "Hyas",
     "next": "Hyas 2",
     "chapters": [
       {
@@ -626,7 +641,7 @@
   {
     "lemma": "Hybristes",
     "previous": "Hybristas 2",
-    "next": "Hybristika",
+    "next": "Ὑβριστικά",
     "chapters": [
       {
         "start": 33,
@@ -636,9 +651,10 @@
     ]
   },
   {
-    "lemma": "Hybristika",
+    "lemma": "Ὑβριστικά",
     "previous": "Hybristes",
     "next": "Hychaios",
+    "sort_key": "Hybristika",
     "chapters": [
       {
         "start": 33,
@@ -649,7 +665,7 @@
   },
   {
     "lemma": "Hychaios",
-    "previous": "Hybristika",
+    "previous": "Ὑβριστικά",
     "next": "Hychantenoi",
     "chapters": [
       {
@@ -856,6 +872,7 @@
     "lemma": "Hydra 2",
     "previous": "Hydra 1",
     "next": "Hydra 3",
+    "redirect": true,
     "wp_link": "w:de:Wasserschlange (Sternbild)",
     "chapters": [
       {

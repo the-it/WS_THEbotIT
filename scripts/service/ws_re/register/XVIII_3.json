@@ -10129,7 +10129,7 @@
   {
     "lemma": "Paraibios",
     "previous": "Paraibates 1",
-    "next": "Paraipaphitis",
+    "next": "Παραιπαφῖτις",
     "chapters": [
       {
         "start": 1182,
@@ -10139,7 +10139,7 @@
     ]
   },
   {
-    "lemma": "Paraipaphitis",
+    "lemma": "Παραιπαφῖτις",
     "previous": "Paraibios",
     "next": "Paraisos",
     "chapters": [
@@ -10152,8 +10152,9 @@
   },
   {
     "lemma": "Paraisos",
-    "previous": "Paraipaphitis",
+    "previous": "Παραιπαφῖτις",
     "next": "Paraitakene 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1182,

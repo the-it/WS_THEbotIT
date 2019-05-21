@@ -744,7 +744,7 @@
   {
     "lemma": "Kaystrianoi",
     "previous": "Kaystriane",
-    "next": "Kaustrianon Pedion",
+    "next": "Καϋστριανὸν Πεδίον",
     "chapters": [
       {
         "start": 99,
@@ -754,7 +754,7 @@
     ]
   },
   {
-    "lemma": "Kaustrianon Pedion",
+    "lemma": "Καϋστριανὸν Πεδίον",
     "previous": "Kaystrianoi",
     "next": "Kaystros 1",
     "chapters": [
@@ -767,7 +767,7 @@
   },
   {
     "lemma": "Kaystros 1",
-    "previous": "Kaustrianon Pedion",
+    "previous": "Καϋστριανὸν Πεδίον",
     "next": "Kaystros 2",
     "wp_link": "w:de:Kleiner Mäander",
     "chapters": [
@@ -1153,7 +1153,7 @@
   {
     "lemma": "Kedrosia",
     "previous": "Kedros",
-    "next": "Kedrysies",
+    "next": "Κεδρύσιες",
     "chapters": [
       {
         "start": 114,
@@ -1162,7 +1162,7 @@
     ]
   },
   {
-    "lemma": "Kedrysies",
+    "lemma": "Κεδρύσιες",
     "previous": "Kedrosia",
     "next": "Keia",
     "chapters": [
@@ -1175,7 +1175,7 @@
   },
   {
     "lemma": "Keia",
-    "previous": "Kedrysies",
+    "previous": "Κεδρύσιες",
     "next": "Keimenos",
     "chapters": [
       {
@@ -1294,7 +1294,7 @@
   {
     "lemma": "Kekoia 2",
     "previous": "Kekoia 1",
-    "next": "Kekola",
+    "next": "Κέκωλα",
     "chapters": [
       {
         "start": 118,
@@ -1304,7 +1304,7 @@
     ]
   },
   {
-    "lemma": "Kekola",
+    "lemma": "Κέκωλα",
     "previous": "Kekoia 2",
     "next": "Kekropeion",
     "chapters": [
@@ -1317,7 +1317,7 @@
   },
   {
     "lemma": "Kekropeion",
-    "previous": "Kekola",
+    "previous": "Κέκωλα",
     "next": "Kekropia",
     "chapters": [
       {
@@ -1425,7 +1425,7 @@
   {
     "lemma": "Kela",
     "previous": "Kekypos(i)os",
-    "next": "Keladeine 1",
+    "next": "Keladeine",
     "chapters": [
       {
         "start": 131,
@@ -1435,8 +1435,20 @@
     ]
   },
   {
-    "lemma": "Keladeine 1",
+    "lemma": "Keladeine",
     "previous": "Kela",
+    "next": "Keladeine 1",
+    "chapters": [
+      {
+        "start": 131,
+        "end": 131,
+        "author": "Adler"
+      }
+    ]
+  },
+  {
+    "lemma": "Keladeine 1",
+    "previous": "Keladeine",
     "next": "Keladeine 2",
     "chapters": [
       {
