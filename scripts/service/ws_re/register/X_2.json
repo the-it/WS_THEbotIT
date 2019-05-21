@@ -16946,7 +16946,7 @@
   {
     "lemma": "Kataonia",
     "previous": "Kataon",
-    "next": "Katapeireterie",
+    "next": "Καταπειρητηρίη",
     "chapters": [
       {
         "start": 2478,
@@ -16956,9 +16956,11 @@
     ]
   },
   {
-    "lemma": "Katapeireterie",
+    "lemma": "Καταπειρητηρίη",
     "previous": "Kataonia",
-    "next": "Kataphraktoi 1",
+    "next": "Κατάφρακτοι 1",
+    "sort_key": "Katapeireterie",
+    "wp_link": "w:de:Lot (Schifffahrt)",
     "chapters": [
       {
         "start": 2479,
@@ -16968,9 +16970,11 @@
     ]
   },
   {
-    "lemma": "Kataphraktoi 1",
-    "previous": "Katapeireterie",
-    "next": "Kataphraktoi 2",
+    "lemma": "Κατάφρακτοι 1",
+    "previous": "Καταπειρητηρίη",
+    "next": "Κατάφρακτοι 2",
+    "sort_key": "Kataphraktoi 1",
+    "wp_link": "w:de:Kataphrakt",
     "chapters": [
       {
         "start": 2479,
@@ -16980,9 +16984,11 @@
     ]
   },
   {
-    "lemma": "Kataphraktoi 2",
-    "previous": "Kataphraktoi 1",
+    "lemma": "Κατάφρακτοι 2",
+    "previous": "Κατάφρακτοι 1",
     "next": "Kataphronia",
+    "sort_key": "Kataphraktoi 2",
+    "wp_link": "w:de:Schiffe der Antike",
     "chapters": [
       {
         "start": 2479,
@@ -16993,7 +16999,7 @@
   },
   {
     "lemma": "Kataphronia",
-    "previous": "Kataphraktoi 2",
+    "previous": "Κατάφρακτοι 2",
     "next": "Kataphronios 1",
     "chapters": [
       {
@@ -17030,7 +17036,7 @@
   {
     "lemma": "Katapolitioi",
     "previous": "Kataphronios 2",
-    "next": "Katapontismos",
+    "next": "Καταποντισμός",
     "chapters": [
       {
         "start": 2480,
@@ -17040,9 +17046,11 @@
     ]
   },
   {
-    "lemma": "Katapontismos",
+    "lemma": "Καταποντισμός",
     "previous": "Katapolitioi",
     "next": "Katapulta",
+    "sort_key": "Katapontismos",
+    "wp_link": "w:de:Ertränken",
     "chapters": [
       {
         "start": 2480,
@@ -17053,7 +17061,7 @@
   },
   {
     "lemma": "Katapulta",
-    "previous": "Katapontismos",
+    "previous": "Καταποντισμός",
     "next": "Katara",
     "wp_link": "w:de:Katapult",
     "chapters": [

@@ -2719,6 +2719,7 @@
     "lemma": "Hypatius 3",
     "previous": "Hypatius 2",
     "next": "Hypatius 4",
+    "wp_link": "w:de:Hypatius (Konsul 359)",
     "chapters": [
       {
         "start": 249,
@@ -3101,6 +3102,7 @@
     "lemma": "Hyperboreia",
     "previous": "Hyperboreer",
     "next": "Hyperboreios Okeanos",
+    "wp_link": "w:de:Hyperborea",
     "chapters": [
       {
         "start": 280,
@@ -3113,6 +3115,7 @@
     "lemma": "Hyperboreios Okeanos",
     "previous": "Hyperboreia",
     "next": "Hypercheiria",
+    "wp_link": "w:de:Hyperborea",
     "chapters": [
       {
         "start": 280,
@@ -3161,6 +3164,7 @@
     "lemma": "Hypere",
     "previous": "Hyperdexios, Hyperdexia",
     "next": "Hyperechius 1",
+    "wp_link": "w:de:Amorgos",
     "chapters": [
       {
         "start": 280,
@@ -3244,6 +3248,7 @@
     "lemma": "Hypereia 2",
     "previous": "Hypereia 1",
     "next": "Hypereia 3",
+    "wp_link": "w:de:Kalavria",
     "chapters": [
       {
         "start": 281,
@@ -3267,7 +3272,8 @@
   {
     "lemma": "Hypereides",
     "previous": "Hypereia 3",
-    "next": "Hyperemeros, hyperemeria",
+    "next": "Ὑπερήμερος, ὑπερημερία",
+    "wp_link": "w:de:Hypereides",
     "chapters": [
       {
         "start": 281,
@@ -3423,7 +3429,7 @@
   {
     "lemma": "Hyperes 4",
     "previous": "Hyperes 3",
-    "next": "Hyperesiai",
+    "next": "Ὑπηρεσίαι",
     "chapters": [
       {
         "start": 286,
@@ -3433,9 +3439,10 @@
     ]
   },
   {
-    "lemma": "Hyperesiai",
+    "lemma": "Ὑπηρεσίαι",
     "previous": "Hyperes 4",
     "next": "Hyperion 1",
+    "sort_key": "Hyperesiai",
     "chapters": [
       {
         "start": 286,
@@ -3446,7 +3453,7 @@
   },
   {
     "lemma": "Hyperion 1",
-    "previous": "Hyperesiai",
+    "previous": "Ὑπηρεσίαι",
     "next": "Hyperion 2",
     "wp_link": "w:de:Hyperion",
     "chapters": [

@@ -5127,8 +5127,9 @@
   },
   {
     "lemma": "Diadema",
-    "previous": "Diachersis",
+    "previous": "Diachyton",
     "next": "Diadematus",
+    "wp_link": "w:de:Diadem",
     "chapters": [
       {
         "start": 303,
@@ -8033,7 +8034,7 @@
   {
     "lemma": "Dikaia 2",
     "previous": "Dikaia 1",
-    "next": "Dikai apo symbolon",
+    "next": "Δίκαι ἀπὸ συμβόλων",
     "chapters": [
       {
         "start": 545,
@@ -8043,7 +8044,7 @@
     ]
   },
   {
-    "lemma": "Dikai apo symbolon",
+    "lemma": "Δίκαι ἀπὸ συμβόλων",
     "previous": "Dikaia 2",
     "next": "Dikaiarcheia",
     "chapters": [
@@ -8056,7 +8057,7 @@
   },
   {
     "lemma": "Dikaiarcheia",
-    "previous": "Dikai apo symbolon",
+    "previous": "Δίκαι ἀπὸ συμβόλων",
     "next": "Dikaiarchos 1",
     "wp_link": "w:de:Pozzuoli",
     "chapters": [
@@ -12947,7 +12948,7 @@
   {
     "lemma": "Dion 02",
     "previous": "Dion 01",
-    "next": "Dion 03",
+    "next": "Δῖον 3",
     "chapters": [
       {
         "start": 833,
@@ -12957,9 +12958,9 @@
     ]
   },
   {
-    "lemma": "Dion 03",
+    "lemma": "Δῖον 3",
     "previous": "Dion 02",
-    "next": "Dion 04",
+    "next": "Δῖον 4",
     "chapters": [
       {
         "start": 833,
@@ -12969,9 +12970,10 @@
     ]
   },
   {
-    "lemma": "Dion 04",
-    "previous": "Dion 03",
-    "next": "Dion 05",
+    "lemma": "Δῖον 4",
+    "previous": "Δῖον 3",
+    "next": "Δῖον 5",
+    "sort_key": "Dion 004",
     "chapters": [
       {
         "start": 833,
@@ -12981,8 +12983,8 @@
     ]
   },
   {
-    "lemma": "Dion 05",
-    "previous": "Dion 04",
+    "lemma": "Δῖον 5",
+    "previous": "Δῖον 4",
     "next": "Dion 1",
     "chapters": [
       {
@@ -12994,7 +12996,7 @@
   },
   {
     "lemma": "Dion 1",
-    "previous": "Dion 05",
+    "previous": "Δῖον 5",
     "next": "Dion 2",
     "chapters": [
       {
@@ -18463,7 +18465,7 @@
   {
     "lemma": "Diphroi",
     "previous": "Diphridas",
-    "next": "Diphros",
+    "next": "Δίφρος",
     "chapters": [
       {
         "start": 1157,
@@ -18473,7 +18475,7 @@
     ]
   },
   {
-    "lemma": "Diphros",
+    "lemma": "Δίφρος",
     "previous": "Diphroi",
     "next": "Διφθέρα",
     "chapters": [
@@ -18485,8 +18487,8 @@
   },
   {
     "lemma": "Διφθέρα",
-    "previous": "Diphros",
-    "next": "Diplasiasmoi",
+    "previous": "Δίφρος",
+    "next": "Διπλασιασμοί",
     "sort_key": "Diphthera",
     "chapters": [
       {
@@ -18497,9 +18499,11 @@
     ]
   },
   {
-    "lemma": "Diplasiasmoi",
+    "lemma": "Διπλασιασμοί",
     "previous": "Διφθέρα",
     "next": "Diploma",
+    "sort_key": "Diplasiasmoi",
+    "wp_link": "w:de:Elementartaktik",
     "chapters": [
       {
         "start": 1158,
@@ -18510,7 +18514,7 @@
   },
   {
     "lemma": "Diploma",
-    "previous": "Diplasiasmoi",
+    "previous": "Διπλασιασμοί",
     "next": "Dipo",
     "chapters": [
       {
@@ -20304,7 +20308,8 @@
   {
     "lemma": "Dok",
     "previous": "Doie",
-    "next": "Doketai",
+    "next": "Δοκηταί",
+    "wp_link": "w:de:Dok (Festung)",
     "chapters": [
       {
         "start": 1268,
@@ -20314,9 +20319,11 @@
     ]
   },
   {
-    "lemma": "Doketai",
+    "lemma": "Δοκηταί",
     "previous": "Dok",
-    "next": "Dokimasia",
+    "next": "Δοκιμασία",
+    "sort_key": "Doketai",
+    "wp_link": "w:de:Doketismus",
     "chapters": [
       {
         "start": 1268,
@@ -20326,8 +20333,8 @@
     ]
   },
   {
-    "lemma": "Dokimasia",
-    "previous": "Doketai",
+    "lemma": "Δοκιμασία",
+    "previous": "Δοκηταί",
     "next": "Dokimeion",
     "chapters": [
       {
@@ -20339,7 +20346,7 @@
   },
   {
     "lemma": "Dokimeion",
-    "previous": "Dokimasia",
+    "previous": "Δοκιμασία",
     "next": "Dokimos 1",
     "chapters": [
       {

@@ -6768,7 +6768,7 @@
   {
     "lemma": "Heras 6",
     "previous": "Heras 5",
-    "next": "Herasios",
+    "next": "Heras lutra",
     "chapters": [
       {
         "start": 529,
@@ -6779,8 +6779,8 @@
   },
   {
     "lemma": "Herasios",
-    "previous": "Heras 6",
-    "next": "Heras lutra",
+    "previous": "Ἤρας νῆσος",
+    "next": "Herasius",
     "chapters": [
       {
         "start": 529,
@@ -6791,8 +6791,8 @@
   },
   {
     "lemma": "Heras lutra",
-    "previous": "Herasios",
-    "next": "Heras nesos",
+    "previous": "Heras 6",
+    "next": "Ἤρας νῆσος",
     "chapters": [
       {
         "start": 529,
@@ -6826,7 +6826,7 @@
   },
   {
     "lemma": "Heratemis",
-    "previous": "Herasinus",
+    "previous": "Herasius",
     "next": "Herbanum",
     "chapters": [
       {
@@ -6852,6 +6852,7 @@
     "lemma": "Herbelloni",
     "previous": "Herbanum",
     "next": "Herbessos 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 530,
@@ -10573,6 +10574,7 @@
     "lemma": "Hermogenes 11",
     "previous": "Hermogenes 10",
     "next": "Hermogenes 12",
+    "redirect": true,
     "chapters": [
       {
         "start": 863,

@@ -289,6 +289,7 @@
     "lemma": "Dora 2",
     "previous": "Dora 1",
     "next": "Dora 3",
+    "wp_link": "w:de:Dor (Stadt)",
     "chapters": [
       {
         "start": 1549,
@@ -13105,8 +13106,9 @@
   },
   {
     "lemma": "Ekdippa",
-    "previous": "Ekdikos 2",
-    "next": "Ekdosis",
+    "previous": "Ekdikos",
+    "next": "Ἔκδοσις",
+    "wp_link": "w:de:Achsiv",
     "chapters": [
       {
         "start": 2161,
@@ -13116,9 +13118,11 @@
     ]
   },
   {
-    "lemma": "Ekdosis",
+    "lemma": "Ἔκδοσις",
     "previous": "Ekdippa",
     "next": "Ἐκδύσια",
+    "sort_key": "Ekdosis",
+    "wp_link": "w:de:Ekdosis",
     "chapters": [
       {
         "start": 2162,
@@ -13129,7 +13133,7 @@
   },
   {
     "lemma": "Ἐκδύσια",
-    "previous": "Ekdosis",
+    "previous": "Ἔκδοσις",
     "next": "Ekebolios",
     "sort_key": "Ekdysia",
     "chapters": [
@@ -18542,6 +18546,7 @@
     "lemma": "Emesa",
     "previous": "Emeriti",
     "next": "Emeum",
+    "wp_link": "w:de:Homs",
     "chapters": [
       {
         "start": 2496,
