@@ -63,6 +63,13 @@ run_coverage: &run_coverage
       . venv/bin/activate
       make coverage
 
+run_unittest: &run_unittest
+  run:
+    name: run unittest
+    command: |
+      . venv/bin/activate
+      make unittest
+
 report_codacy: &report_codacy
   run:
     name: report codacy
@@ -106,6 +113,15 @@ coverage_steps: &coverage_steps
     - <<: *report_codacy
     - <<: *report_codecov
 
+unittest_steps: &unittest_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
+    - <<: *show_python_version
+    - <<: *install_dependencies
+    - <<: *save_cache
+    - <<: *run_unittest
+
 # job definitions
 
 jobs:
@@ -121,11 +137,11 @@ jobs:
     working_directory: ~/repo
     <<: *coverage_steps
 
-  coverage38:
+  unittest38:
     docker:
       - image: circleci/python:3.8-rc
     working_directory: ~/repo
-    <<: *coverage_steps
+    <<: *unittest_steps
 
 # dependencies for the workflow
 
@@ -139,7 +155,7 @@ workflows:
             branches:
               ignore:
                 - /.*updating_registers.*/
-      - coverage38:
+      - unittest38:
           context: python38
           requires:
             - quality
