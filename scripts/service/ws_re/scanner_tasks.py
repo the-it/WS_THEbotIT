@@ -160,7 +160,7 @@ class DEWPTask(ERROTask):
         caption = f"\n\n=={datetime.now():%Y-%m-%d}==\n\n"
         entries = []
         for item in self.data:
-            entries.append(f"* Wikpedia Artikel: [[wp:{item[0]}]] verlinkt von [[RE:{item[1]}]] "
+            entries.append(f"* Wikpedia Artikel: [[w:{item[0]}]] verlinkt von [[RE:{item[1]}]] "
                            f"existiert nicht")
         body = "\n".join(entries)
         return caption + body

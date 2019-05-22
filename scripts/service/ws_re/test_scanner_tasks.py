@@ -392,8 +392,8 @@ class TestDEWPTask(TaskTestCase):
     def test_build_entries(self):
         task = DEWPTask(None, self.logger)
         task.data = [("One", "First_Lemma"), ("Two", "Second_Lemma")]
-        expect = ["* Wikpedia Artikel: [[wp:One]] verlinkt von [[RE:First_Lemma]] existiert nicht",
-                  "* Wikpedia Artikel: [[wp:Two]] verlinkt von [[RE:Second_Lemma]] existiert nicht"]
+        expect = ["* Wikpedia Artikel: [[w:One]] verlinkt von [[RE:First_Lemma]] existiert nicht",
+                  "* Wikpedia Artikel: [[w:Two]] verlinkt von [[RE:Second_Lemma]] existiert nicht"]
         compare(expect, task._build_entry().split("\n")[-2:])
 
 
