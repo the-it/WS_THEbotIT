@@ -626,7 +626,8 @@ class VolumeRegister(Register):
                 self.try_update_next_and_previous(lemma_dict, lemma_to_update)
             elif self.get_lemma_by_sort_key(sort_key):
                 self._update_by_sortkey(lemma_dict, remove_items)
-            elif self.get_lemma_by_name(lemma_dict["previous"]) and self.get_lemma_by_name(lemma_dict["next"]):
+            elif self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])) \
+                and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
                 self._update_pre_and_post_exists(lemma_dict)
             else:
                 raise RegisterException(f"The update of the register {self.volume.name} "
@@ -638,8 +639,8 @@ class VolumeRegister(Register):
                                     f"Key Error in Dictionary")
 
     def _update_pre_and_post_exists(self, lemma_dict):
-        pre_lemma = self.get_lemma_by_name(lemma_dict["previous"])
-        post_lemma = self.get_lemma_by_name(lemma_dict["next"])
+        pre_lemma = self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]))
+        post_lemma = self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]))
         post_idx = self.get_index_of_lemma(post_lemma)
         pre_idx = self.get_index_of_lemma(pre_lemma)
         if post_idx - pre_idx == 1:
