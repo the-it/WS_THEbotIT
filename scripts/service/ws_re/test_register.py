@@ -358,13 +358,13 @@ class TestLemma(BaseTestRegister):
                                                           {"start": 1, "end": 2, "author": "Abbott"}]}
 
     def test_from_dict_errors(self):
-        for entry in ["lemma", "chapters"]:
+        for entry in ["lemma"]:
             test_dict = copy.deepcopy(self.basic_dict)
             del test_dict[entry]
             with self.assertRaises(RegisterException):
                 Lemma(test_dict, Volumes()["I,1"], self.authors)
 
-        for entry in ["previous", "next", "redirect"]:
+        for entry in ["previous", "next", "redirect", "chapters"]:
             test_dict = copy.deepcopy(self.basic_dict)
             del test_dict[entry]
             self.assertIsNone(Lemma(test_dict, Volumes()["I,1"], self.authors)[entry])
@@ -378,8 +378,6 @@ class TestLemma(BaseTestRegister):
                  {"start": 1, "end": 2, "author": "Abbott"}],
                 re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
-
-
 
     def test_get_link(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
@@ -424,8 +422,7 @@ class TestLemma(BaseTestRegister):
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
-        with self.assertRaises(RegisterException):
-            print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
+        Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
         no_chapter_dict = {"lemma": "lemma", "chapters": [{"start": 1}]}
         with self.assertRaises(RegisterException):
             print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
@@ -456,6 +453,15 @@ class TestLemma(BaseTestRegister):
         compare(expected_row, re_register_lemma.get_table_row())
         expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|{{Anker2|lemma}}]]", "|I,1")
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
+
+    def test_get_row_no_chapter(self):
+        one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                         "redirect": False,
+                         "chapters": []}
+        re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
+        expected_row = """|-
+|data-sort-value="lemma"|[[RE:lemma|{{Anker2|lemma}}]]"""
+        compare(expected_row, re_register_lemma.get_table_row())
 
     def test_strip_accents(self):
         compare("Αβαλας λιμηνaoueeeec", Lemma._strip_accents("Ἀβάλας λιμήνäöüèéêëç"))
@@ -733,8 +739,11 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     def test_update_no_update_possible(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam"}
+        update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam", "previous": "rubbish", "next": "something"}
         with self.assertRaisesRegex(RegisterException, "No strategy available"):
+            register.update_lemma(update_dict, [])
+        update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam"}
+        with self.assertRaisesRegex(RegisterException, "Key Error in Dictionary"):
             register.update_lemma(update_dict, [])
 
     def test_update_next_and_previous(self):
@@ -780,11 +789,31 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         register.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
         compare("A", post_lemma["previous"])
+        compare("O", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("A")
+        compare("B", post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("O")
+        compare("B", post_lemma_next["previous"])
+
+    def test_update_by_replace(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "A", "next": "U"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("B")
+        compare("A", post_lemma["previous"])
         compare("U", post_lemma["next"])
         post_lemma_previous = register.get_lemma_by_name("A")
         compare("B", post_lemma_previous["next"])
         post_lemma_next = register.get_lemma_by_name("U")
         compare("B", post_lemma_next["previous"])
+
+    def test_update_pre_and_next_not_possible(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "A", "next": "D"}
+        with self.assertRaisesRegex(RegisterException, "Diff between previous and next aren't 1 or 2"):
+            register.update_lemma(update_dict, [])
 
 
 class TestAlphabeticRegister(BaseTestRegister):
