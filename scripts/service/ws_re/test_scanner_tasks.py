@@ -358,10 +358,26 @@ class TestDEWPTask(TaskTestCase):
 {{REAutor|Autor.}}"""
             self.title_mock.return_value = "Re:Title"
             page_mock.return_value.exists.side_effect = [True]
+            page_mock.return_value.isRedirectPage.side_effect = [False]
             re_page = RePage(self.page_mock)
             task = DEWPTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
             compare([], task.data)
+
+    def test_link_is_existend_but_redirect(self):
+        with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
+                        new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten
+|WP=Bla
+}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = [True]
+            page_mock.return_value.isRedirectPage.side_effect = [True]
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare([("Bla", "Title")], task.data)
 
     def test_link_several_links(self):
         with mock.patch("scripts.service.ws_re.scanner_tasks.pywikibot.Page",
@@ -373,13 +389,16 @@ class TestDEWPTask(TaskTestCase):
 {{REDaten}}
 {{REAutor|Autor.}}
 {{REDaten|WP=Blab}}
+{{REAutor|Autor.}}
+{{REDaten|WP=Blob}}
 {{REAutor|Autor.}}"""
             self.title_mock.return_value = "Re:Title"
-            page_mock.return_value.exists.side_effect = [True, False, False]
+            page_mock.return_value.exists.side_effect = [True, False, False, True]
+            page_mock.return_value.isRedirectPage.side_effect = [False, True]
             re_page = RePage(self.page_mock)
             task = DEWPTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
-            compare([("Blub", "Title"), ("Blab", "Title")], task.data)
+            compare([("Blub", "Title"), ("Blab", "Title"), ("Blob", "Title")], task.data)
 
             self.text_mock.return_value = """{{REDaten|WP=Bli}}
 {{REAutor|Autor.}}"""
@@ -387,13 +406,13 @@ class TestDEWPTask(TaskTestCase):
             page_mock.return_value.exists.side_effect = [False]
             re_page = RePage(self.page_mock)
             compare({"success": True, "changed": False}, task.run(re_page))
-            compare([("Blub", "Title"), ("Blab", "Title"), ("Bli", "Title2")], task.data)
+            compare([("Blub", "Title"), ("Blab", "Title"), ("Blob", "Title"), ("Bli", "Title2")], task.data)
 
     def test_build_entries(self):
         task = DEWPTask(None, self.logger)
         task.data = [("One", "First_Lemma"), ("Two", "Second_Lemma")]
-        expect = ["* Wikpedia Artikel: [[wp:One]] verlinkt von [[RE:First_Lemma]] existiert nicht",
-                  "* Wikpedia Artikel: [[wp:Two]] verlinkt von [[RE:Second_Lemma]] existiert nicht"]
+        expect = ["* Wikpedia Artikel: [[w:One]] verlinkt von [[RE:First_Lemma]] existiert nicht",
+                  "* Wikpedia Artikel: [[w:Two]] verlinkt von [[RE:Second_Lemma]] existiert nicht"]
         compare(expect, task._build_entry().split("\n")[-2:])
 
 

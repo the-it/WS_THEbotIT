@@ -152,15 +152,18 @@ class DEWPTask(ERROTask):
             if isinstance(article, Article):
                 link_to_check = article["WIKIPEDIA"].value
                 if link_to_check:
-                    if not pywikibot.Page(self.wp_wiki, link_to_check).exists():
-                        self.data.append((link_to_check, self.re_page.lemma_without_prefix))
+                    page = pywikibot.Page(self.wp_wiki, link_to_check)
+                    if page.exists():
+                        if not page.isRedirectPage():
+                            continue
+                    self.data.append((link_to_check, self.re_page.lemma_without_prefix))
         return True
 
     def _build_entry(self) -> str:
         caption = f"\n\n=={datetime.now():%Y-%m-%d}==\n\n"
         entries = []
         for item in self.data:
-            entries.append(f"* Wikpedia Artikel: [[wp:{item[0]}]] verlinkt von [[RE:{item[1]}]] "
+            entries.append(f"* Wikpedia Artikel: [[w:{item[0]}]] verlinkt von [[RE:{item[1]}]] "
                            f"existiert nicht")
         body = "\n".join(entries)
         return caption + body
