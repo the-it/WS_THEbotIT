@@ -152,8 +152,11 @@ class DEWPTask(ERROTask):
             if isinstance(article, Article):
                 link_to_check = article["WIKIPEDIA"].value
                 if link_to_check:
-                    if not pywikibot.Page(self.wp_wiki, link_to_check).exists():
-                        self.data.append((link_to_check, self.re_page.lemma_without_prefix))
+                    page = pywikibot.Page(self.wp_wiki, link_to_check)
+                    if page.exists():
+                        if not page.isRedirectPage():
+                            continue
+                    self.data.append((link_to_check, self.re_page.lemma_without_prefix))
         return True
 
     def _build_entry(self) -> str:
