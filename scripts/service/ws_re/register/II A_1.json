@@ -13504,7 +13504,7 @@
   {
     "lemma": "Seligenstadt",
     "previous": "Selicius 2",
-    "next": "Selinda",
+    "next": "Σέλινδα",
     "chapters": [
       {
         "start": 1259,
@@ -13514,9 +13514,10 @@
     ]
   },
   {
-    "lemma": "Selinda",
+    "lemma": "Σέλινδα",
     "previous": "Seligenstadt",
     "next": "Seline",
+    "sort_key": "Selinda",
     "chapters": [
       {
         "start": 1260,
@@ -13527,7 +13528,7 @@
   },
   {
     "lemma": "Seline",
-    "previous": "Selinda",
+    "previous": "Σέλινδα",
     "next": "Seliniacus",
     "chapters": [
       {
@@ -13599,8 +13600,9 @@
   },
   {
     "lemma": "Secundus 8a",
-    "previous": "Scottius",
+    "previous": "Secundini",
     "next": "Secundus 8b",
+    "sort_key": "Secundus 08a",
     "chapters": [
       {
         "start": 1264,
@@ -13612,6 +13614,8 @@
   {
     "lemma": "Secundus 8b",
     "previous": "Secundus 8a",
+    "next": "Secundus 19e",
+    "sort_key": "Secundus 08b",
     "chapters": [
       {
         "start": 1264,

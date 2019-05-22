@@ -97,7 +97,7 @@
   {
     "lemma": "Ius sacrum",
     "previous": "Ius respondendi",
-    "next": "Ius scriptum und non scriptum",
+    "next": "Ius scriptum",
     "chapters": [
       {
         "start": 1292,
@@ -107,20 +107,13 @@
     ]
   },
   {
-    "lemma": "Ius scriptum und non scriptum",
+    "lemma": "Ius scriptum",
     "previous": "Ius sacrum",
-    "next": "Ius singulare",
-    "chapters": [
-      {
-        "start": 1300,
-        "end": 1301,
-        "author": "Leonhard"
-      }
-    ]
+    "next": "Ius singulare"
   },
   {
     "lemma": "Ius singulare",
-    "previous": "Ius scriptum und non scriptum",
+    "previous": "Ius scriptum",
     "next": "Ius strictum",
     "redirect": true,
     "chapters": [
@@ -156,7 +149,7 @@
   },
   {
     "lemma": "Iusciacus",
-    "previous": "Ius suffragii",
+    "previous": "Ius tigni immittendi",
     "next": "Iussiacus",
     "chapters": [
       {
@@ -204,7 +197,7 @@
   },
   {
     "lemma": "Iusta 1",
-    "previous": "Ius tigni immittendi",
+    "previous": "Iussum",
     "next": "Iusta 2",
     "chapters": [
       {
@@ -4719,7 +4712,8 @@
   {
     "lemma": "Kalchas",
     "previous": "Kalbis",
-    "next": "Kalchedon 1",
+    "next": "Kalchedon",
+    "wp_link": "w:de:Kalchas",
     "chapters": [
       {
         "start": 1552,

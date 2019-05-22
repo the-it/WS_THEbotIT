@@ -1720,6 +1720,7 @@
     "lemma": "Alexis 3",
     "previous": "Alexis 2",
     "next": "Alexis 4",
+    "sort_key": "Alexis 03",
     "chapters": [
       {
         "start": 1468,
@@ -1732,6 +1733,7 @@
     "lemma": "Alexis 4",
     "previous": "Alexis 3",
     "next": "Alexis 5",
+    "sort_key": "Alexis 04",
     "chapters": [
       {
         "start": 1468,
@@ -1769,6 +1771,7 @@
     "lemma": "Alexis 7",
     "previous": "Alexis 6",
     "next": "Alexis 8",
+    "sort_key": "Alexis 07",
     "chapters": [
       {
         "start": 1468,
@@ -1781,6 +1784,7 @@
     "lemma": "Alexis 8",
     "previous": "Alexis 7",
     "next": "Alexis 9",
+    "sort_key": "Alexis 08",
     "chapters": [
       {
         "start": 1468,
@@ -2049,6 +2053,7 @@
     "lemma": "Alfius 1",
     "previous": "Alfinus",
     "next": "Alfius 2",
+    "sort_key": "Alfius 01",
     "chapters": [
       {
         "start": 1475,
@@ -2061,6 +2066,7 @@
     "lemma": "Alfius 2",
     "previous": "Alfius 1",
     "next": "Alfius 3",
+    "sort_key": "Alfius 02",
     "chapters": [
       {
         "start": 1475,
@@ -2073,6 +2079,7 @@
     "lemma": "Alfius 3",
     "previous": "Alfius 2",
     "next": "Alfius 4",
+    "sort_key": "Alfius 03",
     "chapters": [
       {
         "start": 1475,
@@ -2085,6 +2092,7 @@
     "lemma": "Alfius 4",
     "previous": "Alfius 3",
     "next": "Alfius 5",
+    "sort_key": "Alfius 04",
     "chapters": [
       {
         "start": 1475,
@@ -2121,6 +2129,7 @@
     "lemma": "Alfius 7",
     "previous": "Alfius 6",
     "next": "Alfius 8",
+    "sort_key": "Alfius 07",
     "chapters": [
       {
         "start": 1475,
@@ -2133,6 +2142,7 @@
     "lemma": "Alfius 8",
     "previous": "Alfius 7",
     "next": "Alfius 9",
+    "sort_key": "Alfius 08",
     "chapters": [
       {
         "start": 1475,
@@ -2230,6 +2240,7 @@
     "lemma": "Alhiahenae",
     "previous": "Algiza",
     "next": "Alia 1",
+    "wp_link": "w:de:Matronen",
     "chapters": [
       {
         "start": 1476,
@@ -2240,7 +2251,7 @@
   },
   {
     "lemma": "Alia 1",
-    "previous": "Alhiahenae",
+    "previous": "Algiza",
     "next": "Alia 2",
     "chapters": [
       {
@@ -2386,6 +2397,7 @@
     "lemma": "Alica 2",
     "previous": "Alica 1",
     "next": "Alicanum",
+    "wp_link": "w:de:Grütze",
     "chapters": [
       {
         "start": 1478,
@@ -2588,7 +2600,7 @@
   {
     "lemma": "Alilat",
     "previous": "Alilaioi",
-    "next": "Alima",
+    "next": "Ἄλιμα",
     "chapters": [
       {
         "start": 1483,
@@ -2598,9 +2610,10 @@
     ]
   },
   {
-    "lemma": "Alima",
+    "lemma": "Ἄλιμα",
     "previous": "Alilat",
     "next": "Alimala (?)",
+    "sort_key": "Alima",
     "chapters": [
       {
         "start": 1483,
@@ -2611,7 +2624,7 @@
   },
   {
     "lemma": "Alimala (?)",
-    "previous": "Alima",
+    "previous": "Ἄλιμα",
     "next": "Alimenta 1",
     "chapters": [
       {
@@ -2685,6 +2698,7 @@
     "lemma": "Alinda",
     "previous": "Alincum",
     "next": "Alingavia",
+    "wp_link": "w:de:Alinda (Karien)",
     "chapters": [
       {
         "start": 1489,
@@ -2697,6 +2711,7 @@
     "lemma": "Alingavia",
     "previous": "Alinda",
     "next": "Alingo",
+    "wp_link": "w:de:Langeais",
     "chapters": [
       {
         "start": 1489,
@@ -2792,7 +2807,7 @@
   {
     "lemma": "Alipheros",
     "previous": "Aliphera",
-    "next": "Alipilus",
+    "next": "Alipilos",
     "chapters": [
       {
         "start": 1494,
@@ -2805,6 +2820,7 @@
     "lemma": "Alipilus",
     "previous": "Alipheros",
     "next": "Alipota",
+    "wp_link": "w:de:Depilation",
     "chapters": [
       {
         "start": 1494,
@@ -2925,6 +2941,7 @@
     "lemma": "Alisontia",
     "previous": "Aliso 2",
     "next": "Alista",
+    "wp_link": "w:de:Elzbach",
     "chapters": [
       {
         "start": 1497,
@@ -2937,6 +2954,7 @@
     "lemma": "Alista",
     "previous": "Alisontia",
     "next": "Alistra",
+    "wp_link": "w:de:Porto-Vecchio",
     "chapters": [
       {
         "start": 1497,
@@ -3030,7 +3048,7 @@
   },
   {
     "lemma": "Aliula",
-    "previous": "Alitherses",
+    "previous": "Alita",
     "next": "Alkainetos",
     "chapters": [
       {
@@ -3058,6 +3076,8 @@
     "lemma": "Alkaios 1",
     "previous": "Alkainetos",
     "next": "Alkaios 2",
+    "sort_key": "Alkaios01",
+    "wp_link": "w:de:Alkaios (Tiryns)",
     "chapters": [
       {
         "start": 1498,
@@ -3070,6 +3090,8 @@
     "lemma": "Alkaios 2",
     "previous": "Alkaios 1",
     "next": "Alkaios 3",
+    "sort_key": "Alkaios02",
+    "wp_link": "w:de:Herakles",
     "chapters": [
       {
         "start": 1498,
@@ -3118,6 +3140,8 @@
     "lemma": "Alkaios 6",
     "previous": "Alkaios 5",
     "next": "Alkaios 7",
+    "sort_key": "Alkaios06",
+    "wp_link": "w:de:Alkaios",
     "chapters": [
       {
         "start": 1498,
@@ -9842,6 +9866,7 @@
     "lemma": "Amathe 2",
     "previous": "Amathe 1",
     "next": "Amathe 3",
+    "wp_link": "w:de:Hama",
     "chapters": [
       {
         "start": 1751,
@@ -12995,6 +13020,7 @@
     "lemma": "Ammaus 1",
     "previous": "Ammathus",
     "next": "Ammaus 2",
+    "wp_link": "w:de:Emmaus Nikopolis",
     "chapters": [
       {
         "start": 1843,
@@ -13007,6 +13033,7 @@
     "lemma": "Ammaus 2",
     "previous": "Ammaus 1",
     "next": "Ammaus 3",
+    "wp_link": "w:de:Emmaus",
     "chapters": [
       {
         "start": 1843,
@@ -13030,7 +13057,8 @@
   {
     "lemma": "Ammen",
     "previous": "Ammaus 3",
-    "next": "Ammenemes 1",
+    "next": "Ammenemes",
+    "wp_link": "w:de:Amme",
     "chapters": [
       {
         "start": 1844,
@@ -15549,6 +15577,7 @@
     "lemma": "Amphilochius 3",
     "previous": "Amphilochius 2",
     "next": "Amphilochius 4",
+    "wp_link": "w:de:Amphilochius von Ikonium",
     "chapters": [
       {
         "start": 1937,
@@ -40562,7 +40591,7 @@
   {
     "lemma": "Antitheos 2",
     "previous": "Antitheos 1",
-    "next": "Antitimesis",
+    "next": "Ἀντιτίμησις",
     "chapters": [
       {
         "start": 2561,
@@ -40572,9 +40601,10 @@
     ]
   },
   {
-    "lemma": "Antitimesis",
+    "lemma": "Ἀντιτίμησις",
     "previous": "Antitheos 2",
     "next": "Antivestaeum",
+    "sort_key": "Antitimesis",
     "chapters": [
       {
         "start": 2561,
@@ -40585,7 +40615,7 @@
   },
   {
     "lemma": "Antivestaeum",
-    "previous": "Antitimesis",
+    "previous": "Ἀντιτίμησις",
     "next": "Antium 1",
     "chapters": [
       {
@@ -40623,6 +40653,7 @@
     "lemma": "Antius 1",
     "previous": "Antium 2",
     "next": "Antius 2",
+    "sort_key": "Antius 01",
     "chapters": [
       {
         "start": 2563,
@@ -40659,6 +40690,7 @@
     "lemma": "Antius 4",
     "previous": "Antius 3",
     "next": "Antius 5",
+    "sort_key": "Antius 04",
     "chapters": [
       {
         "start": 2563,
@@ -40683,6 +40715,7 @@
     "lemma": "Antius 6",
     "previous": "Antius 5",
     "next": "Antius 7",
+    "sort_key": "Antius 06",
     "chapters": [
       {
         "start": 2564,
@@ -40790,7 +40823,7 @@
   {
     "lemma": "Antius 15",
     "previous": "Antius 14",
-    "next": "Antlia",
+    "next": "Ἀντλία",
     "chapters": [
       {
         "start": 2565,
@@ -40800,9 +40833,10 @@
     ]
   },
   {
-    "lemma": "Antlia",
+    "lemma": "Ἀντλία",
     "previous": "Antius 15",
     "next": "Antobroges",
+    "sort_key": "Antlia",
     "chapters": [
       {
         "start": 2565,
@@ -40813,7 +40847,7 @@
   },
   {
     "lemma": "Antobroges",
-    "previous": "Antlia",
+    "previous": "Ἀντλία",
     "next": "Antocidi",
     "chapters": [
       {
@@ -40837,7 +40871,7 @@
   {
     "lemma": "Antodike",
     "previous": "Antocidi",
-    "next": "Antoikoi",
+    "next": "Ἄντοικοι",
     "chapters": [
       {
         "start": 2566,
@@ -40846,9 +40880,9 @@
     ]
   },
   {
-    "lemma": "Antoikoi",
+    "lemma": "Ἄντοικοι",
     "previous": "Antodike",
-    "next": "Antomosia",
+    "next": "Ἀντωμοσία",
     "chapters": [
       {
         "start": 2566,
@@ -40857,9 +40891,10 @@
     ]
   },
   {
-    "lemma": "Antomosia",
-    "previous": "Antoikoi",
+    "lemma": "Ἀντωμοσία",
+    "previous": "Ἄντοικοι",
     "next": "Anton",
+    "sort_key": "Antomosia",
     "chapters": [
       {
         "start": 2566,
@@ -40870,7 +40905,7 @@
   },
   {
     "lemma": "Anton",
-    "previous": "Antomosia",
+    "previous": "Ἀντωμοσία",
     "next": "Antona",
     "chapters": [
       {
@@ -40908,6 +40943,7 @@
     "lemma": "Antonia",
     "previous": "Antoneia",
     "next": "Antonia castra",
+    "wp_link": "w:de:Burg Antonia",
     "chapters": [
       {
         "start": 2566,
@@ -40980,6 +41016,7 @@
     "lemma": "Antoninianus 2",
     "previous": "Antoninianus 1",
     "next": "Antoninopolis",
+    "wp_link": "w:de:Antoninianus",
     "chapters": [
       {
         "start": 2568,
@@ -41004,6 +41041,8 @@
     "lemma": "Antoninus 1",
     "previous": "Antoninopolis",
     "next": "Antoninus 2",
+    "sort_key": "Antoninus 01",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41040,6 +41079,8 @@
     "lemma": "Antoninus 4",
     "previous": "Antoninus 3",
     "next": "Antoninus 5",
+    "sort_key": "Antoninus 04",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41052,6 +41093,8 @@
     "lemma": "Antoninus 5",
     "previous": "Antoninus 4",
     "next": "Antoninus 6",
+    "sort_key": "Antoninus 05",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41064,6 +41107,8 @@
     "lemma": "Antoninus 6",
     "previous": "Antoninus 5",
     "next": "Antoninus 7",
+    "sort_key": "Antoninus 06",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41076,6 +41121,8 @@
     "lemma": "Antoninus 7",
     "previous": "Antoninus 6",
     "next": "Antoninus 8",
+    "sort_key": "Antoninus 07",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41088,6 +41135,8 @@
     "lemma": "Antoninus 8",
     "previous": "Antoninus 7",
     "next": "Antoninus 9",
+    "sort_key": "Antoninus 08",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41100,6 +41149,8 @@
     "lemma": "Antoninus 9",
     "previous": "Antoninus 8",
     "next": "Antoninus 10",
+    "sort_key": "Antoninus 09",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41124,6 +41175,7 @@
     "lemma": "Antoninus 11",
     "previous": "Antoninus 10",
     "next": "Antoninus 12",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -41136,6 +41188,7 @@
     "lemma": "Antoninus 12",
     "previous": "Antoninus 11",
     "next": "Antoninus 13",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2572,
@@ -41148,6 +41201,7 @@
     "lemma": "Antoninus 13",
     "previous": "Antoninus 12",
     "next": "Antoninus 14",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2572,
@@ -41172,6 +41226,7 @@
     "lemma": "Antoninus 15",
     "previous": "Antoninus 14",
     "next": "Antoninus 16",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2572,
@@ -41184,6 +41239,7 @@
     "lemma": "Antoninus 16",
     "previous": "Antoninus 15",
     "next": "Antoninus 17",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2572,
@@ -41196,6 +41252,7 @@
     "lemma": "Antoninus 17",
     "previous": "Antoninus 16",
     "next": "Antoninus 18",
+    "wp_link": "w:de:Antoninus Liberalis",
     "chapters": [
       {
         "start": 2572,
@@ -41208,6 +41265,7 @@
     "lemma": "Antoninus 18",
     "previous": "Antoninus 17",
     "next": "Antoninus 19",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2573,
@@ -41220,6 +41278,7 @@
     "lemma": "Antoninus 19",
     "previous": "Antoninus 18",
     "next": "Antoninus 20",
+    "wp_link": "w:de:Antonina (Byzanz)",
     "chapters": [
       {
         "start": 2573,
@@ -41232,6 +41291,7 @@
     "lemma": "Antoninus 20",
     "previous": "Antoninus 19",
     "next": "Antoniopolis 1",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2574,
@@ -41268,6 +41328,7 @@
     "lemma": "Antonius",
     "previous": "Antoniopolis 2",
     "next": "Antonius 1",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2575,
@@ -41280,6 +41341,8 @@
     "lemma": "Antonius 1",
     "previous": "Antonius",
     "next": "Antonius 2",
+    "sort_key": "Antonius 001",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2575,
@@ -41292,6 +41355,8 @@
     "lemma": "Antonius 2",
     "previous": "Antonius 1",
     "next": "Antonius 3",
+    "sort_key": "Antonius 002",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2575,
@@ -41304,6 +41369,8 @@
     "lemma": "Antonius 3",
     "previous": "Antonius 2",
     "next": "Antonius 4",
+    "sort_key": "Antonius 003",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2575,
@@ -41316,6 +41383,8 @@
     "lemma": "Antonius 4",
     "previous": "Antonius 3",
     "next": "Antonius 5",
+    "sort_key": "Antonius 004",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2575,
@@ -41328,6 +41397,8 @@
     "lemma": "Antonius 5",
     "previous": "Antonius 4",
     "next": "Antonius 6",
+    "sort_key": "Antonius 005",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2575,
@@ -41340,6 +41411,8 @@
     "lemma": "Antonius 6",
     "previous": "Antonius 5",
     "next": "Antonius 7",
+    "sort_key": "Antonius 006",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41352,6 +41425,8 @@
     "lemma": "Antonius 7",
     "previous": "Antonius 6",
     "next": "Antonius 8",
+    "sort_key": "Antonius 007",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41364,6 +41439,8 @@
     "lemma": "Antonius 8",
     "previous": "Antonius 7",
     "next": "Antonius 9",
+    "sort_key": "Antonius 008",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41376,6 +41453,8 @@
     "lemma": "Antonius 9",
     "previous": "Antonius 8",
     "next": "Antonius 10",
+    "sort_key": "Antonius 009",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41388,6 +41467,8 @@
     "lemma": "Antonius 10",
     "previous": "Antonius 9",
     "next": "Antonius 11",
+    "sort_key": "Antonius 010",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41400,6 +41481,8 @@
     "lemma": "Antonius 11",
     "previous": "Antonius 10",
     "next": "Antonius 12",
+    "sort_key": "Antonius 011",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41412,6 +41495,8 @@
     "lemma": "Antonius 12",
     "previous": "Antonius 11",
     "next": "Antonius 13",
+    "sort_key": "Antonius 012",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41424,6 +41509,8 @@
     "lemma": "Antonius 13",
     "previous": "Antonius 12",
     "next": "Antonius 14",
+    "sort_key": "Antonius 013",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41436,6 +41523,8 @@
     "lemma": "Antonius 14",
     "previous": "Antonius 13",
     "next": "Antonius 15",
+    "sort_key": "Antonius 014",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41448,6 +41537,8 @@
     "lemma": "Antonius 15",
     "previous": "Antonius 14",
     "next": "Antonius 16",
+    "sort_key": "Antonius 015",
+    "wp_link": "w:de:Antonius",
     "chapters": [
       {
         "start": 2576,
@@ -41460,6 +41551,9 @@
     "lemma": "Antonius 16",
     "previous": "Antonius 15",
     "next": "Antonius 17",
+    "sort_key": "Antonius 016",
+    "wp_link": "w:de:Antonius der Große",
+    "ws_link": "s:de:Antonius der Große",
     "chapters": [
       {
         "start": 2576,
@@ -41496,6 +41590,8 @@
     "lemma": "Antonius 19",
     "previous": "Antonius 18",
     "next": "Antonius 20",
+    "sort_key": "Antonius 019",
+    "wp_link": "w:de:Gaius Antonius Hybrida",
     "chapters": [
       {
         "start": 2577,

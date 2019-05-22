@@ -1,7 +1,7 @@
 [
   {
     "lemma": "Katoikoi",
-    "next": "Katonakophoroi",
+    "next": "Κατωνακοφόροι",
     "chapters": [
       {
         "start": 1,
@@ -11,9 +11,9 @@
     ]
   },
   {
-    "lemma": "Katonakophoroi",
+    "lemma": "Κατωνακοφόροι",
     "previous": "Katoikoi",
-    "next": "Katoptai",
+    "next": "Κατόπται",
     "chapters": [
       {
         "start": 26,
@@ -23,9 +23,10 @@
     ]
   },
   {
-    "lemma": "Katoptai",
-    "previous": "Katonakophoroi",
+    "lemma": "Κατόπται",
+    "previous": "Κατωνακοφόροι",
     "next": "Katopterios",
+    "sort_key": "Katoptai",
     "chapters": [
       {
         "start": 26,
@@ -36,7 +37,7 @@
   },
   {
     "lemma": "Katopterios",
-    "previous": "Katoptai",
+    "previous": "Κατόπται",
     "next": "Katoptis",
     "chapters": [
       {
@@ -133,7 +134,7 @@
   {
     "lemma": "Katreus 2",
     "previous": "Katreus 1",
-    "next": "Kattapheteros",
+    "next": "Κατταφέτερος",
     "chapters": [
       {
         "start": 46,
@@ -143,7 +144,7 @@
     ]
   },
   {
-    "lemma": "Kattapheteros",
+    "lemma": "Κατταφέτερος",
     "previous": "Katreus 2",
     "next": "Kattarekos",
     "chapters": [
@@ -156,7 +157,7 @@
   },
   {
     "lemma": "Kattarekos",
-    "previous": "Kattapheteros",
+    "previous": "Κατταφέτερος",
     "next": "Kattaros",
     "chapters": [
       {
@@ -217,7 +218,9 @@
   {
     "lemma": "Katze",
     "previous": "Katwijk aan Zee",
-    "next": "Kaualenon katoikia",
+    "next": "Καυαληνῶν κατοικία",
+    "wp_link": "w:de:Hauskatze",
+    "ws_link": "s:de:Katzen",
     "chapters": [
       {
         "start": 52,
@@ -254,6 +257,7 @@
     "lemma": "Kauda",
     "previous": "Kauchabenoi",
     "next": "Kaudo, Kaudos",
+    "wp_link": "w:de:Gvados",
     "chapters": [
       {
         "start": 57,
@@ -265,6 +269,7 @@
     "lemma": "Kaudo, Kaudos",
     "previous": "Kauda",
     "next": "Kaue",
+    "wp_link": "w:de:Gvados",
     "chapters": [
       {
         "start": 57,

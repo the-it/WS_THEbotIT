@@ -88,7 +88,7 @@
   {
     "lemma": "Hyakinthis",
     "previous": "Hyakinthios 2",
-    "next": "Hyakinthis hodos",
+    "next": "Ὑακινθὶς ὁδός",
     "chapters": [
       {
         "start": 4,
@@ -147,7 +147,7 @@
   },
   {
     "lemma": "Hyalea",
-    "previous": "Hyakinthos 3",
+    "previous": "Ὑάκινθος 3",
     "next": "Hyameia",
     "chapters": [
       {
@@ -282,6 +282,7 @@
     "lemma": "Hyanthidas",
     "previous": "Hyantheia",
     "next": "Hyantia",
+    "wp_link": "w:de:Hyanthidas",
     "chapters": [
       {
         "start": 22,
@@ -763,7 +764,7 @@
   {
     "lemma": "Hydatius 2",
     "previous": "Hydatius 1",
-    "next": "Hyde 1",
+    "next": "Hyde",
     "chapters": [
       {
         "start": 40,
@@ -773,9 +774,15 @@
     ]
   },
   {
-    "lemma": "Hyde 1",
+    "lemma": "Hyde",
     "previous": "Hydatius 2",
+    "next": "Hyde 1"
+  },
+  {
+    "lemma": "Hyde 1",
+    "previous": "Hyde",
     "next": "Hyde 2",
+    "wp_link": "w:de:Sardes",
     "chapters": [
       {
         "start": 43,
