@@ -315,7 +315,8 @@ class Lemma(Mapping):
         self._volume = volume
         self._chapters = []
         self._sort_key = ""
-        self._init_chapters()
+        if "chapters" in lemma_dict and lemma_dict["chapters"]:
+            self._init_chapters()
         self._set_sort_key()
 
     def _init_chapters(self):
@@ -407,11 +408,10 @@ class Lemma(Mapping):
         if "lemma" not in self.keys() \
                 or "chapters" not in self.keys():
             return False
-        if not self._chapters:
-            return False
-        for chapter in self._chapters:
-            if not chapter.is_valid():
-                return False
+        if self._chapters:
+            for chapter in self._chapters:
+                if not chapter.is_valid():
+                    return False
         return True
 
     def get_table_row(self, print_volume: bool = False) -> str:
@@ -433,7 +433,8 @@ class Lemma(Mapping):
             row_string.append(f"{self._get_year_format(year)}|{year}")
             row_string.append("-")
         # remove the last entry again because the row separator only needed between rows
-        row_string.pop(-1)
+        if row_string[-1] == "-":
+            row_string.pop(-1)
         return "\n|".join(row_string)
 
     def get_link(self) -> str:
@@ -618,16 +619,39 @@ class VolumeRegister(Register):
     def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List):
         sort_key = self.normalize_sort_key(lemma_dict)
 
-        if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
-            lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
-            lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
-            self.try_update_next_and_previous(lemma_dict, lemma_to_update)
-        elif self.get_lemma_by_sort_key(sort_key):
-            self._update_by_sortkey(lemma_dict, remove_items)
+        try:
+            if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
+                lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
+                lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
+                self.try_update_next_and_previous(lemma_dict, lemma_to_update)
+            elif self.get_lemma_by_sort_key(sort_key):
+                self._update_by_sortkey(lemma_dict, remove_items)
+            elif self.get_lemma_by_name(lemma_dict["previous"]) and self.get_lemma_by_name(lemma_dict["next"]):
+                self._update_pre_and_post_exists(lemma_dict)
+            else:
+                raise RegisterException(f"The update of the register {self.volume.name} "
+                                        f"with the dict {lemma_dict} is not possible. "
+                                        f"No strategy available")
+        except KeyError:
+            raise RegisterException(f"The update of the register {self.volume.name} "
+                                    f"with the dict {lemma_dict} is not possible. "
+                                    f"Key Error in Dictionary")
+
+    def _update_pre_and_post_exists(self, lemma_dict):
+        pre_lemma = self.get_lemma_by_name(lemma_dict["previous"])
+        post_lemma = self.get_lemma_by_name(lemma_dict["next"])
+        post_idx = self.get_index_of_lemma(post_lemma)
+        pre_idx = self.get_index_of_lemma(pre_lemma)
+        if post_idx - pre_idx == 1:
+            self.lemmas.insert(post_idx, Lemma(lemma_dict, self.volume, self._authors))
+        elif post_idx - pre_idx == 2:
+            self.lemmas[pre_idx + 1] = Lemma(lemma_dict, self.volume, self._authors)
         else:
             raise RegisterException(f"The update of the register {self.volume.name} "
                                     f"with the dict {lemma_dict} is not possible. "
-                                    f"No strategy available")
+                                    f"Diff between previous and next aren't 1 or 2")
+        pre_lemma.update_lemma_dict({"next": lemma_dict["lemma"]})
+        post_lemma.update_lemma_dict({"previous": lemma_dict["lemma"]})
 
     def try_update_next_and_previous(self, new_lemma_dict: Dict[str, Any], lemma_to_update: Lemma):
         idx = self.get_index_of_lemma(lemma_to_update)
