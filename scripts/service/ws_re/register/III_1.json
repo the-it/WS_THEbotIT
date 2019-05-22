@@ -2,6 +2,7 @@
   {
     "lemma": "Barbarus 1",
     "next": "Barbarus 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1,
@@ -3024,7 +3025,7 @@
   {
     "lemma": "Basiliensium civitas",
     "previous": "Basilidia",
-    "next": "Basilika Amyntu",
+    "next": "Βασιλικὰ Ἀμύντου",
     "chapters": [
       {
         "start": 97,
@@ -3033,9 +3034,10 @@
     ]
   },
   {
-    "lemma": "Basilika Amyntu",
+    "lemma": "Βασιλικὰ Ἀμύντου",
     "previous": "Basiliensium civitas",
     "next": "Βασιλικοὶ παῖδες",
+    "sort_key": "Basilika Amyntu",
     "chapters": [
       {
         "start": 97,
@@ -3046,7 +3048,7 @@
   },
   {
     "lemma": "Βασιλικοὶ παῖδες",
-    "previous": "Basilika Amyntu",
+    "previous": "Βασιλικὰ Ἀμύντου",
     "next": "Basilikos 1",
     "chapters": [
       {
@@ -3265,6 +3267,7 @@
     "lemma": "Basilos",
     "previous": "Basilium",
     "next": "Basilus",
+    "wp_link": "w:de:Hemithea (Schwester der Parthenos)",
     "chapters": [
       {
         "start": 102,
@@ -3793,6 +3796,7 @@
     "lemma": "Bassus 3",
     "previous": "Bassus 2",
     "next": "Bassus 4",
+    "sort_key": "Bassus 03",
     "chapters": [
       {
         "start": 107,
@@ -11210,6 +11214,7 @@
     "lemma": "Berossos 4",
     "previous": "Berossos 3",
     "next": "Berothe",
+    "wp_link": "w:de:Berossos",
     "chapters": [
       {
         "start": 309,
@@ -13308,7 +13313,7 @@
   {
     "lemma": "Betzas",
     "previous": "Betylua",
-    "next": "Bewaffnung",
+    "next": "Beuca",
     "chapters": [
       {
         "start": 375,
@@ -13318,20 +13323,8 @@
     ]
   },
   {
-    "lemma": "Bewaffnung",
-    "previous": "Betzas",
-    "next": "Beuca",
-    "chapters": [
-      {
-        "start": 375,
-        "end": 378,
-        "author": "Domaszewski"
-      }
-    ]
-  },
-  {
     "lemma": "Beuca",
-    "previous": "Bewaffnung",
+    "previous": "Betzas",
     "next": "Beudos",
     "chapters": [
       {
@@ -13392,7 +13385,7 @@
   {
     "lemma": "Beuzavaticum",
     "previous": "Beurtina",
-    "next": "Bexum",
+    "next": "Bewaffnung",
     "chapters": [
       {
         "start": 375,
@@ -13402,8 +13395,20 @@
     ]
   },
   {
-    "lemma": "Bexum",
+    "lemma": "Bewaffnung",
     "previous": "Beuzavaticum",
+    "next": "Bexum",
+    "chapters": [
+      {
+        "start": 375,
+        "end": 378,
+        "author": "Domaszewski"
+      }
+    ]
+  },
+  {
+    "lemma": "Bexum",
+    "previous": "Bewaffnung",
     "next": "Bezabde",
     "chapters": [
       {

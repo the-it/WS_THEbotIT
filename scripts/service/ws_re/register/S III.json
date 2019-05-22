@@ -90,7 +90,7 @@
   {
     "lemma": "Abdere",
     "previous": "abecedarius, -a, -um",
-    "next": "Absalom 1",
+
     "chapters": [
       {
         "start": 14,
@@ -101,7 +101,7 @@
   },
   {
     "lemma": "Absalom 1",
-    "previous": "Abdere",
+
     "next": "Absalom 2",
     "chapters": [
       {
@@ -379,7 +379,6 @@
   {
     "lemma": "Adiuvense",
     "previous": "Adiutex",
-    "next": "Adour",
     "chapters": [
       {
         "start": 21,
@@ -390,8 +389,9 @@
   },
   {
     "lemma": "Adour",
-    "previous": "Adiuvense",
-    "next": "Ad Iuvense",
+
+    "next": "Adrabaecampi",
+    "wp_link": "w:de:Adour",
     "chapters": [
       {
         "start": 21,
@@ -401,20 +401,19 @@
     ]
   },
   {
-    "lemma": "Ad Iuvense",
+    "lemma": "Adrabaecampi",
     "previous": "Adour",
     "next": "Adria 2",
     "chapters": [
       {
         "start": 21,
-        "end": 21,
-        "author": "Keune"
+        "end": 21
       }
     ]
   },
   {
     "lemma": "Adria 2",
-    "previous": "Ad Iuvense",
+    "previous": "Adrabaecampi",
     "next": "Adventus a",
     "wp_link": "w:de:Adria (Venetien)",
     "chapters": [
@@ -489,7 +488,6 @@
   {
     "lemma": "Aemilius 63c",
     "previous": "Aemilius 63b",
-    "next": "Aenus 2",
     "sort_key": "Aemilius 063c",
     "chapters": [
       {
@@ -501,8 +499,7 @@
   },
   {
     "lemma": "Aenus 2",
-    "previous": "Aemilius 63c",
-    "next": "Aes excurrens",
+
     "chapters": [
       {
         "start": 24,
@@ -513,7 +510,7 @@
   },
   {
     "lemma": "Aes excurrens",
-    "previous": "Aenus 2",
+
     "next": "Aesis 2",
     "wp_link": "w:de:Römische Währung",
     "chapters": [
@@ -5828,7 +5825,7 @@
   {
     "lemma": "Augustinus 3",
     "previous": "Augustalis",
-    "next": "Augustobriga",
+
     "chapters": [
       {
         "start": 185,
@@ -6062,8 +6059,9 @@
   },
   {
     "lemma": "Autun",
-    "previous": "Autodoros",
+
     "next": "Auvergne",
+    "wp_link": "w:de:Autun",
     "chapters": [
       {
         "start": 191,
@@ -6562,8 +6560,9 @@
   },
   {
     "lemma": "Bayeux",
-    "previous": "Bavai, Bavay",
-    "next": "Bdekyra",
+
+
+    "wp_link": "w:de:Bayeux",
     "chapters": [
       {
         "start": 201,
@@ -6930,6 +6929,7 @@
     "lemma": "Beuvray",
     "previous": "Bevagna",
     "next": "Béziers",
+    "wp_link": "w:de:Bibracte",
     "chapters": [
       {
         "start": 205,
@@ -7821,6 +7821,7 @@
     "lemma": "Buda",
     "previous": "Buconica",
     "next": "Bürgel",
+    "wp_link": "w:de:Buda",
     "chapters": [
       {
         "start": 219,

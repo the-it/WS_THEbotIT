@@ -1358,7 +1358,7 @@
   {
     "lemma": "Ad Arvalla",
     "previous": "Arvales fratres",
-    "next": "Arualtes",
+    "next": "Arvaltes",
     "chapters": [
       {
         "start": 1486,
@@ -1368,7 +1368,7 @@
     ]
   },
   {
-    "lemma": "Arualtes",
+    "lemma": "Arvaltes",
     "previous": "Ad Arvalla",
     "next": "Arvandus",
     "chapters": [
@@ -1381,7 +1381,7 @@
   },
   {
     "lemma": "Arvandus",
-    "previous": "Arualtes",
+    "previous": "Arvaltes",
     "next": "Aruarnoi",
     "chapters": [
       {
@@ -3396,7 +3396,7 @@
   {
     "lemma": "Asebeia",
     "previous": "Aseates",
-    "next": "Asebeias graphe",
+    "next": "Ἀσεβείας γραφή",
     "chapters": [
       {
         "start": 1529,
@@ -3406,7 +3406,7 @@
     ]
   },
   {
-    "lemma": "Asebeias graphe",
+    "lemma": "Ἀσεβείας γραφή",
     "previous": "Asebeia",
     "next": "Aseis",
     "chapters": [
@@ -3419,7 +3419,7 @@
   },
   {
     "lemma": "Aseis",
-    "previous": "Asebeias graphe",
+    "previous": "Ἀσεβείας γραφή",
     "next": "Asel",
     "chapters": [
       {
@@ -4855,6 +4855,7 @@
     "lemma": "Asinius 31",
     "previous": "Asinius 30",
     "next": "Asinius 32",
+    "wp_link": "w:de:Asinius Quadratus",
     "chapters": [
       {
         "start": 1603,
@@ -8089,7 +8090,7 @@
   {
     "lemma": "Aspetos 2",
     "previous": "Aspetos 1",
-    "next": "Asphaleia",
+    "next": "Ἀσφάλεια",
     "chapters": [
       {
         "start": 1726,
@@ -8099,9 +8100,10 @@
     ]
   },
   {
-    "lemma": "Asphaleia",
+    "lemma": "Ἀσφάλεια",
     "previous": "Aspetos 2",
     "next": "Asphaleios",
+    "sort_key": "Asphaleia",
     "chapters": [
       {
         "start": 1726,
@@ -8112,7 +8114,7 @@
   },
   {
     "lemma": "Asphaleios",
-    "previous": "Asphaleia",
+    "previous": "Ἀσφάλεια",
     "next": "Asphales",
     "chapters": [
       {
@@ -9149,6 +9151,7 @@
     "lemma": "Assos 1",
     "previous": "Assoros 2",
     "next": "Assos 2",
+    "wp_link": "w:de:Assos",
     "chapters": [
       {
         "start": 1748,
@@ -17711,7 +17714,7 @@
   {
     "lemma": "Atimetus",
     "previous": "Atimetos agon",
-    "next": "Atimia",
+    "next": "Ἀτιμία",
     "chapters": [
       {
         "start": 2101,
@@ -17721,9 +17724,11 @@
     ]
   },
   {
-    "lemma": "Atimia",
+    "lemma": "Ἀτιμία",
     "previous": "Atimetus",
     "next": "Atina 1",
+    "sort_key": "Atimia",
+    "wp_link": "w:de:Atimie",
     "chapters": [
       {
         "start": 2101,
@@ -17734,7 +17739,7 @@
   },
   {
     "lemma": "Atina 1",
-    "previous": "Atimia",
+    "previous": "Ἀτιμία",
     "next": "Atina 2",
     "chapters": [
       {
@@ -18108,6 +18113,7 @@
     "lemma": "Atlas 3",
     "previous": "Atlas 2",
     "next": "Atlenta",
+    "wp_link": "w:de:Atlas (Mythologie)",
     "chapters": [
       {
         "start": 2119,
@@ -24121,6 +24127,8 @@
     "lemma": "Augustinus 2",
     "previous": "Augustinus 1",
     "next": "Augusti turris",
+    "wp_link": "w:de:Augustinus von Hippo",
+    "ws_link": "s:de:Augustinus von Hippo",
     "chapters": [
       {
         "start": 2363,
@@ -24158,6 +24166,7 @@
     "lemma": "Augusti vicus 2",
     "previous": "Augusti vicus 1",
     "next": "Augusti vicus 3",
+    "sort_key": "Augustivicus 2",
     "chapters": [
       {
         "start": 2367,
@@ -35787,6 +35796,7 @@
     "lemma": "Bacchanal",
     "previous": "Baccavates",
     "next": "Bacchaton",
+    "wp_link": "w:de:Bacchanalien",
     "chapters": [
       {
         "start": 2721,
@@ -37322,6 +37332,8 @@
     "lemma": "Bär",
     "previous": "Baenochaemae",
     "next": "Bärenklau",
+    "sort_key": "Baer",
+    "wp_link": "w:de:Bären",
     "chapters": [
       {
         "start": 2759,
@@ -40702,7 +40714,7 @@
   {
     "lemma": "Ballesina",
     "previous": "Ballene",
-    "next": "Balletys",
+    "next": "Βαλλητύς",
     "chapters": [
       {
         "start": 2830,
@@ -40712,7 +40724,7 @@
     ]
   },
   {
-    "lemma": "Balletys",
+    "lemma": "Βαλλητύς",
     "previous": "Ballesina",
     "next": "Ballista 1",
     "chapters": [
@@ -40725,7 +40737,7 @@
   },
   {
     "lemma": "Ballista 1",
-    "previous": "Balletys",
+    "previous": "Βαλλητύς",
     "next": "Ballista 2",
     "chapters": [
       {
@@ -40739,6 +40751,7 @@
     "lemma": "Ballista 2",
     "previous": "Ballista 1",
     "next": "Ballista 3",
+    "wp_link": "w:de:Ballista",
     "chapters": [
       {
         "start": 2831,
@@ -40764,6 +40777,7 @@
     "lemma": "Ballistarii",
     "previous": "Ballista 3",
     "next": "Ballomarius",
+    "sort_key": "Balliste",
     "chapters": [
       {
         "start": 2831,
@@ -41004,6 +41018,7 @@
     "lemma": "Balteus 1",
     "previous": "Balte",
     "next": "Balteus 2",
+    "wp_link": "w:de:Cinctorium",
     "chapters": [
       {
         "start": 2841,

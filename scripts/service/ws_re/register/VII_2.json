@@ -10778,6 +10778,7 @@
     "lemma": "Hannibal 4",
     "previous": "Hannibal 3",
     "next": "Hannibal 5",
+    "sort_key": "Hannibal 04",
     "chapters": [
       {
         "start": 2322,
@@ -10938,6 +10939,7 @@
     "lemma": "Hanno 1",
     "previous": "Hannibalis castra",
     "next": "Hanno 2",
+    "sort_key": "Hanno 01",
     "chapters": [
       {
         "start": 2353,
@@ -11275,7 +11277,7 @@
   {
     "lemma": "Haphe",
     "previous": "Haos",
-    "next": "Har...",
+    "next": "Har..",
     "redirect": true,
     "chapters": [
       {
@@ -11285,7 +11287,7 @@
     ]
   },
   {
-    "lemma": "Har...",
+    "lemma": "Har..",
     "previous": "Haphe",
     "next": "Hara",
     "chapters": [
@@ -11298,7 +11300,7 @@
   },
   {
     "lemma": "Hara",
-    "previous": "Har...",
+    "previous": "Har..",
     "next": "Harac",
     "chapters": [
       {
@@ -12803,6 +12805,7 @@
     "lemma": "Hasmonaeer",
     "previous": "Hasmon",
     "next": "Hassis",
+    "wp_link": "w:de:Hasmonäer",
     "chapters": [
       {
         "start": 2491,
@@ -15434,7 +15437,7 @@
   {
     "lemma": "Hekatos",
     "previous": "Hekatonymos",
-    "next": "Hekatoste",
+    "next": "Ἑκατοστή",
     "chapters": [
       {
         "start": 2799,
@@ -15444,9 +15447,10 @@
     ]
   },
   {
-    "lemma": "Hekatoste",
+    "lemma": "Ἑκατοστή",
     "previous": "Hekatos",
     "next": "Hekebolios 1",
+    "sort_key": "Hekatoste",
     "chapters": [
       {
         "start": 2800,
@@ -15457,7 +15461,7 @@
   },
   {
     "lemma": "Hekebolios 1",
-    "previous": "Hekatoste",
+    "previous": "Ἑκατοστή",
     "next": "Hekebolios 2",
     "chapters": [
       {
@@ -15471,6 +15475,7 @@
     "lemma": "Hekebolios 2",
     "previous": "Hekebolios 1",
     "next": "Hekebolos, Hekatebolos, Hekatebeletes",
+    "wp_link": "w:de:Apollon",
     "chapters": [
       {
         "start": 2800,
@@ -15483,6 +15488,7 @@
     "lemma": "Hekebolos, Hekatebolos, Hekatebeletes",
     "previous": "Hekebolios 2",
     "next": "Hekte",
+    "wp_link": "w:de:Apollon",
     "chapters": [
       {
         "start": 2800,

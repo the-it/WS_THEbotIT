@@ -4557,6 +4557,7 @@
     "lemma": "Carausius 1",
     "previous": "Caravi",
     "next": "Carausius 2",
+    "wp_link": "w:de:Carausius",
     "chapters": [
       {
         "start": 1570,
@@ -6562,6 +6563,7 @@
     "lemma": "Carsici",
     "previous": "Carsania",
     "next": "Carsidava",
+    "wp_link": "w:de:Cassis (Bouches-du-Rhône)",
     "chapters": [
       {
         "start": 1615,
@@ -9822,6 +9824,7 @@
     "lemma": "ad Castoris",
     "previous": "Castitas",
     "next": "Castra",
+    "sort_key": "Castoris",
     "chapters": [
       {
         "start": 1762,
@@ -10481,6 +10484,7 @@
     "lemma": "Castratio",
     "previous": "Castra, Castrum 53",
     "next": "Castrense amphitheatrum",
+    "wp_link": "w:de:Kastration",
     "chapters": [
       {
         "start": 1772,
@@ -20694,6 +20698,7 @@
     "lemma": "Chalkis 14",
     "previous": "Chalkis 13",
     "next": "Chalkis 15",
+    "wp_link": "w:de:Chalkis (Syrien)",
     "chapters": [
       {
         "start": 2090,
@@ -30517,7 +30522,7 @@
   {
     "lemma": "Chreokopidai",
     "previous": "Chrendoi",
-    "next": "Chreophylakes",
+    "next": "Χρεωφύλακες",
     "chapters": [
       {
         "start": 2447,
@@ -30527,9 +30532,10 @@
     ]
   },
   {
-    "lemma": "Chreophylakes",
+    "lemma": "Χρεωφύλακες",
     "previous": "Chreokopidai",
-    "next": "Chreos",
+    "next": "Χρέος",
+    "sort_key": "Chreophylakes",
     "chapters": [
       {
         "start": 2448,
@@ -30539,9 +30545,10 @@
     ]
   },
   {
-    "lemma": "Chreos",
-    "previous": "Chreophylakes",
-    "next": "Chresis",
+    "lemma": "Χρέος",
+    "previous": "Χρεωφύλακες",
+    "next": "Χρῆσις",
+    "sort_key": "Chreos",
     "chapters": [
       {
         "start": 2448,
@@ -30551,9 +30558,10 @@
     ]
   },
   {
-    "lemma": "Chresis",
-    "previous": "Chreos",
+    "lemma": "Χρῆσις",
+    "previous": "Χρέος",
     "next": "Chresterios",
+    "sort_key": "Chresis",
     "chapters": [
       {
         "start": 2449,
@@ -30564,7 +30572,7 @@
   },
   {
     "lemma": "Chresterios",
-    "previous": "Chresis",
+    "previous": "Χρῆσις",
     "next": "Chrestos 1",
     "chapters": [
       {
@@ -30674,6 +30682,7 @@
     "lemma": "Christodoros",
     "previous": "Chrinni",
     "next": "Christopolis 1",
+    "wp_link": "w:de:Christodoros",
     "chapters": [
       {
         "start": 2450,
@@ -30697,7 +30706,7 @@
   {
     "lemma": "Christopolis 2",
     "previous": "Christopolis 1",
-    "next": "Christos paschon",
+    "next": "Χριστὸς πάσχων",
     "redirect": true,
     "chapters": [
       {
@@ -30707,9 +30716,10 @@
     ]
   },
   {
-    "lemma": "Christos paschon",
+    "lemma": "Χριστὸς πάσχων",
     "previous": "Christopolis 2",
     "next": "Chritionis",
+    "sort_key": "Christospaschon",
     "chapters": [
       {
         "start": 2452,
@@ -30720,7 +30730,7 @@
   },
   {
     "lemma": "Chritionis",
-    "previous": "Christos paschon",
+    "previous": "Χριστὸς πάσχων",
     "next": "Chroasai",
     "chapters": [
       {
@@ -30758,6 +30768,7 @@
     "lemma": "Chromatios 2",
     "previous": "Chromatios 1",
     "next": "Chromia",
+    "wp_link": "w:de:Chromatius",
     "chapters": [
       {
         "start": 2452,
@@ -34977,6 +34988,7 @@
     "lemma": "Circumcisio",
     "previous": "Circumcelliones",
     "next": "Circumscriptio",
+    "wp_link": "w:de:Zirkumzision",
     "chapters": [
       {
         "start": 2570,
@@ -36530,6 +36542,9 @@
     "lemma": "Claudianus 9",
     "previous": "Claudianus 8",
     "next": "Claudianus 10",
+    "sort_key": "Claudianus 09",
+    "wp_link": "w:de:Claudian",
+    "ws_link": "s:de:Claudian",
     "chapters": [
       {
         "start": 2652,
@@ -42157,6 +42172,7 @@
   {
     "lemma": "Batis 2",
     "previous": "Basilios",
+    "next": "Batromios",
     "chapters": [
       {
         "start": 2901,

@@ -14124,7 +14124,7 @@
   {
     "lemma": "Archidike",
     "previous": "Archidemus",
-    "next": "Archieranistes",
+    "next": "Ἀρχιερανιστής",
     "chapters": [
       {
         "start": 470,
@@ -14134,9 +14134,9 @@
     ]
   },
   {
-    "lemma": "Archieranistes",
+    "lemma": "Ἀρχιερανιστής",
     "previous": "Archidike",
-    "next": "Archiereus",
+    "next": "Ἀρχιερεύς",
     "chapters": [
       {
         "start": 470,
@@ -14146,9 +14146,11 @@
     ]
   },
   {
-    "lemma": "Archiereus",
-    "previous": "Archieranistes",
+    "lemma": "Ἀρχιερεύς",
+    "previous": "Ἀρχιερανιστής",
     "next": "Archierios",
+    "sort_key": "Archiereus",
+    "wp_link": "w:de:Hoherpriester",
     "chapters": [
       {
         "start": 471,
@@ -14159,7 +14161,7 @@
   },
   {
     "lemma": "Archierios",
-    "previous": "Archiereus",
+    "previous": "Ἀρχιερεύς",
     "next": "Archierothytes",
     "chapters": [
       {
@@ -14836,7 +14838,7 @@
   {
     "lemma": "Architectus",
     "previous": "Architectura",
-    "next": "Architekton 1",
+    "next": "Ἀρχιτέκτων 1",
     "chapters": [
       {
         "start": 551,
@@ -14846,9 +14848,10 @@
     ]
   },
   {
-    "lemma": "Architekton 1",
+    "lemma": "Ἀρχιτέκτων 1",
     "previous": "Architectus",
-    "next": "Architekton 2",
+    "next": "Ἀρχιτέκτων 2",
+    "sort_key": "Architekton 1",
     "chapters": [
       {
         "start": 552,
@@ -14858,9 +14861,10 @@
     ]
   },
   {
-    "lemma": "Architekton 2",
-    "previous": "Architekton 1",
-    "next": "Architekton 3",
+    "lemma": "Ἀρχιτέκτων 2",
+    "previous": "Ἀρχιτέκτων 1",
+    "next": "Ἀρχιτέκτων 3",
+    "sort_key": "Architekton 2",
     "chapters": [
       {
         "start": 552,
@@ -14870,9 +14874,10 @@
     ]
   },
   {
-    "lemma": "Architekton 3",
-    "previous": "Architekton 2",
-    "next": "Architekton 4",
+    "lemma": "Ἀρχιτέκτων 3",
+    "previous": "Ἀρχιτέκτων 2",
+    "next": "Ἀρχιτέκτων 4",
+    "sort_key": "Architekton 3",
     "chapters": [
       {
         "start": 552,
@@ -14882,9 +14887,10 @@
     ]
   },
   {
-    "lemma": "Architekton 4",
-    "previous": "Architekton 3",
+    "lemma": "Ἀρχιτέκτων 4",
+    "previous": "Ἀρχιτέκτων 3",
     "next": "Architeles 1",
+    "sort_key": "Architekton 4",
     "chapters": [
       {
         "start": 552,
@@ -14895,7 +14901,7 @@
   },
   {
     "lemma": "Architeles 1",
-    "previous": "Architekton 4",
+    "previous": "Ἀρχιτέκτων 4",
     "next": "Architeles 2",
     "redirect": true,
     "chapters": [
@@ -14932,7 +14938,7 @@
   {
     "lemma": "Architeles 4",
     "previous": "Architeles 3",
-    "next": "Architheoros",
+    "next": "Ἀρχιθέωρος",
     "chapters": [
       {
         "start": 552,
@@ -14942,9 +14948,10 @@
     ]
   },
   {
-    "lemma": "Architheoros",
+    "lemma": "Ἀρχιθέωρος",
     "previous": "Architeles 4",
     "next": "Architimos 1",
+    "sort_key": "Architheoros",
     "chapters": [
       {
         "start": 552,
@@ -14955,7 +14962,7 @@
   },
   {
     "lemma": "Architimos 1",
-    "previous": "Architheoros",
+    "previous": "Ἀρχιθέωρος",
     "next": "Architimos 2",
     "chapters": [
       {
@@ -17591,6 +17598,7 @@
     "lemma": "Aretas 9",
     "previous": "Aretas 8",
     "next": "Arete 1",
+    "wp_link": "w:de:Arethas von Caesarea",
     "chapters": [
       {
         "start": 675,
@@ -20204,6 +20212,7 @@
     "lemma": "Argonautai",
     "previous": "Argolis 2",
     "next": "Argonautarum portus",
+    "wp_link": "w:de:Argonautensage",
     "chapters": [
       {
         "start": 743,
@@ -22128,6 +22137,7 @@
     "lemma": "Arimathaia",
     "previous": "Arimaspoi",
     "next": "Arimazes",
+    "wp_link": "w:de:Ramathaim-Zophim",
     "chapters": [
       {
         "start": 827,
@@ -25553,6 +25563,8 @@
     "lemma": "Aristobulos 15",
     "previous": "Aristobulos 14",
     "next": "Aristobulos 16",
+    "wp_link": "w:de:Aristobulos (jüdisch-hellenistischer Philosoph)",
+    "ws_link": "s:de:Aristobul",
     "chapters": [
       {
         "start": 918,
