@@ -405,8 +405,7 @@ class Lemma(Mapping):
         return chapter_list
 
     def is_valid(self) -> bool:
-        if "lemma" not in self.keys() \
-                or "chapters" not in self.keys():
+        if "lemma" not in self.keys():
             return False
         if self._chapters:
             for chapter in self._chapters:
@@ -626,7 +625,8 @@ class VolumeRegister(Register):
                 self.try_update_next_and_previous(lemma_dict, lemma_to_update)
             elif self.get_lemma_by_sort_key(sort_key):
                 self._update_by_sortkey(lemma_dict, remove_items)
-            elif self.get_lemma_by_name(lemma_dict["previous"]) and self.get_lemma_by_name(lemma_dict["next"]):
+            elif self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])) \
+                    and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
                 self._update_pre_and_post_exists(lemma_dict)
             else:
                 raise RegisterException(f"The update of the register {self.volume.name} "
@@ -638,8 +638,8 @@ class VolumeRegister(Register):
                                     f"Key Error in Dictionary")
 
     def _update_pre_and_post_exists(self, lemma_dict):
-        pre_lemma = self.get_lemma_by_name(lemma_dict["previous"])
-        post_lemma = self.get_lemma_by_name(lemma_dict["next"])
+        pre_lemma = self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]))
+        post_lemma = self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]))
         post_idx = self.get_index_of_lemma(post_lemma)
         pre_idx = self.get_index_of_lemma(pre_lemma)
         if post_idx - pre_idx == 1:
@@ -650,8 +650,7 @@ class VolumeRegister(Register):
             raise RegisterException(f"The update of the register {self.volume.name} "
                                     f"with the dict {lemma_dict} is not possible. "
                                     f"Diff between previous and next aren't 1 or 2")
-        pre_lemma.update_lemma_dict({"next": lemma_dict["lemma"]})
-        post_lemma.update_lemma_dict({"previous": lemma_dict["lemma"]})
+        self.try_update_next_and_previous(lemma_dict, self[pre_idx + 1])
 
     def try_update_next_and_previous(self, new_lemma_dict: Dict[str, Any], lemma_to_update: Lemma):
         idx = self.get_index_of_lemma(lemma_to_update)
@@ -659,7 +658,7 @@ class VolumeRegister(Register):
             pre_lemma = self[idx - 1]
             pre_lemma_dict = {"lemma": new_lemma_dict["previous"],
                               "previous": pre_lemma["previous"],
-                              "next": pre_lemma["next"]}
+                              "next": new_lemma_dict["lemma"]}
             if Lemma.make_sort_key(pre_lemma_dict["lemma"]) == pre_lemma.sort_key:
                 pre_lemma.update_lemma_dict(pre_lemma_dict)
                 try:
@@ -669,7 +668,7 @@ class VolumeRegister(Register):
         if "next" in new_lemma_dict:
             next_lemma = self[idx + 1]
             next_lemma_dict = {"lemma": new_lemma_dict["next"],
-                               "previous": next_lemma["previous"],
+                               "previous": new_lemma_dict["lemma"],
                                "next": next_lemma["next"]}
             if Lemma.make_sort_key(next_lemma_dict["lemma"]) == next_lemma.sort_key:
                 next_lemma.update_lemma_dict(next_lemma_dict)
