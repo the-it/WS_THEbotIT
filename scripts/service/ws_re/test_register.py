@@ -809,8 +809,12 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         compare("Ü", post_lemma["next"])
         post_lemma_previous = register.get_lemma_by_name("Ä")
         compare("B", post_lemma_previous["next"])
+        post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
+        compare("Ä", post_lemma_previous_previous["next"])
         post_lemma_next = register.get_lemma_by_name("Ü")
         compare("B", post_lemma_next["previous"])
+        post_lemma_next_next = register.get_lemma_by_name("D")
+        compare("Ü", post_lemma_next_next["previous"])
 
     def test_update_pre_and_next_not_possible(self):
         copy_tst_data("I_1_sorting2", "I_1")
