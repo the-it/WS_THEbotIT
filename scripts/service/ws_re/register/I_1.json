@@ -640,24 +640,12 @@
   {
     "lemma": "Abarinos",
     "previous": "Abarimon",
-    "next": "Abaris",
-    "chapters": [
-      {
-        "start": 16,
-        "end": 16,
-        "author": "Hirschfeld"
-      }
-    ]
-  },
-  {
-    "lemma": "Abaris",
-    "previous": "Abarinos",
     "next": "Abaris 1",
     "chapters": [
       {
         "start": 16,
         "end": 16,
-        "author": "Bethe"
+        "author": "Hirschfeld"
       }
     ]
   },
@@ -25372,7 +25360,7 @@
   {
     "lemma": "Agnua",
     "previous": "Agnos",
-    "next": "Agnu keras",
+    "next": "Ἀγνοῦ κέρας",
     "redirect": true,
     "chapters": [
       {
@@ -25382,7 +25370,7 @@
     ]
   },
   {
-    "lemma": "Agnu keras",
+    "lemma": "Ἀγνοῦ κέρας",
     "previous": "Agnua",
     "next": "Agnus",
     "chapters": [
@@ -25700,12 +25688,24 @@
   {
     "lemma": "Agoraia tele",
     "previous": "Agorachos",
-    "next": "Agoraios, Agoraia 1",
+    "next": "Agoraios, Agoraia",
     "chapters": [
       {
         "start": 881,
         "end": 881,
         "author": "Szanto"
+      }
+    ]
+  },
+  {
+    "lemma": "Agoraios, Agoraia",
+    "previous": "Agoraia tele",
+    "next": "Agoraios, Agoraia 1",
+    "chapters": [
+      {
+        "start": 881,
+        "end": 881,
+        "author": "Wentzel."
       }
     ]
   },

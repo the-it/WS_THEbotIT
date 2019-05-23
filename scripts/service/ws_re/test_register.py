@@ -481,6 +481,8 @@ class TestLemma(BaseTestRegister):
         compare("abalas limenu", Lemma.make_sort_key("Ἀβάλας λιμήνου"))
         compare("hestiasis", Lemma.make_sort_key("Ἑστίασις"))
         compare("hiaron tas athanaias", Lemma.make_sort_key("Ἱαρὸν τᾶς Ἀθαναίας"))
+        compare("agnu keras", Lemma.make_sort_key("Ἀγνοῦ κέρας"))
+
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)
@@ -956,7 +958,7 @@ class TestRegisters(BaseTestRegister):
 _MAX_SIZE_WIKI_PAGE = 2_098_175
 
 
-@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+#@skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestIntegrationRegister(TestCase):
     @classmethod
     def setUpClass(cls):
