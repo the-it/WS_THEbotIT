@@ -138,12 +138,24 @@
   {
     "lemma": "Ius suffragii",
     "previous": "Ius strictum",
-    "next": "Iusciacus",
+    "next": "Ius tigni immittendi",
     "chapters": [
       {
         "start": 1302,
         "end": 1306,
         "author": "Rosenberg"
+      }
+    ]
+  },
+  {
+    "lemma": "Ius tigni immittendi",
+    "previous": "Ius suffragii",
+    "next": "Iusciacus",
+    "chapters": [
+      {
+        "start": 1306,
+        "end": 1306,
+        "author": "Manigk"
       }
     ]
   },
@@ -174,24 +186,12 @@
   {
     "lemma": "Iussum",
     "previous": "Iussiacus",
-    "next": "Ius tigni immittendi",
+    "next": "Iusta 1",
     "chapters": [
       {
         "start": 1306,
         "end": 1308,
         "author": "Steinwenter"
-      }
-    ]
-  },
-  {
-    "lemma": "Ius tigni immittendi",
-    "previous": "Iussum",
-    "next": "Iusta 1",
-    "chapters": [
-      {
-        "start": 1306,
-        "end": 1306,
-        "author": "Manigk"
       }
     ]
   },
@@ -4712,7 +4712,7 @@
   {
     "lemma": "Kalchas",
     "previous": "Kalbis",
-    "next": "Kalchedon",
+    "next": "Kalchedon 1",
     "wp_link": "w:de:Kalchas",
     "chapters": [
       {

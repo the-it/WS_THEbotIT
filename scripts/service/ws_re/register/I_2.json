@@ -2251,7 +2251,7 @@
   },
   {
     "lemma": "Alia 1",
-    "previous": "Algiza",
+    "previous": "Alhiahenae",
     "next": "Alia 2",
     "chapters": [
       {
@@ -2807,7 +2807,7 @@
   {
     "lemma": "Alipheros",
     "previous": "Aliphera",
-    "next": "Alipilos",
+    "next": "Alipilus",
     "chapters": [
       {
         "start": 1494,
@@ -3014,7 +3014,7 @@
   {
     "lemma": "Alites",
     "previous": "Aliteria, Aliterios",
-    "next": "Alita",
+    "next": "Alitherses",
     "chapters": [
       {
         "start": 1497,
@@ -3024,9 +3024,10 @@
     ]
   },
   {
-    "lemma": "Alita",
+    "lemma": "Alitherses",
     "previous": "Alites",
-    "next": "Alitherses",
+    "next": "Alita",
+    "redirect": true,
     "chapters": [
       {
         "start": 1498,
@@ -3035,10 +3036,9 @@
     ]
   },
   {
-    "lemma": "Alitherses",
-    "previous": "Alita",
+    "lemma": "Alita",
+    "previous": "Alitherses",
     "next": "Aliula",
-    "redirect": true,
     "chapters": [
       {
         "start": 1498,
@@ -13068,8 +13068,20 @@
     ]
   },
   {
-    "lemma": "Ammenemes 1",
+    "lemma": "Ammenemes",
     "previous": "Ammen",
+    "next": "Ammenemes 1",
+    "chapters": [
+      {
+        "start": 1844,
+        "end": 1844,
+        "author": "Pietschmann"
+      }
+    ]
+  },
+  {
+    "lemma": "Ammenemes 1",
+    "previous": "Ammenemes",
     "next": "Ammenemes 2",
     "chapters": [
       {

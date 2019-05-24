@@ -483,7 +483,7 @@ class TestLemma(BaseTestRegister):
         compare("agnu keras", Lemma.make_sort_key("Ἀγνοῦ κέρας"))
         compare("aptuchu hieron", Lemma.make_sort_key("Ἀπτούχου ἱερόν"))
         compare("hyakinthis hodos", Lemma.make_sort_key("Ὑακινθὶς ὁδός"))
-
+        # compare("kaualenon katoikia", Lemma.make_sort_key("Καυαληνῶν κατοικία"))
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)

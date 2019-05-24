@@ -5515,7 +5515,7 @@
     ]
   },
   {
-    "lemma": "Aptuchu hieron",
+    "lemma": "Ἀπτούχου ἱερόν",
     "previous": "Apteros 2",
     "next": "Aptugni",
     "chapters": [
@@ -5528,7 +5528,7 @@
   },
   {
     "lemma": "Aptugni",
-    "previous": "Aptuchu hieron",
+    "previous": "Ἀπτούχου ἱερόν",
     "next": "Apuani",
     "chapters": [
       {
@@ -5744,7 +5744,7 @@
   {
     "lemma": "Aqua Albana, Alexandrina, Alsietina",
     "previous": "Aqua",
-    "next": "Aqua, Aquae",
+    "next": "Aquae",
     "redirect": true,
     "wp_link": "w:de:Aqua",
     "chapters": [
@@ -5755,27 +5755,28 @@
     ]
   },
   {
-    "lemma": "Aqua, Aquae",
-    "previous": "Aqua Albana, Alexandrina, Alsietina",
-    "next": "Aquae",
-    "chapters": [
-      {
-        "start": 294,
-        "end": 294,
-        "author": "Tomaschek"
-      }
-    ]
-  },
-  {
     "lemma": "Aquae",
-    "previous": "Aqua, Aquae",
-    "next": "Aqua, Aquae 1",
+    "previous": "Aqua Albana, Alexandrina, Alsietina",
+    "next": "Aqua, Aquae",
     "wp_link": "w:de:Heilquelle",
     "chapters": [
       {
         "start": 294,
         "end": 294,
         "author": "Mau, [August]"
+      }
+    ]
+  },
+  {
+    "lemma": "Aqua, Aquae",
+    "previous": "Aquae",
+    "next": "Aqua, Aquae 1",
+    "sort_key": "Aquae",
+    "chapters": [
+      {
+        "start": 294,
+        "end": 294,
+        "author": "Tomaschek"
       }
     ]
   },
@@ -7382,17 +7383,6 @@
         "start": 313,
         "end": 313,
         "author": "Klebs"
-      }
-    ]
-  },
-  {
-    "lemma": "Aquila 1-10",
-    "previous": "Aquila 1",
-    "next": "Aquila 2",
-    "chapters": [
-      {
-        "start": 313,
-        "end": 313
       }
     ]
   },
