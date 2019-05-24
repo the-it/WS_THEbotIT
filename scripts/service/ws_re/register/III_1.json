@@ -1283,6 +1283,7 @@
     "lemma": "Barkocheba",
     "previous": "Barke 4",
     "next": "Barkoph",
+    "wp_link": "w:de:Bar Kochba",
     "chapters": [
       {
         "start": 21,
@@ -2436,6 +2437,7 @@
     "lemma": "Basileides 1",
     "previous": "Basileia 6",
     "next": "Basileides 2",
+    "sort_key": "Basileides 01",
     "chapters": [
       {
         "start": 45,
@@ -2448,6 +2450,7 @@
     "lemma": "Basileides 2",
     "previous": "Basileides 1",
     "next": "Basileides 3",
+    "sort_key": "Basileides 02",
     "chapters": [
       {
         "start": 45,
@@ -3772,6 +3775,7 @@
     "lemma": "Bassus 1",
     "previous": "Bassus",
     "next": "Bassus 2",
+    "sort_key": "Bassus 01",
     "chapters": [
       {
         "start": 107,
@@ -15390,6 +15394,7 @@
     "lemma": "Binsen",
     "previous": "Binothris",
     "next": "Binsitta",
+    "wp_link": "w:de:Binsen",
     "chapters": [
       {
         "start": 476,
@@ -15465,6 +15470,7 @@
     "lemma": "Bion 3",
     "previous": "Bion 2",
     "next": "Bion 4",
+    "sort_key": "Bion 03",
     "chapters": [
       {
         "start": 481,
@@ -18359,7 +18365,7 @@
   {
     "lemma": "Bliulaioi",
     "previous": "Blivila",
-    "next": "Blomiaios artos",
+    "next": "Βλωμιαῖος ἄρτος",
     "chapters": [
       {
         "start": 570,
@@ -18369,7 +18375,7 @@
     ]
   },
   {
-    "lemma": "Blomiaios artos",
+    "lemma": "Βλωμιαῖος ἄρτος",
     "previous": "Bliulaioi",
     "next": "Bloson",
     "chapters": [
@@ -18381,7 +18387,7 @@
   },
   {
     "lemma": "Bloson",
-    "previous": "Blomiaios artos",
+    "previous": "Βλωμιαῖος ἄρτος",
     "next": "Blossius",
     "chapters": [
       {
@@ -23972,6 +23978,7 @@
     "lemma": "Boxs(ani?)",
     "previous": "Boutius",
     "next": "Boxum",
+    "sort_key": "Boxsani",
     "chapters": [
       {
         "start": 800,
@@ -23996,6 +24003,7 @@
     "lemma": "Boz",
     "previous": "Boxum",
     "next": "Boza",
+    "wp_link": "w:de:Boz (Anten)",
     "chapters": [
       {
         "start": 800,
@@ -24031,7 +24039,7 @@
   {
     "lemma": "Boziata",
     "previous": "Bozenos",
-    "next": "Br...",
+    "next": "Br…",
     "chapters": [
       {
         "start": 800,
@@ -24041,9 +24049,10 @@
     ]
   },
   {
-    "lemma": "Br...",
+    "lemma": "Br…",
     "previous": "Boziata",
-    "next": "Brabeion",
+    "next": "Βραβεῖον",
+    "sort_key": "Br",
     "chapters": [
       {
         "start": 800,
@@ -24053,9 +24062,9 @@
     ]
   },
   {
-    "lemma": "Brabeion",
-    "previous": "Br...",
-    "next": "Brabeus",
+    "lemma": "Βραβεῖον",
+    "previous": "Br…",
+    "next": "Βραβεύς",
     "chapters": [
       {
         "start": 800,
@@ -24065,9 +24074,11 @@
     ]
   },
   {
-    "lemma": "Brabeus",
-    "previous": "Brabeion",
+    "lemma": "Βραβεύς",
+    "previous": "Βραβεῖον",
     "next": "Brabeuta",
+    "sort_key": "Brabeus",
+    "wp_link": "w:de:Schiedsrichter",
     "chapters": [
       {
         "start": 801,
@@ -24078,7 +24089,7 @@
   },
   {
     "lemma": "Brabeuta",
-    "previous": "Brabeus",
+    "previous": "Βραβεύς",
     "next": "Brabylos",
     "chapters": [
       {
@@ -24126,6 +24137,8 @@
     "lemma": "Bracara Augusta",
     "previous": "Bracantia",
     "next": "Bracari",
+    "sort_key": "Bracaraaugusta",
+    "wp_link": "w:de:Braga",
     "chapters": [
       {
         "start": 802,
@@ -27590,6 +27603,7 @@
     "lemma": "Bronze",
     "previous": "Bronton",
     "next": "Broteas 1",
+    "wp_link": "w:de:Bronze",
     "chapters": [
       {
         "start": 892,
@@ -27614,6 +27628,7 @@
     "lemma": "Broteas 2",
     "previous": "Broteas 1",
     "next": "Broteas 3",
+    "wp_link": "w:de:Broteas",
     "chapters": [
       {
         "start": 897,
@@ -27626,6 +27641,7 @@
     "lemma": "Broteas 3",
     "previous": "Broteas 2",
     "next": "Broteas 4",
+    "wp_link": "w:de:Broteas",
     "chapters": [
       {
         "start": 898,
@@ -27638,6 +27654,7 @@
     "lemma": "Broteas 4",
     "previous": "Broteas 3",
     "next": "Brotinos",
+    "wp_link": "w:de:Broteas",
     "chapters": [
       {
         "start": 898,
@@ -32295,6 +32312,7 @@
     "lemma": "Busa",
     "previous": "Bus 2",
     "next": "Busacteri",
+    "wp_link": "w:de:Schlacht von Cannae",
     "chapters": [
       {
         "start": 1072,
@@ -32379,6 +32397,7 @@
     "lemma": "Busiris 1",
     "previous": "Businca",
     "next": "Busiris 2",
+    "wp_link": "w:de:Busiris",
     "chapters": [
       {
         "start": 1073,
@@ -32391,6 +32410,7 @@
     "lemma": "Busiris 2",
     "previous": "Busiris 1",
     "next": "Busiris 3",
+    "wp_link": "w:de:Abu Sir Bana",
     "chapters": [
       {
         "start": 1074,

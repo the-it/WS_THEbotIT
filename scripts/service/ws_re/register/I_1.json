@@ -640,7 +640,7 @@
   {
     "lemma": "Abarinos",
     "previous": "Abarimon",
-    "next": "Abaris",
+    "next": "Abaris 1",
     "chapters": [
       {
         "start": 16,
@@ -650,21 +650,10 @@
     ]
   },
   {
-    "lemma": "Abaris",
-    "previous": "Abarinos",
-    "next": "Abaris 1",
-    "chapters": [
-      {
-        "start": 16,
-        "end": 16,
-        "author": "Bethe"
-      }
-    ]
-  },
-  {
     "lemma": "Abaris 1",
-    "previous": "Abaris",
+    "previous": "Abarinos",
     "next": "Abaris 2",
+    "wp_link": "w:de:Abaris",
     "chapters": [
       {
         "start": 16,
@@ -4660,6 +4649,7 @@
     "lemma": "Achaimenidai 1",
     "previous": "Achaimenia",
     "next": "Achaimenidai 2",
+    "wp_link": "w:de:Achaimeniden",
     "chapters": [
       {
         "start": 200,
@@ -4684,6 +4674,7 @@
     "lemma": "Achaimenidai 3",
     "previous": "Achaimenidai 2",
     "next": "Achaimenides",
+    "wp_link": "w:de:Perser (Volk)",
     "chapters": [
       {
         "start": 204,
@@ -8521,6 +8512,7 @@
     "lemma": "Adasa",
     "previous": "Ἀδάρου πόλις",
     "next": "Adata",
+    "wp_link": "w:de:Adasa",
     "chapters": [
       {
         "start": 347,
@@ -9281,7 +9273,7 @@
   {
     "lemma": "Adgentii",
     "previous": "Adgandestrius",
-    "next": "Adherbal 1",
+    "next": "Adherbal",
     "chapters": [
       {
         "start": 359,
@@ -9291,8 +9283,13 @@
     ]
   },
   {
-    "lemma": "Adherbal 1",
+    "lemma": "Adherbal",
     "previous": "Adgentii",
+    "next": "Adherbal 1"
+  },
+  {
+    "lemma": "Adherbal 1",
+    "previous": "Adherbal",
     "next": "Adherbal 2",
     "chapters": [
       {
@@ -9306,6 +9303,7 @@
     "lemma": "Adherbal 2",
     "previous": "Adherbal 1",
     "next": "Adherbal 3",
+    "wp_link": "w:de:Adherbal (Admiral)",
     "chapters": [
       {
         "start": 359,
@@ -9330,6 +9328,7 @@
     "lemma": "Adherbal 4",
     "previous": "Adherbal 3",
     "next": "Adia",
+    "wp_link": "w:de:Adherbal (Numidien)",
     "chapters": [
       {
         "start": 359,
@@ -9366,6 +9365,7 @@
     "lemma": "Adiabene",
     "previous": "Adiabas",
     "next": "Adiabenici ludi",
+    "wp_link": "w:de:Adiabene",
     "chapters": [
       {
         "start": 360,
@@ -9776,6 +9776,7 @@
     "lemma": "Adler",
     "previous": "Adlectus aerario",
     "next": "Adlocutio",
+    "wp_link": "w:de:Adler",
     "chapters": [
       {
         "start": 371,
@@ -10385,7 +10386,7 @@
   {
     "lemma": "Adra 3",
     "previous": "Adra 2",
-    "next": "Adraa, Adra",
+    "next": "Adraa",
     "redirect": true,
     "wp_link": "w:de:Adraa",
     "chapters": [
@@ -10396,20 +10397,14 @@
     ]
   },
   {
-    "lemma": "Adraa, Adra",
+    "lemma": "Adraa",
     "previous": "Adra 3",
     "next": "Adrabaecampi",
-    "chapters": [
-      {
-        "start": 402,
-        "end": 402,
-        "author": "Benzinger"
-      }
-    ]
+    "wp_link": "w:de:Adraa"
   },
   {
     "lemma": "Adrabaecampi",
-    "previous": "Adraa, Adra",
+    "previous": "Adraa",
     "next": "Adraistai",
     "chapters": [
       {
@@ -23736,6 +23731,7 @@
     "lemma": "Agesias 1",
     "previous": "Agesianax",
     "next": "Agesias 2",
+    "wp_link": "w:de:Agesias von Syrakus",
     "chapters": [
       {
         "start": 795,
@@ -24686,6 +24682,8 @@
     "lemma": "Agis 1",
     "previous": "Agiria",
     "next": "Agis 2",
+    "sort_key": "Agis 01",
+    "wp_link": "w:de:Agis I.",
     "chapters": [
       {
         "start": 816,
@@ -25077,6 +25075,7 @@
     "lemma": "Aglaos 2",
     "previous": "Aglaos 1",
     "next": "Aglaos 3",
+    "wp_link": "w:de:Aglaos (Sohn der Hermione)",
     "chapters": [
       {
         "start": 825,
@@ -25238,6 +25237,7 @@
     "lemma": "Agnatio",
     "previous": "Agnaptos",
     "next": "Agnaviae",
+    "wp_link": "w:de:Agnat",
     "chapters": [
       {
         "start": 830,
@@ -25310,6 +25310,7 @@
     "lemma": "Agnodike",
     "previous": "Agnitio",
     "next": "Agnomen",
+    "wp_link": "w:de:Agnodike",
     "chapters": [
       {
         "start": 831,
@@ -25347,6 +25348,7 @@
     "lemma": "Agnos",
     "previous": "Agnon, Agnonides",
     "next": "Agnua",
+    "wp_link": "w:de:Mönchspfeffer",
     "chapters": [
       {
         "start": 832,
@@ -25358,7 +25360,7 @@
   {
     "lemma": "Agnua",
     "previous": "Agnos",
-    "next": "Agnu keras",
+    "next": "Ἀγνοῦ κέρας",
     "redirect": true,
     "chapters": [
       {
@@ -25368,7 +25370,7 @@
     ]
   },
   {
-    "lemma": "Agnu keras",
+    "lemma": "Ἀγνοῦ κέρας",
     "previous": "Agnua",
     "next": "Agnus",
     "chapters": [
@@ -25381,7 +25383,7 @@
   },
   {
     "lemma": "Agnus",
-    "previous": "Agnu keras",
+    "previous": "Ἀγνοῦ κέρας",
     "next": "Agocen",
     "chapters": [
       {
@@ -25394,7 +25396,7 @@
   {
     "lemma": "Agocen",
     "previous": "Agnus",
-    "next": "Agoge",
+    "next": "Ἀγωγή",
     "chapters": [
       {
         "start": 834,
@@ -25404,7 +25406,7 @@
     ]
   },
   {
-    "lemma": "Agoge",
+    "lemma": "Ἀγωγή",
     "previous": "Agocen",
     "next": "Agogeus",
     "chapters": [
@@ -25417,8 +25419,8 @@
   },
   {
     "lemma": "Agogeus",
-    "previous": "Agoge",
-    "next": "Agogimos",
+    "previous": "Ἀγωγή",
+    "next": "Ἀγώγιμος",
     "chapters": [
       {
         "start": 835,
@@ -25428,9 +25430,10 @@
     ]
   },
   {
-    "lemma": "Agogimos",
+    "lemma": "Ἀγώγιμος",
     "previous": "Agogeus",
     "next": "Agon",
+    "sort_key": "Agogimos",
     "chapters": [
       {
         "start": 835,
@@ -25441,8 +25444,9 @@
   },
   {
     "lemma": "Agon",
-    "previous": "Agogimos",
+    "previous": "Ἀγώγιμος",
     "next": "Agonales",
+    "wp_link": "w:de:Agon (Mythologie)",
     "chapters": [
       {
         "start": 835,
@@ -25490,7 +25494,7 @@
   {
     "lemma": "Agonenses",
     "previous": "Agonarches",
-    "next": "Agones 1",
+    "next": "Ἄγωνες",
     "chapters": [
       {
         "start": 836,
@@ -25500,9 +25504,10 @@
     ]
   },
   {
-    "lemma": "Agones 1",
+    "lemma": "Ἄγωνες",
     "previous": "Agonenses",
     "next": "Agones 2",
+    "sort_key": "Agones 1",
     "chapters": [
       {
         "start": 836,
@@ -25513,8 +25518,8 @@
   },
   {
     "lemma": "Agones 2",
-    "previous": "Agones 1",
-    "next": "Agon Homeru kai Hesiodu",
+    "previous": "Ἄγωνες",
+    "next": "Ἀγὼν Ὁμήρου καὶ Ἡσιόδου",
     "chapters": [
       {
         "start": 836,
@@ -25529,20 +25534,15 @@
     ]
   },
   {
-    "lemma": "Agon Homeru kai Hesiodu",
+    "lemma": "Ἀγὼν Ὁμήρου καὶ Ἡσιόδου",
     "previous": "Agones 2",
     "next": "Agonia 1",
-    "chapters": [
-      {
-        "start": 867,
-        "end": 869,
-        "author": "Bethe"
-      }
-    ]
+    "sort_key": "Agonhomeru",
+    "wp_link": "w:de:Certamen Homeri et Hesiodi"
   },
   {
     "lemma": "Agonia 1",
-    "previous": "Agon Homeru kai Hesiodu",
+    "previous": "Ἀγὼν Ὁμήρου καὶ Ἡσιόδου",
     "next": "Agonia 2",
     "chapters": [
       {
@@ -25688,7 +25688,7 @@
   {
     "lemma": "Agoraia tele",
     "previous": "Agorachos",
-    "next": "Agoraios, Agoraia 1",
+    "next": "Agoraios, Agoraia",
     "chapters": [
       {
         "start": 881,
@@ -25698,8 +25698,20 @@
     ]
   },
   {
-    "lemma": "Agoraios, Agoraia 1",
+    "lemma": "Agoraios, Agoraia",
     "previous": "Agoraia tele",
+    "next": "Agoraios, Agoraia 1",
+    "chapters": [
+      {
+        "start": 881,
+        "end": 881,
+        "author": "Wentzel."
+      }
+    ]
+  },
+  {
+    "lemma": "Agoraios, Agoraia 1",
+    "previous": "Agoraios, Agoraia",
     "next": "Agoraios, Agoraia 2",
     "chapters": [
       {
@@ -26097,7 +26109,7 @@
   {
     "lemma": "Agraphoi nomoi",
     "previous": "Agraphiu graphe",
-    "next": "Agraphu metallu graphe",
+    "next": "Ἀγράφου μετάλλου γραφή",
     "chapters": [
       {
         "start": 889,
@@ -26107,7 +26119,7 @@
     ]
   },
   {
-    "lemma": "Agraphu metallu graphe",
+    "lemma": "Ἀγράφου μετάλλου γραφή",
     "previous": "Agraphoi nomoi",
     "next": "P. Agrasius",
     "chapters": [
@@ -26120,8 +26132,9 @@
   },
   {
     "lemma": "P. Agrasius",
-    "previous": "Agraphu metallu graphe",
+    "previous": "Ἀγράφου μετάλλου γραφή",
     "next": "Agrastyon",
+    "sort_key": "Agrasius",
     "chapters": [
       {
         "start": 890,
@@ -26169,7 +26182,7 @@
   {
     "lemma": "Agre 2",
     "previous": "Agre 1",
-    "next": "Agrenon",
+    "next": "Ἀγρηνόν",
     "chapters": [
       {
         "start": 890,
@@ -26179,7 +26192,7 @@
     ]
   },
   {
-    "lemma": "Agrenon",
+    "lemma": "Ἀγρηνόν",
     "previous": "Agre 2",
     "next": "Agresphon",
     "chapters": [
@@ -26192,7 +26205,7 @@
   },
   {
     "lemma": "Agresphon",
-    "previous": "Agrenon",
+    "previous": "Ἀγρηνόν",
     "next": "Agrestis",
     "chapters": [
       {
@@ -26506,6 +26519,7 @@
     "lemma": "Agrimensores",
     "previous": "Agrilion",
     "next": "Agrinagara",
+    "wp_link": "w:de:Agrimensor",
     "chapters": [
       {
         "start": 894,
@@ -26745,7 +26759,7 @@
   {
     "lemma": "Agrios 9",
     "previous": "Agrios 8",
-    "next": "Agrippa 1",
+    "next": "Agrippa",
     "chapters": [
       {
         "start": 897,
@@ -26755,9 +26769,15 @@
     ]
   },
   {
-    "lemma": "Agrippa 1",
+    "lemma": "Agrippa",
     "previous": "Agrios 9",
+    "next": "Agrippa 1"
+  },
+  {
+    "lemma": "Agrippa 1",
+    "previous": "Agrippa",
     "next": "Agrippa 2",
+    "wp_link": "w:de:Marcus Vipsanius Agrippa",
     "chapters": [
       {
         "start": 897,
@@ -26884,6 +26904,7 @@
     "lemma": "Agrippeion 2",
     "previous": "Agrippeion 1",
     "next": "Agrippenses",
+    "wp_link": "w:de:Anthedon",
     "chapters": [
       {
         "start": 898,
@@ -26932,6 +26953,7 @@
     "lemma": "Agrippiana horrea",
     "previous": "Agrippianae thermae",
     "next": "Agrippias",
+    "sort_key": "Agrippianahorrea",
     "chapters": [
       {
         "start": 899,
@@ -26944,6 +26966,7 @@
     "lemma": "Agrippias",
     "previous": "Agrippiana horrea",
     "next": "Agrippiastai",
+    "wp_link": "w:de:Anthedon",
     "chapters": [
       {
         "start": 899,
@@ -27053,6 +27076,7 @@
     "lemma": "Agrippinenses",
     "previous": "Agrippinae lavacrum",
     "next": "Agrippiniana horrea",
+    "wp_link": "w:de:Colonia Claudia Ara Agrippinensium",
     "chapters": [
       {
         "start": 900,
@@ -27354,6 +27378,7 @@
     "lemma": "Agron 1",
     "previous": "Agrolas",
     "next": "Agron 2",
+    "wp_link": "w:de:Agron (Kos)",
     "chapters": [
       {
         "start": 903,
@@ -27546,6 +27571,7 @@
     "lemma": "Agunia",
     "previous": "Agugo",
     "next": "Aguontum",
+    "wp_link": "w:de:Agogna",
     "chapters": [
       {
         "start": 909,
@@ -27618,6 +27644,18 @@
   {
     "lemma": "Agyiates",
     "previous": "Agyeios 2",
+    "next": "Agyieus",
+    "chapters": [
+      {
+        "start": 909,
+        "end": 909,
+        "author": "Wentzel"
+      }
+    ]
+  },
+  {
+    "lemma": "Agyieus",
+    "previous": "Agyiates",
     "next": "Agyieus 1",
     "chapters": [
       {
@@ -27629,7 +27667,7 @@
   },
   {
     "lemma": "Agyieus 1",
-    "previous": "Agyiates",
+    "previous": "Agyieus",
     "next": "Agyieus 2",
     "chapters": [
       {
@@ -27835,6 +27873,7 @@
     "lemma": "Aia 1",
     "previous": "Ahorn",
     "next": "Aia 2",
+    "wp_link": "w:de:Aiaia",
     "chapters": [
       {
         "start": 919,
@@ -27931,6 +27970,7 @@
     "lemma": "Aiaia 1",
     "previous": "Aiadaba",
     "next": "Aiaia 2",
+    "wp_link": "w:de:Aiaia",
     "chapters": [
       {
         "start": 920,
@@ -28160,6 +28200,7 @@
     "lemma": "Aianteia 2",
     "previous": "Aianteia 1",
     "next": "Aianteion",
+    "wp_link": "w:de:Aianteia",
     "chapters": [
       {
         "start": 926,
@@ -28172,6 +28213,7 @@
     "lemma": "Aianteion",
     "previous": "Aianteia 2",
     "next": "Aiantides 1",
+    "wp_link": "w:de:Magnesia (Thessalien)",
     "chapters": [
       {
         "start": 929,
@@ -33921,6 +33963,7 @@
     "lemma": "Akakios 5",
     "previous": "Akakios 4",
     "next": "Akakios 6",
+    "wp_link": "w:de:Acacius von Caesarea",
     "chapters": [
       {
         "start": 1141,
@@ -33933,6 +33976,7 @@
     "lemma": "Akakios 6",
     "previous": "Akakios 5",
     "next": "Akakios 7",
+    "wp_link": "w:de:Acacius von Beröa",
     "chapters": [
       {
         "start": 1141,
@@ -33945,6 +33989,7 @@
     "lemma": "Akakios 7",
     "previous": "Akakios 6",
     "next": "Akakios 8",
+    "wp_link": "w:de:Akakios von Konstantinopel",
     "chapters": [
       {
         "start": 1141,
@@ -35146,7 +35191,7 @@
   {
     "lemma": "Akinakai",
     "previous": "Akilisene",
-    "next": "Akinakes",
+    "next": "Ἀκινάκης",
     "chapters": [
       {
         "start": 1168,
@@ -35156,7 +35201,7 @@
     ]
   },
   {
-    "lemma": "Akinakes",
+    "lemma": "Ἀκινάκης",
     "previous": "Akinakai",
     "next": "Akinasis",
     "chapters": [
@@ -35169,7 +35214,7 @@
   },
   {
     "lemma": "Akinasis",
-    "previous": "Akinakes",
+    "previous": "Ἀκινάκης",
     "next": "Akindynos 1",
     "chapters": [
       {
@@ -35206,7 +35251,7 @@
   {
     "lemma": "Akindynos 3",
     "previous": "Akindynos 2",
-    "next": "Akinos",
+    "next": "Ἄκινος",
     "chapters": [
       {
         "start": 1169,
@@ -35216,9 +35261,11 @@
     ]
   },
   {
-    "lemma": "Akinos",
+    "lemma": "Ἄκινος",
     "previous": "Akindynos 3",
     "next": "Akiris",
+    "sort_key": "Akinos",
+    "wp_link": "w:de:Feld-Steinquendel",
     "chapters": [
       {
         "start": 1170,
@@ -35229,7 +35276,7 @@
   },
   {
     "lemma": "Akiris",
-    "previous": "Akinos",
+    "previous": "Ἄκινος",
     "next": "Akis 1",
     "chapters": [
       {
@@ -35255,6 +35302,7 @@
     "lemma": "Akis 2",
     "previous": "Akis 1",
     "next": "Akithios",
+    "wp_link": "w:de:Akis",
     "chapters": [
       {
         "start": 1170,
@@ -35266,7 +35314,7 @@
   {
     "lemma": "Akithios",
     "previous": "Akis 2",
-    "next": "Akkabikon teichos",
+    "next": "Ἀκκαβικὸν τεῖχος",
     "chapters": [
       {
         "start": 1171,
@@ -35276,9 +35324,10 @@
     ]
   },
   {
-    "lemma": "Akkabikon teichos",
+    "lemma": "Ἀκκαβικὸν τεῖχος",
     "previous": "Akithios",
     "next": "Akkanai",
+    "sort_key": "Akkabikon teichos",
     "chapters": [
       {
         "start": 1171,
@@ -35289,7 +35338,7 @@
   },
   {
     "lemma": "Akkanai",
-    "previous": "Akkabikon teichos",
+    "previous": "Ἀκκαβικὸν τεῖχος",
     "next": "Akkaron",
     "chapters": [
       {
@@ -35302,6 +35351,7 @@
     "lemma": "Akkaron",
     "previous": "Akkanai",
     "next": "Akketa",
+    "wp_link": "w:de:Ekron",
     "chapters": [
       {
         "start": 1171,
@@ -35410,6 +35460,7 @@
     "lemma": "Akmon 1",
     "previous": "Akmenai",
     "next": "Akmon 2",
+    "wp_link": "w:de:Akmon (Vater des Uranos)",
     "chapters": [
       {
         "start": 1173,
@@ -35434,6 +35485,7 @@
     "lemma": "Akmon 3",
     "previous": "Akmon 2",
     "next": "Akmon 4",
+    "wp_link": "w:de:Akmon (Sohn des Klytios)",
     "chapters": [
       {
         "start": 1174,
@@ -35506,6 +35558,7 @@
     "lemma": "Akmonides 1",
     "previous": "Akmonia 2",
     "next": "Akmonides 2",
+    "wp_link": "w:de:Akmonides",
     "chapters": [
       {
         "start": 1174,
@@ -35517,7 +35570,7 @@
   {
     "lemma": "Akmonides 2",
     "previous": "Akmonides 1",
-    "next": "Akoen martyrein",
+    "next": "Ἀκοὴν μαρτυρεῖν",
     "chapters": [
       {
         "start": 1174,
@@ -35527,9 +35580,10 @@
     ]
   },
   {
-    "lemma": "Akoen martyrein",
+    "lemma": "Ἀκοὴν μαρτυρεῖν",
     "previous": "Akmonides 2",
     "next": "Akoites 1",
+    "sort_key": "Akoenmartyrein",
     "chapters": [
       {
         "start": 1175,
@@ -35540,7 +35594,7 @@
   },
   {
     "lemma": "Akoites 1",
-    "previous": "Akoen martyrein",
+    "previous": "Ἀκοὴν μαρτυρεῖν",
     "next": "Akoites 2",
     "chapters": [
       {
@@ -35601,7 +35655,7 @@
   {
     "lemma": "Akonites",
     "previous": "Akonai",
-    "next": "Akoniti",
+    "next": "Ἀκονιτί",
     "chapters": [
       {
         "start": 1178,
@@ -35611,9 +35665,9 @@
     ]
   },
   {
-    "lemma": "Akoniti",
+    "lemma": "Ἀκονιτί",
     "previous": "Akonites",
-    "next": "Akoniton",
+    "next": "Ἀκόνιτον",
     "chapters": [
       {
         "start": 1178,
@@ -35623,9 +35677,11 @@
     ]
   },
   {
-    "lemma": "Akoniton",
-    "previous": "Akoniti",
+    "lemma": "Ἀκόνιτον",
+    "previous": "Ἀκονιτί",
     "next": "Akontes",
+    "sort_key": "Akoniton",
+    "wp_link": "w:de:Eisenhut",
     "chapters": [
       {
         "start": 1178,
@@ -35636,7 +35692,7 @@
   },
   {
     "lemma": "Akontes",
-    "previous": "Akoniton",
+    "previous": "Ἀκόνιτον",
     "next": "Akonteus 1",
     "chapters": [
       {
@@ -35710,6 +35766,7 @@
     "lemma": "Akontios 2",
     "previous": "Akontios 1",
     "next": "Akontisma",
+    "redirect": true,
     "chapters": [
       {
         "start": 1185,
@@ -35721,7 +35778,7 @@
   {
     "lemma": "Akontisma",
     "previous": "Akontios 2",
-    "next": "Akontistai",
+    "next": "Ἀκοντισταί",
     "chapters": [
       {
         "start": 1185,
@@ -35731,9 +35788,10 @@
     ]
   },
   {
-    "lemma": "Akontistai",
+    "lemma": "Ἀκοντισταί",
     "previous": "Akontisma",
     "next": "Akoraba",
+    "sort_key": "Akontistai",
     "chapters": [
       {
         "start": 1185,
@@ -35744,7 +35802,7 @@
   },
   {
     "lemma": "Akoraba",
-    "previous": "Akontistai",
+    "previous": "Ἀκοντισταί",
     "next": "Akoris 1",
     "chapters": [
       {
@@ -35758,6 +35816,7 @@
     "lemma": "Akoris 1",
     "previous": "Akoraba",
     "next": "Akoris 2",
+    "wp_link": "w:de:Tihna al-Dschabal",
     "chapters": [
       {
         "start": 1186,

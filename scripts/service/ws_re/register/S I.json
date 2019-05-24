@@ -1460,6 +1460,7 @@
     "lemma": "Agathokles 2a",
     "previous": "Agathokleia 4",
     "next": "Agathokles 14a",
+    "sort_key": "Agathokles 02a",
     "chapters": [
       {
         "start": 23,
@@ -1616,8 +1617,7 @@
   },
   {
     "lemma": "Agesilaos 7a",
-    "previous": "Agesikles",
-    "next": "Agesipolis 5",
+
     "chapters": [
       {
         "start": 27,
@@ -1689,7 +1689,6 @@
   {
     "lemma": "Agias 8",
     "previous": "Agiadas 2",
-    "next": "Agiptria",
     "chapters": [
       {
         "start": 27,
@@ -2109,7 +2108,7 @@
   {
     "lemma": "Aigeidas",
     "previous": "Aiga 2",
-    "next": "Aigeira 2",
+
     "chapters": [
       {
         "start": 34,
@@ -2313,7 +2312,7 @@
   {
     "lemma": "Ainesidas",
     "previous": "Ainel",
-    "next": "Ainos 7a",
+
     "chapters": [
       {
         "start": 38,
@@ -2447,6 +2446,7 @@
     "lemma": "Aischylos 8a",
     "previous": "Aischylos 6a",
     "next": "Aischylos 16",
+    "sort_key": "Aischylos 08a",
     "chapters": [
       {
         "start": 40,
@@ -4079,7 +4079,7 @@
   {
     "lemma": "Amaios",
     "previous": "Alysis",
-    "next": "Amarcolitan",
+
     "chapters": [
       {
         "start": 66,
@@ -4198,8 +4198,7 @@
   },
   {
     "lemma": "Ameinias 11a",
-    "previous": "Ambrosios 3a",
-    "next": "Ameinias 17a",
+
     "chapters": [
       {
         "start": 67,
@@ -4450,7 +4449,7 @@
   },
   {
     "lemma": "Amphiklos 2",
-    "previous": "Amosta",
+
     "next": "Amphikrates 3a",
     "chapters": [
       {
@@ -4463,7 +4462,7 @@
   {
     "lemma": "Amphikrates 3a",
     "previous": "Amphiklos 2",
-    "next": "Amphimysione",
+
     "chapters": [
       {
         "start": 71,
@@ -4606,8 +4605,9 @@
   },
   {
     "lemma": "Amyntas 2a",
-    "previous": "Amynos 2",
+
     "next": "Amyntas 2b",
+    "sort_key": "Amyntas 02a",
     "chapters": [
       {
         "start": 74,
@@ -4620,6 +4620,7 @@
     "lemma": "Amyntas 2b",
     "previous": "Amyntas 2a",
     "next": "Amyntas 2c",
+    "sort_key": "Amyntas 02b",
     "chapters": [
       {
         "start": 74,
@@ -4632,6 +4633,7 @@
     "lemma": "Amyntas 2c",
     "previous": "Amyntas 2b",
     "next": "Amyntas 21a",
+    "sort_key": "Amyntas 02c",
     "chapters": [
       {
         "start": 74,
@@ -5103,6 +5105,7 @@
     "lemma": "Andronides",
     "previous": "Ἀνδρώνειοι",
     "next": "Andronikopolis",
+    "wp_link": "w:de:Archon (Amt)",
     "chapters": [
       {
         "start": 81,
@@ -5545,8 +5548,7 @@
   },
   {
     "lemma": "Antenor 2a",
-    "previous": "Anteius 5a",
-    "next": "Antheia 5a",
+
     "chapters": [
       {
         "start": 88,
@@ -5593,8 +5595,7 @@
   },
   {
     "lemma": "Antichares",
-    "previous": "Anthemystion",
-    "next": "Antigenes 5a",
+
     "chapters": [
       {
         "start": 89,
@@ -5605,8 +5606,9 @@
   },
   {
     "lemma": "Antigenes 5a",
-    "previous": "Antichares",
+
     "next": "Antigenes 5b",
+    "sort_key": "Antigenes 05a",
     "chapters": [
       {
         "start": 89,
@@ -5618,7 +5620,8 @@
   {
     "lemma": "Antigenes 5b",
     "previous": "Antigenes 5a",
-    "next": "Antigoneia 9",
+
+    "sort_key": "Antigenes 05b",
     "chapters": [
       {
         "start": 89,
@@ -5762,8 +5765,7 @@
   },
   {
     "lemma": "Antiochos 19a",
-    "previous": "Antiochis 7",
-    "next": "Antiochos 74",
+
     "chapters": [
       {
         "start": 92,
@@ -5822,7 +5824,7 @@
   },
   {
     "lemma": "Antiphilos 3a",
-    "previous": "Antiphata",
+
     "next": "Antiphilos 3b",
     "chapters": [
       {
@@ -6253,8 +6255,9 @@
   },
   {
     "lemma": "Apollodoros 4a",
-    "previous": "Aplestia",
+
     "next": "Apollodoros 41a",
+    "sort_key": "Apollodoros 04a",
     "chapters": [
       {
         "start": 108,
@@ -7166,7 +7169,7 @@
   {
     "lemma": "Archestrate",
     "previous": "Archenomos",
-    "next": "Archia",
+
     "chapters": [
       {
         "start": 119,
@@ -7189,8 +7192,9 @@
   },
   {
     "lemma": "Archias 3a",
-    "previous": "Archia",
+
     "next": "Archias 15a",
+    "sort_key": "Archias 003a",
     "chapters": [
       {
         "start": 119,
@@ -7215,6 +7219,7 @@
     "lemma": "Archias 17a",
     "previous": "Archias 15a",
     "next": "Archias 17b",
+    "sort_key": "Archias 017a",
     "chapters": [
       {
         "start": 119,
@@ -7250,7 +7255,8 @@
   {
     "lemma": "Archidamos 7a",
     "previous": "Archibucolus",
-    "next": "Archidendrophorus",
+
+    "sort_key": "Archidamos 07a",
     "chapters": [
       {
         "start": 120,
@@ -7285,7 +7291,7 @@
   },
   {
     "lemma": "Archikles 3a",
-    "previous": "Archidikastes",
+
     "next": "Archilaos",
     "chapters": [
       {
@@ -7393,8 +7399,7 @@
   },
   {
     "lemma": "Archon 4a",
-    "previous": "Archithiasites",
-    "next": "Ardabau",
+
     "chapters": [
       {
         "start": 123,
@@ -9553,7 +9558,7 @@
   },
   {
     "lemma": "Ateisidas 1",
-    "previous": "Asylum",
+
     "next": "Ateisidas 2",
     "chapters": [
       {
@@ -9637,7 +9642,7 @@
   },
   {
     "lemma": "Athambos 3",
-    "previous": "Ates lophos",
+
     "next": "Athanion 1",
     "chapters": [
       {
@@ -9749,6 +9754,7 @@
     "lemma": "Athenodoros 7a",
     "previous": "Athenion 1a",
     "next": "Athenodoros 14a",
+    "sort_key": "Athenodoros 07a",
     "chapters": [
       {
         "start": 221,
@@ -11477,7 +11483,7 @@
   {
     "lemma": "Bathyllos 4a",
     "previous": "Bathon",
-    "next": "Batnai 1",
+
     "chapters": [
       {
         "start": 245,
@@ -11524,8 +11530,7 @@
   },
   {
     "lemma": "Battos 11",
-    "previous": "Batromios",
-    "next": "Beeïa",
+
     "chapters": [
       {
         "start": 245,
@@ -11965,8 +11970,7 @@
   },
   {
     "lemma": "Boiotios",
-    "previous": "Boinops",
-    "next": "Boiskos 3a",
+
     "chapters": [
       {
         "start": 254,
@@ -12180,8 +12184,7 @@
   },
   {
     "lemma": "Brasidas 1a",
-    "previous": "Bovius 1a",
-    "next": "Bria",
+
     "chapters": [
       {
         "start": 257,
@@ -12300,7 +12303,7 @@
   },
   {
     "lemma": "Bubalos",
-    "previous": "Brysopegadion",
+
     "next": "Bubia",
     "chapters": [
       {
@@ -13339,7 +13342,7 @@
   },
   {
     "lemma": "Chairolas",
-    "previous": "Cestilius 2",
+
     "next": "Chaiton",
     "chapters": [
       {
@@ -13483,7 +13486,7 @@
   },
   {
     "lemma": "Charixenos 5",
-    "previous": "Charimortos",
+
     "next": "Charixenos 6",
     "chapters": [
       {
@@ -14740,8 +14743,8 @@
   },
   {
     "lemma": "Damaios a",
-    "previous": "Dalana(?)",
-    "next": "Damasippos 3a",
+
+    "sort_key": "Damaios 0a",
     "chapters": [
       {
         "start": 334,
@@ -14764,7 +14767,7 @@
   },
   {
     "lemma": "Damatrios 2a",
-    "previous": "Damasippos 3a",
+
     "next": "Damea",
     "chapters": [
       {
@@ -14836,7 +14839,7 @@
   },
   {
     "lemma": "Damokrates 2a",
-    "previous": "Damokrates 1a",
+
     "next": "Damokrates 2b",
     "chapters": [
       {
@@ -14872,8 +14875,9 @@
   },
   {
     "lemma": "Damon 8a",
-    "previous": "Damokritos 1a",
+
     "next": "Damon 8b",
+    "sort_key": "Damon 08a",
     "chapters": [
       {
         "start": 335,
@@ -14885,7 +14889,8 @@
   {
     "lemma": "Damon 8b",
     "previous": "Damon 8a",
-    "next": "Damon 15a",
+
+    "sort_key": "Damon 08b",
     "chapters": [
       {
         "start": 336,
@@ -14920,7 +14925,7 @@
   },
   {
     "lemma": "Damoxenos 1a",
-    "previous": "Damoteles 5",
+
     "next": "Damoxenos 1b",
     "chapters": [
       {

@@ -90,7 +90,6 @@
   {
     "lemma": "Abdere",
     "previous": "abecedarius, -a, -um",
-
     "chapters": [
       {
         "start": 14,
@@ -101,7 +100,6 @@
   },
   {
     "lemma": "Absalom 1",
-
     "next": "Absalom 2",
     "chapters": [
       {
@@ -389,7 +387,6 @@
   },
   {
     "lemma": "Adour",
-
     "next": "Adrabaecampi",
     "wp_link": "w:de:Adour",
     "chapters": [
@@ -499,7 +496,6 @@
   },
   {
     "lemma": "Aenus 2",
-
     "chapters": [
       {
         "start": 24,
@@ -510,7 +506,6 @@
   },
   {
     "lemma": "Aes excurrens",
-
     "next": "Aesis 2",
     "wp_link": "w:de:Römische Währung",
     "chapters": [
@@ -2767,7 +2762,7 @@
   {
     "lemma": "Apollonios 126a",
     "previous": "Apollodoros 76b",
-    "next": "Apostolion",
+    "next": "Ἀποστόλιον",
     "chapters": [
       {
         "start": 134,
@@ -2777,9 +2772,10 @@
     ]
   },
   {
-    "lemma": "Apostolion",
+    "lemma": "Ἀποστόλιον",
     "previous": "Apollonios 126a",
     "next": "Ἀποθηρευτής",
+    "sort_key": "Apostolion",
     "chapters": [
       {
         "start": 134,
@@ -2790,7 +2786,7 @@
   },
   {
     "lemma": "Ἀποθηρευτής",
-    "previous": "Apostolion",
+    "previous": "Ἀποστόλιον",
     "next": "Appenninus 1",
     "sort_key": "Apothereutes",
     "chapters": [
@@ -2865,6 +2861,7 @@
     "lemma": "Apronius 9a",
     "previous": "Aprio",
     "next": "Aps",
+    "sort_key": "Apronius 09a",
     "chapters": [
       {
         "start": 135,
@@ -5825,7 +5822,6 @@
   {
     "lemma": "Augustinus 3",
     "previous": "Augustalis",
-
     "chapters": [
       {
         "start": 185,
@@ -6059,7 +6055,6 @@
   },
   {
     "lemma": "Autun",
-
     "next": "Auvergne",
     "wp_link": "w:de:Autun",
     "chapters": [
@@ -6560,8 +6555,6 @@
   },
   {
     "lemma": "Bayeux",
-
-
     "wp_link": "w:de:Bayeux",
     "chapters": [
       {
@@ -7207,6 +7200,7 @@
     "lemma": "Bodensee",
     "previous": "Bodatius",
     "next": "Bodus, Boudus",
+    "wp_link": "w:de:Bodensee",
     "chapters": [
       {
         "start": 209,
@@ -16967,6 +16961,7 @@
     "lemma": "Hippos 3b",
     "previous": "Hippos 3a",
     "next": "Hippos 5",
+    "sort_key": "Hippos 03b",
     "chapters": [
       {
         "start": 1155,

@@ -17523,6 +17523,7 @@
     "lemma": "Diospolis 2",
     "previous": "Diospolis 1",
     "next": "Diospolis 3",
+    "sort_key": "Diospolis 02",
     "chapters": [
       {
         "start": 1144,
@@ -17560,6 +17561,8 @@
     "lemma": "Diospolis 5",
     "previous": "Diospolis 4",
     "next": "Diospolis 6",
+    "sort_key": "Diospolis 05",
+    "redirect": true,
     "chapters": [
       {
         "start": 1144,
@@ -17572,6 +17575,8 @@
     "lemma": "Diospolis 6",
     "previous": "Diospolis 5",
     "next": "Diospolis 7",
+    "sort_key": "Diospolis 06",
+    "wp_link": "w:de:Theben (Ägypten)",
     "chapters": [
       {
         "start": 1144,
@@ -17584,6 +17589,8 @@
     "lemma": "Diospolis 7",
     "previous": "Diospolis 6",
     "next": "Diospolis 8",
+    "sort_key": "Diospolis 07",
+    "wp_link": "w:de:Diospolis Parva",
     "chapters": [
       {
         "start": 1145,
@@ -17596,6 +17603,8 @@
     "lemma": "Diospolis 8",
     "previous": "Diospolis 7",
     "next": "Diospolis 9. 10",
+    "sort_key": "Diospolis 08",
+    "wp_link": "w:de:Tell el-Balamun",
     "chapters": [
       {
         "start": 1145,
@@ -17607,7 +17616,8 @@
   {
     "lemma": "Diospolis 9. 10",
     "previous": "Diospolis 8",
-    "next": "Diossoteriastai",
+    "next": "Διοσσωτηριασταί",
+    "sort_key": "Diospolis 09",
     "chapters": [
       {
         "start": 1145,
@@ -17617,9 +17627,9 @@
     ]
   },
   {
-    "lemma": "Diossoteriastai",
+    "lemma": "Διοσσωτηριασταί",
     "previous": "Diospolis 9. 10",
-    "next": "Dios Theodosia",
+    "next": "Διὸς Θεοδοσία",
     "chapters": [
       {
         "start": 1145,
@@ -17629,20 +17639,14 @@
     ]
   },
   {
-    "lemma": "Dios Theodosia",
-    "previous": "Diossoteriastai",
+    "lemma": "Διὸς Θεοδοσία",
+    "previous": "Διοσσωτηριασταί",
     "next": "Diosthyos",
-    "chapters": [
-      {
-        "start": 1145,
-        "end": 1146,
-        "author": "Bürchner"
-      }
-    ]
+    "sort_key": "Diostheodosia"
   },
   {
     "lemma": "Diosthyos",
-    "previous": "Dios Theodosia",
+    "previous": "Διὸς Θεοδοσία",
     "next": "Diosxeniastai",
     "chapters": [
       {

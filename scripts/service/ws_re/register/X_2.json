@@ -97,7 +97,7 @@
   {
     "lemma": "Ius sacrum",
     "previous": "Ius respondendi",
-    "next": "Ius scriptum und non scriptum",
+    "next": "Ius scriptum",
     "chapters": [
       {
         "start": 1292,
@@ -107,20 +107,13 @@
     ]
   },
   {
-    "lemma": "Ius scriptum und non scriptum",
+    "lemma": "Ius scriptum",
     "previous": "Ius sacrum",
-    "next": "Ius singulare",
-    "chapters": [
-      {
-        "start": 1300,
-        "end": 1301,
-        "author": "Leonhard"
-      }
-    ]
+    "next": "Ius singulare"
   },
   {
     "lemma": "Ius singulare",
-    "previous": "Ius scriptum und non scriptum",
+    "previous": "Ius scriptum",
     "next": "Ius strictum",
     "redirect": true,
     "chapters": [
@@ -145,7 +138,7 @@
   {
     "lemma": "Ius suffragii",
     "previous": "Ius strictum",
-    "next": "Iusciacus",
+    "next": "Ius tigni immittendi",
     "chapters": [
       {
         "start": 1302,
@@ -155,8 +148,20 @@
     ]
   },
   {
-    "lemma": "Iusciacus",
+    "lemma": "Ius tigni immittendi",
     "previous": "Ius suffragii",
+    "next": "Iusciacus",
+    "chapters": [
+      {
+        "start": 1306,
+        "end": 1306,
+        "author": "Manigk"
+      }
+    ]
+  },
+  {
+    "lemma": "Iusciacus",
+    "previous": "Ius tigni immittendi",
     "next": "Iussiacus",
     "chapters": [
       {
@@ -181,7 +186,7 @@
   {
     "lemma": "Iussum",
     "previous": "Iussiacus",
-    "next": "Ius tigni immittendi",
+    "next": "Iusta 1",
     "chapters": [
       {
         "start": 1306,
@@ -191,20 +196,8 @@
     ]
   },
   {
-    "lemma": "Ius tigni immittendi",
-    "previous": "Iussum",
-    "next": "Iusta 1",
-    "chapters": [
-      {
-        "start": 1306,
-        "end": 1306,
-        "author": "Manigk"
-      }
-    ]
-  },
-  {
     "lemma": "Iusta 1",
-    "previous": "Ius tigni immittendi",
+    "previous": "Iussum",
     "next": "Iusta 2",
     "chapters": [
       {
@@ -4720,6 +4713,7 @@
     "lemma": "Kalchas",
     "previous": "Kalbis",
     "next": "Kalchedon 1",
+    "wp_link": "w:de:Kalchas",
     "chapters": [
       {
         "start": 1552,
