@@ -742,15 +742,12 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam", "previous": "rubbish", "next": "something"}
         with self.assertRaisesRegex(RegisterException, "No strategy available"):
             register.update_lemma(update_dict, [])
-        update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam"}
-        with self.assertRaisesRegex(RegisterException, "Key Error in Dictionary"):
-            register.update_lemma(update_dict, [])
 
     def test_update_next_and_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
-        register.try_update_next_and_previous(update_dict, register.get_lemma_by_name("O"))
+        register._try_update_next_and_previous(update_dict, register.get_lemma_by_name("O"))
         post_lemma_previous = register.get_lemma_by_name("Ä")
         compare("O", post_lemma_previous["next"])
         post_lemma_next = register.get_lemma_by_name("Ü")
@@ -815,6 +812,66 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         compare("B", post_lemma_next["previous"])
         post_lemma_next_next = register.get_lemma_by_name("D")
         compare("Ü", post_lemma_next_next["previous"])
+
+    def test_update_by_insert_after_previous(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "Ä", "next": "Something"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("B")
+        compare("Ä", post_lemma["previous"])
+        compare(None, post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("Ä")
+        compare("B", post_lemma_previous["next"])
+        post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
+        compare("Ä", post_lemma_previous_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("O")
+        compare(None, post_lemma_next["previous"])
+
+    def test_update_by_insert_no_next_exists(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "Ä"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("B")
+        compare("Ä", post_lemma["previous"])
+        compare(None, post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("Ä")
+        compare("B", post_lemma_previous["next"])
+        post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
+        compare("Ä", post_lemma_previous_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("O")
+        compare(None, post_lemma_next["previous"])
+
+    def test_update_by_insert_before_next(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "Something", "next": "Ö"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("B")
+        compare(None, post_lemma["previous"])
+        compare("Ö", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("A")
+        compare(None, post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("Ö")
+        compare("B", post_lemma_next["previous"])
+        post_lemma_next_next = register.get_lemma_by_name("U")
+        compare("Ö", post_lemma_next_next["previous"])
+
+    def test_update_by_insert_before_next_no_previous(self):
+        copy_tst_data("I_1_sorting2", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "next": "Ö"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("B")
+        compare(None, post_lemma["previous"])
+        compare("Ö", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("A")
+        compare(None, post_lemma_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("Ö")
+        compare("B", post_lemma_next["previous"])
+        post_lemma_next_next = register.get_lemma_by_name("U")
+        compare("Ö", post_lemma_next_next["previous"])
 
     def test_update_pre_and_next_not_possible(self):
         copy_tst_data("I_1_sorting2", "I_1")
