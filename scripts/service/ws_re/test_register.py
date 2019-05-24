@@ -5,14 +5,13 @@ import time
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
-from unittest import TestCase, skip, skipUnless
+from unittest import TestCase, skip
 
 from testfixtures import compare
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes
 from scripts.service.ws_re.register import Author, Authors, VolumeRegister, LemmaChapter, Lemma, \
     AlphabeticRegister, Registers, AuthorCrawler, RegisterException
-from tools import INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
@@ -482,6 +481,8 @@ class TestLemma(BaseTestRegister):
         compare("hestiasis", Lemma.make_sort_key("Ἑστίασις"))
         compare("hiaron tas athanaias", Lemma.make_sort_key("Ἱαρὸν τᾶς Ἀθαναίας"))
         compare("agnu keras", Lemma.make_sort_key("Ἀγνοῦ κέρας"))
+        compare("aptuchu hieron", Lemma.make_sort_key("Ἀπτούχου ἱερόν"))
+        compare("hyakinthis hodos", Lemma.make_sort_key("Ὑακινθὶς ὁδός"))
 
 
     def test_sort_key_provide_by_lemma(self):

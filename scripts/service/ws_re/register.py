@@ -296,6 +296,10 @@ _PRE_REGEX_RAW_LIST = [
     (r"ου", "u"),
     (r"Ε", "he"),
     (r"Ι", "hi"),
+    (r"Υ", "hy"),
+    (r" ε", " he"),
+    (r" ι", " hi"),
+    (r" ο", " ho"),
 ]
 
 _PRE_REGEX_LIST = []
