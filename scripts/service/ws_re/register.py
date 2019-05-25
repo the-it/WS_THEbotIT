@@ -656,7 +656,7 @@ class VolumeRegister(Register):
 
     def _update_in_supplements_with_neighbour_creation(self,
                                                        lemma_to_update: Lemma,
-                                                       lemma_dict: Dict[str,Union[str, List]],
+                                                       lemma_dict: Dict[str, Union[str, List]],
                                                        remove_items: List[str]):
         lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
         idx = self.get_index_of_lemma(lemma_to_update)
