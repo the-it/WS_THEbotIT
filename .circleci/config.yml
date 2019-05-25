@@ -32,6 +32,14 @@ flake8: &flake8
       . venv/bin/activate
       make flake8
 
+bandit: &bandit
+  run:
+    name: bandit
+    when: always
+    command: |
+      . venv/bin/activate
+      make bandit
+
 pycodestyle: &pycodestyle
   run:
     name: pycodestyle
@@ -101,6 +109,7 @@ quality_steps: &quality_steps
     - <<: *pycodestyle
     - <<: *pylint
     - <<: *safety
+    - <<: *bandit
 
 coverage_steps: &coverage_steps
   steps:

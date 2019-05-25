@@ -876,6 +876,40 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         post_lemma_next_next = register.get_lemma_by_name("U")
         compare("Ö", post_lemma_next_next["previous"])
 
+    def test_update_create_next_previous_supplement_by_sort_key(self):
+        copy_tst_data("I_1_sorting2", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "Ö", "previous": "N", "next": "P"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("Ö")
+        compare("N", post_lemma["previous"])
+        compare("P", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("N")
+        compare("Ö", post_lemma_previous["next"])
+        post_lemma_previous_previous = register.get_lemma_by_name("A")
+        compare(None, post_lemma_previous_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("P")
+        compare("Ö", post_lemma_next["previous"])
+        post_lemma_next_next = register.get_lemma_by_name("U")
+        compare(None, post_lemma_next_next["previous"])
+
+    def test_update_create_next_previous_supplement_by_name(self):
+        copy_tst_data("I_1_sorting2", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "O", "previous": "N", "next": "P"}
+        register.update_lemma(update_dict, [])
+        post_lemma = register.get_lemma_by_name("O")
+        compare("N", post_lemma["previous"])
+        compare("P", post_lemma["next"])
+        post_lemma_previous = register.get_lemma_by_name("N")
+        compare("O", post_lemma_previous["next"])
+        post_lemma_previous_previous = register.get_lemma_by_name("A")
+        compare(None, post_lemma_previous_previous["next"])
+        post_lemma_next = register.get_lemma_by_name("P")
+        compare("O", post_lemma_next["previous"])
+        post_lemma_next_next = register.get_lemma_by_name("U")
+        compare(None, post_lemma_next_next["previous"])
+
     def test_update_pre_and_next_not_possible(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
