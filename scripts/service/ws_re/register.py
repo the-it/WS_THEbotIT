@@ -660,16 +660,23 @@ class VolumeRegister(Register):
                                                        remove_items: List[str]):
         lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
         idx = self.get_index_of_lemma(lemma_to_update)
-        self[idx - 1].update_lemma_dict({}, ["next"])
-        self[idx + 1].update_lemma_dict({}, ["previous"])
-        self.lemmas.insert(idx,
-                           Lemma({"lemma": lemma_dict["previous"], "next": lemma_dict["lemma"]},
-                                 self.volume,
-                                 self._authors))
-        self.lemmas.insert(idx + 2,
-                           Lemma({"lemma": lemma_dict["next"], "previous": lemma_dict["lemma"]},
-                                 self.volume,
-                                 self._authors))
+        if self[idx - 1].sort_key == Lemma.make_sort_key(lemma_dict["previous"]):
+            self._try_update_previous(lemma_to_update, lemma_dict)
+        else:
+            self[idx - 1].update_lemma_dict({}, ["next"])
+            self.lemmas.insert(idx,
+                               Lemma({"lemma": lemma_dict["previous"], "next": lemma_dict["lemma"]},
+                                     self.volume,
+                                     self._authors))
+        idx = self.get_index_of_lemma(lemma_to_update)
+        if self[idx + 1].sort_key == Lemma.make_sort_key(lemma_dict["next"]):
+            self._try_update_next(lemma_to_update, lemma_dict)
+        else:
+            self[idx + 1].update_lemma_dict({}, ["previous"])
+            self.lemmas.insert(idx + 1,
+                               Lemma({"lemma": lemma_dict["next"], "previous": lemma_dict["lemma"]},
+                                     self.volume,
+                                     self._authors))
 
     def _update_pre_and_post_exists(self, lemma_dict):
         pre_lemma = self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]))
