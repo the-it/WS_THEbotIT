@@ -889,6 +889,11 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         compare("Ö", post_lemma_next["previous"])
         post_lemma_next_next = register.get_lemma_by_name("U")
         compare(None, post_lemma_next_next["previous"])
+        self.assertTrue(register.get_index_of_lemma("A") <
+                        register.get_index_of_lemma("N") <
+                        register.get_index_of_lemma("Ö") <
+                        register.get_index_of_lemma("P") <
+                        register.get_index_of_lemma("U"))
 
     def test_update_create_next_previous_supplement_by_name(self):
         copy_tst_data("I_1_sorting2", "S I")

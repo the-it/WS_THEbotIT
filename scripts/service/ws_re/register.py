@@ -662,11 +662,11 @@ class VolumeRegister(Register):
         idx = self.get_index_of_lemma(lemma_to_update)
         self[idx - 1].update_lemma_dict({}, ["next"])
         self[idx + 1].update_lemma_dict({}, ["previous"])
-        self.lemmas.insert(idx - 1,
+        self.lemmas.insert(idx,
                            Lemma({"lemma": lemma_dict["previous"], "next": lemma_dict["lemma"]},
                                  self.volume,
                                  self._authors))
-        self.lemmas.insert(idx + 1,
+        self.lemmas.insert(idx + 2,
                            Lemma({"lemma": lemma_dict["next"], "previous": lemma_dict["lemma"]},
                                  self.volume,
                                  self._authors))
