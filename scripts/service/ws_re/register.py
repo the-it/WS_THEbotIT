@@ -7,7 +7,7 @@ from collections.abc import Mapping
 from datetime import datetime
 from typing import Dict, Union, Sequence, Tuple, List, Any
 
-from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, Volumes
+from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, Volumes, VolumeType
 
 
 class RegisterException(Exception):
@@ -619,9 +619,7 @@ class VolumeRegister(Register):
         sort_key = self.normalize_sort_key(lemma_dict)
 
         if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
-            lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
-            lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
-            self._try_update_next_and_previous(lemma_dict, lemma_to_update)
+            self._update_lemma_by_name(lemma_dict, remove_items)
         elif self.get_lemma_by_sort_key(sort_key):
             self._update_by_sortkey(lemma_dict, remove_items)
         elif "previous" in lemma_dict and "next" in lemma_dict \
@@ -638,6 +636,40 @@ class VolumeRegister(Register):
             raise RegisterException(f"The update of the register {self.volume.name} "
                                     f"with the dict {lemma_dict} is not possible. "
                                     f"No strategy available")
+
+    def _update_lemma_by_name(self, lemma_dict, remove_items):
+        lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
+        if self.volume.type == VolumeType.SUPPLEMENTS:
+            self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
+        else:
+            lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
+            self._try_update_next_and_previous(lemma_dict, lemma_to_update)
+
+    def _update_by_sortkey(self, lemma_dict: Dict[str, Any], remove_items: List[str]):
+        lemma_to_update = self.get_lemma_by_sort_key(self.normalize_sort_key(lemma_dict))
+        if self.volume.type == VolumeType.SUPPLEMENTS:
+            self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
+        else:
+            self.try_update_previous_next_of_surrounding_lemmas(lemma_dict, lemma_to_update)
+            lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
+            self._try_update_next_and_previous(lemma_dict, lemma_to_update)
+
+    def _update_in_supplements_with_neighbour_creation(self,
+                                                       lemma_to_update: Lemma,
+                                                       lemma_dict: Dict[str,Union[str, List]],
+                                                       remove_items: List[str]):
+        lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
+        idx = self.get_index_of_lemma(lemma_to_update)
+        self[idx - 1].update_lemma_dict({}, ["next"])
+        self[idx + 1].update_lemma_dict({}, ["previous"])
+        self.lemmas.insert(idx - 1,
+                           Lemma({"lemma": lemma_dict["previous"], "next": lemma_dict["lemma"]},
+                                 self.volume,
+                                 self._authors))
+        self.lemmas.insert(idx + 1,
+                           Lemma({"lemma": lemma_dict["next"], "previous": lemma_dict["lemma"]},
+                                 self.volume,
+                                 self._authors))
 
     def _update_pre_and_post_exists(self, lemma_dict):
         pre_lemma = self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]))
@@ -713,13 +745,6 @@ class VolumeRegister(Register):
                     self.try_update_previous_next_of_surrounding_lemmas(pre_lemma_dict, pre_lemma)
                 except RegisterException:
                     pass
-
-    def _update_by_sortkey(self, lemma_dict: Dict[str, Any], remove_items: List[str]):
-        lemma_to_update = self.get_lemma_by_sort_key(self.normalize_sort_key(lemma_dict))
-
-        self.try_update_previous_next_of_surrounding_lemmas(lemma_dict, lemma_to_update)
-        lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
-        self._try_update_next_and_previous(lemma_dict, lemma_to_update)
 
     def try_update_previous_next_of_surrounding_lemmas(self, lemma_dict, lemma_to_update):
         idx = self.get_index_of_lemma(lemma_to_update)
