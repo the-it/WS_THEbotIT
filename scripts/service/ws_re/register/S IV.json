@@ -1784,7 +1784,6 @@
   {
     "lemma": "Demetrios 48a",
     "previous": "Demarchos 6",
-    "next": "Demonikos 2a",
     "sort_key": "Demetrios 048a",
     "chapters": [
       {
@@ -1795,8 +1794,12 @@
     ]
   },
   {
+    "lemma": "Demokritos 6",
+    "next": "Demonikos 2a"
+  },
+  {
     "lemma": "Demonikos 2a",
-    "previous": "Demetrios 48a",
+    "previous": "Demokritos 6",
     "next": "Demophon 10",
     "chapters": [
       {
@@ -1821,7 +1824,7 @@
   {
     "lemma": "Demosthenes 4a",
     "previous": "Demophon 10",
-    "next": "Derdas 4",
+    "next": null,
     "chapters": [
       {
         "start": 224,
@@ -1831,8 +1834,12 @@
     ]
   },
   {
+    "lemma": "Denuntiatio",
+    "next": "Derdas 4"
+  },
+  {
     "lemma": "Derdas 4",
-    "previous": "Demosthenes 4a",
+    "previous": "Denuntiatio",
     "next": "Dexandros 2",
     "chapters": [
       {
@@ -1845,7 +1852,7 @@
   {
     "lemma": "Dexandros 2",
     "previous": "Derdas 4",
-    "next": "Diakrier 2",
+    "next": null,
     "chapters": [
       {
         "start": 224,
@@ -1855,8 +1862,12 @@
     ]
   },
   {
+    "lemma": "Dexandros",
+    "next": "Diakrier 2"
+  },
+  {
     "lemma": "Diakrier 2",
-    "previous": "Dexandros 2",
+    "previous": "Dexandros",
     "next": "Didas 2",
     "chapters": [
       {

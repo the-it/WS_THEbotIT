@@ -1,7 +1,7 @@
 [
   {
     "lemma": "Donatio",
-    "previous": null,
+    "previous": "Donatianus 3",
     "next": "Donatismus",
     "chapters": [
       {
@@ -8397,7 +8397,7 @@
   },
   {
     "lemma": "Eburum 1",
-    "previous": "Eburones",
+    "previous": "Eburovices",
     "next": "Eburum 2",
     "chapters": [
       {
@@ -8434,8 +8434,8 @@
   },
   {
     "lemma": "Eburovices",
-    "previous": "Ebusus",
-    "next": "Eccela",
+    "previous": "Eburones",
+    "next": "Eburum 1",
     "chapters": [
       {
         "start": 1903,
@@ -23087,7 +23087,7 @@
   {
     "lemma": "Ephodia",
     "previous": "Ephka",
-    "next": "Ephodion",
+    "next": "Ἐφόδιον",
     "chapters": [
       {
         "start": 2859,
@@ -23122,7 +23122,7 @@
   },
   {
     "lemma": "Ephorkios",
-    "previous": "Epholkion",
+    "previous": "Ἐφόλκιον",
     "next": "Ephoroi",
     "chapters": [
       {
@@ -23135,6 +23135,7 @@
   {
     "lemma": "Ephoroi",
     "previous": "Ephorkios",
+    "next": null,
     "chapters": [
       {
         "start": 2860,

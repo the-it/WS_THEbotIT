@@ -2580,7 +2580,7 @@
   {
     "lemma": "Asandi",
     "previous": "Asanabara",
-    "next": "Asandion",
+    "next": "Ἀσάνδιον",
     "chapters": [
       {
         "start": 1515,
@@ -2590,7 +2590,7 @@
     ]
   },
   {
-    "lemma": "Asandion",
+    "lemma": "Ἀσάνδιον",
     "previous": "Asandi",
     "next": "Asandros 1",
     "chapters": [
@@ -2603,7 +2603,7 @@
   },
   {
     "lemma": "Asandros 1",
-    "previous": "Asandion",
+    "previous": "Ἀσάνδιον",
     "next": "Asandros 2",
     "chapters": [
       {
@@ -30603,6 +30603,7 @@
     "lemma": "Aurunculeius 6",
     "previous": "Aurunculeius 5",
     "next": "Aurunculeius 7",
+    "wp_link": "w:de:Lucius Aurunculeius Cotta",
     "chapters": [
       {
         "start": 2555,
@@ -31841,7 +31842,7 @@
   {
     "lemma": "Autokrates 5",
     "previous": "Autokrates 4",
-    "next": "Autokrator",
+    "next": "Αὐτοκράτωρ",
     "chapters": [
       {
         "start": 2598,
@@ -31851,9 +31852,11 @@
     ]
   },
   {
-    "lemma": "Autokrator",
+    "lemma": "Αὐτοκράτωρ",
     "previous": "Autokrates 5",
     "next": "Autokratorikos",
+    "sort_key": "Autokrator",
+    "wp_link": "w:de:Diktator",
     "chapters": [
       {
         "start": 2599,
@@ -31864,7 +31867,7 @@
   },
   {
     "lemma": "Autokratorikos",
-    "previous": "Autokrator",
+    "previous": "Αὐτοκράτωρ",
     "next": "Autolala",
     "chapters": [
       {
@@ -42414,7 +42417,7 @@
   {
     "lemma": "Barbarikon",
     "previous": "Barbaries",
-    "next": "Barbarikon pedion",
+    "next": "Βαρβαρικὸν πεδίον",
     "chapters": [
       {
         "start": 2858,
@@ -42423,9 +42426,10 @@
     ]
   },
   {
-    "lemma": "Barbarikon pedion",
+    "lemma": "Βαρβαρικὸν πεδίον",
     "previous": "Barbarikon",
-    "next": "Barbarion akron",
+    "next": "Βαρβάριον ἄκρον",
+    "sort_key": "Barbarikon pedion",
     "chapters": [
       {
         "start": 2858,
@@ -42435,9 +42439,11 @@
     ]
   },
   {
-    "lemma": "Barbarion akron",
-    "previous": "Barbarikon pedion",
+    "lemma": "Βαρβάριον ἄκρον",
+    "previous": "Βαρβαρικὸν πεδίον",
     "next": "Barbari promunturium",
+    "sort_key": "Barbarion akron",
+    "wp_link": "w:de:Cabo Espichel",
     "chapters": [
       {
         "start": 2858,
@@ -42448,7 +42454,7 @@
   },
   {
     "lemma": "Barbari promunturium",
-    "previous": "Barbarion akron",
+    "previous": "Βαρβάριον ἄκρον",
     "next": "Barbaroi",
     "chapters": [
       {
@@ -42569,6 +42575,7 @@
   {
     "lemma": "Astakides 2",
     "previous": "Astakides 1",
+    "next": null,
     "chapters": [
       {
         "start": 2861,

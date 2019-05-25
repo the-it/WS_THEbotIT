@@ -450,6 +450,7 @@
     "lemma": "Bardesanes",
     "previous": "Barderate",
     "next": "Bardi",
+    "wp_link": "w:de:Bardesanes",
     "chapters": [
       {
         "start": 8,
@@ -658,6 +659,7 @@
     "lemma": "Barea 2",
     "previous": "Barea 1",
     "next": "Barech",
+    "wp_link": "w:de:Quintus Marcius Barea Soranus",
     "chapters": [
       {
         "start": 12,
@@ -8935,7 +8937,7 @@
   {
     "lemma": "Belunum",
     "previous": "Beltra",
-    "next": "Bema 1",
+    "next": "Βῆμα 1",
     "chapters": [
       {
         "start": 264,
@@ -8944,9 +8946,10 @@
     ]
   },
   {
-    "lemma": "Bema 1",
+    "lemma": "Βῆμα 1",
     "previous": "Belunum",
-    "next": "Bema 2",
+    "next": "Βῆμα 2",
+    "sort_key": "Bema 1",
     "chapters": [
       {
         "start": 264,
@@ -8956,8 +8959,8 @@
     ]
   },
   {
-    "lemma": "Bema 2",
-    "previous": "Bema 1",
+    "lemma": "Βῆμα 2",
+    "previous": "Βῆμα 1",
     "next": "Bemarchios",
     "chapters": [
       {
@@ -8969,7 +8972,7 @@
   },
   {
     "lemma": "Bemarchios",
-    "previous": "Bema 2",
+    "previous": "Βῆμα 2",
     "next": "Bemaste",
     "chapters": [
       {
@@ -9667,7 +9670,7 @@
   {
     "lemma": "Bepsipon",
     "previous": "Bephyras",
-    "next": "Bepyrron oros",
+    "next": "Βήπυρρον ὄρος",
     "chapters": [
       {
         "start": 277,
@@ -9676,9 +9679,10 @@
     ]
   },
   {
-    "lemma": "Bepyrron oros",
+    "lemma": "Βήπυρρον ὄρος",
     "previous": "Bepsipon",
     "next": "Bera",
+    "sort_key": "Bepyrron oros",
     "chapters": [
       {
         "start": 277,
@@ -9689,7 +9693,7 @@
   },
   {
     "lemma": "Bera",
-    "previous": "Bepyrron oros",
+    "previous": "Βήπυρρον ὄρος",
     "next": "Berabai",
     "chapters": [
       {
@@ -9913,7 +9917,7 @@
   },
   {
     "lemma": "Berebis",
-    "previous": "Berea",
+    "previous": "Bera",
     "next": "Berecyntius tractus",
     "chapters": [
       {
@@ -10314,7 +10318,7 @@
   {
     "lemma": "Berenus",
     "previous": "Berenikis",
-    "next": "Beres 1",
+    "next": "Berga",
     "chapters": [
       {
         "start": 290,
@@ -11064,6 +11068,7 @@
     "lemma": "Beroia 5",
     "previous": "Beroia 4",
     "next": "Beroia 6",
+    "wp_link": "w:de:Aleppo",
     "chapters": [
       {
         "start": 307,
@@ -11623,7 +11628,7 @@
   {
     "lemma": "Berzamma",
     "previous": "Berzamis",
-    "next": "Berzeo",
+    "next": "Berzana",
     "chapters": [
       {
         "start": 323,
@@ -11633,8 +11638,13 @@
     ]
   },
   {
-    "lemma": "Berzeo",
+    "lemma": "Berzana",
     "previous": "Berzamma",
+    "next": "Berzeo"
+  },
+  {
+    "lemma": "Berzeo",
+    "previous": "Berzana",
     "next": "Berzetho",
     "chapters": [
       {
@@ -12342,7 +12352,7 @@
   },
   {
     "lemma": "Bethakad",
-    "previous": "Bethagla 4",
+    "previous": "Bethagla",
     "next": "Bethalaga",
     "chapters": [
       {
@@ -12413,6 +12423,7 @@
     "lemma": "Bethania",
     "previous": "Bethana",
     "next": "Bethannaba",
+    "wp_link": "w:de:Bethanien (Israel)",
     "chapters": [
       {
         "start": 362,
@@ -12424,7 +12435,7 @@
   {
     "lemma": "Bethannaba",
     "previous": "Bethania",
-    "next": "Bethar 1",
+    "next": "Bethar",
     "chapters": [
       {
         "start": 362,
@@ -12660,6 +12671,7 @@
     "lemma": "Bethlehem",
     "previous": "Bethezob",
     "next": "Bethleptepha",
+    "wp_link": "w:de:Bethlehem",
     "chapters": [
       {
         "start": 364,
@@ -12684,6 +12696,7 @@
     "lemma": "Bethmaëla",
     "previous": "Bethleptepha",
     "next": "Bethmaus",
+    "sort_key": "Bethmaela",
     "chapters": [
       {
         "start": 364,
@@ -13487,6 +13500,7 @@
     "lemma": "Bezetha 2",
     "previous": "Bezetha 1",
     "next": "Bia 1",
+    "wp_link": "w:de:Bethesda",
     "chapters": [
       {
         "start": 379,
@@ -14532,7 +14546,8 @@
   {
     "lemma": "Bidental",
     "previous": "Bidens 2",
-    "next": "Bideoi",
+    "next": "Βίδεοι",
+    "wp_link": "w:de:Blitz",
     "chapters": [
       {
         "start": 429,
@@ -14542,9 +14557,10 @@
     ]
   },
   {
-    "lemma": "Bideoi",
+    "lemma": "Βίδεοι",
     "previous": "Bidental",
     "next": "Bideris",
+    "sort_key": "Bideoi",
     "chapters": [
       {
         "start": 431,
@@ -14555,7 +14571,7 @@
   },
   {
     "lemma": "Bideris",
-    "previous": "Bideoi",
+    "previous": "Βίδεοι",
     "next": "Bidiaioi",
     "chapters": [
       {
@@ -14639,6 +14655,7 @@
     "lemma": "Bieneches",
     "previous": "Biene",
     "next": "Bienenzucht",
+    "wp_link": "w:de:Hor Qaa",
     "chapters": [
       {
         "start": 450,
@@ -14711,6 +14728,8 @@
     "lemma": "Bier",
     "previous": "Biephi",
     "next": "Biesius",
+    "wp_link": "w:de:Bier",
+    "ws_link": "s:de:Bier",
     "chapters": [
       {
         "start": 457,
@@ -15313,6 +15332,7 @@
     "lemma": "Bingium",
     "previous": "Bineses",
     "next": "Binio",
+    "wp_link": "w:de:Bingen am Rhein",
     "chapters": [
       {
         "start": 475,
@@ -15700,6 +15720,7 @@
     "lemma": "Bipedimui",
     "previous": "Bipalium",
     "next": "Bipennis",
+    "redirect": true,
     "chapters": [
       {
         "start": 488,
@@ -15935,6 +15956,7 @@
     "lemma": "Birnbaum",
     "previous": "Birkenna",
     "next": "Birosabon",
+    "wp_link": "w:de:Birnen",
     "chapters": [
       {
         "start": 491,
@@ -16633,6 +16655,7 @@
     "lemma": "Bithias",
     "previous": "Bithia 2",
     "next": "Bithiga",
+    "wp_link": "w:de:Mesopotamien",
     "chapters": [
       {
         "start": 506,
@@ -17373,6 +17396,7 @@
     "lemma": "Biyt",
     "previous": "Biyres",
     "next": "Bizana",
+    "wp_link": "w:de:Arachosien",
     "chapters": [
       {
         "start": 551,
@@ -17432,7 +17456,7 @@
   {
     "lemma": "Blabe",
     "previous": "Bizye",
-    "next": "Blabes dike",
+    "next": "Βλάβης δίκη",
     "chapters": [
       {
         "start": 552,
@@ -17442,9 +17466,10 @@
     ]
   },
   {
-    "lemma": "Blabes dike",
+    "lemma": "Βλάβης δίκη",
     "previous": "Blabe",
     "next": "Blabia",
+    "sort_key": "Blabes dike",
     "chapters": [
       {
         "start": 552,
@@ -17455,7 +17480,7 @@
   },
   {
     "lemma": "Blabia",
-    "previous": "Blabes dike",
+    "previous": "Βλάβης δίκη",
     "next": "Blaboriciacum",
     "chapters": [
       {
@@ -17469,6 +17494,7 @@
     "lemma": "Blaboriciacum",
     "previous": "Blabia",
     "next": "Blachernai",
+    "wp_link": "w:de:Lorch (Oberösterreich)",
     "chapters": [
       {
         "start": 554,
@@ -17742,7 +17768,7 @@
   {
     "lemma": "Blariacum",
     "previous": "Blanona",
-    "next": "Blasco(n)",
+    "next": "Blascon",
     "wp_link": "w:de:Blerick",
     "chapters": [
       {
@@ -17753,7 +17779,7 @@
     ]
   },
   {
-    "lemma": "Blasco(n)",
+    "lemma": "Blascon",
     "previous": "Blariacum",
     "next": "Blasio",
     "chapters": [
@@ -17766,7 +17792,7 @@
   },
   {
     "lemma": "Blasio",
-    "previous": "Blasco(n)",
+    "previous": "Blascon",
     "next": "Blasta",
     "chapters": [
       {
@@ -18234,6 +18260,7 @@
     "lemma": "Bleza",
     "previous": "Bletisa",
     "next": "Blezis",
+    "wp_link": "w:de:Blies",
     "chapters": [
       {
         "start": 570,
@@ -18484,7 +18511,7 @@
   {
     "lemma": "Bnon",
     "previous": "Bmervasecus",
-    "next": "Bo...",
+    "next": "Bo…",
     "wp_link": "w:de:Beon",
     "chapters": [
       {
@@ -18495,9 +18522,10 @@
     ]
   },
   {
-    "lemma": "Bo...",
+    "lemma": "Bo…",
     "previous": "Bnon",
     "next": "Boa",
+    "sort_key": "Bo",
     "chapters": [
       {
         "start": 571,
@@ -18508,7 +18536,7 @@
   },
   {
     "lemma": "Boa",
-    "previous": "Bo...",
+    "previous": "Bo…",
     "next": "Boacias",
     "chapters": [
       {
@@ -18521,7 +18549,7 @@
   {
     "lemma": "Boacias",
     "previous": "Boa",
-    "next": "Boagos",
+    "next": "Βοαγός",
     "chapters": [
       {
         "start": 572,
@@ -18531,9 +18559,10 @@
     ]
   },
   {
-    "lemma": "Boagos",
+    "lemma": "Βοαγός",
     "previous": "Boacias",
     "next": "Boagrios",
+    "sort_key": "Boagos",
     "chapters": [
       {
         "start": 572,
@@ -18544,7 +18573,7 @@
   },
   {
     "lemma": "Boagrios",
-    "previous": "Boagos",
+    "previous": "Βοαγός",
     "next": "Boaktes",
     "chapters": [
       {
@@ -18568,7 +18597,7 @@
   {
     "lemma": "Boalia",
     "previous": "Boaktes",
-    "next": "Boane limne",
+    "next": "Βοάνη λίμνη",
     "chapters": [
       {
         "start": 572,
@@ -18578,7 +18607,7 @@
     ]
   },
   {
-    "lemma": "Boane limne",
+    "lemma": "Βοάνη λίμνη",
     "previous": "Boalia",
     "next": "Boanensis",
     "chapters": [
@@ -18591,7 +18620,7 @@
   },
   {
     "lemma": "Boanensis",
-    "previous": "Boane limne",
+    "previous": "Βοάνη λίμνη",
     "next": "Boanum",
     "chapters": [
       {
@@ -18629,6 +18658,7 @@
     "lemma": "Boarium forum",
     "previous": "Boaris",
     "next": "Boarius campus",
+    "wp_link": "w:de:Forum Boarium",
     "chapters": [
       {
         "start": 573,
@@ -18653,6 +18683,7 @@
     "lemma": "Boarmia",
     "previous": "Boarius campus",
     "next": "Boas",
+    "wp_link": "w:de:Athena",
     "chapters": [
       {
         "start": 575,
@@ -18926,6 +18957,7 @@
     "lemma": "Bockshornklee",
     "previous": "Bochos",
     "next": "Bococilon",
+    "wp_link": "w:de:Bockshornklee",
     "chapters": [
       {
         "start": 580,
@@ -18973,6 +19005,7 @@
     "lemma": "Bodenkunde",
     "previous": "Bodencus",
     "next": "Boderia",
+    "wp_link": "w:de:Bodenkunde",
     "chapters": [
       {
         "start": 582,
@@ -19024,6 +19057,7 @@
     "lemma": "Bodincus",
     "previous": "Bodincomagus",
     "next": "Bodinoi",
+    "wp_link": "w:de:Po (Fluss)",
     "chapters": [
       {
         "start": 592,
@@ -19285,7 +19319,7 @@
   {
     "lemma": "Boëdromios",
     "previous": "Boëdromion",
-    "next": "Boegia",
+    "next": "Βοηγία",
     "sort_key": "Boedromios",
     "wp_link": "w:de:Boëdromios",
     "chapters": [
@@ -19297,7 +19331,7 @@
     ]
   },
   {
-    "lemma": "Boegia",
+    "lemma": "Βοηγία",
     "previous": "Boëdromios",
     "next": "Böser Blick",
     "chapters": [
@@ -19309,7 +19343,7 @@
   },
   {
     "lemma": "Böser Blick",
-    "previous": "Boegia",
+    "previous": "Βοηγία",
     "next": "Boëthene",
     "chapters": [
       {
@@ -19322,6 +19356,7 @@
     "lemma": "Boëthene",
     "previous": "Böser Blick",
     "next": "Boëthius 1",
+    "sort_key": "Boethene",
     "chapters": [
       {
         "start": 596,
@@ -19392,6 +19427,8 @@
     "lemma": "Boëthos 1",
     "previous": "Boëthius 4",
     "next": "Boëthos 2",
+    "sort_key": "Boethos 01",
+    "wp_link": "w:de:Hetepsechemui",
     "chapters": [
       {
         "start": 601,
@@ -19518,6 +19555,7 @@
     "lemma": "Boëthos 11",
     "previous": "Boëthos 10",
     "next": "Boëthos 12",
+    "sort_key": "Boethos 11",
     "chapters": [
       {
         "start": 604,
@@ -19723,6 +19761,7 @@
     "lemma": "Bohne",
     "previous": "Bogudes 2",
     "next": "Boia 1",
+    "wp_link": "w:de:Bohne",
     "chapters": [
       {
         "start": 609,
@@ -19794,7 +19833,7 @@
   {
     "lemma": "Boiates",
     "previous": "Boiamba",
-    "next": "Boiatikos kolpos",
+    "next": "Βοιατικὸς κόλπος",
     "chapters": [
       {
         "start": 628,
@@ -19804,7 +19843,7 @@
     ]
   },
   {
-    "lemma": "Boiatikos kolpos",
+    "lemma": "Βοιατικὸς κόλπος",
     "previous": "Boiates",
     "next": "Boibe 1",
     "redirect": true,
@@ -19817,7 +19856,7 @@
   },
   {
     "lemma": "Boibe 1",
-    "previous": "Boiatikos kolpos",
+    "previous": "Βοιατικὸς κόλπος",
     "next": "Boibe 2",
     "chapters": [
       {
@@ -19967,6 +20006,7 @@
     "lemma": "Boio",
     "previous": "Boinoa",
     "next": "Boiocales",
+    "wp_link": "w:de:Boio",
     "chapters": [
       {
         "start": 633,
@@ -20155,7 +20195,7 @@
   {
     "lemma": "Boios 2",
     "previous": "Boios 1",
-    "next": "Boiotarchai",
+    "next": "Βοιωτάρχαι",
     "chapters": [
       {
         "start": 636,
@@ -20164,7 +20204,7 @@
     ]
   },
   {
-    "lemma": "Boiotarchai",
+    "lemma": "Βοιωτάρχαι",
     "previous": "Boios 2",
     "next": "Boiotia 1",
     "chapters": [
@@ -20177,7 +20217,7 @@
   },
   {
     "lemma": "Boiotia 1",
-    "previous": "Boiotarchai",
+    "previous": "Βοιωτάρχαι",
     "next": "Boiotia 2",
     "chapters": [
       {
@@ -20457,7 +20497,7 @@
   {
     "lemma": "Bokchyris",
     "previous": "Bokchoris",
-    "next": "Bokkanon hemeron",
+    "next": "Βόκκανον ἥμερον",
     "chapters": [
       {
         "start": 667,
@@ -20661,7 +20701,7 @@
   {
     "lemma": "Bolbitine",
     "previous": "Βολβιτικὸν στόμα",
-    "next": "Bolbos 1",
+    "next": "Bolbos",
     "wp_link": "w:de:Rosette (Ägypten)",
     "chapters": [
       {
@@ -44981,6 +45021,7 @@
     "lemma": "Campania 2",
     "previous": "Campania 1",
     "next": "Campanianus",
+    "wp_link": "w:de:Champagne",
     "chapters": [
       {
         "start": 1439,

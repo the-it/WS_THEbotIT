@@ -1009,6 +1009,7 @@
     "lemma": "Alexandros 105",
     "previous": "Alexandros 104",
     "next": "Alexandros 106",
+    "wp_link": "w:de:Alexandros",
     "chapters": [
       {
         "start": 1462,
@@ -1044,7 +1045,7 @@
   {
     "lemma": "Alexandroschene",
     "previous": "Alexandros 107",
-    "next": "Alexandru bomoi, stelai 1",
+    "next": "Ἀλεξάνδρου βωμοί, στῆλαι 1",
     "chapters": [
       {
         "start": 1462,
@@ -1054,9 +1055,10 @@
     ]
   },
   {
-    "lemma": "Alexandru bomoi, stelai 1",
+    "lemma": "Ἀλεξάνδρου βωμοί, στῆλαι 1",
     "previous": "Alexandroschene",
-    "next": "Alexandru bomoi, stelai 2",
+    "next": "Ἀλεξάνδρου βωμοί, στῆλαι 2",
+    "sort_key": "Alexandru bomoi, stelai 1",
     "chapters": [
       {
         "start": 1462,
@@ -1066,9 +1068,9 @@
     ]
   },
   {
-    "lemma": "Alexandru bomoi, stelai 2",
-    "previous": "Alexandru bomoi, stelai 1",
-    "next": "Alexandru bomoi, stelai 3",
+    "lemma": "Ἀλεξάνδρου βωμοί, στῆλαι 2",
+    "previous": "Ἀλεξάνδρου βωμοί, στῆλαι 1",
+    "next": "Ἀλεξάνδρου βωμοί, στῆλαι 3",
     "chapters": [
       {
         "start": 1463,
@@ -1078,9 +1080,10 @@
     ]
   },
   {
-    "lemma": "Alexandru bomoi, stelai 3",
-    "previous": "Alexandru bomoi, stelai 2",
-    "next": "Alexandru charax",
+    "lemma": "Ἀλεξάνδρου βωμοί, στῆλαι 3",
+    "previous": "Ἀλεξάνδρου βωμοί, στῆλαι 2",
+    "next": "Ἀλεξάνδρου χάραξ",
+    "sort_key": "Alexandru bomoi, stelai 3",
     "chapters": [
       {
         "start": 1463,
@@ -1090,9 +1093,10 @@
     ]
   },
   {
-    "lemma": "Alexandru charax",
-    "previous": "Alexandru bomoi, stelai 3",
-    "next": "Alexandru limen",
+    "lemma": "Ἀλεξάνδρου χάραξ",
+    "previous": "Ἀλεξάνδρου βωμοί, στῆλαι 3",
+    "next": "Ἀλεξάνδρου λιμήν",
+    "sort_key": "Alexandru charax",
     "chapters": [
       {
         "start": 1463,
@@ -1102,9 +1106,9 @@
     ]
   },
   {
-    "lemma": "Alexandru limen",
-    "previous": "Alexandru charax",
-    "next": "Alexandru nesos",
+    "lemma": "Ἀλεξάνδρου λιμήν",
+    "previous": "Ἀλεξάνδρου χάραξ",
+    "next": "Ἀλεξάνδρου νῆσος",
     "chapters": [
       {
         "start": 1463,
@@ -1114,9 +1118,9 @@
     ]
   },
   {
-    "lemma": "Alexandru nesos",
-    "previous": "Alexandru limen",
-    "next": "Alexandru pandokeion",
+    "lemma": "Ἀλεξάνδρου νῆσος",
+    "previous": "Ἀλεξάνδρου λιμήν",
+    "next": "Ἀλεξάνδρου πανδοκεῖον",
     "chapters": [
       {
         "start": 1463,
@@ -1126,9 +1130,10 @@
     ]
   },
   {
-    "lemma": "Alexandru pandokeion",
-    "previous": "Alexandru nesos",
-    "next": "Alexandru pyrgos",
+    "lemma": "Ἀλεξάνδρου πανδοκεῖον",
+    "previous": "Ἀλεξάνδρου νῆσος",
+    "next": "Ἀλεξάνδρου πύργος",
+    "sort_key": "Alexandru pandokeion",
     "chapters": [
       {
         "start": 1463,
@@ -1138,8 +1143,8 @@
     ]
   },
   {
-    "lemma": "Alexandru pyrgos",
-    "previous": "Alexandru pandokeion",
+    "lemma": "Ἀλεξάνδρου πύργος",
+    "previous": "Ἀλεξάνδρου πανδοκεῖον",
     "next": "Alexarchos 1",
     "chapters": [
       {
@@ -1151,7 +1156,7 @@
   },
   {
     "lemma": "Alexarchos 1",
-    "previous": "Alexandru pyrgos",
+    "previous": "Ἀλεξάνδρου πύργος",
     "next": "Alexarchos 2",
     "chapters": [
       {
@@ -1563,7 +1568,7 @@
   {
     "lemma": "Alexion 6",
     "previous": "Alexion 5",
-    "next": "Alexiponos",
+    "next": "Ἀλεξίπονος",
     "chapters": [
       {
         "start": 1466,
@@ -1573,9 +1578,10 @@
     ]
   },
   {
-    "lemma": "Alexiponos",
+    "lemma": "Ἀλεξίπονος",
     "previous": "Alexion 6",
     "next": "Alexippidas",
+    "sort_key": "Alexiponos",
     "chapters": [
       {
         "start": 1467,
@@ -1586,7 +1592,7 @@
   },
   {
     "lemma": "Alexippidas",
-    "previous": "Alexiponos",
+    "previous": "Ἀλεξίπονος",
     "next": "Alexippos 1",
     "chapters": [
       {
@@ -28705,6 +28711,7 @@
     "lemma": "Annaeus 4",
     "previous": "Annaeus 3",
     "next": "Annaeus 5",
+    "sort_key": "Annaeus 04",
     "chapters": [
       {
         "start": 2225,
@@ -28805,6 +28812,7 @@
     "lemma": "Annaeus 12",
     "previous": "Annaeus 11",
     "next": "Annaeus 13",
+    "wp_link": "w:de:Lucius Iunius Gallio Annaeanus",
     "chapters": [
       {
         "start": 2236,

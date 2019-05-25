@@ -6331,6 +6331,7 @@
     "lemma": "Aqua, Aquae 43",
     "previous": "Aqua, Aquae 42",
     "next": "Aqua, Aquae 44",
+    "sort_key": "Aquae 043",
     "chapters": [
       {
         "start": 300,
@@ -6456,6 +6457,7 @@
     "previous": "Aqua, Aquae 52",
     "next": "Aqua, Aquae 54",
     "sort_key": "Aquae 053",
+    "redirect": true,
     "chapters": [
       {
         "start": 301,
@@ -12022,7 +12024,7 @@
   {
     "lemma": "Archaiopolis 2",
     "previous": "Archaiopolis 1",
-    "next": "Archairesiai",
+    "next": "Ἀρχαιρεσίαι",
     "chapters": [
       {
         "start": 436,
@@ -12032,9 +12034,10 @@
     ]
   },
   {
-    "lemma": "Archairesiai",
+    "lemma": "Ἀρχαιρεσίαι",
     "previous": "Archaiopolis 2",
     "next": "Archaleus",
+    "sort_key": "Archairesiai",
     "chapters": [
       {
         "start": 436,
@@ -12045,7 +12048,7 @@
   },
   {
     "lemma": "Archaleus",
-    "previous": "Archairesiai",
+    "previous": "Ἀρχαιρεσίαι",
     "next": "Archalla",
     "chapters": [
       {
@@ -31754,7 +31757,7 @@
   {
     "lemma": "Arktos 3",
     "previous": "Arktos 2",
-    "next": "Arktu akra",
+    "next": "Ἄρκτου ἄκρα",
     "chapters": [
       {
         "start": 1173,
@@ -31764,7 +31767,7 @@
     ]
   },
   {
-    "lemma": "Arktu akra",
+    "lemma": "Ἄρκτου ἄκρα",
     "previous": "Arktos 3",
     "next": "Arkturos 1",
     "chapters": [
@@ -31777,7 +31780,7 @@
   },
   {
     "lemma": "Arkturos 1",
-    "previous": "Arktu akra",
+    "previous": "Ἄρκτου ἄκρα",
     "next": "Arkturos 2",
     "chapters": [
       {
@@ -31980,8 +31983,8 @@
   },
   {
     "lemma": "Arma pugnatoria",
-    "previous": "Armamenta",
-    "next": "Armamentarium 1",
+    "previous": "Arma lusoria",
+    "next": "Armachis",
     "chapters": [
       {
         "start": 1175,
@@ -32147,7 +32150,7 @@
   {
     "lemma": "Armatham",
     "previous": "Armata",
-    "next": "Armatu",
+    "next": "Ἀρμάτου",
     "chapters": [
       {
         "start": 1177,
@@ -32156,7 +32159,7 @@
     ]
   },
   {
-    "lemma": "Armatu",
+    "lemma": "Ἀρμάτου",
     "previous": "Armatham",
     "next": "Armatura 1",
     "chapters": [
@@ -32169,7 +32172,7 @@
   },
   {
     "lemma": "Armatura 1",
-    "previous": "Armatu",
+    "previous": "Ἀρμάτου",
     "next": "Armatura 2",
     "wp_link": "w:de:Römische Legion",
     "chapters": [
