@@ -2012,7 +2012,6 @@
   {
     "lemma": "Ahveccanae",
     "previous": "Ahenobarbi forum",
-    "next": "Aiakidas 2",
     "redirect": true,
     "chapters": [
       {
@@ -2020,6 +2019,10 @@
         "end": 33
       }
     ]
+  },
+  {
+    "lemma":  "Aiakidas 1",
+    "next": "Aiakidas 2"
   },
   {
     "lemma": "Aiakidas 2",
@@ -4255,8 +4258,11 @@
     ]
   },
   {
+    "lemma": "Amida",
+    "previous": "Amerias"
+  },
+  {
     "lemma": "Amilo",
-    "previous": "Amerias",
     "next": "Aminea",
     "chapters": [
       {
@@ -13760,7 +13766,6 @@
   {
     "lemma": "Chronica Italica",
     "previous": "Christophoros 1",
-    "next": "Chryseïs 5",
     "chapters": [
       {
         "start": 296,
@@ -13768,6 +13773,10 @@
         "author": "Hartmann, [Ludo Moritz]"
       }
     ]
+  },
+  {
+    "lemma": "Chronos 2",
+    "next": "Chryseïs 5"
   },
   {
     "lemma": "Chryseïs 5",

@@ -2175,7 +2175,6 @@
   {
     "lemma": "Damatros",
     "previous": "Daduchos 3",
-    "next": "Damon 2a",
     "chapters": [
       {
         "start": 134,
@@ -2183,6 +2182,10 @@
         "author": "Bonaria"
       }
     ]
+  },
+  {
+    "lemma": "Damon 2",
+    "next": "Damon 2a"
   },
   {
     "lemma": "Damon 2a",
@@ -2211,8 +2214,11 @@
     ]
   },
   {
+    "lemma": "Damon 11",
+    "previous": "Damon 3a"
+  },
+  {
     "lemma": "Dativa",
-    "previous": "Damon 3a",
     "next": "Demetrios 32ee",
     "chapters": [
       {

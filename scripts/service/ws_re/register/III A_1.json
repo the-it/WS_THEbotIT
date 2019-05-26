@@ -10764,7 +10764,7 @@
   {
     "lemma": "Smyrna 2",
     "previous": "Smyrna 1",
-    "next": "Smyrna 3",
+    "next": "Smyrna 3f.",
     "chapters": [
       {
         "start": 728,
@@ -10774,9 +10774,10 @@
     ]
   },
   {
-    "lemma": "Smyrna 3",
+    "lemma": "Smyrna 3f.",
     "previous": "Smyrna 2",
-    "next": "Smyrna 3f.",
+    "next": "Smyrna 3",
+    "sort_key": "Smyrna 0025",
     "chapters": [
       {
         "start": 730,
@@ -10786,10 +10787,9 @@
     ]
   },
   {
-    "lemma": "Smyrna 3f.",
-    "previous": "Smyrna 2",
-    "next": "Smyrna 3",
-    "sort_key": "Smyrna 0025",
+    "lemma": "Smyrna 3",
+    "previous": "Smyrna 3f.",
+    "next": "Smyrna 4",
     "chapters": [
       {
         "start": 730,

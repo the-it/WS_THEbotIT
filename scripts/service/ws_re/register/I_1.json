@@ -22668,7 +22668,7 @@
     ]
   },
   {
-    "lemma": "Agaua kome",
+    "lemma": "Ἀγαύα κώμη",
     "previous": "Agathyrsos",
     "next": "Agaue 1",
     "chapters": [
@@ -25717,7 +25717,7 @@
   },
   {
     "lemma": "Agoraios, Agoraia",
-    "previous": "Agoraia tele",
+    "previous": "Ἀγοραῖα τέλη",
     "next": "Agoraios, Agoraia 1",
     "chapters": [
       {
@@ -25729,7 +25729,7 @@
   },
   {
     "lemma": "Agoraios, Agoraia 1",
-    "previous": "Ἀγοραῖα τέλη",
+    "previous": "Agoraios, Agoraia",
     "next": "Agoraios, Agoraia 2",
     "chapters": [
       {
@@ -39043,7 +39043,7 @@
   {
     "lemma": "Alator",
     "previous": "Alatheus",
-    "next": "Alaudae",
+    "next": "Alavicus",
     "wp_link": "w:de:Alator",
     "chapters": [
       {
@@ -39054,21 +39054,8 @@
     ]
   },
   {
-    "lemma": "Alaudae",
-    "previous": "Alator",
-    "next": "Alavicus",
-    "wp_link": "w:de:Legio V Alaudae",
-    "chapters": [
-      {
-        "start": 1295,
-        "end": 1296,
-        "author": "Cichorius"
-      }
-    ]
-  },
-  {
     "lemma": "Alavicus",
-    "previous": "Alaudae",
+    "previous": "Alator",
     "next": "Alavivus",
     "chapters": [
       {
@@ -39080,12 +39067,25 @@
   {
     "lemma": "Alavivus",
     "previous": "Alavicus",
-    "next": "Alaun",
+    "next": "Alaudae",
     "chapters": [
       {
         "start": 1295,
         "end": 1295,
         "author": "Seeck"
+      }
+    ]
+  },
+  {
+    "lemma": "Alaudae",
+    "previous": "Alavivus",
+    "next": "Alaun",
+    "wp_link": "w:de:Legio V Alaudae",
+    "chapters": [
+      {
+        "start": 1295,
+        "end": 1296,
+        "author": "Cichorius"
       }
     ]
   },

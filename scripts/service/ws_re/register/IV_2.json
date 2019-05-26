@@ -12281,7 +12281,6 @@
   {
     "lemma": "Danaus 3",
     "previous": "Danastris",
-    "next": "Dandaguda",
     "chapters": [
       {
         "start": 2098,
@@ -12292,7 +12291,6 @@
   },
   {
     "lemma": "Dandaguda",
-    "previous": "Danastris",
     "next": "Dandake",
     "chapters": [
       {
@@ -19622,18 +19620,6 @@
   {
     "lemma": "Delos 2",
     "previous": "Delos 1",
-    "next": "Delos 4",
-    "chapters": [
-      {
-        "start": 2502,
-        "end": 2503,
-        "author": "Waser"
-      }
-    ]
-  },
-  {
-    "lemma": "Delos 4",
-    "previous": "Delos 2",
     "next": "Delos 3",
     "chapters": [
       {
@@ -19645,11 +19631,23 @@
   },
   {
     "lemma": "Delos 3",
-    "previous": "Delos 4",
-    "next": "Delphakie",
+    "previous": "Delos 2",
+    "next": "Delos 4",
     "chapters": [
       {
         "start": 2503,
+        "end": 2503,
+        "author": "Waser"
+      }
+    ]
+  },
+  {
+    "lemma": "Delos 4",
+    "previous": "Delos 3",
+    "next": "Delphakie",
+    "chapters": [
+      {
+        "start": 2502,
         "end": 2503,
         "author": "Waser"
       }
@@ -19887,7 +19885,7 @@
   },
   {
     "lemma": "Delphion 2",
-    "previous": "Delphinion 1",
+    "previous": "Delphion 1",
     "next": "Delphis",
     "chapters": [
       {
