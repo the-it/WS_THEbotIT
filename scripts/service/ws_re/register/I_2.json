@@ -937,6 +937,7 @@
     "lemma": "Alexandros 99",
     "previous": "Alexandros 98",
     "next": "Alexandros 100",
+    "sort_key": "Alexandros 099",
     "chapters": [
       {
         "start": 1459,
@@ -985,6 +986,7 @@
     "lemma": "Alexandros 103",
     "previous": "Alexandros 102",
     "next": "Alexandros 104",
+    "wp_link": "w:de:Alexander von Alexandria",
     "chapters": [
       {
         "start": 1461,
@@ -28625,7 +28627,7 @@
   },
   {
     "lemma": "Anna 1",
-    "previous": "Ankyron polis",
+    "previous": "Ἀγκυρῶν πόλις",
     "next": "Anna 2",
     "chapters": [
       {
@@ -28650,7 +28652,8 @@
   {
     "lemma": "Anna 3",
     "previous": "Anna 2",
-    "next": "Annaeus",
+    "next": "Annaeus 1",
+    "wp_link": "w:de:Anna Perenna",
     "chapters": [
       {
         "start": 2223,
@@ -28673,8 +28676,9 @@
   },
   {
     "lemma": "Annaeus 1",
-    "previous": "Annaeus",
+    "previous": "Anna 3",
     "next": "Annaeus 2",
+    "sort_key": "Annaeus 01",
     "chapters": [
       {
         "start": 2225,
@@ -28687,6 +28691,7 @@
     "lemma": "Annaeus 2",
     "previous": "Annaeus 1",
     "next": "Annaeus 3",
+    "sort_key": "Annaeus 02",
     "chapters": [
       {
         "start": 2225,
@@ -28699,6 +28704,7 @@
     "lemma": "Annaeus 3",
     "previous": "Annaeus 2",
     "next": "Annaeus 4",
+    "sort_key": "Annaeus 03",
     "chapters": [
       {
         "start": 2225,
@@ -28724,6 +28730,8 @@
     "lemma": "Annaeus 5",
     "previous": "Annaeus 4",
     "next": "Annaeus 6",
+    "sort_key": "Annaeus 05",
+    "wp_link": "w:de:Lucius Annaeus Cornutus",
     "chapters": [
       {
         "start": 2225,
@@ -28861,6 +28869,8 @@
     "lemma": "Annaeus 16",
     "previous": "Annaeus 15",
     "next": "Annaeus 17",
+    "wp_link": "w:de:Seneca der Ältere",
+    "ws_link": "s:de:Seneca der Ältere",
     "chapters": [
       {
         "start": 2237,
@@ -28873,6 +28883,8 @@
     "lemma": "Annaeus 17",
     "previous": "Annaeus 16",
     "next": "Annaeus 18",
+    "wp_link": "w:de:Seneca",
+    "ws_link": "s:de:Seneca",
     "chapters": [
       {
         "start": 2240,
@@ -45598,6 +45610,7 @@
     "lemma": "Aphake 2",
     "previous": "Aphake 1",
     "next": "Aphakitis",
+    "wp_link": "w:de:Gelbe Wicke",
     "chapters": [
       {
         "start": 2709,
@@ -49783,6 +49796,7 @@
     "lemma": "Apollodoros 77",
     "previous": "Apollodoros 76",
     "next": "Apollodotos 1",
+    "wp_link": "w:de:Apollodoros",
     "chapters": [
       {
         "start": 2897,
@@ -49902,7 +49916,8 @@
   {
     "lemma": "Apollokrates",
     "previous": "Apollogenes",
-    "next": "Abercius",
+    "next": "Apollon",
+    "wp_link": "w:de:Apollokrates",
     "chapters": [
       {
         "start": 2898,
@@ -49937,7 +49952,7 @@
   },
   {
     "lemma": "Adranutzion",
-    "previous": "Adoniastai",
+    "previous": "Abercius",
     "next": "Agathenor",
     "chapters": [
       {
@@ -50009,7 +50024,7 @@
   },
   {
     "lemma": "Aisitai",
-    "previous": "Aisimos 2",
+    "previous": "Agonaces",
     "next": "Akamas 6",
     "chapters": [
       {
@@ -50034,7 +50049,7 @@
   {
     "lemma": "Aleos 1a",
     "previous": "Akamas 6",
-    "next": "Alexandros 34",
+    "next": "Ammentum",
     "chapters": [
       {
         "start": 2900,
@@ -50080,7 +50095,7 @@
   },
   {
     "lemma": "Ammentum",
-    "previous": "Amerias",
+    "previous": "Aleos 1a",
     "next": "Ammonios 15a",
     "chapters": [
       {
@@ -50093,6 +50108,7 @@
   {
     "lemma": "Ammonios 15a",
     "previous": "Ammentum",
+    "next": "Apollon",
     "chapters": [
       {
         "start": 2902,

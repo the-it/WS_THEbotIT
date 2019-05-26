@@ -549,7 +549,6 @@
   {
     "lemma": "δημοσίωσις",
     "previous": "Demetrios 100a",
-    "next": "Derkylos 2",
     "chapters": [
       {
         "start": 123,
@@ -559,12 +558,14 @@
     ]
   },
   {
-    "lemma": "Derkylos 2",
-    "previous": "δημοσίωσις"
+    "lemma": "Dekane",
+    "next": "Δεκατηλόγος"
   },
   {
-    "lemma": "Dekatelogos",
+    "lemma": "Δεκατηλόγος",
+    "previous": "Dekane",
     "next": "Demetrios 100a",
+    "sort_key": "Dekatelogos",
     "chapters": [
       {
         "start": 124,
@@ -575,8 +576,8 @@
   },
   {
     "lemma": "Demetrios 100a",
-    "previous": "Dekatelogos",
-    "next": "Diadochos a",
+    "previous": "Δεκατηλόγος",
+    "next": "δημοσίωσις",
     "chapters": [
       {
         "start": 124,
@@ -586,8 +587,11 @@
     ]
   },
   {
+    "lemma": "δημοσίωσις",
+    "previous": "Demetrios 100a"
+  },
+  {
     "lemma": "Diadochos a",
-    "previous": "Demetrios 100a",
     "next": "Dieramatites",
     "chapters": [
       {

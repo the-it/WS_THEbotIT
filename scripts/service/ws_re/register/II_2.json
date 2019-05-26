@@ -2558,6 +2558,7 @@
     "lemma": "Asan",
     "previous": "Asamus",
     "next": "Asanabara",
+    "redirect": "Bethasan",
     "chapters": [
       {
         "start": 1515,
@@ -42275,6 +42276,7 @@
     "lemma": "Barbanna",
     "previous": "Barbanissa",
     "next": "Barbara",
+    "wp_link": "w:de:Buna (Adriatisches Meer)",
     "chapters": [
       {
         "start": 2855,
@@ -42456,6 +42458,7 @@
     "lemma": "Barbari promunturium",
     "previous": "Βαρβάριον ἄκρον",
     "next": "Barbaroi",
+    "sort_key": "Barbaripromunturium",
     "chapters": [
       {
         "start": 2858,
@@ -42491,8 +42494,8 @@
   },
   {
     "lemma": "Archelaos 33a",
-    "previous": "Apolloniastai",
-    "next": "Archippos 1a",
+    "previous": "Archebiades 2",
+    "next": "Archias 6",
     "chapters": [
       {
         "start": 2859,
@@ -42503,8 +42506,10 @@
   },
   {
     "lemma": "Archippos 1a",
-    "previous": "Archelaos 33a",
+    "previous": "Archias 7",
     "next": "Areus 5",
+    "sort_key": "Archippos 01a",
+    "wp_link": "w:de:Archippos (Archon)",
     "chapters": [
       {
         "start": 2859,
@@ -42528,7 +42533,8 @@
   {
     "lemma": "Ariobarzanes 4a",
     "previous": "Areus 5",
-    "next": "Aristobuliastai",
+    "next": "Ariobarzanes 4b",
+    "wp_link": "w:de:Ariobarzanes (Pontos)",
     "chapters": [
       {
         "start": 2860,
@@ -42538,8 +42544,18 @@
     ]
   },
   {
-    "lemma": "Aristobuliastai",
+    "lemma": "Ariobarzanes 4b",
     "previous": "Ariobarzanes 4a",
+    "next": "Ariobarzanes 4c"
+  },
+  {
+    "lemma": "Ariobarzanes 4c",
+    "previous": "Ariobarzanes 4b",
+    "next": "Ἀριστοβουλιασταί"
+  },
+  {
+    "lemma": "Ἀριστοβουλιασταί",
+    "previous": "Ariobarzanes 4c",
     "next": "Askalis",
     "chapters": [
       {
@@ -42551,7 +42567,7 @@
   },
   {
     "lemma": "Askalis",
-    "previous": "Aristobuliastai",
+    "previous": "Ἀριστοβουλιασταί",
     "next": "Astakides 1",
     "chapters": [
       {
@@ -42575,7 +42591,7 @@
   {
     "lemma": "Astakides 2",
     "previous": "Astakides 1",
-    "next": null,
+    "next": "Athenaios 23",
     "chapters": [
       {
         "start": 2861,

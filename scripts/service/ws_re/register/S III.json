@@ -131,7 +131,7 @@
   {
     "lemma": "Abus 2",
     "previous": "Absalom 2",
-    "next": "Acastus",
+    "next": "Abusina",
     "chapters": [
       {
         "start": 16,
@@ -141,8 +141,13 @@
     ]
   },
   {
-    "lemma": "Acastus",
+    "lemma": "Abusina",
     "previous": "Abus 2",
+    "next": "Acastus"
+  },
+  {
+    "lemma": "Acastus",
+    "previous": "Abusina",
     "next": "Acaunus",
     "chapters": [
       {
@@ -7003,7 +7008,7 @@
   {
     "lemma": "Bigorre",
     "previous": "Bigentius",
-    "next": "Bilicatus",
+    "next": "Bikos",
     "chapters": [
       {
         "start": 206,
@@ -7013,8 +7018,13 @@
     ]
   },
   {
-    "lemma": "Bilicatus",
+    "lemma": "Bikos",
     "previous": "Bigorre",
+    "next": "Bilicatus"
+  },
+  {
+    "lemma": "Bilicatus",
+    "previous": "Bikos",
     "next": "Billig",
     "chapters": [
       {
@@ -15315,7 +15325,6 @@
   {
     "lemma": "Giamos",
     "previous": "Giamilus 2",
-    "next": "Giganten",
     "chapters": [
       {
         "start": 654,
@@ -15325,8 +15334,12 @@
     ]
   },
   {
+    "lemma": "Epona",
+    "next": "Giganten"
+  },
+  {
     "lemma": "Giganten",
-    "previous": "Giamos",
+    "previous": "Epona",
     "next": "Gilaios",
     "chapters": [
       {

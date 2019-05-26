@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Demogenes 1",
+    "previous": "Demodoros",
     "next": "Demogenes 2",
     "chapters": [
       {
@@ -37,7 +38,7 @@
   {
     "lemma": "Demogorgon",
     "previous": "Demognetos",
-    "next": "Demoi",
+    "next": "Δῆμοι",
     "chapters": [
       {
         "start": 1,
@@ -47,9 +48,11 @@
     ]
   },
   {
-    "lemma": "Demoi",
+    "lemma": "Δῆμοι",
     "previous": "Demogorgon",
     "next": "Demokedes",
+    "sort_key": "Demoi",
+    "wp_link": "w:de:Demos",
     "chapters": [
       {
         "start": 1,
@@ -60,8 +63,9 @@
   },
   {
     "lemma": "Demokedes",
-    "previous": "Demoi",
+    "previous": "Δῆμοι",
     "next": "Demokleides 1",
+    "wp_link": "w:de:Demokedes",
     "chapters": [
       {
         "start": 132,
@@ -134,6 +138,7 @@
     "lemma": "Demokles 1",
     "previous": "Demokleitos",
     "next": "Demokles 2",
+    "sort_key": "Demokles 01",
     "chapters": [
       {
         "start": 132,
@@ -4793,6 +4798,7 @@
     "lemma": "Dia 3",
     "previous": "Dia 2",
     "next": "Dia 4",
+    "sort_key": "Dia 03",
     "chapters": [
       {
         "start": 298,
@@ -4805,6 +4811,7 @@
     "lemma": "Dia 4",
     "previous": "Dia 3",
     "next": "Dia 5",
+    "sort_key": "Dia 04",
     "chapters": [
       {
         "start": 299,
@@ -4817,6 +4824,7 @@
     "lemma": "Dia 5",
     "previous": "Dia 4",
     "next": "Dia 6",
+    "sort_key": "Dia 05",
     "chapters": [
       {
         "start": 299,
@@ -4829,6 +4837,7 @@
     "lemma": "Dia 6",
     "previous": "Dia 5",
     "next": "Dia 7",
+    "sort_key": "Dia 06",
     "chapters": [
       {
         "start": 299,
@@ -4841,6 +4850,7 @@
     "lemma": "Dia 7",
     "previous": "Dia 6",
     "next": "Dia 8",
+    "sort_key": "Dia 07",
     "chapters": [
       {
         "start": 299,
@@ -6274,7 +6284,7 @@
   {
     "lemma": "Diazeugma",
     "previous": "Diaulos 3",
-    "next": "Diazoma",
+    "next": "Διάζωμα",
     "chapters": [
       {
         "start": 355,
@@ -6284,9 +6294,11 @@
     ]
   },
   {
-    "lemma": "Diazoma",
+    "lemma": "Διάζωμα",
     "previous": "Diazeugma",
     "next": "Dibaltum",
+    "sort_key": "Diazoma",
+    "wp_link": "w:de:Theater der griechischen Antike",
     "chapters": [
       {
         "start": 355,
@@ -6297,7 +6309,7 @@
   },
   {
     "lemma": "Dibaltum",
-    "previous": "Diazoma",
+    "previous": "Διάζωμα",
     "next": "Dibialimon",
     "chapters": [
       {
@@ -6403,7 +6415,7 @@
   {
     "lemma": "Dichalkon",
     "previous": "Dicera",
-    "next": "Dichas",
+    "next": "Διχάς",
     "chapters": [
       {
         "start": 356,
@@ -6413,9 +6425,10 @@
     ]
   },
   {
-    "lemma": "Dichas",
+    "lemma": "Διχάς",
     "previous": "Dichalkon",
-    "next": "Dichoinikon",
+    "next": "Διχοίνικον",
+    "sort_key": "Dichas",
     "chapters": [
       {
         "start": 357,
@@ -6425,9 +6438,10 @@
     ]
   },
   {
-    "lemma": "Dichoinikon",
-    "previous": "Dichas",
-    "next": "Dichoria",
+    "lemma": "Διχοίνικον",
+    "previous": "Διχάς",
+    "next": "Διχορία",
+    "sort_key": "Dichoinikon",
     "chapters": [
       {
         "start": 357,
@@ -6437,9 +6451,10 @@
     ]
   },
   {
-    "lemma": "Dichoria",
-    "previous": "Dichoinikon",
+    "lemma": "Διχορία",
+    "previous": "Διχοίνικον",
     "next": "Dicomes",
+    "sort_key": "Dichoria",
     "chapters": [
       {
         "start": 357,
@@ -6450,7 +6465,7 @@
   },
   {
     "lemma": "Dicomes",
-    "previous": "Dichoria",
+    "previous": "Διχορία",
     "next": "Dicta Catonis",
     "chapters": [
       {
@@ -6501,6 +6516,7 @@
     "lemma": "Dictiarius",
     "previous": "Dictator",
     "next": "Dictinius",
+    "wp_link": "w:de:Retiarius",
     "chapters": [
       {
         "start": 390,
@@ -6525,6 +6541,7 @@
     "lemma": "Dictio dotis",
     "previous": "Dictinius",
     "next": "Dictis",
+    "wp_link": "w:de:Römisches Recht",
     "chapters": [
       {
         "start": 390,
@@ -11115,6 +11132,8 @@
     "lemma": "Diogenes 44",
     "previous": "Diogenes 43",
     "next": "Diogenes 45",
+    "wp_link": "w:de:Diogenes von Sinope",
+    "ws_link": "s:de:Diogenes von Sinope",
     "chapters": [
       {
         "start": 765,
@@ -11140,6 +11159,7 @@
     "lemma": "Diogenes 46",
     "previous": "Diogenes 45",
     "next": "Diogenes 47",
+    "wp_link": "w:de:Diogenes von Tarsos",
     "chapters": [
       {
         "start": 776,
@@ -11286,6 +11306,7 @@
     "lemma": "Diogenianos 4",
     "previous": "Diogenianos 3",
     "next": "Diogenidai",
+    "wp_link": "w:de:Diogenianos Grammatikos",
     "chapters": [
       {
         "start": 778,
@@ -21578,6 +21599,7 @@
     "lemma": "Domitius 5",
     "previous": "Domitius 4",
     "next": "Domitius 6",
+    "sort_key": "Domitius 005",
     "chapters": [
       {
         "start": 1315,
@@ -21627,6 +21649,7 @@
     "lemma": "Domitius 9",
     "previous": "Domitius 8",
     "next": "Domitius 10",
+    "sort_key": "Domitius 009",
     "chapters": [
       {
         "start": 1316,
@@ -23308,7 +23331,7 @@
   {
     "lemma": "Donatianus 3",
     "previous": "Donatianus 2",
-    "next": null,
+    "next": "Donatio",
     "chapters": [
       {
         "start": 1532,
