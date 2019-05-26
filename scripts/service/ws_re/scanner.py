@@ -6,7 +6,9 @@ from typing import List
 import pywikibot
 
 from scripts.service.ws_re.data_types import RePage, ReDatenException
-from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, SCANTask, DEALTask, DEWPTask
+from scripts.service.ws_re.scanner_task_register_scanner import SCANTask
+from scripts.service.ws_re.scanner_tasks import ReScannerTask, ERROTask, KSCHTask, DEALTask, \
+    DEWPTask
 from tools.bots import CanonicalBot, BotException
 from tools.petscan import PetScan
 
