@@ -113,6 +113,8 @@ text.
         compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
 
     def test_redirect(self):
+        task = SCANTask(None, self.logger)
+        # redirect from the properties
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |VERWEIS=ON
@@ -120,8 +122,8 @@ text.
 text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"redirect": True}, []), SCANTask._fetch_redirect(article))
-
+        compare(({"redirect": True}, []), task._fetch_redirect(article))
+        # only a property ... no real link
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |VERWEIS=OFF
@@ -129,7 +131,25 @@ text.
 text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["redirect"]), SCANTask._fetch_redirect(article))
+        compare(({}, ["redirect"]), task._fetch_redirect(article))
+        # fetch a real link from the text {{RE siehe|...
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|VERWEIS=ON
+}}
+'''Ad Algam''' s. {{SperrSchrift|{{RE siehe|Turris ad Algam}}}}.
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"redirect": "Turris ad Algam"}, []), task._fetch_redirect(article))
+        # fetch a real link from the text [[RE:...
+        self.text_mock.return_value = """{{REDaten
+|BAND=I,1
+|VERWEIS=ON
+}}
+'''2)''' s. [[RE:Amantia 2|{{SperrSchrift|Amantia}} Nr.&nbsp;2]].
+{{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"redirect": "Amantia 2"}, []), task._fetch_redirect(article))
 
     def test_previous(self):
         self.text_mock.return_value = """{{REDaten
