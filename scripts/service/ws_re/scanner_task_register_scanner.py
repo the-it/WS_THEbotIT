@@ -1,4 +1,5 @@
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Mapping, List, Tuple, Dict, Any
@@ -73,11 +74,15 @@ class SCANTask(ReScannerTask):
     def _fetch_lemma(self, _) -> Tuple[Dict[str, Any], List[str]]:  # pylint: disable=unused-argument
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
-    @staticmethod
-    def _fetch_redirect(article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
+    _REGEX_REDIRECT = re.compile(r"[sS]\..*?(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
+
+    def _fetch_redirect(self, article_list: List[Article]) -> Tuple[Dict[str, Any], List[str]]:
         article = article_list[0]
         redirect = article["VERWEIS"].value
         if redirect:
+            match = self._REGEX_REDIRECT.search(article.text)
+            if match:
+                redirect = match.group(1)
             return {"redirect": redirect}, []
         return {}, ["redirect"]
 
