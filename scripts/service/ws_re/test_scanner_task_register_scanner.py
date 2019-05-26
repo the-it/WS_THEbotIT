@@ -34,7 +34,7 @@ class TestSCANTask(TaskTestWithRegister):
         self.task = SCANTask(None, self.logger)
 
     def test_pushing_nothing_to_push(self):
-        with mock.patch("scripts.service.ws_re.scanner_tasks.Repo", mock.Mock(spec=Repo)) as repo_mock:
+        with mock.patch("scripts.service.ws_re.scanner_task_register_scanner.Repo", mock.Mock(spec=Repo)) as repo_mock:
             repo_mock().index.diff.return_value = []
             self.task._push_changes()
             compare(3, len(repo_mock.mock_calls))
@@ -43,7 +43,7 @@ class TestSCANTask(TaskTestWithRegister):
 
     def test_pushing_changes(self):
         with LogCapture():
-            with mock.patch("scripts.service.ws_re.scanner_tasks.Repo", mock.Mock(spec=Repo)) as repo_mock:
+            with mock.patch("scripts.service.ws_re.scanner_task_register_scanner.Repo", mock.Mock(spec=Repo)) as repo_mock:
                 repo_mock().index.diff.return_value = ["Something has changed"]
                 self.task._push_changes()
                 compare(8, len(repo_mock.mock_calls))
