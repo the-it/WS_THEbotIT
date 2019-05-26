@@ -180,25 +180,19 @@ class KSCHTask(ReScannerTask):
 
 
 class SCANTask(ReScannerTask):
-    _LEMMAS_MAX = 2500
-
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers()
-        self._register_lemmas = True
-        self._lemmas_registered = 0
+        self._strategies = {}  #type: Dict[str, List[str]]
 
     def task(self):
-        if self._register_lemmas:
-            if self._lemmas_registered < self._LEMMAS_MAX:
-                self._lemmas_registered += 1
-                self._fetch_from_article_list()
-            else:
-                self.logger.warning(f"SCANTask reached the max lemmas to process with lemma {self.re_page.lemma}.")
-                self._register_lemmas = False
+        self._fetch_from_article_list()
 
     def finish_task(self):
         super().finish_task()
+        for strategy in self._strategies:
+            self.logger.info(f"STRATEGY_{strategy}: {len(self._strategies[strategy])}")
+            self.logger.info(f"{self._strategies[strategy]}")
         self.logger.info("Fetch changes for the authors.")
         authors = self.registers.authors
         authors.set_mappings(self._fetch_mapping())
@@ -284,12 +278,19 @@ class SCANTask(ReScannerTask):
                 register = self.registers.volumes[band_info]
                 if register:
                     try:
-                        register.update_lemma(update_dict, delete_list)
-                        continue
+                        strategy = register.update_lemma(update_dict, delete_list)
+                        self._write_strategy_statistic(strategy, update_dict, band_info)
                     except RegisterException as error:
                         self.logger.error(f"No available Lemma in Registers for issue {band_info} "
                                           f"and lemma {self.re_page.lemma_as_link}. "
                                           f"Reason is: {error.args[0]}")
+
+    def _write_strategy_statistic(self, strategy: str, update_dict: Dict, issue_no: str):
+        entry = f"{update_dict['lemma']}/{issue_no}"
+        if strategy in self._strategies:
+            self._strategies[strategy].append(entry)
+        else:
+            self._strategies[strategy] = [entry]
 
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
