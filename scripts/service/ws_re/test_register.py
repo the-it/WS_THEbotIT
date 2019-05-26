@@ -1142,6 +1142,7 @@ class TestIntegrationRegister(TestCase):
                      if not post_lemma["previous"] == lemma["lemma"]:
                         errors.append(f"POST lemma name {lemma['lemma']}/{i} in register {register} not the same as post lemma")
         if errors:
+            errors.insert(0, f"COUNT ERRORS: {len(errors)}")
             raise AssertionError("\n".join(errors))
 
     @skip("only for analysis")
