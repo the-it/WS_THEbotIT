@@ -441,7 +441,14 @@ class Lemma(Mapping):
         return "\n|".join(row_string)
 
     def get_link(self) -> str:
-        return f"[[RE:{self['lemma']}|{{{{Anker2|{self['lemma']}}}}}]]"
+        redirect = self.lemma_dict["redirect"] if "redirect" in self.lemma_dict else False
+        if redirect:
+            link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self['lemma']}}}}}'']]"
+            if isinstance(redirect, str):
+                link += f" → [[RE:{redirect}|{redirect}]]"
+        else:
+            link = f"[[RE:{self['lemma']}|{{{{Anker2|{self['lemma']}}}}}]]"
+        return link
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
         start_page_scan = lemma_chapter.start

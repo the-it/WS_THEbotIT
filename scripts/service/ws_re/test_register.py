@@ -380,7 +380,15 @@ class TestLemma(BaseTestRegister):
 
     def test_get_link(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
+        compare("[[RE:lemma|''{{Anker2|lemma}}'']]", re_register_lemma.get_link())
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["redirect"] = False
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
         compare("[[RE:lemma|{{Anker2|lemma}}]]", re_register_lemma.get_link())
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["redirect"] = "Some other Lemma"
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
+        compare("[[RE:lemma|''{{Anker2|lemma}}'']] → [[RE:Some other Lemma|Some other Lemma]]", re_register_lemma.get_link())
 
     def test_get_pages(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
