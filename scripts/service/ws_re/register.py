@@ -621,19 +621,19 @@ class VolumeRegister(Register):
         if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
             self._update_lemma_by_name(lemma_dict, remove_items)
             return "update_lemma_by_name"
-        elif self.get_lemma_by_sort_key(sort_key):
+        if self.get_lemma_by_sort_key(sort_key):
             self._update_by_sortkey(lemma_dict, remove_items)
             return "update_by_sortkey"
-        elif "previous" in lemma_dict and "next" in lemma_dict \
+        if "previous" in lemma_dict and "next" in lemma_dict \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])) \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
             self._update_pre_and_post_exists(lemma_dict)
             return "update_pre_and_post_exists"
-        elif "previous" in lemma_dict \
+        if "previous" in lemma_dict \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])):
             self._update_pre_exists(lemma_dict)
             return "update_pre_exists"
-        elif "next" in lemma_dict \
+        if "next" in lemma_dict \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
             self._update_post_exists(lemma_dict)
             return "update_post_exists"
