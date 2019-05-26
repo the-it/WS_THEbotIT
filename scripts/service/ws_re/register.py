@@ -619,27 +619,31 @@ class VolumeRegister(Register):
             return Lemma.make_sort_key(lemma_dict["sort_key"])
         return Lemma.make_sort_key(lemma_dict["lemma"])
 
-    def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List):
+    def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List) -> str:
         sort_key = self.normalize_sort_key(lemma_dict)
 
         if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
             self._update_lemma_by_name(lemma_dict, remove_items)
-        elif self.get_lemma_by_sort_key(sort_key):
+            return "update_lemma_by_name"
+        if self.get_lemma_by_sort_key(sort_key):
             self._update_by_sortkey(lemma_dict, remove_items)
-        elif "previous" in lemma_dict and "next" in lemma_dict \
+            return "update_by_sortkey"
+        if "previous" in lemma_dict and "next" in lemma_dict \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])) \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
             self._update_pre_and_post_exists(lemma_dict)
-        elif "previous" in lemma_dict \
+            return "update_pre_and_post_exists"
+        if "previous" in lemma_dict \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])):
             self._update_pre_exists(lemma_dict)
-        elif "next" in lemma_dict \
+            return "update_pre_exists"
+        if "next" in lemma_dict \
                 and self.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
             self._update_post_exists(lemma_dict)
-        else:
-            raise RegisterException(f"The update of the register {self.volume.name} "
-                                    f"with the dict {lemma_dict} is not possible. "
-                                    f"No strategy available")
+            return "update_post_exists"
+        raise RegisterException(f"The update of the register {self.volume.name} "
+                                f"with the dict {lemma_dict} is not possible. "
+                                f"No strategy available")
 
     def _update_lemma_by_name(self, lemma_dict, remove_items):
         lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
