@@ -1,6 +1,11 @@
 [
   {
+    "lemma": "Herodotos 7",
+    "next": "Aachen"
+  },
+  {
     "lemma": "Aachen",
+    "previous": "Herodotos 7",
     "next": "Aalen",
     "wp_link": "w:de:Aachen",
     "ws_link": "s:de:Aachen",
@@ -29,7 +34,7 @@
   {
     "lemma": "Aare",
     "previous": "Aalen",
-    "next": "Abacus 3-5",
+    "next": "Abacus",
     "wp_link": "w:de:Aare",
     "chapters": [
       {
@@ -40,8 +45,11 @@
     ]
   },
   {
+    "lemma": "Abacus",
+    "previous": "Aare"
+  },
+  {
     "lemma": "Abacus 3-5",
-    "previous": "Aare",
     "chapters": [
       {
         "start": 1,
@@ -926,7 +934,7 @@
   {
     "lemma": "Aime",
     "previous": "Aigle 7",
-    "next": "Ainesias 2",
+    "next": "Aineios 2",
     "chapters": [
       {
         "start": 64,
@@ -936,8 +944,13 @@
     ]
   },
   {
-    "lemma": "Ainesias 2",
+    "lemma": "Aineios 2",
     "previous": "Aime",
+    "next": "Ainesias 2"
+  },
+  {
+    "lemma": "Ainesias 2",
+    "previous": "Aineios 2",
     "next": "Ainicisus",
     "chapters": [
       {
@@ -6509,7 +6522,7 @@
   {
     "lemma": "Basel",
     "previous": "Barrus",
-    "next": "Basilikon (to)",
+    "next": "Basileia 2",
     "chapters": [
       {
         "start": 197,
@@ -6519,8 +6532,11 @@
     ]
   },
   {
+    "lemma": "Basileia 2",
+    "previous": "Basel"
+  },
+  {
     "lemma": "Basilikon (to)",
-    "previous": "Basel",
     "next": "Bassus 36a",
     "chapters": [
       {
@@ -6630,7 +6646,6 @@
   {
     "lemma": "Beauvais",
     "previous": "Beaune",
-    "next": "Bedy",
     "chapters": [
       {
         "start": 201,
@@ -6640,8 +6655,12 @@
     ]
   },
   {
+    "lemma": "Bedesis",
+    "next": "Bedy"
+  },
+  {
     "lemma": "Bedy",
-    "previous": "Beauvais",
+    "previous": "Bedesis",
     "next": "Belanius",
     "chapters": [
       {
@@ -7473,7 +7492,7 @@
   {
     "lemma": "Boudillus",
     "previous": "Borillus 2",
-    "next": "Boulogne-sur-Mer",
+    "next": "Boudus",
     "chapters": [
       {
         "start": 213,
@@ -7483,8 +7502,13 @@
     ]
   },
   {
-    "lemma": "Boulogne-sur-Mer",
+    "lemma": "Boudus",
     "previous": "Boudillus",
+    "next": "Boulogne-sur-Mer"
+  },
+  {
+    "lemma": "Boulogne-sur-Mer",
+    "previous": "Boudus",
     "next": "Bourbon",
     "chapters": [
       {
@@ -7558,7 +7582,7 @@
   {
     "lemma": "Braga",
     "previous": "Bracciano",
-    "next": "Bregenz",
+    "next": "Branodunum",
     "wp_link": "w:de:Braga",
     "chapters": [
       {
@@ -7569,8 +7593,13 @@
     ]
   },
   {
-    "lemma": "Bregenz",
+    "lemma": "Branodunum",
     "previous": "Braga",
+    "next": "Bregenz"
+  },
+  {
+    "lemma": "Bregenz",
+    "previous": "Branodunum",
     "next": "Breisach",
     "chapters": [
       {
@@ -9757,7 +9786,7 @@
   {
     "lemma": "Coocus",
     "previous": "Contrebia 1.2",
-    "next": "Cornelius 8a",
+    "next": "Corcoras",
     "chapters": [
       {
         "start": 257,
@@ -9767,8 +9796,11 @@
     ]
   },
   {
+    "lemma": "Corcoras",
+    "previous": "Coocus"
+  },
+  {
     "lemma": "Cornelius 8a",
-    "previous": "Coocus",
     "next": "Cornelius 22a",
     "sort_key": "Cornelius 008a",
     "chapters": [
@@ -10319,7 +10351,6 @@
   {
     "lemma": "Curtianae figlinae",
     "previous": "Curmillus",
-    "next": "Curubis",
     "chapters": [
       {
         "start": 266,
@@ -10329,8 +10360,12 @@
     ]
   },
   {
+    "lemma": "Curtius 26",
+    "next": "Curubis"
+  },
+  {
     "lemma": "Curubis",
-    "previous": "Curtianae figlinae",
+    "previous": "Curtius 26",
     "next": "Cusiacus, Cussiacus",
     "chapters": [
       {

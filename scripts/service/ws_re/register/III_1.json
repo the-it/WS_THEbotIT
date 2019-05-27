@@ -923,7 +923,7 @@
   {
     "lemma": "Bargylia",
     "previous": "Bargyletici campi",
-    "next": "Bargylietikos kolpos",
+    "next": "Βαργυλιητικὸς κόλπος",
     "wp_link": "w:de:Bargylia",
     "chapters": [
       {
@@ -934,7 +934,7 @@
     ]
   },
   {
-    "lemma": "Bargylietikos kolpos",
+    "lemma": "Βαργυλιητικὸς κόλπος",
     "previous": "Bargylia",
     "next": "Bargylos",
     "chapters": [
@@ -947,7 +947,7 @@
   },
   {
     "lemma": "Bargylos",
-    "previous": "Bargylietikos kolpos",
+    "previous": "Βαργυλιητικὸς κόλπος",
     "next": "Bargylus mons",
     "chapters": [
       {
@@ -3059,6 +3059,7 @@
     "lemma": "Βασιλικοὶ παῖδες",
     "previous": "Βασιλικὰ Ἀμύντου",
     "next": "Basilikos 1",
+    "sort_key": "Basilikoipaides",
     "chapters": [
       {
         "start": 97,
@@ -4439,7 +4440,7 @@
     "lemma": "Bata 3",
     "previous": "Bata 2",
     "next": "Batakes",
-    "redirect": true,
+    "redirect": "Bathnai 1",
     "chapters": [
       {
         "start": 114,
@@ -4670,7 +4671,7 @@
   {
     "lemma": "Bateni",
     "previous": "Bateia 3",
-    "next": "Bater",
+    "next": "Βατήρ",
     "chapters": [
       {
         "start": 122,
@@ -4680,7 +4681,7 @@
     ]
   },
   {
-    "lemma": "Bater",
+    "lemma": "Βατήρ",
     "previous": "Bateni",
     "next": "Baternae",
     "chapters": [
@@ -4693,7 +4694,7 @@
   },
   {
     "lemma": "Baternae",
-    "previous": "Bater",
+    "previous": "Βατήρ",
     "next": "Batetara",
     "chapters": [
       {
@@ -5159,7 +5160,7 @@
   {
     "lemma": "Bathys 3",
     "previous": "Bathys 2",
-    "next": "Bathys limen 1",
+    "next": "Βαθὺς λιμήν 1",
     "chapters": [
       {
         "start": 139,
@@ -5169,7 +5170,7 @@
     ]
   },
   {
-    "lemma": "Bathys limen 1",
+    "lemma": "Βαθὺς λιμήν 1",
     "previous": "Bathys 3",
     "next": "Bathys limen 2",
     "chapters": [
@@ -5182,7 +5183,7 @@
   },
   {
     "lemma": "Bathys limen 2",
-    "previous": "Bathys limen 1",
+    "previous": "Βαθὺς λιμήν 1",
     "next": "Bathys limen 3",
     "chapters": [
       {
@@ -5291,7 +5292,7 @@
   {
     "lemma": "Batina",
     "previous": "Batillum",
-    "next": "Batinetis chora",
+    "next": "Βατίνητις χώρα",
     "chapters": [
       {
         "start": 140,
@@ -5301,7 +5302,7 @@
     ]
   },
   {
-    "lemma": "Batinetis chora",
+    "lemma": "Βατίνητις χώρα",
     "previous": "Batina",
     "next": "Batini",
     "chapters": [
@@ -5314,7 +5315,7 @@
   },
   {
     "lemma": "Batini",
-    "previous": "Batinetis chora",
+    "previous": "Βατίνητις χώρα",
     "next": "Batinna",
     "chapters": [
       {
@@ -5375,7 +5376,7 @@
   {
     "lemma": "Batmizomanes",
     "previous": "Batitas",
-    "next": "Batnai",
+    "next": "Batnai 1",
     "chapters": [
       {
         "start": 140,
@@ -5384,20 +5385,13 @@
     ]
   },
   {
-    "lemma": "Batnai",
+    "lemma": "Batnai 1",
     "previous": "Batmizomanes",
-    "next": "Baton 1",
-    "chapters": [
-      {
-        "start": 140,
-        "end": 141,
-        "author": "Fraenkel, [Siegmund]"
-      }
-    ]
+    "next": "Baton 1"
   },
   {
     "lemma": "Baton 1",
-    "previous": "Batnai",
+    "previous": "Batnai 1",
     "next": "Baton 2",
     "chapters": [
       {
@@ -5506,7 +5500,7 @@
   {
     "lemma": "Batora",
     "previous": "Batonius",
-    "next": "Batos",
+    "next": "Βάτος",
     "chapters": [
       {
         "start": 144,
@@ -5516,7 +5510,7 @@
     ]
   },
   {
-    "lemma": "Batos",
+    "lemma": "Βάτος",
     "previous": "Batora",
     "next": "Batracharta",
     "chapters": [
@@ -5528,7 +5522,7 @@
   },
   {
     "lemma": "Batracharta",
-    "previous": "Batos",
+    "previous": "Βάτος",
     "next": "Batrache",
     "chapters": [
       {
@@ -5541,7 +5535,7 @@
   {
     "lemma": "Batrache",
     "previous": "Batracharta",
-    "next": "Batrachia thalassa",
+    "next": "Βατραχία θάλασσα",
     "chapters": [
       {
         "start": 144,
@@ -5551,7 +5545,7 @@
     ]
   },
   {
-    "lemma": "Batrachia thalassa",
+    "lemma": "Βατραχία θάλασσα",
     "previous": "Batrache",
     "next": "Batrachiun",
     "chapters": [
@@ -5563,7 +5557,7 @@
   },
   {
     "lemma": "Batrachiun",
-    "previous": "Batrachia thalassa",
+    "previous": "Βατραχία θάλασσα",
     "next": "Batrachos 1",
     "chapters": [
       {
@@ -5600,7 +5594,7 @@
   {
     "lemma": "Βάτραχος λιμήν",
     "previous": "Batrachos 2",
-    "next": "Batrachu",
+    "next": "Βατράχου",
     "sort_key": "Batrachos limen",
     "chapters": [
       {
@@ -5611,7 +5605,7 @@
     ]
   },
   {
-    "lemma": "Batrachu",
+    "lemma": "Βατράχου",
     "previous": "Βάτραχος λιμήν",
     "next": "Batrasabbes",
     "chapters": [
@@ -5624,7 +5618,7 @@
   },
   {
     "lemma": "Batrasabbes",
-    "previous": "Batrachu",
+    "previous": "Βατράχου",
     "next": "Batrioi",
     "chapters": [
       {
@@ -6235,7 +6229,7 @@
     "previous": "Baunonia",
     "next": "Bausiona",
     "sort_key": "Bauo",
-    "redirect": true,
+    "redirect": "Boa",
     "chapters": [
       {
         "start": 174,
@@ -6617,7 +6611,7 @@
   {
     "lemma": "Beberaci lacus",
     "previous": "Bebase",
-    "next": "Bebia ore",
+    "next": "Βέβια ὄρη",
     "chapters": [
       {
         "start": 179,
@@ -10281,7 +10275,7 @@
   {
     "lemma": "Berenike 18",
     "previous": "Berenike 17",
-    "next": "Berenikes plokamoi",
+    "next": "Βερενίκης πλόκαμοι",
     "chapters": [
       {
         "start": 289,
@@ -10291,9 +10285,11 @@
     ]
   },
   {
-    "lemma": "Berenikes plokamoi",
+    "lemma": "Βερενίκης πλόκαμοι",
     "previous": "Berenike 18",
     "next": "Βερενίκης πόλις",
+    "sort_key": "Berenikes plokamoi",
+    "wp_link": "w:de:Haar der Berenike",
     "chapters": [
       {
         "start": 289,
@@ -10304,8 +10300,9 @@
   },
   {
     "lemma": "Βερενίκης πόλις",
-    "previous": "Berenikes plokamoi",
+    "previous": "Βερενίκης πλόκαμοι",
     "next": "Berenikidai",
+    "sort_key": "Berenikes polis",
     "chapters": [
       {
         "start": 289,
@@ -22850,7 +22847,7 @@
   {
     "lemma": "Bormos",
     "previous": "Bormanon",
-    "next": "Bormanus",
+    "next": "Bornon",
     "chapters": [
       {
         "start": 732,
@@ -22896,7 +22893,7 @@
   {
     "lemma": "Bormo",
     "previous": "Bormitomagus",
-    "next": "Bornon",
+    "next": "Bormos",
     "wp_link": "w:de:Bormo",
     "chapters": [
       {
@@ -22993,7 +22990,7 @@
   {
     "lemma": "Boros 4",
     "previous": "Boros 3",
-    "next": "Borraiai pylai",
+    "next": "Βορραῖαι πύλαι",
     "chapters": [
       {
         "start": 734,
@@ -23003,7 +23000,7 @@
     ]
   },
   {
-    "lemma": "Borraiai pylai",
+    "lemma": "Βορραῖαι πύλαι",
     "previous": "Boros 4",
     "next": "Borrama",
     "chapters": [
@@ -23016,7 +23013,7 @@
   },
   {
     "lemma": "Borrama",
-    "previous": "Borraiai pylai",
+    "previous": "Βορραῖαι πύλαι",
     "next": "Borsea, Borthea",
     "chapters": [
       {
@@ -24829,7 +24826,7 @@
   {
     "lemma": "Branodunum",
     "previous": "Brannovices",
-    "next": "Brar...",
+    "next": "Brar",
     "chapters": [
       {
         "start": 815,
@@ -24839,7 +24836,7 @@
     ]
   },
   {
-    "lemma": "Brar...",
+    "lemma": "Brar",
     "previous": "Branodunum",
     "next": "Brara",
     "chapters": [
@@ -24851,7 +24848,7 @@
   },
   {
     "lemma": "Brara",
-    "previous": "Brar...",
+    "previous": "Brar",
     "next": "Brarkedon",
     "chapters": [
       {

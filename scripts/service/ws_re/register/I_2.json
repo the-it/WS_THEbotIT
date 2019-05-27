@@ -13210,7 +13210,7 @@
   },
   {
     "lemma": "Ammianus 1",
-    "previous": "Ammeres 2",
+    "previous": "Ammeris 2",
     "next": "Ammianus 2",
     "chapters": [
       {
@@ -30887,8 +30887,8 @@
   },
   {
     "lemma": "Annine",
-    "previous": "Annius 125",
-    "next": "Annius 126",
+    "previous": "Annius 127",
+    "next": "Annona",
     "chapters": [
       {
         "start": 2316,
@@ -31120,7 +31120,7 @@
   {
     "lemma": "Anolos",
     "previous": "Anoigath",
-    "next": "Anomalosis",
+    "next": "Ἀνομάλωσις",
     "chapters": [
       {
         "start": 2322,
@@ -31130,7 +31130,7 @@
     ]
   },
   {
-    "lemma": "Anomalosis",
+    "lemma": "Ἀνομάλωσις",
     "previous": "Anolos",
     "next": "Anonos",
     "chapters": [
@@ -31143,8 +31143,8 @@
   },
   {
     "lemma": "Anonos",
-    "previous": "Anomalosis",
-    "next": "Anonymi 1",
+    "previous": "Ἀνομάλωσις",
+    "next": "Anonymi",
     "chapters": [
       {
         "start": 2322,
@@ -31290,7 +31290,7 @@
   {
     "lemma": "Anonymus Valesianus",
     "previous": "Anonymus Norisianus",
-    "next": "Anonymus Valesianus 1",
+    "next": "Anopaia",
     "wp_link": "w:de:Anonymus Valesianus",
     "chapters": [
       {
@@ -33481,7 +33481,7 @@
   {
     "lemma": "Anthinai",
     "previous": "Ἀνθινά",
-    "next": "Anthinon phrear",
+    "next": "Ἀνθινόν φρέαρ",
     "chapters": [
       {
         "start": 2378,
@@ -33491,7 +33491,7 @@
     ]
   },
   {
-    "lemma": "Anthinon phrear",
+    "lemma": "Ἀνθινόν φρέαρ",
     "previous": "Anthinai",
     "next": "Anthios 1",
     "chapters": [
@@ -33504,7 +33504,7 @@
   },
   {
     "lemma": "Anthios 1",
-    "previous": "Anthinon phrear",
+    "previous": "Ἀνθινόν φρέαρ",
     "next": "Anthios 2",
     "chapters": [
       {
@@ -33751,7 +33751,7 @@
   {
     "lemma": "Anthrakia",
     "previous": "Anthos 3",
-    "next": "Anthrene",
+    "next": "Ἀνθρήνη",
     "chapters": [
       {
         "start": 2392,
@@ -33761,7 +33761,7 @@
     ]
   },
   {
-    "lemma": "Anthrene",
+    "lemma": "Ἀνθρήνη",
     "previous": "Anthrakia",
     "next": "Anthropophagoi",
     "redirect": true,
@@ -33774,7 +33774,7 @@
   },
   {
     "lemma": "Anthropophagoi",
-    "previous": "Anthrene",
+    "previous": "Ἀνθρήνη",
     "next": "Anthroporraistes",
     "redirect": true,
     "chapters": [
@@ -35099,7 +35099,7 @@
   {
     "lemma": "Ἀντιγραφεύς",
     "previous": "Ἀντιγραφή",
-    "next": "Antigraphon",
+    "next": "Ἀντίγραφον",
     "sort_key": "Antigrapheus",
     "chapters": [
       {
@@ -35110,9 +35110,10 @@
     ]
   },
   {
-    "lemma": "Antigraphon",
+    "lemma": "Ἀντίγραφον",
     "previous": "Ἀντιγραφεύς",
     "next": "Antikasios",
+    "sort_key": "Antigraphon",
     "chapters": [
       {
         "start": 2424,
@@ -35123,7 +35124,7 @@
   },
   {
     "lemma": "Antikasios",
-    "previous": "Antigraphon",
+    "previous": "Ἀντίγραφον",
     "next": "Antikeites",
     "chapters": [
       {
@@ -45562,7 +45563,7 @@
   {
     "lemma": "Aphairema",
     "previous": "Aphaia",
-    "next": "Aphairesis",
+    "next": "Ἀφαίρεσις",
     "chapters": [
       {
         "start": 2708,
@@ -45572,7 +45573,7 @@
     ]
   },
   {
-    "lemma": "Aphairesis",
+    "lemma": "Ἀφαίρεσις",
     "previous": "Aphairema",
     "next": "Aphaka",
     "chapters": [
@@ -45584,7 +45585,7 @@
   },
   {
     "lemma": "Aphaka",
-    "previous": "Aphairesis",
+    "previous": "Ἀφαίρεσις",
     "next": "Aphake 1",
     "chapters": [
       {
@@ -45633,7 +45634,7 @@
   {
     "lemma": "Aphamios",
     "previous": "Aphakitis",
-    "next": "Aphamiotai",
+    "next": "Ἀφαμιῶται",
     "chapters": [
       {
         "start": 2710,
@@ -45643,9 +45644,10 @@
     ]
   },
   {
-    "lemma": "Aphamiotai",
+    "lemma": "Ἀφαμιῶται",
     "previous": "Aphamios",
-    "next": "Aphanes usia",
+    "next": "Aphannai",
+    "sort_key": "Aphamiotai",
     "chapters": [
       {
         "start": 2710,
@@ -45656,7 +45658,7 @@
   },
   {
     "lemma": "Aphanes usia",
-    "previous": "Aphamiotai",
+    "previous": "Ἀφαμιῶται",
     "next": "Aphannai",
     "chapters": [
       {

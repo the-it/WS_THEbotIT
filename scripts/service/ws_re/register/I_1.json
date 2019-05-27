@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Aal",
+    "previous": "Abkürzungen",
     "next": "Aarassos",
     "chapters": [
       {
@@ -232,7 +233,7 @@
   {
     "lemma": "Abaesamis",
     "previous": "Abaddir",
-    "next": "Abai 1",
+    "next": "Abai",
     "wp_link": "w:de:Abaesamis",
     "chapters": [
       {
@@ -243,16 +244,10 @@
     ]
   },
   {
-    "lemma": "Abai 1",
+    "lemma": "Abai",
     "previous": "Abaesamis",
     "next": "Abai 2",
-    "chapters": [
-      {
-        "start": 11,
-        "end": 11,
-        "author": "Hirschfeld"
-      }
-    ]
+    "wp_link": "w:de:Abai (Griechenland)"
   },
   {
     "lemma": "Abai 2",
@@ -429,7 +424,7 @@
     "lemma": "Abana",
     "previous": "Abalus",
     "next": "Abanni",
-    "redirect": true,
+    "redirect": "Chrysorrhoas 8",
     "chapters": [
       {
         "start": 13,
@@ -3753,7 +3748,7 @@
     "lemma": "Acbatana",
     "previous": "Acbarus",
     "next": "Acca 1",
-    "redirect": true,
+    "redirect": "Ekbatana 3",
     "chapters": [
       {
         "start": 131,
@@ -3803,7 +3798,7 @@
     "lemma": "Acce",
     "previous": "Accaus",
     "next": "Accenna 1",
-    "redirect": true,
+    "redirect": "Ptolemais 9",
     "chapters": [
       {
         "start": 135,
@@ -4806,6 +4801,7 @@
     "lemma": "Ἀχαιῶν λιμήν 2",
     "previous": "Ἀχαιῶν λιμήν 1",
     "next": "Ἀχαιῶν λιμήν 3",
+    "sort_key": "Achaion limen 2",
     "chapters": [
       {
         "start": 205,
@@ -5002,8 +4998,8 @@
   {
     "lemma": "Acharabe",
     "previous": "Achantia",
-    "next": "Achardeos",
-    "redirect": true,
+    "next": "Acharaka",
+    "redirect": "Achabara",
     "chapters": [
       {
         "start": 208,
@@ -5011,6 +5007,11 @@
         "author": "Benzinger"
       }
     ]
+  },
+  {
+    "lemma": "Acharaka",
+    "previous": "Acharabe",
+    "next": "Achardeos"
   },
   {
     "lemma": "Achardeos",
@@ -12869,7 +12870,7 @@
   },
   {
     "lemma": "Aelius",
-    "previous": "Aelianus 15h",
+    "previous": "Aelianus 15",
     "next": "Aelius 1",
     "sort_key": "Aelius 000",
     "wp_link": "w:de:Aelius",
@@ -17307,7 +17308,7 @@
   {
     "lemma": "Aemilius 136",
     "previous": "Aemilius 135",
-    "next": "Aemilius 137",
+    "next": "Aemilius 137–142",
     "chapters": [
       {
         "start": 583,
@@ -17317,8 +17318,12 @@
     ]
   },
   {
-    "lemma": "Aemilius 137",
+    "lemma": "Aemilius 137–142",
     "previous": "Aemilius 136",
+    "sort_key": "Aemilius 137a"
+  },
+  {
+    "lemma": "Aemilius 137",
     "next": "Aemilius 138",
     "sort_key": "Aemilius 137b",
     "chapters": [
@@ -30391,7 +30396,7 @@
   {
     "lemma": "Ailana",
     "previous": "Aïklos",
-    "next": "Ailu kome",
+    "next": "Αἴλου κώμη",
     "chapters": [
       {
         "start": 1008,
@@ -30401,9 +30406,10 @@
     ]
   },
   {
-    "lemma": "Ailu kome",
+    "lemma": "Αἴλου κώμη",
     "previous": "Ailana",
     "next": "Ailinos",
+    "sort_key": "Ailukome",
     "chapters": [
       {
         "start": 1008,
@@ -30414,7 +30420,7 @@
   },
   {
     "lemma": "Ailinos",
-    "previous": "Ailu kome",
+    "previous": "Αἴλου κώμη",
     "next": "Aimathe",
     "chapters": [
       {
@@ -30975,7 +30981,7 @@
   {
     "lemma": "Ainikos",
     "previous": "Ainigma",
-    "next": "Ainion akron",
+    "next": "Αἴνιον ἄκρον",
     "chapters": [
       {
         "start": 1028,
@@ -30985,7 +30991,7 @@
     ]
   },
   {
-    "lemma": "Ainion akron",
+    "lemma": "Αἴνιον ἄκρον",
     "previous": "Ainikos",
     "next": "Ainios 1",
     "chapters": [
@@ -30997,7 +31003,7 @@
   },
   {
     "lemma": "Ainios 1",
-    "previous": "Ainion akron",
+    "previous": "Αἴνιον ἄκρον",
     "next": "Ainios 2",
     "chapters": [
       {
@@ -32774,7 +32780,7 @@
   {
     "lemma": "Aisyetes",
     "previous": "Aistraion",
-    "next": "Aisyme",
+    "next": "Aisyle",
     "chapters": [
       {
         "start": 1087,
@@ -32784,8 +32790,13 @@
     ]
   },
   {
-    "lemma": "Aisyme",
+    "lemma": "Aisyle",
     "previous": "Aisyetes",
+    "next": "Aisyme"
+  },
+  {
+    "lemma": "Aisyme",
+    "previous": "Aisyle",
     "next": "Aisymnetes 1",
     "chapters": [
       {

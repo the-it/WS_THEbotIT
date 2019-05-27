@@ -18237,7 +18237,7 @@
   {
     "lemma": "Gennanas",
     "previous": "Gennaios 4",
-    "next": "Gennesar 1",
+    "next": "Gennesar",
     "chapters": [
       {
         "start": 1174,
@@ -18247,8 +18247,13 @@
     ]
   },
   {
-    "lemma": "Gennesar 1",
+    "lemma": "Gennesar",
     "previous": "Gennanas",
+    "next": "Gennesar 1"
+  },
+  {
+    "lemma": "Gennesar 1",
+    "previous": "Gennesar",
     "next": "Gennesar 2",
     "chapters": [
       {

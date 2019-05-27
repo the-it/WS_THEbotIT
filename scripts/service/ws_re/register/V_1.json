@@ -4863,6 +4863,7 @@
     "lemma": "Dia 8",
     "previous": "Dia 7",
     "next": "Dia 9",
+    "sort_key": "Dia 08",
     "chapters": [
       {
         "start": 299,
@@ -4875,6 +4876,7 @@
     "lemma": "Dia 9",
     "previous": "Dia 8",
     "next": "Dia 10",
+    "sort_key": "Dia 09",
     "chapters": [
       {
         "start": 299,
@@ -4898,7 +4900,7 @@
   {
     "lemma": "Dia 11",
     "previous": "Dia 10",
-    "next": "Dia 11ff.",
+    "next": "Dia 12",
     "chapters": [
       {
         "start": 299,
@@ -4909,8 +4911,8 @@
   },
   {
     "lemma": "Dia 11ff.",
-    "previous": "Dia 11",
-    "next": "Dia 12",
+    "previous": "Dia 10",
+    "next": "Dia 11",
     "chapters": [
       {
         "start": 299,
@@ -4921,7 +4923,7 @@
   },
   {
     "lemma": "Dia 12",
-    "previous": "Dia 11ff.",
+    "previous": "Dia 11",
     "next": "Dia 13",
     "chapters": [
       {
@@ -6355,7 +6357,7 @@
   },
   {
     "lemma": "Dibon",
-    "previous": "Dibolia",
+    "previous": "Dibolla",
     "next": "Dibutades",
     "wp_link": "w:de:Dhiban",
     "chapters": [
@@ -13017,7 +13019,7 @@
   {
     "lemma": "Δῖον 5",
     "previous": "Δῖον 4",
-    "next": "Dion 1",
+    "next": "Δῖον 1",
     "chapters": [
       {
         "start": 833,
@@ -13027,9 +13029,10 @@
     ]
   },
   {
-    "lemma": "Dion 1",
+    "lemma": "Δῖον 1",
     "previous": "Δῖον 5",
     "next": "Dion 2",
+    "sort_key": "Dion 1",
     "chapters": [
       {
         "start": 834,
@@ -13040,8 +13043,10 @@
   },
   {
     "lemma": "Dion 2",
-    "previous": "Dion 1",
+    "previous": "Δῖον 1",
     "next": "Dion 3",
+    "sort_key": "Dion 2",
+    "wp_link": "w:de:Dion von Syrakus",
     "chapters": [
       {
         "start": 834,
