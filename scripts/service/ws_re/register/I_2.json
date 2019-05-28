@@ -443,6 +443,7 @@
     "lemma": "Alexandros 60",
     "previous": "Alexandros 59",
     "next": "Alexandros 61",
+    "sort_key": "Alexandros 060",
     "chapters": [
       {
         "start": 1444,
@@ -520,6 +521,7 @@
     "lemma": "Alexandros 66",
     "previous": "Alexandros 65",
     "next": "Alexandros 67",
+    "sort_key": "Alexandros 066",
     "chapters": [
       {
         "start": 1444,
@@ -532,6 +534,7 @@
     "lemma": "Alexandros 67",
     "previous": "Alexandros 66",
     "next": "Alexandros 68",
+    "sort_key": "Alexandros 067",
     "chapters": [
       {
         "start": 1444,
@@ -609,6 +612,7 @@
     "lemma": "Alexandros 73",
     "previous": "Alexandros 72",
     "next": "Alexandros 74",
+    "sort_key": "Alexandros 073",
     "chapters": [
       {
         "start": 1445,
@@ -635,6 +639,8 @@
     "lemma": "Alexandros 75",
     "previous": "Alexandros 74",
     "next": "Alexandros 76",
+    "sort_key": "Alexandros 075",
+    "wp_link": "w:de:Sulpicius Alexander",
     "chapters": [
       {
         "start": 1446,
@@ -672,6 +678,7 @@
     "lemma": "Alexandros 78",
     "previous": "Alexandros 77",
     "next": "Alexandros 79",
+    "sort_key": "Alexandros 078",
     "chapters": [
       {
         "start": 1446,
@@ -684,6 +691,7 @@
     "lemma": "Alexandros 79",
     "previous": "Alexandros 78",
     "next": "Alexandros 80",
+    "sort_key": "Alexandros 079",
     "chapters": [
       {
         "start": 1446,
@@ -736,6 +744,8 @@
     "lemma": "Alexandros 83",
     "previous": "Alexandros 82",
     "next": "Alexandros 84",
+    "sort_key": "Alexandros 083",
+    "wp_link": "w:de:Alexandros (Satyrspieldichter)",
     "chapters": [
       {
         "start": 1447,
@@ -762,6 +772,7 @@
     "lemma": "Alexandros 85",
     "previous": "Alexandros 84",
     "next": "Alexandros 86",
+    "sort_key": "Alexandros 085",
     "chapters": [
       {
         "start": 1448,
@@ -774,6 +785,7 @@
     "lemma": "Alexandros 86",
     "previous": "Alexandros 85",
     "next": "Alexandros 87",
+    "sort_key": "Alexandros 086",
     "chapters": [
       {
         "start": 1448,
@@ -786,6 +798,7 @@
     "lemma": "Alexandros 87",
     "previous": "Alexandros 86",
     "next": "Alexandros 88",
+    "sort_key": "Alexandros 087",
     "chapters": [
       {
         "start": 1448,
@@ -825,6 +838,7 @@
     "lemma": "Alexandros 90",
     "previous": "Alexandros 89",
     "next": "Alexandros 91",
+    "sort_key": "Alexandros 090",
     "chapters": [
       {
         "start": 1452,
@@ -837,6 +851,7 @@
     "lemma": "Alexandros 91",
     "previous": "Alexandros 90",
     "next": "Alexandros 92",
+    "sort_key": "Alexandros 091",
     "chapters": [
       {
         "start": 1452,
@@ -875,6 +890,8 @@
     "lemma": "Alexandros 94",
     "previous": "Alexandros 93",
     "next": "Alexandros 95",
+    "sort_key": "Alexandros 094",
+    "wp_link": "w:de:Alexander von Aphrodisias",
     "chapters": [
       {
         "start": 1453,
@@ -887,6 +904,7 @@
     "lemma": "Alexandros 95",
     "previous": "Alexandros 94",
     "next": "Alexandros 96",
+    "sort_key": "Alexandros 095",
     "chapters": [
       {
         "start": 1455,
@@ -962,6 +980,8 @@
     "lemma": "Alexandros 101",
     "previous": "Alexandros 100",
     "next": "Alexandros 102",
+    "wp_link": "w:de:Alexander von Tralleis",
+    "ws_link": "s:de:Alexander von Tralleis",
     "chapters": [
       {
         "start": 1460,
@@ -13198,7 +13218,6 @@
   {
     "lemma": "Ammeres 2",
     "previous": "Ammeres 1",
-    "next": "Ammianus 1",
     "wp_link": "w:de:Tanotamun",
     "chapters": [
       {
@@ -13207,6 +13226,11 @@
         "author": "Pietschmann"
       }
     ]
+  },
+  {
+    "lemma": "Ammeris 2",
+    "next": "Ammianus 1",
+    "wp_link": "w:de:Tanotamun"
   },
   {
     "lemma": "Ammianus 1",
@@ -30923,7 +30947,7 @@
   },
   {
     "lemma": "Annona",
-    "previous": "Annius 127",
+    "previous": "Annine",
     "next": "Annona civica",
     "wp_link": "w:de:Cura annonae",
     "chapters": [
@@ -30964,6 +30988,7 @@
     "lemma": "Annonariae species",
     "previous": "Annona militaris",
     "next": "Annubades",
+    "sort_key": "Annonariaespecies",
     "chapters": [
       {
         "start": 2321,
@@ -31133,6 +31158,7 @@
     "lemma": "Ἀνομάλωσις",
     "previous": "Anolos",
     "next": "Anonos",
+    "sort_key": "Anomalosis",
     "chapters": [
       {
         "start": 2322,
@@ -31144,7 +31170,7 @@
   {
     "lemma": "Anonos",
     "previous": "Ἀνομάλωσις",
-    "next": "Anonymi",
+    "next": "Anonymi 1",
     "chapters": [
       {
         "start": 2322,
@@ -31326,7 +31352,7 @@
   },
   {
     "lemma": "Anopaia",
-    "previous": "Anonymus Valesianus 2",
+    "previous": "Anonymus Valesianus",
     "next": "Anosia",
     "chapters": [
       {
@@ -33691,7 +33717,7 @@
   {
     "lemma": "Anthologia 2",
     "previous": "Anthologia 1",
-    "next": "Anthophoroi",
+    "next": "Ἀνθοφόροι",
     "chapters": [
       {
         "start": 2391,
@@ -33701,7 +33727,7 @@
     ]
   },
   {
-    "lemma": "Anthophoroi",
+    "lemma": "Ἀνθοφόροι",
     "previous": "Anthologia 2",
     "next": "Anthos 1",
     "redirect": true,
@@ -33714,7 +33740,7 @@
   },
   {
     "lemma": "Anthos 1",
-    "previous": "Anthophoroi",
+    "previous": "Ἀνθοφόροι",
     "next": "Anthos 2",
     "chapters": [
       {
@@ -45552,6 +45578,7 @@
     "lemma": "Aphaia",
     "previous": "Apfel",
     "next": "Aphairema",
+    "wp_link": "w:de:Aphaia",
     "chapters": [
       {
         "start": 2708,

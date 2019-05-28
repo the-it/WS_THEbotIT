@@ -137,6 +137,7 @@
     "lemma": "Barbier",
     "previous": "Barbesula",
     "next": "Barbillus",
+    "wp_link": "w:de:Barbier",
     "chapters": [
       {
         "start": 3,
@@ -258,6 +259,7 @@
     "lemma": "Barbula",
     "previous": "Barbukalos",
     "next": "Barbylia",
+    "wp_link": "w:de:Barbula",
     "chapters": [
       {
         "start": 5,
@@ -937,6 +939,7 @@
     "lemma": "Βαργυλιητικὸς κόλπος",
     "previous": "Bargylia",
     "next": "Bargylos",
+    "sort_key": "Bargylietikos kolpos",
     "chapters": [
       {
         "start": 16,
@@ -961,6 +964,7 @@
     "lemma": "Bargylus mons",
     "previous": "Bargylos",
     "next": "Bargysoi",
+    "sort_key": "Bargylusmons",
     "chapters": [
       {
         "start": 16,
@@ -1202,7 +1206,8 @@
     "lemma": "Barkas 1",
     "previous": "Barkanioi",
     "next": "Barkas 2",
-    "redirect": true,
+    "redirect": "Hamilkar 7",
+    "wp_link": "w:de:Hamilkar Barkas",
     "chapters": [
       {
         "start": 19,
@@ -1238,6 +1243,7 @@
     "lemma": "Barke 1",
     "previous": "Barkas 3",
     "next": "Barke 2",
+    "wp_link": "w:de:Barce (Libyen)",
     "chapters": [
       {
         "start": 19,
@@ -1822,7 +1828,7 @@
   },
   {
     "lemma": "Bartas",
-    "previous": "Bartae",
+    "previous": "Barthae",
     "next": "Barthas",
     "chapters": [
       {
@@ -1951,7 +1957,7 @@
   },
   {
     "lemma": "Barzanes 1",
-    "previous": "Barzala",
+    "previous": "Barza",
     "next": "Barzanes 2",
     "chapters": [
       {
@@ -2048,6 +2054,7 @@
     "lemma": "Basalt",
     "previous": "Basag",
     "next": "Basan 1",
+    "wp_link": "w:de:Basalt",
     "chapters": [
       {
         "start": 37,
@@ -2118,7 +2125,7 @@
   {
     "lemma": "Basanitis",
     "previous": "Basanites",
-    "next": "Basanitu lithu oros",
+    "next": "Βασανίτου λίθου ὄρος",
     "chapters": [
       {
         "start": 39,
@@ -2127,9 +2134,10 @@
     ]
   },
   {
-    "lemma": "Basanitu lithu oros",
+    "lemma": "Βασανίτου λίθου ὄρος",
     "previous": "Basanitis",
-    "next": "Basanoi",
+    "next": "Βάσανοι",
+    "sort_key": "Basanitu lithu oros",
     "chapters": [
       {
         "start": 39,
@@ -2139,9 +2147,11 @@
     ]
   },
   {
-    "lemma": "Basanoi",
-    "previous": "Basanitu lithu oros",
+    "lemma": "Βάσανοι",
+    "previous": "Βασανίτου λίθου ὄρος",
     "next": "Basante",
+    "sort_key": "Basanoi",
+    "wp_link": "w:de:Folter",
     "chapters": [
       {
         "start": 39,
@@ -2152,7 +2162,7 @@
   },
   {
     "lemma": "Basante",
-    "previous": "Basanoi",
+    "previous": "Βάσανοι",
     "next": "Basapare",
     "chapters": [
       {
@@ -2309,6 +2319,7 @@
     "lemma": "Basich",
     "previous": "Basibunon",
     "next": "Basila",
+    "wp_link": "w:de:Basich",
     "chapters": [
       {
         "start": 41,
@@ -2393,6 +2404,7 @@
     "lemma": "Basileia 3",
     "previous": "Basileia 2",
     "next": "Basileia 4",
+    "wp_link": "w:de:Basel",
     "chapters": [
       {
         "start": 43,
@@ -2503,6 +2515,7 @@
     "lemma": "Basileides 6",
     "previous": "Basileides 5",
     "next": "Basileides 7",
+    "sort_key": "Basileides 06",
     "chapters": [
       {
         "start": 46,
@@ -2515,6 +2528,7 @@
     "lemma": "Basileides 7",
     "previous": "Basileides 6",
     "next": "Basileides 8",
+    "sort_key": "Basileides 07",
     "chapters": [
       {
         "start": 46,
@@ -2527,6 +2541,7 @@
     "lemma": "Basileides 8",
     "previous": "Basileides 7",
     "next": "Basileides 9",
+    "sort_key": "Basileides 08",
     "chapters": [
       {
         "start": 46,
@@ -2611,6 +2626,8 @@
     "lemma": "Βασιλήϊοι",
     "previous": "Basileides 14",
     "next": "Basileion",
+    "sort_key": "Basileioi",
+    "wp_link": "w:de:Skythen",
     "chapters": [
       {
         "start": 47,
@@ -2635,6 +2652,8 @@
     "lemma": "Basileios 1",
     "previous": "Basileion",
     "next": "Basileios 2",
+    "sort_key": "Basileios 01",
+    "redirect": true,
     "chapters": [
       {
         "start": 48,
@@ -2646,6 +2665,7 @@
     "lemma": "Basileios 2",
     "previous": "Basileios 1",
     "next": "Basileios 3",
+    "sort_key": "Basileios 02",
     "chapters": [
       {
         "start": 48,
@@ -2658,6 +2678,7 @@
     "lemma": "Basileios 3",
     "previous": "Basileios 2",
     "next": "Basileios 4",
+    "sort_key": "Basileios 03",
     "chapters": [
       {
         "start": 48,
@@ -2670,6 +2691,7 @@
     "lemma": "Basileios 4",
     "previous": "Basileios 3",
     "next": "Basileios 5",
+    "sort_key": "Basileios 04",
     "chapters": [
       {
         "start": 48,
@@ -2682,6 +2704,7 @@
     "lemma": "Basileios 5",
     "previous": "Basileios 4",
     "next": "Basileios 6",
+    "sort_key": "Basileios 05",
     "chapters": [
       {
         "start": 48,
@@ -2694,6 +2717,8 @@
     "lemma": "Basileios 6",
     "previous": "Basileios 5",
     "next": "Basileios 7",
+    "sort_key": "Basileios 06",
+    "wp_link": "w:de:Flavius Caecina Decius Basilius",
     "chapters": [
       {
         "start": 48,
@@ -2706,6 +2731,7 @@
     "lemma": "Basileios 7",
     "previous": "Basileios 6",
     "next": "Basileios 8",
+    "sort_key": "Basileios 07",
     "chapters": [
       {
         "start": 48,
@@ -2718,6 +2744,7 @@
     "lemma": "Basileios 8",
     "previous": "Basileios 7",
     "next": "Basileios 9",
+    "sort_key": "Basileios 08",
     "wp_link": "w:de:Anicius Faustus Albinus Basilius",
     "chapters": [
       {
@@ -2731,6 +2758,7 @@
     "lemma": "Basileios 9",
     "previous": "Basileios 8",
     "next": "Basileios 10",
+    "sort_key": "Basileios 09",
     "chapters": [
       {
         "start": 49,
@@ -2840,7 +2868,7 @@
   {
     "lemma": "Βασίλειος ποταμός",
     "previous": "Basileios 17",
-    "next": "Basileon phrurion",
+    "next": "Βασιλέων φρούριον",
     "chapters": [
       {
         "start": 55,
@@ -2849,9 +2877,10 @@
     ]
   },
   {
-    "lemma": "Basileon phrurion",
+    "lemma": "Βασιλέων φρούριον",
     "previous": "Βασίλειος ποταμός",
     "next": "Basileus",
+    "sort_key": "Basileon phrurion",
     "chapters": [
       {
         "start": 55,
@@ -2862,7 +2891,7 @@
   },
   {
     "lemma": "Basileus",
-    "previous": "Basileon phrurion",
+    "previous": "Βασιλέων φρούριον",
     "next": "Basileus 1",
     "chapters": [
       {
@@ -2971,6 +3000,7 @@
     "lemma": "Ad Basilicam Diadumeni",
     "previous": "Ad Basilicam",
     "next": "Basilicus sinus",
+    "sort_key": "Basilicam Diadumeni, Ad",
     "chapters": [
       {
         "start": 96,
@@ -3105,8 +3135,9 @@
   },
   {
     "lemma": "Basilina",
-    "previous": "Basilikos aulon",
+    "previous": "Βασιλικὸς αὐλών",
     "next": "Basilinda",
+    "wp_link": "w:de:Basilina",
     "chapters": [
       {
         "start": 98,
@@ -3313,7 +3344,7 @@
   {
     "lemma": "Baska",
     "previous": "Basinnoi",
-    "next": "Baskania",
+    "next": "Βασκάνια",
     "chapters": [
       {
         "start": 103,
@@ -3323,7 +3354,7 @@
     ]
   },
   {
-    "lemma": "Baskania",
+    "lemma": "Βασκάνια",
     "previous": "Baska",
     "next": "Baskatis",
     "chapters": [
@@ -3335,8 +3366,8 @@
   },
   {
     "lemma": "Baskatis",
-    "previous": "Baskania",
-    "next": "Baskisa ore",
+    "previous": "Βασκάνια",
+    "next": "Βάσκισα ὄρη",
     "chapters": [
       {
         "start": 103,
@@ -3346,20 +3377,14 @@
     ]
   },
   {
-    "lemma": "Baskisa ore",
+    "lemma": "Βάσκισα ὄρη",
     "previous": "Baskatis",
     "next": "Basoropeda",
-    "chapters": [
-      {
-        "start": 103,
-        "end": 103,
-        "author": "Sethe"
-      }
-    ]
+    "sort_key": "Baskida ore"
   },
   {
     "lemma": "Basoropeda",
-    "previous": "Baskisa ore",
+    "previous": "Βάσκισα ὄρη",
     "next": "Bassa",
     "chapters": [
       {
@@ -3469,6 +3494,7 @@
     "lemma": "Bassareus",
     "previous": "Bassarai, Bassarides",
     "next": "Bassarinoi",
+    "wp_link": "w:de:Dionysos",
     "chapters": [
       {
         "start": 104,
@@ -3542,6 +3568,7 @@
     "lemma": "Bassiana 1",
     "previous": "Bassi 2",
     "next": "Bassiana 2",
+    "wp_link": "w:de:Szombathely",
     "chapters": [
       {
         "start": 105,
@@ -3638,6 +3665,7 @@
     "lemma": "Bassianus 4",
     "previous": "Bassianus 3",
     "next": "Bassianus 5",
+    "wp_link": "w:de:Bassianus (Caesar)",
     "chapters": [
       {
         "start": 106,
@@ -3795,6 +3823,7 @@
     "lemma": "Bassus 2",
     "previous": "Bassus 1",
     "next": "Bassus 3",
+    "sort_key": "Bassus 02",
     "chapters": [
       {
         "start": 107,
@@ -3916,6 +3945,7 @@
     "lemma": "Bassus 12",
     "previous": "Bassus 11",
     "next": "Bassus 13",
+    "wp_link": "w:de:Marcus Magrius Bassus",
     "chapters": [
       {
         "start": 107,
@@ -3940,6 +3970,7 @@
     "lemma": "Bassus 14",
     "previous": "Bassus 13",
     "next": "Bassus 15",
+    "wp_link": "w:de:Caesonius Bassus",
     "chapters": [
       {
         "start": 108,
@@ -4048,6 +4079,7 @@
     "lemma": "Bassus 23",
     "previous": "Bassus 22",
     "next": "Bassus 24",
+    "wp_link": "w:de:Iunius Bassus Theotecnius",
     "chapters": [
       {
         "start": 108,
@@ -4121,6 +4153,7 @@
     "lemma": "Bassus 29",
     "previous": "Bassus 28",
     "next": "Bassus 30",
+    "redirect": "Herculanus 6",
     "chapters": [
       {
         "start": 109,
@@ -4238,7 +4271,7 @@
   },
   {
     "lemma": "Basta",
-    "previous": "Bassus 37a-m",
+    "previous": "Bassus 37",
     "next": "Bastaga",
     "chapters": [
       {
@@ -4264,6 +4297,7 @@
     "lemma": "Bastagaza",
     "previous": "Bastaga",
     "next": "Bastarnae",
+    "redirect": true,
     "chapters": [
       {
         "start": 110,
@@ -4276,6 +4310,7 @@
     "lemma": "Bastarnae",
     "previous": "Bastagaza",
     "next": "Bastarnicae Alpes",
+    "wp_link": "w:de:Bastarnen",
     "chapters": [
       {
         "start": 110,
@@ -4300,6 +4335,7 @@
     "lemma": "Bastavena",
     "previous": "Bastarnicae Alpes",
     "next": "Basterbini",
+    "sort_key": "Bastauena",
     "chapters": [
       {
         "start": 113,
@@ -4370,6 +4406,7 @@
     "lemma": "Basti",
     "previous": "Bastetani",
     "next": "Bastia 1",
+    "wp_link": "w:de:Baza",
     "chapters": [
       {
         "start": 114,
@@ -4578,6 +4615,7 @@
     "lemma": "Batavia",
     "previous": "Batavi",
     "next": "Batavini",
+    "sort_key": "Batauia",
     "chapters": [
       {
         "start": 121,
@@ -4601,6 +4639,7 @@
     "lemma": "Batavodurum",
     "previous": "Batavini",
     "next": "Batavorum civitas, oppidum",
+    "sort_key": "Batauodurum",
     "chapters": [
       {
         "start": 121,
@@ -4684,6 +4723,8 @@
     "lemma": "Βατήρ",
     "previous": "Bateni",
     "next": "Baternae",
+    "sort_key": "Bater",
+    "wp_link": "w:de:Pentathlon",
     "chapters": [
       {
         "start": 122,
@@ -4741,7 +4782,7 @@
   {
     "lemma": "Bathanattos",
     "previous": "Bathanarius",
-    "next": "Bathea tu Pontu",
+    "next": "Βάθεα τοῦ Πόντου",
     "chapters": [
       {
         "start": 123,
@@ -4751,9 +4792,10 @@
     ]
   },
   {
-    "lemma": "Bathea tu Pontu",
+    "lemma": "Βάθεα τοῦ Πόντου",
     "previous": "Bathanattos",
     "next": "Batheia",
+    "sort_key": "Bathea tu Pontu",
     "chapters": [
       {
         "start": 123,
@@ -4764,7 +4806,7 @@
   },
   {
     "lemma": "Batheia",
-    "previous": "Bathea tu Pontu",
+    "previous": "Βάθεα τοῦ Πόντου",
     "next": "Βαθεῖα Σκοπιά",
     "chapters": [
       {
@@ -5172,7 +5214,8 @@
   {
     "lemma": "Βαθὺς λιμήν 1",
     "previous": "Bathys 3",
-    "next": "Bathys limen 2",
+    "next": "Βαθὺς λιμήν 2",
+    "sort_key": "Bathys limen 1",
     "chapters": [
       {
         "start": 139,
@@ -5182,7 +5225,7 @@
     ]
   },
   {
-    "lemma": "Bathys limen 2",
+    "lemma": "Βαθὺς λιμήν 2",
     "previous": "Βαθὺς λιμήν 1",
     "next": "Bathys limen 3",
     "chapters": [
@@ -5194,8 +5237,8 @@
   },
   {
     "lemma": "Bathys limen 3",
-    "previous": "Bathys limen 2",
-    "next": "Bathys ryax",
+    "previous": "Βαθὺς λιμήν 2",
+    "next": "Βαθὺς ῥύαξ",
     "chapters": [
       {
         "start": 139,
@@ -5205,7 +5248,7 @@
     ]
   },
   {
-    "lemma": "Bathys ryax",
+    "lemma": "Βαθὺς ῥύαξ",
     "previous": "Bathys limen 3",
     "next": "Bati",
     "chapters": [
@@ -5218,7 +5261,7 @@
   },
   {
     "lemma": "Bati",
-    "previous": "Bathys ryax",
+    "previous": "Βαθὺς ῥύαξ",
     "next": "Batiai",
     "chapters": [
       {
@@ -5305,6 +5348,7 @@
     "lemma": "Βατίνητις χώρα",
     "previous": "Batina",
     "next": "Batini",
+    "sort_key": "Batinetis chora",
     "chapters": [
       {
         "start": 140,
@@ -5680,6 +5724,7 @@
     "lemma": "Battara(s)",
     "previous": "Battakes 2",
     "next": "Battarios",
+    "sort_key": "Battaras",
     "chapters": [
       {
         "start": 146,
@@ -5787,6 +5832,8 @@
     "lemma": "Battos 3",
     "previous": "Battos 2",
     "next": "Battos 4",
+    "sort_key": "Battos 03",
+    "wp_link": "w:de:Battos I.",
     "chapters": [
       {
         "start": 147,
@@ -5854,6 +5901,7 @@
     "lemma": "Battos 8",
     "previous": "Battos 7",
     "next": "Battos 9",
+    "sort_key": "Battos 08",
     "chapters": [
       {
         "start": 149,
@@ -5890,7 +5938,7 @@
   {
     "lemma": "Battua",
     "previous": "Battos 10",
-    "next": "Battu skopia",
+    "next": "Βάττου σκοπιά",
     "chapters": [
       {
         "start": 149,
@@ -5899,9 +5947,10 @@
     ]
   },
   {
-    "lemma": "Battu skopia",
+    "lemma": "Βάττου σκοπιά",
     "previous": "Battua",
     "next": "Batulum",
+    "sort_key": "Battu skopia",
     "chapters": [
       {
         "start": 149,
@@ -5912,7 +5961,7 @@
   },
   {
     "lemma": "Batulum",
-    "previous": "Battu skopia",
+    "previous": "Βάττου σκοπιά",
     "next": "Batum",
     "chapters": [
       {
@@ -5997,6 +6046,7 @@
     "lemma": "Bauconica",
     "previous": "Baubo 2",
     "next": "Baudo",
+    "wp_link": "w:de:Buconica",
     "chapters": [
       {
         "start": 152,
@@ -6069,7 +6119,8 @@
   {
     "lemma": "Βαύκαλις",
     "previous": "Bavius",
-    "next": "Baukides",
+    "next": "Βαυκίδες",
+    "sort_key": "Baukalis",
     "chapters": [
       {
         "start": 153,
@@ -6079,9 +6130,10 @@
     ]
   },
   {
-    "lemma": "Baukides",
+    "lemma": "Βαυκίδες",
     "previous": "Βαύκαλις",
     "next": "Baukidias",
+    "sort_key": "Baukides",
     "chapters": [
       {
         "start": 153,
@@ -6092,7 +6144,7 @@
   },
   {
     "lemma": "Baukidias",
-    "previous": "Baukides",
+    "previous": "Βαυκίδες",
     "next": "Baukis 1",
     "chapters": [
       {
@@ -6106,6 +6158,7 @@
     "lemma": "Baukis 1",
     "previous": "Baukidias",
     "next": "Baukis 2",
+    "wp_link": "w:de:Philemon und Baucis",
     "chapters": [
       {
         "start": 153,
@@ -6423,6 +6476,8 @@
     "lemma": "Bazela",
     "previous": "Bazanis",
     "next": "Bazigraban",
+    "redirect": "Basileia 3",
+    "wp_link": "w:de:Basel",
     "chapters": [
       {
         "start": 177,
@@ -6496,6 +6551,7 @@
     "lemma": "Bazista",
     "previous": "Bazis",
     "next": "Bcantunaecus",
+    "wp_link": "w:de:Samarkand",
     "chapters": [
       {
         "start": 178,
@@ -6575,7 +6631,7 @@
   {
     "lemma": "Bebaia",
     "previous": "Beatia",
-    "next": "Bebaiosis",
+    "next": "Βεβαίωσις",
     "chapters": [
       {
         "start": 178,
@@ -6585,9 +6641,10 @@
     ]
   },
   {
-    "lemma": "Bebaiosis",
+    "lemma": "Βεβαίωσις",
     "previous": "Bebaia",
     "next": "Bebase",
+    "sort_key": "Bebaiosis",
     "chapters": [
       {
         "start": 178,
@@ -6598,7 +6655,7 @@
   },
   {
     "lemma": "Bebase",
-    "previous": "Bebaiosis",
+    "previous": "Βεβαίωσις",
     "next": "Beberaci lacus",
     "chapters": [
       {
@@ -6621,9 +6678,10 @@
     ]
   },
   {
-    "lemma": "Bebia ore",
+    "lemma": "Βέβια ὄρη",
     "previous": "Beberaci lacus",
     "next": "Bebon",
+    "sort_key": "Bebia ore",
     "chapters": [
       {
         "start": 179,
@@ -6634,7 +6692,7 @@
   },
   {
     "lemma": "Bebon",
-    "previous": "Bebia ore",
+    "previous": "Βέβια ὄρη",
     "next": "Bebriacum",
     "chapters": [
       {
@@ -6660,6 +6718,7 @@
     "lemma": "Bebryke",
     "previous": "Bebriacum",
     "next": "Bebrykes 1",
+    "wp_link": "w:de:Bebryke",
     "chapters": [
       {
         "start": 180,
@@ -6829,6 +6888,7 @@
     "lemma": "Beda 3",
     "previous": "Beda 2",
     "next": "Bedaium",
+    "wp_link": "w:de:Beda Venerabilis",
     "chapters": [
       {
         "start": 182,
@@ -7089,6 +7149,7 @@
     "lemma": "Befestigung",
     "previous": "Befania",
     "next": "Begabris",
+    "wp_link": "w:de:Befestigung",
     "chapters": [
       {
         "start": 185,
@@ -7848,6 +7909,7 @@
     "lemma": "Belgae",
     "previous": "Belfra",
     "next": "Belgica 1",
+    "wp_link": "w:de:Belger",
     "chapters": [
       {
         "start": 203,
@@ -7871,6 +7933,7 @@
     "lemma": "Belgica 2",
     "previous": "Belgica 1",
     "next": "Belgica 3",
+    "wp_link": "w:de:Belgica vicus",
     "chapters": [
       {
         "start": 207,
@@ -7952,6 +8015,7 @@
     "lemma": "Belgius",
     "previous": "Belgium",
     "next": "Belgula",
+    "wp_link": "w:de:Belgius",
     "chapters": [
       {
         "start": 208,
@@ -8102,6 +8166,7 @@
     "lemma": "Belisama 1",
     "previous": "Belis",
     "next": "Belisama 2",
+    "wp_link": "w:de:Mersey",
     "chapters": [
       {
         "start": 209,
@@ -8405,6 +8470,7 @@
     "lemma": "Bellicius 7",
     "previous": "Bellicius 6",
     "next": "Bellicius 8",
+    "wp_link": "w:de:Gaius Bellicius Calpurnius Torquatus",
     "chapters": [
       {
         "start": 252,
@@ -8416,7 +8482,7 @@
   {
     "lemma": "Bellicius 8",
     "previous": "Bellicius 7",
-    "next": "Bellienus",
+    "next": "Bellienus 1",
     "chapters": [
       {
         "start": 252,
@@ -8537,6 +8603,7 @@
     "lemma": "Bellitiona",
     "previous": "Bellintum",
     "next": "Bellius",
+    "wp_link": "w:de:Bellinzona",
     "chapters": [
       {
         "start": 254,
@@ -11296,6 +11363,7 @@
     "lemma": "Berravus vicus",
     "previous": "Berrabloion",
     "next": "Berressa",
+    "sort_key": "Berrauus uicus",
     "chapters": [
       {
         "start": 316,
@@ -17868,6 +17936,7 @@
     "lemma": "Blasio",
     "previous": "Blascon",
     "next": "Blasta",
+    "redirect": true,
     "chapters": [
       {
         "start": 559,
@@ -19581,6 +19650,7 @@
     "lemma": "Boëthos 7",
     "previous": "Boëthos 6",
     "next": "Boëthos 8",
+    "sort_key": "Boethos 07",
     "chapters": [
       {
         "start": 603,
@@ -19593,6 +19663,7 @@
     "lemma": "Boëthos 8",
     "previous": "Boëthos 7",
     "next": "Boëthos 9",
+    "sort_key": "Boethos 08",
     "chapters": [
       {
         "start": 603,
@@ -21409,6 +21480,7 @@
     "lemma": "Βωμονίκης",
     "previous": "Bomoi",
     "next": "Βωμός",
+    "sort_key": "Bomonikes",
     "chapters": [
       {
         "start": 681,
@@ -22709,6 +22781,7 @@
     "lemma": "Boria(s)",
     "previous": "Borgys",
     "next": "Boriennus",
+    "sort_key": "Borias",
     "chapters": [
       {
         "start": 732,
@@ -22835,7 +22908,7 @@
   {
     "lemma": "Bormanon",
     "previous": "Bormanicus",
-    "next": "Bormos",
+    "next": "Bormanus",
     "chapters": [
       {
         "start": 732,
@@ -22858,7 +22931,7 @@
   },
   {
     "lemma": "Bormanus",
-    "previous": "Bormos",
+    "previous": "Bormanon",
     "next": "Bormiskos",
     "chapters": [
       {
@@ -23027,6 +23100,7 @@
     "lemma": "Borsea, Borthea",
     "previous": "Borrama",
     "next": "Borsippa",
+    "sort_key": "Borsea",
     "chapters": [
       {
         "start": 734,
@@ -23076,6 +23150,7 @@
     "lemma": "Borvo",
     "previous": "Bortinae",
     "next": "Boruskoi",
+    "sort_key": "Boruo",
     "chapters": [
       {
         "start": 735,
@@ -23477,7 +23552,7 @@
   },
   {
     "lemma": "Bostra",
-    "previous": "Bostar 6",
+    "previous": "Bostar",
     "next": "Bostrenos",
     "wp_link": "w:de:Bostra",
     "chapters": [
@@ -23962,6 +24037,7 @@
     "lemma": "Bovianum 1",
     "previous": "Bovenna",
     "next": "Bovianum 2",
+    "sort_key": "Bouianum 1",
     "chapters": [
       {
         "start": 797,

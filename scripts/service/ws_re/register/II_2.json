@@ -1,6 +1,12 @@
 [
   {
+    "lemma": "Mitarbeiter-Verzeichnis (Band II)",
+    "next": "Artemisia 1",
+    "sort_key": "!Autoren1896"
+  },
+  {
     "lemma": "Artemisia 1",
+    "previous": "Mitarbeiter-Verzeichnis (Band II)",
     "next": "Artemisia 2",
     "chapters": [
       {
@@ -2330,7 +2336,6 @@
     "lemma": "Asacaricus",
     "previous": "Ἀσαβῶν ὄρη",
     "next": "Asachaei",
-    "sort_key": "Ascarius",
     "wp_link": "w:de:Ascaricus",
     "chapters": [
       {
@@ -2356,6 +2361,7 @@
     "lemma": "Asadada",
     "previous": "Asachaei",
     "next": "Asael",
+    "redirect": "Asaradda",
     "chapters": [
       {
         "start": 1514,
@@ -2461,7 +2467,8 @@
   {
     "lemma": "Asamas",
     "previous": "Asalmanos",
-    "next": "Asaminthos",
+    "next": "Ἀσάμινθος",
+    "redirect": "Anatis",
     "chapters": [
       {
         "start": 1514,
@@ -2471,9 +2478,11 @@
     ]
   },
   {
-    "lemma": "Asaminthos",
+    "lemma": "Ἀσάμινθος",
     "previous": "Asamas",
     "next": "Asamon 1",
+    "sort_key": "Asaminthos",
+    "wp_link": "w:de:Badewanne",
     "chapters": [
       {
         "start": 1514,
@@ -2484,7 +2493,7 @@
   },
   {
     "lemma": "Asamon 1",
-    "previous": "Asaminthos",
+    "previous": "Ἀσάμινθος",
     "next": "Asamon 2",
     "chapters": [
       {
@@ -2630,6 +2639,7 @@
     "lemma": "Asandros 3",
     "previous": "Asandros 2",
     "next": "Asandros 4",
+    "wp_link": "w:de:Asandros (Karien)",
     "chapters": [
       {
         "start": 1515,
@@ -24334,6 +24344,7 @@
     "lemma": "Augustoritum",
     "previous": "Augustopolis 3",
     "next": "Augustulus",
+    "wp_link": "w:de:Limoges",
     "chapters": [
       {
         "start": 2369,
@@ -24383,6 +24394,7 @@
     "lemma": "Augustus",
     "previous": "Augustum 2",
     "next": "Augustus mons",
+    "wp_link": "w:de:Augustus (Titel)",
     "chapters": [
       {
         "start": 2370,
@@ -24456,6 +24468,7 @@
     "lemma": "Aviaitinehae",
     "previous": "Avia",
     "next": "Avianius 1",
+    "sort_key": "Auiaitinehae",
     "chapters": [
       {
         "start": 2372,
@@ -25256,7 +25269,7 @@
   },
   {
     "lemma": "Aulariokos",
-    "previous": "Aulaiu teichos",
+    "previous": "Αὐλαίου τεῖχος",
     "next": "Aulax",
     "chapters": [
       {
@@ -25354,6 +25367,7 @@
     "lemma": "Aulerci",
     "previous": "Auleon",
     "next": "Auleros",
+    "wp_link": "w:de:Aulerci",
     "chapters": [
       {
         "start": 2402,
@@ -25377,7 +25391,7 @@
   {
     "lemma": "Aulestes",
     "previous": "Auleros",
-    "next": "Auletes",
+    "next": "Auletik",
     "chapters": [
       {
         "start": 2403,
@@ -25557,7 +25571,7 @@
   {
     "lemma": "Aulisua",
     "previous": "Aulis 4",
-    "next": "Auliu kome",
+    "next": "Αὐλίου κώμη",
     "chapters": [
       {
         "start": 2410,
@@ -25567,9 +25581,10 @@
     ]
   },
   {
-    "lemma": "Auliu kome",
+    "lemma": "Αὐλίου κώμη",
     "previous": "Aulisua",
     "next": "Aulius 1",
+    "sort_key": "Auliu kome",
     "chapters": [
       {
         "start": 2410,
@@ -25631,6 +25646,7 @@
     "lemma": "Aulon 1",
     "previous": "Aulodik",
     "next": "Aulon 2",
+    "sort_key": "Aulon 01",
     "chapters": [
       {
         "start": 2413,
@@ -25812,6 +25828,7 @@
     "lemma": "Aulon 16",
     "previous": "Aulon 15",
     "next": "Aulon 17",
+    "wp_link": "w:de:Vlora",
     "chapters": [
       {
         "start": 2414,
@@ -25836,6 +25853,7 @@
     "lemma": "Auloneus",
     "previous": "Aulon 17",
     "next": "Aulonia",
+    "wp_link": "w:de:Dionysos",
     "chapters": [
       {
         "start": 2415,
@@ -25976,7 +25994,7 @@
   },
   {
     "lemma": "Aulus",
-    "previous": "Aulu krene",
+    "previous": "Αὐλοῦ κρήνη",
     "next": "Aumenahenae",
     "chapters": [
       {
@@ -26098,6 +26116,7 @@
     "lemma": "Avobriga",
     "previous": "Avo",
     "next": "Avolgigorum gens",
+    "sort_key": "Auobriga",
     "chapters": [
       {
         "start": 2423,
@@ -26110,6 +26129,7 @@
     "lemma": "Avolgigorum gens",
     "previous": "Avobriga",
     "next": "Avona 1",
+    "sort_key": "Auolgigorum gens",
     "chapters": [
       {
         "start": 2424,
@@ -26122,6 +26142,7 @@
     "lemma": "Avona 1",
     "previous": "Avolgigorum gens",
     "next": "Avona 2",
+    "sort_key": "Auona 1",
     "wp_link": "w:de:Avon (Fluss, Warwickshire)",
     "chapters": [
       {
@@ -26135,6 +26156,8 @@
     "lemma": "Avona 2",
     "previous": "Avona 1",
     "next": "Auos",
+    "sort_key": "Auona 2",
+    "wp_link": "w:de:Avon (Fluss, Bristol)",
     "chapters": [
       {
         "start": 2424,
@@ -26242,7 +26265,8 @@
   {
     "lemma": "Auranitis 1",
     "previous": "Aurana",
-    "next": "Auranitis 2",
+    "next": "Auranatis 2",
+    "wp_link": "w:de:Hauran",
     "chapters": [
       {
         "start": 2425,
@@ -26288,7 +26312,7 @@
   {
     "lemma": "Auras",
     "previous": "Aurarius",
-    "next": "Aurasion oros",
+    "next": "Αὐράσιον ὄρος",
     "chapters": [
       {
         "start": 2425,
@@ -26298,9 +26322,10 @@
     ]
   },
   {
-    "lemma": "Aurasion oros",
+    "lemma": "Αὐράσιον ὄρος",
     "previous": "Auras",
     "next": "Aurata",
+    "sort_key": "Aurasion oros",
     "chapters": [
       {
         "start": 2426,
@@ -26311,7 +26336,7 @@
   },
   {
     "lemma": "Aurata",
-    "previous": "Aurasion oros",
+    "previous": "Αὐράσιον ὄρος",
     "next": "ab auraturis",
     "chapters": [
       {
@@ -26324,6 +26349,7 @@
     "lemma": "ab auraturis",
     "previous": "Aurata",
     "next": "Aurea",
+    "sort_key": "Auraturis",
     "chapters": [
       {
         "start": 2426,
@@ -30446,7 +30472,7 @@
   {
     "lemma": "Aurum Iudaicum",
     "previous": "Aurum glebale",
-    "next": "Aurum lustrale, aurum negotiatorium",
+    "next": "Aurum lustrale und aurum negotiatorium",
     "chapters": [
       {
         "start": 2553,
@@ -30456,20 +30482,14 @@
     ]
   },
   {
-    "lemma": "Aurum lustrale, aurum negotiatorium",
+    "lemma": "Aurum lustrale und aurum negotiatorium",
     "previous": "Aurum Iudaicum",
     "next": "Aurum oblaticium",
-    "chapters": [
-      {
-        "start": 2553,
-        "end": 2553,
-        "author": "Kubitschek"
-      }
-    ]
+    "redirect": true
   },
   {
     "lemma": "Aurum oblaticium",
-    "previous": "Aurum lustrale, aurum negotiatorium",
+    "previous": "Aurum lustrale und aurum negotiatorium",
     "next": "Aurum tironicum",
     "chapters": [
       {
@@ -42167,6 +42187,7 @@
     "lemma": "Βάραθρον",
     "previous": "Barathra",
     "next": "Baraxmalcha",
+    "sort_key": "Barathron",
     "chapters": [
       {
         "start": 2853,
@@ -42239,6 +42260,7 @@
     "lemma": "Barba Iovis",
     "previous": "Barba 3",
     "next": "Barbalissos",
+    "sort_key": "Barbaiovis",
     "wp_link": "w:de:Jupiterbart",
     "chapters": [
       {

@@ -68,6 +68,7 @@
     "lemma": "Apollonia 5",
     "previous": "Apollonia 4",
     "next": "Apollonia 6",
+    "sort_key": "Apollonia 05",
     "chapters": [
       {
         "start": 114,
@@ -105,6 +106,7 @@
     "lemma": "Apollonia 8",
     "previous": "Apollonia 7",
     "next": "Apollonia 9",
+    "sort_key": "Apollonia 08",
     "chapters": [
       {
         "start": 114,
@@ -117,6 +119,7 @@
     "lemma": "Apollonia 9",
     "previous": "Apollonia 8",
     "next": "Apollonia 10",
+    "sort_key": "Apollonia 09",
     "chapters": [
       {
         "start": 115,
@@ -6274,6 +6277,8 @@
     "lemma": "Aqua, Aquae 38",
     "previous": "Aqua, Aquae 37",
     "next": "Aqua, Aquae 39",
+    "sort_key": "Aquae 038",
+    "wp_link": "w:de:Aquae Cutiliae",
     "chapters": [
       {
         "start": 299,
@@ -6286,6 +6291,7 @@
     "lemma": "Aqua, Aquae 39",
     "previous": "Aqua, Aquae 38",
     "next": "Aqua, Aquae 40",
+    "sort_key": "Aquae 039",
     "chapters": [
       {
         "start": 300,
@@ -6532,6 +6538,7 @@
     "lemma": "Aqua, Aquae 58",
     "previous": "Aqua, Aquae 57",
     "next": "Aqua, Aquae 59",
+    "sort_key": "Aquae 058",
     "chapters": [
       {
         "start": 302,
@@ -29353,6 +29360,7 @@
     "lemma": "Aristonymos 7",
     "previous": "Aristonymos 6",
     "next": "Aristonymos 8",
+    "sort_key": "Aristonymos 07",
     "chapters": [
       {
         "start": 968,
@@ -29608,6 +29616,7 @@
     "lemma": "Aristophanes 14",
     "previous": "Aristophanes 13",
     "next": "Aristophanes 15",
+    "wp_link": "w:de:Aristophanes von Byzanz",
     "chapters": [
       {
         "start": 994,
@@ -29681,6 +29690,7 @@
     "lemma": "Aristophon 1",
     "previous": "Aristophilos",
     "next": "Aristophon 2",
+    "sort_key": "Aristophon 01",
     "chapters": [
       {
         "start": 1005,
@@ -29753,6 +29763,7 @@
     "lemma": "Aristophon 7",
     "previous": "Aristophon 6",
     "next": "Aristophon 8",
+    "wp_link": "w:de:Aristophon (Komödiendichter)",
     "chapters": [
       {
         "start": 1007,
@@ -29813,7 +29824,7 @@
   {
     "lemma": "Aristophylos",
     "previous": "Aristophyloi",
-    "next": "Aristopoleitia",
+    "next": "Ἀριστοπολειτία",
     "chapters": [
       {
         "start": 1008,
@@ -29823,9 +29834,10 @@
     ]
   },
   {
-    "lemma": "Aristopoleitia",
+    "lemma": "Ἀριστοπολειτία",
     "previous": "Aristophylos",
     "next": "Aristopoles",
+    "sort_key": "Aristopoleitia",
     "chapters": [
       {
         "start": 1008,
@@ -29836,7 +29848,7 @@
   },
   {
     "lemma": "Aristopoles",
-    "previous": "Aristopoleitia",
+    "previous": "Ἀριστοπολειτία",
     "next": "Aristopolis 1",
     "chapters": [
       {
@@ -29947,6 +29959,7 @@
     "lemma": "Aristos 5",
     "previous": "Aristos 4",
     "next": "Aristos 6",
+    "sort_key": "Aristos 05",
     "chapters": [
       {
         "start": 1010,
@@ -30034,6 +30047,8 @@
     "lemma": "Aristoteles 1",
     "previous": "Aristoteiches",
     "next": "Aristoteles 2",
+    "sort_key": "Aristoteles 01",
+    "wp_link": "w:de:Battos I.",
     "chapters": [
       {
         "start": 1011,
@@ -30046,6 +30061,7 @@
     "lemma": "Aristoteles 2",
     "previous": "Aristoteles 1",
     "next": "Aristoteles 3",
+    "sort_key": "Aristoteles 02",
     "chapters": [
       {
         "start": 1011,
@@ -30217,6 +30233,7 @@
     "lemma": "Aristoteles 16",
     "previous": "Aristoteles 15",
     "next": "Aristoteles 17",
+    "sort_key": "Aristoteles 16",
     "chapters": [
       {
         "start": 1012,
@@ -30320,6 +30337,7 @@
     "lemma": "Aristoteles 24",
     "previous": "Aristoteles 23",
     "next": "Aristotheos",
+    "sort_key": "Aristoteles 24",
     "chapters": [
       {
         "start": 1055,
@@ -30343,7 +30361,7 @@
   {
     "lemma": "Aristotheros",
     "previous": "Aristotheos",
-    "next": "Aristotimidai",
+    "next": "Ἀριστοτιμίδαι",
     "wp_link": "w:de:Aristotheros",
     "chapters": [
       {
@@ -30354,7 +30372,7 @@
     ]
   },
   {
-    "lemma": "Aristotimidai",
+    "lemma": "Ἀριστοτιμίδαι",
     "previous": "Aristotheros",
     "next": "Aristotimos 1",
     "chapters": [
@@ -30367,7 +30385,7 @@
   },
   {
     "lemma": "Aristotimos 1",
-    "previous": "Aristotimidai",
+    "previous": "Ἀριστοτιμίδαι",
     "next": "Aristotimos 2",
     "chapters": [
       {
@@ -30393,6 +30411,7 @@
     "lemma": "Aristoxenos 1",
     "previous": "Aristotimos 2",
     "next": "Aristoxenos 2",
+    "sort_key": "Aristoxenos 01",
     "chapters": [
       {
         "start": 1056,
@@ -30481,6 +30500,8 @@
     "lemma": "Aristoxenos 8",
     "previous": "Aristoxenos 7",
     "next": "Aristoxenos 9",
+    "sort_key": "Aristoxenos 08",
+    "wp_link": "w:de:Aristoxenos (Mediziner)",
     "chapters": [
       {
         "start": 1065,

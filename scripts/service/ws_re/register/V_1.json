@@ -5020,7 +5020,7 @@
   {
     "lemma": "Diabateria",
     "previous": "Diabate",
-    "next": "Diabathron",
+    "next": "Διάβαθρον",
     "chapters": [
       {
         "start": 301,
@@ -5030,9 +5030,10 @@
     ]
   },
   {
-    "lemma": "Diabathron",
+    "lemma": "Διάβαθρον",
     "previous": "Diabateria",
     "next": "Diabetai",
+    "sort_key": "Diabatron",
     "chapters": [
       {
         "start": 301,
@@ -5043,8 +5044,8 @@
   },
   {
     "lemma": "Diabetai",
-    "previous": "Diabathron",
-    "next": "Diabetes",
+    "previous": "Διάβαθρον",
+    "next": "Διαβέτης",
     "chapters": [
       {
         "start": 301,
@@ -5054,9 +5055,10 @@
     ]
   },
   {
-    "lemma": "Diabetes",
+    "lemma": "Διαβέτης",
     "previous": "Diabetai",
     "next": "Diablintes",
+    "sort_key": "Diabetes",
     "chapters": [
       {
         "start": 302,
@@ -5067,8 +5069,9 @@
   },
   {
     "lemma": "Diablintes",
-    "previous": "Diabetes",
-    "next": "Diabola",
+    "previous": "Διαβέτης",
+    "next": "Διαβολά",
+    "redirect": "Aulerci",
     "chapters": [
       {
         "start": 302,
@@ -5078,9 +5081,11 @@
     ]
   },
   {
-    "lemma": "Diabola",
+    "lemma": "Διαβολά",
     "previous": "Diablintes",
     "next": "Diabolis",
+    "sort_key": "Diabola",
+    "redirect": true,
     "chapters": [
       {
         "start": 302,
@@ -5091,7 +5096,7 @@
   },
   {
     "lemma": "Diabolis",
-    "previous": "Diabola",
+    "previous": "Διαβολά",
     "next": "Diacatochia",
     "chapters": [
       {
@@ -5104,7 +5109,7 @@
   {
     "lemma": "Diacatochia",
     "previous": "Diabolis",
-    "next": "Diacheirotonia",
+    "next": "Διαχειροτονία",
     "chapters": [
       {
         "start": 302,
@@ -5114,7 +5119,7 @@
     ]
   },
   {
-    "lemma": "Diacheirotonia",
+    "lemma": "Διαχειροτονία",
     "previous": "Diacatochia",
     "next": "Diachersis",
     "chapters": [
@@ -5127,7 +5132,7 @@
   },
   {
     "lemma": "Diachersis",
-    "previous": "Diacheirotonia",
+    "previous": "Διαχειροτονία",
     "next": "Diachyton",
     "chapters": [
       {
@@ -5141,12 +5146,7 @@
     "lemma": "Diachyton",
     "previous": "Diachersis",
     "next": "Diadema",
-    "chapters": [
-      {
-        "start": 303,
-        "end": 303
-      }
-    ]
+    "redirect": "Wein"
   },
   {
     "lemma": "Diadema",
@@ -5188,7 +5188,7 @@
   {
     "lemma": "Diades 2",
     "previous": "Diades 1",
-    "next": "Diadikasia",
+    "next": "Διαδικασία",
     "chapters": [
       {
         "start": 305,
@@ -5198,7 +5198,7 @@
     ]
   },
   {
-    "lemma": "Diadikasia",
+    "lemma": "Διαδικασία",
     "previous": "Diades 2",
     "next": "Diadochos",
     "chapters": [
@@ -5211,7 +5211,7 @@
   },
   {
     "lemma": "Diadochos",
-    "previous": "Diadikasia",
+    "previous": "Διαδικασία",
     "next": "Diadoseis",
     "chapters": [
       {
@@ -8580,7 +8580,7 @@
   {
     "lemma": "Diktynna",
     "previous": "Diktya",
-    "next": "Diktynnaion 1",
+    "next": "Diktynnaion",
     "wp_link": "w:de:Diktynna",
     "chapters": [
       {
@@ -21445,6 +21445,8 @@
     "lemma": "Domitianus 5",
     "previous": "Domitianus 4",
     "next": "Domitianus 6",
+    "sort_key": "Domitianus 05",
+    "wp_link": "w:de:Lucius Domitius Domitianus",
     "chapters": [
       {
         "start": 1312,
@@ -21457,6 +21459,7 @@
     "lemma": "Domitianus 6",
     "previous": "Domitianus 5",
     "next": "Domitianus 7",
+    "sort_key": "Domitianus 06",
     "wp_link": "w:de:Domitianus (Prätorianerpräfekt)",
     "chapters": [
       {
@@ -21617,6 +21620,7 @@
     "lemma": "Domitius 6",
     "previous": "Domitius 5",
     "next": "Domitius 7",
+    "sort_key": "Domitius 006",
     "chapters": [
       {
         "start": 1315,
@@ -21703,6 +21707,8 @@
     "lemma": "Domitius 13",
     "previous": "Domitius 12",
     "next": "Domitius 14",
+    "sort_key": "Domitius 013",
+    "redirect": "Statius 8",
     "chapters": [
       {
         "start": 1316,
@@ -21896,8 +21902,9 @@
   },
   {
     "lemma": "Domitius 30",
-    "previous": "Domitius 28",
+    "previous": "Domitius 29",
     "next": "Domitius 31",
+    "sort_key": "Domitius 030",
     "chapters": [
       {
         "start": 1346,
@@ -22007,6 +22014,8 @@
     "lemma": "Domitius 39",
     "previous": "Domitius 38",
     "next": "Domitius 40",
+    "sort_key": "Domitius 039",
+    "redirect": "Kallistratos 39",
     "chapters": [
       {
         "start": 1419,
@@ -22166,6 +22175,8 @@
     "lemma": "Domitius 53",
     "previous": "Domitius 52",
     "next": "Domitius 54",
+    "sort_key": "Domitius 053",
+    "redirect": "Calpurnius 33",
     "chapters": [
       {
         "start": 1427,
@@ -22177,6 +22188,8 @@
     "lemma": "Domitius 54",
     "previous": "Domitius 53",
     "next": "Domitius 55",
+    "sort_key": "Domitius 054",
+    "redirect": "Domitianus 5",
     "chapters": [
       {
         "start": 1427,
@@ -22188,6 +22201,8 @@
     "lemma": "Domitius 55",
     "previous": "Domitius 54",
     "next": "Domitius 56",
+    "sort_key": "Domitius 055",
+    "redirect": "Dracontius 5",
     "chapters": [
       {
         "start": 1427,

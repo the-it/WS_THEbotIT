@@ -6573,7 +6573,7 @@
   {
     "lemma": "Bath",
     "previous": "Bassus 36b",
-    "next": "Bavai, Bavay",
+    "next": "Βατιάκη",
     "wp_link": "w:de:Bath",
     "chapters": [
       {
@@ -6584,9 +6584,14 @@
     ]
   },
   {
-    "lemma": "Bavai, Bavay",
+    "lemma": "Βατιάκη",
     "previous": "Bath",
-    "next": "Bayeux",
+    "next": "Bavai, Bavay"
+  },
+  {
+    "lemma": "Bavai, Bavay",
+    "previous": "Βατιάκη",
+    "next": "Βαύκαλις",
     "chapters": [
       {
         "start": 200,
@@ -6596,7 +6601,14 @@
     ]
   },
   {
+    "lemma": "Βαύκαλις",
+    "previous": "Bavai, Bavay",
+    "next": "Bayeux"
+  },
+  {
     "lemma": "Bayeux",
+    "previous": "Βαύκαλις",
+    "next": null,
     "wp_link": "w:de:Bayeux",
     "chapters": [
       {
