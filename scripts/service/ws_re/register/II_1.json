@@ -31919,7 +31919,7 @@
   {
     "lemma": "Arma decretoria",
     "previous": "Ἄρμα",
-    "next": "Armachis",
+    "next": "Arma lusoria",
     "chapters": [
       {
         "start": 1174,
@@ -31929,8 +31929,32 @@
     ]
   },
   {
-    "lemma": "Armachis",
+    "lemma": "Arma lusoria",
     "previous": "Arma decretoria",
+    "next": "Arma pugnatoria",
+    "chapters": [
+      {
+        "start": 1175,
+        "end": 1175,
+        "author": "Pollack"
+      }
+    ]
+  },
+  {
+    "lemma": "Arma pugnatoria",
+    "previous": "Arma lusoria",
+    "next": "Armachis",
+    "chapters": [
+      {
+        "start": 1175,
+        "end": 1175,
+        "author": "Pollack"
+      }
+    ]
+  },
+  {
+    "lemma": "Armachis",
+    "previous": "Arma pugnatoria",
     "next": "Armagara",
     "chapters": [
       {
@@ -31989,7 +32013,7 @@
   {
     "lemma": "Armalausi",
     "previous": "Armaïs",
-    "next": "Arma lusoria",
+    "next": "Armamenta",
     "chapters": [
       {
         "start": 1175,
@@ -31998,22 +32022,11 @@
       }
     ]
   },
-  {
-    "lemma": "Arma lusoria",
-    "previous": "Armalausi",
-    "next": "Armamenta",
-    "chapters": [
-      {
-        "start": 1175,
-        "end": 1175,
-        "author": "Pollack"
-      }
-    ]
-  },
+
   {
     "lemma": "Armamenta",
-    "previous": "Arma lusoria",
-    "next": "Arma pugnatoria",
+    "previous": "Armalausi",
+    "next": "Armamentarium 1",
     "chapters": [
       {
         "start": 1175,
@@ -32023,20 +32036,8 @@
     ]
   },
   {
-    "lemma": "Arma pugnatoria",
-    "previous": "Arma lusoria",
-    "next": "Armachis",
-    "chapters": [
-      {
-        "start": 1175,
-        "end": 1175,
-        "author": "Pollack"
-      }
-    ]
-  },
-  {
     "lemma": "Armamentarium 1",
-    "previous": "Arma pugnatoria",
+    "previous": "Armamenta",
     "next": "Armamentarium 2",
     "chapters": [
       {

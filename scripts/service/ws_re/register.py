@@ -293,11 +293,13 @@ for regex_pair in _POST_REGEX_RAW_LIST:
 # some regex actions must performed before the TRANSLATION_DICT replacement
 
 _PRE_REGEX_RAW_LIST = [
+    (r"αυ", "au"),
+    (r"ευ", "eu"),
     (r"ου", "u"),
-    (r"^(?:Ε|ε|η)", "he"),
-    (r"^(?:Ι|ι)", "hi"),
-    (r"^(?:Ο|ο)", "ho"),
-    (r"^(?:Υ|υ)", "hy"),
+    (r"^(?:ε|η)", "he"),
+    (r"^(?:ι)", "hi"),
+    (r"^(?:ο)", "ho"),
+    (r"^(?:υ)", "hy"),
     (r" (?:ε|η)", " he"),
     (r" ι", " hi"),
     (r" ο", " ho"),
@@ -378,11 +380,11 @@ class Lemma(Mapping):
     @classmethod
     def make_sort_key(cls, lemma: str):
         # remove all accents
-        lemma = cls._strip_accents(lemma)
+        lemma = cls._strip_accents(lemma).casefold()
         # simple replacement of single characters
         for regex in _PRE_REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
-        lemma = lemma.casefold().translate(_TRANSLATION_DICT)
+        lemma = lemma.translate(_TRANSLATION_DICT)
         for regex in _POST_REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
         # delete dots at last
@@ -656,7 +658,7 @@ class VolumeRegister(Register):
 
     def _update_lemma_by_name(self, lemma_dict, remove_items):
         lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
-        if self.volume.type == VolumeType.SUPPLEMENTS:
+        if self.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
             self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
         else:
             lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
@@ -664,7 +666,7 @@ class VolumeRegister(Register):
 
     def _update_by_sortkey(self, lemma_dict: Dict[str, Any], remove_items: List[str]):
         lemma_to_update = self.get_lemma_by_sort_key(self.normalize_sort_key(lemma_dict))
-        if self.volume.type == VolumeType.SUPPLEMENTS:
+        if self.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
             self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
         else:
             self.try_update_previous_next_of_surrounding_lemmas(lemma_dict, lemma_to_update)

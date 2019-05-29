@@ -4653,9 +4653,9 @@
     ]
   },
   {
-    "lemma": "Eponion",
+    "lemma": "Ἐπώνιον",
     "previous": "Epona",
-    "next": "Eponymos",
+    "next": "Ἐπώνυμος",
     "chapters": [
       {
         "start": 243,
@@ -4665,8 +4665,8 @@
     ]
   },
   {
-    "lemma": "Eponymos",
-    "previous": "Eponion",
+    "lemma": "Ἐπώνυμος",
+    "previous": "Ἐπώνιον",
     "next": "Epopetes",
     "chapters": [
       {
@@ -4689,30 +4689,6 @@
     ]
   },
   {
-    "lemma": "Epopeus",
-    "previous": "Epopetes",
-    "next": "Epopeus 1",
-    "chapters": [
-      {
-        "start": 245,
-        "end": 245,
-        "author": "Escher"
-      }
-    ]
-  },
-  {
-    "lemma": "Epopeus 1",
-    "previous": "Epopeus",
-    "next": "Epopeus mons",
-    "chapters": [
-      {
-        "start": 245,
-        "end": 246,
-        "author": "Escher"
-      }
-    ]
-  },
-  {
     "lemma": "Epopeus mons",
     "previous": "Epopetes",
     "next": "Epopeus",
@@ -4726,8 +4702,32 @@
     ]
   },
   {
-    "lemma": "Epopeus 2",
+    "lemma": "Epopeus",
     "previous": "Epopeus mons",
+    "next": "Epopeus 1",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 245,
+        "author": "Escher"
+      }
+    ]
+  },
+  {
+    "lemma": "Epopeus 1",
+    "previous": "Epopeus",
+    "next": "Epopeus 2",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 246,
+        "author": "Escher"
+      }
+    ]
+  },
+  {
+    "lemma": "Epopeus 2",
+    "previous": "Epopeus 1",
     "next": "Epopeus 3",
     "chapters": [
       {
@@ -19943,7 +19943,7 @@
     ]
   },
   {
-    "lemma": "Eumenus alsos",
+    "lemma": "Εὐμένους ἄλσος",
     "previous": "Eumenos",
     "next": "Eumetes",
     "chapters": [
@@ -19956,7 +19956,7 @@
   },
   {
     "lemma": "Eumetes",
-    "previous": "Eumenus alsos",
+    "previous": "Εὐμένους ἄλσος",
     "next": "Eumetis",
     "chapters": [
       {
@@ -23408,7 +23408,7 @@
   {
     "lemma": "Eurolochos",
     "previous": "Euroia",
-    "next": "Euromeus",
+    "next": "Εὐρωμεύς",
     "chapters": [
       {
         "start": 1285,
@@ -23418,7 +23418,7 @@
     ]
   },
   {
-    "lemma": "Euromeus",
+    "lemma": "Εὐρωμεύς",
     "previous": "Eurolochos",
     "next": "Euromius",
     "chapters": [
@@ -27974,7 +27974,7 @@
   {
     "lemma": "Eutelion",
     "previous": "Eutelie",
-    "next": "Euterpe 1",
+    "next": "Euterpe",
     "chapters": [
       {
         "start": 1493,
@@ -27984,7 +27984,7 @@
     ]
   },
   {
-    "lemma": "Euterpe 1",
+    "lemma": "Euterpe",
     "previous": "Eutelion",
     "next": "Euth-",
     "chapters": [

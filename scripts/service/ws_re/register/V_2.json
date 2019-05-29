@@ -8386,49 +8386,12 @@
   {
     "lemma": "Eburones",
     "previous": "Eburomagus",
-    "next": "Eburum 1",
+    "next": "Eburovices",
     "chapters": [
       {
         "start": 1902,
         "end": 1903,
         "author": "Ihm"
-      }
-    ]
-  },
-  {
-    "lemma": "Eburum 1",
-    "previous": "Eburovices",
-    "next": "Eburum 2",
-    "chapters": [
-      {
-        "start": 1902,
-        "end": 1902,
-        "author": "Hülsen"
-      }
-    ]
-  },
-  {
-    "lemma": "Eburum 2",
-    "previous": "Eburum 1",
-    "next": "Ebusus",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 1902,
-        "end": 1902
-      }
-    ]
-  },
-  {
-    "lemma": "Ebusus",
-    "previous": "Eburum 2",
-    "next": "Eccela",
-    "wp_link": "w:de:Ibiza",
-    "chapters": [
-      {
-        "start": 1902,
-        "end": 1906,
-        "author": "Hübner"
       }
     ]
   },
@@ -8445,8 +8408,45 @@
     ]
   },
   {
-    "lemma": "Eccela",
+    "lemma": "Eburum 1",
     "previous": "Eburovices",
+    "next": "Eburum 2",
+    "chapters": [
+      {
+        "start": 1903,
+        "end": 1903,
+        "author": "Hülsen"
+      }
+    ]
+  },
+  {
+    "lemma": "Eburum 2",
+    "previous": "Eburum 1",
+    "next": "Ebusus",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 1903,
+        "end": 1903
+      }
+    ]
+  },
+  {
+    "lemma": "Ebusus",
+    "previous": "Eburum 2",
+    "next": "Eccela",
+    "wp_link": "w:de:Ibiza",
+    "chapters": [
+      {
+        "start": 1903,
+        "end": 1906,
+        "author": "Hübner"
+      }
+    ]
+  },
+  {
+    "lemma": "Eccela",
+    "previous": "Ebusus",
     "next": "Ecdicius",
     "chapters": [
       {
@@ -20643,7 +20643,7 @@
   {
     "lemma": "Ennios",
     "previous": "Ennion",
-    "next": "Ennius 1",
+    "next": "Ennius",
     "chapters": [
       {
         "start": 2588,
@@ -23098,9 +23098,9 @@
     ]
   },
   {
-    "lemma": "Ephodion",
+    "lemma": "Ἐφόδιον",
     "previous": "Ephodia",
-    "next": "Epholkion",
+    "next": "Ἐφόλκιον",
     "chapters": [
       {
         "start": 2859,
@@ -23110,8 +23110,8 @@
     ]
   },
   {
-    "lemma": "Epholkion",
-    "previous": "Ephodion",
+    "lemma": "Ἐφόλκιον",
+    "previous": "Ἐφόδιον",
     "next": "Ephorkios",
     "chapters": [
       {

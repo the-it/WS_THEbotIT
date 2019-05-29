@@ -2397,11 +2397,23 @@
   {
     "lemma": "Cluvius 3",
     "previous": "Cluvius 2",
-    "next": "Cluvius 5",
+    "next": "Cluvius 4",
     "chapters": [
       {
         "start": 119,
         "end": 119,
+        "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Cluvius 4",
+    "previous": "Cluvius 3",
+    "next": "Cluvius 5",
+    "chapters": [
+      {
+        "start": 120,
+        "end": 120,
         "author": "Münzer"
       }
     ]
@@ -2414,27 +2426,15 @@
     "redirect": true,
     "chapters": [
       {
-        "start": 119,
-        "end": 119
-      }
-    ]
-  },
-  {
-    "lemma": "Cluvius 4",
-    "previous": "Cluvius 5",
-    "next": "Cluvius 6",
-    "chapters": [
-      {
         "start": 120,
-        "end": 120,
-        "author": "Münzer"
+        "end": 120
       }
     ]
   },
   {
     "lemma": "Cluvius 6",
-    "previous": "Cluvius 4",
-    "next": "Cluvius 9",
+    "previous": "Cluvius 5",
+    "next": "Cluvius 7",
     "chapters": [
       {
         "start": 120,
@@ -2444,19 +2444,8 @@
     ]
   },
   {
-    "lemma": "Cluvius 9",
-    "previous": "Cluvius 6",
-    "next": "Cluvius 7",
-    "chapters": [
-      {
-        "start": 120,
-        "end": 120
-      }
-    ]
-  },
-  {
     "lemma": "Cluvius 7",
-    "previous": "Cluvius 9",
+    "previous": "Cluvius 6",
     "next": "Cluvius 8",
     "chapters": [
       {
@@ -2469,7 +2458,7 @@
   {
     "lemma": "Cluvius 8",
     "previous": "Cluvius 7",
-    "next": "Cluvius 10",
+    "next": "Cluvius 9",
     "chapters": [
       {
         "start": 121,
@@ -2479,8 +2468,19 @@
     ]
   },
   {
-    "lemma": "Cluvius 10",
+    "lemma": "Cluvius 9",
     "previous": "Cluvius 8",
+    "next": "Cluvius 10",
+    "chapters": [
+      {
+        "start": 121,
+        "end": 121
+      }
+    ]
+  },
+  {
+    "lemma": "Cluvius 10",
+    "previous": "Cluvius 9",
     "next": "Cluvius 11",
     "chapters": [
       {
@@ -12015,7 +12015,7 @@
   {
     "lemma": "Copia 2",
     "previous": "Copia 1",
-    "next": "A copiis militaribus",
+    "next": "A copiis militaribus, castrensibus",
     "chapters": [
       {
         "start": 1213,
@@ -12038,7 +12038,7 @@
   },
   {
     "lemma": "Copillos",
-    "previous": "A copiis militaribus",
+    "previous": "A copiis militaribus, castrensibus",
     "next": "Coplanium",
     "chapters": [
       {

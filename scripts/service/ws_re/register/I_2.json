@@ -28628,7 +28628,7 @@
   {
     "lemma": "Ankyron",
     "previous": "Ankyraion",
-    "next": "Ankyron polis",
+    "next": "Ἀγκυρῶν πόλις",
     "chapters": [
       {
         "start": 2222,
@@ -28638,7 +28638,7 @@
     ]
   },
   {
-    "lemma": "Ankyron polis",
+    "lemma": "Ἀγκυρῶν πόλις",
     "previous": "Ankyron",
     "next": "Anna 1",
     "chapters": [
@@ -28676,7 +28676,7 @@
   {
     "lemma": "Anna 3",
     "previous": "Anna 2",
-    "next": "Annaeus 1",
+    "next": "Annaeus",
     "wp_link": "w:de:Anna Perenna",
     "chapters": [
       {
@@ -28700,7 +28700,7 @@
   },
   {
     "lemma": "Annaeus 1",
-    "previous": "Anna 3",
+    "previous": "Annaeus",
     "next": "Annaeus 2",
     "sort_key": "Annaeus 01",
     "chapters": [
@@ -30900,10 +30900,34 @@
   {
     "lemma": "Annius 125",
     "previous": "Annius 124",
-    "next": "Annine",
+    "next": "Annius 126",
     "chapters": [
       {
         "start": 2315,
+        "end": 2316,
+        "author": "Rohden"
+      }
+    ]
+  },
+  {
+    "lemma": "Annius 126",
+    "previous": "Annius 125",
+    "next": "Annius 127",
+    "chapters": [
+      {
+        "start": 2316,
+        "end": 2316,
+        "author": "Rohden"
+      }
+    ]
+  },
+  {
+    "lemma": "Annius 127",
+    "previous": "Annius 126",
+    "next": "Annine",
+    "chapters": [
+      {
+        "start": 2316,
         "end": 2316,
         "author": "Rohden"
       }
@@ -30918,30 +30942,6 @@
         "start": 2316,
         "end": 2316,
         "author": "Pietschmann"
-      }
-    ]
-  },
-  {
-    "lemma": "Annius 126",
-    "previous": "Annine",
-    "next": "Annius 127",
-    "chapters": [
-      {
-        "start": 2316,
-        "end": 2316,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Annius 127",
-    "previous": "Annius 126",
-    "next": "Annona",
-    "chapters": [
-      {
-        "start": 2316,
-        "end": 2316,
-        "author": "Rohden"
       }
     ]
   },
@@ -31316,7 +31316,7 @@
   {
     "lemma": "Anonymus Valesianus",
     "previous": "Anonymus Norisianus",
-    "next": "Anopaia",
+    "next": "Anonymus Valesianus 1",
     "wp_link": "w:de:Anonymus Valesianus",
     "chapters": [
       {
@@ -31352,7 +31352,7 @@
   },
   {
     "lemma": "Anopaia",
-    "previous": "Anonymus Valesianus",
+    "previous": "Anonymus Valesianus 2",
     "next": "Anosia",
     "chapters": [
       {
@@ -45684,9 +45684,20 @@
     ]
   },
   {
-    "lemma": "Aphanes usia",
+    "lemma": "Aphannai",
     "previous": "Ἀφαμιῶται",
-    "next": "Aphannai",
+    "next": "Ἀφανὴς οὐσία",
+    "chapters": [
+      {
+        "start": 2710,
+        "end": 2710
+      }
+    ]
+  },
+  {
+    "lemma": "Ἀφανὴς οὐσία",
+    "previous": "Aphannai",
+    "next": "Aphar",
     "chapters": [
       {
         "start": 2710,
@@ -45696,19 +45707,8 @@
     ]
   },
   {
-    "lemma": "Aphannai",
-    "previous": "Aphanes usia",
-    "next": "Aphar",
-    "chapters": [
-      {
-        "start": 2710,
-        "end": 2710
-      }
-    ]
-  },
-  {
     "lemma": "Aphar",
-    "previous": "Aphannai",
+    "previous": "Ἀφανὴς οὐσία",
     "next": "Apharea",
     "chapters": [
       {
@@ -49945,7 +49945,7 @@
   {
     "lemma": "Apollokrates",
     "previous": "Apollogenes",
-    "next": "Apollon",
+    "next": "Abercius",
     "wp_link": "w:de:Apollokrates",
     "chapters": [
       {
@@ -49981,7 +49981,7 @@
   },
   {
     "lemma": "Adranutzion",
-    "previous": "Abercius",
+    "previous": "Adoniastai",
     "next": "Agathenor",
     "chapters": [
       {
@@ -50053,7 +50053,7 @@
   },
   {
     "lemma": "Aisitai",
-    "previous": "Agonaces",
+    "previous": "Aisimos 2",
     "next": "Akamas 6",
     "chapters": [
       {
@@ -50078,7 +50078,7 @@
   {
     "lemma": "Aleos 1a",
     "previous": "Akamas 6",
-    "next": "Ammentum",
+    "next": "Alexandros 34",
     "chapters": [
       {
         "start": 2900,
@@ -50124,7 +50124,7 @@
   },
   {
     "lemma": "Ammentum",
-    "previous": "Aleos 1a",
+    "previous": "Amerias",
     "next": "Ammonios 15a",
     "chapters": [
       {

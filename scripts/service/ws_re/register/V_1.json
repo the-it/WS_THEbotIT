@@ -4888,24 +4888,12 @@
   {
     "lemma": "Dia 10",
     "previous": "Dia 9",
-    "next": "Dia 11",
+    "next": "Dia 11ff.",
     "chapters": [
       {
         "start": 299,
         "end": 299,
         "author": "Müller, D.H."
-      }
-    ]
-  },
-  {
-    "lemma": "Dia 11",
-    "previous": "Dia 10",
-    "next": "Dia 12",
-    "chapters": [
-      {
-        "start": 299,
-        "end": 300,
-        "author": "Escher"
       }
     ]
   },
@@ -4917,6 +4905,18 @@
       {
         "start": 299,
         "end": 299,
+        "author": "Escher"
+      }
+    ]
+  },
+  {
+    "lemma": "Dia 11",
+    "previous": "Dia 11ff.",
+    "next": "Dia 12",
+    "chapters": [
+      {
+        "start": 299,
+        "end": 300,
         "author": "Escher"
       }
     ]
@@ -6357,7 +6357,7 @@
   },
   {
     "lemma": "Dibon",
-    "previous": "Dibolla",
+    "previous": "Dibolia",
     "next": "Dibutades",
     "wp_link": "w:de:Dhiban",
     "chapters": [
@@ -8580,7 +8580,7 @@
   {
     "lemma": "Diktynna",
     "previous": "Diktya",
-    "next": "Diktynnaion",
+    "next": "Diktynnaion 1",
     "wp_link": "w:de:Diktynna",
     "chapters": [
       {
@@ -21889,7 +21889,7 @@
   {
     "lemma": "Domitius 28",
     "previous": "Domitius 27",
-    "next": "Domitius 30",
+    "next": "Domitius 29",
     "sort_key": "Domitius 028",
     "wp_link": "w:de:Lucius Domitius Ahenobarbus (Konsul 16 v. Chr.)",
     "chapters": [
@@ -21897,6 +21897,17 @@
         "start": 1343,
         "end": 1346,
         "author": "Groag"
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 29",
+    "previous": "Domitius 28",
+    "next": "Domitius 30",
+    "chapters": [
+      {
+        "start": 1346,
+        "end": 1346
       }
     ]
   },

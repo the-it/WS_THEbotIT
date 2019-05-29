@@ -99,7 +99,7 @@
   {
     "lemma": "Abactores",
     "previous": "Abacti magistratus",
-    "next": "Abacus 1",
+    "next": "Abacus",
     "redirect": true,
     "chapters": [
       {
@@ -107,6 +107,11 @@
         "end": 4
       }
     ]
+  },
+  {
+    "lemma": "Abacus",
+    "previous": "Abactores",
+    "next": "Abacus 1"
   },
   {
     "lemma": "Abacus 1",
@@ -362,7 +367,7 @@
   {
     "lemma": "Abalienatio",
     "previous": "Abali",
-    "next": "Abalites, Abalitu sinus",
+    "next": "Abalites",
     "redirect": true,
     "chapters": [
       {
@@ -372,7 +377,7 @@
     ]
   },
   {
-    "lemma": "Abalites, Abalitu sinus",
+    "lemma": "Abalites",
     "previous": "Abalienatio",
     "next": "Aballava",
     "chapters": [
@@ -3069,7 +3074,7 @@
     ]
   },
   {
-    "lemma": "Abs...",
+    "lemma": "Abs…",
     "previous": "Abrytus",
     "next": "Absasalla",
     "chapters": [
@@ -3866,7 +3871,7 @@
   },
   {
     "lemma": "Accepta",
-    "previous": "Accensi 1",
+    "previous": "Accensi 2",
     "next": "Acceptator",
     "chapters": [
       {
@@ -3988,7 +3993,7 @@
   },
   {
     "lemma": "Accipere 1",
-    "previous": "Acci",
+    "previous": "Accion",
     "next": "Accipere 2",
     "chapters": [
       {
@@ -12784,102 +12789,6 @@
   {
     "lemma": "Aelianus 15",
     "previous": "Aelianus 14",
-    "next": "Aelianus 15a",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15a",
-    "previous": "Aelianus 15",
-    "next": "Aelianus 15b",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15b",
-    "previous": "Aelianus 15a",
-    "next": "Aelianus 15c",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15c",
-    "previous": "Aelianus 15b",
-    "next": "Aelianus 15d",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15d",
-    "previous": "Aelianus 15c",
-    "next": "Aelianus 15e",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15e",
-    "previous": "Aelianus 15d",
-    "next": "Aelianus 15f",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15f",
-    "previous": "Aelianus 15e",
-    "next": "Aelianus 15g",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15g",
-    "previous": "Aelianus 15f",
-    "next": "Aelianus 15h",
-    "chapters": [
-      {
-        "start": 488,
-        "end": 488,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Aelianus 15h",
-    "previous": "Aelianus 15g",
     "next": "Aelius",
     "chapters": [
       {
@@ -13802,10 +13711,9 @@
     ]
   },
   {
-    "lemma": "Aelius 73",
-    "previous": "Aelius 73–79",
-    "next": "Aelius 74",
-    "sort_key": "Aelius 073b",
+    "lemma": "Aelius 73–79",
+    "previous": "Aelius 72",
+    "next": "Aelius 73",
     "chapters": [
       {
         "start": 521,
@@ -13815,9 +13723,10 @@
     ]
   },
   {
-    "lemma": "Aelius 73-79",
-    "previous": "Aelius 73",
+    "lemma": "Aelius 73",
+    "previous": "Aelius 73–79",
     "next": "Aelius 74",
+    "sort_key": "Aelius 073b",
     "chapters": [
       {
         "start": 521,
@@ -14728,8 +14637,13 @@
     ]
   },
   {
-    "lemma": "Aelius 148",
+    "lemma": "Aelius 148–157",
     "previous": "Aelius 147",
+    "next": "Aelius 148"
+  },
+  {
+    "lemma": "Aelius 148",
+    "previous": "Aelius 148–157",
     "next": "Aelius 149",
     "chapters": [
       {

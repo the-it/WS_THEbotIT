@@ -1828,7 +1828,7 @@
   },
   {
     "lemma": "Bartas",
-    "previous": "Barthae",
+    "previous": "Bartae",
     "next": "Barthas",
     "chapters": [
       {
@@ -1957,7 +1957,7 @@
   },
   {
     "lemma": "Barzanes 1",
-    "previous": "Barza",
+    "previous": "Barzala",
     "next": "Barzanes 2",
     "chapters": [
       {
@@ -3123,7 +3123,7 @@
     ]
   },
   {
-    "lemma": "Basilikos aulon",
+    "lemma": "Βασιλικὸς αὐλών",
     "previous": "Basilikos 2",
     "next": "Basilina",
     "chapters": [
@@ -4248,18 +4248,6 @@
   {
     "lemma": "Bassus 37",
     "previous": "Bassus 36",
-    "next": "Bassus 37a-m",
-    "chapters": [
-      {
-        "start": 109,
-        "end": 109,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Bassus 37a-m",
-    "previous": "Bassus 37",
     "next": "Basta",
     "chapters": [
       {
@@ -8482,7 +8470,7 @@
   {
     "lemma": "Bellicius 8",
     "previous": "Bellicius 7",
-    "next": "Bellienus 1",
+    "next": "Bellienus",
     "chapters": [
       {
         "start": 252,
@@ -9274,6 +9262,18 @@
     ]
   },
   {
+    "lemma": "Bendidium templum",
+    "previous": "Bendideia",
+    "next":  "Bendideios",
+    "chapters": [
+      {
+        "start": 269,
+        "end": 269,
+        "author": "Oberhummer"
+      }
+    ]
+  },
+  {
     "lemma": "Bendideios",
     "previous": "Bendidium templum",
     "next": "Bendina",
@@ -9282,18 +9282,6 @@
         "start": 269,
         "end": 269,
         "author": "Knaack"
-      }
-    ]
-  },
-  {
-    "lemma": "Bendidium templum",
-    "previous": "Bendideios",
-    "next": "Bendina",
-    "chapters": [
-      {
-        "start": 269,
-        "end": 269,
-        "author": "Oberhummer"
       }
     ]
   },
@@ -9998,7 +9986,7 @@
   },
   {
     "lemma": "Berebis",
-    "previous": "Bera",
+    "previous": "Berea",
     "next": "Berecyntius tractus",
     "chapters": [
       {
@@ -10405,7 +10393,7 @@
   {
     "lemma": "Berenus",
     "previous": "Berenikis",
-    "next": "Berga",
+    "next": "Beres 1",
     "chapters": [
       {
         "start": 290,
@@ -12403,8 +12391,20 @@
     ]
   },
   {
-    "lemma": "Bethagla 1",
+    "lemma": "Bethagla",
     "previous": "Bethagathon",
+    "next": "Bethagla 1",
+    "chapters": [
+      {
+        "start": 362,
+        "end": 362,
+        "author": "Benzinger"
+      }
+    ]
+  },
+  {
+    "lemma": "Bethagla 1",
+    "previous": "Bethagla",
     "next": "Bethagla 2",
     "chapters": [
       {
@@ -12452,7 +12452,7 @@
   },
   {
     "lemma": "Bethakad",
-    "previous": "Bethagla",
+    "previous": "Bethagla 4",
     "next": "Bethalaga",
     "chapters": [
       {
@@ -12535,7 +12535,7 @@
   {
     "lemma": "Bethannaba",
     "previous": "Bethania",
-    "next": "Bethar",
+    "next": "Bethar 1",
     "chapters": [
       {
         "start": 362,
@@ -17472,6 +17472,30 @@
     ]
   },
   {
+    "lemma": "Bivium 1",
+    "previous": "Biviae",
+    "next": "Bivium 2",
+    "chapters": [
+      {
+        "start": 551,
+        "end": 551,
+        "author": "Patsch"
+      }
+    ]
+  },
+  {
+    "lemma": "Bivium 2",
+    "previous": "Bivium 1",
+    "next": "ad Bivium",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 551,
+        "end": 551
+      }
+    ]
+  },
+  {
     "lemma": "ad Bivium",
     "previous": "Bivium 2",
     "next": "Bix",
@@ -17485,32 +17509,8 @@
     ]
   },
   {
-    "lemma": "Bivium 1",
-    "previous": "ad Bivium",
-    "next": "Bivium 2",
-    "chapters": [
-      {
-        "start": 551,
-        "end": 551,
-        "author": "Patsch"
-      }
-    ]
-  },
-  {
-    "lemma": "Bivium 2",
-    "previous": "Bivium 1",
-    "next": "Bix",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 551,
-        "end": 551
-      }
-    ]
-  },
-  {
     "lemma": "Bix",
-    "previous": "Bivium 2",
+    "previous": "ad Bivium",
     "next": "Biyres",
     "chapters": [
       {
@@ -18068,24 +18068,12 @@
   {
     "lemma": "Blaundos",
     "previous": "Blavia",
-    "next": "Blautai",
-    "chapters": [
-      {
-        "start": 560,
-        "end": 560,
-        "author": "Ruge"
-      }
-    ]
-  },
-  {
-    "lemma": "Blautai",
-    "previous": "Blaundos",
     "next": "Blautasis",
     "chapters": [
       {
         "start": 560,
         "end": 560,
-        "author": "Mau, [August]"
+        "author": "Ruge"
       }
     ]
   },
@@ -18102,8 +18090,20 @@
     ]
   },
   {
-    "lemma": "Blaute",
+    "lemma": "Βλαῦται",
     "previous": "Blautasis",
+    "next": "Blaute",
+    "chapters": [
+      {
+        "start": 560,
+        "end": 560,
+        "author": "Mau, [August]"
+      }
+    ]
+  },
+  {
+    "lemma": "Blaute",
+    "previous": "Βλαῦται",
     "next": "Bleandros",
     "chapters": [
       {
@@ -20661,7 +20661,7 @@
     ]
   },
   {
-    "lemma": "Bokkanon hemeron",
+    "lemma": "Βόκκανον ἥμερον",
     "previous": "Bokchyris",
     "next": "Bola",
     "chapters": [
@@ -20866,9 +20866,9 @@
     ]
   },
   {
-    "lemma": "Bolbos 1",
+    "lemma": "Bolbos",
     "previous": "Bolbitine",
-    "next": "Bolbos 2",
+    "next": "Βολβός",
     "chapters": [
       {
         "start": 669,
@@ -20877,8 +20877,8 @@
     ]
   },
   {
-    "lemma": "Bolbos 2",
-    "previous": "Bolbos 1",
+    "lemma": "Βολβός",
+    "previous": "Bolbos",
     "next": "Bolbulae",
     "chapters": [
       {
@@ -20890,7 +20890,7 @@
   },
   {
     "lemma": "Bolbulae",
-    "previous": "Bolbos 2",
+    "previous": "Βολβός",
     "next": "Bolegasgus",
     "chapters": [
       {
@@ -22918,18 +22918,6 @@
     ]
   },
   {
-    "lemma": "Bormos",
-    "previous": "Bormanon",
-    "next": "Bornon",
-    "chapters": [
-      {
-        "start": 732,
-        "end": 734,
-        "author": "Knaack"
-      }
-    ]
-  },
-  {
     "lemma": "Bormanus",
     "previous": "Bormanon",
     "next": "Bormiskos",
@@ -22977,8 +22965,20 @@
     ]
   },
   {
-    "lemma": "Bornon",
+    "lemma": "Bormos",
     "previous": "Bormo",
+    "next": "Bornon",
+    "chapters": [
+      {
+        "start": 732,
+        "end": 734,
+        "author": "Knaack"
+      }
+    ]
+  },
+  {
+    "lemma": "Bornon",
+    "previous": "Bormos",
     "next": "Borodates",
     "chapters": [
       {
@@ -23552,7 +23552,7 @@
   },
   {
     "lemma": "Bostra",
-    "previous": "Bostar",
+    "previous": "Bostar 6",
     "next": "Bostrenos",
     "wp_link": "w:de:Bostra",
     "chapters": [
