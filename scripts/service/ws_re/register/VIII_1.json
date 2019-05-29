@@ -6768,7 +6768,7 @@
   {
     "lemma": "Heras 6",
     "previous": "Heras 5",
-    "next": "Herasios",
+    "next": "Heras lutra",
     "chapters": [
       {
         "start": 529,
@@ -6777,10 +6777,33 @@
       }
     ]
   },
+    {
+    "lemma": "Heras lutra",
+    "previous": "Heras 6",
+    "next": "Ἤρας νῆσος",
+    "chapters": [
+      {
+        "start": 529,
+        "end": 529,
+        "author": "Weiss, J[akob]"
+      }
+    ]
+  },
+    {
+    "lemma": "Ἤρας νῆσος",
+    "previous": "Heras lutra",
+    "next": "Herasios",
+    "chapters": [
+      {
+        "start": 529,
+        "end": 529
+      }
+    ]
+  },
   {
     "lemma": "Herasios",
-    "previous": "Heras 6",
-    "next": "Heras lutra",
+    "previous": "Ἤρας νῆσος",
+    "next": "Herasius",
     "chapters": [
       {
         "start": 529,
@@ -6790,31 +6813,8 @@
     ]
   },
   {
-    "lemma": "Heras lutra",
+    "lemma": "Herasius",
     "previous": "Herasios",
-    "next": "Heras nesos",
-    "chapters": [
-      {
-        "start": 529,
-        "end": 529,
-        "author": "Weiss, J[akob]"
-      }
-    ]
-  },
-  {
-    "lemma": "Heras nesos",
-    "previous": "Heras lutra",
-    "next": "Herasinus",
-    "chapters": [
-      {
-        "start": 529,
-        "end": 529
-      }
-    ]
-  },
-  {
-    "lemma": "Herasinus",
-    "previous": "Heras nesos",
     "next": "Heratemis",
     "chapters": [
       {
@@ -6826,7 +6826,7 @@
   },
   {
     "lemma": "Heratemis",
-    "previous": "Herasinus",
+    "previous": "Herasius",
     "next": "Herbanum",
     "chapters": [
       {
@@ -6852,6 +6852,7 @@
     "lemma": "Herbelloni",
     "previous": "Herbanum",
     "next": "Herbessos 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 530,
@@ -10573,6 +10574,7 @@
     "lemma": "Hermogenes 11",
     "previous": "Hermogenes 10",
     "next": "Hermogenes 12",
+    "redirect": true,
     "chapters": [
       {
         "start": 863,

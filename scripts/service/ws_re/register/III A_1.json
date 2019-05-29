@@ -10764,7 +10764,7 @@
   {
     "lemma": "Smyrna 2",
     "previous": "Smyrna 1",
-    "next": "Smyrna 3",
+    "next": "Smyrna 3f.",
     "chapters": [
       {
         "start": 728,
@@ -10774,9 +10774,10 @@
     ]
   },
   {
-    "lemma": "Smyrna 3",
+    "lemma": "Smyrna 3f.",
     "previous": "Smyrna 2",
-    "next": "Smyrna 3f.",
+    "next": "Smyrna 3",
+    "sort_key": "Smyrna 0025",
     "chapters": [
       {
         "start": 730,
@@ -10786,10 +10787,9 @@
     ]
   },
   {
-    "lemma": "Smyrna 3f.",
-    "previous": "Smyrna 3",
+    "lemma": "Smyrna 3",
+    "previous": "Smyrna 3f.",
     "next": "Smyrna 4",
-    "sort_key": "Smyrna 25",
     "chapters": [
       {
         "start": 730,
@@ -10800,7 +10800,7 @@
   },
   {
     "lemma": "Smyrna 4",
-    "previous": "Smyrna 3f.",
+    "previous": "Smyrna 3",
     "next": "Smyrna 5",
     "chapters": [
       {
@@ -10813,7 +10813,7 @@
   {
     "lemma": "Smyrna 5",
     "previous": "Smyrna 4",
-    "next": "Smyrnaia Oreine",
+    "next": "Σμυρναία Ὀρεινή",
     "chapters": [
       {
         "start": 765,
@@ -10823,9 +10823,11 @@
     ]
   },
   {
-    "lemma": "Smyrnaia Oreine",
+    "lemma": "Σμυρναία Ὀρεινή",
     "previous": "Smyrna 5",
-    "next": "Smyrnaion Kolpos",
+    "next": "Σμυρναίων Κόλπος",
+    "sort_key": "Smyrnaiaoreine",
+    "wp_link": "w:de:Izmir",
     "chapters": [
       {
         "start": 765,
@@ -10835,9 +10837,10 @@
     ]
   },
   {
-    "lemma": "Smyrnaion Kolpos",
-    "previous": "Smyrnaia Oreine",
+    "lemma": "Σμυρναίων Κόλπος",
+    "previous": "Σμυρναία Ὀρεινή",
     "next": "Smyrnophoros",
+    "sort_key": "Smyrnaionkolpos",
     "chapters": [
       {
         "start": 765,
@@ -10848,7 +10851,7 @@
   },
   {
     "lemma": "Smyrnophoros",
-    "previous": "Smyrnaion Kolpos",
+    "previous": "Σμυρναίων Κόλπος",
     "next": "Smyrnophoros 1",
     "chapters": [
       {
@@ -10873,7 +10876,7 @@
   {
     "lemma": "Smyrnophoros 2",
     "previous": "Smyrnophoros 1",
-    "next": "snenath, snenati?",
+    "next": "snenaθ, snenati?",
     "chapters": [
       {
         "start": 766,
@@ -10883,7 +10886,7 @@
     ]
   },
   {
-    "lemma": "snenath, snenati?",
+    "lemma": "snenaθ, snenati?",
     "previous": "Smyrnophoros 2",
     "next": "Snephorses",
     "chapters": [
@@ -10896,7 +10899,7 @@
   },
   {
     "lemma": "Snephorses",
-    "previous": "snenath, snenati?",
+    "previous": "snenaθ, snenati?",
     "next": "Soa",
     "chapters": [
       {

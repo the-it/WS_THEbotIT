@@ -2012,7 +2012,6 @@
   {
     "lemma": "Ahveccanae",
     "previous": "Ahenobarbi forum",
-    "next": "Aiakidas 2",
     "redirect": true,
     "chapters": [
       {
@@ -2022,8 +2021,12 @@
     ]
   },
   {
+    "lemma":  "Aiakidas 1",
+    "next": "Aiakidas 2"
+  },
+  {
     "lemma": "Aiakidas 2",
-    "previous": "Ahveccanae",
+    "previous": "Aiakidas 1",
     "next": "Aiakidas 3",
     "chapters": [
       {
@@ -4246,7 +4249,7 @@
   {
     "lemma": "Amerias",
     "previous": "Ameria 2",
-    "next": "Amilo",
+    "next": "Amida",
     "chapters": [
       {
         "start": 68,
@@ -4255,8 +4258,11 @@
     ]
   },
   {
+    "lemma": "Amida",
+    "previous": "Amerias"
+  },
+  {
     "lemma": "Amilo",
-    "previous": "Amerias",
     "next": "Aminea",
     "chapters": [
       {
@@ -13760,7 +13766,6 @@
   {
     "lemma": "Chronica Italica",
     "previous": "Christophoros 1",
-    "next": "Chryseïs 5",
     "chapters": [
       {
         "start": 296,
@@ -13770,8 +13775,12 @@
     ]
   },
   {
+    "lemma": "Chronos 2",
+    "next": "Chryseïs 5"
+  },
+  {
     "lemma": "Chryseïs 5",
-    "previous": "Chronica Italica",
+    "previous": "Chronos 2",
     "next": "Chrysermos 4",
     "chapters": [
       {

@@ -269,7 +269,7 @@ _TRANSLATION_DICT = {"a": "α",
                      "x": "ξ",
                      "y": "υ",
                      "z": "ζ",
-                     "": "()?\'ʾʿ"}
+                     "": "()?\'ʾʿ–-"}
 
 _TMP_DICT = {}
 for key in _TRANSLATION_DICT:
@@ -294,12 +294,14 @@ for regex_pair in _POST_REGEX_RAW_LIST:
 
 _PRE_REGEX_RAW_LIST = [
     (r"ου", "u"),
-    (r"Ε", "he"),
-    (r"Ι", "hi"),
-    (r"Υ", "hy"),
-    (r" ε", " he"),
+    (r"^(?:Ε|ε|η)", "he"),
+    (r"^(?:Ι|ι)", "hi"),
+    (r"^(?:Ο|ο)", "ho"),
+    (r"^(?:Υ|υ)", "hy"),
+    (r" (?:ε|η)", " he"),
     (r" ι", " hi"),
     (r" ο", " ho"),
+    (r" υ", " hy"),
 ]
 
 _PRE_REGEX_LIST = []

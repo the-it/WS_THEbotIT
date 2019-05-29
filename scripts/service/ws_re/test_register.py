@@ -5,13 +5,14 @@ import time
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
-from unittest import TestCase, skip
+from unittest import TestCase, skip, skipUnless
 
 from testfixtures import compare
 
 from scripts.service.ws_re.data_types import _REGISTER_PATH, Volumes
 from scripts.service.ws_re.register import Author, Authors, VolumeRegister, LemmaChapter, Lemma, \
     AlphabeticRegister, Registers, AuthorCrawler, RegisterException
+from tools import INTEGRATION_TEST
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
@@ -482,7 +483,7 @@ class TestLemma(BaseTestRegister):
         compare("aabab abfl", Lemma.make_sort_key("aabab abfl"))
         compare("aabad abfl", Lemma.make_sort_key("aabad abfl"))
         compare("abfl", Lemma.make_sort_key("G. abfl"))
-        compare("abdigildus", Lemma.make_sort_key("Abdigildus (?)"))
+        compare("abdigildus", Lemma.make_sort_key("Abdigildus (?)–-"))
         compare("abd 001 011 230", Lemma.make_sort_key("Abd 1 11 230"))
         compare("e    orceni", Lemma.make_sort_key("E....orceni"))
         compare("abalas limenu", Lemma.make_sort_key("Ἀβάλας λιμήνου"))
@@ -492,6 +493,9 @@ class TestLemma(BaseTestRegister):
         compare("aptuchu hieron", Lemma.make_sort_key("Ἀπτούχου ἱερόν"))
         compare("hyakinthis hodos", Lemma.make_sort_key("Ὑακινθὶς ὁδός"))
         # compare("kaualenon katoikia", Lemma.make_sort_key("Καυαληνῶν κατοικία"))
+        # compare("agaua kome", Lemma.make_sort_key("Ἀγαύα κώμη"))
+        compare("hyperemeros, hyperemeria", Lemma.make_sort_key("Ὑπερήμερος, ὑπερημερία"))
+        compare("he kyria", Lemma.make_sort_key("ἡ κυρία"))
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)
@@ -1120,7 +1124,7 @@ class TestRegisters(BaseTestRegister):
 _MAX_SIZE_WIKI_PAGE = 2_098_175
 
 
-#@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+@skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestIntegrationRegister(TestCase):
     @classmethod
     def setUpClass(cls):
@@ -1150,6 +1154,7 @@ class TestIntegrationRegister(TestCase):
                      if not post_lemma["previous"] == lemma["lemma"]:
                         errors.append(f"POST lemma name {lemma['lemma']}/{i} in register {register} not the same as post lemma")
         if errors:
+            errors.insert(0, f"COUNT ERRORS: {len(errors)}")
             raise AssertionError("\n".join(errors))
 
     @skip("only for analysis")

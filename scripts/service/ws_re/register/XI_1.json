@@ -2146,7 +2146,7 @@
   {
     "lemma": "Kemel",
     "previous": "Kema",
-    "next": "Kemos",
+    "next": "Κημός",
     "chapters": [
       {
         "start": 157,
@@ -2156,7 +2156,7 @@
     ]
   },
   {
-    "lemma": "Kemos",
+    "lemma": "Κημός",
     "previous": "Kemel",
     "next": "Kempten",
     "chapters": [
@@ -2169,8 +2169,10 @@
   },
   {
     "lemma": "Kempten",
-    "previous": "Kemos",
+    "previous": "Κημός",
     "next": "Kena",
+    "wp_link": "w:de:Cambodunum",
+    "ws_link": "s:de:Kempten (Allgäu)",
     "chapters": [
       {
         "start": 162,
@@ -8317,7 +8319,7 @@
   {
     "lemma": "Kithara 2",
     "previous": "Kithara 1",
-    "next": "Kitharephoroi",
+    "next": "Κιθαρηφόροι",
     "chapters": [
       {
         "start": 527,
@@ -8327,9 +8329,10 @@
     ]
   },
   {
-    "lemma": "Kitharephoroi",
+    "lemma": "Κιθαρηφόροι",
     "previous": "Kithara 2",
     "next": "Kitharistes",
+    "sort_key": "Kitharephoroi",
     "chapters": [
       {
         "start": 528,
@@ -8340,8 +8343,8 @@
   },
   {
     "lemma": "Kitharistes",
-    "previous": "Kitharephoroi",
-    "next": "Kitharizon",
+    "previous": "Κιθαρηφόροι",
+    "next": "Κιθαρίζων",
     "wp_link": "w:de:La Ciotat",
     "chapters": [
       {
@@ -8352,7 +8355,7 @@
     ]
   },
   {
-    "lemma": "Kitharizon",
+    "lemma": "Κιθαρίζων",
     "previous": "Kitharistes",
     "next": "Κιθαρῳδία",
     "chapters": [
@@ -8365,7 +8368,7 @@
   },
   {
     "lemma": "Κιθαρῳδία",
-    "previous": "Kitharizon",
+    "previous": "Κιθαρίζων",
     "next": "Kithibanitai",
     "sort_key": "Kitharodia",
     "wp_link": "w:de:Kitharöde",

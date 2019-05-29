@@ -3479,7 +3479,7 @@
   {
     "lemma": "Alkathoos 3",
     "previous": "Alkathoos 2",
-    "next": "Alkathoos 4-6",
+    "next": "Alkathoos 4–6",
     "wp_link": "w:de:Alkathoos (Sohn des Aisyetes)",
     "chapters": [
       {
@@ -3490,7 +3490,7 @@
     ]
   },
   {
-    "lemma": "Alkathoos 4-6",
+    "lemma": "Alkathoos 4–6",
     "previous": "Alkathoos 3",
     "next": "Alke 1",
     "chapters": [
@@ -3503,7 +3503,7 @@
   },
   {
     "lemma": "Alke 1",
-    "previous": "Alkathoos 4-6",
+    "previous": "Alkathoos 4–6",
     "next": "Alke 2",
     "chapters": [
       {
@@ -3528,7 +3528,7 @@
   {
     "lemma": "Alke 3",
     "previous": "Alke 2",
-    "next": "Alkea 1",
+    "next": "Ἀλκέα",
     "chapters": [
       {
         "start": 1512,
@@ -3538,9 +3538,9 @@
     ]
   },
   {
-    "lemma": "Alkea 1",
+    "lemma": "Ἀλκέα",
     "previous": "Alke 3",
-    "next": "Alkeides 1",
+    "next": "Alkeides",
     "chapters": [
       {
         "start": 1512,
@@ -3550,8 +3550,20 @@
     ]
   },
   {
+    "lemma": "Alkeides",
+    "previous": "Ἀλκέα",
+    "next": "Alkeides 1",
+    "chapters": [
+      {
+        "start": 1513,
+        "end": 1513,
+        "author": "Wernicke"
+      }
+    ]
+  },
+  {
     "lemma": "Alkeides 1",
-    "previous": "Alkea 1",
+    "previous": "Alkeides",
     "next": "Alkeides 2",
     "chapters": [
       {
@@ -12948,6 +12960,7 @@
     "lemma": "Ammanitai",
     "previous": "Ammanemes",
     "next": "Ammanitis",
+    "wp_link": "w:de:Ammoniter",
     "chapters": [
       {
         "start": 1842,
@@ -15553,6 +15566,7 @@
     "lemma": "Amphilochia",
     "previous": "Amphiktyonis",
     "next": "Amphilochius 1",
+    "wp_link": "w:de:Amfilochia",
     "chapters": [
       {
         "start": 1936,
@@ -17599,7 +17613,7 @@
   {
     "lemma": "Ἀμύητος",
     "previous": "Amydon",
-    "next": "Amygdale",
+    "next": "Ἀμυγδαλῆ",
     "sort_key": "Amyetos",
     "chapters": [
       {
@@ -17610,9 +17624,11 @@
     ]
   },
   {
-    "lemma": "Amygdale",
+    "lemma": "Ἀμυγδαλῆ",
     "previous": "Ἀμύητος",
     "next": "Amygdalon",
+    "sort_key": "Amygdale",
+    "wp_link": "w:de:Mandel",
     "chapters": [
       {
         "start": 1990,
@@ -17623,7 +17639,7 @@
   },
   {
     "lemma": "Amygdalon",
-    "previous": "Amygdale",
+    "previous": "Ἀμυγδαλῆ",
     "next": "Amyke",
     "chapters": [
       {
@@ -36365,6 +36381,8 @@
     "lemma": "Antiocheia 1",
     "previous": "Antinum",
     "next": "Antiocheia 2",
+    "sort_key": "Antiocheia 01",
+    "wp_link": "w:de:Antiochia am Orontes",
     "chapters": [
       {
         "start": 2442,
@@ -36456,6 +36474,7 @@
     "lemma": "Antiocheia 8",
     "previous": "Antiocheia 7",
     "next": "Antiocheia 9",
+    "sort_key": "Antiocheia 08",
     "chapters": [
       {
         "start": 2445,
@@ -36481,7 +36500,6 @@
     "lemma": "Antiocheia 10",
     "previous": "Antiocheia 9",
     "next": "Antiocheia 11",
-    "redirect": true,
     "chapters": [
       {
         "start": 2445,
@@ -36505,6 +36523,7 @@
     "lemma": "Antiocheia 12",
     "previous": "Antiocheia 11",
     "next": "Antiocheia 13",
+    "wp_link": "w:de:Merw",
     "chapters": [
       {
         "start": 2445,
@@ -36580,6 +36599,7 @@
     "lemma": "Antiocheia 18",
     "previous": "Antiocheia 17",
     "next": "Antiocheia 19",
+    "wp_link": "w:de:Adana",
     "chapters": [
       {
         "start": 2447,
@@ -36592,6 +36612,7 @@
     "lemma": "Antiocheia 19",
     "previous": "Antiocheia 18",
     "next": "Antiocheia 20",
+    "wp_link": "w:de:Tarsus (Türkei)",
     "chapters": [
       {
         "start": 2447,
@@ -45858,7 +45879,7 @@
   {
     "lemma": "Apheka 2",
     "previous": "Apheka 1",
-    "next": "Apheku pyrgos",
+    "next": "Ἀφεκοῦ πύργος",
     "chapters": [
       {
         "start": 2714,
@@ -45868,7 +45889,7 @@
     ]
   },
   {
-    "lemma": "Apheku pyrgos",
+    "lemma": "Ἀφεκοῦ πύργος",
     "previous": "Apheka 2",
     "next": "Apheleia",
     "chapters": [
@@ -45881,7 +45902,7 @@
   },
   {
     "lemma": "Apheleia",
-    "previous": "Apheku pyrgos",
+    "previous": "Ἀφεκοῦ πύργος",
     "next": "Aphesas",
     "chapters": [
       {

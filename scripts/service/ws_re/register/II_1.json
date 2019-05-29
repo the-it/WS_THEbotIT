@@ -10536,6 +10536,7 @@
     "lemma": "Aratos 3",
     "previous": "Aratos 2",
     "next": "Aratos 4",
+    "wp_link": "w:de:Aratos",
     "chapters": [
       {
         "start": 390,
@@ -12273,6 +12274,7 @@
     "lemma": "Archedamos 3",
     "previous": "Archedamos 2",
     "next": "Archedamos 4",
+    "wp_link": "w:de:Archedamos (Olympionike)",
     "chapters": [
       {
         "start": 438,
@@ -12498,7 +12500,7 @@
   {
     "lemma": "Archegesia",
     "previous": "Archedios",
-    "next": "Archegetes",
+    "next": "Ἀρχηγέτης",
     "chapters": [
       {
         "start": 441,
@@ -12508,7 +12510,7 @@
     ]
   },
   {
-    "lemma": "Archegetes",
+    "lemma": "Ἀρχηγέτης",
     "previous": "Archegesia",
     "next": "Archegetis",
     "chapters": [
@@ -12521,8 +12523,8 @@
   },
   {
     "lemma": "Archegetis",
-    "previous": "Archegetes",
-    "next": "Archeion",
+    "previous": "Ἀρχηγέτης",
+    "next": "Ἀρχεῖον",
     "chapters": [
       {
         "start": 444,
@@ -12532,9 +12534,10 @@
     ]
   },
   {
-    "lemma": "Archeion",
+    "lemma": "Ἀρχεῖον",
     "previous": "Archegetis",
     "next": "Archelais 1",
+    "sort_key": "Archeion",
     "chapters": [
       {
         "start": 444,
@@ -12545,7 +12548,7 @@
   },
   {
     "lemma": "Archelais 1",
-    "previous": "Archeion",
+    "previous": "Ἀρχεῖον",
     "next": "Archelais 2",
     "chapters": [
       {
@@ -12559,6 +12562,7 @@
     "lemma": "Archelais 2",
     "previous": "Archelais 1",
     "next": "Archelaos 1",
+    "wp_link": "w:de:Aksaray",
     "chapters": [
       {
         "start": 445,
@@ -12584,6 +12588,7 @@
     "lemma": "Archelaos 2",
     "previous": "Archelaos 1",
     "next": "Archelaos 3",
+    "sort_key": "Archelaos 02",
     "chapters": [
       {
         "start": 446,
@@ -12596,6 +12601,7 @@
     "lemma": "Archelaos 3",
     "previous": "Archelaos 2",
     "next": "Archelaos 4",
+    "sort_key": "Archelaos 03",
     "chapters": [
       {
         "start": 446,
@@ -12608,6 +12614,7 @@
     "lemma": "Archelaos 4",
     "previous": "Archelaos 3",
     "next": "Archelaos 5",
+    "sort_key": "Archelaos 04",
     "chapters": [
       {
         "start": 446,
@@ -12620,6 +12627,7 @@
     "lemma": "Archelaos 5",
     "previous": "Archelaos 4",
     "next": "Archelaos 6",
+    "sort_key": "Archelaos 05",
     "chapters": [
       {
         "start": 446,
@@ -12686,6 +12694,7 @@
     "lemma": "Archelaos 10",
     "previous": "Archelaos 9",
     "next": "Archelaos 11",
+    "wp_link": "w:de:Archelaos (Stratege)",
     "chapters": [
       {
         "start": 448,
@@ -12964,6 +12973,7 @@
     "lemma": "Archelaos 33",
     "previous": "Archelaos 32",
     "next": "Archelaos 34",
+    "wp_link": "w:de:Archelaos",
     "chapters": [
       {
         "start": 453,
@@ -17389,7 +17399,7 @@
   {
     "lemma": "Areos",
     "previous": "Areopolis 3",
-    "next": "Areos nesos",
+    "next": "Ἄρεος νῆσος",
     "redirect": true,
     "chapters": [
       {
@@ -17399,9 +17409,10 @@
     ]
   },
   {
-    "lemma": "Areos nesos",
+    "lemma": "Ἄρεος νῆσος",
     "previous": "Areos",
     "next": "Ares 1",
+    "sort_key": "Areosnesos",
     "chapters": [
       {
         "start": 642,
@@ -17412,7 +17423,7 @@
   },
   {
     "lemma": "Ares 1",
-    "previous": "Areos nesos",
+    "previous": "Ἄρεος νῆσος",
     "next": "Ares 2",
     "chapters": [
       {
@@ -33414,7 +33425,7 @@
   {
     "lemma": "Aroandes 4",
     "previous": "Aroandes 3",
-    "next": "Aroania ore",
+    "next": "Ἀροάνια ὄρη",
     "chapters": [
       {
         "start": 1209,
@@ -33424,9 +33435,10 @@
     ]
   },
   {
-    "lemma": "Aroania ore",
+    "lemma": "Ἀροάνια ὄρη",
     "previous": "Aroandes 4",
     "next": "Aroanios 1",
+    "sort_key": "Aroaniaore",
     "chapters": [
       {
         "start": 1209,
@@ -33437,7 +33449,7 @@
   },
   {
     "lemma": "Aroanios 1",
-    "previous": "Aroania ore",
+    "previous": "Ἀροάνια ὄρη",
     "next": "Aroanios 2",
     "chapters": [
       {
@@ -33450,6 +33462,18 @@
   {
     "lemma": "Aroanios 2",
     "previous": "Aroanios 1",
+    "next": "Aroanios 3",
+    "chapters": [
+      {
+        "start": 1209,
+        "end": 1209,
+        "author": "Hirschfeld"
+      }
+    ]
+  },
+  {
+    "lemma": "Aroanios 3",
+    "previous": "Aroanios 2",
     "next": "Arocas",
     "chapters": [
       {
@@ -33461,7 +33485,7 @@
   },
   {
     "lemma": "Arocas",
-    "previous": "Aroanios 2",
+    "previous": "Aroanios 3",
     "next": "Aroe",
     "chapters": [
       {

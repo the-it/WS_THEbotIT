@@ -305,7 +305,6 @@
   {
     "lemma": "Acutus 2",
     "previous": "Acutus 1",
-    "next": "Ad-",
     "chapters": [
       {
         "start": 19,
@@ -315,9 +314,14 @@
     ]
   },
   {
+    "lemma": "Acutus 1",
+    "next": "Ad-"
+  },
+  {
     "lemma": "Ad-",
-    "previous": "Acutus 2",
+    "previous": "Acutus 1",
     "next": "Adad 2",
+    "sort_key": "Ad",
     "chapters": [
       {
         "start": 19,
@@ -5725,7 +5729,6 @@
   {
     "lemma": "Avetedo",
     "previous": "Avertentes dii",
-    "next": "Augsburg",
     "chapters": [
       {
         "start": 184,
@@ -5735,9 +5738,15 @@
     ]
   },
   {
+    "lemma": "Augenärzte",
+    "next": "Augsburg"
+  },
+  {
     "lemma": "Augsburg",
-    "previous": "Avetedo",
+    "previous": "Augenärzte",
     "next": "Augst",
+    "wp_link": "w:de:Augsburg",
+    "ws_link": "s:de:Augsburg",
     "chapters": [
       {
         "start": 185,
@@ -11053,7 +11062,7 @@
   {
     "lemma": "Demoleon 7",
     "previous": "Demokritos 3a",
-    "next": "Demosiates",
+    "next": "Demonax 4",
     "chapters": [
       {
         "start": 333,
@@ -11063,8 +11072,11 @@
     ]
   },
   {
+    "lemma": "Demonax 4",
+    "previous": "Demoleon 7"
+  },
+  {
     "lemma": "Demosiates",
-    "previous": "Demoleon 7",
     "next": "Demosion",
     "chapters": [
       {
