@@ -9,7 +9,9 @@ from git import Repo
 from github import Github
 
 from scripts.service.ws_re.data_types import Article
-from scripts.service.ws_re.register import Registers, AuthorCrawler, RegisterException
+from scripts.service.ws_re.register.author import AuthorCrawler
+from scripts.service.ws_re.register.base import RegisterException
+from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.scanner_tasks import ReScannerTask
 from tools import fetch_text_from_wiki_site
 from tools.bots import WikiLogger
