@@ -4570,7 +4570,7 @@
   {
     "lemma": "Epogmios",
     "previous": "Epochos 2",
-    "next": "Epoikia",
+    "next": "Ἐποικία",
     "chapters": [
       {
         "start": 226,
@@ -4580,9 +4580,10 @@
     ]
   },
   {
-    "lemma": "Epoikia",
+    "lemma": "Ἐποικία",
     "previous": "Epogmios",
     "next": "Epoikidia",
+    "sort_key": "Epoikia",
     "chapters": [
       {
         "start": 227,
@@ -4593,7 +4594,7 @@
   },
   {
     "lemma": "Epoikidia",
-    "previous": "Epoikia",
+    "previous": "Ἐποικία",
     "next": "Epointe",
     "chapters": [
       {
@@ -4641,7 +4642,8 @@
   {
     "lemma": "Epona",
     "previous": "Epokillos",
-    "next": "Eponion",
+    "next": "Ἐπώνιον",
+    "wp_link": "w:de:Epona (Mythologie)",
     "chapters": [
       {
         "start": 228,
@@ -4651,9 +4653,9 @@
     ]
   },
   {
-    "lemma": "Eponion",
+    "lemma": "Ἐπώνιον",
     "previous": "Epona",
-    "next": "Eponymos",
+    "next": "Ἐπώνυμος",
     "chapters": [
       {
         "start": 243,
@@ -4663,8 +4665,8 @@
     ]
   },
   {
-    "lemma": "Eponymos",
-    "previous": "Eponion",
+    "lemma": "Ἐπώνυμος",
+    "previous": "Ἐπώνιον",
     "next": "Epopetes",
     "chapters": [
       {
@@ -4676,8 +4678,8 @@
   },
   {
     "lemma": "Epopetes",
-    "previous": "Eponymos",
-    "next": "Epopeus",
+    "previous": "Ἐπώνυμος",
+    "next": "Epopeus mons",
     "chapters": [
       {
         "start": 245,
@@ -4687,8 +4689,21 @@
     ]
   },
   {
-    "lemma": "Epopeus",
+    "lemma": "Epopeus mons",
     "previous": "Epopetes",
+    "next": "Epopeus",
+    "sort_key": "Epopeus",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 245,
+        "author": "Hülsen"
+      }
+    ]
+  },
+  {
+    "lemma": "Epopeus",
+    "previous": "Epopeus mons",
     "next": "Epopeus 1",
     "chapters": [
       {
@@ -4701,7 +4716,7 @@
   {
     "lemma": "Epopeus 1",
     "previous": "Epopeus",
-    "next": "Epopeus mons",
+    "next": "Epopeus 2",
     "chapters": [
       {
         "start": 245,
@@ -4711,20 +4726,8 @@
     ]
   },
   {
-    "lemma": "Epopeus mons",
-    "previous": "Epopeus 1",
-    "next": "Epopeus 2",
-    "chapters": [
-      {
-        "start": 245,
-        "end": 245,
-        "author": "Hülsen"
-      }
-    ]
-  },
-  {
     "lemma": "Epopeus 2",
-    "previous": "Epopeus mons",
+    "previous": "Epopeus 1",
     "next": "Epopeus 3",
     "chapters": [
       {
@@ -19930,7 +19933,7 @@
   {
     "lemma": "Eumenos",
     "previous": "Eumenius 2",
-    "next": "Eumenus alsos",
+    "next": "Εὐμένους ἄλσος",
     "chapters": [
       {
         "start": 1114,
@@ -19940,7 +19943,7 @@
     ]
   },
   {
-    "lemma": "Eumenus alsos",
+    "lemma": "Εὐμένους ἄλσος",
     "previous": "Eumenos",
     "next": "Eumetes",
     "chapters": [
@@ -19953,7 +19956,7 @@
   },
   {
     "lemma": "Eumetes",
-    "previous": "Eumenus alsos",
+    "previous": "Εὐμένους ἄλσος",
     "next": "Eumetis",
     "chapters": [
       {
@@ -22948,6 +22951,7 @@
     "lemma": "Eupolis 3",
     "previous": "Eupolis 2",
     "next": "Eupolos",
+    "wp_link": "w:de:Eupolis",
     "chapters": [
       {
         "start": 1230,
@@ -23224,6 +23228,7 @@
     "lemma": "Euricus",
     "previous": "Euriadas",
     "next": "Euripides 1",
+    "wp_link": "w:de:Eurich",
     "chapters": [
       {
         "start": 1239,
@@ -23403,7 +23408,7 @@
   {
     "lemma": "Eurolochos",
     "previous": "Euroia",
-    "next": "Euromeus",
+    "next": "Εὐρωμεύς",
     "chapters": [
       {
         "start": 1285,
@@ -23413,7 +23418,7 @@
     ]
   },
   {
-    "lemma": "Euromeus",
+    "lemma": "Εὐρωμεύς",
     "previous": "Eurolochos",
     "next": "Euromius",
     "chapters": [
@@ -23426,7 +23431,7 @@
   },
   {
     "lemma": "Euromius",
-    "previous": "Euromeus",
+    "previous": "Εὐρωμεύς",
     "next": "Euromos 1",
     "chapters": [
       {
@@ -26926,6 +26931,7 @@
     "lemma": "Eusebios 1",
     "previous": "Eusebia 2",
     "next": "Eusebios 2",
+    "sort_key": "Eusebios 01",
     "chapters": [
       {
         "start": 1366,
@@ -26937,6 +26943,8 @@
     "lemma": "Eusebios 2",
     "previous": "Eusebios 1",
     "next": "Eusebios 3",
+    "sort_key": "Eusebios 02",
+    "wp_link": "w:de:Eusebius (Konsul 347)",
     "chapters": [
       {
         "start": 1366,
@@ -26961,6 +26969,7 @@
     "lemma": "Eusebios 4",
     "previous": "Eusebios 3",
     "next": "Eusebios 5",
+    "sort_key": "Eusebios 04",
     "chapters": [
       {
         "start": 1367,
@@ -26972,6 +26981,8 @@
     "lemma": "Eusebios 5",
     "previous": "Eusebios 4",
     "next": "Eusebios 6",
+    "sort_key": "Eusebios 05",
+    "wp_link": "w:de:Eusebius (Kämmerer)",
     "chapters": [
       {
         "start": 1367,
@@ -26995,6 +27006,7 @@
     "lemma": "Eusebios 7",
     "previous": "Eusebios 6",
     "next": "Eusebios 8",
+    "sort_key": "Eusebios 07",
     "chapters": [
       {
         "start": 1368,
@@ -27006,6 +27018,7 @@
     "lemma": "Eusebios 8",
     "previous": "Eusebios 7",
     "next": "Eusebios 9",
+    "sort_key": "Eusebios 08",
     "chapters": [
       {
         "start": 1368,
@@ -27017,6 +27030,7 @@
     "lemma": "Eusebios 9",
     "previous": "Eusebios 8",
     "next": "Eusebios 10",
+    "sort_key": "Eusebios 09",
     "chapters": [
       {
         "start": 1368,
@@ -27028,6 +27042,7 @@
     "lemma": "Eusebios 10",
     "previous": "Eusebios 9",
     "next": "Eusebios 11",
+    "sort_key": "Eusebios 10",
     "chapters": [
       {
         "start": 1369,
@@ -27039,6 +27054,7 @@
     "lemma": "Eusebios 11",
     "previous": "Eusebios 10",
     "next": "Eusebios 12",
+    "sort_key": "Eusebios 11",
     "chapters": [
       {
         "start": 1369,
@@ -27116,6 +27132,7 @@
     "lemma": "Eusebios 18",
     "previous": "Eusebios 17",
     "next": "Eusebios 19",
+    "wp_link": "w:de:Eusebios Scholastikos",
     "chapters": [
       {
         "start": 1369,
@@ -27195,6 +27212,7 @@
     "lemma": "Eusebios 25",
     "previous": "Eusebios 24",
     "next": "Eusebios 26",
+    "wp_link": "w:de:Eusebius von Nikomedia",
     "chapters": [
       {
         "start": 1439,
@@ -27206,6 +27224,7 @@
     "lemma": "Eusebios 26",
     "previous": "Eusebios 25",
     "next": "Eusebios 27",
+    "wp_link": "w:de:Eusebios von Emesa",
     "chapters": [
       {
         "start": 1440,
@@ -27488,6 +27507,7 @@
     "lemma": "Eustathios 1",
     "previous": "Eustasie",
     "next": "Eustathios 2",
+    "sort_key": "Eustathios 01",
     "chapters": [
       {
         "start": 1446,
@@ -27500,6 +27520,7 @@
     "lemma": "Eustathios 2",
     "previous": "Eustathios 1",
     "next": "Eustathios 3",
+    "sort_key": "Eustathios 02",
     "chapters": [
       {
         "start": 1447,
@@ -27512,6 +27533,7 @@
     "lemma": "Eustathios 3",
     "previous": "Eustathios 2",
     "next": "Eustathios 4",
+    "sort_key": "Eustathios 03",
     "chapters": [
       {
         "start": 1447,
@@ -27537,6 +27559,7 @@
     "lemma": "Eustathios 5",
     "previous": "Eustathios 4",
     "next": "Eustathios 6",
+    "sort_key": "Eustathios 05",
     "chapters": [
       {
         "start": 1448,
@@ -27549,6 +27572,7 @@
     "lemma": "Eustathios 6",
     "previous": "Eustathios 5",
     "next": "Eustathios 7",
+    "sort_key": "Eustathios 06",
     "chapters": [
       {
         "start": 1448,
@@ -27601,6 +27625,7 @@
     "lemma": "Eustathios 10",
     "previous": "Eustathios 9",
     "next": "Eustathios 11",
+    "wp_link": "w:de:Eustathius von Sebaste",
     "chapters": [
       {
         "start": 1449,
@@ -27696,6 +27721,7 @@
     "lemma": "Eustathios 18",
     "previous": "Eustathios 17",
     "next": "Eustheneia",
+    "wp_link": "w:de:Eustathios von Thessalonike",
     "chapters": [
       {
         "start": 1452,
@@ -27948,7 +27974,7 @@
   {
     "lemma": "Eutelion",
     "previous": "Eutelie",
-    "next": "Euterpe 1",
+    "next": "Euterpe",
     "chapters": [
       {
         "start": 1493,
@@ -27958,7 +27984,7 @@
     ]
   },
   {
-    "lemma": "Euterpe 1",
+    "lemma": "Euterpe",
     "previous": "Eutelion",
     "next": "Euth-",
     "chapters": [
@@ -27971,8 +27997,9 @@
   },
   {
     "lemma": "Euth-",
-    "previous": "Euterpe 1",
+    "previous": "Euterpe",
     "next": "Euthalios 1",
+    "sort_key": "Euth",
     "chapters": [
       {
         "start": 1494,

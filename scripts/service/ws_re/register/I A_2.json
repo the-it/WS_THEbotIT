@@ -1202,6 +1202,7 @@
     "lemma": "Sabinianus 6",
     "previous": "Sabinianus 5",
     "next": "Sabinianus 7",
+    "sort_key": "Sabinianus 06",
     "chapters": [
       {
         "start": 1585,
@@ -1228,6 +1229,7 @@
     "lemma": "Sabinianus 8",
     "previous": "Sabinianus 7",
     "next": "Sabinianus 9",
+    "sort_key": "Sabinianus 08",
     "chapters": [
       {
         "start": 1585,
@@ -4534,7 +4536,7 @@
   {
     "lemma": "Saitchamiae, Saithamiae",
     "previous": "Saitae",
-    "next": "Saitianoi",
+    "next": "Σαιτιανοί",
     "chapters": [
       {
         "start": 1759,
@@ -4544,9 +4546,9 @@
     ]
   },
   {
-    "lemma": "Saitianoi",
+    "lemma": "Σαιτιανοί",
     "previous": "Saitchamiae, Saithamiae",
-    "next": "Saiteninstrumente",
+    "next": "Saitchamiae",
     "chapters": [
       {
         "start": 1759,
@@ -4555,8 +4557,13 @@
     ]
   },
   {
+    "lemma": "Saitchamiae",
+    "previous": "Σαιτιανοί",
+    "next": "Saiteninstrumente"
+  },
+  {
     "lemma": "Saiteninstrumente",
-    "previous": "Saitianoi",
+    "previous": "Saitchamiae",
     "next": "Saites Nomos",
     "wp_link": "w:de:Saiteninstrument",
     "chapters": [

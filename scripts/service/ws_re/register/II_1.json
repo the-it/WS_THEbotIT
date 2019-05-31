@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Apollon",
+    "previous": null,
     "next": "Apollonia 1",
     "chapters": [
       {
@@ -67,6 +68,7 @@
     "lemma": "Apollonia 5",
     "previous": "Apollonia 4",
     "next": "Apollonia 6",
+    "sort_key": "Apollonia 05",
     "chapters": [
       {
         "start": 114,
@@ -104,6 +106,7 @@
     "lemma": "Apollonia 8",
     "previous": "Apollonia 7",
     "next": "Apollonia 9",
+    "sort_key": "Apollonia 08",
     "chapters": [
       {
         "start": 114,
@@ -116,6 +119,7 @@
     "lemma": "Apollonia 9",
     "previous": "Apollonia 8",
     "next": "Apollonia 10",
+    "sort_key": "Apollonia 09",
     "chapters": [
       {
         "start": 115,
@@ -201,6 +205,7 @@
     "lemma": "Apollonia 16",
     "previous": "Apollonia 15",
     "next": "Apollonia 17",
+    "redirect": "Apollonis 1",
     "chapters": [
       {
         "start": 115,
@@ -6218,6 +6223,8 @@
     "lemma": "Aqua, Aquae 34",
     "previous": "Aqua, Aquae 33",
     "next": "Aqua, Aquae 35",
+    "sort_key": "Aquae 034",
+    "wp_link": "w:de:Aqua",
     "chapters": [
       {
         "start": 299,
@@ -6270,6 +6277,8 @@
     "lemma": "Aqua, Aquae 38",
     "previous": "Aqua, Aquae 37",
     "next": "Aqua, Aquae 39",
+    "sort_key": "Aquae 038",
+    "wp_link": "w:de:Aquae Cutiliae",
     "chapters": [
       {
         "start": 299,
@@ -6282,6 +6291,7 @@
     "lemma": "Aqua, Aquae 39",
     "previous": "Aqua, Aquae 38",
     "next": "Aqua, Aquae 40",
+    "sort_key": "Aquae 039",
     "chapters": [
       {
         "start": 300,
@@ -6319,6 +6329,7 @@
     "lemma": "Aqua, Aquae 42",
     "previous": "Aqua, Aquae 41",
     "next": "Aqua, Aquae 43",
+    "sort_key": "Aquae 042",
     "chapters": [
       {
         "start": 300,
@@ -6331,6 +6342,7 @@
     "lemma": "Aqua, Aquae 43",
     "previous": "Aqua, Aquae 42",
     "next": "Aqua, Aquae 44",
+    "sort_key": "Aquae 043",
     "chapters": [
       {
         "start": 300,
@@ -6369,6 +6381,8 @@
     "lemma": "Aqua, Aquae 46",
     "previous": "Aqua, Aquae 45",
     "next": "Aqua, Aquae 47",
+    "sort_key": "Aquae 046",
+    "wp_link": "w:de:Baden AG",
     "chapters": [
       {
         "start": 301,
@@ -6407,6 +6421,7 @@
     "lemma": "Aqua, Aquae 49",
     "previous": "Aqua, Aquae 48",
     "next": "Aqua, Aquae 50",
+    "sort_key": "Aquae 049",
     "chapters": [
       {
         "start": 301,
@@ -6443,6 +6458,7 @@
     "lemma": "Aqua, Aquae 52",
     "previous": "Aqua, Aquae 51",
     "next": "Aqua, Aquae 53",
+    "sort_key": "Aquae 052",
     "chapters": [
       {
         "start": 301,
@@ -6456,6 +6472,7 @@
     "previous": "Aqua, Aquae 52",
     "next": "Aqua, Aquae 54",
     "sort_key": "Aquae 053",
+    "redirect": true,
     "chapters": [
       {
         "start": 301,
@@ -6468,6 +6485,7 @@
     "lemma": "Aqua, Aquae 54",
     "previous": "Aqua, Aquae 53",
     "next": "Aqua, Aquae 55",
+    "sort_key": "Aquae 054",
     "chapters": [
       {
         "start": 302,
@@ -6480,6 +6498,8 @@
     "lemma": "Aqua, Aquae 55",
     "previous": "Aqua, Aquae 54",
     "next": "Aqua, Aquae 56",
+    "sort_key": "Aquae 055",
+    "wp_link": "w:de:Wiesbaden",
     "chapters": [
       {
         "start": 302,
@@ -6505,6 +6525,7 @@
     "lemma": "Aqua, Aquae 57",
     "previous": "Aqua, Aquae 56",
     "next": "Aqua, Aquae 58",
+    "sort_key": "Aquae 057",
     "chapters": [
       {
         "start": 302,
@@ -6517,6 +6538,7 @@
     "lemma": "Aqua, Aquae 58",
     "previous": "Aqua, Aquae 57",
     "next": "Aqua, Aquae 59",
+    "sort_key": "Aquae 058",
     "chapters": [
       {
         "start": 302,
@@ -6529,6 +6551,8 @@
     "lemma": "Aqua, Aquae 59",
     "previous": "Aqua, Aquae 58",
     "next": "Aqua, Aquae 60",
+    "sort_key": "Aquae 059",
+    "wp_link": "w:de:Néris-les-Bains",
     "chapters": [
       {
         "start": 302,
@@ -6541,6 +6565,7 @@
     "lemma": "Aqua, Aquae 60",
     "previous": "Aqua, Aquae 59",
     "next": "Aqua, Aquae 61",
+    "sort_key": "Aquae 060",
     "chapters": [
       {
         "start": 302,
@@ -11354,7 +11379,7 @@
   {
     "lemma": "Arbiter 4",
     "previous": "Arbiter 3",
-    "next": "Arbitio 1",
+    "next": "Arbitio",
     "chapters": [
       {
         "start": 411,
@@ -11364,20 +11389,14 @@
     ]
   },
   {
-    "lemma": "Arbitio 1",
+    "lemma": "Arbitio",
     "previous": "Arbiter 4",
     "next": "Arbitio 2",
-    "chapters": [
-      {
-        "start": 411,
-        "end": 412,
-        "author": "Seeck"
-      }
-    ]
+    "wp_link": "w:de:Arbitio"
   },
   {
     "lemma": "Arbitio 2",
-    "previous": "Arbitio 1",
+    "previous": "Arbitio",
     "next": "Arbitrium",
     "chapters": [
       {
@@ -12022,7 +12041,7 @@
   {
     "lemma": "Archaiopolis 2",
     "previous": "Archaiopolis 1",
-    "next": "Archairesiai",
+    "next": "Ἀρχαιρεσίαι",
     "chapters": [
       {
         "start": 436,
@@ -12032,9 +12051,10 @@
     ]
   },
   {
-    "lemma": "Archairesiai",
+    "lemma": "Ἀρχαιρεσίαι",
     "previous": "Archaiopolis 2",
     "next": "Archaleus",
+    "sort_key": "Archairesiai",
     "chapters": [
       {
         "start": 436,
@@ -12045,7 +12065,7 @@
   },
   {
     "lemma": "Archaleus",
-    "previous": "Archairesiai",
+    "previous": "Ἀρχαιρεσίαι",
     "next": "Archalla",
     "chapters": [
       {
@@ -21139,7 +21159,7 @@
   {
     "lemma": "Argyronion",
     "previous": "Argyrologoi",
-    "next": "Argyrotamias",
+    "next": "Ἀργυροταμίας",
     "chapters": [
       {
         "start": 802,
@@ -21149,7 +21169,7 @@
     ]
   },
   {
-    "lemma": "Argyrotamias",
+    "lemma": "Ἀργυροταμίας",
     "previous": "Argyronion",
     "next": "Argyruntum",
     "chapters": [
@@ -21162,7 +21182,7 @@
   },
   {
     "lemma": "Argyruntum",
-    "previous": "Argyrotamias",
+    "previous": "Ἀργυροταμίας",
     "next": "Arhia",
     "chapters": [
       {
@@ -29340,6 +29360,7 @@
     "lemma": "Aristonymos 7",
     "previous": "Aristonymos 6",
     "next": "Aristonymos 8",
+    "sort_key": "Aristonymos 07",
     "chapters": [
       {
         "start": 968,
@@ -29352,6 +29373,7 @@
     "lemma": "Aristonymos 8",
     "previous": "Aristonymos 7",
     "next": "Aristonymos 9",
+    "sort_key": "Aristonymos 08",
     "chapters": [
       {
         "start": 968,
@@ -29425,6 +29447,7 @@
     "lemma": "Aristophanes 1",
     "previous": "Aristopeithes",
     "next": "Aristophanes 2",
+    "sort_key": "Aristophanes 01",
     "chapters": [
       {
         "start": 969,
@@ -29593,6 +29616,7 @@
     "lemma": "Aristophanes 14",
     "previous": "Aristophanes 13",
     "next": "Aristophanes 15",
+    "wp_link": "w:de:Aristophanes von Byzanz",
     "chapters": [
       {
         "start": 994,
@@ -29666,6 +29690,7 @@
     "lemma": "Aristophon 1",
     "previous": "Aristophilos",
     "next": "Aristophon 2",
+    "sort_key": "Aristophon 01",
     "chapters": [
       {
         "start": 1005,
@@ -29738,6 +29763,7 @@
     "lemma": "Aristophon 7",
     "previous": "Aristophon 6",
     "next": "Aristophon 8",
+    "wp_link": "w:de:Aristophon (Komödiendichter)",
     "chapters": [
       {
         "start": 1007,
@@ -29762,6 +29788,8 @@
     "lemma": "Aristophon 9",
     "previous": "Aristophon 8",
     "next": "Aristophontes",
+    "sort_key": "Aristophon 09",
+    "wp_link": "w:de:Aristophon (Maler)",
     "chapters": [
       {
         "start": 1008,
@@ -29796,7 +29824,7 @@
   {
     "lemma": "Aristophylos",
     "previous": "Aristophyloi",
-    "next": "Aristopoleitia",
+    "next": "Ἀριστοπολειτία",
     "chapters": [
       {
         "start": 1008,
@@ -29806,9 +29834,10 @@
     ]
   },
   {
-    "lemma": "Aristopoleitia",
+    "lemma": "Ἀριστοπολειτία",
     "previous": "Aristophylos",
     "next": "Aristopoles",
+    "sort_key": "Aristopoleitia",
     "chapters": [
       {
         "start": 1008,
@@ -29819,7 +29848,7 @@
   },
   {
     "lemma": "Aristopoles",
-    "previous": "Aristopoleitia",
+    "previous": "Ἀριστοπολειτία",
     "next": "Aristopolis 1",
     "chapters": [
       {
@@ -29930,6 +29959,7 @@
     "lemma": "Aristos 5",
     "previous": "Aristos 4",
     "next": "Aristos 6",
+    "sort_key": "Aristos 05",
     "chapters": [
       {
         "start": 1010,
@@ -29942,6 +29972,7 @@
     "lemma": "Aristos 6",
     "previous": "Aristos 5",
     "next": "Aristos 7",
+    "sort_key": "Aristos 06",
     "chapters": [
       {
         "start": 1010,
@@ -29978,6 +30009,8 @@
     "lemma": "Aristos 9",
     "previous": "Aristos 8",
     "next": "Aristos 10",
+    "sort_key": "Aristos 09",
+    "wp_link": "w:de:Aristos von Askalon",
     "chapters": [
       {
         "start": 1010,
@@ -30014,6 +30047,8 @@
     "lemma": "Aristoteles 1",
     "previous": "Aristoteiches",
     "next": "Aristoteles 2",
+    "sort_key": "Aristoteles 01",
+    "wp_link": "w:de:Battos I.",
     "chapters": [
       {
         "start": 1011,
@@ -30026,6 +30061,7 @@
     "lemma": "Aristoteles 2",
     "previous": "Aristoteles 1",
     "next": "Aristoteles 3",
+    "sort_key": "Aristoteles 02",
     "chapters": [
       {
         "start": 1011,
@@ -30197,6 +30233,7 @@
     "lemma": "Aristoteles 16",
     "previous": "Aristoteles 15",
     "next": "Aristoteles 17",
+    "sort_key": "Aristoteles 16",
     "chapters": [
       {
         "start": 1012,
@@ -30300,6 +30337,7 @@
     "lemma": "Aristoteles 24",
     "previous": "Aristoteles 23",
     "next": "Aristotheos",
+    "sort_key": "Aristoteles 24",
     "chapters": [
       {
         "start": 1055,
@@ -30323,7 +30361,7 @@
   {
     "lemma": "Aristotheros",
     "previous": "Aristotheos",
-    "next": "Aristotimidai",
+    "next": "Ἀριστοτιμίδαι",
     "wp_link": "w:de:Aristotheros",
     "chapters": [
       {
@@ -30334,7 +30372,7 @@
     ]
   },
   {
-    "lemma": "Aristotimidai",
+    "lemma": "Ἀριστοτιμίδαι",
     "previous": "Aristotheros",
     "next": "Aristotimos 1",
     "chapters": [
@@ -30347,7 +30385,7 @@
   },
   {
     "lemma": "Aristotimos 1",
-    "previous": "Aristotimidai",
+    "previous": "Ἀριστοτιμίδαι",
     "next": "Aristotimos 2",
     "chapters": [
       {
@@ -30373,6 +30411,7 @@
     "lemma": "Aristoxenos 1",
     "previous": "Aristotimos 2",
     "next": "Aristoxenos 2",
+    "sort_key": "Aristoxenos 01",
     "chapters": [
       {
         "start": 1056,
@@ -30409,6 +30448,7 @@
     "lemma": "Aristoxenos 4",
     "previous": "Aristoxenos 3",
     "next": "Aristoxenos 5",
+    "sort_key": "Aristoxenos 04",
     "chapters": [
       {
         "start": 1056,
@@ -30421,6 +30461,8 @@
     "lemma": "Aristoxenos 5",
     "previous": "Aristoxenos 4",
     "next": "Aristoxenos 6",
+    "sort_key": "Aristoxenos 05",
+    "wp_link": "w:de:Aristoxenos von Selinus",
     "chapters": [
       {
         "start": 1056,
@@ -30458,6 +30500,8 @@
     "lemma": "Aristoxenos 8",
     "previous": "Aristoxenos 7",
     "next": "Aristoxenos 9",
+    "sort_key": "Aristoxenos 08",
+    "wp_link": "w:de:Aristoxenos (Mediziner)",
     "chapters": [
       {
         "start": 1065,
@@ -31754,7 +31798,7 @@
   {
     "lemma": "Arktos 3",
     "previous": "Arktos 2",
-    "next": "Arktu akra",
+    "next": "Ἄρκτου ἄκρα",
     "chapters": [
       {
         "start": 1173,
@@ -31764,7 +31808,7 @@
     ]
   },
   {
-    "lemma": "Arktu akra",
+    "lemma": "Ἄρκτου ἄκρα",
     "previous": "Arktos 3",
     "next": "Arkturos 1",
     "chapters": [
@@ -31777,7 +31821,7 @@
   },
   {
     "lemma": "Arkturos 1",
-    "previous": "Arktu akra",
+    "previous": "Ἄρκτου ἄκρα",
     "next": "Arkturos 2",
     "chapters": [
       {
@@ -31875,7 +31919,7 @@
   {
     "lemma": "Arma decretoria",
     "previous": "Ἄρμα",
-    "next": "Armachis",
+    "next": "Arma lusoria",
     "chapters": [
       {
         "start": 1174,
@@ -31885,8 +31929,32 @@
     ]
   },
   {
-    "lemma": "Armachis",
+    "lemma": "Arma lusoria",
     "previous": "Arma decretoria",
+    "next": "Arma pugnatoria",
+    "chapters": [
+      {
+        "start": 1175,
+        "end": 1175,
+        "author": "Pollack"
+      }
+    ]
+  },
+  {
+    "lemma": "Arma pugnatoria",
+    "previous": "Arma lusoria",
+    "next": "Armachis",
+    "chapters": [
+      {
+        "start": 1175,
+        "end": 1175,
+        "author": "Pollack"
+      }
+    ]
+  },
+  {
+    "lemma": "Armachis",
+    "previous": "Arma pugnatoria",
     "next": "Armagara",
     "chapters": [
       {
@@ -31945,7 +32013,7 @@
   {
     "lemma": "Armalausi",
     "previous": "Armaïs",
-    "next": "Arma lusoria",
+    "next": "Armamenta",
     "chapters": [
       {
         "start": 1175,
@@ -31954,22 +32022,11 @@
       }
     ]
   },
-  {
-    "lemma": "Arma lusoria",
-    "previous": "Armalausi",
-    "next": "Armamenta",
-    "chapters": [
-      {
-        "start": 1175,
-        "end": 1175,
-        "author": "Pollack"
-      }
-    ]
-  },
+
   {
     "lemma": "Armamenta",
-    "previous": "Arma lusoria",
-    "next": "Arma pugnatoria",
+    "previous": "Armalausi",
+    "next": "Armamentarium 1",
     "chapters": [
       {
         "start": 1175,
@@ -31979,20 +32036,8 @@
     ]
   },
   {
-    "lemma": "Arma pugnatoria",
-    "previous": "Armamenta",
-    "next": "Armamentarium 1",
-    "chapters": [
-      {
-        "start": 1175,
-        "end": 1175,
-        "author": "Pollack"
-      }
-    ]
-  },
-  {
     "lemma": "Armamentarium 1",
-    "previous": "Arma pugnatoria",
+    "previous": "Armamenta",
     "next": "Armamentarium 2",
     "chapters": [
       {
@@ -32147,7 +32192,7 @@
   {
     "lemma": "Armatham",
     "previous": "Armata",
-    "next": "Armatu",
+    "next": "Ἀρμάτου",
     "chapters": [
       {
         "start": 1177,
@@ -32156,7 +32201,7 @@
     ]
   },
   {
-    "lemma": "Armatu",
+    "lemma": "Ἀρμάτου",
     "previous": "Armatham",
     "next": "Armatura 1",
     "chapters": [
@@ -32169,7 +32214,7 @@
   },
   {
     "lemma": "Armatura 1",
-    "previous": "Armatu",
+    "previous": "Ἀρμάτου",
     "next": "Armatura 2",
     "wp_link": "w:de:Römische Legion",
     "chapters": [

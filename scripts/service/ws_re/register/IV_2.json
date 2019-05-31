@@ -3391,6 +3391,7 @@
     "lemma": "Crispinus 9",
     "previous": "Crispinus 8",
     "next": "Crispinus 10",
+    "sort_key": "Crispinus 09",
     "chapters": [
       {
         "start": 1721,
@@ -3612,6 +3613,7 @@
     "lemma": "Crispus 9",
     "previous": "Crispus 8",
     "next": "Critognatus",
+    "wp_link": "w:de:Crispus",
     "chapters": [
       {
         "start": 1722,
@@ -3671,6 +3673,18 @@
   {
     "lemma": "Crixus 1",
     "previous": "Crixia",
+    "next": "Crixus 2",
+    "chapters": [
+      {
+        "start": 1724,
+        "end": 1724,
+        "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Crixus 2",
+    "previous": "Crixus 1",
     "next": "Crobiggi",
     "chapters": [
       {
@@ -3682,7 +3696,7 @@
   },
   {
     "lemma": "Crobiggi",
-    "previous": "Crixus 1",
+    "previous": "Crixus 2",
     "next": "Crociatonum",
     "chapters": [
       {
@@ -6466,7 +6480,7 @@
     "lemma": "Curveunta",
     "previous": "Curvedenses",
     "next": "Curvius",
-    "redirect": true,
+    "redirect": "Gorbeus",
     "chapters": [
       {
         "start": 1893,
@@ -6598,7 +6612,7 @@
     "lemma": "Cuspianus",
     "previous": "Cuslanus",
     "next": "Cuspidius 1",
-    "redirect": true,
+    "redirect": "Caetronius 2",
     "chapters": [
       {
         "start": 1894,
@@ -6610,7 +6624,7 @@
     "lemma": "Cuspidius 1",
     "previous": "Cuspianus",
     "next": "Cuspidius 2",
-    "redirect": true,
+    "redirect": "Iulius 526",
     "chapters": [
       {
         "start": 1894,
@@ -7750,6 +7764,7 @@
     "lemma": "Daedala",
     "previous": "Daë",
     "next": "Daedalium",
+    "redirect": true,
     "chapters": [
       {
         "start": 1980,
@@ -7978,6 +7993,7 @@
     "lemma": "Dagolassos",
     "previous": "Dagnevana",
     "next": "Dagon 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1985,

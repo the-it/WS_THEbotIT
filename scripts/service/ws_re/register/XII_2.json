@@ -102,7 +102,7 @@
   {
     "lemma": "Lehrgedicht",
     "previous": "Leherennus",
-    "next": "Leia",
+    "next": "Λεία",
     "chapters": [
       {
         "start": 1842,
@@ -112,9 +112,10 @@
     ]
   },
   {
-    "lemma": "Leia",
+    "lemma": "Λεία",
     "previous": "Lehrgedicht",
     "next": "Leiagore",
+    "sort_key": "Leia",
     "chapters": [
       {
         "start": 1857,
@@ -125,7 +126,7 @@
   },
   {
     "lemma": "Leiagore",
-    "previous": "Leia",
+    "previous": "Λεία",
     "next": "Leianeira",
     "chapters": [
       {
@@ -902,6 +903,7 @@
     "lemma": "Lemovices",
     "previous": "Lemonum",
     "next": "Lemuria",
+    "wp_link": "w:de:Lemoviken",
     "chapters": [
       {
         "start": 1931,
@@ -914,6 +916,7 @@
     "lemma": "Lemuria",
     "previous": "Lemovices",
     "next": "Lemurinus",
+    "wp_link": "w:de:Lemuria (Fest)",
     "chapters": [
       {
         "start": 1931,

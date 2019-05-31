@@ -206,7 +206,6 @@
   {
     "lemma": "Battus, Bacchus",
     "previous": "Attius 10a",
-    "next": "Autrico",
     "chapters": [
       {
         "start": 55,
@@ -216,9 +215,13 @@
     ]
   },
   {
+    "lemma": "Attius 10a",
+    "next": "Autrico"
+  },
+  {
     "lemma": "Autrico",
-    "previous": "Battus, Bacchus",
-    "next": "Caecilius 141",
+    "previous": "Attius 10a",
+    "next": "Battus",
     "chapters": [
       {
         "start": 56,
@@ -228,9 +231,16 @@
     ]
   },
   {
-    "lemma": "Caecilius 141",
+    "lemma": "Battus",
     "previous": "Autrico",
-    "next": "Celsus 18a",
+    "next": "Berothe"
+  },
+  {
+    "lemma": "Berothe",
+    "previous": "Battus"
+  },
+  {
+    "lemma": "Caecilius 141",
     "chapters": [
       {
         "start": 57,
@@ -240,8 +250,13 @@
     ]
   },
   {
+    "lemma": "Caecilia Trebulla",
+    "next": "Celsus 18a",
+    "wp_link": "w:de:Caecilia Trebulla"
+  },
+  {
     "lemma": "Celsus 18a",
-    "previous": "Caecilius 141",
+    "previous": "Caecilia Trebulla",
     "next": "Chairemon 2a",
     "chapters": [
       {
@@ -278,7 +293,7 @@
   {
     "lemma": "Claudius 41a",
     "previous": "Cheirisophos 1a",
-    "next": "Cornelius 371a",
+    "next": "Claudius 82",
     "sort_key": "Claudius 041a",
     "chapters": [
       {
@@ -289,8 +304,11 @@
     ]
   },
   {
+    "lemma": "Claudius 82",
+    "previous": "Claudius 41a"
+  },
+  {
     "lemma": "Cornelius 371a",
-    "previous": "Claudius 41a",
     "next": "Delphoi",
     "chapters": [
       {
@@ -4980,7 +4998,6 @@
   {
     "lemma": "Skidros 2",
     "previous": "Skiagraphia",
-    "next": "Sokratikerbriefe",
     "chapters": [
       {
         "start": 980,
@@ -4990,9 +5007,14 @@
     ]
   },
   {
+    "lemma": "Skylla 1",
+    "next": "Sokratikerbriefe"
+  },
+  {
     "lemma": "Sokratikerbriefe",
-    "previous": "Skidros 2",
+    "previous": "Skylla 1",
     "next": "Solliferreum",
+    "wp_link": "w:de:Sokratikerbriefe",
     "chapters": [
       {
         "start": 981,
@@ -5028,7 +5050,7 @@
   {
     "lemma": "Soti",
     "previous": "Sophokles 8",
-    "next": "Sotiates oder Sottiates",
+    "next": "Sotiates",
     "chapters": [
       {
         "start": 988,
@@ -5038,7 +5060,7 @@
     ]
   },
   {
-    "lemma": "Sotiates oder Sottiates",
+    "lemma": "Sotiates",
     "previous": "Soti",
     "next": "Spaleia",
     "chapters": [
@@ -5051,7 +5073,7 @@
   },
   {
     "lemma": "Spaleia",
-    "previous": "Sotiates oder Sottiates",
+    "previous": "Sotiates",
     "next": "Spania",
     "chapters": [
       {
@@ -5064,7 +5086,6 @@
   {
     "lemma": "Spania",
     "previous": "Spaleia",
-    "next": "Statilius 19a",
     "chapters": [
       {
         "start": 992,
@@ -5074,8 +5095,12 @@
     ]
   },
   {
+    "lemma": "Spartacus",
+    "next": "Statilius 19a"
+  },
+  {
     "lemma": "Statilius 19a",
-    "previous": "Spania",
+    "previous": "Spartacus",
     "next": "Kornutos",
     "chapters": [
       {

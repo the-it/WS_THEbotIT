@@ -492,10 +492,12 @@ class TestLemma(BaseTestRegister):
         compare("agnu keras", Lemma.make_sort_key("Ἀγνοῦ κέρας"))
         compare("aptuchu hieron", Lemma.make_sort_key("Ἀπτούχου ἱερόν"))
         compare("hyakinthis hodos", Lemma.make_sort_key("Ὑακινθὶς ὁδός"))
-        # compare("kaualenon katoikia", Lemma.make_sort_key("Καυαληνῶν κατοικία"))
-        # compare("agaua kome", Lemma.make_sort_key("Ἀγαύα κώμη"))
+        compare("kaualenon katoikia", Lemma.make_sort_key("Καυαληνῶν κατοικία"))
+        compare("agaua kome", Lemma.make_sort_key("Ἀγαύα κώμη"))
         compare("hyperemeros, hyperemeria", Lemma.make_sort_key("Ὑπερήμερος, ὑπερημερία"))
         compare("he kyria", Lemma.make_sort_key("ἡ κυρία"))
+        compare("bokkanon hemeron", Lemma.make_sort_key("Βόκκανον ἥμερον"))
+        #compare("ephodion", Lemma.make_sort_key("Ἐφόδιον"))
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)
@@ -911,8 +913,8 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
                         register.get_index_of_lemma("U"))
 
     def test_update_create_next_previous_supplement_by_name(self):
-        copy_tst_data("I_1_sorting2", "S I")
-        register = VolumeRegister(Volumes()["S I"], Authors())
+        copy_tst_data("I_1_sorting2", "R")
+        register = VolumeRegister(Volumes()["R"], Authors())
         update_dict = {"lemma": "O", "previous": "N", "next": "P"}
         register.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
@@ -955,8 +957,8 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
                         register.get_index_of_lemma("U"))
 
     def test_update_create_next_previous_supplement_by_name_next_exists(self):
-        copy_tst_data("I_1_sorting2", "S I")
-        register = VolumeRegister(Volumes()["S I"], Authors())
+        copy_tst_data("I_1_sorting2", "R")
+        register = VolumeRegister(Volumes()["R"], Authors())
         update_dict = {"lemma": "O", "previous": "N", "next": "Ü"}
         register.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
@@ -1143,18 +1145,23 @@ class TestIntegrationRegister(TestCase):
     def test_previous_next_in_order(self):
         errors = []
         for register in self.registers.volumes.values():
-            for i in range(1, len(register) - 1):
-                pre_lemma = register[i -1]
-                lemma = register[i]
-                post_lemma = register[i + 1]
-                if pre_lemma["next"]:
+            for i, lemma in enumerate(register):
+                pre_lemma = register[i -1] if i > 0 else None
+                if pre_lemma and pre_lemma["next"]:
                     if not pre_lemma["next"] == lemma["lemma"]:
                         errors.append(f"PRE lemma name {lemma['lemma']}/{i} in register {register} not the same as pre lemma")
-                if post_lemma["previous"]:
-                     if not post_lemma["previous"] == lemma["lemma"]:
-                        errors.append(f"POST lemma name {lemma['lemma']}/{i} in register {register} not the same as post lemma")
+                try:
+                    post_lemma = register[i + 1]
+                    if post_lemma and post_lemma["previous"]:
+                        if not post_lemma["previous"] == lemma["lemma"]:
+                            errors.append(f"POST lemma name {lemma['lemma']}/{i} in register {register} not the same as post lemma")
+                except IndexError:
+                    pass
+
         if errors:
-            errors.insert(0, f"COUNT ERRORS: {len(errors)}")
+            count = len(errors)
+            errors.insert(0, f"COUNT ERRORS: {count}")
+            errors.append(f"COUNT ERRORS: {count}")
             raise AssertionError("\n".join(errors))
 
     @skip("only for analysis")

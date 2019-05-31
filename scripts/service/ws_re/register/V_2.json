@@ -1,7 +1,7 @@
 [
   {
     "lemma": "Donatio",
-    "previous": null,
+    "previous": "Donatianus 3",
     "next": "Donatismus",
     "chapters": [
       {
@@ -8386,7 +8386,7 @@
   {
     "lemma": "Eburones",
     "previous": "Eburomagus",
-    "next": "Eburum 1",
+    "next": "Eburovices",
     "chapters": [
       {
         "start": 1902,
@@ -8396,13 +8396,25 @@
     ]
   },
   {
-    "lemma": "Eburum 1",
+    "lemma": "Eburovices",
     "previous": "Eburones",
+    "next": "Eburum 1",
+    "chapters": [
+      {
+        "start": 1903,
+        "end": 1903,
+        "author": "Ihm"
+      }
+    ]
+  },
+  {
+    "lemma": "Eburum 1",
+    "previous": "Eburovices",
     "next": "Eburum 2",
     "chapters": [
       {
-        "start": 1902,
-        "end": 1902,
+        "start": 1903,
+        "end": 1903,
         "author": "Hülsen"
       }
     ]
@@ -8414,39 +8426,27 @@
     "redirect": true,
     "chapters": [
       {
-        "start": 1902,
-        "end": 1902
+        "start": 1903,
+        "end": 1903
       }
     ]
   },
   {
     "lemma": "Ebusus",
     "previous": "Eburum 2",
-    "next": "Eburovices",
+    "next": "Eccela",
     "wp_link": "w:de:Ibiza",
     "chapters": [
       {
-        "start": 1902,
+        "start": 1903,
         "end": 1906,
         "author": "Hübner"
       }
     ]
   },
   {
-    "lemma": "Eburovices",
-    "previous": "Ebusus",
-    "next": "Eccela",
-    "chapters": [
-      {
-        "start": 1903,
-        "end": 1903,
-        "author": "Ihm"
-      }
-    ]
-  },
-  {
     "lemma": "Eccela",
-    "previous": "Eburovices",
+    "previous": "Ebusus",
     "next": "Ecdicius",
     "chapters": [
       {
@@ -20631,6 +20631,7 @@
     "lemma": "Ennion",
     "previous": "Ennetoi",
     "next": "Ennios",
+    "wp_link": "w:de:Ennion",
     "chapters": [
       {
         "start": 2588,
@@ -23087,7 +23088,7 @@
   {
     "lemma": "Ephodia",
     "previous": "Ephka",
-    "next": "Ephodion",
+    "next": "Ἐφόδιον",
     "chapters": [
       {
         "start": 2859,
@@ -23097,9 +23098,9 @@
     ]
   },
   {
-    "lemma": "Ephodion",
+    "lemma": "Ἐφόδιον",
     "previous": "Ephodia",
-    "next": "Epholkion",
+    "next": "Ἐφόλκιον",
     "chapters": [
       {
         "start": 2859,
@@ -23109,8 +23110,8 @@
     ]
   },
   {
-    "lemma": "Epholkion",
-    "previous": "Ephodion",
+    "lemma": "Ἐφόλκιον",
+    "previous": "Ἐφόδιον",
     "next": "Ephorkios",
     "chapters": [
       {
@@ -23122,7 +23123,7 @@
   },
   {
     "lemma": "Ephorkios",
-    "previous": "Epholkion",
+    "previous": "Ἐφόλκιον",
     "next": "Ephoroi",
     "chapters": [
       {
@@ -23135,6 +23136,8 @@
   {
     "lemma": "Ephoroi",
     "previous": "Ephorkios",
+    "next": "Ephoros 1",
+    "wp_link": "w:de:Ephoren",
     "chapters": [
       {
         "start": 2860,

@@ -952,7 +952,8 @@
     "lemma": "Clodius 4",
     "previous": "Clodius 3",
     "next": "Clodius 5",
-    "redirect": true,
+    "sort_key": "Clodius 04",
+    "redirect": "Clodius 45",
     "chapters": [
       {
         "start": 64,
@@ -976,6 +977,7 @@
     "lemma": "Clodius 6",
     "previous": "Clodius 5",
     "next": "Clodius 7",
+    "sort_key": "Clodius 06",
     "redirect": true,
     "chapters": [
       {
@@ -1204,7 +1206,7 @@
     "lemma": "Clodius 25",
     "previous": "Clodius 24",
     "next": "Clodius 26",
-    "redirect": true,
+    "redirect": "Celsinus 4",
     "chapters": [
       {
         "start": 77,
@@ -1216,7 +1218,7 @@
     "lemma": "Clodius 26",
     "previous": "Clodius 25",
     "next": "Clodius 27",
-    "redirect": true,
+    "redirect": "Adelphius 1",
     "chapters": [
       {
         "start": 77,
@@ -1300,7 +1302,7 @@
     "lemma": "Clodius 33",
     "previous": "Clodius 32",
     "next": "Clodius 34",
-    "redirect": true,
+    "redirect": "Anicius 43",
     "chapters": [
       {
         "start": 77,
@@ -1312,7 +1314,7 @@
     "lemma": "Clodius 34",
     "previous": "Clodius 33",
     "next": "Clodius 35",
-    "redirect": true,
+    "redirect": "Anicius 40",
     "chapters": [
       {
         "start": 77,
@@ -1576,7 +1578,7 @@
     "lemma": "Clodius 57",
     "previous": "Clodius 56",
     "next": "Clodius 58",
-    "redirect": true,
+    "redirect": "Clodius 17",
     "chapters": [
       {
         "start": 99,
@@ -2395,7 +2397,7 @@
   {
     "lemma": "Cluvius 3",
     "previous": "Cluvius 2",
-    "next": "Cluvius 5",
+    "next": "Cluvius 4",
     "chapters": [
       {
         "start": 119,
@@ -2405,20 +2407,9 @@
     ]
   },
   {
-    "lemma": "Cluvius 5",
-    "previous": "Cluvius 3",
-    "next": "Cluvius 4",
-    "chapters": [
-      {
-        "start": 119,
-        "end": 119
-      }
-    ]
-  },
-  {
     "lemma": "Cluvius 4",
-    "previous": "Cluvius 5",
-    "next": "Cluvius 6",
+    "previous": "Cluvius 3",
+    "next": "Cluvius 5",
     "chapters": [
       {
         "start": 120,
@@ -2428,9 +2419,22 @@
     ]
   },
   {
-    "lemma": "Cluvius 6",
+    "lemma": "Cluvius 5",
     "previous": "Cluvius 4",
-    "next": "Cluvius 9",
+    "next": "Cluvius 6",
+    "sort_key": "Cluvius 05",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 120,
+        "end": 120
+      }
+    ]
+  },
+  {
+    "lemma": "Cluvius 6",
+    "previous": "Cluvius 5",
+    "next": "Cluvius 7",
     "chapters": [
       {
         "start": 120,
@@ -2440,19 +2444,8 @@
     ]
   },
   {
-    "lemma": "Cluvius 9",
-    "previous": "Cluvius 6",
-    "next": "Cluvius 7",
-    "chapters": [
-      {
-        "start": 120,
-        "end": 120
-      }
-    ]
-  },
-  {
     "lemma": "Cluvius 7",
-    "previous": "Cluvius 9",
+    "previous": "Cluvius 6",
     "next": "Cluvius 8",
     "chapters": [
       {
@@ -2465,7 +2458,7 @@
   {
     "lemma": "Cluvius 8",
     "previous": "Cluvius 7",
-    "next": "Cluvius 10",
+    "next": "Cluvius 9",
     "chapters": [
       {
         "start": 121,
@@ -2475,8 +2468,19 @@
     ]
   },
   {
-    "lemma": "Cluvius 10",
+    "lemma": "Cluvius 9",
     "previous": "Cluvius 8",
+    "next": "Cluvius 10",
+    "chapters": [
+      {
+        "start": 121,
+        "end": 121
+      }
+    ]
+  },
+  {
+    "lemma": "Cluvius 10",
+    "previous": "Cluvius 9",
     "next": "Cluvius 11",
     "chapters": [
       {
@@ -3531,6 +3535,7 @@
     "lemma": "Coeletae",
     "previous": "Coelerni",
     "next": "Coelianus 1",
+    "redirect": "Koiletai",
     "chapters": [
       {
         "start": 184,
@@ -3817,6 +3822,7 @@
     "lemma": "Coelius 22",
     "previous": "Coelius 21",
     "next": "Coelius 23",
+    "redirect": "Probatus",
     "chapters": [
       {
         "start": 197,
@@ -3828,6 +3834,7 @@
     "lemma": "Coelius 23",
     "previous": "Coelius 22",
     "next": "Coelius 24",
+    "redirect": true,
     "chapters": [
       {
         "start": 198,
@@ -3992,6 +3999,7 @@
     "lemma": "Coenophrurium",
     "previous": "Coenon Gallicanon",
     "next": "Coenus",
+    "redirect": "Koinophrurion",
     "chapters": [
       {
         "start": 200,
@@ -4037,6 +4045,7 @@
     "lemma": "Coeranus 2",
     "previous": "Coeranus 1",
     "next": "Coeranus 3",
+    "redirect": "Aelius 39",
     "chapters": [
       {
         "start": 201,
@@ -4095,6 +4104,7 @@
     "lemma": "Cogidumnus",
     "previous": "Cofna",
     "next": "Cognatio",
+    "redirect": "Claudius 117",
     "chapters": [
       {
         "start": 204,
@@ -4760,6 +4770,7 @@
     "lemma": "Colles Leugari",
     "previous": "Collegium",
     "next": "Colletiani",
+    "redirect": "Leugari colles",
     "chapters": [
       {
         "start": 480,
@@ -4771,6 +4782,7 @@
     "lemma": "Colletiani",
     "previous": "Colles Leugari",
     "next": "Collina",
+    "redirect": "Colatio",
     "chapters": [
       {
         "start": 480,
@@ -4806,6 +4818,7 @@
     "lemma": "Collini",
     "previous": "Collina porta",
     "next": "Collinus",
+    "redirect": "Salii",
     "chapters": [
       {
         "start": 481,
@@ -5420,6 +5433,7 @@
     "lemma": "Colonis",
     "previous": "Colonianus",
     "next": "Colonus",
+    "redirect": "Kolonis",
     "chapters": [
       {
         "start": 588,
@@ -5455,6 +5469,7 @@
     "lemma": "Colosseum",
     "previous": "Color insaniae",
     "next": "Colosseus",
+    "redirect": "Flavium Amphitheatrum",
     "chapters": [
       {
         "start": 589,
@@ -5611,6 +5626,7 @@
     "lemma": "Columella",
     "previous": "Columbus",
     "next": "Columna",
+    "redirect": "Iunius 67",
     "chapters": [
       {
         "start": 603,
@@ -5694,6 +5710,7 @@
     "lemma": "Comacenus lacus",
     "previous": "Coma",
     "next": "Comaci",
+    "redirect": "Larius Lacus",
     "chapters": [
       {
         "start": 603,
@@ -5705,6 +5722,7 @@
     "lemma": "Comaci",
     "previous": "Comacenus lacus",
     "next": "Comacia",
+    "redirect": "Comani 2",
     "chapters": [
       {
         "start": 603,
@@ -5716,6 +5734,7 @@
     "lemma": "Comacia",
     "previous": "Comaci",
     "next": "Comagena",
+    "redirect": "Comagena",
     "chapters": [
       {
         "start": 603,
@@ -5786,6 +5805,7 @@
     "lemma": "Comassa",
     "previous": "Comasia",
     "next": "Comata Gallia",
+    "redirect": "Kamisa",
     "chapters": [
       {
         "start": 604,
@@ -5928,6 +5948,7 @@
     "lemma": "Comidius",
     "previous": "Comidava",
     "next": "Comillomagus",
+    "redirect": true,
     "chapters": [
       {
         "start": 606,
@@ -5951,6 +5972,7 @@
     "lemma": "Cominiana",
     "previous": "Comillomagus",
     "next": "Cominianus 1",
+    "redirect": "Valerius 398",
     "chapters": [
       {
         "start": 606,
@@ -6112,6 +6134,7 @@
     "lemma": "Cominius 11",
     "previous": "Cominius 10",
     "next": "Cominius 12",
+    "redirect": "Cominius 4",
     "chapters": [
       {
         "start": 608,
@@ -10379,6 +10402,7 @@
     "lemma": "Constantia 13",
     "previous": "Constantia 12",
     "next": "Constantia 14",
+    "wp_link": "w:de:Flavia Iulia Constantia",
     "chapters": [
       {
         "start": 958,
@@ -10391,6 +10415,7 @@
     "lemma": "Constantia 14",
     "previous": "Constantia 13",
     "next": "Constantia 15",
+    "wp_link": "w:de:Constantina (Tochter Konstantins des Großen)",
     "chapters": [
       {
         "start": 958,
@@ -10415,6 +10440,7 @@
     "lemma": "Constantiana",
     "previous": "Constantia 15",
     "next": "Constantianus 1",
+    "wp_link": "w:de:Constanța",
     "chapters": [
       {
         "start": 959,
@@ -10829,6 +10855,7 @@
     "lemma": "Constantius 1",
     "previous": "Constantiolus 2",
     "next": "Constantius 2",
+    "sort_key": "Constantius 01",
     "wp_link": "w:de:Constantius I.",
     "chapters": [
       {
@@ -10893,6 +10920,7 @@
     "lemma": "Constantius 6",
     "previous": "Constantius 5",
     "next": "Constantius 7",
+    "sort_key": "Constantius 06",
     "chapters": [
       {
         "start": 1099,
@@ -10905,6 +10933,7 @@
     "lemma": "Constantius 7",
     "previous": "Constantius 6",
     "next": "Constantius 8",
+    "sort_key": "Constantius 07",
     "chapters": [
       {
         "start": 1099,
@@ -10917,6 +10946,7 @@
     "lemma": "Constantius 8",
     "previous": "Constantius 7",
     "next": "Constantius 9",
+    "sort_key": "Constantius 08",
     "chapters": [
       {
         "start": 1099,
@@ -10929,6 +10959,8 @@
     "lemma": "Constantius 9",
     "previous": "Constantius 8",
     "next": "Constantius 10",
+    "sort_key": "Constantius 09",
+    "wp_link": "w:de:Constantius III.",
     "chapters": [
       {
         "start": 1099,
@@ -11037,6 +11069,7 @@
     "lemma": "Constantius 18",
     "previous": "Constantius 17",
     "next": "Constituere",
+    "wp_link": "w:de:Constantius von Lyon",
     "chapters": [
       {
         "start": 1103,
@@ -11935,6 +11968,7 @@
     "lemma": "Copa",
     "previous": "Cooptatio",
     "next": "Cophantus",
+    "redirect": true,
     "chapters": [
       {
         "start": 1211,
@@ -11970,6 +12004,7 @@
     "lemma": "Copia 1",
     "previous": "Cophinus",
     "next": "Copia 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1213,
@@ -12133,7 +12168,7 @@
     "previous": "Coponius 8",
     "next": "Coponius 10",
     "sort_key": "Coponius 09",
-    "redirect": true,
+    "redirect": "Coponius 3",
     "chapters": [
       {
         "start": 1216,
@@ -12157,7 +12192,7 @@
     "lemma": "Copori",
     "previous": "Coponius 10",
     "next": "Cora 1",
-    "redirect": true,
+    "redirect": "Capori",
     "chapters": [
       {
         "start": 1216,
@@ -12181,7 +12216,7 @@
     "lemma": "Cora 2",
     "previous": "Cora 1",
     "next": "Coracinus",
-    "redirect": true,
+    "redirect": "Chora 5",
     "chapters": [
       {
         "start": 1217,
@@ -12337,7 +12372,7 @@
     "lemma": "Corbio 3",
     "previous": "Corbio 2",
     "next": "Corbis",
-    "redirect": true,
+    "redirect": "Hortensius 10",
     "chapters": [
       {
         "start": 1218,
@@ -12396,7 +12431,7 @@
     "lemma": "Corbulonis fossa",
     "previous": "Corbulo 2",
     "next": "Corcac",
-    "redirect": true,
+    "redirect": "Fossa, Fossae 8",
     "chapters": [
       {
         "start": 1219,
@@ -12408,7 +12443,7 @@
     "lemma": "Corcac",
     "previous": "Corbulonis fossa",
     "next": "Corconiana",
-    "redirect": true,
+    "redirect": "Corcoras",
     "chapters": [
       {
         "start": 1219,
@@ -18905,6 +18940,7 @@
     "previous": "Cornificius 8",
     "next": "Cornificius 10",
     "sort_key": "Cornificius 09",
+    "redirect": true,
     "chapters": [
       {
         "start": 1630,
@@ -18917,6 +18953,7 @@
     "lemma": "Cornificius 10",
     "previous": "Cornificius 9",
     "next": "Cornificius 11",
+    "redirect": true,
     "chapters": [
       {
         "start": 1630,
@@ -18964,6 +19001,7 @@
     "lemma": "Cornificius 14",
     "previous": "Cornificius 13",
     "next": "Cornificius 15",
+    "redirect": true,
     "chapters": [
       {
         "start": 1632,
@@ -18975,6 +19013,7 @@
     "lemma": "Cornificius 15",
     "previous": "Cornificius 14",
     "next": "Cornificius 16",
+    "redirect": true,
     "chapters": [
       {
         "start": 1632,
@@ -18986,6 +19025,7 @@
     "lemma": "Cornificius 16",
     "previous": "Cornificius 15",
     "next": "Cornificius 17",
+    "redirect": true,
     "chapters": [
       {
         "start": 1632,
@@ -18996,6 +19036,7 @@
   {
     "lemma": "Cornificius 17",
     "previous": "Cornificius 16",
+    "next": null,
     "chapters": [
       {
         "start": 1632,

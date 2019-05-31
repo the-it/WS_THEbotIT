@@ -533,7 +533,6 @@
   {
     "lemma": "Dekane",
     "previous": "Dasumius 1a",
-    "next": "Demosiosis",
     "wp_link": "w:de:Dekan (Astrologie)",
     "chapters": [
       {
@@ -544,9 +543,12 @@
     ]
   },
   {
-    "lemma": "Demosiosis",
-    "previous": "Dekane",
-    "next": "Dekatelogos",
+    "lemma": "Demetrios 100a",
+    "next": "δημοσίωσις"
+  },
+  {
+    "lemma": "δημοσίωσις",
+    "previous": "Demetrios 100a",
     "chapters": [
       {
         "start": 123,
@@ -556,9 +558,14 @@
     ]
   },
   {
-    "lemma": "Dekatelogos",
-    "previous": "Demosiosis",
+    "lemma": "Dekane",
+    "next": "Δεκατηλόγος"
+  },
+  {
+    "lemma": "Δεκατηλόγος",
+    "previous": "Dekane",
     "next": "Demetrios 100a",
+    "sort_key": "Dekatelogos",
     "chapters": [
       {
         "start": 124,
@@ -569,8 +576,8 @@
   },
   {
     "lemma": "Demetrios 100a",
-    "previous": "Dekatelogos",
-    "next": "Diadochos a",
+    "previous": "Δεκατηλόγος",
+    "next": "δημοσίωσις",
     "chapters": [
       {
         "start": 124,
@@ -580,8 +587,11 @@
     ]
   },
   {
+    "lemma": "δημοσίωσις",
+    "previous": "Demetrios 100a"
+  },
+  {
     "lemma": "Diadochos a",
-    "previous": "Demetrios 100a",
     "next": "Dieramatites",
     "chapters": [
       {

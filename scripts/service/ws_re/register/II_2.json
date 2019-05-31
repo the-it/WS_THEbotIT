@@ -1,6 +1,12 @@
 [
   {
+    "lemma": "Mitarbeiter-Verzeichnis (Band II)",
+    "next": "Artemisia 1",
+    "sort_key": "!Autoren1896"
+  },
+  {
     "lemma": "Artemisia 1",
+    "previous": "Mitarbeiter-Verzeichnis (Band II)",
     "next": "Artemisia 2",
     "chapters": [
       {
@@ -2330,7 +2336,6 @@
     "lemma": "Asacaricus",
     "previous": "Ἀσαβῶν ὄρη",
     "next": "Asachaei",
-    "sort_key": "Ascarius",
     "wp_link": "w:de:Ascaricus",
     "chapters": [
       {
@@ -2356,6 +2361,7 @@
     "lemma": "Asadada",
     "previous": "Asachaei",
     "next": "Asael",
+    "redirect": "Asaradda",
     "chapters": [
       {
         "start": 1514,
@@ -2461,7 +2467,8 @@
   {
     "lemma": "Asamas",
     "previous": "Asalmanos",
-    "next": "Asaminthos",
+    "next": "Ἀσάμινθος",
+    "redirect": "Anatis",
     "chapters": [
       {
         "start": 1514,
@@ -2471,9 +2478,11 @@
     ]
   },
   {
-    "lemma": "Asaminthos",
+    "lemma": "Ἀσάμινθος",
     "previous": "Asamas",
     "next": "Asamon 1",
+    "sort_key": "Asaminthos",
+    "wp_link": "w:de:Badewanne",
     "chapters": [
       {
         "start": 1514,
@@ -2484,7 +2493,7 @@
   },
   {
     "lemma": "Asamon 1",
-    "previous": "Asaminthos",
+    "previous": "Ἀσάμινθος",
     "next": "Asamon 2",
     "chapters": [
       {
@@ -2558,6 +2567,7 @@
     "lemma": "Asan",
     "previous": "Asamus",
     "next": "Asanabara",
+    "redirect": "Bethasan",
     "chapters": [
       {
         "start": 1515,
@@ -2580,7 +2590,7 @@
   {
     "lemma": "Asandi",
     "previous": "Asanabara",
-    "next": "Asandion",
+    "next": "Ἀσάνδιον",
     "chapters": [
       {
         "start": 1515,
@@ -2590,7 +2600,7 @@
     ]
   },
   {
-    "lemma": "Asandion",
+    "lemma": "Ἀσάνδιον",
     "previous": "Asandi",
     "next": "Asandros 1",
     "chapters": [
@@ -2603,7 +2613,7 @@
   },
   {
     "lemma": "Asandros 1",
-    "previous": "Asandion",
+    "previous": "Ἀσάνδιον",
     "next": "Asandros 2",
     "chapters": [
       {
@@ -2629,6 +2639,7 @@
     "lemma": "Asandros 3",
     "previous": "Asandros 2",
     "next": "Asandros 4",
+    "wp_link": "w:de:Asandros (Karien)",
     "chapters": [
       {
         "start": 1515,
@@ -24333,6 +24344,7 @@
     "lemma": "Augustoritum",
     "previous": "Augustopolis 3",
     "next": "Augustulus",
+    "wp_link": "w:de:Limoges",
     "chapters": [
       {
         "start": 2369,
@@ -24382,6 +24394,7 @@
     "lemma": "Augustus",
     "previous": "Augustum 2",
     "next": "Augustus mons",
+    "wp_link": "w:de:Augustus (Titel)",
     "chapters": [
       {
         "start": 2370,
@@ -24455,6 +24468,7 @@
     "lemma": "Aviaitinehae",
     "previous": "Avia",
     "next": "Avianius 1",
+    "sort_key": "Auiaitinehae",
     "chapters": [
       {
         "start": 2372,
@@ -25232,7 +25246,7 @@
   {
     "lemma": "Aulaitinehae",
     "previous": "Aulai 2",
-    "next": "Aulaiu teichos",
+    "next": "Αὐλαίου τεῖχος",
     "redirect": true,
     "chapters": [
       {
@@ -25242,7 +25256,7 @@
     ]
   },
   {
-    "lemma": "Aulaiu teichos",
+    "lemma": "Αὐλαίου τεῖχος",
     "previous": "Aulaitinehae",
     "next": "Aulariokos",
     "chapters": [
@@ -25255,7 +25269,7 @@
   },
   {
     "lemma": "Aulariokos",
-    "previous": "Aulaiu teichos",
+    "previous": "Αὐλαίου τεῖχος",
     "next": "Aulax",
     "chapters": [
       {
@@ -25353,6 +25367,7 @@
     "lemma": "Aulerci",
     "previous": "Auleon",
     "next": "Auleros",
+    "wp_link": "w:de:Aulerci",
     "chapters": [
       {
         "start": 2402,
@@ -25556,7 +25571,7 @@
   {
     "lemma": "Aulisua",
     "previous": "Aulis 4",
-    "next": "Auliu kome",
+    "next": "Αὐλίου κώμη",
     "chapters": [
       {
         "start": 2410,
@@ -25566,9 +25581,10 @@
     ]
   },
   {
-    "lemma": "Auliu kome",
+    "lemma": "Αὐλίου κώμη",
     "previous": "Aulisua",
     "next": "Aulius 1",
+    "sort_key": "Auliu kome",
     "chapters": [
       {
         "start": 2410,
@@ -25579,7 +25595,7 @@
   },
   {
     "lemma": "Aulius 1",
-    "previous": "Auliu kome",
+    "previous": "Αὐλίου κώμη",
     "next": "Aulius 2",
     "chapters": [
       {
@@ -25630,6 +25646,7 @@
     "lemma": "Aulon 1",
     "previous": "Aulodik",
     "next": "Aulon 2",
+    "sort_key": "Aulon 01",
     "chapters": [
       {
         "start": 2413,
@@ -25811,6 +25828,7 @@
     "lemma": "Aulon 16",
     "previous": "Aulon 15",
     "next": "Aulon 17",
+    "wp_link": "w:de:Vlora",
     "chapters": [
       {
         "start": 2414,
@@ -25835,6 +25853,7 @@
     "lemma": "Auloneus",
     "previous": "Aulon 17",
     "next": "Aulonia",
+    "wp_link": "w:de:Dionysos",
     "chapters": [
       {
         "start": 2415,
@@ -25953,7 +25972,7 @@
   {
     "lemma": "Aulothos",
     "previous": "Aulos 4",
-    "next": "Aulu krene",
+    "next": "Αὐλοῦ κρήνη",
     "chapters": [
       {
         "start": 2422,
@@ -25962,7 +25981,7 @@
     ]
   },
   {
-    "lemma": "Aulu krene",
+    "lemma": "Αὐλοῦ κρήνη",
     "previous": "Aulothos",
     "next": "Aulus",
     "chapters": [
@@ -25975,7 +25994,7 @@
   },
   {
     "lemma": "Aulus",
-    "previous": "Aulu krene",
+    "previous": "Αὐλοῦ κρήνη",
     "next": "Aumenahenae",
     "chapters": [
       {
@@ -26097,6 +26116,7 @@
     "lemma": "Avobriga",
     "previous": "Avo",
     "next": "Avolgigorum gens",
+    "sort_key": "Auobriga",
     "chapters": [
       {
         "start": 2423,
@@ -26109,6 +26129,7 @@
     "lemma": "Avolgigorum gens",
     "previous": "Avobriga",
     "next": "Avona 1",
+    "sort_key": "Auolgigorum gens",
     "chapters": [
       {
         "start": 2424,
@@ -26121,6 +26142,7 @@
     "lemma": "Avona 1",
     "previous": "Avolgigorum gens",
     "next": "Avona 2",
+    "sort_key": "Auona 1",
     "wp_link": "w:de:Avon (Fluss, Warwickshire)",
     "chapters": [
       {
@@ -26134,6 +26156,8 @@
     "lemma": "Avona 2",
     "previous": "Avona 1",
     "next": "Auos",
+    "sort_key": "Auona 2",
+    "wp_link": "w:de:Avon (Fluss, Bristol)",
     "chapters": [
       {
         "start": 2424,
@@ -26242,6 +26266,7 @@
     "lemma": "Auranitis 1",
     "previous": "Aurana",
     "next": "Auranitis 2",
+    "wp_link": "w:de:Hauran",
     "chapters": [
       {
         "start": 2425,
@@ -26287,7 +26312,7 @@
   {
     "lemma": "Auras",
     "previous": "Aurarius",
-    "next": "Aurasion oros",
+    "next": "Αὐράσιον ὄρος",
     "chapters": [
       {
         "start": 2425,
@@ -26297,9 +26322,10 @@
     ]
   },
   {
-    "lemma": "Aurasion oros",
+    "lemma": "Αὐράσιον ὄρος",
     "previous": "Auras",
     "next": "Aurata",
+    "sort_key": "Aurasion oros",
     "chapters": [
       {
         "start": 2426,
@@ -26310,7 +26336,7 @@
   },
   {
     "lemma": "Aurata",
-    "previous": "Aurasion oros",
+    "previous": "Αὐράσιον ὄρος",
     "next": "ab auraturis",
     "chapters": [
       {
@@ -26323,6 +26349,7 @@
     "lemma": "ab auraturis",
     "previous": "Aurata",
     "next": "Aurea",
+    "sort_key": "Auraturis",
     "chapters": [
       {
         "start": 2426,
@@ -30445,7 +30472,7 @@
   {
     "lemma": "Aurum Iudaicum",
     "previous": "Aurum glebale",
-    "next": "Aurum lustrale, aurum negotiatorium",
+    "next": "Aurum lustrale und aurum negotiatorium",
     "chapters": [
       {
         "start": 2553,
@@ -30455,20 +30482,14 @@
     ]
   },
   {
-    "lemma": "Aurum lustrale, aurum negotiatorium",
+    "lemma": "Aurum lustrale und aurum negotiatorium",
     "previous": "Aurum Iudaicum",
     "next": "Aurum oblaticium",
-    "chapters": [
-      {
-        "start": 2553,
-        "end": 2553,
-        "author": "Kubitschek"
-      }
-    ]
+    "redirect": true
   },
   {
     "lemma": "Aurum oblaticium",
-    "previous": "Aurum lustrale, aurum negotiatorium",
+    "previous": "Aurum lustrale und aurum negotiatorium",
     "next": "Aurum tironicum",
     "chapters": [
       {
@@ -30603,6 +30624,7 @@
     "lemma": "Aurunculeius 6",
     "previous": "Aurunculeius 5",
     "next": "Aurunculeius 7",
+    "wp_link": "w:de:Lucius Aurunculeius Cotta",
     "chapters": [
       {
         "start": 2555,
@@ -31841,7 +31863,7 @@
   {
     "lemma": "Autokrates 5",
     "previous": "Autokrates 4",
-    "next": "Autokrator",
+    "next": "Αὐτοκράτωρ",
     "chapters": [
       {
         "start": 2598,
@@ -31851,9 +31873,11 @@
     ]
   },
   {
-    "lemma": "Autokrator",
+    "lemma": "Αὐτοκράτωρ",
     "previous": "Autokrates 5",
     "next": "Autokratorikos",
+    "sort_key": "Autokrator",
+    "wp_link": "w:de:Diktator",
     "chapters": [
       {
         "start": 2599,
@@ -31864,7 +31888,7 @@
   },
   {
     "lemma": "Autokratorikos",
-    "previous": "Autokrator",
+    "previous": "Αὐτοκράτωρ",
     "next": "Autolala",
     "chapters": [
       {
@@ -42150,7 +42174,7 @@
   {
     "lemma": "Barathra",
     "previous": "Barathia",
-    "next": "Barathron",
+    "next": "Βάραθρον",
     "chapters": [
       {
         "start": 2853,
@@ -42160,9 +42184,10 @@
     ]
   },
   {
-    "lemma": "Barathron",
+    "lemma": "Βάραθρον",
     "previous": "Barathra",
     "next": "Baraxmalcha",
+    "sort_key": "Barathron",
     "chapters": [
       {
         "start": 2853,
@@ -42173,7 +42198,7 @@
   },
   {
     "lemma": "Baraxmalcha",
-    "previous": "Barathron",
+    "previous": "Βάραθρον",
     "next": "Baraza",
     "chapters": [
       {
@@ -42235,6 +42260,7 @@
     "lemma": "Barba Iovis",
     "previous": "Barba 3",
     "next": "Barbalissos",
+    "sort_key": "Barbaiovis",
     "wp_link": "w:de:Jupiterbart",
     "chapters": [
       {
@@ -42272,6 +42298,7 @@
     "lemma": "Barbanna",
     "previous": "Barbanissa",
     "next": "Barbara",
+    "wp_link": "w:de:Buna (Adriatisches Meer)",
     "chapters": [
       {
         "start": 2855,
@@ -42414,7 +42441,7 @@
   {
     "lemma": "Barbarikon",
     "previous": "Barbaries",
-    "next": "Barbarikon pedion",
+    "next": "Βαρβαρικὸν πεδίον",
     "chapters": [
       {
         "start": 2858,
@@ -42423,9 +42450,10 @@
     ]
   },
   {
-    "lemma": "Barbarikon pedion",
+    "lemma": "Βαρβαρικὸν πεδίον",
     "previous": "Barbarikon",
-    "next": "Barbarion akron",
+    "next": "Βαρβάριον ἄκρον",
+    "sort_key": "Barbarikon pedion",
     "chapters": [
       {
         "start": 2858,
@@ -42435,9 +42463,11 @@
     ]
   },
   {
-    "lemma": "Barbarion akron",
-    "previous": "Barbarikon pedion",
+    "lemma": "Βαρβάριον ἄκρον",
+    "previous": "Βαρβαρικὸν πεδίον",
     "next": "Barbari promunturium",
+    "sort_key": "Barbarion akron",
+    "wp_link": "w:de:Cabo Espichel",
     "chapters": [
       {
         "start": 2858,
@@ -42448,8 +42478,9 @@
   },
   {
     "lemma": "Barbari promunturium",
-    "previous": "Barbarion akron",
+    "previous": "Βαρβάριον ἄκρον",
     "next": "Barbaroi",
+    "sort_key": "Barbaripromunturium",
     "chapters": [
       {
         "start": 2858,
@@ -42474,7 +42505,6 @@
   {
     "lemma": "Apolloniastai",
     "previous": "Barbaroi",
-    "next": "Archelaos 33a",
     "chapters": [
       {
         "start": 2859,
@@ -42484,9 +42514,13 @@
     ]
   },
   {
+    "lemma": "Archebiades 2",
+    "next": "Archelaos 33a"
+  },
+  {
     "lemma": "Archelaos 33a",
-    "previous": "Apolloniastai",
-    "next": "Archippos 1a",
+    "previous": "Archebiades 2",
+    "next": "Archias 6",
     "chapters": [
       {
         "start": 2859,
@@ -42496,9 +42530,19 @@
     ]
   },
   {
+    "lemma": "Archias 6",
+    "previous": "Archelaos 33a"
+  },
+  {
+    "lemma": "Archias 7",
+    "previous": "Archias 6"
+  },
+  {
     "lemma": "Archippos 1a",
-    "previous": "Archelaos 33a",
+    "previous": "Archias 7",
     "next": "Areus 5",
+    "sort_key": "Archippos 01a",
+    "wp_link": "w:de:Archippos (Archon)",
     "chapters": [
       {
         "start": 2859,
@@ -42522,7 +42566,8 @@
   {
     "lemma": "Ariobarzanes 4a",
     "previous": "Areus 5",
-    "next": "Aristobuliastai",
+    "next": "Ariobarzanes 4b",
+    "wp_link": "w:de:Ariobarzanes (Pontos)",
     "chapters": [
       {
         "start": 2860,
@@ -42532,8 +42577,18 @@
     ]
   },
   {
-    "lemma": "Aristobuliastai",
+    "lemma": "Ariobarzanes 4b",
     "previous": "Ariobarzanes 4a",
+    "next": "Ariobarzanes 4c"
+  },
+  {
+    "lemma": "Ariobarzanes 4c",
+    "previous": "Ariobarzanes 4b",
+    "next": "Ἀριστοβουλιασταί"
+  },
+  {
+    "lemma": "Ἀριστοβουλιασταί",
+    "previous": "Ariobarzanes 4c",
     "next": "Askalis",
     "chapters": [
       {
@@ -42545,7 +42600,7 @@
   },
   {
     "lemma": "Askalis",
-    "previous": "Aristobuliastai",
+    "previous": "Ἀριστοβουλιασταί",
     "next": "Astakides 1",
     "chapters": [
       {
@@ -42569,6 +42624,7 @@
   {
     "lemma": "Astakides 2",
     "previous": "Astakides 1",
+    "next": "Athenaios 23",
     "chapters": [
       {
         "start": 2861,

@@ -2231,7 +2231,6 @@
   {
     "lemma": "Demetrios 32ee",
     "previous": "Dativa",
-    "next": "Demetrios 32e",
     "chapters": [
       {
         "start": 135,
@@ -2241,8 +2240,12 @@
     ]
   },
   {
+    "lemma": "Demetrios 32d",
+    "next": "Demetrios 32e"
+  },
+  {
     "lemma": "Demetrios 32e",
-    "previous": "Demetrios 32ee",
+    "previous": "Demetrios 32d",
     "next": "Demetrios 32f",
     "sort_key": "Demetrios 032e",
     "chapters": [
@@ -2394,6 +2397,7 @@
     "lemma": "Demostratos 9a",
     "previous": "Demosthenes 16",
     "next": "Derketos",
+    "sort_key": "Demostratos 09a",
     "chapters": [
       {
         "start": 137,
@@ -2441,7 +2445,7 @@
   {
     "lemma": "Dikaiopolis 2",
     "previous": "Dexter 12",
-    "next": "Diktys 2",
+    "next": "Dikte 1",
     "chapters": [
       {
         "start": 137,
@@ -2451,8 +2455,13 @@
     ]
   },
   {
-    "lemma": "Diktys 2",
+    "lemma": "Dikte 1",
     "previous": "Dikaiopolis 2",
+    "next": "Diktys 2"
+  },
+  {
+    "lemma": "Diktys 2",
+    "previous": "Dikte 1",
     "next": "Diktys 3",
     "chapters": [
       {

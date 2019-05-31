@@ -18236,6 +18236,7 @@
     "lemma": "Cethegus 1",
     "previous": "Cethegilla",
     "next": "Cethegus 2",
+    "redirect": "Claudius 326",
     "chapters": [
       {
         "start": 2012,
@@ -27783,6 +27784,7 @@
     "lemma": "Chinna",
     "previous": "Chinea",
     "next": "Chinzeros",
+    "redirect": "Cinna",
     "chapters": [
       {
         "start": 2283,
@@ -28130,6 +28132,7 @@
     "lemma": "Chirius",
     "previous": "Chiris",
     "next": "Chirographarii creditores",
+    "redirect": "Fortunatianus",
     "chapters": [
       {
         "start": 2301,
@@ -29481,7 +29484,7 @@
   {
     "lemma": "Chonnamagara",
     "previous": "Chonia",
-    "next": "Chonnos",
+    "next": "Χόννος",
     "chapters": [
       {
         "start": 2373,
@@ -29491,7 +29494,7 @@
     ]
   },
   {
-    "lemma": "Chonnos",
+    "lemma": "Χόννος",
     "previous": "Chonnamagara",
     "next": "Chonodomarius",
     "chapters": [
@@ -29504,8 +29507,9 @@
   },
   {
     "lemma": "Chonodomarius",
-    "previous": "Chonnos",
+    "previous": "Χόννος",
     "next": "Chonuphis",
+    "redirect": "Chnodomarius",
     "chapters": [
       {
         "start": 2373,
@@ -29791,7 +29795,8 @@
   {
     "lemma": "Chordyle",
     "previous": "Chordiraza",
-    "next": "Choregeion",
+    "next": "Χορηγεῖον",
+    "redirect": "Kordyle",
     "chapters": [
       {
         "start": 2409,
@@ -29800,7 +29805,7 @@
     ]
   },
   {
-    "lemma": "Choregeion",
+    "lemma": "Χορηγεῖον",
     "previous": "Chordyle",
     "next": "Choregia",
     "chapters": [
@@ -29813,7 +29818,7 @@
   },
   {
     "lemma": "Choregia",
-    "previous": "Choregeion",
+    "previous": "Χορηγεῖον",
     "next": "Choregos",
     "chapters": [
       {
@@ -30138,7 +30143,8 @@
   {
     "lemma": "Choronike 2",
     "previous": "Choronike 1",
-    "next": "Choropoios",
+    "next": "Χοροποιός",
+    "redirect": "Choranthe",
     "chapters": [
       {
         "start": 2442,
@@ -30147,7 +30153,7 @@
     ]
   },
   {
-    "lemma": "Choropoios",
+    "lemma": "Χοροποιός",
     "previous": "Choronike 2",
     "next": "Choropsaltria",
     "chapters": [
@@ -30160,7 +30166,7 @@
   },
   {
     "lemma": "Choropsaltria",
-    "previous": "Choropoios",
+    "previous": "Χοροποιός",
     "next": "Chorostates",
     "chapters": [
       {
@@ -31263,6 +31269,7 @@
     "lemma": "Chrysargyron",
     "previous": "Chrysaphios",
     "next": "Chrysas 1",
+    "redirect": "Collatio lustralis",
     "chapters": [
       {
         "start": 2486,
@@ -31572,6 +31579,7 @@
     "lemma": "Chryselephantina",
     "previous": "Chryseladin",
     "next": "Chrysendeta",
+    "redirect": "Goldelfenbeintechnik",
     "chapters": [
       {
         "start": 2494,
@@ -32014,6 +32022,7 @@
     "lemma": "Chrysippos 22",
     "previous": "Chrysippos 21",
     "next": "Chrysis 1",
+    "redirect": "Vettius 12",
     "chapters": [
       {
         "start": 2511,
@@ -33401,6 +33410,7 @@
     "lemma": "Chytroi 4",
     "previous": "Chytroi 3",
     "next": "Chytron",
+    "redirect": "Anthesteria",
     "chapters": [
       {
         "start": 2532,
@@ -33591,6 +33601,7 @@
     "lemma": "Cicade",
     "previous": "Ciboliton patria",
     "next": "Cicae insulae",
+    "redirect": "Tettix",
     "chapters": [
       {
         "start": 2536,
@@ -33601,7 +33612,7 @@
   {
     "lemma": "Cicae insulae",
     "previous": "Cicade",
-    "next": "Cicera",
+    "next": "Cicatricula",
     "chapters": [
       {
         "start": 2536,
@@ -33610,9 +33621,16 @@
     ]
   },
   {
-    "lemma": "Cicera",
+    "lemma": "Cicatricula",
     "previous": "Cicae insulae",
+    "next": "Cicera",
+    "redirect": true
+  },
+  {
+    "lemma": "Cicera",
+    "previous": "Cicatricula",
     "next": "Cicereius 1",
+    "redirect": "Erbse",
     "chapters": [
       {
         "start": 2536,
@@ -33743,6 +33761,7 @@
     "lemma": "Cilani caput",
     "previous": "Cigisa",
     "next": "Cilbus",
+    "redirect": "Caput Cilani",
     "chapters": [
       {
         "start": 2543,
@@ -34064,6 +34083,7 @@
     "lemma": "Cimenice regio",
     "previous": "Cimbrianus",
     "next": "Cimetra",
+    "redirect": "Cebenna mons",
     "chapters": [
       {
         "start": 2553,
@@ -34471,6 +34491,7 @@
     "lemma": "Cingius Severus",
     "previous": "Cinginnia",
     "next": "Cingonius",
+    "redirect": "Cincius 9",
     "chapters": [
       {
         "start": 2560,
@@ -34554,6 +34575,7 @@
     "lemma": "Ciniflones",
     "previous": "Ciniaemus",
     "next": "Ciniscus vicus",
+    "redirect": "Cinerarius",
     "chapters": [
       {
         "start": 2561,
@@ -34612,6 +34634,7 @@
     "lemma": "Cinna 2",
     "previous": "Cinna 1",
     "next": "Cinna 3",
+    "redirect": true,
     "chapters": [
       {
         "start": 2562,
@@ -34969,6 +34992,7 @@
     "lemma": "Circulus lacteus",
     "previous": "Circulator 2",
     "next": "Circumcelliones",
+    "redirect": "Milchstrasse",
     "chapters": [
       {
         "start": 2570,
@@ -35575,6 +35599,7 @@
     "lemma": "Citius",
     "previous": "Citium",
     "next": "Citomarae",
+    "redirect": "Cestius 9",
     "chapters": [
       {
         "start": 2612,
@@ -35598,6 +35623,7 @@
     "lemma": "Citrago",
     "previous": "Citomarae",
     "next": "Citrone",
+    "redirect": true,
     "chapters": [
       {
         "start": 2612,
@@ -35633,6 +35659,7 @@
     "lemma": "Citua",
     "previous": "Citrus",
     "next": "Civica 1",
+    "redirect": "Situa",
     "chapters": [
       {
         "start": 2624,
@@ -42152,7 +42179,7 @@
   {
     "lemma": "Claudius 451",
     "previous": "Claudius 450",
-    "next": "Basilios",
+    "next": "Baris 9",
     "chapters": [
       {
         "start": 2900,
@@ -42162,8 +42189,11 @@
     ]
   },
   {
+    "lemma": "Baris 9",
+    "previous": "Claudius 451"
+  },
+  {
     "lemma": "Basilios",
-    "previous": "Claudius 451",
     "next": "Batis 2",
     "chapters": [
       {
