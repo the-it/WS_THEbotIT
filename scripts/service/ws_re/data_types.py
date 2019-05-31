@@ -11,7 +11,7 @@ import roman
 
 from tools.template_handler import TemplateFinder, TemplateFinderException, TemplateHandler
 
-_REGISTER_PATH = Path(__file__).parent.joinpath("register")
+_REGISTER_PATH = Path(__file__).parent.joinpath("register").joinpath("data")
 
 
 class ReDatenException(Exception):

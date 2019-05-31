@@ -53,7 +53,7 @@ class TestSCANTask(TaskTestWithRegister):
                 compare("-b", repo_mock.mock_calls[3][1][0])
                 compare(StringComparison(r"\d{6}_\d{6}_updating_registers"), repo_mock.mock_calls[3][1][1])
                 compare("().git.add", repo_mock.mock_calls[4][0])
-                compare(str(Path(__file__).parent.joinpath("register")), repo_mock.mock_calls[4][1][0])
+                compare(str(Path(__file__).parent.joinpath("register").joinpath("data")), repo_mock.mock_calls[4][1][0])
                 compare("().index.commit", repo_mock.mock_calls[5][0])
                 compare(StringComparison(r"Updating the register at \d{6}_\d{6}"), repo_mock.mock_calls[5][1][0])
                 compare("().git.push", repo_mock.mock_calls[6][0])
