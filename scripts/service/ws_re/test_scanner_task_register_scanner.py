@@ -5,9 +5,11 @@ from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
 from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
-from scripts.service.ws_re.register import Authors, VolumeRegister
+from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH, \
+    copy_tst_data
+from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.scanner_task_register_scanner import SCANTask
-from scripts.service.ws_re.test_register import copy_tst_data, clear_tst_path, _TEST_REGISTER_PATH
 from scripts.service.ws_re.test_scanner_tasks import TaskTestCase
 
 
