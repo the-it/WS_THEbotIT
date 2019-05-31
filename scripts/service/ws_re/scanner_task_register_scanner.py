@@ -140,7 +140,7 @@ class SCANTask(ReScannerTask):
             branch_name = f"{now}_updating_registers"
             self.logger.info(f"Pushing changes to \"{branch_name}\"")
             repo.git.checkout("-b", branch_name)
-            repo.git.add(str(Path(__file__).parent.joinpath("register")))
+            repo.git.add(str(Path(__file__).parent.joinpath("register").joinpath("data")))
             repo.index.commit(f"Updating the register at {now}")
             repo.git.push("origin", repo.active_branch.name)
             repo.git.checkout(master.name)
