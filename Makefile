@@ -18,6 +18,10 @@ bandit :
 	echo "############ BANDIT ############"
 	bandit -r .
 
+gource :
+	echo "############ GOURCE ############"
+	gource -s 0.1 .
+
 mypy :
 	echo "############# MYPY #############"
 	mypy tools
