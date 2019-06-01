@@ -2,9 +2,9 @@ from unittest import mock
 
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import RePage
 from scripts.service.ws_re.scanner import DEWPTask
 from scripts.service.ws_re.scanner.tasks.test_base_task import TaskTestCase
+from scripts.service.ws_re.template.re_page import RePage
 
 _BASE_TASK_PYWIKIBOT_PAGE = "scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page"
 

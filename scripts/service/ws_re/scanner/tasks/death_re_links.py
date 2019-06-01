@@ -3,8 +3,8 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.data_types import Article
 from scripts.service.ws_re.scanner.tasks.error_handling import ERROTask
+from scripts.service.ws_re.template.article import Article
 from tools.bots import WikiLogger
 
 

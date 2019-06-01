@@ -1,8 +1,8 @@
 from testfixtures import LogCapture, compare
 
-from scripts.service.ws_re.data_types import RePage
 from scripts.service.ws_re.scanner import KSCHTask
 from scripts.service.ws_re.scanner.tasks.test_base_task import TaskTestCase
+from scripts.service.ws_re.template.re_page import RePage
 
 
 class TestKSCHTask(TaskTestCase):

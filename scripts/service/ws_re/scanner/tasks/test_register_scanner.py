@@ -4,13 +4,14 @@ from unittest import mock
 from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
-from scripts.service.ws_re.data_types import RePage, _REGISTER_PATH
+from scripts.service.ws_re.register import _REGISTER_PATH
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH, \
     copy_tst_data
 from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.scanner.tasks.test_base_task import TaskTestCase
+from scripts.service.ws_re.template.re_page import RePage
 
 
 class TaskTestWithRegister(TaskTestCase):

@@ -2,12 +2,12 @@ from collections import OrderedDict
 
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import Volumes
 from scripts.service.ws_re.register.alphabetic import AlphabeticRegister
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.lemma import Lemma
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.volumes import Volumes
 
 
 class TestAlphabeticRegister(BaseTestRegister):

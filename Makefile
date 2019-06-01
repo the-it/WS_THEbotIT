@@ -88,7 +88,7 @@ codacy :
 
 clean : clean-pyc clean-coverage clean-code-climate
 
-pre-commit : quality unittest
+pre-commit : quality integrationtest
 
 quality : bandit flake8 pycodestyle pylint
 

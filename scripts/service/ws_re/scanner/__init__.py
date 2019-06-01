@@ -5,13 +5,14 @@ from typing import List
 
 import pywikibot
 
-from scripts.service.ws_re.data_types import RePage, ReDatenException
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.death_re_links import DEALTask
 from scripts.service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from scripts.service.ws_re.scanner.tasks.error_handling import ERROTask
 from scripts.service.ws_re.scanner.tasks.keine_schoepfungshoehe import KSCHTask
 from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
+from scripts.service.ws_re.template import ReDatenException
+from scripts.service.ws_re.template.re_page import RePage
 from tools.bots import CanonicalBot, BotException
 from tools.petscan import PetScan
 

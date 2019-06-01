@@ -9,7 +9,7 @@ from typing import Sequence, Dict, Tuple
 
 from pywikibot import Site, Page
 
-from scripts.service.ws_re.data_types import Volumes
+from scripts.service.ws_re.volumes import Volumes
 from tools.bots import CanonicalBot
 
 

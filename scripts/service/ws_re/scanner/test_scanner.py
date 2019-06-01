@@ -7,9 +7,10 @@ from unittest import TestCase, mock, skip
 import pywikibot
 from testfixtures import LogCapture
 
-from scripts.service.ws_re.data_types import RePage, ReDatenException
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
+from scripts.service.ws_re.template import ReDatenException
+from scripts.service.ws_re.template.re_page import RePage
 from tools.petscan import PetScan
 from tools.test_bots import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 
@@ -178,7 +179,7 @@ class TestReScanner(TestCase):
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "ERROR", "The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.data_types.ReDatenException"),)
+                expected_logging = (("ReScanner", "ERROR", "The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.template.ReDatenException"),)
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_lemma_raise_exception_second_not(self):
@@ -191,7 +192,7 @@ class TestReScanner(TestCase):
                 bot.tasks = [self.ONE1Task]
                 bot.run()
                 expected_logging = (("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
-                                    ("ReScanner", "ERROR", "The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.data_types.ReDatenException"),
+                                    ("ReScanner", "ERROR", "The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.template.ReDatenException"),
                                     ("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]"),
                                     ("ReScanner", "INFO", "I"))
                 log_catcher.check_present(*expected_logging, order_matters=True)

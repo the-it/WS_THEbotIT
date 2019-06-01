@@ -3,10 +3,10 @@ from unittest import skipUnless, TestCase, skip
 
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import Volumes
 from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
     _TEST_REGISTER_PATH
+from scripts.service.ws_re.volumes import Volumes
 from tools import INTEGRATION_TEST
 
 

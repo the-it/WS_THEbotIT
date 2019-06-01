@@ -1,7 +1,7 @@
 import re
 
-from scripts.service.ws_re.data_types import Article
 from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.template.article import Article
 
 
 class KSCHTask(ReScannerTask):

@@ -4,7 +4,7 @@ from datetime import timedelta
 
 import pywikibot
 
-from scripts.service.ws_re.data_types import RePage
+from scripts.service.ws_re.template.re_page import RePage
 from tools.bots import WikiLogger
 
 SUCCESS = "success"
