@@ -1,11 +1,11 @@
 from testfixtures import compare
 
-from scripts.service.ws_re.data_types import Volumes
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
     _TEST_REGISTER_PATH
 from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.volumes import Volumes
 
 
 class TestRegister(BaseTestRegister):

@@ -14,7 +14,7 @@ from pywikibot import Site
 from scripts.service.author_list import AuthorList
 from scripts.service.gl.create_magazine import GlCreateMagazine
 from scripts.service.gl.status import GlStatus
-from scripts.service.ws_re.register_printer import ReRegisterPrinter
+from scripts.service.ws_re.register.printer import ReRegisterPrinter
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.status import ReStatus
 from tools.bot_scheduler import BotScheduler

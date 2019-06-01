@@ -18,6 +18,10 @@ bandit :
 	echo "############ BANDIT ############"
 	bandit -r .
 
+gource :
+	echo "############ GOURCE ############"
+	gource -s 0.1 .
+
 mypy :
 	echo "############# MYPY #############"
 	mypy tools
@@ -84,7 +88,7 @@ codacy :
 
 clean : clean-pyc clean-coverage clean-code-climate
 
-pre-commit : quality unittest
+pre-commit : quality integrationtest
 
 quality : bandit flake8 pycodestyle pylint
 

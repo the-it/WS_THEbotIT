@@ -1,10 +1,11 @@
 import json
 from typing import Union, Dict, List, Any
 
-from scripts.service.ws_re.data_types import _REGISTER_PATH, Volume, VolumeType
+from scripts.service.ws_re.register import _REGISTER_PATH
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException, Register
 from scripts.service.ws_re.register.lemma import Lemma
+from scripts.service.ws_re.volumes import Volume, VolumeType
 
 
 class VolumeRegister(Register):

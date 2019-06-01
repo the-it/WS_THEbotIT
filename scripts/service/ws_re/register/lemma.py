@@ -4,9 +4,9 @@ from collections import OrderedDict
 from datetime import datetime
 from typing import Dict, Union, List
 
-from scripts.service.ws_re.data_types import Volume
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
+from scripts.service.ws_re.volumes import Volume
 
 
 class LemmaChapter:

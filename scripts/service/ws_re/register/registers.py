@@ -1,9 +1,9 @@
 from collections import OrderedDict
 
-from scripts.service.ws_re.data_types import Volumes
 from scripts.service.ws_re.register.alphabetic import AlphabeticRegister
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.volumes import Volumes
 
 
 class Registers:

@@ -2,7 +2,7 @@ import json
 import re
 from typing import Dict, Union, Mapping, Sequence, List, Tuple
 
-from scripts.service.ws_re.data_types import _REGISTER_PATH
+from scripts.service.ws_re.register import _REGISTER_PATH
 
 
 class Author:
@@ -42,8 +42,7 @@ class Authors:
     _REGISTER_PATH = _REGISTER_PATH
 
     def __init__(self):
-        with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "r",
-                  encoding="utf-8") as json_file:
+        with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors = {}
         with open(self._REGISTER_PATH.joinpath("authors.json"), "r",
