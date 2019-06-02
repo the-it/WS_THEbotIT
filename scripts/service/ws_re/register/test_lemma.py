@@ -78,6 +78,25 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
         compare("[[RE:lemma|''{{Anker2|lemma}}'']] → {{RE siehe|Some other Lemma|'''Some other Lemma'''}}", re_register_lemma.get_link())
 
+    def test_wiki_links(self):
+        re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
+        compare(("", ""), re_register_lemma.get_wiki_links())
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["wp_link"] = "w:de:Lemma"
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
+        compare(("[[w:de:Lemma|Lemma<sup>(WP de)</sup>]]", "data-sort-value=\"w:de:lemma\""), re_register_lemma.get_wiki_links())
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["ws_link"] = "s:de:Lemma"
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
+        compare(("[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]", "data-sort-value=\"s:de:lemma\""),
+                re_register_lemma.get_wiki_links())
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["wp_link"] = "w:de:Lemma"
+        altered_dict["ws_link"] = "s:de:Lemma"
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
+        compare(("[[w:de:Lemma|Lemma<sup>(WP de)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]", "data-sort-value=\"w:de:lemma\""),
+                re_register_lemma.get_wiki_links())
+
     def test_get_pages(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]",
@@ -124,20 +143,24 @@ class TestLemma(BaseTestRegister):
 
     def test_get_row(self):
         one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                         "wp_link": "w:en:Lemma", "ws_link": "s:de:Lemma",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+|data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
         two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                         "wp_link": "w:en:Lemma", "ws_link": "s:de:Lemma",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |rowspan=2 data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+|rowspan=2 data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Abel
 |style="background:#FFCBCB"|1998
@@ -155,7 +178,8 @@ class TestLemma(BaseTestRegister):
                          "chapters": []}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]"""
+|data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+||"""
         compare(expected_row, re_register_lemma.get_table_row())
 
     def test_strip_accents(self):
