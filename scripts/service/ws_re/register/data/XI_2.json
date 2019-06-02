@@ -1465,7 +1465,8 @@
   {
     "lemma": "Κορακίου χώρα",
     "previous": "Κοράκιον",
-    "next": "Korakodes limen",
+    "next": "Κορακώδης λιμήν",
+    "sort_key": "Korakiu chora",
     "chapters": [
       {
         "start": 1371,
@@ -1475,9 +1476,10 @@
     ]
   },
   {
-    "lemma": "Korakodes limen",
+    "lemma": "Κορακώδης λιμήν",
     "previous": "Κορακίου χώρα",
-    "next": "Korakon nasos",
+    "next": "Κοράκων νᾶσος",
+    "sort_key": "Korakodes limen",
     "chapters": [
       {
         "start": 1371,
@@ -1487,8 +1489,8 @@
     ]
   },
   {
-    "lemma": "Korakon nasos",
-    "previous": "Korakodes limen",
+    "lemma": "Κοράκων νᾶσος",
+    "previous": "Κορακώδης λιμήν",
     "next": "Korakos Petra",
     "chapters": [
       {
@@ -1500,7 +1502,7 @@
   },
   {
     "lemma": "Korakos Petra",
-    "previous": "Korakon nasos",
+    "previous": "Κοράκων νᾶσος",
     "next": "Koralios 1",
     "chapters": [
       {

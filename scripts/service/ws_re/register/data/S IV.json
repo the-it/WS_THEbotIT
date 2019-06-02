@@ -37,7 +37,6 @@
   {
     "lemma": "Adlullia",
     "previous": "Ada 2",
-    "next": "Aëtos 4",
     "chapters": [
       {
         "start": 7,
@@ -47,8 +46,12 @@
     ]
   },
   {
+    "lemma": "Aetoma",
+    "next": "Aëtos 4"
+  },
+  {
     "lemma": "Aëtos 4",
-    "previous": "Adlullia",
+    "previous": "Aetoma",
     "next": "Agauos 2",
     "chapters": [
       {
@@ -776,7 +779,7 @@
   {
     "lemma": "Arexion",
     "previous": "Aretis",
-    "next": "Arimmas 2",
+    "next": "Arimoi",
     "chapters": [
       {
         "start": 46,
@@ -786,8 +789,11 @@
     ]
   },
   {
+    "lemma": "Arimoi",
+    "previous": "Arexion"
+  },
+  {
     "lemma": "Arimmas 2",
-    "previous": "Arexion",
     "next": "Aristarchos 7a",
     "chapters": [
       {
@@ -848,7 +854,6 @@
   {
     "lemma": "Aristodemos 8a",
     "previous": "Aristobulos 14a",
-    "next": "Aristogeiton 1a",
     "chapters": [
       {
         "start": 47,
@@ -858,8 +863,12 @@
     ]
   },
   {
+    "lemma": "Aristodemos 16",
+    "next": "Aristogeiton 1a"
+  },
+  {
     "lemma": "Aristogeiton 1a",
-    "previous": "Aristodemos 8a",
+    "previous": "Aristodemos 16",
     "next": "Aristokleia",
     "chapters": [
       {
@@ -1652,7 +1661,6 @@
   {
     "lemma": "Chrysippos 10a",
     "previous": "Chrysones (Chryson",
-    "next": "Damasandra",
     "chapters": [
       {
         "start": 218,
@@ -1662,8 +1670,12 @@
     ]
   },
   {
+    "lemma": "Damaratos 3",
+    "next": "Damasandra"
+  },
+  {
     "lemma": "Damasandra",
-    "previous": "Chrysippos 10a",
+    "previous": "Damaratos 3",
     "next": "Damokrita",
     "chapters": [
       {

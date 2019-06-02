@@ -327,6 +327,7 @@
     "lemma": "Dorakta",
     "previous": "Δωράκιον μητρόπολις",
     "next": "Doranum",
+    "redirect": "Oarakta",
     "chapters": [
       {
         "start": 1551,
@@ -506,6 +507,7 @@
     "lemma": "Dories",
     "previous": "Doridas",
     "next": "Dorieus 1",
+    "redirect": "Syries",
     "chapters": [
       {
         "start": 1558,
@@ -997,6 +999,7 @@
     "lemma": "Dornonia",
     "previous": "Dormothea",
     "next": "Dornstrauch",
+    "redirect": "Duranus",
     "chapters": [
       {
         "start": 1568,
@@ -2175,7 +2178,8 @@
   {
     "lemma": "Dosten",
     "previous": "Dossennus",
-    "next": "Dotadas 1",
+    "next": "Dotadas",
+    "redirect": "Origanum",
     "chapters": [
       {
         "start": 1610,
@@ -2937,7 +2941,7 @@
   {
     "lemma": "Drakoneitai",
     "previous": "Drakon 17",
-    "next": "Drakontia",
+    "next": "Δρακοντία",
     "chapters": [
       {
         "start": 1663,
@@ -2946,9 +2950,11 @@
     ]
   },
   {
-    "lemma": "Drakontia",
+    "lemma": "Δρακοντία",
     "previous": "Drakoneitai",
     "next": "Δρακοντίας",
+    "sort_key": "Drakontia",
+    "redirect": "Ἅρον",
     "chapters": [
       {
         "start": 1663,
@@ -2958,7 +2964,7 @@
   },
   {
     "lemma": "Δρακοντίας",
-    "previous": "Drakontia",
+    "previous": "Δρακοντία",
     "next": "Drakontides 1",
     "sort_key": "Drakontias",
     "redirect": true,
@@ -3283,7 +3289,7 @@
   {
     "lemma": "Drepane",
     "previous": "Drapanius",
-    "next": "Drepanon",
+    "next": "Drepanius",
     "chapters": [
       {
         "start": 1697,
@@ -3292,8 +3298,14 @@
     ]
   },
   {
-    "lemma": "Drepanon",
+    "lemma": "Drepanius",
     "previous": "Drepane",
+    "next": "Drepanon",
+    "redirect": "Pacatus 2"
+  },
+  {
+    "lemma": "Drepanon",
+    "previous": "Drepanius",
     "next": "Drepanon 1",
     "chapters": [
       {
@@ -4081,8 +4093,9 @@
   },
   {
     "lemma": "Dronana",
-    "previous": "Dromos 2",
-    "next": "Dronanus",
+    "previous": "Dronanus",
+    "next": "Drooi",
+    "redirect": "Duranus",
     "chapters": [
       {
         "start": 1720,
@@ -4092,8 +4105,9 @@
   },
   {
     "lemma": "Dronanus",
-    "previous": "Dronana",
-    "next": "Drooi",
+    "previous": "Dromos 2",
+    "next": "Dronana",
+    "redirect": "Drahonus",
     "chapters": [
       {
         "start": 1720,
@@ -4249,6 +4263,7 @@
     "lemma": "Drubeta",
     "previous": "Druantium",
     "next": "Druentia",
+    "redirect": "Drobeta",
     "chapters": [
       {
         "start": 1730,
@@ -4652,8 +4667,9 @@
   },
   {
     "lemma": "Dryantianus",
-    "previous": "Dryalos",
-    "next": "Dryantides",
+    "previous": "Dryantiades",
+    "next": "Dryantilla 1",
+    "redirect": "Claudius 141",
     "chapters": [
       {
         "start": 1743,
@@ -4675,8 +4691,9 @@
   },
   {
     "lemma": "Dryantilla 1",
-    "previous": "Dryantides",
+    "previous": "Dryantianus",
     "next": "Dryantilla 2",
+    "redirect": "Claudius 401",
     "chapters": [
       {
         "start": 1743,
@@ -5962,6 +5979,7 @@
     "lemma": "Dumno",
     "previous": "Dumnitonus",
     "next": "Dumnobellaunus",
+    "redirect": "Dumnissus",
     "chapters": [
       {
         "start": 1791,
@@ -8448,6 +8466,7 @@
     "lemma": "Eccela",
     "previous": "Ebusus",
     "next": "Ecdicius",
+    "redirect": true,
     "chapters": [
       {
         "start": 1906,
@@ -8459,6 +8478,7 @@
     "lemma": "Ecdicius",
     "previous": "Eccela",
     "next": "Ecdinii",
+    "redirect": true,
     "chapters": [
       {
         "start": 1906,
@@ -14779,6 +14799,7 @@
     "lemma": "Elcebos",
     "previous": "Elbocori",
     "next": "Elcethion",
+    "redirect": "Helvetum",
     "chapters": [
       {
         "start": 2243,
@@ -15681,6 +15702,7 @@
     "lemma": "Eleopoles",
     "previous": "Eleon 2",
     "next": "Eleos",
+    "redirect": "Elaiopoles",
     "chapters": [
       {
         "start": 2320,
@@ -15921,6 +15943,7 @@
     "lemma": "Elesyces",
     "previous": "Elespis",
     "next": "Elete",
+    "redirect": "Elisyces",
     "chapters": [
       {
         "start": 2328,
@@ -15956,6 +15979,7 @@
     "lemma": "Eleus, Eleussa",
     "previous": "Eleus",
     "next": "Eleusa",
+    "redirect": "Elaius, Elaiussa",
     "chapters": [
       {
         "start": 2328,
@@ -16294,6 +16318,7 @@
     "lemma": "Eleutherai 2",
     "previous": "Eleutherai 1",
     "next": "Eleutherai 3",
+    "redirect": "Eleuthernai",
     "chapters": [
       {
         "start": 2345,
@@ -16739,8 +16764,9 @@
   },
   {
     "lemma": "Elgovae",
-    "previous": "Elgos",
-    "next": "Eliae",
+    "previous": "Elfenbein",
+    "next": "Elgos",
+    "redirect": "Selgovae",
     "chapters": [
       {
         "start": 2366,
@@ -16801,6 +16827,7 @@
     "lemma": "Eliberre",
     "previous": "Elias 3",
     "next": "Elicatores",
+    "redirect": "Elimberrum",
     "chapters": [
       {
         "start": 2366,
@@ -17163,6 +17190,7 @@
     "lemma": "Elissa",
     "previous": "Elisphasioi",
     "next": "Elisyces",
+    "redirect": "Dido",
     "chapters": [
       {
         "start": 2435,
@@ -17294,6 +17322,7 @@
     "lemma": "Ellebicus",
     "previous": "Ellac",
     "next": "Elleporus",
+    "redirect": "Hellebicus",
     "chapters": [
       {
         "start": 2436,
@@ -17580,6 +17609,7 @@
     "lemma": "Elpidiphoros",
     "previous": "Elpia",
     "next": "Elpidius",
+    "redirect": "Aurelius 123",
     "chapters": [
       {
         "start": 2454,
@@ -17770,6 +17800,7 @@
     "lemma": "Elvius, Elvii",
     "previous": "Elufrius",
     "next": "Elusa 1",
+    "redirect": "Helvius, Helvii",
     "chapters": [
       {
         "start": 2457,
@@ -20011,7 +20042,8 @@
   {
     "lemma": "Engolisma",
     "previous": "Engannim 2",
-    "next": "Engonasin",
+    "next": "Engoasin",
+    "redirect": "Iculisna",
     "chapters": [
       {
         "start": 2563,
@@ -21028,6 +21060,7 @@
     "lemma": "ad Ensem",
     "previous": "Enrimmon",
     "next": "Entarabus",
+    "sort_key": "Ensem, ad",
     "chapters": [
       {
         "start": 2638,
@@ -22348,6 +22381,7 @@
     "lemma": "Epeikidai",
     "previous": "Epeigeus",
     "next": "Epeioi",
+    "redirect": "Epieikidai",
     "chapters": [
       {
         "start": 2716,

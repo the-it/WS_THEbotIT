@@ -591,7 +591,6 @@
   {
     "lemma": "Claudia aqua",
     "previous": "Charinos 11",
-    "next": "Conclusa aqua",
     "chapters": [
       {
         "start": 20,
@@ -601,8 +600,12 @@
     ]
   },
   {
+    "lemma": "Claudius 354a",
+    "next": "Conclusa aqua"
+  },
+  {
     "lemma": "Conclusa aqua",
-    "previous": "Claudia aqua",
+    "previous": "Claudius 354a",
     "next": "Dalmatia",
     "chapters": [
       {
