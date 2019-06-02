@@ -47,6 +47,7 @@ class AlphabeticRegister(Register):
         header = """{|class="wikitable sortable"
 !Artikel
 !Band
+!Wikilinks
 !Seite
 !Autor
 !Sterbejahr"""

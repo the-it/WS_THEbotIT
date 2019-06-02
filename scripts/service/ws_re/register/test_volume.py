@@ -18,16 +18,19 @@ class TestRegister(BaseTestRegister):
         register = VolumeRegister(Volumes()["I,1"], Authors())
         expected_table = """{|class="wikitable sortable"
 !Artikel
+!Wikilinks
 !Seite
 !Autor
 !Sterbejahr
 |-
-|data-sort-value="aal"|[[RE:Aal|{{Anker2|Aal}}]]
+|data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
+||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-|data-sort-value="aarassos"|[[RE:Aarassos|{{Anker2|Aarassos}}]]
+|data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
+||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927

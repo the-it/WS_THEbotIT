@@ -2,7 +2,7 @@ import re
 import unicodedata
 from collections import OrderedDict
 from datetime import datetime
-from typing import Dict, Union, List
+from typing import Dict, Union, List, Tuple
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
@@ -225,6 +225,7 @@ class Lemma():
 
     def get_table_row(self, print_volume: bool = False) -> str:
         row_string = ["|-"]
+        interwiki_links, interwiki_sort_key = self.get_wiki_links()
         if print_volume:
             link_or_volume = self.volume.name
             sort_value = ""
@@ -233,8 +234,10 @@ class Lemma():
             sort_value = f"data-sort-value=\"{self.sort_key}\""
         if len(self._chapters) > 1:
             row_string.append(f"rowspan={len(self._chapters)} {sort_value}|{link_or_volume}")
+            row_string.append(f"rowspan={len(self._chapters)} {interwiki_sort_key}|{interwiki_links}")
         else:
             row_string.append(f"{sort_value}|{link_or_volume}")
+            row_string.append(f"{interwiki_sort_key}|{interwiki_links}")
         for chapter in self._chapters:
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))
@@ -251,10 +254,28 @@ class Lemma():
         if redirect:
             link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self['lemma']}}}}}'']]"
             if isinstance(redirect, str):
-                link += f" → [[RE:{redirect}|{redirect}]]"
+                link += f" → {{{{RE siehe|{redirect}|'''{redirect}'''}}}}"
         else:
-            link = f"[[RE:{self['lemma']}|{{{{Anker2|{self['lemma']}}}}}]]"
+            link = f"[[RE:{self['lemma']}|'''{{{{Anker2|{self['lemma']}}}}}''']]"
         return link
+
+    def get_wiki_links(self) -> Tuple[str, str]:
+        link = ""
+        sort_key = ""
+        links = []
+        sort_keys = []
+        if "wp_link" in self:
+            parts = self['wp_link'].split(":")
+            links.append(f"[[{self['wp_link']}|{parts[2]}<sup>(WP {parts[1]})</sup>]]")
+            sort_keys.append(f"{parts[0]}:{parts[1]}:{self.make_sort_key(parts[2])}")
+        if "ws_link" in self:
+            parts = self['ws_link'].split(":")
+            links.append(f"[[{self['ws_link']}|{parts[2]}<sup>(WS {parts[1]})</sup>]]")
+            sort_keys.append(f"{parts[0]}:{parts[1]}:{self.make_sort_key(parts[2])}")
+        if links:
+            link = "<br/>".join(links)
+            sort_key = f"data-sort-value=\"{sort_keys[0]}\""
+        return link, sort_key
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
         start_page_scan = lemma_chapter.start
