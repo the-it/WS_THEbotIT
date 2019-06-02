@@ -60,7 +60,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 !Autor
 !Sterbejahr
 |-
-|rowspan=3 data-sort-value="beta"|[[RE:Beta|{{Anker2|Beta}}]]
+|rowspan=3 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=2 |I,1
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
@@ -75,25 +75,25 @@ class TestAlphabeticRegister(BaseTestRegister):
 |Abbott
 |style="background:#CBCBCB"|
 |-
-|data-sort-value="charlie"|[[RE:Charlie|{{Anker2|Charlie}}]]
+|data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-|data-sort-value="delta"|[[RE:Delta|{{Anker2|Delta}}]]
+|data-sort-value="delta"|[[RE:Delta|'''{{Anker2|Delta}}''']]
 ||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
 |-
-|data-sort-value="uaaa"|[[RE:Vaaa|{{Anker2|Vaaa}}]]
+|data-sort-value="uaaa"|[[RE:Vaaa|'''{{Anker2|Vaaa}}''']]
 ||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert
 |style="background:#B9FFC5"|1927
 |-
-|data-sort-value="ueee"|[[RE:Ueee|{{Anker2|Ueee}}]]
+|data-sort-value="ueee"|[[RE:Ueee|'''{{Anker2|Ueee}}''']]
 ||III,1
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert

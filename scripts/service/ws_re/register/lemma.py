@@ -251,9 +251,9 @@ class Lemma():
         if redirect:
             link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self['lemma']}}}}}'']]"
             if isinstance(redirect, str):
-                link += f" → [[RE:{redirect}|{redirect}]]"
+                link += f" → {{{{RE siehe|{redirect}|'''{redirect}'''}}}}"
         else:
-            link = f"[[RE:{self['lemma']}|{{{{Anker2|{self['lemma']}}}}}]]"
+            link = f"[[RE:{self['lemma']}|'''{{{{Anker2|{self['lemma']}}}}}''']]"
         return link
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
