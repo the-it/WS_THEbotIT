@@ -30,7 +30,8 @@ class SCANTask(ReScannerTask):
         super().finish_task()
         for strategy in self._strategies:
             self.logger.info(f"STRATEGY_{strategy}: {len(self._strategies[strategy])}")
-            self.logger.info(f"{self._strategies[strategy]}")
+            if strategy != "update_lemma_by_name":
+                self.logger.info(f"{self._strategies[strategy]}")
         self.logger.info("Fetch changes for the authors.")
         authors = self.registers.authors
         authors.set_mappings(self._fetch_mapping())
@@ -142,7 +143,7 @@ class SCANTask(ReScannerTask):
             branch_name = f"{now}_updating_registers"
             self.logger.info(f"Pushing changes to \"{branch_name}\"")
             repo.git.checkout("-b", branch_name)
-            repo.git.add(str(Path(__file__).parent.joinpath("register").joinpath("data")))
+            repo.git.add(str(Path(__file__).parent.parent.parent.joinpath("register").joinpath("data")))
             repo.index.commit(f"Updating the register at {now}")
             repo.git.push("origin", repo.active_branch.name)
             repo.git.checkout(master.name)
