@@ -6,6 +6,10 @@ pip3 :
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt
 
+cloc :
+	echo "########## COUNT LOC ###########"
+	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml .
+
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
 	pycodestyle --show-source --statistics --count
