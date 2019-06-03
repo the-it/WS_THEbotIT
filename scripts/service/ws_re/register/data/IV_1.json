@@ -780,7 +780,7 @@
   {
     "lemma": "Cloatilla",
     "previous": "Cloanthus",
-    "next": "Cloatius 1",
+    "next": "Cloatius",
     "chapters": [
       {
         "start": 61,
@@ -1505,7 +1505,7 @@
   {
     "lemma": "Clodius 50",
     "previous": "Clodius 49",
-    "next": "Clodius 52",
+    "next": "Clodius 51",
     "chapters": [
       {
         "start": 88,
@@ -1515,8 +1515,13 @@
     ]
   },
   {
-    "lemma": "Clodius 52",
+    "lemma": "Clodius 51",
     "previous": "Clodius 50",
+    "next": "Clodius 52"
+  },
+  {
+    "lemma": "Clodius 52",
+    "previous": "Clodius 51",
     "next": "Clodius 53",
     "chapters": [
       {
@@ -2301,7 +2306,7 @@
   {
     "lemma": "Clutorius 1",
     "previous": "Clutoida",
-    "next": "Cluturnum",
+    "next": "Clutorius 2",
     "chapters": [
       {
         "start": 118,
@@ -2324,7 +2329,7 @@
   },
   {
     "lemma": "Clutorius 2",
-    "previous": "Cluturnum",
+    "previous": "Clutorius 1",
     "next": "Cluviae",
     "chapters": [
       {
@@ -4915,6 +4920,7 @@
     "lemma": "Colobius",
     "previous": "Colobium",
     "next": "Colocasitis",
+    "redirect": true,
     "chapters": [
       {
         "start": 483,
@@ -6064,6 +6070,7 @@
     "lemma": "Cominius 5",
     "previous": "Cominius 4",
     "next": "Cominius 6",
+    "sort_key": "Cominius 05",
     "chapters": [
       {
         "start": 607,
@@ -6075,6 +6082,7 @@
     "lemma": "Cominius 6",
     "previous": "Cominius 5",
     "next": "Cominius 7",
+    "sort_key": "Cominius 06",
     "chapters": [
       {
         "start": 607,
@@ -9871,6 +9879,7 @@
     "lemma": "Considius 8",
     "previous": "Considius 7",
     "next": "Considius 9",
+    "sort_key": "Considius 08",
     "chapters": [
       {
         "start": 913,
@@ -10180,6 +10189,7 @@
     "lemma": "Constans 2",
     "previous": "Constans 1",
     "next": "Constans 3",
+    "redirect": "Aelius 40",
     "chapters": [
       {
         "start": 948,
@@ -12077,6 +12087,7 @@
     "lemma": "Coponius 2",
     "previous": "Coponius 1",
     "next": "Coponius 3",
+    "sort_key": "Coponius 02",
     "chapters": [
       {
         "start": 1214,
@@ -14048,6 +14059,7 @@
     "lemma": "Cornelius 67",
     "previous": "Cornelius 66",
     "next": "Cornelius 68",
+    "sort_key": "Cornelius 067",
     "chapters": [
       {
         "start": 1260,
@@ -14167,6 +14179,7 @@
     "lemma": "Cornelius 77",
     "previous": "Cornelius 76",
     "next": "Cornelius 78",
+    "sort_key": "Cornelius 077",
     "chapters": [
       {
         "start": 1273,
@@ -14203,6 +14216,7 @@
     "lemma": "Cornelius 80",
     "previous": "Cornelius 79",
     "next": "Cornelius 81",
+    "sort_key": "Cornelius 080",
     "chapters": [
       {
         "start": 1273,
@@ -15240,6 +15254,7 @@
     "lemma": "Cornelius 170",
     "previous": "Cornelius 169",
     "next": "Cornelius 171",
+    "redirect": "Ulpius 32",
     "chapters": [
       {
         "start": 1355,
@@ -16748,6 +16763,7 @@
     "lemma": "Cornelius 299a",
     "previous": "Cornelius 299",
     "next": "Cornelius 300",
+    "redirect": true,
     "chapters": [
       {
         "start": 1422,

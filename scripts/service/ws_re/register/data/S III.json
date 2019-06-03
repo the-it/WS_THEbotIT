@@ -9050,7 +9050,6 @@
   {
     "lemma": "Chaladrioi",
     "previous": "Cettus",
-    "next": "Charaxos 2",
     "chapters": [
       {
         "start": 242,
@@ -9060,8 +9059,12 @@
     ]
   },
   {
+    "lemma": "Charadros 3",
+    "next": "Charaxos 2"
+  },
+  {
     "lemma": "Charaxos 2",
-    "previous": "Chaladrioi",
+    "previous": "Charadros 3",
     "next": "Charenika",
     "chapters": [
       {
@@ -9114,7 +9117,6 @@
   {
     "lemma": "Charinostos",
     "previous": "Charinos 6a",
-    "next": "Charmion 2",
     "chapters": [
       {
         "start": 243,
@@ -9124,8 +9126,12 @@
     ]
   },
   {
+    "lemma": "Charixenos 3",
+    "next": "Charmion 2"
+  },
+  {
     "lemma": "Charmion 2",
-    "previous": "Charinostos",
+    "previous": "Charixenos 3",
     "next": "Charmolas",
     "chapters": [
       {
@@ -9150,7 +9156,7 @@
   {
     "lemma": "Charopinos 2",
     "previous": "Charmolas",
-    "next": "Châtelet, Le",
+    "next": "Chartodras",
     "chapters": [
       {
         "start": 244,
@@ -9160,8 +9166,11 @@
     ]
   },
   {
+    "lemma": "Chartodras",
+    "previous": "Charopinos 2"
+  },
+  {
     "lemma": "Châtelet, Le",
-    "previous": "Charopinos 2",
     "next": "Chelidon 2",
     "chapters": [
       {
@@ -9198,7 +9207,7 @@
   {
     "lemma": "Chelidon 4",
     "previous": "Chelidon 3",
-    "next": "Chelidoneios",
+    "next": "Χελιδόνειος",
     "chapters": [
       {
         "start": 245,
@@ -9208,7 +9217,7 @@
     ]
   },
   {
-    "lemma": "Chelidoneios",
+    "lemma": "Χελιδόνειος",
     "previous": "Chelidon 4",
     "next": "Chelkias",
     "chapters": [
@@ -9221,7 +9230,7 @@
   },
   {
     "lemma": "Chelkias",
-    "previous": "Chelidoneios",
+    "previous": "Χελιδόνειος",
     "next": "Chersaias",
     "chapters": [
       {
@@ -9546,7 +9555,6 @@
   {
     "lemma": "Clodius 5",
     "previous": "Clodius 3a",
-    "next": "Claudius 381",
     "chapters": [
       {
         "start": 253,
@@ -9556,9 +9564,13 @@
     ]
   },
   {
+    "lemma": "Claudius 298",
+    "next": "Claudius 381"
+  },
+  {
     "lemma": "Claudius 381",
-    "previous": "Clodius 5",
-    "next": "Clodius 55a",
+    "previous": "Claudius 298",
+    "next": "Clemens 11",
     "chapters": [
       {
         "start": 254,
@@ -9568,8 +9580,11 @@
     ]
   },
   {
+    "lemma": "Clemens 11",
+    "previous": "Claudius 381"
+  },
+  {
     "lemma": "Clodius 55a",
-    "previous": "Claudius 381",
     "next": "Clonius a",
     "chapters": [
       {
@@ -10100,7 +10115,7 @@
   {
     "lemma": "Crassicius 6",
     "previous": "Crassicius 5",
-    "next": "Crescens 8",
+    "next": "Cremera",
     "chapters": [
       {
         "start": 263,
@@ -10110,8 +10125,11 @@
     ]
   },
   {
+    "lemma": "Cremera",
+    "previous": "Crassicius 6"
+  },
+  {
     "lemma": "Crescens 8",
-    "previous": "Crassicius 6",
     "next": "Crescens 8a",
     "chapters": [
       {
@@ -10569,7 +10587,7 @@
   {
     "lemma": "Dalheim",
     "previous": "Dalatarba 2",
-    "next": "Damalis 1a",
+    "next": null,
     "wp_link": "w:de:Dalheim (Luxemburg),",
     "chapters": [
       {
@@ -10580,8 +10598,12 @@
     ]
   },
   {
+    "lemma": "Damagetos 3",
+    "next": "Damalis 1a"
+  },
+  {
     "lemma": "Damalis 1a",
-    "previous": "Dalheim",
+    "previous": "Damagetos 3",
     "next": "Damasalkida(?)",
     "chapters": [
       {
@@ -11922,7 +11944,6 @@
   {
     "lemma": "Domitius 29",
     "previous": "Domitius 5a",
-    "next": "Domitius 50",
     "chapters": [
       {
         "start": 349,
@@ -11932,10 +11953,14 @@
     ]
   },
   {
+    "lemma": "Domitius 43",
+    "next": "Domitius 50"
+  },
+  {
     "lemma": "Domitius 50",
-    "previous": "Domitius 29",
+    "previous": "Domitius 43",
     "next": "Domitius 89a",
-    "sort_key": "Domitius 043",
+    "sort_key": "Domitius 050",
     "chapters": [
       {
         "start": 394,
@@ -14902,7 +14927,7 @@
   {
     "lemma": "Gaudotos",
     "previous": "Gaudiosus 3",
-    "next": "Gavius 8a",
+    "next": "Gavius 2",
     "chapters": [
       {
         "start": 540,
@@ -14912,10 +14937,15 @@
     ]
   },
   {
-    "lemma": "Gavius 8a",
+    "lemma": "Gavius 2",
     "previous": "Gaudotos",
+    "next": "Gavius 8a"
+  },
+  {
+    "lemma": "Gavius 8a",
+    "previous": "Gavius 2",
     "next": "Gavius 13a",
-    "sort_key": "Gavius 08",
+    "sort_key": "Gavius 08a",
     "chapters": [
       {
         "start": 540,
@@ -14923,6 +14953,14 @@
         "author": "Stein, [Arthur]"
       }
     ]
+  },
+  {
+    "lemma": "Gavius 13a",
+    "previous": "Gavius 8a"
+  },
+  {
+    "lemma": "Gavius 8a",
+    "next": "Gavius 13a"
   },
   {
     "lemma": "Gavius 13a",
@@ -14999,7 +15037,7 @@
   {
     "lemma": "Geizagera",
     "previous": "Gebalene",
-    "next": "Gellius 16a",
+    "next": "Gellius 6",
     "chapters": [
       {
         "start": 541,
@@ -15009,9 +15047,11 @@
     ]
   },
   {
+    "lemma": "Gellius 6",
+    "previous": "Geizagera"
+  },
+  {
     "lemma": "Gellius 16a",
-    "previous": "Geizagera",
-    "next": "Gelupara",
     "chapters": [
       {
         "start": 542,
@@ -15021,8 +15061,12 @@
     ]
   },
   {
+    "lemma": "Gellius 17",
+    "next": "Gelupara"
+  },
+  {
     "lemma": "Gelupara",
-    "previous": "Gellius 16a",
+    "previous": "Gellius 17",
     "next": "Gemella a",
     "chapters": [
       {

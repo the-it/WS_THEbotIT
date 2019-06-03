@@ -2180,7 +2180,7 @@
     ]
   },
   {
-    "lemma":  "Aiakidas 1",
+    "lemma": "Aiakidas 1",
     "next": "Aiakidas 2"
   },
   {
@@ -13355,7 +13355,7 @@
   {
     "lemma": "Capitolinus 2",
     "previous": "Capito 5a",
-    "next": "Capussa",
+    "next": null,
     "chapters": [
       {
         "start": 275,
@@ -13364,9 +13364,13 @@
     ]
   },
   {
+    "lemma": "Capreolus 4",
+    "next": "Capussa"
+  },
+  {
     "lemma": "Capussa",
-    "previous": "Capitolinus 2",
-    "next": "Carbestrio",
+    "previous": "Capreolus 4",
+    "next": "Carbantorate",
     "chapters": [
       {
         "start": 275,
@@ -13376,8 +13380,11 @@
     ]
   },
   {
+    "lemma": "Carbantorate",
+    "previous": "Capussa"
+  },
+  {
     "lemma": "Carbestrio",
-    "previous": "Capussa",
     "next": "Carbinisacron",
     "chapters": [
       {
@@ -13510,7 +13517,6 @@
   {
     "lemma": "Cassius 52a",
     "previous": "Cassius 29a",
-    "next": "Cassius 82a",
     "chapters": [
       {
         "start": 277,
@@ -13520,8 +13526,12 @@
     ]
   },
   {
+    "lemma": "Cassius 72",
+    "next": "Cassius 82a"
+  },
+  {
     "lemma": "Cassius 82a",
-    "previous": "Cassius 52a",
+    "previous": "Cassius 72",
     "next": "Cassius 84a",
     "chapters": [
       {
@@ -13662,7 +13672,6 @@
   {
     "lemma": "Catellius 1a",
     "previous": "Catabana",
-    "next": "Catius 10a",
     "chapters": [
       {
         "start": 279,
@@ -13672,8 +13681,12 @@
     ]
   },
   {
+    "lemma": "Catius 6",
+    "next": "Catius 10a"
+  },
+  {
     "lemma": "Catius 10a",
-    "previous": "Catellius 1a",
+    "previous": "Catius 6",
     "next": "Cato 2",
     "chapters": [
       {
@@ -14129,7 +14142,6 @@
   {
     "lemma": "Chiron 1a",
     "previous": "Chiriphe",
-    "next": "Chloros",
     "chapters": [
       {
         "start": 288,
@@ -14139,8 +14151,12 @@
     ]
   },
   {
+    "lemma": "Χλανίς",
+    "next": "Chloros"
+  },
+  {
     "lemma": "Chloros",
-    "previous": "Chiron 1a",
+    "previous": "Χλανίς",
     "next": "Chlydai",
     "chapters": [
       {
@@ -14188,7 +14204,6 @@
   {
     "lemma": "Choregos 2",
     "previous": "Chondrochyte",
-    "next": "Chremas",
     "chapters": [
       {
         "start": 296,
@@ -14198,8 +14213,12 @@
     ]
   },
   {
+    "lemma": "Chorochoad",
+    "next": "Chremas"
+  },
+  {
     "lemma": "Chremas",
-    "previous": "Choregos 2",
+    "previous": "Chorochoad",
     "next": "Chrestos 7",
     "chapters": [
       {
@@ -14236,6 +14255,7 @@
   {
     "lemma": "Chronica Italica",
     "previous": "Christophoros 1",
+    "next": "Chronos 2",
     "chapters": [
       {
         "start": 296,
@@ -14246,10 +14266,11 @@
   },
   {
     "lemma": "Chronos 2",
-    "next": "Chryseïs 5"
+    "previous": "Chronica Italica",
+    "next": "Chryseis 5"
   },
   {
-    "lemma": "Chryseïs 5",
+    "lemma": "Chryseis 5",
     "previous": "Chronos 2",
     "next": "Chrysermos 4",
     "chapters": [
@@ -14262,7 +14283,7 @@
   },
   {
     "lemma": "Chrysermos 4",
-    "previous": "Chryseïs 5",
+    "previous": "Chryseis 5",
     "next": "Chrysias",
     "chapters": [
       {
@@ -14287,7 +14308,7 @@
   {
     "lemma": "Chrysippos 8a",
     "previous": "Chrysias",
-    "next": "Chrysippos 14a",
+    "next": "Chrysippos 10",
     "chapters": [
       {
         "start": 298,
@@ -14297,8 +14318,11 @@
     ]
   },
   {
+    "lemma": "Chrysippos 10",
+    "previous": "Chrysippos 8a"
+  },
+  {
     "lemma": "Chrysippos 14a",
-    "previous": "Chrysippos 8a",
     "next": "Chrysippos 14b",
     "chapters": [
       {
@@ -14432,7 +14456,7 @@
   {
     "lemma": "Civitas 2",
     "previous": "Cissus",
-    "next": "Clartius",
+    "next": "Clarius",
     "chapters": [
       {
         "start": 300,
@@ -14442,8 +14466,13 @@
     ]
   },
   {
-    "lemma": "Clartius",
+    "lemma": "Clarius",
     "previous": "Civitas 2",
+    "next": "Clartius"
+  },
+  {
+    "lemma": "Clartius",
+    "previous": "Clarius",
     "next": "Classicus 1a",
     "redirect": true,
     "chapters": [
@@ -14456,7 +14485,7 @@
   {
     "lemma": "Classicus 1a",
     "previous": "Clartius",
-    "next": "Claudius 31a(-b)",
+    "next": "Clavariatis",
     "chapters": [
       {
         "start": 317,
@@ -14466,8 +14495,11 @@
     ]
   },
   {
+    "lemma": "Clavariatis",
+    "previous": "Classicus 1a"
+  },
+  {
     "lemma": "Claudius 31a(-b)",
-    "previous": "Classicus 1a",
     "next": "Claudius 38",
     "chapters": [
       {
@@ -14516,8 +14548,8 @@
   {
     "lemma": "Claudius 102a",
     "previous": "Claudius 100a",
-    "next": "Claudius 150a",
-    "sort_key": "Claudius",
+    "next": "Claudius 105",
+    "sort_key": "Claudius 102a",
     "chapters": [
       {
         "start": 318,
@@ -14527,8 +14559,11 @@
     ]
   },
   {
+    "lemma": "Claudius 105",
+    "previous": "Claudius 102a"
+  },
+  {
     "lemma": "Claudius 150a",
-    "previous": "Claudius 102a",
     "next": "Claudius 272a",
     "chapters": [
       {
@@ -15143,7 +15178,6 @@
   {
     "lemma": "Dabithac",
     "previous": "Cuseni",
-    "next": "Dagala",
     "chapters": [
       {
         "start": 333,
@@ -15153,8 +15187,12 @@
     ]
   },
   {
+    "lemma": "Dacicus",
+    "next": "Dagala"
+  },
+  {
     "lemma": "Dagala",
-    "previous": "Dabithac",
+    "previous": "Dacicus",
     "next": "Dahel",
     "chapters": [
       {
@@ -15167,7 +15205,7 @@
   {
     "lemma": "Dahel",
     "previous": "Dagala",
-    "next": "Custidius",
+    "next": "Daiara",
     "chapters": [
       {
         "start": 333,
@@ -15177,8 +15215,11 @@
     ]
   },
   {
+    "lemma": "Daiara",
+    "previous": "Dahel"
+  },
+  {
     "lemma": "Custidius",
-    "previous": "Dahel",
     "next": "Cyrituca",
     "chapters": [
       {
