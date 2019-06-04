@@ -800,7 +800,7 @@
   {
     "lemma": "Arexion",
     "previous": "Aretis",
-    "next": "Arimmas 2",
+    "next": "Arimoi",
     "chapters": [
       {
         "start": 46,
@@ -810,8 +810,11 @@
     ]
   },
   {
+    "lemma": "Arimoi",
+    "previous": "Arexion"
+  },
+  {
     "lemma": "Arimmas 2",
-    "previous": "Arexion",
     "next": "Aristarchos 7a",
     "chapters": [
       {
@@ -886,10 +889,12 @@
   },
   {
     "lemma": "Aristodemos 16",
-    "previous": "Aristodemos 8a"
+    "previous": "Aristodemos 8a",
+    "next": "Aristogeiton 1a"
   },
   {
     "lemma": "Aristogeiton 1a",
+    "previous": "Aristodemos 16",
     "next": "Aristokleia",
     "chapters": [
       {

@@ -946,6 +946,7 @@
     "lemma": "Cosconius 2",
     "previous": "Cosconius 1",
     "next": "Cosconius 3",
+    "sort_key": "Cosconius 02",
     "chapters": [
       {
         "start": 1667,
@@ -2443,6 +2444,7 @@
     "lemma": "Crebro",
     "previous": "Crebennus",
     "next": "Creditor",
+    "redirect": "Ciabrus",
     "chapters": [
       {
         "start": 1699,
@@ -2564,6 +2566,7 @@
     "lemma": "Cremutius 4",
     "previous": "Cremutius 3",
     "next": "Crenacca",
+    "redirect": "Marcius 116",
     "chapters": [
       {
         "start": 1704,
@@ -2636,6 +2639,7 @@
     "lemma": "Crepereius 2",
     "previous": "Crepereius 1",
     "next": "Crepereius 3",
+    "sort_key": "Crepereius 02",
     "chapters": [
       {
         "start": 1704,
@@ -2660,6 +2664,7 @@
     "lemma": "Crepereius 4",
     "previous": "Crepereius 3",
     "next": "Crepereius 5",
+    "sort_key": "Crepereius 04",
     "chapters": [
       {
         "start": 1704,
@@ -2684,6 +2689,7 @@
     "lemma": "Crepereius 6",
     "previous": "Crepereius 5",
     "next": "Crepereius 7",
+    "sort_key": "Crepereius 06",
     "chapters": [
       {
         "start": 1705,
@@ -3279,7 +3285,7 @@
   {
     "lemma": "Crispinius",
     "previous": "Crispinilla 2",
-    "next": "Crispinus 2",
+    "next": "Crispinus 1",
     "chapters": [
       {
         "start": 1719,
@@ -3289,9 +3295,21 @@
     ]
   },
   {
-    "lemma": "Crispinus 2",
+    "lemma": "Crispinus 1",
     "previous": "Crispinius",
-    "next": "Crispinus 1",
+    "next": "Crispinus 2",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 1720,
+        "end": 1720
+      }
+    ]
+  },
+  {
+    "lemma": "Crispinus 2",
+    "previous": "Crispinus 1",
+    "next": "Crispinus 3",
     "redirect": true,
     "chapters": [
       {
@@ -3302,20 +3320,8 @@
     ]
   },
   {
-    "lemma": "Crispinus 1",
-    "previous": "Crispinus 2",
-    "next": "Crispinus 3",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 1720,
-        "end": 1720
-      }
-    ]
-  },
-  {
     "lemma": "Crispinus 3",
-    "previous": "Crispinus 1",
+    "previous": "Crispinus 2",
     "next": "Crispinus 4",
     "redirect": true,
     "chapters": [
@@ -3488,6 +3494,7 @@
     "lemma": "Crispinus 17",
     "previous": "Crispinus 16",
     "next": "Crispitia",
+    "redirect": "Bruttius 11",
     "chapters": [
       {
         "start": 1721,
@@ -3565,6 +3572,7 @@
     "lemma": "Crispus 5",
     "previous": "Crispus 4",
     "next": "Crispus 6",
+    "sort_key": "Crispus 05",
     "chapters": [
       {
         "start": 1722,
@@ -3577,6 +3585,7 @@
     "lemma": "Crispus 6",
     "previous": "Crispus 5",
     "next": "Crispus 7",
+    "sort_key": "Crispus 06",
     "chapters": [
       {
         "start": 1722,
@@ -3589,6 +3598,7 @@
     "lemma": "Crispus 7",
     "previous": "Crispus 6",
     "next": "Crispus 8",
+    "sort_key": "Crispus 07",
     "chapters": [
       {
         "start": 1722,
@@ -8005,6 +8015,7 @@
     "lemma": "Dagon 1",
     "previous": "Dagolassos",
     "next": "Dagon 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1985,
@@ -8435,7 +8446,8 @@
   {
     "lemma": "Daimon",
     "previous": "Daïmenes 2",
-    "next": "Daimonon nesos",
+    "next": "Δαιμόνων νῆσος",
+    "wp_link": "w:de:Dämon",
     "chapters": [
       {
         "start": 2010,
@@ -8445,7 +8457,7 @@
     ]
   },
   {
-    "lemma": "Daimonon nesos",
+    "lemma": "Δαιμόνων νῆσος",
     "previous": "Daimon",
     "next": "Daines",
     "chapters": [
@@ -8458,7 +8470,7 @@
   },
   {
     "lemma": "Daines",
-    "previous": "Daimonon nesos",
+    "previous": "Δαιμόνων νῆσος",
     "next": "Daïphantos 1",
     "chapters": [
       {
@@ -12023,6 +12035,7 @@
     "lemma": "Dana",
     "previous": "Dan",
     "next": "Danaba 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 2083,
@@ -12733,6 +12746,7 @@
     "lemma": "Daphne 4",
     "previous": "Daphne 3",
     "next": "Daphne 5",
+    "redirect": "Daphnai",
     "chapters": [
       {
         "start": 2138,
@@ -19697,6 +19711,7 @@
     "lemma": "Delphidios",
     "previous": "Delphica",
     "next": "Delphidius",
+    "redirect": "Delphinios 1",
     "chapters": [
       {
         "start": 2503,

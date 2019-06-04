@@ -114,7 +114,7 @@
     "lemma": "Demokleides 4",
     "previous": "Demokleides 3",
     "next": "Demokleitos",
-    "redirect": true,
+    "redirect": "Demokles 11",
     "chapters": [
       {
         "start": 132,
@@ -480,6 +480,7 @@
     "lemma": "Demokrates 11",
     "previous": "Demokrates 10",
     "next": "Demokrates 12",
+    "redirect": "Damokrates 8",
     "chapters": [
       {
         "start": 134,
@@ -5744,6 +5745,7 @@
     "lemma": "Diana",
     "previous": "Diamunas",
     "next": "Diana, Dianae, ad Dianam 1",
+    "wp_link": "w:de:Diana",
     "chapters": [
       {
         "start": 325,
@@ -6625,7 +6627,7 @@
   {
     "lemma": "Didaskaliai",
     "previous": "Didaskalia",
-    "next": "Διδάσκαλος",
+    "next": "Διδάσκαλoς",
     "wp_link": "w:de:Didaskalie",
     "chapters": [
       {
@@ -6636,7 +6638,7 @@
     ]
   },
   {
-    "lemma": "Διδάσκαλος",
+    "lemma": "Διδάσκαλoς",
     "previous": "Didaskaliai",
     "next": "Didattium",
     "chapters": [
@@ -6649,8 +6651,9 @@
   },
   {
     "lemma": "Didattium",
-    "previous": "Διδάσκαλος",
+    "previous": "Διδάσκαλoς",
     "next": "Dide",
+    "redirect": true,
     "chapters": [
       {
         "start": 406,
@@ -6686,6 +6689,7 @@
     "lemma": "Didigua",
     "previous": "Didienses",
     "next": "Didius",
+    "redirect": "Digba",
     "chapters": [
       {
         "start": 406,
@@ -8422,7 +8426,7 @@
   {
     "lemma": "Dikitanaura",
     "previous": "Dikeration",
-    "next": "Dikologos",
+    "next": "Δικολόγος",
     "chapters": [
       {
         "start": 580,
@@ -8432,7 +8436,7 @@
     ]
   },
   {
-    "lemma": "Dikologos",
+    "lemma": "Δικολόγος",
     "previous": "Dikitanaura",
     "next": "Dikomes",
     "chapters": [
@@ -8445,8 +8449,9 @@
   },
   {
     "lemma": "Dikomes",
-    "previous": "Dikologos",
+    "previous": "Δικολόγος",
     "next": "Dikon",
+    "redirect": "Dicomes",
     "chapters": [
       {
         "start": 580,
@@ -8614,7 +8619,7 @@
   {
     "lemma": "Diktynnaion 2",
     "previous": "Diktynnaion 1",
-    "next": "Diktyobolos",
+    "next": "Δικτυοβόλος",
     "chapters": [
       {
         "start": 589,
@@ -8624,9 +8629,12 @@
     ]
   },
   {
-    "lemma": "Diktyobolos",
+    "lemma": "Δικτυοβόλος",
     "previous": "Diktynnaion 2",
     "next": "Diktys",
+    "sort_key": "Diktyobolos",
+    "redirect": true,
+    "wp_link": "w:de:Retiarius",
     "chapters": [
       {
         "start": 589,
@@ -8636,7 +8644,7 @@
   },
   {
     "lemma": "Diktys",
-    "previous": "Diktyobolos",
+    "previous": "Δικτυοβόλος",
     "next": "Dilectus",
     "wp_link": "w:de:Dictys Cretensis",
     "ws_link": "s:de:Dictys Cretensis",
@@ -11510,6 +11518,7 @@
     "lemma": "Diognetos 13",
     "previous": "Diognetos 12",
     "next": "Diognetos 14",
+    "redirect": true,
     "chapters": [
       {
         "start": 785,
@@ -19167,6 +19176,7 @@
     "lemma": "Dissium",
     "previous": "Dissignatores 2",
     "next": "Dista",
+    "redirect": "Bissium",
     "chapters": [
       {
         "start": 1200,
@@ -21443,6 +21453,8 @@
     "lemma": "Domitianus 4",
     "previous": "Domitianus 3",
     "next": "Domitianus 5",
+    "sort_key": "Domitianus 04",
+    "redirect": true,
     "chapters": [
       {
         "start": 1312,
