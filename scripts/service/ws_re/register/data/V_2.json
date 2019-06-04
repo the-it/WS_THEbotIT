@@ -2178,7 +2178,7 @@
   {
     "lemma": "Dosten",
     "previous": "Dossennus",
-    "next": "Dotadas",
+    "next": "Dotadas 1",
     "redirect": "Origanum",
     "chapters": [
       {
@@ -4082,24 +4082,12 @@
   {
     "lemma": "Dromos 2",
     "previous": "Dromos 1",
-    "next": "Dronana",
+    "next": "Dronanus",
     "chapters": [
       {
         "start": 1717,
         "end": 1720,
         "author": "Jüthner"
-      }
-    ]
-  },
-  {
-    "lemma": "Dronana",
-    "previous": "Dronanus",
-    "next": "Drooi",
-    "redirect": "Duranus",
-    "chapters": [
-      {
-        "start": 1720,
-        "end": 1720
       }
     ]
   },
@@ -4116,8 +4104,20 @@
     ]
   },
   {
-    "lemma": "Drooi",
+    "lemma": "Dronana",
     "previous": "Dronanus",
+    "next": "Drooi",
+    "redirect": "Duranus",
+    "chapters": [
+      {
+        "start": 1720,
+        "end": 1720
+      }
+    ]
+  },
+  {
+    "lemma": "Drooi",
+    "previous": "Dronana",
     "next": "Dropides 1",
     "chapters": [
       {
@@ -4656,12 +4656,24 @@
   {
     "lemma": "Dryalos",
     "previous": "Dryainos",
-    "next": "Dryantianus",
+    "next": "Dryantiades",
     "chapters": [
       {
         "start": 1743,
         "end": 1743,
         "author": "Hoefer"
+      }
+    ]
+  },
+  {
+    "lemma": "Dryantiades",
+    "previous": "Dryalos",
+    "next": "Dryantianus",
+    "chapters": [
+      {
+        "start": 1743,
+        "end": 1743,
+        "author": "Escher"
       }
     ]
   },
@@ -4674,18 +4686,6 @@
       {
         "start": 1743,
         "end": 1743
-      }
-    ]
-  },
-  {
-    "lemma": "Dryantides",
-    "previous": "Dryantianus",
-    "next": "Dryantilla 1",
-    "chapters": [
-      {
-        "start": 1743,
-        "end": 1743,
-        "author": "Escher"
       }
     ]
   },
@@ -16741,24 +16741,12 @@
   {
     "lemma": "Elfenbein",
     "previous": "Eleutii",
-    "next": "Elgos",
+    "next": "Elgovae",
     "chapters": [
       {
         "start": 2356,
         "end": 2366,
         "author": "Blümner"
-      }
-    ]
-  },
-  {
-    "lemma": "Elgos",
-    "previous": "Elfenbein",
-    "next": "Elgovae",
-    "chapters": [
-      {
-        "start": 2366,
-        "end": 2366,
-        "author": "Bürchner"
       }
     ]
   },
@@ -16775,8 +16763,20 @@
     ]
   },
   {
-    "lemma": "Eliae",
+    "lemma": "Elgos",
     "previous": "Elgovae",
+    "next": "Eliae",
+    "chapters": [
+      {
+        "start": 2366,
+        "end": 2366,
+        "author": "Bürchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Eliae",
+    "previous": "Elgos",
     "next": "Elias 1",
     "chapters": [
       {
@@ -20042,7 +20042,7 @@
   {
     "lemma": "Engolisma",
     "previous": "Engannim 2",
-    "next": "Engoasin",
+    "next": "Engonasin",
     "redirect": "Iculisna",
     "chapters": [
       {

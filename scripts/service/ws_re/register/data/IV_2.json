@@ -3284,7 +3284,7 @@
   },
   {
     "lemma": "Crispinius",
-    "previous": "Crispinilla 1",
+    "previous": "Crispinilla 2",
     "next": "Crispinus 1",
     "chapters": [
       {
@@ -3295,9 +3295,21 @@
     ]
   },
   {
-    "lemma": "Crispinus 2",
+    "lemma": "Crispinus 1",
     "previous": "Crispinius",
-    "next": "Crispinus 1",
+    "next": "Crispinus 2",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 1720,
+        "end": 1720
+      }
+    ]
+  },
+  {
+    "lemma": "Crispinus 2",
+    "previous": "Crispinus 1",
+    "next": "Crispinus 3",
     "redirect": true,
     "chapters": [
       {
@@ -3308,20 +3320,8 @@
     ]
   },
   {
-    "lemma": "Crispinus 1",
-    "previous": "Crispinus 2",
-    "next": "Crispinus 3",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 1720,
-        "end": 1720
-      }
-    ]
-  },
-  {
     "lemma": "Crispinus 3",
-    "previous": "Crispinus 1",
+    "previous": "Crispinus 2",
     "next": "Crispinus 4",
     "redirect": true,
     "chapters": [
