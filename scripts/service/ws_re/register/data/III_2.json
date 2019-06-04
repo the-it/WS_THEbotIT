@@ -23577,18 +23577,6 @@
     ]
   },
   {
-    "lemma": "Charioros",
-    "previous": "Chariomundus",
-    "next": "Chariovalda",
-    "chapters": [
-      {
-        "start": 2145,
-        "end": 2145,
-        "author": "Bürchner"
-      }
-    ]
-  },
-  {
     "lemma": "Chariovalda",
     "previous": "Chariomundus",
     "next": "Charioviscus",
@@ -23603,7 +23591,7 @@
   {
     "lemma": "Charioviscus",
     "previous": "Chariovalda",
-    "next": "Chariphemos",
+    "next": "Charioros",
     "chapters": [
       {
         "start": 2145,
@@ -23613,8 +23601,20 @@
     ]
   },
   {
-    "lemma": "Chariphemos",
+    "lemma": "Charioros",
     "previous": "Charioviscus",
+    "next": "Chariphemos",
+    "chapters": [
+      {
+        "start": 2145,
+        "end": 2145,
+        "author": "Bürchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Chariphemos",
+    "previous": "Charioros",
     "next": "Chariphu",
     "chapters": [
       {
@@ -32220,7 +32220,7 @@
   {
     "lemma": "Chrysogonos 7",
     "previous": "Chrysogonos 6",
-    "next": "Chrysogonos 8",
+    "next": "Χρυσογραφία",
     "chapters": [
       {
         "start": 2513,
@@ -32230,7 +32230,7 @@
     ]
   },
   {
-    "lemma": "Chrysographia",
+    "lemma": "Χρυσογραφία",
     "previous": "Chrysogonos 7",
     "next": "Chrysokeras",
     "chapters": [
@@ -32243,7 +32243,7 @@
   },
   {
     "lemma": "Chrysokeras",
-    "previous": "Chrysographia",
+    "previous": "Χρυσογραφία",
     "next": "Chrysokolla 1",
     "chapters": [
       {
