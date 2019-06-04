@@ -3578,6 +3578,7 @@
     "lemma": "Asellus 4",
     "previous": "Asellus 3",
     "next": "Asellus 5",
+    "redirect": "Assel",
     "chapters": [
       {
         "start": 1533,
@@ -3589,6 +3590,7 @@
     "lemma": "Asellus 5",
     "previous": "Asellus 4",
     "next": "Asemus",
+    "redirect": "Esel",
     "chapters": [
       {
         "start": 1533,
@@ -3600,6 +3602,7 @@
     "lemma": "Asemus",
     "previous": "Asellus 5",
     "next": "Aseneth",
+    "redirect": "Asamus",
     "chapters": [
       {
         "start": 1533,
@@ -3625,6 +3628,7 @@
     "lemma": "Aseni",
     "previous": "Aseneth",
     "next": "Asennethis",
+    "redirect": "Asini",
     "chapters": [
       {
         "start": 1533,
@@ -3636,6 +3640,7 @@
     "lemma": "Asennethis",
     "previous": "Aseni",
     "next": "Aser 1",
+    "redirect": "Aseneth",
     "chapters": [
       {
         "start": 1533,
@@ -3683,6 +3688,7 @@
     "lemma": "Aserina",
     "previous": "Aserecinehae",
     "next": "Ases",
+    "redirect": "Asterion",
     "chapters": [
       {
         "start": 1533,
@@ -3694,6 +3700,7 @@
     "lemma": "Ases",
     "previous": "Aserina",
     "next": "Aseth 1",
+    "redirect": "Assis",
     "chapters": [
       {
         "start": 1533,
@@ -3717,6 +3724,7 @@
     "lemma": "Aseth 2",
     "previous": "Aseth 1",
     "next": "Asetium",
+    "redirect": "Assis",
     "chapters": [
       {
         "start": 1533,
@@ -3740,6 +3748,7 @@
     "lemma": "Asfinis",
     "previous": "Asetium",
     "next": "Asgelatas",
+    "redirect": "Asphynis",
     "chapters": [
       {
         "start": 1533,
@@ -5291,7 +5300,7 @@
   {
     "lemma": "Askalon",
     "previous": "Askalaphos 2",
-    "next": "Askalopas",
+    "next": "Ἀσκαλώπας",
     "chapters": [
       {
         "start": 1609,
@@ -5301,9 +5310,12 @@
     ]
   },
   {
-    "lemma": "Askalopas",
+    "lemma": "Ἀσκαλώπας",
     "previous": "Askalon",
     "next": "Askalos",
+    "sort_key": "Askalopas",
+    "redirect": "Schnepfe",
+    "wp_link": "w:de:Schnepfe",
     "chapters": [
       {
         "start": 1610,
@@ -5313,7 +5325,7 @@
   },
   {
     "lemma": "Askalos",
-    "previous": "Askalopas",
+    "previous": "Ἀσκαλώπας",
     "next": "Askania 1",
     "chapters": [
       {
@@ -6749,6 +6761,8 @@
     "lemma": "Asklepios 2",
     "previous": "Asklepios 1",
     "next": "Asklepios 3",
+    "sort_key": "Asklepios 02",
+    "wp_link": "w:de:Asklepios",
     "chapters": [
       {
         "start": 1642,
@@ -30757,6 +30771,7 @@
     "lemma": "Ausari",
     "previous": "Ausara 2",
     "next": "Ausava vicus",
+    "redirect": true,
     "chapters": [
       {
         "start": 2557,
@@ -30935,7 +30950,8 @@
   {
     "lemma": "Ausimum",
     "previous": "Ausilimdi",
-    "next": "Ausineites eion",
+    "next": "Aὐσινείτης ἠιών",
+    "redirect": true,
     "chapters": [
       {
         "start": 2559,
@@ -30944,7 +30960,7 @@
     ]
   },
   {
-    "lemma": "Ausineites eion",
+    "lemma": "Aὐσινείτης ἠιών",
     "previous": "Ausimum",
     "next": "Ausinza",
     "chapters": [
@@ -30957,7 +30973,7 @@
   },
   {
     "lemma": "Ausinza",
-    "previous": "Ausineites eion",
+    "previous": "Aὐσινείτης ἠιών",
     "next": "Ausitai",
     "chapters": [
       {
@@ -31902,6 +31918,7 @@
     "lemma": "Autolala",
     "previous": "Autokratorikos",
     "next": "Autolaos",
+    "redirect": "Autololes",
     "chapters": [
       {
         "start": 2599,
@@ -31937,6 +31954,7 @@
     "lemma": "Autoleon 2",
     "previous": "Autoleon 1",
     "next": "Autololes",
+    "redirect": true,
     "chapters": [
       {
         "start": 2600,
@@ -35020,7 +35038,7 @@
     "lemma": "Baal Chamman",
     "previous": "Baal 5",
     "next": "Baal Gazur",
-    "redirect": true,
+    "redirect": "Hammon",
     "chapters": [
       {
         "start": 2652,
@@ -35044,7 +35062,7 @@
     "lemma": "Baanes",
     "previous": "Baal Gazur",
     "next": "Baaras",
-    "redirect": true,
+    "redirect": "Baris 5",
     "chapters": [
       {
         "start": 2653,
@@ -35092,7 +35110,7 @@
     "lemma": "Baba 2",
     "previous": "Baba 1",
     "next": "Baba 3",
-    "redirect": true,
+    "redirect": "Babba",
     "chapters": [
       {
         "start": 2653,
@@ -35116,7 +35134,7 @@
     "lemma": "Babai 1",
     "previous": "Baba 3",
     "next": "Babai 2",
-    "redirect": true,
+    "redirect": "Babba",
     "chapters": [
       {
         "start": 2653,
@@ -37240,6 +37258,7 @@
     "lemma": "Baeda",
     "previous": "Baeculonius",
     "next": "Bäder",
+    "redirect": "Beda 3",
     "chapters": [
       {
         "start": 2743,
@@ -42323,6 +42342,7 @@
     "lemma": "Barbare",
     "previous": "Barbara",
     "next": "Barbarei",
+    "redirect": "Bara 1",
     "chapters": [
       {
         "start": 2855,
@@ -42442,6 +42462,7 @@
     "lemma": "Barbarikon",
     "previous": "Barbaries",
     "next": "Βαρβαρικὸν πεδίον",
+    "redirect": "Barbarei",
     "chapters": [
       {
         "start": 2858,

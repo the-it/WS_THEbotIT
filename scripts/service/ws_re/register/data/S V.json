@@ -181,7 +181,6 @@
   {
     "lemma": "Athenagoras 9a",
     "previous": "Asklepiades 51",
-    "next": "Attius 10a",
     "sort_key": "Athenagoras 09a",
     "chapters": [
       {
@@ -192,9 +191,13 @@
     ]
   },
   {
+    "lemma": "Athenodoros 19",
+    "next": "Attius 10a"
+  },
+  {
     "lemma": "Attius 10a",
-    "previous": "Athenagoras 9a",
-    "next": "Battus, Bacchus",
+    "previous": "Athenodoros 19",
+    "next": "Autrico",
     "chapters": [
       {
         "start": 55,
@@ -204,8 +207,11 @@
     ]
   },
   {
+    "lemma": "Autrico",
+    "previous": "Attius 10a"
+  },
+  {
     "lemma": "Battus, Bacchus",
-    "previous": "Attius 10a",
     "chapters": [
       {
         "start": 55,

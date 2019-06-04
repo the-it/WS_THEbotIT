@@ -1897,6 +1897,7 @@
     "lemma": "Alfaterna",
     "previous": "Alexos",
     "next": "Alfaterni",
+    "redirect": "Nuceria 1",
     "chapters": [
       {
         "start": 1471,
@@ -2474,6 +2475,7 @@
     "lemma": "Alidraka",
     "previous": "Alicula",
     "next": "Alienatio",
+    "redirect": "Alikadra",
     "chapters": [
       {
         "start": 1479,
@@ -2629,6 +2631,7 @@
     "lemma": "Alilat",
     "previous": "Alilaioi",
     "next": "Ἄλιμα",
+    "wp_link": "w:de:Alilat",
     "chapters": [
       {
         "start": 1483,
@@ -3628,7 +3631,8 @@
   {
     "lemma": "Alkeides 4",
     "previous": "Alkeides 3",
-    "next": "Alkeïdes",
+    "next": "Ἀλκηΐδες",
+    "redirect": "Alkaios 10",
     "chapters": [
       {
         "start": 1513,
@@ -3637,7 +3641,7 @@
     ]
   },
   {
-    "lemma": "Alkeïdes",
+    "lemma": "Ἀλκηΐδες",
     "previous": "Alkeides 4",
     "next": "Alkeis",
     "chapters": [
@@ -3650,7 +3654,7 @@
   },
   {
     "lemma": "Alkeis",
-    "previous": "Alkeïdes",
+    "previous": "Ἀλκηΐδες",
     "next": "Alkemachos",
     "chapters": [
       {
@@ -13929,6 +13933,7 @@
     "lemma": "Ammudates",
     "previous": "Ammuda",
     "next": "Ammuneoi",
+    "wp_link": "w:de:Elagabal (Gottheit)",
     "chapters": [
       {
         "start": 1868,
@@ -40941,6 +40946,7 @@
     "lemma": "Antocidi",
     "previous": "Antobroges",
     "next": "Antodike",
+    "redirect": true,
     "chapters": [
       {
         "start": 2566,
@@ -40952,6 +40958,7 @@
     "lemma": "Antodike",
     "previous": "Antocidi",
     "next": "Ἄντοικοι",
+    "redirect": "Autodike",
     "chapters": [
       {
         "start": 2566,
@@ -40963,6 +40970,8 @@
     "lemma": "Ἄντοικοι",
     "previous": "Antodike",
     "next": "Ἀντωμοσία",
+    "sort_key": "Antoikoi",
+    "redirect": "Antipodes",
     "chapters": [
       {
         "start": 2566,
@@ -42525,6 +42534,7 @@
     "lemma": "Antonius 88",
     "previous": "Antonius 87",
     "next": "Antonius 89",
+    "sort_key": "Antonius 088",
     "chapters": [
       {
         "start": 2635,

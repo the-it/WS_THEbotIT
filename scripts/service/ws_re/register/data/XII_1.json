@@ -1255,7 +1255,7 @@
   {
     "lemma": "ἡ κυρία",
     "previous": "Kyria",
-    "next": "Kyria ekklesia",
+    "next": "κυρία ἐκκλησία",
     "chapters": [
       {
         "start": 171,
@@ -1265,7 +1265,7 @@
     ]
   },
   {
-    "lemma": "Kyria ekklesia",
+    "lemma": "κυρία ἐκκλησία",
     "previous": "ἡ κυρία",
     "next": "Kyriades 1",
     "chapters": [
@@ -1278,7 +1278,7 @@
   },
   {
     "lemma": "Kyriades 1",
-    "previous": "Kyria ekklesia",
+    "previous": "κυρία ἐκκλησία",
     "next": "Kyriades 2",
     "redirect": true,
     "chapters": [
@@ -1304,6 +1304,7 @@
     "lemma": "Kyriakos 1",
     "previous": "Kyriades 2",
     "next": "Kyriakos 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 173,
@@ -1327,6 +1328,7 @@
     "lemma": "Κυρικτική",
     "previous": "Kyriakos 2",
     "next": "Kyrilas",
+    "sort_key": "Kyriktike",
     "redirect": true,
     "chapters": [
       {
