@@ -409,7 +409,7 @@
   {
     "lemma": "Caburriates",
     "previous": "Butra",
-    "next": "Caedici(i)",
+    "next": "Caecina 22",
     "chapters": [
       {
         "start": 18,
@@ -419,8 +419,16 @@
     ]
   },
   {
+    "lemma": "Caecina 22",
+    "previous": "Caburriates"
+  },
+  {
+    "lemma": "Caecina 23",
+    "next": "Caedici(i)"
+  },
+  {
     "lemma": "Caedici(i)",
-    "previous": "Caburriates",
+    "previous": "Caecina 23",
     "next": "Caedicii vicus",
     "chapters": [
       {
@@ -577,7 +585,6 @@
   {
     "lemma": "Calvisius 10",
     "previous": "Calvisius 9",
-    "next": "Camalatrum(?)",
     "chapters": [
       {
         "start": 20,
@@ -587,8 +594,12 @@
     ]
   },
   {
+    "lemma": "Calvisius 19",
+    "next": "Camalatrum(?)"
+  },
+  {
     "lemma": "Camalatrum(?)",
-    "previous": "Calvisius 10",
+    "previous": "Calvisius 19",
     "next": "Camere",
     "chapters": [
       {
@@ -613,7 +624,7 @@
   {
     "lemma": "Canianus saltus",
     "previous": "Camere",
-    "next": "Canta",
+    "next": "Caninius 7",
     "chapters": [
       {
         "start": 20,
@@ -623,8 +634,11 @@
     ]
   },
   {
+    "lemma": "Caninius 7",
+    "previous": "Canianus saltus"
+  },
+  {
     "lemma": "Canta",
-    "previous": "Canianus saltus",
     "next": "Cantenna",
     "chapters": [
       {
@@ -721,7 +735,6 @@
   {
     "lemma": "Carrea",
     "previous": "Carnus",
-    "next": "Carsitani",
     "chapters": [
       {
         "start": 21,
@@ -731,8 +744,12 @@
     ]
   },
   {
+    "lemma": "Carrea (Carreum, Correa)",
+    "next": "Carsitani"
+  },
+  {
     "lemma": "Carsitani",
-    "previous": "Carrea",
+    "previous": "Carrea (Carreum, Correa)",
     "next": "Carucla",
     "chapters": [
       {
@@ -793,7 +810,7 @@
   {
     "lemma": "Caudalascus",
     "previous": "Caturniacus 2",
-    "next": "Ceremia(?)",
+    "next": "Cavaturini",
     "chapters": [
       {
         "start": 22,
@@ -803,8 +820,11 @@
     ]
   },
   {
+    "lemma": "Cavaturini",
+    "previous": "Caudalascus"
+  },
+  {
     "lemma": "Ceremia(?)",
-    "previous": "Caudalascus",
     "next": "Cermalus 2",
     "chapters": [
       {

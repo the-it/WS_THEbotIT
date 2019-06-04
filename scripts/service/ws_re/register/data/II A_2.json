@@ -7636,6 +7636,7 @@
     "lemma": "Sergius 4",
     "previous": "Sergius 3",
     "next": "Sergius 5",
+    "sort_key": "Sergius 04",
     "chapters": [
       {
         "start": 1688,
@@ -15692,7 +15693,7 @@
   {
     "lemma": "Siavolum",
     "previous": "Siauana",
-    "next": "Siazur",
+    "next": "Σιαζούρ",
     "chapters": [
       {
         "start": 2069,
@@ -15702,9 +15703,9 @@
     ]
   },
   {
-    "lemma": "Siazur",
+    "lemma": "Σιαζούρ",
     "previous": "Siavolum",
-    "next": "Sibai, Siboi",
+    "next": "Σίβαι, Σίβοι",
     "chapters": [
       {
         "start": 2069,
@@ -15714,9 +15715,10 @@
     ]
   },
   {
-    "lemma": "Sibai, Siboi",
-    "previous": "Siazur",
-    "next": "Sibapolis",
+    "lemma": "Σίβαι, Σίβοι",
+    "previous": "Σιαζούρ",
+    "next": "Σιβάπολις",
+    "sort_key": "Sibai, Siboi",
     "chapters": [
       {
         "start": 2069,
@@ -15726,8 +15728,8 @@
     ]
   },
   {
-    "lemma": "Sibapolis",
-    "previous": "Sibai, Siboi",
+    "lemma": "Σιβάπολις",
+    "previous": "Σίβαι, Σίβοι",
     "next": "Sibaria",
     "chapters": [
       {
@@ -15739,7 +15741,7 @@
   },
   {
     "lemma": "Sibaria",
-    "previous": "Sibapolis",
+    "previous": "Σιβάπολις",
     "next": "Sibde",
     "chapters": [
       {
@@ -17751,7 +17753,7 @@
   {
     "lemma": "Σιγάλ",
     "previous": "Siga",
-    "next": "Sigala",
+    "next": "Σιγάλα",
     "sort_key": "Sigal",
     "chapters": [
       {
@@ -17762,9 +17764,10 @@
     ]
   },
   {
-    "lemma": "Sigala",
+    "lemma": "Σιγάλα",
     "previous": "Σιγάλ",
     "next": "Sigambri",
+    "sort_key": "Sigala",
     "chapters": [
       {
         "start": 2275,
@@ -17775,7 +17778,7 @@
   },
   {
     "lemma": "Sigambri",
-    "previous": "Sigala",
+    "previous": "Σιγάλα",
     "next": "Σιγάρα",
     "chapters": [
       {

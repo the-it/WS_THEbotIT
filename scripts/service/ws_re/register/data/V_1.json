@@ -1008,7 +1008,7 @@
     "lemma": "Demonstratio 2",
     "previous": "Demonstratio 1",
     "next": "Demophanes 1",
-    "redirect": true,
+    "redirect": "Formula",
     "chapters": [
       {
         "start": 145,
@@ -1044,7 +1044,7 @@
     "lemma": "Demophanes 3",
     "previous": "Demophanes 2",
     "next": "Demophantos",
-    "redirect": true,
+    "redirect": "Megalophanes",
     "chapters": [
       {
         "start": 145,
@@ -5941,7 +5941,7 @@
   {
     "lemma": "Diaphanes",
     "previous": "Diankylusthai",
-    "next": "Diaphanes 2",
+    "next": "Διαφανές 2",
     "chapters": [
       {
         "start": 341,
@@ -5951,9 +5951,10 @@
     ]
   },
   {
-    "lemma": "Diaphanes 2",
+    "lemma": "Διαφανές 2",
     "previous": "Diaphanes",
     "next": "Diaphoros",
+    "sort_key": "Diaphanes 2",
     "chapters": [
       {
         "start": 341,
@@ -5964,7 +5965,7 @@
   },
   {
     "lemma": "Diaphoros",
-    "previous": "Diaphanes 2",
+    "previous": "Διαφανές 2",
     "next": "Diaphragma",
     "chapters": [
       {
@@ -5989,7 +5990,7 @@
   {
     "lemma": "Diaprepes",
     "previous": "Diaphragma",
-    "next": "Diapsephisis",
+    "next": "Διαψήφισις",
     "chapters": [
       {
         "start": 342,
@@ -5999,9 +6000,10 @@
     ]
   },
   {
-    "lemma": "Diapsephisis",
+    "lemma": "Διαψήφισις",
     "previous": "Diaprepes",
-    "next": "Diapylion",
+    "next": "Διαπύλιον",
+    "sort_key": "Diapsephisis",
     "chapters": [
       {
         "start": 342,
@@ -6011,9 +6013,10 @@
     ]
   },
   {
-    "lemma": "Diapylion",
-    "previous": "Diapsephisis",
+    "lemma": "Διαπύλιον",
+    "previous": "Διαψήφισις",
     "next": "Diarenses",
+    "sort_key": "Diapylion",
     "chapters": [
       {
         "start": 343,
@@ -6024,7 +6027,7 @@
   },
   {
     "lemma": "Diarenses",
-    "previous": "Diapylion",
+    "previous": "Διαπύλιον",
     "next": "Diarium",
     "chapters": [
       {
@@ -6038,6 +6041,7 @@
     "lemma": "Diarium",
     "previous": "Diarenses",
     "next": "Diaron",
+    "wp_link": "w:de:Tagebuch",
     "chapters": [
       {
         "start": 344,
@@ -6050,6 +6054,7 @@
     "lemma": "Diaron",
     "previous": "Diarium",
     "next": "Diarpa",
+    "redirect": "Daron",
     "chapters": [
       {
         "start": 345,
@@ -6144,7 +6149,7 @@
   {
     "lemma": "Dias 5",
     "previous": "Dias 4",
-    "next": "Diasia",
+    "next": "Dias 6",
     "chapters": [
       {
         "start": 345,
@@ -6153,8 +6158,14 @@
     ]
   },
   {
-    "lemma": "Diasia",
+    "lemma": "Dias 6",
     "previous": "Dias 5",
+    "next": "Diasia",
+    "redirect": "Delios 2"
+  },
+  {
+    "lemma": "Diasia",
+    "previous": "Dias 6",
     "next": "Diassorinos",
     "chapters": [
       {
@@ -6179,7 +6190,7 @@
   {
     "lemma": "Diatessaron",
     "previous": "Diassorinos",
-    "next": "Diatheke",
+    "next": "Διαθήκη",
     "wp_link": "w:de:Evangelienharmonie",
     "chapters": [
       {
@@ -6190,9 +6201,11 @@
     ]
   },
   {
-    "lemma": "Diatheke",
+    "lemma": "Διαθήκη",
     "previous": "Diatessaron",
     "next": "Diatonion",
+    "sort_key": "Diatheke",
+    "wp_link": "w:de:Testament",
     "chapters": [
       {
         "start": 349,
@@ -6203,7 +6216,7 @@
   },
   {
     "lemma": "Diatonion",
-    "previous": "Diatheke",
+    "previous": "Διαθήκη",
     "next": "Diatora",
     "chapters": [
       {
@@ -6228,7 +6241,8 @@
   {
     "lemma": "Diatreta",
     "previous": "Diatora",
-    "next": "Diaulion",
+    "next": "Διαύλιον",
+    "wp_link": "w:de:Testament",
     "chapters": [
       {
         "start": 352,
@@ -6238,7 +6252,7 @@
     ]
   },
   {
-    "lemma": "Diaulion",
+    "lemma": "Διαύλιον",
     "previous": "Diatreta",
     "next": "Diaulos 1",
     "chapters": [
@@ -6251,7 +6265,7 @@
   },
   {
     "lemma": "Diaulos 1",
-    "previous": "Diaulion",
+    "previous": "Διαύλιον",
     "next": "Diaulos 2",
     "chapters": [
       {

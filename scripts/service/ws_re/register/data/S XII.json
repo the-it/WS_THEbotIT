@@ -690,7 +690,6 @@
   {
     "lemma": "Apicatus",
     "previous": "Arcani",
-    "next": "Ariaioi",
     "chapters": [
       {
         "start": 90,
@@ -700,9 +699,14 @@
     ]
   },
   {
-    "lemma": "Ariaioi",
-    "previous": "Apicatus",
-    "next": "Arrecinus 2",
+    "lemma": "Argura 1",
+    "next": "Ἀριαῖοι"
+  },
+  {
+    "lemma": "Ἀριαῖοι",
+    "previous": "Argura 1",
+    "next": "Arrabona",
+    "sort_key": "Ariaioi",
     "chapters": [
       {
         "start": 90,
@@ -712,8 +716,11 @@
     ]
   },
   {
+    "lemma": "Arrabona",
+    "previous": "Ἀριαῖοι"
+  },
+  {
     "lemma": "Arrecinus 2",
-    "previous": "Ariaioi",
     "next": "Arrius 17a'",
     "chapters": [
       {
@@ -738,7 +745,6 @@
   {
     "lemma": "Arrius 31a",
     "previous": "Arrius 17a'",
-    "next": "Arsinoë 12a",
     "chapters": [
       {
         "start": 98,
@@ -748,9 +754,13 @@
     ]
   },
   {
+    "lemma": "Arsinoë 12",
+    "next": "Arsinoë 12a"
+  },
+  {
     "lemma": "Arsinoë 12a",
-    "previous": "Arrius 31a",
-    "next": "Articuleius 3a",
+    "previous": "Arsinoë 12",
+    "next": "Arsinoë 15",
     "chapters": [
       {
         "start": 99,
@@ -760,8 +770,11 @@
     ]
   },
   {
+    "lemma": "Arsinoë 15",
+    "previous": "Arsinoë 12a"
+  },
+  {
     "lemma": "Articuleius 3a",
-    "previous": "Arsinoë 12a",
     "next": "Artorius 7a",
     "chapters": [
       {

@@ -35832,6 +35832,7 @@
     "lemma": "Caecilius 41",
     "previous": "Caecilius 40",
     "next": "Caecilius 42",
+    "sort_key": "Caecilius 041",
     "chapters": [
       {
         "start": 1199,
@@ -35914,6 +35915,7 @@
     "lemma": "Caecilius 48",
     "previous": "Caecilius 47",
     "next": "Caecilius 49",
+    "sort_key": "Caecilius 048",
     "chapters": [
       {
         "start": 1200,
@@ -35974,6 +35976,7 @@
     "lemma": "Caecilius 53",
     "previous": "Caecilius 52",
     "next": "Caecilius 54",
+    "sort_key": "Caecilius 053",
     "chapters": [
       {
         "start": 1201,
@@ -36988,7 +36991,7 @@
     "lemma": "Caecilius 139",
     "previous": "Caecilius 138",
     "next": "Caecilius vicus",
-    "redirect": true,
+    "redirect": "Aelius 168",
     "chapters": [
       {
         "start": 1236,
@@ -37477,6 +37480,7 @@
     "lemma": "Caedicius 1",
     "previous": "Caedicianus 3",
     "next": "Caedicius 2",
+    "sort_key": "Caedicius 01",
     "chapters": [
       {
         "start": 1245,
@@ -37513,6 +37517,7 @@
     "lemma": "Caedicius 4",
     "previous": "Caedicius 3",
     "next": "Caedicius 5",
+    "sort_key": "Caedicius 04",
     "chapters": [
       {
         "start": 1245,
@@ -38319,6 +38324,7 @@
     "lemma": "Caelius 32",
     "previous": "Caelius 31",
     "next": "Caelius 33",
+    "sort_key": "Caelius 32",
     "chapters": [
       {
         "start": 1266,
@@ -38867,6 +38873,7 @@
     "lemma": "Caerellius 4",
     "previous": "Caerellius 3",
     "next": "Caerellius 5",
+    "sort_key": "Caerellius 04",
     "chapters": [
       {
         "start": 1283,
@@ -40259,7 +40266,7 @@
     "lemma": "Caesius 22",
     "previous": "Caesius 21",
     "next": "Caesius 23",
-    "redirect": true,
+    "redirect": "Octavius 78",
     "chapters": [
       {
         "start": 1316,
@@ -40447,7 +40454,7 @@
     "previous": "Caesonius 5",
     "next": "Caesonius 7",
     "sort_key": "Caesonius 06",
-    "redirect": true,
+    "redirect": "Anicius 28",
     "chapters": [
       {
         "start": 1318,
@@ -40461,7 +40468,7 @@
     "previous": "Caesonius 6",
     "next": "Caesonius 8",
     "sort_key": "Caesonius 07",
-    "redirect": true,
+    "redirect": "Anicius 23",
     "chapters": [
       {
         "start": 1318,
@@ -40511,7 +40518,7 @@
     "lemma": "Caesonius 11",
     "previous": "Caesonius 10",
     "next": "Caesonius 12",
-    "redirect": true,
+    "redirect": "Milonia 1",
     "chapters": [
       {
         "start": 1318,
@@ -41855,7 +41862,7 @@
     "lemma": "Caligula",
     "previous": "Caligo",
     "next": "Calincius",
-    "redirect": true,
+    "redirect": "Iulius 133",
     "wp_link": "w:de:Caligula",
     "chapters": [
       {
@@ -42489,7 +42496,7 @@
     "previous": "Calpurnius 11",
     "next": "Calpurnius 13",
     "sort_key": "Calpurnius 012",
-    "redirect": true,
+    "redirect": "Iulius 160",
     "chapters": [
       {
         "start": 1365,
@@ -42753,6 +42760,7 @@
     "lemma": "Calpurnius 34",
     "previous": "Calpurnius 33",
     "next": "Calpurnius 35",
+    "sort_key": "Calpurnius 034",
     "chapters": [
       {
         "start": 1371,
@@ -43716,7 +43724,7 @@
   },
   {
     "lemma": "Calpurnius 117",
-    "previous": "Calpurnius 115",
+    "previous": "Calpurnius 116",
     "next": "Calpurnius 118",
     "chapters": [
       {
@@ -44164,7 +44172,7 @@
   {
     "lemma": "Calvinus 4",
     "previous": "Calvinus 3",
-    "next": "Calvisiana",
+    "next": "Calvinus 5",
     "chapters": [
       {
         "start": 1409,
@@ -44174,8 +44182,13 @@
     ]
   },
   {
-    "lemma": "Calvisiana",
+    "lemma": "Calvinus 5",
     "previous": "Calvinus 4",
+    "next": "Calvisiana"
+  },
+  {
+    "lemma": "Calvisiana",
+    "previous": "Calvinus 5",
     "next": "Calvisiana actio",
     "chapters": [
       {
@@ -44238,7 +44251,7 @@
     "previous": "Calvisius 3",
     "next": "Calvisius 5",
     "sort_key": "Calvisius 04",
-    "redirect": true,
+    "redirect": "Calvisius 17",
     "chapters": [
       {
         "start": 1410,
@@ -44383,7 +44396,7 @@
   {
     "lemma": "Calvisius 16",
     "previous": "Calvisius 15",
-    "next": "Calvisius 18",
+    "next": "Calvisius 17",
     "chapters": [
       {
         "start": 1413,
@@ -44393,8 +44406,13 @@
     ]
   },
   {
-    "lemma": "Calvisius 18",
+    "lemma": "Calvisius 17",
     "previous": "Calvisius 16",
+    "next": "Calvisius 18"
+  },
+  {
+    "lemma": "Calvisius 18",
+    "previous": "Calvisius 17",
     "next": "Calvisius 19",
     "chapters": [
       {

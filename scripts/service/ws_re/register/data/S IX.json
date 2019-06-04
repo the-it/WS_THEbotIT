@@ -145,7 +145,6 @@
   {
     "lemma": "Antonius 95a",
     "previous": "Areimanios",
-    "next": "Arekrat",
     "chapters": [
       {
         "start": 12,
@@ -155,9 +154,13 @@
     ]
   },
   {
+    "lemma": "Areimanios",
+    "next": "Arekrat"
+  },
+  {
     "lemma": "Arekrat",
-    "previous": "Antonius 95a",
-    "next": "Arranius 1",
+    "previous": "Areimanios",
+    "next": "Argyra 1",
     "chapters": [
       {
         "start": 13,
@@ -167,8 +170,11 @@
     ]
   },
   {
+    "lemma": "Argyra 1",
+    "previous": "Arekrat"
+  },
+  {
     "lemma": "Arranius 1",
-    "previous": "Arekrat",
     "next": "Arranius 2",
     "chapters": [
       {
@@ -205,7 +211,7 @@
   {
     "lemma": "Arsatzia",
     "previous": "Arrotrebarum promunturium",
-    "next": "Aspis 10a",
+    "next": "Ascheion",
     "chapters": [
       {
         "start": 14,
@@ -215,9 +221,11 @@
     ]
   },
   {
+    "lemma": "Ascheion",
+    "previous": "Arsatzia"
+  },
+  {
     "lemma": "Aspis 10a",
-    "previous": "Arsatzia",
-    "next": "Asprenas 1a",
     "chapters": [
       {
         "start": 15,
@@ -227,8 +235,13 @@
     ]
   },
   {
+    "lemma": "Ἀσπὶς ἄκρα",
+    "next": "Asprenas 1a",
+    "sort_key": "Aspis akra"
+  },
+  {
     "lemma": "Asprenas 1a",
-    "previous": "Aspis 10a",
+    "previous": "Ἀσπὶς ἄκρα",
     "next": "Asprius",
     "chapters": [
       {
@@ -301,7 +314,7 @@
   {
     "lemma": "Bomos Athenas",
     "previous": "Bobiensia epigrammata",
-    "next": "Aurelius 163a",
+    "next": "Buphagion",
     "chapters": [
       {
         "start": 17,
@@ -311,8 +324,11 @@
     ]
   },
   {
+    "lemma": "Buphagion",
+    "previous": "Bomos Athenas"
+  },
+  {
     "lemma": "Aurelius 163a",
-    "previous": "Bomos Athenas",
     "next": "Aurelius 217a",
     "chapters": [
       {
@@ -2130,7 +2146,6 @@
   {
     "lemma": "Pons 26",
     "previous": "Pons 15",
-    "next": "Pontos Euxeinos",
     "chapters": [
       {
         "start": 864,
@@ -2140,9 +2155,16 @@
     ]
   },
   {
+    "lemma": "Pontius 44"
+  },
+  {
+    "lemma": "Iberia",
+    "next": "Pontos Euxeinos"
+  },
+  {
     "lemma": "Pontos Euxeinos",
-    "previous": "Pons 26",
-    "next": "praeteritio 1",
+    "previous": "Iberia",
+    "next": "Seuthopolis",
     "chapters": [
       {
         "start": 866,
@@ -2152,8 +2174,14 @@
     ]
   },
   {
+    "lemma": "Seuthopolis",
+    "previous": "Pontos Euxeinos"
+  },
+  {
+    "lemma": "M. Porcius Verus 45"
+  },
+  {
     "lemma": "praeteritio 1",
-    "previous": "Pontos Euxeinos",
     "next": "praeteritio 2",
     "chapters": [
       {

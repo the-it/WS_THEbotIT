@@ -498,7 +498,7 @@
   {
     "lemma": "Anleihen",
     "previous": "Andronikos 16a",
-    "next": "Antibelos",
+    "next": "Antenor 6",
     "chapters": [
       {
         "start": 23,
@@ -508,8 +508,11 @@
     ]
   },
   {
+    "lemma": "Antenor 6",
+    "previous": "Anleihen"
+  },
+  {
     "lemma": "Antibelos",
-    "previous": "Anleihen",
     "next": "Antidamas",
     "chapters": [
       {
@@ -830,7 +833,7 @@
   {
     "lemma": "Aristobulos 4c",
     "previous": "Aristobulos 4b",
-    "next": "Aristobulos 14a",
+    "next": "Aristodemos 8a",
     "chapters": [
       {
         "start": 47,
@@ -840,8 +843,11 @@
     ]
   },
   {
+    "lemma": "Aristodemos 8a",
+    "previous": "Aristobulos 4c"
+  },
+  {
     "lemma": "Aristobulos 14a",
-    "previous": "Aristobulos 4c",
     "next": "Aristodemos 8a",
     "chapters": [
       {
@@ -953,7 +959,7 @@
   {
     "lemma": "Arridaios 8",
     "previous": "Aristophanes 8a",
-    "next": "Arsakes 9",
+    "next": "Arybas 2",
     "chapters": [
       {
         "start": 48,
@@ -963,8 +969,11 @@
     ]
   },
   {
+    "lemma": "Arybas 2",
+    "previous": "Arridaios 8"
+  },
+  {
     "lemma": "Arsakes 9",
-    "previous": "Arridaios 8",
     "next": "Arybas 2",
     "chapters": [
       {
@@ -1073,7 +1082,7 @@
   {
     "lemma": "Asklepiades 1a",
     "previous": "Arystas",
-    "next": "Asklepiades 2a) = 14a",
+    "next": "Asklepiades 2a",
     "chapters": [
       {
         "start": 50,
@@ -1083,9 +1092,11 @@
     ]
   },
   {
+    "lemma": "Asklepiades 2a",
+    "previous": "Asklepiades 1a"
+  },
+  {
     "lemma": "Asklepiades 2a) = 14a",
-    "previous": "Asklepiades 1a",
-    "next": "Aspis 17",
     "chapters": [
       {
         "start": 50,
@@ -1095,8 +1106,12 @@
     ]
   },
   {
+    "lemma": "Asklepiades 2a",
+    "next": "Aspis 17"
+  },
+  {
     "lemma": "Aspis 17",
-    "previous": "Asklepiades 2a) = 14a",
+    "previous": "Asklepiades 2a",
     "next": "Assagetes",
     "chapters": [
       {
@@ -1217,7 +1232,6 @@
   {
     "lemma": "Attinas 2",
     "previous": "Atizyes",
-    "next": "Attylos",
     "chapters": [
       {
         "start": 57,
@@ -1227,8 +1241,12 @@
     ]
   },
   {
+    "lemma": "Attinas",
+    "next": "Attylos"
+  },
+  {
     "lemma": "Attylos",
-    "previous": "Attinas 2",
+    "previous": "Attinas",
     "next": "Auranos",
     "chapters": [
       {
@@ -1313,7 +1331,7 @@
   {
     "lemma": "Banken",
     "previous": "Bakenor",
-    "next": "Basias",
+    "next": "Barsine 2",
     "chapters": [
       {
         "start": 68,
@@ -1323,8 +1341,13 @@
     ]
   },
   {
-    "lemma": "Basias",
+    "lemma": "Barsine 2",
     "previous": "Banken",
+    "next": "Basias"
+  },
+  {
+    "lemma": "Basias",
+    "previous": "Barsine 2",
     "next": "Batichos",
     "chapters": [
       {
@@ -1457,7 +1480,7 @@
   {
     "lemma": "Bulagoras 2",
     "previous": "Boupares",
-    "next": "Chaireas 5a",
+    "next": "Cercina",
     "chapters": [
       {
         "start": 214,
@@ -1467,9 +1490,14 @@
     ]
   },
   {
-    "lemma": "Chaireas 5a",
+    "lemma": "Cercina",
     "previous": "Bulagoras 2",
-    "next": "Charon 5a",
+    "next": "Chaireas 5a"
+  },
+  {
+    "lemma": "Chaireas 5a",
+    "previous": "Cercina",
+    "next": "Χαμαιδικαστής",
     "chapters": [
       {
         "start": 214,
@@ -1479,8 +1507,11 @@
     ]
   },
   {
+    "lemma": "Χαμαιδικαστής",
+    "previous": "Chaireas 5a"
+  },
+  {
     "lemma": "Charon 5a",
-    "previous": "Chaireas 5a",
     "next": "Charos",
     "chapters": [
       {
