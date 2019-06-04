@@ -74,9 +74,6 @@ class TestAlphabeticRegister(BaseTestRegister):
 |-
 ||III,1
 ||
-|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
-|Abbott
-|style="background:#CBCBCB"|
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||III,1

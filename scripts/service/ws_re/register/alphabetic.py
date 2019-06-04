@@ -57,7 +57,8 @@ class AlphabeticRegister(Register):
             table_rows = []
             lemma = None
             for lemma in lemmas:
-                chapter_sum += len(lemma.chapters)
+                # if there are no chapters ... one line must be added no madder what
+                chapter_sum += max(len(lemma.chapters), 1)
                 table_rows.append(lemma.get_table_row(print_volume=True))
             # strip |-/n form the first line it is later replaced by the lemma line
             table_rows[0] = table_rows[0][3:]
