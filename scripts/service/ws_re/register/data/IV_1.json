@@ -790,8 +790,20 @@
     ]
   },
   {
-    "lemma": "Cloatius 1",
+    "lemma": "Cloatius",
     "previous": "Cloatilla",
+    "next": "Cloatius 1",
+    "chapters": [
+      {
+        "start": 61,
+        "end": 61,
+        "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Cloatius 1",
+    "previous": "Cloatius",
     "next": "Cloatius 2",
     "chapters": [
       {
@@ -2310,27 +2322,15 @@
     "chapters": [
       {
         "start": 118,
-        "end": 118,
+        "end": 119,
         "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Cluturnum",
-    "previous": "Clutorius 1",
-    "next": "Clutorius 2",
-    "chapters": [
-      {
-        "start": 118,
-        "end": 118,
-        "author": "Hülsen"
       }
     ]
   },
   {
     "lemma": "Clutorius 2",
     "previous": "Clutorius 1",
-    "next": "Cluviae",
+    "next": "Cluturnum",
     "chapters": [
       {
         "start": 119,
@@ -2340,8 +2340,20 @@
     ]
   },
   {
-    "lemma": "Cluviae",
+    "lemma": "Cluturnum",
     "previous": "Clutorius 2",
+    "next": "Cluviae",
+    "chapters": [
+      {
+        "start": 119,
+        "end": 119,
+        "author": "Hülsen"
+      }
+    ]
+  },
+  {
+    "lemma": "Cluviae",
+    "previous": "Cluturnum",
     "next": "Cluvidienus",
     "chapters": [
       {

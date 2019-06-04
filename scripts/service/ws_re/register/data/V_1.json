@@ -5912,18 +5912,6 @@
     ]
   },
   {
-    "lemma": "Dia(.....) pagus",
-    "previous": "Dianium 2",
-    "next": "Diaphanes",
-    "chapters": [
-      {
-        "start": 341,
-        "end": 341,
-        "author": "Ihm"
-      }
-    ]
-  },
-  {
     "lemma": "Dianium 3",
     "previous": "Dianium 2",
     "next": "Διαγκυλοῦσθαι",
@@ -5936,14 +5924,26 @@
     ]
   },
   {
-    "lemma": "Diankylusthai",
+    "lemma": "Διαγκυλοῦσθαι",
     "previous": "Dianium 3",
-    "next": "Diaphanes",
+    "next": "Dia(.....) pagus",
     "chapters": [
       {
         "start": 341,
         "end": 341,
         "author": "Droysen"
+      }
+    ]
+  },
+  {
+    "lemma": "Dia(.....) pagus",
+    "previous": "Διαγκυλοῦσθαι",
+    "next": "Diaphanes",
+    "chapters": [
+      {
+        "start": 341,
+        "end": 341,
+        "author": "Ihm"
       }
     ]
   },
@@ -5960,7 +5960,7 @@
     ]
   },
   {
-    "lemma": "Diaphanes 2",
+    "lemma": "Διαφανές",
     "previous": "Diaphanes",
     "next": "Diaphoros",
     "chapters": [
@@ -5973,7 +5973,7 @@
   },
   {
     "lemma": "Diaphoros",
-    "previous": "Diaphanes 2",
+    "previous": "Διαφανές",
     "next": "Diaphragma",
     "chapters": [
       {
