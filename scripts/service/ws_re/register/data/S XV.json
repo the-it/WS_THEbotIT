@@ -1431,7 +1431,7 @@
   {
     "lemma": "Claudius 32b",
     "previous": "Classicus 1a",
-    "next": "Claudius 80a",
+    "next": "Claudius 64",
     "chapters": [
       {
         "start": 89,
@@ -1441,8 +1441,14 @@
     ]
   },
   {
-    "lemma": "Claudius 80a",
+    "lemma": "Claudius 64",
     "previous": "Claudius 32b",
+    "next": "Claudius 80a",
+    "sort_key": "Claudius 64"
+  },
+  {
+    "lemma": "Claudius 80a",
+    "previous": "Claudius 64",
     "next": "Claudius 95a",
     "chapters": [
       {
@@ -1455,7 +1461,7 @@
   {
     "lemma": "Claudius 95a",
     "previous": "Claudius 80a",
-    "next": "Claudius 171a",
+    "next": "Claudius 150a",
     "chapters": [
       {
         "start": 90,
@@ -1465,8 +1471,14 @@
     ]
   },
   {
-    "lemma": "Claudius 171a",
+    "lemma": "Claudius 150a",
     "previous": "Claudius 95a",
+    "next": "Claudius 171a",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 171a",
+    "previous": "Claudius 150a",
     "next": "Claudius 173a",
     "chapters": [
       {
@@ -1518,7 +1530,6 @@
   },
   {
     "lemma": "Coiedius 2",
-    "next": "Claudius 380a",
     "chapters": [
       {
         "start": 91,
@@ -1528,8 +1539,12 @@
     ]
   },
   {
+    "lemma": "Claudius 353",
+    "next": "Claudius 380a"
+  },
+  {
     "lemma": "Claudius 380a",
-    "previous": "Coiedius 2",
+    "previous": "Claudius 353",
     "next": "Claudius 407a",
     "chapters": [
       {

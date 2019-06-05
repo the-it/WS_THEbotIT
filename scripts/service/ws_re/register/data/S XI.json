@@ -552,7 +552,7 @@
   {
     "lemma": "Bilachiniensis statio",
     "previous": "Bianor 5a",
-    "next": "Calcinius",
+    "next": "Brauron",
     "chapters": [
       {
         "start": 355,
@@ -562,8 +562,18 @@
     ]
   },
   {
-    "lemma": "Calcinius",
+    "lemma": "Brauron",
     "previous": "Bilachiniensis statio",
+    "next": "Bryson 1"
+  },
+  {
+    "lemma": "Bryson 1",
+    "previous": "Brauron",
+    "next": "Calcinius"
+  },
+  {
+    "lemma": "Calcinius",
+    "previous": "Bryson 1",
     "next": "Calpurnius 56a",
     "chapters": [
       {

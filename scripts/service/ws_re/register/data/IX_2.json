@@ -3666,7 +3666,7 @@
   {
     "lemma": "Ion 18",
     "previous": "Ion 17",
-    "next": "Ionaion",
+    "next": "Ionaka",
     "chapters": [
       {
         "start": 1869,
@@ -3676,21 +3676,9 @@
     ]
   },
   {
-    "lemma": "Ionaion",
-    "previous": "Ion 18",
-    "next": "Ionaka",
-    "chapters": [
-      {
-        "start": 1869,
-        "end": 1869,
-        "author": "Fimmen"
-      }
-    ]
-  },
-  {
     "lemma": "Ionaka",
-    "previous": "Ionaion",
-    "next": "Ionda",
+    "previous": "Ion 18",
+    "next": "Ionaion",
     "chapters": [
       {
         "start": 1869,
@@ -3700,8 +3688,20 @@
     ]
   },
   {
-    "lemma": "Ionda",
+    "lemma": "Ionaion",
     "previous": "Ionaka",
+    "next": "Ionda",
+    "chapters": [
+      {
+        "start": 1869,
+        "end": 1869,
+        "author": "Fimmen"
+      }
+    ]
+  },
+  {
+    "lemma": "Ionda",
+    "previous": "Ionaion",
     "next": "Iones",
     "chapters": [
       {

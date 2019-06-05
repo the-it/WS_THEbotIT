@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Agamemnon 3",
+    "previous": null,
     "next": "Agathon 14b",
     "chapters": [
       {
@@ -97,7 +98,6 @@
   {
     "lemma": "Apollodoros 41e",
     "previous": "Apelles 5a",
-    "next": "Apollonios 126b",
     "chapters": [
       {
         "start": 43,
@@ -107,8 +107,12 @@
     ]
   },
   {
+    "lemma": "Apollonios 122",
+    "next": "Apollonios 126b"
+  },
+  {
     "lemma": "Apollonios 126b",
-    "previous": "Apollodoros 41e",
+    "previous": "Apollonios 122",
     "next": "Aquilinus 1",
     "chapters": [
       {
@@ -1386,7 +1390,7 @@
   {
     "lemma": "Legeon",
     "previous": "Lecho",
-    "next": "Lekythos 2",
+    "next": "Lekythos",
     "chapters": [
       {
         "start": 546,
@@ -1396,8 +1400,11 @@
     ]
   },
   {
+    "lemma": "Lekythos",
+    "previous": "Legeon"
+  },
+  {
     "lemma": "Lekythos 2",
-    "previous": "Legeon",
     "next": "Lemniskos",
     "chapters": [
       {

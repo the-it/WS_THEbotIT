@@ -1,3 +1,5 @@
+from unittest import TestCase, skipUnless, skip
+
 from testfixtures import compare
 
 from scripts.service.ws_re.register.author import Authors
@@ -427,3 +429,11 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         update_dict = {"lemma": "B", "previous": "A", "next": "D"}
         with self.assertRaisesRegex(RegisterException, "Diff between previous and next aren't 1 or 2"):
             register.update_lemma(update_dict, [])
+
+
+@skip("only for analysis")
+class TestIntegrationRegister(TestCase):
+    def test_json_integrity(self):  # pragma: no cover
+        for volume in Volumes().all_volumes:
+            print(volume)
+            VolumeRegister(volume, Authors)

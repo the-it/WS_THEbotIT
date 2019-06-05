@@ -49,7 +49,7 @@
   {
     "lemma": "Aischetades",
     "previous": "Aguntum",
-    "next": "Alum Gallicum",
+    "next": "Alexandros 17",
     "chapters": [
       {
         "start": 21,
@@ -59,8 +59,11 @@
     ]
   },
   {
+    "lemma": "Alexandros 17",
+    "previous": "Aischetades"
+  },
+  {
     "lemma": "Alum Gallicum",
-    "previous": "Aischetades",
     "next": "Amphinomos 6",
     "chapters": [
       {
@@ -134,6 +137,7 @@
   {
     "lemma": "Archisomatophylakes",
     "previous": "Aqua, Aquae 77a",
+    "next": "Architectura",
     "chapters": [
       {
         "start": 46,
@@ -235,7 +239,6 @@
   {
     "lemma": "Attributio",
     "previous": "Ἀσκληπιαις",
-    "next": "Aurelius 39a",
     "chapters": [
       {
         "start": 65,
@@ -245,9 +248,13 @@
     ]
   },
   {
+    "lemma": "Aurelius 63a",
+    "next": "Aurelius 39a"
+  },
+  {
     "lemma": "Aurelius 39a",
-    "previous": "Attributio",
-    "next": "Aurelius 63a",
+    "previous": "Aurelius 63a",
+    "next": "Aurelius 56b",
     "sort_key": "Aurelius 039a",
     "chapters": [
       {
@@ -258,9 +265,17 @@
     ]
   },
   {
+    "lemma": "Aurelius 56b",
+    "previous": "Aurelius 39a"
+  },
+  {
+    "lemma": "Auction 1",
+    "next": "Aurelius 63a"
+  },
+  {
     "lemma": "Aurelius 63a",
-    "previous": "Aurelius 39a",
-    "next": "Aurelius 145aaa",
+    "previous": "Auction 1",
+    "next": "Aurelius 39a",
     "chapters": [
       {
         "start": 72,
@@ -270,9 +285,17 @@
     ]
   },
   {
+    "lemma": "Aurelius 39a",
+    "previous": "Aurelius 63a"
+  },
+  {
+    "lemma": "Aurelius 56b",
+    "next": "Aurelius 145aaa"
+  },
+  {
     "lemma": "Aurelius 145aaa",
-    "previous": "Aurelius 63a",
-    "next": "Aurelius 216a",
+    "previous": "Aurelius 56b",
+    "next": "Aurelius 184",
     "chapters": [
       {
         "start": 73,
@@ -282,8 +305,13 @@
     ]
   },
   {
-    "lemma": "Aurelius 216a",
+    "lemma": "Aurelius 184",
     "previous": "Aurelius 145aaa",
+    "next": "Aurelius 216a"
+  },
+  {
+    "lemma": "Aurelius 216a",
+    "previous": "Aurelius 184",
     "next": "Aurelius 234a",
     "chapters": [
       {

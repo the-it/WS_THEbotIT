@@ -1367,7 +1367,6 @@
   {
     "lemma": "Pontos 1",
     "previous": "Pontoreia",
-    "next": "Pontyris",
     "chapters": [
       {
         "start": 47,
@@ -1377,8 +1376,13 @@
     ]
   },
   {
+    "lemma": "Pontos Euxeinos",
+    "next": "Pontyris",
+    "wp_link": "w:de:Schwarzes Meer"
+  },
+  {
     "lemma": "Pontyris",
-    "previous": "Pontos 1",
+    "previous": "Pontos Euxeinos",
     "next": "Popanon 1",
     "chapters": [
       {

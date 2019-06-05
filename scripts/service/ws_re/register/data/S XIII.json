@@ -104,7 +104,6 @@
   {
     "lemma": "Athenai 1B",
     "previous": "Alpium Iuliarum Claustra",
-    "next": "Chlodovechus",
     "chapters": [
       {
         "start": 56,
@@ -114,8 +113,14 @@
     ]
   },
   {
+    "lemma": "Athenai 1c",
+    "next": "Chlodovechus",
+    "wp_link": "w:de:Athen",
+    "ws_link": "s:de:Athen"
+  },
+  {
     "lemma": "Chlodovechus",
-    "previous": "Athenai 1B",
+    "previous": "Athenai 1c",
     "next": "Kallimachos 6",
     "chapters": [
       {

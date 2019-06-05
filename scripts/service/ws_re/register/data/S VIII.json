@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Achaios 8",
+    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -206,7 +207,7 @@
   {
     "lemma": "Antiochos 70a",
     "previous": "Antikos",
-    "next": "Antoniniana aqua",
+    "next": "Antiphidas",
     "chapters": [
       {
         "start": 4,
@@ -216,8 +217,13 @@
     ]
   },
   {
-    "lemma": "Antoniniana aqua",
+    "lemma": "Antiphidas",
     "previous": "Antiochos 70a",
+    "next": "Antoniniana aqua"
+  },
+  {
+    "lemma": "Antoniniana aqua",
+    "previous": "Antiphidas",
     "next": "Aphrodisios 10a",
     "chapters": [
       {
@@ -302,7 +308,7 @@
   {
     "lemma": "Aristonidas 1",
     "previous": "Aristodemos 7a",
-    "next": "Aristonidas 2",
+    "next": "Aristonidas 4",
     "chapters": [
       {
         "start": 6,
@@ -312,8 +318,11 @@
     ]
   },
   {
+    "lemma": "Aristonidas 4",
+    "previous": "Aristonidas 1"
+  },
+  {
     "lemma": "Aristonidas 2",
-    "previous": "Aristonidas 1",
     "next": "Aristonidas 3",
     "chapters": [
       {
@@ -350,7 +359,7 @@
   {
     "lemma": "Asklepiades 48a",
     "previous": "Aristonidas 4",
-    "next": "Bathykleia",
+    "next": "Asklepiodoros 13",
     "chapters": [
       {
         "start": 7,
@@ -360,8 +369,16 @@
     ]
   },
   {
+    "lemma": "Asklepiodoros 13",
+    "previous": "Asklepiades 48a"
+  },
+  {
+    "lemma": "Aurelia aqua",
+    "next": "Bathykleia"
+  },
+  {
     "lemma": "Bathykleia",
-    "previous": "Asklepiades 48a",
+    "previous": "Aurelia aqua",
     "next": "Benenatus 1",
     "chapters": [
       {
@@ -386,6 +403,7 @@
   {
     "lemma": "Benenatus 2",
     "previous": "Benenatus 1",
+    "next": "Benenatus 3",
     "chapters": [
       {
         "start": 7,
@@ -393,6 +411,10 @@
         "author": "Enßlin"
       }
     ]
+  },
+  {
+    "lemma": "Benenatus 3",
+    "previous": "Benenatus 2"
   },
   {
     "lemma": "Asklepiades 48a",
@@ -661,8 +683,13 @@
     "previous": "Claudius 354a"
   },
   {
+    "lemma": "Dalmatia",
+    "next": "Damokritos 4"
+  },
+  {
     "lemma": "Damokritos 4",
-    "next": "Demokydes",
+    "previous": "Dalmatia",
+    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -672,8 +699,11 @@
     ]
   },
   {
+    "lemma": "December 2",
+    "previous": "Damokritos 4"
+  },
+  {
     "lemma": "Demokydes",
-    "previous": "Damokritos 4",
     "next": "Die(i)trephes",
     "chapters": [
       {
@@ -698,7 +728,6 @@
   {
     "lemma": "Diodoros 13",
     "previous": "Die(i)trephes",
-    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -708,8 +737,12 @@
     ]
   },
   {
+    "lemma": "Damokritos 4",
+    "next": "December 2"
+  },
+  {
     "lemma": "December 2",
-    "previous": "Diodoros 13",
+    "previous": "Damokritos 4",
     "next": "Demetrios 125b",
     "chapters": [
       {
@@ -722,7 +755,7 @@
   {
     "lemma": "Demetrios 125b",
     "previous": "December 2",
-    "next": "Dionysios 161b",
+    "next": "Demokydes",
     "chapters": [
       {
         "start": 60,
@@ -732,8 +765,11 @@
     ]
   },
   {
+    "lemma": "Demokydes",
+    "previous": "Demetrios 125b"
+  },
+  {
     "lemma": "Dionysios 161b",
-    "previous": "Demetrios 125b",
     "next": "Drakontides 3a",
     "chapters": [
       {
