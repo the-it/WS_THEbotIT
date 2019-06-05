@@ -1244,7 +1244,7 @@
   {
     "lemma": "Demophilos 14",
     "previous": "Demophilos 13",
-    "next": "Demophon 1",
+    "next": "Demophon",
     "chapters": [
       {
         "start": 147,
@@ -1254,8 +1254,14 @@
     ]
   },
   {
-    "lemma": "Demophon 1",
+    "lemma": "Demophon",
     "previous": "Demophilos 14",
+    "next": "Demophon 1",
+    "sort_key": "Demophon 00"
+  },
+  {
+    "lemma": "Demophon 1",
+    "previous": "Demophon",
     "next": "Demophon 2",
     "sort_key": "Demophon 01",
     "chapters": [
@@ -1285,7 +1291,7 @@
     "previous": "Demophon 2",
     "next": "Demophon 4",
     "sort_key": "Demophon 03",
-    "redirect": true,
+    "redirect": "Demiphon",
     "chapters": [
       {
         "start": 152,
@@ -5776,6 +5782,7 @@
     "lemma": "Diana, Dianae, ad Dianam 3",
     "previous": "Diana, Dianae, ad Dianam 2",
     "next": "Diana, Dianae, ad Dianam 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 339,
@@ -5883,6 +5890,7 @@
     "lemma": "Dianium 1",
     "previous": "Dianense castellum",
     "next": "Dianium 2",
+    "wp_link": "w:de:Giannutri",
     "chapters": [
       {
         "start": 340,
@@ -5894,7 +5902,7 @@
   {
     "lemma": "Dianium 2",
     "previous": "Dianium 1",
-    "next": "Dia(.....) pagus",
+    "next": "Dianium 3",
     "chapters": [
       {
         "start": 340,
@@ -5904,21 +5912,10 @@
     ]
   },
   {
-    "lemma": "Dia(.....) pagus",
-    "previous": "Dianium 2",
-    "next": "Dianium 3",
-    "chapters": [
-      {
-        "start": 341,
-        "end": 341,
-        "author": "Ihm"
-      }
-    ]
-  },
-  {
     "lemma": "Dianium 3",
-    "previous": "Dia(.....) pagus",
-    "next": "Diankylusthai",
+    "previous": "Dianium 2",
+    "next": "Διαγκυλοῦσθαι",
+    "redirect": "Diana, Dianae, ad Dianam 4",
     "chapters": [
       {
         "start": 341,
@@ -5927,9 +5924,9 @@
     ]
   },
   {
-    "lemma": "Diankylusthai",
+    "lemma": "Διαγκυλοῦσθαι",
     "previous": "Dianium 3",
-    "next": "Diaphanes",
+    "next": "Dia(.....) pagus",
     "chapters": [
       {
         "start": 341,
@@ -5939,9 +5936,21 @@
     ]
   },
   {
+    "lemma": "Dia(.....) pagus",
+    "previous": "Διαγκυλοῦσθαι",
+    "next": "Diaphanes",
+    "chapters": [
+      {
+        "start": 341,
+        "end": 341,
+        "author": "Ihm"
+      }
+    ]
+  },
+  {
     "lemma": "Diaphanes",
-    "previous": "Diankylusthai",
-    "next": "Diaphanes 2",
+    "previous": "Dia(.....) pagus",
+    "next": "Διαφανές",
     "chapters": [
       {
         "start": 341,
@@ -5951,7 +5960,7 @@
     ]
   },
   {
-    "lemma": "Diaphanes 2",
+    "lemma": "Διαφανές",
     "previous": "Diaphanes",
     "next": "Diaphoros",
     "chapters": [
@@ -5964,7 +5973,7 @@
   },
   {
     "lemma": "Diaphoros",
-    "previous": "Diaphanes 2",
+    "previous": "Διαφανές",
     "next": "Diaphragma",
     "chapters": [
       {
@@ -22158,7 +22167,7 @@
   {
     "lemma": "Domitius 49",
     "previous": "Domitius 48",
-    "next": "Domitius 51",
+    "next": "Domitius 50",
     "sort_key": "Domitius 049",
     "chapters": [
       {
@@ -22169,8 +22178,15 @@
     ]
   },
   {
-    "lemma": "Domitius 51",
+    "lemma": "Domitius 50",
     "previous": "Domitius 49",
+    "next": "Domitius 51",
+    "sort_key": "Domitius 050",
+    "redirect": "Domitius 29"
+  },
+  {
+    "lemma": "Domitius 51",
+    "previous": "Domitius 50",
     "next": "Domitius 52",
     "sort_key": "Domitius 051",
     "chapters": [

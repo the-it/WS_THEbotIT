@@ -1182,7 +1182,7 @@
   {
     "lemma": "Chalai",
     "previous": "Cestius 6a",
-    "next": "Claudius 211",
+    "next": "Chalaion",
     "chapters": [
       {
         "start": 148,
@@ -1192,8 +1192,11 @@
     ]
   },
   {
+    "lemma": "Chalaion",
+    "previous": "Chalai"
+  },
+  {
     "lemma": "Claudius 211",
-    "previous": "Chalai",
     "next": "Claudius 259a",
     "chapters": [
       {
@@ -1206,7 +1209,7 @@
   {
     "lemma": "Claudius 259a",
     "previous": "Claudius 211",
-    "next": "Claudius 288a",
+    "next": "Claudius 262",
     "chapters": [
       {
         "start": 156,
@@ -1216,8 +1219,16 @@
     ]
   },
   {
-    "lemma": "Claudius 288a",
+    "lemma": "Claudius 262",
     "previous": "Claudius 259a",
+    "next": "Claudius 285"
+  },
+  {
+    "lemma": "Claudius 285",
+    "previous": "Claudius 262"
+  },
+  {
+    "lemma": "Claudius 288a",
     "next": "Claudius 299a",
     "chapters": [
       {

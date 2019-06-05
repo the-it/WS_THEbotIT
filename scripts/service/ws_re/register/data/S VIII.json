@@ -386,7 +386,6 @@
   {
     "lemma": "Benenatus 2",
     "previous": "Benenatus 1",
-    "next": "Asklepiodoros 13",
     "chapters": [
       {
         "start": 7,
@@ -396,8 +395,12 @@
     ]
   },
   {
+    "lemma": "Asklepiades 48a",
+    "next": "Asklepiodoros 13"
+  },
+  {
     "lemma": "Asklepiodoros 13",
-    "previous": "Benenatus 2",
+    "previous": "Asklepiades 48a",
     "next": "Attica aqua",
     "chapters": [
       {
@@ -446,8 +449,8 @@
   {
     "lemma": "Aurelia aqua",
     "previous": "Augusta aqua 2",
-    "next": "Benenatus 3",
-    "redirect": true,
+    "next": "Bathykleia",
+    "redirect": "Traiana aqua",
     "chapters": [
       {
         "start": 8,
@@ -456,8 +459,16 @@
     ]
   },
   {
+    "lemma": "Bathykleia",
+    "previous": "Aurelia aqua"
+  },
+  {
+    "lemma": "Benenatus 2",
+    "next": "Benenatus 3"
+  },
+  {
     "lemma": "Benenatus 3",
-    "previous": "Aurelia aqua",
+    "previous": "Benenatus 2",
     "next": "Benenatus 4",
     "chapters": [
       {
@@ -591,6 +602,7 @@
   {
     "lemma": "Claudia aqua",
     "previous": "Charinos 11",
+    "next": "Claudius 354a",
     "chapters": [
       {
         "start": 20,
@@ -601,6 +613,7 @@
   },
   {
     "lemma": "Claudius 354a",
+    "previous": "Claudia aqua",
     "next": "Conclusa aqua"
   },
   {
@@ -618,7 +631,6 @@
   {
     "lemma": "Dalmatia",
     "previous": "Conclusa aqua",
-    "next": "Claudius 354a",
     "wp_link": "w:de:Dalmatia",
     "chapters": [
       {
@@ -629,9 +641,13 @@
     ]
   },
   {
+    "lemma": "Claudia aqua",
+    "next": "Claudius 354a"
+  },
+  {
     "lemma": "Claudius 354a",
-    "previous": "Dalmatia",
-    "next": "Damokritos 4",
+    "previous": "Claudia aqua",
+    "next": "Conclusa aqua",
     "chapters": [
       {
         "start": 22,
@@ -641,8 +657,11 @@
     ]
   },
   {
+    "lemma": "Conclusa aqua",
+    "previous": "Claudius 354a"
+  },
+  {
     "lemma": "Damokritos 4",
-    "previous": "Claudius 354a",
     "next": "Demokydes",
     "chapters": [
       {

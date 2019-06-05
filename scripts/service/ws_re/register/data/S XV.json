@@ -1413,7 +1413,7 @@
   {
     "lemma": "Cimberius",
     "previous": "Chione 10",
-    "next": "Claudius 32b",
+    "next": "Classicus 1a",
     "chapters": [
       {
         "start": 88,
@@ -1423,8 +1423,14 @@
     ]
   },
   {
-    "lemma": "Claudius 32b",
+    "lemma": "Classicus 1a",
     "previous": "Cimberius",
+    "next": "Claudius 32b",
+    "redirect": "Aelius 38a"
+  },
+  {
+    "lemma": "Claudius 32b",
+    "previous": "Classicus 1a",
     "next": "Claudius 80a",
     "chapters": [
       {
@@ -1497,7 +1503,7 @@
   {
     "lemma": "Claudius 341a",
     "previous": "Claudius 320a",
-    "next": "Coiedius 2",
+    "next": "Claudius 343",
     "chapters": [
       {
         "start": 91,
@@ -1507,8 +1513,11 @@
     ]
   },
   {
+    "lemma": "Claudius 343",
+    "previous": "Claudius 341a"
+  },
+  {
     "lemma": "Coiedius 2",
-    "previous": "Claudius 341a",
     "next": "Claudius 380a",
     "chapters": [
       {

@@ -7949,7 +7949,7 @@
     "previous": "Cassianus 2",
     "next": "Cassianus 4",
     "sort_key": "Cassianus 03",
-    "redirect": true,
+    "redirect": "Antonius 43",
     "chapters": [
       {
         "start": 1667,
@@ -10801,7 +10801,7 @@
     "lemma": "Castus 2",
     "previous": "Castus 1",
     "next": "Castus 3",
-    "redirect": true,
+    "redirect": "Fulvius 75",
     "chapters": [
       {
         "start": 1780,
@@ -12381,7 +12381,7 @@
     "lemma": "Catulus 4",
     "previous": "Catulus 3",
     "next": "Catumerus",
-    "redirect": true,
+    "redirect": "Cinna 7",
     "chapters": [
       {
         "start": 1797,
@@ -12488,7 +12488,7 @@
     "lemma": "Catus 2",
     "previous": "Catus 1",
     "next": "Catus 3",
-    "redirect": true,
+    "redirect": "Aelius 35",
     "chapters": [
       {
         "start": 1798,
@@ -15206,7 +15206,7 @@
     "lemma": "Celsus 24",
     "previous": "Celsus 23",
     "next": "Celtae 1",
-    "redirect": true,
+    "redirect": "Nonius 59",
     "chapters": [
       {
         "start": 1886,
@@ -17413,7 +17413,7 @@
     "lemma": "Ceronius",
     "previous": "Cerones",
     "next": "Cerophae",
-    "redirect": true,
+    "redirect": "Kekropios",
     "chapters": [
       {
         "start": 1985,
@@ -19908,7 +19908,7 @@
   {
     "lemma": "Chaldaicus lacus",
     "previous": "Chaldaia",
-    "next": "Chaldaika logia",
+    "next": "Χαλδαϊκὰ λόγια",
     "chapters": [
       {
         "start": 2044,
@@ -19918,7 +19918,7 @@
     ]
   },
   {
-    "lemma": "Chaldaika logia",
+    "lemma": "Χαλδαϊκὰ λόγια",
     "previous": "Chaldaicus lacus",
     "next": "Chaldaioi 1",
     "chapters": [
@@ -19931,7 +19931,7 @@
   },
   {
     "lemma": "Chaldaioi 1",
-    "previous": "Chaldaika logia",
+    "previous": "Χαλδαϊκὰ λόγια",
     "next": "Chaldaioi 2",
     "wp_link": "w:de:Chaldäer",
     "chapters": [
@@ -21439,7 +21439,7 @@
   {
     "lemma": "Champesides",
     "previous": "Chamos",
-    "next": "Champsai",
+    "next": "Χάμψαι",
     "chapters": [
       {
         "start": 2108,
@@ -21449,7 +21449,7 @@
     ]
   },
   {
-    "lemma": "Champsai",
+    "lemma": "Χάμψαι",
     "previous": "Champesides",
     "next": "Chamyne",
     "chapters": [
@@ -21462,7 +21462,7 @@
   },
   {
     "lemma": "Chamyne",
-    "previous": "Champsai",
+    "previous": "Χάμψαι",
     "next": "Chanaanos",
     "chapters": [
       {
@@ -23027,7 +23027,7 @@
   {
     "lemma": "Charidemos 10",
     "previous": "Charidemos 9",
-    "next": "Charidemu akroterion",
+    "next": "Χαριδήμου ἀκρωτήριον",
     "chapters": [
       {
         "start": 2138,
@@ -23037,7 +23037,7 @@
     ]
   },
   {
-    "lemma": "Charidemu akroterion",
+    "lemma": "Χαριδήμου ἀκρωτήριον",
     "previous": "Charidemos 10",
     "next": "Charidotes",
     "chapters": [
@@ -23050,7 +23050,7 @@
   },
   {
     "lemma": "Charidotes",
-    "previous": "Charidemu akroterion",
+    "previous": "Χαριδήμου ἀκρωτήριον",
     "next": "Charieis",
     "chapters": [
       {
@@ -23567,7 +23567,7 @@
   {
     "lemma": "Chariomundus",
     "previous": "Chariomerus",
-    "next": "Charioros",
+    "next": "Chariovalda",
     "chapters": [
       {
         "start": 2145,
@@ -23577,20 +23577,8 @@
     ]
   },
   {
-    "lemma": "Charioros",
-    "previous": "Chariomundus",
-    "next": "Chariovalda",
-    "chapters": [
-      {
-        "start": 2145,
-        "end": 2145,
-        "author": "Bürchner"
-      }
-    ]
-  },
-  {
     "lemma": "Chariovalda",
-    "previous": "Charioros",
+    "previous": "Chariomundus",
     "next": "Charioviscus",
     "chapters": [
       {
@@ -23603,7 +23591,7 @@
   {
     "lemma": "Charioviscus",
     "previous": "Chariovalda",
-    "next": "Chariphemos",
+    "next": "Charioros",
     "chapters": [
       {
         "start": 2145,
@@ -23613,8 +23601,20 @@
     ]
   },
   {
-    "lemma": "Chariphemos",
+    "lemma": "Charioros",
     "previous": "Charioviscus",
+    "next": "Chariphemos",
+    "chapters": [
+      {
+        "start": 2145,
+        "end": 2145,
+        "author": "Bürchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Chariphemos",
+    "previous": "Charioros",
     "next": "Chariphu",
     "chapters": [
       {
@@ -24623,7 +24623,7 @@
   {
     "lemma": "Charoneia",
     "previous": "Charondas 2",
-    "next": "Charoneioi klimakes",
+    "next": "Χαρώνειοι κλίμακες",
     "chapters": [
       {
         "start": 2183,
@@ -24633,7 +24633,7 @@
     ]
   },
   {
-    "lemma": "Charoneioi klimakes",
+    "lemma": "Χαρώνειοι κλίμακες",
     "previous": "Charoneia",
     "next": "Charoneios thyra",
     "chapters": [
@@ -24646,7 +24646,7 @@
   },
   {
     "lemma": "Charoneios thyra",
-    "previous": "Charoneioi klimakes",
+    "previous": "Χαρώνειοι κλίμακες",
     "next": "Charonion",
     "chapters": [
       {
@@ -26077,7 +26077,7 @@
   {
     "lemma": "Χελωνίτης κόλπος",
     "previous": "Chelone 4",
-    "next": "Chelonites nesos",
+    "next": "Χελωνίτης νῆσος",
     "chapters": [
       {
         "start": 2230,
@@ -26087,9 +26087,9 @@
     ]
   },
   {
-    "lemma": "Chelonites nesos",
+    "lemma": "Χελωνίτης νῆσος",
     "previous": "Χελωνίτης κόλπος",
-    "next": "Chelonitides limnai",
+    "next": "Χελωνίτιδες λίμναι",
     "chapters": [
       {
         "start": 2230,
@@ -26099,20 +26099,14 @@
     ]
   },
   {
-    "lemma": "Chelonitides limnai",
-    "previous": "Chelonites nesos",
-    "next": "Chelonitides nesoi",
-    "chapters": [
-      {
-        "start": 2230,
-        "end": 2230,
-        "author": "Fischer"
-      }
-    ]
+    "lemma": "Χελωνίτιδες λίμναι",
+    "previous": "Χελωνίτης νῆσος",
+    "next": "Χελωνίτιδες νῆσοι",
+    "sort_key": "Chelonitιdeslimnai"
   },
   {
-    "lemma": "Chelonitides nesoi",
-    "previous": "Chelonitides limnai",
+    "lemma": "Χελωνίτιδες νῆσοι",
+    "previous": "Χελωνίτιδες λίμναι",
     "next": "Chelonitis",
     "chapters": [
       {
@@ -26124,7 +26118,7 @@
   },
   {
     "lemma": "Chelonitis",
-    "previous": "Chelonitides nesoi",
+    "previous": "Χελωνίτιδες νῆσοι",
     "next": "Chelonon nesos",
     "chapters": [
       {
@@ -29918,7 +29912,7 @@
   {
     "lemma": "Chorikios",
     "previous": "Chorienes",
-    "next": "Chorikoi agones",
+    "next": "Χορικοὶ ἀγῶνες",
     "wp_link": "w:de:Chorikios von Gaza",
     "chapters": [
       {
@@ -29929,7 +29923,7 @@
     ]
   },
   {
-    "lemma": "Chorikoi agones",
+    "lemma": "Χορικοὶ ἀγῶνες",
     "previous": "Chorikios",
     "next": "Chorillos",
     "chapters": [
@@ -29942,7 +29936,7 @@
   },
   {
     "lemma": "Chorillos",
-    "previous": "Chorikoi agones",
+    "previous": "Χορικοὶ ἀγῶνες",
     "next": "Choris oikountes",
     "chapters": [
       {
@@ -32226,7 +32220,7 @@
   {
     "lemma": "Chrysogonos 7",
     "previous": "Chrysogonos 6",
-    "next": "Chrysographia",
+    "next": "Χρυσογραφία",
     "chapters": [
       {
         "start": 2513,
@@ -32236,7 +32230,7 @@
     ]
   },
   {
-    "lemma": "Chrysographia",
+    "lemma": "Χρυσογραφία",
     "previous": "Chrysogonos 7",
     "next": "Chrysokeras",
     "chapters": [
@@ -32249,7 +32243,7 @@
   },
   {
     "lemma": "Chrysokeras",
-    "previous": "Chrysographia",
+    "previous": "Χρυσογραφία",
     "next": "Chrysokolla 1",
     "chapters": [
       {
@@ -36138,7 +36132,7 @@
     "lemma": "Clarus 1",
     "previous": "Clarius",
     "next": "Clarus 2",
-    "redirect": true,
+    "redirect": "Erucius 4",
     "chapters": [
       {
         "start": 2628,
@@ -37705,7 +37699,7 @@
     "previous": "Claudius 76",
     "next": "Claudius 78",
     "sort_key": "Claudius 077",
-    "redirect": true,
+    "redirect": "Aurelius 82",
     "chapters": [
       {
         "start": 2679,
@@ -37718,7 +37712,7 @@
     "previous": "Claudius 77",
     "next": "Claudius 79",
     "sort_key": "Claudius 078",
-    "redirect": true,
+    "redirect": "Aurelius 84",
     "chapters": [
       {
         "start": 2679,
@@ -37990,7 +37984,7 @@
     "lemma": "Claudius 100",
     "previous": "Claudius 99",
     "next": "Claudius 101",
-    "sort_key": "Claudius",
+    "sort_key": "Claudius 100",
     "chapters": [
       {
         "start": 2692,
