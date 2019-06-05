@@ -477,7 +477,6 @@
   {
     "lemma": "Arsaciana",
     "previous": "Aristoteles 25",
-    "next": "Asklepiades 52",
     "chapters": [
       {
         "start": 343,
@@ -487,8 +486,12 @@
     ]
   },
   {
+    "lemma": "Asea 1",
+    "next": "Asklepiades 52"
+  },
+  {
     "lemma": "Asklepiades 52",
-    "previous": "Arsaciana",
+    "previous": "Asea 1",
     "next": "Aurelius 127b",
     "chapters": [
       {
@@ -702,7 +705,7 @@
   {
     "lemma": "Cyrila 2",
     "previous": "Cuneus 5",
-    "next": "Darnithithi (Gen.",
+    "next": "Darnithithi",
     "chapters": [
       {
         "start": 513,
@@ -712,8 +715,11 @@
     ]
   },
   {
+    "lemma": "Darnithithi",
+    "previous": "Cyrila 2"
+  },
+  {
     "lemma": "Darnithithi (Gen.",
-    "previous": "Cyrila 2",
     "next": "Diaios",
     "chapters": [
       {
@@ -1422,7 +1428,7 @@
   {
     "lemma": "Parka",
     "previous": "Oaxus lacus",
-    "next": "Parrharia",
+    "next": "Parrhasia",
     "chapters": [
       {
         "start": 1029,
@@ -1432,8 +1438,11 @@
     ]
   },
   {
+    "lemma": "Parrhasia",
+    "previous": "Parka"
+  },
+  {
     "lemma": "Parrharia",
-    "previous": "Parka",
     "next": "Partitio legata",
     "chapters": [
       {

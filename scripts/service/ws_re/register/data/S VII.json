@@ -140,6 +140,7 @@
   },
   {
     "lemma": "Archisomatophylakes",
+    "previous": "Aqua, Aquae 77a",
     "next": "Aristolaos 2",
     "chapters": [
       {
@@ -150,8 +151,12 @@
     ]
   },
   {
+    "lemma": "Architectura",
+    "next": "Aristolaos 2"
+  },
+  {
     "lemma": "Aristolaos 2",
-    "previous": "Archisomatophylakes",
+    "previous": "Architectura",
     "next": "Arnasi(us)",
     "chapters": [
       {
@@ -383,7 +388,7 @@
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
-    "next": "cheirographon",
+    "next": "χειρόγραφον",
     "chapters": [
       {
         "start": 83,
@@ -393,7 +398,7 @@
     ]
   },
   {
-    "lemma": "cheirographon",
+    "lemma": "χειρόγραφον",
     "previous": "Canaliclarius",
     "next": "Clementius 1a",
     "chapters": [
@@ -406,8 +411,8 @@
   },
   {
     "lemma": "Clementius 1a",
-    "previous": "cheirographon",
-    "next": "Chrematismos",
+    "previous": "χειρόγραφον",
+    "next": "χρηματισμός",
     "chapters": [
       {
         "start": 89,
@@ -417,9 +422,9 @@
     ]
   },
   {
-    "lemma": "Chrematismos",
+    "lemma": "χρηματισμός",
     "previous": "Clementius 1a",
-    "next": "Codicarii 2",
+    "next": "Claudius 207",
     "chapters": [
       {
         "start": 90,
@@ -429,8 +434,11 @@
     ]
   },
   {
+    "lemma": "Claudius 207",
+    "previous": "χρηματισμός"
+  },
+  {
     "lemma": "Codicarii 2",
-    "previous": "Chrematismos",
     "next": "Contributio 2",
     "chapters": [
       {
@@ -479,7 +487,7 @@
   {
     "lemma": "Crepereius 3a",
     "previous": "Dea Coryphea",
-    "next": "Crepereius 3b",
+    "next": "Crepereius 5a",
     "chapters": [
       {
         "start": 98,
@@ -489,8 +497,11 @@
     ]
   },
   {
+    "lemma": "Crepereius 5a",
+    "previous": "Crepereius 3a"
+  },
+  {
     "lemma": "Crepereius 3b",
-    "previous": "Crepereius 3a",
     "next": "Crepereius 5a",
     "chapters": [
       {
@@ -539,7 +550,7 @@
   {
     "lemma": "Daitos",
     "previous": "Daimonismos",
-    "next": "Dasumius 1a",
+    "next": "Dasumius 1",
     "chapters": [
       {
         "start": 114,
@@ -549,9 +560,14 @@
     ]
   },
   {
-    "lemma": "Dasumius 1a",
+    "lemma": "Dasumius 1",
     "previous": "Daitos",
-    "next": "Dekane",
+    "next": "Dasumius 1a"
+  },
+  {
+    "lemma": "Dasumius 1a",
+    "previous": "Dasumius 1",
+    "next": "Δεῖγμα",
     "chapters": [
       {
         "start": 115,
@@ -561,8 +577,11 @@
     ]
   },
   {
+    "lemma": "Δεῖγμα",
+    "previous": "Dasumius 1a"
+  },
+  {
     "lemma": "Dekane",
-    "previous": "Dasumius 1a",
     "wp_link": "w:de:Dekan (Astrologie)",
     "chapters": [
       {

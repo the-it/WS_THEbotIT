@@ -436,11 +436,13 @@
   },
   {
     "lemma": "Cossinius 5",
-    "previous": "Cornelius 398a"
+    "previous": "Cornelius 398a",
+    "next": "Crambianae"
   },
   {
     "lemma": "Crambianae",
-    "next": "Deire 1",
+    "previous": "Cossinius 5",
+    "next": "Cumodina",
     "chapters": [
       {
         "start": 24,
@@ -450,8 +452,18 @@
     ]
   },
   {
-    "lemma": "Deire 1",
+    "lemma": "Cumodina",
     "previous": "Crambianae",
+    "next": "Daitos"
+  },
+  {
+    "lemma": "Daitos",
+    "previous": "Cumodina",
+    "next": "Deire 1"
+  },
+  {
+    "lemma": "Deire 1",
+    "previous": "Daitos",
     "next": "Deire 2",
     "chapters": [
       {

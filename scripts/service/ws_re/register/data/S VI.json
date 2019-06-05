@@ -229,7 +229,6 @@
   {
     "lemma": "Aradius 4a",
     "previous": "Appuleius 17a",
-    "next": "Areliascus",
     "chapters": [
       {
         "start": 10,
@@ -239,9 +238,13 @@
     ]
   },
   {
+    "lemma": "Archelaos 34",
+    "next": "Areliascus"
+  },
+  {
     "lemma": "Areliascus",
-    "previous": "Aradius 4a",
-    "next": "Arinistae",
+    "previous": "Archelaos 34",
+    "next": "Aresaces",
     "chapters": [
       {
         "start": 12,
@@ -251,8 +254,11 @@
     ]
   },
   {
+    "lemma": "Aresaces",
+    "previous": "Areliascus"
+  },
+  {
     "lemma": "Arinistae",
-    "previous": "Areliascus",
     "next": "Arrius 19a",
     "chapters": [
       {
@@ -635,10 +641,12 @@
   },
   {
     "lemma": "Caninius 7",
-    "previous": "Canianus saltus"
+    "previous": "Canianus saltus",
+    "next": "Canta"
   },
   {
     "lemma": "Canta",
+    "previous": "Caninius 7",
     "next": "Cantenna",
     "chapters": [
       {
@@ -687,7 +695,7 @@
   {
     "lemma": "Caris(s)anum",
     "previous": "Capraria 6",
-    "next": "Caristanius 1a",
+    "next": "Caristanius 1",
     "chapters": [
       {
         "start": 21,
@@ -697,9 +705,12 @@
     ]
   },
   {
+    "lemma": "Caristanius 1",
+    "previous": "Caris(s)anum"
+  },
+  {
     "lemma": "Caristanius 1a",
-    "previous": "Caris(s)anum",
-    "next": "Carnuns(?)",
+    "next": "Carnuns",
     "chapters": [
       {
         "start": 21,
@@ -709,7 +720,7 @@
     ]
   },
   {
-    "lemma": "Carnuns(?)",
+    "lemma": "Carnuns",
     "previous": "Caristanius 1a",
     "next": "Carnus",
     "chapters": [
@@ -722,8 +733,8 @@
   },
   {
     "lemma": "Carnus",
-    "previous": "Carnuns(?)",
-    "next": "Carrea",
+    "previous": "Carnuns",
+    "next": "Carrea (Carreum, Correa)",
     "chapters": [
       {
         "start": 21,
@@ -733,7 +744,7 @@
     ]
   },
   {
-    "lemma": "Carrea",
+    "lemma": "Carrea (Carreum, Correa)",
     "previous": "Carnus",
     "chapters": [
       {
@@ -762,7 +773,7 @@
   {
     "lemma": "Carucla",
     "previous": "Carsitani",
-    "next": "Castellum 5a",
+    "next": "Cassius 67",
     "chapters": [
       {
         "start": 22,
@@ -772,9 +783,11 @@
     ]
   },
   {
+    "lemma": "Cassius 67",
+    "previous": "Carucla"
+  },
+  {
     "lemma": "Castellum 5a",
-    "previous": "Carucla",
-    "next": "Catillus 4",
     "chapters": [
       {
         "start": 22,
@@ -784,8 +797,12 @@
     ]
   },
   {
+    "lemma": "Catilius 4",
+    "next": "Catillus 4"
+  },
+  {
     "lemma": "Catillus 4",
-    "previous": "Castellum 5a",
+    "previous": "Catilius 4",
     "next": "Caturniacus 2",
     "chapters": [
       {
@@ -824,7 +841,12 @@
     "previous": "Caudalascus"
   },
   {
-    "lemma": "Ceremia(?)",
+    "lemma": "Cerdeciates",
+    "next": "Ceremia"
+  },
+  {
+    "lemma": "Ceremia",
+    "previous": "Cerdeciates",
     "next": "Cermalus 2",
     "chapters": [
       {
@@ -836,7 +858,7 @@
   },
   {
     "lemma": "Cermalus 2",
-    "previous": "Ceremia(?)",
+    "previous": "Ceremia",
     "next": "Cessernia",
     "chapters": [
       {
@@ -849,7 +871,7 @@
   {
     "lemma": "Cessernia",
     "previous": "Cermalus 2",
-    "next": "Chelidonioi",
+    "next": "Chartodras",
     "chapters": [
       {
         "start": 23,
@@ -859,9 +881,11 @@
     ]
   },
   {
+    "lemma": "Chartodras",
+    "previous": "Cessernia"
+  },
+  {
     "lemma": "Chelidonioi",
-    "previous": "Cessernia",
-    "next": "Coeba(?)",
     "chapters": [
       {
         "start": 23,
@@ -871,8 +895,12 @@
     ]
   },
   {
+    "lemma": "Claudius 415",
+    "next": "Coeba(?)"
+  },
+  {
     "lemma": "Coeba(?)",
-    "previous": "Chelidonioi",
+    "previous": "Claudius 415",
     "next": "Coelius 7a",
     "chapters": [
       {
@@ -921,7 +949,6 @@
   {
     "lemma": "Claudius 415",
     "previous": "Claudius 187. 188. 194",
-    "next": "Comberania",
     "chapters": [
       {
         "start": 24,
@@ -930,9 +957,13 @@
     ]
   },
   {
+    "lemma": "Colonia 34a",
+    "next": "Comberania"
+  },
+  {
     "lemma": "Comberania",
-    "previous": "Claudius 415",
-    "next": "Cornelius 279a",
+    "previous": "Colonia 34a",
+    "next": "Cornelius 145",
     "chapters": [
       {
         "start": 25,
@@ -942,8 +973,11 @@
     ]
   },
   {
+    "lemma": "Cornelius 145",
+    "previous": "Comberania"
+  },
+  {
     "lemma": "Cornelius 279a",
-    "previous": "Comberania",
     "next": "Cossonius 3a",
     "chapters": [
       {
@@ -968,7 +1002,6 @@
   {
     "lemma": "Cuspius 3",
     "previous": "Cossonius 3a",
-    "next": "Delphion 3",
     "chapters": [
       {
         "start": 25,
@@ -978,8 +1011,12 @@
     ]
   },
   {
+    "lemma": "Dasumius 1a",
+    "next": "Delphion 3"
+  },
+  {
     "lemma": "Delphion 3",
-    "previous": "Cuspius 3",
+    "previous": "Dasumius 1a",
     "next": "Dioskoros 7",
     "chapters": [
       {
@@ -2017,7 +2054,7 @@
   {
     "lemma": "Kypellon",
     "previous": "Kynna",
-    "next": "Kypsela 2",
+    "next": "Kypros 1",
     "chapters": [
       {
         "start": 211,
@@ -2027,8 +2064,13 @@
     ]
   },
   {
-    "lemma": "Kypsela 2",
+    "lemma": "Kypros 1",
     "previous": "Kypellon",
+    "next": "Kypsela 2"
+  },
+  {
+    "lemma": "Kypsela 2",
+    "previous": "Kypros 1",
     "next": "Kypsele",
     "chapters": [
       {
@@ -4220,7 +4262,6 @@
   {
     "lemma": "Maia 7",
     "previous": "Kriegsrecht",
-    "next": "Marius 14",
     "chapters": [
       {
         "start": 1362,
@@ -4230,9 +4271,15 @@
     ]
   },
   {
+    "lemma": "Manichäismus",
+    "next": "Marius 14"
+  },
+  {
     "lemma": "Marius 14",
-    "previous": "Maia 7",
-    "next": "Regina castra",
+    "previous": "Manichäismus",
+    "next": "Neapolis 18",
+    "redirect": "Cornelius 392",
+    "wp_link": "w:de:Gaius Marius",
     "chapters": [
       {
         "start": 1363,
@@ -4242,8 +4289,11 @@
     ]
   },
   {
+    "lemma": "Neapolis 18",
+    "previous": "Marius 14"
+  },
+  {
     "lemma": "Regina castra",
-    "previous": "Marius 14",
     "next": "Sarapion 4",
     "chapters": [
       {
