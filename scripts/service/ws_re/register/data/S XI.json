@@ -310,7 +310,7 @@
   {
     "lemma": "Ammatas",
     "previous": "Aelius 15a",
-    "next": "Anartii",
+    "next": "Amythaon 2",
     "chapters": [
       {
         "start": 29,
@@ -320,8 +320,16 @@
     ]
   },
   {
+    "lemma": "Amythaon 2",
+    "previous": "Ammatas"
+  },
+  {
+    "lemma": "Anaphe",
+    "next": "Anartii"
+  },
+  {
     "lemma": "Anartii",
-    "previous": "Ammatas",
+    "previous": "Anaphe",
     "next": "Anatomie",
     "chapters": [
       {
@@ -486,7 +494,12 @@
     ]
   },
   {
+    "lemma": "Arteriotomia",
+    "next": "Asea 1"
+  },
+  {
     "lemma": "Asea 1",
+    "previous": "Arteriotomia",
     "next": "Asklepiades 52"
   },
   {
@@ -516,7 +529,7 @@
   {
     "lemma": "Bacensis civitas",
     "previous": "Aurelius 127b",
-    "next": "Basoretensis vicus",
+    "next": "Bagaudae",
     "chapters": [
       {
         "start": 346,
@@ -526,8 +539,13 @@
     ]
   },
   {
-    "lemma": "Basoretensis vicus",
+    "lemma": "Bagaudae",
     "previous": "Bacensis civitas",
+    "next": "Basoretensis vicus"
+  },
+  {
+    "lemma": "Basoretensis vicus",
+    "previous": "Bagaudae",
     "next": "Bianor 5a",
     "chapters": [
       {

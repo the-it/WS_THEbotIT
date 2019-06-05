@@ -38,7 +38,7 @@
   {
     "lemma": "Amanus",
     "previous": "Akron 5",
-    "next": "Anaxenor 1",
+    "next": "Anaxenor 1.2",
     "chapters": [
       {
         "start": 1,
@@ -48,8 +48,11 @@
     ]
   },
   {
+    "lemma": "Anaxenor 1.2",
+    "previous": "Amanus"
+  },
+  {
     "lemma": "Anaxenor 1",
-    "previous": "Amanus",
     "next": "Antidotos 6",
     "chapters": [
       {
@@ -62,7 +65,7 @@
   {
     "lemma": "Antidotos 6",
     "previous": "Anaxenor 1",
-    "next": "Antisemitismus",
+    "next": "Antigonos 24",
     "chapters": [
       {
         "start": 1,
@@ -72,9 +75,23 @@
     ]
   },
   {
+    "lemma": "Antigonos 24",
+    "previous": "Antidotos 6"
+  },
+  {
+    "lemma": "Antiochos 68",
+    "next": "Antiochos 65"
+  },
+  {
+    "lemma": "Antiochos 65",
+    "previous": "Antiochos 68",
+    "next": "Antisemitismus"
+  },
+  {
     "lemma": "Antisemitismus",
-    "previous": "Antidotos 6",
+    "previous": "Antiochos 65",
     "next": "Apelles 5a",
+    "wp_link": "w:de:Antisemitismus",
     "chapters": [
       {
         "start": 3,
@@ -86,7 +103,7 @@
   {
     "lemma": "Apelles 5a",
     "previous": "Antisemitismus",
-    "next": "Apollodoros 41e",
+    "next": "Apollodoros 41a",
     "chapters": [
       {
         "start": 43,
@@ -96,8 +113,12 @@
     ]
   },
   {
-    "lemma": "Apollodoros 41e",
+    "lemma": "Apollodoros 41a",
     "previous": "Apelles 5a",
+    "next": null
+  },
+  {
+    "lemma": "Apollodoros 41e",
     "chapters": [
       {
         "start": 43,
@@ -162,7 +183,7 @@
   {
     "lemma": "Ariston 62a",
     "previous": "Aristeides 23a",
-    "next": "Asklepiades 51",
+    "next": "Ἀσάλμανος",
     "chapters": [
       {
         "start": 46,
@@ -172,8 +193,11 @@
     ]
   },
   {
+    "lemma": "Ἀσάλμανος",
+    "previous": "Ariston 62a"
+  },
+  {
     "lemma": "Asklepiades 51",
-    "previous": "Ariston 62a",
     "next": "Athenagoras 9a",
     "chapters": [
       {
@@ -670,7 +694,7 @@
   {
     "lemma": "Goneus",
     "previous": "Glykon 6",
-    "next": "Herakleitos 16a",
+    "next": "Hephaistodoros",
     "chapters": [
       {
         "start": 228,
@@ -680,8 +704,11 @@
     ]
   },
   {
+    "lemma": "Hephaistodoros",
+    "previous": "Goneus"
+  },
+  {
     "lemma": "Herakleitos 16a",
-    "previous": "Goneus",
     "next": "Herpyllis",
     "chapters": [
       {
@@ -4042,7 +4069,6 @@
   {
     "lemma": "Maximus 127a",
     "previous": "Maximus 127",
-    "next": "Maximus 128",
     "chapters": [
       {
         "start": 679,
@@ -4050,11 +4076,15 @@
         "author": "Enßlin"
       }
     ]
+  },
+  {
+    "lemma": "Maximus 127",
+    "next": "Maximus 128"
   },
   {
     "lemma": "Maximus 128",
-    "previous": "Maximus 127a",
-    "next": "Mazdaismus",
+    "previous": "Maximus 127",
+    "next": "Maximus 129",
     "chapters": [
       {
         "start": 679,
@@ -4064,8 +4094,11 @@
     ]
   },
   {
+    "lemma": "Maximus 129",
+    "previous": "Maximus 128"
+  },
+  {
     "lemma": "Mazdaismus",
-    "previous": "Maximus 128",
     "next": "Maximus 129",
     "chapters": [
       {

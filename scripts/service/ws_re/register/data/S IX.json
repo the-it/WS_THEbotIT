@@ -171,10 +171,12 @@
   },
   {
     "lemma": "Argyra 1",
-    "previous": "Arekrat"
+    "previous": "Arekrat",
+    "next": "Arranius 1"
   },
   {
     "lemma": "Arranius 1",
+    "previous": "Argyra 1",
     "next": "Arranius 2",
     "chapters": [
       {
@@ -222,10 +224,13 @@
   },
   {
     "lemma": "Ascheion",
-    "previous": "Arsatzia"
+    "previous": "Arsatzia",
+    "next": "Aspis 10a"
   },
   {
     "lemma": "Aspis 10a",
+    "previous": "Ascheion",
+    "next": null,
     "chapters": [
       {
         "start": 15,
@@ -254,7 +259,6 @@
   {
     "lemma": "Asprius",
     "previous": "Asprenas 1a",
-    "next": "Attikos 15",
     "chapters": [
       {
         "start": 15,
@@ -264,9 +268,13 @@
     ]
   },
   {
+    "lemma": "Asterope 6",
+    "next": "Attikos 15"
+  },
+  {
     "lemma": "Attikos 15",
-    "previous": "Asprius",
-    "next": "Aurelius 145aa",
+    "previous": "Asterope 6",
+    "next": "Attius 23",
     "chapters": [
       {
         "start": 16,
@@ -276,8 +284,11 @@
     ]
   },
   {
+    "lemma": "Attius 23",
+    "previous": "Attikos 15"
+  },
+  {
     "lemma": "Aurelius 145aa",
-    "previous": "Attikos 15",
     "next": "Aurelius 157a",
     "chapters": [
       {
@@ -3392,7 +3403,7 @@
   {
     "lemma": "Umbonius 2",
     "previous": "Umbilius 2",
-    "next": "Umbri",
+    "next": "Umbri, Umbria",
     "chapters": [
       {
         "start": 1745,
@@ -3402,20 +3413,13 @@
     ]
   },
   {
-    "lemma": "Umbri",
+    "lemma": "Umbri, Umbria",
     "previous": "Umbonius 2",
-    "next": "Umbricius 5",
-    "chapters": [
-      {
-        "start": 1745,
-        "end": 1827,
-        "author": "Radke"
-      }
-    ]
+    "next": "Umbricius 5"
   },
   {
     "lemma": "Umbricius 5",
-    "previous": "Umbri",
+    "previous": "Umbri, Umbria",
     "next": "Umbricius 6",
     "chapters": [
       {

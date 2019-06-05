@@ -439,6 +439,7 @@
     "lemma": "Olympiodoros 6",
     "previous": "Olympiodoros 5",
     "next": "Olympiodoros 7",
+    "sort_key": "Olympiodoros 06",
     "chapters": [
       {
         "start": 200,
@@ -451,6 +452,7 @@
     "lemma": "Olympiodoros 7",
     "previous": "Olympiodoros 6",
     "next": "Olympiodoros 8",
+    "sort_key": "Olympiodoros 07",
     "chapters": [
       {
         "start": 200,
@@ -463,6 +465,7 @@
     "lemma": "Olympiodoros 8",
     "previous": "Olympiodoros 7",
     "next": "Olympiodoros 9",
+    "sort_key": "Olympiodoros 08",
     "chapters": [
       {
         "start": 200,
@@ -1818,7 +1821,7 @@
   {
     "lemma": "Olynta",
     "previous": "Olynpikon",
-    "next": "Olynthion",
+    "next": "Ὀλυνθιών",
     "chapters": [
       {
         "start": 325,
@@ -1827,9 +1830,10 @@
     ]
   },
   {
-    "lemma": "Olynthion",
+    "lemma": "Ὀλυνθιών",
     "previous": "Olynta",
     "next": "Olynthos",
+    "sort_key": "Olynthion",
     "chapters": [
       {
         "start": 325,
@@ -1840,7 +1844,7 @@
   },
   {
     "lemma": "Olynthos",
-    "previous": "Olynthion",
+    "previous": "Ὀλυνθιών",
     "next": "Olyros",
     "chapters": [
       {
@@ -11204,7 +11208,7 @@
   {
     "lemma": "Oroites",
     "previous": "Oroises",
-    "next": "Orokasias oros",
+    "next": "Ὀροκασιὰς ὄρος",
     "chapters": [
       {
         "start": 1143,
@@ -11214,8 +11218,12 @@
     ]
   },
   {
-    "lemma": "Orokasias oros",
+    "lemma": "Ὀροκασιὰς ὄρος",
     "previous": "Oroites",
+    "sort_key": "Orokasias"
+  },
+  {
+    "lemma": "Orokasias oros",
     "next": "Orokendois",
     "chapters": [
       {

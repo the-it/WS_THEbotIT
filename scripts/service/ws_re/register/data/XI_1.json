@@ -450,7 +450,7 @@
   {
     "lemma": "Kaukones 2",
     "previous": "Kaukones 1",
-    "next": "Kaukonia",
+    "next": "Καυκωνία",
     "chapters": [
       {
         "start": 66,
@@ -460,9 +460,10 @@
     ]
   },
   {
-    "lemma": "Kaukonia",
+    "lemma": "Καυκωνία",
     "previous": "Kaukones 2",
     "next": "Καυκώνιον",
+    "sort_key": "Kaukonia",
     "chapters": [
       {
         "start": 66,
@@ -473,7 +474,7 @@
   },
   {
     "lemma": "Καυκώνιον",
-    "previous": "Kaukonia",
+    "previous": "Καυκωνία",
     "next": "Kaulkoi",
     "sort_key": "Kaukonion",
     "redirect": true,
@@ -932,6 +933,7 @@
     "lemma": "Kebren 3",
     "previous": "Kebren 2",
     "next": "Kebrenia",
+    "wp_link": "w:de:Kebren",
     "chapters": [
       {
         "start": 106,

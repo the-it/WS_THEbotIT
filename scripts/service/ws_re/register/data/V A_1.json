@@ -219,7 +219,7 @@
   {
     "lemma": "Tauroi 2",
     "previous": "Tauroi 1",
-    "next": "Taurokathapsia",
+    "next": "Ταυροκαθάψια",
     "chapters": [
       {
         "start": 24,
@@ -229,9 +229,10 @@
     ]
   },
   {
-    "lemma": "Taurokathapsia",
+    "lemma": "Ταυροκαθάψια",
     "previous": "Tauroi 2",
     "next": "Tauromenes",
+    "sort_key": "Taurokathapsia",
     "chapters": [
       {
         "start": 24,
@@ -242,7 +243,7 @@
   },
   {
     "lemma": "Tauromenes",
-    "previous": "Taurokathapsia",
+    "previous": "Ταυροκαθάψια",
     "next": "Tauromenion",
     "redirect": true,
     "chapters": [
@@ -460,6 +461,7 @@
     "lemma": "Tauros 2",
     "previous": "Tauros 1",
     "next": "Tauros 3",
+    "sort_key": "Tauros 02",
     "chapters": [
       {
         "start": 39,
@@ -1037,7 +1039,7 @@
   {
     "lemma": "Taxis",
     "previous": "Taximagulus",
-    "next": "Taxos",
+    "next": "Ταξός",
     "chapters": [
       {
         "start": 85,
@@ -1047,7 +1049,7 @@
     ]
   },
   {
-    "lemma": "Taxos",
+    "lemma": "Ταξός",
     "previous": "Taxis",
     "next": "Taxtanulates",
     "chapters": [
@@ -1060,7 +1062,7 @@
   },
   {
     "lemma": "Taxtanulates",
-    "previous": "Taxos",
+    "previous": "Ταξός",
     "next": "Taxus",
     "chapters": [
       {

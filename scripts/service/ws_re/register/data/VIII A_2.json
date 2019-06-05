@@ -150,6 +150,7 @@
     "lemma": "Verginius 5",
     "previous": "Verginius 4",
     "next": "Verginius 6",
+    "sort_key": "Verginius 05",
     "chapters": [
       {
         "start": 1511,
@@ -174,6 +175,7 @@
     "lemma": "Verginius 6a",
     "previous": "Verginius 6",
     "next": "Verginius 6b",
+    "sort_key": "Verginius 06a",
     "chapters": [
       {
         "start": 1512,
@@ -186,6 +188,7 @@
     "lemma": "Verginius 6b",
     "previous": "Verginius 6a",
     "next": "Verginius 7",
+    "sort_key": "Verginius 06b",
     "chapters": [
       {
         "start": 1512,
@@ -279,8 +282,8 @@
   },
   {
     "lemma": "Verginius 11a",
-    "previous": "Verginius 11",
-    "next": "Verginius 12",
+    "previous": "Verginius 10",
+    "next": "Verginius 11",
     "chapters": [
       {
         "start": 1520,
@@ -6328,9 +6331,8 @@
   },
   {
     "lemma": "victimarius",
-    "previous": "Victa",
-    "next": "Victium",
-    "redirect": true,
+    "previous": "vici magister",
+    "next": "Victor 1",
     "chapters": [
       {
         "start": 2056,
@@ -6363,9 +6365,8 @@
   },
   {
     "lemma": "Victor 1",
-    "previous": "Victo(h)ali",
-    "next": "Victor 2",
-    "redirect": true,
+    "previous": "victimarius",
+    "next": "Victoria 1",
     "chapters": [
       {
         "start": 2057,
@@ -6413,6 +6414,7 @@
     "lemma": "Victor 5",
     "previous": "Victor 4",
     "next": "Victor 6",
+    "sort_key": "Victor 05",
     "chapters": [
       {
         "start": 2058,
@@ -6425,6 +6427,7 @@
     "lemma": "Victor 6",
     "previous": "Victor 5",
     "next": "Victor 7",
+    "sort_key": "Victor 06",
     "chapters": [
       {
         "start": 2058,
@@ -6437,6 +6440,7 @@
     "lemma": "Victor 7",
     "previous": "Victor 6",
     "next": "Victor 8",
+    "sort_key": "Victor 07",
     "chapters": [
       {
         "start": 2058,
@@ -6449,6 +6453,8 @@
     "lemma": "Victor 8",
     "previous": "Victor 7",
     "next": "Victor 9",
+    "sort_key": "Victor 08",
+    "redirect": "Minervius 5",
     "chapters": [
       {
         "start": 2058,
@@ -6485,6 +6491,7 @@
     "lemma": "Victor 11",
     "previous": "Victor 10",
     "next": "Victor 12",
+    "redirect": "Victorinus 4",
     "chapters": [
       {
         "start": 2060,
@@ -6496,6 +6503,7 @@
     "lemma": "Victor 12",
     "previous": "Victor 11",
     "next": "Victor 13",
+    "redirect": "Olympios 7",
     "chapters": [
       {
         "start": 2060,
@@ -6508,6 +6516,7 @@
     "lemma": "Victor 13",
     "previous": "Victor 12",
     "next": "Victor 14",
+    "redirect": "Olympios 7",
     "chapters": [
       {
         "start": 2060,

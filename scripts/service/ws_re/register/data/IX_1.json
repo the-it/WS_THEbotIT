@@ -4624,7 +4624,7 @@
   {
     "lemma": "Hysbe",
     "previous": "Hyrtakos",
-    "next": "Hysia, Hysiai 1",
+    "next": "Hysia, Hysiai",
     "chapters": [
       {
         "start": 539,
@@ -4837,7 +4837,7 @@
   {
     "lemma": "Hytenna",
     "previous": "Hystaspes 4",
-    "next": "I(...)cianus",
+    "next": "I(..... ...)cianus",
     "chapters": [
       {
         "start": 542,
@@ -4847,20 +4847,13 @@
     ]
   },
   {
-    "lemma": "I(...)cianus",
+    "lemma": "I(..... ...)cianus",
     "previous": "Hytenna",
-    "next": "Ia 1",
-    "chapters": [
-      {
-        "start": 543,
-        "end": 543,
-        "author": "Stein, [Arthur]"
-      }
-    ]
+    "next": "Ia 1"
   },
   {
     "lemma": "Ia 1",
-    "previous": "I(...)cianus",
+    "previous": "I(..... ...)cianus",
     "next": "Ia 2",
     "chapters": [
       {
@@ -4922,6 +4915,7 @@
     "lemma": "Jabezebyth",
     "previous": "Jabes",
     "next": "Jabne",
+    "redirect": "Iao",
     "chapters": [
       {
         "start": 543,
@@ -4934,6 +4928,7 @@
     "lemma": "Jabne",
     "previous": "Jabezebyth",
     "next": "Jabneel 1",
+    "redirect": "Jamnia",
     "chapters": [
       {
         "start": 543,
@@ -4945,6 +4940,7 @@
     "lemma": "Jabneel 1",
     "previous": "Jabne",
     "next": "Jabneel 2",
+    "redirect": "Jamnia",
     "chapters": [
       {
         "start": 543,

@@ -447,7 +447,7 @@
   {
     "lemma": "Alba 6a",
     "previous": "Akephalos",
-    "next": "Albius 14",
+    "next": "Albinus 4",
     "chapters": [
       {
         "start": 14,
@@ -457,8 +457,13 @@
     ]
   },
   {
-    "lemma": "Albius 14",
+    "lemma": "Albinus 4",
     "previous": "Alba 6a",
+    "next": "Albius 14"
+  },
+  {
+    "lemma": "Albius 14",
+    "previous": "Albinus 4",
     "next": "Albucius 5",
     "chapters": [
       {
@@ -471,7 +476,6 @@
   {
     "lemma": "Albucius 5",
     "previous": "Albius 14",
-    "next": "Alkmaion 6",
     "chapters": [
       {
         "start": 22,
@@ -481,8 +485,12 @@
     ]
   },
   {
+    "lemma": "Aliphera",
+    "next": "Alkmaion 6"
+  },
+  {
     "lemma": "Alkmaion 6",
-    "previous": "Albucius 5",
+    "previous": "Aliphera",
     "next": "Allius 1a",
     "chapters": [
       {
@@ -699,11 +707,16 @@
     ]
   },
   {
-    "lemma": "Argura 1",
-    "next": "Ἀριαῖοι"
+    "lemma": "Arcani",
+    "next": "Argura 1"
   },
   {
-    "lemma": "Ἀριαῖοι",
+    "lemma": "Argura 1",
+    "previous": "Arcani",
+    "next": "Ariaioi"
+  },
+  {
+    "lemma": "Ariaioi",
     "previous": "Argura 1",
     "next": "Arrabona",
     "sort_key": "Ariaioi",
@@ -717,7 +730,7 @@
   },
   {
     "lemma": "Arrabona",
-    "previous": "Ἀριαῖοι"
+    "previous": "Ariaioi"
   },
   {
     "lemma": "Arrecinus 2",
@@ -745,6 +758,7 @@
   {
     "lemma": "Arrius 31a",
     "previous": "Arrius 17a'",
+    "next": "Arsinoë 12",
     "chapters": [
       {
         "start": 98,
@@ -755,6 +769,7 @@
   },
   {
     "lemma": "Arsinoë 12",
+    "previous": "Arrius 31a",
     "next": "Arsinoë 12a"
   },
   {
@@ -771,10 +786,12 @@
   },
   {
     "lemma": "Arsinoë 15",
-    "previous": "Arsinoë 12a"
+    "previous": "Arsinoë 12a",
+    "next": "Articuleius 3a"
   },
   {
     "lemma": "Articuleius 3a",
+    "previous": "Arsinoë 15",
     "next": "Artorius 7a",
     "chapters": [
       {
@@ -799,7 +816,6 @@
   {
     "lemma": "Asinius 8a",
     "previous": "Artorius 7a",
-    "next": "Athenaios 12a",
     "chapters": [
       {
         "start": 99,
@@ -809,8 +825,12 @@
     ]
   },
   {
+    "lemma": "Astydamas 2",
+    "next": "Athenaios 12a"
+  },
+  {
     "lemma": "Athenaios 12a",
-    "previous": "Asinius 8a",
+    "previous": "Astydamas 2",
     "next": "Aurelius 141a",
     "chapters": [
       {
@@ -1087,7 +1107,7 @@
   {
     "lemma": "Calpurnius 123a",
     "previous": "Calpurnius 60a",
-    "next": "Caltinus(?)",
+    "next": "Caltinus",
     "chapters": [
       {
         "start": 135,
@@ -1097,9 +1117,9 @@
     ]
   },
   {
-    "lemma": "Caltinus(?)",
+    "lemma": "Caltinus",
     "previous": "Calpurnius 123a",
-    "next": "Caravantis",
+    "next": "Campanius 1",
     "chapters": [
       {
         "start": 135,
@@ -1109,8 +1129,11 @@
     ]
   },
   {
+    "lemma": "Campanius 1",
+    "previous": "Caltinus"
+  },
+  {
     "lemma": "Caravantis",
-    "previous": "Caltinus(?)",
     "next": "Caravantius",
     "chapters": [
       {
@@ -3238,7 +3261,6 @@
   {
     "lemma": "Archedemos 5.6",
     "previous": "Arborius 5",
-    "next": "Arinthaeus 3",
     "chapters": [
       {
         "start": 1356,
@@ -3248,8 +3270,12 @@
     ]
   },
   {
+    "lemma": "Archedemos 6",
+    "next": "Arinthaeus 3"
+  },
+  {
     "lemma": "Arinthaeus 3",
-    "previous": "Archedemos 5.6",
+    "previous": "Archedemos 6",
     "next": "Camundus",
     "chapters": [
       {

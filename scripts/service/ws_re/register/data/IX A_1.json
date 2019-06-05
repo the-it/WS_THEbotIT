@@ -5865,7 +5865,7 @@
   {
     "lemma": "Umbrenus 3",
     "previous": "Umbrenus 2",
-    "next": "Umbricius 1",
+    "next": "Umbri, Umbria",
     "chapters": [
       {
         "start": 593,
@@ -5875,8 +5875,14 @@
     ]
   },
   {
-    "lemma": "Umbricius 1",
+    "lemma": "Umbri, Umbria",
     "previous": "Umbrenus 3",
+    "next": "Umbricius 1",
+    "sort_key": "Vmbri"
+  },
+  {
+    "lemma": "Umbricius 1",
+    "previous": "Umbri, Umbria",
     "next": "Umbricius 2",
     "sort_key": "Vmbricius 1",
     "chapters": [
@@ -9360,6 +9366,7 @@
     "lemma": "Uranides 3",
     "previous": "Uranides 2",
     "next": "Uranietai",
+    "sort_key": "Vranides 3",
     "chapters": [
       {
         "start": 943,
