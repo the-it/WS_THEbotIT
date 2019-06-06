@@ -4131,6 +4131,7 @@
     "lemma": "Josephus 2",
     "previous": "Josephus 1",
     "next": "Iotabe",
+    "wp_link": "w:de:Flavius Josephus",
     "chapters": [
       {
         "start": 1934,
@@ -8030,7 +8031,7 @@
   {
     "lemma": "Israel 5",
     "previous": "Israel 4",
-    "next": "Issa, he 1",
+    "next": "Ἴσσα, ἡ 1",
     "chapters": [
       {
         "start": 2234,
@@ -8380,6 +8381,7 @@
     "lemma": "Isthmos 1",
     "previous": "Isthmios 4",
     "next": "Isthmos 2",
+    "wp_link": "w:de:Isthmus von Korinth",
     "chapters": [
       {
         "start": 2256,
@@ -8750,7 +8752,7 @@
   {
     "lemma": "Itabyrion",
     "previous": "Isyllos",
-    "next": "Italica",
+    "next": "Italia",
     "redirect": true,
     "chapters": [
       {
@@ -8761,8 +8763,13 @@
     ]
   },
   {
-    "lemma": "Italica",
+    "lemma": "Italia",
     "previous": "Itabyrion",
+    "next": "Italica"
+  },
+  {
+    "lemma": "Italica",
+    "previous": "Italia",
     "next": "Italicianus",
     "chapters": [
       {

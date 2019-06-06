@@ -2312,6 +2312,7 @@
     "lemma": "Asabe",
     "previous": "Asabaia",
     "next": "Ἀσαβῶν ὄρη",
+    "redirect": true,
     "chapters": [
       {
         "start": 1513,
@@ -2410,6 +2411,7 @@
     "lemma": "Asaia 1",
     "previous": "Asai 2",
     "next": "Asaia 2",
+    "redirect": "Asea 2",
     "chapters": [
       {
         "start": 1514,
@@ -2421,6 +2423,7 @@
     "lemma": "Asaia 2",
     "previous": "Asaia 1",
     "next": "Asaioi",
+    "redirect": "Ataia 2",
     "chapters": [
       {
         "start": 1514,
@@ -18894,6 +18897,7 @@
     "lemma": "Atron",
     "previous": "Atromos",
     "next": "Atronianus",
+    "redirect": "Airon",
     "chapters": [
       {
         "start": 2149,
@@ -24924,6 +24928,8 @@
     "lemma": "Avillius 3",
     "previous": "Avillius 2",
     "next": "Avillius 4",
+    "sort_key": "Auillius 3",
+    "wp_link": "w:de:Aulus Avillius Flaccus",
     "chapters": [
       {
         "start": 2392,
@@ -25529,7 +25535,7 @@
     "lemma": "Aulirci",
     "previous": "Aulion 2",
     "next": "Aulis 1",
-    "redirect": true,
+    "redirect": "Aulerci",
     "chapters": [
       {
         "start": 2409,
@@ -25822,6 +25828,7 @@
     "lemma": "Aulon 14",
     "previous": "Aulon 13",
     "next": "Aulon 15",
+    "redirect": "Kaulonia",
     "chapters": [
       {
         "start": 2414,
@@ -25966,6 +25973,7 @@
     "lemma": "Aulos 3",
     "previous": "Aulos 2",
     "next": "Aulos 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 2416,
@@ -25990,6 +25998,7 @@
     "lemma": "Aulothos",
     "previous": "Aulos 4",
     "next": "Αὐλοῦ κρήνη",
+    "redirect": "Anaxis 1",
     "chapters": [
       {
         "start": 2422,
@@ -26037,6 +26046,7 @@
     "lemma": "Aumetera",
     "previous": "Aumenahenae",
     "next": "Aumos",
+    "redirect": true,
     "chapters": [
       {
         "start": 2423,
@@ -26260,6 +26270,7 @@
     "lemma": "Aurakleia",
     "previous": "Αὖραι",
     "next": "Aurana",
+    "redirect": true,
     "chapters": [
       {
         "start": 2425,
@@ -26296,6 +26307,7 @@
     "lemma": "Auranitis 2",
     "previous": "Auranitis 1",
     "next": "Auraria functio",
+    "redirect": "Auchanitis",
     "chapters": [
       {
         "start": 2425,
@@ -26307,6 +26319,7 @@
     "lemma": "Auraria functio",
     "previous": "Auranitis 2",
     "next": "Aurarius",
+    "redirect": "Lustralis conlatio",
     "chapters": [
       {
         "start": 2425,
@@ -26355,6 +26368,7 @@
     "lemma": "Aurata",
     "previous": "Αὐράσιον ὄρος",
     "next": "ab auraturis",
+    "redirect": true,
     "chapters": [
       {
         "start": 2426,
@@ -26391,6 +26405,7 @@
     "lemma": "Aureatum",
     "previous": "Aurea",
     "next": "Aureax",
+    "redirect": "Auriana",
     "chapters": [
       {
         "start": 2426,
@@ -31029,6 +31044,7 @@
     "lemma": "Ausona",
     "previous": "Auson",
     "next": "Ausones",
+    "redirect": "Aurunca",
     "chapters": [
       {
         "start": 2561,
@@ -33970,6 +33986,7 @@
     "lemma": "Axomis",
     "previous": "Axola",
     "next": "Axon",
+    "wp_link": "w:de:Aksum",
     "chapters": [
       {
         "start": 2634,
@@ -42275,6 +42292,8 @@
     "lemma": "Barba 3",
     "previous": "Barba 2",
     "next": "Barba Iovis",
+    "redirect": "Bart",
+    "wp_link": "w:de:Barthaar",
     "chapters": [
       {
         "start": 2854,
@@ -42617,7 +42636,7 @@
   {
     "lemma": "Ἀριστοβουλιασταί",
     "previous": "Ariobarzanes 4c",
-
+    "next": "Arsames 3",
     "chapters": [
       {
         "start": 2861,
@@ -42628,8 +42647,8 @@
   },
   {
     "lemma": "Arsames 3",
-    "next": "Askalis",
-    "previous": "Ἀριστοβουλιασταί"
+    "previous": "Ἀριστοβουλιασταί",
+    "next": "Askalis"
   },
   {
     "lemma": "Askalis",
