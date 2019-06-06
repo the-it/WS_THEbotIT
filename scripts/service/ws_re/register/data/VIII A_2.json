@@ -259,7 +259,7 @@
   {
     "lemma": "Verginius 11-23",
     "previous": "Verginius 10",
-    "next": "Verginius 11",
+    "next": "Verginius 11a",
     "chapters": [
       {
         "start": 1518,
@@ -269,20 +269,8 @@
     ]
   },
   {
-    "lemma": "Verginius 11",
-    "previous": "Verginius 11-23",
-    "next": "Verginius 11a",
-    "chapters": [
-      {
-        "start": 1520,
-        "end": 1520,
-        "author": "Gundel, Hans [Georg]"
-      }
-    ]
-  },
-  {
     "lemma": "Verginius 11a",
-    "previous": "Verginius 10",
+    "previous": "Verginius 11-23",
     "next": "Verginius 11",
     "chapters": [
       {
@@ -293,8 +281,20 @@
     ]
   },
   {
-    "lemma": "Verginius 12",
+    "lemma": "Verginius 11",
     "previous": "Verginius 11a",
+    "next": "Verginius 12",
+    "chapters": [
+      {
+        "start": 1520,
+        "end": 1520,
+        "author": "Gundel, Hans [Georg]"
+      }
+    ]
+  },
+  {
+    "lemma": "Verginius 12",
+    "previous": "Verginius 11",
     "next": "Verginius 13",
     "chapters": [
       {
@@ -6331,8 +6331,8 @@
   },
   {
     "lemma": "victimarius",
-    "previous": "vici magister",
-    "next": "Victor 1",
+    "previous": "Victa",
+    "next": "Victium",
     "chapters": [
       {
         "start": 2056,
@@ -6365,8 +6365,9 @@
   },
   {
     "lemma": "Victor 1",
-    "previous": "victimarius",
-    "next": "Victoria 1",
+    "previous": "Victo(h)ali",
+    "next": "Victor 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 2057,

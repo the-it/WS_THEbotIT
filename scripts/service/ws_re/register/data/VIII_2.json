@@ -819,7 +819,7 @@
   {
     "lemma": "Ἱαρὸν τᾶς Ἀθαναίας",
     "previous": "Hiarbas 2",
-    "next": "Hiaros",
+    "next": "Ἱαρός",
     "chapters": [
       {
         "start": 1388,
@@ -829,26 +829,14 @@
     ]
   },
   {
-    "lemma": "Hiaros",
+    "lemma": "Ἱαρός",
     "previous": "Ἱαρὸν τᾶς Ἀθαναίας",
-    "next": "Hiaspis",
-    "chapters": [
-      {
-        "start": 1388,
-        "end": 1388,
-        "author": "Bürchner"
-      }
-    ]
-  },
-  {
-    "lemma": "Hiaspis",
-    "previous": "Hiaros",
     "next": "Hiberina",
     "chapters": [
       {
         "start": 1388,
         "end": 1388,
-        "author": "Streck"
+        "author": "Bürchner"
       }
     ]
   },
@@ -867,7 +855,7 @@
   {
     "lemma": "Hiberinus",
     "previous": "Hiberina",
-    "next": "Hiberna",
+    "next": "Hiaspis",
     "chapters": [
       {
         "start": 1388,
@@ -876,8 +864,20 @@
     ]
   },
   {
-    "lemma": "Hiberna",
+    "lemma": "Hiaspis",
     "previous": "Hiberinus",
+    "next": "Hiberna",
+    "chapters": [
+      {
+        "start": 1388,
+        "end": 1388,
+        "author": "Streck"
+      }
+    ]
+  },
+  {
+    "lemma": "Hiberna",
+    "previous": "Hiaspis",
     "next": "Hibernia",
     "chapters": [
       {
