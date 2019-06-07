@@ -2,6 +2,8 @@
 omit =
     # old code ... will never gain coverage
     archive/*,
+    # offline functions for one time purposes
+    scripts/service/ws_re/download/*,
     # potential python virtual env
     venv/*,
     # the runner suite copies test modules temporary to a directory, ignore this files
