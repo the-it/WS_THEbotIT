@@ -458,6 +458,7 @@
     "lemma": "Apolloniatis 1",
     "previous": "Apollonias 3",
     "next": "Apolloniatis 2",
+    "redirect": "Apollonia 27",
     "chapters": [
       {
         "start": 118,
@@ -493,6 +494,7 @@
     "lemma": "Apollonidea",
     "previous": "Apolloniatis 3",
     "next": "Apollonides 1",
+    "redirect": "Apollonis 1",
     "chapters": [
       {
         "start": 118,
@@ -716,6 +718,7 @@
     "lemma": "Apollonides 17",
     "previous": "Apollonides 16",
     "next": "Apollonides 18",
+    "wp_link": "w:de:Apollonides",
     "chapters": [
       {
         "start": 119,
@@ -934,6 +937,7 @@
     "lemma": "Apollonieis",
     "previous": "Apollonides 34",
     "next": "Ἀπολλώνιον ἀκρωτήριον",
+    "redirect": "Apollonia 22",
     "chapters": [
       {
         "start": 121,
@@ -945,6 +949,8 @@
     "lemma": "Ἀπολλώνιον ἀκρωτήριον",
     "previous": "Apollonieis",
     "next": "Apollonios 1",
+    "sort_key": "Apollonionakroterion",
+    "redirect": true,
     "chapters": [
       {
         "start": 121,
@@ -998,6 +1004,8 @@
     "lemma": "Apollonios 4",
     "previous": "Apollonios 3",
     "next": "Apollonios 5",
+    "sort_key": "Apollonios 004",
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 121,
@@ -1380,6 +1388,8 @@
     "lemma": "Apollonios 34",
     "previous": "Apollonios 33",
     "next": "Apollonios 35",
+    "sort_key": "Apollonios 034",
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 123,
@@ -1560,6 +1570,8 @@
     "lemma": "Apollonios 48",
     "previous": "Apollonios 47",
     "next": "Apollonios 49",
+    "sort_key": "Apollonios 048",
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 123,
@@ -1841,6 +1853,9 @@
     "lemma": "Apollonios 71",
     "previous": "Apollonios 70",
     "next": "Apollonios 72",
+    "sort_key": "Apollonios 071",
+    "wp_link": "w:de:Apollonios von Rhodos",
+    "ws_link": "s:de:Apollonios von Rhodos",
     "chapters": [
       {
         "start": 126,
@@ -2632,7 +2647,8 @@
   {
     "lemma": "Apollonos",
     "previous": "Apollonium",
-    "next": "Apollonos hieron 1",
+    "next": "Ἀπόλλωνος ἱερόν 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 164,
@@ -2641,7 +2657,7 @@
     ]
   },
   {
-    "lemma": "Apollonos hieron 1",
+    "lemma": "Ἀπόλλωνος ἱερόν 1",
     "previous": "Apollonos",
     "next": "Apollonos hieron 2",
     "chapters": [
@@ -2654,7 +2670,7 @@
   },
   {
     "lemma": "Apollonos hieron 2",
-    "previous": "Apollonos hieron 1",
+    "previous": "Ἀπόλλωνος ἱερόν 1",
     "next": "Apollonos men",
     "chapters": [
       {
@@ -6312,6 +6328,8 @@
     "lemma": "Aqua, Aquae 40",
     "previous": "Aqua, Aquae 39",
     "next": "Aqua, Aquae 41",
+    "sort_key": "Aquae 040",
+    "redirect": "Ferentina aqua",
     "chapters": [
       {
         "start": 300,
@@ -6378,6 +6396,8 @@
     "lemma": "Aqua, Aquae 45",
     "previous": "Aqua, Aquae 44",
     "next": "Aqua, Aquae 46",
+    "sort_key": "Aquae 045",
+    "redirect": "Aqua, Aquae 6",
     "chapters": [
       {
         "start": 301,
@@ -6442,6 +6462,8 @@
     "lemma": "Aqua, Aquae 50",
     "previous": "Aqua, Aquae 49",
     "next": "Aqua, Aquae 51",
+    "sort_key": "Aquae 050",
+    "redirect": "Aqua, Aquae 85",
     "chapters": [
       {
         "start": 301,
@@ -29857,6 +29879,7 @@
     "lemma": "Aristophontes",
     "previous": "Aristophon 9",
     "next": "Aristophyloi",
+    "redirect": "Aristophon 8",
     "chapters": [
       {
         "start": 1008,
@@ -30040,6 +30063,7 @@
     "lemma": "Aristos 7",
     "previous": "Aristos 6",
     "next": "Aristos 8",
+    "sort_key": "Aristos 07",
     "redirect": true,
     "chapters": [
       {
@@ -30314,6 +30338,9 @@
     "lemma": "Aristoteles 18",
     "previous": "Aristoteles 17",
     "next": "Aristoteles 19",
+    "sort_key": "Aristoteles 18",
+    "wp_link": "w:de:Aristoteles",
+    "ws_link": "s:de:Aristoteles",
     "chapters": [
       {
         "start": 1012,
@@ -30569,6 +30596,7 @@
     "lemma": "Aristoxenos 9",
     "previous": "Aristoxenos 8",
     "next": "Aristoxenos 10",
+    "sort_key": "Aristoxenos 09",
     "chapters": [
       {
         "start": 1065,

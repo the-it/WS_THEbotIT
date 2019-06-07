@@ -423,7 +423,6 @@
   {
     "lemma": "Agesilaos 7b",
     "previous": "Aemilius 171a",
-    "next": "Akephalos",
     "chapters": [
       {
         "start": 4,
@@ -433,8 +432,12 @@
     ]
   },
   {
+    "lemma": "Αἰνύρων χῶρος",
+    "next": "Akephalos"
+  },
+  {
     "lemma": "Akephalos",
-    "previous": "Agesilaos 7b",
+    "previous": "Αἰνύρων χῶρος",
     "next": "Alba 6a",
     "chapters": [
       {
@@ -476,6 +479,7 @@
   {
     "lemma": "Albucius 5",
     "previous": "Albius 14",
+    "next": "Aliphera",
     "chapters": [
       {
         "start": 22,
@@ -486,6 +490,7 @@
   },
   {
     "lemma": "Aliphera",
+    "previous": "Albucius 5",
     "next": "Alkmaion 6"
   },
   {
@@ -674,7 +679,7 @@
   {
     "lemma": "Appuleius 14",
     "previous": "Appuleius 13",
-    "next": "Arcani",
+    "next": "Aquilius 18",
     "chapters": [
       {
         "start": 89,
@@ -684,8 +689,11 @@
     ]
   },
   {
+    "lemma": "Aquilius 18",
+    "previous": "Appuleius 14"
+  },
+  {
     "lemma": "Arcani",
-    "previous": "Appuleius 14",
     "next": "Apicatus",
     "chapters": [
       {
@@ -3249,7 +3257,7 @@
   {
     "lemma": "Arborius 5",
     "previous": "Thukydides 1",
-    "next": "Archedemos 5.6",
+    "next": "Archedemos 5",
     "chapters": [
       {
         "start": 1355,
@@ -3259,8 +3267,11 @@
     ]
   },
   {
+    "lemma": "Archedemos 5",
+    "previous": "Arborius 5"
+  },
+  {
     "lemma": "Archedemos 5.6",
-    "previous": "Arborius 5",
     "chapters": [
       {
         "start": 1356,

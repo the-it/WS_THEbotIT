@@ -626,6 +626,8 @@
     "lemma": "Strabon 3",
     "previous": "Strabon 2",
     "next": "Stracteos",
+    "wp_link": "w:de:Strabon",
+    "ws_link": "s:de:Strabon",
     "chapters": [
       {
         "start": 76,
@@ -638,6 +640,7 @@
     "lemma": "Stracteos",
     "previous": "Strabon 3",
     "next": "Stradela",
+    "redirect": "Regium 3",
     "chapters": [
       {
         "start": 155,
@@ -650,7 +653,7 @@
     "lemma": "Stradela",
     "previous": "Stracteos",
     "next": "Strafgelder",
-    "redirect": true,
+    "redirect": "Esdraelon 1",
     "chapters": [
       {
         "start": 155,
@@ -5680,6 +5683,7 @@
     "lemma": "Suetonius 4",
     "previous": "Suetonius 3",
     "next": "Suetrii, Suetri",
+    "wp_link": "w:de:Sueton",
     "chapters": [
       {
         "start": 593,
@@ -5704,6 +5708,8 @@
     "lemma": "Suevi",
     "previous": "Suetrii, Suetri",
     "next": "Suevicum",
+    "redirect": "Suebi",
+    "wp_link": "w:de:Sueton",
     "chapters": [
       {
         "start": 642,
@@ -5715,6 +5721,8 @@
     "lemma": "Suevicum",
     "previous": "Suevi",
     "next": "Sufasar",
+    "redirect": "Lagnus sinus",
+    "wp_link": "w:de:Ostsee",
     "chapters": [
       {
         "start": 642,
@@ -5726,7 +5734,9 @@
   {
     "lemma": "Sufasar",
     "previous": "Suevicum",
-    "next": "Sufenas Verus",
+    "next": "Sufenas",
+    "redirect": true,
+    "wp_link": "w:de:Sufasar",
     "chapters": [
       {
         "start": 642,
@@ -5736,7 +5746,7 @@
     ]
   },
   {
-    "lemma": "Sufenas Verus",
+    "lemma": "Sufenas",
     "previous": "Sufasar",
     "next": "Sufes",
     "chapters": [
@@ -5749,7 +5759,7 @@
   },
   {
     "lemma": "Sufes",
-    "previous": "Sufenas Verus",
+    "previous": "Sufenas",
     "next": "Sufeten",
     "chapters": [
       {
@@ -6071,6 +6081,7 @@
     "lemma": "Suicidium",
     "previous": "Sui heredes",
     "next": "Suidas 1",
+    "redirect": "Selbstmord",
     "chapters": [
       {
         "start": 675,

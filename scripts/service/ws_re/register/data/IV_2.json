@@ -2468,6 +2468,7 @@
     "lemma": "Credulitas",
     "previous": "Creditor",
     "next": "Crematio",
+    "wp_link": "w:de:Fama",
     "chapters": [
       {
         "start": 1700,
@@ -3720,6 +3721,7 @@
     "lemma": "Crociatonum",
     "previous": "Crobiggi",
     "next": "Crococalanum",
+    "redirect": "Crouciatonnum",
     "chapters": [
       {
         "start": 1725,
@@ -3755,6 +3757,7 @@
     "lemma": "Crocus 2",
     "previous": "Crocus 1",
     "next": "Crodunum 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1725,
@@ -3778,6 +3781,7 @@
     "lemma": "Crodunum 2",
     "previous": "Crodunum 1",
     "next": "Cronius 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1725,
@@ -3789,6 +3793,7 @@
     "lemma": "Cronius 1",
     "previous": "Crodunum 2",
     "next": "Cronius 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1725,
@@ -3800,6 +3805,7 @@
     "lemma": "Cronius 2",
     "previous": "Cronius 1",
     "next": "Crosa",
+    "redirect": "Eusebios 16",
     "chapters": [
       {
         "start": 1725,
@@ -3836,6 +3842,7 @@
     "lemma": "Crotus",
     "previous": "Crotalus",
     "next": "Croucasis",
+    "redirect": true,
     "chapters": [
       {
         "start": 1726,
@@ -3883,6 +3890,7 @@
     "lemma": "Crovii",
     "previous": "Crougintoudadigoe",
     "next": "Crovius",
+    "redirect": true,
     "chapters": [
       {
         "start": 1726,
@@ -13072,7 +13080,8 @@
   {
     "lemma": "Δαφνουσὶς λίμνη",
     "previous": "Daphnusion",
-    "next": "Daphnus limen",
+    "next": "Δαφνοῦς λιμήν",
+    "sort_key": "Daphnusis limne",
     "chapters": [
       {
         "start": 2149,
@@ -13082,9 +13091,10 @@
     ]
   },
   {
-    "lemma": "Daphnus limen",
+    "lemma": "Δαφνοῦς λιμήν",
     "previous": "Δαφνουσὶς λίμνη",
     "next": "Daphoineus",
+    "sort_key": "Daphnus limen",
     "chapters": [
       {
         "start": 2149,
@@ -13095,7 +13105,7 @@
   },
   {
     "lemma": "Daphoineus",
-    "previous": "Daphnus limen",
+    "previous": "Δαφνοῦς λιμήν",
     "next": "Dapli(?)dike",
     "chapters": [
       {
@@ -13181,6 +13191,7 @@
     "lemma": "Darabescus",
     "previous": "Daraanon",
     "next": "Darada",
+    "redirect": "Drabeskos",
     "chapters": [
       {
         "start": 2151,
@@ -21326,6 +21337,7 @@
     "lemma": "Demetrios 45",
     "previous": "Demetrios 44",
     "next": "Demetrios 46",
+    "sort_key": "Demetrios 045",
     "chapters": [
       {
         "start": 2802,
@@ -21338,6 +21350,7 @@
     "lemma": "Demetrios 46",
     "previous": "Demetrios 45",
     "next": "Demetrios 47",
+    "sort_key": "Demetrios 046",
     "chapters": [
       {
         "start": 2802,
@@ -21350,6 +21363,7 @@
     "lemma": "Demetrios 47",
     "previous": "Demetrios 46",
     "next": "Demetrios 48",
+    "sort_key": "Demetrios 047",
     "chapters": [
       {
         "start": 2802,
@@ -21362,6 +21376,7 @@
     "lemma": "Demetrios 48",
     "previous": "Demetrios 47",
     "next": "Demetrios 49",
+    "sort_key": "Demetrios 048",
     "chapters": [
       {
         "start": 2802,
@@ -21374,6 +21389,7 @@
     "lemma": "Demetrios 49",
     "previous": "Demetrios 48",
     "next": "Demetrios 50",
+    "sort_key": "Demetrios 049",
     "chapters": [
       {
         "start": 2802,
@@ -22055,6 +22071,7 @@
     "lemma": "Demetrios 100",
     "previous": "Demetrios 99",
     "next": "Demetrios 101",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2845,

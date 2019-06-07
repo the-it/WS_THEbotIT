@@ -5631,7 +5631,6 @@
   {
     "lemma": "Plorucensis statio",
     "previous": "Plautius 64a",
-    "next": "Plygonion",
     "chapters": [
       {
         "start": 385,
@@ -5641,9 +5640,13 @@
     ]
   },
   {
+    "lemma": "Plutodotes",
+    "next": "Plygonion"
+  },
+  {
     "lemma": "Plygonion",
-    "previous": "Plorucensis statio",
-    "next": "Plancius 7",
+    "previous": "Plutodotes",
+    "next": "Pneuma",
     "chapters": [
       {
         "start": 385,
@@ -5653,8 +5656,11 @@
     ]
   },
   {
+    "lemma": "Pneuma",
+    "previous": "Plygonion"
+  },
+  {
     "lemma": "Plancius 7",
-    "previous": "Plygonion",
     "next": "Plancius 8",
     "chapters": [
       {

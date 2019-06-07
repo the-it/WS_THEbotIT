@@ -330,7 +330,7 @@
   {
     "lemma": "Anartii",
     "previous": "Anaphe",
-    "next": "Anatomie",
+    "next": "Andreas 11",
     "chapters": [
       {
         "start": 38,
@@ -340,20 +340,13 @@
     ]
   },
   {
-    "lemma": "Anatomie",
+    "lemma": "Andreas 11",
     "previous": "Anartii",
-    "next": "Androkles 11",
-    "chapters": [
-      {
-        "start": 38,
-        "end": 48,
-        "author": "Kudlien"
-      }
-    ]
+    "next": "Androkles 11"
   },
   {
     "lemma": "Androkles 11",
-    "previous": "Anatomie",
+    "previous": "Andreas 11",
     "next": "Anduit",
     "chapters": [
       {
@@ -461,7 +454,6 @@
   {
     "lemma": "Archelaos 10a",
     "previous": "Arabiates",
-    "next": "Aristoteles 25",
     "chapters": [
       {
         "start": 136,
@@ -471,8 +463,12 @@
     ]
   },
   {
+    "lemma": "Aristoteles 18",
+    "next": "Aristoteles 25"
+  },
+  {
     "lemma": "Aristoteles 25",
-    "previous": "Archelaos 10a",
+    "previous": "Aristoteles 18",
     "next": "Arsaciana",
     "chapters": [
       {
@@ -1074,7 +1070,7 @@
   {
     "lemma": "Iosista",
     "previous": "Incerum",
-    "next": "Kallistratos 36a",
+    "next": "Isthmos 1",
     "chapters": [
       {
         "start": 850,
@@ -1084,20 +1080,13 @@
     ]
   },
   {
-    "lemma": "Kallistratos 36a",
+    "lemma": "Isthmos 1",
     "previous": "Iosista",
-    "next": "Iucundus 3a",
-    "chapters": [
-      {
-        "start": 853,
-        "end": 853,
-        "author": "Stoessl"
-      }
-    ]
+    "next": "Iucundus 3a"
   },
   {
     "lemma": "Iucundus 3a",
-    "previous": "Kallistratos 36a",
+    "previous": "Isthmos 1",
     "next": "Kauaroi",
     "chapters": [
       {

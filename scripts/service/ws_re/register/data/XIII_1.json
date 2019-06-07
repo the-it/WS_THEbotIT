@@ -2796,6 +2796,7 @@
     "lemma": "Licinius 91",
     "previous": "Licinius 90",
     "next": "Licinius 92",
+    "sort_key": "Licinius 091",
     "chapters": [
       {
         "start": 371,
@@ -2808,6 +2809,7 @@
     "lemma": "Licinius 92",
     "previous": "Licinius 91",
     "next": "Licinius 93",
+    "sort_key": "Licinius 092",
     "chapters": [
       {
         "start": 371,
@@ -2820,6 +2822,8 @@
     "lemma": "Licinius 93",
     "previous": "Licinius 92",
     "next": "Licinius 94",
+    "sort_key": "Licinius 093",
+    "redirect": "Statius 18",
     "chapters": [
       {
         "start": 371,
@@ -2832,6 +2836,8 @@
     "lemma": "Licinius 94",
     "previous": "Licinius 93",
     "next": "Licinius 95",
+    "sort_key": "Licinius 094",
+    "redirect": "Licinius 80",
     "chapters": [
       {
         "start": 371,
@@ -2844,6 +2850,7 @@
     "lemma": "Licinius 95",
     "previous": "Licinius 94",
     "next": "Licinius 96",
+    "sort_key": "Licinius 095",
     "chapters": [
       {
         "start": 372,
@@ -2856,6 +2863,7 @@
     "lemma": "Licinius 96",
     "previous": "Licinius 95",
     "next": "Licinius 97",
+    "sort_key": "Licinius 096",
     "chapters": [
       {
         "start": 372,
@@ -2868,6 +2876,7 @@
     "lemma": "Licinius 97",
     "previous": "Licinius 96",
     "next": "Licinius 98",
+    "sort_key": "Licinius 097",
     "chapters": [
       {
         "start": 372,
@@ -2879,7 +2888,8 @@
   {
     "lemma": "Licinius 98",
     "previous": "Licinius 97",
-    "next": "Licinius 99",
+    "next": "Licinius 99ff.",
+    "sort_key": "Licinius 098",
     "chapters": [
       {
         "start": 372,
@@ -2889,9 +2899,10 @@
     ]
   },
   {
-    "lemma": "Licinius 99",
+    "lemma": "Licinius 99ff.",
     "previous": "Licinius 98",
-    "next": "Licinius 99ff.",
+    "next": "Licinius 99",
+    "sort_key": "Licinius 099ff.",
     "chapters": [
       {
         "start": 372,
@@ -2901,9 +2912,10 @@
     ]
   },
   {
-    "lemma": "Licinius 99ff.",
-    "previous": "Licinius 99",
+    "lemma": "Licinius 99",
+    "previous": "Licinius 99ff.",
     "next": "Licinius 100",
+    "sort_key": "Licinius 099",
     "chapters": [
       {
         "start": 372,
@@ -2914,7 +2926,7 @@
   },
   {
     "lemma": "Licinius 100",
-    "previous": "Licinius 99ff.",
+    "previous": "Licinius 99",
     "next": "Licinius 101",
     "chapters": [
       {
@@ -2964,6 +2976,7 @@
     "lemma": "Licinius 104",
     "previous": "Licinius 103",
     "next": "Licinius 105",
+    "wp_link": "w:de:Lucius Licinius Lucullus",
     "chapters": [
       {
         "start": 376,
@@ -2976,6 +2989,7 @@
     "lemma": "Licinius 105",
     "previous": "Licinius 104",
     "next": "Licinius 106",
+    "redirect": true,
     "chapters": [
       {
         "start": 414,

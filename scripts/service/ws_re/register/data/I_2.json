@@ -161,6 +161,7 @@
     "lemma": "Alexandros 38",
     "previous": "Alexandros 37",
     "next": "Alexandros 39",
+    "sort_key": "Alexandros 038",
     "chapters": [
       {
         "start": 1443,
@@ -173,6 +174,7 @@
     "lemma": "Alexandros 39",
     "previous": "Alexandros 38",
     "next": "Alexandros 40",
+    "sort_key": "Alexandros 039",
     "chapters": [
       {
         "start": 1443,
@@ -328,6 +330,7 @@
     "lemma": "Alexandros 51",
     "previous": "Alexandros 50",
     "next": "Alexandros 52",
+    "sort_key": "Alexandros 051",
     "chapters": [
       {
         "start": 1444,
@@ -667,6 +670,8 @@
     "lemma": "Alexandros 77",
     "previous": "Alexandros 76",
     "next": "Alexandros 78",
+    "sort_key": "Alexandros 077",
+    "redirect": "Cresconius 2",
     "chapters": [
       {
         "start": 1446,
@@ -1828,6 +1833,7 @@
     "lemma": "Alexis 9",
     "previous": "Alexis 8",
     "next": "Alexis 10",
+    "sort_key": "Alexis 09",
     "chapters": [
       {
         "start": 1468,
@@ -2149,6 +2155,7 @@
     "lemma": "Alfius 6",
     "previous": "Alfius 5",
     "next": "Alfius 7",
+    "sort_key": "Alfius 06",
     "chapters": [
       {
         "start": 1475,
@@ -3162,6 +3169,7 @@
     "lemma": "Alkaios 5",
     "previous": "Alkaios 4",
     "next": "Alkaios 6",
+    "sort_key": "Alkaios05",
     "chapters": [
       {
         "start": 1498,
@@ -3236,6 +3244,7 @@
     "lemma": "Alkaios 11",
     "previous": "Alkaios 10",
     "next": "Alkaios 12",
+    "sort_key": "Alkaios11",
     "chapters": [
       {
         "start": 1505,
@@ -3959,6 +3968,7 @@
     "lemma": "Alkibiades 8",
     "previous": "Alkibiades 7",
     "next": "Alkibiades 9",
+    "sort_key": "Alkibiades 08",
     "chapters": [
       {
         "start": 1533,
@@ -3971,6 +3981,7 @@
     "lemma": "Alkibiades 9",
     "previous": "Alkibiades 8",
     "next": "Alkibiades 10",
+    "sort_key": "Alkibiades 09",
     "chapters": [
       {
         "start": 1533,
@@ -6686,6 +6697,7 @@
     "lemma": "Alopeke 4",
     "previous": "Alopeke 3",
     "next": "Ἀλωπεκίς",
+    "wp_link": "w:de:Alopeke",
     "chapters": [
       {
         "start": 1597,
@@ -7101,7 +7113,7 @@
   {
     "lemma": "Alphito",
     "previous": "Alphios",
-    "next": "Alphitomanteia",
+    "next": "Ἀλφιτομαντεία",
     "chapters": [
       {
         "start": 1637,
@@ -7111,9 +7123,10 @@
     ]
   },
   {
-    "lemma": "Alphitomanteia",
+    "lemma": "Ἀλφιτομαντεία",
     "previous": "Alphito",
     "next": "Alphitopolis",
+    "sort_key": "Alphitomanteia",
     "chapters": [
       {
         "start": 1637,
@@ -7124,7 +7137,7 @@
   },
   {
     "lemma": "Alphitopolis",
-    "previous": "Alphitomanteia",
+    "previous": "Ἀλφιτομαντεία",
     "next": "Alpinius 1",
     "chapters": [
       {
@@ -11495,6 +11508,7 @@
     "lemma": "Ameinias 3",
     "previous": "Ameinias 2",
     "next": "Ameinias 4",
+    "sort_key": "Ameinias 03",
     "chapters": [
       {
         "start": 1818,
@@ -23978,6 +23992,7 @@
     "lemma": "Andreas 5",
     "previous": "Andreas 4",
     "next": "Andreas 6",
+    "sort_key": "Andreas 05",
     "chapters": [
       {
         "start": 2135,
@@ -27804,6 +27819,7 @@
     "lemma": "Anicius 47",
     "previous": "Anicius 46",
     "next": "Anicius 48",
+    "wp_link": "w:de:Flavius Anicius Probinus",
     "chapters": [
       {
         "start": 2207,
@@ -31323,7 +31339,8 @@
     "lemma": "Anonymus Norisianus",
     "previous": "Anonymus Nilanti",
     "next": "Anonymus Valesianus",
-    "redirect": true,
+    "redirect": "Chronograph vom J. 354",
+    "wp_link": "w:de:Chronograph von 354",
     "chapters": [
       {
         "start": 2333,
@@ -33748,6 +33765,7 @@
     "lemma": "Ἀνθοφόροι",
     "previous": "Anthologia 2",
     "next": "Anthos 1",
+    "sort_key": "Anthophoroi",
     "redirect": true,
     "chapters": [
       {
@@ -33808,7 +33826,9 @@
     "lemma": "Ἀνθρήνη",
     "previous": "Anthrakia",
     "next": "Anthropophagoi",
-    "redirect": true,
+    "sort_key": "Anthrene",
+    "redirect": "Biene",
+    "wp_link": "w:de:Bienen",
     "chapters": [
       {
         "start": 2392,
@@ -33820,7 +33840,8 @@
     "lemma": "Anthropophagoi",
     "previous": "Ἀνθρήνη",
     "next": "Anthroporraistes",
-    "redirect": true,
+    "redirect": "Androphagoi",
+    "wp_link": "w:de:Kannibalismus",
     "chapters": [
       {
         "start": 2392,
@@ -45642,6 +45663,8 @@
     "lemma": "Ἀφαίρεσις",
     "previous": "Aphairema",
     "next": "Aphaka",
+    "sort_key": "Aphairesis",
+    "redirect": true,
     "chapters": [
       {
         "start": 2709,
@@ -45690,6 +45713,7 @@
     "lemma": "Aphakitis",
     "previous": "Aphake 2",
     "next": "Aphamios",
+    "redirect": "Aphaka",
     "chapters": [
       {
         "start": 2710,
@@ -45726,6 +45750,7 @@
     "lemma": "Aphannai",
     "previous": "Ἀφαμιῶται",
     "next": "Ἀφανὴς οὐσία",
+    "redirect": "Apina",
     "chapters": [
       {
         "start": 2710,
@@ -45749,6 +45774,7 @@
     "lemma": "Aphar",
     "previous": "Ἀφανὴς οὐσία",
     "next": "Apharea",
+    "redirect": "Saphar 1",
     "chapters": [
       {
         "start": 2710,
@@ -48939,6 +48965,7 @@
     "lemma": "Apollodoros 1",
     "previous": "Apollobex",
     "next": "Apollodoros 2",
+    "sort_key": "Apollodoros 01",
     "chapters": [
       {
         "start": 2847,
@@ -48951,6 +48978,7 @@
     "lemma": "Apollodoros 2",
     "previous": "Apollodoros 1",
     "next": "Apollodoros 3",
+    "sort_key": "Apollodoros 02",
     "chapters": [
       {
         "start": 2847,

@@ -14,18 +14,15 @@
   {
     "lemma": "Adule",
     "previous": "Adobogiona",
-    "next": "Agri decumates",
-    "chapters": [
-      {
-        "start": 1,
-        "end": 1,
-        "author": "Littmann"
-      }
-    ]
+    "next": "Adulitai"
+  },
+  {
+    "lemma": "Adulitai",
+    "previous": "Adule",
+    "next": "Agri decumates"
   },
   {
     "lemma": "Agri decumates",
-    "previous": "Adule",
     "next": "Aguntum",
     "chapters": [
       {
@@ -61,10 +58,12 @@
   },
   {
     "lemma": "Alexandros 17",
-    "previous": "Aischetades"
+    "previous": "Aischetades",
+    "next": "Alum Gallicum"
   },
   {
     "lemma": "Alum Gallicum",
+    "previous": "Alexandros 17",
     "next": "Amphinomos 6",
     "chapters": [
       {
@@ -275,7 +274,13 @@
   },
   {
     "lemma": "Aurelius 56b",
-    "previous": "Aurelius 39a"
+    "previous": "Aurelius 39a",
+    "next": "Aurelius 145aaa",
+    "sort_key": "Aurelius 056b"
+  },
+  {
+    "lemma": "Aurelius 145aaa",
+    "previous": "Aurelius 56b"
   },
   {
     "lemma": "Auction 1",
@@ -357,7 +362,7 @@
   {
     "lemma": "Axomis",
     "previous": "Aurelius 244a",
-    "next": "Caecilius 33a",
+    "next": "Biennos 1",
     "chapters": [
       {
         "start": 75,
@@ -367,8 +372,11 @@
     ]
   },
   {
+    "lemma": "Biennos 1",
+    "previous": "Axomis"
+  },
+  {
     "lemma": "Caecilius 33a",
-    "previous": "Axomis",
     "next": "Caelius 7a",
     "chapters": [
       {
