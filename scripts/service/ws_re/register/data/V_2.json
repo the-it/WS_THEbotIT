@@ -17019,7 +17019,7 @@
   {
     "lemma": "Elipeus",
     "previous": "Elionaios",
-    "next": "Elis, Eleia",
+    "next": "Elis",
     "redirect": true,
     "chapters": [
       {
@@ -17029,21 +17029,16 @@
     ]
   },
   {
-    "lemma": "Elis, Eleia",
+    "lemma": "Elis",
     "previous": "Elipeus",
     "next": "Elis 1",
-    "chapters": [
-      {
-        "start": 2368,
-        "end": 2369,
-        "author": "Philippson"
-      }
-    ]
+    "sort_key": "Elis 0"
   },
   {
     "lemma": "Elis 1",
-    "previous": "Elis, Eleia",
+    "previous": "Elis",
     "next": "Elis 2",
+    "wp_link": "w:de:Elis",
     "chapters": [
       {
         "start": 2369,
@@ -17056,6 +17051,7 @@
     "lemma": "Elis 2",
     "previous": "Elis 1",
     "next": "Elis 3",
+    "wp_link": "w:de:Elis (Stadt)",
     "chapters": [
       {
         "start": 2432,

@@ -3116,7 +3116,7 @@
   {
     "lemma": "Tabienoi 1",
     "previous": "Ταβιηνή",
-    "next": "Tabienoi 2",
+    "next": "Ταβιηνοί 2",
     "chapters": [
       {
         "start": 1878,
@@ -3126,9 +3126,9 @@
     ]
   },
   {
-    "lemma": "Tabienoi 2",
+    "lemma": "Ταβιηνοί 2",
     "previous": "Tabienoi 1",
-    "next": "Tabioi",
+    "next": "Τάβιοι",
     "chapters": [
       {
         "start": 1878,
@@ -3138,9 +3138,10 @@
     ]
   },
   {
-    "lemma": "Tabioi",
-    "previous": "Tabienoi 2",
+    "lemma": "Τάβιοι",
+    "previous": "Ταβιηνοί 2",
     "next": "Tabis 1",
+    "sort_key": "Tabioi",
     "chapters": [
       {
         "start": 1879,
@@ -3151,7 +3152,7 @@
   },
   {
     "lemma": "Tabis 1",
-    "previous": "Tabioi",
+    "previous": "Τάβιοι",
     "next": "Tabis 2",
     "chapters": [
       {
@@ -3165,7 +3166,6 @@
     "lemma": "Tabis 2",
     "previous": "Tabis 1",
     "next": "Tabiti",
-    "redirect": true,
     "chapters": [
       {
         "start": 1879,
@@ -3201,6 +3201,7 @@
     "lemma": "Tablinum",
     "previous": "Tablae",
     "next": "Tabos",
+    "redirect": "Römisches Haus",
     "chapters": [
       {
         "start": 1880,
@@ -5762,7 +5763,7 @@
   {
     "lemma": "Tammuz",
     "previous": "Tammas",
-    "next": "Tamna 1",
+    "next": "Τάμνα 1",
     "chapters": [
       {
         "start": 2139,
@@ -5772,9 +5773,10 @@
     ]
   },
   {
-    "lemma": "Tamna 1",
+    "lemma": "Τάμνα 1",
     "previous": "Tammuz",
-    "next": "Tamna 2",
+    "next": "Τάμνα 2",
+    "sort_key": "Tamna 1",
     "chapters": [
       {
         "start": 2148,
@@ -5784,8 +5786,8 @@
     ]
   },
   {
-    "lemma": "Tamna 2",
-    "previous": "Tamna 1",
+    "lemma": "Τάμνα 2",
+    "previous": "Τάμνα 1",
     "next": "Tamnicum",
     "chapters": [
       {
@@ -5796,7 +5798,7 @@
   },
   {
     "lemma": "Tamnicum",
-    "previous": "Tamna 2",
+    "previous": "Τάμνα 2",
     "next": "Tamnum",
     "chapters": [
       {
@@ -9763,7 +9765,7 @@
   {
     "lemma": "Tartursanis",
     "previous": "Tartettios",
-    "next": "Tarualtai",
+    "next": "Ταρουάλται",
     "chapters": [
       {
         "start": 2451,
@@ -9773,9 +9775,10 @@
     ]
   },
   {
-    "lemma": "Tarualtai",
+    "lemma": "Ταρουάλται",
     "previous": "Tartursanis",
     "next": "Tarvanna",
+    "sort_key": "Tarualtai",
     "chapters": [
       {
         "start": 2451,
@@ -9786,8 +9789,8 @@
   },
   {
     "lemma": "Tarvanna",
-    "previous": "Tarualtai",
-    "next": "Taruda",
+    "previous": "Ταρουάλται",
+    "next": "Τάρουδα",
     "wp_link": "w:de:Thérouanne",
     "chapters": [
       {
@@ -9798,9 +9801,10 @@
     ]
   },
   {
-    "lemma": "Taruda",
+    "lemma": "Τάρουδα",
     "previous": "Tarvanna",
     "next": "Tarvedum",
+    "sort_key": "Taruda",
     "chapters": [
       {
         "start": 2452,
@@ -9811,7 +9815,7 @@
   },
   {
     "lemma": "Tarvedum",
-    "previous": "Taruda",
+    "previous": "Τάρουδα",
     "next": "Tarvesede",
     "chapters": [
       {
@@ -10042,7 +10046,7 @@
   {
     "lemma": "Tasinemeti",
     "previous": "Tasibastenus",
-    "next": "Tasitia",
+    "next": "Τασιτία",
     "chapters": [
       {
         "start": 2461,
@@ -10052,9 +10056,10 @@
     ]
   },
   {
-    "lemma": "Tasitia",
+    "lemma": "Τασιτία",
     "previous": "Tasinemeti",
     "next": "Τάσκα",
+    "sort_key": "Tasitia",
     "chapters": [
       {
         "start": 2461,
@@ -10065,7 +10070,7 @@
   },
   {
     "lemma": "Τάσκα",
-    "previous": "Tasitia",
+    "previous": "Τασιτία",
     "next": "Taskoi",
     "sort_key": "Taska",
     "chapters": [

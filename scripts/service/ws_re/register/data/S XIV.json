@@ -1850,6 +1850,7 @@
   {
     "lemma": "Aginatius 4",
     "previous": "Agathon 18",
+    "next": "Aiacius 1",
     "chapters": [
       {
         "start": 14,
@@ -1860,6 +1861,7 @@
   },
   {
     "lemma": "Aiacius 1",
+    "previous": "Aginatius 4",
     "next": "Aiacius 1a"
   },
   {
@@ -1876,10 +1878,12 @@
   },
   {
     "lemma": "Aiacius 2",
-    "previous": "Aiacius 1a"
+    "previous": "Aiacius 1a",
+    "next": "Aimyndos"
   },
   {
     "lemma": "Aimyndos",
+    "previous": "Aiacius 2",
     "next": "Aisopos 1",
     "redirect": true
   },

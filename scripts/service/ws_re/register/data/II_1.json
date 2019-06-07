@@ -933,7 +933,7 @@
   {
     "lemma": "Apollonieis",
     "previous": "Apollonides 34",
-    "next": "Apollonion akroterion",
+    "next": "Ἀπολλώνιον ἀκρωτήριον",
     "chapters": [
       {
         "start": 121,
@@ -942,7 +942,7 @@
     ]
   },
   {
-    "lemma": "Apollonion akroterion",
+    "lemma": "Ἀπολλώνιον ἀκρωτήριον",
     "previous": "Apollonieis",
     "next": "Apollonios 1",
     "chapters": [
@@ -954,8 +954,10 @@
   },
   {
     "lemma": "Apollonios 1",
-    "previous": "Apollonion akroterion",
+    "previous": "Ἀπολλώνιον ἀκρωτήριον",
     "next": "Apollonios 2",
+    "sort_key": "Apollonios 001",
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 121,
@@ -2034,6 +2036,7 @@
     "lemma": "Apollonios 87",
     "previous": "Apollonios 86",
     "next": "Apollonios 88",
+    "sort_key": "Apollonios 087",
     "chapters": [
       {
         "start": 144,
@@ -2046,6 +2049,7 @@
     "lemma": "Apollonios 88",
     "previous": "Apollonios 87",
     "next": "Apollonios 89",
+    "sort_key": "Apollonios 088",
     "chapters": [
       {
         "start": 144,
@@ -2058,6 +2062,7 @@
     "lemma": "Apollonios 89",
     "previous": "Apollonios 88",
     "next": "Apollonios 90",
+    "sort_key": "Apollonios 089",
     "chapters": [
       {
         "start": 144,
@@ -13924,6 +13929,7 @@
     "lemma": "Archias 11",
     "previous": "Archias 10",
     "next": "Archias 12",
+    "sort_key": "Archias 011",
     "chapters": [
       {
         "start": 462,
@@ -17718,6 +17724,7 @@
     "lemma": "Aretalogoi",
     "previous": "Aretaios",
     "next": "Aretaon 1",
+    "wp_link": "w:de:Aretalogie (Religion)",
     "chapters": [
       {
         "start": 670,
@@ -17901,7 +17908,7 @@
   {
     "lemma": "Arete 3",
     "previous": "Arete 2",
-    "next": "Arete 5",
+    "next": "Ἀρετή",
     "wp_link": "w:de:Arete von Kyrene",
     "chapters": [
       {
@@ -17912,9 +17919,10 @@
     ]
   },
   {
-    "lemma": "Arete 5",
+    "lemma": "Ἀρετή",
     "previous": "Arete 3",
-    "next": "Areteres",
+    "next": "Ἀρητῆρες",
+    "sort_key": "Arete 5",
     "chapters": [
       {
         "start": 678,
@@ -17924,8 +17932,8 @@
     ]
   },
   {
-    "lemma": "Areteres",
-    "previous": "Arete 5",
+    "lemma": "Ἀρητῆρες",
+    "previous": "Ἀρετή",
     "next": "Aretes 1",
     "chapters": [
       {
@@ -17937,7 +17945,7 @@
   },
   {
     "lemma": "Aretes 1",
-    "previous": "Areteres",
+    "previous": "Ἀρητῆρες",
     "next": "Aretes 2",
     "chapters": [
       {
@@ -23771,6 +23779,7 @@
     "lemma": "Aristainetos 8",
     "previous": "Aristainetos 7",
     "next": "Aristainetos 9",
+    "sort_key": "Aristainetos 08",
     "chapters": [
       {
         "start": 851,
@@ -23783,6 +23792,7 @@
     "lemma": "Aristainetos 9",
     "previous": "Aristainetos 8",
     "next": "Aristainetos 10",
+    "sort_key": "Aristainetos 09",
     "chapters": [
       {
         "start": 852,
@@ -25464,6 +25474,7 @@
     "lemma": "Aristippos 3",
     "previous": "Aristippos 2",
     "next": "Aristippos 4",
+    "sort_key": "Aristippos 03",
     "chapters": [
       {
         "start": 902,
@@ -26129,6 +26140,7 @@
     "lemma": "Aristodemos 16",
     "previous": "Aristodemos 15",
     "next": "Aristodemos 17",
+    "wp_link": "w:de:Aristodemos von Milet",
     "chapters": [
       {
         "start": 923,
@@ -27033,6 +27045,7 @@
     "lemma": "Aristokrates 7",
     "previous": "Aristokrates 6",
     "next": "Aristokrates 8",
+    "sort_key": "Aristokrates 07",
     "chapters": [
       {
         "start": 940,
@@ -27629,6 +27642,7 @@
     "lemma": "Aristomachos 5",
     "previous": "Aristomachos 4",
     "next": "Aristomachos 6",
+    "sort_key": "Aristomachos 05",
     "chapters": [
       {
         "start": 945,

@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Abammon",
+    "previous": null,
     "next": "Achilleus 8",
     "chapters": [
       {
@@ -151,6 +152,7 @@
     "lemma": "Aischylos 7a",
     "previous": "Aion 1a",
     "next": "Aischylos 12a",
+    "sort_key": "Aischylos 07a",
     "chapters": [
       {
         "start": 12,
@@ -163,6 +165,7 @@
     "lemma": "Aischylos 12a",
     "previous": "Aischylos 7a",
     "next": "Aischylos 12b",
+    "sort_key": "Aischylos 12a",
     "chapters": [
       {
         "start": 12,
@@ -175,6 +178,7 @@
     "lemma": "Aischylos 12b",
     "previous": "Aischylos 12a",
     "next": "Akios",
+    "sort_key": "Aischylos 12b",
     "chapters": [
       {
         "start": 12,
@@ -198,7 +202,7 @@
   {
     "lemma": "Akuphis",
     "previous": "Akios",
-    "next": "Alektoromanteia",
+    "next": "Ἀλεκτορομαντεία",
     "chapters": [
       {
         "start": 12,
@@ -208,7 +212,7 @@
     ]
   },
   {
-    "lemma": "Alektoromanteia",
+    "lemma": "Ἀλεκτορομαντεία",
     "previous": "Akuphis",
     "next": "Alexandros 34c",
     "chapters": [
@@ -221,8 +225,9 @@
   },
   {
     "lemma": "Alexandros 34c",
-    "previous": "Alektoromanteia",
+    "previous": "Ἀλεκτορομαντεία",
     "next": "Alexandros 34d",
+    "sort_key": "Alexandros 034c",
     "chapters": [
       {
         "start": 15,
@@ -235,6 +240,7 @@
     "lemma": "Alexandros 34d",
     "previous": "Alexandros 34c",
     "next": "Alexandros 34e",
+    "sort_key": "Alexandros 034d",
     "chapters": [
       {
         "start": 15,
@@ -523,10 +529,12 @@
   },
   {
     "lemma": "Antenor 6",
-    "previous": "Anleihen"
+    "previous": "Anleihen",
+    "next": "Antibelos"
   },
   {
     "lemma": "Antibelos",
+    "previous": "Antenor 6",
     "next": "Antidamas",
     "chapters": [
       {
@@ -574,11 +582,17 @@
   },
   {
     "lemma": "Antiochos 68",
-    "previous": "Antimachos 12a"
+    "previous": "Antimachos 12a",
+    "next": "Antipatros 19"
+  },
+  {
+    "lemma": "Antipatros 19",
+    "previous": "Antiochos 68",
+    "next": "Antiphanes 12a"
   },
   {
     "lemma": "Antiphanes 12a",
-    "previous": null,
+    "previous": "Antipatros 19",
     "next": "Antiphilos 3d",
     "chapters": [
       {
@@ -630,7 +644,7 @@
   {
     "lemma": "Aphamios 3",
     "previous": "Aphamios 2",
-    "next": "Aphobetos 2",
+    "next": "Aphneïs",
     "chapters": [
       {
         "start": 44,
@@ -640,8 +654,11 @@
     ]
   },
   {
+    "lemma": "Aphneïs",
+    "previous": "Aphamios 3"
+  },
+  {
     "lemma": "Aphobetos 2",
-    "previous": "Aphamios 3",
     "next": "Aphrikes",
     "chapters": [
       {
@@ -666,7 +683,6 @@
   {
     "lemma": "Apollodoros 41d",
     "previous": "Aphrikes",
-    "next": "Apollodotos 2a",
     "chapters": [
       {
         "start": 44,
@@ -676,8 +692,17 @@
     ]
   },
   {
+    "lemma": "Aphrikes",
+    "next": "Apollodoros 41a"
+  },
+  {
+    "lemma": "Apollodoros 41a",
+    "previous": "Aphrikes",
+    "next": "Apollodotos 2a"
+  },
+  {
     "lemma": "Apollodotos 2a",
-    "previous": "Apollodoros 41d",
+    "previous": "Apollodoros 41a",
     "next": "Apollonios 2a",
     "chapters": [
       {
@@ -990,8 +1015,8 @@
   },
   {
     "lemma": "Arsakes 9",
-    "next": "Arybas 2",
     "previous": "Arridaios 8",
+    "next": "Arybas 2",
     "chapters": [
       {
         "start": 48,
@@ -1889,7 +1914,8 @@
   {
     "lemma": "Demosthenes 4a",
     "previous": "Demophon 10",
-    "next": null,
+    "next": "Denuntiatio",
+    "sort_key": "Demosthenes 04a",
     "chapters": [
       {
         "start": 224,
@@ -1900,6 +1926,7 @@
   },
   {
     "lemma": "Denuntiatio",
+    "previous": "Demosthenes 4a",
     "next": "Derdas 4"
   },
   {
@@ -2421,6 +2448,7 @@
     "lemma": "Eretria 1",
     "previous": "Erdbebenforschung",
     "next": "Erginos 2a",
+    "wp_link": "w:de:Eretria",
     "chapters": [
       {
         "start": 374,
@@ -3687,7 +3715,7 @@
   {
     "lemma": "Histopede",
     "previous": "Histiaios 2a",
-    "next": "Horiodeiktes",
+    "next": "Ὁριοδείκτης",
     "chapters": [
       {
         "start": 757,
@@ -3697,7 +3725,7 @@
     ]
   },
   {
-    "lemma": "Horiodeiktes",
+    "lemma": "Ὁριοδείκτης",
     "previous": "Histopede",
     "next": "Horismos",
     "chapters": [
@@ -3710,8 +3738,8 @@
   },
   {
     "lemma": "Horismos",
-    "previous": "Horiodeiktes",
-    "next": "Horkomotes",
+    "previous": "Ὁριοδείκτης",
+    "next": "Ὁρκωμότης",
     "chapters": [
       {
         "start": 761,
@@ -3721,7 +3749,7 @@
     ]
   },
   {
-    "lemma": "Horkomotes",
+    "lemma": "Ὁρκωμότης",
     "previous": "Horismos",
     "next": "Hormophylakia",
     "chapters": [
@@ -3734,7 +3762,7 @@
   },
   {
     "lemma": "Hormophylakia",
-    "previous": "Horkomotes",
+    "previous": "Ὁρκωμότης",
     "next": "Hyäne",
     "chapters": [
       {
@@ -3873,7 +3901,7 @@
   {
     "lemma": "Hylias",
     "previous": "Hyle 3",
-    "next": "Hypascholumenos",
+    "next": "Ὑπασχολούμενος",
     "chapters": [
       {
         "start": 770,
@@ -3883,7 +3911,7 @@
     ]
   },
   {
-    "lemma": "Hypascholumenos",
+    "lemma": "Ὑπασχολούμενος",
     "previous": "Hylias",
     "next": "Hyperanthes 2",
     "chapters": [
@@ -3896,8 +3924,8 @@
   },
   {
     "lemma": "Hyperanthes 2",
-    "previous": "Hypascholumenos",
-    "next": "Hyperbolos 2",
+    "previous": "Ὑπασχολούμενος",
+    "next": "Hyperbolos 1",
     "chapters": [
       {
         "start": 770,
@@ -3907,8 +3935,11 @@
     ]
   },
   {
+    "lemma": "Hyperbolos 1",
+    "previous": "Hyperanthes 2"
+  },
+  {
     "lemma": "Hyperbolos 2",
-    "previous": "Hyperanthes 2",
     "next": "Hyperethes",
     "chapters": [
       {

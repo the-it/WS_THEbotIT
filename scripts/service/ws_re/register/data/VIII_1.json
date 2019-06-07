@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Helikon 1",
+    "previous": null,
     "next": "Helikon 2",
     "chapters": [
       {
@@ -208,6 +209,7 @@
     "lemma": "Heliodoros 3",
     "previous": "Heliodoros 2",
     "next": "Heliodoros 4",
+    "sort_key": "Heliodoros 03",
     "chapters": [
       {
         "start": 12,
@@ -7483,7 +7485,7 @@
   {
     "lemma": "Herd",
     "previous": "Hercynia silva",
-    "next": "Herdonia",
+    "next": "Herdonia(e)",
     "chapters": [
       {
         "start": 615,
@@ -7493,20 +7495,14 @@
     ]
   },
   {
-    "lemma": "Herdonia",
+    "lemma": "Herdonia(e)",
     "previous": "Herd",
     "next": "Herdonius 1",
-    "chapters": [
-      {
-        "start": 617,
-        "end": 618,
-        "author": "Weiss, J[akob]"
-      }
-    ]
+    "wp_link": "w:de:Ordona"
   },
   {
     "lemma": "Herdonius 1",
-    "previous": "Herdonia",
+    "previous": "Herdonia(e)",
     "next": "Herdonius 2",
     "chapters": [
       {
@@ -11844,6 +11840,7 @@
     "lemma": "Herodes 3",
     "previous": "Herodes 2",
     "next": "Herodes 4",
+    "sort_key": "Herodes 03",
     "chapters": [
       {
         "start": 916,
@@ -11856,6 +11853,7 @@
     "lemma": "Herodes 4",
     "previous": "Herodes 3",
     "next": "Herodes 5",
+    "sort_key": "Herodes 04",
     "chapters": [
       {
         "start": 917,
@@ -11918,6 +11916,7 @@
     "lemma": "Herodes 9",
     "previous": "Herodes 8",
     "next": "Herodes 10",
+    "sort_key": "Herodes 09",
     "chapters": [
       {
         "start": 920,

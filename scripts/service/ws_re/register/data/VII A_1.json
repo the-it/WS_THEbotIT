@@ -1154,7 +1154,7 @@
   {
     "lemma": "Trikomia 4",
     "previous": "Τρικωμία 3",
-    "next": "Trikomia 5",
+    "next": "Τρικωμία 5",
     "chapters": [
       {
         "start": 152,
@@ -1164,9 +1164,9 @@
     ]
   },
   {
-    "lemma": "Trikomia 5",
+    "lemma": "Τρικωμία 5",
     "previous": "Trikomia 4",
-    "next": "Trikomias",
+    "next": "Τρικωμιάς",
     "chapters": [
       {
         "start": 152,
@@ -1176,9 +1176,10 @@
     ]
   },
   {
-    "lemma": "Trikomias",
-    "previous": "Trikomia 5",
+    "lemma": "Τρικωμιάς",
+    "previous": "Τρικωμία 5",
     "next": "Trikornensioi",
+    "sort_key": "Trikomias",
     "chapters": [
       {
         "start": 152,
@@ -1189,7 +1190,7 @@
   },
   {
     "lemma": "Trikornensioi",
-    "previous": "Trikomias",
+    "previous": "Τρικωμιάς",
     "next": "Trikornion",
     "chapters": [
       {
@@ -3291,6 +3292,7 @@
     "lemma": "Troilos 3",
     "previous": "Troilos 2",
     "next": "Troilos 4",
+    "sort_key": "Troilos 03",
     "chapters": [
       {
         "start": 615,
@@ -6260,6 +6262,7 @@
     "lemma": "Tullius 1",
     "previous": "Tullius",
     "next": "Tullius 2",
+    "sort_key": "Tullius 01",
     "chapters": [
       {
         "start": 800,
@@ -6272,6 +6275,7 @@
     "lemma": "Tullius 2",
     "previous": "Tullius 1",
     "next": "Tullius 3",
+    "sort_key": "Tullius 02",
     "chapters": [
       {
         "start": 800,
@@ -6609,6 +6613,8 @@
     "lemma": "Tullius 29",
     "previous": "Tullius 28",
     "next": "Tricasses",
+    "wp_link": "w:de:Marcus Tullius Cicero",
+    "ws_link": "s:de:Cicero",
     "chapters": [
       {
         "start": 827,

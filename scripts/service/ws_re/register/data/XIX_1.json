@@ -122,7 +122,7 @@
   {
     "lemma": "Pecuarius",
     "previous": "Pecuarii 3",
-    "next": "Peculiaris 1",
+    "next": "Peculatus",
     "chapters": [
       {
         "start": 13,
@@ -132,8 +132,13 @@
     ]
   },
   {
-    "lemma": "Peculiaris 1",
+    "lemma": "Peculatus",
     "previous": "Pecuarius",
+    "next": "Peculiaris 1"
+  },
+  {
+    "lemma": "Peculiaris 1",
+    "previous": "Peculatus",
     "next": "Peculiaris 2",
     "chapters": [
       {

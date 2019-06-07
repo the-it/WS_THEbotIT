@@ -86,7 +86,6 @@
   {
     "lemma": "Aiacius 3",
     "previous": "Afranius 10a",
-    "next": "Albiobola",
     "chapters": [
       {
         "start": 3,
@@ -96,8 +95,12 @@
     ]
   },
   {
+    "lemma": "Aiacius 2",
+    "next": "Albiobola"
+  },
+  {
     "lemma": "Albiobola",
-    "previous": "Aiacius 3",
+    "previous": "Aiacius 2",
     "next": "Alexandros 90a",
     "chapters": [
       {
@@ -255,10 +258,17 @@
   },
   {
     "lemma": "Aresaces",
-    "previous": "Areliascus"
+    "previous": "Areliascus",
+    "next": "Aretalogoi"
+  },
+  {
+    "lemma": "Aretalogoi",
+    "previous": "Aresaces",
+    "next": "Arinistae"
   },
   {
     "lemma": "Arinistae",
+    "previous": "Aretalogoi",
     "next": "Arrius 19a",
     "chapters": [
       {
@@ -2587,7 +2597,6 @@
   {
     "lemma": "Maximinus 21a",
     "previous": "Matoas",
-    "next": "Maximus 128",
     "chapters": [
       {
         "start": 283,
@@ -2597,8 +2606,12 @@
     ]
   },
   {
+    "lemma": "Maximinus 5",
+    "next": "Maximus 128"
+  },
+  {
     "lemma": "Maximus 128",
-    "previous": "Maximinus 21a",
+    "previous": "Maximinus 5",
     "next": "Media provincia",
     "chapters": [
       {

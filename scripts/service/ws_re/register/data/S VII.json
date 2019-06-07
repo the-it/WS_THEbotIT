@@ -1,8 +1,9 @@
 [
   {
     "lemma": "Adobogiona",
-    "next": "Adule, Adulis",
-    "redirect": true,
+    "next": "Adule",
+    "sort_key": "Adobogiona",
+    "redirect": "Brogitarus",
     "chapters": [
       {
         "start": 1,
@@ -11,7 +12,7 @@
     ]
   },
   {
-    "lemma": "Adule, Adulis",
+    "lemma": "Adule",
     "previous": "Adobogiona",
     "next": "Agri decumates",
     "chapters": [
@@ -24,7 +25,7 @@
   },
   {
     "lemma": "Agri decumates",
-    "previous": "Adule, Adulis",
+    "previous": "Adule",
     "next": "Aguntum",
     "chapters": [
       {
@@ -100,7 +101,7 @@
   {
     "lemma": "Antiochos 65",
     "previous": "Andron 18",
-    "next": "Apomoira",
+    "next": "Antipatros 29",
     "chapters": [
       {
         "start": 39,
@@ -110,8 +111,16 @@
     ]
   },
   {
-    "lemma": "Apomoira",
+    "lemma": "Antipatros 29",
     "previous": "Antiochos 65",
+    "next": "Apollodoros 27"
+  },
+  {
+    "lemma": "Apollodoros 27",
+    "previous": "Antipatros 29"
+  },
+  {
+    "lemma": "Apomoira",
     "next": "Aqua, Aquae 77a",
     "chapters": [
       {
@@ -384,7 +393,7 @@
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
-    "next": "χειρόγραφον",
+    "next": "Chirographum",
     "chapters": [
       {
         "start": 83,
@@ -394,8 +403,11 @@
     ]
   },
   {
+    "lemma": "Chirographum",
+    "previous": "Canaliclarius"
+  },
+  {
     "lemma": "χειρόγραφον",
-    "previous": "Canaliclarius",
     "next": "Clementius 1a",
     "chapters": [
       {
@@ -2759,7 +2771,6 @@
   {
     "lemma": "Lex Vibia (oder Leges Vibiae) 2",
     "previous": "Lex Vibia (oder Leges Vibiae) 1",
-    "next": "Licinius 151a",
     "chapters": [
       {
         "start": 416,
@@ -2769,8 +2780,12 @@
     ]
   },
   {
+    "lemma": "Libella 1",
+    "next": "Licinius 151a"
+  },
+  {
     "lemma": "Licinius 151a",
-    "previous": "Lex Vibia (oder Leges Vibiae) 2",
+    "previous": "Libella 1",
     "next": "Licinius 155a",
     "chapters": [
       {
@@ -4737,7 +4752,7 @@
   {
     "lemma": "Peculatus",
     "previous": "Origanum",
-    "next": "Orphanene",
+    "next": "Pedion 3",
     "chapters": [
       {
         "start": 817,
@@ -4747,8 +4762,11 @@
     ]
   },
   {
+    "lemma": "Pedion 3",
+    "previous": "Peculatus"
+  },
+  {
     "lemma": "Orphanene",
-    "previous": "Peculatus",
     "next": "Pedion 3",
     "chapters": [
       {

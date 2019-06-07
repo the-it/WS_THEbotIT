@@ -2147,7 +2147,7 @@
   {
     "lemma": "Raps",
     "previous": "Rapraua",
-    "next": "Rapsa 1",
+    "next": "Ῥάψα 1",
     "redirect": true,
     "chapters": [
       {
@@ -2157,9 +2157,10 @@
     ]
   },
   {
-    "lemma": "Rapsa 1",
+    "lemma": "Ῥάψα 1",
     "previous": "Raps",
-    "next": "Rapsa 2",
+    "next": "Ῥάψα 2",
+    "sort_key": "Rapsa 1",
     "chapters": [
       {
         "start": 237,
@@ -2169,8 +2170,8 @@
     ]
   },
   {
-    "lemma": "Rapsa 2",
-    "previous": "Rapsa 1",
+    "lemma": "Ῥάψα 2",
+    "previous": "Ῥάψα 1",
     "next": "Rapseis",
     "chapters": [
       {
@@ -2182,7 +2183,7 @@
   },
   {
     "lemma": "Rapseis",
-    "previous": "Rapsa 2",
+    "previous": "Ῥάψα 2",
     "next": "Ῥάψιοι",
     "chapters": [
       {
@@ -16636,7 +16637,7 @@
   {
     "lemma": "Ῥύνδακος 2",
     "previous": "Ῥύνδακος 1",
-    "next": "Rypara",
+    "next": "Ῥύπαρα",
     "sort_key": "Ryndakos 2",
     "chapters": [
       {
@@ -16647,9 +16648,9 @@
     ]
   },
   {
-    "lemma": "Rypara",
+    "lemma": "Ῥύπαρα",
     "previous": "Ῥύνδακος 2",
-    "next": "Ryparographos",
+    "next": "Ῥυπαρογράφος",
     "chapters": [
       {
         "start": 1287,
@@ -16659,9 +16660,10 @@
     ]
   },
   {
-    "lemma": "Ryparographos",
-    "previous": "Rypara",
-    "next": "Rype",
+    "lemma": "Ῥυπαρογράφος",
+    "previous": "Ῥύπαρα",
+    "next": "Ῥύπη",
+    "sort_key": "Ryparographos",
     "chapters": [
       {
         "start": 1287,
@@ -16671,8 +16673,8 @@
     ]
   },
   {
-    "lemma": "Rype",
-    "previous": "Ryparographos",
+    "lemma": "Ῥύπη",
+    "previous": "Ῥυπαρογράφος",
     "next": "Rypes",
     "chapters": [
       {
@@ -16684,7 +16686,7 @@
   },
   {
     "lemma": "Rypes",
-    "previous": "Rype",
+    "previous": "Ῥύπη",
     "next": "Rysia",
     "chapters": [
       {

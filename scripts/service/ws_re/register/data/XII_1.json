@@ -366,7 +366,7 @@
   {
     "lemma": "Kynos sema 2",
     "previous": "Kynos sema 1",
-    "next": "Kynos sema 3",
+    "next": "Κυνὸς σῆμα 3",
     "chapters": [
       {
         "start": 36,
@@ -376,9 +376,9 @@
     ]
   },
   {
-    "lemma": "Kynos sema 3",
+    "lemma": "Κυνὸς σῆμα 3",
     "previous": "Kynos sema 2",
-    "next": "Kynos sema 4",
+    "next": "Κυνὸς σῆμα 4",
     "chapters": [
       {
         "start": 36,
@@ -386,10 +386,14 @@
         "author": "Oberhummer"
       }
     ]
+  },
+  {
+    "lemma": "Κυνὸς σῆμα 4",
+    "previous": "Κυνὸς σῆμα 3",
+    "sort_key": "Kynossema 4"
   },
   {
     "lemma": "Kynos sema 4",
-    "previous": "Kynos sema 3",
     "next": "Kynosura 1",
     "chapters": [
       {
@@ -777,7 +781,7 @@
   {
     "lemma": "Kyperos",
     "previous": "Kype",
-    "next": "Kyphanioi",
+    "next": "Κυφάνιοι",
     "chapters": [
       {
         "start": 52,
@@ -787,7 +791,7 @@
     ]
   },
   {
-    "lemma": "Kyphanioi",
+    "lemma": "Κυφάνιοι",
     "previous": "Kyperos",
     "next": "Kyphanta",
     "redirect": true,
@@ -800,7 +804,7 @@
   },
   {
     "lemma": "Kyphanta",
-    "previous": "Kyphanioi",
+    "previous": "Κυφάνιοι",
     "next": "Kyphi",
     "chapters": [
       {
@@ -1728,7 +1732,7 @@
   {
     "lemma": "Kyrta",
     "previous": "Kyrsilos",
-    "next": "Kyrtarpaxos",
+    "next": "Κυρτάρπαξος",
     "chapters": [
       {
         "start": 204,
@@ -1738,7 +1742,7 @@
     ]
   },
   {
-    "lemma": "Kyrtarpaxos",
+    "lemma": "Κυρτάρπαξος",
     "previous": "Kyrta",
     "next": "Kyrteidai",
     "chapters": [
@@ -1751,7 +1755,7 @@
   },
   {
     "lemma": "Kyrteidai",
-    "previous": "Kyrtarpaxos",
+    "previous": "Κυρτάρπαξος",
     "next": "Kyrthanium",
     "chapters": [
       {
@@ -1813,7 +1817,7 @@
   {
     "lemma": "Kyrtones",
     "previous": "Kyrtone",
-    "next": "Kyrtos 1",
+    "next": "Κύρτος 1",
     "chapters": [
       {
         "start": 205,
@@ -1823,7 +1827,7 @@
     ]
   },
   {
-    "lemma": "Kyrtos 1",
+    "lemma": "Κύρτος 1",
     "previous": "Kyrtones",
     "next": "Kyrtos 2",
     "redirect": true,
@@ -1836,7 +1840,7 @@
   },
   {
     "lemma": "Kyrtos 2",
-    "previous": "Kyrtos 1",
+    "previous": "Κύρτος 1",
     "next": "Kyru Pedion",
     "chapters": [
       {

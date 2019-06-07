@@ -4245,7 +4245,7 @@
   {
     "lemma": "Asilius 2",
     "previous": "Asilius 1",
-    "next": "Asilla",
+    "next": "Ἀσίλλα",
     "chapters": [
       {
         "start": 1580,
@@ -4255,7 +4255,7 @@
     ]
   },
   {
-    "lemma": "Asilla",
+    "lemma": "Ἀσίλλα",
     "previous": "Asilius 2",
     "next": "Asillus",
     "chapters": [
@@ -4268,7 +4268,7 @@
   },
   {
     "lemma": "Asillus",
-    "previous": "Asilla",
+    "previous": "Ἀσίλλα",
     "next": "Asilva",
     "chapters": [
       {
@@ -14619,6 +14619,7 @@
     "lemma": "Athenagoras 9",
     "previous": "Athenagoras 8",
     "next": "Athenagoras 10",
+    "sort_key": "Athenagoras 09",
     "chapters": [
       {
         "start": 2020,
@@ -15703,6 +15704,7 @@
     "lemma": "Athenodoros 9",
     "previous": "Athenodoros 8",
     "next": "Athenodoros 10",
+    "sort_key": "Athenodoros 09",
     "chapters": [
       {
         "start": 2044,
@@ -26899,6 +26901,7 @@
     "lemma": "Aurelius 9",
     "previous": "Aurelius 8",
     "next": "Aurelius 10",
+    "sort_key": "Aurelius 009",
     "chapters": [
       {
         "start": 2432,
@@ -26911,6 +26914,7 @@
     "lemma": "Aurelius 10",
     "previous": "Aurelius 9",
     "next": "Aurelius 11",
+    "sort_key": "Aurelius 010",
     "chapters": [
       {
         "start": 2432,
@@ -27182,6 +27186,7 @@
     "lemma": "Aurelius 32",
     "previous": "Aurelius 31",
     "next": "Aurelius 33",
+    "sort_key": "Aurelius 032",
     "chapters": [
       {
         "start": 2433,
@@ -33988,7 +33993,7 @@
   {
     "lemma": "Axona",
     "previous": "Axon",
-    "next": "Axones",
+    "next": "Ἄξονες",
     "wp_link": "w:de:Aisne (Oise)",
     "chapters": [
       {
@@ -33999,7 +34004,7 @@
     ]
   },
   {
-    "lemma": "Axones",
+    "lemma": "Ἄξονες",
     "previous": "Axona",
     "next": "Axoranus",
     "chapters": [
@@ -34012,7 +34017,7 @@
   },
   {
     "lemma": "Axoranus",
-    "previous": "Axones",
+    "previous": "Ἄξονες",
     "next": "Axos 1",
     "chapters": [
       {
@@ -37711,6 +37716,7 @@
     "lemma": "Bagaudae",
     "previous": "Bagaridon",
     "next": "Bagaza",
+    "wp_link": "w:de:Bagauden",
     "chapters": [
       {
         "start": 2766,
@@ -42611,7 +42617,7 @@
   {
     "lemma": "Ἀριστοβουλιασταί",
     "previous": "Ariobarzanes 4c",
-    "next": "Askalis",
+
     "chapters": [
       {
         "start": 2861,
@@ -42621,8 +42627,13 @@
     ]
   },
   {
+    "lemma": "Arsames 3",
+    "next": "Askalis",
+    "previous": "Ἀριστοβουλιασταί"
+  },
+  {
     "lemma": "Askalis",
-    "previous": "Ἀριστοβουλιασταί",
+    "previous": "Arsames 3",
     "next": "Astakides 1",
     "chapters": [
       {
