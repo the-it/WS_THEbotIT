@@ -4516,7 +4516,7 @@
   {
     "lemma": "Drusipara",
     "previous": "Drusilla 3",
-    "next": "Drusius",
+    "next": "Drusomagus",
     "chapters": [
       {
         "start": 1741,
@@ -4526,26 +4526,26 @@
     ]
   },
   {
-    "lemma": "Drusius",
-    "previous": "Drusipara",
-    "next": "Drusomagus",
-    "chapters": [
-      {
-        "start": 1742,
-        "end": 1742,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
     "lemma": "Drusomagus",
-    "previous": "Drusius",
-    "next": "Drusus 1",
+    "previous": "Drusipara",
+    "next": "Drusius",
     "chapters": [
       {
         "start": 1742,
         "end": 1742,
         "author": "Ihm"
+      }
+    ]
+  },
+  {
+    "lemma": "Drusius",
+    "previous": "Drusomagus",
+    "next": "Drusus 1",
+    "chapters": [
+      {
+        "start": 1742,
+        "end": 1742,
+        "author": "Stein, [Arthur]"
       }
     ]
   },

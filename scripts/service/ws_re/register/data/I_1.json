@@ -99,7 +99,7 @@
   {
     "lemma": "Abactores",
     "previous": "Abacti magistratus",
-    "next": "Abacus 1",
+    "next": "Abacus",
     "redirect": "Abigeatus",
     "chapters": [
       {
@@ -15165,7 +15165,7 @@
   {
     "lemma": "Aelius 184",
     "previous": "Aelius 183",
-    "next": "Aelius pons 1",
+    "next": "Aelius pons",
     "redirect": true,
     "chapters": [
       {
@@ -15175,7 +15175,7 @@
     ]
   },
   {
-    "lemma": "Aelius pons 1",
+    "lemma": "Aelius pons",
     "previous": "Aelius 184",
     "next": "Aelius pons 2",
     "chapters": [
@@ -16833,8 +16833,20 @@
     ]
   },
   {
-    "lemma": "Aemilius 93",
+    "lemma": "Aemilius 93–101",
     "previous": "Aemilius 92",
+    "next": "Aemilius 93",
+    "chapters": [
+      {
+        "start": 568,
+        "end": 569,
+        "author": "Klebs"
+      }
+    ]
+  },
+  {
+    "lemma": "Aemilius 93",
+    "previous": "Aemilius 93–101",
     "next": "Aemilius 94",
     "chapters": [
       {

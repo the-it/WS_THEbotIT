@@ -13,7 +13,7 @@
   },
   {
     "lemma": "Barbarus 2",
-    "previous": "Barbarus",
+    "previous": "Barbarus 1",
     "next": "Barbarus 3",
     "chapters": [
       {
@@ -3077,8 +3077,13 @@
     ]
   },
   {
-    "lemma": "Basilidia",
+    "lemma": "Βασιλίδες",
     "previous": "Basilides",
+    "next": "Basilidia"
+  },
+  {
+    "lemma": "Basilidia",
+    "previous": "Βασιλίδες",
     "next": "Basiliensium civitas",
     "chapters": [
       {
@@ -5458,7 +5463,7 @@
   {
     "lemma": "Batmizomanes",
     "previous": "Batitas",
-    "next": "Batnai",
+    "next": "Batnai 1",
     "redirect": true,
     "chapters": [
       {
