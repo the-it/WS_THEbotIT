@@ -6823,6 +6823,8 @@
     "lemma": "Didius 8",
     "previous": "Didius 7",
     "next": "Didius 9",
+    "sort_key": "Didius 08",
+    "wp_link": "w:de:Didius Julianus",
     "chapters": [
       {
         "start": 412,
@@ -7149,6 +7151,7 @@
     "lemma": "Didymaion",
     "previous": "Didymai 4",
     "next": "Didymaios",
+    "redirect": "Didyma 1",
     "chapters": [
       {
         "start": 441,
@@ -7159,7 +7162,8 @@
   {
     "lemma": "Didymaios",
     "previous": "Didymaion",
-    "next": "Didyma nesia 1",
+    "next": "Δίδυμα νησία 1",
+    "redirect": "Didymeus",
     "chapters": [
       {
         "start": 441,
@@ -7169,9 +7173,10 @@
     ]
   },
   {
-    "lemma": "Didyma nesia 1",
+    "lemma": "Δίδυμα νησία 1",
     "previous": "Didymaios",
-    "next": "Didyma nesia 2",
+    "next": "Δίδυμα νησία 2",
+    "sort_key": "Didyma nesia 1",
     "chapters": [
       {
         "start": 441,
@@ -7181,9 +7186,10 @@
     ]
   },
   {
-    "lemma": "Didyma nesia 2",
-    "previous": "Didyma nesia 1",
+    "lemma": "Δίδυμα νησία 2",
+    "previous": "Δίδυμα νησία 1",
     "next": "Didymaon",
+    "sort_key": "Didyma nesia 2",
     "chapters": [
       {
         "start": 441,
@@ -7194,8 +7200,8 @@
   },
   {
     "lemma": "Didymaon",
-    "previous": "Didyma nesia 2",
-    "next": "Didyma ore",
+    "previous": "Δίδυμα νησία 2",
+    "next": "Δίδυμα ὄρη",
     "chapters": [
       {
         "start": 441,
@@ -7205,9 +7211,10 @@
     ]
   },
   {
-    "lemma": "Didyma ore",
+    "lemma": "Δίδυμα ὄρη",
     "previous": "Didymaon",
     "next": "Didymarchos",
+    "sort_key": "Didyma ore",
     "chapters": [
       {
         "start": 441,
@@ -7218,8 +7225,8 @@
   },
   {
     "lemma": "Didymarchos",
-    "previous": "Didyma ore",
-    "next": "Didyma teiche",
+    "previous": "Δίδυμα ὄρη",
+    "next": "Δίδυμα τείχη",
     "chapters": [
       {
         "start": 442,
@@ -7229,9 +7236,10 @@
     ]
   },
   {
-    "lemma": "Didyma teiche",
+    "lemma": "Δίδυμα τείχη",
     "previous": "Didymarchos",
     "next": "Didyme 1",
+    "sort_key": "Didyma teiche",
     "chapters": [
       {
         "start": 442,
@@ -7242,7 +7250,7 @@
   },
   {
     "lemma": "Didyme 1",
-    "previous": "Didyma teiche",
+    "previous": "Δίδυμα τείχη",
     "next": "Didyme 2",
     "chapters": [
       {
@@ -21689,6 +21697,7 @@
     "lemma": "Domitius 7",
     "previous": "Domitius 6",
     "next": "Domitius 8",
+    "sort_key": "Domitius 007",
     "chapters": [
       {
         "start": 1315,
@@ -22046,6 +22055,8 @@
     "lemma": "Domitius 36",
     "previous": "Domitius 35",
     "next": "Domitius 37",
+    "sort_key": "Domitius 036",
+    "wp_link": "w:de:Aurelian",
     "chapters": [
       {
         "start": 1347,

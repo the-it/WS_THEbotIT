@@ -2307,7 +2307,7 @@
   {
     "lemma": "Rarentus",
     "previous": "Raraunum",
-    "next": "Raria",
+    "next": " ̓Ραρία",
     "chapters": [
       {
         "start": 251,
@@ -2317,9 +2317,10 @@
     ]
   },
   {
-    "lemma": "Raria",
+    "lemma": " ̓Ραρία",
     "previous": "Rarentus",
-    "next": " ̓Ραρiάς",
+    "next": "̓Ραριάς",
+    "sort_key": "Raria",
     "chapters": [
       {
         "start": 251,
@@ -2329,8 +2330,8 @@
     ]
   },
   {
-    "lemma": " ̓Ραρiάς",
-    "previous": "Raria",
+    "lemma": "̓Ραριάς",
+    "previous": " ̓Ραρία",
     "next": "Rarion",
     "sort_key": "Rarias",
     "chapters": [
@@ -2343,7 +2344,7 @@
   },
   {
     "lemma": "Rarion",
-    "previous": " ̓Ραρiάς",
+    "previous": "̓Ραριάς",
     "next": "Raros",
     "chapters": [
       {

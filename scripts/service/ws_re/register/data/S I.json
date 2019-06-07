@@ -142,7 +142,7 @@
   {
     "lemma": "Abercius",
     "previous": "Abellio",
-    "next": "Abersis",
+    "next": "Aberglaube",
     "redirect": true,
     "chapters": [
       {
@@ -152,8 +152,13 @@
     ]
   },
   {
-    "lemma": "Abersis",
+    "lemma": "Aberglaube",
     "previous": "Abercius",
+    "next": "Abersis"
+  },
+  {
+    "lemma": "Abersis",
+    "previous": "Aberglaube",
     "next": "Abia 2",
     "chapters": [
       {
@@ -2419,11 +2424,13 @@
   },
   {
     "lemma": "Aigeirusa 2",
-    "previous": "Aigeira 2"
+    "previous": "Aigeira 2",
+    "next": "Aigelos"
   },
   {
     "lemma": "Aigelos",
-    "next": "Aigialos 6",
+    "previous": "Aigeirusa 2",
+    "next": "Aigiale 2",
     "chapters": [
       {
         "start": 35,
@@ -2433,8 +2440,11 @@
     ]
   },
   {
+    "lemma": "Aigiale 2",
+    "previous": "Aigelos"
+  },
+  {
     "lemma": "Aigialos 6",
-    "previous": "Aigelos",
     "next": "Aigikoros",
     "chapters": [
       {
@@ -2456,7 +2466,12 @@
     ]
   },
   {
+    "lemma": "Aigimios 3",
+    "next": "Aigina 1"
+  },
+  {
     "lemma": "Aigina 1",
+    "previous": "Aigimios 3",
     "next": "Aigiros 1"
   },
   {
@@ -6482,7 +6497,12 @@
     ]
   },
   {
+    "lemma": "Antonius 28",
+    "next": "Antonius 30"
+  },
+  {
     "lemma": "Antonius 30",
+    "previous": "Antonius 28",
     "next": "Antonius 34a"
   },
   {
@@ -6536,10 +6556,12 @@
   },
   {
     "lemma": "Antonius 107",
-    "previous": "Antonius 101a"
+    "previous": "Antonius 101a",
+    "next": "Antonius 114"
   },
   {
     "lemma": "Antonius 114",
+    "previous": "Antonius 107",
     "next": "Antonius 116a",
     "chapters": [
       {
@@ -14516,7 +14538,6 @@
   {
     "lemma": "Celer 9",
     "previous": "Cazaci",
-    "next": "Celer 1a",
     "chapters": [
       {
         "start": 279,
@@ -14526,8 +14547,13 @@
     ]
   },
   {
+    "lemma": "Celeia",
+    "next": "Celer 1a"
+  },
+  {
     "lemma": "Celer 1a",
-    "previous": "Celer 9",
+    "previous": "Celeia",
+    "next": null,
     "chapters": [
       {
         "start": 280,
@@ -14749,7 +14775,12 @@
   },
   {
     "lemma": "Charinos 1",
-    "previous": "Charimortos"
+    "previous": "Charimortos",
+    "next": "Charixenos 4"
+  },
+  {
+    "lemma": "Charixenos 4",
+    "previous": "Charinos 1"
   },
   {
     "lemma": "Charixenos 5",
@@ -14943,6 +14974,7 @@
   {
     "lemma": "Chiron 1a",
     "previous": "Chiriphe",
+    "next": "Chiton 1",
     "chapters": [
       {
         "start": 288,
@@ -14950,6 +14982,10 @@
         "author": "Knaack"
       }
     ]
+  },
+  {
+    "lemma": "Chiton 1",
+    "previous": "Chiron 1a"
   },
   {
     "lemma": "Χλανίς",

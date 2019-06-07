@@ -681,7 +681,7 @@
   {
     "lemma": "Aemilius 150b",
     "previous": "Aemilius 115a",
-    "next": "Alexandros 62a",
+    "next": "Aigina 1",
     "chapters": [
       {
         "start": 4,
@@ -691,8 +691,13 @@
     ]
   },
   {
-    "lemma": "Alexandros 62a",
+    "lemma": "Aigina 1",
     "previous": "Aemilius 150b",
+    "next": "Alexandros 62a"
+  },
+  {
+    "lemma": "Alexandros 62a",
+    "previous": "Aigina 1",
     "next": "Alexandros 62b",
     "chapters": [
       {

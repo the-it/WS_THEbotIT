@@ -371,7 +371,6 @@
   {
     "lemma": "Angeiologia",
     "previous": "Anduit",
-    "next": "Antiphilos 3c",
     "chapters": [
       {
         "start": 48,
@@ -380,8 +379,12 @@
     ]
   },
   {
+    "lemma": "Antiocheia 15",
+    "next": "Antiphilos 3c"
+  },
+  {
     "lemma": "Antiphilos 3c",
-    "previous": "Angeiologia",
+    "previous": "Antiocheia 15",
     "next": "Antonius 100a",
     "chapters": [
       {
@@ -442,7 +445,6 @@
   {
     "lemma": "Arabiates",
     "previous": "Apollinarios 2",
-    "next": "Archelaos 10a",
     "chapters": [
       {
         "start": 131,
@@ -452,8 +454,13 @@
     ]
   },
   {
+    "lemma": "Aravisci",
+    "next": "Archelaos 10a"
+  },
+  {
     "lemma": "Archelaos 10a",
-    "previous": "Arabiates",
+    "previous": "Aravisci",
+    "next": "Archilochos 2",
     "chapters": [
       {
         "start": 136,
@@ -461,6 +468,11 @@
         "author": "Deininger"
       }
     ]
+  },
+  {
+    "lemma": "Archilochos 2",
+    "previous": "Archelaos 10a",
+    "next": null
   },
   {
     "lemma": "Aristoteles 18",
@@ -671,7 +683,6 @@
   {
     "lemma": "Claudius 211a",
     "previous": "Clementianus 2",
-    "next": "Cornelius 395",
     "chapters": [
       {
         "start": 372,
@@ -681,9 +692,16 @@
     ]
   },
   {
+    "lemma": "Cornacates"
+  },
+  {
+    "lemma": "Zeugisa",
+    "next": "Cornelius 395"
+  },
+  {
     "lemma": "Cornelius 395",
-    "previous": "Claudius 211a",
-    "next": "Cuneus 4",
+    "previous": "Zeugisa",
+    "next": "Maes Titianus",
     "chapters": [
       {
         "start": 373,
@@ -693,8 +711,11 @@
     ]
   },
   {
+    "lemma": "Maes Titianus",
+    "previous": "Cornelius 395"
+  },
+  {
     "lemma": "Cuneus 4",
-    "previous": "Cornelius 395",
     "next": "Cuneus 5",
     "chapters": [
       {

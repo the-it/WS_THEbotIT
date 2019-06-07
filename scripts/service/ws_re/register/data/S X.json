@@ -849,6 +849,7 @@
   },
   {
     "lemma": "Alfius 8a",
+    "previous": null,
     "next": "Alfius 8b",
     "chapters": [
       {
@@ -861,6 +862,7 @@
   {
     "lemma": "Alfius 8b",
     "previous": "Alfius 8a",
+    "next": "Alfius 9",
     "chapters": [
       {
         "start": 15,
@@ -871,6 +873,7 @@
   },
   {
     "lemma": "Alfius 9",
+    "previous": "Alfius 8b",
     "next": "Alkimachos 5a"
   },
   {
@@ -1196,6 +1199,7 @@
     "lemma": "Antonius 88a",
     "previous": "Antonius 73a",
     "next": "Antonius 127a",
+    "sort_key": "Antonius 088a",
     "chapters": [
       {
         "start": 23,
@@ -1320,6 +1324,7 @@
   },
   {
     "lemma": "Apollodoros 41c",
+    "previous": null,
     "next": "Apollodoros 78"
   },
   {
@@ -1527,12 +1532,13 @@
   {
     "lemma": "Arimnestos 6a",
     "previous": "Ἀρι...",
-    "next": "Ἀριστ..."
+    "next": "Ἀριστ(..."
   },
   {
-    "lemma": "Ἀριστ...",
+    "lemma": "Ἀριστ(...",
     "previous": "Arimnestos 6a",
     "next": "Aristagoras 9a",
+    "sort_key": "Arist...",
     "chapters": [
       {
         "start": 41,
@@ -1543,7 +1549,7 @@
   },
   {
     "lemma": "Aristagoras 9a",
-    "previous": "Ἀριστ...",
+    "previous": "Ἀριστ(...",
     "next": "Aristarchos 10"
   },
   {
@@ -1778,6 +1784,7 @@
     "lemma": "Ἄσβολις",
     "previous": "Artemon 1b",
     "next": "Asiaticiani",
+    "sort_key": "Asbolis",
     "chapters": [
       {
         "start": 44,
@@ -1852,7 +1859,7 @@
   {
     "lemma": "Athanias 3",
     "previous": "Astydamas 2",
-    "next": "Athe(---",
+    "next": "Ἀθη...",
     "chapters": [
       {
         "start": 47,
@@ -1862,9 +1869,10 @@
     ]
   },
   {
-    "lemma": "Athe(---",
+    "lemma": "Ἀθη...",
     "previous": "Athanias 3",
     "next": "Athenai 1A",
+    "sort_key": "Athe(...",
     "chapters": [
       {
         "start": 47,
@@ -1875,7 +1883,7 @@
   },
   {
     "lemma": "Athenai 1A",
-    "previous": "Athe(---",
+    "previous": "Ἀθη...",
     "next": "Athenaios 28",
     "chapters": [
       {
@@ -2040,6 +2048,7 @@
     "lemma": "Aurelius 53a",
     "previous": "Aurelius 37a",
     "next": "Aurelius 56a",
+    "sort_key": "Aurelius 053a",
     "chapters": [
       {
         "start": 91,
@@ -2309,7 +2318,12 @@
   },
   {
     "lemma": "Candidiana",
-    "previous": "Caesonius 7a"
+    "previous": "Caesonius 7a",
+    "next": "Caramallus"
+  },
+  {
+    "lemma": "Caramallus",
+    "previous": "Candidiana"
   },
   {
     "lemma": "Candidianae",
@@ -2424,11 +2438,13 @@
   },
   {
     "lemma": "Cicereia lex",
-    "previous": "Chryses 4"
+    "previous": "Chryses 4",
+    "next": "Cillae"
   },
   {
     "lemma": "Cillae",
-    "next": "Clodius 73",
+    "previous": "Cicereia lex",
+    "next": "Clarus 6a",
     "chapters": [
       {
         "start": 128,
@@ -2438,9 +2454,11 @@
     ]
   },
   {
+    "lemma": "Clarus 6a",
+    "previous": "Cillae"
+  },
+  {
     "lemma": "Clodius 73",
-    "previous": "Cillae",
-    "next": "Clarus 6a",
     "chapters": [
       {
         "start": 131,
@@ -2450,8 +2468,12 @@
     ]
   },
   {
+    "lemma": "Cillae",
+    "next": "Clarus 6a"
+  },
+  {
     "lemma": "Clarus 6a",
-    "previous": "Clodius 73",
+    "previous": "Cillae",
     "next": "Claudius 10a",
     "chapters": [
       {

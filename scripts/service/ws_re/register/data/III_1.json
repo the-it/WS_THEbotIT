@@ -2967,6 +2967,7 @@
     "lemma": "Basileus 4",
     "previous": "Basileus 3",
     "next": "Basilia",
+    "redirect": "Basilis 3",
     "chapters": [
       {
         "start": 82,
@@ -26457,6 +26458,8 @@
     "lemma": "Brief",
     "previous": "Bridas",
     "next": "Brigaecium",
+    "wp_link": "w:de:Brief",
+    "ws_link": "s:de:Briefe",
     "chapters": [
       {
         "start": 836,
@@ -27249,6 +27252,7 @@
     "lemma": "Britanni",
     "previous": "Britannae",
     "next": "Britannia",
+    "wp_link": "w:de:Britannien",
     "chapters": [
       {
         "start": 858,
@@ -30318,7 +30322,7 @@
   },
   {
     "lemma": "Buffadensis",
-    "previous": "Bouglosson",
+    "previous": "Büffel",
     "next": "Bugarma",
     "chapters": [
       {
@@ -30817,7 +30821,7 @@
   {
     "lemma": "Bukolo",
     "previous": "Bukolion 6",
-    "next": "Bukoloi 1",
+    "next": "Βουκόλοι 1",
     "chapters": [
       {
         "start": 1013,
@@ -30827,9 +30831,9 @@
     ]
   },
   {
-    "lemma": "Bukoloi 1",
+    "lemma": "Βουκόλοι 1",
     "previous": "Bukolo",
-    "next": "Bukoloi 2",
+    "next": "Βουκόλοι 2",
     "chapters": [
       {
         "start": 1013,
@@ -30839,9 +30843,10 @@
     ]
   },
   {
-    "lemma": "Bukoloi 2",
-    "previous": "Bukoloi 1",
+    "lemma": "Βουκόλοι 2",
+    "previous": "Βουκόλοι 1",
     "next": "Βουκόλων κώμη",
+    "sort_key": "Bukoloi 2",
     "chapters": [
       {
         "start": 1013,
@@ -30852,7 +30857,7 @@
   },
   {
     "lemma": "Βουκόλων κώμη",
-    "previous": "Bukoloi 2",
+    "previous": "Βουκόλοι 2",
     "next": "Βουκόλων πόλις",
     "sort_key": "Bukolon kome",
     "chapters": [

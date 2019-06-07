@@ -545,7 +545,12 @@
     ]
   },
   {
+    "lemma": "Aera",
+    "next": "Aes excurrens"
+  },
+  {
     "lemma": "Aes excurrens",
+    "previous": "Aera",
     "next": "Aesis 2",
     "wp_link": "w:de:Römische Währung",
     "chapters": [
@@ -2840,7 +2845,6 @@
   {
     "lemma": "Aphrodisios a",
     "previous": "Aphneïs",
-    "next": "Aphrodite",
     "sort_key": "Aphrodisios 00a",
     "chapters": [
       {
@@ -2849,6 +2853,10 @@
         "author": "Keil"
       }
     ]
+  },
+  {
+    "lemma": "Aphrodisios a",
+    "next": "Aphrodite"
   },
   {
     "lemma": "Aphrodite",
@@ -2865,6 +2873,7 @@
   {
     "lemma": "Apollinaris 13",
     "previous": "Aphrodite",
+    "next": null,
     "chapters": [
       {
         "start": 133,
@@ -4390,7 +4399,7 @@
   {
     "lemma": "Archias 112",
     "previous": "Archias 111",
-    "next": "Archimachimos",
+    "next": "Ἀρχιμάχιμος",
     "chapters": [
       {
         "start": 144,
@@ -4400,7 +4409,7 @@
     ]
   },
   {
-    "lemma": "Archimachimos",
+    "lemma": "Ἀρχιμάχιμος",
     "previous": "Archias 112",
     "next": "Archimedes 3",
     "chapters": [
@@ -4413,8 +4422,8 @@
   },
   {
     "lemma": "Archimedes 3",
-    "previous": "Archimachimos",
-    "next": "Archinyktophylakes",
+    "previous": "Ἀρχιμάχιμος",
+    "next": "Ἀρχινυκτοφύλακες",
     "chapters": [
       {
         "start": 144,
@@ -4424,7 +4433,7 @@
     ]
   },
   {
-    "lemma": "Archinyktophylakes",
+    "lemma": "Ἀρχινυκτοφύλακες",
     "previous": "Archimedes 3",
     "next": "Archiparaphylax",
     "chapters": [
@@ -4437,7 +4446,7 @@
   },
   {
     "lemma": "Archiparaphylax",
-    "previous": "Archinyktophylakes",
+    "previous": "Ἀρχινυκτοφύλακες",
     "next": "Ardacus 2",
     "chapters": [
       {
@@ -5655,10 +5664,12 @@
   },
   {
     "lemma": "Athena",
-    "previous": "Athenais 10"
+    "previous": "Athenais 10",
+    "next": "Atilianus 2"
   },
   {
     "lemma": "Atilianus 2",
+    "previous": "Athena",
     "next": "Atimetos",
     "chapters": [
       {
@@ -9343,6 +9354,7 @@
   {
     "lemma": "Chaladrioi",
     "previous": "Cettus",
+    "next": "Chalaion",
     "chapters": [
       {
         "start": 242,
@@ -9352,7 +9364,13 @@
     ]
   },
   {
+    "lemma": "Chalaion",
+    "previous": "Chaladrioi",
+    "next": "Charadros 3"
+  },
+  {
     "lemma": "Charadros 3",
+    "previous": "Chalaion",
     "next": "Charaxos 2"
   },
   {
@@ -9788,7 +9806,7 @@
   {
     "lemma": "Claudiana tegula",
     "previous": "Cispius 2a",
-    "next": "Claudius 20a",
+    "next": "Claudius",
     "chapters": [
       {
         "start": 252,
@@ -9798,8 +9816,14 @@
     ]
   },
   {
-    "lemma": "Claudius 20a",
+    "lemma": "Claudius",
     "previous": "Claudiana tegula",
+    "next": "Claudius 20a",
+    "sort_key": "Claudius 000"
+  },
+  {
+    "lemma": "Claudius 20a",
+    "previous": "Claudius",
     "next": "Clemens 10",
     "chapters": [
       {

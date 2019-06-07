@@ -631,7 +631,6 @@
   {
     "lemma": "Antonius 51a",
     "previous": "Antonius 35a",
-    "next": "Antonius 63a",
     "chapters": [
       {
         "start": 88,
@@ -639,11 +638,16 @@
         "author": "Hanslik"
       }
     ]
+  },
+  {
+    "lemma": "Antonius 58a",
+    "next": "Antonius 63a"
   },
   {
     "lemma": "Antonius 63a",
-    "previous": "Antonius 51a",
-    "next": "Antonius 75.76",
+    "previous": "Antonius 58a",
+    "next": "Antonius 65",
+    "sort_key": "Antonius 063a",
     "chapters": [
       {
         "start": 88,
@@ -653,8 +657,11 @@
     ]
   },
   {
+    "lemma": "Antonius 65",
+    "previous": "Antonius 63a"
+  },
+  {
     "lemma": "Antonius 75.76",
-    "previous": "Antonius 63a",
     "next": "Appuleius 13",
     "chapters": [
       {
@@ -1202,7 +1209,6 @@
   {
     "lemma": "Egrilius 2a",
     "previous": "Catienus 1b",
-    "next": "Cestius 6a",
     "chapters": [
       {
         "start": 141,
@@ -1212,8 +1218,12 @@
     ]
   },
   {
+    "lemma": "Celeia",
+    "next": "Cestius 6a"
+  },
+  {
     "lemma": "Cestius 6a",
-    "previous": "Egrilius 2a",
+    "previous": "Celeia",
     "next": "Chalai",
     "chapters": [
       {
@@ -1237,7 +1247,12 @@
   },
   {
     "lemma": "Chalaion",
-    "previous": "Chalai"
+    "previous": "Chalai",
+    "next": "Chalke 2"
+  },
+  {
+    "lemma": "Chalke 2",
+    "previous": "Chalaion"
   },
   {
     "lemma": "Claudius 211",
@@ -1309,7 +1324,6 @@
   {
     "lemma": "Clodius 31a",
     "previous": "Claudius 306a",
-    "next": "Cocceius 1b",
     "chapters": [
       {
         "start": 157,
@@ -1319,8 +1333,12 @@
     ]
   },
   {
+    "lemma": "Clodius 56",
+    "next": "Cocceius 1b"
+  },
+  {
     "lemma": "Cocceius 1b",
-    "previous": "Clodius 31a",
+    "previous": "Clodius 56",
     "next": "Coelius 22a",
     "chapters": [
       {
@@ -3282,12 +3300,13 @@
   },
   {
     "lemma": "Archedemos 6",
+    "previous": null,
     "next": "Arinthaeus 3"
   },
   {
     "lemma": "Arinthaeus 3",
     "previous": "Archedemos 6",
-    "next": "Camundus",
+    "next": "Aristophanes 12",
     "chapters": [
       {
         "start": 1392,
@@ -3297,8 +3316,11 @@
     ]
   },
   {
+    "lemma": "Aristophanes 12",
+    "previous": "Arinthaeus 3"
+  },
+  {
     "lemma": "Camundus",
-    "previous": "Arinthaeus 3",
     "next": "Poreston",
     "chapters": [
       {
