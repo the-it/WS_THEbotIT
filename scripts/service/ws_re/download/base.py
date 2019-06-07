@@ -1,4 +1,5 @@
 import os
+from abc import ABC, abstractmethod
 from pathlib import Path
 from sys import platform
 
@@ -13,5 +14,15 @@ else:
 
 if not os.path.isdir(base_path):
     os.mkdir(base_path)
+
+
+class DownloadTarget(ABC):
+    @abstractmethod
+    def get_source(self):
+        pass
+
+    @abstractmethod
+    def get_target(self):
+        pass
 
 
