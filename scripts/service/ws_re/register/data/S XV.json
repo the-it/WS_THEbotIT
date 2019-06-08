@@ -1003,7 +1003,8 @@
   {
     "lemma": "Aurelius 8a",
     "previous": "Attius 27a",
-    "next": "Aurelius 54a",
+    "next": "Aurelius 27",
+    "sort_key": "Aurelius 008a",
     "chapters": [
       {
         "start": 76,
@@ -1013,8 +1014,11 @@
     ]
   },
   {
+    "lemma": "Aurelius 27",
+    "previous": "Aurelius 8a"
+  },
+  {
     "lemma": "Aurelius 54a",
-    "previous": "Aurelius 8a",
     "next": "Aurelius 54b",
     "sort_key": "Aurelius 054a",
     "chapters": [

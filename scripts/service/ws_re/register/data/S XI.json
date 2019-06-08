@@ -648,7 +648,6 @@
   {
     "lemma": "Ceangli",
     "previous": "Caramantesium vicus",
-    "next": "Clementianus 2",
     "chapters": [
       {
         "start": 368,
@@ -657,9 +656,13 @@
     ]
   },
   {
+    "lemma": "Claudius 211a",
+    "next": "Clementianus 2"
+  },
+  {
     "lemma": "Clementianus 2",
-    "previous": "Ceangli",
-    "next": "Claudius 211a",
+    "previous": "Claudius 211a",
+    "next": "Constantia 6",
     "chapters": [
       {
         "start": 371,
@@ -669,8 +672,11 @@
     ]
   },
   {
+    "lemma": "Constantia 6",
+    "previous": "Clementianus 2"
+  },
+  {
     "lemma": "Claudius 211a",
-    "previous": "Clementianus 2",
     "next": "Cornelius 395",
     "chapters": [
       {

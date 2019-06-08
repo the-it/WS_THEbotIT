@@ -1173,7 +1173,7 @@
   {
     "lemma": "Koponios",
     "previous": "Koplanion pedion",
-    "next": "Kopoxystai",
+    "next": "Κωποξύσται",
     "chapters": [
       {
         "start": 1363,
@@ -1183,9 +1183,9 @@
     ]
   },
   {
-    "lemma": "Kopoxystai",
+    "lemma": "Κωποξύσται",
     "previous": "Koponios",
-    "next": "Kopratas",
+    "next": "Κοπράτας",
     "chapters": [
       {
         "start": 1363,
@@ -1195,9 +1195,10 @@
     ]
   },
   {
-    "lemma": "Kopratas",
-    "previous": "Kopoxystai",
+    "lemma": "Κοπράτας",
+    "previous": "Κωποξύσται",
     "next": "Kopreus",
+    "sort_key": "Kopratas",
     "chapters": [
       {
         "start": 1363,
@@ -1208,7 +1209,7 @@
   },
   {
     "lemma": "Kopreus",
-    "previous": "Kopratas",
+    "previous": "Κοπράτας",
     "next": "Kopria",
     "chapters": [
       {
