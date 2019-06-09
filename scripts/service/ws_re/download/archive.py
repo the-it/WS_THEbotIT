@@ -1,16 +1,7 @@
 import internetarchive
 
 from scripts.service.ws_re.download.base import BASE_PATH, DownloadTarget
-
-_ARCHIVES = {
-    "Pauly Supp.rar": "PaulySupp",
-    "Pauly-Wissowa_54-66.rar": "PaulyWissowa5466",
-    "Pauly-Wissowa_41-53.rar": "PaulyWissowa4153_201412",
-    "Pauly-Wissowa_31-40.rar": "PaulyWissowa3140_201412",
-    "Pauly-Wissowa_21-30.rar": "PaulyWissowa2130",
-    "Pauly-Wissowa_11-20.rar": "PaulyWissowa1120",
-    "Pauly-Wissowa_1-10.rar": "PaulyWissowa110",
-}
+from scripts.service.ws_re.download.data import _ARCHIVES
 
 
 class Archive(DownloadTarget):

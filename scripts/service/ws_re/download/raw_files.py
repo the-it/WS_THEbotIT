@@ -5,16 +5,7 @@ import patoolib
 
 from scripts.service.ws_re.download.archive import Archive
 from scripts.service.ws_re.download.base import DownloadTarget, BASE_PATH
-
-_RAW_FILES = {
-    "PaulySupp": "Pauly Supp.rar",
-    "PaulyWissowa5466": "Pauly-Wissowa_54-66.rar",
-    "PaulyWissowa4153": "Pauly-Wissowa_41-53.rar",
-    "PaulyWissowa3140": "Pauly-Wissowa_31-40.rar",
-    "PaulyWissowa2130": "Pauly-Wissowa_21-30.rar",
-    "PaulyWissowa1120": "Pauly-Wissowa_11-20.rar",
-    "PaulyWissowa110": "Pauly-Wissowa_1-10.rar",
-}
+from scripts.service.ws_re.download.data import _RAW_FILES
 
 
 class RawFiles(DownloadTarget):
