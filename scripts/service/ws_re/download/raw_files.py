@@ -26,10 +26,10 @@ class RawFiles(DownloadTarget):
         Archive(self.source).get_target()
 
     def get_target(self):
-        self.get_source()
         path_raw_files = BASE_PATH.joinpath("raw_files").joinpath(self.target)
         if not path_raw_files.exists():
             print(f"Raw Files {path_raw_files} doesn't exists, unpack them now ")
+            self.get_source()
             os.makedirs(path_raw_files, exist_ok=True)
             patoolib.extract_archive(str(Path(BASE_PATH, "archives", self.source)),
                                      outdir=str(path_raw_files),
