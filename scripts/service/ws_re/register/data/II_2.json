@@ -2655,6 +2655,7 @@
     "lemma": "Asandros 4",
     "previous": "Asandros 3",
     "next": "Asanka",
+    "wp_link": "w:de:Asandros (Bosporanischer König)",
     "chapters": [
       {
         "start": 1516,
@@ -6716,6 +6717,7 @@
     "lemma": "Asklepiodotos 11",
     "previous": "Asklepiodotos 10",
     "next": "Asklepiodotos 12",
+    "wp_link": "w:de:Asklepiodotos von Alexandria",
     "chapters": [
       {
         "start": 1641,
@@ -15296,7 +15298,7 @@
   {
     "lemma": "Athenais 9",
     "previous": "Athenais 8",
-    "next": "Athenaistai",
+    "next": "Ἀθηναϊσταί",
     "chapters": [
       {
         "start": 2037,
@@ -15305,9 +15307,10 @@
     ]
   },
   {
-    "lemma": "Athenaistai",
+    "lemma": "Ἀθηναϊσταί",
     "previous": "Athenais 9",
-    "next": "Athenas Aithyias skopelos",
+    "next": "Ἀθηνᾶς Αἰθυίας σκόπελος",
+    "sort_key": "Athenaistai",
     "chapters": [
       {
         "start": 2037,
@@ -15317,8 +15320,8 @@
     ]
   },
   {
-    "lemma": "Athenas Aithyias skopelos",
-    "previous": "Athenaistai",
+    "lemma": "Ἀθηνᾶς Αἰθυίας σκόπελος",
+    "previous": "Ἀθηναϊσταί",
     "next": "Athenas teichos",
     "chapters": [
       {
@@ -15330,7 +15333,7 @@
   },
   {
     "lemma": "Athenas teichos",
-    "previous": "Athenas Aithyias skopelos",
+    "previous": "Ἀθηνᾶς Αἰθυίας σκόπελος",
     "next": "Athene 1",
     "chapters": [
       {
@@ -19419,6 +19422,8 @@
     "lemma": "Attalos 9",
     "previous": "Attalos 8",
     "next": "Attalos 10",
+    "sort_key": "Attalos 09",
+    "wp_link": "w:de:Attalos I.",
     "chapters": [
       {
         "start": 2159,
@@ -19431,6 +19436,7 @@
     "lemma": "Attalos 10",
     "previous": "Attalos 9",
     "next": "Attalos 11",
+    "wp_link": "w:de:Attalos II.",
     "chapters": [
       {
         "start": 2168,
@@ -19443,6 +19449,7 @@
     "lemma": "Attalos 11",
     "previous": "Attalos 10",
     "next": "Attalos 12",
+    "wp_link": "w:de:Attalos III.",
     "chapters": [
       {
         "start": 2175,
@@ -38644,7 +38651,7 @@
   {
     "lemma": "Baitokaike",
     "previous": "Baitogabra",
-    "next": "Baitokaikeus",
+    "next": "Βαιτοκαικεύς",
     "chapters": [
       {
         "start": 2779,
@@ -38654,9 +38661,10 @@
     ]
   },
   {
-    "lemma": "Baitokaikeus",
+    "lemma": "Βαιτοκαικεύς",
     "previous": "Baitokaike",
     "next": "Baiton",
+    "sort_key": "Baitokaikeus",
     "chapters": [
       {
         "start": 2779,
@@ -38667,7 +38675,7 @@
   },
   {
     "lemma": "Baiton",
-    "previous": "Baitokaikeus",
+    "previous": "Βαιτοκαικεύς",
     "next": "Baitorix",
     "chapters": [
       {

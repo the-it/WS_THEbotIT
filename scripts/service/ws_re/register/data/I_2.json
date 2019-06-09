@@ -19357,7 +19357,7 @@
   {
     "lemma": "Anagnutes",
     "previous": "Ἀναγνωστικοί",
-    "next": "Anagoge",
+    "next": "Ἀναγωγή",
     "chapters": [
       {
         "start": 2026,
@@ -19367,9 +19367,9 @@
     ]
   },
   {
-    "lemma": "Anagoge",
+    "lemma": "Ἀναγωγή",
     "previous": "Anagnutes",
-    "next": "Anagogia",
+    "next": "Ἀναγώγια",
     "redirect": true,
     "chapters": [
       {
@@ -19379,9 +19379,10 @@
     ]
   },
   {
-    "lemma": "Anagogia",
-    "previous": "Anagoge",
+    "lemma": "Ἀναγώγια",
+    "previous": "Ἀναγωγή",
     "next": "Anagombroi",
+    "sort_key": "Anagogia",
     "chapters": [
       {
         "start": 2026,
@@ -19392,7 +19393,7 @@
   },
   {
     "lemma": "Anagombroi",
-    "previous": "Anagogia",
+    "previous": "Ἀναγώγια",
     "next": "Anagome",
     "chapters": [
       {

@@ -1671,6 +1671,7 @@
     "lemma": "Altenstadt 1",
     "previous": "Alteburg 2",
     "next": "Altenstadt 2",
+    "wp_link": "w:de:Wissembourg",
     "chapters": [
       {
         "start": 87,
@@ -2738,7 +2739,7 @@
   {
     "lemma": "Aouste-en-Diois",
     "previous": "Aoste",
-    "next": "Apagoreuein",
+    "next": "Ἀπαγορεύειν",
     "wp_link": "w:de:Aouste-sur-Sye",
     "chapters": [
       {
@@ -2749,9 +2750,10 @@
     ]
   },
   {
-    "lemma": "Apagoreuein",
+    "lemma": "Ἀπαγορεύειν",
     "previous": "Aouste-en-Diois",
-    "next": "Apenninon (oros)",
+    "next": "Apameia 1",
+    "sort_key": "Apagoreuein",
     "chapters": [
       {
         "start": 127,
@@ -2761,8 +2763,11 @@
     ]
   },
   {
+    "lemma": "Apameia 1",
+    "previous": "Ἀπαγορεύειν"
+  },
+  {
     "lemma": "Apenninon (oros)",
-    "previous": "Apagoreuein",
     "next": "Aper 7",
     "chapters": [
       {
@@ -4639,7 +4644,6 @@
   {
     "lemma": "Aristaioi",
     "previous": "Aristagoras 14",
-    "next": "Aristarchos 6a",
     "chapters": [
       {
         "start": 157,
@@ -4649,9 +4653,13 @@
     ]
   },
   {
+    "lemma": "Aristaios 7",
+    "next": "Aristarchos 6a"
+  },
+  {
     "lemma": "Aristarchos 6a",
-    "previous": "Aristaioi",
-    "next": "Aristobulos 3a",
+    "previous": "Aristaios 7",
+    "next": "Aristeides 21",
     "chapters": [
       {
         "start": 158,
@@ -4661,8 +4669,11 @@
     ]
   },
   {
+    "lemma": "Aristeides 21",
+    "previous": "Aristarchos 6a"
+  },
+  {
     "lemma": "Aristobulos 3a",
-    "previous": "Aristarchos 6a",
     "next": "Aristodama 3",
     "chapters": [
       {
@@ -9236,7 +9247,7 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
-    "next": "Ceraria (Caeraria, Geraria) figlina",
+    "next": null,
     "chapters": [
       {
         "start": 241,
@@ -9246,9 +9257,13 @@
     ]
   },
   {
+    "lemma": "Centurion(ica) praedia",
+    "next": "Ceraria (Caeraria, Geraria) figlina"
+  },
+  {
     "lemma": "Ceraria (Caeraria, Geraria) figlina",
-    "previous": "Cepariae figlinae",
-    "next": "Cerdo",
+    "previous": "Centurion(ica) praedia",
+    "next": "Cercina",
     "chapters": [
       {
         "start": 241,
@@ -9258,8 +9273,12 @@
     ]
   },
   {
+    "lemma": "Cercina",
+    "previous": "Ceraria (Caeraria, Geraria) figlina"
+  },
+  {
     "lemma": "Cerdo",
-    "previous": "Ceraria (Caeraria, Geraria) figlina",
+    "previous": null,
     "next": "Cerialis a",
     "chapters": [
       {
@@ -9319,7 +9338,7 @@
   {
     "lemma": "Cervesarius",
     "previous": "Cerm. figlinae",
-    "next": "Cettus",
+    "next": "Cestius 2",
     "chapters": [
       {
         "start": 242,
@@ -9329,8 +9348,11 @@
     ]
   },
   {
+    "lemma": "Cestius 2",
+    "previous": "Cervesarius"
+  },
+  {
     "lemma": "Cettus",
-    "previous": "Cervesarius",
     "next": "Chaladrioi",
     "chapters": [
       {
@@ -9979,7 +10001,7 @@
   {
     "lemma": "Coius",
     "previous": "Cocus",
-    "next": "Colubrarius mons",
+    "next": "Coloniae",
     "chapters": [
       {
         "start": 256,
@@ -9989,8 +10011,13 @@
     ]
   },
   {
-    "lemma": "Colubrarius mons",
+    "lemma": "Coloniae",
     "previous": "Coius",
+    "next": "Colubrarius mons"
+  },
+  {
+    "lemma": "Colubrarius mons",
+    "previous": "Coloniae",
     "next": "Comicato",
     "chapters": [
       {
@@ -10002,19 +10029,15 @@
   },
   {
     "lemma": "Comicato",
-    "previous": "Colubrarius mons",
-    "next": "Cominius 2a",
-    "chapters": [
-      {
-        "start": 256,
-        "end": 256,
-        "author": "Hähnle"
-      }
-    ]
+    "previous": "Colubrarius mons"
+  },
+  {
+    "lemma": "Cominius 10",
+    "next": "Cominius 2a"
   },
   {
     "lemma": "Cominius 2a",
-    "previous": "Comicato",
+    "previous": "Cominius 10",
     "next": "Comisillus",
     "chapters": [
       {

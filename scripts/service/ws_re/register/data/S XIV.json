@@ -1954,6 +1954,7 @@
     "lemma": "Allius 5a",
     "previous": "Alkidamos",
     "next": "Allius 10",
+    "sort_key": "Allius 05a",
     "chapters": [
       {
         "start": 43,
@@ -2121,7 +2122,8 @@
   {
     "lemma": "Antonius 1a",
     "previous": "Antius 14a",
-    "next": "Antonius 94a",
+    "next": "Antonius 36",
+    "sort_key": "Antonius 001a",
     "chapters": [
       {
         "start": 50,
@@ -2131,9 +2133,15 @@
     ]
   },
   {
-    "lemma": "Antonius 94a",
+    "lemma": "Antonius 36",
     "previous": "Antonius 1a",
+    "next": "Antonius 94a"
+  },
+  {
+    "lemma": "Antonius 94a",
+    "previous": "Antonius 36",
     "next": "Aperlai",
+    "sort_key": "Antonius 094a",
     "chapters": [
       {
         "start": 51,
@@ -3138,7 +3146,7 @@
   {
     "lemma": "Catius 17",
     "previous": "Catius 16",
-    "next": "Ceionius 24a",
+    "next": "Ceionius 4",
     "chapters": [
       {
         "start": 88,
@@ -3147,8 +3155,12 @@
     ]
   },
   {
-    "lemma": "Ceionius 24a",
+    "lemma": "Ceionius 4",
     "previous": "Catius 17",
+    "sort_key": "Ceionius 04"
+  },
+  {
+    "lemma": "Ceionius 24a",
     "next": "Celer 16",
     "chapters": [
       {

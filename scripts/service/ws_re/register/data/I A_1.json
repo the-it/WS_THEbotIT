@@ -1532,7 +1532,7 @@
   {
     "lemma": "Ramnumbovas",
     "previous": "Ramnes",
-    "next": "Ramnus",
+    "next": "Ῥαμνοῦς",
     "chapters": [
       {
         "start": 139,
@@ -1542,9 +1542,10 @@
     ]
   },
   {
-    "lemma": "Ramnus",
+    "lemma": "Ῥαμνοῦς",
     "previous": "Ramnumbovas",
-    "next": "Ramnus 1",
+    "next": "Ῥαμνοῦς 1",
+    "sort_key": "Ramnus",
     "chapters": [
       {
         "start": 139,
@@ -1554,8 +1555,8 @@
     ]
   },
   {
-    "lemma": "Ramnus 1",
-    "previous": "Ramnus",
+    "lemma": "Ῥαμνοῦς 1",
+    "previous": "Ῥαμνοῦς",
     "next": "Ramnus 2",
     "chapters": [
       {
@@ -1567,7 +1568,7 @@
   },
   {
     "lemma": "Ramnus 2",
-    "previous": "Ramnus 1",
+    "previous": "Ῥαμνοῦς 1",
     "next": "Ramnusia",
     "chapters": [
       {
@@ -2319,7 +2320,7 @@
   {
     "lemma": "Raria",
     "previous": "Rarentus",
-    "next": " ̓Ραρiάς",
+    "next": "Rarias",
     "chapters": [
       {
         "start": 251,
@@ -2329,9 +2330,9 @@
     ]
   },
   {
-    "lemma": " ̓Ραρiάς",
+    "lemma": "Rarias",
     "previous": "Raria",
-    "next": "Rarion",
+    "next": " ̓Ράριον",
     "sort_key": "Rarias",
     "chapters": [
       {
@@ -2342,9 +2343,10 @@
     ]
   },
   {
-    "lemma": "Rarion",
-    "previous": " ̓Ραρiάς",
+    "lemma": " ̓Ράριον",
+    "previous": "Rarias",
     "next": "Raros",
+    "sort_key": "Rarion",
     "chapters": [
       {
         "start": 252,
@@ -2355,7 +2357,7 @@
   },
   {
     "lemma": "Raros",
-    "previous": "Rarion",
+    "previous": " ̓Ράριον",
     "next": "Rarungae",
     "chapters": [
       {
@@ -2898,7 +2900,7 @@
   {
     "lemma": "Rauke",
     "previous": "Raugara",
-    "next": "Raukos",
+    "next": "Ῥαῦκος",
     "chapters": [
       {
         "start": 287,
@@ -2908,9 +2910,10 @@
     ]
   },
   {
-    "lemma": "Raukos",
+    "lemma": "Ῥαῦκος",
     "previous": "Rauke",
     "next": "Raumarici",
+    "sort_key": "Raukos",
     "chapters": [
       {
         "start": 288,
@@ -2921,7 +2924,7 @@
   },
   {
     "lemma": "Raumarici",
-    "previous": "Raukos",
+    "previous": "Ῥαῦκος",
     "next": "Raunathu kome",
     "wp_link": "w:de:Raumarici",
     "chapters": [
@@ -13358,6 +13361,7 @@
     "lemma": "Rufinus 24",
     "previous": "Rufinus 23",
     "next": "Rufinus 25",
+    "wp_link": "w:de:Rufinus von Aquileia",
     "chapters": [
       {
         "start": 1193,
