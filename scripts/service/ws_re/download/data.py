@@ -52,6 +52,16 @@ _MAPPINGS = {
     "XV,2": {"source": ("PaulyWissowa2130", "Met Molaris lapis"), "pages": ((1295, 300002, 300318),)},
     "XVI,1": {"source": ("PaulyWissowa2130", "Molatzes Myssi"), "pages": ((-1, 310002, 310303),)},
     "XVI,2": {"source": ("PaulyWissowa2130", "Mystagogos Nereae"), "pages": ((1207, 320002, 320338),)},
+    "XVII,1": {"source": ("PaulyWissowa3140", "Nereiden Numantia"), "pages": ((-1, 330002, 330320),)},
+    "XVII,2": {"source": ("PaulyWissowa3140", "Numen Olympia"), "pages": ((1271, 340002, 340323),)},
+    "XVIII,1": {"source": ("PaulyWissowa3140", "Olympia Orpheus"), "pages": ((-1, 350002, 350331),)},
+    "XVIII,2": {"source": ("PaulyWissowa3140", "Orphische Dichtung Palatini"), "pages": ((1319, 3610002, 3610312),)},
+    "XVIII,3": {"source": ("PaulyWissowa3140", "Palatinus Paranatellonta"), "pages": ((-1, 3620002, 3620322),)},
+    "XVIII,4": {"source": ("PaulyWissowa3140", "Paranomon graphe Pax"), "pages": ((1279, 3630002, 3630329),)},
+    "XIX,1": {"source": ("PaulyWissowa3140", "Pech Petronius"), "pages": ((-1, 370002, 370321),)},
+    "XIX,2": {"source": ("PaulyWissowa3140", "Petros Philon"), "pages": ((1279, 380002, 380322),)},
+    "XX,1": {"source": ("PaulyWissowa3140", "Philon Pignus"), "pages": ((-1, 390002, 390330),)},
+    "XX,2": {"source": ("PaulyWissowa3140", "Pigranes Plautinus"), "pages": ((1311, 400002, 400313),)},
 }
 
 _MISSING_PAGES = (

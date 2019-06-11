@@ -20,7 +20,7 @@ class Mapping(DownloadTarget):
                                  f"{Volumes()[self.target].sort_key.replace('_', '')}_{self.target}")
 
     def _get_raw_files_photo_mapping(self) -> Dict[int, str]:
-        regex_number = re.compile(r"\d{4,6}")
+        regex_number = re.compile(r"\d{4,7}")
         onlyfiles = [f for f in listdir(self.path_raw_files) if isfile(join(self.path_raw_files, f))]
         mapping = {}
         for file in onlyfiles:
