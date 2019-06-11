@@ -62,6 +62,20 @@ _MAPPINGS = {
     "XIX,2": {"source": ("PaulyWissowa3140", "Petros Philon"), "pages": ((1279, 380002, 380322),)},
     "XX,1": {"source": ("PaulyWissowa3140", "Philon Pignus"), "pages": ((-1, 390002, 390330),)},
     "XX,2": {"source": ("PaulyWissowa3140", "Pigranes Plautinus"), "pages": ((1311, 400002, 400313),)},
+    "XXI,1": {"source": ("PaulyWissowa4153", "Plautius Polemokrates"), "pages": ((-1, 410002, 410321),)},
+    "XXI,2": {"source": ("PaulyWissowa4153", "Polemon Pontanene"), "pages": ((1279, 420002, 420320),)},
+    "XXII,1": {"source": ("PaulyWissowa4153", "Pontarches Praefectianus"), "pages": ((-1, 430002, 430316),)},
+    "XXII,2": {"source": ("PaulyWissowa4153", "Praefectura Priscianus"), "pages": ((1255, 440002, 440328),)},
+    "XXIII,1": {"source": ("PaulyWissowa4153", "Priscilla Psalychiadai"), "pages": ((-1, 450002, 450326),)},
+    "XXIII,2": {"source": ("PaulyWissowa4153", "Psamathe Pyramiden"), "pages": ((1295, 460002, 460253),
+                                                                                (2307, 460254, 460321))},
+    "XXIV": {"source": ("PaulyWissowa4153", "Pyramos Quosenus"), "pages": ((-1, 470002, 470360),)},
+    "I A,1": {"source": ("PaulyWissowa4153", "Ra Ryton"), "pages": ((-1, 10002, 10323),)},
+    "I A,2": {"source": ("PaulyWissowa4153", "Saale Sarmathon"), "pages": ((1295, 20002, 20316),)},
+    "II A,1": {"source": ("PaulyWissowa4153", "Sarmatia Selinos"), "pages": ((-1, 30002, 30316),)},
+    "II A,2": {"source": ("PaulyWissowa4153", "Selinuntia Sila"), "pages": ((1263, 40002, 40326),)},
+    "III A,1": {"source": ("PaulyWissowa4153", "Silacenis Sparsus"), "pages": ((-1, 50002, 50316),)},
+    "III A,2": {"source": ("PaulyWissowa4153", "Sparta Stluppi"), "pages": ((1263, 60002, 60322),)},
 }
 
 _MISSING_PAGES = (
