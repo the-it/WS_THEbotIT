@@ -777,6 +777,18 @@
   {
     "lemma": "Iulianos 44",
     "previous": "Iulianos 43",
+    "next": "Iulianos 45",
+    "chapters": [
+      {
+        "start": 95,
+        "end": 95,
+        "author": "Seeck"
+      }
+    ]
+  },
+  {
+    "lemma": "Iulianos 45",
+    "previous": "Iulianos 44",
     "next": "Iulianos 46",
     "chapters": [
       {
@@ -788,8 +800,8 @@
   },
   {
     "lemma": "Iulianos 46",
-    "previous": "Iulianos 44",
-    "next": "Iulianus 45",
+    "previous": "Iulianos 45",
+    "next": "Iulianos 47",
     "chapters": [
       {
         "start": 95,
@@ -799,20 +811,8 @@
     ]
   },
   {
-    "lemma": "Iulianus 45",
-    "previous": "Iulianos 46",
-    "next": "Iulianos 47",
-    "chapters": [
-      {
-        "start": 95,
-        "end": 95,
-        "author": "Seeck"
-      }
-    ]
-  },
-  {
     "lemma": "Iulianos 47",
-    "previous": "Iulianus 45",
+    "previous": "Iulianos 46",
     "next": "Iulianos 48",
     "chapters": [
       {
@@ -1427,6 +1427,7 @@
     "lemma": "Iulius 9",
     "previous": "Iulius 8",
     "next": "Iulius 10",
+    "sort_key": "Iulius 009",
     "chapters": [
       {
         "start": 108,
@@ -1968,6 +1969,8 @@
     "lemma": "Iulius 53",
     "previous": "Iulius 52",
     "next": "Iulius 54",
+    "sort_key": "Iulius 053",
+    "wp_link": "w:de:Herodes Agrippa I.",
     "chapters": [
       {
         "start": 143,
@@ -2882,6 +2885,8 @@
     "lemma": "Iulius 131",
     "previous": "Iulius 130",
     "next": "Iulius 132",
+    "wp_link": "w:de:Gaius Iulius Caesar",
+    "ws_link": "s:de:Gaius Iulius Caesar",
     "chapters": [
       {
         "start": 186,

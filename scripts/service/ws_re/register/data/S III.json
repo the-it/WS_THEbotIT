@@ -545,7 +545,12 @@
     ]
   },
   {
+    "lemma": "Aera",
+    "next": "Aes excurrens"
+  },
+  {
     "lemma": "Aes excurrens",
+    "previous": "Aera",
     "next": "Aesis 2",
     "wp_link": "w:de:Römische Währung",
     "chapters": [
@@ -1671,6 +1676,7 @@
     "lemma": "Altenstadt 1",
     "previous": "Alteburg 2",
     "next": "Altenstadt 2",
+    "wp_link": "w:de:Wissembourg",
     "chapters": [
       {
         "start": 87,
@@ -2738,7 +2744,7 @@
   {
     "lemma": "Aouste-en-Diois",
     "previous": "Aoste",
-    "next": "Apagoreuein",
+    "next": "Ἀπαγορεύειν",
     "wp_link": "w:de:Aouste-sur-Sye",
     "chapters": [
       {
@@ -2749,9 +2755,10 @@
     ]
   },
   {
-    "lemma": "Apagoreuein",
+    "lemma": "Ἀπαγορεύειν",
     "previous": "Aouste-en-Diois",
-    "next": "Apenninon (oros)",
+    "next": "Apameia 1",
+    "sort_key": "Apagoreuein",
     "chapters": [
       {
         "start": 127,
@@ -2761,8 +2768,11 @@
     ]
   },
   {
+    "lemma": "Apameia 1",
+    "previous": "Ἀπαγορεύειν"
+  },
+  {
     "lemma": "Apenninon (oros)",
-    "previous": "Apagoreuein",
     "next": "Aper 7",
     "chapters": [
       {
@@ -2840,7 +2850,6 @@
   {
     "lemma": "Aphrodisios a",
     "previous": "Aphneïs",
-    "next": "Aphrodite",
     "sort_key": "Aphrodisios 00a",
     "chapters": [
       {
@@ -2849,6 +2858,10 @@
         "author": "Keil"
       }
     ]
+  },
+  {
+    "lemma": "Aphrodisios a",
+    "next": "Aphrodite"
   },
   {
     "lemma": "Aphrodite",
@@ -2865,6 +2878,7 @@
   {
     "lemma": "Apollinaris 13",
     "previous": "Aphrodite",
+    "next": null,
     "chapters": [
       {
         "start": 133,
@@ -4390,7 +4404,7 @@
   {
     "lemma": "Archias 112",
     "previous": "Archias 111",
-    "next": "Archimachimos",
+    "next": "Ἀρχιμάχιμος",
     "chapters": [
       {
         "start": 144,
@@ -4400,7 +4414,7 @@
     ]
   },
   {
-    "lemma": "Archimachimos",
+    "lemma": "Ἀρχιμάχιμος",
     "previous": "Archias 112",
     "next": "Archimedes 3",
     "chapters": [
@@ -4413,8 +4427,8 @@
   },
   {
     "lemma": "Archimedes 3",
-    "previous": "Archimachimos",
-    "next": "Archinyktophylakes",
+    "previous": "Ἀρχιμάχιμος",
+    "next": "Ἀρχινυκτοφύλακες",
     "chapters": [
       {
         "start": 144,
@@ -4424,7 +4438,7 @@
     ]
   },
   {
-    "lemma": "Archinyktophylakes",
+    "lemma": "Ἀρχινυκτοφύλακες",
     "previous": "Archimedes 3",
     "next": "Archiparaphylax",
     "chapters": [
@@ -4437,7 +4451,7 @@
   },
   {
     "lemma": "Archiparaphylax",
-    "previous": "Archinyktophylakes",
+    "previous": "Ἀρχινυκτοφύλακες",
     "next": "Ardacus 2",
     "chapters": [
       {
@@ -4639,7 +4653,6 @@
   {
     "lemma": "Aristaioi",
     "previous": "Aristagoras 14",
-    "next": "Aristarchos 6a",
     "chapters": [
       {
         "start": 157,
@@ -4649,9 +4662,13 @@
     ]
   },
   {
+    "lemma": "Aristaios 7",
+    "next": "Aristarchos 6a"
+  },
+  {
     "lemma": "Aristarchos 6a",
-    "previous": "Aristaioi",
-    "next": "Aristobulos 3a",
+    "previous": "Aristaios 7",
+    "next": "Aristeides 21",
     "chapters": [
       {
         "start": 158,
@@ -4661,8 +4678,11 @@
     ]
   },
   {
+    "lemma": "Aristeides 21",
+    "previous": "Aristarchos 6a"
+  },
+  {
     "lemma": "Aristobulos 3a",
-    "previous": "Aristarchos 6a",
     "next": "Aristodama 3",
     "chapters": [
       {
@@ -5655,10 +5675,12 @@
   },
   {
     "lemma": "Athena",
-    "previous": "Athenais 10"
+    "previous": "Athenais 10",
+    "next": "Atilianus 2"
   },
   {
     "lemma": "Atilianus 2",
+    "previous": "Athena",
     "next": "Atimetos",
     "chapters": [
       {
@@ -9236,7 +9258,7 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
-    "next": "Ceraria (Caeraria, Geraria) figlina",
+    "next": null,
     "chapters": [
       {
         "start": 241,
@@ -9246,9 +9268,13 @@
     ]
   },
   {
+    "lemma": "Centurion(ica) praedia",
+    "next": "Ceraria (Caeraria, Geraria) figlina"
+  },
+  {
     "lemma": "Ceraria (Caeraria, Geraria) figlina",
-    "previous": "Cepariae figlinae",
-    "next": "Cerdo",
+    "previous": "Centurion(ica) praedia",
+    "next": "Cercina",
     "chapters": [
       {
         "start": 241,
@@ -9258,8 +9284,12 @@
     ]
   },
   {
+    "lemma": "Cercina",
+    "previous": "Ceraria (Caeraria, Geraria) figlina"
+  },
+  {
     "lemma": "Cerdo",
-    "previous": "Ceraria (Caeraria, Geraria) figlina",
+    "previous": null,
     "next": "Cerialis a",
     "chapters": [
       {
@@ -9319,7 +9349,7 @@
   {
     "lemma": "Cervesarius",
     "previous": "Cerm. figlinae",
-    "next": "Cettus",
+    "next": "Cestius 2",
     "chapters": [
       {
         "start": 242,
@@ -9329,8 +9359,11 @@
     ]
   },
   {
+    "lemma": "Cestius 2",
+    "previous": "Cervesarius"
+  },
+  {
     "lemma": "Cettus",
-    "previous": "Cervesarius",
     "next": "Chaladrioi",
     "chapters": [
       {
@@ -9343,6 +9376,7 @@
   {
     "lemma": "Chaladrioi",
     "previous": "Cettus",
+    "next": "Chalaion",
     "chapters": [
       {
         "start": 242,
@@ -9352,7 +9386,13 @@
     ]
   },
   {
+    "lemma": "Chalaion",
+    "previous": "Chaladrioi",
+    "next": "Charadros 3"
+  },
+  {
     "lemma": "Charadros 3",
+    "previous": "Chalaion",
     "next": "Charaxos 2"
   },
   {
@@ -9560,7 +9600,7 @@
   {
     "lemma": "Chilon 5a",
     "previous": "Chersis 4",
-    "next": "Chiurges",
+    "next": "Χιουργές",
     "chapters": [
       {
         "start": 245,
@@ -9570,7 +9610,7 @@
     ]
   },
   {
-    "lemma": "Chiurges",
+    "lemma": "Χιουργές",
     "previous": "Chilon 5a",
     "next": "Christophoros 2",
     "chapters": [
@@ -9583,7 +9623,7 @@
   },
   {
     "lemma": "Christophoros 2",
-    "previous": "Chiurges",
+    "previous": "Χιουργές",
     "next": "Chryseros 3a",
     "chapters": [
       {
@@ -9788,7 +9828,7 @@
   {
     "lemma": "Claudiana tegula",
     "previous": "Cispius 2a",
-    "next": "Claudius 20a",
+    "next": "Claudius",
     "chapters": [
       {
         "start": 252,
@@ -9798,8 +9838,14 @@
     ]
   },
   {
-    "lemma": "Claudius 20a",
+    "lemma": "Claudius",
     "previous": "Claudiana tegula",
+    "next": "Claudius 20a",
+    "sort_key": "Claudius 000"
+  },
+  {
+    "lemma": "Claudius 20a",
+    "previous": "Claudius",
     "next": "Clemens 10",
     "chapters": [
       {
@@ -9979,7 +10025,7 @@
   {
     "lemma": "Coius",
     "previous": "Cocus",
-    "next": "Colubrarius mons",
+    "next": "Coloniae",
     "chapters": [
       {
         "start": 256,
@@ -9989,8 +10035,13 @@
     ]
   },
   {
-    "lemma": "Colubrarius mons",
+    "lemma": "Coloniae",
     "previous": "Coius",
+    "next": "Colubrarius mons"
+  },
+  {
+    "lemma": "Colubrarius mons",
+    "previous": "Coloniae",
     "next": "Comicato",
     "chapters": [
       {
@@ -10003,7 +10054,7 @@
   {
     "lemma": "Comicato",
     "previous": "Colubrarius mons",
-    "next": "Cominius 2a",
+    "next": "Cominius 10",
     "chapters": [
       {
         "start": 256,
@@ -10013,8 +10064,12 @@
     ]
   },
   {
+    "lemma": "Cominius 10",
+    "previous": "Comicato"
+  },
+  {
     "lemma": "Cominius 2a",
-    "previous": "Comicato",
+    "previous": "Cominius 10",
     "next": "Comisillus",
     "chapters": [
       {

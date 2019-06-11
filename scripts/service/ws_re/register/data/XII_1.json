@@ -599,7 +599,7 @@
   {
     "lemma": "Κυογρισσός",
     "previous": "Kynuria 2",
-    "next": "Kyon",
+    "next": "Κύον",
     "sort_key": "Kyogrissos",
     "chapters": [
       {
@@ -610,9 +610,10 @@
     ]
   },
   {
-    "lemma": "Kyon",
+    "lemma": "Κύον",
     "previous": "Κυογρισσός",
-    "next": "Kypaira",
+    "next": "Κύπαιρα",
+    "sort_key": "Kyon",
     "chapters": [
       {
         "start": 46,
@@ -622,8 +623,8 @@
     ]
   },
   {
-    "lemma": "Kypaira",
-    "previous": "Kyon",
+    "lemma": "Κύπαιρα",
+    "previous": "Κύον",
     "next": "Kyparissia, -iai, Kyparissos 1",
     "chapters": [
       {
@@ -635,7 +636,7 @@
   },
   {
     "lemma": "Kyparissia, -iai, Kyparissos 1",
-    "previous": "Kypaira",
+    "previous": "Κύπαιρα",
     "next": "Kyparissia, -iai, Kyparissos 2",
     "chapters": [
       {
@@ -685,7 +686,7 @@
   {
     "lemma": "Kyparissia, -iai, Kyparissos 5",
     "previous": "Kyparissia, -iai, Kyparissos 4",
-    "next": "Kyparissios Kolpos",
+    "next": "Κυπαρίσσιος Κόλπος",
     "chapters": [
       {
         "start": 50,
@@ -695,8 +696,13 @@
     ]
   },
   {
-    "lemma": "Kyparissios Kolpos",
+    "lemma": "Κυπαρίσσιος Κόλπος",
     "previous": "Kyparissia, -iai, Kyparissos 5",
+    "sort_key": "Kyparissios",
+    "wp_link": "w:de:Kyparissia"
+  },
+  {
+    "lemma": "Kyparissios Kolpos",
     "next": "Kyparissiphas",
     "chapters": [
       {
@@ -1150,7 +1156,7 @@
   {
     "lemma": "Kyrenaiker",
     "previous": "Kyrbia",
-    "next": "Kyrenaion",
+    "next": "Κυρηναῖον",
     "chapters": [
       {
         "start": 137,
@@ -1160,9 +1166,10 @@
     ]
   },
   {
-    "lemma": "Kyrenaion",
+    "lemma": "Κυρηναῖον",
     "previous": "Kyrenaiker",
     "next": "Kyrene 1",
+    "sort_key": "Kyrenaion",
     "chapters": [
       {
         "start": 150,
@@ -1173,7 +1180,7 @@
   },
   {
     "lemma": "Kyrene 1",
-    "previous": "Kyrenaion",
+    "previous": "Κυρηναῖον",
     "next": "Kyrene 2",
     "chapters": [
       {
@@ -3275,7 +3282,7 @@
   {
     "lemma": "Labotos",
     "previous": "Labothas",
-    "next": "Labranda",
+    "next": "Λάβρανδα",
     "chapters": [
       {
         "start": 276,
@@ -3285,9 +3292,10 @@
     ]
   },
   {
-    "lemma": "Labranda",
+    "lemma": "Λάβρανδα",
     "previous": "Labotos",
-    "next": "Labraunda",
+    "next": "Λάβραυνδα",
+    "sort_key": "Labranda",
     "chapters": [
       {
         "start": 276,
@@ -3297,9 +3305,10 @@
     ]
   },
   {
-    "lemma": "Labraunda",
-    "previous": "Labranda",
+    "lemma": "Λάβραυνδα",
+    "previous": "Λάβρανδα",
     "next": "Labraundos",
+    "sort_key": "Labraunda",
     "chapters": [
       {
         "start": 276,
@@ -3310,7 +3319,7 @@
   },
   {
     "lemma": "Labraundos",
-    "previous": "Labraunda",
+    "previous": "Λάβραυνδα",
     "next": "Labrax",
     "chapters": [
       {
@@ -6795,7 +6804,7 @@
   {
     "lemma": "Lagodius",
     "previous": "Lagnutum",
-    "next": "Lagoeie",
+    "next": "Λαγοείη",
     "chapters": [
       {
         "start": 457,
@@ -6805,9 +6814,10 @@
     ]
   },
   {
-    "lemma": "Lagoeie",
+    "lemma": "Λαγοείη",
     "previous": "Lagodius",
     "next": "Lagoos",
+    "sort_key": "Lagoeie",
     "chapters": [
       {
         "start": 457,
@@ -6818,7 +6828,7 @@
   },
   {
     "lemma": "Lagoos",
-    "previous": "Lagoeie",
+    "previous": "Λαγοείη",
     "next": "Lagopus",
     "chapters": [
       {

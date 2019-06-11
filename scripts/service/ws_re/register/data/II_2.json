@@ -2655,6 +2655,7 @@
     "lemma": "Asandros 4",
     "previous": "Asandros 3",
     "next": "Asanka",
+    "wp_link": "w:de:Asandros (Bosporanischer König)",
     "chapters": [
       {
         "start": 1516,
@@ -4808,6 +4809,7 @@
     "lemma": "Asinius 25",
     "previous": "Asinius 24",
     "next": "Asinius 26",
+    "wp_link": "w:de:Gaius Asinius Pollio",
     "chapters": [
       {
         "start": 1589,
@@ -6716,6 +6718,7 @@
     "lemma": "Asklepiodotos 11",
     "previous": "Asklepiodotos 10",
     "next": "Asklepiodotos 12",
+    "wp_link": "w:de:Asklepiodotos von Alexandria",
     "chapters": [
       {
         "start": 1641,
@@ -11501,6 +11504,8 @@
     "lemma": "Astrologie",
     "previous": "Astrolabium 2",
     "next": "Astron 1",
+    "wp_link": "w:de:Astrologie",
+    "ws_link": "s:de:Astrologie",
     "chapters": [
       {
         "start": 1802,
@@ -14502,6 +14507,7 @@
     "lemma": "Athena",
     "previous": "Atheleus",
     "next": "Athenades",
+    "wp_link": "w:de:Athene",
     "chapters": [
       {
         "start": 1941,
@@ -15296,7 +15302,7 @@
   {
     "lemma": "Athenais 9",
     "previous": "Athenais 8",
-    "next": "Athenaistai",
+    "next": "Ἀθηναϊσταί",
     "chapters": [
       {
         "start": 2037,
@@ -15305,9 +15311,10 @@
     ]
   },
   {
-    "lemma": "Athenaistai",
+    "lemma": "Ἀθηναϊσταί",
     "previous": "Athenais 9",
-    "next": "Athenas Aithyias skopelos",
+    "next": "Ἀθηνᾶς Αἰθυίας σκόπελος",
+    "sort_key": "Athenaistai",
     "chapters": [
       {
         "start": 2037,
@@ -15317,8 +15324,8 @@
     ]
   },
   {
-    "lemma": "Athenas Aithyias skopelos",
-    "previous": "Athenaistai",
+    "lemma": "Ἀθηνᾶς Αἰθυίας σκόπελος",
+    "previous": "Ἀθηναϊσταί",
     "next": "Athenas teichos",
     "chapters": [
       {
@@ -15330,7 +15337,7 @@
   },
   {
     "lemma": "Athenas teichos",
-    "previous": "Athenas Aithyias skopelos",
+    "previous": "Ἀθηνᾶς Αἰθυίας σκόπελος",
     "next": "Athene 1",
     "chapters": [
       {
@@ -19419,6 +19426,8 @@
     "lemma": "Attalos 9",
     "previous": "Attalos 8",
     "next": "Attalos 10",
+    "sort_key": "Attalos 09",
+    "wp_link": "w:de:Attalos I.",
     "chapters": [
       {
         "start": 2159,
@@ -19431,6 +19440,7 @@
     "lemma": "Attalos 10",
     "previous": "Attalos 9",
     "next": "Attalos 11",
+    "wp_link": "w:de:Attalos II.",
     "chapters": [
       {
         "start": 2168,
@@ -19443,6 +19453,7 @@
     "lemma": "Attalos 11",
     "previous": "Attalos 10",
     "next": "Attalos 12",
+    "wp_link": "w:de:Attalos III.",
     "chapters": [
       {
         "start": 2175,
@@ -24500,7 +24511,9 @@
   {
     "lemma": "Avianius 1",
     "previous": "Aviaitinehae",
-    "next": "Avianius 2",
+    "next": "Avianius 2. 3",
+    "sort_key": "Auianius 01",
+    "redirect": true,
     "chapters": [
       {
         "start": 2372,
@@ -24509,20 +24522,8 @@
     ]
   },
   {
-    "lemma": "Avianius 2",
+    "lemma": "Avianius 2. 3",
     "previous": "Avianius 1",
-    "next": "Avianius 3",
-    "chapters": [
-      {
-        "start": 2372,
-        "end": 2372,
-        "author": "Klebs"
-      }
-    ]
-  },
-  {
-    "lemma": "Avianius 3",
-    "previous": "Avianius 2",
     "next": "Avianius 4",
     "chapters": [
       {
@@ -24534,7 +24535,7 @@
   },
   {
     "lemma": "Avianius 4",
-    "previous": "Avianius 3",
+    "previous": "Avianius 2. 3",
     "next": "Avianius 5",
     "chapters": [
       {
@@ -25270,7 +25271,7 @@
     "lemma": "Aulaitinehae",
     "previous": "Aulai 2",
     "next": "Αὐλαίου τεῖχος",
-    "redirect": true,
+    "redirect": "Aviaitinehae",
     "chapters": [
       {
         "start": 2401,
@@ -25354,6 +25355,7 @@
     "lemma": "Aule 4",
     "previous": "Aule 3",
     "next": "Auleas",
+    "wp_link": "w:de:Aula",
     "chapters": [
       {
         "start": 2401,
@@ -25463,6 +25465,7 @@
     "lemma": "Aulia",
     "previous": "Auleu",
     "next": "Αὐλίδεια",
+    "redirect": "Metroon 2",
     "chapters": [
       {
         "start": 2409,
@@ -29477,6 +29480,7 @@
     "lemma": "Aurelius 221",
     "previous": "Aurelius 220",
     "next": "Aurelius 222",
+    "wp_link": "w:de:Severus Alexander",
     "chapters": [
       {
         "start": 2526,
@@ -38644,7 +38648,7 @@
   {
     "lemma": "Baitokaike",
     "previous": "Baitogabra",
-    "next": "Baitokaikeus",
+    "next": "Βαιτοκαικεύς",
     "chapters": [
       {
         "start": 2779,
@@ -38654,9 +38658,10 @@
     ]
   },
   {
-    "lemma": "Baitokaikeus",
+    "lemma": "Βαιτοκαικεύς",
     "previous": "Baitokaike",
     "next": "Baiton",
+    "sort_key": "Baitokaikeus",
     "chapters": [
       {
         "start": 2779,
@@ -38667,7 +38672,7 @@
   },
   {
     "lemma": "Baiton",
-    "previous": "Baitokaikeus",
+    "previous": "Βαιτοκαικεύς",
     "next": "Baitorix",
     "chapters": [
       {

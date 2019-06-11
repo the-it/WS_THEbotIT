@@ -269,7 +269,7 @@
   {
     "lemma": "Arinistae",
     "previous": "Aretalogoi",
-    "next": "Arrius 19a",
+    "next": "Arrius 13",
     "chapters": [
       {
         "start": 16,
@@ -279,8 +279,11 @@
     ]
   },
   {
+    "lemma": "Arrius 13",
+    "previous": "Arinistae"
+  },
+  {
     "lemma": "Arrius 19a",
-    "previous": "Arinistae",
     "next": "Asellius 1a",
     "chapters": [
       {
@@ -852,6 +855,7 @@
   },
   {
     "lemma": "Cerdeciates",
+    "previous": null,
     "next": "Ceremia"
   },
   {
@@ -905,7 +909,12 @@
     ]
   },
   {
+    "lemma": "Claudius 357",
+    "next": "Claudius 415"
+  },
+  {
     "lemma": "Claudius 415",
+    "previous": "Claudius 357",
     "next": "Coeba(?)"
   },
   {
@@ -935,7 +944,7 @@
   {
     "lemma": "Colonia 34a",
     "previous": "Coelius 7a",
-    "next": "Claudius 187. 188. 194",
+    "next": "Comberania",
     "chapters": [
       {
         "start": 23,
@@ -945,8 +954,11 @@
     ]
   },
   {
+    "lemma": "Comberania",
+    "previous": "Colonia 34a"
+  },
+  {
     "lemma": "Claudius 187. 188. 194",
-    "previous": "Colonia 34a",
     "next": "Claudius 415",
     "chapters": [
       {

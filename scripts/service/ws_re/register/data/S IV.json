@@ -1609,7 +1609,8 @@
   {
     "lemma": "Χειριστής",
     "previous": "Cheimaros",
-    "next": "Chersanippos",
+    "next": "Χερσέφιππος",
+    "sort_key": "Cheiristes",
     "chapters": [
       {
         "start": 215,
@@ -1619,8 +1620,11 @@
     ]
   },
   {
+    "lemma": "Χερσέφιππος",
+    "previous": "Χειριστής"
+  },
+  {
     "lemma": "Chersanippos",
-    "previous": "Χειριστής",
     "next": "Chersephippos",
     "chapters": [
       {
@@ -1741,6 +1745,7 @@
   {
     "lemma": "Chrysippos 10a",
     "previous": "Chrysones (Chryson",
+    "next": "Χρυσώνης",
     "chapters": [
       {
         "start": 218,
@@ -1750,7 +1755,14 @@
     ]
   },
   {
+    "lemma": "Χρυσώνης",
+    "previous": "Chrysippos 10a",
+    "next": "Damaratos 3",
+    "sort_key": "Chrysones"
+  },
+  {
     "lemma": "Damaratos 3",
+    "previous": "Χρυσώνης",
     "next": "Damasandra"
   },
   {

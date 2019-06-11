@@ -1183,6 +1183,7 @@
     "lemma": "Cosinius",
     "previous": "Cosimbie",
     "next": "Cosiri",
+    "redirect": "Cossinius 1",
     "chapters": [
       {
         "start": 1671,
@@ -1206,6 +1207,7 @@
     "lemma": "Cosmianus, Cosmus",
     "previous": "Cosiri",
     "next": "Cososus",
+    "redirect": "Kosmos 2",
     "chapters": [
       {
         "start": 1671,
@@ -5339,6 +5341,7 @@
     "lemma": "Curia 2",
     "previous": "Curia 1",
     "next": "Curia 3",
+    "redirect": "Coria",
     "chapters": [
       {
         "start": 1815,
@@ -5374,6 +5377,7 @@
     "lemma": "Curia 5",
     "previous": "Curia 4",
     "next": "Curiales",
+    "redirect": "Curius 9",
     "chapters": [
       {
         "start": 1826,
@@ -5385,6 +5389,7 @@
     "lemma": "Curiales",
     "previous": "Curia 5",
     "next": "Curianum",
+    "redirect": "Decurio",
     "chapters": [
       {
         "start": 1826,
@@ -5408,6 +5413,7 @@
     "lemma": "Curianus",
     "previous": "Curianum",
     "next": "Curiata lex",
+    "redirect": "Asudius",
     "chapters": [
       {
         "start": 1826,
@@ -10037,6 +10043,7 @@
     "lemma": "Damasos 7",
     "previous": "Damasos 6",
     "next": "Damaspia",
+    "wp_link": "w:de:Damasus I.",
     "chapters": [
       {
         "start": 2048,
@@ -10745,6 +10752,7 @@
     "lemma": "Damnati",
     "previous": "Damnata aqua",
     "next": "Damnatio memoriae",
+    "redirect": "Κατάδικοι",
     "chapters": [
       {
         "start": 2059,
@@ -14590,7 +14598,7 @@
   {
     "lemma": "Daskyleion 5",
     "previous": "Daskyleion 4",
-    "next": "Daskylitis limne",
+    "next": "Δασκυλῖτις λίμνη",
     "chapters": [
       {
         "start": 2220,
@@ -14600,9 +14608,10 @@
     ]
   },
   {
-    "lemma": "Daskylitis limne",
+    "lemma": "Δασκυλῖτις λίμνη",
     "previous": "Daskyleion 5",
-    "next": "Daskylos 3",
+    "next": "Daskylos 1",
+    "sort_key": "Daskylitis limne",
     "chapters": [
       {
         "start": 2220,
@@ -14612,32 +14621,8 @@
     ]
   },
   {
-    "lemma": "Daskylos 3",
-    "previous": "Daskylitis limne",
-    "next": "Daskylos 4",
-    "chapters": [
-      {
-        "start": 2220,
-        "end": 2220,
-        "author": "Escher"
-      }
-    ]
-  },
-  {
-    "lemma": "Daskylos 4",
-    "previous": "Daskylos 3",
-    "next": "Daskylos 1",
-    "chapters": [
-      {
-        "start": 2220,
-        "end": 2220,
-        "author": "Escher"
-      }
-    ]
-  },
-  {
     "lemma": "Daskylos 1",
-    "previous": "Daskylos 4",
+    "previous": "Δασκυλῖτις λίμνη",
     "next": "Daskylos 2",
     "chapters": [
       {
@@ -14650,7 +14635,7 @@
   {
     "lemma": "Daskylos 2",
     "previous": "Daskylos 1",
-    "next": "Daskylu kome",
+    "next": "Daskylos 3",
     "chapters": [
       {
         "start": 2221,
@@ -14660,9 +14645,34 @@
     ]
   },
   {
-    "lemma": "Daskylu kome",
+    "lemma": "Daskylos 3",
     "previous": "Daskylos 2",
+    "next": "Daskylos 4",
+    "chapters": [
+      {
+        "start": 2220,
+        "end": 2220,
+        "author": "Escher"
+      }
+    ]
+  },
+  {
+    "lemma": "Daskylos 4",
+    "previous": "Daskylos 3",
+    "next": "Δασκύλου κώμη",
+    "chapters": [
+      {
+        "start": 2220,
+        "end": 2220,
+        "author": "Escher"
+      }
+    ]
+  },
+  {
+    "lemma": "Δασκύλου κώμη",
+    "previous": "Daskylos 4",
     "next": "Dasmenda",
+    "sort_key": "Daskylu kome",
     "chapters": [
       {
         "start": 2221,
@@ -14673,7 +14683,7 @@
   },
   {
     "lemma": "Dasmenda",
-    "previous": "Daskylu kome",
+    "previous": "Δασκύλου κώμη",
     "next": "Dasmini praesidium",
     "chapters": [
       {
@@ -14759,6 +14769,7 @@
     "lemma": "Dastracus mons",
     "previous": "Dasteira",
     "next": "Dasumius 1",
+    "redirect": "Dasteira",
     "chapters": [
       {
         "start": 2222,
@@ -15323,6 +15334,7 @@
     "lemma": "Daza",
     "previous": "Daximonitis",
     "next": "Dea Augusta Vocontiorum",
+    "redirect": "Daia",
     "chapters": [
       {
         "start": 2235,
@@ -21774,6 +21786,8 @@
     "lemma": "Demetrios 78",
     "previous": "Demetrios 77",
     "next": "Demetrios 79",
+    "sort_key": "Demetrios 078",
+    "wp_link": "w:de:Demetrios von Skepsis",
     "chapters": [
       {
         "start": 2807,

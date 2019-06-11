@@ -416,7 +416,6 @@
   },
   {
     "lemma": "χειρόγραφον",
-    "next": "Clementius 1a",
     "chapters": [
       {
         "start": 84,
@@ -426,9 +425,13 @@
     ]
   },
   {
+    "lemma": "Clementius 1",
+    "next": "Clementius 1a"
+  },
+  {
     "lemma": "Clementius 1a",
-    "previous": "χειρόγραφον",
-    "next": "χρηματισμός",
+    "previous": "Clementius 1",
+    "next": "Cocceius 3",
     "chapters": [
       {
         "start": 89,
@@ -438,8 +441,11 @@
     ]
   },
   {
+    "lemma": "Cocceius 3",
+    "previous": "Clementius 1a"
+  },
+  {
     "lemma": "χρηματισμός",
-    "previous": "Clementius 1a",
     "next": "Claudius 207",
     "chapters": [
       {
@@ -454,7 +460,12 @@
     "previous": "χρηματισμός"
   },
   {
+    "lemma": "Cocceius 12",
+    "next": "Codicarii 2"
+  },
+  {
     "lemma": "Codicarii 2",
+    "previous": "Cocceius 12",
     "next": "Contributio 2",
     "chapters": [
       {

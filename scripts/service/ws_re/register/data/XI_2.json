@@ -326,7 +326,7 @@
   {
     "lemma": "Koniaios",
     "previous": "Kongustos",
-    "next": "Koniakoi",
+    "next": "Κονιακοί",
     "redirect": true,
     "chapters": [
       {
@@ -336,10 +336,11 @@
     ]
   },
   {
-    "lemma": "Koniakoi",
+    "lemma": "Κονιακοί",
     "previous": "Koniaios",
     "next": "Konier",
-    "redirect": true,
+    "sort_key": "Koniakoi",
+    "redirect": "Conisci",
     "chapters": [
       {
         "start": 1312,
@@ -349,7 +350,7 @@
   },
   {
     "lemma": "Konier",
-    "previous": "Koniakoi",
+    "previous": "Κονιακοί",
     "next": "Konika",
     "redirect": true,
     "chapters": [
@@ -1173,7 +1174,7 @@
   {
     "lemma": "Koponios",
     "previous": "Koplanion pedion",
-    "next": "Kopoxystai",
+    "next": "Κωποξύσται",
     "chapters": [
       {
         "start": 1363,
@@ -1183,9 +1184,9 @@
     ]
   },
   {
-    "lemma": "Kopoxystai",
+    "lemma": "Κωποξύσται",
     "previous": "Koponios",
-    "next": "Kopratas",
+    "next": "Κοπράτας",
     "chapters": [
       {
         "start": 1363,
@@ -1195,9 +1196,10 @@
     ]
   },
   {
-    "lemma": "Kopratas",
-    "previous": "Kopoxystai",
+    "lemma": "Κοπράτας",
+    "previous": "Κωποξύσται",
     "next": "Kopreus",
+    "sort_key": "Kopratas",
     "chapters": [
       {
         "start": 1363,
@@ -1208,7 +1210,7 @@
   },
   {
     "lemma": "Kopreus",
-    "previous": "Kopratas",
+    "previous": "Κοπράτας",
     "next": "Kopria",
     "chapters": [
       {

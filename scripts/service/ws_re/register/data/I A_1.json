@@ -1532,7 +1532,7 @@
   {
     "lemma": "Ramnumbovas",
     "previous": "Ramnes",
-    "next": "Ramnus",
+    "next": "Ῥαμνοῦς",
     "chapters": [
       {
         "start": 139,
@@ -1542,9 +1542,10 @@
     ]
   },
   {
-    "lemma": "Ramnus",
+    "lemma": "Ῥαμνοῦς",
     "previous": "Ramnumbovas",
-    "next": "Ramnus 1",
+    "next": "Ῥαμνοῦς 1",
+    "sort_key": "Ramnus",
     "chapters": [
       {
         "start": 139,
@@ -1554,8 +1555,8 @@
     ]
   },
   {
-    "lemma": "Ramnus 1",
-    "previous": "Ramnus",
+    "lemma": "Ῥαμνοῦς 1",
+    "previous": "Ῥαμνοῦς",
     "next": "Ramnus 2",
     "chapters": [
       {
@@ -1567,7 +1568,7 @@
   },
   {
     "lemma": "Ramnus 2",
-    "previous": "Ramnus 1",
+    "previous": "Ῥαμνοῦς 1",
     "next": "Ramnusia",
     "chapters": [
       {
@@ -2001,6 +2002,7 @@
     "lemma": "Ranunculus",
     "previous": "Rantius",
     "next": "Raparia",
+    "wp_link": "w:de:Hahnenfuß",
     "chapters": [
       {
         "start": 230,
@@ -2270,7 +2272,7 @@
   {
     "lemma": "Raptus 2",
     "previous": "Raptus 1",
-    "next": "Rar",
+    "next": "̓Ράρ",
     "wp_link": "w:de:Entführung",
     "chapters": [
       {
@@ -2281,7 +2283,7 @@
     ]
   },
   {
-    "lemma": "Rar",
+    "lemma": "̓Ράρ",
     "previous": "Raptus 2",
     "next": "Raraunum",
     "chapters": [
@@ -2294,7 +2296,7 @@
   },
   {
     "lemma": "Raraunum",
-    "previous": "Rar",
+    "previous": "̓Ράρ",
     "next": "Rarentus",
     "chapters": [
       {
@@ -2307,7 +2309,7 @@
   {
     "lemma": "Rarentus",
     "previous": "Raraunum",
-    "next": "Raria",
+    "next": " ̓Ραρία",
     "chapters": [
       {
         "start": 251,
@@ -2317,9 +2319,10 @@
     ]
   },
   {
-    "lemma": "Raria",
+    "lemma": " ̓Ραρία",
     "previous": "Rarentus",
-    "next": " ̓Ραρiάς",
+    "next": "̓Ραριάς",
+    "sort_key": "Raria",
     "chapters": [
       {
         "start": 251,
@@ -2329,9 +2332,9 @@
     ]
   },
   {
-    "lemma": " ̓Ραρiάς",
-    "previous": "Raria",
-    "next": "Rarion",
+    "lemma": "̓Ραριάς",
+    "previous": " ̓Ραρία",
+    "next": " ̓Ράριον",
     "sort_key": "Rarias",
     "chapters": [
       {
@@ -2342,9 +2345,10 @@
     ]
   },
   {
-    "lemma": "Rarion",
-    "previous": " ̓Ραρiάς",
+    "lemma": " ̓Ράριον",
+    "previous": "̓Ραριάς",
     "next": "Raros",
+    "sort_key": "Rarion",
     "chapters": [
       {
         "start": 252,
@@ -2355,7 +2359,7 @@
   },
   {
     "lemma": "Raros",
-    "previous": "Rarion",
+    "previous": " ̓Ράριον",
     "next": "Rarungae",
     "chapters": [
       {
@@ -2368,7 +2372,7 @@
   {
     "lemma": "Rarungae",
     "previous": "Raros",
-    "next": "Rasennas",
+    "next": "Ῥασέννας",
     "chapters": [
       {
         "start": 252,
@@ -2378,9 +2382,10 @@
     ]
   },
   {
-    "lemma": "Rasennas",
+    "lemma": "Ῥασέννας",
     "previous": "Rarungae",
     "next": "Rasennius",
+    "sort_key": "Rasennas",
     "chapters": [
       {
         "start": 253,
@@ -2391,7 +2396,7 @@
   },
   {
     "lemma": "Rasennius",
-    "previous": "Rasennas",
+    "previous": "Ῥασέννας",
     "next": "Rasiermesser",
     "chapters": [
       {
@@ -2536,7 +2541,7 @@
   {
     "lemma": "Raster",
     "previous": "Rasta",
-    "next": "Rastia",
+    "next": "Ῥαστία",
     "chapters": [
       {
         "start": 257,
@@ -2546,9 +2551,10 @@
     ]
   },
   {
-    "lemma": "Rastia",
+    "lemma": "Ῥαστία",
     "previous": "Raster",
     "next": "Rat(a?)",
+    "sort_key": "Rastia",
     "chapters": [
       {
         "start": 258,
@@ -2559,7 +2565,7 @@
   },
   {
     "lemma": "Rat(a?)",
-    "previous": "Rastia",
+    "previous": "Ῥαστία",
     "next": "Ratacenses",
     "chapters": [
       {
@@ -2584,7 +2590,7 @@
   {
     "lemma": "Ratae Coritanorum",
     "previous": "Ratacenses",
-    "next": "Ratakensioi",
+    "next": "Ρατακήνσιοι",
     "chapters": [
       {
         "start": 258,
@@ -2594,7 +2600,7 @@
     ]
   },
   {
-    "lemma": "Ratakensioi",
+    "lemma": "Ρατακήνσιοι",
     "previous": "Ratae Coritanorum",
     "next": "Ratamatus",
     "chapters": [
@@ -2607,7 +2613,7 @@
   },
   {
     "lemma": "Ratamatus",
-    "previous": "Ratakensioi",
+    "previous": "Ρατακήνσιοι",
     "next": "Rateoneum",
     "chapters": [
       {
@@ -2632,7 +2638,7 @@
   {
     "lemma": "Ratheihae",
     "previous": "Rateoneum",
-    "next": "Rathenoi",
+    "next": "Ῥαθηνοί",
     "chapters": [
       {
         "start": 259,
@@ -2642,9 +2648,10 @@
     ]
   },
   {
-    "lemma": "Rathenoi",
+    "lemma": "Ῥαθηνοί",
     "previous": "Ratheihae",
-    "next": "Rathinai",
+    "next": "Ῥαθῖναι",
+    "sort_key": "Rathenoi",
     "chapters": [
       {
         "start": 259,
@@ -2654,8 +2661,8 @@
     ]
   },
   {
-    "lemma": "Rathinai",
-    "previous": "Rathenoi",
+    "lemma": "Ῥαθῖναι",
+    "previous": "Ῥαθηνοί",
     "next": "Rathines",
     "chapters": [
       {
@@ -2667,7 +2674,7 @@
   },
   {
     "lemma": "Rathines",
-    "previous": "Rathinai",
+    "previous": "Ῥαθῖναι",
     "next": "Ratiaria",
     "chapters": [
       {
@@ -2898,7 +2905,8 @@
   {
     "lemma": "Rauke",
     "previous": "Raugara",
-    "next": "Raukos",
+    "next": "Ῥαῦκος",
+    "wp_link": "w:de:Rucola",
     "chapters": [
       {
         "start": 287,
@@ -2908,9 +2916,10 @@
     ]
   },
   {
-    "lemma": "Raukos",
+    "lemma": "Ῥαῦκος",
     "previous": "Rauke",
     "next": "Raumarici",
+    "sort_key": "Raukos",
     "chapters": [
       {
         "start": 288,
@@ -2921,7 +2930,7 @@
   },
   {
     "lemma": "Raumarici",
-    "previous": "Raukos",
+    "previous": "Ῥαῦκος",
     "next": "Raunathu kome",
     "wp_link": "w:de:Raumarici",
     "chapters": [
@@ -13358,6 +13367,7 @@
     "lemma": "Rufinus 24",
     "previous": "Rufinus 23",
     "next": "Rufinus 25",
+    "wp_link": "w:de:Rufinus von Aquileia",
     "chapters": [
       {
         "start": 1193,

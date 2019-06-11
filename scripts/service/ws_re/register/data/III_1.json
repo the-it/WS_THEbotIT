@@ -2967,6 +2967,7 @@
     "lemma": "Basileus 4",
     "previous": "Basileus 3",
     "next": "Basilia",
+    "redirect": "Basilis 3",
     "chapters": [
       {
         "start": 82,
@@ -3001,6 +3002,7 @@
     "lemma": "Basilica",
     "previous": "Basilianus",
     "next": "Ad Basilicam",
+    "wp_link": "w:de:Basilika",
     "chapters": [
       {
         "start": 83,
@@ -10386,6 +10388,7 @@
     "lemma": "Berenike 11",
     "previous": "Berenike 10",
     "next": "Berenike 12",
+    "wp_link": "w:de:Berenike II.",
     "chapters": [
       {
         "start": 284,
@@ -15933,6 +15936,7 @@
     "lemma": "Bion 9",
     "previous": "Bion 8",
     "next": "Bion 10",
+    "sort_key": "Bion 09",
     "chapters": [
       {
         "start": 483,
@@ -26457,6 +26461,8 @@
     "lemma": "Brief",
     "previous": "Bridas",
     "next": "Brigaecium",
+    "wp_link": "w:de:Brief",
+    "ws_link": "s:de:Briefe",
     "chapters": [
       {
         "start": 836,
@@ -27249,6 +27255,7 @@
     "lemma": "Britanni",
     "previous": "Britannae",
     "next": "Britannia",
+    "wp_link": "w:de:Britannien",
     "chapters": [
       {
         "start": 858,
@@ -28421,6 +28428,7 @@
     "lemma": "Brundisium",
     "previous": "Brumalis circulus",
     "next": "Brundulum",
+    "wp_link": "w:de:Brindisi",
     "chapters": [
       {
         "start": 902,
@@ -30295,7 +30303,7 @@
   {
     "lemma": "Büffel",
     "previous": "Buduxi",
-    "next": "Bouglosson",
+    "next": "Buffadensis",
     "chapters": [
       {
         "start": 992,
@@ -30305,20 +30313,8 @@
     ]
   },
   {
-    "lemma": "Bouglosson",
-    "previous": "Büffel",
-    "next": "Buffadensis",
-    "chapters": [
-      {
-        "start": 993,
-        "end": 993,
-        "author": "Schmidt, Max C[arl] P[aul]"
-      }
-    ]
-  },
-  {
     "lemma": "Buffadensis",
-    "previous": "Bouglosson",
+    "previous": "Büffel",
     "next": "Bugarma",
     "chapters": [
       {
@@ -30366,7 +30362,7 @@
   {
     "lemma": "Bugius",
     "previous": "Buget",
-    "next": "Buguntes",
+    "next": "Bouglosson",
     "chapters": [
       {
         "start": 993,
@@ -30376,8 +30372,20 @@
     ]
   },
   {
-    "lemma": "Buguntes",
+    "lemma": "Bouglosson",
     "previous": "Bugius",
+    "next": "Buguntes",
+    "chapters": [
+      {
+        "start": 993,
+        "end": 993,
+        "author": "Schmidt, Max C[arl] P[aul]"
+      }
+    ]
+  },
+  {
+    "lemma": "Buguntes",
+    "previous": "Bouglosson",
     "next": "Buiza",
     "chapters": [
       {
@@ -30817,7 +30825,7 @@
   {
     "lemma": "Bukolo",
     "previous": "Bukolion 6",
-    "next": "Bukoloi 1",
+    "next": "Βουκόλοι 1",
     "chapters": [
       {
         "start": 1013,
@@ -30827,9 +30835,9 @@
     ]
   },
   {
-    "lemma": "Bukoloi 1",
+    "lemma": "Βουκόλοι 1",
     "previous": "Bukolo",
-    "next": "Bukoloi 2",
+    "next": "Βουκόλοι 2",
     "chapters": [
       {
         "start": 1013,
@@ -30839,9 +30847,10 @@
     ]
   },
   {
-    "lemma": "Bukoloi 2",
-    "previous": "Bukoloi 1",
+    "lemma": "Βουκόλοι 2",
+    "previous": "Βουκόλοι 1",
     "next": "Βουκόλων κώμη",
+    "sort_key": "Bukoloi 2",
     "chapters": [
       {
         "start": 1013,
@@ -30852,7 +30861,7 @@
   },
   {
     "lemma": "Βουκόλων κώμη",
-    "previous": "Bukoloi 2",
+    "previous": "Βουκόλοι 2",
     "next": "Βουκόλων πόλις",
     "sort_key": "Bukolon kome",
     "chapters": [
