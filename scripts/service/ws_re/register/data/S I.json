@@ -14544,13 +14544,25 @@
     ]
   },
   {
+    "lemma": "Ceionius 6",
+    "previous": "Cazaci",
+    "next": "Celeia"
+  },
+  {
     "lemma": "Celeia",
     "next": "Celer 1a"
   },
   {
     "lemma": "Celer 1a",
     "previous": "Celeia",
-    "next": "Celer 9"
+    "next": "Celer 9",
+    "chapters": [
+      {
+        "start": 280,
+        "end": 280,
+        "author": "Münzer"
+      }
+    ]
   },
   {
     "lemma": "Celer 9",
@@ -14564,30 +14576,6 @@
         "author": "Groag"
       }
     ]
-  },
-  {
-    "lemma": "Celeia",
-    "next": "Celer 1a"
-  },
-  {
-    "lemma": "Celeros",
-    "previous": "Celer 9"
-  },
-  {
-    "lemma": "Celer 1a",
-    "previous": "Celeia",
-    "next": null,
-    "chapters": [
-      {
-        "start": 280,
-        "end": 280,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
-    "lemma": "Celer 9",
-    "next": "Celeros"
   },
   {
     "lemma": "Celeros",
