@@ -18029,7 +18029,8 @@
   {
     "lemma": "Cestius 9",
     "previous": "Cestius 8",
-    "next": "Cestius 11",
+    "next": "Cestius 10",
+    "sort_key": "Cestius 09",
     "chapters": [
       {
         "start": 2005,
@@ -18039,8 +18040,13 @@
     ]
   },
   {
-    "lemma": "Cestius 11",
+    "lemma": "Cestius 10",
     "previous": "Cestius 9",
+    "next": "Cestius 11"
+  },
+  {
+    "lemma": "Cestius 11",
+    "previous": "Cestius 10",
     "next": "Cestius 12",
     "chapters": [
       {
@@ -19666,6 +19672,7 @@
     "lemma": "Chaironeia",
     "previous": "Chairondas",
     "next": "Chaitai 1",
+    "wp_link": "w:de:Chaironeia",
     "chapters": [
       {
         "start": 2033,
@@ -26581,7 +26588,7 @@
   {
     "lemma": "Chermula",
     "previous": "Cherias",
-    "next": "Chernibon",
+    "next": "Χέρνιβον",
     "chapters": [
       {
         "start": 2240,
@@ -26591,9 +26598,10 @@
     ]
   },
   {
-    "lemma": "Chernibon",
+    "lemma": "Χέρνιβον",
     "previous": "Chermula",
     "next": "Cherobios",
+    "sort_key": "Chernibon",
     "chapters": [
       {
         "start": 2240,
@@ -26604,7 +26612,7 @@
   },
   {
     "lemma": "Cherobios",
-    "previous": "Chernibon",
+    "previous": "Χέρνιβον",
     "next": "Cheroinon",
     "chapters": [
       {
@@ -27055,6 +27063,7 @@
     "lemma": "Chersonesos 20",
     "previous": "Chersonesos 19",
     "next": "Chersonesos 21",
+    "wp_link": "w:de:Chersones (Stadt)",
     "chapters": [
       {
         "start": 2261,
@@ -27442,7 +27451,7 @@
   {
     "lemma": "Chiliarchos",
     "previous": "Chilbudios 2",
-    "next": "Chiliasteres",
+    "next": "Χιλιαστῆρες",
     "chapters": [
       {
         "start": 2275,
@@ -27452,9 +27461,10 @@
     ]
   },
   {
-    "lemma": "Chiliasteres",
+    "lemma": "Χιλιαστῆρες",
     "previous": "Chiliarchos",
-    "next": "Chiliastys",
+    "next": "Χιλιαστύς",
+    "sort_key": "Chiliasteres",
     "chapters": [
       {
         "start": 2276,
@@ -27464,8 +27474,8 @@
     ]
   },
   {
-    "lemma": "Chiliastys",
-    "previous": "Chiliasteres",
+    "lemma": "Χιλιαστύς",
+    "previous": "Χιλιαστῆρες",
     "next": "Chilioi",
     "chapters": [
       {
@@ -27477,7 +27487,7 @@
   },
   {
     "lemma": "Chilioi",
-    "previous": "Chiliastys",
+    "previous": "Χιλιαστύς",
     "next": "Chiliokomon 1",
     "chapters": [
       {

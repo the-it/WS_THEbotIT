@@ -9578,7 +9578,7 @@
   {
     "lemma": "Chilon 5a",
     "previous": "Chersis 4",
-    "next": "Chiurges",
+    "next": "Χιουργές",
     "chapters": [
       {
         "start": 245,
@@ -9588,7 +9588,7 @@
     ]
   },
   {
-    "lemma": "Chiurges",
+    "lemma": "Χιουργές",
     "previous": "Chilon 5a",
     "next": "Christophoros 2",
     "chapters": [
@@ -9601,7 +9601,7 @@
   },
   {
     "lemma": "Christophoros 2",
-    "previous": "Chiurges",
+    "previous": "Χιουργές",
     "next": "Chryseros 3a",
     "chapters": [
       {
@@ -10027,7 +10027,7 @@
   {
     "lemma": "Comicato",
     "previous": "Colubrarius mons",
-    "next": "Cominius 2a",
+    "next": "Cominius 10",
     "chapters": [
       {
         "start": 256,
@@ -10037,8 +10037,12 @@
     ]
   },
   {
+    "lemma": "Cominius 10",
+    "previous": "Comicato"
+  },
+  {
     "lemma": "Cominius 2a",
-    "previous": "Comicato",
+    "previous": null,
     "next": "Comisillus",
     "chapters": [
       {

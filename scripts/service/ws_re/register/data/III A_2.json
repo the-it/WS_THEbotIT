@@ -3098,7 +3098,7 @@
   {
     "lemma": "Stacheir",
     "previous": "Stachao",
-    "next": "Stachelschwein",
+    "next": "Stachelchwein",
     "chapters": [
       {
         "start": 1927,
@@ -3122,7 +3122,7 @@
   {
     "lemma": "Stachemphax",
     "previous": "Stachelschwein",
-    "next": "Stadia 1",
+    "next": "Σταδία 1",
     "chapters": [
       {
         "start": 1929,
@@ -3132,9 +3132,10 @@
     ]
   },
   {
-    "lemma": "Stadia 1",
+    "lemma": "Σταδία 1",
     "previous": "Stachemphax",
-    "next": "Stadia 2",
+    "next": "Σταδία 2",
+    "sort_key": "Stadia 1",
     "chapters": [
       {
         "start": 1930,
@@ -3144,8 +3145,8 @@
     ]
   },
   {
-    "lemma": "Stadia 2",
-    "previous": "Stadia 1",
+    "lemma": "Σταδία 2",
+    "previous": "Σταδία 1",
     "next": "Stadieus 1",
     "chapters": [
       {
@@ -3157,7 +3158,7 @@
   },
   {
     "lemma": "Stadieus 1",
-    "previous": "Stadia 2",
+    "previous": "Σταδία 2",
     "next": "Stadieus 2",
     "chapters": [
       {

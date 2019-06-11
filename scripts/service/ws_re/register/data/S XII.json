@@ -509,6 +509,7 @@
     "lemma": "Allius 1a",
     "previous": "Alkmaion 6",
     "next": "In Alpe Iulia",
+    "sort_key": "Allius 01a",
     "chapters": [
       {
         "start": 26,
@@ -584,6 +585,7 @@
     "lemma": "Annius 65a",
     "previous": "Annidius (Adsidius?) Severus",
     "next": "Annius 66a",
+    "sort_key": "Annius 065a",
     "chapters": [
       {
         "start": 87,
@@ -607,7 +609,6 @@
   {
     "lemma": "Antipatros 15a",
     "previous": "Annius 66a",
-    "next": "Antonius 35a",
     "chapters": [
       {
         "start": 87,
@@ -617,9 +618,14 @@
     ]
   },
   {
+    "lemma": "Antius 10",
+    "next": "Antonius 35a"
+  },
+  {
     "lemma": "Antonius 35a",
-    "previous": "Antipatros 15a",
-    "next": "Antonius 51a",
+    "previous": "Antius 10",
+    "next": "Antonius 36",
+    "sort_key": "Antonius 035a",
     "chapters": [
       {
         "start": 88,
@@ -629,8 +635,11 @@
     ]
   },
   {
+    "lemma": "Antonius 36",
+    "previous": "Antonius 35a"
+  },
+  {
     "lemma": "Antonius 51a",
-    "previous": "Antonius 35a",
     "chapters": [
       {
         "start": 88,

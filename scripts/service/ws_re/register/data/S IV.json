@@ -1609,7 +1609,8 @@
   {
     "lemma": "Χειριστής",
     "previous": "Cheimaros",
-    "next": "Chersanippos",
+    "next": "Χερσέφιππος",
+    "sort_key": "Cheiristes",
     "chapters": [
       {
         "start": 215,
@@ -1619,8 +1620,11 @@
     ]
   },
   {
+    "lemma": "Χερσέφιππος",
+    "previous": "Χειριστής"
+  },
+  {
     "lemma": "Chersanippos",
-    "previous": "Χειριστής",
     "next": "Chersephippos",
     "chapters": [
       {
