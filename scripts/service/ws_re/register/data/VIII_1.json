@@ -999,6 +999,7 @@
     "lemma": "Helladios 8",
     "previous": "Helladios 7",
     "next": "Helladios 9",
+    "sort_key": "Helladios 08",
     "chapters": [
       {
         "start": 103,
@@ -4555,6 +4556,7 @@
     "lemma": "Heraklas 2",
     "previous": "Heraklas 1",
     "next": "Herakleia 1",
+    "wp_link": "w:de:Heraclas von Alexandria",
     "chapters": [
       {
         "start": 423,
@@ -7176,6 +7178,8 @@
     "lemma": "Hercules 1",
     "previous": "Herculente",
     "next": "Hercules 2",
+    "wp_link": "w:de:Herkules",
+    "ws_link": "s:de:Herakles",
     "chapters": [
       {
         "start": 550,
@@ -12496,7 +12500,7 @@
   {
     "lemma": "Herondas",
     "previous": "Heronas",
-    "next": "Herone",
+    "next": "Ἡρώνη",
     "chapters": [
       {
         "start": 1080,
@@ -12506,9 +12510,10 @@
     ]
   },
   {
-    "lemma": "Herone",
+    "lemma": "Ἡρώνη",
     "previous": "Herondas",
     "next": "Heronius",
+    "sort_key": "Herone",
     "chapters": [
       {
         "start": 1102,
@@ -12519,7 +12524,7 @@
   },
   {
     "lemma": "Heronius",
-    "previous": "Herone",
+    "previous": "Ἡρώνη",
     "next": "Heronsball, Heronsbrunnen",
     "chapters": [
       {

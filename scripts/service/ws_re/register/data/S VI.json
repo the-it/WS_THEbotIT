@@ -50,7 +50,7 @@
   {
     "lemma": "Aelius 75a",
     "previous": "Acutius 1b",
-    "next": "Aemilius 54a",
+    "next": "Aelius 76",
     "chapters": [
       {
         "start": 1,
@@ -60,9 +60,11 @@
     ]
   },
   {
+    "lemma": "Aelius 76",
+    "previous": "Aelius 75a"
+  },
+  {
     "lemma": "Aemilius 54a",
-    "previous": "Aelius 75a",
-    "next": "Afranius 10a",
     "chapters": [
       {
         "start": 2,
@@ -72,8 +74,12 @@
     ]
   },
   {
+    "lemma": "Aemilius 79",
+    "next": "Afranius 10a"
+  },
+  {
     "lemma": "Afranius 10a",
-    "previous": "Aemilius 54a",
+    "previous": "Aemilius 79",
     "next": "Aiacius 3",
     "chapters": [
       {
@@ -113,7 +119,8 @@
   {
     "lemma": "Alexandros 90a",
     "previous": "Albiobola",
-    "next": "Annius 26a",
+    "next": "Anaxilaos 5",
+    "sort_key": "Alexandros 090a",
     "chapters": [
       {
         "start": 3,
@@ -123,9 +130,11 @@
     ]
   },
   {
+    "lemma": "Anaxilaos 5",
+    "previous": "Alexandros 90a"
+  },
+  {
     "lemma": "Annius 26a",
-    "previous": "Alexandros 90a",
-    "next": "Antistius 49a",
     "chapters": [
       {
         "start": 7,
@@ -133,11 +142,15 @@
         "author": "Groag"
       }
     ]
+  },
+  {
+    "lemma": "Antistius 41",
+    "next": "Antistius 49a"
   },
   {
     "lemma": "Antistius 49a",
-    "previous": "Annius 26a",
-    "next": "Antonius 36a",
+    "previous": "Antistius 41",
+    "next": "Antistius 50",
     "chapters": [
       {
         "start": 7,
@@ -147,8 +160,13 @@
     ]
   },
   {
-    "lemma": "Antonius 36a",
+    "lemma": "Antistius 50",
     "previous": "Antistius 49a",
+    "next": "Antonius 36a"
+  },
+  {
+    "lemma": "Antonius 36a",
+    "previous": "Antistius 50",
     "next": "Antonius 58a",
     "chapters": [
       {
@@ -241,7 +259,12 @@
     ]
   },
   {
+    "lemma": "Aradius 1",
+    "next": "Archelaos 34"
+  },
+  {
     "lemma": "Archelaos 34",
+    "previous": "Aradius 1",
     "next": "Areliascus"
   },
   {
@@ -308,7 +331,7 @@
   {
     "lemma": "Asinius 18a",
     "previous": "Asellius 1a",
-    "next": "Atilius 45a",
+    "next": "Athenaios 23",
     "chapters": [
       {
         "start": 16,
@@ -318,8 +341,11 @@
     ]
   },
   {
+    "lemma": "Athenaios 23",
+    "previous": "Asinius 18a"
+  },
+  {
     "lemma": "Atilius 45a",
-    "previous": "Asinius 18a",
     "next": "Atilius 54a",
     "chapters": [
       {
@@ -1012,7 +1038,6 @@
   {
     "lemma": "Cossonius 3a",
     "previous": "Cornelius 279a",
-    "next": "Cuspius 3",
     "chapters": [
       {
         "start": 25,
@@ -1022,8 +1047,13 @@
     ]
   },
   {
+    "lemma": "Curtius 18",
+    "next": "Cuspius 3"
+  },
+  {
     "lemma": "Cuspius 3",
-    "previous": "Cossonius 3a",
+    "previous": "Curtius 18",
+    "next": "Dardanos",
     "chapters": [
       {
         "start": 25,
@@ -1031,6 +1061,10 @@
         "author": "Groag"
       }
     ]
+  },
+  {
+    "lemma": "Dardanos",
+    "previous": "Cuspius 3"
   },
   {
     "lemma": "Dasumius 1a",

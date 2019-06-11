@@ -577,6 +577,7 @@
     "lemma": "Alexandros 70",
     "previous": "Alexandros 69",
     "next": "Alexandros 71",
+    "sort_key": "Alexandros 070",
     "chapters": [
       {
         "start": 1444,
@@ -2910,6 +2911,7 @@
     "lemma": "Alisca",
     "previous": "Alisarna",
     "next": "Alisdaka",
+    "wp_link": "w:de:Pannonien",
     "chapters": [
       {
         "start": 1495,
@@ -2958,6 +2960,7 @@
     "lemma": "Aliso 1",
     "previous": "Alisinenses",
     "next": "Aliso 2",
+    "wp_link": "w:de:Aliso",
     "chapters": [
       {
         "start": 1496,
@@ -3220,6 +3223,8 @@
     "lemma": "Alkaios 9",
     "previous": "Alkaios 8",
     "next": "Alkaios 10",
+    "sort_key": "Alkaios09",
+    "wp_link": "w:de:Alkaios von Lesbos",
     "chapters": [
       {
         "start": 1498,
@@ -3499,6 +3504,7 @@
     "lemma": "Alkathoos 1",
     "previous": "Alkathoë 2",
     "next": "Alkathoos 2",
+    "wp_link": "w:de:Alkathoos (Sohn des Pelops)",
     "chapters": [
       {
         "start": 1510,
@@ -3511,6 +3517,7 @@
     "lemma": "Alkathoos 2",
     "previous": "Alkathoos 1",
     "next": "Alkathoos 3",
+    "wp_link": "w:de:Alkathoos (Sohn des Porthaon)",
     "chapters": [
       {
         "start": 1511,
@@ -5358,6 +5365,8 @@
     "lemma": "Alkon 1",
     "previous": "Alkomenai",
     "next": "Alkon 2",
+    "sort_key": "Alkon 01",
+    "wp_link": "w:de:Alkon (Sohn des Erechtheus)",
     "chapters": [
       {
         "start": 1577,
@@ -5370,6 +5379,8 @@
     "lemma": "Alkon 2",
     "previous": "Alkon 1",
     "next": "Alkon 3",
+    "sort_key": "Alkon 02",
+    "wp_link": "w:de:Alkon (Sohn des Hippokoon)",
     "chapters": [
       {
         "start": 1578,
@@ -9574,6 +9585,7 @@
     "lemma": "Amarynkeus",
     "previous": "Amarusa",
     "next": "Amarynthia, Amarynthis",
+    "wp_link": "w:de:Amarynkeus",
     "chapters": [
       {
         "start": 1742,
@@ -15139,6 +15151,7 @@
     "lemma": "Amphidamas 1",
     "previous": "Amphichares",
     "next": "Amphidamas 2",
+    "wp_link": "w:de:Amphidamas (Tegea)",
     "chapters": [
       {
         "start": 1898,
@@ -15151,6 +15164,8 @@
     "lemma": "Amphidamas 2",
     "previous": "Amphidamas 1",
     "next": "Amphidamas 3",
+    "sort_key": "Amphidamas",
+    "wp_link": "w:de:Amphidamas (Lokris)",
     "chapters": [
       {
         "start": 1899,
@@ -15213,6 +15228,7 @@
     "lemma": "Amphidamas 7",
     "previous": "Amphidamas 6",
     "next": "Amphidamas 8",
+    "wp_link": "w:de:Amphidamas (König von Chalkis)",
     "chapters": [
       {
         "start": 1899,
@@ -16771,6 +16787,7 @@
     "lemma": "Amphitheatrum",
     "previous": "Amphithea 6",
     "next": "Amphitheatrum castrense, Flavium",
+    "wp_link": "w:de:Amphitheater",
     "chapters": [
       {
         "start": 1959,
@@ -17357,6 +17374,7 @@
     "lemma": "Ampykos, Ampyx 1",
     "previous": "Ampykides 2",
     "next": "Ampykos, Ampyx 2",
+    "sort_key": "Ampykos, Ampyx",
     "chapters": [
       {
         "start": 1981,
@@ -17819,6 +17837,7 @@
     "lemma": "Amyklas 1",
     "previous": "Amyklaios 4",
     "next": "Amyklas 2",
+    "wp_link": "w:de:Amyklas (König von Sparta)",
     "chapters": [
       {
         "start": 1999,
@@ -27881,6 +27900,7 @@
     "lemma": "Anicius 52",
     "previous": "Anicius 51",
     "next": "Anicius 53",
+    "wp_link": "w:de:Olybrius",
     "chapters": [
       {
         "start": 2207,
@@ -31120,7 +31140,7 @@
   {
     "lemma": "Anociticus",
     "previous": "Anochos",
-    "next": "Anodos 1",
+    "next": "Ἄνοδος 1",
     "redirect": true,
     "chapters": [
       {
@@ -31130,9 +31150,10 @@
     ]
   },
   {
-    "lemma": "Anodos 1",
+    "lemma": "Ἄνοδος 1",
     "previous": "Anociticus",
-    "next": "Anodos 2",
+    "next": "Ἄνοδος 2",
+    "sort_key": "Anodos",
     "chapters": [
       {
         "start": 2322,
@@ -31142,20 +31163,14 @@
     ]
   },
   {
-    "lemma": "Anodos 2",
-    "previous": "Anodos 1",
+    "lemma": "Ἄνοδος 2",
+    "previous": "Ἄνοδος 1",
     "next": "Anogon",
-    "chapters": [
-      {
-        "start": 2322,
-        "end": 2322,
-        "author": "Hiller von Gaertringen"
-      }
-    ]
+    "sort_key": "Anodos"
   },
   {
     "lemma": "Anogon",
-    "previous": "Anodos 2",
+    "previous": "Ἄνοδος 2",
     "next": "Anoigath",
     "redirect": true,
     "chapters": [
@@ -32987,6 +33002,7 @@
     "lemma": "Anthemius 1",
     "previous": "Anthemis 2",
     "next": "Anthemius 2",
+    "wp_link": "w:de:Anthemius (Prätorianerpräfekt)",
     "chapters": [
       {
         "start": 2365,
@@ -33290,6 +33306,7 @@
     "lemma": "Anthesteria",
     "previous": "Anthesphoria",
     "next": "Anthesterion",
+    "wp_link": "w:de:Anthesteria",
     "chapters": [
       {
         "start": 2371,
@@ -38264,6 +38281,7 @@
     "lemma": "Antipatros 12",
     "previous": "Antipatros 11",
     "next": "Antipatros 13",
+    "wp_link": "w:de:Antipatros (Makedonien)",
     "chapters": [
       {
         "start": 2501,
@@ -40239,6 +40257,7 @@
     "lemma": "Antistius 24",
     "previous": "Antistius 23",
     "next": "Antistius 25",
+    "wp_link": "w:de:Antistius",
     "chapters": [
       {
         "start": 2548,
@@ -40251,6 +40270,7 @@
     "lemma": "Antistius 25",
     "previous": "Antistius 24",
     "next": "Antistius 26",
+    "wp_link": "w:de:Antistius",
     "chapters": [
       {
         "start": 2548,
@@ -40263,6 +40283,7 @@
     "lemma": "Antistius 26",
     "previous": "Antistius 25",
     "next": "Antistius 27",
+    "wp_link": "w:de:Antistius",
     "chapters": [
       {
         "start": 2548,
@@ -40446,6 +40467,7 @@
     "lemma": "Antistius 41",
     "previous": "Antistius 40",
     "next": "Antistius 42",
+    "wp_link": "w:de:Lucius Antistius Rusticus",
     "chapters": [
       {
         "start": 2558,
@@ -40532,6 +40554,7 @@
     "lemma": "Antistius 48",
     "previous": "Antistius 47",
     "next": "Antistius 49",
+    "wp_link": "w:de:Gaius Antistius Vetus (Konsul 6 v. Chr.)",
     "chapters": [
       {
         "start": 2558,
@@ -40556,6 +40579,7 @@
     "lemma": "Antistius 50",
     "previous": "Antistius 49",
     "next": "Antistius 51",
+    "wp_link": "w:de:Gaius Antistius Vetus (Konsul 50)",
     "chapters": [
       {
         "start": 2559,
@@ -40580,6 +40604,7 @@
     "lemma": "Antistius 52",
     "previous": "Antistius 51",
     "next": "Antistius 53",
+    "wp_link": "w:de:Lucius Antistius Vetus (Konsul 28)",
     "chapters": [
       {
         "start": 2559,
@@ -40761,6 +40786,7 @@
     "lemma": "Antium 1",
     "previous": "Antivestaeum",
     "next": "Antium 2",
+    "wp_link": "w:de:Anzio",
     "chapters": [
       {
         "start": 2561,
@@ -40872,6 +40898,7 @@
     "lemma": "Antius 8",
     "previous": "Antius 7",
     "next": "Antius 9",
+    "sort_key": "Antius 08",
     "chapters": [
       {
         "start": 2564,
@@ -41128,6 +41155,7 @@
     "lemma": "Antoninianae thermae",
     "previous": "Antoniarum basilica",
     "next": "Antoninianus 1",
+    "wp_link": "w:de:Caracalla-Thermen",
     "chapters": [
       {
         "start": 2567,
@@ -41191,6 +41219,8 @@
     "lemma": "Antoninus 2",
     "previous": "Antoninus 1",
     "next": "Antoninus 3",
+    "sort_key": "Antoninus 02",
+    "wp_link": "w:de:Antoninus",
     "chapters": [
       {
         "start": 2571,
@@ -43979,7 +44009,7 @@
   {
     "lemma": "Aones",
     "previous": "Aon",
-    "next": "Aooi",
+    "next": "Ἀῷοι",
     "chapters": [
       {
         "start": 2657,
@@ -43989,9 +44019,10 @@
     ]
   },
   {
-    "lemma": "Aooi",
+    "lemma": "Ἀῷοι",
     "previous": "Aones",
     "next": "Aoos 1",
+    "sort_key": "Aooi",
     "chapters": [
       {
         "start": 2657,
@@ -44002,7 +44033,7 @@
   },
   {
     "lemma": "Aoos 1",
-    "previous": "Aooi",
+    "previous": "Ἀῷοι",
     "next": "Aoos 2",
     "wp_link": "w:de:Vjosa",
     "chapters": [
@@ -44356,8 +44387,9 @@
   },
   {
     "lemma": "Apameia 1",
-    "previous": "Apama 6",
+    "previous": "Apama 3",
     "next": "Apameia 2",
+    "wp_link": "w:de:Apameia am Orontes",
     "chapters": [
       {
         "start": 2663,
@@ -48617,6 +48649,8 @@
     "lemma": "Apollinarios",
     "previous": "Apollinares ludi",
     "next": "Apollinaris 1",
+    "sort_key": "Apollinarios 1",
+    "wp_link": "w:de:Apollinaris von Laodicea",
     "chapters": [
       {
         "start": 2842,
@@ -48701,6 +48735,7 @@
     "lemma": "Apollinaris 7",
     "previous": "Apollinaris 6",
     "next": "Apollinaris 8",
+    "sort_key": "Apollinaris 07",
     "chapters": [
       {
         "start": 2845,

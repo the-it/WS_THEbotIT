@@ -7628,7 +7628,7 @@
   {
     "lemma": "Phthas",
     "previous": "Phryxelon",
-    "next": "Phth(e)iron oros, Phthir",
+    "next": "Φθ(ε)ιρῶν ὄρος, Φθίρ",
     "chapters": [
       {
         "start": 930,
@@ -7638,20 +7638,14 @@
     ]
   },
   {
-    "lemma": "Phth(e)iron oros, Phthir",
+    "lemma": "Φθ(ε)ιρῶν ὄρος, Φθίρ",
     "previous": "Phthas",
     "next": "Phtheirophagoi",
-    "chapters": [
-      {
-        "start": 947,
-        "end": 947,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Phtheiron"
   },
   {
     "lemma": "Phtheirophagoi",
-    "previous": "Phth(e)iron oros, Phthir",
+    "previous": "Φθ(ε)ιρῶν ὄρος, Φθίρ",
     "next": "Phthemphut",
     "chapters": [
       {
@@ -7975,7 +7969,7 @@
   {
     "lemma": "Phulphsna",
     "previous": "Phulnice",
-    "next": "Phundusioi",
+    "next": "Φουνδούσιοι",
     "chapters": [
       {
         "start": 966,
@@ -7985,9 +7979,9 @@
     ]
   },
   {
-    "lemma": "Phundusioi",
+    "lemma": "Φουνδούσιοι",
     "previous": "Phulphsna",
-    "next": "Phunusioi",
+    "next": "Φουνούσιοι",
     "chapters": [
       {
         "start": 966,
@@ -7996,9 +7990,10 @@
     ]
   },
   {
-    "lemma": "Phunusioi",
-    "previous": "Phundusioi",
+    "lemma": "Φουνούσιοι",
+    "previous": "Φουνδούσιοι",
     "next": "Phuphagena",
+    "sort_key": "Phunusioi",
     "chapters": [
       {
         "start": 966,
@@ -8009,7 +8004,7 @@
   },
   {
     "lemma": "Phuphagena",
-    "previous": "Phunusioi",
+    "previous": "Φουνούσιοι",
     "next": "Phuphena",
     "chapters": [
       {
@@ -8022,7 +8017,7 @@
   {
     "lemma": "Phuphena",
     "previous": "Phuphagena",
-    "next": "Phurgisatis",
+    "next": "Phuphsna",
     "chapters": [
       {
         "start": 966,

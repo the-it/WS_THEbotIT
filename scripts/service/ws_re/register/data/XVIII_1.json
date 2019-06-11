@@ -1917,7 +1917,7 @@
   {
     "lemma": "Omani",
     "previous": "Omanes",
-    "next": "Omanoi",
+    "next": "Ὀμανοί",
     "chapters": [
       {
         "start": 344,
@@ -1927,9 +1927,10 @@
     ]
   },
   {
-    "lemma": "Omanoi",
+    "lemma": "Ὀμανοί",
     "previous": "Omani",
     "next": "Omanon",
+    "sort_key": "Omanoi",
     "chapters": [
       {
         "start": 345,
@@ -1940,7 +1941,7 @@
   },
   {
     "lemma": "Omanon",
-    "previous": "Omanoi",
+    "previous": "Ὀμανοί",
     "next": "Omanos",
     "chapters": [
       {
@@ -1977,7 +1978,7 @@
   {
     "lemma": "Ombelos",
     "previous": "Omarion",
-    "next": "Ombianon pedion",
+    "next": "Ὀμβιανὸν πεδίον",
     "chapters": [
       {
         "start": 346,
@@ -1987,20 +1988,14 @@
     ]
   },
   {
-    "lemma": "Ombianon pedion",
+    "lemma": "Ὀμβιανὸν πεδίον",
     "previous": "Ombelos",
     "next": "Omboi 1",
-    "chapters": [
-      {
-        "start": 346,
-        "end": 346,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Ombianon"
   },
   {
     "lemma": "Omboi 1",
-    "previous": "Ombianon pedion",
+    "previous": "Ὀμβιανὸν πεδίον",
     "next": "Omboi 2",
     "chapters": [
       {

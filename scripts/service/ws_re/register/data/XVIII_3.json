@@ -571,7 +571,7 @@
   {
     "lemma": "Palladia 3",
     "previous": "Palladia 2",
-    "next": "epi Palladio",
+    "next": "ἐπὶ Παλλαδίῳ",
     "chapters": [
       {
         "start": 168,
@@ -581,20 +581,14 @@
     ]
   },
   {
-    "lemma": "epi Palladio",
+    "lemma": "ἐπὶ Παλλαδίῳ",
     "previous": "Palladia 3",
     "next": "Palladion",
-    "chapters": [
-      {
-        "start": 168,
-        "end": 168,
-        "author": "Lenschau"
-      }
-    ]
+    "sort_key": "Palladio"
   },
   {
     "lemma": "Palladion",
-    "previous": "epi Palladio",
+    "previous": "ἐπὶ Παλλαδίῳ",
     "next": "Palladios 1",
     "chapters": [
       {
@@ -2449,7 +2443,7 @@
   {
     "lemma": "Paluogges",
     "previous": "Palumbus",
-    "next": "Palura",
+    "next": "Παλούρα",
     "chapters": [
       {
         "start": 286,
@@ -2459,9 +2453,10 @@
     ]
   },
   {
-    "lemma": "Palura",
+    "lemma": "Παλούρα",
     "previous": "Paluogges",
     "next": "Palus",
+    "sort_key": "Palura",
     "chapters": [
       {
         "start": 287,
@@ -2472,7 +2467,7 @@
   },
   {
     "lemma": "Palus",
-    "previous": "Palura",
+    "previous": "Παλούρα",
     "next": "Palût",
     "chapters": [
       {
@@ -4172,7 +4167,7 @@
   {
     "lemma": "Panathenais",
     "previous": "Panathenaios",
-    "next": "Panathenaistai",
+    "next": "Παναθηναισταί",
     "chapters": [
       {
         "start": 493,
@@ -4181,9 +4176,10 @@
     ]
   },
   {
-    "lemma": "Panathenaistai",
+    "lemma": "Παναθηναισταί",
     "previous": "Panathenais",
     "next": "Pancarius",
+    "sort_key": "Panathenaistai",
     "chapters": [
       {
         "start": 493,
@@ -4194,7 +4190,7 @@
   },
   {
     "lemma": "Pancarius",
-    "previous": "Panathenaistai",
+    "previous": "Παναθηναισταί",
     "next": "Panchaïa",
     "chapters": [
       {
@@ -4896,7 +4892,7 @@
   {
     "lemma": "Pandius",
     "previous": "Pandios",
-    "next": "Em Pandois",
+    "next": "Ἐμ Πάνδοις",
     "chapters": [
       {
         "start": 519,
@@ -4906,20 +4902,14 @@
     ]
   },
   {
-    "lemma": "Em Pandois",
+    "lemma": "Ἐμ Πάνδοις",
     "previous": "Pandius",
-    "next": "Pandokeion",
-    "chapters": [
-      {
-        "start": 520,
-        "end": 520,
-        "author": "Kruse"
-      }
-    ]
+    "next": "Πανδοκεῖον",
+    "sort_key": "Pandois"
   },
   {
-    "lemma": "Pandokeion",
-    "previous": "Em Pandois",
+    "lemma": "Πανδοκεῖον",
+    "previous": "Ἐμ Πάνδοις",
     "next": "Pandokos",
     "chapters": [
       {
@@ -4931,7 +4921,7 @@
   },
   {
     "lemma": "Pandokos",
-    "previous": "Pandokeion",
+    "previous": "Πανδοκεῖον",
     "next": "Pandora 1",
     "chapters": [
       {

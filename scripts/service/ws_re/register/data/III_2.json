@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Campanus ager",
+    "previous": "Campanus 3",
     "next": "Campanus morbus",
     "chapters": [
       {
@@ -242,7 +243,7 @@
   {
     "lemma": "Camposalaminon",
     "previous": "Camponius",
-    "next": "Campus",
+    "next": "Campus foenicularius",
     "chapters": [
       {
         "start": 1447,
@@ -1279,6 +1280,7 @@
     "lemma": "Caninius 1",
     "previous": "Caninius",
     "next": "Caninius 2",
+    "sort_key": "Caninius 01",
     "chapters": [
       {
         "start": 1476,
@@ -1364,6 +1366,7 @@
     "lemma": "Caninius 8",
     "previous": "Caninius 7",
     "next": "Caninius 9",
+    "sort_key": "Canininius 08",
     "chapters": [
       {
         "start": 1478,
@@ -2212,7 +2215,7 @@
   {
     "lemma": "Cantrusteihiae",
     "previous": "Cantrius",
-    "next": "Cantunaecus",
+    "next": "ad Cantunas novas",
     "chapters": [
       {
         "start": 1499,
@@ -2246,8 +2249,9 @@
   },
   {
     "lemma": "Canucis",
-    "previous": "ad Cantunas novas",
+    "previous": "Cantunaecus",
     "next": "Canuleius",
+    "redirect": "Gunugis",
     "chapters": [
       {
         "start": 1499,
@@ -2306,6 +2310,7 @@
     "lemma": "Canuleius 4",
     "previous": "Canuleius 3",
     "next": "Canuleius 5",
+    "sort_key": "Canuleius 04",
     "chapters": [
       {
         "start": 1500,
@@ -2354,6 +2359,7 @@
     "lemma": "Canuleius 8",
     "previous": "Canuleius 7",
     "next": "Canuleius 9",
+    "sort_key": "Canuleius 08",
     "chapters": [
       {
         "start": 1500,
@@ -3299,7 +3305,7 @@
   {
     "lemma": "Capitolium 2",
     "previous": "Capitolium 1",
-    "next": "Capitolium vetus",
+    "next": "Capitolium 3",
     "chapters": [
       {
         "start": 1538,
@@ -19964,6 +19970,7 @@
     "lemma": "Χαλδαϊκὰ λόγια",
     "previous": "Chaldaicus lacus",
     "next": "Chaldaioi 1",
+    "sort_key": "Chaldaika logia",
     "chapters": [
       {
         "start": 2045,
@@ -20156,7 +20163,7 @@
   {
     "lemma": "Chalinitis",
     "previous": "Chalia",
-    "next": "Chalinos",
+    "next": "Χαλινός",
     "chapters": [
       {
         "start": 2064,
@@ -20166,9 +20173,10 @@
     ]
   },
   {
-    "lemma": "Chalinos",
+    "lemma": "Χαλινός",
     "previous": "Chalinitis",
     "next": "Chalis",
+    "sort_key": "Chalinos",
     "chapters": [
       {
         "start": 2064,
@@ -20179,7 +20187,7 @@
   },
   {
     "lemma": "Chalis",
-    "previous": "Chalinos",
+    "previous": "Χαλινός",
     "next": "Chalisia",
     "chapters": [
       {
@@ -20251,7 +20259,7 @@
   {
     "lemma": "Chalkaor",
     "previous": "Chalkanthos",
-    "next": "Chalkaspides",
+    "next": "Χαλκάσπιδες",
     "chapters": [
       {
         "start": 2065,
@@ -20261,9 +20269,10 @@
     ]
   },
   {
-    "lemma": "Chalkaspides",
+    "lemma": "Χαλκάσπιδες",
     "previous": "Chalkaor",
     "next": "Chalke 1",
+    "sort_key": "Chalkaspides",
     "chapters": [
       {
         "start": 2065,
@@ -20274,7 +20283,7 @@
   },
   {
     "lemma": "Chalke 1",
-    "previous": "Chalkaspides",
+    "previous": "Χαλκάσπιδες",
     "next": "Chalke 2",
     "chapters": [
       {
@@ -20393,7 +20402,7 @@
   {
     "lemma": "Chalkeia 4",
     "previous": "Chalkeia 3",
-    "next": "Chalke myia",
+    "next": "Χαλκῆ μυῖα",
     "chapters": [
       {
         "start": 2067,
@@ -20403,9 +20412,10 @@
     ]
   },
   {
-    "lemma": "Chalke myia",
+    "lemma": "Χαλκῆ μυῖα",
     "previous": "Chalkeia 4",
     "next": "Chalketores",
+    "sort_key": "Chalke myia",
     "chapters": [
       {
         "start": 2068,
@@ -20416,7 +20426,7 @@
   },
   {
     "lemma": "Chalketores",
-    "previous": "Chalke myia",
+    "previous": "Χαλκῆ μυῖα",
     "next": "Chalketorion",
     "chapters": [
       {
@@ -21290,7 +21300,7 @@
   {
     "lemma": "Chalybs 2",
     "previous": "Chalybs 1",
-    "next": "Cham",
+    "next": "Χάμ",
     "chapters": [
       {
         "start": 2101,
@@ -21300,9 +21310,11 @@
     ]
   },
   {
-    "lemma": "Cham",
+    "lemma": "Χάμ",
     "previous": "Chalybs 2",
-    "next": "Chamaidaphne",
+    "next": "Χαμαιδάφνη",
+    "sort_key": "Cham",
+    "wp_link": "w:de:Ham (Bibel)",
     "chapters": [
       {
         "start": 2101,
@@ -21312,9 +21324,11 @@
     ]
   },
   {
-    "lemma": "Chamaidaphne",
-    "previous": "Cham",
-    "next": "Chamaidikastes",
+    "lemma": "Χαμαιδάφνη",
+    "previous": "Χάμ",
+    "next": "Χαμαιδικαστής",
+    "sort_key": "Chamaidaphne",
+    "wp_link": "w:de:Mäusedorne",
     "chapters": [
       {
         "start": 2101,
@@ -21324,9 +21338,10 @@
     ]
   },
   {
-    "lemma": "Chamaidikastes",
-    "previous": "Chamaidaphne",
+    "lemma": "Χαμαιδικαστής",
+    "previous": "Χαμαιδάφνη",
     "next": "Chamaikoitai",
+    "sort_key": "Chamaidikastes",
     "chapters": [
       {
         "start": 2102,
@@ -21337,7 +21352,7 @@
   },
   {
     "lemma": "Chamaikoitai",
-    "previous": "Chamaidikastes",
+    "previous": "Χαμαιδικαστής",
     "next": "Chamaileon 1",
     "chapters": [
       {
@@ -21498,6 +21513,7 @@
     "lemma": "Χάμψαι",
     "previous": "Champesides",
     "next": "Chamyne",
+    "sort_key": "Champsai",
     "chapters": [
       {
         "start": 2109,
@@ -23086,6 +23102,7 @@
     "lemma": "Χαριδήμου ἀκρωτήριον",
     "previous": "Charidemos 10",
     "next": "Charidotes",
+    "sort_key": "Charidemu aktroterion",
     "chapters": [
       {
         "start": 2138,
@@ -24687,7 +24704,8 @@
   {
     "lemma": "Χαρώνειοι κλίμακες",
     "previous": "Charoneia",
-    "next": "Charoneios thyra",
+    "next": "Χαρώνειος θύρα",
+    "sort_key": "Charoneioi klimakes",
     "chapters": [
       {
         "start": 2183,
@@ -24697,7 +24715,7 @@
     ]
   },
   {
-    "lemma": "Charoneios thyra",
+    "lemma": "Χαρώνειος θύρα",
     "previous": "Χαρώνειοι κλίμακες",
     "next": "Charonion",
     "chapters": [
@@ -24710,7 +24728,7 @@
   },
   {
     "lemma": "Charonion",
-    "previous": "Charoneios thyra",
+    "previous": "Χαρώνειος θύρα",
     "next": "Charonion 1",
     "chapters": [
       {
@@ -25696,7 +25714,7 @@
   {
     "lemma": "Cheirimachos",
     "previous": "Cheiri ergasamenos",
-    "next": "Cheiris",
+    "next": "Χειρίς",
     "chapters": [
       {
         "start": 2217,
@@ -25706,9 +25724,10 @@
     ]
   },
   {
-    "lemma": "Cheiris",
+    "lemma": "Χειρίς",
     "previous": "Cheirimachos",
     "next": "Cheirisophos 1",
+    "sort_key": "Cheiris",
     "chapters": [
       {
         "start": 2217,
@@ -25719,7 +25738,7 @@
   },
   {
     "lemma": "Cheirisophos 1",
-    "previous": "Cheiris",
+    "previous": "Χειρίς",
     "next": "Cheirisophos 2",
     "chapters": [
       {
@@ -25744,7 +25763,7 @@
   {
     "lemma": "Cheirisophos 3",
     "previous": "Cheirisophos 2",
-    "next": "Cheirobalistra",
+    "next": "Χειροβαλίστρα",
     "chapters": [
       {
         "start": 2221,
@@ -25754,9 +25773,11 @@
     ]
   },
   {
-    "lemma": "Cheirobalistra",
+    "lemma": "Χειροβαλίστρα",
     "previous": "Cheirisophos 3",
     "next": "Cheirobie",
+    "sort_key": "Cheirobalistra",
+    "wp_link": "w:de:Balliste#Cheiroballistra/Manuballista",
     "chapters": [
       {
         "start": 2221,
@@ -25767,7 +25788,7 @@
   },
   {
     "lemma": "Cheirobie",
-    "previous": "Cheirobalistra",
+    "previous": "Χειροβαλίστρα",
     "next": "Cheirodoton",
     "chapters": [
       {
@@ -25816,7 +25837,7 @@
   {
     "lemma": "Cheirokrates",
     "previous": "Cheirogonia",
-    "next": "Cheirokrites",
+    "next": "Χειροκριτής",
     "chapters": [
       {
         "start": 2222,
@@ -25826,9 +25847,10 @@
     ]
   },
   {
-    "lemma": "Cheirokrites",
+    "lemma": "Χειροκριτής",
     "previous": "Cheirokrates",
-    "next": "Cheiromacha",
+    "next": "Χειρομάχα",
+    "sort_key": "Cheirokrites",
     "chapters": [
       {
         "start": 2223,
@@ -25838,9 +25860,9 @@
     ]
   },
   {
-    "lemma": "Cheiromacha",
-    "previous": "Cheirokrites",
-    "next": "Cheiromaktron",
+    "lemma": "Χειρομάχα",
+    "previous": "Χειροκριτής",
+    "next": "Χειρόμακτρον",
     "chapters": [
       {
         "start": 2223,
@@ -25850,9 +25872,10 @@
     ]
   },
   {
-    "lemma": "Cheiromaktron",
-    "previous": "Cheiromacha",
+    "lemma": "Χειρόμακτρον",
+    "previous": "Χειρομάχα",
     "next": "Cheiron",
+    "sort_key": "Cheiromaktron",
     "chapters": [
       {
         "start": 2223,
@@ -25863,8 +25886,8 @@
   },
   {
     "lemma": "Cheiron",
-    "previous": "Cheiromaktron",
-    "next": "Cheironomia",
+    "previous": "Χειρόμακτρον",
+    "next": "Χειρονομία",
     "chapters": [
       {
         "start": 2224,
@@ -25873,9 +25896,10 @@
     ]
   },
   {
-    "lemma": "Cheironomia",
+    "lemma": "Χειρονομία",
     "previous": "Cheiron",
-    "next": "Cheiroponia",
+    "next": "Χειροπόνια",
+    "sort_key": "Cheironomia",
     "chapters": [
       {
         "start": 2224,
@@ -25885,9 +25909,9 @@
     ]
   },
   {
-    "lemma": "Cheiroponia",
-    "previous": "Cheironomia",
-    "next": "Cheirotechnion",
+    "lemma": "Χειροπόνια",
+    "previous": "Χειρονομία",
+    "next": "Χειροτέχνιον",
     "chapters": [
       {
         "start": 2225,
@@ -25897,9 +25921,10 @@
     ]
   },
   {
-    "lemma": "Cheirotechnion",
-    "previous": "Cheiroponia",
-    "next": "Cheirotonein, cheirotonia",
+    "lemma": "Χειροτέχνιον",
+    "previous": "Χειροπόνια",
+    "next": "Χειροτονεῖν, χειροτονία",
+    "sort_key": "Cheirotechnion",
     "chapters": [
       {
         "start": 2225,
@@ -25909,8 +25934,8 @@
     ]
   },
   {
-    "lemma": "Cheirotonein, cheirotonia",
-    "previous": "Cheirotechnion",
+    "lemma": "Χειροτονεῖν, χειροτονία",
+    "previous": "Χειροτέχνιον",
     "next": "Chelai 1",
     "chapters": [
       {
@@ -25922,7 +25947,7 @@
   },
   {
     "lemma": "Chelai 1",
-    "previous": "Cheirotonein, cheirotonia",
+    "previous": "Χειροτονεῖν, χειροτονία",
     "next": "Chelai 2",
     "chapters": [
       {
@@ -25947,7 +25972,7 @@
   {
     "lemma": "Chelchal",
     "previous": "Chelai 2",
-    "next": "Chelichelone",
+    "next": "Χελιχελώνη",
     "chapters": [
       {
         "start": 2226,
@@ -25957,9 +25982,10 @@
     ]
   },
   {
-    "lemma": "Chelichelone",
+    "lemma": "Χελιχελώνη",
     "previous": "Chelchal",
     "next": "Chelidon",
+    "sort_key": "Chelichelone",
     "chapters": [
       {
         "start": 2226,
@@ -25970,7 +25996,7 @@
   },
   {
     "lemma": "Chelidon",
-    "previous": "Chelichelone",
+    "previous": "Χελιχελώνη",
     "next": "Chelidonia 1",
     "chapters": [
       {
@@ -26007,7 +26033,7 @@
   {
     "lemma": "Chelidonia 3",
     "previous": "Chelidonia 2",
-    "next": "Chelidonides nesoi",
+    "next": "Χελιδονίδες νῆσοι",
     "chapters": [
       {
         "start": 2227,
@@ -26017,9 +26043,10 @@
     ]
   },
   {
-    "lemma": "Chelidonides nesoi",
+    "lemma": "Χελιδονίδες νῆσοι",
     "previous": "Chelidonia 3",
-    "next": "Chelidonion teichos",
+    "next": "Χελιδόνιον τεῖχος",
+    "sort_key": "Chelidonidesnesoi",
     "chapters": [
       {
         "start": 2227,
@@ -26029,20 +26056,14 @@
     ]
   },
   {
-    "lemma": "Chelidonion teichos",
-    "previous": "Chelidonides nesoi",
+    "lemma": "Χελιδόνιον τεῖχος",
+    "previous": "Χελιδονίδες νῆσοι",
     "next": "Chelidonis",
-    "chapters": [
-      {
-        "start": 2228,
-        "end": 2228,
-        "author": "Sethe"
-      }
-    ]
+    "sort_key": "Chelidonionteichos"
   },
   {
     "lemma": "Chelidonis",
-    "previous": "Chelidonion teichos",
+    "previous": "Χελιδόνιον τεῖχος",
     "next": "Chelis",
     "chapters": [
       {
@@ -26267,7 +26288,7 @@
   {
     "lemma": "Chembis",
     "previous": "Chelytis",
-    "next": "Cheme",
+    "next": "Χήμη",
     "chapters": [
       {
         "start": 2232,
@@ -26277,9 +26298,10 @@
     ]
   },
   {
-    "lemma": "Cheme",
+    "lemma": "Χήμη",
     "previous": "Chembis",
     "next": "Chemen",
+    "sort_key": "Cheme",
     "chapters": [
       {
         "start": 2232,
@@ -26290,7 +26312,7 @@
   },
   {
     "lemma": "Chemen",
-    "previous": "Cheme",
+    "previous": "Χήμη",
     "next": "Chemia",
     "chapters": [
       {
@@ -26423,6 +26445,7 @@
     "lemma": "Χενεβριτῶν χώρα",
     "previous": "Chencheres",
     "next": "Chenephres",
+    "sort_key": "Chenebriton chora",
     "chapters": [
       {
         "start": 2235,
@@ -26446,7 +26469,7 @@
   {
     "lemma": "Cheneres",
     "previous": "Chenephres",
-    "next": "Chenion oros",
+    "next": "Χήνιον ὄρος",
     "chapters": [
       {
         "start": 2235,
@@ -26456,9 +26479,10 @@
     ]
   },
   {
-    "lemma": "Chenion oros",
+    "lemma": "Χήνιον ὄρος",
     "previous": "Cheneres",
     "next": "Chenneseri",
+    "sort_key": "Chenion oros",
     "chapters": [
       {
         "start": 2235,
@@ -26469,7 +26493,7 @@
   },
   {
     "lemma": "Chenneseri",
-    "previous": "Chenion oros",
+    "previous": "Χήνιον ὄρος",
     "next": "Chenoboskia",
     "chapters": [
       {
@@ -26662,7 +26686,7 @@
   {
     "lemma": "Cherondas",
     "previous": "Cheroinon",
-    "next": "Cherostai",
+    "next": "Χηρωσταί",
     "chapters": [
       {
         "start": 2240,
@@ -26672,9 +26696,10 @@
     ]
   },
   {
-    "lemma": "Cherostai",
+    "lemma": "Χηρωσταί",
     "previous": "Cherondas",
     "next": "Cherras",
+    "sort_key": "Cherostai",
     "chapters": [
       {
         "start": 2240,
@@ -26685,7 +26710,7 @@
   },
   {
     "lemma": "Cherras",
-    "previous": "Cherostai",
+    "previous": "Χηρωσταί",
     "next": "Cherres",
     "chapters": [
       {
@@ -27503,7 +27528,8 @@
   {
     "lemma": "Χιλιαστύς",
     "previous": "Χιλιαστῆρες",
-    "next": "Chilioi",
+    "next": "Χίλιοι",
+    "sort_key": "Chiliastys",
     "chapters": [
       {
         "start": 2277,
@@ -27513,9 +27539,10 @@
     ]
   },
   {
-    "lemma": "Chilioi",
+    "lemma": "Χίλιοι",
     "previous": "Χιλιαστύς",
     "next": "Chiliokomon 1",
+    "sort_key": "Chilioi",
     "chapters": [
       {
         "start": 2277,
@@ -27526,7 +27553,7 @@
   },
   {
     "lemma": "Chiliokomon 1",
-    "previous": "Chilioi",
+    "previous": "Χίλιοι",
     "next": "Chiliokomon 2",
     "chapters": [
       {
@@ -28234,7 +28261,7 @@
   {
     "lemma": "Chiron 2",
     "previous": "Chiron 1",
-    "next": "Chironeios akra",
+    "next": "Χιρώνειος ἄκρα",
     "chapters": [
       {
         "start": 2308,
@@ -28244,9 +28271,10 @@
     ]
   },
   {
-    "lemma": "Chironeios akra",
+    "lemma": "Χιρώνειος ἄκρα",
     "previous": "Chiron 2",
     "next": "Chironia",
+    "sort_key": "Chironeios akra",
     "chapters": [
       {
         "start": 2308,
@@ -28257,8 +28285,8 @@
   },
   {
     "lemma": "Chironia",
-    "previous": "Chironeios akra",
-    "next": "Chironides akrai",
+    "previous": "Χιρώνειος ἄκρα",
+    "next": "Χιρωνίδες ἄκραι",
     "chapters": [
       {
         "start": 2308,
@@ -28268,9 +28296,10 @@
     ]
   },
   {
-    "lemma": "Chironides akrai",
+    "lemma": "Χιρωνίδες ἄκραι",
     "previous": "Chironia",
     "next": "Chironion",
+    "sort_key": "Chironides akrai",
     "chapters": [
       {
         "start": 2308,
@@ -28281,8 +28310,8 @@
   },
   {
     "lemma": "Chironion",
-    "previous": "Chironides akrai",
-    "next": "Chironos ampelos",
+    "previous": "Χιρωνίδες ἄκραι",
+    "next": "Χίρωνος ἄμπελος",
     "chapters": [
       {
         "start": 2308,
@@ -28292,9 +28321,11 @@
     ]
   },
   {
-    "lemma": "Chironos ampelos",
+    "lemma": "Χίρωνος ἄμπελος",
     "previous": "Chironion",
-    "next": "Chironos rhiza",
+    "next": "Χίρωνος ῥίζα",
+    "sort_key": "Chironos ampelos",
+    "wp_link": "w:de:Weiße Zaunrübe",
     "chapters": [
       {
         "start": 2308,
@@ -28304,9 +28335,11 @@
     ]
   },
   {
-    "lemma": "Chironos rhiza",
-    "previous": "Chironos ampelos",
+    "lemma": "Χίρωνος ῥίζα",
+    "previous": "Χίρωνος ἄμπελος",
     "next": "Chirotosagis",
+    "sort_key": "Chironos rhiza",
+    "wp_link": "w:de:Echter Alant",
     "chapters": [
       {
         "start": 2309,
@@ -28317,7 +28350,7 @@
   },
   {
     "lemma": "Chirotosagis",
-    "previous": "Chironos rhiza",
+    "previous": "Χίρωνος ῥίζα",
     "next": "Chisiduo",
     "chapters": [
       {
@@ -28390,7 +28423,7 @@
   {
     "lemma": "Chituae",
     "previous": "Chitone 2",
-    "next": "Chlaina",
+    "next": "Χλαῖνα",
     "chapters": [
       {
         "start": 2335,
@@ -28400,9 +28433,10 @@
     ]
   },
   {
-    "lemma": "Chlaina",
+    "lemma": "Χλαῖνα",
     "previous": "Chituae",
     "next": "Chlamydia",
+    "sort_key": "Chlaina",
     "chapters": [
       {
         "start": 2335,
@@ -28413,8 +28447,8 @@
   },
   {
     "lemma": "Chlamydia",
-    "previous": "Chlaina",
-    "next": "Chlamys",
+    "previous": "Χλαῖνα",
+    "next": "Χλαμύς",
     "chapters": [
       {
         "start": 2342,
@@ -28424,9 +28458,9 @@
     ]
   },
   {
-    "lemma": "Chlamys",
+    "lemma": "Χλαμύς",
     "previous": "Chlamydia",
-    "next": "Chlanis",
+    "next": "Χλανίς",
     "chapters": [
       {
         "start": 2342,
@@ -28436,9 +28470,10 @@
     ]
   },
   {
-    "lemma": "Chlanis",
-    "previous": "Chlamys",
+    "lemma": "Χλανίς",
+    "previous": "Χλαμύς",
     "next": "Chlemos",
+    "sort_key": "Chlanis",
     "chapters": [
       {
         "start": 2346,
@@ -28449,7 +28484,7 @@
   },
   {
     "lemma": "Chlemos",
-    "previous": "Chlanis",
+    "previous": "Χλανίς",
     "next": "Chliara",
     "chapters": [
       {
@@ -28918,7 +28953,7 @@
   {
     "lemma": "Choiak",
     "previous": "Choi",
-    "next": "Choinix",
+    "next": "Χοῖνιξ",
     "chapters": [
       {
         "start": 2356,
@@ -28928,9 +28963,10 @@
     ]
   },
   {
-    "lemma": "Choinix",
+    "lemma": "Χοῖνιξ",
     "previous": "Choiak",
     "next": "Choirades 1",
+    "sort_key": "Choinix",
     "chapters": [
       {
         "start": 2356,
@@ -28941,7 +28977,7 @@
   },
   {
     "lemma": "Choirades 1",
-    "previous": "Choinix",
+    "previous": "Χοῖνιξ",
     "next": "Choirades 2",
     "chapters": [
       {
@@ -29062,7 +29098,7 @@
   {
     "lemma": "Choirilos 5",
     "previous": "Choirilos 4",
-    "next": "Choirinai",
+    "next": "Χοίριναι",
     "chapters": [
       {
         "start": 2361,
@@ -29072,9 +29108,10 @@
     ]
   },
   {
-    "lemma": "Choirinai",
+    "lemma": "Χοίριναι",
     "previous": "Choirilos 5",
     "next": "Choirion",
+    "sort_key": "Choirinai",
     "chapters": [
       {
         "start": 2363,
@@ -29085,8 +29122,8 @@
   },
   {
     "lemma": "Choirion",
-    "previous": "Choirinai",
-    "next": "Choirios nape",
+    "previous": "Χοίριναι",
+    "next": "Χοίριος νάπη",
     "chapters": [
       {
         "start": 2363,
@@ -29096,9 +29133,10 @@
     ]
   },
   {
-    "lemma": "Choirios nape",
+    "lemma": "Χοίριος νάπη",
     "previous": "Choirion",
     "next": "Choiroboskos",
+    "sort_key": "Choirios nape",
     "chapters": [
       {
         "start": 2363,
@@ -29109,7 +29147,7 @@
   },
   {
     "lemma": "Choiroboskos",
-    "previous": "Choirios nape",
+    "previous": "Χοίριος νάπη",
     "next": "Choiropsalas",
     "chapters": [
       {
@@ -29289,7 +29327,7 @@
   {
     "lemma": "Choloe",
     "previous": "Cholobetene",
-    "next": "Cholon teichos",
+    "next": "Χωλὸν τεῖχος",
     "chapters": [
       {
         "start": 2369,
@@ -29299,9 +29337,10 @@
     ]
   },
   {
-    "lemma": "Cholon teichos",
+    "lemma": "Χωλὸν τεῖχος",
     "previous": "Choloe",
     "next": "Cholua 1",
+    "sort_key": "Cholon teichos",
     "chapters": [
       {
         "start": 2369,
@@ -29312,7 +29351,7 @@
   },
   {
     "lemma": "Cholua 1",
-    "previous": "Cholon teichos",
+    "previous": "Χωλὸν τεῖχος",
     "next": "Cholua 2",
     "chapters": [
       {
@@ -29481,7 +29520,7 @@
   {
     "lemma": "Chondria",
     "previous": "Chon 2",
-    "next": "Chondros",
+    "next": "Χόνδρος",
     "chapters": [
       {
         "start": 2372,
@@ -29491,9 +29530,10 @@
     ]
   },
   {
-    "lemma": "Chondros",
+    "lemma": "Χόνδρος",
     "previous": "Chondria",
     "next": "Chone",
+    "sort_key": "Chondros",
     "chapters": [
       {
         "start": 2372,
@@ -29504,7 +29544,7 @@
   },
   {
     "lemma": "Chone",
-    "previous": "Chondros",
+    "previous": "Χόνδρος",
     "next": "Chones",
     "chapters": [
       {
@@ -29612,8 +29652,10 @@
   },
   {
     "lemma": "Chor",
-    "previous": "Choos",
-    "next": "Chor 1",
+    "previous": "Χόρ",
+    "next": "Chora",
+    "sort_key": "Chor 2",
+    "wp_link": "w:de:Chor (Theater)",
     "chapters": [
       {
         "start": 2373,
@@ -29864,7 +29906,8 @@
   {
     "lemma": "Χορηγεῖον",
     "previous": "Chordyle",
-    "next": "Choregia",
+    "next": "Χορηγία",
+    "sort_key": "Choregeion",
     "chapters": [
       {
         "start": 2409,
@@ -29874,9 +29917,10 @@
     ]
   },
   {
-    "lemma": "Choregia",
+    "lemma": "Χορηγία",
     "previous": "Χορηγεῖον",
-    "next": "Choregos",
+    "next": "Χορηγός",
+    "sort_key": "Choregia",
     "chapters": [
       {
         "start": 2409,
@@ -29886,9 +29930,10 @@
     ]
   },
   {
-    "lemma": "Choregos",
-    "previous": "Choregia",
+    "lemma": "Χορηγός",
+    "previous": "Χορηγία",
     "next": "Choregos 1",
+    "sort_key": "Choregos",
     "chapters": [
       {
         "start": 2422,
@@ -29899,7 +29944,7 @@
   },
   {
     "lemma": "Choregos 1",
-    "previous": "Choregos",
+    "previous": "Χορηγός",
     "next": "Choreia 1",
     "chapters": [
       {
@@ -29986,6 +30031,7 @@
     "lemma": "Χορικοὶ ἀγῶνες",
     "previous": "Chorikios",
     "next": "Chorillos",
+    "sort_key": "Chorikoi agones",
     "chapters": [
       {
         "start": 2431,
@@ -29997,7 +30043,7 @@
   {
     "lemma": "Chorillos",
     "previous": "Χορικοὶ ἀγῶνες",
-    "next": "Choris oikountes",
+    "next": "Χωρὶς οἰκοῦντες",
     "chapters": [
       {
         "start": 2438,
@@ -30007,9 +30053,10 @@
     ]
   },
   {
-    "lemma": "Choris oikountes",
+    "lemma": "Χωρὶς οἰκοῦντες",
     "previous": "Chorillos",
-    "next": "Chorites",
+    "next": "Χωρίτης",
+    "sort_key": "Choris oikountes",
     "chapters": [
       {
         "start": 2438,
@@ -30019,9 +30066,10 @@
     ]
   },
   {
-    "lemma": "Chorites",
-    "previous": "Choris oikountes",
-    "next": "Chorizontes",
+    "lemma": "Χωρίτης",
+    "previous": "Χωρὶς οἰκοῦντες",
+    "next": "Χωρίζοντες",
+    "sort_key": "Chorites",
     "chapters": [
       {
         "start": 2438,
@@ -30031,9 +30079,10 @@
     ]
   },
   {
-    "lemma": "Chorizontes",
-    "previous": "Chorites",
+    "lemma": "Χωρίζοντες",
+    "previous": "Χωρίτης",
     "next": "Choro 1",
+    "sort_key": "Chorizontes",
     "chapters": [
       {
         "start": 2439,
@@ -30044,7 +30093,7 @@
   },
   {
     "lemma": "Choro 1",
-    "previous": "Chorizontes",
+    "previous": "Χωρίζοντες",
     "next": "Choro 2",
     "chapters": [
       {
@@ -30093,7 +30142,7 @@
   {
     "lemma": "Chorochoad",
     "previous": "Chorochartes",
-    "next": "Chorodektes",
+    "next": "Χοροδέκτης",
     "chapters": [
       {
         "start": 2440,
@@ -30103,9 +30152,11 @@
     ]
   },
   {
-    "lemma": "Chorodektes",
+    "lemma": "Χοροδέκτης",
     "previous": "Chorochoad",
-    "next": "Chorodidaskalos",
+    "next": "Χοροδιδάσκαλος",
+    "sort_key": "Chorodektes",
+    "redirect": "Χορολέκτης",
     "chapters": [
       {
         "start": 2441,
@@ -30114,9 +30165,10 @@
     ]
   },
   {
-    "lemma": "Chorodidaskalos",
-    "previous": "Chorodektes",
+    "lemma": "Χοροδιδάσκαλος",
+    "previous": "Χοροδέκτης",
     "next": "Chorodna",
+    "sort_key": "Chorodidaskalos",
     "chapters": [
       {
         "start": 2441,
@@ -30127,8 +30179,8 @@
   },
   {
     "lemma": "Chorodna",
-    "previous": "Chorodidaskalos",
-    "next": "Chorokithareus",
+    "previous": "Χοροδιδάσκαλος",
+    "next": "Χοροκιθαρεύς",
     "chapters": [
       {
         "start": 2441,
@@ -30138,9 +30190,10 @@
     ]
   },
   {
-    "lemma": "Chorokithareus",
+    "lemma": "Χοροκιθαρεύς",
     "previous": "Chorodna",
-    "next": "Chorolektes",
+    "next": "Χορολέκτης",
+    "sort_key": "Chorokithareus",
     "chapters": [
       {
         "start": 2441,
@@ -30150,9 +30203,10 @@
     ]
   },
   {
-    "lemma": "Chorolektes",
-    "previous": "Chorokithareus",
+    "lemma": "Χορολέκτης",
+    "previous": "Χοροκιθαρεύς",
     "next": "Choromandae",
+    "sort_key": "Chorolektes",
     "chapters": [
       {
         "start": 2442,
@@ -30163,7 +30217,7 @@
   },
   {
     "lemma": "Choromandae",
-    "previous": "Chorolektes",
+    "previous": "Χορολέκτης",
     "next": "Choromithrene",
     "chapters": [
       {
@@ -30213,6 +30267,7 @@
     "lemma": "Χοροποιός",
     "previous": "Choronike 2",
     "next": "Choropsaltria",
+    "sort_key": "Choropoios",
     "chapters": [
       {
         "start": 2442,
@@ -30224,7 +30279,7 @@
   {
     "lemma": "Choropsaltria",
     "previous": "Χοροποιός",
-    "next": "Chorostates",
+    "next": "Χοροστάτης",
     "chapters": [
       {
         "start": 2442,
@@ -30234,9 +30289,10 @@
     ]
   },
   {
-    "lemma": "Chorostates",
+    "lemma": "Χοροστάτης",
     "previous": "Choropsaltria",
     "next": "Chorotus",
+    "sort_key": "Chorostates",
     "chapters": [
       {
         "start": 2442,
@@ -30247,7 +30303,7 @@
   },
   {
     "lemma": "Chorotus",
-    "previous": "Chorostates",
+    "previous": "Χοροστάτης",
     "next": "Chorranitae",
     "chapters": [
       {
@@ -31528,7 +31584,7 @@
   {
     "lemma": "Chrysea",
     "previous": "Chryse 14",
-    "next": "Chryse cherronesos",
+    "next": "Χρυσῆ χερρόνησος",
     "chapters": [
       {
         "start": 2490,
@@ -31538,9 +31594,10 @@
     ]
   },
   {
-    "lemma": "Chryse cherronesos",
+    "lemma": "Χρυσῆ χερρόνησος",
     "previous": "Chrysea",
-    "next": "Chryse chora",
+    "next": "Χρυσῆ χώρα",
+    "sort_key": "Chryse cherronesos",
     "chapters": [
       {
         "start": 2490,
@@ -31550,9 +31607,10 @@
     ]
   },
   {
-    "lemma": "Chryse chora",
-    "previous": "Chryse cherronesos",
+    "lemma": "Χρυσῆ χώρα",
+    "previous": "Χρυσῆ χερρόνησος",
     "next": "Chrysei",
+    "sort_key": "Chryse chora",
     "chapters": [
       {
         "start": 2490,
@@ -31563,7 +31621,7 @@
   },
   {
     "lemma": "Chrysei",
-    "previous": "Chryse chora",
+    "previous": "Χρυσῆ χώρα",
     "next": "Chryseïs 1",
     "chapters": [
       {
@@ -31647,7 +31705,7 @@
   {
     "lemma": "Chrysendeta",
     "previous": "Chryselephantina",
-    "next": "Chryse nesos",
+    "next": "Χρυσῆ νῆσος",
     "chapters": [
       {
         "start": 2494,
@@ -31657,9 +31715,10 @@
     ]
   },
   {
-    "lemma": "Chryse nesos",
+    "lemma": "Χρυσῆ νῆσος",
     "previous": "Chrysendeta",
     "next": "Chrysermos 1",
+    "sort_key": "Chryse nesos",
     "chapters": [
       {
         "start": 2495,
@@ -31670,7 +31729,7 @@
   },
   {
     "lemma": "Chrysermos 1",
-    "previous": "Chryse nesos",
+    "previous": "Χρυσῆ νῆσος",
     "next": "Chrysermos 2",
     "chapters": [
       {
@@ -32293,6 +32352,7 @@
     "lemma": "Χρυσογραφία",
     "previous": "Chrysogonos 7",
     "next": "Chrysokeras",
+    "sort_key": "Chrysographia",
     "chapters": [
       {
         "start": 2513,
@@ -32304,7 +32364,7 @@
   {
     "lemma": "Chrysokeras",
     "previous": "Χρυσογραφία",
-    "next": "Chrysokolla 1",
+    "next": "Χρυσοκόλλα 1",
     "chapters": [
       {
         "start": 2513,
@@ -32314,9 +32374,11 @@
     ]
   },
   {
-    "lemma": "Chrysokolla 1",
+    "lemma": "Χρυσοκόλλα 1",
     "previous": "Chrysokeras",
-    "next": "Chrysokolla 2",
+    "next": "Χρυσοκόλλα 2",
+    "sort_key": "Chrysokolla 1",
+    "wp_link": "w:de:Chrysokoll",
     "chapters": [
       {
         "start": 2513,
@@ -32326,9 +32388,9 @@
     ]
   },
   {
-    "lemma": "Chrysokolla 2",
-    "previous": "Chrysokolla 1",
-    "next": "Chrysokolla 3",
+    "lemma": "Χρυσοκόλλα 2",
+    "previous": "Χρυσοκόλλα 1",
+    "next": "Χρυσοκόλλα 3",
     "chapters": [
       {
         "start": 2515,
@@ -32338,9 +32400,10 @@
     ]
   },
   {
-    "lemma": "Chrysokolla 3",
-    "previous": "Chrysokolla 2",
+    "lemma": "Χρυσοκόλλα 3",
+    "previous": "Χρυσοκόλλα 2",
     "next": "Chrysokomas",
+    "sort_key": "Chrysokolla 3",
     "chapters": [
       {
         "start": 2515,
@@ -32351,7 +32414,7 @@
   },
   {
     "lemma": "Chrysokomas",
-    "previous": "Chrysokolla 3",
+    "previous": "Χρυσοκόλλα 3",
     "next": "Chrysokome",
     "chapters": [
       {
@@ -32459,7 +32522,7 @@
   {
     "lemma": "Chrysopeleia",
     "previous": "Chrysopator",
-    "next": "Chrysophoria",
+    "next": "Χρυσοφορία",
     "chapters": [
       {
         "start": 2517,
@@ -32469,9 +32532,10 @@
     ]
   },
   {
-    "lemma": "Chrysophoria",
+    "lemma": "Χρυσοφορία",
     "previous": "Chrysopeleia",
-    "next": "Chrysophrys",
+    "next": "Χρύσοφρυς",
+    "sort_key": "Chrysophoria",
     "chapters": [
       {
         "start": 2517,
@@ -32481,9 +32545,11 @@
     ]
   },
   {
-    "lemma": "Chrysophrys",
-    "previous": "Chrysophoria",
+    "lemma": "Χρύσοφρυς",
+    "previous": "Χρυσοφορία",
     "next": "Chrysopolis 1",
+    "sort_key": "Chrysophrys",
+    "wp_link": "w:de:Goldbrasse",
     "chapters": [
       {
         "start": 2517,
@@ -32494,7 +32560,7 @@
   },
   {
     "lemma": "Chrysopolis 1",
-    "previous": "Chrysophrys",
+    "previous": "Χρύσοφρυς",
     "next": "Chrysopolis 2",
     "chapters": [
       {
@@ -33516,7 +33582,7 @@
   {
     "lemma": "Chytropolis",
     "previous": "Chytropolia",
-    "next": "Chytropous",
+    "next": "Χυτρόπους",
     "chapters": [
       {
         "start": 2532,
@@ -33526,20 +33592,14 @@
     ]
   },
   {
-    "lemma": "Chytropous",
+    "lemma": "Χυτρόπους",
     "previous": "Chytropolis",
     "next": "Chytros",
-    "chapters": [
-      {
-        "start": 2532,
-        "end": 2534,
-        "author": "Mau, [August]"
-      }
-    ]
+    "sort_key": "Chytropus"
   },
   {
     "lemma": "Chytros",
-    "previous": "Chytropous",
+    "previous": "Χυτρόπους",
     "next": "Ciabrus",
     "chapters": [
       {
@@ -35431,7 +35491,7 @@
   {
     "lemma": "Cissianti",
     "previous": "Cissi",
-    "next": "Cissi montes",
+    "next": "Cissii montes",
     "chapters": [
       {
         "start": 2590,
@@ -35441,20 +35501,13 @@
     ]
   },
   {
-    "lemma": "Cissi montes",
+    "lemma": "Cissii montes",
     "previous": "Cissianti",
-    "next": "Cissonius",
-    "chapters": [
-      {
-        "start": 2590,
-        "end": 2590,
-        "author": "Tomaschek"
-      }
-    ]
+    "next": "Cissonius"
   },
   {
     "lemma": "Cissonius",
-    "previous": "Cissi montes",
+    "previous": "Cissii montes",
     "next": "Cista",
     "chapters": [
       {

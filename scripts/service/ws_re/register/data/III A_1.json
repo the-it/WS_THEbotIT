@@ -49,7 +49,7 @@
   {
     "lemma": "Silaion",
     "previous": "Silai",
-    "next": "Silakenoi",
+    "next": "Σιλακηνοί",
     "chapters": [
       {
         "start": 1,
@@ -59,9 +59,10 @@
     ]
   },
   {
-    "lemma": "Silakenoi",
+    "lemma": "Σιλακηνοί",
     "previous": "Silaion",
     "next": "Silana",
+    "sort_key": "Silakenoi",
     "chapters": [
       {
         "start": 1,
@@ -72,7 +73,7 @@
   },
   {
     "lemma": "Silana",
-    "previous": "Silakenoi",
+    "previous": "Σιλακηνοί",
     "next": "Silandos",
     "chapters": [
       {
@@ -1160,7 +1161,7 @@
   {
     "lemma": "Silius 30",
     "previous": "Silius 29",
-    "next": "Silla",
+    "next": "Σίλλα",
     "chapters": [
       {
         "start": 96,
@@ -1170,9 +1171,10 @@
     ]
   },
   {
-    "lemma": "Silla",
+    "lemma": "Σίλλα",
     "previous": "Silius 30",
     "next": "Sillax",
+    "sort_key": "Silla",
     "chapters": [
       {
         "start": 96,
@@ -1183,7 +1185,7 @@
   },
   {
     "lemma": "Sillax",
-    "previous": "Silla",
+    "previous": "Σίλλα",
     "next": "Silleriacus",
     "chapters": [
       {
