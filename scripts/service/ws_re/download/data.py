@@ -42,6 +42,16 @@ _MAPPINGS = {
     "X,2": {"source": ("PaulyWissowa1120", "Ius liberorum Katochos"), "pages": ((1279, 200002, 200318),)},
     "XI,1": {"source": ("PaulyWissowa1120", "Katoikoi Komoedie"), "pages": ((-1, 210002, 210322),)},
     "XI,2": {"source": ("PaulyWissowa1120", "Komogrammateus Kynegoi"), "pages": ((1279, 220002, 220314),)},
+    "XII,1": {"source": ("PaulyWissowa2130", "Kynesioi Legio"), "pages": ((-1, 230002, 230334),)},
+    "XII,2": {"source": ("PaulyWissowa2130", "Legio Libanon"), "pages": ((1327, 240002, 240308),)},
+    "XIII,1": {"source": ("PaulyWissowa2130", "Libanos Lokris"), "pages": ((-1, 250002, 250324),)},
+    "XIII,2": {"source": ("PaulyWissowa2130", "Lokroi Lysimachides"), "pages": ((1287, 260002, 260320),)},
+    "XIV,1": {"source": ("PaulyWissowa2130", "Lysimachos Mantike"), "pages": ((-1, 270002, 270324),)},
+    "XIV,2": {"source": ("PaulyWissowa2130", "Mantikles Mazaion"), "pages": ((1287, 280002, 280326),)},
+    "XV,1": {"source": ("PaulyWissowa2130", "Mazaios Mesyros"), "pages": ((-1, 290002, 290326),)},
+    "XV,2": {"source": ("PaulyWissowa2130", "Met Molaris lapis"), "pages": ((1295, 300002, 300318),)},
+    "XVI,1": {"source": ("PaulyWissowa2130", "Molatzes Myssi"), "pages": ((-1, 310002, 310303),)},
+    "XVI,2": {"source": ("PaulyWissowa2130", "Mystagogos Nereae"), "pages": ((1207, 320002, 320338),)},
 }
 
 _MISSING_PAGES = (

@@ -6,7 +6,7 @@ from sys import platform
 BASE_PATH = None
 
 if platform == "win32":
-    BASE_PATH = Path("C:/RE")
+    BASE_PATH = Path("C:/Users/ESOMMER/RE")
 elif platform in ("linux", "linux2"):
     BASE_PATH = Path("/home/erik/re")
 else:
