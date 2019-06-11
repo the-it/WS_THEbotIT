@@ -11620,6 +11620,7 @@
     "lemma": "Diognetos 18",
     "previous": "Diognetos 17",
     "next": "Diognetos 19",
+    "wp_link": "w:de:Brief an Diognet",
     "chapters": [
       {
         "start": 786,
@@ -15490,6 +15491,7 @@
     "lemma": "Dionysios 151",
     "previous": "Dionysios 150",
     "next": "Dionysios 152",
+    "wp_link": "w:de:Dionysios von Korinth",
     "chapters": [
       {
         "start": 993,
@@ -15502,6 +15504,7 @@
     "lemma": "Dionysios 152",
     "previous": "Dionysios 151",
     "next": "Dionysios 153",
+    "wp_link": "w:de:Dionysius (Bischof von Rom)",
     "chapters": [
       {
         "start": 994,
@@ -15514,6 +15517,7 @@
     "lemma": "Dionysios 153",
     "previous": "Dionysios 152",
     "next": "Dionysios 154",
+    "wp_link": "w:de:Dionysius von Alexandria",
     "chapters": [
       {
         "start": 995,
@@ -15526,6 +15530,7 @@
     "lemma": "Dionysios 154",
     "previous": "Dionysios 153",
     "next": "Dionysios 155",
+    "wp_link": "w:de:Dionysius Areopagita",
     "chapters": [
       {
         "start": 996,
@@ -15538,6 +15543,7 @@
     "lemma": "Dionysios 155",
     "previous": "Dionysios 154",
     "next": "Dionysios 156",
+    "wp_link": "w:de:Dionysius Exiguus",
     "chapters": [
       {
         "start": 998,
@@ -16147,7 +16153,7 @@
   {
     "lemma": "Dionysos 2",
     "previous": "Dionysos 1",
-    "next": "Dionysu akron",
+    "next": "Διονύσου ἄκρον",
     "wp_link": "w:de:Dionysos",
     "chapters": [
       {
@@ -16158,9 +16164,9 @@
     ]
   },
   {
-    "lemma": "Dionysu akron",
+    "lemma": "Διονύσου ἄκρον",
     "previous": "Dionysos 2",
-    "next": "Dionysu nesos",
+    "next": "Διονύσου νῆσος",
     "chapters": [
       {
         "start": 1046,
@@ -16170,9 +16176,10 @@
     ]
   },
   {
-    "lemma": "Dionysu nesos",
-    "previous": "Dionysu akron",
+    "lemma": "Διονύσου νῆσος",
+    "previous": "Διονύσου ἄκρον",
     "next": "Diopan",
+    "sort_key": "Dionysu nesos",
     "chapters": [
       {
         "start": 1046,
@@ -16183,7 +16190,7 @@
   },
   {
     "lemma": "Diopan",
-    "previous": "Dionysu nesos",
+    "previous": "Διονύσου νῆσος",
     "next": "Diopatra",
     "chapters": [
       {
@@ -22205,6 +22212,8 @@
     "lemma": "Domitius 48",
     "previous": "Domitius 47",
     "next": "Domitius 49",
+    "sort_key": "Domitius 048",
+    "redirect": "Celsus 14",
     "chapters": [
       {
         "start": 1425,

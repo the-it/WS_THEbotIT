@@ -13405,7 +13405,8 @@
   },
   {
     "lemma": "Brontotas",
-    "next": "Bruttius 11",
+    "previous": null,
+    "next": "Brundisium",
     "chapters": [
       {
         "start": 258,
@@ -13415,8 +13416,11 @@
     ]
   },
   {
+    "lemma": "Brundisium",
+    "previous": "Brontotas"
+  },
+  {
     "lemma": "Bruttius 11",
-    "previous": "Brontotas",
     "next": "Bruv....",
     "chapters": [
       {
@@ -14531,7 +14535,6 @@
   {
     "lemma": "Cazaci",
     "previous": "Caularis",
-    "next": "Celer 9",
     "chapters": [
       {
         "start": 279,
@@ -14541,8 +14544,19 @@
     ]
   },
   {
+    "lemma": "Celeia",
+    "next": "Celer 1a"
+  },
+  {
+    "lemma": "Celer 1a",
+    "previous": "Celeia",
+    "next": "Celer 9"
+  },
+  {
     "lemma": "Celer 9",
-    "previous": "Cazaci",
+    "previous": "Celer 1a",
+    "next": "Celeros",
+    "sort_key": "Celer 09",
     "chapters": [
       {
         "start": 279,
@@ -14554,6 +14568,10 @@
   {
     "lemma": "Celeia",
     "next": "Celer 1a"
+  },
+  {
+    "lemma": "Celeros",
+    "previous": "Celer 9"
   },
   {
     "lemma": "Celer 1a",
@@ -15354,7 +15372,7 @@
   {
     "lemma": "Claudius 38",
     "previous": "Claudius 31a(-b)",
-    "next": "Cassius 24a",
+    "next": "Claudius 39a",
     "chapters": [
       {
         "start": 317,
@@ -15364,8 +15382,13 @@
     ]
   },
   {
-    "lemma": "Cassius 24a",
+    "lemma": "Claudius 39a",
     "previous": "Claudius 38",
+    "sort_key": "Claudius 039a",
+    "redirect": "Alexandros 65b"
+  },
+  {
+    "lemma": "Cassius 24a",
     "next": "Claudius 100a",
     "chapters": [
       {
@@ -15405,8 +15428,14 @@
     "previous": "Claudius 102a"
   },
   {
+    "lemma": "Claudius 141",
+    "next": "Claudius 149"
+  },
+  {
     "lemma": "Claudius 149",
-    "next": "Claudius 150a"
+    "previous": "Claudius 141",
+    "next": "Claudius 150a",
+    "redirect": "Claudius 375a"
   },
   {
     "lemma": "Claudius 150a",
@@ -15425,7 +15454,12 @@
     "previous": "Claudius 150a"
   },
   {
+    "lemma": "Claudius 265",
+    "next": "Claudius 272"
+  },
+  {
     "lemma": "Claudius 272",
+    "previous": "Claudius 265",
     "next": "Claudius 272a"
   },
   {
@@ -15442,7 +15476,13 @@
   },
   {
     "lemma": "Claudius 288a",
-    "previous": "Claudius 272a"
+    "previous": "Claudius 272a",
+    "next": "Claudius 296",
+    "redirect": "Ptolemaios 66"
+  },
+  {
+    "lemma": "Claudius 296",
+    "previous": "Claudius 288a"
   },
   {
     "lemma": "Claudius 350",
@@ -15716,7 +15756,6 @@
   {
     "lemma": "Coelius 31a",
     "previous": "Codrus a",
-    "next": "Colchis 1",
     "chapters": [
       {
         "start": 325,
@@ -15726,8 +15765,17 @@
     ]
   },
   {
+    "lemma": "Coira",
+    "next": "Colchion"
+  },
+  {
+    "lemma": "Colchion",
+    "previous": "Coira",
+    "next": "Colchis 1"
+  },
+  {
     "lemma": "Colchis 1",
-    "previous": "Coelius 31a",
+    "previous": "Colchion",
     "next": "Colchis 2",
     "chapters": [
       {
@@ -15741,6 +15789,7 @@
     "lemma": "Colchis 2",
     "previous": "Colchis 1",
     "next": "Comboiomarus",
+    "redirect": "Colchion",
     "chapters": [
       {
         "start": 326,
@@ -15765,6 +15814,7 @@
     "lemma": "Comenses",
     "previous": "Comboiomarus",
     "next": "Comum",
+    "redirect": true,
     "chapters": [
       {
         "start": 326,
@@ -15776,6 +15826,7 @@
     "lemma": "Comum",
     "previous": "Comenses",
     "next": "Conpasin",
+    "wp_link": "w:de:Como",
     "chapters": [
       {
         "start": 326,

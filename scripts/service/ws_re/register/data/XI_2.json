@@ -326,7 +326,7 @@
   {
     "lemma": "Koniaios",
     "previous": "Kongustos",
-    "next": "Koniakoi",
+    "next": "Κονιακοί",
     "redirect": true,
     "chapters": [
       {
@@ -336,10 +336,11 @@
     ]
   },
   {
-    "lemma": "Koniakoi",
+    "lemma": "Κονιακοί",
     "previous": "Koniaios",
     "next": "Konier",
-    "redirect": true,
+    "sort_key": "Koniakoi",
+    "redirect": "Conisci",
     "chapters": [
       {
         "start": 1312,
@@ -349,7 +350,7 @@
   },
   {
     "lemma": "Konier",
-    "previous": "Koniakoi",
+    "previous": "Κονιακοί",
     "next": "Konika",
     "redirect": true,
     "chapters": [

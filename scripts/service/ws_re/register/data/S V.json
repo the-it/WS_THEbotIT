@@ -954,7 +954,6 @@
   {
     "lemma": "Issa 3",
     "previous": "Ismeni",
-    "next": "Iulius 76a",
     "chapters": [
       {
         "start": 346,
@@ -964,9 +963,13 @@
     ]
   },
   {
+    "lemma": "Judex",
+    "next": "Iulius 76a"
+  },
+  {
     "lemma": "Iulius 76a",
-    "previous": "Issa 3",
-    "next": "Iunius 21b",
+    "previous": "Judex",
+    "next": "Iunius 21a",
     "chapters": [
       {
         "start": 355,
@@ -976,8 +979,11 @@
     ]
   },
   {
+    "lemma": "Iunius 21a",
+    "previous": "Iulius 76a"
+  },
+  {
     "lemma": "Iunius 21b",
-    "previous": "Iulius 76a",
     "next": "Iunius 46a",
     "chapters": [
       {
