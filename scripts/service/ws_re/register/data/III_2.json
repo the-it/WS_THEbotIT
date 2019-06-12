@@ -253,20 +253,8 @@
     ]
   },
   {
-    "lemma": "Campus",
-    "previous": "Camposalaminon",
-    "next": "Campus foenicularius",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 1447,
-        "end": 1447
-      }
-    ]
-  },
-  {
     "lemma": "Campus foenicularius",
-    "previous": "Campus",
+    "previous": "Camposalaminon",
     "next": "Campus iuncarius",
     "chapters": [
       {
@@ -2225,25 +2213,25 @@
     ]
   },
   {
-    "lemma": "Cantunaecus",
-    "previous": "Cantrusteihiae",
-    "next": "ad Cantunas novas",
-    "chapters": [
-      {
-        "start": 1499,
-        "end": 1499
-      }
-    ]
-  },
-  {
     "lemma": "ad Cantunas novas",
-    "previous": "Cantunaecus",
+    "previous": "Cantrusteihiae",
     "next": "Canucis",
     "chapters": [
       {
         "start": 1499,
         "end": 1499,
         "author": "Ihm"
+      }
+    ]
+  },
+  {
+    "lemma": "Cantunaecus",
+    "previous": "ad Cantunas novas",
+    "next": "Canucis",
+    "chapters": [
+      {
+        "start": 1499,
+        "end": 1499
       }
     ]
   },
@@ -3305,7 +3293,7 @@
   {
     "lemma": "Capitolium 2",
     "previous": "Capitolium 1",
-    "next": "Capitolium 3",
+    "next": "Capitolium vetus",
     "chapters": [
       {
         "start": 1538,
@@ -29629,7 +29617,7 @@
   {
     "lemma": "Choopotes",
     "previous": "Chonuphis",
-    "next": "Choos",
+    "next": "Χόρ",
     "chapters": [
       {
         "start": 2373,
@@ -29639,7 +29627,7 @@
     ]
   },
   {
-    "lemma": "Choos",
+    "lemma": "Χόρ",
     "previous": "Choopotes",
     "next": "Chor",
     "chapters": [
@@ -29665,19 +29653,8 @@
     ]
   },
   {
-    "lemma": "Chor 1",
-    "previous": "Chor",
-    "next": "Chora",
-    "chapters": [
-      {
-        "start": 2373,
-        "end": 2373
-      }
-    ]
-  },
-  {
     "lemma": "Chora",
-    "previous": "Chor 1",
+    "previous": "Chor",
     "next": "Chora 1",
     "chapters": [
       {

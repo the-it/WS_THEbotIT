@@ -28632,7 +28632,7 @@
   {
     "lemma": "Bruttii",
     "previous": "Bruttianus campus",
-    "next": "Bruttium promuntorium",
+    "next": "Bruttium promontorium",
     "wp_link": "w:de:Bruttium",
     "chapters": [
       {
@@ -37872,6 +37872,17 @@
   {
     "lemma": "Caeionius",
     "previous": "Caeduum",
+    "next": "Caelatura",
+    "chapters": [
+      {
+        "start": 1246,
+        "end": 1246
+      }
+    ]
+  },
+  {
+    "lemma": "Caelatura",
+    "previous": "Caeionius",
     "next": "Caelanus pagus",
     "chapters": [
       {
@@ -37893,19 +37904,8 @@
     ]
   },
   {
-    "lemma": "Caelatura",
-    "previous": "Caelanus pagus",
-    "next": "Caelemontana porta",
-    "chapters": [
-      {
-        "start": 1246,
-        "end": 1246
-      }
-    ]
-  },
-  {
     "lemma": "Caelemontana porta",
-    "previous": "Caelatura",
+    "previous": "Caelanus pagus",
     "next": "Caelemontanus campus",
     "wp_link": "w:de:Dolabella-Bogen",
     "chapters": [

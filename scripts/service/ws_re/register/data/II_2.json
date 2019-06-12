@@ -15157,8 +15157,8 @@
   },
   {
     "lemma": "Athenaios 23",
-    "previous": "Astakides 2",
-    "next": "Augustales 1",
+    "previous": "Athenaios 22",
+    "next": "Athenaios 24",
     "chapters": [
       {
         "start": 2033,
@@ -24839,7 +24839,7 @@
   },
   {
     "lemma": "Avidius 8",
-    "previous": "Avidius 6",
+    "previous": "Avidius 7",
     "next": "Avidius 9",
     "sort_key": "Avidius 08",
     "chapters": [
@@ -24851,8 +24851,33 @@
     ]
   },
   {
-    "lemma": "Avidus",
+    "lemma": "Avidius 9",
     "previous": "Avidius 8",
+    "next": "Avidius 10",
+    "sort_key": "Avidius 09",
+    "chapters": [
+      {
+        "start": 2386,
+        "end": 2386,
+        "author": "Rohden"
+      }
+    ]
+  },
+  {
+    "lemma": "Avidius 10",
+    "previous": "Avidius 9",
+    "next": "Avidus",
+    "chapters": [
+      {
+        "start": 2386,
+        "end": 2385,
+        "author": "Rohden"
+      }
+    ]
+  },
+  {
+    "lemma": "Avidus",
+    "previous": "Avidius 10",
     "next": "Avienus 1",
     "chapters": [
       {
@@ -24877,7 +24902,7 @@
   {
     "lemma": "Avienus 2",
     "previous": "Avienus 1",
-    "next": "Avidius 9",
+    "next": "Avienus 3",
     "chapters": [
       {
         "start": 2385,
@@ -24887,33 +24912,8 @@
     ]
   },
   {
-    "lemma": "Avidius 9",
-    "previous": "Avienus 2",
-    "next": "Avidius 10",
-    "sort_key": "Avidius 09",
-    "chapters": [
-      {
-        "start": 2386,
-        "end": 2386,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Avidius 10",
-    "previous": "Avidius 9",
-    "next": "Avienus 3",
-    "chapters": [
-      {
-        "start": 2386,
-        "end": 2385,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
     "lemma": "Avienus 3",
-    "previous": "Avidius 10",
+    "previous": "Avienus 2",
     "next": "Avienus 4",
     "wp_link": "w:de:Avienus",
     "chapters": [
