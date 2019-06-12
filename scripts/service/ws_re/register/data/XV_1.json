@@ -7950,7 +7950,7 @@
   {
     "lemma": "Melokome",
     "previous": "Μηλόκαβος",
-    "next": "Melokometai 1",
+    "next": "Μηλοκωμῆται 1",
     "chapters": [
       {
         "start": 560,
@@ -7960,9 +7960,10 @@
     ]
   },
   {
-    "lemma": "Melokometai 1",
+    "lemma": "Μηλοκωμῆται 1",
     "previous": "Melokome",
-    "next": "Melokometai 2",
+    "next": "Μηλοκωμῆται 2",
+    "sort_key": "Melokometai 1",
     "chapters": [
       {
         "start": 560,
@@ -7972,9 +7973,10 @@
     ]
   },
   {
-    "lemma": "Melokometai 2",
-    "previous": "Melokometai 1",
+    "lemma": "Μηλοκωμῆται 2",
+    "previous": "Μηλοκωμῆται 1",
     "next": "Melon 1",
+    "sort_key": "Melokometai 1",
     "chapters": [
       {
         "start": 560,
@@ -7985,7 +7987,7 @@
   },
   {
     "lemma": "Melon 1",
-    "previous": "Melokometai 2",
+    "previous": "Μηλοκωμῆται 2",
     "next": "Melon 2",
     "chapters": [
       {

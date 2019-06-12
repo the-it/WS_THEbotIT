@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Acilius 28a",
+    "previous": null,
     "next": "Aelius 42a",
     "chapters": [
       {
@@ -13,7 +14,8 @@
   {
     "lemma": "Aelius 42a",
     "previous": "Acilius 28a",
-    "next": "Aelius 122a",
+    "next": "Aelius 92a",
+    "sort_key": "Aelius 042a",
     "chapters": [
       {
         "start": 1,
@@ -23,9 +25,15 @@
     ]
   },
   {
-    "lemma": "Aelius 122a",
+    "lemma": "Aelius 92a",
     "previous": "Aelius 42a",
-    "next": "Aelius 92a",
+    "next": "Aelius 122a",
+    "sort_key": "Aelius 092a"
+  },
+  {
+    "lemma": "Aelius 122a",
+    "previous": "Aelius 92a",
+    "next": "Aelius 160a",
     "chapters": [
       {
         "start": 1,
@@ -35,8 +43,21 @@
     ]
   },
   {
-    "lemma": "Aelius 92a",
+    "lemma": "Aelius 160a",
     "previous": "Aelius 122a",
+    "next": "Aemilius 145"
+  },
+  {
+    "lemma": "Aemilius 145",
+    "previous": "Aelius 160a",
+    "next": "Aeronius"
+  },
+  {
+    "lemma": "Aeronius",
+    "previous": "Aemilius 145"
+  },
+  {
+    "lemma": "Aelius 92a",
     "next": "Aelius 160a",
     "chapters": [
       {
@@ -73,7 +94,7 @@
   {
     "lemma": "Aeronius",
     "previous": "Aemilius 145",
-    "next": "Ankyron polis",
+    "next": "Aipion",
     "chapters": [
       {
         "start": 3,
@@ -83,9 +104,16 @@
     ]
   },
   {
-    "lemma": "Ankyron polis",
+    "lemma": "Aipion",
     "previous": "Aeronius",
-    "next": "Antimachidas",
+    "next": "Alea 1"
+  },
+  {
+    "lemma": "Alea 1",
+    "previous": "Aipion"
+  },
+  {
+    "lemma": "Ankyron polis",
     "chapters": [
       {
         "start": 8,
@@ -95,9 +123,13 @@
     ]
   },
   {
+    "lemma": "Annamatia",
+    "next": "Antimachidas"
+  },
+  {
     "lemma": "Antimachidas",
-    "previous": "Ankyron polis",
-    "next": "Aquilinus 7",
+    "previous": "Annamatia",
+    "next": "Antonius 95a",
     "chapters": [
       {
         "start": 11,
@@ -107,9 +139,21 @@
     ]
   },
   {
-    "lemma": "Aquilinus 7",
+    "lemma": "Antonius 95a",
     "previous": "Antimachidas",
+    "next": "Apesas 1",
+    "sort_key": "Antonius 095a"
+  },
+  {
+    "lemma": "Apesas 1",
+    "previous": "Antonius 95a",
+    "next": "Aquilinus 7"
+  },
+  {
+    "lemma": "Aquilinus 7",
+    "previous": "Apesas 1",
     "next": "Aratza",
+    "sort_key": "Aquilinus 07",
     "chapters": [
       {
         "start": 11,
@@ -133,7 +177,7 @@
   {
     "lemma": "Areimanios",
     "previous": "Aratza",
-    "next": "Antonius 95a",
+    "next": "Arekrat",
     "chapters": [
       {
         "start": 11,
@@ -143,8 +187,11 @@
     ]
   },
   {
+    "lemma": "Arekrat",
+    "previous": "Areimanios"
+  },
+  {
     "lemma": "Antonius 95a",
-    "previous": "Areimanios",
     "chapters": [
       {
         "start": 12,
@@ -285,10 +332,17 @@
   },
   {
     "lemma": "Attius 23",
-    "previous": "Attikos 15"
+    "previous": "Attikos 15",
+    "next": "Aulis 1"
+  },
+  {
+    "lemma": "Aulis 1",
+    "previous": "Attius 23",
+    "next": "Aurelius 145aa"
   },
   {
     "lemma": "Aurelius 145aa",
+    "previous": "Aulis 1",
     "next": "Aurelius 157a",
     "chapters": [
       {
@@ -4464,7 +4518,6 @@
   {
     "lemma": "Agathon 13",
     "previous": "Utis",
-    "next": "Dipolia",
     "chapters": [
       {
         "start": 1895,
@@ -4474,8 +4527,12 @@
     ]
   },
   {
+    "lemma": "Aristarchos 21",
+    "next": "Dipolia"
+  },
+  {
     "lemma": "Dipolia",
-    "previous": "Agathon 13",
+    "previous": "Aristarchos 21",
     "next": "Hektor 5",
     "chapters": [
       {

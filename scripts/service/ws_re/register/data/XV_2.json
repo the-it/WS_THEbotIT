@@ -8790,7 +8790,7 @@
   {
     "lemma": "Minuus",
     "previous": "Minutulus",
-    "next": "Minya 1",
+    "next": "Μινύα 1",
     "chapters": [
       {
         "start": 2009,
@@ -8800,9 +8800,10 @@
     ]
   },
   {
-    "lemma": "Minya 1",
+    "lemma": "Μινύα 1",
     "previous": "Minuus",
-    "next": "Minya 2",
+    "next": "Μινύα 2",
+    "sort_key": "Minya 1",
     "chapters": [
       {
         "start": 2010,
@@ -8812,8 +8813,8 @@
     ]
   },
   {
-    "lemma": "Minya 2",
-    "previous": "Minya 1",
+    "lemma": "Μινύα 2",
+    "previous": "Μινύα 1",
     "next": "Minyaden",
     "chapters": [
       {
@@ -8825,7 +8826,7 @@
   },
   {
     "lemma": "Minyaden",
-    "previous": "Minya 2",
+    "previous": "Μινύα 2",
     "next": "Minyas 1",
     "chapters": [
       {
@@ -9003,7 +9004,7 @@
   {
     "lemma": "Mirones",
     "previous": "Mirocles",
-    "next": "Mirrada",
+    "next": "Μιρράδα",
     "chapters": [
       {
         "start": 2029,
@@ -9013,9 +9014,9 @@
     ]
   },
   {
-    "lemma": "Mirrada",
+    "lemma": "Μιρράδα",
     "previous": "Mirones",
-    "next": "Mirran",
+    "next": "Μιρράν",
     "chapters": [
       {
         "start": 2029,
@@ -9024,9 +9025,10 @@
     ]
   },
   {
-    "lemma": "Mirran",
-    "previous": "Mirrada",
+    "lemma": "Μιρράν",
+    "previous": "Μιρράδα",
     "next": "Mirrhanes",
+    "sort_key": "Mirran",
     "chapters": [
       {
         "start": 2029,
@@ -9037,7 +9039,7 @@
   },
   {
     "lemma": "Mirrhanes",
-    "previous": "Mirran",
+    "previous": "Μιρράν",
     "next": "Mirus",
     "chapters": [
       {

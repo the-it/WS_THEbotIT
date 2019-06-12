@@ -37,7 +37,7 @@
   {
     "lemma": "Komon 2",
     "previous": "Komon 1",
-    "next": "Komon 3",
+    "next": "Κῶμον 3",
     "chapters": [
       {
         "start": 1286,
@@ -47,9 +47,9 @@
     ]
   },
   {
-    "lemma": "Komon 3",
+    "lemma": "Κῶμον 3",
     "previous": "Komon 2",
-    "next": "Komopolis",
+    "next": "Κωμόπολις",
     "chapters": [
       {
         "start": 1286,
@@ -59,9 +59,10 @@
     ]
   },
   {
-    "lemma": "Komopolis",
-    "previous": "Komon 3",
+    "lemma": "Κωμόπολις",
+    "previous": "Κῶμον 3",
     "next": "Komos 1",
+    "sort_key": "Komopolis",
     "chapters": [
       {
         "start": 1286,
@@ -72,7 +73,7 @@
   },
   {
     "lemma": "Komos 1",
-    "previous": "Komopolis",
+    "previous": "Κωμόπολις",
     "next": "Komos 2",
     "chapters": [
       {
@@ -1811,7 +1812,7 @@
   {
     "lemma": "Kordax",
     "previous": "Kordaka",
-    "next": "Kordes",
+    "next": "Κόρδης",
     "chapters": [
       {
         "start": 1382,
@@ -1821,9 +1822,10 @@
     ]
   },
   {
-    "lemma": "Kordes",
+    "lemma": "Κόρδης",
     "previous": "Kordax",
-    "next": "Kordistai",
+    "next": "Κορδίσται",
+    "sort_key": "Kordes",
     "chapters": [
       {
         "start": 1385,
@@ -1833,8 +1835,8 @@
     ]
   },
   {
-    "lemma": "Kordistai",
-    "previous": "Kordes",
+    "lemma": "Κορδίσται",
+    "previous": "Κόρδης",
     "next": "Kordoleon, ho",
     "redirect": true,
     "chapters": [
@@ -1846,7 +1848,7 @@
   },
   {
     "lemma": "Kordoleon, ho",
-    "previous": "Kordistai",
+    "previous": "Κορδίσται",
     "next": "Korduene",
     "chapters": [
       {

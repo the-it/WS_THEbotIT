@@ -64,7 +64,6 @@
   {
     "lemma": "Alum Gallicum",
     "previous": "Alexandros 17",
-    "next": "Amphinomos 6",
     "chapters": [
       {
         "start": 22,
@@ -74,8 +73,12 @@
     ]
   },
   {
+    "lemma": "Amnisos 1",
+    "next": "Amphinomos 6"
+  },
+  {
     "lemma": "Amphinomos 6",
-    "previous": "Alum Gallicum",
+    "previous": "Amnisos 1",
     "next": "Andron 18",
     "chapters": [
       {
@@ -119,7 +122,12 @@
     "previous": "Antipatros 29"
   },
   {
+    "lemma": "Apollonia 7",
+    "next": "Apomoira"
+  },
+  {
     "lemma": "Apomoira",
+    "previous": "Apollonia 7",
     "next": "Aqua, Aquae 77a",
     "chapters": [
       {
@@ -132,7 +140,6 @@
   {
     "lemma": "Aqua, Aquae 77a",
     "previous": "Apomoira",
-    "next": "Archisomatophylakes",
     "sort_key": "Aqua, Aquae 077a",
     "chapters": [
       {
@@ -143,8 +150,12 @@
     ]
   },
   {
+    "lemma": "Arbion",
+    "next": "Archisomatophylakes"
+  },
+  {
     "lemma": "Archisomatophylakes",
-    "previous": "Aqua, Aquae 77a",
+    "previous": "Arbion",
     "next": "Architectura",
     "chapters": [
       {
@@ -156,6 +167,7 @@
   },
   {
     "lemma": "Architectura",
+    "previous": "Archisomatophylakes",
     "next": "Aristolaos 2"
   },
   {
@@ -247,6 +259,7 @@
   {
     "lemma": "Attributio",
     "previous": "Ἀσκληπιαις",
+    "next": "Auction 1",
     "chapters": [
       {
         "start": 65,
@@ -254,6 +267,10 @@
         "author": "Kornemann"
       }
     ]
+  },
+  {
+    "lemma": "Auction 1",
+    "previous": "Attributio"
   },
   {
     "lemma": "Aurelius 63a",
@@ -445,8 +462,14 @@
     "previous": "Clementius 1a"
   },
   {
+    "lemma": "Chersonesos 5",
+    "next": "χρηματισμός"
+  },
+  {
     "lemma": "χρηματισμός",
+    "previous": "Chersonesos 5",
     "next": "Claudius 207",
+    "sort_key": "Chrematismos",
     "chapters": [
       {
         "start": 90,
@@ -457,7 +480,8 @@
   },
   {
     "lemma": "Claudius 207",
-    "previous": "χρηματισμός"
+    "previous": "χρηματισμός",
+    "next": null
   },
   {
     "lemma": "Cocceius 12",

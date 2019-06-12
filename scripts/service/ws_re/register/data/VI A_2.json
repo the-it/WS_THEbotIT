@@ -1393,7 +1393,7 @@
   {
     "lemma": "Timpirum",
     "previous": "Timoxenos 3",
-    "next": "Timuchoi",
+    "next": "Τιμοῦχοι",
     "redirect": true,
     "chapters": [
       {
@@ -1403,9 +1403,10 @@
     ]
   },
   {
-    "lemma": "Timuchoi",
+    "lemma": "Τιμοῦχοι",
     "previous": "Timpirum",
     "next": "Timuchos",
+    "sort_key": "Timuchoi",
     "chapters": [
       {
         "start": 1366,
@@ -1416,8 +1417,8 @@
   },
   {
     "lemma": "Timuchos",
-    "previous": "Timuchoi",
-    "next": "Timula",
+    "previous": "Τιμοῦχοι",
+    "next": "Τίμουλα",
     "chapters": [
       {
         "start": 1369,
@@ -1427,9 +1428,10 @@
     ]
   },
   {
-    "lemma": "Timula",
+    "lemma": "Τίμουλα",
     "previous": "Timuchos",
     "next": "Timum",
+    "sort_key": "Timula",
     "chapters": [
       {
         "start": 1369,
@@ -1440,7 +1442,7 @@
   },
   {
     "lemma": "Timum",
-    "previous": "Timula",
+    "previous": "Τίμουλα",
     "next": "Timus",
     "chapters": [
       {

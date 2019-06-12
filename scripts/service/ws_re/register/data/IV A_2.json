@@ -2881,6 +2881,7 @@
     "lemma": "Tabernae 2",
     "previous": "Tabernae 1",
     "next": "Tabernae 3",
+    "wp_link": "w:de:Rheinzabern",
     "chapters": [
       {
         "start": 1873,
@@ -7267,7 +7268,7 @@
   {
     "lemma": "Tapura",
     "previous": "Taprobane",
-    "next": "Tapura ore",
+    "next": "Τάπουρα ὄρη",
     "chapters": [
       {
         "start": 2272,
@@ -7277,20 +7278,14 @@
     ]
   },
   {
-    "lemma": "Tapura ore",
+    "lemma": "Τάπουρα ὄρη",
     "previous": "Tapura",
     "next": "Tara 1",
-    "chapters": [
-      {
-        "start": 2272,
-        "end": 2272,
-        "author": "Herrmann"
-      }
-    ]
+    "sort_key": "Tapuraore"
   },
   {
     "lemma": "Tara 1",
-    "previous": "Tapura ore",
+    "previous": "Τάπουρα ὄρη",
     "next": "Tara 2",
     "chapters": [
       {

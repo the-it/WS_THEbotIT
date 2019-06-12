@@ -3494,7 +3494,7 @@
   {
     "lemma": "Pithecusa",
     "previous": "Piterus",
-    "next": "Pithekos 1",
+    "next": "Πίθηκος 1",
     "chapters": [
       {
         "start": 1843,
@@ -3503,9 +3503,9 @@
     ]
   },
   {
-    "lemma": "Pithekos 1",
+    "lemma": "Πίθηκος 1",
     "previous": "Pithecusa",
-    "next": "Pithekos 2",
+    "next": "Πίθηκος 2",
     "chapters": [
       {
         "start": 1843,
@@ -3514,9 +3514,10 @@
     ]
   },
   {
-    "lemma": "Pithekos 2",
-    "previous": "Pithekos 1",
+    "lemma": "Πίθηκος 2",
+    "previous": "Πίθηκος 1",
     "next": "Pithios",
+    "sort_key": "Pithekos 2",
     "chapters": [
       {
         "start": 1843,
@@ -3527,7 +3528,7 @@
   },
   {
     "lemma": "Pithios",
-    "previous": "Pithekos 2",
+    "previous": "Πίθηκος 2",
     "next": "Pithoi(?)",
     "chapters": [
       {

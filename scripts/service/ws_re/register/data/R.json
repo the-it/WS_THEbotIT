@@ -139,19 +139,21 @@
   {
     "lemma": "Aelius 43a",
     "previous": "Aelius 27aaa",
-    "next": "Aelius 78a",
     "chapters": [
       {
         "start": 9,
         "end": 9
       }
     ]
+  },
+  {
+    "lemma": "Aelius 76",
+    "next": "Aelius 78a"
   },
   {
     "lemma": "Aelius 78a",
-    "previous": "Aelius 43a",
-    "next": "Aelius 166a",
-    "redirect": true,
+    "previous": "Aelius 76",
+    "next": "Aelius 80a",
     "chapters": [
       {
         "start": 9,
@@ -160,8 +162,11 @@
     ]
   },
   {
+    "lemma": "Aelius 80a",
+    "previous": "Aelius 78a"
+  },
+  {
     "lemma": "Aelius 166a",
-    "previous": "Aelius 78a",
     "next": "Aemilius 3a",
     "chapters": [
       {

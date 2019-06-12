@@ -1418,6 +1418,7 @@
     "lemma": "Gordios 2",
     "previous": "Gordios 1",
     "next": "Gordios 3",
+    "wp_link": "w:de:Gordios",
     "chapters": [
       {
         "start": 1591,
@@ -1454,6 +1455,7 @@
     "lemma": "Gordios 5",
     "previous": "Gordios 4",
     "next": "Gordios 6",
+    "wp_link": "w:de:Gordios (Kappadokien)",
     "chapters": [
       {
         "start": 1592,
@@ -1466,6 +1468,7 @@
     "lemma": "Gordios 6",
     "previous": "Gordios 5",
     "next": "Gordios 7",
+    "redirect": "Cordius 1",
     "chapters": [
       {
         "start": 1593,
@@ -1477,7 +1480,7 @@
   {
     "lemma": "Gordios 7",
     "previous": "Gordios 6",
-    "next": "Gorditanum promuntorium",
+    "next": "Gorditanum promunturium",
     "chapters": [
       {
         "start": 1593,
@@ -1487,20 +1490,13 @@
     ]
   },
   {
-    "lemma": "Gorditanum promuntorium",
+    "lemma": "Gorditanum promunturium",
     "previous": "Gordios 7",
-    "next": "Gordiukome 1",
-    "chapters": [
-      {
-        "start": 1593,
-        "end": 1593,
-        "author": "Weiss, J[akob]"
-      }
-    ]
+    "next": "Gordiukome 1"
   },
   {
     "lemma": "Gordiukome 1",
-    "previous": "Gorditanum promuntorium",
+    "previous": "Gorditanum promunturium",
     "next": "Gordiukome 2",
     "chapters": [
       {
@@ -1514,6 +1510,7 @@
     "lemma": "Gordiukome 2",
     "previous": "Gordiukome 1",
     "next": "Gordiu Teichos",
+    "redirect": "Iuliopolis 1",
     "chapters": [
       {
         "start": 1593,
@@ -1525,6 +1522,7 @@
     "lemma": "Gordiu Teichos",
     "previous": "Gordiukome 2",
     "next": "Gordos 1",
+    "redirect": "Iuliopolis 1",
     "chapters": [
       {
         "start": 1593,

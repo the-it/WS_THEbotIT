@@ -114,11 +114,16 @@
   },
   {
     "lemma": "Apollodoros 41a",
-    "previous": "Apelles 5a",
-    "next": null
+    "previous": "Apelles 5a"
+  },
+  {
+    "lemma": "Apelles 5a",
+    "next": "Apollodoros 41e"
   },
   {
     "lemma": "Apollodoros 41e",
+    "previous": "Apelles 5a",
+    "next": "Apollonios 114",
     "chapters": [
       {
         "start": 43,
@@ -129,6 +134,7 @@
   },
   {
     "lemma": "Apollonios 114",
+    "previous": "Apollodoros 41e",
     "next": "Apollonios 122"
   },
   {
