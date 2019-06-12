@@ -5920,7 +5920,7 @@
   {
     "lemma": "Umbricius 4",
     "previous": "Umbricius 3",
-    "next": "Umbrinus",
+    "next": "Umbricius 5",
     "chapters": [
       {
         "start": 595,
@@ -5930,8 +5930,14 @@
     ]
   },
   {
-    "lemma": "Umbrinus",
+    "lemma": "Umbricius 5",
     "previous": "Umbricius 4",
+    "next": "Umbrinus",
+    "sort_key": "Vmbricius 5"
+  },
+  {
+    "lemma": "Umbrinus",
+    "previous": "Umbricius 5",
     "next": "Umbritae",
     "chapters": [
       {
@@ -6052,7 +6058,7 @@
     "lemma": "Ummidius 4",
     "previous": "Ummidius 3",
     "next": "Ummius",
-    "redirect": true,
+    "sort_key": "Vmmidius 4",
     "chapters": [
       {
         "start": 603,
@@ -9379,6 +9385,7 @@
     "lemma": "Uranietai",
     "previous": "Uranides 3",
     "next": "Uranion 1",
+    "sort_key": "Vranietai",
     "chapters": [
       {
         "start": 943,
@@ -10521,7 +10528,7 @@
   {
     "lemma": "Urbinius 1",
     "previous": "Urbinius",
-    "next": "Urbinum",
+    "next": "Urbinius 2",
     "chapters": [
       {
         "start": 994,
@@ -10531,8 +10538,15 @@
     ]
   },
   {
-    "lemma": "Urbinum",
+    "lemma": "Urbinius 2",
     "previous": "Urbinius 1",
+    "next": "Urbinum",
+    "sort_key": "Vrbinius 2",
+    "redirect": true
+  },
+  {
+    "lemma": "Urbinum",
+    "previous": "Urbinius 2",
     "next": "Urbinus 1",
     "chapters": [
       {

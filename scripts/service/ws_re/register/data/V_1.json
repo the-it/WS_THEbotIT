@@ -1453,7 +1453,7 @@
   {
     "lemma": "Demos 3",
     "previous": "Demos 2",
-    "next": "Δημόσιοι",
+    "next": "Demosioi",
     "chapters": [
       {
         "start": 161,
@@ -1463,7 +1463,7 @@
     ]
   },
   {
-    "lemma": "Δημόσιοι",
+    "lemma": "Demosioi",
     "previous": "Demos 3",
     "next": "Demosios",
     "sort_key": "Demosioi",
@@ -1477,7 +1477,7 @@
   },
   {
     "lemma": "Demosios",
-    "previous": "Δημόσιοι",
+    "previous": "Demosioi",
     "next": "Demosthenes 1",
     "chapters": [
       {
@@ -1822,7 +1822,7 @@
     "lemma": "Demostratos 12",
     "previous": "Demostratos 11",
     "next": "Demostratos 13",
-    "redirect": true,
+    "redirect": "Damostratos 5",
     "chapters": [
       {
         "start": 191,
@@ -1845,7 +1845,7 @@
   {
     "lemma": "Demostratos 14",
     "previous": "Demostratos 13",
-    "next": "Demotai",
+    "next": "Δημόται",
     "chapters": [
       {
         "start": 192,
@@ -1855,9 +1855,11 @@
     ]
   },
   {
-    "lemma": "Demotai",
+    "lemma": "Δημόται",
     "previous": "Demostratos 14",
     "next": "Demoteles 1",
+    "sort_key": "demotai",
+    "redirect": "Demoi",
     "chapters": [
       {
         "start": 192,
@@ -1867,7 +1869,7 @@
   },
   {
     "lemma": "Demoteles 1",
-    "previous": "Demotai",
+    "previous": "Δημόται",
     "next": "Demoteles 2",
     "chapters": [
       {
@@ -1964,7 +1966,7 @@
   {
     "lemma": "Demotionidai",
     "previous": "Demotion",
-    "next": "Demouchoi",
+    "next": "Δημοῦχοι",
     "wp_link": "w:de:Phratrie",
     "chapters": [
       {
@@ -1975,20 +1977,14 @@
     ]
   },
   {
-    "lemma": "Demouchoi",
+    "lemma": "Δημοῦχοι",
     "previous": "Demotionidai",
     "next": "Demuchos",
-    "chapters": [
-      {
-        "start": 202,
-        "end": 202,
-        "author": "Szanto"
-      }
-    ]
+    "sort_key": "Demuchoi"
   },
   {
     "lemma": "Demuchos",
-    "previous": "Demouchoi",
+    "previous": "Δημοῦχοι",
     "next": "Demusia",
     "chapters": [
       {

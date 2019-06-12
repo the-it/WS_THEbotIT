@@ -123,7 +123,22 @@
     ]
   },
   {
+    "lemma": "Altinum 1",
+    "next": "Anicius 47"
+  },
+  {
+    "lemma": "Anicius 47",
+    "previous": "Altinum 1",
+    "next": "Ἀγκυρῶν πόλις"
+  },
+  {
+    "lemma": "Ἀγκυρῶν πόλις",
+    "previous": "Anicius 47",
+    "next": "Annamatia"
+  },
+  {
     "lemma": "Annamatia",
+    "previous": "Ἀγκυρῶν πόλις",
     "next": "Antimachidas"
   },
   {
@@ -288,6 +303,7 @@
   },
   {
     "lemma": "Ἀσπὶς ἄκρα",
+    "previous": null,
     "next": "Asprenas 1a",
     "sort_key": "Aspis akra"
   },
@@ -305,7 +321,16 @@
   },
   {
     "lemma": "Asprius",
-    "previous": "Asprenas 1a",
+    "previous": "Asprenas 1a"
+  },
+  {
+    "lemma": "Asprenas",
+    "next": "Asprius"
+  },
+  {
+    "lemma": "Asprius",
+    "previous": "Asprenas",
+    "next": "Asterope 6",
     "chapters": [
       {
         "start": 15,
@@ -316,6 +341,7 @@
   },
   {
     "lemma": "Asterope 6",
+    "previous": "Asprius",
     "next": "Attikos 15"
   },
   {
@@ -529,7 +555,7 @@
   {
     "lemma": "Deire 1",
     "previous": "Daitos",
-    "next": "Deire 2",
+    "next": "Demetrias 1",
     "chapters": [
       {
         "start": 24,
@@ -539,8 +565,11 @@
     ]
   },
   {
+    "lemma": "Demetrias 1",
+    "previous": "Deire 1"
+  },
+  {
     "lemma": "Deire 2",
-    "previous": "Deire 1",
     "chapters": [
       {
         "start": 24,
@@ -4434,7 +4463,6 @@
   {
     "lemma": "Uranios 1b) = 29",
     "previous": "Uranios 1a) = 28",
-    "next": "Urbinius 2",
     "chapters": [
       {
         "start": 1867,
@@ -4444,8 +4472,12 @@
     ]
   },
   {
+    "lemma": "Uranius 29",
+    "next": "Urbinius 2"
+  },
+  {
     "lemma": "Urbinius 2",
-    "previous": "Uranios 1b) = 29",
+    "previous": "Uranius 29",
     "next": "Urgulania",
     "chapters": [
       {
@@ -4506,7 +4538,6 @@
   {
     "lemma": "Utis",
     "previous": "Utica",
-    "next": "Agathon 13",
     "chapters": [
       {
         "start": 1894,
@@ -4516,8 +4547,13 @@
     ]
   },
   {
+    "lemma": "Achaios 7",
+    "next": "Agathon 13"
+  },
+  {
     "lemma": "Agathon 13",
-    "previous": "Utis",
+    "previous": "Achaios 7",
+    "next": "Akestor 4",
     "chapters": [
       {
         "start": 1895,
@@ -4527,7 +4563,13 @@
     ]
   },
   {
+    "lemma": "Akestor 4",
+    "previous": "Agathon 13",
+    "next": "Aristarchos 21"
+  },
+  {
     "lemma": "Aristarchos 21",
+    "previous": "Akestor 4",
     "next": "Dipolia"
   },
   {

@@ -290,10 +290,22 @@
   },
   {
     "lemma": "Accius 2",
-    "previous": "Acerronius 2"
+    "previous": "Acerronius 2",
+    "next": "Achaios 6"
+  },
+  {
+    "lemma": "Achaios 6",
+    "previous": "Accius 2",
+    "next": "Acilius 42"
+  },
+  {
+    "lemma": "Acilius 42",
+    "previous": "Achaios 6",
+    "next": "Acilius 52"
   },
   {
     "lemma": "Acilius 52",
+    "previous": "Acilius 42",
     "next": "Ad Malum"
   },
   {
@@ -685,11 +697,19 @@
   },
   {
     "lemma": "Annius 72",
-    "previous": "Annius 66a"
+    "previous": "Annius 66a",
+    "next": "Annius 73a"
+  },
+  {
+    "lemma": "Annius 73a",
+    "previous": "Annius 72",
+    "next": "Annius 93"
   },
   {
     "lemma": "Annius 93",
-    "next": "Antipatros 15a"
+    "previous": "Annius 73a",
+    "next": "Antipatros 15a",
+    "sort_key": "Annius 093"
   },
   {
     "lemma": "Antipatros 15a",
@@ -811,10 +831,12 @@
   },
   {
     "lemma": "Aquilius 18",
-    "previous": "Appuleius 14"
+    "previous": "Appuleius 14",
+    "next": "Aquilius 30"
   },
   {
     "lemma": "Aquilius 30",
+    "previous": "Aquilius 18",
     "next": "Arcani"
   },
   {
@@ -834,7 +856,12 @@
     "previous": "Arcani"
   },
   {
+    "lemma": "Antonius 80",
+    "next": "Antonius 107"
+  },
+  {
     "lemma": "Antonius 107",
+    "previous": "Antonius 80",
     "next": "Apicatus"
   },
   {
@@ -860,10 +887,10 @@
   {
     "lemma": "Argura 1",
     "previous": "Arcani",
-    "next": "Ariaioi"
+    "next": "Ἀριαῖοι"
   },
   {
-    "lemma": "Ariaioi",
+    "lemma": "Ἀριαῖοι",
     "previous": "Argura 1",
     "next": "Arrabona",
     "sort_key": "Ariaioi",
@@ -877,11 +904,12 @@
   },
   {
     "lemma": "Arrabona",
-    "previous": "Ariaioi"
+    "previous": "Ἀριαῖοι",
+    "next": "Arrecinus 2"
   },
   {
     "lemma": "Arrecinus 2",
-    "previous": null,
+    "previous": "Arrabona",
     "next": "Arrius 14a",
     "chapters": [
       {
@@ -899,7 +927,6 @@
   {
     "lemma": "Arrius 17a",
     "previous": "Arrius 14a",
-    "next": "Arrius 31a",
     "chapters": [
       {
         "start": 98,
@@ -909,8 +936,12 @@
     ]
   },
   {
+    "lemma": "Arrius 19a",
+    "next": "Arrius 31a"
+  },
+  {
     "lemma": "Arrius 31a",
-    "previous": "Arrius 17a",
+    "previous": "Arrius 19a",
     "next": "Arsinoë 12",
     "chapters": [
       {
@@ -957,7 +988,6 @@
   {
     "lemma": "Artorius 7a",
     "previous": "Articuleius 3a",
-    "next": "Asinius 8a",
     "chapters": [
       {
         "start": 99,
@@ -965,10 +995,15 @@
         "author": "Hanslik"
       }
     ]
+  },
+  {
+    "lemma": "Arulenus 1",
+    "next": "Asinius 8a"
   },
   {
     "lemma": "Asinius 8a",
-    "previous": "Artorius 7a",
+    "previous": "Arulenus 1",
+    "next": "Aspendos",
     "chapters": [
       {
         "start": 99,
@@ -978,13 +1013,19 @@
     ]
   },
   {
+    "lemma": "Aspendos",
+    "previous": "Asinius 8a",
+    "next": "Astydamas 2"
+  },
+  {
     "lemma": "Astydamas 2",
+    "previous": "Aspendos",
     "next": "Athenaios 12a"
   },
   {
     "lemma": "Athenaios 12a",
     "previous": "Astydamas 2",
-    "next": "Aurelius 141a",
+    "next": "Attaleia 3",
     "chapters": [
       {
         "start": 109,
@@ -994,8 +1035,11 @@
     ]
   },
   {
+    "lemma": "Attaleia 3",
+    "previous": "Athenaios 12a"
+  },
+  {
     "lemma": "Aurelius 141a",
-    "previous": "Athenaios 12a",
     "next": "Aurelius 141b",
     "chapters": [
       {
@@ -1008,7 +1052,7 @@
   {
     "lemma": "Aurelius 141b",
     "previous": "Aurelius 141a",
-    "next": "Bainobaudes 1",
+    "next": "Baebius 28",
     "chapters": [
       {
         "start": 130,
@@ -1018,8 +1062,21 @@
     ]
   },
   {
+    "lemma": "Baebius 28",
+    "previous": "Aurelius 141b"
+  },
+  {
+    "lemma": "Baebius 32",
+    "next": "Baebius 47"
+  },
+  {
+    "lemma": "Baebius 47",
+    "previous": "Baebius 32",
+    "next": "Bainobaudes 1"
+  },
+  {
     "lemma": "Bainobaudes 1",
-    "previous": "Aurelius 141b",
+    "previous": "Baebius 47",
     "next": "Bainobaudes 2",
     "chapters": [
       {
@@ -3433,12 +3490,26 @@
     "redirect": "Zangenae"
   },
   {
+    "lemma": "Amelas"
+  },
+  {
+    "lemma": "Amithoscatta",
+    "next": "Anaximandros 1"
+  },
+  {
     "lemma": "Anaximandros 1",
+    "previous": "Amithoscatta",
     "next": "Arborius 5"
   },
   {
     "lemma": "Arborius 5",
-    "previous": "Anaximandros 1",
+    "previous": "Anaximandros 1"
+  },
+  {
+    "lemma": "Anaximenes 2"
+  },
+  {
+    "lemma": "Arborius 5",
     "next": "Archedemos 5",
     "chapters": [
       {
