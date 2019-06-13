@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Abretten(us)",
+    "previous": null,
     "next": "Aburnius 1a",
     "sort_key": "Abrettenus",
     "chapters": [
@@ -14,7 +15,6 @@
   {
     "lemma": "Aburnius 1a",
     "previous": "Abretten(us)",
-    "next": "Aburnius 2",
     "chapters": [
       {
         "start": 1,
@@ -25,7 +25,19 @@
   },
   {
     "lemma": "Aburnius 2",
-    "previous": "Aburnius 1a",
+    "next": "Acilius 16"
+  },
+  {
+    "lemma": "Acilius 16",
+    "previous": "Aburnius 2",
+    "next": "Acutius 1a"
+  },
+  {
+    "lemma": "Acutius 1a",
+    "previous": "Acilius 16"
+  },
+  {
+    "lemma": "Aburnius 2",
     "next": "Acutius 1b",
     "chapters": [
       {
@@ -38,7 +50,6 @@
   {
     "lemma": "Acutius 1b",
     "previous": "Aburnius 2",
-    "next": "Aelius 75a",
     "chapters": [
       {
         "start": 1,
@@ -48,9 +59,14 @@
     ]
   },
   {
+    "lemma": "Acutius 1a",
+    "next": "Aelius 75a"
+  },
+  {
     "lemma": "Aelius 75a",
-    "previous": "Acutius 1b",
+    "previous": "Acutius 1a",
     "next": "Aelius 76",
+    "sort_key": "Aelius 075a",
     "chapters": [
       {
         "start": 1,
@@ -61,7 +77,8 @@
   },
   {
     "lemma": "Aelius 76",
-    "previous": "Aelius 75a"
+    "previous": "Aelius 75a",
+    "next": null
   },
   {
     "lemma": "Aemilius 54a",
@@ -131,10 +148,23 @@
   },
   {
     "lemma": "Anaxilaos 5",
-    "previous": "Alexandros 90a"
+    "previous": "Alexandros 90a",
+    "next": "Androtion"
+  },
+  {
+    "lemma": "Androtion",
+    "previous": "Anaxilaos 5",
+    "next": "Anisa"
+  },
+  {
+    "lemma": "Anisa",
+    "previous": "Androtion",
+    "next": "Annius 26a"
   },
   {
     "lemma": "Annius 26a",
+    "previous": "Anisa",
+    "next": "Annius 30",
     "chapters": [
       {
         "start": 7,
@@ -144,7 +174,28 @@
     ]
   },
   {
+    "lemma": "Annius 30",
+    "previous": "Annius 26a",
+    "next": "Annius 66"
+  },
+  {
+    "lemma": "Annius 66",
+    "previous": "Annius 30",
+    "next": "Annius 69"
+  },
+  {
+    "lemma": "Annius 69",
+    "previous": "Annius 66",
+    "next": "Annius 72"
+  },
+  {
+    "lemma": "Annius 72",
+    "previous": "Annius 69",
+    "next": "Antistius 41"
+  },
+  {
     "lemma": "Antistius 41",
+    "previous": "Annius 72",
     "next": "Antistius 49a"
   },
   {
@@ -238,7 +289,7 @@
   {
     "lemma": "Appuleius 17a",
     "previous": "Appuleius 16a",
-    "next": "Aradius 4a",
+    "next": "Aquilius 30",
     "chapters": [
       {
         "start": 9,
@@ -248,18 +299,13 @@
     ]
   },
   {
-    "lemma": "Aradius 4a",
+    "lemma": "Aquilius 30",
     "previous": "Appuleius 17a",
-    "chapters": [
-      {
-        "start": 10,
-        "end": 10,
-        "author": "Groag"
-      }
-    ]
+    "next": "Aradius 1"
   },
   {
     "lemma": "Aradius 1",
+    "previous": "Aquilius 30",
     "next": "Archelaos 34"
   },
   {
@@ -303,10 +349,12 @@
   },
   {
     "lemma": "Arrius 13",
-    "previous": "Arinistae"
+    "previous": "Arinistae",
+    "next": "Arrius 19a"
   },
   {
     "lemma": "Arrius 19a",
+    "previous": "Arrius 13",
     "next": "Asellius 1a",
     "chapters": [
       {
@@ -342,10 +390,17 @@
   },
   {
     "lemma": "Athenaios 23",
-    "previous": "Asinius 18a"
+    "previous": "Asinius 18a",
+    "next": "Atidius 3"
+  },
+  {
+    "lemma": "Atidius 3",
+    "previous": "Athenaios 23",
+    "next": "Atilius 45a"
   },
   {
     "lemma": "Atilius 45a",
+    "previous": "Atidius 3",
     "next": "Atilius 54a",
     "chapters": [
       {
@@ -358,7 +413,7 @@
   {
     "lemma": "Atilius 54a",
     "previous": "Atilius 45a",
-    "next": "Bruttius 5a",
+    "next": "Aufidius 41",
     "chapters": [
       {
         "start": 17,
@@ -368,20 +423,13 @@
     ]
   },
   {
-    "lemma": "Bruttius 5a",
+    "lemma": "Aufidius 41",
     "previous": "Atilius 54a",
-    "next": "Aufidius 44a",
-    "chapters": [
-      {
-        "start": 17,
-        "end": 17,
-        "author": "Groag"
-      }
-    ]
+    "next": "Aufidius 44a"
   },
   {
     "lemma": "Aufidius 44a",
-    "previous": "Bruttius 5a",
+    "previous": "Aufidius 41",
     "next": "Avidius 7a",
     "chapters": [
       {
@@ -3041,7 +3089,7 @@
   {
     "lemma": "Molibodes",
     "previous": "Molaria",
-    "next": "Molpoi",
+    "next": "Μολποί",
     "chapters": [
       {
         "start": 509,
@@ -3051,7 +3099,7 @@
     ]
   },
   {
-    "lemma": "Molpoi",
+    "lemma": "Μολποί",
     "previous": "Molibodes",
     "next": "Monnica",
     "chapters": [
@@ -3064,7 +3112,7 @@
   },
   {
     "lemma": "Monnica",
-    "previous": "Molpoi",
+    "previous": "Μολποί",
     "next": "Moo",
     "chapters": [
       {

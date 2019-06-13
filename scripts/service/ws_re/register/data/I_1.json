@@ -5848,7 +5848,7 @@
   {
     "lemma": "Achilleos dromos",
     "previous": "Achilleos alsos",
-    "next": "Achilleos nesos",
+    "next": "Ἀχιλλέως νῆσος",
     "chapters": [
       {
         "start": 221,
@@ -5858,7 +5858,7 @@
     ]
   },
   {
-    "lemma": "Achilleos nesos",
+    "lemma": "Ἀχιλλέως νῆσος",
     "previous": "Achilleos dromos",
     "next": "Achilleus 1",
     "chapters": [
@@ -5871,7 +5871,7 @@
   },
   {
     "lemma": "Achilleus 1",
-    "previous": "Achilleos nesos",
+    "previous": "Ἀχιλλέως νῆσος",
     "next": "Achilleus 2",
     "wp_link": "w:de:Achilleus",
     "chapters": [
@@ -12092,7 +12092,7 @@
   {
     "lemma": "Aeclanum",
     "previous": "Q. Aeclanius Hermias",
-    "next": "Aedava",
+    "next": "Aëdava",
     "wp_link": "w:de:Aeclanum",
     "chapters": [
       {
@@ -12103,7 +12103,7 @@
     ]
   },
   {
-    "lemma": "Aedava",
+    "lemma": "Aëdava",
     "previous": "Aeclanum",
     "next": "Aedemon",
     "chapters": [
@@ -12116,7 +12116,7 @@
   },
   {
     "lemma": "Aedemon",
-    "previous": "Aedava",
+    "previous": "Aëdava",
     "next": "Aedes",
     "redirect": true,
     "chapters": [
@@ -13704,6 +13704,7 @@
     "lemma": "Aelius 65",
     "previous": "Aelius 64",
     "next": "Aelius 66",
+    "sort_key": "Aelius 065",
     "chapters": [
       {
         "start": 520,
@@ -23348,6 +23349,7 @@
     "lemma": "Agelaos 9",
     "previous": "Agelaos 8",
     "next": "Agelaos 10",
+    "sort_key": "Agelaos 09",
     "chapters": [
       {
         "start": 770,
@@ -26315,7 +26317,7 @@
   {
     "lemma": "Agranis",
     "previous": "Agrania",
-    "next": "Agraphiu graphe",
+    "next": "Ἀγραφίου γραφή",
     "chapters": [
       {
         "start": 889,
@@ -26325,7 +26327,7 @@
     ]
   },
   {
-    "lemma": "Agraphiu graphe",
+    "lemma": "Ἀγραφίου γραφή",
     "previous": "Agranis",
     "next": "Agraphoi nomoi",
     "chapters": [
@@ -26338,7 +26340,7 @@
   },
   {
     "lemma": "Agraphoi nomoi",
-    "previous": "Agraphiu graphe",
+    "previous": "Ἀγραφίου γραφή",
     "next": "Ἀγράφου μετάλλου γραφή",
     "chapters": [
       {
@@ -29275,7 +29277,7 @@
   {
     "lemma": "Aigeidai",
     "previous": "Aigeai",
-    "next": "Aigeira 1",
+    "next": "Aigeira",
     "chapters": [
       {
         "start": 949,
@@ -29285,20 +29287,13 @@
     ]
   },
   {
-    "lemma": "Aigeira 1",
+    "lemma": "Aigeira",
     "previous": "Aigeidai",
-    "next": "Aigeiros 1",
-    "chapters": [
-      {
-        "start": 950,
-        "end": 951,
-        "author": "Hirschfeld"
-      }
-    ]
+    "next": "Aigeiros 1"
   },
   {
     "lemma": "Aigeiros 1",
-    "previous": "Aigeira 1",
+    "previous": "Aigeira",
     "next": "Aigeiros 2",
     "chapters": [
       {
@@ -29631,6 +29626,7 @@
     "lemma": "Aigialos 5",
     "previous": "Aigialos 4",
     "next": "Aigialos 6",
+    "redirect": "Aigialeia",
     "chapters": [
       {
         "start": 957,
@@ -34901,7 +34897,7 @@
   {
     "lemma": "Akathartos kolpos",
     "previous": "Akateios keraia",
-    "next": "Akatos",
+    "next": "Ἄκατος",
     "chapters": [
       {
         "start": 1158,
@@ -34911,7 +34907,7 @@
     ]
   },
   {
-    "lemma": "Akatos",
+    "lemma": "Ἄκατος",
     "previous": "Akathartos kolpos",
     "next": "Akazie",
     "chapters": [
@@ -34924,7 +34920,7 @@
   },
   {
     "lemma": "Akazie",
-    "previous": "Akatos",
+    "previous": "Ἄκατος",
     "next": "Akbaros",
     "wp_link": "w:de:Akazien",
     "chapters": [
@@ -38742,7 +38738,7 @@
   {
     "lemma": "Alamundarus 2",
     "previous": "Alamundarus 1",
-    "next": "Alana ore",
+    "next": "Ἀλανὰ ὄρη",
     "chapters": [
       {
         "start": 1281,
@@ -38752,7 +38748,7 @@
     ]
   },
   {
-    "lemma": "Alana ore",
+    "lemma": "Ἀλανὰ ὄρη",
     "previous": "Alamundarus 2",
     "next": "Alandri fontes",
     "chapters": [
@@ -38765,7 +38761,7 @@
   },
   {
     "lemma": "Alandri fontes",
-    "previous": "Alana ore",
+    "previous": "Ἀλανὰ ὄρη",
     "next": "Alangaviensis vicus",
     "chapters": [
       {
@@ -39602,6 +39598,7 @@
     "lemma": "Alba Docilia",
     "previous": "Alba Augusta",
     "next": "Alba factio",
+    "sort_key": "Albado",
     "wp_link": "w:de:Albisola",
     "chapters": [
       {
@@ -39626,6 +39623,7 @@
     "lemma": "Alba Fucens",
     "previous": "Alba factio",
     "next": "Alba Helvorum",
+    "sort_key": "Albafucens",
     "wp_link": "w:de:Alba Fucens",
     "chapters": [
       {
@@ -39673,6 +39671,7 @@
     "lemma": "Alba Longa",
     "previous": "Alba linea",
     "next": "Albana 1",
+    "sort_key": "Albalon",
     "wp_link": "w:de:Alba Longa",
     "chapters": [
       {
@@ -39734,7 +39733,7 @@
   {
     "lemma": "Albania 2",
     "previous": "Albania 1",
-    "next": "Albaniai pylai",
+    "next": "Ἀλβάνιαι πύλαι",
     "chapters": [
       {
         "start": 1304,
@@ -39744,7 +39743,7 @@
     ]
   },
   {
-    "lemma": "Albaniai pylai",
+    "lemma": "Ἀλβάνιαι πύλαι",
     "previous": "Albania 2",
     "next": "Albani sacerdotes",
     "chapters": [
@@ -39757,7 +39756,7 @@
   },
   {
     "lemma": "Albani sacerdotes",
-    "previous": "Albaniai pylai",
+    "previous": "Ἀλβάνιαι πύλαι",
     "next": "Albanius",
     "chapters": [
       {
@@ -39925,6 +39924,7 @@
     "lemma": "Albanus ager",
     "previous": "Albanus 2",
     "next": "Albanus lacus",
+    "sort_key": "Albanusag",
     "chapters": [
       {
         "start": 1307,
@@ -41025,6 +41025,7 @@
     "lemma": "Album Intimilium",
     "previous": "Album Ingaunum",
     "next": "Album promontorium",
+    "sort_key": "Albumintimilium",
     "wp_link": "w:de:Ventimiglia",
     "chapters": [
       {
@@ -43194,6 +43195,7 @@
     "lemma": "Alexandros 22",
     "previous": "Alexandros 21",
     "next": "Alexandros 23",
+    "sort_key": "Alexandros 022",
     "wp_link": "w:de:Alexander I. Balas",
     "chapters": [
       {

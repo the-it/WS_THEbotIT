@@ -626,10 +626,12 @@
   },
   {
     "lemma": "Antiphon 15",
-    "previous": "Antiphilos 3d"
+    "previous": "Antiphilos 3d",
+    "next": "Apelleas"
   },
   {
     "lemma": "Apelleas",
+    "previous": "Antiphon 15",
     "next": "Aphamios 2",
     "chapters": [
       {
@@ -678,7 +680,12 @@
     ]
   },
   {
+    "lemma": "Aphneïs",
+    "next": "Aphobetos"
+  },
+  {
     "lemma": "Aphobetos",
+    "previous": "Aphneïs",
     "next": "Aphrikes"
   },
   {
@@ -1026,7 +1033,36 @@
   {
     "lemma": "Arridaios 8",
     "previous": "Aristophanes 8a",
-    "next": "Arsakes 9",
+    "chapters": [
+      {
+        "start": 48,
+        "end": 48,
+        "author": "Schoch"
+      }
+    ]
+  },
+  {
+    "lemma": "Arybas 2",
+    "next": "Arsakes 9"
+  },
+  {
+    "lemma": "Arsakes 9",
+    "previous": "Arybas 2",
+    "next": "Arsames 7",
+    "chapters": [
+      {
+        "start": 48,
+        "end": 48,
+        "author": "Berve"
+      }
+    ]
+  },
+  {
+    "lemma": "Arsames 7",
+    "previous": "Arsakes 9"
+  },
+  {
+    "lemma": "Arybas 2",
     "chapters": [
       {
         "start": 48,
@@ -1037,30 +1073,11 @@
   },
   {
     "lemma": "Arsakes 9",
-    "previous": "Arridaios 8",
-    "next": "Arybas 2",
-    "chapters": [
-      {
-        "start": 48,
-        "end": 48,
-        "author": "Berve"
-      }
-    ]
-  },
-  {
-    "lemma": "Arybas 2",
-    "previous": "Arsakes 9",
-    "next": "Arsames 7",
-    "chapters": [
-      {
-        "start": 48,
-        "end": 48,
-        "author": "Schoch"
-      }
-    ]
+    "next": "Arsames 7"
   },
   {
     "lemma": "Arsames 7",
+    "previous": "Arsakes 9",
     "next": "Arsames 8",
     "chapters": [
       {
@@ -1156,7 +1173,12 @@
   },
   {
     "lemma": "Asklepiades 2a",
-    "previous": "Asklepiades 1a"
+    "previous": "Asklepiades 1a",
+    "next": "Aspis 17"
+  },
+  {
+    "lemma": "Aspis 17",
+    "previous": "Asklepiades 2a"
   },
   {
     "lemma": "Asklepiades 2a) = 14a",
@@ -1295,6 +1317,7 @@
   {
     "lemma": "Attinas 2",
     "previous": "Atizyes",
+    "next": "Attylos",
     "chapters": [
       {
         "start": 57,
@@ -1302,6 +1325,10 @@
         "author": "Berve"
       }
     ]
+  },
+  {
+    "lemma": "Attylos",
+    "previous": "Attinas 2"
   },
   {
     "lemma": "Attinas",
@@ -3940,6 +3967,7 @@
   },
   {
     "lemma": "Hylas 4a",
+    "previous": null,
     "next": "Hyle 3",
     "chapters": [
       {

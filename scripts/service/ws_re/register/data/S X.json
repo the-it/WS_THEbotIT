@@ -1101,6 +1101,7 @@
   {
     "lemma": "Anteros 6",
     "previous": "Anomia",
+    "next": "Antimachos 9",
     "chapters": [
       {
         "start": 21,
@@ -1111,6 +1112,7 @@
   },
   {
     "lemma": "Antimachos 9",
+    "previous": "Anteros 6",
     "next": "Antimedes"
   },
   {
@@ -1859,7 +1861,7 @@
   {
     "lemma": "Athanias 3",
     "previous": "Astydamas 2",
-    "next": "Ἀθη-",
+    "next": "Ἀθη...",
     "chapters": [
       {
         "start": 47,
@@ -1869,9 +1871,9 @@
     ]
   },
   {
-    "lemma": "Ἀθη-",
+    "lemma": "Ἀθη...",
     "previous": "Athanias 3",
-    "next": "Athenai 1b",
+    "next": "Athenai 1A",
     "sort_key": "Athe(...",
     "chapters": [
       {
@@ -1882,15 +1884,13 @@
     ]
   },
   {
-    "lemma": "Athenai 1b",
-    "previous": "Ἀθη-",
-    "next": "Athenaios 28",
-    "wp_link": "w:de:Athen",
-    "ws_link": "s:de:Athen"
+    "lemma": "Athenai 1A",
+    "previous": "Ἀθη...",
+    "next": "Athenaios 28"
   },
   {
     "lemma": "Athenaios 28",
-    "previous": "Athenai 1b",
+    "previous": "Athenai 1A",
     "next": "Athenodoros 9",
     "chapters": [
       {
@@ -7020,7 +7020,7 @@
   {
     "lemma": "Paulus 29",
     "previous": "Paulus 9a",
-    "next": "Pausanias 12a",
+    "next": "Pauperies",
     "chapters": [
       {
         "start": 510,
@@ -7030,8 +7030,13 @@
     ]
   },
   {
-    "lemma": "Pausanias 12a",
+    "lemma": "Pauperies",
     "previous": "Paulus 29",
+    "next": "Pausanias 12a"
+  },
+  {
+    "lemma": "Pausanias 12a",
+    "previous": "Pauperies",
     "next": "Pausanias 25",
     "chapters": [
       {

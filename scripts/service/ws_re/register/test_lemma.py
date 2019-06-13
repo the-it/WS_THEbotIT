@@ -208,8 +208,10 @@ class TestLemma(BaseTestRegister):
         compare("hyperemeros, hyperemeria", Lemma.make_sort_key("Ὑπερήμερος, ὑπερημερία"))
         compare("he kyria", Lemma.make_sort_key("ἡ κυρία"))
         compare("bokkanon hemeron", Lemma.make_sort_key("Βόκκανον ἥμερον"))
-        #compare("charisteria eleutherias", Lemma.make_sort_key("Χαριστήρια ἐλευθερίας"))
-        #compare("ephodion", Lemma.make_sort_key("Ἐφόδιον"))
+        compare("charisteria eleutherias", Lemma.make_sort_key("Χαριστήρια ἐλευθερίας"))
+        compare("ephodion", Lemma.make_sort_key("Ἐφόδιον"))
+        compare("alana ore", Lemma.make_sort_key("Ἀλανὰ ὄρη"))
+
 
     def test_sort_key_provide_by_lemma(self):
         sort_dict = copy.deepcopy(self.basic_dict)

@@ -2141,7 +2141,6 @@
   {
     "lemma": "Paulus 11",
     "previous": "Parthenis 5",
-    "next": "Paulus 26",
     "chapters": [
       {
         "start": 431,
@@ -2151,8 +2150,12 @@
     ]
   },
   {
+    "lemma": "Parthenis 5",
+    "next": "Paulus 26"
+  },
+  {
     "lemma": "Paulus 26",
-    "previous": "Paulus 11",
+    "previous": "Parthenis 5",
     "next": "Pediophylax",
     "chapters": [
       {

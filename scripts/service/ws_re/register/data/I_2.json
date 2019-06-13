@@ -3885,6 +3885,7 @@
     "lemma": "Alkibiades 1",
     "previous": "Alkias 2",
     "next": "Alkibiades 2",
+    "sort_key": "Alkibiades 01",
     "chapters": [
       {
         "start": 1515,
@@ -5967,6 +5968,7 @@
     "lemma": "Allius 4",
     "previous": "Allius 3",
     "next": "Allius 5",
+    "sort_key": "Allius 04",
     "chapters": [
       {
         "start": 1586,
@@ -10949,6 +10951,7 @@
     "lemma": "Ambra",
     "previous": "Ambonion",
     "next": "Ambrakia 1",
+    "redirect": "Amber, Ambra",
     "chapters": [
       {
         "start": 1805,
@@ -14445,7 +14448,7 @@
   {
     "lemma": "Amorges 3",
     "previous": "Amorges 2",
-    "next": "Amorgina",
+    "next": "Ἀμόργινα",
     "wp_link": "w:de:Amorges",
     "chapters": [
       {
@@ -14456,9 +14459,10 @@
     ]
   },
   {
-    "lemma": "Amorgina",
+    "lemma": "Ἀμόργινα",
     "previous": "Amorges 3",
     "next": "Amorgos",
+    "sort_key": "Amorgina",
     "chapters": [
       {
         "start": 1875,
@@ -14469,7 +14473,7 @@
   },
   {
     "lemma": "Amorgos",
-    "previous": "Amorgina",
+    "previous": "Ἀμόργινα",
     "next": "Amorion",
     "wp_link": "w:de:Amorgos",
     "chapters": [
@@ -14579,7 +14583,7 @@
   {
     "lemma": "Ampe",
     "previous": "Ampalaontes",
-    "next": "Ampechonion",
+    "next": "Ἀμπεχόνιον",
     "chapters": [
       {
         "start": 1877,
@@ -14589,9 +14593,10 @@
     ]
   },
   {
-    "lemma": "Ampechonion",
+    "lemma": "Ἀμπεχόνιον",
     "previous": "Ampe",
     "next": "Ἀμπέχονον",
+    "sort_key": "Ampechonion",
     "chapters": [
       {
         "start": 1880,
@@ -14602,7 +14607,7 @@
   },
   {
     "lemma": "Ἀμπέχονον",
-    "previous": "Ampechonion",
+    "previous": "Ἀμπεχόνιον",
     "next": "Ampeliotai",
     "sort_key": "Ampechonon",
     "chapters": [
@@ -16446,6 +16451,7 @@
     "lemma": "Ἀμφίπολος Διός",
     "previous": "Amphipolis 2",
     "next": "Amphiprostylos",
+    "sort_key": "Amphipolos Dios",
     "chapters": [
       {
         "start": 1952,
@@ -16676,7 +16682,7 @@
   {
     "lemma": "Amphistratos 3",
     "previous": "Amphistratos 2",
-    "next": "Amphitapes",
+    "next": "Ἀμφιτάπης",
     "chapters": [
       {
         "start": 1958,
@@ -16686,9 +16692,9 @@
     ]
   },
   {
-    "lemma": "Amphitapes",
+    "lemma": "Ἀμφιτάπης",
     "previous": "Amphistratos 3",
-    "next": "Amphithaleis",
+    "next": "Ἀμφιθαλεῖς",
     "chapters": [
       {
         "start": 1958,
@@ -16698,9 +16704,10 @@
     ]
   },
   {
-    "lemma": "Amphithaleis",
-    "previous": "Amphitapes",
+    "lemma": "Ἀμφιθαλεῖς",
+    "previous": "Ἀμφιτάπης",
     "next": "Amphithea 1",
+    "sort_key": "Amphithaleis",
     "chapters": [
       {
         "start": 1958,
@@ -16711,7 +16718,7 @@
   },
   {
     "lemma": "Amphithea 1",
-    "previous": "Amphithaleis",
+    "previous": "Ἀμφιθαλεῖς",
     "next": "Amphithea 2",
     "wp_link": "w:de:Amphithea (Gattin des Autolykos)",
     "chapters": [
@@ -17292,6 +17299,7 @@
     "lemma": "Ampsiani",
     "previous": "Ampsanctus",
     "next": "Ampsivarii",
+    "redirect": true,
     "chapters": [
       {
         "start": 1981,
@@ -17727,7 +17735,7 @@
   {
     "lemma": "Amyke",
     "previous": "Amygdalon",
-    "next": "Amykes pedion",
+    "next": "Ἀμύκης πεδίον",
     "chapters": [
       {
         "start": 1996,
@@ -17737,20 +17745,14 @@
     ]
   },
   {
-    "lemma": "Amykes pedion",
+    "lemma": "Ἀμύκης πεδίον",
     "previous": "Amyke",
     "next": "Amyklai",
-    "chapters": [
-      {
-        "start": 1996,
-        "end": 1996,
-        "author": "Benzinger"
-      }
-    ]
+    "sort_key": "Amykesp"
   },
   {
     "lemma": "Amyklai",
-    "previous": "Amykes pedion",
+    "previous": "Ἀμύκης πεδίον",
     "next": "Amyklades",
     "wp_link": "w:de:Amyklai",
     "chapters": [
@@ -18142,6 +18144,7 @@
     "lemma": "Amyntas 2",
     "previous": "Amyntas 1",
     "next": "Amyntas 3",
+    "sort_key": "Amyntas 02",
     "chapters": [
       {
         "start": 2005,
@@ -19769,7 +19772,7 @@
   {
     "lemma": "Anakreon 2",
     "previous": "Anakreon 1",
-    "next": "Anakrisis",
+    "next": "Ἀνάκρισις",
     "chapters": [
       {
         "start": 2050,
@@ -19779,9 +19782,10 @@
     ]
   },
   {
-    "lemma": "Anakrisis",
+    "lemma": "Ἀνάκρισις",
     "previous": "Anakreon 2",
     "next": "Anaktes 1",
+    "sort_key": "Anakrisis",
     "chapters": [
       {
         "start": 2050,
@@ -19792,7 +19796,7 @@
   },
   {
     "lemma": "Anaktes 1",
-    "previous": "Anakrisis",
+    "previous": "Ἀνάκρισις",
     "next": "Anaktes 2",
     "chapters": [
       {
@@ -20036,7 +20040,7 @@
   {
     "lemma": "Ananios 2",
     "previous": "Ananios 1",
-    "next": "Anankaion 1",
+    "next": "Ἀναγκαῖον 1",
     "chapters": [
       {
         "start": 2057,
@@ -20046,9 +20050,9 @@
     ]
   },
   {
-    "lemma": "Anankaion 1",
+    "lemma": "Ἀναγκαῖον 1",
     "previous": "Ananios 2",
-    "next": "Anankaion 2",
+    "next": "Ἀναγκαῖον 2",
     "chapters": [
       {
         "start": 2057,
@@ -20058,8 +20062,8 @@
     ]
   },
   {
-    "lemma": "Anankaion 2",
-    "previous": "Anankaion 1",
+    "lemma": "Ἀναγκαῖον 2",
+    "previous": "Ἀναγκαῖον 1",
     "next": "Ananke",
     "chapters": [
       {
@@ -20070,7 +20074,7 @@
   },
   {
     "lemma": "Ananke",
-    "previous": "Anankaion 2",
+    "previous": "Ἀναγκαῖον 2",
     "next": "Anankippos",
     "wp_link": "w:de:Ananke (Mythologie)",
     "chapters": [
@@ -20366,6 +20370,7 @@
     "lemma": "Anares",
     "previous": "Anareoi",
     "next": "Anargiskos",
+    "redirect": "Anamares",
     "chapters": [
       {
         "start": 2063,
@@ -25467,6 +25472,7 @@
     "lemma": "Andronikos 2",
     "previous": "Andronikos 1",
     "next": "Andronikos 3",
+    "sort_key": "Andronikos 02",
     "chapters": [
       {
         "start": 2162,
@@ -25479,6 +25485,7 @@
     "lemma": "Andronikos 3",
     "previous": "Andronikos 2",
     "next": "Andronikos 4",
+    "sort_key": "Andronikos 03",
     "chapters": [
       {
         "start": 2162,
@@ -26964,7 +26971,7 @@
   {
     "lemma": "Anglii, Angli",
     "previous": "Angitula",
-    "next": "Angotheke",
+    "next": "Ἀγγοθήκη",
     "wp_link": "w:de:Angeln (Volk)",
     "chapters": [
       {
@@ -26975,9 +26982,10 @@
     ]
   },
   {
-    "lemma": "Angotheke",
+    "lemma": "Ἀγγοθήκη",
     "previous": "Anglii, Angli",
     "next": "Angrivarii",
+    "sort_key": "Angotheke",
     "chapters": [
       {
         "start": 2192,
@@ -26988,7 +26996,7 @@
   },
   {
     "lemma": "Angrivarii",
-    "previous": "Angotheke",
+    "previous": "Ἀγγοθήκη",
     "next": "Angros",
     "wp_link": "w:de:Angrivarier",
     "chapters": [
@@ -27038,7 +27046,7 @@
   {
     "lemma": "Angulus",
     "previous": "Angulis",
-    "next": "Anguron oros",
+    "next": "Ἄγγουρον ὄρος",
     "chapters": [
       {
         "start": 2193,
@@ -27048,7 +27056,7 @@
     ]
   },
   {
-    "lemma": "Anguron oros",
+    "lemma": "Ἄγγουρον ὄρος",
     "previous": "Angulus",
     "next": "Angustia",
     "chapters": [
@@ -27061,7 +27069,7 @@
   },
   {
     "lemma": "Angustia",
-    "previous": "Anguron oros",
+    "previous": "Ἄγγουρον ὄρος",
     "next": "Angusticlavius",
     "wp_link": "w:de:Kastell Brețcu",
     "chapters": [
@@ -28279,6 +28287,7 @@
     "lemma": "Anio novus",
     "previous": "Anion",
     "next": "Anios",
+    "sort_key": "Anionovus",
     "chapters": [
       {
         "start": 2212,
@@ -28694,6 +28703,7 @@
     "lemma": "Ἀγκυρῶν πόλις",
     "previous": "Ankyron",
     "next": "Anna 1",
+    "sort_key": "Ankyronpolis",
     "chapters": [
       {
         "start": 2222,
@@ -29756,6 +29766,7 @@
     "lemma": "Annius 28",
     "previous": "Annius 27",
     "next": "Annius 29",
+    "sort_key": "Annius 028",
     "chapters": [
       {
         "start": 2263,
@@ -29781,6 +29792,7 @@
     "lemma": "Annius 30",
     "previous": "Annius 29",
     "next": "Annius 31",
+    "sort_key": "Annius 030",
     "chapters": [
       {
         "start": 2264,
@@ -29964,6 +29976,7 @@
     "lemma": "Annius 45",
     "previous": "Annius 44",
     "next": "Annius 46",
+    "sort_key": "Annius 045",
     "chapters": [
       {
         "start": 2265,
@@ -30016,6 +30029,7 @@
     "lemma": "Annius 49",
     "previous": "Annius 48",
     "next": "Annius 50",
+    "sort_key": "Annius 049",
     "chapters": [
       {
         "start": 2268,
@@ -30053,6 +30067,7 @@
     "lemma": "Annius 52",
     "previous": "Annius 51",
     "next": "Annius 53",
+    "sort_key": "Annius 052",
     "chapters": [
       {
         "start": 2269,
@@ -30103,6 +30118,7 @@
     "lemma": "Annius 56",
     "previous": "Annius 55",
     "next": "Annius 57",
+    "sort_key": "Annius 056",
     "chapters": [
       {
         "start": 2269,
@@ -30165,6 +30181,7 @@
     "lemma": "Annius 61",
     "previous": "Annius 60",
     "next": "Annius 62",
+    "sort_key": "Annius 061",
     "wp_link": "w:de:Marcus Annius Libo (Suffektkonsul 161)",
     "chapters": [
       {
@@ -30226,6 +30243,7 @@
     "lemma": "Annius 66",
     "previous": "Annius 65",
     "next": "Annius 67",
+    "sort_key": "Annius 066",
     "chapters": [
       {
         "start": 2271,
@@ -30263,6 +30281,7 @@
     "lemma": "Annius 69",
     "previous": "Annius 68",
     "next": "Annius 70",
+    "sort_key": "Annius 069",
     "chapters": [
       {
         "start": 2276,
@@ -30299,6 +30318,7 @@
     "lemma": "Annius 72",
     "previous": "Annius 71",
     "next": "Annius 73",
+    "sort_key": "Annius 072",
     "chapters": [
       {
         "start": 2277,
@@ -30496,6 +30516,7 @@
     "lemma": "Annius 88",
     "previous": "Annius 87",
     "next": "Annius 89",
+    "sort_key": "Annius 088",
     "chapters": [
       {
         "start": 2278,
@@ -30558,6 +30579,7 @@
     "lemma": "Annius 93",
     "previous": "Annius 92",
     "next": "Annius 94",
+    "sort_key": "Annius 093",
     "wp_link": "w:de:Marcus Annius Verus",
     "chapters": [
       {
@@ -34288,6 +34310,8 @@
     "lemma": "Ἀντίδοσις",
     "previous": "Antidoros 4",
     "next": "Antidotos 1",
+    "sort_key": "Antidosis",
+    "wp_link": "w:de:Antidosis",
     "chapters": [
       {
         "start": 2397,
@@ -34396,6 +34420,7 @@
     "lemma": "Antigenes 2",
     "previous": "Antigenes 1",
     "next": "Antigenes 3",
+    "sort_key": "Antigenes 02",
     "chapters": [
       {
         "start": 2399,
@@ -34445,6 +34470,7 @@
     "lemma": "Antigenes 6",
     "previous": "Antigenes 5",
     "next": "Antigenes 7",
+    "sort_key": "Antigenes 06",
     "chapters": [
       {
         "start": 2399,
@@ -34921,6 +34947,7 @@
     "lemma": "Antigonos 5",
     "previous": "Antigonos 4",
     "next": "Antigonos 6",
+    "sort_key": "Antigonos 05",
     "wp_link": "w:de:Antigonos III. Doson",
     "chapters": [
       {
@@ -35949,6 +35976,7 @@
     "lemma": "Antimachos 9",
     "previous": "Antimachos 8",
     "next": "Antimachos 10",
+    "sort_key": "Antimachos 09",
     "chapters": [
       {
         "start": 2433,
@@ -36731,7 +36759,6 @@
     "lemma": "Antiocheia 20",
     "previous": "Antiocheia 19",
     "next": "Antiocheia 21",
-    "wp_link": "w:de:Antiochia (Begriffsklärung)",
     "chapters": [
       {
         "start": 2447,
@@ -37014,6 +37041,7 @@
     "lemma": "Antiochos 5",
     "previous": "Antiochos 4",
     "next": "Antiochos 6",
+    "sort_key": "Antiochos 05",
     "wp_link": "w:de:Antiochos",
     "chapters": [
       {
@@ -37261,6 +37289,7 @@
     "lemma": "Antiochos 25",
     "previous": "Antiochos 24",
     "next": "Antiochos 26",
+    "wp_link": "w:de:Antiochos III.",
     "chapters": [
       {
         "start": 2459,
@@ -37909,7 +37938,7 @@
   {
     "lemma": "Antion 2",
     "previous": "Antion 1",
-    "next": "Antiope 1",
+    "next": "Antiope",
     "redirect": true,
     "chapters": [
       {
@@ -37919,9 +37948,22 @@
     ]
   },
   {
-    "lemma": "Antiope 1",
+    "lemma": "Antiope",
     "previous": "Antion 2",
+    "next": "Antiope 1",
+    "chapters": [
+      {
+        "start": 2495,
+        "end": 2495,
+        "author": "Wernicke"
+      }
+    ]
+  },
+  {
+    "lemma": "Antiope 1",
+    "previous": "Antiope",
     "next": "Antiope 2",
+    "sort_key": "Antiope 01",
     "chapters": [
       {
         "start": 2495,
@@ -38207,6 +38249,7 @@
     "lemma": "Antipatros 6",
     "previous": "Antipatros 5",
     "next": "Antipatros 7",
+    "sort_key": "Antipatros 06",
     "wp_link": "w:de:Antipatros",
     "chapters": [
       {
@@ -41871,6 +41914,7 @@
     "lemma": "Antonius 28",
     "previous": "Antonius 27",
     "next": "Antonius 29",
+    "sort_key": "Antonius 028",
     "wp_link": "w:de:Marcus Antonius Orator",
     "chapters": [
       {
@@ -42023,6 +42067,7 @@
     "lemma": "Antonius 40",
     "previous": "Antonius 39",
     "next": "Antonius 41",
+    "sort_key": "Antonius 040",
     "chapters": [
       {
         "start": 2615,
@@ -42316,6 +42361,7 @@
     "lemma": "Antonius 63",
     "previous": "Antonius 62",
     "next": "Antonius 64",
+    "sort_key": "Antonius 063",
     "chapters": [
       {
         "start": 2632,
@@ -42509,6 +42555,7 @@
     "lemma": "Antonius 79",
     "previous": "Antonius 78",
     "next": "Antonius 80",
+    "sort_key": "Antonius 079",
     "chapters": [
       {
         "start": 2633,
@@ -44752,6 +44799,7 @@
     "lemma": "Apaturia 2",
     "previous": "Apaturia 1",
     "next": "Apaturion",
+    "wp_link": "w:de:Apaturia",
     "chapters": [
       {
         "start": 2672,
@@ -45122,7 +45170,7 @@
   {
     "lemma": "Apellas 9",
     "previous": "Apellas 8",
-    "next": "Apellazein",
+    "next": "Ἀπελλάζειν",
     "wp_link": "w:de:Apelleas",
     "chapters": [
       {
@@ -45133,7 +45181,7 @@
     ]
   },
   {
-    "lemma": "Apellazein",
+    "lemma": "Ἀπελλάζειν",
     "previous": "Apellas 9",
     "next": "Apelles 1",
     "chapters": [
@@ -45146,7 +45194,7 @@
   },
   {
     "lemma": "Apelles 1",
-    "previous": "Apellazein",
+    "previous": "Ἀπελλάζειν",
     "next": "Apelles 2",
     "chapters": [
       {
@@ -46289,7 +46337,7 @@
   {
     "lemma": "Aphidnos",
     "previous": "Aphidna 2",
-    "next": "Aphidrysis",
+    "next": "Ἀφίδρυσις",
     "chapters": [
       {
         "start": 2720,
@@ -46299,9 +46347,10 @@
     ]
   },
   {
-    "lemma": "Aphidrysis",
+    "lemma": "Ἀφίδρυσις",
     "previous": "Aphidnos",
     "next": "Aphilas",
+    "sort_key": "Aphidrysis",
     "chapters": [
       {
         "start": 2720,
@@ -46312,7 +46361,7 @@
   },
   {
     "lemma": "Aphilas",
-    "previous": "Aphidrysis",
+    "previous": "Ἀφίδρυσις",
     "next": "Aphippodromas",
     "wp_link": "w:de:Aphilas",
     "chapters": [
@@ -46833,7 +46882,7 @@
   {
     "lemma": "Aphrodisias 11",
     "previous": "Aphrodisias 10",
-    "next": "Aphrodisiastai",
+    "next": "Ἀφροδισιασταί",
     "chapters": [
       {
         "start": 2727,
@@ -46843,9 +46892,10 @@
     ]
   },
   {
-    "lemma": "Aphrodisiastai",
+    "lemma": "Ἀφροδισιασταί",
     "previous": "Aphrodisias 11",
     "next": "Aphrodisieus",
+    "sort_key": "Aphrodisiastai",
     "chapters": [
       {
         "start": 2727,
@@ -46856,7 +46906,7 @@
   },
   {
     "lemma": "Aphrodisieus",
-    "previous": "Aphrodisiastai",
+    "previous": "Ἀφροδισιασταί",
     "next": "Aphrodision 1",
     "chapters": [
       {
@@ -48054,7 +48104,7 @@
   {
     "lemma": "Ἀποβατήρια",
     "previous": "Apobatana",
-    "next": "Apobaterios, Apobateria",
+    "next": "Ἀποβατήριος, Ἀποβατηρία",
     "sort_key": "Apobateria",
     "chapters": [
       {
@@ -48065,20 +48115,14 @@
     ]
   },
   {
-    "lemma": "Apobaterios, Apobateria",
+    "lemma": "Ἀποβατήριος, Ἀποβατηρία",
     "previous": "Ἀποβατήρια",
-    "next": "Apobates",
-    "chapters": [
-      {
-        "start": 2814,
-        "end": 2814,
-        "author": "Jessen"
-      }
-    ]
+    "next": "Ἀποβάτης",
+    "sort_key": "Apobaterios"
   },
   {
-    "lemma": "Apobates",
-    "previous": "Apobaterios, Apobateria",
+    "lemma": "Ἀποβάτης",
+    "previous": "Ἀποβατήριος, Ἀποβατηρία",
     "next": "Apobathmoi",
     "chapters": [
       {
@@ -48090,7 +48134,7 @@
   },
   {
     "lemma": "Apobathmoi",
-    "previous": "Apobates",
+    "previous": "Ἀποβάτης",
     "next": "Apobathra 1",
     "chapters": [
       {
@@ -48115,7 +48159,7 @@
   {
     "lemma": "Apobathra 2",
     "previous": "Apobathra 1",
-    "next": "Apobomia hiera",
+    "next": "Ἀποβώμια ἱερά",
     "chapters": [
       {
         "start": 2817,
@@ -48125,20 +48169,14 @@
     ]
   },
   {
-    "lemma": "Apobomia hiera",
+    "lemma": "Ἀποβώμια ἱερά",
     "previous": "Apobathra 2",
     "next": "Apocha",
-    "chapters": [
-      {
-        "start": 2817,
-        "end": 2817,
-        "author": "Stengel"
-      }
-    ]
+    "sort_key": "Apobomia"
   },
   {
     "lemma": "Apocha",
-    "previous": "Apobomia hiera",
+    "previous": "Ἀποβώμια ἱερά",
     "next": "Apocheirotonein",
     "chapters": [
       {
@@ -48360,6 +48398,8 @@
     "lemma": "Ἀποικία",
     "previous": "Ἀπόγραφον",
     "next": "Apoikos",
+    "sort_key": "Apoikia",
+    "wp_link": "w:de:Apoikia",
     "chapters": [
       {
         "start": 2823,

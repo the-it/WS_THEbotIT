@@ -2191,6 +2191,7 @@
     "lemma": "Apollonios 98",
     "previous": "Apollonios 97",
     "next": "Apollonios 99-111",
+    "sort_key": "Apollonios 098",
     "wp_link": "w:de:Apollonios von Tyana",
     "chapters": [
       {
@@ -5637,7 +5638,7 @@
   {
     "lemma": "Apulum",
     "previous": "Apuli, Apulia",
-    "next": "Ἄπους",
+    "next": "Apus",
     "wp_link": "w:de:Alba Iulia",
     "chapters": [
       {
@@ -5648,21 +5649,27 @@
     ]
   },
   {
-    "lemma": "Ἄπους",
+    "lemma": "Apus",
     "previous": "Apulum",
-    "next": "Apusorus",
-    "sort_key": "Apus",
-    "redirect": true,
-    "wp_link": "w:de:Schwalbe",
+    "next": "Ἄπους",
     "chapters": [
-      {
-        "start": 291,
-        "end": 291
-      },
       {
         "start": 291,
         "end": 291,
         "author": "Tomaschek"
+      }
+    ]
+  },
+  {
+    "lemma": "Ἄπους",
+    "previous": "Apus",
+    "next": "Apusorus",
+    "sort_key": "Apus",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 291,
+        "end": 291
       }
     ]
   },
@@ -6041,7 +6048,7 @@
     "previous": "Aqua, Aquae 16",
     "next": "Aqua, Aquae 18",
     "sort_key": "Aquae 017",
-    "redirect": true,
+    "redirect": "Aurelia Aquensis",
     "wp_link": "w:de:Baden-Baden",
     "chapters": [
       {
@@ -6628,6 +6635,7 @@
     "lemma": "Aqua, Aquae 61",
     "previous": "Aqua, Aquae 60",
     "next": "Aqua, Aquae 62",
+    "sort_key": "Aquae 061",
     "wp_link": "w:de:Bourbon-Lancy",
     "chapters": [
       {
@@ -7063,6 +7071,7 @@
     "lemma": "Aqua, Aquae 94",
     "previous": "Aqua, Aquae 93",
     "next": "Aqua, Aquae 95",
+    "sort_key": "Aquae 094",
     "wp_link": "w:de:Aqua",
     "chapters": [
       {
@@ -8739,6 +8748,7 @@
     "lemma": "Ara, Arae 10",
     "previous": "Ara, Arae 9",
     "next": "Ara, Arae 11",
+    "sort_key": "Araarae 10",
     "wp_link": "w:de:Arae Flaviae",
     "chapters": [
       {
@@ -12746,6 +12756,7 @@
     "lemma": "Archelaos 6",
     "previous": "Archelaos 5",
     "next": "Archelaos 7",
+    "sort_key": "Archelaos 06",
     "wp_link": "w:de:Archelaos",
     "chapters": [
       {
@@ -13915,6 +13926,7 @@
     "lemma": "Archias 6",
     "previous": "Archias 5",
     "next": "Archias 7",
+    "sort_key": "Archias 006",
     "chapters": [
       {
         "start": 462,
@@ -13927,6 +13939,7 @@
     "lemma": "Archias 7",
     "previous": "Archias 6",
     "next": "Archias 8",
+    "sort_key": "Archias 007",
     "chapters": [
       {
         "start": 462,
@@ -14013,6 +14026,7 @@
     "lemma": "Archias 14",
     "previous": "Archias 13",
     "next": "Archias 15",
+    "sort_key": "Archias 014",
     "chapters": [
       {
         "start": 463,
@@ -14878,7 +14892,7 @@
   {
     "lemma": "Archinos 7",
     "previous": "Archinos 6",
-    "next": "Archiphylakites",
+    "next": "Ἀρχιφυλακίτης",
     "chapters": [
       {
         "start": 541,
@@ -14888,7 +14902,7 @@
     ]
   },
   {
-    "lemma": "Archiphylakites",
+    "lemma": "Ἀρχιφυλακίτης",
     "previous": "Archinos 7",
     "next": "Ἀρχιφύλαξ",
     "chapters": [
@@ -14901,7 +14915,7 @@
   },
   {
     "lemma": "Ἀρχιφύλαξ",
-    "previous": "Archiphylakites",
+    "previous": "Ἀρχιφυλακίτης",
     "next": "Archippe 1",
     "sort_key": "Archiphylax",
     "chapters": [
@@ -15024,6 +15038,7 @@
     "lemma": "Archippos 8",
     "previous": "Archippos 7",
     "next": "Archippos 9",
+    "sort_key": "Archippos 08",
     "chapters": [
       {
         "start": 542,
@@ -16092,6 +16107,7 @@
     "lemma": "Ardea 2",
     "previous": "Ardea 1",
     "next": "Ardea 3",
+    "sort_key": "Ardea",
     "wp_link": "w:de:Ardea",
     "chapters": [
       {
@@ -16688,7 +16704,7 @@
     "lemma": "Aregenua",
     "previous": "Aregelia",
     "next": "Aregevia",
-    "redirect": true,
+    "redirect": "Araegenua",
     "chapters": [
       {
         "start": 619,
@@ -16853,7 +16869,8 @@
   {
     "lemma": "Areion",
     "previous": "Areïlykos 2",
-    "next": "Areion 2",
+    "next": "Ἀρείων",
+    "wp_link": "w:de:Areion",
     "chapters": [
       {
         "start": 621,
@@ -16863,7 +16880,7 @@
     ]
   },
   {
-    "lemma": "Areion 2",
+    "lemma": "Ἀρείων",
     "previous": "Areion",
     "next": "Areios 1",
     "chapters": [
@@ -16875,8 +16892,9 @@
   },
   {
     "lemma": "Areios 1",
-    "previous": "Areion 2",
+    "previous": "Ἀρείων",
     "next": "Areios 2",
+    "sort_key": "Areios 01",
     "chapters": [
       {
         "start": 623,
@@ -17281,6 +17299,7 @@
     "lemma": "Arenacum",
     "previous": "Arena",
     "next": "Arenae montes",
+    "wp_link": "w:de:Harenatium",
     "chapters": [
       {
         "start": 640,
@@ -19899,6 +19918,7 @@
     "lemma": "ab Argento",
     "previous": "Argentius",
     "next": "Argentocoxus",
+    "sort_key": "Argento",
     "chapters": [
       {
         "start": 713,
@@ -19946,6 +19966,7 @@
     "lemma": "Argentorate",
     "previous": "Argentora",
     "next": "Argentovaria",
+    "wp_link": "w:de:Straßburg",
     "chapters": [
       {
         "start": 713,
@@ -19958,6 +19979,7 @@
     "lemma": "Argentovaria",
     "previous": "Argentorate",
     "next": "Argentum",
+    "wp_link": "w:de:Horbourg-Wihr",
     "chapters": [
       {
         "start": 714,
@@ -20818,7 +20840,7 @@
   {
     "lemma": "Argos 17",
     "previous": "Argos 16",
-    "next": "Argos 18",
+    "next": "Argos 18-27",
     "redirect": true,
     "chapters": [
       {
@@ -20828,9 +20850,21 @@
     ]
   },
   {
-    "lemma": "Argos 18",
+    "lemma": "Argos 18-27",
     "previous": "Argos 17",
-    "next": "Argos 18-27",
+    "next": "Argos 18",
+    "chapters": [
+      {
+        "start": 790,
+        "end": 790,
+        "author": "Wernicke"
+      }
+    ]
+  },
+  {
+    "lemma": "Argos 18",
+    "previous": "Argos 18-27",
+    "next": "Argos 19",
     "wp_link": "w:de:Argos (König)",
     "chapters": [
       {
@@ -20841,21 +20875,10 @@
     ]
   },
   {
-    "lemma": "Argos 18-27",
-    "previous": "Argos 18",
-    "next": "Argos 19",
-    "chapters": [
-      {
-        "start": 790,
-        "end": 790,
-        "author": "Wernicke"
-      }
-    ]
-  },
-  {
     "lemma": "Argos 19",
-    "previous": "Argos 18-27",
+    "previous": "Argos 18",
     "next": "Argos 20",
+    "wp_link": "w:de:Argos (Riese)",
     "chapters": [
       {
         "start": 791,
@@ -22065,6 +22088,7 @@
     "lemma": "Aricia",
     "previous": "Arichoi",
     "next": "Aricina convallis",
+    "wp_link": "w:de:Ariccia",
     "chapters": [
       {
         "start": 822,
@@ -23648,6 +23672,8 @@
     "lemma": "Aristagoras 8",
     "previous": "Aristagoras 7",
     "next": "Aristagoras 9",
+    "sort_key": "Aristagoras 08",
+    "ws_link": "s:de:{{REIA|II,1|849}}",
     "chapters": [
       {
         "start": 849,
@@ -24191,6 +24217,7 @@
     "lemma": "Aristarchos 1",
     "previous": "Aristarcheion",
     "next": "Aristarchos 2",
+    "sort_key": "Aristarchos 01",
     "chapters": [
       {
         "start": 860,
@@ -24265,6 +24292,7 @@
     "lemma": "Aristarchos 7",
     "previous": "Aristarchos 6",
     "next": "Aristarchos 8",
+    "sort_key": "Aristarchos 07",
     "chapters": [
       {
         "start": 861,
@@ -25320,7 +25348,7 @@
   {
     "lemma": "Aristias 2",
     "previous": "Aristias 1",
-    "next": "Aristion",
+    "next": "Ἀρίστιον",
     "chapters": [
       {
         "start": 899,
@@ -25330,20 +25358,14 @@
     ]
   },
   {
-    "lemma": "Aristion",
+    "lemma": "Ἀρίστιον",
     "previous": "Aristias 2",
     "next": "Aristion 1",
-    "chapters": [
-      {
-        "start": 899,
-        "end": 899,
-        "author": "Hirschfeld"
-      }
-    ]
+    "sort_key": "Aristion 0"
   },
   {
     "lemma": "Aristion 1",
-    "previous": "Aristion",
+    "previous": "Ἀρίστιον",
     "next": "Aristion 2",
     "sort_key": "Aristion 01",
     "chapters": [
@@ -25422,6 +25444,7 @@
     "lemma": "Aristion 7",
     "previous": "Aristion 6",
     "next": "Aristion 8",
+    "sort_key": "Aristion 07",
     "chapters": [
       {
         "start": 900,
@@ -25446,6 +25469,7 @@
     "lemma": "Aristion 9",
     "previous": "Aristion 8",
     "next": "Aristion 10",
+    "sort_key": "Aristion 09",
     "chapters": [
       {
         "start": 900,
@@ -25792,6 +25816,7 @@
     "lemma": "Aristobulos 3",
     "previous": "Aristobulos 2",
     "next": "Aristobulos 4",
+    "sort_key": "Aristobulos 03",
     "chapters": [
       {
         "start": 907,
@@ -26865,6 +26890,7 @@
     "lemma": "Aristokles 8",
     "previous": "Aristokles 7",
     "next": "Aristokles 9",
+    "sort_key": "Aristokles 08",
     "chapters": [
       {
         "start": 934,
@@ -28130,6 +28156,7 @@
     "lemma": "Aristomenes 6",
     "previous": "Aristomenes 5",
     "next": "Aristomenes 7",
+    "sort_key": "Aristomenes 06",
     "chapters": [
       {
         "start": 949,
@@ -28155,6 +28182,7 @@
     "lemma": "Aristomenes 8",
     "previous": "Aristomenes 7",
     "next": "Aristomenes 9",
+    "sort_key": "Aristomenes 08",
     "chapters": [
       {
         "start": 949,
@@ -29517,6 +29545,7 @@
     "lemma": "Aristonymos 6",
     "previous": "Aristonymos 5",
     "next": "Aristonymos 7",
+    "sort_key": "Aristonymos 06",
     "chapters": [
       {
         "start": 968,
@@ -30310,6 +30339,7 @@
     "lemma": "Aristoteles 8",
     "previous": "Aristoteles 7",
     "next": "Aristoteles 9",
+    "sort_key": "Aristoteles 08",
     "chapters": [
       {
         "start": 1011,
@@ -30322,6 +30352,7 @@
     "lemma": "Aristoteles 9",
     "previous": "Aristoteles 8",
     "next": "Aristoteles 10",
+    "sort_key": "Aristoteles 09",
     "chapters": [
       {
         "start": 1011,
@@ -30860,6 +30891,7 @@
     "lemma": "Arixo",
     "previous": "Ariusia",
     "next": "Ariza",
+    "sort_key": "Ariusia",
     "chapters": [
       {
         "start": 1117,
@@ -31901,7 +31933,7 @@
   {
     "lemma": "Arktinos",
     "previous": "Ἀρκτικὸς κύκλος",
-    "next": "Arkton nesos",
+    "next": "Ἄρκτων νῆσος",
     "chapters": [
       {
         "start": 1172,
@@ -31911,7 +31943,7 @@
     ]
   },
   {
-    "lemma": "Arkton nesos",
+    "lemma": "Ἄρκτων νῆσος",
     "previous": "Arktinos",
     "next": "Arkton oros",
     "chapters": [
@@ -31924,7 +31956,7 @@
   },
   {
     "lemma": "Arkton oros",
-    "previous": "Arkton nesos",
+    "previous": "Ἄρκτων νῆσος",
     "next": "Arktophylax",
     "chapters": [
       {
@@ -32537,7 +32569,7 @@
   {
     "lemma": "Armeniacus",
     "previous": "Armeniaca",
-    "next": "Armeniai pylai",
+    "next": "Ἀρμένιαι πύλαι",
     "chapters": [
       {
         "start": 1186,
@@ -32547,7 +32579,7 @@
     ]
   },
   {
-    "lemma": "Armeniai pylai",
+    "lemma": "Ἀρμένιαι πύλαι",
     "previous": "Armeniacus",
     "next": "Armenidas",
     "chapters": [
@@ -32560,7 +32592,7 @@
   },
   {
     "lemma": "Armenidas",
-    "previous": "Armeniai pylai",
+    "previous": "Ἀρμένιαι πύλαι",
     "next": "Armenion",
     "chapters": [
       {
@@ -32824,7 +32856,7 @@
   {
     "lemma": "Armillatus",
     "previous": "Armillae",
-    "next": "Armilustrium 1",
+    "next": "Armillum",
     "chapters": [
       {
         "start": 1189,
@@ -32834,8 +32866,20 @@
     ]
   },
   {
-    "lemma": "Armilustrium 1",
+    "lemma": "Armillum",
     "previous": "Armillatus",
+    "next": "Armilustrium 1",
+    "chapters": [
+      {
+        "start": 1189,
+        "end": 1189,
+        "author": "Man"
+      }
+    ]
+  },
+  {
+    "lemma": "Armilustrium 1",
+    "previous": "Armillum",
     "next": "Armilustrium 2",
     "wp_link": "w:de:Armilustrium",
     "chapters": [
@@ -32850,6 +32894,7 @@
     "lemma": "Armilustrium 2",
     "previous": "Armilustrium 1",
     "next": "Armine",
+    "wp_link": "w:de:Armilustrium",
     "chapters": [
       {
         "start": 1189,
@@ -32884,6 +32929,7 @@
     "lemma": "Arminius 1",
     "previous": "Arminericus",
     "next": "Arminius 2",
+    "wp_link": "w:de:Arminius",
     "chapters": [
       {
         "start": 1190,
@@ -33069,6 +33115,7 @@
     "lemma": "Arna 2",
     "previous": "Arna 1",
     "next": "Arnagine",
+    "wp_link": "w:de:it:Civitella d'Arna",
     "chapters": [
       {
         "start": 1201,
@@ -33343,7 +33390,7 @@
   {
     "lemma": "Arnemetici",
     "previous": "Arneios 2",
-    "next": "Arnensis",
+    "next": "Arneos",
     "chapters": [
       {
         "start": 1204,
@@ -33353,20 +33400,8 @@
     ]
   },
   {
-    "lemma": "Arnensis",
-    "previous": "Arnemetici",
-    "next": "Arneos",
-    "chapters": [
-      {
-        "start": 1204,
-        "end": 1205,
-        "author": "Kubitschek"
-      }
-    ]
-  },
-  {
     "lemma": "Arneos",
-    "previous": "Arnensis",
+    "previous": "Arnemetici",
     "next": "Arnestum",
     "chapters": [
       {
@@ -33391,7 +33426,7 @@
   {
     "lemma": "Arni",
     "previous": "Arnestum",
-    "next": "Arniope",
+    "next": "Arnensis",
     "chapters": [
       {
         "start": 1204,
@@ -33401,8 +33436,20 @@
     ]
   },
   {
-    "lemma": "Arniope",
+    "lemma": "Arnensis",
     "previous": "Arni",
+    "next": "Arniope",
+    "chapters": [
+      {
+        "start": 1204,
+        "end": 1205,
+        "author": "Kubitschek"
+      }
+    ]
+  },
+  {
+    "lemma": "Arniope",
+    "previous": "Arnensis",
     "next": "Arnis",
     "chapters": [
       {
@@ -34087,6 +34134,7 @@
     "lemma": "Arpinum",
     "previous": "Arpineius",
     "next": "Arpoxais",
+    "wp_link": "w:de:Arpino",
     "chapters": [
       {
         "start": 1218,
@@ -36041,7 +36089,7 @@
   {
     "lemma": "Arsake",
     "previous": "Arsakas",
-    "next": "Arsakes 1",
+    "next": "Arsakes 1ff.",
     "chapters": [
       {
         "start": 1268,
@@ -36051,21 +36099,9 @@
     ]
   },
   {
-    "lemma": "Arsakes 1",
-    "previous": "Arsake",
-    "next": "Arsakes 1ff.",
-    "chapters": [
-      {
-        "start": 1268,
-        "end": 1268,
-        "author": "Baumgartner"
-      }
-    ]
-  },
-  {
     "lemma": "Arsakes 1ff.",
-    "previous": "Arsakes 1",
-    "next": "Arsakes 2",
+    "previous": "Arsake",
+    "next": "Arsakes 1",
     "wp_link": "w:de:Arsakiden (Armenien)",
     "chapters": [
       {
@@ -36076,8 +36112,20 @@
     ]
   },
   {
-    "lemma": "Arsakes 2",
+    "lemma": "Arsakes 1",
     "previous": "Arsakes 1ff.",
+    "next": "Arsakes 2",
+    "chapters": [
+      {
+        "start": 1268,
+        "end": 1268,
+        "author": "Baumgartner"
+      }
+    ]
+  },
+  {
+    "lemma": "Arsakes 2",
+    "previous": "Arsakes 1",
     "next": "Arsakes 3",
     "chapters": [
       {
@@ -37369,7 +37417,7 @@
   {
     "lemma": "Artabanos 3",
     "previous": "Artabanos 2",
-    "next": "Artabanos 4",
+    "next": "Artabanos 4ff.",
     "sort_key": "Artabanos 03",
     "wp_link": "w:de:Artapanos (Satrap)",
     "chapters": [
@@ -37381,21 +37429,9 @@
     ]
   },
   {
-    "lemma": "Artabanos 4",
-    "previous": "Artabanos 3",
-    "next": "Artabanos 4ff.",
-    "chapters": [
-      {
-        "start": 1292,
-        "end": 1292,
-        "author": "Cauer, F[riedrich]"
-      }
-    ]
-  },
-  {
     "lemma": "Artabanos 4ff.",
-    "previous": "Artabanos 4",
-    "next": "Artabanos 5",
+    "previous": "Artabanos 3",
+    "next": "Artabanos 4",
     "sort_key": "Artabanos 039",
     "wp_link": "w:de:Artabanos",
     "chapters": [
@@ -37407,8 +37443,20 @@
     ]
   },
   {
-    "lemma": "Artabanos 5",
+    "lemma": "Artabanos 4",
     "previous": "Artabanos 4ff.",
+    "next": "Artabanos 5",
+    "chapters": [
+      {
+        "start": 1292,
+        "end": 1292,
+        "author": "Cauer, F[riedrich]"
+      }
+    ]
+  },
+  {
+    "lemma": "Artabanos 5",
+    "previous": "Artabanos 4",
     "next": "Artabanos 6",
     "sort_key": "Artabanos 05",
     "wp_link": "w:de:Artabanos I.",
@@ -37477,7 +37525,7 @@
   {
     "lemma": "Artabanos 10",
     "previous": "Artabanos 9",
-    "next": "Artabazos 1",
+    "next": "Artabanos 11",
     "wp_link": "w:de:Artabanos IV.",
     "chapters": [
       {
@@ -37488,21 +37536,8 @@
     ]
   },
   {
-    "lemma": "Artabazos 1",
-    "previous": "Artabanos 10",
-    "next": "Artabanos 11",
-    "wp_link": "w:de:Artabazos I.",
-    "chapters": [
-      {
-        "start": 1297,
-        "end": 1299,
-        "author": "Judeich"
-      }
-    ]
-  },
-  {
     "lemma": "Artabanos 11",
-    "previous": "Artabazos 1",
+    "previous": "Artabanos 10",
     "next": "Artabatitae",
     "chapters": [
       {
@@ -37572,7 +37607,7 @@
   {
     "lemma": "Artabazos",
     "previous": "Artabazes",
-    "next": "Artabazos 2",
+    "next": "Artabazos 1",
     "chapters": [
       {
         "start": 1298,
@@ -37582,8 +37617,21 @@
     ]
   },
   {
-    "lemma": "Artabazos 2",
+    "lemma": "Artabazos 1",
     "previous": "Artabazos",
+    "next": "Artabazos 2",
+    "wp_link": "w:de:Artabazos I.",
+    "chapters": [
+      {
+        "start": 1297,
+        "end": 1299,
+        "author": "Judeich"
+      }
+    ]
+  },
+  {
+    "lemma": "Artabazos 2",
+    "previous": "Artabazos 1",
     "next": "Artabazos 3",
     "chapters": [
       {
@@ -38292,6 +38340,7 @@
     "lemma": "Artavasdes 2",
     "previous": "Artavasdes 1",
     "next": "Artavasdos",
+    "wp_link": "w:de:Artavasdes II. (Atropatene)",
     "chapters": [
       {
         "start": 1309,
@@ -38391,7 +38440,7 @@
   {
     "lemma": "Artaxerxes 4",
     "previous": "Artaxerxes 3",
-    "next": "Artaxerxes 5",
+    "next": "Artaxerxes 5-7",
     "wp_link": "w:de:Bessos",
     "chapters": [
       {
@@ -38402,9 +38451,21 @@
     ]
   },
   {
-    "lemma": "Artaxerxes 5",
+    "lemma": "Artaxerxes 5-7",
     "previous": "Artaxerxes 4",
-    "next": "Artaxerxes 5-7",
+    "next": "Artaxerxes 5",
+    "chapters": [
+      {
+        "start": 1321,
+        "end": 1321,
+        "author": "Nöldeke"
+      }
+    ]
+  },
+  {
+    "lemma": "Artaxerxes 5",
+    "previous": "Artaxerxes 5-7",
+    "next": "Artaxerxes 6",
     "wp_link": "w:de:Ardaschir I.",
     "chapters": [
       {
@@ -38415,20 +38476,8 @@
     ]
   },
   {
-    "lemma": "Artaxerxes 5-7",
-    "previous": "Artaxerxes 5",
-    "next": "Artaxerxes 6",
-    "chapters": [
-      {
-        "start": 1321,
-        "end": 1321,
-        "author": "Nöldeke"
-      }
-    ]
-  },
-  {
     "lemma": "Artaxerxes 6",
-    "previous": "Artaxerxes 5-7",
+    "previous": "Artaxerxes 5",
     "next": "Artaxerxes 7",
     "wp_link": "w:de:Ardaschir II.",
     "chapters": [
@@ -39120,7 +39169,7 @@
   {
     "lemma": "Artemidoros 38",
     "previous": "Artemidoros 37",
-    "next": "Artemidos hieron",
+    "next": "Ἀρτέμιδος ἱερόν",
     "wp_link": "w:de:Artemidor (Maler)",
     "chapters": [
       {
@@ -39131,9 +39180,9 @@
     ]
   },
   {
-    "lemma": "Artemidos hieron",
+    "lemma": "Ἀρτέμιδος ἱερόν",
     "previous": "Artemidoros 38",
-    "next": "Artemidos naos",
+    "next": "Ἀρτέμιδος ναός",
     "chapters": [
       {
         "start": 1335,
@@ -39143,9 +39192,10 @@
     ]
   },
   {
-    "lemma": "Artemidos naos",
-    "previous": "Artemidos hieron",
-    "next": "Artemidos spelaion",
+    "lemma": "Ἀρτέμιδος ναός",
+    "previous": "Ἀρτέμιδος ἱερόν",
+    "next": "Ἀρτέμιδος σπήλαιον",
+    "sort_key": "Artemidos naos",
     "chapters": [
       {
         "start": 1335,
@@ -39155,8 +39205,8 @@
     ]
   },
   {
-    "lemma": "Artemidos spelaion",
-    "previous": "Artemidos naos",
+    "lemma": "Ἀρτέμιδος σπήλαιον",
+    "previous": "Ἀρτέμιδος ναός",
     "next": "Artemidos speos",
     "chapters": [
       {
@@ -39168,7 +39218,7 @@
   },
   {
     "lemma": "Artemidos speos",
-    "previous": "Artemidos spelaion",
+    "previous": "Ἀρτέμιδος σπήλαιον",
     "next": "Artemion",
     "chapters": [
       {

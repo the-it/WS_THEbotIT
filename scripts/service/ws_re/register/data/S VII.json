@@ -64,6 +64,7 @@
   {
     "lemma": "Alum Gallicum",
     "previous": "Alexandros 17",
+    "next": "Amnisos 1",
     "chapters": [
       {
         "start": 22,
@@ -74,6 +75,7 @@
   },
   {
     "lemma": "Amnisos 1",
+    "previous": "Alum Gallicum",
     "next": "Amphinomos 6"
   },
   {
@@ -270,10 +272,12 @@
   },
   {
     "lemma": "Auction 1",
-    "previous": "Attributio"
+    "previous": "Attributio",
+    "next": "Aurelius 63a"
   },
   {
     "lemma": "Aurelius 63a",
+    "previous": "Auction 1",
     "next": "Aurelius 39a"
   },
   {
@@ -390,10 +394,17 @@
   },
   {
     "lemma": "Biennos 1",
-    "previous": "Axomis"
+    "previous": "Axomis",
+    "next": "Brogitarus"
+  },
+  {
+    "lemma": "Brogitarus",
+    "previous": "Biennos 1",
+    "next": "Caecilius 33a"
   },
   {
     "lemma": "Caecilius 33a",
+    "previous": "Brogitarus",
     "next": "Caelius 7a",
     "chapters": [
       {

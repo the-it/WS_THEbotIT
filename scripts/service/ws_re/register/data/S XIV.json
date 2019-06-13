@@ -2235,10 +2235,12 @@
   },
   {
     "lemma": "Aratos 6",
-    "previous": "Aradius 3a"
+    "previous": "Aradius 3a",
+    "next": "Araxa"
   },
   {
     "lemma": "Araxa",
+    "previous": "Aratos 6",
     "next": "Archelaos 37a"
   },
   {
@@ -2295,6 +2297,7 @@
   },
   {
     "lemma": "Arrecinus 2",
+    "previous": null,
     "next": "Arrianus 9a",
     "chapters": [
       {
@@ -2307,6 +2310,7 @@
   {
     "lemma": "Arrianus 9a",
     "previous": "Arrecinus 2",
+    "next": "Arrius 17a",
     "chapters": [
       {
         "start": 58,
@@ -2317,6 +2321,7 @@
   },
   {
     "lemma": "Arrius 17a",
+    "previous": "Arrianus 9a",
     "next": "Arrius 23a"
   },
   {
@@ -2333,10 +2338,12 @@
   },
   {
     "lemma": "Arrius 43a",
-    "previous": "Arrius 23a"
+    "previous": "Arrius 23a",
+    "next": "Arruntius 9a"
   },
   {
     "lemma": "Arruntius 9a",
+    "previous": "Arrius 43a",
     "next": "Arruntius 16a",
     "sort_key": "Arruntius 09a",
     "chapters": [
@@ -2350,7 +2357,7 @@
   {
     "lemma": "Arruntius 16a",
     "previous": "Arruntius 9a",
-    "next": "Articuleius a",
+    "next": "Arsada",
     "chapters": [
       {
         "start": 59,
@@ -2360,9 +2367,11 @@
     ]
   },
   {
+    "lemma": "Arsada",
+    "previous": "Arruntius 16a"
+  },
+  {
     "lemma": "Articuleius a",
-    "previous": "Arruntius 16a",
-    "next": "Articuleius 4",
     "chapters": [
       {
         "start": 60,
@@ -2370,11 +2379,15 @@
         "author": "Eck"
       }
     ]
+  },
+  {
+    "lemma": "Arsada",
+    "next": "Articuleius 4"
   },
   {
     "lemma": "Articuleius 4",
-    "previous": "Articuleius a",
-    "next": "Asinius 17aa",
+    "previous": "Arsada",
+    "next": "Arykanda",
     "chapters": [
       {
         "start": 60,
@@ -2384,20 +2397,13 @@
     ]
   },
   {
-    "lemma": "Asinius 17aa",
+    "lemma": "Arykanda",
     "previous": "Articuleius 4",
-    "next": "Asinius 17b",
-    "chapters": [
-      {
-        "start": 62,
-        "end": 62,
-        "author": "Eck"
-      }
-    ]
+    "next": "Asinius 17b"
   },
   {
     "lemma": "Asinius 17b",
-    "previous": "Asinius 17aa",
+    "previous": "Arykanda",
     "next": "Asinius 19a",
     "chapters": [
       {
@@ -2421,10 +2427,12 @@
   },
   {
     "lemma": "Asinius 28",
-    "previous": "Asinius 19a"
+    "previous": "Asinius 19a",
+    "next": "Asinius 32a"
   },
   {
     "lemma": "Asinius 32a",
+    "previous": "Asinius 28",
     "next": "Asinius 32b",
     "chapters": [
       {
@@ -2437,6 +2445,7 @@
   {
     "lemma": "Asinius 32b",
     "previous": "Asinius 32a",
+    "next": "Ateius 12",
     "chapters": [
       {
         "start": 63,
@@ -2447,6 +2456,7 @@
   },
   {
     "lemma": "Ateius 12",
+    "previous": "Asinius 32b",
     "next": "Atilius 36a"
   },
   {
@@ -2463,10 +2473,12 @@
   },
   {
     "lemma": "Attalos 18",
-    "previous": "Atilius 36a"
+    "previous": "Atilius 36a",
+    "next": "Attius 11a"
   },
   {
     "lemma": "Attius 11a",
+    "previous": "Attalos 18",
     "next": "Attius 24a",
     "chapters": [
       {
@@ -2491,7 +2503,7 @@
   {
     "lemma": "Attius 35b",
     "previous": "Attius 24a",
-    "next": "Avidius 1a",
+    "next": "Aufidius 19",
     "chapters": [
       {
         "start": 66,
@@ -2501,8 +2513,13 @@
     ]
   },
   {
-    "lemma": "Avidius 1a",
+    "lemma": "Aufidius 19",
     "previous": "Attius 35b",
+    "next": "Avidius 1a"
+  },
+  {
+    "lemma": "Avidius 1a",
+    "previous": "Aufidius 19",
     "next": "Avidius 1b",
     "chapters": [
       {
@@ -2707,7 +2724,7 @@
   {
     "lemma": "Baburius 4",
     "previous": "Baburius 3",
-    "next": "Baebius 24a",
+    "next": "Baebius 21",
     "chapters": [
       {
         "start": 70,
@@ -2717,8 +2734,13 @@
     ]
   },
   {
-    "lemma": "Baebius 24a",
+    "lemma": "Baebius 21",
     "previous": "Baburius 4",
+    "next": "Baebius 24a"
+  },
+  {
+    "lemma": "Baebius 24a",
+    "previous": "Baebius 21",
     "next": "Baienus",
     "chapters": [
       {

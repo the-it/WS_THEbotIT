@@ -702,7 +702,7 @@
   {
     "lemma": "Molpis 3",
     "previous": "Molpis 2",
-    "next": "Molpos 1",
+    "next": "Μολποί",
     "chapters": [
       {
         "start": 28,
@@ -712,8 +712,14 @@
     ]
   },
   {
-    "lemma": "Molpos 1",
+    "lemma": "Μολποί",
     "previous": "Molpis 3",
+    "next": "Molpos 1",
+    "sort_key": "Molpoi"
+  },
+  {
+    "lemma": "Molpos 1",
+    "previous": "Μολποί",
     "next": "Molpos 2",
     "chapters": [
       {
