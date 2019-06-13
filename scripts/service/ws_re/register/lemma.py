@@ -79,7 +79,7 @@ for key in _TRANSLATION_DICT:
         _TMP_DICT[character] = key
 _TRANSLATION_DICT = str.maketrans(_TMP_DICT)
 
-_POST_REGEX_RAW_LIST = [
+_3rd_REGEX_RAW_LIST = [
     # catching of "a ...", "ab ..." and "ad ..."
     (r"^a[db]? ", ""),
     # catching of "X. ..."
@@ -88,29 +88,36 @@ _POST_REGEX_RAW_LIST = [
     (r"(?<!\d)(\d)(?!\d)", r"00\g<1>"),
     (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>")]
 
-_POST_REGEX_LIST = []
-for regex_pair in _POST_REGEX_RAW_LIST:
-    _POST_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
+_3rd_REGEX_LIST = []
+for regex_pair in _3rd_REGEX_RAW_LIST:
+    _3rd_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
 
 # some regex actions must performed before the TRANSLATION_DICT replacement
 
-_PRE_REGEX_RAW_LIST = [
+_2nd_REGEX_RAW_LIST = [
     (r"αυ", "au"),
     (r"ευ", "eu"),
     (r"ου", "u"),
-    (r"^(?:ε|η)", "he"),
-    (r"^(?:ι)", "hi"),
-    (r"^(?:ο)", "ho"),
-    (r"^(?:υ)", "hy"),
-    (r" (?:ε|η)", " he"),
-    (r" ι", " hi"),
-    (r" ο", " ho"),
-    (r" υ", " hy"),
 ]
 
-_PRE_REGEX_LIST = []
-for regex_pair in _PRE_REGEX_RAW_LIST:
-    _PRE_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
+_2nd_REGEX_LIST = []
+for regex_pair in _2nd_REGEX_RAW_LIST:
+    _2nd_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
+
+_1st_REGEX_RAW_LIST = [
+    (r"^(?:ἑ|ἡ|ἥ)", "he"),
+    (r"^ἱ", "hi"),
+    (r"^ὁ", "ho"),
+    (r"^ὑ", "hy"),
+    (r" (?:ἑ|ἡ|ἥ)", " he"),
+    (r" ἱ", " hi"),
+    (r" ὁ", " ho"),
+    (r" ὑ", " hy"),
+]
+
+_1st_REGEX_LIST = []
+for regex_pair in _1st_REGEX_RAW_LIST:
+    _1st_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
 
 
 class Lemma():
@@ -181,13 +188,17 @@ class Lemma():
 
     @classmethod
     def make_sort_key(cls, lemma: str):
+        lemma = lemma.casefold()
+        # handle some things that need regex with accents
+        for regex in _1st_REGEX_LIST:
+            lemma = regex[0].sub(regex[1], lemma)
         # remove all accents
-        lemma = cls._strip_accents(lemma).casefold()
+        lemma = cls._strip_accents(lemma)
         # simple replacement of single characters
-        for regex in _PRE_REGEX_LIST:
+        for regex in _2nd_REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
         lemma = lemma.translate(_TRANSLATION_DICT)
-        for regex in _POST_REGEX_LIST:
+        for regex in _3rd_REGEX_LIST:
             lemma = regex[0].sub(regex[1], lemma)
         # delete dots at last
         lemma = lemma.replace(".", " ")
