@@ -110,8 +110,8 @@
   },
   {
     "lemma": "Alexandros 34",
-    "previous": "Aleos 1a",
-    "next": "Amazones",
+    "previous": "Alexandros 33",
+    "next": "Alexandros 35",
     "chapters": [
       {
         "start": 1443,
@@ -5166,7 +5166,7 @@
   },
   {
     "lemma": "Alkmaion 1",
-    "previous": "Alkisthos",
+    "previous": "Alkithos",
     "next": "Alkmaion 2",
     "wp_link": "w:de:Alkmaion (Sohn des Amphiaraos)",
     "chapters": [
@@ -20050,9 +20050,9 @@
     ]
   },
   {
-    "lemma": "Anankaion 1",
+    "lemma": "Ἀναγκαῖον 1",
     "previous": "Ananios 2",
-    "next": "Anankaion 2",
+    "next": "Ἀναγκαῖον 2",
     "chapters": [
       {
         "start": 2057,
@@ -20062,8 +20062,8 @@
     ]
   },
   {
-    "lemma": "Anankaion 2",
-    "previous": "Anankaion 1",
+    "lemma": "Ἀναγκαῖον 2",
+    "previous": "Ἀναγκαῖον 1",
     "next": "Ananke",
     "chapters": [
       {
@@ -20074,7 +20074,7 @@
   },
   {
     "lemma": "Ananke",
-    "previous": "Anankaion 2",
+    "previous": "Ἀναγκαῖον 2",
     "next": "Anankippos",
     "wp_link": "w:de:Ananke (Mythologie)",
     "chapters": [
@@ -27056,7 +27056,7 @@
     ]
   },
   {
-    "lemma": "Anguron oros",
+    "lemma": "Ἄγγουρον ὄρος",
     "previous": "Angulus",
     "next": "Angustia",
     "chapters": [
@@ -27069,7 +27069,7 @@
   },
   {
     "lemma": "Angustia",
-    "previous": "Anguron oros",
+    "previous": "Ἄγγουρον ὄρος",
     "next": "Angusticlavius",
     "wp_link": "w:de:Kastell Brețcu",
     "chapters": [
@@ -37938,12 +37938,24 @@
   {
     "lemma": "Antion 2",
     "previous": "Antion 1",
-    "next": "Antiope 1",
+    "next": "Antiope",
     "redirect": true,
     "chapters": [
       {
         "start": 2495,
         "end": 2495
+      }
+    ]
+  },
+  {
+    "lemma": "Antiope",
+    "previous": "Antion 2",
+    "next": "Antiope 1",
+    "chapters": [
+      {
+        "start": 2495,
+        "end": 2495,
+        "author": "Wernicke"
       }
     ]
   },

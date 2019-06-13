@@ -926,21 +926,9 @@
     ]
   },
   {
-    "lemma": "Artisiga",
-    "previous": "Artischocke",
-    "next": "Artiskos",
-    "chapters": [
-      {
-        "start": 1458,
-        "end": 1458,
-        "author": "Dessau"
-      }
-    ]
-  },
-  {
     "lemma": "Artiskos",
-    "previous": "Artisiga",
-    "next": "Artiulas",
+    "previous": "Artischocke",
+    "next": "Artisiga",
     "wp_link": "w:de:Arda (Mariza)",
     "chapters": [
       {
@@ -951,8 +939,20 @@
     ]
   },
   {
-    "lemma": "Artiulas",
+    "lemma": "Artisiga",
     "previous": "Artiskos",
+    "next": "Artiulas",
+    "chapters": [
+      {
+        "start": 1458,
+        "end": 1458,
+        "author": "Dessau"
+      }
+    ]
+  },
+  {
+    "lemma": "Artiulas",
+    "previous": "Artisiga",
     "next": "Artoarta",
     "chapters": [
       {
@@ -1468,7 +1468,7 @@
     ]
   },
   {
-    "lemma": "Arudia ore",
+    "lemma": "Ἀρούδια ὄρη",
     "previous": "Arucci",
     "next": "Arudis",
     "chapters": [
@@ -1481,7 +1481,7 @@
   },
   {
     "lemma": "Arudis",
-    "previous": "Arudia ore",
+    "previous": "Ἀρούδια ὄρη",
     "next": "Aruei",
     "chapters": [
       {
@@ -2028,6 +2028,18 @@
     ]
   },
   {
+    "lemma": "Arybas",
+    "previous": "Aryandes",
+    "next": "Aryballos",
+    "chapters": [
+      {
+        "start": 1495,
+        "end": 1495,
+        "author": "Tümpel"
+      }
+    ]
+  },
+  {
     "lemma": "Aryballos",
     "previous": "Arybas",
     "next": "Arybbas 1",
@@ -2037,18 +2049,6 @@
         "start": 1495,
         "end": 1495,
         "author": "Robert"
-      }
-    ]
-  },
-  {
-    "lemma": "Arybas",
-    "previous": "Aryballos",
-    "next": "Arybbas 1",
-    "chapters": [
-      {
-        "start": 1495,
-        "end": 1495,
-        "author": "Tümpel"
       }
     ]
   },
@@ -2192,6 +2192,18 @@
     "previous": "Arytamas",
     "next": "Arzen",
     "wp_link": "w:de:Arzanene",
+    "chapters": [
+      {
+        "start": 1498,
+        "end": 1498,
+        "author": "Baumgartner"
+      }
+    ]
+  },
+  {
+    "lemma": "Arzen",
+    "previous": "Arzanene",
+    "next": "Arzneikunde",
     "chapters": [
       {
         "start": 1498,
@@ -7808,20 +7820,8 @@
     ]
   },
   {
-    "lemma": "Asparagium",
-    "previous": "Aspalis",
-    "next": "Aspalluga",
-    "chapters": [
-      {
-        "start": 1711,
-        "end": 1711,
-        "author": "Tomaschek"
-      }
-    ]
-  },
-  {
     "lemma": "Aspalluga",
-    "previous": "Asparagium",
+    "previous": "Aspalis",
     "next": "Aspaneus",
     "wp_link": "w:de:Accous",
     "chapters": [
@@ -7859,7 +7859,7 @@
   {
     "lemma": "Aspar 2",
     "previous": "Aspar 1",
-    "next": "Ἀσπάραγος",
+    "next": "Asparagium",
     "chapters": [
       {
         "start": 1712,
@@ -7868,8 +7868,20 @@
     ]
   },
   {
-    "lemma": "Ἀσπάραγος",
+    "lemma": "Asparagium",
     "previous": "Aspar 2",
+    "next": "Ἀσπάραγος",
+    "chapters": [
+      {
+        "start": 1711,
+        "end": 1711,
+        "author": "Tomaschek"
+      }
+    ]
+  },
+  {
+    "lemma": "Ἀσπάραγος",
+    "previous": "Asparagium",
     "next": "Aspasia 1",
     "chapters": [
       {
