@@ -2663,6 +2663,7 @@
   {
     "lemma": "Aigikoros",
     "previous": "Aigialos 6",
+    "next": "Aigilia 1",
     "chapters": [
       {
         "start": 35,
@@ -2672,7 +2673,13 @@
     ]
   },
   {
+    "lemma": "Aigilia 1",
+    "previous": "Aigikoros",
+    "next": "Aigimios 3"
+  },
+  {
     "lemma": "Aigimios 3",
+    "previous": "Aigilia 1",
     "next": "Aigina 1"
   },
   {
@@ -4131,7 +4138,12 @@
     "previous": "Alexandros 35"
   },
   {
+    "lemma": "Alexandros 35",
+    "next": "Alexandros 65"
+  },
+  {
     "lemma": "Alexandros 65",
+    "previous": "Alexandros 35",
     "next": "Alexandros 65a"
   },
   {
@@ -5384,7 +5396,12 @@
     "previous": "Amosta"
   },
   {
+    "lemma": "Amphiaraos",
+    "next": "Amphidromia"
+  },
+  {
     "lemma": "Amphidromia",
+    "previous": "Amphiaraos",
     "next": "Amphiklos 2"
   },
   {
@@ -5882,6 +5899,8 @@
   },
   {
     "lemma": "Anaximandros 3",
+    "previous": null,
+    "next": "Anaximenes 2",
     "chapters": [
       {
         "start": 78,
@@ -5892,6 +5911,7 @@
   },
   {
     "lemma": "Anaximenes 2",
+    "previous": "Anaximandros 3",
     "next": "Anazarba"
   },
   {
@@ -9770,7 +9790,12 @@
     ]
   },
   {
+    "lemma": "Aristias 2",
+    "next": "Ἀρίστιον"
+  },
+  {
     "lemma": "Ἀρίστιον",
+    "previous": "Aristias 2",
     "next": "Aristion 7"
   },
   {
@@ -10581,7 +10606,12 @@
     "previous": "Armeniarches"
   },
   {
+    "lemma": "Bukolik",
+    "next": "Bulaios, Bulaia"
+  },
+  {
     "lemma": "Bulaios, Bulaia",
+    "previous": "Bukolik",
     "next": "Bulis 2"
   },
   {
@@ -11208,10 +11238,17 @@
   },
   {
     "lemma": "Ascia",
-    "previous": "Ascarii"
+    "previous": "Ascarii",
+    "next": "Asciburgium"
+  },
+  {
+    "lemma": "Asciburgium",
+    "previous": "Ascia",
+    "next": "Ascliae"
   },
   {
     "lemma": "Ascliae",
+    "previous": "Asciburgium",
     "next": "Ascogefrus"
   },
   {
@@ -11483,6 +11520,7 @@
   {
     "lemma": "Aspera",
     "previous": "Asper 1",
+    "next": "Aspergillum",
     "chapters": [
       {
         "start": 154,
@@ -11492,7 +11530,13 @@
     ]
   },
   {
+    "lemma": "Aspergillum",
+    "previous": "Aspera",
+    "next": "Asphaleios"
+  },
+  {
     "lemma": "Asphaleios",
+    "previous": "Aspergillum",
     "next": "Asphendion"
   },
   {
@@ -13202,11 +13246,15 @@
   },
   {
     "lemma": "Babai 1a",
-    "previous": "Baalram"
+    "previous": "Baalram",
+    "next": "Babsa"
+  },
+  {
+    "lemma": "Babsa",
+    "previous": "Babai 1a"
   },
   {
     "lemma": "Axius 8a",
-    "previous": null,
     "next": "Azara 1",
     "chapters": [
       {
@@ -14212,7 +14260,12 @@
     ]
   },
   {
+    "lemma": "Belistiche",
+    "next": "Bella"
+  },
+  {
     "lemma": "Bella",
+    "previous": "Belistiche",
     "next": "Βελλεροφόντειος δῆμος"
   },
   {
@@ -14780,6 +14833,7 @@
   {
     "lemma": "Bollus 2",
     "previous": "Bollus 1",
+    "next": "Bologesiphora",
     "chapters": [
       {
         "start": 255,
@@ -14787,6 +14841,10 @@
         "author": "Robert"
       }
     ]
+  },
+  {
+    "lemma": "Bologesiphora",
+    "previous": "Bollus 2"
   },
   {
     "lemma": "Bolvinnus",
@@ -15017,7 +15075,6 @@
   {
     "lemma": "Bria",
     "previous": "Brasidas 1a",
-    "next": "Briana",
     "chapters": [
       {
         "start": 257,
@@ -15027,8 +15084,12 @@
     ]
   },
   {
+    "lemma": "Brasidas 1a",
+    "next": "Briana"
+  },
+  {
     "lemma": "Briana",
-    "previous": "Bria",
+    "previous": "Brasidas 1a",
     "next": "Brianeia",
     "chapters": [
       {
@@ -15069,7 +15130,12 @@
   },
   {
     "lemma": "Brixantus",
-    "previous": "Britomartis"
+    "previous": "Britomartis",
+    "next": "Brixia 1"
+  },
+  {
+    "lemma": "Brixia 1",
+    "previous": "Brixantus"
   },
   {
     "lemma": "Brontotas",
@@ -15222,7 +15288,12 @@
     "previous": "Bukolik"
   },
   {
+    "lemma": "Boarius campus",
+    "next": "Boëdromia"
+  },
+  {
     "lemma": "Boëdromia",
+    "previous": "Boarius campus",
     "next": "Boerebista"
   },
   {
@@ -16580,6 +16651,7 @@
   {
     "lemma": "Charixenos 6",
     "previous": "Charixenos 5",
+    "next": "Charmande",
     "chapters": [
       {
         "start": 284,
@@ -16587,6 +16659,10 @@
         "author": "Kirchner"
       }
     ]
+  },
+  {
+    "lemma": "Charmande",
+    "previous": "Charixenos 6"
   },
   {
     "lemma": "Charmidas 2",
@@ -16636,6 +16712,7 @@
   {
     "lemma": "Charra",
     "previous": "Charops 12",
+    "next": "Charta",
     "chapters": [
       {
         "start": 285,
@@ -16646,6 +16723,7 @@
   },
   {
     "lemma": "Charta",
+    "previous": "Charra",
     "next": "Chaskauge"
   },
   {
@@ -16738,10 +16816,12 @@
   },
   {
     "lemma": "Chimaira 3",
-    "previous": "Χέρρεως φρούριον, τὸ"
+    "previous": "Χέρρεως φρούριον, τὸ",
+    "next": "Chindaioi"
   },
   {
     "lemma": "Chindaioi",
+    "previous": "Chimaira 3",
     "next": "Chiomara",
     "chapters": [
       {
@@ -16822,7 +16902,7 @@
   {
     "lemma": "Chlydai",
     "previous": "Chloros",
-    "next": "Cholimma",
+    "next": "Choara",
     "chapters": [
       {
         "start": 295,
@@ -16831,9 +16911,18 @@
     ]
   },
   {
-    "lemma": "Cholimma",
+    "lemma": "Choara",
     "previous": "Chlydai",
-    "next": "Chondrochyte",
+    "next": "Choliatai"
+  },
+  {
+    "lemma": "Choliatai",
+    "previous": "Choara",
+    "next": "Cholimma"
+  },
+  {
+    "lemma": "Cholimma",
+    "previous": "Choliatai",
     "chapters": [
       {
         "start": 295,
@@ -16843,8 +16932,12 @@
     ]
   },
   {
+    "lemma": "Chondria",
+    "next": "Chondrochyte"
+  },
+  {
     "lemma": "Chondrochyte",
-    "previous": "Cholimma",
+    "previous": "Chondria",
     "next": "Choregos 2",
     "chapters": [
       {
@@ -16857,6 +16950,7 @@
   {
     "lemma": "Choregos 2",
     "previous": "Chondrochyte",
+    "next": "Chorochoad",
     "chapters": [
       {
         "start": 296,
@@ -16867,6 +16961,7 @@
   },
   {
     "lemma": "Chorochoad",
+    "previous": "Choregos 2",
     "next": "Chremas"
   },
   {
@@ -16972,10 +17067,12 @@
   },
   {
     "lemma": "Chrysippos 10",
-    "previous": "Chrysippos 8a"
+    "previous": "Chrysippos 8a",
+    "next": "Chrysippos 14a"
   },
   {
     "lemma": "Chrysippos 14a",
+    "previous": "Chrysippos 10",
     "next": "Chrysippos 14b",
     "chapters": [
       {
@@ -17024,7 +17121,7 @@
   {
     "lemma": "Chumbane",
     "previous": "Chumana",
-    "next": "Chytrieioi",
+    "next": "Chumdan",
     "chapters": [
       {
         "start": 299,
@@ -17034,8 +17131,13 @@
     ]
   },
   {
-    "lemma": "Chytrieioi",
+    "lemma": "Chumdan",
     "previous": "Chumbane",
+    "next": "Chytrieioi"
+  },
+  {
+    "lemma": "Chytrieioi",
+    "previous": "Chumdan",
     "next": "Cilnius 4",
     "chapters": [
       {
@@ -17736,7 +17838,7 @@
   {
     "lemma": "Cornelius 10b",
     "previous": "Cornelius 10a(-e)",
-    "next": "Cornelius 103",
+    "next": "Cornelius 40",
     "chapters": [
       {
         "start": 328,
@@ -17746,9 +17848,22 @@
     ]
   },
   {
+    "lemma": "Cornelius 40",
+    "previous": "Cornelius 10b"
+  },
+  {
+    "lemma": "Cornelius 82",
+    "next": "Cornelius 99"
+  },
+  {
+    "lemma": "Cornelius 99",
+    "previous": "Cornelius 82",
+    "next": "Cornelius 103"
+  },
+  {
     "lemma": "Cornelius 103",
-    "previous": "Cornelius 10b",
-    "next": "Cornelius 110a",
+    "previous": "Cornelius 99",
+    "next": "Cornelius 108",
     "chapters": [
       {
         "start": 328,
@@ -17758,8 +17873,14 @@
     ]
   },
   {
-    "lemma": "Cornelius 110a",
+    "lemma": "Cornelius 108",
     "previous": "Cornelius 103",
+    "next": "Cornelius 110a"
+  },
+  {
+    "lemma": "Cornelius 110a",
+    "previous": "Cornelius 108",
+    "next": null,
     "chapters": [
       {
         "start": 328,
@@ -17912,6 +18033,7 @@
   {
     "lemma": "Dabithac",
     "previous": "Cuseni",
+    "next": "Dachareni",
     "chapters": [
       {
         "start": 333,
@@ -17921,7 +18043,13 @@
     ]
   },
   {
+    "lemma": "Dachareni",
+    "previous": "Dabithac",
+    "next": "Dacicus"
+  },
+  {
     "lemma": "Dacicus",
+    "previous": "Dachareni",
     "next": "Dagala"
   },
   {

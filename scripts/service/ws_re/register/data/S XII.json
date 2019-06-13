@@ -1039,7 +1039,17 @@
     "previous": "Athenaios 12a"
   },
   {
+    "lemma": "Aurelius 88",
+    "next": "Aurelius 136"
+  },
+  {
+    "lemma": "Aurelius 136",
+    "previous": "Aurelius 88",
+    "next": "Aurelius 141a"
+  },
+  {
     "lemma": "Aurelius 141a",
+    "previous": "Aurelius 136",
     "next": "Aurelius 141b",
     "chapters": [
       {
@@ -1063,7 +1073,8 @@
   },
   {
     "lemma": "Baebius 28",
-    "previous": "Aurelius 141b"
+    "previous": "Aurelius 141b",
+    "next": null
   },
   {
     "lemma": "Baebius 32",
@@ -1113,7 +1124,7 @@
   {
     "lemma": "Balchobaudes",
     "previous": "Bainobaudes 3",
-    "next": "Barbius 1a",
+    "next": "Bappo 2",
     "chapters": [
       {
         "start": 131,
@@ -1123,8 +1134,13 @@
     ]
   },
   {
-    "lemma": "Barbius 1a",
+    "lemma": "Bappo 2",
     "previous": "Balchobaudes",
+    "next": "Barbius 1a"
+  },
+  {
+    "lemma": "Barbius 1a",
+    "previous": "Bappo 2",
     "next": "Bassa 2",
     "chapters": [
       {
@@ -1137,7 +1153,7 @@
   {
     "lemma": "Bassa 2",
     "previous": "Barbius 1a",
-    "next": "Bappo 2",
+    "next": "Bassilla",
     "chapters": [
       {
         "start": 131,
@@ -1147,9 +1163,11 @@
     ]
   },
   {
+    "lemma": "Bassilla",
+    "previous": "Bassa 2"
+  },
+  {
     "lemma": "Bappo 2",
-    "previous": "Bassa 2",
-    "next": "Bassilla",
     "chapters": [
       {
         "start": 132,
@@ -1159,9 +1177,13 @@
     ]
   },
   {
+    "lemma": "Bassa 2",
+    "next": "Bassilla"
+  },
+  {
     "lemma": "Bassilla",
-    "previous": "Bappo 2",
-    "next": "Bitheridus",
+    "previous": "Bassa 2",
+    "next": "Bellicius 1",
     "chapters": [
       {
         "start": 132,
@@ -1171,9 +1193,14 @@
     ]
   },
   {
-    "lemma": "Bitheridus",
+    "lemma": "Bellicius 1",
     "previous": "Bassilla",
-    "next": "Caecilius 50a",
+    "next": "Bitheridus"
+  },
+  {
+    "lemma": "Bitheridus",
+    "previous": "Bellicius 1",
+    "next": "Bononius 2",
     "chapters": [
       {
         "start": 133,
@@ -1183,8 +1210,16 @@
     ]
   },
   {
-    "lemma": "Caecilius 50a",
+    "lemma": "Bononius 2",
     "previous": "Bitheridus",
+    "next": "Bruttius 5"
+  },
+  {
+    "lemma": "Bruttius 5",
+    "previous": "Bononius 2"
+  },
+  {
+    "lemma": "Caecilius 50a",
     "chapters": [
       {
         "start": 133,
@@ -1422,6 +1457,7 @@
   },
   {
     "lemma": "Celeia",
+    "previous": null,
     "next": "Cestius 6a"
   },
   {
@@ -1566,7 +1602,7 @@
   {
     "lemma": "conductores",
     "previous": "Coelius 22a",
-    "next": "contrectare, contrectatio",
+    "next": "Contrectare, contrectatio",
     "chapters": [
       {
         "start": 158,
@@ -1576,7 +1612,7 @@
     ]
   },
   {
-    "lemma": "contrectare, contrectatio",
+    "lemma": "Contrectare, contrectatio",
     "previous": "conductores",
     "next": "Cornelius 58",
     "chapters": [
@@ -1589,7 +1625,7 @@
   },
   {
     "lemma": "Cornelius 58",
-    "previous": "contrectare, contrectatio",
+    "previous": "Contrectare, contrectatio",
     "next": "Cornelius 205a"
   },
   {
@@ -2576,7 +2612,6 @@
   {
     "lemma": "Iulius 522",
     "previous": "Iulius 509a",
-    "next": "Iunius 114a",
     "chapters": [
       {
         "start": 509,
@@ -2585,8 +2620,12 @@
     ]
   },
   {
+    "lemma": "Iunius 78",
+    "next": "Iunius 114a"
+  },
+  {
     "lemma": "Iunius 114a",
-    "previous": "Iulius 522",
+    "previous": "Iunius 78",
     "next": "Iunius 133a",
     "chapters": [
       {
@@ -3506,7 +3545,17 @@
     "previous": "Anaximandros 1"
   },
   {
-    "lemma": "Anaximenes 2"
+    "lemma": "Anaximandros 1",
+    "next": "Anaximenes 2"
+  },
+  {
+    "lemma": "Anaximenes 2",
+    "previous": "Anaximandros 1",
+    "next": "Andania 1"
+  },
+  {
+    "lemma": "Andania 1",
+    "previous": "Anaximenes 2"
   },
   {
     "lemma": "Arborius 5",

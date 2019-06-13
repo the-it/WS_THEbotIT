@@ -8123,7 +8123,7 @@
   {
     "lemma": "Asper 3",
     "previous": "Asper 2",
-    "next": "Aspetos 1",
+    "next": "Aspergillum",
     "redirect": true,
     "chapters": [
       {
@@ -8131,6 +8131,11 @@
         "end": 1725
       }
     ]
+  },
+  {
+    "lemma": "Aspergillum",
+    "previous": "Asper 3",
+    "next": "Aspetos 1"
   },
   {
     "lemma": "Aspetos 1",
@@ -10374,6 +10379,8 @@
     "lemma": "Asterios 2",
     "previous": "Asterios 1",
     "next": "Asterios 3",
+    "sort_key": "Asterios 02",
+    "redirect": "Asterion 5",
     "chapters": [
       {
         "start": 1786,
@@ -21365,6 +21372,7 @@
     "lemma": "Avaricum",
     "previous": "Avares",
     "next": "Avarini",
+    "wp_link": "w:de:Bourges",
     "chapters": [
       {
         "start": 2265,
@@ -23366,6 +23374,7 @@
     "lemma": "Augeira",
     "previous": "Augeias 2",
     "next": "Augenärzte",
+    "redirect": true,
     "chapters": [
       {
         "start": 2310,
@@ -23474,6 +23483,7 @@
     "lemma": "Augoflada",
     "previous": "ad Augmadum",
     "next": "Augur",
+    "redirect": "Audefleda",
     "chapters": [
       {
         "start": 2312,
@@ -24353,7 +24363,7 @@
   },
   {
     "lemma": "Augustodunum",
-    "previous": "Augustobriga",
+    "previous": "Augustobriga 2",
     "next": "Augustodurum",
     "wp_link": "w:de:Autun",
     "chapters": [
@@ -25071,7 +25081,7 @@
   {
     "lemma": "Aviola",
     "previous": "Avinius",
-    "next": "Aviola a-d",
+    "next": "Aviones",
     "chapters": [
       {
         "start": 2393,
@@ -25094,7 +25104,7 @@
   },
   {
     "lemma": "Aviones",
-    "previous": "Aviola a-d",
+    "previous": "Aviola",
     "next": "Avircius",
     "chapters": [
       {
@@ -28207,6 +28217,7 @@
     "lemma": "Aurelius 107",
     "previous": "Aurelius 106",
     "next": "Aurelius 108",
+    "wp_link": "w:de:Marcus Aurelius Cotta",
     "chapters": [
       {
         "start": 2487,
@@ -31332,7 +31343,7 @@
   {
     "lemma": "Austern",
     "previous": "Auster",
-    "next": "Austeravia",
+    "next": "Austanitis",
     "wp_link": "w:de:Austern",
     "chapters": [
       {
@@ -31710,6 +31721,7 @@
     "lemma": "Autisiodurum",
     "previous": "Autipsida",
     "next": "Autisparate",
+    "redirect": "Autessiodurum",
     "chapters": [
       {
         "start": 2595,
@@ -32206,7 +32218,7 @@
   {
     "lemma": "Autolyte",
     "previous": "Autolykos 9",
-    "next": "Automachein",
+    "next": "Αὐτομαχεῖν",
     "chapters": [
       {
         "start": 2604,
@@ -32216,7 +32228,7 @@
     ]
   },
   {
-    "lemma": "Automachein",
+    "lemma": "Αὐτομαχεῖν",
     "previous": "Autolyte",
     "next": "Automala",
     "chapters": [
@@ -32229,7 +32241,7 @@
   },
   {
     "lemma": "Automala",
-    "previous": "Automachein",
+    "previous": "Αὐτομαχεῖν",
     "next": "Automate 1",
     "chapters": [
       {
@@ -32339,7 +32351,7 @@
   {
     "lemma": "Automedusa",
     "previous": "Automedon 4",
-    "next": "Automolias graphe",
+    "next": "Αὐτομολίας γραφή",
     "chapters": [
       {
         "start": 2605,
@@ -32349,7 +32361,7 @@
     ]
   },
   {
-    "lemma": "Automolias graphe",
+    "lemma": "Αὐτομολίας γραφή",
     "previous": "Automedusa",
     "next": "Automoloi",
     "chapters": [
@@ -32362,7 +32374,7 @@
   },
   {
     "lemma": "Automoloi",
-    "previous": "Automolias graphe",
+    "previous": "Αὐτομολίας γραφή",
     "next": "Automula",
     "chapters": [
       {
@@ -32591,9 +32603,9 @@
   },
   {
     "lemma": "Autophradates 1",
-    "previous": "ep' autophoro",
+    "previous": "ἐπ’ αὐτοφώρῳ",
     "next": "Autophradates 2",
-    "sort_key": "Autophoro",
+    "sort_key": "Autophradates 01",
     "chapters": [
       {
         "start": 2607,
@@ -35613,7 +35625,7 @@
   },
   {
     "lemma": "Babyka",
-    "previous": "Baburius 1",
+    "previous": "Baburius",
     "next": "Babylas",
     "chapters": [
       {
@@ -36289,6 +36301,7 @@
     "lemma": "Badaïs",
     "previous": "Badagos",
     "next": "Badake",
+    "sort_key": "Badais",
     "chapters": [
       {
         "start": 2725,
@@ -37451,7 +37464,7 @@
   },
   {
     "lemma": "Baelo",
-    "previous": "Baega",
+    "previous": "Baedyi",
     "next": "Baemi",
     "chapters": [
       {
@@ -37535,6 +37548,7 @@
     "lemma": "Baesippo",
     "previous": "Baeserte deo",
     "next": "Baesucci",
+    "wp_link": "w:de:Barbate",
     "chapters": [
       {
         "start": 2762,
@@ -37580,7 +37594,7 @@
   {
     "lemma": "Baetasii",
     "previous": "Baetarreni",
-    "next": "Baeterrae",
+    "next": "Baethocemi",
     "chapters": [
       {
         "start": 2762,
@@ -37614,8 +37628,9 @@
   },
   {
     "lemma": "Baetis",
-    "previous": "Baethocemi",
+    "previous": "Baeterrae",
     "next": "Baetulo",
+    "wp_link": "w:de:Guadalquivir",
     "chapters": [
       {
         "start": 2763,
@@ -37687,6 +37702,7 @@
     "lemma": "Bagacum",
     "previous": "Baga 2",
     "next": "Bagada",
+    "wp_link": "w:de:Bavay",
     "chapters": [
       {
         "start": 2765,
@@ -38342,7 +38358,7 @@
   {
     "lemma": "Baika",
     "previous": "Baigorisus",
-    "next": "Baikolikon oros",
+    "next": "Βαικολικὸν ὄρος",
     "chapters": [
       {
         "start": 2776,
@@ -38352,7 +38368,7 @@
     ]
   },
   {
-    "lemma": "Baikolikon oros",
+    "lemma": "Βαικολικὸν ὄρος",
     "previous": "Baika",
     "next": "Baimoi",
     "chapters": [
@@ -38365,7 +38381,7 @@
   },
   {
     "lemma": "Baimoi",
-    "previous": "Baikolikon oros",
+    "previous": "Βαικολικὸν ὄρος",
     "next": "Baina",
     "chapters": [
       {
@@ -39256,6 +39272,7 @@
     "lemma": "Bakchios 6",
     "previous": "Bakchios 5",
     "next": "Bakchios 7",
+    "sort_key": "Bakchios 06",
     "chapters": [
       {
         "start": 2789,
@@ -39281,6 +39298,7 @@
     "lemma": "Bakchios 8",
     "previous": "Bakchios 7",
     "next": "Bakchios 9",
+    "sort_key": "Bakchios 08",
     "chapters": [
       {
         "start": 2789,
@@ -39511,7 +39529,7 @@
   {
     "lemma": "Bakchyllos",
     "previous": "Bakchylides 4",
-    "next": "Bakchylos",
+    "next": "Βάκχυλος",
     "chapters": [
       {
         "start": 2801,
@@ -39521,7 +39539,7 @@
     ]
   },
   {
-    "lemma": "Bakchylos",
+    "lemma": "Βάκχυλος",
     "previous": "Bakchyllos",
     "next": "Bakis 1",
     "chapters": [
@@ -39534,7 +39552,7 @@
   },
   {
     "lemma": "Bakis 1",
-    "previous": "Bakchylos",
+    "previous": "Βάκχυλος",
     "next": "Bakis 2",
     "chapters": [
       {
@@ -39559,7 +39577,7 @@
   {
     "lemma": "Bakkabokola",
     "previous": "Bakis 2",
-    "next": "Bakkaris",
+    "next": "Βάκκαρις",
     "chapters": [
       {
         "start": 2803,
@@ -39569,7 +39587,7 @@
     ]
   },
   {
-    "lemma": "Bakkaris",
+    "lemma": "Βάκκαρις",
     "previous": "Bakkabokola",
     "next": "Baktra",
     "chapters": [
@@ -39582,7 +39600,7 @@
   },
   {
     "lemma": "Baktra",
-    "previous": "Bakkaris",
+    "previous": "Βάκκαρις",
     "next": "Baktriane",
     "chapters": [
       {
@@ -39607,7 +39625,7 @@
   {
     "lemma": "Baktrianoi",
     "previous": "Baktriane",
-    "next": "Baktriasmos",
+    "next": "Βακτριασμός",
     "chapters": [
       {
         "start": 2806,
@@ -39617,7 +39635,7 @@
     ]
   },
   {
-    "lemma": "Baktriasmos",
+    "lemma": "Βακτριασμός",
     "previous": "Baktrianoi",
     "next": "Baktros",
     "chapters": [
@@ -39630,7 +39648,7 @@
   },
   {
     "lemma": "Baktros",
-    "previous": "Baktriasmos",
+    "previous": "Βακτριασμός",
     "next": "Bakurios",
     "chapters": [
       {
@@ -39907,7 +39925,7 @@
   {
     "lemma": "Balanos",
     "previous": "Balanaia",
-    "next": "Balantion",
+    "next": "Βαλάντιον",
     "chapters": [
       {
         "start": 2817,
@@ -39917,7 +39935,7 @@
     ]
   },
   {
-    "lemma": "Balantion",
+    "lemma": "Βαλάντιον",
     "previous": "Balanos",
     "next": "Balantiotomoi",
     "chapters": [
@@ -39929,7 +39947,7 @@
   },
   {
     "lemma": "Balantiotomoi",
-    "previous": "Balantion",
+    "previous": "Βαλάντιον",
     "next": "Balantipyrgon",
     "chapters": [
       {
@@ -40179,7 +40197,7 @@
   {
     "lemma": "Balbinus 4",
     "previous": "Balbinus 3",
-    "next": "Balbinus 4a-d",
+    "next": "Βαλβίς",
     "chapters": [
       {
         "start": 2818,
@@ -40264,6 +40282,7 @@
     "lemma": "Balbus 2",
     "previous": "Balbus 1",
     "next": "Balbus 3",
+    "wp_link": "w:de:Balbus (Agrimensor)",
     "chapters": [
       {
         "start": 2820,
@@ -40286,7 +40305,7 @@
   {
     "lemma": "Balbus 4",
     "previous": "Balbus 3",
-    "next": "Balbus 4a-f",
+    "next": "Balbutius",
     "chapters": [
       {
         "start": 2822,
@@ -40839,7 +40858,7 @@
   {
     "lemma": "Ballatha",
     "previous": "Ballanstra",
-    "next": "Ballenaion oros",
+    "next": "Βαλληναῖον ὄρος",
     "chapters": [
       {
         "start": 2830,
@@ -40849,7 +40868,7 @@
     ]
   },
   {
-    "lemma": "Ballenaion oros",
+    "lemma": "Βαλληναῖον ὄρος",
     "previous": "Ballatha",
     "next": "Ballenaios",
     "chapters": [
@@ -40862,7 +40881,7 @@
   },
   {
     "lemma": "Ballenaios",
-    "previous": "Ballenaion oros",
+    "previous": "Βαλληναῖον ὄρος",
     "next": "Ballene",
     "chapters": [
       {
@@ -41975,7 +41994,7 @@
   {
     "lemma": "Bapeni vicus",
     "previous": "Bao",
-    "next": "Bapha",
+    "next": "Βαφά",
     "chapters": [
       {
         "start": 2849,
@@ -41985,7 +42004,7 @@
     ]
   },
   {
-    "lemma": "Bapha",
+    "lemma": "Βαφά",
     "previous": "Bapeni vicus",
     "next": "Baphyras",
     "chapters": [
@@ -41998,7 +42017,7 @@
   },
   {
     "lemma": "Baphyras",
-    "previous": "Bapha",
+    "previous": "Βαφά",
     "next": "Bapincum",
     "chapters": [
       {
@@ -42667,6 +42686,7 @@
   },
   {
     "lemma": "Archebiades 2",
+    "previous": "Apollonios 113",
     "next": "Archelaos 33a"
   },
   {

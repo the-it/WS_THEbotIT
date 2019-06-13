@@ -291,7 +291,7 @@
   {
     "lemma": "Kondylon",
     "previous": "Kondyleatis",
-    "next": "Kondylos",
+    "next": "Κόνδυλος",
     "chapters": [
       {
         "start": 1311,
@@ -301,9 +301,10 @@
     ]
   },
   {
-    "lemma": "Kondylos",
-    "previous": "Kondylon",
+    "lemma": "Κόνδυλος",
+    "previous": "Kondyleatis",
     "next": "Kongustos",
+    "sort_key": "Kondylos",
     "chapters": [
       {
         "start": 1312,
@@ -314,7 +315,7 @@
   },
   {
     "lemma": "Kongustos",
-    "previous": "Kondylos",
+    "previous": "Κόνδυλος",
     "next": "Koniaios",
     "chapters": [
       {
@@ -376,7 +377,7 @@
   {
     "lemma": "Konios",
     "previous": "Konika",
-    "next": "Konipodes",
+    "next": "Κονίποδες",
     "chapters": [
       {
         "start": 1312,
@@ -386,9 +387,9 @@
     ]
   },
   {
-    "lemma": "Konipodes",
+    "lemma": "Κονίποδες",
     "previous": "Konios",
-    "next": "Konis",
+    "next": "Κόνις",
     "chapters": [
       {
         "start": 1312,
@@ -398,9 +399,10 @@
     ]
   },
   {
-    "lemma": "Konis",
-    "previous": "Konipodes",
+    "lemma": "Κόνις",
+    "previous": "Κονίποδες",
     "next": "Konisalos 1",
+    "sort_key": "Konis",
     "chapters": [
       {
         "start": 1312,
@@ -411,7 +413,7 @@
   },
   {
     "lemma": "Konisalos 1",
-    "previous": "Konis",
+    "previous": "Κόνις",
     "next": "Konisalos 2",
     "chapters": [
       {
@@ -533,6 +535,7 @@
     "lemma": "Κογκοβάρ",
     "previous": "Konkatis",
     "next": "Konkolitanos",
+    "sort_key": "Konkobar",
     "chapters": [
       {
         "start": 1317,
@@ -913,7 +916,7 @@
   {
     "lemma": "Kontoporeia",
     "previous": "Kontopaiktes",
-    "next": "Konureis",
+    "next": "Κονουρεῖς",
     "chapters": [
       {
         "start": 1343,
@@ -923,7 +926,7 @@
     ]
   },
   {
-    "lemma": "Konureis",
+    "lemma": "Κονουρεῖς",
     "previous": "Kontoporeia",
     "next": "Konz",
     "redirect": true,
@@ -936,8 +939,9 @@
   },
   {
     "lemma": "Konz",
-    "previous": "Konureis",
+    "previous": "Κονουρεῖς",
     "next": "Konzilienakten",
+    "wp_link": "w:de:Konz",
     "chapters": [
       {
         "start": 1344,
@@ -1103,7 +1107,7 @@
   {
     "lemma": "Kophen, Kophes",
     "previous": "Kophas",
-    "next": "Kophinos",
+    "next": "Κόφινος",
     "chapters": [
       {
         "start": 1361,
@@ -1113,9 +1117,10 @@
     ]
   },
   {
-    "lemma": "Kophinos",
+    "lemma": "Κόφινος",
     "previous": "Kophen, Kophes",
     "next": "Kophos limen 1",
+    "sort_key": "Kophinos",
     "chapters": [
       {
         "start": 1362,
@@ -1126,7 +1131,7 @@
   },
   {
     "lemma": "Kophos limen 1",
-    "previous": "Kophinos",
+    "previous": "Κόφινος",
     "next": "Kophos limen 2",
     "chapters": [
       {
@@ -1357,7 +1362,7 @@
   {
     "lemma": "Koragion",
     "previous": "Koragia",
-    "next": "Koraia",
+    "next": "Κοραία",
     "chapters": [
       {
         "start": 1370,
@@ -1367,9 +1372,9 @@
     ]
   },
   {
-    "lemma": "Koraia",
+    "lemma": "Κοραία",
     "previous": "Koragion",
-    "next": "Koraia 1",
+    "next": "Κοραία 1",
     "chapters": [
       {
         "start": 1370,
@@ -1379,9 +1384,10 @@
     ]
   },
   {
-    "lemma": "Koraia 1",
-    "previous": "Koraia",
-    "next": "Koraia 2",
+    "lemma": "Κοραία 1",
+    "previous": "Κοραία",
+    "next": "Κοραία 2",
+    "sort_key": "Koraia 1",
     "chapters": [
       {
         "start": 1370,
@@ -1391,8 +1397,8 @@
     ]
   },
   {
-    "lemma": "Koraia 2",
-    "previous": "Koraia 1",
+    "lemma": "Κοραία 2",
+    "previous": "Κοραία 1",
     "next": "Korakai",
     "chapters": [
       {
@@ -1404,7 +1410,7 @@
   },
   {
     "lemma": "Korakai",
-    "previous": "Koraia 2",
+    "previous": "Κοραία 2",
     "next": "Korakesion 1",
     "chapters": [
       {
@@ -1518,7 +1524,7 @@
   {
     "lemma": "Koralios 1",
     "previous": "Korakos Petra",
-    "next": "Koralios 2",
+    "next": "Κωράλιος 2",
     "redirect": true,
     "chapters": [
       {
@@ -1528,9 +1534,9 @@
     ]
   },
   {
-    "lemma": "Koralios 2",
+    "lemma": "Κωράλιος 2",
     "previous": "Koralios 1",
-    "next": "Koralios 3",
+    "next": "Κωράλιος 3",
     "redirect": true,
     "chapters": [
       {
@@ -1540,9 +1546,10 @@
     ]
   },
   {
-    "lemma": "Koralios 3",
-    "previous": "Koralios 2",
-    "next": "Koralios 4",
+    "lemma": "Κωράλιος 3",
+    "previous": "Κωράλιος 2",
+    "next": "Κωράλιος 4",
+    "sort_key": "Koralios 3",
     "chapters": [
       {
         "start": 1372,
@@ -1552,9 +1559,10 @@
     ]
   },
   {
-    "lemma": "Koralios 4",
-    "previous": "Koralios 3",
-    "next": "Koralios 5",
+    "lemma": "Κωράλιος 4",
+    "previous": "Κωράλιος 3",
+    "next": "Κωράλιος 5",
+    "sort_key": "Koralios 4",
     "chapters": [
       {
         "start": 1372,
@@ -1564,8 +1572,8 @@
     ]
   },
   {
-    "lemma": "Koralios 5",
-    "previous": "Koralios 4",
+    "lemma": "Κωράλιος 5",
+    "previous": "Κωράλιος 4",
     "next": "Koralla",
     "redirect": true,
     "chapters": [
@@ -1577,7 +1585,7 @@
   },
   {
     "lemma": "Koralla",
-    "previous": "Koralios 5",
+    "previous": "Κωράλιος 5",
     "next": "Koralle",
     "chapters": [
       {
@@ -1789,6 +1797,7 @@
     "lemma": "Κορβιανή",
     "previous": "Korbeuntos",
     "next": "Kordaka",
+    "sort_key": "Korbiane",
     "chapters": [
       {
         "start": 1382,
@@ -1992,7 +2001,7 @@
   {
     "lemma": "Koreestis",
     "previous": "Koreai",
-    "next": "Korene",
+    "next": "Κορήνη",
     "chapters": [
       {
         "start": 1391,
@@ -2002,9 +2011,10 @@
     ]
   },
   {
-    "lemma": "Korene",
+    "lemma": "Κορήνη",
     "previous": "Koreestis",
     "next": "Korese",
+    "sort_key": "Korene",
     "chapters": [
       {
         "start": 1391,
@@ -2015,7 +2025,7 @@
   },
   {
     "lemma": "Korese",
-    "previous": "Korene",
+    "previous": "Κορήνη",
     "next": "Koresia",
     "chapters": [
       {
@@ -2028,7 +2038,7 @@
   {
     "lemma": "Koresia",
     "previous": "Korese",
-    "next": "Koresos",
+    "next": "Κορησός",
     "chapters": [
       {
         "start": 1392,
@@ -2038,7 +2048,7 @@
     ]
   },
   {
-    "lemma": "Koresos",
+    "lemma": "Κορησός",
     "previous": "Koresia",
     "next": "Koresos 1",
     "chapters": [
@@ -2051,7 +2061,7 @@
   },
   {
     "lemma": "Koresos 1",
-    "previous": "Koresos",
+    "previous": "Κορησός",
     "next": "Koresos 2",
     "chapters": [
       {
@@ -7408,7 +7418,7 @@
   {
     "lemma": "Krissos",
     "previous": "Krissa",
-    "next": "Kristenu chorion",
+    "next": "Κριστένου χωρίον",
     "chapters": [
       {
         "start": 1894,
@@ -7417,9 +7427,10 @@
     ]
   },
   {
-    "lemma": "Kristenu chorion",
+    "lemma": "Κριστένου χωρίον",
     "previous": "Krissos",
     "next": "Kritai",
+    "sort_key": "Kristenu",
     "chapters": [
       {
         "start": 1894,
@@ -7430,7 +7441,7 @@
   },
   {
     "lemma": "Kritai",
-    "previous": "Kristenu chorion",
+    "previous": "Κριστένου χωρίον",
     "next": "Kritalla",
     "chapters": [
       {
@@ -11607,7 +11618,7 @@
   {
     "lemma": "Kyme 3",
     "previous": "Kyme 2",
-    "next": "Kymine",
+    "next": "Κυμίνη",
     "chapters": [
       {
         "start": 2476,
@@ -11617,9 +11628,11 @@
     ]
   },
   {
-    "lemma": "Kymine",
+    "lemma": "Κυμίνη",
     "previous": "Kyme 3",
     "next": "Κυμίσαλα",
+    "sort_key": "Kymine",
+    "redirect": "Ktimenai",
     "chapters": [
       {
         "start": 2478,
@@ -11629,7 +11642,7 @@
   },
   {
     "lemma": "Κυμίσαλα",
-    "previous": "Kymine",
+    "previous": "Κυμίνη",
     "next": "Kymodoke",
     "sort_key": "Kymisala",
     "chapters": [

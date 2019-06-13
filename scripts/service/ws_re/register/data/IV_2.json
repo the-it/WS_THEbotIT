@@ -5157,7 +5157,6 @@
   {
     "lemma": "Cura 2b",
     "previous": "Cura 2a",
-    "next": "Cura 2c",
     "redirect": true,
     "chapters": [
       {
@@ -5168,9 +5167,16 @@
     ]
   },
   {
+    "lemma": "Cura 2a - b",
+    "previous": null,
+    "next": "Cura 2c",
+    "redirect": true
+  },
+  {
     "lemma": "Cura 2c",
-    "previous": "Cura 2b",
+    "previous": "Cura 2a - b",
     "next": "Cura 2d",
+    "redirect": true,
     "chapters": [
       {
         "start": 1770,
@@ -5183,6 +5189,7 @@
     "lemma": "Cura 2d",
     "previous": "Cura 2c",
     "next": "Cura 3",
+    "redirect": true,
     "chapters": [
       {
         "start": 1771,
@@ -5900,6 +5907,7 @@
     "lemma": "Curretia",
     "previous": "Curnonium",
     "next": "Curritis",
+    "wp_link": "w:de:Corrèze (Fluss)",
     "chapters": [
       {
         "start": 1845,
@@ -5924,6 +5932,7 @@
     "lemma": "Cursor",
     "previous": "Curritis",
     "next": "Cursu",
+    "redirect": "Caelius 22",
     "chapters": [
       {
         "start": 1846,
@@ -5935,6 +5944,7 @@
     "lemma": "Cursu",
     "previous": "Cursor",
     "next": "Cursus publicus",
+    "redirect": "Curiga",
     "chapters": [
       {
         "start": 1846,
@@ -5982,6 +5992,7 @@
     "lemma": "Curtiana",
     "previous": "Curta 2",
     "next": "Curtilius 1",
+    "redirect": "Crumerum",
     "chapters": [
       {
         "start": 1863,
@@ -6029,6 +6040,7 @@
     "lemma": "Curtius 1",
     "previous": "Curtisius",
     "next": "Curtius 2",
+    "sort_key": "Curtius 01",
     "chapters": [
       {
         "start": 1863,
@@ -6067,6 +6079,7 @@
     "lemma": "Curtius 4",
     "previous": "Curtius 3",
     "next": "Curtius 5",
+    "sort_key": "Curtius 04",
     "chapters": [
       {
         "start": 1863,
@@ -6079,6 +6092,7 @@
     "lemma": "Curtius 5",
     "previous": "Curtius 4",
     "next": "Curtius 6",
+    "sort_key": "Curtius 05",
     "chapters": [
       {
         "start": 1863,
@@ -6091,6 +6105,7 @@
     "lemma": "Curtius 6",
     "previous": "Curtius 5",
     "next": "Curtius 7",
+    "sort_key": "Curtius 06",
     "chapters": [
       {
         "start": 1864,
@@ -6103,6 +6118,7 @@
     "lemma": "Curtius 7",
     "previous": "Curtius 6",
     "next": "Curtius 8",
+    "sort_key": "Curtius 07",
     "chapters": [
       {
         "start": 1864,
@@ -6115,6 +6131,7 @@
     "lemma": "Curtius 8",
     "previous": "Curtius 7",
     "next": "Curtius 9",
+    "sort_key": "Curtius 08",
     "chapters": [
       {
         "start": 1865,
@@ -7530,6 +7547,7 @@
     "lemma": "Dachs",
     "previous": "Dachinabades",
     "next": "Dacia",
+    "wp_link": "w:de:Dachs",
     "chapters": [
       {
         "start": 1948,
@@ -13574,6 +13592,8 @@
     "lemma": "Dardanos 1",
     "previous": "Dardanis",
     "next": "Dardanos 2",
+    "sort_key": "Dardanos 01",
+    "wp_link": "w:de:Dardanos (Stadt)",
     "chapters": [
       {
         "start": 2163,
@@ -13586,6 +13606,7 @@
     "lemma": "Dardanos 2",
     "previous": "Dardanos 1",
     "next": "Dardanos 3",
+    "sort_key": "Dardanos 02",
     "chapters": [
       {
         "start": 2164,
@@ -13598,6 +13619,8 @@
     "lemma": "Dardanos 3",
     "previous": "Dardanos 2",
     "next": "Dardanos 4",
+    "sort_key": "Dardanos 03",
+    "wp_link": "w:de:Dardanos (Sohn des Zeus)",
     "chapters": [
       {
         "start": 2164,
@@ -18078,6 +18101,7 @@
     "lemma": "Deïnome",
     "previous": "Deinomachos",
     "next": "Deinomenes 1",
+    "sort_key": "Deinome",
     "chapters": [
       {
         "start": 2394,
@@ -18883,7 +18907,7 @@
   {
     "lemma": "Deïthynos",
     "previous": "Deithon",
-    "next": "Deka, oi",
+    "next": "οἱ Δέκα",
     "chapters": [
       {
         "start": 2409,
@@ -19620,6 +19644,7 @@
     "lemma": "Delmatius 2",
     "previous": "Delmatius 1",
     "next": "Delmatius 3",
+    "wp_link": "w:de:Flavius Dalmatius",
     "chapters": [
       {
         "start": 2455,
@@ -19632,6 +19657,7 @@
     "lemma": "Delmatius 3",
     "previous": "Delmatius 2",
     "next": "Delmatius 4",
+    "wp_link": "w:de:Dalmatius",
     "chapters": [
       {
         "start": 2456,

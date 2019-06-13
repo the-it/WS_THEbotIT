@@ -326,7 +326,7 @@
     "lemma": "Pontifex, Pontifex maximus, Pontificii Libri",
     "previous": "Pontienus",
     "next": "Pontificius",
-    "redirect": true,
+    "wp_link": "w:de:Pontifex",
     "chapters": [
       {
         "start": 27,
@@ -1367,6 +1367,7 @@
   {
     "lemma": "Pontos 1",
     "previous": "Pontoreia",
+    "next": "Pontos 2",
     "chapters": [
       {
         "start": 47,
@@ -1376,7 +1377,14 @@
     ]
   },
   {
+    "lemma": "Pontos 2",
+    "previous": "Pontos 1",
+    "next": "Pontos Euxeinos",
+    "wp_link": "w:de:Königreich Pontos"
+  },
+  {
     "lemma": "Pontos Euxeinos",
+    "previous": "Pontos 2",
     "next": "Pontyris",
     "wp_link": "w:de:Schwarzes Meer"
   },
