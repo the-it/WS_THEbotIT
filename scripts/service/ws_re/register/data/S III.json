@@ -9118,7 +9118,7 @@
   {
     "lemma": "Caliadis",
     "previous": "Caliacus",
-    "next": "Calidius 6a",
+    "next": "Calidius 4",
     "chapters": [
       {
         "start": 225,
@@ -9128,8 +9128,13 @@
     ]
   },
   {
-    "lemma": "Calidius 6a",
+    "lemma": "Calidius 4",
     "previous": "Caliadis",
+    "next": "Calidius 6a"
+  },
+  {
+    "lemma": "Calidius 6a",
+    "previous": "Calidius 4",
     "next": "Callistratus",
     "chapters": [
       {
@@ -9178,7 +9183,6 @@
   {
     "lemma": "Calpurnius 73a",
     "previous": "Calpurnius 46a",
-    "next": "Calus",
     "chapters": [
       {
         "start": 230,
@@ -9188,8 +9192,12 @@
     ]
   },
   {
+    "lemma": "Calvisius 13",
+    "next": "Calus"
+  },
+  {
     "lemma": "Calus",
-    "previous": "Calpurnius 73a",
+    "previous": "Calvisius 13",
     "next": "Calvus 1",
     "chapters": [
       {
@@ -9283,7 +9291,6 @@
   {
     "lemma": "Camloriga",
     "previous": "Caminus",
-    "next": "Caninianae figlinae",
     "chapters": [
       {
         "start": 231,
@@ -9293,9 +9300,13 @@
     ]
   },
   {
+    "lemma": "Camulus",
+    "next": "Caninianae figlinae"
+  },
+  {
     "lemma": "Caninianae figlinae",
-    "previous": "Camloriga",
-    "next": "Campanus 4",
+    "previous": "Camulus",
+    "next": "Caninius a",
     "chapters": [
       {
         "start": 231,
@@ -9305,8 +9316,11 @@
     ]
   },
   {
+    "lemma": "Caninius a",
+    "previous": "Caninianae figlinae"
+  },
+  {
     "lemma": "Campanus 4",
-    "previous": "Caninianae figlinae",
     "next": "Camulatus 2",
     "chapters": [
       {
@@ -9319,7 +9333,6 @@
   {
     "lemma": "Camulatus 2",
     "previous": "Campanus 4",
-    "next": "Caninius a",
     "chapters": [
       {
         "start": 232,
@@ -9329,9 +9342,13 @@
     ]
   },
   {
+    "lemma": "Caninianae figlinae",
+    "next": "Caninius a"
+  },
+  {
     "lemma": "Caninius a",
-    "previous": "Camulatus 2",
-    "next": "Canobus",
+    "previous": "Caninianae figlinae",
+    "next": "Caninius 4",
     "chapters": [
       {
         "start": 232,
@@ -9341,8 +9358,18 @@
     ]
   },
   {
-    "lemma": "Canobus",
+    "lemma": "Caninius 4",
     "previous": "Caninius a",
+    "next": "Cannicus"
+  },
+  {
+    "lemma": "Cannicus",
+    "previous": "Caninius 4",
+    "next": "Canobus"
+  },
+  {
+    "lemma": "Canobus",
+    "previous": "Cannicus",
     "next": "Canrucatus",
     "chapters": [
       {
@@ -9366,7 +9393,6 @@
   {
     "lemma": "Cantaber",
     "previous": "Canrucatus",
-    "next": "ad Cantunas novas",
     "chapters": [
       {
         "start": 233,
@@ -9376,9 +9402,14 @@
     ]
   },
   {
+    "lemma": "Canrucatus",
+    "next": "ad Cantunas novas"
+  },
+  {
     "lemma": "ad Cantunas novas",
-    "previous": "Cantaber",
+    "previous": "Canrucatus",
     "next": "Cantus",
+    "sort_key": "Cantunas novas, ad",
     "chapters": [
       {
         "start": 233,
@@ -9402,7 +9433,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolinus 8",
+    "next": "Capitolium 3",
     "chapters": [
       {
         "start": 233,
@@ -9412,9 +9443,14 @@
     ]
   },
   {
-    "lemma": "Capitolinus 8",
+    "lemma": "Capitolium 3",
     "previous": "Capienacus oder Capionacus",
-    "next": "Capitolium 3",
+    "next": "Capitolinus 8"
+  },
+  {
+    "lemma": "Capitolinus 8",
+    "previous": "Capitolium 3",
+    "next": "Caprasius",
     "chapters": [
       {
         "start": 234,
@@ -9424,8 +9460,16 @@
     ]
   },
   {
-    "lemma": "Capitolium 3",
+    "lemma": "Caprasius",
     "previous": "Capitolinus 8",
+    "next": "Caprius a"
+  },
+  {
+    "lemma": "Caprius a",
+    "previous": "Caprasius"
+  },
+  {
+    "lemma": "Capitolium 3",
     "next": "Caprasius",
     "chapters": [
       {
@@ -9486,7 +9530,7 @@
   {
     "lemma": "Caranto",
     "previous": "Carantius",
-    "next": "Caranus oder Carantus",
+    "next": "Caranus, Carantus",
     "chapters": [
       {
         "start": 234,
@@ -9496,20 +9540,18 @@
     ]
   },
   {
-    "lemma": "Caranus oder Carantus",
+    "lemma": "Caranus, Carantus",
     "previous": "Caranto",
-    "next": "Caratacus 2",
-    "chapters": [
-      {
-        "start": 235,
-        "end": 235,
-        "author": "Hähnle"
-      }
-    ]
+    "next": "Caranusca"
+  },
+  {
+    "lemma": "Caranusca",
+    "previous": "Caranus, Carantus",
+    "next": "Caratacus 2"
   },
   {
     "lemma": "Caratacus 2",
-    "previous": "Caranus oder Carantus",
+    "previous": "Caranusca",
     "next": "Carisius a",
     "chapters": [
       {
@@ -9521,7 +9563,15 @@
   },
   {
     "lemma": "Carisius a",
-    "previous": "Caratacus 2",
+    "previous": "Caratacus 2"
+  },
+  {
+    "lemma": "Caratacus",
+    "next": "Carisius a"
+  },
+  {
+    "lemma": "Carisius a",
+    "previous": "Caratacus",
     "next": "Carisso",
     "chapters": [
       {
@@ -9558,7 +9608,7 @@
   {
     "lemma": "Caromarus",
     "previous": "Carminius 9",
-    "next": "Cartoriana",
+    "next": "Carrodunum 2",
     "chapters": [
       {
         "start": 235,
@@ -9568,9 +9618,14 @@
     ]
   },
   {
-    "lemma": "Cartoriana",
+    "lemma": "Carrodunum 2",
     "previous": "Caromarus",
-    "next": "Cassiolus",
+    "next": "Cartoriana"
+  },
+  {
+    "lemma": "Cartoriana",
+    "previous": "Carrodunum 2",
+    "next": "Caruces",
     "chapters": [
       {
         "start": 236,
@@ -9580,9 +9635,22 @@
     ]
   },
   {
-    "lemma": "Cassiolus",
+    "lemma": "Caruces",
     "previous": "Cartoriana",
-    "next": "Casillus",
+    "next": "Cascellius 1"
+  },
+  {
+    "lemma": "Cascellius 1",
+    "previous": "Caruces"
+  },
+  {
+    "lemma": "Casius 2",
+    "next": "Cassiolus"
+  },
+  {
+    "lemma": "Cassiolus",
+    "previous": "Casius 2",
+    "next": "Cassius 20",
     "chapters": [
       {
         "start": 236,
@@ -9592,8 +9660,31 @@
     ]
   },
   {
-    "lemma": "Casillus",
+    "lemma": "Cassius 20",
     "previous": "Cassiolus",
+    "next": "Cassius 65"
+  },
+  {
+    "lemma": "Cassius 65",
+    "previous": "Cassius 20",
+    "next": "Cassius 70"
+  },
+  {
+    "lemma": "Cassius 70",
+    "previous": "Cassius 65"
+  },
+  {
+    "lemma": "Caruces",
+    "next": "Cascellius 1"
+  },
+  {
+    "lemma": "Cascellius 1",
+    "previous": "Caruces",
+    "next": "Casillus"
+  },
+  {
+    "lemma": "Casillus",
+    "previous": "Cascellius 1",
     "next": "Casius 2",
     "chapters": [
       {
@@ -9606,7 +9697,7 @@
   {
     "lemma": "Casius 2",
     "previous": "Casillus",
-    "next": "Cassius 91a",
+    "next": "Cassiolus",
     "chapters": [
       {
         "start": 237,
@@ -9616,8 +9707,26 @@
     ]
   },
   {
+    "lemma": "Cassiolus",
+    "previous": "Casius 2"
+  },
+  {
+    "lemma": "Cassius 70",
+    "next": "Cassius 85"
+  },
+  {
+    "lemma": "Cassius 85",
+    "previous": "Cassius 70",
+    "next": "Cassius 87"
+  },
+  {
+    "lemma": "Cassius 87",
+    "previous": "Cassius 85",
+    "next": "Cassius 91a"
+  },
+  {
     "lemma": "Cassius 91a",
-    "previous": "Casius 2",
+    "previous": "Cassius 87",
     "next": "Cassutus",
     "chapters": [
       {
@@ -9630,7 +9739,7 @@
   {
     "lemma": "Cassutus",
     "previous": "Cassius 91a",
-    "next": "Castricianae figlinae",
+    "next": "Castra, Castrum 33",
     "chapters": [
       {
         "start": 237,
@@ -9640,9 +9749,14 @@
     ]
   },
   {
-    "lemma": "Castricianae figlinae",
+    "lemma": "Castra, Castrum 33",
     "previous": "Cassutus",
-    "next": "Castus 5",
+    "next": "Castricianae figlinae"
+  },
+  {
+    "lemma": "Castricianae figlinae",
+    "previous": "Castra, Castrum 33",
+    "next": "Castricius 6",
     "chapters": [
       {
         "start": 237,
@@ -9652,8 +9766,17 @@
     ]
   },
   {
-    "lemma": "Castus 5",
+    "lemma": "Castricius 6",
     "previous": "Castricianae figlinae",
+    "next": "Castus 2a",
+    "sort_key": "Castricius 06"
+  },
+  {
+    "lemma": "Castus 2a",
+    "previous": "Castricius 6"
+  },
+  {
+    "lemma": "Castus 5",
     "next": "Castus 6",
     "chapters": [
       {
@@ -9666,7 +9789,7 @@
   {
     "lemma": "Castus 6",
     "previous": "Castus 5",
-    "next": "Catius 9",
+    "next": "Cataracta",
     "chapters": [
       {
         "start": 237,
@@ -9676,8 +9799,11 @@
     ]
   },
   {
+    "lemma": "Cataracta",
+    "previous": "Castus 6"
+  },
+  {
     "lemma": "Catius 9",
-    "previous": "Castus 6",
     "next": "Catullus 1",
     "chapters": [
       {
@@ -9701,7 +9827,6 @@
   {
     "lemma": "Catullus 2",
     "previous": "Catullus 1",
-    "next": "Caturniacus 1",
     "chapters": [
       {
         "start": 238,
@@ -9711,8 +9836,13 @@
     ]
   },
   {
+    "lemma": "Catullus 6b",
+    "previous": null,
+    "next": "Caturniacus 1"
+  },
+  {
     "lemma": "Caturniacus 1",
-    "previous": "Catullus 2",
+    "previous": "Catullus 6b",
     "next": "Catus a",
     "chapters": [
       {
@@ -9810,6 +9940,7 @@
     "lemma": "Celsinus 9",
     "previous": "Celer 15",
     "next": "Celsus 25",
+    "sort_key": "Celsinus 09",
     "chapters": [
       {
         "start": 240,
@@ -9936,11 +10067,12 @@
   },
   {
     "lemma": "Cercina",
-    "previous": "Ceraria (Caeraria, Geraria) figlina"
+    "previous": "Ceraria (Caeraria, Geraria) figlina",
+    "next": "Cerdo"
   },
   {
     "lemma": "Cerdo",
-    "previous": null,
+    "previous": "Cercina",
     "next": "Cerialis a",
     "chapters": [
       {
@@ -10522,13 +10654,17 @@
   },
   {
     "lemma": "Claudius",
-    "next": "Claudius 20a",
     "sort_key": "Claudius 000"
+  },
+  {
+    "lemma": "Claudius",
+    "next": "Claudius 20a"
   },
   {
     "lemma": "Claudius 20a",
     "previous": "Claudius",
-    "next": "Clemens 10",
+    "next": "Claudius 30",
+    "sort_key": "Claudius 020a",
     "chapters": [
       {
         "start": 252,
@@ -10538,8 +10674,11 @@
     ]
   },
   {
+    "lemma": "Claudius 30",
+    "previous": "Claudius 20a"
+  },
+  {
     "lemma": "Clemens 10",
-    "previous": "Claudius 20a",
     "chapters": [
       {
         "start": 253,
@@ -10966,7 +11105,12 @@
   },
   {
     "lemma": "Cornelius 105",
-    "previous": "Cornelius 42a"
+    "previous": "Cornelius 42a",
+    "next": "Cornelius 141"
+  },
+  {
+    "lemma": "Cornelius 141",
+    "previous": "Cornelius 105"
   },
   {
     "lemma": "Cornelius 202",
@@ -10986,7 +11130,22 @@
   },
   {
     "lemma": "Cornelius 203",
-    "previous": "Cornelius 202a"
+    "previous": "Cornelius 202a",
+    "next": "Cornelius 208a. b"
+  },
+  {
+    "lemma": "Cornelius 208a. b",
+    "previous": "Cornelius 203",
+    "next": "Cornelius 209"
+  },
+  {
+    "lemma": "Cornelius 209",
+    "previous": "Cornelius 208a. b",
+    "next": "Cornelius 219"
+  },
+  {
+    "lemma": "Cornelius 219",
+    "previous": "Cornelius 209"
   },
   {
     "lemma": "Cornelius 208",
@@ -11431,7 +11590,6 @@
   {
     "lemma": "Crutisiones coloni",
     "previous": "Crummus",
-    "next": "Cunissa",
     "chapters": [
       {
         "start": 265,
@@ -11441,9 +11599,13 @@
     ]
   },
   {
+    "lemma": "Crutisiones",
+    "next": "Cunissa"
+  },
+  {
     "lemma": "Cunissa",
-    "previous": "Crutisiones coloni",
-    "next": "Cupa; Cuparius",
+    "previous": "Crutisiones",
+    "next": "Cupa, Cuparius",
     "chapters": [
       {
         "start": 265,
@@ -11453,9 +11615,17 @@
     ]
   },
   {
-    "lemma": "Cupa; Cuparius",
+    "lemma": "Cupa, Cuparius",
     "previous": "Cunissa",
     "next": "Cupitus",
+    "redirect": "Dolium"
+  },
+  {
+    "lemma": "Cupitus",
+    "previous": "Cupa, Cuparius"
+  },
+  {
+    "lemma": "Cupa; Cuparius",
     "chapters": [
       {
         "start": 265,
@@ -11464,8 +11634,12 @@
     ]
   },
   {
+    "lemma": "Cupa, Cuparius",
+    "next": "Cupitus"
+  },
+  {
     "lemma": "Cupitus",
-    "previous": "Cupa; Cuparius",
+    "previous": "Cupa, Cuparius",
     "next": "Curiunnus",
     "chapters": [
       {
@@ -11478,7 +11652,7 @@
   {
     "lemma": "Curiunnus",
     "previous": "Cupitus",
-    "next": "Curmillus",
+    "next": "Curius 3",
     "chapters": [
       {
         "start": 265,
@@ -11488,8 +11662,16 @@
     ]
   },
   {
+    "lemma": "Curius 3",
+    "previous": "Curiunnus"
+  },
+  {
+    "lemma": "Curius 8",
+    "next": "Curmillus"
+  },
+  {
     "lemma": "Curmillus",
-    "previous": "Curiunnus",
+    "previous": "Curius 8",
     "next": "Curtianae figlinae",
     "chapters": [
       {
@@ -12114,7 +12296,6 @@
   {
     "lemma": "Deiotaros 4",
     "previous": "Deiotaros 2",
-    "next": "Deiotaros 5",
     "chapters": [
       {
         "start": 328,
@@ -12124,8 +12305,12 @@
     ]
   },
   {
+    "lemma": "Deiotarus 4",
+    "next": "Deiotaros 5"
+  },
+  {
     "lemma": "Deiotaros 5",
-    "previous": "Deiotaros 4",
+    "previous": "Deiotarus 4",
     "next": "Dekaineos",
     "chapters": [
       {
@@ -14840,7 +15025,13 @@
   {
     "lemma": "Catius 8",
     "previous": "Cataracta",
+    "next": "Catius 8a",
     "sort_key": "Catius 08"
+  },
+  {
+    "lemma": "Catius 8a",
+    "previous": "Catius 8",
+    "sort_key": "Catius 08a"
   },
   {
     "lemma": "Fannius 1",

@@ -3576,7 +3576,7 @@
   {
     "lemma": "Hilarodia",
     "previous": "Hilarius 12",
-    "next": "Hilartragoedie",
+    "next": "Hilarotragoedie",
     "redirect": true,
     "chapters": [
       {
@@ -3586,20 +3586,13 @@
     ]
   },
   {
-    "lemma": "Hilartragoedie",
+    "lemma": "Hilarotragoedie",
     "previous": "Hilarodia",
-    "next": "Hilarus 1",
-    "chapters": [
-      {
-        "start": 1604,
-        "end": 1604,
-        "author": "Körte"
-      }
-    ]
+    "next": "Hilarus 1"
   },
   {
     "lemma": "Hilarus 1",
-    "previous": "Hilartragoedie",
+    "previous": "Hilarotragoedie",
     "next": "Hilarus 2",
     "chapters": [
       {
@@ -11466,6 +11459,7 @@
     "lemma": "Hortensius",
     "previous": "Hortensianus",
     "next": "Hortensius 1",
+    "sort_key": "Hortensius 0",
     "chapters": [
       {
         "start": 2465,
@@ -11513,6 +11507,7 @@
     "lemma": "Hortensius 4",
     "previous": "Hortensius 3",
     "next": "Hortensius 5",
+    "sort_key": "Hortensius 04",
     "chapters": [
       {
         "start": 2466,
@@ -11525,6 +11520,7 @@
     "lemma": "Hortensius 5",
     "previous": "Hortensius 4",
     "next": "Hortensius 6",
+    "sort_key": "Hortensius 05",
     "chapters": [
       {
         "start": 2466,
@@ -11537,6 +11533,7 @@
     "lemma": "Hortensius 6",
     "previous": "Hortensius 5",
     "next": "Hortensius 7",
+    "sort_key": "Hortensius 06",
     "chapters": [
       {
         "start": 2466,
@@ -11549,6 +11546,7 @@
     "lemma": "Hortensius 7",
     "previous": "Hortensius 6",
     "next": "Hortensius 8",
+    "sort_key": "Hortensius 07",
     "chapters": [
       {
         "start": 2467,
@@ -11574,6 +11572,7 @@
     "lemma": "Hortensius 9",
     "previous": "Hortensius 8",
     "next": "Hortensius 10",
+    "sort_key": "Hortensius 09",
     "chapters": [
       {
         "start": 2469,
@@ -11659,6 +11658,7 @@
     "lemma": "Hortensius 16",
     "previous": "Hortensius 15",
     "next": "Hortensius 17",
+    "wp_link": "w:de:Hortensia",
     "chapters": [
       {
         "start": 2481,
@@ -12730,6 +12730,7 @@
     "lemma": "Hunnum",
     "previous": "Hunni",
     "next": "Hurma",
+    "wp_link": "w:de:Onnum",
     "chapters": [
       {
         "start": 2615,
