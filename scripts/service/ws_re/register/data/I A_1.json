@@ -1245,8 +1245,9 @@
   },
   {
     "lemma": "Rama, Ramath, Ramatha 1",
-    "previous": "Rama, Ramath, Ramatha",
+    "previous": "Rama",
     "next": "Rama, Ramath, Ramatha 2",
+    "wp_link": "w:de:Ramathaim-Zophim",
     "chapters": [
       {
         "start": 132,
@@ -1307,6 +1308,7 @@
     "lemma": "Rama, Ramath, Ramatha 6",
     "previous": "Rama, Ramath, Ramatha 5",
     "next": "Ramae",
+    "wp_link": "w:de:Ramot-Gilead",
     "chapters": [
       {
         "start": 133,
@@ -2195,6 +2197,7 @@
     "lemma": "Ῥαψεῖς",
     "previous": "Ῥάψα 2",
     "next": "Ῥάψιοι",
+    "sort_key": "Rapseis",
     "chapters": [
       {
         "start": 237,
@@ -2281,7 +2284,7 @@
   {
     "lemma": "Raptus 2",
     "previous": "Raptus 1",
-    "next": "̓Ράρ",
+    "next": " ̓Ράρ",
     "wp_link": "w:de:Entführung",
     "chapters": [
       {
@@ -2292,9 +2295,10 @@
     ]
   },
   {
-    "lemma": "̓Ράρ",
+    "lemma": " ̓Ράρ",
     "previous": "Raptus 2",
     "next": "Raraunum",
+    "sort_key": "Rar",
     "chapters": [
       {
         "start": 251,
@@ -2305,7 +2309,7 @@
   },
   {
     "lemma": "Raraunum",
-    "previous": "̓Ράρ",
+    "previous": " ̓Ράρ",
     "next": "Rarentus",
     "chapters": [
       {
@@ -2318,7 +2322,7 @@
   {
     "lemma": "Rarentus",
     "previous": "Raraunum",
-    "next": " ̓Ραρία",
+    "next": "̓Ραρία",
     "chapters": [
       {
         "start": 251,
@@ -2328,7 +2332,7 @@
     ]
   },
   {
-    "lemma": " ̓Ραρία",
+    "lemma": "̓Ραρία",
     "previous": "Rarentus",
     "next": "̓Ραριάς",
     "sort_key": "Raria",
@@ -2342,8 +2346,8 @@
   },
   {
     "lemma": "̓Ραριάς",
-    "previous": " ̓Ραρία",
-    "next": " ̓Ράριον",
+    "previous": "̓Ραρία",
+    "next": "̓Ράριον",
     "sort_key": "Rarias",
     "chapters": [
       {
@@ -2354,9 +2358,9 @@
     ]
   },
   {
-    "lemma": " ̓Ράριον",
+    "lemma": "̓Ράριον",
     "previous": "̓Ραριάς",
-    "next": "Raros",
+    "next": " ̓Ρᾶρος",
     "sort_key": "Rarion",
     "chapters": [
       {
@@ -2367,9 +2371,10 @@
     ]
   },
   {
-    "lemma": "Raros",
-    "previous": " ̓Ράριον",
+    "lemma": " ̓Ρᾶρος",
+    "previous": "̓Ράριον",
     "next": "Rarungae",
+    "sort_key": "Raros",
     "chapters": [
       {
         "start": 252,
@@ -2380,7 +2385,7 @@
   },
   {
     "lemma": "Rarungae",
-    "previous": "Raros",
+    "previous": " ̓Ρᾶρος",
     "next": "Ῥασέννας",
     "chapters": [
       {
@@ -2576,6 +2581,7 @@
     "lemma": "Rat(a?)",
     "previous": "Ῥαστία",
     "next": "Ratacenses",
+    "sort_key": "Rata",
     "chapters": [
       {
         "start": 258,
@@ -2612,6 +2618,7 @@
     "lemma": "Ρατακήνσιοι",
     "previous": "Ratae Coritanorum",
     "next": "Ratamatus",
+    "sort_key": "Ratakensioi",
     "chapters": [
       {
         "start": 259,
@@ -2832,7 +2839,7 @@
   {
     "lemma": "Ratomagus 2",
     "previous": "Ratomagus 1",
-    "next": "Ratostabios",
+    "next": "Ῥατοστάβιος",
     "chapters": [
       {
         "start": 266,
@@ -2842,9 +2849,10 @@
     ]
   },
   {
-    "lemma": "Ratostabios",
+    "lemma": "Ῥατοστάβιος",
     "previous": "Ratomagus 2",
     "next": "Ratte",
+    "sort_key": "Ratostabios",
     "chapters": [
       {
         "start": 266,
@@ -2855,7 +2863,7 @@
   },
   {
     "lemma": "Ratte",
-    "previous": "Ratostabios",
+    "previous": "Ῥατοστάβιος",
     "next": "Rauchopfer",
     "chapters": [
       {
@@ -4897,6 +4905,7 @@
     "lemma": "Rehoboth 1",
     "previous": "Rehob 3",
     "next": "Rehoboth 2",
+    "wp_link": "w:de:Rehoboth (Begriffsklärung)",
     "chapters": [
       {
         "start": 514,
@@ -4909,6 +4918,7 @@
     "lemma": "Rehoboth 2",
     "previous": "Rehoboth 1",
     "next": "Rehoboth 3",
+    "wp_link": "w:de:Rehoboth (Begriffsklärung)",
     "chapters": [
       {
         "start": 514,
@@ -9417,7 +9427,7 @@
   {
     "lemma": "Rogator 2",
     "previous": "Rogator 1",
-    "next": "Rogatorion",
+    "next": "Ῥογατόριον",
     "chapters": [
       {
         "start": 1000,
@@ -9427,7 +9437,7 @@
     ]
   },
   {
-    "lemma": "Rogatorion",
+    "lemma": "Ῥογατόριον",
     "previous": "Rogator 2",
     "next": "Rogatus 1",
     "chapters": [
@@ -9440,7 +9450,7 @@
   },
   {
     "lemma": "Rogatus 1",
-    "previous": "Rogatorion",
+    "previous": "Ῥογατόριον",
     "next": "Rogatus 2",
     "chapters": [
       {
@@ -10964,6 +10974,7 @@
     "lemma": "Roscius 2",
     "previous": "Roscius 1",
     "next": "Roscius 3",
+    "sort_key": "Roscius 02",
     "chapters": [
       {
         "start": 1116,
@@ -10988,6 +10999,8 @@
     "lemma": "Roscius 4",
     "previous": "Roscius 3",
     "next": "Roscius 5",
+    "sort_key": "Roscius 04",
+    "wp_link": "w:de:Lucius Roscius",
     "chapters": [
       {
         "start": 1116,
@@ -13199,6 +13212,7 @@
     "lemma": "Rufinus 9",
     "previous": "Rufinus 8",
     "next": "Rufinus 10",
+    "sort_key": "Rufinus 09",
     "chapters": [
       {
         "start": 1186,
@@ -13454,7 +13468,7 @@
     "lemma": "Rufinus 30",
     "previous": "Rufinus 29",
     "next": "Rufinus 31",
-    "redirect": true,
+    "redirect": "Octavianus 6",
     "chapters": [
       {
         "start": 1196,

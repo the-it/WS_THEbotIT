@@ -4218,7 +4218,7 @@
   {
     "lemma": "Drosache",
     "previous": "Dropion",
-    "next": "Drossel",
+    "next": "Drosera",
     "chapters": [
       {
         "start": 1721,
@@ -4228,8 +4228,13 @@
     ]
   },
   {
-    "lemma": "Drossel",
+    "lemma": "Drosera",
     "previous": "Drosache",
+    "next": "Drossel"
+  },
+  {
+    "lemma": "Drossel",
+    "previous": "Drosera",
     "next": "Droviae",
     "chapters": [
       {
@@ -13545,7 +13550,7 @@
   {
     "lemma": "Ekrebel",
     "previous": "Ekprepes",
-    "next": "Ekrektike chora",
+    "next": "Ekrhegma",
     "chapters": [
       {
         "start": 2216,
@@ -22626,6 +22631,7 @@
     "lemma": "Epha",
     "previous": "Epeur",
     "next": "Ephaptis",
+    "wp_link": "w:de:Haifa",
     "chapters": [
       {
         "start": 2735,

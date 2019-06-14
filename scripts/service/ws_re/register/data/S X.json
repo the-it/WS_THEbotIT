@@ -2455,7 +2455,13 @@
     "previous": "Cillae"
   },
   {
+    "lemma": "Claudius 242a",
+    "next": "Clodius 73"
+  },
+  {
     "lemma": "Clodius 73",
+    "previous": "Claudius 242a",
+    "next": "cohortes urbanae",
     "chapters": [
       {
         "start": 131,
@@ -2467,6 +2473,7 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
+    "next": null,
     "redirect": "urbanae cohortes"
   },
   {

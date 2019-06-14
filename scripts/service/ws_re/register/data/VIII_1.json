@@ -4533,7 +4533,7 @@
   },
   {
     "lemma": "Heraklammon",
-    "previous": "Heraites Hormos",
+    "previous": "Ἡραΐτης Ὅρμος",
     "next": "Heraklas 1",
     "chapters": [
       {
@@ -7072,7 +7072,8 @@
   {
     "lemma": "Herculanus 6",
     "previous": "Herculanus 5",
-    "next": "ad Herculem 1",
+    "next": "Herculea porticus",
+    "wp_link": "w:de:en:Bassus Herculanus",
     "chapters": [
       {
         "start": 549,
@@ -7082,9 +7083,13 @@
     ]
   },
   {
+    "lemma": "Herculea porticus",
+    "previous": "Herculanus 6"
+  },
+  {
     "lemma": "ad Herculem 1",
-    "previous": "Herculanus 6",
     "next": "ad Herculem 2",
+    "sort_key": "Herculem 1, ad",
     "chapters": [
       {
         "start": 549,
@@ -7097,6 +7102,7 @@
     "lemma": "ad Herculem 2",
     "previous": "ad Herculem 1",
     "next": "ad Herculem 3",
+    "sort_key": "Herculem 2, ad",
     "chapters": [
       {
         "start": 549,
@@ -7109,6 +7115,7 @@
     "lemma": "ad Herculem 3",
     "previous": "ad Herculem 2",
     "next": "ad Herculem 4",
+    "sort_key": "Herculem 3, ad",
     "chapters": [
       {
         "start": 549,
@@ -7121,6 +7128,7 @@
     "lemma": "ad Herculem 4",
     "previous": "ad Herculem 3",
     "next": "ad Herculem 5",
+    "sort_key": "Herculem 4, ad",
     "chapters": [
       {
         "start": 550,
@@ -7133,6 +7141,7 @@
     "lemma": "ad Herculem 5",
     "previous": "ad Herculem 4",
     "next": "ad Herculem 6",
+    "sort_key": "Herculem 5, ad",
     "chapters": [
       {
         "start": 550,
@@ -7145,6 +7154,7 @@
     "lemma": "ad Herculem 6",
     "previous": "ad Herculem 5",
     "next": "ad Herculem 7",
+    "sort_key": "Herculem 6, ad",
     "chapters": [
       {
         "start": 550,
@@ -7157,6 +7167,7 @@
     "lemma": "ad Herculem 7",
     "previous": "ad Herculem 6",
     "next": "Herculente",
+    "sort_key": "Herculem 7, ad",
     "chapters": [
       {
         "start": 550,
@@ -10163,6 +10174,8 @@
     "lemma": "Hermippos 6",
     "previous": "Hermippos 5",
     "next": "Hermippos 7",
+    "sort_key": "Hermippos 06",
+    "wp_link": "w:de:Hermippos",
     "chapters": [
       {
         "start": 845,
@@ -13270,6 +13283,7 @@
     "lemma": "ad Herculem 8",
     "previous": "Herakleitos 8b",
     "next": "ad Herculem 9",
+    "sort_key": "Herculem 08, ad",
     "chapters": [
       {
         "start": 1306,
@@ -13282,6 +13296,7 @@
     "lemma": "ad Herculem 9",
     "previous": "ad Herculem 8",
     "next": "ad Herculem 10",
+    "sort_key": "Herculem 09, ad",
     "chapters": [
       {
         "start": 1306,
@@ -13294,6 +13309,8 @@
     "lemma": "ad Herculem 10",
     "previous": "ad Herculem 9",
     "next": "ad Herculem 11",
+    "sort_key": "Herculem 10, ad",
+    "redirect": "Ad Herculem castra",
     "chapters": [
       {
         "start": 1306,
@@ -13306,6 +13323,7 @@
     "lemma": "ad Herculem 11",
     "previous": "ad Herculem 10",
     "next": "Herculia 2",
+    "sort_key": "Herculem 11, ad",
     "chapters": [
       {
         "start": 1306,
@@ -13317,7 +13335,7 @@
   {
     "lemma": "Herculia 2",
     "previous": "ad Herculem 11",
-    "next": "Hereas 2",
+    "next": "Hercuniates 2",
     "chapters": [
       {
         "start": 1306,
@@ -13327,8 +13345,13 @@
     ]
   },
   {
-    "lemma": "Hereas 2",
+    "lemma": "Hercuniates 2",
     "previous": "Herculia 2",
+    "next": "Hereas 2"
+  },
+  {
+    "lemma": "Hereas 2",
+    "previous": "Hercuniates 2",
     "next": "Hermias 10a",
     "chapters": [
       {

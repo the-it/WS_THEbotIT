@@ -1551,7 +1551,6 @@
   {
     "lemma": "Claudius 306a",
     "previous": "Claudius 299a",
-    "next": "Clodius 31a",
     "chapters": [
       {
         "start": 157,
@@ -1561,8 +1560,13 @@
     ]
   },
   {
+    "lemma": "Claudius 347",
+    "next": "Clodius 31a"
+  },
+  {
     "lemma": "Clodius 31a",
-    "previous": "Claudius 306a",
+    "previous": "Claudius 347",
+    "next": "Clodius 41",
     "chapters": [
       {
         "start": 157,
@@ -1572,13 +1576,19 @@
     ]
   },
   {
+    "lemma": "Clodius 41",
+    "previous": "Clodius 31a",
+    "next": "Clodius 56"
+  },
+  {
     "lemma": "Clodius 56",
+    "previous": "Clodius 41",
     "next": "Cocceius 1b"
   },
   {
     "lemma": "Cocceius 1b",
     "previous": "Clodius 56",
-    "next": "Coelius 22a",
+    "next": "Cocceius 19",
     "chapters": [
       {
         "start": 157,
@@ -1588,8 +1598,21 @@
     ]
   },
   {
-    "lemma": "Coelius 22a",
+    "lemma": "Cocceius 19",
     "previous": "Cocceius 1b",
+    "next": "Cocceius 19a"
+  },
+  {
+    "lemma": "Cocceius 19a",
+    "previous": "Cocceius 19"
+  },
+  {
+    "lemma": "Coelius 18",
+    "next": "Coelius 22a"
+  },
+  {
+    "lemma": "Coelius 22a",
+    "previous": "Coelius 18",
     "next": "conductores",
     "chapters": [
       {
@@ -1761,7 +1784,13 @@
   },
   {
     "lemma": "Cossonius 3",
-    "previous": "Cosconius 17"
+    "previous": "Cosconius 17",
+    "next": "Cossonius 3a"
+  },
+  {
+    "lemma": "Cossonius 3a",
+    "previous": "Cossonius 3",
+    "next": null
   },
   {
     "lemma": "Crispinus 5a",
@@ -3680,7 +3709,6 @@
   {
     "lemma": "Sorbam",
     "previous": "Seution",
-    "next": "Chilperich",
     "chapters": [
       {
         "start": 1569,
@@ -3689,9 +3717,13 @@
     ]
   },
   {
+    "lemma": "Carnuntum",
+    "next": "Chilperich"
+  },
+  {
     "lemma": "Chilperich",
-    "previous": "Sorbam",
-    "next": "Inobindus",
+    "previous": "Carnuntum",
+    "next": "Ephesos",
     "chapters": [
       {
         "start": 1588,
@@ -3701,8 +3733,11 @@
     ]
   },
   {
+    "lemma": "Ephesos",
+    "previous": "Chilperich"
+  },
+  {
     "lemma": "Inobindus",
-    "previous": "Chilperich",
     "next": "Iordanes 3",
     "chapters": [
       {

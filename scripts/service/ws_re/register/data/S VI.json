@@ -91,7 +91,13 @@
     ]
   },
   {
+    "lemma": "Aemilius 54b",
+    "next": "Aemilius 79",
+    "sort_key": "Aemilius 054b"
+  },
+  {
     "lemma": "Aemilius 79",
+    "previous": "Aemilius 54b",
     "next": "Afranius 10a"
   },
   {
@@ -985,11 +991,12 @@
   },
   {
     "lemma": "Chartodras",
-    "previous": "Cessernia"
+    "previous": "Cessernia",
+    "next": "Chelidonioi"
   },
   {
     "lemma": "Chelidonioi",
-    "previous": null,
+    "previous": "Chartodras",
     "next": "Cincius 9",
     "chapters": [
       {
@@ -1001,7 +1008,8 @@
   },
   {
     "lemma": "Cincius 9",
-    "previous": "Chelidonioi"
+    "previous": "Chelidonioi",
+    "next": null
   },
   {
     "lemma": "Claudius 357",
@@ -1091,11 +1099,21 @@
   },
   {
     "lemma": "Cornelius 145",
-    "previous": "Comberania"
+    "previous": "Comberania",
+    "next": "Cornelius 236"
+  },
+  {
+    "lemma": "Cornelius 236",
+    "previous": "Cornelius 145"
+  },
+  {
+    "lemma": "Cornelius 279",
+    "next": "Cornelius 279a"
   },
   {
     "lemma": "Cornelius 279a",
-    "next": "Cossonius 3a",
+    "previous": "Cornelius 279",
+    "next": "Cornelius 296",
     "chapters": [
       {
         "start": 25,
@@ -1105,8 +1123,14 @@
     ]
   },
   {
-    "lemma": "Cossonius 3a",
+    "lemma": "Cornelius 296",
     "previous": "Cornelius 279a",
+    "next": "Cossonius 3a"
+  },
+  {
+    "lemma": "Cossonius 3a",
+    "previous": "Cornelius 296",
+    "next": "Curtius 18",
     "chapters": [
       {
         "start": 25,
@@ -1117,6 +1141,7 @@
   },
   {
     "lemma": "Curtius 18",
+    "previous": "Cossonius 3a",
     "next": "Cuspius 3"
   },
   {
@@ -3997,7 +4022,6 @@
   {
     "lemma": "Tatiassos",
     "previous": "Tastris",
-    "next": "Telephanes 5",
     "chapters": [
       {
         "start": 1170,
@@ -4006,8 +4030,12 @@
     ]
   },
   {
+    "lemma": "Telamon 4",
+    "next": "Telephanes 5"
+  },
+  {
     "lemma": "Telephanes 5",
-    "previous": "Tatiassos",
+    "previous": "Telamon 4",
     "next": "Tellen",
     "chapters": [
       {
@@ -4032,7 +4060,6 @@
   {
     "lemma": "Tenestini",
     "previous": "Tellen",
-    "next": "Terentius 84",
     "chapters": [
       {
         "start": 1172,
@@ -4042,9 +4069,14 @@
     ]
   },
   {
+    "lemma": "Teos",
+    "next": "Terentius 84"
+  },
+  {
     "lemma": "Terentius 84",
-    "previous": "Tenestini",
+    "previous": "Teos",
     "next": "Tetraguron",
+    "sort_key": "Terentius 084",
     "chapters": [
       {
         "start": 1172,

@@ -3612,7 +3612,22 @@
   },
   {
     "lemma": "Clodius 58a",
-    "previous": "Clodius 30a"
+    "previous": "Clodius 30a",
+    "next": "Clodius 62a"
+  },
+  {
+    "lemma": "Clodius 62a",
+    "previous": "Clodius 58a",
+    "next": "Cluvius 10b"
+  },
+  {
+    "lemma": "Cluvius 10b",
+    "previous": "Clodius 62a",
+    "next": "Cluvius 10c"
+  },
+  {
+    "lemma": "Cluvius 10c",
+    "previous": "Cluvius 10b"
   },
   {
     "lemma": "Claudius 418a",
@@ -3712,6 +3727,7 @@
   {
     "lemma": "Cluvius 10c",
     "previous": "Cluvius 10b",
+    "next": "Coelius 19",
     "chapters": [
       {
         "start": 105,
@@ -3721,7 +3737,13 @@
     ]
   },
   {
+    "lemma": "Coelius 19",
+    "previous": "Cluvius 10c",
+    "next": "Cominius 22"
+  },
+  {
     "lemma": "Cominius 22",
+    "previous": "Coelius 19",
     "next": "Comius 2"
   },
   {
@@ -3879,6 +3901,7 @@
   },
   {
     "lemma": "Cornelius 398a",
+    "previous": null,
     "next": "Cornelius 442a"
   },
   {

@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Corniscae",
+    "previous": "Cornificius 17",
     "next": "Cornus 1",
     "chapters": [
       {
@@ -1303,6 +1304,7 @@
     "lemma": "Cossinius 6",
     "previous": "Cossinius 5",
     "next": "Cossinus",
+    "redirect": "Rufinus 13",
     "chapters": [
       {
         "start": 1672,
@@ -1363,6 +1365,7 @@
     "lemma": "Cossonius 3",
     "previous": "Cossonius 2",
     "next": "Cossonius 4",
+    "redirect": "Eggius 5",
     "chapters": [
       {
         "start": 1672,
@@ -1375,6 +1378,7 @@
     "lemma": "Cossonius 4",
     "previous": "Cossonius 3",
     "next": "Cossonius 5",
+    "redirect": "Passienius Cossonius Scipio Orfitus",
     "chapters": [
       {
         "start": 1673,
@@ -1494,6 +1498,7 @@
     "lemma": "Cossutius 5",
     "previous": "Cossutius 4",
     "next": "Cossutius 6",
+    "redirect": "Menelaos 18",
     "chapters": [
       {
         "start": 1674,
@@ -1529,6 +1534,7 @@
     "lemma": "Costa",
     "previous": "Cossutius 7",
     "next": "Costa Balaenae",
+    "redirect": "Pedanius 2",
     "chapters": [
       {
         "start": 1674,
@@ -1623,6 +1629,7 @@
     "lemma": "Cotes",
     "previous": "Cotensii",
     "next": "Cotiara",
+    "redirect": "Ampelusia",
     "chapters": [
       {
         "start": 1675,
@@ -1634,6 +1641,7 @@
     "lemma": "Cotiara",
     "previous": "Cotes",
     "next": "Cotia silva",
+    "redirect": "Kottiara",
     "chapters": [
       {
         "start": 1675,
@@ -1657,6 +1665,7 @@
     "lemma": "Cotilus",
     "previous": "Cotia silva",
     "next": "Cotinae",
+    "redirect": "Kotilos",
     "chapters": [
       {
         "start": 1676,
@@ -1704,6 +1713,7 @@
     "lemma": "Cotius",
     "previous": "Cotiso",
     "next": "Cotobacchi",
+    "redirect": true,
     "chapters": [
       {
         "start": 1676,
@@ -1727,6 +1737,7 @@
     "lemma": "Cotoriae",
     "previous": "Cotobacchi",
     "next": "Cotrica",
+    "redirect": true,
     "chapters": [
       {
         "start": 1676,
@@ -1868,7 +1879,7 @@
   {
     "lemma": "Cottius 2",
     "previous": "Cottius 1",
-    "next": "Cottius 4",
+    "next": "Cottius 3",
     "chapters": [
       {
         "start": 1677,
@@ -1880,7 +1891,8 @@
   {
     "lemma": "Cottius 4",
     "previous": "Cottius 2",
-    "next": "Cottius 3",
+    "next": "Cottius 5",
+    "redirect": "Vestricius Cottius",
     "chapters": [
       {
         "start": 1677,
@@ -1890,8 +1902,8 @@
   },
   {
     "lemma": "Cottius 3",
-    "previous": "Cottius 4",
-    "next": "Cottius 5",
+    "previous": "Cottius 2",
+    "next": "Cottius 4",
     "chapters": [
       {
         "start": 1678,
@@ -1902,7 +1914,7 @@
   },
   {
     "lemma": "Cottius 5",
-    "previous": "Cottius 3",
+    "previous": "Cottius 4",
     "next": "Cottius 6",
     "chapters": [
       {
@@ -1916,6 +1928,7 @@
     "lemma": "Cottius 6",
     "previous": "Cottius 5",
     "next": "Cottius 7",
+    "redirect": "Cottius 2",
     "chapters": [
       {
         "start": 1678,
@@ -1928,6 +1941,7 @@
     "lemma": "Cottius 7",
     "previous": "Cottius 6",
     "next": "Cotuantii",
+    "redirect": "Servenius",
     "chapters": [
       {
         "start": 1678,
@@ -1940,6 +1954,7 @@
     "lemma": "Cotuantii",
     "previous": "Cottius 7",
     "next": "Cotus",
+    "redirect": "Cosuanetes",
     "chapters": [
       {
         "start": 1678,
@@ -8139,6 +8154,7 @@
     "lemma": "Dahae",
     "previous": "Daguta",
     "next": "Daho",
+    "redirect": "Daai",
     "chapters": [
       {
         "start": 1986,
@@ -8186,6 +8202,7 @@
     "lemma": "Daidachos",
     "previous": "Daiara",
     "next": "Daidala 1",
+    "redirect": "Daidalos 5",
     "chapters": [
       {
         "start": 1990,
@@ -8293,6 +8310,7 @@
     "lemma": "Daidalion 1",
     "previous": "Daidalidai",
     "next": "Daidalion 2",
+    "redirect": "Daedalium",
     "chapters": [
       {
         "start": 1994,
@@ -8341,6 +8359,7 @@
     "lemma": "Daidalos 3",
     "previous": "Daidalos 2",
     "next": "Daidalos 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 2007,
@@ -10092,7 +10111,7 @@
   {
     "lemma": "Damaspia",
     "previous": "Damasos 7",
-    "next": "Damassa ore",
+    "next": "Δάμασσα ὄρη",
     "chapters": [
       {
         "start": 2050,
@@ -10102,20 +10121,14 @@
     ]
   },
   {
-    "lemma": "Damassa ore",
+    "lemma": "Δάμασσα ὄρη",
     "previous": "Damaspia",
     "next": "Damastes 1",
-    "chapters": [
-      {
-        "start": 2050,
-        "end": 2050,
-        "author": "Tomaschek"
-      }
-    ]
+    "sort_key": "Damassa"
   },
   {
     "lemma": "Damastes 1",
-    "previous": "Damassa ore",
+    "previous": "Δάμασσα ὄρη",
     "next": "Damastes 2",
     "chapters": [
       {
@@ -10849,6 +10862,7 @@
     "lemma": "Damnonii",
     "previous": "Damno",
     "next": "Damnum",
+    "redirect": "Dumnonii",
     "chapters": [
       {
         "start": 2062,
@@ -10895,7 +10909,7 @@
   {
     "lemma": "Damocharis",
     "previous": "Damochares",
-    "next": "Damodeis",
+    "next": "Δαμώδεις",
     "chapters": [
       {
         "start": 2067,
@@ -10905,9 +10919,10 @@
     ]
   },
   {
-    "lemma": "Damodeis",
+    "lemma": "Δαμώδεις",
     "previous": "Damocharis",
     "next": "Damogeron",
+    "sort_key": "Damodeis",
     "chapters": [
       {
         "start": 2067,
@@ -10918,8 +10933,9 @@
   },
   {
     "lemma": "Damogeron",
-    "previous": "Damodeis",
+    "previous": "Δαμώδεις",
     "next": "Damokleidas 1",
+    "redirect": "Damigeron",
     "chapters": [
       {
         "start": 2067,
@@ -11051,6 +11067,7 @@
     "lemma": "Damokrates 1",
     "previous": "Damokrateia",
     "next": "Damokrates 2",
+    "sort_key": "Damokrates 01",
     "chapters": [
       {
         "start": 2068,
@@ -11076,6 +11093,7 @@
     "lemma": "Damokrates 3",
     "previous": "Damokrates 2",
     "next": "Damokrates 4",
+    "sort_key": "Damokrates 03",
     "chapters": [
       {
         "start": 2068,
@@ -11088,6 +11106,7 @@
     "lemma": "Damokrates 4",
     "previous": "Damokrates 3",
     "next": "Damokrates 5",
+    "sort_key": "Damokrates 04",
     "chapters": [
       {
         "start": 2068,
@@ -11100,6 +11119,7 @@
     "lemma": "Damokrates 5",
     "previous": "Damokrates 4",
     "next": "Damokrates 6",
+    "sort_key": "Damokrates 05",
     "chapters": [
       {
         "start": 2068,
@@ -11112,6 +11132,7 @@
     "lemma": "Damokrates 6",
     "previous": "Damokrates 5",
     "next": "Damokrates 7",
+    "sort_key": "Damokrates 06",
     "chapters": [
       {
         "start": 2069,
@@ -11124,6 +11145,7 @@
     "lemma": "Damokrates 7",
     "previous": "Damokrates 6",
     "next": "Damokrates 8",
+    "sort_key": "Damokrates 07",
     "chapters": [
       {
         "start": 2069,
@@ -11136,6 +11158,7 @@
     "lemma": "Damokrates 8",
     "previous": "Damokrates 7",
     "next": "Damokrates 9",
+    "sort_key": "Damokrates 08",
     "chapters": [
       {
         "start": 2069,
@@ -11148,6 +11171,7 @@
     "lemma": "Damokrates 9",
     "previous": "Damokrates 8",
     "next": "Damokrates 10",
+    "sort_key": "Damokrates 09",
     "chapters": [
       {
         "start": 2070,
@@ -11256,6 +11280,7 @@
     "lemma": "Damon 1",
     "previous": "Damokritos 3",
     "next": "Damon 2",
+    "sort_key": "Damon 01",
     "chapters": [
       {
         "start": 2071,
@@ -14905,6 +14930,7 @@
     "lemma": "Datames",
     "previous": "Data",
     "next": "Datamissa",
+    "wp_link": "w:de:Datames",
     "chapters": [
       {
         "start": 2224,
@@ -14929,6 +14955,7 @@
     "lemma": "Dataphernes",
     "previous": "Datamissa",
     "next": "Datatim ludere",
+    "wp_link": "w:de:Dataphernes",
     "chapters": [
       {
         "start": 2226,
@@ -14940,7 +14967,8 @@
   {
     "lemma": "Datatim ludere",
     "previous": "Dataphernes",
-    "next": "Datha",
+    "next": "Δατηταί",
+    "redirect": "Ballspiel",
     "chapters": [
       {
         "start": 2226,
@@ -14950,8 +14978,14 @@
     ]
   },
   {
-    "lemma": "Datha",
+    "lemma": "Δατηταί",
     "previous": "Datatim ludere",
+    "next": "Datha",
+    "sort_key": "Datetai"
+  },
+  {
+    "lemma": "Datha",
+    "previous": "Δατηταί",
     "next": "Dathema",
     "chapters": [
       {
@@ -15013,6 +15047,7 @@
     "lemma": "Datis 1",
     "previous": "Datii",
     "next": "Datis 2",
+    "wp_link": "w:de:Datis",
     "chapters": [
       {
         "start": 2227,
@@ -16808,6 +16843,7 @@
     "lemma": "Decretum",
     "previous": "Decoriana",
     "next": "Decretum Damasi, Gelasii, Hormisdae",
+    "wp_link": "w:de:Dekret",
     "chapters": [
       {
         "start": 2289,
@@ -17010,6 +17046,7 @@
     "lemma": "Decurio 1",
     "previous": "Decurialis",
     "next": "Decurio 2",
+    "wp_link": "w:de:Decurio (Kommunalverwaltung)",
     "chapters": [
       {
         "start": 2319,
