@@ -503,7 +503,6 @@
   {
     "lemma": "Dumopireti",
     "previous": "Drogen",
-    "next": "Epistolographie",
     "chapters": [
       {
         "start": 182,
@@ -513,9 +512,14 @@
     ]
   },
   {
+    "lemma": "Dura 2",
+    "next": "Epistolographie"
+  },
+  {
     "lemma": "Epistolographie",
-    "previous": "Dumopireti",
+    "previous": "Dura 2",
     "next": "Epyaxa",
+    "wp_link": "w:de:Epistolografie",
     "chapters": [
       {
         "start": 185,

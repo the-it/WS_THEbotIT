@@ -1477,7 +1477,7 @@
   {
     "lemma": "Epigramm",
     "previous": "Epigonos 8",
-    "next": "Epigrapheis",
+    "next": "Ἐπιγραφεῖς",
     "chapters": [
       {
         "start": 71,
@@ -1487,7 +1487,7 @@
     ]
   },
   {
-    "lemma": "Epigrapheis",
+    "lemma": "Ἐπιγραφεῖς",
     "previous": "Epigramm",
     "next": "Epikairos",
     "chapters": [
@@ -1500,7 +1500,7 @@
   },
   {
     "lemma": "Epikairos",
-    "previous": "Epigrapheis",
+    "previous": "Ἐπιγραφεῖς",
     "next": "Epikarpios",
     "chapters": [
       {
@@ -12853,7 +12853,7 @@
   {
     "lemma": "Euandriana",
     "previous": "Euandre",
-    "next": "Euandrias agon",
+    "next": "Εὐανδρίας ἀγών",
     "chapters": [
       {
         "start": 839,
@@ -12863,7 +12863,7 @@
     ]
   },
   {
-    "lemma": "Euandrias agon",
+    "lemma": "Εὐανδρίας ἀγών",
     "previous": "Euandriana",
     "next": "Euandridas",
     "chapters": [
@@ -12876,7 +12876,7 @@
   },
   {
     "lemma": "Euandridas",
-    "previous": "Euandrias agon",
+    "previous": "Εὐανδρίας ἀγών",
     "next": "Euandros 1",
     "chapters": [
       {
@@ -12890,6 +12890,7 @@
     "lemma": "Euandros 1",
     "previous": "Euandridas",
     "next": "Euandros 2",
+    "sort_key": "Euandros 01",
     "chapters": [
       {
         "start": 839,
@@ -12902,6 +12903,7 @@
     "lemma": "Euandros 2",
     "previous": "Euandros 1",
     "next": "Euandros 3",
+    "sort_key": "Euandros 02",
     "chapters": [
       {
         "start": 842,
@@ -12940,6 +12942,7 @@
     "lemma": "Euandros 5",
     "previous": "Euandros 4",
     "next": "Euandros 6",
+    "sort_key": "Euandros 05",
     "chapters": [
       {
         "start": 842,
@@ -12978,6 +12981,7 @@
     "lemma": "Euandros 8",
     "previous": "Euandros 7",
     "next": "Euandros 9",
+    "sort_key": "Euandros 08",
     "chapters": [
       {
         "start": 842,

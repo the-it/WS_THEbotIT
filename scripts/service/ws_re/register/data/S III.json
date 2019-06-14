@@ -9022,7 +9022,7 @@
   {
     "lemma": "Caecilius 137",
     "previous": "Caecilius 136",
-    "next": "Caelianae figlinae",
+    "next": "Caecina 2ff.",
     "chapters": [
       {
         "start": 223,
@@ -9032,8 +9032,11 @@
     ]
   },
   {
+    "lemma": "Caecina 2ff.",
+    "previous": "Caecilius 137"
+  },
+  {
     "lemma": "Caelianae figlinae",
-    "previous": "Caecilius 137",
     "next": "Caepioniana praedia",
     "chapters": [
       {
@@ -9902,7 +9905,7 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
-    "next": null,
+    "next": "Ceraria (Caeraria, Geraria) figlina",
     "chapters": [
       {
         "start": 241,
@@ -9910,6 +9913,10 @@
         "author": "Hähnle"
       }
     ]
+  },
+  {
+    "lemma": "Ceraria (Caeraria, Geraria) figlina",
+    "previous": "Cepariae figlinae"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -10004,10 +10011,13 @@
   },
   {
     "lemma": "Cestius 2",
-    "previous": "Cervesarius"
+    "previous": "Cervesarius",
+    "next": "Cettus",
+    "sort_key": "Cestius 02"
   },
   {
     "lemma": "Cettus",
+    "previous": "Cestius 2",
     "next": "Chaladrioi",
     "chapters": [
       {
@@ -10072,6 +10082,7 @@
     "lemma": "Charikles 4a",
     "previous": "Charenika",
     "next": "Charinos 6a",
+    "redirect": "Antiochos 42a",
     "chapters": [
       {
         "start": 243,
@@ -10402,7 +10413,7 @@
   {
     "lemma": "Cinna 5a",
     "previous": "Cinges",
-    "next": "Cinniana 2",
+    "next": "Cinnamus",
     "chapters": [
       {
         "start": 250,
@@ -10412,8 +10423,13 @@
     ]
   },
   {
-    "lemma": "Cinniana 2",
+    "lemma": "Cinnamus",
     "previous": "Cinna 5a",
+    "next": "Cinniana 2"
+  },
+  {
+    "lemma": "Cinniana 2",
+    "previous": "Cinnamus",
     "next": "Cintugnatus",
     "chapters": [
       {
@@ -10474,7 +10490,7 @@
   {
     "lemma": "Cispius 2a",
     "previous": "Ciruca",
-    "next": "Claudiana tegula",
+    "next": "Citiergesetz",
     "chapters": [
       {
         "start": 252,
@@ -10484,8 +10500,13 @@
     ]
   },
   {
-    "lemma": "Claudiana tegula",
+    "lemma": "Citiergesetz",
     "previous": "Cispius 2a",
+    "next": "Claudiana tegula"
+  },
+  {
+    "lemma": "Claudiana tegula",
+    "previous": "Citiergesetz",
     "next": "Claudius",
     "chapters": [
       {
@@ -10497,7 +10518,10 @@
   },
   {
     "lemma": "Claudius",
-    "previous": "Claudiana tegula",
+    "previous": "Claudiana tegula"
+  },
+  {
+    "lemma": "Claudius",
     "next": "Claudius 20a",
     "sort_key": "Claudius 000"
   },
@@ -10516,7 +10540,6 @@
   {
     "lemma": "Clemens 10",
     "previous": "Claudius 20a",
-    "next": "Cleppius",
     "chapters": [
       {
         "start": 253,
@@ -10526,8 +10549,12 @@
     ]
   },
   {
+    "lemma": "Clemens 11",
+    "next": "Cleppius"
+  },
+  {
     "lemma": "Cleppius",
-    "previous": "Clemens 10",
+    "previous": "Clemens 11",
     "next": "Clodius 3a",
     "chapters": [
       {
@@ -10540,7 +10567,8 @@
   {
     "lemma": "Clodius 3a",
     "previous": "Cleppius",
-    "next": "Clodius 5",
+    "next": "Clodius 5a",
+    "sort_key": "Clodius 03a",
     "chapters": [
       {
         "start": 253,
@@ -10550,8 +10578,12 @@
     ]
   },
   {
-    "lemma": "Clodius 5",
-    "previous": "Clodius 3a",
+    "lemma": "Clodius 5a",
+    "previous": "Clodius 3a"
+  },
+  {
+    "lemma": "Clodius 5a",
+    "sort_key": "Clodius 05",
     "chapters": [
       {
         "start": 253,
@@ -10559,6 +10591,20 @@
         "author": "Münzer"
       }
     ]
+  },
+  {
+    "lemma": "Clodius 5a",
+    "next": "Clodius 47"
+  },
+  {
+    "lemma": "Clodius 47",
+    "previous": "Clodius 5a",
+    "next": "Clodius 55a",
+    "sort_key": "Clodius 05"
+  },
+  {
+    "lemma": "Clodius 55a",
+    "previous": "Clodius 47"
   },
   {
     "lemma": "Claudius 298",
@@ -10581,7 +10627,12 @@
     "previous": "Claudius 381"
   },
   {
+    "lemma": "Clodius 47",
+    "next": "Clodius 55a"
+  },
+  {
     "lemma": "Clodius 55a",
+    "previous": "Clodius 47",
     "next": "Clonius a",
     "chapters": [
       {
@@ -10593,6 +10644,7 @@
   {
     "lemma": "Clonius a",
     "previous": "Clodius 55a",
+    "next": "Cluentius 1",
     "chapters": [
       {
         "start": 254,
@@ -10602,8 +10654,18 @@
     ]
   },
   {
+    "lemma": "Cluentius 1",
+    "previous": "Clonius a"
+  },
+  {
+    "lemma": "Clunia 1",
+    "next": "Cluvius 3"
+  },
+  {
     "lemma": "Cluvius 3",
-    "next": "Cluvius 10a"
+    "previous": "Clunia 1",
+    "next": "Cluvius 10a",
+    "sort_key": "Cluvius 03"
   },
   {
     "lemma": "Cluvius 10a",
@@ -10619,10 +10681,12 @@
   },
   {
     "lemma": "Cluvius 14",
-    "previous": "Cluvius 10a"
+    "previous": "Cluvius 10a",
+    "next": "Cobnertus 1"
   },
   {
     "lemma": "Cobnertus 1",
+    "previous": "Cluvius 14",
     "next": "Cobnertus 2",
     "chapters": [
       {
@@ -10671,7 +10735,7 @@
   {
     "lemma": "Cocus",
     "previous": "Cocisius",
-    "next": "Coius",
+    "next": "Coelius 6",
     "chapters": [
       {
         "start": 255,
@@ -10681,8 +10745,19 @@
     ]
   },
   {
-    "lemma": "Coius",
+    "lemma": "Coelius 6",
     "previous": "Cocus",
+    "next": "Coelius 12",
+    "sort_key": "Coelius 06"
+  },
+  {
+    "lemma": "Coelius 12",
+    "previous": "Coelius 6",
+    "next": "Coius"
+  },
+  {
+    "lemma": "Coius",
+    "previous": "Coelius 12",
     "next": "Coloniae",
     "chapters": [
       {
@@ -10894,8 +10969,13 @@
     "previous": "Cornelius 42a"
   },
   {
+    "lemma": "Cornelius 202",
+    "next": "Cornelius 202a"
+  },
+  {
     "lemma": "Cornelius 202a",
-    "next": "Cornelius 208",
+    "previous": "Cornelius 202",
+    "next": "Cornelius 203",
     "chapters": [
       {
         "start": 259,
@@ -10905,8 +10985,11 @@
     ]
   },
   {
+    "lemma": "Cornelius 203",
+    "previous": "Cornelius 202a"
+  },
+  {
     "lemma": "Cornelius 208",
-    "previous": "Cornelius 202a",
     "next": "Cornelius 208b",
     "chapters": [
       {
@@ -10950,7 +11033,12 @@
   },
   {
     "lemma": "Cornutus 6",
-    "previous": "Cornificius 5"
+    "previous": "Cornificius 5",
+    "next": "Cosconius 3"
+  },
+  {
+    "lemma": "Cosconius 3",
+    "previous": "Cornutus 6"
   },
   {
     "lemma": "Cosius 1",
@@ -15979,7 +16067,12 @@
     "previous": "Γαστρόπτης"
   },
   {
+    "lemma": "Gaudiacus",
+    "next": "Gaudiosus 3"
+  },
+  {
     "lemma": "Gaudiosus 3",
+    "previous": "Gaudiacus",
     "next": "Gaudotos",
     "chapters": [
       {
@@ -16004,7 +16097,8 @@
   {
     "lemma": "Gavius 2",
     "previous": "Gaudotos",
-    "next": "Gavius 8a"
+    "next": "Gavius 8a",
+    "sort_key": "Gavius 02"
   },
   {
     "lemma": "Gavius 8a",
@@ -16144,7 +16238,7 @@
   {
     "lemma": "Gemella a",
     "previous": "Gelupara",
-    "next": "Geminius 20a",
+    "next": "Gemellus 10",
     "chapters": [
       {
         "start": 542,
@@ -16154,8 +16248,21 @@
     ]
   },
   {
-    "lemma": "Geminius 20a",
+    "lemma": "Gemellus 10",
     "previous": "Gemella a",
+    "next": "Gemenus"
+  },
+  {
+    "lemma": "Gemenus",
+    "previous": "Gemellus 10"
+  },
+  {
+    "lemma": "Geminius 3",
+    "next": "Geminius 20a"
+  },
+  {
+    "lemma": "Geminius 20a",
+    "previous": "Geminius 3",
     "next": "Geminus 2a",
     "chapters": [
       {
@@ -18999,7 +19106,6 @@
   {
     "lemma": "Insulae odoriferae",
     "previous": "Inheiden",
-    "next": "Ad Ioglandem",
     "chapters": [
       {
         "start": 1240,
@@ -19009,9 +19115,13 @@
     ]
   },
   {
+    "lemma": "Intaranum",
+    "next": "Ad Ioglandem"
+  },
+  {
     "lemma": "Ad Ioglandem",
-    "previous": "Insulae odoriferae",
-    "next": "Ad Ioglandum",
+    "previous": "Intaranum",
+    "next": "Iolaos 6",
     "chapters": [
       {
         "start": 1241,
@@ -19021,8 +19131,16 @@
     ]
   },
   {
-    "lemma": "Ad Ioglandum",
+    "lemma": "Iolaos 6",
     "previous": "Ad Ioglandem",
+    "next": "Jonquières"
+  },
+  {
+    "lemma": "Jonquières",
+    "previous": "Iolaos 6"
+  },
+  {
+    "lemma": "Ad Ioglandum",
     "next": "Jonquières",
     "chapters": [
       {

@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Euxantios",
+    "previous": "Eutychos 8",
     "next": "Euxeinos",
     "chapters": [
       {
@@ -1314,7 +1315,7 @@
   {
     "lemma": "Extricatus",
     "previous": "Extraordinarii",
-    "next": "Exules dike",
+    "next": "Ἐξούλης δίκη",
     "chapters": [
       {
         "start": 1699,
@@ -1323,20 +1324,14 @@
     ]
   },
   {
-    "lemma": "Exules dike",
+    "lemma": "Ἐξούλης δίκη",
     "previous": "Extricatus",
-    "next": "Exusta Insula",
-    "chapters": [
-      {
-        "start": 1699,
-        "end": 1699,
-        "author": "Thalheim"
-      }
-    ]
+    "next": "Exusta insula",
+    "sort_key": "Exules"
   },
   {
-    "lemma": "Exusta Insula",
-    "previous": "Exules dike",
+    "lemma": "Exusta insula",
+    "previous": "Ἐξούλης δίκη",
     "next": "Exuviae",
     "chapters": [
       {
@@ -1348,7 +1343,7 @@
   },
   {
     "lemma": "Exuviae",
-    "previous": "Exusta Insula",
+    "previous": "Exusta insula",
     "next": "Eza",
     "chapters": [
       {
@@ -10657,6 +10652,8 @@
     "lemma": "Flaccus 1",
     "previous": "Flacconius",
     "next": "Flaccus 2",
+    "sort_key": "Flaccus 01",
+    "redirect": "Ammius 1",
     "chapters": [
       {
         "start": 2433,
@@ -14750,6 +14747,7 @@
     "lemma": "Fletio",
     "previous": "Flenucletense",
     "next": "Flevi, Flevo, Fleum",
+    "redirect": "Fectio",
     "chapters": [
       {
         "start": 2743,
@@ -14761,6 +14759,7 @@
     "lemma": "Flevi, Flevo, Fleum",
     "previous": "Fletio",
     "next": "Flevum",
+    "redirect": "Flevum",
     "chapters": [
       {
         "start": 2743,
@@ -14784,6 +14783,7 @@
     "lemma": "ad Flexum 1",
     "previous": "Flevum",
     "next": "ad Flexum 2",
+    "sort_key": "Flexum 1, ad",
     "chapters": [
       {
         "start": 2743,
@@ -14796,6 +14796,7 @@
     "lemma": "ad Flexum 2",
     "previous": "ad Flexum 1",
     "next": "Flexuntes",
+    "sort_key": "Flexum 2, ad",
     "chapters": [
       {
         "start": 2744,

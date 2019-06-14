@@ -879,6 +879,7 @@
     "lemma": "Infanticidium",
     "previous": "Infans",
     "next": "Infantius",
+    "wp_link": "w:de:Kindstötung",
     "chapters": [
       {
         "start": 1540,
@@ -3042,7 +3043,7 @@
   {
     "lemma": "Ioërbeth",
     "previous": "Ioel",
-    "next": "Ad Ioglandum",
+    "next": "Ad Ioglandem",
     "chapters": [
       {
         "start": 1841,
@@ -3052,9 +3053,10 @@
     ]
   },
   {
-    "lemma": "Ad Ioglandum",
+    "lemma": "Ad Ioglandem",
     "previous": "Ioërbeth",
     "next": "Iogola",
+    "sort_key": "Ioglandum",
     "chapters": [
       {
         "start": 1841,
@@ -3065,7 +3067,7 @@
   },
   {
     "lemma": "Iogola",
-    "previous": "Ad Ioglandum",
+    "previous": "Ad Ioglandem",
     "next": "Iohallis",
     "chapters": [
       {
@@ -3527,6 +3529,7 @@
     "lemma": "Ion 6",
     "previous": "Ion 5",
     "next": "Ion 7",
+    "sort_key": "Ion 06",
     "chapters": [
       {
         "start": 1860,
@@ -3552,6 +3555,7 @@
     "lemma": "Ion 8",
     "previous": "Ion 7",
     "next": "Ion 9",
+    "sort_key": "Ion 08",
     "chapters": [
       {
         "start": 1860,
@@ -6105,7 +6109,7 @@
   {
     "lemma": "Isagoras 4",
     "previous": "Isagoras 3",
-    "next": "Isaia",
+    "next": "Ἴσαι λιμήν",
     "chapters": [
       {
         "start": 2050,
