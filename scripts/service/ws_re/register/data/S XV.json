@@ -1076,10 +1076,18 @@
   },
   {
     "lemma": "Aurelius 27",
-    "previous": "Aurelius 8a"
+    "previous": "Aurelius 8a",
+    "next": "Aurelius 37c"
+  },
+  {
+    "lemma": "Aurelius 37c",
+    "previous": "Aurelius 27",
+    "next": "Aurelius 54a",
+    "sort_key": "Aurelius 037c"
   },
   {
     "lemma": "Aurelius 54a",
+    "previous": "Aurelius 37c",
     "next": "Aurelius 54b",
     "sort_key": "Aurelius 054a",
     "chapters": [
@@ -1118,7 +1126,7 @@
   {
     "lemma": "Aurelius 127c",
     "previous": "Aurelius 123a",
-    "next": "Aurelius 159a",
+    "next": "Aurelius 160aa",
     "chapters": [
       {
         "start": 77,
@@ -1128,8 +1136,26 @@
     ]
   },
   {
-    "lemma": "Aurelius 159a",
+    "lemma": "Aurelius 160aa",
     "previous": "Aurelius 127c",
+    "next": "Aurelius 160b"
+  },
+  {
+    "lemma": "Aurelius 160b",
+    "previous": "Aurelius 160aa",
+    "next": "Aurelius 164a"
+  },
+  {
+    "lemma": "Aurelius 164a",
+    "previous": "Aurelius 160b",
+    "next": "Aurelius 192f"
+  },
+  {
+    "lemma": "Aurelius 192f",
+    "previous": "Aurelius 164a"
+  },
+  {
+    "lemma": "Aurelius 159a",
     "next": "Aurelius 160aa",
     "chapters": [
       {
@@ -1273,10 +1299,17 @@
   },
   {
     "lemma": "Aurelius 250",
-    "previous": "Aurelius 232b"
+    "previous": "Aurelius 232b",
+    "next": "Baebius 29"
+  },
+  {
+    "lemma": "Baebius 29",
+    "previous": "Aurelius 250",
+    "next": "Barbatio 2"
   },
   {
     "lemma": "Barbatio 2",
+    "previous": "Baebius 29",
     "next": "Bienus 2",
     "chapters": [
       {
@@ -3162,7 +3195,7 @@
   {
     "lemma": "Pomponius 51a",
     "previous": "Pontifex",
-    "next": "Pontos 2",
+    "next": "Pontifex, Pontifex maximus, Pontificii Libri",
     "chapters": [
       {
         "start": 332,
@@ -3172,8 +3205,13 @@
     ]
   },
   {
-    "lemma": "Pontos 2",
+    "lemma": "Pontifex, Pontifex maximus, Pontificii Libri",
     "previous": "Pomponius 51a",
+    "next": "Pontos 2"
+  },
+  {
+    "lemma": "Pontos 2",
+    "previous": "Pontifex, Pontifex maximus, Pontificii Libri",
     "next": "Porcius 34a",
     "chapters": [
       {

@@ -1251,7 +1251,6 @@
   {
     "lemma": "Baebius 7a",
     "previous": "Baebius 5a",
-    "next": "Bappo 1",
     "chapters": [
       {
         "start": 60,
@@ -1260,9 +1259,14 @@
     ]
   },
   {
+    "lemma": "Bappo",
+    "next": "Bappo 1"
+  },
+  {
     "lemma": "Bappo 1",
-    "previous": "Baebius 7a",
-    "next": "Basilia 1",
+    "previous": "Bappo",
+    "next": "Bappo 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 62,
@@ -1272,8 +1276,11 @@
     ]
   },
   {
+    "lemma": "Bappo 2",
+    "previous": "Bappo 1"
+  },
+  {
     "lemma": "Basilia 1",
-    "previous": "Bappo 1",
     "next": "Basilia 2",
     "chapters": [
       {
@@ -3525,7 +3532,6 @@
   {
     "lemma": "Kydna",
     "previous": "Kybos",
-    "next": "Kyros 6a",
     "chapters": [
       {
         "start": 148,
@@ -3534,10 +3540,13 @@
     ]
   },
   {
+    "lemma": "Kyros 6",
+    "next": "Kyros 6a"
+  },
+  {
     "lemma": "Kyros 6a",
-    "previous": "Kydna",
+    "previous": "Kyros 6",
     "next": "Kyros 6b",
-    "redirect": true,
     "chapters": [
       {
         "start": 149,

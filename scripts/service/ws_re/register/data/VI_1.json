@@ -12914,6 +12914,7 @@
     "lemma": "Euandros 3",
     "previous": "Euandros 2",
     "next": "Euandros 4",
+    "sort_key": "Euandros 03",
     "chapters": [
       {
         "start": 842,
@@ -12926,6 +12927,7 @@
     "lemma": "Euandros 4",
     "previous": "Euandros 3",
     "next": "Euandros 5",
+    "sort_key": "Euandros 04",
     "chapters": [
       {
         "start": 842,
@@ -12950,6 +12952,7 @@
     "lemma": "Euandros 6",
     "previous": "Euandros 5",
     "next": "Euandros 7",
+    "sort_key": "Euandros 06",
     "chapters": [
       {
         "start": 842,
@@ -12962,6 +12965,7 @@
     "lemma": "Euandros 7",
     "previous": "Euandros 6",
     "next": "Euandros 8",
+    "sort_key": "Euandros 07",
     "chapters": [
       {
         "start": 842,
@@ -20229,6 +20233,7 @@
     "lemma": "Euneike",
     "previous": "Eune",
     "next": "Euneus",
+    "wp_link": "w:de:Euneike",
     "chapters": [
       {
         "start": 1127,
@@ -20265,6 +20270,7 @@
     "lemma": "Eunike 1",
     "previous": "Eunias nemus",
     "next": "Eunike 2",
+    "redirect": "Euneike",
     "chapters": [
       {
         "start": 1128,
@@ -29271,7 +29277,9 @@
   {
     "lemma": "Eutropius 10",
     "previous": "Eutropius 9",
-    "next": "Eutropiu limen",
+    "next": "Εὐτροπίου λιμήν",
+    "wp_link": "w:de:Eutropius (Historiker)",
+    "ws_link": "s:de:Eutropius (Historiker)",
     "chapters": [
       {
         "start": 1521,
@@ -29281,7 +29289,7 @@
     ]
   },
   {
-    "lemma": "Eutropiu limen",
+    "lemma": "Εὐτροπίου λιμήν",
     "previous": "Eutropius 10",
     "next": "Eutyches 1",
     "chapters": [
@@ -29294,7 +29302,7 @@
   },
   {
     "lemma": "Eutyches 1",
-    "previous": "Eutropiu limen",
+    "previous": "Εὐτροπίου λιμήν",
     "next": "Eutyches 2",
     "chapters": [
       {

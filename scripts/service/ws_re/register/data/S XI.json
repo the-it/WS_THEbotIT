@@ -587,7 +587,7 @@
   {
     "lemma": "Aurelius 127b",
     "previous": "Asklepiades 52",
-    "next": "Bacensis civitas",
+    "next": "Azaloi",
     "chapters": [
       {
         "start": 344,
@@ -597,8 +597,16 @@
     ]
   },
   {
+    "lemma": "Azaloi",
+    "previous": "Aurelius 127b"
+  },
+  {
+    "lemma": "Azali",
+    "next": "Bacensis civitas"
+  },
+  {
     "lemma": "Bacensis civitas",
-    "previous": "Aurelius 127b",
+    "previous": "Azali",
     "next": "Bagaudae",
     "chapters": [
       {
@@ -616,7 +624,7 @@
   {
     "lemma": "Basoretensis vicus",
     "previous": "Bagaudae",
-    "next": "Bianor 5a",
+    "next": "Bathinus",
     "chapters": [
       {
         "start": 353,
@@ -626,8 +634,13 @@
     ]
   },
   {
-    "lemma": "Bianor 5a",
+    "lemma": "Bathinus",
     "previous": "Basoretensis vicus",
+    "next": "Bianor 5a"
+  },
+  {
+    "lemma": "Bianor 5a",
+    "previous": "Bathinus",
     "next": "Bilachiniensis statio",
     "chapters": [
       {

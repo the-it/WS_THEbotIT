@@ -430,7 +430,7 @@
   {
     "lemma": "Aufidius 44a",
     "previous": "Aufidius 41",
-    "next": "Avidius 7a",
+    "next": "Avidius 5",
     "chapters": [
       {
         "start": 18,
@@ -440,8 +440,20 @@
     ]
   },
   {
-    "lemma": "Avidius 7a",
+    "lemma": "Avidius 5",
     "previous": "Aufidius 44a",
+    "next": "Avidius 6",
+    "sort_key": "Avidius 05"
+  },
+  {
+    "lemma": "Avidius 6",
+    "previous": "Avidius 5",
+    "next": "Avidius 7a",
+    "sort_key": "Avidius 06"
+  },
+  {
+    "lemma": "Avidius 7a",
+    "previous": "Avidius 6",
     "next": "Aurelius 111a",
     "chapters": [
       {
@@ -478,7 +490,6 @@
   {
     "lemma": "Baebius 36a",
     "previous": "Aurelius 140a",
-    "next": "Butra",
     "chapters": [
       {
         "start": 18,
@@ -488,8 +499,12 @@
     ]
   },
   {
+    "lemma": "Brutus 3",
+    "next": "Butra"
+  },
+  {
     "lemma": "Butra",
-    "previous": "Baebius 36a",
+    "previous": "Brutus 3",
     "next": "Caburriates",
     "chapters": [
       {
@@ -974,6 +989,8 @@
   },
   {
     "lemma": "Chelidonioi",
+    "previous": null,
+    "next": "Cincius 9",
     "chapters": [
       {
         "start": 23,
@@ -981,6 +998,10 @@
         "author": "Fluss"
       }
     ]
+  },
+  {
+    "lemma": "Cincius 9",
+    "previous": "Chelidonioi"
   },
   {
     "lemma": "Claudius 357",
