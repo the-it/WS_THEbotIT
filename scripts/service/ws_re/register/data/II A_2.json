@@ -121,7 +121,7 @@
   {
     "lemma": "Selinus 7",
     "previous": "Selinus 6",
-    "next": "Selinus 8",
+    "next": "Selinus 8-11",
     "chapters": [
       {
         "start": 1266,
@@ -131,25 +131,25 @@
     ]
   },
   {
-    "lemma": "Selinus 8",
+    "lemma": "Selinus 8-11",
     "previous": "Selinus 7",
-    "next": "Selinus 8-11",
+    "next": "Selinus 8",
+    "chapters": [
+      {
+        "start": 1266,
+        "end": 1266
+      }
+    ]
+  },
+  {
+    "lemma": "Selinus 8",
+    "previous": "Selinus 8-11",
+    "next": "Selinus 9",
     "chapters": [
       {
         "start": 1266,
         "end": 1308,
         "author": "Ziegler"
-      }
-    ]
-  },
-  {
-    "lemma": "Selinus 8-11",
-    "previous": "Selinus 8",
-    "next": "Selinus 9",
-    "chapters": [
-      {
-        "start": 1266,
-        "end": 1266
       }
     ]
   },
