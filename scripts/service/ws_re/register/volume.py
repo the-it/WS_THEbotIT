@@ -104,10 +104,10 @@ class VolumeRegister(Register):
             return Lemma.make_sort_key(lemma_dict["sort_key"])
         return Lemma.make_sort_key(lemma_dict["lemma"])
 
-    def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List) -> str:
+    def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List, self_supplement: bool=False) -> str:
         sort_key = self.normalize_sort_key(lemma_dict)
 
-        if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
+        if "lemma" in lemma_dict and self.get_lemma_by_name(lemma_dict["lemma"], self_supplement):
             self._update_lemma_by_name(lemma_dict, remove_items)
             return "update_lemma_by_name"
         if self.get_lemma_by_sort_key(sort_key):
