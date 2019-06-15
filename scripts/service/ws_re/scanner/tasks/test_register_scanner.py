@@ -259,8 +259,8 @@ text.
         compare("Lemma Previous", post_lemma.lemma_dict["previous"])
         compare("Lemma Next", post_lemma.lemma_dict["next"])
         post_lemma_append = task.registers["I,1"].get_lemma_by_name("Aal", self_supplement=True)
-        compare("Lemma Previous", post_lemma_append.lemma_dict["previous2"])
-        compare("Lemma Next", post_lemma_append.lemma_dict["next2"])
+        compare("Lemma Previous2", post_lemma_append.lemma_dict["previous"])
+        compare("Lemma Next2", post_lemma_append.lemma_dict["next"])
 
     def test_fetch_from_properties_lemma_not_found(self):
         self.title_mock.return_value = "RE:Aas"
