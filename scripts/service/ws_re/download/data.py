@@ -76,6 +76,22 @@ _MAPPINGS = {
     "II A,2": {"source": ("PaulyWissowa4153", "Selinuntia Sila"), "pages": ((1263, 40002, 40326),)},
     "III A,1": {"source": ("PaulyWissowa4153", "Silacenis Sparsus"), "pages": ((-1, 50002, 50316),)},
     "III A,2": {"source": ("PaulyWissowa4153", "Sparta Stluppi"), "pages": ((1263, 60002, 60322),)},
+    "IV A,1": {"source": ("PaulyWissowa5466", "Stoa Symposion"), "pages": ((-1, 70002, 70314),)},
+    "IV A,2": {"source": ("PaulyWissowa5466", "Symposion Tauris"), "pages": ((1271, 80002, 80319),)},
+    "V A,1": {"source": ("PaulyWissowa5466", "Taurisci Thapsis"), "pages": ((-1, 90002, 90319),)},
+    "V A,2": {"source": ("PaulyWissowa5466", "Thapsos Thesara"), "pages": ((1279, 100002, 100319),)},
+    "VI A,1": {"source": ("PaulyWissowa5466", "Thesauros Timomachos"), "pages": ((-1, 110002, 110314),)},
+    "VI A,2": {"source": ("PaulyWissowa5466", "Timon Tribus"), "pages": ((1295, 120002, 120306),)},
+    "VII A,1": {"source": ("PaulyWissowa5466", "Tributum M. Tullius Cicero"), "pages": ((-1, 130002, 130318),)},
+    "VII A,2": {"source": ("PaulyWissowa5466", "Tullius (M. Tullius Cicero) Valerius"),
+                "pages": ((1279, 140002, 140321),)},
+    "VIII A,1": {"source": ("PaulyWissowa5466", "Valerius Fabrianus P. Vergilius Maro"),
+                 "pages": ((-1, 150002, 150317),)},
+    "VIII A,2": {"source": ("PaulyWissowa5466", "Vergilius (P. Vergilius Maro) Vindeleia"),
+                 "pages": ((1263, 160002, 160333),)},
+    "IX A,1": {"source": ("PaulyWissowa5466", "Vindelici Vulca"), "pages": ((-1, 170002, 170310),(1235, 170312, 170322),)},
+    "IX A,2": {"source": ("PaulyWissowa5466", "Vulcanius Zenius"), "pages": ((1279, 180002, 180302),)},
+    "X A": {"source": ("PaulyWissowa5466", "Zenobia Zythos"), "pages": ((-1, 190002, 190213),)},
 }
 
 _MISSING_PAGES = (

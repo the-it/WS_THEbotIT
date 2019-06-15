@@ -53,7 +53,7 @@ class TestVolume(TestCase):
         volume = Volume("IX A,2", "1900", "Aal", "Bethel")
         compare("2_09_2", volume.sort_key)
         volume = Volume("X A", "1900", "Aal", "Bethel")
-        compare("2_10_None", volume.sort_key)
+        compare("2_10_0", volume.sort_key)
         volume = Volume("S IV", "1900", "Aal", "Bethel")
         compare("3_04", volume.sort_key)
         volume = Volume("R", "1900", "Aal", "Bethel")
