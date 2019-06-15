@@ -2825,6 +2825,7 @@
     "lemma": "P. Crepusius",
     "previous": "Crepundia",
     "next": "Crescens 1",
+    "sort_key": "Crepusius",
     "chapters": [
       {
         "start": 1707,
@@ -2837,6 +2838,8 @@
     "lemma": "Crescens 1",
     "previous": "P. Crepusius",
     "next": "Crescens 2",
+    "sort_key": "Crescens 01",
+    "redirect": "Aemilius 41",
     "chapters": [
       {
         "start": 1707,
@@ -2933,6 +2936,7 @@
     "lemma": "Crescentianus",
     "previous": "Crescentia",
     "next": "Crescentilla",
+    "redirect": "Aiacius 2",
     "chapters": [
       {
         "start": 1707,
@@ -2945,6 +2949,7 @@
     "lemma": "Crescentilla",
     "previous": "Crescentianus",
     "next": "Crescentina",
+    "redirect": "Baebius 50",
     "chapters": [
       {
         "start": 1707,
@@ -2956,6 +2961,7 @@
     "lemma": "Crescentina",
     "previous": "Crescentilla",
     "next": "Crescentius",
+    "redirect": "Cannutius 5",
     "chapters": [
       {
         "start": 1707,
@@ -3003,6 +3009,7 @@
     "lemma": "Cresconius 3",
     "previous": "Cresconius 2",
     "next": "Cresimenses",
+    "redirect": "Corippus",
     "chapters": [
       {
         "start": 1708,
@@ -12357,7 +12364,7 @@
   {
     "lemma": "Danaos 2",
     "previous": "Danaos 1",
-    "next": "Danapris",
+    "next": "Danaos 3",
     "chapters": [
       {
         "start": 2098,
@@ -12367,9 +12374,15 @@
     ]
   },
   {
-    "lemma": "Danapris",
+    "lemma": "Danaos 3",
     "previous": "Danaos 2",
+    "next": "Danapris"
+  },
+  {
+    "lemma": "Danapris",
+    "previous": "Danaos 3",
     "next": "Danastris",
+    "wp_link": "w:de:Dnepr",
     "chapters": [
       {
         "start": 2098,
@@ -12381,7 +12394,8 @@
   {
     "lemma": "Danastris",
     "previous": "Danapris",
-    "next": "Danaus 3",
+    "next": "Dandaguda",
+    "wp_link": "w:de:Dnister",
     "chapters": [
       {
         "start": 2098,
@@ -13302,6 +13316,7 @@
     "lemma": "Daradax",
     "previous": "Daradae",
     "next": "Daradrai",
+    "wp_link": "w:de:Sādschūr (Fluss)",
     "chapters": [
       {
         "start": 2151,
@@ -18691,7 +18706,7 @@
   {
     "lemma": "Deiotarus 4",
     "previous": "Deiotarus 3",
-    "next": "Deipatyros",
+    "next": "Δειπάτυρος",
     "chapters": [
       {
         "start": 2404,
@@ -18701,9 +18716,10 @@
     ]
   },
   {
-    "lemma": "Deipatyros",
+    "lemma": "Δειπάτυρος",
     "previous": "Deiotarus 4",
     "next": "Deïphobe",
+    "sort_key": "Deipatyros",
     "chapters": [
       {
         "start": 2404,
@@ -18714,7 +18730,7 @@
   },
   {
     "lemma": "Deïphobe",
-    "previous": "Deipatyros",
+    "previous": "Δειπάτυρος",
     "next": "Deïphobos 1",
     "chapters": [
       {
@@ -19393,6 +19409,7 @@
     "lemma": "Delia castra",
     "previous": "Delia 3",
     "next": "Deliades 1",
+    "redirect": "Castra, Castrum 15",
     "chapters": [
       {
         "start": 2435,
@@ -20130,6 +20147,7 @@
     "lemma": "Delta 1",
     "previous": "Delphynes",
     "next": "Delta 2",
+    "wp_link": "w:de:Nildelta",
     "chapters": [
       {
         "start": 2701,
@@ -20142,6 +20160,7 @@
     "lemma": "Delta 2",
     "previous": "Delta 1",
     "next": "Deltoton",
+    "redirect": "Indos",
     "chapters": [
       {
         "start": 2702,

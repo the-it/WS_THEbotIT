@@ -699,8 +699,14 @@
     "previous": "Damokritos 4"
   },
   {
+    "lemma": "Demetrios 125b",
+    "next": "Demokydes"
+  },
+  {
     "lemma": "Demokydes",
+    "previous": "Demetrios 125b",
     "next": "Die(i)trephes",
+    "redirect": true,
     "chapters": [
       {
         "start": 59,
@@ -3753,13 +3759,14 @@
     "sort_key": "Antonius 030"
   },
   {
-    "lemma": "Apollodoros 23",
+    "lemma": "Apollonios 23",
+    "previous": null,
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
   {
     "lemma": "Caesaris thronus",
-    "previous": "Apollodoros 23",
+    "previous": "Apollonios 23",
     "next": "Damolyte",
     "chapters": [
       {

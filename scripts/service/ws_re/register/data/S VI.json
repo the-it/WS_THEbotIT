@@ -91,7 +91,13 @@
     ]
   },
   {
+    "lemma": "Aemilius 43",
+    "next": "Aemilius 54b",
+    "sort_key": "Aemilius 043"
+  },
+  {
     "lemma": "Aemilius 54b",
+    "previous": "Aemilius 43",
     "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
   },
@@ -103,7 +109,7 @@
   {
     "lemma": "Afranius 10a",
     "previous": "Aemilius 79",
-    "next": "Aiacius 3",
+    "next": "Agesistratos",
     "chapters": [
       {
         "start": 3,
@@ -113,8 +119,11 @@
     ]
   },
   {
+    "lemma": "Agesistratos",
+    "previous": "Afranius 10a"
+  },
+  {
     "lemma": "Aiacius 3",
-    "previous": "Afranius 10a",
     "chapters": [
       {
         "start": 3,
@@ -237,6 +246,7 @@
     "lemma": "Antonius 58a",
     "previous": "Antonius 36a",
     "next": "Antonius 107a",
+    "sort_key": "Antonius 058a",
     "chapters": [
       {
         "start": 8,
@@ -699,6 +709,7 @@
   {
     "lemma": "Calvisius 10",
     "previous": "Calvisius 9",
+    "next": "Calvisius 19",
     "chapters": [
       {
         "start": 20,
@@ -709,6 +720,7 @@
   },
   {
     "lemma": "Calvisius 19",
+    "previous": "Calvisius 10",
     "next": "Camalatrum(?)"
   },
   {
@@ -750,7 +762,8 @@
   {
     "lemma": "Caninius 7",
     "previous": "Canianus saltus",
-    "next": "Canta"
+    "next": "Canta",
+    "sort_key": "Caninius 07"
   },
   {
     "lemma": "Canta",
@@ -814,10 +827,12 @@
   },
   {
     "lemma": "Caristanius 1",
-    "previous": "Caris(s)anum"
+    "previous": "Caris(s)anum",
+    "next": "Caristanius 1a"
   },
   {
     "lemma": "Caristanius 1a",
+    "previous": "Caristanius 1",
     "next": "Carnuns",
     "chapters": [
       {
@@ -892,10 +907,21 @@
   },
   {
     "lemma": "Cassius 67",
-    "previous": "Carucla"
+    "previous": "Carucla",
+    "next": "Castellum 5a"
   },
   {
     "lemma": "Castellum 5a",
+    "previous": "Cassius 67"
+  },
+  {
+    "lemma": "Cassius",
+    "next": "Castellum 5a"
+  },
+  {
+    "lemma": "Castellum 5a",
+    "previous": "Cassius",
+    "next": "Catilius 4",
     "chapters": [
       {
         "start": 22,
@@ -906,6 +932,7 @@
   },
   {
     "lemma": "Catilius 4",
+    "previous": "Castellum 5a",
     "next": "Catillus 4"
   },
   {
