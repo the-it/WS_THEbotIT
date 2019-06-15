@@ -147,7 +147,7 @@
   {
     "lemma": "Rabdu analepsis",
     "previous": "Rabdophoroi, rabduchoi",
-    "next": "Rabduchoi",
+    "next": "Ῥαβδοφόροι, ῥαβδοῦχοι",
     "chapters": [
       {
         "start": 18,
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "lemma": "Rabduchoi",
+    "lemma": "Ῥαβδοφόροι, ῥαβδοῦχοι",
     "previous": "Rabdu analepsis",
     "next": "Rabe 1",
     "redirect": true,
@@ -1081,7 +1081,7 @@
   {
     "lemma": "Raida",
     "previous": "Ῥαία",
-    "next": "Raikes",
+    "next": "Raiteai",
     "chapters": [
       {
         "start": 130,
@@ -1091,8 +1091,32 @@
     ]
   },
   {
-    "lemma": "Raikes",
+    "lemma": "Raiteai",
     "previous": "Raida",
+    "next": "Raithenoi",
+    "chapters": [
+      {
+        "start": 131,
+        "end": 131,
+        "author": "Bölte"
+      }
+    ]
+  },
+  {
+    "lemma": "Raithenoi",
+    "previous": "Raiteai",
+    "next": "Raikes",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 131,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "lemma": "Raikes",
+    "previous": "Raithenoi",
     "next": "Ῥαικοί",
     "chapters": [
       {
@@ -1128,32 +1152,8 @@
     ]
   },
   {
-    "lemma": "Raiteai",
-    "previous": "Raita",
-    "next": "Raithenoi",
-    "chapters": [
-      {
-        "start": 131,
-        "end": 131,
-        "author": "Bölte"
-      }
-    ]
-  },
-  {
-    "lemma": "Raithenoi",
-    "previous": "Raiteai",
-    "next": "Ῥαίξ",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 131,
-        "end": 131
-      }
-    ]
-  },
-  {
     "lemma": "Ῥαίξ",
-    "previous": "Raithenoi",
+    "previous": "Raita",
     "next": "Ῥακάται",
     "redirect": true,
     "chapters": [
@@ -1250,7 +1250,7 @@
   },
   {
     "lemma": "Rama, Ramath, Ramatha 1",
-    "previous": "Rama",
+    "previous": "Rama, Ramath, Ramatha",
     "next": "Rama, Ramath, Ramatha 2",
     "wp_link": "w:de:Ramathaim-Zophim",
     "chapters": [
@@ -4907,7 +4907,7 @@
   {
     "lemma": "Rehob 3",
     "previous": "Rehob 2",
-    "next": "Rehoboth",
+    "next": "Rehoboth 1",
     "chapters": [
       {
         "start": 513,
@@ -5768,7 +5768,7 @@
   {
     "lemma": "Repentinus",
     "previous": "Reparatus 2",
-    "next": "Repentundarum crimen",
+    "next": "Repetundarum crimen",
     "chapters": [
       {
         "start": 603,
@@ -5777,7 +5777,7 @@
     ]
   },
   {
-    "lemma": "Repentundarum crimen",
+    "lemma": "Repetundarum crimen",
     "previous": "Repentinus",
     "next": "Rephaim",
     "chapters": [
