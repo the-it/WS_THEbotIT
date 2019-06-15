@@ -2010,6 +2010,7 @@
     "lemma": "Denarius",
     "previous": "Demusia",
     "next": "Dendrites",
+    "wp_link": "w:de:Denarius",
     "chapters": [
       {
         "start": 202,
@@ -2033,7 +2034,7 @@
   {
     "lemma": "Dendritis",
     "previous": "Dendrites",
-    "next": "Dendrobatai",
+    "next": "Δενδροβάται",
     "chapters": [
       {
         "start": 215,
@@ -2043,7 +2044,7 @@
     ]
   },
   {
-    "lemma": "Dendrobatai",
+    "lemma": "Δενδροβάται",
     "previous": "Dendritis",
     "next": "Dendrobosa",
     "chapters": [
@@ -2056,7 +2057,7 @@
   },
   {
     "lemma": "Dendrobosa",
-    "previous": "Dendrobatai",
+    "previous": "Δενδροβάται",
     "next": "Δενδροειδής",
     "chapters": [
       {
@@ -3136,7 +3137,7 @@
     "lemma": "Dertum",
     "previous": "Dertosa",
     "next": "Derva",
-    "redirect": true,
+    "redirect": "Diria",
     "chapters": [
       {
         "start": 248,
@@ -3148,7 +3149,7 @@
     "lemma": "Derva",
     "previous": "Dertum",
     "next": "Derventio 1",
-    "redirect": true,
+    "redirect": "Derbani",
     "chapters": [
       {
         "start": 248,
@@ -3196,7 +3197,7 @@
     "lemma": "Dervetios",
     "previous": "Derventio 3",
     "next": "Dervetius pagus",
-    "redirect": true,
+    "redirect": "Develtos",
     "chapters": [
       {
         "start": 248,
@@ -3267,7 +3268,7 @@
   {
     "lemma": "Desertor",
     "previous": "Deserti agri",
-    "next": "Delisoi",
+    "next": "Desiderius 1",
     "chapters": [
       {
         "start": 249,
@@ -3290,8 +3291,9 @@
   },
   {
     "lemma": "Desiderius 1",
-    "previous": "Delisoi",
+    "previous": "Desertor",
     "next": "Desiderius 2",
+    "wp_link": "w:de:Desiderius (Caesar)",
     "chapters": [
       {
         "start": 250,
@@ -3316,7 +3318,7 @@
     "lemma": "Designator",
     "previous": "Desiderius 2",
     "next": "Desilaus",
-    "redirect": true,
+    "redirect": "Dissignator",
     "chapters": [
       {
         "start": 250,
@@ -3327,8 +3329,8 @@
   {
     "lemma": "Desilaus",
     "previous": "Designator",
-    "next": "Desmontes",
-    "redirect": true,
+    "next": "Desiloi",
+    "redirect": "Kresilas",
     "chapters": [
       {
         "start": 250,
@@ -3338,8 +3340,13 @@
     ]
   },
   {
-    "lemma": "Desmontes",
+    "lemma": "Desiloi",
     "previous": "Desilaus",
+    "next": "Desmontes"
+  },
+  {
+    "lemma": "Desmontes",
+    "previous": "Desiloi",
     "next": "Δεσμωτήριον",
     "chapters": [
       {
@@ -9665,6 +9672,7 @@
     "lemma": "Diodoros 9",
     "previous": "Diodoros 8",
     "next": "Diodoros 10",
+    "sort_key": "Diodoros 09",
     "chapters": [
       {
         "start": 659,

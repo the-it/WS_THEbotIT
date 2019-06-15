@@ -287,7 +287,13 @@
     "previous": "Battus"
   },
   {
+    "lemma": "Bias 10",
+    "next": "Caecilius 141"
+  },
+  {
     "lemma": "Caecilius 141",
+    "previous": "Bias 10",
+    "next": "Celsius 18a",
     "chapters": [
       {
         "start": 57,
@@ -295,6 +301,10 @@
         "author": "Hosius"
       }
     ]
+  },
+  {
+    "lemma": "Celsius 18a",
+    "previous": "Caecilius 141"
   },
   {
     "lemma": "Caecilia Trebulla",

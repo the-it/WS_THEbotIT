@@ -6913,7 +6913,7 @@
   {
     "lemma": "Lagubalium",
     "previous": "Laguantan",
-    "next": "Lagusa",
+    "next": "Λαγοῦσα",
     "chapters": [
       {
         "start": 464,
@@ -6923,9 +6923,10 @@
     ]
   },
   {
-    "lemma": "Lagusa",
+    "lemma": "Λαγοῦσα",
     "previous": "Lagubalium",
-    "next": "Lagusa 1",
+    "next": "Λαγοῦσα 1",
+    "sort_key": "Lagusa",
     "chapters": [
       {
         "start": 464,
@@ -6935,8 +6936,8 @@
     ]
   },
   {
-    "lemma": "Lagusa 1",
-    "previous": "Lagusa",
+    "lemma": "Λαγοῦσα 1",
+    "previous": "Λαγοῦσα",
     "next": "Lagusa 2",
     "chapters": [
       {
@@ -6948,7 +6949,7 @@
   },
   {
     "lemma": "Lagusa 2",
-    "previous": "Lagusa 1",
+    "previous": "Λαγοῦσα 1",
     "next": "Lagusa 3",
     "chapters": [
       {
@@ -19132,6 +19133,7 @@
     "lemma": "Legio, Legeon",
     "previous": "Leges Romanae barbarorum",
     "next": "Legio 1",
+    "wp_link": "w:de:<!-- Nicht Megiddo -->",
     "chapters": [
       {
         "start": 1186,
@@ -19143,6 +19145,7 @@
   {
     "lemma": "Legio 1",
     "previous": "Legio, Legeon",
+    "next": null,
     "chapters": [
       {
         "start": 1186,
