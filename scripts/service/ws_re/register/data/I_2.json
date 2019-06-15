@@ -2144,6 +2144,7 @@
     "lemma": "Alfius 5",
     "previous": "Alfius 4",
     "next": "Alfius 6",
+    "sort_key": "Alfius 05",
     "chapters": [
       {
         "start": 1475,
@@ -2195,6 +2196,7 @@
     "lemma": "Alfius 9",
     "previous": "Alfius 8",
     "next": "Alfius 10",
+    "sort_key": "Alfius 09",
     "chapters": [
       {
         "start": 1475,
@@ -6901,7 +6903,7 @@
   {
     "lemma": "Alperium",
     "previous": "Alpenos",
-    "next": "Alpes",
+    "next": "Alpes 1",
     "chapters": [
       {
         "start": 1599,
@@ -6911,20 +6913,14 @@
     ]
   },
   {
-    "lemma": "Alpes",
+    "lemma": "Alpes 1",
     "previous": "Alperium",
     "next": "Alpesa",
-    "chapters": [
-      {
-        "start": 1599,
-        "end": 1612,
-        "author": "Partsch"
-      }
-    ]
+    "wp_link": "w:de:Alpen"
   },
   {
     "lemma": "Alpesa",
-    "previous": "Alpes",
+    "previous": "Alpes 1",
     "next": "Alphabet",
     "chapters": [
       {
@@ -10302,8 +10298,8 @@
   },
   {
     "lemma": "Amazones",
-    "previous": "Alexandros 34",
-    "next": "Amerias",
+    "previous": "Amazoneion 5",
+    "next": "Amazonia",
     "sort_key": "Amazones",
     "chapters": [
       {
@@ -16403,7 +16399,7 @@
   {
     "lemma": "Amphipagos akra",
     "previous": "Amphios 2",
-    "next": "Amphiphontes",
+    "next": "Ἀμφιφῶντες",
     "chapters": [
       {
         "start": 1949,
@@ -16412,7 +16408,7 @@
     ]
   },
   {
-    "lemma": "Amphiphontes",
+    "lemma": "Ἀμφιφῶντες",
     "previous": "Amphipagos akra",
     "next": "Amphipolis 1",
     "chapters": [
@@ -16425,8 +16421,9 @@
   },
   {
     "lemma": "Amphipolis 1",
-    "previous": "Amphiphontes",
+    "previous": "Ἀμφιφῶντες",
     "next": "Amphipolis 2",
+    "wp_link": "w:de:Amphipolis",
     "chapters": [
       {
         "start": 1949,
@@ -23228,6 +23225,7 @@
     "lemma": "Andeda",
     "previous": "Andecombogius",
     "next": "Andeira 1",
+    "wp_link": "w:de:Andeda",
     "chapters": [
       {
         "start": 2121,
@@ -42018,6 +42016,7 @@
     "lemma": "Antonius 36",
     "previous": "Antonius 35",
     "next": "Antonius 37",
+    "sort_key": "Antonius 036",
     "chapters": [
       {
         "start": 2614,
@@ -42386,6 +42385,7 @@
     "lemma": "Antonius 65",
     "previous": "Antonius 64",
     "next": "Antonius 66",
+    "sort_key": "Antonius 065",
     "chapters": [
       {
         "start": 2632,
@@ -42507,6 +42507,7 @@
     "lemma": "Antonius 75",
     "previous": "Antonius 74",
     "next": "Antonius 76",
+    "sort_key": "Antonius 075",
     "chapters": [
       {
         "start": 2633,
@@ -42519,6 +42520,7 @@
     "lemma": "Antonius 76",
     "previous": "Antonius 75",
     "next": "Antonius 77",
+    "sort_key": "Antonius 076",
     "chapters": [
       {
         "start": 2633,

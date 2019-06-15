@@ -121,11 +121,14 @@
   },
   {
     "lemma": "Apollodoros 27",
-    "previous": "Antipatros 29"
+    "previous": "Antipatros 29",
+    "next": "Apollonia 7"
   },
   {
     "lemma": "Apollonia 7",
-    "next": "Apomoira"
+    "previous": "Apollodoros 27",
+    "next": "Apomoira",
+    "sort_key": "Apollonia 07"
   },
   {
     "lemma": "Apomoira",
@@ -142,6 +145,7 @@
   {
     "lemma": "Aqua, Aquae 77a",
     "previous": "Apomoira",
+    "next": "Arbion",
     "sort_key": "Aqua, Aquae 077a",
     "chapters": [
       {
@@ -153,6 +157,7 @@
   },
   {
     "lemma": "Arbion",
+    "previous": "Aqua, Aquae 77a",
     "next": "Archisomatophylakes"
   },
   {
@@ -405,7 +410,7 @@
   {
     "lemma": "Caecilius 33a",
     "previous": "Brogitarus",
-    "next": "Caelius 7a",
+    "next": "Caecina 24",
     "chapters": [
       {
         "start": 83,
@@ -415,8 +420,11 @@
     ]
   },
   {
+    "lemma": "Caecina 24",
+    "previous": "Caecilius 33a"
+  },
+  {
     "lemma": "Caelius 7a",
-    "previous": "Caecilius 33a",
     "next": "Canaliclarius",
     "chapters": [
       {
@@ -473,8 +481,14 @@
     "previous": "Clementius 1a"
   },
   {
+    "lemma": "Χειροτέχνιον",
+    "next": "Chersonesos 5"
+  },
+  {
     "lemma": "Chersonesos 5",
-    "next": "χρηματισμός"
+    "previous": "Χειροτέχνιον",
+    "next": "χρηματισμός",
+    "sort_key": "Cheirotechnion"
   },
   {
     "lemma": "χρηματισμός",

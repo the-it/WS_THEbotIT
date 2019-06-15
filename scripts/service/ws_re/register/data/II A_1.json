@@ -168,8 +168,8 @@
   },
   {
     "lemma": "Sarmus",
-    "previous": "Selinos 3",
-    "next": "Sauconna",
+    "previous": "Sarmizegethusa",
+    "next": "Sarmydessos",
     "chapters": [
       {
         "start": 27,
@@ -423,6 +423,7 @@
     "lemma": "Saron 3",
     "previous": "Saron 2",
     "next": "Sarona",
+    "wp_link": "w:de:Scharonebene",
     "chapters": [
       {
         "start": 32,
@@ -8038,6 +8039,7 @@
     "lemma": "Scythopolis",
     "previous": "Scythophorius",
     "next": "Scythotauri",
+    "wp_link": "w:de:Bet Sche’an",
     "chapters": [
       {
         "start": 947,
@@ -8780,7 +8782,8 @@
   {
     "lemma": "Sebulon",
     "previous": "Sebuinum",
-    "next": "Sebous",
+    "next": "Σεβοῦς",
+    "wp_link": "w:de:Sebulon",
     "chapters": [
       {
         "start": 969,
@@ -8790,7 +8793,7 @@
     ]
   },
   {
-    "lemma": "Sebous",
+    "lemma": "Σεβοῦς",
     "previous": "Sebulon",
     "next": "Sebusiani",
     "chapters": [
@@ -8803,7 +8806,7 @@
   },
   {
     "lemma": "Sebusiani",
-    "previous": "Sebous",
+    "previous": "Σεβοῦς",
     "next": "Secalaunia",
     "chapters": [
       {
@@ -12887,8 +12890,20 @@
     ]
   },
   {
-    "lemma": "Seleukos 1",
+    "lemma": "Seleukos",
     "previous": "Seleukis 6",
+    "next": "Seleukos 1",
+    "chapters": [
+      {
+        "start": 1208,
+        "end": 1208,
+        "author": "Stähelin"
+      }
+    ]
+  },
+  {
+    "lemma": "Seleukos 1",
+    "previous": "Seleukos",
     "next": "Seleukos 2",
     "chapters": [
       {

@@ -1,18 +1,36 @@
 [
   {
+    "lemma": "Claudius 107b",
+    "next": "Claudius 147a"
+  },
+  {
     "lemma": "Claudius 147a",
-    "next": "Claudius 412",
+    "previous": "Claudius 107b",
+    "next": "Claudius 167",
     "chapters": [
       {
         "start": 0,
         "end": 0
       }
     ]
+  },
+  {
+    "lemma": "Claudius 167",
+    "previous": "Claudius 147a",
+    "next": "Claudius 197a"
+  },
+  {
+    "lemma": "Claudius 197a",
+    "previous": "Claudius 167"
+  },
+  {
+    "lemma": "Claudius 410a",
+    "next": "Claudius 412"
   },
   {
     "lemma": "Claudius 412",
-    "previous": "Claudius 147a",
-    "next": "Comius a",
+    "previous": "Claudius 410a",
+    "next": "Claudius 414a",
     "chapters": [
       {
         "start": 0,
@@ -21,8 +39,11 @@
     ]
   },
   {
+    "lemma": "Claudius 414a",
+    "previous": "Claudius 412"
+  },
+  {
     "lemma": "Comius a",
-    "previous": "Claudius 412",
     "next": "Fabius 59a",
     "chapters": [
       {
@@ -1758,11 +1779,15 @@
   },
   {
     "lemma": "Aemilius 43",
-    "previous": "Aemilianus 17"
+    "previous": "Aemilianus 17",
+    "next": "Aemilius 54a",
+    "sort_key": "Aemilius 043"
   },
   {
     "lemma": "Aemilius 54a",
+    "previous": "Aemilius 43",
     "next": "Aemilius 131a",
+    "sort_key": "Aemilius 054a",
     "chapters": [
       {
         "start": 2,
@@ -2089,7 +2114,12 @@
   },
   {
     "lemma": "Antiphellos",
-    "previous": "Antiochis 8"
+    "previous": "Antiochis 8",
+    "next": "Antius 11a"
+  },
+  {
+    "lemma": "Antius 11a",
+    "previous": "Antiphellos"
   },
   {
     "lemma": "Turranius",
@@ -2157,7 +2187,8 @@
   {
     "lemma": "Antonius 36",
     "previous": "Antonius 1a",
-    "next": "Antonius 94a"
+    "next": "Antonius 94a",
+    "sort_key": "Antonius 036"
   },
   {
     "lemma": "Antonius 94a",
@@ -2203,11 +2234,17 @@
   },
   {
     "lemma": "Apsines",
-    "previous": "Apollonides 33c"
+    "previous": "Apollonides 33c",
+    "next": "Aqua, Aquae 97"
   },
   {
     "lemma": "Aqua, Aquae 97",
-    "next": "Aradius 1a"
+    "previous": "Apsines"
+  },
+  {
+    "lemma": "Aqua, Aquae 97",
+    "next": "Aradius 1a",
+    "sort_key": "Aquae 097"
   },
   {
     "lemma": "Aradius 1a",
@@ -2369,7 +2406,12 @@
   },
   {
     "lemma": "Arsada",
-    "previous": "Arruntius 16a"
+    "previous": "Arruntius 16a",
+    "next": "Articuleius 4"
+  },
+  {
+    "lemma": "Articuleius 4",
+    "previous": "Arsada"
   },
   {
     "lemma": "Articuleius a",
@@ -2993,11 +3035,19 @@
   },
   {
     "lemma": "Caelius 26a",
-    "previous": "Caecilius 140"
+    "previous": "Caecilius 140",
+    "next": "Caerellius 9"
+  },
+  {
+    "lemma": "Caerellius 9",
+    "previous": "Caelius 26a",
+    "next": "Caesellius 1a",
+    "sort_key": "Caerellius 09"
   },
   {
     "lemma": "Caesellius 1a",
-    "next": "Caesernius 6",
+    "previous": "Caerellius 9",
+    "next": "Caesennius 13a",
     "chapters": [
       {
         "start": 80,
@@ -3007,8 +3057,13 @@
     ]
   },
   {
-    "lemma": "Caesernius 6",
+    "lemma": "Caesennius 13a",
     "previous": "Caesellius 1a",
+    "next": "Caesernius 6"
+  },
+  {
+    "lemma": "Caesernius 6",
+    "previous": "Caesennius 13a",
     "next": "Caesius 22a",
     "chapters": [
       {
@@ -3033,7 +3088,7 @@
   {
     "lemma": "Caesius 22b",
     "previous": "Caesius 22a",
-    "next": "Caetronius 2a",
+    "next": "Caesonius 9",
     "chapters": [
       {
         "start": 81,
@@ -3043,9 +3098,15 @@
     ]
   },
   {
-    "lemma": "Caetronius 2a",
+    "lemma": "Caesonius 9",
     "previous": "Caesius 22b",
-    "next": "Calestrius 4",
+    "next": "Caetronius 2a",
+    "sort_key": "Caesonius 09"
+  },
+  {
+    "lemma": "Caetronius 2a",
+    "previous": "Caesonius 9",
+    "next": "Calestrius 3",
     "chapters": [
       {
         "start": 83,
@@ -3055,8 +3116,13 @@
     ]
   },
   {
-    "lemma": "Calestrius 4",
+    "lemma": "Calestrius 3",
     "previous": "Caetronius 2a",
+    "next": "Calestrius 4"
+  },
+  {
+    "lemma": "Calestrius 4",
+    "previous": "Calestrius 3",
     "next": "Calpurnius 51a",
     "chapters": [
       {
@@ -3082,6 +3148,7 @@
     "lemma": "Calpurnius 51b",
     "previous": "Calpurnius 51a",
     "next": "Calpurnius 110a",
+    "sort_key": "Calpurnius 051b",
     "chapters": [
       {
         "start": 85,
@@ -3248,6 +3315,7 @@
     "lemma": "Catius 6b",
     "previous": "Catius 6a",
     "next": "Catius 9a",
+    "redirect": true,
     "chapters": [
       {
         "start": 88,
@@ -3292,10 +3360,17 @@
   {
     "lemma": "Ceionius 4",
     "previous": "Catius 17",
+    "next": "Ceionius 24",
     "sort_key": "Ceionius 04"
   },
   {
+    "lemma": "Ceionius 24",
+    "previous": "Ceionius 4",
+    "next": "Ceionius 24a"
+  },
+  {
     "lemma": "Ceionius 24a",
+    "previous": "Ceionius 24",
     "next": "Celer 16",
     "chapters": [
       {
@@ -3403,6 +3478,7 @@
     "lemma": "Claudius 21a",
     "previous": "Claudianus 11",
     "next": "Claudius 32a",
+    "sort_key": "Claudius 021a",
     "chapters": [
       {
         "start": 98,
@@ -3414,7 +3490,8 @@
   {
     "lemma": "Claudius 32a",
     "previous": "Claudius 21a",
-    "next": "Claudius 75a",
+    "next": "Claudius 41b",
+    "sort_key": "Claudius 032a",
     "chapters": [
       {
         "start": 98,
@@ -3424,9 +3501,16 @@
     ]
   },
   {
-    "lemma": "Claudius 75a",
+    "lemma": "Claudius 41b",
     "previous": "Claudius 32a",
+    "next": "Claudius 75a",
+    "sort_key": "Claudius 041b"
+  },
+  {
+    "lemma": "Claudius 75a",
+    "previous": "Claudius 41b",
     "next": "Claudius 89a",
+    "sort_key": "Claudius 075a",
     "chapters": [
       {
         "start": 98,
@@ -3439,6 +3523,7 @@
     "lemma": "Claudius 89a",
     "previous": "Claudius 75a",
     "next": "Claudius 107a",
+    "sort_key": "Claudius 089a",
     "chapters": [
       {
         "start": 98,
@@ -3462,7 +3547,7 @@
   {
     "lemma": "Claudius 107b",
     "previous": "Claudius 107a",
-    "next": "Claudius 197a",
+    "next": "Claudius 147a",
     "chapters": [
       {
         "start": 100,
@@ -3472,8 +3557,16 @@
     ]
   },
   {
+    "lemma": "Claudius 147a",
+    "previous": "Claudius 107b"
+  },
+  {
+    "lemma": "Claudius 167",
+    "next": "Claudius 197a"
+  },
+  {
     "lemma": "Claudius 197a",
-    "previous": "Claudius 107b",
+    "previous": "Claudius 167",
     "next": "Claudius 200a",
     "chapters": [
       {
@@ -3510,7 +3603,7 @@
   {
     "lemma": "Claudius 241a",
     "previous": "Claudius 210a",
-    "next": "Claudius 273a",
+    "next": "Claudius 242",
     "chapters": [
       {
         "start": 101,
@@ -3520,8 +3613,13 @@
     ]
   },
   {
-    "lemma": "Claudius 273a",
+    "lemma": "Claudius 242",
     "previous": "Claudius 241a",
+    "next": "Claudius 273a"
+  },
+  {
+    "lemma": "Claudius 273a",
+    "previous": "Claudius 242",
     "next": "Claudius 319",
     "chapters": [
       {
@@ -3574,7 +3672,7 @@
   {
     "lemma": "Claudius 410a",
     "previous": "Claudius 369a",
-    "next": "Claudius 414a",
+    "next": "Claudius 412",
     "chapters": [
       {
         "start": 103,
@@ -3584,8 +3682,14 @@
     ]
   },
   {
-    "lemma": "Claudius 414a",
+    "lemma": "Claudius 412",
     "previous": "Claudius 410a",
+    "next": "Claudius 414a"
+  },
+  {
+    "lemma": "Claudius 414a",
+    "previous": "Claudius 412",
+    "next": "Claudius 418a",
     "chapters": [
       {
         "start": 103,
@@ -3595,7 +3699,21 @@
     ]
   },
   {
+    "lemma": "Claudius 418a",
+    "previous": "Claudius 414a"
+  },
+  {
+    "lemma": "Claudius 433a",
+    "next": "Claudius 437a"
+  },
+  {
+    "lemma": "Claudius 437a",
+    "previous": "Claudius 433a",
+    "next": "Claudius 440a"
+  },
+  {
     "lemma": "Claudius 440a",
+    "previous": "Claudius 437a",
     "next": "Clodius 30a"
   },
   {
@@ -3630,7 +3748,12 @@
     "previous": "Cluvius 10b"
   },
   {
+    "lemma": "Claudius 414a",
+    "next": "Claudius 418a"
+  },
+  {
     "lemma": "Claudius 418a",
+    "previous": "Claudius 414a",
     "next": "Claudius 429a",
     "chapters": [
       {

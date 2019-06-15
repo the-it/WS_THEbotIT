@@ -904,20 +904,8 @@
     ]
   },
   {
-    "lemma": "Libria",
-    "previous": "Libri Acherontici",
-    "next": "Libri augurales",
-    "chapters": [
-      {
-        "start": 140,
-        "end": 140,
-        "author": "Cramer"
-      }
-    ]
-  },
-  {
     "lemma": "Libri augurales",
-    "previous": "Libria",
+    "previous": "Libri Acherontici",
     "next": "Libri Etrusci",
     "redirect": true,
     "chapters": [
@@ -978,7 +966,7 @@
   {
     "lemma": "Libri ostentarii",
     "previous": "Libri haruspicini",
-    "next": "Libripens",
+    "next": "Libri pontificales",
     "redirect": true,
     "chapters": [
       {
@@ -988,20 +976,8 @@
     ]
   },
   {
-    "lemma": "Libripens",
-    "previous": "Libri ostentarii",
-    "next": "Libri pontificales",
-    "chapters": [
-      {
-        "start": 140,
-        "end": 140,
-        "author": "Kübler, B[ernhard]"
-      }
-    ]
-  },
-  {
     "lemma": "Libri pontificales",
-    "previous": "Libripens",
+    "previous": "Libri ostentarii",
     "next": "Libri rituales",
     "redirect": true,
     "chapters": [
@@ -1038,7 +1014,7 @@
   {
     "lemma": "Libri Tarquitiani",
     "previous": "Libri Sibyllini",
-    "next": "ad Libros",
+    "next": "Libria",
     "redirect": true,
     "chapters": [
       {
@@ -1048,8 +1024,32 @@
     ]
   },
   {
-    "lemma": "ad Libros",
+    "lemma": "Libria",
     "previous": "Libri Tarquitiani",
+    "next": "Libripens",
+    "chapters": [
+      {
+        "start": 140,
+        "end": 140,
+        "author": "Cramer"
+      }
+    ]
+  },
+  {
+    "lemma": "Libripens",
+    "previous": "Libria",
+    "next": "ad Libros",
+    "chapters": [
+      {
+        "start": 140,
+        "end": 140,
+        "author": "Kübler, B[ernhard]"
+      }
+    ]
+  },
+  {
+    "lemma": "ad Libros",
+    "previous": "Libripens",
     "next": "Librosus",
     "wp_link": "w:de:Vidoši",
     "chapters": [
@@ -2464,6 +2464,7 @@
     "lemma": "Licinius 63",
     "previous": "Licinius 62",
     "next": "Licinius 64",
+    "wp_link": "w:de:Publius Licinius Crassus (Legat)",
     "chapters": [
       {
         "start": 291,
@@ -7043,7 +7044,8 @@
   },
   {
     "lemma": "Litra",
-    "previous": "Lokris 2",
+    "previous": "Litorius 2",
+    "next": "Litria",
     "chapters": [
       {
         "start": 784,
@@ -7786,6 +7788,7 @@
     "lemma": "Livius 38",
     "previous": "Livius 37",
     "next": "Livius 39",
+    "wp_link": "w:de:Livilla",
     "chapters": [
       {
         "start": 924,
@@ -8804,35 +8807,35 @@
   {
     "lemma": "Lokris 1",
     "previous": "Lokrion",
-    "next": "Litra",
+    "next": "Lokris 2",
     "chapters": [
       {
         "start": 1135,
-        "end": 1135,
+        "end": 1288,
+        "author": "Oldfather"
+      }
+    ]
+  },
+  {
+    "lemma": "Lokris 2",
+    "previous": "Lokris 1",
+    "next": "Litra",
+    "chapters": [
+      {
+        "start": 1288,
+        "end": 1288,
         "author": "Oldfather"
       }
     ]
   },
   {
     "lemma": "Litra",
-    "previous": "Lokris 1",
-    "next": "Lokris 2",
+    "previous": "Lokris 2",
     "chapters": [
       {
         "start": 1287,
-        "end": 1287,
-        "author": "Regling"
-      }
-    ]
-  },
-  {
-    "lemma": "Lokris 2",
-    "previous": "Litra",
-    "chapters": [
-      {
-        "start": 1288,
         "end": 1288,
-        "author": "Oldfather"
+        "author": "Regling"
       }
     ]
   }
