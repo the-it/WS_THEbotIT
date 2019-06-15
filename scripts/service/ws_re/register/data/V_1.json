@@ -7681,18 +7681,6 @@
     ]
   },
   {
-    "lemma": "Diespiter",
-    "previous": "Dies sanguinis",
-    "next": "Dieteris",
-    "chapters": [
-      {
-        "start": 478,
-        "end": 479,
-        "author": "Wissowa"
-      }
-    ]
-  },
-  {
     "lemma": "Dies sanguinis",
     "previous": "Dies imperii",
     "next": "Diespiter",
@@ -7701,6 +7689,18 @@
       {
         "start": 478,
         "end": 478
+      }
+    ]
+  },
+  {
+    "lemma": "Diespiter",
+    "previous": "Dies sanguinis",
+    "next": "Dieteris",
+    "chapters": [
+      {
+        "start": 478,
+        "end": 479,
+        "author": "Wissowa"
       }
     ]
   },
@@ -9509,9 +9509,8 @@
   },
   {
     "lemma": "Diocletianopolis 2",
-    "previous": "Diodoros 8",
-    "next": "Diodoros 10",
-    "sort_key": "Diodoros 09",
+    "previous": "Diocletianopolis 1",
+    "next": "Diocletianopolis 3",
     "chapters": [
       {
         "start": 658,
@@ -20126,7 +20125,7 @@
   },
   {
     "lemma": "Dodanim",
-    "previous": "Dodekaeteris 2",
+    "previous": "Doctor 2",
     "next": "Dodekadrachmon",
     "chapters": [
       {
