@@ -16,7 +16,7 @@ class LemmaChapter:
         self._dict = chapter_dict
 
     def __repr__(self):  # pragma: no cover
-        return f"<LEMMA CHAPTER - start:{self.start}, end:{self.end}, author:{self.author}>"
+        return f"<{self.__class__.__name__} - start:{self.start}, end:{self.end}, author:{self.author}>"
 
     def is_valid(self) -> bool:
         try:
@@ -144,8 +144,8 @@ class Lemma():
             raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
 
     def __repr__(self):  # pragma: no cover
-        return f"<LEMMA - lemma:{self['lemma']}, previous:{self['previous']}, next:{self['next']}, " \
-            f"chapters:{len(self._chapters)}, volume:{self._volume.name}>"
+        return f"<{self.__class__.__name__} - lemma:{self['lemma']}, previous:{self['previous']}, " \
+            f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
 
     def __getitem__(self, item):
         try:

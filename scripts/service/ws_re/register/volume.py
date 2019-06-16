@@ -22,7 +22,7 @@ class VolumeRegister(Register):
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
     def __repr__(self):  # pragma: no cover
-        return f"<VOLUME REGISTER - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
+        return f"<{self.__class__.__name__} - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
 
     def __len__(self):
         return len(self._lemmas)
