@@ -105,14 +105,11 @@ for regex_pair in _2ND_REGEX_RAW_LIST:
     _2ND_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
 
 _1ST_REGEX_RAW_LIST = [
-    (r"^(?:ἑ|ἡ|ἥ)", "he"),
-    (r"^ἱ", "hi"),
-    (r"^ὁ", "ho"),
-    (r"^ὑ", "hy"),
-    (r" (?:ἑ|ἡ|ἥ)", " he"),
-    (r" ἱ", " hi"),
-    (r" ὁ", " ho"),
-    (r" ὑ", " hy"),
+    (r"(^| )(?:ἅ)", r"\1ha"),
+    (r"(^| )(?:ἑ|ἡ|ἥ)", r"\1he"),
+    (r"(^| )(?:ἱ)", r"\1hi"),
+    (r"(^| )(?:ὁ|ὅ)", r"\1ho"),
+    (r"(^| )(?:ὑ)", r"\1hy"),
 ]
 
 _1ST_REGEX_LIST = []
