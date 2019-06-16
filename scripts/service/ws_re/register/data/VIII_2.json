@@ -9533,7 +9533,7 @@
   },
   {
     "lemma": "Homeros 3",
-    "previous": "Homeros 2",
+    "previous": "Homeros 1",
     "next": "Homeros 4",
     "chapters": [
       {
@@ -11483,6 +11483,7 @@
     "lemma": "Hortensius 2",
     "previous": "Hortensius 1",
     "next": "Hortensius 3",
+    "sort_key": "Hortensius 02",
     "chapters": [
       {
         "start": 2465,
@@ -11495,6 +11496,7 @@
     "lemma": "Hortensius 3",
     "previous": "Hortensius 2",
     "next": "Hortensius 4",
+    "sort_key": "Hortensius 03",
     "chapters": [
       {
         "start": 2466,
@@ -12766,7 +12768,6 @@
   {
     "lemma": "Hyagnis",
     "previous": "Hyaden",
-    "next": "Ad Herculem castra",
     "chapters": [
       {
         "start": 2624,
@@ -12774,6 +12775,10 @@
         "author": "Abert"
       }
     ]
+  },
+  {
+    "lemma": "Harmachis",
+    "next": "Ad Herculem castra"
   },
   {
     "lemma": "Ad Herculem castra",
@@ -12789,8 +12794,11 @@
     ]
   },
   {
+    "lemma": "Herodes 7",
+    "previous": "Ad Herculem castra"
+  },
+  {
     "lemma": "Hippo Regius",
-    "previous": "Ad Herculem castra",
     "chapters": [
       {
         "start": 2627,

@@ -4686,6 +4686,7 @@
     "lemma": "Gregorios 1",
     "previous": "Gredonense castrum",
     "next": "Gregorios 2",
+    "sort_key": "Gregorios 01",
     "chapters": [
       {
         "start": 1848,
@@ -4698,6 +4699,8 @@
     "lemma": "Gregorios 2",
     "previous": "Gregorios 1",
     "next": "Gregorios 3",
+    "sort_key": "Gregorios 02",
+    "wp_link": "w:de:Gregor II. von Zypern",
     "chapters": [
       {
         "start": 1852,
@@ -4738,6 +4741,8 @@
     "lemma": "Gregorios 5",
     "previous": "Gregorios 4",
     "next": "Gregorios 6",
+    "sort_key": "Gregorios 05",
+    "wp_link": "w:de:Gregor von Nyssa",
     "chapters": [
       {
         "start": 1863,
@@ -4750,6 +4755,8 @@
     "lemma": "Gregorios 6",
     "previous": "Gregorios 5",
     "next": "Gregorios 7",
+    "sort_key": "Gregorios 06",
+    "wp_link": "w:de:Gregor von Elvira",
     "chapters": [
       {
         "start": 1864,
@@ -4762,6 +4769,9 @@
     "lemma": "Gregorios 7",
     "previous": "Gregorios 6",
     "next": "Gregorios 8",
+    "sort_key": "Gregorios 07",
+    "wp_link": "w:de:Gregor von Tours",
+    "ws_link": "s:de:Gregor von Tours",
     "chapters": [
       {
         "start": 1867,
@@ -4774,6 +4784,8 @@
     "lemma": "Gregorios 8",
     "previous": "Gregorios 7",
     "next": "Gregorios 9",
+    "sort_key": "Gregorios 08",
+    "wp_link": "w:de:Gregor der Große",
     "chapters": [
       {
         "start": 1868,
@@ -4786,6 +4798,9 @@
     "lemma": "Gregorios 9",
     "previous": "Gregorios 8",
     "next": "Gregorios 10",
+    "sort_key": "Gregorios 09",
+    "wp_link": "w:de:Gregor von Tours",
+    "ws_link": "s:de:Gregor von Tours",
     "chapters": [
       {
         "start": 1870,
@@ -4845,7 +4860,8 @@
   {
     "lemma": "Gregorios 14",
     "previous": "Gregorios 13",
-    "next": "Grakea",
+    "next": "Grekea",
+    "wp_link": "w:de:fr:Grégoire (cousin d'Artabanès)",
     "chapters": [
       {
         "start": 1871,
@@ -4855,7 +4871,7 @@
     ]
   },
   {
-    "lemma": "Grakea",
+    "lemma": "Grekea",
     "previous": "Gregorios 14",
     "next": "Grenikos",
     "chapters": [
@@ -4868,7 +4884,7 @@
   },
   {
     "lemma": "Grenikos",
-    "previous": "Grakea",
+    "previous": "Grekea",
     "next": "Greothingi",
     "chapters": [
       {
@@ -10393,7 +10409,7 @@
   },
   {
     "lemma": "Hamilkar",
-    "previous": "Hamaxites",
+    "previous": "Hamaxitos 2",
     "next": "Hamilkar 1",
     "chapters": [
       {
@@ -10407,6 +10423,7 @@
     "lemma": "Hamilkar 1",
     "previous": "Hamilkar",
     "next": "Hamilkar 2",
+    "sort_key": "Hamilkar 01",
     "chapters": [
       {
         "start": 2297,
@@ -10432,6 +10449,7 @@
     "lemma": "Hamilkar 3",
     "previous": "Hamilkar 2",
     "next": "Hamilkar 4",
+    "sort_key": "Hamilkar 03",
     "chapters": [
       {
         "start": 2300,
@@ -10457,6 +10475,7 @@
     "lemma": "Hamilkar 5",
     "previous": "Hamilkar 4",
     "next": "Hamilkar 6",
+    "sort_key": "Hamilkar 05",
     "chapters": [
       {
         "start": 2301,
@@ -10469,6 +10488,7 @@
     "lemma": "Hamilkar 6",
     "previous": "Hamilkar 5",
     "next": "Hamilkar 7",
+    "sort_key": "Hamilkar 06",
     "chapters": [
       {
         "start": 2302,
@@ -10580,7 +10600,7 @@
   {
     "lemma": "Hamillus",
     "previous": "Hamilkar 14",
-    "next": "Hamippoi",
+    "next": "Ἅμιπποι",
     "chapters": [
       {
         "start": 2309,
@@ -10590,7 +10610,7 @@
     ]
   },
   {
-    "lemma": "Hamippoi",
+    "lemma": "Ἅμιπποι",
     "previous": "Hamillus",
     "next": "Hamiroei",
     "chapters": [
@@ -10602,7 +10622,7 @@
   },
   {
     "lemma": "Hamiroei",
-    "previous": "Hamippoi",
+    "previous": "Ἅμιπποι",
     "next": "Hammanientes",
     "chapters": [
       {
@@ -13417,6 +13437,7 @@
     "lemma": "Hebron",
     "previous": "Hebromagus",
     "next": "Hebros",
+    "wp_link": "w:de:Hebron",
     "chapters": [
       {
         "start": 2584,

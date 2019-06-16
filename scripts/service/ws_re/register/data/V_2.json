@@ -4460,7 +4460,7 @@
   },
   {
     "lemma": "Drusias",
-    "previous": "Druseios",
+    "previous": "Drusi arcus",
     "next": "Drusiliana",
     "chapters": [
       {
@@ -13560,21 +13560,9 @@
     ]
   },
   {
-    "lemma": "Ekrektike chora",
-    "previous": "Ekrebel",
-    "next": "Ekrhegma",
-    "chapters": [
-      {
-        "start": 2216,
-        "end": 2216,
-        "author": "Kiessling, Max"
-      }
-    ]
-  },
-  {
     "lemma": "Ekrhegma",
-    "previous": "Ekrektike chora",
-    "next": "Ekron",
+    "previous": "Ekrebel",
+    "next": "Ekrektike chora",
     "chapters": [
       {
         "start": 2216,
@@ -13584,8 +13572,20 @@
     ]
   },
   {
-    "lemma": "Ekron",
+    "lemma": "Ekrektike chora",
     "previous": "Ekrhegma",
+    "next": "Ekron",
+    "chapters": [
+      {
+        "start": 2216,
+        "end": 2216,
+        "author": "Kiessling, Max"
+      }
+    ]
+  },
+  {
+    "lemma": "Ekron",
+    "previous": "Ekrektike chora",
     "next": "Ektypon",
     "redirect": true,
     "chapters": [

@@ -1555,7 +1555,7 @@
   {
     "lemma": "Lichas 4",
     "previous": "Lichas 3",
-    "next": "Licinia atria",
+    "next": "Licini forum",
     "chapters": [
       {
         "start": 212,
@@ -1565,8 +1565,20 @@
     ]
   },
   {
-    "lemma": "Licinia atria",
+    "lemma": "Licini forum",
     "previous": "Lichas 4",
+    "next": "Licinia atria",
+    "chapters": [
+      {
+        "start": 213,
+        "end": 213,
+        "author": "Kroll"
+      }
+    ]
+  },
+  {
+    "lemma": "Licinia atria",
+    "previous": "Licini forum",
     "next": "Liciniana",
     "chapters": [
       {
@@ -1603,7 +1615,7 @@
   {
     "lemma": "Licinianus 2",
     "previous": "Licinianus 1",
-    "next": "Licini forum",
+    "next": "Licinianus 3",
     "chapters": [
       {
         "start": 213,
@@ -1613,20 +1625,8 @@
     ]
   },
   {
-    "lemma": "Licini forum",
-    "previous": "Licinianus 2",
-    "next": "Licinianus 3",
-    "chapters": [
-      {
-        "start": 213,
-        "end": 213,
-        "author": "Kroll"
-      }
-    ]
-  },
-  {
     "lemma": "Licinianus 3",
-    "previous": "Licini forum",
+    "previous": "Licinianus 2",
     "next": "Licinium atrium",
     "chapters": [
       {

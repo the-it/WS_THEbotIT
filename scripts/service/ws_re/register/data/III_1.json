@@ -24862,7 +24862,7 @@
   {
     "lemma": "Brachme",
     "previous": "Brachmanes",
-    "next": "Brachodes akra",
+    "next": "Βραχώδης ἄκρα",
     "chapters": [
       {
         "start": 806,
@@ -24872,7 +24872,7 @@
     ]
   },
   {
-    "lemma": "Brachodes akra",
+    "lemma": "Βραχώδης ἄκρα",
     "previous": "Brachme",
     "next": "Brachyle",
     "chapters": [
@@ -24885,7 +24885,7 @@
   },
   {
     "lemma": "Brachyle",
-    "previous": "Brachodes akra",
+    "previous": "Βραχώδης ἄκρα",
     "next": "Brachylles",
     "chapters": [
       {
@@ -26310,6 +26310,7 @@
     "lemma": "Brezecha",
     "previous": "Breuni",
     "next": "Briagontinus pagus",
+    "wp_link": "w:de:Breisach am Rhein",
     "chapters": [
       {
         "start": 832,
@@ -27474,6 +27475,7 @@
     "lemma": "Briva 1",
     "previous": "Briva",
     "next": "Briva 2",
+    "wp_link": "w:de:Pontoise",
     "chapters": [
       {
         "start": 882,
@@ -27486,6 +27488,7 @@
     "lemma": "Briva 2",
     "previous": "Briva 1",
     "next": "Briva 3",
+    "wp_link": "w:de:Brive-la-Gaillarde",
     "chapters": [
       {
         "start": 882,
@@ -27559,6 +27562,7 @@
     "lemma": "Briula",
     "previous": "Brivines",
     "next": "Brivodurum",
+    "wp_link": "w:de:Briula",
     "chapters": [
       {
         "start": 883,
@@ -28707,6 +28711,7 @@
     "lemma": "Bruttius 2",
     "previous": "Bruttius 1",
     "next": "Bruttius 3",
+    "sort_key": "Bruttius 02",
     "chapters": [
       {
         "start": 912,
@@ -28719,6 +28724,7 @@
     "lemma": "Bruttius 3",
     "previous": "Bruttius 2",
     "next": "Bruttius 4",
+    "sort_key": "Bruttius 03",
     "chapters": [
       {
         "start": 912,
@@ -29758,7 +29764,7 @@
   },
   {
     "lemma": "Bucellarii",
-    "previous": "Buccos",
+    "previous": "Bucconis",
     "next": "Buces",
     "chapters": [
       {
@@ -30413,7 +30419,7 @@
   {
     "lemma": "Bugius",
     "previous": "Buget",
-    "next": "Bouglosson",
+    "next": "Βούγλωσσον",
     "chapters": [
       {
         "start": 993,
@@ -30601,13 +30607,18 @@
   {
     "lemma": "Bukephalia 2",
     "previous": "Bukephalia 1",
-    "next": "Bukephalos",
+    "next": "Bukephalitai",
     "chapters": [
       {
         "start": 995,
         "end": 995
       }
     ]
+  },
+  {
+    "lemma": "Bukephalitai",
+    "previous": "Bukephalia 2",
+    "next": "Bukephalos"
   },
   {
     "lemma": "Bukephalos",
@@ -30636,7 +30647,7 @@
   {
     "lemma": "Bukeraïs",
     "previous": "Bukera",
-    "next": "Bukeras",
+    "next": "Βούκερας",
     "chapters": [
       {
         "start": 996,
@@ -30646,7 +30657,7 @@
     ]
   },
   {
-    "lemma": "Bukeras",
+    "lemma": "Βούκερας",
     "previous": "Bukeraïs",
     "next": "Bukinna",
     "chapters": [
@@ -30658,7 +30669,7 @@
   },
   {
     "lemma": "Bukinna",
-    "previous": "Bukeras",
+    "previous": "Βούκερας",
     "next": "Bukiris",
     "chapters": [
       {
@@ -30732,7 +30743,7 @@
   {
     "lemma": "Bukolia 2",
     "previous": "Bukolia 1",
-    "next": "Bukoliasmos",
+    "next": "Βουκολιασμός",
     "chapters": [
       {
         "start": 998,
@@ -30741,7 +30752,7 @@
     ]
   },
   {
-    "lemma": "Bukoliasmos",
+    "lemma": "Βουκολιασμός",
     "previous": "Bukolia 2",
     "next": "Bukolidai 1",
     "chapters": [
@@ -30754,7 +30765,7 @@
   },
   {
     "lemma": "Bukolidai 1",
-    "previous": "Bukoliasmos",
+    "previous": "Βουκολιασμός",
     "next": "Bukolidai 2",
     "chapters": [
       {
@@ -30987,7 +30998,7 @@
   {
     "lemma": "Bukolos 5",
     "previous": "Bukolos 4",
-    "next": "Bukopia Theudaisia",
+    "next": "Βουκόπια Θευδαίσια",
     "chapters": [
       {
         "start": 1017,
@@ -30997,7 +31008,7 @@
     ]
   },
   {
-    "lemma": "Bukopia Theudaisia",
+    "lemma": "Βουκόπια Θευδαίσια",
     "previous": "Bukolos 5",
     "next": "Bukra",
     "sort_key": "Bukopia Theudaisia",
@@ -31011,7 +31022,7 @@
   },
   {
     "lemma": "Bukra",
-    "previous": "Bukopia Theudaisia",
+    "previous": "Βουκόπια Θευδαίσια",
     "next": "Bulagoras",
     "chapters": [
       {
@@ -31202,6 +31213,7 @@
     "lemma": "Βουλεύσεως γραφή",
     "previous": "Buleus 2",
     "next": "Buleuterion 1",
+    "sort_key": "Buleuseos graphe",
     "chapters": [
       {
         "start": 1037,
@@ -31237,7 +31249,7 @@
   {
     "lemma": "Bulga",
     "previous": "Buleuterion 2",
-    "next": "Bulgaroi, Bulgares",
+    "next": "Bulgaroi",
     "chapters": [
       {
         "start": 1040,
@@ -31247,20 +31259,14 @@
     ]
   },
   {
-    "lemma": "Bulgaroi, Bulgares",
+    "lemma": "Bulgaroi",
     "previous": "Bulga",
     "next": "Bulgiatensis",
-    "chapters": [
-      {
-        "start": 1040,
-        "end": 1045,
-        "author": "Tomaschek"
-      }
-    ]
+    "wp_link": "w:de:Protobulgaren"
   },
   {
     "lemma": "Bulgiatensis",
-    "previous": "Bulgaroi, Bulgares",
+    "previous": "Bulgaroi",
     "next": "Bulibas",
     "chapters": [
       {
@@ -31608,8 +31614,8 @@
   },
   {
     "lemma": "Bounoi",
-    "previous": "Bunaia",
-    "next": "Bunartis",
+    "previous": "Bunobora",
+    "next": "Bunomeia",
     "sort_key": "Bunoi",
     "chapters": [
       {
@@ -31621,7 +31627,7 @@
   },
   {
     "lemma": "Bunartis",
-    "previous": "Bounoi",
+    "previous": "Bunaia",
     "next": "Buneima",
     "chapters": [
       {
@@ -31658,7 +31664,7 @@
   {
     "lemma": "Buni",
     "previous": "Buneus",
-    "next": "Bunias",
+    "next": "Βουνίας",
     "chapters": [
       {
         "start": 1053,
@@ -31668,7 +31674,7 @@
     ]
   },
   {
-    "lemma": "Bunias",
+    "lemma": "Βουνίας",
     "previous": "Buni",
     "next": "Bunikos",
     "chapters": [
@@ -31680,7 +31686,7 @@
   },
   {
     "lemma": "Bunikos",
-    "previous": "Bunias",
+    "previous": "Βουνίας",
     "next": "Bunimos",
     "chapters": [
       {
@@ -32190,6 +32196,7 @@
     "lemma": "Burcana",
     "previous": "Burca",
     "next": "Burco",
+    "wp_link": "w:de:Borkum",
     "chapters": [
       {
         "start": 1061,
@@ -32308,6 +32315,7 @@
     "lemma": "Burdomina",
     "previous": "Burdoga",
     "next": "Burdopes",
+    "wp_link": "w:de:Bela Palanka",
     "chapters": [
       {
         "start": 1062,
@@ -32463,6 +32471,7 @@
     "lemma": "Burgundiones",
     "previous": "Burgundio 2",
     "next": "Burgus",
+    "wp_link": "w:de:Burgunden",
     "chapters": [
       {
         "start": 1063,
@@ -32475,6 +32484,7 @@
     "lemma": "Burgus",
     "previous": "Burgundiones",
     "next": "Burgus novus",
+    "wp_link": "w:de:Burgus",
     "chapters": [
       {
         "start": 1066,
@@ -33066,7 +33076,7 @@
   {
     "lemma": "Busiris 5",
     "previous": "Busiris 4",
-    "next": "Busirites nomos",
+    "next": "Βουσιρίτης νομός",
     "chapters": [
       {
         "start": 1074,
@@ -33076,7 +33086,7 @@
     ]
   },
   {
-    "lemma": "Busirites nomos",
+    "lemma": "Βουσιρίτης νομός",
     "previous": "Busiris 5",
     "next": "Βουσιριτικὸς ποταμός",
     "sort_key": "Busirites nomos",
@@ -33090,7 +33100,7 @@
   },
   {
     "lemma": "Βουσιριτικὸς ποταμός",
-    "previous": "Busirites nomos",
+    "previous": "Βουσιρίτης νομός",
     "next": "Busmadis",
     "sort_key": "Busiritikos potamos",
     "chapters": [
@@ -33515,7 +33525,7 @@
   {
     "lemma": "Butes 11",
     "previous": "Butes 10",
-    "next": "Butes II",
+    "next": "Buthericus",
     "chapters": [
       {
         "start": 1083,
@@ -33538,7 +33548,7 @@
   },
   {
     "lemma": "Buthericus",
-    "previous": "Butes II",
+    "previous": "Butes 11",
     "next": "Butheros",
     "chapters": [
       {
@@ -33675,6 +33685,7 @@
     "lemma": "Βουτικὸς νομός",
     "previous": "Βουτικὴ λίμνη",
     "next": "Butilinus",
+    "sort_key": "Butikos",
     "chapters": [
       {
         "start": 1085,
@@ -34754,6 +34765,7 @@
     "lemma": "Byzes 2",
     "previous": "Byzes 1",
     "next": "Byzia",
+    "wp_link": "w:de:Byzes",
     "chapters": [
       {
         "start": 1160,
@@ -35532,6 +35544,7 @@
     "lemma": "Caecilianus 9",
     "previous": "Caecilianus 8",
     "next": "Caecilianus 10",
+    "sort_key": "Caecilianus 09",
     "chapters": [
       {
         "start": 1173,
@@ -35590,6 +35603,7 @@
     "lemma": "Caecilius 1",
     "previous": "Caecilius",
     "next": "Caecilius 2",
+    "sort_key": "Caecilius 001",
     "chapters": [
       {
         "start": 1174,
@@ -35652,6 +35666,7 @@
     "lemma": "Caecilius 6",
     "previous": "Caecilius 5",
     "next": "Caecilius 7",
+    "sort_key": "Caecilius 006",
     "chapters": [
       {
         "start": 1188,
@@ -35663,6 +35678,7 @@
     "lemma": "Caecilius 7",
     "previous": "Caecilius 6",
     "next": "Caecilius 8",
+    "sort_key": "Caecilius 007",
     "chapters": [
       {
         "start": 1188,
@@ -35714,6 +35730,7 @@
     "lemma": "Caecilius 11",
     "previous": "Caecilius 10",
     "next": "Caecilius 12",
+    "sort_key": "Caecilius 011",
     "chapters": [
       {
         "start": 1188,
@@ -35752,6 +35769,7 @@
     "lemma": "Caecilius 14",
     "previous": "Caecilius 13",
     "next": "Caecilius 15",
+    "sort_key": "Caecilius 014",
     "chapters": [
       {
         "start": 1188,
@@ -35764,6 +35782,7 @@
     "lemma": "Caecilius 15",
     "previous": "Caecilius 14",
     "next": "Caecilius 16",
+    "sort_key": "Caecilius 015",
     "chapters": [
       {
         "start": 1188,
@@ -35854,6 +35873,7 @@
     "lemma": "Caecilius 22",
     "previous": "Caecilius 21",
     "next": "Caecilius 23",
+    "sort_key": "Caecilius 022",
     "chapters": [
       {
         "start": 1189,
@@ -35906,6 +35926,7 @@
     "lemma": "Caecilius 26",
     "previous": "Caecilius 25",
     "next": "Caecilius 27",
+    "sort_key": "Caecilius 026",
     "chapters": [
       {
         "start": 1192,
@@ -35917,6 +35938,7 @@
     "lemma": "Caecilius 27",
     "previous": "Caecilius 26",
     "next": "Caecilius 28",
+    "sort_key": "Caecilius 027",
     "chapters": [
       {
         "start": 1192,
@@ -36157,6 +36179,7 @@
     "lemma": "Caecilius 46",
     "previous": "Caecilius 45",
     "next": "Caecilius 47",
+    "sort_key": "Caecilius 046",
     "chapters": [
       {
         "start": 1200,
@@ -36403,6 +36426,7 @@
     "lemma": "Caecilius 66",
     "previous": "Caecilius 65",
     "next": "Caecilius 67",
+    "sort_key": "Caecilius 066",
     "chapters": [
       {
         "start": 1202,
@@ -36787,6 +36811,8 @@
     "lemma": "Caecilius 97",
     "previous": "Caecilius 96",
     "next": "Caecilius 98",
+    "sort_key": "Caecilius 097",
+    "wp_link": "w:de:Quintus Caecilius Metellus Numidicus",
     "chapters": [
       {
         "start": 1218,
@@ -37086,6 +37112,7 @@
     "lemma": "Caecilius 123",
     "previous": "Caecilius 122",
     "next": "Caecilius 124",
+    "redirect": "Caesellius 2",
     "chapters": [
       {
         "start": 1234,
@@ -37328,6 +37355,7 @@
     "lemma": "Caecina 2",
     "previous": "Caecina 2ff.",
     "next": "Caecina 3",
+    "sort_key": "Caecina 02",
     "chapters": [
       {
         "start": 1237,
@@ -37339,6 +37367,7 @@
     "lemma": "Caecina 3",
     "previous": "Caecina 2",
     "next": "Caecina 4",
+    "sort_key": "Caecina 03",
     "chapters": [
       {
         "start": 1237,
@@ -37350,6 +37379,7 @@
     "lemma": "Caecina 4",
     "previous": "Caecina 3",
     "next": "Caecina 5",
+    "sort_key": "Caecina 04",
     "chapters": [
       {
         "start": 1237,
@@ -37374,6 +37404,7 @@
     "lemma": "Caecina 6",
     "previous": "Caecina 5",
     "next": "Caecina 7",
+    "sort_key": "Caecina 06",
     "chapters": [
       {
         "start": 1237,
@@ -37398,6 +37429,7 @@
     "lemma": "Caecina 8",
     "previous": "Caecina 7",
     "next": "Caecina 9",
+    "sort_key": "Caecina 08",
     "chapters": [
       {
         "start": 1238,
@@ -37409,6 +37441,8 @@
     "lemma": "Caecina 9",
     "previous": "Caecina 8",
     "next": "Caecina 10",
+    "sort_key": "Caecina 09",
+    "redirect": "Ceionius 30",
     "chapters": [
       {
         "start": 1238,
@@ -37780,6 +37814,7 @@
     "lemma": "Caedicius 2",
     "previous": "Caedicius 1",
     "next": "Caedicius 3",
+    "sort_key": "Caedicius 02",
     "chapters": [
       {
         "start": 1245,
@@ -37792,6 +37827,7 @@
     "lemma": "Caedicius 3",
     "previous": "Caedicius 2",
     "next": "Caedicius 4",
+    "sort_key": "Caedicius 03",
     "chapters": [
       {
         "start": 1245,
@@ -37854,6 +37890,7 @@
     "lemma": "Caedicius 8",
     "previous": "Caedicius 7",
     "next": "Caedicius 9",
+    "sort_key": "Caedicius 08",
     "chapters": [
       {
         "start": 1246,
@@ -37970,7 +38007,7 @@
   },
   {
     "lemma": "Caelemontana porta",
-    "previous": "Caelanus pagus",
+    "previous": "Caelatura",
     "next": "Caelemontanus campus",
     "wp_link": "w:de:Dolabella-Bogen",
     "chapters": [
@@ -38165,6 +38202,7 @@
     "lemma": "Caelianus 2",
     "previous": "Caelianus 1",
     "next": "Caelianus 3",
+    "redirect": "Calpurnius",
     "chapters": [
       {
         "start": 1253,
@@ -38238,6 +38276,7 @@
     "lemma": "Caelius",
     "previous": "Caelis",
     "next": "Caelius 1",
+    "sort_key": "Caelius 00",
     "chapters": [
       {
         "start": 1254,
@@ -38273,6 +38312,7 @@
     "lemma": "Caelius 3",
     "previous": "Caelius 2",
     "next": "Caelius 4",
+    "sort_key": "Caelius 03",
     "chapters": [
       {
         "start": 1254,
@@ -38309,6 +38349,7 @@
     "lemma": "Caelius 6",
     "previous": "Caelius 5",
     "next": "Caelius 7",
+    "sort_key": "Caelius 06",
     "chapters": [
       {
         "start": 1255,
@@ -38320,6 +38361,7 @@
     "lemma": "Caelius 7",
     "previous": "Caelius 6",
     "next": "Caelius 8",
+    "sort_key": "Caelius 07",
     "chapters": [
       {
         "start": 1255,
@@ -38331,6 +38373,7 @@
     "lemma": "Caelius 8",
     "previous": "Caelius 7",
     "next": "Caelius 9",
+    "sort_key": "Caelius 08",
     "chapters": [
       {
         "start": 1255,
@@ -38355,6 +38398,7 @@
     "lemma": "Caelius 10",
     "previous": "Caelius 9",
     "next": "Caelius 11",
+    "sort_key": "Caelius 10",
     "chapters": [
       {
         "start": 1255,
@@ -38366,6 +38410,7 @@
     "lemma": "Caelius 11",
     "previous": "Caelius 10",
     "next": "Caelius 12",
+    "sort_key": "Caelius 11",
     "chapters": [
       {
         "start": 1255,
@@ -38390,6 +38435,7 @@
     "lemma": "Caelius 13",
     "previous": "Caelius 12",
     "next": "Caelius 14",
+    "sort_key": "Caelius 13",
     "chapters": [
       {
         "start": 1255,
@@ -38401,6 +38447,7 @@
     "lemma": "Caelius 14",
     "previous": "Caelius 13",
     "next": "Caelius 15",
+    "sort_key": "Caelius 14",
     "chapters": [
       {
         "start": 1256,
@@ -38412,6 +38459,7 @@
     "lemma": "Caelius 15",
     "previous": "Caelius 14",
     "next": "Caelius 16",
+    "sort_key": "Caelius 15",
     "chapters": [
       {
         "start": 1256,
@@ -38510,6 +38558,7 @@
     "lemma": "Caelius 23",
     "previous": "Caelius 22",
     "next": "Caelius 24",
+    "sort_key": "Caelius 23",
     "chapters": [
       {
         "start": 1265,
@@ -38557,6 +38606,7 @@
     "lemma": "Caelius 27",
     "previous": "Caelius 26",
     "next": "Caelius 28",
+    "sort_key": "Caelius 27",
     "chapters": [
       {
         "start": 1265,
@@ -38568,6 +38618,7 @@
     "lemma": "Caelius 28",
     "previous": "Caelius 27",
     "next": "Caelius 29",
+    "sort_key": "Caelius 28",
     "chapters": [
       {
         "start": 1265,
@@ -38603,6 +38654,7 @@
     "lemma": "Caelius 31",
     "previous": "Caelius 30",
     "next": "Caelius 32",
+    "sort_key": "Caelius 31",
     "chapters": [
       {
         "start": 1266,
@@ -38628,6 +38680,7 @@
     "lemma": "Caelius 33",
     "previous": "Caelius 32",
     "next": "Caelius 34",
+    "sort_key": "Caelius 33",
     "chapters": [
       {
         "start": 1266,
@@ -38640,6 +38693,7 @@
     "lemma": "Caelius 34",
     "previous": "Caelius 33",
     "next": "Caelius 35",
+    "sort_key": "Caelius 34",
     "chapters": [
       {
         "start": 1266,
@@ -38714,6 +38768,7 @@
     "lemma": "Caelius 40",
     "previous": "Caelius 39",
     "next": "Caelius mons 1",
+    "sort_key": "Caelius 40",
     "chapters": [
       {
         "start": 1273,
@@ -39155,6 +39210,7 @@
     "lemma": "Caerellius 3",
     "previous": "Caerellius 2",
     "next": "Caerellius 4",
+    "sort_key": "Caerellius 03",
     "chapters": [
       {
         "start": 1283,
@@ -39810,6 +39866,7 @@
     "lemma": "Caesarobriga",
     "previous": "Caesarius 9",
     "next": "Caesarodunum",
+    "wp_link": "w:de:Talavera de la Reina",
     "chapters": [
       {
         "start": 1304,
@@ -39822,6 +39879,7 @@
     "lemma": "Caesarodunum",
     "previous": "Caesarobriga",
     "next": "Caesaromagus 1",
+    "wp_link": "w:de:Caesarodunum",
     "chapters": [
       {
         "start": 1304,
@@ -39834,6 +39892,7 @@
     "lemma": "Caesaromagus 1",
     "previous": "Caesarodunum",
     "next": "Caesaromagus 2",
+    "wp_link": "w:de:Caesaromagus (Beauvais)",
     "chapters": [
       {
         "start": 1304,
@@ -39932,6 +39991,7 @@
     "lemma": "Caesennius 3",
     "previous": "Caesennius 2",
     "next": "Caesennius 4",
+    "sort_key": "Caesennius 03",
     "chapters": [
       {
         "start": 1306,
@@ -39957,6 +40017,7 @@
     "lemma": "Caesennius 5",
     "previous": "Caesennius 4",
     "next": "Caesennius 6",
+    "sort_key": "Caesennius 05",
     "chapters": [
       {
         "start": 1307,
@@ -39969,6 +40030,7 @@
     "lemma": "Caesennius 6",
     "previous": "Caesennius 5",
     "next": "Caesennius 7",
+    "sort_key": "Caesennius 06",
     "chapters": [
       {
         "start": 1307,
@@ -39981,6 +40043,7 @@
     "lemma": "Caesennius 7",
     "previous": "Caesennius 6",
     "next": "Caesennius 8",
+    "sort_key": "Caesennius 07",
     "chapters": [
       {
         "start": 1307,
@@ -39993,6 +40056,7 @@
     "lemma": "Caesennius 8",
     "previous": "Caesennius 7",
     "next": "Caesennius 9",
+    "sort_key": "Caesennius 08",
     "chapters": [
       {
         "start": 1307,
@@ -40077,6 +40141,7 @@
     "lemma": "Caesennius 15",
     "previous": "Caesennius 14",
     "next": "Caesernius 1",
+    "redirect": "Arrius 43",
     "chapters": [
       {
         "start": 1309,
@@ -40293,6 +40358,7 @@
     "lemma": "Caesilius 2",
     "previous": "Caesilius 1",
     "next": "Caesius",
+    "redirect": "Fabius 59",
     "chapters": [
       {
         "start": 1311,
@@ -40378,6 +40444,7 @@
     "lemma": "Caesius 6",
     "previous": "Caesius 5",
     "next": "Caesius 7",
+    "sort_key": "Caesius 06",
     "chapters": [
       {
         "start": 1312,
@@ -40390,6 +40457,7 @@
     "lemma": "Caesius 7",
     "previous": "Caesius 6",
     "next": "Caesius 8",
+    "sort_key": "Caesius 07",
     "chapters": [
       {
         "start": 1312,
@@ -40402,6 +40470,7 @@
     "lemma": "Caesius 8",
     "previous": "Caesius 7",
     "next": "Caesius 9",
+    "sort_key": "Caesius 08",
     "chapters": [
       {
         "start": 1312,
@@ -40691,6 +40760,7 @@
     "lemma": "Caesonius 1",
     "previous": "Caesoninus",
     "next": "Caesonius 2",
+    "sort_key": "Caesonius 01",
     "chapters": [
       {
         "start": 1317,
@@ -40703,6 +40773,8 @@
     "lemma": "Caesonius 2",
     "previous": "Caesonius 1",
     "next": "Caesonius 3",
+    "sort_key": "Caesonius 02",
+    "redirect": "Caesennius 6",
     "chapters": [
       {
         "start": 1317,
@@ -40715,6 +40787,7 @@
     "lemma": "Caesonius 3",
     "previous": "Caesonius 2",
     "next": "Caesonius 4",
+    "sort_key": "Caesonius 03",
     "chapters": [
       {
         "start": 1317,
@@ -40727,6 +40800,7 @@
     "lemma": "Caesonius 4",
     "previous": "Caesonius 3",
     "next": "Caesonius 5",
+    "sort_key": "Caesonius 04",
     "chapters": [
       {
         "start": 1318,
@@ -40739,6 +40813,8 @@
     "lemma": "Caesonius 5",
     "previous": "Caesonius 4",
     "next": "Caesonius 6",
+    "sort_key": "Caesonius 05",
+    "redirect": "Caesennius 7",
     "chapters": [
       {
         "start": 1318,
@@ -40899,6 +40975,7 @@
     "lemma": "Caestus",
     "previous": "Caestuarii",
     "next": "Caesulenus 1",
+    "wp_link": "w:de:Cestus (Waffe)",
     "chapters": [
       {
         "start": 1319,
@@ -41054,6 +41131,7 @@
     "lemma": "Caiatia",
     "previous": "Cahi",
     "next": "Caieta",
+    "wp_link": "w:de:Caiazzo",
     "chapters": [
       {
         "start": 1322,
@@ -41066,6 +41144,7 @@
     "lemma": "Caieta",
     "previous": "Caiatia",
     "next": "Caietae portus",
+    "wp_link": "w:de:Gaeta",
     "chapters": [
       {
         "start": 1323,
@@ -41078,6 +41157,7 @@
     "lemma": "Caietae portus",
     "previous": "Caieta",
     "next": "Caietae promonturium",
+    "wp_link": "w:de:Gaeta",
     "chapters": [
       {
         "start": 1323,
@@ -41138,6 +41218,7 @@
     "lemma": "Caimine(h)ae",
     "previous": "Caiiarus",
     "next": "Caino(n)",
+    "sort_key": "Caiminehae",
     "chapters": [
       {
         "start": 1324,
@@ -41150,6 +41231,8 @@
     "lemma": "Caino(n)",
     "previous": "Caimine(h)ae",
     "next": "Caistena",
+    "sort_key": "Cainon",
+    "wp_link": "w:de:Chinon",
     "chapters": [
       {
         "start": 1324,
@@ -41209,6 +41292,7 @@
     "lemma": "Cala",
     "previous": "Cal.",
     "next": "Calabra curia",
+    "wp_link": "w:de:Chelles",
     "chapters": [
       {
         "start": 1325,
@@ -41232,6 +41316,7 @@
     "lemma": "Calabria",
     "previous": "Calabra curia",
     "next": "Calacticus sinus",
+    "wp_link": "w:de:Calabria",
     "chapters": [
       {
         "start": 1325,
@@ -41315,6 +41400,7 @@
     "lemma": "Calagurris 2",
     "previous": "Calagurris 1",
     "next": "Calama 1",
+    "wp_link": "w:de:Calahorra",
     "chapters": [
       {
         "start": 1327,
@@ -41327,6 +41413,7 @@
     "lemma": "Calama 1",
     "previous": "Calagurris 2",
     "next": "Calama 2",
+    "wp_link": "w:de:Guelma",
     "chapters": [
       {
         "start": 1328,
@@ -42272,6 +42359,7 @@
     "lemma": "Calleva",
     "previous": "Callenses",
     "next": "Callicula 1",
+    "wp_link": "w:de:Calleva Atrebatum",
     "chapters": [
       {
         "start": 1360,
@@ -42354,7 +42442,7 @@
   {
     "lemma": "Callipolis",
     "previous": "Callipianus",
-    "next": "Callipus",
+    "next": "Callipianus",
     "chapters": [
       {
         "start": 1362,
@@ -42390,6 +42478,7 @@
     "lemma": "Calloniana",
     "previous": "Callode",
     "next": "Callum",
+    "redirect": true,
     "chapters": [
       {
         "start": 1362,
@@ -42471,6 +42560,7 @@
     "lemma": "Calor 1",
     "previous": "Calones",
     "next": "Calor 2",
+    "wp_link": "w:de:Calore Irpino",
     "chapters": [
       {
         "start": 1362,
@@ -42483,6 +42573,7 @@
     "lemma": "Calor 2",
     "previous": "Calor 1",
     "next": "Calpar",
+    "wp_link": "w:de:Calore Lucano",
     "chapters": [
       {
         "start": 1362,
@@ -42579,6 +42670,7 @@
     "lemma": "Calphurnius",
     "previous": "Calpetianus",
     "next": "Calpurniana",
+    "sort_key": "korrigiert",
     "chapters": [
       {
         "start": 1364,
@@ -42664,6 +42756,7 @@
     "lemma": "Calpurnius 1",
     "previous": "Calpurnius",
     "next": "Calpurnius 2",
+    "sort_key": "Calpurnius 001",
     "chapters": [
       {
         "start": 1365,
@@ -42688,6 +42781,7 @@
     "lemma": "Calpurnius 3",
     "previous": "Calpurnius 2",
     "next": "Calpurnius 4",
+    "sort_key": "Calpurnius 003",
     "chapters": [
       {
         "start": 1365,
@@ -42699,6 +42793,7 @@
     "lemma": "Calpurnius 4",
     "previous": "Calpurnius 3",
     "next": "Calpurnius 5",
+    "sort_key": "Calpurnius 004",
     "chapters": [
       {
         "start": 1365,
@@ -42750,6 +42845,7 @@
     "lemma": "Calpurnius 8",
     "previous": "Calpurnius 7",
     "next": "Calpurnius 9",
+    "sort_key": "Calpurnius 008",
     "chapters": [
       {
         "start": 1365,
@@ -42762,6 +42858,7 @@
     "lemma": "Calpurnius 9",
     "previous": "Calpurnius 8",
     "next": "Calpurnius 10",
+    "sort_key": "Calpurnius 009",
     "chapters": [
       {
         "start": 1365,
@@ -42773,6 +42870,7 @@
     "lemma": "Calpurnius 10",
     "previous": "Calpurnius 9",
     "next": "Calpurnius 11",
+    "sort_key": "Calpurnius 010",
     "chapters": [
       {
         "start": 1365,
@@ -42824,6 +42922,7 @@
     "lemma": "Calpurnius 14",
     "previous": "Calpurnius 13",
     "next": "Calpurnius 15",
+    "sort_key": "Calpurnius 014",
     "chapters": [
       {
         "start": 1365,
@@ -42835,6 +42934,7 @@
     "lemma": "Calpurnius 15",
     "previous": "Calpurnius 14",
     "next": "Calpurnius 16",
+    "sort_key": "Calpurnius 015",
     "chapters": [
       {
         "start": 1366,
@@ -42847,6 +42947,7 @@
     "lemma": "Calpurnius 16",
     "previous": "Calpurnius 15",
     "next": "Calpurnius 17",
+    "sort_key": "Calpurnius 016",
     "chapters": [
       {
         "start": 1366,
@@ -42859,6 +42960,7 @@
     "lemma": "Calpurnius 17",
     "previous": "Calpurnius 16",
     "next": "Calpurnius 18",
+    "sort_key": "Calpurnius 017",
     "chapters": [
       {
         "start": 1366,
@@ -43019,6 +43121,7 @@
     "lemma": "Calpurnius 30",
     "previous": "Calpurnius 29",
     "next": "Calpurnius 31",
+    "sort_key": "Calpurnius 030",
     "chapters": [
       {
         "start": 1370,
@@ -43031,6 +43134,7 @@
     "lemma": "Calpurnius 31",
     "previous": "Calpurnius 30",
     "next": "Calpurnius 32",
+    "sort_key": "Calpurnius 031",
     "chapters": [
       {
         "start": 1370,
@@ -43079,6 +43183,7 @@
     "lemma": "Calpurnius 35",
     "previous": "Calpurnius 34",
     "next": "Calpurnius 36",
+    "sort_key": "Calpurnius 035",
     "chapters": [
       {
         "start": 1371,
@@ -43090,6 +43195,7 @@
     "lemma": "Calpurnius 36",
     "previous": "Calpurnius 35",
     "next": "Calpurnius 37",
+    "sort_key": "Calpurnius 036",
     "chapters": [
       {
         "start": 1371,
@@ -43101,6 +43207,7 @@
     "lemma": "Calpurnius 37",
     "previous": "Calpurnius 36",
     "next": "Calpurnius 38",
+    "sort_key": "Calpurnius 037",
     "chapters": [
       {
         "start": 1371,
@@ -43112,6 +43219,7 @@
     "lemma": "Calpurnius 38",
     "previous": "Calpurnius 37",
     "next": "Calpurnius 39",
+    "sort_key": "Calpurnius 038",
     "chapters": [
       {
         "start": 1371,
@@ -43148,6 +43256,7 @@
     "lemma": "Calpurnius 41",
     "previous": "Calpurnius 40",
     "next": "Calpurnius 42",
+    "sort_key": "Calpurnius 041",
     "chapters": [
       {
         "start": 1373,
@@ -43172,6 +43281,7 @@
     "lemma": "Calpurnius 43",
     "previous": "Calpurnius 42",
     "next": "Calpurnius 44",
+    "sort_key": "Calpurnius 043",
     "chapters": [
       {
         "start": 1373,
@@ -43196,6 +43306,7 @@
     "lemma": "Calpurnius 45",
     "previous": "Calpurnius 44",
     "next": "Calpurnius 46",
+    "sort_key": "Calpurnius 045",
     "chapters": [
       {
         "start": 1373,
@@ -43208,6 +43319,7 @@
     "lemma": "Calpurnius 46",
     "previous": "Calpurnius 45",
     "next": "Calpurnius 47",
+    "sort_key": "Calpurnius 046",
     "chapters": [
       {
         "start": 1373,
@@ -43219,6 +43331,7 @@
     "lemma": "Calpurnius 47",
     "previous": "Calpurnius 46",
     "next": "Calpurnius 48",
+    "sort_key": "Calpurnius 047",
     "chapters": [
       {
         "start": 1373,
@@ -43358,6 +43471,7 @@
     "lemma": "Calpurnius 57",
     "previous": "Calpurnius 57ff.",
     "next": "Calpurnius 58",
+    "sort_key": "Calpurnius 057",
     "chapters": [
       {
         "start": 1376,
@@ -43370,6 +43484,7 @@
     "lemma": "Calpurnius 58",
     "previous": "Calpurnius 57",
     "next": "Calpurnius 59",
+    "sort_key": "Calpurnius 058",
     "chapters": [
       {
         "start": 1376,
@@ -43382,6 +43497,7 @@
     "lemma": "Calpurnius 59",
     "previous": "Calpurnius 58",
     "next": "Calpurnius 60",
+    "sort_key": "Calpurnius 059",
     "chapters": [
       {
         "start": 1376,
@@ -43440,6 +43556,7 @@
     "lemma": "Calpurnius 64",
     "previous": "Calpurnius 63",
     "next": "Calpurnius 65",
+    "sort_key": "Calpurnius 064",
     "chapters": [
       {
         "start": 1377,
@@ -43464,6 +43581,7 @@
     "lemma": "Calpurnius 66",
     "previous": "Calpurnius 65",
     "next": "Calpurnius 67",
+    "sort_key": "Calpurnius 066",
     "chapters": [
       {
         "start": 1379,
@@ -43609,6 +43727,7 @@
     "lemma": "Calpurnius 78",
     "previous": "Calpurnius 77",
     "next": "Calpurnius 79",
+    "sort_key": "Calpurnius 078",
     "chapters": [
       {
         "start": 1385,
@@ -43642,6 +43761,7 @@
     "lemma": "Calpurnius 81",
     "previous": "Calpurnius 80",
     "next": "Calpurnius 82",
+    "sort_key": "Calpurnius 081",
     "chapters": [
       {
         "start": 1386,
@@ -43664,6 +43784,7 @@
     "lemma": "Calpurnius 83",
     "previous": "Calpurnius 82",
     "next": "Calpurnius 84",
+    "sort_key": "Calpurnius 083",
     "chapters": [
       {
         "start": 1386,
@@ -43676,6 +43797,8 @@
     "lemma": "Calpurnius 84",
     "previous": "Calpurnius 83",
     "next": "Calpurnius 85",
+    "sort_key": "Calpurnius 084",
+    "redirect": true,
     "chapters": [
       {
         "start": 1386,
@@ -43700,6 +43823,7 @@
     "lemma": "Calpurnius 86",
     "previous": "Calpurnius 85",
     "next": "Calpurnius 87",
+    "sort_key": "Calpurnius 086",
     "chapters": [
       {
         "start": 1386,
@@ -43756,6 +43880,7 @@
     "lemma": "Calpurnius 91",
     "previous": "Calpurnius 90",
     "next": "Calpurnius 92",
+    "sort_key": "Calpurnius 091",
     "chapters": [
       {
         "start": 1390,
@@ -43827,6 +43952,7 @@
     "lemma": "Calpurnius 97",
     "previous": "Calpurnius 96",
     "next": "Calpurnius 98",
+    "sort_key": "Calpurnius 097",
     "chapters": [
       {
         "start": 1395,
@@ -43920,6 +44046,7 @@
     "lemma": "Calpurnius 105",
     "previous": "Calpurnius 104",
     "next": "Calpurnius 106",
+    "redirect": "Seius 7",
     "chapters": [
       {
         "start": 1400,
@@ -44118,6 +44245,7 @@
     "lemma": "Calpurnius 122",
     "previous": "Calpurnius 121",
     "next": "Calpurnius 123",
+    "redirect": "Bellicius 1",
     "chapters": [
       {
         "start": 1406,
@@ -44129,7 +44257,6 @@
     "lemma": "Calpurnius 123",
     "previous": "Calpurnius 122",
     "next": "Calpurnius 124",
-    "redirect": true,
     "chapters": [
       {
         "start": 1406,
@@ -44534,6 +44661,7 @@
     "lemma": "Calvisius 1",
     "previous": "Calvisiana actio",
     "next": "Calvisius 2",
+    "sort_key": "Calvisius 01",
     "chapters": [
       {
         "start": 1410,
@@ -44546,6 +44674,7 @@
     "lemma": "Calvisius 2",
     "previous": "Calvisius 1",
     "next": "Calvisius 3",
+    "sort_key": "Calvisius 02",
     "chapters": [
       {
         "start": 1410,
@@ -44558,6 +44687,7 @@
     "lemma": "Calvisius 3",
     "previous": "Calvisius 2",
     "next": "Calvisius 4",
+    "sort_key": "Calvisius 03",
     "chapters": [
       {
         "start": 1410,
@@ -44584,6 +44714,8 @@
     "lemma": "Calvisius 5",
     "previous": "Calvisius 4",
     "next": "Calvisius 6",
+    "sort_key": "Calvisius 05",
+    "redirect": "Clodius 19",
     "chapters": [
       {
         "start": 1410,
@@ -44609,6 +44741,7 @@
     "lemma": "Calvisius 7",
     "previous": "Calvisius 6",
     "next": "Calvisius 8",
+    "sort_key": "Calvisius 07",
     "chapters": [
       {
         "start": 1410,
@@ -44633,6 +44766,7 @@
     "lemma": "Calvisius 9",
     "previous": "Calvisius 8",
     "next": "Calvisius 10",
+    "sort_key": "Calvisius 09",
     "chapters": [
       {
         "start": 1411,
@@ -45058,7 +45192,7 @@
   },
   {
     "lemma": "Camarini 2",
-    "previous": "Camarini 1",
+    "previous": "Camarini",
     "next": "Camars 1",
     "chapters": [
       {
@@ -45296,6 +45430,7 @@
     "lemma": "Camenae",
     "previous": "Cameliomagus",
     "next": "Camenarum vallis",
+    "wp_link": "w:de:Camena",
     "chapters": [
       {
         "start": 1427,
@@ -45555,6 +45690,7 @@
     "lemma": "Camillus 4",
     "previous": "Camillus 3",
     "next": "Camillus 5",
+    "redirect": "Arruntius 14",
     "chapters": [
       {
         "start": 1433,
@@ -45567,6 +45703,7 @@
     "lemma": "Camillus 5",
     "previous": "Camillus 4",
     "next": "Caminacum",
+    "redirect": "Nonius 46",
     "chapters": [
       {
         "start": 1433,

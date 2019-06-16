@@ -51,7 +51,7 @@
     "lemma": "Cornutus 1",
     "previous": "Cornutius vicus",
     "next": "Cornutus 2",
-    "redirect": true,
+    "redirect": "Annaeus 5",
     "chapters": [
       {
         "start": 1635,
@@ -75,6 +75,7 @@
     "lemma": "Cornutus 3",
     "previous": "Cornutus 2",
     "next": "Cornutus 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 1635,
@@ -99,6 +100,7 @@
     "lemma": "Cornutus 5",
     "previous": "Cornutus 4",
     "next": "Corobilium",
+    "redirect": "Servenius",
     "chapters": [
       {
         "start": 1635,
@@ -195,6 +197,7 @@
     "lemma": "Corona 2",
     "previous": "Corona 1",
     "next": "Coronarii",
+    "wp_link": "w:de:Nördliche Krone",
     "chapters": [
       {
         "start": 1643,
@@ -1889,18 +1892,6 @@
     ]
   },
   {
-    "lemma": "Cottius 4",
-    "previous": "Cottius 2",
-    "next": "Cottius 5",
-    "redirect": "Vestricius Cottius",
-    "chapters": [
-      {
-        "start": 1677,
-        "end": 1677
-      }
-    ]
-  },
-  {
     "lemma": "Cottius 3",
     "previous": "Cottius 2",
     "next": "Cottius 4",
@@ -1909,6 +1900,18 @@
         "start": 1678,
         "end": 1678,
         "author": "Groag"
+      }
+    ]
+  },
+  {
+    "lemma": "Cottius 4",
+    "previous": "Cottius 3",
+    "next": "Cottius 5",
+    "redirect": "Vestricius Cottius",
+    "chapters": [
+      {
+        "start": 1678,
+        "end": 1678
       }
     ]
   },
@@ -12405,17 +12408,6 @@
     ]
   },
   {
-    "lemma": "Danaus 3",
-    "previous": "Danastris",
-    "chapters": [
-      {
-        "start": 2098,
-        "end": 2098,
-        "author": "Pollack"
-      }
-    ]
-  },
-  {
     "lemma": "Dandaguda",
     "next": "Dandake",
     "chapters": [
@@ -18970,7 +18962,7 @@
     ]
   },
   {
-    "lemma": "Deka, oi",
+    "lemma": "οἱ Δέκα",
     "previous": "Deïthynos",
     "next": "Dekadarchiai 1",
     "chapters": [
@@ -18983,7 +18975,7 @@
   },
   {
     "lemma": "Dekadarchiai 1",
-    "previous": "Deka, oi",
+    "previous": "οἱ Δέκα",
     "next": "Dekadarchiai 2",
     "chapters": [
       {

@@ -516,6 +516,7 @@
   },
   {
     "lemma": "Brutus 3",
+    "previous": null,
     "next": "Butra"
   },
   {
@@ -544,10 +545,12 @@
   },
   {
     "lemma": "Caecina 22",
-    "previous": "Caburriates"
+    "previous": "Caburriates",
+    "next": "Caecina 23"
   },
   {
     "lemma": "Caecina 23",
+    "previous": "Caecina 22",
     "next": "Caedici(i)"
   },
   {
@@ -685,7 +688,6 @@
   {
     "lemma": "Calouitanus Portus",
     "previous": "Calor 3",
-    "next": "Calvisius 9",
     "chapters": [
       {
         "start": 20,
@@ -695,9 +697,16 @@
     ]
   },
   {
+    "lemma": "Calvisius 7",
+    "previous": null,
+    "next": "Calvisius 9",
+    "sort_key": "Calvisius 07"
+  },
+  {
     "lemma": "Calvisius 9",
-    "previous": "Calouitanus Portus",
+    "previous": "Calvisius 7",
     "next": "Calvisius 10",
+    "sort_key": "Calvisius 09",
     "chapters": [
       {
         "start": 20,
@@ -869,6 +878,7 @@
   {
     "lemma": "Carrea (Carreum, Correa)",
     "previous": "Carnus",
+    "next": null,
     "chapters": [
       {
         "start": 21,
@@ -1035,16 +1045,56 @@
   },
   {
     "lemma": "Cincius 9",
-    "previous": "Chelidonioi",
-    "next": null
+    "previous": "Chelidonioi"
+  },
+  {
+    "lemma": "Claudius 186",
+    "next": "Claudius 187"
+  },
+  {
+    "lemma": "Claudius 187",
+    "previous": "Claudius 186",
+    "next": "Claudius 188",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 188",
+    "previous": "Claudius 187"
+  },
+  {
+    "lemma": "Claudius 194",
+    "next": "Claudius 357",
+    "sort_key": "Claudius"
   },
   {
     "lemma": "Claudius 357",
-    "next": "Claudius 415"
+    "previous": "Claudius 194"
+  },
+  {
+    "lemma": "Cincius 9",
+    "next": "Claudius 71"
+  },
+  {
+    "lemma": "Claudius 71",
+    "previous": "Cincius 9",
+    "next": "Claudius 186",
+    "sort_key": "Claudius 071"
+  },
+  {
+    "lemma": "Claudius 186",
+    "previous": "Claudius 71"
+  },
+  {
+    "lemma": "Claudius 186",
+    "next": "Claudius 187",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 187",
+    "previous": "Claudius 186"
   },
   {
     "lemma": "Claudius 415",
-    "previous": "Claudius 357",
     "next": "Coeba(?)"
   },
   {
@@ -1131,10 +1181,12 @@
   },
   {
     "lemma": "Cornelius 236",
-    "previous": "Cornelius 145"
+    "previous": "Cornelius 145",
+    "next": "Cornelius 279"
   },
   {
     "lemma": "Cornelius 279",
+    "previous": "Cornelius 236",
     "next": "Cornelius 279a"
   },
   {

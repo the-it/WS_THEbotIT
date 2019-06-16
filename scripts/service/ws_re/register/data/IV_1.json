@@ -4207,7 +4207,7 @@
   {
     "lemma": "Cognatio",
     "previous": "Cogidumnus",
-    "next": "Cognitio 1",
+    "next": "Cogni",
     "chapters": [
       {
         "start": 204,
@@ -6542,6 +6542,7 @@
     "lemma": "Comites 3",
     "previous": "Comites 2",
     "next": "Comites 4",
+    "sort_key": "Comites 003",
     "chapters": [
       {
         "start": 637,
@@ -6578,6 +6579,7 @@
     "lemma": "Comites 6",
     "previous": "Comites 5",
     "next": "Comites 7",
+    "sort_key": "Comites 006",
     "chapters": [
       {
         "start": 639,
@@ -6603,6 +6605,7 @@
     "lemma": "Comites 8",
     "previous": "Comites 7",
     "next": "Comites 9",
+    "sort_key": "Comites 008",
     "chapters": [
       {
         "start": 639,
@@ -6640,6 +6643,7 @@
     "lemma": "Comites 11",
     "previous": "Comites 10",
     "next": "Comites 12",
+    "sort_key": "Comites 011",
     "chapters": [
       {
         "start": 640,
@@ -6652,6 +6656,7 @@
     "lemma": "Comites 12",
     "previous": "Comites 11",
     "next": "Comites 13",
+    "sort_key": "Comites 012",
     "chapters": [
       {
         "start": 640,
@@ -6687,24 +6692,12 @@
   {
     "lemma": "Comites 15",
     "previous": "Comites 14",
-    "next": "Comites 19",
+    "next": "Comites 16",
+    "sort_key": "Comites 015",
     "chapters": [
       {
         "start": 641,
         "end": 643,
-        "author": "Seeck"
-      }
-    ]
-  },
-  {
-    "lemma": "Comites 19",
-    "previous": "Comites 18",
-    "next": "Comites 20",
-    "sort_key": "Comites 019",
-    "chapters": [
-      {
-        "start": 641,
-        "end": 646,
         "author": "Seeck"
       }
     ]
@@ -6736,7 +6729,8 @@
   {
     "lemma": "Comites 18",
     "previous": "Comites 17",
-    "next": "Comites 20",
+    "next": "Comites 19",
+    "sort_key": "Comites 018",
     "chapters": [
       {
         "start": 643,
@@ -6746,9 +6740,23 @@
     ]
   },
   {
-    "lemma": "Comites 20",
+    "lemma": "Comites 19",
     "previous": "Comites 18",
+    "next": "Comites 20",
+    "sort_key": "Comites 019",
+    "chapters": [
+      {
+        "start": 644,
+        "end": 646,
+        "author": "Seeck"
+      }
+    ]
+  },
+  {
+    "lemma": "Comites 20",
+    "previous": "Comites 19",
     "next": "Comites 21",
+    "sort_key": "Comites 020",
     "chapters": [
       {
         "start": 646,
@@ -6773,6 +6781,7 @@
     "lemma": "Comites 22",
     "previous": "Comites 21",
     "next": "Comites 23",
+    "sort_key": "Comites 022",
     "chapters": [
       {
         "start": 647,
@@ -6809,6 +6818,7 @@
     "lemma": "Comites 25",
     "previous": "Comites 24",
     "next": "Comites 26",
+    "sort_key": "Comites 025",
     "chapters": [
       {
         "start": 648,
@@ -6821,6 +6831,7 @@
     "lemma": "Comites 26",
     "previous": "Comites 25",
     "next": "Comites 27",
+    "sort_key": "Comites 026",
     "chapters": [
       {
         "start": 650,
@@ -6833,6 +6844,7 @@
     "lemma": "Comites 27",
     "previous": "Comites 26",
     "next": "Comites 28",
+    "sort_key": "Comites 027",
     "chapters": [
       {
         "start": 650,
@@ -6906,6 +6918,7 @@
     "lemma": "Comites 33",
     "previous": "Comites 32",
     "next": "Comites 34",
+    "sort_key": "Comites 033",
     "chapters": [
       {
         "start": 654,
@@ -6957,6 +6970,7 @@
     "lemma": "Comites 37",
     "previous": "Comites 36",
     "next": "Comites 38",
+    "sort_key": "Comites 037",
     "chapters": [
       {
         "start": 654,
@@ -6981,6 +6995,7 @@
     "lemma": "Comites 39",
     "previous": "Comites 38",
     "next": "Comites 40",
+    "sort_key": "Comites 039",
     "chapters": [
       {
         "start": 655,
@@ -7055,6 +7070,7 @@
     "lemma": "Comites 45",
     "previous": "Comites 44",
     "next": "Comites 46",
+    "sort_key": "Comites 045",
     "chapters": [
       {
         "start": 656,
@@ -7118,6 +7134,7 @@
     "lemma": "Comites 50",
     "previous": "Comites 49",
     "next": "Comites 51",
+    "sort_key": "Comites 050",
     "chapters": [
       {
         "start": 657,
@@ -7192,6 +7209,7 @@
     "lemma": "Comites 56",
     "previous": "Comites 55",
     "next": "Comites 57",
+    "sort_key": "Comites 056",
     "chapters": [
       {
         "start": 658,
@@ -7428,6 +7446,7 @@
     "lemma": "Comites 75",
     "previous": "Comites 74",
     "next": "Comites 76",
+    "sort_key": "Comites 075",
     "chapters": [
       {
         "start": 662,
@@ -7490,6 +7509,7 @@
     "lemma": "Comites 80",
     "previous": "Comites 79",
     "next": "Comites 81",
+    "sort_key": "Comites 080",
     "chapters": [
       {
         "start": 670,
@@ -7515,6 +7535,7 @@
     "lemma": "Comites 82",
     "previous": "Comites 81",
     "next": "Comites 83",
+    "sort_key": "Comites 082",
     "chapters": [
       {
         "start": 671,
@@ -10831,6 +10852,7 @@
     "lemma": "Constantini arcus",
     "previous": "Constantina 6",
     "next": "Constantini basilica",
+    "wp_link": "w:de:Konstantinsbogen",
     "chapters": [
       {
         "start": 961,
@@ -13571,7 +13593,7 @@
   {
     "lemma": "Corneli forum",
     "previous": "Cornelianus 6",
-    "next": "Cornelius 1",
+    "next": "Cornelius",
     "chapters": [
       {
         "start": 1249,
@@ -13580,8 +13602,14 @@
     ]
   },
   {
-    "lemma": "Cornelius 1",
+    "lemma": "Cornelius",
     "previous": "Corneli forum",
+    "next": "Cornelius 1",
+    "sort_key": "Cornelius 000"
+  },
+  {
+    "lemma": "Cornelius 1",
+    "previous": "Cornelius",
     "next": "Cornelius 2",
     "sort_key": "Cornelius 001",
     "chapters": [
@@ -13595,6 +13623,7 @@
     "lemma": "Cornelius 2",
     "previous": "Cornelius 1",
     "next": "Cornelius 3",
+    "sort_key": "Cornelius 002",
     "chapters": [
       {
         "start": 1250,
@@ -13629,6 +13658,7 @@
     "lemma": "Cornelius 5",
     "previous": "Cornelius 4",
     "next": "Cornelius 6",
+    "sort_key": "Cornelius 005",
     "chapters": [
       {
         "start": 1250,
@@ -13738,6 +13768,7 @@
     "lemma": "Cornelius 14",
     "previous": "Cornelius 13",
     "next": "Cornelius 15",
+    "sort_key": "Cornelius 014",
     "chapters": [
       {
         "start": 1252,
@@ -13774,6 +13805,7 @@
     "lemma": "Cornelius 17",
     "previous": "Cornelius 16",
     "next": "Cornelius 18",
+    "sort_key": "Cornelius 017",
     "chapters": [
       {
         "start": 1252,
@@ -13845,6 +13877,7 @@
     "lemma": "Cornelius 23",
     "previous": "Cornelius 22",
     "next": "Cornelius 24",
+    "sort_key": "Cornelius 023",
     "chapters": [
       {
         "start": 1255,
@@ -16509,7 +16542,7 @@
     "lemma": "Cornelius 242",
     "previous": "Cornelius 241",
     "next": "Cornelius 243",
-    "redirect": true,
+    "redirect": "Pomponius 43",
     "chapters": [
       {
         "start": 1402,
@@ -16655,6 +16688,7 @@
     "lemma": "Cornelius 255",
     "previous": "Cornelius 254",
     "next": "Cornelius 256",
+    "redirect": "Cornelius 226",
     "chapters": [
       {
         "start": 1405,
@@ -16722,6 +16756,7 @@
     "lemma": "Cornelius 261",
     "previous": "Cornelius 260",
     "next": "Cornelius 262",
+    "redirect": "Cornelius 227",
     "chapters": [
       {
         "start": 1406,
