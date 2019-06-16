@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Lokroi 1",
+    "previous": null,
     "next": "Lokroi 2",
     "chapters": [
       {
@@ -325,6 +326,7 @@
     "lemma": "Lollius 1",
     "previous": "Lollius",
     "next": "Lollius 2",
+    "sort_key": "Lollius 01",
     "chapters": [
       {
         "start": 1375,
@@ -376,6 +378,7 @@
     "lemma": "Lollius 5",
     "previous": "Lollius 4",
     "next": "Lollius 6",
+    "sort_key": "Lollius 05",
     "chapters": [
       {
         "start": 1376,
@@ -388,6 +391,7 @@
     "lemma": "Lollius 6",
     "previous": "Lollius 5",
     "next": "Lollius 7",
+    "sort_key": "Lollius 06",
     "chapters": [
       {
         "start": 1376,
@@ -400,6 +404,7 @@
     "lemma": "Lollius 7",
     "previous": "Lollius 6",
     "next": "Lollius 8",
+    "sort_key": "Lollius 07",
     "chapters": [
       {
         "start": 1377,
@@ -750,6 +755,7 @@
     "lemma": "Londinium",
     "previous": "Loncium",
     "next": "Londobris",
+    "wp_link": "w:de:London",
     "chapters": [
       {
         "start": 1396,
@@ -1097,6 +1103,8 @@
     "lemma": "Longos 1",
     "previous": "Longon",
     "next": "Longos 2",
+    "wp_link": "w:de:Longos",
+    "ws_link": "s:de:Longos",
     "chapters": [
       {
         "start": 1425,
@@ -1217,6 +1225,7 @@
     "lemma": "Lopadusa",
     "previous": "Lontrico",
     "next": "Lopheites",
+    "wp_link": "w:de:Lampedusa",
     "chapters": [
       {
         "start": 1428,
@@ -1535,7 +1544,7 @@
   {
     "lemma": "Lorum",
     "previous": "Lorne",
-    "next": "Loryma",
+    "next": "Λώρυμα",
     "chapters": [
       {
         "start": 1449,
@@ -1545,9 +1554,10 @@
     ]
   },
   {
-    "lemma": "Loryma",
+    "lemma": "Λώρυμα",
     "previous": "Lorum",
-    "next": "Los",
+    "next": "Λῶς",
+    "sort_key": "Loryma",
     "chapters": [
       {
         "start": 1450,
@@ -1557,8 +1567,8 @@
     ]
   },
   {
-    "lemma": "Los",
-    "previous": "Loryma",
+    "lemma": "Λῶς",
+    "previous": "Λώρυμα",
     "next": "Losa",
     "chapters": [
       {
@@ -1570,7 +1580,7 @@
   },
   {
     "lemma": "Losa",
-    "previous": "Los",
+    "previous": "Λῶς",
     "next": "Losodica",
     "chapters": [
       {
@@ -1689,7 +1699,7 @@
   {
     "lemma": "Loto 2",
     "previous": "Loto 1",
-    "next": "Lotoa",
+    "next": "Λωτῴα",
     "chapters": [
       {
         "start": 1507,
@@ -1711,8 +1721,9 @@
   },
   {
     "lemma": "Lotophagen",
-    "previous": "Lotoa",
+    "previous": "Λωτῴα",
     "next": "Lotophagitis 1",
+    "wp_link": "w:de:Lotophagen",
     "chapters": [
       {
         "start": 1507,
@@ -1723,7 +1734,7 @@
   },
   {
     "lemma": "Lotophagitis 1",
-    "previous": "Lotophagen",
+    "previous": "Lotophagoi",
     "next": "Lotophagitis 2",
     "chapters": [
       {
@@ -1737,6 +1748,7 @@
     "lemma": "Lotophagitis 2",
     "previous": "Lotophagitis 1",
     "next": "Lotos 1",
+    "wp_link": "w:de:Djerba",
     "chapters": [
       {
         "start": 1515,
@@ -1783,6 +1795,7 @@
     "lemma": "Lousonna",
     "previous": "Lotus",
     "next": "Loxa",
+    "wp_link": "w:de:Lausanne",
     "chapters": [
       {
         "start": 1532,

@@ -4513,6 +4513,7 @@
     "lemma": "Culcitanensis",
     "previous": "Culcianus",
     "next": "Culex",
+    "redirect": "Culusitana civitas",
     "chapters": [
       {
         "start": 1742,
@@ -4524,6 +4525,7 @@
     "lemma": "Culex",
     "previous": "Culcitanensis",
     "next": "Culina",
+    "redirect": "Vergilius Maro",
     "chapters": [
       {
         "start": 1742,
@@ -4547,6 +4549,7 @@
     "lemma": "Culleo",
     "previous": "Culina",
     "next": "Culleolus",
+    "redirect": "Terentius 43",
     "chapters": [
       {
         "start": 1744,
@@ -4702,6 +4705,7 @@
     "lemma": "Cumae",
     "previous": "Culusitana civitas",
     "next": "Cumania",
+    "redirect": "Kyme",
     "chapters": [
       {
         "start": 1754,
@@ -4725,6 +4729,7 @@
     "lemma": "Cumanus",
     "previous": "Cumania",
     "next": "Cumba",
+    "redirect": "Ventidius 7",
     "chapters": [
       {
         "start": 1754,
@@ -16874,6 +16879,7 @@
     "lemma": "Decrianus 1",
     "previous": "Decretum Damasi, Gelasii, Hormisdae",
     "next": "Decrianus 2",
+    "wp_link": "w:de:Decrianus",
     "chapters": [
       {
         "start": 2306,
@@ -18952,7 +18958,7 @@
   {
     "lemma": "Deïthynos",
     "previous": "Deithon",
-    "next": "οἱ Δέκα",
+    "next": "οἱ δέκα",
     "chapters": [
       {
         "start": 2409,
@@ -18962,9 +18968,10 @@
     ]
   },
   {
-    "lemma": "οἱ Δέκα",
+    "lemma": "οἱ δέκα",
     "previous": "Deïthynos",
-    "next": "Dekadarchiai 1",
+    "next": "Δεκαδαρχίαι 1",
+    "sort_key": "Deka, hoi",
     "chapters": [
       {
         "start": 2409,
@@ -18974,9 +18981,10 @@
     ]
   },
   {
-    "lemma": "Dekadarchiai 1",
-    "previous": "οἱ Δέκα",
-    "next": "Dekadarchiai 2",
+    "lemma": "Δεκαδαρχίαι 1",
+    "previous": "οἱ δέκα",
+    "next": "Δεκαδαρχίαι 2",
+    "sort_key": "Dekadarchiai 1",
     "chapters": [
       {
         "start": 2411,
@@ -18986,9 +18994,10 @@
     ]
   },
   {
-    "lemma": "Dekadarchiai 2",
-    "previous": "Dekadarchiai 1",
-    "next": "Dekadistai",
+    "lemma": "Δεκαδαρχίαι 2",
+    "previous": "Δεκαδαρχίαι 1",
+    "next": "Δεκαδισταί",
+    "sort_key": "Dekadarchiai 2",
     "chapters": [
       {
         "start": 2412,
@@ -18998,8 +19007,8 @@
     ]
   },
   {
-    "lemma": "Dekadistai",
-    "previous": "Dekadarchiai 2",
+    "lemma": "Δεκαδισταί",
+    "previous": "Δεκαδαρχίαι 2",
     "next": "Dekadouchoi",
     "chapters": [
       {
@@ -19011,7 +19020,7 @@
   },
   {
     "lemma": "Dekadouchoi",
-    "previous": "Dekadistai",
+    "previous": "Δεκαδισταί",
     "next": "Dekadrachmon",
     "chapters": [
       {
@@ -19022,8 +19031,8 @@
   },
   {
     "lemma": "Dekadrachmon",
-    "previous": "Dekadouchoi",
-    "next": "Dekalitron Italikon",
+    "previous": "Δεκαδισταί",
+    "next": "Δεκαδοῦχοι",
     "chapters": [
       {
         "start": 2413,
@@ -19033,9 +19042,17 @@
     ]
   },
   {
-    "lemma": "Dekalitron Italikon",
+    "lemma": "Δεκαδοῦχοι",
     "previous": "Dekadrachmon",
-    "next": "Dekalitros stater",
+    "next": "Δεκάλιτρον Ἰταλικόν",
+    "sort_key": "Dekaduchoi",
+    "redirect": "οἱ δέκα"
+  },
+  {
+    "lemma": "Δεκάλιτρον Ἰταλικόν",
+    "previous": "Δεκαδοῦχοι",
+    "next": "Δεκάλιτρος στατήρ",
+    "sort_key": "Dekalitron Italikon",
     "chapters": [
       {
         "start": 2413,
@@ -19045,9 +19062,10 @@
     ]
   },
   {
-    "lemma": "Dekalitros stater",
-    "previous": "Dekalitron Italikon",
+    "lemma": "Δεκάλιτρος στατήρ",
+    "previous": "Δεκάλιτρον Ἰταλικόν",
     "next": "Δεκανουμμίον",
+    "sort_key": "Dekalitros stater",
     "chapters": [
       {
         "start": 2413,
@@ -19058,8 +19076,9 @@
   },
   {
     "lemma": "Δεκανουμμίον",
-    "previous": "Dekalitros stater",
+    "previous": "Δεκάλιτρος στατήρ",
     "next": "Dekapolis 1",
+    "sort_key": "Dekanummion",
     "chapters": [
       {
         "start": 2414,
@@ -19109,7 +19128,8 @@
   {
     "lemma": "Dekargyros",
     "previous": "Δεκάπρωτοι",
-    "next": "Dekas",
+    "next": "Δεκάς",
+    "redirect": "Decargyrus nummus",
     "chapters": [
       {
         "start": 2422,
@@ -19118,9 +19138,10 @@
     ]
   },
   {
-    "lemma": "Dekas",
+    "lemma": "Δεκάς",
     "previous": "Dekargyros",
-    "next": "Dekasmu graphe",
+    "next": "Δεκασμοῦ γραφή",
+    "sort_key": "Dekas",
     "chapters": [
       {
         "start": 2422,
@@ -19130,9 +19151,10 @@
     ]
   },
   {
-    "lemma": "Dekasmu graphe",
-    "previous": "Dekas",
+    "lemma": "Δεκασμοῦ γραφή",
+    "previous": "Δεκάς",
     "next": "Δεκάτη",
+    "sort_key": "Dekasmu graphe",
     "chapters": [
       {
         "start": 2422,
@@ -19143,7 +19165,7 @@
   },
   {
     "lemma": "Δεκάτη",
-    "previous": "Dekasmu graphe",
+    "previous": "Δεκασμοῦ γραφή",
     "next": "Dekatephoros",
     "sort_key": "Dekate",
     "wp_link": "w:de:Zehnt",
@@ -22597,7 +22619,7 @@
   {
     "lemma": "Demetrios 131",
     "previous": "Demetrios 130",
-    "next": "Demetriu skopiai",
+    "next": "Δημητρίου σκοπιαί",
     "chapters": [
       {
         "start": 2853,
@@ -22606,9 +22628,10 @@
     ]
   },
   {
-    "lemma": "Demetriu skopiai",
+    "lemma": "Δημητρίου σκοπιαί",
     "previous": "Demetrios 131",
-    "next": "Demeusis",
+    "next": "Δήμευσις",
+    "sort_key": "Demetriu skopiai",
     "chapters": [
       {
         "start": 2853,
@@ -22618,9 +22641,10 @@
     ]
   },
   {
-    "lemma": "Demeusis",
-    "previous": "Demetriu skopiai",
+    "lemma": "Δήμευσις",
+    "previous": "Δημητρίου σκοπιαί",
     "next": "Demianus",
+    "sort_key": "Demeusis",
     "chapters": [
       {
         "start": 2853,
@@ -22631,8 +22655,9 @@
   },
   {
     "lemma": "Demianus",
-    "previous": "Demeusis",
-    "next": "Demioprata",
+    "previous": "Δήμευσις",
+    "next": "Δημιόπρατα",
+    "redirect": "Claudius 127",
     "chapters": [
       {
         "start": 2854,
@@ -22641,9 +22666,10 @@
     ]
   },
   {
-    "lemma": "Demioprata",
+    "lemma": "Δημιόπρατα",
     "previous": "Demianus",
-    "next": "Demios",
+    "next": "Δήμιος",
+    "sort_key": "Demioprata",
     "chapters": [
       {
         "start": 2854,
@@ -22653,9 +22679,10 @@
     ]
   },
   {
-    "lemma": "Demios",
-    "previous": "Demioprata",
+    "lemma": "Δήμιος",
+    "previous": "Δημιόπρατα",
     "next": "Demiphon",
+    "sort_key": "Demios",
     "chapters": [
       {
         "start": 2854,
@@ -22666,7 +22693,7 @@
   },
   {
     "lemma": "Demiphon",
-    "previous": "Demios",
+    "previous": "Δήμιος",
     "next": "Demiurgoi 1",
     "chapters": [
       {
@@ -22788,7 +22815,7 @@
   },
   {
     "lemma": "Demochares 1",
-    "previous": "Demo 5",
+    "previous": "Demo 6",
     "next": "Demochares 2",
     "chapters": [
       {
@@ -23053,6 +23080,7 @@
   {
     "lemma": "Demodoros",
     "previous": "Demodokos 7",
+    "next": null,
     "chapters": [
       {
         "start": 2870,

@@ -16495,7 +16495,7 @@
   {
     "lemma": "Eleutherios 5",
     "previous": "Eleutherios 4",
-    "next": "Eleutherius 6",
+    "next": "Eleutherios 6",
     "chapters": [
       {
         "start": 2350,
@@ -16519,7 +16519,6 @@
   {
     "lemma": "Eleutherius 7",
     "previous": "Eleutherius 6",
-    "next": "Eleutherios 8",
     "chapters": [
       {
         "start": 2350,
@@ -16529,9 +16528,13 @@
     ]
   },
   {
+    "lemma": "Eleutherios 7",
+    "next": "Eleutherios 8"
+  },
+  {
     "lemma": "Eleutherios 8",
-    "previous": "Eleutherius 7",
-    "next": "Eleutherius 9",
+    "previous": "Eleutherios 7",
+    "next": "Eleutherios 9",
     "chapters": [
       {
         "start": 2351,
@@ -16541,20 +16544,13 @@
     ]
   },
   {
-    "lemma": "Eleutherius 9",
+    "lemma": "Eleutherios 9",
     "previous": "Eleutherios 8",
-    "next": "Eleuthernai",
-    "chapters": [
-      {
-        "start": 2351,
-        "end": 2351,
-        "author": "Benjamin"
-      }
-    ]
+    "next": "Eleuthernai"
   },
   {
     "lemma": "Eleuthernai",
-    "previous": "Eleutherius 9",
+    "previous": "Eleutherios 9",
     "next": "Eleutherokilikes",
     "wp_link": "w:de:Eleutherna",
     "chapters": [

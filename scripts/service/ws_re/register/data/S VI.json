@@ -629,6 +629,7 @@
     "lemma": "Caesius 2a",
     "previous": "Caeptiema",
     "next": "Calena",
+    "sort_key": "Caesius 02a",
     "chapters": [
       {
         "start": 19,
@@ -688,6 +689,7 @@
   {
     "lemma": "Calouitanus Portus",
     "previous": "Calor 3",
+    "next": "Calpurnius 99",
     "chapters": [
       {
         "start": 20,
@@ -697,8 +699,17 @@
     ]
   },
   {
+    "lemma": "Calpurnius 99",
+    "previous": "Calouitanus Portus",
+    "next": "Calpurnius 101",
+    "sort_key": "Calpurnius 099"
+  },
+  {
+    "lemma": "Calpurnius 101",
+    "previous": "Calpurnius 99"
+  },
+  {
     "lemma": "Calvisius 7",
-    "previous": null,
     "next": "Calvisius 9",
     "sort_key": "Calvisius 07"
   },
