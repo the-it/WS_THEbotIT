@@ -25,8 +25,11 @@ class ERROTask(ReScannerTask):
         body = "\n".join(entries)
         return caption + body
 
+    def _data_exists(self):
+        return bool(self.data)
+
     def finish_task(self):
-        if self.data:
+        if self._data_exists():
             if not self.debug:
                 page = pywikibot.Page(self.wiki, self._wiki_page)
                 page.text = page.text + self._build_entry()
