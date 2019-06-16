@@ -60,4 +60,4 @@ class TestReProperty(TestCase):
 
     def test_repr(self):
         re_property = Property(name="Test", default=False)
-        compare("<ReProperty> (name: Test, value: False, type: <class 'bool'>)", repr(re_property))
+        compare("<Property (name: Test, value: False, type: bool)>", repr(re_property))

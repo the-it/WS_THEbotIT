@@ -13,7 +13,7 @@ class Author:
         self._name = name
 
     def __repr__(self):  # pragma: no cover
-        return f"<AUTHOR - name:{self.name}, birth:{self.birth}, death:{self.death}>"
+        return f"<{self.__class__.__name__} - name:{self.name}, birth:{self.birth}, death:{self.death}>"
 
     @property
     def death(self) -> Union[int, None]:

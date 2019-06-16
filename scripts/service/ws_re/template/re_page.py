@@ -44,6 +44,10 @@ class RePage():
         if last_handled_char < len(self.pre_text):
             self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)].strip())
 
+    def __repr__(self):  # pragma: no cover
+        return f"<{self.__class__.__name__} (articles: {len(self), len(self.splitted_article_list)}, " \
+            f"lemma: {self.lemma_without_prefix})>"
+
     def __getitem__(self, idx: int) -> Union[Article, str]:
         return self._article_list[idx]
 

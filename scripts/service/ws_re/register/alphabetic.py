@@ -13,7 +13,7 @@ class AlphabeticRegister(Register):
         self._init_lemmas()
 
     def __repr__(self):  # pragma: no cover
-        return f"<ALPHABETIC REGISTER - start:{self._start}, end:{self._end}, lemmas:{len(self)}>"
+        return f"<{self.__class__.__name__} - start:{self._start}, end:{self._end}, lemmas:{len(self)}>"
 
     def __len__(self):
         return len(self.squash_lemmas(self._lemmas))
