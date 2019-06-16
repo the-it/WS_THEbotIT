@@ -4330,6 +4330,18 @@
     ]
   },
   {
+    "lemma": "Caracotinum",
+    "previous": "Caracca",
+    "next": "Caraceni",
+    "chapters": [
+      {
+        "start": 1567,
+        "end": 1567,
+        "author": "Ihm"
+      }
+    ]
+  },
+  {
     "lemma": "Caraceni",
     "previous": "Caracotinum",
     "next": "Cara cognatio",
@@ -4344,7 +4356,7 @@
   {
     "lemma": "Cara cognatio",
     "previous": "Caraceni",
-    "next": "Caracotinum",
+    "next": "Caracylaea",
     "chapters": [
       {
         "start": 1567,
@@ -4353,20 +4365,8 @@
     ]
   },
   {
-    "lemma": "Caracotinum",
-    "previous": "Cara cognatio",
-    "next": "Caraceni",
-    "chapters": [
-      {
-        "start": 1567,
-        "end": 1567,
-        "author": "Ihm"
-      }
-    ]
-  },
-  {
     "lemma": "Caracylaea",
-    "previous": "Caracotinum",
+    "previous": "Cara cognatio",
     "next": "Caraditonus",
     "chapters": [
       {
@@ -5594,18 +5594,6 @@
     ]
   },
   {
-    "lemma": "Carmen de ponderibus",
-    "previous": "Carmen famosum",
-    "next": "Carmenta",
-    "chapters": [
-      {
-        "start": 1593,
-        "end": 1594,
-        "author": "Hultsch"
-      }
-    ]
-  },
-  {
     "lemma": "Carmen famosum",
     "previous": "Carmei",
     "next": "Carmen de ponderibus",
@@ -5614,6 +5602,18 @@
         "start": 1593,
         "end": 1593,
         "author": "Leonhard"
+      }
+    ]
+  },
+  {
+    "lemma": "Carmen de ponderibus",
+    "previous": "Carmen famosum",
+    "next": "Carmenta",
+    "chapters": [
+      {
+        "start": 1593,
+        "end": 1594,
+        "author": "Hultsch"
       }
     ]
   },
@@ -14901,7 +14901,7 @@
   },
   {
     "lemma": "Celsa",
-    "previous": "Celobot(h)ras",
+    "previous": "Celoces",
     "next": "Celse",
     "chapters": [
       {

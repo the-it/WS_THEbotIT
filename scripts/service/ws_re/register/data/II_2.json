@@ -37584,25 +37584,25 @@
     ]
   },
   {
-    "lemma": "Baeterrae",
+    "lemma": "Baethocemi",
     "previous": "Baetasii",
-    "next": "Baethocemi",
+    "next": "Baeterrae",
+    "chapters": [
+      {
+        "start": 2762,
+        "end": 2762
+      }
+    ]
+  },
+  {
+    "lemma": "Baeterrae",
+    "previous": "Baethocemi",
+    "next": "Baetis",
     "chapters": [
       {
         "start": 2762,
         "end": 2763,
         "author": "Ihm"
-      }
-    ]
-  },
-  {
-    "lemma": "Baethocemi",
-    "previous": "Baeterrae",
-    "next": "Baetis",
-    "chapters": [
-      {
-        "start": 2762,
-        "end": 2762
       }
     ]
   },
@@ -40181,26 +40181,14 @@
     "chapters": [
       {
         "start": 2818,
-        "end": 2818,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Balbinus 4a-d",
-    "previous": "Balbinus 4",
-    "next": "Balbis",
-    "chapters": [
-      {
-        "start": 2818,
         "end": 2819,
         "author": "Rohden"
       }
     ]
   },
   {
-    "lemma": "Balbis",
-    "previous": "Balbinus 4a-d",
+    "lemma": "Βαλβίς",
+    "previous": "Balbinus 4",
     "next": "Balbitene",
     "chapters": [
       {
@@ -40212,7 +40200,7 @@
   },
   {
     "lemma": "Balbitene",
-    "previous": "Balbis",
+    "previous": "Βαλβίς",
     "next": "Balbura",
     "chapters": [
       {
@@ -40295,20 +40283,8 @@
     ]
   },
   {
-    "lemma": "Balbus 4a-f",
-    "previous": "Balbus 4",
-    "next": "Balbutius",
-    "chapters": [
-      {
-        "start": 2822,
-        "end": 2822,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
     "lemma": "Balbutius",
-    "previous": "Balbus 4a-f",
+    "previous": "Balbus 4",
     "next": "Balbyblos",
     "chapters": [
       {
@@ -40591,11 +40567,23 @@
   {
     "lemma": "Balio",
     "previous": "Balidas",
-    "next": "Balios 1",
+    "next": "Balios",
     "chapters": [
       {
         "start": 2828,
         "end": 2828
+      }
+    ]
+  },
+  {
+    "lemma": "Balios",
+    "previous": "Balio",
+    "next": "Balios 1",
+    "chapters": [
+      {
+        "start": 2828,
+        "end": 2828,
+        "author": "Escher"
       }
     ]
   },
@@ -42663,6 +42651,10 @@
         "author": "Oehler, J[ohann]"
       }
     ]
+  },
+  {
+    "lemma": "Apollonios 113",
+    "next": "Archebiades 2"
   },
   {
     "lemma": "Archebiades 2",
