@@ -16225,8 +16225,20 @@
     ]
   },
   {
-    "lemma": "ad Centenarium 1",
+    "lemma": "Centenarium 2",
     "previous": "Centenarium 1",
+    "next": "ad Centenarium 1",
+    "chapters": [
+      {
+        "start": 1926,
+        "end": 1926,
+        "author": "Schmidt, Joh[annes]"
+      }
+    ]
+  },
+  {
+    "lemma": "ad Centenarium 1",
+    "previous": "Centenarium 2",
     "next": "ad Centenarium 2",
     "chapters": [
       {
@@ -16239,19 +16251,6 @@
   {
     "lemma": "ad Centenarium 2",
     "previous": "ad Centenarium 1",
-    "next": "ad Centenarium 3",
-    "sort_key": "Centenarium 4",
-    "chapters": [
-      {
-        "start": 1926,
-        "end": 1926,
-        "author": "Schmidt, Joh[annes]"
-      }
-    ]
-  },
-  {
-    "lemma": "ad Centenarium 2",
-    "previous": "Centenarium 1",
     "next": "ad Centenarium 3",
     "chapters": [
       {
@@ -21592,18 +21591,6 @@
     ]
   },
   {
-    "lemma": "Chamavi",
-    "previous": "Cham(m)anene",
-    "next": "Chamogamision",
-    "chapters": [
-      {
-        "start": 2107,
-        "end": 2108,
-        "author": "Ihm"
-      }
-    ]
-  },
-  {
     "lemma": "Cham(m)anene",
     "previous": "Chamaizelos 2",
     "next": "Chamavi",
@@ -21612,6 +21599,18 @@
         "start": 2107,
         "end": 2107,
         "author": "Ruge"
+      }
+    ]
+  },
+  {
+    "lemma": "Chamavi",
+    "previous": "Cham(m)anene",
+    "next": "Chamogamision",
+    "chapters": [
+      {
+        "start": 2107,
+        "end": 2108,
+        "author": "Ihm"
       }
     ]
   },
@@ -24540,7 +24539,7 @@
   },
   {
     "lemma": "Charmion",
-    "previous": "Charminos 1",
+    "previous": "Charminos 2",
     "next": "Charmis",
     "chapters": [
       {
@@ -24673,7 +24672,7 @@
   {
     "lemma": "Charmosina",
     "previous": "Charmos 4",
-    "next": "Charmotas",
+    "next": "Charmothas",
     "chapters": [
       {
         "start": 2176,
@@ -25277,7 +25276,7 @@
   },
   {
     "lemma": "Chasalus",
-    "previous": "Charudes",
+    "previous": "Charybdis",
     "next": "Chasamari",
     "wp_link": "w:de:Iksal",
     "chapters": [
@@ -28722,18 +28721,6 @@
     ]
   },
   {
-    "lemma": "Chliara",
-    "previous": "Chlidanope",
-    "next": "Chloe 1",
-    "chapters": [
-      {
-        "start": 2347,
-        "end": 2347,
-        "author": "Bürchner"
-      }
-    ]
-  },
-  {
     "lemma": "Chlidanope",
     "previous": "Chlemos",
     "next": "Chliara",
@@ -28742,6 +28729,18 @@
         "start": 2347,
         "end": 2347,
         "author": "Tümpel"
+      }
+    ]
+  },
+  {
+    "lemma": "Chliara",
+    "previous": "Chlidanope",
+    "next": "Chloe 1",
+    "chapters": [
+      {
+        "start": 2347,
+        "end": 2347,
+        "author": "Bürchner"
       }
     ]
   },
@@ -33152,7 +33151,7 @@
     ]
   },
   {
-    "lemma": "Chrysun oros",
+    "lemma": "Xρυσοῦν ὄρος",
     "previous": "Chrysothemis 6",
     "next": "Chrysun stoma",
     "chapters": [
@@ -33165,7 +33164,7 @@
   },
   {
     "lemma": "Chrysun stoma",
-    "previous": "Chrysun oros",
+    "previous": "Xρυσοῦν ὄρος",
     "next": "Chrysun theros",
     "chapters": [
       {
@@ -35413,7 +35412,7 @@
   },
   {
     "lemma": "Circumscriptio",
-    "previous": "Circumcelliones",
+    "previous": "Circumcisio",
     "next": "Circus",
     "chapters": [
       {
@@ -35710,7 +35709,7 @@
   },
   {
     "lemma": "Cispius mons",
-    "previous": "Cispius 5",
+    "previous": "Cispius 6",
     "next": "Cissa 1",
     "chapters": [
       {

@@ -9533,7 +9533,7 @@
   },
   {
     "lemma": "Homeros 3",
-    "previous": "Homeros 2",
+    "previous": "Homeros 1",
     "next": "Homeros 4",
     "chapters": [
       {
@@ -12768,7 +12768,6 @@
   {
     "lemma": "Hyagnis",
     "previous": "Hyaden",
-    "next": "Ad Herculem castra",
     "chapters": [
       {
         "start": 2624,
@@ -12776,6 +12775,10 @@
         "author": "Abert"
       }
     ]
+  },
+  {
+    "lemma": "Harmachis",
+    "next": "Ad Herculem castra"
   },
   {
     "lemma": "Ad Herculem castra",
@@ -12791,8 +12794,11 @@
     ]
   },
   {
+    "lemma": "Herodes 7",
+    "previous": "Ad Herculem castra"
+  },
+  {
     "lemma": "Hippo Regius",
-    "previous": "Ad Herculem castra",
     "chapters": [
       {
         "start": 2627,
