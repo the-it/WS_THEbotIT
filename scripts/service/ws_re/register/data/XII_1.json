@@ -6770,7 +6770,7 @@
   {
     "lemma": "Lagnis",
     "previous": "Lagni",
-    "next": "Lagnoka",
+    "next": "Λάγνωκα",
     "chapters": [
       {
         "start": 457,
@@ -6779,9 +6779,10 @@
     ]
   },
   {
-    "lemma": "Lagnoka",
+    "lemma": "Λάγνωκα",
     "previous": "Lagnis",
     "next": "Lagnus sinus",
+    "sort_key": "Lagnoka",
     "chapters": [
       {
         "start": 457,
@@ -6792,7 +6793,7 @@
   },
   {
     "lemma": "Lagnus sinus",
-    "previous": "Lagnoka",
+    "previous": "Λάγνωκα",
     "next": "Lagnutum",
     "chapters": [
       {
@@ -6843,6 +6844,7 @@
     "lemma": "Lagoos",
     "previous": "Λαγοείη",
     "next": "Lagopus",
+    "wp_link": "w:de:Hase (Sternbild)",
     "chapters": [
       {
         "start": 458,
@@ -6855,6 +6857,7 @@
     "lemma": "Lagopus",
     "previous": "Lagoos",
     "next": "Lagoras",
+    "wp_link": "w:de:Schneehühner",
     "chapters": [
       {
         "start": 461,
@@ -6950,7 +6953,8 @@
   {
     "lemma": "Λαγοῦσα 1",
     "previous": "Λαγοῦσα",
-    "next": "Lagusa 2",
+    "next": "Λαγοῦσα 2",
+    "sort_key": "Lagusa 1",
     "chapters": [
       {
         "start": 464,
@@ -6960,9 +6964,10 @@
     ]
   },
   {
-    "lemma": "Lagusa 2",
+    "lemma": "Λαγοῦσα 2",
     "previous": "Λαγοῦσα 1",
-    "next": "Lagusa 3",
+    "next": "Λαγοῦσα 3",
+    "sort_key": "Lagusa 2",
     "chapters": [
       {
         "start": 465,
@@ -6972,9 +6977,10 @@
     ]
   },
   {
-    "lemma": "Lagusa 3",
-    "previous": "Lagusa 2",
+    "lemma": "Λαγοῦσα 3",
+    "previous": "Λαγοῦσα 2",
     "next": "Lagynophoria",
+    "sort_key": "Lagusa 3",
     "chapters": [
       {
         "start": 465,
@@ -6985,7 +6991,7 @@
   },
   {
     "lemma": "Lagynophoria",
-    "previous": "Lagusa 3",
+    "previous": "Λαγοῦσα 3",
     "next": "Lagyra",
     "chapters": [
       {

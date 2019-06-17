@@ -3458,6 +3458,7 @@
     "lemma": "Sengscheidt",
     "previous": "Sengilachos",
     "next": "Seni",
+    "wp_link": "w:de:Sengscheid",
     "chapters": [
       {
         "start": 1459,
@@ -15679,7 +15680,7 @@
   {
     "lemma": "Siatutanda",
     "previous": "Siata",
-    "next": "Siauana",
+    "next": "Σιαυάνα",
     "chapters": [
       {
         "start": 2068,
@@ -15689,7 +15690,7 @@
     ]
   },
   {
-    "lemma": "Siauana",
+    "lemma": "Σιαυάνα",
     "previous": "Siatutanda",
     "next": "Siavolum",
     "chapters": [
@@ -15702,7 +15703,7 @@
   },
   {
     "lemma": "Siavolum",
-    "previous": "Siauana",
+    "previous": "Σιαυάνα",
     "next": "Σιαζούρ",
     "chapters": [
       {
@@ -16110,7 +16111,7 @@
     "lemma": "Sicalonia",
     "previous": "Sica",
     "next": "Sicambri",
-    "redirect": true,
+    "redirect": "Secalaunia",
     "chapters": [
       {
         "start": 2185,
@@ -16122,7 +16123,7 @@
     "lemma": "Sicambri",
     "previous": "Sicalonia",
     "next": "Sicana",
-    "redirect": true,
+    "redirect": "Sugambri",
     "chapters": [
       {
         "start": 2185,
@@ -16158,7 +16159,7 @@
     "lemma": "Sicani 1",
     "previous": "Sicandrus",
     "next": "Sicani 2",
-    "redirect": true,
+    "redirect": "Sikaner",
     "chapters": [
       {
         "start": 2185,
@@ -16169,7 +16170,7 @@
   {
     "lemma": "Sicani 2",
     "previous": "Sicani 1",
-    "next": "Sicarius",
+    "next": "Sicarii",
     "redirect": true,
     "chapters": [
       {
@@ -16179,8 +16180,14 @@
     ]
   },
   {
-    "lemma": "Sicarius",
+    "lemma": "Sicarii",
     "previous": "Sicani 2",
+    "next": "Sicarius",
+    "redirect": "Σικάριοι"
+  },
+  {
+    "lemma": "Sicarius",
+    "previous": "Sicarii",
     "next": "Sicca",
     "chapters": [
       {
@@ -17826,7 +17833,7 @@
   {
     "lemma": "Sigarra 2",
     "previous": "Sigarra 1",
-    "next": "Sigatha",
+    "next": "Σίγαθα",
     "chapters": [
       {
         "start": 2275,
@@ -17836,7 +17843,7 @@
     ]
   },
   {
-    "lemma": "Sigatha",
+    "lemma": "Σίγαθα",
     "previous": "Sigarra 2",
     "next": "Sige",
     "chapters": [
@@ -17849,7 +17856,7 @@
   },
   {
     "lemma": "Sige",
-    "previous": "Sigatha",
+    "previous": "Σίγαθα",
     "next": "Sigeias",
     "chapters": [
       {
@@ -18087,7 +18094,7 @@
   {
     "lemma": "Sigliniacus",
     "previous": "Siglae",
-    "next": "Siglos",
+    "next": "Σίγλος",
     "redirect": true,
     "chapters": [
       {
@@ -18097,7 +18104,7 @@
     ]
   },
   {
-    "lemma": "Siglos",
+    "lemma": "Σίγλος",
     "previous": "Sigliniacus",
     "next": "Sigma",
     "chapters": [
@@ -18110,7 +18117,7 @@
   },
   {
     "lemma": "Sigma",
-    "previous": "Siglos",
+    "previous": "Σίγλος",
     "next": "Sigman",
     "chapters": [
       {

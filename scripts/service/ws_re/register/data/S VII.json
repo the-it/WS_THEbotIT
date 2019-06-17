@@ -480,7 +480,12 @@
   },
   {
     "lemma": "Cocceius 3",
-    "previous": "Clementius 1a"
+    "previous": "Clementius 1a",
+    "next": "Cocceius 12"
+  },
+  {
+    "lemma": "Cocceius 12",
+    "previous": "Cocceius 3"
   },
   {
     "lemma": "Χειροτέχνιον",
@@ -507,11 +512,15 @@
   },
   {
     "lemma": "Claudius 207",
-    "previous": "χρηματισμός",
-    "next": null
+    "previous": "χρηματισμός"
+  },
+  {
+    "lemma": "Cocceius 3",
+    "next": "Cocceius 12"
   },
   {
     "lemma": "Cocceius 12",
+    "previous": "Cocceius 3",
     "next": "Codicarii 2"
   },
   {
