@@ -193,7 +193,7 @@
     ]
   },
   {
-    "lemma": "Campodonum",
+    "lemma": "Campodunum",
     "previous": "Campius",
     "next": "Campona",
     "redirect": true,
@@ -1223,8 +1223,20 @@
     ]
   },
   {
-    "lemma": "Canimadium",
+    "lemma": "Caninefates",
     "previous": "Canidius 3",
+    "next": "Canimadium",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 1476,
+        "end": 1476
+      }
+    ]
+  },
+  {
+    "lemma": "Canimadium",
+    "previous": "Caninefates",
     "next": "Canini campi",
     "chapters": [
       {
@@ -1235,20 +1247,8 @@
     ]
   },
   {
-    "lemma": "Caninefates",
-    "previous": "Canimadium",
-    "next": "Canini campi",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 1476,
-        "end": 1476
-      }
-    ]
-  },
-  {
     "lemma": "Canini campi",
-    "previous": "Caninefates",
+    "previous": "Canimadium",
     "next": "Caninius",
     "redirect": true,
     "chapters": [
@@ -4461,9 +4461,9 @@
     ]
   },
   {
-    "lemma": "Caranitis",
+    "lemma": "Caranium",
     "previous": "Caralitanus sinus",
-    "next": "Caranium",
+    "next": "Caranitis",
     "chapters": [
       {
         "start": 1569,
@@ -4472,8 +4472,8 @@
     ]
   },
   {
-    "lemma": "Caranium",
-    "previous": "Caranitis",
+    "lemma": "Caranitis",
+    "previous": "Caranium",
     "next": "Carantomagus",
     "chapters": [
       {
@@ -4918,7 +4918,7 @@
   {
     "lemma": "Carcoë",
     "previous": "Carcinus",
-    "next": "Carcuvium",
+    "next": "Carcome",
     "chapters": [
       {
         "start": 1586,
@@ -5194,18 +5194,6 @@
     ]
   },
   {
-    "lemma": "Cari..beflacae",
-    "previous": "Cariati",
-    "next": "Carietes",
-    "chapters": [
-      {
-        "start": 1590,
-        "end": 1590,
-        "author": "Ihm"
-      }
-    ]
-  },
-  {
     "lemma": "Cariacus",
     "previous": "Carfulenus",
     "next": "Carianense",
@@ -5232,7 +5220,7 @@
   {
     "lemma": "Cariati",
     "previous": "Carianense",
-    "next": "Carietes",
+    "next": "Cari..beflacae",
     "chapters": [
       {
         "start": 1590,
@@ -5241,8 +5229,20 @@
     ]
   },
   {
+    "lemma": "Cari..beflacae",
+    "previous": "Cariati",
+    "next": "Carietes",
+    "chapters": [
+      {
+        "start": 1590,
+        "end": 1590,
+        "author": "Ihm"
+      }
+    ]
+  },
+  {
     "lemma": "Carietes",
-    "previous": "Cari .. beflacae",
+    "previous": "Cari..beflacae",
     "next": "Carietto",
     "chapters": [
       {
@@ -6791,7 +6791,7 @@
   },
   {
     "lemma": "Carthago nova",
-    "previous": "Caelus",
+    "previous": "Carthago",
     "next": "Carthago vetus",
     "chapters": [
       {
@@ -8295,7 +8295,7 @@
   {
     "lemma": "Cassivelaunus",
     "previous": "Cassis 2",
-    "next": "Cassius 1",
+    "next": "Cassius",
     "wp_link": "w:de:Cassivelaunus",
     "chapters": [
       {
@@ -8319,7 +8319,7 @@
   },
   {
     "lemma": "Cassius 1",
-    "previous": "Cassivelaunus",
+    "previous": "Cassius",
     "next": "Cassius 2",
     "sort_key": "Cassius 01",
     "chapters": [
@@ -9913,7 +9913,7 @@
   {
     "lemma": "Castra",
     "previous": "ad Castoris",
-    "next": "Castra, Castrum 1",
+    "next": "Castra, Castrum",
     "chapters": [
       {
         "start": 1762,
@@ -9936,7 +9936,7 @@
   },
   {
     "lemma": "Castra, Castrum 1",
-    "previous": "Castra",
+    "previous": "Castra, Castrum",
     "next": "Castra, Castrum 2",
     "sort_key": "Castra, Castrum 01",
     "chapters": [
@@ -12928,7 +12928,7 @@
   },
   {
     "lemma": "Cavea",
-    "previous": "Cavaturini",
+    "previous": "Caudium",
     "next": "Cavellio",
     "chapters": [
       {
@@ -13606,7 +13606,7 @@
   {
     "lemma": "Cehere",
     "previous": "Cegritice",
-    "next": "Ceionius 1",
+    "next": "Ceionius",
     "chapters": [
       {
         "start": 1828,

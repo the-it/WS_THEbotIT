@@ -5481,7 +5481,7 @@
   },
   {
     "lemma": "Baton 1",
-    "previous": "Batnai",
+    "previous": "Batnai 1",
     "next": "Baton 2",
     "wp_link": "w:de:Baton (Mythologie)",
     "chapters": [
@@ -8449,7 +8449,7 @@
   {
     "lemma": "Bellerophon",
     "previous": "Belleridus",
-    "next": "Βελλεροφόντειος δῆμος",
+    "next": "Belleros",
     "wp_link": "w:de:Bellerophon",
     "chapters": [
       {
@@ -16294,7 +16294,7 @@
   {
     "lemma": "Biris",
     "previous": "Birila",
-    "next": "Birium",
+    "next": "Birithos",
     "chapters": [
       {
         "start": 490,
@@ -19595,7 +19595,7 @@
   {
     "lemma": "Bodone",
     "previous": "Bodonaios",
-    "next": "Bodorecas",
+    "next": "Bodonias",
     "chapters": [
       {
         "start": 593,
@@ -30439,7 +30439,7 @@
     ]
   },
   {
-    "lemma": "Bouglosson",
+    "lemma": "Βούγλωσσον",
     "previous": "Bugius",
     "next": "Buguntes",
     "chapters": [
@@ -30452,7 +30452,7 @@
   },
   {
     "lemma": "Buguntes",
-    "previous": "Bouglosson",
+    "previous": "Βούγλωσσον",
     "next": "Buiza",
     "chapters": [
       {
@@ -31625,19 +31625,6 @@
     ]
   },
   {
-    "lemma": "Bounoi",
-    "previous": "Bunobora",
-    "next": "Bunomeia",
-    "sort_key": "Bunoi",
-    "chapters": [
-      {
-        "start": 1053,
-        "end": 1053,
-        "author": "Oberhummer"
-      }
-    ]
-  },
-  {
     "lemma": "Bunartis",
     "previous": "Bunaia",
     "next": "Buneima",
@@ -31747,7 +31734,7 @@
   {
     "lemma": "Bunobora",
     "previous": "Bunnos",
-    "next": "Bunoi",
+    "next": "Bounoi",
     "chapters": [
       {
         "start": 1053,
@@ -31757,8 +31744,21 @@
     ]
   },
   {
+    "lemma": "Bounoi",
+    "previous": "Bunobora",
+    "next": "Bunomeia",
+    "sort_key": "Bunoi",
+    "chapters": [
+      {
+        "start": 1053,
+        "end": 1053,
+        "author": "Oberhummer"
+      }
+    ]
+  },
+  {
     "lemma": "Bunomeia",
-    "previous": "Bunoi",
+    "previous": "Bounoi",
     "next": "Bunomos",
     "wp_link": "w:de:Pella (Pella)",
     "chapters": [
@@ -33013,7 +33013,7 @@
   {
     "lemma": "Buselos",
     "previous": "Busbatos",
-    "next": "Busentus",
+    "next": "Businca",
     "chapters": [
       {
         "start": 1073,
@@ -33537,18 +33537,6 @@
   {
     "lemma": "Butes 11",
     "previous": "Butes 10",
-    "next": "Buthericus",
-    "chapters": [
-      {
-        "start": 1083,
-        "end": 1083,
-        "author": "Wernicke"
-      }
-    ]
-  },
-  {
-    "lemma": "Butes II",
-    "previous": "Butes 11",
     "next": "Buthericus",
     "chapters": [
       {
@@ -38049,7 +38037,7 @@
   },
   {
     "lemma": "Caelemontana porta",
-    "previous": "Caelatura",
+    "previous": "Caelanus pagus",
     "next": "Caelemontanus campus",
     "wp_link": "w:de:Dolabella-Bogen",
     "chapters": [
@@ -42481,7 +42469,7 @@
   {
     "lemma": "Calliopius",
     "previous": "Callinipaza",
-    "next": "Callipianus",
+    "next": "Callipolis",
     "chapters": [
       {
         "start": 1361,
@@ -42491,19 +42479,8 @@
     ]
   },
   {
-    "lemma": "Callipianus",
-    "previous": "Calliopius",
-    "next": "Callipolis",
-    "chapters": [
-      {
-        "start": 1362,
-        "end": 1362
-      }
-    ]
-  },
-  {
     "lemma": "Callipolis",
-    "previous": "Callipianus",
+    "previous": "Calliopius",
     "next": "Callipianus",
     "chapters": [
       {
@@ -42514,8 +42491,19 @@
     ]
   },
   {
-    "lemma": "Callipus",
+    "lemma": "Callipianus",
     "previous": "Callipolis",
+    "next": "Callipus",
+    "chapters": [
+      {
+        "start": 1362,
+        "end": 1362
+      }
+    ]
+  },
+  {
+    "lemma": "Callipus",
+    "previous": "Callipianus",
     "next": "Callode",
     "chapters": [
       {
@@ -45685,7 +45673,7 @@
   },
   {
     "lemma": "Camilia",
-    "previous": "Cameza",
+    "previous": "Camicetense",
     "next": "Camilius",
     "chapters": [
       {
