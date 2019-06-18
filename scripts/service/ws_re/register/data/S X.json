@@ -2528,7 +2528,12 @@
     "previous": "Claudius 242a"
   },
   {
+    "lemma": "Collegium",
+    "next": "Constantiniani"
+  },
+  {
     "lemma": "Constantiniani",
+    "previous": "Collegium",
     "next": "Cornelius 274a",
     "chapters": [
       {
@@ -2642,7 +2647,8 @@
   {
     "lemma": "Damon 2",
     "previous": "Damatros",
-    "next": "Damon 2a"
+    "next": "Damon 2a",
+    "sort_key": "Damon 02"
   },
   {
     "lemma": "Damon 2a",
@@ -2672,10 +2678,12 @@
   },
   {
     "lemma": "Damon 11",
-    "previous": "Damon 3a"
+    "previous": "Damon 3a",
+    "next": "Damotimos 1"
   },
   {
     "lemma": "Damotimos 1",
+    "previous": "Damon 11",
     "next": "Dativa"
   },
   {
@@ -2705,7 +2713,12 @@
     ]
   },
   {
+    "lemma": "Demeas 1",
+    "next": "Demetrios 32d"
+  },
+  {
     "lemma": "Demetrios 32d",
+    "previous": "Demeas 1",
     "next": "Demetrios 32e"
   },
   {

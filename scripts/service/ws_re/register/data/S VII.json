@@ -665,10 +665,23 @@
   },
   {
     "lemma": "Δεῖγμα",
-    "previous": "Dasumius 1a"
+    "previous": "Dasumius 1a",
+    "next": "Δειγματοάρτης"
+  },
+  {
+    "lemma": "Δειγματοάρτης",
+    "previous": "Δεῖγμα",
+    "next": "Δειγματοκαταγωγός"
+  },
+  {
+    "lemma": "Δειγματοκαταγωγός",
+    "previous": "Δειγματοάρτης",
+    "next": "Dekane"
   },
   {
     "lemma": "Dekane",
+    "previous": "Δειγματοκαταγωγός",
+    "next": null,
     "wp_link": "w:de:Dekan (Astrologie)",
     "chapters": [
       {
