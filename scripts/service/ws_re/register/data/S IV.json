@@ -669,7 +669,8 @@
   },
   {
     "lemma": "Aphneïs",
-    "previous": "Aphamios 3"
+    "previous": "Aphamios 3",
+    "next": null
   },
   {
     "lemma": "Aphobetos 2",
@@ -1887,7 +1888,7 @@
   {
     "lemma": "Daulios",
     "previous": "Damon 15b",
-    "next": "Deigmatoartes",
+    "next": "Δειγματοάρτης",
     "chapters": [
       {
         "start": 219,
@@ -1897,9 +1898,10 @@
     ]
   },
   {
-    "lemma": "Deigmatoartes",
+    "lemma": "Δειγματοάρτης",
     "previous": "Daulios",
     "next": "Δειγματοκαταγωγός",
+    "sort_key": "Deigmatoartes",
     "chapters": [
       {
         "start": 219,
@@ -1910,8 +1912,9 @@
   },
   {
     "lemma": "Δειγματοκαταγωγός",
-    "previous": "Deigmatoartes",
+    "previous": "Δειγματοάρτης",
     "next": "Deinokrates 5a",
+    "sort_key": "Deigmatokatagogos",
     "chapters": [
       {
         "start": 219,
@@ -3707,7 +3710,6 @@
   {
     "lemma": "Hipparches b",
     "previous": "Hipparches a",
-    "next": "Hippeios",
     "chapters": [
       {
         "start": 746,
@@ -3717,9 +3719,14 @@
     ]
   },
   {
-    "lemma": "Hippeios",
-    "previous": "Hipparches b",
-    "next": "Hippias 9a",
+    "lemma": "Ἱππάρχης",
+    "next": "Ἱππεῖος"
+  },
+  {
+    "lemma": "Ἱππεῖος",
+    "previous": "Ἱππάρχης",
+    "next": "Hippias 4",
+    "sort_key": "Hippeios",
     "chapters": [
       {
         "start": 746,
@@ -3729,9 +3736,12 @@
     ]
   },
   {
+    "lemma": "Hippias 4",
+    "previous": "Ἱππεῖος"
+  },
+  {
     "lemma": "Hippias 9a",
-    "previous": "Hippeios",
-    "next": "Hippikos 2",
+    "next": "Ἱππικός",
     "chapters": [
       {
         "start": 747,
@@ -3741,20 +3751,14 @@
     ]
   },
   {
-    "lemma": "Hippikos 2",
+    "lemma": "Ἱππικός",
     "previous": "Hippias 9a",
     "next": "Hippodamas 1a",
-    "chapters": [
-      {
-        "start": 747,
-        "end": 747,
-        "author": "Bilabel"
-      }
-    ]
+    "sort_key": "Hippikos"
   },
   {
     "lemma": "Hippodamas 1a",
-    "previous": "Hippikos 2",
+    "previous": "Ἱππικός",
     "next": "Hippokles 1a",
     "chapters": [
       {
@@ -3879,6 +3883,7 @@
     "lemma": "Hyäne",
     "previous": "Ὁρμοφυλακία",
     "next": "Hydarnes 1",
+    "sort_key": "Hyaene",
     "wp_link": "w:de:Hyänen",
     "chapters": [
       {
@@ -3983,8 +3988,12 @@
     "previous": "Ὑδροφύλαξ"
   },
   {
+    "lemma": "Hydarnes 3",
+    "next": "Hylas 4a"
+  },
+  {
     "lemma": "Hylas 4a",
-    "previous": null,
+    "previous": "Hydarnes 3",
     "next": "Hyle 3",
     "chapters": [
       {

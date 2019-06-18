@@ -1836,7 +1836,7 @@
   {
     "lemma": "Κύρτος 1",
     "previous": "Kyrtones",
-    "next": "Kyrtos 2",
+    "next": "Κύρτος 2",
     "redirect": true,
     "chapters": [
       {
@@ -1846,9 +1846,9 @@
     ]
   },
   {
-    "lemma": "Kyrtos 2",
+    "lemma": "Κύρτος 2",
     "previous": "Κύρτος 1",
-    "next": "Kyru Pedion",
+    "next": "Κύρου Πεδίον",
     "chapters": [
       {
         "start": 206,
@@ -1858,20 +1858,14 @@
     ]
   },
   {
-    "lemma": "Kyru Pedion",
-    "previous": "Kyrtos 2",
+    "lemma": "Κύρου Πεδίον",
+    "previous": "Κύρτος 2",
     "next": "Κῦς",
-    "chapters": [
-      {
-        "start": 206,
-        "end": 206,
-        "author": "Bürchner"
-      }
-    ]
+    "sort_key": "Kyrupedion"
   },
   {
     "lemma": "Κῦς",
-    "previous": "Kyru Pedion",
+    "previous": "Κύρου Πεδίον",
     "next": "Κύσα",
     "sort_key": "Kys",
     "chapters": [
@@ -18972,7 +18966,7 @@
     "lemma": "Leder",
     "previous": "Leda",
     "next": "Lederata",
-    "redirect": true,
+    "redirect": "Coriarius",
     "chapters": [
       {
         "start": 1125,

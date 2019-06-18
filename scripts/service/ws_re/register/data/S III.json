@@ -951,7 +951,6 @@
   {
     "lemma": "Agriadas",
     "previous": "Agreus, Agreutes 1",
-    "next": "Agrianome 2",
     "chapters": [
       {
         "start": 61,
@@ -961,8 +960,12 @@
     ]
   },
   {
+    "lemma": "Agreus, Agreutes 1",
+    "next": "Agrianome 2"
+  },
+  {
     "lemma": "Agrianome 2",
-    "previous": "Agriadas",
+    "previous": "Agreus, Agreutes 1",
     "next": "Agroitas 2",
     "chapters": [
       {
@@ -4037,6 +4040,7 @@
     "lemma": "Archias 61",
     "previous": "Archias 60",
     "next": "Archias 62",
+    "sort_key": "Archias 061",
     "chapters": [
       {
         "start": 141,
@@ -4049,6 +4053,7 @@
     "lemma": "Archias 62",
     "previous": "Archias 61",
     "next": "Archias 63",
+    "sort_key": "Archias 062",
     "chapters": [
       {
         "start": 141,
@@ -4113,6 +4118,7 @@
     "lemma": "Archias 67",
     "previous": "Archias 66",
     "next": "Archias 68",
+    "sort_key": "Archias 067",
     "chapters": [
       {
         "start": 142,
@@ -4125,6 +4131,7 @@
     "lemma": "Archias 68",
     "previous": "Archias 67",
     "next": "Archias 69",
+    "sort_key": "Archias 068",
     "chapters": [
       {
         "start": 142,
@@ -4163,6 +4170,7 @@
     "lemma": "Archias 71",
     "previous": "Archias 70",
     "next": "Archias 72",
+    "sort_key": "Archias 071",
     "chapters": [
       {
         "start": 142,
@@ -4175,6 +4183,12 @@
     "lemma": "Archias 72",
     "previous": "Archias 71",
     "next": "Archias 73",
+    "sort_key": "Archias 072"
+  },
+  {
+    "lemma": "Archias 73",
+    "previous": "Archias 72",
+    "next": "Archias 74",
     "sort_key": "Archias 073",
     "chapters": [
       {
@@ -4185,8 +4199,11 @@
     ]
   },
   {
+    "lemma": "Archias 74",
+    "previous": "Archias 73"
+  },
+  {
     "lemma": "Archias 73",
-    "previous": "Archias 72",
     "next": "Archias 74",
     "sort_key": "Archias 073",
     "chapters": [
@@ -4240,6 +4257,7 @@
     "lemma": "Archias 77",
     "previous": "Archias 76",
     "next": "Archias 78",
+    "sort_key": "Archias 077",
     "chapters": [
       {
         "start": 142,
@@ -4252,6 +4270,7 @@
     "lemma": "Archias 78",
     "previous": "Archias 77",
     "next": "Archias 79",
+    "sort_key": "Archias 078",
     "chapters": [
       {
         "start": 142,
@@ -4433,6 +4452,7 @@
     "lemma": "Archias 92",
     "previous": "Archias 91",
     "next": "Archias 93",
+    "sort_key": "Archias 092",
     "chapters": [
       {
         "start": 143,
@@ -4458,6 +4478,7 @@
     "lemma": "Archias 94",
     "previous": "Archias 93",
     "next": "Archias 95",
+    "sort_key": "Archias 094",
     "chapters": [
       {
         "start": 143,
@@ -4678,7 +4699,7 @@
   {
     "lemma": "Archias 112",
     "previous": "Archias 111",
-    "next": "Ἀρχιμάχιμος",
+    "next": "Archikrates 3a",
     "chapters": [
       {
         "start": 144,
@@ -4688,9 +4709,15 @@
     ]
   },
   {
-    "lemma": "Ἀρχιμάχιμος",
+    "lemma": "Archikrates 3a",
     "previous": "Archias 112",
+    "next": "Ἀρχιμάχιμος"
+  },
+  {
+    "lemma": "Ἀρχιμάχιμος",
+    "previous": "Archikrates 3a",
     "next": "Archimedes 3",
+    "sort_key": "Archimachimos",
     "chapters": [
       {
         "start": 144,
@@ -5422,11 +5449,12 @@
   },
   {
     "lemma": "Artemis 2",
-    "previous": "Artemidoros 37"
+    "previous": "Artemidoros 37",
+    "next": "Artemisioi"
   },
   {
     "lemma": "Artemisioi",
-    "previous": null,
+    "previous": "Artemis 2",
     "next": "Artemius 2",
     "chapters": [
       {
@@ -5856,7 +5884,7 @@
   {
     "lemma": "Athanadas 6",
     "previous": "Athanadas 5",
-    "next": "Athanadas 7",
+    "next": null,
     "chapters": [
       {
         "start": 175,
@@ -5866,8 +5894,12 @@
     ]
   },
   {
+    "lemma": "Athanadas",
+    "next": "Athanadas 7"
+  },
+  {
     "lemma": "Athanadas 7",
-    "previous": "Athanadas 6",
+    "previous": "Athanadas",
     "next": "Athanaios",
     "chapters": [
       {
@@ -5910,6 +5942,7 @@
     "lemma": "Athenades 1",
     "previous": "Athenades",
     "next": "Athenades 2",
+    "sort_key": "Athenades 01",
     "chapters": [
       {
         "start": 176,
@@ -5922,6 +5955,7 @@
     "lemma": "Athenades 2",
     "previous": "Athenades 1",
     "next": "Athenades 3",
+    "sort_key": "Athenades 02",
     "chapters": [
       {
         "start": 176,
@@ -5934,6 +5968,7 @@
     "lemma": "Athenades 3",
     "previous": "Athenades 2",
     "next": "Athenades 4",
+    "sort_key": "Athenades 03",
     "chapters": [
       {
         "start": 176,
@@ -5946,6 +5981,7 @@
     "lemma": "Athenades 4",
     "previous": "Athenades 3",
     "next": "Athenades 5",
+    "sort_key": "Athenades 04",
     "chapters": [
       {
         "start": 176,
@@ -5958,6 +5994,7 @@
     "lemma": "Athenades 5",
     "previous": "Athenades 4",
     "next": "Athenades 6",
+    "sort_key": "Athenades 05",
     "chapters": [
       {
         "start": 176,
@@ -5970,6 +6007,7 @@
     "lemma": "Athenades 6",
     "previous": "Athenades 5",
     "next": "Athenades 7",
+    "sort_key": "Athenades 06",
     "chapters": [
       {
         "start": 176,
@@ -5982,6 +6020,7 @@
     "lemma": "Athenades 7",
     "previous": "Athenades 6",
     "next": "Athenades 8",
+    "sort_key": "Athenades 07",
     "chapters": [
       {
         "start": 176,
@@ -5994,6 +6033,7 @@
     "lemma": "Athenades 8",
     "previous": "Athenades 7",
     "next": "Athenades 9",
+    "sort_key": "Athenades 08",
     "chapters": [
       {
         "start": 176,
@@ -6006,6 +6046,7 @@
     "lemma": "Athenades 9",
     "previous": "Athenades 8",
     "next": "Athenades 10",
+    "sort_key": "Athenades 09",
     "chapters": [
       {
         "start": 176,
@@ -7141,7 +7182,6 @@
   },
   {
     "lemma": "Bakchon",
-    "next": "Bakchon 1",
     "sort_key": "Bakchon 0",
     "chapters": [
       {
@@ -7152,9 +7192,14 @@
     ]
   },
   {
+    "lemma": "Bakchon",
+    "next": "Bakchon 1"
+  },
+  {
     "lemma": "Bakchon 1",
     "previous": "Bakchon",
     "next": "Bakchon 2",
+    "sort_key": "Bakchon 01",
     "chapters": [
       {
         "start": 193,
@@ -7167,6 +7212,7 @@
     "lemma": "Bakchon 2",
     "previous": "Bakchon 1",
     "next": "Bakchon 3",
+    "sort_key": "Bakchon 02",
     "chapters": [
       {
         "start": 193,
@@ -7179,6 +7225,7 @@
     "lemma": "Bakchon 3",
     "previous": "Bakchon 2",
     "next": "Bakchon 4",
+    "sort_key": "Bakchon 03",
     "chapters": [
       {
         "start": 193,
@@ -7191,6 +7238,7 @@
     "lemma": "Bakchon 4",
     "previous": "Bakchon 3",
     "next": "Bakchon 5",
+    "sort_key": "Bakchon 04",
     "chapters": [
       {
         "start": 193,
@@ -7203,6 +7251,7 @@
     "lemma": "Bakchon 5",
     "previous": "Bakchon 4",
     "next": "Bakchon 6",
+    "sort_key": "Bakchon 05",
     "chapters": [
       {
         "start": 193,
@@ -7215,6 +7264,7 @@
     "lemma": "Bakchon 6",
     "previous": "Bakchon 5",
     "next": "Bakchon 7",
+    "sort_key": "Bakchon 06",
     "chapters": [
       {
         "start": 193,
@@ -7227,6 +7277,7 @@
     "lemma": "Bakchon 7",
     "previous": "Bakchon 6",
     "next": "Bakchon 8",
+    "sort_key": "Bakchon 07",
     "chapters": [
       {
         "start": 193,
@@ -7239,6 +7290,7 @@
     "lemma": "Bakchon 8",
     "previous": "Bakchon 7",
     "next": "Bakchon 9",
+    "sort_key": "Bakchon 08",
     "chapters": [
       {
         "start": 193,
@@ -7251,6 +7303,7 @@
     "lemma": "Bakchon 9",
     "previous": "Bakchon 8",
     "next": "Bakchon 10",
+    "sort_key": "Bakchon 09",
     "chapters": [
       {
         "start": 193,
@@ -8740,6 +8793,8 @@
   },
   {
     "lemma": "Brindisi",
+    "previous": null,
+    "next": "Brisiacus, -um",
     "chapters": [
       {
         "start": 217,
@@ -8749,7 +8804,9 @@
   },
   {
     "lemma": "Brisiacus, -um",
-    "next": "Brit..."
+    "previous": "Brindisi",
+    "next": "Brit...",
+    "redirect": "Breisach"
   },
   {
     "lemma": "Brit...",
@@ -11884,7 +11941,12 @@
     ]
   },
   {
+    "lemma": "Crummus",
+    "next": "Crutisiones"
+  },
+  {
     "lemma": "Crutisiones",
+    "previous": "Crummus",
     "next": "Cunissa"
   },
   {
@@ -12306,7 +12368,7 @@
   {
     "lemma": "Damon 2c",
     "previous": "Damon 1a",
-    "next": "Damonax",
+    "next": "Damon 17",
     "chapters": [
       {
         "start": 324,
@@ -12316,8 +12378,13 @@
     ]
   },
   {
-    "lemma": "Damonax",
+    "lemma": "Damon 17",
     "previous": "Damon 2c",
+    "next": "Damonax"
+  },
+  {
+    "lemma": "Damonax",
+    "previous": "Damon 17",
     "next": "Damonikos 1",
     "chapters": [
       {
@@ -12414,7 +12481,7 @@
   {
     "lemma": "Danomarus",
     "previous": "Damoxenos 1c",
-    "next": "Dario",
+    "next": "Daphnus 4",
     "chapters": [
       {
         "start": 326,
@@ -12424,8 +12491,13 @@
     ]
   },
   {
-    "lemma": "Dario",
+    "lemma": "Daphnus 4",
     "previous": "Danomarus",
+    "next": "Dario"
+  },
+  {
+    "lemma": "Dario",
+    "previous": "Daphnus 4",
     "next": "Darra",
     "chapters": [
       {

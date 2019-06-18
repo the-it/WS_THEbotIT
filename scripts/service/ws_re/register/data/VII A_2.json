@@ -671,6 +671,7 @@
     "lemma": "Τουντό-βριγα",
     "previous": "Tuntle",
     "next": "Tuola",
+    "sort_key": "Tuntobriga",
     "chapters": [
       {
         "start": 1361,
@@ -3632,7 +3633,7 @@
   {
     "lemma": "Tutonia",
     "previous": "Tutmosis, Thutmosis",
-    "next": "Tutor, Iuppiter",
+    "next": "Tutor",
     "chapters": [
       {
         "start": 1626,
@@ -3641,20 +3642,13 @@
     ]
   },
   {
-    "lemma": "Tutor, Iuppiter",
+    "lemma": "Tutor",
     "previous": "Tutonia",
-    "next": "Tutorius",
-    "chapters": [
-      {
-        "start": 1626,
-        "end": 1626,
-        "author": "Marbach"
-      }
-    ]
+    "next": "Tutorius"
   },
   {
     "lemma": "Tutorius",
-    "previous": "Tutor, Iuppiter",
+    "previous": "Tutor",
     "next": "Tutugi",
     "chapters": [
       {
@@ -3680,7 +3674,7 @@
     "lemma": "Tutula",
     "previous": "Tutugi",
     "next": "Tutulus",
-    "redirect": true,
+    "redirect": "Philotis",
     "chapters": [
       {
         "start": 1627,
@@ -4501,7 +4495,7 @@
   {
     "lemma": "Tyndaridai 2",
     "previous": "Tyndaridai 1",
-    "next": "Tyndarioi skopeloi",
+    "next": "Τυνδάριοι σκόπελοι",
     "chapters": [
       {
         "start": 1775,
@@ -4510,7 +4504,7 @@
     ]
   },
   {
-    "lemma": "Tyndarioi skopeloi",
+    "lemma": "Τυνδάριοι σκόπελοι",
     "previous": "Tyndaridai 2",
     "next": "Tyndarion",
     "chapters": [
@@ -4523,7 +4517,7 @@
   },
   {
     "lemma": "Tyndarion",
-    "previous": "Tyndarioi skopeloi",
+    "previous": "Τυνδάριοι σκόπελοι",
     "next": "Tyndaris 1",
     "chapters": [
       {
@@ -5907,7 +5901,7 @@
   {
     "lemma": "Tyrrhus",
     "previous": "Tyrrhenum mare",
-    "next": "Tyrrias",
+    "next": "Tyrria(s)",
     "chapters": [
       {
         "start": 1940,
@@ -5917,7 +5911,7 @@
     ]
   },
   {
-    "lemma": "Tyrrias",
+    "lemma": "Tyrria(s)",
     "previous": "Tyrrhus",
     "next": "Tyrritor",
     "chapters": [
@@ -5930,7 +5924,7 @@
   },
   {
     "lemma": "Tyrritor",
-    "previous": "Tyrrias",
+    "previous": "Tyrria(s)",
     "next": "Tyrsenos",
     "chapters": [
       {
@@ -11922,8 +11916,8 @@
   },
   {
     "lemma": "Tycae",
-    "previous": "Tyberis(s)eis",
-    "next": "Tyindeis",
+    "previous": "Τυβιάκαι",
+    "next": "Tychaion",
     "chapters": [
       {
         "start": 2557,
