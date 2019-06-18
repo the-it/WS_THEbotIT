@@ -15882,7 +15882,7 @@
   {
     "lemma": "Kokkygion",
     "previous": "Kokkos",
-    "next": "Kokkynos",
+    "next": "Kokondrios",
     "chapters": [
       {
         "start": 1063,
@@ -15892,21 +15892,9 @@
     ]
   },
   {
-    "lemma": "Kokkynos",
-    "previous": "Kokkygion",
-    "next": "Kokondrios",
-    "chapters": [
-      {
-        "start": 1064,
-        "end": 1064,
-        "author": "Ziegler"
-      }
-    ]
-  },
-  {
     "lemma": "Kokondrios",
-    "previous": "Kokkynos",
-    "next": "Koktemalikai",
+    "previous": "Kokkygion",
+    "next": "Kokkynos",
     "chapters": [
       {
         "start": 1064,
@@ -15916,8 +15904,20 @@
     ]
   },
   {
-    "lemma": "Koktemalikai",
+    "lemma": "Kokkynos",
     "previous": "Kokondrios",
+    "next": "Koktemalikai",
+    "chapters": [
+      {
+        "start": 1064,
+        "end": 1064,
+        "author": "Ziegler"
+      }
+    ]
+  },
+  {
+    "lemma": "Koktemalikai",
+    "previous": "Kokkynos",
     "next": "Kokusos",
     "chapters": [
       {

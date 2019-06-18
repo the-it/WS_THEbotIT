@@ -4261,6 +4261,18 @@
     ]
   },
   {
+    "lemma": "Pater senatus",
+    "previous": "Pater sacrorum",
+    "next": "Patera 1",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 2158,
+        "end": 2158
+      }
+    ]
+  },
+  {
     "lemma": "Patera 1",
     "previous": "Pater senatus",
     "next": "Patera 2",
@@ -4275,7 +4287,7 @@
   {
     "lemma": "Patera 2",
     "previous": "Patera 1",
-    "next": "Pater senatus",
+    "next": "Paterculianus",
     "chapters": [
       {
         "start": 2158,
@@ -4285,20 +4297,8 @@
     ]
   },
   {
-    "lemma": "Pater senatus",
-    "previous": "Patera 2",
-    "next": "Paterculianus",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 2158,
-        "end": 2158
-      }
-    ]
-  },
-  {
     "lemma": "Paterculianus",
-    "previous": "Pater senatus",
+    "previous": "Patera 2",
     "next": "Paterculus",
     "chapters": [
       {
@@ -6533,8 +6533,19 @@
     ]
   },
   {
-    "lemma": "Pautaliotes",
+    "lemma": "Pautalia",
     "previous": "Pausus",
+    "next": "Pautaliotes",
+    "chapters": [
+      {
+        "start": 2429,
+        "end": 2429
+      }
+    ]
+  },
+  {
+    "lemma": "Pautaliotes",
+    "previous": "Pautalia",
     "next": "Pavus",
     "chapters": [
       {

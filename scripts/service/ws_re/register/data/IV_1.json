@@ -17239,6 +17239,7 @@
     "lemma": "Cornelius 300",
     "previous": "Cornelius 299a",
     "next": "Cornelius 301",
+    "redirect": true,
     "chapters": [
       {
         "start": 1422,
@@ -17273,6 +17274,7 @@
     "lemma": "Cornelius 303",
     "previous": "Cornelius 302",
     "next": "Cornelius 304",
+    "redirect": true,
     "chapters": [
       {
         "start": 1424,
@@ -17297,6 +17299,7 @@
     "lemma": "Cornelius 305",
     "previous": "Cornelius 304",
     "next": "Cornelius 306",
+    "redirect": true,
     "chapters": [
       {
         "start": 1424,
@@ -17782,6 +17785,7 @@
     "lemma": "Cornelius 344",
     "previous": "Cornelius 343",
     "next": "Cornelius 345",
+    "redirect": true,
     "chapters": [
       {
         "start": 1491,
@@ -17843,6 +17847,7 @@
     "lemma": "Cornelius 349",
     "previous": "Cornelius 348",
     "next": "Cornelius 350",
+    "redirect": "Cornelius 353",
     "chapters": [
       {
         "start": 1494,
@@ -17940,7 +17945,7 @@
   {
     "lemma": "Cornelius 357",
     "previous": "Cornelius 356",
-    "next": "Cornelius 358",
+    "next": "Cornelius 358ff.",
     "chapters": [
       {
         "start": 1505,
@@ -17950,9 +17955,20 @@
     ]
   },
   {
-    "lemma": "Cornelius 358",
+    "lemma": "Cornelius 358ff.",
     "previous": "Cornelius 357",
-    "next": "Cornelius 358ff.",
+    "next": "Cornelius 358",
+    "chapters": [
+      {
+        "start": 1506,
+        "end": 1506
+      }
+    ]
+  },
+  {
+    "lemma": "Cornelius 358",
+    "previous": "Cornelius 358ff.",
+    "next": "Cornelius 359",
     "chapters": [
       {
         "start": 1506,
@@ -17962,19 +17978,8 @@
     ]
   },
   {
-    "lemma": "Cornelius 358ff.",
-    "previous": "Cornelius 358",
-    "next": "Cornelius 359",
-    "chapters": [
-      {
-        "start": 1506,
-        "end": 1506
-      }
-    ]
-  },
-  {
     "lemma": "Cornelius 359",
-    "previous": "Cornelius 358ff.",
+    "previous": "Cornelius 358",
     "next": "Cornelius 360",
     "chapters": [
       {
@@ -18978,6 +18983,7 @@
     "lemma": "Cornelius 444",
     "previous": "Cornelius 443",
     "next": "Cornelius 445",
+    "redirect": true,
     "chapters": [
       {
         "start": 1600,
@@ -19073,6 +19079,7 @@
     "lemma": "Cornelius 452",
     "previous": "Cornelius 451",
     "next": "Cornelius 453",
+    "redirect": true,
     "chapters": [
       {
         "start": 1601,
@@ -19089,6 +19096,7 @@
     "lemma": "Cornelius 453",
     "previous": "Cornelius 452",
     "next": "Cornelius 454",
+    "redirect": true,
     "chapters": [
       {
         "start": 1601,
@@ -19126,6 +19134,7 @@
     "lemma": "Cornelius 456",
     "previous": "Cornelius 455",
     "next": "Cornelius 457",
+    "redirect": true,
     "chapters": [
       {
         "start": 1601,
@@ -19138,6 +19147,7 @@
     "lemma": "Cornelius 457",
     "previous": "Cornelius 456",
     "next": "Cornelius 458",
+    "redirect": "Aemilius 162",
     "chapters": [
       {
         "start": 1601,
@@ -19198,6 +19208,7 @@
     "lemma": "Cornelius 462",
     "previous": "Cornelius 461",
     "next": "Corneta",
+    "redirect": "Licinius 192",
     "chapters": [
       {
         "start": 1602,

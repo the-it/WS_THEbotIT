@@ -7582,6 +7582,7 @@
   },
   {
     "lemma": "Ἀφροδισιασταί",
+    "previous": null,
     "next": "Aphrodisios 11a"
   },
   {
@@ -12662,10 +12663,16 @@
   {
     "lemma": "Aurelia via",
     "previous": "Aurelianoi",
-    "next": null
+    "next": "Aurelius 24"
+  },
+  {
+    "lemma": "Aurelius 24",
+    "previous": "Aurelia via",
+    "next": "Aurelius 27a"
   },
   {
     "lemma": "Aurelius 27a",
+    "previous": "Aurelius 24",
     "next": "Aurelius 35a",
     "sort_key": "Aurelius 027a",
     "chapters": [
@@ -14220,7 +14227,6 @@
   {
     "lemma": "Batnai 1",
     "previous": "Batis 2",
-    "next": "Batnai 2",
     "chapters": [
       {
         "start": 245,
@@ -14230,8 +14236,12 @@
     ]
   },
   {
+    "lemma": "Batnai",
+    "next": "Batnai 2"
+  },
+  {
     "lemma": "Batnai 2",
-    "previous": "Batnai 1",
+    "previous": "Batnai",
     "next": "Batromios",
     "chapters": [
       {
@@ -16944,6 +16954,7 @@
   },
   {
     "lemma": "Chamyne",
+    "previous": null,
     "next": "Chanaranges"
   },
   {
@@ -18538,7 +18549,7 @@
   {
     "lemma": "Crispus 7b",
     "previous": "Crispus 7a",
-    "next": "Cuavus(?)",
+    "next": "Cuavus",
     "chapters": [
       {
         "start": 332,
@@ -18548,9 +18559,9 @@
     ]
   },
   {
-    "lemma": "Cuavus(?)",
+    "lemma": "Cuavus",
     "previous": "Crispus 7b",
-    "next": "Culleolus a",
+    "next": "Cubi",
     "chapters": [
       {
         "start": 332,
@@ -18558,10 +18569,13 @@
         "author": "Robert"
       }
     ]
+  },
+  {
+    "lemma": "Cubi",
+    "previous": "Cuavus"
   },
   {
     "lemma": "Culleolus a",
-    "previous": "Cuavus(?)",
     "chapters": [
       {
         "start": 332,
@@ -19200,7 +19214,7 @@
   {
     "lemma": "Demeas 3",
     "previous": "Demaratos 3a",
-    "next": "Demetrios 32a",
+    "next": "Demetria 1",
     "chapters": [
       {
         "start": 340,
@@ -19210,8 +19224,18 @@
     ]
   },
   {
-    "lemma": "Demetrios 32a",
+    "lemma": "Demetria 1",
     "previous": "Demeas 3",
+    "next": "Demetrias 1a"
+  },
+  {
+    "lemma": "Demetrias 1a",
+    "previous": "Demetria 1",
+    "next": "Demetrios 32a"
+  },
+  {
+    "lemma": "Demetrios 32a",
+    "previous": "Demetrias 1a",
     "next": "Demetrios 32b",
     "chapters": [
       {
@@ -19248,6 +19272,7 @@
   {
     "lemma": "Demetrios 32d",
     "previous": "Demetrios 32c",
+    "next": "Demetrios 33",
     "chapters": [
       {
         "start": 342,
@@ -19255,6 +19280,10 @@
         "author": "Capps"
       }
     ]
+  },
+  {
+    "lemma": "Demetrios 33",
+    "previous": "Demetrios 32d"
   },
   {
     "lemma": "Demetrios 39",
