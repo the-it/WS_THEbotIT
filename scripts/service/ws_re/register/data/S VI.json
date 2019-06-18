@@ -1243,7 +1243,7 @@
   {
     "lemma": "Cuspius 3",
     "previous": "Curtius 18",
-    "next": "Dardanos",
+    "next": "Dardanos 11",
     "chapters": [
       {
         "start": 25,
@@ -1253,17 +1253,19 @@
     ]
   },
   {
-    "lemma": "Dardanos",
-    "previous": "Cuspius 3"
+    "lemma": "Dardanos 11",
+    "previous": "Cuspius 3",
+    "next": "Dasumius 1a"
   },
   {
     "lemma": "Dasumius 1a",
+    "previous": "Dardanos 11",
     "next": "Delphion 3"
   },
   {
     "lemma": "Delphion 3",
     "previous": "Dasumius 1a",
-    "next": "Dioskoros 7",
+    "next": "Diades 2",
     "chapters": [
       {
         "start": 26,
@@ -1273,8 +1275,11 @@
     ]
   },
   {
+    "lemma": "Diades 2",
+    "previous": "Delphion 3"
+  },
+  {
     "lemma": "Dioskoros 7",
-    "previous": "Delphion 3",
     "next": "Donuca",
     "chapters": [
       {

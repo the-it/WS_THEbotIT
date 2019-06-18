@@ -15361,6 +15361,7 @@
     "lemma": "Koiletai",
     "previous": "Koile Syria",
     "next": "Koilon",
+    "redirect": "Koilaletai",
     "chapters": [
       {
         "start": 1052,
@@ -15384,6 +15385,7 @@
     "lemma": "Koilos",
     "previous": "Koilon",
     "next": "Koilossa",
+    "redirect": "Koile",
     "chapters": [
       {
         "start": 1052,
@@ -15393,8 +15395,9 @@
   },
   {
     "lemma": "Koilossa",
-    "previous": "Koilos",
-    "next": "Koinobomia",
+    "previous": "Koiletai",
+    "next": "Κοινοβωμία",
+    "redirect": "Kelossa",
     "chapters": [
       {
         "start": 1052,
@@ -15403,7 +15406,7 @@
     ]
   },
   {
-    "lemma": "Koinobomia",
+    "lemma": "Κοινοβωμία",
     "previous": "Koilossa",
     "next": "Koinodikasterion",
     "chapters": [
@@ -15416,7 +15419,7 @@
   },
   {
     "lemma": "Koinodikasterion",
-    "previous": "Koinobomia",
+    "previous": "Κοινοβωμία",
     "next": "Koinon 1",
     "chapters": [
       {
@@ -16300,7 +16303,7 @@
   {
     "lemma": "Kolluthos",
     "previous": "Kollektiveigentum",
-    "next": "Kollybistes",
+    "next": "Κολλυβιστής",
     "wp_link": "w:de:Kolluthos",
     "ws_link": "s:de:Kolluthos",
     "chapters": [
@@ -16312,7 +16315,7 @@
     ]
   },
   {
-    "lemma": "Kollybistes",
+    "lemma": "Κολλυβιστής",
     "previous": "Kolluthos",
     "next": "Kollybos",
     "chapters": [
@@ -16325,7 +16328,7 @@
   },
   {
     "lemma": "Kollybos",
-    "previous": "Kollybistes",
+    "previous": "Κολλυβιστής",
     "next": "Kollyrion 1",
     "chapters": [
       {

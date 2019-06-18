@@ -1903,7 +1903,7 @@
   {
     "lemma": "Tintenfische",
     "previous": "Tinos",
-    "next": "tinthu(n)",
+    "next": "tinθu(n)",
     "wp_link": "w:de:Tintenfische",
     "chapters": [
       {
@@ -1914,9 +1914,10 @@
     ]
   },
   {
-    "lemma": "tinthu(n)",
+    "lemma": "tinθu(n)",
     "previous": "Tintenfische",
     "next": "Tintinnabulum",
+    "sort_key": "tinthun",
     "chapters": [
       {
         "start": 1406,
@@ -1927,7 +1928,7 @@
   },
   {
     "lemma": "Tintinnabulum",
-    "previous": "tinthu(n)",
+    "previous": "tinθu(n)",
     "next": "Tinulus",
     "chapters": [
       {
@@ -2155,8 +2156,8 @@
   },
   {
     "lemma": "Tipsos",
-    "previous": "Tiphys 2",
-    "next": "Tiquara",
+    "previous": "Tiphys",
+    "next": "Tiquadra",
     "chapters": [
       {
         "start": 1430,
@@ -2180,7 +2181,7 @@
   {
     "lemma": "Tiracia",
     "previous": "Tiquara",
-    "next": "Tiraios",
+    "next": "Τίραιος",
     "redirect": true,
     "chapters": [
       {
@@ -2190,9 +2191,9 @@
     ]
   },
   {
-    "lemma": "Tiraios",
+    "lemma": "Τίραιος",
     "previous": "Tiracia",
-    "next": "Tirallis",
+    "next": "Τιραλλίς",
     "chapters": [
       {
         "start": 1430,
@@ -2202,9 +2203,10 @@
     ]
   },
   {
-    "lemma": "Tirallis",
-    "previous": "Tiraios",
+    "lemma": "Τιραλλίς",
+    "previous": "Τίραιος",
     "next": "Tirallum",
+    "sort_key": "Tirallis",
     "chapters": [
       {
         "start": 1431,
@@ -2215,7 +2217,7 @@
   },
   {
     "lemma": "Tirallum",
-    "previous": "Tirallis",
+    "previous": "Τιραλλίς",
     "next": "Tiran II.",
     "chapters": [
       {
@@ -2287,7 +2289,7 @@
   {
     "lemma": "Tirida",
     "previous": "Tiribazos",
-    "next": "Tiridates 1",
+    "next": "Tiridates",
     "chapters": [
       {
         "start": 1437,
@@ -2297,8 +2299,13 @@
     ]
   },
   {
-    "lemma": "Tiridates 1",
+    "lemma": "Tiridates",
     "previous": "Tirida",
+    "next": "Tiridates 1"
+  },
+  {
+    "lemma": "Tiridates 1",
+    "previous": "Tiridates",
     "next": "Tiridates 2",
     "sort_key": "Tiridates 01",
     "chapters": [
@@ -2313,6 +2320,7 @@
     "lemma": "Tiridates 2",
     "previous": "Tiridates 1",
     "next": "Tiridates 3",
+    "sort_key": "Tiridates 02",
     "chapters": [
       {
         "start": 1437,
@@ -2338,6 +2346,7 @@
     "lemma": "Tiridates 4",
     "previous": "Tiridates 3",
     "next": "Tiridates 5",
+    "sort_key": "Tiridates 04",
     "wp_link": "w:de:Tiridates II.",
     "chapters": [
       {
@@ -2523,7 +2532,7 @@
   {
     "lemma": "Tiristis",
     "previous": "Tiristasis",
-    "next": "Tirittha",
+    "next": "Τιρίτθα",
     "chapters": [
       {
         "start": 1446,
@@ -2533,9 +2542,10 @@
     ]
   },
   {
-    "lemma": "Tirittha",
+    "lemma": "Τιρίτθα",
     "previous": "Tiristis",
     "next": "Tirium",
+    "sort_key": "Tirittha",
     "chapters": [
       {
         "start": 1447,
@@ -2546,7 +2556,7 @@
   },
   {
     "lemma": "Tirium",
-    "previous": "Tirittha",
+    "previous": "Τιρίτθα",
     "next": "Tiriza",
     "chapters": [
       {
@@ -2793,6 +2803,7 @@
     "lemma": "Τισαπατίγγα",
     "previous": "Tisanusa",
     "next": "Tisarchos",
+    "sort_key": "Tisapatinga",
     "chapters": [
       {
         "start": 1468,
@@ -5426,7 +5437,7 @@
   {
     "lemma": "Tlos 2",
     "previous": "Tlos 1",
-    "next": "Tlua(?)",
+    "next": "Tlua (?)",
     "chapters": [
       {
         "start": 1626,
@@ -5436,7 +5447,7 @@
     ]
   },
   {
-    "lemma": "Tlua(?)",
+    "lemma": "Tlua (?)",
     "previous": "Tlos 2",
     "next": "Tluscv",
     "chapters": [
@@ -5449,7 +5460,7 @@
   },
   {
     "lemma": "Tluscv",
-    "previous": "Tlua(?)",
+    "previous": "Tlua (?)",
     "next": "Tmarion",
     "chapters": [
       {
@@ -5567,7 +5578,7 @@
   {
     "lemma": "Toani",
     "previous": "Toana",
-    "next": "Tob",
+    "next": "Τώβ",
     "chapters": [
       {
         "start": 1628,
@@ -5576,9 +5587,9 @@
     ]
   },
   {
-    "lemma": "Tob",
+    "lemma": "Τώβ",
     "previous": "Toani",
-    "next": "Tobata",
+    "next": "Τόβατα",
     "chapters": [
       {
         "start": 1628,
@@ -5588,9 +5599,10 @@
     ]
   },
   {
-    "lemma": "Tobata",
-    "previous": "Tob",
+    "lemma": "Τόβατα",
+    "previous": "Τώβ",
     "next": "Tobias",
+    "sort_key": "Tobata",
     "chapters": [
       {
         "start": 1629,
@@ -5601,7 +5613,7 @@
   },
   {
     "lemma": "Tobias",
-    "previous": "Tobata",
+    "previous": "Τόβατα",
     "next": "Tobios, Tovios",
     "chapters": [
       {
@@ -5614,7 +5626,7 @@
   {
     "lemma": "Tobios, Tovios",
     "previous": "Tobias",
-    "next": "Tobros",
+    "next": "Τόβρος",
     "chapters": [
       {
         "start": 1632,
@@ -5624,7 +5636,7 @@
     ]
   },
   {
-    "lemma": "Tobros",
+    "lemma": "Τόβρος",
     "previous": "Tobios, Tovios",
     "next": "Tocharoi",
     "chapters": [
@@ -5637,7 +5649,7 @@
   },
   {
     "lemma": "Tocharoi",
-    "previous": "Tobros",
+    "previous": "Τόβρος",
     "next": "Tochoa",
     "chapters": [
       {

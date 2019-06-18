@@ -11456,6 +11456,7 @@
   },
   {
     "lemma": "Cornelius 202",
+    "previous": null,
     "next": "Cornelius 202a"
   },
   {
@@ -12042,7 +12043,8 @@
   },
   {
     "lemma": "Curtius 7",
-    "previous": "Curtianae figlinae"
+    "previous": "Curtianae figlinae",
+    "next": null
   },
   {
     "lemma": "Curtius 26",
@@ -12558,7 +12560,7 @@
   {
     "lemma": "Debre",
     "previous": "Daurises",
-    "next": "Decius 7",
+    "next": "Decempagi",
     "chapters": [
       {
         "start": 327,
@@ -12568,8 +12570,11 @@
     ]
   },
   {
+    "lemma": "Decempagi",
+    "previous": "Debre"
+  },
+  {
     "lemma": "Decius 7",
-    "previous": "Debre",
     "next": "Decmanus",
     "chapters": [
       {
@@ -12581,7 +12586,6 @@
   {
     "lemma": "Decmanus",
     "previous": "Decius 7",
-    "next": "Decminus",
     "chapters": [
       {
         "start": 328,
@@ -12591,8 +12595,17 @@
     ]
   },
   {
+    "lemma": "Decius 7",
+    "next": "Decmanus 1"
+  },
+  {
+    "lemma": "Decmanus 1",
+    "previous": "Decius 7",
+    "next": "Decminus"
+  },
+  {
     "lemma": "Decminus",
-    "previous": "Decmanus",
+    "previous": "Decmanus 1",
     "next": "Decmus",
     "chapters": [
       {
@@ -12668,6 +12681,7 @@
   },
   {
     "lemma": "Deiotarus 4",
+    "previous": null,
     "next": "Deiotaros 5"
   },
   {

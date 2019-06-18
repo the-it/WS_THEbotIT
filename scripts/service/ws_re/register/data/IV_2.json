@@ -3063,6 +3063,7 @@
     "lemma": "Creticus",
     "previous": "Creta",
     "next": "Cretio 1",
+    "redirect": "Caecilius 87",
     "chapters": [
       {
         "start": 1708,
@@ -3172,7 +3173,7 @@
     "lemma": "Crinagoras, Crinas",
     "previous": "Crimen expilatae hereditatis",
     "next": "Crindavinus portus",
-    "redirect": true,
+    "redirect": "Krinagoras, Krinas",
     "chapters": [
       {
         "start": 1718,
@@ -3196,6 +3197,7 @@
     "lemma": "Crinitus",
     "previous": "Crindavinus portus",
     "next": "Crino",
+    "redirect": "Ulpius 33",
     "chapters": [
       {
         "start": 1718,
@@ -13751,7 +13753,7 @@
   {
     "lemma": "Dardanos 9",
     "previous": "Dardanos 8",
-    "next": "Dardanus 10",
+    "next": "Dardanos 10",
     "sort_key": "Dardanos 09",
     "chapters": [
       {
@@ -13762,20 +13764,14 @@
     ]
   },
   {
-    "lemma": "Dardanus 10",
+    "lemma": "Dardanos 10",
     "previous": "Dardanos 9",
     "next": "Dardanos 11",
-    "chapters": [
-      {
-        "start": 2179,
-        "end": 2180,
-        "author": "Seeck"
-      }
-    ]
+    "wp_link": "w:de:Claudius Postumus Dardanus"
   },
   {
     "lemma": "Dardanos 11",
-    "previous": "Dardanus 10",
+    "previous": "Dardanos 10",
     "next": "Dardanos 12",
     "chapters": [
       {
@@ -16022,7 +16018,7 @@
     "lemma": "Deciana 2",
     "previous": "Deciana 1",
     "next": "Decianae thermae",
-    "redirect": true,
+    "redirect": "Neratius",
     "chapters": [
       {
         "start": 2269,
@@ -16070,7 +16066,7 @@
     "lemma": "Decianus 3",
     "previous": "Decianus 2",
     "next": "Deciates",
-    "redirect": true,
+    "redirect": "Appuleius 21",
     "chapters": [
       {
         "start": 2270,
@@ -16095,7 +16091,7 @@
     "lemma": "Decidiana",
     "previous": "Deciates",
     "next": "Decidius 1",
-    "redirect": true,
+    "redirect": "Domitius",
     "chapters": [
       {
         "start": 2270,
@@ -16119,7 +16115,7 @@
     "lemma": "Decidius 2",
     "previous": "Decidius 1",
     "next": "Decidius 3",
-    "redirect": true,
+    "redirect": "Domitius 51",
     "chapters": [
       {
         "start": 2270,

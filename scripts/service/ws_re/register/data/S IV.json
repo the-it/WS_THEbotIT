@@ -1937,10 +1937,17 @@
   },
   {
     "lemma": "Demarchos 6",
-    "previous": "Deinokrates 5a"
+    "previous": "Deinokrates 5a",
+    "next": "Demetrios 48a"
+  },
+  {
+    "lemma": "Demetrios 48a",
+    "previous": "Demarchos 6",
+    "next": "Demokrates 10a"
   },
   {
     "lemma": "Demokrates 10a",
+    "previous": "Demetrios 48a",
     "next": "Demokritos 6",
     "chapters": [
       {
@@ -1977,6 +1984,7 @@
   {
     "lemma": "Demetrios 48a",
     "previous": "Demarchos 6",
+    "next": "Demokrates 10a",
     "sort_key": "Demetrios 048a",
     "chapters": [
       {
@@ -1985,6 +1993,10 @@
         "author": "Berve"
       }
     ]
+  },
+  {
+    "lemma": "Demokrates 10a",
+    "previous": "Demetrios 48a"
   },
   {
     "lemma": "Demokritos 6",
