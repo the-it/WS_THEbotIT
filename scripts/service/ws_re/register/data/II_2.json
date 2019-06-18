@@ -8153,7 +8153,7 @@
   },
   {
     "lemma": "Aspetos 2",
-    "previous": "Aspergillum",
+    "previous": "Aspetos 1",
     "next": "Ἀσφάλεια",
     "chapters": [
       {
@@ -8227,24 +8227,12 @@
   {
     "lemma": "Ἀσφαλτῖτις λίμνη",
     "previous": "Asphalt",
-    "next": "Asphodelodeis",
+    "next": "Asphar",
     "chapters": [
       {
         "start": 1729,
         "end": 1730,
         "author": "Benzinger"
-      }
-    ]
-  },
-  {
-    "lemma": "Asphodelodeis",
-    "previous": "Ἀσφαλτῖτις λίμνη",
-    "next": "Asphar",
-    "chapters": [
-      {
-        "start": 1729,
-        "end": 1729,
-        "author": "Dessau"
       }
     ]
   },
@@ -8261,8 +8249,20 @@
     ]
   },
   {
-    "lemma": "Asphodelos",
+    "lemma": "Asphodelodeis",
     "previous": "Asphar",
+    "next": "Asphodelos",
+    "chapters": [
+      {
+        "start": 1730,
+        "end": 1730,
+        "author": "Dessau"
+      }
+    ]
+  },
+  {
+    "lemma": "Asphodelos",
+    "previous": "Asphodelodeis",
     "next": "Asphodikos",
     "chapters": [
       {
@@ -14540,7 +14540,7 @@
   },
   {
     "lemma": "Atheleus",
-    "previous": "Atharrias",
+    "previous": "Atheas",
     "next": "Athena",
     "chapters": [
       {
@@ -16275,7 +16275,7 @@
   },
   {
     "lemma": "Athlula",
-    "previous": "Athlothetes",
+    "previous": "Ἀθλοθέτης",
     "next": "Athmonon",
     "chapters": [
       {
@@ -30654,7 +30654,7 @@
   {
     "lemma": "Aurius 7",
     "previous": "Aurius 6",
-    "next": "Aurokra",
+    "next": "ab auro potorio",
     "chapters": [
       {
         "start": 2551,
@@ -30664,8 +30664,21 @@
     ]
   },
   {
-    "lemma": "Aurokra",
+    "lemma": "ab auro potorio",
     "previous": "Aurius 7",
+    "next": "Aurokra",
+    "sort_key": "Auropotorio",
+    "chapters": [
+      {
+        "start": 2551,
+        "end": 2551,
+        "author": "Kubitschek"
+      }
+    ]
+  },
+  {
+    "lemma": "Aurokra",
+    "previous": "ab auro potorio",
     "next": "Aurophite",
     "redirect": true,
     "chapters": [
@@ -30688,21 +30701,8 @@
     ]
   },
   {
-    "lemma": "ab auro potorio",
-    "previous": "Aurius 7",
-    "next": "Aurokra",
-    "sort_key": "Auropotorio",
-    "chapters": [
-      {
-        "start": 2551,
-        "end": 2551,
-        "author": "Kubitschek"
-      }
-    ]
-  },
-  {
     "lemma": "Aurora",
-    "previous": "ab auro potorio",
+    "previous": "Aurophite",
     "next": "Auru",
     "redirect": true,
     "chapters": [
@@ -34894,7 +34894,7 @@
     ]
   },
   {
-    "lemma": "Azeus 2",
+    "lemma": "Ἀζηούς",
     "previous": "Azeus",
     "next": "Azia",
     "chapters": [
@@ -34906,7 +34906,7 @@
   },
   {
     "lemma": "Azia",
-    "previous": "Azeus 2",
+    "previous": "Ἀζηούς",
     "next": "Aziaioi",
     "chapters": [
       {

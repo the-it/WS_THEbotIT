@@ -427,7 +427,7 @@
   {
     "lemma": "Sabaoth",
     "previous": "Sabanum",
-    "next": "Σάβαρα",
+    "next": "Σάβαρα 1",
     "wp_link": "w:de:Zebaot",
     "chapters": [
       {
@@ -438,9 +438,9 @@
     ]
   },
   {
-    "lemma": "Sabara 1",
+    "lemma": "Σάβαρα 1",
     "previous": "Sabaoth",
-    "next": "Sabara 2",
+    "next": "Σάβαρα 2",
     "chapters": [
       {
         "start": 1536,
@@ -450,8 +450,8 @@
     ]
   },
   {
-    "lemma": "Sabara 2",
-    "previous": "Sabara 1",
+    "lemma": "Σάβαρα 2",
+    "previous": "Σάβαρα 1",
     "next": "Sabarai",
     "chapters": [
       {
@@ -463,7 +463,7 @@
   },
   {
     "lemma": "Sabarai",
-    "previous": "Sabara 2",
+    "previous": "Σάβαρα 2",
     "next": "Sabarbares",
     "chapters": [
       {
@@ -9788,7 +9788,7 @@
   {
     "lemma": "Sambethe",
     "previous": "Sambatistai",
-    "next": "Samida",
+    "next": "Sambida",
     "wp_link": "w:de:Sibylle (Prophetin)",
     "ws_link": "s:de:Apokryphen/Sibyllinische Orakel",
     "chapters": [
@@ -9800,20 +9800,8 @@
     ]
   },
   {
-    "lemma": "Sambia, Samba",
-    "previous": "Sambethe",
-    "next": "Sambida",
-    "chapters": [
-      {
-        "start": 2122,
-        "end": 2122,
-        "author": "Keune"
-      }
-    ]
-  },
-  {
     "lemma": "Sambida",
-    "previous": "Sambia, Samba",
+    "previous": "Sambethe",
     "next": "Sambi regnum",
     "chapters": [
       {
@@ -9826,7 +9814,7 @@
   {
     "lemma": "Sambi regnum",
     "previous": "Sambida",
-    "next": "Sambis",
+    "next": "Sambia, Samba",
     "chapters": [
       {
         "start": 2122,
@@ -9836,8 +9824,20 @@
     ]
   },
   {
-    "lemma": "Sambis",
+    "lemma": "Sambia, Samba",
     "previous": "Sambi regnum",
+    "next": "Sambis",
+    "chapters": [
+      {
+        "start": 2122,
+        "end": 2122,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sambis",
+    "previous": "Sambia, Samba",
     "next": "Sambos 1",
     "chapters": [
       {

@@ -293,7 +293,7 @@
   {
     "lemma": "Liber pontificalis",
     "previous": "Liber pater",
-    "next": "Liberalia 1",
+    "next": "Liber pontificalis ecclesiae Ravennatis",
     "wp_link": "w:de:Liber Pontificalis",
     "chapters": [
       {
@@ -304,26 +304,26 @@
     ]
   },
   {
-    "lemma": "Liberalia 1",
-    "previous": "Liber pontificalis",
-    "next": "Liber pontificalis ecclesiae Ravennatis",
-    "chapters": [
-      {
-        "start": 81,
-        "end": 81,
-        "author": "Schur"
-      }
-    ]
-  },
-  {
     "lemma": "Liber pontificalis ecclesiae Ravennatis",
-    "previous": "Liberalia 1",
-    "next": "Liberalia 2",
+    "previous": "Liber pontificalis",
+    "next": "Liberalia 1",
     "chapters": [
       {
         "start": 81,
         "end": 81,
         "author": "Lietzmann"
+      }
+    ]
+  },
+  {
+    "lemma": "Liberalia 1",
+    "previous": "Liber pontificalis ecclesiae Ravennatis",
+    "next": "Liberalia 2",
+    "chapters": [
+      {
+        "start": 81,
+        "end": 81,
+        "author": "Schur"
       }
     ]
   },

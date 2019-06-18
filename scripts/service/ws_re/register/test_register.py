@@ -79,12 +79,12 @@ class TestIntegrationRegister(TestCase):
                 pre_lemma = register[i -1] if i > 0 else None
                 if pre_lemma and pre_lemma["next"]:
                     if not pre_lemma["next"] == lemma["lemma"]:
-                        errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register} not the same as pre lemma")
+                        errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register.volume.name} not the same as pre lemma")
                 try:
                     post_lemma = register[i + 1]
                     if post_lemma and post_lemma["previous"]:
                         if not post_lemma["previous"] == lemma["lemma"]:
-                            errors.append(f"POST lemma name {lemma['lemma']} /{i} in register {register} not the same as post lemma")
+                            errors.append(f"POST lemma name {lemma['lemma']} /{i} in register {register.volume.name} not the same as post lemma")
                 except IndexError:
                     pass
 

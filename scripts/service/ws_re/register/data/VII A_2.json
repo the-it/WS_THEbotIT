@@ -3782,7 +3782,7 @@
   {
     "lemma": "Tyberisos",
     "previous": "Tyba",
-    "next": "Tybiakai",
+    "next": "Τυβιάκαι",
     "redirect": true,
     "chapters": [
       {
@@ -3792,9 +3792,9 @@
     ]
   },
   {
-    "lemma": "Tybiakai",
+    "lemma": "Τυβιάκαι",
     "previous": "Tyberisos",
-    "next": "Tychaion",
+    "next": "Tycae",
     "chapters": [
       {
         "start": 1643,
@@ -3804,8 +3804,19 @@
     ]
   },
   {
+    "lemma": "Tycae",
+    "previous": "Τυβιάκαι",
+    "next": "Tychaion",
+    "chapters": [
+      {
+        "start": 1643,
+        "end": 1643
+      }
+    ]
+  },
+  {
     "lemma": "Tychaion",
-    "previous": "Tybiakai",
+    "previous": "Tycae",
     "next": "Tychandros",
     "chapters": [
       {
@@ -6290,7 +6301,7 @@
     ]
   },
   {
-    "lemma": "vacantia, Bona",
+    "lemma": "vacantia",
     "previous": "Vacantes",
     "next": "Vacatio 1",
     "chapters": [
@@ -11916,8 +11927,8 @@
   },
   {
     "lemma": "Tycae",
-    "previous": "Τυβιάκαι",
-    "next": "Tychaion",
+    "previous": "Tyberis(s)eis",
+    "next": "Tyindeis",
     "chapters": [
       {
         "start": 2557,

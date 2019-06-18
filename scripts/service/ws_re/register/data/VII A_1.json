@@ -731,21 +731,9 @@
     ]
   },
   {
-    "lemma": "Triginta Tyranni",
-    "previous": "Triggua",
-    "next": "Trigibildos",
-    "chapters": [
-      {
-        "start": 128,
-        "end": 128,
-        "author": "Hohl"
-      }
-    ]
-  },
-  {
     "lemma": "Trigibildos",
-    "previous": "Triginta Tyranni",
-    "next": "Trigisamo",
+    "previous": "Triggua",
+    "next": "Triginta Tyranni",
     "redirect": true,
     "chapters": [
       {
@@ -755,8 +743,20 @@
     ]
   },
   {
-    "lemma": "Trigisamo",
+    "lemma": "Triginta Tyranni",
     "previous": "Trigibildos",
+    "next": "Trigisamo",
+    "chapters": [
+      {
+        "start": 128,
+        "end": 128,
+        "author": "Hohl"
+      }
+    ]
+  },
+  {
+    "lemma": "Trigisamo",
+    "previous": "Triginta Tyranni",
     "next": "Triglanthine",
     "chapters": [
       {
@@ -3970,7 +3970,7 @@
   {
     "lemma": "Trophonion",
     "previous": "Trophonianos",
-    "next": "Trophonios",
+    "next": "Trophonios 1",
     "chapters": [
       {
         "start": 678,
@@ -3980,7 +3980,7 @@
     ]
   },
   {
-    "lemma": "Trophonios",
+    "lemma": "Trophonios 1",
     "previous": "Trophonion",
     "next": "Trophonios 2",
     "chapters": [
