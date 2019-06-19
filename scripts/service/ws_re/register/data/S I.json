@@ -3895,7 +3895,12 @@
   },
   {
     "lemma": "Alastos",
-    "previous": "Alassenses"
+    "previous": "Alassenses",
+    "next": "Alator"
+  },
+  {
+    "lemma": "Alator",
+    "previous": "Alastos"
   },
   {
     "lemma": "Alassenses",
@@ -4730,7 +4735,8 @@
   {
     "lemma": "Alkon 8",
     "previous": "Alkmaion 6",
-    "next": "Alkyoneus 1"
+    "next": "Alkyoneus 1",
+    "sort_key": "Alkon 08"
   },
   {
     "lemma": "Alkyoneus 1",
@@ -5173,7 +5179,7 @@
   {
     "lemma": "Ambitouti",
     "previous": "Ambitarvius",
-    "next": "Ambriula",
+    "next": "Amblada",
     "chapters": [
       {
         "start": 67,
@@ -5183,8 +5189,18 @@
     ]
   },
   {
-    "lemma": "Ambriula",
+    "lemma": "Amblada",
     "previous": "Ambitouti",
+    "next": "Ambrani"
+  },
+  {
+    "lemma": "Ambrani",
+    "previous": "Amblada",
+    "next": "Ambriula"
+  },
+  {
+    "lemma": "Ambriula",
+    "previous": "Ambrani",
     "next": "Ambron 2",
     "chapters": [
       {

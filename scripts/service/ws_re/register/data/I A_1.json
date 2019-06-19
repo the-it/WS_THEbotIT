@@ -535,7 +535,7 @@
   {
     "lemma": "Radices, Radix 3",
     "previous": "Radices, Radix 2",
-    "next": "Radine, Leontichos",
+    "next": "Ῥαδίνη, Λεόντιχος",
     "chapters": [
       {
         "start": 36,
@@ -545,7 +545,7 @@
     ]
   },
   {
-    "lemma": "Radine, Leontichos",
+    "lemma": "Ῥαδίνη, Λεόντιχος",
     "previous": "Radices, Radix 3",
     "next": "Ῥαδίνης μνῆμα",
     "chapters": [
@@ -558,8 +558,9 @@
   },
   {
     "lemma": "Ῥαδίνης μνῆμα",
-    "previous": "Radine, Leontichos",
+    "previous": "Ῥαδίνη, Λεόντιχος",
     "next": "Ῥάδιος",
+    "sort_key": "Radines mnema",
     "chapters": [
       {
         "start": 37,
@@ -866,7 +867,7 @@
   {
     "lemma": "Raga",
     "previous": "Rätsel",
-    "next": "Ῥάγαια",
+    "next": "Ragaia",
     "chapters": [
       {
         "start": 125,
@@ -876,7 +877,7 @@
     ]
   },
   {
-    "lemma": "Ῥάγαια",
+    "lemma": "Ragaia",
     "previous": "Raga",
     "next": "Ragando",
     "sort_key": "Ragaia",
@@ -890,8 +891,8 @@
   },
   {
     "lemma": "Ragando",
-    "previous": "Ῥάγαια",
-    "next": "Ῥαγαῦ",
+    "previous": "Ragaia",
+    "next": "Ragau",
     "chapters": [
       {
         "start": 127,
@@ -901,7 +902,7 @@
     ]
   },
   {
-    "lemma": "Ῥαγαῦ",
+    "lemma": "Ragau",
     "previous": "Ragando",
     "next": "Rages",
     "sort_key": "Ragau",
@@ -915,7 +916,7 @@
   },
   {
     "lemma": "Rages",
-    "previous": "Ῥαγαῦ",
+    "previous": "Ragau",
     "next": "Ragnahilda",
     "redirect": true,
     "chapters": [
@@ -1097,7 +1098,7 @@
   {
     "lemma": "Raiteai",
     "previous": "Raida",
-    "next": "Raithenoi",
+    "next": "Ῥαϊθηνοί",
     "chapters": [
       {
         "start": 131,
@@ -1107,9 +1108,9 @@
     ]
   },
   {
-    "lemma": "Raithenoi",
+    "lemma": "Ῥαϊθηνοί",
     "previous": "Raiteai",
-    "next": "Raikes",
+    "next": "Ῥαῖκες",
     "redirect": true,
     "chapters": [
       {
@@ -1119,9 +1120,10 @@
     ]
   },
   {
-    "lemma": "Raikes",
-    "previous": "Raithenoi",
+    "lemma": "Ῥαῖκες",
+    "previous": "Ῥαϊθηνοί",
     "next": "Ῥαικοί",
+    "sort_key": "Raikes",
     "chapters": [
       {
         "start": 131,
@@ -1132,7 +1134,7 @@
   },
   {
     "lemma": "Ῥαικοί",
-    "previous": "Raikes",
+    "previous": "Ῥαῖκες",
     "next": "Raita",
     "sort_key": "Raikoi",
     "chapters": [

@@ -28293,7 +28293,7 @@
   {
     "lemma": "Aiakes 2",
     "previous": "Aiakes 1",
-    "next": "Aiakidas 1",
+    "next": "Aiakidas",
     "chapters": [
       {
         "start": 922,
@@ -31929,6 +31929,7 @@
     "lemma": "Aischines 2",
     "previous": "Aischines 1",
     "next": "Aischines 3",
+    "sort_key": "Aischines 02",
     "chapters": [
       {
         "start": 1047,
@@ -31941,6 +31942,7 @@
     "lemma": "Aischines 3",
     "previous": "Aischines 2",
     "next": "Aischines 4",
+    "sort_key": "Aischines 03",
     "chapters": [
       {
         "start": 1047,
@@ -31953,6 +31955,7 @@
     "lemma": "Aischines 4",
     "previous": "Aischines 3",
     "next": "Aischines 5",
+    "sort_key": "Aischines 04",
     "chapters": [
       {
         "start": 1047,
@@ -31978,6 +31981,7 @@
     "lemma": "Aischines 6",
     "previous": "Aischines 5",
     "next": "Aischines 7",
+    "sort_key": "Aischines 06",
     "chapters": [
       {
         "start": 1047,
@@ -31990,6 +31994,7 @@
     "lemma": "Aischines 7",
     "previous": "Aischines 6",
     "next": "Aischines 8",
+    "sort_key": "Aischines 07",
     "chapters": [
       {
         "start": 1047,
@@ -32002,6 +32007,7 @@
     "lemma": "Aischines 8",
     "previous": "Aischines 7",
     "next": "Aischines 9",
+    "sort_key": "Aischines 08",
     "chapters": [
       {
         "start": 1047,
@@ -32014,6 +32020,7 @@
     "lemma": "Aischines 9",
     "previous": "Aischines 8",
     "next": "Aischines 10",
+    "sort_key": "Aischines 09",
     "chapters": [
       {
         "start": 1047,
@@ -32465,6 +32472,7 @@
     "lemma": "Aischylos 3",
     "previous": "Aischylos 2",
     "next": "Aischylos 4",
+    "sort_key": "Aischylos 03",
     "chapters": [
       {
         "start": 1065,
@@ -32477,6 +32485,7 @@
     "lemma": "Aischylos 4",
     "previous": "Aischylos 3",
     "next": "Aischylos 5",
+    "sort_key": "Aischylos 04",
     "chapters": [
       {
         "start": 1065,
@@ -33440,6 +33449,7 @@
     "lemma": "Aithon 3",
     "previous": "Aithon 2",
     "next": "Aithon 4",
+    "sort_key": "Aithon 03",
     "chapters": [
       {
         "start": 1106,
@@ -33452,6 +33462,7 @@
     "lemma": "Aithon 4",
     "previous": "Aithon 3",
     "next": "Aithon 5",
+    "sort_key": "Aithon 04",
     "chapters": [
       {
         "start": 1106,
@@ -34775,7 +34786,6 @@
     "lemma": "Akaste 1",
     "previous": "Akas",
     "next": "Akaste 2",
-    "wp_link": "w:de:Akaste (Okeanide)",
     "chapters": [
       {
         "start": 1157,
@@ -36514,7 +36524,7 @@
   {
     "lemma": "Akraiphios",
     "previous": "Akraiphia",
-    "next": "Akra leuke",
+    "next": "Ἄκρα λευκή",
     "chapters": [
       {
         "start": 1194,
@@ -36524,7 +36534,7 @@
     ]
   },
   {
-    "lemma": "Akra leuke",
+    "lemma": "Ἄκρα λευκή",
     "previous": "Akraiphios",
     "next": "Akrasos",
     "chapters": [
@@ -36536,7 +36546,7 @@
   },
   {
     "lemma": "Akrasos",
-    "previous": "Akra leuke",
+    "previous": "Ἄκρα λευκή",
     "next": "Akrathos",
     "chapters": [
       {
@@ -36866,6 +36876,7 @@
     "lemma": "Ἀκροχειρισμός",
     "previous": "Ἀκρόαμα",
     "next": "Akrodemos",
+    "sort_key": "Akrocheirismos",
     "chapters": [
       {
         "start": 1197,
@@ -36877,7 +36888,7 @@
   {
     "lemma": "Akrodemos",
     "previous": "Ἀκροχειρισμός",
-    "next": "Akrokeraia",
+    "next": "Ἀκροκέραια",
     "chapters": [
       {
         "start": 1198,
@@ -36887,9 +36898,10 @@
     ]
   },
   {
-    "lemma": "Akrokeraia",
+    "lemma": "Ἀκροκέραια",
     "previous": "Akrodemos",
     "next": "Akrokeraunia",
+    "sort_key": "Akrokeraia",
     "chapters": [
       {
         "start": 1198,
@@ -36900,7 +36912,7 @@
   },
   {
     "lemma": "Akrokeraunia",
-    "previous": "Akrokeraia",
+    "previous": "Ἀκροκέραια",
     "next": "Akrokomos",
     "chapters": [
       {
@@ -37010,7 +37022,7 @@
   {
     "lemma": "Akroneos",
     "previous": "Akron 4",
-    "next": "Akrophylakes",
+    "next": "Ἀκροφύλακες",
     "chapters": [
       {
         "start": 1199,
@@ -37020,9 +37032,10 @@
     ]
   },
   {
-    "lemma": "Akrophylakes",
+    "lemma": "Ἀκροφύλακες",
     "previous": "Akroneos",
     "next": "Akropodion",
+    "sort_key": "Akrophylakes",
     "chapters": [
       {
         "start": 1199,
@@ -37033,7 +37046,7 @@
   },
   {
     "lemma": "Akropodion",
-    "previous": "Akrophylakes",
+    "previous": "Ἀκροφύλακες",
     "next": "Akropolis 1",
     "chapters": [
       {
@@ -37094,7 +37107,7 @@
   {
     "lemma": "Akrostichis",
     "previous": "Akroreites",
-    "next": "Akrostolion",
+    "next": "Ἀκροστόλιον",
     "wp_link": "w:de:Akrostichon",
     "chapters": [
       {
@@ -37105,9 +37118,11 @@
     ]
   },
   {
-    "lemma": "Akrostolion",
+    "lemma": "Ἀκροστόλιον",
     "previous": "Akrostichis",
     "next": "Akrotatos 1",
+    "sort_key": "Akrostolion",
+    "wp_link": "w:de:Steven",
     "chapters": [
       {
         "start": 1207,
@@ -37118,7 +37133,7 @@
   },
   {
     "lemma": "Akrotatos 1",
-    "previous": "Akrostolion",
+    "previous": "Ἀκροστόλιον",
     "next": "Akrotatos 2",
     "wp_link": "w:de:Akrotatos (Sohn des Kleomenes)",
     "chapters": [
@@ -37145,7 +37160,7 @@
   {
     "lemma": "Akroterion",
     "previous": "Akrotatos 2",
-    "next": "Akrothinia",
+    "next": "Ἀκροθίνια",
     "wp_link": "w:de:Akroterion",
     "chapters": [
       {
@@ -37156,9 +37171,10 @@
     ]
   },
   {
-    "lemma": "Akrothinia",
+    "lemma": "Ἀκροθίνια",
     "previous": "Akroterion",
     "next": "Akrothooi",
+    "sort_key": "Akrothinia",
     "chapters": [
       {
         "start": 1208,
@@ -37169,7 +37185,7 @@
   },
   {
     "lemma": "Akrothooi",
-    "previous": "Akrothinia",
+    "previous": "Ἀκροθίνια",
     "next": "Akrurion",
     "chapters": [
       {
@@ -37219,7 +37235,6 @@
     "lemma": "Aktaia 2",
     "previous": "Aktaia 1",
     "next": "Aktaia 3",
-    "wp_link": "w:de:Aktaia",
     "chapters": [
       {
         "start": 1209,
@@ -38096,7 +38111,7 @@
   {
     "lemma": "Alaba 2",
     "previous": "Alaba 1",
-    "next": "Alabageion akron",
+    "next": "Ἀλαβάγειον ἄκρον",
     "chapters": [
       {
         "start": 1270,
@@ -38106,9 +38121,10 @@
     ]
   },
   {
-    "lemma": "Alabageion akron",
+    "lemma": "Ἀλαβάγειον ἄκρον",
     "previous": "Alaba 2",
     "next": "Alabanda",
+    "sort_key": "Alabageion",
     "chapters": [
       {
         "start": 1270,
@@ -38119,7 +38135,7 @@
   },
   {
     "lemma": "Alabanda",
-    "previous": "Alabageion akron",
+    "previous": "Ἀλαβάγειον ἄκρον",
     "next": "Alabandicus",
     "wp_link": "w:de:Alabanda",
     "chapters": [
@@ -38726,6 +38742,7 @@
     "lemma": "Ala miliaria",
     "previous": "Alambrima",
     "next": "Alamon",
+    "sort_key": "Alamiliaria",
     "wp_link": "w:de:Ala miliaria",
     "chapters": [
       {
@@ -38786,6 +38803,7 @@
     "lemma": "Ἀλανὰ ὄρη",
     "previous": "Alamundarus 2",
     "next": "Alandri fontes",
+    "sort_key": "Alanaore",
     "chapters": [
       {
         "start": 1281,
@@ -38881,6 +38899,7 @@
     "lemma": "Ala nova",
     "previous": "Alanorsoi",
     "next": "Alanoviiamuthis",
+    "sort_key": "Alanova",
     "chapters": [
       {
         "start": 1285,
@@ -39101,6 +39120,7 @@
     "lemma": "Alastor 2",
     "previous": "Alastor 1",
     "next": "Alastor 3",
+    "sort_key": "Alastor 02",
     "chapters": [
       {
         "start": 1293,
@@ -39113,6 +39133,7 @@
     "lemma": "Alastor 3",
     "previous": "Alastor 2",
     "next": "Alastor 4",
+    "sort_key": "Alastor 03",
     "chapters": [
       {
         "start": 1293,
@@ -39125,6 +39146,7 @@
     "lemma": "Alastor 4",
     "previous": "Alastor 3",
     "next": "Alastor 5",
+    "sort_key": "Alastor 04",
     "chapters": [
       {
         "start": 1293,
@@ -39137,6 +39159,7 @@
     "lemma": "Alastor 5",
     "previous": "Alastor 4",
     "next": "Alastor 6",
+    "sort_key": "Alastor 05",
     "chapters": [
       {
         "start": 1293,
@@ -39149,6 +39172,7 @@
     "lemma": "Alastor 6",
     "previous": "Alastor 5",
     "next": "Alastor 7",
+    "sort_key": "Alastor 06",
     "chapters": [
       {
         "start": 1293,
@@ -39174,6 +39198,7 @@
     "lemma": "Alastor 8",
     "previous": "Alastor 7",
     "next": "Alastor 9",
+    "sort_key": "Alastor 08",
     "chapters": [
       {
         "start": 1293,
@@ -39186,6 +39211,7 @@
     "lemma": "Alastor 9",
     "previous": "Alastor 8",
     "next": "Alastor 10",
+    "sort_key": "Alastor 09",
     "chapters": [
       {
         "start": 1293,
@@ -39622,6 +39648,7 @@
     "lemma": "Alba Augusta",
     "previous": "Alba 6",
     "next": "Alba Docilia",
+    "sort_key": "Albaau",
     "chapters": [
       {
         "start": 1299,
@@ -39673,6 +39700,7 @@
     "lemma": "Alba Helvorum",
     "previous": "Alba Fucens",
     "next": "Alba Iulia",
+    "sort_key": "Albahel",
     "chapters": [
       {
         "start": 1301,
@@ -39782,6 +39810,7 @@
     "lemma": "Ἀλβάνιαι πύλαι",
     "previous": "Albania 2",
     "next": "Albani sacerdotes",
+    "sort_key": "Albaniaip",
     "chapters": [
       {
         "start": 1305,
@@ -39828,7 +39857,7 @@
   {
     "lemma": "Albanoi 2",
     "previous": "Albanoi 1",
-    "next": "Albanon oros 1",
+    "next": "Ἀλβανὸν ὄρος 1",
     "wp_link": "w:de:Albaner",
     "chapters": [
       {
@@ -39839,7 +39868,7 @@
     ]
   },
   {
-    "lemma": "Albanon oros 1",
+    "lemma": "Ἀλβανὸν ὄρος 1",
     "previous": "Albanoi 2",
     "next": "Albanon oros 2",
     "chapters": [
@@ -39851,8 +39880,8 @@
   },
   {
     "lemma": "Albanon oros 2",
-    "previous": "Albanon oros 1",
-    "next": "Albanon oros 3",
+    "previous": "Ἀλβανὸν ὄρος 1",
+    "next": "Ἀλβανὸν ὄρος 3",
     "redirect": true,
     "chapters": [
       {
@@ -39862,7 +39891,7 @@
     ]
   },
   {
-    "lemma": "Albanon oros 3",
+    "lemma": "Ἀλβανὸν ὄρος 3",
     "previous": "Albanon oros 2",
     "next": "Albanopolis 1",
     "redirect": true,
@@ -39875,7 +39904,7 @@
   },
   {
     "lemma": "Albanopolis 1",
-    "previous": "Albanon oros 3",
+    "previous": "Ἀλβανὸν ὄρος 3",
     "next": "Albanopolis 2",
     "chapters": [
       {
@@ -39973,6 +40002,7 @@
     "lemma": "Albanus lacus",
     "previous": "Albanus ager",
     "next": "Albanus lapis",
+    "sort_key": "Albanuslacus",
     "wp_link": "w:de:Albaner See",
     "chapters": [
       {
@@ -39986,6 +40016,7 @@
     "lemma": "Albanus lapis",
     "previous": "Albanus lacus",
     "next": "Albanus mons",
+    "sort_key": "Albanuslapis",
     "wp_link": "w:de:Peperino",
     "chapters": [
       {
@@ -39999,6 +40030,7 @@
     "lemma": "Albanus mons",
     "previous": "Albanus lapis",
     "next": "Albanus pagus",
+    "sort_key": "Albanusmons",
     "wp_link": "w:de:Monte Cavo",
     "chapters": [
       {
@@ -40012,6 +40044,7 @@
     "lemma": "Albanus pagus",
     "previous": "Albanus mons",
     "next": "Albanus rivus",
+    "sort_key": "Albanuspagus",
     "chapters": [
       {
         "start": 1311,
@@ -40024,6 +40057,7 @@
     "lemma": "Albanus rivus",
     "previous": "Albanus pagus",
     "next": "Alba Pompeia",
+    "sort_key": "Albanusrivus",
     "chapters": [
       {
         "start": 1311,
@@ -40036,6 +40070,7 @@
     "lemma": "Alba Pompeia",
     "previous": "Albanus rivus",
     "next": "Albarinus",
+    "sort_key": "Albapompeia",
     "wp_link": "w:de:Alba (Piemont)",
     "chapters": [
       {
@@ -40085,6 +40120,7 @@
     "lemma": "Alba Silvius",
     "previous": "Albarius",
     "next": "Alba vallis",
+    "sort_key": "Albasil",
     "chapters": [
       {
         "start": 1311,
@@ -40458,7 +40494,7 @@
     "lemma": "Albinus 2",
     "previous": "Albinus 1",
     "next": "Albinus 3",
-    "redirect": true,
+    "redirect": "Lucceius 11",
     "chapters": [
       {
         "start": 1314,
@@ -40531,7 +40567,7 @@
   {
     "lemma": "Albinus 8",
     "previous": "Albinus 7",
-    "next": "Albinus 8a–d",
+    "next": "Albinus 8a-d",
     "chapters": [
       {
         "start": 1316,
@@ -40541,7 +40577,7 @@
     ]
   },
   {
-    "lemma": "Albinus 8a–d",
+    "lemma": "Albinus 8a-d",
     "previous": "Albinus 8",
     "next": "Albioeci",
     "chapters": [
@@ -40554,7 +40590,7 @@
   },
   {
     "lemma": "Albioeci",
-    "previous": "Albinus 8a–d",
+    "previous": "Albinus 8a-d",
     "next": "Albion",
     "chapters": [
       {
@@ -40578,7 +40614,7 @@
   {
     "lemma": "Albionae",
     "previous": "Albion",
-    "next": "Albion oros",
+    "next": "Ἄλβιον ὄρος",
     "chapters": [
       {
         "start": 1316,
@@ -40588,9 +40624,11 @@
     ]
   },
   {
-    "lemma": "Albion oros",
+    "lemma": "Ἄλβιον ὄρος",
     "previous": "Albionae",
     "next": "Albiorica",
+    "sort_key": "Albionoros",
+    "wp_link": "w:de:Velebit",
     "chapters": [
       {
         "start": 1316,
@@ -40601,7 +40639,7 @@
   },
   {
     "lemma": "Albiorica",
-    "previous": "Albion oros",
+    "previous": "Ἄλβιον ὄρος",
     "next": "Albiorix",
     "chapters": [
       {
@@ -40652,6 +40690,7 @@
     "lemma": "Albius 1",
     "previous": "Albis 2",
     "next": "Albius 2",
+    "sort_key": "Albius 01",
     "chapters": [
       {
         "start": 1317,
@@ -40664,6 +40703,7 @@
     "lemma": "Albius 2",
     "previous": "Albius 1",
     "next": "Albius 3",
+    "sort_key": "Albius 02",
     "chapters": [
       {
         "start": 1317,
@@ -40689,6 +40729,7 @@
     "lemma": "Albius 4",
     "previous": "Albius 3",
     "next": "Albius 5",
+    "sort_key": "Albius 04",
     "chapters": [
       {
         "start": 1317,
@@ -40701,6 +40742,7 @@
     "lemma": "Albius 5",
     "previous": "Albius 4",
     "next": "Albius 6",
+    "sort_key": "Albius 05",
     "chapters": [
       {
         "start": 1317,
@@ -40739,6 +40781,7 @@
     "lemma": "Albius 8",
     "previous": "Albius 7",
     "next": "Albius 9",
+    "sort_key": "Albius 08",
     "chapters": [
       {
         "start": 1317,
@@ -40751,6 +40794,7 @@
     "lemma": "Albius 9",
     "previous": "Albius 8",
     "next": "Albius 10",
+    "sort_key": "Albius 09",
     "chapters": [
       {
         "start": 1317,
@@ -41486,7 +41530,7 @@
   {
     "lemma": "Alegenor",
     "previous": "Alebus",
-    "next": "Aleion pedion 1",
+    "next": "Ἀλήϊον πεδίον 1",
     "chapters": [
       {
         "start": 1360,
@@ -41496,9 +41540,10 @@
     ]
   },
   {
-    "lemma": "Aleion pedion 1",
+    "lemma": "Ἀλήϊον πεδίον 1",
     "previous": "Alegenor",
-    "next": "Aleion pedion 2",
+    "next": "Ἀλήϊον πεδίον 2",
+    "sort_key": "Aleionpedion 1",
     "chapters": [
       {
         "start": 1360,
@@ -41508,9 +41553,10 @@
     ]
   },
   {
-    "lemma": "Aleion pedion 2",
-    "previous": "Aleion pedion 1",
-    "next": "Aleion pedion 3",
+    "lemma": "Ἀλήϊον πεδίον 2",
+    "previous": "Ἀλήϊον πεδίον 1",
+    "next": "Ἀλήϊον πεδίον 3",
+    "sort_key": "Aleionpedion 2",
     "chapters": [
       {
         "start": 1360,
@@ -41520,9 +41566,10 @@
     ]
   },
   {
-    "lemma": "Aleion pedion 3",
-    "previous": "Aleion pedion 2",
+    "lemma": "Ἀλήϊον πεδίον 3",
+    "previous": "Ἀλήϊον πεδίον 2",
     "next": "Aleios",
+    "sort_key": "Aleionpedion 3",
     "chapters": [
       {
         "start": 1360,
@@ -41533,7 +41580,7 @@
   },
   {
     "lemma": "Aleios",
-    "previous": "Aleion pedion 3",
+    "previous": "Ἀλήϊον πεδίον 3",
     "next": "Aleipes",
     "chapters": [
       {
@@ -41584,6 +41631,7 @@
     "lemma": "Ἄλεισον",
     "previous": "Ἀλειπτήριον",
     "next": "Aleisos",
+    "sort_key": "Aleison",
     "chapters": [
       {
         "start": 1363,
@@ -41715,7 +41763,7 @@
   {
     "lemma": "Ἀλεκτορομαντεία",
     "previous": "Alektor 4",
-    "next": "Alektoros phrurion",
+    "next": "Ἀλέκτορος φρούριον",
     "sort_key": "Alektoromanteia",
     "chapters": [
       {
@@ -41726,20 +41774,14 @@
     ]
   },
   {
-    "lemma": "Alektoros phrurion",
+    "lemma": "Ἀλέκτορος φρούριον",
     "previous": "Ἀλεκτορομαντεία",
     "next": "Alektrona 1",
-    "chapters": [
-      {
-        "start": 1364,
-        "end": 1364,
-        "author": "Tomaschek"
-      }
-    ]
+    "sort_key": "Alektoros"
   },
   {
     "lemma": "Alektrona 1",
-    "previous": "Alektoros phrurion",
+    "previous": "Ἀλέκτορος φρούριον",
     "next": "Alektrona 2",
     "chapters": [
       {
@@ -42088,7 +42130,7 @@
   {
     "lemma": "Aletanus",
     "previous": "Aleta 2",
-    "next": "Aleter",
+    "next": "Ἀλητήρ",
     "chapters": [
       {
         "start": 1368,
@@ -42098,9 +42140,10 @@
     ]
   },
   {
-    "lemma": "Aleter",
+    "lemma": "Ἀλητήρ",
     "previous": "Aletanus",
     "next": "Aletes 1",
+    "sort_key": "Aleter",
     "chapters": [
       {
         "start": 1369,
@@ -42111,7 +42154,7 @@
   },
   {
     "lemma": "Aletes 1",
-    "previous": "Aleter",
+    "previous": "Ἀλητήρ",
     "next": "Aletes 2",
     "wp_link": "w:de:Aletes (Sohn des Ikarios)",
     "chapters": [
@@ -42394,7 +42437,7 @@
   },
   {
     "lemma": "Alexandra 1",
-    "previous": "Alexamenos 2",
+    "previous": "Alexamenos 1",
     "next": "Alexandra 2",
     "chapters": [
       {
@@ -42774,7 +42817,7 @@
   {
     "lemma": "Alexandreion 2",
     "previous": "Alexandreion 1",
-    "next": "Alexandreios",
+    "next": "Ἀλεξάνδρειος",
     "chapters": [
       {
         "start": 1397,
@@ -42784,7 +42827,7 @@
     ]
   },
   {
-    "lemma": "Alexandreios",
+    "lemma": "Ἀλεξάνδρειος",
     "previous": "Alexandreion 2",
     "next": "Alexandrianus",
     "chapters": [
@@ -42797,7 +42840,7 @@
   },
   {
     "lemma": "Alexandrianus",
-    "previous": "Alexandreios",
+    "previous": "Ἀλεξάνδρειος",
     "next": "Alexandrides",
     "chapters": [
       {
@@ -42847,7 +42890,7 @@
   {
     "lemma": "Alexandrinae thermae",
     "previous": "Alexandrina basilica",
-    "next": "Alexandrinische Litteratur",
+    "next": "Alexandrinische Literatur",
     "wp_link": "w:de:Nerothermen",
     "chapters": [
       {

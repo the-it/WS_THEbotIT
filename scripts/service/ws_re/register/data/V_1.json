@@ -2974,7 +2974,7 @@
   {
     "lemma": "Dermatikon",
     "previous": "Derkynos",
-    "next": "Δερμειθῶν κόμη",
+    "next": "Δερμειθῶν κώμη",
     "chapters": [
       {
         "start": 243,
@@ -2984,7 +2984,7 @@
     ]
   },
   {
-    "lemma": "Δερμειθῶν κόμη",
+    "lemma": "Δερμειθῶν κώμη",
     "previous": "Dermatikon",
     "next": "Dermones",
     "sort_key": "Dermeithon kome",
@@ -2998,8 +2998,8 @@
   },
   {
     "lemma": "Dermones",
-    "previous": "Δερμειθῶν κόμη",
-    "next": "Derreatis",
+    "previous": "Δερμειθῶν κώμη",
+    "next": "Dero",
     "chapters": [
       {
         "start": 244,
@@ -3009,10 +3009,15 @@
     ]
   },
   {
-    "lemma": "Derreatis",
+    "lemma": "Dero",
     "previous": "Dermones",
+    "next": "Derreatis"
+  },
+  {
+    "lemma": "Derreatis",
+    "previous": "Dero",
     "next": "Derrii",
-    "redirect": true,
+    "redirect": "Dereatis",
     "chapters": [
       {
         "start": 244,
@@ -8014,7 +8019,7 @@
     "lemma": "Diglito",
     "previous": "Digitus",
     "next": "Dignilla",
-    "redirect": true,
+    "redirect": "Tigris 1",
     "chapters": [
       {
         "start": 545,
@@ -19726,7 +19731,7 @@
     "lemma": "Divodurum 3",
     "previous": "Divodurum 2",
     "next": "Divona 1",
-    "redirect": true,
+    "redirect": "Theudurum",
     "chapters": [
       {
         "start": 1241,
