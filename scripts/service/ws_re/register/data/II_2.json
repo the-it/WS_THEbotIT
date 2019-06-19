@@ -1118,6 +1118,7 @@
     "lemma": "Artorius 6",
     "previous": "Artorius 5",
     "next": "Artorius 7",
+    "sort_key": "Artorius 06",
     "chapters": [
       {
         "start": 1461,
@@ -1361,7 +1362,7 @@
   {
     "lemma": "Ad Arvalla",
     "previous": "Arvales fratres",
-    "next": "Arvaltes",
+    "next": "Arualtes",
     "chapters": [
       {
         "start": 1486,
@@ -1371,7 +1372,7 @@
     ]
   },
   {
-    "lemma": "Arvaltes",
+    "lemma": "Arualtes",
     "previous": "Ad Arvalla",
     "next": "Arvandus",
     "chapters": [
@@ -1384,7 +1385,7 @@
   },
   {
     "lemma": "Arvandus",
-    "previous": "Arvaltes",
+    "previous": "Arualtes",
     "next": "Aruarnoi",
     "chapters": [
       {
@@ -1471,6 +1472,7 @@
     "lemma": "Ἀρούδια ὄρη",
     "previous": "Arucci",
     "next": "Arudis",
+    "sort_key": "Arudia",
     "chapters": [
       {
         "start": 1487,
@@ -1662,7 +1664,7 @@
     "lemma": "Arulenus 3",
     "previous": "Arulenus 2",
     "next": "Arulis",
-    "redirect": true,
+    "redirect": "Iunius 149",
     "chapters": [
       {
         "start": 1490,
@@ -3880,6 +3882,7 @@
     "lemma": "Asia 7",
     "previous": "Asia 6",
     "next": "Asia 8",
+    "sort_key": "Asia 07",
     "chapters": [
       {
         "start": 1563,
@@ -4167,7 +4170,7 @@
   {
     "lemma": "Asicha",
     "previous": "Asiba",
-    "next": "Asichonos",
+    "next": "Ἀσίχωνος",
     "chapters": [
       {
         "start": 1579,
@@ -4177,9 +4180,10 @@
     ]
   },
   {
-    "lemma": "Asichonos",
+    "lemma": "Ἀσίχωνος",
     "previous": "Asicha",
     "next": "Asicius",
+    "sort_key": "Asichonos",
     "chapters": [
       {
         "start": 1579,
@@ -4190,7 +4194,7 @@
   },
   {
     "lemma": "Asicius",
-    "previous": "Asichonos",
+    "previous": "Ἀσίχωνος",
     "next": "Asido",
     "chapters": [
       {
@@ -4324,7 +4328,7 @@
   {
     "lemma": "Asinaia",
     "previous": "Asina",
-    "next": "Asinaios kolpos",
+    "next": "Ἀσιναῖος κόλπος",
     "chapters": [
       {
         "start": 1580,
@@ -4334,9 +4338,10 @@
     ]
   },
   {
-    "lemma": "Asinaios kolpos",
+    "lemma": "Ἀσιναῖος κόλπος",
     "previous": "Asinaia",
     "next": "Asinaria",
+    "sort_key": "Asinaios kolpos",
     "chapters": [
       {
         "start": 1580,
@@ -4347,7 +4352,7 @@
   },
   {
     "lemma": "Asinaria",
-    "previous": "Asinaios kolpos",
+    "previous": "Ἀσιναῖος κόλπος",
     "next": "Asinaria porta",
     "chapters": [
       {
@@ -4617,6 +4622,7 @@
     "lemma": "Asinius 8",
     "previous": "Asinius 7",
     "next": "Asinius 9",
+    "sort_key": "Asinius 08",
     "wp_link": "w:de:Asinius",
     "chapters": [
       {
@@ -5424,6 +5430,8 @@
     "lemma": "Ἀσκανία λίμνη 2",
     "previous": "Ἀσκανία λίμνη 1",
     "next": "Askanios 1",
+    "sort_key": "Askanialimne 2",
+    "wp_link": "w:de:Burdur Gölü",
     "chapters": [
       {
         "start": 1610,
@@ -5562,7 +5570,7 @@
   {
     "lemma": "Askarata",
     "previous": "Askara",
-    "next": "Askaris 1",
+    "next": "Ἀσκαρίς 1",
     "chapters": [
       {
         "start": 1614,
@@ -5572,9 +5580,10 @@
     ]
   },
   {
-    "lemma": "Askaris 1",
+    "lemma": "Ἀσκαρίς 1",
     "previous": "Askarata",
-    "next": "Askaris 2",
+    "next": "Ἀσκαρίς 2",
+    "sort_key": "Askaris 1",
     "chapters": [
       {
         "start": 1614,
@@ -5584,9 +5593,10 @@
     ]
   },
   {
-    "lemma": "Askaris 2",
-    "previous": "Askaris 1",
+    "lemma": "Ἀσκαρίς 2",
+    "previous": "Ἀσκαρίς 1",
     "next": "Askaros",
+    "sort_key": "Askaris 2",
     "chapters": [
       {
         "start": 1614,
@@ -5597,7 +5607,7 @@
   },
   {
     "lemma": "Askaros",
-    "previous": "Askaris 2",
+    "previous": "Ἀσκαρίς 2",
     "next": "Askatakas",
     "chapters": [
       {
@@ -5683,7 +5693,7 @@
   {
     "lemma": "Askitai",
     "previous": "Askioi",
-    "next": "Asklapiastai",
+    "next": "Asklapiodoros",
     "chapters": [
       {
         "start": 1622,
@@ -5705,8 +5715,8 @@
   },
   {
     "lemma": "Asklapiodoros",
-    "previous": "Asklapiastai",
-    "next": "Asklapon 1",
+    "previous": "Askitai",
+    "next": "Asklapiastai",
     "chapters": [
       {
         "start": 1622,
@@ -5717,7 +5727,7 @@
   },
   {
     "lemma": "Asklapon 1",
-    "previous": "Asklapiodoros",
+    "previous": "Asklapiastai",
     "next": "Asklapon 2",
     "chapters": [
       {
@@ -5801,6 +5811,7 @@
     "lemma": "Asklepiades 1",
     "previous": "Asklepiadai",
     "next": "Asklepiades 2",
+    "sort_key": "Asklepiades 01",
     "chapters": [
       {
         "start": 1622,
@@ -5826,6 +5837,7 @@
     "lemma": "Asklepiades 3",
     "previous": "Asklepiades 2",
     "next": "Asklepiades 4",
+    "sort_key": "Asklepiades 03",
     "chapters": [
       {
         "start": 1624,
@@ -5838,6 +5850,7 @@
     "lemma": "Asklepiades 4",
     "previous": "Asklepiades 3",
     "next": "Asklepiades 5",
+    "sort_key": "Asklepiades 04",
     "chapters": [
       {
         "start": 1624,
@@ -5850,6 +5863,7 @@
     "lemma": "Asklepiades 5",
     "previous": "Asklepiades 4",
     "next": "Asklepiades 6",
+    "sort_key": "Asklepiades 05",
     "chapters": [
       {
         "start": 1624,
@@ -5862,6 +5876,7 @@
     "lemma": "Asklepiades 6",
     "previous": "Asklepiades 5",
     "next": "Asklepiades 7",
+    "sort_key": "Asklepiades 06",
     "chapters": [
       {
         "start": 1624,
@@ -5874,6 +5889,7 @@
     "lemma": "Asklepiades 7",
     "previous": "Asklepiades 6",
     "next": "Asklepiades 8",
+    "sort_key": "Asklepiades 07",
     "chapters": [
       {
         "start": 1624,
@@ -5886,6 +5902,7 @@
     "lemma": "Asklepiades 8",
     "previous": "Asklepiades 7",
     "next": "Asklepiades 9",
+    "sort_key": "Asklepiades 08",
     "chapters": [
       {
         "start": 1624,
@@ -5898,6 +5915,7 @@
     "lemma": "Asklepiades 9",
     "previous": "Asklepiades 8",
     "next": "Asklepiades 10",
+    "sort_key": "Asklepiades 09",
     "chapters": [
       {
         "start": 1624,
@@ -6473,6 +6491,7 @@
     "lemma": "Asklepiodoros 1",
     "previous": "Asklepigeneia 2",
     "next": "Asklepiodoros 2",
+    "sort_key": "Asklepiodoros 01",
     "chapters": [
       {
         "start": 1636,
@@ -6485,6 +6504,7 @@
     "lemma": "Asklepiodoros 2",
     "previous": "Asklepiodoros 1",
     "next": "Asklepiodoros 3",
+    "sort_key": "Asklepiodoros 02",
     "chapters": [
       {
         "start": 1636,
@@ -6497,6 +6517,7 @@
     "lemma": "Asklepiodoros 3",
     "previous": "Asklepiodoros 2",
     "next": "Asklepiodoros 4",
+    "sort_key": "Asklepiodoros 03",
     "chapters": [
       {
         "start": 1636,
@@ -6509,6 +6530,7 @@
     "lemma": "Asklepiodoros 4",
     "previous": "Asklepiodoros 3",
     "next": "Asklepiodoros 5",
+    "sort_key": "Asklepiodoros 04",
     "chapters": [
       {
         "start": 1636,
@@ -6521,6 +6543,7 @@
     "lemma": "Asklepiodoros 5",
     "previous": "Asklepiodoros 4",
     "next": "Asklepiodoros 6",
+    "sort_key": "Asklepiodoros 05",
     "chapters": [
       {
         "start": 1636,
@@ -6533,6 +6556,7 @@
     "lemma": "Asklepiodoros 6",
     "previous": "Asklepiodoros 5",
     "next": "Asklepiodoros 7",
+    "sort_key": "Asklepiodoros 06",
     "chapters": [
       {
         "start": 1636,
@@ -6545,6 +6569,7 @@
     "lemma": "Asklepiodoros 7",
     "previous": "Asklepiodoros 6",
     "next": "Asklepiodoros 8",
+    "sort_key": "Asklepiodoros 07",
     "chapters": [
       {
         "start": 1636,
@@ -6557,6 +6582,7 @@
     "lemma": "Asklepiodoros 8",
     "previous": "Asklepiodoros 7",
     "next": "Asklepiodoros 9",
+    "sort_key": "Asklepiodoros 08",
     "chapters": [
       {
         "start": 1636,
@@ -6569,6 +6595,7 @@
     "lemma": "Asklepiodoros 9",
     "previous": "Asklepiodoros 8",
     "next": "Asklepiodoros 10",
+    "sort_key": "Asklepiodoros 09",
     "chapters": [
       {
         "start": 1636,
@@ -6777,6 +6804,7 @@
     "lemma": "Asklepios 1",
     "previous": "Asklepion",
     "next": "Asklepios 2",
+    "sort_key": "Asklepios 01",
     "chapters": [
       {
         "start": 1642,
@@ -6817,6 +6845,7 @@
     "lemma": "Asklepios 4",
     "previous": "Asklepios 3",
     "next": "Asklepios 5",
+    "sort_key": "Asklepios 04",
     "chapters": [
       {
         "start": 1697,
@@ -6842,6 +6871,7 @@
     "lemma": "Asklepios 6",
     "previous": "Asklepios 5",
     "next": "Asklepios 7",
+    "sort_key": "Asklepios 06",
     "chapters": [
       {
         "start": 1697,
@@ -6854,6 +6884,7 @@
     "lemma": "Asklepios 7",
     "previous": "Asklepios 6",
     "next": "Asklepios 8",
+    "sort_key": "Asklepios 07",
     "chapters": [
       {
         "start": 1698,
@@ -6866,6 +6897,7 @@
     "lemma": "Asklepios 8",
     "previous": "Asklepios 7",
     "next": "Asklepios 9",
+    "sort_key": "Asklepios 08",
     "chapters": [
       {
         "start": 1698,
@@ -6878,6 +6910,7 @@
     "lemma": "Asklepios 9",
     "previous": "Asklepios 8",
     "next": "Asklepios 10",
+    "sort_key": "Asklepios 09",
     "chapters": [
       {
         "start": 1698,
@@ -6952,6 +6985,7 @@
     "lemma": "Ἀσκοπήρα",
     "previous": "Askondas",
     "next": "Askordos",
+    "sort_key": "Askopera",
     "chapters": [
       {
         "start": 1700,
@@ -7330,7 +7364,7 @@
   {
     "lemma": "Asopichos 5",
     "previous": "Asopichos 4",
-    "next": "Asopios",
+    "next": "Asopis 1",
     "chapters": [
       {
         "start": 1704,
@@ -7352,7 +7386,7 @@
   },
   {
     "lemma": "Asopis 1",
-    "previous": "Asopios",
+    "previous": "Asopichos 5",
     "next": "Asopis 2",
     "chapters": [
       {
@@ -7435,7 +7469,7 @@
   },
   {
     "lemma": "Asopo",
-    "previous": "Asopis 7",
+    "previous": "Asopios",
     "next": "Asopodoros 1",
     "chapters": [
       {
@@ -8251,7 +8285,7 @@
   {
     "lemma": "Asphodelodeis",
     "previous": "Asphar",
-    "next": "Asphodelos",
+    "next": "Ἀσφόδελος",
     "chapters": [
       {
         "start": 1730,
@@ -8261,7 +8295,7 @@
     ]
   },
   {
-    "lemma": "Asphodelos",
+    "lemma": "Ἀσφόδελος",
     "previous": "Asphodelodeis",
     "next": "Asphodikos",
     "chapters": [
@@ -8274,7 +8308,7 @@
   },
   {
     "lemma": "Asphodikos",
-    "previous": "Asphodelos",
+    "previous": "Ἀσφόδελος",
     "next": "Asphynis",
     "chapters": [
       {
@@ -8323,6 +8357,7 @@
     "lemma": "ἐν ἀσπίδι",
     "previous": "Aspiate",
     "next": "Aspidocharme",
+    "sort_key": "Aspidi",
     "chapters": [
       {
         "start": 1734,
@@ -8347,6 +8382,7 @@
     "lemma": "Ἀσπιώνου σατραπεία",
     "previous": "Aspidocharme",
     "next": "Aspis 1",
+    "sort_key": "Aspionu satrapeia",
     "chapters": [
       {
         "start": 1734,
@@ -8359,6 +8395,7 @@
     "lemma": "Aspis 1",
     "previous": "Ἀσπιώνου σατραπεία",
     "next": "Aspis 2",
+    "sort_key": "Aspis 01",
     "chapters": [
       {
         "start": 1734,
@@ -8371,6 +8408,7 @@
     "lemma": "Aspis 2",
     "previous": "Aspis 1",
     "next": "Aspis 3",
+    "sort_key": "Aspis 02",
     "chapters": [
       {
         "start": 1734,
@@ -8383,6 +8421,7 @@
     "lemma": "Aspis 3",
     "previous": "Aspis 2",
     "next": "Aspis 4",
+    "sort_key": "Aspis 03",
     "chapters": [
       {
         "start": 1734,
@@ -8395,6 +8434,7 @@
     "lemma": "Aspis 4",
     "previous": "Aspis 3",
     "next": "Aspis 5",
+    "sort_key": "Aspis 04",
     "chapters": [
       {
         "start": 1734,
@@ -8407,6 +8447,7 @@
     "lemma": "Aspis 5",
     "previous": "Aspis 4",
     "next": "Aspis 6",
+    "sort_key": "Aspis 05",
     "chapters": [
       {
         "start": 1734,
@@ -8419,6 +8460,7 @@
     "lemma": "Aspis 6",
     "previous": "Aspis 5",
     "next": "Aspis 7",
+    "sort_key": "Aspis 06",
     "chapters": [
       {
         "start": 1734,
@@ -8431,6 +8473,7 @@
     "lemma": "Aspis 7",
     "previous": "Aspis 6",
     "next": "Aspis 8",
+    "sort_key": "Aspis 07",
     "chapters": [
       {
         "start": 1734,
@@ -8443,6 +8486,7 @@
     "lemma": "Aspis 8",
     "previous": "Aspis 7",
     "next": "Aspis 9",
+    "sort_key": "Aspis 08",
     "chapters": [
       {
         "start": 1734,
@@ -8455,6 +8499,7 @@
     "lemma": "Aspis 9",
     "previous": "Aspis 8",
     "next": "Aspis 10",
+    "sort_key": "Aspis 09",
     "chapters": [
       {
         "start": 1734,
@@ -8622,7 +8667,7 @@
   {
     "lemma": "Asporacius",
     "previous": "Aspona",
-    "next": "Aspordenon oros",
+    "next": "Ἀσπόρδηνον ὄρος",
     "chapters": [
       {
         "start": 1738,
@@ -8631,9 +8676,10 @@
     ]
   },
   {
-    "lemma": "Aspordenon oros",
+    "lemma": "Ἀσπόρδηνον ὄρος",
     "previous": "Asporacius",
     "next": "Asprenas",
+    "sort_key": "Aspordenon oros",
     "chapters": [
       {
         "start": 1738,
@@ -8644,8 +8690,8 @@
   },
   {
     "lemma": "Asprenas",
-    "previous": "Aspordenon oros",
-    "next": "Asprenas a-e",
+    "previous": "Ἀσπόρδηνον ὄρος",
+    "next": "Asprianus",
     "chapters": [
       {
         "start": 1738,
@@ -8668,8 +8714,8 @@
   },
   {
     "lemma": "Asprianus",
-    "previous": "Asprenas a-e",
-    "next": "Aspru kastron 1",
+    "previous": "Asprenas",
+    "next": "Ἄσπρου κάστρον 1",
     "chapters": [
       {
         "start": 1738,
@@ -8679,9 +8725,10 @@
     ]
   },
   {
-    "lemma": "Aspru kastron 1",
+    "lemma": "Ἄσπρου κάστρον 1",
     "previous": "Asprianus",
-    "next": "Aspru kastron 2",
+    "next": "Ἄσπρου κάστρον 2",
+    "sort_key": "Aspru kastron 1",
     "chapters": [
       {
         "start": 1738,
@@ -8691,9 +8738,10 @@
     ]
   },
   {
-    "lemma": "Aspru kastron 2",
-    "previous": "Aspru kastron 1",
+    "lemma": "Ἄσπρου κάστρον 2",
+    "previous": "Ἄσπρου κάστρον 1",
     "next": "Aspukka",
+    "sort_key": "Aspru kastron 2",
     "chapters": [
       {
         "start": 1738,
@@ -8704,7 +8752,7 @@
   },
   {
     "lemma": "Aspukka",
-    "previous": "Aspru kastron 2",
+    "previous": "Ἄσπρου κάστρον 2",
     "next": "Aspuna",
     "chapters": [
       {
@@ -9906,6 +9954,7 @@
     "lemma": "Asteria 1",
     "previous": "Aster 5",
     "next": "Asteria 2",
+    "sort_key": "Asteria 01",
     "chapters": [
       {
         "start": 1780,
@@ -9944,6 +9993,7 @@
     "lemma": "Asteria 4",
     "previous": "Asteria 3",
     "next": "Asteria 5",
+    "sort_key": "Asteria 04",
     "chapters": [
       {
         "start": 1781,
@@ -9956,6 +10006,7 @@
     "lemma": "Asteria 5",
     "previous": "Asteria 4",
     "next": "Asteria 6",
+    "sort_key": "Asteria 05",
     "chapters": [
       {
         "start": 1781,
@@ -15719,6 +15770,7 @@
     "lemma": "Athenodoros 3",
     "previous": "Athenodoros 2",
     "next": "Athenodoros 4",
+    "sort_key": "Athenodoros 03",
     "chapters": [
       {
         "start": 2044,
@@ -15731,6 +15783,7 @@
     "lemma": "Athenodoros 4",
     "previous": "Athenodoros 3",
     "next": "Athenodoros 5",
+    "sort_key": "Athenodoros 04",
     "chapters": [
       {
         "start": 2044,
@@ -38741,7 +38794,7 @@
   {
     "lemma": "Baitarrhus",
     "previous": "Bait",
-    "next": "Baite",
+    "next": "Βαίτη",
     "chapters": [
       {
         "start": 2778,
@@ -38751,9 +38804,10 @@
     ]
   },
   {
-    "lemma": "Baite",
+    "lemma": "Βαίτη",
     "previous": "Baitarrhus",
     "next": "Baithakath",
+    "sort_key": "Baite",
     "chapters": [
       {
         "start": 2778,
@@ -38764,7 +38818,7 @@
   },
   {
     "lemma": "Baithakath",
-    "previous": "Baite",
+    "previous": "Βαίτη",
     "next": "Baithana",
     "chapters": [
       {

@@ -486,6 +486,7 @@
     "lemma": "Tauros 4",
     "previous": "Tauros 3",
     "next": "Tauros 5",
+    "sort_key": "Tauros 04",
     "chapters": [
       {
         "start": 39,
@@ -823,7 +824,7 @@
   {
     "lemma": "Tausius",
     "previous": "Taurus 13",
-    "next": "Tauson",
+    "next": "Ταούσων",
     "chapters": [
       {
         "start": 72,
@@ -833,7 +834,7 @@
     ]
   },
   {
-    "lemma": "Tauson",
+    "lemma": "Ταούσων",
     "previous": "Tausius",
     "next": "Tautaendia",
     "chapters": [
@@ -846,7 +847,7 @@
   },
   {
     "lemma": "Tautaendia",
-    "previous": "Tauson",
+    "previous": "Ταούσων",
     "next": "Tautalos",
     "chapters": [
       {
@@ -943,7 +944,7 @@
   {
     "lemma": "Taxatio",
     "previous": "Tautomedes",
-    "next": "Taxeina",
+    "next": "Ταξεῖνα",
     "chapters": [
       {
         "start": 73,
@@ -953,9 +954,10 @@
     ]
   },
   {
-    "lemma": "Taxeina",
+    "lemma": "Ταξεῖνα",
     "previous": "Taxatio",
     "next": "Taxgaition",
+    "sort_key": "Taxeina",
     "chapters": [
       {
         "start": 75,
@@ -966,8 +968,8 @@
   },
   {
     "lemma": "Taxgaition",
-    "previous": "Taxeina",
-    "next": "Taxiana",
+    "previous": "Ταξεῖνα",
+    "next": "Ταξιάνα",
     "chapters": [
       {
         "start": 75,
@@ -976,9 +978,10 @@
     ]
   },
   {
-    "lemma": "Taxiana",
+    "lemma": "Ταξιάνα",
     "previous": "Taxgaition",
-    "next": "Taxiarchos",
+    "next": "Ταξίαρχος",
+    "sort_key": "Taxiana",
     "chapters": [
       {
         "start": 75,
@@ -988,8 +991,8 @@
     ]
   },
   {
-    "lemma": "Taxiarchos",
-    "previous": "Taxiana",
+    "lemma": "Ταξίαρχος",
+    "previous": "Ταξιάνα",
     "next": "Taxila",
     "chapters": [
       {
@@ -1001,7 +1004,7 @@
   },
   {
     "lemma": "Taxila",
-    "previous": "Taxiarchos",
+    "previous": "Ταξίαρχος",
     "next": "Taxiles",
     "chapters": [
       {
@@ -1027,7 +1030,7 @@
   {
     "lemma": "Taximagulus",
     "previous": "Taxiles",
-    "next": "Taxis",
+    "next": "Τάξις",
     "chapters": [
       {
         "start": 85,
@@ -1037,7 +1040,7 @@
     ]
   },
   {
-    "lemma": "Taxis",
+    "lemma": "Τάξις",
     "previous": "Taximagulus",
     "next": "Ταξός",
     "chapters": [
@@ -1050,7 +1053,7 @@
   },
   {
     "lemma": "Ταξός",
-    "previous": "Taxis",
+    "previous": "Τάξις",
     "next": "Taxtanulates",
     "chapters": [
       {

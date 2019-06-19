@@ -7041,7 +7041,7 @@
   {
     "lemma": "Tiarai",
     "previous": "Tiara",
-    "next": "Tiarantos",
+    "next": "Τιαραντός",
     "chapters": [
       {
         "start": 761,
@@ -7051,7 +7051,7 @@
     ]
   },
   {
-    "lemma": "Tiarantos",
+    "lemma": "Τιαραντός",
     "previous": "Tiarai",
     "next": "Tiare",
     "chapters": [
@@ -7064,7 +7064,7 @@
   },
   {
     "lemma": "Tiare",
-    "previous": "Tiarantos",
+    "previous": "Τιαραντός",
     "next": "Tiasa",
     "chapters": [
       {
@@ -7124,7 +7124,7 @@
   {
     "lemma": "Tiauranceaicus",
     "previous": "Tiatura",
-    "next": "Tiausa",
+    "next": "Τιαύσα",
     "chapters": [
       {
         "start": 763,
@@ -7134,9 +7134,10 @@
     ]
   },
   {
-    "lemma": "Tiausa",
+    "lemma": "Τιαύσα",
     "previous": "Tiauranceaicus",
     "next": "Tibarani",
+    "sort_key": "Tiausa",
     "chapters": [
       {
         "start": 763,
@@ -7147,7 +7148,7 @@
   },
   {
     "lemma": "Tibarani",
-    "previous": "Tiausa",
+    "previous": "Τιαύσα",
     "next": "Tibarenoi",
     "chapters": [
       {
@@ -7220,7 +7221,7 @@
   {
     "lemma": "Tiberiacum",
     "previous": "Tibeios",
-    "next": "Tiberiane",
+    "next": "Τιβεριανή",
     "chapters": [
       {
         "start": 765,
@@ -7230,9 +7231,10 @@
     ]
   },
   {
-    "lemma": "Tiberiane",
+    "lemma": "Τιβεριανή",
     "previous": "Tiberiacum",
     "next": "Tiberianus",
+    "sort_key": "Tiberiane",
     "chapters": [
       {
         "start": 766,
@@ -7243,8 +7245,9 @@
   },
   {
     "lemma": "Tiberianus",
-    "previous": "Tiberiane",
+    "previous": "Τιβεριανή",
     "next": "Tiberianus 1",
+    "redirect": "Aradius 1",
     "chapters": [
       {
         "start": 766,

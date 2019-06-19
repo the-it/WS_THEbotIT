@@ -8149,6 +8149,7 @@
   {
     "lemma": "Apukumis",
     "previous": "Aptyratheitai",
+    "next": "Aqua, Aquae 6a",
     "chapters": [
       {
         "start": 113,
@@ -8156,6 +8157,10 @@
         "author": "Ruge"
       }
     ]
+  },
+  {
+    "lemma": "Aqua, Aquae 6a",
+    "previous": "Apukumis"
   },
   {
     "lemma": "Aqua, Aquae 94",
@@ -8642,6 +8647,7 @@
     "lemma": "Archelaos 6a",
     "previous": "Archelaos 6",
     "next": "Archelaos 33a",
+    "sort_key": "Archelaos 06a",
     "wp_link": "w:de:Archelaos",
     "chapters": [
       {
@@ -10279,10 +10285,13 @@
   },
   {
     "lemma": "Aristonymos 9",
-    "previous": "Aristonymos 8a"
+    "previous": "Aristonymos 8a",
+    "next": "Aristophantos a"
   },
   {
     "lemma": "Aristophantos a",
+    "previous": "Aristonymos 9",
+    "next": "Aristophantos 2",
     "sort_key": "Aristophantos 0",
     "chapters": [
       {
@@ -10291,6 +10300,10 @@
         "author": "Hiller von Gaertringen"
       }
     ]
+  },
+  {
+    "lemma": "Aristophantos 2",
+    "previous": "Aristophantos a"
   },
   {
     "lemma": "Aristophantos a",
@@ -10324,7 +10337,8 @@
   },
   {
     "lemma": "Aristophon 6",
-    "previous": "Aristophon 1a"
+    "previous": "Aristophon 1a",
+    "next": null
   },
   {
     "lemma": "Aristoteles 8.9",
@@ -10342,6 +10356,7 @@
   },
   {
     "lemma": "Aristoteles 8",
+    "previous": null,
     "next": "Aristoteles 12a",
     "sort_key": "Aristoteles 08"
   },
@@ -10425,6 +10440,7 @@
   {
     "lemma": "Arkadianai 2",
     "previous": "Arka 5",
+    "next": "Arkadion",
     "chapters": [
       {
         "start": 137,
@@ -10432,6 +10448,10 @@
         "author": "Ruge"
       }
     ]
+  },
+  {
+    "lemma": "Arkadion",
+    "previous": "Arkadianai 2"
   },
   {
     "lemma": "Arkadianai",
@@ -10732,7 +10752,7 @@
   {
     "lemma": "Arrianus 2a",
     "previous": "Arretium",
-    "next": "Arrianus 12",
+    "next": "Arrius 12",
     "sort_key": "Arrianus 02a",
     "chapters": [
       {
@@ -10743,8 +10763,11 @@
     ]
   },
   {
-    "lemma": "Arrianus 12",
+    "lemma": "Arrius 12",
     "previous": "Arrianus 2a"
+  },
+  {
+    "lemma": "Arrianus 12"
   },
   {
     "lemma": "Arrianus 2a",
@@ -10907,10 +10930,17 @@
   },
   {
     "lemma": "Artagigarta",
-    "previous": "Artabe"
+    "previous": "Artabe",
+    "next": "Artagnes"
+  },
+  {
+    "lemma": "Artagnes",
+    "previous": "Artagigarta",
+    "next": "Artahe"
   },
   {
     "lemma": "Artahe",
+    "previous": "Artagnes",
     "next": "Artamis 1"
   },
   {
@@ -14397,6 +14427,7 @@
   {
     "lemma": "Bello",
     "previous": "Belligenes",
+    "next": "Bellona",
     "chapters": [
       {
         "start": 246,
@@ -14407,6 +14438,7 @@
   },
   {
     "lemma": "Bellona",
+    "previous": "Bello",
     "next": "Bellum a"
   },
   {
@@ -16984,7 +17016,7 @@
   {
     "lemma": "Charax 16a",
     "previous": "Charax",
-    "next": "Charcha",
+    "next": "Charcha 1",
     "chapters": [
       {
         "start": 283,
@@ -16994,8 +17026,11 @@
     ]
   },
   {
+    "lemma": "Charcha 1",
+    "previous": "Charax 16a"
+  },
+  {
     "lemma": "Charcha",
-    "previous": "Charax 16a",
     "next": "Charcha 2"
   },
   {
@@ -18345,10 +18380,18 @@
   {
     "lemma": "Coriopis",
     "previous": "Corioco",
+    "next": "Corma",
+    "redirect": true
+  },
+  {
+    "lemma": "Corma",
+    "previous": "Coriopis",
+    "next": "Cornan",
     "redirect": true
   },
   {
     "lemma": "Cornan",
+    "previous": "Corma",
     "next": "Corne",
     "redirect": "Carnon"
   },
@@ -18379,7 +18422,7 @@
   {
     "lemma": "Cornelius a",
     "previous": "Cornelianus 7",
-    "next": "Cornelius 10a(-e)",
+    "next": "Cornelius 10a",
     "chapters": [
       {
         "start": 328,
@@ -18389,20 +18432,13 @@
     ]
   },
   {
-    "lemma": "Cornelius 10a(-e)",
+    "lemma": "Cornelius 10a",
     "previous": "Cornelius a",
-    "next": "Cornelius 10b",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Groag"
-      }
-    ]
+    "next": "Cornelius 10b"
   },
   {
     "lemma": "Cornelius 10b",
-    "previous": "Cornelius 10a(-e)",
+    "previous": "Cornelius 10a",
     "next": "Cornelius 40",
     "chapters": [
       {
@@ -18456,7 +18492,8 @@
   },
   {
     "lemma": "Cornelius 135",
-    "previous": "Cornelius 110a"
+    "previous": "Cornelius 110a",
+    "next": null
   },
   {
     "lemma": "Cornificius 7",
@@ -19142,7 +19179,7 @@
   {
     "lemma": "Deïdameia 6",
     "previous": "Decanus 3",
-    "next": "Deinicha",
+    "next": "Deimos",
     "chapters": [
       {
         "start": 339,
@@ -19152,8 +19189,13 @@
     ]
   },
   {
-    "lemma": "Deinicha",
+    "lemma": "Deimos",
     "previous": "Deïdameia 6",
+    "next": "Deinicha"
+  },
+  {
+    "lemma": "Deinicha",
+    "previous": "Deimos",
     "next": "Deinon 7a",
     "chapters": [
       {
@@ -19338,7 +19380,6 @@
   },
   {
     "lemma": "Demodike",
-    "next": "Demodokos 6a",
     "chapters": [
       {
         "start": 346,
@@ -19348,8 +19389,12 @@
     ]
   },
   {
+    "lemma": "Demodike 6",
+    "next": "Demodokos 6a"
+  },
+  {
     "lemma": "Demodokos 6a",
-    "previous": "Demodike",
+    "previous": "Demodike 6",
     "next": "Demokratia",
     "chapters": [
       {

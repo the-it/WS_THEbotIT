@@ -2118,7 +2118,7 @@
   {
     "lemma": "Basanisai",
     "previous": "Basanarai",
-    "next": "Βασανίτης",
+    "next": "Basanites",
     "chapters": [
       {
         "start": 39,
@@ -2128,7 +2128,7 @@
     ]
   },
   {
-    "lemma": "Βασανίτης",
+    "lemma": "Basanites",
     "previous": "Basanisai",
     "next": "Basanitis",
     "sort_key": "Basanites",
@@ -2143,7 +2143,7 @@
   },
   {
     "lemma": "Basanitis",
-    "previous": "Βασανίτης",
+    "previous": "Basanites",
     "next": "Βασανίτου λίθου ὄρος",
     "redirect": "Batanaia 1",
     "chapters": [
@@ -5284,6 +5284,7 @@
     "lemma": "Βαθὺς λιμήν 3",
     "previous": "Βαθὺς λιμήν 2",
     "next": "Βαθὺς ῥύαξ",
+    "sort_key": "Bathys limen 3",
     "chapters": [
       {
         "start": 139,
@@ -5296,6 +5297,7 @@
     "lemma": "Βαθὺς ῥύαξ",
     "previous": "Βαθὺς λιμήν 3",
     "next": "Bati",
+    "sort_key": "Bathys ryax",
     "chapters": [
       {
         "start": 139,
@@ -5704,6 +5706,7 @@
     "lemma": "Βατράχου",
     "previous": "Βάτραχος λιμήν",
     "next": "Batrasabbes",
+    "sort_key": "Batrachu",
     "chapters": [
       {
         "start": 145,
@@ -7671,6 +7674,7 @@
     "lemma": "Belbina 3",
     "previous": "Belbina 2",
     "next": "Belca",
+    "redirect": "Bembina",
     "chapters": [
       {
         "start": 198,
@@ -8744,7 +8748,7 @@
   },
   {
     "lemma": "Bellona",
-    "previous": "Bellocassi",
+    "previous": "Bellonum",
     "next": "Bellonarii",
     "wp_link": "w:de:Bellona",
     "chapters": [
@@ -8955,7 +8959,7 @@
   {
     "lemma": "Belola",
     "previous": "Beloium",
-    "next": "Βελομαντεία",
+    "next": "Belomanteia",
     "redirect": "Bellona",
     "chapters": [
       {
@@ -8965,7 +8969,7 @@
     ]
   },
   {
-    "lemma": "Βελομαντεία",
+    "lemma": "Belomanteia",
     "previous": "Belola",
     "next": "Belone",
     "sort_key": "Belomanteia",
@@ -8979,7 +8983,7 @@
   },
   {
     "lemma": "Belone",
-    "previous": "Βελομαντεία",
+    "previous": "Belomanteia",
     "next": "Belos 1",
     "chapters": [
       {
@@ -9712,7 +9716,7 @@
   {
     "lemma": "Bennike",
     "previous": "Benneueke",
-    "next": "Bennikos kolpos",
+    "next": "Βεννικὸς κόλπος",
     "chapters": [
       {
         "start": 276,
@@ -9721,9 +9725,10 @@
     ]
   },
   {
-    "lemma": "Bennikos kolpos",
+    "lemma": "Βεννικὸς κόλπος",
     "previous": "Bennike",
     "next": "Bennios",
+    "sort_key": "Bennikos",
     "chapters": [
       {
         "start": 276,
@@ -9734,7 +9739,7 @@
   },
   {
     "lemma": "Bennios",
-    "previous": "Bennikos kolpos",
+    "previous": "Βεννικὸς κόλπος",
     "next": "Bennisoa",
     "chapters": [
       {

@@ -2575,7 +2575,7 @@
   {
     "lemma": "Avidius 1b",
     "previous": "Avidius 1a",
-    "next": "Aurelius 5a",
+    "next": "Avillius 2c",
     "chapters": [
       {
         "start": 67,
@@ -2585,9 +2585,14 @@
     ]
   },
   {
-    "lemma": "Aurelius 5a",
+    "lemma": "Avillius 2c",
     "previous": "Avidius 1b",
-    "next": "Aurelius 37aa) = 37b",
+    "next": "Aurelius 5a"
+  },
+  {
+    "lemma": "Aurelius 5a",
+    "previous": "Avillius 2c",
+    "next": "Aurelius 37b",
     "chapters": [
       {
         "start": 67,
@@ -2597,8 +2602,21 @@
     ]
   },
   {
-    "lemma": "Aurelius 37aa) = 37b",
+    "lemma": "Aurelius 37b",
     "previous": "Aurelius 5a",
+    "next": "Aurelius 63aa"
+  },
+  {
+    "lemma": "Aurelius 63aa",
+    "previous": "Aurelius 37b",
+    "next": "Aurelius 65a"
+  },
+  {
+    "lemma": "Aurelius 65a",
+    "previous": "Aurelius 63aa"
+  },
+  {
+    "lemma": "Aurelius 37aa) = 37b",
     "next": "Aurelius 63aa",
     "chapters": [
       {
@@ -2681,7 +2699,7 @@
   {
     "lemma": "Aurelius 192e",
     "previous": "Aurelius 192d",
-    "next": "Pompeianus 1a",
+    "next": "Aurelius 221a",
     "chapters": [
       {
         "start": 69,
@@ -2691,8 +2709,16 @@
     ]
   },
   {
-    "lemma": "Pompeianus 1a",
+    "lemma": "Aurelius 221a",
     "previous": "Aurelius 192e",
+    "next": "Aurelius 232a"
+  },
+  {
+    "lemma": "Aurelius 232a",
+    "previous": "Aurelius 221a"
+  },
+  {
+    "lemma": "Pompeianus 1a",
     "next": "Aurelius 221a",
     "chapters": [
       {
@@ -4090,6 +4116,7 @@
   {
     "lemma": "Cuspius 1a",
     "previous": "Curvius 2",
+    "next": "Cutius 1a",
     "chapters": [
       {
         "start": 110,
@@ -4100,6 +4127,7 @@
   },
   {
     "lemma": "Cutius 1a",
+    "previous": "Cuspius 1a",
     "next": "Damocharis 2"
   },
   {
