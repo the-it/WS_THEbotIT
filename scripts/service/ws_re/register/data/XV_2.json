@@ -350,7 +350,8 @@
   {
     "lemma": "Μέταλλος 1",
     "previous": "Metallon",
-    "next": "Metallos 2",
+    "next": "Μέταλλος 2",
+    "sort_key": "Metallos 1",
     "chapters": [
       {
         "start": 1323,
@@ -360,7 +361,7 @@
     ]
   },
   {
-    "lemma": "Metallos 2",
+    "lemma": "Μέταλλος 2",
     "previous": "Μέταλλος 1",
     "next": "Metambala",
     "chapters": [
@@ -372,7 +373,7 @@
   },
   {
     "lemma": "Metambala",
-    "previous": "Metallos 2",
+    "previous": "Μέταλλος 2",
     "next": "Metameleia",
     "chapters": [
       {
@@ -502,7 +503,7 @@
   },
   {
     "lemma": "Metapioi",
-    "previous": "Metapinum",
+    "previous": "Metapinun",
     "next": "Metapontios",
     "chapters": [
       {
@@ -551,7 +552,7 @@
   {
     "lemma": "Metarchios",
     "previous": "Metapontum",
-    "next": "Metaris eischysis",
+    "next": "Μεταρὶς εἴσχυσις",
     "chapters": [
       {
         "start": 1368,
@@ -561,9 +562,10 @@
     ]
   },
   {
-    "lemma": "Metaris eischysis",
+    "lemma": "Μεταρὶς εἴσχυσις",
     "previous": "Metarchios",
     "next": "Metas",
+    "sort_key": "Metarisei",
     "chapters": [
       {
         "start": 1368,
@@ -574,7 +576,7 @@
   },
   {
     "lemma": "Metas",
-    "previous": "Metaris eischysis",
+    "previous": "Μεταρὶς εἴσχυσις",
     "next": "Metasoris",
     "chapters": [
       {
@@ -1052,7 +1054,7 @@
   {
     "lemma": "Methydrion 2",
     "previous": "Methydrion 1",
-    "next": "Methylion",
+    "next": "Μεθύλιον",
     "chapters": [
       {
         "start": 1391,
@@ -1062,7 +1064,7 @@
     ]
   },
   {
-    "lemma": "Methylion",
+    "lemma": "Μεθύλιον",
     "previous": "Methydrion 2",
     "next": "Methymna",
     "chapters": [
@@ -1074,7 +1076,7 @@
   },
   {
     "lemma": "Methymna",
-    "previous": "Methylion",
+    "previous": "Μεθύλιον",
     "next": "Methymnaios",
     "chapters": [
       {
@@ -1209,6 +1211,7 @@
     "lemma": "Metilius 2",
     "previous": "Metilius 1",
     "next": "Metilius 3",
+    "sort_key": "Metilius 02",
     "chapters": [
       {
         "start": 1397,
@@ -1221,6 +1224,7 @@
     "lemma": "Metilius 3",
     "previous": "Metilius 2",
     "next": "Metilius 4",
+    "sort_key": "Metilius 03",
     "chapters": [
       {
         "start": 1398,
@@ -1271,6 +1275,7 @@
     "lemma": "Metilius 7",
     "previous": "Metilius 6",
     "next": "Metilius 8",
+    "sort_key": "Metilius 07",
     "chapters": [
       {
         "start": 1398,
@@ -5629,6 +5634,7 @@
     "lemma": "Miltiades 5",
     "previous": "Miltiades 4",
     "next": "Miltiades 6",
+    "sort_key": "Miltiades 05",
     "chapters": [
       {
         "start": 1705,
@@ -5641,6 +5647,7 @@
     "lemma": "Miltiades 6",
     "previous": "Miltiades 5",
     "next": "Miltiades 7",
+    "sort_key": "Miltiades 06",
     "chapters": [
       {
         "start": 1705,
@@ -5677,6 +5684,7 @@
     "lemma": "Miltiades 9",
     "previous": "Miltiades 8",
     "next": "Miltiades 10",
+    "sort_key": "Miltiades 09",
     "chapters": [
       {
         "start": 1705,
@@ -6908,6 +6916,7 @@
     "lemma": "Minicius 5",
     "previous": "Minicius 4",
     "next": "Minicius 6",
+    "sort_key": "Minicius 05",
     "chapters": [
       {
         "start": 1810,
@@ -6932,6 +6941,7 @@
     "lemma": "Minicius 7",
     "previous": "Minicius 6",
     "next": "Minicius 8",
+    "sort_key": "Minicius 07",
     "chapters": [
       {
         "start": 1811,

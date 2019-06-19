@@ -146,7 +146,7 @@
     "lemma": "Aion 1a",
     "previous": "Aineias 5",
     "next": "Aischylos 7a",
-    "wp_link": "w:de:Aion",
+    "sort_key": "Aion 1a",
     "chapters": [
       {
         "start": 11,
@@ -1876,7 +1876,7 @@
   {
     "lemma": "Damon 15b",
     "previous": "Damokrita",
-    "next": "Daulios",
+    "next": "Daphnus 1",
     "chapters": [
       {
         "start": 218,
@@ -1886,8 +1886,13 @@
     ]
   },
   {
-    "lemma": "Daulios",
+    "lemma": "Daphnus 1",
     "previous": "Damon 15b",
+    "next": "Daulios"
+  },
+  {
+    "lemma": "Daulios",
+    "previous": "Daphnus 1",
     "next": "Δειγματοάρτης",
     "chapters": [
       {
@@ -2611,7 +2616,7 @@
   {
     "lemma": "Essener",
     "previous": "Erotylos",
-    "next": "Euandros",
+    "next": "Euandros 4a",
     "wp_link": "w:de:Essener",
     "chapters": [
       {
@@ -2622,8 +2627,11 @@
     ]
   },
   {
+    "lemma": "Euandros 4a",
+    "previous": "Essener"
+  },
+  {
     "lemma": "Euandros",
-    "previous": "Essener",
     "chapters": [
       {
         "start": 430,
