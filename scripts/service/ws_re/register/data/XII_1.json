@@ -318,7 +318,7 @@
   {
     "lemma": "Kynosarges",
     "previous": "Kynos 3",
-    "next": "Kynos kephalai",
+    "next": "Κυνὸς κεφαλαί",
     "chapters": [
       {
         "start": 33,
@@ -328,9 +328,9 @@
     ]
   },
   {
-    "lemma": "Kynos kephalai",
+    "lemma": "Κυνὸς κεφαλαί",
     "previous": "Kynosarges",
-    "next": "Kynos kephale",
+    "next": "Κυνὸς κεφαλή",
     "chapters": [
       {
         "start": 33,
@@ -340,8 +340,12 @@
     ]
   },
   {
+    "lemma": "Κυνὸς κεφαλή",
+    "previous": "Κυνὸς κεφαλαί",
+    "sort_key": "Kynoskephale"
+  },
+  {
     "lemma": "Kynos kephale",
-    "previous": "Kynos kephalai",
     "next": "Kynos sema 1",
     "chapters": [
       {
@@ -823,7 +827,7 @@
   {
     "lemma": "Kyphi",
     "previous": "Kyphanta",
-    "next": "Kyphon",
+    "next": "Κύφων",
     "chapters": [
       {
         "start": 52,
@@ -833,9 +837,9 @@
     ]
   },
   {
-    "lemma": "Kyphon",
+    "lemma": "Κύφων",
     "previous": "Kyphi",
-    "next": "Kyphos",
+    "next": "Κύφος",
     "chapters": [
       {
         "start": 57,
@@ -845,9 +849,10 @@
     ]
   },
   {
-    "lemma": "Kyphos",
-    "previous": "Kyphon",
+    "lemma": "Κύφος",
+    "previous": "Κύφων",
     "next": "Kypria",
+    "sort_key": "Kyphos",
     "chapters": [
       {
         "start": 57,
@@ -858,8 +863,8 @@
   },
   {
     "lemma": "Kypria",
-    "previous": "Kyphos",
-    "next": "Kypriai nesoi",
+    "previous": "Κύφος",
+    "next": "Κύπριαι νῆσοι",
     "redirect": true,
     "chapters": [
       {
@@ -869,20 +874,14 @@
     ]
   },
   {
-    "lemma": "Kypriai nesoi",
+    "lemma": "Κύπριαι νῆσοι",
     "previous": "Kypria",
     "next": "Kyprischer Kalender",
-    "chapters": [
-      {
-        "start": 58,
-        "end": 58,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Kypriain"
   },
   {
     "lemma": "Kyprischer Kalender",
-    "previous": "Kypriai nesoi",
+    "previous": "Κύπριαι νῆσοι",
     "next": "Kypros 1",
     "chapters": [
       {

@@ -5703,17 +5703,6 @@
     ]
   },
   {
-    "lemma": "Asklapiastai",
-    "previous": "Askitai",
-    "next": "Asklapiodoros",
-    "chapters": [
-      {
-        "start": 1622,
-        "end": 1622
-      }
-    ]
-  },
-  {
     "lemma": "Asklapiodoros",
     "previous": "Askitai",
     "next": "Asklapiastai",
@@ -5722,6 +5711,17 @@
         "start": 1622,
         "end": 1622,
         "author": "Kirchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Asklapiastai",
+    "previous": "Asklapiodoros",
+    "next": "Asklapon 1",
+    "chapters": [
+      {
+        "start": 1622,
+        "end": 1622
       }
     ]
   },
@@ -7374,17 +7374,6 @@
     ]
   },
   {
-    "lemma": "Asopios",
-    "previous": "Asopichos 5",
-    "next": "Asopis 1",
-    "chapters": [
-      {
-        "start": 1704,
-        "end": 1704
-      }
-    ]
-  },
-  {
     "lemma": "Asopis 1",
     "previous": "Asopichos 5",
     "next": "Asopis 2",
@@ -7459,6 +7448,17 @@
   {
     "lemma": "Asopis 7",
     "previous": "Asopis 6",
+    "next": "Asopios",
+    "chapters": [
+      {
+        "start": 1704,
+        "end": 1704
+      }
+    ]
+  },
+  {
+    "lemma": "Asopios",
+    "previous": "Asopis 7",
     "next": "Asopo",
     "chapters": [
       {
@@ -8691,18 +8691,6 @@
   {
     "lemma": "Asprenas",
     "previous": "Ἀσπόρδηνον ὄρος",
-    "next": "Asprianus",
-    "chapters": [
-      {
-        "start": 1738,
-        "end": 1738,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
-    "lemma": "Asprenas a-e",
-    "previous": "Asprenas",
     "next": "Asprianus",
     "chapters": [
       {
@@ -21915,6 +21903,7 @@
     "lemma": "Auctoritas 5",
     "previous": "Auctoritas 4",
     "next": "Auctus",
+    "redirect": "Ius respondendi",
     "chapters": [
       {
         "start": 2277,
@@ -39682,6 +39671,8 @@
     "lemma": "Βάκχου νῆσος",
     "previous": "Bakchos 2",
     "next": "Bakchylides 1",
+    "sort_key": "Bakchu",
+    "wp_link": "w:de:Dahlak-Archipel",
     "chapters": [
       {
         "start": 2793,
