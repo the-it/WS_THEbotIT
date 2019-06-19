@@ -70,6 +70,7 @@
     "lemma": "Ἀρτεμισιασταί",
     "previous": "Artemisia 5",
     "next": "Ἀρτεμισιών, Ἀρτεμίσιος",
+    "sort_key": "Artemisiastai",
     "chapters": [
       {
         "start": 1442,
@@ -2618,6 +2619,7 @@
     "lemma": "Ἀσάνδιον",
     "previous": "Asandi",
     "next": "Asandros 1",
+    "sort_key": "Asandion",
     "chapters": [
       {
         "start": 1515,
@@ -2773,7 +2775,7 @@
   {
     "lemma": "Asarinum",
     "previous": "Asarakon",
-    "next": "Asarotos oikos",
+    "next": "Ἀσάρωτος οἶκος",
     "chapters": [
       {
         "start": 1518,
@@ -2783,9 +2785,10 @@
     ]
   },
   {
-    "lemma": "Asarotos oikos",
+    "lemma": "Ἀσάρωτος οἶκος",
     "previous": "Asarinum",
     "next": "Asarri",
+    "sort_key": "Asarotos oikos",
     "chapters": [
       {
         "start": 1518,
@@ -2796,7 +2799,7 @@
   },
   {
     "lemma": "Asarri",
-    "previous": "Asarotos oikos",
+    "previous": "Ἀσάρωτος οἶκος",
     "next": "Asarubas",
     "chapters": [
       {
@@ -10204,6 +10207,7 @@
     "lemma": "Asterion 1",
     "previous": "Asterioi 2",
     "next": "Asterion 2",
+    "sort_key": "Asterion 01",
     "chapters": [
       {
         "start": 1784,
@@ -10216,6 +10220,7 @@
     "lemma": "Asterion 2",
     "previous": "Asterion 1",
     "next": "Asterion 3",
+    "sort_key": "Asterion 02",
     "chapters": [
       {
         "start": 1784,
@@ -10228,6 +10233,7 @@
     "lemma": "Asterion 3",
     "previous": "Asterion 2",
     "next": "Asterion 4",
+    "sort_key": "Asterion 03",
     "chapters": [
       {
         "start": 1784,
@@ -10252,7 +10258,8 @@
   {
     "lemma": "Asterion 5",
     "previous": "Asterion 4",
-    "next": "Asterion 5ff.",
+    "next": "Asterion 6",
+    "sort_key": "Asterion 05b",
     "wp_link": "w:de:Asterios",
     "chapters": [
       {
@@ -10264,8 +10271,9 @@
   },
   {
     "lemma": "Asterion 5ff.",
-    "previous": "Asterion 5",
-    "next": "Asterion 6",
+    "previous": "Asterion 4",
+    "next": "Asterion 5",
+    "sort_key": "Asterion 05a",
     "wp_link": "w:de:Asterion (Name)",
     "chapters": [
       {
@@ -10277,8 +10285,9 @@
   },
   {
     "lemma": "Asterion 6",
-    "previous": "Asterion 5ff.",
+    "previous": "Asterion 5",
     "next": "Asterion 7",
+    "sort_key": "Asterion 06",
     "chapters": [
       {
         "start": 1785,
@@ -10291,6 +10300,7 @@
     "lemma": "Asterion 7",
     "previous": "Asterion 6",
     "next": "Asterion 8",
+    "sort_key": "Asterion 07",
     "chapters": [
       {
         "start": 1785,
@@ -10303,6 +10313,7 @@
     "lemma": "Asterion 8",
     "previous": "Asterion 7",
     "next": "Asterion 9",
+    "sort_key": "Asterion 08",
     "chapters": [
       {
         "start": 1785,
@@ -10315,6 +10326,7 @@
     "lemma": "Asterion 9",
     "previous": "Asterion 8",
     "next": "Asterion 10",
+    "sort_key": "Asterion 09",
     "chapters": [
       {
         "start": 1785,
@@ -10410,6 +10422,7 @@
     "lemma": "Asterios 1",
     "previous": "Asterion 16",
     "next": "Asterios 2",
+    "sort_key": "Asterios 01",
     "chapters": [
       {
         "start": 1786,
@@ -12732,6 +12745,7 @@
     "lemma": "Astyphilos 1",
     "previous": "Astypale",
     "next": "Astyphilos 2",
+    "sort_key": "Astyphilos",
     "chapters": [
       {
         "start": 1876,
@@ -28136,6 +28150,7 @@
     "lemma": "Aurelius 87",
     "previous": "Aurelius 86",
     "next": "Aurelius 88",
+    "sort_key": "Aurelius 087",
     "chapters": [
       {
         "start": 2464,
@@ -32072,6 +32087,8 @@
     "lemma": "Ἀυτόγραφον",
     "previous": "Autodike",
     "next": "Autokane 1",
+    "sort_key": "Autographon",
+    "wp_link": "w:de:Autograph",
     "chapters": [
       {
         "start": 2596,
@@ -42866,7 +42883,7 @@
   {
     "lemma": "Barbaroi",
     "previous": "Barbari promunturium",
-    "next": "Apolloniastai",
+    "next": "Ἀπολλωνιασταί",
     "wp_link": "w:de:Barbar",
     "chapters": [
       {
@@ -42877,8 +42894,9 @@
     ]
   },
   {
-    "lemma": "Apolloniastai",
+    "lemma": "Ἀπολλωνιασταί",
     "previous": "Barbaroi",
+    "next": null,
     "chapters": [
       {
         "start": 2859,

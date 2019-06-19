@@ -2176,6 +2176,7 @@
     "lemma": "Crambeis",
     "previous": "Cracina",
     "next": "Crambianis",
+    "redirect": "Clambetae",
     "chapters": [
       {
         "start": 1680,
@@ -2187,6 +2188,7 @@
     "lemma": "Crambianis",
     "previous": "Crambeis",
     "next": "Crane",
+    "redirect": "Granivianae",
     "chapters": [
       {
         "start": 1680,
@@ -2222,6 +2224,7 @@
     "lemma": "Craris",
     "previous": "Cranium",
     "next": "Crarus",
+    "redirect": "Novemcraris",
     "chapters": [
       {
         "start": 1680,
@@ -2233,6 +2236,7 @@
     "lemma": "Crarus",
     "previous": "Craris",
     "next": "Craspedites sinus",
+    "redirect": "Diocrarus",
     "chapters": [
       {
         "start": 1680,
@@ -2280,6 +2284,7 @@
     "lemma": "Crassum promuntorium",
     "previous": "Crassicius 2",
     "next": "Crassus 1",
+    "redirect": "Pacheia 1",
     "chapters": [
       {
         "start": 1681,
@@ -4790,7 +4795,7 @@
     "lemma": "Cuminion",
     "previous": "Cuminarius vicus",
     "next": "Cumodina",
-    "redirect": true,
+    "redirect": "Acumincum",
     "chapters": [
       {
         "start": 1755,
@@ -4850,7 +4855,7 @@
     "lemma": "Cunei",
     "previous": "Cunculiana",
     "next": "Cunerum promunturium",
-    "redirect": true,
+    "redirect": "Cynetes",
     "chapters": [
       {
         "start": 1755,
@@ -4886,7 +4891,7 @@
     "lemma": "Cuneus 1",
     "previous": "Cunetio",
     "next": "Cuneus 2",
-    "redirect": true,
+    "redirect": "Sacrum promunturium 2",
     "chapters": [
       {
         "start": 1755,
@@ -4922,7 +4927,7 @@
     "lemma": "Cunici",
     "previous": "Cuneus 3",
     "next": "Cuniculariae insulae",
-    "redirect": true,
+    "redirect": "Guium",
     "chapters": [
       {
         "start": 1757,
@@ -7628,7 +7633,7 @@
     "lemma": "Dacira",
     "previous": "Dacicus",
     "next": "Dactonium",
-    "redirect": true,
+    "redirect": "Diacira",
     "chapters": [
       {
         "start": 1977,
@@ -7723,7 +7728,7 @@
   {
     "lemma": "Dadastana",
     "previous": "Dadasa",
-    "next": "Dadikai",
+    "next": "Δᾷδες ἄκρα",
     "chapters": [
       {
         "start": 1978,
@@ -7733,8 +7738,14 @@
     ]
   },
   {
-    "lemma": "Dadikai",
+    "lemma": "Δᾷδες ἄκρα",
     "previous": "Dadastana",
+    "next": "Dadikai",
+    "sort_key": "Dadesakra"
+  },
+  {
+    "lemma": "Dadikai",
+    "previous": "Δᾷδες ἄκρα",
     "next": "Dadis 1",
     "chapters": [
       {
@@ -8917,7 +8928,7 @@
   {
     "lemma": "Dakora",
     "previous": "Dakie (?)",
-    "next": "Dakrydion",
+    "next": "Δακρύδιον",
     "chapters": [
       {
         "start": 2017,
@@ -8927,7 +8938,7 @@
     ]
   },
   {
-    "lemma": "Dakrydion",
+    "lemma": "Δακρύδιον",
     "previous": "Dakora",
     "next": "Daktyliotheke",
     "chapters": [
@@ -8939,7 +8950,7 @@
   },
   {
     "lemma": "Daktyliotheke",
-    "previous": "Dakrydion",
+    "previous": "Δακρύδιον",
     "next": "Δακτυλοδόχμη",
     "chapters": [
       {
@@ -17334,6 +17345,7 @@
     "lemma": "Defensor plebis",
     "previous": "Defensor ecclesiae",
     "next": "Defensor senatus",
+    "redirect": "Defensor civitatis",
     "chapters": [
       {
         "start": 2372,
@@ -17381,6 +17393,7 @@
     "lemma": "Defrutum",
     "previous": "Defixio",
     "next": "Deganta",
+    "redirect": true,
     "chapters": [
       {
         "start": 2377,
@@ -17404,6 +17417,7 @@
     "lemma": "Degetia",
     "previous": "Deganta",
     "next": "Degia",
+    "redirect": "Decetia",
     "chapters": [
       {
         "start": 2378,
@@ -21448,6 +21462,7 @@
     "lemma": "Demetrios 42",
     "previous": "Demetrios 41",
     "next": "Demetrios 43",
+    "sort_key": "Demetrios 042",
     "wp_link": "w:de:Demetrios III.",
     "chapters": [
       {
@@ -21553,6 +21568,7 @@
     "lemma": "Demetrios 50",
     "previous": "Demetrios 49",
     "next": "Demetrios 51",
+    "sort_key": "Demetrios 050",
     "chapters": [
       {
         "start": 2802,
@@ -22024,6 +22040,7 @@
     "lemma": "Demetrios 85",
     "previous": "Demetrios 84",
     "next": "Demetrios 86",
+    "sort_key": "Demetrios 085",
     "wp_link": "w:de:Demetrios von Phaleron",
     "chapters": [
       {
@@ -22433,6 +22450,7 @@
     "lemma": "Demetrios 116",
     "previous": "Demetrios 115",
     "next": "Demetrios 117",
+    "sort_key": "Demetrios 116",
     "wp_link": "w:de:Demetrios",
     "chapters": [
       {
@@ -22514,6 +22532,7 @@
     "lemma": "Demetrios 122",
     "previous": "Demetrios 121",
     "next": "Demetrios 123",
+    "sort_key": "Demetrios 122",
     "wp_link": "w:de:Demetrios",
     "chapters": [
       {

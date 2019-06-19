@@ -629,7 +629,8 @@
   {
     "lemma": "Κύπαιρα",
     "previous": "Κύον",
-    "next": "Kyparissia, -iai, Kyparissos 1",
+    "next": "Kyparissia, -iai, Kyparissos",
+    "sort_key": "Kypaira",
     "chapters": [
       {
         "start": 46,
@@ -1118,7 +1119,7 @@
   {
     "lemma": "Κύρβασα",
     "previous": "Kyrba, Kyrbe 2",
-    "next": "Kyrbeis",
+    "next": "Κύρβεις",
     "sort_key": "Kyrbasa",
     "chapters": [
       {
@@ -1129,9 +1130,10 @@
     ]
   },
   {
-    "lemma": "Kyrbeis",
+    "lemma": "Κύρβεις",
     "previous": "Κύρβασα",
     "next": "Kyrbia",
+    "sort_key": "Kyrbeis",
     "chapters": [
       {
         "start": 134,
@@ -1142,7 +1144,7 @@
   },
   {
     "lemma": "Kyrbia",
-    "previous": "Kyrbeis",
+    "previous": "Κύρβεις",
     "next": "Kyrenaiker",
     "chapters": [
       {
@@ -1228,7 +1230,7 @@
   {
     "lemma": "Kyrenikos",
     "previous": "Kyrene 4",
-    "next": "Kyretiai",
+    "next": "Κυρετίαι",
     "redirect": true,
     "chapters": [
       {
@@ -1238,9 +1240,10 @@
     ]
   },
   {
-    "lemma": "Kyretiai",
+    "lemma": "Κυρετίαι",
     "previous": "Kyrenikos",
     "next": "Kyria",
+    "sort_key": "Kyretiai",
     "chapters": [
       {
         "start": 169,
@@ -1251,7 +1254,7 @@
   },
   {
     "lemma": "Kyria",
-    "previous": "Kyretiai",
+    "previous": "Κυρετίαι",
     "next": "ἡ κυρία",
     "sort_key": "Kyria 1",
     "chapters": [
@@ -1532,6 +1535,7 @@
     "lemma": "Kyros 2",
     "previous": "Kyros 1",
     "next": "Kyros 3",
+    "sort_key": "Kyros 02",
     "wp_link": "w:de:Kura",
     "chapters": [
       {
@@ -1545,6 +1549,7 @@
     "lemma": "Kyros 3",
     "previous": "Kyros 2",
     "next": "Kyros 4",
+    "sort_key": "Kyros 03",
     "chapters": [
       {
         "start": 187,
@@ -1556,7 +1561,8 @@
   {
     "lemma": "Kyros 4",
     "previous": "Kyros 3",
-    "next": "Kyros 5-6",
+    "next": "Kyros 5–6",
+    "sort_key": "Kyros 04",
     "chapters": [
       {
         "start": 188,
@@ -1566,7 +1572,7 @@
     ]
   },
   {
-    "lemma": "Kyros 5-6",
+    "lemma": "Kyros 5–6",
     "previous": "Kyros 4",
     "next": "Kyros 7",
     "redirect": true,
@@ -1579,7 +1585,7 @@
   },
   {
     "lemma": "Kyros 7",
-    "previous": "Kyros 5-6",
+    "previous": "Kyros 5–6",
     "next": "Kyros 8",
     "sort_key": "Kyros 07",
     "chapters": [
@@ -1750,7 +1756,8 @@
   {
     "lemma": "Κυρτάρπαξος",
     "previous": "Kyrta",
-    "next": "Kyrteidai",
+    "next": "Κυρτεῖδαι",
+    "sort_key": "Kyrtarpaxos",
     "chapters": [
       {
         "start": 204,
@@ -1760,7 +1767,7 @@
     ]
   },
   {
-    "lemma": "Kyrteidai",
+    "lemma": "Κυρτεῖδαι",
     "previous": "Κυρτάρπαξος",
     "next": "Kyrthanium",
     "chapters": [
@@ -1773,8 +1780,8 @@
   },
   {
     "lemma": "Kyrthanium",
-    "previous": "Kyrteidai",
-    "next": "Kyrtioi",
+    "previous": "Κυρτεῖδαι",
+    "next": "Κύρτιοι",
     "chapters": [
       {
         "start": 205,
@@ -1784,9 +1791,10 @@
     ]
   },
   {
-    "lemma": "Kyrtioi",
+    "lemma": "Κύρτιοι",
     "previous": "Kyrthanium",
     "next": "Κυρτοβόλοι",
+    "sort_key": "Kyrtioi",
     "chapters": [
       {
         "start": 205,
@@ -1797,7 +1805,7 @@
   },
   {
     "lemma": "Κυρτοβόλοι",
-    "previous": "Kyrtioi",
+    "previous": "Κύρτιοι",
     "next": "Kyrtone",
     "sort_key": "Kyrtoboloi",
     "chapters": [
