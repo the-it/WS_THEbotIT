@@ -345,8 +345,9 @@
     "sort_key": "Kynoskephale"
   },
   {
-    "lemma": "Kynos kephale",
-    "next": "Kynos sema 1",
+    "lemma": "Κυνὸς κεφαλή",
+    "previous": null,
+    "next": "Κυνὸς σῆμα",
     "chapters": [
       {
         "start": 35,
@@ -356,9 +357,15 @@
     ]
   },
   {
-    "lemma": "Kynos sema 1",
-    "previous": "Kynos kephale",
-    "next": "Kynos sema 2",
+    "lemma": "Κυνὸς σῆμα",
+    "previous": "Κυνὸς κεφαλή",
+    "sort_key": "Kynossema"
+  },
+  {
+    "lemma": "Κυνὸς σῆμα 1",
+    "previous": "Κυνὸς σῆμα",
+    "next": "Κυνὸς σῆμα 2",
+    "sort_key": "Kynossema 1",
     "chapters": [
       {
         "start": 36,
@@ -368,9 +375,10 @@
     ]
   },
   {
-    "lemma": "Kynos sema 2",
-    "previous": "Kynos sema 1",
+    "lemma": "Κυνὸς σῆμα 2",
+    "previous": "Κυνὸς σῆμα 1",
     "next": "Κυνὸς σῆμα 3",
+    "sort_key": "Kynossema 2",
     "chapters": [
       {
         "start": 36,
@@ -381,8 +389,9 @@
   },
   {
     "lemma": "Κυνὸς σῆμα 3",
-    "previous": "Kynos sema 2",
+    "previous": "Κυνὸς σῆμα 2",
     "next": "Κυνὸς σῆμα 4",
+    "sort_key": "Kynossema 3",
     "chapters": [
       {
         "start": 36,
@@ -397,8 +406,9 @@
     "sort_key": "Kynossema 4"
   },
   {
-    "lemma": "Kynos sema 4",
-    "next": "Kynosura 1",
+    "lemma": "Κυνὸς σῆμα 4",
+    "previous": null,
+    "next": "Kynosura",
     "chapters": [
       {
         "start": 36,
@@ -408,8 +418,13 @@
     ]
   },
   {
+    "lemma": "Kynosura",
+    "previous": "Κυνὸς σῆμα 4",
+    "next": "Kynosura 1"
+  },
+  {
     "lemma": "Kynosura 1",
-    "previous": "Kynos sema 4",
+    "previous": "Kynosura",
     "next": "Kynosura 2",
     "chapters": [
       {
@@ -542,7 +557,7 @@
   {
     "lemma": "Kynthos",
     "previous": "Kynthios",
-    "next": "Kyntodemu",
+    "next": "Κυντοδήμου",
     "chapters": [
       {
         "start": 42,
@@ -552,9 +567,10 @@
     ]
   },
   {
-    "lemma": "Kyntodemu",
+    "lemma": "Κυντοδήμου",
     "previous": "Kynthos",
     "next": "Κυντῶν",
+    "sort_key": "Kyntodemu",
     "chapters": [
       {
         "start": 42,
@@ -565,7 +581,7 @@
   },
   {
     "lemma": "Κυντῶν",
-    "previous": "Kyntodemu",
+    "previous": "Κυντοδήμου",
     "next": "Kynuria 1",
     "sort_key": "Kynton",
     "chapters": [
@@ -1071,7 +1087,7 @@
   {
     "lemma": "Kyraunis",
     "previous": "Kyraniden",
-    "next": "Kyrba, Kyrbe",
+    "next": "Κύρβα, Κύρβη",
     "chapters": [
       {
         "start": 134,
@@ -1081,9 +1097,10 @@
     ]
   },
   {
-    "lemma": "Kyrba, Kyrbe",
+    "lemma": "Κύρβα, Κύρβη",
     "previous": "Kyraunis",
-    "next": "Kyrba, Kyrbe 1",
+    "next": "Κύρβα, Κύρβη 1",
+    "sort_key": "Kyrba",
     "chapters": [
       {
         "start": 134,
@@ -1093,21 +1110,16 @@
     ]
   },
   {
-    "lemma": "Kyrba, Kyrbe 1",
-    "previous": "Kyrba, Kyrbe",
-    "next": "Kyrba, Kyrbe 2",
-    "chapters": [
-      {
-        "start": 134,
-        "end": 134,
-        "author": "Bürchner"
-      }
-    ]
+    "lemma": "Κύρβα, Κύρβη 1",
+    "previous": "Κύρβα, Κύρβη",
+    "next": "Κύρβα, Κύρβη 2",
+    "sort_key": "Kyrba 1"
   },
   {
-    "lemma": "Kyrba, Kyrbe 2",
-    "previous": "Kyrba, Kyrbe 1",
+    "lemma": "Κύρβα, Κύρβη 2",
+    "previous": "Κύρβα, Κύρβη 1",
     "next": "Κύρβασα",
+    "sort_key": "Kyrba 2",
     "chapters": [
       {
         "start": 134,
@@ -1118,7 +1130,7 @@
   },
   {
     "lemma": "Κύρβασα",
-    "previous": "Kyrba, Kyrbe 2",
+    "previous": "Κύρβα, Κύρβη 2",
     "next": "Κύρβεις",
     "sort_key": "Kyrbasa",
     "chapters": [
@@ -1612,6 +1624,7 @@
     "lemma": "Kyros 9",
     "previous": "Kyros 8",
     "next": "Kyros 10",
+    "sort_key": "Kyros 09",
     "chapters": [
       {
         "start": 188,
@@ -1696,7 +1709,7 @@
   {
     "lemma": "Kyros 16",
     "previous": "Kyros 15",
-    "next": "Kyrrhestike",
+    "next": "Κυρρηστική",
     "chapters": [
       {
         "start": 191,
@@ -1708,7 +1721,7 @@
   {
     "lemma": "Kyrrhestike",
     "previous": "Kyros 16",
-    "next": "Kyrros",
+    "next": "Κύρρος",
     "chapters": [
       {
         "start": 191,
@@ -1718,7 +1731,7 @@
     ]
   },
   {
-    "lemma": "Kyrros",
+    "lemma": "Κύρρος",
     "previous": "Kyrrhestike",
     "next": "Kyrsilos",
     "chapters": [
@@ -1731,7 +1744,7 @@
   },
   {
     "lemma": "Kyrsilos",
-    "previous": "Kyrros",
+    "previous": "Κύρρος",
     "next": "Kyrta",
     "chapters": [
       {
@@ -4424,7 +4437,7 @@
   {
     "lemma": "Lactantius 2",
     "previous": "Lactantius 1",
-    "next": "Lactarius 1",
+    "next": "Lactarius",
     "wp_link": "w:de:Lactantius Placidus",
     "ws_link": "s:de:Lactantius Placidus",
     "chapters": [

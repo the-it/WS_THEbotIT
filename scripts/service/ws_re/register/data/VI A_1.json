@@ -1,6 +1,7 @@
 [
   {
-    "lemma": "Thesauros",
+    "lemma": "Θησαυρός",
+    "previous": null,
     "next": "Thesaurus",
     "chapters": [
       {
@@ -12,7 +13,7 @@
   },
   {
     "lemma": "Thesaurus",
-    "previous": "Thesauros",
+    "previous": "Θησαυρός",
     "next": "Thesba",
     "chapters": [
       {
@@ -900,7 +901,7 @@
   {
     "lemma": "Thetis",
     "previous": "Thetieia",
-    "next": "Theton, Thetonion",
+    "next": "Θητών, Θητώνιον",
     "chapters": [
       {
         "start": 206,
@@ -910,20 +911,14 @@
     ]
   },
   {
-    "lemma": "Theton, Thetonion",
+    "lemma": "Θητών, Θητώνιον",
     "previous": "Thetis",
     "next": "Thettale",
-    "chapters": [
-      {
-        "start": 242,
-        "end": 242,
-        "author": "Stählin"
-      }
-    ]
+    "sort_key": "Theton"
   },
   {
     "lemma": "Thettale",
-    "previous": "Theton, Thetonion",
+    "previous": "Θητών, Θητώνιον",
     "next": "Theuda",
     "chapters": [
       {

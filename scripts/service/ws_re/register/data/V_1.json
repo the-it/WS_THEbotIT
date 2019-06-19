@@ -2873,7 +2873,7 @@
     "lemma": "Derketo",
     "previous": "Derketaios",
     "next": "Derkippos",
-    "redirect": true,
+    "redirect": "Atargatis",
     "chapters": [
       {
         "start": 240,
@@ -2897,7 +2897,7 @@
     "lemma": "Derkos",
     "previous": "Derkippos",
     "next": "Derkylidas 1",
-    "redirect": true,
+    "redirect": "Delkos",
     "chapters": [
       {
         "start": 240,
@@ -2921,7 +2921,7 @@
   {
     "lemma": "Derkylidas 2",
     "previous": "Derkylidas 1",
-    "next": "Derkylos 1",
+    "next": "Derkylidas 3",
     "chapters": [
       {
         "start": 242,
@@ -2931,8 +2931,13 @@
     ]
   },
   {
-    "lemma": "Derkylos 1",
+    "lemma": "Derkylidas 3",
     "previous": "Derkylidas 2",
+    "next": "Derkylos 1"
+  },
+  {
+    "lemma": "Derkylos 1",
+    "previous": "Derkylidas 3",
     "next": "Derkylos 2",
     "chapters": [
       {
@@ -5126,6 +5131,7 @@
     "lemma": "Διαχειροτονία",
     "previous": "Diacatochia",
     "next": "Diachersis",
+    "sort_key": "Diacheirotonia",
     "chapters": [
       {
         "start": 303,
@@ -18723,7 +18729,7 @@
   {
     "lemma": "Δίπρῳρος",
     "previous": "Dipolis 2",
-    "next": "Diprymnos",
+    "next": "Δίπρυμνος",
     "sort_key": "Diproros",
     "chapters": [
       {
@@ -18734,7 +18740,7 @@
     ]
   },
   {
-    "lemma": "Diprymnos",
+    "lemma": "Δίπρυμνος",
     "previous": "Δίπρῳρος",
     "next": "Dipsakos 1",
     "chapters": [
@@ -18746,7 +18752,7 @@
   },
   {
     "lemma": "Dipsakos 1",
-    "previous": "Diprymnos",
+    "previous": "Δίπρυμνος",
     "next": "Doreia",
     "chapters": [
       {

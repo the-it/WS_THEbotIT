@@ -29115,7 +29115,7 @@
   {
     "lemma": "Aigaion 3",
     "previous": "Aigaion 2",
-    "next": "Aigaion oros",
+    "next": "Αἰγαῖον ὄρος",
     "redirect": true,
     "chapters": [
       {
@@ -29125,9 +29125,10 @@
     ]
   },
   {
-    "lemma": "Aigaion oros",
+    "lemma": "Αἰγαῖον ὄρος",
     "previous": "Aigaion 3",
-    "next": "Aigaion pedion",
+    "next": "Αἰγαῖον πεδίον",
+    "sort_key": "Aigaionoros",
     "chapters": [
       {
         "start": 947,
@@ -29137,21 +29138,17 @@
     ]
   },
   {
-    "lemma": "Aigaion pedion",
-    "previous": "Aigaion oros",
-    "next": "Aigaion pelagos",
-    "chapters": [
-      {
-        "start": 947,
-        "end": 947,
-        "author": "Hirschfeld"
-      }
-    ]
+    "lemma": "Αἰγαῖον πεδίον",
+    "previous": "Αἰγαῖον ὄρος",
+    "next": "Αἰγαῖον πέλαγος",
+    "sort_key": "Aigaionpedion"
   },
   {
-    "lemma": "Aigaion pelagos",
-    "previous": "Aigaion pedion",
+    "lemma": "Αἰγαῖον πέλαγος",
+    "previous": "Αἰγαῖον πεδίον",
     "next": "Aigaios 1",
+    "sort_key": "Aigaionpelagos",
+    "wp_link": "w:de:Ägäisches Meer",
     "chapters": [
       {
         "start": 947,
@@ -29162,7 +29159,7 @@
   },
   {
     "lemma": "Aigaios 1",
-    "previous": "Aigaion pelagos",
+    "previous": "Αἰγαῖον πέλαγος",
     "next": "Aigaios 2",
     "chapters": [
       {
@@ -29374,6 +29371,7 @@
     "lemma": "Aigeïs",
     "previous": "Aigeirusa 2",
     "next": "Aigeoneus",
+    "sort_key": "Aigeis",
     "chapters": [
       {
         "start": 951,
@@ -29436,7 +29434,6 @@
     "lemma": "Aigeus 2",
     "previous": "Aigeus 1",
     "next": "Aigeus 3",
-    "wp_link": "w:de:Aigeus (Sohn des Oiolykos)",
     "chapters": [
       {
         "start": 955,
@@ -29449,7 +29446,6 @@
     "lemma": "Aigeus 3",
     "previous": "Aigeus 2",
     "next": "Aigeus 4",
-    "wp_link": "w:de:Aigeus (Sohn des Phorbas)",
     "chapters": [
       {
         "start": 955,
@@ -29644,7 +29640,7 @@
   {
     "lemma": "Aigialos 6",
     "previous": "Aigialos 5",
-    "next": "Aigidion nesos",
+    "next": "Αἰγιδίων νῆσος",
     "chapters": [
       {
         "start": 957,
@@ -29654,9 +29650,10 @@
     ]
   },
   {
-    "lemma": "Aigidion nesos",
+    "lemma": "Αἰγιδίων νῆσος",
     "previous": "Aigialos 6",
     "next": "Aigikoreis",
+    "sort_key": "Aigidionnesos",
     "chapters": [
       {
         "start": 957,
@@ -29667,7 +29664,7 @@
   },
   {
     "lemma": "Aigikoreis",
-    "previous": "Aigidion nesos",
+    "previous": "Αἰγιδίων νῆσος",
     "next": "Aigila 1",
     "chapters": [
       {
@@ -30268,7 +30265,7 @@
   {
     "lemma": "Aigusa",
     "previous": "Aigua",
-    "next": "Aigussai",
+    "next": "Αἴγουσσαι",
     "chapters": [
       {
         "start": 977,
@@ -30277,7 +30274,7 @@
     ]
   },
   {
-    "lemma": "Aigussai",
+    "lemma": "Αἴγουσσαι",
     "previous": "Aigusa",
     "next": "Aigypios",
     "chapters": [
@@ -30289,7 +30286,7 @@
   },
   {
     "lemma": "Aigypios",
-    "previous": "Aigussai",
+    "previous": "Αἴγουσσαι",
     "next": "Aigyptia, Aigyptios",
     "chapters": [
       {
@@ -30302,7 +30299,7 @@
   {
     "lemma": "Aigyptia, Aigyptios",
     "previous": "Aigypios",
-    "next": "Aigyption pelagos",
+    "next": "Αἰγύπτιον πέλαγος",
     "chapters": [
       {
         "start": 978,
@@ -30312,9 +30309,10 @@
     ]
   },
   {
-    "lemma": "Aigyption pelagos",
+    "lemma": "Αἰγύπτιον πέλαγος",
     "previous": "Aigyptia, Aigyptios",
     "next": "Aigyptios",
+    "sort_key": "Aigyptionpelagos",
     "chapters": [
       {
         "start": 978,
@@ -30325,7 +30323,7 @@
   },
   {
     "lemma": "Aigyptios",
-    "previous": "Aigyption pelagos",
+    "previous": "Αἰγύπτιον πέλαγος",
     "next": "Aigyptos 1",
     "chapters": [
       {
@@ -30473,6 +30471,7 @@
     "lemma": "Αἰκίας δίκη",
     "previous": "Aikalos",
     "next": "Aiklidas",
+    "sort_key": "Aikiasdike",
     "chapters": [
       {
         "start": 1006,
@@ -31966,6 +31965,7 @@
     "lemma": "Aischines 5",
     "previous": "Aischines 4",
     "next": "Aischines 6",
+    "sort_key": "Aischines 05",
     "chapters": [
       {
         "start": 1047,
@@ -33315,7 +33315,7 @@
   {
     "lemma": "Aithiopike thalassa",
     "previous": "Aithiopika ore",
-    "next": "Aithiopikos kolpos",
+    "next": "Αἰθιοπικὸς κόλπος",
     "chapters": [
       {
         "start": 1102,
@@ -33325,7 +33325,7 @@
     ]
   },
   {
-    "lemma": "Aithiopikos kolpos",
+    "lemma": "Αἰθιοπικὸς κόλπος",
     "previous": "Aithiopike thalassa",
     "next": "Aithiopis 1",
     "chapters": [
@@ -33338,7 +33338,7 @@
   },
   {
     "lemma": "Aithiopis 1",
-    "previous": "Aithiopikos kolpos",
+    "previous": "Αἰθιοπικὸς κόλπος",
     "next": "Aithiopis 2",
     "wp_link": "w:de:Aithiopis",
     "chapters": [
@@ -33427,6 +33427,7 @@
     "lemma": "Aithon 2",
     "previous": "Aithon 1",
     "next": "Aithon 3",
+    "sort_key": "Aithon 02",
     "chapters": [
       {
         "start": 1106,
@@ -33489,6 +33490,7 @@
     "lemma": "Aithon 7",
     "previous": "Aithon 6",
     "next": "Aithon 8",
+    "sort_key": "Aithon 07",
     "chapters": [
       {
         "start": 1106,
@@ -33501,6 +33503,7 @@
     "lemma": "Aithon 8",
     "previous": "Aithon 7",
     "next": "Aithon 9",
+    "sort_key": "Aithon 08",
     "chapters": [
       {
         "start": 1107,
@@ -33513,6 +33516,7 @@
     "lemma": "Aithon 9",
     "previous": "Aithon 8",
     "next": "Aithon 10",
+    "sort_key": "Aithon 09",
     "chapters": [
       {
         "start": 1107,
@@ -33549,7 +33553,7 @@
   {
     "lemma": "Aithopion",
     "previous": "Aithopia",
-    "next": "Aithopios pontos",
+    "next": "Αἰθόπιος πόντος",
     "chapters": [
       {
         "start": 1107,
@@ -33559,7 +33563,7 @@
     ]
   },
   {
-    "lemma": "Aithopios pontos",
+    "lemma": "Αἰθόπιος πόντος",
     "previous": "Aithopion",
     "next": "Aithops 1",
     "chapters": [
@@ -33571,7 +33575,7 @@
   },
   {
     "lemma": "Aithops 1",
-    "previous": "Aithopios pontos",
+    "previous": "Αἰθόπιος πόντος",
     "next": "Aithops 2",
     "chapters": [
       {
@@ -33673,7 +33677,6 @@
     "lemma": "Aithusa 2",
     "previous": "Aithusa 1",
     "next": "Aithusa 3",
-    "wp_link": "w:de:Aithusa (Tochter des Poseidon)",
     "chapters": [
       {
         "start": 1110,
@@ -33773,7 +33776,6 @@
     "lemma": "Aitne 3",
     "previous": "Aitne 2",
     "next": "Aitole",
-    "wp_link": "w:de:Aitne (Mythologie)",
     "chapters": [
       {
         "start": 1113,
@@ -34859,7 +34861,7 @@
   {
     "lemma": "Akastos 5",
     "previous": "Akastos 4",
-    "next": "Akateion histion",
+    "next": "Ἀκάθαρτος κόλπος",
     "chapters": [
       {
         "start": 1158,
@@ -34869,9 +34871,16 @@
     ]
   },
   {
-    "lemma": "Akateion histion",
+    "lemma": "Ἀκάθαρτος κόλπος",
     "previous": "Akastos 5",
-    "next": "Akateios histos",
+    "next": "Ἀκάτειον ἱστίον",
+    "sort_key": "Akathartos"
+  },
+  {
+    "lemma": "Ἀκάτειον ἱστίον",
+    "previous": "Ἀκάθαρτος κόλπος",
+    "next": "Ἀκάτειος ἱστός",
+    "sort_key": "Akateionh",
     "chapters": [
       {
         "start": 1158,
@@ -34881,9 +34890,11 @@
     ]
   },
   {
-    "lemma": "Akateios histos",
-    "previous": "Akateion histion",
-    "next": "Akateios keraia",
+    "lemma": "Ἀκάτειος ἱστός",
+    "previous": "Ἀκάτειον ἱστίον",
+    "next": "Ἀκάτειος κεραία",
+    "sort_key": "Akateiosh",
+    "wp_link": "w:de:Fockmast",
     "chapters": [
       {
         "start": 1158,
@@ -34893,9 +34904,10 @@
     ]
   },
   {
-    "lemma": "Akateios keraia",
-    "previous": "Akateios histos",
-    "next": "Akathartos kolpos",
+    "lemma": "Ἀκάτειος κεραία",
+    "previous": "Ἀκάτειος ἱστός",
+    "next": "Ἄκατος",
+    "sort_key": "Akateiosk",
     "chapters": [
       {
         "start": 1158,
@@ -34906,7 +34918,7 @@
   },
   {
     "lemma": "Akathartos kolpos",
-    "previous": "Akateios keraia",
+    "previous": "Ἀκάτειος κεραία",
     "next": "Ἄκατος",
     "chapters": [
       {
@@ -34918,8 +34930,9 @@
   },
   {
     "lemma": "Ἄκατος",
-    "previous": "Akathartos kolpos",
+    "previous": "Ἀκάτειος κεραία",
     "next": "Akazie",
+    "sort_key": "Akatos",
     "chapters": [
       {
         "start": 1158,
@@ -35484,6 +35497,8 @@
     "lemma": "Ἀκινάκης",
     "previous": "Akinakai",
     "next": "Akinasis",
+    "sort_key": "Akinakes",
+    "wp_link": "w:de:Acinaces",
     "chapters": [
       {
         "start": 1168,
@@ -36424,7 +36439,7 @@
   {
     "lemma": "Akraia 2",
     "previous": "Akraia 1",
-    "next": "Akraion lepas",
+    "next": "Ἀκραῖον λέπας",
     "wp_link": "w:de:Akraia (Beiname)",
     "chapters": [
       {
@@ -36435,9 +36450,10 @@
     ]
   },
   {
-    "lemma": "Akraion lepas",
+    "lemma": "Ἀκραῖον λέπας",
     "previous": "Akraia 2",
     "next": "Akraios 1",
+    "sort_key": "Akraionlepas",
     "chapters": [
       {
         "start": 1193,
@@ -36448,7 +36464,7 @@
   },
   {
     "lemma": "Akraios 1",
-    "previous": "Akraion lepas",
+    "previous": "Ἀκραῖον λέπας",
     "next": "Akraios 2",
     "wp_link": "w:de:Akraia (Beiname)",
     "chapters": [
@@ -36533,7 +36549,7 @@
   {
     "lemma": "Akrathos",
     "previous": "Akrasos",
-    "next": "Akratisma",
+    "next": "Ἀκράτισμα",
     "chapters": [
       {
         "start": 1194,
@@ -36543,9 +36559,10 @@
     ]
   },
   {
-    "lemma": "Akratisma",
+    "lemma": "Ἀκράτισμα",
     "previous": "Akrathos",
     "next": "Akratophoron",
+    "sort_key": "Akratisma",
     "chapters": [
       {
         "start": 1194,
@@ -36556,7 +36573,7 @@
   },
   {
     "lemma": "Akratophoron",
-    "previous": "Akratisma",
+    "previous": "Ἀκράτισμα",
     "next": "Akratophoros",
     "chapters": [
       {
@@ -36823,7 +36840,7 @@
   {
     "lemma": "Akritobatai",
     "previous": "Akrite",
-    "next": "Akroama",
+    "next": "Ἀκρόαμα",
     "chapters": [
       {
         "start": 1197,
@@ -36833,9 +36850,10 @@
     ]
   },
   {
-    "lemma": "Akroama",
+    "lemma": "Ἀκρόαμα",
     "previous": "Akritobatai",
-    "next": "Akrocheirismos",
+    "next": "Ἀκροχειρισμός",
+    "sort_key": "Akroama",
     "chapters": [
       {
         "start": 1197,
@@ -36845,8 +36863,8 @@
     ]
   },
   {
-    "lemma": "Akrocheirismos",
-    "previous": "Akroama",
+    "lemma": "Ἀκροχειρισμός",
+    "previous": "Ἀκρόαμα",
     "next": "Akrodemos",
     "chapters": [
       {
@@ -36858,7 +36876,7 @@
   },
   {
     "lemma": "Akrodemos",
-    "previous": "Akrocheirismos",
+    "previous": "Ἀκροχειρισμός",
     "next": "Akrokeraia",
     "chapters": [
       {
@@ -39069,6 +39087,7 @@
     "lemma": "Alastor 1",
     "previous": "Alassa",
     "next": "Alastor 2",
+    "sort_key": "Alastor 01",
     "wp_link": "w:de:Alastor",
     "chapters": [
       {

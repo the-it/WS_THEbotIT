@@ -358,7 +358,7 @@
   {
     "lemma": "Olympikos 2",
     "previous": "Olympikos 1",
-    "next": "Olympikos 3",
+    "next": "Ὀλυμπικός 3",
     "chapters": [
       {
         "start": 199,
@@ -368,9 +368,10 @@
     ]
   },
   {
-    "lemma": "Olympikos 3",
+    "lemma": "Ὀλυμπικός 3",
     "previous": "Olympikos 2",
     "next": "Olympiodoros 1",
+    "sort_key": "Olympikos 3",
     "chapters": [
       {
         "start": 199,
@@ -381,8 +382,9 @@
   },
   {
     "lemma": "Olympiodoros 1",
-    "previous": "Olympikos 3",
+    "previous": "Ὀλυμπικός 3",
     "next": "Olympiodoros 2",
+    "sort_key": "Olympiodoros 01",
     "wp_link": "w:de:Olympiodoros von Athen",
     "chapters": [
       {
@@ -421,6 +423,7 @@
     "lemma": "Olympiodoros 4",
     "previous": "Olympiodoros 3",
     "next": "Olympiodoros 5",
+    "sort_key": "Olympiodoros 04",
     "chapters": [
       {
         "start": 200,

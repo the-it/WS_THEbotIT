@@ -1,8 +1,10 @@
 [
   {
     "lemma": "Π(ε...",
-    "previous": null,
+    "previous": "Parmenon 4",
     "next": "Pech",
+    "sort_key": "Pe",
+    "wp_link": "w:de:Priene",
     "chapters": [
       {
         "start": 1,
@@ -27,7 +29,7 @@
   {
     "lemma": "Πεχῖνοι",
     "previous": "Pech",
-    "next": "Pechys",
+    "next": "Πῆχυς",
     "chapters": [
       {
         "start": 6,
@@ -37,7 +39,7 @@
     ]
   },
   {
-    "lemma": "Pechys",
+    "lemma": "Πῆχυς",
     "previous": "Πεχῖνοι",
     "next": "Pecse",
     "chapters": [
@@ -50,7 +52,7 @@
   },
   {
     "lemma": "Pecse",
-    "previous": "Pechys",
+    "previous": "Πῆχυς",
     "next": "Pecten",
     "chapters": [
       {
@@ -320,6 +322,7 @@
     "lemma": "Pedanius 1",
     "previous": "Pedanassos (-a?)",
     "next": "Pedanius 2",
+    "sort_key": "Pedanius 01",
     "chapters": [
       {
         "start": 18,
@@ -332,6 +335,7 @@
     "lemma": "Pedanius 2",
     "previous": "Pedanius 1",
     "next": "Pedanius 3",
+    "sort_key": "Pedanius 02",
     "chapters": [
       {
         "start": 19,
@@ -344,6 +348,7 @@
     "lemma": "Pedanius 3",
     "previous": "Pedanius 2",
     "next": "Pedanius 4",
+    "sort_key": "Pedanius 03",
     "chapters": [
       {
         "start": 19,

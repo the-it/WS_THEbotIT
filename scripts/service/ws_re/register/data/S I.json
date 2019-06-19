@@ -1303,6 +1303,7 @@
     "lemma": "Aemilius 14a",
     "previous": "Aemilius 11",
     "next": "Aemilius 15a",
+    "sort_key": "Aemilius 014a",
     "wp_link": "w:de:Aemilius",
     "chapters": [
       {
@@ -1562,7 +1563,7 @@
   {
     "lemma": "Afranius 6a",
     "previous": "Afiniana",
-    "next": null,
+    "next": "Agabana",
     "sort_key": "Afranius 06a",
     "chapters": [
       {
@@ -1571,6 +1572,10 @@
         "author": "Münzer"
       }
     ]
+  },
+  {
+    "lemma": "Agabana",
+    "previous": "Afranius 6a"
   },
   {
     "lemma": "Afranius  6a",
@@ -2597,7 +2602,8 @@
   {
     "lemma": "Aianteion 2",
     "previous": "Aianta",
-    "next": "Aias 4"
+    "next": "Aias 4",
+    "redirect": "Aianteion"
   },
   {
     "lemma": "Aias 4",
@@ -3805,6 +3811,7 @@
   {
     "lemma": "Alai",
     "previous": "Alabon 1",
+    "next": "Alaisiagae",
     "chapters": [
       {
         "start": 48,
@@ -3814,8 +3821,11 @@
     ]
   },
   {
+    "lemma": "Alaisiagae",
+    "previous": "Alai"
+  },
+  {
     "lemma": "Alamanni",
-    "previous": null,
     "next": "Alamundarus"
   },
   {
@@ -4476,6 +4486,7 @@
   },
   {
     "lemma": "Alilat",
+    "previous": null,
     "next": "Alimne",
     "wp_link": "w:de:al-Lāt"
   },
@@ -4990,7 +5001,7 @@
   {
     "lemma": "Altis 2",
     "previous": "Altinum 2",
-    "next": "Alybas 2a",
+    "next": "Aluaka",
     "chapters": [
       {
         "start": 65,
@@ -5000,8 +5011,13 @@
     ]
   },
   {
-    "lemma": "Alybas 2a",
+    "lemma": "Aluaka",
     "previous": "Altis 2",
+    "next": "Alybas 2a"
+  },
+  {
+    "lemma": "Alybas 2a",
+    "previous": "Aluaka",
     "next": "Alypios 2",
     "chapters": [
       {
@@ -5590,7 +5606,7 @@
   {
     "lemma": "Ampliatus 2",
     "previous": "Amphitryon",
-    "next": null,
+    "next": "Amulett",
     "chapters": [
       {
         "start": 72,
@@ -5601,6 +5617,7 @@
   },
   {
     "lemma": "Amulett",
+    "previous": "Ampliatus 2",
     "next": "Amurius"
   },
   {
@@ -5908,7 +5925,7 @@
   {
     "lemma": "Anastasiupolis 1",
     "previous": "Ananios 2",
-    "next": null,
+    "next": "Anastasiupolis 2",
     "chapters": [
       {
         "start": 76,
@@ -5919,6 +5936,7 @@
   },
   {
     "lemma": "Anastasiupolis 2",
+    "previous": "Anastasiupolis 1",
     "next": "Anastasios 3a"
   },
   {
@@ -6006,7 +6024,8 @@
   },
   {
     "lemma": "Anaxandridas 3",
-    "previous": "Anaxagoras 7"
+    "previous": "Anaxagoras 7",
+    "next": null
   },
   {
     "lemma": "Anaximandros 3",
@@ -7991,7 +8010,12 @@
     "sort_key": "Apollonios 098"
   },
   {
+    "lemma": "Apollonios 114",
+    "next": "Apollonios 118a"
+  },
+  {
     "lemma": "Apollonios 118a",
+    "previous": "Apollonios 114",
     "next": "Apollonios 127",
     "wp_link": "w:de:Apollonios",
     "chapters": [
@@ -12154,13 +12178,17 @@
   },
   {
     "lemma": "Athenaios 7",
-    "next": "Athenaios 9a",
     "sort_key": "Athenaios 08"
+  },
+  {
+    "lemma": "Athenaios 7",
+    "next": "Athenaios 9a"
   },
   {
     "lemma": "Athenaios 9a",
     "previous": "Athenaios 7",
     "next": "Athenaios 22",
+    "sort_key": "Athenaios 09a",
     "chapters": [
       {
         "start": 219,
@@ -18472,10 +18500,17 @@
   },
   {
     "lemma": "Cognitor 2",
-    "previous": "Cognitio 2"
+    "previous": "Cognitio 2",
+    "next": "Cognomen"
+  },
+  {
+    "lemma": "Cognomen",
+    "previous": "Cognitor 2",
+    "next": "Coira"
   },
   {
     "lemma": "Coira",
+    "previous": "Cognomen",
     "next": "Colchion"
   },
   {
@@ -19443,7 +19478,7 @@
   {
     "lemma": "Deinon 7b",
     "previous": "Deinon 7a",
-    "next": "Dektadas",
+    "next": "Deïokes",
     "chapters": [
       {
         "start": 339,
@@ -19453,9 +19488,14 @@
     ]
   },
   {
-    "lemma": "Dektadas",
+    "lemma": "Deïokes",
     "previous": "Deinon 7b",
-    "next": "Demaratos 3a",
+    "next": "Dektadas"
+  },
+  {
+    "lemma": "Dektadas",
+    "previous": "Deïokes",
+    "next": "Deliades 1",
     "chapters": [
       {
         "start": 340,
@@ -19465,9 +19505,19 @@
     ]
   },
   {
-    "lemma": "Demaratos 3a",
+    "lemma": "Deliades 1",
     "previous": "Dektadas",
-    "next": "Demeas 3",
+    "next": "Deloptes"
+  },
+  {
+    "lemma": "Deloptes",
+    "previous": "Deliades 1",
+    "next": "Demaratos 3a"
+  },
+  {
+    "lemma": "Demaratos 3a",
+    "previous": "Deloptes",
+    "next": "Demeas 1",
     "chapters": [
       {
         "start": 340,
@@ -19477,8 +19527,13 @@
     ]
   },
   {
-    "lemma": "Demeas 3",
+    "lemma": "Demeas 1",
     "previous": "Demaratos 3a",
+    "next": "Demeas 3"
+  },
+  {
+    "lemma": "Demeas 3",
+    "previous": "Demeas 1",
     "next": "Demetria 1",
     "chapters": [
       {
@@ -19576,7 +19631,6 @@
   {
     "lemma": "Demetrios 84a",
     "previous": "Demetrios 44a",
-    "next": "Demo 6",
     "chapters": [
       {
         "start": 345,
@@ -19586,8 +19640,12 @@
     ]
   },
   {
+    "lemma": "Demetrios 130",
+    "next": "Demo 6"
+  },
+  {
     "lemma": "Demo 6",
-    "previous": "Demetrios 84a",
+    "previous": "Demetrios 130",
     "next": "Demochares 1",
     "chapters": [
       {
@@ -19599,7 +19657,8 @@
   },
   {
     "lemma": "Demochares 1",
-    "previous": "Demo 6"
+    "previous": "Demo 6",
+    "next": null
   },
   {
     "lemma": "Demodike",

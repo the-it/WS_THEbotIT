@@ -572,7 +572,7 @@
     "lemma": "Caerulea aqua",
     "previous": "Bulis 4",
     "next": "Casius mons",
-    "redirect": true,
+    "redirect": "Caeruleus fons",
     "chapters": [
       {
         "start": 19,
@@ -793,7 +793,6 @@
   },
   {
     "lemma": "Drakontides 3a",
-    "next": "Drusia aqua",
     "chapters": [
       {
         "start": 60,
@@ -803,10 +802,14 @@
     ]
   },
   {
+    "lemma": "Drakontides",
+    "next": "Drusia aqua"
+  },
+  {
     "lemma": "Drusia aqua",
-    "previous": "Drakontides 3a",
-    "next": "Engye",
-    "redirect": true,
+    "previous": "Drakontides",
+    "next": "Ἐγγύη",
+    "redirect": "Damnata aqua",
     "chapters": [
       {
         "start": 60,
@@ -816,8 +819,11 @@
     ]
   },
   {
+    "lemma": "Ἐγγύη",
+    "previous": "Drusia aqua"
+  },
+  {
     "lemma": "Engye",
-    "previous": "Drusia aqua",
     "next": "Engyesis",
     "chapters": [
       {

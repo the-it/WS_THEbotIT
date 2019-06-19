@@ -1141,7 +1141,7 @@
   {
     "lemma": "Τρικωμία 3",
     "previous": "Trikomia 2",
-    "next": "Τρικωμία 4",
+    "next": "Trikomia 4",
     "sort_key": "Trikomia 3",
     "chapters": [
       {
@@ -1155,6 +1155,7 @@
     "lemma": "Τρικωμία 4",
     "previous": "Τρικωμία 3",
     "next": "Τρικωμία 5",
+    "sort_key": "Trikomia 5",
     "chapters": [
       {
         "start": 152,
@@ -1312,7 +1313,7 @@
   {
     "lemma": "Trimammion",
     "previous": "Trilogie",
-    "next": "Trimenothuritai",
+    "next": "Τριμενοθουρῖται",
     "chapters": [
       {
         "start": 155,
@@ -1322,20 +1323,14 @@
     ]
   },
   {
-    "lemma": "Trimenothuritai",
+    "lemma": "Τριμενοθουρῖται",
     "previous": "Trimammion",
     "next": "Trimerus",
-    "chapters": [
-      {
-        "start": 156,
-        "end": 156,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Trimenoth"
   },
   {
     "lemma": "Trimerus",
-    "previous": "Trimenothuritai",
+    "previous": "Τριμενοθουρῖται",
     "next": "Trimetus",
     "chapters": [
       {
