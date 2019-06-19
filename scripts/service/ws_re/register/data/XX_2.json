@@ -3589,7 +3589,7 @@
   {
     "lemma": "Pithon",
     "previous": "Pitholaos",
-    "next": "Pithonobaste emporion",
+    "next": "Πιθωνοβάστη ἐμπόριον",
     "chapters": [
       {
         "start": 1848,
@@ -3598,21 +3598,15 @@
     ]
   },
   {
-    "lemma": "Pithonobaste emporion",
+    "lemma": "Πιθωνοβάστη ἐμπόριον",
     "previous": "Pithon",
-    "next": "Pithos",
-    "chapters": [
-      {
-        "start": 1848,
-        "end": 1848,
-        "author": "Stein, O[tto]"
-      }
-    ]
+    "next": "Πίθος",
+    "sort_key": "Pithonobasteemporion"
   },
   {
-    "lemma": "Pithos",
-    "previous": "Pithonobaste emporion",
-    "next": "Pithos 2",
+    "lemma": "Πίθος",
+    "previous": "Πιθωνοβάστη ἐμπόριον",
+    "next": "Πίθος 2",
     "redirect": true,
     "chapters": [
       {
@@ -3622,9 +3616,10 @@
     ]
   },
   {
-    "lemma": "Pithos 2",
-    "previous": "Pithos",
+    "lemma": "Πίθος 2",
+    "previous": "Πίθος",
     "next": "Pitiêl",
+    "sort_key": "Pithos 2",
     "chapters": [
       {
         "start": 1849,
@@ -3635,7 +3630,7 @@
   },
   {
     "lemma": "Pitiêl",
-    "previous": "Pithos 2",
+    "previous": "Πίθος 2",
     "next": "Pitinatis Ager",
     "chapters": [
       {
@@ -4267,7 +4262,7 @@
   {
     "lemma": "Pius 8",
     "previous": "Pius 7",
-    "next": "Pius Cassius",
+    "next": "D. Pius Cassius",
     "chapters": [
       {
         "start": 1893,
@@ -4277,8 +4272,12 @@
     ]
   },
   {
-    "lemma": "Pius Cassius",
+    "lemma": "D. Pius Cassius",
     "previous": "Pius 8",
+    "sort_key": "Pius c"
+  },
+  {
+    "lemma": "Pius Cassius",
     "next": "Pixodaros 1",
     "chapters": [
       {

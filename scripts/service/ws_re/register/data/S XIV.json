@@ -4040,6 +4040,7 @@
   {
     "lemma": "Cornelius 333a",
     "previous": "Cornelius 304a",
+    "next": "Cornelius 359",
     "chapters": [
       {
         "start": 109,
@@ -4049,8 +4050,13 @@
     ]
   },
   {
+    "lemma": "Cornelius 359",
+    "previous": "Cornelius 333a",
+    "next": "Cornelius 398a"
+  },
+  {
     "lemma": "Cornelius 398a",
-    "previous": null,
+    "previous": "Cornelius 359",
     "next": "Cornelius 442a"
   },
   {

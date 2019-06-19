@@ -1662,6 +1662,7 @@
     "lemma": "Tineius 3",
     "previous": "Tineius 2",
     "next": "Tineius 4",
+    "sort_key": "Tineius 03",
     "chapters": [
       {
         "start": 1375,
@@ -1687,6 +1688,7 @@
     "lemma": "Tineius 5",
     "previous": "Tineius 4",
     "next": "Tineius 6",
+    "sort_key": "Tineius 05",
     "chapters": [
       {
         "start": 1376,
@@ -1842,7 +1844,7 @@
   {
     "lemma": "Tinigene",
     "previous": "Tinia",
-    "next": "Tinissa",
+    "next": "Τίνισσα",
     "redirect": true,
     "chapters": [
       {
@@ -1852,9 +1854,10 @@
     ]
   },
   {
-    "lemma": "Tinissa",
+    "lemma": "Τίνισσα",
     "previous": "Tinigene",
     "next": "Tinna",
+    "sort_key": "Tinissa",
     "chapters": [
       {
         "start": 1392,
@@ -1865,7 +1868,7 @@
   },
   {
     "lemma": "Tinna",
-    "previous": "Tinissa",
+    "previous": "Τίνισσα",
     "next": "Tinnetione",
     "chapters": [
       {
@@ -1903,7 +1906,7 @@
   {
     "lemma": "Tintenfische",
     "previous": "Tinos",
-    "next": "tinθu(n)",
+    "next": "Tinθu(n)",
     "wp_link": "w:de:Tintenfische",
     "chapters": [
       {
@@ -1914,7 +1917,7 @@
     ]
   },
   {
-    "lemma": "tinθu(n)",
+    "lemma": "Tinθu(n)",
     "previous": "Tintenfische",
     "next": "Tintinnabulum",
     "sort_key": "tinthun",
@@ -1928,7 +1931,7 @@
   },
   {
     "lemma": "Tintinnabulum",
-    "previous": "tinθu(n)",
+    "previous": "Tinθu(n)",
     "next": "Tinulus",
     "chapters": [
       {
@@ -2333,6 +2336,7 @@
     "lemma": "Tiridates 3",
     "previous": "Tiridates 2",
     "next": "Tiridates 4",
+    "sort_key": "Tiridates 03",
     "wp_link": "w:de:Tiridates I.",
     "chapters": [
       {
@@ -2360,6 +2364,7 @@
     "lemma": "Tiridates 5",
     "previous": "Tiridates 4",
     "next": "Tiridates 6",
+    "sort_key": "Tiridates 05",
     "wp_link": "w:de:Tiridates III.",
     "chapters": [
       {
@@ -2373,6 +2378,7 @@
     "lemma": "Tiridates 6",
     "previous": "Tiridates 5",
     "next": "Tiridates 7",
+    "sort_key": "Tiridates 06",
     "wp_link": "w:de:Trdat I.",
     "chapters": [
       {
@@ -2386,6 +2392,7 @@
     "lemma": "Tiridates 7",
     "previous": "Tiridates 6",
     "next": "Tiridates 8",
+    "sort_key": "Tiridates 07",
     "chapters": [
       {
         "start": 1444,
@@ -2411,6 +2418,7 @@
     "lemma": "Tiridates 9",
     "previous": "Tiridates 8",
     "next": "Tiridates 10",
+    "sort_key": "Tiridates 09",
     "wp_link": "w:de:Trdat III.",
     "chapters": [
       {
@@ -2862,7 +2870,7 @@
   },
   {
     "lemma": "Tisia 3",
-    "previous": "Tisia 2",
+    "previous": "Tisia 1",
     "next": "Tisianes",
     "wp_link": "w:de:Theiß",
     "chapters": [
@@ -11952,7 +11960,7 @@
   {
     "lemma": "Tribas",
     "previous": "Tribanta",
-    "next": "Tribazina",
+    "next": "Τριβαζίνα",
     "chapters": [
       {
         "start": 2403,
@@ -11962,9 +11970,10 @@
     ]
   },
   {
-    "lemma": "Tribazina",
+    "lemma": "Τριβαζίνα",
     "previous": "Tribas",
     "next": "Tribicium",
+    "sort_key": "Tribazina",
     "chapters": [
       {
         "start": 2403,
@@ -11975,7 +11984,7 @@
   },
   {
     "lemma": "Tribicium",
-    "previous": "Tribazina",
+    "previous": "Τριβαζίνα",
     "next": "Tribigild",
     "redirect": true,
     "chapters": [

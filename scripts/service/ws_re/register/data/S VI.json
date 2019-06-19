@@ -120,10 +120,13 @@
   },
   {
     "lemma": "Agesistratos",
-    "previous": "Afranius 10a"
+    "previous": "Afranius 10a",
+    "next": "Aiacius 3"
   },
   {
     "lemma": "Aiacius 3",
+    "previous": "Agesistratos",
+    "next": "Albiobola",
     "chapters": [
       {
         "start": 3,
@@ -133,12 +136,19 @@
     ]
   },
   {
-    "lemma": "Aiacius 2",
+    "lemma": "Albiobola",
+    "previous": "Aiacius 3"
+  },
+  {
+    "lemma": "Aiacius 2"
+  },
+  {
+    "lemma": "Aiacius 3",
     "next": "Albiobola"
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 2",
+    "previous": "Aiacius 3",
     "next": "Alexandros 90a",
     "chapters": [
       {
@@ -180,6 +190,7 @@
     "lemma": "Annius 26a",
     "previous": "Anisa",
     "next": "Annius 30",
+    "sort_key": "Annius 026a",
     "chapters": [
       {
         "start": 7,
@@ -282,6 +293,7 @@
     "lemma": "Aponius 8a",
     "previous": "Apollodoros 61",
     "next": "Appius 13a",
+    "sort_key": "Aponius 08a",
     "chapters": [
       {
         "start": 9,
@@ -477,6 +489,7 @@
     "lemma": "Avidius 7a",
     "previous": "Avidius 6",
     "next": "Aurelius 111a",
+    "sort_key": "Avidius 07a",
     "chapters": [
       {
         "start": 18,
@@ -2853,7 +2866,6 @@
   {
     "lemma": "Maximus 128",
     "previous": "Maximinus 5",
-    "next": "Media provincia",
     "chapters": [
       {
         "start": 289,
@@ -2863,8 +2875,12 @@
     ]
   },
   {
+    "lemma": "Maximus 26",
+    "next": "Media provincia"
+  },
+  {
     "lemma": "Media provincia",
-    "previous": "Maximus 128",
+    "previous": "Maximus 26",
     "next": "Meidylides 1",
     "chapters": [
       {

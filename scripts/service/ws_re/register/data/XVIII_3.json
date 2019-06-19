@@ -202,7 +202,7 @@
   {
     "lemma": "Palem",
     "previous": "Paleis",
-    "next": "Pales",
+    "next": "Παλ..έων ὁ δῆμος",
     "chapters": [
       {
         "start": 89,
@@ -212,8 +212,14 @@
     ]
   },
   {
-    "lemma": "Pales",
+    "lemma": "Παλ..έων ὁ δῆμος",
     "previous": "Palem",
+    "next": "Pales",
+    "sort_key": "Paleon"
+  },
+  {
+    "lemma": "Pales",
+    "previous": "Παλ..έων ὁ δῆμος",
     "next": "Palfuriana",
     "chapters": [
       {
@@ -393,6 +399,7 @@
     "lemma": "Παλιντοκία",
     "previous": "Palinodia",
     "next": "Palinurus 1",
+    "sort_key": "Palintokia",
     "chapters": [
       {
         "start": 148,
@@ -500,7 +507,7 @@
   {
     "lemma": "Palla 3",
     "previous": "Palla 2",
-    "next": "Pallacinae Vicus",
+    "next": "Paliacinae Vicus",
     "chapters": [
       {
         "start": 155,

@@ -13,7 +13,7 @@
   {
     "lemma": "Saale",
     "previous": "S...",
-    "next": "Saana",
+    "next": "Σάανα",
     "chapters": [
       {
         "start": 1297,
@@ -23,9 +23,10 @@
     ]
   },
   {
-    "lemma": "Saana",
+    "lemma": "Σάανα",
     "previous": "Saale",
     "next": "Saar, Saarburg",
+    "sort_key": "Saana",
     "chapters": [
       {
         "start": 1297,
@@ -36,7 +37,7 @@
   },
   {
     "lemma": "Saar, Saarburg",
-    "previous": "Saana",
+    "previous": "Σάανα",
     "next": "Saarnaios",
     "chapters": [
       {
@@ -107,7 +108,7 @@
   {
     "lemma": "Saba 3",
     "previous": "Saba 2",
-    "next": "Σαβαδεῖβαι νῆσοι",
+    "next": "Sabadeibai nesoi",
     "chapters": [
       {
         "start": 1514,
@@ -117,7 +118,7 @@
     ]
   },
   {
-    "lemma": "Σαβαδεῖβαι νῆσοι",
+    "lemma": "Sabadeibai nesoi",
     "previous": "Saba 3",
     "next": "Σαβάδιοι",
     "sort_key": "Sabadeibai nesoi",
@@ -131,7 +132,7 @@
   },
   {
     "lemma": "Σαβάδιοι",
-    "previous": "Σαβαδεῖβαι νῆσοι",
+    "previous": "Sabadeibai nesoi",
     "next": "Sabae",
     "sort_key": "Sabadioi",
     "chapters": [
