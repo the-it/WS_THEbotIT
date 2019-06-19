@@ -7832,6 +7832,7 @@
     "lemma": "Mellodunum",
     "previous": "Mellesa",
     "next": "Mellon",
+    "redirect": true,
     "wp_link": "w:de:Melun",
     "chapters": [
       {
@@ -16415,7 +16416,8 @@
   {
     "lemma": "Μεσχέλα",
     "previous": "Μέσχη",
-    "next": "Mescheta",
+    "next": "Μεσχῆτα",
+    "sort_key": "Meschela",
     "chapters": [
       {
         "start": 1076,
@@ -16425,7 +16427,7 @@
     ]
   },
   {
-    "lemma": "Mescheta",
+    "lemma": "Μεσχῆτα",
     "previous": "Μεσχέλα",
     "next": "Mescianus",
     "sort_key": "Mescheta",
@@ -16439,7 +16441,7 @@
   },
   {
     "lemma": "Mescianus",
-    "previous": "Mescheta",
+    "previous": "Μεσχῆτα",
     "next": "Mescidius",
     "chapters": [
       {
@@ -16512,6 +16514,7 @@
     "lemma": "Mese 1",
     "previous": "Mescinius 4",
     "next": "Mese 2",
+    "sort_key": "Mescheta",
     "chapters": [
       {
         "start": 1078,

@@ -38,7 +38,6 @@
   },
   {
     "lemma": "Aburnius 2",
-    "next": "Acutius 1b",
     "chapters": [
       {
         "start": 1,
@@ -48,8 +47,13 @@
     ]
   },
   {
+    "lemma": "Acilius 16",
+    "next": "Acutius 1b"
+  },
+  {
     "lemma": "Acutius 1b",
-    "previous": "Aburnius 2",
+    "previous": "Acilius 16",
+    "next": "Aelius 75a",
     "chapters": [
       {
         "start": 1,
@@ -57,6 +61,10 @@
         "author": "Groag"
       }
     ]
+  },
+  {
+    "lemma": "Aelius 75a",
+    "previous": "Acutius 1b"
   },
   {
     "lemma": "Acutius 1a",
@@ -245,6 +253,7 @@
     "lemma": "Antonius 36a",
     "previous": "Antistius 50",
     "next": "Antonius 58a",
+    "sort_key": "Antonius 036a",
     "chapters": [
       {
         "start": 8,
@@ -525,6 +534,7 @@
   {
     "lemma": "Baebius 36a",
     "previous": "Aurelius 140a",
+    "next": "Bruttius 5a",
     "chapters": [
       {
         "start": 18,
@@ -534,8 +544,14 @@
     ]
   },
   {
+    "lemma": "Bruttius 5a",
+    "previous": "Baebius 36a",
+    "next": "Brutus 3",
+    "sort_key": "Bruttius 05a"
+  },
+  {
     "lemma": "Brutus 3",
-    "previous": null,
+    "previous": "Bruttius 5a",
     "next": "Butra"
   },
   {

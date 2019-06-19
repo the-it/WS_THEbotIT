@@ -998,7 +998,6 @@
   {
     "lemma": "Felix 23a",
     "previous": "Eutyches 7b",
-    "next": "Finken",
     "chapters": [
       {
         "start": 169,
@@ -1008,8 +1007,12 @@
     ]
   },
   {
+    "lemma": "Eutyches 23a",
+    "next": "Finken"
+  },
+  {
     "lemma": "Finken",
-    "previous": "Felix 23a",
+    "previous": "Eutyches 23a",
     "next": "Flamingo",
     "wp_link": "w:de:Finken",
     "chapters": [
