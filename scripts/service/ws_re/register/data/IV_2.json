@@ -537,6 +537,7 @@
     "lemma": "Cortovallium",
     "previous": "Cortoriacenses",
     "next": "Cortuosa",
+    "redirect": "Coriovallum",
     "chapters": [
       {
         "start": 1662,
@@ -584,6 +585,7 @@
     "lemma": "Corvilius",
     "previous": "Corucara",
     "next": "Corvilu",
+    "redirect": "Cornelius 168",
     "chapters": [
       {
         "start": 1662,
@@ -631,6 +633,7 @@
     "lemma": "Corvinus 1",
     "previous": "Corvinius 2",
     "next": "Corvinus 2",
+    "redirect": "Statilius 17",
     "chapters": [
       {
         "start": 1662,
@@ -678,6 +681,7 @@
     "lemma": "Corvinus 5",
     "previous": "Corvinus 4",
     "next": "Corvius",
+    "redirect": "Statilius 17",
     "chapters": [
       {
         "start": 1662,
@@ -809,6 +813,7 @@
     "lemma": "Coryllus",
     "previous": "Corvus 4",
     "next": "Corylus",
+    "redirect": "Scorylo",
     "chapters": [
       {
         "start": 1666,
@@ -820,6 +825,7 @@
     "lemma": "Corylus",
     "previous": "Coryllus",
     "next": "Corynaeum promuntorium",
+    "redirect": "Haselnuss",
     "chapters": [
       {
         "start": 1666,
@@ -831,6 +837,7 @@
     "lemma": "Corynaeum promuntorium",
     "previous": "Corylus",
     "next": "Corynaeus 1",
+    "redirect": "Koryne 2",
     "chapters": [
       {
         "start": 1666,
@@ -8750,6 +8757,7 @@
     "lemma": "Daitas 2",
     "previous": "Daitas 1",
     "next": "Daites",
+    "redirect": "Daito",
     "chapters": [
       {
         "start": 2015,
@@ -8832,7 +8840,7 @@
   {
     "lemma": "Daitor",
     "previous": "Daitondas",
-    "next": "Daitroi",
+    "next": "Δαιτροί",
     "chapters": [
       {
         "start": 2015,
@@ -8842,9 +8850,10 @@
     ]
   },
   {
-    "lemma": "Daitroi",
+    "lemma": "Δαιτροί",
     "previous": "Daitor",
-    "next": "Daitymones",
+    "next": "Δαιτυμόνες",
+    "sort_key": "Daitroi",
     "chapters": [
       {
         "start": 2015,
@@ -8854,9 +8863,10 @@
     ]
   },
   {
-    "lemma": "Daitymones",
-    "previous": "Daitroi",
+    "lemma": "Δαιτυμόνες",
+    "previous": "Δαιτροί",
     "next": "Daïx",
+    "sort_key": "Daitymones",
     "chapters": [
       {
         "start": 2016,
@@ -8867,7 +8877,7 @@
   },
   {
     "lemma": "Daïx",
-    "previous": "Daitymones",
+    "previous": "Δαιτυμόνες",
     "next": "Dakasye",
     "chapters": [
       {
@@ -13881,7 +13891,7 @@
   {
     "lemma": "Dareikos",
     "previous": "Dare actionem",
-    "next": "Δαρεινὴ ἀτροπός",
+    "next": "Δαρεινὴ ἀτραπός",
     "wp_link": "w:de:Dareikos",
     "chapters": [
       {
@@ -13892,7 +13902,7 @@
     ]
   },
   {
-    "lemma": "Δαρεινὴ ἀτροπός",
+    "lemma": "Δαρεινὴ ἀτραπός",
     "previous": "Dareikos",
     "next": "Dareion",
     "sort_key": "Dareine atrapos",
@@ -13906,7 +13916,7 @@
   },
   {
     "lemma": "Dareion",
-    "previous": "Δαρεινὴ ἀτροπός",
+    "previous": "Δαρεινὴ ἀτραπός",
     "next": "Dareios",
     "chapters": [
       {
@@ -17816,7 +17826,7 @@
     "lemma": "Deïmachos 6",
     "previous": "Deïmachos 5",
     "next": "Deimas",
-    "redirect": true,
+    "redirect": "Daïmachos 2",
     "chapters": [
       {
         "start": 2385,
@@ -18344,7 +18354,7 @@
   {
     "lemma": "Deinon 5",
     "previous": "Deinon 4",
-    "next": "Deinon 7",
+    "next": "Deinon 6",
     "chapters": [
       {
         "start": 2395,
@@ -18354,8 +18364,13 @@
     ]
   },
   {
-    "lemma": "Deinon 7",
+    "lemma": "Deinon 6",
     "previous": "Deinon 5",
+    "next": "Deinon 7"
+  },
+  {
+    "lemma": "Deinon 7",
+    "previous": "Deinon 6",
     "next": "Deinon 8",
     "chapters": [
       {
@@ -18369,6 +18384,7 @@
     "lemma": "Deinon 8",
     "previous": "Deinon 7",
     "next": "Deinon 9",
+    "redirect": "Dinon 2",
     "chapters": [
       {
         "start": 2395,
@@ -20720,7 +20736,7 @@
     "lemma": "Demetrianus 2",
     "previous": "Demetrianus 1",
     "next": "Demetrianus 3",
-    "redirect": true,
+    "redirect": "Iulius 356",
     "chapters": [
       {
         "start": 2764,
@@ -22217,6 +22233,7 @@
     "lemma": "Demetrios 98",
     "previous": "Demetrios 97",
     "next": "Demetrios 99",
+    "sort_key": "Demetrios 098",
     "chapters": [
       {
         "start": 2844,

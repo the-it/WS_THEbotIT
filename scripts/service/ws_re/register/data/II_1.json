@@ -1665,6 +1665,7 @@
     "lemma": "Apollonios 55",
     "previous": "Apollonios 54",
     "next": "Apollonios 56",
+    "sort_key": "Apollonios 055",
     "chapters": [
       {
         "start": 124,
@@ -1677,6 +1678,7 @@
     "lemma": "Apollonios 56",
     "previous": "Apollonios 55",
     "next": "Apollonios 57",
+    "sort_key": "Apollonios 056",
     "chapters": [
       {
         "start": 124,
@@ -16479,7 +16481,7 @@
   {
     "lemma": "Ardys 2",
     "previous": "Ardys 1",
-    "next": "Ardys 3",
+    "next": "Ardys 3ff.",
     "chapters": [
       {
         "start": 617,
@@ -16490,8 +16492,8 @@
   },
   {
     "lemma": "Ardys 3",
-    "previous": "Ardys 2",
-    "next": "Ardys 3ff.",
+    "previous": "Ardys 3ff.",
+    "next": "Ardys 4",
     "chapters": [
       {
         "start": 617,
@@ -16502,8 +16504,8 @@
   },
   {
     "lemma": "Ardys 3ff.",
-    "previous": "Ardys 3",
-    "next": "Ardys 4",
+    "previous": "Ardys 2",
+    "next": "Ardys 3",
     "sort_key": "Ardys 25",
     "chapters": [
       {
@@ -16515,7 +16517,7 @@
   },
   {
     "lemma": "Ardys 4",
-    "previous": "Ardys 3ff.",
+    "previous": "Ardys 3",
     "next": "Ardys 5",
     "chapters": [
       {
@@ -16862,7 +16864,7 @@
   {
     "lemma": "Areia 5",
     "previous": "Areia 4",
-    "next": "Areia krene",
+    "next": "Ἀρεία κρήνη",
     "chapters": [
       {
         "start": 621,
@@ -16872,20 +16874,14 @@
     ]
   },
   {
-    "lemma": "Areia krene",
+    "lemma": "Ἀρεία κρήνη",
     "previous": "Areia 5",
     "next": "Ἀρεία λίμνη",
-    "chapters": [
-      {
-        "start": 621,
-        "end": 621,
-        "author": "Hirschfeld"
-      }
-    ]
+    "sort_key": "Areiakrene"
   },
   {
     "lemma": "Ἀρεία λίμνη",
-    "previous": "Areia krene",
+    "previous": "Ἀρεία κρήνη",
     "next": "Ἀρεία πόλις",
     "chapters": [
       {
@@ -23323,6 +23319,7 @@
     "lemma": "Ariovindus 2",
     "previous": "Ariovindus 1",
     "next": "Ariovindus 3",
+    "redirect": "Martialis 6",
     "chapters": [
       {
         "start": 841,

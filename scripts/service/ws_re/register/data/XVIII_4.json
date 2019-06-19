@@ -85,7 +85,7 @@
   {
     "lemma": "Parapegma",
     "previous": "Parapanisus 2",
-    "next": "Paraphylakes",
+    "next": "Παραφύλακες",
     "chapters": [
       {
         "start": 1295,
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "lemma": "Paraphylakes",
+    "lemma": "Παραφύλακες",
     "previous": "Parapegma",
     "next": "Parapinae",
     "chapters": [
@@ -108,7 +108,7 @@
   },
   {
     "lemma": "Parapinae",
-    "previous": "Paraphylakes",
+    "previous": "Παραφύλακες",
     "next": "Parapotamioi",
     "chapters": [
       {
@@ -234,7 +234,7 @@
   {
     "lemma": "Parasopias",
     "previous": "Parasopiai",
-    "next": "Parastades",
+    "next": "Παραστάδες",
     "chapters": [
       {
         "start": 1405,
@@ -244,9 +244,9 @@
     ]
   },
   {
-    "lemma": "Parastades",
+    "lemma": "Παραστάδες",
     "previous": "Parasopias",
-    "next": "parastasis",
+    "next": "παράστασις",
     "chapters": [
       {
         "start": 1406,
@@ -256,9 +256,10 @@
     ]
   },
   {
-    "lemma": "parastasis",
-    "previous": "Parastades",
-    "next": "parastatai",
+    "lemma": "παράστασις",
+    "previous": "Παραστάδες",
+    "next": "παραστάται",
+    "sort_key": "Parastasis",
     "chapters": [
       {
         "start": 1406,
@@ -268,9 +269,10 @@
     ]
   },
   {
-    "lemma": "parastatai",
-    "previous": "parastasis",
+    "lemma": "παραστάται",
+    "previous": "παράστασις",
     "next": "Parastates",
+    "sort_key": "Parastatai",
     "chapters": [
       {
         "start": 1406,
@@ -281,8 +283,8 @@
   },
   {
     "lemma": "Parastates",
-    "previous": "parastatai",
-    "next": "Parathesis",
+    "previous": "παραστάται",
+    "next": "Παράθεσις",
     "chapters": [
       {
         "start": 1406,
@@ -292,9 +294,10 @@
     ]
   },
   {
-    "lemma": "Parathesis",
+    "lemma": "Παράθεσις",
     "previous": "Parastates",
     "next": "Paratianis",
+    "sort_key": "Parathesis",
     "chapters": [
       {
         "start": 1407,
@@ -305,7 +308,7 @@
   },
   {
     "lemma": "Paratianis",
-    "previous": "Parathesis",
+    "previous": "Παράθεσις",
     "next": "Paratilmos",
     "chapters": [
       {

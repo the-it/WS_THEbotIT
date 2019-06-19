@@ -1,7 +1,9 @@
 [
   {
     "lemma": "Selinuntia",
-    "next": "Selinuntios",
+    "previous": "Selinos",
+    "next": "Σελινούντιος",
+    "redirect": "Selinus 8",
     "chapters": [
       {
         "start": 1265,
@@ -11,7 +13,7 @@
     ]
   },
   {
-    "lemma": "Selinuntios",
+    "lemma": "Σελινούντιος",
     "previous": "Selinuntia",
     "next": "Selinus",
     "chapters": [
@@ -24,8 +26,8 @@
   },
   {
     "lemma": "Selinus",
-    "previous": "Selinuntios",
-    "next": "Selinus 1",
+    "previous": "Σελινούντιος",
+    "next": "Selinus 1-7",
     "chapters": [
       {
         "start": 1265,
@@ -36,8 +38,8 @@
   },
   {
     "lemma": "Selinus 1",
-    "previous": "Selinus",
-    "next": "Selinus 1-7",
+    "previous": "Σελινούντιος",
+    "next": "Selinus 2",
     "chapters": [
       {
         "start": 1265,
@@ -59,7 +61,7 @@
   },
   {
     "lemma": "Selinus 2",
-    "previous": "Selinus 1-7",
+    "previous": "Selinus 1",
     "next": "Selinus 3",
     "sort_key": "Selinus 02",
     "chapters": [
@@ -74,6 +76,7 @@
     "lemma": "Selinus 3",
     "previous": "Selinus 2",
     "next": "Selinus 4",
+    "sort_key": "Selinus 03",
     "chapters": [
       {
         "start": 1265,
@@ -99,6 +102,7 @@
     "lemma": "Selinus 5",
     "previous": "Selinus 4",
     "next": "Selinus 6",
+    "sort_key": "Selinus 05",
     "chapters": [
       {
         "start": 1265,
@@ -11166,7 +11170,7 @@
   {
     "lemma": "Sescuncia",
     "previous": "Sescla",
-    "next": "Sesea",
+    "next": "Σεσέα",
     "chapters": [
       {
         "start": 1853,
@@ -11176,7 +11180,7 @@
     ]
   },
   {
-    "lemma": "Sesea",
+    "lemma": "Σεσέα",
     "previous": "Sescuncia",
     "next": "Sesedi",
     "chapters": [
@@ -11189,7 +11193,7 @@
   },
   {
     "lemma": "Sesedi",
-    "previous": "Sesea",
+    "previous": "Σεσέα",
     "next": "Sesekreienai",
     "chapters": [
       {
@@ -12900,6 +12904,7 @@
     "lemma": "Severus 1",
     "previous": "Severius 3",
     "next": "Severus 2",
+    "sort_key": "Severus 01",
     "chapters": [
       {
         "start": 1937,
@@ -12912,7 +12917,7 @@
     "lemma": "Severus 2",
     "previous": "Severus 1",
     "next": "Severus 3",
-    "redirect": true,
+    "sort_key": "Severus 02",
     "chapters": [
       {
         "start": 1938,
@@ -12924,6 +12929,7 @@
     "lemma": "Severus 3",
     "previous": "Severus 2",
     "next": "Severus 4",
+    "sort_key": "Severus 03",
     "chapters": [
       {
         "start": 1938,
@@ -12936,6 +12942,7 @@
     "lemma": "Severus 4",
     "previous": "Severus 3",
     "next": "Severus 5",
+    "sort_key": "Severus 04",
     "chapters": [
       {
         "start": 1938,
