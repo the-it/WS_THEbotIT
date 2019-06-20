@@ -582,7 +582,7 @@
   {
     "lemma": "Molpadia 2",
     "previous": "Molpadia 1",
-    "next": "Molpagoras, -u 1",
+    "next": "Μολπαγόρας, -ου 1",
     "chapters": [
       {
         "start": 26,
@@ -592,9 +592,10 @@
     ]
   },
   {
-    "lemma": "Molpagoras, -u 1",
+    "lemma": "Μολπαγόρας, -ου 1",
     "previous": "Molpadia 2",
-    "next": "Molpagoras, -u 2",
+    "next": "Μολπαγόρας, -ου 2",
+    "sort_key": "Molpagoras 1",
     "chapters": [
       {
         "start": 26,
@@ -604,21 +605,16 @@
     ]
   },
   {
-    "lemma": "Molpagoras, -u 2",
-    "previous": "Molpagoras, -u 1",
-    "next": "Molpagoras, -u 3",
-    "chapters": [
-      {
-        "start": 27,
-        "end": 27,
-        "author": "Modrze"
-      }
-    ]
+    "lemma": "Μολπαγόρας, -ου 2",
+    "previous": "Μολπαγόρας, -ου 1",
+    "next": "Μολπαγόρας, -ου 3",
+    "sort_key": "Molpagoras 2"
   },
   {
-    "lemma": "Molpagoras, -u 3",
-    "previous": "Molpagoras, -u 2",
+    "lemma": "Μολπαγόρας, -ου 3",
+    "previous": "Μολπαγόρας, -ου 2",
     "next": "Molpe",
+    "sort_key": "Molpagoras 3",
     "chapters": [
       {
         "start": 27,
@@ -629,7 +625,7 @@
   },
   {
     "lemma": "Molpe",
-    "previous": "Molpagoras, -u 3",
+    "previous": "Μολπαγόρας, -ου 3",
     "next": "Molpe 1",
     "chapters": [
       {
@@ -975,7 +971,7 @@
   {
     "lemma": "Monaedes",
     "previous": "Monadi",
-    "next": "Monaises, -u 1",
+    "next": "Μοναίσης, -ου 1",
     "chapters": [
       {
         "start": 43,
@@ -985,9 +981,10 @@
     ]
   },
   {
-    "lemma": "Monaises, -u 1",
+    "lemma": "Μοναίσης, -ου 1",
     "previous": "Monaedes",
     "next": "Μοναίσης, -ου 2",
+    "sort_key": "Monaises 1",
     "chapters": [
       {
         "start": 43,
@@ -998,8 +995,9 @@
   },
   {
     "lemma": "Μοναίσης, -ου 2",
-    "previous": "Monaises, -u 1",
+    "previous": "Μοναίσης, -ου 1",
     "next": "Monalos",
+    "sort_key": "Monaises 2",
     "chapters": [
       {
         "start": 44,

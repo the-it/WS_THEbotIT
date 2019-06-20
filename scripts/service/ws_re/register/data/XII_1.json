@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Kynesioi",
+    "previous": "Kynegoi",
     "next": "Kynetes",
     "chapters": [
       {
@@ -13,7 +14,7 @@
   {
     "lemma": "Kynetes",
     "previous": "Kynesioi",
-    "next": "Kynethos 1",
+    "next": "Kynethos",
     "redirect": true,
     "chapters": [
       {
@@ -23,8 +24,13 @@
     ]
   },
   {
-    "lemma": "Kynethos 1",
+    "lemma": "Kynethos",
     "previous": "Kynetes",
+    "next": "Kynethos 1"
+  },
+  {
+    "lemma": "Kynethos 1",
+    "previous": "Kynethos",
     "next": "Kynethos 2",
     "chapters": [
       {
@@ -61,7 +67,7 @@
   {
     "lemma": "Kynia",
     "previous": "Kynetia",
-    "next": "Kyniska",
+    "next": "Κυνίσκα",
     "chapters": [
       {
         "start": 1,
@@ -71,7 +77,7 @@
     ]
   },
   {
-    "lemma": "Kyniska",
+    "lemma": "Κυνίσκα",
     "previous": "Kynia",
     "next": "Kyniskos 1",
     "chapters": [
@@ -84,7 +90,7 @@
   },
   {
     "lemma": "Kyniskos 1",
-    "previous": "Kyniska",
+    "previous": "Κυνίσκα",
     "next": "Kyniskos 2",
     "chapters": [
       {
@@ -145,7 +151,7 @@
   {
     "lemma": "Kynokephaloi",
     "previous": "Kynodesme",
-    "next": "Kynophaloi",
+    "next": "Κυνόφαλοι",
     "chapters": [
       {
         "start": 24,
@@ -160,9 +166,10 @@
     ]
   },
   {
-    "lemma": "Kynophaloi",
+    "lemma": "Κυνόφαλοι",
     "previous": "Kynokephaloi",
-    "next": "Kynophontis",
+    "next": "Κυνοφόντις",
+    "sort_key": "Kynophaloi",
     "chapters": [
       {
         "start": 26,
@@ -172,8 +179,8 @@
     ]
   },
   {
-    "lemma": "Kynophontis",
-    "previous": "Kynophaloi",
+    "lemma": "Κυνοφόντις",
+    "previous": "Κυνόφαλοι",
     "next": "Kynopolis 1",
     "chapters": [
       {
@@ -185,7 +192,7 @@
   },
   {
     "lemma": "Kynopolis 1",
-    "previous": "Kynophontis",
+    "previous": "Κυνοφόντις",
     "next": "Kynopolis 2",
     "chapters": [
       {
@@ -331,6 +338,7 @@
     "lemma": "Κυνὸς κεφαλαί",
     "previous": "Kynosarges",
     "next": "Κυνὸς κεφαλή",
+    "sort_key": "Kynoskephalai",
     "chapters": [
       {
         "start": 33,

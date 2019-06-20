@@ -258,6 +258,7 @@
     "lemma": "Iulianos 2",
     "previous": "Iulianos 1",
     "next": "Iulianos 3",
+    "sort_key": "Iulianos 02",
     "chapters": [
       {
         "start": 9,
@@ -345,6 +346,7 @@
     "lemma": "Iulianos 9",
     "previous": "Iulianos 8",
     "next": "Iulianos 10",
+    "sort_key": "Iulianos 09",
     "chapters": [
       {
         "start": 15,
@@ -574,7 +576,6 @@
     "lemma": "Iulianos 27",
     "previous": "Iulianos 26",
     "next": "Iulianos 28",
-    "wp_link": "w:de:Julianus (Usurpator)",
     "chapters": [
       {
         "start": 91,
@@ -610,7 +611,7 @@
   {
     "lemma": "Iulianos 30",
     "previous": "Iulianos 29",
-    "next": "Iulianos 32",
+    "next": "Iulianos 31",
     "chapters": [
       {
         "start": 92,
@@ -620,9 +621,14 @@
     ]
   },
   {
-    "lemma": "Iulianos 32",
+    "lemma": "Iulianos 31",
     "previous": "Iulianos 30",
-    "next": "Iulianus 31",
+    "next": "Iulianos 32"
+  },
+  {
+    "lemma": "Iulianos 32",
+    "previous": "Iulianos 31",
+    "next": "Iulianos 33",
     "chapters": [
       {
         "start": 92,
@@ -644,7 +650,7 @@
   },
   {
     "lemma": "Iulianos 33",
-    "previous": "Iulianus 31",
+    "previous": "Iulianos 32",
     "next": "Iulianos 34",
     "chapters": [
       {
@@ -9586,6 +9592,7 @@
     "lemma": "Iunius 71",
     "previous": "Iunius 70",
     "next": "Iunius 72",
+    "sort_key": "Iunius 071",
     "chapters": [
       {
         "start": 1034,
@@ -9610,6 +9617,7 @@
     "lemma": "Iunius 73",
     "previous": "Iunius 72",
     "next": "Iunius 74",
+    "sort_key": "Iunius 073",
     "chapters": [
       {
         "start": 1034,
@@ -9647,6 +9655,7 @@
     "lemma": "Iunius 76",
     "previous": "Iunius 75",
     "next": "Iunius 77",
+    "sort_key": "Iunius 076",
     "chapters": [
       {
         "start": 1035,
@@ -9770,6 +9779,7 @@
     "lemma": "Iunius 86",
     "previous": "Iunius 85",
     "next": "Iunius 87",
+    "sort_key": "Iunius 086",
     "chapters": [
       {
         "start": 1041,
@@ -9805,6 +9815,7 @@
     "lemma": "Iunius 89",
     "previous": "Iunius 88",
     "next": "Iunius 90",
+    "sort_key": "Iunius 089",
     "chapters": [
       {
         "start": 1050,

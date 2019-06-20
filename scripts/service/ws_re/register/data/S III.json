@@ -285,6 +285,7 @@
     "lemma": "Acilius 47a",
     "previous": "Acilius 18a",
     "next": "Acisius",
+    "sort_key": "Acilius 47a",
     "chapters": [
       {
         "start": 17,
@@ -5028,7 +5029,8 @@
   },
   {
     "lemma": "Argenteus",
-    "previous": "Argenteuil"
+    "previous": "Argenteuil",
+    "next": null
   },
   {
     "lemma": "Aristianae",
@@ -12881,11 +12883,12 @@
   },
   {
     "lemma": "Demeter",
-    "previous": "Demarchos 5a"
+    "previous": "Demarchos 5a",
+    "next": "Demetrianus 1a"
   },
   {
     "lemma": "Demetrianus 1a",
-    "previous": null,
+    "previous": "Demeter",
     "next": "Demetrias 1",
     "chapters": [
       {

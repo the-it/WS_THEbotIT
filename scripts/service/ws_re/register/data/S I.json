@@ -3958,7 +3958,8 @@
   },
   {
     "lemma": "Alba Docilia",
-    "previous": "Alazoneia"
+    "previous": "Alazoneia",
+    "next": null
   },
   {
     "lemma": "Albania 1",
@@ -4700,7 +4701,6 @@
   },
   {
     "lemma": "Alkippos 1",
-    "next": "Alkithos",
     "sort_key": "Alkippos 1",
     "chapters": [
       {
@@ -4711,8 +4711,12 @@
     ]
   },
   {
+    "lemma": "Alkippos",
+    "next": "Alkithos"
+  },
+  {
     "lemma": "Alkithos",
-    "previous": "Alkippos 1",
+    "previous": "Alkippos",
     "next": "Alkmaion 1"
   },
   {

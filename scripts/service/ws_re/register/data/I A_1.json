@@ -1,7 +1,8 @@
 [
   {
     "lemma": "Ra",
-    "next": "Raabenoi",
+    "previous": "quinta essentia",
+    "next": "Ῥααβηνοί",
     "wp_link": "w:de:Wolga",
     "chapters": [
       {
@@ -12,9 +13,10 @@
     ]
   },
   {
-    "lemma": "Raabenoi",
+    "lemma": "Ῥααβηνοί",
     "previous": "Ra",
-    "next": "Rabana 1",
+    "next": "Ῥάβανα 1",
+    "sort_key": "Raabenoi",
     "chapters": [
       {
         "start": 9,
@@ -24,9 +26,10 @@
     ]
   },
   {
-    "lemma": "Rabana 1",
-    "previous": "Raabenoi",
-    "next": "Rabana 2",
+    "lemma": "Ῥάβανα 1",
+    "previous": "Ῥααβηνοί",
+    "next": "Ῥάβανα 2",
+    "sort_key": "Rabana 1",
     "chapters": [
       {
         "start": 9,
@@ -36,9 +39,10 @@
     ]
   },
   {
-    "lemma": "Rabana 2",
-    "previous": "Rabana 1",
-    "next": "Rabanitai",
+    "lemma": "Ῥάβανα 2",
+    "previous": "Ῥάβανα 1",
+    "next": "Ῥαβανῖται",
+    "sort_key": "Rabana 2",
     "chapters": [
       {
         "start": 10,
@@ -48,9 +52,10 @@
     ]
   },
   {
-    "lemma": "Rabanitai",
-    "previous": "Rabana 2",
+    "lemma": "Ῥαβανῖται",
+    "previous": "Ῥάβανα 2",
     "next": "Rabatamana",
+    "sort_key": "Rabanitai",
     "chapters": [
       {
         "start": 10,
@@ -61,7 +66,7 @@
   },
   {
     "lemma": "Rabatamana",
-    "previous": "Rabanitai",
+    "previous": "Ῥαβανῖται",
     "next": "Rabathmoba",
     "redirect": true,
     "chapters": [
@@ -99,6 +104,7 @@
     "lemma": "Ῥαβδᾶς",
     "previous": "Rabbanai",
     "next": "Ῥάβδιον",
+    "sort_key": "Rabdas",
     "chapters": [
       {
         "start": 11,

@@ -4599,7 +4599,6 @@
   {
     "lemma": "Sarapion 4",
     "previous": "Regina castra",
-    "next": "Sarapion 9",
     "chapters": [
       {
         "start": 1434,
@@ -4609,8 +4608,12 @@
     ]
   },
   {
+    "lemma": "Régĭna castra",
+    "next": "Sarapion 9"
+  },
+  {
     "lemma": "Sarapion 9",
-    "previous": "Sarapion 4",
+    "previous": "Régĭna castra",
     "next": "Scrofulas",
     "chapters": [
       {
@@ -4622,6 +4625,7 @@
   {
     "lemma": "Scrofulas",
     "previous": "Sarapion 9",
+    "next": null,
     "chapters": [
       {
         "start": 1434,

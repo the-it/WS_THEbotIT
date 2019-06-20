@@ -4453,6 +4453,7 @@
     "lemma": "Appuleius 9",
     "previous": "Appuleius 8",
     "next": "Appuleius 10",
+    "sort_key": "Appuleius 09",
     "wp_link": "w:de:Apuleius",
     "ws_link": "s:de:Apuleius",
     "chapters": [
@@ -36725,7 +36726,7 @@
   {
     "lemma": "Arsenios 3",
     "previous": "Arsenios 2",
-    "next": "(Ar)senius",
+    "next": "Arsenius",
     "chapters": [
       {
         "start": 1273,
@@ -36735,10 +36736,9 @@
     ]
   },
   {
-    "lemma": "(Ar)senius",
+    "lemma": "Arsenius",
     "previous": "Arsenios 3",
     "next": "Arsenoites",
-    "sort_key": "Arsenius",
     "chapters": [
       {
         "start": 1275,
@@ -36749,7 +36749,7 @@
   },
   {
     "lemma": "Arsenoites",
-    "previous": "(Ar)senius",
+    "previous": "Arsenius",
     "next": "Arses",
     "chapters": [
       {
