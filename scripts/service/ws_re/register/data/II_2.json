@@ -2207,6 +2207,7 @@
     "lemma": "Arzen",
     "previous": "Arzanene",
     "next": "Arzneikunde",
+    "wp_link": "w:de:Erzurum",
     "chapters": [
       {
         "start": 1498,
@@ -2694,6 +2695,7 @@
     "lemma": "Asa Paulini",
     "previous": "Asanka",
     "next": "Asapheidama",
+    "sort_key": "Asapaulini",
     "chapters": [
       {
         "start": 1517,
@@ -4552,6 +4554,7 @@
     "lemma": "Asinius 2",
     "previous": "Asinius 1",
     "next": "Asinius 3",
+    "sort_key": "Asinius 02",
     "chapters": [
       {
         "start": 1583,
@@ -4564,6 +4567,7 @@
     "lemma": "Asinius 3",
     "previous": "Asinius 2",
     "next": "Asinius 4",
+    "sort_key": "Asinius 03",
     "chapters": [
       {
         "start": 1583,
@@ -4576,6 +4580,7 @@
     "lemma": "Asinius 4",
     "previous": "Asinius 3",
     "next": "Asinius 5",
+    "sort_key": "Asinius 04",
     "chapters": [
       {
         "start": 1583,
@@ -4588,6 +4593,7 @@
     "lemma": "Asinius 5",
     "previous": "Asinius 4",
     "next": "Asinius 6",
+    "sort_key": "Asinius 05",
     "chapters": [
       {
         "start": 1583,
@@ -10449,6 +10455,7 @@
     "lemma": "Asterios 3",
     "previous": "Asterios 2",
     "next": "Asterios 4",
+    "sort_key": "Asterios 03",
     "chapters": [
       {
         "start": 1786,
@@ -16873,6 +16880,7 @@
     "lemma": "Atilius 1",
     "previous": "Atilius",
     "next": "Atilius 2",
+    "sort_key": "Atilius 01",
     "chapters": [
       {
         "start": 2076,
@@ -16911,6 +16919,7 @@
     "lemma": "Atilius 4",
     "previous": "Atilius 3",
     "next": "Atilius 5",
+    "sort_key": "Atilius 04",
     "chapters": [
       {
         "start": 2076,
@@ -33562,6 +33571,7 @@
     "lemma": "Auzia",
     "previous": "Auzemmi",
     "next": "Auziqua",
+    "sort_key": "Auzia",
     "wp_link": "w:de:Auzia",
     "chapters": [
       {
@@ -33622,7 +33632,7 @@
   {
     "lemma": "Auzurenses",
     "previous": "Auzui",
-    "next": "Axabitis tainia",
+    "next": "Ἀξαβῖτις ταινία",
     "chapters": [
       {
         "start": 2624,
@@ -33632,20 +33642,14 @@
     ]
   },
   {
-    "lemma": "Axabitis tainia",
+    "lemma": "Ἀξαβῖτις ταινία",
     "previous": "Auzurenses",
     "next": "Axabriga",
-    "chapters": [
-      {
-        "start": 2624,
-        "end": 2624,
-        "author": "Tomaschek"
-      }
-    ]
+    "sort_key": "Axabitistainia"
   },
   {
     "lemma": "Axabriga",
-    "previous": "Axabitis tainia",
+    "previous": "Ἀξαβῖτις ταινία",
     "next": "Axamenta",
     "chapters": [
       {
@@ -35317,6 +35321,7 @@
     "lemma": "Ἄζυγες νῆες",
     "previous": "Azy",
     "next": "Baal 1",
+    "sort_key": "Azyges nees",
     "chapters": [
       {
         "start": 2646,
@@ -35869,8 +35874,13 @@
     ]
   },
   {
-    "lemma": "Babyllinioi",
+    "lemma": "Babyle",
     "previous": "Babylas",
+    "next": "Babyllinioi"
+  },
+  {
+    "lemma": "Babyllinioi",
+    "previous": "Babyle",
     "next": "Babylon 1",
     "chapters": [
       {
@@ -36907,13 +36917,19 @@
   {
     "lemma": "Baebiani Ligures",
     "previous": "Baebiana 2",
-    "next": "Baebius 1",
+    "next": "Baebius",
     "chapters": [
       {
         "start": 2728,
         "end": 2728
       }
     ]
+  },
+  {
+    "lemma": "Baebius",
+    "previous": "Baebiani Ligures",
+    "next": "Baebius 1",
+    "wp_link": "w:de:Baebius"
   },
   {
     "lemma": "Baebius 1",
@@ -36932,6 +36948,7 @@
     "lemma": "Baebius 2",
     "previous": "Baebius 1",
     "next": "Baebius 3",
+    "sort_key": "Baebius 02",
     "chapters": [
       {
         "start": 2729,
@@ -36956,6 +36973,7 @@
     "lemma": "Baebius 4",
     "previous": "Baebius 3",
     "next": "Baebius 5",
+    "sort_key": "Baebius 04",
     "chapters": [
       {
         "start": 2729,
@@ -36968,6 +36986,7 @@
     "lemma": "Baebius 5",
     "previous": "Baebius 4",
     "next": "Baebius 6",
+    "sort_key": "Baebius 05",
     "chapters": [
       {
         "start": 2729,
@@ -36980,6 +36999,7 @@
     "lemma": "Baebius 6",
     "previous": "Baebius 5",
     "next": "Baebius 7",
+    "sort_key": "Baebius 06",
     "chapters": [
       {
         "start": 2729,
@@ -36992,6 +37012,7 @@
     "lemma": "Baebius 7",
     "previous": "Baebius 6",
     "next": "Baebius 8",
+    "sort_key": "Baebius 07",
     "chapters": [
       {
         "start": 2729,
@@ -37004,6 +37025,7 @@
     "lemma": "Baebius 8",
     "previous": "Baebius 7",
     "next": "Baebius 9",
+    "sort_key": "Baebius 08",
     "chapters": [
       {
         "start": 2729,
@@ -37016,6 +37038,7 @@
     "lemma": "Baebius 9",
     "previous": "Baebius 8",
     "next": "Baebius 10",
+    "sort_key": "Baebius 09",
     "chapters": [
       {
         "start": 2729,
