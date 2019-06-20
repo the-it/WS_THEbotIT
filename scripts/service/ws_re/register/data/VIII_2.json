@@ -3354,7 +3354,7 @@
     "lemma": "Hilarianus 4",
     "previous": "Hilarianus 3",
     "next": "Hilarianus 5",
-    "redirect": true,
+    "redirect": "Hesperius 1",
     "chapters": [
       {
         "start": 1599,
@@ -10619,7 +10619,7 @@
   {
     "lemma": "Horarius",
     "previous": "Horapollon",
-    "next": "Horatiae sepulcrum",
+    "next": "Horatia pila",
     "chapters": [
       {
         "start": 2319,
@@ -10630,19 +10630,7 @@
   },
   {
     "lemma": "Horatiae sepulcrum",
-    "previous": "Horarius",
-    "next": "Horatia pila",
-    "chapters": [
-      {
-        "start": 2319,
-        "end": 2319,
-        "author": "Gall"
-      }
-    ]
-  },
-  {
-    "lemma": "Horatia pila",
-    "previous": "Horatiae sepulcrum",
+    "previous": "Horatia pila",
     "next": "Horatiorum campus",
     "chapters": [
       {
@@ -10653,8 +10641,20 @@
     ]
   },
   {
+    "lemma": "Horatia pila",
+    "previous": "Horarius",
+    "next": "Horatiae sepulcrum",
+    "chapters": [
+      {
+        "start": 2319,
+        "end": 2319,
+        "author": "Gall"
+      }
+    ]
+  },
+  {
     "lemma": "Horatiorum campus",
-    "previous": "Horatia pila",
+    "previous": "Horatiae sepulcrum",
     "next": "Horatius 1",
     "chapters": [
       {
@@ -10668,6 +10668,7 @@
     "lemma": "Horatius 1",
     "previous": "Horatiorum campus",
     "next": "Horatius 2ff.",
+    "sort_key": "Horatius 01",
     "chapters": [
       {
         "start": 2319,
@@ -10680,6 +10681,7 @@
     "lemma": "Horatius 2ff.",
     "previous": "Horatius 1",
     "next": "Horatius 2",
+    "sort_key": "Horatius 02ff.",
     "chapters": [
       {
         "start": 2321,
@@ -10782,6 +10784,7 @@
     "lemma": "Horatius 9",
     "previous": "Horatius 8",
     "next": "Horatius 10",
+    "sort_key": "Horatius 09",
     "chapters": [
       {
         "start": 2331,
