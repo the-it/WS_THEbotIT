@@ -3603,6 +3603,8 @@
     "lemma": "Ἀλκέα",
     "previous": "Alke 3",
     "next": "Alkeides",
+    "sort_key": "Alkea 1",
+    "wp_link": "w:de:Alcea",
     "chapters": [
       {
         "start": 1512,
@@ -3675,6 +3677,8 @@
     "lemma": "Ἀλκηΐδες",
     "previous": "Alkeides 4",
     "next": "Alkeis",
+    "sort_key": "Alkeides 5",
+    "wp_link": "w:de:Alkeides",
     "chapters": [
       {
         "start": 1513,
@@ -9119,6 +9123,7 @@
     "lemma": "Amandus 2",
     "previous": "Amandus 1",
     "next": "Amandus 3",
+    "wp_link": "w:de:Amandus (Bagaudenführer)",
     "chapters": [
       {
         "start": 1723,
@@ -9142,7 +9147,7 @@
   {
     "lemma": "Amandus 4",
     "previous": "Amandus 3",
-    "next": "Ἀμανίδες πύλαι 1",
+    "next": "Amanides pylai 1",
     "chapters": [
       {
         "start": 1723,
@@ -9152,7 +9157,7 @@
     ]
   },
   {
-    "lemma": "Ἀμανίδες πύλαι 1",
+    "lemma": "Amanides pylai 1",
     "previous": "Amandus 4",
     "next": "Ἀμανίδες πύλαι 2",
     "chapters": [
@@ -9165,7 +9170,7 @@
   },
   {
     "lemma": "Ἀμανίδες πύλαι 2",
-    "previous": "Ἀμανίδες πύλαι 1",
+    "previous": "Amanides pylai 1",
     "next": "Ἀμανίδες πύλαι 3",
     "sort_key": "Amanidespylai 2"
   },
@@ -12573,7 +12578,7 @@
     "lemma": "Amicus 1",
     "previous": "Amictus",
     "next": "Amicus 2",
-    "redirect": true,
+    "redirect": "Servaeus",
     "chapters": [
       {
         "start": 1831,
@@ -22869,7 +22874,8 @@
   {
     "lemma": "Ἀγχιστεία",
     "previous": "Anchisos",
-    "next": "Anchisu limen",
+    "next": "Ἀγχίσου λιμήν",
+    "sort_key": "Anchisteia",
     "chapters": [
       {
         "start": 2110,
@@ -26864,7 +26870,7 @@
   },
   {
     "lemma": "Angelion",
-    "previous": "Angelike",
+    "previous": "Ἀγγελική",
     "next": "Angellae",
     "chapters": [
       {
@@ -33983,6 +33989,7 @@
     "lemma": "Anthologia 2",
     "previous": "Anthologia 1",
     "next": "Ἀνθοφόροι",
+    "wp_link": "w:de:Anthologia Latina",
     "chapters": [
       {
         "start": 2391,
@@ -36918,7 +36925,6 @@
     "lemma": "Antiocheia 16",
     "previous": "Antiocheia 15",
     "next": "Antiocheia 17",
-    "wp_link": "w:de:Antiochia (Mäander)",
     "chapters": [
       {
         "start": 2446,
@@ -40025,6 +40031,7 @@
     "lemma": "Antirrodos",
     "previous": "Antirrion",
     "next": "Antis",
+    "wp_link": "w:de:Antirhodos",
     "chapters": [
       {
         "start": 2535,
@@ -46434,6 +46441,7 @@
     "lemma": "Ἀφεκοῦ πύργος",
     "previous": "Apheka 2",
     "next": "Apheleia",
+    "sort_key": "Aphekupyrgos",
     "chapters": [
       {
         "start": 2715,
@@ -46891,6 +46899,7 @@
     "lemma": "Ἀφορίζειν",
     "previous": "Aphobos",
     "next": "Ἀφορμή",
+    "sort_key": "Aphorizein",
     "chapters": [
       {
         "start": 2723,
@@ -46903,6 +46912,7 @@
     "lemma": "Ἀφορμή",
     "previous": "Ἀφορίζειν",
     "next": "Aphormion",
+    "sort_key": "Aphorme",
     "chapters": [
       {
         "start": 2723,
@@ -48225,6 +48235,7 @@
     "lemma": "Apion 3",
     "previous": "Apion 2",
     "next": "Apion 4",
+    "wp_link": "w:de:Apion",
     "chapters": [
       {
         "start": 2803,
@@ -48765,7 +48776,7 @@
   {
     "lemma": "Ἀπόγραφον",
     "previous": "Ἀπογραφή",
-    "next": "Apoikia",
+    "next": "Ἀποικία",
     "sort_key": "Apographon",
     "chapters": [
       {
@@ -48776,7 +48787,7 @@
     ]
   },
   {
-    "lemma": "Apoikia",
+    "lemma": "Ἀποικία",
     "previous": "Ἀπόγραφον",
     "next": "Apoikos",
     "sort_key": "Apoikia",
@@ -48791,7 +48802,7 @@
   },
   {
     "lemma": "Apoikos",
-    "previous": "Apoikia",
+    "previous": "Ἀποικία",
     "next": "Apokalypsen",
     "chapters": [
       {
