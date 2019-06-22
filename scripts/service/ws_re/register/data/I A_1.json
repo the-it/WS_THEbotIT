@@ -129,7 +129,7 @@
   {
     "lemma": "Ῥαβδομαντεία",
     "previous": "Ῥάβδιον",
-    "next": "Rabdophoroi, rabduchoi",
+    "next": "Rabdu analepsis",
     "chapters": [
       {
         "start": 13,
@@ -139,26 +139,25 @@
     ]
   },
   {
-    "lemma": "Rabdophoroi, rabduchoi",
-    "previous": "Ῥαβδομαντεία",
-    "next": "Rabdu analepsis",
-    "chapters": [
-      {
-        "start": 18,
-        "end": 19,
-        "author": "Thalheim"
-      }
-    ]
-  },
-  {
     "lemma": "Rabdu analepsis",
-    "previous": "Rabdophoroi, rabduchoi",
-    "next": "Ῥαβδοφόροι, ῥαβδοῦχοι",
+    "previous": "Ῥαβδομαντεία",
+    "next": "Ῥαβδοῦχοι",
     "chapters": [
       {
         "start": 18,
         "end": 18,
         "author": "Gundel, Wilhelm"
+      }
+    ]
+  },
+  {
+    "lemma": "Ῥαβδοῦχοι",
+    "previous": "Rabdu analepsis",
+    "next": "Ῥαβδοφόροι, ῥαβδοῦχοι",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18
       }
     ]
   },

@@ -16551,7 +16551,7 @@
   },
   {
     "lemma": "Eleuthernai",
-    "previous": "Eleutherius 9",
+    "previous": "Eleutherios 9",
     "next": "Eleutherokilikes",
     "wp_link": "w:de:Eleutherna",
     "chapters": [
@@ -21477,24 +21477,12 @@
   {
     "lemma": "Enyo 2",
     "previous": "Enyo 1",
-    "next": "E....orceni",
+    "next": "Eochar",
     "chapters": [
       {
         "start": 2655,
         "end": 2656,
         "author": "Waser"
-      }
-    ]
-  },
-  {
-    "lemma": "E....orceni",
-    "previous": "Eone",
-    "next": "Eordai",
-    "chapters": [
-      {
-        "start": 2656,
-        "end": 2656,
-        "author": "Ruge"
       }
     ]
   },
@@ -21549,7 +21537,7 @@
   {
     "lemma": "Eone",
     "previous": "Eon",
-    "next": "Eordaia 1",
+    "next": "E....orceni",
     "chapters": [
       {
         "start": 2656,
@@ -21559,8 +21547,20 @@
     ]
   },
   {
-    "lemma": "Eordaia 1",
+    "lemma": "E....orceni",
     "previous": "Eone",
+    "next": "Eordaia 1",
+    "chapters": [
+      {
+        "start": 2656,
+        "end": 2656,
+        "author": "Ruge"
+      }
+    ]
+  },
+  {
+    "lemma": "Eordaia 1",
+    "previous": "E....orceni",
     "next": "Eordaia 2",
     "wp_link": "w:de:Eordaia",
     "chapters": [

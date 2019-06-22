@@ -508,7 +508,7 @@
   {
     "lemma": "Kaulomyketes",
     "previous": "Kaulkoi",
-    "next": "Kaulonia",
+    "next": "Kaulonia 1",
     "chapters": [
       {
         "start": 67,
@@ -518,7 +518,7 @@
     ]
   },
   {
-    "lemma": "Kaulonia",
+    "lemma": "Kaulonia 1",
     "previous": "Kaulomyketes",
     "next": "Kaunias",
     "chapters": [
@@ -15130,7 +15130,7 @@
   {
     "lemma": "Kösching",
     "previous": "Koes",
-    "next": "Kognabanda",
+    "next": "Konche",
     "chapters": [
       {
         "start": 1033,
@@ -15140,8 +15140,20 @@
     ]
   },
   {
-    "lemma": "Kognabanda",
+    "lemma": "Konche",
     "previous": "Kösching",
+    "next": "Kognabanda",
+    "chapters": [
+      {
+        "start": 1034,
+        "end": 1034,
+        "author": "Viedebantt"
+      }
+    ]
+  },
+  {
+    "lemma": "Kognabanda",
+    "previous": "Konche",
     "next": "Kognandaua",
     "chapters": [
       {
@@ -15166,24 +15178,12 @@
   {
     "lemma": "Kohl",
     "previous": "Kognandaua",
-    "next": "Konche 1",
+    "next": "Kohle",
     "chapters": [
       {
         "start": 1034,
         "end": 1038,
         "author": "Orth"
-      }
-    ]
-  },
-  {
-    "lemma": "Konche 1",
-    "previous": "Kohl",
-    "next": "Kohle",
-    "chapters": [
-      {
-        "start": 1034,
-        "end": 1034,
-        "author": "Viedebantt"
       }
     ]
   },
@@ -15417,7 +15417,7 @@
   },
   {
     "lemma": "Koilossa",
-    "previous": "Koiletai",
+    "previous": "Koilos",
     "next": "Κοινοβωμία",
     "redirect": "Kelossa",
     "chapters": [

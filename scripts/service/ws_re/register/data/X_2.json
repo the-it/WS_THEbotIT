@@ -1114,7 +1114,7 @@
   {
     "lemma": "Iuvencus",
     "previous": "Iuvenalis 9",
-    "next": "Iuvenes, iuventus",
+    "next": "Iuvenes",
     "chapters": [
       {
         "start": 1357,
@@ -1124,7 +1124,7 @@
     ]
   },
   {
-    "lemma": "Iuvenes, iuventus",
+    "lemma": "Iuvenes",
     "previous": "Iuvencus",
     "next": "Iuveniacus, Iuviniacus",
     "chapters": [
@@ -1137,8 +1137,8 @@
   },
   {
     "lemma": "Iuveniacus, Iuviniacus",
-    "previous": "Iuvenalis 8",
-    "next": "Iuvencus",
+    "previous": "Iuvenes",
+    "next": "Iuvenis 1",
     "chapters": [
       {
         "start": 1358,
@@ -1792,21 +1792,9 @@
     ]
   },
   {
-    "lemma": "Iygx",
-    "previous": "Iyggios",
-    "next": "Iyngies",
-    "chapters": [
-      {
-        "start": 1384,
-        "end": 1386,
-        "author": "Gossen"
-      }
-    ]
-  },
-  {
     "lemma": "Iyngies",
-    "previous": "Iygx",
-    "next": "Iyrkai",
+    "previous": "Iyggios",
+    "next": "Iygx",
     "chapters": [
       {
         "start": 1384,
@@ -1816,8 +1804,20 @@
     ]
   },
   {
-    "lemma": "Iyrkai",
+    "lemma": "Iygx",
     "previous": "Iyngies",
+    "next": "Iyrkai",
+    "chapters": [
+      {
+        "start": 1384,
+        "end": 1386,
+        "author": "Gossen"
+      }
+    ]
+  },
+  {
+    "lemma": "Iyrkai",
+    "previous": "Iygx",
     "next": "Izabates",
     "chapters": [
       {
@@ -8704,7 +8704,7 @@
   {
     "lemma": "Kalon 2",
     "previous": "Kalon 1",
-    "next": "Kalondas 1",
+    "next": "Kalon Korasion",
     "chapters": [
       {
         "start": 1758,
@@ -8714,32 +8714,8 @@
     ]
   },
   {
-    "lemma": "Kalondas 1",
-    "previous": "Kalon stoma",
-    "next": "Kalondas 2",
-    "chapters": [
-      {
-        "start": 1758,
-        "end": 1758,
-        "author": "Kroll"
-      }
-    ]
-  },
-  {
-    "lemma": "Kalondas 2",
-    "previous": "Kalondas 1",
-    "next": "Kalos",
-    "chapters": [
-      {
-        "start": 1758,
-        "end": 1758,
-        "author": "Kroll"
-      }
-    ]
-  },
-  {
     "lemma": "Kalon Korasion",
-    "previous": "Kalondas 2",
+    "previous": "Kalon 2",
     "next": "Καλὸν πεδίον",
     "chapters": [
       {
@@ -8772,8 +8748,32 @@
     ]
   },
   {
-    "lemma": "Kalos",
+    "lemma": "Kalondas 1",
     "previous": "Kalon stoma",
+    "next": "Kalondas 2",
+    "chapters": [
+      {
+        "start": 1758,
+        "end": 1758,
+        "author": "Kroll"
+      }
+    ]
+  },
+  {
+    "lemma": "Kalondas 2",
+    "previous": "Kalondas 1",
+    "next": "Kalos",
+    "chapters": [
+      {
+        "start": 1758,
+        "end": 1758,
+        "author": "Kroll"
+      }
+    ]
+  },
+  {
+    "lemma": "Kalos",
+    "previous": "Kalondas 2",
     "next": "Kalos agros",
     "chapters": [
       {
