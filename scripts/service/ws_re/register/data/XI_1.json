@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Katoikoi",
+    "previous": null,
     "next": "Κατωνακοφόροι",
     "chapters": [
       {
@@ -14,6 +15,7 @@
     "lemma": "Κατωνακοφόροι",
     "previous": "Katoikoi",
     "next": "Κατόπται",
+    "sort_key": "Katonakophoroi",
     "chapters": [
       {
         "start": 26,
@@ -62,7 +64,7 @@
   {
     "lemma": "Katoptromanteia",
     "previous": "Katoptis",
-    "next": "Katoptron",
+    "next": "Κάτοπτρον",
     "chapters": [
       {
         "start": 27,
@@ -72,9 +74,9 @@
     ]
   },
   {
-    "lemma": "Katoptron",
+    "lemma": "Κάτοπτρον",
     "previous": "Katoptromanteia",
-    "next": "Katrasema",
+    "next": "Κατράσεμα",
     "chapters": [
       {
         "start": 29,
@@ -84,9 +86,10 @@
     ]
   },
   {
-    "lemma": "Katrasema",
-    "previous": "Katoptron",
+    "lemma": "Κατράσεμα",
+    "previous": "Κάτοπτρον",
     "next": "Katre",
+    "sort_key": "Katrasema",
     "chapters": [
       {
         "start": 45,
@@ -97,8 +100,8 @@
   },
   {
     "lemma": "Katre",
-    "previous": "Katrasema",
-    "next": "Katrelatis",
+    "previous": "Κατράσεμα",
+    "next": "Κατρέλατις",
     "chapters": [
       {
         "start": 45,
@@ -108,9 +111,10 @@
     ]
   },
   {
-    "lemma": "Katrelatis",
+    "lemma": "Κατρέλατις",
     "previous": "Katre",
     "next": "Katreus 1",
+    "sort_key": "Katrelatis",
     "chapters": [
       {
         "start": 45,
@@ -121,7 +125,7 @@
   },
   {
     "lemma": "Katreus 1",
-    "previous": "Katrelatis",
+    "previous": "Κατρέλατις",
     "next": "Katreus 2",
     "chapters": [
       {
@@ -146,7 +150,8 @@
   {
     "lemma": "Κατταφέτερος",
     "previous": "Katreus 2",
-    "next": "Kattarekos",
+    "next": "Κατταρηκός",
+    "sort_key": "Kattapheteros",
     "chapters": [
       {
         "start": 46,
@@ -156,9 +161,10 @@
     ]
   },
   {
-    "lemma": "Kattarekos",
+    "lemma": "Κατταρηκός",
     "previous": "Κατταφέτερος",
-    "next": "Kattaros",
+    "next": "Κάτταρος",
+    "sort_key": "Kattarekos",
     "chapters": [
       {
         "start": 46,
@@ -168,9 +174,10 @@
     ]
   },
   {
-    "lemma": "Kattaros",
-    "previous": "Kattarekos",
+    "lemma": "Κάτταρος",
+    "previous": "Κατταρηκός",
     "next": "Kattigara",
+    "sort_key": "Kattaros",
     "chapters": [
       {
         "start": 46,
@@ -181,7 +188,7 @@
   },
   {
     "lemma": "Kattigara",
-    "previous": "Kattaros",
+    "previous": "Κάτταρος",
     "next": "Katuchios",
     "chapters": [
       {
@@ -233,6 +240,7 @@
     "lemma": "Καυαληνῶν κατοικία",
     "previous": "Katze",
     "next": "Kauchabenoi",
+    "sort_key": "Kaualenon",
     "chapters": [
       {
         "start": 57,
@@ -353,7 +361,7 @@
   {
     "lemma": "Kaukasiai Pylai",
     "previous": "Kaukaseus",
-    "next": "Kaukasos 1",
+    "next": "Καύκασος 1",
     "chapters": [
       {
         "start": 58,
@@ -363,9 +371,9 @@
     ]
   },
   {
-    "lemma": "Kaukasos 1",
+    "lemma": "Καύκασος 1",
     "previous": "Kaukasiai Pylai",
-    "next": "Kaukasos 2",
+    "next": "Καύκασος 2",
     "chapters": [
       {
         "start": 59,
@@ -375,9 +383,10 @@
     ]
   },
   {
-    "lemma": "Kaukasos 2",
-    "previous": "Kaukasos 1",
-    "next": "Kaukasos 3",
+    "lemma": "Καύκασος 2",
+    "previous": "Καύκασος 1",
+    "next": "Καύκασος 3",
+    "sort_key": "Kaukasos 2",
     "chapters": [
       {
         "start": 59,
@@ -387,9 +396,9 @@
     ]
   },
   {
-    "lemma": "Kaukasos 3",
-    "previous": "Kaukasos 2",
-    "next": "Kaukasos 4",
+    "lemma": "Καύκασος 3",
+    "previous": "Καύκασος 2",
+    "next": "Καύκασος 4",
     "chapters": [
       {
         "start": 59,
@@ -399,8 +408,8 @@
     ]
   },
   {
-    "lemma": "Kaukasos 4",
-    "previous": "Kaukasos 3",
+    "lemma": "Καύκασος 4",
+    "previous": "Καύκασος 3",
     "next": "Kaukon 1",
     "chapters": [
       {
@@ -412,7 +421,7 @@
   },
   {
     "lemma": "Kaukon 1",
-    "previous": "Kaukasos 4",
+    "previous": "Καύκασος 4",
     "next": "Kaukon 2",
     "chapters": [
       {
@@ -522,8 +531,8 @@
   },
   {
     "lemma": "Kaunias",
-    "previous": "Kaulonia",
-    "next": "Kaunion Panormos",
+    "previous": "Kaulonia 1",
+    "next": "Καυνίων Πάνορμος",
     "chapters": [
       {
         "start": 85,
@@ -533,9 +542,10 @@
     ]
   },
   {
-    "lemma": "Kaunion Panormos",
+    "lemma": "Καυνίων Πάνορμος",
     "previous": "Kaunias",
     "next": "Kaunos 1",
+    "sort_key": "Kaunion",
     "chapters": [
       {
         "start": 85,
@@ -546,7 +556,7 @@
   },
   {
     "lemma": "Kaunos 1",
-    "previous": "Kaunion Panormos",
+    "previous": "Καυνίων Πάνορμος",
     "next": "Kaunos 2",
     "chapters": [
       {
@@ -571,7 +581,7 @@
   {
     "lemma": "Kaunos 3",
     "previous": "Kaunos 2",
-    "next": "Kauphiaka",
+    "next": "Καυφίακα",
     "chapters": [
       {
         "start": 88,
@@ -581,7 +591,7 @@
     ]
   },
   {
-    "lemma": "Kauphiaka",
+    "lemma": "Καυφίακα",
     "previous": "Kaunos 3",
     "next": "Kauros",
     "chapters": [
@@ -594,7 +604,7 @@
   },
   {
     "lemma": "Kauros",
-    "previous": "Kauphiaka",
+    "previous": "Καυφίακα",
     "next": "Kaus",
     "chapters": [
       {
@@ -726,7 +736,7 @@
   {
     "lemma": "Kaysterros",
     "previous": "Kaynis",
-    "next": "Kaystriane",
+    "next": "Καϋστριανή",
     "chapters": [
       {
         "start": 99,
@@ -736,9 +746,10 @@
     ]
   },
   {
-    "lemma": "Kaystriane",
+    "lemma": "Καϋστριανή",
     "previous": "Kaysterros",
     "next": "Kaystrianoi",
+    "sort_key": "Kaystriane",
     "chapters": [
       {
         "start": 99,
@@ -749,7 +760,7 @@
   },
   {
     "lemma": "Kaystrianoi",
-    "previous": "Kaystriane",
+    "previous": "Καϋστριανή",
     "next": "Καϋστριανὸν Πεδίον",
     "chapters": [
       {
@@ -763,6 +774,7 @@
     "lemma": "Καϋστριανὸν Πεδίον",
     "previous": "Kaystrianoi",
     "next": "Kaystros 1",
+    "sort_key": "Kaystrianonp",
     "chapters": [
       {
         "start": 100,
@@ -847,7 +859,7 @@
   {
     "lemma": "Kebalinos",
     "previous": "Keadas",
-    "next": "Kebateos",
+    "next": "Κεβάτεος",
     "chapters": [
       {
         "start": 101,
@@ -857,9 +869,10 @@
     ]
   },
   {
-    "lemma": "Kebateos",
+    "lemma": "Κεβάτεος",
     "previous": "Kebalinos",
     "next": "Kebes 1",
+    "sort_key": "Kebateos",
     "chapters": [
       {
         "start": 101,
@@ -870,7 +883,7 @@
   },
   {
     "lemma": "Kebes 1",
-    "previous": "Kebateos",
+    "previous": "Κεβάτεος",
     "next": "Kebes 2",
     "chapters": [
       {
@@ -945,7 +958,7 @@
   {
     "lemma": "Kebrenia",
     "previous": "Kebren 3",
-    "next": "Kebrenieis",
+    "next": "Κεβρηνιεῖς",
     "chapters": [
       {
         "start": 106,
@@ -955,9 +968,10 @@
     ]
   },
   {
-    "lemma": "Kebrenieis",
+    "lemma": "Κεβρηνιεῖς",
     "previous": "Kebrenia",
     "next": "Kebrenios",
+    "sort_key": "Kebrenieis",
     "chapters": [
       {
         "start": 106,
@@ -967,7 +981,7 @@
   },
   {
     "lemma": "Kebrenios",
-    "previous": "Kebrenieis",
+    "previous": "Κεβρηνιεῖς",
     "next": "Kebriones 1",
     "chapters": [
       {
@@ -1112,7 +1126,7 @@
   {
     "lemma": "Kedrisos",
     "previous": "Kedrios",
-    "next": "Kedron 1",
+    "next": "Kedron",
     "chapters": [
       {
         "start": 112,
@@ -1122,8 +1136,13 @@
     ]
   },
   {
-    "lemma": "Kedron 1",
+    "lemma": "Kedron",
     "previous": "Kedrisos",
+    "next": "Kedron 1"
+  },
+  {
+    "lemma": "Kedron 1",
+    "previous": "Kedron",
     "next": "Kedron 2",
     "chapters": [
       {
@@ -1173,6 +1192,7 @@
     "lemma": "Κεδρύσιες",
     "previous": "Kedrosia",
     "next": "Keia",
+    "sort_key": "Kedrysies",
     "chapters": [
       {
         "start": 114,
@@ -1266,7 +1286,7 @@
   {
     "lemma": "Kekeis",
     "previous": "Kekeides",
-    "next": "Keklimene",
+    "next": "Κεκλιμένη",
     "chapters": [
       {
         "start": 117,
@@ -1276,9 +1296,10 @@
     ]
   },
   {
-    "lemma": "Keklimene",
+    "lemma": "Κεκλιμένη",
     "previous": "Kekeis",
     "next": "Kekoia 1",
+    "sort_key": "Keklimene",
     "chapters": [
       {
         "start": 117,
@@ -1289,7 +1310,7 @@
   },
   {
     "lemma": "Kekoia 1",
-    "previous": "Keklimene",
+    "previous": "Κεκλιμένη",
     "next": "Kekoia 2",
     "chapters": [
       {
@@ -1315,6 +1336,7 @@
     "lemma": "Κέκωλα",
     "previous": "Kekoia 2",
     "next": "Kekropeion",
+    "sort_key": "Kekola",
     "chapters": [
       {
         "start": 118,
@@ -1409,7 +1431,7 @@
   {
     "lemma": "Kekryphalos",
     "previous": "Kekryphaleia",
-    "next": "Kekyposios",
+    "next": "Kekypos(i)os",
     "chapters": [
       {
         "start": 126,
@@ -1419,7 +1441,7 @@
     ]
   },
   {
-    "lemma": "Kekyposios",
+    "lemma": "Kekypos(i)os",
     "previous": "Kekryphalos",
     "next": "Kela",
     "chapters": [
@@ -1432,7 +1454,7 @@
   },
   {
     "lemma": "Kela",
-    "previous": "Kekyposios",
+    "previous": "Kekypos(i)os",
     "next": "Keladeine",
     "chapters": [
       {

@@ -2695,7 +2695,8 @@
   {
     "lemma": "Ioannes 41",
     "previous": "Ioannes 40",
-    "next": "Ioannes 41-54",
+    "next": "Ioannes 42",
+    "wp_link": "w:de:Johannes (Apostel)",
     "chapters": [
       {
         "start": 1801,
@@ -2717,8 +2718,9 @@
   },
   {
     "lemma": "Ioannes 42",
-    "previous": "Ioannes 41-54",
+    "previous": "Ioannes 41",
     "next": "Ioannes 43",
+    "wp_link": "w:de:Johannes II. (Jerusalem)",
     "chapters": [
       {
         "start": 1804,
@@ -2731,6 +2733,7 @@
     "lemma": "Ioannes 43",
     "previous": "Ioannes 42",
     "next": "Ioannes 44",
+    "wp_link": "w:de:Johannes Cassianus",
     "chapters": [
       {
         "start": 1805,
@@ -2819,6 +2822,7 @@
     "lemma": "Ioannes 50",
     "previous": "Ioannes 49",
     "next": "Ioannes 51",
+    "wp_link": "w:de:Johannes II. (Papst)",
     "chapters": [
       {
         "start": 1808,
@@ -2856,6 +2860,7 @@
     "lemma": "Ioannes 53",
     "previous": "Ioannes 52",
     "next": "Ioannes 54",
+    "wp_link": "w:de:Johannes Moschos",
     "chapters": [
       {
         "start": 1810,
@@ -3048,7 +3053,7 @@
   {
     "lemma": "Ioërbeth",
     "previous": "Ioel",
-    "next": "Ad Ioglandem",
+    "next": "Ad Ioglandum",
     "chapters": [
       {
         "start": 1841,
@@ -3058,7 +3063,7 @@
     ]
   },
   {
-    "lemma": "Ad Ioglandem",
+    "lemma": "Ad Ioglandum",
     "previous": "Ioërbeth",
     "next": "Iogola",
     "sort_key": "Ioglandum",
@@ -3072,7 +3077,7 @@
   },
   {
     "lemma": "Iogola",
-    "previous": "Ad Ioglandem",
+    "previous": "Ad Ioglandum",
     "next": "Iohallis",
     "chapters": [
       {
@@ -3155,7 +3160,7 @@
   {
     "lemma": "Iol",
     "previous": "Iokura",
-    "next": "Iolaeia",
+    "next": "Ἰολάεια",
     "chapters": [
       {
         "start": 1842,
@@ -3164,9 +3169,10 @@
     ]
   },
   {
-    "lemma": "Iolaeia",
+    "lemma": "Ἰολάεια",
     "previous": "Iol",
     "next": "Iolaidas 1",
+    "sort_key": "Iolaeia",
     "chapters": [
       {
         "start": 1842,
@@ -3177,7 +3183,7 @@
   },
   {
     "lemma": "Iolaidas 1",
-    "previous": "Iolaeia",
+    "previous": "Ἰολάεια",
     "next": "Iolaidas 2",
     "chapters": [
       {
@@ -4247,7 +4253,7 @@
   {
     "lemma": "Iotape 6",
     "previous": "Iotape 5",
-    "next": "Iotapiuanus",
+    "next": "Iotapianus",
     "chapters": [
       {
         "start": 2004,
@@ -4296,6 +4302,7 @@
     "lemma": "ad Iovem",
     "previous": "Iovantucarus",
     "next": "Ioventio",
+    "sort_key": "Iovem",
     "chapters": [
       {
         "start": 2005,
@@ -8782,7 +8789,7 @@
     "lemma": "Itabyrion",
     "previous": "Isyllos",
     "next": "Italia",
-    "redirect": true,
+    "redirect": "Atabyrion 2",
     "chapters": [
       {
         "start": 2283,

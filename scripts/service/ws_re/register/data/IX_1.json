@@ -28,7 +28,6 @@
     "previous": "Hyaioi",
     "next": "Hyakinthides",
     "sort_key": "Hyakinthia",
-    "wp_link": "w:de:Hyakinthia",
     "chapters": [
       {
         "start": 1,
@@ -100,7 +99,8 @@
   {
     "lemma": "Ὑακινθὶς ὁδός",
     "previous": "Hyakinthis",
-    "next": "Hyakinthos 1",
+    "next": "Ὑάκινθος 1",
+    "sort_key": "Hyakinthish",
     "chapters": [
       {
         "start": 4,
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "lemma": "Hyakinthos 1",
+    "lemma": "Ὑάκινθος 1",
     "previous": "Ὑακινθὶς ὁδός",
     "next": "Hyakinthos 2",
     "chapters": [
@@ -123,7 +123,7 @@
   },
   {
     "lemma": "Hyakinthos 2",
-    "previous": "Hyakinthos 1",
+    "previous": "Ὑάκινθος 1",
     "next": "Ὑάκινθος 3",
     "chapters": [
       {

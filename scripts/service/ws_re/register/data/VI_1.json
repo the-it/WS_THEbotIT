@@ -1,7 +1,9 @@
 [
   {
     "lemma": "Ephoros 1",
+    "previous": null,
     "next": "Ephoros 2",
+    "wp_link": "w:de:Ephoros von Kyme",
     "chapters": [
       {
         "start": 1,
@@ -3303,6 +3305,7 @@
     "lemma": "Epiphanios 2",
     "previous": "Epiphanios 1",
     "next": "Epiphanios 3",
+    "sort_key": "Epiphanios 02",
     "chapters": [
       {
         "start": 193,
@@ -3343,6 +3346,8 @@
     "lemma": "Epiphanios 5",
     "previous": "Epiphanios 4",
     "next": "Epiphanios 6",
+    "sort_key": "Epiphanios 05",
+    "wp_link": "w:de:Epiphanios Scholastikos",
     "chapters": [
       {
         "start": 195,
@@ -3368,6 +3373,7 @@
     "lemma": "Epiphanios 7",
     "previous": "Epiphanios 6",
     "next": "Epiphanios 8",
+    "sort_key": "Epiphanios 07",
     "chapters": [
       {
         "start": 195,
@@ -10083,7 +10089,7 @@
   {
     "lemma": "Erythras 4",
     "previous": "Erythras 3",
-    "next": "Erythra thalassa",
+    "next": "Ἐρυθρὰ θάλασσα",
     "chapters": [
       {
         "start": 592,
@@ -10093,20 +10099,15 @@
     ]
   },
   {
-    "lemma": "Erythra thalassa",
+    "lemma": "Ἐρυθρὰ θάλασσα",
     "previous": "Erythras 4",
     "next": "Erythrinos",
-    "chapters": [
-      {
-        "start": 592,
-        "end": 601,
-        "author": "Berger"
-      }
-    ]
+    "sort_key": "Erythrathalassa",
+    "wp_link": "w:de:Rotes Meer"
   },
   {
     "lemma": "Erythrinos",
-    "previous": "Erythra thalassa",
+    "previous": "Ἐρυθρὰ θάλασσα",
     "next": "Erythrios 1",
     "chapters": [
       {
@@ -28026,6 +28027,7 @@
     "lemma": "Euterpe",
     "previous": "Eutelion",
     "next": "Euth-",
+    "wp_link": "w:de:Euterpe",
     "chapters": [
       {
         "start": 1493,

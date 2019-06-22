@@ -147,6 +147,7 @@
     "lemma": "Ἑστίασις",
     "previous": "Hestiaiotis",
     "next": "Ἑστιασταί",
+    "sort_key": "Hestiasis",
     "chapters": [
       {
         "start": 1315,
@@ -159,6 +160,7 @@
     "lemma": "Ἑστιασταί",
     "previous": "Ἑστίασις",
     "next": "Ἑστιατόρια",
+    "sort_key": "Hestiastai",
     "chapters": [
       {
         "start": 1315,
@@ -171,6 +173,7 @@
     "lemma": "Ἑστιατόρια",
     "previous": "Ἑστιασταί",
     "next": "Hestieos",
+    "sort_key": "Hestiatoria",
     "chapters": [
       {
         "start": 1315,
@@ -519,7 +522,8 @@
   {
     "lemma": "Ἑταιρήσεως γραφή",
     "previous": "Hetaireios",
-    "next": "Hetairia",
+    "next": "Ἑταιρία",
+    "sort_key": "Hetaireseos",
     "chapters": [
       {
         "start": 1372,
@@ -529,7 +533,7 @@
     ]
   },
   {
-    "lemma": "Hetairia",
+    "lemma": "Ἑταιρία",
     "previous": "Ἑταιρήσεως γραφή",
     "next": "Hetairion",
     "chapters": [
@@ -542,7 +546,7 @@
   },
   {
     "lemma": "Hetairion",
-    "previous": "Hetairia",
+    "previous": "Ἑταιρία",
     "next": "Ἑταῖροι",
     "chapters": [
       {
@@ -820,6 +824,7 @@
     "lemma": "Ἱαρὸν τᾶς Ἀθαναίας",
     "previous": "Hiarbas 2",
     "next": "Ἱαρός",
+    "sort_key": "Hiarontas",
     "chapters": [
       {
         "start": 1388,
@@ -832,6 +837,7 @@
     "lemma": "Ἱαρός",
     "previous": "Ἱαρὸν τᾶς Ἀθαναίας",
     "next": "Hiberina",
+    "sort_key": "Hiaros",
     "chapters": [
       {
         "start": 1388,
@@ -1025,6 +1031,7 @@
     "lemma": "Hiera 3",
     "previous": "Hiera 2",
     "next": "Hiera 4",
+    "sort_key": "Hiera 03",
     "chapters": [
       {
         "start": 1396,
@@ -1037,6 +1044,7 @@
     "lemma": "Hiera 4",
     "previous": "Hiera 3",
     "next": "Hiera 5",
+    "sort_key": "Hiera 04",
     "wp_link": "w:de:Palea Kameni",
     "chapters": [
       {
@@ -1050,6 +1058,7 @@
     "lemma": "Hiera 5",
     "previous": "Hiera 4",
     "next": "Hiera 6",
+    "sort_key": "Hiera 05",
     "chapters": [
       {
         "start": 1396,
@@ -1062,6 +1071,7 @@
     "lemma": "Hiera 6",
     "previous": "Hiera 5",
     "next": "Hiera 7",
+    "sort_key": "Hiera 06",
     "chapters": [
       {
         "start": 1396,
@@ -1074,6 +1084,7 @@
     "lemma": "Hiera 7",
     "previous": "Hiera 6",
     "next": "Hiera 8",
+    "sort_key": "Hiera 07",
     "chapters": [
       {
         "start": 1396,
@@ -10336,6 +10347,7 @@
     "lemma": "Honorius 5",
     "previous": "Honorius 4",
     "next": "Honos",
+    "wp_link": "w:de:Justa Grata Honoria",
     "chapters": [
       {
         "start": 2291,
@@ -11787,6 +11799,8 @@
     "lemma": "Hosidius 3",
     "previous": "Hosidius 2",
     "next": "Hosidius 4",
+    "sort_key": "Hosidius 03",
+    "wp_link": "w:de:Hosidius Geta",
     "chapters": [
       {
         "start": 2489,

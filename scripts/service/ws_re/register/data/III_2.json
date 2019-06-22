@@ -9866,6 +9866,7 @@
     "lemma": "Castinus 1",
     "previous": "Castillum",
     "next": "Castinus 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1761,
@@ -9878,6 +9879,7 @@
     "lemma": "Castinus 2",
     "previous": "Castinus 1",
     "next": "Castitas",
+    "wp_link": "w:de:Flavius Castinus",
     "chapters": [
       {
         "start": 1761,
@@ -13821,7 +13823,7 @@
   {
     "lemma": "Ceionius 16",
     "previous": "Ceionius 15",
-    "next": "Ceionius 17ff",
+    "next": "Ceionius 17ff.",
     "chapters": [
       {
         "start": 1858,
@@ -13831,7 +13833,7 @@
     ]
   },
   {
-    "lemma": "Ceionius 17ff",
+    "lemma": "Ceionius 17ff.",
     "previous": "Ceionius 16",
     "next": "Ceionius 17",
     "chapters": [
@@ -13844,7 +13846,7 @@
   },
   {
     "lemma": "Ceionius 17",
-    "previous": "Ceionius 17ff",
+    "previous": "Ceionius 17ff.",
     "next": "Ceionius 18",
     "wp_link": "w:de:Gaius Ceionius Rufius Volusianus",
     "chapters": [
@@ -22375,6 +22377,7 @@
     "lemma": "Charax 6",
     "previous": "Charax 5",
     "next": "Charax 7",
+    "sort_key": "Charax 06",
     "chapters": [
       {
         "start": 2121,
@@ -32653,6 +32656,8 @@
     "lemma": "Χρυσοκόλλα 2",
     "previous": "Χρυσοκόλλα 1",
     "next": "Χρυσοκόλλα 3",
+    "sort_key": "Chrysokolla 2",
+    "wp_link": "w:de:Malachit",
     "chapters": [
       {
         "start": 2515,
@@ -35858,7 +35863,7 @@
   },
   {
     "lemma": "Cisterna",
-    "previous": "Cista 4",
+    "previous": "Cista",
     "next": "Cistra",
     "wp_link": "w:de:Zisterne",
     "chapters": [
@@ -42693,10 +42698,17 @@
   {
     "lemma": "Baris 9",
     "previous": "Claudius 451",
-    "next": null
+    "next": "Βασιλεῖται"
+  },
+  {
+    "lemma": "Βασιλεῖται",
+    "previous": "Baris 9",
+    "next": "Basilios",
+    "sort_key": "Basileitai"
   },
   {
     "lemma": "Basilios",
+    "previous": "Βασιλεῖται",
     "next": "Batis 2",
     "chapters": [
       {

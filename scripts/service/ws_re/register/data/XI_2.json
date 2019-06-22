@@ -1,7 +1,8 @@
 [
   {
     "lemma": "Komogrammateus",
-    "next": "Komomisthotes",
+    "previous": "Kerkinion",
+    "next": "Κωμομισθώτης",
     "chapters": [
       {
         "start": 1281,
@@ -11,9 +12,10 @@
     ]
   },
   {
-    "lemma": "Komomisthotes",
+    "lemma": "Κωμομισθώτης",
     "previous": "Komogrammateus",
-    "next": "Komon 1",
+    "next": "Κῶμον 1",
+    "sort_key": "Komomisthotes",
     "chapters": [
       {
         "start": 1284,
@@ -23,8 +25,8 @@
     ]
   },
   {
-    "lemma": "Komon 1",
-    "previous": "Komomisthotes",
+    "lemma": "Κῶμον 1",
+    "previous": "Κωμομισθώτης",
     "next": "Komon 2",
     "chapters": [
       {
@@ -36,7 +38,7 @@
   },
   {
     "lemma": "Komon 2",
-    "previous": "Komon 1",
+    "previous": "Κῶμον 1",
     "next": "Κῶμον 3",
     "chapters": [
       {
@@ -122,7 +124,7 @@
   {
     "lemma": "Kompasi",
     "previous": "Komos 4",
-    "next": "Komyrion",
+    "next": "Κομύριον",
     "chapters": [
       {
         "start": 1304,
@@ -132,9 +134,10 @@
     ]
   },
   {
-    "lemma": "Komyrion",
+    "lemma": "Κομύριον",
     "previous": "Kompasi",
     "next": "Komyros",
+    "sort_key": "Komyrion",
     "chapters": [
       {
         "start": 1304,
@@ -145,7 +148,7 @@
   },
   {
     "lemma": "Komyros",
-    "previous": "Komyrion",
+    "previous": "Κομύριον",
     "next": "Konadipsas",
     "chapters": [
       {
@@ -195,6 +198,7 @@
     "lemma": "Κόγχη 2",
     "previous": "Konapsenoi",
     "next": "Konchoide",
+    "sort_key": "Konche 2",
     "chapters": [
       {
         "start": 1308,
@@ -206,7 +210,7 @@
   {
     "lemma": "Konchoide",
     "previous": "Κόγχη 2",
-    "next": "Kondaia",
+    "next": "Κονδαία",
     "wp_link": "w:de:Konchoide",
     "chapters": [
       {
@@ -217,9 +221,10 @@
     ]
   },
   {
-    "lemma": "Kondaia",
+    "lemma": "Κονδαία",
     "previous": "Konchoide",
     "next": "Kondochates",
+    "sort_key": "Kondaia",
     "chapters": [
       {
         "start": 1308,
@@ -230,7 +235,7 @@
   },
   {
     "lemma": "Kondochates",
-    "previous": "Kondaia",
+    "previous": "Κονδαία",
     "next": "Konduzia",
     "chapters": [
       {
@@ -390,6 +395,7 @@
     "lemma": "Κονίποδες",
     "previous": "Konios",
     "next": "Κόνις",
+    "sort_key": "Konipodes",
     "chapters": [
       {
         "start": 1312,
@@ -511,6 +517,7 @@
     "lemma": "Κονκάρου",
     "previous": "Koniupolis",
     "next": "Konkatis",
+    "sort_key": "Konkaru",
     "chapters": [
       {
         "start": 1317,
@@ -674,6 +681,7 @@
     "lemma": "Konon 5",
     "previous": "Konon 4",
     "next": "Konon 6",
+    "sort_key": "Konon 05",
     "chapters": [
       {
         "start": 1335,
@@ -686,6 +694,7 @@
     "lemma": "Konon 6",
     "previous": "Konon 5",
     "next": "Konon 7",
+    "sort_key": "Konon 06",
     "chapters": [
       {
         "start": 1335,
@@ -722,6 +731,7 @@
     "lemma": "Konon 9",
     "previous": "Konon 8",
     "next": "Konon 10",
+    "sort_key": "Konon 09",
     "wp_link": "w:de:Konon (Mythograph)",
     "chapters": [
       {
@@ -770,7 +780,7 @@
   {
     "lemma": "Kononeia",
     "previous": "Konon 12",
-    "next": "Kononos bomoi",
+    "next": "Κόνωνος βωμοί",
     "chapters": [
       {
         "start": 1341,
@@ -780,7 +790,7 @@
     ]
   },
   {
-    "lemma": "Kononos bomoi",
+    "lemma": "Κόνωνος βωμοί",
     "previous": "Kononeia",
     "next": "Konope",
     "chapters": [
@@ -793,7 +803,7 @@
   },
   {
     "lemma": "Konope",
-    "previous": "Kononos bomoi",
+    "previous": "Κόνωνος βωμοί",
     "next": "Konopeion",
     "chapters": [
       {
@@ -843,7 +853,7 @@
   {
     "lemma": "Konstanz",
     "previous": "Κῶνος",
-    "next": "Konsuantai",
+    "next": "Κωνσούανται",
     "wp_link": "w:de:Konstanz",
     "chapters": [
       {
@@ -854,7 +864,7 @@
     ]
   },
   {
-    "lemma": "Konsuantai",
+    "lemma": "Κωνσούανται",
     "previous": "Konstanz",
     "next": "Konta",
     "redirect": true,
@@ -867,7 +877,7 @@
   },
   {
     "lemma": "Konta",
-    "previous": "Konsuantai",
+    "previous": "Κωνσούανται",
     "next": "Kontakossyla",
     "chapters": [
       {
@@ -964,7 +974,7 @@
   {
     "lemma": "Koon",
     "previous": "Konzilienakten",
-    "next": "Koon Thalassa",
+    "next": "Κῴων Θάλασσα",
     "chapters": [
       {
         "start": 1344,
@@ -974,20 +984,14 @@
     ]
   },
   {
-    "lemma": "Koon Thalassa",
+    "lemma": "Κῴων Θάλασσα",
     "previous": "Koon",
     "next": "Koos",
-    "chapters": [
-      {
-        "start": 1345,
-        "end": 1345,
-        "author": "Bürchner"
-      }
-    ]
+    "sort_key": "Koonthalassa"
   },
   {
     "lemma": "Koos",
-    "previous": "Koon Thalassa",
+    "previous": "Κῴων Θάλασσα",
     "next": "Κοπάδον",
     "chapters": [
       {
@@ -1193,6 +1197,7 @@
     "lemma": "Κωποξύσται",
     "previous": "Koponios",
     "next": "Κοπράτας",
+    "sort_key": "Kopoxystai",
     "chapters": [
       {
         "start": 1363,
@@ -1350,7 +1355,7 @@
   {
     "lemma": "Koragia",
     "previous": "Koradea",
-    "next": "Koragion",
+    "next": "Κοράγιον",
     "chapters": [
       {
         "start": 1369,
@@ -1360,9 +1365,10 @@
     ]
   },
   {
-    "lemma": "Koragion",
+    "lemma": "Κοράγιον",
     "previous": "Koragia",
     "next": "Κοραία",
+    "sort_key": "Koragion",
     "chapters": [
       {
         "start": 1370,
@@ -1373,8 +1379,9 @@
   },
   {
     "lemma": "Κοραία",
-    "previous": "Koragion",
+    "previous": "Κοράγιον",
     "next": "Κοραία 1",
+    "sort_key": "Koraia",
     "chapters": [
       {
         "start": 1370,
@@ -1399,7 +1406,8 @@
   {
     "lemma": "Κοραία 2",
     "previous": "Κοραία 1",
-    "next": "Korakai",
+    "next": "Κορακαί",
+    "sort_key": "Koraia 2",
     "chapters": [
       {
         "start": 1370,
@@ -1409,9 +1417,10 @@
     ]
   },
   {
-    "lemma": "Korakai",
+    "lemma": "Κορακαί",
     "previous": "Κοραία 2",
     "next": "Korakesion 1",
+    "sort_key": "Korakai",
     "chapters": [
       {
         "start": 1370,
@@ -1422,7 +1431,7 @@
   },
   {
     "lemma": "Korakesion 1",
-    "previous": "Korakai",
+    "previous": "Κορακαί",
     "next": "Korakesion 2",
     "wp_link": "w:de:Alanya",
     "chapters": [
@@ -1449,6 +1458,8 @@
     "lemma": "Κοράκιοι",
     "previous": "Korakesion 2",
     "next": "Κοράκιον",
+    "sort_key": "Korakioi",
+    "wp_link": "w:de:Spercheios",
     "chapters": [
       {
         "start": 1371,
@@ -1500,7 +1511,8 @@
   {
     "lemma": "Κοράκων νᾶσος",
     "previous": "Κορακώδης λιμήν",
-    "next": "Korakos Petra",
+    "next": "Κόρακος Πέτρα",
+    "sort_key": "Korakon",
     "chapters": [
       {
         "start": 1371,
@@ -1510,20 +1522,15 @@
     ]
   },
   {
-    "lemma": "Korakos Petra",
+    "lemma": "Κόρακος Πέτρα",
     "previous": "Κοράκων νᾶσος",
-    "next": "Koralios 1",
-    "chapters": [
-      {
-        "start": 1372,
-        "end": 1372,
-        "author": "Bürchner"
-      }
-    ]
+    "next": "Κωράλιος 1",
+    "sort_key": "Korakosp",
+    "wp_link": "w:de:Ithaka"
   },
   {
-    "lemma": "Koralios 1",
-    "previous": "Korakos Petra",
+    "lemma": "Κωράλιος 1",
+    "previous": "Κόρακος Πέτρα",
     "next": "Κωράλιος 2",
     "redirect": true,
     "chapters": [
@@ -1535,7 +1542,7 @@
   },
   {
     "lemma": "Κωράλιος 2",
-    "previous": "Koralios 1",
+    "previous": "Κωράλιος 1",
     "next": "Κωράλιος 3",
     "redirect": true,
     "chapters": [
@@ -1626,7 +1633,7 @@
   {
     "lemma": "Koralloi",
     "previous": "Koralle",
-    "next": "Korama kome",
+    "next": "Κόραμα κώμη",
     "chapters": [
       {
         "start": 1377,
@@ -1636,7 +1643,7 @@
     ]
   },
   {
-    "lemma": "Korama kome",
+    "lemma": "Κόραμα κώμη",
     "previous": "Koralloi",
     "next": "Korankaloi",
     "chapters": [
@@ -1649,7 +1656,7 @@
   },
   {
     "lemma": "Korankaloi",
-    "previous": "Korama kome",
+    "previous": "Κόραμα κώμη",
     "next": "Korasion",
     "chapters": [
       {
@@ -1846,7 +1853,7 @@
   {
     "lemma": "Κορδίσται",
     "previous": "Κόρδης",
-    "next": "Kordoleon, ho",
+    "next": "Κορδολέων, ὁ",
     "redirect": true,
     "chapters": [
       {
@@ -1856,20 +1863,14 @@
     ]
   },
   {
-    "lemma": "Kordoleon, ho",
+    "lemma": "Κορδολέων, ὁ",
     "previous": "Κορδίσται",
     "next": "Κορδουηνή",
-    "chapters": [
-      {
-        "start": 1386,
-        "end": 1386,
-        "author": "Bürchner"
-      }
-    ]
+    "sort_key": "Kordoleon"
   },
   {
     "lemma": "Κορδουηνή",
-    "previous": "Kordoleon, ho",
+    "previous": "Κορδολέων, ὁ",
     "next": "Kordyle 1",
     "chapters": [
       {

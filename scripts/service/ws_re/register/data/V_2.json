@@ -101,6 +101,7 @@
     "lemma": "Donatus 5",
     "previous": "Donatus 4",
     "next": "Donatus 6",
+    "sort_key": "Donatus 05",
     "chapters": [
       {
         "start": 1545,
@@ -127,7 +128,7 @@
     "previous": "Donatus 6",
     "next": "Donatus 8",
     "sort_key": "Donatus 07",
-    "redirect": true,
+    "redirect": "Donatismus",
     "chapters": [
       {
         "start": 1545,
@@ -2021,6 +2022,7 @@
     "lemma": "Dositheos 2",
     "previous": "Dositheos 1",
     "next": "Dositheos 3",
+    "sort_key": "Dositheos 02",
     "chapters": [
       {
         "start": 1605,
@@ -7975,6 +7977,7 @@
     "lemma": "Ebioniten",
     "previous": "Ebidas",
     "next": "Ebisma",
+    "wp_link": "w:de:Ebioniten",
     "chapters": [
       {
         "start": 1895,
@@ -9880,7 +9883,7 @@
     "lemma": "Edessa 3",
     "previous": "Edessa 2",
     "next": "Edetani",
-    "redirect": true,
+    "redirect": "Bambyke",
     "chapters": [
       {
         "start": 1938,
@@ -16588,6 +16591,7 @@
     "lemma": "Ἐλευθέρων φθορά",
     "previous": "Eleutherolakones",
     "next": "Eleutheropolis",
+    "sort_key": "Eleutheronphthora",
     "chapters": [
       {
         "start": 2353,
@@ -16599,7 +16603,7 @@
   {
     "lemma": "Eleutheropolis",
     "previous": "Ἐλευθέρων φθορά",
-    "next": "Eleutheroprasiu dike",
+    "next": "Ἐλευθεροπρασίου δίκη",
     "chapters": [
       {
         "start": 2353,
@@ -16609,9 +16613,10 @@
     ]
   },
   {
-    "lemma": "Eleutheroprasiu dike",
+    "lemma": "Ἐλευθεροπρασίου δίκη",
     "previous": "Eleutheropolis",
     "next": "Eleutheros 1",
+    "sort_key": "Eleutheroprasiudike",
     "chapters": [
       {
         "start": 2354,
@@ -16622,7 +16627,7 @@
   },
   {
     "lemma": "Eleutheros 1",
-    "previous": "Eleutheroprasiu dike",
+    "previous": "Ἐλευθεροπρασίου δίκη",
     "next": "Eleutheros 2",
     "wp_link": "w:de:Nahr al-Kabir",
     "chapters": [
@@ -18673,7 +18678,7 @@
   {
     "lemma": "Emmaus 2",
     "previous": "Emmaus 1",
-    "next": "Emmeleia",
+    "next": "Ἐμμέλεια",
     "chapters": [
       {
         "start": 2498,
@@ -18683,7 +18688,7 @@
     ]
   },
   {
-    "lemma": "Emmeleia",
+    "lemma": "Ἐμμέλεια",
     "previous": "Emmaus 2",
     "next": "Emmenidai",
     "chapters": [
@@ -18696,7 +18701,7 @@
   },
   {
     "lemma": "Emmenidai",
-    "previous": "Emmeleia",
+    "previous": "Ἐμμέλεια",
     "next": "Emmenidas 1",
     "chapters": [
       {
@@ -22986,6 +22991,7 @@
     "lemma": "Ephialtes 4",
     "previous": "Ephialtes 3",
     "next": "Ephialtes 5",
+    "wp_link": "w:de:Ephialtes von Athen",
     "chapters": [
       {
         "start": 2849,
@@ -23153,6 +23159,7 @@
     "lemma": "Ἐφόδιον",
     "previous": "Ephodia",
     "next": "Ἐφόλκιον",
+    "sort_key": "Ephodion",
     "chapters": [
       {
         "start": 2859,
@@ -23165,6 +23172,7 @@
     "lemma": "Ἐφόλκιον",
     "previous": "Ἐφόδιον",
     "next": "Ephorkios",
+    "sort_key": "Epholkion",
     "chapters": [
       {
         "start": 2860,

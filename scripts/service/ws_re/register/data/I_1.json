@@ -4085,6 +4085,7 @@
     "lemma": "Accius 1",
     "previous": "Accisi",
     "next": "Accius 2",
+    "wp_link": "w:de:Lucius Accius",
     "chapters": [
       {
         "start": 142,
@@ -5233,7 +5234,7 @@
   {
     "lemma": "Acheloïdes",
     "previous": "Acheletides",
-    "next": "Acheloïdes 2",
+    "next": "Acheloïdes 1",
     "sort_key": "Acheloides",
     "chapters": [
       {
@@ -5244,8 +5245,20 @@
     ]
   },
   {
-    "lemma": "Acheloïdes 2",
+    "lemma": "Acheloïdes 1",
     "previous": "Acheloïdes",
+    "next": "Acheloïdes 2",
+    "chapters": [
+      {
+        "start": 212,
+        "end": 212,
+        "author": "Wernicke"
+      }
+    ]
+  },
+  {
+    "lemma": "Acheloïdes 2",
+    "previous": "Acheloïdes 1",
     "next": "Acheloïdes 3",
     "sort_key": "Acheloides 2",
     "chapters": [
@@ -5384,7 +5397,6 @@
     "lemma": "Acheloos 5",
     "previous": "Acheloos 4",
     "next": "Acheloos 6",
-    "wp_link": "w:de:Acheloos",
     "chapters": [
       {
         "start": 214,
@@ -5483,7 +5495,7 @@
     "previous": "Acherini",
     "next": "Acheron",
     "sort_key": "Achero",
-    "redirect": true,
+    "redirect": "Hesychios 9",
     "chapters": [
       {
         "start": 217,
@@ -5653,7 +5665,7 @@
   {
     "lemma": "Acherusia 5",
     "previous": "Acherusia 4",
-    "next": "Achilides Cherronesoi",
+    "next": "Ἀχιλίδες Χερρόνησοι",
     "wp_link": "w:de:Ägypten",
     "chapters": [
       {
@@ -5664,20 +5676,14 @@
     ]
   },
   {
-    "lemma": "Achilides Cherronesoi",
+    "lemma": "Ἀχιλίδες Χερρόνησοι",
     "previous": "Acherusia 5",
     "next": "Achillas 1",
-    "chapters": [
-      {
-        "start": 220,
-        "end": 220,
-        "author": "Pietschmann"
-      }
-    ]
+    "sort_key": "Achilidescherronesoi"
   },
   {
     "lemma": "Achillas 1",
-    "previous": "Achilides Cherronesoi",
+    "previous": "Ἀχιλίδες Χερρόνησοι",
     "next": "Achillas 2",
     "wp_link": "w:de:Achillas",
     "chapters": [
@@ -5764,8 +5770,8 @@
   {
     "lemma": "Achilleion 4",
     "previous": "Achilleion 3",
-    "next": "Achilleios charax",
-    "redirect": true,
+    "next": "Ἀχίλλειος χάραξ",
+    "redirect": "Ἀχίλλειος κώμη",
     "chapters": [
       {
         "start": 220,
@@ -5775,9 +5781,10 @@
     ]
   },
   {
-    "lemma": "Achilleios charax",
+    "lemma": "Ἀχίλλειος χάραξ",
     "previous": "Achilleion 4",
-    "next": "Achilleios kome",
+    "next": "Ἀχίλλειος κώμη",
+    "sort_key": "Achilleioscharax",
     "chapters": [
       {
         "start": 220,
@@ -5787,9 +5794,10 @@
     ]
   },
   {
-    "lemma": "Achilleios kome",
-    "previous": "Achilleios charax",
-    "next": "Achilleios krene",
+    "lemma": "Ἀχίλλειος κώμη",
+    "previous": "Ἀχίλλειος χάραξ",
+    "next": "Ἀχίλλειος κρήνη",
+    "sort_key": "Achilleioskome",
     "chapters": [
       {
         "start": 220,
@@ -5799,21 +5807,16 @@
     ]
   },
   {
-    "lemma": "Achilleios krene",
-    "previous": "Achilleios kome",
-    "next": "Achilleios limen",
-    "chapters": [
-      {
-        "start": 220,
-        "end": 220,
-        "author": "Hirschfeld"
-      }
-    ]
+    "lemma": "Ἀχίλλειος κρήνη",
+    "previous": "Ἀχίλλειος κώμη",
+    "next": "Ἀχίλλειος λιμήν",
+    "sort_key": "Achilleioskrene"
   },
   {
-    "lemma": "Achilleios limen",
-    "previous": "Achilleios krene",
+    "lemma": "Ἀχίλλειος λιμήν",
+    "previous": "Ἀχίλλειος κρήνη",
     "next": "Achilleitis",
+    "sort_key": "Achilleioslimen",
     "chapters": [
       {
         "start": 220,
@@ -5824,8 +5827,8 @@
   },
   {
     "lemma": "Achilleitis",
-    "previous": "Achilleios limen",
-    "next": "Achilleos alsos",
+    "previous": "Ἀχίλλειος λιμήν",
+    "next": "Ἀχιλλέως ἄλσος",
     "chapters": [
       {
         "start": 221,
@@ -5835,21 +5838,18 @@
     ]
   },
   {
-    "lemma": "Achilleos alsos",
+    "lemma": "Ἀχιλλέως ἄλσος",
     "previous": "Achilleitis",
-    "next": "Achilleos dromos",
-    "chapters": [
-      {
-        "start": 221,
-        "end": 221,
-        "author": "Tomaschek"
-      }
-    ]
+    "next": "Ἀχιλλέως δρόμος",
+    "sort_key": "Achilleosalsos",
+    "wp_link": "w:de:Rennbahn des Achilleus"
   },
   {
-    "lemma": "Achilleos dromos",
-    "previous": "Achilleos alsos",
+    "lemma": "Ἀχιλλέως δρόμος",
+    "previous": "Ἀχιλλέως ἄλσος",
     "next": "Ἀχιλλέως νῆσος",
+    "sort_key": "Achilleosdromos",
+    "wp_link": "w:de:Rennbahn des Achilleus",
     "chapters": [
       {
         "start": 221,
@@ -5860,8 +5860,10 @@
   },
   {
     "lemma": "Ἀχιλλέως νῆσος",
-    "previous": "Achilleos dromos",
+    "previous": "Ἀχιλλέως δρόμος",
     "next": "Achilleus 1",
+    "sort_key": "Achilleosnesos",
+    "wp_link": "w:de:Leuke (Insel)",
     "chapters": [
       {
         "start": 221,
@@ -6362,6 +6364,7 @@
     "lemma": "Acilius",
     "previous": "Acili compitum",
     "next": "Acilius 1",
+    "wp_link": "w:de:Acilius",
     "chapters": [
       {
         "start": 251,
@@ -8588,6 +8591,7 @@
     "lemma": "Ἀδάνου δύο",
     "previous": "Adanos",
     "next": "Adapera",
+    "sort_key": "Adanudyo",
     "chapters": [
       {
         "start": 345,
@@ -8660,6 +8664,7 @@
     "lemma": "Ἀδάρου πόλις",
     "previous": "Adarin",
     "next": "Adasa",
+    "sort_key": "Adarou polis",
     "chapters": [
       {
         "start": 347,
@@ -9589,7 +9594,7 @@
   {
     "lemma": "Ἀδίαντον",
     "previous": "Adiante",
-    "next": "Adiatakoi",
+    "next": "Ἀδιάτακτοι",
     "sort_key": "Adianton",
     "chapters": [
       {
@@ -9599,20 +9604,14 @@
     ]
   },
   {
-    "lemma": "Adiatakoi",
+    "lemma": "Ἀδιάτακτοι",
     "previous": "Ἀδίαντον",
     "next": "Adiathain",
-    "chapters": [
-      {
-        "start": 360,
-        "end": 360,
-        "author": "Szanto"
-      }
-    ]
+    "sort_key": "Adiataktoi"
   },
   {
     "lemma": "Adiathain",
-    "previous": "Adiatakoi",
+    "previous": "Ἀδιάτακτοι",
     "next": "Adiatorix",
     "redirect": true,
     "chapters": [
@@ -10682,6 +10681,7 @@
     "lemma": "Ἀδραμυττηνὸς κόλπος",
     "previous": "Adramytteion",
     "next": "Adramyttis",
+    "sort_key": "Adramyttenoskolpos",
     "chapters": [
       {
         "start": 404,
@@ -10851,7 +10851,6 @@
     "lemma": "Adrasteia 1",
     "previous": "Adraste",
     "next": "Adrasteia 2",
-    "wp_link": "w:de:Adrasteia (Quelle)",
     "chapters": [
       {
         "start": 406,
@@ -10876,6 +10875,7 @@
     "lemma": "Adrasteia 3",
     "previous": "Adrasteia 2",
     "next": "Ἀδραστείας ὄρος",
+    "wp_link": "w:de:Adrasteia (Mythologie)",
     "chapters": [
       {
         "start": 406,
@@ -10888,6 +10888,7 @@
     "lemma": "Ἀδραστείας ὄρος",
     "previous": "Adrasteia 3",
     "next": "Adrastine, Adrestine",
+    "sort_key": "Adrasteiasoros",
     "chapters": [
       {
         "start": 411,
@@ -11168,6 +11169,7 @@
     "lemma": "Ἄδρου",
     "previous": "Adrotta",
     "next": "ad Adrum flumen",
+    "sort_key": "Adru",
     "chapters": [
       {
         "start": 421,
@@ -11524,6 +11526,7 @@
     "lemma": "Ἀδουλικὸς κόλπος",
     "previous": "Adule",
     "next": "Adulitai",
+    "sort_key": "Adulikoskolpos",
     "chapters": [
       {
         "start": 432,
@@ -11560,6 +11563,7 @@
     "lemma": "Adulterium",
     "previous": "Adullam",
     "next": "Aduna",
+    "wp_link": "w:de:Ehebruch",
     "chapters": [
       {
         "start": 432,
@@ -11927,6 +11931,7 @@
     "lemma": "Aebutius 8",
     "previous": "Aebutius 7",
     "next": "Aebutius 9",
+    "sort_key": "Aebutius 08",
     "chapters": [
       {
         "start": 442,
@@ -11939,6 +11944,7 @@
     "lemma": "Aebutius 9",
     "previous": "Aebutius 8",
     "next": "Aebutius 10",
+    "sort_key": "Aebutius 09",
     "chapters": [
       {
         "start": 442,
@@ -12107,6 +12113,7 @@
     "lemma": "Aëdava",
     "previous": "Aeclanum",
     "next": "Aedemon",
+    "sort_key": "Aedaua",
     "chapters": [
       {
         "start": 444,
@@ -12304,6 +12311,7 @@
     "lemma": "Aëdon 2",
     "previous": "Aëdon 1",
     "next": "Aedonia",
+    "sort_key": "Aedon 2",
     "chapters": [
       {
         "start": 474,
@@ -12462,6 +12470,7 @@
     "lemma": "Aegissus",
     "previous": "Aegina",
     "next": "Aegitna",
+    "wp_link": "w:de:Tulcea",
     "chapters": [
       {
         "start": 477,
@@ -12497,7 +12506,7 @@
   {
     "lemma": "Aegonne",
     "previous": "Aegnatius",
-    "next": "Aegrillus",
+    "next": "Aegrilius",
     "chapters": [
       {
         "start": 477,
@@ -12507,7 +12516,7 @@
     ]
   },
   {
-    "lemma": "Aegrillus",
+    "lemma": "Aegrilius",
     "previous": "Aegonne",
     "next": "ab aegris cubiculariorum",
     "chapters": [
@@ -12519,8 +12528,9 @@
   },
   {
     "lemma": "ab aegris cubiculariorum",
-    "previous": "Aegrillus",
+    "previous": "Aegrilius",
     "next": "Aegusa",
+    "sort_key": "Aegris",
     "chapters": [
       {
         "start": 477,
@@ -12533,6 +12543,7 @@
     "lemma": "Aegusa",
     "previous": "ab aegris cubiculariorum",
     "next": "Aeimnastos",
+    "wp_link": "w:de:Favignana",
     "chapters": [
       {
         "start": 477,
@@ -12544,7 +12555,7 @@
   {
     "lemma": "Aeimnastos",
     "previous": "Aegusa",
-    "next": "Aeinautai",
+    "next": "Ἀειναῦται",
     "chapters": [
       {
         "start": 477,
@@ -12554,9 +12565,10 @@
     ]
   },
   {
-    "lemma": "Aeinautai",
+    "lemma": "Ἀειναῦται",
     "previous": "Aeimnastos",
     "next": "Ἀειφυγία",
+    "sort_key": "Aeinautai",
     "chapters": [
       {
         "start": 477,
@@ -12567,8 +12579,10 @@
   },
   {
     "lemma": "Ἀειφυγία",
-    "previous": "Aeinautai",
+    "previous": "Ἀειναῦται",
     "next": "Ἀείσιτοι",
+    "sort_key": "Aeiphygia",
+    "wp_link": "w:de:Verbannung",
     "chapters": [
       {
         "start": 478,
@@ -12595,7 +12609,6 @@
     "previous": "Ἀείσιτοι",
     "next": "Aelana, Aelanites sinus",
     "sort_key": "Aeizoon",
-    "wp_link": "w:de:Fetthennen",
     "chapters": [
       {
         "start": 478,
@@ -19383,7 +19396,7 @@
     "lemma": "Aeternius",
     "previous": "Aeternitas",
     "next": "Aeternus",
-    "redirect": true,
+    "redirect": "Fronto 7",
     "chapters": [
       {
         "start": 696,
@@ -22984,7 +22997,7 @@
     "lemma": "Agbatana",
     "previous": "Agbaros",
     "next": "Agbia",
-    "redirect": true,
+    "redirect": "Ekbatana 3",
     "wp_link": "w:de:Ekbatana",
     "chapters": [
       {
@@ -23745,6 +23758,7 @@
     "lemma": "Agentes in rebus",
     "previous": "Agensis",
     "next": "Ἀγεωργίου δίκη",
+    "sort_key": "Agentesinrebus",
     "chapters": [
       {
         "start": 776,
@@ -24793,7 +24807,7 @@
     "lemma": "Aginatius 2",
     "previous": "Aginatius 1",
     "next": "Aginatius 3",
-    "redirect": true,
+    "redirect": "Faustus 20",
     "chapters": [
       {
         "start": 810,
@@ -24806,7 +24820,7 @@
     "lemma": "Aginatius 3",
     "previous": "Aginatius 2",
     "next": "Aginis",
-    "redirect": true,
+    "redirect": "Ceionius 39",
     "chapters": [
       {
         "start": 810,
@@ -26673,7 +26687,7 @@
   {
     "lemma": "Agricola 4",
     "previous": "Agricola 3",
-    "next": "Agricola 4a-d",
+    "next": "Agricola 4a",
     "chapters": [
       {
         "start": 892,
@@ -26683,20 +26697,13 @@
     ]
   },
   {
-    "lemma": "Agricola 4a-d",
+    "lemma": "Agricola 4a",
     "previous": "Agricola 4",
-    "next": "Agricolanus",
-    "chapters": [
-      {
-        "start": 892,
-        "end": 893,
-        "author": "Rohden"
-      }
-    ]
+    "next": "Agricolanus"
   },
   {
     "lemma": "Agricolanus",
-    "previous": "Agricola 4a-d",
+    "previous": "Agricola 4a",
     "next": "Agri decumates",
     "chapters": [
       {
@@ -27248,6 +27255,7 @@
     "lemma": "Agrippina 2",
     "previous": "Agrippina 1",
     "next": "Agrippina 3",
+    "wp_link": "w:de:Agrippina die Ältere",
     "chapters": [
       {
         "start": 899,
@@ -27260,6 +27268,7 @@
     "lemma": "Agrippina 3",
     "previous": "Agrippina 2",
     "next": "Agrippina 4",
+    "wp_link": "w:de:Agrippina die Jüngere",
     "chapters": [
       {
         "start": 899,
@@ -27551,6 +27560,7 @@
     "lemma": "Agroecius 3",
     "previous": "Agroecius 2",
     "next": "Agroeira",
+    "ws_link": "s:de:Agroecius",
     "chapters": [
       {
         "start": 902,
@@ -28830,6 +28840,8 @@
     "lemma": "Αἴδεσις",
     "previous": "Aidesios 5",
     "next": "Aidoingos",
+    "sort_key": "Aidesis",
+    "wp_link": "w:de:Aidesis",
     "chapters": [
       {
         "start": 941,
@@ -31555,7 +31567,7 @@
   {
     "lemma": "Aiolos 2",
     "previous": "Aiolos 1",
-    "next": "Aiolu nesoi",
+    "next": "Αἰόλου νῆσοι",
     "chapters": [
       {
         "start": 1041,
@@ -31565,7 +31577,7 @@
     ]
   },
   {
-    "lemma": "Aiolu nesoi",
+    "lemma": "Αἰόλου νῆσοι",
     "previous": "Aiolos 2",
     "next": "Αἰόλου πύλαι",
     "chapters": [
@@ -31578,7 +31590,7 @@
   },
   {
     "lemma": "Αἰόλου πύλαι",
-    "previous": "Aiolu nesoi",
+    "previous": "Αἰόλου νῆσοι",
     "next": "Aion 1",
     "chapters": [
       {
@@ -32498,6 +32510,7 @@
     "lemma": "Aischylos 5",
     "previous": "Aischylos 4",
     "next": "Aischylos 6",
+    "sort_key": "Aischylos 05",
     "chapters": [
       {
         "start": 1065,
@@ -32510,6 +32523,7 @@
     "lemma": "Aischylos 6",
     "previous": "Aischylos 5",
     "next": "Aischylos 7",
+    "sort_key": "Aischylos 06",
     "chapters": [
       {
         "start": 1065,
@@ -32535,6 +32549,7 @@
     "lemma": "Aischylos 8",
     "previous": "Aischylos 7",
     "next": "Aischylos 9",
+    "sort_key": "Aischylos 08",
     "chapters": [
       {
         "start": 1065,
@@ -32547,6 +32562,7 @@
     "lemma": "Aischylos 9",
     "previous": "Aischylos 8",
     "next": "Aischylos 10",
+    "sort_key": "Aischylos 09",
     "chapters": [
       {
         "start": 1065,
@@ -37456,6 +37472,7 @@
     "lemma": "Ἀκτιακός",
     "previous": "Aktia",
     "next": "Ἀκτιάς",
+    "sort_key": "Aktiakos",
     "chapters": [
       {
         "start": 1214,
@@ -38201,6 +38218,7 @@
     "lemma": "Ἀλαβαστρηνὸν ὄρος",
     "previous": "Alabarches",
     "next": "Alabastrites",
+    "sort_key": "Alabastrenonoros",
     "chapters": [
       {
         "start": 1271,
@@ -40819,6 +40837,8 @@
     "lemma": "Albius 12",
     "previous": "Albius 11",
     "next": "Albius 13",
+    "wp_link": "w:de:Tibull",
+    "ws_link": "s:de:Tibull",
     "chapters": [
       {
         "start": 1319,
@@ -41002,7 +41022,7 @@
   {
     "lemma": "Albucius 4",
     "previous": "Albucius 3",
-    "next": "Albula 1",
+    "next": "Albudinus fons",
     "wp_link": "w:de:Albucius",
     "chapters": [
       {
@@ -41013,8 +41033,13 @@
     ]
   },
   {
-    "lemma": "Albula 1",
+    "lemma": "Albudinus fons",
     "previous": "Albucius 4",
+    "next": "Albula 1"
+  },
+  {
+    "lemma": "Albula 1",
+    "previous": "Albudinus fons",
     "next": "Albula 2",
     "redirect": true,
     "chapters": [
@@ -42696,7 +42721,7 @@
     "lemma": "Alexandreia 19",
     "previous": "Alexandreia 18",
     "next": "Alexandreia 20",
-    "redirect": true,
+    "redirect": "Alexandropolis 3",
     "chapters": [
       {
         "start": 1396,
@@ -42818,6 +42843,7 @@
     "lemma": "Ἀλεξάνδρειος",
     "previous": "Alexandreion 2",
     "next": "Alexandrianus",
+    "sort_key": "Alexandreios",
     "chapters": [
       {
         "start": 1397,

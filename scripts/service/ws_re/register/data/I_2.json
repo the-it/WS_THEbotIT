@@ -3603,6 +3603,8 @@
     "lemma": "Ἀλκέα",
     "previous": "Alke 3",
     "next": "Alkeides",
+    "sort_key": "Alkea 1",
+    "wp_link": "w:de:Alcea",
     "chapters": [
       {
         "start": 1512,
@@ -3675,6 +3677,8 @@
     "lemma": "Ἀλκηΐδες",
     "previous": "Alkeides 4",
     "next": "Alkeis",
+    "sort_key": "Alkeides 5",
+    "wp_link": "w:de:Alkeides",
     "chapters": [
       {
         "start": 1513,
@@ -4859,7 +4863,7 @@
   {
     "lemma": "Alkinoe 3",
     "previous": "Alkinoe 2",
-    "next": "Alkinoos",
+    "next": "Alkinoos 1",
     "wp_link": "w:de:Alkinoë (Korinth)",
     "chapters": [
       {
@@ -5412,6 +5416,7 @@
     "lemma": "Alkon 3",
     "previous": "Alkon 2",
     "next": "Alkon 4",
+    "sort_key": "Alkon 03",
     "chapters": [
       {
         "start": 1579,
@@ -5424,6 +5429,7 @@
     "lemma": "Alkon 4",
     "previous": "Alkon 3",
     "next": "Alkon 5",
+    "sort_key": "Alkon 04",
     "chapters": [
       {
         "start": 1579,
@@ -5462,6 +5468,7 @@
     "lemma": "Alkon 7",
     "previous": "Alkon 6",
     "next": "Alkon 8",
+    "sort_key": "Alkon 07",
     "chapters": [
       {
         "start": 1579,
@@ -5487,6 +5494,7 @@
     "lemma": "Alkon 9",
     "previous": "Alkon 8",
     "next": "Alkon 10",
+    "sort_key": "Alkon 09",
     "chapters": [
       {
         "start": 1579,
@@ -5663,7 +5671,7 @@
   {
     "lemma": "Alkyonides",
     "previous": "Ἀλκυονία λίμνη",
-    "next": "Alkyonis thalatta",
+    "next": "Ἀλκυονὶς θάλαττα",
     "wp_link": "w:de:Eisvögel",
     "chapters": [
       {
@@ -5674,20 +5682,15 @@
     ]
   },
   {
-    "lemma": "Alkyonis thalatta",
+    "lemma": "Ἀλκυονὶς θάλαττα",
     "previous": "Alkyonides",
     "next": "Alla",
-    "chapters": [
-      {
-        "start": 1583,
-        "end": 1583,
-        "author": "Hirschfeld"
-      }
-    ]
+    "sort_key": "Alkyonis",
+    "wp_link": "w:de:Alkyoniden (Inselgruppe)"
   },
   {
     "lemma": "Alla",
-    "previous": "Alkyonis thalatta",
+    "previous": "Ἀλκυονὶς θάλαττα",
     "next": "Allabo",
     "chapters": [
       {
@@ -5957,6 +5960,7 @@
     "lemma": "Allius 2",
     "previous": "Allius 1",
     "next": "Allius 3",
+    "sort_key": "Allius 02",
     "chapters": [
       {
         "start": 1586,
@@ -5969,6 +5973,7 @@
     "lemma": "Allius 3",
     "previous": "Allius 2",
     "next": "Allius 4",
+    "sort_key": "Allius 03",
     "chapters": [
       {
         "start": 1586,
@@ -6340,6 +6345,7 @@
     "lemma": "Almus 2",
     "previous": "Almus 1",
     "next": "Alo",
+    "redirect": "Alma 1",
     "chapters": [
       {
         "start": 1590,
@@ -6362,7 +6368,7 @@
   {
     "lemma": "Aloadai, Aloeidai",
     "previous": "Alo",
-    "next": "Aloba hiera",
+    "next": "Ἄλοβα ἱερά",
     "wp_link": "w:de:Aloiden",
     "chapters": [
       {
@@ -6373,21 +6379,16 @@
     ]
   },
   {
-    "lemma": "Aloba hiera",
+    "lemma": "Ἄλοβα ἱερά",
     "previous": "Aloadai, Aloeidai",
     "next": "Aloë 1",
-    "chapters": [
-      {
-        "start": 1592,
-        "end": 1593,
-        "author": "Stengel"
-      }
-    ]
+    "sort_key": "Aloba"
   },
   {
     "lemma": "Aloë 1",
-    "previous": "Aloba hiera",
+    "previous": "Ἄλοβα ἱερά",
     "next": "Aloë 2",
+    "sort_key": "Aloe 1",
     "chapters": [
       {
         "start": 1593,
@@ -6436,7 +6437,7 @@
   {
     "lemma": "Aloeus 2",
     "previous": "Aloeus 1",
-    "next": "Alogiu graphe",
+    "next": "Ἀλογίου γραφή",
     "chapters": [
       {
         "start": 1594,
@@ -6446,20 +6447,14 @@
     ]
   },
   {
-    "lemma": "Alogiu graphe",
+    "lemma": "Ἀλογίου γραφή",
     "previous": "Aloeus 2",
     "next": "Aloion",
-    "chapters": [
-      {
-        "start": 1594,
-        "end": 1594,
-        "author": "Thalheim"
-      }
-    ]
+    "sort_key": "Alogiug"
   },
   {
     "lemma": "Aloion",
-    "previous": "Alogiu graphe",
+    "previous": "Ἀλογίου γραφή",
     "next": "Aloisius",
     "chapters": [
       {
@@ -6484,7 +6479,7 @@
   {
     "lemma": "Aloitis",
     "previous": "Aloisius",
-    "next": "Alokiai nesoi",
+    "next": "Ἀλοκίαι νῆσοι",
     "chapters": [
       {
         "start": 1594,
@@ -6494,20 +6489,14 @@
     ]
   },
   {
-    "lemma": "Alokiai nesoi",
+    "lemma": "Ἀλοκίαι νῆσοι",
     "previous": "Aloitis",
     "next": "Alonae",
-    "chapters": [
-      {
-        "start": 1594,
-        "end": 1594,
-        "author": "Ihm"
-      }
-    ]
+    "sort_key": "Aloikiain"
   },
   {
     "lemma": "Alonae",
-    "previous": "Alokiai nesoi",
+    "previous": "Ἀλοκίαι νῆσοι",
     "next": "Alone 1",
     "chapters": [
       {
@@ -6784,7 +6773,7 @@
   {
     "lemma": "Alor",
     "previous": "Alopios",
-    "next": "Alorion helos",
+    "next": "Ἀλώριον ἕλος",
     "chapters": [
       {
         "start": 1598,
@@ -6794,20 +6783,14 @@
     ]
   },
   {
-    "lemma": "Alorion helos",
+    "lemma": "Ἀλώριον ἕλος",
     "previous": "Alor",
     "next": "Aloros",
-    "chapters": [
-      {
-        "start": 1598,
-        "end": 1598,
-        "author": "Hirschfeld"
-      }
-    ]
+    "sort_key": "Alorionh"
   },
   {
     "lemma": "Aloros",
-    "previous": "Alorion helos",
+    "previous": "Ἀλώριον ἕλος",
     "next": "Alos 1",
     "chapters": [
       {
@@ -8093,7 +8076,7 @@
   {
     "lemma": "Alusor..",
     "previous": "Alusias",
-    "next": "Alustu phrurion",
+    "next": "Ἀλούστου φρούριον",
     "chapters": [
       {
         "start": 1706,
@@ -8103,20 +8086,14 @@
     ]
   },
   {
-    "lemma": "Alustu phrurion",
+    "lemma": "Ἀλούστου φρούριον",
     "previous": "Alusor..",
     "next": "Aluta",
-    "chapters": [
-      {
-        "start": 1706,
-        "end": 1706,
-        "author": "Tomaschek"
-      }
-    ]
+    "sort_key": "Alustuph"
   },
   {
     "lemma": "Aluta",
-    "previous": "Alustu phrurion",
+    "previous": "Ἀλούστου φρούριον",
     "next": "Alutae",
     "chapters": [
       {
@@ -9034,7 +9011,7 @@
   {
     "lemma": "Amaltheia 4",
     "previous": "Amaltheia 3",
-    "next": "Amaltheias keras",
+    "next": "Ἀμαλθείας κέρας",
     "chapters": [
       {
         "start": 1723,
@@ -9044,9 +9021,10 @@
     ]
   },
   {
-    "lemma": "Amaltheias keras",
+    "lemma": "Ἀμαλθείας κέρας",
     "previous": "Amaltheia 4",
     "next": "Amaltheion",
+    "sort_key": "Amaltheiaskeras",
     "chapters": [
       {
         "start": 1723,
@@ -9057,7 +9035,7 @@
   },
   {
     "lemma": "Amaltheion",
-    "previous": "Amaltheias keras",
+    "previous": "Ἀμαλθείας κέρας",
     "next": "Amamassos",
     "chapters": [
       {
@@ -9119,6 +9097,7 @@
     "lemma": "Amandus 2",
     "previous": "Amandus 1",
     "next": "Amandus 3",
+    "wp_link": "w:de:Amandus (Bagaudenführer)",
     "chapters": [
       {
         "start": 1723,
@@ -9142,7 +9121,7 @@
   {
     "lemma": "Amandus 4",
     "previous": "Amandus 3",
-    "next": "Ἀμανίδες πύλαι 1",
+    "next": "Amanides pylai 1",
     "chapters": [
       {
         "start": 1723,
@@ -9152,9 +9131,11 @@
     ]
   },
   {
-    "lemma": "Ἀμανίδες πύλαι 1",
+    "lemma": "Amanides pylai 1",
     "previous": "Amandus 4",
     "next": "Ἀμανίδες πύλαι 2",
+    "sort_key": "Amanidespylai 1",
+    "wp_link": "w:de:Belen (Hatay)",
     "chapters": [
       {
         "start": 1723,
@@ -9165,7 +9146,7 @@
   },
   {
     "lemma": "Ἀμανίδες πύλαι 2",
-    "previous": "Ἀμανίδες πύλαι 1",
+    "previous": "Amanides pylai 1",
     "next": "Ἀμανίδες πύλαι 3",
     "sort_key": "Amanidespylai 2"
   },
@@ -10377,6 +10358,7 @@
     "lemma": "Amazonius mons",
     "previous": "Ἀμαζονὶς στήλη",
     "next": "Ambacia",
+    "sort_key": "Amazoniusm",
     "chapters": [
       {
         "start": 1790,
@@ -11230,7 +11212,7 @@
     "lemma": "Ambrosios 5",
     "previous": "Ambrosios 4",
     "next": "Ambrosios 6",
-    "redirect": true,
+    "redirect": "Aurelianus 14",
     "wp_link": "w:de:Ambrosius Aurelianus",
     "chapters": [
       {
@@ -12573,7 +12555,7 @@
     "lemma": "Amicus 1",
     "previous": "Amictus",
     "next": "Amicus 2",
-    "redirect": true,
+    "redirect": "Servaeus",
     "chapters": [
       {
         "start": 1831,
@@ -18567,6 +18549,7 @@
     "lemma": "Amyntor 5",
     "previous": "Amyntor 4",
     "next": "Amyntor 6",
+    "sort_key": "Amyntor 05",
     "chapters": [
       {
         "start": 2009,
@@ -18591,7 +18574,7 @@
   {
     "lemma": "Amyntor 7",
     "previous": "Amyntor 6",
-    "next": "Amyntor 9",
+    "next": "Amyntor 8",
     "sort_key": "Amyntor 07",
     "chapters": [
       {
@@ -18605,6 +18588,7 @@
     "lemma": "Amyntor 8",
     "previous": "Amyntor 7",
     "next": "Amyntor 9",
+    "sort_key": "Amyntor 07",
     "chapters": [
       {
         "start": 2010,
@@ -19030,6 +19014,7 @@
     "lemma": "Ἀναβαθμοί",
     "previous": "Ἀναβάτης",
     "next": "Anabestae",
+    "sort_key": "Anabathmoi",
     "chapters": [
       {
         "start": 2015,
@@ -19620,6 +19605,7 @@
     "lemma": "Ἀναιδείας χῶρος",
     "previous": "Anaideia",
     "next": "Ἀναιρεῖσθαι",
+    "sort_key": "Anaideiaschoros",
     "chapters": [
       {
         "start": 2029,
@@ -20145,7 +20131,7 @@
   {
     "lemma": "Anankippos",
     "previous": "Ananke",
-    "next": "Anankophagia",
+    "next": "Ἀναγκοφαγία",
     "chapters": [
       {
         "start": 2058,
@@ -20155,9 +20141,10 @@
     ]
   },
   {
-    "lemma": "Anankophagia",
+    "lemma": "Ἀναγκοφαγία",
     "previous": "Anankippos",
     "next": "Ananu",
+    "sort_key": "Anankophagia",
     "chapters": [
       {
         "start": 2058,
@@ -20168,7 +20155,7 @@
   },
   {
     "lemma": "Ananu",
-    "previous": "Anankophagia",
+    "previous": "Ἀναγκοφαγία",
     "next": "Anaolsus",
     "chapters": [
       {
@@ -20463,7 +20450,7 @@
   {
     "lemma": "Anarion",
     "previous": "Anariakai",
-    "next": "Anarismundu akron",
+    "next": "Ἀναρισμούνδου ἄκρον",
     "chapters": [
       {
         "start": 2063,
@@ -20473,7 +20460,7 @@
     ]
   },
   {
-    "lemma": "Anarismundu akron",
+    "lemma": "Ἀναρισμούνδου ἄκρον",
     "previous": "Anarion",
     "next": "Anaros",
     "chapters": [
@@ -20485,7 +20472,7 @@
   },
   {
     "lemma": "Anaros",
-    "previous": "Anarismundu akron",
+    "previous": "Ἀναρισμούνδου ἄκρον",
     "next": "Anarrysis",
     "chapters": [
       {
@@ -20571,6 +20558,7 @@
     "lemma": "Ἀνασκευάζεσθαι",
     "previous": "Anasi",
     "next": "Ἄνασσαι",
+    "sort_key": "Anaskeuaz",
     "chapters": [
       {
         "start": 2064,
@@ -20908,6 +20896,7 @@
     "lemma": "Anatolius 4",
     "previous": "Anatolius 3",
     "next": "Anatolius 5",
+    "sort_key": "Anatolius 04",
     "chapters": [
       {
         "start": 2072,
@@ -21105,6 +21094,7 @@
     "lemma": "Ἀναυμαχίου γραφή",
     "previous": "Anauchidas",
     "next": "Anauni",
+    "sort_key": "Anaumachiu",
     "chapters": [
       {
         "start": 2075,
@@ -21322,7 +21312,6 @@
     "lemma": "Anaxandridas 1",
     "previous": "Anaxandra 2",
     "next": "Anaxandridas 2",
-    "wp_link": "w:de:Anaxandridas (König von Sparta)",
     "chapters": [
       {
         "start": 2078,
@@ -22212,6 +22201,8 @@
     "lemma": "Ἀναξυρίδες",
     "previous": "Anaxum",
     "next": "Anazarba",
+    "sort_key": "Anaxyrides",
+    "wp_link": "w:de:Bracae",
     "chapters": [
       {
         "start": 2100,
@@ -22869,7 +22860,8 @@
   {
     "lemma": "Ἀγχιστεία",
     "previous": "Anchisos",
-    "next": "Anchisu limen",
+    "next": "Ἀγχίσου λιμήν",
+    "sort_key": "Anchisteia",
     "chapters": [
       {
         "start": 2110,
@@ -22879,8 +22871,9 @@
     ]
   },
   {
-    "lemma": "Anchisu limen",
-    "previous": "Ἀγχιστεία",
+    "lemma": "Ἀγχίσου λιμήν",
+    "next": "Anchitai",
+    "sort_key": "Anchisu",
     "chapters": [
       {
         "start": 2110,
@@ -22888,11 +22881,6 @@
         "author": "Hirschfeld"
       }
     ]
-  },
-  {
-    "lemma": "Ἀγχίσου λιμήν",
-    "next": "Anchitai",
-    "sort_key": "Anchisu"
   },
   {
     "lemma": "Anchitai",
@@ -26841,7 +26829,7 @@
   {
     "lemma": "Ἀγγελιαφόροι",
     "previous": "Angelia",
-    "next": "Angelike",
+    "next": "Ἀγγελική",
     "redirect": true,
     "chapters": [
       {
@@ -26851,7 +26839,7 @@
     ]
   },
   {
-    "lemma": "Angelike",
+    "lemma": "Ἀγγελική",
     "previous": "Ἀγγελιαφόροι",
     "next": "Angelion",
     "chapters": [
@@ -26864,7 +26852,7 @@
   },
   {
     "lemma": "Angelion",
-    "previous": "Angelike",
+    "previous": "Ἀγγελική",
     "next": "Angellae",
     "chapters": [
       {
@@ -33983,6 +33971,7 @@
     "lemma": "Anthologia 2",
     "previous": "Anthologia 1",
     "next": "Ἀνθοφόροι",
+    "wp_link": "w:de:Anthologia Latina",
     "chapters": [
       {
         "start": 2391,
@@ -36918,7 +36907,6 @@
     "lemma": "Antiocheia 16",
     "previous": "Antiocheia 15",
     "next": "Antiocheia 17",
-    "wp_link": "w:de:Antiochia (Mäander)",
     "chapters": [
       {
         "start": 2446,
@@ -40025,6 +40013,7 @@
     "lemma": "Antirrodos",
     "previous": "Antirrion",
     "next": "Antis",
+    "wp_link": "w:de:Antirhodos",
     "chapters": [
       {
         "start": 2535,
@@ -46434,6 +46423,7 @@
     "lemma": "Ἀφεκοῦ πύργος",
     "previous": "Apheka 2",
     "next": "Apheleia",
+    "sort_key": "Aphekupyrgos",
     "chapters": [
       {
         "start": 2715,
@@ -46891,6 +46881,7 @@
     "lemma": "Ἀφορίζειν",
     "previous": "Aphobos",
     "next": "Ἀφορμή",
+    "sort_key": "Aphorizein",
     "chapters": [
       {
         "start": 2723,
@@ -46903,6 +46894,7 @@
     "lemma": "Ἀφορμή",
     "previous": "Ἀφορίζειν",
     "next": "Aphormion",
+    "sort_key": "Aphorme",
     "chapters": [
       {
         "start": 2723,
@@ -48225,6 +48217,7 @@
     "lemma": "Apion 3",
     "previous": "Apion 2",
     "next": "Apion 4",
+    "wp_link": "w:de:Apion",
     "chapters": [
       {
         "start": 2803,
@@ -48765,7 +48758,7 @@
   {
     "lemma": "Ἀπόγραφον",
     "previous": "Ἀπογραφή",
-    "next": "Apoikia",
+    "next": "Ἀποικία",
     "sort_key": "Apographon",
     "chapters": [
       {
@@ -48776,7 +48769,7 @@
     ]
   },
   {
-    "lemma": "Apoikia",
+    "lemma": "Ἀποικία",
     "previous": "Ἀπόγραφον",
     "next": "Apoikos",
     "sort_key": "Apoikia",
@@ -48791,7 +48784,7 @@
   },
   {
     "lemma": "Apoikos",
-    "previous": "Apoikia",
+    "previous": "Ἀποικία",
     "next": "Apokalypsen",
     "chapters": [
       {

@@ -765,6 +765,7 @@
     "lemma": "Iustus 2",
     "previous": "Iustus 1",
     "next": "Iustus 3",
+    "sort_key": "Iustus 02",
     "chapters": [
       {
         "start": 1340,
@@ -777,6 +778,7 @@
     "lemma": "Iustus 3",
     "previous": "Iustus 2",
     "next": "Iustus 4",
+    "sort_key": "Iustus 03",
     "chapters": [
       {
         "start": 1340,
@@ -789,6 +791,7 @@
     "lemma": "Iustus 4",
     "previous": "Iustus 3",
     "next": "Iustus 5",
+    "sort_key": "Iustus 04",
     "chapters": [
       {
         "start": 1340,
@@ -1134,8 +1137,8 @@
   },
   {
     "lemma": "Iuveniacus, Iuviniacus",
-    "previous": "Iuvenes, iuventus",
-    "next": "Iuvenis 1",
+    "previous": "Iuvenalis 8",
+    "next": "Iuvencus",
     "chapters": [
       {
         "start": 1358,
@@ -1779,7 +1782,7 @@
   {
     "lemma": "Iyggios",
     "previous": "Ixos",
-    "next": "Iygx",
+    "next": "Iyngies",
     "chapters": [
       {
         "start": 1384,
@@ -1959,7 +1962,7 @@
   {
     "lemma": "Kaanthos",
     "previous": "Ka",
-    "next": "Kabaion",
+    "next": "Κάβαιον",
     "chapters": [
       {
         "start": 1393,
@@ -1969,9 +1972,10 @@
     ]
   },
   {
-    "lemma": "Kabaion",
+    "lemma": "Κάβαιον",
     "previous": "Kaanthos",
     "next": "Kabala 1",
+    "sort_key": "Kabaion",
     "chapters": [
       {
         "start": 1394,
@@ -1982,7 +1986,7 @@
   },
   {
     "lemma": "Kabala 1",
-    "previous": "Kabaion",
+    "previous": "Κάβαιον",
     "next": "Kabala 2",
     "chapters": [
       {
@@ -2042,7 +2046,7 @@
   {
     "lemma": "Kabalis",
     "previous": "Kabalia",
-    "next": "Kaballa",
+    "next": "Κάβαλλα",
     "chapters": [
       {
         "start": 1395,
@@ -2052,7 +2056,7 @@
     ]
   },
   {
-    "lemma": "Kaballa",
+    "lemma": "Κάβαλλα",
     "previous": "Kabalis",
     "next": "Kabalsi",
     "chapters": [
@@ -2065,7 +2069,7 @@
   },
   {
     "lemma": "Kabalsi",
-    "previous": "Kaballa",
+    "previous": "Κάβαλλα",
     "next": "Kabana",
     "chapters": [
       {
@@ -8639,7 +8643,7 @@
   {
     "lemma": "Kalograias Bunos (ho)",
     "previous": "Kalobates",
-    "next": "Kaloi Limenes",
+    "next": "Καλοὶ λιμένες",
     "chapters": [
       {
         "start": 1756,
@@ -8649,7 +8653,7 @@
     ]
   },
   {
-    "lemma": "Kaloi Limenes",
+    "lemma": "Καλοὶ λιμένες",
     "previous": "Kalograias Bunos (ho)",
     "next": "Kalokairos",
     "chapters": [
@@ -8662,7 +8666,7 @@
   },
   {
     "lemma": "Kalokairos",
-    "previous": "Kaloi Limenes",
+    "previous": "Καλοὶ λιμένες",
     "next": "Kalolakka",
     "wp_link": "w:de:Calocaerus",
     "chapters": [
@@ -8711,7 +8715,7 @@
   },
   {
     "lemma": "Kalondas 1",
-    "previous": "Kalon 2",
+    "previous": "Kalon stoma",
     "next": "Kalondas 2",
     "chapters": [
       {
@@ -8724,7 +8728,7 @@
   {
     "lemma": "Kalondas 2",
     "previous": "Kalondas 1",
-    "next": "Kalon Korasion",
+    "next": "Kalos",
     "chapters": [
       {
         "start": 1758,
@@ -8736,7 +8740,7 @@
   {
     "lemma": "Kalon Korasion",
     "previous": "Kalondas 2",
-    "next": "Kalon pedion",
+    "next": "Καλὸν πεδίον",
     "chapters": [
       {
         "start": 1758,
@@ -8745,7 +8749,7 @@
     ]
   },
   {
-    "lemma": "Kalon pedion",
+    "lemma": "Καλὸν πεδίον",
     "previous": "Kalon Korasion",
     "next": "Kalon stoma",
     "chapters": [
@@ -8758,8 +8762,8 @@
   },
   {
     "lemma": "Kalon stoma",
-    "previous": "Kalon pedion",
-    "next": "Kalos",
+    "previous": "Καλὸν πεδίον",
+    "next": "Kalondas 1",
     "chapters": [
       {
         "start": 1758,
@@ -8841,7 +8845,7 @@
   {
     "lemma": "Kalpe 2",
     "previous": "Kalpe 1",
-    "next": "Kalpes dromos",
+    "next": "Κάλπης δρόμος",
     "chapters": [
       {
         "start": 1760,
@@ -8851,7 +8855,7 @@
     ]
   },
   {
-    "lemma": "Kalpes dromos",
+    "lemma": "Κάλπης δρόμος",
     "previous": "Kalpe 2",
     "next": "Kalpetos",
     "chapters": [
@@ -8864,7 +8868,7 @@
   },
   {
     "lemma": "Kalpetos",
-    "previous": "Kalpes dromos",
+    "previous": "Κάλπης δρόμος",
     "next": "Kalpinon",
     "chapters": [
       {

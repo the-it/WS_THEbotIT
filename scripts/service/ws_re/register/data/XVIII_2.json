@@ -5607,6 +5607,7 @@
     "lemma": "Paccius 8",
     "previous": "Paccius 7",
     "next": "Paccius 9",
+    "sort_key": "Paccius 08",
     "chapters": [
       {
         "start": 2064,
@@ -5715,7 +5716,7 @@
   {
     "lemma": "Pacenius",
     "previous": "Paccius 16",
-    "next": "Pacheia 1",
+    "next": "Παχεῖα 1",
     "chapters": [
       {
         "start": 2066,
@@ -5725,9 +5726,10 @@
     ]
   },
   {
-    "lemma": "Pacheia 1",
-    "previous": "Pacenius",
-    "next": "Pacheia 2",
+    "lemma": "Παχεῖα 1",
+    "previous": "Pacensius",
+    "next": "Παχεῖα 2",
+    "sort_key": "Pacheia 1",
     "chapters": [
       {
         "start": 2066,
@@ -5737,9 +5739,10 @@
     ]
   },
   {
-    "lemma": "Pacheia 2",
-    "previous": "Pacheia 1",
+    "lemma": "Παχεῖα 2",
+    "previous": "Παχεῖα 1",
     "next": "Paches",
+    "sort_key": "Pacheia 2",
     "chapters": [
       {
         "start": 2066,
@@ -5750,7 +5753,7 @@
   },
   {
     "lemma": "Paches",
-    "previous": "Pacheia 2",
+    "previous": "Παχεῖα 2",
     "next": "Pachidas",
     "chapters": [
       {
