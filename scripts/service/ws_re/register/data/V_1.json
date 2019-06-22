@@ -3399,6 +3399,7 @@
     "lemma": "Δεσποσιοναῦται",
     "previous": "Despoina",
     "next": "Despotius",
+    "sort_key": "Desposionautai",
     "chapters": [
       {
         "start": 254,
@@ -3797,6 +3798,7 @@
     "lemma": "Deultum",
     "previous": "Deukalion",
     "next": "Deunx",
+    "redirect": "Develtos",
     "chapters": [
       {
         "start": 276,
@@ -3820,6 +3822,7 @@
     "lemma": "Devona",
     "previous": "Deunx",
     "next": "Devono",
+    "redirect": "Divona",
     "chapters": [
       {
         "start": 277,
@@ -4273,7 +4276,7 @@
   {
     "lemma": "Dexion",
     "previous": "Dexiochos",
-    "next": "Dexionidai",
+    "next": "Δεξιωνίδαι",
     "chapters": [
       {
         "start": 287,
@@ -4283,9 +4286,10 @@
     ]
   },
   {
-    "lemma": "Dexionidai",
+    "lemma": "Δεξιωνίδαι",
     "previous": "Dexion",
     "next": "Dexios 1",
+    "sort_key": "Dexionidai",
     "chapters": [
       {
         "start": 287,
@@ -4296,7 +4300,7 @@
   },
   {
     "lemma": "Dexios 1",
-    "previous": "Dexionidai",
+    "previous": "Δεξιωνίδαι",
     "next": "Dexios 2",
     "chapters": [
       {
@@ -4321,7 +4325,7 @@
   {
     "lemma": "Dexios 3",
     "previous": "Dexios 2",
-    "next": "Dexiostates",
+    "next": "Δεξιοστάτης",
     "chapters": [
       {
         "start": 287,
@@ -4331,9 +4335,10 @@
     ]
   },
   {
-    "lemma": "Dexiostates",
+    "lemma": "Δεξιοστάτης",
     "previous": "Dexios 3",
-    "next": "Dexiostoichos",
+    "next": "Δεξιόστοιχος",
+    "sort_key": "Dexiostates",
     "chapters": [
       {
         "start": 287,
@@ -4343,9 +4348,10 @@
     ]
   },
   {
-    "lemma": "Dexiostoichos",
-    "previous": "Dexiostates",
+    "lemma": "Δεξιόστοιχος",
+    "previous": "Δεξιοστάτης",
     "next": "Dexiphon",
+    "sort_key": "Dexiostoichos",
     "chapters": [
       {
         "start": 287,
@@ -4356,7 +4362,7 @@
   },
   {
     "lemma": "Dexiphon",
-    "previous": "Dexiostoichos",
+    "previous": "Δεξιόστοιχος",
     "next": "Dexippos 1",
     "chapters": [
       {
@@ -4417,6 +4423,7 @@
     "lemma": "Dexippos 5",
     "previous": "Dexippos 4",
     "next": "Dexippos 6",
+    "wp_link": "w:de:Publius Herennius Dexippus",
     "chapters": [
       {
         "start": 288,
@@ -4703,8 +4710,8 @@
   {
     "lemma": "Dextrale",
     "previous": "Dexterati",
-    "next": "Dextratum iunctio",
-    "redirect": true,
+    "next": "Dextrarum iunctio",
+    "redirect": "Armbänder",
     "chapters": [
       {
         "start": 297,
@@ -4713,21 +4720,16 @@
     ]
   },
   {
-    "lemma": "Dextratum iunctio",
+    "lemma": "Dextrarum iunctio",
     "previous": "Dextrale",
     "next": "Dextrianus",
-    "chapters": [
-      {
-        "start": 297,
-        "end": 297
-      }
-    ]
+    "redirect": "Iuga"
   },
   {
     "lemma": "Dextrianus",
-    "previous": "Dextratum iunctio",
+    "previous": "Dextrarum iunctio",
     "next": "Dexu(v)iates",
-    "redirect": true,
+    "redirect": "Caecilius 51",
     "chapters": [
       {
         "start": 297,
@@ -4738,7 +4740,7 @@
   {
     "lemma": "Dexu(v)iates",
     "previous": "Dextrianus",
-    "next": "Deision",
+    "next": "Deysion",
     "wp_link": "w:de:fr:Dexcivate",
     "chapters": [
       {
@@ -4749,21 +4751,14 @@
     ]
   },
   {
-    "lemma": "Deision",
+    "lemma": "Deysion",
     "previous": "Dexu(v)iates",
-    "next": "Di...",
-    "chapters": [
-      {
-        "start": 298,
-        "end": 298,
-        "author": "Bürchner"
-      }
-    ]
+    "next": "Di..."
   },
   {
     "lemma": "Di...",
-    "previous": "Deision",
-    "next": "Dia",
+    "previous": "Deysion",
+    "next": "Dia 1",
     "chapters": [
       {
         "start": 298,
@@ -5703,7 +5698,7 @@
   {
     "lemma": "Diamant",
     "previous": "Dialogus",
-    "next": "Diamartyria",
+    "next": "Διαμαρτυρία",
     "wp_link": "w:de:Diamant",
     "chapters": [
       {
@@ -5714,7 +5709,7 @@
     ]
   },
   {
-    "lemma": "Diamartyria",
+    "lemma": "Διαμαρτυρία",
     "previous": "Diamant",
     "next": "Diamastigosis",
     "chapters": [
@@ -5727,7 +5722,7 @@
   },
   {
     "lemma": "Diamastigosis",
-    "previous": "Diamartyria",
+    "previous": "Διαμαρτυρία",
     "next": "Diamunas",
     "chapters": [
       {
@@ -11289,7 +11284,7 @@
     "lemma": "Diogenes 49",
     "previous": "Diogenes 48",
     "next": "Diogenes 50",
-    "redirect": true,
+    "redirect": "Antonius 49",
     "wp_link": "w:de:Antonios Diogenes",
     "chapters": [
       {
@@ -17679,6 +17674,7 @@
     "lemma": "Diospolis 3",
     "previous": "Diospolis 2",
     "next": "Diospolis 4",
+    "sort_key": "Diospolis 03",
     "chapters": [
       {
         "start": 1144,
@@ -18819,7 +18815,7 @@
   {
     "lemma": "Diptychon",
     "previous": "Dipteros",
-    "next": "Dipylon",
+    "next": "Δίπτυον",
     "wp_link": "w:de:Wachstafel",
     "chapters": [
       {

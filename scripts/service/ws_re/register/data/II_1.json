@@ -2696,7 +2696,7 @@
   {
     "lemma": "Apollonos men",
     "previous": "Apollonos hieron 2",
-    "next": "Apollonos nesos",
+    "next": "Ἀπόλλωνος νῆσος",
     "chapters": [
       {
         "start": 164,
@@ -2706,7 +2706,7 @@
     ]
   },
   {
-    "lemma": "Apollonos nesos",
+    "lemma": "Ἀπόλλωνος νῆσος",
     "previous": "Apollonos men",
     "next": "Apollophanes 1",
     "chapters": [
@@ -2719,7 +2719,7 @@
   },
   {
     "lemma": "Apollophanes 1",
-    "previous": "Apollonos nesos",
+    "previous": "Ἀπόλλωνος νῆσος",
     "next": "Apollophanes 2",
     "sort_key": "Apollophanes 01",
     "chapters": [
@@ -8613,7 +8613,7 @@
   {
     "lemma": "Ara 3",
     "previous": "Ara 2",
-    "next": "Ara, Arae",
+    "next": "Ara 4",
     "chapters": [
       {
         "start": 338,
@@ -8624,7 +8624,7 @@
   },
   {
     "lemma": "Ara, Arae",
-    "previous": "Ara 3",
+    "previous": "Ara 4",
     "next": "Ara, Arae 1",
     "sort_key": "Araarae",
     "chapters": [
@@ -8689,7 +8689,7 @@
   {
     "lemma": "Ara, Arae 5",
     "previous": "Ara, Arae 4",
-    "next": "Ara 4",
+    "next": "Ara, Arae 6",
     "sort_key": "Araarae 05",
     "chapters": [
       {
@@ -8713,7 +8713,7 @@
   },
   {
     "lemma": "Ara, Arae 6",
-    "previous": "Ara 4",
+    "previous": "Ara, Arae 5",
     "next": "Ara, Arae 7",
     "sort_key": "Araarae 06",
     "chapters": [
@@ -8754,6 +8754,7 @@
     "lemma": "Ara, Arae 9",
     "previous": "Ara, Arae 8",
     "next": "Ara, Arae 10",
+    "sort_key": "Araarae 09",
     "chapters": [
       {
         "start": 340,
@@ -8806,6 +8807,7 @@
     "lemma": "Ara, Arae 13",
     "previous": "Ara, Arae 12",
     "next": "Ara, Arae 14",
+    "sort_key": "Araarae 13",
     "chapters": [
       {
         "start": 340,
@@ -9068,6 +9070,7 @@
     "lemma": "Ἀραβίας νομός",
     "previous": "Arabianus 3",
     "next": "Arabiates",
+    "sort_key": "Arabiasnomos",
     "chapters": [
       {
         "start": 362,
@@ -9251,6 +9254,7 @@
     "lemma": "Arabon 1",
     "previous": "Arabitai 2",
     "next": "Arabon 2",
+    "wp_link": "w:de:Raab (Fluss)",
     "chapters": [
       {
         "start": 365,
@@ -9275,6 +9279,7 @@
     "lemma": "Ἀράβων κώμη",
     "previous": "Arabon 2",
     "next": "Arabos",
+    "sort_key": "Arabonkome",
     "chapters": [
       {
         "start": 365,
@@ -9445,6 +9450,7 @@
     "lemma": "Arachosia",
     "previous": "Arachnos",
     "next": "Arachotos 1",
+    "wp_link": "w:de:Arachosien",
     "chapters": [
       {
         "start": 368,
@@ -9737,7 +9743,7 @@
   {
     "lemma": "Arai",
     "previous": "Araharius",
-    "next": "Arainon chorion",
+    "next": "Ἀράϊνον χωρίον",
     "chapters": [
       {
         "start": 374,
@@ -9747,9 +9753,10 @@
     ]
   },
   {
-    "lemma": "Arainon chorion",
+    "lemma": "Ἀράϊνον χωρίον",
     "previous": "Arai",
     "next": "Arainos",
+    "sort_key": "Arainonchorion",
     "chapters": [
       {
         "start": 374,
@@ -9760,7 +9767,7 @@
   },
   {
     "lemma": "Arainos",
-    "previous": "Arainon chorion",
+    "previous": "Ἀράϊνον χωρίον",
     "next": "Ἀραίνου ἀκτή",
     "chapters": [
       {
@@ -10499,6 +10506,7 @@
     "lemma": "Arath 2",
     "previous": "Arath 1",
     "next": "Aratha 1",
+    "wp_link": "w:de:Tel Arad",
     "chapters": [
       {
         "start": 382,
@@ -10632,6 +10640,7 @@
     "lemma": "Aratos 1",
     "previous": "Arator 3",
     "next": "Aratos 2",
+    "wp_link": "w:de:Aratos",
     "chapters": [
       {
         "start": 383,
@@ -10683,6 +10692,7 @@
     "lemma": "Aratos 5",
     "previous": "Aratos 4",
     "next": "Aratos 6",
+    "wp_link": "w:de:Aratos",
     "chapters": [
       {
         "start": 391,
@@ -10722,6 +10732,7 @@
     "lemma": "Aratos 8",
     "previous": "Aratos 7",
     "next": "Aratrioi",
+    "wp_link": "w:de:Aratos",
     "chapters": [
       {
         "start": 399,
@@ -10769,7 +10780,7 @@
   {
     "lemma": "Aratulla",
     "previous": "Aratu",
-    "next": "Aratu teichos",
+    "next": "Ἀράτου τεῖχος",
     "chapters": [
       {
         "start": 400,
@@ -10779,20 +10790,14 @@
     ]
   },
   {
-    "lemma": "Aratu teichos",
+    "lemma": "Ἀράτου τεῖχος",
     "previous": "Aratulla",
     "next": "Aratyos",
-    "chapters": [
-      {
-        "start": 400,
-        "end": 400,
-        "author": "Hirschfeld"
-      }
-    ]
+    "sort_key": "Aratuteichos"
   },
   {
     "lemma": "Aratyos",
-    "previous": "Aratu teichos",
+    "previous": "Ἀράτου τεῖχος",
     "next": "Aravene",
     "chapters": [
       {
@@ -11000,6 +11005,7 @@
     "lemma": "Ἀραξηνὸν πεδίον",
     "previous": "Araxates",
     "next": "Araxes 1",
+    "sort_key": "Araxenonpedion",
     "chapters": [
       {
         "start": 402,
@@ -11012,6 +11018,7 @@
     "lemma": "Araxes 1",
     "previous": "Ἀραξηνὸν πεδίον",
     "next": "Araxes 2",
+    "wp_link": "w:de:Amudarja",
     "chapters": [
       {
         "start": 402,
@@ -11533,6 +11540,7 @@
     "lemma": "Arbogastes 1",
     "previous": "Arbocala",
     "next": "Arbogastes 2",
+    "wp_link": "w:de:Arbogast der Ältere",
     "chapters": [
       {
         "start": 415,
@@ -12043,7 +12051,7 @@
     "lemma": "Archagathos 6",
     "previous": "Archagathos 5",
     "next": "Archagathos 7",
-    "redirect": true,
+    "redirect": "Caecilius 2",
     "chapters": [
       {
         "start": 432,
@@ -12079,7 +12087,7 @@
   {
     "lemma": "Archagoras 2",
     "previous": "Archagoras 1",
-    "next": "Archai",
+    "next": "Ἀρχαί",
     "chapters": [
       {
         "start": 433,
@@ -12089,7 +12097,7 @@
     ]
   },
   {
-    "lemma": "Archai",
+    "lemma": "Ἀρχαί",
     "previous": "Archagoras 2",
     "next": "Archaianaktidai",
     "chapters": [
@@ -12102,7 +12110,7 @@
   },
   {
     "lemma": "Archaianaktidai",
-    "previous": "Archai",
+    "previous": "Ἀρχαί",
     "next": "Archaianax",
     "chapters": [
       {
@@ -12622,7 +12630,7 @@
   {
     "lemma": "Archedios",
     "previous": "Archedikos 2",
-    "next": "Archegesia",
+    "next": "Ἀρχηγέσια",
     "chapters": [
       {
         "start": 441,
@@ -12632,9 +12640,10 @@
     ]
   },
   {
-    "lemma": "Archegesia",
+    "lemma": "Ἀρχηγέσια",
     "previous": "Archedios",
     "next": "Ἀρχηγέτης",
+    "sort_key": "Archegesia",
     "chapters": [
       {
         "start": 441,
@@ -12645,8 +12654,10 @@
   },
   {
     "lemma": "Ἀρχηγέτης",
-    "previous": "Archegesia",
+    "previous": "Ἀρχηγέσια",
     "next": "Archegetis",
+    "sort_key": "Archegetes",
+    "wp_link": "w:de:Archeget",
     "chapters": [
       {
         "start": 441,
@@ -26098,8 +26109,6 @@
     "lemma": "Aristobulos 15",
     "previous": "Aristobulos 14",
     "next": "Aristobulos 16",
-    "wp_link": "w:de:Aristobulos (jüdisch-hellenistischer Philosoph)",
-    "ws_link": "s:de:Aristobul",
     "chapters": [
       {
         "start": 918,
@@ -32117,6 +32126,7 @@
     "lemma": "Ἄρκτων νῆσος",
     "previous": "Arktinos",
     "next": "Ἄρκτων ὄρος",
+    "sort_key": "Arktonnesos",
     "chapters": [
       {
         "start": 1172,
@@ -38668,6 +38678,7 @@
     "lemma": "Artaxerxes 7",
     "previous": "Artaxerxes 6",
     "next": "Artaxes",
+    "wp_link": "w:de:Ardaschir III.",
     "chapters": [
       {
         "start": 1325,

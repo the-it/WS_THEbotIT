@@ -9866,6 +9866,7 @@
     "lemma": "Castinus 1",
     "previous": "Castillum",
     "next": "Castinus 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1761,
@@ -9878,6 +9879,7 @@
     "lemma": "Castinus 2",
     "previous": "Castinus 1",
     "next": "Castitas",
+    "wp_link": "w:de:Flavius Castinus",
     "chapters": [
       {
         "start": 1761,
@@ -32654,6 +32656,8 @@
     "lemma": "Χρυσοκόλλα 2",
     "previous": "Χρυσοκόλλα 1",
     "next": "Χρυσοκόλλα 3",
+    "sort_key": "Chrysokolla 2",
+    "wp_link": "w:de:Malachit",
     "chapters": [
       {
         "start": 2515,
@@ -35859,7 +35863,7 @@
   },
   {
     "lemma": "Cisterna",
-    "previous": "Cista 4",
+    "previous": "Cista",
     "next": "Cistra",
     "wp_link": "w:de:Zisterne",
     "chapters": [
@@ -42694,10 +42698,17 @@
   {
     "lemma": "Baris 9",
     "previous": "Claudius 451",
-    "next": null
+    "next": "Βασιλεῖται"
+  },
+  {
+    "lemma": "Βασιλεῖται",
+    "previous": "Baris 9",
+    "next": "Basilios",
+    "sort_key": "Basileitai"
   },
   {
     "lemma": "Basilios",
+    "previous": "Βασιλεῖται",
     "next": "Batis 2",
     "chapters": [
       {

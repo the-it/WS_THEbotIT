@@ -1445,12 +1445,17 @@
   },
   {
     "lemma": "Aenaria",
-    "previous": "Aemilius 163a",
-    "next": null
+    "previous": "Aemilius 163a"
+  },
+  {
+    "lemma": "Aequum Tuticum",
+    "next": "Aër"
   },
   {
     "lemma": "Aër",
-    "next": "Aere"
+    "previous": "Aequum Tuticum",
+    "next": "Aere",
+    "sort_key": "Aer"
   },
   {
     "lemma": "Aere",
@@ -3070,6 +3075,7 @@
   {
     "lemma": "Aischronidas",
     "previous": "Aischrion 5b",
+    "next": "Aischyliskos",
     "chapters": [
       {
         "start": 39,
@@ -3080,6 +3086,7 @@
   },
   {
     "lemma": "Aischyliskos",
+    "previous": "Aischronidas",
     "next": "Aischylos 2"
   },
   {
@@ -4012,7 +4019,7 @@
   {
     "lemma": "Albius 7a",
     "previous": "Albius 6a",
-    "next": null,
+    "next": "Albius 11",
     "chapters": [
       {
         "start": 51,
@@ -4023,6 +4030,7 @@
   },
   {
     "lemma": "Albius 11",
+    "previous": "Albius 7a",
     "next": "Albocelus"
   },
   {
@@ -7819,7 +7827,8 @@
   },
   {
     "lemma": "Ἀποβατήριος, Ἀποβατηρία",
-    "previous": "Aplestia"
+    "previous": "Aplestia",
+    "next": null
   },
   {
     "lemma": "Apolexis 3",
@@ -8030,7 +8039,12 @@
     "sort_key": "Apollonios 098"
   },
   {
+    "lemma": "Apollonios 113",
+    "next": "Apollonios 114"
+  },
+  {
     "lemma": "Apollonios 114",
+    "previous": "Apollonios 113",
     "next": "Apollonios 118a"
   },
   {
@@ -11220,6 +11234,7 @@
   },
   {
     "lemma": "Artemisia 4",
+    "previous": null,
     "next": "Artemisias"
   },
   {
@@ -11360,11 +11375,13 @@
   {
     "lemma": "Arverni",
     "previous": "Artynes",
-    "next": null
+    "next": "Arvernicus"
   },
   {
-    "lemma": "Arvernicus 1",
+    "lemma": "Arvernicus",
+    "previous": "Arverni",
     "next": "Arvius",
+    "sort_key": "Arvernicus 1",
     "chapters": [
       {
         "start": 146,
@@ -11375,8 +11392,7 @@
   },
   {
     "lemma": "Arvius",
-    "previous": "Arvernicus 1",
-    "next": "Arx 3",
+    "previous": "Arvernicus",
     "chapters": [
       {
         "start": 146,
@@ -11386,8 +11402,12 @@
     ]
   },
   {
+    "lemma": "Arvius 1",
+    "next": "Arx 3"
+  },
+  {
     "lemma": "Arx 3",
-    "previous": "Arvius",
+    "previous": "Arvius 1",
     "next": "Arxama"
   },
   {
@@ -12398,10 +12418,17 @@
   },
   {
     "lemma": "Atlantis 2",
-    "previous": "Atis"
+    "previous": "Atis",
+    "next": "Atlas 3"
+  },
+  {
+    "lemma": "Atlas 3",
+    "previous": "Atlantis 2",
+    "next": "Atrapitoi"
   },
   {
     "lemma": "Atrapitoi",
+    "previous": "Atlas 3",
     "next": "Atria",
     "chapters": [
       {
@@ -12459,6 +12486,7 @@
   },
   {
     "lemma": "Attalos 23",
+    "previous": null,
     "next": "Attalos 25a"
   },
   {
@@ -14860,7 +14888,12 @@
   },
   {
     "lemma": "Beroia 5",
-    "previous": "Bergaios"
+    "previous": "Bergaios",
+    "next": "Berossos 4"
+  },
+  {
+    "lemma": "Berossos 4",
+    "previous": "Beroia 5"
   },
   {
     "lemma": "Beryllos 1",
@@ -17240,7 +17273,8 @@
   },
   {
     "lemma": "Cham(m)anene",
-    "previous": "Chambritrasos"
+    "previous": "Chambritrasos",
+    "next": null
   },
   {
     "lemma": "Chamyne",
@@ -17788,7 +17822,7 @@
   {
     "lemma": "Chrysippos 14b",
     "previous": "Chrysippos 14a",
-    "next": "Chrysippos 16",
+    "next": "Chrysippos 15",
     "chapters": [
       {
         "start": 299,
@@ -17798,8 +17832,11 @@
     ]
   },
   {
-    "lemma": "Chrysippos 16",
+    "lemma": "Chrysippos 15",
     "previous": "Chrysippos 14b"
+  },
+  {
+    "lemma": "Chrysippos 16"
   },
   {
     "lemma": "Chrysippos 15"
