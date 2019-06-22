@@ -6897,7 +6897,7 @@
   {
     "lemma": "Alperium",
     "previous": "Alpenos",
-    "next": "Alpes",
+    "next": "Alpes 1",
     "chapters": [
       {
         "start": 1599,
@@ -7642,7 +7642,7 @@
   },
   {
     "lemma": "Althaimenes 3",
-    "previous": "Althaimenes 1",
+    "previous": "Althaimenes 2",
     "next": "Althainos",
     "chapters": [
       {
@@ -9298,7 +9298,7 @@
   },
   {
     "lemma": "Amanuensis",
-    "previous": "Amantius 3",
+    "previous": "Amantius 4",
     "next": "Amara 1",
     "wp_link": "w:de:Amanuensis",
     "chapters": [
@@ -22871,8 +22871,9 @@
     ]
   },
   {
-    "lemma": "Anchisu limen",
-    "previous": "Ἀγχιστεία",
+    "lemma": "Ἀγχίσου λιμήν",
+    "next": "Anchitai",
+    "sort_key": "Anchisu",
     "chapters": [
       {
         "start": 2110,
@@ -22880,11 +22881,6 @@
         "author": "Hirschfeld"
       }
     ]
-  },
-  {
-    "lemma": "Ἀγχίσου λιμήν",
-    "next": "Anchitai",
-    "sort_key": "Anchisu"
   },
   {
     "lemma": "Anchitai",
@@ -26833,7 +26829,7 @@
   {
     "lemma": "Ἀγγελιαφόροι",
     "previous": "Angelia",
-    "next": "Angelike",
+    "next": "Ἀγγελική",
     "redirect": true,
     "chapters": [
       {
@@ -26843,7 +26839,7 @@
     ]
   },
   {
-    "lemma": "Angelike",
+    "lemma": "Ἀγγελική",
     "previous": "Ἀγγελιαφόροι",
     "next": "Angelion",
     "chapters": [
