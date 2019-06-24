@@ -3237,7 +3237,7 @@
   {
     "lemma": "Ἀποπεμπτικοὶ ὕμνοι",
     "previous": "Ἀποπέμπειν",
-    "next": "Ἀποφάσις",
+    "next": "Ἀπόφασις",
     "sort_key": "Apopemptikoi hymnoi",
     "chapters": [
       {
@@ -3248,9 +3248,11 @@
     ]
   },
   {
-    "lemma": "Ἀποφάσις",
+    "lemma": "Ἀπόφασις",
     "previous": "Ἀποπεμπτικοὶ ὕμνοι",
     "next": "Apophis",
+    "sort_key": "Apophasis",
+    "wp_link": "w:de:Apophasis",
     "chapters": [
       {
         "start": 173,
@@ -3261,7 +3263,7 @@
   },
   {
     "lemma": "Apophis",
-    "previous": "Ἀποφάσις",
+    "previous": "Ἀπόφασις",
     "next": "Ἀποφορά",
     "wp_link": "w:de:Apopi I.",
     "chapters": [
@@ -3340,6 +3342,7 @@
     "lemma": "Ἀποπομπαῖοι θεοί",
     "previous": "Apopis",
     "next": "Ἀπόπτυγμα",
+    "sort_key": "Apopompaioitheoi",
     "chapters": [
       {
         "start": 175,
@@ -3353,7 +3356,7 @@
     "previous": "Ἀποπομπαῖοι θεοί",
     "next": "Aporia",
     "sort_key": "Apoptugma",
-    "wp_link": "w:de:Apoptygma"
+    "wp_link": "w:de:Peplos"
   },
   {
     "lemma": "Aporia",
@@ -3478,7 +3481,7 @@
     "lemma": "Apostolios",
     "previous": "Ἀποστολεῖς",
     "next": "Apostoli litterae",
-    "wp_link": "w:de:Apostolios",
+    "wp_link": "w:de:Michael Apostolios",
     "chapters": [
       {
         "start": 182,
@@ -3631,7 +3634,7 @@
   {
     "lemma": "Ἀποτριάζειν",
     "previous": "Ἀποτομεύς",
-    "next": "Apotropaia",
+    "next": "Ἀποτροπαῖα",
     "sort_key": "Apotriazein",
     "chapters": [
       {
@@ -3641,7 +3644,7 @@
     ]
   },
   {
-    "lemma": "Apotropaia",
+    "lemma": "Ἀποτροπαῖα",
     "previous": "Ἀποτριάζειν",
     "next": "Ἀποτρόπαιος, ἀποτροπαία, ἀποτρόπαιοι",
     "chapters": [
@@ -3653,8 +3656,9 @@
   },
   {
     "lemma": "Ἀποτρόπαιος, ἀποτροπαία, ἀποτρόπαιοι",
-    "previous": "Apotropaia",
+    "previous": "Ἀποτροπαῖα",
     "next": "Ἀποτυμπανισμός",
+    "sort_key": "Apotrοpaios",
     "chapters": [
       {
         "start": 189,
@@ -3852,7 +3856,7 @@
     "lemma": "Apphadana 2",
     "previous": "Apphadana 1",
     "next": "Apphana",
-    "redirect": true,
+    "redirect": "Apphana",
     "chapters": [
       {
         "start": 214,
@@ -5855,7 +5859,6 @@
     "previous": "Aqua, Aquae",
     "next": "Aqua, Aquae 2",
     "sort_key": "Aquae 001",
-    "wp_link": "w:de:Baden bei Wien",
     "chapters": [
       {
         "start": 294,
@@ -6666,7 +6669,7 @@
     "previous": "Aqua, Aquae 61",
     "next": "Aqua, Aquae 63",
     "sort_key": "Aquae 062",
-    "wp_link": "w:de:Aquae Novae in Numidia",
+    "wp_link": "w:de:Titularbistum Aquae Novae in Numidia",
     "chapters": [
       {
         "start": 303,
@@ -7035,7 +7038,7 @@
     "previous": "Aqua, Aquae 89",
     "next": "Aqua, Aquae 91",
     "sort_key": "Aquae 090",
-    "redirect": true,
+    "redirect": "Aqua, Aquae 13",
     "chapters": [
       {
         "start": 306,
@@ -7048,7 +7051,7 @@
     "previous": "Aqua, Aquae 90",
     "next": "Aqua, Aquae 92",
     "sort_key": "Aquae 091",
-    "redirect": true,
+    "redirect": "Aqua, Aquae 31",
     "chapters": [
       {
         "start": 306,
@@ -33770,7 +33773,6 @@
     "lemma": "Arnum",
     "previous": "Arnos",
     "next": "Arnuphis",
-    "wp_link": "w:de:Tordera (Fluss)",
     "chapters": [
       {
         "start": 1208,
@@ -33795,7 +33797,6 @@
     "lemma": "Arnus 1",
     "previous": "Arnuphis",
     "next": "Arnus 2",
-    "wp_link": "w:de:Arno (Fluss)",
     "chapters": [
       {
         "start": 1208,

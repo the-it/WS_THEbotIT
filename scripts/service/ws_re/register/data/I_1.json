@@ -4765,7 +4765,7 @@
     "lemma": "Achaimenidai 1",
     "previous": "Achaimenia",
     "next": "Achaimenidai 2",
-    "wp_link": "w:de:Achaimeniden",
+    "wp_link": "w:de:Achämenidenreich",
     "chapters": [
       {
         "start": 200,
@@ -10565,7 +10565,7 @@
     "lemma": "Adraa",
     "previous": "Adra 3",
     "next": "Adrabaecampi",
-    "wp_link": "w:de:Adraa"
+    "wp_link": "w:de:Darʿā"
   },
   {
     "lemma": "Adrabaecampi",
@@ -12682,6 +12682,7 @@
     "previous": "Aeliae",
     "next": "Aelianus 1",
     "sort_key": "Aelianus",
+    "wp_link": "w:de:en:Aelian",
     "chapters": [
       {
         "start": 482,
@@ -22766,6 +22767,7 @@
     "lemma": "Ἀγαθὸς θεός",
     "previous": "Agathosthenes",
     "next": "Agathostratos",
+    "sort_key": "Agathostheos",
     "chapters": [
       {
         "start": 763,
@@ -23771,6 +23773,7 @@
     "lemma": "Ἀγεωργίου δίκη",
     "previous": "Agentes in rebus",
     "next": "Agepolis",
+    "sort_key": "Ageorgiudike",
     "chapters": [
       {
         "start": 779,
@@ -23967,7 +23970,6 @@
     "lemma": "Agesias 1",
     "previous": "Agesianax",
     "next": "Agesias 2",
-    "wp_link": "w:de:Agesias von Syrakus",
     "chapters": [
       {
         "start": 795,
@@ -25621,6 +25623,7 @@
     "lemma": "Ἀγνοῦ κέρας",
     "previous": "Agnua",
     "next": "Agnus",
+    "sort_key": "Agnukeras",
     "chapters": [
       {
         "start": 834,
@@ -25939,6 +25942,7 @@
     "lemma": "Ἀγοραῖα τέλη",
     "previous": "Agorachos",
     "next": "Agoraios, Agoraia",
+    "sort_key": "Agoraiatele",
     "chapters": [
       {
         "start": 881,
@@ -26348,7 +26352,8 @@
   {
     "lemma": "Ἀγραφίου γραφή",
     "previous": "Agranis",
-    "next": "Agraphoi nomoi",
+    "next": "Ἄγραφοι νόμοι",
+    "sort_key": "Agrapgiugraphe",
     "chapters": [
       {
         "start": 889,
@@ -26358,9 +26363,10 @@
     ]
   },
   {
-    "lemma": "Agraphoi nomoi",
+    "lemma": "Ἄγραφοι νόμοι",
     "previous": "Ἀγραφίου γραφή",
     "next": "Ἀγράφου μετάλλου γραφή",
+    "sort_key": "Agraphoinomoi",
     "chapters": [
       {
         "start": 889,
@@ -26371,8 +26377,9 @@
   },
   {
     "lemma": "Ἀγράφου μετάλλου γραφή",
-    "previous": "Agraphoi nomoi",
+    "previous": "Ἄγραφοι νόμοι",
     "next": "P. Agrasius",
+    "sort_key": "Agraphumetallu",
     "chapters": [
       {
         "start": 890,
