@@ -10,4 +10,5 @@ git pull
 git reset --hard master
 sudo python3.7 -m pip install -r requirements.txt
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
+source /etc/environment
 python3.7 scripts/runner.py
