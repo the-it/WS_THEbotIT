@@ -257,7 +257,17 @@
   },
   {
     "lemma": "Autrico",
-    "previous": "Attius 10a"
+    "previous": "Attius 10a",
+    "next": "Battus"
+  },
+  {
+    "lemma": "Battus",
+    "previous": "Autrico",
+    "next": "Berothe"
+  },
+  {
+    "lemma": "Berothe",
+    "previous": "Battus"
   },
   {
     "lemma": "Battus, Bacchus",
@@ -302,7 +312,18 @@
   },
   {
     "lemma": "Caecilia Trebulla",
-    "previous": "Bias 10"
+    "previous": "Bias 10",
+    "next": "Celsus 18a",
+    "wp_link": "w:de:Caecilia Trebulla"
+  },
+  {
+    "lemma": "Celsus 18a",
+    "previous": "Caecilia Trebulla",
+    "next": "Chairemon 2a"
+  },
+  {
+    "lemma": "Chairemon 2a",
+    "previous": "Celsus 18a"
   },
   {
     "lemma": "Caecilius 141",
