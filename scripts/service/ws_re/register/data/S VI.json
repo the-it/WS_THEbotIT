@@ -33,7 +33,12 @@
   },
   {
     "lemma": "Acutius 1a",
-    "previous": "Acilius 16"
+    "previous": "Acilius 16",
+    "next": "Aelius 75a"
+  },
+  {
+    "lemma": "Aelius 75a",
+    "previous": "Acutius 1a"
   },
   {
     "lemma": "Aburnius 2",
@@ -85,20 +90,16 @@
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 75a",
-    "next": null
+    "next": "Aelius 155"
   },
   {
-    "lemma": "Aemilius 54a",
-    "chapters": [
-      {
-        "start": 2,
-        "end": 3,
-        "author": "Groag"
-      }
-    ]
+    "lemma": "Aelius 155",
+    "previous": "Aelius 76",
+    "next": "Aemilius 43"
   },
   {
     "lemma": "Aemilius 43",
+    "previous": "Aelius 155",
     "next": "Aemilius 54b",
     "sort_key": "Aemilius 043"
   },

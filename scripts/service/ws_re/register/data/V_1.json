@@ -516,6 +516,7 @@
     "lemma": "Demokratia",
     "previous": "Demokrates 13",
     "next": "Demokritos 1",
+    "wp_link": "w:de:Demokratie",
     "chapters": [
       {
         "start": 135,
@@ -3846,6 +3847,7 @@
     "lemma": "Devotio",
     "previous": "Devono",
     "next": "Deuri",
+    "wp_link": "w:de:Hingabe",
     "chapters": [
       {
         "start": 277,
@@ -3905,7 +3907,7 @@
   {
     "lemma": "Deusios",
     "previous": "Deusara",
-    "next": "Deuso(n",
+    "next": "Deuso(n)",
     "chapters": [
       {
         "start": 281,
@@ -3915,9 +3917,9 @@
     ]
   },
   {
-    "lemma": "Deuso(n",
+    "lemma": "Deuso(n)",
     "previous": "Deusios",
-    "next": "Deuterius",
+    "next": "Δευτεραγωνιστής",
     "chapters": [
       {
         "start": 281,
@@ -3927,9 +3929,15 @@
     ]
   },
   {
+    "lemma": "Δευτεραγωνιστής",
+    "previous": "Deuso(n)",
+    "next": "Deuterius",
+    "sort_key": "Deuteragonistes"
+  },
+  {
     "lemma": "Deuterius",
-    "previous": "Deuso(n",
-    "next": "Deuteroloia",
+    "previous": "Δευτεραγωνιστής",
+    "next": "Δευτερολογία",
     "chapters": [
       {
         "start": 282,
@@ -3939,21 +3947,15 @@
     ]
   },
   {
-    "lemma": "Deuteroloia",
+    "lemma": "Δευτερολογία",
     "previous": "Deuterius",
     "next": "Deuteros",
-    "chapters": [
-      {
-        "start": 282,
-        "end": 283,
-        "author": "Thalheim"
-      }
-    ]
+    "sort_key": "Deuterologia"
   },
   {
     "lemma": "Deuteros",
-    "previous": "Deuteroloia",
-    "next": "Deuterostatai",
+    "previous": "Δευτερολογία",
+    "next": "Δευτεροστάται",
     "chapters": [
       {
         "start": 283,
@@ -3963,9 +3965,10 @@
     ]
   },
   {
-    "lemma": "Deuterostatai",
+    "lemma": "Δευτεροστάται",
     "previous": "Deuteros",
     "next": "Dexamene",
+    "sort_key": "Deuterostatai",
     "chapters": [
       {
         "start": 283,
@@ -3976,7 +3979,7 @@
   },
   {
     "lemma": "Dexamene",
-    "previous": "Deuterostatai",
+    "previous": "Δευτεροστάται",
     "next": "Dexamenos 1",
     "chapters": [
       {
@@ -3990,6 +3993,7 @@
     "lemma": "Dexamenos 1",
     "previous": "Dexamene",
     "next": "Dexamenos 2",
+    "wp_link": "w:de:Dexamenos (König von Olenos)",
     "chapters": [
       {
         "start": 283,
@@ -4230,6 +4234,7 @@
     "lemma": "Deximachos",
     "previous": "Dexileos 2",
     "next": "Deximontani",
+    "redirect": "Iulius 208",
     "chapters": [
       {
         "start": 286,
@@ -4568,6 +4573,7 @@
     "lemma": "Dexter 1",
     "previous": "Dextans",
     "next": "Dexter 2",
+    "sort_key": "Dexter 01",
     "chapters": [
       {
         "start": 296,
@@ -4580,6 +4586,7 @@
     "lemma": "Dexter 2",
     "previous": "Dexter 1",
     "next": "Dexter 3",
+    "sort_key": "Dexter 02",
     "chapters": [
       {
         "start": 296,
@@ -4592,6 +4599,8 @@
     "lemma": "Dexter 3",
     "previous": "Dexter 2",
     "next": "Dexter 4",
+    "sort_key": "Dexter 03",
+    "redirect": "Bellicius 5",
     "chapters": [
       {
         "start": 296,
@@ -4602,7 +4611,8 @@
   {
     "lemma": "Dexter 4",
     "previous": "Dexter 3",
-    "next": "Dexter 5a-d",
+    "next": "Dexter 5",
+    "sort_key": "Dexter 04",
     "chapters": [
       {
         "start": 296,
@@ -4612,21 +4622,18 @@
     ]
   },
   {
-    "lemma": "Dexter 5a-d",
+    "lemma": "Dexter 5",
     "previous": "Dexter 4",
     "next": "Dexter 6",
-    "chapters": [
-      {
-        "start": 296,
-        "end": 297,
-        "author": "Groag"
-      }
-    ]
+    "sort_key": "Dexter 05",
+    "redirect": "Iulius 118"
   },
   {
     "lemma": "Dexter 6",
-    "previous": "Dexter 5a-d",
+    "previous": "Dexter 5",
     "next": "Dexter 7",
+    "sort_key": "Dexter 06",
+    "redirect": "Afranius 9",
     "chapters": [
       {
         "start": 297,
@@ -4639,6 +4646,8 @@
     "lemma": "Dexter 7",
     "previous": "Dexter 6",
     "next": "Dexter 8",
+    "sort_key": "Dexter 07",
+    "wp_link": "w:de:it:Nummio Emiliano Destro (prefetto del pretorio)",
     "chapters": [
       {
         "start": 297,
@@ -4651,6 +4660,7 @@
     "lemma": "Dexter 8",
     "previous": "Dexter 7",
     "next": "Dexter 9",
+    "sort_key": "Dexter 08",
     "chapters": [
       {
         "start": 297,
@@ -4663,6 +4673,7 @@
     "lemma": "Dexter 9",
     "previous": "Dexter 8",
     "next": "Dexter 10",
+    "sort_key": "Dexter 09",
     "chapters": [
       {
         "start": 297,
@@ -4675,6 +4686,7 @@
     "lemma": "Dexter 10",
     "previous": "Dexter 9",
     "next": "Dexter 11",
+    "wp_link": "w:de:en:Appius Nicomachus Dexter",
     "chapters": [
       {
         "start": 297,
@@ -4783,6 +4795,7 @@
     "lemma": "Dia 1",
     "previous": "Dia",
     "next": "Dia 2",
+    "sort_key": "Dia 01",
     "chapters": [
       {
         "start": 298,
@@ -4795,6 +4808,7 @@
     "lemma": "Dia 2",
     "previous": "Dia 1",
     "next": "Dia 3",
+    "sort_key": "Dia 02",
     "chapters": [
       {
         "start": 298,
@@ -13111,7 +13125,8 @@
   {
     "lemma": "Δῖον 5",
     "previous": "Δῖον 4",
-    "next": "Δῖον 1",
+    "next": "Dion 1",
+    "sort_key": "Dion G1",
     "chapters": [
       {
         "start": 833,
@@ -13121,7 +13136,7 @@
     ]
   },
   {
-    "lemma": "Δῖον 1",
+    "lemma": "Dion 1",
     "previous": "Δῖον 5",
     "next": "Dion 2",
     "sort_key": "Dion 1",
@@ -13135,7 +13150,7 @@
   },
   {
     "lemma": "Dion 2",
-    "previous": "Δῖον 1",
+    "previous": "Dion 1",
     "next": "Dion 3",
     "sort_key": "Dion 2",
     "wp_link": "w:de:Dion von Syrakus",
@@ -19298,7 +19313,7 @@
   {
     "lemma": "Distamenos",
     "previous": "Dista",
-    "next": "Distegia",
+    "next": "Διστεγία",
     "chapters": [
       {
         "start": 1200,
@@ -19308,9 +19323,10 @@
     ]
   },
   {
-    "lemma": "Distegia",
+    "lemma": "Διστεγία",
     "previous": "Distamenos",
     "next": "Distel",
+    "sort_key": "Distegia",
     "chapters": [
       {
         "start": 1200,
@@ -19321,7 +19337,7 @@
   },
   {
     "lemma": "Distel",
-    "previous": "Distegia",
+    "previous": "Διστεγία",
     "next": "Disticha Catonis",
     "chapters": [
       {

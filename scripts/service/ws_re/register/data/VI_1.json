@@ -4905,7 +4905,8 @@
   {
     "lemma": "Eporedia",
     "previous": "Epora",
-    "next": "Eporedorix 1",
+    "next": "Eporedorix",
+    "wp_link": "w:de:Ivrea",
     "chapters": [
       {
         "start": 249,
@@ -4965,7 +4966,8 @@
   {
     "lemma": "Epossium",
     "previous": "Eposognatus",
-    "next": "Epostrakismos",
+    "next": "Ἐποστρακισμός",
+    "wp_link": "w:de:Carignan (Ardennes)",
     "chapters": [
       {
         "start": 251,
@@ -4975,9 +4977,11 @@
     ]
   },
   {
-    "lemma": "Epostrakismos",
+    "lemma": "Ἐποστρακισμός",
     "previous": "Epossium",
-    "next": "Epotis",
+    "next": "Ἐπωτίς",
+    "sort_key": "Epostrakismos",
+    "wp_link": "w:de:Steinehüpfen",
     "chapters": [
       {
         "start": 251,
@@ -4987,9 +4991,11 @@
     ]
   },
   {
-    "lemma": "Epotis",
-    "previous": "Epostrakismos",
+    "lemma": "Ἐπωτίς",
+    "previous": "Ἐποστρακισμός",
     "next": "Epotius pagus",
+    "sort_key": "Epotis",
+    "wp_link": "w:de:Schiffe der Antike",
     "chapters": [
       {
         "start": 251,
@@ -5000,7 +5006,7 @@
   },
   {
     "lemma": "Epotius pagus",
-    "previous": "Epotis",
+    "previous": "Ἐπωτίς",
     "next": "Eppich",
     "chapters": [
       {
@@ -5014,6 +5020,7 @@
     "lemma": "Eppich",
     "previous": "Epotius pagus",
     "next": "Eppius 1",
+    "wp_link": "w:de:Echter Sellerie",
     "chapters": [
       {
         "start": 252,
@@ -21930,6 +21937,8 @@
     "lemma": "Εὐφόρβιον",
     "previous": "Euphorbion",
     "next": "Euphorbos 1",
+    "sort_key": "Euphorbion",
+    "wp_link": "w:de:Euphorbia",
     "chapters": [
       {
         "start": 1171,
@@ -21942,6 +21951,7 @@
     "lemma": "Euphorbos 1",
     "previous": "Εὐφόρβιον",
     "next": "Euphorbos 2",
+    "wp_link": "w:de:Euphorbos",
     "chapters": [
       {
         "start": 1173,
@@ -21990,6 +22000,7 @@
     "lemma": "Euphorbos 5",
     "previous": "Euphorbos 4",
     "next": "Euphorbos 6",
+    "wp_link": "w:de:Euphorbus",
     "chapters": [
       {
         "start": 1173,
@@ -22038,6 +22049,7 @@
     "lemma": "Euphorion 3",
     "previous": "Euphorion 2",
     "next": "Euphorion 4",
+    "wp_link": "w:de:Euphorion (Tragödiendichter)",
     "chapters": [
       {
         "start": 1174,
@@ -22050,6 +22062,7 @@
     "lemma": "Euphorion 4",
     "previous": "Euphorion 3",
     "next": "Euphorion 5",
+    "wp_link": "w:de:Euphorion (Autor)",
     "chapters": [
       {
         "start": 1174,
@@ -22230,6 +22243,7 @@
     "lemma": "Euphranor 8",
     "previous": "Euphranor 7",
     "next": "Euphranta 1",
+    "wp_link": "w:de:Euphranor vom Isthmos",
     "chapters": [
       {
         "start": 1191,

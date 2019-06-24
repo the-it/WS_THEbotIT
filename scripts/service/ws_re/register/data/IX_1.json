@@ -139,6 +139,7 @@
     "lemma": "Ὑάκινθος 3",
     "previous": "Ὑάκινθος 2",
     "next": "Hyalea",
+    "sort_key": "Hyakinthos3",
     "chapters": [
       {
         "start": 16,
@@ -548,7 +549,7 @@
   {
     "lemma": "Hybreas 2",
     "previous": "Hybreas 1",
-    "next": "Hybreos graphe",
+    "next": "Ὕβρεως γραφή",
     "chapters": [
       {
         "start": 31,
@@ -558,20 +559,14 @@
     ]
   },
   {
-    "lemma": "Hybreos graphe",
+    "lemma": "Ὕβρεως γραφή",
     "previous": "Hybreas 2",
     "next": "Hybrias 1",
-    "chapters": [
-      {
-        "start": 31,
-        "end": 32,
-        "author": "Thalheim"
-      }
-    ]
+    "sort_key": "Hybreosgraphe"
   },
   {
     "lemma": "Hybrias 1",
-    "previous": "Hybreos graphe",
+    "previous": "Ὕβρεως γραφή",
     "next": "Hybrias 2",
     "chapters": [
       {
@@ -755,6 +750,7 @@
     "lemma": "Hydatius 1",
     "previous": "Hydata",
     "next": "Hydatius 2",
+    "wp_link": "w:de:Hydatius von Emeritia",
     "chapters": [
       {
         "start": 39,
@@ -767,6 +763,8 @@
     "lemma": "Hydatius 2",
     "previous": "Hydatius 1",
     "next": "Hyde",
+    "wp_link": "w:de:Hydatius von Aquae Flaviae",
+    "ws_link": "s:de:Hydatius",
     "chapters": [
       {
         "start": 40,

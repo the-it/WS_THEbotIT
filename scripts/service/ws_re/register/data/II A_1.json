@@ -99,6 +99,7 @@
     "lemma": "Sarmatorum, strata",
     "previous": "Sarmatina",
     "next": "Sarmentius",
+    "sort_key": "Sarmatorum",
     "chapters": [
       {
         "start": 24,
@@ -135,6 +136,7 @@
     "lemma": "Sarmia",
     "previous": "Sarmentus",
     "next": "Sarminium",
+    "wp_link": "w:de:Guernsey",
     "chapters": [
       {
         "start": 25,
@@ -255,7 +257,7 @@
   {
     "lemma": "Sarnali",
     "previous": "Sarnaka",
-    "next": "Sarn(e)ios",
+    "next": "Σάρν(ε)ιος",
     "chapters": [
       {
         "start": 29,
@@ -265,7 +267,7 @@
     ]
   },
   {
-    "lemma": "Sarn(e)ios",
+    "lemma": "Σάρν(ε)ιος",
     "previous": "Sarnali",
     "next": "Sarnia",
     "chapters": [
@@ -278,8 +280,8 @@
   },
   {
     "lemma": "Sarnia",
-    "previous": "Sarn(e)ios",
-    "next": "Sarnios",
+    "previous": "Σάρν(ε)ιος",
+    "next": "Σάρνιος",
     "redirect": true,
     "chapters": [
       {
@@ -289,7 +291,7 @@
     ]
   },
   {
-    "lemma": "Sarnios",
+    "lemma": "Σάρνιος",
     "previous": "Sarnia",
     "next": "Sarnos",
     "chapters": [
@@ -302,8 +304,8 @@
   },
   {
     "lemma": "Sarnos",
-    "previous": "Sarnios",
-    "next": "Sarnouka",
+    "previous": "Σάρνιος",
+    "next": "Σαρνοῦκα",
     "chapters": [
       {
         "start": 29,
@@ -5142,7 +5144,7 @@
   {
     "lemma": "Scherie",
     "previous": "Scheria",
-    "next": "Schesia",
+    "next": "Σχησία",
     "chapters": [
       {
         "start": 406,
@@ -5152,9 +5154,10 @@
     ]
   },
   {
-    "lemma": "Schesia",
+    "lemma": "Σχησία",
     "previous": "Scherie",
-    "next": "Schesios",
+    "next": "Σχήσιος",
+    "sort_key": "Schesia",
     "chapters": [
       {
         "start": 407,
@@ -5164,9 +5167,10 @@
     ]
   },
   {
-    "lemma": "Schesios",
-    "previous": "Schesia",
+    "lemma": "Σχήσιος",
+    "previous": "Σχησία",
     "next": "Schierenhof",
+    "sort_key": "Schesios",
     "chapters": [
       {
         "start": 407,
@@ -5177,7 +5181,7 @@
   },
   {
     "lemma": "Schierenhof",
-    "previous": "Schesios",
+    "previous": "Σχήσιος",
     "next": "Schiffahrt",
     "chapters": [
       {
@@ -5191,6 +5195,7 @@
     "lemma": "Schiffahrt",
     "previous": "Schierenhof",
     "next": "Schiffswesen",
+    "wp_link": "w:de:Schiffe der Antike",
     "chapters": [
       {
         "start": 408,
@@ -5215,6 +5220,7 @@
     "lemma": "Schild 1",
     "previous": "Schiffswesen",
     "next": "Schild 2",
+    "wp_link": "w:de:Schild (Schutzwaffe)",
     "chapters": [
       {
         "start": 420,
@@ -12762,6 +12768,7 @@
     "lemma": "Seleukeia 8",
     "previous": "Seleukeia 7",
     "next": "Seleukeia 9",
+    "sort_key": "Seleukeia 08",
     "chapters": [
       {
         "start": 1205,
@@ -12799,7 +12806,7 @@
   {
     "lemma": "Seleukeios",
     "previous": "Seleukeia 10ff.",
-    "next": "Seleukides",
+    "next": "Σελευκίδες",
     "chapters": [
       {
         "start": 1205,
@@ -12809,7 +12816,7 @@
     ]
   },
   {
-    "lemma": "Seleukides",
+    "lemma": "Σελευκίδες",
     "previous": "Seleukeios",
     "next": "Seleukis 1",
     "chapters": [
@@ -12822,7 +12829,7 @@
   },
   {
     "lemma": "Seleukis 1",
-    "previous": "Seleukides",
+    "previous": "Σελευκίδες",
     "next": "Seleukis 2",
     "chapters": [
       {
@@ -13433,7 +13440,7 @@
   {
     "lemma": "Selge",
     "previous": "Seleukos 45",
-    "next": "Selgia",
+    "next": "Σελγία",
     "chapters": [
       {
         "start": 1257,
@@ -13443,7 +13450,7 @@
     ]
   },
   {
-    "lemma": "Selgia",
+    "lemma": "Σελγία",
     "previous": "Selge",
     "next": "Selgiacus",
     "chapters": [
@@ -13456,7 +13463,7 @@
   },
   {
     "lemma": "Selgiacus",
-    "previous": "Selgia",
+    "previous": "Σελγία",
     "next": "Selgovae",
     "chapters": [
       {
@@ -13530,6 +13537,7 @@
     "lemma": "Seligenstadt",
     "previous": "Selicius 2",
     "next": "Σέλινδα",
+    "wp_link": "w:de:Seligenstadt",
     "chapters": [
       {
         "start": 1259,
