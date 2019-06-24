@@ -295,10 +295,12 @@ class PetScan:
         @return: list of result dicionaries.
         @rtype: list
         """
-        response = requests.get(url=self._construct_string(),
-                                headers=self.header, timeout=self._timeout)
+        try:
+            response = requests.get(url=self._construct_string(), headers=self.header, timeout=self._timeout)
+        except requests.exceptions.RequestException:
+            raise PetScanException("Get request didn't return correctly")
         if response.status_code != 200:
-            raise ConnectionError
+            raise PetScanException("Request wasn't a success")
         response_byte = response.content
         response_dict = json.loads(response_byte.decode("utf8"))
         return response_dict["*"][0]["a"]["*"]
