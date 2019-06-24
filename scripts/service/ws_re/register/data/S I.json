@@ -2016,11 +2016,13 @@
   },
   {
     "lemma": "Agesilaos 3",
-    "previous": "Agesikles"
+    "previous": "Agesikles",
+    "next": "Agesilaos 7a",
+    "redirect": "Agis 1a"
   },
   {
     "lemma": "Agesilaos 7a",
-    "previous": null,
+    "previous": "Agesilaos 3",
     "next": "Agesilaos 7b",
     "chapters": [
       {
@@ -2439,11 +2441,16 @@
   {
     "lemma": "Agrippinae lavacrum",
     "previous": "Agrippianae thermae",
-    "next": null
+    "next": "Agrippinenses"
+  },
+  {
+    "lemma": "Agrippinenses",
+    "previous": "Agrippinae lavacrum",
+    "next": "Agrius 5"
   },
   {
     "lemma": "Agrius 5",
-    "previous": null,
+    "previous": "Agrippinenses",
     "next": "Agrokome"
   },
   {
@@ -2654,7 +2661,7 @@
   {
     "lemma": "Aigeidas",
     "previous": "Aiga 2",
-    "next": "Aigeira",
+    "next": "Aigeira 1",
     "chapters": [
       {
         "start": 34,
@@ -2664,8 +2671,11 @@
     ]
   },
   {
+    "lemma": "Aigeira 1",
+    "previous": "Aigeidas"
+  },
+  {
     "lemma": "Aigeira",
-    "previous": "Aigeidas",
     "next": "Aigeira 2"
   },
   {
@@ -4355,7 +4365,10 @@
   },
   {
     "lemma": "Aleximachos a",
-    "previous": "Alexikles 2",
+    "previous": "Alexikles 2"
+  },
+  {
+    "lemma": "Aleximachos a",
     "next": "Alexinos a",
     "sort_key": "Aleximachos 0a",
     "chapters": [
@@ -8387,7 +8400,12 @@
     ]
   },
   {
+    "lemma": "Aquatores",
+    "next": "Aquileia 1"
+  },
+  {
     "lemma": "Aquileia 1",
+    "previous": "Aquatores",
     "next": "Aquilius 16"
   },
   {
@@ -9242,6 +9260,7 @@
   },
   {
     "lemma": "Archon 4",
+    "previous": null,
     "next": "Archon 4a"
   },
   {
@@ -13596,7 +13615,12 @@
   },
   {
     "lemma": "Babylos 1",
-    "previous": "Babsa"
+    "previous": "Babsa",
+    "next": "Babylos 2"
+  },
+  {
+    "lemma": "Babylos 2",
+    "previous": "Babylos 1"
   },
   {
     "lemma": "Axius 5",
@@ -14524,6 +14548,7 @@
   {
     "lemma": "Bathyllos 4a",
     "previous": "Bathon",
+    "next": "Batis 2",
     "chapters": [
       {
         "start": 245,
@@ -14534,6 +14559,7 @@
   },
   {
     "lemma": "Batis 2",
+    "previous": "Bathyllos 4a",
     "next": "Batnai 1"
   },
   {
@@ -14583,7 +14609,7 @@
   {
     "lemma": "Battos 11",
     "previous": "Battakes 1",
-    "next": null,
+    "next": "Bauli",
     "chapters": [
       {
         "start": 245,
@@ -14594,7 +14620,8 @@
   },
   {
     "lemma": "Bauli",
-    "previous": "Battos 11"
+    "previous": "Battos 11",
+    "next": null
   },
   {
     "lemma": "Bechuni",
@@ -15487,7 +15514,7 @@
   {
     "lemma": "Brasidas 1a",
     "previous": "Branchos 1",
-    "next": null,
+    "next": "Briana",
     "chapters": [
       {
         "start": 257,
@@ -15497,8 +15524,11 @@
     ]
   },
   {
+    "lemma": "Briana",
+    "previous": "Brasidas 1a"
+  },
+  {
     "lemma": "Bria",
-    "previous": "Brasidas 1a",
     "chapters": [
       {
         "start": 257,
@@ -17752,10 +17782,10 @@
   {
     "lemma": "Chronos 2",
     "previous": "Chronica Italica",
-    "next": "Chryseis 5"
+    "next": "Chryseïs 5"
   },
   {
-    "lemma": "Chryseis 5",
+    "lemma": "Chryseïs 5",
     "previous": "Chronos 2",
     "next": "Chrysermos 4",
     "chapters": [
@@ -17768,7 +17798,7 @@
   },
   {
     "lemma": "Chrysermos 4",
-    "previous": "Chryseis 5",
+    "previous": "Chryseïs 5",
     "next": "Chrysias",
     "chapters": [
       {
@@ -19128,7 +19158,7 @@
   {
     "lemma": "Damatrios 2a",
     "previous": "Damaskos 3",
-    "next": null,
+    "next": "Damea",
     "chapters": [
       {
         "start": 335,
@@ -19136,6 +19166,10 @@
         "author": "Kirchner"
       }
     ]
+  },
+  {
+    "lemma": "Damea",
+    "previous": "Damatrios 2a"
   },
   {
     "lemma": "Damatrios 2",
