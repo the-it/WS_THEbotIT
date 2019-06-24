@@ -18658,7 +18658,7 @@
   {
     "lemma": "Cornelius 414",
     "previous": "Cornelius 413",
-    "next": "Cornelius 416",
+    "next": "Cornelius 415",
     "chapters": [
       {
         "start": 1596,
@@ -18667,8 +18667,13 @@
     ]
   },
   {
-    "lemma": "Cornelius 416",
+    "lemma": "Cornelius 415",
     "previous": "Cornelius 414",
+    "next": "Cornelius 416"
+  },
+  {
+    "lemma": "Cornelius 416",
+    "previous": "Cornelius 415",
     "next": "Cornelius 417",
     "chapters": [
       {
@@ -18793,7 +18798,7 @@
   {
     "lemma": "Cornelius 427",
     "previous": "Cornelius 426",
-    "next": "Cornelius 429",
+    "next": "Cornelius 428",
     "chapters": [
       {
         "start": 1598,
@@ -18802,9 +18807,16 @@
     ]
   },
   {
-    "lemma": "Cornelius 429",
+    "lemma": "Cornelius 428",
     "previous": "Cornelius 427",
-    "next": "Cornelius 430a",
+    "next": "Cornelius 429",
+    "redirect": "Valerius 401"
+  },
+  {
+    "lemma": "Cornelius 429",
+    "previous": "Cornelius 428",
+    "next": "Cornelius 430",
+    "redirect": "Volusius 23",
     "chapters": [
       {
         "start": 1598,
@@ -18814,9 +18826,15 @@
     ]
   },
   {
-    "lemma": "Cornelius 430a",
+    "lemma": "Cornelius 430",
     "previous": "Cornelius 429",
+    "next": "Cornelius 430a"
+  },
+  {
+    "lemma": "Cornelius 430a",
+    "previous": "Cornelius 430",
     "next": "Cornelius 431",
+    "redirect": "Servenia",
     "chapters": [
       {
         "start": 1599,
@@ -18865,6 +18883,7 @@
     "lemma": "Cornelius 434",
     "previous": "Cornelius 433",
     "next": "Cornelius 435",
+    "redirect": "Lorenius",
     "chapters": [
       {
         "start": 1599,
@@ -18900,6 +18919,7 @@
     "lemma": "Cornelius 437",
     "previous": "Cornelius 436",
     "next": "Cornelius 438",
+    "redirect": true,
     "chapters": [
       {
         "start": 1600,
@@ -18925,6 +18945,7 @@
     "lemma": "Cornelius 439",
     "previous": "Cornelius 438",
     "next": "Cornelius 440",
+    "redirect": true,
     "chapters": [
       {
         "start": 1600,
@@ -19257,6 +19278,7 @@
     "lemma": "Cornicula",
     "previous": "Cornicines",
     "next": "Corniculanenses",
+    "redirect": "Annius 38",
     "chapters": [
       {
         "start": 1603,
