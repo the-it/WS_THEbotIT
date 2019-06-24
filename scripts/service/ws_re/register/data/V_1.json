@@ -6615,6 +6615,7 @@
     "lemma": "Didache",
     "previous": "Dictis",
     "next": "Didakai",
+    "wp_link": "w:de:Didache",
     "chapters": [
       {
         "start": 392,
@@ -6663,7 +6664,7 @@
   {
     "lemma": "Didaskaliai",
     "previous": "Didaskalia",
-    "next": "Διδάσκαλoς",
+    "next": "Διδάσκαλος",
     "wp_link": "w:de:Didaskalie",
     "chapters": [
       {
@@ -6674,9 +6675,10 @@
     ]
   },
   {
-    "lemma": "Διδάσκαλoς",
+    "lemma": "Διδάσκαλος",
     "previous": "Didaskaliai",
     "next": "Didattium",
+    "sort_key": "Didaskalos",
     "chapters": [
       {
         "start": 401,
@@ -6687,7 +6689,7 @@
   },
   {
     "lemma": "Didattium",
-    "previous": "Διδάσκαλoς",
+    "previous": "Διδάσκαλος",
     "next": "Dide",
     "redirect": true,
     "chapters": [
@@ -8519,6 +8521,8 @@
     "lemma": "Δικολόγος",
     "previous": "Dikitanaura",
     "next": "Dikomes",
+    "sort_key": "Dikologos",
+    "wp_link": "w:de:Advokat",
     "chapters": [
       {
         "start": 580,
@@ -8542,7 +8546,7 @@
   {
     "lemma": "Dikon",
     "previous": "Dikomes",
-    "next": "Dikotylon",
+    "next": "Δικότυλον",
     "chapters": [
       {
         "start": 581,
@@ -8552,9 +8556,10 @@
     ]
   },
   {
-    "lemma": "Dikotylon",
+    "lemma": "Δικότυλον",
     "previous": "Dikon",
     "next": "Diktaia",
+    "sort_key": "Dikotylon",
     "chapters": [
       {
         "start": 581,
@@ -8565,7 +8570,7 @@
   },
   {
     "lemma": "Diktaia",
-    "previous": "Dikotylon",
+    "previous": "Δικότυλον",
     "next": "Diktaios",
     "chapters": [
       {
@@ -11421,7 +11426,7 @@
   {
     "lemma": "Diogenidai",
     "previous": "Diogenianos 4",
-    "next": "Diogenus akron",
+    "next": "Διογένους ἄκρον",
     "chapters": [
       {
         "start": 783,
@@ -11431,20 +11436,14 @@
     ]
   },
   {
-    "lemma": "Diogenus akron",
+    "lemma": "Διογένους ἄκρον",
     "previous": "Diogenidai",
     "next": "Diogmitai",
-    "chapters": [
-      {
-        "start": 784,
-        "end": 784,
-        "author": "Sethe"
-      }
-    ]
+    "sort_key": "Diogenusakron"
   },
   {
     "lemma": "Diogmitai",
-    "previous": "Diogenus akron",
+    "previous": "Διογένους ἄκρον",
     "next": "Diognetos 1",
     "chapters": [
       {
@@ -11458,6 +11457,7 @@
     "lemma": "Diognetos 1",
     "previous": "Diogmitai",
     "next": "Diognetos 2",
+    "sort_key": "Diognetos 01",
     "chapters": [
       {
         "start": 784,
@@ -11470,6 +11470,7 @@
     "lemma": "Diognetos 2",
     "previous": "Diognetos 1",
     "next": "Diognetos 3",
+    "sort_key": "Diognetos 02",
     "chapters": [
       {
         "start": 784,
