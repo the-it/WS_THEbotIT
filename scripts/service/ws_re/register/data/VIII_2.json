@@ -5343,7 +5343,7 @@
   {
     "lemma": "Hippikos",
     "previous": "Hippike agros",
-    "next": "Hippion",
+    "next": "Hippion, Hippios",
     "chapters": [
       {
         "start": 1717,
@@ -5918,7 +5918,7 @@
   {
     "lemma": "Hippodromos 2",
     "previous": "Hippodromos 1",
-    "next": "Hippodromos 4",
+    "next": "Hippodromos 3",
     "chapters": [
       {
         "start": 1735,
@@ -5928,8 +5928,20 @@
     ]
   },
   {
-    "lemma": "Hippodromos 4",
+    "lemma": "Hippodromos 3",
     "previous": "Hippodromos 2",
+    "next": "Hippodromos 4",
+    "chapters": [
+      {
+        "start": 1745,
+        "end": 1745,
+        "author": "Schneider, K[arl]"
+      }
+    ]
+  },
+  {
+    "lemma": "Hippodromos 4",
+    "previous": "Hippodromos 3",
     "next": "Hippoi",
     "chapters": [
       {
@@ -5940,28 +5952,9 @@
     ]
   },
   {
-    "lemma": "Hippodromus 3",
-    "previous": "Hippodromos 4",
-    "next": "Hippoi",
-    "chapters": [
-      {
-        "start": 1745,
-        "end": 1745,
-        "author": "Schneider, K[arl]"
-      }
-    ]
-  },
-  {
     "lemma": "Hippoi",
-    "previous": "Hippodromus 3",
-    "next": "Hippoi 1",
-    "chapters": [
-      {
-        "start": 1747,
-        "end": 1747,
-        "author": "Bürchner"
-      }
-    ]
+    "previous": "Hippodromos 4",
+    "next": "Hippoi 1"
   },
   {
     "lemma": "Hippoi 1",
@@ -10641,9 +10634,9 @@
     ]
   },
   {
-    "lemma": "Horatiae sepulcrum",
-    "previous": "Horatia pila",
-    "next": "Horatiorum campus",
+    "lemma": "Horatia pila",
+    "previous": "Horarius",
+    "next": "Horatiae sepulcrum",
     "chapters": [
       {
         "start": 2319,
@@ -10653,9 +10646,9 @@
     ]
   },
   {
-    "lemma": "Horatia pila",
-    "previous": "Horarius",
-    "next": "Horatiae sepulcrum",
+    "lemma": "Horatiae sepulcrum",
+    "previous": "Horatia pila",
+    "next": "Horatiorum campus",
     "chapters": [
       {
         "start": 2319,

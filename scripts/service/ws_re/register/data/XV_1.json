@@ -439,8 +439,20 @@
     ]
   },
   {
-    "lemma": "Meda 1",
+    "lemma": "Meda",
     "previous": "Meculonius",
+    "next": "Meda 1",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Weinstock"
+      }
+    ]
+  },
+  {
+    "lemma": "Meda 1",
+    "previous": "Meda",
     "next": "Meda 2",
     "chapters": [
       {
@@ -734,12 +746,23 @@
   {
     "lemma": "Medesikaste",
     "previous": "Mederiacum",
-    "next": "Mediam",
+    "next": "Media",
     "chapters": [
       {
         "start": 67,
         "end": 67,
         "author": "Kolf"
+      }
+    ]
+  },
+  {
+    "lemma": "Media",
+    "previous": "Medesikaste",
+    "next": "Mediam",
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67
       }
     ]
   },
@@ -915,7 +938,7 @@
   {
     "lemma": "Medicina Plinii",
     "previous": "Medici",
-    "next": "Meda",
+    "next": "Medicinae",
     "wp_link": "w:de:Medicina Plinii",
     "chapters": [
       {
@@ -7702,7 +7725,7 @@
   {
     "lemma": "Mella 2",
     "previous": "Mella 1",
-    "next": "Mellakes",
+    "next": "Μέλλακες",
     "chapters": [
       {
         "start": 556,
@@ -7711,26 +7734,14 @@
     ]
   },
   {
-    "lemma": "Mellakes",
+    "lemma": "Μέλλακες",
     "previous": "Mella 2",
-    "next": "Milizigeris",
-    "chapters": [
-      {
-        "start": 556,
-        "end": 556,
-        "author": "Poland"
-      }
-    ]
-  },
-  {
-    "lemma": "Milizigeris",
-    "previous": "Mellakes",
     "next": "Mellapokopsas",
     "chapters": [
       {
         "start": 556,
         "end": 556,
-        "author": "Herrmann"
+        "author": "Poland"
       }
     ]
   },

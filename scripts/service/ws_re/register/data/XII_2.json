@@ -18,24 +18,12 @@
   {
     "lemma": "Legio 2",
     "previous": "Legio 1",
-    "next": "Legion",
-    "chapters": [
-      {
-        "start": 1837,
-        "end": 1837,
-        "author": "Schulten"
-      }
-    ]
-  },
-  {
-    "lemma": "Legion",
-    "previous": "Legio 2",
     "next": "Legio Traiana",
     "chapters": [
       {
         "start": 1837,
         "end": 1837,
-        "author": "Ganschinietz"
+        "author": "Schulten"
       }
     ]
   },
@@ -53,8 +41,20 @@
     ]
   },
   {
-    "lemma": "Legis actio",
+    "lemma": "Legion",
     "previous": "Legio Traiana",
+    "next": "Legis actio",
+    "chapters": [
+      {
+        "start": 1837,
+        "end": 1837,
+        "author": "Ganschinietz"
+      }
+    ]
+  },
+  {
+    "lemma": "Legis actio",
+    "previous": "Legion",
     "next": "Legna",
     "chapters": [
       {

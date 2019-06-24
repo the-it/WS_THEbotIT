@@ -2683,7 +2683,7 @@
   {
     "lemma": "Ioannes 40",
     "previous": "Ioannes 39",
-    "next": "Ioannes 41",
+    "next": "Ioannes 41–54",
     "chapters": [
       {
         "start": 1801,
@@ -2693,8 +2693,19 @@
     ]
   },
   {
-    "lemma": "Ioannes 41",
+    "lemma": "Ioannes 41–54",
     "previous": "Ioannes 40",
+    "next": "Ioannes 41",
+    "chapters": [
+      {
+        "start": 1801,
+        "end": 1801
+      }
+    ]
+  },
+  {
+    "lemma": "Ioannes 41",
+    "previous": "Ioannes 41–54",
     "next": "Ioannes 42",
     "wp_link": "w:de:Johannes (Apostel)",
     "chapters": [
@@ -2702,17 +2713,6 @@
         "start": 1801,
         "end": 1804,
         "author": "Jülicher"
-      }
-    ]
-  },
-  {
-    "lemma": "Ioannes 41-54",
-    "previous": "Ioannes 41",
-    "next": "Ioannes 42",
-    "chapters": [
-      {
-        "start": 1801,
-        "end": 1801
       }
     ]
   },
@@ -4263,7 +4263,7 @@
     ]
   },
   {
-    "lemma": "Iotapiuanus",
+    "lemma": "Iotapianus",
     "previous": "Iotape 6",
     "next": "Iovalia",
     "chapters": [
@@ -4276,7 +4276,7 @@
   },
   {
     "lemma": "Iovalia",
-    "previous": "Iotapiuanus",
+    "previous": "Iotapianus",
     "next": "Iovantucarus",
     "chapters": [
       {
