@@ -14,7 +14,7 @@ from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.template import ReDatenException
 from scripts.service.ws_re.template.re_page import RePage
 from tools.bots import CanonicalBot, BotException
-from tools.petscan import PetScan
+from tools.petscan import PetScan, PetScanException
 
 
 class ReScanner(CanonicalBot):
@@ -39,7 +39,7 @@ class ReScanner(CanonicalBot):
 
     def _prepare_searcher(self) -> PetScan:
         searcher = PetScan()
-        searcher.add_any_template("REDaten")
+        searcher.add_yes_template("REDaten")
 
         if self.debug:
             searcher.add_namespace(2)
@@ -48,11 +48,10 @@ class ReScanner(CanonicalBot):
             searcher.add_positive_category("RE:Fertig")
             searcher.add_positive_category("RE:Korrigiert")
             searcher.add_positive_category("RE:Platzhalter")
-            # searcher.add_negative_category("Wikisource:Gemeinfreiheit|2")
             searcher.set_logic_union()
             searcher.set_sort_criteria("date")
             searcher.set_sortorder_decending()
-            searcher.set_timeout(60)
+            searcher.set_timeout(120)
         return searcher
 
     def compile_lemma_list(self) -> List[str]:
@@ -60,7 +59,11 @@ class ReScanner(CanonicalBot):
         self.logger.info("Searching for lemmas")
         searcher = self._prepare_searcher()
         self.logger.info(f"[{searcher} {searcher}]")
-        raw_lemma_list = searcher.run()
+        raw_lemma_list = []
+        try:
+            raw_lemma_list = searcher.run()
+        except PetScanException:
+            self.logger.error("Search timed out.")
         self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
         self.logger.info("Filter new_lemma_list")
         # all items which wasn't process before
