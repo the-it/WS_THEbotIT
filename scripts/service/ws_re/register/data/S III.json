@@ -51,7 +51,12 @@
   },
   {
     "lemma": "Abacus 9",
-    "previous": "Abacus"
+    "previous": "Abacus",
+    "next": "Abano"
+  },
+  {
+    "lemma": "Abano",
+    "previous": "Abacus 9"
   },
   {
     "lemma": "Abacus 3-5",
@@ -65,8 +70,7 @@
   },
   {
     "lemma": "Abacus 9",
-    "previous": null,
-    "next": "Abano"
+    "next": "Epona"
   },
   {
     "lemma": "Abano",
@@ -107,7 +111,6 @@
   {
     "lemma": "abecedarius, -a, -um",
     "previous": "Abbo 2",
-    "next": null,
     "redirect": true,
     "chapters": [
       {
@@ -117,7 +120,17 @@
     ]
   },
   {
-    "lemma": "Abdera 1"
+    "lemma": "Abella",
+    "next": "Abdera 1"
+  },
+  {
+    "lemma": "Abdera 1",
+    "previous": "Abella",
+    "next": "Abdere"
+  },
+  {
+    "lemma": "Abdere",
+    "previous": "Abdera 1"
   },
   {
     "lemma": "Abdera",
@@ -706,7 +719,6 @@
   {
     "lemma": "Africanus 9",
     "previous": "Afer 3",
-    "next": "Afrius",
     "chapters": [
       {
         "start": 36,
@@ -716,12 +728,17 @@
     ]
   },
   {
+    "lemma": "Afer",
+    "next": "Afrius"
+  },
+  {
     "lemma": "Afrius",
-    "previous": "Africanus 9"
+    "previous": "Afer",
+    "next": "Agasias 2"
   },
   {
     "lemma": "Agasias 2",
-    "previous": null,
+    "previous": "Afrius",
     "next": "Agasilaos"
   },
   {
@@ -787,7 +804,11 @@
   {
     "lemma": "Agathinos 8",
     "previous": "Agathias 3",
-    "next": null
+    "next": "Agathinos 10"
+  },
+  {
+    "lemma": "Agathinos 10",
+    "previous": "Agathinos 8"
   },
   {
     "lemma": "Agathias 3",
@@ -3544,7 +3565,22 @@
   },
   {
     "lemma": "Aqua, Aquae 36",
-    "previous": "Aqua, Aquae 20"
+    "previous": "Aqua, Aquae 20",
+    "next": "Aqua, Aquae 46"
+  },
+  {
+    "lemma": "Aqua, Aquae 46",
+    "previous": "Aqua, Aquae 36",
+    "next": "Aqua, Aquae 55"
+  },
+  {
+    "lemma": "Aqua, Aquae 55",
+    "previous": "Aqua, Aquae 46",
+    "next": "Aqua, Aquae 59"
+  },
+  {
+    "lemma": "Aqua, Aquae 59",
+    "previous": "Aqua, Aquae 55"
   },
   {
     "lemma": "Aqua, Aquae 93",
@@ -13163,7 +13199,7 @@
     "lemma": "Demonax 4",
     "previous": "Demoleon 7",
     "next": "Demosiates",
-    "redirect": true
+    "redirect": "Damonax"
   },
   {
     "lemma": "Demosiates",
@@ -13295,7 +13331,8 @@
   {
     "lemma": "Δεσπότης",
     "previous": "Dertallos",
-    "next": "Demodes",
+    "next": "Detalla",
+    "sort_key": "Despotes",
     "chapters": [
       {
         "start": 333,
@@ -13305,8 +13342,11 @@
     ]
   },
   {
+    "lemma": "Detalla",
+    "previous": "Δεσπότης"
+  },
+  {
     "lemma": "Demodes",
-    "previous": "Δεσπότης",
     "next": "Demodokos 8",
     "chapters": [
       {
@@ -14437,7 +14477,7 @@
   {
     "lemma": "Eirenis",
     "previous": "Eirenarchai",
-    "next": "Eirenophylakes",
+    "next": "Ἐἰρηνοφύλακες",
     "chapters": [
       {
         "start": 423,
@@ -14447,9 +14487,10 @@
     ]
   },
   {
-    "lemma": "Eirenophylakes",
+    "lemma": "Ἐἰρηνοφύλακες",
     "previous": "Eirenis",
-    "next": "Eisagogion",
+    "next": "Εἰσαγωγεῖς",
+    "sort_key": "Eirenophylakes",
     "chapters": [
       {
         "start": 423,
@@ -14459,8 +14500,11 @@
     ]
   },
   {
+    "lemma": "Εἰσαγωγεῖς",
+    "previous": "Ἐἰρηνοφύλακες"
+  },
+  {
     "lemma": "Eisagogion",
-    "previous": "Eirenophylakes",
     "next": "Eisdikaia",
     "chapters": [
       {
@@ -14794,7 +14838,7 @@
   {
     "lemma": "Epikles 4a",
     "previous": "Epikados 2",
-    "next": "Epiklesis",
+    "next": "Ἐπίκλησις",
     "chapters": [
       {
         "start": 434,
@@ -14804,9 +14848,10 @@
     ]
   },
   {
-    "lemma": "Epiklesis",
+    "lemma": "Ἐπίκλησις",
     "previous": "Epikles 4a",
     "next": "Epikrates 1a",
+    "sort_key": "Epiklesis",
     "chapters": [
       {
         "start": 435,
@@ -14817,8 +14862,8 @@
   },
   {
     "lemma": "Epikrates 1a",
-    "previous": "Epiklesis",
-    "next": "Epimenes 1a",
+    "previous": "Ἐπίκλησις",
+    "next": "Epikrates 3",
     "chapters": [
       {
         "start": 435,
@@ -14828,9 +14873,14 @@
     ]
   },
   {
-    "lemma": "Epimenes 1a",
+    "lemma": "Epikrates 3",
     "previous": "Epikrates 1a",
-    "next": "Epistates eirenes",
+    "next": "Epimenes 1a"
+  },
+  {
+    "lemma": "Epimenes 1a",
+    "previous": "Epikrates 3",
+    "next": "Ἐπιστάτης εἰρήνης",
     "chapters": [
       {
         "start": 435,
@@ -14840,10 +14890,11 @@
     ]
   },
   {
-    "lemma": "Epistates eirenes",
+    "lemma": "Ἐπιστάτης εἰρήνης",
     "previous": "Epimenes 1a",
-    "next": "Eporedorix",
-    "redirect": true,
+    "next": "Epistula 1",
+    "sort_key": "Epistates eirenes",
+    "redirect": "Εἰρηνοφύλακες",
     "chapters": [
       {
         "start": 435,
@@ -14852,8 +14903,11 @@
     ]
   },
   {
+    "lemma": "Epistula 1",
+    "previous": "Ἐπιστάτης εἰρήνης"
+  },
+  {
     "lemma": "Eporedorix",
-    "previous": "Epistates eirenes",
     "next": "Eppillius",
     "chapters": [
       {
@@ -17477,12 +17531,26 @@
     ]
   },
   {
+    "lemma": "Epistula"
+  },
+  {
+    "lemma": "Abacus",
+    "next": "Epona"
+  },
+  {
     "lemma": "Epona",
+    "previous": "Abacus",
     "next": "Giganten"
   },
   {
     "lemma": "Giganten",
-    "previous": "Epona",
+    "previous": "Epona"
+  },
+  {
+    "lemma": "Eporecorix"
+  },
+  {
+    "lemma": "Giganten",
     "next": "Gilaios",
     "chapters": [
       {
@@ -18609,7 +18677,12 @@
     ]
   },
   {
+    "lemma": "Hekate",
+    "next": "Helena 1"
+  },
+  {
     "lemma": "Helena 1",
+    "previous": "Hekate",
     "next": "Helena 1a"
   },
   {
