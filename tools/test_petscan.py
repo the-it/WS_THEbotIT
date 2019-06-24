@@ -3,7 +3,7 @@ from unittest import TestCase
 
 import requests_mock
 
-from tools.petscan import PetScan
+from tools.petscan import PetScan, PetScanException
 
 
 class TestCatScan(TestCase):
@@ -192,5 +192,5 @@ class TestCatScan(TestCase):
             mock.get("https://petscan.wmflabs.org/"
                      "?language=de&project=wikisource&format=json&doit=1",
                      status_code=404)
-            with self.assertRaises(ConnectionError):
+            with self.assertRaises(PetScanException):
                 self.petscan.run()
