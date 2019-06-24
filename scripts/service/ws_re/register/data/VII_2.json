@@ -3516,7 +3516,7 @@
   {
     "lemma": "Grandimirum",
     "previous": "Grandetum",
-    "next": "Granianum promunturium",
+    "next": "Grani mons",
     "redirect": true,
     "chapters": [
       {
@@ -3526,8 +3526,20 @@
     ]
   },
   {
-    "lemma": "Granianum promunturium",
+    "lemma": "Grani mons",
     "previous": "Grandimirum",
+    "next": "Granianum promunturium",
+    "chapters": [
+      {
+        "start": 1813,
+        "end": 1813,
+        "author": "Weiss, J[akob]"
+      }
+    ]
+  },
+  {
+    "lemma": "Granianum promunturium",
+    "previous": "Grani mons",
     "next": "Granianus",
     "chapters": [
       {
@@ -3564,24 +3576,12 @@
   {
     "lemma": "Granikos 2",
     "previous": "Granikos 1",
-    "next": "Grani mons",
+    "next": "Granikos 3",
     "chapters": [
       {
         "start": 1813,
         "end": 1814,
         "author": "Tümpel"
-      }
-    ]
-  },
-  {
-    "lemma": "Grani mons",
-    "previous": "Granikos 2",
-    "next": "Granikos 3",
-    "chapters": [
-      {
-        "start": 1813,
-        "end": 1813,
-        "author": "Weiss, J[akob]"
       }
     ]
   },
