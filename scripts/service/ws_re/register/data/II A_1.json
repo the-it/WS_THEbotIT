@@ -12,21 +12,9 @@
     ]
   },
   {
-    "lemma": "Sarmaticae portae",
-    "previous": "Sarmatia",
-    "next": "Sarmatica insula",
-    "chapters": [
-      {
-        "start": 13,
-        "end": 14,
-        "author": "Kretschmer"
-      }
-    ]
-  },
-  {
     "lemma": "Sarmatica insula",
-    "previous": "Sarmaticae portae",
-    "next": "Sarmatici montes",
+    "previous": "Sarmatia",
+    "next": "Sarmaticae portae",
     "chapters": [
       {
         "start": 13,
@@ -36,8 +24,20 @@
     ]
   },
   {
-    "lemma": "Sarmatici montes",
+    "lemma": "Sarmaticae portae",
     "previous": "Sarmatica insula",
+    "next": "Sarmatici montes",
+    "chapters": [
+      {
+        "start": 13,
+        "end": 14,
+        "author": "Kretschmer"
+      }
+    ]
+  },
+  {
+    "lemma": "Sarmatici montes",
+    "previous": "Sarmaticae portae",
     "next": "Sarmaticus",
     "chapters": [
       {
@@ -13602,7 +13602,6 @@
   {
     "lemma": "Selinos",
     "previous": "Selino",
-    "next": "Scottius",
     "chapters": [
       {
         "start": 1261,
@@ -13612,16 +13611,8 @@
     ]
   },
   {
-    "lemma": "Scottius",
-    "previous": "Selinos",
-    "next": "Secundus 8a",
-    "chapters": [
-      {
-        "start": 1264,
-        "end": 1264,
-        "author": "Keune"
-      }
-    ]
+    "lemma": "Secundini",
+    "next": "Secundus 8a"
   },
   {
     "lemma": "Secundus 8a",

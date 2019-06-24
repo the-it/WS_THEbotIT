@@ -2115,7 +2115,7 @@
   {
     "lemma": "Plotiana",
     "previous": "Plotheia",
-    "next": "Plotianus",
+    "next": "Plotilla",
     "chapters": [
       {
         "start": 470,
@@ -2163,12 +2163,23 @@
   {
     "lemma": "Plotinus Eustathius",
     "previous": "Plotinos",
-    "next": "Plotius 1",
+    "next": "Plotius",
     "chapters": [
       {
         "start": 592,
         "end": 592,
         "author": "Enßlin"
+      }
+    ]
+  },
+  {
+    "lemma": "Plotius",
+    "previous": "Plotinus Eustathius",
+    "next": "Plotius 1",
+    "chapters": [
+      {
+        "start": 592,
+        "end": 592
       }
     ]
   },

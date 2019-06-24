@@ -415,7 +415,7 @@
   {
     "lemma": "Lysippe",
     "previous": "Lysiponos",
-    "next": "Lysippe 1",
+    "next": "Lysippe 1-6",
     "chapters": [
       {
         "start": 42,
@@ -425,25 +425,25 @@
     ]
   },
   {
-    "lemma": "Lysippe 1",
+    "lemma": "Lysippe 1-6",
     "previous": "Lysippe",
+    "next": "Lysippe 1",
+    "chapters": [
+      {
+        "start": 43,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "lemma": "Lysippe 1",
+    "previous": "Lysippe 1-6",
     "next": "Lysippe 2",
     "chapters": [
       {
         "start": 43,
         "end": 43,
         "author": "Lamer"
-      }
-    ]
-  },
-  {
-    "lemma": "Lysippe 1-6",
-    "previous": "Lysippe 1",
-    "next": "Lysippe 2",
-    "chapters": [
-      {
-        "start": 43,
-        "end": 43
       }
     ]
   },

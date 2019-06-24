@@ -3234,7 +3234,7 @@
   {
     "lemma": "Graiai",
     "previous": "Graïadai",
-    "next": "Graias aule",
+    "next": "Γραίας αὐλή",
     "chapters": [
       {
         "start": 1695,
@@ -3243,9 +3243,9 @@
     ]
   },
   {
-    "lemma": "Graias aule",
+    "lemma": "Γραίας αὐλή",
     "previous": "Graiai",
-    "next": "Γραϊκή",
+    "next": "Γραίας γόνυ",
     "chapters": [
       {
         "start": 1695,
@@ -3253,6 +3253,11 @@
         "author": "Stählin"
       }
     ]
+  },
+  {
+    "lemma": "Γραίας γόνυ",
+    "previous": "Γραίας αὐλή",
+    "next": "Γραϊκή"
   },
   {
     "lemma": "Γραϊκή",
@@ -15932,7 +15937,7 @@
   {
     "lemma": "Helene 7",
     "previous": "Helene 6",
-    "next": "Ἑλένια",
+    "next": "Ἑλένιεα",
     "chapters": [
       {
         "start": 2837,
@@ -15942,7 +15947,7 @@
     ]
   },
   {
-    "lemma": "Heleneia",
+    "lemma": "Ἑλένιεα",
     "previous": "Helene 7",
     "next": "Helenes loutron",
     "chapters": [
@@ -15955,7 +15960,7 @@
   },
   {
     "lemma": "Helenes loutron",
-    "previous": "Heleneia",
+    "previous": "Ἑλένιεα",
     "next": "Helenion",
     "chapters": [
       {
@@ -16524,7 +16529,7 @@
   {
     "lemma": "Harpii, Harpis",
     "previous": "Hammeum",
-    "next": "Harpokration 2a",
+    "next": "Harpokration 11",
     "chapters": [
       {
         "start": 2880,
@@ -16533,20 +16538,8 @@
     ]
   },
   {
-    "lemma": "Harpokration 2a",
-    "previous": "Harpii, Harpis",
-    "next": "Harpokration 11",
-    "chapters": [
-      {
-        "start": 2880,
-        "end": 2880,
-        "author": "De Stefani"
-      }
-    ]
-  },
-  {
     "lemma": "Harpokration 11",
-    "previous": "Harpii",
+    "previous": "Harpii, Harpis",
     "next": "Harpyia",
     "chapters": [
       {
