@@ -2831,21 +2831,9 @@
     ]
   },
   {
-    "lemma": "Tabernaculum 1",
-    "previous": "Taberna 2",
-    "next": "Taberna frigida",
-    "chapters": [
-      {
-        "start": 1872,
-        "end": 1872,
-        "author": "Weinstock"
-      }
-    ]
-  },
-  {
     "lemma": "Taberna frigida",
-    "previous": "Tabernaculum 1",
-    "next": "Tabernaculum 2",
+    "previous": "Taberna 2",
+    "next": "Tabernaculum 1",
     "chapters": [
       {
         "start": 1872,
@@ -2855,8 +2843,20 @@
     ]
   },
   {
-    "lemma": "Tabernaculum 2",
+    "lemma": "Tabernaculum 1",
     "previous": "Taberna frigida",
+    "next": "Tabernaculum 2",
+    "chapters": [
+      {
+        "start": 1872,
+        "end": 1872,
+        "author": "Weinstock"
+      }
+    ]
+  },
+  {
+    "lemma": "Tabernaculum 2",
+    "previous": "Tabernaculum 1",
     "next": "Tabernae 1",
     "chapters": [
       {
@@ -2903,8 +2903,20 @@
     ]
   },
   {
-    "lemma": "Tabernae, Tres 1",
+    "lemma": "Tabernae 4",
     "previous": "Tabernae 3",
+    "next": "Tabernae, Tres 1",
+    "chapters": [
+      {
+        "start": 1875,
+        "end": 1875,
+        "author": "Treidler"
+      }
+    ]
+  },
+  {
+    "lemma": "Tabernae, Tres 1",
+    "previous": "Tabernae 4",
     "next": "Tabernae, Tres 2",
     "chapters": [
       {
@@ -2941,7 +2953,7 @@
   {
     "lemma": "Tabernae, Tres 4",
     "previous": "Tabernae, Tres 3",
-    "next": "Tabernae 4",
+    "next": "Tabernae Caediciae",
     "chapters": [
       {
         "start": 1875,
@@ -2951,20 +2963,8 @@
     ]
   },
   {
-    "lemma": "Tabernae 4",
-    "previous": "Tabernae, Tres 4",
-    "next": "Tabernae Caediciae",
-    "chapters": [
-      {
-        "start": 1875,
-        "end": 1875,
-        "author": "Treidler"
-      }
-    ]
-  },
-  {
     "lemma": "Tabernae Caediciae",
-    "previous": "Tabernae 4",
+    "previous": "Tabernae, Tres 4",
     "next": "Tabernae novae",
     "chapters": [
       {
@@ -8428,12 +8428,23 @@
   {
     "lemma": "Tarne 1",
     "previous": "Tarnasici",
-    "next": "Tarneum",
+    "next": "Tarne 2",
     "chapters": [
       {
         "start": 2327,
         "end": 2327,
         "author": "Keil"
+      }
+    ]
+  },
+  {
+    "lemma": "Tarne 2",
+    "previous": "Tarne 1",
+    "next": "Tarneum",
+    "chapters": [
+      {
+        "start": 2327,
+        "end": 2327
       }
     ]
   },

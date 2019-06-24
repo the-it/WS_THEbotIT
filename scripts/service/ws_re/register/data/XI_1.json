@@ -361,7 +361,7 @@
   {
     "lemma": "Kaukasiai Pylai",
     "previous": "Kaukaseus",
-    "next": "Καύκασος 1",
+    "next": "Kaukasis",
     "chapters": [
       {
         "start": 58,
@@ -371,8 +371,13 @@
     ]
   },
   {
+    "lemma": "Kaukasis",
+    "previous": "Kaukasiai Pylai",
+    "next": "Καύκασος 1"
+  },
+  {
     "lemma": "Καύκασος 1",
-    "previous": "Kaukana",
+    "previous": "Kaukasis",
     "next": "Καύκασος 2",
     "sort_key": "Kaukasos 1",
     "chapters": [
