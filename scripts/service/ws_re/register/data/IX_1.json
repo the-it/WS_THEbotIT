@@ -112,7 +112,9 @@
   {
     "lemma": "Ὑάκινθος 1",
     "previous": "Ὑακινθὶς ὁδός",
-    "next": "Hyakinthos 2",
+    "next": "Ὑάκινθος 2",
+    "sort_key": "Hyakinthos 1",
+    "wp_link": "w:de:Hyazinthen",
     "chapters": [
       {
         "start": 4,
@@ -122,7 +124,7 @@
     ]
   },
   {
-    "lemma": "Hyakinthos 2",
+    "lemma": "Ὑάκινθος 2",
     "previous": "Ὑάκινθος 1",
     "next": "Ὑάκινθος 3",
     "chapters": [
@@ -135,7 +137,7 @@
   },
   {
     "lemma": "Ὑάκινθος 3",
-    "previous": "Hyakinthos 2",
+    "previous": "Ὑάκινθος 2",
     "next": "Hyalea",
     "chapters": [
       {
@@ -3287,7 +3289,8 @@
   {
     "lemma": "Ὑπερήμερος, ὑπερημερία",
     "previous": "Hypereides",
-    "next": "Hyperencheus",
+    "next": "Ὑπερεγχεύς",
+    "sort_key": "Hyperemeros",
     "chapters": [
       {
         "start": 285,
@@ -3297,9 +3300,10 @@
     ]
   },
   {
-    "lemma": "Hyperencheus",
+    "lemma": "Ὑπερεγχεύς",
     "previous": "Ὑπερήμερος, ὑπερημερία",
     "next": "Hyperenor 1",
+    "sort_key": "Hyperencheus",
     "chapters": [
       {
         "start": 285,
@@ -3310,7 +3314,7 @@
   },
   {
     "lemma": "Hyperenor 1",
-    "previous": "Hyperencheus",
+    "previous": "Ὑπερεγχεύς",
     "next": "Hyperenor 2",
     "chapters": [
       {
@@ -3431,7 +3435,7 @@
   {
     "lemma": "Hyperes 4",
     "previous": "Hyperes 3",
-    "next": "Hyperesiai",
+    "next": "Ὑπηρεσίαι",
     "chapters": [
       {
         "start": 286,
@@ -3441,7 +3445,7 @@
     ]
   },
   {
-    "lemma": "Hyperesiai",
+    "lemma": "Ὑπηρεσίαι",
     "previous": "Hyperes 4",
     "next": "Hyperion 1",
     "sort_key": "Hyperesiai",
@@ -3455,7 +3459,7 @@
   },
   {
     "lemma": "Hyperion 1",
-    "previous": "Hyperesiai",
+    "previous": "Ὑπηρεσίαι",
     "next": "Hyperion 2",
     "wp_link": "w:de:Hyperion",
     "chapters": [

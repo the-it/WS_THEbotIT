@@ -386,7 +386,6 @@
   {
     "lemma": "Acutus 2",
     "previous": "Acutus 1",
-    "next": "Ad-",
     "chapters": [
       {
         "start": 19,
@@ -396,8 +395,18 @@
     ]
   },
   {
+    "lemma": "Acutus 1",
+    "next": "Ad-"
+  },
+  {
     "lemma": "Ad-",
-    "previous": "Acutus 2"
+    "previous": "Acutus 1",
+    "next": "Adad 2",
+    "sort_key": "Ad"
+  },
+  {
+    "lemma": "Adad 2",
+    "previous": "Ad-"
   },
   {
     "lemma": "Acutus 1",
@@ -3523,7 +3532,12 @@
     "previous": "Aqua, Aquae 20"
   },
   {
+    "lemma": "Aqua, Aquae 93",
+    "next": "Aquileia 1"
+  },
+  {
     "lemma": "Aquileia 1",
+    "previous": "Aqua, Aquae 93",
     "next": "Aquilius 34a"
   },
   {
@@ -10691,10 +10705,12 @@
   },
   {
     "lemma": "Charixenos 2",
-    "previous": "Charinostos"
+    "previous": "Charinostos",
+    "next": "Charixenos 3"
   },
   {
     "lemma": "Charixenos 3",
+    "previous": "Charixenos 2",
     "next": "Charmion 2"
   },
   {
@@ -11917,7 +11933,17 @@
   },
   {
     "lemma": "Cremera",
-    "previous": "Crassicius 6"
+    "previous": "Crassicius 6",
+    "next": "Cremona"
+  },
+  {
+    "lemma": "Cremona",
+    "previous": "Cremera",
+    "next": "Crescens 8a"
+  },
+  {
+    "lemma": "Crescens 8a",
+    "previous": "Cremona"
   },
   {
     "lemma": "Crescens 8",
