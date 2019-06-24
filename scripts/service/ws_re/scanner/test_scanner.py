@@ -46,7 +46,7 @@ class TestReScanner(TestCase):
             checker = self.SearchStringChecker(str(bot._prepare_searcher()))
             self.assertTrue(checker.is_part_of_searchstring(
                 r"https://petscan.wmflabs.org/?language=de&project=wikisource"))
-            self.assertTrue(checker.is_part_of_searchstring("&templates_any=REDaten"))
+            self.assertTrue(checker.is_part_of_searchstring("&templates_yes=REDaten"))
             self.assertTrue(checker.is_part_of_searchstring("&ns%5B2%5D=1"))
             self.assertTrue(checker.is_empty())
 
@@ -60,7 +60,7 @@ class TestReScanner(TestCase):
                 "&categories=RE:Fertig%0D%0ARE:Korrigiert%0D%0ARE:Platzhalter"))
             #self.assertTrue(checker.is_part_of_searchstring(
             #    "&negcats=Wikisource:Gemeinfreiheit%7C2"))
-            self.assertTrue(checker.is_part_of_searchstring("&templates_any=REDaten"))
+            self.assertTrue(checker.is_part_of_searchstring("&templates_yes=REDaten"))
             self.assertTrue(checker.is_part_of_searchstring("&ns%5B0%5D=1"))
             self.assertTrue(checker.is_part_of_searchstring("&combination=union"))
             self.assertTrue(checker.is_part_of_searchstring("&sortby=date"))

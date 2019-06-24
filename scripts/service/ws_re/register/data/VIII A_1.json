@@ -1177,7 +1177,7 @@
   {
     "lemma": "Valerius 247",
     "previous": "Valerius 246",
-    "next": "Valerius 248",
+    "next": "Valerius 248-270",
     "chapters": [
       {
         "start": 123,
@@ -1187,9 +1187,9 @@
     ]
   },
   {
-    "lemma": "Valerius 248",
+    "lemma": "Valerius 248-270",
     "previous": "Valerius 247",
-    "next": "Valerius 248-270",
+    "next": "Valerius 248",
     "chapters": [
       {
         "start": 125,
@@ -1199,8 +1199,8 @@
     ]
   },
   {
-    "lemma": "Valerius 248-270",
-    "previous": "Valerius 248",
+    "lemma": "Valerius 248",
+    "previous": "Valerius 248-270",
     "next": "Valerius 249",
     "chapters": [
       {
@@ -1212,7 +1212,7 @@
   },
   {
     "lemma": "Valerius 249",
-    "previous": "Valerius 248-270",
+    "previous": "Valerius 248",
     "next": "Valerius 250",
     "chapters": [
       {
@@ -5532,7 +5532,7 @@
   {
     "lemma": "Varius 16",
     "previous": "Varius 15",
-    "next": "Varia 19",
+    "next": "Varius 17",
     "chapters": [
       {
         "start": 407,
@@ -5542,20 +5542,8 @@
     ]
   },
   {
-    "lemma": "Varia 19",
-    "previous": "Varius 16",
-    "next": "Varius 17",
-    "chapters": [
-      {
-        "start": 410,
-        "end": 410,
-        "author": "Hanslik"
-      }
-    ]
-  },
-  {
     "lemma": "Varius 17",
-    "previous": "Varia 19",
+    "previous": "Varius 16",
     "next": "Varius 18",
     "chapters": [
       {
@@ -5568,7 +5556,7 @@
   {
     "lemma": "Varius 18",
     "previous": "Varius 17",
-    "next": "Varius 20",
+    "next": "Varius 19",
     "chapters": [
       {
         "start": 410,
@@ -5578,8 +5566,20 @@
     ]
   },
   {
-    "lemma": "Varius 20",
+    "lemma": "Varius 19",
     "previous": "Varius 18",
+    "next": "Varius 20",
+    "chapters": [
+      {
+        "start": 410,
+        "end": 410,
+        "author": "Hanslik"
+      }
+    ]
+  },
+  {
+    "lemma": "Varius 20",
+    "previous": "Varius 19",
     "next": "Varius 21",
     "chapters": [
       {
@@ -5923,6 +5923,7 @@
     "lemma": "Varus 4",
     "previous": "Varus 3",
     "next": "Varus 5",
+    "sort_key": "Varus 04",
     "chapters": [
       {
         "start": 426,
@@ -6349,7 +6350,7 @@
   {
     "lemma": "Wasserleitungen",
     "previous": "Vassei",
-    "next": "Wassernuss",
+    "next": "Wassernuß",
     "chapters": [
       {
         "start": 453,
@@ -6359,7 +6360,7 @@
     ]
   },
   {
-    "lemma": "Wassernuss",
+    "lemma": "Wassernuß",
     "previous": "Wasserleitungen",
     "next": "Vassinassa",
     "chapters": [
@@ -6372,7 +6373,7 @@
   },
   {
     "lemma": "Vassinassa",
-    "previous": "Wassernuss",
+    "previous": "Wassernuß",
     "next": "Vassinus",
     "chapters": [
       {

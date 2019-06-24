@@ -721,7 +721,7 @@
   {
     "lemma": "Triggua",
     "previous": "Trigetius",
-    "next": "Triginta Tyranni",
+    "next": "Trigibildos",
     "chapters": [
       {
         "start": 128,
@@ -731,21 +731,9 @@
     ]
   },
   {
-    "lemma": "Triginta Tyranni",
-    "previous": "Triggua",
-    "next": "Trigibildos",
-    "chapters": [
-      {
-        "start": 128,
-        "end": 128,
-        "author": "Hohl"
-      }
-    ]
-  },
-  {
     "lemma": "Trigibildos",
-    "previous": "Triginta Tyranni",
-    "next": "Trigisamo",
+    "previous": "Triggua",
+    "next": "Triginta Tyranni",
     "redirect": true,
     "chapters": [
       {
@@ -755,8 +743,20 @@
     ]
   },
   {
-    "lemma": "Trigisamo",
+    "lemma": "Triginta Tyranni",
     "previous": "Trigibildos",
+    "next": "Trigisamo",
+    "chapters": [
+      {
+        "start": 128,
+        "end": 128,
+        "author": "Hohl"
+      }
+    ]
+  },
+  {
+    "lemma": "Trigisamo",
+    "previous": "Triginta Tyranni",
     "next": "Triglanthine",
     "chapters": [
       {
@@ -1105,7 +1105,7 @@
   {
     "lemma": "Trikolonos 2",
     "previous": "Trikolonos 1",
-    "next": "Trikomia 1",
+    "next": "Τρικωμία 1",
     "chapters": [
       {
         "start": 151,
@@ -1115,9 +1115,9 @@
     ]
   },
   {
-    "lemma": "Trikomia 1",
+    "lemma": "Τρικωμία 1",
     "previous": "Trikolonos 2",
-    "next": "Trikomia 2",
+    "next": "Τρικωμία 2",
     "redirect": true,
     "chapters": [
       {
@@ -1127,8 +1127,8 @@
     ]
   },
   {
-    "lemma": "Trikomia 2",
-    "previous": "Trikomia 1",
+    "lemma": "Τρικωμία 2",
+    "previous": "Τρικωμία 1",
     "next": "Τρικωμία 3",
     "chapters": [
       {
@@ -1140,8 +1140,8 @@
   },
   {
     "lemma": "Τρικωμία 3",
-    "previous": "Trikomia 2",
-    "next": "Trikomia 4",
+    "previous": "Τρικωμία 2",
+    "next": "Τρικωμία 4",
     "sort_key": "Trikomia 3",
     "chapters": [
       {
@@ -1152,9 +1152,10 @@
     ]
   },
   {
-    "lemma": "Trikomia 4",
+    "lemma": "Τρικωμία 4",
     "previous": "Τρικωμία 3",
-    "next": "Trikomia 5",
+    "next": "Τρικωμία 5",
+    "sort_key": "Trikomia 5",
     "chapters": [
       {
         "start": 152,
@@ -1164,9 +1165,10 @@
     ]
   },
   {
-    "lemma": "Trikomia 5",
-    "previous": "Trikomia 4",
-    "next": "Trikomias",
+    "lemma": "Τρικωμία 5",
+    "previous": "Τρικωμία 4",
+    "next": "Τρικωμιάς",
+    "sort_key": "Trikomia 5",
     "chapters": [
       {
         "start": 152,
@@ -1176,9 +1178,10 @@
     ]
   },
   {
-    "lemma": "Trikomias",
-    "previous": "Trikomia 5",
+    "lemma": "Τρικωμιάς",
+    "previous": "Τρικωμία 5",
     "next": "Trikornensioi",
+    "sort_key": "Trikomias",
     "chapters": [
       {
         "start": 152,
@@ -1189,7 +1192,7 @@
   },
   {
     "lemma": "Trikornensioi",
-    "previous": "Trikomias",
+    "previous": "Τρικωμιάς",
     "next": "Trikornion",
     "chapters": [
       {
@@ -1310,7 +1313,7 @@
   {
     "lemma": "Trimammion",
     "previous": "Trilogie",
-    "next": "Trimenothuritai",
+    "next": "Τριμενοθουρῖται",
     "chapters": [
       {
         "start": 155,
@@ -1320,20 +1323,14 @@
     ]
   },
   {
-    "lemma": "Trimenothuritai",
+    "lemma": "Τριμενοθουρῖται",
     "previous": "Trimammion",
     "next": "Trimerus",
-    "chapters": [
-      {
-        "start": 156,
-        "end": 156,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Trimenoth"
   },
   {
     "lemma": "Trimerus",
-    "previous": "Trimenothuritai",
+    "previous": "Τριμενοθουρῖται",
     "next": "Trimetus",
     "chapters": [
       {
@@ -3291,6 +3288,7 @@
     "lemma": "Troilos 3",
     "previous": "Troilos 2",
     "next": "Troilos 4",
+    "sort_key": "Troilos 03",
     "chapters": [
       {
         "start": 615,
@@ -3811,7 +3809,7 @@
   {
     "lemma": "Trophilos",
     "previous": "Tropheus 2",
-    "next": "topos Trophimionos",
+    "next": "τόπος Τροφιμίωνος",
     "chapters": [
       {
         "start": 675,
@@ -3821,9 +3819,10 @@
     ]
   },
   {
-    "lemma": "topos Trophimionos",
+    "lemma": "τόπος Τροφιμίωνος",
     "previous": "Trophilos",
     "next": "Trophimoi",
+    "sort_key": "topos Trophimionos",
     "chapters": [
       {
         "start": 675,
@@ -3834,7 +3833,7 @@
   },
   {
     "lemma": "Trophimoi",
-    "previous": "topos Trophimionos",
+    "previous": "τόπος Τροφιμίωνος",
     "next": "Trophimon Alexandreias",
     "chapters": [
       {
@@ -3967,7 +3966,7 @@
   {
     "lemma": "Trophonion",
     "previous": "Trophonianos",
-    "next": "Trophonios",
+    "next": "Trophonios 1",
     "chapters": [
       {
         "start": 678,
@@ -3977,7 +3976,7 @@
     ]
   },
   {
-    "lemma": "Trophonios",
+    "lemma": "Trophonios 1",
     "previous": "Trophonion",
     "next": "Trophonios 2",
     "chapters": [
@@ -3990,7 +3989,7 @@
   },
   {
     "lemma": "Trophonios 2",
-    "previous": "Trophonios",
+    "previous": "Trophonios 1",
     "next": "Trophos 1",
     "chapters": [
       {
@@ -4310,6 +4309,7 @@
     "lemma": "Truloi",
     "previous": "Trulleum",
     "next": "Trumpilini",
+    "wp_link": "w:de:Trüffel",
     "chapters": [
       {
         "start": 707,
@@ -6260,6 +6260,7 @@
     "lemma": "Tullius 1",
     "previous": "Tullius",
     "next": "Tullius 2",
+    "sort_key": "Tullius 01",
     "chapters": [
       {
         "start": 800,
@@ -6272,6 +6273,7 @@
     "lemma": "Tullius 2",
     "previous": "Tullius 1",
     "next": "Tullius 3",
+    "sort_key": "Tullius 02",
     "chapters": [
       {
         "start": 800,
@@ -6284,6 +6286,7 @@
     "lemma": "Tullius 3",
     "previous": "Tullius 2",
     "next": "Tullius 4",
+    "sort_key": "Tullius 03",
     "chapters": [
       {
         "start": 800,
@@ -6296,6 +6299,7 @@
     "lemma": "Tullius 4",
     "previous": "Tullius 3",
     "next": "Tullius 5",
+    "sort_key": "Tullius 04",
     "chapters": [
       {
         "start": 801,
@@ -6321,6 +6325,7 @@
     "lemma": "Tullius 6",
     "previous": "Tullius 5",
     "next": "Tullius 7",
+    "sort_key": "Tullius 06",
     "chapters": [
       {
         "start": 802,
@@ -6333,6 +6338,7 @@
     "lemma": "Tullius 7",
     "previous": "Tullius 6",
     "next": "Tullius 8",
+    "sort_key": "Tullius 07",
     "chapters": [
       {
         "start": 802,
@@ -6345,6 +6351,7 @@
     "lemma": "Tullius 8",
     "previous": "Tullius 7",
     "next": "Tullius 9",
+    "sort_key": "Tullius 08",
     "chapters": [
       {
         "start": 802,
@@ -6357,6 +6364,7 @@
     "lemma": "Tullius 9",
     "previous": "Tullius 8",
     "next": "Tullius 10",
+    "sort_key": "Tullius 09",
     "chapters": [
       {
         "start": 802,
@@ -6609,6 +6617,8 @@
     "lemma": "Tullius 29",
     "previous": "Tullius 28",
     "next": "Tricasses",
+    "wp_link": "w:de:Marcus Tullius Cicero",
+    "ws_link": "s:de:Cicero",
     "chapters": [
       {
         "start": 827,

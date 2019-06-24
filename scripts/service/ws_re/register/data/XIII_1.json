@@ -61,7 +61,7 @@
   {
     "lemma": "Libatio",
     "previous": "Libarna",
-    "next": "Libaton",
+    "next": "Λίβατον",
     "redirect": true,
     "chapters": [
       {
@@ -71,9 +71,10 @@
     ]
   },
   {
-    "lemma": "Libaton",
+    "lemma": "Λίβατον",
     "previous": "Libatio",
     "next": "Libba 1",
+    "sort_key": "Libaton",
     "chapters": [
       {
         "start": 13,
@@ -84,7 +85,7 @@
   },
   {
     "lemma": "Libba 1",
-    "previous": "Libaton",
+    "previous": "Λίβατον",
     "next": "Libba 2",
     "chapters": [
       {
@@ -195,6 +196,8 @@
     "lemma": "a libellis",
     "previous": "Libellensis",
     "next": "Libellorum magister",
+    "sort_key": "Libellis",
+    "wp_link": "w:de:A libellis",
     "chapters": [
       {
         "start": 15,
@@ -291,7 +294,7 @@
   {
     "lemma": "Liber pontificalis",
     "previous": "Liber pater",
-    "next": "Liberalia 1",
+    "next": "Liber pontificalis ecclesiae Ravennatis",
     "wp_link": "w:de:Liber Pontificalis",
     "chapters": [
       {
@@ -302,21 +305,9 @@
     ]
   },
   {
-    "lemma": "Liberalia 1",
-    "previous": "Liber pontificalis",
-    "next": "Liber pontificalis ecclesiae Ravennatis",
-    "chapters": [
-      {
-        "start": 81,
-        "end": 81,
-        "author": "Schur"
-      }
-    ]
-  },
-  {
     "lemma": "Liber pontificalis ecclesiae Ravennatis",
-    "previous": "Liberalia 1",
-    "next": "Liberalia 2",
+    "previous": "Liber pontificalis",
+    "next": "Liberalia 1",
     "chapters": [
       {
         "start": 81,
@@ -326,8 +317,20 @@
     ]
   },
   {
-    "lemma": "Liberalia 2",
+    "lemma": "Liberalia 1",
     "previous": "Liber pontificalis ecclesiae Ravennatis",
+    "next": "Liberalia 2",
+    "chapters": [
+      {
+        "start": 81,
+        "end": 81,
+        "author": "Schur"
+      }
+    ]
+  },
+  {
+    "lemma": "Liberalia 2",
+    "previous": "Liberalia 1",
     "next": "Liberalis",
     "chapters": [
       {
@@ -891,7 +894,8 @@
   {
     "lemma": "Libri Acherontici",
     "previous": "Librator 2",
-    "next": "Libria",
+    "next": "Libri augurales",
+    "sort_key": "Libri Acherontici",
     "chapters": [
       {
         "start": 139,
@@ -901,20 +905,8 @@
     ]
   },
   {
-    "lemma": "Libria",
-    "previous": "Libri Acherontici",
-    "next": "Libri augurales",
-    "chapters": [
-      {
-        "start": 140,
-        "end": 140,
-        "author": "Cramer"
-      }
-    ]
-  },
-  {
     "lemma": "Libri augurales",
-    "previous": "Libria",
+    "previous": "Libri Acherontici",
     "next": "Libri Etrusci",
     "redirect": true,
     "chapters": [
@@ -975,7 +967,7 @@
   {
     "lemma": "Libri ostentarii",
     "previous": "Libri haruspicini",
-    "next": "Libripens",
+    "next": "Libri pontificales",
     "redirect": true,
     "chapters": [
       {
@@ -985,20 +977,8 @@
     ]
   },
   {
-    "lemma": "Libripens",
-    "previous": "Libri ostentarii",
-    "next": "Libri pontificales",
-    "chapters": [
-      {
-        "start": 140,
-        "end": 140,
-        "author": "Kübler, B[ernhard]"
-      }
-    ]
-  },
-  {
     "lemma": "Libri pontificales",
-    "previous": "Libripens",
+    "previous": "Libri ostentarii",
     "next": "Libri rituales",
     "redirect": true,
     "chapters": [
@@ -1035,7 +1015,7 @@
   {
     "lemma": "Libri Tarquitiani",
     "previous": "Libri Sibyllini",
-    "next": "ad Libros",
+    "next": "Libria",
     "redirect": true,
     "chapters": [
       {
@@ -1045,9 +1025,34 @@
     ]
   },
   {
-    "lemma": "ad Libros",
+    "lemma": "Libria",
     "previous": "Libri Tarquitiani",
+    "next": "Libripens",
+    "chapters": [
+      {
+        "start": 140,
+        "end": 140,
+        "author": "Cramer"
+      }
+    ]
+  },
+  {
+    "lemma": "Libripens",
+    "previous": "Libria",
+    "next": "ad Libros",
+    "chapters": [
+      {
+        "start": 140,
+        "end": 140,
+        "author": "Kübler, B[ernhard]"
+      }
+    ]
+  },
+  {
+    "lemma": "ad Libros",
+    "previous": "Libripens",
     "next": "Librosus",
+    "sort_key": "Libros",
     "wp_link": "w:de:Vidoši",
     "chapters": [
       {
@@ -1552,7 +1557,7 @@
   {
     "lemma": "Lichas 4",
     "previous": "Lichas 3",
-    "next": "Licinia atria",
+    "next": "Licini forum",
     "chapters": [
       {
         "start": 212,
@@ -1562,8 +1567,20 @@
     ]
   },
   {
-    "lemma": "Licinia atria",
+    "lemma": "Licini forum",
     "previous": "Lichas 4",
+    "next": "Licinia atria",
+    "chapters": [
+      {
+        "start": 213,
+        "end": 213,
+        "author": "Kroll"
+      }
+    ]
+  },
+  {
+    "lemma": "Licinia atria",
+    "previous": "Licini forum",
     "next": "Liciniana",
     "chapters": [
       {
@@ -1600,7 +1617,7 @@
   {
     "lemma": "Licinianus 2",
     "previous": "Licinianus 1",
-    "next": "Licini forum",
+    "next": "Licinianus 3",
     "chapters": [
       {
         "start": 213,
@@ -1610,20 +1627,8 @@
     ]
   },
   {
-    "lemma": "Licini forum",
-    "previous": "Licinianus 2",
-    "next": "Licinianus 3",
-    "chapters": [
-      {
-        "start": 213,
-        "end": 213,
-        "author": "Kroll"
-      }
-    ]
-  },
-  {
     "lemma": "Licinianus 3",
-    "previous": "Licini forum",
+    "previous": "Licinianus 2",
     "next": "Licinium atrium",
     "chapters": [
       {
@@ -1648,6 +1653,7 @@
     "lemma": "Licinius",
     "previous": "Licinium atrium",
     "next": "Licinius 1",
+    "wp_link": "w:de:Licinier",
     "chapters": [
       {
         "start": 214,
@@ -2461,6 +2467,7 @@
     "lemma": "Licinius 63",
     "previous": "Licinius 62",
     "next": "Licinius 64",
+    "wp_link": "w:de:Publius Licinius Crassus (Legat)",
     "chapters": [
       {
         "start": 291,
@@ -2796,6 +2803,7 @@
     "lemma": "Licinius 91",
     "previous": "Licinius 90",
     "next": "Licinius 92",
+    "sort_key": "Licinius 091",
     "chapters": [
       {
         "start": 371,
@@ -2808,6 +2816,7 @@
     "lemma": "Licinius 92",
     "previous": "Licinius 91",
     "next": "Licinius 93",
+    "sort_key": "Licinius 092",
     "chapters": [
       {
         "start": 371,
@@ -2820,6 +2829,8 @@
     "lemma": "Licinius 93",
     "previous": "Licinius 92",
     "next": "Licinius 94",
+    "sort_key": "Licinius 093",
+    "redirect": "Statius 18",
     "chapters": [
       {
         "start": 371,
@@ -2832,6 +2843,8 @@
     "lemma": "Licinius 94",
     "previous": "Licinius 93",
     "next": "Licinius 95",
+    "sort_key": "Licinius 094",
+    "redirect": "Licinius 80",
     "chapters": [
       {
         "start": 371,
@@ -2844,6 +2857,7 @@
     "lemma": "Licinius 95",
     "previous": "Licinius 94",
     "next": "Licinius 96",
+    "sort_key": "Licinius 095",
     "chapters": [
       {
         "start": 372,
@@ -2856,6 +2870,7 @@
     "lemma": "Licinius 96",
     "previous": "Licinius 95",
     "next": "Licinius 97",
+    "sort_key": "Licinius 096",
     "chapters": [
       {
         "start": 372,
@@ -2868,6 +2883,7 @@
     "lemma": "Licinius 97",
     "previous": "Licinius 96",
     "next": "Licinius 98",
+    "sort_key": "Licinius 097",
     "chapters": [
       {
         "start": 372,
@@ -2879,7 +2895,8 @@
   {
     "lemma": "Licinius 98",
     "previous": "Licinius 97",
-    "next": "Licinius 99",
+    "next": "Licinius 99ff.",
+    "sort_key": "Licinius 098",
     "chapters": [
       {
         "start": 372,
@@ -2889,9 +2906,10 @@
     ]
   },
   {
-    "lemma": "Licinius 99",
+    "lemma": "Licinius 99ff.",
     "previous": "Licinius 98",
-    "next": "Licinius 99ff.",
+    "next": "Licinius 99",
+    "sort_key": "Licinius 099ff.",
     "chapters": [
       {
         "start": 372,
@@ -2901,9 +2919,10 @@
     ]
   },
   {
-    "lemma": "Licinius 99ff.",
-    "previous": "Licinius 99",
+    "lemma": "Licinius 99",
+    "previous": "Licinius 99ff.",
     "next": "Licinius 100",
+    "sort_key": "Licinius 099",
     "chapters": [
       {
         "start": 372,
@@ -2914,7 +2933,7 @@
   },
   {
     "lemma": "Licinius 100",
-    "previous": "Licinius 99ff.",
+    "previous": "Licinius 99",
     "next": "Licinius 101",
     "chapters": [
       {
@@ -2964,6 +2983,7 @@
     "lemma": "Licinius 104",
     "previous": "Licinius 103",
     "next": "Licinius 105",
+    "wp_link": "w:de:Lucius Licinius Lucullus",
     "chapters": [
       {
         "start": 376,
@@ -2976,6 +2996,7 @@
     "lemma": "Licinius 105",
     "previous": "Licinius 104",
     "next": "Licinius 106",
+    "redirect": true,
     "chapters": [
       {
         "start": 414,
@@ -4329,6 +4350,7 @@
     "lemma": "Licitatio",
     "previous": "Licinus 5",
     "next": "Licium 1",
+    "wp_link": "w:de:Auktion",
     "chapters": [
       {
         "start": 505,
@@ -4750,7 +4772,7 @@
   {
     "lemma": "Likatioi",
     "previous": "Ligynae",
-    "next": "Likattioi",
+    "next": "Λικάττιοι",
     "chapters": [
       {
         "start": 536,
@@ -4759,9 +4781,9 @@
     ]
   },
   {
-    "lemma": "Likattioi",
+    "lemma": "Λικάττιοι",
     "previous": "Likatioi",
-    "next": "Likias",
+    "next": "Λικίας",
     "chapters": [
       {
         "start": 536,
@@ -4770,9 +4792,11 @@
     ]
   },
   {
-    "lemma": "Likias",
-    "previous": "Likattioi",
+    "lemma": "Λικίας",
+    "previous": "Λικάττιοι",
     "next": "Likineia",
+    "sort_key": "Likias",
+    "wp_link": "w:de:Lech",
     "chapters": [
       {
         "start": 536,
@@ -4783,7 +4807,7 @@
   },
   {
     "lemma": "Likineia",
-    "previous": "Likias",
+    "previous": "Λικίας",
     "next": "Likmaie",
     "chapters": [
       {
@@ -7757,6 +7781,7 @@
     "lemma": "Livius 37",
     "previous": "Livius 36",
     "next": "Livius 38",
+    "wp_link": "w:de:Livia Drusilla",
     "chapters": [
       {
         "start": 900,
@@ -7769,6 +7794,7 @@
     "lemma": "Livius 38",
     "previous": "Livius 37",
     "next": "Livius 39",
+    "wp_link": "w:de:Livilla",
     "chapters": [
       {
         "start": 924,
@@ -8370,6 +8396,7 @@
     "lemma": "Löffel",
     "previous": "Loesius 2",
     "next": "Löwe",
+    "sort_key": "Loeve",
     "chapters": [
       {
         "start": 965,
@@ -8786,35 +8813,35 @@
   {
     "lemma": "Lokris 1",
     "previous": "Lokrion",
-    "next": "Litra",
+    "next": "Lokris 2",
     "chapters": [
       {
         "start": 1135,
-        "end": 1135,
+        "end": 1288,
+        "author": "Oldfather"
+      }
+    ]
+  },
+  {
+    "lemma": "Lokris 2",
+    "previous": "Lokris 1",
+    "next": "Litra",
+    "chapters": [
+      {
+        "start": 1288,
+        "end": 1288,
         "author": "Oldfather"
       }
     ]
   },
   {
     "lemma": "Litra",
-    "previous": "Lokris 1",
-    "next": "Lokris 2",
+    "previous": "Lokris 2",
     "chapters": [
       {
         "start": 1287,
-        "end": 1287,
-        "author": "Regling"
-      }
-    ]
-  },
-  {
-    "lemma": "Lokris 2",
-    "previous": "Litra",
-    "chapters": [
-      {
-        "start": 1288,
         "end": 1288,
-        "author": "Oldfather"
+        "author": "Regling"
       }
     ]
   }

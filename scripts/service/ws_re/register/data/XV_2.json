@@ -338,7 +338,7 @@
   {
     "lemma": "Metallon",
     "previous": "Metallinum",
-    "next": "Metallos 1",
+    "next": "Μέταλλος 1",
     "chapters": [
       {
         "start": 1323,
@@ -348,9 +348,10 @@
     ]
   },
   {
-    "lemma": "Metallos 1",
+    "lemma": "Μέταλλος 1",
     "previous": "Metallon",
-    "next": "Metallos 2",
+    "next": "Μέταλλος 2",
+    "sort_key": "Metallos 1",
     "chapters": [
       {
         "start": 1323,
@@ -360,8 +361,8 @@
     ]
   },
   {
-    "lemma": "Metallos 2",
-    "previous": "Metallos 1",
+    "lemma": "Μέταλλος 2",
+    "previous": "Μέταλλος 1",
     "next": "Metambala",
     "chapters": [
       {
@@ -372,7 +373,7 @@
   },
   {
     "lemma": "Metambala",
-    "previous": "Metallos 2",
+    "previous": "Μέταλλος 2",
     "next": "Metameleia",
     "chapters": [
       {
@@ -551,7 +552,7 @@
   {
     "lemma": "Metarchios",
     "previous": "Metapontum",
-    "next": "Metaris eischysis",
+    "next": "Μεταρὶς εἴσχυσις",
     "chapters": [
       {
         "start": 1368,
@@ -561,9 +562,10 @@
     ]
   },
   {
-    "lemma": "Metaris eischysis",
+    "lemma": "Μεταρὶς εἴσχυσις",
     "previous": "Metarchios",
     "next": "Metas",
+    "sort_key": "Metarisei",
     "chapters": [
       {
         "start": 1368,
@@ -574,7 +576,7 @@
   },
   {
     "lemma": "Metas",
-    "previous": "Metaris eischysis",
+    "previous": "Μεταρὶς εἴσχυσις",
     "next": "Metasoris",
     "chapters": [
       {
@@ -1052,7 +1054,7 @@
   {
     "lemma": "Methydrion 2",
     "previous": "Methydrion 1",
-    "next": "Methylion",
+    "next": "Μεθύλιον",
     "chapters": [
       {
         "start": 1391,
@@ -1062,7 +1064,7 @@
     ]
   },
   {
-    "lemma": "Methylion",
+    "lemma": "Μεθύλιον",
     "previous": "Methydrion 2",
     "next": "Methymna",
     "chapters": [
@@ -1074,7 +1076,7 @@
   },
   {
     "lemma": "Methymna",
-    "previous": "Methylion",
+    "previous": "Μεθύλιον",
     "next": "Methymnaios",
     "chapters": [
       {
@@ -1209,6 +1211,7 @@
     "lemma": "Metilius 2",
     "previous": "Metilius 1",
     "next": "Metilius 3",
+    "sort_key": "Metilius 02",
     "chapters": [
       {
         "start": 1397,
@@ -1221,6 +1224,7 @@
     "lemma": "Metilius 3",
     "previous": "Metilius 2",
     "next": "Metilius 4",
+    "sort_key": "Metilius 03",
     "chapters": [
       {
         "start": 1398,
@@ -1245,6 +1249,7 @@
     "lemma": "Metilius 5",
     "previous": "Metilius 4",
     "next": "Metilius 6",
+    "sort_key": "Metilius 05",
     "chapters": [
       {
         "start": 1398,
@@ -1257,6 +1262,7 @@
     "lemma": "Metilius 6",
     "previous": "Metilius 5",
     "next": "Metilius 7",
+    "sort_key": "Metilius 06",
     "chapters": [
       {
         "start": 1398,
@@ -1269,6 +1275,7 @@
     "lemma": "Metilius 7",
     "previous": "Metilius 6",
     "next": "Metilius 8",
+    "sort_key": "Metilius 07",
     "chapters": [
       {
         "start": 1398,
@@ -5627,6 +5634,7 @@
     "lemma": "Miltiades 5",
     "previous": "Miltiades 4",
     "next": "Miltiades 6",
+    "sort_key": "Miltiades 05",
     "chapters": [
       {
         "start": 1705,
@@ -5639,6 +5647,7 @@
     "lemma": "Miltiades 6",
     "previous": "Miltiades 5",
     "next": "Miltiades 7",
+    "sort_key": "Miltiades 06",
     "chapters": [
       {
         "start": 1705,
@@ -5675,6 +5684,7 @@
     "lemma": "Miltiades 9",
     "previous": "Miltiades 8",
     "next": "Miltiades 10",
+    "sort_key": "Miltiades 09",
     "chapters": [
       {
         "start": 1705,
@@ -6906,6 +6916,7 @@
     "lemma": "Minicius 5",
     "previous": "Minicius 4",
     "next": "Minicius 6",
+    "sort_key": "Minicius 05",
     "chapters": [
       {
         "start": 1810,
@@ -6930,6 +6941,7 @@
     "lemma": "Minicius 7",
     "previous": "Minicius 6",
     "next": "Minicius 8",
+    "sort_key": "Minicius 07",
     "chapters": [
       {
         "start": 1811,
@@ -8788,7 +8800,7 @@
   {
     "lemma": "Minuus",
     "previous": "Minutulus",
-    "next": "Minya 1",
+    "next": "Μινύα 1",
     "chapters": [
       {
         "start": 2009,
@@ -8798,9 +8810,10 @@
     ]
   },
   {
-    "lemma": "Minya 1",
+    "lemma": "Μινύα 1",
     "previous": "Minuus",
-    "next": "Minya 2",
+    "next": "Μινύα 2",
+    "sort_key": "Minya 1",
     "chapters": [
       {
         "start": 2010,
@@ -8810,8 +8823,8 @@
     ]
   },
   {
-    "lemma": "Minya 2",
-    "previous": "Minya 1",
+    "lemma": "Μινύα 2",
+    "previous": "Μινύα 1",
     "next": "Minyaden",
     "chapters": [
       {
@@ -8823,7 +8836,7 @@
   },
   {
     "lemma": "Minyaden",
-    "previous": "Minya 2",
+    "previous": "Μινύα 2",
     "next": "Minyas 1",
     "chapters": [
       {
@@ -9001,7 +9014,7 @@
   {
     "lemma": "Mirones",
     "previous": "Mirocles",
-    "next": "Mirrada",
+    "next": "Μιρράδα",
     "chapters": [
       {
         "start": 2029,
@@ -9011,9 +9024,9 @@
     ]
   },
   {
-    "lemma": "Mirrada",
+    "lemma": "Μιρράδα",
     "previous": "Mirones",
-    "next": "Mirran",
+    "next": "Μιρράν",
     "chapters": [
       {
         "start": 2029,
@@ -9022,9 +9035,10 @@
     ]
   },
   {
-    "lemma": "Mirran",
-    "previous": "Mirrada",
+    "lemma": "Μιρράν",
+    "previous": "Μιρράδα",
     "next": "Mirrhanes",
+    "sort_key": "Mirran",
     "chapters": [
       {
         "start": 2029,
@@ -9035,7 +9049,7 @@
   },
   {
     "lemma": "Mirrhanes",
-    "previous": "Mirran",
+    "previous": "Μιρράν",
     "next": "Mirus",
     "chapters": [
       {
@@ -10052,6 +10066,7 @@
     "lemma": "Mithridates 1",
     "previous": "Mithres",
     "next": "Mithridates 2",
+    "sort_key": "Mithridates 01",
     "chapters": [
       {
         "start": 2157,
@@ -10076,6 +10091,7 @@
     "lemma": "Mithridates 3",
     "previous": "Mithridates 2",
     "next": "Mithridates 4",
+    "sort_key": "Mithridates 03",
     "chapters": [
       {
         "start": 2158,
@@ -10088,6 +10104,7 @@
     "lemma": "Mithridates 4",
     "previous": "Mithridates 3",
     "next": "Mithridates 5",
+    "sort_key": "Mithridates 04",
     "chapters": [
       {
         "start": 2158,
@@ -10100,6 +10117,7 @@
     "lemma": "Mithridates 5",
     "previous": "Mithridates 4",
     "next": "Mithridates 6",
+    "sort_key": "Mithridates 05",
     "chapters": [
       {
         "start": 2158,
@@ -10112,6 +10130,7 @@
     "lemma": "Mithridates 6",
     "previous": "Mithridates 5",
     "next": "Mithridates 7",
+    "sort_key": "Mithridates 06",
     "chapters": [
       {
         "start": 2158,
@@ -10124,6 +10143,8 @@
     "lemma": "Mithridates 7",
     "previous": "Mithridates 6",
     "next": "Mithridates 8",
+    "sort_key": "Mithridates 07",
+    "wp_link": "w:de:Mithridates I. (Pontos)",
     "chapters": [
       {
         "start": 2158,
@@ -10136,6 +10157,8 @@
     "lemma": "Mithridates 8",
     "previous": "Mithridates 7",
     "next": "Mithridates 9",
+    "sort_key": "Mithridates 08",
+    "wp_link": "w:de:Mithridates II. (Pontos)",
     "chapters": [
       {
         "start": 2160,
@@ -10148,6 +10171,7 @@
     "lemma": "Mithridates 9",
     "previous": "Mithridates 8",
     "next": "Mithridates 10",
+    "sort_key": "Mithridates 09",
     "chapters": [
       {
         "start": 2161,
@@ -10160,6 +10184,7 @@
     "lemma": "Mithridates 10",
     "previous": "Mithridates 9",
     "next": "Mithridates 11",
+    "wp_link": "w:de:Mithridates IV. (Pontos)",
     "chapters": [
       {
         "start": 2161,
@@ -10172,6 +10197,7 @@
     "lemma": "Mithridates 11",
     "previous": "Mithridates 10",
     "next": "Mithridates 12",
+    "wp_link": "w:de:Mithridates V. (Pontos)",
     "chapters": [
       {
         "start": 2162,

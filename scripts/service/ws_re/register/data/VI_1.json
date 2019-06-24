@@ -1,7 +1,9 @@
 [
   {
     "lemma": "Ephoros 1",
+    "previous": null,
     "next": "Ephoros 2",
+    "wp_link": "w:de:Ephoros von Kyme",
     "chapters": [
       {
         "start": 1,
@@ -1477,7 +1479,7 @@
   {
     "lemma": "Epigramm",
     "previous": "Epigonos 8",
-    "next": "Epigrapheis",
+    "next": "Ἐπιγραφεῖς",
     "chapters": [
       {
         "start": 71,
@@ -1487,7 +1489,7 @@
     ]
   },
   {
-    "lemma": "Epigrapheis",
+    "lemma": "Ἐπιγραφεῖς",
     "previous": "Epigramm",
     "next": "Epikairos",
     "chapters": [
@@ -1500,7 +1502,7 @@
   },
   {
     "lemma": "Epikairos",
-    "previous": "Epigrapheis",
+    "previous": "Ἐπιγραφεῖς",
     "next": "Epikarpios",
     "chapters": [
       {
@@ -3303,6 +3305,7 @@
     "lemma": "Epiphanios 2",
     "previous": "Epiphanios 1",
     "next": "Epiphanios 3",
+    "sort_key": "Epiphanios 02",
     "chapters": [
       {
         "start": 193,
@@ -3315,6 +3318,8 @@
     "lemma": "Epiphanios 3",
     "previous": "Epiphanios 2",
     "next": "Epiphanios 4",
+    "sort_key": "Epiphanios 03",
+    "wp_link": "w:de:Epiphanius von Salamis",
     "chapters": [
       {
         "start": 193,
@@ -3341,6 +3346,8 @@
     "lemma": "Epiphanios 5",
     "previous": "Epiphanios 4",
     "next": "Epiphanios 6",
+    "sort_key": "Epiphanios 05",
+    "wp_link": "w:de:Epiphanios Scholastikos",
     "chapters": [
       {
         "start": 195,
@@ -3366,6 +3373,7 @@
     "lemma": "Epiphanios 7",
     "previous": "Epiphanios 6",
     "next": "Epiphanios 8",
+    "sort_key": "Epiphanios 07",
     "chapters": [
       {
         "start": 195,
@@ -3413,7 +3421,7 @@
   {
     "lemma": "Epiphanios 11",
     "previous": "Epiphanios 10",
-    "next": "Epiphora",
+    "next": "Ἐπιφορά",
     "chapters": [
       {
         "start": 196,
@@ -3423,7 +3431,7 @@
     ]
   },
   {
-    "lemma": "Epiphora",
+    "lemma": "Ἐπιφορά",
     "previous": "Epiphanios 11",
     "next": "Epiphrades",
     "chapters": [
@@ -3435,7 +3443,7 @@
   },
   {
     "lemma": "Epiphrades",
-    "previous": "Epiphora",
+    "previous": "Ἐπιφορά",
     "next": "Epiphron",
     "chapters": [
       {
@@ -4897,7 +4905,8 @@
   {
     "lemma": "Eporedia",
     "previous": "Epora",
-    "next": "Eporedorix 1",
+    "next": "Eporedorix",
+    "wp_link": "w:de:Ivrea",
     "chapters": [
       {
         "start": 249,
@@ -4907,8 +4916,20 @@
     ]
   },
   {
-    "lemma": "Eporedorix 1",
+    "lemma": "Eporedorix",
     "previous": "Eporedia",
+    "next": "Eporedorix 1",
+    "chapters": [
+      {
+        "start": 250,
+        "end": 250,
+        "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Eporedorix 1",
+    "previous": "Eporedorix",
     "next": "Eporedorix 2",
     "chapters": [
       {
@@ -4957,7 +4978,8 @@
   {
     "lemma": "Epossium",
     "previous": "Eposognatus",
-    "next": "Epostrakismos",
+    "next": "Ἐποστρακισμός",
+    "wp_link": "w:de:Carignan (Ardennes)",
     "chapters": [
       {
         "start": 251,
@@ -4967,9 +4989,11 @@
     ]
   },
   {
-    "lemma": "Epostrakismos",
+    "lemma": "Ἐποστρακισμός",
     "previous": "Epossium",
-    "next": "Epotis",
+    "next": "Ἐπωτίς",
+    "sort_key": "Epostrakismos",
+    "wp_link": "w:de:Steinehüpfen",
     "chapters": [
       {
         "start": 251,
@@ -4979,9 +5003,11 @@
     ]
   },
   {
-    "lemma": "Epotis",
-    "previous": "Epostrakismos",
+    "lemma": "Ἐπωτίς",
+    "previous": "Ἐποστρακισμός",
     "next": "Epotius pagus",
+    "sort_key": "Epotis",
+    "wp_link": "w:de:Schiffe der Antike",
     "chapters": [
       {
         "start": 251,
@@ -4992,7 +5018,7 @@
   },
   {
     "lemma": "Epotius pagus",
-    "previous": "Epotis",
+    "previous": "Ἐπωτίς",
     "next": "Eppich",
     "chapters": [
       {
@@ -5006,6 +5032,7 @@
     "lemma": "Eppich",
     "previous": "Epotius pagus",
     "next": "Eppius 1",
+    "wp_link": "w:de:Echter Sellerie",
     "chapters": [
       {
         "start": 252,
@@ -6390,7 +6417,7 @@
   {
     "lemma": "Erebidae",
     "previous": "Erditse",
-    "next": "Erebinthon oikos",
+    "next": "Ἐρεβίνθων οἶκος",
     "chapters": [
       {
         "start": 402,
@@ -6400,20 +6427,14 @@
     ]
   },
   {
-    "lemma": "Erebinthon oikos",
+    "lemma": "Ἐρεβίνθων οἶκος",
     "previous": "Erebidae",
     "next": "Erebinthos",
-    "chapters": [
-      {
-        "start": 402,
-        "end": 402,
-        "author": "Benzinger"
-      }
-    ]
+    "sort_key": "Erebinthon"
   },
   {
     "lemma": "Erebinthos",
-    "previous": "Erebinthon oikos",
+    "previous": "Ἐρεβίνθων οἶκος",
     "next": "Erebos",
     "chapters": [
       {
@@ -10087,7 +10108,7 @@
   {
     "lemma": "Erythras 4",
     "previous": "Erythras 3",
-    "next": "Erythra thalassa",
+    "next": "Ἐρυθρὰ θάλασσα",
     "chapters": [
       {
         "start": 592,
@@ -10097,20 +10118,15 @@
     ]
   },
   {
-    "lemma": "Erythra thalassa",
+    "lemma": "Ἐρυθρὰ θάλασσα",
     "previous": "Erythras 4",
     "next": "Erythrinos",
-    "chapters": [
-      {
-        "start": 592,
-        "end": 601,
-        "author": "Berger"
-      }
-    ]
+    "sort_key": "Erythrathalassa",
+    "wp_link": "w:de:Rotes Meer"
   },
   {
     "lemma": "Erythrinos",
-    "previous": "Erythra thalassa",
+    "previous": "Ἐρυθρὰ θάλασσα",
     "next": "Erythrios 1",
     "chapters": [
       {
@@ -12851,7 +12867,7 @@
   {
     "lemma": "Euandriana",
     "previous": "Euandre",
-    "next": "Euandrias agon",
+    "next": "Εὐανδρίας ἀγών",
     "chapters": [
       {
         "start": 839,
@@ -12861,7 +12877,7 @@
     ]
   },
   {
-    "lemma": "Euandrias agon",
+    "lemma": "Εὐανδρίας ἀγών",
     "previous": "Euandriana",
     "next": "Euandridas",
     "chapters": [
@@ -12874,7 +12890,7 @@
   },
   {
     "lemma": "Euandridas",
-    "previous": "Euandrias agon",
+    "previous": "Εὐανδρίας ἀγών",
     "next": "Euandros 1",
     "chapters": [
       {
@@ -12888,6 +12904,7 @@
     "lemma": "Euandros 1",
     "previous": "Euandridas",
     "next": "Euandros 2",
+    "sort_key": "Euandros 01",
     "chapters": [
       {
         "start": 839,
@@ -12900,6 +12917,7 @@
     "lemma": "Euandros 2",
     "previous": "Euandros 1",
     "next": "Euandros 3",
+    "sort_key": "Euandros 02",
     "chapters": [
       {
         "start": 842,
@@ -12912,6 +12930,7 @@
     "lemma": "Euandros 3",
     "previous": "Euandros 2",
     "next": "Euandros 4",
+    "sort_key": "Euandros 03",
     "chapters": [
       {
         "start": 842,
@@ -12924,6 +12943,7 @@
     "lemma": "Euandros 4",
     "previous": "Euandros 3",
     "next": "Euandros 5",
+    "sort_key": "Euandros 04",
     "chapters": [
       {
         "start": 842,
@@ -12936,6 +12956,7 @@
     "lemma": "Euandros 5",
     "previous": "Euandros 4",
     "next": "Euandros 6",
+    "sort_key": "Euandros 05",
     "chapters": [
       {
         "start": 842,
@@ -12948,6 +12969,7 @@
     "lemma": "Euandros 6",
     "previous": "Euandros 5",
     "next": "Euandros 7",
+    "sort_key": "Euandros 06",
     "chapters": [
       {
         "start": 842,
@@ -12960,6 +12982,7 @@
     "lemma": "Euandros 7",
     "previous": "Euandros 6",
     "next": "Euandros 8",
+    "sort_key": "Euandros 07",
     "chapters": [
       {
         "start": 842,
@@ -12972,6 +12995,7 @@
     "lemma": "Euandros 8",
     "previous": "Euandros 7",
     "next": "Euandros 9",
+    "sort_key": "Euandros 08",
     "chapters": [
       {
         "start": 842,
@@ -14066,7 +14090,7 @@
   {
     "lemma": "Euboiskos",
     "previous": "Eubois",
-    "next": "Eubosia",
+    "next": "Euboisia",
     "chapters": [
       {
         "start": 858,
@@ -14076,7 +14100,7 @@
     ]
   },
   {
-    "lemma": "Eubosia",
+    "lemma": "Euboisia",
     "previous": "Euboiskos",
     "next": "Eubote",
     "chapters": [
@@ -14089,7 +14113,7 @@
   },
   {
     "lemma": "Eubote",
-    "previous": "Eubosia",
+    "previous": "Euboisia",
     "next": "Eubule 1",
     "chapters": [
       {
@@ -15831,6 +15855,7 @@
     "lemma": "Eudoros 2",
     "previous": "Eudoros 1",
     "next": "Eudoros 3",
+    "sort_key": "Eudoros 02",
     "chapters": [
       {
         "start": 915,
@@ -15843,6 +15868,7 @@
     "lemma": "Eudoros 3",
     "previous": "Eudoros 2",
     "next": "Eudoros 4",
+    "sort_key": "Eudoros 03",
     "chapters": [
       {
         "start": 915,
@@ -15855,6 +15881,7 @@
     "lemma": "Eudoros 4",
     "previous": "Eudoros 3",
     "next": "Eudoros 5",
+    "sort_key": "Eudoros 04",
     "chapters": [
       {
         "start": 915,
@@ -15867,6 +15894,7 @@
     "lemma": "Eudoros 5",
     "previous": "Eudoros 4",
     "next": "Eudoros 6",
+    "sort_key": "Eudoros 05",
     "chapters": [
       {
         "start": 915,
@@ -15879,6 +15907,7 @@
     "lemma": "Eudoros 6",
     "previous": "Eudoros 5",
     "next": "Eudoros 7",
+    "sort_key": "Eudoros 06",
     "chapters": [
       {
         "start": 915,
@@ -15891,6 +15920,7 @@
     "lemma": "Eudoros 7",
     "previous": "Eudoros 6",
     "next": "Eudoros 8",
+    "sort_key": "Eudoros 07",
     "chapters": [
       {
         "start": 915,
@@ -15903,6 +15933,7 @@
     "lemma": "Eudoros 8",
     "previous": "Eudoros 7",
     "next": "Eudoros 9",
+    "sort_key": "Eudoros 08",
     "chapters": [
       {
         "start": 915,
@@ -15915,6 +15946,7 @@
     "lemma": "Eudoros 9",
     "previous": "Eudoros 8",
     "next": "Eudoros 10",
+    "sort_key": "Eudoros 09",
     "chapters": [
       {
         "start": 915,
@@ -15989,6 +16021,7 @@
     "lemma": "Eudoxia 2",
     "previous": "Eudoxia 1",
     "next": "Eudoxias",
+    "wp_link": "w:de:Licinia Eudoxia",
     "chapters": [
       {
         "start": 925,
@@ -17162,6 +17195,7 @@
     "lemma": "Eugenius 1",
     "previous": "Eugenitor",
     "next": "Eugenius 2",
+    "sort_key": "Eugenius 01",
     "chapters": [
       {
         "start": 986,
@@ -17174,6 +17208,7 @@
     "lemma": "Eugenius 2",
     "previous": "Eugenius 1",
     "next": "Eugenius 3",
+    "sort_key": "Eugenius 02",
     "chapters": [
       {
         "start": 986,
@@ -17186,6 +17221,7 @@
     "lemma": "Eugenius 3",
     "previous": "Eugenius 2",
     "next": "Eugenius 4",
+    "sort_key": "Eugenius 03",
     "chapters": [
       {
         "start": 986,
@@ -17198,6 +17234,7 @@
     "lemma": "Eugenius 4",
     "previous": "Eugenius 3",
     "next": "Eugenius 5",
+    "sort_key": "Eugenius 04",
     "chapters": [
       {
         "start": 986,
@@ -17210,6 +17247,7 @@
     "lemma": "Eugenius 5",
     "previous": "Eugenius 4",
     "next": "Eugenius 6",
+    "sort_key": "Eugenius 05",
     "wp_link": "w:de:Eugenius",
     "chapters": [
       {
@@ -17223,6 +17261,7 @@
     "lemma": "Eugenius 6",
     "previous": "Eugenius 5",
     "next": "Eugenius 7",
+    "sort_key": "Eugenius 06",
     "chapters": [
       {
         "start": 986,
@@ -17235,6 +17274,7 @@
     "lemma": "Eugenius 7",
     "previous": "Eugenius 6",
     "next": "Eugenius 8",
+    "sort_key": "Eugenius 07",
     "chapters": [
       {
         "start": 986,
@@ -17247,6 +17287,7 @@
     "lemma": "Eugenius 8",
     "previous": "Eugenius 7",
     "next": "Eugenius 9",
+    "sort_key": "Eugenius 08",
     "chapters": [
       {
         "start": 986,
@@ -17259,6 +17300,7 @@
     "lemma": "Eugenius 9",
     "previous": "Eugenius 8",
     "next": "Eugenius 10",
+    "sort_key": "Eugenius 09",
     "chapters": [
       {
         "start": 987,
@@ -17343,6 +17385,7 @@
     "lemma": "Evgoni",
     "previous": "Eugnotos",
     "next": "Eugrammimus",
+    "sort_key": "Eugoni",
     "chapters": [
       {
         "start": 990,
@@ -19890,6 +19933,7 @@
     "lemma": "Eumenides",
     "previous": "Eumenetica regio",
     "next": "Eumenis",
+    "redirect": true,
     "chapters": [
       {
         "start": 1105,
@@ -20225,6 +20269,7 @@
     "lemma": "Euneike",
     "previous": "Eune",
     "next": "Euneus",
+    "wp_link": "w:de:Euneike",
     "chapters": [
       {
         "start": 1127,
@@ -20261,6 +20306,7 @@
     "lemma": "Eunike 1",
     "previous": "Eunias nemus",
     "next": "Eunike 2",
+    "redirect": "Euneike",
     "chapters": [
       {
         "start": 1128,
@@ -20369,6 +20415,7 @@
     "lemma": "Eunoë 2",
     "previous": "Eunoë 1",
     "next": "Eunoidas",
+    "wp_link": "w:de:Eunoë (Königin von Mauretanien)",
     "chapters": [
       {
         "start": 1128,
@@ -21889,7 +21936,7 @@
   {
     "lemma": "Euphorbion",
     "previous": "Euphiton",
-    "next": "Euphorbion 2",
+    "next": "Εὐφόρβιον",
     "chapters": [
       {
         "start": 1170,
@@ -21899,9 +21946,11 @@
     ]
   },
   {
-    "lemma": "Euphorbion 2",
+    "lemma": "Εὐφόρβιον",
     "previous": "Euphorbion",
     "next": "Euphorbos 1",
+    "sort_key": "Euphorbion",
+    "wp_link": "w:de:Euphorbia",
     "chapters": [
       {
         "start": 1171,
@@ -21912,8 +21961,9 @@
   },
   {
     "lemma": "Euphorbos 1",
-    "previous": "Euphorbion 2",
+    "previous": "Εὐφόρβιον",
     "next": "Euphorbos 2",
+    "wp_link": "w:de:Euphorbos",
     "chapters": [
       {
         "start": 1173,
@@ -21962,6 +22012,7 @@
     "lemma": "Euphorbos 5",
     "previous": "Euphorbos 4",
     "next": "Euphorbos 6",
+    "wp_link": "w:de:Euphorbus",
     "chapters": [
       {
         "start": 1173,
@@ -22010,6 +22061,7 @@
     "lemma": "Euphorion 3",
     "previous": "Euphorion 2",
     "next": "Euphorion 4",
+    "wp_link": "w:de:Euphorion (Tragödiendichter)",
     "chapters": [
       {
         "start": 1174,
@@ -22022,6 +22074,7 @@
     "lemma": "Euphorion 4",
     "previous": "Euphorion 3",
     "next": "Euphorion 5",
+    "wp_link": "w:de:Euphorion (Autor)",
     "chapters": [
       {
         "start": 1174,
@@ -22202,6 +22255,7 @@
     "lemma": "Euphranor 8",
     "previous": "Euphranor 7",
     "next": "Euphranta 1",
+    "wp_link": "w:de:Euphranor vom Isthmos",
     "chapters": [
       {
         "start": 1191,
@@ -22226,6 +22280,7 @@
     "lemma": "Euphranta 2",
     "previous": "Euphranta 1",
     "next": "Euphrantides",
+    "redirect": "Bethlehem",
     "chapters": [
       {
         "start": 1194,
@@ -23282,6 +23337,8 @@
     "lemma": "Euripides 4",
     "previous": "Euripides 3",
     "next": "Euripides 5",
+    "wp_link": "w:de:Euripides",
+    "ws_link": "s:de:Euripides",
     "chapters": [
       {
         "start": 1242,
@@ -23606,6 +23663,7 @@
     "lemma": "Europos 6",
     "previous": "Europos 5",
     "next": "Europos 7",
+    "wp_link": "w:de:Karkemiš",
     "chapters": [
       {
         "start": 1310,
@@ -23930,6 +23988,7 @@
     "lemma": "Euryalos 7",
     "previous": "Euryalos 6",
     "next": "Euryalos 8",
+    "sort_key": "Euryalos 07",
     "chapters": [
       {
         "start": 1317,
@@ -27205,6 +27264,7 @@
     "lemma": "Eusebios 24",
     "previous": "Eusebios 23",
     "next": "Eusebios 25",
+    "wp_link": "w:de:Eusebius von Caesarea",
     "chapters": [
       {
         "start": 1370,
@@ -27691,6 +27751,7 @@
     "lemma": "Eustathios 15",
     "previous": "Eustathios 14",
     "next": "Eustathios 16",
+    "redirect": true,
     "chapters": [
       {
         "start": 1451,
@@ -27992,6 +28053,7 @@
     "lemma": "Euterpe",
     "previous": "Eutelion",
     "next": "Euth-",
+    "wp_link": "w:de:Euterpe",
     "chapters": [
       {
         "start": 1493,
@@ -28150,6 +28212,7 @@
     "lemma": "Euthiciani",
     "previous": "Euthias",
     "next": "Euthios",
+    "redirect": true,
     "chapters": [
       {
         "start": 1501,
@@ -28281,6 +28344,7 @@
     "lemma": "Euthydemos 1",
     "previous": "Euthydemeia",
     "next": "Euthydemos 2",
+    "sort_key": "Euthydemos 01",
     "chapters": [
       {
         "start": 1503,
@@ -28293,6 +28357,7 @@
     "lemma": "Euthydemos 2",
     "previous": "Euthydemos 1",
     "next": "Euthydemos 3",
+    "sort_key": "Euthydemos 02",
     "chapters": [
       {
         "start": 1503,
@@ -28305,6 +28370,7 @@
     "lemma": "Euthydemos 3",
     "previous": "Euthydemos 2",
     "next": "Euthydemos 4",
+    "sort_key": "Euthydemos 03",
     "chapters": [
       {
         "start": 1503,
@@ -28317,6 +28383,7 @@
     "lemma": "Euthydemos 4",
     "previous": "Euthydemos 3",
     "next": "Euthydemos 5",
+    "sort_key": "Euthydemos 04",
     "chapters": [
       {
         "start": 1503,
@@ -28329,6 +28396,7 @@
     "lemma": "Euthydemos 5",
     "previous": "Euthydemos 4",
     "next": "Euthydemos 6",
+    "sort_key": "Euthydemos 05",
     "chapters": [
       {
         "start": 1503,
@@ -28341,6 +28409,7 @@
     "lemma": "Euthydemos 6",
     "previous": "Euthydemos 5",
     "next": "Euthydemos 7",
+    "sort_key": "Euthydemos 06",
     "chapters": [
       {
         "start": 1503,
@@ -28353,6 +28422,7 @@
     "lemma": "Euthydemos 7",
     "previous": "Euthydemos 6",
     "next": "Euthydemos 8",
+    "sort_key": "Euthydemos 07",
     "chapters": [
       {
         "start": 1503,
@@ -28365,6 +28435,7 @@
     "lemma": "Euthydemos 8",
     "previous": "Euthydemos 7",
     "next": "Euthydemos 9",
+    "sort_key": "Euthydemos 08",
     "chapters": [
       {
         "start": 1503,
@@ -28377,6 +28448,7 @@
     "lemma": "Euthydemos 9",
     "previous": "Euthydemos 8",
     "next": "Euthydemos 10",
+    "sort_key": "Euthydemos 09",
     "chapters": [
       {
         "start": 1503,
@@ -28448,7 +28520,7 @@
   {
     "lemma": "Euthydemos 15",
     "previous": "Euthydemos 14",
-    "next": "Euthydikia",
+    "next": "Εὐθυδικία",
     "chapters": [
       {
         "start": 1505,
@@ -28458,7 +28530,7 @@
     ]
   },
   {
-    "lemma": "Euthydikia",
+    "lemma": "Εὐθυδικία",
     "previous": "Euthydemos 15",
     "next": "Euthydikos 1",
     "chapters": [
@@ -28471,7 +28543,7 @@
   },
   {
     "lemma": "Euthydikos 1",
-    "previous": "Euthydikia",
+    "previous": "Εὐθυδικία",
     "next": "Euthydikos 2",
     "chapters": [
       {
@@ -29251,7 +29323,9 @@
   {
     "lemma": "Eutropius 10",
     "previous": "Eutropius 9",
-    "next": "Eutropiu limen",
+    "next": "Εὐτροπίου λιμήν",
+    "wp_link": "w:de:Eutropius (Historiker)",
+    "ws_link": "s:de:Eutropius (Historiker)",
     "chapters": [
       {
         "start": 1521,
@@ -29261,9 +29335,10 @@
     ]
   },
   {
-    "lemma": "Eutropiu limen",
+    "lemma": "Εὐτροπίου λιμήν",
     "previous": "Eutropius 10",
     "next": "Eutyches 1",
+    "sort_key": "Eutropiu limen",
     "chapters": [
       {
         "start": 1527,
@@ -29274,7 +29349,7 @@
   },
   {
     "lemma": "Eutyches 1",
-    "previous": "Eutropiu limen",
+    "previous": "Εὐτροπίου λιμήν",
     "next": "Eutyches 2",
     "chapters": [
       {

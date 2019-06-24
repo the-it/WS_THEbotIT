@@ -13,7 +13,7 @@
   {
     "lemma": "Saale",
     "previous": "S...",
-    "next": "Saana",
+    "next": "Σάανα",
     "chapters": [
       {
         "start": 1297,
@@ -23,9 +23,10 @@
     ]
   },
   {
-    "lemma": "Saana",
+    "lemma": "Σάανα",
     "previous": "Saale",
     "next": "Saar, Saarburg",
+    "sort_key": "Saana",
     "chapters": [
       {
         "start": 1297,
@@ -36,7 +37,7 @@
   },
   {
     "lemma": "Saar, Saarburg",
-    "previous": "Saana",
+    "previous": "Σάανα",
     "next": "Saarnaios",
     "chapters": [
       {
@@ -253,7 +254,7 @@
   {
     "lemma": "Σαβαιῶν",
     "previous": "Σαβαῖοι βωμοί",
-    "next": "Sabaitikon stoma",
+    "next": "Σαβαϊτικὸν στόμα",
     "chapters": [
       {
         "start": 1522,
@@ -262,20 +263,14 @@
     ]
   },
   {
-    "lemma": "Sabaitikon stoma",
+    "lemma": "Σαβαϊτικὸν στόμα",
     "previous": "Σαβαιῶν",
     "next": "Sabaium",
-    "chapters": [
-      {
-        "start": 1522,
-        "end": 1523,
-        "author": "Tkáč"
-      }
-    ]
+    "sort_key": "Sabaitikon"
   },
   {
     "lemma": "Sabaium",
-    "previous": "Sabaitikon stoma",
+    "previous": "Σαβαϊτικὸν στόμα",
     "next": "Sabakchos",
     "chapters": [
       {
@@ -323,7 +318,7 @@
   {
     "lemma": "Sabaktes",
     "previous": "Sabakon",
-    "next": "Sabalaessa",
+    "next": "Σαβαλάεσσα",
     "chapters": [
       {
         "start": 1531,
@@ -333,7 +328,7 @@
     ]
   },
   {
-    "lemma": "Sabalaessa",
+    "lemma": "Σαβαλάεσσα",
     "previous": "Sabaktes",
     "next": "Σαβαλασσός",
     "chapters": [
@@ -346,7 +341,7 @@
   },
   {
     "lemma": "Σαβαλασσός",
-    "previous": "Sabalaessa",
+    "previous": "Σαβαλάεσσα",
     "next": "Sabalia",
     "sort_key": "Sabalassos",
     "chapters": [
@@ -372,7 +367,7 @@
   {
     "lemma": "Σαβαλίγγιοι",
     "previous": "Sabalia",
-    "next": "Sabana 1",
+    "next": "Σάβανα 1",
     "sort_key": "Sabalingioi",
     "chapters": [
       {
@@ -383,9 +378,9 @@
     ]
   },
   {
-    "lemma": "Sabana 1",
+    "lemma": "Σάβανα 1",
     "previous": "Σαβαλίγγιοι",
-    "next": "Sabana 2",
+    "next": "Σάβανα 2",
     "chapters": [
       {
         "start": 1532,
@@ -394,8 +389,8 @@
     ]
   },
   {
-    "lemma": "Sabana 2",
-    "previous": "Sabana 1",
+    "lemma": "Σάβανα 2",
+    "previous": "Σάβανα 1",
     "next": "Σαβανίς",
     "chapters": [
       {
@@ -407,7 +402,7 @@
   },
   {
     "lemma": "Σαβανίς",
-    "previous": "Sabana 2",
+    "previous": "Σάβανα 2",
     "next": "Sabanum",
     "sort_key": "Sabanis",
     "chapters": [
@@ -433,7 +428,8 @@
   {
     "lemma": "Sabaoth",
     "previous": "Sabanum",
-    "next": "Sabara 1",
+    "next": "Σάβαρα 1",
+    "wp_link": "w:de:Zebaot",
     "chapters": [
       {
         "start": 1533,
@@ -443,9 +439,9 @@
     ]
   },
   {
-    "lemma": "Sabara 1",
+    "lemma": "Σάβαρα 1",
     "previous": "Sabaoth",
-    "next": "Sabara 2",
+    "next": "Σάβαρα 2",
     "chapters": [
       {
         "start": 1536,
@@ -455,8 +451,8 @@
     ]
   },
   {
-    "lemma": "Sabara 2",
-    "previous": "Sabara 1",
+    "lemma": "Σάβαρα 2",
+    "previous": "Σάβαρα 1",
     "next": "Sabarai",
     "chapters": [
       {
@@ -468,7 +464,7 @@
   },
   {
     "lemma": "Sabarai",
-    "previous": "Sabara 2",
+    "previous": "Σάβαρα 2",
     "next": "Sabarbares",
     "chapters": [
       {
@@ -516,6 +512,7 @@
     "lemma": "Sabas 1",
     "previous": "Sabaria",
     "next": "Sabas 2",
+    "redirect": "Septimius 63",
     "chapters": [
       {
         "start": 1537,
@@ -728,6 +725,7 @@
     "lemma": "Sabbat",
     "previous": "Sabazios",
     "next": "Sabbatha",
+    "wp_link": "w:de:Sabbat",
     "chapters": [
       {
         "start": 1551,
@@ -739,7 +737,7 @@
   {
     "lemma": "Sabbatha",
     "previous": "Sabbat",
-    "next": "Sabbatikos potamos",
+    "next": "Σαββατικὸς ποταμός",
     "chapters": [
       {
         "start": 1557,
@@ -749,9 +747,10 @@
     ]
   },
   {
-    "lemma": "Sabbatikos potamos",
+    "lemma": "Σαββατικὸς ποταμός",
     "previous": "Sabbatha",
     "next": "Sabbatistai",
+    "sort_key": "Sabbatikos potamos",
     "chapters": [
       {
         "start": 1560,
@@ -762,7 +761,7 @@
   },
   {
     "lemma": "Sabbatistai",
-    "previous": "Sabbatikos potamos",
+    "previous": "Σαββατικὸς ποταμός",
     "next": "Sabbatius",
     "chapters": [
       {
@@ -882,6 +881,7 @@
     "lemma": "Sabellius 2",
     "previous": "Sabellius 1",
     "next": "Sabellus 1",
+    "wp_link": "w:de:Sabellius",
     "chapters": [
       {
         "start": 1567,
@@ -917,7 +917,7 @@
   {
     "lemma": "Sabeon",
     "previous": "Sabellus 2",
-    "next": "Saberidai",
+    "next": "Σαβηρίδαι",
     "chapters": [
       {
         "start": 1568,
@@ -927,9 +927,10 @@
     ]
   },
   {
-    "lemma": "Saberidai",
+    "lemma": "Σαβηρίδαι",
     "previous": "Sabeon",
     "next": "En Saberidais",
+    "sort_key": "Saberidai",
     "chapters": [
       {
         "start": 1569,
@@ -940,8 +941,9 @@
   },
   {
     "lemma": "En Saberidais",
-    "previous": "Saberidai",
+    "previous": "Σαβηρίδαι",
     "next": "Sabernius",
+    "sort_key": "Saberidais, En",
     "chapters": [
       {
         "start": 1569,
@@ -966,6 +968,7 @@
     "lemma": "Sabi",
     "previous": "Sabernius",
     "next": "Sabiacus",
+    "redirect": "Sambi regnum",
     "chapters": [
       {
         "start": 1569,
@@ -1131,6 +1134,7 @@
     "lemma": "Sabiniani",
     "previous": "Sabin(i)acus",
     "next": "Sabinianus 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1585,
@@ -1328,6 +1332,7 @@
     "lemma": "Sabinianus 16",
     "previous": "Sabinianus 15",
     "next": "Sabinilla",
+    "redirect": "Asinius 35",
     "chapters": [
       {
         "start": 1588,
@@ -1350,7 +1355,7 @@
   {
     "lemma": "Sabinillus",
     "previous": "Sabinilla",
-    "next": "Sabiniribes",
+    "next": "Σαβινίριβες",
     "chapters": [
       {
         "start": 1588,
@@ -1360,9 +1365,10 @@
     ]
   },
   {
-    "lemma": "Sabiniribes",
+    "lemma": "Σαβινίριβες",
     "previous": "Sabinillus",
     "next": "Sabinius 1",
+    "sort_key": "Sabiniribes",
     "chapters": [
       {
         "start": 1588,
@@ -1373,7 +1379,7 @@
   },
   {
     "lemma": "Sabinius 1",
-    "previous": "Sabiniribes",
+    "previous": "Σαβινίριβες",
     "next": "Sabinius 2",
     "chapters": [
       {
@@ -3673,6 +3679,7 @@
     "lemma": "Saetis",
     "previous": "Saeterrae",
     "next": "Saevates",
+    "redirect": "Sabis 2",
     "chapters": [
       {
         "start": 1727,
@@ -7200,6 +7207,7 @@
     "lemma": "Sallustius 22",
     "previous": "Sallustius 21",
     "next": "Sallustius 23",
+    "redirect": true,
     "chapters": [
       {
         "start": 1958,
@@ -8117,6 +8125,7 @@
     "lemma": "Salomo-Oden",
     "previous": "Salomo 2",
     "next": "Salomo-Psalmen",
+    "wp_link": "w:de:Oden Salomos",
     "chapters": [
       {
         "start": 1999,
@@ -8129,6 +8138,8 @@
     "lemma": "Salomo-Psalmen",
     "previous": "Salomo-Oden",
     "next": "Salon",
+    "wp_link": "w:de:Psalmen Salomos",
+    "ws_link": "s:de:Apokryphen/Psalmen Salomos",
     "chapters": [
       {
         "start": 2001,
@@ -9444,6 +9455,7 @@
     "lemma": "Salyes",
     "previous": "Salutius",
     "next": "Salynthios",
+    "redirect": "Salluvi",
     "chapters": [
       {
         "start": 2075,
@@ -9662,6 +9674,7 @@
     "lemma": "Samariter, Samaritaner",
     "previous": "Samaria",
     "next": "Samarobriva",
+    "wp_link": "w:de:Samaritaner",
     "chapters": [
       {
         "start": 2105,
@@ -9778,7 +9791,9 @@
   {
     "lemma": "Sambethe",
     "previous": "Sambatistai",
-    "next": "Sambia, Samba",
+    "next": "Sambida",
+    "wp_link": "w:de:Sibylle (Prophetin)",
+    "ws_link": "s:de:Apokryphen/Sibyllinische Orakel",
     "chapters": [
       {
         "start": 2119,
@@ -9788,20 +9803,8 @@
     ]
   },
   {
-    "lemma": "Sambia, Samba",
-    "previous": "Sambethe",
-    "next": "Sambida",
-    "chapters": [
-      {
-        "start": 2122,
-        "end": 2122,
-        "author": "Keune"
-      }
-    ]
-  },
-  {
     "lemma": "Sambida",
-    "previous": "Sambia, Samba",
+    "previous": "Sambethe",
     "next": "Sambi regnum",
     "chapters": [
       {
@@ -9814,7 +9817,7 @@
   {
     "lemma": "Sambi regnum",
     "previous": "Sambida",
-    "next": "Sambis",
+    "next": "Sambia, Samba",
     "chapters": [
       {
         "start": 2122,
@@ -9824,8 +9827,20 @@
     ]
   },
   {
-    "lemma": "Sambis",
+    "lemma": "Sambia, Samba",
     "previous": "Sambi regnum",
+    "next": "Sambis",
+    "chapters": [
+      {
+        "start": 2122,
+        "end": 2122,
+        "author": "Keune"
+      }
+    ]
+  },
+  {
+    "lemma": "Sambis",
+    "previous": "Sambia, Samba",
     "next": "Sambos 1",
     "chapters": [
       {
@@ -14124,7 +14139,8 @@
   {
     "lemma": "Sarepta",
     "previous": "Sarensis",
-    "next": "Sareptenos",
+    "next": "Σαρεπτηνός",
+    "wp_link": "w:de:Sarepta (Phönizien)",
     "chapters": [
       {
         "start": 2497,
@@ -14134,7 +14150,7 @@
     ]
   },
   {
-    "lemma": "Sareptenos",
+    "lemma": "Σαρεπτηνός",
     "previous": "Sarepta",
     "next": "Sargantha",
     "chapters": [
@@ -14147,7 +14163,7 @@
   },
   {
     "lemma": "Sargantha",
-    "previous": "Sareptenos",
+    "previous": "Σαρεπτηνός",
     "next": "Sargarausene",
     "chapters": [
       {
@@ -14420,7 +14436,7 @@
   {
     "lemma": "Sarmagana",
     "previous": "Sarlatum",
-    "next": "Sarmalia",
+    "next": "Σαρμαλία",
     "chapters": [
       {
         "start": 2542,
@@ -14429,9 +14445,10 @@
     ]
   },
   {
-    "lemma": "Sarmalia",
+    "lemma": "Σαρμαλία",
     "previous": "Sarmagana",
     "next": "Sarmatae 1",
+    "sort_key": "Sarmalia",
     "chapters": [
       {
         "start": 2542,
@@ -14442,7 +14459,7 @@
   },
   {
     "lemma": "Sarmatae 1",
-    "previous": "Sarmalia",
+    "previous": "Σαρμαλία",
     "next": "Sarmatae 2",
     "wp_link": "w:de:Sarmaten",
     "chapters": [
@@ -14469,6 +14486,7 @@
     "lemma": "Sarmategte",
     "previous": "Sarmatae 2",
     "next": "Sarmathon",
+    "redirect": "Sarmizegethusa",
     "chapters": [
       {
         "start": 2550,

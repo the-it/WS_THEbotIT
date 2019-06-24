@@ -37,10 +37,22 @@
   {
     "lemma": "Aal",
     "previous": "Something",
+    "next": "Dummy-End",
     "chapters": [
       {
         "start": 5,
         "end": 6,
+        "author": "Abel"
+      }
+    ]
+  },
+  {
+    "lemma": "Dummy-End",
+    "previous": "Aal",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 7,
         "author": "Abel"
       }
     ]

@@ -192,6 +192,7 @@
     "lemma": "Philon 56",
     "previous": "Philon 55",
     "next": "Philon 57",
+    "wp_link": "w:de:Philon von Eleusis",
     "chapters": [
       {
         "start": 56,
@@ -3971,6 +3972,7 @@
     "lemma": "Phoinix 6",
     "previous": "Phoinix 5",
     "next": "Phoinix 7",
+    "sort_key": "Phoinix 06",
     "chapters": [
       {
         "start": 423,
@@ -4569,6 +4571,7 @@
     "lemma": "Phokos 6",
     "previous": "Phokos 5",
     "next": "Phokos 7",
+    "sort_key": "Phokos 06",
     "chapters": [
       {
         "start": 501,
@@ -4581,6 +4584,7 @@
     "lemma": "Phokos 7",
     "previous": "Phokos 6",
     "next": "Phokos 8",
+    "sort_key": "Phokos 07",
     "chapters": [
       {
         "start": 502,
@@ -4593,6 +4597,7 @@
     "lemma": "Phokos 8",
     "previous": "Phokos 7",
     "next": "Phokos 9",
+    "sort_key": "Phokos 08",
     "chapters": [
       {
         "start": 502,
@@ -4605,6 +4610,7 @@
     "lemma": "Phokos 9",
     "previous": "Phokos 8",
     "next": "Phokos 10",
+    "sort_key": "Phokos 09",
     "chapters": [
       {
         "start": 502,
@@ -4616,7 +4622,7 @@
   {
     "lemma": "Phokos 10",
     "previous": "Phokos 9",
-    "next": "Phokra",
+    "next": "Φόκρα",
     "chapters": [
       {
         "start": 502,
@@ -4626,7 +4632,7 @@
     ]
   },
   {
-    "lemma": "Phokra",
+    "lemma": "Φόκρα",
     "previous": "Phokos 10",
     "next": "Phokritos",
     "chapters": [
@@ -4639,7 +4645,7 @@
   },
   {
     "lemma": "Phokritos",
-    "previous": "Phokra",
+    "previous": "Φόκρα",
     "next": "Phokus",
     "chapters": [
       {
@@ -7431,6 +7437,7 @@
     "lemma": "Phrynichos 3",
     "previous": "Phrynichos 2",
     "next": "Phrynichos 4",
+    "wp_link": "w:de:Phrynichos (Politiker)",
     "chapters": [
       {
         "start": 907,
@@ -7443,6 +7450,7 @@
     "lemma": "Phrynichos 4",
     "previous": "Phrynichos 3",
     "next": "Phrynichos 5",
+    "wp_link": "w:de:Phrynichos (Tragiker)",
     "chapters": [
       {
         "start": 911,
@@ -7455,6 +7463,7 @@
     "lemma": "Phrynichos 5",
     "previous": "Phrynichos 4",
     "next": "Phrynichos 6",
+    "wp_link": "w:de:Phrynichos (Tragiker II)",
     "chapters": [
       {
         "start": 917,
@@ -7626,7 +7635,7 @@
   {
     "lemma": "Phthas",
     "previous": "Phryxelon",
-    "next": "Phth(e)iron oros, Phthir",
+    "next": "Φθ(ε)ιρῶν ὄρος, Φθίρ",
     "chapters": [
       {
         "start": 930,
@@ -7636,21 +7645,16 @@
     ]
   },
   {
-    "lemma": "Phth(e)iron oros, Phthir",
+    "lemma": "Φθ(ε)ιρῶν ὄρος, Φθίρ",
     "previous": "Phthas",
     "next": "Phtheirophagoi",
-    "chapters": [
-      {
-        "start": 947,
-        "end": 947,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Phtheiron"
   },
   {
     "lemma": "Phtheirophagoi",
-    "previous": "Phth(e)iron oros, Phthir",
+    "previous": "Φθ(ε)ιρῶν ὄρος, Φθίρ",
     "next": "Phthemphut",
+    "sort_key": "Phtheiron",
     "chapters": [
       {
         "start": 947,
@@ -7877,7 +7881,7 @@
   {
     "lemma": "Phthora 2",
     "previous": "Phthora 1",
-    "next": "Phthouri",
+    "next": "Φθοῦρι",
     "chapters": [
       {
         "start": 964,
@@ -7887,7 +7891,7 @@
     ]
   },
   {
-    "lemma": "Phthouri",
+    "lemma": "Φθοῦρι",
     "previous": "Phthora 2",
     "next": "Phubagina",
     "chapters": [
@@ -7900,7 +7904,7 @@
   },
   {
     "lemma": "Phubagina",
-    "previous": "Phthouri",
+    "previous": "Φθοῦρι",
     "next": "Phubelis",
     "chapters": [
       {
@@ -7973,7 +7977,7 @@
   {
     "lemma": "Phulphsna",
     "previous": "Phulnice",
-    "next": "Phundusioi",
+    "next": "Φουνδούσιοι",
     "chapters": [
       {
         "start": 966,
@@ -7983,9 +7987,9 @@
     ]
   },
   {
-    "lemma": "Phundusioi",
+    "lemma": "Φουνδούσιοι",
     "previous": "Phulphsna",
-    "next": "Phunusioi",
+    "next": "Φουνούσιοι",
     "chapters": [
       {
         "start": 966,
@@ -7994,9 +7998,10 @@
     ]
   },
   {
-    "lemma": "Phunusioi",
-    "previous": "Phundusioi",
+    "lemma": "Φουνούσιοι",
+    "previous": "Φουνδούσιοι",
     "next": "Phuphagena",
+    "sort_key": "Phunusioi",
     "chapters": [
       {
         "start": 966,
@@ -8007,7 +8012,7 @@
   },
   {
     "lemma": "Phuphagena",
-    "previous": "Phunusioi",
+    "previous": "Φουνούσιοι",
     "next": "Phuphena",
     "chapters": [
       {

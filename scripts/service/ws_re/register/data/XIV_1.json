@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Lysimachos 1",
+    "previous": null,
     "next": "Lysimachos 2",
     "chapters": [
       {
@@ -14,6 +15,7 @@
     "lemma": "Lysimachos 2",
     "previous": "Lysimachos 1",
     "next": "Lysimachos 3",
+    "sort_key": "Lysimachos 02",
     "chapters": [
       {
         "start": 31,
@@ -242,7 +244,7 @@
   {
     "lemma": "Lysimachos 21",
     "previous": "Lysimachos 20",
-    "next": "Lysimeleia limne",
+    "next": "Lysimeleia Limne",
     "chapters": [
       {
         "start": 39,
@@ -257,7 +259,7 @@
     ]
   },
   {
-    "lemma": "Lysimeleia limne",
+    "lemma": "Lysimeleia Limne",
     "previous": "Lysimachos 21",
     "next": "Lysimeles",
     "chapters": [
@@ -270,7 +272,7 @@
   },
   {
     "lemma": "Lysimeles",
-    "previous": "Lysimeleia limne",
+    "previous": "Lysimeleia Limne",
     "next": "Lysimenes 1",
     "chapters": [
       {
@@ -413,7 +415,7 @@
   {
     "lemma": "Lysippe",
     "previous": "Lysiponos",
-    "next": "Lysippe 1",
+    "next": "Lysippe 1-6",
     "chapters": [
       {
         "start": 42,
@@ -423,9 +425,20 @@
     ]
   },
   {
-    "lemma": "Lysippe 1",
+    "lemma": "Lysippe 1-6",
     "previous": "Lysippe",
-    "next": "Lysippe 1-6",
+    "next": "Lysippe 1",
+    "chapters": [
+      {
+        "start": 43,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "lemma": "Lysippe 1",
+    "previous": "Lysippe 1-6",
+    "next": "Lysippe 2",
     "chapters": [
       {
         "start": 43,
@@ -435,19 +448,8 @@
     ]
   },
   {
-    "lemma": "Lysippe 1-6",
-    "previous": "Lysippe 1",
-    "next": "Lysippe 2",
-    "chapters": [
-      {
-        "start": 43,
-        "end": 43
-      }
-    ]
-  },
-  {
     "lemma": "Lysippe 2",
-    "previous": "Lysippe 1-6",
+    "previous": "Lysippe 1",
     "next": "Lysippe 3",
     "chapters": [
       {
@@ -545,6 +547,7 @@
     "lemma": "Lysippos 3",
     "previous": "Lysippos 2",
     "next": "Lysippos 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 46,
@@ -6765,6 +6768,7 @@
     "lemma": "Mago 2",
     "previous": "Mago 1",
     "next": "Mago 3",
+    "wp_link": "w:de:Mago I",
     "chapters": [
       {
         "start": 495,
@@ -9100,7 +9104,7 @@
   {
     "lemma": "Makedonia",
     "previous": "Makedones Hyrcani",
-    "next": "Makedonike thalassa",
+    "next": "Μακεδονικὴ θάλασσα",
     "chapters": [
       {
         "start": 638,
@@ -9120,9 +9124,10 @@
     ]
   },
   {
-    "lemma": "Makedonike thalassa",
+    "lemma": "Μακεδονικὴ θάλασσα",
     "previous": "Makedonia",
     "next": "Makedonios 1",
+    "sort_key": "Makedonike thalassa",
     "chapters": [
       {
         "start": 771,
@@ -9133,7 +9138,7 @@
   },
   {
     "lemma": "Makedonios 1",
-    "previous": "Makedonike thalassa",
+    "previous": "Μακεδονικὴ θάλασσα",
     "next": "Makedonios 2",
     "chapters": [
       {

@@ -23,7 +23,6 @@
   {
     "lemma": "Achaikaros",
     "previous": "Abercius b",
-    "next": "Acilius 40a",
     "chapters": [
       {
         "start": 6,
@@ -32,8 +31,12 @@
     ]
   },
   {
+    "lemma": "Acilius 40",
+    "next": "Acilius 40a"
+  },
+  {
     "lemma": "Acilius 40a",
-    "previous": "Achaikaros",
+    "previous": "Acilius 40",
     "next": "Acilius 40b",
     "redirect": true,
     "chapters": [
@@ -82,8 +85,8 @@
   {
     "lemma": "Acilius 40e",
     "previous": "Acilius 40d",
-    "next": "Aelius 23a",
-    "redirect": true,
+    "next": "Acilius 42",
+    "redirect": "Acilius 40#Acilius 40e",
     "chapters": [
       {
         "start": 7,
@@ -92,8 +95,11 @@
     ]
   },
   {
+    "lemma": "Acilius 42",
+    "previous": "Acilius 40e"
+  },
+  {
     "lemma": "Aelius 23a",
-    "previous": "Acilius 40e",
     "next": "Aelius 26b",
     "chapters": [
       {
@@ -139,19 +145,21 @@
   {
     "lemma": "Aelius 43a",
     "previous": "Aelius 27aaa",
-    "next": "Aelius 78a",
     "chapters": [
       {
         "start": 9,
         "end": 9
       }
     ]
+  },
+  {
+    "lemma": "Aelius 76",
+    "next": "Aelius 78a"
   },
   {
     "lemma": "Aelius 78a",
-    "previous": "Aelius 43a",
-    "next": "Aelius 166a",
-    "redirect": true,
+    "previous": "Aelius 76",
+    "next": "Aelius 80a",
     "chapters": [
       {
         "start": 9,
@@ -160,8 +168,11 @@
     ]
   },
   {
+    "lemma": "Aelius 80a",
+    "previous": "Aelius 78a"
+  },
+  {
     "lemma": "Aelius 166a",
-    "previous": "Aelius 78a",
     "next": "Aemilius 3a",
     "chapters": [
       {
@@ -1246,7 +1257,6 @@
   {
     "lemma": "Baebius 7a",
     "previous": "Baebius 5a",
-    "next": "Bappo 1",
     "chapters": [
       {
         "start": 60,
@@ -1255,9 +1265,14 @@
     ]
   },
   {
+    "lemma": "Bappo",
+    "next": "Bappo 1"
+  },
+  {
     "lemma": "Bappo 1",
-    "previous": "Baebius 7a",
-    "next": "Basilia 1",
+    "previous": "Bappo",
+    "next": "Bappo 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 62,
@@ -1267,8 +1282,11 @@
     ]
   },
   {
+    "lemma": "Bappo 2",
+    "previous": "Bappo 1"
+  },
+  {
     "lemma": "Basilia 1",
-    "previous": "Bappo 1",
     "next": "Basilia 2",
     "chapters": [
       {
@@ -3520,7 +3538,6 @@
   {
     "lemma": "Kydna",
     "previous": "Kybos",
-    "next": "Kyros 6a",
     "chapters": [
       {
         "start": 148,
@@ -3529,10 +3546,13 @@
     ]
   },
   {
+    "lemma": "Kyros 6",
+    "next": "Kyros 6a"
+  },
+  {
     "lemma": "Kyros 6a",
-    "previous": "Kydna",
+    "previous": "Kyros 6",
     "next": "Kyros 6b",
-    "redirect": true,
     "chapters": [
       {
         "start": 149,

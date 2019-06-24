@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Mystagogos",
+    "previous": "Mundu",
     "next": "Mysterien",
     "wp_link": "w:de:Mystagoge",
     "chapters": [
@@ -139,7 +140,7 @@
   {
     "lemma": "Mysticus",
     "previous": "Mystichides",
-    "next": "Mystike",
+    "next": "Μυστικὴ",
     "chapters": [
       {
         "start": 1351,
@@ -149,9 +150,10 @@
     ]
   },
   {
-    "lemma": "Mystike",
+    "lemma": "Μυστικὴ",
     "previous": "Mysticus",
-    "next": "Mystile",
+    "next": "Μυστίλη",
+    "sort_key": "Mystike",
     "chapters": [
       {
         "start": 1351,
@@ -161,8 +163,8 @@
     ]
   },
   {
-    "lemma": "Mystile",
-    "previous": "Mystike",
+    "lemma": "Μυστίλη",
+    "previous": "Μυστικὴ",
     "next": "Mystipoloi",
     "redirect": true,
     "chapters": [
@@ -174,7 +176,7 @@
   },
   {
     "lemma": "Mystipoloi",
-    "previous": "Mystile",
+    "previous": "Μυστίλη",
     "next": "Mystis 1",
     "chapters": [
       {
@@ -1888,7 +1890,7 @@
   {
     "lemma": "Nagnata",
     "previous": "Nagidusa",
-    "next": "Nagur",
+    "next": "Νάγουρ",
     "redirect": true,
     "chapters": [
       {
@@ -1898,9 +1900,10 @@
     ]
   },
   {
-    "lemma": "Nagur",
+    "lemma": "Νάγουρ",
     "previous": "Nagnata",
     "next": "Nahalal",
+    "sort_key": "Nagur",
     "chapters": [
       {
         "start": 1583,
@@ -1911,7 +1914,7 @@
   },
   {
     "lemma": "Nahalal",
-    "previous": "Nagur",
+    "previous": "Νάγουρ",
     "next": "Nahanarvali",
     "redirect": true,
     "chapters": [
@@ -1961,6 +1964,8 @@
     "lemma": "Naharvali",
     "previous": "Nahartes",
     "next": "Naia 1",
+    "redirect": "Lugii",
+    "wp_link": "w:de:Nahanarvaler",
     "chapters": [
       {
         "start": 1584,
@@ -2009,7 +2014,7 @@
   {
     "lemma": "Naiades",
     "previous": "Naia 3",
-    "next": "Naiarchos",
+    "next": "Ναΐαρχος",
     "redirect": true,
     "chapters": [
       {
@@ -2019,9 +2024,10 @@
     ]
   },
   {
-    "lemma": "Naiarchos",
+    "lemma": "Ναΐαρχος",
     "previous": "Naiades",
     "next": "Naim",
+    "sort_key": "Naiarchos",
     "chapters": [
       {
         "start": 1585,
@@ -2032,7 +2038,7 @@
   },
   {
     "lemma": "Naim",
-    "previous": "Naiarchos",
+    "previous": "Ναΐαρχος",
     "next": "Naimanes",
     "redirect": true,
     "chapters": [
@@ -2352,7 +2358,7 @@
   {
     "lemma": "Nalpotes",
     "previous": "Nalopatana",
-    "next": "Namades",
+    "next": "Ναμάδης",
     "chapters": [
       {
         "start": 1609,
@@ -2362,9 +2368,10 @@
     ]
   },
   {
-    "lemma": "Namades",
+    "lemma": "Ναμάδης",
     "previous": "Nalpotes",
-    "next": "Naʿm-an",
+    "next": "Naʾman",
+    "wp_link": "w:de:Narbada",
     "chapters": [
       {
         "start": 1609,
@@ -2374,8 +2381,8 @@
     ]
   },
   {
-    "lemma": "Naʿm-an",
-    "previous": "Namades",
+    "lemma": "Naʾman",
+    "previous": "Ναμάδης",
     "next": "Namara",
     "chapters": [
       {
@@ -2386,7 +2393,7 @@
   },
   {
     "lemma": "Namara",
-    "previous": "Naʿm-an",
+    "previous": "Naʾman",
     "next": "Namare",
     "chapters": [
       {

@@ -153,6 +153,7 @@
     "lemma": "Inachos 4",
     "previous": "Inachos 3",
     "next": "In Alperio",
+    "wp_link": "w:de:Acheloos (Fluss)",
     "chapters": [
       {
         "start": 1219,
@@ -201,6 +202,7 @@
     "lemma": "Inaros 1",
     "previous": "Inaronia",
     "next": "Inaros 2",
+    "wp_link": "w:de:Inaros",
     "chapters": [
       {
         "start": 1219,
@@ -578,6 +580,7 @@
     "lemma": "Indictio",
     "previous": "Indibilis",
     "next": "Indicum",
+    "wp_link": "w:de:Indiktion",
     "chapters": [
       {
         "start": 1327,
@@ -614,6 +617,7 @@
     "lemma": "Indigitamenta",
     "previous": "Indiges",
     "next": "Indignus",
+    "wp_link": "w:de:en:Indigitamenta",
     "chapters": [
       {
         "start": 1334,
@@ -638,6 +642,7 @@
     "lemma": "Indigo",
     "previous": "Indignus",
     "next": "Indike",
+    "wp_link": "w:de:Indigo",
     "chapters": [
       {
         "start": 1367,
@@ -661,7 +666,7 @@
   {
     "lemma": "Indiketes",
     "previous": "Indike",
-    "next": "ho Indikos kolpos",
+    "next": "ὁ Ἰνδικὸς κόλπος",
     "chapters": [
       {
         "start": 1368,
@@ -671,7 +676,7 @@
     ]
   },
   {
-    "lemma": "ho Indikos kolpos",
+    "lemma": "ὁ Ἰνδικὸς κόλπος",
     "previous": "Indiketes",
     "next": "Indikos Okeanos",
     "chapters": [
@@ -684,7 +689,7 @@
   },
   {
     "lemma": "Indikos Okeanos",
-    "previous": "ho Indikos kolpos",
+    "previous": "ὁ Ἰνδικὸς κόλπος",
     "next": "Indischer Feigenbaum",
     "wp_link": "w:de:Indischer Ozean",
     "chapters": [
@@ -699,6 +704,7 @@
     "lemma": "Indischer Feigenbaum",
     "previous": "Indikos Okeanos",
     "next": "Indo",
+    "wp_link": "w:de:Banyan-Feige",
     "chapters": [
       {
         "start": 1368,
@@ -771,6 +777,7 @@
     "lemma": "Indulgentia",
     "previous": "Indoskythia",
     "next": "Indus",
+    "wp_link": "w:de:Gnadenbefugnis",
     "chapters": [
       {
         "start": 1378,
@@ -783,7 +790,7 @@
     "lemma": "Indus",
     "previous": "Indulgentia",
     "next": "Industria",
-    "redirect": true,
+    "redirect": "Iulius 280",
     "chapters": [
       {
         "start": 1380,
@@ -879,6 +886,7 @@
     "lemma": "Infanticidium",
     "previous": "Infans",
     "next": "Infantius",
+    "wp_link": "w:de:Kindstötung",
     "chapters": [
       {
         "start": 1540,
@@ -2677,7 +2685,7 @@
   {
     "lemma": "Ioannes 40",
     "previous": "Ioannes 39",
-    "next": "Ioannes 41",
+    "next": "Ioannes 41–54",
     "chapters": [
       {
         "start": 1801,
@@ -2687,9 +2695,22 @@
     ]
   },
   {
-    "lemma": "Ioannes 41",
+    "lemma": "Ioannes 41–54",
     "previous": "Ioannes 40",
-    "next": "Ioannes 41-54",
+    "next": "Ioannes 41",
+    "wp_link": "w:de:Johannes (Apostel)",
+    "chapters": [
+      {
+        "start": 1801,
+        "end": 1801
+      }
+    ]
+  },
+  {
+    "lemma": "Ioannes 41",
+    "previous": "Ioannes 41–54",
+    "next": "Ioannes 42",
+    "wp_link": "w:de:Johannes (Apostel)",
     "chapters": [
       {
         "start": 1801,
@@ -2699,20 +2720,10 @@
     ]
   },
   {
-    "lemma": "Ioannes 41-54",
-    "previous": "Ioannes 41",
-    "next": "Ioannes 42",
-    "chapters": [
-      {
-        "start": 1801,
-        "end": 1801
-      }
-    ]
-  },
-  {
     "lemma": "Ioannes 42",
-    "previous": "Ioannes 41-54",
+    "previous": "Ioannes 41",
     "next": "Ioannes 43",
+    "wp_link": "w:de:Johannes II. (Jerusalem)",
     "chapters": [
       {
         "start": 1804,
@@ -2725,6 +2736,7 @@
     "lemma": "Ioannes 43",
     "previous": "Ioannes 42",
     "next": "Ioannes 44",
+    "wp_link": "w:de:Johannes Cassianus",
     "chapters": [
       {
         "start": 1805,
@@ -2800,6 +2812,7 @@
     "lemma": "Ioannes 49",
     "previous": "Ioannes 48",
     "next": "Ioannes 50",
+    "wp_link": "w:de:Johannes I. (Papst)",
     "chapters": [
       {
         "start": 1808,
@@ -2812,6 +2825,7 @@
     "lemma": "Ioannes 50",
     "previous": "Ioannes 49",
     "next": "Ioannes 51",
+    "wp_link": "w:de:Johannes II. (Papst)",
     "chapters": [
       {
         "start": 1808,
@@ -2824,6 +2838,7 @@
     "lemma": "Ioannes 51",
     "previous": "Ioannes 50",
     "next": "Ioannes 52",
+    "wp_link": "w:de:Johannes von Biclaro",
     "chapters": [
       {
         "start": 1809,
@@ -2848,6 +2863,7 @@
     "lemma": "Ioannes 53",
     "previous": "Ioannes 52",
     "next": "Ioannes 54",
+    "wp_link": "w:de:Johannes Moschos",
     "chapters": [
       {
         "start": 1810,
@@ -3053,6 +3069,7 @@
     "lemma": "Ad Ioglandum",
     "previous": "Ioërbeth",
     "next": "Iogola",
+    "sort_key": "Ioglandum",
     "chapters": [
       {
         "start": 1841,
@@ -3146,7 +3163,7 @@
   {
     "lemma": "Iol",
     "previous": "Iokura",
-    "next": "Iolaeia",
+    "next": "Ἰολάεια",
     "chapters": [
       {
         "start": 1842,
@@ -3155,9 +3172,10 @@
     ]
   },
   {
-    "lemma": "Iolaeia",
+    "lemma": "Ἰολάεια",
     "previous": "Iol",
     "next": "Iolaidas 1",
+    "sort_key": "Iolaeia",
     "chapters": [
       {
         "start": 1842,
@@ -3168,7 +3186,7 @@
   },
   {
     "lemma": "Iolaidas 1",
-    "previous": "Iolaeia",
+    "previous": "Ἰολάεια",
     "next": "Iolaidas 2",
     "chapters": [
       {
@@ -3501,6 +3519,8 @@
     "lemma": "Ion 4",
     "previous": "Ion 3",
     "next": "Ion 5",
+    "sort_key": "Ion 04",
+    "redirect": true,
     "chapters": [
       {
         "start": 1860,
@@ -3523,6 +3543,7 @@
     "lemma": "Ion 6",
     "previous": "Ion 5",
     "next": "Ion 7",
+    "sort_key": "Ion 06",
     "chapters": [
       {
         "start": 1860,
@@ -3535,6 +3556,7 @@
     "lemma": "Ion 7",
     "previous": "Ion 6",
     "next": "Ion 8",
+    "sort_key": "Ion 07",
     "chapters": [
       {
         "start": 1860,
@@ -3547,6 +3569,7 @@
     "lemma": "Ion 8",
     "previous": "Ion 7",
     "next": "Ion 9",
+    "sort_key": "Ion 08",
     "chapters": [
       {
         "start": 1860,
@@ -3559,6 +3582,7 @@
     "lemma": "Ion 9",
     "previous": "Ion 8",
     "next": "Ion 10",
+    "sort_key": "Ion 09",
     "chapters": [
       {
         "start": 1860,
@@ -3583,6 +3607,7 @@
     "lemma": "Ion 11",
     "previous": "Ion 10",
     "next": "Ion 12",
+    "wp_link": "w:de:Ion von Chios",
     "chapters": [
       {
         "start": 1861,
@@ -3999,6 +4024,7 @@
     "lemma": "Joppe",
     "previous": "Iopolis",
     "next": "Iops",
+    "wp_link": "w:de:Tel Aviv-Jaffa",
     "chapters": [
       {
         "start": 1901,
@@ -4034,7 +4060,8 @@
   {
     "lemma": "Jordanes 1",
     "previous": "Iopsaphos",
-    "next": "Jordanes 2",
+    "next": "Iordanes 2",
+    "wp_link": "w:de:Jordan",
     "chapters": [
       {
         "start": 1903,
@@ -4044,7 +4071,7 @@
     ]
   },
   {
-    "lemma": "Jordanes 2",
+    "lemma": "Iordanes 2",
     "previous": "Jordanes 1",
     "next": "Iordanis",
     "chapters": [
@@ -4057,7 +4084,7 @@
   },
   {
     "lemma": "Iordanis",
-    "previous": "Jordanes 2",
+    "previous": "Iordanes 2",
     "next": "Iortius",
     "chapters": [
       {
@@ -4131,6 +4158,7 @@
     "lemma": "Josephus 2",
     "previous": "Josephus 1",
     "next": "Iotabe",
+    "wp_link": "w:de:Flavius Josephus",
     "chapters": [
       {
         "start": 1934,
@@ -4156,6 +4184,7 @@
     "lemma": "Jotapata",
     "previous": "Iotabe",
     "next": "Iotape 1",
+    "wp_link": "w:de:Jotapata",
     "chapters": [
       {
         "start": 2002,
@@ -4227,7 +4256,7 @@
   {
     "lemma": "Iotape 6",
     "previous": "Iotape 5",
-    "next": "Iotapiuanus",
+    "next": "Iotapianus",
     "chapters": [
       {
         "start": 2004,
@@ -4237,7 +4266,7 @@
     ]
   },
   {
-    "lemma": "Iotapiuanus",
+    "lemma": "Iotapianus",
     "previous": "Iotape 6",
     "next": "Iovalia",
     "chapters": [
@@ -4250,7 +4279,7 @@
   },
   {
     "lemma": "Iovalia",
-    "previous": "Iotapiuanus",
+    "previous": "Iotapianus",
     "next": "Iovantucarus",
     "chapters": [
       {
@@ -4276,6 +4305,7 @@
     "lemma": "ad Iovem",
     "previous": "Iovantucarus",
     "next": "Ioventio",
+    "sort_key": "Iovem",
     "chapters": [
       {
         "start": 2005,
@@ -4492,6 +4522,7 @@
     "lemma": "Iovinus 1",
     "previous": "Iovinianus",
     "next": "Iovinus 2",
+    "wp_link": "w:de:Iovinus (Heermeister)",
     "chapters": [
       {
         "start": 2011,
@@ -6025,6 +6056,7 @@
     "lemma": "Isachar",
     "previous": "Isaca",
     "next": "Isacia",
+    "wp_link": "w:de:Issachar",
     "chapters": [
       {
         "start": 2048,
@@ -6096,7 +6128,7 @@
   {
     "lemma": "Isagoras 4",
     "previous": "Isagoras 3",
-    "next": "Isaia",
+    "next": "Ἴσαι λιμήν",
     "chapters": [
       {
         "start": 2050,
@@ -6106,8 +6138,14 @@
     ]
   },
   {
-    "lemma": "Isaia",
+    "lemma": "Ἴσαι λιμήν",
     "previous": "Isagoras 4",
+    "next": "Isaia",
+    "sort_key": "Isai limen"
+  },
+  {
+    "lemma": "Isaia",
+    "previous": "Ἴσαι λιμήν",
     "next": "Isai limen",
     "chapters": [
       {
@@ -7061,6 +7099,7 @@
     "lemma": "Isidoros 27",
     "previous": "Isidoros 26",
     "next": "Isidoros 28",
+    "wp_link": "w:de:Isidor von Sevilla",
     "chapters": [
       {
         "start": 2069,
@@ -8030,7 +8069,7 @@
   {
     "lemma": "Israel 5",
     "previous": "Israel 4",
-    "next": "Issa, he 1",
+    "next": "Ἴσσα, ἡ 1",
     "chapters": [
       {
         "start": 2234,
@@ -8040,9 +8079,9 @@
     ]
   },
   {
-    "lemma": "Issa, he 1",
+    "lemma": "Ἴσσα, ἡ 1",
     "previous": "Israel 5",
-    "next": "Issa, he 2",
+    "next": "Ἴσσα, ἡ 2",
     "chapters": [
       {
         "start": 2234,
@@ -8052,8 +8091,8 @@
     ]
   },
   {
-    "lemma": "Issa, he 2",
-    "previous": "Issa, he 1",
+    "lemma": "Ἴσσα, ἡ 2",
+    "previous": "Ἴσσα, ἡ 1",
     "next": "Issatis",
     "chapters": [
       {
@@ -8065,7 +8104,7 @@
   },
   {
     "lemma": "Issatis",
-    "previous": "Issa, he 2",
+    "previous": "Ἴσσα, ἡ 2",
     "next": "Isse 1",
     "chapters": [
       {
@@ -8138,6 +8177,7 @@
     "lemma": "Issicus sinus",
     "previous": "Issedon",
     "next": "Issoi",
+    "wp_link": "w:de:Golf von İskenderun",
     "chapters": [
       {
         "start": 2246,
@@ -8380,6 +8420,7 @@
     "lemma": "Isthmos 1",
     "previous": "Isthmios 4",
     "next": "Isthmos 2",
+    "wp_link": "w:de:Isthmus von Korinth",
     "chapters": [
       {
         "start": 2256,
@@ -8750,8 +8791,8 @@
   {
     "lemma": "Itabyrion",
     "previous": "Isyllos",
-    "next": "Italica",
-    "redirect": true,
+    "next": "Italia",
+    "redirect": "Atabyrion 2",
     "chapters": [
       {
         "start": 2283,
@@ -8761,8 +8802,13 @@
     ]
   },
   {
-    "lemma": "Italica",
+    "lemma": "Italia",
     "previous": "Itabyrion",
+    "next": "Italica"
+  },
+  {
+    "lemma": "Italica",
+    "previous": "Italia",
     "next": "Italicianus",
     "chapters": [
       {
@@ -9419,6 +9465,7 @@
     "lemma": "Ituraea 1",
     "previous": "Ituna",
     "next": "Ituraea 2",
+    "wp_link": "w:de:Ituräa",
     "chapters": [
       {
         "start": 2377,
@@ -9798,7 +9845,8 @@
   {
     "lemma": "Juda und Israel",
     "previous": "Juda",
-    "next": "Iudacail...",
+    "next": "Iudacail-",
+    "wp_link": "w:de:Geschichte Israels",
     "chapters": [
       {
         "start": 2399,
@@ -9808,7 +9856,7 @@
     ]
   },
   {
-    "lemma": "Iudacail...",
+    "lemma": "Iudacail-",
     "previous": "Juda und Israel",
     "next": "Iudacilius",
     "chapters": [
@@ -9821,7 +9869,7 @@
   },
   {
     "lemma": "Iudacilius",
-    "previous": "Iudacail...",
+    "previous": "Iudacail-",
     "next": "Iudaea",
     "chapters": [
       {
@@ -9845,7 +9893,7 @@
   {
     "lemma": "Iudaeorum castra",
     "previous": "Iudaea",
-    "next": "Iudaeorum pons",
+    "next": "Iudaeorum Pons",
     "chapters": [
       {
         "start": 2460,
@@ -9854,7 +9902,7 @@
     ]
   },
   {
-    "lemma": "Iudaeorum pons",
+    "lemma": "Iudaeorum Pons",
     "previous": "Iudaeorum castra",
     "next": "Iudaeorum vicus",
     "chapters": [
@@ -9867,7 +9915,7 @@
   },
   {
     "lemma": "Iudaeorum vicus",
-    "previous": "Iudaeorum pons",
+    "previous": "Iudaeorum Pons",
     "next": "Iudaeus",
     "chapters": [
       {
@@ -10569,6 +10617,7 @@
     "lemma": "Jonathan 1",
     "previous": "Ioannes 18",
     "next": "Iphigeneia",
+    "sort_key": "Ionathan 1",
     "wp_link": "w:de:Jonatan (Hasmonäer)",
     "chapters": [
       {

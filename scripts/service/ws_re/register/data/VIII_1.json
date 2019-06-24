@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Helikon 1",
+    "previous": null,
     "next": "Helikon 2",
     "chapters": [
       {
@@ -50,7 +51,7 @@
   {
     "lemma": "Helikon 5",
     "previous": "Helikon 4",
-    "next": "Helikoniados gas",
+    "next": "Ἑλικωνιάδος γᾶς",
     "chapters": [
       {
         "start": 8,
@@ -60,7 +61,7 @@
     ]
   },
   {
-    "lemma": "Helikoniados gas",
+    "lemma": "Ἑλικωνιάδος γᾶς",
     "previous": "Helikon 5",
     "next": "Helikonios 1",
     "chapters": [
@@ -73,7 +74,7 @@
   },
   {
     "lemma": "Helikonios 1",
-    "previous": "Helikoniados gas",
+    "previous": "Ἑλικωνιάδος γᾶς",
     "next": "Helikonios 2",
     "chapters": [
       {
@@ -208,6 +209,7 @@
     "lemma": "Heliodoros 3",
     "previous": "Heliodoros 2",
     "next": "Heliodoros 4",
+    "sort_key": "Heliodoros 03",
     "chapters": [
       {
         "start": 12,
@@ -246,6 +248,7 @@
     "lemma": "Heliodoros 6",
     "previous": "Heliodoros 5",
     "next": "Heliodoros 7",
+    "sort_key": "Heliodoros 06",
     "chapters": [
       {
         "start": 12,
@@ -333,6 +336,7 @@
     "lemma": "Heliodoros 13",
     "previous": "Heliodoros 12",
     "next": "Heliodoros 14",
+    "sort_key": "Heliodoros 13",
     "chapters": [
       {
         "start": 18,
@@ -552,6 +556,7 @@
     "lemma": "Heliopolis 1",
     "previous": "Helion 2",
     "next": "Heliopolis 2",
+    "redirect": "Iuliopolis",
     "chapters": [
       {
         "start": 47,
@@ -563,6 +568,7 @@
     "lemma": "Heliopolis 2",
     "previous": "Heliopolis 1",
     "next": "Heliopolis 3",
+    "wp_link": "w:de:Baalbek",
     "chapters": [
       {
         "start": 47,
@@ -920,6 +926,7 @@
     "lemma": "Helladios 2",
     "previous": "Helladios 1",
     "next": "Helladios 3",
+    "sort_key": "Helladios 02",
     "chapters": [
       {
         "start": 98,
@@ -997,6 +1004,7 @@
     "lemma": "Helladios 8",
     "previous": "Helladios 7",
     "next": "Helladios 9",
+    "sort_key": "Helladios 08",
     "chapters": [
       {
         "start": 103,
@@ -1131,6 +1139,7 @@
     "lemma": "Hellanodikeon",
     "previous": "Hellanodikai",
     "next": "Hellanokrates 1",
+    "redirect": "Hellanodikai",
     "chapters": [
       {
         "start": 157,
@@ -4503,7 +4512,7 @@
   {
     "lemma": "Heraiskos",
     "previous": "Heraïs",
-    "next": "Heraites Hormos",
+    "next": "Ἡραΐτης Ὅρμος",
     "chapters": [
       {
         "start": 421,
@@ -4513,7 +4522,7 @@
     ]
   },
   {
-    "lemma": "Heraites Hormos",
+    "lemma": "Ἡραΐτης Ὅρμος",
     "previous": "Heraiskos",
     "next": "Heraklammon",
     "chapters": [
@@ -4526,7 +4535,7 @@
   },
   {
     "lemma": "Heraklammon",
-    "previous": "Heraites Hormos",
+    "previous": "Ἡραΐτης Ὅρμος",
     "next": "Heraklas 1",
     "chapters": [
       {
@@ -4552,6 +4561,7 @@
     "lemma": "Heraklas 2",
     "previous": "Heraklas 1",
     "next": "Herakleia 1",
+    "wp_link": "w:de:Heraclas von Alexandria",
     "chapters": [
       {
         "start": 423,
@@ -6793,6 +6803,8 @@
     "lemma": "Ἤρας νῆσος",
     "previous": "Heras lutra",
     "next": "Herasios",
+    "sort_key": "Heras nesos",
+    "redirect": "Iunonia 1",
     "chapters": [
       {
         "start": 529,
@@ -6852,7 +6864,7 @@
     "lemma": "Herbelloni",
     "previous": "Herbanum",
     "next": "Herbessos 1",
-    "redirect": true,
+    "redirect": "Helvillum vicus",
     "chapters": [
       {
         "start": 530,
@@ -7064,7 +7076,8 @@
   {
     "lemma": "Herculanus 6",
     "previous": "Herculanus 5",
-    "next": "ad Herculem 1",
+    "next": "Herculea porticus",
+    "wp_link": "w:de:en:Bassus Herculanus",
     "chapters": [
       {
         "start": 549,
@@ -7074,9 +7087,13 @@
     ]
   },
   {
+    "lemma": "Herculea porticus",
+    "previous": "Herculanus 6"
+  },
+  {
     "lemma": "ad Herculem 1",
-    "previous": "Herculanus 6",
     "next": "ad Herculem 2",
+    "sort_key": "Herculem 1, ad",
     "chapters": [
       {
         "start": 549,
@@ -7089,6 +7106,7 @@
     "lemma": "ad Herculem 2",
     "previous": "ad Herculem 1",
     "next": "ad Herculem 3",
+    "sort_key": "Herculem 2, ad",
     "chapters": [
       {
         "start": 549,
@@ -7101,6 +7119,7 @@
     "lemma": "ad Herculem 3",
     "previous": "ad Herculem 2",
     "next": "ad Herculem 4",
+    "sort_key": "Herculem 3, ad",
     "chapters": [
       {
         "start": 549,
@@ -7113,6 +7132,7 @@
     "lemma": "ad Herculem 4",
     "previous": "ad Herculem 3",
     "next": "ad Herculem 5",
+    "sort_key": "Herculem 4, ad",
     "chapters": [
       {
         "start": 550,
@@ -7125,6 +7145,7 @@
     "lemma": "ad Herculem 5",
     "previous": "ad Herculem 4",
     "next": "ad Herculem 6",
+    "sort_key": "Herculem 5, ad",
     "chapters": [
       {
         "start": 550,
@@ -7137,6 +7158,7 @@
     "lemma": "ad Herculem 6",
     "previous": "ad Herculem 5",
     "next": "ad Herculem 7",
+    "sort_key": "Herculem 6, ad",
     "chapters": [
       {
         "start": 550,
@@ -7149,6 +7171,7 @@
     "lemma": "ad Herculem 7",
     "previous": "ad Herculem 6",
     "next": "Herculente",
+    "sort_key": "Herculem 7, ad",
     "chapters": [
       {
         "start": 550,
@@ -7173,6 +7196,8 @@
     "lemma": "Hercules 1",
     "previous": "Herculente",
     "next": "Hercules 2",
+    "wp_link": "w:de:Herkules",
+    "ws_link": "s:de:Herakles",
     "chapters": [
       {
         "start": 550,
@@ -7483,7 +7508,7 @@
   {
     "lemma": "Herd",
     "previous": "Hercynia silva",
-    "next": "Herdonia",
+    "next": "Herdonia(e)",
     "chapters": [
       {
         "start": 615,
@@ -7493,20 +7518,14 @@
     ]
   },
   {
-    "lemma": "Herdonia",
+    "lemma": "Herdonia(e)",
     "previous": "Herd",
     "next": "Herdonius 1",
-    "chapters": [
-      {
-        "start": 617,
-        "end": 618,
-        "author": "Weiss, J[akob]"
-      }
-    ]
+    "wp_link": "w:de:Ordona"
   },
   {
     "lemma": "Herdonius 1",
-    "previous": "Herdonia",
+    "previous": "Herdonia(e)",
     "next": "Herdonius 2",
     "chapters": [
       {
@@ -9538,6 +9557,7 @@
     "lemma": "Hermes Trismegistos",
     "previous": "Hermes 7",
     "next": "Hermesia",
+    "wp_link": "w:de:Hermes Trismegistos",
     "chapters": [
       {
         "start": 792,
@@ -9635,6 +9655,7 @@
     "lemma": "Hermias 1",
     "previous": "Hermianus",
     "next": "Hermias 2",
+    "sort_key": "Hermias 01",
     "chapters": [
       {
         "start": 828,
@@ -9647,6 +9668,7 @@
     "lemma": "Hermias 2",
     "previous": "Hermias 1",
     "next": "Hermias 3",
+    "sort_key": "Hermias 02",
     "chapters": [
       {
         "start": 829,
@@ -9659,6 +9681,7 @@
     "lemma": "Hermias 3",
     "previous": "Hermias 2",
     "next": "Hermias 4",
+    "sort_key": "Hermias 03",
     "chapters": [
       {
         "start": 829,
@@ -9671,6 +9694,7 @@
     "lemma": "Hermias 4",
     "previous": "Hermias 3",
     "next": "Hermias 5",
+    "sort_key": "Hermias 04",
     "chapters": [
       {
         "start": 829,
@@ -10052,7 +10076,7 @@
     "lemma": "Hermionilla",
     "previous": "Hermione 8",
     "next": "Ἕρμιον πεδίον",
-    "redirect": true,
+    "redirect": "Nonius",
     "chapters": [
       {
         "start": 844,
@@ -10155,6 +10179,8 @@
     "lemma": "Hermippos 6",
     "previous": "Hermippos 5",
     "next": "Hermippos 7",
+    "sort_key": "Hermippos 06",
+    "wp_link": "w:de:Hermippos",
     "chapters": [
       {
         "start": 845,
@@ -10180,6 +10206,7 @@
     "lemma": "Hermippos 8",
     "previous": "Hermippos 7",
     "next": "Hermippos 9",
+    "sort_key": "Hermippos 08",
     "chapters": [
       {
         "start": 853,
@@ -11211,6 +11238,7 @@
     "lemma": "Hermon 2",
     "previous": "Hermon 1",
     "next": "Hermon 3",
+    "wp_link": "w:de:Hermon",
     "chapters": [
       {
         "start": 892,
@@ -11819,6 +11847,7 @@
     "lemma": "Herodes 1",
     "previous": "Herodas",
     "next": "Herodes 2",
+    "sort_key": "Herodes 01",
     "chapters": [
       {
         "start": 916,
@@ -11844,6 +11873,7 @@
     "lemma": "Herodes 3",
     "previous": "Herodes 2",
     "next": "Herodes 4",
+    "sort_key": "Herodes 03",
     "chapters": [
       {
         "start": 916,
@@ -11856,6 +11886,7 @@
     "lemma": "Herodes 4",
     "previous": "Herodes 3",
     "next": "Herodes 5",
+    "sort_key": "Herodes 04",
     "chapters": [
       {
         "start": 917,
@@ -11894,6 +11925,7 @@
     "lemma": "Herodes 7",
     "previous": "Herodes 6",
     "next": "Herodes 8",
+    "sort_key": "Herodes 07",
     "chapters": [
       {
         "start": 918,
@@ -11906,6 +11938,7 @@
     "lemma": "Herodes 8",
     "previous": "Herodes 7",
     "next": "Herodes 9",
+    "sort_key": "Herodes 08",
     "chapters": [
       {
         "start": 920,
@@ -11918,6 +11951,7 @@
     "lemma": "Herodes 9",
     "previous": "Herodes 8",
     "next": "Herodes 10",
+    "sort_key": "Herodes 09",
     "chapters": [
       {
         "start": 920,
@@ -11966,6 +12000,7 @@
     "lemma": "Herodes 13",
     "previous": "Herodes 12",
     "next": "Herodes 14ff.",
+    "wp_link": "w:de:Herodes Atticus",
     "chapters": [
       {
         "start": 921,
@@ -12084,6 +12119,7 @@
     "lemma": "Herodion 1",
     "previous": "Herodikos 4",
     "next": "Herodion 2",
+    "wp_link": "w:de:Herodium",
     "chapters": [
       {
         "start": 979,
@@ -12491,7 +12527,7 @@
   {
     "lemma": "Herondas",
     "previous": "Heronas",
-    "next": "Herone",
+    "next": "Ἡρώνη",
     "chapters": [
       {
         "start": 1080,
@@ -12501,9 +12537,10 @@
     ]
   },
   {
-    "lemma": "Herone",
+    "lemma": "Ἡρώνη",
     "previous": "Herondas",
     "next": "Heronius",
+    "sort_key": "Herone",
     "chapters": [
       {
         "start": 1102,
@@ -12514,7 +12551,7 @@
   },
   {
     "lemma": "Heronius",
-    "previous": "Herone",
+    "previous": "Ἡρώνη",
     "next": "Heronsball, Heronsbrunnen",
     "chapters": [
       {
@@ -12528,6 +12565,7 @@
     "lemma": "Heronsball, Heronsbrunnen",
     "previous": "Heronius",
     "next": "Heroopolis",
+    "redirect": "Heron 5",
     "chapters": [
       {
         "start": 1102,
@@ -13256,6 +13294,7 @@
     "lemma": "ad Herculem 8",
     "previous": "Herakleitos 8b",
     "next": "ad Herculem 9",
+    "sort_key": "Herculem 08, ad",
     "chapters": [
       {
         "start": 1306,
@@ -13268,6 +13307,7 @@
     "lemma": "ad Herculem 9",
     "previous": "ad Herculem 8",
     "next": "ad Herculem 10",
+    "sort_key": "Herculem 09, ad",
     "chapters": [
       {
         "start": 1306,
@@ -13280,6 +13320,8 @@
     "lemma": "ad Herculem 10",
     "previous": "ad Herculem 9",
     "next": "ad Herculem 11",
+    "sort_key": "Herculem 10, ad",
+    "redirect": "Ad Herculem castra",
     "chapters": [
       {
         "start": 1306,
@@ -13292,6 +13334,7 @@
     "lemma": "ad Herculem 11",
     "previous": "ad Herculem 10",
     "next": "Herculia 2",
+    "sort_key": "Herculem 11, ad",
     "chapters": [
       {
         "start": 1306,
@@ -13303,7 +13346,7 @@
   {
     "lemma": "Herculia 2",
     "previous": "ad Herculem 11",
-    "next": "Hereas 2",
+    "next": "Hercuniates 2",
     "chapters": [
       {
         "start": 1306,
@@ -13313,8 +13356,13 @@
     ]
   },
   {
-    "lemma": "Hereas 2",
+    "lemma": "Hercuniates 2",
     "previous": "Herculia 2",
+    "next": "Hereas 2"
+  },
+  {
+    "lemma": "Hereas 2",
+    "previous": "Hercuniates 2",
     "next": "Hermias 10a",
     "chapters": [
       {
@@ -13327,7 +13375,7 @@
   {
     "lemma": "Hermias 10a",
     "previous": "Hereas 2",
-    "next": "Herodes 7a",
+    "next": "Hermion, Hermione 1",
     "chapters": [
       {
         "start": 1306,
@@ -13337,8 +13385,13 @@
     ]
   },
   {
-    "lemma": "Herodes 7a",
+    "lemma": "Hermion, Hermione 1",
     "previous": "Hermias 10a",
+    "next": "Herodes 7a"
+  },
+  {
+    "lemma": "Herodes 7a",
+    "previous": "Hermion, Hermione 1",
     "next": "Herodes 13",
     "chapters": [
       {

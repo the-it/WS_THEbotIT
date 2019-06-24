@@ -28,7 +28,6 @@
     "previous": "Hyaioi",
     "next": "Hyakinthides",
     "sort_key": "Hyakinthia",
-    "wp_link": "w:de:Hyakinthia",
     "chapters": [
       {
         "start": 1,
@@ -100,7 +99,8 @@
   {
     "lemma": "Ὑακινθὶς ὁδός",
     "previous": "Hyakinthis",
-    "next": "Hyakinthos 1",
+    "next": "Ὑάκινθος 1",
+    "sort_key": "Hyakinthish",
     "chapters": [
       {
         "start": 4,
@@ -110,9 +110,11 @@
     ]
   },
   {
-    "lemma": "Hyakinthos 1",
+    "lemma": "Ὑάκινθος 1",
     "previous": "Ὑακινθὶς ὁδός",
-    "next": "Hyakinthos 2",
+    "next": "Ὑάκινθος 2",
+    "sort_key": "Hyakinthos 1",
+    "wp_link": "w:de:Hyazinthen",
     "chapters": [
       {
         "start": 4,
@@ -122,8 +124,8 @@
     ]
   },
   {
-    "lemma": "Hyakinthos 2",
-    "previous": "Hyakinthos 1",
+    "lemma": "Ὑάκινθος 2",
+    "previous": "Ὑάκινθος 1",
     "next": "Ὑάκινθος 3",
     "chapters": [
       {
@@ -135,8 +137,9 @@
   },
   {
     "lemma": "Ὑάκινθος 3",
-    "previous": "Hyakinthos 2",
+    "previous": "Ὑάκινθος 2",
     "next": "Hyalea",
+    "sort_key": "Hyakinthos3",
     "chapters": [
       {
         "start": 16,
@@ -546,7 +549,7 @@
   {
     "lemma": "Hybreas 2",
     "previous": "Hybreas 1",
-    "next": "Hybreos graphe",
+    "next": "Ὕβρεως γραφή",
     "chapters": [
       {
         "start": 31,
@@ -556,20 +559,14 @@
     ]
   },
   {
-    "lemma": "Hybreos graphe",
+    "lemma": "Ὕβρεως γραφή",
     "previous": "Hybreas 2",
     "next": "Hybrias 1",
-    "chapters": [
-      {
-        "start": 31,
-        "end": 32,
-        "author": "Thalheim"
-      }
-    ]
+    "sort_key": "Hybreosgraphe"
   },
   {
     "lemma": "Hybrias 1",
-    "previous": "Hybreos graphe",
+    "previous": "Ὕβρεως γραφή",
     "next": "Hybrias 2",
     "chapters": [
       {
@@ -753,6 +750,7 @@
     "lemma": "Hydatius 1",
     "previous": "Hydata",
     "next": "Hydatius 2",
+    "wp_link": "w:de:Hydatius von Emeritia",
     "chapters": [
       {
         "start": 39,
@@ -765,6 +763,8 @@
     "lemma": "Hydatius 2",
     "previous": "Hydatius 1",
     "next": "Hyde",
+    "wp_link": "w:de:Hydatius von Aquae Flaviae",
+    "ws_link": "s:de:Hydatius",
     "chapters": [
       {
         "start": 40,
@@ -1403,6 +1403,7 @@
     "lemma": "Hygenneis",
     "previous": "Hygassos",
     "next": "Hygiainon",
+    "redirect": "Hytenna",
     "chapters": [
       {
         "start": 93,
@@ -1841,6 +1842,7 @@
     "lemma": "Hyle 3",
     "previous": "Hyle 2",
     "next": "Hylees",
+    "redirect": "Hyla 1",
     "chapters": [
       {
         "start": 119,
@@ -3285,7 +3287,8 @@
   {
     "lemma": "Ὑπερήμερος, ὑπερημερία",
     "previous": "Hypereides",
-    "next": "Hyperencheus",
+    "next": "Ὑπερεγχεύς",
+    "sort_key": "Hyperemeros",
     "chapters": [
       {
         "start": 285,
@@ -3295,9 +3298,10 @@
     ]
   },
   {
-    "lemma": "Hyperencheus",
+    "lemma": "Ὑπερεγχεύς",
     "previous": "Ὑπερήμερος, ὑπερημερία",
     "next": "Hyperenor 1",
+    "sort_key": "Hyperencheus",
     "chapters": [
       {
         "start": 285,
@@ -3308,7 +3312,7 @@
   },
   {
     "lemma": "Hyperenor 1",
-    "previous": "Hyperencheus",
+    "previous": "Ὑπερεγχεύς",
     "next": "Hyperenor 2",
     "chapters": [
       {
@@ -4517,6 +4521,7 @@
     "lemma": "Hyrkanos 5",
     "previous": "Hyrkanos 4",
     "next": "Hyrkodes",
+    "redirect": "Flavius 100",
     "chapters": [
       {
         "start": 534,
@@ -4624,6 +4629,18 @@
   {
     "lemma": "Hysbe",
     "previous": "Hyrtakos",
+    "next": "Hysia, Hysiai",
+    "chapters": [
+      {
+        "start": 539,
+        "end": 539,
+        "author": "Bürchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Hysia, Hysiai",
+    "previous": "Hysbe",
     "next": "Hysia, Hysiai 1",
     "chapters": [
       {
@@ -4635,7 +4652,7 @@
   },
   {
     "lemma": "Hysia, Hysiai 1",
-    "previous": "Hysbe",
+    "previous": "Hysia, Hysiai",
     "next": "Hysia, Hysiai 2",
     "chapters": [
       {
@@ -4837,7 +4854,7 @@
   {
     "lemma": "Hytenna",
     "previous": "Hystaspes 4",
-    "next": "I(...)cianus",
+    "next": "I(..... ...)cianus",
     "chapters": [
       {
         "start": 542,
@@ -4847,20 +4864,13 @@
     ]
   },
   {
-    "lemma": "I(...)cianus",
+    "lemma": "I(..... ...)cianus",
     "previous": "Hytenna",
-    "next": "Ia 1",
-    "chapters": [
-      {
-        "start": 543,
-        "end": 543,
-        "author": "Stein, [Arthur]"
-      }
-    ]
+    "next": "Ia 1"
   },
   {
     "lemma": "Ia 1",
-    "previous": "I(...)cianus",
+    "previous": "I(..... ...)cianus",
     "next": "Ia 2",
     "chapters": [
       {
@@ -4898,6 +4908,7 @@
     "lemma": "Jabbok",
     "previous": "Ia 3",
     "next": "Jabes",
+    "wp_link": "w:de:Jabbok",
     "chapters": [
       {
         "start": 543,
@@ -4922,6 +4933,7 @@
     "lemma": "Jabezebyth",
     "previous": "Jabes",
     "next": "Jabne",
+    "redirect": "Iao",
     "chapters": [
       {
         "start": 543,
@@ -4934,6 +4946,7 @@
     "lemma": "Jabne",
     "previous": "Jabezebyth",
     "next": "Jabneel 1",
+    "redirect": "Jamnia",
     "chapters": [
       {
         "start": 543,
@@ -4945,6 +4958,7 @@
     "lemma": "Jabneel 1",
     "previous": "Jabne",
     "next": "Jabneel 2",
+    "redirect": "Jamnia",
     "chapters": [
       {
         "start": 543,
@@ -5028,6 +5042,7 @@
     "lemma": "Iactura",
     "previous": "Jacthiel",
     "next": "Iactus 1",
+    "redirect": "Iactus 2",
     "chapters": [
       {
         "start": 545,
@@ -5979,7 +5994,7 @@
   {
     "lemma": "Ianoha",
     "previous": "Iannes",
-    "next": "Ianthe 1",
+    "next": "Ianthe",
     "chapters": [
       {
         "start": 695,
@@ -5989,8 +6004,20 @@
     ]
   },
   {
-    "lemma": "Ianthe 1",
+    "lemma": "Ianthe",
     "previous": "Ianoha",
+    "next": "Ianthe 1",
+    "chapters": [
+      {
+        "start": 695,
+        "end": 695,
+        "author": "Eitrem"
+      }
+    ]
+  },
+  {
+    "lemma": "Ianthe 1",
+    "previous": "Ianthe",
     "next": "Ianthe 2",
     "chapters": [
       {
@@ -6596,7 +6623,7 @@
   {
     "lemma": "Iaribolos",
     "previous": "Iarganon",
-    "next": "Iarmioi",
+    "next": "Ἰάρμιοι",
     "chapters": [
       {
         "start": 750,
@@ -6606,7 +6633,7 @@
     ]
   },
   {
-    "lemma": "Iarmioi",
+    "lemma": "Ἰάρμιοι",
     "previous": "Iaribolos",
     "next": "Jarmuth",
     "chapters": [
@@ -6619,7 +6646,7 @@
   },
   {
     "lemma": "Jarmuth",
-    "previous": "Iarmioi",
+    "previous": "Ἰάρμιοι",
     "next": "Iarsath",
     "chapters": [
       {
@@ -9517,6 +9544,7 @@
     "lemma": "Jericho",
     "previous": "Ieratis",
     "next": "Ierne",
+    "wp_link": "w:de:Jericho",
     "chapters": [
       {
         "start": 922,
@@ -9589,6 +9617,7 @@
     "lemma": "Jesrael",
     "previous": "Jesimon",
     "next": "Iesso",
+    "wp_link": "w:de:Jesreel (Stadt)",
     "chapters": [
       {
         "start": 959,
@@ -10529,6 +10558,7 @@
     "lemma": "Ilias latina",
     "previous": "Ilias",
     "next": "Iliberris",
+    "sort_key": "Iliasl",
     "wp_link": "w:de:Ilias Latina",
     "chapters": [
       {

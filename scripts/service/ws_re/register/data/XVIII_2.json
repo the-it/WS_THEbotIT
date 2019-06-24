@@ -1932,7 +1932,7 @@
   {
     "lemma": "Ospinio",
     "previous": "Osphagos",
-    "next": "Ospinon",
+    "next": "Ὄσπινον",
     "chapters": [
       {
         "start": 1588,
@@ -1942,9 +1942,9 @@
     ]
   },
   {
-    "lemma": "Ospinon",
+    "lemma": "Ὄσπινον",
     "previous": "Ospinio",
-    "next": "en Ospraonnoi",
+    "next": "ἐν Ωσπραοννωι",
     "chapters": [
       {
         "start": 1589,
@@ -1954,20 +1954,14 @@
     ]
   },
   {
-    "lemma": "en Ospraonnoi",
-    "previous": "Ospinon",
+    "lemma": "ἐν Ωσπραοννωι",
+    "previous": "Ὄσπινον",
     "next": "Osquidates",
-    "chapters": [
-      {
-        "start": 1589,
-        "end": 1589,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Ospraonno"
   },
   {
     "lemma": "Osquidates",
-    "previous": "en Ospraonnoi",
+    "previous": "ἐν Ωσπραοννωι",
     "next": "Osra",
     "chapters": [
       {
@@ -2479,7 +2473,7 @@
   {
     "lemma": "Ostern",
     "previous": "Osteodes",
-    "next": "Ostha",
+    "next": "Ὄσθα",
     "wp_link": "w:de:Ostern",
     "ws_link": "s:de:Ostern",
     "chapters": [
@@ -2491,9 +2485,10 @@
     ]
   },
   {
-    "lemma": "Ostha",
+    "lemma": "Ὄσθα",
     "previous": "Ostern",
     "next": "Ostia",
+    "sort_key": "Ostha",
     "chapters": [
       {
         "start": 1653,
@@ -2504,7 +2499,7 @@
   },
   {
     "lemma": "Ostia",
-    "previous": "Ostha",
+    "previous": "Ὄσθα",
     "next": "Ostia Aterni",
     "chapters": [
       {
@@ -2517,7 +2512,7 @@
   {
     "lemma": "Ostia Aterni",
     "previous": "Ostia",
-    "next": "Ostiaioi",
+    "next": "Ὠστιαῖοι",
     "chapters": [
       {
         "start": 1664,
@@ -2527,9 +2522,10 @@
     ]
   },
   {
-    "lemma": "Ostiaioi",
+    "lemma": "Ὠστιαῖοι",
     "previous": "Ostia Aterni",
     "next": "Ostiarius",
+    "sort_key": "Ostiaioi",
     "chapters": [
       {
         "start": 1665,
@@ -2540,7 +2536,7 @@
   },
   {
     "lemma": "Ostiarius",
-    "previous": "Ostiaioi",
+    "previous": "Ὠστιαῖοι",
     "next": "Ostippo",
     "chapters": [
       {
@@ -2637,7 +2633,7 @@
   {
     "lemma": "Ostium Spineticum",
     "previous": "Ostium Sagis",
-    "next": "Ostobalasara",
+    "next": "Ὀστοβαλασάρα",
     "chapters": [
       {
         "start": 1670,
@@ -2646,9 +2642,10 @@
     ]
   },
   {
-    "lemma": "Ostobalasara",
+    "lemma": "Ὀστοβαλασάρα",
     "previous": "Ostium Spineticum",
     "next": "Ostobara",
+    "sort_key": "Ostobalasara",
     "chapters": [
       {
         "start": 1670,
@@ -2659,7 +2656,7 @@
   },
   {
     "lemma": "Ostobara",
-    "previous": "Ostobalasara",
+    "previous": "Ὀστοβαλασάρα",
     "next": "Ostorius 1",
     "chapters": [
       {
@@ -5610,6 +5607,7 @@
     "lemma": "Paccius 8",
     "previous": "Paccius 7",
     "next": "Paccius 9",
+    "sort_key": "Paccius 08",
     "chapters": [
       {
         "start": 2064,
@@ -5718,7 +5716,7 @@
   {
     "lemma": "Pacenius",
     "previous": "Paccius 16",
-    "next": "Pacheia 1",
+    "next": "Παχεῖα 1",
     "chapters": [
       {
         "start": 2066,
@@ -5728,9 +5726,10 @@
     ]
   },
   {
-    "lemma": "Pacheia 1",
+    "lemma": "Παχεῖα 1",
     "previous": "Pacenius",
-    "next": "Pacheia 2",
+    "next": "Παχεῖα 2",
+    "sort_key": "Pacheia 1",
     "chapters": [
       {
         "start": 2066,
@@ -5740,9 +5739,10 @@
     ]
   },
   {
-    "lemma": "Pacheia 2",
-    "previous": "Pacheia 1",
+    "lemma": "Παχεῖα 2",
+    "previous": "Παχεῖα 1",
     "next": "Paches",
+    "sort_key": "Pacheia 2",
     "chapters": [
       {
         "start": 2066,
@@ -5753,7 +5753,7 @@
   },
   {
     "lemma": "Paches",
-    "previous": "Pacheia 2",
+    "previous": "Παχεῖα 2",
     "next": "Pachidas",
     "chapters": [
       {
@@ -7319,7 +7319,7 @@
   {
     "lemma": "Pagras",
     "previous": "Pagrai 2",
-    "next": "Pagrasa",
+    "next": "Πάγρασα",
     "chapters": [
       {
         "start": 2316,
@@ -7329,7 +7329,7 @@
     ]
   },
   {
-    "lemma": "Pagrasa",
+    "lemma": "Πάγρασα",
     "previous": "Pagras",
     "next": "Pagrika",
     "chapters": [
@@ -7342,7 +7342,7 @@
   },
   {
     "lemma": "Pagrika",
-    "previous": "Pagrasa",
+    "previous": "Πάγρασα",
     "next": "Pagrum",
     "chapters": [
       {
@@ -7712,7 +7712,7 @@
   {
     "lemma": "Paidotrophos",
     "previous": "Paidotribes",
-    "next": "paignion",
+    "next": "παίγνιον",
     "chapters": [
       {
         "start": 2396,
@@ -7722,9 +7722,10 @@
     ]
   },
   {
-    "lemma": "paignion",
+    "lemma": "παίγνιον",
     "previous": "Paidotrophos",
-    "next": "Paina nesos",
+    "next": "Παῖνα νῆσος",
+    "sort_key": "Paignion",
     "chapters": [
       {
         "start": 2396,
@@ -7734,8 +7735,8 @@
     ]
   },
   {
-    "lemma": "Paina nesos",
-    "previous": "paignion",
+    "lemma": "Παῖνα νῆσος",
+    "previous": "παίγνιον",
     "next": "Paion 1",
     "chapters": [
       {
@@ -7747,7 +7748,7 @@
   },
   {
     "lemma": "Paion 1",
-    "previous": "Paina nesos",
+    "previous": "Παῖνα νῆσος",
     "next": "Paion 2",
     "chapters": [
       {
@@ -8750,7 +8751,7 @@
   {
     "lemma": "Palaiphatos 4",
     "previous": "Palaiphatos 3",
-    "next": "Palaiphatos 1",
+    "next": "Palairos",
     "chapters": [
       {
         "start": 2451,
@@ -8760,20 +8761,8 @@
     ]
   },
   {
-    "lemma": "Palaiphatos 1",
-    "previous": "Palaiphatos 4",
-    "next": "Palairos",
-    "chapters": [
-      {
-        "start": 2452,
-        "end": 2452,
-        "author": "Blumenthal"
-      }
-    ]
-  },
-  {
     "lemma": "Palairos",
-    "previous": "Palaiphatos 1",
+    "previous": "Palaiphatos 4",
     "next": "Palaiskepsis",
     "chapters": [
       {

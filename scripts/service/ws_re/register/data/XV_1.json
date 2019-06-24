@@ -73,7 +73,7 @@
   {
     "lemma": "Mazamacae",
     "previous": "Mazalla",
-    "next": "Mazamias",
+    "next": "Μαζαμίας",
     "chapters": [
       {
         "start": 3,
@@ -83,9 +83,10 @@
     ]
   },
   {
-    "lemma": "Mazamias",
+    "lemma": "Μαζαμίας",
     "previous": "Mazamacae",
     "next": "Mazara 1",
+    "sort_key": "Mazamias",
     "chapters": [
       {
         "start": 3,
@@ -96,7 +97,7 @@
   },
   {
     "lemma": "Mazara 1",
-    "previous": "Mazamias",
+    "previous": "Μαζαμίας",
     "next": "Mazara 2",
     "chapters": [
       {
@@ -109,7 +110,7 @@
   {
     "lemma": "Mazara 2",
     "previous": "Mazara 1",
-    "next": "Mazaros",
+    "next": "Μάζαρος",
     "wp_link": "w:de:Elazığ",
     "chapters": [
       {
@@ -120,7 +121,7 @@
     ]
   },
   {
-    "lemma": "Mazaros",
+    "lemma": "Μάζαρος",
     "previous": "Mazara 2",
     "next": "Mazdak",
     "chapters": [
@@ -133,8 +134,8 @@
   },
   {
     "lemma": "Mazdak",
-    "previous": "Mazaros",
-    "next": "Mazenes",
+    "previous": "Μάζαρος",
+    "next": "Μαζήνης",
     "chapters": [
       {
         "start": 4,
@@ -144,7 +145,7 @@
     ]
   },
   {
-    "lemma": "Mazenes",
+    "lemma": "Μαζήνης",
     "previous": "Mazdak",
     "next": "Mazeus",
     "chapters": [
@@ -157,7 +158,7 @@
   },
   {
     "lemma": "Mazeus",
-    "previous": "Mazenes",
+    "previous": "Μαζήνης",
     "next": "Mazikes",
     "chapters": [
       {
@@ -264,6 +265,7 @@
     "lemma": "mean",
     "previous": "Mealeitis",
     "next": "meanpe",
+    "sort_key": "Mean",
     "chapters": [
       {
         "start": 7,
@@ -299,6 +301,7 @@
     "lemma": "meas",
     "previous": "Meara",
     "next": "Mearus",
+    "sort_key": "Meas",
     "chapters": [
       {
         "start": 9,
@@ -368,7 +371,7 @@
   {
     "lemma": "Mechanitis",
     "previous": "Mechanische Methode",
-    "next": "Mechlessos",
+    "next": "Μεχλεσσός",
     "chapters": [
       {
         "start": 17,
@@ -377,7 +380,7 @@
     ]
   },
   {
-    "lemma": "Mechlessos",
+    "lemma": "Μεχλεσσός",
     "previous": "Mechanitis",
     "next": "Mechophanes",
     "chapters": [
@@ -390,7 +393,7 @@
   },
   {
     "lemma": "Mechophanes",
-    "previous": "Mechlessos",
+    "previous": "Μεχλεσσός",
     "next": "Mecilius",
     "chapters": [
       {
@@ -426,7 +429,7 @@
   {
     "lemma": "Meculonius",
     "previous": "Mecira",
-    "next": "Meda 1",
+    "next": "Meda",
     "chapters": [
       {
         "start": 17,
@@ -436,8 +439,20 @@
     ]
   },
   {
-    "lemma": "Meda 1",
+    "lemma": "Meda",
     "previous": "Meculonius",
+    "next": "Meda 1",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Weinstock"
+      }
+    ]
+  },
+  {
+    "lemma": "Meda 1",
+    "previous": "Meda",
     "next": "Meda 2",
     "chapters": [
       {
@@ -731,7 +746,7 @@
   {
     "lemma": "Medesikaste",
     "previous": "Mederiacum",
-    "next": "Mediam",
+    "next": "Media",
     "chapters": [
       {
         "start": 67,
@@ -741,8 +756,19 @@
     ]
   },
   {
-    "lemma": "Mediam",
+    "lemma": "Media",
     "previous": "Medesikaste",
+    "next": "Mediam",
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "lemma": "Mediam",
+    "previous": "Media",
     "next": "Mediana",
     "chapters": [
       {
@@ -768,7 +794,7 @@
   {
     "lemma": "Medianoi",
     "previous": "Mediana",
-    "next": "Medianon, Mezianon kome",
+    "next": "Μεδιάνων, Μεζιάνων κώμη",
     "chapters": [
       {
         "start": 68,
@@ -778,7 +804,7 @@
     ]
   },
   {
-    "lemma": "Medianon, Mezianon kome",
+    "lemma": "Μεδιάνων, Μεζιάνων κώμη",
     "previous": "Medianoi",
     "next": "Medias teichos",
     "chapters": [
@@ -791,7 +817,7 @@
   },
   {
     "lemma": "Medias teichos",
-    "previous": "Medianon, Mezianon kome",
+    "previous": "Μεδιάνων, Μεζιάνων κώμη",
     "next": "Medias 1",
     "chapters": [
       {
@@ -7653,7 +7679,7 @@
   {
     "lemma": "Melizitanum",
     "previous": "Melizeigara",
-    "next": "Melkomenioi",
+    "next": "Μελκομένιοι",
     "chapters": [
       {
         "start": 556,
@@ -7663,7 +7689,7 @@
     ]
   },
   {
-    "lemma": "Melkomenioi",
+    "lemma": "Μελκομένιοι",
     "previous": "Melizitanum",
     "next": "Melkynda",
     "chapters": [
@@ -7675,7 +7701,7 @@
   },
   {
     "lemma": "Melkynda",
-    "previous": "Melkomenioi",
+    "previous": "Μελκομένιοι",
     "next": "Mella 1",
     "chapters": [
       {
@@ -7699,7 +7725,7 @@
   {
     "lemma": "Mella 2",
     "previous": "Mella 1",
-    "next": "Mellakes",
+    "next": "Μέλλακες",
     "chapters": [
       {
         "start": 556,
@@ -7708,9 +7734,9 @@
     ]
   },
   {
-    "lemma": "Mellakes",
+    "lemma": "Μέλλακες",
     "previous": "Mella 2",
-    "next": "Milizigeris",
+    "next": "Mellapokopsas",
     "chapters": [
       {
         "start": 556,
@@ -7720,20 +7746,8 @@
     ]
   },
   {
-    "lemma": "Milizigeris",
-    "previous": "Mellakes",
-    "next": "Mellapokopsas",
-    "chapters": [
-      {
-        "start": 556,
-        "end": 556,
-        "author": "Herrmann"
-      }
-    ]
-  },
-  {
     "lemma": "Mellapokopsas",
-    "previous": "Milizigeris",
+    "previous": "Μέλλακες",
     "next": "Mellaria 1",
     "chapters": [
       {
@@ -7781,7 +7795,7 @@
   {
     "lemma": "Mellaria 4",
     "previous": "Mellaria 3",
-    "next": "Melleiren",
+    "next": "Μελλείρην",
     "chapters": [
       {
         "start": 557,
@@ -7791,7 +7805,7 @@
     ]
   },
   {
-    "lemma": "Melleiren",
+    "lemma": "Μελλείρην",
     "previous": "Mellaria 4",
     "next": "Μελλέφηβος",
     "redirect": true,
@@ -7804,7 +7818,7 @@
   },
   {
     "lemma": "Μελλέφηβος",
-    "previous": "Melleiren",
+    "previous": "Μελλείρην",
     "next": "Mellesa",
     "sort_key": "Mellephebos",
     "chapters": [
@@ -7831,6 +7845,7 @@
     "lemma": "Mellodunum",
     "previous": "Mellesa",
     "next": "Mellon",
+    "redirect": true,
     "wp_link": "w:de:Melun",
     "chapters": [
       {
@@ -7950,7 +7965,7 @@
   {
     "lemma": "Melokome",
     "previous": "Μηλόκαβος",
-    "next": "Melokometai 1",
+    "next": "Μηλοκωμῆται 1",
     "chapters": [
       {
         "start": 560,
@@ -7960,9 +7975,10 @@
     ]
   },
   {
-    "lemma": "Melokometai 1",
+    "lemma": "Μηλοκωμῆται 1",
     "previous": "Melokome",
-    "next": "Melokometai 2",
+    "next": "Μηλοκωμῆται 2",
+    "sort_key": "Melokometai 1",
     "chapters": [
       {
         "start": 560,
@@ -7972,9 +7988,10 @@
     ]
   },
   {
-    "lemma": "Melokometai 2",
-    "previous": "Melokometai 1",
+    "lemma": "Μηλοκωμῆται 2",
+    "previous": "Μηλοκωμῆται 1",
     "next": "Melon 1",
+    "sort_key": "Melokometai 1",
     "chapters": [
       {
         "start": 560,
@@ -7985,7 +8002,7 @@
   },
   {
     "lemma": "Melon 1",
-    "previous": "Melokometai 2",
+    "previous": "Μηλοκωμῆται 2",
     "next": "Melon 2",
     "chapters": [
       {
@@ -8375,7 +8392,7 @@
   {
     "lemma": "Membliaros 1",
     "previous": "Membles",
-    "next": "Membliaros 2",
+    "next": "Μεμβλίαρος 2",
     "chapters": [
       {
         "start": 595,
@@ -8385,7 +8402,7 @@
     ]
   },
   {
-    "lemma": "Membliaros 2",
+    "lemma": "Μεμβλίαρος 2",
     "previous": "Membliaros 1",
     "next": "Membrana",
     "chapters": [
@@ -8398,7 +8415,7 @@
   },
   {
     "lemma": "Membrana",
-    "previous": "Membliaros 2",
+    "previous": "Μεμβλίαρος 2",
     "next": "Membressa",
     "chapters": [
       {
@@ -8511,6 +8528,7 @@
     "lemma": "Memmius 3",
     "previous": "Memmius 2",
     "next": "Memmius 4",
+    "sort_key": "Memmius 03",
     "chapters": [
       {
         "start": 604,
@@ -8575,6 +8593,7 @@
     "lemma": "Memmius 8",
     "previous": "Memmius 7",
     "next": "Memmius 9",
+    "sort_key": "Memmius 08",
     "chapters": [
       {
         "start": 609,
@@ -8600,7 +8619,7 @@
     "lemma": "Memmius 10",
     "previous": "Memmius 9",
     "next": "Memmius 11",
-    "sort_key": "Memmius",
+    "sort_key": "Memmius 10",
     "chapters": [
       {
         "start": 618,
@@ -9200,6 +9219,7 @@
     "lemma": "Memnonia",
     "previous": "Memnones",
     "next": "Memnonides",
+    "redirect": "Susa (Archäologisch)",
     "chapters": [
       {
         "start": 655,
@@ -9211,6 +9231,7 @@
     "lemma": "Memnonides",
     "previous": "Memnonia",
     "next": "Memnonius 1",
+    "redirect": "Memnon 1",
     "chapters": [
       {
         "start": 655,
@@ -9306,6 +9327,7 @@
     "lemma": "a memoria",
     "previous": "Memor 5",
     "next": "Memoriae damnatio",
+    "sort_key": "memoria, a",
     "chapters": [
       {
         "start": 655,
@@ -9318,7 +9340,7 @@
     "lemma": "Memoriae damnatio",
     "previous": "a memoria",
     "next": "Memoriales",
-    "redirect": true,
+    "redirect": "Damnatio memoriae",
     "chapters": [
       {
         "start": 657,
@@ -16382,7 +16404,7 @@
   {
     "lemma": "Mesatis",
     "previous": "Mesateus",
-    "next": "Mesche",
+    "next": "Μέσχη",
     "chapters": [
       {
         "start": 1075,
@@ -16392,9 +16414,10 @@
     ]
   },
   {
-    "lemma": "Mesche",
+    "lemma": "Μέσχη",
     "previous": "Mesatis",
-    "next": "Meschela",
+    "next": "Μεσχέλα",
+    "sort_key": "Mesche",
     "chapters": [
       {
         "start": 1076,
@@ -16404,9 +16427,10 @@
     ]
   },
   {
-    "lemma": "Meschela",
-    "previous": "Mesche",
+    "lemma": "Μεσχέλα",
+    "previous": "Μέσχη",
     "next": "Mescheta",
+    "sort_key": "Meschela",
     "chapters": [
       {
         "start": 1076,
@@ -16417,7 +16441,7 @@
   },
   {
     "lemma": "Mescheta",
-    "previous": "Meschela",
+    "previous": "Μεσχέλα",
     "next": "Mescianus",
     "sort_key": "Mescheta",
     "chapters": [
@@ -16503,6 +16527,7 @@
     "lemma": "Mese 1",
     "previous": "Mescinius 4",
     "next": "Mese 2",
+    "sort_key": "Mescheta",
     "chapters": [
       {
         "start": 1078,

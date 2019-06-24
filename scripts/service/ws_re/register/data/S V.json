@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Agamemnon 3",
-    "previous": null,
     "next": "Agathon 14b",
     "chapters": [
       {
@@ -38,7 +37,7 @@
   {
     "lemma": "Amanus",
     "previous": "Akron 5",
-    "next": "Anaxenor 1",
+    "next": "Anaxenor 1.2",
     "chapters": [
       {
         "start": 1,
@@ -46,6 +45,14 @@
         "author": "Lippold, Georg"
       }
     ]
+  },
+  {
+    "lemma": "Anaxenor 1.2",
+    "previous": "Amanus"
+  },
+  {
+    "lemma": "Amanus",
+    "next": "Anaxenor 1"
   },
   {
     "lemma": "Anaxenor 1",
@@ -62,7 +69,7 @@
   {
     "lemma": "Antidotos 6",
     "previous": "Anaxenor 1",
-    "next": "Antisemitismus",
+    "next": "Antigonos 24",
     "chapters": [
       {
         "start": 1,
@@ -72,9 +79,25 @@
     ]
   },
   {
-    "lemma": "Antisemitismus",
+    "lemma": "Antigonos 24",
     "previous": "Antidotos 6",
+    "next": "Antiochos 68"
+  },
+  {
+    "lemma": "Antiochos 68",
+    "previous": "Antigonos 24",
+    "next": "Antiochos 65"
+  },
+  {
+    "lemma": "Antiochos 65",
+    "previous": "Antiochos 68",
+    "next": "Antisemitismus"
+  },
+  {
+    "lemma": "Antisemitismus",
+    "previous": "Antiochos 65",
     "next": "Apelles 5a",
+    "wp_link": "w:de:Antisemitismus",
     "chapters": [
       {
         "start": 3,
@@ -86,7 +109,7 @@
   {
     "lemma": "Apelles 5a",
     "previous": "Antisemitismus",
-    "next": "Apollodoros 41e",
+    "next": "Apollodoros 41a",
     "chapters": [
       {
         "start": 43,
@@ -96,8 +119,17 @@
     ]
   },
   {
+    "lemma": "Apollodoros 41a",
+    "previous": "Apelles 5a"
+  },
+  {
+    "lemma": "Apelles 5a",
+    "next": "Apollodoros 41e"
+  },
+  {
     "lemma": "Apollodoros 41e",
     "previous": "Apelles 5a",
+    "next": "Apollonios 114",
     "chapters": [
       {
         "start": 43,
@@ -107,7 +139,13 @@
     ]
   },
   {
+    "lemma": "Apollonios 114",
+    "previous": "Apollodoros 41e",
+    "next": "Apollonios 122"
+  },
+  {
     "lemma": "Apollonios 122",
+    "previous": "Apollonios 114",
     "next": "Apollonios 126b"
   },
   {
@@ -162,7 +200,7 @@
   {
     "lemma": "Ariston 62a",
     "previous": "Aristeides 23a",
-    "next": "Asklepiades 51",
+    "next": "Ἀσάλμανος",
     "chapters": [
       {
         "start": 46,
@@ -172,8 +210,13 @@
     ]
   },
   {
-    "lemma": "Asklepiades 51",
+    "lemma": "Ἀσάλμανος",
     "previous": "Ariston 62a",
+    "next": "Asklepiades 51"
+  },
+  {
+    "lemma": "Asklepiades 51",
+    "previous": "Ἀσάλμανος",
     "next": "Athenagoras 9a",
     "chapters": [
       {
@@ -185,6 +228,7 @@
   {
     "lemma": "Athenagoras 9a",
     "previous": "Asklepiades 51",
+    "next": "Athenodoros 19",
     "sort_key": "Athenagoras 09a",
     "chapters": [
       {
@@ -196,6 +240,7 @@
   },
   {
     "lemma": "Athenodoros 19",
+    "previous": "Athenagoras 9a",
     "next": "Attius 10a"
   },
   {
@@ -250,7 +295,13 @@
     "previous": "Battus"
   },
   {
+    "lemma": "Bias 10",
+    "next": "Caecilius 141"
+  },
+  {
     "lemma": "Caecilius 141",
+    "previous": "Bias 10",
+    "next": "Celsius 18a",
     "chapters": [
       {
         "start": 57,
@@ -258,6 +309,10 @@
         "author": "Hosius"
       }
     ]
+  },
+  {
+    "lemma": "Celsius 18a",
+    "previous": "Caecilius 141"
   },
   {
     "lemma": "Caecilia Trebulla",
@@ -466,7 +521,7 @@
   {
     "lemma": "Dumopireti",
     "previous": "Drogen",
-    "next": "Epistolographie",
+    "next": "Dura 2",
     "chapters": [
       {
         "start": 182,
@@ -476,9 +531,15 @@
     ]
   },
   {
-    "lemma": "Epistolographie",
+    "lemma": "Dura 2",
     "previous": "Dumopireti",
+    "next": "Epistolographie"
+  },
+  {
+    "lemma": "Epistolographie",
+    "previous": "Dura 2",
     "next": "Epyaxa",
+    "wp_link": "w:de:Epistolografie",
     "chapters": [
       {
         "start": 185,
@@ -670,7 +731,7 @@
   {
     "lemma": "Goneus",
     "previous": "Glykon 6",
-    "next": "Herakleitos 16a",
+    "next": "Hephaistodoros",
     "chapters": [
       {
         "start": 228,
@@ -680,8 +741,11 @@
     ]
   },
   {
+    "lemma": "Hephaistodoros",
+    "previous": "Goneus"
+  },
+  {
     "lemma": "Herakleitos 16a",
-    "previous": "Goneus",
     "next": "Herpyllis",
     "chapters": [
       {
@@ -922,7 +986,6 @@
   {
     "lemma": "Issa 3",
     "previous": "Ismeni",
-    "next": "Iulius 76a",
     "chapters": [
       {
         "start": 346,
@@ -932,9 +995,13 @@
     ]
   },
   {
+    "lemma": "Judex",
+    "next": "Iulius 76a"
+  },
+  {
     "lemma": "Iulius 76a",
-    "previous": "Issa 3",
-    "next": "Iunius 21b",
+    "previous": "Judex",
+    "next": "Iunius 21a",
     "chapters": [
       {
         "start": 355,
@@ -944,8 +1011,11 @@
     ]
   },
   {
+    "lemma": "Iunius 21a",
+    "previous": "Iulius 76a"
+  },
+  {
     "lemma": "Iunius 21b",
-    "previous": "Iulius 76a",
     "next": "Iunius 46a",
     "chapters": [
       {
@@ -971,6 +1041,8 @@
     "lemma": "Iunius 55a",
     "previous": "Iunius 46a",
     "next": "Iunius 75a",
+    "sort_key": "Iunius 55a",
+    "wp_link": "w:de:Decimus Iunius Brutus Albinus",
     "chapters": [
       {
         "start": 369,
@@ -4042,7 +4114,6 @@
   {
     "lemma": "Maximus 127a",
     "previous": "Maximus 127",
-    "next": "Maximus 128",
     "chapters": [
       {
         "start": 679,
@@ -4050,11 +4121,15 @@
         "author": "Enßlin"
       }
     ]
+  },
+  {
+    "lemma": "Maximus 127",
+    "next": "Maximus 128"
   },
   {
     "lemma": "Maximus 128",
-    "previous": "Maximus 127a",
-    "next": "Mazdaismus",
+    "previous": "Maximus 127",
+    "next": "Maximus 129",
     "chapters": [
       {
         "start": 679,
@@ -4064,8 +4139,11 @@
     ]
   },
   {
+    "lemma": "Maximus 129",
+    "previous": "Maximus 128"
+  },
+  {
     "lemma": "Mazdaismus",
-    "previous": "Maximus 128",
     "next": "Maximus 129",
     "chapters": [
       {

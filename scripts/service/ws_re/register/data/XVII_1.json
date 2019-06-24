@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Nereiden",
+    "previous": null,
     "next": "Nereis",
     "chapters": [
       {
@@ -1907,7 +1908,7 @@
   {
     "lemma": "Nesulion",
     "previous": "Nesukios",
-    "next": "Nesyt",
+    "next": "Νεσύτ",
     "chapters": [
       {
         "start": 141,
@@ -1917,7 +1918,7 @@
     ]
   },
   {
-    "lemma": "Nesyt",
+    "lemma": "Νεσύτ",
     "previous": "Nesulion",
     "next": "Netabio",
     "chapters": [
@@ -1930,7 +1931,7 @@
   },
   {
     "lemma": "Netabio",
-    "previous": "Nesyt",
+    "previous": "Νεσύτ",
     "next": "Nete",
     "chapters": [
       {
@@ -1943,7 +1944,7 @@
   {
     "lemma": "Nete",
     "previous": "Netabio",
-    "next": "neuun(u)s",
+    "next": "neθun(u)s",
     "chapters": [
       {
         "start": 141,
@@ -1953,20 +1954,15 @@
     ]
   },
   {
-    "lemma": "neuun(u)s",
+    "lemma": "neθun(u)s",
     "previous": "Nete",
     "next": "Netindava",
-    "chapters": [
-      {
-        "start": 142,
-        "end": 142,
-        "author": "Fiesel"
-      }
-    ]
+    "sort_key": "netun(u)s",
+    "wp_link": "w:de:Neptun (Mythologie)"
   },
   {
     "lemma": "Netindava",
-    "previous": "neuun(u)s",
+    "previous": "neθun(u)s",
     "next": "Netis",
     "chapters": [
       {
@@ -3374,6 +3370,7 @@
     "lemma": "Nikagoras 7",
     "previous": "Nikagoras 6",
     "next": "Nikagoras 8",
+    "sort_key": "Nikagoras 08",
     "chapters": [
       {
         "start": 216,
@@ -6699,6 +6696,8 @@
     "lemma": "Nikomedes 3",
     "previous": "Nikomedes 2",
     "next": "Nikomedes 4",
+    "sort_key": "Nikomedes 03",
+    "wp_link": "w:de:Nikomedes I.",
     "chapters": [
       {
         "start": 493,
@@ -6753,6 +6752,7 @@
     "lemma": "Nikomedes 7",
     "previous": "Nikomedes 6",
     "next": "Nikomedes 8",
+    "sort_key": "Nikomedes 07",
     "chapters": [
       {
         "start": 499,

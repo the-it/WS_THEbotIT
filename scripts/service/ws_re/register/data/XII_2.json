@@ -18,7 +18,7 @@
   {
     "lemma": "Legio 2",
     "previous": "Legio 1",
-    "next": "Legion",
+    "next": "Legio Traiana",
     "chapters": [
       {
         "start": 1837,
@@ -28,21 +28,9 @@
     ]
   },
   {
-    "lemma": "Legion",
-    "previous": "Legio 2",
-    "next": "Legio Traiana",
-    "chapters": [
-      {
-        "start": 1837,
-        "end": 1837,
-        "author": "Ganschinietz"
-      }
-    ]
-  },
-  {
     "lemma": "Legio Traiana",
-    "previous": "Legion",
-    "next": "Legis actio",
+    "previous": "Legio 2",
+    "next": "Legion",
     "wp_link": "w:de:Colonia Ulpia Traiana",
     "chapters": [
       {
@@ -53,8 +41,20 @@
     ]
   },
   {
-    "lemma": "Legis actio",
+    "lemma": "Legion",
     "previous": "Legio Traiana",
+    "next": "Legis actio",
+    "chapters": [
+      {
+        "start": 1837,
+        "end": 1837,
+        "author": "Ganschinietz"
+      }
+    ]
+  },
+  {
+    "lemma": "Legis actio",
+    "previous": "Legion",
     "next": "Legna",
     "chapters": [
       {
@@ -104,6 +104,7 @@
     "lemma": "Lehrgedicht",
     "previous": "Leherennus",
     "next": "Λεία",
+    "wp_link": "w:de:Lehrgedicht",
     "chapters": [
       {
         "start": 1842,
@@ -252,7 +253,7 @@
   {
     "lemma": "Leimon 3",
     "previous": "Leimon 2",
-    "next": "Leimone 1",
+    "next": "Λειμώνη 1",
     "chapters": [
       {
         "start": 1862,
@@ -262,9 +263,10 @@
     ]
   },
   {
-    "lemma": "Leimone 1",
+    "lemma": "Λειμώνη 1",
     "previous": "Leimon 3",
-    "next": "Leimone 2",
+    "next": "Λειμώνη 2",
+    "sort_key": "Leimone 1",
     "chapters": [
       {
         "start": 1863,
@@ -274,8 +276,8 @@
     ]
   },
   {
-    "lemma": "Leimone 2",
-    "previous": "Leimone 1",
+    "lemma": "Λειμώνη 2",
+    "previous": "Λειμώνη 1",
     "next": "Leimones",
     "chapters": [
       {
@@ -287,8 +289,8 @@
   },
   {
     "lemma": "Leimones",
-    "previous": "Leimone 2",
-    "next": "Leimonion Pedion",
+    "previous": "Λειμώνη 2",
+    "next": "Λειμώνιον Πεδίον",
     "chapters": [
       {
         "start": 1864,
@@ -298,9 +300,10 @@
     ]
   },
   {
-    "lemma": "Leimonion Pedion",
+    "lemma": "Λειμώνιον Πεδίον",
     "previous": "Leimones",
     "next": "Leinon",
+    "sort_key": "Leimonion Pedion",
     "chapters": [
       {
         "start": 1869,
@@ -311,7 +314,7 @@
   },
   {
     "lemma": "Leinon",
-    "previous": "Leimonion Pedion",
+    "previous": "Λειμώνιον Πεδίον",
     "next": "Leinth",
     "chapters": [
       {
@@ -348,7 +351,7 @@
   {
     "lemma": "Leïon",
     "previous": "Leiodes",
-    "next": "Leiopedon",
+    "next": "Λειόπεδον",
     "chapters": [
       {
         "start": 1870,
@@ -357,9 +360,10 @@
     ]
   },
   {
-    "lemma": "Leiopedon",
+    "lemma": "Λειόπεδον",
     "previous": "Leïon",
     "next": "Leipsydrion",
+    "sort_key": "Leiopedon",
     "chapters": [
       {
         "start": 1870,
@@ -370,7 +374,7 @@
   },
   {
     "lemma": "Leipsydrion",
-    "previous": "Leiopedon",
+    "previous": "Λειόπεδον",
     "next": "Leis",
     "chapters": [
       {
@@ -515,6 +519,8 @@
     "lemma": "Λήλαντον Πεδίον",
     "previous": "Lelante",
     "next": "Lelantos 1",
+    "sort_key": "Lelantonpedion",
+    "wp_link": "w:de:Lelantische Ebene",
     "chapters": [
       {
         "start": 1889,
@@ -589,6 +595,8 @@
     "lemma": "Λελέγων πόλις ἐν Καρίᾳ",
     "previous": "Leleger",
     "next": "Lelex",
+    "sort_key": "Lelegonp",
+    "wp_link": "w:de:Aphrodisias",
     "chapters": [
       {
         "start": 1893,
@@ -1614,6 +1622,7 @@
     "lemma": "Leon 1",
     "previous": "Leon",
     "next": "Leon 2",
+    "sort_key": "Leon 01",
     "chapters": [
       {
         "start": 2004,
@@ -1651,6 +1660,7 @@
     "lemma": "Leon 4",
     "previous": "Leon 3",
     "next": "Leon 5",
+    "sort_key": "Leon 04",
     "chapters": [
       {
         "start": 2004,
@@ -1663,6 +1673,8 @@
     "lemma": "Leon 5",
     "previous": "Leon 4",
     "next": "Leon 6",
+    "sort_key": "Leon 05",
+    "wp_link": "w:de:Leon (Gigant)",
     "chapters": [
       {
         "start": 2004,
@@ -1675,6 +1687,7 @@
     "lemma": "Leon 6",
     "previous": "Leon 5",
     "next": "Leon 7",
+    "sort_key": "Leon 06",
     "chapters": [
       {
         "start": 2004,
@@ -1687,6 +1700,8 @@
     "lemma": "Leon 7",
     "previous": "Leon 6",
     "next": "Leon 8",
+    "sort_key": "Leon 07",
+    "wp_link": "w:de:Leon (Sohn des Kolonos)",
     "chapters": [
       {
         "start": 2004,
@@ -1699,6 +1714,7 @@
     "lemma": "Leon 8",
     "previous": "Leon 7",
     "next": "Leon 9",
+    "sort_key": "Leon 08",
     "chapters": [
       {
         "start": 2004,
@@ -1711,6 +1727,7 @@
     "lemma": "Leon 9",
     "previous": "Leon 8",
     "next": "Leon 10",
+    "sort_key": "Leon 09",
     "chapters": [
       {
         "start": 2005,
@@ -1902,6 +1919,7 @@
     "lemma": "Leon 25",
     "previous": "Leon 24",
     "next": "Leon 26",
+    "wp_link": "w:de:en:Leon of Pella",
     "chapters": [
       {
         "start": 2012,
@@ -3898,7 +3916,7 @@
   {
     "lemma": "Lesanici",
     "previous": "Lesa",
-    "next": "Lesanon kome",
+    "next": "Λησανῶν κώμη",
     "chapters": [
       {
         "start": 2098,
@@ -3907,7 +3925,7 @@
     ]
   },
   {
-    "lemma": "Lesanon kome",
+    "lemma": "Λησανῶν κώμη",
     "previous": "Lesanici",
     "next": "Lesbi",
     "chapters": [
@@ -3920,7 +3938,7 @@
   },
   {
     "lemma": "Lesbi",
-    "previous": "Lesanon kome",
+    "previous": "Λησανῶν κώμη",
     "next": "Lesbierinnen",
     "chapters": [
       {

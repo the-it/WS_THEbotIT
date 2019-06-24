@@ -25,7 +25,7 @@
   {
     "lemma": "Numenia 1",
     "previous": "Numen Praestantissimum",
-    "next": "Numenia 2",
+    "next": "Νουμηνία 2",
     "chapters": [
       {
         "start": 1292,
@@ -35,7 +35,7 @@
     ]
   },
   {
-    "lemma": "Numenia 2",
+    "lemma": "Νουμηνία 2",
     "previous": "Numenia 1",
     "next": "Numenion",
     "chapters": [
@@ -48,7 +48,7 @@
   },
   {
     "lemma": "Numenion",
-    "previous": "Numenia 2",
+    "previous": "Νουμηνία 2",
     "next": "Numenios 1",
     "chapters": [
       {
@@ -87,6 +87,7 @@
     "lemma": "Numenios 3",
     "previous": "Numenios 2",
     "next": "Numenios 4",
+    "sort_key": "Numenios 03",
     "chapters": [
       {
         "start": 1295,
@@ -99,6 +100,7 @@
     "lemma": "Numenios 4",
     "previous": "Numenios 3",
     "next": "Numenios 5",
+    "sort_key": "Numenios 04",
     "chapters": [
       {
         "start": 1295,
@@ -111,6 +113,7 @@
     "lemma": "Numenios 5",
     "previous": "Numenios 4",
     "next": "Numenios 6",
+    "sort_key": "Numenios 05",
     "chapters": [
       {
         "start": 1296,
@@ -136,6 +139,7 @@
     "lemma": "Numenios 7",
     "previous": "Numenios 6",
     "next": "Numenios 8",
+    "sort_key": "Numenios 07",
     "chapters": [
       {
         "start": 1296,
@@ -735,6 +739,7 @@
     "lemma": "Numitor 1",
     "previous": "Numiternus",
     "next": "Numitor 2",
+    "wp_link": "w:de:Numitor",
     "chapters": [
       {
         "start": 1402,
@@ -3052,7 +3057,7 @@
   {
     "lemma": "Oaeneum",
     "previous": "Oaditai",
-    "next": "Oaeona",
+    "next": "Oaeonae",
     "chapters": [
       {
         "start": 1673,
@@ -3067,7 +3072,7 @@
     ]
   },
   {
-    "lemma": "Oaeona",
+    "lemma": "Oaeonae",
     "previous": "Oaeneum",
     "next": "Oamenoth",
     "redirect": true,
@@ -3080,7 +3085,7 @@
   },
   {
     "lemma": "Oamenoth",
-    "previous": "Oaeona",
+    "previous": "Oaeonae",
     "next": "Oamoutha",
     "chapters": [
       {
@@ -3105,7 +3110,7 @@
   {
     "lemma": "Oanis, Oanos",
     "previous": "Oamoutha",
-    "next": "Oannes",
+    "next": "Ὠάννης",
     "chapters": [
       {
         "start": 1675,
@@ -3115,9 +3120,11 @@
     ]
   },
   {
-    "lemma": "Oannes",
+    "lemma": "Ὠάννης",
     "previous": "Oanis, Oanos",
     "next": "Oanos",
+    "sort_key": "Oannes",
+    "wp_link": "w:de:Oannes",
     "chapters": [
       {
         "start": 1677,
@@ -3128,8 +3135,8 @@
   },
   {
     "lemma": "Oanos",
-    "previous": "Oannes",
-    "next": "Oarakta",
+    "previous": "Ὠάννης",
+    "next": "Ὀάρακτα",
     "chapters": [
       {
         "start": 1679,
@@ -3139,7 +3146,7 @@
     ]
   },
   {
-    "lemma": "Oarakta",
+    "lemma": "Ὀάρακτα",
     "previous": "Oanos",
     "next": "Oarizos",
     "chapters": [
@@ -3152,7 +3159,7 @@
   },
   {
     "lemma": "Oarizos",
-    "previous": "Oarakta",
+    "previous": "Ὀάρακτα",
     "next": "Oaros",
     "chapters": [
       {
@@ -3297,7 +3304,7 @@
   {
     "lemma": "Obarator",
     "previous": "Obana 2",
-    "next": "Obareis",
+    "next": "Ὀβαρεῖς",
     "chapters": [
       {
         "start": 1704,
@@ -3307,9 +3314,10 @@
     ]
   },
   {
-    "lemma": "Obareis",
+    "lemma": "Ὀβαρεῖς",
     "previous": "Obarator",
-    "next": "Obarenoi",
+    "next": "Ὠβαρηνοί",
+    "sort_key": "Obareis",
     "chapters": [
       {
         "start": 1705,
@@ -3319,9 +3327,10 @@
     ]
   },
   {
-    "lemma": "Obarenoi",
-    "previous": "Obareis",
+    "lemma": "Ὠβαρηνοί",
+    "previous": "Ὀβαρεῖς",
     "next": "Obaritus",
+    "sort_key": "Obarenoi",
     "chapters": [
       {
         "start": 1705,
@@ -3332,7 +3341,7 @@
   },
   {
     "lemma": "Obaritus",
-    "previous": "Obarenoi",
+    "previous": "Ὠβαρηνοί",
     "next": "Obba 1",
     "chapters": [
       {

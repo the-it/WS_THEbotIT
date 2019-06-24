@@ -2163,7 +2163,7 @@
   {
     "lemma": "Plotinus Eustathius",
     "previous": "Plotinos",
-    "next": "Plotius 1",
+    "next": "Plotius",
     "chapters": [
       {
         "start": 592,
@@ -2173,9 +2173,21 @@
     ]
   },
   {
-    "lemma": "Plotius 1",
+    "lemma": "Plotius",
     "previous": "Plotinus Eustathius",
+    "next": "Plotius 1",
+    "chapters": [
+      {
+        "start": 592,
+        "end": 592
+      }
+    ]
+  },
+  {
+    "lemma": "Plotius 1",
+    "previous": "Plotius",
     "next": "Plotius 2",
+    "sort_key": "Plotius 01",
     "chapters": [
       {
         "start": 592,
@@ -2188,6 +2200,7 @@
     "lemma": "Plotius 2",
     "previous": "Plotius 1",
     "next": "Plotius 3",
+    "sort_key": "Plotius 02",
     "chapters": [
       {
         "start": 592,
@@ -2248,6 +2261,7 @@
     "lemma": "Plotius 7",
     "previous": "Plotius 6",
     "next": "Plotius 8",
+    "sort_key": "Plotius 07",
     "chapters": [
       {
         "start": 594,
@@ -2260,6 +2274,7 @@
     "lemma": "Plotius 8",
     "previous": "Plotius 7",
     "next": "Plotius 9",
+    "sort_key": "Plotius 08",
     "chapters": [
       {
         "start": 594,
@@ -2272,6 +2287,7 @@
     "lemma": "Plotius 9",
     "previous": "Plotius 8",
     "next": "Plotius 10",
+    "sort_key": "Plotius 09",
     "chapters": [
       {
         "start": 595,
@@ -3012,7 +3028,6 @@
     "lemma": "Plygonion",
     "previous": "Pluvius",
     "next": "Πλυνέαι",
-    "redirect": true,
     "chapters": [
       {
         "start": 1052,
@@ -3072,7 +3087,7 @@
   {
     "lemma": "Plynterion",
     "previous": "Plynteria",
-    "next": "Pnebebis",
+    "next": "Pneuma",
     "chapters": [
       {
         "start": 1065,
@@ -3082,20 +3097,13 @@
     ]
   },
   {
-    "lemma": "Pnebebis",
+    "lemma": "Pneuma",
     "previous": "Plynterion",
-    "next": "Pneumatische Schule",
-    "chapters": [
-      {
-        "start": 1065,
-        "end": 1065,
-        "author": "Kees"
-      }
-    ]
+    "next": "Pneumatische Schule"
   },
   {
     "lemma": "Pneumatische Schule",
-    "previous": "Pnebebis",
+    "previous": "Pneuma",
     "next": "Pneumatomachoi",
     "chapters": [
       {

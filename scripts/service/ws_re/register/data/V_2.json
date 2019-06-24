@@ -101,6 +101,7 @@
     "lemma": "Donatus 5",
     "previous": "Donatus 4",
     "next": "Donatus 6",
+    "sort_key": "Donatus 05",
     "chapters": [
       {
         "start": 1545,
@@ -127,7 +128,7 @@
     "previous": "Donatus 6",
     "next": "Donatus 8",
     "sort_key": "Donatus 07",
-    "redirect": true,
+    "redirect": "Donatismus",
     "chapters": [
       {
         "start": 1545,
@@ -2021,6 +2022,7 @@
     "lemma": "Dositheos 2",
     "previous": "Dositheos 1",
     "next": "Dositheos 3",
+    "sort_key": "Dositheos 02",
     "chapters": [
       {
         "start": 1605,
@@ -2033,6 +2035,7 @@
     "lemma": "Dositheos 3",
     "previous": "Dositheos 2",
     "next": "Dositheos 4",
+    "sort_key": "Dositheos 03",
     "chapters": [
       {
         "start": 1605,
@@ -2045,6 +2048,8 @@
     "lemma": "Dositheos 4",
     "previous": "Dositheos 3",
     "next": "Dositheos 5",
+    "sort_key": "Dositheos 04",
+    "wp_link": "w:de:Dositheos (Sohn des Drimylos)",
     "chapters": [
       {
         "start": 1605,
@@ -2057,6 +2062,7 @@
     "lemma": "Dositheos 5",
     "previous": "Dositheos 4",
     "next": "Dositheos 6",
+    "sort_key": "Dositheos 05",
     "chapters": [
       {
         "start": 1605,
@@ -2082,6 +2088,7 @@
     "lemma": "Dositheos 7",
     "previous": "Dositheos 6",
     "next": "Dositheos 8",
+    "sort_key": "Dositheos 07",
     "chapters": [
       {
         "start": 1606,
@@ -2107,6 +2114,7 @@
     "lemma": "Dositheos 9",
     "previous": "Dositheos 8",
     "next": "Dositheos 10",
+    "sort_key": "Dositheos 09",
     "chapters": [
       {
         "start": 1607,
@@ -4214,7 +4222,7 @@
   {
     "lemma": "Drosache",
     "previous": "Dropion",
-    "next": "Drossel",
+    "next": "Drosera",
     "chapters": [
       {
         "start": 1721,
@@ -4224,8 +4232,13 @@
     ]
   },
   {
-    "lemma": "Drossel",
+    "lemma": "Drosera",
     "previous": "Drosache",
+    "next": "Drossel"
+  },
+  {
+    "lemma": "Drossel",
+    "previous": "Drosera",
     "next": "Droviae",
     "chapters": [
       {
@@ -4512,7 +4525,7 @@
   {
     "lemma": "Drusipara",
     "previous": "Drusilla 3",
-    "next": "Drusius",
+    "next": "Drusomagus",
     "chapters": [
       {
         "start": 1741,
@@ -4522,21 +4535,9 @@
     ]
   },
   {
-    "lemma": "Drusius",
-    "previous": "Drusipara",
-    "next": "Drusomagus",
-    "chapters": [
-      {
-        "start": 1742,
-        "end": 1742,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
     "lemma": "Drusomagus",
-    "previous": "Drusius",
-    "next": "Drusus 1",
+    "previous": "Drusipara",
+    "next": "Drusius",
     "chapters": [
       {
         "start": 1742,
@@ -4546,8 +4547,20 @@
     ]
   },
   {
-    "lemma": "Drusus 1",
+    "lemma": "Drusius",
     "previous": "Drusomagus",
+    "next": "Drusus 1",
+    "chapters": [
+      {
+        "start": 1742,
+        "end": 1742,
+        "author": "Stein, [Arthur]"
+      }
+    ]
+  },
+  {
+    "lemma": "Drusus 1",
+    "previous": "Drusius",
     "next": "Drusus 2",
     "chapters": [
       {
@@ -4573,6 +4586,7 @@
     "lemma": "Drusus 3",
     "previous": "Drusus 2",
     "next": "Drusus 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 1742,
@@ -7963,6 +7977,7 @@
     "lemma": "Ebioniten",
     "previous": "Ebidas",
     "next": "Ebisma",
+    "wp_link": "w:de:Ebioniten",
     "chapters": [
       {
         "start": 1895,
@@ -9868,7 +9883,7 @@
     "lemma": "Edessa 3",
     "previous": "Edessa 2",
     "next": "Edetani",
-    "redirect": true,
+    "redirect": "Bambyke",
     "chapters": [
       {
         "start": 1938,
@@ -12166,6 +12181,7 @@
     "lemma": "Einbalsamierung",
     "previous": "Einatos",
     "next": "Einhorn",
+    "wp_link": "w:de:Einbalsamierung",
     "chapters": [
       {
         "start": 2113,
@@ -12502,6 +12518,7 @@
     "lemma": "Eirenaios 8",
     "previous": "Eirenaios 7",
     "next": "Eirenaios 9",
+    "wp_link": "w:de:Irenäus von Lyon",
     "chapters": [
       {
         "start": 2124,
@@ -12514,6 +12531,7 @@
     "lemma": "Eirenaios 9",
     "previous": "Eirenaios 8",
     "next": "Eirenaios 10",
+    "sort_key": "Eirenaios 9",
     "chapters": [
       {
         "start": 2126,
@@ -13142,7 +13160,6 @@
     "previous": "Ekdippa",
     "next": "Ἐκδύσια",
     "sort_key": "Ekdosis",
-    "wp_link": "w:de:Ekdosis",
     "chapters": [
       {
         "start": 2162,
@@ -13538,7 +13555,7 @@
   {
     "lemma": "Ekrebel",
     "previous": "Ekprepes",
-    "next": "Ekrektike chora",
+    "next": "Ekrhegma",
     "chapters": [
       {
         "start": 2216,
@@ -13548,21 +13565,9 @@
     ]
   },
   {
-    "lemma": "Ekrektike chora",
-    "previous": "Ekrebel",
-    "next": "Ekrhegma",
-    "chapters": [
-      {
-        "start": 2216,
-        "end": 2216,
-        "author": "Kiessling, Max"
-      }
-    ]
-  },
-  {
     "lemma": "Ekrhegma",
-    "previous": "Ekrektike chora",
-    "next": "Ekron",
+    "previous": "Ekrebel",
+    "next": "Ekrektike chora",
     "chapters": [
       {
         "start": 2216,
@@ -13572,8 +13577,20 @@
     ]
   },
   {
-    "lemma": "Ekron",
+    "lemma": "Ekrektike chora",
     "previous": "Ekrhegma",
+    "next": "Ekron",
+    "chapters": [
+      {
+        "start": 2216,
+        "end": 2216,
+        "author": "Kiessling, Max"
+      }
+    ]
+  },
+  {
+    "lemma": "Ekron",
+    "previous": "Ekrektike chora",
     "next": "Ektypon",
     "redirect": true,
     "chapters": [
@@ -14943,6 +14960,7 @@
     "lemma": "Eleazaros 1",
     "previous": "Eleatische Philosophie",
     "next": "Eleazaros 2",
+    "sort_key": "Eleazaros 01",
     "chapters": [
       {
         "start": 2245,
@@ -14955,6 +14973,7 @@
     "lemma": "Eleazaros 2",
     "previous": "Eleazaros 1",
     "next": "Eleazaros 3",
+    "sort_key": "Eleazaros 02",
     "chapters": [
       {
         "start": 2245,
@@ -14967,6 +14986,7 @@
     "lemma": "Eleazaros 3",
     "previous": "Eleazaros 2",
     "next": "Eleazaros 4",
+    "sort_key": "Eleazaros 03",
     "chapters": [
       {
         "start": 2245,
@@ -14979,6 +14999,8 @@
     "lemma": "Eleazaros 4",
     "previous": "Eleazaros 3",
     "next": "Eleazaros 5",
+    "sort_key": "Eleazaros 04",
+    "wp_link": "w:de:Eleasar Makkabäus",
     "chapters": [
       {
         "start": 2245,
@@ -14991,6 +15013,7 @@
     "lemma": "Eleazaros 5",
     "previous": "Eleazaros 4",
     "next": "Eleazaros 6",
+    "sort_key": "Eleazaros 05",
     "chapters": [
       {
         "start": 2245,
@@ -15003,6 +15026,7 @@
     "lemma": "Eleazaros 6",
     "previous": "Eleazaros 5",
     "next": "Eleazaros 7",
+    "sort_key": "Eleazaros 06",
     "chapters": [
       {
         "start": 2245,
@@ -15015,6 +15039,7 @@
     "lemma": "Eleazaros 7",
     "previous": "Eleazaros 6",
     "next": "Eleazaros 8",
+    "sort_key": "Eleazaros 07",
     "chapters": [
       {
         "start": 2245,
@@ -15027,6 +15052,7 @@
     "lemma": "Eleazaros 8",
     "previous": "Eleazaros 7",
     "next": "Eleazaros 9",
+    "sort_key": "Eleazaros 08",
     "chapters": [
       {
         "start": 2245,
@@ -15039,6 +15065,7 @@
     "lemma": "Eleazaros 9",
     "previous": "Eleazaros 8",
     "next": "Eleazaros 10",
+    "sort_key": "Eleazaros 09",
     "chapters": [
       {
         "start": 2245,
@@ -16473,7 +16500,7 @@
   {
     "lemma": "Eleutherios 5",
     "previous": "Eleutherios 4",
-    "next": "Eleutherius 6",
+    "next": "Eleutherios 6",
     "chapters": [
       {
         "start": 2350,
@@ -16483,9 +16510,9 @@
     ]
   },
   {
-    "lemma": "Eleutherius 6",
+    "lemma": "Eleutherios 6",
     "previous": "Eleutherios 5",
-    "next": "Eleutherius 7",
+    "next": "Eleutherios 7",
     "chapters": [
       {
         "start": 2350,
@@ -16495,9 +16522,8 @@
     ]
   },
   {
-    "lemma": "Eleutherius 7",
-    "previous": "Eleutherius 6",
-    "next": "Eleutherios 8",
+    "lemma": "Eleutherios 7",
+    "previous": "Eleutherios 6",
     "chapters": [
       {
         "start": 2350,
@@ -16508,8 +16534,8 @@
   },
   {
     "lemma": "Eleutherios 8",
-    "previous": "Eleutherius 7",
-    "next": "Eleutherius 9",
+    "previous": "Eleutherios 7",
+    "next": "Eleutherios 9",
     "chapters": [
       {
         "start": 2351,
@@ -16519,20 +16545,13 @@
     ]
   },
   {
-    "lemma": "Eleutherius 9",
+    "lemma": "Eleutherios 9",
     "previous": "Eleutherios 8",
-    "next": "Eleuthernai",
-    "chapters": [
-      {
-        "start": 2351,
-        "end": 2351,
-        "author": "Benjamin"
-      }
-    ]
+    "next": "Eleuthernai"
   },
   {
     "lemma": "Eleuthernai",
-    "previous": "Eleutherius 9",
+    "previous": "Eleutherios 9",
     "next": "Eleutherokilikes",
     "wp_link": "w:de:Eleutherna",
     "chapters": [
@@ -16558,7 +16577,7 @@
   {
     "lemma": "Eleutherolakones",
     "previous": "Eleutherokilikes",
-    "next": "Eleutheron phthora",
+    "next": "Ἐλευθέρων φθορά",
     "wp_link": "w:de:Eleutherolakonen",
     "chapters": [
       {
@@ -16569,9 +16588,10 @@
     ]
   },
   {
-    "lemma": "Eleutheron phthora",
+    "lemma": "Ἐλευθέρων φθορά",
     "previous": "Eleutherolakones",
     "next": "Eleutheropolis",
+    "sort_key": "Eleutheronphthora",
     "chapters": [
       {
         "start": 2353,
@@ -16582,8 +16602,8 @@
   },
   {
     "lemma": "Eleutheropolis",
-    "previous": "Eleutheron phthora",
-    "next": "Eleutheroprasiu dike",
+    "previous": "Ἐλευθέρων φθορά",
+    "next": "Ἐλευθεροπρασίου δίκη",
     "chapters": [
       {
         "start": 2353,
@@ -16593,9 +16613,10 @@
     ]
   },
   {
-    "lemma": "Eleutheroprasiu dike",
+    "lemma": "Ἐλευθεροπρασίου δίκη",
     "previous": "Eleutheropolis",
     "next": "Eleutheros 1",
+    "sort_key": "Eleutheroprasiudike",
     "chapters": [
       {
         "start": 2354,
@@ -16606,7 +16627,7 @@
   },
   {
     "lemma": "Eleutheros 1",
-    "previous": "Eleutheroprasiu dike",
+    "previous": "Ἐλευθεροπρασίου δίκη",
     "next": "Eleutheros 2",
     "wp_link": "w:de:Nahr al-Kabir",
     "chapters": [
@@ -17019,7 +17040,7 @@
   {
     "lemma": "Elipeus",
     "previous": "Elionaios",
-    "next": "Elis, Eleia",
+    "next": "Elis",
     "redirect": true,
     "chapters": [
       {
@@ -17029,21 +17050,16 @@
     ]
   },
   {
-    "lemma": "Elis, Eleia",
+    "lemma": "Elis",
     "previous": "Elipeus",
     "next": "Elis 1",
-    "chapters": [
-      {
-        "start": 2368,
-        "end": 2369,
-        "author": "Philippson"
-      }
-    ]
+    "sort_key": "Elis 0"
   },
   {
     "lemma": "Elis 1",
-    "previous": "Elis, Eleia",
+    "previous": "Elis",
     "next": "Elis 2",
+    "wp_link": "w:de:Elis",
     "chapters": [
       {
         "start": 2369,
@@ -17056,6 +17072,7 @@
     "lemma": "Elis 2",
     "previous": "Elis 1",
     "next": "Elis 3",
+    "wp_link": "w:de:Elis (Stadt)",
     "chapters": [
       {
         "start": 2432,
@@ -17093,7 +17110,6 @@
     "lemma": "Elis 5",
     "previous": "Elis 4",
     "next": "Elisa",
-    "wp_link": "w:de:Elis (Begriffsklärung)",
     "chapters": [
       {
         "start": 2433,
@@ -17298,6 +17314,7 @@
     "lemma": "Elkesi",
     "previous": "Elixos",
     "next": "Ellac",
+    "wp_link": "w:de:Elkosch",
     "chapters": [
       {
         "start": 2436,
@@ -18661,7 +18678,7 @@
   {
     "lemma": "Emmaus 2",
     "previous": "Emmaus 1",
-    "next": "Emmeleia",
+    "next": "Ἐμμέλεια",
     "chapters": [
       {
         "start": 2498,
@@ -18671,7 +18688,7 @@
     ]
   },
   {
-    "lemma": "Emmeleia",
+    "lemma": "Ἐμμέλεια",
     "previous": "Emmaus 2",
     "next": "Emmenidai",
     "chapters": [
@@ -18684,7 +18701,7 @@
   },
   {
     "lemma": "Emmenidai",
-    "previous": "Emmeleia",
+    "previous": "Ἐμμέλεια",
     "next": "Emmenidas 1",
     "chapters": [
       {
@@ -19319,7 +19336,7 @@
   {
     "lemma": "Empylos",
     "previous": "Empusa",
-    "next": "Empyra",
+    "next": "Ἔμπυρα",
     "chapters": [
       {
         "start": 2543,
@@ -19329,7 +19346,7 @@
     ]
   },
   {
-    "lemma": "Empyra",
+    "lemma": "Ἔμπυρα",
     "previous": "Empylos",
     "next": "Enadab",
     "chapters": [
@@ -19342,7 +19359,7 @@
   },
   {
     "lemma": "Enadab",
-    "previous": "Empyra",
+    "previous": "Ἔμπυρα",
     "next": "Enagonios",
     "chapters": [
       {
@@ -20592,6 +20609,7 @@
     "lemma": "Enneakrunos",
     "previous": "Enneakaidekaëteris",
     "next": "Enneapylon",
+    "redirect": "Kallirrhoë 11",
     "chapters": [
       {
         "start": 2587,
@@ -20724,6 +20742,9 @@
     "lemma": "Ennius 3",
     "previous": "Ennius 2",
     "next": "Ennius 4",
+    "sort_key": "Ennius 4",
+    "wp_link": "w:de:Quintus Ennius",
+    "ws_link": "s:de:Quintus Ennius",
     "chapters": [
       {
         "start": 2589,
@@ -21456,7 +21477,7 @@
   {
     "lemma": "Enyo 2",
     "previous": "Enyo 1",
-    "next": "E....orceni",
+    "next": "Eochar",
     "chapters": [
       {
         "start": 2655,
@@ -21466,20 +21487,8 @@
     ]
   },
   {
-    "lemma": "E....orceni",
-    "previous": "Enyo 2",
-    "next": "Eochar",
-    "chapters": [
-      {
-        "start": 2656,
-        "end": 2656,
-        "author": "Ruge"
-      }
-    ]
-  },
-  {
     "lemma": "Eochar",
-    "previous": "E....orceni",
+    "previous": "Enyo 2",
     "next": "Eodanda",
     "chapters": [
       {
@@ -21528,7 +21537,7 @@
   {
     "lemma": "Eone",
     "previous": "Eon",
-    "next": "Eordaia 1",
+    "next": "E....orceni",
     "chapters": [
       {
         "start": 2656,
@@ -21538,8 +21547,20 @@
     ]
   },
   {
-    "lemma": "Eordaia 1",
+    "lemma": "E....orceni",
     "previous": "Eone",
+    "next": "Eordaia 1",
+    "chapters": [
+      {
+        "start": 2656,
+        "end": 2656,
+        "author": "Ruge"
+      }
+    ]
+  },
+  {
+    "lemma": "Eordaia 1",
+    "previous": "E....orceni",
     "next": "Eordaia 2",
     "wp_link": "w:de:Eordaia",
     "chapters": [
@@ -21625,7 +21646,7 @@
   {
     "lemma": "Eous",
     "previous": "Eos",
-    "next": "Epachthes",
+    "next": "Ἐπαχθής",
     "chapters": [
       {
         "start": 2669,
@@ -21635,9 +21656,10 @@
     ]
   },
   {
-    "lemma": "Epachthes",
+    "lemma": "Ἐπαχθής",
     "previous": "Eous",
     "next": "Epadatextorix",
+    "sort_key": "Epachthes",
     "chapters": [
       {
         "start": 2669,
@@ -21648,7 +21670,7 @@
   },
   {
     "lemma": "Epadatextorix",
-    "previous": "Epachthes",
+    "previous": "Ἐπαχθής",
     "next": "Epagathos 1",
     "chapters": [
       {
@@ -22609,6 +22631,7 @@
     "lemma": "Epha",
     "previous": "Epeur",
     "next": "Ephaptis",
+    "wp_link": "w:de:Haifa",
     "chapters": [
       {
         "start": 2735,
@@ -22968,6 +22991,7 @@
     "lemma": "Ephialtes 4",
     "previous": "Ephialtes 3",
     "next": "Ephialtes 5",
+    "wp_link": "w:de:Ephialtes von Athen",
     "chapters": [
       {
         "start": 2849,
@@ -23135,6 +23159,7 @@
     "lemma": "Ἐφόδιον",
     "previous": "Ephodia",
     "next": "Ἐφόλκιον",
+    "sort_key": "Ephodion",
     "chapters": [
       {
         "start": 2859,
@@ -23147,6 +23172,7 @@
     "lemma": "Ἐφόλκιον",
     "previous": "Ἐφόδιον",
     "next": "Ephorkios",
+    "sort_key": "Epholkion",
     "chapters": [
       {
         "start": 2860,

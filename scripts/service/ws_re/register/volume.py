@@ -22,7 +22,7 @@ class VolumeRegister(Register):
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
     def __repr__(self):  # pragma: no cover
-        return f"<VOLUME REGISTER - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
+        return f"<{self.__class__.__name__} - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
 
     def __len__(self):
         return len(self._lemmas)
@@ -104,11 +104,11 @@ class VolumeRegister(Register):
             return Lemma.make_sort_key(lemma_dict["sort_key"])
         return Lemma.make_sort_key(lemma_dict["lemma"])
 
-    def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List) -> str:
+    def update_lemma(self, lemma_dict: Dict[str, str], remove_items: List[str], self_supplement: bool = False) -> str:
         sort_key = self.normalize_sort_key(lemma_dict)
 
-        if "lemma" in lemma_dict and lemma_dict["lemma"] in self:
-            self._update_lemma_by_name(lemma_dict, remove_items)
+        if "lemma" in lemma_dict and self.get_lemma_by_name(lemma_dict["lemma"], self_supplement):
+            self._update_lemma_by_name(lemma_dict, remove_items, self_supplement)
             return "update_lemma_by_name"
         if self.get_lemma_by_sort_key(sort_key):
             self._update_by_sortkey(lemma_dict, remove_items)
@@ -130,8 +130,8 @@ class VolumeRegister(Register):
                                 f"with the dict {lemma_dict} is not possible. "
                                 f"No strategy available")
 
-    def _update_lemma_by_name(self, lemma_dict, remove_items):
-        lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"])
+    def _update_lemma_by_name(self, lemma_dict: Dict[str, str], remove_items: List[str], self_supplement: bool):
+        lemma_to_update = self.get_lemma_by_name(lemma_dict["lemma"], self_supplement)
         if self.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
             self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
         else:

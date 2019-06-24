@@ -258,6 +258,7 @@
     "lemma": "Iulianos 2",
     "previous": "Iulianos 1",
     "next": "Iulianos 3",
+    "sort_key": "Iulianos 02",
     "chapters": [
       {
         "start": 9,
@@ -345,6 +346,7 @@
     "lemma": "Iulianos 9",
     "previous": "Iulianos 8",
     "next": "Iulianos 10",
+    "sort_key": "Iulianos 09",
     "chapters": [
       {
         "start": 15,
@@ -574,7 +576,6 @@
     "lemma": "Iulianos 27",
     "previous": "Iulianos 26",
     "next": "Iulianos 28",
-    "wp_link": "w:de:Julianus (Usurpator)",
     "chapters": [
       {
         "start": 91,
@@ -610,7 +611,7 @@
   {
     "lemma": "Iulianos 30",
     "previous": "Iulianos 29",
-    "next": "Iulianos 32",
+    "next": "Iulianos 31",
     "chapters": [
       {
         "start": 92,
@@ -620,9 +621,20 @@
     ]
   },
   {
-    "lemma": "Iulianos 32",
+    "lemma": "Iulianos 31",
     "previous": "Iulianos 30",
-    "next": "Iulianus 31",
+    "next": "Iulianos 32",
+    "chapters": [
+      {
+        "start": 92,
+        "end": 92
+      }
+    ]
+  },
+  {
+    "lemma": "Iulianos 32",
+    "previous": "Iulianos 31",
+    "next": "Iulianos 33",
     "chapters": [
       {
         "start": 92,
@@ -632,19 +644,8 @@
     ]
   },
   {
-    "lemma": "Iulianus 31",
-    "previous": "Iulianos 32",
-    "next": "Iulianos 33",
-    "chapters": [
-      {
-        "start": 92,
-        "end": 92
-      }
-    ]
-  },
-  {
     "lemma": "Iulianos 33",
-    "previous": "Iulianus 31",
+    "previous": "Iulianos 32",
     "next": "Iulianos 34",
     "chapters": [
       {
@@ -777,6 +778,18 @@
   {
     "lemma": "Iulianos 44",
     "previous": "Iulianos 43",
+    "next": "Iulianos 45",
+    "chapters": [
+      {
+        "start": 95,
+        "end": 95,
+        "author": "Seeck"
+      }
+    ]
+  },
+  {
+    "lemma": "Iulianos 45",
+    "previous": "Iulianos 44",
     "next": "Iulianos 46",
     "chapters": [
       {
@@ -788,8 +801,8 @@
   },
   {
     "lemma": "Iulianos 46",
-    "previous": "Iulianos 44",
-    "next": "Iulianus 45",
+    "previous": "Iulianos 45",
+    "next": "Iulianos 47",
     "chapters": [
       {
         "start": 95,
@@ -799,20 +812,8 @@
     ]
   },
   {
-    "lemma": "Iulianus 45",
-    "previous": "Iulianos 46",
-    "next": "Iulianos 47",
-    "chapters": [
-      {
-        "start": 95,
-        "end": 95,
-        "author": "Seeck"
-      }
-    ]
-  },
-  {
     "lemma": "Iulianos 47",
-    "previous": "Iulianus 45",
+    "previous": "Iulianos 46",
     "next": "Iulianos 48",
     "chapters": [
       {
@@ -982,6 +983,7 @@
     "lemma": "Iulias 1",
     "previous": "Iulianos 60",
     "next": "Iulias 2",
+    "wp_link": "w:de:Bethsaida",
     "chapters": [
       {
         "start": 97,
@@ -1328,6 +1330,7 @@
     "lemma": "Iulius 1",
     "previous": "Iulius",
     "next": "Iulius 2",
+    "sort_key": "Iulius 001",
     "chapters": [
       {
         "start": 107,
@@ -1340,6 +1343,7 @@
     "lemma": "Iulius 2",
     "previous": "Iulius 1",
     "next": "Iulius 3",
+    "sort_key": "Iulius 002",
     "chapters": [
       {
         "start": 107,
@@ -1352,6 +1356,8 @@
     "lemma": "Iulius 3",
     "previous": "Iulius 2",
     "next": "Iulius 4",
+    "sort_key": "Iulius 003",
+    "redirect": "Aurelius 155",
     "chapters": [
       {
         "start": 107,
@@ -1376,6 +1382,7 @@
     "lemma": "Iulius 5",
     "previous": "Iulius 4",
     "next": "Iulius 6",
+    "sort_key": "Iulius 005",
     "chapters": [
       {
         "start": 107,
@@ -1388,6 +1395,7 @@
     "lemma": "Iulius 6",
     "previous": "Iulius 5",
     "next": "Iulius 7",
+    "sort_key": "Iulius 006",
     "chapters": [
       {
         "start": 107,
@@ -1413,6 +1421,7 @@
     "lemma": "Iulius 8",
     "previous": "Iulius 7",
     "next": "Iulius 9",
+    "sort_key": "Iulius 008",
     "chapters": [
       {
         "start": 108,
@@ -1425,6 +1434,7 @@
     "lemma": "Iulius 9",
     "previous": "Iulius 8",
     "next": "Iulius 10",
+    "sort_key": "Iulius 009",
     "chapters": [
       {
         "start": 108,
@@ -1707,6 +1717,7 @@
     "lemma": "Iulius 32",
     "previous": "Iulius 31",
     "next": "Iulius 33",
+    "sort_key": "Iulius 032",
     "chapters": [
       {
         "start": 111,
@@ -1887,6 +1898,7 @@
     "lemma": "Iulius 47",
     "previous": "Iulius 46",
     "next": "Iulius 48",
+    "sort_key": "Iulius 047",
     "wp_link": "w:de:Sextus Iulius Africanus",
     "chapters": [
       {
@@ -1917,6 +1929,7 @@
     "lemma": "Iulius 49",
     "previous": "Iulius 48",
     "next": "Iulius 50",
+    "sort_key": "Iulius 049",
     "wp_link": "w:de:Gnaeus Iulius Agricola",
     "chapters": [
       {
@@ -1966,6 +1979,8 @@
     "lemma": "Iulius 53",
     "previous": "Iulius 52",
     "next": "Iulius 54",
+    "sort_key": "Iulius 053",
+    "wp_link": "w:de:Herodes Agrippa I.",
     "chapters": [
       {
         "start": 143,
@@ -1978,6 +1993,7 @@
     "lemma": "Iulius 54",
     "previous": "Iulius 53",
     "next": "Iulius 55",
+    "sort_key": "Iulius 054",
     "wp_link": "w:de:Herodes Agrippa II.",
     "chapters": [
       {
@@ -2880,6 +2896,8 @@
     "lemma": "Iulius 131",
     "previous": "Iulius 130",
     "next": "Iulius 132",
+    "wp_link": "w:de:Gaius Iulius Caesar",
+    "ws_link": "s:de:Gaius Iulius Caesar",
     "chapters": [
       {
         "start": 186,
@@ -2897,6 +2915,7 @@
     "lemma": "Iulius 132",
     "previous": "Iulius 131",
     "next": "Iulius 133",
+    "wp_link": "w:de:Augustus",
     "chapters": [
       {
         "start": 275,
@@ -3088,7 +3107,9 @@
   {
     "lemma": "Iulius 148/149",
     "previous": "Iulius 147",
-    "next": "Iulius 149",
+    "next": "Iulius 150",
+    "sort_key": "Iulius 148",
+    "wp_link": "w:de:Sextus Iulius Caesar (Konsul 157 v. Chr.)",
     "chapters": [
       {
         "start": 475,
@@ -3097,20 +3118,8 @@
     ]
   },
   {
-    "lemma": "Iulius 149",
-    "previous": "Iulius 148/149",
-    "next": "Iulius 150",
-    "chapters": [
-      {
-        "start": 475,
-        "end": 476,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
     "lemma": "Iulius 150",
-    "previous": "Iulius 149",
+    "previous": "Iulius 148/149",
     "next": "Iulius 151",
     "chapters": [
       {
@@ -7939,6 +7948,7 @@
     "lemma": "Iulius 567",
     "previous": "Iulius 566",
     "next": "Iulius 568",
+    "wp_link": "w:de:Drusilla (Schwester des Caligula)",
     "chapters": [
       {
         "start": 935,
@@ -7950,6 +7960,7 @@
     "lemma": "Iulius 568",
     "previous": "Iulius 567",
     "next": "Iulius 569",
+    "wp_link": "w:de:Iulia Drusilla",
     "chapters": [
       {
         "start": 937,
@@ -8020,6 +8031,7 @@
     "lemma": "Iulius 574",
     "previous": "Iulius 573",
     "next": "Iulius 575",
+    "redirect": "Iulius 96",
     "chapters": [
       {
         "start": 938,
@@ -8031,6 +8043,7 @@
     "lemma": "Iulius 575",
     "previous": "Iulius 574",
     "next": "Iulius 576",
+    "wp_link": "w:de:Iulia Livilla",
     "chapters": [
       {
         "start": 938,
@@ -9192,6 +9205,7 @@
     "lemma": "Iunius 41",
     "previous": "Iunius 40",
     "next": "Iunius 42",
+    "sort_key": "Iunius 041",
     "chapters": [
       {
         "start": 967,
@@ -9282,6 +9296,7 @@
     "lemma": "Iunius 48",
     "previous": "Iunius 47",
     "next": "Iunius 49",
+    "sort_key": "Iunius 048",
     "chapters": [
       {
         "start": 970,
@@ -9293,6 +9308,7 @@
     "lemma": "Iunius 49",
     "previous": "Iunius 48",
     "next": "Iunius 50",
+    "sort_key": "Iunius 049",
     "chapters": [
       {
         "start": 971,
@@ -9304,6 +9320,7 @@
     "lemma": "Iunius 50",
     "previous": "Iunius 49",
     "next": "Iunius 51",
+    "sort_key": "Iunius 050",
     "chapters": [
       {
         "start": 971,
@@ -9315,6 +9332,7 @@
     "lemma": "Iunius 51",
     "previous": "Iunius 50",
     "next": "Iunius 52",
+    "sort_key": "Iunius 051",
     "chapters": [
       {
         "start": 972,
@@ -9326,6 +9344,8 @@
     "lemma": "Iunius 52",
     "previous": "Iunius 51",
     "next": "Iunius 53",
+    "sort_key": "Iunius 052",
+    "wp_link": "w:de:Marcus Iunius Brutus (Volkstribun)",
     "chapters": [
       {
         "start": 972,
@@ -9338,6 +9358,7 @@
     "lemma": "Iunius 53",
     "previous": "Iunius 52",
     "next": "Iunius 54",
+    "sort_key": "Iunius 053",
     "wp_link": "w:de:Marcus Iunius Brutus",
     "chapters": [
       {
@@ -9410,6 +9431,7 @@
     "lemma": "Iunius 58",
     "previous": "Iunius 57",
     "next": "Iunius 59",
+    "sort_key": "Iunius 058",
     "chapters": [
       {
         "start": 1025,
@@ -9422,6 +9444,7 @@
     "lemma": "Iunius 59",
     "previous": "Iunius 58",
     "next": "Iunius 60",
+    "sort_key": "Iunius 059",
     "chapters": [
       {
         "start": 1026,
@@ -9531,6 +9554,7 @@
     "lemma": "Iunius 68",
     "previous": "Iunius 67",
     "next": "Iunius 69",
+    "sort_key": "Iunius 068",
     "chapters": [
       {
         "start": 1031,
@@ -9566,6 +9590,7 @@
     "lemma": "Iunius 71",
     "previous": "Iunius 70",
     "next": "Iunius 72",
+    "sort_key": "Iunius 071",
     "chapters": [
       {
         "start": 1034,
@@ -9590,6 +9615,7 @@
     "lemma": "Iunius 73",
     "previous": "Iunius 72",
     "next": "Iunius 74",
+    "sort_key": "Iunius 073",
     "chapters": [
       {
         "start": 1034,
@@ -9627,6 +9653,7 @@
     "lemma": "Iunius 76",
     "previous": "Iunius 75",
     "next": "Iunius 77",
+    "sort_key": "Iunius 076",
     "chapters": [
       {
         "start": 1035,
@@ -9652,7 +9679,7 @@
     "previous": "Iunius 77",
     "next": "Iunius 79",
     "sort_key": "Iunius 078",
-    "redirect": true,
+    "redirect": "Annaeus 12",
     "wp_link": "w:de:Lucius Iunius Gallio Annaeanus",
     "chapters": [
       {
@@ -9750,6 +9777,7 @@
     "lemma": "Iunius 86",
     "previous": "Iunius 85",
     "next": "Iunius 87",
+    "sort_key": "Iunius 086",
     "chapters": [
       {
         "start": 1041,
@@ -9785,6 +9813,7 @@
     "lemma": "Iunius 89",
     "previous": "Iunius 88",
     "next": "Iunius 90",
+    "sort_key": "Iunius 089",
     "chapters": [
       {
         "start": 1050,

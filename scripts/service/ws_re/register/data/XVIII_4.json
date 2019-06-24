@@ -85,7 +85,7 @@
   {
     "lemma": "Parapegma",
     "previous": "Parapanisus 2",
-    "next": "Paraphylakes",
+    "next": "Παραφύλακες",
     "chapters": [
       {
         "start": 1295,
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "lemma": "Paraphylakes",
+    "lemma": "Παραφύλακες",
     "previous": "Parapegma",
     "next": "Parapinae",
     "chapters": [
@@ -108,7 +108,7 @@
   },
   {
     "lemma": "Parapinae",
-    "previous": "Paraphylakes",
+    "previous": "Παραφύλακες",
     "next": "Parapotamioi",
     "chapters": [
       {
@@ -234,7 +234,7 @@
   {
     "lemma": "Parasopias",
     "previous": "Parasopiai",
-    "next": "Parastades",
+    "next": "Παραστάδες",
     "chapters": [
       {
         "start": 1405,
@@ -244,9 +244,9 @@
     ]
   },
   {
-    "lemma": "Parastades",
+    "lemma": "Παραστάδες",
     "previous": "Parasopias",
-    "next": "parastasis",
+    "next": "παράστασις",
     "chapters": [
       {
         "start": 1406,
@@ -256,9 +256,10 @@
     ]
   },
   {
-    "lemma": "parastasis",
-    "previous": "Parastades",
-    "next": "parastatai",
+    "lemma": "παράστασις",
+    "previous": "Παραστάδες",
+    "next": "παραστάται",
+    "sort_key": "Parastasis",
     "chapters": [
       {
         "start": 1406,
@@ -268,9 +269,10 @@
     ]
   },
   {
-    "lemma": "parastatai",
-    "previous": "parastasis",
+    "lemma": "παραστάται",
+    "previous": "παράστασις",
     "next": "Parastates",
+    "sort_key": "Parastatai",
     "chapters": [
       {
         "start": 1406,
@@ -281,8 +283,8 @@
   },
   {
     "lemma": "Parastates",
-    "previous": "parastatai",
-    "next": "Parathesis",
+    "previous": "παραστάται",
+    "next": "Παράθεσις",
     "chapters": [
       {
         "start": 1406,
@@ -292,9 +294,10 @@
     ]
   },
   {
-    "lemma": "Parathesis",
+    "lemma": "Παράθεσις",
     "previous": "Parastates",
     "next": "Paratianis",
+    "sort_key": "Parathesis",
     "chapters": [
       {
         "start": 1407,
@@ -305,7 +308,7 @@
   },
   {
     "lemma": "Paratianis",
-    "previous": "Parathesis",
+    "previous": "Παράθεσις",
     "next": "Paratilmos",
     "chapters": [
       {
@@ -392,6 +395,7 @@
     "previous": "Parazonium",
     "next": "Parcae 2",
     "redirect": true,
+    "wp_link": "w:de:Parzen",
     "chapters": [
       {
         "start": 1417,
@@ -498,7 +502,7 @@
   {
     "lemma": "Πάρεδρος 1",
     "previous": "Paredron",
-    "next": "Paredros 2",
+    "next": "Πάρεδρος 2",
     "sort_key": "Paredros 1",
     "chapters": [
       {
@@ -509,7 +513,7 @@
     ]
   },
   {
-    "lemma": "Paredros 2",
+    "lemma": "Πάρεδρος 2",
     "previous": "Πάρεδρος 1",
     "next": "Paredros 3",
     "chapters": [
@@ -522,7 +526,7 @@
   },
   {
     "lemma": "Paredros 3",
-    "previous": "Paredros 2",
+    "previous": "Πάρεδρος 2",
     "next": "Paregoros",
     "redirect": true,
     "chapters": [
@@ -2335,6 +2339,7 @@
     "lemma": "Parthenios 15",
     "previous": "Parthenios 14",
     "next": "Parthenios 16",
+    "wp_link": "w:de:Parthenios von Nicaea",
     "chapters": [
       {
         "start": 1895,
@@ -4249,7 +4254,7 @@
   {
     "lemma": "Pater sacrorum",
     "previous": "Pater patriae",
-    "next": "Patera 1",
+    "next": "Pater senatus",
     "chapters": [
       {
         "start": 2157,
@@ -4259,8 +4264,20 @@
     ]
   },
   {
-    "lemma": "Patera 1",
+    "lemma": "Pater senatus",
     "previous": "Pater sacrorum",
+    "next": "Patera 1",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 2158,
+        "end": 2158
+      }
+    ]
+  },
+  {
+    "lemma": "Patera 1",
+    "previous": "Pater senatus",
     "next": "Patera 2",
     "chapters": [
       {
@@ -4273,7 +4290,7 @@
   {
     "lemma": "Patera 2",
     "previous": "Patera 1",
-    "next": "Pater senatus",
+    "next": "Paterculianus",
     "chapters": [
       {
         "start": 2158,
@@ -4283,20 +4300,8 @@
     ]
   },
   {
-    "lemma": "Pater senatus",
-    "previous": "Patera 2",
-    "next": "Paterculianus",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 2158,
-        "end": 2158
-      }
-    ]
-  },
-  {
     "lemma": "Paterculianus",
-    "previous": "Pater senatus",
+    "previous": "Patera 2",
     "next": "Paterculus",
     "chapters": [
       {
@@ -6521,7 +6526,7 @@
   {
     "lemma": "Pausus",
     "previous": "Pausulae",
-    "next": "Pautaliotes",
+    "next": "Pautalia",
     "chapters": [
       {
         "start": 2429,
@@ -6531,8 +6536,19 @@
     ]
   },
   {
-    "lemma": "Pautaliotes",
+    "lemma": "Pautalia",
     "previous": "Pausus",
+    "next": "Pautaliotes",
+    "chapters": [
+      {
+        "start": 2429,
+        "end": 2429
+      }
+    ]
+  },
+  {
+    "lemma": "Pautaliotes",
+    "previous": "Pautalia",
     "next": "Pavus",
     "chapters": [
       {

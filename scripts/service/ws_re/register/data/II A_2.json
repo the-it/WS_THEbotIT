@@ -1,7 +1,9 @@
 [
   {
     "lemma": "Selinuntia",
-    "next": "Selinuntios",
+    "previous": "Selinos",
+    "next": "Σελινούντιος",
+    "redirect": "Selinus 8",
     "chapters": [
       {
         "start": 1265,
@@ -11,7 +13,7 @@
     ]
   },
   {
-    "lemma": "Selinuntios",
+    "lemma": "Σελινούντιος",
     "previous": "Selinuntia",
     "next": "Selinus",
     "chapters": [
@@ -24,19 +26,7 @@
   },
   {
     "lemma": "Selinus",
-    "previous": "Selinuntios",
-    "next": "Selinus 1",
-    "chapters": [
-      {
-        "start": 1265,
-        "end": 1265,
-        "author": "Bürchner"
-      }
-    ]
-  },
-  {
-    "lemma": "Selinus 1",
-    "previous": "Selinus",
+    "previous": "Σελινούντιος",
     "next": "Selinus 1-7",
     "chapters": [
       {
@@ -48,8 +38,8 @@
   },
   {
     "lemma": "Selinus 1-7",
-    "previous": "Selinus 1",
-    "next": "Selinus 2",
+    "previous": "Selinus",
+    "next": "Selinus 1",
     "chapters": [
       {
         "start": 1265,
@@ -58,8 +48,20 @@
     ]
   },
   {
-    "lemma": "Selinus 2",
+    "lemma": "Selinus 1",
     "previous": "Selinus 1-7",
+    "next": "Selinus 2",
+    "chapters": [
+      {
+        "start": 1265,
+        "end": 1265,
+        "author": "Bürchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Selinus 2",
+    "previous": "Selinus 1",
     "next": "Selinus 3",
     "sort_key": "Selinus 02",
     "chapters": [
@@ -74,6 +76,7 @@
     "lemma": "Selinus 3",
     "previous": "Selinus 2",
     "next": "Selinus 4",
+    "sort_key": "Selinus 03",
     "chapters": [
       {
         "start": 1265,
@@ -99,6 +102,7 @@
     "lemma": "Selinus 5",
     "previous": "Selinus 4",
     "next": "Selinus 6",
+    "sort_key": "Selinus 05",
     "chapters": [
       {
         "start": 1265,
@@ -121,7 +125,7 @@
   {
     "lemma": "Selinus 7",
     "previous": "Selinus 6",
-    "next": "Selinus 8",
+    "next": "Selinus 8-11",
     "chapters": [
       {
         "start": 1266,
@@ -131,9 +135,20 @@
     ]
   },
   {
-    "lemma": "Selinus 8",
+    "lemma": "Selinus 8-11",
     "previous": "Selinus 7",
-    "next": "Selinus 8-11",
+    "next": "Selinus 8",
+    "chapters": [
+      {
+        "start": 1266,
+        "end": 1266
+      }
+    ]
+  },
+  {
+    "lemma": "Selinus 8",
+    "previous": "Selinus 8-11",
+    "next": "Selinus 9",
     "chapters": [
       {
         "start": 1266,
@@ -143,20 +158,10 @@
     ]
   },
   {
-    "lemma": "Selinus 8-11",
-    "previous": "Selinus 8",
-    "next": "Selinus 9",
-    "chapters": [
-      {
-        "start": 1266,
-        "end": 1266
-      }
-    ]
-  },
-  {
     "lemma": "Selinus 9",
-    "previous": "Selinus 8-11",
+    "previous": "Selinus 8",
     "next": "Selinus 10",
+    "sort_key": "Selinus 08",
     "chapters": [
       {
         "start": 1308,
@@ -421,6 +426,7 @@
     "lemma": "Sellentiacus",
     "previous": "Sellense castrum",
     "next": "Sellesius",
+    "redirect": "Silentiacus",
     "chapters": [
       {
         "start": 1320,
@@ -3456,6 +3462,7 @@
     "lemma": "Sengscheidt",
     "previous": "Sengilachos",
     "next": "Seni",
+    "wp_link": "w:de:Sengscheid",
     "chapters": [
       {
         "start": 1459,
@@ -7587,7 +7594,7 @@
     "lemma": "Sergius",
     "previous": "Sergiupolis",
     "next": "Sergius 1",
-    "wp_link": "w:de:Sergius",
+    "sort_key": "Sergius 01",
     "chapters": [
       {
         "start": 1688,
@@ -7600,6 +7607,7 @@
     "lemma": "Sergius 1",
     "previous": "Sergius",
     "next": "Sergius 2",
+    "sort_key": "Sergius 01",
     "chapters": [
       {
         "start": 1688,
@@ -7612,6 +7620,7 @@
     "lemma": "Sergius 2",
     "previous": "Sergius 1",
     "next": "Sergius 3",
+    "sort_key": "Sergius 02",
     "chapters": [
       {
         "start": 1688,
@@ -7624,6 +7633,7 @@
     "lemma": "Sergius 3",
     "previous": "Sergius 2",
     "next": "Sergius 4",
+    "sort_key": "Sergius 03",
     "chapters": [
       {
         "start": 1688,
@@ -7649,6 +7659,7 @@
     "lemma": "Sergius 5",
     "previous": "Sergius 4",
     "next": "Sergius 6",
+    "sort_key": "Sergius 05",
     "chapters": [
       {
         "start": 1689,
@@ -7661,6 +7672,7 @@
     "lemma": "Sergius 6",
     "previous": "Sergius 5",
     "next": "Sergius 7",
+    "sort_key": "Sergius 06",
     "chapters": [
       {
         "start": 1689,
@@ -7685,6 +7697,7 @@
     "lemma": "Sergius 8",
     "previous": "Sergius 7",
     "next": "Sergius 9",
+    "sort_key": "Sergius 08",
     "chapters": [
       {
         "start": 1691,
@@ -7697,6 +7710,7 @@
     "lemma": "Sergius 9",
     "previous": "Sergius 8",
     "next": "Sergius 10",
+    "sort_key": "Sergius 09",
     "chapters": [
       {
         "start": 1691,
@@ -10961,7 +10975,7 @@
     "previous": "Servius 6",
     "next": "Servius 8",
     "sort_key": "Servius 07",
-    "redirect": true,
+    "redirect": "Tullius 18",
     "chapters": [
       {
         "start": 1834,
@@ -11035,7 +11049,7 @@
   {
     "lemma": "Servus",
     "previous": "Serutius",
-    "next": "Ses.",
+    "next": "Ses",
     "redirect": true,
     "chapters": [
       {
@@ -11046,9 +11060,10 @@
     ]
   },
   {
-    "lemma": "Ses.",
+    "lemma": "Ses",
     "previous": "Servus",
     "next": "Sesa, Sesus",
+    "redirect": "Sept. 2",
     "chapters": [
       {
         "start": 1849,
@@ -11059,7 +11074,7 @@
   },
   {
     "lemma": "Sesa, Sesus",
-    "previous": "Ses.",
+    "previous": "Ses",
     "next": "Sesambri",
     "chapters": [
       {
@@ -11084,7 +11099,7 @@
   {
     "lemma": "Sesamon",
     "previous": "Sesambri",
-    "next": "Sesamos",
+    "next": "Σησαμός",
     "wp_link": "w:de:Sesam",
     "chapters": [
       {
@@ -11095,7 +11110,7 @@
     ]
   },
   {
-    "lemma": "Sesamos",
+    "lemma": "Σησαμός",
     "previous": "Sesamon",
     "next": "Sesamus",
     "chapters": [
@@ -11107,7 +11122,7 @@
   },
   {
     "lemma": "Sesamus",
-    "previous": "Sesamos",
+    "previous": "Σησαμός",
     "next": "Sescennius Iacchus",
     "chapters": [
       {
@@ -11156,7 +11171,7 @@
   {
     "lemma": "Sescuncia",
     "previous": "Sescla",
-    "next": "Sesea",
+    "next": "Σεσέα",
     "chapters": [
       {
         "start": 1853,
@@ -11166,7 +11181,7 @@
     ]
   },
   {
-    "lemma": "Sesea",
+    "lemma": "Σεσέα",
     "previous": "Sescuncia",
     "next": "Sesedi",
     "chapters": [
@@ -11179,7 +11194,7 @@
   },
   {
     "lemma": "Sesedi",
-    "previous": "Sesea",
+    "previous": "Σεσέα",
     "next": "Sesekreienai",
     "chapters": [
       {
@@ -12890,6 +12905,7 @@
     "lemma": "Severus 1",
     "previous": "Severius 3",
     "next": "Severus 2",
+    "sort_key": "Severus 01",
     "chapters": [
       {
         "start": 1937,
@@ -12902,7 +12918,7 @@
     "lemma": "Severus 2",
     "previous": "Severus 1",
     "next": "Severus 3",
-    "redirect": true,
+    "sort_key": "Severus 02",
     "chapters": [
       {
         "start": 1938,
@@ -12914,6 +12930,7 @@
     "lemma": "Severus 3",
     "previous": "Severus 2",
     "next": "Severus 4",
+    "sort_key": "Severus 03",
     "chapters": [
       {
         "start": 1938,
@@ -12926,6 +12943,7 @@
     "lemma": "Severus 4",
     "previous": "Severus 3",
     "next": "Severus 5",
+    "sort_key": "Severus 04",
     "chapters": [
       {
         "start": 1938,
@@ -13034,6 +13052,7 @@
     "lemma": "Severus 13",
     "previous": "Severus 12",
     "next": "Severus 14",
+    "wp_link": "w:de:Septimius Severus",
     "chapters": [
       {
         "start": 1940,
@@ -15669,7 +15688,7 @@
   {
     "lemma": "Siatutanda",
     "previous": "Siata",
-    "next": "Siauana",
+    "next": "Σιαυάνα",
     "chapters": [
       {
         "start": 2068,
@@ -15679,7 +15698,7 @@
     ]
   },
   {
-    "lemma": "Siauana",
+    "lemma": "Σιαυάνα",
     "previous": "Siatutanda",
     "next": "Siavolum",
     "chapters": [
@@ -15692,7 +15711,7 @@
   },
   {
     "lemma": "Siavolum",
-    "previous": "Siauana",
+    "previous": "Σιαυάνα",
     "next": "Σιαζούρ",
     "chapters": [
       {
@@ -15706,6 +15725,7 @@
     "lemma": "Σιαζούρ",
     "previous": "Siavolum",
     "next": "Σίβαι, Σίβοι",
+    "sort_key": "Siazur",
     "chapters": [
       {
         "start": 2069,
@@ -16099,7 +16119,7 @@
     "lemma": "Sicalonia",
     "previous": "Sica",
     "next": "Sicambri",
-    "redirect": true,
+    "redirect": "Secalaunia",
     "chapters": [
       {
         "start": 2185,
@@ -16111,7 +16131,7 @@
     "lemma": "Sicambri",
     "previous": "Sicalonia",
     "next": "Sicana",
-    "redirect": true,
+    "redirect": "Sugambri",
     "chapters": [
       {
         "start": 2185,
@@ -16147,7 +16167,7 @@
     "lemma": "Sicani 1",
     "previous": "Sicandrus",
     "next": "Sicani 2",
-    "redirect": true,
+    "redirect": "Sikaner",
     "chapters": [
       {
         "start": 2185,
@@ -16158,7 +16178,7 @@
   {
     "lemma": "Sicani 2",
     "previous": "Sicani 1",
-    "next": "Sicarius",
+    "next": "Sicarii",
     "redirect": true,
     "chapters": [
       {
@@ -16168,8 +16188,14 @@
     ]
   },
   {
-    "lemma": "Sicarius",
+    "lemma": "Sicarii",
     "previous": "Sicani 2",
+    "next": "Sicarius",
+    "redirect": "Σικάριοι"
+  },
+  {
+    "lemma": "Sicarius",
+    "previous": "Sicarii",
     "next": "Sicca",
     "chapters": [
       {
@@ -16361,7 +16387,7 @@
   {
     "lemma": "Sichem, Sicima",
     "previous": "Sichel",
-    "next": "Sichnis",
+    "next": "Σίχνις",
     "redirect": true,
     "wp_link": "w:de:Nablus",
     "chapters": [
@@ -16372,9 +16398,10 @@
     ]
   },
   {
-    "lemma": "Sichnis",
+    "lemma": "Σίχνις",
     "previous": "Sichem, Sicima",
     "next": "Sicila",
+    "sort_key": "Sichnis",
     "chapters": [
       {
         "start": 2193,
@@ -16385,7 +16412,7 @@
   },
   {
     "lemma": "Sicila",
-    "previous": "Sichnis",
+    "previous": "Σίχνις",
     "next": "Sicilia 1",
     "redirect": true,
     "chapters": [
@@ -17815,7 +17842,7 @@
   {
     "lemma": "Sigarra 2",
     "previous": "Sigarra 1",
-    "next": "Sigatha",
+    "next": "Σίγαθα",
     "chapters": [
       {
         "start": 2275,
@@ -17825,7 +17852,7 @@
     ]
   },
   {
-    "lemma": "Sigatha",
+    "lemma": "Σίγαθα",
     "previous": "Sigarra 2",
     "next": "Sige",
     "chapters": [
@@ -17838,7 +17865,7 @@
   },
   {
     "lemma": "Sige",
-    "previous": "Sigatha",
+    "previous": "Σίγαθα",
     "next": "Sigeias",
     "chapters": [
       {
@@ -18076,7 +18103,7 @@
   {
     "lemma": "Sigliniacus",
     "previous": "Siglae",
-    "next": "Siglos",
+    "next": "Σίγλος",
     "redirect": true,
     "chapters": [
       {
@@ -18086,7 +18113,7 @@
     ]
   },
   {
-    "lemma": "Siglos",
+    "lemma": "Σίγλος",
     "previous": "Sigliniacus",
     "next": "Sigma",
     "chapters": [
@@ -18099,7 +18126,7 @@
   },
   {
     "lemma": "Sigma",
-    "previous": "Siglos",
+    "previous": "Σίγλος",
     "next": "Sigman",
     "chapters": [
       {

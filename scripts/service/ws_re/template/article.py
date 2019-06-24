@@ -58,6 +58,9 @@ class Article(collections.MutableMapping):
                             Property("VERWEIS", False))
         self._init_properties(re_daten_properties)
 
+    def __repr__(self):  # pragma: no cover
+        return f"<{self.__class__.__name__} - type:{self._article_type}, author:{self._author}, issue:{self['BAND']}>"
+
     @property
     def article_type(self) -> str:
         return self._article_type

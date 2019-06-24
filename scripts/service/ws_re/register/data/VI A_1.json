@@ -1,6 +1,7 @@
 [
   {
-    "lemma": "Thesauros",
+    "lemma": "Θησαυρός",
+    "previous": null,
     "next": "Thesaurus",
     "chapters": [
       {
@@ -12,7 +13,7 @@
   },
   {
     "lemma": "Thesaurus",
-    "previous": "Thesauros",
+    "previous": "Θησαυρός",
     "next": "Thesba",
     "chapters": [
       {
@@ -25,7 +26,7 @@
   {
     "lemma": "Thesba",
     "previous": "Thesaurus",
-    "next": "these",
+    "next": "θese",
     "chapters": [
       {
         "start": 13,
@@ -35,9 +36,10 @@
     ]
   },
   {
-    "lemma": "these",
+    "lemma": "θese",
     "previous": "Thesba",
-    "next": "Thesebone",
+    "next": "Θεσεβώνη",
+    "sort_key": "these",
     "chapters": [
       {
         "start": 14,
@@ -47,8 +49,8 @@
     ]
   },
   {
-    "lemma": "Thesebone",
-    "previous": "these",
+    "lemma": "Θεσεβώνη",
+    "previous": "θese",
     "next": "Theseus 1",
     "redirect": true,
     "chapters": [
@@ -60,9 +62,10 @@
   },
   {
     "lemma": "Theseus 1",
-    "previous": "Thesebone",
+    "previous": "Θεσεβώνη",
     "next": "Theseus 2",
     "redirect": true,
+    "wp_link": "w:de:Theseus",
     "chapters": [
       {
         "start": 14,
@@ -898,7 +901,7 @@
   {
     "lemma": "Thetis",
     "previous": "Thetieia",
-    "next": "Theton, Thetonion",
+    "next": "Θητών, Θητώνιον",
     "chapters": [
       {
         "start": 206,
@@ -908,20 +911,14 @@
     ]
   },
   {
-    "lemma": "Theton, Thetonion",
+    "lemma": "Θητών, Θητώνιον",
     "previous": "Thetis",
     "next": "Thettale",
-    "chapters": [
-      {
-        "start": 242,
-        "end": 242,
-        "author": "Stählin"
-      }
-    ]
+    "sort_key": "Theton"
   },
   {
     "lemma": "Thettale",
-    "previous": "Theton, Thetonion",
+    "previous": "Θητών, Θητώνιον",
     "next": "Theuda",
     "chapters": [
       {
@@ -957,7 +954,7 @@
   {
     "lemma": "Theudas",
     "previous": "Theudalis",
-    "next": "Theudense oppidum",
+    "next": "Theudense (oppidum)",
     "chapters": [
       {
         "start": 244,
@@ -967,7 +964,7 @@
     ]
   },
   {
-    "lemma": "Theudense oppidum",
+    "lemma": "Theudense (oppidum)",
     "previous": "Theudas",
     "next": "Theudimund",
     "chapters": [
@@ -980,7 +977,7 @@
   },
   {
     "lemma": "Theudimund",
-    "previous": "Theudense oppidum",
+    "previous": "Theudense (oppidum)",
     "next": "Theudios",
     "chapters": [
       {
@@ -7023,7 +7020,7 @@
   {
     "lemma": "Tiar 2",
     "previous": "Tiar 1",
-    "next": "Tiarai",
+    "next": "Tiara",
     "chapters": [
       {
         "start": 761,
@@ -7033,9 +7030,14 @@
     ]
   },
   {
-    "lemma": "Tiarai",
+    "lemma": "Tiara",
     "previous": "Tiar 2",
-    "next": "Tiarantos",
+    "next": "Tiarai"
+  },
+  {
+    "lemma": "Tiarai",
+    "previous": "Tiara",
+    "next": "Τιαραντός",
     "chapters": [
       {
         "start": 761,
@@ -7045,7 +7047,7 @@
     ]
   },
   {
-    "lemma": "Tiarantos",
+    "lemma": "Τιαραντός",
     "previous": "Tiarai",
     "next": "Tiare",
     "chapters": [
@@ -7058,7 +7060,7 @@
   },
   {
     "lemma": "Tiare",
-    "previous": "Tiarantos",
+    "previous": "Τιαραντός",
     "next": "Tiasa",
     "chapters": [
       {
@@ -7095,7 +7097,7 @@
   {
     "lemma": "Tiassos",
     "previous": "Tiason",
-    "next": "Tiatura",
+    "next": "Τιάτουρα",
     "chapters": [
       {
         "start": 763,
@@ -7104,9 +7106,10 @@
     ]
   },
   {
-    "lemma": "Tiatura",
+    "lemma": "Τιάτουρα",
     "previous": "Tiassos",
     "next": "Tiauranceaicus",
+    "sort_key": "Tiatura",
     "chapters": [
       {
         "start": 763,
@@ -7117,8 +7120,8 @@
   },
   {
     "lemma": "Tiauranceaicus",
-    "previous": "Tiatura",
-    "next": "Tiausa",
+    "previous": "Τιάτουρα",
+    "next": "Τιαύσα",
     "chapters": [
       {
         "start": 763,
@@ -7128,9 +7131,10 @@
     ]
   },
   {
-    "lemma": "Tiausa",
+    "lemma": "Τιαύσα",
     "previous": "Tiauranceaicus",
     "next": "Tibarani",
+    "sort_key": "Tiausa",
     "chapters": [
       {
         "start": 763,
@@ -7141,7 +7145,7 @@
   },
   {
     "lemma": "Tibarani",
-    "previous": "Tiausa",
+    "previous": "Τιαύσα",
     "next": "Tibarenoi",
     "chapters": [
       {
@@ -7214,7 +7218,7 @@
   {
     "lemma": "Tiberiacum",
     "previous": "Tibeios",
-    "next": "Tiberiane",
+    "next": "Τιβεριανή",
     "chapters": [
       {
         "start": 765,
@@ -7224,9 +7228,10 @@
     ]
   },
   {
-    "lemma": "Tiberiane",
+    "lemma": "Τιβεριανή",
     "previous": "Tiberiacum",
     "next": "Tiberianus",
+    "sort_key": "Tiberiane",
     "chapters": [
       {
         "start": 766,
@@ -7237,8 +7242,9 @@
   },
   {
     "lemma": "Tiberianus",
-    "previous": "Tiberiane",
+    "previous": "Τιβεριανή",
     "next": "Tiberianus 1",
+    "redirect": "Aradius 1",
     "chapters": [
       {
         "start": 766,
@@ -8443,7 +8449,7 @@
   {
     "lemma": "Tigra",
     "previous": "Tignum iunctum",
-    "next": "Tigrana",
+    "next": "Τιγράνα",
     "chapters": [
       {
         "start": 969,
@@ -8452,9 +8458,10 @@
     ]
   },
   {
-    "lemma": "Tigrana",
+    "lemma": "Τιγράνα",
     "previous": "Tigra",
     "next": "Tigranes",
+    "sort_key": "Tigrana",
     "chapters": [
       {
         "start": 969,
@@ -8465,7 +8472,7 @@
   },
   {
     "lemma": "Tigranes",
-    "previous": "Tigrana",
+    "previous": "Τιγράνα",
     "next": "Tigranes 1",
     "chapters": [
       {

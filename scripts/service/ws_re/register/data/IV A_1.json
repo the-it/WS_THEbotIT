@@ -626,6 +626,8 @@
     "lemma": "Strabon 3",
     "previous": "Strabon 2",
     "next": "Stracteos",
+    "wp_link": "w:de:Strabon",
+    "ws_link": "s:de:Strabon",
     "chapters": [
       {
         "start": 76,
@@ -638,6 +640,7 @@
     "lemma": "Stracteos",
     "previous": "Strabon 3",
     "next": "Stradela",
+    "redirect": "Regium 3",
     "chapters": [
       {
         "start": 155,
@@ -650,7 +653,7 @@
     "lemma": "Stradela",
     "previous": "Stracteos",
     "next": "Strafgelder",
-    "redirect": true,
+    "redirect": "Esdraelon 1",
     "chapters": [
       {
         "start": 155,
@@ -5680,6 +5683,7 @@
     "lemma": "Suetonius 4",
     "previous": "Suetonius 3",
     "next": "Suetrii, Suetri",
+    "wp_link": "w:de:Sueton",
     "chapters": [
       {
         "start": 593,
@@ -5704,6 +5708,8 @@
     "lemma": "Suevi",
     "previous": "Suetrii, Suetri",
     "next": "Suevicum",
+    "redirect": "Suebi",
+    "wp_link": "w:de:Sueton",
     "chapters": [
       {
         "start": 642,
@@ -5715,6 +5721,8 @@
     "lemma": "Suevicum",
     "previous": "Suevi",
     "next": "Sufasar",
+    "redirect": "Lagnus sinus",
+    "wp_link": "w:de:Ostsee",
     "chapters": [
       {
         "start": 642,
@@ -5726,7 +5734,9 @@
   {
     "lemma": "Sufasar",
     "previous": "Suevicum",
-    "next": "Sufenas Verus",
+    "next": "Sufenas",
+    "redirect": true,
+    "wp_link": "w:de:Sufasar",
     "chapters": [
       {
         "start": 642,
@@ -5736,7 +5746,7 @@
     ]
   },
   {
-    "lemma": "Sufenas Verus",
+    "lemma": "Sufenas",
     "previous": "Sufasar",
     "next": "Sufes",
     "chapters": [
@@ -5749,7 +5759,7 @@
   },
   {
     "lemma": "Sufes",
-    "previous": "Sufenas Verus",
+    "previous": "Sufenas",
     "next": "Sufeten",
     "chapters": [
       {
@@ -6071,6 +6081,7 @@
     "lemma": "Suicidium",
     "previous": "Sui heredes",
     "next": "Suidas 1",
+    "redirect": "Selbstmord",
     "chapters": [
       {
         "start": 675,
@@ -6082,6 +6093,7 @@
     "lemma": "Suidas 1",
     "previous": "Suicidium",
     "next": "Suidas 2",
+    "redirect": "Lexikographie",
     "wp_link": "w:de:Suidas",
     "chapters": [
       {
@@ -7304,6 +7316,8 @@
     "lemma": "Sulpicius 63",
     "previous": "Sulpicius 62",
     "next": "Sulpicius 64",
+    "sort_key": "Sulpicius 063",
+    "wp_link": "w:de:Galba",
     "chapters": [
       {
         "start": 772,
@@ -8922,6 +8936,7 @@
     "lemma": "Σούπτου",
     "previous": "Suppostor",
     "next": "Supunna",
+    "sort_key": "Suptu",
     "chapters": [
       {
         "start": 953,
@@ -9007,6 +9022,7 @@
     "lemma": "Sura 4a",
     "previous": "Sura 4",
     "next": "Sura 4b",
+    "wp_link": "w:de:Sauer (Mosel)",
     "chapters": [
       {
         "start": 961,
@@ -9019,6 +9035,7 @@
     "lemma": "Sura 4b",
     "previous": "Sura 4a",
     "next": "Sura 4c",
+    "wp_link": "w:de:Sauer (Rhein)",
     "chapters": [
       {
         "start": 962,
@@ -9077,7 +9094,7 @@
   {
     "lemma": "Suranae thermae",
     "previous": "Surae",
-    "next": "Suras",
+    "next": "Σούρας",
     "chapters": [
       {
         "start": 963,
@@ -9087,9 +9104,10 @@
     ]
   },
   {
-    "lemma": "Suras",
+    "lemma": "Σούρας",
     "previous": "Suranae thermae",
     "next": "Surasena",
+    "sort_key": "Suras",
     "chapters": [
       {
         "start": 963,
@@ -9100,7 +9118,7 @@
   },
   {
     "lemma": "Surasena",
-    "previous": "Suras",
+    "previous": "Σούρας",
     "next": "Surattha",
     "chapters": [
       {
@@ -12002,6 +12020,8 @@
     "lemma": "Symmachos 30",
     "previous": "Symmachos 29",
     "next": "Symmachos 31",
+    "wp_link": "w:de:Quintus Aurelius Memmius Symmachus",
+    "ws_link": "s:de:Quintus Aurelius Memmius Symmachus",
     "chapters": [
       {
         "start": 1160,
@@ -12038,6 +12058,7 @@
     "lemma": "Symmachos 33",
     "previous": "Symmachos 32",
     "next": "Symmachos 34",
+    "redirect": "Boëthius 2",
     "chapters": [
       {
         "start": 1161,
@@ -12050,6 +12071,7 @@
     "lemma": "Symmachos 34",
     "previous": "Symmachos 33",
     "next": "Symmachos 35",
+    "redirect": "Boëthius 3",
     "wp_link": "w:de:Boëthius",
     "ws_link": "s:de:Boëthius",
     "chapters": [
@@ -12183,7 +12205,7 @@
   {
     "lemma": "Symmoroi, synteleis",
     "previous": "Symmoritai",
-    "next": "Symmystai",
+    "next": "Συμμύσται",
     "chapters": [
       {
         "start": 1168,
@@ -12193,7 +12215,7 @@
     ]
   },
   {
-    "lemma": "Symmystai",
+    "lemma": "Συμμύσται",
     "previous": "Symmoroi, synteleis",
     "next": "Symoitha",
     "chapters": [
@@ -12206,8 +12228,8 @@
   },
   {
     "lemma": "Symoitha",
-    "previous": "Symmystai",
-    "next": "Symphoitetes",
+    "previous": "Συμμύσται",
+    "next": "Συμφοιτητής",
     "chapters": [
       {
         "start": 1169,
@@ -12217,7 +12239,7 @@
     ]
   },
   {
-    "lemma": "Symphoitetes",
+    "lemma": "Συμφοιτητής",
     "previous": "Symoitha",
     "next": "Symphonia",
     "chapters": [
@@ -12230,7 +12252,7 @@
   },
   {
     "lemma": "Symphonia",
-    "previous": "Symphoitetes",
+    "previous": "Συμφοιτητής",
     "next": "Symphoniaci",
     "chapters": [
       {
@@ -12255,7 +12277,7 @@
   {
     "lemma": "Symphorion",
     "previous": "Symphoniaci",
-    "next": "Symphruroi",
+    "next": "Σύμφρουροι",
     "chapters": [
       {
         "start": 1170,
@@ -12265,7 +12287,7 @@
     ]
   },
   {
-    "lemma": "Symphruroi",
+    "lemma": "Σύμφρουροι",
     "previous": "Symphorion",
     "next": "Symphygion",
     "chapters": [
@@ -12278,8 +12300,8 @@
   },
   {
     "lemma": "Symphygion",
-    "previous": "Symphruroi",
-    "next": "Sympileadeis",
+    "previous": "Σύμφρουροι",
+    "next": "Συμπιλεαδεῖς",
     "chapters": [
       {
         "start": 1170,
@@ -12289,7 +12311,7 @@
     ]
   },
   {
-    "lemma": "Sympileadeis",
+    "lemma": "Συμπιλεαδεῖς",
     "previous": "Symphygion",
     "next": "Symplegades",
     "chapters": [
@@ -12302,7 +12324,7 @@
   },
   {
     "lemma": "Symplegades",
-    "previous": "Sympileadeis",
+    "previous": "Συμπιλεαδεῖς",
     "next": "Sympoliteia",
     "chapters": [
       {

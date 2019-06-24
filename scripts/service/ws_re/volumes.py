@@ -33,7 +33,7 @@ class Volume:
         self._sortkey = self._compute_sortkey()
 
     def __repr__(self):  # pragma: no cover
-        return f"<VOLUME - name:{self.name}, year:{self.year}, start:{self.start}, " \
+        return f"<{self.__class__.__name__} - name:{self.name}, year:{self.year}, start:{self.start}, " \
                f"end:{self.end}, sort:{self.sort_key}>"
 
     @property

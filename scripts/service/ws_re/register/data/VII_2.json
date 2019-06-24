@@ -1023,6 +1023,7 @@
     "lemma": "Gomorrha",
     "previous": "Gomon",
     "next": "Γόμφοι",
+    "wp_link": "w:de:Sodom und Gomorra",
     "chapters": [
       {
         "start": 1582,
@@ -1418,6 +1419,7 @@
     "lemma": "Gordios 2",
     "previous": "Gordios 1",
     "next": "Gordios 3",
+    "wp_link": "w:de:Gordios",
     "chapters": [
       {
         "start": 1591,
@@ -1454,6 +1456,7 @@
     "lemma": "Gordios 5",
     "previous": "Gordios 4",
     "next": "Gordios 6",
+    "wp_link": "w:de:Gordios (Kappadokien)",
     "chapters": [
       {
         "start": 1592,
@@ -1466,6 +1469,7 @@
     "lemma": "Gordios 6",
     "previous": "Gordios 5",
     "next": "Gordios 7",
+    "redirect": "Cordius 1",
     "chapters": [
       {
         "start": 1593,
@@ -1477,7 +1481,7 @@
   {
     "lemma": "Gordios 7",
     "previous": "Gordios 6",
-    "next": "Gorditanum promuntorium",
+    "next": "Gorditanum promunturium",
     "chapters": [
       {
         "start": 1593,
@@ -1487,20 +1491,13 @@
     ]
   },
   {
-    "lemma": "Gorditanum promuntorium",
+    "lemma": "Gorditanum promunturium",
     "previous": "Gordios 7",
-    "next": "Gordiukome 1",
-    "chapters": [
-      {
-        "start": 1593,
-        "end": 1593,
-        "author": "Weiss, J[akob]"
-      }
-    ]
+    "next": "Gordiukome 1"
   },
   {
     "lemma": "Gordiukome 1",
-    "previous": "Gorditanum promuntorium",
+    "previous": "Gorditanum promunturium",
     "next": "Gordiukome 2",
     "chapters": [
       {
@@ -1514,6 +1511,7 @@
     "lemma": "Gordiukome 2",
     "previous": "Gordiukome 1",
     "next": "Gordiu Teichos",
+    "redirect": "Iuliopolis 1",
     "chapters": [
       {
         "start": 1593,
@@ -1525,6 +1523,7 @@
     "lemma": "Gordiu Teichos",
     "previous": "Gordiukome 2",
     "next": "Gordos 1",
+    "redirect": "Iuliopolis 1",
     "chapters": [
       {
         "start": 1593,
@@ -3235,7 +3234,7 @@
   {
     "lemma": "Graiai",
     "previous": "Graïadai",
-    "next": "Graias aule",
+    "next": "Γραίας αὐλή",
     "chapters": [
       {
         "start": 1695,
@@ -3244,9 +3243,9 @@
     ]
   },
   {
-    "lemma": "Graias aule",
+    "lemma": "Γραίας αὐλή",
     "previous": "Graiai",
-    "next": "Graike",
+    "next": "Γραίας γόνυ",
     "chapters": [
       {
         "start": 1695,
@@ -3256,9 +3255,15 @@
     ]
   },
   {
-    "lemma": "Graike",
-    "previous": "Graias aule",
+    "lemma": "Γραίας γόνυ",
+    "previous": "Γραίας αὐλή",
+    "next": "Γραϊκή"
+  },
+  {
+    "lemma": "Γραϊκή",
+    "previous": "Γραίας γόνυ",
     "next": "Graikes",
+    "sort_key": "Graike",
     "chapters": [
       {
         "start": 1695,
@@ -3269,7 +3274,7 @@
   },
   {
     "lemma": "Graikes",
-    "previous": "Graike",
+    "previous": "Γραϊκή",
     "next": "Graikoi",
     "chapters": [
       {
@@ -3414,7 +3419,7 @@
   {
     "lemma": "Grammatik",
     "previous": "Grammateis",
-    "next": "Gramme",
+    "next": "Γραμμή",
     "chapters": [
       {
         "start": 1780,
@@ -3424,7 +3429,7 @@
     ]
   },
   {
-    "lemma": "Gramme",
+    "lemma": "Γραμμή",
     "previous": "Grammatik",
     "next": "Grammion",
     "chapters": [
@@ -3437,7 +3442,7 @@
   },
   {
     "lemma": "Grammion",
-    "previous": "Gramme",
+    "previous": "Γραμμή",
     "next": "Grampius",
     "chapters": [
       {
@@ -3475,7 +3480,7 @@
     "lemma": "Granarium",
     "previous": "Gramrianae",
     "next": "Grandaus",
-    "wp_link": "w:de:Kornhaus",
+    "wp_link": "w:de:Getreidespeicher",
     "chapters": [
       {
         "start": 1812,
@@ -3511,7 +3516,7 @@
   {
     "lemma": "Grandimirum",
     "previous": "Grandetum",
-    "next": "Granianum promunturium",
+    "next": "Grani mons",
     "redirect": true,
     "chapters": [
       {
@@ -3521,8 +3526,20 @@
     ]
   },
   {
-    "lemma": "Granianum promunturium",
+    "lemma": "Grani mons",
     "previous": "Grandimirum",
+    "next": "Granianum promunturium",
+    "chapters": [
+      {
+        "start": 1813,
+        "end": 1813,
+        "author": "Weiss, J[akob]"
+      }
+    ]
+  },
+  {
+    "lemma": "Granianum promunturium",
+    "previous": "Grani mons",
     "next": "Granianus",
     "chapters": [
       {
@@ -3559,7 +3576,7 @@
   {
     "lemma": "Granikos 2",
     "previous": "Granikos 1",
-    "next": "Grani mons",
+    "next": "Granikos 3",
     "chapters": [
       {
         "start": 1813,
@@ -3569,21 +3586,10 @@
     ]
   },
   {
-    "lemma": "Grani mons",
-    "previous": "Granikos 2",
-    "next": "Granikos 3",
-    "chapters": [
-      {
-        "start": 1813,
-        "end": 1813,
-        "author": "Weiss, J[akob]"
-      }
-    ]
-  },
-  {
     "lemma": "Granikos 3",
-    "previous": "Grani mons",
+    "previous": "Granikos 2",
     "next": "Granionarium",
+    "wp_link": "w:de:Granikos",
     "chapters": [
       {
         "start": 1814,
@@ -3897,6 +3903,7 @@
     "lemma": "Grannus",
     "previous": "Grannona",
     "next": "Granonius",
+    "wp_link": "w:de:Grannus",
     "chapters": [
       {
         "start": 1823,
@@ -3956,7 +3963,7 @@
   {
     "lemma": "Granucomatitae",
     "previous": "Granucomatae",
-    "next": "Graos stethos",
+    "next": "Γραὸς στῆθος",
     "chapters": [
       {
         "start": 1827,
@@ -3966,7 +3973,7 @@
     ]
   },
   {
-    "lemma": "Graos stethos",
+    "lemma": "Γραὸς στῆθος",
     "previous": "Granucomatitae",
     "next": "Graphara",
     "chapters": [
@@ -3979,7 +3986,7 @@
   },
   {
     "lemma": "Graphara",
-    "previous": "Graos stethos",
+    "previous": "Γραὸς στῆθος",
     "next": "Γραφή 1",
     "redirect": true,
     "chapters": [
@@ -4006,6 +4013,7 @@
     "lemma": "Γραφή 2",
     "previous": "Γραφή 1",
     "next": "Graphon",
+    "sort_key": "Graphe 2",
     "chapters": [
       {
         "start": 1829,
@@ -4259,6 +4267,7 @@
     "lemma": "Gratianus 4",
     "previous": "Gratianus 3",
     "next": "Gratiarum collis",
+    "wp_link": "w:de:Gratian (Usurpator)",
     "chapters": [
       {
         "start": 1840,
@@ -4639,6 +4648,7 @@
     "lemma": "Grauthungi",
     "previous": "Graupius mons",
     "next": "Graxa",
+    "redirect": "Greuthungi",
     "chapters": [
       {
         "start": 1848,
@@ -4687,6 +4697,7 @@
     "lemma": "Gregorios 1",
     "previous": "Gredonense castrum",
     "next": "Gregorios 2",
+    "sort_key": "Gregorios 01",
     "chapters": [
       {
         "start": 1848,
@@ -4699,6 +4710,8 @@
     "lemma": "Gregorios 2",
     "previous": "Gregorios 1",
     "next": "Gregorios 3",
+    "sort_key": "Gregorios 02",
+    "wp_link": "w:de:Gregor II. von Zypern",
     "chapters": [
       {
         "start": 1852,
@@ -4739,6 +4752,8 @@
     "lemma": "Gregorios 5",
     "previous": "Gregorios 4",
     "next": "Gregorios 6",
+    "sort_key": "Gregorios 05",
+    "wp_link": "w:de:Gregor von Nyssa",
     "chapters": [
       {
         "start": 1863,
@@ -4751,6 +4766,8 @@
     "lemma": "Gregorios 6",
     "previous": "Gregorios 5",
     "next": "Gregorios 7",
+    "sort_key": "Gregorios 06",
+    "wp_link": "w:de:Gregor von Elvira",
     "chapters": [
       {
         "start": 1864,
@@ -4763,6 +4780,9 @@
     "lemma": "Gregorios 7",
     "previous": "Gregorios 6",
     "next": "Gregorios 8",
+    "sort_key": "Gregorios 07",
+    "wp_link": "w:de:Gregor von Tours",
+    "ws_link": "s:de:Gregor von Tours",
     "chapters": [
       {
         "start": 1867,
@@ -4775,6 +4795,8 @@
     "lemma": "Gregorios 8",
     "previous": "Gregorios 7",
     "next": "Gregorios 9",
+    "sort_key": "Gregorios 08",
+    "wp_link": "w:de:Gregor der Große",
     "chapters": [
       {
         "start": 1868,
@@ -4787,6 +4809,9 @@
     "lemma": "Gregorios 9",
     "previous": "Gregorios 8",
     "next": "Gregorios 10",
+    "sort_key": "Gregorios 09",
+    "wp_link": "w:de:Gregor von Tours",
+    "ws_link": "s:de:Gregor von Tours",
     "chapters": [
       {
         "start": 1870,
@@ -4846,7 +4871,8 @@
   {
     "lemma": "Gregorios 14",
     "previous": "Gregorios 13",
-    "next": "Grakea",
+    "next": "Grekea",
+    "wp_link": "w:de:fr:Grégoire (cousin d'Artabanès)",
     "chapters": [
       {
         "start": 1871,
@@ -4856,7 +4882,7 @@
     ]
   },
   {
-    "lemma": "Grakea",
+    "lemma": "Grekea",
     "previous": "Gregorios 14",
     "next": "Grenikos",
     "chapters": [
@@ -4869,7 +4895,7 @@
   },
   {
     "lemma": "Grenikos",
-    "previous": "Grakea",
+    "previous": "Grekea",
     "next": "Greothingi",
     "chapters": [
       {
@@ -6752,7 +6778,7 @@
   {
     "lemma": "Gynada",
     "previous": "Gymnopaidien",
-    "next": "Gynaikeia theos",
+    "next": "Γυναικεία θέος",
     "chapters": [
       {
         "start": 2089,
@@ -6762,7 +6788,7 @@
     ]
   },
   {
-    "lemma": "Gynaikeia theos",
+    "lemma": "Γυναικεία θέος",
     "previous": "Gynada",
     "next": "Γυναικονόμοι",
     "chapters": [
@@ -6774,7 +6800,7 @@
   },
   {
     "lemma": "Γυναικονόμοι",
-    "previous": "Gynaikeia theos",
+    "previous": "Γυναικεία θέος",
     "next": "Gynaikopolis",
     "sort_key": "Gynaikonomoi",
     "chapters": [
@@ -7489,7 +7515,7 @@
   {
     "lemma": "Hadria",
     "previous": "Hadreus",
-    "next": "Hadrianeia",
+    "next": "Ἁδριάνεια",
     "chapters": [
       {
         "start": 2164,
@@ -7499,7 +7525,7 @@
     ]
   },
   {
-    "lemma": "Hadrianeia",
+    "lemma": "Ἁδριάνεια",
     "previous": "Hadria",
     "next": "Hadrianeum 1",
     "sort_key": "Hadrianeia",
@@ -7513,7 +7539,7 @@
   },
   {
     "lemma": "Hadrianeum 1",
-    "previous": "Hadrianeia",
+    "previous": "Ἁδριάνεια",
     "next": "Hadrianeum 2",
     "chapters": [
       {
@@ -10408,6 +10434,7 @@
     "lemma": "Hamilkar 1",
     "previous": "Hamilkar",
     "next": "Hamilkar 2",
+    "sort_key": "Hamilkar 01",
     "chapters": [
       {
         "start": 2297,
@@ -10420,6 +10447,7 @@
     "lemma": "Hamilkar 2",
     "previous": "Hamilkar 1",
     "next": "Hamilkar 3",
+    "sort_key": "Hamilkar 02",
     "chapters": [
       {
         "start": 2299,
@@ -10432,6 +10460,7 @@
     "lemma": "Hamilkar 3",
     "previous": "Hamilkar 2",
     "next": "Hamilkar 4",
+    "sort_key": "Hamilkar 03",
     "chapters": [
       {
         "start": 2300,
@@ -10444,6 +10473,7 @@
     "lemma": "Hamilkar 4",
     "previous": "Hamilkar 3",
     "next": "Hamilkar 5",
+    "sort_key": "Hamilkar 04",
     "chapters": [
       {
         "start": 2300,
@@ -10456,6 +10486,7 @@
     "lemma": "Hamilkar 5",
     "previous": "Hamilkar 4",
     "next": "Hamilkar 6",
+    "sort_key": "Hamilkar 05",
     "chapters": [
       {
         "start": 2301,
@@ -10468,6 +10499,7 @@
     "lemma": "Hamilkar 6",
     "previous": "Hamilkar 5",
     "next": "Hamilkar 7",
+    "sort_key": "Hamilkar 06",
     "chapters": [
       {
         "start": 2302,
@@ -10480,6 +10512,8 @@
     "lemma": "Hamilkar 7",
     "previous": "Hamilkar 6",
     "next": "Hamilkar 8",
+    "sort_key": "Hamilkar 07",
+    "wp_link": "w:de:Hamilkar Barkas",
     "chapters": [
       {
         "start": 2303,
@@ -10492,6 +10526,7 @@
     "lemma": "Hamilkar 8",
     "previous": "Hamilkar 7",
     "next": "Hamilkar 9",
+    "sort_key": "Hamilkar 08",
     "chapters": [
       {
         "start": 2308,
@@ -10504,6 +10539,7 @@
     "lemma": "Hamilkar 9",
     "previous": "Hamilkar 8",
     "next": "Hamilkar 10",
+    "sort_key": "Hamilkar 09",
     "chapters": [
       {
         "start": 2308,
@@ -10575,7 +10611,7 @@
   {
     "lemma": "Hamillus",
     "previous": "Hamilkar 14",
-    "next": "Hamippoi",
+    "next": "Ἅμιπποι",
     "chapters": [
       {
         "start": 2309,
@@ -10585,7 +10621,7 @@
     ]
   },
   {
-    "lemma": "Hamippoi",
+    "lemma": "Ἅμιπποι",
     "previous": "Hamillus",
     "next": "Hamiroei",
     "chapters": [
@@ -10597,7 +10633,7 @@
   },
   {
     "lemma": "Hamiroei",
-    "previous": "Hamippoi",
+    "previous": "Ἅμιπποι",
     "next": "Hammanientes",
     "chapters": [
       {
@@ -10659,7 +10695,7 @@
   {
     "lemma": "Hammonius",
     "previous": "Hammon",
-    "next": "Hamphiar(e)",
+    "next": "Hamφiar(e)",
     "chapters": [
       {
         "start": 2312,
@@ -10669,9 +10705,11 @@
     ]
   },
   {
-    "lemma": "Hamphiar(e)",
+    "lemma": "Hamφiar(e)",
     "previous": "Hammonius",
     "next": "Hampsicora",
+    "sort_key": "Hamphiare",
+    "wp_link": "w:de:Amphiaraos",
     "chapters": [
       {
         "start": 2312,
@@ -10682,7 +10720,7 @@
   },
   {
     "lemma": "Hampsicora",
-    "previous": "Hamphiar(e)",
+    "previous": "Hamφiar(e)",
     "next": "Hanf",
     "chapters": [
       {
@@ -10721,6 +10759,7 @@
     "lemma": "Hannas 1",
     "previous": "Hanhavaldus",
     "next": "Hannas 2",
+    "wp_link": "w:de:Hannas",
     "chapters": [
       {
         "start": 2316,
@@ -10745,6 +10784,7 @@
     "lemma": "Hannibal 1",
     "previous": "Hannas 2",
     "next": "Hannibal 2",
+    "sort_key": "Hannibal 01",
     "chapters": [
       {
         "start": 2318,
@@ -10757,6 +10797,7 @@
     "lemma": "Hannibal 2",
     "previous": "Hannibal 1",
     "next": "Hannibal 3",
+    "sort_key": "Hannibal 02",
     "chapters": [
       {
         "start": 2318,
@@ -10769,6 +10810,7 @@
     "lemma": "Hannibal 3",
     "previous": "Hannibal 2",
     "next": "Hannibal 4",
+    "sort_key": "Hannibal 03",
     "wp_link": "w:de:Hannibal Gisko",
     "chapters": [
       {
@@ -10795,6 +10837,7 @@
     "lemma": "Hannibal 5",
     "previous": "Hannibal 4",
     "next": "Hannibal 6",
+    "sort_key": "Hannibal 05",
     "chapters": [
       {
         "start": 2322,
@@ -10807,6 +10850,7 @@
     "lemma": "Hannibal 6",
     "previous": "Hannibal 5",
     "next": "Hannibal 7",
+    "sort_key": "Hannibal 06",
     "chapters": [
       {
         "start": 2322,
@@ -10832,6 +10876,7 @@
     "lemma": "Hannibal 8",
     "previous": "Hannibal 7",
     "next": "Hannibal 9",
+    "sort_key": "Hannibal 08",
     "wp_link": "w:de:Hannibal",
     "chapters": [
       {
@@ -10845,6 +10890,7 @@
     "lemma": "Hannibal 9",
     "previous": "Hannibal 8",
     "next": "Hannibal 10",
+    "sort_key": "Hannibal 09",
     "chapters": [
       {
         "start": 2351,
@@ -10857,6 +10903,7 @@
     "lemma": "Hannibal 10",
     "previous": "Hannibal 9",
     "next": "Hannibal 11",
+    "wp_link": "w:de:Hannibal (Sohn Bomilkars)",
     "chapters": [
       {
         "start": 2351,
@@ -10969,6 +11016,7 @@
     "lemma": "Hanno 3",
     "previous": "Hanno 2",
     "next": "Hanno 4",
+    "sort_key": "Hanno 03",
     "chapters": [
       {
         "start": 2353,
@@ -10981,6 +11029,7 @@
     "lemma": "Hanno 4",
     "previous": "Hanno 3",
     "next": "Hanno 5",
+    "sort_key": "Hanno 04",
     "chapters": [
       {
         "start": 2354,
@@ -10993,6 +11042,7 @@
     "lemma": "Hanno 5",
     "previous": "Hanno 4",
     "next": "Hanno 6",
+    "sort_key": "Hanno 05",
     "chapters": [
       {
         "start": 2354,
@@ -11018,6 +11068,7 @@
     "lemma": "Hanno 7",
     "previous": "Hanno 6",
     "next": "Hanno 8",
+    "sort_key": "Hanno 07",
     "chapters": [
       {
         "start": 2354,
@@ -11030,6 +11081,7 @@
     "lemma": "Hanno 8",
     "previous": "Hanno 7",
     "next": "Hanno 9",
+    "sort_key": "Hanno 08",
     "chapters": [
       {
         "start": 2355,
@@ -11042,6 +11094,7 @@
     "lemma": "Hanno 9",
     "previous": "Hanno 8",
     "next": "Hanno 10",
+    "sort_key": "Hanno 09",
     "chapters": [
       {
         "start": 2355,
@@ -12593,6 +12646,7 @@
     "lemma": "Hasdrubal 1",
     "previous": "Haruspices",
     "next": "Hasdrubal 2",
+    "sort_key": "Hasdrubal 01",
     "chapters": [
       {
         "start": 2468,
@@ -12605,6 +12659,7 @@
     "lemma": "Hasdrubal 2",
     "previous": "Hasdrubal 1",
     "next": "Hasdrubal 3",
+    "sort_key": "Hasdrubal 02",
     "chapters": [
       {
         "start": 2468,
@@ -12617,6 +12672,7 @@
     "lemma": "Hasdrubal 3",
     "previous": "Hasdrubal 2",
     "next": "Hasdrubal 4",
+    "sort_key": "Hasdrubal 03",
     "chapters": [
       {
         "start": 2468,
@@ -12629,6 +12685,7 @@
     "lemma": "Hasdrubal 4",
     "previous": "Hasdrubal 3",
     "next": "Hasdrubal 5",
+    "sort_key": "Hasdrubal 04",
     "chapters": [
       {
         "start": 2469,
@@ -12641,6 +12698,8 @@
     "lemma": "Hasdrubal 5",
     "previous": "Hasdrubal 4",
     "next": "Hasdrubal 6",
+    "sort_key": "Hasdrubal 05",
+    "wp_link": "w:de:Hasdrubal (Cartagena)",
     "chapters": [
       {
         "start": 2469,
@@ -12653,6 +12712,7 @@
     "lemma": "Hasdrubal 6",
     "previous": "Hasdrubal 5",
     "next": "Hasdrubal 7",
+    "sort_key": "Hasdrubal 06",
     "chapters": [
       {
         "start": 2470,
@@ -12665,6 +12725,8 @@
     "lemma": "Hasdrubal 7",
     "previous": "Hasdrubal 6",
     "next": "Hasdrubal 8",
+    "sort_key": "Hasdrubal 07",
+    "wp_link": "w:de:Hasdrubal (Bruder Hannibals)",
     "chapters": [
       {
         "start": 2470,
@@ -12677,6 +12739,7 @@
     "lemma": "Hasdrubal 8",
     "previous": "Hasdrubal 7",
     "next": "Hasdrubal 9",
+    "sort_key": "Hasdrubal 08",
     "chapters": [
       {
         "start": 2473,
@@ -12689,6 +12752,7 @@
     "lemma": "Hasdrubal 9",
     "previous": "Hasdrubal 8",
     "next": "Hasdrubal 10",
+    "sort_key": "Hasdrubal 09",
     "chapters": [
       {
         "start": 2474,
@@ -12701,6 +12765,7 @@
     "lemma": "Hasdrubal 10",
     "previous": "Hasdrubal 9",
     "next": "Hasdrubal 11",
+    "wp_link": "w:de:Hasdrubal (Sohn Gisgos)",
     "chapters": [
       {
         "start": 2474,
@@ -13400,6 +13465,7 @@
     "lemma": "Hebron",
     "previous": "Hebromagus",
     "next": "Hebros",
+    "wp_link": "w:de:Hebron",
     "chapters": [
       {
         "start": 2584,
@@ -14406,6 +14472,7 @@
     "lemma": "Hegesistratos 1",
     "previous": "Hegesipyle",
     "next": "Hegesistratos 2",
+    "redirect": "Thessalos 3",
     "chapters": [
       {
         "start": 2612,
@@ -15479,7 +15546,6 @@
     "lemma": "Hekebolios 2",
     "previous": "Hekebolios 1",
     "next": "Hekebolos, Hekatebolos, Hekatebeletes",
-    "wp_link": "w:de:Apollon",
     "chapters": [
       {
         "start": 2800,
@@ -15707,6 +15773,7 @@
     "lemma": "Helellum",
     "previous": "Helela",
     "next": "Helena 1",
+    "redirect": "Helvetum",
     "chapters": [
       {
         "start": 2820,
@@ -15874,7 +15941,7 @@
   {
     "lemma": "Helene 7",
     "previous": "Helene 6",
-    "next": "Heleneia",
+    "next": "Ἑλένιεα",
     "chapters": [
       {
         "start": 2837,
@@ -15884,7 +15951,7 @@
     ]
   },
   {
-    "lemma": "Heleneia",
+    "lemma": "Ἑλένιεα",
     "previous": "Helene 7",
     "next": "Helenes loutron",
     "chapters": [
@@ -15897,7 +15964,7 @@
   },
   {
     "lemma": "Helenes loutron",
-    "previous": "Heleneia",
+    "previous": "Ἑλένιεα",
     "next": "Helenion",
     "chapters": [
       {
@@ -16466,7 +16533,7 @@
   {
     "lemma": "Harpii, Harpis",
     "previous": "Hammeum",
-    "next": "Harpokration 2a",
+    "next": "Harpokration 11",
     "chapters": [
       {
         "start": 2880,
@@ -16475,20 +16542,8 @@
     ]
   },
   {
-    "lemma": "Harpokration 2a",
-    "previous": "Harpii, Harpis",
-    "next": "Harpokration 11",
-    "chapters": [
-      {
-        "start": 2880,
-        "end": 2880,
-        "author": "De Stefani"
-      }
-    ]
-  },
-  {
     "lemma": "Harpokration 11",
-    "previous": "Harpokration 2a",
+    "previous": "Harpii, Harpis",
     "next": "Harpyia",
     "chapters": [
       {

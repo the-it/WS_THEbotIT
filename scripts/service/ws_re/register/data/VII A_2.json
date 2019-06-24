@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Tullius 30",
+    "previous": "Tullius 29",
     "next": "Tullius 31",
     "chapters": [
       {
@@ -398,7 +399,7 @@
   {
     "lemma": "Tullius 63",
     "previous": "Tullius 62",
-    "next": "Tullon",
+    "next": "Τοῦλλον",
     "chapters": [
       {
         "start": 1336,
@@ -408,7 +409,7 @@
     ]
   },
   {
-    "lemma": "Tullon",
+    "lemma": "Τοῦλλον",
     "previous": "Tullius 63",
     "next": "Tullonium",
     "chapters": [
@@ -421,7 +422,7 @@
   },
   {
     "lemma": "Tullonium",
-    "previous": "Tullon",
+    "previous": "Τοῦλλον",
     "next": "Tullonius",
     "chapters": [
       {
@@ -670,6 +671,7 @@
     "lemma": "Τουντό-βριγα",
     "previous": "Tuntle",
     "next": "Tuola",
+    "sort_key": "Tuntobriga",
     "chapters": [
       {
         "start": 1361,
@@ -1890,6 +1892,7 @@
     "lemma": "Turpilius 4",
     "previous": "Turpilius 3",
     "next": "Turpilius 5",
+    "sort_key": "Turpilius 04",
     "chapters": [
       {
         "start": 1428,
@@ -2098,6 +2101,7 @@
     "lemma": "Turranius 3",
     "previous": "Turranius 2",
     "next": "Turranius 4",
+    "sort_key": "Turranius 03",
     "chapters": [
       {
         "start": 1440,
@@ -2146,6 +2150,7 @@
     "lemma": "Turranius 7",
     "previous": "Turranius 6",
     "next": "Turranius 8",
+    "sort_key": "Turranius 07",
     "chapters": [
       {
         "start": 1442,
@@ -3630,7 +3635,7 @@
   {
     "lemma": "Tutonia",
     "previous": "Tutmosis, Thutmosis",
-    "next": "Tutor, Iuppiter",
+    "next": "Tutor",
     "chapters": [
       {
         "start": 1626,
@@ -3639,20 +3644,13 @@
     ]
   },
   {
-    "lemma": "Tutor, Iuppiter",
+    "lemma": "Tutor",
     "previous": "Tutonia",
-    "next": "Tutorius",
-    "chapters": [
-      {
-        "start": 1626,
-        "end": 1626,
-        "author": "Marbach"
-      }
-    ]
+    "next": "Tutorius"
   },
   {
     "lemma": "Tutorius",
-    "previous": "Tutor, Iuppiter",
+    "previous": "Tutor",
     "next": "Tutugi",
     "chapters": [
       {
@@ -3678,7 +3676,7 @@
     "lemma": "Tutula",
     "previous": "Tutugi",
     "next": "Tutulus",
-    "redirect": true,
+    "redirect": "Philotis",
     "chapters": [
       {
         "start": 1627,
@@ -3786,7 +3784,7 @@
   {
     "lemma": "Tyberisos",
     "previous": "Tyba",
-    "next": "Tybiakai",
+    "next": "Τυβιάκαι",
     "redirect": true,
     "chapters": [
       {
@@ -3796,9 +3794,9 @@
     ]
   },
   {
-    "lemma": "Tybiakai",
+    "lemma": "Τυβιάκαι",
     "previous": "Tyberisos",
-    "next": "Tychaion",
+    "next": "Tycae",
     "chapters": [
       {
         "start": 1643,
@@ -3808,8 +3806,19 @@
     ]
   },
   {
+    "lemma": "Tycae",
+    "previous": "Τυβιάκαι",
+    "next": "Tychaion",
+    "chapters": [
+      {
+        "start": 1643,
+        "end": 1643
+      }
+    ]
+  },
+  {
     "lemma": "Tychaion",
-    "previous": "Tybiakai",
+    "previous": "Tycae",
     "next": "Tychandros",
     "chapters": [
       {
@@ -4499,7 +4508,7 @@
   {
     "lemma": "Tyndaridai 2",
     "previous": "Tyndaridai 1",
-    "next": "Tyndarioi skopeloi",
+    "next": "Τυνδάριοι σκόπελοι",
     "chapters": [
       {
         "start": 1775,
@@ -4508,7 +4517,7 @@
     ]
   },
   {
-    "lemma": "Tyndarioi skopeloi",
+    "lemma": "Τυνδάριοι σκόπελοι",
     "previous": "Tyndaridai 2",
     "next": "Tyndarion",
     "chapters": [
@@ -4521,7 +4530,7 @@
   },
   {
     "lemma": "Tyndarion",
-    "previous": "Tyndarioi skopeloi",
+    "previous": "Τυνδάριοι σκόπελοι",
     "next": "Tyndaris 1",
     "chapters": [
       {
@@ -4558,7 +4567,7 @@
   {
     "lemma": "Tyndenses",
     "previous": "Tyndaris 2",
-    "next": "Tyndis 1",
+    "next": "Τύνδις 1",
     "chapters": [
       {
         "start": 1790,
@@ -4568,9 +4577,9 @@
     ]
   },
   {
-    "lemma": "Tyndis 1",
+    "lemma": "Τύνδις 1",
     "previous": "Tyndenses",
-    "next": "Tyndis 2",
+    "next": "Τύνδις 2",
     "chapters": [
       {
         "start": 1790,
@@ -4580,9 +4589,10 @@
     ]
   },
   {
-    "lemma": "Tyndis 2",
-    "previous": "Tyndis 1",
+    "lemma": "Τύνδις 2",
+    "previous": "Τύνδις 1",
     "next": "Tynes 1",
+    "sort_key": "Tyndis 2",
     "chapters": [
       {
         "start": 1791,
@@ -4593,7 +4603,7 @@
   },
   {
     "lemma": "Tynes 1",
-    "previous": "Tyndis 2",
+    "previous": "Τύνδις 2",
     "next": "Tynes 2",
     "chapters": [
       {
@@ -4646,7 +4656,7 @@
   {
     "lemma": "Τυεννεσσῷ",
     "previous": "Tynna",
-    "next": "Tyn(n)as",
+    "next": "Τύν(ν)ας",
     "sort_key": "Tyennesso",
     "chapters": [
       {
@@ -4657,9 +4667,10 @@
     ]
   },
   {
-    "lemma": "Tyn(n)as",
+    "lemma": "Τύν(ν)ας",
     "previous": "Τυεννεσσῷ",
     "next": "Tynnichos 1",
+    "sort_key": "Tynnas",
     "chapters": [
       {
         "start": 1794,
@@ -4670,7 +4681,7 @@
   },
   {
     "lemma": "Tynnichos 1",
-    "previous": "Tyn(n)as",
+    "previous": "Τύν(ν)ας",
     "next": "Tynnichos 2",
     "chapters": [
       {
@@ -4768,7 +4779,7 @@
   {
     "lemma": "Typhion",
     "previous": "Typhaonion",
-    "next": "Typhon 1",
+    "next": "Τύφων 1",
     "chapters": [
       {
         "start": 1798,
@@ -4778,9 +4789,9 @@
     ]
   },
   {
-    "lemma": "Typhon 1",
+    "lemma": "Τύφων 1",
     "previous": "Typhion",
-    "next": "Typhon 2",
+    "next": "Τύφων 2",
     "redirect": true,
     "chapters": [
       {
@@ -4790,8 +4801,8 @@
     ]
   },
   {
-    "lemma": "Typhon 2",
-    "previous": "Typhon 1",
+    "lemma": "Τύφων 2",
+    "previous": "Τύφων 1",
     "next": "Typhoneus",
     "redirect": true,
     "chapters": [
@@ -4803,8 +4814,8 @@
   },
   {
     "lemma": "Typhoneus",
-    "previous": "Typhon 2",
-    "next": "Typhrestos 1",
+    "previous": "Τύφων 2",
+    "next": "Typhrestos",
     "chapters": [
       {
         "start": 1798,
@@ -4814,8 +4825,20 @@
     ]
   },
   {
-    "lemma": "Typhrestos 1",
+    "lemma": "Typhrestos",
     "previous": "Typhoneus",
+    "next": "Typhrestos 1",
+    "chapters": [
+      {
+        "start": 1798,
+        "end": 1798,
+        "author": "Scherling"
+      }
+    ]
+  },
+  {
+    "lemma": "Typhrestos 1",
+    "previous": "Typhrestos",
     "next": "Typhrestos 2",
     "chapters": [
       {
@@ -4828,7 +4851,7 @@
   {
     "lemma": "Typhrestos 2",
     "previous": "Typhrestos 1",
-    "next": "Typos",
+    "next": "Τύπος",
     "chapters": [
       {
         "start": 1798,
@@ -4838,7 +4861,7 @@
     ]
   },
   {
-    "lemma": "Typos",
+    "lemma": "Τύπος",
     "previous": "Typhrestos 2",
     "next": "Tyracinus",
     "chapters": [
@@ -4851,7 +4874,7 @@
   },
   {
     "lemma": "Tyracinus",
-    "previous": "Typos",
+    "previous": "Τύπος",
     "next": "Tyragetai",
     "chapters": [
       {
@@ -5457,7 +5480,7 @@
   {
     "lemma": "Tyrimnos",
     "previous": "Tyrimneia",
-    "next": "Tyrine",
+    "next": "Τυρίνη",
     "chapters": [
       {
         "start": 1867,
@@ -5467,9 +5490,10 @@
     ]
   },
   {
-    "lemma": "Tyrine",
+    "lemma": "Τυρίνη",
     "previous": "Tyrimnos",
     "next": "Tyris 1",
+    "sort_key": "Tyrine",
     "chapters": [
       {
         "start": 1868,
@@ -5480,7 +5504,7 @@
   },
   {
     "lemma": "Tyris 1",
-    "previous": "Tyrine",
+    "previous": "Τυρίνη",
     "next": "Tyris 2",
     "chapters": [
       {
@@ -5658,7 +5682,7 @@
   {
     "lemma": "Tyrmidai",
     "previous": "Tyrmenioi",
-    "next": "Tyrmisseis",
+    "next": "Τυρμισσεῖς",
     "chapters": [
       {
         "start": 1869,
@@ -5668,9 +5692,11 @@
     ]
   },
   {
-    "lemma": "Tyrmisseis",
+    "lemma": "Τυρμισσεῖς",
     "previous": "Tyrmidai",
     "next": "Tyro",
+    "sort_key": "Tyrmisseis",
+    "redirect": "Tyberis(s)eis",
     "chapters": [
       {
         "start": 1869,
@@ -5680,7 +5706,7 @@
   },
   {
     "lemma": "Tyro",
-    "previous": "Tyrmisseis",
+    "previous": "Τυρμισσεῖς",
     "next": "Tyrodiza",
     "chapters": [
       {
@@ -5741,7 +5767,7 @@
   {
     "lemma": "Tyros 2",
     "previous": "Tyros 1",
-    "next": "Tyros 3",
+    "next": "Τύρος 3",
     "chapters": [
       {
         "start": 1875,
@@ -5751,9 +5777,9 @@
     ]
   },
   {
-    "lemma": "Tyros 3",
+    "lemma": "Τύρος 3",
     "previous": "Tyros 2",
-    "next": "Tyros 4",
+    "next": "Τύρος 4",
     "chapters": [
       {
         "start": 1876,
@@ -5763,9 +5789,10 @@
     ]
   },
   {
-    "lemma": "Tyros 4",
-    "previous": "Tyros 3",
-    "next": "Tyros 5",
+    "lemma": "Τύρος 4",
+    "previous": "Τύρος 3",
+    "next": "Τύρος 5",
+    "sort_key": "Tyros 4",
     "chapters": [
       {
         "start": 1908,
@@ -5775,9 +5802,10 @@
     ]
   },
   {
-    "lemma": "Tyros 5",
-    "previous": "Tyros 4",
-    "next": "Tyros 6",
+    "lemma": "Τύρος 5",
+    "previous": "Τύρος 4",
+    "next": "Τύρος 6",
+    "sort_key": "Tyros 5",
     "chapters": [
       {
         "start": 1908,
@@ -5787,9 +5815,10 @@
     ]
   },
   {
-    "lemma": "Tyros 6",
-    "previous": "Tyros 5",
+    "lemma": "Τύρος 6",
+    "previous": "Τύρος 5",
     "next": "Tyrra",
+    "sort_key": "Tyros 6",
     "chapters": [
       {
         "start": 1908,
@@ -5800,7 +5829,7 @@
   },
   {
     "lemma": "Tyrra",
-    "previous": "Tyros 6",
+    "previous": "Τύρος 6",
     "next": "Tyrrhener",
     "chapters": [
       {
@@ -5885,7 +5914,7 @@
   {
     "lemma": "Tyrrhus",
     "previous": "Tyrrhenum mare",
-    "next": "Tyrrias",
+    "next": "Tyrria(s)",
     "chapters": [
       {
         "start": 1940,
@@ -5895,7 +5924,7 @@
     ]
   },
   {
-    "lemma": "Tyrrias",
+    "lemma": "Tyrria(s)",
     "previous": "Tyrrhus",
     "next": "Tyrritor",
     "chapters": [
@@ -5908,7 +5937,7 @@
   },
   {
     "lemma": "Tyrritor",
-    "previous": "Tyrrias",
+    "previous": "Tyrria(s)",
     "next": "Tyrsenos",
     "chapters": [
       {
@@ -5957,7 +5986,7 @@
   {
     "lemma": "Tyrtaios 2",
     "previous": "Tyrtaios 1",
-    "next": "Tyska chora",
+    "next": "Τύσκα χώρα",
     "chapters": [
       {
         "start": 1956,
@@ -5967,7 +5996,7 @@
     ]
   },
   {
-    "lemma": "Tyska chora",
+    "lemma": "Τύσκα χώρα",
     "previous": "Tyrtaios 2",
     "next": "Tyttigias",
     "chapters": [
@@ -5980,7 +6009,7 @@
   },
   {
     "lemma": "Tyttigias",
-    "previous": "Tyska chora",
+    "previous": "Τύσκα χώρα",
     "next": "Tyxis",
     "chapters": [
       {
@@ -6264,7 +6293,7 @@
   {
     "lemma": "Vacantes",
     "previous": "Vacalus, Va(c)halis",
-    "next": "vacantia, Bona",
+    "next": "vacantia",
     "chapters": [
       {
         "start": 2024,
@@ -6274,7 +6303,7 @@
     ]
   },
   {
-    "lemma": "vacantia, Bona",
+    "lemma": "vacantia",
     "previous": "Vacantes",
     "next": "Vacatio 1",
     "chapters": [
@@ -6287,7 +6316,7 @@
   },
   {
     "lemma": "Vacatio 1",
-    "previous": "vacantia, Bona",
+    "previous": "vacantia",
     "next": "Vacatio 2",
     "chapters": [
       {
@@ -6609,7 +6638,7 @@
   {
     "lemma": "Vadamerca",
     "previous": "Vadaei",
-    "next": "Uadassoi",
+    "next": "Οὐάδασσοι",
     "chapters": [
       {
         "start": 2051,
@@ -6619,9 +6648,10 @@
     ]
   },
   {
-    "lemma": "Uadassoi",
+    "lemma": "Οὐάδασσοι",
     "previous": "Vadamerca",
-    "next": "Uadata",
+    "next": "Οὐαδατα",
+    "sort_key": "Vadassoi",
     "chapters": [
       {
         "start": 2052,
@@ -6631,9 +6661,10 @@
     ]
   },
   {
-    "lemma": "Uadata",
-    "previous": "Uadassoi",
+    "lemma": "Οὐαδατα",
+    "previous": "Οὐάδασσοι",
     "next": "Vadavero",
+    "sort_key": "Vadata",
     "chapters": [
       {
         "start": 2052,
@@ -6644,7 +6675,7 @@
   },
   {
     "lemma": "Vadavero",
-    "previous": "Uadata",
+    "previous": "Οὐαδατα",
     "next": "Vadicassii",
     "chapters": [
       {

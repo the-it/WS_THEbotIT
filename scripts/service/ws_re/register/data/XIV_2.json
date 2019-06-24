@@ -73,7 +73,7 @@
   {
     "lemma": "Mantin(e)ion",
     "previous": "Mantineus 2",
-    "next": "Mantinon",
+    "next": "Μαντίνων",
     "chapters": [
       {
         "start": 1345,
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "lemma": "Mantinon",
+    "lemma": "Μαντίνων",
     "previous": "Mantin(e)ion",
     "next": "Mantio",
     "chapters": [
@@ -96,7 +96,7 @@
   },
   {
     "lemma": "Mantio",
-    "previous": "Mantinon",
+    "previous": "Μαντίνων",
     "next": "Mantios",
     "chapters": [
       {
@@ -312,7 +312,7 @@
   {
     "lemma": "Mantyes",
     "previous": "Mantus",
-    "next": "Mantzikiert",
+    "next": "Μαντζικίερτ",
     "chapters": [
       {
         "start": 1361,
@@ -322,9 +322,10 @@
     ]
   },
   {
-    "lemma": "Mantzikiert",
+    "lemma": "Μαντζικίερτ",
     "previous": "Mantyes",
     "next": "a manu, ad manum",
+    "sort_key": "Mantzikiert",
     "chapters": [
       {
         "start": 1361,
@@ -335,8 +336,9 @@
   },
   {
     "lemma": "a manu, ad manum",
-    "previous": "Mantzikiert",
+    "previous": "Μαντζικίερτ",
     "next": "Manubiae",
+    "sort_key": "Manu",
     "chapters": [
       {
         "start": 1361,

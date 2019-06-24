@@ -57,5 +57,6 @@ class Property:
     def __hash__(self):
         return hash(self.name) + hash(self.value)
 
-    def __repr__(self):
-        return f"<ReProperty> (name: {self.name}, value: {self.value}, type: {type(self._default)})"
+    def __repr__(self):  # pragma: no cover
+        return f"<{self.__class__.__name__} (name: {self.name}, value: {self.value}, " \
+            f"type: {type(self._default).__name__})>"

@@ -108,6 +108,7 @@ class SCANTask(ReScannerTask):
     def _fetch_from_article_list(self):
         function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key, self._fetch_lemma,
                                     self._fetch_redirect, self._fetch_previous, self._fetch_next)
+        issues_in_articles = set()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             if isinstance(article_list[0], Article):
@@ -119,9 +120,13 @@ class SCANTask(ReScannerTask):
                     delete_list += function_list
                 band_info = article_list[0]["BAND"].value
                 register = self.registers.volumes[band_info]
+                self_supplement = False
+                if band_info in issues_in_articles:
+                    self_supplement = True
+                issues_in_articles.add(band_info)
                 if register:
                     try:
-                        strategy = register.update_lemma(update_dict, delete_list)
+                        strategy = register.update_lemma(update_dict, delete_list, self_supplement)
                         self._write_strategy_statistic(strategy, update_dict, band_info)
                     except RegisterException as error:
                         self.logger.error(f"No available Lemma in Registers for issue {band_info} "

@@ -516,6 +516,7 @@
     "lemma": "Demokratia",
     "previous": "Demokrates 13",
     "next": "Demokritos 1",
+    "wp_link": "w:de:Demokratie",
     "chapters": [
       {
         "start": 135,
@@ -1453,7 +1454,7 @@
   {
     "lemma": "Demos 3",
     "previous": "Demos 2",
-    "next": "Δημόσιοι",
+    "next": "Demosioi",
     "chapters": [
       {
         "start": 161,
@@ -1463,7 +1464,7 @@
     ]
   },
   {
-    "lemma": "Δημόσιοι",
+    "lemma": "Demosioi",
     "previous": "Demos 3",
     "next": "Demosios",
     "sort_key": "Demosioi",
@@ -1477,7 +1478,7 @@
   },
   {
     "lemma": "Demosios",
-    "previous": "Δημόσιοι",
+    "previous": "Demosioi",
     "next": "Demosthenes 1",
     "chapters": [
       {
@@ -1543,6 +1544,7 @@
     "lemma": "Demosthenes 5",
     "previous": "Demosthenes 4",
     "next": "Demosthenes 6",
+    "sort_key": "Demosthenes 05",
     "wp_link": "w:de:Demosthenes (Militär)",
     "chapters": [
       {
@@ -1556,6 +1558,7 @@
     "lemma": "Demosthenes 6",
     "previous": "Demosthenes 5",
     "next": "Demosthenes 7",
+    "sort_key": "Demosthenes 06",
     "wp_link": "w:de:Demosthenes",
     "ws_link": "s:de:Demosthenes",
     "chapters": [
@@ -1583,6 +1586,7 @@
     "lemma": "Demosthenes 8",
     "previous": "Demosthenes 7",
     "next": "Demosthenes 9",
+    "sort_key": "Demosthenes 08",
     "chapters": [
       {
         "start": 188,
@@ -1821,7 +1825,7 @@
     "lemma": "Demostratos 12",
     "previous": "Demostratos 11",
     "next": "Demostratos 13",
-    "redirect": true,
+    "redirect": "Damostratos 5",
     "chapters": [
       {
         "start": 191,
@@ -1844,7 +1848,7 @@
   {
     "lemma": "Demostratos 14",
     "previous": "Demostratos 13",
-    "next": "Demotai",
+    "next": "Δημόται",
     "chapters": [
       {
         "start": 192,
@@ -1854,9 +1858,11 @@
     ]
   },
   {
-    "lemma": "Demotai",
+    "lemma": "Δημόται",
     "previous": "Demostratos 14",
     "next": "Demoteles 1",
+    "sort_key": "demotai",
+    "redirect": "Demoi",
     "chapters": [
       {
         "start": 192,
@@ -1866,7 +1872,7 @@
   },
   {
     "lemma": "Demoteles 1",
-    "previous": "Demotai",
+    "previous": "Δημόται",
     "next": "Demoteles 2",
     "chapters": [
       {
@@ -1963,7 +1969,7 @@
   {
     "lemma": "Demotionidai",
     "previous": "Demotion",
-    "next": "Demouchoi",
+    "next": "Δημοῦχοι",
     "wp_link": "w:de:Phratrie",
     "chapters": [
       {
@@ -1974,20 +1980,14 @@
     ]
   },
   {
-    "lemma": "Demouchoi",
+    "lemma": "Δημοῦχοι",
     "previous": "Demotionidai",
     "next": "Demuchos",
-    "chapters": [
-      {
-        "start": 202,
-        "end": 202,
-        "author": "Szanto"
-      }
-    ]
+    "sort_key": "Demuchoi"
   },
   {
     "lemma": "Demuchos",
-    "previous": "Demouchoi",
+    "previous": "Δημοῦχοι",
     "next": "Demusia",
     "chapters": [
       {
@@ -2013,6 +2013,7 @@
     "lemma": "Denarius",
     "previous": "Demusia",
     "next": "Dendrites",
+    "wp_link": "w:de:Denarius",
     "chapters": [
       {
         "start": 202,
@@ -2036,7 +2037,7 @@
   {
     "lemma": "Dendritis",
     "previous": "Dendrites",
-    "next": "Dendrobatai",
+    "next": "Δενδροβάται",
     "chapters": [
       {
         "start": 215,
@@ -2046,9 +2047,10 @@
     ]
   },
   {
-    "lemma": "Dendrobatai",
+    "lemma": "Δενδροβάται",
     "previous": "Dendritis",
     "next": "Dendrobosa",
+    "sort_key": "Dendrobatai",
     "chapters": [
       {
         "start": 215,
@@ -2059,7 +2061,7 @@
   },
   {
     "lemma": "Dendrobosa",
-    "previous": "Dendrobatai",
+    "previous": "Δενδροβάται",
     "next": "Δενδροειδής",
     "chapters": [
       {
@@ -2074,7 +2076,7 @@
     "previous": "Dendrobosa",
     "next": "Dendrolibanos",
     "sort_key": "Dendroeides",
-    "redirect": true,
+    "redirect": "Tithymalus",
     "chapters": [
       {
         "start": 216,
@@ -2086,7 +2088,7 @@
     "lemma": "Dendrolibanos",
     "previous": "Δενδροειδής",
     "next": "Dendrophori",
-    "redirect": true,
+    "redirect": "Möhre",
     "chapters": [
       {
         "start": 216,
@@ -2098,7 +2100,7 @@
     "lemma": "Dendrophori",
     "previous": "Dendrolibanos",
     "next": "Denegare actionem",
-    "redirect": true,
+    "redirect": "Strabon 3",
     "chapters": [
       {
         "start": 216,
@@ -2230,7 +2232,7 @@
     "lemma": "Dentheletai",
     "previous": "Denthalioi",
     "next": "Dentifricium",
-    "redirect": true,
+    "redirect": "Danthaletai",
     "chapters": [
       {
         "start": 221,
@@ -2254,7 +2256,7 @@
     "lemma": "Dentilianus",
     "previous": "Dentifricium",
     "next": "Dentiscalpium",
-    "redirect": true,
+    "redirect": "Caecilius 64",
     "chapters": [
       {
         "start": 221,
@@ -2314,7 +2316,7 @@
     "lemma": "Denzic",
     "previous": "Denuntiator",
     "next": "Deo",
-    "redirect": true,
+    "redirect": "Dintzic",
     "chapters": [
       {
         "start": 227,
@@ -2872,7 +2874,7 @@
     "lemma": "Derketo",
     "previous": "Derketaios",
     "next": "Derkippos",
-    "redirect": true,
+    "redirect": "Atargatis",
     "chapters": [
       {
         "start": 240,
@@ -2896,7 +2898,7 @@
     "lemma": "Derkos",
     "previous": "Derkippos",
     "next": "Derkylidas 1",
-    "redirect": true,
+    "redirect": "Delkos",
     "chapters": [
       {
         "start": 240,
@@ -2920,7 +2922,7 @@
   {
     "lemma": "Derkylidas 2",
     "previous": "Derkylidas 1",
-    "next": "Derkylos 1",
+    "next": "Derkylidas 3",
     "chapters": [
       {
         "start": 242,
@@ -2930,8 +2932,13 @@
     ]
   },
   {
-    "lemma": "Derkylos 1",
+    "lemma": "Derkylidas 3",
     "previous": "Derkylidas 2",
+    "next": "Derkylos 1"
+  },
+  {
+    "lemma": "Derkylos 1",
+    "previous": "Derkylidas 3",
     "next": "Derkylos 2",
     "chapters": [
       {
@@ -2968,7 +2975,7 @@
   {
     "lemma": "Dermatikon",
     "previous": "Derkynos",
-    "next": "Δερμειθῶν κόμη",
+    "next": "Δερμειθῶν κώμη",
     "chapters": [
       {
         "start": 243,
@@ -2978,7 +2985,7 @@
     ]
   },
   {
-    "lemma": "Δερμειθῶν κόμη",
+    "lemma": "Δερμειθῶν κώμη",
     "previous": "Dermatikon",
     "next": "Dermones",
     "sort_key": "Dermeithon kome",
@@ -2992,8 +2999,8 @@
   },
   {
     "lemma": "Dermones",
-    "previous": "Δερμειθῶν κόμη",
-    "next": "Derreatis",
+    "previous": "Δερμειθῶν κώμη",
+    "next": "Dero",
     "chapters": [
       {
         "start": 244,
@@ -3003,10 +3010,15 @@
     ]
   },
   {
-    "lemma": "Derreatis",
+    "lemma": "Dero",
     "previous": "Dermones",
+    "next": "Derreatis"
+  },
+  {
+    "lemma": "Derreatis",
+    "previous": "Dero",
     "next": "Derrii",
-    "redirect": true,
+    "redirect": "Dereatis",
     "chapters": [
       {
         "start": 244,
@@ -3139,7 +3151,7 @@
     "lemma": "Dertum",
     "previous": "Dertosa",
     "next": "Derva",
-    "redirect": true,
+    "redirect": "Diria",
     "chapters": [
       {
         "start": 248,
@@ -3151,7 +3163,7 @@
     "lemma": "Derva",
     "previous": "Dertum",
     "next": "Derventio 1",
-    "redirect": true,
+    "redirect": "Derbani",
     "chapters": [
       {
         "start": 248,
@@ -3199,7 +3211,7 @@
     "lemma": "Dervetios",
     "previous": "Derventio 3",
     "next": "Dervetius pagus",
-    "redirect": true,
+    "redirect": "Develtos",
     "chapters": [
       {
         "start": 248,
@@ -3270,7 +3282,7 @@
   {
     "lemma": "Desertor",
     "previous": "Deserti agri",
-    "next": "Delisoi",
+    "next": "Desiderius 1",
     "chapters": [
       {
         "start": 249,
@@ -3280,21 +3292,10 @@
     ]
   },
   {
-    "lemma": "Delisoi",
-    "previous": "Desertor",
-    "next": "Desiderius 1",
-    "chapters": [
-      {
-        "start": 250,
-        "end": 250,
-        "author": "Oberhummer"
-      }
-    ]
-  },
-  {
     "lemma": "Desiderius 1",
-    "previous": "Delisoi",
+    "previous": "Desertor",
     "next": "Desiderius 2",
+    "wp_link": "w:de:Desiderius (Caesar)",
     "chapters": [
       {
         "start": 250,
@@ -3319,7 +3320,7 @@
     "lemma": "Designator",
     "previous": "Desiderius 2",
     "next": "Desilaus",
-    "redirect": true,
+    "redirect": "Dissignator",
     "chapters": [
       {
         "start": 250,
@@ -3330,8 +3331,8 @@
   {
     "lemma": "Desilaus",
     "previous": "Designator",
-    "next": "Desmontes",
-    "redirect": true,
+    "next": "Desiloi",
+    "redirect": "Kresilas",
     "chapters": [
       {
         "start": 250,
@@ -3341,8 +3342,13 @@
     ]
   },
   {
-    "lemma": "Desmontes",
+    "lemma": "Desiloi",
     "previous": "Desilaus",
+    "next": "Desmontes"
+  },
+  {
+    "lemma": "Desmontes",
+    "previous": "Desiloi",
     "next": "Δεσμωτήριον",
     "chapters": [
       {
@@ -3394,6 +3400,7 @@
     "lemma": "Δεσποσιοναῦται",
     "previous": "Despoina",
     "next": "Despotius",
+    "sort_key": "Desposionautai",
     "chapters": [
       {
         "start": 254,
@@ -3575,7 +3582,7 @@
     "lemma": "Desuviates",
     "previous": "Desultor",
     "next": "Detestatio sacrorum",
-    "redirect": true,
+    "redirect": "Dexu(v)iates",
     "chapters": [
       {
         "start": 259,
@@ -3587,7 +3594,7 @@
     "lemma": "Detestatio sacrorum",
     "previous": "Desuviates",
     "next": "Detumo",
-    "redirect": true,
+    "redirect": "Calata comitia",
     "chapters": [
       {
         "start": 259,
@@ -3611,7 +3618,7 @@
     "lemma": "Detunda",
     "previous": "Detumo",
     "next": "Deva 1",
-    "redirect": true,
+    "redirect": "Detumo",
     "chapters": [
       {
         "start": 259,
@@ -3707,6 +3714,7 @@
     "lemma": "Develtos",
     "previous": "Deudorix",
     "next": "Deverra",
+    "wp_link": "w:de:Deultum",
     "chapters": [
       {
         "start": 260,
@@ -3731,6 +3739,7 @@
     "lemma": "Deversorium",
     "previous": "Deverra",
     "next": "Deviatis",
+    "redirect": "Wirtshäuser",
     "chapters": [
       {
         "start": 261,
@@ -3790,6 +3799,7 @@
     "lemma": "Deultum",
     "previous": "Deukalion",
     "next": "Deunx",
+    "redirect": "Develtos",
     "chapters": [
       {
         "start": 276,
@@ -3813,6 +3823,7 @@
     "lemma": "Devona",
     "previous": "Deunx",
     "next": "Devono",
+    "redirect": "Divona",
     "chapters": [
       {
         "start": 277,
@@ -3836,6 +3847,7 @@
     "lemma": "Devotio",
     "previous": "Devono",
     "next": "Deuri",
+    "wp_link": "w:de:Hingabe",
     "chapters": [
       {
         "start": 277,
@@ -3895,7 +3907,7 @@
   {
     "lemma": "Deusios",
     "previous": "Deusara",
-    "next": "Deuso(n",
+    "next": "Deuso(n)",
     "chapters": [
       {
         "start": 281,
@@ -3905,9 +3917,9 @@
     ]
   },
   {
-    "lemma": "Deuso(n",
+    "lemma": "Deuso(n)",
     "previous": "Deusios",
-    "next": "Deuterius",
+    "next": "Δευτεραγωνιστής",
     "chapters": [
       {
         "start": 281,
@@ -3917,9 +3929,15 @@
     ]
   },
   {
+    "lemma": "Δευτεραγωνιστής",
+    "previous": "Deuso(n)",
+    "next": "Deuterius",
+    "sort_key": "Deuteragonistes"
+  },
+  {
     "lemma": "Deuterius",
-    "previous": "Deuso(n",
-    "next": "Deuteroloia",
+    "previous": "Δευτεραγωνιστής",
+    "next": "Δευτερολογία",
     "chapters": [
       {
         "start": 282,
@@ -3929,21 +3947,15 @@
     ]
   },
   {
-    "lemma": "Deuteroloia",
+    "lemma": "Δευτερολογία",
     "previous": "Deuterius",
     "next": "Deuteros",
-    "chapters": [
-      {
-        "start": 282,
-        "end": 283,
-        "author": "Thalheim"
-      }
-    ]
+    "sort_key": "Deuterologia"
   },
   {
     "lemma": "Deuteros",
-    "previous": "Deuteroloia",
-    "next": "Deuterostatai",
+    "previous": "Δευτερολογία",
+    "next": "Δευτεροστάται",
     "chapters": [
       {
         "start": 283,
@@ -3953,9 +3965,10 @@
     ]
   },
   {
-    "lemma": "Deuterostatai",
+    "lemma": "Δευτεροστάται",
     "previous": "Deuteros",
     "next": "Dexamene",
+    "sort_key": "Deuterostatai",
     "chapters": [
       {
         "start": 283,
@@ -3966,7 +3979,7 @@
   },
   {
     "lemma": "Dexamene",
-    "previous": "Deuterostatai",
+    "previous": "Δευτεροστάται",
     "next": "Dexamenos 1",
     "chapters": [
       {
@@ -3980,6 +3993,7 @@
     "lemma": "Dexamenos 1",
     "previous": "Dexamene",
     "next": "Dexamenos 2",
+    "wp_link": "w:de:Dexamenos (König von Olenos)",
     "chapters": [
       {
         "start": 283,
@@ -4220,6 +4234,7 @@
     "lemma": "Deximachos",
     "previous": "Dexileos 2",
     "next": "Deximontani",
+    "redirect": "Iulius 208",
     "chapters": [
       {
         "start": 286,
@@ -4266,7 +4281,7 @@
   {
     "lemma": "Dexion",
     "previous": "Dexiochos",
-    "next": "Dexionidai",
+    "next": "Δεξιωνίδαι",
     "chapters": [
       {
         "start": 287,
@@ -4276,9 +4291,10 @@
     ]
   },
   {
-    "lemma": "Dexionidai",
+    "lemma": "Δεξιωνίδαι",
     "previous": "Dexion",
     "next": "Dexios 1",
+    "sort_key": "Dexionidai",
     "chapters": [
       {
         "start": 287,
@@ -4289,7 +4305,7 @@
   },
   {
     "lemma": "Dexios 1",
-    "previous": "Dexionidai",
+    "previous": "Δεξιωνίδαι",
     "next": "Dexios 2",
     "chapters": [
       {
@@ -4314,7 +4330,7 @@
   {
     "lemma": "Dexios 3",
     "previous": "Dexios 2",
-    "next": "Dexiostates",
+    "next": "Δεξιοστάτης",
     "chapters": [
       {
         "start": 287,
@@ -4324,9 +4340,10 @@
     ]
   },
   {
-    "lemma": "Dexiostates",
+    "lemma": "Δεξιοστάτης",
     "previous": "Dexios 3",
-    "next": "Dexiostoichos",
+    "next": "Δεξιόστοιχος",
+    "sort_key": "Dexiostates",
     "chapters": [
       {
         "start": 287,
@@ -4336,9 +4353,10 @@
     ]
   },
   {
-    "lemma": "Dexiostoichos",
-    "previous": "Dexiostates",
+    "lemma": "Δεξιόστοιχος",
+    "previous": "Δεξιοστάτης",
     "next": "Dexiphon",
+    "sort_key": "Dexiostoichos",
     "chapters": [
       {
         "start": 287,
@@ -4349,7 +4367,7 @@
   },
   {
     "lemma": "Dexiphon",
-    "previous": "Dexiostoichos",
+    "previous": "Δεξιόστοιχος",
     "next": "Dexippos 1",
     "chapters": [
       {
@@ -4410,6 +4428,7 @@
     "lemma": "Dexippos 5",
     "previous": "Dexippos 4",
     "next": "Dexippos 6",
+    "wp_link": "w:de:Publius Herennius Dexippus",
     "chapters": [
       {
         "start": 288,
@@ -4554,6 +4573,7 @@
     "lemma": "Dexter 1",
     "previous": "Dextans",
     "next": "Dexter 2",
+    "sort_key": "Dexter 01",
     "chapters": [
       {
         "start": 296,
@@ -4566,6 +4586,7 @@
     "lemma": "Dexter 2",
     "previous": "Dexter 1",
     "next": "Dexter 3",
+    "sort_key": "Dexter 02",
     "chapters": [
       {
         "start": 296,
@@ -4578,6 +4599,8 @@
     "lemma": "Dexter 3",
     "previous": "Dexter 2",
     "next": "Dexter 4",
+    "sort_key": "Dexter 03",
+    "redirect": "Bellicius 5",
     "chapters": [
       {
         "start": 296,
@@ -4588,7 +4611,8 @@
   {
     "lemma": "Dexter 4",
     "previous": "Dexter 3",
-    "next": "Dexter 5a-d",
+    "next": "Dexter 5",
+    "sort_key": "Dexter 04",
     "chapters": [
       {
         "start": 296,
@@ -4598,21 +4622,18 @@
     ]
   },
   {
-    "lemma": "Dexter 5a-d",
+    "lemma": "Dexter 5",
     "previous": "Dexter 4",
     "next": "Dexter 6",
-    "chapters": [
-      {
-        "start": 296,
-        "end": 297,
-        "author": "Groag"
-      }
-    ]
+    "sort_key": "Dexter 05",
+    "redirect": "Iulius 118"
   },
   {
     "lemma": "Dexter 6",
-    "previous": "Dexter 5a-d",
+    "previous": "Dexter 5",
     "next": "Dexter 7",
+    "sort_key": "Dexter 06",
+    "redirect": "Afranius 9",
     "chapters": [
       {
         "start": 297,
@@ -4625,6 +4646,8 @@
     "lemma": "Dexter 7",
     "previous": "Dexter 6",
     "next": "Dexter 8",
+    "sort_key": "Dexter 07",
+    "wp_link": "w:de:it:Nummio Emiliano Destro (prefetto del pretorio)",
     "chapters": [
       {
         "start": 297,
@@ -4637,6 +4660,7 @@
     "lemma": "Dexter 8",
     "previous": "Dexter 7",
     "next": "Dexter 9",
+    "sort_key": "Dexter 08",
     "chapters": [
       {
         "start": 297,
@@ -4649,6 +4673,7 @@
     "lemma": "Dexter 9",
     "previous": "Dexter 8",
     "next": "Dexter 10",
+    "sort_key": "Dexter 09",
     "chapters": [
       {
         "start": 297,
@@ -4661,6 +4686,7 @@
     "lemma": "Dexter 10",
     "previous": "Dexter 9",
     "next": "Dexter 11",
+    "wp_link": "w:de:en:Appius Nicomachus Dexter",
     "chapters": [
       {
         "start": 297,
@@ -4696,8 +4722,8 @@
   {
     "lemma": "Dextrale",
     "previous": "Dexterati",
-    "next": "Dextratum iunctio",
-    "redirect": true,
+    "next": "Dextrarum iunctio",
+    "redirect": "Armbänder",
     "chapters": [
       {
         "start": 297,
@@ -4706,21 +4732,16 @@
     ]
   },
   {
-    "lemma": "Dextratum iunctio",
+    "lemma": "Dextrarum iunctio",
     "previous": "Dextrale",
     "next": "Dextrianus",
-    "chapters": [
-      {
-        "start": 297,
-        "end": 297
-      }
-    ]
+    "redirect": "Iuga"
   },
   {
     "lemma": "Dextrianus",
-    "previous": "Dextratum iunctio",
+    "previous": "Dextrarum iunctio",
     "next": "Dexu(v)iates",
-    "redirect": true,
+    "redirect": "Caecilius 51",
     "chapters": [
       {
         "start": 297,
@@ -4731,7 +4752,7 @@
   {
     "lemma": "Dexu(v)iates",
     "previous": "Dextrianus",
-    "next": "Deision",
+    "next": "Deysion",
     "wp_link": "w:de:fr:Dexcivate",
     "chapters": [
       {
@@ -4742,20 +4763,13 @@
     ]
   },
   {
-    "lemma": "Deision",
+    "lemma": "Deysion",
     "previous": "Dexu(v)iates",
-    "next": "Di...",
-    "chapters": [
-      {
-        "start": 298,
-        "end": 298,
-        "author": "Bürchner"
-      }
-    ]
+    "next": "Di..."
   },
   {
     "lemma": "Di...",
-    "previous": "Deision",
+    "previous": "Deysion",
     "next": "Dia",
     "chapters": [
       {
@@ -4781,6 +4795,7 @@
     "lemma": "Dia 1",
     "previous": "Dia",
     "next": "Dia 2",
+    "sort_key": "Dia 01",
     "chapters": [
       {
         "start": 298,
@@ -4793,6 +4808,7 @@
     "lemma": "Dia 2",
     "previous": "Dia 1",
     "next": "Dia 3",
+    "sort_key": "Dia 02",
     "chapters": [
       {
         "start": 298,
@@ -5129,6 +5145,7 @@
     "lemma": "Διαχειροτονία",
     "previous": "Diacatochia",
     "next": "Diachersis",
+    "sort_key": "Diacheirotonia",
     "chapters": [
       {
         "start": 303,
@@ -5695,7 +5712,7 @@
   {
     "lemma": "Diamant",
     "previous": "Dialogus",
-    "next": "Diamartyria",
+    "next": "Διαμαρτυρία",
     "wp_link": "w:de:Diamant",
     "chapters": [
       {
@@ -5706,7 +5723,7 @@
     ]
   },
   {
-    "lemma": "Diamartyria",
+    "lemma": "Διαμαρτυρία",
     "previous": "Diamant",
     "next": "Diamastigosis",
     "chapters": [
@@ -5719,7 +5736,7 @@
   },
   {
     "lemma": "Diamastigosis",
-    "previous": "Diamartyria",
+    "previous": "Διαμαρτυρία",
     "next": "Diamunas",
     "chapters": [
       {
@@ -6264,6 +6281,7 @@
     "lemma": "Διαύλιον",
     "previous": "Diatreta",
     "next": "Diaulos 1",
+    "sort_key": "Diaulion",
     "chapters": [
       {
         "start": 353,
@@ -6338,6 +6356,7 @@
     "lemma": "Dibaltum",
     "previous": "Διάζωμα",
     "next": "Dibialimon",
+    "redirect": true,
     "chapters": [
       {
         "start": 355,
@@ -6361,6 +6380,7 @@
     "lemma": "Dibio",
     "previous": "Dibialimon",
     "next": "Dibolia",
+    "redirect": "Divio",
     "chapters": [
       {
         "start": 356,
@@ -6397,6 +6417,7 @@
     "lemma": "Dibutades",
     "previous": "Dibon",
     "next": "Dicalidones",
+    "redirect": true,
     "chapters": [
       {
         "start": 356,
@@ -6408,6 +6429,7 @@
     "lemma": "Dicalidones",
     "previous": "Dibutades",
     "next": "Dicelis",
+    "redirect": true,
     "chapters": [
       {
         "start": 356,
@@ -6715,6 +6737,7 @@
     "lemma": "Didius",
     "previous": "Didigua",
     "next": "Didius 1",
+    "sort_key": "Didius 00",
     "chapters": [
       {
         "start": 406,
@@ -6727,6 +6750,7 @@
     "lemma": "Didius 1",
     "previous": "Didius",
     "next": "Didius 2",
+    "sort_key": "Didius 01",
     "chapters": [
       {
         "start": 406,
@@ -6739,6 +6763,7 @@
     "lemma": "Didius 2",
     "previous": "Didius 1",
     "next": "Didius 3",
+    "sort_key": "Didius 02",
     "chapters": [
       {
         "start": 406,
@@ -6751,6 +6776,8 @@
     "lemma": "Didius 3",
     "previous": "Didius 2",
     "next": "Didius 4",
+    "sort_key": "Didius 03",
+    "redirect": "Didius 5",
     "chapters": [
       {
         "start": 407,
@@ -6762,6 +6789,7 @@
     "lemma": "Didius 4",
     "previous": "Didius 3",
     "next": "Didius 5",
+    "sort_key": "Didius 04",
     "chapters": [
       {
         "start": 407,
@@ -6774,6 +6802,8 @@
     "lemma": "Didius 5",
     "previous": "Didius 4",
     "next": "Didius 6",
+    "sort_key": "Didius 05",
+    "wp_link": "w:de:Titus Didius",
     "chapters": [
       {
         "start": 407,
@@ -6786,6 +6816,7 @@
     "lemma": "Didius 6",
     "previous": "Didius 5",
     "next": "Didius 7",
+    "sort_key": "Didius 06",
     "chapters": [
       {
         "start": 410,
@@ -6798,6 +6829,8 @@
     "lemma": "Didius 7",
     "previous": "Didius 6",
     "next": "Didius 8",
+    "sort_key": "Didius 07",
+    "redirect": "Fabricius 15",
     "chapters": [
       {
         "start": 412,
@@ -6809,6 +6842,8 @@
     "lemma": "Didius 8",
     "previous": "Didius 7",
     "next": "Didius 9",
+    "sort_key": "Didius 08",
+    "wp_link": "w:de:Didius Julianus",
     "chapters": [
       {
         "start": 412,
@@ -6821,6 +6856,7 @@
     "lemma": "Didius 9",
     "previous": "Didius 8",
     "next": "Didius 10",
+    "sort_key": "Didius 09",
     "chapters": [
       {
         "start": 424,
@@ -6905,6 +6941,7 @@
     "lemma": "Didius 16",
     "previous": "Didius 15",
     "next": "Didius 17",
+    "redirect": "Didius 8",
     "chapters": [
       {
         "start": 425,
@@ -6928,6 +6965,7 @@
     "lemma": "Didius 18",
     "previous": "Didius 17",
     "next": "Didius 19",
+    "wp_link": "w:de:Didia Clara",
     "chapters": [
       {
         "start": 425,
@@ -6964,6 +7002,7 @@
     "lemma": "Dido",
     "previous": "Didnasos",
     "next": "Didoros",
+    "wp_link": "w:de:Dido (Mythologie)",
     "chapters": [
       {
         "start": 426,
@@ -7000,6 +7039,7 @@
     "lemma": "Didrachmon",
     "previous": "Didraa",
     "next": "Diduni",
+    "wp_link": "w:de:Griechische Drachme",
     "chapters": [
       {
         "start": 433,
@@ -7012,6 +7052,7 @@
     "lemma": "Diduni",
     "previous": "Didrachmon",
     "next": "Diduroi",
+    "redirect": "Lugii",
     "chapters": [
       {
         "start": 436,
@@ -7047,6 +7088,7 @@
     "lemma": "Didyma 2",
     "previous": "Didyma 1",
     "next": "Didyma 3",
+    "redirect": "Didymai 3",
     "chapters": [
       {
         "start": 441,
@@ -7130,6 +7172,7 @@
     "lemma": "Didymaion",
     "previous": "Didymai 4",
     "next": "Didymaios",
+    "redirect": "Didyma 1",
     "chapters": [
       {
         "start": 441,
@@ -7140,7 +7183,8 @@
   {
     "lemma": "Didymaios",
     "previous": "Didymaion",
-    "next": "Didyma nesia 1",
+    "next": "Δίδυμα νησία 1",
+    "redirect": "Didymeus",
     "chapters": [
       {
         "start": 441,
@@ -7150,9 +7194,10 @@
     ]
   },
   {
-    "lemma": "Didyma nesia 1",
+    "lemma": "Δίδυμα νησία 1",
     "previous": "Didymaios",
-    "next": "Didyma nesia 2",
+    "next": "Δίδυμα νησία 2",
+    "sort_key": "Didyma nesia 1",
     "chapters": [
       {
         "start": 441,
@@ -7162,9 +7207,10 @@
     ]
   },
   {
-    "lemma": "Didyma nesia 2",
-    "previous": "Didyma nesia 1",
+    "lemma": "Δίδυμα νησία 2",
+    "previous": "Δίδυμα νησία 1",
     "next": "Didymaon",
+    "sort_key": "Didyma nesia 2",
     "chapters": [
       {
         "start": 441,
@@ -7175,8 +7221,8 @@
   },
   {
     "lemma": "Didymaon",
-    "previous": "Didyma nesia 2",
-    "next": "Didyma ore",
+    "previous": "Δίδυμα νησία 2",
+    "next": "Δίδυμα ὄρη",
     "chapters": [
       {
         "start": 441,
@@ -7186,9 +7232,10 @@
     ]
   },
   {
-    "lemma": "Didyma ore",
+    "lemma": "Δίδυμα ὄρη",
     "previous": "Didymaon",
     "next": "Didymarchos",
+    "sort_key": "Didyma ore",
     "chapters": [
       {
         "start": 441,
@@ -7199,8 +7246,8 @@
   },
   {
     "lemma": "Didymarchos",
-    "previous": "Didyma ore",
-    "next": "Didyma teiche",
+    "previous": "Δίδυμα ὄρη",
+    "next": "Δίδυμα τείχη",
     "chapters": [
       {
         "start": 442,
@@ -7210,9 +7257,10 @@
     ]
   },
   {
-    "lemma": "Didyma teiche",
+    "lemma": "Δίδυμα τείχη",
     "previous": "Didymarchos",
     "next": "Didyme 1",
+    "sort_key": "Didyma teiche",
     "chapters": [
       {
         "start": 442,
@@ -7223,7 +7271,7 @@
   },
   {
     "lemma": "Didyme 1",
-    "previous": "Didyma teiche",
+    "previous": "Δίδυμα τείχη",
     "next": "Didyme 2",
     "chapters": [
       {
@@ -7333,6 +7381,7 @@
     "lemma": "Didymoi 3",
     "previous": "Didymoi 2",
     "next": "Didymoi 4",
+    "redirect": "Didymai 3",
     "chapters": [
       {
         "start": 444,
@@ -7343,7 +7392,8 @@
   {
     "lemma": "Didymoi 4",
     "previous": "Didymoi 3",
-    "next": "Didymon teichos",
+    "next": "Δίδυμον τεῖχος",
+    "redirect": "Didyma 1",
     "chapters": [
       {
         "start": 444,
@@ -7352,9 +7402,10 @@
     ]
   },
   {
-    "lemma": "Didymon teichos",
+    "lemma": "Δίδυμον τεῖχος",
     "previous": "Didymoi 4",
     "next": "Didymos 1",
+    "sort_key": "Didymon teichos",
     "chapters": [
       {
         "start": 444,
@@ -7365,8 +7416,10 @@
   },
   {
     "lemma": "Didymos 1",
-    "previous": "Didymon teichos",
+    "previous": "Δίδυμον τεῖχος",
     "next": "Didymos 2",
+    "sort_key": "Didymos 01",
+    "wp_link": "w:de:fr:Didyme Klydéus",
     "chapters": [
       {
         "start": 444,
@@ -7379,6 +7432,7 @@
     "lemma": "Didymos 2",
     "previous": "Didymos 1",
     "next": "Didymos 3",
+    "sort_key": "Didymos 02",
     "chapters": [
       {
         "start": 444,
@@ -7391,6 +7445,8 @@
     "lemma": "Didymos 3",
     "previous": "Didymos 2",
     "next": "Didymos 4",
+    "sort_key": "Didymos 03",
+    "redirect": "Areios 12",
     "chapters": [
       {
         "start": 444,
@@ -7402,6 +7458,7 @@
     "lemma": "Didymos 4",
     "previous": "Didymos 3",
     "next": "Didymos 5",
+    "sort_key": "Didymos 04",
     "chapters": [
       {
         "start": 444,
@@ -7414,6 +7471,7 @@
     "lemma": "Didymos 5",
     "previous": "Didymos 4",
     "next": "Didymos 6",
+    "sort_key": "Didymos 05",
     "chapters": [
       {
         "start": 444,
@@ -7426,6 +7484,7 @@
     "lemma": "Didymos 6",
     "previous": "Didymos 5",
     "next": "Didymos 7",
+    "sort_key": "Didymos 06",
     "chapters": [
       {
         "start": 444,
@@ -7438,6 +7497,7 @@
     "lemma": "Didymos 7",
     "previous": "Didymos 6",
     "next": "Didymos 8",
+    "sort_key": "Didymos 07",
     "chapters": [
       {
         "start": 445,
@@ -7450,6 +7510,8 @@
     "lemma": "Didymos 8",
     "previous": "Didymos 7",
     "next": "Didymos 9",
+    "sort_key": "Didymos 08",
+    "wp_link": "w:de:Didymos Chalkenteros",
     "chapters": [
       {
         "start": 445,
@@ -7462,6 +7524,7 @@
     "lemma": "Didymos 9",
     "previous": "Didymos 8",
     "next": "Didymos 10",
+    "sort_key": "Didymos 09",
     "chapters": [
       {
         "start": 472,
@@ -7533,7 +7596,7 @@
   {
     "lemma": "Diegylis",
     "previous": "Didymoxarthos",
-    "next": "Dielkystinda",
+    "next": "Διελκυστίνδα",
     "chapters": [
       {
         "start": 475,
@@ -7543,9 +7606,10 @@
     ]
   },
   {
-    "lemma": "Dielkystinda",
+    "lemma": "Διελκυστίνδα",
     "previous": "Diegylis",
     "next": "Diemporos",
+    "sort_key": "Dielkystinda",
     "chapters": [
       {
         "start": 475,
@@ -7556,8 +7620,8 @@
   },
   {
     "lemma": "Diemporos",
-    "previous": "Dielkystinda",
-    "next": "Diengyesis",
+    "previous": "Διελκυστίνδα",
+    "next": "Διεγγύησις",
     "chapters": [
       {
         "start": 475,
@@ -7567,9 +7631,10 @@
     ]
   },
   {
-    "lemma": "Diengyesis",
+    "lemma": "Διεγγύησις",
     "previous": "Diemporos",
     "next": "Dierna",
+    "sort_key": "Diengyesis",
     "chapters": [
       {
         "start": 475,
@@ -7580,7 +7645,7 @@
   },
   {
     "lemma": "Dierna",
-    "previous": "Diengyesis",
+    "previous": "Διεγγύησις",
     "next": "Dies 1",
     "chapters": [
       {
@@ -7629,7 +7694,7 @@
   {
     "lemma": "Dies imperii",
     "previous": "Dies 3",
-    "next": "Diespiter",
+    "next": "Dies sanguinis",
     "chapters": [
       {
         "start": 477,
@@ -7639,9 +7704,21 @@
     ]
   },
   {
-    "lemma": "Diespiter",
+    "lemma": "Dies sanguinis",
     "previous": "Dies imperii",
-    "next": "Dies sanguinis",
+    "next": "Diespiter",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 478,
+        "end": 478
+      }
+    ]
+  },
+  {
+    "lemma": "Diespiter",
+    "previous": "Dies sanguinis",
+    "next": "Dieteris",
     "chapters": [
       {
         "start": 478,
@@ -7651,20 +7728,10 @@
     ]
   },
   {
-    "lemma": "Dies sanguinis",
-    "previous": "Diespiter",
-    "next": "Dieteris",
-    "chapters": [
-      {
-        "start": 478,
-        "end": 478
-      }
-    ]
-  },
-  {
     "lemma": "Dieteris",
-    "previous": "Dies sanguinis",
+    "previous": "Diespiter",
     "next": "Diethusa",
+    "redirect": "Trieteris",
     "chapters": [
       {
         "start": 479,
@@ -7711,7 +7778,7 @@
   {
     "lemma": "Dieuches 3",
     "previous": "Dieuches 2",
-    "next": "Diffarreatio",
+    "next": "Dieuchidas",
     "chapters": [
       {
         "start": 480,
@@ -7721,8 +7788,13 @@
     ]
   },
   {
-    "lemma": "Diffarreatio",
+    "lemma": "Dieuchidas",
     "previous": "Dieuches 3",
+    "next": "Diffarreatio"
+  },
+  {
+    "lemma": "Diffarreatio",
+    "previous": "Dieuchidas",
     "next": "Differentiarum scriptores",
     "chapters": [
       {
@@ -7735,7 +7807,7 @@
   {
     "lemma": "Differentiarum scriptores",
     "previous": "Diffarreatio",
-    "next": "Diegba",
+    "next": "Digba",
     "chapters": [
       {
         "start": 481,
@@ -7745,21 +7817,15 @@
     ]
   },
   {
-    "lemma": "Diegba",
+    "lemma": "Digba",
     "previous": "Differentiarum scriptores",
-    "next": "Digdes to phrurion",
-    "chapters": [
-      {
-        "start": 484,
-        "end": 484,
-        "author": "Streck"
-      }
-    ]
+    "next": "Δίγδης τὸ φρούριον"
   },
   {
-    "lemma": "Digdes to phrurion",
-    "previous": "Diegba",
+    "lemma": "Δίγδης τὸ φρούριον",
+    "previous": "Digba",
     "next": "Digdiga",
+    "sort_key": "Digdes to phrurion",
     "chapters": [
       {
         "start": 484,
@@ -7770,7 +7836,7 @@
   },
   {
     "lemma": "Digdiga",
-    "previous": "Digdes to phrurion",
+    "previous": "Δίγδης τὸ φρούριον",
     "next": "Digema",
     "chapters": [
       {
@@ -7964,7 +8030,7 @@
     "lemma": "Diglito",
     "previous": "Digitus",
     "next": "Dignilla",
-    "redirect": true,
+    "redirect": "Tigris 1",
     "chapters": [
       {
         "start": 545,
@@ -9278,7 +9344,8 @@
   {
     "lemma": "Dintzic",
     "previous": "Dinos 3",
-    "next": "Diobelia",
+    "next": "Διωβελία",
+    "wp_link": "w:de:Dengizich",
     "chapters": [
       {
         "start": 655,
@@ -9288,7 +9355,7 @@
     ]
   },
   {
-    "lemma": "Diobelia",
+    "lemma": "Διωβελία",
     "previous": "Dintzic",
     "next": "Diobolon",
     "chapters": [
@@ -9300,7 +9367,7 @@
   },
   {
     "lemma": "Diobolon",
-    "previous": "Diobelia",
+    "previous": "Διωβελία",
     "next": "Diocaesarea 1",
     "chapters": [
       {
@@ -9621,6 +9688,7 @@
     "lemma": "Diodoros 9",
     "previous": "Diodoros 8",
     "next": "Diodoros 10",
+    "sort_key": "Diodoros 09",
     "chapters": [
       {
         "start": 659,
@@ -11141,6 +11209,7 @@
     "lemma": "Diogenes 42",
     "previous": "Diogenes 41",
     "next": "Diogenes 43",
+    "wp_link": "w:de:Diogenes von Apollonia",
     "chapters": [
       {
         "start": 764,
@@ -11229,7 +11298,7 @@
     "lemma": "Diogenes 49",
     "previous": "Diogenes 48",
     "next": "Diogenes 50",
-    "redirect": true,
+    "redirect": "Antonius 49",
     "wp_link": "w:de:Antonios Diogenes",
     "chapters": [
       {
@@ -11303,6 +11372,7 @@
     "lemma": "Diogenianos 1",
     "previous": "Diogenes 54",
     "next": "Diogenianos 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 777,
@@ -11424,6 +11494,7 @@
     "lemma": "Diognetos 4",
     "previous": "Diognetos 3",
     "next": "Diognetos 5",
+    "sort_key": "Diognetos 04",
     "chapters": [
       {
         "start": 784,
@@ -11472,6 +11543,7 @@
     "lemma": "Diognetos 8",
     "previous": "Diognetos 7",
     "next": "Diognetos 9",
+    "sort_key": "Diognetos 08",
     "chapters": [
       {
         "start": 785,
@@ -11484,6 +11556,7 @@
     "lemma": "Diognetos 9",
     "previous": "Diognetos 8",
     "next": "Diognetos 10",
+    "sort_key": "Diognetos 09",
     "chapters": [
       {
         "start": 785,
@@ -11592,6 +11665,7 @@
     "lemma": "Diognetos 18",
     "previous": "Diognetos 17",
     "next": "Diognetos 19",
+    "wp_link": "w:de:Brief an Diognet",
     "chapters": [
       {
         "start": 786,
@@ -11603,7 +11677,7 @@
   {
     "lemma": "Diognetos 19",
     "previous": "Diognetos 18",
-    "next": "Dioikesis",
+    "next": "Διοίκησις",
     "chapters": [
       {
         "start": 786,
@@ -11613,7 +11687,7 @@
     ]
   },
   {
-    "lemma": "Dioikesis",
+    "lemma": "Διοίκησις",
     "previous": "Diognetos 19",
     "next": "Dioitas",
     "chapters": [
@@ -11626,7 +11700,7 @@
   },
   {
     "lemma": "Dioitas",
-    "previous": "Dioikesis",
+    "previous": "Διοίκησις",
     "next": "Diokessa",
     "chapters": [
       {
@@ -13051,7 +13125,8 @@
   {
     "lemma": "Δῖον 5",
     "previous": "Δῖον 4",
-    "next": "Δῖον 1",
+    "next": "Dion 1",
+    "sort_key": "Dion G1",
     "chapters": [
       {
         "start": 833,
@@ -13061,7 +13136,7 @@
     ]
   },
   {
-    "lemma": "Δῖον 1",
+    "lemma": "Dion 1",
     "previous": "Δῖον 5",
     "next": "Dion 2",
     "sort_key": "Dion 1",
@@ -13075,7 +13150,7 @@
   },
   {
     "lemma": "Dion 2",
-    "previous": "Δῖον 1",
+    "previous": "Dion 1",
     "next": "Dion 3",
     "sort_key": "Dion 2",
     "wp_link": "w:de:Dion von Syrakus",
@@ -15055,6 +15130,7 @@
     "lemma": "Dionysios 117",
     "previous": "Dionysios 116",
     "next": "Dionysios 118",
+    "wp_link": "w:de:Dionysios (Gesandter)",
     "chapters": [
       {
         "start": 972,
@@ -15079,6 +15155,7 @@
     "lemma": "Dionysios 119",
     "previous": "Dionysios 118",
     "next": "Dionysios 120",
+    "wp_link": "w:de:Dionysios Metathemenos",
     "chapters": [
       {
         "start": 973,
@@ -15462,6 +15539,7 @@
     "lemma": "Dionysios 151",
     "previous": "Dionysios 150",
     "next": "Dionysios 152",
+    "wp_link": "w:de:Dionysios von Korinth",
     "chapters": [
       {
         "start": 993,
@@ -15474,6 +15552,7 @@
     "lemma": "Dionysios 152",
     "previous": "Dionysios 151",
     "next": "Dionysios 153",
+    "wp_link": "w:de:Dionysius (Bischof von Rom)",
     "chapters": [
       {
         "start": 994,
@@ -15486,6 +15565,7 @@
     "lemma": "Dionysios 153",
     "previous": "Dionysios 152",
     "next": "Dionysios 154",
+    "wp_link": "w:de:Dionysius von Alexandria",
     "chapters": [
       {
         "start": 995,
@@ -15498,6 +15578,7 @@
     "lemma": "Dionysios 154",
     "previous": "Dionysios 153",
     "next": "Dionysios 155",
+    "wp_link": "w:de:Dionysius Areopagita",
     "chapters": [
       {
         "start": 996,
@@ -15510,6 +15591,7 @@
     "lemma": "Dionysios 155",
     "previous": "Dionysios 154",
     "next": "Dionysios 156",
+    "wp_link": "w:de:Dionysius Exiguus",
     "chapters": [
       {
         "start": 998,
@@ -16119,7 +16201,7 @@
   {
     "lemma": "Dionysos 2",
     "previous": "Dionysos 1",
-    "next": "Dionysu akron",
+    "next": "Διονύσου ἄκρον",
     "wp_link": "w:de:Dionysos",
     "chapters": [
       {
@@ -16130,9 +16212,10 @@
     ]
   },
   {
-    "lemma": "Dionysu akron",
+    "lemma": "Διονύσου ἄκρον",
     "previous": "Dionysos 2",
-    "next": "Dionysu nesos",
+    "next": "Διονύσου νῆσος",
+    "sort_key": "Dionysu akron",
     "chapters": [
       {
         "start": 1046,
@@ -16142,9 +16225,10 @@
     ]
   },
   {
-    "lemma": "Dionysu nesos",
-    "previous": "Dionysu akron",
+    "lemma": "Διονύσου νῆσος",
+    "previous": "Διονύσου ἄκρον",
     "next": "Diopan",
+    "sort_key": "Dionysu nesos",
     "chapters": [
       {
         "start": 1046,
@@ -16155,7 +16239,7 @@
   },
   {
     "lemma": "Diopan",
-    "previous": "Dionysu nesos",
+    "previous": "Διονύσου νῆσος",
     "next": "Diopatra",
     "chapters": [
       {
@@ -17607,6 +17691,7 @@
     "lemma": "Diospolis 3",
     "previous": "Diospolis 2",
     "next": "Diospolis 4",
+    "sort_key": "Diospolis 03",
     "chapters": [
       {
         "start": 1144,
@@ -17718,7 +17803,7 @@
   {
     "lemma": "Diosthyos",
     "previous": "Διὸς Θεοδοσία",
-    "next": "Diosxeniastai",
+    "next": "Διοσξενιασταί",
     "chapters": [
       {
         "start": 1146,
@@ -17728,7 +17813,7 @@
     ]
   },
   {
-    "lemma": "Diosxeniastai",
+    "lemma": "Διοσξενιασταί",
     "previous": "Diosthyos",
     "next": "Diotahi",
     "chapters": [
@@ -17741,7 +17826,7 @@
   },
   {
     "lemma": "Diotahi",
-    "previous": "Diosxeniastai",
+    "previous": "Διοσξενιασταί",
     "next": "Diothare",
     "chapters": [
       {
@@ -17803,6 +17888,7 @@
     "lemma": "Diotimos 1",
     "previous": "Diotima 2",
     "next": "Diotimos 2",
+    "sort_key": "Diotimos 01",
     "chapters": [
       {
         "start": 1147,
@@ -17815,6 +17901,7 @@
     "lemma": "Diotimos 2",
     "previous": "Diotimos 1",
     "next": "Diotimos 3",
+    "sort_key": "Diotimos 02",
     "chapters": [
       {
         "start": 1147,
@@ -17827,6 +17914,7 @@
     "lemma": "Diotimos 3",
     "previous": "Diotimos 2",
     "next": "Diotimos 4",
+    "sort_key": "Diotimos 03",
     "chapters": [
       {
         "start": 1148,
@@ -17839,6 +17927,7 @@
     "lemma": "Diotimos 4",
     "previous": "Diotimos 3",
     "next": "Diotimos 5",
+    "sort_key": "Diotimos 04",
     "chapters": [
       {
         "start": 1148,
@@ -17851,6 +17940,7 @@
     "lemma": "Diotimos 5",
     "previous": "Diotimos 4",
     "next": "Diotimos 6",
+    "sort_key": "Diotimos 05",
     "chapters": [
       {
         "start": 1148,
@@ -17863,6 +17953,7 @@
     "lemma": "Diotimos 6",
     "previous": "Diotimos 5",
     "next": "Diotimos 7",
+    "sort_key": "Diotimos 06",
     "chapters": [
       {
         "start": 1148,
@@ -17875,6 +17966,7 @@
     "lemma": "Diotimos 7",
     "previous": "Diotimos 6",
     "next": "Diotimos 8",
+    "sort_key": "Diotimos 07",
     "chapters": [
       {
         "start": 1148,
@@ -17887,6 +17979,7 @@
     "lemma": "Diotimos 8",
     "previous": "Diotimos 7",
     "next": "Diotimos 9",
+    "sort_key": "Diotimos 08",
     "chapters": [
       {
         "start": 1148,
@@ -17899,6 +17992,7 @@
     "lemma": "Diotimos 9",
     "previous": "Diotimos 8",
     "next": "Diotimos 10",
+    "sort_key": "Diotimos 09",
     "chapters": [
       {
         "start": 1148,
@@ -18655,7 +18749,7 @@
   {
     "lemma": "Δίπρῳρος",
     "previous": "Dipolis 2",
-    "next": "Diprymnos",
+    "next": "Δίπρυμνος",
     "sort_key": "Diproros",
     "chapters": [
       {
@@ -18666,7 +18760,7 @@
     ]
   },
   {
-    "lemma": "Diprymnos",
+    "lemma": "Δίπρυμνος",
     "previous": "Δίπρῳρος",
     "next": "Dipsakos 1",
     "chapters": [
@@ -18678,7 +18772,7 @@
   },
   {
     "lemma": "Dipsakos 1",
-    "previous": "Diprymnos",
+    "previous": "Δίπρυμνος",
     "next": "Doreia",
     "chapters": [
       {
@@ -18738,7 +18832,7 @@
   {
     "lemma": "Diptychon",
     "previous": "Dipteros",
-    "next": "Dipylon",
+    "next": "Δίπτυον",
     "wp_link": "w:de:Wachstafel",
     "chapters": [
       {
@@ -18749,8 +18843,13 @@
     ]
   },
   {
-    "lemma": "Dipylon",
+    "lemma": "Δίπτυον",
     "previous": "Diptychon",
+    "next": "Dipylon"
+  },
+  {
+    "lemma": "Dipylon",
+    "previous": "Δίπτυον",
     "next": "Dire",
     "chapters": [
       {
@@ -18835,6 +18934,7 @@
     "lemma": "Diribitorium",
     "previous": "Diribitores",
     "next": "Dirica",
+    "wp_link": "w:de:Diribitorium",
     "chapters": [
       {
         "start": 1168,
@@ -19213,7 +19313,7 @@
   {
     "lemma": "Distamenos",
     "previous": "Dista",
-    "next": "Distegia",
+    "next": "Διστεγία",
     "chapters": [
       {
         "start": 1200,
@@ -19223,9 +19323,10 @@
     ]
   },
   {
-    "lemma": "Distegia",
+    "lemma": "Διστεγία",
     "previous": "Distamenos",
     "next": "Distel",
+    "sort_key": "Distegia",
     "chapters": [
       {
         "start": 1200,
@@ -19236,7 +19337,7 @@
   },
   {
     "lemma": "Distel",
-    "previous": "Distegia",
+    "previous": "Διστεγία",
     "next": "Disticha Catonis",
     "chapters": [
       {
@@ -19651,7 +19752,7 @@
     "lemma": "Divodurum 3",
     "previous": "Divodurum 2",
     "next": "Divona 1",
-    "redirect": true,
+    "redirect": "Theudurum",
     "chapters": [
       {
         "start": 1241,
@@ -20502,6 +20603,7 @@
     "lemma": "Dolabella",
     "previous": "Dokonos",
     "next": "Dolabellina",
+    "wp_link": "w:de:Dolabella",
     "chapters": [
       {
         "start": 1274,
@@ -21559,6 +21661,7 @@
     "lemma": "Domitilla",
     "previous": "Domitianus 10",
     "next": "Domitiopolis",
+    "redirect": true,
     "chapters": [
       {
         "start": 1313,
@@ -21582,6 +21685,7 @@
     "lemma": "Domitius",
     "previous": "Domitiopolis",
     "next": "Domitius 1",
+    "sort_key": "Domitius 000",
     "chapters": [
       {
         "start": 1313,
@@ -21594,6 +21698,7 @@
     "lemma": "Domitius 1",
     "previous": "Domitius",
     "next": "Domitius 2",
+    "sort_key": "Domitius 001",
     "chapters": [
       {
         "start": 1315,
@@ -21606,6 +21711,7 @@
     "lemma": "Domitius 2",
     "previous": "Domitius 1",
     "next": "Domitius 3",
+    "sort_key": "Domitius 002",
     "chapters": [
       {
         "start": 1315,
@@ -21618,6 +21724,7 @@
     "lemma": "Domitius 3",
     "previous": "Domitius 2",
     "next": "Domitius 4",
+    "sort_key": "Domitius 003",
     "chapters": [
       {
         "start": 1315,
@@ -21630,6 +21737,7 @@
     "lemma": "Domitius 4",
     "previous": "Domitius 3",
     "next": "Domitius 5",
+    "sort_key": "Domitius 004",
     "chapters": [
       {
         "start": 1315,
@@ -21668,6 +21776,7 @@
     "lemma": "Domitius 7",
     "previous": "Domitius 6",
     "next": "Domitius 8",
+    "sort_key": "Domitius 007",
     "chapters": [
       {
         "start": 1315,
@@ -21706,6 +21815,7 @@
     "lemma": "Domitius 10",
     "previous": "Domitius 9",
     "next": "Domitius 11",
+    "sort_key": "Domitius 010",
     "chapters": [
       {
         "start": 1316,
@@ -21717,6 +21827,7 @@
     "lemma": "Domitius 11",
     "previous": "Domitius 10",
     "next": "Domitius 12",
+    "sort_key": "Domitius 011",
     "chapters": [
       {
         "start": 1316,
@@ -21755,6 +21866,7 @@
     "lemma": "Domitius 14",
     "previous": "Domitius 13",
     "next": "Domitius 15",
+    "sort_key": "Domitius 014",
     "chapters": [
       {
         "start": 1316,
@@ -21767,6 +21879,8 @@
     "lemma": "Domitius 15",
     "previous": "Domitius 14",
     "next": "Domitius 16",
+    "sort_key": "Domitius 015",
+    "redirect": "Domitius Domitius 23",
     "chapters": [
       {
         "start": 1320,
@@ -21778,6 +21892,8 @@
     "lemma": "Domitius 16",
     "previous": "Domitius 15",
     "next": "Domitius 17",
+    "sort_key": "Domitius 016",
+    "redirect": "Domitius Domitius 65",
     "chapters": [
       {
         "start": 1320,
@@ -21790,6 +21906,8 @@
     "lemma": "Domitius 17",
     "previous": "Domitius 16",
     "next": "Domitius 18",
+    "sort_key": "Domitius 017",
+    "redirect": "Domitius Domitius 84",
     "chapters": [
       {
         "start": 1320,
@@ -21802,6 +21920,8 @@
     "lemma": "Domitius 18",
     "previous": "Domitius 17",
     "next": "Domitius 19",
+    "sort_key": "Domitius 018",
+    "wp_link": "w:de:Gnaeus Domitius Ahenobarbus (Konsul 192 v. Chr.)",
     "chapters": [
       {
         "start": 1320,
@@ -21814,6 +21934,8 @@
     "lemma": "Domitius 19",
     "previous": "Domitius 18",
     "next": "Domitius 20",
+    "sort_key": "Domitius 019",
+    "wp_link": "w:de:Gnaeus Domitius Ahenobarbus (Konsul 162 v. Chr.)",
     "chapters": [
       {
         "start": 1322,
@@ -21826,6 +21948,8 @@
     "lemma": "Domitius 20",
     "previous": "Domitius 19",
     "next": "Domitius 21",
+    "sort_key": "Domitius 020",
+    "wp_link": "w:de:Gnaeus Domitius Ahenobarbus (Konsul 122 v. Chr.)",
     "chapters": [
       {
         "start": 1322,
@@ -21838,6 +21962,7 @@
     "lemma": "Domitius 21",
     "previous": "Domitius 20",
     "next": "Domitius 22",
+    "sort_key": "Domitius 021",
     "chapters": [
       {
         "start": 1324,
@@ -21850,6 +21975,7 @@
     "lemma": "Domitius 22",
     "previous": "Domitius 21",
     "next": "Domitius 23",
+    "sort_key": "Domitius 022",
     "chapters": [
       {
         "start": 1327,
@@ -21862,6 +21988,8 @@
     "lemma": "Domitius 23",
     "previous": "Domitius 22",
     "next": "Domitius 24",
+    "sort_key": "Domitius 023",
+    "wp_link": "w:de:Gnaeus Domitius Ahenobarbus (Konsul 32 v. Chr.)",
     "chapters": [
       {
         "start": 1328,
@@ -21874,6 +22002,7 @@
     "lemma": "Domitius 24",
     "previous": "Domitius 23",
     "next": "Domitius 25",
+    "sort_key": "Domitius 024",
     "chapters": [
       {
         "start": 1331,
@@ -21886,6 +22015,7 @@
     "lemma": "Domitius 25",
     "previous": "Domitius 24",
     "next": "Domitius 26",
+    "sort_key": "Domitius 025",
     "wp_link": "w:de:Gnaeus Domitius Ahenobarbus (Konsul 32)",
     "chapters": [
       {
@@ -21899,6 +22029,7 @@
     "lemma": "Domitius 26",
     "previous": "Domitius 25",
     "next": "Domitius 27",
+    "sort_key": "Domitius 026",
     "wp_link": "w:de:Lucius Domitius Ahenobarbus (Konsul 94 v. Chr.)",
     "chapters": [
       {
@@ -21939,6 +22070,8 @@
     "lemma": "Domitius 29",
     "previous": "Domitius 28",
     "next": "Domitius 30",
+    "sort_key": "Domitius 029",
+    "wp_link": "w:de:Nero",
     "chapters": [
       {
         "start": 1346,
@@ -21975,6 +22108,7 @@
     "lemma": "Domitius 32",
     "previous": "Domitius 31",
     "next": "Domitius 33",
+    "sort_key": "Domitius 032",
     "chapters": [
       {
         "start": 1346,
@@ -21987,6 +22121,7 @@
     "lemma": "Domitius 33",
     "previous": "Domitius 32",
     "next": "Domitius 34",
+    "sort_key": "Domitius 033",
     "chapters": [
       {
         "start": 1347,
@@ -21999,6 +22134,7 @@
     "lemma": "Domitius 34",
     "previous": "Domitius 33",
     "next": "Domitius 35",
+    "sort_key": "Domitius 034",
     "chapters": [
       {
         "start": 1347,
@@ -22011,6 +22147,7 @@
     "lemma": "Domitius 35",
     "previous": "Domitius 34",
     "next": "Domitius 36",
+    "sort_key": "Domitius 035",
     "chapters": [
       {
         "start": 1347,
@@ -22023,6 +22160,8 @@
     "lemma": "Domitius 36",
     "previous": "Domitius 35",
     "next": "Domitius 37",
+    "sort_key": "Domitius 036",
+    "wp_link": "w:de:Aurelian",
     "chapters": [
       {
         "start": 1347,
@@ -22035,6 +22174,7 @@
     "lemma": "Domitius 37",
     "previous": "Domitius 36",
     "next": "Domitius 38",
+    "sort_key": "Domitius 037",
     "chapters": [
       {
         "start": 1419,
@@ -22073,6 +22213,7 @@
     "lemma": "Domitius 40",
     "previous": "Domitius 39",
     "next": "Domitius 41",
+    "sort_key": "Domitius 040",
     "chapters": [
       {
         "start": 1419,
@@ -22098,6 +22239,7 @@
     "lemma": "Domitius 42",
     "previous": "Domitius 41",
     "next": "Domitius 43",
+    "sort_key": "Domitius 042",
     "chapters": [
       {
         "start": 1419,
@@ -22110,6 +22252,8 @@
     "lemma": "Domitius 43",
     "previous": "Domitius 42",
     "next": "Domitius 44",
+    "sort_key": "Domitius 043",
+    "wp_link": "w:de:Gnaeus Domitius Calvinus",
     "chapters": [
       {
         "start": 1419,
@@ -22122,6 +22266,7 @@
     "lemma": "Domitius 44",
     "previous": "Domitius 43",
     "next": "Domitius 45",
+    "sort_key": "Domitius 044",
     "chapters": [
       {
         "start": 1424,
@@ -22134,6 +22279,7 @@
     "lemma": "Domitius 45",
     "previous": "Domitius 44",
     "next": "Domitius 46",
+    "sort_key": "Domitius 045",
     "chapters": [
       {
         "start": 1424,
@@ -22146,6 +22292,7 @@
     "lemma": "Domitius 46",
     "previous": "Domitius 45",
     "next": "Domitius 47",
+    "sort_key": "Domitius 046",
     "chapters": [
       {
         "start": 1425,
@@ -22171,6 +22318,8 @@
     "lemma": "Domitius 48",
     "previous": "Domitius 47",
     "next": "Domitius 49",
+    "sort_key": "Domitius 048",
+    "redirect": "Celsus 14",
     "chapters": [
       {
         "start": 1425,
@@ -23358,6 +23507,7 @@
     "lemma": "Donaria",
     "previous": "Dona militaria",
     "next": "Donatianae",
+    "redirect": true,
     "chapters": [
       {
         "start": 1531,

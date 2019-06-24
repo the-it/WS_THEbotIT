@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Claudius mons",
+    "previous": null,
     "next": "Clavenna",
     "chapters": [
       {
@@ -174,7 +175,9 @@
     "lemma": "Clemens 3",
     "previous": "Clemens 2",
     "next": "Clemens 4",
-    "redirect": true,
+    "sort_key": "Clemens 03",
+    "redirect": "Cornelius 109",
+    "wp_link": "w:de:Sextus Cornelius Clemens",
     "chapters": [
       {
         "start": 10,
@@ -186,6 +189,7 @@
     "lemma": "Clemens 4",
     "previous": "Clemens 3",
     "next": "Clemens 5",
+    "sort_key": "Clemens 04",
     "chapters": [
       {
         "start": 10,
@@ -223,6 +227,7 @@
     "lemma": "Clemens 7",
     "previous": "Clemens 6",
     "next": "Clemens 8",
+    "sort_key": "Clemens 07",
     "chapters": [
       {
         "start": 11,
@@ -262,6 +267,7 @@
     "lemma": "Clemens 10",
     "previous": "Clemens 9",
     "next": "Clementia",
+    "wp_link": "w:de:Clemens von Rom",
     "chapters": [
       {
         "start": 13,
@@ -550,6 +556,7 @@
     "lemma": "Clientes",
     "previous": "Cliena",
     "next": "Clima",
+    "wp_link": "w:de:Klient",
     "chapters": [
       {
         "start": 23,
@@ -902,7 +909,7 @@
     "lemma": "Clodianus 3",
     "previous": "Clodianus 2",
     "next": "Clodia via",
-    "redirect": true,
+    "redirect": "Aemilius 40",
     "chapters": [
       {
         "start": 63,
@@ -914,7 +921,8 @@
   {
     "lemma": "Clodia via",
     "previous": "Clodianus 3",
-    "next": "Clodius 1",
+    "next": "Clodius",
+    "sort_key": "Clodiavia",
     "wp_link": "w:de:Via Clodia",
     "chapters": [
       {
@@ -925,9 +933,16 @@
     ]
   },
   {
-    "lemma": "Clodius 1",
+    "lemma": "Clodius",
     "previous": "Clodia via",
+    "next": "Clodius 1",
+    "sort_key": "Clodius 0"
+  },
+  {
+    "lemma": "Clodius 1",
+    "previous": "Clodius",
     "next": "Clodius 2",
+    "sort_key": "Clodius 01",
     "redirect": true,
     "chapters": [
       {
@@ -940,6 +955,7 @@
     "lemma": "Clodius 2",
     "previous": "Clodius 1",
     "next": "Clodius 3",
+    "sort_key": "Clodius 02",
     "chapters": [
       {
         "start": 64,
@@ -952,6 +968,7 @@
     "lemma": "Clodius 3",
     "previous": "Clodius 2",
     "next": "Clodius 4",
+    "sort_key": "Clodius 03",
     "chapters": [
       {
         "start": 64,
@@ -977,6 +994,7 @@
     "lemma": "Clodius 5",
     "previous": "Clodius 4",
     "next": "Clodius 6",
+    "sort_key": "Clodius 05",
     "chapters": [
       {
         "start": 64,
@@ -1002,6 +1020,7 @@
     "lemma": "Clodius 7",
     "previous": "Clodius 6",
     "next": "Clodius 8",
+    "sort_key": "Clodius 07",
     "chapters": [
       {
         "start": 64,
@@ -1014,6 +1033,7 @@
     "lemma": "Clodius 8",
     "previous": "Clodius 7",
     "next": "Clodius 9",
+    "sort_key": "Clodius 08",
     "chapters": [
       {
         "start": 64,
@@ -1026,6 +1046,7 @@
     "lemma": "Clodius 9",
     "previous": "Clodius 8",
     "next": "Clodius 10",
+    "sort_key": "Clodius 09",
     "chapters": [
       {
         "start": 65,
@@ -1122,6 +1143,7 @@
     "lemma": "Clodius 17",
     "previous": "Clodius 16",
     "next": "Clodius 18",
+    "wp_link": "w:de:Clodius Albinus",
     "chapters": [
       {
         "start": 67,
@@ -1266,6 +1288,7 @@
     "lemma": "Clodius 29",
     "previous": "Clodius 28",
     "next": "Clodius 30",
+    "redirect": true,
     "chapters": [
       {
         "start": 77,
@@ -1278,6 +1301,7 @@
     "lemma": "Clodius 30",
     "previous": "Clodius 29",
     "next": "Clodius 31",
+    "redirect": true,
     "chapters": [
       {
         "start": 77,
@@ -1679,6 +1703,7 @@
     "lemma": "Clodius 64",
     "previous": "Clodius 63",
     "next": "Clodius 65",
+    "redirect": "Vibius 63",
     "chapters": [
       {
         "start": 105,
@@ -1691,6 +1716,7 @@
     "lemma": "Clodius 65",
     "previous": "Clodius 64",
     "next": "Clodius 66",
+    "redirect": true,
     "chapters": [
       {
         "start": 105,
@@ -1703,6 +1729,7 @@
     "lemma": "Clodius 66",
     "previous": "Clodius 65",
     "next": "Clodius 67",
+    "wp_link": "w:de:Clodia",
     "chapters": [
       {
         "start": 105,
@@ -1750,6 +1777,7 @@
     "lemma": "Clodius 70",
     "previous": "Clodius 69",
     "next": "Clodius 71",
+    "wp_link": "w:de:Clodia Laeta",
     "chapters": [
       {
         "start": 107,
@@ -1811,6 +1839,7 @@
     "lemma": "Cloelius 2",
     "previous": "Cloelius 1",
     "next": "Cloelius 3",
+    "sort_key": "Cloelius 02",
     "wp_link": "w:de:Gaius Cluilius",
     "chapters": [
       {
@@ -1850,6 +1879,7 @@
     "lemma": "Cloelius 5",
     "previous": "Cloelius 4",
     "next": "Cloelius 6",
+    "sort_key": "Cloelius 05",
     "chapters": [
       {
         "start": 109,
@@ -1862,6 +1892,7 @@
     "lemma": "Cloelius 6",
     "previous": "Cloelius 5",
     "next": "Cloelius 7",
+    "sort_key": "Cloelius 06",
     "chapters": [
       {
         "start": 109,
@@ -1900,6 +1931,7 @@
     "lemma": "Cloelius 9",
     "previous": "Cloelius 8",
     "next": "Cloelius 10",
+    "sort_key": "Cloelius 09",
     "chapters": [
       {
         "start": 109,
@@ -2223,6 +2255,7 @@
     "lemma": "L. Clusinas",
     "previous": "Clusinae aquae",
     "next": "Clusinius 1",
+    "sort_key": "Clusinas, L.",
     "chapters": [
       {
         "start": 114,
@@ -2271,6 +2304,7 @@
     "lemma": "Clusium",
     "previous": "Clusiolum",
     "next": "Clusius",
+    "wp_link": "w:de:Chiusi",
     "chapters": [
       {
         "start": 115,
@@ -2391,6 +2425,7 @@
     "lemma": "Cluvius 1",
     "previous": "Cluvienus",
     "next": "Cluvius 2",
+    "sort_key": "Cluvius 01",
     "chapters": [
       {
         "start": 119,
@@ -2403,6 +2438,7 @@
     "lemma": "Cluvius 2",
     "previous": "Cluvius 1",
     "next": "Cluvius 3",
+    "sort_key": "Cluvius 02",
     "chapters": [
       {
         "start": 119,
@@ -2415,6 +2451,7 @@
     "lemma": "Cluvius 3",
     "previous": "Cluvius 2",
     "next": "Cluvius 4",
+    "sort_key": "Cluvius 03",
     "chapters": [
       {
         "start": 119,
@@ -2427,6 +2464,7 @@
     "lemma": "Cluvius 4",
     "previous": "Cluvius 3",
     "next": "Cluvius 5",
+    "sort_key": "Cluvius 04",
     "chapters": [
       {
         "start": 120,
@@ -2452,6 +2490,7 @@
     "lemma": "Cluvius 6",
     "previous": "Cluvius 5",
     "next": "Cluvius 7",
+    "sort_key": "Cluvius 06",
     "chapters": [
       {
         "start": 120,
@@ -2464,6 +2503,7 @@
     "lemma": "Cluvius 7",
     "previous": "Cluvius 6",
     "next": "Cluvius 8",
+    "sort_key": "Cluvius 07",
     "chapters": [
       {
         "start": 121,
@@ -2476,6 +2516,7 @@
     "lemma": "Cluvius 8",
     "previous": "Cluvius 7",
     "next": "Cluvius 9",
+    "sort_key": "Cluvius 08",
     "chapters": [
       {
         "start": 121,
@@ -2488,6 +2529,8 @@
     "lemma": "Cluvius 9",
     "previous": "Cluvius 8",
     "next": "Cluvius 10",
+    "sort_key": "Cluvius 09",
+    "redirect": "Claudius 159",
     "chapters": [
       {
         "start": 121,
@@ -2535,6 +2578,7 @@
     "lemma": "Cluvius 13",
     "previous": "Cluvius 12",
     "next": "Cluvius 14",
+    "redirect": "Marius 46",
     "chapters": [
       {
         "start": 125,
@@ -2595,6 +2639,7 @@
     "lemma": "Cneius",
     "previous": "Cnabetius",
     "next": "Coabis",
+    "redirect": true,
     "chapters": [
       {
         "start": 125,
@@ -2805,6 +2850,7 @@
     "lemma": "Cocceius 2",
     "previous": "Cocceius 1",
     "next": "Cocceius 3",
+    "sort_key": "Cocceius 02",
     "chapters": [
       {
         "start": 129,
@@ -2830,6 +2876,7 @@
     "lemma": "Cocceius 4",
     "previous": "Cocceius 3",
     "next": "Cocceius 5",
+    "sort_key": "Cocceius 04",
     "chapters": [
       {
         "start": 129,
@@ -2880,7 +2927,7 @@
   {
     "lemma": "Cocceius 8",
     "previous": "Cocceius 7",
-    "next": "Cocceius 10",
+    "next": "Cocceius 9",
     "sort_key": "Cocceius 08",
     "chapters": [
       {
@@ -2891,8 +2938,14 @@
     ]
   },
   {
-    "lemma": "Cocceius 10",
+    "lemma": "Cocceius 9",
     "previous": "Cocceius 8",
+    "next": "Cocceius 10",
+    "sort_key": "Cocceius 09"
+  },
+  {
+    "lemma": "Cocceius 10",
+    "previous": "Cocceius 9",
     "next": "Cocceius 11",
     "chapters": [
       {
@@ -3062,6 +3115,7 @@
     "lemma": "Cocceius 24",
     "previous": "Cocceius 23",
     "next": "Cocceius 25",
+    "redirect": "Stertinius",
     "chapters": [
       {
         "start": 155,
@@ -3074,6 +3128,7 @@
     "lemma": "Cocceius 25",
     "previous": "Cocceius 24",
     "next": "Coccium",
+    "redirect": "Claudius 441",
     "chapters": [
       {
         "start": 155,
@@ -3110,6 +3165,7 @@
     "lemma": "Cochlea 1",
     "previous": "Cocconae",
     "next": "Cochlea 2",
+    "wp_link": "w:de:Archimedische Schraube",
     "chapters": [
       {
         "start": 155,
@@ -3314,6 +3370,7 @@
     "lemma": "Codex",
     "previous": "Codeta",
     "next": "Codex accepti et expensi",
+    "wp_link": "w:de:Kodex",
     "chapters": [
       {
         "start": 159,
@@ -3338,6 +3395,7 @@
     "lemma": "Codex Gregorianus",
     "previous": "Codex accepti et expensi",
     "next": "Codex Hermogenianus",
+    "wp_link": "w:de:Codex Gregorianus",
     "chapters": [
       {
         "start": 161,
@@ -3350,6 +3408,7 @@
     "lemma": "Codex Hermogenianus",
     "previous": "Codex Gregorianus",
     "next": "Codex Iustinianus",
+    "wp_link": "w:de:Codex Hermogenianus",
     "chapters": [
       {
         "start": 164,
@@ -3375,6 +3434,7 @@
     "lemma": "Codex Theodosianus",
     "previous": "Codex Iustinianus",
     "next": "Codicarii",
+    "wp_link": "w:de:Codex Theodosianus",
     "chapters": [
       {
         "start": 170,
@@ -3518,6 +3578,7 @@
     "lemma": "Coeciva",
     "previous": "Coduzabala",
     "next": "Coedamusii",
+    "redirect": "Appius 22",
     "chapters": [
       {
         "start": 184,
@@ -3601,6 +3662,7 @@
     "lemma": "Coelius 1",
     "previous": "Coelianus 2",
     "next": "Coelius 2",
+    "sort_key": "Coelius 01",
     "chapters": [
       {
         "start": 184,
@@ -3613,6 +3675,7 @@
     "lemma": "Coelius 2",
     "previous": "Coelius 1",
     "next": "Coelius 3",
+    "sort_key": "Coelius 02",
     "chapters": [
       {
         "start": 184,
@@ -3625,6 +3688,7 @@
     "lemma": "Coelius 3",
     "previous": "Coelius 2",
     "next": "Coelius 4",
+    "sort_key": "Coelius 03",
     "chapters": [
       {
         "start": 184,
@@ -3648,6 +3712,7 @@
     "lemma": "Coelius 5",
     "previous": "Coelius 4",
     "next": "Coelius 6",
+    "sort_key": "Coelius 05",
     "chapters": [
       {
         "start": 185,
@@ -3660,6 +3725,7 @@
     "lemma": "Coelius 6",
     "previous": "Coelius 5",
     "next": "Coelius 7",
+    "sort_key": "Coelius 06",
     "chapters": [
       {
         "start": 185,
@@ -3672,6 +3738,8 @@
     "lemma": "Coelius 7",
     "previous": "Coelius 6",
     "next": "Coelius 8",
+    "sort_key": "Coelius 07",
+    "wp_link": "w:de:Lucius Coelius Antipater",
     "chapters": [
       {
         "start": 185,
@@ -3684,6 +3752,7 @@
     "lemma": "Coelius 8",
     "previous": "Coelius 7",
     "next": "Coelius 9",
+    "sort_key": "Coelius 08",
     "chapters": [
       {
         "start": 195,
@@ -3696,6 +3765,7 @@
     "lemma": "Coelius 9",
     "previous": "Coelius 8",
     "next": "Coelius 10",
+    "sort_key": "Coelius 09",
     "chapters": [
       {
         "start": 195,
@@ -3876,6 +3946,7 @@
     "lemma": "Coelius 24",
     "previous": "Coelius 23",
     "next": "Coelius 25",
+    "redirect": "Coelius 21",
     "chapters": [
       {
         "start": 198,
@@ -3888,6 +3959,7 @@
     "lemma": "Coelius 25",
     "previous": "Coelius 24",
     "next": "Coelius 26",
+    "redirect": true,
     "chapters": [
       {
         "start": 198,
@@ -3947,6 +4019,7 @@
     "lemma": "Coelius 30",
     "previous": "Coelius 29",
     "next": "Coelius 31",
+    "redirect": "Concordia 4",
     "chapters": [
       {
         "start": 198,
@@ -3982,6 +4055,7 @@
     "lemma": "Coemus",
     "previous": "Coemptio",
     "next": "Coenicum",
+    "redirect": "Koinos",
     "chapters": [
       {
         "start": 200,
@@ -4041,6 +4115,7 @@
     "lemma": "Coenus",
     "previous": "Coenophrurium",
     "next": "Coequosa",
+    "redirect": true,
     "chapters": [
       {
         "start": 200,
@@ -4052,6 +4127,7 @@
     "lemma": "Coequosa",
     "previous": "Coenus",
     "next": "Coeranus 1",
+    "redirect": "Cocosates",
     "chapters": [
       {
         "start": 200,
@@ -4111,6 +4187,7 @@
     "lemma": "Coetum",
     "previous": "Coercitio",
     "next": "Cofna",
+    "redirect": true,
     "chapters": [
       {
         "start": 204,
@@ -4158,6 +4235,7 @@
     "lemma": "Cogni",
     "previous": "Cognatio",
     "next": "Cognitio 1",
+    "redirect": "Cotini",
     "chapters": [
       {
         "start": 206,
@@ -4193,6 +4271,7 @@
     "lemma": "a cognitionibus",
     "previous": "Cognitio 2",
     "next": "Cognitor 1",
+    "sort_key": "cognitionibus, a",
     "chapters": [
       {
         "start": 220,
@@ -4277,6 +4356,7 @@
     "lemma": "Cohors",
     "previous": "Cohibus",
     "next": "Cohors amicorum",
+    "wp_link": "w:de:Kohorte",
     "chapters": [
       {
         "start": 231,
@@ -4673,6 +4753,7 @@
     "lemma": "Collatinus",
     "previous": "Collatini",
     "next": "Collatio bonorum",
+    "redirect": "Tarquinius",
     "chapters": [
       {
         "start": 365,
@@ -4684,6 +4765,7 @@
     "lemma": "Collatio bonorum",
     "previous": "Collatinus",
     "next": "Collatio frumenti",
+    "redirect": "Bonorum collatio",
     "chapters": [
       {
         "start": 365,
@@ -4695,6 +4777,7 @@
     "lemma": "Collatio frumenti",
     "previous": "Collatio bonorum",
     "next": "Collatio glebalis",
+    "redirect": "Frumentum",
     "chapters": [
       {
         "start": 365,
@@ -4754,6 +4837,7 @@
     "lemma": "Collega 1",
     "previous": "Collectarii",
     "next": "Collega 2",
+    "redirect": "Pompeius 73",
     "chapters": [
       {
         "start": 377,
@@ -4777,6 +4861,7 @@
     "lemma": "Collegataris",
     "previous": "Collega 2",
     "next": "Collegium",
+    "redirect": "Legatum",
     "chapters": [
       {
         "start": 380,
@@ -4836,6 +4921,7 @@
     "lemma": "Collina porta",
     "previous": "Collina",
     "next": "Collini",
+    "wp_link": "w:de:Porta Collina",
     "chapters": [
       {
         "start": 481,
@@ -5372,6 +5458,7 @@
     "lemma": "Colonia 34",
     "previous": "Colonia 33",
     "next": "Colonia 35",
+    "redirect": "Hasta",
     "chapters": [
       {
         "start": 511,
@@ -5440,6 +5527,7 @@
     "lemma": "Coloniae",
     "previous": "Colonia 39",
     "next": "Colonianus",
+    "wp_link": "w:de:Colonia (Rom)",
     "chapters": [
       {
         "start": 511,
@@ -5560,6 +5648,7 @@
     "lemma": "Colubraria",
     "previous": "Colpusa",
     "next": "Colum",
+    "wp_link": "w:de:Formentera",
     "chapters": [
       {
         "start": 590,
@@ -5872,6 +5961,7 @@
     "lemma": "Combaristum",
     "previous": "Comazon",
     "next": "Combretonium",
+    "wp_link": "w:de:Combrée",
     "chapters": [
       {
         "start": 605,
@@ -6015,6 +6105,7 @@
     "lemma": "Cominianus 1",
     "previous": "Cominiana",
     "next": "Cominianus 2",
+    "redirect": "Comnianus",
     "chapters": [
       {
         "start": 606,
@@ -6050,6 +6141,7 @@
     "lemma": "Cominius 1",
     "previous": "Cominium",
     "next": "Cominius 2",
+    "sort_key": "Cominius 01",
     "chapters": [
       {
         "start": 607,
@@ -6061,6 +6153,7 @@
     "lemma": "Cominius 2",
     "previous": "Cominius 1",
     "next": "Cominius 3",
+    "sort_key": "Cominius 02",
     "chapters": [
       {
         "start": 607,
@@ -6072,6 +6165,8 @@
     "lemma": "Cominius 3",
     "previous": "Cominius 2",
     "next": "Cominius 4",
+    "sort_key": "Cominius 03",
+    "redirect": "Agilius 2",
     "chapters": [
       {
         "start": 607,
@@ -6083,6 +6178,7 @@
     "lemma": "Cominius 4",
     "previous": "Cominius 3",
     "next": "Cominius 5",
+    "sort_key": "Cominius 04",
     "chapters": [
       {
         "start": 607,
@@ -6120,6 +6216,7 @@
     "lemma": "Cominius 7",
     "previous": "Cominius 6",
     "next": "Cominius 8",
+    "sort_key": "Cominius 07",
     "chapters": [
       {
         "start": 607,
@@ -6131,6 +6228,7 @@
     "lemma": "Cominius 8",
     "previous": "Cominius 7",
     "next": "Cominius 9",
+    "sort_key": "Cominius 08",
     "chapters": [
       {
         "start": 608,
@@ -6143,6 +6241,7 @@
     "lemma": "Cominius 9",
     "previous": "Cominius 8",
     "next": "Cominius 10",
+    "sort_key": "Cominius 09",
     "chapters": [
       {
         "start": 608,
@@ -6251,6 +6350,7 @@
     "lemma": "Cominius 18",
     "previous": "Cominius 17",
     "next": "Cominius 19",
+    "redirect": "Aurelius 88",
     "chapters": [
       {
         "start": 609,
@@ -6334,6 +6434,7 @@
     "lemma": "Cominius 25",
     "previous": "Cominius 24",
     "next": "Cominius 26",
+    "redirect": "Lartidius 7",
     "chapters": [
       {
         "start": 610,
@@ -6381,6 +6482,7 @@
     "lemma": "Comitatenses 1",
     "previous": "Comitanasso",
     "next": "Comitatenses 2",
+    "wp_link": "w:de:Comitatenses",
     "chapters": [
       {
         "start": 619,
@@ -6393,6 +6495,7 @@
     "lemma": "Comitatenses 2",
     "previous": "Comitatenses 1",
     "next": "Comitatus",
+    "redirect": "Comites 84",
     "chapters": [
       {
         "start": 622,
@@ -6417,6 +6520,7 @@
     "lemma": "Comites",
     "previous": "Comitatus",
     "next": "Comites 1",
+    "wp_link": "w:de:Comes",
     "chapters": [
       {
         "start": 622,
@@ -6429,6 +6533,7 @@
     "lemma": "Comites 1",
     "previous": "Comites",
     "next": "Comites 2",
+    "sort_key": "Comites 001",
     "chapters": [
       {
         "start": 636,
@@ -6441,6 +6546,7 @@
     "lemma": "Comites 2",
     "previous": "Comites 1",
     "next": "Comites 3",
+    "sort_key": "Comites 002",
     "chapters": [
       {
         "start": 637,
@@ -6452,6 +6558,7 @@
     "lemma": "Comites 3",
     "previous": "Comites 2",
     "next": "Comites 4",
+    "sort_key": "Comites 003",
     "chapters": [
       {
         "start": 637,
@@ -6464,6 +6571,7 @@
     "lemma": "Comites 4",
     "previous": "Comites 3",
     "next": "Comites 5",
+    "sort_key": "Comites 004",
     "chapters": [
       {
         "start": 638,
@@ -6475,6 +6583,7 @@
     "lemma": "Comites 5",
     "previous": "Comites 4",
     "next": "Comites 6",
+    "sort_key": "Comites 005",
     "chapters": [
       {
         "start": 639,
@@ -6486,6 +6595,7 @@
     "lemma": "Comites 6",
     "previous": "Comites 5",
     "next": "Comites 7",
+    "sort_key": "Comites 006",
     "chapters": [
       {
         "start": 639,
@@ -6498,6 +6608,7 @@
     "lemma": "Comites 7",
     "previous": "Comites 6",
     "next": "Comites 8",
+    "sort_key": "Comites 007",
     "chapters": [
       {
         "start": 639,
@@ -6510,6 +6621,7 @@
     "lemma": "Comites 8",
     "previous": "Comites 7",
     "next": "Comites 9",
+    "sort_key": "Comites 008",
     "chapters": [
       {
         "start": 639,
@@ -6522,6 +6634,7 @@
     "lemma": "Comites 9",
     "previous": "Comites 8",
     "next": "Comites 10",
+    "sort_key": "Comites 009",
     "chapters": [
       {
         "start": 639,
@@ -6534,6 +6647,7 @@
     "lemma": "Comites 10",
     "previous": "Comites 9",
     "next": "Comites 11",
+    "sort_key": "Comites 010",
     "chapters": [
       {
         "start": 640,
@@ -6545,6 +6659,7 @@
     "lemma": "Comites 11",
     "previous": "Comites 10",
     "next": "Comites 12",
+    "sort_key": "Comites 011",
     "chapters": [
       {
         "start": 640,
@@ -6557,6 +6672,7 @@
     "lemma": "Comites 12",
     "previous": "Comites 11",
     "next": "Comites 13",
+    "sort_key": "Comites 012",
     "chapters": [
       {
         "start": 640,
@@ -6569,6 +6685,7 @@
     "lemma": "Comites 13",
     "previous": "Comites 12",
     "next": "Comites 14",
+    "sort_key": "Comites 013",
     "chapters": [
       {
         "start": 641,
@@ -6580,6 +6697,7 @@
     "lemma": "Comites 14",
     "previous": "Comites 13",
     "next": "Comites 15",
+    "sort_key": "Comites 014",
     "chapters": [
       {
         "start": 641,
@@ -6590,7 +6708,8 @@
   {
     "lemma": "Comites 15",
     "previous": "Comites 14",
-    "next": "Comites 19",
+    "next": "Comites 16",
+    "sort_key": "Comites 015",
     "chapters": [
       {
         "start": 641,
@@ -6600,21 +6719,10 @@
     ]
   },
   {
-    "lemma": "Comites 19",
-    "previous": "Comites 15",
-    "next": "Comites 16",
-    "chapters": [
-      {
-        "start": 641,
-        "end": 646,
-        "author": "Seeck"
-      }
-    ]
-  },
-  {
     "lemma": "Comites 16",
-    "previous": "Comites 19",
+    "previous": "Comites 15",
     "next": "Comites 17",
+    "sort_key": "Comites 016",
     "chapters": [
       {
         "start": 643,
@@ -6626,6 +6734,7 @@
     "lemma": "Comites 17",
     "previous": "Comites 16",
     "next": "Comites 18",
+    "sort_key": "Comites 017",
     "chapters": [
       {
         "start": 643,
@@ -6636,7 +6745,8 @@
   {
     "lemma": "Comites 18",
     "previous": "Comites 17",
-    "next": "Comites 20",
+    "next": "Comites 19",
+    "sort_key": "Comites 018",
     "chapters": [
       {
         "start": 643,
@@ -6646,9 +6756,23 @@
     ]
   },
   {
-    "lemma": "Comites 20",
+    "lemma": "Comites 19",
     "previous": "Comites 18",
+    "next": "Comites 20",
+    "sort_key": "Comites 019",
+    "chapters": [
+      {
+        "start": 644,
+        "end": 646,
+        "author": "Seeck"
+      }
+    ]
+  },
+  {
+    "lemma": "Comites 20",
+    "previous": "Comites 19",
     "next": "Comites 21",
+    "sort_key": "Comites 020",
     "chapters": [
       {
         "start": 646,
@@ -6661,6 +6785,7 @@
     "lemma": "Comites 21",
     "previous": "Comites 20",
     "next": "Comites 22",
+    "sort_key": "Comites 021",
     "chapters": [
       {
         "start": 646,
@@ -6672,6 +6797,7 @@
     "lemma": "Comites 22",
     "previous": "Comites 21",
     "next": "Comites 23",
+    "sort_key": "Comites 022",
     "chapters": [
       {
         "start": 647,
@@ -6684,6 +6810,7 @@
     "lemma": "Comites 23",
     "previous": "Comites 22",
     "next": "Comites 24",
+    "sort_key": "Comites 023",
     "chapters": [
       {
         "start": 648,
@@ -6695,6 +6822,7 @@
     "lemma": "Comites 24",
     "previous": "Comites 23",
     "next": "Comites 25",
+    "sort_key": "Comites 024",
     "chapters": [
       {
         "start": 648,
@@ -6706,6 +6834,7 @@
     "lemma": "Comites 25",
     "previous": "Comites 24",
     "next": "Comites 26",
+    "sort_key": "Comites 025",
     "chapters": [
       {
         "start": 648,
@@ -6718,6 +6847,7 @@
     "lemma": "Comites 26",
     "previous": "Comites 25",
     "next": "Comites 27",
+    "sort_key": "Comites 026",
     "chapters": [
       {
         "start": 650,
@@ -6730,6 +6860,7 @@
     "lemma": "Comites 27",
     "previous": "Comites 26",
     "next": "Comites 28",
+    "sort_key": "Comites 027",
     "chapters": [
       {
         "start": 650,
@@ -6742,6 +6873,7 @@
     "lemma": "Comites 28",
     "previous": "Comites 27",
     "next": "Comites 29",
+    "sort_key": "Comites 028",
     "chapters": [
       {
         "start": 654,
@@ -6753,6 +6885,7 @@
     "lemma": "Comites 29",
     "previous": "Comites 28",
     "next": "Comites 30",
+    "sort_key": "Comites 029",
     "chapters": [
       {
         "start": 654,
@@ -6764,6 +6897,7 @@
     "lemma": "Comites 30",
     "previous": "Comites 29",
     "next": "Comites 31",
+    "sort_key": "Comites 030",
     "chapters": [
       {
         "start": 654,
@@ -6775,6 +6909,7 @@
     "lemma": "Comites 31",
     "previous": "Comites 30",
     "next": "Comites 32",
+    "sort_key": "Comites 031",
     "chapters": [
       {
         "start": 654,
@@ -6786,6 +6921,7 @@
     "lemma": "Comites 32",
     "previous": "Comites 31",
     "next": "Comites 33",
+    "sort_key": "Comites 032",
     "chapters": [
       {
         "start": 654,
@@ -6798,6 +6934,7 @@
     "lemma": "Comites 33",
     "previous": "Comites 32",
     "next": "Comites 34",
+    "sort_key": "Comites 033",
     "chapters": [
       {
         "start": 654,
@@ -6810,6 +6947,7 @@
     "lemma": "Comites 34",
     "previous": "Comites 33",
     "next": "Comites 35",
+    "sort_key": "Comites 034",
     "chapters": [
       {
         "start": 654,
@@ -6822,6 +6960,7 @@
     "lemma": "Comites 35",
     "previous": "Comites 34",
     "next": "Comites 36",
+    "sort_key": "Comites 035",
     "chapters": [
       {
         "start": 654,
@@ -6834,6 +6973,7 @@
     "lemma": "Comites 36",
     "previous": "Comites 35",
     "next": "Comites 37",
+    "sort_key": "Comites 036",
     "chapters": [
       {
         "start": 654,
@@ -6846,6 +6986,7 @@
     "lemma": "Comites 37",
     "previous": "Comites 36",
     "next": "Comites 38",
+    "sort_key": "Comites 037",
     "chapters": [
       {
         "start": 654,
@@ -6858,6 +6999,7 @@
     "lemma": "Comites 38",
     "previous": "Comites 37",
     "next": "Comites 39",
+    "sort_key": "Comites 038",
     "chapters": [
       {
         "start": 655,
@@ -6869,6 +7011,7 @@
     "lemma": "Comites 39",
     "previous": "Comites 38",
     "next": "Comites 40",
+    "sort_key": "Comites 039",
     "chapters": [
       {
         "start": 655,
@@ -6881,6 +7024,7 @@
     "lemma": "Comites 40",
     "previous": "Comites 39",
     "next": "Comites 41",
+    "sort_key": "Comites 040",
     "chapters": [
       {
         "start": 655,
@@ -6906,6 +7050,7 @@
     "lemma": "Comites 42",
     "previous": "Comites 41",
     "next": "Comites 43",
+    "sort_key": "Comites 042",
     "chapters": [
       {
         "start": 656,
@@ -6917,6 +7062,7 @@
     "lemma": "Comites 43",
     "previous": "Comites 42",
     "next": "Comites 44",
+    "sort_key": "Comites 043",
     "chapters": [
       {
         "start": 656,
@@ -6940,6 +7086,7 @@
     "lemma": "Comites 45",
     "previous": "Comites 44",
     "next": "Comites 46",
+    "sort_key": "Comites 045",
     "chapters": [
       {
         "start": 656,
@@ -6952,6 +7099,7 @@
     "lemma": "Comites 46",
     "previous": "Comites 45",
     "next": "Comites 47",
+    "sort_key": "Comites 046",
     "chapters": [
       {
         "start": 657,
@@ -6964,6 +7112,7 @@
     "lemma": "Comites 47",
     "previous": "Comites 46",
     "next": "Comites 48",
+    "sort_key": "Comites 047",
     "chapters": [
       {
         "start": 657,
@@ -6976,6 +7125,7 @@
     "lemma": "Comites 48",
     "previous": "Comites 47",
     "next": "Comites 49",
+    "sort_key": "Comites 048",
     "chapters": [
       {
         "start": 657,
@@ -6988,6 +7138,7 @@
     "lemma": "Comites 49",
     "previous": "Comites 48",
     "next": "Comites 50",
+    "sort_key": "Comites 049",
     "chapters": [
       {
         "start": 657,
@@ -6999,6 +7150,7 @@
     "lemma": "Comites 50",
     "previous": "Comites 49",
     "next": "Comites 51",
+    "sort_key": "Comites 050",
     "chapters": [
       {
         "start": 657,
@@ -7024,6 +7176,7 @@
     "lemma": "Comites 52",
     "previous": "Comites 51",
     "next": "Comites 53",
+    "sort_key": "Comites 052",
     "chapters": [
       {
         "start": 658,
@@ -7035,6 +7188,7 @@
     "lemma": "Comites 53",
     "previous": "Comites 52",
     "next": "Comites 54",
+    "sort_key": "Comites 053",
     "chapters": [
       {
         "start": 658,
@@ -7046,6 +7200,7 @@
     "lemma": "Comites 54",
     "previous": "Comites 53",
     "next": "Comites 55",
+    "sort_key": "Comites 054",
     "chapters": [
       {
         "start": 658,
@@ -7057,6 +7212,7 @@
     "lemma": "Comites 55",
     "previous": "Comites 54",
     "next": "Comites 56",
+    "sort_key": "Comites 055",
     "chapters": [
       {
         "start": 658,
@@ -7069,6 +7225,7 @@
     "lemma": "Comites 56",
     "previous": "Comites 55",
     "next": "Comites 57",
+    "sort_key": "Comites 056",
     "chapters": [
       {
         "start": 658,
@@ -7081,6 +7238,7 @@
     "lemma": "Comites 57",
     "previous": "Comites 56",
     "next": "Comites 58",
+    "sort_key": "Comites 057",
     "chapters": [
       {
         "start": 658,
@@ -7092,6 +7250,7 @@
     "lemma": "Comites 58",
     "previous": "Comites 57",
     "next": "Comites 59",
+    "sort_key": "Comites 058",
     "chapters": [
       {
         "start": 659,
@@ -7103,6 +7262,7 @@
     "lemma": "Comites 59",
     "previous": "Comites 58",
     "next": "Comites 60",
+    "sort_key": "Comites 059",
     "chapters": [
       {
         "start": 659,
@@ -7115,6 +7275,7 @@
     "lemma": "Comites 60",
     "previous": "Comites 59",
     "next": "Comites 61",
+    "sort_key": "Comites 060",
     "chapters": [
       {
         "start": 659,
@@ -7126,6 +7287,7 @@
     "lemma": "Comites 61",
     "previous": "Comites 60",
     "next": "Comites 62",
+    "sort_key": "Comites 061",
     "chapters": [
       {
         "start": 659,
@@ -7138,6 +7300,7 @@
     "lemma": "Comites 62",
     "previous": "Comites 61",
     "next": "Comites 63",
+    "sort_key": "Comites 062",
     "chapters": [
       {
         "start": 659,
@@ -7149,6 +7312,7 @@
     "lemma": "Comites 63",
     "previous": "Comites 62",
     "next": "Comites 64",
+    "sort_key": "Comites 063",
     "chapters": [
       {
         "start": 659,
@@ -7173,6 +7337,7 @@
     "lemma": "Comites 65",
     "previous": "Comites 64",
     "next": "Comites 66",
+    "sort_key": "Comites 065",
     "chapters": [
       {
         "start": 661,
@@ -7185,6 +7350,7 @@
     "lemma": "Comites 66",
     "previous": "Comites 65",
     "next": "Comites 67",
+    "sort_key": "Comites 066",
     "chapters": [
       {
         "start": 661,
@@ -7196,6 +7362,7 @@
     "lemma": "Comites 67",
     "previous": "Comites 66",
     "next": "Comites 68",
+    "sort_key": "Comites 067",
     "chapters": [
       {
         "start": 661,
@@ -7207,6 +7374,7 @@
     "lemma": "Comites 68",
     "previous": "Comites 67",
     "next": "Comites 69",
+    "sort_key": "Comites 068",
     "chapters": [
       {
         "start": 661,
@@ -7231,6 +7399,7 @@
     "lemma": "Comites 70",
     "previous": "Comites 69",
     "next": "Comites 71",
+    "sort_key": "Comites 070",
     "chapters": [
       {
         "start": 661,
@@ -7243,6 +7412,7 @@
     "lemma": "Comites 71",
     "previous": "Comites 70",
     "next": "Comites 72",
+    "sort_key": "Comites 071",
     "chapters": [
       {
         "start": 661,
@@ -7268,6 +7438,7 @@
     "lemma": "Comites 73",
     "previous": "Comites 72",
     "next": "Comites 74",
+    "sort_key": "Comites 073",
     "chapters": [
       {
         "start": 662,
@@ -7279,6 +7450,7 @@
     "lemma": "Comites 74",
     "previous": "Comites 73",
     "next": "Comites 75",
+    "sort_key": "Comites 074",
     "chapters": [
       {
         "start": 662,
@@ -7290,6 +7462,7 @@
     "lemma": "Comites 75",
     "previous": "Comites 74",
     "next": "Comites 76",
+    "sort_key": "Comites 075",
     "chapters": [
       {
         "start": 662,
@@ -7302,6 +7475,7 @@
     "lemma": "Comites 76",
     "previous": "Comites 75",
     "next": "Comites 77",
+    "sort_key": "Comites 076",
     "chapters": [
       {
         "start": 662,
@@ -7326,6 +7500,7 @@
     "lemma": "Comites 78",
     "previous": "Comites 77",
     "next": "Comites 79",
+    "sort_key": "Comites 078",
     "chapters": [
       {
         "start": 664,
@@ -7350,6 +7525,7 @@
     "lemma": "Comites 80",
     "previous": "Comites 79",
     "next": "Comites 81",
+    "sort_key": "Comites 080",
     "chapters": [
       {
         "start": 670,
@@ -7362,6 +7538,7 @@
     "lemma": "Comites 81",
     "previous": "Comites 80",
     "next": "Comites 82",
+    "sort_key": "Comites 081",
     "chapters": [
       {
         "start": 671,
@@ -7374,6 +7551,7 @@
     "lemma": "Comites 82",
     "previous": "Comites 81",
     "next": "Comites 83",
+    "sort_key": "Comites 082",
     "chapters": [
       {
         "start": 671,
@@ -7412,6 +7590,7 @@
     "lemma": "Comites 85",
     "previous": "Comites 84",
     "next": "Comites 86",
+    "sort_key": "Comites 085",
     "chapters": [
       {
         "start": 675,
@@ -7423,6 +7602,7 @@
     "lemma": "Comites 86",
     "previous": "Comites 85",
     "next": "Comites 87",
+    "sort_key": "Comites 086",
     "chapters": [
       {
         "start": 675,
@@ -7460,6 +7640,7 @@
     "lemma": "Comites 89",
     "previous": "Comites 88",
     "next": "Comites 90",
+    "sort_key": "Comites 089",
     "chapters": [
       {
         "start": 678,
@@ -7485,7 +7666,7 @@
     "lemma": "Comites 91",
     "previous": "Comites 90",
     "next": "Comites 92",
-    "redirect": true,
+    "sort_key": "Comites 091",
     "chapters": [
       {
         "start": 678,
@@ -7497,6 +7678,7 @@
     "lemma": "Comites 92",
     "previous": "Comites 91",
     "next": "Comites 93",
+    "sort_key": "Comites 092",
     "chapters": [
       {
         "start": 678,
@@ -7509,6 +7691,7 @@
     "lemma": "Comites 93",
     "previous": "Comites 92",
     "next": "Comites 94",
+    "sort_key": "Comites 093",
     "chapters": [
       {
         "start": 678,
@@ -7521,7 +7704,7 @@
     "lemma": "Comites 94",
     "previous": "Comites 93",
     "next": "Comites 95",
-    "redirect": true,
+    "sort_key": "Comites 094",
     "chapters": [
       {
         "start": 678,
@@ -7533,7 +7716,7 @@
     "lemma": "Comites 95",
     "previous": "Comites 94",
     "next": "Comites 96",
-    "redirect": true,
+    "sort_key": "Comites 095",
     "chapters": [
       {
         "start": 678,
@@ -7545,6 +7728,7 @@
     "lemma": "Comites 96",
     "previous": "Comites 95",
     "next": "Comites 97",
+    "sort_key": "Comites 096",
     "chapters": [
       {
         "start": 678,
@@ -7557,7 +7741,7 @@
     "lemma": "Comites 97",
     "previous": "Comites 96",
     "next": "Comites 98",
-    "redirect": true,
+    "sort_key": "Comites 097",
     "chapters": [
       {
         "start": 678,
@@ -7569,7 +7753,7 @@
     "lemma": "Comites 98",
     "previous": "Comites 97",
     "next": "Comites 99",
-    "redirect": true,
+    "sort_key": "Comites 098",
     "chapters": [
       {
         "start": 678,
@@ -7581,7 +7765,7 @@
     "lemma": "Comites 99",
     "previous": "Comites 98",
     "next": "Comites 100",
-    "redirect": true,
+    "sort_key": "Comites 099",
     "chapters": [
       {
         "start": 678,
@@ -7593,6 +7777,7 @@
     "lemma": "Comites 100",
     "previous": "Comites 99",
     "next": "Comites 101",
+    "sort_key": "Comites",
     "chapters": [
       {
         "start": 679,
@@ -7605,6 +7790,7 @@
     "lemma": "Comites 101",
     "previous": "Comites 100",
     "next": "Comites 102",
+    "sort_key": "Comites",
     "chapters": [
       {
         "start": 679,
@@ -7617,6 +7803,7 @@
     "lemma": "Comites 102",
     "previous": "Comites 101",
     "next": "Comites 103",
+    "sort_key": "Comites",
     "chapters": [
       {
         "start": 679,
@@ -7629,6 +7816,7 @@
     "lemma": "Comites 103",
     "previous": "Comites 102",
     "next": "Comites 104",
+    "sort_key": "Comites",
     "chapters": [
       {
         "start": 679,
@@ -7713,6 +7901,7 @@
     "lemma": "Comitium",
     "previous": "Comitiva",
     "next": "Comius",
+    "wp_link": "w:de:Comitium",
     "chapters": [
       {
         "start": 717,
@@ -7737,6 +7926,7 @@
     "lemma": "Commagenses",
     "previous": "Comius",
     "next": "Commeatus 1",
+    "redirect": "Comagena",
     "chapters": [
       {
         "start": 718,
@@ -7808,6 +7998,7 @@
     "lemma": "Commentariensis",
     "previous": "Commendatio",
     "next": "Commentarii",
+    "redirect": "a commentariis",
     "chapters": [
       {
         "start": 726,
@@ -7819,6 +8010,7 @@
     "lemma": "Commentarii",
     "previous": "Commentariensis",
     "next": "a commentariis",
+    "wp_link": "w:de:Kommentar",
     "chapters": [
       {
         "start": 726,
@@ -7831,6 +8023,7 @@
     "lemma": "a commentariis",
     "previous": "Commentarii",
     "next": "Commercium 1",
+    "sort_key": "commentariis a",
     "chapters": [
       {
         "start": 759,
@@ -7903,6 +8096,7 @@
     "lemma": "Commius",
     "previous": "Commissum",
     "next": "Commodatum",
+    "wp_link": "w:de:Commius",
     "chapters": [
       {
         "start": 770,
@@ -7927,6 +8121,7 @@
     "lemma": "Commodianus 1",
     "previous": "Commodatum",
     "next": "Commodianus 2",
+    "redirect": "Cosconius 13",
     "chapters": [
       {
         "start": 773,
@@ -7938,6 +8133,7 @@
     "lemma": "Commodianus 2",
     "previous": "Commodianus 1",
     "next": "Commodum",
+    "wp_link": "w:de:Commodian",
     "chapters": [
       {
         "start": 773,
@@ -7974,6 +8170,7 @@
     "lemma": "Commodus 2",
     "previous": "Commodus 1",
     "next": "Commodus 3",
+    "redirect": "Aurelius 89",
     "chapters": [
       {
         "start": 775,
@@ -7985,6 +8182,7 @@
     "lemma": "Commodus 3",
     "previous": "Commodus 2",
     "next": "Commodus 4a-d",
+    "redirect": "Ceionius 5",
     "chapters": [
       {
         "start": 775,
@@ -7996,6 +8194,7 @@
     "lemma": "Commodus 4a-d",
     "previous": "Commodus 3",
     "next": "Commolenda",
+    "redirect": true,
     "chapters": [
       {
         "start": 775,
@@ -8020,6 +8219,7 @@
     "lemma": "Commonitio",
     "previous": "Commolenda",
     "next": "Commonitorium",
+    "redirect": "Conventio",
     "chapters": [
       {
         "start": 775,
@@ -8151,6 +8351,7 @@
     "lemma": "Comniades",
     "previous": "Communis 2",
     "next": "Comnianus",
+    "redirect": "Komniades",
     "chapters": [
       {
         "start": 781,
@@ -8198,6 +8399,7 @@
     "lemma": "Compascuus ager",
     "previous": "Comparatio publica",
     "next": "Compendium",
+    "redirect": "Ager",
     "chapters": [
       {
         "start": 784,
@@ -8221,6 +8423,7 @@
     "lemma": "Compensatio",
     "previous": "Compendium",
     "next": "Comperendinatio",
+    "wp_link": "w:de:Aufrechnung",
     "chapters": [
       {
         "start": 784,
@@ -8233,6 +8436,7 @@
     "lemma": "Comperendinatio",
     "previous": "Compensatio",
     "next": "Compitalia",
+    "wp_link": "w:de:Aufrechnung",
     "chapters": [
       {
         "start": 788,
@@ -8341,6 +8545,7 @@
     "lemma": "Compluvium",
     "previous": "Complutum",
     "next": "Compromissum",
+    "wp_link": "w:de:Compluvium",
     "chapters": [
       {
         "start": 795,
@@ -8434,6 +8639,7 @@
     "lemma": "Conbulantia",
     "previous": "Conbaristum",
     "next": "Concam",
+    "wp_link": "w:de:Confluentes",
     "chapters": [
       {
         "start": 798,
@@ -8482,6 +8688,7 @@
     "lemma": "Concessus",
     "previous": "Concani",
     "next": "Concha",
+    "redirect": "Gallienus",
     "chapters": [
       {
         "start": 798,
@@ -8505,6 +8712,7 @@
     "lemma": "Conchylioleguli",
     "previous": "Concha",
     "next": "Conciliabulum",
+    "redirect": "Murileguli",
     "chapters": [
       {
         "start": 799,
@@ -8552,6 +8760,7 @@
     "lemma": "Concla",
     "previous": "Concium",
     "next": "Concobar",
+    "redirect": "Concula",
     "chapters": [
       {
         "start": 830,
@@ -8563,6 +8772,7 @@
     "lemma": "Concobar",
     "previous": "Concla",
     "next": "Concon",
+    "redirect": "Konkobar",
     "chapters": [
       {
         "start": 830,
@@ -8646,6 +8856,7 @@
     "lemma": "Concordius 1",
     "previous": "Concordia 5",
     "next": "Concordius 2",
+    "redirect": "Aurelius 90",
     "chapters": [
       {
         "start": 835,
@@ -8669,6 +8880,7 @@
     "lemma": "Concubinatus",
     "previous": "Concordius 2",
     "next": "Concubinus",
+    "wp_link": "w:de:Konkubinat",
     "chapters": [
       {
         "start": 835,
@@ -8776,6 +8988,7 @@
     "lemma": "Condate 1",
     "previous": "Condate",
     "next": "Condate 2",
+    "sort_key": "Condate 01",
     "chapters": [
       {
         "start": 841,
@@ -8788,6 +9001,7 @@
     "lemma": "Condate 2",
     "previous": "Condate 1",
     "next": "Condate 3",
+    "sort_key": "Condate 02",
     "chapters": [
       {
         "start": 841,
@@ -8800,6 +9014,8 @@
     "lemma": "Condate 3",
     "previous": "Condate 2",
     "next": "Condate 4",
+    "sort_key": "Condate 03",
+    "wp_link": "w:de:Condé-sur-Iton",
     "chapters": [
       {
         "start": 841,
@@ -8812,6 +9028,7 @@
     "lemma": "Condate 4",
     "previous": "Condate 3",
     "next": "Condate 5",
+    "sort_key": "Condate 04",
     "chapters": [
       {
         "start": 841,
@@ -8824,6 +9041,7 @@
     "lemma": "Condate 5",
     "previous": "Condate 4",
     "next": "Condate 6",
+    "sort_key": "Condate 05",
     "chapters": [
       {
         "start": 841,
@@ -8836,6 +9054,7 @@
     "lemma": "Condate 6",
     "previous": "Condate 5",
     "next": "Condate 7",
+    "sort_key": "Condate 06",
     "chapters": [
       {
         "start": 841,
@@ -8848,6 +9067,7 @@
     "lemma": "Condate 7",
     "previous": "Condate 6",
     "next": "Condate 8",
+    "sort_key": "Condate 07",
     "chapters": [
       {
         "start": 841,
@@ -8860,6 +9080,7 @@
     "lemma": "Condate 8",
     "previous": "Condate 7",
     "next": "Condate 9",
+    "sort_key": "Condate 08",
     "chapters": [
       {
         "start": 841,
@@ -8872,6 +9093,7 @@
     "lemma": "Condate 9",
     "previous": "Condate 8",
     "next": "Condate 10",
+    "sort_key": "Condate 09",
     "chapters": [
       {
         "start": 841,
@@ -8920,6 +9142,7 @@
     "lemma": "Condatiscone",
     "previous": "Condatis",
     "next": "Condatomagus",
+    "wp_link": "w:de:Saint-Claude (Jura)",
     "chapters": [
       {
         "start": 842,
@@ -9028,6 +9251,7 @@
     "lemma": "Condicio",
     "previous": "Condianus",
     "next": "Condictio",
+    "wp_link": "w:de:Bedingung (Recht)",
     "chapters": [
       {
         "start": 844,
@@ -9040,6 +9264,7 @@
     "lemma": "Condictio",
     "previous": "Condicio",
     "next": "Condigramma",
+    "wp_link": "w:de:Condictio",
     "chapters": [
       {
         "start": 847,
@@ -9089,6 +9314,7 @@
     "lemma": "Condorsa",
     "previous": "Conditor factionis",
     "next": "Condrusi",
+    "redirect": "Contrua",
     "chapters": [
       {
         "start": 859,
@@ -9112,6 +9338,7 @@
     "lemma": "Condrustis pagus",
     "previous": "Condrusi",
     "next": "Conductio",
+    "redirect": "Condrusi",
     "chapters": [
       {
         "start": 859,
@@ -9135,6 +9362,7 @@
     "lemma": "Condylum",
     "previous": "Conductio",
     "next": "Condylus",
+    "redirect": "Kondylon",
     "chapters": [
       {
         "start": 862,
@@ -9158,6 +9386,7 @@
     "lemma": "Confarreatio",
     "previous": "Condylus",
     "next": "Confessio 1",
+    "wp_link": "w:de:Confarreatio",
     "chapters": [
       {
         "start": 862,
@@ -9170,6 +9399,7 @@
     "lemma": "Confessio 1",
     "previous": "Confarreatio",
     "next": "Confessio 2",
+    "wp_link": "w:de:Confessio",
     "chapters": [
       {
         "start": 864,
@@ -9182,6 +9412,7 @@
     "lemma": "Confessio 2",
     "previous": "Confessio 1",
     "next": "Confessoria actio",
+    "wp_link": "w:de:Confessio",
     "chapters": [
       {
         "start": 870,
@@ -9218,6 +9449,7 @@
     "lemma": "Confiscatio",
     "previous": "Confinium",
     "next": "Confluentes 1",
+    "redirect": "Publicatio",
     "chapters": [
       {
         "start": 871,
@@ -9229,6 +9461,7 @@
     "lemma": "Confluentes 1",
     "previous": "Confiscatio",
     "next": "Confluentes 2",
+    "wp_link": "w:de:Confluentes",
     "chapters": [
       {
         "start": 871,
@@ -9313,6 +9546,7 @@
     "lemma": "Confluentia",
     "previous": "Confluentes 7",
     "next": "Confusio",
+    "redirect": "Confluentes 2",
     "chapters": [
       {
         "start": 873,
@@ -9360,6 +9594,7 @@
     "lemma": "Conger",
     "previous": "Congedus",
     "next": "Congiarium",
+    "wp_link": "w:de:Meeraal",
     "chapters": [
       {
         "start": 874,
@@ -9456,6 +9691,7 @@
     "lemma": "Conii",
     "previous": "Coniectio causae",
     "next": "Conimbrica",
+    "redirect": "Cynetes",
     "chapters": [
       {
         "start": 884,
@@ -9551,6 +9787,7 @@
     "lemma": "Conoba",
     "previous": "Connoba",
     "next": "Conopas",
+    "redirect": "Colobana",
     "chapters": [
       {
         "start": 885,
@@ -9574,6 +9811,7 @@
     "lemma": "Conovium",
     "previous": "Conopas",
     "next": "Conpulsor",
+    "redirect": "Canovium",
     "chapters": [
       {
         "start": 885,
@@ -9585,6 +9823,7 @@
     "lemma": "Conpulsor",
     "previous": "Conovium",
     "next": "Conqudum",
+    "redirect": "Canonicarius",
     "chapters": [
       {
         "start": 885,
@@ -9668,6 +9907,7 @@
     "lemma": "Consabura",
     "previous": "Cons...",
     "next": "Consacrani",
+    "wp_link": "w:de:Consuegra",
     "chapters": [
       {
         "start": 889,
@@ -9716,6 +9956,7 @@
     "lemma": "Conscriptio",
     "previous": "Conscripti",
     "next": "Consecratio",
+    "redirect": "Dilectus",
     "chapters": [
       {
         "start": 896,
@@ -9811,6 +10052,7 @@
     "lemma": "Conserturinus",
     "previous": "Consentius 3",
     "next": "Considius 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 912,
@@ -9822,6 +10064,7 @@
     "lemma": "Considius 1",
     "previous": "Conserturinus",
     "next": "Considius 2",
+    "sort_key": "Considius 01",
     "chapters": [
       {
         "start": 912,
@@ -9833,6 +10076,7 @@
     "lemma": "Considius 2",
     "previous": "Considius 1",
     "next": "Considius 3",
+    "sort_key": "Considius 02",
     "chapters": [
       {
         "start": 912,
@@ -9845,6 +10089,7 @@
     "lemma": "Considius 3",
     "previous": "Considius 2",
     "next": "Considius 4",
+    "sort_key": "Considius 03",
     "chapters": [
       {
         "start": 912,
@@ -9857,6 +10102,7 @@
     "lemma": "Considius 4",
     "previous": "Considius 3",
     "next": "Considius 5",
+    "sort_key": "Considius 04",
     "chapters": [
       {
         "start": 912,
@@ -9869,6 +10115,7 @@
     "lemma": "Considius 5",
     "previous": "Considius 4",
     "next": "Considius 6",
+    "sort_key": "Considius 05",
     "chapters": [
       {
         "start": 912,
@@ -9881,6 +10128,7 @@
     "lemma": "Considius 6",
     "previous": "Considius 5",
     "next": "Considius 7",
+    "sort_key": "Considius 06",
     "chapters": [
       {
         "start": 912,
@@ -9892,6 +10140,7 @@
     "lemma": "Considius 7",
     "previous": "Considius 6",
     "next": "Considius 8",
+    "sort_key": "Considius 07",
     "chapters": [
       {
         "start": 913,
@@ -9917,6 +10166,7 @@
     "lemma": "Considius 9",
     "previous": "Considius 8",
     "next": "Considius 10",
+    "sort_key": "Considius 09",
     "chapters": [
       {
         "start": 913,
@@ -10001,6 +10251,7 @@
     "lemma": "Considius 16",
     "previous": "Considius 15",
     "next": "Considius 17",
+    "redirect": true,
     "chapters": [
       {
         "start": 914,
@@ -10024,6 +10275,7 @@
     "lemma": "Consignare",
     "previous": "Considius 17",
     "next": "Consiliarius",
+    "redirect": "Obsignare",
     "chapters": [
       {
         "start": 915,
@@ -10035,6 +10287,7 @@
     "lemma": "Consiliarius",
     "previous": "Consignare",
     "next": "Consilinum castrum",
+    "redirect": "Consistorium",
     "chapters": [
       {
         "start": 915,
@@ -10178,6 +10431,7 @@
     "lemma": "Consortium",
     "previous": "Consoranni",
     "next": "Consta",
+    "wp_link": "w:de:Konsortium",
     "chapters": [
       {
         "start": 947,
@@ -10353,6 +10607,7 @@
     "lemma": "Constantia 6",
     "previous": "Constantia 5",
     "next": "Constantia 7",
+    "sort_key": "Constantia 06",
     "chapters": [
       {
         "start": 957,
@@ -10391,6 +10646,9 @@
     "lemma": "Constantia 9",
     "previous": "Constantia 8",
     "next": "Constantia 10",
+    "sort_key": "Constantia 09",
+    "wp_link": "w:de:Konstanz",
+    "ws_link": "s:de:Konstanz",
     "chapters": [
       {
         "start": 957,
@@ -10403,6 +10661,7 @@
     "lemma": "Constantia 10",
     "previous": "Constantia 9",
     "next": "Constantia 11",
+    "redirect": "Castra, Castrum 12",
     "chapters": [
       {
         "start": 957,
@@ -10463,6 +10722,7 @@
     "lemma": "Constantia 15",
     "previous": "Constantia 14",
     "next": "Constantiana",
+    "wp_link": "w:de:Constantia (Tochter Constantius’ II.)",
     "chapters": [
       {
         "start": 959,
@@ -10560,6 +10820,7 @@
     "lemma": "Constantina 3",
     "previous": "Constantina 2",
     "next": "Constantina 4",
+    "redirect": "Constantia 8",
     "chapters": [
       {
         "start": 961,
@@ -10571,6 +10832,7 @@
     "lemma": "Constantina 4",
     "previous": "Constantina 3",
     "next": "Constantina 5",
+    "redirect": "Cirta",
     "chapters": [
       {
         "start": 961,
@@ -10606,6 +10868,7 @@
     "lemma": "Constantini arcus",
     "previous": "Constantina 6",
     "next": "Constantini basilica",
+    "wp_link": "w:de:Konstantinsbogen",
     "chapters": [
       {
         "start": 961,
@@ -10618,6 +10881,7 @@
     "lemma": "Constantini basilica",
     "previous": "Constantini arcus",
     "next": "Constantini porticus",
+    "wp_link": "w:de:Maxentiusbasilika",
     "chapters": [
       {
         "start": 961,
@@ -10654,6 +10918,7 @@
     "lemma": "Constantinopolis",
     "previous": "Constantini thermae",
     "next": "Constantinus 1",
+    "wp_link": "w:de:Konstantinopel",
     "chapters": [
       {
         "start": 963,
@@ -10666,6 +10931,8 @@
     "lemma": "Constantinus 1",
     "previous": "Constantinopolis",
     "next": "Constantinus 2",
+    "sort_key": "Constantinus 01",
+    "redirect": "Aurelius 91",
     "chapters": [
       {
         "start": 1013,
@@ -10677,6 +10944,8 @@
     "lemma": "Constantinus 2",
     "previous": "Constantinus 1",
     "next": "Constantinus 3",
+    "sort_key": "Constantinus 02",
+    "wp_link": "w:de:Konstantin der Große",
     "chapters": [
       {
         "start": 1013,
@@ -10729,6 +10998,7 @@
     "lemma": "Constantinus 6",
     "previous": "Constantinus 5",
     "next": "Constantinus 7",
+    "sort_key": "Constantinus 06",
     "chapters": [
       {
         "start": 1031,
@@ -10917,6 +11187,8 @@
     "lemma": "Constantius 3",
     "previous": "Constantius 2",
     "next": "Constantius 4",
+    "sort_key": "Constantius 03",
+    "wp_link": "w:de:Julius Constantius",
     "chapters": [
       {
         "start": 1043,
@@ -11165,6 +11437,7 @@
     "lemma": "Constitutum",
     "previous": "Constitutius",
     "next": "Constratus pes",
+    "redirect": "Constituere",
     "chapters": [
       {
         "start": 1111,
@@ -11234,7 +11507,6 @@
     "lemma": "Consul",
     "previous": "Consuetudo",
     "next": "Consularis 1",
-    "wp_link": "w:de:Consul",
     "chapters": [
       {
         "start": 1112,
@@ -11247,6 +11519,7 @@
     "lemma": "Consularis 1",
     "previous": "Consul",
     "next": "Consularis 2",
+    "wp_link": "w:de:Consul",
     "chapters": [
       {
         "start": 1138,
@@ -11319,6 +11592,7 @@
     "lemma": "Consus 1",
     "previous": "Consumptio actionis",
     "next": "Consus 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1147,
@@ -11426,6 +11700,7 @@
     "lemma": "Contionacum",
     "previous": "Contio",
     "next": "Contobris",
+    "wp_link": "w:de:Konz",
     "chapters": [
       {
         "start": 1153,
@@ -11438,6 +11713,7 @@
     "lemma": "Contobris",
     "previous": "Contionacum",
     "next": "Contorniaten",
+    "redirect": "Contrebia 1",
     "chapters": [
       {
         "start": 1153,
@@ -11449,6 +11725,7 @@
     "lemma": "Contorniaten",
     "previous": "Contobris",
     "next": "Contosolia",
+    "wp_link": "w:de:Kontorniaten",
     "chapters": [
       {
         "start": 1153,
@@ -11473,6 +11750,7 @@
     "lemma": "Contra",
     "previous": "Contosolia",
     "next": "Contra 1",
+    "sort_key": "Contra 00",
     "chapters": [
       {
         "start": 1160,
@@ -11485,6 +11763,7 @@
     "lemma": "Contra 1",
     "previous": "Contra",
     "next": "Contra 2",
+    "sort_key": "Contra 01",
     "chapters": [
       {
         "start": 1160,
@@ -11497,6 +11776,7 @@
     "lemma": "Contra 2",
     "previous": "Contra 1",
     "next": "Contra 3",
+    "sort_key": "Contra 02",
     "chapters": [
       {
         "start": 1160,
@@ -11509,6 +11789,7 @@
     "lemma": "Contra 3",
     "previous": "Contra 2",
     "next": "Contra 4",
+    "sort_key": "Contra 03",
     "chapters": [
       {
         "start": 1160,
@@ -11521,6 +11802,7 @@
     "lemma": "Contra 4",
     "previous": "Contra 3",
     "next": "Contra 5",
+    "sort_key": "Contra 04",
     "chapters": [
       {
         "start": 1160,
@@ -11533,6 +11815,7 @@
     "lemma": "Contra 5",
     "previous": "Contra 4",
     "next": "Contra 6",
+    "sort_key": "Contra 05",
     "chapters": [
       {
         "start": 1160,
@@ -11545,6 +11828,7 @@
     "lemma": "Contra 6",
     "previous": "Contra 5",
     "next": "Contra 7",
+    "sort_key": "Contra 06",
     "chapters": [
       {
         "start": 1161,
@@ -11557,6 +11841,7 @@
     "lemma": "Contra 7",
     "previous": "Contra 6",
     "next": "Contra 8",
+    "sort_key": "Contra 07",
     "chapters": [
       {
         "start": 1161,
@@ -11569,6 +11854,7 @@
     "lemma": "Contra 8",
     "previous": "Contra 7",
     "next": "Contra 9",
+    "sort_key": "Contra 08",
     "chapters": [
       {
         "start": 1161,
@@ -11581,6 +11867,7 @@
     "lemma": "Contra 9",
     "previous": "Contra 8",
     "next": "Contra 10",
+    "sort_key": "Contra 09",
     "chapters": [
       {
         "start": 1161,
@@ -11593,6 +11880,7 @@
     "lemma": "Contra 10",
     "previous": "Contra 9",
     "next": "Contra 11",
+    "sort_key": "Contra",
     "chapters": [
       {
         "start": 1161,
@@ -11605,6 +11893,7 @@
     "lemma": "Contra 11",
     "previous": "Contra 10",
     "next": "Contra 12",
+    "redirect": "Transaquincum",
     "chapters": [
       {
         "start": 1161,
@@ -11616,6 +11905,7 @@
     "lemma": "Contra 12",
     "previous": "Contra 11",
     "next": "Contra 13",
+    "redirect": "Florentia",
     "chapters": [
       {
         "start": 1161,
@@ -11627,6 +11917,7 @@
     "lemma": "Contra 13",
     "previous": "Contra 12",
     "next": "Contractus",
+    "redirect": true,
     "chapters": [
       {
         "start": 1161,
@@ -11663,6 +11954,7 @@
     "lemma": "Contraginnenses",
     "previous": "Contradis",
     "next": "Contrarete",
+    "redirect": "Contra 10",
     "chapters": [
       {
         "start": 1163,
@@ -11722,6 +12014,7 @@
     "lemma": "Contrectatio",
     "previous": "Contrebis",
     "next": "Contributa Iulia",
+    "redirect": "Furtum",
     "chapters": [
       {
         "start": 1164,
@@ -11733,6 +12026,7 @@
     "lemma": "Contributa Iulia",
     "previous": "Contrectatio",
     "next": "Contributio",
+    "redirect": "Ugultuniacum",
     "chapters": [
       {
         "start": 1164,
@@ -11756,6 +12050,7 @@
     "lemma": "Contributum",
     "previous": "Contributio",
     "next": "Controversia",
+    "redirect": true,
     "chapters": [
       {
         "start": 1164,
@@ -11815,6 +12110,7 @@
     "lemma": "Contubernium 2",
     "previous": "Contubernium 1",
     "next": "Contuccius",
+    "wp_link": "w:de:Contubernium",
     "chapters": [
       {
         "start": 1165,
@@ -11827,6 +12123,7 @@
     "lemma": "Contuccius",
     "previous": "Contubernium 2",
     "next": "Contumacia",
+    "redirect": "Cornelius 299",
     "chapters": [
       {
         "start": 1165,
@@ -11838,6 +12135,7 @@
     "lemma": "Contumacia",
     "previous": "Contuccius",
     "next": "Contumelia",
+    "wp_link": "w:de:Kontumazentscheidung",
     "chapters": [
       {
         "start": 1165,
@@ -11850,6 +12148,7 @@
     "lemma": "Contumelia",
     "previous": "Contumacia",
     "next": "Contus",
+    "redirect": "Iniuria",
     "chapters": [
       {
         "start": 1170,
@@ -11873,6 +12172,7 @@
     "lemma": "Convallis",
     "previous": "Contus",
     "next": "Conubium",
+    "redirect": "Fortunatae insulae",
     "chapters": [
       {
         "start": 1170,
@@ -11920,7 +12220,7 @@
     "lemma": "Conventina",
     "previous": "Convenae",
     "next": "Conventio",
-    "redirect": true,
+    "redirect": "Coventina",
     "chapters": [
       {
         "start": 1172,
@@ -11956,6 +12256,7 @@
     "lemma": "Convicium",
     "previous": "Conventus",
     "next": "Convictolitavis",
+    "redirect": "Iniuria",
     "chapters": [
       {
         "start": 1201,
@@ -12600,6 +12901,7 @@
     "lemma": "Corduba",
     "previous": "Cordius 2",
     "next": "Corduenus",
+    "wp_link": "w:de:Córdoba (Spanien)",
     "chapters": [
       {
         "start": 1221,
@@ -12778,6 +13080,7 @@
     "lemma": "Corfulenus",
     "previous": "Corfinium",
     "next": "Coria",
+    "redirect": "Statilius 16",
     "chapters": [
       {
         "start": 1227,
@@ -12825,6 +13128,7 @@
     "lemma": "Coriarius",
     "previous": "Coriaria Septimiania",
     "next": "Coridorgis",
+    "wp_link": "w:de:Gerben",
     "chapters": [
       {
         "start": 1227,
@@ -12873,7 +13177,7 @@
     "lemma": "Corinthia",
     "previous": "Corinium 2",
     "next": "a Corinthiis",
-    "redirect": true,
+    "redirect": "Maura 2",
     "chapters": [
       {
         "start": 1232,
@@ -12910,7 +13214,7 @@
     "lemma": "Corinthon",
     "previous": "Corinthium aes",
     "next": "Corinthus",
-    "redirect": true,
+    "redirect": "Corinium 1",
     "chapters": [
       {
         "start": 1234,
@@ -12933,7 +13237,7 @@
     "lemma": "Coriolanus",
     "previous": "Corinthus",
     "next": "Corioli",
-    "redirect": true,
+    "redirect": "Marcius 50",
     "chapters": [
       {
         "start": 1234,
@@ -13017,6 +13321,8 @@
     "lemma": "Corippus",
     "previous": "Coriovallum",
     "next": "Cori promunturium",
+    "wp_link": "w:de:Gorippus",
+    "ws_link": "s:de:Gorippus",
     "chapters": [
       {
         "start": 1236,
@@ -13053,7 +13359,7 @@
     "lemma": "Coriton",
     "previous": "Coritavi",
     "next": "Corma",
-    "redirect": true,
+    "redirect": "Corinium 1",
     "chapters": [
       {
         "start": 1246,
@@ -13197,6 +13503,7 @@
     "lemma": "Cornelia castra",
     "previous": "Cornelia",
     "next": "Corneliana",
+    "redirect": "Castra, Castrum 14",
     "chapters": [
       {
         "start": 1248,
@@ -13208,6 +13515,7 @@
     "lemma": "Corneliana",
     "previous": "Cornelia castra",
     "next": "Corneliani Ligures",
+    "redirect": "Ovinius 11",
     "chapters": [
       {
         "start": 1248,
@@ -13219,6 +13527,7 @@
     "lemma": "Corneliani Ligures",
     "previous": "Corneliana",
     "next": "Cornelianus 1",
+    "redirect": "Ligures Corneliani",
     "chapters": [
       {
         "start": 1248,
@@ -13278,6 +13587,7 @@
     "lemma": "Cornelianus 5",
     "previous": "Cornelianus 4",
     "next": "Cornelianus 6",
+    "redirect": "Atidius 3",
     "chapters": [
       {
         "start": 1248,
@@ -13300,7 +13610,7 @@
   {
     "lemma": "Corneli forum",
     "previous": "Cornelianus 6",
-    "next": "Cornelius 1",
+    "next": "Cornelius",
     "chapters": [
       {
         "start": 1249,
@@ -13309,8 +13619,14 @@
     ]
   },
   {
-    "lemma": "Cornelius 1",
+    "lemma": "Cornelius",
     "previous": "Corneli forum",
+    "next": "Cornelius 1",
+    "sort_key": "Cornelius 000"
+  },
+  {
+    "lemma": "Cornelius 1",
+    "previous": "Cornelius",
     "next": "Cornelius 2",
     "sort_key": "Cornelius 001",
     "chapters": [
@@ -13324,6 +13640,7 @@
     "lemma": "Cornelius 2",
     "previous": "Cornelius 1",
     "next": "Cornelius 3",
+    "sort_key": "Cornelius 002",
     "chapters": [
       {
         "start": 1250,
@@ -13335,6 +13652,7 @@
     "lemma": "Cornelius 3",
     "previous": "Cornelius 2",
     "next": "Cornelius 4",
+    "sort_key": "Cornelius 003",
     "chapters": [
       {
         "start": 1250,
@@ -13346,6 +13664,7 @@
     "lemma": "Cornelius 4",
     "previous": "Cornelius 3",
     "next": "Cornelius 5",
+    "sort_key": "Cornelius 004",
     "chapters": [
       {
         "start": 1250,
@@ -13357,6 +13676,7 @@
     "lemma": "Cornelius 5",
     "previous": "Cornelius 4",
     "next": "Cornelius 6",
+    "sort_key": "Cornelius 005",
     "chapters": [
       {
         "start": 1250,
@@ -13368,6 +13688,7 @@
     "lemma": "Cornelius 6",
     "previous": "Cornelius 5",
     "next": "Cornelius 7",
+    "sort_key": "Cornelius 006",
     "chapters": [
       {
         "start": 1250,
@@ -13379,6 +13700,7 @@
     "lemma": "Cornelius 7",
     "previous": "Cornelius 6",
     "next": "Cornelius 8",
+    "sort_key": "Cornelius 007",
     "chapters": [
       {
         "start": 1250,
@@ -13428,6 +13750,8 @@
     "lemma": "Cornelius 11",
     "previous": "Cornelius 10",
     "next": "Cornelius 12",
+    "sort_key": "Cornelius 011",
+    "wp_link": "w:de:Cornelius (Papst)",
     "chapters": [
       {
         "start": 1251,
@@ -13440,6 +13764,7 @@
     "lemma": "Cornelius 12",
     "previous": "Cornelius 11",
     "next": "Cornelius 13",
+    "sort_key": "Cornelius 012",
     "chapters": [
       {
         "start": 1252,
@@ -13451,6 +13776,7 @@
     "lemma": "Cornelius 13",
     "previous": "Cornelius 12",
     "next": "Cornelius 14",
+    "sort_key": "Cornelius 013",
     "chapters": [
       {
         "start": 1252,
@@ -13462,6 +13788,7 @@
     "lemma": "Cornelius 14",
     "previous": "Cornelius 13",
     "next": "Cornelius 15",
+    "sort_key": "Cornelius 014",
     "chapters": [
       {
         "start": 1252,
@@ -13473,6 +13800,7 @@
     "lemma": "Cornelius 15",
     "previous": "Cornelius 14",
     "next": "Cornelius 16",
+    "sort_key": "Cornelius 015",
     "chapters": [
       {
         "start": 1252,
@@ -13497,6 +13825,7 @@
     "lemma": "Cornelius 17",
     "previous": "Cornelius 16",
     "next": "Cornelius 18",
+    "sort_key": "Cornelius 017",
     "chapters": [
       {
         "start": 1252,
@@ -13522,6 +13851,8 @@
     "lemma": "Cornelius 19",
     "previous": "Cornelius 18",
     "next": "Cornelius 20",
+    "sort_key": "Cornelius 019",
+    "wp_link": "w:de:Gaius Cornelius (Ritter)",
     "chapters": [
       {
         "start": 1255,
@@ -13545,6 +13876,7 @@
     "lemma": "Cornelius 21",
     "previous": "Cornelius 20",
     "next": "Cornelius 22",
+    "sort_key": "Cornelius 021",
     "chapters": [
       {
         "start": 1255,
@@ -13556,6 +13888,7 @@
     "lemma": "Cornelius 22",
     "previous": "Cornelius 21",
     "next": "Cornelius 23",
+    "sort_key": "Cornelius 022",
     "chapters": [
       {
         "start": 1255,
@@ -13567,6 +13900,7 @@
     "lemma": "Cornelius 23",
     "previous": "Cornelius 22",
     "next": "Cornelius 24",
+    "sort_key": "Cornelius 023",
     "chapters": [
       {
         "start": 1255,
@@ -13578,6 +13912,7 @@
     "lemma": "Cornelius 24",
     "previous": "Cornelius 23",
     "next": "Cornelius 25",
+    "sort_key": "Cornelius 024",
     "chapters": [
       {
         "start": 1255,
@@ -13589,6 +13924,7 @@
     "lemma": "Cornelius 25",
     "previous": "Cornelius 24",
     "next": "Cornelius 26",
+    "sort_key": "Cornelius 025",
     "chapters": [
       {
         "start": 1255,
@@ -13614,6 +13950,7 @@
     "lemma": "Cornelius 27",
     "previous": "Cornelius 26",
     "next": "Cornelius 28",
+    "sort_key": "Cornelius 027",
     "chapters": [
       {
         "start": 1255,
@@ -13625,6 +13962,7 @@
     "lemma": "Cornelius 28",
     "previous": "Cornelius 27",
     "next": "Cornelius 29",
+    "sort_key": "Cornelius 028",
     "chapters": [
       {
         "start": 1256,
@@ -13636,6 +13974,7 @@
     "lemma": "Cornelius 29",
     "previous": "Cornelius 28",
     "next": "Cornelius 30",
+    "sort_key": "Cornelius 029",
     "chapters": [
       {
         "start": 1256,
@@ -13647,6 +13986,7 @@
     "lemma": "Cornelius 30",
     "previous": "Cornelius 29",
     "next": "Cornelius 31",
+    "sort_key": "Cornelius 030",
     "chapters": [
       {
         "start": 1256,
@@ -13659,6 +13999,7 @@
     "lemma": "Cornelius 31",
     "previous": "Cornelius 30",
     "next": "Cornelius 32",
+    "sort_key": "Cornelius 031",
     "chapters": [
       {
         "start": 1256,
@@ -13671,6 +14012,7 @@
     "lemma": "Cornelius 32",
     "previous": "Cornelius 31",
     "next": "Cornelius 33",
+    "sort_key": "Cornelius 032",
     "chapters": [
       {
         "start": 1256,
@@ -13696,6 +14038,7 @@
     "lemma": "Cornelius 34",
     "previous": "Cornelius 33",
     "next": "Cornelius 35",
+    "sort_key": "Cornelius 034",
     "chapters": [
       {
         "start": 1256,
@@ -13707,6 +14050,7 @@
     "lemma": "Cornelius 35",
     "previous": "Cornelius 34",
     "next": "Cornelius 36",
+    "sort_key": "Cornelius 035",
     "chapters": [
       {
         "start": 1256,
@@ -13718,6 +14062,7 @@
     "lemma": "Cornelius 36",
     "previous": "Cornelius 35",
     "next": "Cornelius 37",
+    "sort_key": "Cornelius 036",
     "chapters": [
       {
         "start": 1256,
@@ -13730,6 +14075,7 @@
     "lemma": "Cornelius 37",
     "previous": "Cornelius 36",
     "next": "Cornelius 38",
+    "sort_key": "Cornelius 037",
     "chapters": [
       {
         "start": 1256,
@@ -13742,6 +14088,8 @@
     "lemma": "Cornelius 38",
     "previous": "Cornelius 37",
     "next": "Cornelius 39",
+    "sort_key": "Cornelius 038",
+    "redirect": "Cornelius 33",
     "chapters": [
       {
         "start": 1256,
@@ -13753,6 +14101,7 @@
     "lemma": "Cornelius 39",
     "previous": "Cornelius 38",
     "next": "Cornelius 40",
+    "sort_key": "Cornelius 039",
     "chapters": [
       {
         "start": 1256,
@@ -13764,6 +14113,7 @@
     "lemma": "Cornelius 40",
     "previous": "Cornelius 39",
     "next": "Cornelius 41",
+    "sort_key": "Cornelius 040",
     "chapters": [
       {
         "start": 1256,
@@ -13775,6 +14125,7 @@
     "lemma": "Cornelius 41",
     "previous": "Cornelius 40",
     "next": "Cornelius 42",
+    "sort_key": "Cornelius 042",
     "chapters": [
       {
         "start": 1256,
@@ -13786,6 +14137,7 @@
     "lemma": "Cornelius 42",
     "previous": "Cornelius 41",
     "next": "Cornelius 42a",
+    "sort_key": "Cornelius 042",
     "chapters": [
       {
         "start": 1257,
@@ -13809,6 +14161,7 @@
     "lemma": "Cornelius 43",
     "previous": "Cornelius 42a",
     "next": "Cornelius 44",
+    "sort_key": "Cornelius 043",
     "chapters": [
       {
         "start": 1257,
@@ -13820,6 +14173,7 @@
     "lemma": "Cornelius 44",
     "previous": "Cornelius 43",
     "next": "Cornelius 45",
+    "sort_key": "Cornelius 044",
     "chapters": [
       {
         "start": 1257,
@@ -13831,6 +14185,7 @@
     "lemma": "Cornelius 45",
     "previous": "Cornelius 44",
     "next": "Cornelius 46",
+    "sort_key": "Cornelius 045",
     "chapters": [
       {
         "start": 1257,
@@ -13842,6 +14197,7 @@
     "lemma": "Cornelius 46",
     "previous": "Cornelius 45",
     "next": "Cornelius 47",
+    "sort_key": "Cornelius 046",
     "chapters": [
       {
         "start": 1257,
@@ -13853,6 +14209,7 @@
     "lemma": "Cornelius 47",
     "previous": "Cornelius 46",
     "next": "Cornelius 48",
+    "sort_key": "Cornelius 047",
     "chapters": [
       {
         "start": 1257,
@@ -13865,6 +14222,8 @@
     "lemma": "Cornelius 48",
     "previous": "Cornelius 47",
     "next": "Cornelius 49",
+    "sort_key": "Cornelius 048",
+    "redirect": "Cornelius 143",
     "chapters": [
       {
         "start": 1257,
@@ -13876,6 +14235,8 @@
     "lemma": "Cornelius 49",
     "previous": "Cornelius 48",
     "next": "Cornelius 50",
+    "sort_key": "Cornelius 049",
+    "redirect": "Cornelius 58",
     "chapters": [
       {
         "start": 1257,
@@ -13888,6 +14249,8 @@
     "lemma": "Cornelius 50",
     "previous": "Cornelius 49",
     "next": "Cornelius 51",
+    "sort_key": "Cornelius 050",
+    "redirect": "Cornelius 33",
     "chapters": [
       {
         "start": 1257,
@@ -13899,6 +14262,7 @@
     "lemma": "Cornelius 51",
     "previous": "Cornelius 50",
     "next": "Cornelius 52",
+    "sort_key": "Cornelius 051",
     "chapters": [
       {
         "start": 1257,
@@ -13910,6 +14274,7 @@
     "lemma": "Cornelius 52",
     "previous": "Cornelius 51",
     "next": "Cornelius 53",
+    "sort_key": "Cornelius 052",
     "chapters": [
       {
         "start": 1257,
@@ -13922,6 +14287,7 @@
     "lemma": "Cornelius 53",
     "previous": "Cornelius 52",
     "next": "Cornelius 54",
+    "sort_key": "Cornelius 053",
     "chapters": [
       {
         "start": 1258,
@@ -13934,6 +14300,7 @@
     "lemma": "Cornelius 54",
     "previous": "Cornelius 53",
     "next": "Cornelius 55",
+    "sort_key": "Cornelius 054",
     "chapters": [
       {
         "start": 1258,
@@ -13946,6 +14313,7 @@
     "lemma": "Cornelius 55",
     "previous": "Cornelius 54",
     "next": "Cornelius 56",
+    "sort_key": "Cornelius 055",
     "chapters": [
       {
         "start": 1258,
@@ -13958,6 +14326,8 @@
     "lemma": "Cornelius 56",
     "previous": "Cornelius 55",
     "next": "Cornelius 57",
+    "sort_key": "Cornelius 056",
+    "redirect": "Alexandros 88",
     "chapters": [
       {
         "start": 1258,
@@ -13969,6 +14339,7 @@
     "lemma": "Cornelius 57",
     "previous": "Cornelius 56",
     "next": "Cornelius 58",
+    "sort_key": "Cornelius 057",
     "chapters": [
       {
         "start": 1258,
@@ -13981,6 +14352,7 @@
     "lemma": "Cornelius 58",
     "previous": "Cornelius 57",
     "next": "Cornelius 59",
+    "sort_key": "Cornelius 058",
     "chapters": [
       {
         "start": 1258,
@@ -13992,6 +14364,7 @@
     "lemma": "Cornelius 59",
     "previous": "Cornelius 58",
     "next": "Cornelius 60",
+    "sort_key": "Cornelius 059",
     "chapters": [
       {
         "start": 1259,
@@ -14004,6 +14377,8 @@
     "lemma": "Cornelius 60",
     "previous": "Cornelius 59",
     "next": "Cornelius 61",
+    "sort_key": "Cornelius 060",
+    "redirect": "Cornutus 4",
     "chapters": [
       {
         "start": 1259,
@@ -14015,6 +14390,7 @@
     "lemma": "Cornelius 61",
     "previous": "Cornelius 60",
     "next": "Cornelius 62",
+    "sort_key": "Cornelius 061",
     "chapters": [
       {
         "start": 1259,
@@ -14027,6 +14403,7 @@
     "lemma": "Cornelius 62",
     "previous": "Cornelius 61",
     "next": "Cornelius 63",
+    "sort_key": "Cornelius 062",
     "chapters": [
       {
         "start": 1259,
@@ -14038,6 +14415,7 @@
     "lemma": "Cornelius 63",
     "previous": "Cornelius 62",
     "next": "Cornelius 64",
+    "sort_key": "Cornelius 063",
     "chapters": [
       {
         "start": 1259,
@@ -14050,6 +14428,7 @@
     "lemma": "Cornelius 64",
     "previous": "Cornelius 63",
     "next": "Cornelius 65",
+    "sort_key": "Cornelius 064",
     "chapters": [
       {
         "start": 1260,
@@ -14062,6 +14441,7 @@
     "lemma": "Cornelius 65",
     "previous": "Cornelius 64",
     "next": "Cornelius 66",
+    "sort_key": "Cornelius 065",
     "chapters": [
       {
         "start": 1260,
@@ -14073,6 +14453,7 @@
     "lemma": "Cornelius 66",
     "previous": "Cornelius 65",
     "next": "Cornelius 67",
+    "sort_key": "Cornelius 066",
     "chapters": [
       {
         "start": 1260,
@@ -14098,6 +14479,7 @@
     "lemma": "Cornelius 68",
     "previous": "Cornelius 67",
     "next": "Cornelius 69",
+    "sort_key": "Cornelius 068",
     "chapters": [
       {
         "start": 1260,
@@ -14110,6 +14492,7 @@
     "lemma": "Cornelius 69",
     "previous": "Cornelius 68",
     "next": "Cornelius 70",
+    "sort_key": "Cornelius 069",
     "chapters": [
       {
         "start": 1260,
@@ -14122,6 +14505,8 @@
     "lemma": "Cornelius 70",
     "previous": "Cornelius 69",
     "next": "Cornelius 71",
+    "sort_key": "Cornelius 070",
+    "wp_link": "w:de:Lucius Cornelius Balbus Minor",
     "chapters": [
       {
         "start": 1268,
@@ -14134,6 +14519,8 @@
     "lemma": "Cornelius 71",
     "previous": "Cornelius 70",
     "next": "Cornelius 72",
+    "sort_key": "Cornelius 071",
+    "redirect": true,
     "chapters": [
       {
         "start": 1271,
@@ -14145,6 +14532,7 @@
     "lemma": "Cornelius 72",
     "previous": "Cornelius 71",
     "next": "Cornelius 73",
+    "sort_key": "Cornelius 072",
     "chapters": [
       {
         "start": 1271,
@@ -14157,6 +14545,7 @@
     "lemma": "Cornelius 73",
     "previous": "Cornelius 72",
     "next": "Cornelius 74",
+    "sort_key": "Cornelius 073",
     "chapters": [
       {
         "start": 1271,
@@ -14169,6 +14558,7 @@
     "lemma": "Cornelius 74",
     "previous": "Cornelius 73",
     "next": "Cornelius 75",
+    "sort_key": "Cornelius 074",
     "chapters": [
       {
         "start": 1272,
@@ -14181,6 +14571,7 @@
     "lemma": "Cornelius 75",
     "previous": "Cornelius 74",
     "next": "Cornelius 76",
+    "sort_key": "Cornelius 075",
     "chapters": [
       {
         "start": 1272,
@@ -14193,6 +14584,7 @@
     "lemma": "Cornelius 76",
     "previous": "Cornelius 75",
     "next": "Cornelius 77",
+    "sort_key": "Cornelius 076",
     "chapters": [
       {
         "start": 1272,
@@ -14218,6 +14610,7 @@
     "lemma": "Cornelius 78",
     "previous": "Cornelius 77",
     "next": "Cornelius 79",
+    "sort_key": "Cornelius 078",
     "chapters": [
       {
         "start": 1273,
@@ -14230,6 +14623,7 @@
     "lemma": "Cornelius 79",
     "previous": "Cornelius 78",
     "next": "Cornelius 80",
+    "sort_key": "Cornelius 079",
     "chapters": [
       {
         "start": 1273,
@@ -14255,6 +14649,8 @@
     "lemma": "Cornelius 81",
     "previous": "Cornelius 80",
     "next": "Cornelius 81a",
+    "sort_key": "Cornelius 081",
+    "redirect": "Cornelius 212",
     "chapters": [
       {
         "start": 1273,
@@ -14267,6 +14663,8 @@
     "lemma": "Cornelius 81a",
     "previous": "Cornelius 81",
     "next": "Cornelius 82",
+    "sort_key": "Cornelius 081a",
+    "redirect": true,
     "chapters": [
       {
         "start": 1273,
@@ -14279,6 +14677,7 @@
     "lemma": "Cornelius 82",
     "previous": "Cornelius 81a",
     "next": "Cornelius 83ff.",
+    "sort_key": "Cornelius 082",
     "chapters": [
       {
         "start": 1273,
@@ -14291,6 +14690,7 @@
     "lemma": "Cornelius 83ff.",
     "previous": "Cornelius 82",
     "next": "Cornelius 83",
+    "sort_key": "Cornelius 083ff.",
     "chapters": [
       {
         "start": 1276,
@@ -14303,6 +14703,7 @@
     "lemma": "Cornelius 83",
     "previous": "Cornelius 83ff.",
     "next": "Cornelius 84",
+    "sort_key": "Cornelius 083",
     "chapters": [
       {
         "start": 1277,
@@ -14314,6 +14715,7 @@
     "lemma": "Cornelius 84",
     "previous": "Cornelius 83",
     "next": "Cornelius 85",
+    "sort_key": "Cornelius 084",
     "chapters": [
       {
         "start": 1277,
@@ -14326,6 +14728,7 @@
     "lemma": "Cornelius 85",
     "previous": "Cornelius 84",
     "next": "Cornelius 86",
+    "sort_key": "Cornelius 085",
     "chapters": [
       {
         "start": 1277,
@@ -14338,6 +14741,7 @@
     "lemma": "Cornelius 86",
     "previous": "Cornelius 85",
     "next": "Cornelius 87",
+    "sort_key": "Cornelius 086",
     "chapters": [
       {
         "start": 1277,
@@ -14349,6 +14753,7 @@
     "lemma": "Cornelius 87",
     "previous": "Cornelius 86",
     "next": "Cornelius 88",
+    "sort_key": "Cornelius 087",
     "chapters": [
       {
         "start": 1277,
@@ -14361,6 +14766,7 @@
     "lemma": "Cornelius 88",
     "previous": "Cornelius 87",
     "next": "Cornelius 89",
+    "sort_key": "Cornelius 088",
     "chapters": [
       {
         "start": 1277,
@@ -14372,6 +14778,7 @@
     "lemma": "Cornelius 89",
     "previous": "Cornelius 88",
     "next": "Cornelius 90",
+    "sort_key": "Cornelius 089",
     "chapters": [
       {
         "start": 1278,
@@ -14384,6 +14791,7 @@
     "lemma": "Cornelius 90",
     "previous": "Cornelius 89",
     "next": "Cornelius 91",
+    "sort_key": "Cornelius 090",
     "chapters": [
       {
         "start": 1279,
@@ -14395,6 +14803,7 @@
     "lemma": "Cornelius 91",
     "previous": "Cornelius 90",
     "next": "Cornelius 92",
+    "sort_key": "Cornelius 091",
     "chapters": [
       {
         "start": 1279,
@@ -14406,6 +14815,7 @@
     "lemma": "Cornelius 92",
     "previous": "Cornelius 91",
     "next": "Cornelius 93",
+    "sort_key": "Cornelius 092",
     "wp_link": "w:de:Marcus Cornelius Cethegus (Konsul 204 v. Chr.)",
     "chapters": [
       {
@@ -14418,6 +14828,7 @@
     "lemma": "Cornelius 93",
     "previous": "Cornelius 92",
     "next": "Cornelius 94",
+    "sort_key": "Cornelius 093",
     "chapters": [
       {
         "start": 1280,
@@ -14430,6 +14841,7 @@
     "lemma": "Cornelius 94",
     "previous": "Cornelius 93",
     "next": "Cornelius 95",
+    "sort_key": "Cornelius 094",
     "chapters": [
       {
         "start": 1280,
@@ -14442,6 +14854,7 @@
     "lemma": "Cornelius 95",
     "previous": "Cornelius 94",
     "next": "Cornelius 96",
+    "sort_key": "Cornelius 095",
     "chapters": [
       {
         "start": 1280,
@@ -14454,6 +14867,7 @@
     "lemma": "Cornelius 96",
     "previous": "Cornelius 95",
     "next": "Cornelius 97",
+    "sort_key": "Cornelius 096",
     "chapters": [
       {
         "start": 1281,
@@ -14465,6 +14879,7 @@
     "lemma": "Cornelius 97",
     "previous": "Cornelius 96",
     "next": "Cornelius 98",
+    "sort_key": "Cornelius 097",
     "chapters": [
       {
         "start": 1281,
@@ -14477,6 +14892,7 @@
     "lemma": "Cornelius 98",
     "previous": "Cornelius 97",
     "next": "Cornelius 99",
+    "sort_key": "Cornelius 098",
     "chapters": [
       {
         "start": 1281,
@@ -14488,6 +14904,7 @@
     "lemma": "Cornelius 99",
     "previous": "Cornelius 98",
     "next": "Cornelius 100",
+    "sort_key": "Cornelius 099",
     "chapters": [
       {
         "start": 1281,
@@ -14558,6 +14975,7 @@
     "lemma": "Cornelius 105",
     "previous": "Cornelius 104",
     "next": "Cornelius 106",
+    "wp_link": "w:de:Lucius Cornelius Cinna",
     "chapters": [
       {
         "start": 1282,
@@ -14569,6 +14987,7 @@
     "lemma": "Cornelius 106",
     "previous": "Cornelius 105",
     "next": "Cornelius 107",
+    "wp_link": "w:de:Lucius Cornelius Cinna",
     "chapters": [
       {
         "start": 1282,
@@ -14580,6 +14999,7 @@
     "lemma": "Cornelius 107",
     "previous": "Cornelius 106",
     "next": "Cornelius 108",
+    "wp_link": "w:de:Lucius Cornelius Cinna (Prätor 44 v. Chr.)",
     "chapters": [
       {
         "start": 1287,
@@ -14616,6 +15036,7 @@
     "lemma": "Cornelius 110",
     "previous": "Cornelius 109",
     "next": "Cornelius 111",
+    "redirect": "Pinarius 10a",
     "chapters": [
       {
         "start": 1289,
@@ -14749,6 +15170,7 @@
     "lemma": "Cornelius 122",
     "previous": "Cornelius 121",
     "next": "Cornelius 123",
+    "wp_link": "w:de:Aulus Cornelius Cossus Arvina",
     "chapters": [
       {
         "start": 1294,
@@ -14977,6 +15399,7 @@
     "lemma": "Cornelius 142",
     "previous": "Cornelius 141",
     "next": "Cornelius 143",
+    "redirect": "Cornelius 130",
     "chapters": [
       {
         "start": 1308,
@@ -14999,6 +15422,7 @@
     "lemma": "Cornelius 144",
     "previous": "Cornelius 143",
     "next": "Cornelius 145",
+    "redirect": "Cornelius 143",
     "chapters": [
       {
         "start": 1310,
@@ -15058,6 +15482,7 @@
     "lemma": "Cornelius 149",
     "previous": "Cornelius 148",
     "next": "Cornelius 150",
+    "redirect": true,
     "chapters": [
       {
         "start": 1311,
@@ -15068,7 +15493,7 @@
   {
     "lemma": "Cornelius 150",
     "previous": "Cornelius 149",
-    "next": "Cornelius 153",
+    "next": "Cornelius 151",
     "chapters": [
       {
         "start": 1311,
@@ -15078,8 +15503,18 @@
     ]
   },
   {
-    "lemma": "Cornelius 153",
+    "lemma": "Cornelius 151",
     "previous": "Cornelius 150",
+    "next": "Cornelius 152"
+  },
+  {
+    "lemma": "Cornelius 152",
+    "previous": "Cornelius 151",
+    "next": "Cornelius 153"
+  },
+  {
+    "lemma": "Cornelius 153",
+    "previous": "Cornelius 152",
     "next": "Cornelius 154",
     "chapters": [
       {
@@ -15151,6 +15586,7 @@
     "lemma": "Cornelius 159",
     "previous": "Cornelius 158",
     "next": "Cornelius 160",
+    "redirect": "Cornelius 220",
     "chapters": [
       {
         "start": 1342,
@@ -15257,6 +15693,7 @@
     "lemma": "Cornelius 168",
     "previous": "Cornelius 167",
     "next": "Cornelius 169",
+    "wp_link": "w:de:Cornelius Labeo",
     "chapters": [
       {
         "start": 1351,
@@ -15907,6 +16344,7 @@
     "lemma": "Cornelius 223",
     "previous": "Cornelius 222",
     "next": "Cornelius 224",
+    "redirect": "Cornelius 244",
     "chapters": [
       {
         "start": 1386,
@@ -15965,6 +16403,7 @@
     "lemma": "Cornelius 228",
     "previous": "Cornelius 227",
     "next": "Cornelius 229",
+    "wp_link": "w:de:Gnaeus Cornelius Lentulus Marcellinus",
     "chapters": [
       {
         "start": 1389,
@@ -16081,6 +16520,7 @@
     "lemma": "Cornelius 238",
     "previous": "Cornelius 237",
     "next": "Cornelius 239",
+    "wp_link": "w:de:Publius Cornelius Lentulus Spinther (Konsul 57 v. Chr.)",
     "chapters": [
       {
         "start": 1392,
@@ -16092,6 +16532,7 @@
     "lemma": "Cornelius 239",
     "previous": "Cornelius 238",
     "next": "Cornelius 240",
+    "wp_link": "w:de:Publius Cornelius Lentulus Spinther (Politiker)",
     "chapters": [
       {
         "start": 1398,
@@ -16104,6 +16545,7 @@
     "lemma": "Cornelius 240",
     "previous": "Cornelius 239",
     "next": "Cornelius 241",
+    "wp_link": "w:de:Publius Cornelius Lentulus Sura",
     "chapters": [
       {
         "start": 1399,
@@ -16127,7 +16569,7 @@
     "lemma": "Cornelius 242",
     "previous": "Cornelius 241",
     "next": "Cornelius 243",
-    "redirect": true,
+    "redirect": "Pomponius 43",
     "chapters": [
       {
         "start": 1402,
@@ -16273,6 +16715,7 @@
     "lemma": "Cornelius 255",
     "previous": "Cornelius 254",
     "next": "Cornelius 256",
+    "redirect": "Cornelius 226",
     "chapters": [
       {
         "start": 1405,
@@ -16340,6 +16783,7 @@
     "lemma": "Cornelius 261",
     "previous": "Cornelius 260",
     "next": "Cornelius 262",
+    "redirect": "Cornelius 227",
     "chapters": [
       {
         "start": 1406,
@@ -16536,6 +16980,7 @@
     "lemma": "Cornelius 278",
     "previous": "Cornelius 277",
     "next": "Cornelius 279",
+    "redirect": "Cornelius 359",
     "chapters": [
       {
         "start": 1418,
@@ -16616,6 +17061,7 @@
     "lemma": "Cornelius 285",
     "previous": "Cornelius 284",
     "next": "Cornelius 286",
+    "redirect": "Iavolenus 1",
     "chapters": [
       {
         "start": 1419,
@@ -16628,6 +17074,7 @@
     "lemma": "Cornelius 286",
     "previous": "Cornelius 285",
     "next": "Cornelius 287",
+    "redirect": "Cutius 1",
     "chapters": [
       {
         "start": 1419,
@@ -16686,6 +17133,7 @@
     "lemma": "Cornelius 291",
     "previous": "Cornelius 290",
     "next": "Cornelius 292",
+    "redirect": "Cornelius 294",
     "chapters": [
       {
         "start": 1420,
@@ -16802,6 +17250,7 @@
     "lemma": "Cornelius 300",
     "previous": "Cornelius 299a",
     "next": "Cornelius 301",
+    "redirect": true,
     "chapters": [
       {
         "start": 1422,
@@ -16824,6 +17273,7 @@
     "lemma": "Cornelius 302",
     "previous": "Cornelius 301",
     "next": "Cornelius 303",
+    "wp_link": "w:de:Publius Cornelius Rufinus (Konsul)",
     "chapters": [
       {
         "start": 1422,
@@ -16835,6 +17285,7 @@
     "lemma": "Cornelius 303",
     "previous": "Cornelius 302",
     "next": "Cornelius 304",
+    "redirect": true,
     "chapters": [
       {
         "start": 1424,
@@ -16859,6 +17310,7 @@
     "lemma": "Cornelius 305",
     "previous": "Cornelius 304",
     "next": "Cornelius 306",
+    "redirect": true,
     "chapters": [
       {
         "start": 1424,
@@ -17087,6 +17539,7 @@
     "lemma": "Cornelius 323",
     "previous": "Cornelius 322",
     "next": "Cornelius 324",
+    "wp_link": "w:de:Lucius Cornelius Scipio (Konsul 259 v. Chr.)",
     "chapters": [
       {
         "start": 1428,
@@ -17171,6 +17624,7 @@
     "lemma": "Cornelius 330",
     "previous": "Cornelius 329",
     "next": "Cornelius 331",
+    "wp_link": "w:de:Publius Cornelius Scipio (Konsul 218 v. Chr.)",
     "chapters": [
       {
         "start": 1434,
@@ -17244,6 +17698,7 @@
     "lemma": "Cornelius 336",
     "previous": "Cornelius 335",
     "next": "Cornelius 337",
+    "wp_link": "w:de:Publius Cornelius Scipio Africanus",
     "chapters": [
       {
         "start": 1462,
@@ -17304,6 +17759,7 @@
     "lemma": "Cornelius 341",
     "previous": "Cornelius 340",
     "next": "Cornelius 342",
+    "wp_link": "w:de:Gnaeus Cornelius Scipio Asina",
     "chapters": [
       {
         "start": 1485,
@@ -17340,6 +17796,7 @@
     "lemma": "Cornelius 344",
     "previous": "Cornelius 343",
     "next": "Cornelius 345",
+    "redirect": true,
     "chapters": [
       {
         "start": 1491,
@@ -17352,6 +17809,7 @@
     "lemma": "Cornelius 345",
     "previous": "Cornelius 344",
     "next": "Cornelius 346",
+    "wp_link": "w:de:Gnaeus Cornelius Scipio Calvus",
     "chapters": [
       {
         "start": 1491,
@@ -17400,6 +17858,7 @@
     "lemma": "Cornelius 349",
     "previous": "Cornelius 348",
     "next": "Cornelius 350",
+    "redirect": "Cornelius 353",
     "chapters": [
       {
         "start": 1494,
@@ -17449,6 +17908,7 @@
     "lemma": "Cornelius 353",
     "previous": "Cornelius 352",
     "next": "Cornelius 354",
+    "redirect": "Cornelius 350",
     "wp_link": "w:de:Publius Cornelius Scipio Nasica Corculum",
     "chapters": [
       {
@@ -17497,7 +17957,7 @@
   {
     "lemma": "Cornelius 357",
     "previous": "Cornelius 356",
-    "next": "Cornelius 358",
+    "next": "Cornelius 358ff.",
     "chapters": [
       {
         "start": 1505,
@@ -17507,9 +17967,20 @@
     ]
   },
   {
-    "lemma": "Cornelius 358",
+    "lemma": "Cornelius 358ff.",
     "previous": "Cornelius 357",
-    "next": "Cornelius 358ff.",
+    "next": "Cornelius 358",
+    "chapters": [
+      {
+        "start": 1506,
+        "end": 1506
+      }
+    ]
+  },
+  {
+    "lemma": "Cornelius 358",
+    "previous": "Cornelius 358ff.",
+    "next": "Cornelius 359",
     "chapters": [
       {
         "start": 1506,
@@ -17519,19 +17990,8 @@
     ]
   },
   {
-    "lemma": "Cornelius 358ff.",
-    "previous": "Cornelius 358",
-    "next": "Cornelius 359",
-    "chapters": [
-      {
-        "start": 1506,
-        "end": 1506
-      }
-    ]
-  },
-  {
     "lemma": "Cornelius 359",
-    "previous": "Cornelius 358ff.",
+    "previous": "Cornelius 358",
     "next": "Cornelius 360",
     "chapters": [
       {
@@ -17664,6 +18124,7 @@
     "lemma": "Cornelius 370",
     "previous": "Cornelius 369",
     "next": "Cornelius 371",
+    "redirect": "Acilius 42",
     "chapters": [
       {
         "start": 1510,
@@ -17740,36 +18201,23 @@
         "start": 1513,
         "end": 1515,
         "author": "Münzer"
+      },
+      {
+        "start": 1515,
+        "end": 1515,
+        "author": "Groag"
       }
     ]
   },
   {
     "lemma": "Cornelius 376",
     "previous": "Cornelius 376ff.",
-    "next": "Cornelius 376ff.",
-    "chapters": [
-      {
-        "start": 1515,
-        "end": 1515,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
-    "lemma": "Cornelius 376ff.",
-    "previous": "Cornelius 376",
     "next": "Cornelius 377",
-    "chapters": [
-      {
-        "start": 1515,
-        "end": 1515,
-        "author": "Groag"
-      }
-    ]
+    "chapters": []
   },
   {
     "lemma": "Cornelius 377",
-    "previous": "Cornelius 376ff.",
+    "previous": "Cornelius 376",
     "next": "Cornelius 378",
     "chapters": [
       {
@@ -17818,7 +18266,7 @@
     "lemma": "Cornelius 381",
     "previous": "Cornelius 380",
     "next": "Cornelius 382",
-    "redirect": true,
+    "redirect": "Cornelius 393",
     "chapters": [
       {
         "start": 1517,
@@ -17952,6 +18400,7 @@
     "lemma": "Cornelius 392",
     "previous": "Cornelius 391",
     "next": "Cornelius 393",
+    "wp_link": "w:de:Lucius Cornelius Sulla Felix",
     "chapters": [
       {
         "start": 1522,
@@ -17988,6 +18437,8 @@
     "lemma": "Cornelius 395",
     "previous": "Cornelius 394",
     "next": "Cornelius 396",
+    "wp_link": "w:de:Tacitus",
+    "ws_link": "s:de:Tacitus",
     "chapters": [
       {
         "start": 1566,
@@ -18207,7 +18658,7 @@
   {
     "lemma": "Cornelius 414",
     "previous": "Cornelius 413",
-    "next": "Cornelius 416",
+    "next": "Cornelius 415",
     "chapters": [
       {
         "start": 1596,
@@ -18216,8 +18667,13 @@
     ]
   },
   {
-    "lemma": "Cornelius 416",
+    "lemma": "Cornelius 415",
     "previous": "Cornelius 414",
+    "next": "Cornelius 416"
+  },
+  {
+    "lemma": "Cornelius 416",
+    "previous": "Cornelius 415",
     "next": "Cornelius 417",
     "chapters": [
       {
@@ -18342,7 +18798,7 @@
   {
     "lemma": "Cornelius 427",
     "previous": "Cornelius 426",
-    "next": "Cornelius 429",
+    "next": "Cornelius 428",
     "chapters": [
       {
         "start": 1598,
@@ -18351,9 +18807,16 @@
     ]
   },
   {
-    "lemma": "Cornelius 429",
+    "lemma": "Cornelius 428",
     "previous": "Cornelius 427",
-    "next": "Cornelius 430a",
+    "next": "Cornelius 429",
+    "redirect": "Valerius 401"
+  },
+  {
+    "lemma": "Cornelius 429",
+    "previous": "Cornelius 428",
+    "next": "Cornelius 430",
+    "redirect": "Volusius 23",
     "chapters": [
       {
         "start": 1598,
@@ -18363,9 +18826,15 @@
     ]
   },
   {
-    "lemma": "Cornelius 430a",
+    "lemma": "Cornelius 430",
     "previous": "Cornelius 429",
+    "next": "Cornelius 430a"
+  },
+  {
+    "lemma": "Cornelius 430a",
+    "previous": "Cornelius 430",
     "next": "Cornelius 431",
+    "redirect": "Servenia",
     "chapters": [
       {
         "start": 1599,
@@ -18414,6 +18883,7 @@
     "lemma": "Cornelius 434",
     "previous": "Cornelius 433",
     "next": "Cornelius 435",
+    "redirect": "Lorenius",
     "chapters": [
       {
         "start": 1599,
@@ -18449,6 +18919,7 @@
     "lemma": "Cornelius 437",
     "previous": "Cornelius 436",
     "next": "Cornelius 438",
+    "redirect": true,
     "chapters": [
       {
         "start": 1600,
@@ -18474,6 +18945,7 @@
     "lemma": "Cornelius 439",
     "previous": "Cornelius 438",
     "next": "Cornelius 440",
+    "redirect": true,
     "chapters": [
       {
         "start": 1600,
@@ -18532,6 +19004,7 @@
     "lemma": "Cornelius 444",
     "previous": "Cornelius 443",
     "next": "Cornelius 445",
+    "redirect": true,
     "chapters": [
       {
         "start": 1600,
@@ -18627,6 +19100,7 @@
     "lemma": "Cornelius 452",
     "previous": "Cornelius 451",
     "next": "Cornelius 453",
+    "redirect": true,
     "chapters": [
       {
         "start": 1601,
@@ -18643,6 +19117,7 @@
     "lemma": "Cornelius 453",
     "previous": "Cornelius 452",
     "next": "Cornelius 454",
+    "redirect": true,
     "chapters": [
       {
         "start": 1601,
@@ -18680,6 +19155,7 @@
     "lemma": "Cornelius 456",
     "previous": "Cornelius 455",
     "next": "Cornelius 457",
+    "redirect": true,
     "chapters": [
       {
         "start": 1601,
@@ -18692,6 +19168,7 @@
     "lemma": "Cornelius 457",
     "previous": "Cornelius 456",
     "next": "Cornelius 458",
+    "redirect": "Aemilius 162",
     "chapters": [
       {
         "start": 1601,
@@ -18752,6 +19229,7 @@
     "lemma": "Cornelius 462",
     "previous": "Cornelius 461",
     "next": "Corneta",
+    "redirect": "Licinius 192",
     "chapters": [
       {
         "start": 1602,
@@ -18800,6 +19278,7 @@
     "lemma": "Cornicula",
     "previous": "Cornicines",
     "next": "Corniculanenses",
+    "redirect": "Annius 38",
     "chapters": [
       {
         "start": 1603,
@@ -18883,6 +19362,7 @@
     "lemma": "Cornificius",
     "previous": "Cornidius",
     "next": "Cornificius 1",
+    "sort_key": "Cornificius 00",
     "chapters": [
       {
         "start": 1605,

@@ -1,6 +1,13 @@
 [
   {
+    "lemma": "Wilhelm Kroll †",
+    "next": "Olympia",
+    "sort_key": "!Wilhelm Kroll",
+    "wp_link": "w:de:Wilhelm Kroll"
+  },
+  {
     "lemma": "Olympia",
+    "previous": "Wilhelm Kroll †",
     "next": "Olympia 2",
     "chapters": [
       {
@@ -351,7 +358,7 @@
   {
     "lemma": "Olympikos 2",
     "previous": "Olympikos 1",
-    "next": "Olympikos 3",
+    "next": "Ὀλυμπικός 3",
     "chapters": [
       {
         "start": 199,
@@ -361,9 +368,10 @@
     ]
   },
   {
-    "lemma": "Olympikos 3",
+    "lemma": "Ὀλυμπικός 3",
     "previous": "Olympikos 2",
     "next": "Olympiodoros 1",
+    "sort_key": "Olympikos 3",
     "chapters": [
       {
         "start": 199,
@@ -374,8 +382,9 @@
   },
   {
     "lemma": "Olympiodoros 1",
-    "previous": "Olympikos 3",
+    "previous": "Ὀλυμπικός 3",
     "next": "Olympiodoros 2",
+    "sort_key": "Olympiodoros 01",
     "wp_link": "w:de:Olympiodoros von Athen",
     "chapters": [
       {
@@ -414,6 +423,7 @@
     "lemma": "Olympiodoros 4",
     "previous": "Olympiodoros 3",
     "next": "Olympiodoros 5",
+    "sort_key": "Olympiodoros 04",
     "chapters": [
       {
         "start": 200,
@@ -439,6 +449,7 @@
     "lemma": "Olympiodoros 6",
     "previous": "Olympiodoros 5",
     "next": "Olympiodoros 7",
+    "sort_key": "Olympiodoros 06",
     "chapters": [
       {
         "start": 200,
@@ -451,6 +462,7 @@
     "lemma": "Olympiodoros 7",
     "previous": "Olympiodoros 6",
     "next": "Olympiodoros 8",
+    "sort_key": "Olympiodoros 07",
     "chapters": [
       {
         "start": 200,
@@ -463,6 +475,7 @@
     "lemma": "Olympiodoros 8",
     "previous": "Olympiodoros 7",
     "next": "Olympiodoros 9",
+    "sort_key": "Olympiodoros 08",
     "chapters": [
       {
         "start": 200,
@@ -1818,7 +1831,7 @@
   {
     "lemma": "Olynta",
     "previous": "Olynpikon",
-    "next": "Olynthion",
+    "next": "Ὀλυνθιών",
     "chapters": [
       {
         "start": 325,
@@ -1827,9 +1840,10 @@
     ]
   },
   {
-    "lemma": "Olynthion",
+    "lemma": "Ὀλυνθιών",
     "previous": "Olynta",
     "next": "Olynthos",
+    "sort_key": "Olynthion",
     "chapters": [
       {
         "start": 325,
@@ -1840,7 +1854,7 @@
   },
   {
     "lemma": "Olynthos",
-    "previous": "Olynthion",
+    "previous": "Ὀλυνθιών",
     "next": "Olyros",
     "chapters": [
       {
@@ -1913,7 +1927,7 @@
   {
     "lemma": "Omani",
     "previous": "Omanes",
-    "next": "Omanoi",
+    "next": "Ὀμανοί",
     "chapters": [
       {
         "start": 344,
@@ -1923,9 +1937,10 @@
     ]
   },
   {
-    "lemma": "Omanoi",
+    "lemma": "Ὀμανοί",
     "previous": "Omani",
     "next": "Omanon",
+    "sort_key": "Omanoi",
     "chapters": [
       {
         "start": 345,
@@ -1936,7 +1951,7 @@
   },
   {
     "lemma": "Omanon",
-    "previous": "Omanoi",
+    "previous": "Ὀμανοί",
     "next": "Omanos",
     "chapters": [
       {
@@ -1973,7 +1988,7 @@
   {
     "lemma": "Ombelos",
     "previous": "Omarion",
-    "next": "Ombianon pedion",
+    "next": "Ὀμβιανὸν πεδίον",
     "chapters": [
       {
         "start": 346,
@@ -1983,20 +1998,14 @@
     ]
   },
   {
-    "lemma": "Ombianon pedion",
+    "lemma": "Ὀμβιανὸν πεδίον",
     "previous": "Ombelos",
     "next": "Omboi 1",
-    "chapters": [
-      {
-        "start": 346,
-        "end": 346,
-        "author": "Ruge"
-      }
-    ]
+    "sort_key": "Ombianon"
   },
   {
     "lemma": "Omboi 1",
-    "previous": "Ombianon pedion",
+    "previous": "Ὀμβιανὸν πεδίον",
     "next": "Omboi 2",
     "chapters": [
       {
@@ -7184,7 +7193,6 @@
     "lemma": "Ora 2",
     "previous": "Ora 1",
     "next": "Oracla",
-    "redirect": true,
     "chapters": [
       {
         "start": 828,
@@ -11204,7 +11212,7 @@
   {
     "lemma": "Oroites",
     "previous": "Oroises",
-    "next": "Orokasias oros",
+    "next": "Ὀροκασιὰς ὄρος",
     "chapters": [
       {
         "start": 1143,
@@ -11214,8 +11222,12 @@
     ]
   },
   {
-    "lemma": "Orokasias oros",
+    "lemma": "Ὀροκασιὰς ὄρος",
     "previous": "Oroites",
+    "sort_key": "Orokasias"
+  },
+  {
+    "lemma": "Orokasias oros",
     "next": "Orokendois",
     "chapters": [
       {

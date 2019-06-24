@@ -320,6 +320,7 @@
     "lemma": "Molon 5",
     "previous": "Molon 4",
     "next": "Molon 6",
+    "wp_link": "w:de:Molon (Usurpator)",
     "chapters": [
       {
         "start": 10,
@@ -581,7 +582,7 @@
   {
     "lemma": "Molpadia 2",
     "previous": "Molpadia 1",
-    "next": "Molpagoras, -u 1",
+    "next": "Μολπαγόρας, -ου 1",
     "chapters": [
       {
         "start": 26,
@@ -591,9 +592,10 @@
     ]
   },
   {
-    "lemma": "Molpagoras, -u 1",
+    "lemma": "Μολπαγόρας, -ου 1",
     "previous": "Molpadia 2",
-    "next": "Molpagoras, -u 2",
+    "next": "Μολπαγόρας, -ου 2",
+    "sort_key": "Molpagoras 1",
     "chapters": [
       {
         "start": 26,
@@ -603,21 +605,16 @@
     ]
   },
   {
-    "lemma": "Molpagoras, -u 2",
-    "previous": "Molpagoras, -u 1",
-    "next": "Molpagoras, -u 3",
-    "chapters": [
-      {
-        "start": 27,
-        "end": 27,
-        "author": "Modrze"
-      }
-    ]
+    "lemma": "Μολπαγόρας, -ου 2",
+    "previous": "Μολπαγόρας, -ου 1",
+    "next": "Μολπαγόρας, -ου 3",
+    "sort_key": "Molpagoras 2"
   },
   {
-    "lemma": "Molpagoras, -u 3",
-    "previous": "Molpagoras, -u 2",
+    "lemma": "Μολπαγόρας, -ου 3",
+    "previous": "Μολπαγόρας, -ου 2",
     "next": "Molpe",
+    "sort_key": "Molpagoras 3",
     "chapters": [
       {
         "start": 27,
@@ -628,7 +625,7 @@
   },
   {
     "lemma": "Molpe",
-    "previous": "Molpagoras, -u 3",
+    "previous": "Μολπαγόρας, -ου 3",
     "next": "Molpe 1",
     "chapters": [
       {
@@ -701,7 +698,7 @@
   {
     "lemma": "Molpis 3",
     "previous": "Molpis 2",
-    "next": "Molpos 1",
+    "next": "Μολποί",
     "chapters": [
       {
         "start": 28,
@@ -711,8 +708,14 @@
     ]
   },
   {
-    "lemma": "Molpos 1",
+    "lemma": "Μολποί",
     "previous": "Molpis 3",
+    "next": "Molpos 1",
+    "sort_key": "Molpoi"
+  },
+  {
+    "lemma": "Molpos 1",
+    "previous": "Μολποί",
     "next": "Molpos 2",
     "chapters": [
       {
@@ -968,7 +971,7 @@
   {
     "lemma": "Monaedes",
     "previous": "Monadi",
-    "next": "Monaises, -u 1",
+    "next": "Μοναίσης, -ου 1",
     "chapters": [
       {
         "start": 43,
@@ -978,9 +981,10 @@
     ]
   },
   {
-    "lemma": "Monaises, -u 1",
+    "lemma": "Μοναίσης, -ου 1",
     "previous": "Monaedes",
-    "next": "Monaises, -u 2",
+    "next": "Μοναίσης, -ου 2",
+    "sort_key": "Monaises 1",
     "chapters": [
       {
         "start": 43,
@@ -990,9 +994,10 @@
     ]
   },
   {
-    "lemma": "Monaises, -u 2",
-    "previous": "Monaises, -u 1",
+    "lemma": "Μοναίσης, -ου 2",
+    "previous": "Μοναίσης, -ου 1",
     "next": "Monalos",
+    "sort_key": "Monaises 2",
     "chapters": [
       {
         "start": 44,
@@ -1003,8 +1008,8 @@
   },
   {
     "lemma": "Monalos",
-    "previous": "Monaises, -u 2",
-    "next": "Monaoida",
+    "previous": "Μοναίσης, -ου 2",
+    "next": "Μονάοιδα",
     "chapters": [
       {
         "start": 44,
@@ -1014,7 +1019,7 @@
     ]
   },
   {
-    "lemma": "Monaoida",
+    "lemma": "Μονάοιδα",
     "previous": "Monalos",
     "next": "Monapia",
     "chapters": [
@@ -1026,7 +1031,7 @@
   },
   {
     "lemma": "Monapia",
-    "previous": "Monaoida",
+    "previous": "Μονάοιδα",
     "next": "Monarchos",
     "chapters": [
       {
@@ -1038,7 +1043,7 @@
   {
     "lemma": "Monarchos",
     "previous": "Monapia",
-    "next": "Monarina",
+    "next": "Μοναρίνα",
     "chapters": [
       {
         "start": 44,
@@ -1048,7 +1053,7 @@
     ]
   },
   {
-    "lemma": "Monarina",
+    "lemma": "Μοναρίνα",
     "previous": "Monarchos",
     "next": "Monat",
     "chapters": [
@@ -1060,7 +1065,7 @@
   },
   {
     "lemma": "Monat",
-    "previous": "Monarina",
+    "previous": "Μοναρίνα",
     "next": "Monate",
     "chapters": [
       {
@@ -6302,6 +6307,19 @@
   {
     "lemma": "Mummius 7",
     "previous": "Mummius 6",
+    "next": "Mummius 7a",
+    "sort_key": "Mummius 07",
+    "chapters": [
+      {
+        "start": 525,
+        "end": 525,
+        "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Mummius 7a",
+    "previous": "Mummius 7",
     "next": "Mummius 8",
     "chapters": [
       {
@@ -6313,7 +6331,7 @@
   },
   {
     "lemma": "Mummius 8",
-    "previous": "Mummius 7",
+    "previous": "Mummius 7a",
     "next": "Mummius 9",
     "chapters": [
       {
@@ -13403,6 +13421,7 @@
     "lemma": "Mummius 7a",
     "previous": "Myssi",
     "next": "Mundu",
+    "sort_key": "Mummius 07a",
     "chapters": [
       {
         "start": 1195,
@@ -13414,6 +13433,7 @@
   {
     "lemma": "Mundu",
     "previous": "Mummius 7a",
+    "next": null,
     "chapters": [
       {
         "start": 1206,

@@ -3111,6 +3111,7 @@
     "lemma": "Stachelschwein",
     "previous": "Stacheir",
     "next": "Stachemphax",
+    "wp_link": "w:de:Stachelschweine",
     "chapters": [
       {
         "start": 1927,
@@ -3122,7 +3123,7 @@
   {
     "lemma": "Stachemphax",
     "previous": "Stachelschwein",
-    "next": "Stadia 1",
+    "next": "Σταδία 1",
     "chapters": [
       {
         "start": 1929,
@@ -3132,9 +3133,10 @@
     ]
   },
   {
-    "lemma": "Stadia 1",
+    "lemma": "Σταδία 1",
     "previous": "Stachemphax",
-    "next": "Stadia 2",
+    "next": "Σταδία 2",
+    "sort_key": "Stadia 1",
     "chapters": [
       {
         "start": 1930,
@@ -3144,9 +3146,10 @@
     ]
   },
   {
-    "lemma": "Stadia 2",
-    "previous": "Stadia 1",
+    "lemma": "Σταδία 2",
+    "previous": "Σταδία 1",
     "next": "Stadieus 1",
+    "sort_key": "Stadia 2",
     "chapters": [
       {
         "start": 1930,
@@ -3157,7 +3160,7 @@
   },
   {
     "lemma": "Stadieus 1",
-    "previous": "Stadia 2",
+    "previous": "Σταδία 2",
     "next": "Stadieus 2",
     "chapters": [
       {
@@ -6571,7 +6574,7 @@
   {
     "lemma": "Stephanos 13",
     "previous": "Stephanos 12",
-    "next": "Stephanos 14. 15",
+    "next": "Stephanos 14-15",
     "wp_link": "w:de:Stephanos (Grammatiker im 7. Jahrhundert)",
     "chapters": [
       {
@@ -6582,7 +6585,7 @@
     ]
   },
   {
-    "lemma": "Stephanos 14. 15",
+    "lemma": "Stephanos 14-15",
     "previous": "Stephanos 13",
     "next": "Stephanos 16",
     "chapters": [
@@ -6595,7 +6598,7 @@
   },
   {
     "lemma": "Stephanos 16",
-    "previous": "Stephanos 14. 15",
+    "previous": "Stephanos 14-15",
     "next": "Stephanos 17",
     "chapters": [
       {
@@ -7961,7 +7964,6 @@
     "lemma": "Stier",
     "previous": "Stickerei",
     "next": "Στιγματίας",
-    "wp_link": "w:de:Stier",
     "chapters": [
       {
         "start": 2495,

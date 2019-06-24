@@ -172,7 +172,7 @@
     "lemma": "Taurocentae",
     "previous": "Taurobolos",
     "next": "Taurocholia",
-    "redirect": true,
+    "redirect": "Venatio 2",
     "chapters": [
       {
         "start": 22,
@@ -219,7 +219,7 @@
   {
     "lemma": "Tauroi 2",
     "previous": "Tauroi 1",
-    "next": "Taurokathapsia",
+    "next": "Ταυροκαθάψια",
     "chapters": [
       {
         "start": 24,
@@ -229,9 +229,10 @@
     ]
   },
   {
-    "lemma": "Taurokathapsia",
+    "lemma": "Ταυροκαθάψια",
     "previous": "Tauroi 2",
     "next": "Tauromenes",
+    "sort_key": "Taurokathapsia",
     "chapters": [
       {
         "start": 24,
@@ -242,7 +243,7 @@
   },
   {
     "lemma": "Tauromenes",
-    "previous": "Taurokathapsia",
+    "previous": "Ταυροκαθάψια",
     "next": "Tauromenion",
     "redirect": true,
     "chapters": [
@@ -460,6 +461,7 @@
     "lemma": "Tauros 2",
     "previous": "Tauros 1",
     "next": "Tauros 3",
+    "sort_key": "Tauros 02",
     "chapters": [
       {
         "start": 39,
@@ -484,6 +486,7 @@
     "lemma": "Tauros 4",
     "previous": "Tauros 3",
     "next": "Tauros 5",
+    "sort_key": "Tauros 04",
     "chapters": [
       {
         "start": 39,
@@ -496,6 +499,7 @@
     "lemma": "Tauros 5",
     "previous": "Tauros 4",
     "next": "Tauros 6",
+    "sort_key": "Tauros 05",
     "wp_link": "w:de:Taurusgebirge",
     "chapters": [
       {
@@ -713,6 +717,7 @@
     "lemma": "Taurus 5",
     "previous": "Taurus 4",
     "next": "Taurus 6",
+    "sort_key": "Taurus 05",
     "chapters": [
       {
         "start": 70,
@@ -821,7 +826,7 @@
   {
     "lemma": "Tausius",
     "previous": "Taurus 13",
-    "next": "Tauson",
+    "next": "Ταούσων",
     "chapters": [
       {
         "start": 72,
@@ -831,7 +836,7 @@
     ]
   },
   {
-    "lemma": "Tauson",
+    "lemma": "Ταούσων",
     "previous": "Tausius",
     "next": "Tautaendia",
     "chapters": [
@@ -844,7 +849,7 @@
   },
   {
     "lemma": "Tautaendia",
-    "previous": "Tauson",
+    "previous": "Ταούσων",
     "next": "Tautalos",
     "chapters": [
       {
@@ -941,7 +946,7 @@
   {
     "lemma": "Taxatio",
     "previous": "Tautomedes",
-    "next": "Taxeina",
+    "next": "Ταξεῖνα",
     "chapters": [
       {
         "start": 73,
@@ -951,9 +956,10 @@
     ]
   },
   {
-    "lemma": "Taxeina",
+    "lemma": "Ταξεῖνα",
     "previous": "Taxatio",
     "next": "Taxgaition",
+    "sort_key": "Taxeina",
     "chapters": [
       {
         "start": 75,
@@ -964,8 +970,8 @@
   },
   {
     "lemma": "Taxgaition",
-    "previous": "Taxeina",
-    "next": "Taxiana",
+    "previous": "Ταξεῖνα",
+    "next": "Ταξιάνα",
     "chapters": [
       {
         "start": 75,
@@ -974,9 +980,10 @@
     ]
   },
   {
-    "lemma": "Taxiana",
+    "lemma": "Ταξιάνα",
     "previous": "Taxgaition",
-    "next": "Taxiarchos",
+    "next": "Ταξίαρχος",
+    "sort_key": "Taxiana",
     "chapters": [
       {
         "start": 75,
@@ -986,8 +993,8 @@
     ]
   },
   {
-    "lemma": "Taxiarchos",
-    "previous": "Taxiana",
+    "lemma": "Ταξίαρχος",
+    "previous": "Ταξιάνα",
     "next": "Taxila",
     "chapters": [
       {
@@ -999,7 +1006,7 @@
   },
   {
     "lemma": "Taxila",
-    "previous": "Taxiarchos",
+    "previous": "Ταξίαρχος",
     "next": "Taxiles",
     "chapters": [
       {
@@ -1025,7 +1032,7 @@
   {
     "lemma": "Taximagulus",
     "previous": "Taxiles",
-    "next": "Taxis",
+    "next": "Τάξις",
     "chapters": [
       {
         "start": 85,
@@ -1035,9 +1042,9 @@
     ]
   },
   {
-    "lemma": "Taxis",
+    "lemma": "Τάξις",
     "previous": "Taximagulus",
-    "next": "Taxos",
+    "next": "Ταξός",
     "chapters": [
       {
         "start": 85,
@@ -1047,8 +1054,8 @@
     ]
   },
   {
-    "lemma": "Taxos",
-    "previous": "Taxis",
+    "lemma": "Ταξός",
+    "previous": "Τάξις",
     "next": "Taxtanulates",
     "chapters": [
       {
@@ -1060,7 +1067,7 @@
   },
   {
     "lemma": "Taxtanulates",
-    "previous": "Taxos",
+    "previous": "Ταξός",
     "next": "Taxus",
     "chapters": [
       {
@@ -7089,6 +7096,7 @@
     "lemma": "Terentius 21",
     "previous": "Terentius 20",
     "next": "Terentius 22",
+    "sort_key": "Terentius 021",
     "chapters": [
       {
         "start": 596,
@@ -7856,6 +7864,9 @@
     "lemma": "Terentius 84",
     "previous": "Terentius 83",
     "next": "Terentius 85",
+    "sort_key": "Terentius 084",
+    "redirect": true,
+    "wp_link": "w:de:Marcus Terentius Varro",
     "chapters": [
       {
         "start": 690,
@@ -10922,7 +10933,7 @@
     "previous": "Tettius 8",
     "next": "Tettius 10",
     "sort_key": "Tettius 09",
-    "redirect": true,
+    "redirect": "Tetitius Facundus",
     "chapters": [
       {
         "start": 1107,

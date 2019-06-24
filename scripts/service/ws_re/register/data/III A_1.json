@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Silacenis",
+    "previous": "Sialus",
     "next": "Silaces",
     "chapters": [
       {
@@ -49,7 +50,7 @@
   {
     "lemma": "Silaion",
     "previous": "Silai",
-    "next": "Silakenoi",
+    "next": "Σιλακηνοί",
     "chapters": [
       {
         "start": 1,
@@ -59,9 +60,10 @@
     ]
   },
   {
-    "lemma": "Silakenoi",
+    "lemma": "Σιλακηνοί",
     "previous": "Silaion",
     "next": "Silana",
+    "sort_key": "Silakenoi",
     "chapters": [
       {
         "start": 1,
@@ -72,7 +74,7 @@
   },
   {
     "lemma": "Silana",
-    "previous": "Silakenoi",
+    "previous": "Σιλακηνοί",
     "next": "Silandos",
     "chapters": [
       {
@@ -1160,7 +1162,7 @@
   {
     "lemma": "Silius 30",
     "previous": "Silius 29",
-    "next": "Silla",
+    "next": "Σίλλα",
     "chapters": [
       {
         "start": 96,
@@ -1170,9 +1172,10 @@
     ]
   },
   {
-    "lemma": "Silla",
+    "lemma": "Σίλλα",
     "previous": "Silius 30",
     "next": "Sillax",
+    "sort_key": "Silla",
     "chapters": [
       {
         "start": 96,
@@ -1183,7 +1186,7 @@
   },
   {
     "lemma": "Sillax",
-    "previous": "Silla",
+    "previous": "Σίλλα",
     "next": "Silleriacus",
     "chapters": [
       {
@@ -1242,7 +1245,7 @@
   {
     "lemma": "Sillos 1",
     "previous": "Silloi",
-    "next": "Sillos 2",
+    "next": "Σίλλος 2",
     "chapters": [
       {
         "start": 98,
@@ -1252,7 +1255,7 @@
     ]
   },
   {
-    "lemma": "Sillos 2",
+    "lemma": "Σίλλος 2",
     "previous": "Sillos 1",
     "next": "Sillybos",
     "chapters": [
@@ -1265,7 +1268,7 @@
   },
   {
     "lemma": "Sillybos",
-    "previous": "Sillos 2",
+    "previous": "Σίλλος 2",
     "next": "Sillyon 1",
     "chapters": [
       {
@@ -1776,6 +1779,7 @@
     "lemma": "Silvi 2",
     "previous": "Silvi 1",
     "next": "Silviacus",
+    "redirect": true,
     "chapters": [
       {
         "start": 127,
@@ -1823,6 +1827,7 @@
     "lemma": "Silvianum",
     "previous": "Silviae peregrinatio",
     "next": "Silviliacus",
+    "redirect": true,
     "chapters": [
       {
         "start": 128,
@@ -7453,7 +7458,7 @@
   {
     "lemma": "Skamandros 3",
     "previous": "Skamandros 2",
-    "next": "Skambonidai",
+    "next": "Σκαμβωνίδαι",
     "chapters": [
       {
         "start": 434,
@@ -7463,7 +7468,7 @@
     ]
   },
   {
-    "lemma": "Skambonidai",
+    "lemma": "Σκαμβωνίδαι",
     "previous": "Skamandros 3",
     "next": "Skamma",
     "chapters": [
@@ -7476,7 +7481,7 @@
   },
   {
     "lemma": "Skamma",
-    "previous": "Skambonidai",
+    "previous": "Σκαμβωνίδαι",
     "next": "Skamon",
     "chapters": [
       {
@@ -9296,7 +9301,7 @@
   {
     "lemma": "Skopis",
     "previous": "Skopion",
-    "next": "Skopoloupa",
+    "next": "Σκοπόλουρα",
     "chapters": [
       {
         "start": 583,
@@ -9305,7 +9310,7 @@
     ]
   },
   {
-    "lemma": "Skopoloupa",
+    "lemma": "Σκοπόλουρα",
     "previous": "Skopis",
     "next": "Skopus",
     "chapters": [
@@ -9318,8 +9323,8 @@
   },
   {
     "lemma": "Skopus",
-    "previous": "Skopoloupa",
-    "next": "Skordai",
+    "previous": "Σκοπόλουρα",
+    "next": "Σκόρδαι",
     "wp_link": "w:de:Skopus (Berg)",
     "chapters": [
       {
@@ -9330,7 +9335,7 @@
     ]
   },
   {
-    "lemma": "Skordai",
+    "lemma": "Σκόρδαι",
     "previous": "Skopus",
     "next": "Skordapia",
     "chapters": [
@@ -9343,7 +9348,7 @@
   },
   {
     "lemma": "Skordapia",
-    "previous": "Skordai",
+    "previous": "Σκόρδαι",
     "next": "Skordiskos",
     "chapters": [
       {
@@ -10793,6 +10798,7 @@
     "lemma": "Smyrna 3",
     "previous": "Smyrna 3f.",
     "next": "Smyrna 4",
+    "wp_link": "w:de:Izmir",
     "chapters": [
       {
         "start": 730,
@@ -10892,6 +10898,7 @@
     "lemma": "snenaθ, snenati?",
     "previous": "Smyrnophoros 2",
     "next": "Snephorses",
+    "sort_key": "Snenath",
     "chapters": [
       {
         "start": 766,
@@ -12018,6 +12025,8 @@
     "lemma": "Sokrates 5",
     "previous": "Sokrates 4",
     "next": "Sokrates 6",
+    "sort_key": "Sokrates 05",
+    "wp_link": "w:de:Sokrates",
     "chapters": [
       {
         "start": 811,
@@ -12186,7 +12195,6 @@
     "lemma": "Sol 1",
     "previous": "Sokratus nesos",
     "next": "Sol 2",
-    "wp_link": "w:de:Sol (Gott)",
     "chapters": [
       {
         "start": 901,
@@ -14372,7 +14380,7 @@
   {
     "lemma": "Sophanitai",
     "previous": "Sophanes 2",
-    "next": "Sophanus",
+    "next": "Σωφάνους",
     "chapters": [
       {
         "start": 1015,
@@ -14382,7 +14390,7 @@
     ]
   },
   {
-    "lemma": "Sophanus",
+    "lemma": "Σωφάνους",
     "previous": "Sophanitai",
     "next": "Sophene",
     "chapters": [
@@ -14395,7 +14403,7 @@
   },
   {
     "lemma": "Sophene",
-    "previous": "Sophanus",
+    "previous": "Σωφάνους",
     "next": "Sophia",
     "wp_link": "w:de:Sophene",
     "chapters": [

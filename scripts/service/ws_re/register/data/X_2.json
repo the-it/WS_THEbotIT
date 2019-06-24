@@ -49,7 +49,7 @@
   {
     "lemma": "Ius praediatorium",
     "previous": "Ius pontificium",
-    "next": "Ius privatum und publicum",
+    "next": "Ius privatum",
     "redirect": true,
     "chapters": [
       {
@@ -59,20 +59,13 @@
     ]
   },
   {
-    "lemma": "Ius privatum und publicum",
+    "lemma": "Ius privatum",
     "previous": "Ius praediatorium",
-    "next": "Ius Quiritium",
-    "chapters": [
-      {
-        "start": 1289,
-        "end": 1290,
-        "author": "Leonhard"
-      }
-    ]
+    "next": "Ius Quiritium"
   },
   {
     "lemma": "Ius Quiritium",
-    "previous": "Ius privatum und publicum",
+    "previous": "Ius privatum",
     "next": "Ius respondendi",
     "chapters": [
       {
@@ -524,6 +517,7 @@
     "lemma": "Iustinus 2",
     "previous": "Iustinus 1",
     "next": "Iustinus 3",
+    "sort_key": "Iustinus 02",
     "chapters": [
       {
         "start": 1329,
@@ -764,6 +758,7 @@
     "lemma": "Iustus 2",
     "previous": "Iustus 1",
     "next": "Iustus 3",
+    "sort_key": "Iustus 02",
     "chapters": [
       {
         "start": 1340,
@@ -776,6 +771,7 @@
     "lemma": "Iustus 3",
     "previous": "Iustus 2",
     "next": "Iustus 4",
+    "sort_key": "Iustus 03",
     "chapters": [
       {
         "start": 1340,
@@ -788,6 +784,7 @@
     "lemma": "Iustus 4",
     "previous": "Iustus 3",
     "next": "Iustus 5",
+    "sort_key": "Iustus 04",
     "chapters": [
       {
         "start": 1340,
@@ -1110,7 +1107,7 @@
   {
     "lemma": "Iuvencus",
     "previous": "Iuvenalis 9",
-    "next": "Iuvenes, iuventus",
+    "next": "Iuvenes",
     "chapters": [
       {
         "start": 1357,
@@ -1120,7 +1117,7 @@
     ]
   },
   {
-    "lemma": "Iuvenes, iuventus",
+    "lemma": "Iuvenes",
     "previous": "Iuvencus",
     "next": "Iuveniacus, Iuviniacus",
     "chapters": [
@@ -1133,7 +1130,7 @@
   },
   {
     "lemma": "Iuveniacus, Iuviniacus",
-    "previous": "Iuvenes, iuventus",
+    "previous": "Iuvenes",
     "next": "Iuvenis 1",
     "chapters": [
       {
@@ -1778,7 +1775,7 @@
   {
     "lemma": "Iyggios",
     "previous": "Ixos",
-    "next": "Iygx",
+    "next": "Iyngies",
     "chapters": [
       {
         "start": 1384,
@@ -1788,21 +1785,9 @@
     ]
   },
   {
-    "lemma": "Iygx",
-    "previous": "Iyggios",
-    "next": "Iyngies",
-    "chapters": [
-      {
-        "start": 1384,
-        "end": 1386,
-        "author": "Gossen"
-      }
-    ]
-  },
-  {
     "lemma": "Iyngies",
-    "previous": "Iygx",
-    "next": "Iyrkai",
+    "previous": "Iyggios",
+    "next": "Iygx",
     "chapters": [
       {
         "start": 1384,
@@ -1812,8 +1797,20 @@
     ]
   },
   {
-    "lemma": "Iyrkai",
+    "lemma": "Iygx",
     "previous": "Iyngies",
+    "next": "Iyrkai",
+    "chapters": [
+      {
+        "start": 1384,
+        "end": 1386,
+        "author": "Gossen"
+      }
+    ]
+  },
+  {
+    "lemma": "Iyrkai",
+    "previous": "Iygx",
     "next": "Izabates",
     "chapters": [
       {
@@ -1958,7 +1955,7 @@
   {
     "lemma": "Kaanthos",
     "previous": "Ka",
-    "next": "Kabaion",
+    "next": "Κάβαιον",
     "chapters": [
       {
         "start": 1393,
@@ -1968,9 +1965,10 @@
     ]
   },
   {
-    "lemma": "Kabaion",
+    "lemma": "Κάβαιον",
     "previous": "Kaanthos",
     "next": "Kabala 1",
+    "sort_key": "Kabaion",
     "chapters": [
       {
         "start": 1394,
@@ -1981,7 +1979,7 @@
   },
   {
     "lemma": "Kabala 1",
-    "previous": "Kabaion",
+    "previous": "Κάβαιον",
     "next": "Kabala 2",
     "chapters": [
       {
@@ -2041,7 +2039,7 @@
   {
     "lemma": "Kabalis",
     "previous": "Kabalia",
-    "next": "Kaballa",
+    "next": "Κάβαλλα",
     "chapters": [
       {
         "start": 1395,
@@ -2051,7 +2049,7 @@
     ]
   },
   {
-    "lemma": "Kaballa",
+    "lemma": "Κάβαλλα",
     "previous": "Kabalis",
     "next": "Kabalsi",
     "chapters": [
@@ -2064,7 +2062,7 @@
   },
   {
     "lemma": "Kabalsi",
-    "previous": "Kaballa",
+    "previous": "Κάβαλλα",
     "next": "Kabana",
     "chapters": [
       {
@@ -2890,7 +2888,7 @@
   {
     "lemma": "Kadyanda",
     "previous": "Kaduenoi Makedones",
-    "next": "Kadyie kome",
+    "next": "Καδυίη κώμη",
     "chapters": [
       {
         "start": 1477,
@@ -2900,7 +2898,7 @@
     ]
   },
   {
-    "lemma": "Kadyie kome",
+    "lemma": "Καδυίη κώμη",
     "previous": "Kadyanda",
     "next": "Kadytis",
     "chapters": [
@@ -2913,8 +2911,9 @@
   },
   {
     "lemma": "Kadytis",
-    "previous": "Kadyie kome",
+    "previous": "Καδυίη κώμη",
     "next": "Käfer",
+    "wp_link": "w:de:Gaza (Stadt)",
     "chapters": [
       {
         "start": 1478,
@@ -3572,6 +3571,7 @@
     "lemma": "Kairos 1",
     "previous": "Kairios",
     "next": "Kairos 2",
+    "sort_key": "Kairos 1",
     "chapters": [
       {
         "start": 1508,
@@ -7528,6 +7528,7 @@
     "lemma": "Kallirrhoë 12",
     "previous": "Kallirrhoë 11",
     "next": "Kallirrhoë 13",
+    "wp_link": "w:de:Kallirhoe (Bad)",
     "chapters": [
       {
         "start": 1672,
@@ -8635,7 +8636,7 @@
   {
     "lemma": "Kalograias Bunos (ho)",
     "previous": "Kalobates",
-    "next": "Kaloi Limenes",
+    "next": "Καλοὶ λιμένες",
     "chapters": [
       {
         "start": 1756,
@@ -8645,7 +8646,7 @@
     ]
   },
   {
-    "lemma": "Kaloi Limenes",
+    "lemma": "Καλοὶ λιμένες",
     "previous": "Kalograias Bunos (ho)",
     "next": "Kalokairos",
     "chapters": [
@@ -8658,7 +8659,7 @@
   },
   {
     "lemma": "Kalokairos",
-    "previous": "Kaloi Limenes",
+    "previous": "Καλοὶ λιμένες",
     "next": "Kalolakka",
     "wp_link": "w:de:Calocaerus",
     "chapters": [
@@ -8696,7 +8697,7 @@
   {
     "lemma": "Kalon 2",
     "previous": "Kalon 1",
-    "next": "Kalondas 1",
+    "next": "Kalon Korasion",
     "chapters": [
       {
         "start": 1758,
@@ -8706,33 +8707,9 @@
     ]
   },
   {
-    "lemma": "Kalondas 1",
-    "previous": "Kalon 2",
-    "next": "Kalondas 2",
-    "chapters": [
-      {
-        "start": 1758,
-        "end": 1758,
-        "author": "Kroll"
-      }
-    ]
-  },
-  {
-    "lemma": "Kalondas 2",
-    "previous": "Kalondas 1",
-    "next": "Kalon Korasion",
-    "chapters": [
-      {
-        "start": 1758,
-        "end": 1758,
-        "author": "Kroll"
-      }
-    ]
-  },
-  {
     "lemma": "Kalon Korasion",
-    "previous": "Kalondas 2",
-    "next": "Kalon pedion",
+    "previous": "Kalon 2",
+    "next": "Καλὸν πεδίον",
     "chapters": [
       {
         "start": 1758,
@@ -8741,7 +8718,7 @@
     ]
   },
   {
-    "lemma": "Kalon pedion",
+    "lemma": "Καλὸν πεδίον",
     "previous": "Kalon Korasion",
     "next": "Kalon stoma",
     "chapters": [
@@ -8754,8 +8731,8 @@
   },
   {
     "lemma": "Kalon stoma",
-    "previous": "Kalon pedion",
-    "next": "Kalos",
+    "previous": "Καλὸν πεδίον",
+    "next": "Kalondas 1",
     "chapters": [
       {
         "start": 1758,
@@ -8764,8 +8741,32 @@
     ]
   },
   {
-    "lemma": "Kalos",
+    "lemma": "Kalondas 1",
     "previous": "Kalon stoma",
+    "next": "Kalondas 2",
+    "chapters": [
+      {
+        "start": 1758,
+        "end": 1758,
+        "author": "Kroll"
+      }
+    ]
+  },
+  {
+    "lemma": "Kalondas 2",
+    "previous": "Kalondas 1",
+    "next": "Kalos",
+    "chapters": [
+      {
+        "start": 1758,
+        "end": 1758,
+        "author": "Kroll"
+      }
+    ]
+  },
+  {
+    "lemma": "Kalos",
+    "previous": "Kalondas 2",
     "next": "Kalos agros",
     "chapters": [
       {
@@ -8837,7 +8838,7 @@
   {
     "lemma": "Kalpe 2",
     "previous": "Kalpe 1",
-    "next": "Kalpes dromos",
+    "next": "Κάλπης δρόμος",
     "chapters": [
       {
         "start": 1760,
@@ -8847,7 +8848,7 @@
     ]
   },
   {
-    "lemma": "Kalpes dromos",
+    "lemma": "Κάλπης δρόμος",
     "previous": "Kalpe 2",
     "next": "Kalpetos",
     "chapters": [
@@ -8860,7 +8861,7 @@
   },
   {
     "lemma": "Kalpetos",
-    "previous": "Kalpes dromos",
+    "previous": "Κάλπης δρόμος",
     "next": "Kalpinon",
     "chapters": [
       {
@@ -10265,6 +10266,7 @@
     "lemma": "Kana 5",
     "previous": "Kana 4",
     "next": "Kana 6",
+    "wp_link": "w:de:Kana (Libanon)",
     "chapters": [
       {
         "start": 1845,
@@ -10277,6 +10279,7 @@
     "lemma": "Kana 6",
     "previous": "Kana 5",
     "next": "Kanaan",
+    "wp_link": "w:de:Kana (Galiläa)",
     "chapters": [
       {
         "start": 1845,
@@ -10513,6 +10516,7 @@
     "lemma": "Kanatha 1",
     "previous": "Kanastraios",
     "next": "Kanatha 2",
+    "wp_link": "w:de:Kanatha",
     "chapters": [
       {
         "start": 1856,
@@ -10572,7 +10576,7 @@
   {
     "lemma": "Kanauna",
     "previous": "Kanathra",
-    "next": "Demu Kanaura",
+    "next": "Δήμου Κάναυρα",
     "chapters": [
       {
         "start": 1857,
@@ -10582,7 +10586,7 @@
     ]
   },
   {
-    "lemma": "Demu Kanaura",
+    "lemma": "Δήμου Κάναυρα",
     "previous": "Kanauna",
     "next": "Kandaios",
     "chapters": [
@@ -10595,7 +10599,7 @@
   },
   {
     "lemma": "Kandaios",
-    "previous": "Demu Kanaura",
+    "previous": "Δήμου Κάναυρα",
     "next": "Kandake 1",
     "chapters": [
       {
@@ -11361,7 +11365,7 @@
   {
     "lemma": "Kapeleion",
     "previous": "Kapauta",
-    "next": "Kapeloi",
+    "next": "Κάπηλοι",
     "chapters": [
       {
         "start": 1888,
@@ -11371,7 +11375,7 @@
     ]
   },
   {
-    "lemma": "Kapeloi",
+    "lemma": "Κάπηλοι",
     "previous": "Kapeleion",
     "next": "Kapernaum",
     "chapters": [
@@ -11384,8 +11388,9 @@
   },
   {
     "lemma": "Kapernaum",
-    "previous": "Kapeloi",
+    "previous": "Κάπηλοι",
     "next": "Kapersburg",
+    "wp_link": "w:de:Kafarnaum",
     "chapters": [
       {
         "start": 1889,
@@ -11397,7 +11402,7 @@
   {
     "lemma": "Kapersburg",
     "previous": "Kapernaum",
-    "next": "Kapetis",
+    "next": "Καπέτις",
     "wp_link": "w:de:Kastell Kapersburg",
     "chapters": [
       {
@@ -11408,7 +11413,7 @@
     ]
   },
   {
-    "lemma": "Kapetis",
+    "lemma": "Καπέτις",
     "previous": "Kapersburg",
     "next": "Kapetolios",
     "chapters": [
@@ -11421,7 +11426,7 @@
   },
   {
     "lemma": "Kapetolios",
-    "previous": "Kapetis",
+    "previous": "Καπέτις",
     "next": "Kapetos 1",
     "chapters": [
       {
@@ -11480,7 +11485,7 @@
   {
     "lemma": "Kapharsalama",
     "previous": "Kapharsaba",
-    "next": "Kaphauros",
+    "next": "Κάφας ὄρος",
     "chapters": [
       {
         "start": 1892,
@@ -11490,8 +11495,20 @@
     ]
   },
   {
-    "lemma": "Kaphauros",
+    "lemma": "Κάφας ὄρος",
     "previous": "Kapharsalama",
+    "next": "Kaphauros",
+    "chapters": [
+      {
+        "start": 1892,
+        "end": 1892,
+        "author": "Fischer"
+      }
+    ]
+  },
+  {
+    "lemma": "Kaphauros",
+    "previous": "Κάφας ὄρος",
     "next": "Kapheira",
     "chapters": [
       {
@@ -11504,7 +11521,7 @@
   {
     "lemma": "Kapheira",
     "previous": "Kaphauros",
-    "next": "Kaphos oros",
+    "next": "Kaphene",
     "chapters": [
       {
         "start": 1892,
@@ -11514,20 +11531,8 @@
     ]
   },
   {
-    "lemma": "Kaphos oros",
-    "previous": "Kapheira",
-    "next": "Kaphene",
-    "chapters": [
-      {
-        "start": 1892,
-        "end": 1892,
-        "author": "Fischer"
-      }
-    ]
-  },
-  {
     "lemma": "Kaphene",
-    "previous": "Kaphos oros",
+    "previous": "Kapheira",
     "next": "Kaphereus",
     "chapters": [
       {
@@ -13194,6 +13199,7 @@
     "lemma": "Karmel 1",
     "previous": "Karmeios",
     "next": "Karmel 2",
+    "wp_link": "w:de:Karmel (Gebirge)",
     "chapters": [
       {
         "start": 1957,
@@ -14262,6 +14268,7 @@
     "lemma": "Karten",
     "previous": "Kartasina",
     "next": "Kartereia 1",
+    "wp_link": "w:de:Weltkarte",
     "chapters": [
       {
         "start": 2022,
@@ -14322,6 +14329,7 @@
     "lemma": "Karthago",
     "previous": "Karteron",
     "next": "Karthaia 1",
+    "wp_link": "w:de:Karthago",
     "chapters": [
       {
         "start": 2150,
@@ -15258,7 +15266,7 @@
   {
     "lemma": "Kasos 2",
     "previous": "Kasos 1",
-    "next": "Kasossos",
+    "next": "Κασωσσός",
     "chapters": [
       {
         "start": 2269,
@@ -15268,9 +15276,10 @@
     ]
   },
   {
-    "lemma": "Kasossos",
+    "lemma": "Κασωσσός",
     "previous": "Kasos 2",
     "next": "Kaspapyros",
+    "sort_key": "Kasossos",
     "chapters": [
       {
         "start": 2269,
@@ -15281,7 +15290,7 @@
   },
   {
     "lemma": "Kaspapyros",
-    "previous": "Kasossos",
+    "previous": "Κασωσσός",
     "next": "Kaspeira",
     "chapters": [
       {

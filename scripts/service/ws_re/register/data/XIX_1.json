@@ -1,7 +1,10 @@
 [
   {
-    "lemma": "P(e...",
+    "lemma": "Π(ε...",
+    "previous": "Parmenon 4",
     "next": "Pech",
+    "sort_key": "Pe",
+    "wp_link": "w:de:Priene",
     "chapters": [
       {
         "start": 1,
@@ -12,8 +15,8 @@
   },
   {
     "lemma": "Pech",
-    "previous": "P(e...",
-    "next": "Pechinoi",
+    "previous": "Π(ε...",
+    "next": "Πεχῖνοι",
     "wp_link": "w:de:Pech (Stoff)",
     "chapters": [
       {
@@ -24,9 +27,9 @@
     ]
   },
   {
-    "lemma": "Pechinoi",
+    "lemma": "Πεχῖνοι",
     "previous": "Pech",
-    "next": "Pechys",
+    "next": "Πῆχυς",
     "chapters": [
       {
         "start": 6,
@@ -36,8 +39,8 @@
     ]
   },
   {
-    "lemma": "Pechys",
-    "previous": "Pechinoi",
+    "lemma": "Πῆχυς",
+    "previous": "Πεχῖνοι",
     "next": "Pecse",
     "chapters": [
       {
@@ -49,7 +52,7 @@
   },
   {
     "lemma": "Pecse",
-    "previous": "Pechys",
+    "previous": "Πῆχυς",
     "next": "Pecten",
     "chapters": [
       {
@@ -122,7 +125,7 @@
   {
     "lemma": "Pecuarius",
     "previous": "Pecuarii 3",
-    "next": "Peculiaris 1",
+    "next": "Peculatus",
     "chapters": [
       {
         "start": 13,
@@ -132,8 +135,13 @@
     ]
   },
   {
-    "lemma": "Peculiaris 1",
+    "lemma": "Peculatus",
     "previous": "Pecuarius",
+    "next": "Peculiaris 1"
+  },
+  {
+    "lemma": "Peculiaris 1",
+    "previous": "Peculatus",
     "next": "Peculiaris 2",
     "chapters": [
       {
@@ -314,6 +322,7 @@
     "lemma": "Pedanius 1",
     "previous": "Pedanassos (-a?)",
     "next": "Pedanius 2",
+    "sort_key": "Pedanius 01",
     "chapters": [
       {
         "start": 18,
@@ -326,6 +335,7 @@
     "lemma": "Pedanius 2",
     "previous": "Pedanius 1",
     "next": "Pedanius 3",
+    "sort_key": "Pedanius 02",
     "chapters": [
       {
         "start": 19,
@@ -338,6 +348,7 @@
     "lemma": "Pedanius 3",
     "previous": "Pedanius 2",
     "next": "Pedanius 4",
+    "sort_key": "Pedanius 03",
     "chapters": [
       {
         "start": 19,
@@ -350,6 +361,7 @@
     "lemma": "Pedanius 4",
     "previous": "Pedanius 3",
     "next": "Pedanius 5",
+    "sort_key": "Pedanius 04",
     "chapters": [
       {
         "start": 19,
@@ -362,6 +374,7 @@
     "lemma": "Pedanius 5",
     "previous": "Pedanius 4",
     "next": "Pedanius 6",
+    "sort_key": "Pedanius 05",
     "chapters": [
       {
         "start": 20,
@@ -374,6 +387,7 @@
     "lemma": "Pedanius 6",
     "previous": "Pedanius 5",
     "next": "Pedanius 7",
+    "sort_key": "Pedanius 06",
     "chapters": [
       {
         "start": 21,
@@ -813,6 +827,7 @@
     "lemma": "Pedius 1",
     "previous": "Pedius",
     "next": "Pedius 2",
+    "wp_link": "w:de:Quintus Pedius",
     "chapters": [
       {
         "start": 38,
@@ -10300,6 +10315,8 @@
     "lemma": "Persius 5",
     "previous": "Persius 4",
     "next": "Persius 6",
+    "wp_link": "w:de:Aulus Persius Flaccus",
+    "ws_link": "s:de:Aulus Persius Flaccus",
     "chapters": [
       {
         "start": 1036,
