@@ -67,12 +67,15 @@ class Volume:
         match = _REGEX_MAPPING[self.type].search(self.name)
         key = "4"
         latin_number = 0
+        first_or_second_half = 0
         if self.name != "R":
             latin_number = roman.fromRoman(match.group(1))
+            if self.type != VolumeType.SUPPLEMENTS:
+                first_or_second_half = match.group(2) if match.group(2) else 0
         if self.type == VolumeType.FIRST_SERIES:
-            key = f"1_{latin_number:02d}_{match.group(2)}"
+            key = f"1_{latin_number:02d}_{first_or_second_half}"
         elif self.type == VolumeType.SECOND_SERIES:
-            key = f"2_{latin_number:02d}_{match.group(2)}"
+            key = f"2_{latin_number:02d}_{first_or_second_half}"
         elif self.type == VolumeType.SUPPLEMENTS:
             key = f"3_{latin_number:02d}"
         return key
