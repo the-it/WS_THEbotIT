@@ -89,7 +89,8 @@ _MAPPINGS = {
                  "pages": ((-1, 150002, 150317),)},
     "VIII A,2": {"source": ("PaulyWissowa5466", "Vergilius (P. Vergilius Maro) Vindeleia"),
                  "pages": ((1263, 160002, 160333),)},
-    "IX A,1": {"source": ("PaulyWissowa5466", "Vindelici Vulca"), "pages": ((-1, 170002, 170310),(1235, 170312, 170322),)},
+    "IX A,1": {"source": ("PaulyWissowa5466", "Vindelici Vulca"), "pages": ((-1, 170002, 170310),
+                                                                            (1235, 170312, 170322),)},
     "IX A,2": {"source": ("PaulyWissowa5466", "Vulcanius Zenius"), "pages": ((1279, 180002, 180302),)},
     "X A": {"source": ("PaulyWissowa5466", "Zenobia Zythos"), "pages": ((-1, 190002, 190213),)},
 }
