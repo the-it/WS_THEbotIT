@@ -1,5 +1,9 @@
 [
   {
+    "lemma": "Herodotos 7",
+    "next": "Aachen"
+  },
+  {
     "lemma": "Aachen",
     "previous": "Herodotos 7",
     "next": "Aalen",
@@ -128,10 +132,18 @@
   },
   {
     "lemma": "Abderos",
-    "previous": "Abdere"
+    "previous": "Abdere",
+    "next": "Abrincatui"
+  },
+  {
+    "lemma": "Abrincatui",
+    "previous": "Abderos",
+    "next": "Abronius",
+    "redirect": "Avranches"
   },
   {
     "lemma": "Abronius",
+    "previous": "Abrincatui",
     "next": "Absalom 1"
   },
   {
@@ -7675,7 +7687,17 @@
   {
     "lemma": "Basileia 2",
     "previous": "Basel",
-    "next": null
+    "next": "Basileia 3"
+  },
+  {
+    "lemma": "Basileia 3",
+    "previous": "Basileia 2",
+    "next": "Basileia 4",
+    "wp_link": "w:de:Basel"
+  },
+  {
+    "lemma": "Basileia 4",
+    "previous": "Basileia 3"
   },
   {
     "lemma": "Basilikon (to)",
@@ -7830,6 +7852,7 @@
   },
   {
     "lemma": "Bedaium",
+    "previous": null,
     "next": "Bedesis"
   },
   {
