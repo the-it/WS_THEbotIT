@@ -693,15 +693,20 @@
   },
   {
     "lemma": "Δεκατηλόγος",
-    "previous": "Dekane"
+    "previous": "Dekane",
+    "next": "Demetrios 100a",
+    "sort_key": "Dekatelogos"
   },
   {
     "lemma": "Demetrios 100a",
+    "previous": "Δεκατηλόγος",
     "next": "δημοσίωσις"
   },
   {
     "lemma": "δημοσίωσις",
     "previous": "Demetrios 100a",
+    "next": "Derkylos 2",
+    "sort_key": "demosiosis",
     "chapters": [
       {
         "start": 123,
@@ -709,6 +714,10 @@
         "author": "Ziebarth"
       }
     ]
+  },
+  {
+    "lemma": "Derkylos 2",
+    "previous": "δημοσίωσις"
   },
   {
     "lemma": "Dekane",

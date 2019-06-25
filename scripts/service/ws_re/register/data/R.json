@@ -288,7 +288,12 @@
   },
   {
     "lemma": "Agathinos 8",
-    "previous": "Agathinos 5a"
+    "previous": "Agathinos 5a",
+    "next": "Agathinos 9"
+  },
+  {
+    "lemma": "Agathinos 9",
+    "previous": "Agathinos 8"
   },
   {
     "lemma": "Agemon 2",
@@ -1309,7 +1314,6 @@
   {
     "lemma": "Betis",
     "previous": "Basilia 2",
-    "next": "ad Bivium",
     "chapters": [
       {
         "start": 66,
@@ -1318,9 +1322,13 @@
     ]
   },
   {
+    "lemma": "Biturix",
+    "next": "ad Bivium"
+  },
+  {
     "lemma": "ad Bivium",
-    "previous": "Betis",
-    "next": "Boconiana officina",
+    "previous": "Biturix",
+    "next": "Bizana",
     "chapters": [
       {
         "start": 67,
@@ -1329,8 +1337,11 @@
     ]
   },
   {
+    "lemma": "Bizana",
+    "previous": "ad Bivium"
+  },
+  {
     "lemma": "Boconiana officina",
-    "previous": "ad Bivium",
     "next": "Bodus 2",
     "redirect": true,
     "chapters": [

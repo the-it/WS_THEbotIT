@@ -257,7 +257,17 @@
   },
   {
     "lemma": "Autrico",
-    "previous": "Attius 10a"
+    "previous": "Attius 10a",
+    "next": "Battus"
+  },
+  {
+    "lemma": "Battus",
+    "previous": "Autrico",
+    "next": "Berothe"
+  },
+  {
+    "lemma": "Berothe",
+    "previous": "Battus"
   },
   {
     "lemma": "Battus, Bacchus",
@@ -288,19 +298,35 @@
   {
     "lemma": "Battus",
     "previous": "Autrico",
-    "next": "Berothe"
+    "next": "Βηρώθε"
   },
   {
-    "lemma": "Berothe",
-    "previous": "Battus"
+    "lemma": "Βηρώθε",
+    "previous": "Battus",
+    "next": "Bias 10"
   },
   {
     "lemma": "Bias 10",
-    "next": "Caecilius 141"
+    "previous": "Βηρώθε",
+    "next": "Caecilia Trebulla"
+  },
+  {
+    "lemma": "Caecilia Trebulla",
+    "previous": "Bias 10",
+    "next": "Celsus 18a",
+    "wp_link": "w:de:Caecilia Trebulla"
+  },
+  {
+    "lemma": "Celsus 18a",
+    "previous": "Caecilia Trebulla",
+    "next": "Chairemon 2a"
+  },
+  {
+    "lemma": "Chairemon 2a",
+    "previous": "Celsus 18a"
   },
   {
     "lemma": "Caecilius 141",
-    "previous": "Bias 10",
     "next": "Celsius 18a",
     "chapters": [
       {
@@ -5102,6 +5128,7 @@
   },
   {
     "lemma": "Skylla 1",
+    "previous": null,
     "next": "Sokratikerbriefe"
   },
   {
@@ -5190,6 +5217,7 @@
   },
   {
     "lemma": "Spartacus",
+    "previous": null,
     "next": "Statilius 19a"
   },
   {

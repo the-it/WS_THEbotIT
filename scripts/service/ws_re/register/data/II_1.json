@@ -2303,6 +2303,7 @@
     "lemma": "Apollonios 99–111",
     "previous": "Apollonios 98",
     "next": "Apollonios 99",
+    "sort_key": "Apollonios 099",
     "chapters": [
       {
         "start": 148,
@@ -2536,6 +2537,7 @@
     "lemma": "Apollonios 117",
     "previous": "Apollonios 116",
     "next": "Apollonios 118",
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 161,
@@ -2766,7 +2768,8 @@
   {
     "lemma": "Ἀπόλλωνος ἱερόν 1",
     "previous": "Apollonos",
-    "next": "Apollonos hieron 2",
+    "next": "Ἀπόλλωνος ἱερόν 2",
+    "sort_key": "Apollonoshieron 1",
     "chapters": [
       {
         "start": 164,
@@ -2776,9 +2779,10 @@
     ]
   },
   {
-    "lemma": "Apollonos hieron 2",
+    "lemma": "Ἀπόλλωνος ἱερόν 2",
     "previous": "Ἀπόλλωνος ἱερόν 1",
-    "next": "Apollonos men",
+    "next": "Ἀπόλλωνος μήν",
+    "sort_key": "Apollonoshieron 2",
     "chapters": [
       {
         "start": 164,
@@ -2788,21 +2792,16 @@
     ]
   },
   {
-    "lemma": "Apollonos men",
-    "previous": "Apollonos hieron 2",
+    "lemma": "Ἀπόλλωνος μήν",
+    "previous": "Ἀπόλλωνος ἱερόν 2",
     "next": "Ἀπόλλωνος νῆσος",
-    "chapters": [
-      {
-        "start": 164,
-        "end": 164,
-        "author": "Kubitschek"
-      }
-    ]
+    "sort_key": "Apollonosmen"
   },
   {
     "lemma": "Ἀπόλλωνος νῆσος",
-    "previous": "Apollonos men",
+    "previous": "Ἀπόλλωνος μήν",
     "next": "Apollophanes 1",
+    "sort_key": "Apollonosnesos",
     "chapters": [
       {
         "start": 164,
@@ -6727,7 +6726,7 @@
     "previous": "Aqua, Aquae 52",
     "next": "Aqua, Aquae 54",
     "sort_key": "Aquae 053",
-    "redirect": true,
+    "redirect": "Aqua, Aquae 41",
     "chapters": [
       {
         "start": 301,
@@ -12287,6 +12286,8 @@
     "lemma": "Ἀρχαί",
     "previous": "Archagoras 2",
     "next": "Archaianaktidai",
+    "sort_key": "Archai",
+    "wp_link": "w:de:Öffentliches Amt",
     "chapters": [
       {
         "start": 433,
@@ -32451,6 +32452,7 @@
     "lemma": "Arlape",
     "previous": "Arkyes",
     "next": "Arlaph",
+    "wp_link": "w:de:Pöchlarn",
     "chapters": [
       {
         "start": 1174,
@@ -32789,6 +32791,7 @@
     "lemma": "Ἀρμάτου",
     "previous": "Armatham",
     "next": "Armatura 1",
+    "sort_key": "Armatu",
     "chapters": [
       {
         "start": 1177,
