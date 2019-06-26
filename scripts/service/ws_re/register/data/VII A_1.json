@@ -734,7 +734,7 @@
     "lemma": "Trigibildos",
     "previous": "Triggua",
     "next": "Triginta Tyranni",
-    "redirect": true,
+    "redirect": "Tribigild",
     "chapters": [
       {
         "start": 129,
@@ -794,7 +794,7 @@
     "lemma": "Triglenos",
     "previous": "Trigleia",
     "next": "Trigletta",
-    "redirect": true,
+    "redirect": "Triglanthine",
     "chapters": [
       {
         "start": 135,
@@ -1116,9 +1116,10 @@
   },
   {
     "lemma": "Τρικωμία 1",
-    "previous": "Trikolonos 2",
-    "next": "Τρικωμία 2",
-    "redirect": true,
+    "previous": "Trikolonos 1",
+    "next": "Trikomia 2",
+    "sort_key": "Trikomia 1",
+    "redirect": "Tricomia",
     "chapters": [
       {
         "start": 151,
@@ -1127,7 +1128,7 @@
     ]
   },
   {
-    "lemma": "Τρικωμία 2",
+    "lemma": "Trikomia 2",
     "previous": "Τρικωμία 1",
     "next": "Τρικωμία 3",
     "chapters": [
@@ -1140,7 +1141,7 @@
   },
   {
     "lemma": "Τρικωμία 3",
-    "previous": "Τρικωμία 2",
+    "previous": "Trikomia 2",
     "next": "Τρικωμία 4",
     "sort_key": "Trikomia 3",
     "chapters": [
@@ -1253,7 +1254,7 @@
   {
     "lemma": "Trikrena",
     "previous": "Trikrana",
-    "next": "Trikrinon",
+    "next": "Τρικρίνων",
     "chapters": [
       {
         "start": 154,
@@ -1263,9 +1264,9 @@
     ]
   },
   {
-    "lemma": "Trikrinon",
+    "lemma": "Τρικρίνων",
     "previous": "Trikrena",
-    "next": "Trileukoi skopeloi",
+    "next": "Τρίλευκοι σκόπελοι",
     "chapters": [
       {
         "start": 155,
@@ -1275,20 +1276,15 @@
     ]
   },
   {
-    "lemma": "Trileukoi skopeloi",
-    "previous": "Trikrinon",
+    "lemma": "Τρίλευκοι σκόπελοι",
+    "previous": "Τρικρίνων",
     "next": "Trileukon",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 155,
-        "end": 155
-      }
-    ]
+    "sort_key": "Trileukois",
+    "redirect": "Trileukon"
   },
   {
     "lemma": "Trileukon",
-    "previous": "Trileukoi skopeloi",
+    "previous": "Τρίλευκοι σκόπελοι",
     "next": "Trilogie",
     "chapters": [
       {
@@ -1302,7 +1298,8 @@
     "lemma": "Trilogie",
     "previous": "Trileukon",
     "next": "Trimammion",
-    "redirect": true,
+    "redirect": "Tetralogie (Trilogie)",
+    "wp_link": "w:de:Mehrteiler",
     "chapters": [
       {
         "start": 155,
@@ -3235,6 +3232,7 @@
     "lemma": "Troiae lusus",
     "previous": "Troia 6",
     "next": "Troianus pagus",
+    "redirect": "Lusus Troiae",
     "chapters": [
       {
         "start": 601,
@@ -3325,6 +3323,8 @@
     "lemma": "Troilos 6",
     "previous": "Troilos 5",
     "next": "Troilos 7",
+    "sort_key": "Troilos 06",
+    "redirect": "Troius",
     "chapters": [
       {
         "start": 616,
@@ -4015,6 +4015,7 @@
     "lemma": "Trophos 2",
     "previous": "Trophos 1",
     "next": "Tropina",
+    "redirect": "Nutrix 1",
     "chapters": [
       {
         "start": 695,
@@ -4204,6 +4205,8 @@
     "lemma": "Trüffel",
     "previous": "Trucculensis Portus",
     "next": "Truentum",
+    "redirect": "Pilze",
+    "wp_link": "w:de:Trüffel",
     "chapters": [
       {
         "start": 701,
@@ -4334,6 +4337,8 @@
     "lemma": "Trutina",
     "previous": "Trumpilini",
     "next": "Truttedius 1",
+    "redirect": "Waage",
+    "wp_link": "w:de:Waage",
     "chapters": [
       {
         "start": 710,
@@ -4379,8 +4384,9 @@
   },
   {
     "lemma": "Trutulensis",
-    "previous": "Truttedius (sic!) 1",
+    "previous": "Truttidius 2",
     "next": "Trybaktra",
+    "redirect": "Trucculensis",
     "chapters": [
       {
         "start": 710,

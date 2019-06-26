@@ -334,7 +334,7 @@
     "lemma": "Koniaios",
     "previous": "Kongustos",
     "next": "Κονιακοί",
-    "redirect": true,
+    "redirect": "Kondaia",
     "chapters": [
       {
         "start": 1312,
@@ -359,7 +359,7 @@
     "lemma": "Konier",
     "previous": "Κονιακοί",
     "next": "Konika",
-    "redirect": true,
+    "redirect": "Cynetes",
     "chapters": [
       {
         "start": 1312,
@@ -867,7 +867,8 @@
     "lemma": "Κωνσούανται",
     "previous": "Konstanz",
     "next": "Konta",
-    "redirect": true,
+    "sort_key": "Konsuantai",
+    "redirect": "Cosuanetes",
     "chapters": [
       {
         "start": 1343,
@@ -939,7 +940,8 @@
     "lemma": "Κονουρεῖς",
     "previous": "Kontoporeia",
     "next": "Konz",
-    "redirect": true,
+    "sort_key": "Konureis",
+    "redirect": "Kynosura 4",
     "chapters": [
       {
         "start": 1344,
@@ -964,6 +966,7 @@
     "lemma": "Konzilienakten",
     "previous": "Konz",
     "next": "Koon",
+    "redirect": "Kirchenrechtliche Sammlungen",
     "chapters": [
       {
         "start": 1344,
@@ -993,6 +996,7 @@
     "lemma": "Koos",
     "previous": "Κῴων Θάλασσα",
     "next": "Κοπάδον",
+    "redirect": "Koios 3",
     "chapters": [
       {
         "start": 1345,
@@ -1065,6 +1069,7 @@
     "lemma": "Kopfsteuer",
     "previous": "Kopas",
     "next": "Kophaios",
+    "redirect": "Laographia",
     "chapters": [
       {
         "start": 1361,
@@ -1332,7 +1337,7 @@
     "lemma": "Kora",
     "previous": "Κοπούστορος",
     "next": "Koradea",
-    "redirect": true,
+    "redirect": "Persephone",
     "chapters": [
       {
         "start": 1369,
@@ -1446,7 +1451,7 @@
     "lemma": "Korakesion 2",
     "previous": "Korakesion 1",
     "next": "Κοράκιοι",
-    "redirect": true,
+    "redirect": "Korasion",
     "chapters": [
       {
         "start": 1371,
@@ -1532,7 +1537,8 @@
     "lemma": "Κωράλιος 1",
     "previous": "Κόρακος Πέτρα",
     "next": "Κωράλιος 2",
-    "redirect": true,
+    "sort_key": "Koralios 1",
+    "redirect": "Kuralios 1",
     "chapters": [
       {
         "start": 1372,
@@ -1544,7 +1550,8 @@
     "lemma": "Κωράλιος 2",
     "previous": "Κωράλιος 1",
     "next": "Κωράλιος 3",
-    "redirect": true,
+    "sort_key": "Koralios 2",
+    "redirect": "Kuarios",
     "chapters": [
       {
         "start": 1372,
@@ -1582,7 +1589,8 @@
     "lemma": "Κωράλιος 5",
     "previous": "Κωράλιος 4",
     "next": "Koralla",
-    "redirect": true,
+    "sort_key": "Koralios 5",
+    "redirect": "Karalis 1",
     "chapters": [
       {
         "start": 1373,
@@ -1793,6 +1801,7 @@
     "lemma": "Korbeuntos",
     "previous": "Korbasa",
     "next": "Κορβιανή",
+    "redirect": "Gorbeus",
     "chapters": [
       {
         "start": 1382,
@@ -1854,7 +1863,8 @@
     "lemma": "Κορδίσται",
     "previous": "Κόρδης",
     "next": "Κορδολέων, ὁ",
-    "redirect": true,
+    "sort_key": "Kordistai",
+    "redirect": "Scordisci",
     "chapters": [
       {
         "start": 1385,
@@ -1872,6 +1882,8 @@
     "lemma": "Κορδουηνή",
     "previous": "Κορδολέων, ὁ",
     "next": "Kordyle 1",
+    "sort_key": "Korduene",
+    "redirect": "Karduchoi",
     "chapters": [
       {
         "start": 1386,
@@ -7387,6 +7399,8 @@
     "lemma": "Κρίσπας",
     "previous": "Krisos 3",
     "next": "Krispos",
+    "sort_key": "Krispas",
+    "redirect": "Crispiana",
     "chapters": [
       {
         "start": 1893,
@@ -7410,6 +7424,7 @@
     "lemma": "Krissa",
     "previous": "Krispos",
     "next": "Krissos",
+    "redirect": "Krisa 1",
     "chapters": [
       {
         "start": 1894,
@@ -7421,6 +7436,7 @@
     "lemma": "Krissos",
     "previous": "Krissa",
     "next": "Κριστένου χωρίον",
+    "redirect": "Krisos 1",
     "chapters": [
       {
         "start": 1894,
@@ -10611,6 +10627,7 @@
     "lemma": "Kybomanteia",
     "previous": "Κυβιστητήρ",
     "next": "Kychreia",
+    "redirect": "Astragalomanteia",
     "chapters": [
       {
         "start": 2300,
@@ -10697,8 +10714,9 @@
   },
   {
     "lemma": "Kydias 1",
-    "previous": "Kydathenaieis, Kydathenaion",
+    "previous": "Kydas 2",
     "next": "Kydias 2",
+    "redirect": "Kekeides",
     "chapters": [
       {
         "start": 2302,

@@ -68,7 +68,7 @@
     "lemma": "Rabatamana",
     "previous": "Ῥαβανῖται",
     "next": "Rabathmoba",
-    "redirect": true,
+    "redirect": "Philadelpheia 3",
     "chapters": [
       {
         "start": 11,
@@ -80,7 +80,7 @@
     "lemma": "Rabathmoba",
     "previous": "Rabatamana",
     "next": "Rabbanai",
-    "redirect": true,
+    "redirect": "Areopolis 2",
     "chapters": [
       {
         "start": 11,
@@ -129,7 +129,7 @@
   {
     "lemma": "Ῥαβδομαντεία",
     "previous": "Ῥάβδιον",
-    "next": "Rabdu analepsis",
+    "next": "Ῥάβδου ἀνάληψις",
     "chapters": [
       {
         "start": 13,
@@ -139,7 +139,7 @@
     ]
   },
   {
-    "lemma": "Rabdu analepsis",
+    "lemma": "Ῥάβδου ἀνάληψις",
     "previous": "Ῥαβδομαντεία",
     "next": "Ῥαβδοῦχοι",
     "chapters": [
@@ -152,8 +152,10 @@
   },
   {
     "lemma": "Ῥαβδοῦχοι",
-    "previous": "Rabdu analepsis",
+    "previous": "Ῥάβδου ἀνάληψις",
     "next": "Ῥαβδοφόροι, ῥαβδοῦχοι",
+    "sort_key": "Rabduchoi",
+    "redirect": "Ῥαβδοφόροι, ῥαβδοῦχοι",
     "chapters": [
       {
         "start": 18,
@@ -190,7 +192,7 @@
     "lemma": "Rabe 2",
     "previous": "Rabe 1",
     "next": "Rabilos",
-    "redirect": true,
+    "redirect": "Corvus 4",
     "chapters": [
       {
         "start": 23,
@@ -334,8 +336,8 @@
   {
     "lemma": "Rabo",
     "previous": "Rabirius 9",
-    "next": "Rabocentus",
-    "redirect": true,
+    "next": "Rabuleius 1",
+    "redirect": "Arabon 2",
     "chapters": [
       {
         "start": 29,
@@ -469,7 +471,7 @@
     "lemma": "Radamaei",
     "previous": "Radagaisus",
     "next": "Radamanthys",
-    "redirect": true,
+    "redirect": "Rhadamaei",
     "chapters": [
       {
         "start": 31,
@@ -796,7 +798,8 @@
     "lemma": "Raedestus",
     "previous": "Raeda",
     "next": "Raeti",
-    "redirect": true,
+    "redirect": "Bisanthe",
+    "wp_link": "w:de:Tekirdağ",
     "chapters": [
       {
         "start": 42,
@@ -897,7 +900,7 @@
   {
     "lemma": "Ragando",
     "previous": "Ragaia",
-    "next": "Ragau",
+    "next": "Ῥαγαῦ",
     "chapters": [
       {
         "start": 127,
@@ -907,7 +910,7 @@
     ]
   },
   {
-    "lemma": "Ragau",
+    "lemma": "Ῥαγαῦ",
     "previous": "Ragando",
     "next": "Rages",
     "sort_key": "Ragau",
@@ -921,9 +924,9 @@
   },
   {
     "lemma": "Rages",
-    "previous": "Ragau",
+    "previous": "Ῥαγαῦ",
     "next": "Ragnahilda",
-    "redirect": true,
+    "redirect": "Ῥάγαια",
     "chapters": [
       {
         "start": 127,
@@ -1043,7 +1046,7 @@
     "lemma": "Ragonius 7",
     "previous": "Ragonius 6",
     "next": "Ragusium",
-    "redirect": true,
+    "redirect": "Celsus 17",
     "chapters": [
       {
         "start": 130,
@@ -1079,8 +1082,9 @@
   {
     "lemma": "Ῥαία",
     "previous": "Rahius",
-    "next": "Raida",
-    "redirect": true,
+    "next": "Ῥαίδα",
+    "sort_key": "Raia",
+    "redirect": "Ῥῆα",
     "chapters": [
       {
         "start": 130,
@@ -1089,9 +1093,9 @@
     ]
   },
   {
-    "lemma": "Raida",
+    "lemma": "Ῥαίδα",
     "previous": "Ῥαία",
-    "next": "Raiteai",
+    "next": "Ῥαιτέαι",
     "chapters": [
       {
         "start": 130,
@@ -1101,8 +1105,8 @@
     ]
   },
   {
-    "lemma": "Raiteai",
-    "previous": "Raida",
+    "lemma": "Ῥαιτέαι",
+    "previous": "Ῥαίδα",
     "next": "Ῥαϊθηνοί",
     "chapters": [
       {
@@ -1114,9 +1118,10 @@
   },
   {
     "lemma": "Ῥαϊθηνοί",
-    "previous": "Raiteai",
+    "previous": "Ῥαιτέαι",
     "next": "Ῥαῖκες",
-    "redirect": true,
+    "sort_key": "Raithenoi",
+    "redirect": "Rathenoi",
     "chapters": [
       {
         "start": 131,
@@ -1166,7 +1171,8 @@
     "lemma": "Ῥαίξ",
     "previous": "Raita",
     "next": "Ῥακάται",
-    "redirect": true,
+    "sort_key": "Raix",
+    "redirect": "Ῥαῖκες",
     "chapters": [
       {
         "start": 131,
@@ -1190,8 +1196,9 @@
   {
     "lemma": "Ῥακατρίαι",
     "previous": "Ῥακάται",
-    "next": "Rakeloi (-a?)",
-    "redirect": true,
+    "next": "Rakeloi (-a ?)",
+    "sort_key": "Rakatriai",
+    "redirect": "Rakatai",
     "chapters": [
       {
         "start": 132,
@@ -1200,7 +1207,7 @@
     ]
   },
   {
-    "lemma": "Rakeloi (-a?)",
+    "lemma": "Rakeloi (-a ?)",
     "previous": "Ῥακατρίαι",
     "next": "Rakotis",
     "chapters": [
@@ -1213,7 +1220,7 @@
   },
   {
     "lemma": "Rakotis",
-    "previous": "Rakeloi (-a?)",
+    "previous": "Rakeloi (-a ?)",
     "next": "Rallum",
     "wp_link": "w:de:Alexandria in der Antike",
     "chapters": [
@@ -1364,7 +1371,7 @@
     "lemma": "Ramath",
     "previous": "Ῥαμανῖται",
     "next": "Ramatha",
-    "redirect": true,
+    "redirect": "Rama, Ramath, Ramatha",
     "chapters": [
       {
         "start": 134,
@@ -1376,7 +1383,7 @@
     "lemma": "Ramatha",
     "previous": "Ramath",
     "next": "Ῥαμβακία",
-    "redirect": true,
+    "redirect": "Rama, Ramath, Ramatha",
     "chapters": [
       {
         "start": 134,
@@ -1401,7 +1408,7 @@
     "lemma": "Ramesses",
     "previous": "Ῥαμβακία",
     "next": "Rami",
-    "redirect": true,
+    "redirect": "Ramses",
     "chapters": [
       {
         "start": 134,
@@ -1473,7 +1480,7 @@
     "lemma": "Ramitus",
     "previous": "Ramista",
     "next": "Rammachius",
-    "redirect": true,
+    "redirect": "Remistus",
     "chapters": [
       {
         "start": 135,
@@ -1647,7 +1654,7 @@
     "lemma": "Ramoth 1",
     "previous": "Ῥαμνουσίς",
     "next": "Ramoth 2",
-    "redirect": true,
+    "redirect": "Aramotha",
     "chapters": [
       {
         "start": 140,
@@ -2158,7 +2165,7 @@
     "lemma": "Rappiana",
     "previous": "Rappha",
     "next": "Rapraua",
-    "redirect": true,
+    "redirect": "Gramrianae",
     "chapters": [
       {
         "start": 234,
@@ -2183,7 +2190,8 @@
     "lemma": "Raps",
     "previous": "Rapraua",
     "next": "Ῥάψα 1",
-    "redirect": true,
+    "redirect": "Kohl",
+    "wp_link": "w:de:Kohl",
     "chapters": [
       {
         "start": 237,
@@ -2233,7 +2241,7 @@
   {
     "lemma": "Ῥάψιοι",
     "previous": "Ῥαψεῖς",
-    "next": "Ῥαψῳδός",
+    "next": "Rapsodos",
     "sort_key": "Rapsioi",
     "chapters": [
       {
@@ -2244,7 +2252,7 @@
     ]
   },
   {
-    "lemma": "Ῥαψῳδός",
+    "lemma": "Rapsodos",
     "previous": "Ῥάψιοι",
     "next": "Ῥάπτα",
     "sort_key": "Rapsodos",
@@ -2259,9 +2267,9 @@
   },
   {
     "lemma": "Ῥάπτα",
-    "previous": "Ῥαψῳδός",
-    "next": "Rapton",
-    "redirect": true,
+    "previous": "Rapsodos",
+    "next": "Ῥάπτον",
+    "sort_key": "Rapta",
     "chapters": [
       {
         "start": 249,
@@ -2270,10 +2278,11 @@
     ]
   },
   {
-    "lemma": "Rapton",
+    "lemma": "Ῥάπτον",
     "previous": "Ῥάπτα",
     "next": "Ῥάπτος",
-    "redirect": true,
+    "sort_key": "Rapton",
+    "redirect": "Ῥάψιοι",
     "chapters": [
       {
         "start": 249,
@@ -2283,9 +2292,10 @@
   },
   {
     "lemma": "Ῥάπτος",
-    "previous": "Rapton",
+    "previous": "Ῥάπτον",
     "next": "Raptus 1",
-    "redirect": true,
+    "sort_key": "Raptos",
+    "redirect": "Ῥάψιοι",
     "chapters": [
       {
         "start": 249,
@@ -2308,7 +2318,7 @@
   {
     "lemma": "Raptus 2",
     "previous": "Raptus 1",
-    "next": " ̓Ράρ",
+    "next": "Rar",
     "wp_link": "w:de:Entführung",
     "chapters": [
       {
@@ -2319,7 +2329,7 @@
     ]
   },
   {
-    "lemma": " ̓Ράρ",
+    "lemma": "Rar",
     "previous": "Raptus 2",
     "next": "Raraunum",
     "sort_key": "Rar",
@@ -2333,7 +2343,7 @@
   },
   {
     "lemma": "Raraunum",
-    "previous": " ̓Ράρ",
+    "previous": "Rar",
     "next": "Rarentus",
     "chapters": [
       {
@@ -2346,7 +2356,7 @@
   {
     "lemma": "Rarentus",
     "previous": "Raraunum",
-    "next": "̓Ραρία",
+    "next": "Raria",
     "chapters": [
       {
         "start": 251,
@@ -2356,9 +2366,9 @@
     ]
   },
   {
-    "lemma": "̓Ραρία",
+    "lemma": "Raria",
     "previous": "Rarentus",
-    "next": "̓Ραριάς",
+    "next": " ̓Ραρiάς",
     "sort_key": "Raria",
     "chapters": [
       {
@@ -2369,9 +2379,9 @@
     ]
   },
   {
-    "lemma": "̓Ραριάς",
-    "previous": "̓Ραρία",
-    "next": "̓Ράριον",
+    "lemma": " ̓Ραρiάς",
+    "previous": "Raria",
+    "next": "Rarion",
     "sort_key": "Rarias",
     "chapters": [
       {
@@ -2382,8 +2392,8 @@
     ]
   },
   {
-    "lemma": "̓Ράριον",
-    "previous": "̓Ραριάς",
+    "lemma": "Rarion",
+    "previous": " ̓Ραρiάς",
     "next": " ̓Ρᾶρος",
     "sort_key": "Rarion",
     "chapters": [
@@ -2396,7 +2406,7 @@
   },
   {
     "lemma": " ̓Ρᾶρος",
-    "previous": "̓Ράριον",
+    "previous": "Rarion",
     "next": "Rarungae",
     "sort_key": "Raros",
     "chapters": [
@@ -2554,9 +2564,9 @@
   },
   {
     "lemma": "Rasparaganus",
-    "previous": "Raskuporis 3",
+    "previous": "Ῥασκούπορις",
     "next": "Rasta",
-    "redirect": true,
+    "redirect": "Aelius 119",
     "chapters": [
       {
         "start": 257,
@@ -2805,7 +2815,7 @@
     "lemma": "Ratio privata",
     "previous": "a rationibus",
     "next": "Ratis 1",
-    "redirect": true,
+    "redirect": "Res privata",
     "chapters": [
       {
         "start": 264,
@@ -3005,7 +3015,7 @@
     "lemma": "Rauraci",
     "previous": "Ῥαυνάθου κώμη",
     "next": "Rauranum",
-    "redirect": true,
+    "redirect": "Raurici",
     "chapters": [
       {
         "start": 289,
@@ -3017,7 +3027,7 @@
     "lemma": "Rauranum",
     "previous": "Rauraci",
     "next": "Raurici",
-    "redirect": true,
+    "redirect": "Raraunum",
     "chapters": [
       {
         "start": 289,
@@ -3162,6 +3172,7 @@
     "lemma": "Ravius 1",
     "previous": "Ravilla",
     "next": "Ravius 2",
+    "redirect": "Ravidus",
     "chapters": [
       {
         "start": 310,
@@ -3424,6 +3435,7 @@
     "lemma": "Recciarius",
     "previous": "Recaranus",
     "next": "Reccila",
+    "redirect": "Rechiarius",
     "chapters": [
       {
         "start": 354,
@@ -3435,6 +3447,7 @@
     "lemma": "Reccila",
     "previous": "Recciarius",
     "next": "Reccimundus",
+    "redirect": "Rechila",
     "chapters": [
       {
         "start": 354,
@@ -3445,7 +3458,8 @@
   {
     "lemma": "Reccimundus",
     "previous": "Reccila",
-    "next": "Receptio nominis",
+    "next": "Receptator",
+    "redirect": " Rechimundus",
     "chapters": [
       {
         "start": 354,
@@ -4044,6 +4058,7 @@
     "lemma": "Regentium",
     "previous": "Regendarius",
     "next": "Regenus",
+    "redirect": "Regni",
     "chapters": [
       {
         "start": 465,
@@ -4163,6 +4178,7 @@
     "lemma": "Regiae leges",
     "previous": "Regiae",
     "next": "Regianensis",
+    "redirect": "Lex#Seite_2316",
     "chapters": [
       {
         "start": 469,
@@ -4210,6 +4226,7 @@
     "lemma": "Regiates",
     "previous": "Regianum",
     "next": "Regifugium",
+    "redirect": "Veleiates Regiates",
     "chapters": [
       {
         "start": 469,
@@ -4340,7 +4357,7 @@
   {
     "lemma": "Reginia Maxima",
     "previous": "Reginca",
-    "next": "Reginos",
+    "next": "Ῥηγῖνος",
     "chapters": [
       {
         "start": 474,
@@ -4350,7 +4367,7 @@
     ]
   },
   {
-    "lemma": "Reginos",
+    "lemma": "Ῥηγῖνος",
     "previous": "Reginia Maxima",
     "next": "Reginum",
     "chapters": [
@@ -4363,8 +4380,9 @@
   },
   {
     "lemma": "Reginum",
-    "previous": "Reginos",
+    "previous": "Ῥηγῖνος",
     "next": "Reginum talentum",
+    "redirect": "Castra, Castrum 44",
     "chapters": [
       {
         "start": 475,
@@ -4460,6 +4478,8 @@
     "lemma": "Registo",
     "previous": "Regiones",
     "next": "Regisvilla",
+    "redirect": "Bisanthe",
+    "wp_link": "w:de:Tekirdağ",
     "chapters": [
       {
         "start": 486,
@@ -4471,6 +4491,7 @@
     "lemma": "Regisvilla",
     "previous": "Registo",
     "next": "Regium 1",
+    "redirect": "Regae, Regisvilla",
     "chapters": [
       {
         "start": 486,
@@ -4518,6 +4539,7 @@
     "lemma": "Regium 4",
     "previous": "Regium 3",
     "next": "Regium 5",
+    "redirect": "Ῥήγιον",
     "chapters": [
       {
         "start": 502,
@@ -4529,6 +4551,7 @@
     "lemma": "Regium 5",
     "previous": "Regium 4",
     "next": "Regium 6",
+    "redirect": "Regium 3",
     "chapters": [
       {
         "start": 502,
@@ -4540,6 +4563,7 @@
     "lemma": "Regium 6",
     "previous": "Regium 5",
     "next": "Regium atrium",
+    "redirect": "Leukopetra 2",
     "chapters": [
       {
         "start": 502,
@@ -6046,7 +6070,7 @@
     "lemma": "Rescriptum",
     "previous": "Rescripti codices",
     "next": "Resculum",
-    "redirect": true,
+    "redirect": "Epistula 1",
     "chapters": [
       {
         "start": 622,
@@ -6387,9 +6411,9 @@
   },
   {
     "lemma": "Restitutianus 1",
-    "previous": "Restio, Restiarius",
+    "previous": "Restio",
     "next": "Restitutianus 2",
-    "redirect": true,
+    "redirect": "Faltonius 4",
     "chapters": [
       {
         "start": 676,
@@ -6840,6 +6864,8 @@
     "lemma": "Rha-, Rhe-, Rhi-, Rho-, Rhu-",
     "previous": "Rex sacrorum",
     "next": "Rhabarber",
+    "sort_key": "Rha",
+    "redirect": true,
     "chapters": [
       {
         "start": 726,
@@ -7609,8 +7635,10 @@
   },
   {
     "lemma": "Rigomagum",
-    "previous": "Rigodunon",
+    "previous": "Rhigodounon",
     "next": "Rigomagus",
+    "redirect": "Rigomagus 1",
+    "wp_link": "w:de:Remagen",
     "chapters": [
       {
         "start": 804,
@@ -10021,7 +10049,7 @@
   {
     "lemma": "Ῥωμαῖα",
     "previous": "Rom",
-    "next": "Romaios",
+    "next": "Ῥωμαῖος",
     "chapters": [
       {
         "start": 1061,
@@ -10031,7 +10059,7 @@
     ]
   },
   {
-    "lemma": "Romaios",
+    "lemma": "Ῥωμαῖος",
     "previous": "Ῥωμαῖα",
     "next": "Romana",
     "chapters": [
@@ -10044,8 +10072,9 @@
   },
   {
     "lemma": "Romana",
-    "previous": "Romaios",
+    "previous": "Ῥωμαῖος",
     "next": "Romanius 1",
+    "redirect": "Aelius 182a",
     "chapters": [
       {
         "start": 1063,
@@ -10081,6 +10110,7 @@
     "lemma": "Romanos",
     "previous": "Romanius 2",
     "next": "Romanus 1",
+    "redirect": "Romanus 15",
     "chapters": [
       {
         "start": 1064,
@@ -10257,6 +10287,7 @@
     "lemma": "Romanus 14",
     "previous": "Romanus 13",
     "next": "Romanus 15",
+    "redirect": "Aelius 123",
     "chapters": [
       {
         "start": 1067,
@@ -11392,7 +11423,7 @@
     "lemma": "Rose",
     "previous": "Roscius 32",
     "next": "Rosea rura",
-    "redirect": true,
+    "redirect": "Gartenbau",
     "chapters": [
       {
         "start": 1128,
@@ -14549,6 +14580,7 @@
     "lemma": "Rumitalica",
     "previous": "Ruminus",
     "next": "Rumnici",
+    "redirect": "Rometalca 2",
     "chapters": [
       {
         "start": 1226,
@@ -14560,6 +14592,7 @@
     "lemma": "Rumnici",
     "previous": "Rumitalica",
     "next": "Rumo",
+    "redirect": "Rymmoi",
     "chapters": [
       {
         "start": 1226,
@@ -16728,7 +16761,7 @@
   {
     "lemma": "Ῥύνδακος 2",
     "previous": "Ῥύνδακος 1",
-    "next": "Rypara",
+    "next": "Ῥύπαρα",
     "sort_key": "Ryndakos 2",
     "chapters": [
       {
@@ -16739,7 +16772,7 @@
     ]
   },
   {
-    "lemma": "Rypara",
+    "lemma": "Ῥύπαρα",
     "previous": "Ῥύνδακος 2",
     "next": "Ῥυπαρογράφος",
     "chapters": [
@@ -16752,7 +16785,7 @@
   },
   {
     "lemma": "Ῥυπαρογράφος",
-    "previous": "Rypara",
+    "previous": "Ῥύπαρα",
     "next": "Ῥύπη",
     "sort_key": "Ryparographos",
     "chapters": [

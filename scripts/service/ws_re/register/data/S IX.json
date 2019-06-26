@@ -110,7 +110,17 @@
   },
   {
     "lemma": "Alea 1",
-    "previous": "Aipion"
+    "previous": "Aipion",
+    "next": "Alfenus 4"
+  },
+  {
+    "lemma": "Alfenus 4",
+    "previous": "Alea 1",
+    "next": "Aliphera"
+  },
+  {
+    "lemma": "Aliphera",
+    "previous": "Alfenus 4"
   },
   {
     "lemma": "Ankyron polis",
@@ -124,6 +134,7 @@
   },
   {
     "lemma": "Altinum 1",
+    "previous": null,
     "next": "Anicius 47"
   },
   {
@@ -203,7 +214,17 @@
   },
   {
     "lemma": "Arekrat",
-    "previous": "Areimanios"
+    "previous": "Areimanios",
+    "next": "Argyra 1"
+  },
+  {
+    "lemma": "Argyra 1",
+    "previous": "Arekrat",
+    "next": "Arranius 1"
+  },
+  {
+    "lemma": "Arranius 1",
+    "previous": "Argyra 1"
   },
   {
     "lemma": "Antonius 95a",
@@ -302,8 +323,12 @@
     ]
   },
   {
+    "lemma": "Ascheion",
+    "next": "Ἀσπὶς ἄκρα"
+  },
+  {
     "lemma": "Ἀσπὶς ἄκρα",
-    "previous": null,
+    "previous": "Ascheion",
     "next": "Asprenas 1a",
     "sort_key": "Aspis akra"
   },
@@ -430,6 +455,11 @@
   {
     "lemma": "Buphagion",
     "previous": "Bomos Athenas",
+    "next": "Bura 1"
+  },
+  {
+    "lemma": "Bura 1",
+    "previous": "Buphagion",
     "next": null
   },
   {
@@ -478,6 +508,7 @@
   },
   {
     "lemma": "Cassius 84",
+    "previous": null,
     "next": "Claudius 149a",
     "sort_key": "Cassius 084"
   },
@@ -485,6 +516,7 @@
     "lemma": "Claudius 149a",
     "previous": "Cassius 84",
     "next": "Clemens aqua",
+    "redirect": "Aeronius",
     "chapters": [
       {
         "start": 20,
@@ -1784,7 +1816,6 @@
   {
     "lemma": "Nauplia 1",
     "previous": "Munda 3",
-    "next": "Neusis",
     "chapters": [
       {
         "start": 415,
@@ -1794,9 +1825,14 @@
     ]
   },
   {
-    "lemma": "Neusis",
-    "previous": "Nauplia 1",
-    "next": "Neratius 15a",
+    "lemma": "Nerion",
+    "next": "νεῦσις"
+  },
+  {
+    "lemma": "νεῦσις",
+    "previous": "Nerion",
+    "next": "Nikochis",
+    "sort_key": "neusis",
     "chapters": [
       {
         "start": 415,
@@ -1806,8 +1842,16 @@
     ]
   },
   {
+    "lemma": "Nikochis",
+    "previous": "νεῦσις",
+    "next": "Ninon"
+  },
+  {
+    "lemma": "Ninon",
+    "previous": "Nikochis"
+  },
+  {
     "lemma": "Neratius 15a",
-    "previous": "Neusis",
     "next": "Nikochis",
     "chapters": [
       {
@@ -2312,6 +2356,12 @@
     "lemma": "Pontius 44"
   },
   {
+    "lemma": "Iberia"
+  },
+  {
+    "lemma": "Pontius 44"
+  },
+  {
     "lemma": "Iberia",
     "next": "Pontos Euxeinos"
   },
@@ -2330,6 +2380,12 @@
   {
     "lemma": "Seuthopolis",
     "previous": "Pontos Euxeinos"
+  },
+  {
+    "lemma": "M. Porcius Verus 45"
+  },
+  {
+    "lemma": "Seuthopolis"
   },
   {
     "lemma": "M. Porcius Verus 45"

@@ -43,7 +43,12 @@
     ]
   },
   {
+    "lemma": "Caltinus",
+    "next": "Campanius 1"
+  },
+  {
     "lemma": "Campanius 1",
+    "previous": "Caltinus",
     "next": "Caninius 5"
   },
   {
@@ -554,7 +559,22 @@
   },
   {
     "lemma": "Aguntum",
-    "previous": "Agesilaos 8"
+    "previous": "Agesilaos 8",
+    "next": "Aigosthena"
+  },
+  {
+    "lemma": "Aigosthena",
+    "previous": "Aguntum",
+    "next": "Αἰνύρων χῶρος"
+  },
+  {
+    "lemma": "Αἰνύρων χῶρος",
+    "previous": "Aigosthena",
+    "next": "Akephalos"
+  },
+  {
+    "lemma": "Akephalos",
+    "previous": "Αἰνύρων χῶρος"
   },
   {
     "lemma": "Agesilaos 7b",
@@ -657,7 +677,6 @@
   {
     "lemma": "In Alpe Iulia",
     "previous": "Allius 1a",
-    "next": "Amelas",
     "sort_key": "Alpe Iulia, In",
     "chapters": [
       {
@@ -668,11 +687,25 @@
     ]
   },
   {
+    "lemma": "In Alpe Iulia",
+    "next": "Amelas"
+  },
+  {
     "lemma": "Amelas",
-    "previous": "In Alpe Iulia"
+    "previous": "In Alpe Iulia",
+    "next": "Anaxagoras 4"
+  },
+  {
+    "lemma": "Anaxagoras 4",
+    "previous": "Amelas"
+  },
+  {
+    "lemma": "Anaximenes 1",
+    "next": "Andania 1"
   },
   {
     "lemma": "Andania 1",
+    "previous": "Anaximenes 1",
     "next": "Andautonia"
   },
   {
@@ -934,11 +967,22 @@
   },
   {
     "lemma": "Argura 1",
-    "previous": "Arcani"
+    "previous": "Arcani",
+    "next": "Ariaioi"
+  },
+  {
+    "lemma": "Ariaioi",
+    "previous": "Argura 1"
+  },
+  {
+    "lemma": "Antonius 76",
+    "next": "Antonius 80"
   },
   {
     "lemma": "Antonius 80",
-    "next": "Antonius 107"
+    "previous": "Antonius 76",
+    "next": "Antonius 107",
+    "sort_key": "Antonius 080"
   },
   {
     "lemma": "Antonius 107",
@@ -1652,7 +1696,8 @@
   },
   {
     "lemma": "Charax 19",
-    "previous": "Chalke 2"
+    "previous": "Chalke 2",
+    "next": null
   },
   {
     "lemma": "Cilnius 3",
@@ -1704,7 +1749,12 @@
   },
   {
     "lemma": "Claudius 285",
-    "previous": "Claudius 262"
+    "previous": "Claudius 262",
+    "next": "Claudius 288aaa"
+  },
+  {
+    "lemma": "Claudius 288aaa",
+    "previous": "Claudius 285"
   },
   {
     "lemma": "Claudius 288a",
@@ -1996,10 +2046,16 @@
   {
     "lemma": "Cossonius 3a",
     "previous": "Cossonius 3",
-    "next": null
+    "next": "Crepereius 5a"
+  },
+  {
+    "lemma": "Crepereius 5a",
+    "previous": "Cossonius 3a",
+    "next": "Crispinus 5a"
   },
   {
     "lemma": "Crispinus 5a",
+    "previous": "Crepereius 5a",
     "next": "Cupressenus",
     "chapters": [
       {
@@ -2011,7 +2067,7 @@
   {
     "lemma": "Cupressenus",
     "previous": "Crispinus 5a",
-    "next": "Curtius 36c",
+    "next": "Curtius 37a",
     "chapters": [
       {
         "start": 191,
@@ -2021,8 +2077,16 @@
     ]
   },
   {
-    "lemma": "Curtius 36c",
+    "lemma": "Curtius 37a",
     "previous": "Cupressenus",
+    "next": "Curtius 37b"
+  },
+  {
+    "lemma": "Curtius 37b",
+    "previous": "Curtius 37a"
+  },
+  {
+    "lemma": "Curtius 36c",
     "next": "Curtius 36b",
     "chapters": [
       {
@@ -2035,7 +2099,6 @@
   {
     "lemma": "Curtius 36b",
     "previous": "Curtius 36c",
-    "next": "Cutius 1a",
     "chapters": [
       {
         "start": 192,
@@ -2045,8 +2108,17 @@
     ]
   },
   {
+    "lemma": "Curtius 37a",
+    "next": "Curtius 37b"
+  },
+  {
+    "lemma": "Curtius 37b",
+    "previous": "Curtius 37a",
+    "next": "Cutius 1a"
+  },
+  {
     "lemma": "Cutius 1a",
-    "previous": "Curtius 36b",
+    "previous": "Curtius 37b",
     "next": "Dasumius aa",
     "chapters": [
       {
@@ -2059,6 +2131,7 @@
   {
     "lemma": "Dasumius aa",
     "previous": "Cutius 1a",
+    "next": "Demokritos 6",
     "chapters": [
       {
         "start": 193,
@@ -2066,6 +2139,10 @@
         "author": "Hanslik"
       }
     ]
+  },
+  {
+    "lemma": "Demokritos 6",
+    "previous": "Dasumius aa"
   },
   {
     "lemma": "Dasumius 1a",
@@ -3800,6 +3877,7 @@
   },
   {
     "lemma": "Arborius 5",
+    "previous": null,
     "next": "Archedemos 5",
     "chapters": [
       {
@@ -3812,7 +3890,11 @@
   {
     "lemma": "Archedemos 5",
     "previous": "Arborius 5",
-    "next": null
+    "next": "Archedemos 6"
+  },
+  {
+    "lemma": "Archedemos 6",
+    "previous": "Archedemos 5"
   },
   {
     "lemma": "Archedemos 5.6",
@@ -3825,8 +3907,12 @@
     ]
   },
   {
+    "lemma": "Archedemos 5",
+    "next": "Archedemos 6"
+  },
+  {
     "lemma": "Archedemos 6",
-    "previous": null,
+    "previous": "Archedemos 5",
     "next": "Arinthaeus 3"
   },
   {

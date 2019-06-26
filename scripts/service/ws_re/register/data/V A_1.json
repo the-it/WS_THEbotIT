@@ -184,7 +184,7 @@
     "lemma": "Taurocholia",
     "previous": "Taurocentae",
     "next": "Tauroentum",
-    "redirect": true,
+    "redirect": "Ταυροκαθάψια",
     "chapters": [
       {
         "start": 22,
@@ -196,7 +196,7 @@
     "lemma": "Tauroentum",
     "previous": "Taurocholia",
     "next": "Tauroi 1",
-    "redirect": true,
+    "redirect": "Tauriana",
     "chapters": [
       {
         "start": 22,
@@ -245,7 +245,7 @@
     "lemma": "Tauromenes",
     "previous": "Ταυροκαθάψια",
     "next": "Tauromenion",
-    "redirect": true,
+    "redirect": "Tauros 1",
     "chapters": [
       {
         "start": 27,
@@ -305,7 +305,7 @@
     "lemma": "Taurophagos",
     "previous": "Tauron",
     "next": "Taurophonia",
-    "redirect": true,
+    "redirect": "Tauros 1",
     "chapters": [
       {
         "start": 33,
@@ -317,7 +317,7 @@
     "lemma": "Taurophonia",
     "previous": "Taurophagos",
     "next": "Taurophonos",
-    "redirect": true,
+    "redirect": "Ταυροκαθάψια",
     "chapters": [
       {
         "start": 33,
@@ -341,7 +341,7 @@
     "lemma": "Tauropis",
     "previous": "Taurophonos",
     "next": "Tauropoleites",
-    "redirect": true,
+    "redirect": "Tauropos",
     "chapters": [
       {
         "start": 33,
@@ -365,7 +365,7 @@
     "lemma": "Tauropolia",
     "previous": "Tauropoleites",
     "next": "Tauropolis 1",
-    "redirect": true,
+    "redirect": "Ταυροκαθάψια",
     "chapters": [
       {
         "start": 33,
@@ -449,7 +449,8 @@
     "lemma": "Tauros 1",
     "previous": "Tauroprosopos",
     "next": "Tauros 2",
-    "redirect": true,
+    "sort_key": "Tauros 01",
+    "redirect": "Tauromenion",
     "chapters": [
       {
         "start": 39,
@@ -474,7 +475,8 @@
     "lemma": "Tauros 3",
     "previous": "Tauros 2",
     "next": "Tauros 4",
-    "redirect": true,
+    "sort_key": "Tauros 03",
+    "redirect": "Θρήξ",
     "chapters": [
       {
         "start": 39,
@@ -537,6 +539,8 @@
     "lemma": "Tauros 8",
     "previous": "Tauros 7",
     "next": "Tauros 9",
+    "sort_key": "Tauros 08",
+    "redirect": "Taureos",
     "chapters": [
       {
         "start": 52,
@@ -585,7 +589,7 @@
     "lemma": "Tauroskythai",
     "previous": "Tauros 11",
     "next": "Taurosthenes 1",
-    "redirect": true,
+    "redirect": "Tauroi 1",
     "chapters": [
       {
         "start": 69,
@@ -621,6 +625,7 @@
     "lemma": "Taurotheria",
     "previous": "Taurosthenes 2",
     "next": "Taurubulae",
+    "redirect": "Ταυροκαθάψια",
     "chapters": [
       {
         "start": 69,
@@ -644,6 +649,7 @@
     "lemma": "Tauruntus",
     "previous": "Taurubulae",
     "next": "Taurunum",
+    "redirect": true,
     "chapters": [
       {
         "start": 69,
@@ -694,6 +700,8 @@
     "lemma": "Taurus 3",
     "previous": "Taurus 2",
     "next": "Taurus 4",
+    "sort_key": "Taurus 03",
+    "redirect": "Flavius 26",
     "chapters": [
       {
         "start": 70,
@@ -911,6 +919,7 @@
     "lemma": "Tauti",
     "previous": "Tauthe",
     "next": "Ταυτίκη",
+    "redirect": "Ala 2#Tautorum",
     "chapters": [
       {
         "start": 73,
@@ -972,6 +981,7 @@
     "lemma": "Taxgaition",
     "previous": "Ταξεῖνα",
     "next": "Ταξιάνα",
+    "redirect": "Tasgaetium",
     "chapters": [
       {
         "start": 75,
@@ -11149,6 +11159,7 @@
     "lemma": "Teuita",
     "previous": "Teuglussa",
     "next": "Teukris",
+    "redirect": "Tyita",
     "chapters": [
       {
         "start": 1121,
@@ -11268,6 +11279,7 @@
     "lemma": "Teumense",
     "previous": "Teukros 7",
     "next": "Teumessos 1",
+    "redirect": "Θελμενισσός",
     "chapters": [
       {
         "start": 1134,

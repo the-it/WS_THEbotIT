@@ -519,7 +519,7 @@
   {
     "lemma": "Silentiarius",
     "previous": "Silentiacus",
-    "next": "Sileoi",
+    "next": "Σίλεοι",
     "chapters": [
       {
         "start": 57,
@@ -529,7 +529,7 @@
     ]
   },
   {
-    "lemma": "Sileoi",
+    "lemma": "Σίλεοι",
     "previous": "Silentiarius",
     "next": "Siler",
     "chapters": [
@@ -542,8 +542,9 @@
   },
   {
     "lemma": "Siler",
-    "previous": "Sileoi",
+    "previous": "Σίλεοι",
     "next": "Silerus",
+    "redirect": "Silarus 1",
     "chapters": [
       {
         "start": 59,
@@ -555,6 +556,7 @@
     "lemma": "Silerus",
     "previous": "Siler",
     "next": "Silesva",
+    "redirect": "Silarus 1",
     "chapters": [
       {
         "start": 59,
@@ -602,6 +604,7 @@
     "lemma": "Silianus",
     "previous": "Siliacus, Silliacus",
     "next": "Silicernium",
+    "redirect": "Licinus 137",
     "chapters": [
       {
         "start": 59,
@@ -709,7 +712,7 @@
   {
     "lemma": "Silingae",
     "previous": "Silindokome",
-    "next": "Siliniacus, Silliniacus",
+    "next": "Silinacus, Silliniacus",
     "chapters": [
       {
         "start": 61,
@@ -769,6 +772,7 @@
     "lemma": "Silitum",
     "previous": "Silis 2",
     "next": "Silius",
+    "redirect": "Silvium 1",
     "chapters": [
       {
         "start": 68,
@@ -1127,7 +1131,7 @@
     "lemma": "Silius 27d",
     "previous": "Silius 27c",
     "next": "Silius 28",
-    "redirect": true,
+    "redirect": "Sileus",
     "chapters": [
       {
         "start": 96,
@@ -8128,7 +8132,7 @@
   {
     "lemma": "Skeptiker",
     "previous": "Skepsis 2",
-    "next": "Skeptos",
+    "next": "Σκέπτος",
     "chapters": [
       {
         "start": 515,
@@ -8138,9 +8142,9 @@
     ]
   },
   {
-    "lemma": "Skeptos",
+    "lemma": "Σκέπτος",
     "previous": "Skeptiker",
-    "next": "Skeptron",
+    "next": "Σκῆπτρον",
     "chapters": [
       {
         "start": 515,
@@ -8150,9 +8154,11 @@
     ]
   },
   {
-    "lemma": "Skeptron",
-    "previous": "Skeptos",
+    "lemma": "Σκῆπτρον",
+    "previous": "Σκέπτος",
     "next": "Skeuothek",
+    "sort_key": "Skeptron",
+    "redirect": "Sceptrum",
     "chapters": [
       {
         "start": 516,
@@ -8162,7 +8168,7 @@
   },
   {
     "lemma": "Skeuothek",
-    "previous": "Skeptron",
+    "previous": "Σκῆπτρον",
     "next": "Skia",
     "chapters": [
       {
@@ -14453,7 +14459,7 @@
   {
     "lemma": "Sophisten",
     "previous": "Sophilos 2",
-    "next": "Sophoi hepta",
+    "next": "Σοφοὶ ἑπτά",
     "chapters": [
       {
         "start": 1040,
@@ -14462,7 +14468,7 @@
     ]
   },
   {
-    "lemma": "Sophoi hepta",
+    "lemma": "Σοφοὶ ἑπτά",
     "previous": "Sophisten",
     "next": "Sophokles 1",
     "chapters": [
@@ -14474,8 +14480,10 @@
   },
   {
     "lemma": "Sophokles 1",
-    "previous": "Sophoi hepta",
+    "previous": "Σοφοὶ ἑπτά",
     "next": "Sophokles 2",
+    "wp_link": "w:de:Sophokles",
+    "ws_link": "s:de:Sophokles",
     "chapters": [
       {
         "start": 1040,

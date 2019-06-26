@@ -52,7 +52,8 @@
     "lemma": "Θεσεβώνη",
     "previous": "θese",
     "next": "Theseus 1",
-    "redirect": true,
+    "sort_key": "Thesebone",
+    "redirect": "Thesba",
     "chapters": [
       {
         "start": 14,
@@ -101,7 +102,7 @@
     "lemma": "Thesida",
     "previous": "Theseus 3",
     "next": "Thesimenes",
-    "redirect": true,
+    "redirect": "Theleda",
     "chapters": [
       {
         "start": 14,
@@ -125,7 +126,7 @@
     "lemma": "Thesmia",
     "previous": "Thesimenes",
     "next": "Thesmophoria",
-    "redirect": true,
+    "redirect": "Thesmophoros",
     "chapters": [
       {
         "start": 15,
@@ -149,7 +150,7 @@
     "lemma": "Thesmophorion",
     "previous": "Thesmophoria",
     "next": "Thesmophorios",
-    "redirect": true,
+    "redirect": "Thesmophorios",
     "chapters": [
       {
         "start": 28,
@@ -932,6 +933,7 @@
     "lemma": "Theuda",
     "previous": "Thettale",
     "next": "Theudalis",
+    "redirect": "Theudense oppidum",
     "chapters": [
       {
         "start": 243,
@@ -979,6 +981,7 @@
     "lemma": "Theudimund",
     "previous": "Theudense (oppidum)",
     "next": "Theudios",
+    "redirect": "Theodimund",
     "chapters": [
       {
         "start": 244,
@@ -6949,7 +6952,7 @@
   {
     "lemma": "Thyterion",
     "previous": "Thyssos",
-    "next": "Tiagar",
+    "next": "Τιάγαρ",
     "chapters": [
       {
         "start": 757,
@@ -6959,9 +6962,9 @@
     ]
   },
   {
-    "lemma": "Tiagar",
+    "lemma": "Τιάγαρ",
     "previous": "Thyterion",
-    "next": "Tiagura",
+    "next": "Τιάγουρα",
     "chapters": [
       {
         "start": 760,
@@ -6971,9 +6974,11 @@
     ]
   },
   {
-    "lemma": "Tiagura",
-    "previous": "Tiagar",
+    "lemma": "Τιάγουρα",
+    "previous": "Τιάγαρ",
     "next": "Tiamos",
+    "sort_key": "Tiagura",
+    "redirect": "Τιάτουρα",
     "chapters": [
       {
         "start": 760,
@@ -6983,7 +6988,7 @@
   },
   {
     "lemma": "Tiamos",
-    "previous": "Tiagura",
+    "previous": "Τιάγουρα",
     "next": "Tiana",
     "chapters": [
       {
@@ -7098,6 +7103,7 @@
     "lemma": "Tiassos",
     "previous": "Tiason",
     "next": "Τιάτουρα",
+    "redirect": "Tiasa",
     "chapters": [
       {
         "start": 763,

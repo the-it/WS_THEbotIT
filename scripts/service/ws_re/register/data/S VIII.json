@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Achaios 8",
+    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -37,7 +38,7 @@
   {
     "lemma": "Aisopos 6",
     "previous": "Agathokles 36",
-    "next": "Alexandrina aqua",
+    "next": "Alexandri(a)na aqua",
     "chapters": [
       {
         "start": 1,
@@ -47,8 +48,21 @@
     ]
   },
   {
-    "lemma": "Alexandrina aqua",
+    "lemma": "Alexandri(a)na aqua",
     "previous": "Aisopos 6"
+  },
+  {
+    "lemma": "Aisopos 6",
+    "next": "Alexandrina aqua"
+  },
+  {
+    "lemma": "Alexandrina aqua",
+    "previous": "Aisopos 6",
+    "next": "Alko"
+  },
+  {
+    "lemma": "Alko",
+    "previous": "Alexandrina aqua"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -280,7 +294,7 @@
     "lemma": "Aristo",
     "previous": "Aristarchos 21a",
     "next": "Aristodemos 7a",
-    "redirect": true,
+    "redirect": "Titius",
     "chapters": [
       {
         "start": 6,
@@ -315,7 +329,17 @@
   },
   {
     "lemma": "Aristonidas 4",
-    "previous": "Aristonidas 1"
+    "previous": "Aristonidas 1",
+    "next": "Asklepiades 48a"
+  },
+  {
+    "lemma": "Asklepiades 48a",
+    "previous": "Aristonidas 4",
+    "next": "Asklepiodoros 13"
+  },
+  {
+    "lemma": "Asklepiodoros 13",
+    "previous": "Asklepiades 48a"
   },
   {
     "lemma": "Aristonidas 2",
@@ -366,11 +390,27 @@
   },
   {
     "lemma": "Asklepiodoros 13",
-    "previous": "Asklepiades 48a"
+    "previous": "Asklepiades 48a",
+    "next": "Attica aqua"
+  },
+  {
+    "lemma": "Attica aqua",
+    "previous": "Asklepiodoros 13"
+  },
+  {
+    "lemma": "Augusta aqua 1",
+    "next": "Augusta aqua 2"
+  },
+  {
+    "lemma": "Augusta aqua 2",
+    "previous": "Augusta aqua 1",
+    "next": "Aurelia aqua"
   },
   {
     "lemma": "Aurelia aqua",
-    "next": "Bathykleia"
+    "previous": "Augusta aqua 2",
+    "next": "Bathykleia",
+    "redirect": "Traiana aqua"
   },
   {
     "lemma": "Bathykleia",
@@ -410,7 +450,12 @@
   },
   {
     "lemma": "Benenatus 3",
-    "previous": "Benenatus 2"
+    "previous": "Benenatus 2",
+    "next": "Benenatus 4"
+  },
+  {
+    "lemma": "Benenatus 4",
+    "previous": "Benenatus 3"
   },
   {
     "lemma": "Asklepiades 48a",
@@ -661,7 +706,12 @@
   },
   {
     "lemma": "Damokritos 4",
-    "previous": "Dalmatia"
+    "previous": "Dalmatia",
+    "next": "December 2"
+  },
+  {
+    "lemma": "December 2",
+    "previous": "Damokritos 4"
   },
   {
     "lemma": "Claudia aqua",
@@ -701,10 +751,12 @@
   },
   {
     "lemma": "December 2",
-    "previous": "Damokritos 4"
+    "previous": "Damokritos 4",
+    "next": "Demetrios 125b"
   },
   {
     "lemma": "Demetrios 125b",
+    "previous": "December 2",
     "next": "Demokydes"
   },
   {
@@ -777,6 +829,7 @@
   },
   {
     "lemma": "Diodoros",
+    "previous": null,
     "next": "Dionysios 161b"
   },
   {
@@ -794,7 +847,8 @@
   },
   {
     "lemma": "Drakontides",
-    "previous": "Dionysios 161b"
+    "previous": "Dionysios 161b",
+    "next": null
   },
   {
     "lemma": "Drakontides 3a",
@@ -1009,6 +1063,7 @@
   {
     "lemma": "Felix 23a",
     "previous": "Eutyches 7b",
+    "next": null,
     "chapters": [
       {
         "start": 169,
@@ -1104,6 +1159,7 @@
   },
   {
     "lemma": "Glaukos 48a",
+    "previous": null,
     "next": "Gorgias 13"
   },
   {
@@ -1121,7 +1177,8 @@
   },
   {
     "lemma": "Hegetorides",
-    "previous": "Gorgias 13"
+    "previous": "Gorgias 13",
+    "next": null
   },
   {
     "lemma": "Hegetorides 3",
@@ -1605,7 +1662,7 @@
   {
     "lemma": "Lamprias 5",
     "previous": "Kyprides",
-    "next": "Libelle",
+    "next": "Lamprias 6",
     "chapters": [
       {
         "start": 257,
@@ -1615,8 +1672,14 @@
     ]
   },
   {
-    "lemma": "Libelle",
+    "lemma": "Lamprias 6",
     "previous": "Lamprias 5",
+    "next": "Libelle",
+    "redirect": true
+  },
+  {
+    "lemma": "Libelle",
+    "previous": "Lamprias 6",
     "next": "Likymna",
     "chapters": [
       {
@@ -3777,18 +3840,18 @@
   {
     "lemma": "Antonius 30",
     "previous": "Achilleus 8a",
-    "next": null,
+    "next": "Apollodoros 23",
     "sort_key": "Antonius 030"
   },
   {
-    "lemma": "Apollonios 23",
-    "previous": null,
+    "lemma": "Apollodoros 23",
+    "previous": "Antonius 30",
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
   {
     "lemma": "Caesaris thronus",
-    "previous": "Apollonios 23",
+    "previous": "Apollodoros 23",
     "next": "Damolyte",
     "chapters": [
       {

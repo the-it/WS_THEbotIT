@@ -55,6 +55,7 @@
     "lemma": "Vergilius grammaticus",
     "previous": "Vergilius Romanus",
     "next": "Verginius",
+    "redirect": "Virgilius",
     "chapters": [
       {
         "start": 1507,
@@ -270,7 +271,7 @@
   },
   {
     "lemma": "Verginius 11a",
-    "previous": "Verginius 11-23",
+    "previous": "Verginius 10",
     "next": "Verginius 11",
     "chapters": [
       {
@@ -536,6 +537,7 @@
     "lemma": "Vergium",
     "previous": "Vergivius Oceanus",
     "next": "Vergium castrum",
+    "redirect": "Bergium",
     "chapters": [
       {
         "start": 1544,
@@ -6178,9 +6180,9 @@
   },
   {
     "lemma": "Ad Vicesimum 5ff.",
-    "previous": "Ad Vicesimum 4",
+    "previous": "Vicesimum, ad 4",
     "next": "Vicetia",
-    "redirect": true,
+    "redirect": "Ad Vice(n)simum 5",
     "chapters": [
       {
         "start": 2053,
@@ -6263,6 +6265,7 @@
     "lemma": "Vicinium",
     "previous": "Vicinia",
     "next": "Vicinnus",
+    "redirect": "Ulcinium",
     "chapters": [
       {
         "start": 2056,
@@ -6298,6 +6301,7 @@
     "lemma": "Vicis",
     "previous": "Vicinonia",
     "next": "Vicres",
+    "redirect": "Vincens",
     "chapters": [
       {
         "start": 2056,
@@ -6321,6 +6325,7 @@
     "lemma": "Victa",
     "previous": "Vicres",
     "next": "victimarius",
+    "redirect": "Vica Pota",
     "chapters": [
       {
         "start": 2056,
@@ -6354,7 +6359,9 @@
   {
     "lemma": "Victo(h)ali",
     "previous": "Victium",
-    "next": "Victor 1",
+    "next": "Victor",
+    "sort_key": "Victohali",
+    "redirect": "Victovali",
     "chapters": [
       {
         "start": 2056,
@@ -6363,10 +6370,16 @@
     ]
   },
   {
-    "lemma": "Victor 1",
+    "lemma": "Victor",
     "previous": "Victo(h)ali",
+    "next": "Victor 1",
+    "redirect": true
+  },
+  {
+    "lemma": "Victor 1",
+    "previous": "Victor",
     "next": "Victor 2",
-    "redirect": true,
+    "sort_key": "Victor 01",
     "chapters": [
       {
         "start": 2057,
@@ -6529,6 +6542,7 @@
     "lemma": "Victor 14",
     "previous": "Victor 13",
     "next": "Victor 15",
+    "redirect": "Olympios 8",
     "chapters": [
       {
         "start": 2060,
@@ -9563,7 +9577,7 @@
     "lemma": "Vanduara",
     "previous": "Οὐάλω",
     "next": "Varae",
-    "redirect": true,
+    "redirect": "Vindogara",
     "chapters": [
       {
         "start": 2391,

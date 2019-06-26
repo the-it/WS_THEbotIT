@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Pigranes",
+    "previous": null,
     "next": "Pigraxes",
     "chapters": [
       {
@@ -14,6 +15,7 @@
     "lemma": "Pigraxes",
     "previous": "Pigranes",
     "next": "Pigres",
+    "redirect": "Pigranes",
     "chapters": [
       {
         "start": 1313,
@@ -469,7 +471,7 @@
   {
     "lemma": "Pimenius",
     "previous": "Pilze",
-    "next": "Pimolisna",
+    "next": "Pimolisa",
     "redirect": true,
     "chapters": [
       {
@@ -1152,6 +1154,7 @@
     "lemma": "Pindaros 4",
     "previous": "Pindaros 3",
     "next": "Pindaros 5",
+    "redirect": "Ilias latina",
     "chapters": [
       {
         "start": 1698,
@@ -1163,6 +1166,7 @@
     "lemma": "Pindaros 5",
     "previous": "Pindaros 4",
     "next": "Pindaros 6",
+    "redirect": "Ptolemaios 79a",
     "chapters": [
       {
         "start": 1698,
@@ -2842,7 +2846,7 @@
     "lemma": "Pisoninus",
     "previous": "Pisonianus 2",
     "next": "Pisonius",
-    "redirect": true,
+    "redirect": "Tarronius 2",
     "chapters": [
       {
         "start": 1805,
@@ -2854,7 +2858,7 @@
     "lemma": "Pisonius",
     "previous": "Pisoninus",
     "next": "Pisonos",
-    "redirect": true,
+    "redirect": "Tarronius 2",
     "chapters": [
       {
         "start": 1805,
@@ -2998,6 +3002,7 @@
     "lemma": "Pista",
     "previous": "Pissuthnes",
     "next": "Pistazie",
+    "redirect": "Pistyros",
     "chapters": [
       {
         "start": 1809,
@@ -3021,6 +3026,7 @@
     "lemma": "Pisteira",
     "previous": "Pistazie",
     "next": "Pistias",
+    "redirect": "Pistyros",
     "chapters": [
       {
         "start": 1811,
@@ -3294,7 +3300,7 @@
   {
     "lemma": "Pistoxenos",
     "previous": "Pistos 8",
-    "next": "Pistre",
+    "next": "Πίστρη",
     "chapters": [
       {
         "start": 1836,
@@ -3304,7 +3310,7 @@
     ]
   },
   {
-    "lemma": "Pistre",
+    "lemma": "Πίστρη",
     "previous": "Pistoxenos",
     "next": "Pistrinum",
     "chapters": [
@@ -3317,8 +3323,9 @@
   },
   {
     "lemma": "Pistrinum",
-    "previous": "Pistre",
+    "previous": "Πίστρη",
     "next": "Pistris",
+    "redirect": "Bäckerei",
     "chapters": [
       {
         "start": 1837,
@@ -3330,6 +3337,7 @@
     "lemma": "Pistris",
     "previous": "Pistrinum",
     "next": "Pistus",
+    "redirect": "Pristis",
     "chapters": [
       {
         "start": 1837,
@@ -3365,6 +3373,7 @@
     "lemma": "Pisuertes",
     "previous": "Pistyros",
     "next": "Pisurgia",
+    "redirect": "Pitulani",
     "chapters": [
       {
         "start": 1837,
@@ -3483,7 +3492,7 @@
   {
     "lemma": "Piterus",
     "previous": "Pitara",
-    "next": "Pithecusa",
+    "next": "Pithecusa, -ae",
     "chapters": [
       {
         "start": 1843,
@@ -3493,20 +3502,17 @@
     ]
   },
   {
-    "lemma": "Pithecusa",
+    "lemma": "Pithecusa, -ae",
     "previous": "Piterus",
     "next": "Πίθηκος 1",
-    "chapters": [
-      {
-        "start": 1843,
-        "end": 1843
-      }
-    ]
+    "redirect": "Aenaria"
   },
   {
     "lemma": "Πίθηκος 1",
     "previous": "Pithecusa",
     "next": "Πίθηκος 2",
+    "sort_key": "Pithekos 1",
+    "redirect": "Affe",
     "chapters": [
       {
         "start": 1843,
@@ -3531,6 +3537,7 @@
     "lemma": "Pithios",
     "previous": "Πίθηκος 2",
     "next": "Pithoi(?)",
+    "redirect": "Pytheos",
     "chapters": [
       {
         "start": 1843,
@@ -3590,6 +3597,7 @@
     "lemma": "Pithon",
     "previous": "Pitholaos",
     "next": "Πιθωνοβάστη ἐμπόριον",
+    "redirect": "Python 1",
     "chapters": [
       {
         "start": 1848,
@@ -3607,7 +3615,8 @@
     "lemma": "Πίθος",
     "previous": "Πιθωνοβάστη ἐμπόριον",
     "next": "Πίθος 2",
-    "redirect": true,
+    "sort_key": "Pithos 1",
+    "redirect": "Dolium",
     "chapters": [
       {
         "start": 1849,

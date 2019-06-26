@@ -178,7 +178,7 @@
     "lemma": "Inarime",
     "previous": "In Alperio",
     "next": "Inaronia",
-    "redirect": true,
+    "redirect": "Aenaria",
     "chapters": [
       {
         "start": 1219,
@@ -400,7 +400,7 @@
     "lemma": "Incitega",
     "previous": "Incitatus",
     "next": "Incola",
-    "redirect": true,
+    "redirect": "Angotheke",
     "chapters": [
       {
         "start": 1249,
@@ -436,7 +436,7 @@
     "lemma": "Incorporalis",
     "previous": "Incolatus",
     "next": "Incriones",
-    "redirect": true,
+    "redirect": "Res",
     "chapters": [
       {
         "start": 1256,
@@ -593,7 +593,7 @@
     "lemma": "Indicum",
     "previous": "Indictio",
     "next": "Indiges",
-    "redirect": true,
+    "redirect": "Indigo",
     "chapters": [
       {
         "start": 1332,
@@ -630,7 +630,7 @@
     "lemma": "Indignus",
     "previous": "Indigitamenta",
     "next": "Indigo",
-    "redirect": true,
+    "redirect": "Exheredatio",
     "chapters": [
       {
         "start": 1367,
@@ -960,6 +960,7 @@
     "lemma": "Ingauni",
     "previous": "Ingaevones",
     "next": "Ingena",
+    "redirect": "Album Ingaunum",
     "chapters": [
       {
         "start": 1544,
@@ -2100,6 +2101,7 @@
     "lemma": "Intimilii",
     "previous": "Intibilis",
     "next": "Introiugus",
+    "redirect": "Albintimilium",
     "chapters": [
       {
         "start": 1731,
@@ -3094,6 +3096,7 @@
     "lemma": "Iohallis",
     "previous": "Iogola",
     "next": "Iokaste 1",
+    "redirect": "Meleagrides",
     "chapters": [
       {
         "start": 1841,
@@ -3118,6 +3121,8 @@
     "lemma": "Iokles",
     "previous": "Iokaste 1",
     "next": "Ioklos",
+    "redirect": "Oikles 1",
+    "wp_link": "w:de:Oikles",
     "chapters": [
       {
         "start": 1842,
@@ -3141,6 +3146,7 @@
     "lemma": "Iokritos",
     "previous": "Ioklos",
     "next": "Iokura",
+    "redirect": "Botachos",
     "chapters": [
       {
         "start": 1842,
@@ -3164,6 +3170,7 @@
     "lemma": "Iol",
     "previous": "Iokura",
     "next": "Ἰολάεια",
+    "redirect": "Caesarea 14",
     "chapters": [
       {
         "start": 1842,
@@ -3532,6 +3539,8 @@
     "lemma": "Ion 5",
     "previous": "Ion 4",
     "next": "Ion 6",
+    "sort_key": "Ion 05",
+    "redirect": true,
     "chapters": [
       {
         "start": 1860,
@@ -4013,6 +4022,7 @@
     "lemma": "Iopolis",
     "previous": "Iophossa",
     "next": "Joppe",
+    "redirect": "Iuliopolis",
     "chapters": [
       {
         "start": 1901,
@@ -4498,7 +4508,7 @@
     "lemma": "Iovina",
     "previous": "Iovianus 6",
     "next": "Iovinianus",
-    "redirect": true,
+    "redirect": "Fabius 185",
     "chapters": [
       {
         "start": 2011,
@@ -4636,7 +4646,7 @@
     "previous": "Iovis cenatio",
     "next": "Iovis epulum",
     "sort_key": "Ioviscustos",
-    "redirect": true,
+    "redirect": "Iuppiter",
     "chapters": [
       {
         "start": 2013,
@@ -4698,6 +4708,7 @@
     "lemma": "Iovis Oppidum",
     "previous": "Iovis nympheum",
     "next": "Iovis pagus",
+    "redirect": "Diospolis 7",
     "chapters": [
       {
         "start": 2014,
@@ -4722,7 +4733,7 @@
     "previous": "Iovis pagus",
     "next": "Iovis Tifatinus",
     "sort_key": "Iovispalene",
-    "redirect": true,
+    "redirect": "Iovis Larene",
     "chapters": [
       {
         "start": 2014,
@@ -6917,7 +6928,7 @@
     "lemma": "Isidoros 12",
     "previous": "Isidoros 11",
     "next": "Isidoros 13",
-    "redirect": true,
+    "redirect": "Caecilius 58",
     "chapters": [
       {
         "start": 2062,
@@ -7973,7 +7984,7 @@
     "lemma": "Ispa 2",
     "previous": "Ispa 1",
     "next": "Ispada",
-    "redirect": true,
+    "redirect": "Hispa",
     "chapters": [
       {
         "start": 2233,
@@ -7997,7 +8008,7 @@
     "lemma": "Ispalis",
     "previous": "Ispada",
     "next": "Ispinum",
-    "redirect": true,
+    "redirect": "Hispalis",
     "wp_link": "w:de:Sevilla",
     "chapters": [
       {
@@ -8034,7 +8045,7 @@
     "lemma": "Israel 2",
     "previous": "Israel 1",
     "next": "Israel 3",
-    "redirect": true,
+    "redirect": "Iudaea",
     "chapters": [
       {
         "start": 2233,
@@ -8046,7 +8057,7 @@
     "lemma": "Israel 3",
     "previous": "Israel 2",
     "next": "Israel 4",
-    "redirect": true,
+    "redirect": "Esdraelon 1",
     "chapters": [
       {
         "start": 2233,
@@ -8164,8 +8175,9 @@
   },
   {
     "lemma": "Issedon",
-    "previous": "Issedoi, Issedones, Essedones",
+    "previous": "Issedoi",
     "next": "Issicus sinus",
+    "redirect": "Issedoi",
     "chapters": [
       {
         "start": 2246,
@@ -8264,7 +8276,7 @@
     "lemma": "Ister",
     "previous": "Istanioi",
     "next": "Isthmia 1",
-    "redirect": true,
+    "redirect": "Danuvius 1",
     "wp_link": "w:de:Donau",
     "chapters": [
       {
@@ -8670,7 +8682,7 @@
     "lemma": "Istros 4",
     "previous": "Istros 3",
     "next": "Istros 5",
-    "redirect": true,
+    "redirect": "Danuvius 1",
     "wp_link": "w:de:Donau",
     "chapters": [
       {

@@ -129,7 +129,8 @@
   {
     "lemma": "Agesistratos",
     "previous": "Afranius 10a",
-    "next": "Aiacius 3"
+    "next": "Aiacius 3",
+    "redirect": "Athenaios 23"
   },
   {
     "lemma": "Aiacius 3",
@@ -148,7 +149,17 @@
     "previous": "Aiacius 3"
   },
   {
-    "lemma": "Aiacius 2"
+    "lemma": "Agesistratos",
+    "next": "Aiacius 2"
+  },
+  {
+    "lemma": "Aiacius 2",
+    "previous": "Agesistratos",
+    "next": "Albiobola"
+  },
+  {
+    "lemma": "Albiobola",
+    "previous": "Aiacius 2"
   },
   {
     "lemma": "Aiacius 3",
@@ -924,7 +935,7 @@
   {
     "lemma": "Carrea (Carreum, Correa)",
     "previous": "Carnus",
-    "next": null,
+    "next": "Carsitani",
     "chapters": [
       {
         "start": 21,
@@ -932,6 +943,15 @@
         "author": "Geisau"
       }
     ]
+  },
+  {
+    "lemma": "Carsitani",
+    "previous": "Carrea (Carreum, Correa)",
+    "next": "Carucla"
+  },
+  {
+    "lemma": "Carucla",
+    "previous": "Carsitani"
   },
   {
     "lemma": "Carrea (Carreum, Correa)",
@@ -1029,11 +1049,17 @@
   },
   {
     "lemma": "Cavaturini",
-    "previous": "Caudalascus"
+    "previous": "Caudalascus",
+    "next": "Celelates"
+  },
+  {
+    "lemma": "Celelates",
+    "previous": "Cavaturini",
+    "next": "Cerdeciates"
   },
   {
     "lemma": "Cerdeciates",
-    "previous": null,
+    "previous": "Celelates",
     "next": "Ceremia"
   },
   {
@@ -1141,6 +1167,7 @@
   },
   {
     "lemma": "Claudius 415",
+    "previous": null,
     "next": "Coeba(?)"
   },
   {
@@ -1181,7 +1208,12 @@
   },
   {
     "lemma": "Comberania",
-    "previous": "Colonia 34a"
+    "previous": "Colonia 34a",
+    "next": "Cornelius 145"
+  },
+  {
+    "lemma": "Cornelius 145",
+    "previous": "Comberania"
   },
   {
     "lemma": "Claudius 187. 188. 194",
@@ -2877,11 +2909,13 @@
   },
   {
     "lemma": "Maximinus 5",
+    "previous": null,
     "next": "Maximus 128"
   },
   {
     "lemma": "Maximus 128",
     "previous": "Maximinus 5",
+    "next": "Media provincia",
     "chapters": [
       {
         "start": 289,
@@ -2889,6 +2923,10 @@
         "author": "Opitz"
       }
     ]
+  },
+  {
+    "lemma": "Media provincia",
+    "previous": "Maximus 128"
   },
   {
     "lemma": "Maximus 26",
@@ -4565,6 +4603,7 @@
   },
   {
     "lemma": "Manichäismus",
+    "previous": null,
     "next": "Marius 14"
   },
   {
@@ -4583,7 +4622,8 @@
   },
   {
     "lemma": "Neapolis 18",
-    "previous": "Marius 14"
+    "previous": "Marius 14",
+    "next": null
   },
   {
     "lemma": "Regina castra",

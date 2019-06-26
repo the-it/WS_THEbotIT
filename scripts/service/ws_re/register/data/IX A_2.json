@@ -958,6 +958,7 @@
     "lemma": "Xanthis 2",
     "previous": "Xanthis 1",
     "next": "Xantho 1",
+    "redirect": "Xanthes 1",
     "chapters": [
       {
         "start": 1351,
@@ -993,6 +994,7 @@
     "lemma": "Xanthoi",
     "previous": "Xantho 2",
     "next": "Xanthos 1",
+    "redirect": "Xanthioi, Xanthoi",
     "chapters": [
       {
         "start": 1351,
@@ -1452,7 +1454,7 @@
     "lemma": "Xeinagores",
     "previous": "Xeinagoras",
     "next": "Xeine",
-    "redirect": true,
+    "redirect": "Xenagoras 4",
     "chapters": [
       {
         "start": 1409,
@@ -1715,7 +1717,7 @@
   {
     "lemma": "Xenetos",
     "previous": "Xenephyris",
-    "next": "xenia",
+    "next": "ξενία",
     "chapters": [
       {
         "start": 1438,
@@ -1725,9 +1727,11 @@
     ]
   },
   {
-    "lemma": "xenia",
+    "lemma": "ξενία",
     "previous": "Xenetos",
     "next": "Xeniades 1",
+    "sort_key": "Xenia",
+    "redirect": "ξενίας γραφή",
     "chapters": [
       {
         "start": 1438,
@@ -1737,7 +1741,7 @@
   },
   {
     "lemma": "Xeniades 1",
-    "previous": "xenia",
+    "previous": "ξενία",
     "next": "Xeniades 2",
     "chapters": [
       {

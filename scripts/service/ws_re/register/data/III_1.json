@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Barbarus 1",
+    "previous": null,
     "next": "Barbarus 2",
     "redirect": true,
     "chapters": [
@@ -2466,7 +2467,7 @@
     "lemma": "Basileia 6",
     "previous": "Basileia 5",
     "next": "Basileides 1",
-    "redirect": true,
+    "redirect": "Basileus 2",
     "chapters": [
       {
         "start": 45,
@@ -2984,7 +2985,8 @@
   {
     "lemma": "Basilia",
     "previous": "Basileus 4",
-    "next": "Basilianus",
+    "next": "Βασιλικόν (τὸ)",
+    "redirect": true,
     "chapters": [
       {
         "start": 82,
@@ -3087,7 +3089,8 @@
   {
     "lemma": "Βασιλίδες",
     "previous": "Basilides",
-    "next": "Basilidia"
+    "next": "Basilidia",
+    "sort_key": "Basilides"
   },
   {
     "lemma": "Basilidia",
@@ -8189,6 +8192,7 @@
     "lemma": "Belias",
     "previous": "Beliar",
     "next": "Belibos",
+    "redirect": "Balicha",
     "chapters": [
       {
         "start": 208,
@@ -8212,6 +8216,7 @@
     "lemma": "Belicenses",
     "previous": "Belibos",
     "next": "Belimos",
+    "redirect": "Bellicenses",
     "chapters": [
       {
         "start": 208,
@@ -9155,7 +9160,7 @@
   {
     "lemma": "Βῆμα 1",
     "previous": "Belunum",
-    "next": "Βῆμα 2",
+    "next": "Bema 2",
     "sort_key": "Bema 1",
     "chapters": [
       {
@@ -9166,7 +9171,7 @@
     ]
   },
   {
-    "lemma": "Βῆμα 2",
+    "lemma": "Bema 2",
     "previous": "Βῆμα 1",
     "next": "Bemarchios",
     "sort_key": "Bema 2",
@@ -9180,7 +9185,7 @@
   },
   {
     "lemma": "Bemarchios",
-    "previous": "Βῆμα 2",
+    "previous": "Bema 2",
     "next": "Bemaste",
     "chapters": [
       {
@@ -9729,6 +9734,7 @@
     "lemma": "Bennike",
     "previous": "Benneueke",
     "next": "Βεννικὸς κόλπος",
+    "redirect": "Beni",
     "chapters": [
       {
         "start": 276,
@@ -12768,6 +12774,7 @@
     "lemma": "Bethar 2",
     "previous": "Bethar 1",
     "next": "Bethar 3",
+    "redirect": true,
     "chapters": [
       {
         "start": 362,
@@ -12780,6 +12787,7 @@
     "lemma": "Bethar 3",
     "previous": "Bethar 2",
     "next": "Betharamathos",
+    "redirect": true,
     "chapters": [
       {
         "start": 362,
@@ -15046,7 +15054,6 @@
     "lemma": "Bienenzucht",
     "previous": "Bieneches",
     "next": "Biennos 1",
-    "wp_link": "w:de:Bienenzucht",
     "chapters": [
       {
         "start": 450,
@@ -21505,6 +21512,7 @@
     "lemma": "Bolodurum",
     "previous": "Boloconoton",
     "next": "Boloeis",
+    "redirect": "Boiodurum",
     "chapters": [
       {
         "start": 676,
@@ -21528,6 +21536,7 @@
     "lemma": "Bologesias",
     "previous": "Boloeis",
     "next": "Bologesiphora",
+    "redirect": "Vologesia",
     "chapters": [
       {
         "start": 676,
@@ -24549,7 +24558,7 @@
     "lemma": "Boutas",
     "previous": "Boutae",
     "next": "Boutes",
-    "redirect": true,
+    "redirect": "Bo…",
     "chapters": [
       {
         "start": 800,
@@ -24863,6 +24872,7 @@
     "lemma": "Brachmai",
     "previous": "Brachion",
     "next": "Brachmanai",
+    "redirect": true,
     "chapters": [
       {
         "start": 803,
@@ -24984,6 +24994,7 @@
     "lemma": "Bradua 1",
     "previous": "Bradanus",
     "next": "Bradua 2",
+    "redirect": "Appius 5",
     "chapters": [
       {
         "start": 807,
@@ -24995,6 +25006,7 @@
     "lemma": "Bradua 2",
     "previous": "Bradua 1",
     "next": "Bradua 3",
+    "redirect": "Annius 32",
     "chapters": [
       {
         "start": 807,
@@ -25138,6 +25150,7 @@
     "lemma": "Brammogura",
     "previous": "Bramma",
     "next": "Branchiades",
+    "redirect": true,
     "chapters": [
       {
         "start": 809,
@@ -25473,6 +25486,7 @@
     "lemma": "Brassica",
     "previous": "Brasios",
     "next": "Bratananium",
+    "redirect": "Kohl",
     "chapters": [
       {
         "start": 820,
@@ -25653,6 +25667,7 @@
     "lemma": "Braxius",
     "previous": "Bravum",
     "next": "Brazia",
+    "redirect": "Araxius",
     "chapters": [
       {
         "start": 826,
@@ -25724,6 +25739,7 @@
     "lemma": "Brectenus",
     "previous": "Brebeta",
     "next": "Bredas",
+    "redirect": "Brigomagenses",
     "chapters": [
       {
         "start": 826,
@@ -25747,6 +25763,7 @@
     "lemma": "Brediacum",
     "previous": "Bredas",
     "next": "Bregedaba",
+    "redirect": "Betriacum",
     "chapters": [
       {
         "start": 826,
@@ -25770,6 +25787,7 @@
     "lemma": "Bregetio",
     "previous": "Bregedaba",
     "next": "Bregmeni",
+    "redirect": "Brigetio",
     "chapters": [
       {
         "start": 826,
@@ -25829,6 +25847,7 @@
     "lemma": "Breiseus",
     "previous": "Breiseis",
     "next": "Bremenium",
+    "redirect": "Brisaios",
     "chapters": [
       {
         "start": 827,
@@ -25924,6 +25943,7 @@
     "lemma": "Brenai",
     "previous": "Bremusa",
     "next": "Brendesion",
+    "redirect": "Beni",
     "chapters": [
       {
         "start": 828,
@@ -25935,6 +25955,7 @@
     "lemma": "Brendesion",
     "previous": "Brenai",
     "next": "Brendice",
+    "redirect": "Brundisium",
     "chapters": [
       {
         "start": 828,
@@ -25970,7 +25991,7 @@
     "lemma": "Brennacus",
     "previous": "Breniton",
     "next": "Brenni",
-    "redirect": true,
+    "redirect": "Brinnacus",
     "chapters": [
       {
         "start": 829,
@@ -25982,7 +26003,7 @@
     "lemma": "Brenni",
     "previous": "Brennacus",
     "next": "Brennos 1",
-    "redirect": true,
+    "redirect": "Breuni",
     "chapters": [
       {
         "start": 829,
@@ -26056,6 +26077,7 @@
     "lemma": "Brentice",
     "previous": "Brentheates",
     "next": "Brentonicum",
+    "redirect": "Brendice",
     "chapters": [
       {
         "start": 830,
@@ -26065,8 +26087,9 @@
   },
   {
     "lemma": "Brentonicum",
-    "previous": "Brentice",
+    "previous": "Brendesion",
     "next": "Brentos",
+    "redirect": "Bremtonicum",
     "chapters": [
       {
         "start": 830,
@@ -26090,6 +26113,7 @@
     "lemma": "Breones",
     "previous": "Brentos",
     "next": "Brepos",
+    "redirect": "Breuni",
     "chapters": [
       {
         "start": 830,
@@ -26137,6 +26161,7 @@
     "lemma": "Brese",
     "previous": "Bresagenes",
     "next": "Breseus, Bressaios",
+    "redirect": "Brisa",
     "chapters": [
       {
         "start": 830,
@@ -26148,6 +26173,7 @@
     "lemma": "Breseus, Bressaios",
     "previous": "Brese",
     "next": "Bretina",
+    "redirect": "Brisaios",
     "chapters": [
       {
         "start": 830,
@@ -26184,6 +26210,7 @@
     "lemma": "Brettia 1",
     "previous": "Bret(t)anos",
     "next": "Brettia 2",
+    "redirect": "Brattia",
     "chapters": [
       {
         "start": 831,
@@ -26219,6 +26246,7 @@
     "lemma": "Brettonicum",
     "previous": "Brettios",
     "next": "Brettos",
+    "redirect": "Bremtonicum",
     "chapters": [
       {
         "start": 831,
@@ -26254,6 +26282,7 @@
     "lemma": "Breucomagus",
     "previous": "Breuci",
     "next": "Breves 1",
+    "redirect": "Brocomagus",
     "chapters": [
       {
         "start": 831,
@@ -26277,6 +26306,7 @@
     "lemma": "Breves 2",
     "previous": "Breves 1",
     "next": "Breviarium Alaricianum",
+    "redirect": "Brevis 2",
     "chapters": [
       {
         "start": 831,
@@ -26288,6 +26318,8 @@
     "lemma": "Breviarium Alaricianum",
     "previous": "Breves 2",
     "next": "Breviodurum",
+    "redirect": "Lex Romana Wisigotorum",
+    "wp_link": "w:de:Lex Romana Visigothorum",
     "chapters": [
       {
         "start": 831,
@@ -26493,6 +26525,7 @@
     "lemma": "Bricteri",
     "previous": "Bricilonnum",
     "next": "Bridama",
+    "redirect": "Bructeri",
     "chapters": [
       {
         "start": 836,
@@ -26554,6 +26587,7 @@
     "lemma": "Brigai",
     "previous": "Brigaecium",
     "next": "Briganitius",
+    "redirect": "Bryges",
     "chapters": [
       {
         "start": 843,
@@ -26589,6 +26623,7 @@
     "lemma": "Brigantes 2",
     "previous": "Brigantes 1",
     "next": "Brigantia 1",
+    "redirect": "Bryges",
     "chapters": [
       {
         "start": 844,
@@ -26600,6 +26635,7 @@
     "lemma": "Brigantia 1",
     "previous": "Brigantes 2",
     "next": "Brigantia 2",
+    "redirect": "Brigantio 1",
     "chapters": [
       {
         "start": 844,
@@ -26635,6 +26671,7 @@
     "lemma": "Brigantikos",
     "previous": "Brigantii",
     "next": "Brigantinomagus",
+    "redirect": "Bituios",
     "chapters": [
       {
         "start": 845,
@@ -26709,6 +26746,7 @@
     "lemma": "Brigantium 2",
     "previous": "Brigantium 1",
     "next": "Brigantium 3",
+    "redirect": "Brigantio 1",
     "chapters": [
       {
         "start": 846,
@@ -26720,6 +26758,7 @@
     "lemma": "Brigantium 3",
     "previous": "Brigantium 2",
     "next": "Brigantium 4",
+    "redirect": "Brigetio",
     "chapters": [
       {
         "start": 846,
@@ -26755,6 +26794,7 @@
     "lemma": "Briges",
     "previous": "Brige",
     "next": "Brigetio",
+    "redirect": "Bryges",
     "chapters": [
       {
         "start": 847,
@@ -26911,6 +26951,7 @@
     "lemma": "Brikindera",
     "previous": "Brigulus",
     "next": "Brikinniai",
+    "redirect": "Brygindara",
     "chapters": [
       {
         "start": 852,
@@ -27007,6 +27048,7 @@
     "lemma": "Brincatis",
     "previous": "Brinavis",
     "next": "Brindia",
+    "redirect": "Brigantio 1",
     "chapters": [
       {
         "start": 854,
@@ -27030,6 +27072,7 @@
     "lemma": "Brindice",
     "previous": "Brindia",
     "next": "Briniates",
+    "redirect": "Brendice",
     "chapters": [
       {
         "start": 854,
@@ -27041,6 +27084,7 @@
     "lemma": "Briniates",
     "previous": "Brindice",
     "next": "Brinnacus",
+    "redirect": "Friniates",
     "chapters": [
       {
         "start": 854,
@@ -27100,6 +27144,7 @@
     "lemma": "Brintesia",
     "previous": "Brinta",
     "next": "Briotreidis",
+    "redirect": "Brinta",
     "chapters": [
       {
         "start": 855,
@@ -27231,6 +27276,7 @@
     "lemma": "Briseus 2",
     "previous": "Briseus 1",
     "next": "Brisiacus mons",
+    "redirect": "Brisaios",
     "chapters": [
       {
         "start": 858,
@@ -27267,6 +27313,7 @@
     "lemma": "Briso",
     "previous": "Brisigavi",
     "next": "Brisoana",
+    "redirect": "Antius 7",
     "chapters": [
       {
         "start": 858,
@@ -27364,6 +27411,8 @@
     "lemma": "Britannicus",
     "previous": "Britannicum mare",
     "next": "Britho",
+    "redirect": "Claudius 92",
+    "wp_link": "w:de:Britannicus",
     "chapters": [
       {
         "start": 880,
@@ -27484,6 +27533,7 @@
     "lemma": "Brittones",
     "previous": "Brittomaris",
     "next": "Brittura",
+    "redirect": "Britanni",
     "chapters": [
       {
         "start": 882,
@@ -27625,6 +27675,7 @@
     "lemma": "Brixa",
     "previous": "Brivodurum",
     "next": "Brixaba",
+    "redirect": "Brisoana",
     "chapters": [
       {
         "start": 883,
@@ -27648,6 +27699,7 @@
     "lemma": "Brixantai",
     "previous": "Brixaba",
     "next": "Brixantus",
+    "redirect": "Brixentes",
     "chapters": [
       {
         "start": 883,
@@ -27709,6 +27761,7 @@
     "lemma": "Brixia 2",
     "previous": "Brixia 1",
     "next": "Brixis",
+    "redirect": "Bricia",
     "chapters": [
       {
         "start": 885,
@@ -27744,6 +27797,7 @@
     "lemma": "Brizana",
     "previous": "Brizaka",
     "next": "Brizice",
+    "redirect": "Brisoana",
     "chapters": [
       {
         "start": 885,
@@ -27755,6 +27809,7 @@
     "lemma": "Brizice",
     "previous": "Brizana",
     "next": "Brizo",
+    "redirect": "Brendice",
     "chapters": [
       {
         "start": 885,
@@ -27778,6 +27833,7 @@
     "lemma": "Brocavum",
     "previous": "Brizo",
     "next": "Brocchus",
+    "redirect": "Brovonacae",
     "chapters": [
       {
         "start": 886,
@@ -27873,6 +27929,7 @@
     "lemma": "Brocolitia",
     "previous": "Brochullos",
     "next": "Brocomagus",
+    "redirect": "Procolitia",
     "chapters": [
       {
         "start": 886,
@@ -28103,6 +28160,8 @@
     "lemma": "Bromos 2",
     "previous": "Bromos 1",
     "next": "Brona",
+    "redirect": "Hafer",
+    "wp_link": "w:de:Hafer",
     "chapters": [
       {
         "start": 889,
@@ -28312,7 +28371,7 @@
     "lemma": "Brotinos",
     "previous": "Broteas 4",
     "next": "Brotion",
-    "redirect": true,
+    "redirect": "Brontinos",
     "chapters": [
       {
         "start": 898,
@@ -28384,7 +28443,7 @@
     "lemma": "Bruanium",
     "previous": "Bruani",
     "next": "Bruca",
-    "redirect": true,
+    "redirect": "Bryanion",
     "chapters": [
       {
         "start": 898,
@@ -28505,6 +28564,7 @@
     "lemma": "Brumalis circulus",
     "previous": "Bruma",
     "next": "Brundisium",
+    "redirect": "Himmelskreise",
     "chapters": [
       {
         "start": 902,
@@ -28601,6 +28661,7 @@
     "lemma": "Brutia",
     "previous": "Brusos",
     "next": "Brutianus 1",
+    "redirect": "Brucla",
     "chapters": [
       {
         "start": 906,
@@ -28684,6 +28745,7 @@
     "lemma": "Bruttianus",
     "previous": "Bruttiani",
     "next": "Bruttianus campus",
+    "redirect": "Brutianus 2",
     "chapters": [
       {
         "start": 907,
@@ -28914,6 +28976,7 @@
     "lemma": "Brutus 2",
     "previous": "Brutus 1",
     "next": "Brutus 3",
+    "redirect": "Bruttedius 1",
     "chapters": [
       {
         "start": 916,
@@ -28937,6 +29000,7 @@
     "lemma": "Bruusara",
     "previous": "Brutus 3",
     "next": "Bruzos",
+    "redirect": "Briva 1",
     "chapters": [
       {
         "start": 916,
@@ -29069,6 +29133,7 @@
     "lemma": "Bryennios",
     "previous": "Bryela",
     "next": "Bryes",
+    "redirect": "Manuel 2",
     "chapters": [
       {
         "start": 920,
@@ -29405,6 +29470,7 @@
     "lemma": "Buaicorix",
     "previous": "Bryusa",
     "next": "Buana",
+    "redirect": "Baicorix",
     "chapters": [
       {
         "start": 929,
@@ -29476,6 +29542,7 @@
     "lemma": "Bubalia 2",
     "previous": "Bubalia 1",
     "next": "Bubalus",
+    "redirect": "Budalia",
     "chapters": [
       {
         "start": 930,
@@ -29511,6 +29578,7 @@
     "lemma": "Bubassos",
     "previous": "Bubares",
     "next": "Βουβαστιακὸς ποταμός",
+    "redirect": "Bybassos 1",
     "chapters": [
       {
         "start": 930,
@@ -29721,6 +29789,7 @@
     "lemma": "Buca 2",
     "previous": "Buca 1",
     "next": "Bucar",
+    "redirect": "Aemilius 36",
     "chapters": [
       {
         "start": 934,
@@ -29744,6 +29813,7 @@
     "lemma": "Buccellarii",
     "previous": "Bucar",
     "next": "Buccia",
+    "redirect": "Bucellarii",
     "chapters": [
       {
         "start": 934,
@@ -29767,6 +29837,7 @@
     "lemma": "Buccinium",
     "previous": "Buccia",
     "next": "Bucco",
+    "redirect": "Ulcinium",
     "chapters": [
       {
         "start": 934,
@@ -29778,6 +29849,7 @@
     "lemma": "Bucco",
     "previous": "Buccinium",
     "next": "Bucconienses",
+    "redirect": "Atellanae fabulae",
     "chapters": [
       {
         "start": 934,
@@ -29825,6 +29897,7 @@
     "lemma": "Buces",
     "previous": "Bucellarii",
     "next": "Buch",
+    "redirect": "Bykes",
     "chapters": [
       {
         "start": 939,
@@ -29909,6 +29982,7 @@
     "lemma": "Buchonia",
     "previous": "Buchloos",
     "next": "Buchsbaum",
+    "redirect": "Buconia",
     "chapters": [
       {
         "start": 985,
@@ -29957,6 +30031,7 @@
     "lemma": "Bucina 2",
     "previous": "Bucina 1",
     "next": "Bucina 3",
+    "redirect": "Bukinna",
     "chapters": [
       {
         "start": 986,
@@ -30040,6 +30115,7 @@
     "lemma": "Bucolici milites",
     "previous": "Bucolas",
     "next": "Buconia",
+    "redirect": "Βουκόλοι 1",
     "chapters": [
       {
         "start": 987,
@@ -30087,6 +30163,7 @@
     "lemma": "Bucra",
     "previous": "Buconis Turris",
     "next": "Buculeius",
+    "redirect": "Bruca",
     "chapters": [
       {
         "start": 987,
@@ -30146,6 +30223,7 @@
     "lemma": "Budaron",
     "previous": "Budalia",
     "next": "Budaxicara",
+    "redirect": "Budoron",
     "chapters": [
       {
         "start": 988,
@@ -30157,6 +30235,7 @@
     "lemma": "Budaxicara",
     "previous": "Budaron",
     "next": "Buddarus",
+    "redirect": "Buduxi",
     "chapters": [
       {
         "start": 988,
@@ -30385,6 +30464,7 @@
     "lemma": "Budua",
     "previous": "Budroe",
     "next": "Buduxi",
+    "redirect": "Burdua",
     "chapters": [
       {
         "start": 992,
@@ -30433,6 +30513,7 @@
     "lemma": "Bugarma",
     "previous": "Buffadensis",
     "next": "Bugenes",
+    "redirect": "Bagaraca",
     "chapters": [
       {
         "start": 993,
@@ -30494,6 +30575,7 @@
     "lemma": "Buguntes",
     "previous": "Βούγλωσσον",
     "next": "Buiza",
+    "redirect": "Βurgundiones",
     "chapters": [
       {
         "start": 993,
@@ -30505,6 +30587,7 @@
     "lemma": "Buiza",
     "previous": "Buguntes",
     "next": "Bukaia",
+    "redirect": "Quiza",
     "chapters": [
       {
         "start": 993,
@@ -30528,6 +30611,7 @@
     "lemma": "Bukaioi",
     "previous": "Bukaia",
     "next": "Bukarteros",
+    "redirect": true,
     "chapters": [
       {
         "start": 993,
@@ -30647,6 +30731,7 @@
     "lemma": "Bukephalia 1",
     "previous": "Bukephalas 2",
     "next": "Bukephalia 2",
+    "redirect": "Bukephala 1",
     "chapters": [
       {
         "start": 995,
@@ -30658,6 +30743,7 @@
     "lemma": "Bukephalia 2",
     "previous": "Bukephalia 1",
     "next": "Bukephalitai",
+    "redirect": "Bukephalitai",
     "chapters": [
       {
         "start": 995,
@@ -30710,6 +30796,8 @@
     "lemma": "Βούκερας",
     "previous": "Bukeraïs",
     "next": "Bukinna",
+    "sort_key": "Bukeras",
+    "redirect": "Bockshornklee",
     "chapters": [
       {
         "start": 996,
@@ -30794,6 +30882,7 @@
     "lemma": "Bukolia 2",
     "previous": "Bukolia 1",
     "next": "Βουκολιασμός",
+    "redirect": "Βουκόλοι 1",
     "chapters": [
       {
         "start": 998,
@@ -31076,6 +31165,7 @@
     "lemma": "Bukra",
     "previous": "Βουκόπια Θευδαίσια",
     "next": "Bulagoras",
+    "redirect": "Bruca",
     "chapters": [
       {
         "start": 1019,
@@ -31111,6 +31201,7 @@
     "lemma": "Bulanes",
     "previous": "Bulaios, Bulaia",
     "next": "Bularchos 1",
+    "redirect": "Borani",
     "chapters": [
       {
         "start": 1020,
@@ -31158,6 +31249,7 @@
     "lemma": "Bulbus",
     "previous": "Bularchos 3",
     "next": "Βουλή",
+    "redirect": "Atilius 33",
     "chapters": [
       {
         "start": 1020,
@@ -31182,6 +31274,7 @@
     "lemma": "Buleia, Bulia",
     "previous": "Βουλή",
     "next": "Buleides",
+    "redirect": "Bulis 1",
     "chapters": [
       {
         "start": 1037,
@@ -31489,6 +31582,7 @@
     "lemma": "Bulliones, Bullis",
     "previous": "Bullatius",
     "next": "Bulnetia",
+    "redirect": "Byllis",
     "chapters": [
       {
         "start": 1052,
@@ -31714,8 +31808,10 @@
   },
   {
     "lemma": "Βουνίας",
-    "previous": "Buni",
+    "previous": "Buneus",
     "next": "Bunikos",
+    "sort_key": "Bunias",
+    "redirect": "Kohlrübe",
     "chapters": [
       {
         "start": 1053,
@@ -31813,6 +31909,7 @@
     "lemma": "Bunomos",
     "previous": "Bunomeia",
     "next": "Bunos",
+    "redirect": "Bunikos",
     "chapters": [
       {
         "start": 1053,
@@ -32128,6 +32225,7 @@
     "lemma": "Buragara",
     "previous": "Bura 3",
     "next": "Buraia",
+    "redirect": "Bagaraca",
     "chapters": [
       {
         "start": 1060,
@@ -32273,6 +32371,7 @@
     "lemma": "Burcturi",
     "previous": "Burco",
     "next": "Burdapa",
+    "redirect": "Bructeri",
     "chapters": [
       {
         "start": 1061,
@@ -32345,6 +32444,7 @@
     "lemma": "Burdo",
     "previous": "Burdizizon",
     "next": "Burdoga",
+    "redirect": "Iulius 125",
     "chapters": [
       {
         "start": 1062,
@@ -32356,6 +32456,7 @@
     "lemma": "Burdoga",
     "previous": "Burdo",
     "next": "Burdomina",
+    "redirect": "Burdua",
     "chapters": [
       {
         "start": 1062,
@@ -32404,6 +32505,7 @@
     "lemma": "Burei",
     "previous": "Burdua",
     "next": "Burgaon",
+    "redirect": "Buri",
     "chapters": [
       {
         "start": 1062,
@@ -32427,6 +32529,7 @@
     "lemma": "Burgarii",
     "previous": "Burgaon",
     "next": "Burgenae",
+    "redirect": "Burgus",
     "chapters": [
       {
         "start": 1062,
@@ -32586,6 +32689,8 @@
     "lemma": "Βουριδαυήνσιοι",
     "previous": "Burichos",
     "next": "Burina",
+    "sort_key": "Buridauensioi",
+    "redirect": "Burridava",
     "chapters": [
       {
         "start": 1067,
@@ -32633,6 +32738,7 @@
     "lemma": "Burkas",
     "previous": "Buritanus",
     "next": "Burnistae",
+    "redirect": "Borgys",
     "chapters": [
       {
         "start": 1068,
@@ -32669,6 +32775,7 @@
     "lemma": "Burnus",
     "previous": "Burnum",
     "next": "Burorina",
+    "redirect": "Liburnus 1",
     "chapters": [
       {
         "start": 1070,
@@ -32741,6 +32848,7 @@
     "lemma": "Burrium",
     "previous": "Burrienus",
     "next": "Burrus",
+    "redirect": "Bullaeum",
     "chapters": [
       {
         "start": 1070,
@@ -32764,6 +32872,7 @@
     "lemma": "Bursa",
     "previous": "Burrus",
     "next": "Bursada",
+    "redirect": "Munatius",
     "chapters": [
       {
         "start": 1070,
@@ -32799,7 +32908,7 @@
     "lemma": "Bursio",
     "previous": "Bursaones",
     "next": "Burticum 1",
-    "redirect": true,
+    "redirect": "Iulius",
     "chapters": [
       {
         "start": 1071,
@@ -32835,7 +32944,7 @@
     "lemma": "Burtina",
     "previous": "Burticum 2",
     "next": "Burtinum",
-    "redirect": true,
+    "redirect": "Bortinae",
     "chapters": [
       {
         "start": 1071,
@@ -32859,7 +32968,7 @@
     "lemma": "Burtizon",
     "previous": "Burtinum",
     "next": "Burtudizon",
-    "redirect": true,
+    "redirect": "Burtudizon",
     "chapters": [
       {
         "start": 1071,
@@ -32895,7 +33004,7 @@
     "lemma": "Buruesca",
     "previous": "Buruc",
     "next": "Burugiatensis",
-    "redirect": true,
+    "redirect": "Virovesca",
     "chapters": [
       {
         "start": 1071,
@@ -33337,7 +33446,7 @@
     "lemma": "Butaias",
     "previous": "Butae",
     "next": "Butaroton",
-    "redirect": true,
+    "redirect": "Buphonas",
     "chapters": [
       {
         "start": 1079,
@@ -33681,6 +33790,7 @@
     "lemma": "Buthrotus",
     "previous": "Buthrotos",
     "next": "Buthuris",
+    "redirect": "Bulotus",
     "chapters": [
       {
         "start": 1085,
@@ -33755,6 +33865,7 @@
     "lemma": "Butis 1",
     "previous": "Butilinus",
     "next": "Butis 2",
+    "redirect": "Dekapolis 2",
     "chapters": [
       {
         "start": 1086,
@@ -33991,6 +34102,7 @@
     "lemma": "Buxeri",
     "previous": "Buxenus",
     "next": "Buzara",
+    "redirect": "Byzeres",
     "chapters": [
       {
         "start": 1094,
@@ -34161,6 +34273,7 @@
     "lemma": "Byble",
     "previous": "Bybassos 2",
     "next": "Byblis 1",
+    "redirect": "Byblis 4",
     "chapters": [
       {
         "start": 1098,
@@ -34357,6 +34470,7 @@
     "lemma": "Bylliake",
     "previous": "Bylazora",
     "next": "Byllis",
+    "redirect": "Byllis",
     "chapters": [
       {
         "start": 1105,
@@ -34428,6 +34542,8 @@
     "lemma": "Byrchanis",
     "previous": "Byntha",
     "next": "Byriadas",
+    "redirect": "Burcana",
+    "wp_link": "w:de:Borkum",
     "chapters": [
       {
         "start": 1107,
@@ -34451,6 +34567,8 @@
     "lemma": "Byrigantum",
     "previous": "Byriadas",
     "next": "Byrrus",
+    "redirect": "Brigantio 1",
+    "wp_link": "w:de:Briançon",
     "chapters": [
       {
         "start": 1107,
@@ -34487,6 +34605,8 @@
     "lemma": "Byrsa 2",
     "previous": "Byrsa 1",
     "next": "Byrsia",
+    "redirect": "Karthago",
+    "wp_link": "w:de:Karthago",
     "chapters": [
       {
         "start": 1107,
@@ -34535,6 +34655,7 @@
     "lemma": "Bysbikos",
     "previous": "Byryn",
     "next": "Bysios",
+    "redirect": "Besbikos 1",
     "chapters": [
       {
         "start": 1107,
@@ -34595,6 +34716,8 @@
     "lemma": "Byssatis",
     "previous": "Byssa",
     "next": "Byssos",
+    "redirect": "Byzacium",
+    "wp_link": "w:de:Byzacium",
     "chapters": [
       {
         "start": 1108,
@@ -34632,6 +34755,7 @@
     "lemma": "Bythemaneis",
     "previous": "Bytharia",
     "next": "Bythias",
+    "redirect": "Banizomeneis",
     "chapters": [
       {
         "start": 1114,
@@ -34643,6 +34767,7 @@
     "lemma": "Bythias",
     "previous": "Bythemaneis",
     "next": "Bytinis",
+    "redirect": "Bosporos 1",
     "chapters": [
       {
         "start": 1114,
@@ -34728,6 +34853,7 @@
     "lemma": "Byzantion 3",
     "previous": "Byzantion 2",
     "next": "Byzas",
+    "redirect": "Byzacium",
     "chapters": [
       {
         "start": 1158,
@@ -34873,7 +34999,7 @@
     "lemma": "Cabaeum",
     "previous": "Cabacos",
     "next": "Cabalaca",
-    "redirect": true,
+    "redirect": "Gabaeum",
     "chapters": [
       {
         "start": 1161,
@@ -34885,7 +35011,7 @@
     "lemma": "Cabalaca",
     "previous": "Cabaeum",
     "next": "Cabalio",
-    "redirect": true,
+    "redirect": "Chabala",
     "chapters": [
       {
         "start": 1161,
@@ -34897,7 +35023,7 @@
     "lemma": "Cabalio",
     "previous": "Cabalaca",
     "next": "Caballodunum",
-    "redirect": true,
+    "redirect": "Cabellio",
     "chapters": [
       {
         "start": 1161,
@@ -34909,7 +35035,7 @@
     "lemma": "Caballodunum",
     "previous": "Cabalio",
     "next": "Caballucome",
-    "redirect": true,
+    "redirect": "Cabillonum",
     "chapters": [
       {
         "start": 1161,
@@ -34933,7 +35059,7 @@
     "lemma": "Caballus",
     "previous": "Caballucome",
     "next": "Cabardiacensis",
-    "redirect": true,
+    "redirect": "Tettius 7",
     "chapters": [
       {
         "start": 1161,
@@ -35031,7 +35157,7 @@
     "lemma": "Cabetius",
     "previous": "Cabenses 3",
     "next": "Cabillonum",
-    "redirect": true,
+    "redirect": "Cnabetius",
     "chapters": [
       {
         "start": 1163,
@@ -35092,7 +35218,7 @@
     "lemma": "Cablium",
     "previous": "Cablie(n)ses",
     "next": "Cabris",
-    "redirect": true,
+    "redirect": "Gabaeum",
     "chapters": [
       {
         "start": 1164,
@@ -35104,7 +35230,7 @@
     "lemma": "Cabris",
     "previous": "Cablium",
     "next": "Cabruagenigi",
-    "redirect": true,
+    "redirect": "Gabris 1",
     "chapters": [
       {
         "start": 1164,
@@ -35140,6 +35266,7 @@
     "lemma": "Cabyllinum",
     "previous": "Cabuniaeginus",
     "next": "Caca",
+    "redirect": "Cabillonum",
     "chapters": [
       {
         "start": 1164,
@@ -35163,6 +35290,7 @@
     "lemma": "Caccabaria",
     "previous": "Caca",
     "next": "Caccabus",
+    "redirect": true,
     "chapters": [
       {
         "start": 1164,
@@ -35283,6 +35411,7 @@
     "lemma": "Caddarenses",
     "previous": "Cadaum Castra",
     "next": "Cad(enus?)",
+    "redirect": "Cattharenses",
     "chapters": [
       {
         "start": 1170,
@@ -35333,6 +35462,7 @@
     "lemma": "Cadicianus",
     "previous": "Cadianum",
     "next": "Cadienses",
+    "redirect": true,
     "chapters": [
       {
         "start": 1170,
@@ -35356,6 +35486,7 @@
     "lemma": "Cadistus",
     "previous": "Cadienses",
     "next": "Cadius",
+    "redirect": "Kadistos",
     "chapters": [
       {
         "start": 1170,
@@ -35403,6 +35534,7 @@
     "lemma": "Caducum",
     "previous": "Caduceus",
     "next": "Cadurci",
+    "redirect": "Bona caduca",
     "chapters": [
       {
         "start": 1171,
@@ -35440,6 +35572,7 @@
     "lemma": "Caecas",
     "previous": "Cadus",
     "next": "Caecidianus",
+    "redirect": "Caecilius",
     "chapters": [
       {
         "start": 1172,
@@ -35609,6 +35742,7 @@
     "lemma": "Caecilianus 10",
     "previous": "Caecilianus 9",
     "next": "Caecilia via",
+    "redirect": "Publilius",
     "chapters": [
       {
         "start": 1173,
@@ -35632,6 +35766,7 @@
     "lemma": "Caecilionicum",
     "previous": "Caecilia via",
     "next": "Caecilius",
+    "redirect": "Caecilius vicus",
     "chapters": [
       {
         "start": 1174,
@@ -36061,6 +36196,8 @@
     "lemma": "Caecilius 32",
     "previous": "Caecilius 31",
     "next": "Caecilius 33",
+    "sort_key": "Caecilius 032",
+    "redirect": "Arborius 1",
     "chapters": [
       {
         "start": 1196,
@@ -37219,6 +37356,7 @@
     "lemma": "Caecilius 126",
     "previous": "Caecilius 125",
     "next": "Caecilius 127",
+    "redirect": "Furius 96",
     "chapters": [
       {
         "start": 1234,
@@ -37537,7 +37675,7 @@
     "lemma": "Caecina 11",
     "previous": "Caecina 10",
     "next": "Caecina 12",
-    "redirect": true,
+    "redirect": "Claudius 90",
     "chapters": [
       {
         "start": 1240,
@@ -37549,6 +37687,7 @@
     "lemma": "Caecina 12",
     "previous": "Caecina 11",
     "next": "Caecina 13",
+    "redirect": "Ceionius 39",
     "chapters": [
       {
         "start": 1240,
@@ -37560,6 +37699,7 @@
     "lemma": "Caecina 13",
     "previous": "Caecina 12",
     "next": "Caecina 14",
+    "redirect": "Ceionius 36",
     "chapters": [
       {
         "start": 1240,
@@ -37571,6 +37711,7 @@
     "lemma": "Caecina 14",
     "previous": "Caecina 13",
     "next": "Caecina 15",
+    "redirect": "Basileios 6",
     "chapters": [
       {
         "start": 1240,
@@ -37582,6 +37723,7 @@
     "lemma": "Caecina 15",
     "previous": "Caecina 14",
     "next": "Caecina 16",
+    "redirect": "Laecanius 1",
     "chapters": [
       {
         "start": 1240,
@@ -37651,6 +37793,7 @@
     "lemma": "Caecina 21",
     "previous": "Caecina 20",
     "next": "Caecina 22",
+    "redirect": "Licinius 40",
     "chapters": [
       {
         "start": 1241,
@@ -37719,6 +37862,7 @@
     "lemma": "Caecina 27",
     "previous": "Caecina 26",
     "next": "Caecina 28",
+    "redirect": "Arrius 40",
     "chapters": [
       {
         "start": 1243,
@@ -37742,6 +37886,7 @@
     "lemma": "Caecina 29",
     "previous": "Caecina 28",
     "next": "Caecinum",
+    "redirect": "Ceionius 25",
     "chapters": [
       {
         "start": 1243,
@@ -37827,6 +37972,7 @@
     "lemma": "Caecus",
     "previous": "Caeculus 2",
     "next": "Caedicianus 1",
+    "redirect": "Claudius 91",
     "chapters": [
       {
         "start": 1245,
@@ -37862,6 +38008,7 @@
     "lemma": "Caedicianus 3",
     "previous": "Caedicianus 2",
     "next": "Caedicius 1",
+    "redirect": "Aburnius 1",
     "chapters": [
       {
         "start": 1245,
@@ -38038,6 +38185,7 @@
     "lemma": "Caeduum",
     "previous": "Caedicus 2",
     "next": "Caeionius",
+    "redirect": "Canduum",
     "chapters": [
       {
         "start": 1246,
@@ -38049,6 +38197,7 @@
     "lemma": "Caeionius",
     "previous": "Caeduum",
     "next": "Caelatura",
+    "redirect": "Ceionius",
     "chapters": [
       {
         "start": 1246,
@@ -38060,6 +38209,7 @@
     "lemma": "Caelatura",
     "previous": "Caeionius",
     "next": "Caelanus pagus",
+    "redirect": "Toreutik",
     "chapters": [
       {
         "start": 1246,
@@ -38108,6 +38258,7 @@
     "lemma": "Caelemontium",
     "previous": "Caelemontanus campus",
     "next": "Caeles",
+    "redirect": "Caelius mons 1",
     "chapters": [
       {
         "start": 1247,
@@ -38119,6 +38270,7 @@
     "lemma": "Caeles",
     "previous": "Caelemontium",
     "next": "Caelestinus 1",
+    "redirect": "Caelius mons 1",
     "chapters": [
       {
         "start": 1247,
@@ -38549,6 +38701,8 @@
     "lemma": "Caelius 16",
     "previous": "Caelius 15",
     "next": "Caelius 17",
+    "sort_key": "Caelius 16",
+    "redirect": "Probianus",
     "chapters": [
       {
         "start": 1256,
@@ -38612,6 +38766,8 @@
     "lemma": "Caelius 21",
     "previous": "Caelius 20",
     "next": "Caelius 22",
+    "sort_key": "Caelius 21",
+    "redirect": "Censorinus 5",
     "chapters": [
       {
         "start": 1265,
@@ -38814,6 +38970,8 @@
     "lemma": "Caelius 37",
     "previous": "Caelius 36",
     "next": "Caelius 38",
+    "sort_key": "Caelius 37",
+    "redirect": "Arulenus 2",
     "chapters": [
       {
         "start": 1273,
@@ -38838,6 +38996,8 @@
     "lemma": "Caelius 39",
     "previous": "Caelius 38",
     "next": "Caelius 40",
+    "sort_key": "Caelius 39",
+    "redirect": "Urbanus",
     "chapters": [
       {
         "start": 1273,
@@ -38983,6 +39143,7 @@
     "lemma": "Caenicenses",
     "previous": "Caenia",
     "next": "Caenina",
+    "redirect": "Caenus",
     "chapters": [
       {
         "start": 1278,
@@ -39019,6 +39180,7 @@
     "lemma": "Caenis, Antonia",
     "previous": "Caeninenses sacerdotes",
     "next": "Caenus",
+    "redirect": "Antonius 117",
     "chapters": [
       {
         "start": 1279,
@@ -39042,6 +39204,7 @@
     "lemma": "Caenys promontorium",
     "previous": "Caenus",
     "next": "Caeparius",
+    "redirect": "Kainys",
     "chapters": [
       {
         "start": 1279,
@@ -39114,6 +39277,7 @@
     "lemma": "Caepio 1",
     "previous": "Caepio",
     "next": "Caepio 2",
+    "redirect": "Fannius",
     "chapters": [
       {
         "start": 1280,
@@ -39209,6 +39373,7 @@
     "lemma": "Caepionianus",
     "previous": "Caepio 8",
     "next": "Caepionis monumentum",
+    "redirect": "Crispinus 15",
     "chapters": [
       {
         "start": 1280,
@@ -39435,6 +39600,7 @@
     "lemma": "Caerianus",
     "previous": "Caeriana",
     "next": "Caeritum tabulae",
+    "redirect": "Pica",
     "chapters": [
       {
         "start": 1284,
@@ -40389,6 +40555,7 @@
     "lemma": "Caesianus 1",
     "previous": "Caesi",
     "next": "Caesianus 2",
+    "redirect": "Iuventius",
     "chapters": [
       {
         "start": 1311,
@@ -40714,6 +40881,7 @@
     "lemma": "Caesius 20",
     "previous": "Caesius 19",
     "next": "Caesius 21",
+    "redirect": "Catius 4",
     "chapters": [
       {
         "start": 1316,
@@ -40807,6 +40975,7 @@
     "lemma": "Caesius 28",
     "previous": "Caesius 27",
     "next": "Caesius 29",
+    "redirect": "Petillius 8",
     "chapters": [
       {
         "start": 1316,
@@ -40842,6 +41011,7 @@
     "lemma": "Caesius 31",
     "previous": "Caesius 30",
     "next": "Caesoninus",
+    "redirect": "Cornelius 431",
     "chapters": [
       {
         "start": 1317,
@@ -40853,6 +41023,7 @@
     "lemma": "Caesoninus",
     "previous": "Caesius 31",
     "next": "Caesonius 1",
+    "redirect": "Calpurnius",
     "chapters": [
       {
         "start": 1317,
@@ -41046,6 +41217,7 @@
     "lemma": "Caesticillus",
     "previous": "Caesorix",
     "next": "Caestici ludi",
+    "redirect": "Arculum 1",
     "chapters": [
       {
         "start": 1319,
@@ -41057,6 +41229,7 @@
     "lemma": "Caestici ludi",
     "previous": "Caesticillus",
     "next": "Caestuarii",
+    "redirect": true,
     "chapters": [
       {
         "start": 1319,
@@ -41068,6 +41241,7 @@
     "lemma": "Caestuarii",
     "previous": "Caestici ludi",
     "next": "Caestus",
+    "redirect": "Pugilatus",
     "chapters": [
       {
         "start": 1319,
@@ -41104,6 +41278,7 @@
     "lemma": "Caesulenus 2",
     "previous": "Caesulenus 1",
     "next": "Caetobriga",
+    "redirect": "Matius 3",
     "chapters": [
       {
         "start": 1321,
@@ -41373,6 +41548,7 @@
     "lemma": "Caius",
     "previous": "Caiva dea",
     "next": "Cal.",
+    "redirect": true,
     "chapters": [
       {
         "start": 1324,
@@ -41409,6 +41585,7 @@
     "lemma": "Calabra curia",
     "previous": "Cala",
     "next": "Calabria",
+    "redirect": "Curia 3#b",
     "chapters": [
       {
         "start": 1325,
@@ -41433,6 +41610,7 @@
     "lemma": "Calacticus sinus",
     "previous": "Calabria",
     "next": "Caladunum",
+    "redirect": "Calathe",
     "chapters": [
       {
         "start": 1327,
@@ -41542,6 +41720,7 @@
     "lemma": "Calamantia",
     "previous": "Calama 2",
     "next": "Calamistrum",
+    "redirect": "Celamantia",
     "chapters": [
       {
         "start": 1329,
@@ -41902,6 +42081,7 @@
     "lemma": "Calculus Minervae",
     "previous": "Calculi 2",
     "next": "Calda",
+    "redirect": "Absolutio 1",
     "chapters": [
       {
         "start": 1345,
@@ -41998,6 +42178,7 @@
     "lemma": "Caleda",
     "previous": "Calecula",
     "next": "Caledonii",
+    "redirect": "Volumnius 28",
     "chapters": [
       {
         "start": 1347,
@@ -42033,6 +42214,7 @@
     "lemma": "Calendarium",
     "previous": "Calefacelenses",
     "next": "Calenum",
+    "redirect": "Fasti",
     "chapters": [
       {
         "start": 1350,
@@ -42044,6 +42226,7 @@
     "lemma": "Calenum",
     "previous": "Calendarium",
     "next": "Calenus 1",
+    "redirect": "Cales",
     "chapters": [
       {
         "start": 1351,
@@ -42091,6 +42274,7 @@
     "lemma": "Calenus 4",
     "previous": "Calenus 3",
     "next": "Caleorsissa",
+    "redirect": true,
     "chapters": [
       {
         "start": 1351,
@@ -42127,6 +42311,7 @@
     "lemma": "Calestrius 1",
     "previous": "Cales",
     "next": "Calestrius 2",
+    "redirect": "Servilius 81a",
     "chapters": [
       {
         "start": 1352,
@@ -42198,6 +42383,7 @@
     "lemma": "Caliabria",
     "previous": "Calgacus",
     "next": "Calicardama",
+    "redirect": "Caelobriga",
     "chapters": [
       {
         "start": 1353,
@@ -42429,6 +42615,7 @@
     "lemma": "Calix",
     "previous": "Calisia",
     "next": "Callaici",
+    "redirect": "Kylix",
     "chapters": [
       {
         "start": 1356,
@@ -42549,6 +42736,7 @@
     "lemma": "Callipianus",
     "previous": "Callipolis",
     "next": "Callipus",
+    "redirect": "Claudius 94",
     "chapters": [
       {
         "start": 1362,
@@ -42560,6 +42748,7 @@
     "lemma": "Callipus",
     "previous": "Callipianus",
     "next": "Callode",
+    "redirect": "Collippo",
     "chapters": [
       {
         "start": 1362,
@@ -42642,6 +42831,7 @@
     "lemma": "Calocerus",
     "previous": "Calo",
     "next": "Calones",
+    "redirect": "Kalokairos",
     "chapters": [
       {
         "start": 1362,
@@ -43091,6 +43281,8 @@
     "lemma": "Calpurnius 19",
     "previous": "Calpurnius 18",
     "next": "Calpurnius 20",
+    "sort_key": "Calpurnius 019",
+    "redirect": "Nonius 29",
     "chapters": [
       {
         "start": 1366,
@@ -44690,7 +44882,8 @@
   {
     "lemma": "Calvilla",
     "previous": "Calucones 2",
-    "next": "Calvina 5",
+    "next": "Calvinianus",
+    "redirect": "Domitius 105",
     "chapters": [
       {
         "start": 1409,
@@ -44712,8 +44905,9 @@
   },
   {
     "lemma": "Calvinianus",
-    "previous": "Calvina 5",
+    "previous": "Calvilla",
     "next": "Calvinus 1",
+    "redirect": "Venidius 3",
     "chapters": [
       {
         "start": 1409,
@@ -45009,6 +45203,7 @@
     "lemma": "Calvisius 18",
     "previous": "Calvisius 17",
     "next": "Calvisius 19",
+    "redirect": "Taurus 2",
     "chapters": [
       {
         "start": 1413,
@@ -45353,6 +45548,7 @@
     "lemma": "Camars 2",
     "previous": "Camars 1",
     "next": "Camasene, Cameses",
+    "redirect": "Annius 36",
     "chapters": [
       {
         "start": 1425,
@@ -45424,6 +45620,8 @@
     "lemma": "Cambidanum",
     "previous": "Cambes",
     "next": "Cambiovicenses",
+    "redirect": "Cambodunum 1",
+    "wp_link": "w:de:Cambodunum",
     "chapters": [
       {
         "start": 1426,
@@ -45532,6 +45730,7 @@
     "lemma": "Cambunii montes",
     "previous": "Camboricum",
     "next": "Cambysis forum",
+    "redirect": "Καμβούνια",
     "chapters": [
       {
         "start": 1427,
@@ -45543,6 +45742,7 @@
     "lemma": "Cambysis forum",
     "previous": "Cambunii montes",
     "next": "Cameliomagus",
+    "redirect": "Καμβύσου ταμιεῖα",
     "chapters": [
       {
         "start": 1427,
@@ -45554,6 +45754,7 @@
     "lemma": "Cameliomagus",
     "previous": "Cambysis forum",
     "next": "Camenae",
+    "redirect": "Comillomagus",
     "chapters": [
       {
         "start": 1427,
@@ -45578,6 +45779,7 @@
     "lemma": "Camenarum vallis",
     "previous": "Camenae",
     "next": "Camenius 1",
+    "redirect": "Egeriae vallis",
     "chapters": [
       {
         "start": 1428,
@@ -45589,6 +45791,7 @@
     "lemma": "Camenius 1",
     "previous": "Camenarum vallis",
     "next": "Camenius 2",
+    "redirect": "Ceionius 19",
     "chapters": [
       {
         "start": 1428,
@@ -45600,6 +45803,7 @@
     "lemma": "Camenius 2",
     "previous": "Camenius 1",
     "next": "Camerata",
+    "redirect": "Ceionius 31",
     "chapters": [
       {
         "start": 1428,
@@ -45684,6 +45888,7 @@
     "lemma": "Camers",
     "previous": "Camerinus 3",
     "next": "Cametae",
+    "redirect": "Camars 1",
     "chapters": [
       {
         "start": 1430,
@@ -45743,6 +45948,7 @@
     "lemma": "Camilius",
     "previous": "Camilia",
     "next": "Camilla 1",
+    "redirect": "Iulius",
     "chapters": [
       {
         "start": 1430,
@@ -45767,6 +45973,7 @@
     "lemma": "Camilla 2",
     "previous": "Camilla 1",
     "next": "Camillius",
+    "redirect": "Arruntius 28",
     "chapters": [
       {
         "start": 1431,

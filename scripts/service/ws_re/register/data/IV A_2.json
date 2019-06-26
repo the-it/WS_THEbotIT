@@ -2870,6 +2870,8 @@
     "lemma": "Tabernae 1",
     "previous": "Tabernaculum 2",
     "next": "Tabernae 2",
+    "redirect": "Tabernae, Tres 4",
+    "wp_link": "w:de:Zabern",
     "chapters": [
       {
         "start": 1873,
@@ -2978,6 +2980,7 @@
     "lemma": "Tabernae novae",
     "previous": "Tabernae Caediciae",
     "next": "Tabernae plebeiae",
+    "redirect": "Taberna 1",
     "chapters": [
       {
         "start": 1875,
@@ -2989,6 +2992,7 @@
     "lemma": "Tabernae plebeiae",
     "previous": "Tabernae novae",
     "next": "Tabernae septem",
+    "redirect": "Taberna 1",
     "chapters": [
       {
         "start": 1875,
@@ -3000,6 +3004,7 @@
     "lemma": "Tabernae septem",
     "previous": "Tabernae plebeiae",
     "next": "Tabernae veteres",
+    "redirect": "Taberna 1",
     "chapters": [
       {
         "start": 1875,
@@ -3010,7 +3015,8 @@
   {
     "lemma": "Tabernae veteres",
     "previous": "Tabernae septem",
-    "next": "Tabernae, Tres 5",
+    "next": "Tres Tabernae 1",
+    "redirect": "Taberna 1",
     "chapters": [
       {
         "start": 1875,
@@ -3062,6 +3068,7 @@
     "lemma": "Tabia 1",
     "previous": "Tabernarius",
     "next": "Tabia 2",
+    "redirect": "Tambia",
     "chapters": [
       {
         "start": 1878,
@@ -3073,6 +3080,7 @@
     "lemma": "Tabia 2",
     "previous": "Tabia 1",
     "next": "Ταβιάνα",
+    "redirect": "Tavium",
     "chapters": [
       {
         "start": 1878,
@@ -3231,6 +3239,7 @@
     "lemma": "Tabraca",
     "previous": "Tabos",
     "next": "Tabucci",
+    "redirect": "Thabraca",
     "chapters": [
       {
         "start": 1880,
@@ -3334,7 +3343,8 @@
   {
     "lemma": "Tabula Peutingeriana",
     "previous": "Tabula lusoria",
-    "next": "Tabulae censoriae",
+    "next": "Tabulae Caeritum",
+    "redirect": "Karten/V",
     "chapters": [
       {
         "start": 1897,
@@ -5030,7 +5040,7 @@
   {
     "lemma": "Talius Geminus",
     "previous": "Talium",
-    "next": "Talka",
+    "next": "Τάλκα",
     "chapters": [
       {
         "start": 2078,
@@ -5040,9 +5050,11 @@
     ]
   },
   {
-    "lemma": "Talka",
+    "lemma": "Τάλκα",
     "previous": "Talius Geminus",
-    "next": "Talkinon",
+    "next": "Τάλκινον",
+    "sort_key": "Talka",
+    "redirect": "Talge",
     "chapters": [
       {
         "start": 2078,
@@ -5051,8 +5063,8 @@
     ]
   },
   {
-    "lemma": "Talkinon",
-    "previous": "Talka",
+    "lemma": "Τάλκινον",
+    "previous": "Τάλκα",
     "next": "Tallaia",
     "chapters": [
       {
@@ -5064,7 +5076,7 @@
   },
   {
     "lemma": "Tallaia",
-    "previous": "Talkinon",
+    "previous": "Τάλκινον",
     "next": "Tal(l)aios",
     "chapters": [
       {
@@ -5078,6 +5090,8 @@
     "lemma": "Tal(l)aios",
     "previous": "Tallaia",
     "next": "Talliates",
+    "sort_key": "Tallaios",
+    "redirect": "Taletitas",
     "chapters": [
       {
         "start": 2079,
@@ -5795,6 +5809,8 @@
     "lemma": "Τάμνα 2",
     "previous": "Τάμνα 1",
     "next": "Tamnicum",
+    "sort_key": "Tamna 2",
+    "redirect": "Thumna",
     "chapters": [
       {
         "start": 2148,
@@ -5829,7 +5845,7 @@
   {
     "lemma": "Tamonbari",
     "previous": "Tamnum",
-    "next": "Tamonitis",
+    "next": "Ταμωνῖτις",
     "chapters": [
       {
         "start": 2148,
@@ -5839,7 +5855,7 @@
     ]
   },
   {
-    "lemma": "Tamonitis",
+    "lemma": "Ταμωνῖτις",
     "previous": "Tamonbari",
     "next": "Ταμωρῖτις",
     "sort_key": "Tamonitis",
@@ -5853,8 +5869,10 @@
   },
   {
     "lemma": "Ταμωρῖτις",
-    "previous": "Tamonitis",
+    "previous": "Ταμωνῖτις",
     "next": "Tamos",
+    "sort_key": "Tamoritis",
+    "redirect": "Ταμωνῖτις",
     "chapters": [
       {
         "start": 2149,
@@ -5914,6 +5932,7 @@
     "lemma": "Tamuada",
     "previous": "Tamsapor",
     "next": "Tamucus",
+    "redirect": "Tamuda 1",
     "chapters": [
       {
         "start": 2150,
@@ -5925,6 +5944,7 @@
     "lemma": "Tamucus",
     "previous": "Tamuada",
     "next": "Tamuda 1",
+    "redirect": "Tamuda 2",
     "chapters": [
       {
         "start": 2150,
@@ -5960,6 +5980,7 @@
     "lemma": "Tamugadis",
     "previous": "Tamuda 2",
     "next": "Tamus",
+    "redirect": "Thamugadi(s)",
     "chapters": [
       {
         "start": 2150,
@@ -5970,7 +5991,8 @@
   {
     "lemma": "Tamus",
     "previous": "Tamugadis",
-    "next": "Tamousiga",
+    "next": "Tamusida",
+    "redirect": "Tamaros 1",
     "chapters": [
       {
         "start": 2150,
@@ -7632,6 +7654,7 @@
     "lemma": "Tarba 2",
     "previous": "Tarba 1",
     "next": "Ταρβακάνα",
+    "redirect": "Tarra 2",
     "chapters": [
       {
         "start": 2292,
@@ -7731,6 +7754,7 @@
     "lemma": "Tarbision",
     "previous": "Tarbelos 2",
     "next": "Tarbisium",
+    "redirect": "Tarvisium",
     "chapters": [
       {
         "start": 2294,
@@ -7742,6 +7766,7 @@
     "lemma": "Tarbisium",
     "previous": "Tarbision",
     "next": "Tarbo",
+    "redirect": "Tarvisium",
     "chapters": [
       {
         "start": 2294,
@@ -7777,6 +7802,7 @@
     "lemma": "Tarbula",
     "previous": "Tarbonia",
     "next": "Tarbus",
+    "redirect": "Tarbo",
     "chapters": [
       {
         "start": 2294,
@@ -7836,6 +7862,8 @@
     "lemma": "Ταρχωλά",
     "previous": "Tarchetius",
     "next": "Tarchon",
+    "sort_key": "Tarchola",
+    "redirect": "Targala kome",
     "chapters": [
       {
         "start": 2296,
@@ -7859,6 +7887,8 @@
     "lemma": "Tarcondarius",
     "previous": "Tarchon",
     "next": "Tarcondimantos",
+    "redirect": "Tektosagen",
+    "wp_link": "w:de:Tektosagen",
     "chapters": [
       {
         "start": 2297,
@@ -7870,6 +7900,7 @@
     "lemma": "Tarcondimantos",
     "previous": "Tarcondarius",
     "next": "Tarcondimotus",
+    "redirect": "Tarkondimantos, Tarkodimantos",
     "chapters": [
       {
         "start": 2297,
@@ -7943,6 +7974,7 @@
     "lemma": "Tarentini ludi",
     "previous": "Tarelyi",
     "next": "Tarentinus portus",
+    "redirect": "Tarentum 2",
     "chapters": [
       {
         "start": 2299,
@@ -8515,7 +8547,9 @@
   {
     "lemma": "Ταρωνῖτις",
     "previous": "Ταρῶνα",
-    "next": "Tarpe",
+    "next": "Τάρπη",
+    "sort_key": "Taronitis",
+    "redirect": "Ταμωνῖτις",
     "chapters": [
       {
         "start": 2330,
@@ -8524,7 +8558,7 @@
     ]
   },
   {
-    "lemma": "Tarpe",
+    "lemma": "Τάρπη",
     "previous": "Ταρωνῖτις",
     "next": "Tarpeium saxum",
     "chapters": [
@@ -8537,7 +8571,7 @@
   },
   {
     "lemma": "Tarpeium saxum",
-    "previous": "Tarpe",
+    "previous": "Τάρπη",
     "next": "Tarpeius 1",
     "chapters": [
       {
@@ -9758,6 +9792,7 @@
     "lemma": "Tartessos 2",
     "previous": "Tartessos 1",
     "next": "Tartettios",
+    "redirect": "Baetis",
     "chapters": [
       {
         "start": 2451,
@@ -9769,6 +9804,7 @@
     "lemma": "Tartettios",
     "previous": "Tartessos 2",
     "next": "Tartursanis",
+    "redirect": "Orthros 1",
     "chapters": [
       {
         "start": 2451,
@@ -9779,7 +9815,7 @@
   {
     "lemma": "Tartursanis",
     "previous": "Tartettios",
-    "next": "Tarualtai",
+    "next": "Ταρουάλται",
     "chapters": [
       {
         "start": 2451,
@@ -9789,7 +9825,7 @@
     ]
   },
   {
-    "lemma": "Tarualtai",
+    "lemma": "Ταρουάλται",
     "previous": "Tartursanis",
     "next": "Tarvanna",
     "sort_key": "Tarualtai",
@@ -9803,7 +9839,7 @@
   },
   {
     "lemma": "Tarvanna",
-    "previous": "Tarualtai",
+    "previous": "Ταρουάλται",
     "next": "Τάρουδα",
     "wp_link": "w:de:Thérouanne",
     "chapters": [
@@ -9942,6 +9978,7 @@
     "lemma": "Tarutius",
     "previous": "Tarutia emporon",
     "next": "Tasagora 1",
+    "redirect": "Tarrutius 1",
     "chapters": [
       {
         "start": 2459,
@@ -10001,6 +10038,7 @@
     "lemma": "Tasconi",
     "previous": "Tasciavant(ius), Tasciovant(ius)",
     "next": "Tasgaetium",
+    "redirect": "Tasgoduni",
     "chapters": [
       {
         "start": 2460,
@@ -10099,6 +10137,8 @@
     "lemma": "Τασκοί",
     "previous": "Τάσκα",
     "next": "Τασόπιον",
+    "sort_key": "Taskoi",
+    "redirect": "Taoke 1",
     "chapters": [
       {
         "start": 2461,
@@ -11353,7 +11393,7 @@
   },
   {
     "lemma": "Tarne 2",
-    "previous": "Tauris",
+    "previous": "Symmachia",
     "chapters": [
       {
         "start": 2548,
