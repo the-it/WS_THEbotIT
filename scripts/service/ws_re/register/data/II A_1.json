@@ -185,7 +185,7 @@
     "lemma": "Sarmydessos",
     "previous": "Sarmus",
     "next": "Sarna",
-    "redirect": true,
+    "redirect": "Salmydessos",
     "wp_link": "w:de:Salmydessos",
     "chapters": [
       {
@@ -282,7 +282,7 @@
     "lemma": "Sarnia",
     "previous": "Σάρν(ε)ιος",
     "next": "Σάρνιος",
-    "redirect": true,
+    "redirect": "Sarmia",
     "chapters": [
       {
         "start": 29,
@@ -330,7 +330,7 @@
     "lemma": "Sarnum",
     "previous": "Σαρνοῦκα",
     "next": "Sarnunto",
-    "redirect": true,
+    "redirect": "Sarnus",
     "chapters": [
       {
         "start": 30,
@@ -390,7 +390,7 @@
     "lemma": "Saroa, Saroensis",
     "previous": "Sarnus mons",
     "next": "Saron 1",
-    "redirect": true,
+    "redirect": "Saravus",
     "chapters": [
       {
         "start": 31,
@@ -475,7 +475,7 @@
     "lemma": "Sarophages",
     "previous": "Saronia 2",
     "next": "Saros 1",
-    "redirect": true,
+    "redirect": "Sorofages",
     "chapters": [
       {
         "start": 34,
@@ -535,7 +535,7 @@
     "lemma": "Sarpach",
     "previous": "Saros 4",
     "next": "Sarpedon",
-    "redirect": true,
+    "redirect": "Saeprus fluvius",
     "chapters": [
       {
         "start": 35,
@@ -643,7 +643,7 @@
     "lemma": "Sarpedonis",
     "previous": "Sarpedonios",
     "next": "Sarra 1",
-    "redirect": true,
+    "redirect": "Sarpedon 1",
     "chapters": [
       {
         "start": 48,
@@ -715,7 +715,7 @@
     "lemma": "Sarralis",
     "previous": "Sarracum",
     "next": "Sarranates",
-    "redirect": true,
+    "redirect": "Sarnali",
     "chapters": [
       {
         "start": 50,
@@ -727,7 +727,7 @@
     "lemma": "Sarranates",
     "previous": "Sarralis",
     "next": "Sarrastes",
-    "redirect": true,
+    "redirect": "Sarnus",
     "chapters": [
       {
         "start": 50,
@@ -739,7 +739,7 @@
     "lemma": "Sarrastes",
     "previous": "Sarranates",
     "next": "Sarromaëna",
-    "redirect": true,
+    "redirect": "Sarnus",
     "chapters": [
       {
         "start": 50,
@@ -787,7 +787,7 @@
     "lemma": "Sarsapa",
     "previous": "Sars",
     "next": "Sarsina",
-    "redirect": true,
+    "redirect": "Varsapa",
     "chapters": [
       {
         "start": 50,
@@ -8246,7 +8246,8 @@
   {
     "lemma": "Sebaste 7",
     "previous": "Sebaste 6",
-    "next": "Sebasteia",
+    "next": "Σεβάστεια",
+    "redirect": "Samaria",
     "chapters": [
       {
         "start": 952,
@@ -8255,7 +8256,7 @@
     ]
   },
   {
-    "lemma": "Sebasteia",
+    "lemma": "Σεβάστεια",
     "previous": "Sebaste 7",
     "next": "Sebast(e)ia",
     "chapters": [
@@ -8268,7 +8269,7 @@
   },
   {
     "lemma": "Sebast(e)ia",
-    "previous": "Sebasteia",
+    "previous": "Σεβάστεια",
     "next": "Sebastenus",
     "chapters": [
       {
@@ -11539,6 +11540,7 @@
     "lemma": "Segovellauni",
     "previous": "Segovax",
     "next": "Segovesos",
+    "redirect": "Segallauni, Segovellauni",
     "chapters": [
       {
         "start": 1089,
@@ -11563,6 +11565,8 @@
     "lemma": "Segovesus",
     "previous": "Segovesos",
     "next": "Segovia",
+    "redirect": "Segovesos",
+    "wp_link": "w:de:Segovesus",
     "chapters": [
       {
         "start": 1089,
@@ -11927,8 +11931,8 @@
   {
     "lemma": "Seirenes",
     "previous": "Seiopa, Seiope, Seiopum",
-    "next": "Seisachtheia",
-    "redirect": true,
+    "next": "Σεισάχθεια",
+    "redirect": "Sirenen",
     "chapters": [
       {
         "start": 1118,
@@ -11937,7 +11941,7 @@
     ]
   },
   {
-    "lemma": "Seisachtheia",
+    "lemma": "Σεισάχθεια",
     "previous": "Seirenes",
     "next": "Seiuges",
     "chapters": [
@@ -11950,7 +11954,7 @@
   },
   {
     "lemma": "Seiuges",
-    "previous": "Seisachtheia",
+    "previous": "Σεισάχθεια",
     "next": "Seius",
     "chapters": [
       {

@@ -121,7 +121,8 @@
   {
     "lemma": "Mantipolos",
     "previous": "Mantios",
-    "next": "Mantis 1",
+    "next": "Μάντις 1",
+    "redirect": "Manteios",
     "chapters": [
       {
         "start": 1345,
@@ -130,9 +131,9 @@
     ]
   },
   {
-    "lemma": "Mantis 1",
+    "lemma": "Μάντις 1",
     "previous": "Mantipolos",
-    "next": "Mantis 2",
+    "next": "Μάντις 2",
     "chapters": [
       {
         "start": 1345,
@@ -142,9 +143,11 @@
     ]
   },
   {
-    "lemma": "Mantis 2",
-    "previous": "Mantis 1",
+    "lemma": "Μάντις 2",
+    "previous": "Μάντις 1",
     "next": "Mantitheos 1",
+    "sort_key": "Mantis 2",
+    "redirect": "Manteios",
     "chapters": [
       {
         "start": 1355,
@@ -154,7 +157,7 @@
   },
   {
     "lemma": "Mantitheos 1",
-    "previous": "Mantis 2",
+    "previous": "Μάντις 2",
     "next": "Mantitheos 2",
     "chapters": [
       {
@@ -9902,6 +9905,7 @@
     "lemma": "Marius 72",
     "previous": "Marius 71",
     "next": "Marius 73",
+    "redirect": "Vindicius 2",
     "chapters": [
       {
         "start": 1848,
@@ -9949,6 +9953,7 @@
     "lemma": "Marius 76",
     "previous": "Marius 75",
     "next": "Marius 77",
+    "redirect": "Claudius 426",
     "chapters": [
       {
         "start": 1848,
@@ -9972,6 +9977,7 @@
     "lemma": "Marius 78",
     "previous": "Marius 77",
     "next": "Marius 79",
+    "redirect": "Vibius 72",
     "chapters": [
       {
         "start": 1849,
@@ -10020,6 +10026,7 @@
     "lemma": "Markellinos",
     "previous": "Markala",
     "next": "Markellos",
+    "redirect": true,
     "chapters": [
       {
         "start": 1849,
@@ -10031,6 +10038,7 @@
     "lemma": "Markellos",
     "previous": "Markellinos",
     "next": "Markiane",
+    "redirect": true,
     "chapters": [
       {
         "start": 1849,
@@ -13626,6 +13634,7 @@
     "lemma": "Masora",
     "previous": "Masonitai",
     "next": "Maspha",
+    "redirect": "Kasara 1",
     "chapters": [
       {
         "start": 2121,
@@ -13637,6 +13646,7 @@
     "lemma": "Maspha",
     "previous": "Masora",
     "next": "Masphalata",
+    "redirect": "Mizpa, Mizpe 1",
     "chapters": [
       {
         "start": 2121,
@@ -13659,7 +13669,7 @@
   {
     "lemma": "Masphalatenos",
     "previous": "Masphalata",
-    "next": "Masphate",
+    "next": "Μασφάτη",
     "chapters": [
       {
         "start": 2121,
@@ -13669,9 +13679,12 @@
     ]
   },
   {
-    "lemma": "Masphate",
+    "lemma": "Μασφάτη",
     "previous": "Masphalatenos",
-    "next": "Masphatha",
+    "next": "Μασφαθά",
+    "sort_key": "Masphate",
+    "redirect": "Mispa, Mizpe 2",
+    "wp_link": "w:de:Mizpa",
     "chapters": [
       {
         "start": 2122,
@@ -13680,9 +13693,12 @@
     ]
   },
   {
-    "lemma": "Masphatha",
-    "previous": "Masphate",
-    "next": "Maspioi",
+    "lemma": "Μασφαθά",
+    "previous": "Μασφάτη",
+    "next": "Maspitianus",
+    "sort_key": "Masphatha",
+    "redirect": "Mispa, Mizpe 2",
+    "wp_link": "w:de:Mizpa",
     "chapters": [
       {
         "start": 2122,
@@ -13692,7 +13708,7 @@
   },
   {
     "lemma": "Maspioi",
-    "previous": "Masphatha",
+    "previous": "Μασφαθά",
     "next": "Maspitianus",
     "chapters": [
       {
@@ -13906,8 +13922,9 @@
   {
     "lemma": "Maße",
     "previous": "Massanoi",
-    "next": "Massepha",
-    "redirect": true,
+    "next": "Μασσηφά",
+    "sort_key": "Masse",
+    "redirect": "Gewichte",
     "chapters": [
       {
         "start": 2153,
@@ -13916,7 +13933,7 @@
     ]
   },
   {
-    "lemma": "Massepha",
+    "lemma": "Μασσηφά",
     "previous": "Maße",
     "next": "Massia",
     "redirect": true,
@@ -13929,7 +13946,7 @@
   },
   {
     "lemma": "Massia",
-    "previous": "Massepha",
+    "previous": "Μασσηφά",
     "next": "Massice",
     "chapters": [
       {

@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Agamemnon 3",
+    "previous": null,
     "next": "Agathon 14b",
     "chapters": [
       {
@@ -37,7 +38,7 @@
   {
     "lemma": "Amanus",
     "previous": "Akron 5",
-    "next": "Anaxenor 1.2",
+    "next": "Anaxenor 1",
     "chapters": [
       {
         "start": 1,
@@ -47,8 +48,11 @@
     ]
   },
   {
-    "lemma": "Anaxenor 1.2",
+    "lemma": "Anaxenor 1",
     "previous": "Amanus"
+  },
+  {
+    "lemma": "Anaxenor 1.2"
   },
   {
     "lemma": "Amanus",
@@ -120,7 +124,12 @@
   },
   {
     "lemma": "Apollodoros 41a",
-    "previous": "Apelles 5a"
+    "previous": "Apelles 5a",
+    "next": "Apollonios 114"
+  },
+  {
+    "lemma": "Apollonios 114",
+    "previous": "Apollodoros 41a"
   },
   {
     "lemma": "Apelles 5a",
@@ -200,7 +209,7 @@
   {
     "lemma": "Ariston 62a",
     "previous": "Aristeides 23a",
-    "next": "Ἀσάλμανος",
+    "next": "Asalmanos",
     "chapters": [
       {
         "start": 46,
@@ -210,13 +219,13 @@
     ]
   },
   {
-    "lemma": "Ἀσάλμανος",
+    "lemma": "Asalmanos",
     "previous": "Ariston 62a",
     "next": "Asklepiades 51"
   },
   {
     "lemma": "Asklepiades 51",
-    "previous": "Ἀσάλμανος",
+    "previous": "Asalmanos",
     "next": "Athenagoras 9a",
     "chapters": [
       {
@@ -768,7 +777,8 @@
   },
   {
     "lemma": "Hephaistodoros",
-    "previous": "Goneus"
+    "previous": "Goneus",
+    "next": null
   },
   {
     "lemma": "Herakleitos 16a",
@@ -1499,7 +1509,8 @@
   },
   {
     "lemma": "Lekythos",
-    "previous": "Legeon"
+    "previous": "Legeon",
+    "next": null
   },
   {
     "lemma": "Lekythos 2",
@@ -4150,6 +4161,7 @@
   },
   {
     "lemma": "Maximus 127",
+    "previous": null,
     "next": "Maximus 128"
   },
   {
@@ -4166,7 +4178,8 @@
   },
   {
     "lemma": "Maximus 129",
-    "previous": "Maximus 128"
+    "previous": "Maximus 128",
+    "next": null
   },
   {
     "lemma": "Mazdaismus",

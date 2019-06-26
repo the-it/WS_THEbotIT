@@ -88,7 +88,7 @@
     "lemma": "Tullius 37",
     "previous": "Tullius 36",
     "next": "Tullius 38",
-    "redirect": true,
+    "redirect": "Tullius 17",
     "chapters": [
       {
         "start": 1314,
@@ -208,7 +208,7 @@
     "lemma": "Tullius 47",
     "previous": "Tullius 46",
     "next": "Tullius 48",
-    "redirect": true,
+    "redirect": "Tullius 17",
     "chapters": [
       {
         "start": 1318,
@@ -280,7 +280,7 @@
     "lemma": "Tullius 53",
     "previous": "Tullius 52",
     "next": "Tullius 54",
-    "redirect": true,
+    "redirect": "Tullius 41",
     "chapters": [
       {
         "start": 1325,
@@ -292,7 +292,7 @@
     "lemma": "Tullius 54",
     "previous": "Tullius 53",
     "next": "Tullius 55",
-    "redirect": true,
+    "redirect": "Dasumius 1",
     "chapters": [
       {
         "start": 1325,
@@ -304,7 +304,7 @@
     "lemma": "Tullius 55",
     "previous": "Tullius 54",
     "next": "Tullius 56",
-    "redirect": true,
+    "redirect": "Dasumius 2",
     "chapters": [
       {
         "start": 1325,
@@ -446,7 +446,7 @@
   },
   {
     "lemma": "Tullum (Tullium) Leucorum",
-    "previous": "Tullonius",
+    "previous": "Τοῦλλον",
     "next": "Tullum 2",
     "chapters": [
       {
@@ -513,7 +513,7 @@
   {
     "lemma": "Tumaêl",
     "previous": "Τουλουρασευς",
-    "next": "Tumarra",
+    "next": "Τουμάρρα",
     "chapters": [
       {
         "start": 1344,
@@ -523,7 +523,7 @@
     ]
   },
   {
-    "lemma": "Tumarra",
+    "lemma": "Τουμάρρα",
     "previous": "Tumaêl",
     "next": "Tummaestiae",
     "chapters": [
@@ -536,9 +536,9 @@
   },
   {
     "lemma": "Tummaestiae",
-    "previous": "Tumarra",
+    "previous": "Τουμάρρα",
     "next": "Tummara",
-    "redirect": true,
+    "redirect": "Matres",
     "chapters": [
       {
         "start": 1344,
@@ -611,6 +611,7 @@
     "previous": "Tungri",
     "next": "Tunis",
     "redirect": true,
+    "wp_link": "w:de:Tunika (Kleidung)",
     "chapters": [
       {
         "start": 1359,
@@ -696,7 +697,8 @@
     "lemma": "Tupa",
     "previous": "Tuola",
     "next": "Tuphium",
-    "redirect": true,
+    "sort_key": "Tupa",
+    "redirect": "turan",
     "chapters": [
       {
         "start": 1361,
@@ -744,7 +746,7 @@
     "lemma": "Tupusuctu",
     "previous": "Tuppelius saltus",
     "next": "Tur",
-    "redirect": true,
+    "redirect": "Tubusuctu",
     "chapters": [
       {
         "start": 1362,
@@ -768,7 +770,8 @@
     "lemma": "tura",
     "previous": "Tur",
     "next": "Turaesamicio(m)",
-    "redirect": true,
+    "sort_key": "Tura",
+    "redirect": "turan",
     "chapters": [
       {
         "start": 1362,
@@ -1008,7 +1011,7 @@
     "lemma": "Turcianus",
     "previous": "Turcae",
     "next": "Turcilianus",
-    "redirect": true,
+    "redirect": "Aquilius 22",
     "chapters": [
       {
         "start": 1377,
@@ -1152,7 +1155,8 @@
     "lemma": "Turdus 1",
     "previous": "Turduler",
     "next": "Turdus 2",
-    "redirect": true,
+    "redirect": "Drossel",
+    "wp_link": "w:de:Echte Drosseln",
     "chapters": [
       {
         "start": 1380,
@@ -1260,6 +1264,7 @@
     "lemma": "Turia 1",
     "previous": "Turgun",
     "next": "Turia 2",
+    "redirect": "Tutia",
     "chapters": [
       {
         "start": 1383,
@@ -1402,6 +1407,8 @@
     "lemma": "Turisind",
     "previous": "Turinus",
     "next": "Turismod, Turismund",
+    "redirect": "Thurisind",
+    "wp_link": "w:de:Turisind",
     "chapters": [
       {
         "start": 1387,
@@ -1413,6 +1420,7 @@
     "lemma": "Turismod, Turismund",
     "previous": "Turisind",
     "next": "Turissa",
+    "redirect": "Thorismud",
     "chapters": [
       {
         "start": 1387,
@@ -1506,7 +1514,7 @@
   {
     "lemma": "Turmasgad",
     "previous": "Turmaca",
-    "next": "Turmeda",
+    "next": "Τούρμεδα",
     "chapters": [
       {
         "start": 1392,
@@ -1516,9 +1524,11 @@
     ]
   },
   {
-    "lemma": "Turmeda",
+    "lemma": "Τούρμεδα",
     "previous": "Turmasgad",
     "next": "Turmogi, Turmogidi",
+    "sort_key": "Turmeda",
+    "redirect": "Amphipolis 2",
     "chapters": [
       {
         "start": 1393,
@@ -1528,7 +1538,7 @@
   },
   {
     "lemma": "Turmogi, Turmogidi",
-    "previous": "Turmeda",
+    "previous": "Τούρμεδα",
     "next": "Turmogon",
     "chapters": [
       {
@@ -2018,6 +2028,7 @@
     "lemma": "Turpio 1",
     "previous": "Turpilius 13",
     "next": "Turpio 2",
+    "redirect": "Ambivius 4",
     "chapters": [
       {
         "start": 1431,
@@ -2224,7 +2235,7 @@
     "lemma": "Turranius 13",
     "previous": "Turranius 12",
     "next": "Turranius 14",
-    "redirect": true,
+    "redirect": "Rufinus 24",
     "chapters": [
       {
         "start": 1444,
@@ -2273,6 +2284,7 @@
     "lemma": "Turrenia",
     "previous": "Ad Turrem",
     "next": "Turres 1",
+    "redirect": "Tyrrhenia",
     "chapters": [
       {
         "start": 1445,
@@ -2284,6 +2296,8 @@
     "lemma": "Turres 1",
     "previous": "Turrenia",
     "next": "Turres 2",
+    "sort_key": "Turres 01",
+    "redirect": "Saetabis 2",
     "chapters": [
       {
         "start": 1445,
@@ -3636,6 +3650,7 @@
     "lemma": "Tutonia",
     "previous": "Tutmosis, Thutmosis",
     "next": "Tutor",
+    "redirect": "Totonia",
     "chapters": [
       {
         "start": 1626,
@@ -3701,6 +3716,7 @@
     "lemma": "Tutunus",
     "previous": "Tutulus",
     "next": "Tutus 1",
+    "redirect": "Mutunus Tutunus",
     "chapters": [
       {
         "start": 1629,
@@ -3785,7 +3801,7 @@
     "lemma": "Tyberisos",
     "previous": "Tyba",
     "next": "Τυβιάκαι",
-    "redirect": true,
+    "redirect": "Τυβερισ(σ)εῖς",
     "chapters": [
       {
         "start": 1643,
@@ -4046,8 +4062,9 @@
   },
   {
     "lemma": "Tyde",
-    "previous": "Tychopolis",
+    "previous": "Tydeus",
     "next": "Tydeia",
+    "redirect": "Tude",
     "chapters": [
       {
         "start": 1702,
@@ -4261,7 +4278,8 @@
   {
     "lemma": "Tymenaion",
     "previous": "Tymena",
-    "next": "Tymes",
+    "next": "Τύμης",
+    "redirect": true,
     "chapters": [
       {
         "start": 1747,
@@ -4270,7 +4288,7 @@
     ]
   },
   {
-    "lemma": "Tymes",
+    "lemma": "Τύμης",
     "previous": "Tymenaion",
     "next": "Tymion",
     "chapters": [
@@ -4283,7 +4301,7 @@
   },
   {
     "lemma": "Tymion",
-    "previous": "Tymes",
+    "previous": "Τύμης",
     "next": "Tymnes 1",
     "chapters": [
       {
@@ -4344,6 +4362,7 @@
     "lemma": "Tymolos",
     "previous": "Tymnos",
     "next": "Tympaneai",
+    "redirect": "Tmolos",
     "chapters": [
       {
         "start": 1749,
@@ -4355,6 +4374,7 @@
     "lemma": "Tympaneai",
     "previous": "Tymolos",
     "next": "Tympanis",
+    "redirect": "Typaneai",
     "chapters": [
       {
         "start": 1749,
@@ -4426,6 +4446,7 @@
     "lemma": "Tymphrestos",
     "previous": "Tymphe",
     "next": "Τυναδεῖς",
+    "redirect": "Typhrestos 2",
     "chapters": [
       {
         "start": 1756,
@@ -4462,6 +4483,7 @@
     "lemma": "Tynchanius",
     "previous": "Tynchanios",
     "next": "Tyndareos",
+    "redirect": "Tuticanius 1",
     "chapters": [
       {
         "start": 1756,
@@ -4509,6 +4531,7 @@
     "lemma": "Tyndaridai 2",
     "previous": "Tyndaridai 1",
     "next": "Τυνδάριοι σκόπελοι",
+    "redirect": "Tyndareos",
     "chapters": [
       {
         "start": 1775,
@@ -4617,6 +4640,8 @@
     "lemma": "Tynes 2",
     "previous": "Tynes 1",
     "next": "Tynes 3",
+    "redirect": true,
+    "wp_link": "w:de:Tunis",
     "chapters": [
       {
         "start": 1793,
@@ -4792,7 +4817,8 @@
     "lemma": "Τύφων 1",
     "previous": "Typhion",
     "next": "Τύφων 2",
-    "redirect": true,
+    "sort_key": "Typhon 1",
+    "redirect": "Orontes 2",
     "chapters": [
       {
         "start": 1798,
@@ -4804,7 +4830,9 @@
     "lemma": "Τύφων 2",
     "previous": "Τύφων 1",
     "next": "Typhoneus",
+    "sort_key": "Typhon 2",
     "redirect": true,
+    "wp_link": "w:de:Typhon (Mythologie)",
     "chapters": [
       {
         "start": 1798,
@@ -5411,6 +5439,7 @@
     "lemma": "Tyriaion",
     "previous": "Tyria 2",
     "next": "Tyriaspes",
+    "redirect": "Tyraion 1",
     "chapters": [
       {
         "start": 1865,
@@ -5446,6 +5475,7 @@
     "lemma": "Tyrienses",
     "previous": "Tyrichae",
     "next": "Tyriktake",
+    "redirect": "Tyraion 1",
     "chapters": [
       {
         "start": 1865,
@@ -5566,6 +5596,7 @@
     "lemma": "Tyristake",
     "previous": "Tyrissa",
     "next": "Tyritai",
+    "redirect": "Tyriktake",
     "chapters": [
       {
         "start": 1868,
@@ -5589,6 +5620,7 @@
     "lemma": "Tyritake",
     "previous": "Tyritai",
     "next": "Tyritas",
+    "redirect": "Tyriktake",
     "chapters": [
       {
         "start": 1868,
@@ -5636,6 +5668,7 @@
     "lemma": "Tyrius",
     "previous": "Tyrium",
     "next": "Tyrius Septimius Azizus",
+    "redirect": "Turia 2",
     "chapters": [
       {
         "start": 1869,
@@ -5951,6 +5984,7 @@
     "lemma": "Tyrsenos",
     "previous": "Tyrritor",
     "next": "Tyrseta",
+    "redirect": true,
     "chapters": [
       {
         "start": 1941,
@@ -6035,6 +6069,7 @@
     "lemma": "Tzanoi",
     "previous": "Tyxis",
     "next": "Tzath 1",
+    "redirect": "Makrones",
     "chapters": [
       {
         "start": 1957,
@@ -6118,6 +6153,7 @@
     "lemma": "Tzilgbi",
     "previous": "Tzetzes 2",
     "next": "Tziros",
+    "redirect": "Zilgbi",
     "chapters": [
       {
         "start": 2012,
@@ -6129,6 +6165,7 @@
     "lemma": "Tziros",
     "previous": "Tzilgbi",
     "next": "Tzittanus, Tzitta",
+    "redirect": "Theodoros 52",
     "chapters": [
       {
         "start": 2012,
@@ -6152,6 +6189,7 @@
     "lemma": "Tzittas",
     "previous": "Tzittanus, Tzitta",
     "next": "Tzitzi",
+    "redirect": "Sittas",
     "chapters": [
       {
         "start": 2012,
@@ -6175,6 +6213,7 @@
     "lemma": "Tzotzos, Tzutzos",
     "previous": "Tzitzi",
     "next": "Tzur",
+    "redirect": "Stotzas",
     "chapters": [
       {
         "start": 2012,

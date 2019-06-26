@@ -963,7 +963,7 @@
     "lemma": "Gomarius",
     "previous": "Gomares",
     "next": "Gombes",
-    "redirect": true,
+    "redirect": "Gomoarius",
     "chapters": [
       {
         "start": 1582,
@@ -3235,6 +3235,7 @@
     "lemma": "Graiai",
     "previous": "Graïadai",
     "next": "Γραίας αὐλή",
+    "redirect": "Phorkides",
     "chapters": [
       {
         "start": 1695,
@@ -4098,7 +4099,7 @@
     "lemma": "Grassatura",
     "previous": "Grassatores",
     "next": "Grasse",
-    "redirect": true,
+    "redirect": "Grassatores",
     "chapters": [
       {
         "start": 1830,
@@ -4146,7 +4147,7 @@
     "lemma": "Gratiae",
     "previous": "Gratia",
     "next": "Gratiana 1",
-    "redirect": true,
+    "redirect": "Charites",
     "chapters": [
       {
         "start": 1830,
@@ -4206,7 +4207,7 @@
     "lemma": "Gratianopolis 1",
     "previous": "Gratianensis",
     "next": "Gratianopolis 2",
-    "redirect": true,
+    "redirect": "Cularo",
     "chapters": [
       {
         "start": 1831,
@@ -5565,6 +5566,7 @@
     "lemma": "Gubba",
     "previous": "Gubazes",
     "next": "Gubernator",
+    "redirect": "Guba",
     "chapters": [
       {
         "start": 1930,
@@ -5576,6 +5578,8 @@
     "lemma": "Gubernator",
     "previous": "Gubba",
     "next": "Gubernatrices",
+    "redirect": "Kybernetai",
+    "wp_link": "w:de:Gubernator",
     "chapters": [
       {
         "start": 1930,
@@ -6347,6 +6351,7 @@
     "lemma": "Gutones",
     "previous": "Guthalus",
     "next": "Gutruatus",
+    "redirect": "Butones",
     "chapters": [
       {
         "start": 1952,
@@ -6791,6 +6796,8 @@
     "lemma": "Γυναικεία θέος",
     "previous": "Gynada",
     "next": "Γυναικονόμοι",
+    "sort_key": "Gynaikeia",
+    "redirect": "Bona dea",
     "chapters": [
       {
         "start": 2089,
@@ -7169,6 +7176,7 @@
     "lemma": "Hababa",
     "previous": "Haartracht, Haarschmuck",
     "next": "Habessos",
+    "redirect": "Ababa",
     "chapters": [
       {
         "start": 2150,
@@ -7180,6 +7188,7 @@
     "lemma": "Habessos",
     "previous": "Hababa",
     "next": "Habicht",
+    "redirect": "Antiphellos",
     "chapters": [
       {
         "start": 2150,
@@ -7191,7 +7200,7 @@
     "lemma": "Habicht",
     "previous": "Habessos",
     "next": "Habilis",
-    "redirect": true,
+    "redirect": "Hierax 13",
     "wp_link": "w:de:Habicht",
     "chapters": [
       {
@@ -7469,6 +7478,7 @@
     "lemma": "Hadramitae",
     "previous": "Hadra",
     "next": "Hadranon",
+    "redirect": "Adramitai",
     "chapters": [
       {
         "start": 2164,
@@ -7515,7 +7525,7 @@
   {
     "lemma": "Hadria",
     "previous": "Hadreus",
-    "next": "Ἁδριάνεια",
+    "next": "Hadrianeia",
     "chapters": [
       {
         "start": 2164,
@@ -7525,7 +7535,7 @@
     ]
   },
   {
-    "lemma": "Ἁδριάνεια",
+    "lemma": "Hadrianeia",
     "previous": "Hadria",
     "next": "Hadrianeum 1",
     "sort_key": "Hadrianeia",
@@ -7539,7 +7549,7 @@
   },
   {
     "lemma": "Hadrianeum 1",
-    "previous": "Ἁδριάνεια",
+    "previous": "Hadrianeia",
     "next": "Hadrianeum 2",
     "chapters": [
       {
@@ -7672,6 +7682,8 @@
     "lemma": "Hadrianopolis 6",
     "previous": "Hadrianopolis 5",
     "next": "Hadrianopolis 7",
+    "sort_key": "Hadrianopolis 06",
+    "redirect": "Zephyrion",
     "chapters": [
       {
         "start": 2174,
@@ -7683,6 +7695,8 @@
     "lemma": "Hadrianopolis 7",
     "previous": "Hadrianopolis 6",
     "next": "Hadrianopolis 8",
+    "sort_key": "Hadrianopolis07",
+    "redirect": "Olympos",
     "chapters": [
       {
         "start": 2174,
@@ -7837,6 +7851,7 @@
     "lemma": "Hadrias",
     "previous": "Hadrianus 6",
     "next": "Hadrumetum",
+    "redirect": "Adria",
     "chapters": [
       {
         "start": 2178,
@@ -10326,7 +10341,9 @@
   {
     "lemma": "Hamath",
     "previous": "Hamaktyon",
-    "next": "Hamavehae",
+    "next": "Hamavchae",
+    "redirect": "Epiphaneia 3",
+    "wp_link": "w:de:Hama",
     "chapters": [
       {
         "start": 2293,
@@ -10611,7 +10628,7 @@
   {
     "lemma": "Hamillus",
     "previous": "Hamilkar 14",
-    "next": "Ἅμιπποι",
+    "next": "Hamippoi",
     "chapters": [
       {
         "start": 2309,
@@ -10621,9 +10638,10 @@
     ]
   },
   {
-    "lemma": "Ἅμιπποι",
+    "lemma": "Hamippoi",
     "previous": "Hamillus",
     "next": "Hamiroei",
+    "sort_key": "Hamippoi",
     "chapters": [
       {
         "start": 2309,
@@ -10633,7 +10651,7 @@
   },
   {
     "lemma": "Hamiroei",
-    "previous": "Ἅμιπποι",
+    "previous": "Hamippoi",
     "next": "Hammanientes",
     "chapters": [
       {
@@ -10978,7 +10996,7 @@
     "lemma": "Hannibalis castra",
     "previous": "Hannibalianus 3",
     "next": "Hanno 1",
-    "redirect": true,
+    "redirect": "Castra, Castrum 20",
     "chapters": [
       {
         "start": 2353,
@@ -11335,7 +11353,7 @@
     "lemma": "Haphe",
     "previous": "Haos",
     "next": "Har..",
-    "redirect": true,
+    "redirect": "Κόνις",
     "chapters": [
       {
         "start": 2363,
@@ -11395,7 +11413,7 @@
     "lemma": "Harenatium",
     "previous": "Harauso",
     "next": "Hariasa",
-    "redirect": true,
+    "redirect": "Arenacum",
     "chapters": [
       {
         "start": 2365,
@@ -12887,7 +12905,7 @@
     "lemma": "Hassis",
     "previous": "Hasmonaeer",
     "next": "Hasta 1",
-    "redirect": true,
+    "redirect": "Aza 1",
     "chapters": [
       {
         "start": 2501,
@@ -14700,6 +14718,7 @@
     "lemma": "Hegra",
     "previous": "Hegies",
     "next": "Hegylos",
+    "redirect": "Egra 2",
     "chapters": [
       {
         "start": 2621,
@@ -16026,6 +16045,8 @@
     "lemma": "Helenopolis",
     "previous": "Helenophoria",
     "next": "Helenopontos",
+    "redirect": "Drepanon 4",
+    "wp_link": "w:de:Helenopolis",
     "chapters": [
       {
         "start": 2844,

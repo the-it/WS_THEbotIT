@@ -439,7 +439,19 @@
   },
   {
     "lemma": "Aelius 33a",
-    "previous": "Aelius 27aaa"
+    "previous": "Aelius 27aaa",
+    "next": "Aelius 42b",
+    "sort_key": "Aelius 033a"
+  },
+  {
+    "lemma": "Aelius 42b",
+    "previous": "Aelius 33a",
+    "next": "Aelius 67a",
+    "sort_key": "Aelius 042b"
+  },
+  {
+    "lemma": "Aelius 67a",
+    "previous": "Aelius 42b"
   },
   {
     "lemma": "Aelius 27",
@@ -559,7 +571,17 @@
   },
   {
     "lemma": "Aemilius 164a",
-    "previous": "Aemilius 144"
+    "previous": "Aemilius 144",
+    "next": "Aëtos 5"
+  },
+  {
+    "lemma": "Aëtos 5",
+    "previous": "Aemilius 164a",
+    "next": "Aëtos 6"
+  },
+  {
+    "lemma": "Aëtos 6",
+    "previous": "Aëtos 5"
   },
   {
     "lemma": "Aemilius 144",
@@ -605,6 +627,7 @@
     "lemma": "Afer a",
     "previous": "Aëtos 6",
     "next": "Agatharchos 16",
+    "redirect": "Aphras",
     "chapters": [
       {
         "start": 6,
@@ -793,6 +816,18 @@
     "lemma": "Alexandros 51",
     "next": "Alexandros 104a",
     "sort_key": "Alexandros"
+  },
+  {
+    "lemma": "Alexandros 104a",
+    "previous": "Alexandros 51"
+  },
+  {
+    "lemma": "Alexandros 51",
+    "sort_key": "Alexandros"
+  },
+  {
+    "lemma": "Alexandros 51",
+    "next": "Alexandros 104a"
   },
   {
     "lemma": "Alexandros 104a",
@@ -1083,7 +1118,12 @@
   },
   {
     "lemma": "Anomia",
-    "previous": "Annius 94"
+    "previous": "Annius 94",
+    "next": "Anteros 6"
+  },
+  {
+    "lemma": "Anteros 6",
+    "previous": "Anomia"
   },
   {
     "lemma": "Annius 94",
@@ -1234,7 +1274,12 @@
   },
   {
     "lemma": "Aphras",
-    "previous": "Apelles 8"
+    "previous": "Apelles 8",
+    "next": "Apolaustus 3"
+  },
+  {
+    "lemma": "Apolaustus 3",
+    "previous": "Aphras"
   },
   {
     "lemma": "Apelles 8",
@@ -1280,7 +1325,7 @@
     "lemma": "Apolaustus 5",
     "previous": "Apolaustus 4",
     "next": "Apolaustus 6",
-    "redirect": true,
+    "redirect": "Ulpius 3a",
     "chapters": [
       {
         "start": 23,
@@ -1292,7 +1337,7 @@
     "lemma": "Apolaustus 6",
     "previous": "Apolaustus 5",
     "next": "Apolaustus 7",
-    "redirect": true,
+    "redirect": "Aurelius 53a",
     "chapters": [
       {
         "start": 23,
@@ -1327,11 +1372,17 @@
   },
   {
     "lemma": "Apollas 1",
-    "previous": "Apolaustus 8"
+    "previous": "Apolaustus 8",
+    "next": "Apollodoros 41b"
+  },
+  {
+    "lemma": "Apollodoros 41b",
+    "previous": "Apollas 1",
+    "next": "Apollodoros 41c"
   },
   {
     "lemma": "Apollodoros 41c",
-    "previous": null,
+    "previous": "Apollodoros 41b",
     "next": "Apollodoros 78"
   },
   {
@@ -1370,11 +1421,12 @@
   },
   {
     "lemma": "Apollonios 4",
-    "previous": "Apollonides 17"
+    "previous": "Apollonides 17",
+    "next": "Apollonios 34"
   },
   {
     "lemma": "Apollonios 34",
-    "previous": null,
+    "previous": "Apollonios 4",
     "next": "Apollonios 48"
   },
   {
@@ -1539,10 +1591,10 @@
   {
     "lemma": "Arimnestos 6a",
     "previous": "Ἀρι...",
-    "next": "Ἀριστ(..."
+    "next": "Ἀριστ..."
   },
   {
-    "lemma": "Ἀριστ(...",
+    "lemma": "Ἀριστ...",
     "previous": "Arimnestos 6a",
     "next": "Aristagoras 9a",
     "sort_key": "Arist...",
@@ -1556,7 +1608,7 @@
   },
   {
     "lemma": "Aristagoras 9a",
-    "previous": "Ἀριστ(...",
+    "previous": "Ἀριστ...",
     "next": "Aristarchos 10"
   },
   {
@@ -2178,10 +2230,20 @@
   {
     "lemma": "Autolykos 6",
     "previous": "Αὐτο(...",
+    "next": "Babyllios",
+    "sort_key": "Auto(---"
+  },
+  {
+    "lemma": "Babyllios",
+    "previous": "Autolykos 6"
+  },
+  {
+    "lemma": "Autolykos 6",
     "sort_key": "Auto(---"
   },
   {
     "lemma": "Autolykos 6",
+    "previous": null,
     "next": "Βαβύλλιος"
   },
   {
@@ -2326,7 +2388,17 @@
   },
   {
     "lemma": "Caramallus",
-    "previous": "Candidiana"
+    "previous": "Candidiana",
+    "next": "Cardamates"
+  },
+  {
+    "lemma": "Cardamates",
+    "previous": "Caramallus",
+    "next": "Carmen adversus paganos"
+  },
+  {
+    "lemma": "Carmen adversus paganos",
+    "previous": "Cardamates"
   },
   {
     "lemma": "Candidianae",
@@ -2390,13 +2462,23 @@
     ]
   },
   {
+    "lemma": "Chairestratos 1a",
+    "next": "Chares 12"
+  },
+  {
+    "lemma": "Chares 12",
+    "previous": "Chairestratos 1a",
+    "next": "Charias 2"
+  },
+  {
     "lemma": "Charias 2",
+    "previous": "Chares 12",
     "next": "Charidemos 4a"
   },
   {
     "lemma": "Charidemos 4a",
     "previous": "Charias 2",
-    "next": "Chirographum",
+    "next": "χειρόγραφον",
     "chapters": [
       {
         "start": 126,
@@ -2406,13 +2488,29 @@
     ]
   },
   {
+    "lemma": "χειρόγραφον",
+    "previous": "Charidemos 4a"
+  },
+  {
+    "lemma": "Charidemos 4a",
+    "next": "Chirographum"
+  },
+  {
     "lemma": "Chirographum",
     "previous": "Charidemos 4a",
     "next": "Choraules"
   },
   {
     "lemma": "Choraules",
-    "previous": "Chirographum",
+    "previous": "Chirographum"
+  },
+  {
+    "lemma": "χειρόγραφον",
+    "next": "Choraules"
+  },
+  {
+    "lemma": "Choraules",
+    "previous": "χειρόγραφον",
     "next": "Chryses 3"
   },
   {
@@ -2442,7 +2540,8 @@
   {
     "lemma": "Cicereia lex",
     "previous": "Chryses 4",
-    "next": "Cillae"
+    "next": "Cillae",
+    "redirect": "Lex Cicereia de sponsu"
   },
   {
     "lemma": "Cillae",
@@ -2461,7 +2560,12 @@
     "previous": "Cillae"
   },
   {
+    "lemma": "Claudius 10a",
+    "next": "Claudius 242a"
+  },
+  {
     "lemma": "Claudius 242a",
+    "previous": "Claudius 10a",
     "next": "Clodius 73"
   },
   {
@@ -3747,7 +3851,12 @@
     ]
   },
   {
+    "lemma": "Chairemon 5",
+    "next": "Chairestratos 1"
+  },
+  {
     "lemma": "Chairestratos 1",
+    "previous": "Chairemon 5",
     "next": "Chairestratos 1a"
   },
   {

@@ -1,7 +1,10 @@
 [
   {
     "lemma": "Praefectura",
+    "previous": "Pontentius 5",
     "next": "praefectus",
+    "redirect": true,
+    "wp_link": "w:de:Präfektur",
     "chapters": [
       {
         "start": 1257,
@@ -73,7 +76,7 @@
     "lemma": "Praeguttii",
     "previous": "Praegustator",
     "next": "Prähistorische Kulturen Griechenlands",
-    "redirect": true,
+    "redirect": "Praetuttiana Regio",
     "chapters": [
       {
         "start": 1350,
@@ -1165,7 +1168,7 @@
     "lemma": "Pramnios oinos",
     "previous": "Pramnios Daimon",
     "next": "Pramnos",
-    "redirect": true,
+    "redirect": "Pramnos",
     "chapters": [
       {
         "start": 1687,
@@ -1177,6 +1180,7 @@
     "lemma": "Pramnos",
     "previous": "Pramnios oinos",
     "next": "Prandium",
+    "redirect": "Pramnios, Pramnos",
     "chapters": [
       {
         "start": 1687,
@@ -1223,7 +1227,7 @@
   {
     "lemma": "Prapiotai",
     "previous": "Praotes",
-    "next": "Praratios",
+    "next": "Πραράτιος",
     "chapters": [
       {
         "start": 1690,
@@ -1233,9 +1237,10 @@
     ]
   },
   {
-    "lemma": "Praratios",
+    "lemma": "Πραράτιος",
     "previous": "Prapiotai",
-    "next": "Prasi",
+    "next": "Pras",
+    "sort_key": "Praratios",
     "chapters": [
       {
         "start": 1690,
@@ -1245,9 +1250,16 @@
     ]
   },
   {
+    "lemma": "Pras",
+    "previous": "Πραράτιος",
+    "next": "Prasi",
+    "redirect": "Pras 1"
+  },
+  {
     "lemma": "Prasi",
-    "previous": "Praratios",
+    "previous": "Pras",
     "next": "Prasiai 1",
+    "redirect": "Prasii",
     "chapters": [
       {
         "start": 1690,
@@ -1283,6 +1295,8 @@
     "lemma": "Πρασιακή",
     "previous": "Prasiai 2",
     "next": "Prasiana gens",
+    "sort_key": "Prasiake",
+    "redirect": "Prasii",
     "chapters": [
       {
         "start": 1696,

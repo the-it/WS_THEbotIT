@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Adobogiona",
+    "previous": null,
     "next": "Adule",
     "sort_key": "Adobogiona",
     "redirect": "Brogitarus",
@@ -23,6 +24,7 @@
   },
   {
     "lemma": "Agri decumates",
+    "previous": "Adulitai",
     "next": "Aguntum",
     "chapters": [
       {
@@ -306,7 +308,17 @@
   },
   {
     "lemma": "Aurelius 145aaa",
-    "previous": "Aurelius 56b"
+    "previous": "Aurelius 56b",
+    "next": "Aurelius 184"
+  },
+  {
+    "lemma": "Aurelius 184",
+    "previous": "Aurelius 145aaa",
+    "next": "Aurelius 216a"
+  },
+  {
+    "lemma": "Aurelius 216a",
+    "previous": "Aurelius 184"
   },
   {
     "lemma": "Auction 1",
@@ -439,7 +451,7 @@
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
-    "next": "Chirographum",
+    "next": "χειρόγραφον",
     "chapters": [
       {
         "start": 83,
@@ -449,8 +461,21 @@
     ]
   },
   {
-    "lemma": "Chirographum",
+    "lemma": "χειρόγραφον",
     "previous": "Canaliclarius"
+  },
+  {
+    "lemma": "Canaliclarius",
+    "next": "Chirographum"
+  },
+  {
+    "lemma": "Chirographum",
+    "previous": "Canaliclarius",
+    "next": "Χειροτέχνιον"
+  },
+  {
+    "lemma": "Χειροτέχνιον",
+    "previous": "Chirographum"
   },
   {
     "lemma": "χειρόγραφον",
@@ -463,7 +488,12 @@
     ]
   },
   {
+    "lemma": "Claudius 207",
+    "next": "Clementius 1"
+  },
+  {
     "lemma": "Clementius 1",
+    "previous": "Claudius 207",
     "next": "Clementius 1a"
   },
   {
@@ -512,7 +542,12 @@
   },
   {
     "lemma": "Claudius 207",
-    "previous": "χρηματισμός"
+    "previous": "χρηματισμός",
+    "next": "Clementius 1"
+  },
+  {
+    "lemma": "Clementius 1",
+    "previous": "Claudius 207"
   },
   {
     "lemma": "Cocceius 3",
@@ -585,7 +620,12 @@
   },
   {
     "lemma": "Crepereius 5a",
-    "previous": "Crepereius 3a"
+    "previous": "Crepereius 3a",
+    "next": "Cuspius 2a"
+  },
+  {
+    "lemma": "Cuspius 2a",
+    "previous": "Crepereius 5a"
   },
   {
     "lemma": "Crepereius 3b",
@@ -2885,7 +2925,12 @@
     ]
   },
   {
+    "lemma": "Lex Vibia (oder Leges Vibiae)",
+    "next": "Libella 1"
+  },
+  {
     "lemma": "Libella 1",
+    "previous": "Lex Vibia (oder Leges Vibiae)",
     "next": "Licinius 151a"
   },
   {
@@ -4868,7 +4913,8 @@
   },
   {
     "lemma": "Pedion 3",
-    "previous": "Peculatus"
+    "previous": "Peculatus",
+    "next": null
   },
   {
     "lemma": "Orphanene",

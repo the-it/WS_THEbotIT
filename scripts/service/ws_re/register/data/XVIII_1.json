@@ -252,6 +252,7 @@
     "lemma": "Olympias 14",
     "previous": "Olympias 13",
     "next": "Olympichos 1",
+    "redirect": "Aera#Seite_627",
     "chapters": [
       {
         "start": 185,
@@ -560,6 +561,7 @@
     "lemma": "Olympiodoros 15",
     "previous": "Olympiodoros 14",
     "next": "Olympiodoros 16",
+    "redirect": "Steinbücher",
     "chapters": [
       {
         "start": 228,
@@ -1832,6 +1834,7 @@
     "lemma": "Olynta",
     "previous": "Olynpikon",
     "next": "Ὀλυνθιών",
+    "redirect": "Solentia",
     "chapters": [
       {
         "start": 325,
@@ -7216,6 +7219,7 @@
     "lemma": "Oracula",
     "previous": "Oracla",
     "next": "Oraendos 1",
+    "redirect": "Orakel",
     "chapters": [
       {
         "start": 828,
@@ -7238,7 +7242,8 @@
   {
     "lemma": "Oraendos 2",
     "previous": "Oraendos 1",
-    "next": "Oragon",
+    "next": "Ὀραγῶν",
+    "redirect": "Ουαενδος",
     "chapters": [
       {
         "start": 828,
@@ -7247,7 +7252,7 @@
     ]
   },
   {
-    "lemma": "Oragon",
+    "lemma": "Ὀραγῶν",
     "previous": "Oraendos 2",
     "next": "Orai",
     "chapters": [
@@ -7260,8 +7265,9 @@
   },
   {
     "lemma": "Orai",
-    "previous": "Oragon",
+    "previous": "Ὀραγῶν",
     "next": "Oraia",
+    "redirect": "Oritai",
     "chapters": [
       {
         "start": 828,
@@ -7285,6 +7291,7 @@
     "lemma": "Oraio",
     "previous": "Oraia",
     "next": "Oraka",
+    "redirect": "Uraias",
     "chapters": [
       {
         "start": 828,
@@ -9688,6 +9695,7 @@
     "lemma": "Oriel",
     "previous": "Oricus",
     "next": "Oriens 1",
+    "redirect": "Oriens 1",
     "chapters": [
       {
         "start": 1031,
@@ -10795,6 +10803,7 @@
     "lemma": "Ornithiai",
     "previous": "Ornis 2",
     "next": "Ornithogonia",
+    "redirect": "Winde",
     "chapters": [
       {
         "start": 1129,
@@ -10806,6 +10815,7 @@
     "lemma": "Ornithogonia",
     "previous": "Ornithiai",
     "next": "Ornithon polis",
+    "redirect": "Boio",
     "chapters": [
       {
         "start": 1129,
@@ -10829,6 +10839,7 @@
     "lemma": "Ornithoskopia",
     "previous": "Ornithon polis",
     "next": "Ornospades",
+    "redirect": "Mantike",
     "chapters": [
       {
         "start": 1129,
@@ -11224,6 +11235,7 @@
   {
     "lemma": "Ὀροκασιὰς ὄρος",
     "previous": "Oroites",
+    "next": "Ὀροκένδοις",
     "sort_key": "Orokasias"
   },
   {
@@ -11360,7 +11372,7 @@
   {
     "lemma": "Oron",
     "previous": "Oromuschoi",
-    "next": "Oronaim",
+    "next": "Ὀρωναίμ",
     "chapters": [
       {
         "start": 1159,
@@ -11370,7 +11382,7 @@
     ]
   },
   {
-    "lemma": "Oronaim",
+    "lemma": "Ὀρωναίμ",
     "previous": "Oron",
     "next": "Orondikoi",
     "chapters": [
@@ -11383,8 +11395,9 @@
   },
   {
     "lemma": "Orondikoi",
-    "previous": "Oronaim",
+    "previous": "Ὀρωναίμ",
     "next": "Orongis",
+    "redirect": "Oroandeis",
     "chapters": [
       {
         "start": 1160,

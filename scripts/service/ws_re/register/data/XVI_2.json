@@ -92,7 +92,7 @@
   {
     "lemma": "Mystes 4",
     "previous": "Mystes 3",
-    "next": "Mystia",
+    "next": "Μυστία",
     "chapters": [
       {
         "start": 1350,
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "lemma": "Mystia",
+    "lemma": "Μυστία",
     "previous": "Mystes 4",
     "next": "Mystiae",
     "chapters": [
@@ -115,9 +115,9 @@
   },
   {
     "lemma": "Mystiae",
-    "previous": "Mystia",
+    "previous": "Μυστία",
     "next": "Mystichides",
-    "redirect": true,
+    "redirect": "Mustiae Calmes",
     "chapters": [
       {
         "start": 1351,
@@ -166,7 +166,8 @@
     "lemma": "Μυστίλη",
     "previous": "Μυστικὴ",
     "next": "Mystipoloi",
-    "redirect": true,
+    "sort_key": "Mystile",
+    "redirect": "Cochlear 1",
     "chapters": [
       {
         "start": 1351,
@@ -1095,6 +1096,7 @@
     "lemma": "Nachoergan",
     "previous": "Naccararum palus",
     "next": "Nachoragan",
+    "redirect": "Nachoragan",
     "chapters": [
       {
         "start": 1496,
@@ -1879,7 +1881,7 @@
     "lemma": "Nagidusa",
     "previous": "Nagidos",
     "next": "Nagnata",
-    "redirect": true,
+    "redirect": "Nagidos",
     "chapters": [
       {
         "start": 1583,
@@ -1891,7 +1893,7 @@
     "lemma": "Nagnata",
     "previous": "Nagidusa",
     "next": "Νάγουρ",
-    "redirect": true,
+    "redirect": "Magnata",
     "chapters": [
       {
         "start": 1583,
@@ -1916,7 +1918,7 @@
     "lemma": "Nahalal",
     "previous": "Νάγουρ",
     "next": "Nahanarvali",
-    "redirect": true,
+    "redirect": "Mahlul",
     "chapters": [
       {
         "start": 1583,
@@ -1928,7 +1930,7 @@
     "lemma": "Nahanarvali",
     "previous": "Nahalal",
     "next": "Naharra, Naharre",
-    "redirect": true,
+    "redirect": "Naharvali",
     "chapters": [
       {
         "start": 1583,
@@ -1940,7 +1942,7 @@
     "lemma": "Naharra, Naharre",
     "previous": "Nahanarvali",
     "next": "Nahartes",
-    "redirect": true,
+    "redirect": "Ναάρδα",
     "chapters": [
       {
         "start": 1583,
@@ -2015,7 +2017,7 @@
     "lemma": "Naiades",
     "previous": "Naia 3",
     "next": "Ναΐαρχος",
-    "redirect": true,
+    "redirect": "Nymphai",
     "chapters": [
       {
         "start": 1585,
@@ -2040,7 +2042,7 @@
     "lemma": "Naim",
     "previous": "Ναΐαρχος",
     "next": "Naimanes",
-    "redirect": true,
+    "redirect": "Nain",
     "chapters": [
       {
         "start": 1585,

@@ -50,7 +50,7 @@
     "lemma": "Ius praediatorium",
     "previous": "Ius pontificium",
     "next": "Ius privatum",
-    "redirect": true,
+    "redirect": "Praes",
     "chapters": [
       {
         "start": 1289,
@@ -79,7 +79,7 @@
     "lemma": "Ius respondendi",
     "previous": "Ius Quiritium",
     "next": "Ius sacrum",
-    "redirect": true,
+    "redirect": "Iurisprudentia",
     "chapters": [
       {
         "start": 1292,
@@ -108,7 +108,7 @@
     "lemma": "Ius singulare",
     "previous": "Ius scriptum",
     "next": "Ius strictum",
-    "redirect": true,
+    "redirect": "Ius commune",
     "chapters": [
       {
         "start": 1301,
@@ -240,7 +240,7 @@
     "lemma": "Iustiacus",
     "previous": "Iusti",
     "next": "Iustianus",
-    "redirect": true,
+    "redirect": "Iusciacus",
     "chapters": [
       {
         "start": 1309,
@@ -348,7 +348,7 @@
     "lemma": "Iustinianopolis 5",
     "previous": "Iustinianopolis 4",
     "next": "Iustinianopolis 6",
-    "redirect": true,
+    "redirect": "Koptos",
     "chapters": [
       {
         "start": 1310,
@@ -360,7 +360,7 @@
     "lemma": "Iustinianopolis 6",
     "previous": "Iustinianopolis 5",
     "next": "Iustinianus 1",
-    "redirect": true,
+    "redirect": "Kamulianai",
     "chapters": [
       {
         "start": 1310,
@@ -530,6 +530,8 @@
     "lemma": "Iustinus 3",
     "previous": "Iustinus 2",
     "next": "Iustinus 4",
+    "sort_key": "Iustinus 03",
+    "redirect": "Iustinianus 4",
     "chapters": [
       {
         "start": 1329,
@@ -589,6 +591,8 @@
     "lemma": "Iustinus 8",
     "previous": "Iustinus 7",
     "next": "Iustinus 9",
+    "sort_key": "Iustinus 08",
+    "redirect": "Ceccius",
     "chapters": [
       {
         "start": 1332,
@@ -600,7 +604,8 @@
     "lemma": "Iustinus 9",
     "previous": "Iustinus 8",
     "next": "Iustinus 10",
-    "redirect": true,
+    "sort_key": "Iustinus 09",
+    "redirect": "Iunianus 4",
     "chapters": [
       {
         "start": 1332,
@@ -834,6 +839,8 @@
     "lemma": "Iustus 8",
     "previous": "Iustus 7",
     "next": "Iustus 9",
+    "sort_key": "Iustus 08",
+    "redirect": "Arruntius 18",
     "chapters": [
       {
         "start": 1341,
@@ -929,6 +936,7 @@
     "lemma": "Iuvanenses",
     "previous": "Iuturna",
     "next": "Iuvaro, -us",
+    "redirect": "Iuanenses",
     "chapters": [
       {
         "start": 1349,
@@ -940,6 +948,7 @@
     "lemma": "Iuvaro, -us",
     "previous": "Iuvanenses",
     "next": "Iuvas",
+    "redirect": "Ivaro, Ivarus",
     "chapters": [
       {
         "start": 1349,
@@ -1037,6 +1046,7 @@
     "lemma": "Iuvenalis 4",
     "previous": "Iuvenalis 3",
     "next": "Iuvenalis 5",
+    "redirect": "Cassius 50",
     "chapters": [
       {
         "start": 1356,
@@ -1156,6 +1166,7 @@
     "lemma": "Iuvenis 2",
     "previous": "Iuvenis 1",
     "next": "Iuvenis 3",
+    "redirect": "Antonius 69",
     "chapters": [
       {
         "start": 1359,
@@ -1228,6 +1239,7 @@
     "lemma": "Iuventianus 2",
     "previous": "Iuventianus 1",
     "next": "Iuventinus",
+    "redirect": "Caecilius 59",
     "chapters": [
       {
         "start": 1361,
@@ -1323,6 +1335,8 @@
     "lemma": "Iuventius 6",
     "previous": "Iuventius 5",
     "next": "Iuventius 7",
+    "sort_key": "Iuventius 06",
+    "redirect": "Iuventius 10",
     "chapters": [
       {
         "start": 1362,
@@ -1658,6 +1672,7 @@
     "lemma": "Iuvia",
     "previous": "Iuventius 33",
     "next": "Ixamatae",
+    "redirect": "Nabias",
     "chapters": [
       {
         "start": 1372,
@@ -1669,6 +1684,7 @@
     "lemma": "Ixamatae",
     "previous": "Iuvia",
     "next": "Ixia",
+    "redirect": "Iaxamatae",
     "chapters": [
       {
         "start": 1372,
@@ -2005,6 +2021,7 @@
     "lemma": "Kabalaka",
     "previous": "Kabala 2",
     "next": "Kabales",
+    "redirect": "Chabala",
     "chapters": [
       {
         "start": 1394,
@@ -8710,6 +8727,7 @@
     "lemma": "Kalon Korasion",
     "previous": "Kalon 2",
     "next": "Καλὸν πεδίον",
+    "redirect": "Korasion",
     "chapters": [
       {
         "start": 1758,
@@ -8816,6 +8834,7 @@
     "lemma": "Kalpas 2",
     "previous": "Kalpas 1",
     "next": "Kalpe 1",
+    "redirect": "Kalpe 2",
     "chapters": [
       {
         "start": 1759,

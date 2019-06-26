@@ -1234,6 +1234,7 @@
     "lemma": "Psycheus",
     "previous": "Psycheion",
     "next": "Psychia",
+    "redirect": "Psycheion",
     "chapters": [
       {
         "start": 1439,
@@ -1257,6 +1258,7 @@
     "lemma": "Psychion",
     "previous": "Psychia",
     "next": "Psychostasie",
+    "redirect": "Psycheion",
     "chapters": [
       {
         "start": 1439,
@@ -3669,6 +3671,8 @@
     "lemma": "Publicius 9a",
     "previous": "Publicius 9",
     "next": "Publicius 10",
+    "sort_key": "Publicius 09a",
+    "redirect": true,
     "chapters": [
       {
         "start": 1897,
@@ -7960,7 +7964,10 @@
   },
   {
     "lemma": "Ptolemaios 66",
+    "previous": "Ptolemaios 18",
     "next": "publicatio bonorum",
+    "sort_key": "Ptolemaios 66",
+    "wp_link": "w:de:Claudius Ptolemäus",
     "chapters": [
       {
         "start": 2484,

@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Mazaios",
+    "previous": null,
     "next": "Mazaka",
     "chapters": [
       {
@@ -14,7 +15,7 @@
     "lemma": "Mazaka",
     "previous": "Mazaios",
     "next": "Mazakes 1",
-    "redirect": true,
+    "redirect": "Caesarea 5",
     "chapters": [
       {
         "start": 2,
@@ -37,8 +38,8 @@
   {
     "lemma": "Mazakes 2",
     "previous": "Mazakes 1",
-    "next": "Mazakila",
-    "redirect": true,
+    "next": "Μαζάκιλα",
+    "redirect": "Maxyes",
     "chapters": [
       {
         "start": 2,
@@ -47,7 +48,7 @@
     ]
   },
   {
-    "lemma": "Mazakila",
+    "lemma": "Μαζάκιλα",
     "previous": "Mazakes 2",
     "next": "Mazalla",
     "chapters": [
@@ -60,9 +61,9 @@
   },
   {
     "lemma": "Mazalla",
-    "previous": "Mazakila",
+    "previous": "Μαζάκιλα",
     "next": "Mazamacae",
-    "redirect": true,
+    "redirect": "Maxalla",
     "chapters": [
       {
         "start": 3,
@@ -196,6 +197,7 @@
     "lemma": "Maziris",
     "previous": "Mazippa",
     "next": "Mazonomon",
+    "redirect": "Maxera",
     "chapters": [
       {
         "start": 6,
@@ -231,6 +233,7 @@
     "lemma": "Mazusia",
     "previous": "Mazurôth",
     "next": "Mazyes",
+    "redirect": "Mastusia 1",
     "chapters": [
       {
         "start": 7,
@@ -242,6 +245,7 @@
     "lemma": "Mazyes",
     "previous": "Mazusia",
     "next": "Mealeitis",
+    "redirect": "Maxyes",
     "chapters": [
       {
         "start": 7,
@@ -278,6 +282,8 @@
     "lemma": "meanpe",
     "previous": "mean",
     "next": "Meara",
+    "sort_key": "Meanpe",
+    "redirect": "mean",
     "chapters": [
       {
         "start": 9,
@@ -325,7 +331,8 @@
   {
     "lemma": "Mecennius",
     "previous": "Mearus",
-    "next": "Mechane",
+    "next": "Μηχανή",
+    "redirect": "Egnatius 28",
     "chapters": [
       {
         "start": 10,
@@ -334,7 +341,7 @@
     ]
   },
   {
-    "lemma": "Mechane",
+    "lemma": "Μηχανή",
     "previous": "Mecennius",
     "next": "Mechaneus",
     "chapters": [
@@ -347,8 +354,9 @@
   },
   {
     "lemma": "Mechaneus",
-    "previous": "Mechane",
+    "previous": "Μηχανή",
     "next": "Mechanische Methode",
+    "redirect": "Machaneus 1",
     "chapters": [
       {
         "start": 14,
@@ -372,6 +380,7 @@
     "lemma": "Mechanitis",
     "previous": "Mechanische Methode",
     "next": "Μεχλεσσός",
+    "redirect": "Machanitis",
     "chapters": [
       {
         "start": 17,
@@ -419,6 +428,7 @@
     "lemma": "Mecira",
     "previous": "Mecilius",
     "next": "Meculonius",
+    "redirect": "Micheris",
     "chapters": [
       {
         "start": 17,
@@ -701,6 +711,7 @@
     "lemma": "Medeon 4",
     "previous": "Medeon 3",
     "next": "Medera",
+    "redirect": "Medion",
     "chapters": [
       {
         "start": 66,
@@ -712,6 +723,7 @@
     "lemma": "Medera",
     "previous": "Medeon 4",
     "next": "Medera 2",
+    "redirect": "Ammaedara",
     "chapters": [
       {
         "start": 66,
@@ -759,6 +771,7 @@
     "lemma": "Media",
     "previous": "Medesikaste",
     "next": "Mediam",
+    "redirect": true,
     "chapters": [
       {
         "start": 67,
@@ -986,8 +999,9 @@
   },
   {
     "lemma": "Medilas",
-    "previous": "Medikarra",
+    "previous": "Μεδικκάρα",
     "next": "Medimni",
+    "redirect": "Mediam",
     "chapters": [
       {
         "start": 85,
@@ -998,7 +1012,7 @@
   {
     "lemma": "Medimni",
     "previous": "Medilas",
-    "next": "Medimnos",
+    "next": "Μέδιμνος",
     "chapters": [
       {
         "start": 86,
@@ -1008,7 +1022,7 @@
     ]
   },
   {
-    "lemma": "Medimnos",
+    "lemma": "Μέδιμνος",
     "previous": "Medimni",
     "next": "Mediolana",
     "chapters": [
@@ -1021,8 +1035,9 @@
   },
   {
     "lemma": "Mediolana",
-    "previous": "Medimnos",
+    "previous": "Μέδιμνος",
     "next": "Mediolanium 1",
+    "redirect": "Mediolanum 5",
     "chapters": [
       {
         "start": 91,
@@ -1142,6 +1157,8 @@
     "lemma": "Mediolanum Santonum",
     "previous": "Mediolanum Aulercorum",
     "next": "Mediolum",
+    "sort_key": "Mediolanums",
+    "redirect": "Santoni, Santones",
     "chapters": [
       {
         "start": 96,
@@ -5888,6 +5905,7 @@
     "lemma": "Melchiades",
     "previous": "Melatas",
     "next": "Melcomani",
+    "redirect": "Miltiades",
     "chapters": [
       {
         "start": 441,
@@ -5899,6 +5917,7 @@
     "lemma": "Melcomani",
     "previous": "Melchiades",
     "next": "Melcumani",
+    "redirect": "Melkomenioi",
     "chapters": [
       {
         "start": 442,
@@ -7583,6 +7602,7 @@
     "lemma": "Melitone",
     "previous": "Meliton 4",
     "next": "Melitonus",
+    "redirect": "Melitodes",
     "chapters": [
       {
         "start": 554,
@@ -7692,6 +7712,8 @@
     "lemma": "Μελκομένιοι",
     "previous": "Melizitanum",
     "next": "Melkynda",
+    "sort_key": "Melkomenioi",
+    "redirect": "Melcumani",
     "chapters": [
       {
         "start": 556,
@@ -7703,6 +7725,7 @@
     "lemma": "Melkynda",
     "previous": "Μελκομένιοι",
     "next": "Mella 1",
+    "redirect": "Nelkynda",
     "chapters": [
       {
         "start": 556,
@@ -7726,6 +7749,7 @@
     "lemma": "Mella 2",
     "previous": "Mella 1",
     "next": "Μέλλακες",
+    "redirect": "Mizpa, Mizpe 1",
     "chapters": [
       {
         "start": 556,
@@ -7761,6 +7785,7 @@
     "lemma": "Mellaria 1",
     "previous": "Mellapokopsas",
     "next": "Mellaria 2",
+    "redirect": "Menaria",
     "chapters": [
       {
         "start": 557,
@@ -7808,7 +7833,8 @@
     "lemma": "Μελλείρην",
     "previous": "Mellaria 4",
     "next": "Μελλέφηβος",
-    "redirect": true,
+    "sort_key": "Melleiren",
+    "redirect": "Μελλέφηβος",
     "chapters": [
       {
         "start": 557,
@@ -7859,7 +7885,7 @@
     "lemma": "Mellon",
     "previous": "Mellodunum",
     "next": "Mellona",
-    "redirect": true,
+    "redirect": "Melon 1",
     "chapters": [
       {
         "start": 558,
@@ -7907,6 +7933,7 @@
     "lemma": "Melobaudes",
     "previous": "Mellosedum",
     "next": "Melobios",
+    "redirect": "Merobaudes 1",
     "chapters": [
       {
         "start": 559,
@@ -7930,6 +7957,7 @@
     "lemma": "Melodunum",
     "previous": "Melobios",
     "next": "Meloessa",
+    "redirect": "Meclodunum",
     "chapters": [
       {
         "start": 559,
@@ -12473,7 +12501,7 @@
   {
     "lemma": "Meniarches",
     "previous": "Menexenos 8",
-    "next": "Meniastai",
+    "next": "Μηνιασταί",
     "chapters": [
       {
         "start": 858,
@@ -12483,7 +12511,7 @@
     ]
   },
   {
-    "lemma": "Meniastai",
+    "lemma": "Μηνιασταί",
     "previous": "Meniarches",
     "next": "Menidas",
     "chapters": [
@@ -12496,7 +12524,7 @@
   },
   {
     "lemma": "Menidas",
-    "previous": "Meniastai",
+    "previous": "Μηνιασταί",
     "next": "Μενῖκος φρούριον",
     "chapters": [
       {
@@ -12534,7 +12562,8 @@
   {
     "lemma": "Meninx",
     "previous": "Meninga",
-    "next": "Menios",
+    "next": "Μήνιος",
+    "wp_link": "w:de:Djerba",
     "chapters": [
       {
         "start": 859,
@@ -12544,7 +12573,7 @@
     ]
   },
   {
-    "lemma": "Menios",
+    "lemma": "Μήνιος",
     "previous": "Meninx",
     "next": "Menippe 1",
     "chapters": [
@@ -12557,7 +12586,7 @@
   },
   {
     "lemma": "Menippe 1",
-    "previous": "Menios",
+    "previous": "Μήνιος",
     "next": "Menippe 2",
     "chapters": [
       {
@@ -12619,6 +12648,7 @@
     "lemma": "Menippides",
     "previous": "Menippe 5",
     "next": "Menippis",
+    "redirect": "Menippis",
     "chapters": [
       {
         "start": 861,
@@ -16192,8 +16222,9 @@
   },
   {
     "lemma": "Mesa 1",
-    "previous": "Mesa...",
+    "previous": "Mes",
     "next": "Mesa 2",
+    "redirect": "Medma 1",
     "chapters": [
       {
         "start": 1071,
@@ -16215,8 +16246,9 @@
   },
   {
     "lemma": "Mesada 1",
-    "previous": "Mesa 2",
+    "previous": "Mesa...",
     "next": "Mesada 2",
+    "redirect": "Masada",
     "chapters": [
       {
         "start": 1071,
@@ -16288,6 +16320,7 @@
     "lemma": "Mesalum",
     "previous": "Mesaloth",
     "next": "Mesambria 1",
+    "redirect": "Mesala",
     "chapters": [
       {
         "start": 1072,
@@ -16347,6 +16380,7 @@
     "lemma": "Mesanaioi",
     "previous": "Mesammones",
     "next": "Mesanites",
+    "redirect": "Mesene",
     "chapters": [
       {
         "start": 1075,
@@ -16358,6 +16392,7 @@
     "lemma": "Mesanites",
     "previous": "Mesanaioi",
     "next": "Mesapios",
+    "redirect": "Maisanites",
     "chapters": [
       {
         "start": 1075,
@@ -16429,7 +16464,7 @@
   {
     "lemma": "Μεσχέλα",
     "previous": "Μέσχη",
-    "next": "Mescheta",
+    "next": "Μεσχῆτα",
     "sort_key": "Meschela",
     "chapters": [
       {
@@ -16440,7 +16475,7 @@
     ]
   },
   {
-    "lemma": "Mescheta",
+    "lemma": "Μεσχῆτα",
     "previous": "Μεσχέλα",
     "next": "Mescianus",
     "sort_key": "Mescheta",
@@ -16454,8 +16489,9 @@
   },
   {
     "lemma": "Mescianus",
-    "previous": "Mescheta",
+    "previous": "Μεσχῆτα",
     "next": "Mescidius",
+    "redirect": "Messianus 1",
     "chapters": [
       {
         "start": 1076,
@@ -16563,7 +16599,8 @@
   {
     "lemma": "Mesembria",
     "previous": "Mesefar",
-    "next": "Mesembrinos kyklos",
+    "next": "Μεσημβρινὸς κύκλος",
+    "redirect": "Mesambria 1",
     "chapters": [
       {
         "start": 1078,
@@ -16572,7 +16609,7 @@
     ]
   },
   {
-    "lemma": "Mesembrinos kyklos",
+    "lemma": "Μεσημβρινὸς κύκλος",
     "previous": "Mesembria",
     "next": "Mesengyema",
     "chapters": [
@@ -16585,7 +16622,7 @@
   },
   {
     "lemma": "Mesengyema",
-    "previous": "Mesembrinos kyklos",
+    "previous": "Μεσημβρινὸς κύκλος",
     "next": "Mesene",
     "chapters": [
       {

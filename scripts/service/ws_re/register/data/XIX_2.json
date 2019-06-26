@@ -76,7 +76,7 @@
     "lemma": "Petros 7",
     "previous": "Petros 6",
     "next": "Petrosaka 1",
-    "redirect": true,
+    "redirect": "Petrus 1",
     "chapters": [
       {
         "start": 1304,
@@ -1707,7 +1707,7 @@
     "lemma": "Petteia",
     "previous": "Petrusapokryphen",
     "next": "Pettius",
-    "redirect": true,
+    "redirect": "Lusoria tabula",
     "chapters": [
       {
         "start": 1381,
@@ -1815,7 +1815,7 @@
     "lemma": "Petza",
     "previous": "Petusius",
     "next": "Peucaei",
-    "redirect": true,
+    "redirect": "Pitza",
     "chapters": [
       {
         "start": 1382,
@@ -1827,7 +1827,7 @@
     "lemma": "Peucaei",
     "previous": "Petza",
     "next": "Peuce 1",
-    "redirect": true,
+    "redirect": "Peucetii",
     "chapters": [
       {
         "start": 1382,
@@ -2064,7 +2064,8 @@
   {
     "lemma": "Pexodoros",
     "previous": "Pexa",
-    "next": "Pezetairoi",
+    "next": "Πεζέταιροι",
+    "redirect": true,
     "chapters": [
       {
         "start": 1412,
@@ -2073,7 +2074,7 @@
     ]
   },
   {
-    "lemma": "Pezetairoi",
+    "lemma": "Πεζέταιροι",
     "previous": "Pexodoros",
     "next": "Pfändung",
     "chapters": [
@@ -2086,8 +2087,10 @@
   },
   {
     "lemma": "Pfändung",
-    "previous": "Pezetairoi",
+    "previous": "Πεζέταιροι",
     "next": "Pfand, Pfandrecht",
+    "redirect": "Pignoris capio",
+    "wp_link": "w:de:Pfändung",
     "chapters": [
       {
         "start": 1414,
@@ -2099,7 +2102,8 @@
     "lemma": "Pfand, Pfandrecht",
     "previous": "Pfändung",
     "next": "Pfau",
-    "redirect": true,
+    "redirect": "Fiducia",
+    "wp_link": "w:de:Pfand (Recht)",
     "chapters": [
       {
         "start": 1414,
@@ -2171,7 +2175,8 @@
     "lemma": "Pfirsich",
     "previous": "Pferdezucht",
     "next": "Pflanzenaberglaube",
-    "redirect": true,
+    "redirect": "Persica",
+    "wp_link": "w:de:Pfirsich",
     "chapters": [
       {
         "start": 1446,
@@ -10625,6 +10630,7 @@
     "lemma": "Philetas 4",
     "previous": "Philetas 3",
     "next": "Phileterias",
+    "redirect": "Philytas",
     "chapters": [
       {
         "start": 2171,
@@ -10636,6 +10642,7 @@
     "lemma": "Phileterias",
     "previous": "Philetas 4",
     "next": "Philetor",
+    "redirect": "Philoteras 1",
     "chapters": [
       {
         "start": 2171,
@@ -11851,7 +11858,8 @@
   {
     "lemma": "Philippos 53",
     "previous": "Philippos 52",
-    "next": "Philippus 1",
+    "next": "Philippos 53-71",
+    "redirect": "Philippus 1",
     "chapters": [
       {
         "start": 2370,

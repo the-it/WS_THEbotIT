@@ -101,7 +101,7 @@
     "lemma": "Metachompso",
     "previous": "Metachoion",
     "next": "Metageitnion",
-    "redirect": true,
+    "redirect": "Tachompso, Takompsos",
     "chapters": [
       {
         "start": 1317,
@@ -245,6 +245,7 @@
     "lemma": "Metalkes",
     "previous": "Metakon",
     "next": "Metalla 1",
+    "redirect": "Menalkes 1",
     "chapters": [
       {
         "start": 1321,
@@ -304,7 +305,8 @@
   {
     "lemma": "Metalla 5",
     "previous": "Metalla 4",
-    "next": "Metallarches",
+    "next": "Μεταλλάρχης",
+    "redirect": "Bergbau",
     "chapters": [
       {
         "start": 1323,
@@ -313,7 +315,7 @@
     ]
   },
   {
-    "lemma": "Metallarches",
+    "lemma": "Μεταλλάρχης",
     "previous": "Metalla 5",
     "next": "Metallinum",
     "chapters": [
@@ -326,8 +328,9 @@
   },
   {
     "lemma": "Metallinum",
-    "previous": "Metallarches",
+    "previous": "Μεταλλάρχης",
     "next": "Metallon",
+    "redirect": "Metellinum",
     "chapters": [
       {
         "start": 1323,
@@ -364,6 +367,8 @@
     "lemma": "Μέταλλος 2",
     "previous": "Μέταλλος 1",
     "next": "Metambala",
+    "sort_key": "Metallos 2",
+    "redirect": "Megallos",
     "chapters": [
       {
         "start": 1324,
@@ -387,6 +392,7 @@
     "lemma": "Metameleia",
     "previous": "Metambala",
     "next": "Metanastae",
+    "redirect": "Metanoia",
     "chapters": [
       {
         "start": 1324,
@@ -482,6 +488,7 @@
     "lemma": "Metaphretor",
     "previous": "Metapa",
     "next": "Metapinum",
+    "redirect": "Metageitnios",
     "chapters": [
       {
         "start": 1325,
@@ -661,7 +668,8 @@
   {
     "lemma": "Metaurus 3",
     "previous": "Metaurus 2",
-    "next": "Meteiboi",
+    "next": "Μέτειβοι",
+    "redirect": "Matauros",
     "chapters": [
       {
         "start": 1370,
@@ -670,7 +678,7 @@
     ]
   },
   {
-    "lemma": "Meteiboi",
+    "lemma": "Μέτειβοι",
     "previous": "Metaurus 3",
     "next": "Meteita",
     "chapters": [
@@ -683,7 +691,7 @@
   },
   {
     "lemma": "Meteita",
-    "previous": "Meteiboi",
+    "previous": "Μέτειβοι",
     "next": "Metelis",
     "chapters": [
       {
@@ -817,6 +825,7 @@
     "lemma": "Methaikos",
     "previous": "Meterius 3",
     "next": "Methana",
+    "redirect": "Mithaikos",
     "chapters": [
       {
         "start": 1375,
@@ -1008,6 +1017,7 @@
     "lemma": "Methuriades",
     "previous": "Methora",
     "next": "Methurides",
+    "redirect": "Methurides",
     "chapters": [
       {
         "start": 1387,
@@ -1067,6 +1077,8 @@
     "lemma": "Μεθύλιον",
     "previous": "Methydrion 2",
     "next": "Methymna",
+    "sort_key": "Methylion",
+    "redirect": "Methydrion 2",
     "chapters": [
       {
         "start": 1391,
@@ -1150,6 +1162,7 @@
     "lemma": "Metichos",
     "previous": "Meticanius",
     "next": "Μητίχου",
+    "redirect": "Metiochos 3",
     "chapters": [
       {
         "start": 1396,
@@ -1482,7 +1495,7 @@
     "lemma": "Metilius 24",
     "previous": "Metilius 23",
     "next": "Metilius 25",
-    "redirect": true,
+    "redirect": "Marcius 116",
     "chapters": [
       {
         "start": 1406,
@@ -1494,7 +1507,7 @@
     "lemma": "Metilius 25",
     "previous": "Metilius 24",
     "next": "Metilius 26",
-    "redirect": true,
+    "redirect": "Marcius 116",
     "chapters": [
       {
         "start": 1406,
@@ -5769,6 +5782,7 @@
     "lemma": "Miltopae",
     "previous": "Miltokythes 2",
     "next": "Miltopes",
+    "redirect": "Miltopes",
     "chapters": [
       {
         "start": 1708,
@@ -5804,6 +5818,7 @@
     "lemma": "Miltos 1",
     "previous": "Miltophorion",
     "next": "Miltos 2",
+    "redirect": "Minium 1",
     "chapters": [
       {
         "start": 1709,
@@ -5827,6 +5842,7 @@
     "lemma": "Milvius",
     "previous": "Miltos 2",
     "next": "Milvus 1",
+    "redirect": "Mulvius 1",
     "chapters": [
       {
         "start": 1709,
@@ -5838,6 +5854,7 @@
     "lemma": "Milvus 1",
     "previous": "Milvius",
     "next": "Milvus 2",
+    "redirect": "Sperber",
     "chapters": [
       {
         "start": 1709,
@@ -6621,6 +6638,8 @@
     "lemma": "Minervae Agon",
     "previous": "Minervae",
     "next": "Minervae ara",
+    "redirect": "Agones 2",
+    "wp_link": "w:de:Agon",
     "chapters": [
       {
         "start": 1805,
@@ -6655,7 +6674,8 @@
   {
     "lemma": "Minervae atrium",
     "previous": "Minervae arx",
-    "next": "Minervae Insulae",
+    "next": "Minervae Insula",
+    "redirect": "Chalcidicum#Seite_2041",
     "chapters": [
       {
         "start": 1806,
@@ -6751,6 +6771,7 @@
     "lemma": "Minervium 4",
     "previous": "Minervium 3",
     "next": "Minervius 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1807,
@@ -9027,6 +9048,8 @@
     "lemma": "Μιρράδα",
     "previous": "Mirones",
     "next": "Μιρράν",
+    "sort_key": "Mirrada",
+    "redirect": "Θιλλάδα Μιρράδα",
     "chapters": [
       {
         "start": 2029,
@@ -9075,6 +9098,7 @@
     "lemma": "Misach",
     "previous": "Mirus",
     "next": "Misael",
+    "redirect": "Misak",
     "chapters": [
       {
         "start": 2029,
@@ -9086,6 +9110,7 @@
     "lemma": "Misael",
     "previous": "Misach",
     "next": "Misagenes",
+    "redirect": "Misahel",
     "chapters": [
       {
         "start": 2029,
@@ -9133,6 +9158,7 @@
     "lemma": "Misaris",
     "previous": "Misak",
     "next": "Misatis",
+    "redirect": "Mysaris promonturium",
     "chapters": [
       {
         "start": 2030,

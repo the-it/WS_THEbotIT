@@ -53,6 +53,7 @@
     "lemma": "Foroclaudienses",
     "previous": "Foroba",
     "next": "Foroiulienses, Foroneronienses",
+    "redirect": "Forum Claudi",
     "chapters": [
       {
         "start": 12,
@@ -64,6 +65,7 @@
     "lemma": "Foroiulienses, Foroneronienses",
     "previous": "Foroclaudienses",
     "next": "Forontianensis",
+    "redirect": true,
     "chapters": [
       {
         "start": 12,
@@ -7406,6 +7408,7 @@
     "lemma": "Gabala 3",
     "previous": "Gabala 2",
     "next": "Gabala 4",
+    "redirect": true,
     "chapters": [
       {
         "start": 414,
@@ -7417,6 +7420,7 @@
     "lemma": "Gabala 4",
     "previous": "Gabala 3",
     "next": "Gabala 5",
+    "redirect": true,
     "chapters": [
       {
         "start": 415,
@@ -8485,7 +8489,7 @@
     "lemma": "Gadinio",
     "previous": "Gadini",
     "next": "Gadirtha",
-    "redirect": true,
+    "redirect": "Adienos",
     "chapters": [
       {
         "start": 462,
@@ -8497,7 +8501,7 @@
     "lemma": "Gadirtha",
     "previous": "Gadinio",
     "next": "Gadora 1",
-    "redirect": true,
+    "redirect": "Gadeirtha",
     "chapters": [
       {
         "start": 462,
@@ -8544,7 +8548,7 @@
     "lemma": "Gadrosoi",
     "previous": "Gadra",
     "next": "Gaeli",
-    "redirect": true,
+    "redirect": "Gedrosoi",
     "chapters": [
       {
         "start": 462,
@@ -8556,7 +8560,7 @@
     "lemma": "Gaeli",
     "previous": "Gadrosoi",
     "next": "Gaesaeone",
-    "redirect": true,
+    "redirect": "Geli",
     "chapters": [
       {
         "start": 462,
@@ -10670,10 +10674,10 @@
   },
   {
     "lemma": "Galla 9",
-    "previous": "Galla 8",
-    "next": "Galla 10",
+    "previous": "Galla 10",
+    "next": "Gallaba",
     "sort_key": "Galla 09",
-    "redirect": true,
+    "redirect": "Aelius 173",
     "chapters": [
       {
         "start": 609,
@@ -10721,7 +10725,7 @@
     "lemma": "Gallaecia",
     "previous": "Gallae",
     "next": "Gallaia",
-    "redirect": true,
+    "redirect": "Callaici",
     "chapters": [
       {
         "start": 610,
@@ -11148,7 +11152,7 @@
     "lemma": "Gallio 1",
     "previous": "ad Gallinas",
     "next": "Gallio 2",
-    "redirect": true,
+    "redirect": "Iunius 78",
     "wp_link": "w:de:Lucius Iunius Gallio Annaeanus",
     "chapters": [
       {
@@ -11161,7 +11165,7 @@
     "lemma": "Gallio 2",
     "previous": "Gallio 1",
     "next": "Gallio 3",
-    "redirect": true,
+    "redirect": "Iunius 77",
     "chapters": [
       {
         "start": 670,
@@ -11771,6 +11775,7 @@
     "lemma": "Gamabrivii",
     "previous": "Galtis",
     "next": "Gamala 1",
+    "redirect": "Gambrivii",
     "chapters": [
       {
         "start": 689,
@@ -12274,6 +12279,7 @@
     "lemma": "Gangaridai",
     "previous": "Gangara",
     "next": "Gange 1",
+    "redirect": "Gandaridai",
     "chapters": [
       {
         "start": 702,
@@ -13371,7 +13377,7 @@
     "lemma": "Garites",
     "previous": "Garis",
     "next": "Garizin",
-    "redirect": true,
+    "redirect": "Gates",
     "chapters": [
       {
         "start": 766,
@@ -15001,6 +15007,7 @@
     "lemma": "Gauti, Gautigoth",
     "previous": "Gauterit",
     "next": "Γαυζανία",
+    "redirect": "Gautae",
     "chapters": [
       {
         "start": 879,
@@ -15134,7 +15141,7 @@
     "lemma": "Gazakon",
     "previous": "Gazakene",
     "next": "Gazaluitis",
-    "redirect": true,
+    "redirect": "Gazaka",
     "chapters": [
       {
         "start": 887,
@@ -15290,7 +15297,7 @@
     "lemma": "Ge",
     "previous": "Gazos",
     "next": "Gea",
-    "redirect": true,
+    "redirect": "Gaia 1",
     "chapters": [
       {
         "start": 891,
@@ -15553,6 +15560,7 @@
     "lemma": "Gedur",
     "previous": "Gedrus",
     "next": "Geeios",
+    "redirect": "Gedrus",
     "chapters": [
       {
         "start": 903,
@@ -15733,7 +15741,7 @@
     "lemma": "Gegina",
     "previous": "Gegeneis 2",
     "next": "Gehennom",
-    "redirect": true,
+    "redirect": "Geinensis vicus",
     "chapters": [
       {
         "start": 931,
@@ -16700,7 +16708,8 @@
   {
     "lemma": "Gelos 3",
     "previous": "Gelos 2",
-    "next": "Gelotopoioi",
+    "next": "Γελωτοποιοί",
+    "redirect": "Kalbis",
     "chapters": [
       {
         "start": 1019,
@@ -16710,7 +16719,7 @@
     ]
   },
   {
-    "lemma": "Gelotopoioi",
+    "lemma": "Γελωτοποιοί",
     "previous": "Gelos 3",
     "next": "Geluina",
     "chapters": [
@@ -16723,7 +16732,7 @@
   },
   {
     "lemma": "Geluina",
-    "previous": "Gelotopoioi",
+    "previous": "Γελωτοποιοί",
     "next": "Gema",
     "chapters": [
       {
@@ -16737,6 +16746,7 @@
     "lemma": "Gema",
     "previous": "Geluina",
     "next": "Gembro",
+    "redirect": true,
     "chapters": [
       {
         "start": 1021,
@@ -19624,6 +19634,7 @@
     "lemma": "Geraritike",
     "previous": "Gerariticus saltus",
     "next": "Geras",
+    "redirect": "Gerariticus saltus",
     "chapters": [
       {
         "start": 1240,
@@ -21080,6 +21091,7 @@
     "lemma": "Gesdao",
     "previous": "Geschütze",
     "next": "Gesila",
+    "redirect": "Gaesao",
     "chapters": [
       {
         "start": 1322,
@@ -22253,7 +22265,7 @@
     "lemma": "Gipedes",
     "previous": "Gioras",
     "next": "Gipidia",
-    "redirect": true,
+    "redirect": "Gepidae",
     "chapters": [
       {
         "start": 1366,
@@ -22265,7 +22277,7 @@
     "lemma": "Gipidia",
     "previous": "Gipedes",
     "next": "Gir",
-    "redirect": true,
+    "redirect": "Gepidae",
     "chapters": [
       {
         "start": 1366,

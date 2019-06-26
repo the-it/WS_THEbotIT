@@ -743,6 +743,7 @@
     "lemma": "Coruncanius 4",
     "previous": "Coruncanius 3",
     "next": "Corvorum duorum portus",
+    "redirect": true,
     "chapters": [
       {
         "start": 1665,
@@ -754,6 +755,7 @@
     "lemma": "Corvorum duorum portus",
     "previous": "Coruncanius 4",
     "next": "Corvus 1",
+    "redirect": "Δύο κοράκων λιμήν",
     "chapters": [
       {
         "start": 1665,
@@ -765,6 +767,7 @@
     "lemma": "Corvus 1",
     "previous": "Corvorum duorum portus",
     "next": "Corvus 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 1665,
@@ -5680,6 +5683,7 @@
     "lemma": "Curio 1",
     "previous": "Curiga",
     "next": "Curio 2",
+    "redirect": "Scribonius 7",
     "chapters": [
       {
         "start": 1836,
@@ -5715,6 +5719,7 @@
     "lemma": "Curionium aes",
     "previous": "Curiones",
     "next": "Curiosi",
+    "redirect": "Aes curionium",
     "chapters": [
       {
         "start": 1838,
@@ -5726,6 +5731,7 @@
     "lemma": "Curiosi",
     "previous": "Curionium aes",
     "next": "Curiosolitae",
+    "redirect": "Agentes in rebus",
     "chapters": [
       {
         "start": 1838,
@@ -5737,6 +5743,7 @@
     "lemma": "Curiosolitae",
     "previous": "Curiosi",
     "next": "Curiosum urbis Romae",
+    "redirect": "Coriosolites",
     "chapters": [
       {
         "start": 1838,
@@ -5760,6 +5767,8 @@
     "lemma": "Curius",
     "previous": "Curiosum urbis Romae",
     "next": "Curius 1",
+    "sort_key": "Curius 00",
+    "redirect": true,
     "chapters": [
       {
         "start": 1838,
@@ -5771,6 +5780,7 @@
     "lemma": "Curius 1",
     "previous": "Curius",
     "next": "Curius 2",
+    "sort_key": "Curius 01",
     "chapters": [
       {
         "start": 1839,
@@ -5783,6 +5793,7 @@
     "lemma": "Curius 2",
     "previous": "Curius 1",
     "next": "Curius 3",
+    "sort_key": "Curius 02",
     "chapters": [
       {
         "start": 1839,
@@ -5795,6 +5806,7 @@
     "lemma": "Curius 3",
     "previous": "Curius 2",
     "next": "Curius 4",
+    "sort_key": "Curius 03",
     "chapters": [
       {
         "start": 1839,
@@ -5807,6 +5819,7 @@
     "lemma": "Curius 4",
     "previous": "Curius 3",
     "next": "Curius 5",
+    "sort_key": "Curius 04",
     "chapters": [
       {
         "start": 1839,
@@ -5819,6 +5832,7 @@
     "lemma": "Curius 5",
     "previous": "Curius 4",
     "next": "Curius 6",
+    "sort_key": "Curius 05",
     "chapters": [
       {
         "start": 1839,
@@ -5831,6 +5845,7 @@
     "lemma": "Curius 6",
     "previous": "Curius 5",
     "next": "Curius 7",
+    "sort_key": "Curius 06",
     "chapters": [
       {
         "start": 1840,
@@ -5843,6 +5858,7 @@
     "lemma": "Curius 7",
     "previous": "Curius 6",
     "next": "Curius 8",
+    "sort_key": "Curius 07",
     "chapters": [
       {
         "start": 1840,
@@ -5855,6 +5871,7 @@
     "lemma": "Curius 8",
     "previous": "Curius 7",
     "next": "Curius 9",
+    "sort_key": "Curius 08",
     "chapters": [
       {
         "start": 1841,
@@ -5867,6 +5884,7 @@
     "lemma": "Curius 9",
     "previous": "Curius 8",
     "next": "Curius 10",
+    "sort_key": "Curius 09",
     "chapters": [
       {
         "start": 1841,
@@ -5891,6 +5909,7 @@
     "lemma": "Curius 11",
     "previous": "Curius 10",
     "next": "Curius 12",
+    "redirect": "Ovinius 5",
     "chapters": [
       {
         "start": 1845,
@@ -5902,6 +5921,7 @@
     "lemma": "Curius 12",
     "previous": "Curius 11",
     "next": "Curmi",
+    "redirect": "Vibius 10",
     "chapters": [
       {
         "start": 1845,
@@ -5913,6 +5933,7 @@
     "lemma": "Curmi",
     "previous": "Curius 12",
     "next": "Curmiliaca",
+    "redirect": "Bier",
     "chapters": [
       {
         "start": 1845,
@@ -5924,6 +5945,7 @@
     "lemma": "Curmiliaca",
     "previous": "Curmi",
     "next": "Curnonium",
+    "wp_link": "w:de:Cormeilles (Oise)",
     "chapters": [
       {
         "start": 1845,
@@ -7312,7 +7334,7 @@
     "lemma": "Cypsaria",
     "previous": "Cyprusa",
     "next": "Cypsela",
-    "redirect": true,
+    "redirect": "Gypsaria 1",
     "chapters": [
       {
         "start": 1942,
@@ -7349,6 +7371,7 @@
     "lemma": "Cyrenaica",
     "previous": "Cyrei",
     "next": "Cyrila",
+    "redirect": "Legio 1",
     "chapters": [
       {
         "start": 1943,
@@ -7505,7 +7528,7 @@
     "lemma": "Dabeira",
     "previous": "Dabausa",
     "next": "Dabelli",
-    "redirect": true,
+    "redirect": "Dabaritta",
     "chapters": [
       {
         "start": 1947,
@@ -8961,7 +8984,7 @@
   },
   {
     "lemma": "Δακτυλοδόχμη",
-    "previous": "Daktyliotheke",
+    "previous": "Δακρύδιον",
     "next": "Daktyloi",
     "sort_key": "Daktylodochme",
     "chapters": [
@@ -9914,6 +9937,7 @@
     "lemma": "Damasippos 5",
     "previous": "Damasippos 4",
     "next": "Damasippos 6",
+    "redirect": true,
     "chapters": [
       {
         "start": 2038,
@@ -9997,6 +10021,8 @@
     "lemma": "Δαμασκηνόν",
     "previous": "Damaskene",
     "next": "Damaskios 1",
+    "sort_key": "Damaskenon",
+    "redirect": "Prunus",
     "chapters": [
       {
         "start": 2039,
@@ -10508,7 +10534,7 @@
   {
     "lemma": "Dameon",
     "previous": "Damenetos",
-    "next": "Dametidai",
+    "next": "Δαμητίδαι",
     "chapters": [
       {
         "start": 2054,
@@ -10518,9 +10544,10 @@
     ]
   },
   {
-    "lemma": "Dametidai",
+    "lemma": "Δαμητίδαι",
     "previous": "Dameon",
     "next": "Damia",
+    "sort_key": "Dametidai",
     "chapters": [
       {
         "start": 2054,
@@ -10531,7 +10558,7 @@
   },
   {
     "lemma": "Damia",
-    "previous": "Dametidai",
+    "previous": "Δαμητίδαι",
     "next": "Damianos 1",
     "chapters": [
       {
@@ -12682,6 +12709,7 @@
     "lemma": "Danuvius 2",
     "previous": "Danuvius 1",
     "next": "Daochos",
+    "wp_link": "w:de:Danuvius",
     "chapters": [
       {
         "start": 2132,
@@ -12706,6 +12734,7 @@
     "lemma": "Daoi",
     "previous": "Daochos",
     "next": "Daokome",
+    "wp_link": "w:de:Dahae",
     "chapters": [
       {
         "start": 2133,
@@ -12923,6 +12952,7 @@
     "lemma": "Daphne 8",
     "previous": "Daphne 7",
     "next": "Daphnephoria",
+    "redirect": "Laurus",
     "chapters": [
       {
         "start": 2140,
@@ -16855,6 +16885,7 @@
     "lemma": "Decollatio",
     "previous": "Decoctor",
     "next": "Decoratus",
+    "wp_link": "w:de:Enthauptung",
     "chapters": [
       {
         "start": 2287,
@@ -16904,6 +16935,7 @@
     "lemma": "Decretum Damasi, Gelasii, Hormisdae",
     "previous": "Decretum",
     "next": "Decrianus 1",
+    "redirect": "Gelasius 3",
     "chapters": [
       {
         "start": 2306,
@@ -16940,6 +16972,7 @@
     "lemma": "Decrianus 3",
     "previous": "Decrianus 2",
     "next": "Decrius 1",
+    "redirect": "Aelius 44",
     "chapters": [
       {
         "start": 2306,
@@ -17035,6 +17068,7 @@
     "lemma": "Decumanus ager",
     "previous": "Decumanus",
     "next": "Decumates agri",
+    "redirect": "Decuma",
     "chapters": [
       {
         "start": 2316,
@@ -19791,6 +19825,7 @@
     "lemma": "Delminium",
     "previous": "Delmatius 4",
     "next": "Delon",
+    "wp_link": "w:de:Tomislavgrad",
     "chapters": [
       {
         "start": 2457,
@@ -22693,6 +22728,9 @@
     "lemma": "Demetrios 131",
     "previous": "Demetrios 130",
     "next": "Δημητρίου σκοπιαί",
+    "sort_key": "Demetrios 131",
+    "redirect": "Damatrios",
+    "wp_link": "w:de:Demetrios",
     "chapters": [
       {
         "start": 2853,

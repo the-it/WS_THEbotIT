@@ -39,6 +39,7 @@
     "lemma": "Saar, Saarburg",
     "previous": "Σάανα",
     "next": "Saarnaios",
+    "redirect": "Saravus",
     "chapters": [
       {
         "start": 1297,
@@ -62,6 +63,7 @@
     "lemma": "Saat",
     "previous": "Saarnaios",
     "next": "Sab...",
+    "redirect": "Getreide",
     "chapters": [
       {
         "start": 1297,
@@ -72,7 +74,7 @@
   {
     "lemma": "Sab...",
     "previous": "Saat",
-    "next": "Saba 1",
+    "next": "Saba",
     "redirect": true,
     "chapters": [
       {
@@ -147,6 +149,7 @@
     "lemma": "Sabae",
     "previous": "Σαβάδιοι",
     "next": "Sabaei",
+    "redirect": "Sabai 2",
     "chapters": [
       {
         "start": 1515,
@@ -158,6 +161,7 @@
     "lemma": "Sabaei",
     "previous": "Sabae",
     "next": "Σαβάγηνα",
+    "redirect": "Saba 1",
     "chapters": [
       {
         "start": 1515,
@@ -255,6 +259,8 @@
     "lemma": "Σαβαιῶν",
     "previous": "Σαβαῖοι βωμοί",
     "next": "Σαβαϊτικὸν στόμα",
+    "sort_key": "Sabaion",
+    "redirect": "Isba",
     "chapters": [
       {
         "start": 1522,
@@ -272,6 +278,8 @@
     "lemma": "Sabaium",
     "previous": "Σαβαϊτικὸν στόμα",
     "next": "Sabakchos",
+    "redirect": "Sabaia, sabaium",
+    "wp_link": "w:de:Geschichte des Bieres",
     "chapters": [
       {
         "start": 1523,
@@ -381,6 +389,8 @@
     "lemma": "Σάβανα 1",
     "previous": "Σαβαλίγγιοι",
     "next": "Σάβανα 2",
+    "sort_key": "Sabana 1",
+    "redirect": true,
     "chapters": [
       {
         "start": 1532,
@@ -453,7 +463,7 @@
   {
     "lemma": "Σάβαρα 2",
     "previous": "Σάβαρα 1",
-    "next": "Sabarai",
+    "next": "Σαβᾶραι",
     "chapters": [
       {
         "start": 1536,
@@ -463,7 +473,7 @@
     ]
   },
   {
-    "lemma": "Sabarai",
+    "lemma": "Σαβᾶραι",
     "previous": "Σάβαρα 2",
     "next": "Sabarbares",
     "chapters": [
@@ -476,8 +486,9 @@
   },
   {
     "lemma": "Sabarbares",
-    "previous": "Sabarai",
+    "previous": "Σαβᾶραι",
     "next": "Sabarcae",
+    "redirect": "Suburbures",
     "chapters": [
       {
         "start": 1536,
@@ -501,6 +512,8 @@
     "lemma": "Sabaria",
     "previous": "Sabarcae",
     "next": "Sabas 1",
+    "redirect": "Savaria",
+    "wp_link": "w:de:Savaria",
     "chapters": [
       {
         "start": 1537,
@@ -549,6 +562,7 @@
     "lemma": "Sabastos",
     "previous": "Sabas 3",
     "next": "Sabat",
+    "redirect": "Sebastos 2",
     "chapters": [
       {
         "start": 1537,
@@ -560,6 +574,7 @@
     "lemma": "Sabat",
     "previous": "Sabastos",
     "next": "Sabate",
+    "redirect": "Saba 3",
     "chapters": [
       {
         "start": 1537,
@@ -583,6 +598,8 @@
     "lemma": "Sabatene Angularia",
     "previous": "Sabate",
     "next": "Sabatha 1",
+    "sort_key": "Sabatene",
+    "redirect": "Sabate",
     "chapters": [
       {
         "start": 1539,
@@ -605,8 +622,8 @@
   {
     "lemma": "Sabatha 2",
     "previous": "Sabatha 1",
-    "next": "Sabathra",
-    "redirect": true,
+    "next": "Σαβάθρα",
+    "redirect": "Meinas Sabattha",
     "chapters": [
       {
         "start": 1540,
@@ -615,9 +632,10 @@
     ]
   },
   {
-    "lemma": "Sabathra",
+    "lemma": "Σαβάθρα",
     "previous": "Sabatha 2",
     "next": "Sabatia",
+    "sort_key": "Sabathra",
     "redirect": true,
     "chapters": [
       {
@@ -628,9 +646,9 @@
   },
   {
     "lemma": "Sabatia",
-    "previous": "Sabathra",
+    "previous": "Σαβάθρα",
     "next": "Sabatina tribus",
-    "redirect": true,
+    "redirect": "Vada Sabatia",
     "chapters": [
       {
         "start": 1540,
@@ -642,7 +660,7 @@
     "lemma": "Sabatina tribus",
     "previous": "Sabatia",
     "next": "Sabatinca",
-    "redirect": true,
+    "redirect": "Sabate",
     "chapters": [
       {
         "start": 1540,
@@ -678,6 +696,7 @@
     "lemma": "Sabatinus lacus",
     "previous": "Sabatini",
     "next": "Sabatus",
+    "redirect": "Sabate",
     "chapters": [
       {
         "start": 1540,
@@ -689,7 +708,7 @@
     "lemma": "Sabatus",
     "previous": "Sabatinus lacus",
     "next": "Sabaudia, Sabaudus",
-    "redirect": true,
+    "redirect": "Sabutus",
     "chapters": [
       {
         "start": 1540,
@@ -701,7 +720,7 @@
     "lemma": "Sabaudia, Sabaudus",
     "previous": "Sabatus",
     "next": "Sabazios",
-    "redirect": true,
+    "redirect": "Sapaudia",
     "chapters": [
       {
         "start": 1540,
@@ -787,7 +806,7 @@
     "lemma": "Sabbe",
     "previous": "Sabbatius",
     "next": "Sabburarsakios",
-    "redirect": true,
+    "redirect": "Sambethe",
     "chapters": [
       {
         "start": 1566,
@@ -1381,6 +1400,7 @@
     "lemma": "Sabinius 1",
     "previous": "Σαβινίριβες",
     "next": "Sabinius 2",
+    "redirect": "Furius 89",
     "chapters": [
       {
         "start": 1588,
@@ -1441,6 +1461,7 @@
     "lemma": "Sabinius 6",
     "previous": "Sabinius 5",
     "next": "Sabinum",
+    "redirect": "Furius 98",
     "chapters": [
       {
         "start": 1590,
@@ -3763,7 +3784,7 @@
     "lemma": "Safrac",
     "previous": "Safinius",
     "next": "Safran",
-    "redirect": true,
+    "redirect": "Saphrax",
     "chapters": [
       {
         "start": 1728,
@@ -9492,7 +9513,7 @@
     "lemma": "Salzach",
     "previous": "Salz",
     "next": "Salzburg",
-    "redirect": true,
+    "redirect": "Ivaro, Ivarus",
     "wp_link": "w:de:Salzach",
     "chapters": [
       {
@@ -9505,7 +9526,7 @@
     "lemma": "Salzburg",
     "previous": "Salzach",
     "next": "Salzig",
-    "redirect": true,
+    "redirect": "Iuvavum",
     "wp_link": "w:de:Salzburg",
     "ws_link": "s:de:Salzburg",
     "chapters": [
@@ -10369,7 +10390,7 @@
     "lemma": "Samnium 1",
     "previous": "Samnites",
     "next": "Samnium 2",
-    "redirect": true,
+    "redirect": "Samnites",
     "chapters": [
       {
         "start": 2158,
@@ -13060,6 +13081,8 @@
     "lemma": "Sara 1",
     "previous": "Sapyle",
     "next": "Sara 2",
+    "redirect": "Sarepta",
+    "wp_link": "w:de:Sarepta (Phönizien)",
     "chapters": [
       {
         "start": 2385,

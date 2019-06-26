@@ -115,6 +115,8 @@
     "lemma": "Selinus 6",
     "previous": "Selinus 5",
     "next": "Selinus 7",
+    "sort_key": "Selinus 06",
+    "redirect": "Selinus 12",
     "chapters": [
       {
         "start": 1265,
@@ -197,8 +199,8 @@
   {
     "lemma": "Selinus 12",
     "previous": "Selinus 11",
-    "next": "Selinus limen",
-    "redirect": true,
+    "next": "Σελινοὺς λιμήν",
+    "redirect": "Selinos",
     "chapters": [
       {
         "start": 1309,
@@ -207,10 +209,11 @@
     ]
   },
   {
-    "lemma": "Selinus limen",
+    "lemma": "Σελινοὺς λιμήν",
     "previous": "Selinus 12",
     "next": "Selius 1",
-    "redirect": true,
+    "sort_key": "Selinus limen",
+    "redirect": "Σεληνίς",
     "chapters": [
       {
         "start": 1309,
@@ -220,7 +223,7 @@
   },
   {
     "lemma": "Selius 1",
-    "previous": "Selinus limen",
+    "previous": "Σελινοὺς λιμήν",
     "next": "Selius 2",
     "chapters": [
       {
@@ -305,8 +308,8 @@
   {
     "lemma": "Sellariacus",
     "previous": "Sella equestris",
-    "next": "Sellas",
-    "redirect": true,
+    "next": "Σέλλας",
+    "redirect": "Seleriacum",
     "chapters": [
       {
         "start": 1316,
@@ -315,10 +318,11 @@
     ]
   },
   {
-    "lemma": "Sellas",
+    "lemma": "Σέλλας",
     "previous": "Sellariacus",
-    "next": "Sellasia",
-    "redirect": true,
+    "next": "Σελλασία",
+    "sort_key": "Sellas",
+    "redirect": "Σέλας",
     "chapters": [
       {
         "start": 1316,
@@ -327,8 +331,8 @@
     ]
   },
   {
-    "lemma": "Sellasia",
-    "previous": "Sellas",
+    "lemma": "Σελλασία",
+    "previous": "Σέλλας",
     "next": "Selleeis 1",
     "chapters": [
       {
@@ -340,7 +344,7 @@
   },
   {
     "lemma": "Selleeis 1",
-    "previous": "Sellasia",
+    "previous": "Σελλασία",
     "next": "Selleeis 2",
     "chapters": [
       {
@@ -402,7 +406,7 @@
     "lemma": "Selleniacus",
     "previous": "Selleeis 5",
     "next": "Sellense castrum",
-    "redirect": true,
+    "redirect": "Seliniacus",
     "chapters": [
       {
         "start": 1320,
@@ -414,7 +418,7 @@
     "lemma": "Sellense castrum",
     "previous": "Selleniacus",
     "next": "Sellentiacus",
-    "redirect": true,
+    "redirect": "Selli",
     "chapters": [
       {
         "start": 1320,
@@ -3427,6 +3431,7 @@
     "lemma": "Senepos",
     "previous": "Senemuris, Senepos",
     "next": "Senex",
+    "redirect": "Senemuris, Senepos",
     "chapters": [
       {
         "start": 1459,
@@ -11113,6 +11118,8 @@
     "lemma": "Σησαμός",
     "previous": "Sesamon",
     "next": "Sesamus",
+    "sort_key": "Sesamos",
+    "redirect": "Amastris 1",
     "chapters": [
       {
         "start": 1853,
@@ -16414,7 +16421,7 @@
     "lemma": "Sicila",
     "previous": "Σίχνις",
     "next": "Sicilia 1",
-    "redirect": true,
+    "redirect": "Sicilia 2",
     "chapters": [
       {
         "start": 2193,
@@ -16426,7 +16433,7 @@
     "lemma": "Sicilia 1",
     "previous": "Sicila",
     "next": "Sicilia 2",
-    "redirect": true,
+    "redirect": "Sikelia, Sicilia 1",
     "chapters": [
       {
         "start": 2193,
@@ -17807,6 +17814,7 @@
     "lemma": "Sigambri",
     "previous": "Σιγάλα",
     "next": "Σιγάρα",
+    "redirect": "Sugambri",
     "chapters": [
       {
         "start": 2275,
@@ -18140,6 +18148,7 @@
     "lemma": "Sigman",
     "previous": "Sigma",
     "next": "Sigmatis",
+    "redirect": "Sigmatis",
     "chapters": [
       {
         "start": 2324,

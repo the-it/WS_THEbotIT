@@ -373,8 +373,8 @@
   {
     "lemma": "Pontilius 3",
     "previous": "Pontilius 2",
-    "next": "Pontinius",
-    "redirect": true,
+    "next": "Pontinius 3",
+    "redirect": "Pomptinus",
     "chapters": [
       {
         "start": 28,
@@ -383,20 +383,14 @@
     ]
   },
   {
-    "lemma": "Pontinius",
+    "lemma": "Pontinius 3",
     "previous": "Pontilius 3",
     "next": "Pontinos",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 28,
-        "end": 28
-      }
-    ]
+    "redirect": "Pomptinus"
   },
   {
     "lemma": "Pontinos",
-    "previous": "Pontinius",
+    "previous": "Pontinius 3",
     "next": "Pontios 1",
     "chapters": [
       {
@@ -1190,6 +1184,8 @@
     "lemma": "Pontius 62",
     "previous": "Pontius 61",
     "next": "Pontius 63",
+    "redirect": "Paulinus 9",
+    "wp_link": "w:de:Paulinus von Nola",
     "chapters": [
       {
         "start": 45,

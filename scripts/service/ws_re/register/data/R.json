@@ -1354,7 +1354,6 @@
   {
     "lemma": "Bodus 2",
     "previous": "Boconiana officina",
-    "next": "Boiskos 1a",
     "redirect": true,
     "chapters": [
       {
@@ -1364,9 +1363,14 @@
     ]
   },
   {
+    "lemma": "Boiotios",
+    "next": "Boiskos 1a"
+  },
+  {
     "lemma": "Boiskos 1a",
-    "previous": "Bodus 2",
-    "next": "Briva",
+    "previous": "Boiotios",
+    "next": "Boiskos 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 67,
@@ -1376,8 +1380,11 @@
     ]
   },
   {
+    "lemma": "Boiskos 2",
+    "previous": "Boiskos 1a"
+  },
+  {
     "lemma": "Briva",
-    "previous": "Boiskos 1a",
     "next": "Bur(e)bista",
     "redirect": true,
     "chapters": [
@@ -1423,7 +1430,6 @@
   {
     "lemma": "Calaegia",
     "previous": "Caesius 30a",
-    "next": "Cassius 95",
     "chapters": [
       {
         "start": 73,
@@ -1432,9 +1438,13 @@
     ]
   },
   {
+    "lemma": "Cassius 94",
+    "next": "Cassius 95"
+  },
+  {
     "lemma": "Cassius 95",
-    "previous": "Calaegia",
-    "next": "Castus 2a",
+    "previous": "Cassius 94",
+    "next": "Cassutus",
     "redirect": true,
     "chapters": [
       {
@@ -1444,8 +1454,11 @@
     ]
   },
   {
+    "lemma": "Cassutus",
+    "previous": "Cassius 95"
+  },
+  {
     "lemma": "Castus 2a",
-    "previous": "Cassius 95",
     "next": "Castus 2b",
     "redirect": true,
     "chapters": [

@@ -490,9 +490,9 @@
   {
     "lemma": "Καυκώνιον",
     "previous": "Καυκωνία",
-    "next": "Kaulkoi",
+    "next": "Καῦλκοι",
     "sort_key": "Kaukonion",
-    "redirect": true,
+    "redirect": "Kaukasion",
     "chapters": [
       {
         "start": 66,
@@ -501,9 +501,11 @@
     ]
   },
   {
-    "lemma": "Kaulkoi",
+    "lemma": "Καῦλκοι",
     "previous": "Καυκώνιον",
-    "next": "Kaulomyketes",
+    "next": "Καυλομύκητες",
+    "sort_key": "Kaulkoi",
+    "redirect": "Calucones 2",
     "chapters": [
       {
         "start": 66,
@@ -512,8 +514,8 @@
     ]
   },
   {
-    "lemma": "Kaulomyketes",
-    "previous": "Kaulkoi",
+    "lemma": "Καυλομύκητες",
+    "previous": "Καῦλκοι",
     "next": "Kaulonia 1",
     "chapters": [
       {
@@ -525,7 +527,7 @@
   },
   {
     "lemma": "Kaulonia 1",
-    "previous": "Kaulomyketes",
+    "previous": "Καυλομύκητες",
     "next": "Kaunias",
     "chapters": [
       {
@@ -636,6 +638,7 @@
     "lemma": "Kausantha",
     "previous": "Kaus",
     "next": "Kausatha",
+    "redirect": "Kausatha",
     "chapters": [
       {
         "start": 89,
@@ -854,7 +857,7 @@
     "lemma": "Keadas",
     "previous": "Kea",
     "next": "Kebalinos",
-    "redirect": true,
+    "redirect": "Kaiadas, Keadas",
     "chapters": [
       {
         "start": 101,
@@ -1187,6 +1190,7 @@
     "lemma": "Kedrosia",
     "previous": "Kedros",
     "next": "Κεδρύσιες",
+    "redirect": "Gedrosia",
     "chapters": [
       {
         "start": 114,
@@ -1258,7 +1262,7 @@
   {
     "lemma": "Keisos",
     "previous": "Keiris",
-    "next": "Kekaumene",
+    "next": "Κεκαυμένη",
     "chapters": [
       {
         "start": 117,
@@ -1268,9 +1272,11 @@
     ]
   },
   {
-    "lemma": "Kekaumene",
+    "lemma": "Κεκαυμένη",
     "previous": "Keisos",
     "next": "Kekeides",
+    "sort_key": "Kekaumene",
+    "redirect": "Katakekaumene",
     "chapters": [
       {
         "start": 117,
@@ -1280,8 +1286,9 @@
   },
   {
     "lemma": "Kekeides",
-    "previous": "Kekaumene",
+    "previous": "Κεκαυμένη",
     "next": "Kekeis",
+    "redirect": "Kedeides",
     "chapters": [
       {
         "start": 117,
@@ -1367,6 +1374,7 @@
     "lemma": "Kekropia",
     "previous": "Kekropeion",
     "next": "Kekropios 1",
+    "redirect": "Athenai 1a#Seite_S_I_174",
     "chapters": [
       {
         "start": 118,
@@ -9891,6 +9899,7 @@
     "lemma": "Kleitodemos",
     "previous": "Kleito",
     "next": "Kleitomachos 1",
+    "redirect": "Kleidemos 1",
     "chapters": [
       {
         "start": 656,
@@ -10714,7 +10723,7 @@
     "lemma": "Kleodemos 2",
     "previous": "Kleodemos 1",
     "next": "Kleodora 1",
-    "redirect": true,
+    "redirect": "Kleodamos 1",
     "chapters": [
       {
         "start": 675,
@@ -10762,7 +10771,7 @@
     "lemma": "Kleodotos",
     "previous": "Kleodoros",
     "next": "Kleodoxa",
-    "redirect": true,
+    "redirect": "Kleodaios 2",
     "chapters": [
       {
         "start": 675,

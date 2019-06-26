@@ -15,7 +15,7 @@
     "lemma": "Kynetes",
     "previous": "Kynesioi",
     "next": "Kynethos",
-    "redirect": true,
+    "redirect": "Cynetes",
     "chapters": [
       {
         "start": 1,
@@ -127,7 +127,7 @@
   {
     "lemma": "Kynnes",
     "previous": "Kynismus",
-    "next": "Kynodesme",
+    "next": "Κυνοδέσμη",
     "chapters": [
       {
         "start": 24,
@@ -137,10 +137,11 @@
     ]
   },
   {
-    "lemma": "Kynodesme",
+    "lemma": "Κυνοδέσμη",
     "previous": "Kynnes",
     "next": "Kynokephaloi",
-    "redirect": true,
+    "sort_key": "Kynodesme",
+    "redirect": "Infibulatio",
     "chapters": [
       {
         "start": 24,
@@ -150,7 +151,7 @@
   },
   {
     "lemma": "Kynokephaloi",
-    "previous": "Kynodesme",
+    "previous": "Κυνοδέσμη",
     "next": "Κυνόφαλοι",
     "chapters": [
       {
@@ -411,6 +412,7 @@
   {
     "lemma": "Κυνὸς σῆμα 4",
     "previous": "Κυνὸς σῆμα 3",
+    "next": "Kynosura",
     "sort_key": "Kynossema 4"
   },
   {
@@ -506,7 +508,7 @@
     "lemma": "Kynosura 7",
     "previous": "Kynosura 6",
     "next": "Kynthia 1",
-    "redirect": true,
+    "redirect": "Kynthia 6",
     "chapters": [
       {
         "start": 41,
@@ -542,7 +544,7 @@
     "lemma": "Kynthia 3",
     "previous": "Kynthia 2",
     "next": "Kynthios",
-    "redirect": true,
+    "redirect": "Hostia 6",
     "chapters": [
       {
         "start": 41,
@@ -793,7 +795,7 @@
     "lemma": "Kyparissos 3",
     "previous": "Kyparissos 2",
     "next": "Kypasis",
-    "redirect": true,
+    "redirect": "Kyparissia, -iai, Kyparissos 4",
     "chapters": [
       {
         "start": 51,
@@ -841,7 +843,8 @@
     "lemma": "Κυφάνιοι",
     "previous": "Kyperos",
     "next": "Kyphanta",
-    "redirect": true,
+    "sort_key": "Kyphanioi",
+    "redirect": "Κύφος",
     "chapters": [
       {
         "start": 52,
@@ -902,7 +905,7 @@
     "lemma": "Kypria",
     "previous": "Κύφος",
     "next": "Κύπριαι νῆσοι",
-    "redirect": true,
+    "redirect": "Kyklos",
     "chapters": [
       {
         "start": 58,
@@ -1262,8 +1265,8 @@
   {
     "lemma": "Kyrenikos",
     "previous": "Kyrene 4",
-    "next": "Kyretiai",
-    "redirect": true,
+    "next": "Κυρετίαι",
+    "redirect": "Marcius 53",
     "chapters": [
       {
         "start": 169,
@@ -1272,7 +1275,7 @@
     ]
   },
   {
-    "lemma": "Kyretiai",
+    "lemma": "Κυρετίαι",
     "previous": "Kyrenikos",
     "next": "Kyria",
     "sort_key": "Kyretiai",
@@ -1286,7 +1289,7 @@
   },
   {
     "lemma": "Kyria",
-    "previous": "Kyretiai",
+    "previous": "Κυρετίαι",
     "next": "ἡ κυρία",
     "sort_key": "Kyria 1",
     "chapters": [
@@ -1328,7 +1331,7 @@
   },
   {
     "lemma": "Kyriades 1",
-    "previous": "Κυρία ἐκκλησία",
+    "previous": "κυρία ἐκκλησία",
     "next": "Kyriades 2",
     "redirect": true,
     "chapters": [
@@ -1391,7 +1394,7 @@
     "lemma": "Kyrilas",
     "previous": "Κυρικτική",
     "next": "Kyrilla",
-    "redirect": true,
+    "redirect": "Cyrila",
     "chapters": [
       {
         "start": 174,
@@ -1403,7 +1406,7 @@
     "lemma": "Kyrilla",
     "previous": "Kyrilas",
     "next": "Kyrillos 1",
-    "redirect": true,
+    "redirect": "Aurelius 254",
     "chapters": [
       {
         "start": 174,
@@ -1512,6 +1515,7 @@
     "lemma": "Κύρνοι",
     "previous": "Kyrios",
     "next": "Kyrnos 1",
+    "sort_key": "Kyrnoi",
     "redirect": true,
     "chapters": [
       {
@@ -1548,7 +1552,7 @@
     "lemma": "Kyrnos 3",
     "previous": "Kyrnos 2",
     "next": "Kyros 1",
-    "redirect": true,
+    "redirect": "Kyros 2",
     "chapters": [
       {
         "start": 183,
@@ -1612,6 +1616,7 @@
     "lemma": "Kyros 5–6",
     "previous": "Kyros 4",
     "next": "Kyros 7",
+    "sort_key": "Kyros 05",
     "redirect": true,
     "chapters": [
       {
@@ -1637,7 +1642,8 @@
     "lemma": "Kyros 8",
     "previous": "Kyros 7",
     "next": "Kyros 9",
-    "redirect": true,
+    "sort_key": "Kyros 08",
+    "redirect": "Mareades 1",
     "chapters": [
       {
         "start": 188,
@@ -1858,7 +1864,7 @@
     "lemma": "Kyrtone",
     "previous": "Κυρτοβόλοι",
     "next": "Kyrtones",
-    "redirect": true,
+    "redirect": "Kyrtones",
     "chapters": [
       {
         "start": 205,
@@ -1882,7 +1888,8 @@
     "lemma": "Κύρτος 1",
     "previous": "Kyrtones",
     "next": "Κύρτος 2",
-    "redirect": true,
+    "sort_key": "Kyrtos 1",
+    "redirect": "Kyros 2",
     "chapters": [
       {
         "start": 206,
@@ -4607,6 +4614,7 @@
     "lemma": "Lacum Comacenum",
     "previous": "Lacunar",
     "next": "Lacum felicis",
+    "redirect": "Larius Lacus",
     "chapters": [
       {
         "start": 375,
@@ -6799,6 +6807,7 @@
     "lemma": "Lagium",
     "previous": "Lagiska",
     "next": "Lagni",
+    "redirect": "Lagenses",
     "chapters": [
       {
         "start": 457,
@@ -6822,6 +6831,7 @@
     "lemma": "Lagnis",
     "previous": "Lagni",
     "next": "Λάγνωκα",
+    "redirect": "Lanias",
     "chapters": [
       {
         "start": 457,
@@ -6957,6 +6967,7 @@
     "lemma": "Lagos 3",
     "previous": "Lagos 2",
     "next": "Laguantan",
+    "redirect": "Lagbe",
     "chapters": [
       {
         "start": 464,
@@ -7080,6 +7091,8 @@
     "lemma": "Lahn",
     "previous": "Lahe",
     "next": "Lai",
+    "redirect": "Laugona",
+    "wp_link": "w:de:Lahn",
     "chapters": [
       {
         "start": 465,
@@ -7091,6 +7104,7 @@
     "lemma": "Lai",
     "previous": "Lahn",
     "next": "Laia 1",
+    "redirect": "Laevi",
     "chapters": [
       {
         "start": 465,
@@ -7102,6 +7116,7 @@
     "lemma": "Laia 1",
     "previous": "Lai",
     "next": "Laia 2",
+    "redirect": "Iaia",
     "chapters": [
       {
         "start": 465,
@@ -8087,6 +8102,7 @@
     "lemma": "Lala 2",
     "previous": "Lala 1",
     "next": "Lala 3",
+    "redirect": "Iaia",
     "chapters": [
       {
         "start": 535,

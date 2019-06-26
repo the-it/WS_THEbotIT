@@ -1,8 +1,9 @@
 [
   {
     "lemma": "Libanos 1",
+    "previous": "Libanon",
     "next": "Libanos 2",
-    "redirect": true,
+    "redirect": "Weihrauch",
     "chapters": [
       {
         "start": 1,
@@ -62,7 +63,8 @@
     "lemma": "Libatio",
     "previous": "Libarna",
     "next": "Λίβατον",
-    "redirect": true,
+    "redirect": "Trankopfer",
+    "wp_link": "w:de:Trankopfer",
     "chapters": [
       {
         "start": 13,
@@ -124,7 +126,7 @@
     "lemma": "Libeios",
     "previous": "Λίβεια",
     "next": "Libelarius",
-    "redirect": true,
+    "redirect": "Libieios",
     "chapters": [
       {
         "start": 14,
@@ -172,7 +174,7 @@
     "lemma": "Libellaticus",
     "previous": "Libella 2",
     "next": "Libellensis",
-    "redirect": true,
+    "redirect": "Libellus",
     "chapters": [
       {
         "start": 15,
@@ -184,7 +186,7 @@
     "lemma": "Libellensis",
     "previous": "Libellaticus",
     "next": "a libellis",
-    "redirect": true,
+    "redirect": "a libellis",
     "chapters": [
       {
         "start": 15,
@@ -210,7 +212,7 @@
     "lemma": "Libellorum magister",
     "previous": "a libellis",
     "next": "Libellus",
-    "redirect": true,
+    "redirect": "a libellis",
     "chapters": [
       {
         "start": 26,
@@ -234,7 +236,7 @@
     "lemma": "Libenos",
     "previous": "Libellus",
     "next": "Libentina",
-    "redirect": true,
+    "redirect": "Libaios",
     "chapters": [
       {
         "start": 61,
@@ -368,6 +370,7 @@
     "lemma": "Liberalitas 2",
     "previous": "Liberalitas 1",
     "next": "Liberatio",
+    "redirect": "Ebora 3",
     "chapters": [
       {
         "start": 93,
@@ -379,6 +382,7 @@
     "lemma": "Liberatio",
     "previous": "Liberalitas 2",
     "next": "Liberator",
+    "redirect": "Solutio",
     "chapters": [
       {
         "start": 93,
@@ -440,6 +444,7 @@
     "lemma": "Liberorum ius",
     "previous": "Liberius 3",
     "next": "Libertas",
+    "redirect": "Ius liberorum",
     "chapters": [
       {
         "start": 101,
@@ -524,6 +529,7 @@
     "lemma": "Libiada",
     "previous": "Libia",
     "next": "Libias",
+    "redirect": "Libias",
     "chapters": [
       {
         "start": 111,
@@ -571,6 +577,7 @@
     "lemma": "Libieios",
     "previous": "Libici",
     "next": "Libienses",
+    "redirect": "Libaios",
     "chapters": [
       {
         "start": 112,
@@ -594,6 +601,7 @@
     "lemma": "Libikoi",
     "previous": "Libienses",
     "next": "Libino",
+    "redirect": "Lebecii",
     "chapters": [
       {
         "start": 113,
@@ -773,7 +781,7 @@
     "lemma": "Libona",
     "previous": "Libon 2",
     "next": "Libonotos",
-    "redirect": true,
+    "redirect": "Libba",
     "chapters": [
       {
         "start": 116,
@@ -785,7 +793,7 @@
     "lemma": "Libonotos",
     "previous": "Libona",
     "next": "Libophoinix",
-    "redirect": true,
+    "redirect": "Leukonotos",
     "chapters": [
       {
         "start": 116,
@@ -797,7 +805,7 @@
     "lemma": "Libophoinix",
     "previous": "Libonotos",
     "next": "Libora",
-    "redirect": true,
+    "redirect": "Leukonotos",
     "chapters": [
       {
         "start": 116,
@@ -821,7 +829,8 @@
     "lemma": "Libra 1",
     "previous": "Libora",
     "next": "Libra 2",
-    "redirect": true,
+    "redirect": "Wage",
+    "wp_link": "w:de:Waage",
     "chapters": [
       {
         "start": 116,
@@ -908,7 +917,8 @@
     "lemma": "Libri augurales",
     "previous": "Libri Acherontici",
     "next": "Libri Etrusci",
-    "redirect": true,
+    "sort_key": "Libri Augurales",
+    "redirect": "Augures",
     "chapters": [
       {
         "start": 140,
@@ -920,7 +930,8 @@
     "lemma": "Libri Etrusci",
     "previous": "Libri augurales",
     "next": "Libri fatales",
-    "redirect": true,
+    "sort_key": "Libri Etrusci",
+    "redirect": "Etrusca disciplina",
     "chapters": [
       {
         "start": 140,
@@ -932,7 +943,8 @@
     "lemma": "Libri fatales",
     "previous": "Libri Etrusci",
     "next": "Libri fulgurales",
-    "redirect": true,
+    "sort_key": "Libri Fatales",
+    "redirect": "Etrusca disciplina",
     "chapters": [
       {
         "start": 140,
@@ -944,7 +956,8 @@
     "lemma": "Libri fulgurales",
     "previous": "Libri fatales",
     "next": "Libri haruspicini",
-    "redirect": true,
+    "sort_key": "Libri Fulgurales",
+    "redirect": "Etrusca disciplina",
     "chapters": [
       {
         "start": 140,
@@ -956,7 +969,8 @@
     "lemma": "Libri haruspicini",
     "previous": "Libri fulgurales",
     "next": "Libri ostentarii",
-    "redirect": true,
+    "sort_key": "Libri Haruspicini",
+    "redirect": "Haruspices",
     "chapters": [
       {
         "start": 140,
@@ -968,7 +982,8 @@
     "lemma": "Libri ostentarii",
     "previous": "Libri haruspicini",
     "next": "Libri pontificales",
-    "redirect": true,
+    "sort_key": "Libri Ostentarii",
+    "redirect": "Etrusca disciplina",
     "chapters": [
       {
         "start": 140,
@@ -980,7 +995,8 @@
     "lemma": "Libri pontificales",
     "previous": "Libri ostentarii",
     "next": "Libri rituales",
-    "redirect": true,
+    "sort_key": "Libri Pontificales",
+    "redirect": "Pontifex",
     "chapters": [
       {
         "start": 140,
@@ -992,7 +1008,8 @@
     "lemma": "Libri rituales",
     "previous": "Libri pontificales",
     "next": "Libri Sibyllini",
-    "redirect": true,
+    "sort_key": "Libri Rituales",
+    "redirect": "Etrusca disciplina",
     "chapters": [
       {
         "start": 140,
@@ -1004,7 +1021,8 @@
     "lemma": "Libri Sibyllini",
     "previous": "Libri rituales",
     "next": "Libri Tarquitiani",
-    "redirect": true,
+    "sort_key": "Libri Sibyllini",
+    "redirect": "Sibyllinische Orakel",
     "chapters": [
       {
         "start": 140,
@@ -1016,7 +1034,8 @@
     "lemma": "Libri Tarquitiani",
     "previous": "Libri Sibyllini",
     "next": "Libria",
-    "redirect": true,
+    "sort_key": "Libri Tarquitiani",
+    "redirect": "Tarquitius 7",
     "chapters": [
       {
         "start": 140,
@@ -1090,7 +1109,7 @@
     "lemma": "Libui",
     "previous": "Libs",
     "next": "Libum",
-    "redirect": true,
+    "redirect": "Libici",
     "chapters": [
       {
         "start": 143,
@@ -1246,7 +1265,7 @@
     "lemma": "Libyca ostia",
     "previous": "Libyca",
     "next": "Libyci montes",
-    "redirect": true,
+    "redirect": "Rhodanus",
     "chapters": [
       {
         "start": 148,
@@ -1475,6 +1494,7 @@
     "lemma": "Licca",
     "previous": "Licates",
     "next": "Licentius",
+    "redirect": "Λικίας",
     "chapters": [
       {
         "start": 204,
@@ -1642,6 +1662,7 @@
     "lemma": "Licinium atrium",
     "previous": "Licinianus 3",
     "next": "Licinius",
+    "redirect": "Licinia atria",
     "chapters": [
       {
         "start": 214,
@@ -4916,6 +4937,7 @@
     "lemma": "Lilium",
     "previous": "Lilaios",
     "next": "Lillion",
+    "redirect": "Gartenbau",
     "chapters": [
       {
         "start": 542,
@@ -7221,6 +7243,7 @@
     "lemma": "Livias",
     "previous": "Liviana 2",
     "next": "Livicus",
+    "redirect": "Libias",
     "chapters": [
       {
         "start": 807,
@@ -8435,7 +8458,7 @@
     "lemma": "Logarikon",
     "previous": "Logadios",
     "next": "Logbasis",
-    "redirect": true,
+    "redirect": "Longaricum",
     "chapters": [
       {
         "start": 990,
