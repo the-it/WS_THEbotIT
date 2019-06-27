@@ -367,7 +367,12 @@
   },
   {
     "lemma": "Anatomie",
-    "previous": "Anartii"
+    "previous": "Anartii",
+    "next": "Andreas 11"
+  },
+  {
+    "lemma": "Andreas 11",
+    "previous": "Anatomie"
   },
   {
     "lemma": "Anartii",
@@ -804,7 +809,12 @@
   },
   {
     "lemma": "Cornelius 395",
-    "previous": "Cornacates"
+    "previous": "Cornacates",
+    "next": "Cuneus 4"
+  },
+  {
+    "lemma": "Cuneus 4",
+    "previous": "Cornelius 395"
   },
   {
     "lemma": "Claudius 211a",
@@ -821,6 +831,7 @@
   },
   {
     "lemma": "Zeugisa",
+    "previous": null,
     "next": "Cornelius 395"
   },
   {
@@ -837,7 +848,8 @@
   },
   {
     "lemma": "Maes Titianus",
-    "previous": "Cornelius 395"
+    "previous": "Cornelius 395",
+    "next": null
   },
   {
     "lemma": "Cornelius 395",
@@ -1021,7 +1033,12 @@
     ]
   },
   {
+    "lemma": "Eudemos 1",
+    "next": "Euripides 4"
+  },
+  {
     "lemma": "Euripides 4",
+    "previous": "Eudemos 1",
     "next": "Eurylochos 11"
   },
   {
@@ -1878,6 +1895,7 @@
   },
   {
     "lemma": "Proxenos 10a",
+    "previous": null,
     "next": "Psellos"
   },
   {
@@ -1894,7 +1912,8 @@
   },
   {
     "lemma": "Psiax",
-    "previous": "Psellos"
+    "previous": "Psellos",
+    "next": null
   },
   {
     "lemma": "publicani",

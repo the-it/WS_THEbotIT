@@ -16287,7 +16287,7 @@
   },
   {
     "lemma": "Censu manumissio",
-    "previous": "Censorius 6",
+    "previous": "Censuales",
     "next": "Census",
     "redirect": "Manumissio",
     "chapters": [
@@ -16666,7 +16666,7 @@
   {
     "lemma": "Centum Cellae",
     "previous": "Centullius 2",
-    "next": "Centum gradus",
+    "next": "Centum Gradus",
     "wp_link": "w:de:Civitavecchia",
     "chapters": [
       {
@@ -16677,7 +16677,7 @@
     ]
   },
   {
-    "lemma": "Centum gradus",
+    "lemma": "Centum Gradus",
     "previous": "Centum Cellae",
     "next": "Centumpondium",
     "chapters": [
@@ -16690,7 +16690,7 @@
   },
   {
     "lemma": "Centumpondium",
-    "previous": "Centum gradus",
+    "previous": "Centum Gradus",
     "next": "Centum Putea 1",
     "chapters": [
       {
@@ -18703,7 +18703,7 @@
   },
   {
     "lemma": "Cetius",
-    "previous": "Cetium (bzw. Cetius mons",
+    "previous": "Cetium",
     "next": "Cetius mons",
     "chapters": [
       {
@@ -19091,7 +19091,7 @@
   {
     "lemma": "Chabrios",
     "previous": "Chabrias 4",
-    "next": "Χαβρίου 1",
+    "next": "Chabriu 1",
     "chapters": [
       {
         "start": 2021,
@@ -19101,7 +19101,7 @@
     ]
   },
   {
-    "lemma": "Χαβρίου 1",
+    "lemma": "Chabriu 1",
     "previous": "Chabrios",
     "next": "Χαβρίου 2",
     "sort_key": "Chabriu 1",
@@ -19115,7 +19115,7 @@
   },
   {
     "lemma": "Χαβρίου 2",
-    "previous": "Χαβρίου 1",
+    "previous": "Chabriu 1",
     "next": "Chabryes",
     "sort_key": "Chabriu 2",
     "chapters": [
@@ -21516,7 +21516,7 @@
     "lemma": "Chalkus",
     "previous": "Chalkotheke",
     "next": "Challis",
-    "wp_link": "w:de:Chalkus",
+    "wp_link": "w:de:Chalkos",
     "chapters": [
       {
         "start": 2098,
@@ -26132,6 +26132,8 @@
     "lemma": "Χειριδωτὸς χιτών",
     "previous": "Cheimon",
     "next": "Χειρὶ ἐργασάμενος",
+    "sort_key": "Cheiridotos chiton",
+    "wp_link": "w:de:Ärmelchiton",
     "chapters": [
       {
         "start": 2206,
@@ -26281,7 +26283,7 @@
   {
     "lemma": "Cheirokrates",
     "previous": "Cheirogonia",
-    "next": "Χειροκριτἠς",
+    "next": "Χειροκριτής",
     "chapters": [
       {
         "start": 2222,
@@ -26291,7 +26293,7 @@
     ]
   },
   {
-    "lemma": "Χειροκριτἠς",
+    "lemma": "Χειροκριτής",
     "previous": "Cheirokrates",
     "next": "Χειρομάχα",
     "sort_key": "Cheirokrites",
@@ -26305,7 +26307,7 @@
   },
   {
     "lemma": "Χειρομάχα",
-    "previous": "Χειροκριτἠς",
+    "previous": "Χειροκριτής",
     "next": "Χειρόμακτρον",
     "sort_key": "Cheiromacha",
     "chapters": [
@@ -34009,8 +34011,9 @@
   },
   {
     "lemma": "Χυτρίνδα",
-    "previous": "Chytos",
+    "previous": "Chyton, Chytron",
     "next": "Chytrion",
+    "sort_key": "Chytrinda",
     "chapters": [
       {
         "start": 2528,

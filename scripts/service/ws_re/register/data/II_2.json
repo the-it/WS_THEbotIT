@@ -2681,7 +2681,7 @@
     "lemma": "Asandros 4",
     "previous": "Asandros 3",
     "next": "Asanka",
-    "wp_link": "w:de:Asandros (Bosporanischer König)",
+    "wp_link": "w:de:Asandros (bosporanischer König)",
     "chapters": [
       {
         "start": 1516,
@@ -7975,6 +7975,8 @@
     "lemma": "Ἀσπάραγος",
     "previous": "Asparagium",
     "next": "Aspasia 1",
+    "sort_key": "Asparagos",
+    "wp_link": "w:de:Spargel",
     "chapters": [
       {
         "start": 1712,
@@ -8356,6 +8358,7 @@
     "lemma": "Ἀσφόδελος",
     "previous": "Asphodelodeis",
     "next": "Asphodikos",
+    "sort_key": "Asphodelos",
     "chapters": [
       {
         "start": 1730,
@@ -15381,6 +15384,7 @@
     "lemma": "Athenaios 23",
     "previous": "Athenaios 22",
     "next": "Athenaios 24",
+    "wp_link": "w:de:Athenaios (Militärschriftsteller)",
     "chapters": [
       {
         "start": 2033,
@@ -20287,7 +20291,7 @@
   {
     "lemma": "Attikeites",
     "previous": "Attika 1",
-    "next": "Attikiana",
+    "next": "Ἀττικιανά",
     "redirect": "Antikeites",
     "chapters": [
       {
@@ -20297,7 +20301,7 @@
     ]
   },
   {
-    "lemma": "Attikiana",
+    "lemma": "Ἀττικιανά",
     "previous": "Attikeites",
     "next": "Attikianos 1",
     "sort_key": "Attikiana",
@@ -20311,7 +20315,7 @@
   },
   {
     "lemma": "Attikianos 1",
-    "previous": "Attikiana",
+    "previous": "Ἀττικιανά",
     "next": "Attikianos 2",
     "chapters": [
       {
@@ -23700,7 +23704,7 @@
   {
     "lemma": "Auges",
     "previous": "Augenärzte",
-    "next": "Augi....",
+    "next": "Augi...",
     "chapters": [
       {
         "start": 2311,
@@ -23710,7 +23714,7 @@
     ]
   },
   {
-    "lemma": "Augi....",
+    "lemma": "Augi...",
     "previous": "Auges",
     "next": "Augila",
     "chapters": [
@@ -23723,7 +23727,7 @@
   },
   {
     "lemma": "Augila",
-    "previous": "Augi....",
+    "previous": "Augi...",
     "next": "Augilai",
     "wp_link": "w:de:Nasamonen",
     "chapters": [
@@ -25671,7 +25675,7 @@
   {
     "lemma": "Aulai 2",
     "previous": "Aulai 1",
-    "next": "Aulaithinehae",
+    "next": "Aulaitinehae",
     "chapters": [
       {
         "start": 2400,
@@ -25681,20 +25685,14 @@
     ]
   },
   {
-    "lemma": "Aulaithinehae",
+    "lemma": "Aulaitinehae",
     "previous": "Aulai 2",
     "next": "Αὐλαίου τεῖχος",
-    "redirect": "Aviaitinehae",
-    "chapters": [
-      {
-        "start": 2401,
-        "end": 2401
-      }
-    ]
+    "redirect": "Aviaitinehae"
   },
   {
     "lemma": "Αὐλαίου τεῖχος",
-    "previous": "Aulaithinehae",
+    "previous": "Aulaitinehae",
     "next": "Aulariokos",
     "sort_key": "Aulaiu teichos",
     "chapters": [

@@ -522,7 +522,12 @@
   },
   {
     "lemma": "Antibelos",
-    "previous": "Antenor 6"
+    "previous": "Antenor 6",
+    "next": "Antidamas"
+  },
+  {
+    "lemma": "Antidamas",
+    "previous": "Antibelos"
   },
   {
     "lemma": "Androkles 13a",
@@ -1786,7 +1791,13 @@
   },
   {
     "lemma": "Χωματεπιμελητής",
-    "previous": "Chiton 2"
+    "previous": "Chiton 2",
+    "next": "Ch(on?)neia",
+    "sort_key": "Chomatepimeletes"
+  },
+  {
+    "lemma": "Ch(on?)neia",
+    "previous": "Χωματεπιμελητής"
   },
   {
     "lemma": "Chersanippos",
@@ -1880,7 +1891,13 @@
   },
   {
     "lemma": "Χρυσώνης",
-    "previous": "Chrysippos 10a"
+    "previous": "Chrysippos 10a",
+    "next": "Damaratos 3",
+    "sort_key": "Chrysones"
+  },
+  {
+    "lemma": "Damaratos 3",
+    "previous": "Χρυσώνης"
   },
   {
     "lemma": "Chrematistes 2",
@@ -3876,11 +3893,17 @@
     ]
   },
   {
-    "lemma": "Ἱππάρχης",
-    "next": "Ἱππεῖος"
+    "lemma": "Himeraios",
+    "next": "Ἱππάρχης"
   },
   {
-    "lemma": "Ἱππεῖος",
+    "lemma": "Ἱππάρχης",
+    "previous": "Himeraios",
+    "next": "Hippeios",
+    "sort_key": "Hipparches"
+  },
+  {
+    "lemma": "Hippeios",
     "previous": "Ἱππάρχης",
     "next": "Hippias 4",
     "sort_key": "Hippeios",
@@ -3894,7 +3917,7 @@
   },
   {
     "lemma": "Hippias 4",
-    "previous": "Ἱππεῖος"
+    "previous": "Hippeios"
   },
   {
     "lemma": "Hippias 9a",
@@ -4038,7 +4061,10 @@
   },
   {
     "lemma": "Hyäne",
-    "previous": "Ὁρμοφυλακία",
+    "previous": "Ὁρμοφυλακία"
+  },
+  {
+    "lemma": "Hyäne",
     "next": "Hydarnes 1",
     "sort_key": "Hyaene",
     "wp_link": "w:de:Hyänen",
@@ -4142,7 +4168,8 @@
   },
   {
     "lemma": "Hydarnes 1",
-    "previous": "Ὑδροφύλαξ"
+    "previous": "Ὑδροφύλαξ",
+    "next": null
   },
   {
     "lemma": "Hydarnes 3",
@@ -4238,6 +4265,7 @@
   },
   {
     "lemma": "Hyperbolos",
+    "previous": null,
     "next": "Ὑπηρέτης"
   },
   {
