@@ -712,7 +712,12 @@
   },
   {
     "lemma": "Aphobetos",
-    "previous": "Aphneïs"
+    "previous": "Aphneïs",
+    "next": "Aphrikes"
+  },
+  {
+    "lemma": "Aphrikes",
+    "previous": "Aphobetos"
   },
   {
     "lemma": "Aphobetos 2",
@@ -1117,7 +1122,12 @@
   },
   {
     "lemma": "Arsames 7",
-    "previous": "Arsakes 9"
+    "previous": "Arsakes 9",
+    "next": "Arsames 8"
+  },
+  {
+    "lemma": "Arsames 8",
+    "previous": "Arsames 7"
   },
   {
     "lemma": "Arybas 2",
@@ -1241,7 +1251,32 @@
   },
   {
     "lemma": "Assagetes",
-    "previous": "Aspis 17"
+    "previous": "Aspis 17",
+    "next": "Assakenos"
+  },
+  {
+    "lemma": "Assakenos",
+    "previous": "Assagetes",
+    "next": "Astaspes"
+  },
+  {
+    "lemma": "Astaspes",
+    "previous": "Assakenos",
+    "next": "Astes"
+  },
+  {
+    "lemma": "Astes",
+    "previous": "Astaspes",
+    "next": "Astragalomanteia"
+  },
+  {
+    "lemma": "Astragalomanteia",
+    "previous": "Astes",
+    "next": "Astyanax 5"
+  },
+  {
+    "lemma": "Astyanax 5",
+    "previous": "Astragalomanteia"
   },
   {
     "lemma": "Asklepiades 2a) = 14a",
@@ -1380,6 +1415,7 @@
   {
     "lemma": "Attinas 2",
     "previous": "Atizyes",
+    "next": "Attylos",
     "chapters": [
       {
         "start": 57,
@@ -1387,6 +1423,10 @@
         "author": "Berve"
       }
     ]
+  },
+  {
+    "lemma": "Attylos",
+    "previous": "Attinas 2"
   },
   {
     "lemma": "Attinas",
