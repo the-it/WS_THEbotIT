@@ -7196,6 +7196,7 @@
     "lemma": "Ora 2",
     "previous": "Ora 1",
     "next": "Oracla",
+    "wp_link": "w:de:Ora",
     "chapters": [
       {
         "start": 828,
@@ -11239,8 +11240,9 @@
     "sort_key": "Orokasias"
   },
   {
-    "lemma": "Orokasias oros",
-    "next": "Orokendois",
+    "lemma": "Ὀροκασιὰς ὄρος",
+    "previous": null,
+    "next": "Ὀροκένδοις",
     "chapters": [
       {
         "start": 1144,
@@ -11250,9 +11252,10 @@
     ]
   },
   {
-    "lemma": "Orokendois",
-    "previous": "Orokasias oros",
+    "lemma": "Ὀροκένδοις",
+    "previous": "Ὀροκασιὰς ὄρος",
     "next": "Orolaunum",
+    "sort_key": "Orokendois",
     "chapters": [
       {
         "start": 1144,
@@ -11263,7 +11266,7 @@
   },
   {
     "lemma": "Orolaunum",
-    "previous": "Orokendois",
+    "previous": "Ὀροκένδοις",
     "next": "Orolos",
     "chapters": [
       {
@@ -11944,7 +11947,7 @@
   },
   {
     "lemma": "Ora 2",
-    "previous": "Olympia",
+    "previous": "Onomakritos",
     "next": "Orpheus 1",
     "chapters": [
       {
@@ -11957,6 +11960,7 @@
   {
     "lemma": "Orpheus 1",
     "previous": "Ora 2",
+    "next": null,
     "chapters": [
       {
         "start": 1318,

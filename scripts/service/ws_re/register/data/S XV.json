@@ -593,6 +593,7 @@
   },
   {
     "lemma": "Acilius 57",
+    "previous": null,
     "next": "Adelphius a"
   },
   {
@@ -638,7 +639,12 @@
   },
   {
     "lemma": "Aelius 69a",
-    "previous": "Aelius 51a"
+    "previous": "Aelius 51a",
+    "next": "Aelius 140aa"
+  },
+  {
+    "lemma": "Aelius 140aa",
+    "previous": "Aelius 69a"
   },
   {
     "lemma": "Aelius 36a",
@@ -697,7 +703,17 @@
   },
   {
     "lemma": "Aemilius 115a",
-    "previous": "Aemilius 23a"
+    "previous": "Aemilius 23a",
+    "next": "Aemilius 150b"
+  },
+  {
+    "lemma": "Aemilius 150b",
+    "previous": "Aemilius 115a",
+    "next": "Aigina 1"
+  },
+  {
+    "lemma": "Aigina 1",
+    "previous": "Aemilius 150b"
   },
   {
     "lemma": "Aelius 140aa",
@@ -799,7 +815,19 @@
   },
   {
     "lemma": "Andromeda 3",
-    "previous": "Alpes 1"
+    "previous": "Alpes 1",
+    "next": "Annianus 8",
+    "redirect": true
+  },
+  {
+    "lemma": "Annianus 8",
+    "previous": "Andromeda 3",
+    "next": "Annius 51a",
+    "redirect": "Lucretius 15a"
+  },
+  {
+    "lemma": "Annius 51a",
+    "previous": "Annianus 8"
   },
   {
     "lemma": "Alexandros 93b",
@@ -974,6 +1002,20 @@
         "author": "Eck"
       }
     ]
+  },
+  {
+    "lemma": "Apokryphe Apostelakten",
+    "next": "Apronius 8a"
+  },
+  {
+    "lemma": "Apronius 8a",
+    "previous": "Apokryphe Apostelakten",
+    "next": "Apronius 12",
+    "sort_key": "Apronius 08a"
+  },
+  {
+    "lemma": "Apronius 12",
+    "previous": "Apronius 8a"
   },
   {
     "lemma": "Apokryphe Apostelakten",
@@ -1180,7 +1222,12 @@
   },
   {
     "lemma": "Aurelius 192f",
-    "previous": "Aurelius 164a"
+    "previous": "Aurelius 164a",
+    "next": "Aurelius 199a"
+  },
+  {
+    "lemma": "Aurelius 199a",
+    "previous": "Aurelius 192f"
   },
   {
     "lemma": "Aurelius 159a",

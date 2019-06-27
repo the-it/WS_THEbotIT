@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Achaios 8",
-    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -57,12 +56,20 @@
   },
   {
     "lemma": "Alexandrina aqua",
-    "previous": "Aisopos 6",
+    "previous": "Aisopos 6"
+  },
+  {
+    "lemma": "Alexandri(a)na aqua",
     "next": "Alko"
   },
   {
     "lemma": "Alko",
-    "previous": "Alexandrina aqua"
+    "previous": "Alexandri(a)na aqua",
+    "next": "Alsietina aqua"
+  },
+  {
+    "lemma": "Alsietina aqua",
+    "previous": "Alko"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -3845,7 +3852,10 @@
   },
   {
     "lemma": "Apollodoros 23",
-    "previous": "Antonius 30",
+    "previous": "Antonius 30"
+  },
+  {
+    "lemma": "Apollodoros 23",
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
@@ -6053,6 +6063,7 @@
   },
   {
     "lemma": "Serapion 7b",
+    "previous": null,
     "next": "Aleximachos 3"
   },
   {

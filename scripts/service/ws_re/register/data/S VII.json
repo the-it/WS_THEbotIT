@@ -470,12 +470,21 @@
   },
   {
     "lemma": "Chirographum",
-    "previous": "Canaliclarius",
+    "previous": "Canaliclarius"
+  },
+  {
+    "lemma": "χειρόγραφον",
     "next": "Χειροτέχνιον"
   },
   {
     "lemma": "Χειροτέχνιον",
-    "previous": "Chirographum"
+    "previous": "χειρόγραφον",
+    "next": "Chersonesos 5",
+    "sort_key": "Cheirotechnion"
+  },
+  {
+    "lemma": "Chersonesos 5",
+    "previous": "Χειροτέχνιον"
   },
   {
     "lemma": "χειρόγραφον",
@@ -524,8 +533,11 @@
   {
     "lemma": "Chersonesos 5",
     "previous": "Χειροτέχνιον",
-    "next": "χρηματισμός",
     "sort_key": "Cheirotechnion"
+  },
+  {
+    "lemma": "Chersonesos 5",
+    "next": "χρηματισμός"
   },
   {
     "lemma": "χρηματισμός",

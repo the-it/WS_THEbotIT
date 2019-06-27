@@ -1591,10 +1591,10 @@
   {
     "lemma": "Arimnestos 6a",
     "previous": "Ἀρι...",
-    "next": "Ἀριστ..."
+    "next": "Ἀριστ(..."
   },
   {
-    "lemma": "Ἀριστ...",
+    "lemma": "Ἀριστ(...",
     "previous": "Arimnestos 6a",
     "next": "Aristagoras 9a",
     "sort_key": "Arist...",
@@ -1608,7 +1608,7 @@
   },
   {
     "lemma": "Aristagoras 9a",
-    "previous": "Ἀριστ...",
+    "previous": "Ἀριστ(...",
     "next": "Aristarchos 10"
   },
   {
@@ -1918,7 +1918,7 @@
   {
     "lemma": "Athanias 3",
     "previous": "Astydamas 2",
-    "next": "Ἀθη...",
+    "next": "Ἀθη-",
     "chapters": [
       {
         "start": 47,
@@ -1928,9 +1928,9 @@
     ]
   },
   {
-    "lemma": "Ἀθη...",
+    "lemma": "Ἀθη-",
     "previous": "Athanias 3",
-    "next": "Athenai 1A",
+    "next": "Athenai 1b",
     "sort_key": "Athe(...",
     "chapters": [
       {
@@ -1941,13 +1941,15 @@
     ]
   },
   {
-    "lemma": "Athenai 1A",
-    "previous": "Ἀθη...",
-    "next": "Athenaios 28"
+    "lemma": "Athenai 1b",
+    "previous": "Ἀθη-",
+    "next": "Athenaios 28",
+    "wp_link": "w:de:Athen",
+    "ws_link": "s:de:Athen"
   },
   {
     "lemma": "Athenaios 28",
-    "previous": "Athenai 1A",
+    "previous": "Athenai 1b",
     "next": "Athenodoros 9",
     "chapters": [
       {
@@ -2557,10 +2559,12 @@
   },
   {
     "lemma": "Clarus 6a",
-    "previous": "Cillae"
+    "previous": "Cillae",
+    "next": "Claudius 10a"
   },
   {
     "lemma": "Claudius 10a",
+    "previous": "Clarus 6a",
     "next": "Claudius 242a"
   },
   {
@@ -2583,8 +2587,17 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
-    "next": null,
+    "next": "Collegium",
     "redirect": "urbanae cohortes"
+  },
+  {
+    "lemma": "Collegium",
+    "previous": "cohortes urbanae",
+    "next": "Constantiniani"
+  },
+  {
+    "lemma": "Constantiniani",
+    "previous": "Collegium"
   },
   {
     "lemma": "Cillae",
@@ -10134,6 +10147,7 @@
   },
   {
     "lemma": "Ulpius 1",
+    "previous": null,
     "next": "Ulpius 1a"
   },
   {
@@ -10157,7 +10171,8 @@
   },
   {
     "lemma": "Ulpius 3a",
-    "previous": "Ulpius 1a"
+    "previous": "Ulpius 1a",
+    "next": null
   },
   {
     "lemma": "Ummidius 2a",

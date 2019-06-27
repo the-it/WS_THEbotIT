@@ -1714,6 +1714,7 @@
   },
   {
     "lemma": "Aelius 75a",
+    "previous": null,
     "next": "Aelius 89a"
   },
   {
@@ -2119,7 +2120,12 @@
   },
   {
     "lemma": "Antius 11a",
-    "previous": "Antiphellos"
+    "previous": "Antiphellos",
+    "next": "Antius 12a"
+  },
+  {
+    "lemma": "Antius 12a",
+    "previous": "Antius 11a"
   },
   {
     "lemma": "Turranius",
@@ -2243,8 +2249,11 @@
   },
   {
     "lemma": "Aqua, Aquae 97",
-    "next": "Aradius 1a",
     "sort_key": "Aquae 097"
+  },
+  {
+    "lemma": "Aqua, Aquae 97",
+    "next": "Aradius 1a"
   },
   {
     "lemma": "Aradius 1a",
@@ -2411,7 +2420,12 @@
   },
   {
     "lemma": "Articuleius 4",
-    "previous": "Arsada"
+    "previous": "Arsada",
+    "next": "Arykanda"
+  },
+  {
+    "lemma": "Arykanda",
+    "previous": "Articuleius 4"
   },
   {
     "lemma": "Articuleius a",
@@ -3930,7 +3944,12 @@
   },
   {
     "lemma": "Corellius 2",
-    "previous": "Corellius 1a"
+    "previous": "Corellius 1a",
+    "next": "Cornelius 124a"
+  },
+  {
+    "lemma": "Cornelius 124a",
+    "previous": "Corellius 2"
   },
   {
     "lemma": "Comius 2",
