@@ -135,21 +135,17 @@
   },
   {
     "lemma": "Alisca",
-    "previous": "Aliphera"
+    "previous": "Aliphera",
+    "next": "Alta ripa 1"
   },
   {
-    "lemma": "Ankyron polis",
-    "chapters": [
-      {
-        "start": 8,
-        "end": 8,
-        "author": "Helck"
-      }
-    ]
+    "lemma": "Alta ripa 1",
+    "previous": "Alisca",
+    "next": "Altinum 1"
   },
   {
     "lemma": "Altinum 1",
-    "previous": null,
+    "previous": "Alta ripa 1",
     "next": "Anicius 47"
   },
   {
@@ -239,7 +235,17 @@
   },
   {
     "lemma": "Arranius 1",
-    "previous": "Argyra 1"
+    "previous": "Argyra 1",
+    "next": "Arranius 2"
+  },
+  {
+    "lemma": "Arranius 2",
+    "previous": "Arranius 1",
+    "next": "Arrotrebarum promunturium"
+  },
+  {
+    "lemma": "Arrotrebarum promunturium",
+    "previous": "Arranius 2"
   },
   {
     "lemma": "Antonius 95a",
@@ -362,6 +368,19 @@
   {
     "lemma": "Asprius",
     "previous": "Asprenas 1a"
+  },
+  {
+    "lemma": "Asprenas",
+    "next": "Asprius"
+  },
+  {
+    "lemma": "Asprius",
+    "previous": "Asprenas",
+    "next": "Asterope 6"
+  },
+  {
+    "lemma": "Asterope 6",
+    "previous": "Asprius"
   },
   {
     "lemma": "Asprenas",
@@ -4592,6 +4611,7 @@
   },
   {
     "lemma": "Uranius 29",
+    "previous": null,
     "next": "Urbinius 2"
   },
   {

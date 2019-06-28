@@ -391,7 +391,15 @@
   },
   {
     "lemma": "Acilius 52",
-    "previous": "Acilius 42",
+    "previous": "Acilius 42"
+  },
+  {
+    "lemma": "Achaios 6",
+    "next": "Acilius 52"
+  },
+  {
+    "lemma": "Acilius 52",
+    "previous": "Achaios 6",
     "next": "Ad Malum"
   },
   {
@@ -767,6 +775,19 @@
     "previous": "Amelas"
   },
   {
+    "lemma": "Amelas",
+    "next": "Anaximandros 1"
+  },
+  {
+    "lemma": "Anaximandros 1",
+    "previous": "Amelas",
+    "next": "Anaximenes 2"
+  },
+  {
+    "lemma": "Anaximenes 2",
+    "previous": "Anaximandros 1"
+  },
+  {
     "lemma": "Anaximenes 1",
     "next": "Andania 1"
   },
@@ -977,7 +998,12 @@
     ]
   },
   {
+    "lemma": "Antonius 80",
+    "next": "Antonius 107"
+  },
+  {
     "lemma": "Antonius 107",
+    "previous": "Antonius 80",
     "next": "Apicatus"
   },
   {
@@ -1242,7 +1268,12 @@
   },
   {
     "lemma": "Aufidius 41",
-    "previous": "Attaleia 3"
+    "previous": "Attaleia 3",
+    "next": "Avidius 6"
+  },
+  {
+    "lemma": "Avidius 6",
+    "previous": "Aufidius 41"
   },
   {
     "lemma": "Avidius 7",
@@ -1291,10 +1322,16 @@
   {
     "lemma": "Baebius 28",
     "previous": "Aurelius 141b",
-    "next": null
+    "next": "Baebius 28a"
+  },
+  {
+    "lemma": "Baebius 28a",
+    "previous": "Baebius 28",
+    "next": "Baebius 32"
   },
   {
     "lemma": "Baebius 32",
+    "previous": "Baebius 28a",
     "next": "Baebius 47"
   },
   {
@@ -3035,7 +3072,12 @@
     ]
   },
   {
+    "lemma": "Iunius 75a",
+    "next": "Iunius 78"
+  },
+  {
     "lemma": "Iunius 78",
+    "previous": "Iunius 75a",
     "next": "Iunius 114a"
   },
   {
@@ -3946,7 +3988,12 @@
   },
   {
     "lemma": "Anaximandros 1",
-    "previous": "Amithoscatta"
+    "previous": "Amithoscatta",
+    "next": "Arborius 5"
+  },
+  {
+    "lemma": "Arborius 5",
+    "previous": "Anaximandros 1"
   },
   {
     "lemma": "Amelas"

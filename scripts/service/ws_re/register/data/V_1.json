@@ -8090,6 +8090,7 @@
     "lemma": "Dignitas",
     "previous": "Dignilla",
     "next": "Diia",
+    "redirect": "Cominius 26",
     "chapters": [
       {
         "start": 545,
@@ -8113,6 +8114,7 @@
     "lemma": "Diilyke",
     "previous": "Diia",
     "next": "Diipolia",
+    "redirect": "Deïlyke",
     "chapters": [
       {
         "start": 545,
@@ -8123,7 +8125,8 @@
   {
     "lemma": "Diipolia",
     "previous": "Diilyke",
-    "next": "Diippon",
+    "next": "Δίιππον",
+    "redirect": "Dipolia",
     "chapters": [
       {
         "start": 545,
@@ -8132,9 +8135,11 @@
     ]
   },
   {
-    "lemma": "Diippon",
+    "lemma": "Δίιππον",
     "previous": "Diipolia",
     "next": "Diitrephes 1",
+    "sort_key": "Diippon",
+    "redirect": "Biga",
     "chapters": [
       {
         "start": 545,
@@ -8144,7 +8149,7 @@
   },
   {
     "lemma": "Diitrephes 1",
-    "previous": "Diippon",
+    "previous": "Δίιππον",
     "next": "Diitrephes 2",
     "chapters": [
       {
@@ -8206,6 +8211,7 @@
     "lemma": "Δίκαι ἀπὸ συμβόλων",
     "previous": "Dikaia 2",
     "next": "Dikaiarcheia",
+    "sort_key": "Dikai apo symbolon",
     "chapters": [
       {
         "start": 545,
