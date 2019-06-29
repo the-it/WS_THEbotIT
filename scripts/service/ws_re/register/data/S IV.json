@@ -1449,7 +1449,12 @@
   },
   {
     "lemma": "Autodikos",
-    "previous": "Austanes"
+    "previous": "Austanes",
+    "next": "Autokles 4"
+  },
+  {
+    "lemma": "Autokles 4",
+    "previous": "Autodikos"
   },
   {
     "lemma": "Attinas",
@@ -1643,7 +1648,27 @@
   },
   {
     "lemma": "Biton 2a",
-    "previous": "Bion 3a"
+    "previous": "Bion 3a",
+    "next": "Bolon 2"
+  },
+  {
+    "lemma": "Bolon 2",
+    "previous": "Biton 2a",
+    "next": "Boubakes"
+  },
+  {
+    "lemma": "Boubakes",
+    "previous": "Bolon 2",
+    "next": "Boupares"
+  },
+  {
+    "lemma": "Boupares",
+    "previous": "Boubakes",
+    "next": "Bulagoras 2"
+  },
+  {
+    "lemma": "Bulagoras 2",
+    "previous": "Boupares"
   },
   {
     "lemma": "Berufsvereine",
@@ -1837,7 +1862,12 @@
   },
   {
     "lemma": "Ch(on?)neia",
-    "previous": "Χωματεπιμελητής"
+    "previous": "Χωματεπιμελητής",
+    "next": "Choregis"
+  },
+  {
+    "lemma": "Choregis",
+    "previous": "Ch(on?)neia"
   },
   {
     "lemma": "Chersanippos",
@@ -7226,7 +7256,12 @@
   {
     "lemma": "Kyros 6a",
     "previous": "Kyros 6",
+    "next": "Λαβασσάρασκος",
     "wp_link": "w:de:Kyros der Jüngere"
+  },
+  {
+    "lemma": "Λαβασσάρασκος",
+    "previous": "Kyros 6a"
   },
   {
     "lemma": "Kyros 7",

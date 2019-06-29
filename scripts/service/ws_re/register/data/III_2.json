@@ -1997,7 +1997,7 @@
   {
     "lemma": "Cantabrum 2",
     "previous": "Cantabrum 1",
-    "next": "Cantai Niscai(?)",
+    "next": "Cantai Niscai",
     "chapters": [
       {
         "start": 1495,
@@ -2007,7 +2007,7 @@
     ]
   },
   {
-    "lemma": "Cantai Niscai(?)",
+    "lemma": "Cantai Niscai",
     "previous": "Cantabrum 2",
     "next": "Cantauriani",
     "chapters": [
@@ -2020,7 +2020,7 @@
   },
   {
     "lemma": "Cantauriani",
-    "previous": "Cantai Niscai(?)",
+    "previous": "Cantai Niscai",
     "next": "Canthace",
     "chapters": [
       {
@@ -11917,7 +11917,7 @@
   },
   {
     "lemma": "Catio",
-    "previous": "Catinus 2",
+    "previous": "Catinus 3",
     "next": "Catispi",
     "redirect": "Cuccium",
     "chapters": [
@@ -17065,7 +17065,7 @@
   },
   {
     "lemma": "Cerasus",
-    "previous": "Ceraine",
+    "previous": "Ceras",
     "next": "Ceratae",
     "redirect": "Kirschbaum",
     "chapters": [
@@ -17248,7 +17248,7 @@
     "lemma": "Cerealis",
     "previous": "Cereae",
     "next": "Cerealius",
-    "redirect": "Cerialis",
+    "redirect": true,
     "chapters": [
       {
         "start": 1969,
@@ -18686,7 +18686,7 @@
   {
     "lemma": "Cetis",
     "previous": "Cethegus 5",
-    "next": "Cetium (bzw. Cetius mons",
+    "next": "Cetium",
     "chapters": [
       {
         "start": 2013,
@@ -19091,7 +19091,7 @@
   {
     "lemma": "Chabrios",
     "previous": "Chabrias 4",
-    "next": "Chabriu 1",
+    "next": "Χαβρίου 1",
     "chapters": [
       {
         "start": 2021,
@@ -19101,7 +19101,7 @@
     ]
   },
   {
-    "lemma": "Chabriu 1",
+    "lemma": "Χαβρίου 1",
     "previous": "Chabrios",
     "next": "Χαβρίου 2",
     "sort_key": "Chabriu 1",
@@ -19115,7 +19115,7 @@
   },
   {
     "lemma": "Χαβρίου 2",
-    "previous": "Chabriu 1",
+    "previous": "Χαβρίου 1",
     "next": "Chabryes",
     "sort_key": "Chabriu 2",
     "chapters": [
@@ -21762,7 +21762,7 @@
   {
     "lemma": "Χαμαίμηλον",
     "previous": "Chamaileon 2",
-    "next": "Chamaipitys",
+    "next": "Χαμαίπιτυς",
     "sort_key": "Chamaimelon",
     "wp_link": "w:de:Echte Kamille",
     "chapters": [
@@ -21774,7 +21774,7 @@
     ]
   },
   {
-    "lemma": "Chamaipitys",
+    "lemma": "Χαμαίπιτυς",
     "previous": "Χαμαίμηλον",
     "next": "Chamaizelos 1",
     "sort_key": "Chamaipitys",
@@ -21789,7 +21789,7 @@
   },
   {
     "lemma": "Chamaizelos 1",
-    "previous": "Chamaipitys",
+    "previous": "Χαμαίπιτυς",
     "next": "Chamaizelos 2",
     "chapters": [
       {
@@ -21973,7 +21973,7 @@
   {
     "lemma": "Chania",
     "previous": "Chanes",
-    "next": "Χάννη",
+    "next": "Channe",
     "chapters": [
       {
         "start": 2110,
@@ -21983,7 +21983,7 @@
     ]
   },
   {
-    "lemma": "Χάννη",
+    "lemma": "Channe",
     "previous": "Chania",
     "next": "Channinefates",
     "sort_key": "Channe",
@@ -21997,7 +21997,7 @@
   },
   {
     "lemma": "Channinefates",
-    "previous": "Χάννη",
+    "previous": "Channe",
     "next": "Channinus",
     "redirect": "Cannenefates",
     "chapters": [
@@ -30132,10 +30132,10 @@
   {
     "lemma": "Choos",
     "previous": "Choopotes",
-    "next": "Χόρ"
+    "next": "Χόρ 1"
   },
   {
-    "lemma": "Χόρ",
+    "lemma": "Χόρ 1",
     "previous": "Choos",
     "next": "Chor",
     "sort_key": "Chor 1",
@@ -30150,7 +30150,7 @@
   },
   {
     "lemma": "Chor",
-    "previous": "Χόρ",
+    "previous": "Χόρ 1",
     "next": "Chora",
     "sort_key": "Chor 2",
     "wp_link": "w:de:Chor (Theater)",
@@ -33434,7 +33434,8 @@
   {
     "lemma": "Xρυσοῦν ὄρος",
     "previous": "Chrysothemis 6",
-    "next": "Chrysun stoma",
+    "next": "Xρυσοῦν στόμα",
+    "sort_key": "Chrysun oros",
     "chapters": [
       {
         "start": 2521,
@@ -34011,7 +34012,7 @@
   },
   {
     "lemma": "Χυτρίνδα",
-    "previous": "Chyton, Chytron",
+    "previous": "Chytos",
     "next": "Chytrion",
     "sort_key": "Chytrinda",
     "chapters": [
@@ -36014,7 +36015,7 @@
   },
   {
     "lemma": "Cissa 1",
-    "previous": "Cispius 6",
+    "previous": "Cispius mons",
     "next": "Cissa 2",
     "redirect": "Gissa",
     "chapters": [

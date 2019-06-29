@@ -1445,7 +1445,7 @@
   {
     "lemma": "Kekryphalos",
     "previous": "Kekryphaleia",
-    "next": "Kekypos(i)os",
+    "next": "Kekyposios",
     "chapters": [
       {
         "start": 126,
@@ -1455,7 +1455,7 @@
     ]
   },
   {
-    "lemma": "Kekypos(i)os",
+    "lemma": "Kekyposios",
     "previous": "Kekryphalos",
     "next": "Kela",
     "chapters": [
@@ -1468,7 +1468,7 @@
   },
   {
     "lemma": "Kela",
-    "previous": "Kekypos(i)os",
+    "previous": "Kekyposios",
     "next": "Keladeine",
     "chapters": [
       {
@@ -15157,7 +15157,6 @@
   {
     "lemma": "Konche",
     "previous": "Kösching",
-    "next": "Kognabanda",
     "chapters": [
       {
         "start": 1034,
@@ -15167,8 +15166,13 @@
     ]
   },
   {
+    "lemma": "Κόγχη 1",
+    "next": "Kognabanda",
+    "sort_key": "Konche 1"
+  },
+  {
     "lemma": "Kognabanda",
-    "previous": "Konche",
+    "previous": "Κόγχη 1",
     "next": "Kognandaua",
     "chapters": [
       {

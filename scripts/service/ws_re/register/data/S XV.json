@@ -1156,7 +1156,15 @@
   },
   {
     "lemma": "Aurelius 54a",
-    "previous": "Aurelius 37c",
+    "previous": "Aurelius 37c"
+  },
+  {
+    "lemma": "Aurelius 27",
+    "next": "Aurelius 54a"
+  },
+  {
+    "lemma": "Aurelius 54a",
+    "previous": "Aurelius 27",
     "next": "Aurelius 54b",
     "sort_key": "Aurelius 054a",
     "chapters": [
@@ -1226,7 +1234,17 @@
   },
   {
     "lemma": "Aurelius 199a",
-    "previous": "Aurelius 192f"
+    "previous": "Aurelius 192f",
+    "next": "Aurelius 205a"
+  },
+  {
+    "lemma": "Aurelius 205a",
+    "previous": "Aurelius 199a",
+    "next": "Aurelius 225a"
+  },
+  {
+    "lemma": "Aurelius 225a",
+    "previous": "Aurelius 205a"
   },
   {
     "lemma": "Aurelius 159a",
@@ -1767,11 +1785,15 @@
   },
   {
     "lemma": "Corellius 1b",
-    "previous": "Constantinus 8a"
+    "previous": "Constantinus 8a",
+    "next": "Cornelianus 3a"
+  },
+  {
+    "lemma": "Cornelianus 3a",
+    "previous": "Corellius 1b"
   },
   {
     "lemma": "Claudius 353",
-    "previous": null,
     "next": "Claudius 380a"
   },
   {

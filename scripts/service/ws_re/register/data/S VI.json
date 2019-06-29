@@ -126,7 +126,12 @@
   {
     "lemma": "Aemilius 54b",
     "previous": "Aemilius 43",
+    "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
+  },
+  {
+    "lemma": "Aemilius 79",
+    "previous": "Aemilius 54b"
   },
   {
     "lemma": "Aemilius 43",
@@ -1140,7 +1145,12 @@
   },
   {
     "lemma": "Cincius 9",
-    "previous": "Chelidonioi"
+    "previous": "Chelidonioi",
+    "next": "Claudius 71"
+  },
+  {
+    "lemma": "Claudius 71",
+    "previous": "Cincius 9"
   },
   {
     "lemma": "Claudius 186",
@@ -1149,12 +1159,21 @@
   {
     "lemma": "Claudius 187",
     "previous": "Claudius 186",
-    "next": "Claudius 188",
     "sort_key": "Claudius"
   },
   {
+    "lemma": "Claudius 187",
+    "next": "Claudius 188"
+  },
+  {
     "lemma": "Claudius 188",
-    "previous": "Claudius 187"
+    "previous": "Claudius 187",
+    "next": "Claudius 194",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 194",
+    "previous": "Claudius 188"
   },
   {
     "lemma": "Claudius 194",
@@ -1240,7 +1259,12 @@
   },
   {
     "lemma": "Cornelius 145",
-    "previous": "Comberania"
+    "previous": "Comberania",
+    "next": "Cornelius 236"
+  },
+  {
+    "lemma": "Cornelius 236",
+    "previous": "Cornelius 145"
   },
   {
     "lemma": "Claudius 187. 188. 194",
@@ -4232,6 +4256,7 @@
   },
   {
     "lemma": "Telamon 4",
+    "previous": null,
     "next": "Telephanes 5"
   },
   {
@@ -4271,6 +4296,7 @@
   },
   {
     "lemma": "Teos",
+    "previous": null,
     "next": "Terentius 84"
   },
   {

@@ -785,7 +785,12 @@
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1"
+    "previous": "Anaximandros 1",
+    "next": "Andania 1"
+  },
+  {
+    "lemma": "Andania 1",
+    "previous": "Anaximenes 2"
   },
   {
     "lemma": "Anaximenes 1",
@@ -1273,11 +1278,14 @@
   },
   {
     "lemma": "Avidius 6",
-    "previous": "Aufidius 41"
+    "previous": "Aufidius 41",
+    "next": "Avidius 7"
   },
   {
     "lemma": "Avidius 7",
-    "next": "Aulis 1"
+    "previous": "Avidius 6",
+    "next": "Aulis 1",
+    "sort_key": "Avidius 07"
   },
   {
     "lemma": "Aulis 1",
@@ -1418,7 +1426,12 @@
   },
   {
     "lemma": "Bassilla",
-    "previous": "Bassa 2"
+    "previous": "Bassa 2",
+    "next": "Bellicius 1"
+  },
+  {
+    "lemma": "Bellicius 1",
+    "previous": "Bassilla"
   },
   {
     "lemma": "Bappo 2",
@@ -1769,7 +1782,12 @@
   },
   {
     "lemma": "Cestius 6a",
-    "previous": "Celeia"
+    "previous": "Celeia",
+    "next": "Chalai"
+  },
+  {
+    "lemma": "Chalai",
+    "previous": "Cestius 6a"
   },
   {
     "lemma": "Egrilius 2a",
@@ -4201,7 +4219,12 @@
     "previous": "Carnuntum"
   },
   {
+    "lemma": "Carnuntum",
+    "next": "Chilperich"
+  },
+  {
     "lemma": "Chilperich",
+    "previous": "Carnuntum",
     "next": "Ephesos",
     "chapters": [
       {
@@ -4213,7 +4236,8 @@
   },
   {
     "lemma": "Ephesos",
-    "previous": "Chilperich"
+    "previous": "Chilperich",
+    "next": null
   },
   {
     "lemma": "Inobindus",
