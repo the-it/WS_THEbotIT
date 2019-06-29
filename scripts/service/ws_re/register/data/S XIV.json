@@ -2934,6 +2934,12 @@
     "lemma": "Bruttidius",
     "previous": "Bononius 2",
     "next": "Bruttius 4a",
+    "sort_key": "Bruttius 04a"
+  },
+  {
+    "lemma": "Bruttius 4a",
+    "previous": "Bruttidius",
+    "next": null,
     "sort_key": "Bruttius 04a",
     "chapters": [
       {
@@ -2942,6 +2948,10 @@
         "author": "Eck"
       }
     ]
+  },
+  {
+    "lemma": "Bruttidius",
+    "next": "Bruttius 4a"
   },
   {
     "lemma": "Bruttius 4a",
@@ -3784,7 +3794,12 @@
   },
   {
     "lemma": "Cluvius 10c",
-    "previous": "Cluvius 10b"
+    "previous": "Cluvius 10b",
+    "next": "Coelius 19"
+  },
+  {
+    "lemma": "Coelius 19",
+    "previous": "Cluvius 10c"
   },
   {
     "lemma": "Claudius 414a",
@@ -6030,7 +6045,8 @@
   },
   {
     "lemma": "Pneumatologie",
-    "previous": "Pneuma"
+    "previous": "Pneuma",
+    "next": null
   },
   {
     "lemma": "Plancius 7",
@@ -8067,6 +8083,7 @@
   },
   {
     "lemma": "Thukydides 1",
+    "previous": null,
     "next": "Tiara"
   },
   {

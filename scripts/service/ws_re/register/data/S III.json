@@ -5324,7 +5324,12 @@
   },
   {
     "lemma": "Argentius",
-    "previous": "Argentiolum"
+    "previous": "Argentiolum",
+    "next": "Argentoialum"
+  },
+  {
+    "lemma": "Argentoialum",
+    "previous": "Argentius"
   },
   {
     "lemma": "Aristarchos 6a",
@@ -7651,7 +7656,13 @@
     "previous": "Axima 2"
   },
   {
+    "lemma": "Axima 2",
+    "next": "Axius 8b"
+  },
+  {
     "lemma": "Axius 8b",
+    "previous": "Axima 2",
+    "next": "Azizos 1",
     "chapters": [
       {
         "start": 192,
@@ -7659,6 +7670,10 @@
         "author": "Kroll"
       }
     ]
+  },
+  {
+    "lemma": "Azizos 1",
+    "previous": "Axius 8b"
   },
   {
     "lemma": "Axius 8a",
@@ -7922,7 +7937,6 @@
   {
     "lemma": "Balbinus 5",
     "previous": "Bakchylides 2",
-    "next": "Balbus 5",
     "chapters": [
       {
         "start": 195,
@@ -7932,8 +7946,22 @@
     ]
   },
   {
+    "lemma": "Balbinus 4",
+    "next": "Balbus 5"
+  },
+  {
     "lemma": "Balbus 5",
-    "previous": "Balbinus 5"
+    "previous": "Balbinus 4",
+    "next": "Banassac"
+  },
+  {
+    "lemma": "Banassac",
+    "previous": "Balbus 5",
+    "next": "Banaurides"
+  },
+  {
+    "lemma": "Banaurides",
+    "previous": "Banassac"
   },
   {
     "lemma": "Balbinus 4",
@@ -8098,7 +8126,6 @@
   {
     "lemma": "Βασιλικόν (τὸ)",
     "previous": "Basilia",
-    "next": "Bassus 36a",
     "sort_key": "Basilikon",
     "chapters": [
       {
@@ -8109,8 +8136,17 @@
     ]
   },
   {
+    "lemma": "Βασιλικόν (τὸ)",
+    "next": "Bassus 36a"
+  },
+  {
     "lemma": "Bassus 36a",
-    "previous": "Βασιλικόν (τὸ)"
+    "previous": "Βασιλικόν (τὸ)",
+    "next": "Bassus 36b"
+  },
+  {
+    "lemma": "Bassus 36b",
+    "previous": "Bassus 36a"
   },
   {
     "lemma": "Βασιλικόν (τὸ)",
@@ -8854,6 +8890,7 @@
   {
     "lemma": "Boa 2",
     "previous": "Blondelia",
+    "next": null,
     "chapters": [
       {
         "start": 209,
@@ -10256,7 +10293,12 @@
   },
   {
     "lemma": "Caninius a",
-    "previous": "Caninianae figlinae"
+    "previous": "Caninianae figlinae",
+    "next": "Caninius 4"
+  },
+  {
+    "lemma": "Caninius 4",
+    "previous": "Caninius a"
   },
   {
     "lemma": "Camloriga",
@@ -10344,6 +10386,7 @@
   {
     "lemma": "Cantaber",
     "previous": "Canrucatus",
+    "next": "ad Cantunas novas",
     "chapters": [
       {
         "start": 233,
@@ -10351,6 +10394,10 @@
         "author": "Hähnle"
       }
     ]
+  },
+  {
+    "lemma": "ad Cantunas novas",
+    "previous": "Cantaber"
   },
   {
     "lemma": "Canrucatus",
@@ -10627,7 +10674,8 @@
   },
   {
     "lemma": "Cassius 70",
-    "previous": "Cassius 65"
+    "previous": "Cassius 65",
+    "next": null
   },
   {
     "lemma": "Caruces",
@@ -11007,7 +11055,7 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
-    "next": null,
+    "next": "Ceraria (Caeraria, Geraria) figlina",
     "chapters": [
       {
         "start": 241,
@@ -11015,6 +11063,10 @@
         "author": "Hähnle"
       }
     ]
+  },
+  {
+    "lemma": "Ceraria (Caeraria, Geraria) figlina",
+    "previous": "Cepariae figlinae"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -11633,13 +11685,25 @@
   },
   {
     "lemma": "Claudius",
-    "previous": "Claudiana tegula",
-    "next": "Claudius 20a",
+    "previous": "Claudiana tegula"
+  },
+  {
+    "lemma": "Claudius",
     "sort_key": "Claudius 000"
   },
   {
+    "lemma": "Claudius",
+    "next": "Claudius 20a"
+  },
+  {
     "lemma": "Claudius 20a",
-    "previous": "Claudius"
+    "previous": "Claudius",
+    "next": "Claudius 30",
+    "sort_key": "Claudius 020a"
+  },
+  {
+    "lemma": "Claudius 30",
+    "previous": "Claudius 20a"
   },
   {
     "lemma": "Claudius",
@@ -11739,6 +11803,24 @@
   },
   {
     "lemma": "Clodius 5a",
+    "sort_key": "Clodius 05"
+  },
+  {
+    "lemma": "Clodius 5a",
+    "next": "Clodius 47"
+  },
+  {
+    "lemma": "Clodius 47",
+    "previous": "Clodius 5a",
+    "next": "Clodius 55a",
+    "sort_key": "Clodius 05"
+  },
+  {
+    "lemma": "Clodius 55a",
+    "previous": "Clodius 47"
+  },
+  {
+    "lemma": "Clodius 5a",
     "sort_key": "Clodius 05",
     "chapters": [
       {
@@ -11755,12 +11837,20 @@
   {
     "lemma": "Clodius 47",
     "previous": "Clodius 5a",
-    "next": "Clodius 55a",
     "sort_key": "Clodius 05"
   },
   {
+    "lemma": "Clodius 47",
+    "next": "Clodius 55a"
+  },
+  {
     "lemma": "Clodius 55a",
-    "previous": "Clodius 47"
+    "previous": "Clodius 47",
+    "next": "Clonius a"
+  },
+  {
+    "lemma": "Clonius a",
+    "previous": "Clodius 55a"
   },
   {
     "lemma": "Claudius 225",
@@ -12091,6 +12181,19 @@
   {
     "lemma": "Coocus",
     "previous": "Contrebia 1",
+    "next": "Corcoras"
+  },
+  {
+    "lemma": "Corcoras",
+    "previous": "Coocus"
+  },
+  {
+    "lemma": "Contrebia 1",
+    "next": "Coocus"
+  },
+  {
+    "lemma": "Coocus",
+    "previous": "Contrebia 1",
     "next": "Corcoras",
     "chapters": [
       {
@@ -12168,11 +12271,27 @@
   },
   {
     "lemma": "Cornelius 141",
-    "previous": "Cornelius 105"
+    "previous": "Cornelius 105",
+    "next": "Cornelius 177"
+  },
+  {
+    "lemma": "Cornelius 177",
+    "previous": "Cornelius 141",
+    "next": "Cornelius 186"
+  },
+  {
+    "lemma": "Cornelius 186",
+    "previous": "Cornelius 177",
+    "next": "Cornelius 193"
+  },
+  {
+    "lemma": "Cornelius 193",
+    "previous": "Cornelius 186",
+    "next": "Cornelius 202"
   },
   {
     "lemma": "Cornelius 202",
-    "previous": null,
+    "previous": "Cornelius 193",
     "next": "Cornelius 202a"
   },
   {
@@ -12204,7 +12323,12 @@
   },
   {
     "lemma": "Cornelius 219",
-    "previous": "Cornelius 209"
+    "previous": "Cornelius 209",
+    "next": "Cornelius 317ff."
+  },
+  {
+    "lemma": "Cornelius 317ff.",
+    "previous": "Cornelius 219"
   },
   {
     "lemma": "Cornelius 208",
@@ -17577,6 +17701,7 @@
   },
   {
     "lemma": "Gaudiacus",
+    "previous": null,
     "next": "Gaudiosus 3"
   },
   {
@@ -17629,7 +17754,17 @@
   },
   {
     "lemma": "Gaulos a",
-    "previous": "Gavius 13a"
+    "previous": "Gavius 13a",
+    "next": "Gauros 2"
+  },
+  {
+    "lemma": "Gauros 2",
+    "previous": "Gaulos a",
+    "next": "Gaza 4"
+  },
+  {
+    "lemma": "Gaza 4",
+    "previous": "Gauros 2"
   },
   {
     "lemma": "Gavius 8a",
@@ -17770,10 +17905,12 @@
   },
   {
     "lemma": "Gemenus",
-    "previous": "Gemellus 10"
+    "previous": "Gemellus 10",
+    "next": "Geminius 3"
   },
   {
     "lemma": "Geminius 3",
+    "previous": "Gemenus",
     "next": "Geminius 20a"
   },
   {
@@ -20671,6 +20808,7 @@
   },
   {
     "lemma": "Intaranum",
+    "previous": null,
     "next": "Ad Ioglandem"
   },
   {
@@ -20692,7 +20830,8 @@
   },
   {
     "lemma": "Jonquières",
-    "previous": "Iolaos 6"
+    "previous": "Iolaos 6",
+    "next": null
   },
   {
     "lemma": "Ad Ioglandum",

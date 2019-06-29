@@ -4547,7 +4547,12 @@
     "previous": "Alexandros 35"
   },
   {
+    "lemma": "Alexandros 35",
+    "next": "Alexandros 65"
+  },
+  {
     "lemma": "Alexandros 65",
+    "previous": "Alexandros 35",
     "next": "Alexandros 65a"
   },
   {
@@ -15916,7 +15921,12 @@
   },
   {
     "lemma": "Belistiche",
-    "previous": "Belisaria porta"
+    "previous": "Belisaria porta",
+    "next": "Bella"
+  },
+  {
+    "lemma": "Bella",
+    "previous": "Belistiche"
   },
   {
     "lemma": "Belatullus 1",
@@ -16519,10 +16529,12 @@
   },
   {
     "lemma": "Boarius campus",
-    "previous": "Boarium forum"
+    "previous": "Boarium forum",
+    "next": "Boëdromia"
   },
   {
     "lemma": "Boëdromia",
+    "previous": "Boarius campus",
     "next": "Boerebista"
   },
   {
@@ -16878,7 +16890,12 @@
   },
   {
     "lemma": "Briana",
-    "previous": "Brasidas 1a"
+    "previous": "Brasidas 1a",
+    "next": "Brianeia"
+  },
+  {
+    "lemma": "Brianeia",
+    "previous": "Briana"
   },
   {
     "lemma": "Bria",
@@ -18612,11 +18629,17 @@
   },
   {
     "lemma": "Cestius 18",
-    "previous": "Cestius 14"
+    "previous": "Cestius 14",
+    "next": "Chabora"
+  },
+  {
+    "lemma": "Chabora",
+    "previous": "Cestius 18",
+    "next": "Chairekla"
   },
   {
     "lemma": "Chairekla",
-    "previous": null,
+    "previous": "Chabora",
     "next": "Chairephon 1"
   },
   {
@@ -18734,11 +18757,16 @@
   {
     "lemma": "Cham(m)anene",
     "previous": "Chambritrasos",
-    "next": null
+    "next": "Chamogamision"
+  },
+  {
+    "lemma": "Chamogamision",
+    "previous": "Cham(m)anene",
+    "next": "Chamyne"
   },
   {
     "lemma": "Chamyne",
-    "previous": null,
+    "previous": "Chamogamision",
     "next": "Chanaranges"
   },
   {
@@ -19302,13 +19330,24 @@
     "previous": "Chrysippos 14b"
   },
   {
-    "lemma": "Chrysippos 16"
+    "lemma": "Chrysippos 14b",
+    "next": "Chrysippos 16"
+  },
+  {
+    "lemma": "Chrysippos 16",
+    "previous": "Chrysippos 14b",
+    "next": "Chrysippos 16"
+  },
+  {
+    "lemma": "Chrysippos 16",
+    "previous": "Chrysippos 16"
   },
   {
     "lemma": "Chrysippos 15"
   },
   {
     "lemma": "Chrysippos 16",
+    "previous": null,
     "next": "Chudukka"
   },
   {
@@ -19354,7 +19393,10 @@
   },
   {
     "lemma": "Chytrieioi",
-    "previous": "Chumdan",
+    "previous": "Chumdan"
+  },
+  {
+    "lemma": "Chytrieioi",
     "sort_key": "Artikelname ohne \"RE:\"",
     "chapters": [
       {
@@ -19756,7 +19798,12 @@
   },
   {
     "lemma": "Claudius 400",
-    "previous": "Claudius 399a"
+    "previous": "Claudius 399a",
+    "next": "Claudius 410"
+  },
+  {
+    "lemma": "Claudius 410",
+    "previous": "Claudius 400"
   },
   {
     "lemma": "Claudius 451",
@@ -19781,7 +19828,17 @@
   },
   {
     "lemma": "Cletabion",
-    "previous": "Clavicularius"
+    "previous": "Clavicularius",
+    "next": "Cletabis"
+  },
+  {
+    "lemma": "Cletabis",
+    "previous": "Cletabion",
+    "next": "Clipeocentrus"
+  },
+  {
+    "lemma": "Clipeocentrus",
+    "previous": "Cletabis"
   },
   {
     "lemma": "Claudius 399a",
@@ -20018,8 +20075,10 @@
   },
   {
     "lemma": "Codrus a",
-    "previous": "Cocceius 19a",
-    "next": "Coelius 8",
+    "previous": "Cocceius 19a"
+  },
+  {
+    "lemma": "Codrus a",
     "sort_key": "Codrus 0a",
     "chapters": [
       {
@@ -20028,6 +20087,10 @@
         "author": "Skutsch, [Franz]"
       }
     ]
+  },
+  {
+    "lemma": "Codrus a",
+    "next": "Coelius 8"
   },
   {
     "lemma": "Coelius 8",
@@ -20270,10 +20333,16 @@
   {
     "lemma": "Cornelius 40",
     "previous": "Cornelius 10b",
-    "next": null
+    "next": "Cornelius 69"
+  },
+  {
+    "lemma": "Cornelius 69",
+    "previous": "Cornelius 40",
+    "next": "Cornelius 82"
   },
   {
     "lemma": "Cornelius 82",
+    "previous": "Cornelius 69",
     "next": "Cornelius 99"
   },
   {
@@ -20312,11 +20381,16 @@
   },
   {
     "lemma": "Cornelius 135",
-    "previous": "Cornelius 110a"
+    "previous": "Cornelius 110a",
+    "next": "Cornelius 136"
+  },
+  {
+    "lemma": "Cornelius 136",
+    "previous": "Cornelius 135",
+    "next": null
   },
   {
     "lemma": "Cornelius 376ff.",
-    "previous": null,
     "next": "Cornificius 7"
   },
   {
@@ -20440,7 +20514,6 @@
   {
     "lemma": "Culleolus a",
     "previous": "Cubi",
-    "next": "Cura 4",
     "chapters": [
       {
         "start": 332,
@@ -20450,8 +20523,12 @@
     ]
   },
   {
+    "lemma": "Culleolus",
+    "next": "Cura 4"
+  },
+  {
     "lemma": "Cura 4",
-    "previous": "Culleolus a",
+    "previous": "Culleolus",
     "next": "Currodrepanus"
   },
   {
@@ -20488,7 +20565,12 @@
     "previous": "Custidius"
   },
   {
+    "lemma": "Dabana 1",
+    "next": "Dabausa"
+  },
+  {
     "lemma": "Dabausa",
+    "previous": "Dabana 1",
     "next": "Dabithac"
   },
   {

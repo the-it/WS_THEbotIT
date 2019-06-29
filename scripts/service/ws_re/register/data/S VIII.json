@@ -6105,10 +6105,16 @@
   },
   {
     "lemma": "Dionysios  50a",
-    "previous": "Damon 20"
+    "previous": "Damon 20",
+    "next": null
+  },
+  {
+    "lemma": "Damon 20",
+    "next": "Dionysios 50a"
   },
   {
     "lemma": "Dionysios 50a",
+    "previous": "Damon 20",
     "next": "Ergoteles 3",
     "chapters": [
       {
@@ -6120,7 +6126,8 @@
   },
   {
     "lemma": "Ergoteles 3",
-    "previous": "Dionysios 50a"
+    "previous": "Dionysios 50a",
+    "next": null
   },
   {
     "lemma": "Serapion 7b",
