@@ -2563,7 +2563,8 @@
   {
     "lemma": "Claudius 10a",
     "previous": "Clarus 6a",
-    "next": "Claudius 242a"
+    "next": "Claudius 242a",
+    "sort_key": "Claudius 010a"
   },
   {
     "lemma": "Claudius 242a",
@@ -3862,7 +3863,12 @@
     ]
   },
   {
+    "lemma": "Castronius",
+    "next": "Chairemon 5"
+  },
+  {
     "lemma": "Chairemon 5",
+    "previous": "Castronius",
     "next": "Chairestratos 1"
   },
   {

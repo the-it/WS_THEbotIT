@@ -1737,7 +1737,6 @@
   {
     "lemma": "Bulagoras 2",
     "previous": "Boupares",
-    "next": "Cercina",
     "chapters": [
       {
         "start": 214,
@@ -1747,8 +1746,17 @@
     ]
   },
   {
+    "lemma": "Bulagoras",
+    "next": "Cercina"
+  },
+  {
     "lemma": "Cercina",
-    "previous": "Bulagoras 2"
+    "previous": "Bulagoras",
+    "next": "Chaireas 5a"
+  },
+  {
+    "lemma": "Chaireas 5a",
+    "previous": "Cercina"
   },
   {
     "lemma": "Bulagoras",
