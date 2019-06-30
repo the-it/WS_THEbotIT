@@ -780,10 +780,12 @@
   },
   {
     "lemma": "Calpurnius 101",
-    "previous": "Calpurnius 99"
+    "previous": "Calpurnius 99",
+    "next": "Calvisius 7"
   },
   {
     "lemma": "Calvisius 7",
+    "previous": "Calpurnius 101",
     "next": "Calvisius 9",
     "sort_key": "Calvisius 07"
   },
@@ -1025,6 +1027,24 @@
   {
     "lemma": "Castellum 5a",
     "previous": "Cassius",
+    "next": "Catilius 4"
+  },
+  {
+    "lemma": "Catilius 4",
+    "previous": "Castellum 5a",
+    "next": "Catillus 4"
+  },
+  {
+    "lemma": "Catillus 4",
+    "previous": "Catilius 4"
+  },
+  {
+    "lemma": "Cassius",
+    "next": "Castellum 5a"
+  },
+  {
+    "lemma": "Castellum 5a",
+    "previous": "Cassius",
     "next": "Catilius 4",
     "chapters": [
       {
@@ -1150,7 +1170,17 @@
   },
   {
     "lemma": "Claudius 71",
-    "previous": "Cincius 9"
+    "previous": "Cincius 9",
+    "next": "Claudius 186",
+    "sort_key": "Claudius 071"
+  },
+  {
+    "lemma": "Claudius 186",
+    "previous": "Claudius 71"
+  },
+  {
+    "lemma": "Claudius 186",
+    "sort_key": "Claudius"
   },
   {
     "lemma": "Claudius 186",
@@ -1159,6 +1189,15 @@
   {
     "lemma": "Claudius 187",
     "previous": "Claudius 186",
+    "next": "Claudius 188",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 188",
+    "previous": "Claudius 187"
+  },
+  {
+    "lemma": "Claudius 187",
     "sort_key": "Claudius"
   },
   {
@@ -1168,21 +1207,39 @@
   {
     "lemma": "Claudius 188",
     "previous": "Claudius 187",
-    "next": "Claudius 194",
     "sort_key": "Claudius"
   },
   {
-    "lemma": "Claudius 194",
-    "previous": "Claudius 188"
+    "lemma": "Claudius 187",
+    "next": "Claudius 194"
   },
   {
     "lemma": "Claudius 194",
+    "previous": "Claudius 187",
     "next": "Claudius 357",
     "sort_key": "Claudius"
   },
   {
     "lemma": "Claudius 357",
     "previous": "Claudius 194"
+  },
+  {
+    "lemma": "Claudius 194",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 194",
+    "next": "Claudius 357"
+  },
+  {
+    "lemma": "Claudius 357",
+    "previous": "Claudius 194",
+    "next": "Claudius 415",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 415",
+    "previous": "Claudius 357"
   },
   {
     "lemma": "Cincius 9",
@@ -1264,7 +1321,12 @@
   },
   {
     "lemma": "Cornelius 236",
-    "previous": "Cornelius 145"
+    "previous": "Cornelius 145",
+    "next": "Cornelius 279"
+  },
+  {
+    "lemma": "Cornelius 279",
+    "previous": "Cornelius 236"
   },
   {
     "lemma": "Claudius 187. 188. 194",

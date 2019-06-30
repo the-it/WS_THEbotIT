@@ -341,8 +341,13 @@
     "previous": "Chairemon 2a"
   },
   {
+    "lemma": "Bias 10",
+    "next": "Caecilius 141"
+  },
+  {
     "lemma": "Caecilius 141",
-    "next": "Celsius 18a",
+    "previous": "Bias 10",
+    "next": "Celsus 18a",
     "chapters": [
       {
         "start": 57,
@@ -352,8 +357,11 @@
     ]
   },
   {
-    "lemma": "Celsius 18a",
+    "lemma": "Celsus 18a",
     "previous": "Caecilius 141"
+  },
+  {
+    "lemma": "Celsius 18a"
   },
   {
     "lemma": "Caecilia Trebulla",
