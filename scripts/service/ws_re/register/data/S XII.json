@@ -160,7 +160,22 @@
     ]
   },
   {
+    "lemma": "Cornelius 282a",
+    "next": "Cornelius 290"
+  },
+  {
+    "lemma": "Cornelius 290",
+    "previous": "Cornelius 282a",
+    "next": "Cornelius 291"
+  },
+  {
+    "lemma": "Cornelius 291",
+    "previous": "Cornelius 290",
+    "next": "Cornelius 294"
+  },
+  {
     "lemma": "Cornelius 294",
+    "previous": "Cornelius 291",
     "next": "Cornelius 296a"
   },
   {
@@ -4203,7 +4218,12 @@
   {
     "lemma": "Azania 2",
     "previous": "Aristophanes 12",
+    "next": "Camundus",
     "redirect": "Zangenae"
+  },
+  {
+    "lemma": "Camundus",
+    "previous": "Azania 2"
   },
   {
     "lemma": "Ἀζανία",

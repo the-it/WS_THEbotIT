@@ -2134,7 +2134,8 @@
   {
     "lemma": "Demetrios 48a",
     "previous": "Demarchos 6",
-    "next": "Demokrates 10a"
+    "next": "Demokrates 10a",
+    "sort_key": "Demetrios 048a"
   },
   {
     "lemma": "Demokrates 10a",
@@ -3977,11 +3978,11 @@
   {
     "lemma": "Ἱππάρχης",
     "previous": "Himeraios",
-    "next": "Hippeios",
+    "next": "Ἱππεῖος",
     "sort_key": "Hipparches"
   },
   {
-    "lemma": "Hippeios",
+    "lemma": "Ἱππεῖος",
     "previous": "Ἱππάρχης",
     "next": "Hippias 4",
     "sort_key": "Hippeios",
@@ -3995,10 +3996,12 @@
   },
   {
     "lemma": "Hippias 4",
-    "previous": "Hippeios"
+    "previous": "Ἱππεῖος",
+    "next": null
   },
   {
     "lemma": "Hippias 9a",
+    "previous": null,
     "next": "Ἱππικός",
     "chapters": [
       {
@@ -4139,7 +4142,14 @@
   },
   {
     "lemma": "Hyäne",
-    "previous": "Ὁρμοφυλακία"
+    "previous": "Ὁρμοφυλακία",
+    "next": "Hydarnes 1",
+    "sort_key": "Hyaene",
+    "wp_link": "w:de:Hyänen"
+  },
+  {
+    "lemma": "Hydarnes 1",
+    "previous": "Hyäne"
   },
   {
     "lemma": "Hyäne",
@@ -4251,6 +4261,7 @@
   },
   {
     "lemma": "Hydarnes 3",
+    "previous": null,
     "next": "Hylas 4a"
   },
   {

@@ -11813,7 +11813,12 @@
   },
   {
     "lemma": "Bura 2",
-    "previous": "Bunos a"
+    "previous": "Bunos a",
+    "next": "Burburus"
+  },
+  {
+    "lemma": "Burburus",
+    "previous": "Bura 2"
   },
   {
     "lemma": "Armenon 3a",
@@ -13669,7 +13674,7 @@
   {
     "lemma": "Atussa",
     "previous": "Aturus",
-    "next": null,
+    "next": "Aucissa",
     "chapters": [
       {
         "start": 226,
@@ -13677,6 +13682,10 @@
         "author": "Ruge"
       }
     ]
+  },
+  {
+    "lemma": "Aucissa",
+    "previous": "Atussa"
   },
   {
     "lemma": "Avarigni",
@@ -15409,10 +15418,12 @@
   },
   {
     "lemma": "Bambyke",
-    "previous": "Baltis"
+    "previous": "Baltis",
+    "next": null
   },
   {
     "lemma": "Bandusiae fons",
+    "previous": null,
     "next": "Bantem"
   },
   {
@@ -15797,7 +15808,6 @@
   {
     "lemma": "Batnai 1",
     "previous": "Batis 2",
-    "next": "Batnai 2",
     "chapters": [
       {
         "start": 245,
@@ -15807,8 +15817,17 @@
     ]
   },
   {
+    "lemma": "Batnai",
+    "next": "Batnai 2"
+  },
+  {
     "lemma": "Batnai 2",
-    "previous": "Batnai 1"
+    "previous": "Batnai",
+    "next": "Batromios"
+  },
+  {
+    "lemma": "Batromios",
+    "previous": "Batnai 2"
   },
   {
     "lemma": "Batnai",
@@ -15962,7 +15981,6 @@
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
-    "next": "Bellicius 9",
     "sort_key": "Bellerophonteios",
     "chapters": [
       {
@@ -15973,8 +15991,17 @@
     ]
   },
   {
+    "lemma": "Βελλεροφόντειος δῆμος",
+    "next": "Bellicius 9"
+  },
+  {
     "lemma": "Bellicius 9",
-    "previous": "Βελλεροφόντειος δῆμος"
+    "previous": "Βελλεροφόντειος δῆμος",
+    "next": "Belligenes"
+  },
+  {
+    "lemma": "Belligenes",
+    "previous": "Bellicius 9"
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
@@ -17745,12 +17772,30 @@
   {
     "lemma": "Calpurnius 73",
     "previous": "Calpurnius 70",
-    "next": null,
+    "next": "Calpurnius 74",
     "sort_key": "Calpurnius 073"
   },
   {
+    "lemma": "Calpurnius 74",
+    "previous": "Calpurnius 73",
+    "next": "Calpurnius 82",
+    "sort_key": "Calpurnius 074"
+  },
+  {
+    "lemma": "Calpurnius 82",
+    "previous": "Calpurnius 74",
+    "next": "Calpurnius 88",
+    "sort_key": "Calpurnius 082"
+  },
+  {
+    "lemma": "Calpurnius 88",
+    "previous": "Calpurnius 82",
+    "next": "Calpurnius 90",
+    "sort_key": "Calpurnius 088"
+  },
+  {
     "lemma": "Calpurnius 90",
-    "previous": null,
+    "previous": "Calpurnius 88",
     "next": "Calpurnius 93",
     "sort_key": "Calpurnius 090"
   },
@@ -19663,7 +19708,13 @@
   },
   {
     "lemma": "Claudius 87",
-    "previous": "Claudius 72"
+    "previous": "Claudius 72",
+    "next": "Claudius 93",
+    "sort_key": "Claudius 087"
+  },
+  {
+    "lemma": "Claudius 93",
+    "previous": "Claudius 87"
   },
   {
     "lemma": "Claudius 31a(-b)",
@@ -20546,7 +20597,12 @@
     "previous": "Cornelius 136"
   },
   {
+    "lemma": "Cornelius 351",
+    "next": "Cornelius 376ff."
+  },
+  {
     "lemma": "Cornelius 376ff.",
+    "previous": "Cornelius 351",
     "next": "Cornificius 7"
   },
   {
@@ -20665,11 +20721,14 @@
   {
     "lemma": "Cubi",
     "previous": "Cuavus",
-    "next": "Culleolus a"
+    "next": "Culleolus"
+  },
+  {
+    "lemma": "Culleolus",
+    "previous": "Cubi"
   },
   {
     "lemma": "Culleolus a",
-    "previous": "Cubi",
     "chapters": [
       {
         "start": 332,
@@ -21531,21 +21590,16 @@
   {
     "lemma": "Demochares 1",
     "previous": "Demo 6",
-    "next": null
+    "next": "Demochares 2"
   },
   {
-    "lemma": "Demodike",
-    "chapters": [
-      {
-        "start": 346,
-        "end": 346,
-        "author": "Körte"
-      }
-    ]
+    "lemma": "Demochares 2",
+    "previous": "Demochares 1",
+    "next": "Demodike 6"
   },
   {
     "lemma": "Demodike 6",
-    "previous": null,
+    "previous": "Demochares 2",
     "next": "Demodokos 6a"
   },
   {
