@@ -25800,7 +25800,6 @@
     "lemma": "Andronikos 10",
     "previous": "Andronikos 9",
     "next": "Andronikos 11",
-    "wp_link": "w:de:Andronikos",
     "chapters": [
       {
         "start": 2162,
@@ -26557,7 +26556,7 @@
   {
     "lemma": "Anemokoitai",
     "previous": "Anemoitas",
-    "next": "Anemone",
+    "next": "Ἀνεμώνη",
     "chapters": [
       {
         "start": 2180,
@@ -26567,7 +26566,7 @@
     ]
   },
   {
-    "lemma": "Anemone",
+    "lemma": "Ἀνεμώνη",
     "previous": "Anemokoitai",
     "next": "Anemoreia",
     "sort_key": "Anemone",
@@ -26582,7 +26581,7 @@
   },
   {
     "lemma": "Anemoreia",
-    "previous": "Anemone",
+    "previous": "Ἀνεμώνη",
     "next": "Anemosa",
     "chapters": [
       {
@@ -46093,6 +46092,7 @@
     "lemma": "Ἀπενιαυτισμός",
     "previous": "Apenestai",
     "next": "Aper",
+    "sort_key": "Apeniautismos",
     "chapters": [
       {
         "start": 2696,
@@ -46766,6 +46766,7 @@
     "lemma": "Ἄφεσον",
     "previous": "Ἄφεσις",
     "next": "Ἀφεστήρ",
+    "sort_key": "Apheson",
     "chapters": [
       {
         "start": 2717,
@@ -47877,6 +47878,7 @@
   {
     "lemma": "Ἀφροδίτης ὅρμος",
     "previous": "Ἀφροδίτης ἡμέρα",
+    "next": "Ἀφροδίτης ὕδρευμα",
     "sort_key": "Aphroditeshor",
     "wp_link": "w:de:Myos Hormos"
   },
@@ -47902,7 +47904,8 @@
   {
     "lemma": "Ἀφροδίτης νῆσος 1",
     "previous": "Ἀφροδίτης ὕδρευμα",
-    "next": null,
+    "next": "Ἀφροδίτης νῆσος 2",
+    "sort_key": "Aphroditesnesos 1",
     "chapters": [
       {
         "start": 2788,

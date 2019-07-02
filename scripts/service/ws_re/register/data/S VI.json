@@ -72,6 +72,7 @@
   },
   {
     "lemma": "Acilius 16",
+    "previous": null,
     "next": "Acutius 1b"
   },
   {
@@ -88,7 +89,8 @@
   },
   {
     "lemma": "Aelius 75a",
-    "previous": "Acutius 1b"
+    "previous": "Acutius 1b",
+    "next": null
   },
   {
     "lemma": "Acutius 1a",
@@ -174,7 +176,12 @@
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 3"
+    "previous": "Aiacius 3",
+    "next": "Alexandros 90a"
+  },
+  {
+    "lemma": "Alexandros 90a",
+    "previous": "Albiobola"
   },
   {
     "lemma": "Agesistratos",
@@ -1436,7 +1443,12 @@
     "previous": "Cuspius 3"
   },
   {
+    "lemma": "Cuspius 3",
+    "next": "Dardanos 11"
+  },
+  {
     "lemma": "Dardanos 11",
+    "previous": "Cuspius 3",
     "next": "Dasumius 1a"
   },
   {
@@ -3037,7 +3049,6 @@
   {
     "lemma": "Maximus 128",
     "previous": "Maximinus 5",
-    "next": "Media provincia",
     "chapters": [
       {
         "start": 289,
@@ -3047,8 +3058,17 @@
     ]
   },
   {
+    "lemma": "Maximus 26",
+    "next": "Media provincia"
+  },
+  {
     "lemma": "Media provincia",
-    "previous": "Maximus 128"
+    "previous": "Maximus 26",
+    "next": "Meidylides 1"
+  },
+  {
+    "lemma": "Meidylides 1",
+    "previous": "Media provincia"
   },
   {
     "lemma": "Maximus 26",
