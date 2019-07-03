@@ -1570,7 +1570,7 @@
   {
     "lemma": "Albus 2",
     "previous": "Albucius 3a",
-    "next": "Alençon, Notre Dame d,-,",
+    "next": "Alençon, Notre Dame d'-",
     "chapters": [
       {
         "start": 78,
@@ -1580,7 +1580,7 @@
     ]
   },
   {
-    "lemma": "Alençon, Notre Dame d,-,",
+    "lemma": "Alençon, Notre Dame d'-",
     "previous": "Albus 2",
     "next": "Alesia 1",
     "sort_key": "Alençon, Notre Dame d,-,",
@@ -1594,7 +1594,8 @@
   },
   {
     "lemma": "Alesia 1",
-    "previous": "Alençon, Notre Dame d,-,"
+    "previous": "Alençon, Notre Dame d'-",
+    "next": null
   },
   {
     "lemma": "Aleuas 5",
@@ -1700,6 +1701,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1707,6 +1709,10 @@
         "author": "Oldfather"
       }
     ]
+  },
+  {
+    "lemma": "Alexios",
+    "previous": "Alexinos 2"
   },
   {
     "lemma": "Alexinos",
@@ -8269,7 +8275,13 @@
   },
   {
     "lemma": "Barbarus a",
-    "previous": "Barba 2a"
+    "previous": "Barba 2a",
+    "next": "Barbarus 2",
+    "sort_key": "Barbarus 0a"
+  },
+  {
+    "lemma": "Barbarus 2",
+    "previous": "Barbarus a"
   },
   {
     "lemma": "Barbarus a",
@@ -12779,6 +12791,7 @@
   },
   {
     "lemma": "Cornelius 354",
+    "previous": null,
     "next": "Cornelius 373"
   },
   {
@@ -14149,6 +14162,7 @@
   {
     "lemma": "Demarchos 5a",
     "previous": "Delos 1a",
+    "next": "Demeter",
     "chapters": [
       {
         "start": 329,
@@ -14156,6 +14170,10 @@
         "author": "Oldfather"
       }
     ]
+  },
+  {
+    "lemma": "Demeter",
+    "previous": "Demarchos 5a"
   },
   {
     "lemma": "Demarchos 5",
@@ -16050,6 +16068,7 @@
   },
   {
     "lemma": "Eporedorix",
+    "previous": null,
     "next": "Eppillius",
     "chapters": [
       {
@@ -16073,7 +16092,8 @@
   },
   {
     "lemma": "Eppius 2",
-    "previous": "Eppillius"
+    "previous": "Eppillius",
+    "next": null
   },
   {
     "lemma": "Eppius 3a",
