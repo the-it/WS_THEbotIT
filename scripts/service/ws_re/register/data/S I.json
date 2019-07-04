@@ -1708,7 +1708,8 @@
   },
   {
     "lemma": "Agabana",
-    "previous": "Afranius 6a"
+    "previous": "Afranius 6a",
+    "next": null
   },
   {
     "lemma": "Afrius",
@@ -1726,7 +1727,8 @@
   },
   {
     "lemma": "Ἀγαμέμνονος λουτρά",
-    "previous": "Agamemnon 2"
+    "previous": "Agamemnon 2",
+    "next": null
   },
   {
     "lemma": "Afranius  6a",
@@ -8387,7 +8389,8 @@
   },
   {
     "lemma": "Aphetatha",
-    "previous": "Aphesis"
+    "previous": "Aphesis",
+    "next": null
   },
   {
     "lemma": "Aphesis",
@@ -13435,6 +13438,7 @@
   },
   {
     "lemma": "Athenaios 7",
+    "previous": null,
     "next": "Athenaios 9a"
   },
   {
@@ -13445,7 +13449,8 @@
   },
   {
     "lemma": "Athenaios 22",
-    "previous": "Athenaios 9a"
+    "previous": "Athenaios 9a",
+    "next": null
   },
   {
     "lemma": "Athenaios 7",
@@ -16194,7 +16199,12 @@
   },
   {
     "lemma": "Belligenes",
-    "previous": "Bellicius 9"
+    "previous": "Bellicius 9",
+    "next": "Bello"
+  },
+  {
+    "lemma": "Bello",
+    "previous": "Belligenes"
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
@@ -21656,6 +21666,19 @@
   {
     "lemma": "Demeas 3",
     "previous": "Demaratos 3a",
+    "next": "Demetria 1"
+  },
+  {
+    "lemma": "Demetria 1",
+    "previous": "Demeas 3"
+  },
+  {
+    "lemma": "Demaratos 3a",
+    "next": "Demeas 3"
+  },
+  {
+    "lemma": "Demeas 3",
+    "previous": "Demaratos 3a",
     "next": "Demetria 1",
     "chapters": [
       {
@@ -21774,6 +21797,7 @@
   },
   {
     "lemma": "Demetrios 130",
+    "previous": null,
     "next": "Demo 6"
   },
   {
@@ -21783,7 +21807,8 @@
   },
   {
     "lemma": "Demochares 1",
-    "previous": "Demo 6"
+    "previous": "Demo 6",
+    "next": null
   },
   {
     "lemma": "Demetrios 130",
