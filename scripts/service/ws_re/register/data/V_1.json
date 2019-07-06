@@ -8417,7 +8417,7 @@
   {
     "lemma": "Dikaiosynos",
     "previous": "Dikaiosyne 3",
-    "next": "Dikaskopoi",
+    "next": "Δικάσκοποι",
     "chapters": [
       {
         "start": 565,
@@ -8427,9 +8427,10 @@
     ]
   },
   {
-    "lemma": "Dikaskopoi",
+    "lemma": "Δικάσκοποι",
     "previous": "Dikaiosynos",
-    "next": "Dikastagogos",
+    "next": "Δικασταγωγός",
+    "sort_key": "Dikaskopoi",
     "chapters": [
       {
         "start": 565,
@@ -8439,9 +8440,10 @@
     ]
   },
   {
-    "lemma": "Dikastagogos",
-    "previous": "Dikaskopoi",
-    "next": "Dikastai",
+    "lemma": "Δικασταγωγός",
+    "previous": "Δικάσκοποι",
+    "next": "Δικασταί",
+    "sort_key": "Dikastagogos",
     "chapters": [
       {
         "start": 565,
@@ -8451,9 +8453,10 @@
     ]
   },
   {
-    "lemma": "Dikastai",
-    "previous": "Dikastagogos",
-    "next": "Dikastai kata demus",
+    "lemma": "Δικασταί",
+    "previous": "Δικασταγωγός",
+    "next": "Δικασταὶ κατὰ δήμους",
+    "sort_key": "Dikastai",
     "chapters": [
       {
         "start": 565,
@@ -8463,9 +8466,10 @@
     ]
   },
   {
-    "lemma": "Dikastai kata demus",
-    "previous": "Dikastai",
-    "next": "Dikasteria 1",
+    "lemma": "Δικασταὶ κατὰ δήμους",
+    "previous": "Δικασταί",
+    "next": "Δικαστήρια 1",
+    "sort_key": "Dikastai kata demus",
     "chapters": [
       {
         "start": 571,
@@ -8475,9 +8479,10 @@
     ]
   },
   {
-    "lemma": "Dikasteria 1",
-    "previous": "Dikastai kata demus",
-    "next": "Dikasteria 2",
+    "lemma": "Δικαστήρια 1",
+    "previous": "Δικασταὶ κατὰ δήμους",
+    "next": "Δικαστήρια 2",
+    "sort_key": "Dikasteria 1",
     "chapters": [
       {
         "start": 571,
@@ -8487,8 +8492,8 @@
     ]
   },
   {
-    "lemma": "Dikasteria 2",
-    "previous": "Dikasteria 1",
+    "lemma": "Δικαστήρια 2",
+    "previous": "Δικαστήρια 1",
     "next": "Dikastikos misthos",
     "chapters": [
       {
@@ -8500,7 +8505,7 @@
   },
   {
     "lemma": "Dikastikos misthos",
-    "previous": "Dikasteria 2",
+    "previous": "Δικαστήρια 2",
     "next": "Dike 1",
     "chapters": [
       {
@@ -14649,6 +14654,7 @@
     "lemma": "Dionysios 68",
     "previous": "Dionysios 67",
     "next": "Dionysios 69",
+    "sort_key": "Dionysios 068",
     "chapters": [
       {
         "start": 913,
@@ -14661,6 +14667,7 @@
     "lemma": "Dionysios 69",
     "previous": "Dionysios 68",
     "next": "Dionysios 70",
+    "sort_key": "Dionysios 069",
     "chapters": [
       {
         "start": 913,
@@ -14673,6 +14680,7 @@
     "lemma": "Dionysios 70",
     "previous": "Dionysios 69",
     "next": "Dionysios 71",
+    "sort_key": "Dionysios 070",
     "chapters": [
       {
         "start": 913,
@@ -14685,6 +14693,7 @@
     "lemma": "Dionysios 71",
     "previous": "Dionysios 70",
     "next": "Dionysios 72",
+    "sort_key": "Dionysios 071",
     "chapters": [
       {
         "start": 913,
@@ -14697,6 +14706,7 @@
     "lemma": "Dionysios 72",
     "previous": "Dionysios 71",
     "next": "Dionysios 73",
+    "sort_key": "Dionysios 072",
     "chapters": [
       {
         "start": 913,
@@ -14709,6 +14719,7 @@
     "lemma": "Dionysios 73",
     "previous": "Dionysios 72",
     "next": "Dionysios 74",
+    "sort_key": "Dionysios 073",
     "chapters": [
       {
         "start": 913,
@@ -14721,6 +14732,7 @@
     "lemma": "Dionysios 74",
     "previous": "Dionysios 73",
     "next": "Dionysios 75",
+    "sort_key": "Dionysios 074",
     "chapters": [
       {
         "start": 913,
@@ -14733,6 +14745,7 @@
     "lemma": "Dionysios 75",
     "previous": "Dionysios 74",
     "next": "Dionysios 76",
+    "sort_key": "Dionysios 075",
     "chapters": [
       {
         "start": 913,
@@ -14745,6 +14758,7 @@
     "lemma": "Dionysios 76",
     "previous": "Dionysios 75",
     "next": "Dionysios 77",
+    "sort_key": "Dionysios 076",
     "chapters": [
       {
         "start": 914,
@@ -14757,6 +14771,8 @@
     "lemma": "Dionysios 77",
     "previous": "Dionysios 76",
     "next": "Dionysios 78",
+    "sort_key": "Dionysios 077",
+    "redirect": "Attius 16",
     "chapters": [
       {
         "start": 914,
@@ -14769,6 +14785,7 @@
     "lemma": "Dionysios 78",
     "previous": "Dionysios 77",
     "next": "Dionysios 79",
+    "sort_key": "Dionysios 078",
     "chapters": [
       {
         "start": 914,
@@ -14781,6 +14798,7 @@
     "lemma": "Dionysios 79",
     "previous": "Dionysios 78",
     "next": "Dionysios 80",
+    "sort_key": "Dionysios 079",
     "chapters": [
       {
         "start": 914,
@@ -14793,6 +14811,7 @@
     "lemma": "Dionysios 80",
     "previous": "Dionysios 79",
     "next": "Dionysios 81",
+    "sort_key": "Dionysios 080",
     "chapters": [
       {
         "start": 914,
@@ -14805,6 +14824,8 @@
     "lemma": "Dionysios 81",
     "previous": "Dionysios 80",
     "next": "Dionysios 82",
+    "sort_key": "Dionysios 081",
+    "redirect": "Aelius 47",
     "chapters": [
       {
         "start": 914,
@@ -14817,6 +14838,8 @@
     "lemma": "Dionysios 82",
     "previous": "Dionysios 81",
     "next": "Dionysios 83",
+    "sort_key": "Dionysios 082",
+    "wp_link": "w:de:en:Lucius Aelius Helvius Dionysius",
     "chapters": [
       {
         "start": 914,
@@ -14829,6 +14852,7 @@
     "lemma": "Dionysios 83",
     "previous": "Dionysios 82",
     "next": "Dionysios 84",
+    "sort_key": "Dionysios 083",
     "chapters": [
       {
         "start": 914,
@@ -14841,6 +14865,7 @@
     "lemma": "Dionysios 84",
     "previous": "Dionysios 83",
     "next": "Dionysios 85",
+    "sort_key": "Dionysios 084",
     "chapters": [
       {
         "start": 914,
@@ -14853,6 +14878,7 @@
     "lemma": "Dionysios 85",
     "previous": "Dionysios 84",
     "next": "Dionysios 86",
+    "sort_key": "Dionysios 085",
     "chapters": [
       {
         "start": 914,
@@ -14865,6 +14891,7 @@
     "lemma": "Dionysios 86",
     "previous": "Dionysios 85",
     "next": "Dionysios 87",
+    "sort_key": "Dionysios 086",
     "chapters": [
       {
         "start": 915,
@@ -14877,6 +14904,8 @@
     "lemma": "Dionysios 87",
     "previous": "Dionysios 86",
     "next": "Dionysios 88",
+    "sort_key": "Dionysios 087",
+    "redirect": "Philokalos 1",
     "chapters": [
       {
         "start": 915,
@@ -14888,6 +14917,7 @@
     "lemma": "Dionysios 88",
     "previous": "Dionysios 87",
     "next": "Dionysios 89",
+    "sort_key": "Dionysios 088",
     "chapters": [
       {
         "start": 915,
@@ -14900,6 +14930,7 @@
     "lemma": "Dionysios 89",
     "previous": "Dionysios 88",
     "next": "Dionysios 90",
+    "sort_key": "Dionysios 089",
     "chapters": [
       {
         "start": 915,
@@ -14912,6 +14943,7 @@
     "lemma": "Dionysios 90",
     "previous": "Dionysios 89",
     "next": "Dionysios 91",
+    "sort_key": "Dionysios 090",
     "chapters": [
       {
         "start": 915,
@@ -14924,6 +14956,7 @@
     "lemma": "Dionysios 91",
     "previous": "Dionysios 90",
     "next": "Dionysios 92",
+    "sort_key": "Dionysios 091",
     "chapters": [
       {
         "start": 915,
@@ -14936,6 +14969,7 @@
     "lemma": "Dionysios 92",
     "previous": "Dionysios 91",
     "next": "Dionysios 93",
+    "sort_key": "Dionysios 092",
     "chapters": [
       {
         "start": 915,
@@ -14948,6 +14982,7 @@
     "lemma": "Dionysios 93",
     "previous": "Dionysios 92",
     "next": "Dionysios 94",
+    "sort_key": "Dionysios 093",
     "chapters": [
       {
         "start": 915,
@@ -14960,6 +14995,8 @@
     "lemma": "Dionysios 94",
     "previous": "Dionysios 93",
     "next": "Dionysios 95",
+    "sort_key": "Dionysios 094",
+    "wp_link": "w:de:Dionysios von Alexandria (Geograph)",
     "chapters": [
       {
         "start": 915,
@@ -14972,6 +15009,8 @@
     "lemma": "Dionysios 95",
     "previous": "Dionysios 94",
     "next": "Dionysios 96",
+    "sort_key": "Dionysios 095",
+    "wp_link": "w:de:Dionysios (Epiker)",
     "chapters": [
       {
         "start": 924,
@@ -14984,6 +15023,7 @@
     "lemma": "Dionysios 96",
     "previous": "Dionysios 95",
     "next": "Dionysios 97",
+    "sort_key": "Dionysios 096",
     "chapters": [
       {
         "start": 925,
@@ -14996,6 +15036,7 @@
     "lemma": "Dionysios 97",
     "previous": "Dionysios 96",
     "next": "Dionysios 98",
+    "sort_key": "Dionysios 097",
     "chapters": [
       {
         "start": 926,
@@ -15008,6 +15049,7 @@
     "lemma": "Dionysios 98",
     "previous": "Dionysios 97",
     "next": "Dionysios 99",
+    "sort_key": "Dionysios 098",
     "chapters": [
       {
         "start": 927,
@@ -15020,6 +15062,7 @@
     "lemma": "Dionysios 99",
     "previous": "Dionysios 98",
     "next": "Dionysios 100",
+    "sort_key": "Dionysios 099",
     "chapters": [
       {
         "start": 927,
@@ -15140,6 +15183,7 @@
     "lemma": "Dionysios 109",
     "previous": "Dionysios 108",
     "next": "Dionysios 110",
+    "wp_link": "w:de:Dionysios Skytobrachion",
     "chapters": [
       {
         "start": 929,
@@ -19761,7 +19805,6 @@
     "lemma": "Divitia",
     "previous": "Divisor 3",
     "next": "Divitiacus",
-    "wp_link": "w:de:Köln-Deutz",
     "chapters": [
       {
         "start": 1238,
