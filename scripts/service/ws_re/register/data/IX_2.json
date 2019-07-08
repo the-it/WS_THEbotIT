@@ -8587,7 +8587,7 @@
   {
     "lemma": "Istriana",
     "previous": "Istria",
-    "next": "Istrianon limen",
+    "next": "Ἰστριανῶν λιμήν",
     "chapters": [
       {
         "start": 2267,
@@ -8597,7 +8597,7 @@
     ]
   },
   {
-    "lemma": "Istrianon limen",
+    "lemma": "Ἰστριανῶν λιμήν",
     "previous": "Istriana",
     "next": "Istriopolis, Istropolis",
     "chapters": [
@@ -8610,8 +8610,9 @@
   },
   {
     "lemma": "Istriopolis, Istropolis",
-    "previous": "Istrianon limen",
+    "previous": "Ἰστριανῶν λιμήν",
     "next": "Istron",
+    "redirect": true,
     "chapters": [
       {
         "start": 2267,
