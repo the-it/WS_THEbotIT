@@ -8494,7 +8494,8 @@
   {
     "lemma": "Δικαστήρια 2",
     "previous": "Δικαστήρια 1",
-    "next": "Dikastikos misthos",
+    "next": "Δικαστikὸς μισθός",
+    "sort_key": "Dikasteria 2",
     "chapters": [
       {
         "start": 573,
@@ -8504,9 +8505,10 @@
     ]
   },
   {
-    "lemma": "Dikastikos misthos",
+    "lemma": "Δικαστikὸς μισθός",
     "previous": "Δικαστήρια 2",
     "next": "Dike 1",
+    "sort_key": "Dikastikos misthos",
     "chapters": [
       {
         "start": 574,
@@ -8517,7 +8519,7 @@
   },
   {
     "lemma": "Dike 1",
-    "previous": "Dikastikos misthos",
+    "previous": "Δικαστikὸς μισθός",
     "next": "Dike 2",
     "chapters": [
       {
@@ -8802,6 +8804,7 @@
     "lemma": "Dilimnia",
     "previous": "Dilectus",
     "next": "Dilimnitai",
+    "redirect": "Delemna",
     "chapters": [
       {
         "start": 639,
@@ -8813,6 +8816,7 @@
     "lemma": "Dilimnitai",
     "previous": "Dilimnia",
     "next": "Dilis",
+    "redirect": "Delemitai",
     "chapters": [
       {
         "start": 639,
@@ -8823,7 +8827,7 @@
   {
     "lemma": "Dilis",
     "previous": "Dilimnitai",
-    "next": "Dilitron",
+    "next": "Δίλιτρον",
     "chapters": [
       {
         "start": 639,
@@ -8833,7 +8837,7 @@
     ]
   },
   {
-    "lemma": "Dilitron",
+    "lemma": "Δίλιτρον",
     "previous": "Dilis",
     "next": "Dill",
     "chapters": [
@@ -8846,7 +8850,7 @@
   },
   {
     "lemma": "Dill",
-    "previous": "Dilitron",
+    "previous": "Δίλιτρον",
     "next": "Dillius 1",
     "chapters": [
       {
@@ -9727,6 +9731,7 @@
     "lemma": "Diodoros 8",
     "previous": "Diodoros 7",
     "next": "Diodoros 9",
+    "sort_key": "Diodoros 08",
     "chapters": [
       {
         "start": 658,
@@ -13785,6 +13790,8 @@
     "lemma": "Dionysios 1",
     "previous": "Dionysiodoros",
     "next": "Dionysios 2",
+    "sort_key": "Dionysios 001",
+    "wp_link": "w:de:Dionysios I. von Syrakus",
     "chapters": [
       {
         "start": 882,
