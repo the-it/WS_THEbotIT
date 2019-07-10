@@ -154,7 +154,7 @@ class SCANTask(ReScannerTask):
             repo.git.checkout(master.name)
             if "GITHUB_USER" in os.environ:  # pragma: no cover
                 self.logger.info(f"Opening Pullrequest for \"{branch_name}\"")
-                self._open_pullrequest(branch_name)
+                # self._open_pullrequest(branch_name)
             else:
                 self.logger.error("No env variable GITHUB_USER")
         else:
