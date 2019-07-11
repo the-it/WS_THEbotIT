@@ -8840,6 +8840,7 @@
     "lemma": "Δίλιτρον",
     "previous": "Dilis",
     "next": "Dill",
+    "sort_key": "Dilitron",
     "chapters": [
       {
         "start": 639,
@@ -8852,6 +8853,7 @@
     "lemma": "Dill",
     "previous": "Δίλιτρον",
     "next": "Dillius 1",
+    "wp_link": "w:de:Dill",
     "chapters": [
       {
         "start": 639,
@@ -8875,7 +8877,8 @@
   {
     "lemma": "Dillius 2",
     "previous": "Dillius 1",
-    "next": "Dilmainon ethnos",
+    "next": "Διλμαϊνὸν ἔθνος",
+    "wp_link": "w:de:Gaius Dillius Vocula",
     "chapters": [
       {
         "start": 643,
@@ -8885,9 +8888,11 @@
     ]
   },
   {
-    "lemma": "Dilmainon ethnos",
+    "lemma": "Διλμαϊνὸν ἔθνος",
     "previous": "Dillius 2",
     "next": "Diluntum",
+    "sort_key": "Dilmainon ethnos",
+    "redirect": "Delemitai",
     "chapters": [
       {
         "start": 646,
@@ -8897,8 +8902,9 @@
   },
   {
     "lemma": "Diluntum",
-    "previous": "Dilmainon ethnos",
+    "previous": "Διλμαϊνὸν ἔθνος",
     "next": "Dimachaeri",
+    "redirect": "Dalluntum",
     "chapters": [
       {
         "start": 646,
@@ -8909,7 +8915,7 @@
   {
     "lemma": "Dimachaeri",
     "previous": "Diluntum",
-    "next": "Dimachai",
+    "next": "Διμάχαι",
     "chapters": [
       {
         "start": 646,
@@ -8919,9 +8925,10 @@
     ]
   },
   {
-    "lemma": "Dimachai",
+    "lemma": "Διμάχαι",
     "previous": "Dimachaeri",
     "next": "Dimale",
+    "sort_key": "Dimachai",
     "chapters": [
       {
         "start": 646,
@@ -8932,7 +8939,7 @@
   },
   {
     "lemma": "Dimale",
-    "previous": "Dimachai",
+    "previous": "Διμάχαι",
     "next": "Dimastos 1",
     "chapters": [
       {
@@ -8970,6 +8977,7 @@
     "lemma": "Dimenses",
     "previous": "Dimastos 2",
     "next": "Dimensuratio provinciarum",
+    "redirect": "Dimum",
     "chapters": [
       {
         "start": 647,
@@ -8992,7 +9000,7 @@
   {
     "lemma": "Dimeranos",
     "previous": "Dimensuratio provinciarum",
-    "next": "Dimidia Sextula",
+    "next": "Dimidia sextula",
     "chapters": [
       {
         "start": 647,
@@ -9002,7 +9010,7 @@
     ]
   },
   {
-    "lemma": "Dimidia Sextula",
+    "lemma": "Dimidia sextula",
     "previous": "Dimeranos",
     "next": "Dimnos",
     "chapters": [
@@ -9015,8 +9023,8 @@
   },
   {
     "lemma": "Dimnos",
-    "previous": "Dimidia Sextula",
-    "next": "Dimnoun",
+    "previous": "Dimidia sextula",
+    "next": "Δίμνουν",
     "chapters": [
       {
         "start": 648,
@@ -9026,20 +9034,14 @@
     ]
   },
   {
-    "lemma": "Dimnoun",
+    "lemma": "Δίμνουν",
     "previous": "Dimnos",
     "next": "Dimoi",
-    "chapters": [
-      {
-        "start": 648,
-        "end": 648,
-        "author": "Hultsch"
-      }
-    ]
+    "sort_key": "Dimnun"
   },
   {
     "lemma": "Dimoi",
-    "previous": "Dimnoun",
+    "previous": "Δίμνουν",
     "next": "Dimoites",
     "chapters": [
       {
@@ -9613,6 +9615,7 @@
     "lemma": "Diocletianus 1",
     "previous": "Diocletianopolis 3",
     "next": "Diocletianus 2",
+    "redirect": "Licinius 81",
     "chapters": [
       {
         "start": 658,
@@ -9624,6 +9627,7 @@
     "lemma": "Diocletianus 2",
     "previous": "Diocletianus 1",
     "next": "Diocrarus",
+    "redirect": "Valerius 142",
     "chapters": [
       {
         "start": 658,
@@ -9647,6 +9651,7 @@
     "lemma": "Diodoros 1",
     "previous": "Diocrarus",
     "next": "Diodoros 2",
+    "sort_key": "Diodoros 01",
     "chapters": [
       {
         "start": 658,
@@ -9659,6 +9664,7 @@
     "lemma": "Diodoros 2",
     "previous": "Diodoros 1",
     "next": "Diodoros 3",
+    "sort_key": "Diodoros 02",
     "chapters": [
       {
         "start": 658,
@@ -9671,6 +9677,7 @@
     "lemma": "Diodoros 3",
     "previous": "Diodoros 2",
     "next": "Diodoros 4",
+    "sort_key": "Diodoros 03",
     "chapters": [
       {
         "start": 658,
@@ -9683,6 +9690,7 @@
     "lemma": "Diodoros 4",
     "previous": "Diodoros 3",
     "next": "Diodoros 5",
+    "sort_key": "Diodoros 04",
     "chapters": [
       {
         "start": 658,
@@ -9695,6 +9703,7 @@
     "lemma": "Diodoros 5",
     "previous": "Diodoros 4",
     "next": "Diodoros 6",
+    "sort_key": "Diodoros 05",
     "chapters": [
       {
         "start": 658,
@@ -9707,6 +9716,7 @@
     "lemma": "Diodoros 6",
     "previous": "Diodoros 5",
     "next": "Diodoros 7",
+    "sort_key": "Diodoros 06",
     "chapters": [
       {
         "start": 658,
@@ -9719,6 +9729,7 @@
     "lemma": "Diodoros 7",
     "previous": "Diodoros 6",
     "next": "Diodoros 8",
+    "sort_key": "Diodoros 07",
     "chapters": [
       {
         "start": 658,
@@ -13804,6 +13815,8 @@
     "lemma": "Dionysios 2",
     "previous": "Dionysios 1",
     "next": "Dionysios 3",
+    "sort_key": "Dionysios 002",
+    "wp_link": "w:de:Dionysios II. von Syrakus",
     "chapters": [
       {
         "start": 904,
