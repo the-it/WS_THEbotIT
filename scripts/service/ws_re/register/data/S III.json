@@ -69,7 +69,8 @@
   },
   {
     "lemma": "Abas",
-    "previous": "Abano"
+    "previous": "Abano",
+    "next": null
   },
   {
     "lemma": "Abano",
@@ -182,7 +183,12 @@
     "previous": "Abronius"
   },
   {
+    "lemma": "Abronius",
+    "next": "Absalom 1"
+  },
+  {
     "lemma": "Absalom 1",
+    "previous": "Abronius",
     "next": "Absalom 2",
     "chapters": [
       {
@@ -7689,7 +7695,13 @@
   },
   {
     "lemma": "Aureus mons 4",
-    "previous": "Aurelius vicus"
+    "previous": "Aurelius vicus",
+    "next": "Ausci 2",
+    "sort_key": "Aureusmons 4"
+  },
+  {
+    "lemma": "Ausci 2",
+    "previous": "Aureus mons 4"
   },
   {
     "lemma": "Aureus mons 4",
@@ -10764,7 +10776,17 @@
     "previous": "Capienacus oder Capionacus"
   },
   {
-    "lemma": "Capitolium vetus"
+    "lemma": "Capienacus oder Capionacus",
+    "next": "Capitolium vetus"
+  },
+  {
+    "lemma": "Capitolium vetus",
+    "previous": "Capienacus oder Capionacus",
+    "next": "Capitolinus 8"
+  },
+  {
+    "lemma": "Capitolinus 8",
+    "previous": "Capitolium vetus"
   },
   {
     "lemma": "Capitolium 3",
@@ -14164,7 +14186,6 @@
   {
     "lemma": "Demarchos 5a",
     "previous": "Delos 1a",
-    "next": "Demeter",
     "chapters": [
       {
         "start": 329,
@@ -14174,9 +14195,17 @@
     ]
   },
   {
+    "lemma": "Demarchos 5",
+    "next": "Demeter"
+  },
+  {
     "lemma": "Demeter",
-    "previous": "Demarchos 5a",
-    "next": null
+    "previous": "Demarchos 5",
+    "next": "Demetrianus 1a"
+  },
+  {
+    "lemma": "Demetrianus 1a",
+    "previous": "Demeter"
   },
   {
     "lemma": "Demarchos 5",
@@ -15789,6 +15818,7 @@
   },
   {
     "lemma": "Elpinike 1a",
+    "previous": null,
     "next": "Emeia"
   },
   {
@@ -15805,7 +15835,8 @@
   },
   {
     "lemma": "Empusa",
-    "previous": "Emeia"
+    "previous": "Emeia",
+    "next": null
   },
   {
     "lemma": "Empusa 2",
