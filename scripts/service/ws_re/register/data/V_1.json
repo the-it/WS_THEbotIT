@@ -9247,6 +9247,7 @@
     "lemma": "Diniguttia",
     "previous": "Diniae",
     "next": "Dinis",
+    "redirect": "Dinogetia",
     "chapters": [
       {
         "start": 653,
@@ -9294,6 +9295,7 @@
     "lemma": "Dinkel",
     "previous": "Dinium",
     "next": "Dinogetia",
+    "redirect": "Spelt",
     "chapters": [
       {
         "start": 654,
@@ -9414,6 +9416,8 @@
     "lemma": "Διωβελία",
     "previous": "Dintzic",
     "next": "Diobolon",
+    "sort_key": "Diobelia",
+    "redirect": "Θεωρικόν",
     "chapters": [
       {
         "start": 655,
@@ -9437,6 +9441,7 @@
     "lemma": "Diocaesarea 1",
     "previous": "Diobolon",
     "next": "Diocaesarea 2",
+    "redirect": true,
     "chapters": [
       {
         "start": 656,
@@ -9448,6 +9453,7 @@
     "lemma": "Diocaesarea 2",
     "previous": "Diocaesarea 1",
     "next": "Diocaesarea 3",
+    "redirect": true,
     "chapters": [
       {
         "start": 656,
@@ -9494,7 +9500,7 @@
   {
     "lemma": "Diochares",
     "previous": "Diochaites",
-    "next": "Diocharus pylai",
+    "next": "Διοχάρους πύλαι",
     "chapters": [
       {
         "start": 656,
@@ -9504,9 +9510,10 @@
     ]
   },
   {
-    "lemma": "Diocharus pylai",
+    "lemma": "Διοχάρους πύλαι",
     "previous": "Diochares",
     "next": "Diochites",
+    "sort_key": "Diocharus pylai",
     "chapters": [
       {
         "start": 656,
@@ -9517,7 +9524,7 @@
   },
   {
     "lemma": "Diochites",
-    "previous": "Diocharus pylai",
+    "previous": "Διοχάρους πύλαι",
     "next": "Diochthondes",
     "chapters": [
       {

@@ -5149,7 +5149,12 @@
   },
   {
     "lemma": "Alkithos",
-    "previous": "Alkippos"
+    "previous": "Alkippos",
+    "next": "Alkmaion 1"
+  },
+  {
+    "lemma": "Alkmaion 1",
+    "previous": "Alkithos"
   },
   {
     "lemma": "Alkinoe 4",
@@ -12478,7 +12483,13 @@
   },
   {
     "lemma": "Arvernicus",
-    "previous": "Arverni"
+    "previous": "Arverni",
+    "next": "Arvius",
+    "sort_key": "Arvernicus 1"
+  },
+  {
+    "lemma": "Arvius",
+    "previous": "Arvernicus"
   },
   {
     "lemma": "Arvernicus",
@@ -12504,7 +12515,17 @@
     ]
   },
   {
-    "lemma": "Arvius 1"
+    "lemma": "Arvernicus",
+    "next": "Arvius 1"
+  },
+  {
+    "lemma": "Arvius 1",
+    "previous": "Arvernicus",
+    "next": "Arx 3"
+  },
+  {
+    "lemma": "Arx 3",
+    "previous": "Arvius 1"
   },
   {
     "lemma": "Arvius",
@@ -15804,7 +15825,10 @@
   },
   {
     "lemma": "Βασιλέων οἶκοι",
-    "previous": "Βασιλεῖται",
+    "previous": "Βασιλεῖται"
+  },
+  {
+    "lemma": "Βασιλέων οἶκοι",
     "sort_key": "Basileonoikoi",
     "chapters": [
       {
@@ -19677,7 +19701,8 @@
   },
   {
     "lemma": "Chrysippos 15",
-    "previous": "Chrysippos 14b"
+    "previous": "Chrysippos 14b",
+    "next": null
   },
   {
     "lemma": "Chrysippos 14b",
