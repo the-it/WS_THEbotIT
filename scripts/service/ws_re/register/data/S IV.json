@@ -2169,7 +2169,12 @@
   },
   {
     "lemma": "Demophon 10",
-    "previous": "Demonikos 2a"
+    "previous": "Demonikos 2a",
+    "next": "Demosthenes 4a"
+  },
+  {
+    "lemma": "Demosthenes 4a",
+    "previous": "Demophon 10"
   },
   {
     "lemma": "Demarchos 6",
@@ -2268,6 +2273,19 @@
         "author": "Kroll"
       }
     ]
+  },
+  {
+    "lemma": "Dexandros",
+    "next": "Diakrier 2"
+  },
+  {
+    "lemma": "Diakrier 2",
+    "previous": "Dexandros",
+    "next": "Didas 2"
+  },
+  {
+    "lemma": "Didas 2",
+    "previous": "Diakrier 2"
   },
   {
     "lemma": "Dexandros",

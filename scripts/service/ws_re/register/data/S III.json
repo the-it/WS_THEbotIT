@@ -131,7 +131,12 @@
   },
   {
     "lemma": "Abdera 1",
-    "previous": "Abella"
+    "previous": "Abella",
+    "next": "Abdere"
+  },
+  {
+    "lemma": "Abdere",
+    "previous": "Abdera 1"
   },
   {
     "lemma": "Abdera",
@@ -462,12 +467,21 @@
   },
   {
     "lemma": "Acutus 2",
-    "previous": "Acutus 1",
+    "previous": "Acutus 1"
+  },
+  {
+    "lemma": "Acutus 1",
     "next": "Ad-"
   },
   {
     "lemma": "Ad-",
-    "previous": "Acutus 2"
+    "previous": "Acutus 1",
+    "next": "Adad 2",
+    "sort_key": "Ad"
+  },
+  {
+    "lemma": "Adad 2",
+    "previous": "Ad-"
   },
   {
     "lemma": "-acus, -iacus",
@@ -925,7 +939,11 @@
   {
     "lemma": "Agathinos 8",
     "previous": "Agathias 3",
-    "next": null
+    "next": "Agathinos 10"
+  },
+  {
+    "lemma": "Agathinos 10",
+    "previous": "Agathinos 8"
   },
   {
     "lemma": "Agathias 3",
@@ -3477,7 +3495,13 @@
   },
   {
     "lemma": "Apollinaris 13",
-    "previous": "Aphrodite"
+    "previous": "Aphrodite",
+    "next": "Apollodoros 26a",
+    "wp_link": "w:de:Apollinaris"
+  },
+  {
+    "lemma": "Apollodoros 26a",
+    "previous": "Apollinaris 13"
   },
   {
     "lemma": "Aphrodisios a",
@@ -3576,7 +3600,13 @@
   },
   {
     "lemma": "Ἀποστόλιον",
-    "previous": "Apollonios 126a"
+    "previous": "Apollonios 126a",
+    "next": "Ἀποθηρευτής",
+    "sort_key": "Apostolion"
+  },
+  {
+    "lemma": "Ἀποθηρευτής",
+    "previous": "Ἀποστόλιον"
   },
   {
     "lemma": "Apollinaris 13",
@@ -3801,7 +3831,12 @@
   },
   {
     "lemma": "Aqua, Aquae 36",
-    "previous": "Aqua, Aquae 20"
+    "previous": "Aqua, Aquae 20",
+    "next": "Aqua, Aquae 46"
+  },
+  {
+    "lemma": "Aqua, Aquae 46",
+    "previous": "Aqua, Aquae 36"
   },
   {
     "lemma": "Aqua, Aquae 10a",
@@ -11501,7 +11536,12 @@
   },
   {
     "lemma": "Cerdo",
-    "previous": "Cercina"
+    "previous": "Cercina",
+    "next": "Cerialis a"
+  },
+  {
+    "lemma": "Cerialis a",
+    "previous": "Cerdo"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -12905,7 +12945,12 @@
   },
   {
     "lemma": "Costillus",
-    "previous": "Cossutius 3a"
+    "previous": "Cossutius 3a",
+    "next": "Costio"
+  },
+  {
+    "lemma": "Costio",
+    "previous": "Costillus"
   },
   {
     "lemma": "Cossutius 2a",
@@ -12996,6 +13041,27 @@
   {
     "lemma": "Cotus 1",
     "previous": "Cotulo"
+  },
+  {
+    "lemma": "Cotto",
+    "next": "Cotus 1"
+  },
+  {
+    "lemma": "Cotus 1",
+    "previous": "Cotto"
+  },
+  {
+    "lemma": "Cotus",
+    "next": "Cr...."
+  },
+  {
+    "lemma": "Cr....",
+    "previous": "Cotus",
+    "next": "Cracuna"
+  },
+  {
+    "lemma": "Cracuna",
+    "previous": "Cr...."
   },
   {
     "lemma": "Cotto",
@@ -13115,7 +13181,12 @@
   },
   {
     "lemma": "Cresconius 4",
-    "previous": "Crescens 8b"
+    "previous": "Crescens 8b",
+    "next": "Crestio"
+  },
+  {
+    "lemma": "Crestio",
+    "previous": "Cresconius 4"
   },
   {
     "lemma": "Crescens 8",
@@ -13195,6 +13266,15 @@
     "previous": "Crestio"
   },
   {
+    "lemma": "a creta",
+    "next": "Criciro 1",
+    "sort_key": "creta a"
+  },
+  {
+    "lemma": "Criciro 1",
+    "previous": "a creta"
+  },
+  {
     "lemma": "Creta, a",
     "chapters": [
       {
@@ -13211,8 +13291,11 @@
   {
     "lemma": "a creta",
     "previous": "Crestio",
-    "next": "Criciro 1",
     "sort_key": "creta a"
+  },
+  {
+    "lemma": "a creta",
+    "next": "Criciro 1"
   },
   {
     "lemma": "Criciro 1",
@@ -14509,7 +14592,12 @@
   },
   {
     "lemma": "Detalla",
-    "previous": "Δεσπότης"
+    "previous": "Δεσπότης",
+    "next": "Deuterius 2"
+  },
+  {
+    "lemma": "Deuterius 2",
+    "previous": "Detalla"
   },
   {
     "lemma": "Demodes",
@@ -15692,7 +15780,8 @@
   },
   {
     "lemma": "Εἰσαγωγεῖς",
-    "previous": "Ἐἰρηνοφύλακες"
+    "previous": "Ἐἰρηνοφύλακες",
+    "next": null
   },
   {
     "lemma": "Eisagogion",
@@ -16098,7 +16187,8 @@
   },
   {
     "lemma": "Epistula 1",
-    "previous": "Ἐπιστάτης εἰρήνης"
+    "previous": "Ἐπιστάτης εἰρήνης",
+    "next": null
   },
   {
     "lemma": "Eporedorix",
