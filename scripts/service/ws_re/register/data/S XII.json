@@ -160,7 +160,17 @@
     ]
   },
   {
+    "lemma": "Cornelius 205a",
+    "next": "Cornelius 263a"
+  },
+  {
+    "lemma": "Cornelius 263a",
+    "previous": "Cornelius 205a",
+    "next": "Cornelius 282a"
+  },
+  {
     "lemma": "Cornelius 282a",
+    "previous": "Cornelius 263a",
     "next": "Cornelius 290"
   },
   {
@@ -216,7 +226,12 @@
   },
   {
     "lemma": "Cornelius 398a",
-    "previous": "Cornelius 366"
+    "previous": "Cornelius 366",
+    "next": "Cornelius 402a"
+  },
+  {
+    "lemma": "Cornelius 402a",
+    "previous": "Cornelius 398a"
   },
   {
     "lemma": "Curtius 37a-b",
@@ -2418,7 +2433,11 @@
   {
     "lemma": "Deraia",
     "previous": "Demokritos 6",
-    "next": null
+    "next": "Didius 6"
+  },
+  {
+    "lemma": "Didius 6",
+    "previous": "Deraia"
   },
   {
     "lemma": "Dasumius 1a",

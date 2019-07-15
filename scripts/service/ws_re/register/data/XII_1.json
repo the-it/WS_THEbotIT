@@ -1268,7 +1268,7 @@
   {
     "lemma": "Kyrenikos",
     "previous": "Kyrene 4",
-    "next": "Κυρετίαι",
+    "next": "Kyretiai",
     "redirect": "Marcius 53",
     "chapters": [
       {
@@ -1278,7 +1278,7 @@
     ]
   },
   {
-    "lemma": "Κυρετίαι",
+    "lemma": "Kyretiai",
     "previous": "Kyrenikos",
     "next": "Kyria",
     "sort_key": "Kyretiai",
@@ -1292,7 +1292,7 @@
   },
   {
     "lemma": "Kyria",
-    "previous": "Κυρετίαι",
+    "previous": "Kyretiai",
     "next": "ἡ κυρία",
     "sort_key": "Kyria 1",
     "chapters": [
@@ -1319,6 +1319,7 @@
   {
     "lemma": "κυρία ἐκκλησία",
     "previous": "ἡ κυρία",
+    "next": null,
     "chapters": [
       {
         "start": 171,
@@ -1329,12 +1330,13 @@
   },
   {
     "lemma": "Κυρία ἐκκλησία",
+    "previous": "ἡ κυρία",
     "next": "Kyriades 1",
     "sort_key": "Kyriaekklesia"
   },
   {
     "lemma": "Kyriades 1",
-    "previous": "κυρία ἐκκλησία",
+    "previous": "Κυρία ἐκκλησία",
     "next": "Kyriades 2",
     "redirect": true,
     "chapters": [
