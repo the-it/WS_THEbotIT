@@ -3786,7 +3786,7 @@
   },
   {
     "lemma": "Deukalion",
-    "previous": "Deukalidai",
+    "previous": "Devite",
     "next": "Deultum",
     "wp_link": "w:de:Deukalion",
     "chapters": [
@@ -5228,6 +5228,7 @@
     "lemma": "Διαδικασία",
     "previous": "Diades 2",
     "next": "Diadochos",
+    "sort_key": "Diadikasia",
     "chapters": [
       {
         "start": 305,
@@ -5252,6 +5253,7 @@
     "lemma": "Διαδόσεις",
     "previous": "Diadochos",
     "next": "Diadumenianus",
+    "sort_key": "Diadoseis",
     "chapters": [
       {
         "start": 307,
@@ -5709,6 +5711,7 @@
     "lemma": "Διαλλακταί",
     "previous": "Diallage",
     "next": "Diallos",
+    "sort_key": "Diallaktai",
     "chapters": [
       {
         "start": 322,
@@ -10374,7 +10377,7 @@
   {
     "lemma": "Diodoros 60",
     "previous": "Diodoros 59",
-    "next": "Diodoru nesos",
+    "next": "Διοδώρου νῆσος",
     "chapters": [
       {
         "start": 714,
@@ -10384,9 +10387,10 @@
     ]
   },
   {
-    "lemma": "Diodoru nesos",
+    "lemma": "Διοδώρου νῆσος",
     "previous": "Diodoros 60",
     "next": "Diodotos 1",
+    "sort_key": "Diodoru nesos",
     "chapters": [
       {
         "start": 714,
@@ -10397,8 +10401,9 @@
   },
   {
     "lemma": "Diodotos 1",
-    "previous": "Diodoru nesos",
+    "previous": "Διοδώρου νῆσος",
     "next": "Diodotos 2",
+    "sort_key": "Diodotos 01",
     "chapters": [
       {
         "start": 714,
@@ -10411,6 +10416,7 @@
     "lemma": "Diodotos 2",
     "previous": "Diodotos 1",
     "next": "Diodotos 3",
+    "sort_key": "Diodotos 02",
     "chapters": [
       {
         "start": 714,
@@ -10423,6 +10429,7 @@
     "lemma": "Diodotos 3",
     "previous": "Diodotos 2",
     "next": "Diodotos 4",
+    "sort_key": "Diodotos 03",
     "chapters": [
       {
         "start": 714,
@@ -10435,6 +10442,7 @@
     "lemma": "Diodotos 4",
     "previous": "Diodotos 3",
     "next": "Diodotos 5",
+    "sort_key": "Diodotos 04",
     "chapters": [
       {
         "start": 714,
@@ -10447,6 +10455,7 @@
     "lemma": "Diodotos 5",
     "previous": "Diodotos 4",
     "next": "Diodotos 6",
+    "sort_key": "Diodotos 05",
     "chapters": [
       {
         "start": 714,
@@ -10459,6 +10468,7 @@
     "lemma": "Diodotos 6",
     "previous": "Diodotos 5",
     "next": "Diodotos 7",
+    "sort_key": "Diodotos 06",
     "chapters": [
       {
         "start": 714,
@@ -10471,6 +10481,7 @@
     "lemma": "Diodotos 7",
     "previous": "Diodotos 6",
     "next": "Diodotos 8",
+    "sort_key": "Diodotos 07",
     "chapters": [
       {
         "start": 714,
@@ -10483,6 +10494,8 @@
     "lemma": "Diodotos 8",
     "previous": "Diodotos 7",
     "next": "Diodotos 9",
+    "sort_key": "Diodotos 08",
+    "redirect": "Tryphon 1",
     "chapters": [
       {
         "start": 715,
@@ -10494,6 +10507,8 @@
     "lemma": "Diodotos 9",
     "previous": "Diodotos 8",
     "next": "Diodotos 10",
+    "sort_key": "Diodotos 09",
+    "redirect": "Aelius 45",
     "chapters": [
       {
         "start": 715,
@@ -10625,6 +10640,7 @@
     "lemma": "Diodurum",
     "previous": "Diodotos 19",
     "next": "Dioecesis",
+    "redirect": "Divodurum",
     "chapters": [
       {
         "start": 716,
