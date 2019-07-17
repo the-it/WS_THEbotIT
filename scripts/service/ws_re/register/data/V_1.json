@@ -6701,7 +6701,7 @@
   {
     "lemma": "Didaskaliai",
     "previous": "Didaskalia",
-    "next": "Διδάσκαλος",
+    "next": "Διδάσκαλoς",
     "wp_link": "w:de:Didaskalie",
     "chapters": [
       {
@@ -6712,7 +6712,7 @@
     ]
   },
   {
-    "lemma": "Διδάσκαλος",
+    "lemma": "Διδάσκαλoς",
     "previous": "Didaskaliai",
     "next": "Didattium",
     "sort_key": "Didaskalos",
@@ -6726,7 +6726,7 @@
   },
   {
     "lemma": "Didattium",
-    "previous": "Διδάσκαλος",
+    "previous": "Διδάσκαλoς",
     "next": "Dide",
     "redirect": true,
     "chapters": [
@@ -10771,7 +10771,7 @@
   {
     "lemma": "Diogeneia 4",
     "previous": "Diogeneia 3",
-    "next": "Diogeneiastai",
+    "next": "Διογενειασταί",
     "chapters": [
       {
         "start": 734,
@@ -10781,7 +10781,7 @@
     ]
   },
   {
-    "lemma": "Diogeneiastai",
+    "lemma": "Διογενειασταί",
     "previous": "Diogeneia 4",
     "next": "Diogeneion",
     "chapters": [
@@ -10794,7 +10794,7 @@
   },
   {
     "lemma": "Diogeneion",
-    "previous": "Diogeneiastai",
+    "previous": "Διογενειασταί",
     "next": "Diogenes 7",
     "chapters": [
       {
@@ -10808,6 +10808,7 @@
     "lemma": "Diogenes 7",
     "previous": "Diogeneion",
     "next": "Diogenes 8",
+    "sort_key": "Diogenes 07",
     "chapters": [
       {
         "start": 734,
@@ -10819,7 +10820,8 @@
   {
     "lemma": "Diogenes 8",
     "previous": "Diogenes 7",
-    "next": "Diogenes 1",
+    "next": "Diogenes 9",
+    "sort_key": "Diogenes 08",
     "chapters": [
       {
         "start": 734,
@@ -10830,8 +10832,9 @@
   },
   {
     "lemma": "Diogenes 1",
-    "previous": "Diogenes 8",
+    "previous": "Diogeneion",
     "next": "Diogenes 2",
+    "sort_key": "Diogenes 01",
     "chapters": [
       {
         "start": 735,
@@ -10844,6 +10847,7 @@
     "lemma": "Diogenes 2",
     "previous": "Diogenes 1",
     "next": "Diogenes 3",
+    "sort_key": "Diogenes 02",
     "chapters": [
       {
         "start": 735,
@@ -10856,6 +10860,7 @@
     "lemma": "Diogenes 3",
     "previous": "Diogenes 2",
     "next": "Diogenes 4",
+    "sort_key": "Diogenes 03",
     "chapters": [
       {
         "start": 735,
@@ -10868,6 +10873,7 @@
     "lemma": "Diogenes 4",
     "previous": "Diogenes 3",
     "next": "Diogenes 5",
+    "sort_key": "Diogenes 04",
     "chapters": [
       {
         "start": 735,
@@ -10880,6 +10886,7 @@
     "lemma": "Diogenes 5",
     "previous": "Diogenes 4",
     "next": "Diogenes 6",
+    "sort_key": "Diogenes 05",
     "chapters": [
       {
         "start": 735,
@@ -10891,7 +10898,8 @@
   {
     "lemma": "Diogenes 6",
     "previous": "Diogenes 5",
-    "next": "Diogenes 9",
+    "next": "Diogenes 7",
+    "sort_key": "Diogenes 06",
     "chapters": [
       {
         "start": 735,
@@ -10902,8 +10910,9 @@
   },
   {
     "lemma": "Diogenes 9",
-    "previous": "Diogenes 6",
+    "previous": "Diogenes 8",
     "next": "Diogenes 10",
+    "sort_key": "Diogenes 09",
     "chapters": [
       {
         "start": 735,
@@ -10939,7 +10948,7 @@
   {
     "lemma": "Diogenes 12",
     "previous": "Diogenes 11",
-    "next": "Diogenes 23",
+    "next": "Diogenes 13",
     "chapters": [
       {
         "start": 735,
@@ -10950,8 +10959,9 @@
   },
   {
     "lemma": "Diogenes 23",
-    "previous": "Diogenes 12",
+    "previous": "Diogenes 22",
     "next": "Diogenes 13",
+    "redirect": "Claudius 131",
     "chapters": [
       {
         "start": 735,
@@ -10961,7 +10971,7 @@
   },
   {
     "lemma": "Diogenes 13",
-    "previous": "Diogenes 23",
+    "previous": "Diogenes 12",
     "next": "Diogenes 14",
     "chapters": [
       {
@@ -11070,7 +11080,7 @@
   {
     "lemma": "Diogenes 22",
     "previous": "Diogenes 21",
-    "next": "Diogenes 24",
+    "next": "Diogenes 23",
     "chapters": [
       {
         "start": 736,
@@ -11081,7 +11091,7 @@
   },
   {
     "lemma": "Diogenes 24",
-    "previous": "Diogenes 22",
+    "previous": "Diogenes 23",
     "next": "Diogenes 25",
     "chapters": [
       {
@@ -11166,7 +11176,7 @@
   {
     "lemma": "Diogenes 31",
     "previous": "Diogenes 30",
-    "next": "Diogenes 36",
+    "next": "Diogenes 32",
     "chapters": [
       {
         "start": 736,
@@ -11177,8 +11187,8 @@
   },
   {
     "lemma": "Diogenes 36",
-    "previous": "Diogenes 31",
-    "next": "Diogenes 32",
+    "previous": "Diogenes 35",
+    "next": "Diogenes 37",
     "chapters": [
       {
         "start": 736,
@@ -11189,7 +11199,7 @@
   },
   {
     "lemma": "Diogenes 32",
-    "previous": "Diogenes 36",
+    "previous": "Diogenes 31",
     "next": "Diogenes 33",
     "chapters": [
       {
@@ -11226,7 +11236,7 @@
   {
     "lemma": "Diogenes 35",
     "previous": "Diogenes 34",
-    "next": "Diogenes 37",
+    "next": "Diogenes 36",
     "chapters": [
       {
         "start": 737,
@@ -11237,7 +11247,7 @@
   },
   {
     "lemma": "Diogenes 37",
-    "previous": "Diogenes 35",
+    "previous": "Diogenes 36",
     "next": "Diogenes 38",
     "chapters": [
       {
