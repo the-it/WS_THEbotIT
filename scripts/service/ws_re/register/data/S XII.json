@@ -825,12 +825,20 @@
   {
     "lemma": "In Alpe Iulia",
     "previous": "Allius 1a",
-    "next": "Amelas",
     "sort_key": "Alpe Iulia, In"
   },
   {
+    "lemma": "In Alpe Iulia",
+    "next": "Amelas"
+  },
+  {
     "lemma": "Amelas",
-    "previous": "In Alpe Iulia"
+    "previous": "In Alpe Iulia",
+    "next": "Anaxagoras 4"
+  },
+  {
+    "lemma": "Anaxagoras 4",
+    "previous": "Amelas"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -1908,7 +1916,12 @@
   },
   {
     "lemma": "Chalai",
-    "previous": "Cestius 6a"
+    "previous": "Cestius 6a",
+    "next": "Chalaion"
+  },
+  {
+    "lemma": "Chalaion",
+    "previous": "Chalai"
   },
   {
     "lemma": "Egrilius 2a",
@@ -2364,7 +2377,12 @@
   },
   {
     "lemma": "Curtius 37b",
-    "previous": "Curtius 37a"
+    "previous": "Curtius 37a",
+    "next": "Cutius 1a"
+  },
+  {
+    "lemma": "Cutius 1a",
+    "previous": "Curtius 37b"
   },
   {
     "lemma": "Curtius 36c",
@@ -2412,6 +2430,7 @@
   {
     "lemma": "Dasumius aa",
     "previous": "Cutius 1a",
+    "next": "Demokritos 6",
     "chapters": [
       {
         "start": 193,
@@ -2421,8 +2440,11 @@
     ]
   },
   {
+    "lemma": "Demokritos 6",
+    "previous": "Dasumius aa"
+  },
+  {
     "lemma": "Dasumius 1a",
-    "previous": null,
     "next": "Demokritos 6"
   },
   {

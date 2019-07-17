@@ -33448,7 +33448,8 @@
   {
     "lemma": "Χρυσοῦν στόμα",
     "previous": "Χρυσοῦν ὄρος",
-    "next": "Chrysun theros",
+    "next": "Χρυσοῦν θέρος",
+    "sort_key": "Chrysun stoma",
     "chapters": [
       {
         "start": 2522,
@@ -33458,9 +33459,10 @@
     ]
   },
   {
-    "lemma": "Chrysun theros",
+    "lemma": "Χρυσοῦν θέρος",
     "previous": "Χρυσοῦν στόμα",
-    "next": "Chrysus",
+    "next": "Χρυσοῦς",
+    "sort_key": "Chrysun theros",
     "chapters": [
       {
         "start": 2522,
@@ -33470,9 +33472,11 @@
     ]
   },
   {
-    "lemma": "Chrysus",
-    "previous": "Chrysun theros",
+    "lemma": "Χρυσοῦς",
+    "previous": "Χρυσοῦν θέρος",
     "next": "Chthimena",
+    "sort_key": "Chrysus",
+    "redirect": "Aureus",
     "chapters": [
       {
         "start": 2522,
@@ -33482,7 +33486,7 @@
   },
   {
     "lemma": "Chthimena",
-    "previous": "Xρυσοῦς",
+    "previous": "Χρυσοῦς",
     "next": "Chthon",
     "redirect": "Ktimena",
     "chapters": [

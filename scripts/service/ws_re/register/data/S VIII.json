@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Achaios 8",
+    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -69,7 +70,22 @@
   },
   {
     "lemma": "Alsietina aqua",
-    "previous": "Alko"
+    "previous": "Alko",
+    "next": "Amabilis 1a"
+  },
+  {
+    "lemma": "Amabilis 1a",
+    "previous": "Alsietina aqua",
+    "next": "Amblichos"
+  },
+  {
+    "lemma": "Amblichos",
+    "previous": "Amabilis 1a",
+    "next": "Ameisenlöwe"
+  },
+  {
+    "lemma": "Ameisenlöwe",
+    "previous": "Amblichos"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -346,7 +362,12 @@
   },
   {
     "lemma": "Asklepiodoros 13",
-    "previous": "Asklepiades 48a"
+    "previous": "Asklepiades 48a",
+    "next": "Attica aqua"
+  },
+  {
+    "lemma": "Attica aqua",
+    "previous": "Asklepiodoros 13"
   },
   {
     "lemma": "Aristonidas 2",
@@ -402,10 +423,12 @@
   },
   {
     "lemma": "Attica aqua",
-    "previous": "Asklepiodoros 13"
+    "previous": "Asklepiodoros 13",
+    "next": "Augusta aqua 1"
   },
   {
     "lemma": "Augusta aqua 1",
+    "previous": "Attica aqua",
     "next": "Augusta aqua 2"
   },
   {
@@ -462,7 +485,22 @@
   },
   {
     "lemma": "Benenatus 4",
-    "previous": "Benenatus 3"
+    "previous": "Benenatus 3",
+    "next": "Benenatus 5"
+  },
+  {
+    "lemma": "Benenatus 5",
+    "previous": "Benenatus 4",
+    "next": "Benenatus 6"
+  },
+  {
+    "lemma": "Benenatus 6",
+    "previous": "Benenatus 5",
+    "next": "Bewässerungsanlagen"
+  },
+  {
+    "lemma": "Bewässerungsanlagen",
+    "previous": "Benenatus 6"
   },
   {
     "lemma": "Asklepiades 48a",
@@ -718,7 +756,12 @@
   },
   {
     "lemma": "December 2",
-    "previous": "Damokritos 4"
+    "previous": "Damokritos 4",
+    "next": "Demetrios 125b"
+  },
+  {
+    "lemma": "Demetrios 125b",
+    "previous": "December 2"
   },
   {
     "lemma": "Claudia aqua",

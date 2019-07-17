@@ -992,7 +992,12 @@
   },
   {
     "lemma": "Carucla",
-    "previous": "Carsitani"
+    "previous": "Carsitani",
+    "next": "Cassius 67"
+  },
+  {
+    "lemma": "Cassius 67",
+    "previous": "Carucla"
   },
   {
     "lemma": "Carrea (Carreum, Correa)",
@@ -1047,7 +1052,27 @@
   },
   {
     "lemma": "Catillus 4",
-    "previous": "Catilius 4"
+    "previous": "Catilius 4",
+    "next": "Caturniacus 2"
+  },
+  {
+    "lemma": "Caturniacus 2",
+    "previous": "Catillus 4",
+    "next": "Caudalascus"
+  },
+  {
+    "lemma": "Caudalascus",
+    "previous": "Caturniacus 2",
+    "next": "Cavaturini"
+  },
+  {
+    "lemma": "Cavaturini",
+    "previous": "Caudalascus",
+    "next": "Celelates"
+  },
+  {
+    "lemma": "Celelates",
+    "previous": "Cavaturini"
   },
   {
     "lemma": "Cassius",

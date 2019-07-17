@@ -5074,8 +5074,7 @@
   {
     "lemma": "Alilat",
     "previous": "Alikadra",
-    "next": "Alimne",
-    "wp_link": "w:de:al-Lāt"
+    "next": "Alimne"
   },
   {
     "lemma": "Alimne",
@@ -6731,7 +6730,12 @@
   },
   {
     "lemma": "Anatolius 14",
-    "previous": "Anatha 1"
+    "previous": "Anatha 1",
+    "next": "Anax"
+  },
+  {
+    "lemma": "Anax",
+    "previous": "Anatolius 14"
   },
   {
     "lemma": "Anastasiupolis 2",
@@ -12281,7 +12285,12 @@
   },
   {
     "lemma": "Burburus",
-    "previous": "Bura 2"
+    "previous": "Bura 2",
+    "next": "Burebista"
+  },
+  {
+    "lemma": "Burebista",
+    "previous": "Burburus"
   },
   {
     "lemma": "Armenon 3a",
@@ -14491,7 +14500,12 @@
     "previous": "Avidius 4"
   },
   {
+    "lemma": "Avidius 1",
+    "next": "Avidius 3"
+  },
+  {
     "lemma": "Avidius 3",
+    "previous": "Avidius 1",
     "next": "Avidius 4"
   },
   {
@@ -14930,12 +14944,25 @@
   },
   {
     "lemma": "Aurelius 220a",
-    "next": "Aurelius 223a",
     "sort_key": "Aurelius"
   },
   {
+    "lemma": "Aurelius 220a",
+    "next": "Aurelius 223a"
+  },
+  {
     "lemma": "Aurelius 223a",
-    "previous": "Aurelius 220a"
+    "previous": "Aurelius 220a",
+    "next": "Aurelius 229a"
+  },
+  {
+    "lemma": "Aurelius 229a",
+    "previous": "Aurelius 223a",
+    "next": "Aurelius 233"
+  },
+  {
+    "lemma": "Aurelius 233",
+    "previous": "Aurelius 229a"
   },
   {
     "lemma": "Aurelius 220a",
@@ -15181,6 +15208,7 @@
   },
   {
     "lemma": "Autonomos a",
+    "previous": null,
     "next": "Autonomos"
   },
   {
@@ -15417,6 +15445,7 @@
   {
     "lemma": "Azbaal 2",
     "previous": "Azbaal 1",
+    "next": null,
     "chapters": [
       {
         "start": 234,
@@ -16333,7 +16362,12 @@
   },
   {
     "lemma": "Bastareus",
-    "previous": "Bastagas"
+    "previous": "Bastagas",
+    "next": "Batava"
+  },
+  {
+    "lemma": "Batava",
+    "previous": "Bastareus"
   },
   {
     "lemma": "Basilistai",
@@ -17022,7 +17056,13 @@
   },
   {
     "lemma": "Bienus",
-    "previous": "Biennos 1"
+    "previous": "Biennos 1",
+    "next": "Bile",
+    "sort_key": "Bienus 1"
+  },
+  {
+    "lemma": "Bile",
+    "previous": "Bienus"
   },
   {
     "lemma": "Bienus",
@@ -18226,11 +18266,16 @@
   },
   {
     "lemma": "Caecilius 69ff.",
-    "previous": "Caecilius 65",
-    "next": null
+    "previous": "Caecilius 65"
+  },
+  {
+    "lemma": "Caecilius 104",
+    "previous": null,
+    "next": "Caecilius 112"
   },
   {
     "lemma": "Caecilius 112",
+    "previous": "Caecilius 104",
     "next": "Caecilius 117"
   },
   {
@@ -19307,6 +19352,7 @@
   {
     "lemma": "Cato 2",
     "previous": "Catius 10a",
+    "next": null,
     "chapters": [
       {
         "start": 279,
@@ -20086,10 +20132,10 @@
   {
     "lemma": "Chronos 2",
     "previous": "Chronica Italica",
-    "next": "Chryseïs 5"
+    "next": "Chryseis 5"
   },
   {
-    "lemma": "Chryseïs 5",
+    "lemma": "Chryseis 5",
     "previous": "Chronos 2",
     "next": "Chrysermos 4",
     "chapters": [
@@ -20102,7 +20148,7 @@
   },
   {
     "lemma": "Chrysermos 4",
-    "previous": "Chryseïs 5",
+    "previous": "Chryseis 5",
     "next": "Chrysias",
     "chapters": [
       {
@@ -21611,7 +21657,17 @@
   },
   {
     "lemma": "Dalana(?)",
-    "previous": "Daitis"
+    "previous": "Daitis",
+    "next": "Damagetos 3"
+  },
+  {
+    "lemma": "Damagetos 3",
+    "previous": "Dalana(?)",
+    "next": "Damaios a"
+  },
+  {
+    "lemma": "Damaios a",
+    "previous": "Damagetos 3"
   },
   {
     "lemma": "Custidius",
@@ -21690,12 +21746,25 @@
   {
     "lemma": "Damaios a",
     "previous": "Damagetos 3",
-    "next": "Damasias 1",
     "sort_key": "Damaios 0a"
   },
   {
+    "lemma": "Damaios a",
+    "next": "Damasias 1"
+  },
+  {
     "lemma": "Damasias 1",
-    "previous": "Damaios a"
+    "previous": "Damaios a",
+    "next": "Damasias 3"
+  },
+  {
+    "lemma": "Damasias 3",
+    "previous": "Damasias 1",
+    "next": "Damasippos 3a"
+  },
+  {
+    "lemma": "Damasippos 3a",
+    "previous": "Damasias 3"
   },
   {
     "lemma": "Damaios a",
@@ -21742,7 +21811,6 @@
   {
     "lemma": "Damatrios 2a",
     "previous": "Damaskos 3",
-    "next": "Damea",
     "chapters": [
       {
         "start": 335,
@@ -21752,8 +21820,17 @@
     ]
   },
   {
+    "lemma": "Damatrios 2",
+    "next": "Damea"
+  },
+  {
     "lemma": "Damea",
-    "previous": "Damatrios 2a"
+    "previous": "Damatrios 2",
+    "next": "Damis 2a"
+  },
+  {
+    "lemma": "Damis 2a",
+    "previous": "Damea"
   },
   {
     "lemma": "Damatrios 2",
