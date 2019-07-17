@@ -94,6 +94,25 @@ class TestIntegrationRegister(TestCase):
             errors.append(f"COUNT ERRORS: {count}")
             raise AssertionError("\n".join(errors))
 
+    def test_previous_double_lemmas(self):
+        LEMMA_DISTANCE = 20
+        errors = []
+        for register in self.registers.volumes.values():
+            lemmas = dict()
+            for i, lemma in enumerate(register):
+                lemma = lemma["lemma"]
+                if lemma not in lemmas:
+                    lemmas[lemma] = i
+                else:
+                    if i - lemmas[lemma] < LEMMA_DISTANCE:  # pragma: no cover
+                        errors.append(f"distance problem {register.volume.name}, {lemma}, {lemmas[lemma]}, {i}")
+                    lemmas[lemma] = i
+        if errors:  # pragma: no cover
+            count = len(errors)
+            errors.insert(0, f"COUNT ERRORS: {count}")
+            errors.append(f"COUNT ERRORS: {count}")
+            raise AssertionError("\n".join(errors))
+
     @skip("only for analysis")
     def test_no_double_lemma(self):  # pragma: no cover
         for register in self.registers.volumes.values():
