@@ -822,7 +822,12 @@
   },
   {
     "lemma": "Cuneus 4",
-    "previous": "Cornelius 395"
+    "previous": "Cornelius 395",
+    "next": "Cuneus 5"
+  },
+  {
+    "lemma": "Cuneus 5",
+    "previous": "Cuneus 4"
   },
   {
     "lemma": "Claudius 211a",
@@ -1625,7 +1630,8 @@
   },
   {
     "lemma": "Parthenion 1",
-    "previous": "Parrhasia"
+    "previous": "Parrhasia",
+    "next": null
   },
   {
     "lemma": "Parrharia",

@@ -318,7 +318,12 @@
   },
   {
     "lemma": "Aurelius 216a",
-    "previous": "Aurelius 184"
+    "previous": "Aurelius 184",
+    "next": "Aurelius 234a"
+  },
+  {
+    "lemma": "Aurelius 234a",
+    "previous": "Aurelius 216a"
   },
   {
     "lemma": "Auction 1",
@@ -462,7 +467,8 @@
   },
   {
     "lemma": "χειρόγραφον",
-    "previous": "Canaliclarius"
+    "previous": "Canaliclarius",
+    "next": null
   },
   {
     "lemma": "Canaliclarius",
@@ -503,7 +509,12 @@
     ]
   },
   {
+    "lemma": "χρηματισμός",
+    "next": "Claudius 207"
+  },
+  {
     "lemma": "Claudius 207",
+    "previous": "χρηματισμός",
     "next": "Clementius 1"
   },
   {
@@ -648,7 +659,12 @@
   },
   {
     "lemma": "Cuspius 2a",
-    "previous": "Crepereius 5a"
+    "previous": "Crepereius 5a",
+    "next": "Daimonismos"
+  },
+  {
+    "lemma": "Daimonismos",
+    "previous": "Cuspius 2a"
   },
   {
     "lemma": "Crepereius 3b",

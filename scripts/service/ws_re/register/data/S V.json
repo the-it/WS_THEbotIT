@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Agamemnon 3",
+    "previous": null,
     "next": "Agathon 14b",
     "chapters": [
       {
@@ -350,7 +351,12 @@
   },
   {
     "lemma": "Cheirisophos 1a",
-    "previous": "Chairemon 2a"
+    "previous": "Chairemon 2a",
+    "next": "Claudius 41a"
+  },
+  {
+    "lemma": "Claudius 41a",
+    "previous": "Cheirisophos 1a"
   },
   {
     "lemma": "Bias 10",

@@ -308,7 +308,6 @@
   },
   {
     "lemma": "Accaus 2",
-    "previous": null,
     "next": "Acharneus",
     "chapters": [
       {
@@ -451,7 +450,13 @@
   },
   {
     "lemma": "Aelius 67a",
-    "previous": "Aelius 42b"
+    "previous": "Aelius 42b",
+    "next": "Aelius 118",
+    "sort_key": "Aelius 067a"
+  },
+  {
+    "lemma": "Aelius 118",
+    "previous": "Aelius 67a"
   },
   {
     "lemma": "Aelius 27",
@@ -581,7 +586,12 @@
   },
   {
     "lemma": "Aëtos 6",
-    "previous": "Aëtos 5"
+    "previous": "Aëtos 5",
+    "next": "Afer a"
+  },
+  {
+    "lemma": "Afer a",
+    "previous": "Aëtos 6"
   },
   {
     "lemma": "Aemilius 144",
@@ -814,12 +824,20 @@
   },
   {
     "lemma": "Alexandros 51",
-    "next": "Alexandros 104a",
     "sort_key": "Alexandros"
   },
   {
+    "lemma": "Alexandros 51",
+    "next": "Alexandros 104a"
+  },
+  {
     "lemma": "Alexandros 104a",
-    "previous": "Alexandros 51"
+    "previous": "Alexandros 51",
+    "next": "Alexanor"
+  },
+  {
+    "lemma": "Alexanor",
+    "previous": "Alexandros 104a"
   },
   {
     "lemma": "Alexandros 51",
@@ -1123,7 +1141,8 @@
   },
   {
     "lemma": "Anteros 6",
-    "previous": "Anomia"
+    "previous": "Anomia",
+    "next": null
   },
   {
     "lemma": "Annius 94",
@@ -1279,7 +1298,17 @@
   },
   {
     "lemma": "Apolaustus 3",
-    "previous": "Aphras"
+    "previous": "Aphras",
+    "next": "Apolaustus 4"
+  },
+  {
+    "lemma": "Apolaustus 4",
+    "previous": "Apolaustus 3",
+    "next": "Apolaustus 5"
+  },
+  {
+    "lemma": "Apolaustus 5",
+    "previous": "Apolaustus 4"
   },
   {
     "lemma": "Apelles 8",
@@ -1531,10 +1560,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε"
+    "next": "Ἀρχε(..."
   },
   {
-    "lemma": "Ἀρχε",
+    "lemma": "Ἀρχε(...",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1548,7 +1577,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε",
+    "previous": "Ἀρχε(...",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -2239,6 +2268,15 @@
   },
   {
     "lemma": "Autolykos 6",
+    "next": "Babyllios",
+    "sort_key": "Auto(---"
+  },
+  {
+    "lemma": "Babyllios",
+    "previous": "Autolykos 6"
+  },
+  {
+    "lemma": "Autolykos 6",
     "sort_key": "Auto(---"
   },
   {
@@ -2288,10 +2326,10 @@
   {
     "lemma": "Bathyllos 7",
     "previous": "Βασιλείδης 1a",
-    "next": "Βελεμινάτου"
+    "next": "(Βελε)μινάτου"
   },
   {
-    "lemma": "Βελεμινάτου",
+    "lemma": "(Βελε)μινάτου",
     "previous": "Bathyllos 7",
     "next": "Beste",
     "sort_key": "Beleminatu",
@@ -2305,7 +2343,7 @@
   },
   {
     "lemma": "Beste",
-    "previous": "Βελεμινάτου",
+    "previous": "(Βελε)μινάτου",
     "next": "Bestia deselutia",
     "redirect": "Bestia deselutia",
     "chapters": [
@@ -2398,7 +2436,12 @@
   },
   {
     "lemma": "Carmen adversus paganos",
-    "previous": "Cardamates"
+    "previous": "Cardamates",
+    "next": "Castronius"
+  },
+  {
+    "lemma": "Castronius",
+    "previous": "Carmen adversus paganos"
   },
   {
     "lemma": "Candidianae",
@@ -2462,7 +2505,12 @@
     ]
   },
   {
+    "lemma": "Chairestratos 1",
+    "next": "Chairestratos 1a"
+  },
+  {
     "lemma": "Chairestratos 1a",
+    "previous": "Chairestratos 1",
     "next": "Chares 12"
   },
   {
@@ -2489,7 +2537,8 @@
   },
   {
     "lemma": "χειρόγραφον",
-    "previous": "Charidemos 4a"
+    "previous": "Charidemos 4a",
+    "next": null
   },
   {
     "lemma": "Charidemos 4a",
@@ -2497,12 +2546,20 @@
   },
   {
     "lemma": "Chirographum",
-    "previous": "Charidemos 4a",
+    "previous": "Charidemos 4a"
+  },
+  {
+    "lemma": "χειρόγραφον",
     "next": "Choraules"
   },
   {
     "lemma": "Choraules",
-    "previous": "Chirographum"
+    "previous": "χειρόγραφον",
+    "next": "Chryses 3"
+  },
+  {
+    "lemma": "Chryses 3",
+    "previous": "Choraules"
   },
   {
     "lemma": "χειρόγραφον",

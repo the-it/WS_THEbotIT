@@ -245,7 +245,17 @@
   },
   {
     "lemma": "Arrotrebarum promunturium",
-    "previous": "Arranius 2"
+    "previous": "Arranius 2",
+    "next": "Arsatzia"
+  },
+  {
+    "lemma": "Arsatzia",
+    "previous": "Arrotrebarum promunturium",
+    "next": "Ascheion"
+  },
+  {
+    "lemma": "Ascheion",
+    "previous": "Arsatzia"
   },
   {
     "lemma": "Antonius 95a",
@@ -345,6 +355,7 @@
   },
   {
     "lemma": "Ascheion",
+    "previous": null,
     "next": "Ἀσπὶς ἄκρα"
   },
   {
@@ -506,7 +517,16 @@
   {
     "lemma": "Bura 1",
     "previous": "Buphagion",
-    "next": null
+    "next": "Buraïkos 1"
+  },
+  {
+    "lemma": "Buraïkos 1",
+    "previous": "Bura 1",
+    "next": "Cassius 84"
+  },
+  {
+    "lemma": "Cassius 84",
+    "previous": "Buraïkos 1"
   },
   {
     "lemma": "Aurelius 157a",
@@ -1877,6 +1897,7 @@
   },
   {
     "lemma": "Nerion",
+    "previous": null,
     "next": "νεῦσις"
   },
   {
@@ -1899,7 +1920,8 @@
   },
   {
     "lemma": "Ninon",
-    "previous": "Nikochis"
+    "previous": "Nikochis",
+    "next": null
   },
   {
     "lemma": "Neratius 15a",
@@ -2413,6 +2435,12 @@
     "lemma": "Pontius 44"
   },
   {
+    "lemma": "Iberia"
+  },
+  {
+    "lemma": "Pontius 44"
+  },
+  {
     "lemma": "Iberia",
     "next": "Pontos Euxeinos"
   },
@@ -2431,6 +2459,12 @@
   {
     "lemma": "Seuthopolis",
     "previous": "Pontos Euxeinos"
+  },
+  {
+    "lemma": "M. Porcius Verus 45"
+  },
+  {
+    "lemma": "Seuthopolis"
   },
   {
     "lemma": "M. Porcius Verus 45"
