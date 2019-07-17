@@ -3786,7 +3786,7 @@
   },
   {
     "lemma": "Deukalion",
-    "previous": "Devite",
+    "previous": "Deukalidai",
     "next": "Deultum",
     "wp_link": "w:de:Deukalion",
     "chapters": [
@@ -10795,38 +10795,12 @@
   {
     "lemma": "Diogeneion",
     "previous": "Διογενειασταί",
-    "next": "Diogenes 7",
+    "next": "Diogenes 1",
     "chapters": [
       {
         "start": 734,
         "end": 735,
         "author": "Wachsmuth"
-      }
-    ]
-  },
-  {
-    "lemma": "Diogenes 7",
-    "previous": "Diogeneion",
-    "next": "Diogenes 8",
-    "sort_key": "Diogenes 07",
-    "chapters": [
-      {
-        "start": 734,
-        "end": 734,
-        "author": "Kirchner"
-      }
-    ]
-  },
-  {
-    "lemma": "Diogenes 8",
-    "previous": "Diogenes 7",
-    "next": "Diogenes 9",
-    "sort_key": "Diogenes 08",
-    "chapters": [
-      {
-        "start": 734,
-        "end": 734,
-        "author": "Kirchner"
       }
     ]
   },
@@ -10909,6 +10883,32 @@
     ]
   },
   {
+    "lemma": "Diogenes 7",
+    "previous": "Diogenes 6",
+    "next": "Diogenes 8",
+    "sort_key": "Diogenes 07",
+    "chapters": [
+      {
+        "start": 734,
+        "end": 734,
+        "author": "Kirchner"
+      }
+    ]
+  },
+  {
+    "lemma": "Diogenes 8",
+    "previous": "Diogenes 7",
+    "next": "Diogenes 9",
+    "sort_key": "Diogenes 08",
+    "chapters": [
+      {
+        "start": 734,
+        "end": 734,
+        "author": "Kirchner"
+      }
+    ]
+  },
+  {
     "lemma": "Diogenes 9",
     "previous": "Diogenes 8",
     "next": "Diogenes 10",
@@ -10954,18 +10954,6 @@
         "start": 735,
         "end": 735,
         "author": "Kirchner"
-      }
-    ]
-  },
-  {
-    "lemma": "Diogenes 23",
-    "previous": "Diogenes 22",
-    "next": "Diogenes 13",
-    "redirect": "Claudius 131",
-    "chapters": [
-      {
-        "start": 735,
-        "end": 735
       }
     ]
   },
@@ -11090,6 +11078,18 @@
     ]
   },
   {
+    "lemma": "Diogenes 23",
+    "previous": "Diogenes 22",
+    "next": "Diogenes 24",
+    "redirect": "Claudius 131",
+    "chapters": [
+      {
+        "start": 735,
+        "end": 735
+      }
+    ]
+  },
+  {
     "lemma": "Diogenes 24",
     "previous": "Diogenes 23",
     "next": "Diogenes 25",
@@ -11186,18 +11186,6 @@
     ]
   },
   {
-    "lemma": "Diogenes 36",
-    "previous": "Diogenes 35",
-    "next": "Diogenes 37",
-    "chapters": [
-      {
-        "start": 736,
-        "end": 736,
-        "author": "Dieterich"
-      }
-    ]
-  },
-  {
     "lemma": "Diogenes 32",
     "previous": "Diogenes 31",
     "next": "Diogenes 33",
@@ -11242,6 +11230,18 @@
         "start": 737,
         "end": 737,
         "author": "Reitzenstein"
+      }
+    ]
+  },
+  {
+    "lemma": "Diogenes 36",
+    "previous": "Diogenes 35",
+    "next": "Diogenes 37",
+    "chapters": [
+      {
+        "start": 736,
+        "end": 736,
+        "author": "Dieterich"
       }
     ]
   },
