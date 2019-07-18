@@ -722,7 +722,12 @@
   },
   {
     "lemma": "Albinus 4",
-    "previous": "Alba 6a"
+    "previous": "Alba 6a",
+    "next": "Albius 14"
+  },
+  {
+    "lemma": "Albius 14",
+    "previous": "Albinus 4"
   },
   {
     "lemma": "Agesilaos 7b",
@@ -824,7 +829,10 @@
   },
   {
     "lemma": "In Alpe Iulia",
-    "previous": "Allius 1a",
+    "previous": "Allius 1a"
+  },
+  {
+    "lemma": "In Alpe Iulia",
     "sort_key": "Alpe Iulia, In"
   },
   {
@@ -875,12 +883,20 @@
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1",
+    "previous": "Anaximandros 1"
+  },
+  {
+    "lemma": "Anaximenes 1",
     "next": "Andania 1"
   },
   {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 2"
+    "previous": "Anaximenes 1",
+    "next": "Andautonia"
+  },
+  {
+    "lemma": "Andautonia",
+    "previous": "Andania 1"
   },
   {
     "lemma": "Anaximenes 1",
@@ -1090,7 +1106,13 @@
   },
   {
     "lemma": "Antonius 80",
-    "previous": "Antonius 76"
+    "previous": "Antonius 76",
+    "next": "Antonius 107",
+    "sort_key": "Antonius 080"
+  },
+  {
+    "lemma": "Antonius 107",
+    "previous": "Antonius 80"
   },
   {
     "lemma": "Antonius 75.76",
@@ -1175,7 +1197,8 @@
   },
   {
     "lemma": "Ariaioi",
-    "previous": "Argura 1"
+    "previous": "Argura 1",
+    "next": null
   },
   {
     "lemma": "Antonius 76",
@@ -1921,7 +1944,12 @@
   },
   {
     "lemma": "Chalaion",
-    "previous": "Chalai"
+    "previous": "Chalai",
+    "next": "Chalke 2"
+  },
+  {
+    "lemma": "Chalke 2",
+    "previous": "Chalaion"
   },
   {
     "lemma": "Egrilius 2a",
@@ -4198,7 +4226,12 @@
   },
   {
     "lemma": "Archedemos 5",
-    "previous": "Arborius 5"
+    "previous": "Arborius 5",
+    "next": "Archedemos 6"
+  },
+  {
+    "lemma": "Archedemos 6",
+    "previous": "Archedemos 5"
   },
   {
     "lemma": "Anaximandros 1",
@@ -4232,7 +4265,17 @@
   },
   {
     "lemma": "Archedemos 6",
-    "previous": "Archedemos 5"
+    "previous": "Archedemos 5",
+    "next": "Arinthaeus 3"
+  },
+  {
+    "lemma": "Arinthaeus 3",
+    "previous": "Archedemos 6",
+    "next": "Aristophanes 12"
+  },
+  {
+    "lemma": "Aristophanes 12",
+    "previous": "Arinthaeus 3"
   },
   {
     "lemma": "Archedemos 5.6",

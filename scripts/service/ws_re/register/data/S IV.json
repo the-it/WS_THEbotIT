@@ -519,7 +519,12 @@
   },
   {
     "lemma": "Antenor 6",
-    "previous": "Anleihen"
+    "previous": "Anleihen",
+    "next": "Antibelos"
+  },
+  {
+    "lemma": "Antibelos",
+    "previous": "Antenor 6"
   },
   {
     "lemma": "Androkles 13a",
@@ -777,7 +782,12 @@
   },
   {
     "lemma": "Apollodotos 2a",
-    "previous": "Apollodoros 41a"
+    "previous": "Apollodoros 41a",
+    "next": "Apollonios 2a"
+  },
+  {
+    "lemma": "Apollonios 2a",
+    "previous": "Apollodotos 2a"
   },
   {
     "lemma": "Apollodoros 41d",
@@ -997,7 +1007,12 @@
   },
   {
     "lemma": "Aristodemos 16",
-    "previous": "Aristodemos 8a"
+    "previous": "Aristodemos 8a",
+    "next": "Aristogeiton 1a"
+  },
+  {
+    "lemma": "Aristogeiton 1a",
+    "previous": "Aristodemos 16"
   },
   {
     "lemma": "Aristobulos 14a",
@@ -1682,6 +1697,7 @@
   {
     "lemma": "Bienenzucht",
     "previous": "Berufsvereine",
+    "next": "Bion 3a",
     "chapters": [
       {
         "start": 211,
@@ -1689,6 +1705,10 @@
         "author": "Klek"
       }
     ]
+  },
+  {
+    "lemma": "Bion 3a",
+    "previous": "Bienenzucht"
   },
   {
     "lemma": "Berufsvereine",
@@ -2264,7 +2284,13 @@
   },
   {
     "lemma": "Demosthenes 4a",
-    "previous": "Demophon 10"
+    "previous": "Demophon 10",
+    "next": "Denuntiatio",
+    "sort_key": "Demosthenes 04a"
+  },
+  {
+    "lemma": "Denuntiatio",
+    "previous": "Demosthenes 4a"
   },
   {
     "lemma": "Demarchos 6",

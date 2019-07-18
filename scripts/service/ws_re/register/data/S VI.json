@@ -189,6 +189,7 @@
   },
   {
     "lemma": "Agesistratos",
+    "previous": null,
     "next": "Aiacius 2"
   },
   {
@@ -198,7 +199,8 @@
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 2"
+    "previous": "Aiacius 2",
+    "next": null
   },
   {
     "lemma": "Aiacius 3",
@@ -1270,12 +1272,20 @@
   {
     "lemma": "Claudius 357",
     "previous": "Claudius 194",
-    "next": "Claudius 415",
     "sort_key": "Claudius"
   },
   {
+    "lemma": "Claudius 357",
+    "next": "Claudius 415"
+  },
+  {
     "lemma": "Claudius 415",
-    "previous": "Claudius 357"
+    "previous": "Claudius 357",
+    "next": "Coeba(?)"
+  },
+  {
+    "lemma": "Coeba(?)",
+    "previous": "Claudius 415"
   },
   {
     "lemma": "Cincius 9",
@@ -1469,7 +1479,8 @@
   },
   {
     "lemma": "Dardanos",
-    "previous": "Cuspius 3"
+    "previous": "Cuspius 3",
+    "next": null
   },
   {
     "lemma": "Cuspius 3",
@@ -3078,6 +3089,7 @@
   {
     "lemma": "Maximus 128",
     "previous": "Maximinus 5",
+    "next": "Media provincia",
     "chapters": [
       {
         "start": 289,
@@ -3085,6 +3097,10 @@
         "author": "Opitz"
       }
     ]
+  },
+  {
+    "lemma": "Media provincia",
+    "previous": "Maximus 128"
   },
   {
     "lemma": "Maximus 26",

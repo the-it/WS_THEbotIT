@@ -49,15 +49,22 @@
   },
   {
     "lemma": "Alexandri(a)na aqua",
-    "previous": "Aisopos 6"
+    "previous": "Aisopos 6",
+    "next": null
   },
   {
     "lemma": "Aisopos 6",
+    "previous": null,
     "next": "Alexandrina aqua"
   },
   {
     "lemma": "Alexandrina aqua",
-    "previous": "Aisopos 6"
+    "previous": "Aisopos 6",
+    "next": "Alko"
+  },
+  {
+    "lemma": "Alko",
+    "previous": "Alexandrina aqua"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -3904,8 +3911,16 @@
     "previous": "Antonius 30"
   },
   {
+    "lemma": "Apollodoros 23",
+    "next": "Caesaris thronus",
+    "sort_key": "Apollonios 023"
+  },
+  {
+    "lemma": "Caesaris thronus",
+    "previous": "Apollodoros 23"
+  },
+  {
     "lemma": "Apollonios 23",
-    "previous": null,
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },

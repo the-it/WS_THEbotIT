@@ -308,6 +308,7 @@
   },
   {
     "lemma": "Accaus 2",
+    "previous": null,
     "next": "Acharneus",
     "chapters": [
       {
@@ -456,7 +457,17 @@
   },
   {
     "lemma": "Aelius 118",
-    "previous": "Aelius 67a"
+    "previous": "Aelius 67a",
+    "next": "Aelius 169"
+  },
+  {
+    "lemma": "Aelius 169",
+    "previous": "Aelius 118",
+    "next": "Aelius 174b"
+  },
+  {
+    "lemma": "Aelius 174b",
+    "previous": "Aelius 169"
   },
   {
     "lemma": "Aelius 27",
@@ -824,6 +835,15 @@
   },
   {
     "lemma": "Alexandros 51",
+    "next": "Alexandros 104a",
+    "sort_key": "Alexandros"
+  },
+  {
+    "lemma": "Alexandros 104a",
+    "previous": "Alexandros 51"
+  },
+  {
+    "lemma": "Alexandros 51",
     "sort_key": "Alexandros"
   },
   {
@@ -837,7 +857,13 @@
   },
   {
     "lemma": "Alexanor",
-    "previous": "Alexandros 104a"
+    "previous": "Alexandros 104a",
+    "next": "Alexidemos 2",
+    "redirect": "Alexenor"
+  },
+  {
+    "lemma": "Alexidemos 2",
+    "previous": "Alexanor"
   },
   {
     "lemma": "Alexandros 51",
@@ -1560,10 +1586,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε(..."
+    "next": "Ἀρχε"
   },
   {
-    "lemma": "Ἀρχε(...",
+    "lemma": "Ἀρχε",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1577,7 +1603,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε(...",
+    "previous": "Ἀρχε",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -2326,10 +2352,10 @@
   {
     "lemma": "Bathyllos 7",
     "previous": "Βασιλείδης 1a",
-    "next": "(Βελε)μινάτου"
+    "next": "Βελεμινάτου"
   },
   {
-    "lemma": "(Βελε)μινάτου",
+    "lemma": "Βελεμινάτου",
     "previous": "Bathyllos 7",
     "next": "Beste",
     "sort_key": "Beleminatu",
@@ -2343,7 +2369,7 @@
   },
   {
     "lemma": "Beste",
-    "previous": "(Βελε)μινάτου",
+    "previous": "Βελεμινάτου",
     "next": "Bestia deselutia",
     "redirect": "Bestia deselutia",
     "chapters": [
@@ -2542,11 +2568,17 @@
   },
   {
     "lemma": "Charidemos 4a",
+    "previous": null,
     "next": "Chirographum"
   },
   {
     "lemma": "Chirographum",
-    "previous": "Charidemos 4a"
+    "previous": "Charidemos 4a",
+    "next": "Choraules"
+  },
+  {
+    "lemma": "Choraules",
+    "previous": "Chirographum"
   },
   {
     "lemma": "χειρόγραφον",

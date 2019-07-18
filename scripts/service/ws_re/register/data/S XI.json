@@ -340,7 +340,12 @@
   },
   {
     "lemma": "Amythaon 2",
-    "previous": "Ammatas"
+    "previous": "Ammatas",
+    "next": "Anakreon 1"
+  },
+  {
+    "lemma": "Anakreon 1",
+    "previous": "Amythaon 2"
   },
   {
     "lemma": "Anaitis",
@@ -370,12 +375,20 @@
   },
   {
     "lemma": "Anatomie",
-    "previous": "Anartii",
+    "previous": "Anartii"
+  },
+  {
+    "lemma": "Anartii",
     "next": "Andreas 11"
   },
   {
     "lemma": "Andreas 11",
-    "previous": "Anatomie"
+    "previous": "Anartii",
+    "next": "Androkles 11"
+  },
+  {
+    "lemma": "Androkles 11",
+    "previous": "Andreas 11"
   },
   {
     "lemma": "Anartii",
@@ -623,7 +636,12 @@
   },
   {
     "lemma": "Bagaudae",
-    "previous": "Bacensis civitas"
+    "previous": "Bacensis civitas",
+    "next": "Basoretensis vicus"
+  },
+  {
+    "lemma": "Basoretensis vicus",
+    "previous": "Bagaudae"
   },
   {
     "lemma": "Azali",
