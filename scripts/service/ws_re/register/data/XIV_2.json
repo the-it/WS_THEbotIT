@@ -13707,21 +13707,9 @@
     ]
   },
   {
-    "lemma": "Maspioi",
-    "previous": "Μασφαθά",
-    "next": "Maspitianus",
-    "chapters": [
-      {
-        "start": 2122,
-        "end": 2122,
-        "author": "Weissbach"
-      }
-    ]
-  },
-  {
     "lemma": "Maspitianus",
-    "previous": "Maspioi",
-    "next": "Masreka",
+    "previous": "Μασφαθά",
+    "next": "Maspioi",
     "chapters": [
       {
         "start": 2122,
@@ -13731,8 +13719,20 @@
     ]
   },
   {
-    "lemma": "Masreka",
+    "lemma": "Maspioi",
     "previous": "Maspitianus",
+    "next": "Masreka",
+    "chapters": [
+      {
+        "start": 2122,
+        "end": 2122,
+        "author": "Weissbach"
+      }
+    ]
+  },
+  {
+    "lemma": "Masreka",
+    "previous": "Maspioi",
     "next": "Massa, Masath 1",
     "chapters": [
       {

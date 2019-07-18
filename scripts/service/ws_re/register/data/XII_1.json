@@ -410,12 +410,7 @@
     "lemma": "Κυνὸς σῆμα 4",
     "previous": "Κυνὸς σῆμα 3",
     "next": "Kynosura",
-    "sort_key": "Kynossema 4"
-  },
-  {
-    "lemma": "Κυνὸς σῆμα 4",
-    "previous": null,
-    "next": "Kynosura",
+    "sort_key": "Kynossema 4",
     "chapters": [
       {
         "start": 36,
@@ -738,13 +733,9 @@
   {
     "lemma": "Κυπαρίσσιος Κόλπος",
     "previous": "Kyparissia, -iai, Kyparissos 5",
-    "next": "Κυπαρισσι",
-    "sort_key": "Kyparissios",
-    "wp_link": "w:de:Kyparissia"
-  },
-  {
-    "lemma": "Kyparissios Kolpos",
     "next": "Kyparissiphas",
+    "sort_key": "Kyparissios",
+    "wp_link": "w:de:Kyparissia",
     "chapters": [
       {
         "start": 51,
@@ -755,7 +746,7 @@
   },
   {
     "lemma": "Kyparissiphas",
-    "previous": "Kyparissios Kolpos",
+    "previous": "Κυπαρίσσιος Κόλπος",
     "next": "Kyparissos 1",
     "chapters": [
       {
@@ -1314,7 +1305,8 @@
   {
     "lemma": "Κυρία ἐκκλησία",
     "previous": "ἡ κυρία",
-    "next": null,
+    "next": "Kyriades 1",
+    "sort_key": "Kyriaekklesia",
     "chapters": [
       {
         "start": 171,
@@ -1324,14 +1316,8 @@
     ]
   },
   {
-    "lemma": "Κυρία ἐκκλησία",
-    "previous": "ἡ κυρία",
-    "next": "Kyriades 1",
-    "sort_key": "Kyriaekklesia"
-  },
-  {
     "lemma": "Kyriades 1",
-    "previous": "κυρία ἐκκλησία",
+    "previous": "Κυρία ἐκκλησία",
     "next": "Kyriades 2",
     "redirect": true,
     "chapters": [
