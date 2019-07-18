@@ -976,7 +976,7 @@
   {
     "lemma": "Medicus",
     "previous": "Medicinae",
-    "next": "Medikarra",
+    "next": "Μεδικκάρα",
     "chapters": [
       {
         "start": 85,
@@ -986,7 +986,7 @@
     ]
   },
   {
-    "lemma": "Medikarra",
+    "lemma": "Μεδικκάρα",
     "previous": "Medicus",
     "next": "Medilas",
     "chapters": [
@@ -16200,24 +16200,12 @@
   {
     "lemma": "Mes",
     "previous": "Merula",
-    "next": "Mesa...",
-    "chapters": [
-      {
-        "start": 1071,
-        "end": 1071,
-        "author": "Treidler"
-      }
-    ]
-  },
-  {
-    "lemma": "Mesa...",
-    "previous": "Mes",
     "next": "Mesa 1",
     "chapters": [
       {
         "start": 1071,
         "end": 1071,
-        "author": "Hölscher"
+        "author": "Treidler"
       }
     ]
   },
@@ -16236,6 +16224,18 @@
   {
     "lemma": "Mesa 2",
     "previous": "Mesa 1",
+    "next": "Mesa...",
+    "chapters": [
+      {
+        "start": 1071,
+        "end": 1071,
+        "author": "Hölscher"
+      }
+    ]
+  },
+  {
+    "lemma": "Mesa...",
+    "previous": "Mesa 2",
     "next": "Mesada 1",
     "chapters": [
       {
@@ -16624,7 +16624,7 @@
     ]
   },
   {
-    "lemma": "Mesengyema",
+    "lemma": "Μεσεγγύημα",
     "previous": "Μεσημβρινὸς κύκλος",
     "next": "Mesene",
     "chapters": [
@@ -16637,7 +16637,7 @@
   },
   {
     "lemma": "Mesene",
-    "previous": "Mesengyema",
+    "previous": "Μεσεγγύημα",
     "next": "Meserkeios",
     "chapters": [
       {
