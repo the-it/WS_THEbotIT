@@ -472,11 +472,17 @@
   },
   {
     "lemma": "Canaliclarius",
+    "previous": null,
     "next": "Chirographum"
   },
   {
     "lemma": "Chirographum",
-    "previous": "Canaliclarius"
+    "previous": "Canaliclarius",
+    "next": "Χειροτέχνιον"
+  },
+  {
+    "lemma": "Χειροτέχνιον",
+    "previous": "Chirographum"
   },
   {
     "lemma": "χειρόγραφον",
@@ -546,7 +552,12 @@
   },
   {
     "lemma": "Codicarii 2",
-    "previous": "Cocceius 12"
+    "previous": "Cocceius 12",
+    "next": "Contributio 2"
+  },
+  {
+    "lemma": "Contributio 2",
+    "previous": "Codicarii 2"
   },
   {
     "lemma": "Χειροτέχνιον",
@@ -2971,6 +2982,7 @@
   },
   {
     "lemma": "Lex Vibia (oder Leges Vibiae)",
+    "previous": null,
     "next": "Libella 1"
   },
   {

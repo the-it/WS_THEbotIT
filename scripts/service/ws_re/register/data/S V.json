@@ -54,7 +54,12 @@
   },
   {
     "lemma": "Antidotos 6",
-    "previous": "Anaxenor 1"
+    "previous": "Anaxenor 1",
+    "next": "Antigonos 24"
+  },
+  {
+    "lemma": "Antigonos 24",
+    "previous": "Antidotos 6"
   },
   {
     "lemma": "Anaxenor 1.2"
@@ -129,7 +134,12 @@
   },
   {
     "lemma": "Apollodoros 41a",
-    "previous": "Apelles 5a"
+    "previous": "Apelles 5a",
+    "next": "Apollonios 114"
+  },
+  {
+    "lemma": "Apollonios 114",
+    "previous": "Apollodoros 41a"
   },
   {
     "lemma": "Apollodoros 41e",
@@ -142,7 +152,12 @@
   },
   {
     "lemma": "Apollonios 122",
-    "previous": "Apollonios 114"
+    "previous": "Apollonios 114",
+    "next": "Apollonios 126b"
+  },
+  {
+    "lemma": "Apollonios 126b",
+    "previous": "Apollonios 122"
   },
   {
     "lemma": "Apelles 5a",
@@ -222,7 +237,7 @@
   {
     "lemma": "Ariston 62a",
     "previous": "Aristeides 23a",
-    "next": "Ἀσάλμανος",
+    "next": "Asalmanos",
     "chapters": [
       {
         "start": 46,
@@ -232,13 +247,13 @@
     ]
   },
   {
-    "lemma": "Ἀσάλμανος",
+    "lemma": "Asalmanos",
     "previous": "Ariston 62a",
     "next": "Asklepiades 51"
   },
   {
     "lemma": "Asklepiades 51",
-    "previous": "Ἀσάλμανος",
+    "previous": "Asalmanos",
     "next": "Athenagoras 9a",
     "chapters": [
       {
