@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Abretten(us)",
+    "previous": null,
     "next": "Aburnius 1a",
     "sort_key": "Abrettenus",
     "chapters": [
@@ -33,12 +34,7 @@
   },
   {
     "lemma": "Acutius 1a",
-    "previous": "Acilius 16",
-    "next": "Aelius 75a"
-  },
-  {
-    "lemma": "Aelius 75a",
-    "previous": "Acutius 1a"
+    "previous": "Acilius 16"
   },
   {
     "lemma": "Aburnius 2",
@@ -63,6 +59,35 @@
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 75a"
+  },
+  {
+    "lemma": "Aburnius 2",
+    "next": "Acilius 16"
+  },
+  {
+    "lemma": "Acilius 16",
+    "previous": "Aburnius 2",
+    "next": "Acutius 1a"
+  },
+  {
+    "lemma": "Acutius 1a",
+    "previous": "Acilius 16",
+    "next": "Aelius 75a"
+  },
+  {
+    "lemma": "Aelius 75a",
+    "previous": "Acutius 1a",
+    "next": "Aelius 76",
+    "sort_key": "Aelius 075a"
+  },
+  {
+    "lemma": "Aelius 76",
+    "previous": "Aelius 75a",
+    "next": "Aelius 155"
+  },
+  {
+    "lemma": "Aelius 155",
+    "previous": "Aelius 76"
   },
   {
     "lemma": "Aburnius 2",
@@ -132,12 +157,20 @@
   {
     "lemma": "Aemilius 54b",
     "previous": "Aemilius 43",
-    "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
   },
   {
+    "lemma": "Aemilius 43",
+    "next": "Aemilius 79"
+  },
+  {
     "lemma": "Aemilius 79",
-    "previous": "Aemilius 54b"
+    "previous": "Aemilius 43",
+    "next": "Afranius 10a"
+  },
+  {
+    "lemma": "Afranius 10a",
+    "previous": "Aemilius 79"
   },
   {
     "lemma": "Aemilius 43",
@@ -185,11 +218,26 @@
   },
   {
     "lemma": "Alexandros 90a",
-    "previous": "Albiobola"
+    "previous": "Albiobola",
+    "next": "Anaxilaos 5",
+    "sort_key": "Alexandros 090a"
+  },
+  {
+    "lemma": "Anaxilaos 5",
+    "previous": "Alexandros 90a",
+    "next": "Androtion"
+  },
+  {
+    "lemma": "Androtion",
+    "previous": "Anaxilaos 5",
+    "next": "Anisa"
+  },
+  {
+    "lemma": "Anisa",
+    "previous": "Androtion"
   },
   {
     "lemma": "Agesistratos",
-    "previous": null,
     "next": "Aiacius 2"
   },
   {

@@ -69,7 +69,12 @@
   },
   {
     "lemma": "Alfenus 4",
-    "previous": "Alea 1"
+    "previous": "Alea 1",
+    "next": "Aliphera"
+  },
+  {
+    "lemma": "Aliphera",
+    "previous": "Alfenus 4"
   },
   {
     "lemma": "Aelius 92a",
@@ -401,6 +406,19 @@
   },
   {
     "lemma": "Asterope 6",
+    "previous": "Asprius"
+  },
+  {
+    "lemma": "Asprenas",
+    "next": "Asprius"
+  },
+  {
+    "lemma": "Asprius",
+    "previous": "Asprenas",
+    "next": "Asterope 6"
+  },
+  {
+    "lemma": "Asterope 6",
     "previous": "Asprius",
     "next": "Attikos 15"
   },
@@ -411,7 +429,12 @@
   },
   {
     "lemma": "Attius 23",
-    "previous": "Attikos 15"
+    "previous": "Attikos 15",
+    "next": "Aulis 1"
+  },
+  {
+    "lemma": "Aulis 1",
+    "previous": "Attius 23"
   },
   {
     "lemma": "Asprenas",

@@ -659,7 +659,12 @@
   },
   {
     "lemma": "Aelius 140aa",
-    "previous": "Aelius 69a"
+    "previous": "Aelius 69a",
+    "next": "Aelius 140a"
+  },
+  {
+    "lemma": "Aelius 140a",
+    "previous": "Aelius 140aa"
   },
   {
     "lemma": "Aelius 36a",
@@ -733,7 +738,17 @@
   },
   {
     "lemma": "Alexandros 62a",
-    "previous": "Aigina 1"
+    "previous": "Aigina 1",
+    "next": "Alexandros 62b"
+  },
+  {
+    "lemma": "Alexandros 62b",
+    "previous": "Alexandros 62a",
+    "next": "Alexandros 93a"
+  },
+  {
+    "lemma": "Alexandros 93a",
+    "previous": "Alexandros 62b"
   },
   {
     "lemma": "Aelius 140aa",
@@ -847,7 +862,23 @@
   },
   {
     "lemma": "Annius 51a",
-    "previous": "Annianus 8"
+    "previous": "Annianus 8",
+    "next": "Annius 129",
+    "sort_key": "Annius 051a"
+  },
+  {
+    "lemma": "Annius 129",
+    "previous": "Annius 51a",
+    "next": "Antipatros 38"
+  },
+  {
+    "lemma": "Antipatros 38",
+    "previous": "Annius 129",
+    "next": "Antistius 41a"
+  },
+  {
+    "lemma": "Antistius 41a",
+    "previous": "Antipatros 38"
   },
   {
     "lemma": "Alexandros 93b",
@@ -1045,6 +1076,25 @@
     "lemma": "Apronius 8a",
     "previous": "Apokryphe Apostelakten",
     "next": "Apronius 12",
+    "sort_key": "Apronius 08a"
+  },
+  {
+    "lemma": "Apronius 12",
+    "previous": "Apronius 8a",
+    "next": "arcantodan"
+  },
+  {
+    "lemma": "arcantodan",
+    "previous": "Apronius 12"
+  },
+  {
+    "lemma": "Apokryphe Apostelakten",
+    "next": "Apronius 8a"
+  },
+  {
+    "lemma": "Apronius 8a",
+    "previous": "Apokryphe Apostelakten",
+    "next": "Apronius 12",
     "sort_key": "Apronius 08a",
     "chapters": [
       {
@@ -1187,6 +1237,20 @@
     "lemma": "Aurelius 54a",
     "previous": "Aurelius 27",
     "next": "Aurelius 54b",
+    "sort_key": "Aurelius 054a"
+  },
+  {
+    "lemma": "Aurelius 54b",
+    "previous": "Aurelius 54a"
+  },
+  {
+    "lemma": "Aurelius 27",
+    "next": "Aurelius 54a"
+  },
+  {
+    "lemma": "Aurelius 54a",
+    "previous": "Aurelius 27",
+    "next": "Aurelius 54b",
     "sort_key": "Aurelius 054a",
     "chapters": [
       {
@@ -1265,7 +1329,17 @@
   },
   {
     "lemma": "Aurelius 225a",
-    "previous": "Aurelius 205a"
+    "previous": "Aurelius 205a",
+    "next": "Aurelius 225b"
+  },
+  {
+    "lemma": "Aurelius 225b",
+    "previous": "Aurelius 225a",
+    "next": "Aurelius 227a"
+  },
+  {
+    "lemma": "Aurelius 227a",
+    "previous": "Aurelius 225b"
   },
   {
     "lemma": "Aurelius 159a",
