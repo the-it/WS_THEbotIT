@@ -75,11 +75,17 @@
   },
   {
     "lemma": "Abano",
+    "previous": null,
     "next": "Abas 12"
   },
   {
     "lemma": "Abas 12",
-    "previous": "Abano"
+    "previous": "Abano",
+    "next": "Abbo 2"
+  },
+  {
+    "lemma": "Abbo 2",
+    "previous": "Abas 12"
   },
   {
     "lemma": "Abas",
@@ -159,7 +165,12 @@
   },
   {
     "lemma": "Abderos",
-    "previous": "Abdere"
+    "previous": "Abdere",
+    "next": "Abrincatui"
+  },
+  {
+    "lemma": "Abrincatui",
+    "previous": "Abderos"
   },
   {
     "lemma": "Abdera",
@@ -456,6 +467,7 @@
   },
   {
     "lemma": "Acqualagna",
+    "previous": null,
     "next": "Acronus"
   },
   {
@@ -465,7 +477,8 @@
   },
   {
     "lemma": "-acus, -iacus",
-    "previous": "Acronus"
+    "previous": "Acronus",
+    "next": null
   },
   {
     "lemma": "Acqualagna",
@@ -620,12 +633,20 @@
   {
     "lemma": "Ἀδδάνων, κώμη–",
     "previous": "Adanos",
-    "next": "Adgandestrius",
     "sort_key": "Addanon kome"
   },
   {
+    "lemma": "Ἀδδάνων, κώμη–",
+    "next": "Adgandestrius"
+  },
+  {
     "lemma": "Adgandestrius",
-    "previous": "Ἀδδάνων, κώμη–"
+    "previous": "Ἀδδάνων, κώμη–",
+    "next": "Adiutex"
+  },
+  {
+    "lemma": "Adiutex",
+    "previous": "Adgandestrius"
   },
   {
     "lemma": "Ἀδδάνων, κώμη–",
@@ -805,6 +826,7 @@
   },
   {
     "lemma": "Aemilius 63c",
+    "previous": null,
     "next": "Aenus"
   },
   {
@@ -1011,7 +1033,12 @@
   },
   {
     "lemma": "Agathodaimon 2",
-    "previous": "Agathodaimon 1"
+    "previous": "Agathodaimon 1",
+    "next": "Ἀγαθοδαιμονιασταί"
+  },
+  {
+    "lemma": "Ἀγαθοδαιμονιασταί",
+    "previous": "Agathodaimon 2"
   },
   {
     "lemma": "Agathias 3",
@@ -1278,7 +1305,17 @@
   },
   {
     "lemma": "Aguontum",
-    "previous": "Agroitas 2"
+    "previous": "Agroitas 2",
+    "next": "Agyeios 1"
+  },
+  {
+    "lemma": "Agyeios 1",
+    "previous": "Aguontum",
+    "next": "Aiaciana"
+  },
+  {
+    "lemma": "Aiaciana",
+    "previous": "Agyeios 1"
   },
   {
     "lemma": "Agreus, Agreutes 1",
@@ -1467,7 +1504,12 @@
   },
   {
     "lemma": "Akazie",
-    "previous": "Akatos 2"
+    "previous": "Akatos 2",
+    "next": "Akestor 6"
+  },
+  {
+    "lemma": "Akestor 6",
+    "previous": "Akazie"
   },
   {
     "lemma": "Aix 3",
@@ -1527,10 +1569,10 @@
   {
     "lemma": "Aktor 1",
     "previous": "Akestor 6",
-    "next": "Alanouiiamuthis"
+    "next": "Alanoviiamuthis"
   },
   {
-    "lemma": "Alanouiiamuthis",
+    "lemma": "Alanoviiamuthis",
     "previous": "Aktor 1",
     "next": "Albacina",
     "chapters": [
@@ -1543,7 +1585,7 @@
   },
   {
     "lemma": "Albacina",
-    "previous": "Alanouiiamuthis",
+    "previous": "Alanoviiamuthis",
     "next": "Albanus 1a",
     "chapters": [
       {
@@ -1820,6 +1862,7 @@
   },
   {
     "lemma": "Alexinos 2",
+    "previous": null,
     "next": "Alexias 5"
   },
   {
@@ -1829,7 +1872,8 @@
   },
   {
     "lemma": "Alfius 6",
-    "previous": "Alexias 5"
+    "previous": "Alexias 5",
+    "next": null
   },
   {
     "lemma": "Alexios",
@@ -2777,10 +2821,29 @@
   },
   {
     "lemma": "Andemantunnum",
+    "previous": "Andecavi",
+    "next": null
+  },
+  {
+    "lemma": "Andecavi",
+    "next": "Andematunnum"
+  },
+  {
+    "lemma": "Andematunnum",
     "previous": "Andecavi"
   },
   {
-    "lemma": "Andematunnum"
+    "lemma": "Andemantunnum",
+    "next": "Anderitum"
+  },
+  {
+    "lemma": "Anderitum",
+    "previous": "Andemantunnum",
+    "next": "Andernach"
+  },
+  {
+    "lemma": "Andernach",
+    "previous": "Anderitum"
   },
   {
     "lemma": "Andemantunnum",
@@ -3916,15 +3979,31 @@
   },
   {
     "lemma": "Aqua, Aquae 10a",
-    "previous": "Aquae",
-    "next": "Aqua, Aquae 17",
+    "previous": "Aquae"
+  },
+  {
+    "lemma": "Aqua, Aquae 10a",
     "sort_key": "Aquae 010a",
     "redirect": "Aqua, Aquae 6a",
     "wp_link": "w:de:Aqua"
   },
   {
+    "lemma": "Aqua, Aquae 10a",
+    "next": "Aqua, Aquae 17"
+  },
+  {
     "lemma": "Aqua, Aquae 17",
-    "previous": "Aqua, Aquae 10a"
+    "previous": "Aqua, Aquae 10a",
+    "next": "Aqua, Aquae 20"
+  },
+  {
+    "lemma": "Aqua, Aquae 20",
+    "previous": "Aqua, Aquae 17",
+    "next": "Aqua, Aquae 36"
+  },
+  {
+    "lemma": "Aqua, Aquae 36",
+    "previous": "Aqua, Aquae 20"
   },
   {
     "lemma": "Aqua, Aquae 10a",
@@ -4138,7 +4217,8 @@
   },
   {
     "lemma": "Arcanus",
-    "previous": "Arbor Felix"
+    "previous": "Arbor Felix",
+    "next": null
   },
   {
     "lemma": "Arbor Felix",
@@ -5457,6 +5537,26 @@
   },
   {
     "lemma": "Ardacus 2",
+    "previous": "Archytas 6"
+  },
+  {
+    "lemma": "Ἀρχιφυλακίτης",
+    "next": "Ἀρχιφύλαξ"
+  },
+  {
+    "lemma": "Ἀρχιφύλαξ",
+    "previous": "Ἀρχιφυλακίτης",
+    "next": "Archytas 6",
+    "sort_key": "Archiphylax",
+    "redirect": "Ἀρχιφυλακίτης a"
+  },
+  {
+    "lemma": "Archytas 6",
+    "previous": "Ἀρχιφύλαξ",
+    "next": "Ardacus 2"
+  },
+  {
+    "lemma": "Ardacus 2",
     "previous": "Archytas 6",
     "next": "Ardanion",
     "chapters": [
@@ -5648,10 +5748,25 @@
   },
   {
     "lemma": "Argentorate",
-    "previous": "Argentoialum"
+    "previous": "Argentoialum",
+    "next": "Argentovaria"
+  },
+  {
+    "lemma": "Argentovaria",
+    "previous": "Argentorate",
+    "next": "Argines"
+  },
+  {
+    "lemma": "Argines",
+    "previous": "Argentovaria"
+  },
+  {
+    "lemma": "Aristaioi",
+    "next": "Aristaios 7"
   },
   {
     "lemma": "Aristaios 7",
+    "previous": "Aristaioi",
     "next": "Aristarchos 6a"
   },
   {
@@ -5683,7 +5798,17 @@
   },
   {
     "lemma": "Aristodama 3",
-    "previous": "Aristobulos 3a"
+    "previous": "Aristobulos 3a",
+    "next": "Aristodemos 21"
+  },
+  {
+    "lemma": "Aristodemos 21",
+    "previous": "Aristodama 3",
+    "next": "Aristodemos 35"
+  },
+  {
+    "lemma": "Aristodemos 35",
+    "previous": "Aristodemos 21"
   },
   {
     "lemma": "Argentovaria",
@@ -6345,7 +6470,18 @@
   },
   {
     "lemma": "Asberg",
-    "previous": "Arzbach"
+    "previous": "Arzbach",
+    "next": "Aschaffenburg",
+    "wp_link": "w:de:Asberg (Moers)"
+  },
+  {
+    "lemma": "Aschaffenburg",
+    "previous": "Asberg",
+    "next": "Aschenurnen"
+  },
+  {
+    "lemma": "Aschenurnen",
+    "previous": "Aschaffenburg"
   },
   {
     "lemma": "Arvius 1",
@@ -6424,10 +6560,20 @@
   },
   {
     "lemma": "Aschenurnen",
-    "previous": "Aschaffenburg"
+    "previous": "Aschaffenburg",
+    "next": "Asciacus"
+  },
+  {
+    "lemma": "Asciacus",
+    "previous": "Aschenurnen"
+  },
+  {
+    "lemma": "Aschenurnen",
+    "next": "Ascia"
   },
   {
     "lemma": "Ascia",
+    "previous": "Aschenurnen",
     "next": "Asciacus"
   },
   {
@@ -6437,7 +6583,12 @@
   },
   {
     "lemma": "Asciburgium",
-    "previous": "Asciacus"
+    "previous": "Asciacus",
+    "next": "Ascoli"
+  },
+  {
+    "lemma": "Ascoli",
+    "previous": "Asciburgium"
   },
   {
     "lemma": "Aschenurnen",
@@ -6757,7 +6908,17 @@
   },
   {
     "lemma": "Athanaios",
-    "previous": "Athanadas 7"
+    "previous": "Athanadas 7",
+    "next": "Athenadas"
+  },
+  {
+    "lemma": "Athenadas",
+    "previous": "Athanaios",
+    "next": "Athenades"
+  },
+  {
+    "lemma": "Athenades",
+    "previous": "Athenadas"
   },
   {
     "lemma": "Athanadas",
@@ -7462,8 +7623,7 @@
   },
   {
     "lemma": "Aufaniae",
-    "previous": "Avetedo",
-    "next": null
+    "previous": "Avetedo"
   },
   {
     "lemma": "Avetedo",
@@ -7477,6 +7637,24 @@
   {
     "lemma": "Augenärzte",
     "previous": "Augeiai 1"
+  },
+  {
+    "lemma": "Avetedo",
+    "next": "Augeiai 1"
+  },
+  {
+    "lemma": "Augeiai 1",
+    "previous": "Avetedo",
+    "next": "Augenärzte"
+  },
+  {
+    "lemma": "Augenärzte",
+    "previous": "Augeiai 1",
+    "next": "Augsburg"
+  },
+  {
+    "lemma": "Augsburg",
+    "previous": "Augenärzte"
   },
   {
     "lemma": "Avetedo",
@@ -7598,30 +7776,36 @@
   },
   {
     "lemma": "Augustobriga",
-    "previous": "Augustobona"
+    "previous": "Augustobona",
+    "next": null
+  },
+  {
+    "lemma": "Augustobona",
+    "next": "Augustobriga 1"
   },
   {
     "lemma": "Augustobriga 1",
-    "previous": null,
+    "previous": "Augustobona",
     "next": "Augustodunum"
   },
   {
     "lemma": "Augustodunum",
-    "previous": "Augustobriga 1"
+    "previous": "Augustobriga 1",
+    "next": "Augustodurum"
   },
   {
-    "lemma": "Augustobriga",
-    "chapters": [
-      {
-        "start": 186,
-        "end": 186,
-        "author": "Keune"
-      }
-    ]
+    "lemma": "Augustodurum",
+    "previous": "Augustodunum",
+    "next": "Augustomagus"
+  },
+  {
+    "lemma": "Augustomagus",
+    "previous": "Augustodurum",
+    "next": "Augustonemetum"
   },
   {
     "lemma": "Augustonemetum",
-    "previous": null,
+    "previous": "Augustomagus",
     "next": "Augustoritum"
   },
   {
@@ -7661,6 +7845,7 @@
   },
   {
     "lemma": "Avignon",
+    "previous": null,
     "next": "Avillius 2a"
   },
   {
@@ -7671,7 +7856,8 @@
   },
   {
     "lemma": "Avitianae",
-    "previous": "Avillius 2a"
+    "previous": "Avillius 2a",
+    "next": null
   },
   {
     "lemma": "Avillius 2a",
@@ -7884,7 +8070,10 @@
   },
   {
     "lemma": "Aureus mons 4",
-    "previous": "Aurelius vicus",
+    "previous": "Aurelius vicus"
+  },
+  {
+    "lemma": "Aureus mons 4",
     "sort_key": "Aureusmons 4"
   },
   {
@@ -7899,7 +8088,13 @@
   },
   {
     "lemma": "Aushängeschilder",
-    "previous": "Ausci 2"
+    "previous": "Ausci 2",
+    "next": "Austrus",
+    "redirect": "Ad-"
+  },
+  {
+    "lemma": "Austrus",
+    "previous": "Aushängeschilder"
   },
   {
     "lemma": "Aureus mons 4",
@@ -8026,10 +8221,12 @@
   },
   {
     "lemma": "Axima 2",
-    "previous": "Axia 1"
+    "previous": "Axia 1",
+    "next": "Axius 8a"
   },
   {
     "lemma": "Axius 8a",
+    "previous": "Axima 2",
     "next": "Azizos 1"
   },
   {
@@ -8225,7 +8422,13 @@
   },
   {
     "lemma": "Bakchon",
-    "previous": "Bagnorea"
+    "previous": "Bagnorea",
+    "next": "Bakchon 1",
+    "sort_key": "Bakchon 0"
+  },
+  {
+    "lemma": "Bakchon 1",
+    "previous": "Bakchon"
   },
   {
     "lemma": "Bakchon",
@@ -8430,7 +8633,12 @@
   },
   {
     "lemma": "Banaurides",
-    "previous": "Banassac"
+    "previous": "Banassac",
+    "next": "Banuus"
+  },
+  {
+    "lemma": "Banuus",
+    "previous": "Banaurides"
   },
   {
     "lemma": "Balbinus 4",
@@ -9390,7 +9598,6 @@
   {
     "lemma": "Boa 2",
     "previous": "Blondelia",
-    "next": "Boagrios",
     "chapters": [
       {
         "start": 209,
@@ -9400,8 +9607,17 @@
     ]
   },
   {
+    "lemma": "Boa",
+    "next": "Boagrios"
+  },
+  {
     "lemma": "Boagrios",
-    "previous": "Boa 2"
+    "previous": "Boa",
+    "next": "Boconiana"
+  },
+  {
+    "lemma": "Boconiana",
+    "previous": "Boagrios"
   },
   {
     "lemma": "Boa",
@@ -9735,7 +9951,12 @@
     "previous": "Botrys 5"
   },
   {
+    "lemma": "Borillus",
+    "next": "Byzantion 1"
+  },
+  {
     "lemma": "Byzantion 1",
+    "previous": "Borillus",
     "next": "Botrys 5"
   },
   {
@@ -10339,6 +10560,11 @@
   {
     "lemma": "Caecilius 72",
     "previous": "Caecilius 45",
+    "next": "Caecilius 73"
+  },
+  {
+    "lemma": "Caecilius 73",
+    "previous": "Caecilius 72",
     "next": null
   },
   {
@@ -10390,7 +10616,13 @@
     "previous": "Bytios"
   },
   {
+    "lemma": "Caecilius 94",
+    "previous": null,
+    "next": "Caecilius 96"
+  },
+  {
     "lemma": "Caecilius 96",
+    "previous": "Caecilius 94",
     "next": "Caecilius 99"
   },
   {
@@ -14459,7 +14691,17 @@
     "previous": "Dedicatio"
   },
   {
-    "lemma": "Deiotarus 1"
+    "lemma": "Dedicatio",
+    "next": "Deiotarus 1"
+  },
+  {
+    "lemma": "Deiotarus 1",
+    "previous": "Dedicatio",
+    "next": "Deiotarus 2"
+  },
+  {
+    "lemma": "Deiotarus 2",
+    "previous": "Deiotarus 1"
   },
   {
     "lemma": "Deiotaros 1",
@@ -15180,7 +15422,17 @@
   },
   {
     "lemma": "Diogenes 22a",
-    "previous": "Diodoros 40a"
+    "previous": "Diodoros 40a",
+    "next": "Diomedes 17"
+  },
+  {
+    "lemma": "Diomedes 17",
+    "previous": "Diogenes 22a",
+    "next": "Dionysikles 2"
+  },
+  {
+    "lemma": "Dionysikles 2",
+    "previous": "Diomedes 17"
   },
   {
     "lemma": "Diodoros 38",
@@ -17942,7 +18194,8 @@
   },
   {
     "lemma": "Floreius pagus",
-    "previous": "ad Flexum 3"
+    "previous": "ad Flexum 3",
+    "next": null
   },
   {
     "lemma": "Florentinus 16",
@@ -18589,7 +18842,8 @@
   },
   {
     "lemma": "Gaudiosus",
-    "previous": "Gaudiacus vicus"
+    "previous": "Gaudiacus vicus",
+    "next": null
   },
   {
     "lemma": "Gaudiacus",
@@ -20872,6 +21126,7 @@
   },
   {
     "lemma": "Hipponion",
+    "previous": null,
     "next": "Hippos 2"
   },
   {
@@ -21640,6 +21895,7 @@
   },
   {
     "lemma": "Inatos",
+    "previous": null,
     "next": "Indus"
   },
   {

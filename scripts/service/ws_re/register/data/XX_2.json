@@ -481,7 +481,7 @@
     ]
   },
   {
-    "lemma": "Pimolisna",
+    "lemma": "Pimolisa",
     "previous": "Pimenius",
     "next": "Pimpleia",
     "chapters": [
@@ -494,7 +494,7 @@
   },
   {
     "lemma": "Pimpleia",
-    "previous": "Pimolisna",
+    "previous": "Pimolisa",
     "next": "Pimpleis",
     "chapters": [
       {
@@ -3510,7 +3510,7 @@
   },
   {
     "lemma": "Πίθηκος 1",
-    "previous": "Pithecusa",
+    "previous": "Pithecusa, -ae",
     "next": "Πίθηκος 2",
     "sort_key": "Pithekos 1",
     "redirect": "Affe",
@@ -4285,11 +4285,7 @@
     "lemma": "D. Pius Cassius",
     "previous": "Pius 8",
     "next": "Pixodaros",
-    "sort_key": "Pius c"
-  },
-  {
-    "lemma": "Pius Cassius",
-    "next": "Pixodaros 1",
+    "sort_key": "Pius c",
     "chapters": [
       {
         "start": 1893,
@@ -4299,8 +4295,13 @@
     ]
   },
   {
+    "lemma": "Pixodaros",
+    "previous": "D. Pius Cassius",
+    "next": "Pixodaros 1"
+  },
+  {
     "lemma": "Pixodaros 1",
-    "previous": "Pius Cassius",
+    "previous": "Pixodaros",
     "next": "Pixodaros 2",
     "chapters": [
       {

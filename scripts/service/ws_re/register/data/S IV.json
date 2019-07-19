@@ -524,7 +524,12 @@
   },
   {
     "lemma": "Antibelos",
-    "previous": "Antenor 6"
+    "previous": "Antenor 6",
+    "next": "Antidamas"
+  },
+  {
+    "lemma": "Antidamas",
+    "previous": "Antibelos"
   },
   {
     "lemma": "Androkles 13a",
@@ -552,7 +557,12 @@
   },
   {
     "lemma": "Antidamas",
-    "previous": "Antibelos"
+    "previous": "Antibelos",
+    "next": "Antikles 6a"
+  },
+  {
+    "lemma": "Antikles 6a",
+    "previous": "Antidamas"
   },
   {
     "lemma": "Androkles 13a",
@@ -742,7 +752,12 @@
   },
   {
     "lemma": "Aphrikes",
-    "previous": "Aphobetos"
+    "previous": "Aphobetos",
+    "next": "Apollodoros 41a"
+  },
+  {
+    "lemma": "Apollodoros 41a",
+    "previous": "Aphrikes"
   },
   {
     "lemma": "Aphobetos 2",
@@ -1167,7 +1182,22 @@
   },
   {
     "lemma": "Arsames 8",
-    "previous": "Arsames 7"
+    "previous": "Arsames 7",
+    "next": "Arsimas"
+  },
+  {
+    "lemma": "Arsimas",
+    "previous": "Arsames 8",
+    "next": "Artemios"
+  },
+  {
+    "lemma": "Artemios",
+    "previous": "Arsimas",
+    "next": "Artemon 9a"
+  },
+  {
+    "lemma": "Artemon 9a",
+    "previous": "Artemios"
   },
   {
     "lemma": "Arybas 2",
@@ -1326,7 +1356,22 @@
   },
   {
     "lemma": "Athenophanes",
-    "previous": "Athenobios 2"
+    "previous": "Athenobios 2",
+    "next": "Atizyes"
+  },
+  {
+    "lemma": "Atizyes",
+    "previous": "Athenophanes",
+    "next": "Attinas 2"
+  },
+  {
+    "lemma": "Attinas 2",
+    "previous": "Atizyes",
+    "next": "Attylos"
+  },
+  {
+    "lemma": "Attylos",
+    "previous": "Attinas 2"
   },
   {
     "lemma": "Asklepiades 2a) = 14a",
@@ -1494,7 +1539,12 @@
   },
   {
     "lemma": "Autodikos",
-    "previous": "Austanes"
+    "previous": "Austanes",
+    "next": "Autokles 4"
+  },
+  {
+    "lemma": "Autokles 4",
+    "previous": "Autodikos"
   },
   {
     "lemma": "Attinas",
@@ -1527,7 +1577,12 @@
   },
   {
     "lemma": "Bakchylides 2",
-    "previous": "Autokles 4"
+    "previous": "Autokles 4",
+    "next": "Bakenor"
+  },
+  {
+    "lemma": "Bakenor",
+    "previous": "Bakchylides 2"
   },
   {
     "lemma": "Attinas",
@@ -1852,7 +1907,13 @@
   },
   {
     "lemma": "Χαμαιδικαστής",
-    "previous": "Chaireas 5a"
+    "previous": "Chaireas 5a",
+    "next": "Charikles 4a",
+    "sort_key": "Chamaidikastes"
+  },
+  {
+    "lemma": "Charikles 4a",
+    "previous": "Χαμαιδικαστής"
   },
   {
     "lemma": "Bulagoras",
@@ -1976,7 +2037,13 @@
   },
   {
     "lemma": "Χρηματιστής 1",
-    "previous": "Choregis"
+    "previous": "Choregis",
+    "next": "Chrysippos 10a",
+    "sort_key": "Chrematistes 1"
+  },
+  {
+    "lemma": "Chrysippos 10a",
+    "previous": "Χρηματιστής 1"
   },
   {
     "lemma": "Chersanippos",
@@ -4146,16 +4213,17 @@
   },
   {
     "lemma": "Himeraios",
+    "previous": null,
     "next": "Ἱππάρχης"
   },
   {
     "lemma": "Ἱππάρχης",
     "previous": "Himeraios",
-    "next": "Ἱππεῖος",
+    "next": "Hippeios",
     "sort_key": "Hipparches"
   },
   {
-    "lemma": "Ἱππεῖος",
+    "lemma": "Hippeios",
     "previous": "Ἱππάρχης",
     "next": "Hippias 4",
     "sort_key": "Hippeios",
@@ -4169,7 +4237,7 @@
   },
   {
     "lemma": "Hippias 4",
-    "previous": "Ἱππεῖος",
+    "previous": "Hippeios",
     "next": null
   },
   {
@@ -4315,7 +4383,10 @@
   },
   {
     "lemma": "Hyäne",
-    "previous": "Ὁρμοφυλακία",
+    "previous": "Ὁρμοφυλακία"
+  },
+  {
+    "lemma": "Hyäne",
     "next": "Hydarnes 1",
     "sort_key": "Hyaene",
     "wp_link": "w:de:Hyänen"

@@ -2164,7 +2164,12 @@
   },
   {
     "lemma": "Antius 14a",
-    "previous": "Antius 12a"
+    "previous": "Antius 12a",
+    "next": "Antonius 1a"
+  },
+  {
+    "lemma": "Antonius 1a",
+    "previous": "Antius 14a"
   },
   {
     "lemma": "Turranius",
@@ -2306,7 +2311,12 @@
   },
   {
     "lemma": "Aratos 6",
-    "previous": "Aradius 3a"
+    "previous": "Aradius 3a",
+    "next": "Araxa"
+  },
+  {
+    "lemma": "Araxa",
+    "previous": "Aratos 6"
   },
   {
     "lemma": "Aqua, Aquae 97",
@@ -2486,7 +2496,17 @@
   },
   {
     "lemma": "Arykanda",
-    "previous": "Articuleius 4"
+    "previous": "Articuleius 4",
+    "next": "Asinius 17b"
+  },
+  {
+    "lemma": "Asinius 17b",
+    "previous": "Arykanda",
+    "next": "Asinius 19a"
+  },
+  {
+    "lemma": "Asinius 19a",
+    "previous": "Asinius 17b"
   },
   {
     "lemma": "Articuleius a",
@@ -2693,7 +2713,12 @@
   },
   {
     "lemma": "Aurelius 136",
-    "previous": "Aurelius 65a"
+    "previous": "Aurelius 65a",
+    "next": "Aurelius 141a"
+  },
+  {
+    "lemma": "Aurelius 141a",
+    "previous": "Aurelius 136"
   },
   {
     "lemma": "Aurelius 37aa) = 37b",
