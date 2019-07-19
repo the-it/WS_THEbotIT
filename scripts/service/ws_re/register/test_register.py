@@ -94,8 +94,9 @@ class TestIntegrationRegister(TestCase):
             errors.append(f"COUNT ERRORS: {count}")
             raise AssertionError("\n".join(errors))
 
+    @skip("not fully implemented yet")
     def test_previous_double_lemmas(self):
-        LEMMA_DISTANCE = 20
+        LEMMA_DISTANCE = 80
         errors = []
         for register in self.registers.volumes.values():
             lemmas = dict()
@@ -122,3 +123,13 @@ class TestIntegrationRegister(TestCase):
                 if lemma_name in unique_lemmas:
                     print(f"Lemma {lemma_name} is not unique in register {register.volume.name}")
                 unique_lemmas.add(lemma_name)
+
+
+@skip("only for analysis")
+class TestAnalyse(TestCase):
+    def test_compare_lemma(self):  # pragma: no cover
+        lemma_1 = "lemma 1"
+        lemma_2 = "lemma 1"
+        for i in range(len(lemma_1)):
+            if lemma_1[i] != lemma_2[i]:
+                raise AssertionError(f"position {i} {lemma_1[i]}({ord(lemma_1[i])}) != {lemma_2[i]}({ord(lemma_2[i])})")
