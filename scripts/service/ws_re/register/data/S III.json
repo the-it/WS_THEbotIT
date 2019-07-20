@@ -8306,6 +8306,7 @@
   },
   {
     "lemma": "Axima 2",
+    "previous": null,
     "next": "Axius 8b"
   },
   {
@@ -8322,7 +8323,8 @@
   },
   {
     "lemma": "Azizos 1",
-    "previous": "Axius 8b"
+    "previous": "Axius 8b",
+    "next": null
   },
   {
     "lemma": "Axius 8a",
@@ -8604,7 +8606,6 @@
   {
     "lemma": "Balbinus 5",
     "previous": "Bakchylides 2",
-    "next": "Balbus 5",
     "chapters": [
       {
         "start": 195,
@@ -8614,8 +8615,22 @@
     ]
   },
   {
+    "lemma": "Balbinus 4",
+    "next": "Balbus 5"
+  },
+  {
     "lemma": "Balbus 5",
-    "previous": "Balbinus 5"
+    "previous": "Balbinus 4",
+    "next": "Banassac"
+  },
+  {
+    "lemma": "Banassac",
+    "previous": "Balbus 5",
+    "next": "Banaurides"
+  },
+  {
+    "lemma": "Banaurides",
+    "previous": "Banassac"
   },
   {
     "lemma": "Balbinus 4",
@@ -8638,7 +8653,12 @@
   },
   {
     "lemma": "Banuus",
-    "previous": "Banaurides"
+    "previous": "Banaurides",
+    "next": "Barba 2a"
+  },
+  {
+    "lemma": "Barba 2a",
+    "previous": "Banuus"
   },
   {
     "lemma": "Balbinus 4",
@@ -8820,12 +8840,20 @@
   {
     "lemma": "Βασιλικόν (τὸ)",
     "previous": "Basilia",
-    "next": "Bassus 36a",
     "sort_key": "Basilikon"
   },
   {
+    "lemma": "Βασιλικόν (τὸ)",
+    "next": "Bassus 36a"
+  },
+  {
     "lemma": "Bassus 36a",
-    "previous": "Βασιλικόν (τὸ)"
+    "previous": "Βασιλικόν (τὸ)",
+    "next": "Bassus 36b"
+  },
+  {
+    "lemma": "Bassus 36b",
+    "previous": "Bassus 36a"
   },
   {
     "lemma": "Βασιλικόν (τὸ)",
@@ -9598,6 +9626,7 @@
   {
     "lemma": "Boa 2",
     "previous": "Blondelia",
+    "next": null,
     "chapters": [
       {
         "start": 209,
@@ -11171,6 +11200,7 @@
   {
     "lemma": "Cantaber",
     "previous": "Canrucatus",
+    "next": "ad Cantunas novas",
     "chapters": [
       {
         "start": 233,
@@ -11178,6 +11208,10 @@
         "author": "Hähnle"
       }
     ]
+  },
+  {
+    "lemma": "ad Cantunas novas",
+    "previous": "Cantaber"
   },
   {
     "lemma": "Canrucatus",
@@ -11644,6 +11678,7 @@
   },
   {
     "lemma": "Castricius 6",
+    "previous": null,
     "next": "Castus 5"
   },
   {
@@ -11661,6 +11696,7 @@
   {
     "lemma": "Castus 6",
     "previous": "Castus 5",
+    "next": "Cataracta",
     "chapters": [
       {
         "start": 237,
@@ -11668,6 +11704,10 @@
         "author": "Hähnle"
       }
     ]
+  },
+  {
+    "lemma": "Cataracta",
+    "previous": "Castus 6"
   },
   {
     "lemma": "Castus 2b",
@@ -11713,7 +11753,12 @@
   },
   {
     "lemma": "Catullus 6a",
-    "previous": "Catius 8a"
+    "previous": "Catius 8a",
+    "next": "Catullus 6b"
+  },
+  {
+    "lemma": "Catullus 6b",
+    "previous": "Catullus 6a"
   },
   {
     "lemma": "Catius 9",
@@ -11953,7 +11998,7 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
-    "next": null,
+    "next": "Ceraria (Caeraria, Geraria) figlina",
     "chapters": [
       {
         "start": 241,
@@ -11961,6 +12006,10 @@
         "author": "Hähnle"
       }
     ]
+  },
+  {
+    "lemma": "Ceraria (Caeraria, Geraria) figlina",
+    "previous": "Cepariae figlinae"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -12001,7 +12050,12 @@
   },
   {
     "lemma": "Cerialis 12",
-    "previous": "Cerialis a"
+    "previous": "Cerialis a",
+    "next": "Cerialis 13"
+  },
+  {
+    "lemma": "Cerialis 13",
+    "previous": "Cerialis 12"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -12607,13 +12661,25 @@
   },
   {
     "lemma": "Claudius",
-    "previous": "Claudiana tegula",
-    "next": "Claudius 20a",
+    "previous": "Claudiana tegula"
+  },
+  {
+    "lemma": "Claudius",
     "sort_key": "Claudius 000"
   },
   {
+    "lemma": "Claudius",
+    "next": "Claudius 20a"
+  },
+  {
     "lemma": "Claudius 20a",
-    "previous": "Claudius"
+    "previous": "Claudius",
+    "next": "Claudius 30",
+    "sort_key": "Claudius 020a"
+  },
+  {
+    "lemma": "Claudius 30",
+    "previous": "Claudius 20a"
   },
   {
     "lemma": "Claudius",
@@ -12782,6 +12848,32 @@
   },
   {
     "lemma": "Clodius 5a",
+    "sort_key": "Clodius 05"
+  },
+  {
+    "lemma": "Clodius 5a",
+    "next": "Clodius 47"
+  },
+  {
+    "lemma": "Clodius 47",
+    "previous": "Clodius 5a",
+    "sort_key": "Clodius 05"
+  },
+  {
+    "lemma": "Clodius 47",
+    "next": "Clodius 55a"
+  },
+  {
+    "lemma": "Clodius 55a",
+    "previous": "Clodius 47",
+    "next": "Clonius a"
+  },
+  {
+    "lemma": "Clonius a",
+    "previous": "Clodius 55a"
+  },
+  {
+    "lemma": "Clodius 5a",
     "sort_key": "Clodius 05",
     "chapters": [
       {
@@ -12811,11 +12903,15 @@
   },
   {
     "lemma": "Clonius a",
-    "previous": "Clodius 55a"
+    "previous": "Clodius 55a",
+    "next": "Cluentius 1"
+  },
+  {
+    "lemma": "Cluentius 1",
+    "previous": "Clonius a"
   },
   {
     "lemma": "Claudius 225",
-    "previous": null,
     "next": "Claudius 251"
   },
   {
@@ -13178,6 +13274,19 @@
   },
   {
     "lemma": "Corcoras",
+    "previous": "Coocus"
+  },
+  {
+    "lemma": "Contrebia 1",
+    "next": "Coocus"
+  },
+  {
+    "lemma": "Coocus",
+    "previous": "Contrebia 1",
+    "next": "Corcoras"
+  },
+  {
+    "lemma": "Corcoras",
     "previous": "Coocus",
     "next": "Cornelius 8"
   },
@@ -13331,7 +13440,12 @@
   },
   {
     "lemma": "Cornelius 335",
-    "previous": "Cornelius 317ff."
+    "previous": "Cornelius 317ff.",
+    "next": "Cornelius 336"
+  },
+  {
+    "lemma": "Cornelius 336",
+    "previous": "Cornelius 335"
   },
   {
     "lemma": "Cornelius 208",

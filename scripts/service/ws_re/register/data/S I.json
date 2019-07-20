@@ -15418,7 +15418,12 @@
   },
   {
     "lemma": "Aurelius 107",
-    "previous": "Aurelius 79"
+    "previous": "Aurelius 79",
+    "next": "Aurelius 110"
+  },
+  {
+    "lemma": "Aurelius 110",
+    "previous": "Aurelius 107"
   },
   {
     "lemma": "Aurelius 60aa",
@@ -20034,7 +20039,6 @@
   {
     "lemma": "Casus a",
     "previous": "Castus 4",
-    "next": "Catabana",
     "redirect": "Kazanes",
     "chapters": [
       {
@@ -20044,8 +20048,17 @@
     ]
   },
   {
+    "lemma": "Casus",
+    "next": "Catabana"
+  },
+  {
     "lemma": "Catabana",
-    "previous": "Casus a"
+    "previous": "Casus",
+    "next": "Catellius 1a"
+  },
+  {
+    "lemma": "Catellius 1a",
+    "previous": "Catabana"
   },
   {
     "lemma": "Casus",
@@ -20123,7 +20136,6 @@
   {
     "lemma": "Cato 2",
     "previous": "Catius 10a",
-    "next": null,
     "chapters": [
       {
         "start": 279,
@@ -20144,6 +20156,24 @@
   {
     "lemma": "Cazaci",
     "previous": "Caularis"
+  },
+  {
+    "lemma": "Cato",
+    "next": "Caularis"
+  },
+  {
+    "lemma": "Caularis",
+    "previous": "Cato",
+    "next": "Cazaci"
+  },
+  {
+    "lemma": "Cazaci",
+    "previous": "Caularis",
+    "next": "Ceionius 6"
+  },
+  {
+    "lemma": "Ceionius 6",
+    "previous": "Cazaci"
   },
   {
     "lemma": "Cato",
@@ -20985,8 +21015,20 @@
   },
   {
     "lemma": "Chrysippos 15",
+    "previous": "Chrysippos 14b"
+  },
+  {
+    "lemma": "Chrysippos 14b",
+    "next": "Chrysippos 16"
+  },
+  {
+    "lemma": "Chrysippos 16",
     "previous": "Chrysippos 14b",
-    "next": null
+    "next": "Chrysippos 16"
+  },
+  {
+    "lemma": "Chrysippos 16",
+    "previous": "Chrysippos 16"
   },
   {
     "lemma": "Chrysippos 14b",
@@ -21052,7 +21094,10 @@
   },
   {
     "lemma": "Chytrieioi",
-    "previous": "Chumdan",
+    "previous": "Chumdan"
+  },
+  {
+    "lemma": "Chytrieioi",
     "sort_key": "Artikelname ohne \"RE:\""
   },
   {
@@ -21587,7 +21632,12 @@
   },
   {
     "lemma": "Clodius 12",
-    "previous": "Clodius 10a"
+    "previous": "Clodius 10a",
+    "next": "Clodius 17a"
+  },
+  {
+    "lemma": "Clodius 17a",
+    "previous": "Clodius 12"
   },
   {
     "lemma": "Claudius 399a",
@@ -21824,13 +21874,34 @@
   },
   {
     "lemma": "Codrus a",
-    "previous": "Cocceius 19a",
-    "next": "Coelius 8",
+    "previous": "Cocceius 19a"
+  },
+  {
+    "lemma": "Codrus a",
     "sort_key": "Codrus 0a"
   },
   {
+    "lemma": "Codrus a",
+    "next": "Coelius 8"
+  },
+  {
     "lemma": "Coelius 8",
-    "previous": "Codrus a"
+    "previous": "Codrus a",
+    "next": "Coelius 9"
+  },
+  {
+    "lemma": "Coelius 9",
+    "previous": "Coelius 8",
+    "next": "Coelius 12"
+  },
+  {
+    "lemma": "Coelius 12",
+    "previous": "Coelius 9",
+    "next": "Coelius 31a"
+  },
+  {
+    "lemma": "Coelius 31a",
+    "previous": "Coelius 12"
   },
   {
     "lemma": "Codrus a",
@@ -22158,11 +22229,15 @@
   },
   {
     "lemma": "Cornelius 141",
-    "previous": "Cornelius 136"
+    "previous": "Cornelius 136",
+    "next": "Cornelius 143"
+  },
+  {
+    "lemma": "Cornelius 143",
+    "previous": "Cornelius 141"
   },
   {
     "lemma": "Cornelius 351",
-    "previous": null,
     "next": "Cornelius 376ff."
   },
   {
@@ -22299,7 +22374,6 @@
   {
     "lemma": "Culleolus a",
     "previous": "Cubi",
-    "next": "Cura 4",
     "chapters": [
       {
         "start": 332,
@@ -22309,8 +22383,17 @@
     ]
   },
   {
+    "lemma": "Culleolus",
+    "next": "Cura 4"
+  },
+  {
     "lemma": "Cura 4",
-    "previous": "Culleolus a"
+    "previous": "Culleolus",
+    "next": "Currodrepanus"
+  },
+  {
+    "lemma": "Currodrepanus",
+    "previous": "Cura 4"
   },
   {
     "lemma": "Culleolus",

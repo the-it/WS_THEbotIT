@@ -3042,6 +3042,16 @@
     "lemma": "Bruttius 4a",
     "previous": "Bruttidius",
     "next": null,
+    "sort_key": "Bruttius 04a"
+  },
+  {
+    "lemma": "Bruttidius",
+    "next": "Bruttius 4a"
+  },
+  {
+    "lemma": "Bruttius 4a",
+    "previous": "Bruttidius",
+    "next": "Bruttius 5",
     "sort_key": "Bruttius 04a",
     "chapters": [
       {
@@ -3050,6 +3060,10 @@
         "author": "Eck"
       }
     ]
+  },
+  {
+    "lemma": "Bruttius 5",
+    "previous": "Bruttius 4a"
   },
   {
     "lemma": "Bruttidius",
@@ -3908,7 +3922,12 @@
   },
   {
     "lemma": "Coelius 19",
-    "previous": "Cluvius 10c"
+    "previous": "Cluvius 10c",
+    "next": "Cominius 22"
+  },
+  {
+    "lemma": "Cominius 22",
+    "previous": "Coelius 19"
   },
   {
     "lemma": "Claudius 414a",
@@ -4077,7 +4096,12 @@
   },
   {
     "lemma": "Cornelius 146",
-    "previous": "Cornelius 124a"
+    "previous": "Cornelius 124a",
+    "next": "Cornelius 154a"
+  },
+  {
+    "lemma": "Cornelius 154a",
+    "previous": "Cornelius 146"
   },
   {
     "lemma": "Comius 2",
