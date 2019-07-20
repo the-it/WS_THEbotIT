@@ -1776,7 +1776,27 @@
   },
   {
     "lemma": "Biton 2a",
-    "previous": "Bion 3a"
+    "previous": "Bion 3a",
+    "next": "Bolon 2"
+  },
+  {
+    "lemma": "Bolon 2",
+    "previous": "Biton 2a",
+    "next": "Boubakes"
+  },
+  {
+    "lemma": "Boubakes",
+    "previous": "Bolon 2",
+    "next": "Boupares"
+  },
+  {
+    "lemma": "Boupares",
+    "previous": "Boubakes",
+    "next": "Bulagoras 2"
+  },
+  {
+    "lemma": "Bulagoras 2",
+    "previous": "Boupares"
   },
   {
     "lemma": "Berufsvereine",
@@ -1913,7 +1933,12 @@
   },
   {
     "lemma": "Charikles 4a",
-    "previous": "Χαμαιδικαστής"
+    "previous": "Χαμαιδικαστής",
+    "next": "Charon 5a"
+  },
+  {
+    "lemma": "Charon 5a",
+    "previous": "Charikles 4a"
   },
   {
     "lemma": "Bulagoras",
@@ -2043,7 +2068,12 @@
   },
   {
     "lemma": "Chrysippos 10a",
-    "previous": "Χρηματιστής 1"
+    "previous": "Χρηματιστής 1",
+    "next": "Χρυσώνης"
+  },
+  {
+    "lemma": "Χρυσώνης",
+    "previous": "Chrysippos 10a"
   },
   {
     "lemma": "Chersanippos",
@@ -7524,7 +7554,8 @@
   },
   {
     "lemma": "Λαβασσάρασκος",
-    "previous": "Kyros 6a"
+    "previous": "Kyros 6a",
+    "next": null
   },
   {
     "lemma": "Kyros 7",

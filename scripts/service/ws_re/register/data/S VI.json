@@ -157,7 +157,12 @@
   {
     "lemma": "Aemilius 54b",
     "previous": "Aemilius 43",
+    "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
+  },
+  {
+    "lemma": "Aemilius 79",
+    "previous": "Aemilius 54b"
   },
   {
     "lemma": "Aemilius 43",
@@ -1275,12 +1280,21 @@
   {
     "lemma": "Claudius 187",
     "previous": "Claudius 186",
-    "next": "Claudius 188",
     "sort_key": "Claudius"
   },
   {
+    "lemma": "Claudius 187",
+    "next": "Claudius 188"
+  },
+  {
     "lemma": "Claudius 188",
-    "previous": "Claudius 187"
+    "previous": "Claudius 187",
+    "next": "Claudius 194",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 194",
+    "previous": "Claudius 188"
   },
   {
     "lemma": "Claudius 187",
@@ -1425,7 +1439,12 @@
   },
   {
     "lemma": "Cornelius 279a",
-    "previous": "Cornelius 279"
+    "previous": "Cornelius 279",
+    "next": "Cornelius 296"
+  },
+  {
+    "lemma": "Cornelius 296",
+    "previous": "Cornelius 279a"
   },
   {
     "lemma": "Claudius 187. 188. 194",

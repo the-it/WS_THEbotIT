@@ -1654,7 +1654,17 @@
   },
   {
     "lemma": "Bitheridus",
-    "previous": "Bellicius 1"
+    "previous": "Bellicius 1",
+    "next": "Bononius 2"
+  },
+  {
+    "lemma": "Bononius 2",
+    "previous": "Bitheridus",
+    "next": "Bruttius 5"
+  },
+  {
+    "lemma": "Bruttius 5",
+    "previous": "Bononius 2"
   },
   {
     "lemma": "Bappo 2",
@@ -4554,6 +4564,7 @@
   },
   {
     "lemma": "Carnuntum",
+    "previous": null,
     "next": "Chilperich"
   },
   {
