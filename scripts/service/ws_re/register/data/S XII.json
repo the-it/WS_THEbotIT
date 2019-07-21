@@ -1,11 +1,19 @@
 [
   {
+    "lemma": "Accius 2",
+    "next": "Achaios 6"
+  },
+  {
     "lemma": "Achaios 6",
-    "next": "Acilius 52"
+    "previous": "Accius 2",
+    "next": "Acilius 42"
+  },
+  {
+    "lemma": "Acilius 42",
+    "previous": "Achaios 6"
   },
   {
     "lemma": "Acilius 52",
-    "previous": "Achaios 6",
     "next": "Ad Malum"
   },
   {
@@ -121,8 +129,25 @@
     ]
   },
   {
+    "lemma": "Calestrius 3",
+    "next": "Calpetanus 3"
+  },
+  {
+    "lemma": "Calpetanus 3",
+    "previous": "Calestrius 3",
+    "next": "Calpurnius 53"
+  },
+  {
+    "lemma": "Calpurnius 53",
+    "previous": "Calpetanus 3",
+    "next": "Calpurnius 60a",
+    "sort_key": "Calpurnius 053"
+  },
+  {
     "lemma": "Calpurnius 60a",
-    "next": "Calpurnius 70"
+    "previous": "Calpurnius 53",
+    "next": "Calpurnius 70",
+    "sort_key": "Calpurnius 060a"
   },
   {
     "lemma": "Calpurnius 70",
@@ -192,6 +217,34 @@
   {
     "lemma": "Catienus 1b",
     "previous": "Catienus 1a"
+  },
+  {
+    "lemma": "Cassius 45a",
+    "next": "Castra, Castrum 1a"
+  },
+  {
+    "lemma": "Castra, Castrum 1a",
+    "previous": "Cassius 45a",
+    "next": "Catienus 1a"
+  },
+  {
+    "lemma": "Catienus 1a",
+    "previous": "Castra, Castrum 1a",
+    "next": "Catienus 1b"
+  },
+  {
+    "lemma": "Catienus 1b",
+    "previous": "Catienus 1a",
+    "next": "Catius 4"
+  },
+  {
+    "lemma": "Catius 4",
+    "previous": "Catienus 1b",
+    "next": "Celeia"
+  },
+  {
+    "lemma": "Celeia",
+    "previous": "Catius 4"
   },
   {
     "lemma": "Cornelius 295a",
@@ -673,12 +726,20 @@
   {
     "lemma": "Aemilius 102a",
     "previous": "Aemilius 85a",
-    "next": "Aemilius 135",
     "sort_key": "Aemilius 085a"
   },
   {
+    "lemma": "Aemilius 102a",
+    "next": "Aemilius 135"
+  },
+  {
     "lemma": "Aemilius 135",
-    "previous": "Aemilius 102a"
+    "previous": "Aemilius 102a",
+    "next": "Aemilius 150a"
+  },
+  {
+    "lemma": "Aemilius 150a",
+    "previous": "Aemilius 135"
   },
   {
     "lemma": "Aemilius 102a",
@@ -895,7 +956,13 @@
   },
   {
     "lemma": "In Alpe Iulia",
-    "previous": "Allius 1a"
+    "previous": "Allius 1a",
+    "next": "Amelas",
+    "sort_key": "Alpe Iulia, In"
+  },
+  {
+    "lemma": "Amelas",
+    "previous": "In Alpe Iulia"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -986,7 +1053,12 @@
   },
   {
     "lemma": "Andautonia",
-    "previous": "Andania 1"
+    "previous": "Andania 1",
+    "next": "Andeda"
+  },
+  {
+    "lemma": "Andeda",
+    "previous": "Andautonia"
   },
   {
     "lemma": "Anaximenes 1",
@@ -1866,6 +1938,7 @@
   },
   {
     "lemma": "Caesilianus",
+    "previous": null,
     "next": "Caesius 14a"
   },
   {
@@ -1878,6 +1951,19 @@
         "author": "Winkler"
       }
     ]
+  },
+  {
+    "lemma": "Caesius 15a",
+    "next": "Calestrius 3"
+  },
+  {
+    "lemma": "Calestrius 3",
+    "previous": "Caesius 15a",
+    "next": "Calpetanus 3"
+  },
+  {
+    "lemma": "Calpetanus 3",
+    "previous": "Calestrius 3"
   },
   {
     "lemma": "Caesius 15a",
@@ -2112,10 +2198,12 @@
   },
   {
     "lemma": "Chrysippos 14",
-    "previous": "Charax 19"
+    "previous": "Charax 19",
+    "next": null
   },
   {
     "lemma": "Cilnius 3",
+    "previous": null,
     "next": "Claudius 109"
   },
   {
@@ -2174,7 +2262,22 @@
   },
   {
     "lemma": "Claudius 299a",
-    "previous": "Claudius 288aaa"
+    "previous": "Claudius 288aaa",
+    "next": "Claudius 306a"
+  },
+  {
+    "lemma": "Claudius 306a",
+    "previous": "Claudius 299a",
+    "next": "Claudius 347"
+  },
+  {
+    "lemma": "Claudius 347",
+    "previous": "Claudius 306a",
+    "next": "Clodius 31a"
+  },
+  {
+    "lemma": "Clodius 31a",
+    "previous": "Claudius 347"
   },
   {
     "lemma": "Claudius 288a",
@@ -4432,12 +4535,7 @@
   {
     "lemma": "Azania 2",
     "previous": "Aristophanes 12",
-    "next": "Camundus",
     "redirect": "Zangenae"
-  },
-  {
-    "lemma": "Camundus",
-    "previous": "Azania 2"
   },
   {
     "lemma": "Ἀζανία",
@@ -4451,6 +4549,24 @@
   {
     "lemma": "Carniola",
     "previous": "Camundus"
+  },
+  {
+    "lemma": "Ἀζανία",
+    "next": "Camundus"
+  },
+  {
+    "lemma": "Camundus",
+    "previous": "Ἀζανία",
+    "next": "Carniola"
+  },
+  {
+    "lemma": "Carniola",
+    "previous": "Camundus",
+    "next": "Carnuntum"
+  },
+  {
+    "lemma": "Carnuntum",
+    "previous": "Carniola"
   },
   {
     "lemma": "Ἀζανία",
@@ -4475,7 +4591,12 @@
   },
   {
     "lemma": "Carnuntum",
-    "previous": "Carniola"
+    "previous": "Carniola",
+    "next": "Ephesos"
+  },
+  {
+    "lemma": "Ephesos",
+    "previous": "Carnuntum"
   },
   {
     "lemma": "Poreston",

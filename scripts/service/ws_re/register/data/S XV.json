@@ -9,7 +9,12 @@
     ]
   },
   {
+    "lemma": "Briovera",
+    "next": "Caecilianus 4a"
+  },
+  {
     "lemma": "Caecilianus 4a",
+    "previous": "Briovera",
     "next": "Caecilius 124cc"
   },
   {
@@ -57,7 +62,12 @@
   },
   {
     "lemma": "Camulogenus",
-    "previous": "Calpurnius 123b"
+    "previous": "Calpurnius 123b",
+    "next": "Cassius 48"
+  },
+  {
+    "lemma": "Cassius 48",
+    "previous": "Camulogenus"
   },
   {
     "lemma": "Demostratos 16",
@@ -1085,7 +1095,12 @@
   },
   {
     "lemma": "arcantodan",
-    "previous": "Apronius 12"
+    "previous": "Apronius 12",
+    "next": "Ariston 56a"
+  },
+  {
+    "lemma": "Ariston 56a",
+    "previous": "arcantodan"
   },
   {
     "lemma": "Apokryphe Apostelakten",
@@ -1772,13 +1787,7 @@
   },
   {
     "lemma": "Claudius 150a",
-    "previous": "Claudius 95a",
-    "next": "Claudius 171a",
-    "sort_key": "Claudius"
-  },
-  {
-    "lemma": "Claudius 171a",
-    "previous": "Claudius 150a"
+    "previous": "Claudius 95a"
   },
   {
     "lemma": "Claudius 150a",
@@ -1796,6 +1805,28 @@
   {
     "lemma": "Claudius 173a",
     "previous": "Claudius 171a"
+  },
+  {
+    "lemma": "Claudius 150a",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 150a",
+    "next": "Claudius 171a"
+  },
+  {
+    "lemma": "Claudius 171a",
+    "previous": "Claudius 150a",
+    "next": "Claudius 173a"
+  },
+  {
+    "lemma": "Claudius 173a",
+    "previous": "Claudius 171a",
+    "next": "Claudius 320a"
+  },
+  {
+    "lemma": "Claudius 320a",
+    "previous": "Claudius 173a"
   },
   {
     "lemma": "Claudius 150a",

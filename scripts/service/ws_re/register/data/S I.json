@@ -3446,7 +3446,10 @@
   },
   {
     "lemma": "Aiolides a",
-    "previous": "Aioleion",
+    "previous": "Aioleion"
+  },
+  {
+    "lemma": "Aiolides a",
     "sort_key": "Aiolides 0a"
   },
   {
@@ -12924,11 +12927,15 @@
   },
   {
     "lemma": "Arrius 17a",
-    "previous": "Arrius 14a"
+    "previous": "Arrius 14a",
+    "next": "Arrius 18"
+  },
+  {
+    "lemma": "Arrius 18",
+    "previous": "Arrius 17a"
   },
   {
     "lemma": "Arrianus 2a",
-    "previous": null,
     "next": "Arrianus 12"
   },
   {
@@ -13667,7 +13674,12 @@
   },
   {
     "lemma": "Asinius 27",
-    "previous": "Asinius 19"
+    "previous": "Asinius 19",
+    "next": "Asinius 28"
+  },
+  {
+    "lemma": "Asinius 28",
+    "previous": "Asinius 27"
   },
   {
     "lemma": "Asisium",
@@ -17792,7 +17804,10 @@
   },
   {
     "lemma": "Bienus",
-    "previous": "Biennos 1",
+    "previous": "Biennos 1"
+  },
+  {
+    "lemma": "Bienus",
     "sort_key": "Bienus 1"
   },
   {
@@ -18135,7 +18150,12 @@
   },
   {
     "lemma": "Bomos 2",
-    "previous": "Bolus"
+    "previous": "Bolus",
+    "next": "Bononia 1"
+  },
+  {
+    "lemma": "Bononia 1",
+    "previous": "Bomos 2"
   },
   {
     "lemma": "Bolvinnus",
@@ -18239,11 +18259,13 @@
   },
   {
     "lemma": "Boriennus",
+    "previous": null,
     "next": "Borillus 1"
   },
   {
     "lemma": "Borillus 1",
     "previous": "Boriennus",
+    "next": "Borion",
     "chapters": [
       {
         "start": 256,
@@ -18251,6 +18273,10 @@
         "author": "Robert"
       }
     ]
+  },
+  {
+    "lemma": "Borion",
+    "previous": "Borillus 1"
   },
   {
     "lemma": "Borillus",
@@ -18263,7 +18289,12 @@
   },
   {
     "lemma": "Borissos",
-    "previous": "Borion"
+    "previous": "Borion",
+    "next": "Borius"
+  },
+  {
+    "lemma": "Borius",
+    "previous": "Borissos"
   },
   {
     "lemma": "Boriennus",
@@ -18422,7 +18453,12 @@
   },
   {
     "lemma": "Britomartis",
-    "previous": "Brioratenses"
+    "previous": "Brioratenses",
+    "next": "Brixantus"
+  },
+  {
+    "lemma": "Brixantus",
+    "previous": "Britomartis"
   },
   {
     "lemma": "Bria",
@@ -18883,7 +18919,12 @@
   },
   {
     "lemma": "Cadra",
-    "previous": "Cacus"
+    "previous": "Cacus",
+    "next": "Caeciliana 2"
+  },
+  {
+    "lemma": "Caeciliana 2",
+    "previous": "Cadra"
   },
   {
     "lemma": "Caca",
@@ -18906,7 +18947,13 @@
   },
   {
     "lemma": "Caecilius 10a",
-    "previous": "Caeciliana 2"
+    "previous": "Caeciliana 2",
+    "next": "Caecilius 28",
+    "sort_key": "Caecilius 010a"
+  },
+  {
+    "lemma": "Caecilius 28",
+    "previous": "Caecilius 10a"
   },
   {
     "lemma": "Byzantion 4",
@@ -19365,6 +19412,25 @@
   {
     "lemma": "Calvisius 3a",
     "previous": "L. Calventius",
+    "next": "Calvisius 9"
+  },
+  {
+    "lemma": "Calvisius 9",
+    "previous": "Calvisius 3a",
+    "next": "Camarum",
+    "sort_key": "Calvisius 09"
+  },
+  {
+    "lemma": "Camarum",
+    "previous": "Calvisius 9"
+  },
+  {
+    "lemma": "L. Calventius",
+    "next": "Calvisius 3a"
+  },
+  {
+    "lemma": "Calvisius 3a",
+    "previous": "L. Calventius",
     "next": "Calvisius 9",
     "chapters": [
       {
@@ -19447,16 +19513,35 @@
   },
   {
     "lemma": "Campi Cauchi",
-    "previous": "Campanius 1"
-  },
-  {
-    "lemma": "Campi Cauchi",
+    "previous": "Campanius 1",
     "next": "Camulatus 1",
     "sort_key": "Campicauchi"
   },
   {
     "lemma": "Camulatus 1",
     "previous": "Campi Cauchi"
+  },
+  {
+    "lemma": "Campi Cauchi",
+    "sort_key": "Campicauchi"
+  },
+  {
+    "lemma": "Campi Cauchi",
+    "next": "Camulatus 1"
+  },
+  {
+    "lemma": "Camulatus 1",
+    "previous": "Campi Cauchi",
+    "next": "Canas"
+  },
+  {
+    "lemma": "Canas",
+    "previous": "Camulatus 1",
+    "next": "Candidus 1"
+  },
+  {
+    "lemma": "Candidus 1",
+    "previous": "Canas"
   },
   {
     "lemma": "Campi Cauchi",
@@ -19485,7 +19570,18 @@
   },
   {
     "lemma": "Candidus 1",
-    "previous": "Canas"
+    "previous": "Canas",
+    "next": "Caninius 3"
+  },
+  {
+    "lemma": "Caninius 3",
+    "previous": "Candidus 1",
+    "next": "Caninius 4",
+    "sort_key": "Caninius 03"
+  },
+  {
+    "lemma": "Caninius 4",
+    "previous": "Caninius 3"
   },
   {
     "lemma": "Campi Cauchi",
@@ -20039,6 +20135,7 @@
   {
     "lemma": "Casus a",
     "previous": "Castus 4",
+    "next": null,
     "redirect": "Kazanes",
     "chapters": [
       {
@@ -20058,7 +20155,12 @@
   },
   {
     "lemma": "Catellius 1a",
-    "previous": "Catabana"
+    "previous": "Catabana",
+    "next": "Catilius 3"
+  },
+  {
+    "lemma": "Catilius 3",
+    "previous": "Catellius 1a"
   },
   {
     "lemma": "Casus",
@@ -20076,7 +20178,12 @@
   },
   {
     "lemma": "Catilius 3",
-    "previous": "Catellius 1a"
+    "previous": "Catellius 1a",
+    "next": "Catilius 4"
+  },
+  {
+    "lemma": "Catilius 4",
+    "previous": "Catilius 3"
   },
   {
     "lemma": "Casus",
@@ -20173,7 +20280,13 @@
   },
   {
     "lemma": "Ceionius 6",
-    "previous": "Cazaci"
+    "previous": "Cazaci",
+    "next": "Celeia",
+    "sort_key": "Ceionius 06"
+  },
+  {
+    "lemma": "Celeia",
+    "previous": "Ceionius 6"
   },
   {
     "lemma": "Cato",
@@ -21295,7 +21408,13 @@
   },
   {
     "lemma": "Claudius 93",
-    "previous": "Claudius 87"
+    "previous": "Claudius 87",
+    "next": "Claudius 100a",
+    "sort_key": "Claudius 093"
+  },
+  {
+    "lemma": "Claudius 100a",
+    "previous": "Claudius 93"
   },
   {
     "lemma": "Claudius 31a(-b)",
@@ -22234,7 +22353,8 @@
   },
   {
     "lemma": "Cornelius 143",
-    "previous": "Cornelius 141"
+    "previous": "Cornelius 141",
+    "next": null
   },
   {
     "lemma": "Cornelius 351",

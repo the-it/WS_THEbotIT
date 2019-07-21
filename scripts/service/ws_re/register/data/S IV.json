@@ -1829,12 +1829,20 @@
   },
   {
     "lemma": "Bulagoras 2",
-    "previous": "Boupares",
+    "previous": "Boupares"
+  },
+  {
+    "lemma": "Bulagoras",
     "next": "Cercina"
   },
   {
     "lemma": "Cercina",
-    "previous": "Bulagoras 2"
+    "previous": "Bulagoras",
+    "next": "Chaireas 5a"
+  },
+  {
+    "lemma": "Chaireas 5a",
+    "previous": "Cercina"
   },
   {
     "lemma": "Berufsvereine",
