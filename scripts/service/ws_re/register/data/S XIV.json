@@ -1,6 +1,17 @@
 [
   {
+    "lemma": "Claudius 75a",
+    "next": "Claudius 89a"
+  },
+  {
+    "lemma": "Claudius 89a",
+    "previous": "Claudius 75a",
+    "next": "Claudius 107a",
+    "sort_key": "Claudius 089a"
+  },
+  {
     "lemma": "Claudius 107a",
+    "previous": "Claudius 89a",
     "next": "Claudius 107b"
   },
   {
@@ -41,10 +52,25 @@
   },
   {
     "lemma": "Claudius 241a",
-    "previous": "Claudius 210a"
+    "previous": "Claudius 210a",
+    "next": "Claudius 242"
+  },
+  {
+    "lemma": "Claudius 242",
+    "previous": "Claudius 241a",
+    "next": "Claudius 273a"
+  },
+  {
+    "lemma": "Claudius 273a",
+    "previous": "Claudius 242"
+  },
+  {
+    "lemma": "Claudius 342a",
+    "next": "Claudius 349a"
   },
   {
     "lemma": "Claudius 349a",
+    "previous": "Claudius 342a",
     "next": "Claudius 369a"
   },
   {
@@ -75,7 +101,12 @@
   },
   {
     "lemma": "Claudius 418a",
-    "previous": "Claudius 414a"
+    "previous": "Claudius 414a",
+    "next": "Claudius 429a"
+  },
+  {
+    "lemma": "Claudius 429a",
+    "previous": "Claudius 418a"
   },
   {
     "lemma": "Comius a",
@@ -2293,6 +2324,15 @@
   },
   {
     "lemma": "Aqua, Aquae 97",
+    "next": "Aradius 1a",
+    "sort_key": "Aquae 097"
+  },
+  {
+    "lemma": "Aradius 1a",
+    "previous": "Aqua, Aquae 97"
+  },
+  {
+    "lemma": "Aqua, Aquae 97",
     "sort_key": "Aquae 097"
   },
   {
@@ -2316,7 +2356,12 @@
   },
   {
     "lemma": "Araxa",
-    "previous": "Aratos 6"
+    "previous": "Aratos 6",
+    "next": "Archelaos 37a"
+  },
+  {
+    "lemma": "Archelaos 37a",
+    "previous": "Araxa"
   },
   {
     "lemma": "Aqua, Aquae 97",

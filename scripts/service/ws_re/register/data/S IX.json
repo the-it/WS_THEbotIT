@@ -406,7 +406,12 @@
   },
   {
     "lemma": "Asterope 6",
-    "previous": "Asprius"
+    "previous": "Asprius",
+    "next": "Attikos 15"
+  },
+  {
+    "lemma": "Attikos 15",
+    "previous": "Asterope 6"
   },
   {
     "lemma": "Asprenas",
@@ -564,7 +569,13 @@
   },
   {
     "lemma": "Cassius 84",
-    "previous": "Buraïkos 1"
+    "previous": "Buraïkos 1",
+    "next": "Claudius 149a",
+    "sort_key": "Cassius 084"
+  },
+  {
+    "lemma": "Claudius 149a",
+    "previous": "Cassius 84"
   },
   {
     "lemma": "Aurelius 157a",
