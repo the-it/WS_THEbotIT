@@ -2395,7 +2395,12 @@
   },
   {
     "lemma": "Denuntiatio",
-    "previous": "Demosthenes 4a"
+    "previous": "Demosthenes 4a",
+    "next": "Derdas 4"
+  },
+  {
+    "lemma": "Derdas 4",
+    "previous": "Denuntiatio"
   },
   {
     "lemma": "Demarchos 6",
@@ -4257,11 +4262,11 @@
   {
     "lemma": "Ἱππάρχης",
     "previous": "Himeraios",
-    "next": "Hippeios",
+    "next": "Ἱππεῖος",
     "sort_key": "Hipparches"
   },
   {
-    "lemma": "Hippeios",
+    "lemma": "Ἱππεῖος",
     "previous": "Ἱππάρχης",
     "next": "Hippias 4",
     "sort_key": "Hippeios",
@@ -4275,7 +4280,7 @@
   },
   {
     "lemma": "Hippias 4",
-    "previous": "Hippeios",
+    "previous": "Ἱππεῖος",
     "next": null
   },
   {
@@ -4421,7 +4426,14 @@
   },
   {
     "lemma": "Hyäne",
-    "previous": "Ὁρμοφυλακία"
+    "previous": "Ὁρμοφυλακία",
+    "next": "Hydarnes 1",
+    "sort_key": "Hyaene",
+    "wp_link": "w:de:Hyänen"
+  },
+  {
+    "lemma": "Hydarnes 1",
+    "previous": "Hyäne"
   },
   {
     "lemma": "Hyäne",
