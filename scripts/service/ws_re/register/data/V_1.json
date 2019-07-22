@@ -11603,6 +11603,7 @@
     "lemma": "Diognetos 5",
     "previous": "Diognetos 4",
     "next": "Diognetos 6",
+    "sort_key": "Diognetos 05",
     "chapters": [
       {
         "start": 784,
@@ -11615,6 +11616,7 @@
     "lemma": "Diognetos 6",
     "previous": "Diognetos 5",
     "next": "Diognetos 7",
+    "sort_key": "Diognetos 06",
     "chapters": [
       {
         "start": 784,
@@ -11627,6 +11629,7 @@
     "lemma": "Diognetos 7",
     "previous": "Diognetos 6",
     "next": "Diognetos 8",
+    "sort_key": "Diognetos 07",
     "chapters": [
       {
         "start": 784,
@@ -11821,7 +11824,7 @@
   {
     "lemma": "Dioklea",
     "previous": "Diokessa",
-    "next": "Diokleia",
+    "next": "Diokleia 1",
     "chapters": [
       {
         "start": 791,
@@ -11844,7 +11847,7 @@
   },
   {
     "lemma": "Diokleia 1",
-    "previous": "Diokleia",
+    "previous": "Dioklea",
     "next": "Diokleia 2",
     "chapters": [
       {
@@ -11857,7 +11860,7 @@
   {
     "lemma": "Diokleia 2",
     "previous": "Diokleia 1",
-    "next": "Diokleides 1",
+    "next": "Διόκλεια",
     "chapters": [
       {
         "start": 791,
@@ -11868,7 +11871,7 @@
   },
   {
     "lemma": "Diokleides 1",
-    "previous": "Diokleia 2",
+    "previous": "Διόκλεια",
     "next": "Diokleides 2",
     "chapters": [
       {
@@ -11905,7 +11908,7 @@
   {
     "lemma": "Diokleides 4",
     "previous": "Diokleides 3",
-    "next": "Diokleion oros",
+    "next": "Διόκλειον ὄρος",
     "chapters": [
       {
         "start": 791,
@@ -11915,9 +11918,10 @@
     ]
   },
   {
-    "lemma": "Diokleion oros",
+    "lemma": "Διόκλειον ὄρος",
     "previous": "Diokleides 4",
     "next": "Diokles 1",
+    "sort_key": "Diokleion oros",
     "chapters": [
       {
         "start": 791,
@@ -11928,7 +11932,7 @@
   },
   {
     "lemma": "Diokles 1",
-    "previous": "Diokleion oros",
+    "previous": "Διόκλειον ὄρος",
     "next": "Diokles 2",
     "chapters": [
       {

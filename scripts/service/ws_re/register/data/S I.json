@@ -11500,7 +11500,13 @@
   },
   {
     "lemma": "Aristagoras 8a",
-    "previous": "Aristagoras 8"
+    "previous": "Aristagoras 8",
+    "next": "Aristagoras 9a",
+    "sort_key": "Aristagoras 08a"
+  },
+  {
+    "lemma": "Aristagoras 9a",
+    "previous": "Aristagoras 8a"
   },
   {
     "lemma": "Arionos oros",
@@ -12231,7 +12237,13 @@
   },
   {
     "lemma": "Aristophantos a",
-    "previous": "Aristonymos 9"
+    "previous": "Aristonymos 9",
+    "next": "Aristophantos 2",
+    "sort_key": "Aristophantos 0"
+  },
+  {
+    "lemma": "Aristophantos 2",
+    "previous": "Aristophantos a"
   },
   {
     "lemma": "Aristophantos a",
@@ -12248,7 +12260,13 @@
   },
   {
     "lemma": "Aristophon 1a",
-    "previous": "Aristophantos 2"
+    "previous": "Aristophantos 2",
+    "next": "Aristophon 6",
+    "sort_key": "Aristophon 01a"
+  },
+  {
+    "lemma": "Aristophon 6",
+    "previous": "Aristophon 1a"
   },
   {
     "lemma": "Aristophantos a",
@@ -12335,7 +12353,12 @@
   },
   {
     "lemma": "Aristoteles 12a",
-    "previous": "Aristoteles 8"
+    "previous": "Aristoteles 8",
+    "next": "Aristoteles 13"
+  },
+  {
+    "lemma": "Aristoteles 13",
+    "previous": "Aristoteles 12a"
   },
   {
     "lemma": "Aristoteles 8.9",
@@ -12485,6 +12508,7 @@
   {
     "lemma": "Arkadianai 2",
     "previous": "Arka 5",
+    "next": "Arkadion",
     "chapters": [
       {
         "start": 137,
@@ -12492,6 +12516,10 @@
         "author": "Ruge"
       }
     ]
+  },
+  {
+    "lemma": "Arkadion",
+    "previous": "Arkadianai 2"
   },
   {
     "lemma": "Arkadianai",
@@ -12522,7 +12550,12 @@
   },
   {
     "lemma": "Arkea",
-    "previous": "Arkas 4"
+    "previous": "Arkas 4",
+    "next": "Arkesikerta"
+  },
+  {
+    "lemma": "Arkesikerta",
+    "previous": "Arkea"
   },
   {
     "lemma": "Arkadianai",
@@ -12881,7 +12914,13 @@
   },
   {
     "lemma": "Arrianus 2a",
-    "previous": "Arretium"
+    "previous": "Arretium",
+    "next": "Arrius 12",
+    "sort_key": "Arrianus 02a"
+  },
+  {
+    "lemma": "Arrius 12",
+    "previous": "Arrianus 2a"
   },
   {
     "lemma": "Arra 1a",
@@ -14881,7 +14920,7 @@
   {
     "lemma": "Atussa",
     "previous": "Aturus",
-    "next": null,
+    "next": "Aucissa",
     "chapters": [
       {
         "start": 226,
@@ -14889,6 +14928,10 @@
         "author": "Ruge"
       }
     ]
+  },
+  {
+    "lemma": "Aucissa",
+    "previous": "Atussa"
   },
   {
     "lemma": "Avarigni",
@@ -16042,7 +16085,12 @@
   },
   {
     "lemma": "Baal-Harrân",
-    "previous": "Azochis"
+    "previous": "Azochis",
+    "next": "Baalmelek"
+  },
+  {
+    "lemma": "Baalmelek",
+    "previous": "Baal-Harrân"
   },
   {
     "lemma": "Azochis",
@@ -17223,7 +17271,6 @@
   {
     "lemma": "Batnai 1",
     "previous": "Batis 2",
-    "next": "Batnai 2",
     "chapters": [
       {
         "start": 245,
@@ -17233,8 +17280,17 @@
     ]
   },
   {
+    "lemma": "Batnai",
+    "next": "Batnai 2"
+  },
+  {
     "lemma": "Batnai 2",
-    "previous": "Batnai 1"
+    "previous": "Batnai",
+    "next": "Batromios"
+  },
+  {
+    "lemma": "Batromios",
+    "previous": "Batnai 2"
   },
   {
     "lemma": "Batnai",
@@ -17403,12 +17459,20 @@
   {
     "lemma": "Βελλεροφόντειος δῆμος",
     "previous": "Bella",
-    "next": "Bellicius 9",
     "sort_key": "Bellerophonteios"
   },
   {
+    "lemma": "Βελλεροφόντειος δῆμος",
+    "next": "Bellicius 9"
+  },
+  {
     "lemma": "Bellicius 9",
-    "previous": "Βελλεροφόντειος δῆμος"
+    "previous": "Βελλεροφόντειος δῆμος",
+    "next": "Belligenes"
+  },
+  {
+    "lemma": "Belligenes",
+    "previous": "Bellicius 9"
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
@@ -17442,11 +17506,15 @@
   },
   {
     "lemma": "Bellona",
-    "previous": "Bello"
+    "previous": "Bello",
+    "next": "Bellum a"
+  },
+  {
+    "lemma": "Bellum a",
+    "previous": "Bellona"
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
-    "previous": null,
     "next": "Bellicenses"
   },
   {
@@ -22353,11 +22421,16 @@
   },
   {
     "lemma": "Cornelius 143",
-    "previous": "Cornelius 141",
-    "next": null
+    "previous": "Cornelius 141"
+  },
+  {
+    "lemma": "Cornelius 350",
+    "previous": null,
+    "next": "Cornelius 351"
   },
   {
     "lemma": "Cornelius 351",
+    "previous": "Cornelius 350",
     "next": "Cornelius 376ff."
   },
   {
@@ -22485,7 +22558,8 @@
   },
   {
     "lemma": "Culleolus",
-    "previous": "Cubi"
+    "previous": "Cubi",
+    "next": null
   },
   {
     "lemma": "Cubi",
@@ -23293,7 +23367,12 @@
   },
   {
     "lemma": "Demetria 1",
-    "previous": "Demeas 3"
+    "previous": "Demeas 3",
+    "next": "Demetrias 1a"
+  },
+  {
+    "lemma": "Demetrias 1a",
+    "previous": "Demetria 1"
   },
   {
     "lemma": "Demaratos 3a",
@@ -23500,7 +23579,11 @@
   {
     "lemma": "Demochares 1",
     "previous": "Demo 6",
-    "next": null
+    "next": "Demochares 2"
+  },
+  {
+    "lemma": "Demochares 2",
+    "previous": "Demochares 1"
   },
   {
     "lemma": "Demetrios 130",

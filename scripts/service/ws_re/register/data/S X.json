@@ -2690,7 +2690,8 @@
   },
   {
     "lemma": "Cornelius 274a",
-    "previous": "Constantiniani"
+    "previous": "Constantiniani",
+    "next": null
   },
   {
     "lemma": "Cillae",
@@ -2921,7 +2922,11 @@
   {
     "lemma": "Demetrios 32d",
     "previous": "Demeas 1",
-    "next": null
+    "next": "Demetrios 32e"
+  },
+  {
+    "lemma": "Demetrios 32e",
+    "previous": "Demetrios 32d"
   },
   {
     "lemma": "Demetrios 32ee",
