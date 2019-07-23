@@ -125,7 +125,12 @@
   },
   {
     "lemma": "Abeikta",
-    "previous": "Abdymon"
+    "previous": "Abdymon",
+    "next": "Abellinum"
+  },
+  {
+    "lemma": "Abellinum",
+    "previous": "Abeikta"
   },
   {
     "lemma": "Abd Hadad",
@@ -753,7 +758,12 @@
   },
   {
     "lemma": "Adaba",
-    "previous": "Acutius 1a"
+    "previous": "Acutius 1a",
+    "next": "Adad"
+  },
+  {
+    "lemma": "Adad",
+    "previous": "Adaba"
   },
   {
     "lemma": "Acutius a",
@@ -2388,7 +2398,12 @@
   },
   {
     "lemma": "Aglibolos",
-    "previous": "Agis 1a"
+    "previous": "Agis 1a",
+    "next": "Aglochartos"
+  },
+  {
+    "lemma": "Aglochartos",
+    "previous": "Aglibolos"
   },
   {
     "lemma": "Agimenes",
@@ -2770,12 +2785,20 @@
   {
     "lemma": "Aix b",
     "previous": "Aix a",
-    "next": "Aiza",
     "sort_key": "Aix 0b"
   },
   {
+    "lemma": "Aix b",
+    "next": "Aiza"
+  },
+  {
     "lemma": "Aiza",
-    "previous": "Aix b"
+    "previous": "Aix b",
+    "next": "Aizeios"
+  },
+  {
+    "lemma": "Aizeios",
+    "previous": "Aiza"
   },
   {
     "lemma": "Agrion",
@@ -2885,7 +2908,13 @@
   },
   {
     "lemma": "Ἀγρὸς θερμῶν",
-    "previous": "Agros 3"
+    "previous": "Agros 3",
+    "next": "Aguontum",
+    "sort_key": "Agrosthermon"
+  },
+  {
+    "lemma": "Aguontum",
+    "previous": "Ἀγρὸς θερμῶν"
   },
   {
     "lemma": "Ἀγρὸς θερμῶν",
@@ -3233,7 +3262,13 @@
   },
   {
     "lemma": "Aigle a",
-    "previous": "Aigitna"
+    "previous": "Aigitna",
+    "next": "Aigle 1",
+    "sort_key": "Aigle 0a"
+  },
+  {
+    "lemma": "Aigle 1",
+    "previous": "Aigle a"
   },
   {
     "lemma": "Aigle a",
@@ -3893,7 +3928,12 @@
   },
   {
     "lemma": "Akachia",
-    "previous": "Aizeios"
+    "previous": "Aizeios",
+    "next": "Akadamis"
+  },
+  {
+    "lemma": "Akadamis",
+    "previous": "Akachia"
   },
   {
     "lemma": "Aix a",
@@ -4073,11 +4113,15 @@
   },
   {
     "lemma": "Akonesiai",
-    "previous": "Akoition"
+    "previous": "Akoition",
+    "next": "Akonitis"
+  },
+  {
+    "lemma": "Akonitis",
+    "previous": "Akonesiai"
   },
   {
     "lemma": "Akestorides 4",
-    "previous": null,
     "next": "Akikaros"
   },
   {
@@ -4415,7 +4459,13 @@
   },
   {
     "lemma": "Alamundarus 3",
-    "previous": "Alamundarus 2"
+    "previous": "Alamundarus 2",
+    "next": "Alanoviiamuthis",
+    "sort_key": "Alamundarus"
+  },
+  {
+    "lemma": "Alanoviiamuthis",
+    "previous": "Alamundarus 3"
   },
   {
     "lemma": "Alamundarus 3",
@@ -4500,6 +4550,7 @@
   },
   {
     "lemma": "Alassenses",
+    "previous": null,
     "next": "Alastos 1a"
   },
   {
@@ -5037,7 +5088,13 @@
   },
   {
     "lemma": "Aleximachos a",
-    "previous": "Alexikles 2"
+    "previous": "Alexikles 2",
+    "next": "Alexinos a",
+    "sort_key": "Aleximachos 0a"
+  },
+  {
+    "lemma": "Alexinos a",
+    "previous": "Aleximachos a"
   },
   {
     "lemma": "Aleximachos a",
@@ -5521,6 +5578,7 @@
   },
   {
     "lemma": "Alkinoe 4",
+    "previous": null,
     "next": "Alkippos 1"
   },
   {
@@ -5538,7 +5596,8 @@
   },
   {
     "lemma": "Alkithos",
-    "previous": "Alkippos 1"
+    "previous": "Alkippos 1",
+    "next": null
   },
   {
     "lemma": "Alkippos",
@@ -5781,6 +5840,7 @@
   },
   {
     "lemma": "Alphaios",
+    "previous": null,
     "next": "Alpheios 2a"
   },
   {
@@ -6812,7 +6872,12 @@
   },
   {
     "lemma": "Anamta",
-    "previous": "Analemma"
+    "previous": "Analemma",
+    "next": "Ananios 2"
+  },
+  {
+    "lemma": "Ananios 2",
+    "previous": "Anamta"
   },
   {
     "lemma": "Anaktoria 2",
@@ -9678,7 +9743,10 @@
   },
   {
     "lemma": "Aqua, Aquae 6a",
-    "previous": "Apukumis",
+    "previous": "Apukumis"
+  },
+  {
+    "lemma": "Aqua, Aquae 6a",
     "sort_key": "Aquae 006a"
   },
   {
@@ -9880,12 +9948,30 @@
   },
   {
     "lemma": "Ara, Arae 3a",
-    "next": "Ara, Arae 3b",
     "sort_key": "Araarae 03a"
   },
   {
+    "lemma": "Ara, Arae 3a",
+    "next": "Ara, Arae 3b"
+  },
+  {
     "lemma": "Ara, Arae 3b",
-    "previous": "Ara, Arae 3a"
+    "previous": "Ara, Arae 3a",
+    "sort_key": "Araarae 03b"
+  },
+  {
+    "lemma": "Ara, Arae 3b",
+    "next": "Aʿra"
+  },
+  {
+    "lemma": "Aʿra",
+    "previous": "Ara, Arae 3b",
+    "next": "Arabana",
+    "sort_key": "Arab"
+  },
+  {
+    "lemma": "Arabana",
+    "previous": "Aʿra"
   },
   {
     "lemma": "Ara, Arae 3b",
@@ -10042,13 +10128,24 @@
   },
   {
     "lemma": "Aradius a",
-    "previous": "Aradita",
-    "next": "Aradum",
+    "previous": "Aradita"
+  },
+  {
+    "lemma": "Aradius a",
     "sort_key": "Aradius 0a"
   },
   {
+    "lemma": "Aradius a",
+    "next": "Aradum"
+  },
+  {
     "lemma": "Aradum",
-    "previous": "Aradius a"
+    "previous": "Aradius a",
+    "next": "Araguenoi"
+  },
+  {
+    "lemma": "Araguenoi",
+    "previous": "Aradum"
   },
   {
     "lemma": "Aradius a",
@@ -12555,7 +12652,12 @@
   },
   {
     "lemma": "Arkesikerta",
-    "previous": "Arkea"
+    "previous": "Arkea",
+    "next": "Arkesine 1"
+  },
+  {
+    "lemma": "Arkesine 1",
+    "previous": "Arkesikerta"
   },
   {
     "lemma": "Arkadianai",
@@ -13610,7 +13712,13 @@
   },
   {
     "lemma": "Asconius 3a",
-    "previous": "Ascogefrus"
+    "previous": "Ascogefrus",
+    "next": "Asculum 1",
+    "sort_key": "Asconius"
+  },
+  {
+    "lemma": "Asculum 1",
+    "previous": "Asconius 3a"
   },
   {
     "lemma": "Asconius 3a",
@@ -13632,7 +13740,12 @@
   },
   {
     "lemma": "Asia 7a",
-    "previous": "Asgilia"
+    "previous": "Asgilia",
+    "next": "Asia 7b"
+  },
+  {
+    "lemma": "Asia 7b",
+    "previous": "Asia 7a"
   },
   {
     "lemma": "Asconius 3a",
@@ -14027,7 +14140,21 @@
   },
   {
     "lemma": "Astias a",
-    "previous": "Asteria 5a"
+    "previous": "Asteria 5a",
+    "sort_key": "Astias"
+  },
+  {
+    "lemma": "Astias a",
+    "next": "Astibaras"
+  },
+  {
+    "lemma": "Astibaras",
+    "previous": "Astias a",
+    "next": "Astoxenos 1"
+  },
+  {
+    "lemma": "Astoxenos 1",
+    "previous": "Astibaras"
   },
   {
     "lemma": "Astias a",
@@ -15217,7 +15344,13 @@
   },
   {
     "lemma": "Avidius 9a",
-    "previous": "Avidius 8"
+    "previous": "Avidius 8",
+    "next": "Avillius 2a",
+    "sort_key": "Avidius 09a"
+  },
+  {
+    "lemma": "Avillius 2a",
+    "previous": "Avidius 9a"
   },
   {
     "lemma": "Avidius 1",
@@ -15923,7 +16056,13 @@
   },
   {
     "lemma": "Autonomos a",
-    "previous": "Automedes"
+    "previous": "Automedes",
+    "next": "Autonomos 1",
+    "sort_key": "Autonomos 0"
+  },
+  {
+    "lemma": "Autonomos 1",
+    "previous": "Autonomos a"
   },
   {
     "lemma": "Autonomos a",
@@ -16231,7 +16370,12 @@
   },
   {
     "lemma": "Azizos 1",
-    "previous": "Azeia"
+    "previous": "Azeia",
+    "next": "Azochis"
+  },
+  {
+    "lemma": "Azochis",
+    "previous": "Azizos 1"
   },
   {
     "lemma": "Azbaal 1",
@@ -17106,6 +17250,15 @@
   },
   {
     "lemma": "Bas....lia",
+    "next": "Bassaeus 2",
+    "sort_key": "Baslia"
+  },
+  {
+    "lemma": "Bassaeus 2",
+    "previous": "Bas....lia"
+  },
+  {
+    "lemma": "Bas....lia",
     "sort_key": "Baslia"
   },
   {
@@ -17434,7 +17587,13 @@
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
-    "previous": "Bella"
+    "previous": "Bella",
+    "next": "Bellicius 9",
+    "sort_key": "Bellerophonteios"
+  },
+  {
+    "lemma": "Bellicius 9",
+    "previous": "Βελλεροφόντειος δῆμος"
   },
   {
     "lemma": "Belatullus 1",
@@ -22315,12 +22474,20 @@
   },
   {
     "lemma": "Cornelius a",
-    "next": "Cornelius 10a",
     "sort_key": "Cornelius 000a"
   },
   {
+    "lemma": "Cornelius a",
+    "next": "Cornelius 10a"
+  },
+  {
     "lemma": "Cornelius 10a",
-    "previous": "Cornelius a"
+    "previous": "Cornelius a",
+    "next": "Cornelius 10b"
+  },
+  {
+    "lemma": "Cornelius 10b",
+    "previous": "Cornelius 10a"
   },
   {
     "lemma": "Cornelius a",
