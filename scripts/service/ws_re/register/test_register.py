@@ -94,7 +94,7 @@ class TestIntegrationRegister(TestCase):
             errors.append(f"COUNT ERRORS: {count}")
             raise AssertionError("\n".join(errors))
 
-    @skip("not fully implemented yet")
+    # @skip("not fully implemented yet")
     def test_previous_double_lemmas(self):
         LEMMA_DISTANCE = 80
         errors = []
