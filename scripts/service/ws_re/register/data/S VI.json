@@ -3221,7 +3221,6 @@
   {
     "lemma": "Maximus 128",
     "previous": "Maximinus 5",
-    "next": "Media provincia",
     "chapters": [
       {
         "start": 289,
@@ -3231,8 +3230,17 @@
     ]
   },
   {
+    "lemma": "Maximus 26",
+    "next": "Media provincia"
+  },
+  {
     "lemma": "Media provincia",
-    "previous": "Maximus 128"
+    "previous": "Maximus 26",
+    "next": "Meidylides 1"
+  },
+  {
+    "lemma": "Meidylides 1",
+    "previous": "Media provincia"
   },
   {
     "lemma": "Maximus 26",

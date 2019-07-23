@@ -2191,7 +2191,12 @@
   },
   {
     "lemma": "Damokrita",
-    "previous": "Damasandra"
+    "previous": "Damasandra",
+    "next": "Damon 15b"
+  },
+  {
+    "lemma": "Damon 15b",
+    "previous": "Damokrita"
   },
   {
     "lemma": "Chrematistes 2",
@@ -3070,6 +3075,7 @@
   {
     "lemma": "Essener",
     "previous": "Erotylos",
+    "next": "Euandros 4a",
     "wp_link": "w:de:Essener",
     "chapters": [
       {
@@ -3078,6 +3084,10 @@
         "author": "Bauer, [Walter]"
       }
     ]
+  },
+  {
+    "lemma": "Euandros 4a",
+    "previous": "Essener"
   },
   {
     "lemma": "Erotylos",
