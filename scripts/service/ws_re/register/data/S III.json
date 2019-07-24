@@ -1819,7 +1819,7 @@
   {
     "lemma": "Albus 2",
     "previous": "Albucius 3a",
-    "next": "Alençon, Notre Dame d,-,",
+    "next": "Alençon, Notre Dame d'-",
     "chapters": [
       {
         "start": 78,
@@ -1829,7 +1829,7 @@
     ]
   },
   {
-    "lemma": "Alençon, Notre Dame d,-,",
+    "lemma": "Alençon, Notre Dame d'-",
     "previous": "Albus 2",
     "next": "Alesia 1",
     "sort_key": "Alençon, Notre Dame d,-,",
@@ -1843,7 +1843,7 @@
   },
   {
     "lemma": "Alesia 1",
-    "previous": "Alençon, Notre Dame d,-,",
+    "previous": "Alençon, Notre Dame d'-",
     "next": null
   },
   {
@@ -1951,6 +1951,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1958,6 +1959,10 @@
         "author": "Oldfather"
       }
     ]
+  },
+  {
+    "lemma": "Alexios",
+    "previous": "Alexinos 2"
   },
   {
     "lemma": "Alexinos",
@@ -2973,7 +2978,13 @@
   },
   {
     "lemma": "Andernach",
-    "previous": "Anderitum"
+    "previous": "Anderitum",
+    "next": "Andethanna",
+    "wp_link": "w:de:Andernach"
+  },
+  {
+    "lemma": "Andethanna",
+    "previous": "Andernach"
   },
   {
     "lemma": "Andemantunnum",
@@ -3386,7 +3397,12 @@
   },
   {
     "lemma": "Antiphatas 2",
-    "previous": "Antipatros 20b"
+    "previous": "Antipatros 20b",
+    "next": "Antiphidas"
+  },
+  {
+    "lemma": "Antiphidas",
+    "previous": "Antiphatas 2"
   },
   {
     "lemma": "Antiochos 42a",
@@ -3574,7 +3590,13 @@
   },
   {
     "lemma": "Aosta",
-    "previous": "Ἀοιδός"
+    "previous": "Ἀοιδός",
+    "next": "Aoste",
+    "wp_link": "w:de:Aosta"
+  },
+  {
+    "lemma": "Aoste",
+    "previous": "Aosta"
   },
   {
     "lemma": "Anunus",
@@ -8523,7 +8545,12 @@
   },
   {
     "lemma": "Baebius 53",
-    "previous": "Baebius 52"
+    "previous": "Baebius 52",
+    "next": "Bagacum"
+  },
+  {
+    "lemma": "Bagacum",
+    "previous": "Baebius 53"
   },
   {
     "lemma": "Axia 1",
@@ -8932,7 +8959,13 @@
   },
   {
     "lemma": "Barbarus a",
-    "previous": "Barba 2a"
+    "previous": "Barba 2a",
+    "next": "Barbarus 2",
+    "sort_key": "Barbarus 0a"
+  },
+  {
+    "lemma": "Barbarus 2",
+    "previous": "Barbarus a"
   },
   {
     "lemma": "Balbinus 4",
@@ -15430,6 +15463,7 @@
   {
     "lemma": "Demarchos 5a",
     "previous": "Delos 1a",
+    "next": "Demeter",
     "chapters": [
       {
         "start": 329,
@@ -15437,6 +15471,10 @@
         "author": "Oldfather"
       }
     ]
+  },
+  {
+    "lemma": "Demeter",
+    "previous": "Demarchos 5a"
   },
   {
     "lemma": "Demarchos 5",

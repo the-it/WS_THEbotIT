@@ -1774,6 +1774,7 @@
   {
     "lemma": "Afranius 6a",
     "previous": "Afiniana",
+    "next": "Agabana",
     "sort_key": "Afranius 06a",
     "chapters": [
       {
@@ -1782,6 +1783,10 @@
         "author": "Münzer"
       }
     ]
+  },
+  {
+    "lemma": "Agabana",
+    "previous": "Afranius 6a"
   },
   {
     "lemma": "Afrius",
@@ -1794,7 +1799,12 @@
   },
   {
     "lemma": "Agamemnon 2",
-    "previous": "Agabana"
+    "previous": "Agabana",
+    "next": "Ἀγαμέμνονος λουτρά"
+  },
+  {
+    "lemma": "Ἀγαμέμνονος λουτρά",
+    "previous": "Agamemnon 2"
   },
   {
     "lemma": "Afranius  6a",
@@ -8945,7 +8955,13 @@
   },
   {
     "lemma": "Aphesis",
-    "previous": "Aphareus 4"
+    "previous": "Aphareus 4",
+    "next": "Aphetatha",
+    "sort_key": "Aphesis 2"
+  },
+  {
+    "lemma": "Aphetatha",
+    "previous": "Aphesis"
   },
   {
     "lemma": "Aphesis",
@@ -10145,7 +10161,12 @@
   },
   {
     "lemma": "Araguenoi",
-    "previous": "Aradum"
+    "previous": "Aradum",
+    "next": "Arakka"
+  },
+  {
+    "lemma": "Arakka",
+    "previous": "Araguenoi"
   },
   {
     "lemma": "Aradius a",
@@ -14627,12 +14648,21 @@
   },
   {
     "lemma": "Athenaios 7",
-    "next": "Athenaios 9a",
     "sort_key": "Athenaios 08"
   },
   {
+    "lemma": "Athenaios 7",
+    "next": "Athenaios 9a"
+  },
+  {
     "lemma": "Athenaios 9a",
-    "previous": "Athenaios 7"
+    "previous": "Athenaios 7",
+    "next": "Athenaios 22",
+    "sort_key": "Athenaios 09a"
+  },
+  {
+    "lemma": "Athenaios 22",
+    "previous": "Athenaios 9a"
   },
   {
     "lemma": "Athenaios 7",
@@ -17631,7 +17661,12 @@
   },
   {
     "lemma": "Belligenes",
-    "previous": "Bellicius 9"
+    "previous": "Bellicius 9",
+    "next": "Bello"
+  },
+  {
+    "lemma": "Bello",
+    "previous": "Belligenes"
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
@@ -21983,7 +22018,12 @@
   },
   {
     "lemma": "Clodius 17a",
-    "previous": "Clodius 12"
+    "previous": "Clodius 12",
+    "next": "Clodius 20"
+  },
+  {
+    "lemma": "Clodius 20",
+    "previous": "Clodius 17a"
   },
   {
     "lemma": "Claudius 399a",
@@ -23534,6 +23574,19 @@
   },
   {
     "lemma": "Demetria 1",
+    "previous": "Demeas 3"
+  },
+  {
+    "lemma": "Demaratos 3a",
+    "next": "Demeas 3"
+  },
+  {
+    "lemma": "Demeas 3",
+    "previous": "Demaratos 3a",
+    "next": "Demetria 1"
+  },
+  {
+    "lemma": "Demetria 1",
     "previous": "Demeas 3",
     "next": "Demetrias 1a"
   },
@@ -23719,7 +23772,6 @@
   {
     "lemma": "Demetrios 84a",
     "previous": "Demetrios 44a",
-    "next": "Demo 6",
     "sort_key": "Demetrios 084a",
     "wp_link": "w:de:Demetrios",
     "chapters": [
@@ -23731,8 +23783,17 @@
     ]
   },
   {
+    "lemma": "Demetrios 130",
+    "next": "Demo 6"
+  },
+  {
     "lemma": "Demo 6",
-    "previous": "Demetrios 84a"
+    "previous": "Demetrios 130",
+    "next": "Demochares 1"
+  },
+  {
+    "lemma": "Demochares 1",
+    "previous": "Demo 6"
   },
   {
     "lemma": "Demetrios 130",
