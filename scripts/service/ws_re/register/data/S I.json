@@ -4556,11 +4556,15 @@
   },
   {
     "lemma": "Alazoneia",
-    "previous": "Alazeir"
+    "previous": "Alazeir",
+    "next": "Alba Docilia"
+  },
+  {
+    "lemma": "Alba Docilia",
+    "previous": "Alazoneia"
   },
   {
     "lemma": "Alassenses",
-    "previous": null,
     "next": "Alastos 1a"
   },
   {
@@ -12531,7 +12535,12 @@
   },
   {
     "lemma": "Aristotheos 2",
-    "previous": "Aristoteles 13"
+    "previous": "Aristoteles 13",
+    "next": "Aristotheros"
+  },
+  {
+    "lemma": "Aristotheros",
+    "previous": "Aristotheos 2"
   },
   {
     "lemma": "Aristos 10"
@@ -13517,7 +13526,13 @@
   },
   {
     "lemma": "Arvernicus",
-    "previous": "Arverni"
+    "previous": "Arverni",
+    "next": "Arvius",
+    "sort_key": "Arvernicus 1"
+  },
+  {
+    "lemma": "Arvius",
+    "previous": "Arvernicus"
   },
   {
     "lemma": "Arvernicus",
@@ -17210,7 +17225,10 @@
   },
   {
     "lemma": "Βασιλέων οἶκοι",
-    "previous": "Βασιλεῖται",
+    "previous": "Βασιλεῖται"
+  },
+  {
+    "lemma": "Βασιλέων οἶκοι",
     "sort_key": "Basileonoikoi"
   },
   {
@@ -21390,7 +21408,8 @@
   },
   {
     "lemma": "Chrysippos 15",
-    "previous": "Chrysippos 14b"
+    "previous": "Chrysippos 14b",
+    "next": null
   },
   {
     "lemma": "Chrysippos 14b",
