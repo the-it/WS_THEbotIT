@@ -13,6 +13,12 @@ class Updater():
     def __init__(self, volume_register: VolumeRegister):
         self._register = volume_register
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
     def __repr__(self):  # pragma: no cover
         return f"<{self.__class__.__name__} - register:{self._register.volume.name}>"
 
@@ -68,7 +74,7 @@ class Updater():
         if self._register[idx - 1].sort_key == Lemma.make_sort_key(lemma_dict["previous"]):
             self._try_update_previous(lemma_dict, lemma_to_update)
         else:
-            self[idx - 1].update_lemma_dict({}, ["next"])
+            self._register[idx - 1].update_lemma_dict({}, ["next"])
             self._register.lemmas.insert(idx,
                                Lemma({"lemma": lemma_dict["previous"], "next": lemma_dict["lemma"]},
                                      self._register.volume,
@@ -89,7 +95,7 @@ class Updater():
         post_idx = self._register.get_index_of_lemma(post_lemma)
         pre_idx = self._register.get_index_of_lemma(pre_lemma)
         if post_idx - pre_idx == 1:
-            self.lemmas.insert(post_idx, Lemma(lemma_dict, self._register.volume, self._register._authors))
+            self._register.lemmas.insert(post_idx, Lemma(lemma_dict, self._register.volume, self._register._authors))
         elif post_idx - pre_idx == 2:
             self._register.lemmas[pre_idx + 1] = Lemma(lemma_dict, self._register.volume, self._register._authors)
         else:

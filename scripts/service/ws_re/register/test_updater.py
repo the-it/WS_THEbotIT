@@ -23,7 +23,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äal", "redirect": True, "sort_key": "Aal", "next": "Aarassos"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Äal")
         compare(True, post_lemma["redirect"])
         compare("Aal", post_lemma["sort_key"])
@@ -34,7 +35,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal", "next": "Aba 1"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Äarassos")
         compare("Aarassos", post_lemma["sort_key"])
         post_lemma_previous = register.get_lemma_by_name("Aal")
@@ -46,7 +48,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Ö", "sort_key": "O", "previous": "Ä", "next": "Ü"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Ö")
         compare("O", post_lemma["sort_key"])
         post_lemma_previous = register.get_lemma_by_name("Ä")
@@ -63,7 +66,8 @@ class TestRegister(BaseTestRegister):
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "previous": "Aal", "next": "Aba 1", "sort_key": "Aarassos"}
         with self.assertRaisesRegex(RegisterException, "!= next lemma name \"Ab 1\""):
-            register.update_lemma(update_dict, [])
+            with Updater(register) as updater:
+                updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma["next"])
         next_lemma = register.get_lemma_by_name("Ab 1")
@@ -74,14 +78,16 @@ class TestRegister(BaseTestRegister):
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos"}
         with self.assertRaisesRegex(RegisterException, "!= previous lemma name \"Aal\""):
-            register.update_lemma(update_dict, [])
+            with Updater(register) as updater:
+                updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma["next"])
         next_lemma = register.get_lemma_by_name("Aba 1")
         compare("Aarassos", next_lemma["previous"])
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal"}
         with self.assertRaisesRegex(RegisterException, "!= next lemma name \"Aba 1\""):
-            register.update_lemma(update_dict, [])
+            with Updater(register) as updater:
+                updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma["next"])
         next_lemma = register.get_lemma_by_name("Aba 1")
@@ -92,13 +98,15 @@ class TestRegister(BaseTestRegister):
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam", "previous": "rubbish", "next": "something"}
         with self.assertRaisesRegex(RegisterException, "No strategy available"):
-            register.update_lemma(update_dict, [])
+            with Updater(register) as updater:
+                updater.update_lemma(update_dict, [])
 
     def test_update_next_and_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
-        register._try_update_next_and_previous(update_dict, register.get_lemma_by_name("O"))
+        with Updater(register) as updater:
+            updater._try_update_next_and_previous(update_dict, register.get_lemma_by_name("O"))
         post_lemma_previous = register.get_lemma_by_name("Ä")
         compare("O", post_lemma_previous["next"])
         post_lemma_next = register.get_lemma_by_name("Ü")
@@ -108,7 +116,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
         compare("Ä", post_lemma["previous"])
         compare("Ü", post_lemma["next"])
@@ -121,7 +130,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Ö", "previous": "Ä", "next": "Ü"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Ö")
         compare("Ä", post_lemma["previous"])
         compare("Ü", post_lemma["next"])
@@ -134,7 +144,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä", "next": "Ö"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
         compare("Ä", post_lemma["previous"])
         compare("Ö", post_lemma["next"])
@@ -151,7 +162,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä", "next": "Ü"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
         compare("Ä", post_lemma["previous"])
         compare("Ü", post_lemma["next"])
@@ -168,7 +180,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä", "next": "Something"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
         compare("Ä", post_lemma["previous"])
         compare(None, post_lemma["next"])
@@ -183,7 +196,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
         compare("Ä", post_lemma["previous"])
         compare(None, post_lemma["next"])
@@ -198,7 +212,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Something", "next": "Ö"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
         compare(None, post_lemma["previous"])
         compare("Ö", post_lemma["next"])
@@ -213,7 +228,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "next": "Ö"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
         compare(None, post_lemma["previous"])
         compare("Ö", post_lemma["next"])
@@ -228,7 +244,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "S I")
         register = VolumeRegister(Volumes()["S I"], Authors())
         update_dict = {"lemma": "Ö", "previous": "N", "next": "P"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Ö")
         compare("N", post_lemma["previous"])
         compare("P", post_lemma["next"])
@@ -250,7 +267,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "R")
         register = VolumeRegister(Volumes()["R"], Authors())
         update_dict = {"lemma": "O", "previous": "N", "next": "P"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
         compare("N", post_lemma["previous"])
         compare("P", post_lemma["next"])
@@ -272,7 +290,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "S I")
         register = VolumeRegister(Volumes()["S I"], Authors())
         update_dict = {"lemma": "O", "previous": "Ä", "next": "P"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
         compare("Ä", post_lemma["previous"])
         compare("P", post_lemma["next"])
@@ -294,7 +313,8 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "R")
         register = VolumeRegister(Volumes()["R"], Authors())
         update_dict = {"lemma": "O", "previous": "N", "next": "Ü"}
-        register.update_lemma(update_dict, [])
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
         compare("N", post_lemma["previous"])
         compare("Ü", post_lemma["next"])
@@ -317,4 +337,5 @@ class TestRegister(BaseTestRegister):
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "A", "next": "D"}
         with self.assertRaisesRegex(RegisterException, "Diff between previous and next aren't 1 or 2"):
-            register.update_lemma(update_dict, [])
+            with Updater(register) as updater:
+                updater.update_lemma(update_dict, [])
