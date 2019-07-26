@@ -534,12 +534,21 @@
   },
   {
     "lemma": "Acutus 2",
-    "previous": "Acutus 1",
+    "previous": "Acutus 1"
+  },
+  {
+    "lemma": "Acutus 1",
     "next": "Ad-"
   },
   {
     "lemma": "Ad-",
-    "previous": "Acutus 2"
+    "previous": "Acutus 1",
+    "next": "Adad 2",
+    "sort_key": "Ad"
+  },
+  {
+    "lemma": "Adad 2",
+    "previous": "Ad-"
   },
   {
     "lemma": "Acqualagna",
@@ -3803,7 +3812,13 @@
   },
   {
     "lemma": "Apollinaris 13",
-    "previous": "Aphrodite"
+    "previous": "Aphrodite",
+    "next": "Apollodoros 26a",
+    "wp_link": "w:de:Apollinaris"
+  },
+  {
+    "lemma": "Apollodoros 26a",
+    "previous": "Apollinaris 13"
   },
   {
     "lemma": "Aphrodisios a",
@@ -7897,7 +7912,14 @@
   },
   {
     "lemma": "Augsburg",
-    "previous": "Augenärzte"
+    "previous": "Augenärzte",
+    "next": "Augst",
+    "wp_link": "w:de:Augsburg",
+    "ws_link": "s:de:Augsburg"
+  },
+  {
+    "lemma": "Augst",
+    "previous": "Augsburg"
   },
   {
     "lemma": "Avetedo",
@@ -10017,7 +10039,13 @@
   },
   {
     "lemma": "Bodensee",
-    "previous": "Bodatius"
+    "previous": "Bodatius",
+    "next": "Bodus, Boudus",
+    "wp_link": "w:de:Bodensee"
+  },
+  {
+    "lemma": "Bodus, Boudus",
+    "previous": "Bodensee"
   },
   {
     "lemma": "Boa",
@@ -12500,7 +12528,12 @@
   },
   {
     "lemma": "Cerdo",
-    "previous": "Cercina"
+    "previous": "Cercina",
+    "next": "Cerialis a"
+  },
+  {
+    "lemma": "Cerialis a",
+    "previous": "Cerdo"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -14109,7 +14142,17 @@
   },
   {
     "lemma": "Costio",
-    "previous": "Costillus"
+    "previous": "Costillus",
+    "next": "Cottalus"
+  },
+  {
+    "lemma": "Cottalus",
+    "previous": "Costio",
+    "next": "Cotto"
+  },
+  {
+    "lemma": "Cotto",
+    "previous": "Cottalus"
   },
   {
     "lemma": "Cossutius 2a",
@@ -14221,6 +14264,32 @@
   {
     "lemma": "Cracuna",
     "previous": "Cr...."
+  },
+  {
+    "lemma": "Cotto",
+    "next": "Cotus 1"
+  },
+  {
+    "lemma": "Cotus 1",
+    "previous": "Cotto"
+  },
+  {
+    "lemma": "Cotus",
+    "next": "Cr...."
+  },
+  {
+    "lemma": "Cr....",
+    "previous": "Cotus",
+    "next": "Cracuna"
+  },
+  {
+    "lemma": "Cracuna",
+    "previous": "Cr....",
+    "next": "Crassicius 1a"
+  },
+  {
+    "lemma": "Crassicius 1a",
+    "previous": "Cracuna"
   },
   {
     "lemma": "Cotto",
@@ -14345,7 +14414,12 @@
   },
   {
     "lemma": "Crestio",
-    "previous": "Cresconius 4"
+    "previous": "Cresconius 4",
+    "next": "a creta"
+  },
+  {
+    "lemma": "a creta",
+    "previous": "Crestio"
   },
   {
     "lemma": "Crescens 8",
@@ -14422,16 +14496,35 @@
   },
   {
     "lemma": "a creta",
-    "previous": "Crestio"
-  },
-  {
-    "lemma": "a creta",
+    "previous": "Crestio",
     "next": "Criciro 1",
     "sort_key": "creta a"
   },
   {
     "lemma": "Criciro 1",
     "previous": "a creta"
+  },
+  {
+    "lemma": "a creta",
+    "sort_key": "creta a"
+  },
+  {
+    "lemma": "a creta",
+    "next": "Criciro 1"
+  },
+  {
+    "lemma": "Criciro 1",
+    "previous": "a creta",
+    "next": "Criciro 2"
+  },
+  {
+    "lemma": "Criciro 2",
+    "previous": "Criciro 1",
+    "next": "Crispus 10"
+  },
+  {
+    "lemma": "Crispus 10",
+    "previous": "Criciro 2"
   },
   {
     "lemma": "Creta, a",

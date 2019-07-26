@@ -4756,7 +4756,6 @@
     "lemma": "Dexu(v)iates",
     "previous": "Dextrianus",
     "next": "Deysion",
-    "wp_link": "w:de:fr:Dexcivate",
     "chapters": [
       {
         "start": 297,
@@ -6701,7 +6700,7 @@
   {
     "lemma": "Didaskaliai",
     "previous": "Didaskalia",
-    "next": "Διδάσκαλoς",
+    "next": "Διδάσκαλος",
     "wp_link": "w:de:Didaskalie",
     "chapters": [
       {
@@ -6712,7 +6711,7 @@
     ]
   },
   {
-    "lemma": "Διδάσκαλoς",
+    "lemma": "Διδάσκαλος",
     "previous": "Didaskaliai",
     "next": "Didattium",
     "sort_key": "Didaskalos",
@@ -6726,7 +6725,7 @@
   },
   {
     "lemma": "Didattium",
-    "previous": "Διδάσκαλoς",
+    "previous": "Διδάσκαλος",
     "next": "Dide",
     "redirect": true,
     "chapters": [
@@ -11523,7 +11522,7 @@
   {
     "lemma": "Diogenidai",
     "previous": "Diogenianos 4",
-    "next": "Diogenus akron",
+    "next": "Διογένους ἄκρον",
     "chapters": [
       {
         "start": 783,
@@ -11790,7 +11789,8 @@
   {
     "lemma": "Διοίκησις",
     "previous": "Diognetos 19",
-    "next": "Dioitas",
+    "next": "Διοικητής",
+    "sort_key": "Dioikesis",
     "chapters": [
       {
         "start": 786,
@@ -11800,8 +11800,14 @@
     ]
   },
   {
-    "lemma": "Dioitas",
+    "lemma": "Διοικητής",
     "previous": "Διοίκησις",
+    "next": "Dioitas",
+    "sort_key": "Dioiketes"
+  },
+  {
+    "lemma": "Dioitas",
+    "previous": "Διοικητής",
     "next": "Diokessa",
     "chapters": [
       {
