@@ -2405,7 +2405,12 @@
   },
   {
     "lemma": "Derdas 4",
-    "previous": "Denuntiatio"
+    "previous": "Denuntiatio",
+    "next": "Dexandros 2"
+  },
+  {
+    "lemma": "Dexandros 2",
+    "previous": "Derdas 4"
   },
   {
     "lemma": "Demarchos 6",
@@ -2496,7 +2501,6 @@
   {
     "lemma": "Dexandros 2",
     "previous": "Derdas 4",
-    "next": null,
     "chapters": [
       {
         "start": 224,
@@ -2504,6 +2508,19 @@
         "author": "Kroll"
       }
     ]
+  },
+  {
+    "lemma": "Dexandros",
+    "next": "Diakrier 2"
+  },
+  {
+    "lemma": "Diakrier 2",
+    "previous": "Dexandros",
+    "next": "Didas 2"
+  },
+  {
+    "lemma": "Didas 2",
+    "previous": "Diakrier 2"
   },
   {
     "lemma": "Dexandros",
