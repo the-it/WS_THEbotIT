@@ -377,7 +377,7 @@
   },
   {
     "lemma": "Καύκασος 1",
-    "previous": "Kaukana",
+    "previous": "Kaukasis",
     "next": "Καύκασος 2",
     "sort_key": "Kaukasos 1",
     "chapters": [
@@ -15145,7 +15145,7 @@
   {
     "lemma": "Kösching",
     "previous": "Koes",
-    "next": "Konche",
+    "next": "Kogamis, Kogamos",
     "chapters": [
       {
         "start": 1033,
@@ -15154,26 +15154,16 @@
       }
     ]
   },
+  {"lemma": "Kogamis, Kogamos"},
   {
-    "lemma": "Konche",
-    "previous": "Kösching",
-    "chapters": [
-      {
-        "start": 1034,
-        "end": 1034,
-        "author": "Viedebantt"
-      }
-    ]
-  },
-  {
-    "lemma": "Κόγχη 1",
+    "lemma": "Κόγχη",
     "previous": "Kogamis, Kogamos",
     "next": "Kognabanda",
     "sort_key": "Konche 1"
   },
   {
     "lemma": "Kognabanda",
-    "previous": "Κόγχη 1",
+    "previous": "Κόγχη",
     "next": "Kognandaua",
     "chapters": [
       {
