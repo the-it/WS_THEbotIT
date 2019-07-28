@@ -53,7 +53,7 @@
   {
     "lemma": "Abacus 9",
     "previous": "Abacus",
-    "next": "Abano"
+    "next": "Epona"
   },
   {
     "lemma": "Abano",
@@ -164,7 +164,12 @@
   },
   {
     "lemma": "Abdera 1",
-    "previous": "Abella"
+    "previous": "Abella",
+    "next": "Abdere"
+  },
+  {
+    "lemma": "Abdere",
+    "previous": "Abdera 1"
   },
   {
     "lemma": "Abdera",
@@ -195,7 +200,13 @@
   },
   {
     "lemma": "Abrincatui",
-    "previous": "Abderos"
+    "previous": "Abderos",
+    "next": "Abronius",
+    "redirect": "Avranches"
+  },
+  {
+    "lemma": "Abronius",
+    "previous": "Abrincatui"
   },
   {
     "lemma": "Abdera",
@@ -1037,7 +1048,6 @@
   {
     "lemma": "Africanus 9",
     "previous": "Afer 3",
-    "next": "Afrius",
     "chapters": [
       {
         "start": 36,
@@ -1047,8 +1057,17 @@
     ]
   },
   {
+    "lemma": "Afer",
+    "next": "Afrius"
+  },
+  {
     "lemma": "Afrius",
-    "previous": "Africanus 9"
+    "previous": "Afer",
+    "next": "Agasias 2"
+  },
+  {
+    "lemma": "Agasias 2",
+    "previous": "Afrius"
   },
   {
     "lemma": "Afer",
@@ -1156,7 +1175,11 @@
   {
     "lemma": "Agathinos 8",
     "previous": "Agathias 3",
-    "next": null
+    "next": "Agathinos 10"
+  },
+  {
+    "lemma": "Agathinos 10",
+    "previous": "Agathinos 8"
   },
   {
     "lemma": "Agathias 3",
@@ -4240,7 +4263,17 @@
   },
   {
     "lemma": "Aqua, Aquae 36",
-    "previous": "Aqua, Aquae 20"
+    "previous": "Aqua, Aquae 20",
+    "next": "Aqua, Aquae 46"
+  },
+  {
+    "lemma": "Aqua, Aquae 46",
+    "previous": "Aqua, Aquae 36",
+    "next": "Aqua, Aquae 55"
+  },
+  {
+    "lemma": "Aqua, Aquae 55",
+    "previous": "Aqua, Aquae 46"
   },
   {
     "lemma": "Aqua, Aquae 10a",
@@ -4274,7 +4307,17 @@
   },
   {
     "lemma": "Aqua, Aquae 55",
-    "previous": "Aqua, Aquae 46"
+    "previous": "Aqua, Aquae 46",
+    "next": "Aqua, Aquae 59"
+  },
+  {
+    "lemma": "Aqua, Aquae 59",
+    "previous": "Aqua, Aquae 55",
+    "next": "Aqua, Aquae 61"
+  },
+  {
+    "lemma": "Aqua, Aquae 61",
+    "previous": "Aqua, Aquae 59"
   },
   {
     "lemma": "Aqua, Aquae 10a",
@@ -5933,7 +5976,12 @@
   },
   {
     "lemma": "Argenidas",
-    "previous": "Arezzo"
+    "previous": "Arezzo",
+    "next": "Argenteuil"
+  },
+  {
+    "lemma": "Argenteuil",
+    "previous": "Argenidas"
   },
   {
     "lemma": "Areopolis 3",
@@ -9277,7 +9325,10 @@
   },
   {
     "lemma": "Βασιλικόν (τὸ)",
-    "previous": "Basilia",
+    "previous": "Basilia"
+  },
+  {
+    "lemma": "Βασιλικόν (τὸ)",
     "sort_key": "Basilikon"
   },
   {
@@ -9331,7 +9382,12 @@
   },
   {
     "lemma": "Βατιάκη",
-    "previous": "Bath"
+    "previous": "Bath",
+    "next": "Bavai, Bavay"
+  },
+  {
+    "lemma": "Bavai, Bavay",
+    "previous": "Βατιάκη"
   },
   {
     "lemma": "Βασιλικόν (τὸ)",
@@ -10448,7 +10504,12 @@
   },
   {
     "lemma": "Boudus",
-    "previous": "Boudillus"
+    "previous": "Boudillus",
+    "next": "Boulogne-sur-Mer"
+  },
+  {
+    "lemma": "Boulogne-sur-Mer",
+    "previous": "Boudus"
   },
   {
     "lemma": "Borillus",
@@ -13945,7 +14006,12 @@
   },
   {
     "lemma": "Corcoras",
-    "previous": "Coocus"
+    "previous": "Coocus",
+    "next": "Cornelius 8"
+  },
+  {
+    "lemma": "Cornelius 8",
+    "previous": "Corcoras"
   },
   {
     "lemma": "Contrebia 1",
@@ -16074,7 +16140,12 @@
   },
   {
     "lemma": "Deuterius 2",
-    "previous": "Detalla"
+    "previous": "Detalla",
+    "next": "Dexitheos 2"
+  },
+  {
+    "lemma": "Dexitheos 2",
+    "previous": "Deuterius 2"
   },
   {
     "lemma": "Demodes",
@@ -20375,6 +20446,12 @@
     "lemma": "Epistula"
   },
   {
+    "lemma": "Abacus"
+  },
+  {
+    "lemma": "Epistula"
+  },
+  {
     "lemma": "Abacus",
     "next": "Epona"
   },
@@ -20386,6 +20463,12 @@
   {
     "lemma": "Giganten",
     "previous": "Epona"
+  },
+  {
+    "lemma": "Eporecorix"
+  },
+  {
+    "lemma": "Giganten"
   },
   {
     "lemma": "Eporecorix"
