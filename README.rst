@@ -24,3 +24,12 @@ WS_THEbotIT
 
 .. |appveyor| image:: https://ci.appveyor.com/api/projects/status/708fj1d0vr1gpovi/branch/master?svg=true
 .. _appveyor: https://ci.appveyor.com/project/the-it/ws-thebotit/branch/master|
+
+
+To bootstrap the project execute following command:
+
+.. code-block:: shell
+
+  wget -O - https://raw.githubusercontent.com/the-it/WS_THEbotIT/master/bootstrap.sh | bash
+
+This should work on a debian like system.
