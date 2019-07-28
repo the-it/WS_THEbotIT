@@ -88,12 +88,21 @@
   },
   {
     "lemma": "Abbo 2",
-    "previous": "Abas",
+    "previous": "Abas"
+  },
+  {
+    "lemma": "Abbo",
     "next": "abecedarius, -a, -um"
   },
   {
     "lemma": "abecedarius, -a, -um",
-    "previous": "Abbo 2"
+    "previous": "Abbo",
+    "next": "Abella",
+    "redirect": "Alphabet"
+  },
+  {
+    "lemma": "Abella",
+    "previous": "abecedarius, -a, -um"
   },
   {
     "lemma": "Abas",
@@ -312,12 +321,22 @@
   },
   {
     "lemma": "Accaus Postumius",
-    "next": "Accius Postumius",
     "sort_key": "Accaus 3"
   },
   {
+    "lemma": "Accaus Postumius",
+    "next": "Accius Postumius"
+  },
+  {
     "lemma": "Accius Postumius",
-    "previous": "Accaus Postumius"
+    "previous": "Accaus Postumius",
+    "next": "Acheruntini",
+    "sort_key": "Accius 4",
+    "redirect": "Accaus 3"
+  },
+  {
+    "lemma": "Acheruntini",
+    "previous": "Accius Postumius"
   },
   {
     "lemma": "Accaus Postumius",
@@ -559,7 +578,12 @@
   },
   {
     "lemma": "Adad 2",
-    "previous": "Ad-"
+    "previous": "Ad-",
+    "next": "Adamclissi"
+  },
+  {
+    "lemma": "Adamclissi",
+    "previous": "Adad 2"
   },
   {
     "lemma": "Acqualagna",
@@ -1066,7 +1090,13 @@
   },
   {
     "lemma": "Agatha (Agathe), Agathon",
-    "previous": "Agasilaos"
+    "previous": "Agasilaos",
+    "next": "Agatharchos 14a",
+    "redirect": "Agde"
+  },
+  {
+    "lemma": "Agatharchos 14a",
+    "previous": "Agatha (Agathe), Agathon"
   },
   {
     "lemma": "Afer",
@@ -1185,7 +1215,13 @@
   },
   {
     "lemma": "Ἀγαθοδαιμονιασταί",
-    "previous": "Agathodaimon 2"
+    "previous": "Agathodaimon 2",
+    "next": "Ἀγαθοδαιμονῖται",
+    "sort_key": "Agathodaimoniastai"
+  },
+  {
+    "lemma": "Ἀγαθοδαιμονῖται",
+    "previous": "Ἀγαθοδαιμονιασταί"
   },
   {
     "lemma": "Agathias 3",
@@ -3920,12 +3956,20 @@
   },
   {
     "lemma": "Apollodoros 76b",
-    "previous": "Apollodoros 26a",
+    "previous": "Apollodoros 26a"
+  },
+  {
+    "lemma": "Apollodoros 76a",
     "next": "Apollon"
   },
   {
     "lemma": "Apollon",
-    "previous": "Apollodoros 76b"
+    "previous": "Apollodoros 76a",
+    "next": "Apollonia 10"
+  },
+  {
+    "lemma": "Apollonia 10",
+    "previous": "Apollon"
   },
   {
     "lemma": "Apollodoros 76a",
@@ -4187,7 +4231,15 @@
   },
   {
     "lemma": "Aqua, Aquae 10a",
-    "previous": "Aquae"
+    "previous": "Aquae",
+    "next": "Aqua, Aquae 17",
+    "sort_key": "Aquae 010a",
+    "redirect": "Aqua, Aquae 6a",
+    "wp_link": "w:de:Aqua"
+  },
+  {
+    "lemma": "Aqua, Aquae 17",
+    "previous": "Aqua, Aquae 10a"
   },
   {
     "lemma": "Aqua, Aquae 10a",
@@ -5900,6 +5952,19 @@
   },
   {
     "lemma": "Arestianae",
+    "previous": "Ares 2"
+  },
+  {
+    "lemma": "Areopolis 3",
+    "next": "Ares 2"
+  },
+  {
+    "lemma": "Ares 2",
+    "previous": "Areopolis 3",
+    "next": "Arestianae"
+  },
+  {
+    "lemma": "Arestianae",
     "previous": "Ares 2",
     "next": "Arezzo"
   },
@@ -6412,7 +6477,13 @@
   },
   {
     "lemma": "Armoric, Armory",
-    "previous": "Arlon"
+    "previous": "Arlon",
+    "next": "Armoti",
+    "redirect": "Aremorica"
+  },
+  {
+    "lemma": "Armoti",
+    "previous": "Armoric, Armory"
   },
   {
     "lemma": "Arkison",
@@ -8410,12 +8481,21 @@
   {
     "lemma": "Aureus mons 4",
     "previous": "Aurelius vicus",
-    "next": "Ausci 2",
     "sort_key": "Aureusmons 4"
   },
   {
+    "lemma": "Aureus mons 4",
+    "next": "Ausci 2"
+  },
+  {
     "lemma": "Ausci 2",
-    "previous": "Aureus mons 4"
+    "previous": "Aureus mons 4",
+    "next": "Aushängeschilder",
+    "redirect": "Auch"
+  },
+  {
+    "lemma": "Aushängeschilder",
+    "previous": "Ausci 2"
   },
   {
     "lemma": "Aureus mons 4",
@@ -10071,7 +10151,13 @@
   },
   {
     "lemma": "Boconiana",
-    "previous": "Boagrios"
+    "previous": "Boagrios",
+    "next": "Bodatius",
+    "redirect": "Buconiana"
+  },
+  {
+    "lemma": "Bodatius",
+    "previous": "Boconiana"
   },
   {
     "lemma": "Boa",
@@ -11569,7 +11655,13 @@
   },
   {
     "lemma": "Canobus",
-    "previous": "Cannicus"
+    "previous": "Cannicus",
+    "next": "Canrucatus",
+    "redirect": "Kanopos"
+  },
+  {
+    "lemma": "Canrucatus",
+    "previous": "Canobus"
   },
   {
     "lemma": "Camloriga",
@@ -12242,7 +12334,6 @@
   {
     "lemma": "Castus 6",
     "previous": "Castus 5",
-    "next": "Cataracta",
     "chapters": [
       {
         "start": 237,
@@ -12252,8 +12343,24 @@
     ]
   },
   {
+    "lemma": "Castus 2b",
+    "next": "Cataracta"
+  },
+  {
     "lemma": "Cataracta",
-    "previous": "Castus 6"
+    "previous": "Castus 2b",
+    "next": "Catius 8",
+    "redirect": "Fallgatter"
+  },
+  {
+    "lemma": "Catius 8",
+    "previous": "Cataracta",
+    "next": "Catius 8a",
+    "sort_key": "Catius 08"
+  },
+  {
+    "lemma": "Catius 8a",
+    "previous": "Catius 8"
   },
   {
     "lemma": "Castus 2b",
@@ -13928,7 +14035,13 @@
   },
   {
     "lemma": "Cornelius 8a",
-    "previous": "Cornelius 8"
+    "previous": "Cornelius 8",
+    "next": "Cornelius 16",
+    "sort_key": "Cornelius 008a"
+  },
+  {
+    "lemma": "Cornelius 16",
+    "previous": "Cornelius 8a"
   },
   {
     "lemma": "Contrebia 1",
@@ -14218,7 +14331,12 @@
   },
   {
     "lemma": "Cotto",
-    "previous": "Cottalus"
+    "previous": "Cottalus",
+    "next": "Cotulo"
+  },
+  {
+    "lemma": "Cotulo",
+    "previous": "Cotto"
   },
   {
     "lemma": "Cossutius 2a",
@@ -14590,7 +14708,22 @@
   },
   {
     "lemma": "Crispus 10",
-    "previous": "Criciro 2"
+    "previous": "Criciro 2",
+    "next": "Crissio"
+  },
+  {
+    "lemma": "Crissio",
+    "previous": "Crispus 10",
+    "next": "Cristinus"
+  },
+  {
+    "lemma": "Cristinus",
+    "previous": "Crissio",
+    "next": "Critonius a"
+  },
+  {
+    "lemma": "Critonius a",
+    "previous": "Cristinus"
   },
   {
     "lemma": "Creta, a",
@@ -14682,7 +14815,12 @@
   },
   {
     "lemma": "Crummus",
-    "previous": "Critonius a"
+    "previous": "Critonius a",
+    "next": "Crutisiones"
+  },
+  {
+    "lemma": "Crutisiones",
+    "previous": "Crummus"
   },
   {
     "lemma": "Critonius",
@@ -14796,7 +14934,12 @@
   },
   {
     "lemma": "Curius 8",
-    "previous": "Curius 3"
+    "previous": "Curius 3",
+    "next": "Curmillus"
+  },
+  {
+    "lemma": "Curmillus",
+    "previous": "Curius 8"
   },
   {
     "lemma": "Cupa; Cuparius",
@@ -15080,7 +15223,7 @@
     "lemma": "Dalheim",
     "previous": "Dalatarba 2",
     "next": "Damagetos 3",
-    "wp_link": "w:de:Dalheim (Luxemburg),",
+    "wp_link": "w:de:Ricciacum",
     "chapters": [
       {
         "start": 322,
@@ -15092,8 +15235,7 @@
   {
     "lemma": "Damagetos 3",
     "previous": "Dalheim",
-    "next": "Damalis 1a",
-    "wp_link": "w:de:Dalheim (Luxemburg),"
+    "next": "Damalis 1a"
   },
   {
     "lemma": "Damalis 1a",
@@ -19805,7 +19947,12 @@
   },
   {
     "lemma": "Geizagera",
-    "previous": "Gebalene"
+    "previous": "Gebalene",
+    "next": "Gellius 6"
+  },
+  {
+    "lemma": "Gellius 6",
+    "previous": "Geizagera"
   },
   {
     "lemma": "Gavius 8a",

@@ -189,7 +189,13 @@
   },
   {
     "lemma": "Agesistratos",
-    "previous": "Afranius 10a"
+    "previous": "Afranius 10a",
+    "next": "Aiacius 3",
+    "redirect": "Athenaios 23"
+  },
+  {
+    "lemma": "Aiacius 3",
+    "previous": "Agesistratos"
   },
   {
     "lemma": "Aemilius 43",
@@ -1121,7 +1127,27 @@
   },
   {
     "lemma": "Catillus 4",
-    "previous": "Catilius 4"
+    "previous": "Catilius 4",
+    "next": "Caturniacus 2"
+  },
+  {
+    "lemma": "Caturniacus 2",
+    "previous": "Catillus 4",
+    "next": "Caudalascus"
+  },
+  {
+    "lemma": "Caudalascus",
+    "previous": "Caturniacus 2",
+    "next": "Cavaturini"
+  },
+  {
+    "lemma": "Cavaturini",
+    "previous": "Caudalascus",
+    "next": "Celelates"
+  },
+  {
+    "lemma": "Celelates",
+    "previous": "Cavaturini"
   },
   {
     "lemma": "Cassius",
@@ -1159,7 +1185,12 @@
   },
   {
     "lemma": "Celelates",
-    "previous": "Cavaturini"
+    "previous": "Cavaturini",
+    "next": "Cerdeciates"
+  },
+  {
+    "lemma": "Cerdeciates",
+    "previous": "Celelates"
   },
   {
     "lemma": "Cassius",
@@ -1415,7 +1446,12 @@
   },
   {
     "lemma": "Coeba(?)",
-    "previous": "Claudius 415"
+    "previous": "Claudius 415",
+    "next": "Coelius 7a"
+  },
+  {
+    "lemma": "Coelius 7a",
+    "previous": "Coeba(?)"
   },
   {
     "lemma": "Cincius 9",

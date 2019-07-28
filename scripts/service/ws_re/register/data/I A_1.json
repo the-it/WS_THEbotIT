@@ -341,7 +341,7 @@
   {
     "lemma": "Rabo",
     "previous": "Rabirius 9",
-    "next": "Rabocentus",
+    "next": "Rabuleius 1",
     "redirect": "Arabon 2",
     "chapters": [
       {
@@ -905,7 +905,7 @@
   {
     "lemma": "Ragando",
     "previous": "Ragaia",
-    "next": "Ragau",
+    "next": "Ῥαγαῦ",
     "chapters": [
       {
         "start": 127,
@@ -915,7 +915,7 @@
     ]
   },
   {
-    "lemma": "Ragau",
+    "lemma": "Ῥαγαῦ",
     "previous": "Ragando",
     "next": "Rages",
     "sort_key": "Ragau",
@@ -929,7 +929,7 @@
   },
   {
     "lemma": "Rages",
-    "previous": "Ragau",
+    "previous": "Ῥαγαῦ",
     "next": "Ragnahilda",
     "redirect": "Ῥάγαια",
     "chapters": [
@@ -1203,7 +1203,7 @@
   {
     "lemma": "Ῥακατρίαι",
     "previous": "Ῥακάται",
-    "next": "Rakeloi (-a?)",
+    "next": "Rakeloi (-a ?)",
     "sort_key": "Rakatriai",
     "redirect": "Rakatai",
     "chapters": [
@@ -1214,7 +1214,7 @@
     ]
   },
   {
-    "lemma": "Rakeloi (-a?)",
+    "lemma": "Rakeloi (-a ?)",
     "previous": "Ῥακατρίαι",
     "next": "Rakotis",
     "chapters": [
@@ -1227,7 +1227,7 @@
   },
   {
     "lemma": "Rakotis",
-    "previous": "Rakeloi (-a?)",
+    "previous": "Rakeloi (-a ?)",
     "next": "Rallum",
     "wp_link": "w:de:Alexandria in der Antike",
     "chapters": [
@@ -2259,7 +2259,7 @@
     ]
   },
   {
-    "lemma": "Rapsodos",
+    "lemma": "Ῥαψῳδός",
     "previous": "Ῥάψιοι",
     "next": "Ῥάπτα",
     "sort_key": "Rapsodos",
@@ -2274,7 +2274,7 @@
   },
   {
     "lemma": "Ῥάπτα",
-    "previous": "Rapsodos",
+    "previous": "Ῥαψῳδός",
     "next": "Ῥάπτον",
     "sort_key": "Rapta",
     "chapters": [
@@ -2325,7 +2325,7 @@
   {
     "lemma": "Raptus 2",
     "previous": "Raptus 1",
-    "next": " ̓Ράρ",
+    "next": "Rar",
     "wp_link": "w:de:Entführung",
     "chapters": [
       {
@@ -2336,7 +2336,7 @@
     ]
   },
   {
-    "lemma": " ̓Ράρ",
+    "lemma": "Rar",
     "previous": "Raptus 2",
     "next": "Raraunum",
     "sort_key": "Rar",
@@ -2350,7 +2350,7 @@
   },
   {
     "lemma": "Raraunum",
-    "previous": " ̓Ράρ",
+    "previous": "Rar",
     "next": "Rarentus",
     "chapters": [
       {
@@ -2363,7 +2363,7 @@
   {
     "lemma": "Rarentus",
     "previous": "Raraunum",
-    "next": "̓Ραρία",
+    "next": "Raria",
     "chapters": [
       {
         "start": 251,
@@ -2373,9 +2373,9 @@
     ]
   },
   {
-    "lemma": "̓Ραρία",
+    "lemma": "Raria",
     "previous": "Rarentus",
-    "next": "Rarias",
+    "next": " ̓Ραρiάς",
     "sort_key": "Raria",
     "chapters": [
       {
@@ -2386,9 +2386,9 @@
     ]
   },
   {
-    "lemma": "Rarias",
-    "previous": "̓Ραρία",
-    "next": "̓Ράριον",
+    "lemma": " ̓Ραρiάς",
+    "previous": "Raria",
+    "next": "Rarion",
     "sort_key": "Rarias",
     "chapters": [
       {
@@ -2399,8 +2399,8 @@
     ]
   },
   {
-    "lemma": "̓Ράριον",
-    "previous": "Rarias",
+    "lemma": "Rarion",
+    "previous": " ̓Ραρiάς",
     "next": " ̓Ρᾶρος",
     "sort_key": "Rarion",
     "chapters": [
@@ -2413,7 +2413,7 @@
   },
   {
     "lemma": " ̓Ρᾶρος",
-    "previous": "̓Ράριον",
+    "previous": "Rarion",
     "next": "Rarungae",
     "sort_key": "Raros",
     "chapters": [
