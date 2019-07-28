@@ -9,3 +9,5 @@ if [ ! -d "$ANSIBLE_REPO" ] ; then
     git clone "https://github.com/the-it/$ANSIBLE_REPO.git"
 fi
 ansible-galaxy install -r "$ANSIBLE_REPO/requirements.yml"
+ansible-playbook "$ANSIBLE_REPO/ws_thebotit.yml"
+set +x
