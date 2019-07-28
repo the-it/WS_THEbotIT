@@ -28,8 +28,8 @@ WS_THEbotIT
 
 To bootstrap the project execute following command:
 
-.. code-block:: shell
+.. code-block::
 
   wget -O - https://raw.githubusercontent.com/the-it/WS_THEbotIT/master/bootstrap.sh | bash
 
-This should work on a debian like system.
+This should work on a debian like system and installs the project in the folder `~/workspace/WS_THEbotIT` and initiate a virtual environment there.
