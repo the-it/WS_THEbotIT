@@ -1334,7 +1334,13 @@
   },
   {
     "lemma": "Apolaustus 5",
-    "previous": "Apolaustus 4"
+    "previous": "Apolaustus 4",
+    "next": "Apolaustus 6",
+    "redirect": "Ulpius 3a"
+  },
+  {
+    "lemma": "Apolaustus 6",
+    "previous": "Apolaustus 5"
   },
   {
     "lemma": "Apelles 8",
@@ -2926,7 +2932,19 @@
   },
   {
     "lemma": "Demetrios 32e",
-    "previous": "Demetrios 32d"
+    "previous": "Demetrios 32d",
+    "next": "Demetrios 32f",
+    "sort_key": "Demetrios 032e"
+  },
+  {
+    "lemma": "Demetrios 32f",
+    "previous": "Demetrios 32e",
+    "next": "Demetrios 32g",
+    "sort_key": "Demetrios 032f"
+  },
+  {
+    "lemma": "Demetrios 32g",
+    "previous": "Demetrios 32f"
   },
   {
     "lemma": "Demetrios 32ee",
