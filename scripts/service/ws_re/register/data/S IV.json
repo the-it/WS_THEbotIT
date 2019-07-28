@@ -519,6 +519,24 @@
   },
   {
     "lemma": "Antenor 6",
+    "previous": "Anleihen"
+  },
+  {
+    "lemma": "Androkles 13a",
+    "next": "Andronikos 16a"
+  },
+  {
+    "lemma": "Andronikos 16a",
+    "previous": "Androkles 13a",
+    "next": "Anleihen"
+  },
+  {
+    "lemma": "Anleihen",
+    "previous": "Andronikos 16a",
+    "next": "Antenor 6"
+  },
+  {
+    "lemma": "Antenor 6",
     "previous": "Anleihen",
     "next": "Antibelos"
   },
@@ -802,7 +820,19 @@
   },
   {
     "lemma": "Apollonios 2a",
-    "previous": "Apollodotos 2a"
+    "previous": "Apollodotos 2a",
+    "next": "Apollonios 70a",
+    "sort_key": "Apollonios 002a"
+  },
+  {
+    "lemma": "Apollonios 70a",
+    "previous": "Apollonios 2a",
+    "next": "Apollonios 70b",
+    "sort_key": "Apollonios 070a"
+  },
+  {
+    "lemma": "Apollonios 70b",
+    "previous": "Apollonios 70a"
   },
   {
     "lemma": "Apollodoros 41d",
@@ -1027,7 +1057,12 @@
   },
   {
     "lemma": "Aristogeiton 1a",
-    "previous": "Aristodemos 16"
+    "previous": "Aristodemos 16",
+    "next": "Aristokleia"
+  },
+  {
+    "lemma": "Aristokleia",
+    "previous": "Aristogeiton 1a"
   },
   {
     "lemma": "Aristobulos 14a",
@@ -1197,7 +1232,12 @@
   },
   {
     "lemma": "Artemon 9a",
-    "previous": "Artemios"
+    "previous": "Artemios",
+    "next": "Artiboles"
+  },
+  {
+    "lemma": "Artiboles",
+    "previous": "Artemon 9a"
   },
   {
     "lemma": "Arybas 2",
@@ -1366,12 +1406,30 @@
   },
   {
     "lemma": "Attinas 2",
-    "previous": "Atizyes",
+    "previous": "Atizyes"
+  },
+  {
+    "lemma": "Attinas",
     "next": "Attylos"
   },
   {
     "lemma": "Attylos",
-    "previous": "Attinas 2"
+    "previous": "Attinas",
+    "next": "Auranos"
+  },
+  {
+    "lemma": "Auranos",
+    "previous": "Attylos",
+    "next": "Austanes"
+  },
+  {
+    "lemma": "Austanes",
+    "previous": "Auranos",
+    "next": "Autodikos"
+  },
+  {
+    "lemma": "Autodikos",
+    "previous": "Austanes"
   },
   {
     "lemma": "Asklepiades 2a) = 14a",
@@ -1544,7 +1602,12 @@
   },
   {
     "lemma": "Autokles 4",
-    "previous": "Autodikos"
+    "previous": "Autodikos",
+    "next": "Bakchylides 2"
+  },
+  {
+    "lemma": "Bakchylides 2",
+    "previous": "Autokles 4"
   },
   {
     "lemma": "Attinas",
@@ -1752,7 +1815,6 @@
   {
     "lemma": "Bienenzucht",
     "previous": "Berufsvereine",
-    "next": "Bion 3a",
     "chapters": [
       {
         "start": 211,
@@ -1762,8 +1824,17 @@
     ]
   },
   {
+    "lemma": "Berufsvereine",
+    "next": "Bion 3a"
+  },
+  {
     "lemma": "Bion 3a",
-    "previous": "Bienenzucht"
+    "previous": "Berufsvereine",
+    "next": "Biton 2a"
+  },
+  {
+    "lemma": "Biton 2a",
+    "previous": "Bion 3a"
   },
   {
     "lemma": "Berufsvereine",
@@ -1796,7 +1867,12 @@
   },
   {
     "lemma": "Bulagoras 2",
-    "previous": "Boupares"
+    "previous": "Boupares",
+    "next": "Cercina"
+  },
+  {
+    "lemma": "Cercina",
+    "previous": "Bulagoras 2"
   },
   {
     "lemma": "Berufsvereine",
@@ -1842,7 +1918,12 @@
   },
   {
     "lemma": "Chaireas 5a",
-    "previous": "Cercina"
+    "previous": "Cercina",
+    "next": "Χαμαιδικαστής"
+  },
+  {
+    "lemma": "Χαμαιδικαστής",
+    "previous": "Chaireas 5a"
   },
   {
     "lemma": "Berufsvereine",
@@ -3092,7 +3173,6 @@
   {
     "lemma": "Essener",
     "previous": "Erotylos",
-    "next": "Euandros 4a",
     "wp_link": "w:de:Essener",
     "chapters": [
       {
@@ -3101,10 +3181,6 @@
         "author": "Bauer, [Walter]"
       }
     ]
-  },
-  {
-    "lemma": "Euandros 4a",
-    "previous": "Essener"
   },
   {
     "lemma": "Erotylos",
@@ -3133,6 +3209,44 @@
   {
     "lemma": "Euktos 2",
     "previous": "Eukles 16a"
+  },
+  {
+    "lemma": "Erotylos",
+    "next": "Euandros 4a"
+  },
+  {
+    "lemma": "Euandros 4a",
+    "previous": "Erotylos",
+    "next": "Euboia 1"
+  },
+  {
+    "lemma": "Euboia 1",
+    "previous": "Euandros 4a",
+    "next": "Eugnostos"
+  },
+  {
+    "lemma": "Eugnostos",
+    "previous": "Euboia 1",
+    "next": "Eukles 16a"
+  },
+  {
+    "lemma": "Eukles 16a",
+    "previous": "Eugnostos",
+    "next": "Euktos 2"
+  },
+  {
+    "lemma": "Euktos 2",
+    "previous": "Eukles 16a",
+    "next": "Eulaios 3"
+  },
+  {
+    "lemma": "Eulaios 3",
+    "previous": "Euktos 2",
+    "next": "Eumedes 7a"
+  },
+  {
+    "lemma": "Eumedes 7a",
+    "previous": "Eulaios 3"
   },
   {
     "lemma": "Erotylos",

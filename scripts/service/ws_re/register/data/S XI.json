@@ -411,7 +411,13 @@
   },
   {
     "lemma": "Angeiologia",
-    "previous": "Anduit"
+    "previous": "Anduit",
+    "next": "Antigonos 16",
+    "redirect": "Periskythismos"
+  },
+  {
+    "lemma": "Antigonos 16",
+    "previous": "Angeiologia"
   },
   {
     "lemma": "Anartii",
@@ -878,7 +884,22 @@
   },
   {
     "lemma": "Cuneus 5",
-    "previous": "Cuneus 4"
+    "previous": "Cuneus 4",
+    "next": "Cyrila 2"
+  },
+  {
+    "lemma": "Cyrila 2",
+    "previous": "Cuneus 5",
+    "next": "Darnithithi"
+  },
+  {
+    "lemma": "Darnithithi",
+    "previous": "Cyrila 2",
+    "next": "Demetrios 85"
+  },
+  {
+    "lemma": "Demetrios 85",
+    "previous": "Darnithithi"
   },
   {
     "lemma": "Claudius 211a",

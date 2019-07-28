@@ -387,7 +387,22 @@
   },
   {
     "lemma": "Attica aqua",
-    "previous": "Asklepiodoros 13"
+    "previous": "Asklepiodoros 13",
+    "next": "Augusta aqua 1"
+  },
+  {
+    "lemma": "Augusta aqua 1",
+    "previous": "Attica aqua",
+    "next": "Augusta aqua 2"
+  },
+  {
+    "lemma": "Augusta aqua 2",
+    "previous": "Augusta aqua 1",
+    "next": "Aurelia aqua"
+  },
+  {
+    "lemma": "Aurelia aqua",
+    "previous": "Augusta aqua 2"
   },
   {
     "lemma": "Aristonidas 2",
@@ -520,7 +535,12 @@
   },
   {
     "lemma": "Bewässerungsanlagen",
-    "previous": "Benenatus 6"
+    "previous": "Benenatus 6",
+    "next": "Bremse"
+  },
+  {
+    "lemma": "Bremse",
+    "previous": "Bewässerungsanlagen"
   },
   {
     "lemma": "Asklepiades 48a",
@@ -781,7 +801,12 @@
   },
   {
     "lemma": "Demetrios 125b",
-    "previous": "December 2"
+    "previous": "December 2",
+    "next": "Demokydes"
+  },
+  {
+    "lemma": "Demokydes",
+    "previous": "Demetrios 125b"
   },
   {
     "lemma": "Claudia aqua",

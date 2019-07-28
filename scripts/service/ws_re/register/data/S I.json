@@ -12906,7 +12906,12 @@
   },
   {
     "lemma": "Arkesine 1",
-    "previous": "Arkesikerta"
+    "previous": "Arkesikerta",
+    "next": "Arkesos a"
+  },
+  {
+    "lemma": "Arkesos a",
+    "previous": "Arkesine 1"
   },
   {
     "lemma": "Arkadianai",
@@ -20869,6 +20874,7 @@
   {
     "lemma": "Cato 2",
     "previous": "Catius 10a",
+    "next": null,
     "chapters": [
       {
         "start": 279,
@@ -22070,7 +22076,13 @@
   },
   {
     "lemma": "Claudius 102a",
-    "previous": "Claudius 100a"
+    "previous": "Claudius 100a",
+    "next": "Claudius 105",
+    "sort_key": "Claudius 102a"
+  },
+  {
+    "lemma": "Claudius 105",
+    "previous": "Claudius 102a"
   },
   {
     "lemma": "Claudius 31a(-b)",
@@ -23349,13 +23361,29 @@
   },
   {
     "lemma": "Damaios a",
-    "previous": "Damagetos 3",
-    "next": "Damasias 1",
+    "previous": "Damagetos 3"
+  },
+  {
+    "lemma": "Damaios a",
     "sort_key": "Damaios 0a"
   },
   {
+    "lemma": "Damaios a",
+    "next": "Damasias 1"
+  },
+  {
     "lemma": "Damasias 1",
-    "previous": "Damaios a"
+    "previous": "Damaios a",
+    "next": "Damasias 3"
+  },
+  {
+    "lemma": "Damasias 3",
+    "previous": "Damasias 1",
+    "next": "Damasippos 3a"
+  },
+  {
+    "lemma": "Damasippos 3a",
+    "previous": "Damasias 3"
   },
   {
     "lemma": "Custidius",
@@ -23504,7 +23532,6 @@
   {
     "lemma": "Damatrios 2a",
     "previous": "Damaskos 3",
-    "next": "Damea",
     "chapters": [
       {
         "start": 335,
@@ -23514,8 +23541,17 @@
     ]
   },
   {
+    "lemma": "Damatrios 2",
+    "next": "Damea"
+  },
+  {
     "lemma": "Damea",
-    "previous": "Damatrios 2a"
+    "previous": "Damatrios 2",
+    "next": "Damis 2a"
+  },
+  {
+    "lemma": "Damis 2a",
+    "previous": "Damea"
   },
   {
     "lemma": "Damatrios 2",
@@ -23561,7 +23597,12 @@
   },
   {
     "lemma": "Damokrates 2",
-    "previous": "Damokles 6a"
+    "previous": "Damokles 6a",
+    "next": "Damokrates 2a"
+  },
+  {
+    "lemma": "Damokrates 2a",
+    "previous": "Damokrates 2"
   },
   {
     "lemma": "Damatrios 2",

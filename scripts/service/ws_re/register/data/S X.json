@@ -602,7 +602,13 @@
   },
   {
     "lemma": "Afer a",
-    "previous": "Aëtos 6"
+    "previous": "Aëtos 6",
+    "next": "Agatharchos 16",
+    "redirect": "Aphras"
+  },
+  {
+    "lemma": "Agatharchos 16",
+    "previous": "Afer a"
   },
   {
     "lemma": "Aemilius 144",
@@ -863,7 +869,12 @@
   },
   {
     "lemma": "Alexidemos 2",
-    "previous": "Alexanor"
+    "previous": "Alexanor",
+    "next": "Alfenus 10"
+  },
+  {
+    "lemma": "Alfenus 10",
+    "previous": "Alexidemos 2"
   },
   {
     "lemma": "Alexandros 51",
@@ -1334,7 +1345,8 @@
   },
   {
     "lemma": "Apolaustus 5",
-    "previous": "Apolaustus 4"
+    "previous": "Apolaustus 4",
+    "next": null
   },
   {
     "lemma": "Apelles 8",
@@ -1586,10 +1598,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε"
+    "next": "Ἀρχε(..."
   },
   {
-    "lemma": "Ἀρχε",
+    "lemma": "Ἀρχε(...",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1603,7 +1615,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε",
+    "previous": "Ἀρχε(...",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -2284,7 +2296,10 @@
   },
   {
     "lemma": "Autolykos 6",
-    "previous": "Αὐτο(...",
+    "previous": "Αὐτο(..."
+  },
+  {
+    "lemma": "Autolykos 6",
     "next": "Babyllios",
     "sort_key": "Auto(---"
   },
@@ -2467,7 +2482,8 @@
   },
   {
     "lemma": "Castronius",
-    "previous": "Carmen adversus paganos"
+    "previous": "Carmen adversus paganos",
+    "next": null
   },
   {
     "lemma": "Candidianae",
@@ -2531,7 +2547,12 @@
     ]
   },
   {
+    "lemma": "Chairemon 5",
+    "next": "Chairestratos 1"
+  },
+  {
     "lemma": "Chairestratos 1",
+    "previous": "Chairemon 5",
     "next": "Chairestratos 1a"
   },
   {
@@ -2573,12 +2594,7 @@
   },
   {
     "lemma": "Chirographum",
-    "previous": "Charidemos 4a",
-    "next": "Choraules"
-  },
-  {
-    "lemma": "Choraules",
-    "previous": "Chirographum"
+    "previous": "Charidemos 4a"
   },
   {
     "lemma": "χειρόγραφον",
@@ -2592,6 +2608,29 @@
   {
     "lemma": "Chryses 3",
     "previous": "Choraules"
+  },
+  {
+    "lemma": "χειρόγραφον",
+    "next": "Choraules"
+  },
+  {
+    "lemma": "Choraules",
+    "previous": "χειρόγραφον",
+    "next": "Chryses 3"
+  },
+  {
+    "lemma": "Chryses 3",
+    "previous": "Choraules",
+    "next": "Chryses 4"
+  },
+  {
+    "lemma": "Chryses 4",
+    "previous": "Chryses 3",
+    "next": "Cicereia lex"
+  },
+  {
+    "lemma": "Cicereia lex",
+    "previous": "Chryses 4"
   },
   {
     "lemma": "χειρόγραφον",
