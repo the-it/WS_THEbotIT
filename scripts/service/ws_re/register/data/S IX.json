@@ -74,7 +74,12 @@
   },
   {
     "lemma": "Aliphera",
-    "previous": "Alfenus 4"
+    "previous": "Alfenus 4",
+    "next": "Alisca"
+  },
+  {
+    "lemma": "Alisca",
+    "previous": "Aliphera"
   },
   {
     "lemma": "Aelius 92a",
@@ -270,7 +275,8 @@
   },
   {
     "lemma": "Aspis 10a",
-    "previous": "Ascheion"
+    "previous": "Ascheion",
+    "next": null
   },
   {
     "lemma": "Antonius 95a",
@@ -411,7 +417,12 @@
   },
   {
     "lemma": "Attikos 15",
-    "previous": "Asterope 6"
+    "previous": "Asterope 6",
+    "next": "Attius 23"
+  },
+  {
+    "lemma": "Attius 23",
+    "previous": "Attikos 15"
   },
   {
     "lemma": "Asprenas",
@@ -581,7 +592,12 @@
   },
   {
     "lemma": "Clemens aqua",
-    "previous": "Claudius 149a"
+    "previous": "Claudius 149a",
+    "next": "Clodius 21a"
+  },
+  {
+    "lemma": "Clodius 21a",
+    "previous": "Clemens aqua"
   },
   {
     "lemma": "Aurelius 157a",
@@ -2496,6 +2512,12 @@
     "lemma": "Pontius 44"
   },
   {
+    "lemma": "Iberia"
+  },
+  {
+    "lemma": "Pontius 44"
+  },
+  {
     "lemma": "Iberia",
     "next": "Pontos Euxeinos"
   },
@@ -2514,6 +2536,12 @@
   {
     "lemma": "Seuthopolis",
     "previous": "Pontos Euxeinos"
+  },
+  {
+    "lemma": "M. Porcius Verus 45"
+  },
+  {
+    "lemma": "Seuthopolis"
   },
   {
     "lemma": "M. Porcius Verus 45"

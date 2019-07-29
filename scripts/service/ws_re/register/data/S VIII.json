@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Achaios 8",
+    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -58,7 +59,12 @@
   },
   {
     "lemma": "Alexandrina aqua",
-    "previous": "Aisopos 6"
+    "previous": "Aisopos 6",
+    "next": "Alko"
+  },
+  {
+    "lemma": "Alko",
+    "previous": "Alexandrina aqua"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -71,7 +77,22 @@
   },
   {
     "lemma": "Alsietina aqua",
-    "previous": "Alko"
+    "previous": "Alko",
+    "next": "Amabilis 1a"
+  },
+  {
+    "lemma": "Amabilis 1a",
+    "previous": "Alsietina aqua",
+    "next": "Amblichos"
+  },
+  {
+    "lemma": "Amblichos",
+    "previous": "Amabilis 1a",
+    "next": "Ameisenlöwe"
+  },
+  {
+    "lemma": "Ameisenlöwe",
+    "previous": "Amblichos"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -105,7 +126,12 @@
   },
   {
     "lemma": "Amphimedusa",
-    "previous": "Ameisenlöwe"
+    "previous": "Ameisenlöwe",
+    "next": "Andragoras 4"
+  },
+  {
+    "lemma": "Andragoras 4",
+    "previous": "Amphimedusa"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -3949,8 +3975,16 @@
     "previous": "Antonius 30"
   },
   {
+    "lemma": "Apollodoros 23",
+    "next": "Caesaris thronus",
+    "sort_key": "Apollonios 023"
+  },
+  {
+    "lemma": "Caesaris thronus",
+    "previous": "Apollodoros 23"
+  },
+  {
     "lemma": "Apollonios 23",
-    "previous": null,
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },

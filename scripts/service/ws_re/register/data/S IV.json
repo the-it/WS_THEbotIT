@@ -519,7 +519,12 @@
   },
   {
     "lemma": "Antenor 6",
-    "previous": "Anleihen"
+    "previous": "Anleihen",
+    "next": "Antibelos"
+  },
+  {
+    "lemma": "Antibelos",
+    "previous": "Antenor 6"
   },
   {
     "lemma": "Androkles 13a",
@@ -775,7 +780,12 @@
   },
   {
     "lemma": "Apollodoros 41a",
-    "previous": "Aphrikes"
+    "previous": "Aphrikes",
+    "next": "Apollodotos 2a"
+  },
+  {
+    "lemma": "Apollodotos 2a",
+    "previous": "Apollodoros 41a"
   },
   {
     "lemma": "Aphobetos 2",
@@ -1645,7 +1655,22 @@
   },
   {
     "lemma": "Bakenor",
-    "previous": "Bakchylides 2"
+    "previous": "Bakchylides 2",
+    "next": "Banken"
+  },
+  {
+    "lemma": "Banken",
+    "previous": "Bakenor",
+    "next": "Barsine 2"
+  },
+  {
+    "lemma": "Barsine 2",
+    "previous": "Banken",
+    "next": "Basias"
+  },
+  {
+    "lemma": "Basias",
+    "previous": "Barsine 2"
   },
   {
     "lemma": "Attinas",
@@ -1815,6 +1840,7 @@
   {
     "lemma": "Bienenzucht",
     "previous": "Berufsvereine",
+    "next": "Bion 3a",
     "chapters": [
       {
         "start": 211,
@@ -1822,6 +1848,10 @@
         "author": "Klek"
       }
     ]
+  },
+  {
+    "lemma": "Bion 3a",
+    "previous": "Bienenzucht"
   },
   {
     "lemma": "Berufsvereine",
@@ -2162,7 +2192,13 @@
   },
   {
     "lemma": "Χρυσώνης",
-    "previous": "Chrysippos 10a"
+    "previous": "Chrysippos 10a",
+    "next": "Damaratos 3",
+    "sort_key": "Chrysones"
+  },
+  {
+    "lemma": "Damaratos 3",
+    "previous": "Χρυσώνης"
   },
   {
     "lemma": "Chersanippos",
