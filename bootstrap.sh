@@ -2,7 +2,7 @@
 
 set -x
 sudo apt-get update
-sudo apt-get install -y python-pip git
+sudo apt-get install -y python-pip git python3-apt
 pip install ansible
 ANSIBLE_REPO="ansible_roles"
 if [ ! -d "$ANSIBLE_REPO" ] ; then
@@ -10,4 +10,5 @@ if [ ! -d "$ANSIBLE_REPO" ] ; then
 fi
 ansible-galaxy install -r "$ANSIBLE_REPO/requirements.yml"
 ansible-playbook "$ANSIBLE_REPO/ws_thebotit.yml"
+rm -rf $ANSIBLE_REPO
 set +x
