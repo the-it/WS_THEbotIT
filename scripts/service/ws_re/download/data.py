@@ -77,7 +77,7 @@ _MAPPINGS = {
     "III A,1": {"source": ("PaulyWissowa4153", "Silacenis Sparsus"), "pages": ((-1, 50002, 50316),)},
     "III A,2": {"source": ("PaulyWissowa4153", "Sparta Stluppi"), "pages": ((1263, 60002, 60322),)},
     "IV A,1": {"source": ("PaulyWissowa5466", "Stoa Symposion"), "pages": ((-1, 70002, 70314),)},
-    "IV A,2": {"source": ("PaulyWissowa5466", "Symposion Tauris"), "pages": ((1271, 80002, 80319),)},
+    "IV A,2": {"source": ("PaulyWissowa5466", "Symposion Tauris"), "pages": ((1271, 80002, 80321),)},
     "V A,1": {"source": ("PaulyWissowa5466", "Taurisci Thapsis"), "pages": ((-1, 90002, 90319),)},
     "V A,2": {"source": ("PaulyWissowa5466", "Thapsos Thesara"), "pages": ((1279, 100002, 100319),)},
     "VI A,1": {"source": ("PaulyWissowa5466", "Thesauros Timomachos"), "pages": ((-1, 110002, 110314),)},
