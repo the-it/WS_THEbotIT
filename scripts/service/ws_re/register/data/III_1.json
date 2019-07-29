@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Barbarus 1",
+    "previous": null,
     "next": "Barbarus 2",
     "redirect": true,
     "chapters": [
@@ -2121,7 +2122,7 @@
   {
     "lemma": "Basanisai",
     "previous": "Basanarai",
-    "next": "Basanites",
+    "next": "Βασανίτης",
     "chapters": [
       {
         "start": 39,
@@ -2131,7 +2132,7 @@
     ]
   },
   {
-    "lemma": "Basanites",
+    "lemma": "Βασανίτης",
     "previous": "Basanisai",
     "next": "Basanitis",
     "sort_key": "Basanites",
@@ -2146,7 +2147,7 @@
   },
   {
     "lemma": "Basanitis",
-    "previous": "Basanites",
+    "previous": "Βασανίτης",
     "next": "Βασανίτου λίθου ὄρος",
     "redirect": "Batanaia 1",
     "chapters": [
