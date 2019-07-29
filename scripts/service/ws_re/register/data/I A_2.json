@@ -84,12 +84,24 @@
     ]
   },
   {
-    "lemma": "Saba 1",
+    "lemma": "Saba",
     "previous": "Sab...",
-    "next": "Saba 2",
+    "next": "Saba 1",
     "chapters": [
       {
         "start": 1298,
+        "end": 1299,
+        "author": "Tkáč"
+      }
+    ]
+  },
+  {
+    "lemma": "Saba 1",
+    "previous": "Saba",
+    "next": "Saba 2",
+    "chapters": [
+      {
+        "start": 1299,
         "end": 1511,
         "author": "Tkáč"
       }
@@ -9813,7 +9825,7 @@
   {
     "lemma": "Sambethe",
     "previous": "Sambatistai",
-    "next": "Samida",
+    "next": "Sambida",
     "wp_link": "w:de:Sibylle (Prophetin)",
     "ws_link": "s:de:Apokryphen/Sibyllinische Orakel",
     "chapters": [
