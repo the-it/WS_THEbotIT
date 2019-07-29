@@ -333,7 +333,12 @@
   },
   {
     "lemma": "Axomis",
-    "previous": "Aurelius 244a"
+    "previous": "Aurelius 244a",
+    "next": "Biennos 1"
+  },
+  {
+    "lemma": "Biennos 1",
+    "previous": "Axomis"
   },
   {
     "lemma": "Auction 1",
@@ -487,7 +492,12 @@
   },
   {
     "lemma": "Chirographum",
-    "previous": "Canaliclarius"
+    "previous": "Canaliclarius",
+    "next": "Χειροτέχνιον"
+  },
+  {
+    "lemma": "Χειροτέχνιον",
+    "previous": "Chirographum"
   },
   {
     "lemma": "χειρόγραφον",
@@ -541,7 +551,17 @@
   },
   {
     "lemma": "Clementius 1",
-    "previous": "Claudius 207"
+    "previous": "Claudius 207",
+    "next": "Clementius 1a"
+  },
+  {
+    "lemma": "Clementius 1a",
+    "previous": "Clementius 1",
+    "next": "Cocceius 3"
+  },
+  {
+    "lemma": "Cocceius 3",
+    "previous": "Clementius 1a"
   },
   {
     "lemma": "χειρόγραφον",

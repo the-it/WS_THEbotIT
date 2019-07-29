@@ -244,7 +244,12 @@
   },
   {
     "lemma": "Celeia",
-    "previous": "Catius 4"
+    "previous": "Catius 4",
+    "next": "Cestius 6a"
+  },
+  {
+    "lemma": "Cestius 6a",
+    "previous": "Celeia"
   },
   {
     "lemma": "Cornelius 295a",
@@ -863,7 +868,12 @@
   },
   {
     "lemma": "Aliphera",
-    "previous": "Albucius 5"
+    "previous": "Albucius 5",
+    "next": "Alkmaion 6"
+  },
+  {
+    "lemma": "Alkmaion 6",
+    "previous": "Aliphera"
   },
   {
     "lemma": "Agesilaos 7b",
@@ -965,7 +975,10 @@
   },
   {
     "lemma": "In Alpe Iulia",
-    "previous": "Allius 1a",
+    "previous": "Allius 1a"
+  },
+  {
+    "lemma": "In Alpe Iulia",
     "sort_key": "Alpe Iulia, In"
   },
   {
@@ -1009,12 +1022,20 @@
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1",
+    "previous": "Anaximandros 1"
+  },
+  {
+    "lemma": "Anaximenes 1",
     "next": "Andania 1"
   },
   {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 2"
+    "previous": "Anaximenes 1",
+    "next": "Andautonia"
+  },
+  {
+    "lemma": "Andautonia",
+    "previous": "Andania 1"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -4464,7 +4485,12 @@
   },
   {
     "lemma": "Archedemos 5",
-    "previous": "Arborius 5"
+    "previous": "Arborius 5",
+    "next": "Archedemos 6"
+  },
+  {
+    "lemma": "Archedemos 6",
+    "previous": "Archedemos 5"
   },
   {
     "lemma": "Amelas"
@@ -4490,7 +4516,17 @@
   },
   {
     "lemma": "Archedemos 6",
-    "previous": "Archedemos 5"
+    "previous": "Archedemos 5",
+    "next": "Arinthaeus 3"
+  },
+  {
+    "lemma": "Arinthaeus 3",
+    "previous": "Archedemos 6",
+    "next": "Aristophanes 12"
+  },
+  {
+    "lemma": "Aristophanes 12",
+    "previous": "Arinthaeus 3"
   },
   {
     "lemma": "Anaximandros 1",

@@ -206,7 +206,12 @@
   },
   {
     "lemma": "Abronius",
-    "previous": "Abrincatui"
+    "previous": "Abrincatui",
+    "next": "Absalom"
+  },
+  {
+    "lemma": "Absalom",
+    "previous": "Abronius"
   },
   {
     "lemma": "Abdera",
@@ -317,7 +322,13 @@
   },
   {
     "lemma": "Accaus Postumius",
-    "previous": "Acaunus"
+    "previous": "Acaunus",
+    "next": "Accius Postumius",
+    "sort_key": "Accaus 3"
+  },
+  {
+    "lemma": "Accius Postumius",
+    "previous": "Accaus Postumius"
   },
   {
     "lemma": "Accaus Postumius",
@@ -650,7 +661,12 @@
   },
   {
     "lemma": "Adanos",
-    "previous": "Adamclissi"
+    "previous": "Adamclissi",
+    "next": "Ἀδδάνων, κώμη–"
+  },
+  {
+    "lemma": "Ἀδδάνων, κώμη–",
+    "previous": "Adanos"
   },
   {
     "lemma": "-acus, -iacus",
@@ -1067,7 +1083,12 @@
   },
   {
     "lemma": "Agasias 2",
-    "previous": "Afrius"
+    "previous": "Afrius",
+    "next": "Agasilaos"
+  },
+  {
+    "lemma": "Agasilaos",
+    "previous": "Agasias 2"
   },
   {
     "lemma": "Afer",
@@ -1096,7 +1117,17 @@
   },
   {
     "lemma": "Agatharchos 14a",
-    "previous": "Agatha (Agathe), Agathon"
+    "previous": "Agatha (Agathe), Agathon",
+    "next": "Agatharchos 14b"
+  },
+  {
+    "lemma": "Agatharchos 14b",
+    "previous": "Agatharchos 14a",
+    "next": "Agathias 3"
+  },
+  {
+    "lemma": "Agathias 3",
+    "previous": "Agatharchos 14b"
   },
   {
     "lemma": "Afer",
@@ -1192,7 +1223,12 @@
   },
   {
     "lemma": "Agathodaimon 1",
-    "previous": "Agathinos 10"
+    "previous": "Agathinos 10",
+    "next": "Agathodaimon 2"
+  },
+  {
+    "lemma": "Agathodaimon 2",
+    "previous": "Agathodaimon 1"
   },
   {
     "lemma": "Agathias 3",
@@ -1221,7 +1257,13 @@
   },
   {
     "lemma": "Ἀγαθοδαιμονῖται",
-    "previous": "Ἀγαθοδαιμονιασταί"
+    "previous": "Ἀγαθοδαιμονιασταί",
+    "next": "Agathokles 34",
+    "sort_key": "Agathodaimonitai"
+  },
+  {
+    "lemma": "Agathokles 34",
+    "previous": "Ἀγαθοδαιμονῖται"
   },
   {
     "lemma": "Agathias 3",
@@ -1483,7 +1525,12 @@
   },
   {
     "lemma": "Agroitas 2",
-    "previous": "Agrianome 2"
+    "previous": "Agrianome 2",
+    "next": "Aguontum"
+  },
+  {
+    "lemma": "Aguontum",
+    "previous": "Agroitas 2"
   },
   {
     "lemma": "Agreus, Agreutes 1",
@@ -1710,11 +1757,15 @@
   },
   {
     "lemma": "Akestor 6",
-    "previous": "Akazie"
+    "previous": "Akazie",
+    "next": "Aktor 1"
+  },
+  {
+    "lemma": "Aktor 1",
+    "previous": "Akestor 6"
   },
   {
     "lemma": "Aix 3",
-    "previous": null,
     "next": "Akanthos 5a"
   },
   {
@@ -2055,7 +2106,12 @@
   },
   {
     "lemma": "Alfius 6",
-    "previous": "Alexios"
+    "previous": "Alexios",
+    "next": "Algalsos"
+  },
+  {
+    "lemma": "Algalsos",
+    "previous": "Alfius 6"
   },
   {
     "lemma": "Alexinos",
@@ -2073,11 +2129,15 @@
   },
   {
     "lemma": "Algalsos",
-    "previous": "Alfius 6"
+    "previous": "Alfius 6",
+    "next": "Alichamps"
+  },
+  {
+    "lemma": "Alichamps",
+    "previous": "Algalsos"
   },
   {
     "lemma": "Alexinos 2",
-    "previous": null,
     "next": "Alexias 5"
   },
   {
@@ -3482,7 +3542,12 @@
   },
   {
     "lemma": "Antiphidas",
-    "previous": "Antiphatas 2"
+    "previous": "Antiphatas 2",
+    "next": "Antiphon 14"
+  },
+  {
+    "lemma": "Antiphon 14",
+    "previous": "Antiphidas"
   },
   {
     "lemma": "Antiochos 42a",
@@ -3871,13 +3936,7 @@
   },
   {
     "lemma": "Apollinaris 13",
-    "previous": "Aphrodite",
-    "next": "Apollodoros 26a",
-    "wp_link": "w:de:Apollinaris"
-  },
-  {
-    "lemma": "Apollodoros 26a",
-    "previous": "Apollinaris 13"
+    "previous": "Aphrodite"
   },
   {
     "lemma": "Aphrodisios a",
@@ -3907,6 +3966,40 @@
   {
     "lemma": "Apollodoros 76b",
     "previous": "Apollodoros 26a"
+  },
+  {
+    "lemma": "Aphrodisios a",
+    "sort_key": "Aphrodisios 00a"
+  },
+  {
+    "lemma": "Aphrodisios a",
+    "next": "Aphrodite"
+  },
+  {
+    "lemma": "Aphrodite",
+    "previous": "Aphrodisios a",
+    "next": "Apollinaris 13"
+  },
+  {
+    "lemma": "Apollinaris 13",
+    "previous": "Aphrodite",
+    "next": "Apollodoros 26a",
+    "wp_link": "w:de:Apollinaris"
+  },
+  {
+    "lemma": "Apollodoros 26a",
+    "previous": "Apollinaris 13",
+    "next": "Apollodoros 76b",
+    "wp_link": "w:de:Apollodoros (Diener Kleopatras)"
+  },
+  {
+    "lemma": "Apollodoros 76b",
+    "previous": "Apollodoros 26a",
+    "next": "Apollon"
+  },
+  {
+    "lemma": "Apollon",
+    "previous": "Apollodoros 76b"
   },
   {
     "lemma": "Aphrodisios a",
@@ -6129,7 +6222,12 @@
   },
   {
     "lemma": "Aristodemos 35",
-    "previous": "Aristodemos 21"
+    "previous": "Aristodemos 21",
+    "next": "Aristokrates 21a"
+  },
+  {
+    "lemma": "Aristokrates 21a",
+    "previous": "Aristodemos 35"
   },
   {
     "lemma": "Argentovaria",
@@ -6437,6 +6535,7 @@
   {
     "lemma": "Arkison 2",
     "previous": "Arkadia 4a",
+    "next": null,
     "chapters": [
       {
         "start": 160,
@@ -6624,7 +6723,12 @@
   },
   {
     "lemma": "Arselis",
-    "previous": "Arsames 4"
+    "previous": "Arsames 4",
+    "next": "Arsenios 2a"
+  },
+  {
+    "lemma": "Arsenios 2a",
+    "previous": "Arselis"
   },
   {
     "lemma": "Arsames 5",
@@ -9134,12 +9238,20 @@
   {
     "lemma": "Barbarus a",
     "previous": "Barba 2a",
-    "next": "Barbarus 2",
     "sort_key": "Barbarus 0a"
   },
   {
+    "lemma": "Barbarus a",
+    "next": "Barbarus 2"
+  },
+  {
     "lemma": "Barbarus 2",
-    "previous": "Barbarus a"
+    "previous": "Barbarus a",
+    "next": "Barga"
+  },
+  {
+    "lemma": "Barga",
+    "previous": "Barbarus 2"
   },
   {
     "lemma": "Balbinus 4",
@@ -9325,7 +9437,13 @@
   },
   {
     "lemma": "Βασιλικόν (τὸ)",
-    "previous": "Basilia"
+    "previous": "Basilia",
+    "next": "Bassus 36a",
+    "sort_key": "Basilikon"
+  },
+  {
+    "lemma": "Bassus 36a",
+    "previous": "Βασιλικόν (τὸ)"
   },
   {
     "lemma": "Βασιλικόν (τὸ)",
@@ -10131,7 +10249,7 @@
   {
     "lemma": "Boa 2",
     "previous": "Blondelia",
-    "next": null,
+    "next": "Boagrios",
     "chapters": [
       {
         "start": 209,
@@ -10139,6 +10257,10 @@
         "author": "Stähelin"
       }
     ]
+  },
+  {
+    "lemma": "Boagrios",
+    "previous": "Boa 2"
   },
   {
     "lemma": "Boa",
@@ -12667,7 +12789,7 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
-    "next": "Ceraria (Caeraria, Geraria) figlina",
+    "next": null,
     "chapters": [
       {
         "start": 241,
@@ -12677,8 +12799,17 @@
     ]
   },
   {
+    "lemma": "Centurion(ica) praedia",
+    "next": "Ceraria (Caeraria, Geraria) figlina"
+  },
+  {
     "lemma": "Ceraria (Caeraria, Geraria) figlina",
-    "previous": "Cepariae figlinae"
+    "previous": "Centurion(ica) praedia",
+    "next": "Cercina"
+  },
+  {
+    "lemma": "Cercina",
+    "previous": "Ceraria (Caeraria, Geraria) figlina"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -12701,7 +12832,12 @@
   },
   {
     "lemma": "Cerialis a",
-    "previous": "Cerdo"
+    "previous": "Cerdo",
+    "next": "Cerialis 12"
+  },
+  {
+    "lemma": "Cerialis 12",
+    "previous": "Cerialis a"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -12734,7 +12870,12 @@
   },
   {
     "lemma": "Cerialis 13",
-    "previous": "Cerialis 12"
+    "previous": "Cerialis 12",
+    "next": "Cerm. figlinae"
+  },
+  {
+    "lemma": "Cerm. figlinae",
+    "previous": "Cerialis 13"
   },
   {
     "lemma": "Centurion(ica) praedia",
@@ -13340,7 +13481,13 @@
   },
   {
     "lemma": "Claudius",
-    "previous": "Claudiana tegula"
+    "previous": "Claudiana tegula",
+    "next": "Claudius 20a",
+    "sort_key": "Claudius 000"
+  },
+  {
+    "lemma": "Claudius 20a",
+    "previous": "Claudius"
   },
   {
     "lemma": "Claudius",
@@ -13897,6 +14044,47 @@
   {
     "lemma": "Conatius",
     "previous": "Comitialis"
+  },
+  {
+    "lemma": "Colubrarius mons",
+    "next": "Cominius 10"
+  },
+  {
+    "lemma": "Cominius 10",
+    "previous": "Colubrarius mons"
+  },
+  {
+    "lemma": "Comicato",
+    "next": "Cominius 2a"
+  },
+  {
+    "lemma": "Cominius 2a",
+    "previous": "Comicato",
+    "next": "Comisillus"
+  },
+  {
+    "lemma": "Comisillus",
+    "previous": "Cominius 2a",
+    "next": "Comitialis"
+  },
+  {
+    "lemma": "Comitialis",
+    "previous": "Comisillus",
+    "next": "Conatius"
+  },
+  {
+    "lemma": "Conatius",
+    "previous": "Comitialis",
+    "next": "Concordius 3"
+  },
+  {
+    "lemma": "Concordius 3",
+    "previous": "Conatius",
+    "next": "Constans 8"
+  },
+  {
+    "lemma": "Constans 8",
+    "previous": "Concordius 3"
   },
   {
     "lemma": "Comicato",
