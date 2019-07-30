@@ -1,4 +1,3 @@
-import time
 from unittest import skipUnless, TestCase, skip
 
 from testfixtures import compare
@@ -60,13 +59,7 @@ _MAX_SIZE_WIKI_PAGE = 2_098_175
 class TestIntegrationRegister(TestCase):
     @classmethod
     def setUpClass(cls):
-        start = time.time()
         cls.registers = Registers()
-        end = time.time()
-        init_time = end - start
-        if init_time > 20:
-            raise AssertionError(f"Register take to long to initiate ... {init_time} s. "
-                                 "It should initiate in 20 seconds.")
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
