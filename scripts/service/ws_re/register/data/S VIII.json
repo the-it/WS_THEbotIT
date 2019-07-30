@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Achaios 8",
-    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -59,12 +58,20 @@
   },
   {
     "lemma": "Alexandrina aqua",
-    "previous": "Aisopos 6",
+    "previous": "Aisopos 6"
+  },
+  {
+    "lemma": "Alexandri(a)na aqua",
     "next": "Alko"
   },
   {
     "lemma": "Alko",
-    "previous": "Alexandrina aqua"
+    "previous": "Alexandri(a)na aqua",
+    "next": "Alsietina aqua"
+  },
+  {
+    "lemma": "Alsietina aqua",
+    "previous": "Alko"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -566,7 +573,12 @@
   },
   {
     "lemma": "Bremse",
-    "previous": "Bewässerungsanlagen"
+    "previous": "Bewässerungsanlagen",
+    "next": "Bulis 4"
+  },
+  {
+    "lemma": "Bulis 4",
+    "previous": "Bremse"
   },
   {
     "lemma": "Asklepiades 48a",

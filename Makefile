@@ -14,7 +14,7 @@ pycodestyle :
 	echo "########## PYCODESTYLE #########"
 	pycodestyle --show-source --statistics --count
 
-pylint : 
+pylint :
 	echo "############ PYLINT ############"
 	pylint -j4 --rcfile .pylintrc scripts tools
 
@@ -47,13 +47,13 @@ integrationtest :
 	echo "######## INTEGRATIONTEST #######"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
 	export INTEGRATION=1 && \
-	coverage run all_tests.py && \
+	coverage run tst_runner.py && \
 	coverage xml
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
-	coverage run all_tests.py && \
+	coverage run tst_runner.py && \
 	coverage xml
 
 coverage-html : coverage
@@ -76,13 +76,13 @@ code-climate-post :
 	./cc-test-reporter format-coverage --output "coverage/codeclimate.${N}.json" && \
 	./cc-test-reporter after-build --exit-code 0
 
-clean-code-climate : 
+clean-code-climate :
 	echo "###### CLEAN CODE CLIMATE ######"
 	rm -rf cc-test-reporter coverage || :
 
 code-climate : clean-code-climate code-climate-pre coverage code-climate-post
 
-codecov : 
+codecov :
 	echo "########### CODECOV ############"
 	codecov
 

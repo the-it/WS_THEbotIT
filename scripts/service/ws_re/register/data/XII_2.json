@@ -8301,7 +8301,7 @@
   {
     "lemma": "Lex Icilia",
     "previous": "Lex Hostilia",
-    "next": "Leges Iuliae 1",
+    "next": "Lex imperfecta",
     "chapters": [
       {
         "start": 2361,
@@ -8311,9 +8311,20 @@
     ]
   },
   {
-    "lemma": "Leges Iuliae 1",
+    "lemma": "Lex imperfecta",
     "previous": "Lex Icilia",
-    "next": "Lex imperfecta",
+    "next": "Leges Iuliae 1",
+    "chapters": [
+      {
+        "start": 2362,
+        "end": 2362
+      }
+    ]
+  },
+  {
+    "lemma": "Leges Iuliae 1",
+    "previous": "Lex imperfecta",
+    "next": "Leges Iuliae 2",
     "chapters": [
       {
         "start": 2362,
@@ -8323,19 +8334,8 @@
     ]
   },
   {
-    "lemma": "Lex imperfecta",
-    "previous": "Leges Iuliae 1",
-    "next": "Leges Iuliae 2",
-    "chapters": [
-      {
-        "start": 2362,
-        "end": 2362
-      }
-    ]
-  },
-  {
     "lemma": "Leges Iuliae 2",
-    "previous": "Lex imperfecta",
+    "previous": "Leges Iuliae 1",
     "next": "Lex Iulia",
     "chapters": [
       {
@@ -8347,7 +8347,7 @@
   },
   {
     "lemma": "Lex Iulia",
-    "previous": "Lex imperfecta",
+    "previous": "Leges Iuliae 2",
     "next": "Lex Iulia de ambitu",
     "redirect": true,
     "chapters": [
