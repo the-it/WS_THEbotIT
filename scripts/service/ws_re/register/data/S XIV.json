@@ -2348,7 +2348,12 @@
   },
   {
     "lemma": "Aratos 6",
-    "previous": "Aradius 3a"
+    "previous": "Aradius 3a",
+    "next": "Araxa"
+  },
+  {
+    "lemma": "Araxa",
+    "previous": "Aratos 6"
   },
   {
     "lemma": "Aqua, Aquae 97",
@@ -2380,7 +2385,22 @@
   },
   {
     "lemma": "Archelaos 37a",
-    "previous": "Araxa"
+    "previous": "Araxa",
+    "next": "Aricinius"
+  },
+  {
+    "lemma": "Aricinius",
+    "previous": "Archelaos 37a",
+    "next": "Arinius"
+  },
+  {
+    "lemma": "Arinius",
+    "previous": "Aricinius",
+    "next": "Arminius 4"
+  },
+  {
+    "lemma": "Arminius 4",
+    "previous": "Arinius"
   },
   {
     "lemma": "Aqua, Aquae 97",
@@ -3137,7 +3157,12 @@
   },
   {
     "lemma": "Bruttius 5",
-    "previous": "Bruttius 4a"
+    "previous": "Bruttius 4a",
+    "next": "Bubon 1"
+  },
+  {
+    "lemma": "Bubon 1",
+    "previous": "Bruttius 5"
   },
   {
     "lemma": "Bruttidius",
