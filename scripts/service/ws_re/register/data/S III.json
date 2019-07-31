@@ -53,12 +53,12 @@
   {
     "lemma": "Abacus 9",
     "previous": "Abacus",
-    "next": "Epona"
+    "next": "Abano"
   },
   {
     "lemma": "Abano",
     "previous": "Abacus 9",
-    "next": "Abas",
+    "next": "Abas 12",
     "wp_link": "w:de:Abano Terme",
     "chapters": [
       {
@@ -67,16 +67,6 @@
         "author": "Keune"
       }
     ]
-  },
-  {
-    "lemma": "Abas",
-    "previous": "Abano",
-    "next": null
-  },
-  {
-    "lemma": "Abano",
-    "previous": null,
-    "next": "Abas 12"
   },
   {
     "lemma": "Abas 12",
@@ -88,20 +78,8 @@
     "previous": "Abas 12"
   },
   {
-    "lemma": "Abas",
-    "next": "Abbo 2"
-  },
-  {
-    "lemma": "Abbo 2",
-    "previous": "Abas"
-  },
-  {
-    "lemma": "Abbo",
-    "next": "abecedarius, -a, -um"
-  },
-  {
     "lemma": "abecedarius, -a, -um",
-    "previous": "Abbo",
+    "previous": "Abbo 2",
     "next": "Abella",
     "redirect": "Alphabet"
   },
