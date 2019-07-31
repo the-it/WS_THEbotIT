@@ -9,7 +9,12 @@
     ]
   },
   {
+    "lemma": "Blangiani",
+    "next": "Briovera"
+  },
+  {
     "lemma": "Briovera",
+    "previous": "Blangiani",
     "next": "Caecilianus 4a"
   },
   {
@@ -1347,6 +1352,26 @@
     "lemma": "Aurelius 54a",
     "previous": "Aurelius 27",
     "next": "Aurelius 54b",
+    "sort_key": "Aurelius 054a"
+  },
+  {
+    "lemma": "Aurelius 54b",
+    "previous": "Aurelius 54a",
+    "next": "Aurelius 123a",
+    "sort_key": "Aurelius 054b"
+  },
+  {
+    "lemma": "Aurelius 123a",
+    "previous": "Aurelius 54b"
+  },
+  {
+    "lemma": "Aurelius 27",
+    "next": "Aurelius 54a"
+  },
+  {
+    "lemma": "Aurelius 54a",
+    "previous": "Aurelius 27",
+    "next": "Aurelius 54b",
     "sort_key": "Aurelius 054a",
     "chapters": [
       {
@@ -1435,7 +1460,12 @@
   },
   {
     "lemma": "Aurelius 227a",
-    "previous": "Aurelius 225b"
+    "previous": "Aurelius 225b",
+    "next": "Aurelius 231"
+  },
+  {
+    "lemma": "Aurelius 231",
+    "previous": "Aurelius 227a"
   },
   {
     "lemma": "Aurelius 159a",

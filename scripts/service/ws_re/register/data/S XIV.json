@@ -2807,7 +2807,12 @@
   },
   {
     "lemma": "Aurelius 141a",
-    "previous": "Aurelius 136"
+    "previous": "Aurelius 136",
+    "next": "Aurelius 158a"
+  },
+  {
+    "lemma": "Aurelius 158a",
+    "previous": "Aurelius 141a"
   },
   {
     "lemma": "Aurelius 37aa) = 37b",
@@ -2924,7 +2929,12 @@
   },
   {
     "lemma": "Baburius 2",
-    "previous": "Aurelius 262a"
+    "previous": "Aurelius 262a",
+    "next": "Baburius 3"
+  },
+  {
+    "lemma": "Baburius 3",
+    "previous": "Baburius 2"
   },
   {
     "lemma": "Pompeianus 1a",
@@ -3146,6 +3156,20 @@
     "lemma": "Bruttius 4a",
     "previous": "Bruttidius",
     "next": "Bruttius 5",
+    "sort_key": "Bruttius 04a"
+  },
+  {
+    "lemma": "Bruttius 5",
+    "previous": "Bruttius 4a"
+  },
+  {
+    "lemma": "Bruttidius",
+    "next": "Bruttius 4a"
+  },
+  {
+    "lemma": "Bruttius 4a",
+    "previous": "Bruttidius",
+    "next": "Bruttius 5",
     "sort_key": "Bruttius 04a",
     "chapters": [
       {
@@ -3162,7 +3186,17 @@
   },
   {
     "lemma": "Bubon 1",
-    "previous": "Bruttius 5"
+    "previous": "Bruttius 5",
+    "next": "Burennius"
+  },
+  {
+    "lemma": "Burennius",
+    "previous": "Bubon 1",
+    "next": "Caecilius 37"
+  },
+  {
+    "lemma": "Caecilius 37",
+    "previous": "Burennius"
   },
   {
     "lemma": "Bruttidius",
@@ -4026,7 +4060,12 @@
   },
   {
     "lemma": "Cominius 22",
-    "previous": "Coelius 19"
+    "previous": "Coelius 19",
+    "next": "Comius 2"
+  },
+  {
+    "lemma": "Comius 2",
+    "previous": "Cominius 22"
   },
   {
     "lemma": "Claudius 414a",

@@ -463,7 +463,12 @@
   },
   {
     "lemma": "Antigonos 16",
-    "previous": "Angeiologia"
+    "previous": "Angeiologia",
+    "next": "Antiocheia 15"
+  },
+  {
+    "lemma": "Antiocheia 15",
+    "previous": "Antigonos 16"
   },
   {
     "lemma": "Anartii",
@@ -726,7 +731,17 @@
   },
   {
     "lemma": "Bianor 5a",
-    "previous": "Bathinus"
+    "previous": "Bathinus",
+    "next": "Bilachiniensis statio"
+  },
+  {
+    "lemma": "Bilachiniensis statio",
+    "previous": "Bianor 5a",
+    "next": "Brauron"
+  },
+  {
+    "lemma": "Brauron",
+    "previous": "Bilachiniensis statio"
   },
   {
     "lemma": "Azali",

@@ -15154,16 +15154,20 @@
       }
     ]
   },
-  {"lemma": "Kogamis, Kogamos"},
   {
-    "lemma": "Κόγχη",
+    "lemma": "Kogamis, Kogamos",
+    "previous": null,
+    "next": "Κόγχη 1"
+  },
+  {
+    "lemma": "Κόγχη 1",
     "previous": "Kogamis, Kogamos",
     "next": "Kognabanda",
     "sort_key": "Konche 1"
   },
   {
     "lemma": "Kognabanda",
-    "previous": "Κόγχη",
+    "previous": "Κόγχη 1",
     "next": "Kognandaua",
     "chapters": [
       {
