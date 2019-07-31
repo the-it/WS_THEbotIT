@@ -1464,7 +1464,12 @@
   },
   {
     "lemma": "Autodikos",
-    "previous": "Austanes"
+    "previous": "Austanes",
+    "next": "Autokles 4"
+  },
+  {
+    "lemma": "Autokles 4",
+    "previous": "Autodikos"
   },
   {
     "lemma": "Asklepiades 2a) = 14a",
@@ -1894,7 +1899,27 @@
   },
   {
     "lemma": "Biton 2a",
-    "previous": "Bion 3a"
+    "previous": "Bion 3a",
+    "next": "Bolon 2"
+  },
+  {
+    "lemma": "Bolon 2",
+    "previous": "Biton 2a",
+    "next": "Boubakes"
+  },
+  {
+    "lemma": "Boubakes",
+    "previous": "Bolon 2",
+    "next": "Boupares"
+  },
+  {
+    "lemma": "Boupares",
+    "previous": "Boubakes",
+    "next": "Bulagoras 2"
+  },
+  {
+    "lemma": "Bulagoras 2",
+    "previous": "Boupares"
   },
   {
     "lemma": "Berufsvereine",
@@ -1989,7 +2014,12 @@
   },
   {
     "lemma": "Charikles 4a",
-    "previous": "Χαμαιδικαστής"
+    "previous": "Χαμαιδικαστής",
+    "next": "Charon 5a"
+  },
+  {
+    "lemma": "Charon 5a",
+    "previous": "Charikles 4a"
   },
   {
     "lemma": "Berufsvereine",
@@ -2093,7 +2123,12 @@
   },
   {
     "lemma": "Charon 5a",
-    "previous": "Charikles 4a"
+    "previous": "Charikles 4a",
+    "next": "Charos"
+  },
+  {
+    "lemma": "Charos",
+    "previous": "Charon 5a"
   },
   {
     "lemma": "Bulagoras",

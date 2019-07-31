@@ -5322,7 +5322,12 @@
     "previous": "Alexandros 35"
   },
   {
+    "lemma": "Alexandros 35",
+    "next": "Alexandros 65"
+  },
+  {
     "lemma": "Alexandros 65",
+    "previous": "Alexandros 35",
     "next": "Alexandros 65a"
   },
   {
@@ -7673,7 +7678,12 @@
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 3"
+    "previous": "Anaximandros 3",
+    "next": "Anazarba"
+  },
+  {
+    "lemma": "Anazarba",
+    "previous": "Anaximenes 2"
   },
   {
     "lemma": "Anaxagoras 4",
@@ -17585,7 +17595,12 @@
   },
   {
     "lemma": "Babai 1a",
-    "previous": "Baalram"
+    "previous": "Baalram",
+    "next": "Babsa"
+  },
+  {
+    "lemma": "Babsa",
+    "previous": "Babai 1a"
   },
   {
     "lemma": "Azochis",
@@ -20193,7 +20208,12 @@
   },
   {
     "lemma": "Brixia 1",
-    "previous": "Brixantus"
+    "previous": "Brixantus",
+    "next": "Bronton"
+  },
+  {
+    "lemma": "Bronton",
+    "previous": "Brixia 1"
   },
   {
     "lemma": "Bria",
@@ -22926,8 +22946,20 @@
   },
   {
     "lemma": "Chrysippos 15",
+    "previous": "Chrysippos 14b"
+  },
+  {
+    "lemma": "Chrysippos 14b",
+    "next": "Chrysippos 16"
+  },
+  {
+    "lemma": "Chrysippos 16",
     "previous": "Chrysippos 14b",
-    "next": null
+    "next": "Chrysippos 16"
+  },
+  {
+    "lemma": "Chrysippos 16",
+    "previous": "Chrysippos 16"
   },
   {
     "lemma": "Chrysippos 14b",
@@ -23081,7 +23113,12 @@
   },
   {
     "lemma": "Cisson",
-    "previous": "Cisippades"
+    "previous": "Cisippades",
+    "next": "Cissus"
+  },
+  {
+    "lemma": "Cissus",
+    "previous": "Cisson"
   },
   {
     "lemma": "Cilnius 4",
@@ -23595,7 +23632,17 @@
   },
   {
     "lemma": "Clodius 20",
-    "previous": "Clodius 17a"
+    "previous": "Clodius 17a",
+    "next": "Clodius 36"
+  },
+  {
+    "lemma": "Clodius 36",
+    "previous": "Clodius 20",
+    "next": "Clodius 42a"
+  },
+  {
+    "lemma": "Clodius 42a",
+    "previous": "Clodius 36"
   },
   {
     "lemma": "Claudius 399a",
@@ -23832,13 +23879,7 @@
   },
   {
     "lemma": "Codrus a",
-    "previous": "Cocceius 19a",
-    "next": "Coelius 8",
-    "sort_key": "Codrus 0a"
-  },
-  {
-    "lemma": "Coelius 8",
-    "previous": "Codrus a"
+    "previous": "Cocceius 19a"
   },
   {
     "lemma": "Codrus a",
@@ -23866,6 +23907,38 @@
   {
     "lemma": "Coelius 31a",
     "previous": "Coelius 12"
+  },
+  {
+    "lemma": "Codrus a",
+    "sort_key": "Codrus 0a"
+  },
+  {
+    "lemma": "Codrus a",
+    "next": "Coelius 8"
+  },
+  {
+    "lemma": "Coelius 8",
+    "previous": "Codrus a",
+    "next": "Coelius 9"
+  },
+  {
+    "lemma": "Coelius 9",
+    "previous": "Coelius 8",
+    "next": "Coelius 12"
+  },
+  {
+    "lemma": "Coelius 12",
+    "previous": "Coelius 9",
+    "next": "Coelius 31a"
+  },
+  {
+    "lemma": "Coelius 31a",
+    "previous": "Coelius 12",
+    "next": "Cognitio 2"
+  },
+  {
+    "lemma": "Cognitio 2",
+    "previous": "Coelius 31a"
   },
   {
     "lemma": "Codrus a",
@@ -24120,7 +24193,12 @@
   },
   {
     "lemma": "Cornelius 40",
-    "previous": "Cornelius 10b"
+    "previous": "Cornelius 10b",
+    "next": "Cornelius 69"
+  },
+  {
+    "lemma": "Cornelius 69",
+    "previous": "Cornelius 40"
   },
   {
     "lemma": "Cornelius a",
@@ -24221,11 +24299,25 @@
   },
   {
     "lemma": "Cornelius 143",
-    "previous": "Cornelius 141"
+    "previous": "Cornelius 141",
+    "next": "Cornelius 146"
+  },
+  {
+    "lemma": "Cornelius 146",
+    "previous": "Cornelius 143",
+    "next": "Cornelius 198"
+  },
+  {
+    "lemma": "Cornelius 198",
+    "previous": "Cornelius 146"
+  },
+  {
+    "lemma": "Cornelius 337",
+    "next": "Cornelius 350"
   },
   {
     "lemma": "Cornelius 350",
-    "previous": null,
+    "previous": "Cornelius 337",
     "next": "Cornelius 351"
   },
   {

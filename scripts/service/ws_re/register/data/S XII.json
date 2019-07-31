@@ -296,7 +296,12 @@
   },
   {
     "lemma": "Cestius 6a",
-    "previous": "Celeia"
+    "previous": "Celeia",
+    "next": "Chalai"
+  },
+  {
+    "lemma": "Chalai",
+    "previous": "Cestius 6a"
   },
   {
     "lemma": "Cornelius 295a",
@@ -308,7 +313,12 @@
     ]
   },
   {
+    "lemma": "Contrectare, contrectatio",
+    "next": "Cornelius 58"
+  },
+  {
     "lemma": "Cornelius 58",
+    "previous": "Contrectare, contrectatio",
     "next": "Cornelius 205a"
   },
   {
@@ -1063,7 +1073,12 @@
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1"
+    "previous": "Anaximandros 1",
+    "next": "Andania 1"
+  },
+  {
+    "lemma": "Andania 1",
+    "previous": "Anaximenes 2"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -2419,7 +2434,17 @@
   },
   {
     "lemma": "Clodius 31a",
-    "previous": "Claudius 347"
+    "previous": "Claudius 347",
+    "next": "Clodius 41"
+  },
+  {
+    "lemma": "Clodius 41",
+    "previous": "Clodius 31a",
+    "next": "Clodius 56"
+  },
+  {
+    "lemma": "Clodius 56",
+    "previous": "Clodius 41"
   },
   {
     "lemma": "Claudius 288a",
