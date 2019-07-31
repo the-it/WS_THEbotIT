@@ -1,6 +1,11 @@
 [
   {
+    "lemma": "Acerronius 2",
+    "next": "Accius 2"
+  },
+  {
     "lemma": "Accius 2",
+    "previous": "Acerronius 2",
     "next": "Achaios 6"
   },
   {
@@ -10,10 +15,20 @@
   },
   {
     "lemma": "Acilius 42",
-    "previous": "Achaios 6"
+    "previous": "Achaios 6",
+    "next": "Acilius 52"
   },
   {
     "lemma": "Acilius 52",
+    "previous": "Acilius 42"
+  },
+  {
+    "lemma": "Achaios 6",
+    "next": "Acilius 52"
+  },
+  {
+    "lemma": "Acilius 52",
+    "previous": "Achaios 6",
     "next": "Ad Malum"
   },
   {
@@ -24,6 +39,23 @@
   {
     "lemma": "Ad Vicesimum",
     "previous": "Ad Malum"
+  },
+  {
+    "lemma": "Ad Vicesimum",
+    "sort_key": "Vicesimum Ad"
+  },
+  {
+    "lemma": "Ad Vicesimum",
+    "next": "Aelius 57"
+  },
+  {
+    "lemma": "Aelius 57",
+    "previous": "Ad Vicesimum",
+    "next": "Aelius 76"
+  },
+  {
+    "lemma": "Aelius 76",
+    "previous": "Aelius 57"
   },
   {
     "lemma": "Ad Vicesimum",
@@ -55,10 +87,16 @@
   },
   {
     "lemma": "Aelius 168a",
-    "previous": "Aelius 140a"
+    "previous": "Aelius 140a",
+    "next": "Aelius 174a"
+  },
+  {
+    "lemma": "Aelius 174a",
+    "previous": "Aelius 168a"
   },
   {
     "lemma": "Aelius 76",
+    "previous": null,
     "next": "Aelius 78a"
   },
   {
@@ -118,6 +156,15 @@
   {
     "lemma": "Aemilius 102a",
     "previous": "Aemilius 85a"
+  },
+  {
+    "lemma": "Aemilius 102a",
+    "next": "Aemilius 135",
+    "sort_key": "Aemilius 085a"
+  },
+  {
+    "lemma": "Aemilius 135",
+    "previous": "Aemilius 102a"
   },
   {
     "lemma": "Caesius 15a",
@@ -244,7 +291,17 @@
   },
   {
     "lemma": "Celeia",
-    "previous": "Catius 4"
+    "previous": "Catius 4",
+    "next": "Cestius 6a"
+  },
+  {
+    "lemma": "Cestius 6a",
+    "previous": "Celeia",
+    "next": "Chalai"
+  },
+  {
+    "lemma": "Chalai",
+    "previous": "Cestius 6a"
   },
   {
     "lemma": "Cornelius 295a",
@@ -256,7 +313,17 @@
     ]
   },
   {
+    "lemma": "Contrectare, contrectatio",
+    "next": "Cornelius 58"
+  },
+  {
+    "lemma": "Cornelius 58",
+    "previous": "Contrectare, contrectatio",
+    "next": "Cornelius 205a"
+  },
+  {
     "lemma": "Cornelius 205a",
+    "previous": "Cornelius 58",
     "next": "Cornelius 263a"
   },
   {
@@ -327,7 +394,12 @@
   },
   {
     "lemma": "Cornelius 402a",
-    "previous": "Cornelius 398a"
+    "previous": "Cornelius 398a",
+    "next": "Cornelius 441a"
+  },
+  {
+    "lemma": "Cornelius 441a",
+    "previous": "Cornelius 402a"
   },
   {
     "lemma": "Curtius 37a-b",
@@ -739,7 +811,12 @@
   },
   {
     "lemma": "Aemilius 150a",
-    "previous": "Aemilius 135"
+    "previous": "Aemilius 135",
+    "next": "Aemilius 171a"
+  },
+  {
+    "lemma": "Aemilius 171a",
+    "previous": "Aemilius 150a"
   },
   {
     "lemma": "Aemilius 102a",
@@ -761,7 +838,12 @@
   },
   {
     "lemma": "Aemilius 171a",
-    "previous": "Aemilius 150a"
+    "previous": "Aemilius 150a",
+    "next": "Agesilaos 8"
+  },
+  {
+    "lemma": "Agesilaos 8",
+    "previous": "Aemilius 171a"
   },
   {
     "lemma": "Aemilius 102a",
@@ -854,7 +936,12 @@
   },
   {
     "lemma": "Aliphera",
-    "previous": "Albucius 5"
+    "previous": "Albucius 5",
+    "next": "Alkmaion 6"
+  },
+  {
+    "lemma": "Alkmaion 6",
+    "previous": "Aliphera"
   },
   {
     "lemma": "Agesilaos 7b",
@@ -956,13 +1043,7 @@
   },
   {
     "lemma": "In Alpe Iulia",
-    "previous": "Allius 1a",
-    "next": "Amelas",
-    "sort_key": "Alpe Iulia, In"
-  },
-  {
-    "lemma": "Amelas",
-    "previous": "In Alpe Iulia"
+    "previous": "Allius 1a"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -1001,14 +1082,7 @@
   },
   {
     "lemma": "In Alpe Iulia",
-    "sort_key": "Alpe Iulia, In",
-    "chapters": [
-      {
-        "start": 26,
-        "end": 27,
-        "author": "Šašel"
-      }
-    ]
+    "sort_key": "Alpe Iulia, In"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -1038,6 +1112,73 @@
   {
     "lemma": "Arborius 5",
     "previous": "Anaximandros 1"
+  },
+  {
+    "lemma": "Anaximenes 2"
+  },
+  {
+    "lemma": "Anaximenes 1",
+    "next": "Andania 1"
+  },
+  {
+    "lemma": "Andania 1",
+    "previous": "Anaximenes 1",
+    "next": "Andautonia"
+  },
+  {
+    "lemma": "Andautonia",
+    "previous": "Andania 1"
+  },
+  {
+    "lemma": "In Alpe Iulia",
+    "sort_key": "Alpe Iulia, In",
+    "chapters": [
+      {
+        "start": 26,
+        "end": 27,
+        "author": "Šašel"
+      }
+    ]
+  },
+  {
+    "lemma": "In Alpe Iulia",
+    "next": "Amelas"
+  },
+  {
+    "lemma": "Amelas",
+    "previous": "In Alpe Iulia",
+    "next": "Anaxagoras 4"
+  },
+  {
+    "lemma": "Anaxagoras 4",
+    "previous": "Amelas"
+  },
+  {
+    "lemma": "Amelas"
+  },
+  {
+    "lemma": "Ambito",
+    "next": "Amithoscatta"
+  },
+  {
+    "lemma": "Amithoscatta",
+    "previous": "Ambito",
+    "next": "Anaximandros 1",
+    "redirect": "Zangenae"
+  },
+  {
+    "lemma": "Anaximandros 1",
+    "previous": "Amithoscatta",
+    "next": "Arborius 5"
+  },
+  {
+    "lemma": "Arborius 5",
+    "previous": "Anaximandros 1",
+    "next": "Archedemos 5"
+  },
+  {
+    "lemma": "Archedemos 5",
+    "previous": "Arborius 5"
   },
   {
     "lemma": "Anaximenes 2"
@@ -1279,7 +1420,12 @@
   },
   {
     "lemma": "Apicatus",
-    "previous": "Antonius 107"
+    "previous": "Antonius 107",
+    "next": "Aponius 8"
+  },
+  {
+    "lemma": "Aponius 8",
+    "previous": "Apicatus"
   },
   {
     "lemma": "Antonius 75.76",
@@ -1736,7 +1882,13 @@
   },
   {
     "lemma": "Bruttius 5",
-    "previous": "Bononius 2"
+    "previous": "Bononius 2",
+    "next": "Caecilius 33a",
+    "sort_key": "Bruttius 05"
+  },
+  {
+    "lemma": "Caecilius 33a",
+    "previous": "Bruttius 5"
   },
   {
     "lemma": "Bappo 2",
@@ -2140,7 +2292,12 @@
   },
   {
     "lemma": "Chalke 2",
-    "previous": "Chalaion"
+    "previous": "Chalaion",
+    "next": "Charax 19"
+  },
+  {
+    "lemma": "Charax 19",
+    "previous": "Chalke 2"
   },
   {
     "lemma": "Egrilius 2a",
@@ -2277,7 +2434,17 @@
   },
   {
     "lemma": "Clodius 31a",
-    "previous": "Claudius 347"
+    "previous": "Claudius 347",
+    "next": "Clodius 41"
+  },
+  {
+    "lemma": "Clodius 41",
+    "previous": "Clodius 31a",
+    "next": "Clodius 56"
+  },
+  {
+    "lemma": "Clodius 56",
+    "previous": "Clodius 41"
   },
   {
     "lemma": "Claudius 288a",
@@ -2618,7 +2785,17 @@
   },
   {
     "lemma": "Cutius 1a",
-    "previous": "Curtius 37b"
+    "previous": "Curtius 37b",
+    "next": "Dasumius aa"
+  },
+  {
+    "lemma": "Dasumius aa",
+    "previous": "Cutius 1a",
+    "next": "Demokritos 6"
+  },
+  {
+    "lemma": "Demokritos 6",
+    "previous": "Dasumius aa"
   },
   {
     "lemma": "Curtius 36c",
@@ -2666,7 +2843,6 @@
   {
     "lemma": "Dasumius aa",
     "previous": "Cutius 1a",
-    "next": "Demokritos 6",
     "chapters": [
       {
         "start": 193,
@@ -2676,8 +2852,22 @@
     ]
   },
   {
+    "lemma": "Dasumius 1a",
+    "next": "Demokritos 6"
+  },
+  {
     "lemma": "Demokritos 6",
-    "previous": "Dasumius aa"
+    "previous": "Dasumius 1a",
+    "next": "Deraia"
+  },
+  {
+    "lemma": "Deraia",
+    "previous": "Demokritos 6",
+    "next": "Didius 6"
+  },
+  {
+    "lemma": "Didius 6",
+    "previous": "Deraia"
   },
   {
     "lemma": "Dasumius 1a",
@@ -4419,7 +4609,12 @@
   },
   {
     "lemma": "Archedemos 5",
-    "previous": "Arborius 5"
+    "previous": "Arborius 5",
+    "next": "Archedemos 6"
+  },
+  {
+    "lemma": "Archedemos 6",
+    "previous": "Archedemos 5"
   },
   {
     "lemma": "Amelas"
@@ -4445,7 +4640,22 @@
   },
   {
     "lemma": "Archedemos 6",
-    "previous": "Archedemos 5"
+    "previous": "Archedemos 5",
+    "next": "Arinthaeus 3"
+  },
+  {
+    "lemma": "Arinthaeus 3",
+    "previous": "Archedemos 6",
+    "next": "Aristophanes 12"
+  },
+  {
+    "lemma": "Aristophanes 12",
+    "previous": "Arinthaeus 3",
+    "next": "Azania 2"
+  },
+  {
+    "lemma": "Azania 2",
+    "previous": "Aristophanes 12"
   },
   {
     "lemma": "Anaximandros 1",

@@ -372,6 +372,29 @@
   {
     "lemma": "Anartii",
     "previous": "Anaphe",
+    "next": "Anatomie"
+  },
+  {
+    "lemma": "Anatomie",
+    "previous": "Anartii"
+  },
+  {
+    "lemma": "Anaitis",
+    "next": "Anakreon 1"
+  },
+  {
+    "lemma": "Anakreon 1",
+    "previous": "Anaitis",
+    "next": "Anaphe"
+  },
+  {
+    "lemma": "Anaphe",
+    "previous": "Anakreon 1",
+    "next": "Anartii"
+  },
+  {
+    "lemma": "Anartii",
+    "previous": "Anaphe",
     "next": "Anatomie",
     "chapters": [
       {
@@ -412,6 +435,40 @@
   {
     "lemma": "Angeiologia",
     "previous": "Anduit"
+  },
+  {
+    "lemma": "Anartii",
+    "next": "Andreas 11"
+  },
+  {
+    "lemma": "Andreas 11",
+    "previous": "Anartii",
+    "next": "Androkles 11"
+  },
+  {
+    "lemma": "Androkles 11",
+    "previous": "Andreas 11",
+    "next": "Anduit"
+  },
+  {
+    "lemma": "Anduit",
+    "previous": "Androkles 11",
+    "next": "Angeiologia"
+  },
+  {
+    "lemma": "Angeiologia",
+    "previous": "Anduit",
+    "next": "Antigonos 16",
+    "redirect": "Periskythismos"
+  },
+  {
+    "lemma": "Antigonos 16",
+    "previous": "Angeiologia",
+    "next": "Antiocheia 15"
+  },
+  {
+    "lemma": "Antiocheia 15",
+    "previous": "Antigonos 16"
   },
   {
     "lemma": "Anartii",
@@ -674,7 +731,17 @@
   },
   {
     "lemma": "Bianor 5a",
-    "previous": "Bathinus"
+    "previous": "Bathinus",
+    "next": "Bilachiniensis statio"
+  },
+  {
+    "lemma": "Bilachiniensis statio",
+    "previous": "Bianor 5a",
+    "next": "Brauron"
+  },
+  {
+    "lemma": "Brauron",
+    "previous": "Bilachiniensis statio"
   },
   {
     "lemma": "Azali",
@@ -878,7 +945,22 @@
   },
   {
     "lemma": "Cuneus 5",
-    "previous": "Cuneus 4"
+    "previous": "Cuneus 4",
+    "next": "Cyrila 2"
+  },
+  {
+    "lemma": "Cyrila 2",
+    "previous": "Cuneus 5",
+    "next": "Darnithithi"
+  },
+  {
+    "lemma": "Darnithithi",
+    "previous": "Cyrila 2",
+    "next": "Demetrios 85"
+  },
+  {
+    "lemma": "Demetrios 85",
+    "previous": "Darnithithi"
   },
   {
     "lemma": "Claudius 211a",

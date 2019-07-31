@@ -37,6 +37,8 @@ class SCANTask(ReScannerTask):
         authors = self.registers.authors
         authors.set_mappings(self._fetch_mapping())
         authors.set_author(self._fetch_author_infos())
+        self.logger.info("Persist the author data.")
+        authors.persist()
         self.logger.info("Persist the register data.")
         self.registers.persist()
         self._push_changes()

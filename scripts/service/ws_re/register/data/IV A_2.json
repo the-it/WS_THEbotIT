@@ -3025,15 +3025,16 @@
     ]
   },
   {
-    "lemma": "Tabernae, Tres 5",
-    "previous": "Tabernae veteres",
-    "chapters": [
-      {
-        "start": 1877,
-        "end": 1877,
-        "author": "Fluss"
-      }
-    ]
+    "lemma": "Tres Tabernae 1"
+  },
+  {
+    "lemma": "Tres Tabernae 2"
+  },
+  {
+    "lemma": "Tres Tabernae 3"
+  },
+  {
+    "lemma": "Tres Tabernae 4"
   },
   {
     "lemma": "Tres Tabernae 5",
@@ -3309,7 +3310,7 @@
   {
     "lemma": "Tabula Iliaca",
     "previous": "Tabula alimentaria",
-    "next": "Tabulae Caeritum",
+    "next": "Tabula lusoria",
     "chapters": [
       {
         "start": 1886,
@@ -3319,20 +3320,8 @@
     ]
   },
   {
-    "lemma": "Tabulae Caeritum",
-    "previous": "Tabula Iliaca",
-    "next": "Tabula lusoria",
-    "chapters": [
-      {
-        "start": 1897,
-        "end": 1897,
-        "author": "Kübler, B[ernhard]"
-      }
-    ]
-  },
-  {
     "lemma": "Tabula lusoria",
-    "previous": "Tabulae Caeritum",
+    "previous": "Tabula Iliaca",
     "next": "Tabula Peutingeriana",
     "chapters": [
       {
@@ -3354,8 +3343,20 @@
     ]
   },
   {
-    "lemma": "Tabulae censoriae",
+    "lemma": "Tabulae Caeritum",
     "previous": "Tabula Peutingeriana",
+    "next": "Tabulae censoriae",
+    "chapters": [
+      {
+        "start": 1897,
+        "end": 1897,
+        "author": "Kübler, B[ernhard]"
+      }
+    ]
+  },
+  {
+    "lemma": "Tabulae censoriae",
+    "previous": "Tabulae Caeritum",
     "next": "Tabulae dotales",
     "chapters": [
       {
@@ -6002,20 +6003,9 @@
     ]
   },
   {
-    "lemma": "Tamousiga",
-    "previous": "Tamus",
-    "next": "Tamusida",
-    "chapters": [
-      {
-        "start": 2151,
-        "end": 2151
-      }
-    ]
-  },
-  {
     "lemma": "Tamusida",
-    "previous": "Tamousiga",
-    "next": "Tamusiense",
+    "previous": "Tamus",
+    "next": "Tamousiga",
     "chapters": [
       {
         "start": 2151,
@@ -6025,8 +6015,19 @@
     ]
   },
   {
-    "lemma": "Tamusiense",
+    "lemma": "Tamousiga",
     "previous": "Tamusida",
+    "next": "Tamusiense",
+    "chapters": [
+      {
+        "start": 2151,
+        "end": 2151
+      }
+    ]
+  },
+  {
+    "lemma": "Tamusiense",
+    "previous": "Tamousiga",
     "next": "Tamynai",
     "chapters": [
       {
@@ -11385,7 +11386,6 @@
   {
     "lemma": "Tauris",
     "previous": "Taurios potamos",
-    "next": "Tarne 2",
     "chapters": [
       {
         "start": 2546,
@@ -11393,6 +11393,9 @@
         "author": "Fluss"
       }
     ]
+  },
+  {
+    "lemma": "Symmachia"
   },
   {
     "lemma": "Tarne 2",

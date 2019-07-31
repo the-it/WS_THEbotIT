@@ -323,7 +323,22 @@
   },
   {
     "lemma": "Aurelius 234a",
-    "previous": "Aurelius 216a"
+    "previous": "Aurelius 216a",
+    "next": "Aurelius 244a"
+  },
+  {
+    "lemma": "Aurelius 244a",
+    "previous": "Aurelius 234a",
+    "next": "Axomis"
+  },
+  {
+    "lemma": "Axomis",
+    "previous": "Aurelius 244a",
+    "next": "Biennos 1"
+  },
+  {
+    "lemma": "Biennos 1",
+    "previous": "Axomis"
   },
   {
     "lemma": "Auction 1",
@@ -491,13 +506,7 @@
   },
   {
     "lemma": "Chersonesos 5",
-    "previous": "Χειροτέχνιον",
-    "next": "χρηματισμός",
-    "sort_key": "Cheirotechnion"
-  },
-  {
-    "lemma": "χρηματισμός",
-    "previous": "Chersonesos 5"
+    "previous": "Χειροτέχνιον"
   },
   {
     "lemma": "χειρόγραφον",
@@ -527,6 +536,50 @@
   {
     "lemma": "Claudius 207",
     "previous": "χρηματισμός"
+  },
+  {
+    "lemma": "χειρόγραφον",
+    "next": "Χειροτέχνιον"
+  },
+  {
+    "lemma": "Χειροτέχνιον",
+    "previous": "χειρόγραφον",
+    "next": "Chersonesos 5",
+    "sort_key": "Cheirotechnion"
+  },
+  {
+    "lemma": "Chersonesos 5",
+    "previous": "Χειροτέχνιον",
+    "sort_key": "Cheirotechnion"
+  },
+  {
+    "lemma": "Chersonesos 5",
+    "next": "χρηματισμός"
+  },
+  {
+    "lemma": "χρηματισμός",
+    "previous": "Chersonesos 5",
+    "next": "Claudius 207",
+    "sort_key": "Chrematismos"
+  },
+  {
+    "lemma": "Claudius 207",
+    "previous": "χρηματισμός",
+    "next": "Clementius 1"
+  },
+  {
+    "lemma": "Clementius 1",
+    "previous": "Claudius 207",
+    "next": "Clementius 1a"
+  },
+  {
+    "lemma": "Clementius 1a",
+    "previous": "Clementius 1",
+    "next": "Cocceius 3"
+  },
+  {
+    "lemma": "Cocceius 3",
+    "previous": "Clementius 1a"
   },
   {
     "lemma": "χειρόγραφον",
@@ -586,7 +639,17 @@
   },
   {
     "lemma": "Corona 3",
-    "previous": "Contributio 2"
+    "previous": "Contributio 2",
+    "next": "Dea Coryphea"
+  },
+  {
+    "lemma": "Dea Coryphea",
+    "previous": "Corona 3",
+    "next": "Crepereius 3a"
+  },
+  {
+    "lemma": "Crepereius 3a",
+    "previous": "Dea Coryphea"
   },
   {
     "lemma": "Χειροτέχνιον",
@@ -709,7 +772,12 @@
   },
   {
     "lemma": "Daitos",
-    "previous": "Daimonismos"
+    "previous": "Daimonismos",
+    "next": "Dasumius 1"
+  },
+  {
+    "lemma": "Dasumius 1",
+    "previous": "Daitos"
   },
   {
     "lemma": "Crepereius 3b",
@@ -5379,6 +5447,7 @@
   },
   {
     "lemma": "Peristylium",
+    "previous": null,
     "next": "Persius 5"
   },
   {

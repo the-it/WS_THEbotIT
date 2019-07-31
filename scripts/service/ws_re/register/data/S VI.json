@@ -91,6 +91,40 @@
   },
   {
     "lemma": "Aburnius 2",
+    "next": "Acilius 16"
+  },
+  {
+    "lemma": "Acilius 16",
+    "previous": "Aburnius 2",
+    "next": "Acutius 1a"
+  },
+  {
+    "lemma": "Acutius 1a",
+    "previous": "Acilius 16",
+    "next": "Aelius 75a"
+  },
+  {
+    "lemma": "Aelius 75a",
+    "previous": "Acutius 1a",
+    "next": "Aelius 76",
+    "sort_key": "Aelius 075a"
+  },
+  {
+    "lemma": "Aelius 76",
+    "previous": "Aelius 75a",
+    "next": "Aelius 155"
+  },
+  {
+    "lemma": "Aelius 155",
+    "previous": "Aelius 76",
+    "next": "Aemilius 43"
+  },
+  {
+    "lemma": "Aemilius 43",
+    "previous": "Aelius 155"
+  },
+  {
+    "lemma": "Aburnius 2",
     "chapters": [
       {
         "start": 1,
@@ -175,12 +209,31 @@
   },
   {
     "lemma": "Afranius 10a",
+    "previous": "Aemilius 79"
+  },
+  {
+    "lemma": "Aemilius 43",
+    "next": "Aemilius 79"
+  },
+  {
+    "lemma": "Aemilius 79",
+    "previous": "Aemilius 43",
+    "next": "Afranius 10a"
+  },
+  {
+    "lemma": "Afranius 10a",
     "previous": "Aemilius 79",
     "next": "Agesistratos"
   },
   {
     "lemma": "Agesistratos",
-    "previous": "Afranius 10a"
+    "previous": "Afranius 10a",
+    "next": "Aiacius 3",
+    "redirect": "Athenaios 23"
+  },
+  {
+    "lemma": "Aiacius 3",
+    "previous": "Agesistratos"
   },
   {
     "lemma": "Aemilius 43",
@@ -244,7 +297,12 @@
   },
   {
     "lemma": "Anisa",
-    "previous": "Androtion"
+    "previous": "Androtion",
+    "next": "Annius 26a"
+  },
+  {
+    "lemma": "Annius 26a",
+    "previous": "Anisa"
   },
   {
     "lemma": "Agesistratos",
@@ -1112,7 +1170,27 @@
   },
   {
     "lemma": "Catillus 4",
-    "previous": "Catilius 4"
+    "previous": "Catilius 4",
+    "next": "Caturniacus 2"
+  },
+  {
+    "lemma": "Caturniacus 2",
+    "previous": "Catillus 4",
+    "next": "Caudalascus"
+  },
+  {
+    "lemma": "Caudalascus",
+    "previous": "Caturniacus 2",
+    "next": "Cavaturini"
+  },
+  {
+    "lemma": "Cavaturini",
+    "previous": "Caudalascus",
+    "next": "Celelates"
+  },
+  {
+    "lemma": "Celelates",
+    "previous": "Cavaturini"
   },
   {
     "lemma": "Cassius",
@@ -1150,7 +1228,12 @@
   },
   {
     "lemma": "Celelates",
-    "previous": "Cavaturini"
+    "previous": "Cavaturini",
+    "next": "Cerdeciates"
+  },
+  {
+    "lemma": "Cerdeciates",
+    "previous": "Celelates"
   },
   {
     "lemma": "Cassius",
@@ -1303,12 +1386,21 @@
   {
     "lemma": "Claudius 187",
     "previous": "Claudius 186",
-    "next": "Claudius 188",
     "sort_key": "Claudius"
   },
   {
+    "lemma": "Claudius 187",
+    "next": "Claudius 188"
+  },
+  {
     "lemma": "Claudius 188",
-    "previous": "Claudius 187"
+    "previous": "Claudius 187",
+    "next": "Claudius 194",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 194",
+    "previous": "Claudius 188"
   },
   {
     "lemma": "Claudius 186",
@@ -1375,12 +1467,20 @@
   {
     "lemma": "Claudius 357",
     "previous": "Claudius 194",
-    "next": "Claudius 415",
     "sort_key": "Claudius"
   },
   {
+    "lemma": "Claudius 357",
+    "next": "Claudius 415"
+  },
+  {
     "lemma": "Claudius 415",
-    "previous": "Claudius 357"
+    "previous": "Claudius 357",
+    "next": "Coeba(?)"
+  },
+  {
+    "lemma": "Coeba(?)",
+    "previous": "Claudius 415"
   },
   {
     "lemma": "Claudius 194",
@@ -1406,7 +1506,17 @@
   },
   {
     "lemma": "Coeba(?)",
-    "previous": "Claudius 415"
+    "previous": "Claudius 415",
+    "next": "Coelius 7a"
+  },
+  {
+    "lemma": "Coelius 7a",
+    "previous": "Coeba(?)",
+    "next": "Colonia 34a"
+  },
+  {
+    "lemma": "Colonia 34a",
+    "previous": "Coelius 7a"
   },
   {
     "lemma": "Cincius 9",
@@ -1508,7 +1618,12 @@
   },
   {
     "lemma": "Cossonius 3a",
-    "previous": "Cornelius 296"
+    "previous": "Cornelius 296",
+    "next": "Curtius 18"
+  },
+  {
+    "lemma": "Curtius 18",
+    "previous": "Cossonius 3a"
   },
   {
     "lemma": "Claudius 187. 188. 194",
@@ -3221,6 +3336,7 @@
   {
     "lemma": "Maximus 128",
     "previous": "Maximinus 5",
+    "next": "Media provincia",
     "chapters": [
       {
         "start": 289,
@@ -3228,6 +3344,10 @@
         "author": "Opitz"
       }
     ]
+  },
+  {
+    "lemma": "Media provincia",
+    "previous": "Maximus 128"
   },
   {
     "lemma": "Maximus 26",

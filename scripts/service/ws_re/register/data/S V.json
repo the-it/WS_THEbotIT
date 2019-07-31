@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Agamemnon 3",
+    "previous": null,
     "next": "Agathon 14b",
     "chapters": [
       {
@@ -167,6 +168,39 @@
   {
     "lemma": "Apollonios 126b",
     "previous": "Apollonios 122"
+  },
+  {
+    "lemma": "Apelles 5a",
+    "next": "Apollodoros 41e"
+  },
+  {
+    "lemma": "Apollodoros 41e",
+    "previous": "Apelles 5a",
+    "next": "Apollonios 114"
+  },
+  {
+    "lemma": "Apollonios 114",
+    "previous": "Apollodoros 41e",
+    "next": "Apollonios 122"
+  },
+  {
+    "lemma": "Apollonios 122",
+    "previous": "Apollonios 114",
+    "next": "Apollonios 126b"
+  },
+  {
+    "lemma": "Apollonios 126b",
+    "previous": "Apollonios 122",
+    "next": "Aquilinus 1"
+  },
+  {
+    "lemma": "Aquilinus 1",
+    "previous": "Apollonios 126b",
+    "next": "Aristarche"
+  },
+  {
+    "lemma": "Aristarche",
+    "previous": "Aquilinus 1"
   },
   {
     "lemma": "Apelles 5a",
@@ -380,11 +414,16 @@
   },
   {
     "lemma": "Claudius 41a",
-    "previous": "Cheirisophos 1a"
+    "previous": "Cheirisophos 1a",
+    "next": "Claudius 82",
+    "sort_key": "Claudius 041a"
+  },
+  {
+    "lemma": "Claudius 82",
+    "previous": "Claudius 41a"
   },
   {
     "lemma": "Bias 10",
-    "previous": null,
     "next": "Caecilius 141"
   },
   {

@@ -9,7 +9,12 @@
     ]
   },
   {
+    "lemma": "Blangiani",
+    "next": "Briovera"
+  },
+  {
     "lemma": "Briovera",
+    "previous": "Blangiani",
     "next": "Caecilianus 4a"
   },
   {
@@ -674,7 +679,17 @@
   },
   {
     "lemma": "Aelius 140a",
-    "previous": "Aelius 140aa"
+    "previous": "Aelius 140aa",
+    "next": "Aemilius 23a"
+  },
+  {
+    "lemma": "Aemilius 23a",
+    "previous": "Aelius 140a",
+    "next": "Aemilius 115a"
+  },
+  {
+    "lemma": "Aemilius 115a",
+    "previous": "Aemilius 23a"
   },
   {
     "lemma": "Aelius 36a",
@@ -758,7 +773,17 @@
   },
   {
     "lemma": "Alexandros 93a",
-    "previous": "Alexandros 62b"
+    "previous": "Alexandros 62b",
+    "next": "Allogenes"
+  },
+  {
+    "lemma": "Allogenes",
+    "previous": "Alexandros 93a",
+    "next": "Alpes 1"
+  },
+  {
+    "lemma": "Alpes 1",
+    "previous": "Allogenes"
   },
   {
     "lemma": "Aelius 140aa",
@@ -888,7 +913,18 @@
   },
   {
     "lemma": "Antistius 41a",
-    "previous": "Antipatros 38"
+    "previous": "Antipatros 38",
+    "next": "Antius 6aa"
+  },
+  {
+    "lemma": "Antius 6aa",
+    "previous": "Antistius 41a",
+    "next": "Antonius 96a",
+    "sort_key": "Antius 06aa"
+  },
+  {
+    "lemma": "Antonius 96a",
+    "previous": "Antius 6aa"
   },
   {
     "lemma": "Alexandros 93b",
@@ -1095,12 +1131,62 @@
   },
   {
     "lemma": "arcantodan",
+    "previous": "Apronius 12"
+  },
+  {
+    "lemma": "Apokryphe Apostelakten",
+    "next": "Apronius 8a"
+  },
+  {
+    "lemma": "Apronius 8a",
+    "previous": "Apokryphe Apostelakten",
+    "next": "Apronius 12",
+    "sort_key": "Apronius 08a"
+  },
+  {
+    "lemma": "Apronius 12",
+    "previous": "Apronius 8a",
+    "next": "arcantodan"
+  },
+  {
+    "lemma": "arcantodan",
     "previous": "Apronius 12",
     "next": "Ariston 56a"
   },
   {
     "lemma": "Ariston 56a",
-    "previous": "arcantodan"
+    "previous": "arcantodan",
+    "next": "Arrius 3a"
+  },
+  {
+    "lemma": "Arrius 3a",
+    "previous": "Ariston 56a",
+    "next": "Artemidoros 28a",
+    "sort_key": "Arrius 03a"
+  },
+  {
+    "lemma": "Artemidoros 28a",
+    "previous": "Arrius 3a",
+    "next": "Atilius 41a"
+  },
+  {
+    "lemma": "Atilius 41a",
+    "previous": "Artemidoros 28a",
+    "next": "Attikos 7a"
+  },
+  {
+    "lemma": "Attikos 7a",
+    "previous": "Atilius 41a",
+    "next": "Attius 27a"
+  },
+  {
+    "lemma": "Attius 27a",
+    "previous": "Attikos 7a",
+    "next": "Aurelius 8a"
+  },
+  {
+    "lemma": "Aurelius 8a",
+    "previous": "Attius 27a"
   },
   {
     "lemma": "Apokryphe Apostelakten",
@@ -1266,6 +1352,26 @@
     "lemma": "Aurelius 54a",
     "previous": "Aurelius 27",
     "next": "Aurelius 54b",
+    "sort_key": "Aurelius 054a"
+  },
+  {
+    "lemma": "Aurelius 54b",
+    "previous": "Aurelius 54a",
+    "next": "Aurelius 123a",
+    "sort_key": "Aurelius 054b"
+  },
+  {
+    "lemma": "Aurelius 123a",
+    "previous": "Aurelius 54b"
+  },
+  {
+    "lemma": "Aurelius 27",
+    "next": "Aurelius 54a"
+  },
+  {
+    "lemma": "Aurelius 54a",
+    "previous": "Aurelius 27",
+    "next": "Aurelius 54b",
     "sort_key": "Aurelius 054a",
     "chapters": [
       {
@@ -1354,7 +1460,12 @@
   },
   {
     "lemma": "Aurelius 227a",
-    "previous": "Aurelius 225b"
+    "previous": "Aurelius 225b",
+    "next": "Aurelius 231"
+  },
+  {
+    "lemma": "Aurelius 231",
+    "previous": "Aurelius 227a"
   },
   {
     "lemma": "Aurelius 159a",
@@ -1787,7 +1898,13 @@
   },
   {
     "lemma": "Claudius 150a",
-    "previous": "Claudius 95a"
+    "previous": "Claudius 95a",
+    "next": "Claudius 171a",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 171a",
+    "previous": "Claudius 150a"
   },
   {
     "lemma": "Claudius 150a",
@@ -1938,7 +2055,8 @@
   },
   {
     "lemma": "Demostratos 16",
-    "previous": "Cornelianus 3a"
+    "previous": "Cornelianus 3a",
+    "next": null
   },
   {
     "lemma": "Claudius 353",

@@ -108,6 +108,45 @@
   {
     "lemma": "Alko",
     "previous": "Alexandri(a)na aqua",
+    "next": "Alsietina aqua"
+  },
+  {
+    "lemma": "Alsietina aqua",
+    "previous": "Alko",
+    "next": "Amabilis 1a"
+  },
+  {
+    "lemma": "Amabilis 1a",
+    "previous": "Alsietina aqua",
+    "next": "Amblichos"
+  },
+  {
+    "lemma": "Amblichos",
+    "previous": "Amabilis 1a",
+    "next": "Ameisenlöwe"
+  },
+  {
+    "lemma": "Ameisenlöwe",
+    "previous": "Amblichos",
+    "next": "Amphimedusa",
+    "wp_link": "w:de:Ameisenlöwe"
+  },
+  {
+    "lemma": "Amphimedusa",
+    "previous": "Ameisenlöwe",
+    "next": "Andragoras 4"
+  },
+  {
+    "lemma": "Andragoras 4",
+    "previous": "Amphimedusa"
+  },
+  {
+    "lemma": "Alexandri(a)na aqua",
+    "next": "Alko"
+  },
+  {
+    "lemma": "Alko",
+    "previous": "Alexandri(a)na aqua",
     "next": "Alsietina aqua",
     "chapters": [
       {
@@ -381,7 +420,22 @@
   },
   {
     "lemma": "Attica aqua",
-    "previous": "Asklepiodoros 13"
+    "previous": "Asklepiodoros 13",
+    "next": "Augusta aqua 1"
+  },
+  {
+    "lemma": "Augusta aqua 1",
+    "previous": "Attica aqua",
+    "next": "Augusta aqua 2"
+  },
+  {
+    "lemma": "Augusta aqua 2",
+    "previous": "Augusta aqua 1",
+    "next": "Aurelia aqua"
+  },
+  {
+    "lemma": "Aurelia aqua",
+    "previous": "Augusta aqua 2"
   },
   {
     "lemma": "Aristonidas 2",
@@ -514,7 +568,17 @@
   },
   {
     "lemma": "Bewässerungsanlagen",
-    "previous": "Benenatus 6"
+    "previous": "Benenatus 6",
+    "next": "Bremse"
+  },
+  {
+    "lemma": "Bremse",
+    "previous": "Bewässerungsanlagen",
+    "next": "Bulis 4"
+  },
+  {
+    "lemma": "Bulis 4",
+    "previous": "Bremse"
   },
   {
     "lemma": "Asklepiades 48a",
@@ -775,7 +839,12 @@
   },
   {
     "lemma": "Demetrios 125b",
-    "previous": "December 2"
+    "previous": "December 2",
+    "next": "Demokydes"
+  },
+  {
+    "lemma": "Demokydes",
+    "previous": "Demetrios 125b"
   },
   {
     "lemma": "Claudia aqua",
@@ -3918,8 +3987,16 @@
     "previous": "Antonius 30"
   },
   {
+    "lemma": "Apollodoros 23",
+    "next": "Caesaris thronus",
+    "sort_key": "Apollonios 023"
+  },
+  {
+    "lemma": "Caesaris thronus",
+    "previous": "Apollodoros 23"
+  },
+  {
     "lemma": "Apollonios 23",
-    "previous": null,
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
