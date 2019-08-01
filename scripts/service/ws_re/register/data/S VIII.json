@@ -49,100 +49,14 @@
   {
     "lemma": "Alexandri(a)na aqua",
     "previous": "Aisopos 6",
-    "next": null
-  },
-  {
-    "lemma": "Aisopos 6",
-    "previous": null,
-    "next": "Alexandrina aqua"
-  },
-  {
-    "lemma": "Alexandrina aqua",
-    "previous": "Aisopos 6"
-  },
-  {
-    "lemma": "Alexandri(a)na aqua",
-    "next": "Alko"
-  },
-  {
-    "lemma": "Alko",
-    "previous": "Alexandri(a)na aqua",
-    "next": "Alsietina aqua"
-  },
-  {
-    "lemma": "Alsietina aqua",
-    "previous": "Alko"
-  },
-  {
-    "lemma": "Alexandri(a)na aqua",
-    "next": "Alko"
-  },
-  {
-    "lemma": "Alko",
-    "previous": "Alexandri(a)na aqua",
-    "next": "Alsietina aqua"
-  },
-  {
-    "lemma": "Alsietina aqua",
-    "previous": "Alko",
-    "next": "Amabilis 1a"
-  },
-  {
-    "lemma": "Amabilis 1a",
-    "previous": "Alsietina aqua",
-    "next": "Amblichos"
-  },
-  {
-    "lemma": "Amblichos",
-    "previous": "Amabilis 1a",
-    "next": "Ameisenlöwe"
-  },
-  {
-    "lemma": "Ameisenlöwe",
-    "previous": "Amblichos"
-  },
-  {
-    "lemma": "Alexandri(a)na aqua",
-    "next": "Alko"
-  },
-  {
-    "lemma": "Alko",
-    "previous": "Alexandri(a)na aqua",
-    "next": "Alsietina aqua"
-  },
-  {
-    "lemma": "Alsietina aqua",
-    "previous": "Alko",
-    "next": "Amabilis 1a"
-  },
-  {
-    "lemma": "Amabilis 1a",
-    "previous": "Alsietina aqua",
-    "next": "Amblichos"
-  },
-  {
-    "lemma": "Amblichos",
-    "previous": "Amabilis 1a",
-    "next": "Ameisenlöwe"
-  },
-  {
-    "lemma": "Ameisenlöwe",
-    "previous": "Amblichos",
-    "next": "Amphimedusa",
-    "wp_link": "w:de:Ameisenlöwe"
-  },
-  {
-    "lemma": "Amphimedusa",
-    "previous": "Ameisenlöwe",
-    "next": "Andragoras 4"
-  },
-  {
-    "lemma": "Andragoras 4",
-    "previous": "Amphimedusa"
-  },
-  {
-    "lemma": "Alexandri(a)na aqua",
-    "next": "Alko"
+    "next": "Alko",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 2,
+        "author": "Buren"
+      }
+    ]
   },
   {
     "lemma": "Alko",
@@ -196,7 +110,6 @@
     "lemma": "Ameisenlöwe",
     "previous": "Amblichos",
     "next": "Amphimedusa",
-    "wp_link": "w:de:Ameisenlöwe",
     "chapters": [
       {
         "start": 3,
@@ -292,7 +205,7 @@
   {
     "lemma": "Antiochos 70a",
     "previous": "Antikos",
-    "next": "Antiphidas",
+    "next": "Antoniniana aqua",
     "chapters": [
       {
         "start": 4,
@@ -302,13 +215,8 @@
     ]
   },
   {
-    "lemma": "Antiphidas",
-    "previous": "Antiochos 70a",
-    "next": "Antoniniana aqua"
-  },
-  {
     "lemma": "Antoniniana aqua",
-    "previous": "Antiphidas",
+    "previous": "Antiochos 70a",
     "next": "Aphrodisios 10a",
     "chapters": [
       {
@@ -370,7 +278,7 @@
     "lemma": "Aristo",
     "previous": "Aristarchos 21a",
     "next": "Aristodemos 7a",
-    "redirect": "Titius",
+    "redirect": true,
     "chapters": [
       {
         "start": 6,
@@ -382,7 +290,6 @@
     "lemma": "Aristodemos 7a",
     "previous": "Aristo",
     "next": "Aristonidas 1",
-    "sort_key": "Aristodemos 07a",
     "chapters": [
       {
         "start": 6,
@@ -394,7 +301,7 @@
   {
     "lemma": "Aristonidas 1",
     "previous": "Aristodemos 7a",
-    "next": "Aristonidas 4",
+    "next": "Aristonidas 2",
     "chapters": [
       {
         "start": 6,
@@ -404,41 +311,8 @@
     ]
   },
   {
-    "lemma": "Aristonidas 4",
-    "previous": "Aristonidas 1",
-    "next": "Asklepiades 48a"
-  },
-  {
-    "lemma": "Asklepiades 48a",
-    "previous": "Aristonidas 4",
-    "next": "Asklepiodoros 13"
-  },
-  {
-    "lemma": "Asklepiodoros 13",
-    "previous": "Asklepiades 48a",
-    "next": "Attica aqua"
-  },
-  {
-    "lemma": "Attica aqua",
-    "previous": "Asklepiodoros 13",
-    "next": "Augusta aqua 1"
-  },
-  {
-    "lemma": "Augusta aqua 1",
-    "previous": "Attica aqua",
-    "next": "Augusta aqua 2"
-  },
-  {
-    "lemma": "Augusta aqua 2",
-    "previous": "Augusta aqua 1",
-    "next": "Aurelia aqua"
-  },
-  {
-    "lemma": "Aurelia aqua",
-    "previous": "Augusta aqua 2"
-  },
-  {
     "lemma": "Aristonidas 2",
+    "previous": "Aristonidas 1",
     "next": "Aristonidas 3",
     "chapters": [
       {
@@ -475,7 +349,7 @@
   {
     "lemma": "Asklepiades 48a",
     "previous": "Aristonidas 4",
-    "next": "Asklepiodoros 13",
+    "next": "Bathykleia",
     "chapters": [
       {
         "start": 7,
@@ -485,34 +359,8 @@
     ]
   },
   {
-    "lemma": "Asklepiodoros 13",
-    "previous": "Asklepiades 48a",
-    "next": "Attica aqua"
-  },
-  {
-    "lemma": "Attica aqua",
-    "previous": "Asklepiodoros 13",
-    "next": "Augusta aqua 1"
-  },
-  {
-    "lemma": "Augusta aqua 1",
-    "previous": "Attica aqua",
-    "next": "Augusta aqua 2"
-  },
-  {
-    "lemma": "Augusta aqua 2",
-    "previous": "Augusta aqua 1",
-    "next": "Aurelia aqua"
-  },
-  {
-    "lemma": "Aurelia aqua",
-    "previous": "Augusta aqua 2",
-    "next": "Bathykleia",
-    "redirect": "Traiana aqua"
-  },
-  {
     "lemma": "Bathykleia",
-    "previous": "Aurelia aqua",
+    "previous": "Asklepiades 48a",
     "next": "Benenatus 1",
     "chapters": [
       {
@@ -537,7 +385,7 @@
   {
     "lemma": "Benenatus 2",
     "previous": "Benenatus 1",
-    "next": "Benenatus 3",
+    "next": "Asklepiodoros 13",
     "chapters": [
       {
         "start": 7,
@@ -547,46 +395,8 @@
     ]
   },
   {
-    "lemma": "Benenatus 3",
-    "previous": "Benenatus 2",
-    "next": "Benenatus 4"
-  },
-  {
-    "lemma": "Benenatus 4",
-    "previous": "Benenatus 3",
-    "next": "Benenatus 5"
-  },
-  {
-    "lemma": "Benenatus 5",
-    "previous": "Benenatus 4",
-    "next": "Benenatus 6"
-  },
-  {
-    "lemma": "Benenatus 6",
-    "previous": "Benenatus 5",
-    "next": "Bewässerungsanlagen"
-  },
-  {
-    "lemma": "Bewässerungsanlagen",
-    "previous": "Benenatus 6",
-    "next": "Bremse"
-  },
-  {
-    "lemma": "Bremse",
-    "previous": "Bewässerungsanlagen",
-    "next": "Bulis 4"
-  },
-  {
-    "lemma": "Bulis 4",
-    "previous": "Bremse"
-  },
-  {
-    "lemma": "Asklepiades 48a",
-    "next": "Asklepiodoros 13"
-  },
-  {
     "lemma": "Asklepiodoros 13",
-    "previous": "Asklepiades 48a",
+    "previous": "Benenatus 2",
     "next": "Attica aqua",
     "chapters": [
       {
@@ -635,8 +445,7 @@
   {
     "lemma": "Aurelia aqua",
     "previous": "Augusta aqua 2",
-    "next": "Bathykleia",
-    "redirect": "Traiana aqua",
+    "next": "Benenatus 3",
     "chapters": [
       {
         "start": 8,
@@ -645,16 +454,8 @@
     ]
   },
   {
-    "lemma": "Bathykleia",
-    "previous": "Aurelia aqua"
-  },
-  {
-    "lemma": "Benenatus 2",
-    "next": "Benenatus 3"
-  },
-  {
     "lemma": "Benenatus 3",
-    "previous": "Benenatus 2",
+    "previous": "Aurelia aqua",
     "next": "Benenatus 4",
     "chapters": [
       {
@@ -740,7 +541,6 @@
     "lemma": "Caerulea aqua",
     "previous": "Bulis 4",
     "next": "Casius mons",
-    "redirect": "Caeruleus fons",
     "chapters": [
       {
         "start": 19,
@@ -788,7 +588,7 @@
   {
     "lemma": "Claudia aqua",
     "previous": "Charinos 11",
-    "next": "Claudius 354a",
+    "next": "Conclusa aqua",
     "chapters": [
       {
         "start": 20,
@@ -798,13 +598,8 @@
     ]
   },
   {
-    "lemma": "Claudius 354a",
-    "previous": "Claudia aqua",
-    "next": "Conclusa aqua"
-  },
-  {
     "lemma": "Conclusa aqua",
-    "previous": "Claudius 354a",
+    "previous": "Claudia aqua",
     "next": "Dalmatia",
     "chapters": [
       {
@@ -817,8 +612,7 @@
   {
     "lemma": "Dalmatia",
     "previous": "Conclusa aqua",
-    "next": "Damokritos 4",
-    "wp_link": "w:de:Dalmatia",
+    "next": "Claudius 354a",
     "chapters": [
       {
         "start": 21,
@@ -828,38 +622,9 @@
     ]
   },
   {
-    "lemma": "Damokritos 4",
-    "previous": "Dalmatia",
-    "next": "December 2"
-  },
-  {
-    "lemma": "December 2",
-    "previous": "Damokritos 4",
-    "next": "Demetrios 125b"
-  },
-  {
-    "lemma": "Demetrios 125b",
-    "previous": "December 2",
-    "next": "Demokydes"
-  },
-  {
-    "lemma": "Demokydes",
-    "previous": "Demetrios 125b",
-    "next": "Die(i)trephes",
-    "redirect": true
-  },
-  {
-    "lemma": "Die(i)trephes",
-    "previous": "Demokydes"
-  },
-  {
-    "lemma": "Claudia aqua",
-    "next": "Claudius 354a"
-  },
-  {
     "lemma": "Claudius 354a",
-    "previous": "Claudia aqua",
-    "next": "Conclusa aqua",
+    "previous": "Dalmatia",
+    "next": "Damokritos 4",
     "chapters": [
       {
         "start": 22,
@@ -869,17 +634,9 @@
     ]
   },
   {
-    "lemma": "Conclusa aqua",
-    "previous": "Claudius 354a"
-  },
-  {
-    "lemma": "Dalmatia",
-    "next": "Damokritos 4"
-  },
-  {
     "lemma": "Damokritos 4",
-    "previous": "Dalmatia",
-    "next": "December 2",
+    "previous": "Claudius 354a",
+    "next": "Demokydes",
     "chapters": [
       {
         "start": 59,
@@ -889,20 +646,9 @@
     ]
   },
   {
-    "lemma": "December 2",
-    "previous": "Damokritos 4",
-    "next": "Demetrios 125b"
-  },
-  {
-    "lemma": "Demetrios 125b",
-    "previous": "December 2",
-    "next": "Demokydes"
-  },
-  {
     "lemma": "Demokydes",
-    "previous": "Demetrios 125b",
+    "previous": "Damokritos 4",
     "next": "Die(i)trephes",
-    "redirect": true,
     "chapters": [
       {
         "start": 59,
@@ -926,6 +672,7 @@
   {
     "lemma": "Diodoros 13",
     "previous": "Die(i)trephes",
+    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -935,12 +682,8 @@
     ]
   },
   {
-    "lemma": "Damokritos 4",
-    "next": "December 2"
-  },
-  {
     "lemma": "December 2",
-    "previous": "Damokritos 4",
+    "previous": "Diodoros 13",
     "next": "Demetrios 125b",
     "chapters": [
       {
@@ -953,7 +696,7 @@
   {
     "lemma": "Demetrios 125b",
     "previous": "December 2",
-    "next": "Demokydes",
+    "next": "Dionysios 161b",
     "chapters": [
       {
         "start": 60,
@@ -961,21 +704,11 @@
         "author": "Lippold, Georg"
       }
     ]
-  },
-  {
-    "lemma": "Demokydes",
-    "previous": "Demetrios 125b"
-  },
-  {
-    "lemma": "Diodoros",
-    "previous": null,
-    "next": "Dionysios 161b"
   },
   {
     "lemma": "Dionysios 161b",
-    "previous": "Diodoros",
-    "next": "Drakontides",
-    "redirect": "Dionysios 161",
+    "previous": "Demetrios 125b",
+    "next": "Drakontides 3a",
     "chapters": [
       {
         "start": 60,
@@ -985,12 +718,9 @@
     ]
   },
   {
-    "lemma": "Drakontides",
-    "previous": "Dionysios 161b",
-    "next": null
-  },
-  {
     "lemma": "Drakontides 3a",
+    "previous": "Dionysios 161b",
+    "next": "Drusia aqua",
     "chapters": [
       {
         "start": 60,
@@ -1000,15 +730,9 @@
     ]
   },
   {
-    "lemma": "Drakontides",
-    "previous": null,
-    "next": "Drusia aqua"
-  },
-  {
     "lemma": "Drusia aqua",
-    "previous": "Drakontides",
-    "next": "Ἐγγύη",
-    "redirect": "Damnata aqua",
+    "previous": "Drakontides 3a",
+    "next": "Engye",
     "chapters": [
       {
         "start": 60,
@@ -1018,12 +742,8 @@
     ]
   },
   {
-    "lemma": "Ἐγγύη",
-    "previous": "Drusia aqua",
-    "next": null
-  },
-  {
     "lemma": "Engye",
+    "previous": "Drusia aqua",
     "next": "Engyesis",
     "chapters": [
       {
@@ -1204,7 +924,7 @@
   {
     "lemma": "Felix 23a",
     "previous": "Eutyches 7b",
-    "next": null,
+    "next": "Finken",
     "chapters": [
       {
         "start": 169,
@@ -1214,15 +934,9 @@
     ]
   },
   {
-    "lemma": "Eutyches 23a",
-    "previous": null,
-    "next": "Finken"
-  },
-  {
     "lemma": "Finken",
-    "previous": "Eutyches 23a",
+    "previous": "Felix 23a",
     "next": "Flamingo",
-    "wp_link": "w:de:Finken",
     "chapters": [
       {
         "start": 169,
@@ -1235,7 +949,6 @@
     "lemma": "Flamingo",
     "previous": "Finken",
     "next": "Fliegenfänger",
-    "wp_link": "w:de:Flamingos",
     "chapters": [
       {
         "start": 172,
@@ -1271,6 +984,7 @@
   {
     "lemma": "Glaukos 48a",
     "previous": "Gareas 2",
+    "next": "Herakleides 61b",
     "chapters": [
       {
         "start": 177,
@@ -1278,16 +992,11 @@
         "author": "Lippold, Georg"
       }
     ]
-  },
-  {
-    "lemma": "Hegetorides 3",
-    "previous": null,
-    "next": "Herakleides 61b"
   },
   {
     "lemma": "Herakleides 61b",
-    "previous": "Hegetorides 3",
-    "next": "Herculea aqua",
+    "previous": "Glaukos 48a",
+    "next": "Gorgias 13",
     "chapters": [
       {
         "start": 177,
@@ -1297,20 +1006,9 @@
     ]
   },
   {
-    "lemma": "Herculea aqua",
-    "previous": "Herakleides 61b",
-    "next": null
-  },
-  {
-    "lemma": "Glaukos 48a",
-    "previous": null,
-    "next": "Gorgias 13"
-  },
-  {
     "lemma": "Gorgias 13",
-    "previous": "Glaukos 48a",
-    "next": "Hegetorides",
-    "redirect": "Kallimachos 7a",
+    "previous": "Herakleides 61b",
+    "next": "Hegetorides 3",
     "chapters": [
       {
         "start": 178,
@@ -1320,12 +1018,8 @@
     ]
   },
   {
-    "lemma": "Hegetorides",
-    "previous": "Gorgias 13",
-    "next": null
-  },
-  {
     "lemma": "Hegetorides 3",
+    "previous": "Gorgias 13",
     "next": "Herculea aqua",
     "chapters": [
       {
@@ -1806,7 +1500,7 @@
   {
     "lemma": "Lamprias 5",
     "previous": "Kyprides",
-    "next": "Lamprias 6",
+    "next": "Libelle",
     "chapters": [
       {
         "start": 257,
@@ -1816,14 +1510,8 @@
     ]
   },
   {
-    "lemma": "Lamprias 6",
-    "previous": "Lamprias 5",
-    "next": "Libelle",
-    "redirect": true
-  },
-  {
     "lemma": "Libelle",
-    "previous": "Lamprias 6",
+    "previous": "Lamprias 5",
     "next": "Likymna",
     "chapters": [
       {
@@ -2376,6 +2064,7 @@
   {
     "lemma": "Paulus 11",
     "previous": "Parthenis 5",
+    "next": "Paulus 26",
     "chapters": [
       {
         "start": 431,
@@ -2385,13 +2074,8 @@
     ]
   },
   {
-    "lemma": "Parthenis 5",
-    "previous": null,
-    "next": "Paulus 26"
-  },
-  {
     "lemma": "Paulus 26",
-    "previous": "Parthenis 5",
+    "previous": "Paulus 11",
     "next": "Pediophylax",
     "chapters": [
       {
@@ -3972,8 +3656,7 @@
   {
     "lemma": "Achilleus 8a",
     "previous": "Valerius 81a",
-    "next": "Antonius 30",
-    "sort_key": "Achilleus 08a",
+    "next": "Caesaris thronus",
     "chapters": [
       {
         "start": 917,
@@ -3983,52 +3666,8 @@
     ]
   },
   {
-    "lemma": "Antonius 30",
+    "lemma": "Caesaris thronus",
     "previous": "Achilleus 8a",
-    "next": "Apollodoros 23",
-    "sort_key": "Antonius 030"
-  },
-  {
-    "lemma": "Apollodoros 23",
-    "previous": "Antonius 30"
-  },
-  {
-    "lemma": "Apollonios 23",
-    "previous": null,
-    "next": "Caesaris thronus",
-    "sort_key": "Apollonios 023"
-  },
-  {
-    "lemma": "Caesaris thronus",
-    "previous": "Apollonios 23",
-    "next": "Damolyte"
-  },
-  {
-    "lemma": "Damolyte",
-    "previous": "Caesaris thronus"
-  },
-  {
-    "lemma": "Apollonios 23",
-    "next": "Caesaris thronus",
-    "sort_key": "Apollonios 023"
-  },
-  {
-    "lemma": "Caesaris thronus",
-    "previous": "Apollonios 23",
-    "next": "Damolyte"
-  },
-  {
-    "lemma": "Damolyte",
-    "previous": "Caesaris thronus"
-  },
-  {
-    "lemma": "Apollonios 23",
-    "next": "Caesaris thronus",
-    "sort_key": "Apollonios 023"
-  },
-  {
-    "lemma": "Caesaris thronus",
-    "previous": "Apollonios 23",
     "next": "Damolyte",
     "chapters": [
       {
@@ -6220,6 +5859,7 @@
   {
     "lemma": "Serapion 10",
     "previous": "Serapion 7a",
+    "next": "Aleximachos 3",
     "chapters": [
       {
         "start": 1260,
@@ -6229,13 +5869,8 @@
     ]
   },
   {
-    "lemma": "Serapion 7b",
-    "previous": null,
-    "next": "Aleximachos 3"
-  },
-  {
     "lemma": "Aleximachos 3",
-    "previous": "Serapion 7b",
+    "previous": "Serapion 10",
     "next": "Chremetides",
     "chapters": [
       {
@@ -6260,7 +5895,7 @@
   {
     "lemma": "Damon 20",
     "previous": "Chremetides",
-    "next": "Dionysios  50a",
+    "next": "Dionysios 50a",
     "chapters": [
       {
         "start": 1267,
@@ -6268,21 +5903,11 @@
         "author": "Brommer"
       }
     ]
-  },
-  {
-    "lemma": "Dionysios  50a",
-    "previous": "Damon 20",
-    "next": null
-  },
-  {
-    "lemma": "Damon 20",
-    "previous": null,
-    "next": "Dionysios 50a"
   },
   {
     "lemma": "Dionysios 50a",
     "previous": "Damon 20",
-    "next": "Ergoteles 3",
+    "next": "Serapion 7b",
     "chapters": [
       {
         "start": 1267,
@@ -6292,12 +5917,8 @@
     ]
   },
   {
-    "lemma": "Ergoteles 3",
-    "previous": "Dionysios 50a",
-    "next": null
-  },
-  {
     "lemma": "Serapion 7b",
+    "previous": "Dionysios 50a",
     "next": "Serapion 11",
     "chapters": [
       {
