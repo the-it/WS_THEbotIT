@@ -1087,7 +1087,12 @@
   },
   {
     "lemma": "Aristokleia",
-    "previous": "Aristogeiton 1a"
+    "previous": "Aristogeiton 1a",
+    "next": "Aristokrates 28"
+  },
+  {
+    "lemma": "Aristokrates 28",
+    "previous": "Aristokleia"
   },
   {
     "lemma": "Aristobulos 14a",
@@ -1952,12 +1957,20 @@
   },
   {
     "lemma": "Bulagoras 2",
-    "previous": "Boupares",
+    "previous": "Boupares"
+  },
+  {
+    "lemma": "Bulagoras",
     "next": "Cercina"
   },
   {
     "lemma": "Cercina",
-    "previous": "Bulagoras 2"
+    "previous": "Bulagoras",
+    "next": "Chaireas 5a"
+  },
+  {
+    "lemma": "Chaireas 5a",
+    "previous": "Cercina"
   },
   {
     "lemma": "Berufsvereine",
