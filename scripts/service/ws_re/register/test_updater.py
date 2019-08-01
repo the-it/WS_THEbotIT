@@ -1,3 +1,4 @@
+from ddt import ddt, data
 from testfixtures import compare
 
 from scripts.service.ws_re.register.author import Authors
@@ -349,3 +350,38 @@ class TestBugUpdates(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         compare(11, len(register.lemmas))
+
+
+@ddt
+class TestMissingIndices(BaseTestRegister):
+    @data(1, 2, 3, 4, 5, 6)
+    def test_update_missing_lemma(self, file_number):
+        copy_tst_data(f"I_1_index_missing{file_number}", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "A", "next": "O"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+
+    @data(1, 2, 3, 4, 5, 6)
+    def test_update_missing_lemma_sort(self, file_number):
+        copy_tst_data(f"I_1_index_missing{file_number}", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "Ä", "next": "Ö"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+
+    @data(1, 2, 3, 4, 5, 6)
+    def test_update_missing_lemma_supple(self, file_number):
+        copy_tst_data(f"I_1_index_missing{file_number}", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "B", "previous": "A", "next": "O"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+
+    @data(1, 2, 3, 4, 5, 6)
+    def test_update_missing_lemma_sort_supple(self, file_number):
+        copy_tst_data(f"I_1_index_missing{file_number}", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "B", "previous": "Ä", "next": "Ö"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])

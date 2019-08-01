@@ -71,23 +71,27 @@ class Updater():
                                                        remove_items: List[str]):
         lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
         idx = self._register.get_index_of_lemma(lemma_to_update)
-        if self._register[idx - 1].sort_key == Lemma.make_sort_key(lemma_dict["previous"]):
-            self._try_update_previous(lemma_dict, lemma_to_update)
-        else:
-            self._register[idx - 1].update_lemma_dict({}, ["next"])
-            self._register.lemmas.insert(idx,
-                                         Lemma({"lemma": lemma_dict["previous"], "next": lemma_dict["lemma"]},
-                                               self._register.volume,
-                                               self._register.authors))
-        idx = self._register.get_index_of_lemma(lemma_to_update)
-        if self._register[idx + 1].sort_key == Lemma.make_sort_key(lemma_dict["next"]):
-            self._try_update_next(lemma_dict, lemma_to_update)
-        else:
-            self._register[idx + 1].update_lemma_dict({}, ["previous"])
-            self._register.lemmas.insert(idx + 1,
-                                         Lemma({"lemma": lemma_dict["next"], "previous": lemma_dict["lemma"]},
-                                               self._register.volume,
-                                               self._register.authors))
+        if idx - 1 >= 0:
+            if self._register[idx - 1].sort_key == Lemma.make_sort_key(lemma_dict["previous"]):
+                self._try_update_previous(lemma_dict, lemma_to_update)
+            else:
+                self._register[idx - 1].update_lemma_dict({}, ["next"])
+                self._register.lemmas.insert(idx,
+                                             Lemma({"lemma": lemma_dict["previous"], "next": lemma_dict["lemma"]},
+                                                   self._register.volume,
+                                                   self._register.authors))
+        try:
+            idx = self._register.get_index_of_lemma(lemma_to_update)
+            if self._register[idx + 1].sort_key == Lemma.make_sort_key(lemma_dict["next"]):
+                self._try_update_next(lemma_dict, lemma_to_update)
+            else:
+                self._register[idx + 1].update_lemma_dict({}, ["previous"])
+                self._register.lemmas.insert(idx + 1,
+                                             Lemma({"lemma": lemma_dict["next"], "previous": lemma_dict["lemma"]},
+                                                   self._register.volume,
+                                                   self._register.authors))
+        except IndexError:
+            pass
 
     def _update_pre_and_post_exists(self, lemma_dict: Dict[str, Any]):
         pre_lemma = self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]))
@@ -108,8 +112,10 @@ class Updater():
         pre_lemma = self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]))
         pre_idx = self._register.get_index_of_lemma(pre_lemma)
         # remove previous and next for gap
-        post_lemma = self._register[pre_idx + 1]
-        post_lemma.update_lemma_dict({}, ["previous"])
+        try:
+            self._register[pre_idx + 1].update_lemma_dict({}, ["previous"])
+        except IndexError:
+            pass
         try:
             del lemma_dict["next"]
         except KeyError:
@@ -122,6 +128,7 @@ class Updater():
         post_lemma = self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]))
         post_idx = self._register.get_index_of_lemma(post_lemma)
         # remove previous and next for gap
+        assert post_idx - 1 < 0
         pre_lemma = self._register[post_idx - 1]
         pre_lemma.update_lemma_dict({}, ["next"])
         try:
@@ -139,20 +146,25 @@ class Updater():
     def _try_update_next(self, new_lemma_dict: Dict[str, Any], lemma_to_update: Lemma):
         if "next" in new_lemma_dict:
             idx = self._register.get_index_of_lemma(lemma_to_update)
-            next_lemma = self._register[idx + 1]
-            next_lemma_dict = {"lemma": new_lemma_dict["next"],
-                               "previous": new_lemma_dict["lemma"],
-                               "next": next_lemma["next"]}
-            if Lemma.make_sort_key(next_lemma_dict["lemma"]) == next_lemma.sort_key:
-                next_lemma.update_lemma_dict(next_lemma_dict)
-                try:
-                    self.try_update_previous_next_of_surrounding_lemmas(next_lemma_dict, next_lemma)
-                except RegisterException:
-                    pass
+            try:
+                next_lemma = self._register[idx + 1]
+                next_lemma_dict = {"lemma": new_lemma_dict["next"],
+                                   "previous": new_lemma_dict["lemma"],
+                                   "next": next_lemma["next"]}
+                if Lemma.make_sort_key(next_lemma_dict["lemma"]) == next_lemma.sort_key:
+                    next_lemma.update_lemma_dict(next_lemma_dict)
+                    try:
+                        self.try_update_previous_next_of_surrounding_lemmas(next_lemma_dict, next_lemma)
+                    except RegisterException:
+                        pass
+            except IndexError:
+                pass
 
     def _try_update_previous(self, new_lemma_dict, lemma_to_update):
         if "previous" in new_lemma_dict:
             idx = self._register.get_index_of_lemma(lemma_to_update)
+            if idx - 1 < 0:
+                return
             pre_lemma = self._register[idx - 1]
             pre_lemma_dict = {"lemma": new_lemma_dict["previous"],
                               "previous": pre_lemma["previous"],
@@ -168,31 +180,37 @@ class Updater():
         idx = self._register.get_index_of_lemma(lemma_to_update)
         previous_test = False
         if lemma_to_update["previous"]:
-            pre_lemma = self._register[idx - 1]
+            if idx - 1 > 0:
+                pre_lemma = self._register[idx - 1]
+            else:
+                pre_lemma = None
             try:
                 previous_test = \
                     Lemma.make_sort_key(lemma_to_update["previous"]) == \
                     Lemma.make_sort_key(pre_lemma["lemma"]) == \
                     Lemma.make_sort_key(lemma_dict["previous"])
-            except KeyError:
+            except (KeyError, TypeError):
                 pass
             if not previous_test:
-                raise RegisterException(f"Current Lemma previous: \"{lemma_to_update['previous']}\""
-                                        f" != previous lemma name \"{pre_lemma['lemma']}\" "
+                raise RegisterException(f"Current Lemma previous: \"{lemma_to_update['previous']}\" "
+                                        f"!= previous lemma name \"{pre_lemma['lemma'] if pre_lemma else pre_lemma}\" "
                                         f"!= new lemma value previous \"{lemma_dict.get('previous', 'no key')}\"")
         next_test = False
         if lemma_to_update["next"]:
-            next_lemma = self._register[idx + 1]
+            try:
+                next_lemma = self._register[idx + 1]
+            except IndexError:
+                next_lemma = None
             try:
                 next_test = \
                     Lemma.make_sort_key(lemma_to_update["next"]) == \
                     Lemma.make_sort_key(next_lemma["lemma"]) == \
                     Lemma.make_sort_key(lemma_dict["next"])
-            except KeyError:
+            except (KeyError, TypeError):
                 pass
             if not next_test:
                 raise RegisterException(f"Current Lemma next: \"{lemma_to_update['next']}\" "
-                                        f"!= next lemma name \"{next_lemma['lemma']}\" "
+                                        f"!= next lemma name \"{next_lemma['lemma'] if next_lemma else next_lemma}\" "
                                         f"!= new lemma value next \"{lemma_dict.get('next', 'no key')}\"")
         if previous_test:
             pre_lemma.update_lemma_dict({"next": lemma_dict["lemma"]})
