@@ -1,7 +1,13 @@
 [
   {
+    "lemma": "Claudius 41b",
+    "next": "Claudius 75a"
+  },
+  {
     "lemma": "Claudius 75a",
-    "next": "Claudius 89a"
+    "previous": "Claudius 41b",
+    "next": "Claudius 89a",
+    "sort_key": "Claudius 075a"
   },
   {
     "lemma": "Claudius 89a",
@@ -62,10 +68,17 @@
   },
   {
     "lemma": "Claudius 273a",
-    "previous": "Claudius 242"
+    "previous": "Claudius 242",
+    "next": "Claudius 319"
+  },
+  {
+    "lemma": "Claudius 319",
+    "previous": "Claudius 273a",
+    "next": "Claudius 342a"
   },
   {
     "lemma": "Claudius 342a",
+    "previous": "Claudius 319",
     "next": "Claudius 349a"
   },
   {
@@ -106,7 +119,12 @@
   },
   {
     "lemma": "Claudius 429a",
-    "previous": "Claudius 418a"
+    "previous": "Claudius 418a",
+    "next": "Claudius 433a"
+  },
+  {
+    "lemma": "Claudius 433a",
+    "previous": "Claudius 429a"
   },
   {
     "lemma": "Comius a",
@@ -2206,7 +2224,13 @@
   },
   {
     "lemma": "Antonius 36",
-    "previous": "Antonius 1a"
+    "previous": "Antonius 1a",
+    "next": "Antonius 94a",
+    "sort_key": "Antonius 036"
+  },
+  {
+    "lemma": "Antonius 94a",
+    "previous": "Antonius 36"
   },
   {
     "lemma": "Turranius",
@@ -2330,6 +2354,15 @@
   },
   {
     "lemma": "Aqua, Aquae 97",
+    "next": "Aradius 1a",
+    "sort_key": "Aquae 097"
+  },
+  {
+    "lemma": "Aradius 1a",
+    "previous": "Aqua, Aquae 97"
+  },
+  {
+    "lemma": "Aqua, Aquae 97",
     "sort_key": "Aquae 097"
   },
   {
@@ -2353,7 +2386,12 @@
   },
   {
     "lemma": "Araxa",
-    "previous": "Aratos 6"
+    "previous": "Aratos 6",
+    "next": "Archelaos 37a"
+  },
+  {
+    "lemma": "Archelaos 37a",
+    "previous": "Araxa"
   },
   {
     "lemma": "Aqua, Aquae 97",
@@ -2595,7 +2633,12 @@
   },
   {
     "lemma": "Asinius 28",
-    "previous": "Asinius 19a"
+    "previous": "Asinius 19a",
+    "next": "Asinius 32a"
+  },
+  {
+    "lemma": "Asinius 32a",
+    "previous": "Asinius 28"
   },
   {
     "lemma": "Articuleius a",

@@ -844,7 +844,13 @@
   },
   {
     "lemma": "Demokydes",
-    "previous": "Demetrios 125b"
+    "previous": "Demetrios 125b",
+    "next": "Die(i)trephes",
+    "redirect": true
+  },
+  {
+    "lemma": "Die(i)trephes",
+    "previous": "Demokydes"
   },
   {
     "lemma": "Claudia aqua",
@@ -3987,13 +3993,19 @@
     "previous": "Antonius 30"
   },
   {
-    "lemma": "Apollodoros 23",
+    "lemma": "Apollonios 23",
+    "previous": null,
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
   {
     "lemma": "Caesaris thronus",
-    "previous": "Apollodoros 23"
+    "previous": "Apollonios 23",
+    "next": "Damolyte"
+  },
+  {
+    "lemma": "Damolyte",
+    "previous": "Caesaris thronus"
   },
   {
     "lemma": "Apollonios 23",
