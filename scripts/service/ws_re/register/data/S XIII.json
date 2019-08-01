@@ -1,12 +1,95 @@
 [
   {
-    "lemma": "Africa 2",
-    "next": "Alpium Iuliarum Claustra"
+    "lemma": "prometretes",
+    "next": "Proxenos a",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Proxenos a",
+    "previous": "prometretes",
+    "next": "Proxenos 17",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Proxenos 17",
+    "previous": "Proxenos a",
+    "next": "Prytanis a",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Prytanis a",
+    "previous": "Proxenos 17",
+    "next": "Prytanis 7",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Prytanis 7",
+    "previous": "Prytanis a",
+    "next": "Wachs",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Wachs",
+    "previous": "Prytanis 7",
+    "next": "Valerius 373a",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Valerius 373a",
+    "previous": "Wachs",
+    "next": "Via 3",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Via 3",
+    "previous": "Valerius 373a",
+    "next": "Alpium Iuliarum Claustra",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
   },
   {
     "lemma": "Alpium Iuliarum Claustra",
-    "previous": "Africa 2",
-    "next": "Apollonios 71",
+    "previous": "Via 3",
+    "next": "Athenai 1B",
     "chapters": [
       {
         "start": 11,
@@ -16,22 +99,21 @@
     ]
   },
   {
-    "lemma": "Apollonios 71",
+    "lemma": "Athenai 1B",
     "previous": "Alpium Iuliarum Claustra",
-    "next": "Athenai 1c"
-  },
-  {
-    "lemma": "Athenai 1c",
-    "previous": "Apollonios 71",
     "next": "Chlodovechus",
-    "wp_link": "w:de:Athen",
-    "ws_link": "s:de:Athen"
+    "chapters": [
+      {
+        "start": 56,
+        "end": 140,
+        "author": "Zschietzschmann"
+      }
+    ]
   },
   {
     "lemma": "Chlodovechus",
-    "previous": "Athenai 1c",
-    "next": "Iuvavum",
-    "wp_link": "w:de:Chlodwig I.",
+    "previous": "Athenai 1B",
+    "next": "Kallimachos 6",
     "chapters": [
       {
         "start": 139,
@@ -41,12 +123,8 @@
     ]
   },
   {
-    "lemma": "Iuvavum",
-    "previous": "Chlodovechus",
-    "next": null
-  },
-  {
     "lemma": "Kallimachos 6",
+    "previous": "Chlodovechus",
     "next": "Lykia",
     "chapters": [
       {
@@ -143,7 +221,7 @@
   {
     "lemma": "Theseus 1",
     "previous": "Theodosios 11",
-    "next": "M. Tullius Cicero",
+    "next": "Tullius 29",
     "chapters": [
       {
         "start": 1045,
@@ -153,12 +231,8 @@
     ]
   },
   {
-    "lemma": "M. Tullius Cicero",
-    "previous": "Theseus 1",
-    "next": null
-  },
-  {
     "lemma": "Tullius 29",
+    "previous": "Theseus 1",
     "chapters": [
       {
         "start": 1237,
