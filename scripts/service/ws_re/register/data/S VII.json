@@ -338,7 +338,12 @@
   },
   {
     "lemma": "Biennos 1",
-    "previous": "Axomis"
+    "previous": "Axomis",
+    "next": "Brogitarus"
+  },
+  {
+    "lemma": "Brogitarus",
+    "previous": "Biennos 1"
   },
   {
     "lemma": "Auction 1",
@@ -506,7 +511,13 @@
   },
   {
     "lemma": "Chersonesos 5",
-    "previous": "Χειροτέχνιον"
+    "previous": "Χειροτέχνιον",
+    "next": "χρηματισμός",
+    "sort_key": "Cheirotechnion"
+  },
+  {
+    "lemma": "χρηματισμός",
+    "previous": "Chersonesos 5"
   },
   {
     "lemma": "χειρόγραφον",

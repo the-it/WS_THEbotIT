@@ -72,7 +72,17 @@
   },
   {
     "lemma": "Cassius 48",
-    "previous": "Camulogenus"
+    "previous": "Camulogenus",
+    "next": "Casticus"
+  },
+  {
+    "lemma": "Casticus",
+    "previous": "Cassius 48",
+    "next": "Cavarillus"
+  },
+  {
+    "lemma": "Cavarillus",
+    "previous": "Casticus"
   },
   {
     "lemma": "Demostratos 16",
@@ -783,7 +793,12 @@
   },
   {
     "lemma": "Alpes 1",
-    "previous": "Allogenes"
+    "previous": "Allogenes",
+    "next": "Andromeda 3"
+  },
+  {
+    "lemma": "Andromeda 3",
+    "previous": "Alpes 1"
   },
   {
     "lemma": "Aelius 140aa",
@@ -1131,7 +1146,12 @@
   },
   {
     "lemma": "arcantodan",
-    "previous": "Apronius 12"
+    "previous": "Apronius 12",
+    "next": "Ariston 56a"
+  },
+  {
+    "lemma": "Ariston 56a",
+    "previous": "arcantodan"
   },
   {
     "lemma": "Apokryphe Apostelakten",
@@ -1465,7 +1485,12 @@
   },
   {
     "lemma": "Aurelius 231",
-    "previous": "Aurelius 227a"
+    "previous": "Aurelius 227a",
+    "next": "Aurelius 232b"
+  },
+  {
+    "lemma": "Aurelius 232b",
+    "previous": "Aurelius 231"
   },
   {
     "lemma": "Aurelius 159a",
@@ -1898,13 +1923,7 @@
   },
   {
     "lemma": "Claudius 150a",
-    "previous": "Claudius 95a",
-    "next": "Claudius 171a",
-    "sort_key": "Claudius"
-  },
-  {
-    "lemma": "Claudius 171a",
-    "previous": "Claudius 150a"
+    "previous": "Claudius 95a"
   },
   {
     "lemma": "Claudius 150a",
@@ -1944,6 +1963,38 @@
   {
     "lemma": "Claudius 320a",
     "previous": "Claudius 173a"
+  },
+  {
+    "lemma": "Claudius 150a",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 150a",
+    "next": "Claudius 171a"
+  },
+  {
+    "lemma": "Claudius 171a",
+    "previous": "Claudius 150a",
+    "next": "Claudius 173a"
+  },
+  {
+    "lemma": "Claudius 173a",
+    "previous": "Claudius 171a",
+    "next": "Claudius 320a"
+  },
+  {
+    "lemma": "Claudius 320a",
+    "previous": "Claudius 173a",
+    "next": "Claudius 341a"
+  },
+  {
+    "lemma": "Claudius 341a",
+    "previous": "Claudius 320a",
+    "next": "Claudius 343"
+  },
+  {
+    "lemma": "Claudius 343",
+    "previous": "Claudius 341a"
   },
   {
     "lemma": "Claudius 150a",

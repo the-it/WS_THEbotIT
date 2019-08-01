@@ -92,11 +92,20 @@
   },
   {
     "lemma": "Aelius 174a",
-    "previous": "Aelius 168a"
+    "previous": "Aelius 168a",
+    "next": "Aelius 174d"
+  },
+  {
+    "lemma": "Aelius 174d",
+    "previous": "Aelius 174a",
+    "next": "Aemilius 28a"
+  },
+  {
+    "lemma": "Aemilius 28a",
+    "previous": "Aelius 174d"
   },
   {
     "lemma": "Aelius 76",
-    "previous": null,
     "next": "Aelius 78a"
   },
   {
@@ -159,15 +168,24 @@
   },
   {
     "lemma": "Aemilius 102a",
-    "next": "Aemilius 135",
     "sort_key": "Aemilius 085a"
   },
   {
+    "lemma": "Aemilius 102a",
+    "next": "Aemilius 135"
+  },
+  {
     "lemma": "Aemilius 135",
-    "previous": "Aemilius 102a"
+    "previous": "Aemilius 102a",
+    "next": "Aemilius 150a"
+  },
+  {
+    "lemma": "Aemilius 150a",
+    "previous": "Aemilius 135"
   },
   {
     "lemma": "Caesius 15a",
+    "next": "Calestrius 3",
     "chapters": [
       {
         "start": 0,
@@ -177,6 +195,7 @@
   },
   {
     "lemma": "Calestrius 3",
+    "previous": "Caesius 15a",
     "next": "Calpetanus 3"
   },
   {
@@ -264,6 +283,34 @@
   {
     "lemma": "Catienus 1b",
     "previous": "Catienus 1a"
+  },
+  {
+    "lemma": "Cassius 45a",
+    "next": "Castra, Castrum 1a"
+  },
+  {
+    "lemma": "Castra, Castrum 1a",
+    "previous": "Cassius 45a",
+    "next": "Catienus 1a"
+  },
+  {
+    "lemma": "Catienus 1a",
+    "previous": "Castra, Castrum 1a",
+    "next": "Catienus 1b"
+  },
+  {
+    "lemma": "Catienus 1b",
+    "previous": "Catienus 1a",
+    "next": "Catius 4"
+  },
+  {
+    "lemma": "Catius 4",
+    "previous": "Catienus 1b",
+    "next": "Celeia"
+  },
+  {
+    "lemma": "Celeia",
+    "previous": "Catius 4"
   },
   {
     "lemma": "Cassius 45a",
@@ -843,7 +890,12 @@
   },
   {
     "lemma": "Agesilaos 8",
-    "previous": "Aemilius 171a"
+    "previous": "Aemilius 171a",
+    "next": "Aguntum"
+  },
+  {
+    "lemma": "Aguntum",
+    "previous": "Agesilaos 8"
   },
   {
     "lemma": "Aemilius 102a",
@@ -1043,7 +1095,13 @@
   },
   {
     "lemma": "In Alpe Iulia",
-    "previous": "Allius 1a"
+    "previous": "Allius 1a",
+    "next": "Amelas",
+    "sort_key": "Alpe Iulia, In"
+  },
+  {
+    "lemma": "Amelas",
+    "previous": "In Alpe Iulia"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -1127,7 +1185,12 @@
   },
   {
     "lemma": "Andautonia",
-    "previous": "Andania 1"
+    "previous": "Andania 1",
+    "next": "Andeda"
+  },
+  {
+    "lemma": "Andeda",
+    "previous": "Andautonia"
   },
   {
     "lemma": "In Alpe Iulia",
@@ -1199,7 +1262,12 @@
   },
   {
     "lemma": "Andeda",
-    "previous": "Andautonia"
+    "previous": "Andautonia",
+    "next": "Andreas 11a"
+  },
+  {
+    "lemma": "Andreas 11a",
+    "previous": "Andeda"
   },
   {
     "lemma": "Anaximenes 1",
@@ -1425,7 +1493,13 @@
   },
   {
     "lemma": "Aponius 8",
-    "previous": "Apicatus"
+    "previous": "Apicatus",
+    "next": "Appuleius 13",
+    "sort_key": "Aponius 08"
+  },
+  {
+    "lemma": "Appuleius 13",
+    "previous": "Aponius 8"
   },
   {
     "lemma": "Antonius 75.76",
@@ -1888,7 +1962,12 @@
   },
   {
     "lemma": "Caecilius 33a",
-    "previous": "Bruttius 5"
+    "previous": "Bruttius 5",
+    "next": "Caecilius 50a"
+  },
+  {
+    "lemma": "Caecilius 50a",
+    "previous": "Caecilius 33a"
   },
   {
     "lemma": "Bappo 2",
@@ -2096,6 +2175,7 @@
   {
     "lemma": "Caesius 14a",
     "previous": "Caesilianus",
+    "next": "Calestrius 3",
     "chapters": [
       {
         "start": 134,
@@ -2103,6 +2183,10 @@
         "author": "Winkler"
       }
     ]
+  },
+  {
+    "lemma": "Calestrius 3",
+    "previous": "Caesius 14a"
   },
   {
     "lemma": "Caesius 15a",
@@ -2297,7 +2381,12 @@
   },
   {
     "lemma": "Charax 19",
-    "previous": "Chalke 2"
+    "previous": "Chalke 2",
+    "next": "Chrysippos 14"
+  },
+  {
+    "lemma": "Chrysippos 14",
+    "previous": "Charax 19"
   },
   {
     "lemma": "Egrilius 2a",
@@ -4705,12 +4794,20 @@
   {
     "lemma": "Azania 2",
     "previous": "Aristophanes 12",
-    "next": "Camundus",
     "redirect": "Zangenae"
   },
   {
+    "lemma": "Ἀζανία",
+    "next": "Camundus"
+  },
+  {
     "lemma": "Camundus",
-    "previous": "Azania 2"
+    "previous": "Ἀζανία",
+    "next": "Carniola"
+  },
+  {
+    "lemma": "Carniola",
+    "previous": "Camundus"
   },
   {
     "lemma": "Archedemos 5.6",
@@ -4764,7 +4861,12 @@
   },
   {
     "lemma": "Carniola",
-    "previous": "Camundus"
+    "previous": "Camundus",
+    "next": "Carnuntum"
+  },
+  {
+    "lemma": "Carnuntum",
+    "previous": "Carniola"
   },
   {
     "lemma": "Ἀζανία",
@@ -4782,7 +4884,12 @@
   },
   {
     "lemma": "Carnuntum",
-    "previous": "Carniola"
+    "previous": "Carniola",
+    "next": "Ephesos"
+  },
+  {
+    "lemma": "Ephesos",
+    "previous": "Carnuntum"
   },
   {
     "lemma": "Ἀζανία",
