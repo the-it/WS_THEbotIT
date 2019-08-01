@@ -8,7 +8,7 @@ from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 
-class TestRegister(BaseTestRegister):
+class TestUpdater(BaseTestRegister):
     def test_update_lemma(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
@@ -339,3 +339,13 @@ class TestRegister(BaseTestRegister):
         with self.assertRaisesRegex(RegisterException, "Diff between previous and next aren't 1 or 2"):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
+
+
+class TestBugUpdates(BaseTestRegister):
+    def test_duplicate_lemmas_in_supplements(self):
+        copy_tst_data("S_I_no_dublicates", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "Abdymon", "previous": "Abd Hadad", "next": "Abeikta"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        compare(11, len(register.lemmas))
