@@ -122,20 +122,21 @@ class SCANTask(ReScannerTask):
                     update_dict.update(function_dict)
                     delete_list += function_list
                 band_info = article_list[0]["BAND"].value
-                register = self.registers.volumes[band_info]
-                self_supplement = False
-                if band_info in issues_in_articles:
-                    self_supplement = True
+                self_supplement = band_info in issues_in_articles
                 issues_in_articles.add(band_info)
-                if register:
-                    try:
-                        with Updater(register) as updater:
-                            strategy = updater.update_lemma(update_dict, delete_list, self_supplement)
-                        self._write_strategy_statistic(strategy, update_dict, band_info)
-                    except RegisterException as error:
-                        self.logger.error(f"No available Lemma in Registers for issue {band_info} "
-                                          f"and lemma {self.re_page.lemma_as_link}. "
-                                          f"Reason is: {error.args[0]}")
+                self._update_lemma(band_info, delete_list, self_supplement, update_dict)
+
+    def _update_lemma(self, band_info, delete_list, self_supplement, update_dict):
+        register = self.registers.volumes[band_info]
+        if register:
+            try:
+                with Updater(register) as updater:
+                    strategy = updater.update_lemma(update_dict, delete_list, self_supplement)
+                self._write_strategy_statistic(strategy, update_dict, band_info)
+            except RegisterException as error:
+                self.logger.error(f"No available Lemma in Registers for issue {band_info} "
+                                  f"and lemma {self.re_page.lemma_as_link}. "
+                                  f"Reason is: {error.args[0]}")
 
     def _write_strategy_statistic(self, strategy: str, update_dict: Dict, issue_no: str):
         entry = f"{update_dict['lemma']}/{issue_no}"

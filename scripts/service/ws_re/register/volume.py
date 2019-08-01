@@ -32,6 +32,10 @@ class VolumeRegister(Register):
         return self._volume
 
     @property
+    def authors(self):
+        return self._authors
+
+    @property
     def lemmas(self):
         return self._lemmas
 
