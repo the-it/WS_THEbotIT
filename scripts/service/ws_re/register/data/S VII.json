@@ -325,7 +325,7 @@
   {
     "lemma": "Caecilius 33a",
     "previous": "Axomis",
-    "next": "Caelius 7a",
+    "next": "Caecina 24",
     "chapters": [
       {
         "start": 83,
@@ -335,8 +335,13 @@
     ]
   },
   {
-    "lemma": "Caelius 7a",
+    "lemma": "Caecina 24",
     "previous": "Caecilius 33a",
+    "next": "Caelius 7a"
+  },
+  {
+    "lemma": "Caelius 7a",
+    "previous": "Caecina 24",
     "next": "Canaliclarius",
     "chapters": [
       {
@@ -373,7 +378,7 @@
   {
     "lemma": "Clementius 1a",
     "previous": "cheirographon",
-    "next": "Chrematismos",
+    "next": "Cocceius 3",
     "chapters": [
       {
         "start": 89,
@@ -383,20 +388,18 @@
     ]
   },
   {
-    "lemma": "Chrematismos",
+    "lemma": "Cocceius 3",
     "previous": "Clementius 1a",
-    "next": "Codicarii 2",
-    "chapters": [
-      {
-        "start": 90,
-        "end": 90,
-        "author": "Ziebarth"
-      }
-    ]
+    "next": "Cocceius 12"
+  },
+  {
+    "lemma": "Cocceius 12",
+    "previous": "Cocceius 3",
+    "next": "Codicarii 2"
   },
   {
     "lemma": "Codicarii 2",
-    "previous": "Chrematismos",
+    "previous": "Cocceius 12",
     "next": "Contributio 2",
     "chapters": [
       {
@@ -517,7 +520,7 @@
   {
     "lemma": "Dasumius 1a",
     "previous": "Daitos",
-    "next": "Dekane",
+    "next": "Δεῖγμα",
     "chapters": [
       {
         "start": 115,
@@ -527,8 +530,23 @@
     ]
   },
   {
-    "lemma": "Dekane",
+    "lemma": "Δεῖγμα",
     "previous": "Dasumius 1a",
+    "next": "Δειγματοάρτης"
+  },
+  {
+    "lemma": "Δειγματοάρτης",
+    "previous": "Δεῖγμα",
+    "next": "Δειγματοκαταγωγός"
+  },
+  {
+    "lemma": "Δειγματοκαταγωγός",
+    "previous": "Δειγματοάρτης",
+    "next": "Dekane"
+  },
+  {
+    "lemma": "Dekane",
+    "previous": "Δειγματοκαταγωγός",
     "next": "Demosiosis",
     "chapters": [
       {

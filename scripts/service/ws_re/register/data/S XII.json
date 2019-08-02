@@ -1325,7 +1325,7 @@
   {
     "lemma": "Cornelius 282a",
     "previous": "Cornelius 263a",
-    "next": "Cornelius 294",
+    "next": "Cornelius 290",
     "chapters": [
       {
         "start": 189,
@@ -1334,8 +1334,18 @@
     ]
   },
   {
-    "lemma": "Cornelius 294",
+    "lemma": "Cornelius 290",
     "previous": "Cornelius 282a",
+    "next": "Cornelius 291"
+  },
+  {
+    "lemma": "Cornelius 291",
+    "previous": "Cornelius 290",
+    "next": "Cornelius 294"
+  },
+  {
+    "lemma": "Cornelius 294",
+    "previous": "Cornelius 291",
     "next": "Cornelius 296a",
     "chapters": [
       {
@@ -1348,7 +1358,7 @@
   {
     "lemma": "Cornelius 296a",
     "previous": "Cornelius 294",
-    "next": "Cornelius 402a",
+    "next": "Cornelius 297",
     "chapters": [
       {
         "start": 189,
@@ -1358,8 +1368,11 @@
     ]
   },
   {
+    "lemma": "Cornelius 297",
+    "previous": "Cornelius 296a"
+  },
+  {
     "lemma": "Cornelius 402a",
-    "previous": "Cornelius 296a",
     "next": "Cornelius 441a",
     "chapters": [
       {
@@ -1372,7 +1385,7 @@
   {
     "lemma": "Cornelius 441a",
     "previous": "Cornelius 402a",
-    "next": "Cornelius 454a",
+    "next": "Cornelius 444",
     "chapters": [
       {
         "start": 190,
@@ -1382,8 +1395,19 @@
     ]
   },
   {
-    "lemma": "Cornelius 454a",
+    "lemma": "Cornelius 444",
     "previous": "Cornelius 441a",
+    "next": "Cornelius 452"
+  },
+  {
+    "lemma": "Cornelius 452",
+    "previous": "Cornelius 444",
+    "next": "Cornelius 454a",
+    "redirect": true
+  },
+  {
+    "lemma": "Cornelius 454a",
+    "previous": "Cornelius 452",
     "next": "Cosconius 17",
     "chapters": [
       {
@@ -3175,7 +3199,6 @@
   {
     "lemma": "Arinthaeus 3",
     "previous": "Archedemos 5.6",
-    "next": "Camundus",
     "chapters": [
       {
         "start": 1392,
@@ -3185,8 +3208,13 @@
     ]
   },
   {
+    "lemma": "Azania 2",
+    "next": "Camundus",
+    "redirect": "Zangenae"
+  },
+  {
     "lemma": "Camundus",
-    "previous": "Arinthaeus 3",
+    "previous": "Azania 2",
     "next": "Poreston",
     "chapters": [
       {

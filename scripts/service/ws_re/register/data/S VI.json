@@ -192,7 +192,7 @@
   {
     "lemma": "Aponius 8a",
     "previous": "Apollodoros 61",
-    "next": "Appuleius 16a",
+    "next": "Appius 13a",
     "chapters": [
       {
         "start": 9,
@@ -202,8 +202,14 @@
     ]
   },
   {
-    "lemma": "Appuleius 16a",
+    "lemma": "Appius 13a",
     "previous": "Aponius 8a",
+    "next": "Appuleius 16a",
+    "redirect": "Maximus 1"
+  },
+  {
+    "lemma": "Appuleius 16a",
+    "previous": "Appius 13a",
     "next": "Appuleius 17a",
     "chapters": [
       {
@@ -408,7 +414,6 @@
   {
     "lemma": "Caburriates",
     "previous": "Butra",
-    "next": "Caedici(i)",
     "chapters": [
       {
         "start": 18,
@@ -418,8 +423,12 @@
     ]
   },
   {
+    "lemma": "Caecina 23",
+    "next": "Caedici(i)"
+  },
+  {
     "lemma": "Caedici(i)",
-    "previous": "Caburriates",
+    "previous": "Caecina 23",
     "next": "Caedicii vicus",
     "chapters": [
       {
@@ -493,6 +502,7 @@
     "lemma": "Caesius 2a",
     "previous": "Caeptiema",
     "next": "Calena",
+    "sort_key": "Caesius 02a",
     "chapters": [
       {
         "start": 19,
@@ -552,7 +562,7 @@
   {
     "lemma": "Calouitanus Portus",
     "previous": "Calor 3",
-    "next": "Calvisius 9",
+    "next": "Calpurnius 99",
     "chapters": [
       {
         "start": 20,
@@ -562,8 +572,12 @@
     ]
   },
   {
-    "lemma": "Calvisius 9",
+    "lemma": "Calpurnius 99",
     "previous": "Calouitanus Portus",
+    "sort_key": "Calpurnius 099"
+  },
+  {
+    "lemma": "Calvisius 9",
     "next": "Calvisius 10",
     "chapters": [
       {
@@ -911,7 +925,6 @@
   {
     "lemma": "Comberania",
     "previous": "Claudius 415",
-    "next": "Cornelius 279a",
     "chapters": [
       {
         "start": 25,
@@ -921,9 +934,13 @@
     ]
   },
   {
+    "lemma": "Cornelius 279",
+    "next": "Cornelius 279a"
+  },
+  {
     "lemma": "Cornelius 279a",
-    "previous": "Comberania",
-    "next": "Cossonius 3a",
+    "previous": "Cornelius 279",
+    "next": "Cornelius 296",
     "chapters": [
       {
         "start": 25,
@@ -933,8 +950,13 @@
     ]
   },
   {
-    "lemma": "Cossonius 3a",
+    "lemma": "Cornelius 296",
     "previous": "Cornelius 279a",
+    "next": "Cossonius 3a"
+  },
+  {
+    "lemma": "Cossonius 3a",
+    "previous": "Cornelius 296",
     "next": "Cuspius 3",
     "chapters": [
       {

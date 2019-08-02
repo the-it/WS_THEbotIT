@@ -2059,7 +2059,6 @@
   {
     "lemma": "Claudius 242a",
     "previous": "Claudius 10a",
-    "next": "Constantiniani",
     "chapters": [
       {
         "start": 132,
@@ -2069,8 +2068,12 @@
     ]
   },
   {
+    "lemma": "Collegium",
+    "next": "Constantiniani"
+  },
+  {
     "lemma": "Constantiniani",
-    "previous": "Claudius 242a",
+    "previous": "Collegium",
     "next": "Cornelius 274a",
     "chapters": [
       {
@@ -2143,7 +2146,7 @@
   {
     "lemma": "Cornuti",
     "previous": "Cornelius 459a",
-    "next": "Daduchos 3",
+    "next": "creditum",
     "chapters": [
       {
         "start": 133,
@@ -2153,8 +2156,11 @@
     ]
   },
   {
+    "lemma": "creditum",
+    "previous": "Cornuti"
+  },
+  {
     "lemma": "Daduchos 3",
-    "previous": "Cornuti",
     "next": "Damatros",
     "chapters": [
       {
@@ -2167,7 +2173,7 @@
   {
     "lemma": "Damatros",
     "previous": "Daduchos 3",
-    "next": "Damon 2a",
+    "next": "Damon 2",
     "chapters": [
       {
         "start": 134,
@@ -2177,8 +2183,14 @@
     ]
   },
   {
-    "lemma": "Damon 2a",
+    "lemma": "Damon 2",
     "previous": "Damatros",
+    "next": "Damon 2a",
+    "sort_key": "Damon 02"
+  },
+  {
+    "lemma": "Damon 2a",
+    "previous": "Damon 2",
     "next": "Damon 3a",
     "chapters": [
       {
@@ -2191,7 +2203,7 @@
   {
     "lemma": "Damon 3a",
     "previous": "Damon 2a",
-    "next": "Dativa",
+    "next": "Damon 11",
     "chapters": [
       {
         "start": 135,
@@ -2201,8 +2213,18 @@
     ]
   },
   {
-    "lemma": "Dativa",
+    "lemma": "Damon 11",
     "previous": "Damon 3a",
+    "next": "Damotimos 1"
+  },
+  {
+    "lemma": "Damotimos 1",
+    "previous": "Damon 11",
+    "next": "Dativa"
+  },
+  {
+    "lemma": "Dativa",
+    "previous": "Damotimos 1",
     "next": "Demetrios 32ee",
     "chapters": [
       {
@@ -2215,7 +2237,6 @@
   {
     "lemma": "Demetrios 32ee",
     "previous": "Dativa",
-    "next": "Demetrios 32e",
     "chapters": [
       {
         "start": 135,
@@ -2225,8 +2246,12 @@
     ]
   },
   {
+    "lemma": "Demetrios 32d",
+    "next": "Demetrios 32e"
+  },
+  {
     "lemma": "Demetrios 32e",
-    "previous": "Demetrios 32ee",
+    "previous": "Demetrios 32d",
     "next": "Demetrios 32f",
     "chapters": [
       {
