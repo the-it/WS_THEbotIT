@@ -11291,7 +11291,14 @@
   },
   {
     "lemma": "Bantem",
-    "next": "Barbatius 2"
+    "next": "Barbatius 2",
+    "chapters": [
+      {
+        "start": 240,
+        "end": 240,
+        "author": "Streck"
+      }
+    ]
   },
   {
     "lemma": "Barbatius 2",
@@ -11304,30 +11311,6 @@
         "author": "Münzer"
       }
     ]
-  },
-  {
-    "lemma": "Barbillus",
-    "previous": "Barbatius 2"
-  },
-  {
-    "lemma": "Bandusiae fons",
-    "next": "Bantem"
-  },
-  {
-    "lemma": "Bantem",
-    "previous": "Bandusiae fons",
-    "next": "Barbatius 2",
-    "chapters": [
-      {
-        "start": 240,
-        "end": 240,
-        "author": "Streck"
-      }
-    ]
-  },
-  {
-    "lemma": "Barbatius 2",
-    "previous": "Bantem"
   },
   {
     "lemma": "Barbillus",
