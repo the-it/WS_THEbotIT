@@ -50,11 +50,11 @@ class Updater():
 
     def _update_lemma_by_name(self, lemma_dict: Dict[str, str], remove_items: List[str], self_supplement: bool):
         lemma_to_update = self._register.get_lemma_by_name(lemma_dict["lemma"], self_supplement)
-        if self._register.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
-            self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
-        else:
-            lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
-            self._try_update_next_and_previous(lemma_dict, lemma_to_update)
+        # if self._register.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
+        #     self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
+        # else:
+        lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
+        self._try_update_next_and_previous(lemma_dict, lemma_to_update)
 
     def _update_by_sortkey(self, lemma_dict: Dict[str, Any], remove_items: List[str]):
         lemma_to_update = self._register.get_lemma_by_sort_key(self._register.normalize_sort_key(lemma_dict))
