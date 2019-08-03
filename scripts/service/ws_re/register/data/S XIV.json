@@ -2426,7 +2426,7 @@
   {
     "lemma": "Avidius 1b",
     "previous": "Avidius 1a",
-    "next": "Aurelius 5a",
+    "next": "Avillius 2c",
     "chapters": [
       {
         "start": 67,
@@ -2436,8 +2436,13 @@
     ]
   },
   {
-    "lemma": "Aurelius 5a",
+    "lemma": "Avillius 2c",
     "previous": "Avidius 1b",
+    "next": "Aurelius 5a"
+  },
+  {
+    "lemma": "Aurelius 5a",
+    "previous": "Avillius 2c",
     "next": "Aurelius 37aa) = 37b",
     "chapters": [
       {
@@ -3646,7 +3651,7 @@
   {
     "lemma": "Cornelius 333a",
     "previous": "Cornelius 304a",
-    "next": "Cornelius 442a",
+    "next": "Cornelius 359",
     "chapters": [
       {
         "start": 109,
@@ -3656,8 +3661,11 @@
     ]
   },
   {
+    "lemma": "Cornelius 359",
+    "previous": "Cornelius 333a"
+  },
+  {
     "lemma": "Cornelius 442a",
-    "previous": "Cornelius 333a",
     "next": "Cos(s)inius 5a",
     "chapters": [
       {

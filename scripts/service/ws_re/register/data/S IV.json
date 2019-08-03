@@ -37,7 +37,7 @@
   {
     "lemma": "Adlullia",
     "previous": "Ada 2",
-    "next": "Aëtos 4",
+    "next": "Aelius 93",
     "chapters": [
       {
         "start": 7,
@@ -47,8 +47,11 @@
     ]
   },
   {
+    "lemma": "Aelius 93",
+    "previous": "Adlullia"
+  },
+  {
     "lemma": "Aëtos 4",
-    "previous": "Adlullia",
     "next": "Agauos 2",
     "chapters": [
       {
@@ -134,6 +137,7 @@
     "lemma": "Aion 1a",
     "previous": "Aineias 5",
     "next": "Aischylos 7a",
+    "sort_key": "Aion 1a",
     "chapters": [
       {
         "start": 11,
@@ -541,7 +545,7 @@
   {
     "lemma": "Antimachos 12a",
     "previous": "Antikles 6a",
-    "next": "Antiphanes 12a",
+    "next": "Antiochos 68",
     "chapters": [
       {
         "start": 32,
@@ -551,8 +555,11 @@
     ]
   },
   {
+    "lemma": "Antiochos 68",
+    "previous": "Antimachos 12a"
+  },
+  {
     "lemma": "Antiphanes 12a",
-    "previous": "Antimachos 12a",
     "next": "Antiphilos 3d",
     "chapters": [
       {
@@ -1681,7 +1688,7 @@
   {
     "lemma": "Damon 15b",
     "previous": "Damokrita",
-    "next": "Daulios",
+    "next": "Daphnus 1",
     "chapters": [
       {
         "start": 218,
@@ -1691,9 +1698,14 @@
     ]
   },
   {
-    "lemma": "Daulios",
+    "lemma": "Daphnus 1",
     "previous": "Damon 15b",
-    "next": "Deigmatoartes",
+    "next": "Daulios"
+  },
+  {
+    "lemma": "Daulios",
+    "previous": "Daphnus 1",
+    "next": "Δειγματοάρτης",
     "chapters": [
       {
         "start": 219,
@@ -1703,7 +1715,7 @@
     ]
   },
   {
-    "lemma": "Deigmatoartes",
+    "lemma": "Δειγματοάρτης",
     "previous": "Daulios",
     "next": "Deigmatokatagogos",
     "chapters": [
@@ -1716,7 +1728,7 @@
   },
   {
     "lemma": "Deigmatokatagogos",
-    "previous": "Deigmatoartes",
+    "previous": "Δειγματοάρτης",
     "next": "Deinokrates 5a",
     "chapters": [
       {
@@ -1729,7 +1741,6 @@
   {
     "lemma": "Deinokrates 5a",
     "previous": "Deigmatokatagogos",
-    "next": "Demokrates 10a",
     "chapters": [
       {
         "start": 219,
@@ -1739,8 +1750,12 @@
     ]
   },
   {
+    "lemma": "Demetrios 48a",
+    "next": "Demokrates 10a"
+  },
+  {
     "lemma": "Demokrates 10a",
-    "previous": "Deinokrates 5a",
+    "previous": "Demetrios 48a",
     "next": "Demokritos 6",
     "chapters": [
       {
@@ -1753,7 +1768,6 @@
   {
     "lemma": "Demokritos 6",
     "previous": "Demokrates 10a",
-    "next": "Demarchos 6",
     "chapters": [
       {
         "start": 219,
@@ -1763,8 +1777,12 @@
     ]
   },
   {
+    "lemma": "Deinokrates 5a",
+    "next": "Demarchos 6"
+  },
+  {
     "lemma": "Demarchos 6",
-    "previous": "Demokritos 6",
+    "previous": "Deinokrates 5a",
     "next": "Demetrios 48a",
     "chapters": [
       {
@@ -1777,7 +1795,8 @@
   {
     "lemma": "Demetrios 48a",
     "previous": "Demarchos 6",
-    "next": "Demonikos 2a",
+    "next": "Demokrates 10a",
+    "sort_key": "Demetrios 048a",
     "chapters": [
       {
         "start": 220,
@@ -1787,8 +1806,11 @@
     ]
   },
   {
+    "lemma": "Demokrates 10a",
+    "previous": "Demetrios 48a"
+  },
+  {
     "lemma": "Demonikos 2a",
-    "previous": "Demetrios 48a",
     "next": "Demophon 10",
     "chapters": [
       {
@@ -2376,7 +2398,8 @@
   {
     "lemma": "Essener",
     "previous": "Erotylos",
-    "next": "Euandros",
+    "next": "Euandros 4a",
+    "wp_link": "w:de:Essener",
     "chapters": [
       {
         "start": 386,
@@ -2386,8 +2409,11 @@
     ]
   },
   {
+    "lemma": "Euandros 4a",
+    "previous": "Essener"
+  },
+  {
     "lemma": "Euandros",
-    "previous": "Essener",
     "next": "Euboia 1",
     "chapters": [
       {
