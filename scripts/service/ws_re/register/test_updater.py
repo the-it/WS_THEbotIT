@@ -1,5 +1,3 @@
-from unittest import skip
-
 from testfixtures import compare
 
 from scripts.service.ws_re.register.author import Authors
@@ -265,7 +263,6 @@ class TestUpdater(BaseTestRegister):
                         register.get_index_of_lemma("P") <
                         register.get_index_of_lemma("U"))
 
-    @skip("the special update of supplements are problematic, too much dublicates")
     def test_update_create_next_previous_supplement_by_name(self):
         copy_tst_data("I_1_sorting2", "R")
         register = VolumeRegister(Volumes()["R"], Authors())
@@ -289,7 +286,6 @@ class TestUpdater(BaseTestRegister):
                         register.get_index_of_lemma("P") <
                         register.get_index_of_lemma("U"))
 
-    @skip("the special update of supplements are problematic, too much dublicates")
     def test_update_create_next_previous_supplement_by_name_pre_exists(self):
         copy_tst_data("I_1_sorting2", "S I")
         register = VolumeRegister(Volumes()["S I"], Authors())
@@ -313,8 +309,6 @@ class TestUpdater(BaseTestRegister):
                         register.get_index_of_lemma("P") <
                         register.get_index_of_lemma("U"))
 
-
-    @skip("the special update of supplements are problematic, too much dublicates")
     def test_update_create_next_previous_supplement_by_name_next_exists(self):
         copy_tst_data("I_1_sorting2", "R")
         register = VolumeRegister(Volumes()["R"], Authors())
