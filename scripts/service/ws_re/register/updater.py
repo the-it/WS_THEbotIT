@@ -128,11 +128,9 @@ class Updater():
         post_lemma = self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]))
         post_idx = self._register.get_index_of_lemma(post_lemma)
         # remove previous and next for gap
-        # todo: think this through
-        if post_idx - 1 < 0:
-            raise IndexError("No pre lemma to update")
-        pre_lemma = self._register[post_idx - 1]
-        pre_lemma.update_lemma_dict({}, ["next"])
+        if post_idx - 1 > 0:
+            pre_lemma = self._register[post_idx - 1]
+            pre_lemma.update_lemma_dict({}, ["next"])
         try:
             del lemma_dict["previous"]
         except KeyError:
