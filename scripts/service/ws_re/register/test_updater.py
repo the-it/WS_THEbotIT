@@ -1,5 +1,3 @@
-from unittest import skip
-
 from testfixtures import compare
 
 from scripts.service.ws_re.register.author import Authors
@@ -265,7 +263,6 @@ class TestUpdater(BaseTestRegister):
                         register.get_index_of_lemma("P") <
                         register.get_index_of_lemma("U"))
 
-    @skip("the special update of supplements are problematic, too much dublicates")
     def test_update_create_next_previous_supplement_by_name(self):
         copy_tst_data("I_1_sorting2", "R")
         register = VolumeRegister(Volumes()["R"], Authors())
@@ -289,7 +286,6 @@ class TestUpdater(BaseTestRegister):
                         register.get_index_of_lemma("P") <
                         register.get_index_of_lemma("U"))
 
-    @skip("the special update of supplements are problematic, too much dublicates")
     def test_update_create_next_previous_supplement_by_name_pre_exists(self):
         copy_tst_data("I_1_sorting2", "S I")
         register = VolumeRegister(Volumes()["S I"], Authors())
@@ -313,8 +309,6 @@ class TestUpdater(BaseTestRegister):
                         register.get_index_of_lemma("P") <
                         register.get_index_of_lemma("U"))
 
-
-    @skip("the special update of supplements are problematic, too much dublicates")
     def test_update_create_next_previous_supplement_by_name_next_exists(self):
         copy_tst_data("I_1_sorting2", "R")
         register = VolumeRegister(Volumes()["R"], Authors())
@@ -355,3 +349,47 @@ class TestBugUpdates(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         compare(11, len(register.lemmas))
+
+    def test_update_create_next_previous_supplement_by_name(self):
+        copy_tst_data("I_1_sorting2", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "O", "previous": "blub", "next": "A"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        compare(8, len(register.lemmas))
+        update_dict = {"lemma": "A", "previous": "O", "next": "blab"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        compare(9, len(register.lemmas))
+        post_lemma = register.get_lemma_by_name("O")
+        compare("blub", post_lemma["previous"])
+        compare("A", post_lemma["next"])
+        post_lemma = register.get_lemma_by_name("A")
+        compare("O", post_lemma["previous"])
+        compare("blab", post_lemma["next"])
+        self.assertTrue(register.get_index_of_lemma("A") <
+                        register.get_index_of_lemma("blab") <
+                        register.get_index_of_lemma("blub") <
+                        register.get_index_of_lemma("O"))
+
+    def test_update_create_next_previous_supplement_by_sort_key(self):
+        copy_tst_data("I_1_sorting2", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "Ö", "previous": "blub", "next": "Ä"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        compare(8, len(register.lemmas))
+        update_dict = {"lemma": "Ä", "previous": "Ö", "next": "blab"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        compare(9, len(register.lemmas))
+        post_lemma = register.get_lemma_by_name("Ö")
+        compare("blub", post_lemma["previous"])
+        compare("Ä", post_lemma["next"])
+        post_lemma = register.get_lemma_by_name("Ä")
+        compare("Ö", post_lemma["previous"])
+        compare("blab", post_lemma["next"])
+        self.assertTrue(register.get_index_of_lemma("Ä") <
+                        register.get_index_of_lemma("blab") <
+                        register.get_index_of_lemma("blub") <
+                        register.get_index_of_lemma("Ö"))
