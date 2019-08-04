@@ -517,7 +517,6 @@
   {
     "lemma": "Dasumius 1a",
     "previous": "Daitos",
-    "next": "Dekane",
     "chapters": [
       {
         "start": 115,
@@ -527,9 +526,14 @@
     ]
   },
   {
+    "lemma": "Δειγματοκαταγωγός",
+    "next": "Dekane"
+  },
+  {
     "lemma": "Dekane",
-    "previous": "Dasumius 1a",
-    "next": "Demosiosis",
+    "previous": "Δειγματοκαταγωγός",
+    "next": "Δεκατηλόγος",
+    "wp_link": "w:de:Dekan (Astrologie)",
     "chapters": [
       {
         "start": 116,
@@ -540,7 +544,6 @@
   },
   {
     "lemma": "Demosiosis",
-    "previous": "Dekane",
     "next": "Dekatelogos",
     "chapters": [
       {

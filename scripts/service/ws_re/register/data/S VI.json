@@ -384,7 +384,7 @@
   {
     "lemma": "Baebius 36a",
     "previous": "Aurelius 140a",
-    "next": "Butra",
+    "next": "Bruttius 5a",
     "chapters": [
       {
         "start": 18,
@@ -395,7 +395,6 @@
   },
   {
     "lemma": "Butra",
-    "previous": "Baebius 36a",
     "next": "Caburriates",
     "chapters": [
       {
@@ -935,7 +934,7 @@
   {
     "lemma": "Cossonius 3a",
     "previous": "Cornelius 279a",
-    "next": "Cuspius 3",
+    "next": "Curtius 18",
     "chapters": [
       {
         "start": 25,
@@ -945,8 +944,13 @@
     ]
   },
   {
-    "lemma": "Cuspius 3",
+    "lemma": "Curtius 18",
     "previous": "Cossonius 3a",
+    "next": "Cuspius 3"
+  },
+  {
+    "lemma": "Cuspius 3",
+    "previous": "Curtius 18",
     "next": "Delphion 3",
     "chapters": [
       {
@@ -4235,7 +4239,6 @@
   {
     "lemma": "Sarapion 4",
     "previous": "Regina castra",
-    "next": "Sarapion 9",
     "chapters": [
       {
         "start": 1434,
@@ -4246,7 +4249,7 @@
   },
   {
     "lemma": "Sarapion 9",
-    "previous": "Sarapion 4",
+    "previous": "Régĭna castra",
     "next": "Scrofulas",
     "chapters": [
       {
