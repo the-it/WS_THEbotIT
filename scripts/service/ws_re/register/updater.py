@@ -176,14 +176,19 @@ class Updater():
                 except RegisterException:
                     pass
 
+    # todo: cut this pylint: disable=fixme
+    # it will fail if there is no previous lemma and the next is able to update
     def try_update_previous_next_of_surrounding_lemmas(self, lemma_dict: Dict[str, Any], lemma_to_update: Lemma):
         idx = self._register.get_index_of_lemma(lemma_to_update)
         previous_test = False
+        pre_lemma = None
         if lemma_to_update["previous"]:
-            if idx - 1 > 0:
+            if idx - 1 >= 0:
+                # there is a lemma to update
                 pre_lemma = self._register[idx - 1]
             else:
-                pre_lemma = None
+                # no lemma to update, we are done here
+                return
             try:
                 previous_test = \
                     Lemma.make_sort_key(lemma_to_update["previous"]) == \
@@ -196,11 +201,14 @@ class Updater():
                                         f"!= previous lemma name \"{pre_lemma['lemma'] if pre_lemma else pre_lemma}\" "
                                         f"!= new lemma value previous \"{lemma_dict.get('previous', 'no key')}\"")
         next_test = False
+        next_lemma = None
         if lemma_to_update["next"]:
             try:
+                # there is a next lemma to update
                 next_lemma = self._register[idx + 1]
             except IndexError:
-                next_lemma = None
+                # there is no next lemma we are done here
+                return
             try:
                 next_test = \
                     Lemma.make_sort_key(lemma_to_update["next"]) == \
