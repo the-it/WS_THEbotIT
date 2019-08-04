@@ -49,7 +49,7 @@
   {
     "lemma": "Anaxenor 1",
     "previous": "Amanus",
-    "next": "Anaxenor 2",
+    "next": "Antidotos 6",
     "chapters": [
       {
         "start": 1,
@@ -60,7 +60,6 @@
   },
   {
     "lemma": "Anaxenor 2",
-    "previous": "Anaxenor 1",
     "next": "Antidotos 6",
     "chapters": [
       {
@@ -109,7 +108,7 @@
   {
     "lemma": "Apollodoros 41e",
     "previous": "Apelles 5a",
-    "next": "Apollonios 126b",
+    "next": "Apollonios 114",
     "chapters": [
       {
         "start": 43,
@@ -119,8 +118,11 @@
     ]
   },
   {
+    "lemma": "Apollonios 114",
+    "previous": "Apollodoros 41e"
+  },
+  {
     "lemma": "Apollonios 126b",
-    "previous": "Apollodoros 41e",
     "next": "Aquilinus 1",
     "chapters": [
       {
