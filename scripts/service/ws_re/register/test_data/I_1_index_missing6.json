@@ -1,0 +1,15 @@
+[
+  {"lemma":  "B"},
+  {
+    "lemma": "O",
+    "previous": "A",
+    "next": "U",
+    "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
+  },
+  {
+    "lemma": "U",
+    "previous": "O",
+    "next": "D",
+    "chapters": [{"start": 1, "end": 1, "author": "Autor"}]
+  }
+]
