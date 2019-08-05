@@ -72,7 +72,9 @@ class Updater():
         lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
         idx = self._register.get_index_of_lemma(lemma_to_update)
         if idx - 1 >= 0:
-            if self._register[idx - 1].sort_key == Lemma.make_sort_key(lemma_dict["previous"]):
+            if self._register[idx - 1].sort_key == Lemma.make_sort_key(lemma_dict["previous"])\
+                or Lemma.make_sort_key(self._register[idx - 1]["lemma"]) \
+                    == Lemma.make_sort_key(lemma_dict["previous"]):
                 self._try_update_previous(lemma_dict, lemma_to_update)
             else:
                 self._register[idx - 1].update_lemma_dict({}, ["next"])
@@ -83,7 +85,9 @@ class Updater():
                                                        self._register.authors))
         try:
             idx = self._register.get_index_of_lemma(lemma_to_update)
-            if self._register[idx + 1].sort_key == Lemma.make_sort_key(lemma_dict["next"]):
+            if self._register[idx + 1].sort_key == Lemma.make_sort_key(lemma_dict["next"])\
+                or Lemma.make_sort_key(self._register[idx + 1]["lemma"]) \
+                    == Lemma.make_sort_key(lemma_dict["next"]):
                 self._try_update_next(lemma_dict, lemma_to_update)
             else:
                 self._register[idx + 1].update_lemma_dict({}, ["previous"])
