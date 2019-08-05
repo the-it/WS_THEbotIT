@@ -395,6 +395,18 @@ class TestBugUpdates(BaseTestRegister):
                         register.get_index_of_lemma("blub") <
                         register.get_index_of_lemma("Ö"))
 
+    def test_acutius_1a(self):
+        copy_tst_data("acutius_1a_bug", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "Acutius a", "previous": "Acronoma", "next": "Acutius 1a", "sort_key": "Acutius 0a"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        update_dict = {"lemma": "Acutius 1a", "previous": "Acutius a", "next": "Adaba", "redirect": True}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        # don't create a new lemma, because Acutius a !=  Acutius 0a
+        compare(5, len(register.lemmas))
+
 
 @ddt
 class TestMissingIndices(BaseTestRegister):
