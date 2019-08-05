@@ -2167,7 +2167,6 @@
   {
     "lemma": "Damatros",
     "previous": "Daduchos 3",
-    "next": "Damon 2a",
     "chapters": [
       {
         "start": 134,
@@ -2177,9 +2176,14 @@
     ]
   },
   {
+    "lemma": "Damon 2",
+    "next": "Damon 2a"
+  },
+  {
     "lemma": "Damon 2a",
-    "previous": "Damatros",
+    "previous": "Damon 2",
     "next": "Damon 3a",
+    "sort_key": "Damon 02a",
     "chapters": [
       {
         "start": 134,
@@ -2191,7 +2195,8 @@
   {
     "lemma": "Damon 3a",
     "previous": "Damon 2a",
-    "next": "Dativa",
+    "next": "Damon 11",
+    "sort_key": "Damon 03a",
     "chapters": [
       {
         "start": 135,
@@ -2201,9 +2206,12 @@
     ]
   },
   {
+    "lemma": "Damon 11",
+    "previous": "Damon 3a"
+  },
+  {
     "lemma": "Dativa",
-    "previous": "Damon 3a",
-    "next": "Demetrios 32ee",
+    "next": "Decuria",
     "chapters": [
       {
         "start": 135,
@@ -2213,8 +2221,11 @@
     ]
   },
   {
+    "lemma": "Decuria",
+    "previous": "Dativa"
+  },
+  {
     "lemma": "Demetrios 32ee",
-    "previous": "Dativa",
     "next": "Demetrios 32e",
     "chapters": [
       {

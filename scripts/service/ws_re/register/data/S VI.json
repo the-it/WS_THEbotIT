@@ -2,6 +2,7 @@
   {
     "lemma": "Abretten(us)",
     "next": "Aburnius 1a",
+    "sort_key": "Abrettenus",
     "chapters": [
       {
         "start": 1,
@@ -37,7 +38,6 @@
   {
     "lemma": "Acutius 1b",
     "previous": "Aburnius 2",
-    "next": "Aelius 75a",
     "chapters": [
       {
         "start": 1,
@@ -47,8 +47,12 @@
     ]
   },
   {
+    "lemma": "Acutius 1a",
+    "next": "Aelius 75a"
+  },
+  {
     "lemma": "Aelius 75a",
-    "previous": "Acutius 1b",
+    "previous": "Acutius 1a",
     "next": "Aemilius 54a",
     "chapters": [
       {
@@ -240,7 +244,7 @@
   {
     "lemma": "Areliascus",
     "previous": "Aradius 4a",
-    "next": "Arinistae",
+    "next": "Aresaces",
     "chapters": [
       {
         "start": 12,
@@ -250,8 +254,11 @@
     ]
   },
   {
+    "lemma": "Aresaces",
+    "previous": "Areliascus"
+  },
+  {
     "lemma": "Arinistae",
-    "previous": "Areliascus",
     "next": "Arrius 19a",
     "chapters": [
       {
