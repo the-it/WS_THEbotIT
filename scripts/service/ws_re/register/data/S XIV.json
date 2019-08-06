@@ -1862,7 +1862,6 @@
   {
     "lemma": "Aiacius 1a",
     "previous": "Aginatius 4",
-    "next": "Aisopos 1",
     "chapters": [
       {
         "start": 14,
@@ -1872,8 +1871,13 @@
     ]
   },
   {
+    "lemma": "Aimyndos",
+    "next": "Aisopos 1",
+    "redirect": "Priaponesos"
+  },
+  {
     "lemma": "Aisopos 1",
-    "previous": "Aiacius 1a",
+    "previous": "Aimyndos",
     "next": "Aius 2",
     "chapters": [
       {
@@ -3526,7 +3530,6 @@
   {
     "lemma": "Cluvius 10c",
     "previous": "Cluvius 10b",
-    "next": "(? Con)cors",
     "chapters": [
       {
         "start": 105,
@@ -3536,9 +3539,14 @@
     ]
   },
   {
-    "lemma": "(? Con)cors",
-    "previous": "Cluvius 10c",
-    "next": "Comius 2",
+    "lemma": "computus",
+    "previous": "Comius 2",
+    "next": "Concors",
+    "redirect": "digitorum computus"
+  },
+  {
+    "lemma": "Concors",
+    "previous": "computus",
     "chapters": [
       {
         "start": 106,
@@ -3548,9 +3556,13 @@
     ]
   },
   {
+    "lemma": "Cominius 22",
+    "next": "Comius 2"
+  },
+  {
     "lemma": "Comius 2",
-    "previous": "(? Con)cors",
-    "next": "Cordus 1a",
+    "previous": "Cominius 22",
+    "next": "computus",
     "chapters": [
       {
         "start": 106,
@@ -3561,7 +3573,6 @@
   },
   {
     "lemma": "Cordus 1a",
-    "previous": "Comius 2",
     "next": "Corellius 1a",
     "chapters": [
       {
@@ -3585,11 +3596,13 @@
   },
   {
     "lemma": "Corellius 2",
-    "previous": "Corellius 1a"
+    "previous": "Corellius 1a",
+    "next": "Cornelius 124a"
   },
   {
     "lemma": "Cornelius 124a",
-    "next": "Cornelius 154a",
+    "previous": "Corellius 2",
+    "next": "Cornelius 146",
     "chapters": [
       {
         "start": 107,
@@ -3597,11 +3610,16 @@
         "author": "Eck"
       }
     ]
+  },
+  {
+    "lemma": "Cornelius 146",
+    "previous": "Cornelius 124a",
+    "next": "Cornelius 154a"
   },
   {
     "lemma": "Cornelius 154a",
-    "previous": "Cornelius 124a",
-    "next": "Cornelius 283a",
+    "previous": "Cornelius 146",
+    "next": "Cornelius 276",
     "chapters": [
       {
         "start": 107,
@@ -3611,8 +3629,13 @@
     ]
   },
   {
-    "lemma": "Cornelius 283a",
+    "lemma": "Cornelius 276",
     "previous": "Cornelius 154a",
+    "next": "Cornelius 283a"
+  },
+  {
+    "lemma": "Cornelius 283a",
+    "previous": "Cornelius 276",
     "next": "Cornelius 291a",
     "chapters": [
       {
@@ -3660,10 +3683,17 @@
   },
   {
     "lemma": "Cornelius 359",
-    "previous": "Cornelius 333a"
+    "previous": "Cornelius 333a",
+    "next": "Cornelius 398a"
+  },
+  {
+    "lemma": "Cornelius 398a",
+    "previous": "Cornelius 359",
+    "next": "Cornelius 442a"
   },
   {
     "lemma": "Cornelius 442a",
+    "previous": "Cornelius 398a",
     "next": "Cos(s)inius 5a",
     "chapters": [
       {
@@ -3772,7 +3802,6 @@
   {
     "lemma": "Decimius 10a",
     "previous": "Danacia",
-    "next": "Demokrates 11a",
     "chapters": [
       {
         "start": 111,
@@ -3783,7 +3812,7 @@
   },
   {
     "lemma": "Demokrates 11a",
-    "previous": "Decimius 10a",
+    "previous": "Demetrianus 5",
     "next": "Dentilianus 2",
     "chapters": [
       {
@@ -3808,7 +3837,7 @@
   {
     "lemma": "Dexius 4",
     "previous": "Dentilianus 2",
-    "next": "Demetrianus 5",
+    "next": "Didius 6",
     "chapters": [
       {
         "start": 111,
@@ -3818,8 +3847,11 @@
     ]
   },
   {
+    "lemma": "Didius 6",
+    "previous": "Dexius 4"
+  },
+  {
     "lemma": "Demetrianus 5",
-    "previous": "Dexius 4",
     "next": "digitorum computus",
     "chapters": [
       {
