@@ -1856,6 +1856,16 @@
     "previous": "Agesilaos 7a"
   },
   {
+    "lemma": "Agesilaos 8",
+    "chapters": [
+      {
+        "start": 28,
+        "end": 28,
+        "author": "Knaack"
+      }
+    ]
+  },
+  {
     "lemma": "Agesipolis 5",
     "previous": "Agesilaos 8",
     "next": "Agesistratos 4",
@@ -1963,7 +1973,6 @@
   {
     "lemma": "Aglibolos",
     "previous": "Agis 1a",
-    "next": "Agesilaos 8",
     "chapters": [
       {
         "start": 27,
@@ -1973,20 +1982,7 @@
     ]
   },
   {
-    "lemma": "Agesilaos 8",
-    "previous": "Aglibolos",
-    "next": "Aglochartos",
-    "chapters": [
-      {
-        "start": 28,
-        "end": 28,
-        "author": "Knaack"
-      }
-    ]
-  },
-  {
     "lemma": "Aglochartos",
-    "previous": "Agesilaos 8",
     "next": "Agne",
     "chapters": [
       {
@@ -2147,18 +2143,6 @@
       {
         "start": 31,
         "end": 32,
-        "author": "Bürchner"
-      }
-    ]
-  },
-  {
-    "lemma": "Aithusa 1a",
-    "previous": "Aithrion",
-    "next": "Aitne 1a",
-    "chapters": [
-      {
-        "start": 31,
-        "end": 31,
         "author": "Bürchner"
       }
     ]
@@ -2989,7 +2973,6 @@
   {
     "lemma": "Aithrion",
     "previous": "Aithopia a",
-    "next": "Aithusa 1a",
     "chapters": [
       {
         "start": 41,
@@ -3300,16 +3283,6 @@
     "previous": "Akrokos",
     "next": "Akron 3",
     "sort_key": "Akron"
-  },
-  {
-    "lemma": "Akron a",
-    "chapters": [
-      {
-        "start": 46,
-        "end": 46,
-        "author": "Bürchner"
-      }
-    ]
   },
   {
     "lemma": "Akron 3",
@@ -12651,7 +12624,6 @@
   },
   {
     "lemma": "Barium",
-    "previous": "Baris 5b",
     "next": "Barkanioi"
   },
   {
@@ -14027,7 +13999,6 @@
   },
   {
     "lemma": "Bunos a",
-    "previous": "Bullensis campus",
     "next": "Bura 2",
     "chapters": [
       {
@@ -14157,30 +14128,6 @@
   {
     "lemma": "Cacus",
     "previous": "Caca 2"
-  },
-  {
-    "lemma": "Byzantion 4",
-    "previous": null,
-    "next": "Byzes 1a",
-    "chapters": [
-      {
-        "start": 266,
-        "end": 266,
-        "author": "Streck"
-      }
-    ]
-  },
-  {
-    "lemma": "Byzes 1a",
-    "previous": "Byzantion 4",
-    "next": "Cabalsi",
-    "chapters": [
-      {
-        "start": 266,
-        "end": 266,
-        "author": "Niese"
-      }
-    ]
   },
   {
     "lemma": "Cadra",
@@ -14987,7 +14934,6 @@
   {
     "lemma": "Cazaci",
     "previous": "Caularis",
-    "next": "Celer 9",
     "chapters": [
       {
         "start": 279,
@@ -14997,25 +14943,22 @@
     ]
   },
   {
-    "lemma": "Celer 9",
-    "previous": "Cazaci",
-    "next": "Celer 1a",
-    "chapters": [
-      {
-        "start": 279,
-        "end": 279,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
     "lemma": "Celer 1a",
-    "previous": "Celer 9",
     "chapters": [
       {
         "start": 280,
         "end": 280,
         "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Celer 9",
+    "chapters": [
+      {
+        "start": 279,
+        "end": 279,
+        "author": "Groag"
       }
     ]
   },
@@ -15844,23 +15787,6 @@
     ]
   },
   {
-    "lemma": "Cassius 24a",
-    "previous": "Cassius 21a",
-    "next": "Cassius 25",
-    "redirect": "Claudius 93",
-    "chapters": [
-      {
-        "start": 318,
-        "end": 318,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
-    "lemma": "Cassius 25",
-    "previous": "Cassius 24a"
-  },
-  {
     "lemma": "Claudius 93",
     "next": "Claudius 100a"
   },
@@ -15967,19 +15893,7 @@
     ]
   },
   {
-    "lemma": "Clavicularius",
-    "next": "Claudius 399a",
-    "chapters": [
-      {
-        "start": 321,
-        "end": 322,
-        "author": "Fiebiger"
-      }
-    ]
-  },
-  {
     "lemma": "Claudius 399a",
-    "previous": "Clavicularius",
     "next": "Claudius 400",
     "chapters": [
       {
@@ -16057,6 +15971,16 @@
         "start": 322,
         "end": 322,
         "author": "Stähelin"
+      }
+    ]
+  },
+  {
+    "lemma": "Clavicularius",
+    "chapters": [
+      {
+        "start": 321,
+        "end": 322,
+        "author": "Fiebiger"
       }
     ]
   },
@@ -16362,16 +16286,6 @@
     "previous": "Cornelius a"
   },
   {
-    "lemma": "Cornelius 10a(-e)",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
     "lemma": "Cornelius 10b",
     "previous": "Cornelius 10a",
     "next": "Cornelius 40",
@@ -16564,7 +16478,6 @@
   {
     "lemma": "Cuseni",
     "previous": "Currodrepanus",
-    "next": "Dabithac",
     "chapters": [
       {
         "start": 333,
@@ -16574,8 +16487,29 @@
     ]
   },
   {
+    "lemma": "Custidius",
+    "next": "Cyrituca",
+    "chapters": [
+      {
+        "start": 334,
+        "end": 334,
+        "author": "Münzer"
+      }
+    ]
+  },
+  {
+    "lemma": "Cyrituca",
+    "previous": "Custidius",
+    "chapters": [
+      {
+        "start": 334,
+        "end": 334,
+        "author": "Streck"
+      }
+    ]
+  },
+  {
     "lemma": "Dabithac",
-    "previous": "Cuseni",
     "chapters": [
       {
         "start": 333,
@@ -16609,28 +16543,6 @@
         "start": 333,
         "end": 333,
         "author": "Willrich"
-      }
-    ]
-  },
-  {
-    "lemma": "Custidius",
-    "next": "Cyrituca",
-    "chapters": [
-      {
-        "start": 334,
-        "end": 334,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
-    "lemma": "Cyrituca",
-    "previous": "Custidius",
-    "chapters": [
-      {
-        "start": 334,
-        "end": 334,
-        "author": "Streck"
       }
     ]
   },
@@ -16777,16 +16689,6 @@
         "start": 335,
         "end": 335,
         "author": "Büttner-Wobst"
-      }
-    ]
-  },
-  {
-    "lemma": "Damokrates 1a",
-    "chapters": [
-      {
-        "start": 335,
-        "end": 335,
-        "author": "Kirchner"
       }
     ]
   },
