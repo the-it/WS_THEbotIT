@@ -409,7 +409,7 @@
   {
     "lemma": "Cornelius 398a",
     "previous": "Cornelius 297a",
-    "next": "Crambianae",
+    "next": "Cossinius 5",
     "chapters": [
       {
         "start": 23,
@@ -419,8 +419,11 @@
     ]
   },
   {
+    "lemma": "Cossinius 5",
+    "previous": "Cornelius 398a"
+  },
+  {
     "lemma": "Crambianae",
-    "previous": "Cornelius 398a",
     "next": "Deire 1",
     "chapters": [
       {
@@ -445,7 +448,6 @@
   {
     "lemma": "Deire 2",
     "previous": "Deire 1",
-    "next": "Demonassa 6",
     "chapters": [
       {
         "start": 24,
@@ -455,8 +457,12 @@
     ]
   },
   {
+    "lemma": "Demetrias 1",
+    "next": "Demonassa 6"
+  },
+  {
     "lemma": "Demonassa 6",
-    "previous": "Deire 2",
+    "previous": "Demetrias 1",
     "next": "Desonci",
     "chapters": [
       {

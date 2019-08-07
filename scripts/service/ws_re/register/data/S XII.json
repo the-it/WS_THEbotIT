@@ -34,18 +34,22 @@
   {
     "lemma": "Cornelius 295a",
     "previous": "Cassius 45a",
-    "next": "Cornelius 311a",
     "chapters": [
       {
         "start": 0,
         "end": 0
       }
     ]
+  },
+  {
+    "lemma": "Cornelius 297a",
+    "previous": "Cornelius 297",
+    "next": "Cornelius 311a"
   },
   {
     "lemma": "Cornelius 311a",
-    "previous": "Cornelius 295a",
-    "next": "Curtius 37a-b",
+    "previous": "Cornelius 297a",
+    "next": "Cornelius 359",
     "chapters": [
       {
         "start": 0,
@@ -54,8 +58,11 @@
     ]
   },
   {
+    "lemma": "Cornelius 359",
+    "previous": "Cornelius 311a"
+  },
+  {
     "lemma": "Curtius 37a-b",
-    "previous": "Cornelius 311a",
     "next": "Eprius",
     "chapters": [
       {
@@ -1288,7 +1295,7 @@
   {
     "lemma": "Contrectare, contrectatio",
     "previous": "conductores",
-    "next": "Cornelius 205a",
+    "next": "Cornelius 58",
     "chapters": [
       {
         "start": 162,
@@ -1298,8 +1305,13 @@
     ]
   },
   {
-    "lemma": "Cornelius 205a",
+    "lemma": "Cornelius 58",
     "previous": "Contrectare, contrectatio",
+    "next": "Cornelius 205a"
+  },
+  {
+    "lemma": "Cornelius 205a",
+    "previous": "Cornelius 58",
     "next": "Cornelius 263a",
     "chapters": [
       {
@@ -1324,7 +1336,7 @@
   {
     "lemma": "Cornelius 282a",
     "previous": "Cornelius 263a",
-    "next": "Cornelius 294",
+    "next": "Cornelius 290",
     "chapters": [
       {
         "start": 189,
@@ -1333,8 +1345,11 @@
     ]
   },
   {
+    "lemma": "Cornelius 290",
+    "previous": "Cornelius 282a"
+  },
+  {
     "lemma": "Cornelius 294",
-    "previous": "Cornelius 282a",
     "next": "Cornelius 296a",
     "chapters": [
       {
@@ -1347,7 +1362,7 @@
   {
     "lemma": "Cornelius 296a",
     "previous": "Cornelius 294",
-    "next": "Cornelius 402a",
+    "next": "Cornelius 297",
     "chapters": [
       {
         "start": 189,
@@ -1357,8 +1372,21 @@
     ]
   },
   {
+    "lemma": "Cornelius 297",
+    "previous": "Cornelius 296a"
+  },
+  {
+    "lemma": "Cornelius 366",
+    "next": "Cornelius 398a"
+  },
+  {
+    "lemma": "Cornelius 398a",
+    "previous": "Cornelius 366",
+    "next": "Cornelius 402a"
+  },
+  {
     "lemma": "Cornelius 402a",
-    "previous": "Cornelius 296a",
+    "previous": "Cornelius 398a",
     "next": "Cornelius 441a",
     "chapters": [
       {
@@ -1371,7 +1399,7 @@
   {
     "lemma": "Cornelius 441a",
     "previous": "Cornelius 402a",
-    "next": "Cornelius 454a",
+    "next": "Cornelius 444",
     "chapters": [
       {
         "start": 190,
@@ -1381,8 +1409,16 @@
     ]
   },
   {
+    "lemma": "Cornelius 444",
+    "previous": "Cornelius 441a"
+  },
+  {
+    "lemma": "Cornelius 452",
+    "next": "Cornelius 454a"
+  },
+  {
     "lemma": "Cornelius 454a",
-    "previous": "Cornelius 441a",
+    "previous": "Cornelius 452",
     "next": "Cosconius 17",
     "chapters": [
       {
@@ -1395,7 +1431,7 @@
   {
     "lemma": "Cosconius 17",
     "previous": "Cornelius 454a",
-    "next": "Crispinus 5a",
+    "next": "Cossonius 3",
     "chapters": [
       {
         "start": 190,
@@ -1405,8 +1441,11 @@
     ]
   },
   {
+    "lemma": "Cossonius 3",
+    "previous": "Cosconius 17"
+  },
+  {
     "lemma": "Crispinus 5a",
-    "previous": "Cosconius 17",
     "next": "Cupressenus",
     "chapters": [
       {
@@ -1466,7 +1505,6 @@
   {
     "lemma": "Dasumius aa",
     "previous": "Cutius 1a",
-    "next": "Deraia",
     "chapters": [
       {
         "start": 193,
@@ -1476,9 +1514,13 @@
     ]
   },
   {
+    "lemma": "Demokritos 6",
+    "next": "Deraia"
+  },
+  {
     "lemma": "Deraia",
-    "previous": "Dasumius aa",
-    "next": "Didius 10a",
+    "previous": "Demokritos 6",
+    "next": "Didius 6",
     "chapters": [
       {
         "start": 223,
@@ -1488,8 +1530,11 @@
     ]
   },
   {
+    "lemma": "Didius 6",
+    "previous": "Deraia"
+  },
+  {
     "lemma": "Didius 10a",
-    "previous": "Deraia",
     "next": "Diodoros 61",
     "chapters": [
       {

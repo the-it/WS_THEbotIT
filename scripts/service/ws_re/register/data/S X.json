@@ -1065,7 +1065,7 @@
     "lemma": "Apolaustus 5",
     "previous": "Apolaustus 4",
     "next": "Apolaustus 6",
-    "redirect": true,
+    "redirect": "Ulpius 3a",
     "chapters": [
       {
         "start": 23,
@@ -1077,7 +1077,7 @@
     "lemma": "Apolaustus 6",
     "previous": "Apolaustus 5",
     "next": "Apolaustus 7",
-    "redirect": true,
+    "redirect": "Aurelius 53a",
     "chapters": [
       {
         "start": 23,
@@ -1999,7 +1999,7 @@
   {
     "lemma": "Chryses 4",
     "previous": "Chryses 3",
-    "next": "Cillae",
+    "next": "Cicereia lex",
     "chapters": [
       {
         "start": 128,
@@ -2009,8 +2009,14 @@
     ]
   },
   {
-    "lemma": "Cillae",
+    "lemma": "Cicereia lex",
     "previous": "Chryses 4",
+    "next": "Cillae",
+    "redirect": "Lex Cicereia de sponsu"
+  },
+  {
+    "lemma": "Cillae",
+    "previous": "Cicereia lex",
     "next": "Clodius 73",
     "chapters": [
       {
@@ -2226,7 +2232,6 @@
   },
   {
     "lemma": "Demetrios 32ee",
-    "next": "Demetrios 32e",
     "chapters": [
       {
         "start": 135,
@@ -2236,9 +2241,14 @@
     ]
   },
   {
+    "lemma": "Demetrios 32d",
+    "next": "Demetrios 32e"
+  },
+  {
     "lemma": "Demetrios 32e",
-    "previous": "Demetrios 32ee",
+    "previous": "Demetrios 32d",
     "next": "Demetrios 32f",
+    "sort_key": "Demetrios 032e",
     "chapters": [
       {
         "start": 136,
@@ -2251,6 +2261,7 @@
     "lemma": "Demetrios 32f",
     "previous": "Demetrios 32e",
     "next": "Demetrios 32g",
+    "sort_key": "Demetrios 032f",
     "chapters": [
       {
         "start": 136,
@@ -2383,6 +2394,7 @@
     "lemma": "Demostratos 9a",
     "previous": "Demosthenes 16",
     "next": "Derketos",
+    "sort_key": "Demostratos 09a",
     "chapters": [
       {
         "start": 137,
@@ -2430,7 +2442,7 @@
   {
     "lemma": "Dikaiopolis 2",
     "previous": "Dexter 12",
-    "next": "Diktys 2",
+    "next": "Dikte 1",
     "chapters": [
       {
         "start": 137,
@@ -2440,8 +2452,13 @@
     ]
   },
   {
-    "lemma": "Diktys 2",
+    "lemma": "Dikte 1",
     "previous": "Dikaiopolis 2",
+    "next": "Diktys 2"
+  },
+  {
+    "lemma": "Diktys 2",
+    "previous": "Dikte 1",
     "next": "Diktys 3",
     "chapters": [
       {
