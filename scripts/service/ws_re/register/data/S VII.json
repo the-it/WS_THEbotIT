@@ -121,7 +121,8 @@
   {
     "lemma": "Aqua, Aquae 77a",
     "previous": "Apomoira",
-    "next": "Archisomatophylakes",
+    "next": "Arbion",
+    "sort_key": "Aqua, Aquae 077a",
     "chapters": [
       {
         "start": 45,
@@ -131,9 +132,11 @@
     ]
   },
   {
+    "lemma": "Arbion",
+    "previous": "Aqua, Aquae 77a"
+  },
+  {
     "lemma": "Archisomatophylakes",
-    "previous": "Aqua, Aquae 77a",
-    "next": "Aristolaos 2",
     "chapters": [
       {
         "start": 46,
@@ -143,8 +146,12 @@
     ]
   },
   {
+    "lemma": "Architectura",
+    "next": "Aristolaos 2"
+  },
+  {
     "lemma": "Aristolaos 2",
-    "previous": "Archisomatophylakes",
+    "previous": "Architectura",
     "next": "Arnasi(us)",
     "chapters": [
       {
@@ -205,7 +212,7 @@
   {
     "lemma": "Askese",
     "previous": "Asidonia",
-    "next": "Asklepiais",
+    "next": "Ἀσκληπιαις",
     "chapters": [
       {
         "start": 50,
@@ -215,9 +222,10 @@
     ]
   },
   {
-    "lemma": "Asklepiais",
+    "lemma": "Ἀσκληπιαις",
     "previous": "Askese",
     "next": "Attributio",
+    "sort_key": "Asklepiais",
     "chapters": [
       {
         "start": 64,
@@ -228,8 +236,7 @@
   },
   {
     "lemma": "Attributio",
-    "previous": "Asklepiais",
-    "next": "Aurelius 39a",
+    "previous": "Ἀσκληπιαις",
     "chapters": [
       {
         "start": 65,
@@ -240,8 +247,9 @@
   },
   {
     "lemma": "Aurelius 39a",
-    "previous": "Attributio",
-    "next": "Aurelius 63a",
+    "previous": "Aurelius 63a",
+    "next": "Aurelius 56b",
+    "sort_key": "Aurelius 039a",
     "chapters": [
       {
         "start": 72,
@@ -251,9 +259,16 @@
     ]
   },
   {
+    "lemma": "Aurelius 56b",
+    "previous": "Aurelius 39a"
+  },
+  {
+    "lemma": "Auction 1",
+    "next": "Aurelius 63a"
+  },
+  {
     "lemma": "Aurelius 63a",
-    "previous": "Aurelius 39a",
-    "next": "Aurelius 145aaa",
+    "previous": "Auction 1",
     "chapters": [
       {
         "start": 72,
@@ -264,8 +279,8 @@
   },
   {
     "lemma": "Aurelius 145aaa",
-    "previous": "Aurelius 63a",
-    "next": "Aurelius 216a",
+    "previous": "Aurelius 56b",
+    "next": "Aurelius 184",
     "chapters": [
       {
         "start": 73,
@@ -275,8 +290,13 @@
     ]
   },
   {
-    "lemma": "Aurelius 216a",
+    "lemma": "Aurelius 184",
     "previous": "Aurelius 145aaa",
+    "next": "Aurelius 216a"
+  },
+  {
+    "lemma": "Aurelius 216a",
+    "previous": "Aurelius 184",
     "next": "Aurelius 234a",
     "chapters": [
       {
@@ -349,7 +369,7 @@
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
-    "next": "cheirographon",
+    "next": "χειρόγραφον",
     "chapters": [
       {
         "start": 83,
@@ -359,7 +379,7 @@
     ]
   },
   {
-    "lemma": "cheirographon",
+    "lemma": "χειρόγραφον",
     "previous": "Canaliclarius",
     "next": "Clementius 1a",
     "chapters": [
@@ -372,8 +392,8 @@
   },
   {
     "lemma": "Clementius 1a",
-    "previous": "cheirographon",
-    "next": "Chrematismos",
+    "previous": "χειρόγραφον",
+    "next": "χρηματισμός",
     "chapters": [
       {
         "start": 89,
@@ -383,9 +403,9 @@
     ]
   },
   {
-    "lemma": "Chrematismos",
+    "lemma": "χρηματισμός",
     "previous": "Clementius 1a",
-    "next": "Codicarii 2",
+    "next": "Claudius 207",
     "chapters": [
       {
         "start": 90,
@@ -395,8 +415,11 @@
     ]
   },
   {
+    "lemma": "Claudius 207",
+    "previous": "χρηματισμός"
+  },
+  {
     "lemma": "Codicarii 2",
-    "previous": "Chrematismos",
     "next": "Contributio 2",
     "chapters": [
       {
@@ -445,18 +468,6 @@
   {
     "lemma": "Crepereius 3a",
     "previous": "Dea Coryphea",
-    "next": "Crepereius 3b",
-    "chapters": [
-      {
-        "start": 98,
-        "end": 98,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Crepereius 3b",
-    "previous": "Crepereius 3a",
     "next": "Crepereius 5a",
     "chapters": [
       {
@@ -467,8 +478,18 @@
     ]
   },
   {
+    "lemma": "Crepereius 3b",
+    "chapters": [
+      {
+        "start": 98,
+        "end": 98,
+        "author": "Stein, [Arthur]"
+      }
+    ]
+  },
+  {
     "lemma": "Crepereius 5a",
-    "previous": "Crepereius 3b",
+    "previous": "Crepereius 3a",
     "next": "Cuspius 2a",
     "chapters": [
       {
@@ -505,7 +526,7 @@
   {
     "lemma": "Daitos",
     "previous": "Daimonismos",
-    "next": "Dasumius 1a",
+    "next": "Dasumius 1",
     "chapters": [
       {
         "start": 114,
@@ -515,8 +536,14 @@
     ]
   },
   {
-    "lemma": "Dasumius 1a",
+    "lemma": "Dasumius 1",
     "previous": "Daitos",
+    "next": "Dasumius 1a"
+  },
+  {
+    "lemma": "Dasumius 1a",
+    "previous": "Dasumius 1",
+    "next": "Δεῖγμα",
     "chapters": [
       {
         "start": 115,
@@ -524,6 +551,10 @@
         "author": "Saria"
       }
     ]
+  },
+  {
+    "lemma": "Δεῖγμα",
+    "previous": "Dasumius 1a"
   },
   {
     "lemma": "Δειγματοκαταγωγός",
