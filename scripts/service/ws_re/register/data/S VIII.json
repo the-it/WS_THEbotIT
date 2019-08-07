@@ -205,7 +205,7 @@
   {
     "lemma": "Antiochos 70a",
     "previous": "Antikos",
-    "next": "Antoniniana aqua",
+    "next": "Antiphidas",
     "chapters": [
       {
         "start": 4,
@@ -215,8 +215,13 @@
     ]
   },
   {
-    "lemma": "Antoniniana aqua",
+    "lemma": "Antiphidas",
     "previous": "Antiochos 70a",
+    "next": "Antoniniana aqua"
+  },
+  {
+    "lemma": "Antoniniana aqua",
+    "previous": "Antiphidas",
     "next": "Aphrodisios 10a",
     "chapters": [
       {
@@ -278,7 +283,7 @@
     "lemma": "Aristo",
     "previous": "Aristarchos 21a",
     "next": "Aristodemos 7a",
-    "redirect": true,
+    "redirect": "Titius",
     "chapters": [
       {
         "start": 6,
@@ -301,7 +306,7 @@
   {
     "lemma": "Aristonidas 1",
     "previous": "Aristodemos 7a",
-    "next": "Aristonidas 2",
+    "next": "Aristonidas 4",
     "chapters": [
       {
         "start": 6,
@@ -312,7 +317,6 @@
   },
   {
     "lemma": "Aristonidas 2",
-    "previous": "Aristonidas 1",
     "next": "Aristonidas 3",
     "chapters": [
       {
@@ -325,7 +329,6 @@
   {
     "lemma": "Aristonidas 3",
     "previous": "Aristonidas 2",
-    "next": "Aristonidas 4",
     "chapters": [
       {
         "start": 7,
@@ -336,7 +339,7 @@
   },
   {
     "lemma": "Aristonidas 4",
-    "previous": "Aristonidas 3",
+    "previous": "Aristonidas 1",
     "next": "Asklepiades 48a",
     "chapters": [
       {
@@ -349,7 +352,7 @@
   {
     "lemma": "Asklepiades 48a",
     "previous": "Aristonidas 4",
-    "next": "Bathykleia",
+    "next": "Asklepiodoros 13",
     "chapters": [
       {
         "start": 7,
@@ -360,7 +363,7 @@
   },
   {
     "lemma": "Bathykleia",
-    "previous": "Asklepiades 48a",
+    "previous": null,
     "next": "Benenatus 1",
     "chapters": [
       {
@@ -385,7 +388,7 @@
   {
     "lemma": "Benenatus 2",
     "previous": "Benenatus 1",
-    "next": "Asklepiodoros 13",
+    "next": "Benenatus 3",
     "chapters": [
       {
         "start": 7,
@@ -396,7 +399,6 @@
   },
   {
     "lemma": "Asklepiodoros 13",
-    "previous": "Benenatus 2",
     "next": "Attica aqua",
     "chapters": [
       {
@@ -445,7 +447,8 @@
   {
     "lemma": "Aurelia aqua",
     "previous": "Augusta aqua 2",
-    "next": "Benenatus 3",
+    "next": null,
+    "redirect": "Traiana aqua",
     "chapters": [
       {
         "start": 8,
@@ -455,7 +458,7 @@
   },
   {
     "lemma": "Benenatus 3",
-    "previous": "Aurelia aqua",
+    "previous": "Benenatus 2",
     "next": "Benenatus 4",
     "chapters": [
       {
@@ -588,7 +591,7 @@
   {
     "lemma": "Claudia aqua",
     "previous": "Charinos 11",
-    "next": "Conclusa aqua",
+    "next": "Claudius 354a",
     "chapters": [
       {
         "start": 20,
@@ -599,7 +602,6 @@
   },
   {
     "lemma": "Conclusa aqua",
-    "previous": "Claudia aqua",
     "next": "Dalmatia",
     "chapters": [
       {
@@ -612,7 +614,6 @@
   {
     "lemma": "Dalmatia",
     "previous": "Conclusa aqua",
-    "next": "Claudius 354a",
     "chapters": [
       {
         "start": 21,
@@ -623,8 +624,8 @@
   },
   {
     "lemma": "Claudius 354a",
-    "previous": "Dalmatia",
-    "next": "Damokritos 4",
+    "previous": "Claudia aqua",
+    "next": "Conclusa aqua",
     "chapters": [
       {
         "start": 22,
@@ -635,7 +636,6 @@
   },
   {
     "lemma": "Damokritos 4",
-    "previous": "Claudius 354a",
     "next": "Demokydes",
     "chapters": [
       {
@@ -1500,7 +1500,7 @@
   {
     "lemma": "Lamprias 5",
     "previous": "Kyprides",
-    "next": "Libelle",
+    "next": "Lamprias 6",
     "chapters": [
       {
         "start": 257,
@@ -1510,8 +1510,14 @@
     ]
   },
   {
-    "lemma": "Libelle",
+    "lemma": "Lamprias 6",
     "previous": "Lamprias 5",
+    "next": "Libelle",
+    "redirect": true
+  },
+  {
+    "lemma": "Libelle",
+    "previous": "Lamprias 6",
     "next": "Likymna",
     "chapters": [
       {
