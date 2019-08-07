@@ -78,7 +78,6 @@
   {
     "lemma": "Via 3",
     "previous": "Valerius 373a",
-    "next": "Alpium Iuliarum Claustra",
     "chapters": [
       {
         "start": 0,
@@ -87,8 +86,12 @@
     ]
   },
   {
+    "lemma": "Africa 2",
+    "next": "Alpium Iuliarum Claustra"
+  },
+  {
     "lemma": "Alpium Iuliarum Claustra",
-    "previous": "Via 3",
+    "previous": "Africa 2",
     "next": "Athenai 1B",
     "chapters": [
       {

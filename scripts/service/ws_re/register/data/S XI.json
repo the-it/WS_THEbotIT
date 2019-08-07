@@ -370,7 +370,8 @@
   {
     "lemma": "Angeiologia",
     "previous": "Anduit",
-    "next": "Antiphilos 3c",
+    "next": "Antigonos 16",
+    "redirect": "Periskythismos",
     "chapters": [
       {
         "start": 48,
@@ -379,8 +380,11 @@
     ]
   },
   {
+    "lemma": "Antigonos 16",
+    "previous": "Angeiologia"
+  },
+  {
     "lemma": "Antiphilos 3c",
-    "previous": "Angeiologia",
     "next": "Antonius 100a",
     "chapters": [
       {
@@ -477,7 +481,6 @@
   {
     "lemma": "Arsaciana",
     "previous": "Aristoteles 25",
-    "next": "Asklepiades 52",
     "chapters": [
       {
         "start": 343,
@@ -487,8 +490,12 @@
     ]
   },
   {
+    "lemma": "Asea 1",
+    "next": "Asklepiades 52"
+  },
+  {
     "lemma": "Asklepiades 52",
-    "previous": "Arsaciana",
+    "previous": "Asea 1",
     "next": "Aurelius 127b",
     "chapters": [
       {
@@ -692,7 +699,7 @@
   {
     "lemma": "Cyrila 2",
     "previous": "Cuneus 5",
-    "next": "Darnithithi (Gen.",
+    "next": "Darnithithi",
     "chapters": [
       {
         "start": 513,
@@ -702,8 +709,16 @@
     ]
   },
   {
-    "lemma": "Darnithithi (Gen.",
+    "lemma": "Darnithithi",
     "previous": "Cyrila 2",
+    "next": "Demetrios 85"
+  },
+  {
+    "lemma": "Demetrios 85",
+    "previous": "Darnithithi"
+  },
+  {
+    "lemma": "Darnithithi (Gen.",
     "next": "Diaios",
     "chapters": [
       {
@@ -1412,7 +1427,7 @@
   {
     "lemma": "Parka",
     "previous": "Oaxus lacus",
-    "next": "Parrharia",
+    "next": "Parrhasia",
     "chapters": [
       {
         "start": 1029,
@@ -1422,8 +1437,11 @@
     ]
   },
   {
+    "lemma": "Parrhasia",
+    "previous": "Parka"
+  },
+  {
     "lemma": "Parrharia",
-    "previous": "Parka",
     "next": "Partitio legata",
     "chapters": [
       {

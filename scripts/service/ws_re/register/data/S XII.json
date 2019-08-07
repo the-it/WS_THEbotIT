@@ -496,7 +496,7 @@
   {
     "lemma": "In Alpe Iulia",
     "previous": "Allius 1a",
-    "next": "Andreas 11a",
+    "next": "Amelas",
     "chapters": [
       {
         "start": 26,
@@ -506,8 +506,11 @@
     ]
   },
   {
+    "lemma": "Amelas",
+    "previous": "In Alpe Iulia"
+  },
+  {
     "lemma": "Andreas 11a",
-    "previous": "In Alpe Iulia",
     "next": "Annaeus 21",
     "chapters": [
       {
@@ -676,7 +679,6 @@
   {
     "lemma": "Apicatus",
     "previous": "Arcani",
-    "next": "Ariaioi",
     "chapters": [
       {
         "start": 90,
@@ -686,9 +688,14 @@
     ]
   },
   {
-    "lemma": "Ariaioi",
-    "previous": "Apicatus",
-    "next": "Arrecinus 2",
+    "lemma": "Argura 1",
+    "next": "Ἀριαῖοι"
+  },
+  {
+    "lemma": "Ἀριαῖοι",
+    "previous": "Argura 1",
+    "next": "Arrabona",
+    "sort_key": "Ariaioi",
     "chapters": [
       {
         "start": 90,
@@ -698,8 +705,11 @@
     ]
   },
   {
+    "lemma": "Arrabona",
+    "previous": "Ἀριαῖοι"
+  },
+  {
     "lemma": "Arrecinus 2",
-    "previous": "Ariaioi",
     "next": "Arrius 17a'",
     "chapters": [
       {
@@ -1168,7 +1178,7 @@
   {
     "lemma": "Chalai",
     "previous": "Cestius 6a",
-    "next": "Claudius 211",
+    "next": "Chalaion",
     "chapters": [
       {
         "start": 148,
@@ -1178,8 +1188,16 @@
     ]
   },
   {
-    "lemma": "Claudius 211",
+    "lemma": "Chalaion",
     "previous": "Chalai",
+    "next": "Chalke 2"
+  },
+  {
+    "lemma": "Chalke 2",
+    "previous": "Chalaion"
+  },
+  {
+    "lemma": "Claudius 211",
     "next": "Claudius 259a",
     "chapters": [
       {
@@ -1192,7 +1210,7 @@
   {
     "lemma": "Claudius 259a",
     "previous": "Claudius 211",
-    "next": "Claudius 288a",
+    "next": "Claudius 262",
     "chapters": [
       {
         "start": 156,
@@ -1202,8 +1220,16 @@
     ]
   },
   {
-    "lemma": "Claudius 288a",
+    "lemma": "Claudius 262",
     "previous": "Claudius 259a",
+    "next": "Claudius 285"
+  },
+  {
+    "lemma": "Claudius 285",
+    "previous": "Claudius 262"
+  },
+  {
+    "lemma": "Claudius 288a",
     "next": "Claudius 299a",
     "chapters": [
       {
@@ -1395,7 +1421,6 @@
   {
     "lemma": "Cosconius 17",
     "previous": "Cornelius 454a",
-    "next": "Crispinus 5a",
     "chapters": [
       {
         "start": 190,
@@ -1405,8 +1430,17 @@
     ]
   },
   {
+    "lemma": "Cossonius 3a",
+    "next": "Crepereius 5a"
+  },
+  {
+    "lemma": "Crepereius 5a",
+    "previous": "Cossonius 3a",
+    "next": "Crispinus 5a"
+  },
+  {
     "lemma": "Crispinus 5a",
-    "previous": "Cosconius 17",
+    "previous": "Crepereius 5a",
     "next": "Cupressenus",
     "chapters": [
       {
@@ -1418,7 +1452,7 @@
   {
     "lemma": "Cupressenus",
     "previous": "Crispinus 5a",
-    "next": "Curtius 36c",
+    "next": "Curtius 37a",
     "chapters": [
       {
         "start": 191,
@@ -1429,7 +1463,6 @@
   },
   {
     "lemma": "Curtius 36c",
-    "previous": "Cupressenus",
     "next": "Curtius 36b",
     "chapters": [
       {
@@ -1442,7 +1475,6 @@
   {
     "lemma": "Curtius 36b",
     "previous": "Curtius 36c",
-    "next": "Cutius 1a",
     "chapters": [
       {
         "start": 192,
@@ -1452,8 +1484,18 @@
     ]
   },
   {
+    "lemma": "Curtius 37a",
+    "previous": "Cupressenus",
+    "next": "Curtius 37b"
+  },
+  {
+    "lemma": "Curtius 37b",
+    "previous": "Curtius 37a",
+    "next": "Cutius 1a"
+  },
+  {
     "lemma": "Cutius 1a",
-    "previous": "Curtius 36b",
+    "previous": "Curtius 37b",
     "next": "Dasumius aa",
     "chapters": [
       {
@@ -1466,7 +1508,7 @@
   {
     "lemma": "Dasumius aa",
     "previous": "Cutius 1a",
-    "next": "Deraia",
+    "next": "Demokritos 6",
     "chapters": [
       {
         "start": 193,
@@ -1476,8 +1518,11 @@
     ]
   },
   {
+    "lemma": "Demokritos 6",
+    "previous": "Dasumius aa"
+  },
+  {
     "lemma": "Deraia",
-    "previous": "Dasumius aa",
     "next": "Didius 10a",
     "chapters": [
       {

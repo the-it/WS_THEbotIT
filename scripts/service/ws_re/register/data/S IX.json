@@ -145,7 +145,6 @@
   {
     "lemma": "Antonius 95a",
     "previous": "Areimanios",
-    "next": "Arekrat",
     "chapters": [
       {
         "start": 12,
@@ -156,8 +155,8 @@
   },
   {
     "lemma": "Arekrat",
-    "previous": "Antonius 95a",
-    "next": "Arranius 1",
+    "previous": "Areimanios",
+    "next": "Argyra 1",
     "chapters": [
       {
         "start": 13,
@@ -167,8 +166,11 @@
     ]
   },
   {
+    "lemma": "Argyra 1",
+    "previous": "Arekrat"
+  },
+  {
     "lemma": "Arranius 1",
-    "previous": "Arekrat",
     "next": "Arranius 2",
     "chapters": [
       {
@@ -205,7 +207,7 @@
   {
     "lemma": "Arsatzia",
     "previous": "Arrotrebarum promunturium",
-    "next": "Aspis 10a",
+    "next": "Ascheion",
     "chapters": [
       {
         "start": 14,
@@ -215,9 +217,11 @@
     ]
   },
   {
+    "lemma": "Ascheion",
+    "previous": "Arsatzia"
+  },
+  {
     "lemma": "Aspis 10a",
-    "previous": "Arsatzia",
-    "next": "Asprenas 1a",
     "chapters": [
       {
         "start": 15,
@@ -227,8 +231,13 @@
     ]
   },
   {
+    "lemma": "Ἀσπὶς ἄκρα",
+    "next": "Asprenas 1a",
+    "sort_key": "Aspis akra"
+  },
+  {
     "lemma": "Asprenas 1a",
-    "previous": "Aspis 10a",
+    "previous": "Ἀσπὶς ἄκρα",
     "next": "Asprius",
     "chapters": [
       {
@@ -337,7 +346,6 @@
   {
     "lemma": "Automedusa 2",
     "previous": "Aurelius 217a",
-    "next": "Claudius 149a",
     "chapters": [
       {
         "start": 18,
@@ -347,9 +355,14 @@
     ]
   },
   {
+    "lemma": "Cassius 84",
+    "next": "Claudius 149a"
+  },
+  {
     "lemma": "Claudius 149a",
-    "previous": "Automedusa 2",
+    "previous": "Cassius 84",
     "next": "Clemens aqua",
+    "redirect": "Aeronius",
     "chapters": [
       {
         "start": 20,
@@ -409,7 +422,6 @@
   {
     "lemma": "Cornelius 398a",
     "previous": "Cornelius 297a",
-    "next": "Crambianae",
     "chapters": [
       {
         "start": 23,
@@ -419,9 +431,13 @@
     ]
   },
   {
+    "lemma": "Cossinius 5",
+    "next": "Crambianae"
+  },
+  {
     "lemma": "Crambianae",
-    "previous": "Cornelius 398a",
-    "next": "Deire 1",
+    "previous": "Cossinius 5",
+    "next": "Cumodina",
     "chapters": [
       {
         "start": 24,
@@ -431,8 +447,18 @@
     ]
   },
   {
-    "lemma": "Deire 1",
+    "lemma": "Cumodina",
     "previous": "Crambianae",
+    "next": "Daitos"
+  },
+  {
+    "lemma": "Daitos",
+    "previous": "Cumodina",
+    "next": "Deire 1"
+  },
+  {
+    "lemma": "Deire 1",
+    "previous": "Daitos",
     "next": "Deire 2",
     "chapters": [
       {
@@ -1608,7 +1634,6 @@
   {
     "lemma": "Nauplia 1",
     "previous": "Munda 3",
-    "next": "Neusis",
     "chapters": [
       {
         "start": 415,
@@ -1618,9 +1643,14 @@
     ]
   },
   {
-    "lemma": "Neusis",
-    "previous": "Nauplia 1",
-    "next": "Neratius 15a",
+    "lemma": "Nerion",
+    "next": "νεῦσις"
+  },
+  {
+    "lemma": "νεῦσις",
+    "previous": "Nerion",
+    "next": "Nikochis",
+    "sort_key": "neusis",
     "chapters": [
       {
         "start": 415,
@@ -1631,8 +1661,6 @@
   },
   {
     "lemma": "Neratius 15a",
-    "previous": "Neusis",
-    "next": "Nikochis",
     "chapters": [
       {
         "start": 416,
@@ -1643,7 +1671,7 @@
   },
   {
     "lemma": "Nikochis",
-    "previous": "Neratius 15a",
+    "previous": "νεῦσις",
     "next": "Ninon",
     "chapters": [
       {

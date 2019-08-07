@@ -1850,7 +1850,6 @@
   {
     "lemma": "Aginatius 4",
     "previous": "Agathon 18",
-    "next": "Aiacius 1a",
     "chapters": [
       {
         "start": 14,
@@ -1858,11 +1857,15 @@
         "author": "Eck"
       }
     ]
+  },
+  {
+    "lemma": "Aiacius 1",
+    "next": "Aiacius 1a"
   },
   {
     "lemma": "Aiacius 1a",
-    "previous": "Aginatius 4",
-    "next": "Aisopos 1",
+    "previous": "Aiacius 1",
+    "next": "Aiacius 2",
     "chapters": [
       {
         "start": 14,
@@ -1872,8 +1875,11 @@
     ]
   },
   {
+    "lemma": "Aiacius 2",
+    "previous": "Aiacius 1a"
+  },
+  {
     "lemma": "Aisopos 1",
-    "previous": "Aiacius 1a",
     "next": "Aius 2",
     "chapters": [
       {
@@ -1886,7 +1892,6 @@
   {
     "lemma": "Aius 2",
     "previous": "Aisopos 1",
-    "next": "Akomena",
     "chapters": [
       {
         "start": 40,
@@ -1896,8 +1901,12 @@
     ]
   },
   {
+    "lemma": "Akalissos",
+    "next": "Akomena"
+  },
+  {
     "lemma": "Akomena",
-    "previous": "Aius 2",
+    "previous": "Akalissos",
     "next": "Alexandros 108",
     "chapters": [
       {
@@ -3050,7 +3059,7 @@
   {
     "lemma": "Castus 1a",
     "previous": "Cassius 94",
-    "next": "Ceionius 24",
+    "next": "Catius 6",
     "chapters": [
       {
         "start": 87,
@@ -3060,20 +3069,13 @@
     ]
   },
   {
-    "lemma": "Ceionius 24",
+    "lemma": "Catius 6",
     "previous": "Castus 1a",
-    "next": "Catius 6a",
-    "chapters": [
-      {
-        "start": 87,
-        "end": 88,
-        "author": "Thomas"
-      }
-    ]
+    "next": "Catius 6a"
   },
   {
     "lemma": "Catius 6a",
-    "previous": "Ceionius 24",
+    "previous": "Catius 6",
     "next": "Catius 6b",
     "chapters": [
       {
@@ -3143,7 +3145,7 @@
   {
     "lemma": "Celer 16",
     "previous": "Ceionius 24a",
-    "next": "Cerellius 5",
+    "next": "Cerellius 1",
     "chapters": [
       {
         "start": 89,
@@ -3153,8 +3155,13 @@
     ]
   },
   {
-    "lemma": "Cerellius 5",
+    "lemma": "Cerellius 1",
     "previous": "Celer 16",
+    "next": "Cerellius 5"
+  },
+  {
+    "lemma": "Cerellius 5",
+    "previous": "Cerellius 1",
     "next": "Cetium (bzw. Cetius mons",
     "chapters": [
       {
@@ -3347,7 +3354,7 @@
   {
     "lemma": "Claudius 273a",
     "previous": "Claudius 241a",
-    "next": "Claudius 342a",
+    "next": "Claudius 319",
     "chapters": [
       {
         "start": 101,
@@ -3357,8 +3364,13 @@
     ]
   },
   {
-    "lemma": "Claudius 342a",
+    "lemma": "Claudius 319",
     "previous": "Claudius 273a",
+    "next": "Claudius 342a"
+  },
+  {
+    "lemma": "Claudius 342a",
+    "previous": "Claudius 319",
     "next": "Claudius 349a",
     "chapters": [
       {
@@ -3664,6 +3676,7 @@
   },
   {
     "lemma": "Cornelius 442a",
+    "previous": null,
     "next": "Cos(s)inius 5a",
     "chapters": [
       {
@@ -3724,7 +3737,7 @@
   {
     "lemma": "Cuspius 1a",
     "previous": "Curvius 2",
-    "next": "Damocharis 2",
+    "next": "Cutius 1a",
     "chapters": [
       {
         "start": 110,
@@ -3734,8 +3747,13 @@
     ]
   },
   {
-    "lemma": "Damocharis 2",
+    "lemma": "Cutius 1a",
     "previous": "Cuspius 1a",
+    "next": "Damocharis 2"
+  },
+  {
+    "lemma": "Damocharis 2",
+    "previous": "Cutius 1a",
     "next": "Damocratia",
     "chapters": [
       {
@@ -3772,7 +3790,8 @@
   {
     "lemma": "Decimius 10a",
     "previous": "Danacia",
-    "next": "Demokrates 11a",
+    "next": "Demetrianus 5",
+    "sort_key": "Decimius 010a",
     "chapters": [
       {
         "start": 111,
@@ -3783,7 +3802,6 @@
   },
   {
     "lemma": "Demokrates 11a",
-    "previous": "Decimius 10a",
     "next": "Dentilianus 2",
     "chapters": [
       {
@@ -3808,7 +3826,6 @@
   {
     "lemma": "Dexius 4",
     "previous": "Dentilianus 2",
-    "next": "Demetrianus 5",
     "chapters": [
       {
         "start": 111,
@@ -3819,8 +3836,8 @@
   },
   {
     "lemma": "Demetrianus 5",
-    "previous": "Dexius 4",
-    "next": "digitorum computus",
+    "previous": "Decimius 10a",
+    "next": "Demokrates 11a",
     "chapters": [
       {
         "start": 112,
@@ -3831,7 +3848,6 @@
   },
   {
     "lemma": "digitorum computus",
-    "previous": "Demetrianus 5",
     "next": "Domitius 63a",
     "chapters": [
       {

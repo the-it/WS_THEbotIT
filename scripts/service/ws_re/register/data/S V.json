@@ -195,7 +195,6 @@
   {
     "lemma": "Athenagoras 9a",
     "previous": "Asklepiades 51",
-    "next": "Attius 10a",
     "chapters": [
       {
         "start": 46,
@@ -205,9 +204,13 @@
     ]
   },
   {
+    "lemma": "Athenodoros 19",
+    "next": "Attius 10a"
+  },
+  {
     "lemma": "Attius 10a",
-    "previous": "Athenagoras 9a",
-    "next": "Battus, Bacchus",
+    "previous": "Athenodoros 19",
+    "next": "Autrico",
     "chapters": [
       {
         "start": 55,
@@ -218,7 +221,6 @@
   },
   {
     "lemma": "Battus, Bacchus",
-    "previous": "Attius 10a",
     "next": "Autrico",
     "chapters": [
       {
@@ -291,7 +293,7 @@
   {
     "lemma": "Claudius 41a",
     "previous": "Cheirisophos 1a",
-    "next": "Cornelius 371a",
+    "next": "Claudius 82",
     "chapters": [
       {
         "start": 59,
@@ -301,8 +303,14 @@
     ]
   },
   {
-    "lemma": "Cornelius 371a",
+    "lemma": "Claudius 82",
     "previous": "Claudius 41a",
+    "next": "Cornelius 371a",
+    "sort_key": "Claudius 082"
+  },
+  {
+    "lemma": "Cornelius 371a",
+    "previous": "Claudius 82",
     "next": "Delphoi",
     "chapters": [
       {
