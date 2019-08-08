@@ -310,7 +310,7 @@
   {
     "lemma": "Ammatas",
     "previous": "Aelius 15a",
-    "next": "Anartii",
+    "next": "Amythaon 2",
     "chapters": [
       {
         "start": 29,
@@ -320,9 +320,17 @@
     ]
   },
   {
+    "lemma": "Amythaon 2",
+    "previous": "Ammatas"
+  },
+  {
+    "lemma": "Anaphe",
+    "next": "Anartii"
+  },
+  {
     "lemma": "Anartii",
-    "previous": "Ammatas",
-    "next": "Anatomie",
+    "previous": "Anaphe",
+    "next": "Andreas 11",
     "chapters": [
       {
         "start": 38,
@@ -332,20 +340,13 @@
     ]
   },
   {
-    "lemma": "Anatomie",
+    "lemma": "Andreas 11",
     "previous": "Anartii",
-    "next": "Androkles 11",
-    "chapters": [
-      {
-        "start": 38,
-        "end": 48,
-        "author": "Kudlien"
-      }
-    ]
+    "next": "Androkles 11"
   },
   {
     "lemma": "Androkles 11",
-    "previous": "Anatomie",
+    "previous": "Andreas 11",
     "next": "Anduit",
     "chapters": [
       {
@@ -384,7 +385,12 @@
     "previous": "Angeiologia"
   },
   {
+    "lemma": "Antiocheia 15",
+    "next": "Antiphilos 3c"
+  },
+  {
     "lemma": "Antiphilos 3c",
+    "previous": "Antiocheia 15",
     "next": "Antonius 100a",
     "chapters": [
       {
@@ -445,7 +451,6 @@
   {
     "lemma": "Arabiates",
     "previous": "Apollinarios 2",
-    "next": "Archelaos 10a",
     "chapters": [
       {
         "start": 131,
@@ -455,9 +460,13 @@
     ]
   },
   {
+    "lemma": "Aravisci",
+    "next": "Archelaos 10a"
+  },
+  {
     "lemma": "Archelaos 10a",
-    "previous": "Arabiates",
-    "next": "Aristoteles 25",
+    "previous": "Aravisci",
+    "next": "Archilochos 2",
     "chapters": [
       {
         "start": 136,
@@ -467,8 +476,17 @@
     ]
   },
   {
-    "lemma": "Aristoteles 25",
+    "lemma": "Archilochos 2",
     "previous": "Archelaos 10a",
+    "next": null
+  },
+  {
+    "lemma": "Aristoteles 18",
+    "next": "Aristoteles 25"
+  },
+  {
+    "lemma": "Aristoteles 25",
+    "previous": "Aristoteles 18",
     "next": "Arsaciana",
     "chapters": [
       {
@@ -490,7 +508,12 @@
     ]
   },
   {
+    "lemma": "Arteriotomia",
+    "next": "Asea 1"
+  },
+  {
     "lemma": "Asea 1",
+    "previous": "Arteriotomia",
     "next": "Asklepiades 52"
   },
   {
@@ -520,7 +543,7 @@
   {
     "lemma": "Bacensis civitas",
     "previous": "Aurelius 127b",
-    "next": "Basoretensis vicus",
+    "next": "Bagaudae",
     "chapters": [
       {
         "start": 346,
@@ -530,8 +553,13 @@
     ]
   },
   {
-    "lemma": "Basoretensis vicus",
+    "lemma": "Bagaudae",
     "previous": "Bacensis civitas",
+    "next": "Basoretensis vicus"
+  },
+  {
+    "lemma": "Basoretensis vicus",
+    "previous": "Bagaudae",
     "next": "Bianor 5a",
     "chapters": [
       {
@@ -556,7 +584,7 @@
   {
     "lemma": "Bilachiniensis statio",
     "previous": "Bianor 5a",
-    "next": "Calcinius",
+    "next": "Brauron",
     "chapters": [
       {
         "start": 355,
@@ -566,8 +594,18 @@
     ]
   },
   {
-    "lemma": "Calcinius",
+    "lemma": "Brauron",
     "previous": "Bilachiniensis statio",
+    "next": "Bryson 1"
+  },
+  {
+    "lemma": "Bryson 1",
+    "previous": "Brauron",
+    "next": "Calcinius"
+  },
+  {
+    "lemma": "Calcinius",
+    "previous": "Bryson 1",
     "next": "Calpurnius 56a",
     "chapters": [
       {
@@ -643,7 +681,8 @@
   },
   {
     "lemma": "Clementianus 2",
-    "next": "Claudius 211a",
+    "previous": "Claudius 211a",
+    "next": "Constantia 6",
     "chapters": [
       {
         "start": 371,
@@ -653,9 +692,11 @@
     ]
   },
   {
+    "lemma": "Constantia 6",
+    "previous": "Clementianus 2"
+  },
+  {
     "lemma": "Claudius 211a",
-    "previous": "Clementianus 2",
-    "next": "Cornelius 395",
     "chapters": [
       {
         "start": 372,
@@ -665,8 +706,12 @@
     ]
   },
   {
+    "lemma": "Cornacates",
+    "next": "Cornelius 395"
+  },
+  {
     "lemma": "Cornelius 395",
-    "previous": "Claudius 211a",
+    "previous": "Cornacates",
     "next": "Cuneus 4",
     "chapters": [
       {
@@ -1059,7 +1104,7 @@
   {
     "lemma": "Iosista",
     "previous": "Incerum",
-    "next": "Kallistratos 36a",
+    "next": "Isthmos 1",
     "chapters": [
       {
         "start": 850,
@@ -1069,20 +1114,13 @@
     ]
   },
   {
-    "lemma": "Kallistratos 36a",
+    "lemma": "Isthmos 1",
     "previous": "Iosista",
-    "next": "Iucundus 3a",
-    "chapters": [
-      {
-        "start": 853,
-        "end": 853,
-        "author": "Stoessl"
-      }
-    ]
+    "next": "Iucundus 3a"
   },
   {
     "lemma": "Iucundus 3a",
-    "previous": "Kallistratos 36a",
+    "previous": "Isthmos 1",
     "next": "Kauaroi",
     "chapters": [
       {
@@ -2141,7 +2179,6 @@
   {
     "lemma": "Zengisa",
     "previous": "Zenertis",
-    "next": "Cornelius 395",
     "redirect": true,
     "chapters": [
       {
@@ -2151,9 +2188,13 @@
     ]
   },
   {
+    "lemma": "Zeugisa",
+    "next": "Cornelius 395"
+  },
+  {
     "lemma": "Cornelius 395",
-    "previous": "Zengisa",
-    "next": "Manneianis",
+    "previous": "Zeugisa",
+    "next": "Maes Titianus",
     "chapters": [
       {
         "start": 1365,
@@ -2163,8 +2204,11 @@
     ]
   },
   {
+    "lemma": "Maes Titianus",
+    "previous": "Cornelius 395"
+  },
+  {
     "lemma": "Manneianis",
-    "previous": "Cornelius 395",
     "chapters": [
       {
         "start": 1365,

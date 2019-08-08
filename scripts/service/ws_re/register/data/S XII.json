@@ -419,7 +419,6 @@
   {
     "lemma": "Agesilaos 7b",
     "previous": "Aemilius 171a",
-    "next": "Akephalos",
     "chapters": [
       {
         "start": 4,
@@ -429,8 +428,12 @@
     ]
   },
   {
+    "lemma": "Αἰνύρων χῶρος",
+    "next": "Akephalos"
+  },
+  {
     "lemma": "Akephalos",
-    "previous": "Agesilaos 7b",
+    "previous": "Αἰνύρων χῶρος",
     "next": "Alba 6a",
     "chapters": [
       {
@@ -443,7 +446,7 @@
   {
     "lemma": "Alba 6a",
     "previous": "Akephalos",
-    "next": "Albius 14",
+    "next": "Albinus 4",
     "chapters": [
       {
         "start": 14,
@@ -453,8 +456,13 @@
     ]
   },
   {
-    "lemma": "Albius 14",
+    "lemma": "Albinus 4",
     "previous": "Alba 6a",
+    "next": "Albius 14"
+  },
+  {
+    "lemma": "Albius 14",
+    "previous": "Albinus 4",
     "next": "Albucius 5",
     "chapters": [
       {
@@ -467,7 +475,7 @@
   {
     "lemma": "Albucius 5",
     "previous": "Albius 14",
-    "next": "Alkmaion 6",
+    "next": "Aliphera",
     "chapters": [
       {
         "start": 22,
@@ -477,8 +485,13 @@
     ]
   },
   {
-    "lemma": "Alkmaion 6",
+    "lemma": "Aliphera",
     "previous": "Albucius 5",
+    "next": "Alkmaion 6"
+  },
+  {
+    "lemma": "Alkmaion 6",
+    "previous": "Aliphera",
     "next": "Allius 1a",
     "chapters": [
       {
@@ -492,6 +505,7 @@
     "lemma": "Allius 1a",
     "previous": "Alkmaion 6",
     "next": "In Alpe Iulia",
+    "sort_key": "Allius 01a",
     "chapters": [
       {
         "start": 26,
@@ -567,6 +581,7 @@
     "lemma": "Annius 65a",
     "previous": "Annidius (Adsidius?) Severus",
     "next": "Annius 66a",
+    "sort_key": "Annius 065a",
     "chapters": [
       {
         "start": 87,
@@ -590,7 +605,6 @@
   {
     "lemma": "Antipatros 15a",
     "previous": "Annius 66a",
-    "next": "Antonius 35a",
     "chapters": [
       {
         "start": 87,
@@ -600,9 +614,14 @@
     ]
   },
   {
+    "lemma": "Antius 10",
+    "next": "Antonius 35a"
+  },
+  {
     "lemma": "Antonius 35a",
-    "previous": "Antipatros 15a",
-    "next": "Antonius 51a",
+    "previous": "Antius 10",
+    "next": "Antonius 36",
+    "sort_key": "Antonius 035a",
     "chapters": [
       {
         "start": 88,
@@ -610,11 +629,13 @@
         "author": "Hanslik"
       }
     ]
+  },
+  {
+    "lemma": "Antonius 36",
+    "previous": "Antonius 35a"
   },
   {
     "lemma": "Antonius 51a",
-    "previous": "Antonius 35a",
-    "next": "Antonius 63a",
     "chapters": [
       {
         "start": 88,
@@ -622,11 +643,16 @@
         "author": "Hanslik"
       }
     ]
+  },
+  {
+    "lemma": "Antonius 58a",
+    "next": "Antonius 63a"
   },
   {
     "lemma": "Antonius 63a",
-    "previous": "Antonius 51a",
-    "next": "Antonius 75.76",
+    "previous": "Antonius 58a",
+    "next": "Antonius 65",
+    "sort_key": "Antonius 063a",
     "chapters": [
       {
         "start": 88,
@@ -636,8 +662,11 @@
     ]
   },
   {
+    "lemma": "Antonius 65",
+    "previous": "Antonius 63a"
+  },
+  {
     "lemma": "Antonius 75.76",
-    "previous": "Antonius 63a",
     "next": "Appuleius 13",
     "chapters": [
       {
@@ -662,7 +691,7 @@
   {
     "lemma": "Appuleius 14",
     "previous": "Appuleius 13",
-    "next": "Arcani",
+    "next": "Aquilius 18",
     "chapters": [
       {
         "start": 89,
@@ -672,8 +701,11 @@
     ]
   },
   {
+    "lemma": "Aquilius 18",
+    "previous": "Appuleius 14"
+  },
+  {
     "lemma": "Arcani",
-    "previous": "Appuleius 14",
     "next": "Apicatus",
     "chapters": [
       {
@@ -696,10 +728,11 @@
   },
   {
     "lemma": "Argura 1",
-    "next": "Ἀριαῖοι"
+    "previous": "Arcani",
+    "next": "Ariaioi"
   },
   {
-    "lemma": "Ἀριαῖοι",
+    "lemma": "Ariaioi",
     "previous": "Argura 1",
     "next": "Arrabona",
     "sort_key": "Ariaioi",
@@ -713,7 +746,7 @@
   },
   {
     "lemma": "Arrabona",
-    "previous": "Ἀριαῖοι"
+    "previous": "Ariaioi"
   },
   {
     "lemma": "Arrecinus 2",
@@ -741,7 +774,7 @@
   {
     "lemma": "Arrius 31a",
     "previous": "Arrius 17a'",
-    "next": "Arsinoë 12a",
+    "next": "Arsinoë 12",
     "chapters": [
       {
         "start": 98,
@@ -751,9 +784,14 @@
     ]
   },
   {
-    "lemma": "Arsinoë 12a",
+    "lemma": "Arsinoë 12",
     "previous": "Arrius 31a",
-    "next": "Articuleius 3a",
+    "next": "Arsinoë 12a"
+  },
+  {
+    "lemma": "Arsinoë 12a",
+    "previous": "Arsinoë 12",
+    "next": "Arsinoë 15",
     "chapters": [
       {
         "start": 99,
@@ -763,8 +801,13 @@
     ]
   },
   {
-    "lemma": "Articuleius 3a",
+    "lemma": "Arsinoë 15",
     "previous": "Arsinoë 12a",
+    "next": "Articuleius 3a"
+  },
+  {
+    "lemma": "Articuleius 3a",
+    "previous": "Arsinoë 15",
     "next": "Artorius 7a",
     "chapters": [
       {
@@ -789,7 +832,6 @@
   {
     "lemma": "Asinius 8a",
     "previous": "Artorius 7a",
-    "next": "Athenaios 12a",
     "chapters": [
       {
         "start": 99,
@@ -799,8 +841,12 @@
     ]
   },
   {
+    "lemma": "Astydamas 2",
+    "next": "Athenaios 12a"
+  },
+  {
     "lemma": "Athenaios 12a",
-    "previous": "Asinius 8a",
+    "previous": "Astydamas 2",
     "next": "Aurelius 141a",
     "chapters": [
       {
@@ -1077,7 +1123,7 @@
   {
     "lemma": "Calpurnius 123a",
     "previous": "Calpurnius 60a",
-    "next": "Caltinus(?)",
+    "next": "Caltinus",
     "chapters": [
       {
         "start": 135,
@@ -1087,9 +1133,9 @@
     ]
   },
   {
-    "lemma": "Caltinus(?)",
+    "lemma": "Caltinus",
     "previous": "Calpurnius 123a",
-    "next": "Caravantis",
+    "next": "Campanius 1",
     "chapters": [
       {
         "start": 135,
@@ -1099,8 +1145,11 @@
     ]
   },
   {
+    "lemma": "Campanius 1",
+    "previous": "Caltinus"
+  },
+  {
     "lemma": "Caravantis",
-    "previous": "Caltinus(?)",
     "next": "Caravantius",
     "chapters": [
       {
@@ -1161,7 +1210,6 @@
   {
     "lemma": "Egrilius 2a",
     "previous": "Catienus 1b",
-    "next": "Cestius 6a",
     "chapters": [
       {
         "start": 141,
@@ -1171,8 +1219,12 @@
     ]
   },
   {
+    "lemma": "Celeia",
+    "next": "Cestius 6a"
+  },
+  {
     "lemma": "Cestius 6a",
-    "previous": "Egrilius 2a",
+    "previous": "Celeia",
     "next": "Chalai",
     "chapters": [
       {
@@ -1201,7 +1253,8 @@
   },
   {
     "lemma": "Chalke 2",
-    "previous": "Chalaion"
+    "previous": "Chalaion",
+    "next": null
   },
   {
     "lemma": "Claudius 211",
@@ -1273,7 +1326,6 @@
   {
     "lemma": "Clodius 31a",
     "previous": "Claudius 306a",
-    "next": "Cocceius 1b",
     "chapters": [
       {
         "start": 157,
@@ -1283,8 +1335,12 @@
     ]
   },
   {
+    "lemma": "Clodius 56",
+    "next": "Cocceius 1b"
+  },
+  {
     "lemma": "Cocceius 1b",
-    "previous": "Clodius 31a",
+    "previous": "Clodius 56",
     "next": "Coelius 22a",
     "chapters": [
       {
@@ -3235,7 +3291,7 @@
   {
     "lemma": "Arborius 5",
     "previous": "Thukydides 1",
-    "next": "Archedemos 5.6",
+    "next": "Archedemos 5",
     "chapters": [
       {
         "start": 1355,
@@ -3245,21 +3301,19 @@
     ]
   },
   {
-    "lemma": "Archedemos 5.6",
+    "lemma": "Archedemos 5",
     "previous": "Arborius 5",
-    "next": "Arinthaeus 3",
-    "chapters": [
-      {
-        "start": 1356,
-        "end": 1392,
-        "author": "Schmidt"
-      }
-    ]
+    "next": "Archedemos 6"
+  },
+  {
+    "lemma": "Archedemos 6",
+    "previous": "Archedemos 5",
+    "next": "Arinthaeus 3"
   },
   {
     "lemma": "Arinthaeus 3",
-    "previous": "Archedemos 5.6",
-    "next": "Camundus",
+    "previous": "Archedemos 6",
+    "next": "Aristophanes 12",
     "chapters": [
       {
         "start": 1392,
@@ -3269,8 +3323,11 @@
     ]
   },
   {
+    "lemma": "Aristophanes 12",
+    "previous": "Arinthaeus 3"
+  },
+  {
     "lemma": "Camundus",
-    "previous": "Arinthaeus 3",
     "next": "Poreston",
     "chapters": [
       {

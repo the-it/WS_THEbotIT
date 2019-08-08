@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Agamemnon 3",
+    "previous": null,
     "next": "Agathon 14b",
     "chapters": [
       {
@@ -60,7 +61,6 @@
   },
   {
     "lemma": "Anaxenor 2",
-    "next": "Antidotos 6",
     "chapters": [
       {
         "start": 1,
@@ -71,8 +71,8 @@
   },
   {
     "lemma": "Antidotos 6",
-    "previous": "Anaxenor 2",
-    "next": "Antisemitismus",
+    "previous": "Anaxenor 1",
+    "next": "Antigonos 24",
     "chapters": [
       {
         "start": 1,
@@ -82,9 +82,23 @@
     ]
   },
   {
+    "lemma": "Antigonos 24",
+    "previous": "Antidotos 6"
+  },
+  {
+    "lemma": "Antiochos 68",
+    "next": "Antiochos 65"
+  },
+  {
+    "lemma": "Antiochos 65",
+    "previous": "Antiochos 68",
+    "next": "Antisemitismus"
+  },
+  {
     "lemma": "Antisemitismus",
-    "previous": "Antidotos 6",
+    "previous": "Antiochos 65",
     "next": "Apelles 5a",
+    "wp_link": "w:de:Antisemitismus",
     "chapters": [
       {
         "start": 3,
@@ -96,7 +110,7 @@
   {
     "lemma": "Apelles 5a",
     "previous": "Antisemitismus",
-    "next": "Apollodoros 41e",
+    "next": "Apollodoros 41a",
     "chapters": [
       {
         "start": 43,
@@ -106,23 +120,23 @@
     ]
   },
   {
-    "lemma": "Apollodoros 41e",
+    "lemma": "Apollodoros 41a",
     "previous": "Apelles 5a",
-    "next": "Apollonios 114",
-    "chapters": [
-      {
-        "start": 43,
-        "end": 43,
-        "author": "Fiehn"
-      }
-    ]
+    "next": "Apollonios 114"
   },
   {
     "lemma": "Apollonios 114",
-    "previous": "Apollodoros 41e"
+    "previous": "Apollodoros 41a",
+    "next": "Apollonios 122"
+  },
+  {
+    "lemma": "Apollonios 122",
+    "previous": "Apollonios 114",
+    "next": "Apollonios 126b"
   },
   {
     "lemma": "Apollonios 126b",
+    "previous": "Apollonios 122",
     "next": "Aquilinus 1",
     "chapters": [
       {
@@ -171,7 +185,7 @@
   {
     "lemma": "Ariston 62a",
     "previous": "Aristeides 23a",
-    "next": "Asklepiades 51",
+    "next": "Asalmanos",
     "chapters": [
       {
         "start": 46,
@@ -181,8 +195,13 @@
     ]
   },
   {
-    "lemma": "Asklepiades 51",
+    "lemma": "Asalmanos",
     "previous": "Ariston 62a",
+    "next": "Asklepiades 51"
+  },
+  {
+    "lemma": "Asklepiades 51",
+    "previous": "Asalmanos",
     "next": "Athenagoras 9a",
     "redirect": true,
     "chapters": [
@@ -677,7 +696,7 @@
   {
     "lemma": "Goneus",
     "previous": "Glykon 6",
-    "next": "Herakleitos 16a",
+    "next": "Hephaistodoros",
     "chapters": [
       {
         "start": 228,
@@ -688,7 +707,6 @@
   },
   {
     "lemma": "Herakleitos 16a",
-    "previous": "Goneus",
     "next": "Herpyllis",
     "chapters": [
       {
@@ -929,7 +947,6 @@
   {
     "lemma": "Issa 3",
     "previous": "Ismeni",
-    "next": "Iulius 76a",
     "chapters": [
       {
         "start": 346,
@@ -939,9 +956,13 @@
     ]
   },
   {
+    "lemma": "Judex",
+    "next": "Iulius 76a"
+  },
+  {
     "lemma": "Iulius 76a",
-    "previous": "Issa 3",
-    "next": "Iunius 21b",
+    "previous": "Judex",
+    "next": "Iunius 21a",
     "chapters": [
       {
         "start": 355,
@@ -951,8 +972,11 @@
     ]
   },
   {
+    "lemma": "Iunius 21a",
+    "previous": "Iulius 76a"
+  },
+  {
     "lemma": "Iunius 21b",
-    "previous": "Iulius 76a",
     "next": "Iunius 46a",
     "chapters": [
       {
@@ -1397,7 +1421,7 @@
   {
     "lemma": "Legeon",
     "previous": "Lecho",
-    "next": "Lekythos 2",
+    "next": "Lekythos",
     "chapters": [
       {
         "start": 546,
@@ -1407,8 +1431,11 @@
     ]
   },
   {
+    "lemma": "Lekythos",
+    "previous": "Legeon"
+  },
+  {
     "lemma": "Lekythos 2",
-    "previous": "Legeon",
     "next": "Lemniskos",
     "chapters": [
       {
@@ -4046,7 +4073,6 @@
   {
     "lemma": "Maximus 127a",
     "previous": "Maximus 127",
-    "next": "Maximus 128",
     "chapters": [
       {
         "start": 679,
@@ -4057,8 +4083,8 @@
   },
   {
     "lemma": "Maximus 128",
-    "previous": "Maximus 127a",
-    "next": "Mazdaismus",
+    "previous": "Maximus 127",
+    "next": "Maximus 129",
     "chapters": [
       {
         "start": 679,
@@ -4069,7 +4095,6 @@
   },
   {
     "lemma": "Mazdaismus",
-    "previous": "Maximus 128",
     "next": "Maximus 129",
     "chapters": [
       {

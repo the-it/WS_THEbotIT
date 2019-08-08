@@ -89,24 +89,17 @@
   {
     "lemma": "Agesistratos",
     "previous": "Afranius 10a",
-    "next": "Aiacius 3",
+    "next": "Aiacius 2",
     "redirect": "Athenaios 23"
   },
   {
-    "lemma": "Aiacius 3",
+    "lemma": "Aiacius 2",
     "previous": "Agesistratos",
-    "next": "Albiobola",
-    "chapters": [
-      {
-        "start": 3,
-        "end": 3,
-        "author": "Groag"
-      }
-    ]
+    "next": "Albiobola"
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 3",
+    "previous": "Aiacius 2",
     "next": "Alexandros 90a",
     "chapters": [
       {
@@ -265,11 +258,17 @@
   {
     "lemma": "Aresaces",
     "previous": "Areliascus",
-    "next": null
+    "next": "Aretalogoi"
+  },
+  {
+    "lemma": "Aretalogoi",
+    "previous": "Aresaces",
+    "next": "Arinistae"
   },
   {
     "lemma": "Arinistae",
-    "next": "Arrius 19a",
+    "previous": "Aretalogoi",
+    "next": "Arrius 13",
     "chapters": [
       {
         "start": 16,
@@ -279,8 +278,11 @@
     ]
   },
   {
+    "lemma": "Arrius 13",
+    "previous": "Arinistae"
+  },
+  {
     "lemma": "Arrius 19a",
-    "previous": "Arinistae",
     "next": "Asellius 1a",
     "chapters": [
       {
@@ -412,6 +414,7 @@
   },
   {
     "lemma": "Butra",
+    "previous": null,
     "next": "Caburriates",
     "chapters": [
       {
@@ -424,7 +427,7 @@
   {
     "lemma": "Caburriates",
     "previous": "Butra",
-    "next": "Caedici(i)",
+    "next": "Caecina 22",
     "chapters": [
       {
         "start": 18,
@@ -434,8 +437,16 @@
     ]
   },
   {
+    "lemma": "Caecina 22",
+    "previous": "Caburriates"
+  },
+  {
+    "lemma": "Caecina 23",
+    "next": "Caedici(i)"
+  },
+  {
     "lemma": "Caedici(i)",
-    "previous": "Caburriates",
+    "previous": "Caecina 23",
     "next": "Caedicii vicus",
     "chapters": [
       {
@@ -592,7 +603,6 @@
   {
     "lemma": "Calvisius 10",
     "previous": "Calvisius 9",
-    "next": "Camalatrum(?)",
     "chapters": [
       {
         "start": 20,
@@ -602,8 +612,12 @@
     ]
   },
   {
+    "lemma": "Calvisius 19",
+    "next": "Camalatrum(?)"
+  },
+  {
     "lemma": "Camalatrum(?)",
-    "previous": "Calvisius 10",
+    "previous": "Calvisius 19",
     "next": "Camere",
     "chapters": [
       {
@@ -628,6 +642,7 @@
   {
     "lemma": "Canianus saltus",
     "previous": "Camere",
+    "next": "Caninius 7",
     "chapters": [
       {
         "start": 20,
@@ -638,6 +653,7 @@
   },
   {
     "lemma": "Caninius 7",
+    "previous": "Canianus saltus",
     "next": "Canta"
   },
   {
@@ -914,7 +930,7 @@
   {
     "lemma": "Colonia 34a",
     "previous": "Coelius 7a",
-    "next": "Claudius 187. 188. 194",
+    "next": "Comberania",
     "chapters": [
       {
         "start": 23,
@@ -925,8 +941,6 @@
   },
   {
     "lemma": "Claudius 187. 188. 194",
-    "previous": "Colonia 34a",
-    "next": "Claudius 415",
     "chapters": [
       {
         "start": 24,
@@ -936,8 +950,13 @@
     ]
   },
   {
+    "lemma": "Claudius 357",
+    "next": "Claudius 415"
+  },
+  {
     "lemma": "Claudius 415",
-    "previous": "Claudius 187. 188. 194",
+    "previous": "Claudius 357",
+    "next": "Coeba(?)",
     "chapters": [
       {
         "start": 24,
@@ -947,7 +966,6 @@
   },
   {
     "lemma": "Comberania",
-    "previous": "Colonia 34a",
     "next": "Cornelius 145",
     "chapters": [
       {
@@ -2577,7 +2595,6 @@
   {
     "lemma": "Maximinus 21a",
     "previous": "Matoas",
-    "next": "Maximus 128",
     "chapters": [
       {
         "start": 283,
@@ -2587,8 +2604,12 @@
     ]
   },
   {
+    "lemma": "Maximinus 5",
+    "next": "Maximus 128"
+  },
+  {
     "lemma": "Maximus 128",
-    "previous": "Maximinus 21a",
+    "previous": "Maximinus 5",
     "next": "Media provincia",
     "chapters": [
       {
