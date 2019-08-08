@@ -92,7 +92,7 @@
   {
     "lemma": "Alpium Iuliarum Claustra",
     "previous": "Africa 2",
-    "next": "Athenai 1B",
+    "next": "Apollonios 71",
     "chapters": [
       {
         "start": 11,
@@ -102,21 +102,22 @@
     ]
   },
   {
-    "lemma": "Athenai 1B",
+    "lemma": "Apollonios 71",
     "previous": "Alpium Iuliarum Claustra",
+    "next": "Athenai 1c"
+  },
+  {
+    "lemma": "Athenai 1c",
+    "previous": "Apollonios 71",
     "next": "Chlodovechus",
-    "chapters": [
-      {
-        "start": 56,
-        "end": 140,
-        "author": "Zschietzschmann"
-      }
-    ]
+    "wp_link": "w:de:Athen",
+    "ws_link": "s:de:Athen"
   },
   {
     "lemma": "Chlodovechus",
-    "previous": "Athenai 1B",
-    "next": "Kallimachos 6",
+    "previous": "Athenai 1c",
+    "next": "Iuvavum",
+    "wp_link": "w:de:Chlodwig I.",
     "chapters": [
       {
         "start": 139,
@@ -126,8 +127,11 @@
     ]
   },
   {
+    "lemma": "Iuvavum",
+    "previous": "Chlodovechus"
+  },
+  {
     "lemma": "Kallimachos 6",
-    "previous": "Chlodovechus",
     "next": "Lykia",
     "chapters": [
       {
@@ -224,7 +228,7 @@
   {
     "lemma": "Theseus 1",
     "previous": "Theodosios 11",
-    "next": "Tullius 29",
+    "next": "M. Tullius Cicero",
     "chapters": [
       {
         "start": 1045,
@@ -234,8 +238,11 @@
     ]
   },
   {
+    "lemma": "M. Tullius Cicero",
+    "previous": "Theseus 1"
+  },
+  {
     "lemma": "Tullius 29",
-    "previous": "Theseus 1",
     "chapters": [
       {
         "start": 1237,

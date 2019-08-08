@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Achaios 8",
+    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -37,7 +38,7 @@
   {
     "lemma": "Aisopos 6",
     "previous": "Agathokles 36",
-    "next": "Alexandri(a)na aqua",
+    "next": "Alexandrina aqua",
     "chapters": [
       {
         "start": 1,
@@ -47,20 +48,13 @@
     ]
   },
   {
-    "lemma": "Alexandri(a)na aqua",
+    "lemma": "Alexandrina aqua",
     "previous": "Aisopos 6",
-    "next": "Alko",
-    "chapters": [
-      {
-        "start": 1,
-        "end": 2,
-        "author": "Buren"
-      }
-    ]
+    "next": "Alko"
   },
   {
     "lemma": "Alko",
-    "previous": "Alexandri(a)na aqua",
+    "previous": "Alexandrina aqua",
     "next": "Alsietina aqua",
     "chapters": [
       {
@@ -625,7 +619,6 @@
   {
     "lemma": "Claudius 354a",
     "previous": "Claudia aqua",
-    "next": "Conclusa aqua",
     "chapters": [
       {
         "start": 22,
@@ -636,7 +629,8 @@
   },
   {
     "lemma": "Damokritos 4",
-    "next": "Demokydes",
+    "previous": "Dalmatia",
+    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -647,7 +641,6 @@
   },
   {
     "lemma": "Demokydes",
-    "previous": "Damokritos 4",
     "next": "Die(i)trephes",
     "chapters": [
       {
@@ -672,7 +665,6 @@
   {
     "lemma": "Diodoros 13",
     "previous": "Die(i)trephes",
-    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -683,7 +675,7 @@
   },
   {
     "lemma": "December 2",
-    "previous": "Diodoros 13",
+    "previous": "Damokritos 4",
     "next": "Demetrios 125b",
     "chapters": [
       {
@@ -696,7 +688,6 @@
   {
     "lemma": "Demetrios 125b",
     "previous": "December 2",
-    "next": "Dionysios 161b",
     "chapters": [
       {
         "start": 60,
@@ -704,11 +695,16 @@
         "author": "Lippold, Georg"
       }
     ]
+  },
+  {
+    "lemma": "Diodoros",
+    "next": "Dionysios 161b"
   },
   {
     "lemma": "Dionysios 161b",
-    "previous": "Demetrios 125b",
-    "next": "Drakontides 3a",
+    "previous": "Diodoros",
+    "next": "Drakontides",
+    "redirect": "Dionysios 161",
     "chapters": [
       {
         "start": 60,
@@ -718,8 +714,11 @@
     ]
   },
   {
+    "lemma": "Drakontides",
+    "previous": "Dionysios 161b"
+  },
+  {
     "lemma": "Drakontides 3a",
-    "previous": "Dionysios 161b",
     "next": "Drusia aqua",
     "chapters": [
       {
@@ -996,7 +995,6 @@
   {
     "lemma": "Herakleides 61b",
     "previous": "Glaukos 48a",
-    "next": "Gorgias 13",
     "chapters": [
       {
         "start": 177,
@@ -1007,8 +1005,9 @@
   },
   {
     "lemma": "Gorgias 13",
-    "previous": "Herakleides 61b",
-    "next": "Hegetorides 3",
+    "previous": "Glaukos 48a",
+    "next": "Hegetorides",
+    "redirect": "Kallimachos 7a",
     "chapters": [
       {
         "start": 178,
@@ -1018,8 +1017,11 @@
     ]
   },
   {
+    "lemma": "Hegetorides",
+    "previous": "Gorgias 13"
+  },
+  {
     "lemma": "Hegetorides 3",
-    "previous": "Gorgias 13",
     "next": "Herculea aqua",
     "chapters": [
       {
@@ -3662,7 +3664,7 @@
   {
     "lemma": "Achilleus 8a",
     "previous": "Valerius 81a",
-    "next": "Caesaris thronus",
+    "next": "Antonius 30",
     "chapters": [
       {
         "start": 917,
@@ -3672,8 +3674,18 @@
     ]
   },
   {
-    "lemma": "Caesaris thronus",
+    "lemma": "Antonius 30",
     "previous": "Achilleus 8a",
+    "sort_key": "Antonius 030"
+  },
+  {
+    "lemma": "Apollodoros 23",
+    "next": "Caesaris thronus",
+    "sort_key": "Apollonios 023"
+  },
+  {
+    "lemma": "Caesaris thronus",
+    "previous": "Apollodoros 23",
     "next": "Damolyte",
     "chapters": [
       {

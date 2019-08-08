@@ -1,8 +1,10 @@
 [
   {
     "lemma": "Adobogiona",
-    "next": "Adule, Adulis",
-    "redirect": true,
+    "previous": null,
+    "next": "Adule",
+    "sort_key": "Adobogiona",
+    "redirect": "Brogitarus",
     "chapters": [
       {
         "start": 1,
@@ -11,9 +13,17 @@
     ]
   },
   {
-    "lemma": "Adule, Adulis",
+    "lemma": "Adule",
     "previous": "Adobogiona",
-    "next": "Agri decumates",
+    "next": "Adulitai"
+  },
+  {
+    "lemma": "Adulitai",
+    "previous": "Adule",
+    "next": "Agri decumates"
+  },
+  {
+    "lemma": "Adule, Adulis",
     "chapters": [
       {
         "start": 1,
@@ -24,7 +34,7 @@
   },
   {
     "lemma": "Agri decumates",
-    "previous": "Adule, Adulis",
+    "previous": "Adulitai",
     "next": "Aguntum",
     "chapters": [
       {
@@ -49,7 +59,7 @@
   {
     "lemma": "Aischetades",
     "previous": "Aguntum",
-    "next": "Alum Gallicum",
+    "next": "Alexandros 17",
     "chapters": [
       {
         "start": 21,
@@ -59,8 +69,13 @@
     ]
   },
   {
-    "lemma": "Alum Gallicum",
+    "lemma": "Alexandros 17",
     "previous": "Aischetades",
+    "next": "Alum Gallicum"
+  },
+  {
+    "lemma": "Alum Gallicum",
+    "previous": "Alexandros 17",
     "next": "Amphinomos 6",
     "chapters": [
       {
@@ -97,7 +112,7 @@
   {
     "lemma": "Antiochos 65",
     "previous": "Andron 18",
-    "next": "Apomoira",
+    "next": "Antipatros 29",
     "chapters": [
       {
         "start": 39,
@@ -107,8 +122,16 @@
     ]
   },
   {
-    "lemma": "Apomoira",
+    "lemma": "Antipatros 29",
     "previous": "Antiochos 65",
+    "next": "Apollodoros 27"
+  },
+  {
+    "lemma": "Apollodoros 27",
+    "previous": "Antipatros 29"
+  },
+  {
+    "lemma": "Apomoira",
     "next": "Aqua, Aquae 77a",
     "chapters": [
       {
@@ -260,7 +283,9 @@
   },
   {
     "lemma": "Aurelius 56b",
-    "previous": "Aurelius 39a"
+    "previous": "Aurelius 39a",
+    "next": "Aurelius 145aaa",
+    "sort_key": "Aurelius 056b"
   },
   {
     "lemma": "Auction 1",
@@ -333,7 +358,7 @@
   {
     "lemma": "Axomis",
     "previous": "Aurelius 244a",
-    "next": "Caecilius 33a",
+    "next": "Biennos 1",
     "chapters": [
       {
         "start": 75,
@@ -343,8 +368,11 @@
     ]
   },
   {
+    "lemma": "Biennos 1",
+    "previous": "Axomis"
+  },
+  {
     "lemma": "Caecilius 33a",
-    "previous": "Axomis",
     "next": "Caelius 7a",
     "chapters": [
       {
@@ -369,7 +397,7 @@
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
-    "next": "χειρόγραφον",
+    "next": "Chirographum",
     "chapters": [
       {
         "start": 83,
@@ -379,9 +407,11 @@
     ]
   },
   {
+    "lemma": "Chirographum",
+    "previous": "Canaliclarius"
+  },
+  {
     "lemma": "χειρόγραφον",
-    "previous": "Canaliclarius",
-    "next": "Clementius 1a",
     "chapters": [
       {
         "start": 84,
@@ -391,9 +421,13 @@
     ]
   },
   {
+    "lemma": "Clementius 1",
+    "next": "Clementius 1a"
+  },
+  {
     "lemma": "Clementius 1a",
-    "previous": "χειρόγραφον",
-    "next": "χρηματισμός",
+    "previous": "Clementius 1",
+    "next": "Cocceius 3",
     "chapters": [
       {
         "start": 89,
@@ -403,8 +437,11 @@
     ]
   },
   {
+    "lemma": "Cocceius 3",
+    "previous": "Clementius 1a"
+  },
+  {
     "lemma": "χρηματισμός",
-    "previous": "Clementius 1a",
     "next": "Claudius 207",
     "chapters": [
       {
@@ -419,7 +456,12 @@
     "previous": "χρηματισμός"
   },
   {
+    "lemma": "Cocceius 12",
+    "next": "Codicarii 2"
+  },
+  {
     "lemma": "Codicarii 2",
+    "previous": "Cocceius 12",
     "next": "Contributio 2",
     "chapters": [
       {
@@ -2738,7 +2780,6 @@
   {
     "lemma": "Lex Vibia (oder Leges Vibiae) 2",
     "previous": "Lex Vibia (oder Leges Vibiae) 1",
-    "next": "Licinius 151a",
     "chapters": [
       {
         "start": 416,
@@ -2748,8 +2789,12 @@
     ]
   },
   {
+    "lemma": "Libella 1",
+    "next": "Licinius 151a"
+  },
+  {
     "lemma": "Licinius 151a",
-    "previous": "Lex Vibia (oder Leges Vibiae) 2",
+    "previous": "Libella 1",
     "next": "Licinius 155a",
     "chapters": [
       {
@@ -4716,7 +4761,7 @@
   {
     "lemma": "Peculatus",
     "previous": "Origanum",
-    "next": "Orphanene",
+    "next": "Pedion 3",
     "chapters": [
       {
         "start": 817,
@@ -4727,7 +4772,6 @@
   },
   {
     "lemma": "Orphanene",
-    "previous": "Peculatus",
     "next": "Pedion 3",
     "chapters": [
       {
