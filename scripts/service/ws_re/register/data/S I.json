@@ -1197,16 +1197,6 @@
     "next": "Aelius 144"
   },
   {
-    "lemma": "Aelius 177",
-    "chapters": [
-      {
-        "start": 14,
-        "end": 14,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
     "lemma": "Aelius 144",
     "previous": null,
     "next": "Aelius 146a"
@@ -2145,8 +2135,7 @@
   },
   {
     "lemma": "Agimenes",
-    "previous": "Agilochos",
-    "next": "Agis 1a"
+    "previous": "Agilochos"
   },
   {
     "lemma": "Agiptria",
@@ -2624,7 +2613,7 @@
   {
     "lemma": "Aigeidas",
     "previous": "Aiga 2",
-    "next": "Aigeira 1",
+    "next": "Aigeira",
     "chapters": [
       {
         "start": 34,
@@ -2634,13 +2623,8 @@
     ]
   },
   {
-    "lemma": "Aigeira 1",
-    "previous": "Aigeidas"
-  },
-  {
     "lemma": "Aigeira",
-    "previous": "Aigeidas",
-    "next": "Aigeira 2"
+    "previous": "Aigeidas"
   },
   {
     "lemma": "Aigeira 2",
@@ -3470,9 +3454,7 @@
     "next": "Akestorides 4"
   },
   {
-    "lemma": "Akestorides 4",
-    "previous": "Akestor 5",
-    "next": "Akimis"
+    "lemma": "Akestorides 4"
   },
   {
     "lemma": "Akikaros",
@@ -3836,7 +3818,7 @@
   {
     "lemma": "Alassenses",
     "previous": "Alardostus",
-    "next": "Alastos",
+    "next": "Alastos 1a",
     "redirect": "Alastos 1a",
     "chapters": [
       {
@@ -3845,10 +3827,6 @@
         "author": "Ruge"
       }
     ]
-  },
-  {
-    "lemma": "Alastos",
-    "previous": "Alassenses"
   },
   {
     "lemma": "Alastos 1a",
@@ -3862,7 +3840,7 @@
   },
   {
     "lemma": "Alator",
-    "previous": "Alastos",
+    "previous": "Alastos 1a",
     "next": "Alazeir"
   },
   {
