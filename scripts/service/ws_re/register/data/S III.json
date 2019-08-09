@@ -60,7 +60,7 @@
   {
     "lemma": "Abano",
     "previous": "Abacus 9",
-    "next": "Abas",
+    "next": "Abas 12",
     "wp_link": "w:de:Abano Terme",
     "chapters": [
       {
@@ -71,11 +71,14 @@
     ]
   },
   {
-    "lemma": "Abas",
-    "previous": "Abano"
+    "lemma": "Abas 12",
+    "previous": "Abano",
+    "next": "Abbo 2"
   },
   {
     "lemma": "Abbo 2",
+    "previous": "Abas 12",
+    "next": null,
     "chapters": [
       {
         "start": 13,
@@ -106,6 +109,8 @@
   },
   {
     "lemma": "Abdere",
+    "previous": null,
+    "next": "Abderos",
     "chapters": [
       {
         "start": 14,
@@ -115,8 +120,13 @@
     ]
   },
   {
+    "lemma": "Abderos",
+    "previous": "Abdere",
+    "next": "Abrincatui"
+  },
+  {
     "lemma": "Abrincatui",
-    "previous": null,
+    "previous": "Abderos",
     "next": "Abronius",
     "redirect": "Avranches"
   },
@@ -311,7 +321,7 @@
   {
     "lemma": "Acqualagna",
     "previous": "Aco 2",
-    "next": "-acus, -iacus",
+    "next": "Acronus",
     "chapters": [
       {
         "start": 17,
@@ -321,8 +331,13 @@
     ]
   },
   {
-    "lemma": "-acus, -iacus",
+    "lemma": "Acronus",
     "previous": "Acqualagna",
+    "next": "-acus, -iacus"
+  },
+  {
+    "lemma": "-acus, -iacus",
+    "previous": "Acronus",
     "next": "Acutus 1",
     "chapters": [
       {
@@ -398,7 +413,6 @@
   },
   {
     "lemma": "Addanon kome",
-    "next": "Adiutex",
     "chapters": [
       {
         "start": 20,
@@ -408,8 +422,12 @@
     ]
   },
   {
+    "lemma": "Adgandestrius",
+    "next": "Adiutex"
+  },
+  {
     "lemma": "Adiutex",
-    "previous": "Addanon kome",
+    "previous": "Adgandestrius",
     "next": "Adiuvense",
     "chapters": [
       {
@@ -422,6 +440,7 @@
   {
     "lemma": "Adiuvense",
     "previous": "Adiutex",
+    "next": "Adlector 1",
     "chapters": [
       {
         "start": 21,
@@ -432,6 +451,7 @@
   },
   {
     "lemma": "Adlector 1",
+    "previous": "Adiuvense",
     "next": "Adour"
   },
   {
@@ -449,7 +469,8 @@
   },
   {
     "lemma": "Adrabaecampi",
-    "previous": "Adour"
+    "previous": "Adour",
+    "next": "Adria 2"
   },
   {
     "lemma": "Ad Iuvense",
@@ -489,7 +510,7 @@
   {
     "lemma": "Advocisus",
     "previous": "Adventus a",
-    "next": "Aegyptiaci",
+    "next": "Aedui",
     "chapters": [
       {
         "start": 22,
@@ -499,8 +520,13 @@
     ]
   },
   {
-    "lemma": "Aegyptiaci",
+    "lemma": "Aedui",
     "previous": "Advocisus",
+    "next": "Aegyptiaci"
+  },
+  {
+    "lemma": "Aegyptiaci",
+    "previous": "Aedui",
     "next": "Aemilianus 1",
     "chapters": [
       {
@@ -542,6 +568,7 @@
   {
     "lemma": "Aemilius 63c",
     "previous": "Aemilius 63b",
+    "next": "Aenus",
     "chapters": [
       {
         "start": 24,
@@ -552,6 +579,7 @@
   },
   {
     "lemma": "Aenus",
+    "previous": "Aemilius 63c",
     "next": "Aenus 2"
   },
   {
@@ -817,7 +845,7 @@
   {
     "lemma": "Agedillus",
     "previous": "Agde",
-    "next": "Agemon 1",
+    "next": "Agedincum",
     "chapters": [
       {
         "start": 60,
@@ -827,8 +855,18 @@
     ]
   },
   {
-    "lemma": "Agemon 1",
+    "lemma": "Agedincum",
     "previous": "Agedillus",
+    "next": "Agelaos 9"
+  },
+  {
+    "lemma": "Agelaos 9",
+    "previous": "Agedincum",
+    "next": "Agemon 1"
+  },
+  {
+    "lemma": "Agemon 1",
+    "previous": "Agelaos 9",
     "next": "Agemos",
     "chapters": [
       {
@@ -917,10 +955,12 @@
   },
   {
     "lemma": "Agreus, Agreutes 1",
-    "previous": "Agorallos"
+    "previous": "Agorallos",
+    "next": "Agriadas"
   },
   {
     "lemma": "Agriadas",
+    "previous": "Agreus, Agreutes 1",
     "next": "Agrianome 2",
     "chapters": [
       {
@@ -944,10 +984,23 @@
   },
   {
     "lemma": "Agroitas 2",
-    "previous": "Agrianome 2"
+    "previous": "Agrianome 2",
+    "next": "Aguontum"
+  },
+  {
+    "lemma": "Aguontum",
+    "previous": "Agroitas 2",
+    "next": "Agyeios 1"
+  },
+  {
+    "lemma": "Agyeios 1",
+    "previous": "Aguontum",
+    "next": "Aiaciana"
   },
   {
     "lemma": "Aiaciana",
+    "previous": "Agyeios 1",
+    "next": "Aianes",
     "chapters": [
       {
         "start": 62,
@@ -958,6 +1011,7 @@
   },
   {
     "lemma": "Aianes",
+    "previous": "Aiaciana",
     "next": "Aietius"
   },
   {
@@ -1057,7 +1111,7 @@
   {
     "lemma": "Aisne",
     "previous": "Aire",
-    "next": "Aix 3",
+    "next": "Aitolos",
     "chapters": [
       {
         "start": 69,
@@ -1067,8 +1121,13 @@
     ]
   },
   {
-    "lemma": "Aix 3",
+    "lemma": "Aitolos",
     "previous": "Aisne",
+    "next": "Aix 3"
+  },
+  {
+    "lemma": "Aix 3",
+    "previous": "Aitolos",
     "next": "Akanthos 1",
     "chapters": [
       {
@@ -1093,6 +1152,7 @@
   {
     "lemma": "Akatos 2",
     "previous": "Akanthos 1",
+    "next": "Akazie",
     "chapters": [
       {
         "start": 70,
@@ -1103,6 +1163,7 @@
   },
   {
     "lemma": "Akazie",
+    "previous": "Akatos 2",
     "next": "Akestor 6"
   },
   {
@@ -1119,10 +1180,12 @@
   },
   {
     "lemma": "Aktor 1",
-    "previous": "Akestor 6"
+    "previous": "Akestor 6",
+    "next": "Alanoviiamuthis"
   },
   {
-    "lemma": "Alanouiiamuthis",
+    "lemma": "Alanoviiamuthis",
+    "previous": "Aktor 1",
     "next": "Albacina",
     "chapters": [
       {
@@ -1134,7 +1197,7 @@
   },
   {
     "lemma": "Albacina",
-    "previous": "Alanouiiamuthis",
+    "previous": "Alanoviiamuthis",
     "next": "Albanus 1a",
     "chapters": [
       {
@@ -1355,7 +1418,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexios",
+    "next": "Alexias 5",
     "chapters": [
       {
         "start": 80,
@@ -1365,20 +1428,13 @@
     ]
   },
   {
-    "lemma": "Alexios",
+    "lemma": "Alexias 5",
     "previous": "Alexinos 2",
-    "next": "Alfius 6",
-    "chapters": [
-      {
-        "start": 80,
-        "end": 80,
-        "author": "Oldfather"
-      }
-    ]
+    "next": "Alfius 6"
   },
   {
     "lemma": "Alfius 6",
-    "previous": "Alexios",
+    "previous": "Alexias 5",
     "next": "Algalsos"
   },
   {
@@ -1420,7 +1476,7 @@
   {
     "lemma": "Alisinum",
     "previous": "Alise-Sainte-Reine",
-    "next": "Alkaie",
+    "next": "Aliso 1",
     "chapters": [
       {
         "start": 81,
@@ -1430,8 +1486,13 @@
     ]
   },
   {
-    "lemma": "Alkaie",
+    "lemma": "Aliso 1",
     "previous": "Alisinum",
+    "next": "Alkaie"
+  },
+  {
+    "lemma": "Alkaie",
+    "previous": "Aliso 1",
     "next": "Alkamenes 6",
     "chapters": [
       {
@@ -1456,6 +1517,7 @@
   {
     "lemma": "Alkiadas",
     "previous": "Alkamenes 6",
+    "next": "Alkimache 2",
     "chapters": [
       {
         "start": 82,
@@ -1466,6 +1528,7 @@
   },
   {
     "lemma": "Alkimache 2",
+    "previous": "Alkiadas",
     "next": "Alkimos 21"
   },
   {
@@ -1590,10 +1653,17 @@
   },
   {
     "lemma": "Alope 1",
-    "previous": "Alogune"
+    "previous": "Alogune",
+    "next": "Alope 2"
+  },
+  {
+    "lemma": "Alope 2",
+    "previous": "Alope 1",
+    "next": "Alope 3"
   },
   {
     "lemma": "Alope 3",
+    "previous": "Alope 2",
     "next": "Alorcus"
   },
   {
@@ -1610,7 +1680,12 @@
   },
   {
     "lemma": "Alpenos",
-    "previous": "Alorcus"
+    "previous": "Alorcus",
+    "next": "Alphabet"
+  },
+  {
+    "lemma": "Alphabet",
+    "previous": "Alpenos"
   },
   {
     "lemma": "Ἀλφιτομαντεία",
@@ -1861,7 +1936,7 @@
   {
     "lemma": "Amator",
     "previous": "Amato",
-    "next": "Amberloup",
+    "next": "Ambarri",
     "chapters": [
       {
         "start": 89,
@@ -1871,8 +1946,13 @@
     ]
   },
   {
-    "lemma": "Amberloup",
+    "lemma": "Ambarri",
     "previous": "Amator",
+    "next": "Amberloup"
+  },
+  {
+    "lemma": "Amberloup",
+    "previous": "Ambarri",
     "next": "Ambiomarcis",
     "chapters": [
       {
@@ -1897,7 +1977,7 @@
   {
     "lemma": "Ambirenus",
     "previous": "Ambiomarcis",
-    "next": "Ambitrebius pagus",
+    "next": "Ambitarvius",
     "chapters": [
       {
         "start": 90,
@@ -1907,8 +1987,13 @@
     ]
   },
   {
-    "lemma": "Ambitrebius pagus",
+    "lemma": "Ambitarvius",
     "previous": "Ambirenus",
+    "next": "Ambitrebius pagus"
+  },
+  {
+    "lemma": "Ambitrebius pagus",
+    "previous": "Ambitarvius",
     "next": "Ambix",
     "chapters": [
       {
@@ -1921,7 +2006,7 @@
   {
     "lemma": "Ambix",
     "previous": "Ambitrebius pagus",
-    "next": "Ameinokrates",
+    "next": "Ambra",
     "chapters": [
       {
         "start": 90,
@@ -1931,8 +2016,13 @@
     ]
   },
   {
-    "lemma": "Ameinokrates",
+    "lemma": "Ambra",
     "previous": "Ambix",
+    "next": "Ameinokrates"
+  },
+  {
+    "lemma": "Ameinokrates",
+    "previous": "Ambra",
     "next": "Amelia",
     "chapters": [
       {
@@ -2012,10 +2102,16 @@
   {
     "lemma": "Ammudates",
     "previous": "Ammos",
-    "next": null
+    "next": "Amon"
+  },
+  {
+    "lemma": "Amon",
+    "previous": "Ammudates",
+    "next": "Amphikles 6"
   },
   {
     "lemma": "Amphikles 6",
+    "previous": "Amon",
     "next": "Amphiphanes",
     "chapters": [
       {
@@ -2028,7 +2124,7 @@
   {
     "lemma": "Amphiphanes",
     "previous": "Amphikles 6",
-    "next": "Amphissa 1",
+    "next": "Ἀμφίπολος Διός",
     "chapters": [
       {
         "start": 91,
@@ -2038,8 +2134,14 @@
     ]
   },
   {
-    "lemma": "Amphissa 1",
+    "lemma": "Ἀμφίπολος Διός",
     "previous": "Amphiphanes",
+    "next": "Amphissa 1"
+  },
+  {
+    "lemma": "Amphissa 1",
+    "previous": "Ἀμφίπολος Διός",
+    "next": "Ἀμφιθαλεῖς",
     "chapters": [
       {
         "start": 92,
@@ -2050,6 +2152,7 @@
   },
   {
     "lemma": "Ἀμφιθαλεῖς",
+    "previous": "Amphissa 1",
     "next": "Amphitimos"
   },
   {
@@ -2091,7 +2194,7 @@
   {
     "lemma": "Amsoldingen",
     "previous": "Amphoteros 4a",
-    "next": "Anaitoi",
+    "next": "Ampsiani",
     "chapters": [
       {
         "start": 95,
@@ -2101,8 +2204,19 @@
     ]
   },
   {
-    "lemma": "Anaitoi",
+    "lemma": "Ampsiani",
     "previous": "Amsoldingen",
+    "next": "Amurius"
+  },
+  {
+    "lemma": "Amurius",
+    "previous": "Ampsiani",
+    "next": "Anaitoi"
+  },
+  {
+    "lemma": "Anaitoi",
+    "previous": "Amurius",
+    "next": "Ἀνάκρισις",
     "chapters": [
       {
         "start": 95,
@@ -2112,7 +2226,18 @@
     ]
   },
   {
+    "lemma": "Ἀνάκρισις",
+    "previous": "Anaitoi",
+    "next": "Anar"
+  },
+  {
+    "lemma": "Anar",
+    "previous": "Ἀνάκρισις",
+    "next": "Anares"
+  },
+  {
     "lemma": "Anares",
+    "previous": "Anar",
     "next": "Anathyrosis"
   },
   {
@@ -2191,7 +2316,7 @@
   {
     "lemma": "Anchialos 7",
     "previous": "Anchasios",
-    "next": "Anconne",
+    "next": "Anchoë",
     "chapters": [
       {
         "start": 99,
@@ -2201,9 +2326,14 @@
     ]
   },
   {
-    "lemma": "Anconne",
+    "lemma": "Anchoë",
     "previous": "Anchialos 7",
-    "next": "Andernach",
+    "next": "Anconne"
+  },
+  {
+    "lemma": "Anconne",
+    "previous": "Anchoë",
+    "next": "Andarta dea",
     "chapters": [
       {
         "start": 99,
@@ -2213,9 +2343,11 @@
     ]
   },
   {
+    "lemma": "Andarta dea",
+    "previous": "Anconne"
+  },
+  {
     "lemma": "Andernach",
-    "previous": "Anconne",
-    "next": "Andromenes 1a",
     "chapters": [
       {
         "start": 99,
@@ -2225,8 +2357,12 @@
     ]
   },
   {
+    "lemma": "Andraimon 1",
+    "next": "Andromenes 1a"
+  },
+  {
     "lemma": "Andromenes 1a",
-    "previous": "Andernach",
+    "previous": "Andraimon 1",
     "next": "Andronikos 29",
     "chapters": [
       {
@@ -2274,6 +2410,7 @@
     "lemma": "Angelos a",
     "previous": "Anesus",
     "next": "Angers",
+    "wp_link": "w:de:Engel",
     "chapters": [
       {
         "start": 101,
@@ -2309,7 +2446,7 @@
   {
     "lemma": "Anhausen",
     "previous": "Angoulême",
-    "next": "Anjou",
+    "next": "Anicium",
     "chapters": [
       {
         "start": 115,
@@ -2319,8 +2456,13 @@
     ]
   },
   {
-    "lemma": "Anjou",
+    "lemma": "Anicium",
     "previous": "Anhausen",
+    "next": "Anjou"
+  },
+  {
+    "lemma": "Anjou",
+    "previous": "Anicium",
     "next": "Anisatus, Aenisatus",
     "chapters": [
       {
@@ -2386,7 +2528,7 @@
   {
     "lemma": "Anthe 3",
     "previous": "Antes",
-    "next": "Anthus",
+    "next": "Anthele",
     "chapters": [
       {
         "start": 119,
@@ -2396,8 +2538,13 @@
     ]
   },
   {
-    "lemma": "Anthus",
+    "lemma": "Anthele",
     "previous": "Anthe 3",
+    "next": "Anthus"
+  },
+  {
+    "lemma": "Anthus",
+    "previous": "Anthele",
     "next": "Antibes",
     "chapters": [
       {
@@ -2506,6 +2653,7 @@
   {
     "lemma": "Antigonis 4",
     "previous": "Antigny",
+    "next": "Antikyra 2",
     "chapters": [
       {
         "start": 123,
@@ -2515,7 +2663,13 @@
     ]
   },
   {
+    "lemma": "Antikyra 2",
+    "previous": "Antigonis 4",
+    "next": "Antinoitai"
+  },
+  {
     "lemma": "Antinoitai",
+    "previous": "Antikyra 2",
     "next": "Antinoos 4a",
     "redirect": "Antinoitae"
   },
@@ -2559,6 +2713,7 @@
   },
   {
     "lemma": "Antiope 1",
+    "previous": "Antiochos 74",
     "next": "Antipatros 20a"
   },
   {
@@ -2611,11 +2766,12 @@
   },
   {
     "lemma": "Antiphon 14",
-    "previous": "Antiphidas"
+    "previous": "Antiphidas",
+    "next": "Antiphos 10"
   },
   {
     "lemma": "Antiphos 10",
-    "next": "Antistii",
+    "previous": "Antiphon 14",
     "chapters": [
       {
         "start": 125,
@@ -2625,8 +2781,12 @@
     ]
   },
   {
+    "lemma": "Antirrion",
+    "next": "Antistii"
+  },
+  {
     "lemma": "Antistii",
-    "previous": "Antiphos 10",
+    "previous": "Antirrion",
     "next": "Antochos",
     "chapters": [
       {
@@ -2705,6 +2865,7 @@
   },
   {
     "lemma": "Anytos 1",
+    "previous": "Anwen",
     "next": "Ἀοιδός"
   },
   {
@@ -2771,10 +2932,12 @@
   },
   {
     "lemma": "Apameia 1",
-    "previous": "Ἀπαγορεύειν"
+    "previous": "Ἀπαγορεύειν",
+    "next": "Apaturios 5"
   },
   {
     "lemma": "Apaturios 5",
+    "previous": "Apameia 1",
     "next": "Apaturius"
   },
   {
@@ -3134,7 +3297,7 @@
   {
     "lemma": "Aqua, Aquae 17",
     "previous": "Aqua, Aquae 10a",
-    "next": null,
+    "next": "Aqua, Aquae 20",
     "chapters": [
       {
         "start": 137,
@@ -3144,7 +3307,31 @@
     ]
   },
   {
+    "lemma": "Aqua, Aquae 20",
+    "previous": "Aqua, Aquae 17",
+    "next": "Aqua, Aquae 36"
+  },
+  {
+    "lemma": "Aqua, Aquae 36",
+    "previous": "Aqua, Aquae 20"
+  },
+  {
+    "lemma": "Aqua, Aquae 63",
+    "next": "Aqua, Aquae 85"
+  },
+  {
+    "lemma": "Aqua, Aquae 85",
+    "previous": "Aqua, Aquae 63",
+    "next": "Aqua, Aquae 93"
+  },
+  {
+    "lemma": "Aqua, Aquae 93",
+    "previous": "Aqua, Aquae 85",
+    "next": "Aquileia 1"
+  },
+  {
     "lemma": "Aquileia 1",
+    "previous": "Aqua, Aquae 93",
     "next": "Aquilius 34a"
   },
   {
@@ -3186,6 +3373,7 @@
   {
     "lemma": "Ara, Arae 10",
     "previous": "Aquitanus",
+    "next": "Arabos",
     "chapters": [
       {
         "start": 138,
@@ -3195,7 +3383,13 @@
     ]
   },
   {
+    "lemma": "Arabos",
+    "previous": "Ara, Arae 10",
+    "next": "Aramo"
+  },
+  {
     "lemma": "Aramo",
+    "previous": "Arabos",
     "next": "Aramus"
   },
   {
@@ -3224,7 +3418,17 @@
   },
   {
     "lemma": "Arar",
-    "previous": "Aranda"
+    "previous": "Aranda",
+    "next": "Arausio 1"
+  },
+  {
+    "lemma": "Arausio 1",
+    "previous": "Arar",
+    "next": "Arbor Felix"
+  },
+  {
+    "lemma": "Arbor Felix",
+    "previous": "Arausio 1"
   },
   {
     "lemma": "Arcanus 2",
@@ -4373,7 +4577,8 @@
   {
     "lemma": "Ἀρχινυκτοφύλακες",
     "previous": "Archimedes 3",
-    "next": "Archiparaphylax",
+    "next": "Ἀρχιπαραφύλαξ",
+    "sort_key": "Archinyktophylakes",
     "chapters": [
       {
         "start": 152,
@@ -4383,9 +4588,10 @@
     ]
   },
   {
-    "lemma": "Archiparaphylax",
+    "lemma": "Ἀρχιπαραφύλαξ",
     "previous": "Ἀρχινυκτοφύλακες",
-    "next": "Ardacus 2",
+    "next": "Ἀρχιφυλακίτης a",
+    "sort_key": "Archiparaphylax",
     "chapters": [
       {
         "start": 152,
@@ -4393,10 +4599,26 @@
         "author": "Schulthess"
       }
     ]
+  },
+  {
+    "lemma": "Ἀρχιφυλακίτης a",
+    "previous": "Ἀρχιπαραφύλαξ",
+    "next": "Ἀρχιφύλαξ",
+    "sort_key": "Archiphylakites a"
+  },
+  {
+    "lemma": "Ἀρχιφύλαξ",
+    "previous": "Ἀρχιφυλακίτης a",
+    "next": "Archytas 6"
+  },
+  {
+    "lemma": "Archytas 6",
+    "previous": "Ἀρχιφύλαξ",
+    "next": "Ardacus 2"
   },
   {
     "lemma": "Ardacus 2",
-    "previous": "Archiparaphylax",
+    "previous": "Archytas 6",
     "next": "Ardanion",
     "chapters": [
       {
@@ -4432,10 +4654,20 @@
   },
   {
     "lemma": "Arecomici",
-    "previous": "Ardoates"
+    "previous": "Ardoates",
+    "next": "Aregenua"
+  },
+  {
+    "lemma": "Aregenua",
+    "previous": "Arecomici"
+  },
+  {
+    "lemma": "Arenacum",
+    "next": "Arentsburg"
   },
   {
     "lemma": "Arentsburg",
+    "previous": "Arenacum",
     "next": "Areopolis 2",
     "chapters": [
       {
@@ -4506,16 +4738,27 @@
   },
   {
     "lemma": "Argenteus",
-    "previous": "Argenteuil"
+    "previous": "Argenteuil",
+    "next": "Argentiolum"
+  },
+  {
+    "lemma": "Argentiolum",
+    "previous": "Argenteus",
+    "next": "Argentius"
+  },
+  {
+    "lemma": "Argentius",
+    "previous": "Argentiolum"
   },
   {
     "lemma": "Aristeides 21",
+    "previous": "Aristarchos 6a",
     "next": "Aristianae"
   },
   {
     "lemma": "Aristianae",
     "previous": "Aristeides 21",
-    "next": "Aristobulos 3a",
+    "next": null,
     "redirect": "Arestianae",
     "chapters": [
       {
@@ -4525,7 +4768,12 @@
     ]
   },
   {
+    "lemma": "Argos 19",
+    "next": "Argynna"
+  },
+  {
     "lemma": "Argynna",
+    "previous": "Argos 19",
     "next": "Argyris",
     "chapters": [
       {
@@ -4598,6 +4846,7 @@
   {
     "lemma": "Aristaioi",
     "previous": "Aristagoras 14",
+    "next": "Aristaios 7",
     "chapters": [
       {
         "start": 157,
@@ -4608,6 +4857,7 @@
   },
   {
     "lemma": "Aristaios 7",
+    "previous": "Aristaioi",
     "next": "Aristarchos 6a"
   },
   {
@@ -4624,6 +4874,7 @@
   },
   {
     "lemma": "Aristobulos 3a",
+    "previous": null,
     "next": "Aristodama 3",
     "chapters": [
       {
@@ -4636,6 +4887,7 @@
   {
     "lemma": "Aristodama 3",
     "previous": "Aristobulos 3a",
+    "next": "Aristodemos 21",
     "chapters": [
       {
         "start": 158,
@@ -4645,7 +4897,13 @@
     ]
   },
   {
+    "lemma": "Aristodemos 21",
+    "previous": "Aristodama 3",
+    "next": "Aristodemos 35"
+  },
+  {
     "lemma": "Aristodemos 35",
+    "previous": "Aristodemos 21",
     "next": "Aristokrates 21a"
   },
   {
@@ -4750,6 +5008,7 @@
   {
     "lemma": "Arius",
     "previous": "Ariukes",
+    "next": "Arkades, Arkadia",
     "chapters": [
       {
         "start": 159,
@@ -4760,6 +5019,7 @@
   },
   {
     "lemma": "Arkades, Arkadia",
+    "previous": "Arius",
     "next": "Arkadia 4a"
   },
   {
@@ -4873,6 +5133,7 @@
     "lemma": "Arras",
     "previous": "Arnsburg",
     "next": "Arriphon",
+    "wp_link": "w:de:Arras",
     "chapters": [
       {
         "start": 161,
@@ -4896,7 +5157,8 @@
   {
     "lemma": "Ars",
     "previous": "Arriphon",
-    "next": "Arsames 5",
+    "next": "Arsames 3",
+    "wp_link": "w:de:Ars-sur-Moselle",
     "chapters": [
       {
         "start": 161,
@@ -4907,7 +5169,6 @@
   },
   {
     "lemma": "Arsames 5",
-    "previous": "Ars",
     "next": "Arsames 6",
     "chapters": [
       {
@@ -5004,7 +5265,7 @@
   {
     "lemma": "Artemisioi",
     "previous": "Artemis 2",
-    "next": "Articianus",
+    "next": "Artemius 2",
     "chapters": [
       {
         "start": 163,
@@ -5014,9 +5275,14 @@
     ]
   },
   {
-    "lemma": "Articianus",
+    "lemma": "Artemius 2",
     "previous": "Artemisioi",
-    "next": "Arvernicus 2",
+    "next": "Articianus"
+  },
+  {
+    "lemma": "Articianus",
+    "previous": "Artemius 2",
+    "next": "Artio dea",
     "chapters": [
       {
         "start": 163,
@@ -5026,8 +5292,16 @@
     ]
   },
   {
+    "lemma": "Artio dea",
+    "previous": "Articianus"
+  },
+  {
+    "lemma": "Arverni",
+    "next": "Arvernicus 2"
+  },
+  {
     "lemma": "Arvernicus 2",
-    "previous": "Articianus",
+    "previous": "Arverni",
     "next": "Arvius 1",
     "chapters": [
       {
@@ -5094,6 +5368,7 @@
     "lemma": "Asberg",
     "previous": "Arzbach",
     "next": "Aschaffenburg",
+    "wp_link": "w:de:Asberg (Moers)",
     "chapters": [
       {
         "start": 164,
@@ -5105,7 +5380,7 @@
   {
     "lemma": "Aschaffenburg",
     "previous": "Asberg",
-    "next": "Asciacus",
+    "next": "Aschenurnen",
     "chapters": [
       {
         "start": 164,
@@ -5115,8 +5390,18 @@
     ]
   },
   {
-    "lemma": "Asciacus",
+    "lemma": "Aschenurnen",
     "previous": "Aschaffenburg",
+    "next": "Ascia"
+  },
+  {
+    "lemma": "Ascia",
+    "previous": "Aschenurnen",
+    "next": "Asciacus"
+  },
+  {
+    "lemma": "Asciacus",
+    "previous": "Ascia",
     "next": "Ascoli",
     "chapters": [
       {
@@ -5187,7 +5472,7 @@
   {
     "lemma": "Askos a",
     "previous": "Asklepios 2",
-    "next": "Asseriates",
+    "next": "Asmosata",
     "chapters": [
       {
         "start": 171,
@@ -5197,8 +5482,13 @@
     ]
   },
   {
-    "lemma": "Asseriates",
+    "lemma": "Asmosata",
     "previous": "Askos a",
+    "next": "Asseriates"
+  },
+  {
+    "lemma": "Asseriates",
+    "previous": "Asmosata",
     "next": "Assisi",
     "chapters": [
       {
@@ -5278,7 +5568,7 @@
   {
     "lemma": "Astyoche 9",
     "previous": "Astykrates 2",
-    "next": "Atenicus",
+    "next": "Atalante 1",
     "chapters": [
       {
         "start": 174,
@@ -5288,8 +5578,18 @@
     ]
   },
   {
-    "lemma": "Atenicus",
+    "lemma": "Atalante 1",
     "previous": "Astyoche 9",
+    "next": "Ateius 3a"
+  },
+  {
+    "lemma": "Ateius 3a",
+    "previous": "Atalante 1",
+    "next": "Atenicus"
+  },
+  {
+    "lemma": "Atenicus",
+    "previous": "Ateius 3a",
     "next": "Atepomarus 2",
     "chapters": [
       {
@@ -5302,7 +5602,7 @@
   {
     "lemma": "Atepomarus 2",
     "previous": "Atenicus",
-    "next": "Athanadas 1",
+    "next": "Athanadas",
     "chapters": [
       {
         "start": 175,
@@ -5312,8 +5612,13 @@
     ]
   },
   {
-    "lemma": "Athanadas 1",
+    "lemma": "Athanadas",
     "previous": "Atepomarus 2",
+    "next": "Athanadas 1"
+  },
+  {
+    "lemma": "Athanadas 1",
+    "previous": "Athanadas",
     "next": "Athanadas 2",
     "chapters": [
       {
@@ -5410,7 +5715,7 @@
   {
     "lemma": "Athenadas",
     "previous": "Athanaios",
-    "next": "Athenades 1",
+    "next": "Athenades",
     "chapters": [
       {
         "start": 176,
@@ -5420,8 +5725,13 @@
     ]
   },
   {
-    "lemma": "Athenades 1",
+    "lemma": "Athenades",
     "previous": "Athenadas",
+    "next": "Athenades 1"
+  },
+  {
+    "lemma": "Athenades 1",
+    "previous": "Athenades",
     "next": "Athenades 2",
     "chapters": [
       {
@@ -5631,7 +5941,7 @@
   {
     "lemma": "Atilianus 2",
     "previous": "Athena",
-    "next": null,
+    "next": "Atilius 40",
     "chapters": [
       {
         "start": 178,
@@ -5642,6 +5952,7 @@
   },
   {
     "lemma": "Atilius 40",
+    "previous": "Atilianus 2",
     "next": "Atimetos"
   },
   {
@@ -5660,6 +5971,7 @@
     "lemma": "Ἄτιμος",
     "previous": "Atimetos",
     "next": "Atisius",
+    "sort_key": "Atimos",
     "chapters": [
       {
         "start": 178,
@@ -5671,7 +5983,7 @@
   {
     "lemma": "Atisius",
     "previous": "Ἄτιμος",
-    "next": "Atri",
+    "next": "Attius 32a",
     "chapters": [
       {
         "start": 180,
@@ -5682,7 +5994,7 @@
   },
   {
     "lemma": "Atri",
-    "previous": "Atisius",
+    "next": "Atta 3",
     "chapters": [
       {
         "start": 180,
@@ -5693,6 +6005,7 @@
   },
   {
     "lemma": "Atta 3",
+    "previous": "Atri",
     "next": "Attales"
   },
   {
@@ -5709,11 +6022,11 @@
   },
   {
     "lemma": "Attalos 27",
-    "previous": "Attales"
+    "previous": "Attales",
+    "next": "Attianus 2"
   },
   {
     "lemma": "Attius 32a",
-    "next": "Attianus 2",
     "chapters": [
       {
         "start": 180,
@@ -5724,7 +6037,7 @@
   },
   {
     "lemma": "Attianus 2",
-    "previous": "Attius 32a",
+    "previous": "Attalos 27",
     "next": "Attianus 3",
     "chapters": [
       {
@@ -5869,7 +6182,7 @@
   {
     "lemma": "Aturre",
     "previous": "Atura",
-    "next": "Avallon",
+    "next": "Aturus",
     "chapters": [
       {
         "start": 182,
@@ -5879,8 +6192,13 @@
     ]
   },
   {
-    "lemma": "Avallon",
+    "lemma": "Aturus",
     "previous": "Aturre",
+    "next": "Avallon"
+  },
+  {
+    "lemma": "Avallon",
+    "previous": "Aturus",
     "next": "Avanacus vicus",
     "chapters": [
       {
@@ -5917,7 +6235,7 @@
   {
     "lemma": "Auch",
     "previous": "Aucella",
-    "next": "Aude",
+    "next": "Aucissa",
     "chapters": [
       {
         "start": 183,
@@ -5925,11 +6243,21 @@
         "author": "Keune"
       }
     ]
+  },
+  {
+    "lemma": "Aucissa",
+    "previous": "Auch",
+    "next": "Auctus 2"
+  },
+  {
+    "lemma": "Auctus 2",
+    "previous": "Aucissa",
+    "next": "Aude"
   },
   {
     "lemma": "Aude",
-    "previous": "Auch",
-    "next": "Avenches",
+    "previous": "Auctus 2",
+    "next": "Avella",
     "chapters": [
       {
         "start": 183,
@@ -5939,9 +6267,14 @@
     ]
   },
   {
-    "lemma": "Avenches",
+    "lemma": "Avella",
     "previous": "Aude",
-    "next": "Aventinus 4",
+    "next": "Avenches"
+  },
+  {
+    "lemma": "Avenches",
+    "previous": "Avella",
+    "next": "Aventicum",
     "chapters": [
       {
         "start": 183,
@@ -5951,8 +6284,14 @@
     ]
   },
   {
-    "lemma": "Aventinus 4",
+    "lemma": "Aventicum",
     "previous": "Avenches",
+    "next": "Aventinus 4"
+  },
+  {
+    "lemma": "Aventinus 4",
+    "previous": "Aventicum",
+    "next": "Auerochs",
     "chapters": [
       {
         "start": 184,
@@ -5963,6 +6302,7 @@
   },
   {
     "lemma": "Auerochs",
+    "previous": "Aventinus 4",
     "next": "Avertentes dii"
   },
   {
@@ -5980,7 +6320,7 @@
   {
     "lemma": "Avetedo",
     "previous": "Avertentes dii",
-    "next": null,
+    "next": "Aufaniae",
     "chapters": [
       {
         "start": 184,
@@ -5990,7 +6330,17 @@
     ]
   },
   {
+    "lemma": "Aufaniae",
+    "previous": "Avetedo"
+  },
+  {
+    "lemma": "Augeiai 1",
+    "previous": "Avetedo",
+    "next": "Augenärzte"
+  },
+  {
     "lemma": "Augenärzte",
+    "previous": "Augeiai 1",
     "next": "Augsburg"
   },
   {
@@ -6093,11 +6443,20 @@
   },
   {
     "lemma": "Augustobona",
-    "previous": "Augustinus 3"
+    "previous": "Augustinus 3",
+    "next": "Augustobriga"
+  },
+  {
+    "lemma": "Augustobriga 1",
+    "previous": null,
+    "next": "Augustodunum"
+  },
+  {
+    "lemma": "Augustodunum",
+    "previous": "Augustobriga 1"
   },
   {
     "lemma": "Augustobriga",
-    "next": "Avignon",
     "chapters": [
       {
         "start": 186,
@@ -6107,9 +6466,20 @@
     ]
   },
   {
+    "lemma": "Augustum 1",
+    "next": "Augustum 2",
+    "redirect": "Aoste"
+  },
+  {
+    "lemma": "Augustum 2",
+    "previous": "Augustum 1",
+    "next": "Avignon",
+    "redirect": "Aoste"
+  },
+  {
     "lemma": "Avignon",
-    "previous": "Augustobriga",
-    "next": "Avitianae figlinae",
+    "previous": "Augustum 2",
+    "next": "Avillius 2a",
     "chapters": [
       {
         "start": 187,
@@ -6119,8 +6489,12 @@
     ]
   },
   {
-    "lemma": "Avitianae figlinae",
+    "lemma": "Avillius 2a",
     "previous": "Avignon",
+    "sort_key": "Auillius 2a"
+  },
+  {
+    "lemma": "Avitianae figlinae",
     "next": "Avitus 8",
     "chapters": [
       {
@@ -6265,6 +6639,7 @@
   {
     "lemma": "Aurelianorum (Aurelianensis) civitas, Aureliani",
     "previous": "Avranches",
+    "next": "Aurelius 92",
     "chapters": [
       {
         "start": 189,
@@ -6274,7 +6649,18 @@
     ]
   },
   {
+    "lemma": "Aurelius 92",
+    "previous": "Aurelianorum (Aurelianensis) civitas, Aureliani",
+    "next": "Aurelius 107"
+  },
+  {
+    "lemma": "Aurelius 107",
+    "previous": "Aurelius 92",
+    "next": "Aurelius vicus"
+  },
+  {
     "lemma": "Aurelius vicus",
+    "previous": "Aurelius 107",
     "next": "Aureus mons 4"
   },
   {
@@ -6298,10 +6684,14 @@
   },
   {
     "lemma": "Aushängeschilder",
-    "previous": "Ausci 2"
+    "previous": "Ausci 2",
+    "next": "Austrus",
+    "redirect": "Ad-"
   },
   {
     "lemma": "Austrus",
+    "previous": "Aushängeschilder",
+    "next": "Autessiodurum",
     "chapters": [
       {
         "start": 190,
@@ -6312,7 +6702,9 @@
   },
   {
     "lemma": "Autessiodurum",
-    "next": "Autodoros"
+    "previous": "Austrus",
+    "next": "Autodoros",
+    "redirect": "Auxerre"
   },
   {
     "lemma": "Autodoros",
@@ -6376,7 +6768,7 @@
   {
     "lemma": "Auxois",
     "previous": "Auxerre",
-    "next": "Baden",
+    "next": "Axia 1",
     "chapters": [
       {
         "start": 191,
@@ -6386,8 +6778,16 @@
     ]
   },
   {
+    "lemma": "Axia 1",
+    "previous": "Auxois"
+  },
+  {
+    "lemma": "Babullius",
+    "next": "Baden"
+  },
+  {
     "lemma": "Baden",
-    "previous": "Auxois",
+    "previous": "Babullius",
     "next": "Baden-Baden",
     "chapters": [
       {
@@ -6506,6 +6906,7 @@
     "lemma": "Bakchon",
     "previous": "Bagnorea",
     "next": "Bakchon 1",
+    "sort_key": "Bakchon 0",
     "chapters": [
       {
         "start": 193,
@@ -6640,10 +7041,12 @@
   },
   {
     "lemma": "Bakchylides 2",
-    "previous": "Bakchon 10"
+    "previous": "Bakchon 10",
+    "next": "Balbinus 5"
   },
   {
     "lemma": "Balbinus 5",
+    "previous": "Bakchylides 2",
     "next": "Balbus 5",
     "chapters": [
       {
@@ -6668,7 +7071,7 @@
   {
     "lemma": "Banassac",
     "previous": "Balbus 5",
-    "next": "Barbarus a",
+    "next": "Banaurides",
     "chapters": [
       {
         "start": 195,
@@ -6678,20 +7081,13 @@
     ]
   },
   {
-    "lemma": "Barbarus a",
+    "lemma": "Banaurides",
     "previous": "Banassac",
-    "next": "Banuus",
-    "chapters": [
-      {
-        "start": 195,
-        "end": 195,
-        "author": "Oehler, R[aimund]"
-      }
-    ]
+    "next": "Banuus"
   },
   {
     "lemma": "Banuus",
-    "previous": "Barbarus a",
+    "previous": "Banaurides",
     "next": "Barba 2a",
     "chapters": [
       {
@@ -6939,12 +7335,18 @@
   {
     "lemma": "Beda",
     "previous": "Beauvais",
+    "next": "Bedaium",
     "redirect": "Bitburg",
     "wp_link": "w:de:Bitburg"
   },
   {
+    "lemma": "Bedaium",
+    "previous": "Beda",
+    "next": "Bedesis"
+  },
+  {
     "lemma": "Bedesis",
-    "previous": null,
+    "previous": "Bedaium",
     "next": "Bedy"
   },
   {
@@ -7045,10 +7447,13 @@
   },
   {
     "lemma": "Bellovaci",
-    "previous": "Bellos"
+    "previous": "Bellos",
+    "next": "Benndorf",
+    "redirect": "Beauvais"
   },
   {
     "lemma": "Benndorf",
+    "previous": "Bellovaci",
     "next": "Benningen",
     "chapters": [
       {
@@ -7217,7 +7622,7 @@
   {
     "lemma": "Besançon",
     "previous": "Besa 2",
-    "next": "Bessin",
+    "next": "Bessa 1",
     "chapters": [
       {
         "start": 205,
@@ -7227,8 +7632,13 @@
     ]
   },
   {
-    "lemma": "Bessin",
+    "lemma": "Bessa 1",
     "previous": "Besançon",
+    "next": "Bessin"
+  },
+  {
+    "lemma": "Bessin",
+    "previous": "Bessa 1",
     "next": "Betis",
     "chapters": [
       {
@@ -7272,7 +7682,7 @@
   {
     "lemma": "Béziers",
     "previous": "Beuvray",
-    "next": "Bieda",
+    "next": "Bibracte",
     "chapters": [
       {
         "start": 205,
@@ -7282,8 +7692,14 @@
     ]
   },
   {
-    "lemma": "Bieda",
+    "lemma": "Bibracte",
     "previous": "Béziers",
+    "next": "Bieda",
+    "redirect": "Beuvray"
+  },
+  {
+    "lemma": "Bieda",
+    "previous": "Bibracte",
     "next": "Biga",
     "chapters": [
       {
@@ -7506,7 +7922,6 @@
   {
     "lemma": "Boa 2",
     "previous": "Blondelia",
-    "next": "Boagrios",
     "chapters": [
       {
         "start": 209,
@@ -7516,8 +7931,12 @@
     ]
   },
   {
+    "lemma": "Boa",
+    "next": "Boagrios"
+  },
+  {
     "lemma": "Boagrios",
-    "previous": "Boa 2",
+    "previous": "Boa",
     "next": "Boconiana"
   },
   {
@@ -7786,6 +8205,7 @@
   {
     "lemma": "Borillus 2",
     "previous": "Borgo San Donnino",
+    "next": "Bosporos 1",
     "chapters": [
       {
         "start": 213,
@@ -7795,7 +8215,13 @@
     ]
   },
   {
+    "lemma": "Bosporos 1",
+    "previous": "Borillus 2",
+    "next": "Botrys 5"
+  },
+  {
     "lemma": "Botrys 5",
+    "previous": "Bosporos 1",
     "next": "Boudillus"
   },
   {
@@ -8073,7 +8499,7 @@
   {
     "lemma": "briva",
     "previous": "Brithagoras",
-    "next": "Brohltal",
+    "next": "Brivodurum",
     "chapters": [
       {
         "start": 217,
@@ -8083,8 +8509,11 @@
     ]
   },
   {
+    "lemma": "Brivodurum",
+    "previous": "briva"
+  },
+  {
     "lemma": "Brohltal",
-    "previous": "briva",
     "next": "Bromias a",
     "chapters": [
       {
@@ -8121,7 +8550,7 @@
   {
     "lemma": "Brutianae",
     "previous": "Brumath",
-    "next": "Bucconianae",
+    "next": "Bruttius 10",
     "chapters": [
       {
         "start": 217,
@@ -8131,8 +8560,13 @@
     ]
   },
   {
-    "lemma": "Bucconianae",
+    "lemma": "Bruttius 10",
     "previous": "Brutianae",
+    "next": "Bucconianae"
+  },
+  {
+    "lemma": "Bucconianae",
+    "previous": "Bruttius 10",
     "next": "Buccos",
     "chapters": [
       {
@@ -8206,7 +8640,7 @@
   {
     "lemma": "Bürgel",
     "previous": "Buda",
-    "next": "Bulographos",
+    "next": "Bukatios",
     "chapters": [
       {
         "start": 219,
@@ -8216,8 +8650,14 @@
     ]
   },
   {
-    "lemma": "Bulographos",
+    "lemma": "Bukatios",
     "previous": "Bürgel",
+    "next": "Βουλογράφος"
+  },
+  {
+    "lemma": "Βουλογράφος",
+    "previous": "Bukatios",
+    "next": "Bumelitaia",
     "chapters": [
       {
         "start": 219,
@@ -8228,6 +8668,7 @@
   },
   {
     "lemma": "Bumelitaia",
+    "previous": "Βουλογράφος",
     "next": "Busipara"
   },
   {
@@ -8244,10 +8685,12 @@
   },
   {
     "lemma": "Bussenius",
-    "previous": "Busipara"
+    "previous": "Busipara",
+    "next": "Butrio"
   },
   {
     "lemma": "Butrio",
+    "previous": "Bussenius",
     "next": "Buttos",
     "chapters": [
       {
@@ -8296,7 +8739,7 @@
   {
     "lemma": "Cacunius",
     "previous": "Cabuca",
-    "next": "Caecilius 1a",
+    "next": "Cadurci",
     "chapters": [
       {
         "start": 221,
@@ -8306,9 +8749,14 @@
     ]
   },
   {
-    "lemma": "Caecilius 1a",
+    "lemma": "Cadurci",
     "previous": "Cacunius",
-    "next": "Caecilius 73. 76",
+    "next": "Caecilius 1a"
+  },
+  {
+    "lemma": "Caecilius 1a",
+    "previous": "Cadurci",
+    "next": "Caecilius 45",
     "chapters": [
       {
         "start": 221,
@@ -8318,8 +8766,11 @@
     ]
   },
   {
+    "lemma": "Caecilius 45",
+    "previous": "Caecilius 1a"
+  },
+  {
     "lemma": "Caecilius 73. 76",
-    "previous": "Caecilius 1a",
     "next": "Bytaeus",
     "chapters": [
       {
@@ -8404,7 +8855,6 @@
   {
     "lemma": "Caepioniana praedia",
     "previous": "Caelianae figlinae",
-    "next": "Calbium",
     "chapters": [
       {
         "start": 224,
@@ -8414,9 +8864,20 @@
     ]
   },
   {
+    "lemma": "Caiva dea",
+    "next": "Calaegia"
+  },
+  {
+    "lemma": "Calaegia",
+    "previous": "Caiva dea",
+    "next": "Calbium",
+    "redirect": "Galaegia"
+  },
+  {
     "lemma": "Calbium",
-    "previous": "Caepioniana praedia",
+    "previous": "Calaegia",
     "next": "Calenius",
+    "redirect": "Gabaeum",
     "chapters": [
       {
         "start": 224,
@@ -9559,6 +10020,7 @@
     "lemma": "Χελιδόνειος",
     "previous": "Chelidon 4",
     "next": "Chelkias",
+    "sort_key": "Chelidoneios",
     "chapters": [
       {
         "start": 245,
@@ -9619,6 +10081,7 @@
     "lemma": "Χιουργές",
     "previous": "Chilon 5a",
     "next": "Christophoros 2",
+    "sort_key": "Chiurges",
     "chapters": [
       {
         "start": 245,
@@ -11498,10 +11961,12 @@
   },
   {
     "lemma": "Demetrios 89",
-    "previous": "Demetrios 22a"
+    "previous": "Demetrios 22a",
+    "next": "Demetrios 124"
   },
   {
     "lemma": "Demetrios 124",
+    "previous": "Demetrios 89",
     "next": "Demetrios 125a"
   },
   {
@@ -12024,7 +12489,6 @@
   },
   {
     "lemma": "Diodoros 38",
-    "next": "Diodoros 40a",
     "chapters": [
       {
         "start": 336,
@@ -12035,7 +12499,7 @@
   },
   {
     "lemma": "Diodoros 40a",
-    "previous": "Diodoros 38",
+    "previous": "Diocletianopolis 4",
     "next": "Diogenes 22a",
     "chapters": [
       {
@@ -12060,7 +12524,7 @@
   {
     "lemma": "Diomedes 17",
     "previous": "Diogenes 22a",
-    "next": "Dionysios 148a",
+    "next": "Dionysikles 2",
     "chapters": [
       {
         "start": 337,
@@ -12070,8 +12534,11 @@
     ]
   },
   {
+    "lemma": "Dionysikles 2",
+    "previous": "Diomedes 17"
+  },
+  {
     "lemma": "Dionysios 148a",
-    "previous": "Diomedes 17",
     "next": "Dionysios 161a",
     "chapters": [
       {
@@ -13348,7 +13815,7 @@
   {
     "lemma": "Erasippos 2",
     "previous": "Equa....",
-    "next": "Eremophylakes",
+    "next": "Erasistratos 1",
     "chapters": [
       {
         "start": 440,
@@ -13358,8 +13825,13 @@
     ]
   },
   {
-    "lemma": "Eremophylakes",
+    "lemma": "Erasistratos 1",
     "previous": "Erasippos 2",
+    "next": "Ἐρημοφύλακες"
+  },
+  {
+    "lemma": "Ἐρημοφύλακες",
+    "previous": "Erasistratos 1",
     "next": "Ergissenoi",
     "chapters": [
       {
@@ -13371,7 +13843,7 @@
   },
   {
     "lemma": "Ergissenoi",
-    "previous": "Eremophylakes",
+    "previous": "Ἐρημοφύλακες",
     "next": "Ergophilos 3",
     "chapters": [
       {
@@ -14741,7 +15213,7 @@
   {
     "lemma": "ad Flexum 3",
     "previous": "Flavius 216a",
-    "next": "Florentinus 16",
+    "next": "Floreius pagus",
     "chapters": [
       {
         "start": 526,
@@ -14751,8 +15223,11 @@
     ]
   },
   {
+    "lemma": "Floreius pagus",
+    "previous": "ad Flexum 3"
+  },
+  {
     "lemma": "Florentinus 16",
-    "previous": "ad Flexum 3",
     "next": "Floriacus, -um",
     "chapters": [
       {
@@ -15354,7 +15829,7 @@
   {
     "lemma": "Gargoris",
     "previous": "Gaodikai",
-    "next": "Gastroptes",
+    "next": "Garizin",
     "chapters": [
       {
         "start": 539,
@@ -15364,9 +15839,14 @@
     ]
   },
   {
-    "lemma": "Gastroptes",
+    "lemma": "Garizin",
     "previous": "Gargoris",
-    "next": "Gaudiosus 3",
+    "next": "Γαστρόπτης"
+  },
+  {
+    "lemma": "Γαστρόπτης",
+    "previous": "Garizin",
+    "next": "Gaudiacus vicus",
     "chapters": [
       {
         "start": 539,
@@ -15376,8 +15856,11 @@
     ]
   },
   {
+    "lemma": "Gaudiacus vicus",
+    "previous": "Γαστρόπτης"
+  },
+  {
     "lemma": "Gaudiosus 3",
-    "previous": "Gastroptes",
     "next": "Gaudotos",
     "chapters": [
       {
@@ -17097,7 +17580,7 @@
   {
     "lemma": "Helvius 15b",
     "previous": "Helvius 15a",
-    "next": "Hemiolia",
+    "next": "Ἡμιχόριον",
     "chapters": [
       {
         "start": 904,
@@ -17107,8 +17590,13 @@
     ]
   },
   {
-    "lemma": "Hemiolia",
+    "lemma": "Ἡμιχόριον",
     "previous": "Helvius 15b",
+    "next": "Ἡμιολία"
+  },
+  {
+    "lemma": "Ἡμιολία",
+    "previous": "Ἡμιχόριον",
     "next": "Hemiolion",
     "chapters": [
       {
@@ -17119,7 +17607,7 @@
   },
   {
     "lemma": "Hemiolion",
-    "previous": "Hemiolia",
+    "previous": "Ἡμιολία",
     "next": "Heraios 1",
     "chapters": [
       {
@@ -17555,7 +18043,12 @@
     ]
   },
   {
+    "lemma": "Hipponion",
+    "next": "Hippos 2"
+  },
+  {
     "lemma": "Hippos 2",
+    "previous": "Hipponion",
     "next": "Hippos 3a"
   },
   {
@@ -18308,7 +18801,6 @@
   {
     "lemma": "Indus 2",
     "previous": "Indus 3",
-    "next": "Ingelheim",
     "chapters": [
       {
         "start": 1239,
@@ -18318,8 +18810,12 @@
     ]
   },
   {
+    "lemma": "Indus",
+    "next": "Ingelheim"
+  },
+  {
     "lemma": "Ingelheim",
-    "previous": "Indus 2",
+    "previous": "Indus",
     "next": "Ingenuus 4",
     "chapters": [
       {

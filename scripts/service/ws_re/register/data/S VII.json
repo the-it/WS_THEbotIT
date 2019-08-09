@@ -76,7 +76,7 @@
   {
     "lemma": "Alum Gallicum",
     "previous": "Alexandros 17",
-    "next": "Amphinomos 6",
+    "next": "Amnisos 1",
     "chapters": [
       {
         "start": 22,
@@ -86,8 +86,13 @@
     ]
   },
   {
-    "lemma": "Amphinomos 6",
+    "lemma": "Amnisos 1",
     "previous": "Alum Gallicum",
+    "next": "Amphinomos 6"
+  },
+  {
+    "lemma": "Amphinomos 6",
+    "previous": "Amnisos 1",
     "next": "Andron 18",
     "chapters": [
       {
@@ -131,7 +136,12 @@
     "previous": "Antipatros 29"
   },
   {
+    "lemma": "Apollonia 7",
+    "next": "Apomoira"
+  },
+  {
     "lemma": "Apomoira",
+    "previous": "Apollonia 7",
     "next": "Aqua, Aquae 77a",
     "chapters": [
       {
@@ -156,10 +166,13 @@
   },
   {
     "lemma": "Arbion",
-    "previous": "Aqua, Aquae 77a"
+    "previous": "Aqua, Aquae 77a",
+    "next": "Archisomatophylakes"
   },
   {
     "lemma": "Archisomatophylakes",
+    "previous": "Arbion",
+    "next": "Architectura",
     "chapters": [
       {
         "start": 46,
@@ -170,6 +183,7 @@
   },
   {
     "lemma": "Architectura",
+    "previous": "Archisomatophylakes",
     "next": "Aristolaos 2"
   },
   {
@@ -236,6 +250,7 @@
     "lemma": "Askese",
     "previous": "Asidonia",
     "next": "Ἀσκληπιαις",
+    "wp_link": "w:de:Askese",
     "chapters": [
       {
         "start": 50,
@@ -260,6 +275,7 @@
   {
     "lemma": "Attributio",
     "previous": "Ἀσκληπιαις",
+    "next": "Auction 1",
     "chapters": [
       {
         "start": 65,
@@ -270,7 +286,6 @@
   },
   {
     "lemma": "Aurelius 39a",
-    "previous": "Aurelius 63a",
     "next": "Aurelius 56b",
     "sort_key": "Aurelius 039a",
     "chapters": [
@@ -284,16 +299,17 @@
   {
     "lemma": "Aurelius 56b",
     "previous": "Aurelius 39a",
-    "next": "Aurelius 145aaa",
     "sort_key": "Aurelius 056b"
   },
   {
     "lemma": "Auction 1",
+    "previous": "Attributio",
     "next": "Aurelius 63a"
   },
   {
     "lemma": "Aurelius 63a",
     "previous": "Auction 1",
+    "next": null,
     "chapters": [
       {
         "start": 72,
@@ -369,10 +385,17 @@
   },
   {
     "lemma": "Biennos 1",
-    "previous": "Axomis"
+    "previous": "Axomis",
+    "next": "Brogitarus"
+  },
+  {
+    "lemma": "Brogitarus",
+    "previous": "Biennos 1",
+    "next": "Caecilius 33a"
   },
   {
     "lemma": "Caecilius 33a",
+    "previous": "Brogitarus",
     "next": "Caelius 7a",
     "chapters": [
       {
@@ -441,8 +464,14 @@
     "previous": "Clementius 1a"
   },
   {
+    "lemma": "Chersonesos 5",
+    "next": "χρηματισμός"
+  },
+  {
     "lemma": "χρηματισμός",
+    "previous": "Chersonesos 5",
     "next": "Claudius 207",
+    "sort_key": "Chrematismos",
     "chapters": [
       {
         "start": 90,
@@ -453,7 +482,8 @@
   },
   {
     "lemma": "Claudius 207",
-    "previous": "χρηματισμός"
+    "previous": "χρηματισμός",
+    "next": null
   },
   {
     "lemma": "Cocceius 12",
