@@ -233,7 +233,7 @@ class GlCreateMagazine(CanonicalBot):
             string_list.append("|BEARBEITUNGSSTAND=fertig\n")
         else:
             string_list.append("|BEARBEITUNGSSTAND=korrigiert\n")
-        string_list.append("|INDEXSEITE=Die Gartenlaube ({year})\n}}}}\n\n"
+        string_list.append("|INDEXSEITE=Die Gartenlaube ({year})\n}}}}\n"
                            "{{{{BlockSatzStart}}}}\n__TOC__\n".format(year=year))
         ref = []
         for page in list_of_pages:
