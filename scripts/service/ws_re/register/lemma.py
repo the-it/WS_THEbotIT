@@ -213,7 +213,8 @@ class Lemma():
                     value = self._get_chapter_dicts()
                 else:
                     value = self._lemma_dict[property_key]
-                return_dict[property_key] = value
+                if value:
+                    return_dict[property_key] = value
         return return_dict
 
     def _get_chapter_dicts(self) -> List[Dict[str, str]]:
