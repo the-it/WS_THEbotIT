@@ -38,6 +38,7 @@
   {
     "lemma": "Adlullia",
     "previous": "Ada 2",
+    "next": "Aelius 93",
     "chapters": [
       {
         "start": 7,
@@ -47,8 +48,13 @@
     ]
   },
   {
+    "lemma": "Aelius 93",
+    "previous": "Adlullia",
+    "next": "Aetoma"
+  },
+  {
     "lemma": "Aetoma",
-    "previous": null,
+    "previous": "Aelius 93",
     "next": "Aëtos 4"
   },
   {
@@ -215,6 +221,7 @@
     "lemma": "Ἀλεκτορομαντεία",
     "previous": "Akuphis",
     "next": "Alexandros 34c",
+    "sort_key": "Alektoromanteia",
     "chapters": [
       {
         "start": 12,
@@ -253,6 +260,7 @@
     "lemma": "Alexandros 34e",
     "previous": "Alexandros 34d",
     "next": "Alexandros 34f",
+    "sort_key": "Alexandros 034e",
     "chapters": [
       {
         "start": 15,
@@ -349,6 +357,7 @@
     "lemma": "Allegorische Dichtererklärung",
     "previous": "Alkmeonides 2",
     "next": "Allodios",
+    "wp_link": "w:de:Allegorie",
     "chapters": [
       {
         "start": 16,
@@ -601,10 +610,12 @@
   },
   {
     "lemma": "Antiphon 15",
-    "previous": "Antiphilos 3d"
+    "previous": "Antiphilos 3d",
+    "next": "Apelleas"
   },
   {
     "lemma": "Apelleas",
+    "previous": "Antiphon 15",
     "next": "Aphamios 2",
     "chapters": [
       {
@@ -644,7 +655,6 @@
   },
   {
     "lemma": "Aphobetos 2",
-    "next": "Aphrikes",
     "chapters": [
       {
         "start": 44,
@@ -654,9 +664,14 @@
     ]
   },
   {
+    "lemma": "Aphobetos",
+    "previous": "Aphneïs",
+    "next": "Aphrikes"
+  },
+  {
     "lemma": "Aphrikes",
-    "previous": "Aphobetos 2",
-    "next": "Apollodoros 41d",
+    "previous": "Aphobetos",
+    "next": "Apollodoros 41a",
     "chapters": [
       {
         "start": 44,
@@ -667,7 +682,6 @@
   },
   {
     "lemma": "Apollodoros 41d",
-    "previous": "Aphrikes",
     "chapters": [
       {
         "start": 44,
@@ -736,6 +750,7 @@
     "lemma": "Apollonios 71a",
     "previous": "Apollonios 70b",
     "next": "Apollophanes 7a",
+    "sort_key": "Apollonios 071a",
     "chapters": [
       {
         "start": 45,
@@ -820,10 +835,13 @@
   },
   {
     "lemma": "Arimoi",
-    "previous": "Arexion"
+    "previous": "Arexion",
+    "next": "Arimmas 2",
+    "redirect": "Aenaria"
   },
   {
     "lemma": "Arimmas 2",
+    "previous": "Arimoi",
     "next": "Aristarchos 7a",
     "chapters": [
       {
@@ -936,6 +954,7 @@
     "lemma": "Aristomenes 2a",
     "previous": "Aristokrates 28",
     "next": "Ariston 11a",
+    "sort_key": "Aristomenes 02a",
     "chapters": [
       {
         "start": 48,
@@ -972,6 +991,7 @@
     "lemma": "Aristophanes 8a",
     "previous": "Aristonymos 12",
     "next": "Arridaios 8",
+    "sort_key": "Aristophanes 08a",
     "chapters": [
       {
         "start": 48,
@@ -983,7 +1003,6 @@
   {
     "lemma": "Arridaios 8",
     "previous": "Aristophanes 8a",
-    "next": "Arybas 2",
     "chapters": [
       {
         "start": 48,
@@ -994,6 +1013,8 @@
   },
   {
     "lemma": "Arsakes 9",
+    "previous": "Arybas 2",
+    "next": "Arsames 7",
     "chapters": [
       {
         "start": 48,
@@ -1004,8 +1025,6 @@
   },
   {
     "lemma": "Arybas 2",
-    "previous": "Arridaios 8",
-    "next": "Arsakes 9",
     "chapters": [
       {
         "start": 48,
@@ -1016,6 +1035,7 @@
   },
   {
     "lemma": "Arsames 7",
+    "previous": "Arsakes 9",
     "next": "Arsames 8",
     "chapters": [
       {
@@ -1111,7 +1131,8 @@
   },
   {
     "lemma": "Asklepiades 2a",
-    "previous": "Asklepiades 1a"
+    "previous": "Asklepiades 1a",
+    "next": "Aspis 17"
   },
   {
     "lemma": "Asklepiades 2a) = 14a",
@@ -1246,6 +1267,7 @@
   {
     "lemma": "Attinas 2",
     "previous": "Atizyes",
+    "next": "Attylos",
     "chapters": [
       {
         "start": 57,
@@ -1522,7 +1544,13 @@
   },
   {
     "lemma": "Χαμαιδικαστής",
-    "previous": "Chaireas 5a"
+    "previous": "Chaireas 5a",
+    "next": "Charikles 4a",
+    "sort_key": "Chamaidikastes"
+  },
+  {
+    "lemma": "Charikles 4a",
+    "previous": "Χαμαιδικαστής"
   },
   {
     "lemma": "Charon 5a",
@@ -1586,7 +1614,6 @@
   },
   {
     "lemma": "Chersanippos",
-    "next": "Chersephippos",
     "chapters": [
       {
         "start": 216,
@@ -1596,9 +1623,10 @@
     ]
   },
   {
-    "lemma": "Chersephippos",
-    "previous": "Chersanippos",
+    "lemma": "Χερσέφιππος",
+    "previous": "Χειριστής",
     "next": "Chiton 2",
+    "sort_key": "Chersephippos",
     "chapters": [
       {
         "start": 216,
@@ -1609,8 +1637,8 @@
   },
   {
     "lemma": "Chiton 2",
-    "previous": "Chersephippos",
-    "next": "Chomatepimeletes",
+    "previous": "Χερσέφιππος",
+    "next": "Χωματεπιμελητής",
     "chapters": [
       {
         "start": 216,
@@ -1620,9 +1648,10 @@
     ]
   },
   {
-    "lemma": "Chomatepimeletes",
+    "lemma": "Χωματεπιμελητής",
     "previous": "Chiton 2",
     "next": "Ch(on?)neia",
+    "sort_key": "Chomatepimeletes",
     "chapters": [
       {
         "start": 216,
@@ -1633,7 +1662,7 @@
   },
   {
     "lemma": "Ch(on?)neia",
-    "previous": "Chomatepimeletes",
+    "previous": "Χωματεπιμελητής",
     "next": "Choregis",
     "chapters": [
       {
@@ -1658,7 +1687,8 @@
   {
     "lemma": "Χρηματιστής 1",
     "previous": "Choregis",
-    "next": "Chrematistes 2",
+    "next": "Chrysippos 10a",
+    "sort_key": "Chrematistes 1",
     "chapters": [
       {
         "start": 216,
@@ -1669,7 +1699,6 @@
   },
   {
     "lemma": "Chrematistes 2",
-    "previous": "Χρηματιστής 1",
     "next": "Chrematistes 3",
     "chapters": [
       {
@@ -3692,6 +3721,7 @@
     "lemma": "Ὁριοδείκτης",
     "previous": "Histopede",
     "next": "Horismos",
+    "sort_key": "Horiodeiktes",
     "chapters": [
       {
         "start": 760,
@@ -3715,7 +3745,8 @@
   {
     "lemma": "Ὁρκωμότης",
     "previous": "Horismos",
-    "next": "Hormophylakia",
+    "next": "Ὁρμοφυλακία",
+    "sort_key": "Horkomotes",
     "chapters": [
       {
         "start": 761,
@@ -3725,9 +3756,10 @@
     ]
   },
   {
-    "lemma": "Hormophylakia",
+    "lemma": "Ὁρμοφυλακία",
     "previous": "Ὁρκωμότης",
     "next": "Hyäne",
+    "sort_key": "Hormophylakia",
     "chapters": [
       {
         "start": 761,
@@ -3738,7 +3770,7 @@
   },
   {
     "lemma": "Hyäne",
-    "previous": "Hormophylakia",
+    "previous": "Ὁρμοφυλακία",
     "next": "Hydarnes 1",
     "chapters": [
       {
@@ -3816,7 +3848,7 @@
   {
     "lemma": "Hydrophoros",
     "previous": "Hydrakes",
-    "next": "Hydrophylax",
+    "next": "Ὑδροφύλαξ",
     "chapters": [
       {
         "start": 769,
@@ -3826,9 +3858,10 @@
     ]
   },
   {
-    "lemma": "Hydrophylax",
+    "lemma": "Ὑδροφύλαξ",
     "previous": "Hydrophoros",
-    "next": "Hylas 4a",
+    "next": "Hydarnes 1",
+    "sort_key": "Hydrophylax",
     "chapters": [
       {
         "start": 769,
@@ -3839,7 +3872,7 @@
   },
   {
     "lemma": "Hylas 4a",
-    "previous": "Hydrophylax",
+    "previous": null,
     "next": "Hyle 3",
     "chapters": [
       {
@@ -3877,6 +3910,7 @@
     "lemma": "Ὑπασχολούμενος",
     "previous": "Hylias",
     "next": "Hyperanthes 2",
+    "sort_key": "Hypascholumenos",
     "chapters": [
       {
         "start": 770,
@@ -3915,7 +3949,6 @@
   {
     "lemma": "Hyperethes",
     "previous": "Hyperbolos 2",
-    "next": "Hypobibliophylax",
     "chapters": [
       {
         "start": 771,
@@ -3925,9 +3958,20 @@
     ]
   },
   {
-    "lemma": "Hypobibliophylax",
-    "previous": "Hyperethes",
-    "next": "Hypodioiketes",
+    "lemma": "Hyperbolos",
+    "next": "Ὑπηρέτης"
+  },
+  {
+    "lemma": "Ὑπηρέτης",
+    "previous": "Hyperbolos",
+    "next": "Ὑποβιβλιοφύλαξ",
+    "sort_key": "Hyperetes"
+  },
+  {
+    "lemma": "Ὑποβιβλιοφύλαξ",
+    "previous": "Ὑπηρέτης",
+    "next": "Ὑποδιοικητής",
+    "sort_key": "Hypobibliophylax",
     "chapters": [
       {
         "start": 772,
@@ -3937,9 +3981,10 @@
     ]
   },
   {
-    "lemma": "Hypodioiketes",
-    "previous": "Hypobibliophylax",
-    "next": "Hypomnematographos",
+    "lemma": "Ὑποδιοικητής",
+    "previous": "Ὑποβιβλιοφύλαξ",
+    "next": "Ὑπομνηματογράφος",
+    "sort_key": "Hypodioiketes",
     "chapters": [
       {
         "start": 772,
@@ -3949,9 +3994,10 @@
     ]
   },
   {
-    "lemma": "Hypomnematographos",
-    "previous": "Hypodioiketes",
-    "next": "Hypostrategos",
+    "lemma": "Ὑπομνηματογράφος",
+    "previous": "Ὑποδιοικητής",
+    "next": "Ὑποστράτηγος",
+    "sort_key": "Hypomnematographos",
     "chapters": [
       {
         "start": 773,
@@ -3961,9 +4007,10 @@
     ]
   },
   {
-    "lemma": "Hypostrategos",
-    "previous": "Hypomnematographos",
-    "next": "Hypoteles",
+    "lemma": "Ὑποστράτηγος",
+    "previous": "Ὑπομνηματογράφος",
+    "next": "Ὑποτελής",
+    "sort_key": "Hypostrategos",
     "chapters": [
       {
         "start": 775,
@@ -3973,8 +4020,8 @@
     ]
   },
   {
-    "lemma": "Hypoteles",
-    "previous": "Hypostrategos",
+    "lemma": "Ὑποτελής",
+    "previous": "Ὑποστράτηγος",
     "next": "Hypozoma",
     "chapters": [
       {
@@ -3986,7 +4033,7 @@
   },
   {
     "lemma": "Hypozoma",
-    "previous": "Hypoteles",
+    "previous": "Ὑποτελής",
     "next": "Hypsides",
     "chapters": [
       {

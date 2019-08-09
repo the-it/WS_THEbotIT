@@ -976,7 +976,7 @@
     "lemma": "Ancilius 2",
     "previous": "Ancilius 1",
     "next": "Andron 19",
-    "redirect": true,
+    "redirect": "Ancilius 1",
     "chapters": [
       {
         "start": 20,
@@ -1075,6 +1075,7 @@
   {
     "lemma": "Anteros 6",
     "previous": "Anomia",
+    "next": "Antimachos 9",
     "chapters": [
       {
         "start": 21,
@@ -1085,6 +1086,7 @@
   },
   {
     "lemma": "Antimachos 9",
+    "previous": "Anteros 6",
     "next": "Antimedes"
   },
   {
@@ -1263,7 +1265,7 @@
     "lemma": "Apolaustus 7",
     "previous": "Apolaustus 6",
     "next": "Apolaustus 8",
-    "redirect": true,
+    "redirect": "Aelius 27aaa",
     "chapters": [
       {
         "start": 23,
@@ -1851,14 +1853,7 @@
   {
     "lemma": "Athenai 1A",
     "previous": "Ἀθη...",
-    "next": "Athenaios 28",
-    "chapters": [
-      {
-        "start": 48,
-        "end": 89,
-        "author": "Papastavrou"
-      }
-    ]
+    "next": "Athenaios 28"
   },
   {
     "lemma": "Athenaios 28",
@@ -2606,7 +2601,12 @@
     "previous": "Damon 3a"
   },
   {
+    "lemma": "Damotimos 1",
+    "next": "Dativa"
+  },
+  {
     "lemma": "Dativa",
+    "previous": "Damotimos 1",
     "next": "Decuria",
     "chapters": [
       {
@@ -2618,7 +2618,8 @@
   },
   {
     "lemma": "Decuria",
-    "previous": "Dativa"
+    "previous": "Dativa",
+    "next": null
   },
   {
     "lemma": "Demetrios 32ee",
@@ -6959,7 +6960,7 @@
   {
     "lemma": "Paulus 29",
     "previous": "Paulus 9a",
-    "next": "Pausanias 12a",
+    "next": "Pauperies",
     "chapters": [
       {
         "start": 510,
@@ -6969,8 +6970,13 @@
     ]
   },
   {
-    "lemma": "Pausanias 12a",
+    "lemma": "Pauperies",
     "previous": "Paulus 29",
+    "next": "Pausanias 12a"
+  },
+  {
+    "lemma": "Pausanias 12a",
+    "previous": "Pauperies",
     "next": "Pausanias 25",
     "chapters": [
       {
@@ -9910,7 +9916,6 @@
   {
     "lemma": "Tzoides",
     "previous": "Tyrmeidai",
-    "next": "Ulpius 1a",
     "chapters": [
       {
         "start": 955,
@@ -9921,8 +9926,10 @@
   },
   {
     "lemma": "Ulpius 1a",
-    "previous": "Tzoides",
-    "next": "Ummidius 2a",
+    "previous": "Ulpius 1",
+    "next": "Ulpius 3a",
+    "sort_key": "Vlpius 1a",
+    "wp_link": "w:de:Trajan",
     "chapters": [
       {
         "start": 1035,
@@ -9938,7 +9945,6 @@
   },
   {
     "lemma": "Ummidius 2a",
-    "previous": "Ulpius 1a",
     "next": "Urbanae cohortes",
     "chapters": [
       {

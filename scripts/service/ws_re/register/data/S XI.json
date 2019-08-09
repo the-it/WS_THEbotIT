@@ -287,7 +287,6 @@
   {
     "lemma": "Xerxes 4",
     "previous": "Vomitorium",
-    "next": "Aelius 15a",
     "chapters": [
       {
         "start": 0,
@@ -296,9 +295,14 @@
     ]
   },
   {
+    "lemma": "Abragila",
+    "previous": null,
+    "next": "Aelius 15a"
+  },
+  {
     "lemma": "Aelius 15a",
-    "previous": "Xerxes 4",
-    "next": "Ammatas",
+    "previous": "Abragila",
+    "next": "Aischylos 13",
     "chapters": [
       {
         "start": 1,
@@ -308,8 +312,23 @@
     ]
   },
   {
-    "lemma": "Ammatas",
+    "lemma": "Aischylos 13",
     "previous": "Aelius 15a",
+    "next": "Alkaios 9"
+  },
+  {
+    "lemma": "Alkaios 9",
+    "previous": "Aischylos 13",
+    "next": "Alkman"
+  },
+  {
+    "lemma": "Alkman",
+    "previous": "Alkaios 9",
+    "next": "Ammatas"
+  },
+  {
+    "lemma": "Ammatas",
+    "previous": "Alkman",
     "next": "Amythaon 2",
     "chapters": [
       {
@@ -324,13 +343,18 @@
     "previous": "Ammatas"
   },
   {
+    "lemma": "Anakreon 1",
+    "next": "Anaphe"
+  },
+  {
     "lemma": "Anaphe",
+    "previous": "Anakreon 1",
     "next": "Anartii"
   },
   {
     "lemma": "Anartii",
     "previous": "Anaphe",
-    "next": "Andreas 11",
+    "next": "Anatomie",
     "chapters": [
       {
         "start": 38,
@@ -340,8 +364,13 @@
     ]
   },
   {
-    "lemma": "Andreas 11",
+    "lemma": "Anatomie",
     "previous": "Anartii",
+    "next": "Andreas 11"
+  },
+  {
+    "lemma": "Andreas 11",
+    "previous": "Anatomie",
     "next": "Androkles 11"
   },
   {
@@ -382,10 +411,12 @@
   },
   {
     "lemma": "Antigonos 16",
-    "previous": "Angeiologia"
+    "previous": "Angeiologia",
+    "next": "Antiocheia 15"
   },
   {
     "lemma": "Antiocheia 15",
+    "previous": "Antigonos 16",
     "next": "Antiphilos 3c"
   },
   {
@@ -439,7 +470,7 @@
   {
     "lemma": "Apollinarios 2",
     "previous": "Antonius 126a",
-    "next": "Arabiates",
+    "next": "Aqua, Aquae 18",
     "chapters": [
       {
         "start": 62,
@@ -449,8 +480,19 @@
     ]
   },
   {
-    "lemma": "Arabiates",
+    "lemma": "Aqua, Aquae 18",
     "previous": "Apollinarios 2",
+    "next": "Aquincum"
+  },
+  {
+    "lemma": "Aquincum",
+    "previous": "Aqua, Aquae 18",
+    "next": "Arabiates"
+  },
+  {
+    "lemma": "Arabiates",
+    "previous": "Aquincum",
+    "next": "Aravisci",
     "chapters": [
       {
         "start": 131,
@@ -461,6 +503,7 @@
   },
   {
     "lemma": "Aravisci",
+    "previous": "Arabiates",
     "next": "Archelaos 10a"
   },
   {
@@ -478,16 +521,22 @@
   {
     "lemma": "Archilochos 2",
     "previous": "Archelaos 10a",
-    "next": null
+    "next": "Ariston 52"
+  },
+  {
+    "lemma": "Ariston 52",
+    "previous": "Archilochos 2",
+    "next": "Aristoteles 18"
   },
   {
     "lemma": "Aristoteles 18",
+    "previous": "Ariston 52",
     "next": "Aristoteles 25"
   },
   {
     "lemma": "Aristoteles 25",
     "previous": "Aristoteles 18",
-    "next": "Arsaciana",
+    "next": "Aristoxenos 7",
     "chapters": [
       {
         "start": 336,
@@ -497,8 +546,14 @@
     ]
   },
   {
-    "lemma": "Arsaciana",
+    "lemma": "Aristoxenos 7",
     "previous": "Aristoteles 25",
+    "next": "Arsaciana"
+  },
+  {
+    "lemma": "Arsaciana",
+    "previous": "Aristoxenos 7",
+    "next": "Arteriotomia",
     "chapters": [
       {
         "start": 343,
@@ -509,7 +564,9 @@
   },
   {
     "lemma": "Arteriotomia",
-    "next": "Asea 1"
+    "previous": "Arsaciana",
+    "next": "Asea 1",
+    "redirect": "Periskythismos"
   },
   {
     "lemma": "Asea 1",
@@ -900,7 +957,6 @@
   {
     "lemma": "Eurea",
     "previous": "Eudemos 11",
-    "next": "Eurylochos 11",
     "chapters": [
       {
         "start": 658,
@@ -910,8 +966,12 @@
     ]
   },
   {
+    "lemma": "Euripides 4",
+    "next": "Eurylochos 11"
+  },
+  {
     "lemma": "Eurylochos 11",
-    "previous": "Eurea",
+    "previous": "Euripides 4",
     "next": "Faustus 26",
     "chapters": [
       {
@@ -1748,7 +1808,6 @@
   {
     "lemma": "principes",
     "previous": "primores",
-    "next": "Psellos",
     "chapters": [
       {
         "start": 1113,
@@ -1759,8 +1818,8 @@
   },
   {
     "lemma": "Psellos",
-    "previous": "principes",
-    "next": "publicani",
+    "previous": "Proxenos 10a",
+    "next": "Psiax",
     "chapters": [
       {
         "start": 1124,
@@ -1771,7 +1830,6 @@
   },
   {
     "lemma": "publicani",
-    "previous": "Psellos",
     "next": "societates publicanorum",
     "chapters": [
       {

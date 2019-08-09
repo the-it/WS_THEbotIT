@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Achaios 8",
-    "previous": null,
     "next": "Agathokles 35",
     "chapters": [
       {
@@ -49,12 +48,15 @@
   },
   {
     "lemma": "Alexandrina aqua",
-    "previous": "Aisopos 6",
+    "previous": "Aisopos 6"
+  },
+  {
+    "lemma": "Alexandri(a)na aqua",
     "next": "Alko"
   },
   {
     "lemma": "Alko",
-    "previous": "Alexandrina aqua",
+    "previous": "Alexandri(a)na aqua",
     "next": "Alsietina aqua",
     "chapters": [
       {
@@ -289,6 +291,7 @@
     "lemma": "Aristodemos 7a",
     "previous": "Aristo",
     "next": "Aristonidas 1",
+    "sort_key": "Aristodemos 07a",
     "chapters": [
       {
         "start": 6,
@@ -2072,7 +2075,6 @@
   {
     "lemma": "Paulus 11",
     "previous": "Parthenis 5",
-    "next": "Paulus 26",
     "chapters": [
       {
         "start": 431,
@@ -2083,7 +2085,7 @@
   },
   {
     "lemma": "Paulus 26",
-    "previous": "Paulus 11",
+    "previous": "Parthenis 5",
     "next": "Pediophylax",
     "chapters": [
       {
@@ -3665,6 +3667,7 @@
     "lemma": "Achilleus 8a",
     "previous": "Valerius 81a",
     "next": "Antonius 30",
+    "sort_key": "Achilleus 08a",
     "chapters": [
       {
         "start": 917,
@@ -3676,6 +3679,7 @@
   {
     "lemma": "Antonius 30",
     "previous": "Achilleus 8a",
+    "next": null,
     "sort_key": "Antonius 030"
   },
   {
@@ -5877,7 +5881,6 @@
   {
     "lemma": "Serapion 10",
     "previous": "Serapion 7a",
-    "next": "Aleximachos 3",
     "chapters": [
       {
         "start": 1260,
@@ -5888,7 +5891,7 @@
   },
   {
     "lemma": "Aleximachos 3",
-    "previous": "Serapion 10",
+    "previous": "Serapion 7b",
     "next": "Chremetides",
     "chapters": [
       {
