@@ -214,7 +214,9 @@ class TestLemma(BaseTestRegister):
         compare("heraites hormos", Lemma.make_sort_key("Ἡραΐτης Ὅρμος"))
         compare("hamippoi", Lemma.make_sort_key("Ἅμιπποι"))
         compare("chrysun stoma", Lemma.make_sort_key("Χρυσοῦν στόμα"))
-        #compare("drimylon oros", Lemma.make_sort_key("Δριμύλον ὅρος"))
+        # compare("drimylon oros", Lemma.make_sort_key("Δριμύλον ὅρος"))
+        compare("hea", Lemma.make_sort_key("Ἑα"))
+        compare("ea", Lemma.make_sort_key("Ἐα"))
 
 
     def test_sort_key_provide_by_lemma(self):
