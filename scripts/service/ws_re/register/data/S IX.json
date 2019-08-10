@@ -331,7 +331,7 @@
   {
     "lemma": "Aurelius 145aa",
     "previous": "Aulis 1",
-    "next": "Aurelius 157a",
+    "next": "Aurelius 155",
     "chapters": [
       {
         "start": 17,
@@ -341,9 +341,13 @@
     ]
   },
   {
-    "lemma": "Aurelius 157a",
+    "lemma": "Aurelius 155",
     "previous": "Aurelius 145aa",
-    "next": "Bobiensia epigrammata",
+    "next": "Aurelius 157a"
+  },
+  {
+    "lemma": "Aurelius 157a",
+    "previous": "Aurelius 155",
     "chapters": [
       {
         "start": 17,
@@ -354,9 +358,9 @@
   },
   {
     "lemma": "Bobiensia epigrammata",
-    "previous": "Aurelius 157a",
+    "previous": "Automedusa 2",
     "next": "Bomos Athenas",
-    "redirect": true,
+    "redirect": "Epigrammata Bobiensia",
     "chapters": [
       {
         "start": 17,
@@ -378,10 +382,12 @@
   },
   {
     "lemma": "Buphagion",
-    "previous": "Bomos Athenas"
+    "previous": "Bomos Athenas",
+    "next": null
   },
   {
     "lemma": "Aurelius 163a",
+    "previous": "Aurelius 157a",
     "next": "Aurelius 217a",
     "chapters": [
       {
@@ -406,6 +412,7 @@
   {
     "lemma": "Automedusa 2",
     "previous": "Aurelius 217a",
+    "next": "Bobiensia epigrammata",
     "chapters": [
       {
         "start": 18,
@@ -451,7 +458,7 @@
   {
     "lemma": "Clodius 21a",
     "previous": "Clemens aqua",
-    "next": "Cornelius 171",
+    "next": "Cornelius 284",
     "chapters": [
       {
         "start": 21,
@@ -461,8 +468,13 @@
     ]
   },
   {
-    "lemma": "Cornelius 171",
+    "lemma": "Cornelius 284",
     "previous": "Clodius 21a",
+    "next": "Cornelius 171"
+  },
+  {
+    "lemma": "Cornelius 171",
+    "previous": "Cornelius 284",
     "next": "Cornelius 297a",
     "chapters": [
       {
@@ -498,7 +510,8 @@
   },
   {
     "lemma": "Cossinius 5",
-    "previous": "Cornelius 398a"
+    "previous": "Cornelius 398a",
+    "next": "Crambianae"
   },
   {
     "lemma": "Crambianae",

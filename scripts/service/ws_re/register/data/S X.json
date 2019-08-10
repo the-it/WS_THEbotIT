@@ -1972,7 +1972,8 @@
   {
     "lemma": "Avianius 7",
     "previous": "Aufidius 44b",
-    "next": "Aurelius 32"
+    "next": "Aurelius 32",
+    "sort_key": "Auianius 07"
   },
   {
     "lemma": "Aurelius 32",
@@ -2229,6 +2230,7 @@
   },
   {
     "lemma": "bona damnatorum",
+    "previous": null,
     "next": "Bonifatius 4",
     "chapters": [
       {
@@ -2398,7 +2400,6 @@
   {
     "lemma": "Cillae",
     "previous": "Cicereia lex",
-    "next": "Clarus 6a",
     "chapters": [
       {
         "start": 128,
@@ -2409,7 +2410,7 @@
   },
   {
     "lemma": "Clodius 73",
-    "previous": null,
+    "previous": "Claudius 242a",
     "next": "cohortes urbanae",
     "chapters": [
       {
@@ -2422,6 +2423,7 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
+    "next": null,
     "redirect": "urbanae cohortes"
   },
   {

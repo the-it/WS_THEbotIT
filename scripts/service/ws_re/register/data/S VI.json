@@ -84,7 +84,13 @@
     ]
   },
   {
+    "lemma": "Aemilius 54b",
+    "next": "Aemilius 79",
+    "sort_key": "Aemilius 054b"
+  },
+  {
     "lemma": "Aemilius 79",
+    "previous": "Aemilius 54b",
     "next": "Afranius 10a"
   },
   {
@@ -402,7 +408,7 @@
   {
     "lemma": "Atilius 54a",
     "previous": "Atilius 45a",
-    "next": "Bruttius 5a",
+    "next": "Aufidius 41",
     "chapters": [
       {
         "start": 17,
@@ -412,21 +418,14 @@
     ]
   },
   {
-    "lemma": "Bruttius 5a",
+    "lemma": "Aufidius 41",
     "previous": "Atilius 54a",
-    "next": "Aufidius 44a",
-    "chapters": [
-      {
-        "start": 17,
-        "end": 17,
-        "author": "Groag"
-      }
-    ]
+    "next": "Aufidius 44a"
   },
   {
     "lemma": "Aufidius 44a",
-    "previous": "Bruttius 5a",
-    "next": "Avidius 7a",
+    "previous": "Aufidius 41",
+    "next": "Avidius 5",
     "chapters": [
       {
         "start": 18,
@@ -436,8 +435,20 @@
     ]
   },
   {
-    "lemma": "Avidius 7a",
+    "lemma": "Avidius 5",
     "previous": "Aufidius 44a",
+    "next": "Avidius 6",
+    "sort_key": "Avidius 05"
+  },
+  {
+    "lemma": "Avidius 6",
+    "previous": "Avidius 5",
+    "next": "Avidius 7a",
+    "sort_key": "Avidius 06"
+  },
+  {
+    "lemma": "Avidius 7a",
+    "previous": "Avidius 6",
     "next": "Aurelius 111a",
     "chapters": [
       {
@@ -474,7 +485,6 @@
   {
     "lemma": "Baebius 36a",
     "previous": "Aurelius 140a",
-    "next": "Bruttius 5a",
     "chapters": [
       {
         "start": 18,
@@ -484,8 +494,12 @@
     ]
   },
   {
+    "lemma": "Brutus 3",
+    "next": "Butra"
+  },
+  {
     "lemma": "Butra",
-    "previous": null,
+    "previous": "Brutus 3",
     "next": "Caburriates",
     "chapters": [
       {
@@ -962,10 +976,13 @@
   },
   {
     "lemma": "Chartodras",
-    "previous": "Cessernia"
+    "previous": "Cessernia",
+    "next": "Chelidonioi"
   },
   {
     "lemma": "Chelidonioi",
+    "previous": "Chartodras",
+    "next": "Cincius 9",
     "chapters": [
       {
         "start": 23,
@@ -975,8 +992,12 @@
     ]
   },
   {
+    "lemma": "Cincius 9",
+    "previous": "Chelidonioi",
+    "next": null
+  },
+  {
     "lemma": "Coeba(?)",
-    "previous": "Claudius 415",
     "next": "Coelius 7a",
     "chapters": [
       {
@@ -1037,6 +1058,7 @@
   },
   {
     "lemma": "Comberania",
+    "previous": null,
     "next": "Cornelius 145",
     "chapters": [
       {
@@ -1048,11 +1070,21 @@
   },
   {
     "lemma": "Cornelius 145",
-    "previous": "Comberania"
+    "previous": "Comberania",
+    "next": "Cornelius 236"
+  },
+  {
+    "lemma": "Cornelius 236",
+    "previous": "Cornelius 145"
+  },
+  {
+    "lemma": "Cornelius 279",
+    "next": "Cornelius 279a"
   },
   {
     "lemma": "Cornelius 279a",
-    "next": "Cossonius 3a",
+    "previous": "Cornelius 279",
+    "next": "Cornelius 296",
     "chapters": [
       {
         "start": 25,
@@ -1062,8 +1094,13 @@
     ]
   },
   {
-    "lemma": "Cossonius 3a",
+    "lemma": "Cornelius 296",
     "previous": "Cornelius 279a",
+    "next": "Cossonius 3a"
+  },
+  {
+    "lemma": "Cossonius 3a",
+    "previous": "Cornelius 296",
     "next": "Curtius 18",
     "chapters": [
       {
@@ -3956,7 +3993,6 @@
   {
     "lemma": "Tatiassos",
     "previous": "Tastris",
-    "next": "Telephanes 5",
     "chapters": [
       {
         "start": 1170,
@@ -3965,8 +4001,12 @@
     ]
   },
   {
+    "lemma": "Telamon 4",
+    "next": "Telephanes 5"
+  },
+  {
     "lemma": "Telephanes 5",
-    "previous": "Tatiassos",
+    "previous": "Telamon 4",
     "next": "Tellen",
     "chapters": [
       {
@@ -3991,7 +4031,6 @@
   {
     "lemma": "Tenestini",
     "previous": "Tellen",
-    "next": "Terentius 84",
     "chapters": [
       {
         "start": 1172,
@@ -4001,9 +4040,14 @@
     ]
   },
   {
+    "lemma": "Teos",
+    "next": "Terentius 84"
+  },
+  {
     "lemma": "Terentius 84",
-    "previous": "Tenestini",
+    "previous": "Teos",
     "next": "Tetraguron",
+    "sort_key": "Terentius 084",
     "chapters": [
       {
         "start": 1172,

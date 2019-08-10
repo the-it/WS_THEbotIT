@@ -1550,10 +1550,12 @@
   },
   {
     "lemma": "Charikles 4a",
-    "previous": "Χαμαιδικαστής"
+    "previous": "Χαμαιδικαστής",
+    "next": "Charon 5a"
   },
   {
     "lemma": "Charon 5a",
+    "previous": "Charikles 4a",
     "next": "Charos",
     "chapters": [
       {
@@ -1723,7 +1725,6 @@
   {
     "lemma": "Chrysones (Chryson",
     "previous": "Chrematistes 3",
-    "next": "Chrysippos 10a",
     "chapters": [
       {
         "start": 217,
@@ -1734,7 +1735,7 @@
   },
   {
     "lemma": "Chrysippos 10a",
-    "previous": "Chrysones (Chryson",
+    "previous": "Χρηματιστής 1",
     "next": "Χρυσώνης",
     "chapters": [
       {
@@ -6866,7 +6867,7 @@
   {
     "lemma": "Kyros 6",
     "previous": "Kyros 5",
-    "next": "Kyros 7",
+    "next": "Kyros 6a",
     "chapters": [
       {
         "start": 1129,
@@ -6876,8 +6877,12 @@
     ]
   },
   {
-    "lemma": "Kyros 7",
+    "lemma": "Kyros 6a",
     "previous": "Kyros 6",
+    "wp_link": "w:de:Kyros der Jüngere"
+  },
+  {
+    "lemma": "Kyros 7",
     "next": "Labassoaraskos",
     "chapters": [
       {
