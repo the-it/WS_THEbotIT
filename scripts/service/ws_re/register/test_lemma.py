@@ -214,7 +214,9 @@ class TestLemma(BaseTestRegister):
         compare("heraites hormos", Lemma.make_sort_key("Ἡραΐτης Ὅρμος"))
         compare("hamippoi", Lemma.make_sort_key("Ἅμιπποι"))
         compare("chrysun stoma", Lemma.make_sort_key("Χρυσοῦν στόμα"))
-        #compare("drimylon oros", Lemma.make_sort_key("Δριμύλον ὅρος"))
+        # compare("drimylon oros", Lemma.make_sort_key("Δριμύλον ὅρος"))
+        compare("hea", Lemma.make_sort_key("Ἑα"))
+        compare("ea", Lemma.make_sort_key("Ἐα"))
 
 
     def test_sort_key_provide_by_lemma(self):
@@ -254,9 +256,11 @@ class TestLemma(BaseTestRegister):
         missing_dict = copy.deepcopy(reverse_dict)
         del missing_dict["next"]
         del missing_dict["redirect"]
+        missing_dict["previous"] = None
         missing_expected_dict = copy.deepcopy(expected_dict)
         del missing_expected_dict["next"]
         del missing_expected_dict["redirect"]
+        del missing_expected_dict["previous"]
         missing_dict_lemma = Lemma(missing_dict, self.volumes["I,1"], self.authors)
         compare(missing_expected_dict, missing_dict_lemma.lemma_dict)
 

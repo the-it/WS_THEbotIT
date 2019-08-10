@@ -1197,16 +1197,6 @@
     "next": "Aelius 144"
   },
   {
-    "lemma": "Aelius 177",
-    "chapters": [
-      {
-        "start": 14,
-        "end": 14,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
     "lemma": "Aelius 144",
     "previous": null,
     "next": "Aelius 146a"
@@ -2145,8 +2135,7 @@
   },
   {
     "lemma": "Agimenes",
-    "previous": "Agilochos",
-    "next": "Agis 1a"
+    "previous": "Agilochos"
   },
   {
     "lemma": "Agiptria",
@@ -2624,7 +2613,7 @@
   {
     "lemma": "Aigeidas",
     "previous": "Aiga 2",
-    "next": "Aigeira 1",
+    "next": "Aigeira",
     "chapters": [
       {
         "start": 34,
@@ -2634,13 +2623,8 @@
     ]
   },
   {
-    "lemma": "Aigeira 1",
-    "previous": "Aigeidas"
-  },
-  {
     "lemma": "Aigeira",
-    "previous": "Aigeidas",
-    "next": "Aigeira 2"
+    "previous": "Aigeidas"
   },
   {
     "lemma": "Aigeira 2",
@@ -3470,9 +3454,7 @@
     "next": "Akestorides 4"
   },
   {
-    "lemma": "Akestorides 4",
-    "previous": "Akestor 5",
-    "next": "Akimis"
+    "lemma": "Akestorides 4"
   },
   {
     "lemma": "Akikaros",
@@ -3836,7 +3818,7 @@
   {
     "lemma": "Alassenses",
     "previous": "Alardostus",
-    "next": "Alastos",
+    "next": "Alastos 1a",
     "redirect": "Alastos 1a",
     "chapters": [
       {
@@ -3845,10 +3827,6 @@
         "author": "Ruge"
       }
     ]
-  },
-  {
-    "lemma": "Alastos",
-    "previous": "Alassenses"
   },
   {
     "lemma": "Alastos 1a",
@@ -3862,7 +3840,7 @@
   },
   {
     "lemma": "Alator",
-    "previous": "Alastos",
+    "previous": "Alastos 1a",
     "next": "Alazeir"
   },
   {
@@ -5972,7 +5950,6 @@
   },
   {
     "lemma": "Anaximandros 1",
-    "previous": "Anaxagoras 4",
     "next": "Anaximandros 3"
   },
   {
@@ -6643,28 +6620,6 @@
     "lemma": "Annius 28",
     "previous": "Annius 9a",
     "next": "Annius 38a"
-  },
-  {
-    "lemma": "Annius 9b",
-    "next": "Annius 9c",
-    "chapters": [
-      {
-        "start": 86,
-        "end": 86,
-        "author": "Robert"
-      }
-    ]
-  },
-  {
-    "lemma": "Annius 9c",
-    "previous": "Annius 9b",
-    "chapters": [
-      {
-        "start": 86,
-        "end": 86,
-        "author": "Robert"
-      }
-    ]
   },
   {
     "lemma": "Annius 38a",
@@ -7955,7 +7910,6 @@
   },
   {
     "lemma": "Apollonia 33",
-    "previous": "Apollonia 33",
     "next": "Ἀπολλωνιασταί"
   },
   {
@@ -8447,7 +8401,6 @@
   {
     "lemma": "Aquilleam",
     "previous": "Aquilius 29a",
-    "next": "Aʿra",
     "chapters": [
       {
         "start": 114,
@@ -8455,22 +8408,6 @@
         "author": "Streck"
       }
     ]
-  },
-  {
-    "lemma": "Aʿra",
-    "previous": "Aquilleam",
-    "next": "Arabana",
-    "chapters": [
-      {
-        "start": 114,
-        "end": 114,
-        "author": "Cumont"
-      }
-    ]
-  },
-  {
-    "lemma": "Arabana",
-    "previous": "Aʿra"
   },
   {
     "lemma": "Aquilonis mutatio",
@@ -8882,28 +8819,6 @@
     "next": "Archelas 3"
   },
   {
-    "lemma": "Archelas 1a",
-    "next": "Archelas 1b",
-    "chapters": [
-      {
-        "start": 118,
-        "end": 119,
-        "author": "Kirchner"
-      }
-    ]
-  },
-  {
-    "lemma": "Archelas 1b",
-    "previous": "Archelas 1a",
-    "chapters": [
-      {
-        "start": 119,
-        "end": 119,
-        "author": "Kirchner"
-      }
-    ]
-  },
-  {
     "lemma": "Archelas 3",
     "previous": "Archelas 2",
     "next": "Archelas 3a"
@@ -9286,11 +9201,6 @@
   },
   {
     "lemma": "Ardacus",
-    "previous": "Ardabau",
-    "next": null
-  },
-  {
-    "lemma": "Ardacus 1",
     "chapters": [
       {
         "start": 123,
@@ -10472,7 +10382,6 @@
   },
   {
     "lemma": "Aristonophos",
-    "previous": "Ariston 39c",
     "next": "Aristonymos a"
   },
   {
