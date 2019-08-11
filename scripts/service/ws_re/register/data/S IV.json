@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Abammon",
-    "previous": null,
     "next": "Achilleus 8",
     "chapters": [
       {
@@ -273,6 +272,7 @@
     "lemma": "Alexandros 34f",
     "previous": "Alexandros 34e",
     "next": "Alexandros 34g",
+    "sort_key": "Alexandros 034f",
     "chapters": [
       {
         "start": 15,
@@ -285,6 +285,7 @@
     "lemma": "Alexandros 34g",
     "previous": "Alexandros 34f",
     "next": "Alexion 2a",
+    "sort_key": "Alexandros 034g",
     "chapters": [
       {
         "start": 15,
@@ -487,7 +488,6 @@
   },
   {
     "lemma": "Androkles 13a",
-    "previous": null,
     "next": "Andronikos 16a",
     "chapters": [
       {
@@ -1516,7 +1516,6 @@
   {
     "lemma": "Bulagoras 2",
     "previous": "Boupares",
-    "next": "Cercina",
     "chapters": [
       {
         "start": 214,
@@ -1526,8 +1525,12 @@
     ]
   },
   {
+    "lemma": "Bulagoras",
+    "next": "Cercina"
+  },
+  {
     "lemma": "Cercina",
-    "previous": "Bulagoras 2",
+    "previous": "Bulagoras",
     "next": "Chaireas 5a"
   },
   {
@@ -1943,7 +1946,6 @@
   {
     "lemma": "Dexandros 2",
     "previous": "Derdas 4",
-    "next": null,
     "chapters": [
       {
         "start": 224,
@@ -3873,7 +3875,6 @@
   },
   {
     "lemma": "Hylas 4a",
-    "previous": null,
     "next": "Hyle 3",
     "chapters": [
       {

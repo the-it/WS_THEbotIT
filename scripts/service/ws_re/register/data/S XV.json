@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Aurelius 226a",
-    "next": "Callistianus",
     "chapters": [
       {
         "start": 0,
@@ -11,8 +10,8 @@
   },
   {
     "lemma": "Callistianus",
-    "previous": "Aurelius 226a",
-    "next": "Demostratos 16",
+    "previous": "Caelius 32a",
+    "next": "Calpurnius 53",
     "chapters": [
       {
         "start": 0,
@@ -22,7 +21,6 @@
   },
   {
     "lemma": "Demostratos 16",
-    "previous": "Callistianus",
     "next": "Pacatianus 1a",
     "chapters": [
       {
@@ -1026,7 +1024,8 @@
   {
     "lemma": "Aurelius 27",
     "previous": "Aurelius 8a",
-    "next": "Aurelius 37c"
+    "next": "Aurelius 37c",
+    "sort_key": "Aurelius 027"
   },
   {
     "lemma": "Aurelius 37c",
@@ -1323,7 +1322,6 @@
   {
     "lemma": "Caelius 32a",
     "previous": "Caecilius 138",
-    "next": "Calpurnius 56aa",
     "chapters": [
       {
         "start": 82,
@@ -1333,9 +1331,16 @@
     ]
   },
   {
+    "lemma": "Calpurnius 53",
+    "previous": "Callistianus",
+    "next": "Calpurnius 56aa",
+    "sort_key": "Calpurnius 053"
+  },
+  {
     "lemma": "Calpurnius 56aa",
-    "previous": "Caelius 32a",
+    "previous": "Calpurnius 53",
     "next": "Calpurnius 123b",
+    "sort_key": "Calpurnius 056aa",
     "chapters": [
       {
         "start": 82,
@@ -1359,7 +1364,7 @@
   {
     "lemma": "Camulogenus",
     "previous": "Calpurnius 123b",
-    "next": "Casticus",
+    "next": "Cassius 48",
     "chapters": [
       {
         "start": 83,
@@ -1369,8 +1374,13 @@
     ]
   },
   {
-    "lemma": "Casticus",
+    "lemma": "Cassius 48",
     "previous": "Camulogenus",
+    "next": "Casticus"
+  },
+  {
+    "lemma": "Casticus",
+    "previous": "Cassius 48",
     "next": "Cavarillus",
     "chapters": [
       {
@@ -1462,6 +1472,7 @@
     "lemma": "Claudius 32b",
     "previous": "Classicus 1a",
     "next": "Claudius 64",
+    "sort_key": "Claudius 032b",
     "chapters": [
       {
         "start": 89,
@@ -1480,6 +1491,7 @@
     "lemma": "Claudius 80a",
     "previous": "Claudius 64",
     "next": "Claudius 95a",
+    "sort_key": "Claudius 080a",
     "chapters": [
       {
         "start": 90,
@@ -1492,6 +1504,7 @@
     "lemma": "Claudius 95a",
     "previous": "Claudius 80a",
     "next": "Claudius 150a",
+    "sort_key": "Claudius 095a",
     "chapters": [
       {
         "start": 90,

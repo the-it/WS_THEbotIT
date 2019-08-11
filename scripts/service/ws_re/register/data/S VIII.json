@@ -360,7 +360,6 @@
   },
   {
     "lemma": "Bathykleia",
-    "previous": null,
     "next": "Benenatus 1",
     "chapters": [
       {
@@ -444,7 +443,6 @@
   {
     "lemma": "Aurelia aqua",
     "previous": "Augusta aqua 2",
-    "next": null,
     "redirect": "Traiana aqua",
     "chapters": [
       {
@@ -633,7 +631,6 @@
   {
     "lemma": "Damokritos 4",
     "previous": "Dalmatia",
-    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -644,7 +641,9 @@
   },
   {
     "lemma": "Demokydes",
+    "previous": "Demetrios 125b",
     "next": "Die(i)trephes",
+    "redirect": true,
     "chapters": [
       {
         "start": 59,
@@ -3679,17 +3678,16 @@
   {
     "lemma": "Antonius 30",
     "previous": "Achilleus 8a",
-    "next": null,
     "sort_key": "Antonius 030"
   },
   {
-    "lemma": "Apollodoros 23",
+    "lemma": "Apollonios 23",
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
   {
     "lemma": "Caesaris thronus",
-    "previous": "Apollodoros 23",
+    "previous": "Apollonios 23",
     "next": "Damolyte",
     "chapters": [
       {

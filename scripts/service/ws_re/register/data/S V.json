@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Agamemnon 3",
-    "previous": null,
     "next": "Agathon 14b",
     "chapters": [
       {
@@ -274,7 +273,13 @@
     "previous": "Battus"
   },
   {
+    "lemma": "Bias 10",
+    "next": "Caecilius 141"
+  },
+  {
     "lemma": "Caecilius 141",
+    "previous": "Bias 10",
+    "next": "Celsus 18a",
     "chapters": [
       {
         "start": 57,
@@ -285,7 +290,6 @@
   },
   {
     "lemma": "Caecilia Trebulla",
-    "previous": null,
     "next": "Celsus 18a",
     "wp_link": "w:de:Caecilia Trebulla"
   },

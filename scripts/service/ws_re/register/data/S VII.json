@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Adobogiona",
-    "previous": null,
     "next": "Adule",
     "sort_key": "Adobogiona",
     "redirect": "Brogitarus",
@@ -133,11 +132,14 @@
   },
   {
     "lemma": "Apollodoros 27",
-    "previous": "Antipatros 29"
+    "previous": "Antipatros 29",
+    "next": "Apollonia 7"
   },
   {
     "lemma": "Apollonia 7",
-    "next": "Apomoira"
+    "previous": "Apollodoros 27",
+    "next": "Apomoira",
+    "sort_key": "Apollonia 07"
   },
   {
     "lemma": "Apomoira",
@@ -309,7 +311,6 @@
   {
     "lemma": "Aurelius 63a",
     "previous": "Auction 1",
-    "next": null,
     "chapters": [
       {
         "start": 72,
@@ -396,7 +397,7 @@
   {
     "lemma": "Caecilius 33a",
     "previous": "Brogitarus",
-    "next": "Caelius 7a",
+    "next": "Caecina 24",
     "chapters": [
       {
         "start": 83,
@@ -406,8 +407,13 @@
     ]
   },
   {
-    "lemma": "Caelius 7a",
+    "lemma": "Caecina 24",
     "previous": "Caecilius 33a",
+    "next": "Caelius 7a"
+  },
+  {
+    "lemma": "Caelius 7a",
+    "previous": "Caecina 24",
     "next": "Canaliclarius",
     "chapters": [
       {
@@ -465,7 +471,9 @@
   },
   {
     "lemma": "Chersonesos 5",
-    "next": "χρηματισμός"
+    "previous": "Χειροτέχνιον",
+    "next": "χρηματισμός",
+    "sort_key": "Cheirotechnion"
   },
   {
     "lemma": "χρηματισμός",
@@ -482,8 +490,7 @@
   },
   {
     "lemma": "Claudius 207",
-    "previous": "χρηματισμός",
-    "next": null
+    "previous": "χρηματισμός"
   },
   {
     "lemma": "Cocceius 12",
