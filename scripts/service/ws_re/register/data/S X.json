@@ -308,7 +308,6 @@
   },
   {
     "lemma": "Accaus 2",
-    "previous": null,
     "next": "Acharneus",
     "chapters": [
       {
@@ -827,11 +826,13 @@
   },
   {
     "lemma": "Alfius 5",
-    "previous": "Alfenus 10"
+    "previous": "Alfenus 10",
+    "next": "Alfius 8a",
+    "sort_key": "Alfius 05"
   },
   {
     "lemma": "Alfius 8a",
-    "previous": null,
+    "previous": "Alfius 5",
     "next": "Alfius 8b",
     "chapters": [
       {
@@ -856,7 +857,8 @@
   {
     "lemma": "Alfius 9",
     "previous": "Alfius 8b",
-    "next": "Alkimachos 5a"
+    "next": "Alkimachos 5a",
+    "sort_key": "Alfius 09"
   },
   {
     "lemma": "Alkimachos 5a",
@@ -1128,6 +1130,7 @@
   {
     "lemma": "Antiphanes 24",
     "previous": "Antiodemis",
+    "next": "Antiphon 12",
     "chapters": [
       {
         "start": 22,
@@ -1138,6 +1141,7 @@
   },
   {
     "lemma": "Antiphon 12",
+    "previous": "Antiphanes 24",
     "next": "Antiphon 13"
   },
   {
@@ -1288,12 +1292,10 @@
   },
   {
     "lemma": "Apollas 1",
-    "previous": "Apolaustus 8",
-    "next": null
+    "previous": "Apolaustus 8"
   },
   {
     "lemma": "Apollodoros 41c",
-    "previous": null,
     "next": "Apollodoros 78"
   },
   {
@@ -1336,7 +1338,6 @@
   },
   {
     "lemma": "Apollonios 34",
-    "previous": null,
     "next": "Apollonios 48"
   },
   {
@@ -2226,11 +2227,12 @@
   },
   {
     "lemma": "Biotos",
-    "previous": "Bestia deselutia"
+    "previous": "Bestia deselutia",
+    "next": "bona damnatorum"
   },
   {
     "lemma": "bona damnatorum",
-    "previous": null,
+    "previous": "Biotos",
     "next": "Bonifatius 4",
     "chapters": [
       {
@@ -2331,7 +2333,6 @@
   {
     "lemma": "Castronius",
     "previous": "Carmen adversus paganos",
-    "next": null,
     "chapters": [
       {
         "start": 124,
@@ -2342,7 +2343,6 @@
   },
   {
     "lemma": "Charias 2",
-    "previous": null,
     "next": "Charidemos 4a"
   },
   {
@@ -2423,7 +2423,6 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
-    "next": null,
     "redirect": "urbanae cohortes"
   },
   {
@@ -2441,6 +2440,7 @@
     "lemma": "Claudius 10a",
     "previous": "Clarus 6a",
     "next": "Claudius 242a",
+    "sort_key": "Claudius 010a",
     "chapters": [
       {
         "start": 132,
@@ -2620,8 +2620,7 @@
   },
   {
     "lemma": "Decuria",
-    "previous": "Dativa",
-    "next": null
+    "previous": "Dativa"
   },
   {
     "lemma": "Demetrios 32ee",
@@ -3654,7 +3653,6 @@
   },
   {
     "lemma": "Chairestratos 1",
-    "previous": null,
     "next": "Chairestratos 1a"
   },
   {

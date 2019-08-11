@@ -296,7 +296,6 @@
   },
   {
     "lemma": "Abragila",
-    "previous": null,
     "next": "Aelius 15a"
   },
   {
@@ -548,7 +547,8 @@
   {
     "lemma": "Aristoxenos 7",
     "previous": "Aristoteles 25",
-    "next": "Arsaciana"
+    "next": "Arsaciana",
+    "sort_key": "Aristoxenos 07"
   },
   {
     "lemma": "Arsaciana",
@@ -686,6 +686,7 @@
     "lemma": "Calpurnius 56a",
     "previous": "Calcinius",
     "next": "Campilius",
+    "sort_key": "Calpurnius 056a",
     "chapters": [
       {
         "start": 357,
@@ -697,7 +698,7 @@
   {
     "lemma": "Campilius",
     "previous": "Calpurnius 56a",
-    "next": "Caragonius",
+    "next": "Campona",
     "chapters": [
       {
         "start": 357,
@@ -707,8 +708,13 @@
     ]
   },
   {
-    "lemma": "Caragonius",
+    "lemma": "Campona",
     "previous": "Campilius",
+    "next": "Caragonius"
+  },
+  {
+    "lemma": "Caragonius",
+    "previous": "Campona",
     "next": "Caramantesium vicus",
     "chapters": [
       {
@@ -744,11 +750,18 @@
   },
   {
     "lemma": "Celamantia",
-    "previous": "Ceangli"
+    "previous": "Ceangli",
+    "next": "Chamaileon 1",
+    "redirect": "Pannonia"
+  },
+  {
+    "lemma": "Chamaileon 1",
+    "previous": "Celamantia",
+    "next": "Claudius 211a",
+    "redirect": true
   },
   {
     "lemma": "Clementianus 2",
-    "previous": "Claudius 211a",
     "next": "Constantia 6",
     "chapters": [
       {
@@ -760,10 +773,13 @@
   },
   {
     "lemma": "Constantia 6",
-    "previous": "Clementianus 2"
+    "previous": "Clementianus 2",
+    "sort_key": "Constantia 06"
   },
   {
     "lemma": "Claudius 211a",
+    "previous": "Chamaileon 1",
+    "next": "Clementianus 2",
     "chapters": [
       {
         "start": 372,

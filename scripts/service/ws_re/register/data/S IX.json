@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Acilius 28a",
-    "previous": null,
     "next": "Aelius 42a",
     "chapters": [
       {
@@ -49,7 +48,6 @@
   },
   {
     "lemma": "Aelius 160a",
-    "previous": null,
     "next": "Aemilius 145",
     "chapters": [
       {
@@ -124,7 +122,6 @@
   {
     "lemma": "Antimachidas",
     "previous": "Annamatia",
-    "next": null,
     "chapters": [
       {
         "start": 11,
@@ -258,7 +255,6 @@
   {
     "lemma": "Aspis 10a",
     "previous": "Ascheion",
-    "next": null,
     "chapters": [
       {
         "start": 15,
@@ -269,7 +265,6 @@
   },
   {
     "lemma": "Ἀσπὶς ἄκρα",
-    "previous": null,
     "next": "Asprenas 1a",
     "sort_key": "Aspis akra"
   },
@@ -382,8 +377,7 @@
   },
   {
     "lemma": "Buphagion",
-    "previous": "Bomos Athenas",
-    "next": null
+    "previous": "Bomos Athenas"
   },
   {
     "lemma": "Aurelius 163a",
@@ -428,7 +422,8 @@
   {
     "lemma": "Cassius 84",
     "previous": "Buraïkos 1",
-    "next": "Claudius 149a"
+    "next": "Claudius 149a",
+    "sort_key": "Cassius 084"
   },
   {
     "lemma": "Claudius 149a",
@@ -4511,6 +4506,7 @@
   {
     "lemma": "Utis",
     "previous": "Utica",
+    "next": "Achaios 6",
     "chapters": [
       {
         "start": 1894,
@@ -4520,7 +4516,13 @@
     ]
   },
   {
+    "lemma": "Achaios 6",
+    "previous": "Utis",
+    "next": "Achaios 7"
+  },
+  {
     "lemma": "Achaios 7",
+    "previous": "Achaios 6",
     "next": "Agathon 13"
   },
   {

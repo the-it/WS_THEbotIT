@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Abretten(us)",
-    "previous": null,
     "next": "Aburnius 1a",
     "sort_key": "Abrettenus",
     "chapters": [
@@ -52,7 +51,6 @@
   },
   {
     "lemma": "Acutius 1a",
-    "previous": null,
     "next": "Aelius 75a"
   },
   {
@@ -70,8 +68,7 @@
   },
   {
     "lemma": "Aelius 76",
-    "previous": "Aelius 75a",
-    "next": null
+    "previous": "Aelius 75a"
   },
   {
     "lemma": "Aemilius 54a",
@@ -84,7 +81,13 @@
     ]
   },
   {
+    "lemma": "Aemilius 43",
+    "next": "Aemilius 54b",
+    "sort_key": "Aemilius 043"
+  },
+  {
     "lemma": "Aemilius 54b",
+    "previous": "Aemilius 43",
     "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
   },
@@ -226,6 +229,7 @@
     "lemma": "Antonius 58a",
     "previous": "Antonius 36a",
     "next": "Antonius 107a",
+    "sort_key": "Antonius 058a",
     "chapters": [
       {
         "start": 8,
@@ -523,10 +527,12 @@
   },
   {
     "lemma": "Caecina 22",
-    "previous": "Caburriates"
+    "previous": "Caburriates",
+    "next": "Caecina 23"
   },
   {
     "lemma": "Caecina 23",
+    "previous": "Caecina 22",
     "next": "Caedici(i)"
   },
   {
@@ -664,7 +670,7 @@
   {
     "lemma": "Calouitanus Portus",
     "previous": "Calor 3",
-    "next": "Calvisius 9",
+    "next": "Calpurnius 99",
     "chapters": [
       {
         "start": 20,
@@ -674,9 +680,19 @@
     ]
   },
   {
+    "lemma": "Calpurnius 99",
+    "previous": "Calouitanus Portus"
+  },
+  {
+    "lemma": "Calvisius 7",
+    "next": "Calvisius 9",
+    "sort_key": "Calvisius 07"
+  },
+  {
     "lemma": "Calvisius 9",
-    "previous": "Calouitanus Portus",
+    "previous": "Calvisius 7",
     "next": "Calvisius 10",
+    "sort_key": "Calvisius 09",
     "chapters": [
       {
         "start": 20,
@@ -688,6 +704,7 @@
   {
     "lemma": "Calvisius 10",
     "previous": "Calvisius 9",
+    "next": "Calvisius 19",
     "chapters": [
       {
         "start": 20,
@@ -698,6 +715,7 @@
   },
   {
     "lemma": "Calvisius 19",
+    "previous": "Calvisius 10",
     "next": "Camalatrum(?)"
   },
   {
@@ -739,7 +757,8 @@
   {
     "lemma": "Caninius 7",
     "previous": "Canianus saltus",
-    "next": "Canta"
+    "next": "Canta",
+    "sort_key": "Caninius 07"
   },
   {
     "lemma": "Canta",
@@ -803,10 +822,12 @@
   },
   {
     "lemma": "Caristanius 1",
-    "previous": "Caris(s)anum"
+    "previous": "Caris(s)anum",
+    "next": "Caristanius 1a"
   },
   {
     "lemma": "Caristanius 1a",
+    "previous": "Caristanius 1",
     "next": "Carnuns",
     "chapters": [
       {
@@ -871,10 +892,17 @@
   },
   {
     "lemma": "Cassius 67",
-    "previous": "Carucla"
+    "previous": "Carucla",
+    "next": "Castellum 5a"
+  },
+  {
+    "lemma": "Cassius",
+    "next": "Castellum 5a"
   },
   {
     "lemma": "Castellum 5a",
+    "previous": "Cassius",
+    "next": "Catilius 4",
     "chapters": [
       {
         "start": 22,
@@ -885,6 +913,7 @@
   },
   {
     "lemma": "Catilius 4",
+    "previous": "Castellum 5a",
     "next": "Catillus 4"
   },
   {
@@ -993,8 +1022,7 @@
   },
   {
     "lemma": "Cincius 9",
-    "previous": "Chelidonioi",
-    "next": null
+    "previous": "Chelidonioi"
   },
   {
     "lemma": "Coeba(?)",
@@ -1042,12 +1070,39 @@
     ]
   },
   {
+    "lemma": "Claudius 194",
+    "previous": "Claudius 187",
+    "next": "Claudius 357",
+    "sort_key": "Claudius"
+  },
+  {
     "lemma": "Claudius 357",
-    "next": "Claudius 415"
+    "previous": "Claudius 194"
+  },
+  {
+    "lemma": "Claudius 71",
+    "previous": "Cincius 9",
+    "next": "Claudius 186",
+    "sort_key": "Claudius 071"
+  },
+  {
+    "lemma": "Claudius 186",
+    "previous": "Claudius 71",
+    "next": "Claudius 187",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 187",
+    "previous": "Claudius 186",
+    "next": "Claudius 188",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 188",
+    "previous": "Claudius 187"
   },
   {
     "lemma": "Claudius 415",
-    "previous": "Claudius 357",
     "next": "Coeba(?)",
     "chapters": [
       {
@@ -1058,7 +1113,6 @@
   },
   {
     "lemma": "Comberania",
-    "previous": null,
     "next": "Cornelius 145",
     "chapters": [
       {
@@ -1075,10 +1129,12 @@
   },
   {
     "lemma": "Cornelius 236",
-    "previous": "Cornelius 145"
+    "previous": "Cornelius 145",
+    "next": "Cornelius 279"
   },
   {
     "lemma": "Cornelius 279",
+    "previous": "Cornelius 236",
     "next": "Cornelius 279a"
   },
   {
