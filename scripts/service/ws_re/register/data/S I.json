@@ -5507,7 +5507,7 @@
   },
   {
     "lemma": "Amphipolis 1",
-    "previous": "Amphineis 1",
+    "previous": "Amphineis 2",
     "next": "Amphistratos 2"
   },
   {
@@ -8879,8 +8879,7 @@
   },
   {
     "lemma": "Archiadas 1",
-    "previous": "Archia",
-    "next": "Archias 3a"
+    "previous": "Archia"
   },
   {
     "lemma": "Archiadas 2",
@@ -10778,16 +10777,6 @@
     "previous": "Armenon"
   },
   {
-    "lemma": "Armenon 3a",
-    "chapters": [
-      {
-        "start": 139,
-        "end": 139,
-        "author": "Bürchner"
-      }
-    ]
-  },
-  {
     "lemma": "Arminius 1",
     "previous": "Armilustrium 2",
     "next": "Arna 2"
@@ -10837,7 +10826,7 @@
   },
   {
     "lemma": "Arrapachitis",
-    "previous": "Arra 1a",
+    "previous": "Arrapa",
     "next": "Arreneides 1"
   },
   {
@@ -11676,19 +11665,7 @@
     "next": "Aspera"
   },
   {
-    "lemma": "Asper 4",
-    "next": "Aspera",
-    "chapters": [
-      {
-        "start": 154,
-        "end": 154,
-        "author": "Streck"
-      }
-    ]
-  },
-  {
     "lemma": "Aspera",
-    "previous": "Asper 4",
     "next": "Aspergillum",
     "chapters": [
       {
@@ -12038,12 +12015,9 @@
   },
   {
     "lemma": "Ἄτης λόφος",
-    "previous": "Aternus",
-    "sort_key": "Ateslophos"
-  },
-  {
-    "lemma": "Ἄτης λόφος",
     "next": "Ateste",
+        "previous": "Aternus",
+    "sort_key": "Ateslophos",
     "chapters": [
       {
         "start": 158,
@@ -12485,19 +12459,7 @@
     "sort_key": "Attius 08"
   },
   {
-    "lemma": "Attius 7.8",
-    "next": "Attius 12a",
-    "chapters": [
-      {
-        "start": 225,
-        "end": 225,
-        "author": "Rohden"
-      }
-    ]
-  },
-  {
     "lemma": "Attius 12a",
-    "previous": "Attius 7.8",
     "next": "Attius 22a",
     "chapters": [
       {
@@ -12537,7 +12499,7 @@
   {
     "lemma": "Atussa",
     "previous": "Aturus",
-    "next": "Aucissa",
+    "next": "Avarigni",
     "chapters": [
       {
         "start": 226,
@@ -12560,11 +12522,6 @@
   },
   {
     "lemma": "Aucissa",
-    "previous": "Avarigni",
-    "next": "Auctus 2"
-  },
-  {
-    "lemma": "Aucissa 1",
     "chapters": [
       {
         "start": 226,
@@ -12958,15 +12915,6 @@
     "lemma": "Aurelius 67",
     "previous": "Aurelius 60a",
     "next": "Aurelius 78a"
-  },
-  {
-    "lemma": "Aurelius 60aa",
-    "chapters": [
-      {
-        "start": 230,
-        "end": 230
-      }
-    ]
   },
   {
     "lemma": "Aurelius 78a",
@@ -13465,34 +13413,6 @@
     ]
   },
   {
-    "lemma": "Azochis",
-    "next": "Baal-Harrân"
-  },
-  {
-    "lemma": "Baal-Harrân",
-    "previous": "Azochis",
-    "next": "Baalmelek",
-    "chapters": [
-      {
-        "start": 233,
-        "end": 233,
-        "author": "Cumont"
-      }
-    ]
-  },
-  {
-    "lemma": "Baalmelek",
-    "previous": "Baal-Harrân",
-    "next": "Baalram",
-    "chapters": [
-      {
-        "start": 233,
-        "end": 233,
-        "author": "Willrich"
-      }
-    ]
-  },
-  {
     "lemma": "Axius 8a",
     "next": "Azara 1",
     "chapters": [
@@ -13564,6 +13484,29 @@
   {
     "lemma": "Azizos 1",
     "previous": "Azeia"
+  },
+  {
+    "lemma": "Baal-Harrân",
+    "next": "Baalmelek",
+    "chapters": [
+      {
+        "start": 233,
+        "end": 233,
+        "author": "Cumont"
+      }
+    ]
+  },
+  {
+    "lemma": "Baalmelek",
+    "previous": "Baal-Harrân",
+    "next": "Baalram",
+    "chapters": [
+      {
+        "start": 233,
+        "end": 233,
+        "author": "Willrich"
+      }
+    ]
   },
   {
     "lemma": "Baalram",
@@ -14593,16 +14536,6 @@
     "next": "Bella"
   },
   {
-    "lemma": "Belatullus 1",
-    "chapters": [
-      {
-        "start": 246,
-        "end": 246,
-        "author": "Robert"
-      }
-    ]
-  },
-  {
     "lemma": "Bella",
     "next": "Βελλεροφόντειος δῆμος"
   },
@@ -14624,7 +14557,6 @@
   },
   {
     "lemma": "Bellicius 9",
-    "previous": "Βελλεροφόντειος δῆμος",
     "next": "Belligenes",
     "chapters": [
       {
@@ -16208,23 +16140,11 @@
   {
     "lemma": "Calpurnius 131a",
     "previous": "Calpurnius 99",
-    "next": "Calventius 1",
     "chapters": [
       {
         "start": 272,
         "end": 272,
         "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Calventius 1",
-    "previous": "Calpurnius 131a",
-    "chapters": [
-      {
-        "start": 272,
-        "end": 272,
-        "author": "Groag"
       }
     ]
   },
@@ -17776,7 +17696,6 @@
   },
   {
     "lemma": "Chrysippos 16",
-    "previous": "Chrysippos 14b",
     "next": "Chudukka"
   },
   {
@@ -17944,16 +17863,6 @@
     "previous": "Clavariatis",
     "next": "Claudius 38",
     "sort_key": "Claudius 031a"
-  },
-  {
-    "lemma": "Claudius 31a(-b)",
-    "chapters": [
-      {
-        "start": 317,
-        "end": 317,
-        "author": "Groag"
-      }
-    ]
   },
   {
     "lemma": "Claudius 38",
@@ -18816,16 +18725,6 @@
     "lemma": "Cubi",
     "previous": "Cuavus",
     "next": "Culleolus"
-  },
-  {
-    "lemma": "Culleolus a",
-    "chapters": [
-      {
-        "start": 332,
-        "end": 332,
-        "author": "Münzer"
-      }
-    ]
   },
   {
     "lemma": "Culleolus",
