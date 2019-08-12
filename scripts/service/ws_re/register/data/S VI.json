@@ -264,7 +264,7 @@
   {
     "lemma": "Aponius 8a",
     "previous": "Apollodoros 61",
-    "next": "Appuleius 16a",
+    "next": "Appius 13a",
     "chapters": [
       {
         "start": 9,
@@ -274,8 +274,14 @@
     ]
   },
   {
-    "lemma": "Appuleius 16a",
+    "lemma": "Appius 13a",
     "previous": "Aponius 8a",
+    "next": "Appuleius 16a",
+    "redirect": "Maximus 1"
+  },
+  {
+    "lemma": "Appuleius 16a",
+    "previous": "Appius 13a",
     "next": "Appuleius 17a",
     "chapters": [
       {
@@ -611,6 +617,7 @@
     "lemma": "Caesius 2a",
     "previous": "Caeptiema",
     "next": "Calena",
+    "sort_key": "Caesius 02a",
     "chapters": [
       {
         "start": 19,
@@ -681,7 +688,13 @@
   },
   {
     "lemma": "Calpurnius 99",
-    "previous": "Calouitanus Portus"
+    "previous": "Calouitanus Portus",
+    "next": "Calpurnius 101",
+    "sort_key": "Calpurnius 099"
+  },
+  {
+    "lemma": "Calpurnius 101",
+    "previous": "Calpurnius 99"
   },
   {
     "lemma": "Calvisius 7",
@@ -1194,7 +1207,7 @@
   {
     "lemma": "Delphion 3",
     "previous": "Dasumius 1a",
-    "next": "Dioskoros 7",
+    "next": "Diades 2",
     "chapters": [
       {
         "start": 26,
@@ -1204,8 +1217,11 @@
     ]
   },
   {
+    "lemma": "Diades 2",
+    "previous": "Delphion 3"
+  },
+  {
     "lemma": "Dioskoros 7",
-    "previous": "Delphion 3",
     "next": "Donuca",
     "chapters": [
       {

@@ -1798,7 +1798,7 @@
   {
     "lemma": "Daulios",
     "previous": "Damon 15b",
-    "next": "Deigmatoartes",
+    "next": "Δειγματοάρτης",
     "chapters": [
       {
         "start": 219,
@@ -1808,9 +1808,10 @@
     ]
   },
   {
-    "lemma": "Deigmatoartes",
+    "lemma": "Δειγματοάρτης",
     "previous": "Daulios",
     "next": "Δειγματοκαταγωγός",
+    "sort_key": "Deigmatoartes",
     "chapters": [
       {
         "start": 219,
@@ -1821,8 +1822,9 @@
   },
   {
     "lemma": "Δειγματοκαταγωγός",
-    "previous": "Deigmatoartes",
+    "previous": "Δειγματοάρτης",
     "next": "Deinokrates 5a",
+    "sort_key": "Deigmatokatagogos",
     "chapters": [
       {
         "start": 219,
@@ -1834,7 +1836,6 @@
   {
     "lemma": "Deinokrates 5a",
     "previous": "Δειγματοκαταγωγός",
-    "next": "Demarchos 6",
     "chapters": [
       {
         "start": 219,
@@ -1845,6 +1846,7 @@
   },
   {
     "lemma": "Demokrates 10a",
+    "previous": "Demetrios 48a",
     "next": "Demokritos 6",
     "chapters": [
       {
@@ -1857,7 +1859,6 @@
   {
     "lemma": "Demokritos 6",
     "previous": "Demokrates 10a",
-    "next": "Demarchos 6",
     "chapters": [
       {
         "start": 219,
@@ -1868,7 +1869,7 @@
   },
   {
     "lemma": "Demarchos 6",
-    "previous": "Demokritos 6",
+    "previous": "Deinokrates 5a",
     "next": "Demetrios 48a",
     "chapters": [
       {
@@ -1881,6 +1882,8 @@
   {
     "lemma": "Demetrios 48a",
     "previous": "Demarchos 6",
+    "next": "Demokrates 10a",
+    "sort_key": "Demetrios 048a",
     "chapters": [
       {
         "start": 220,
@@ -1891,7 +1894,6 @@
   },
   {
     "lemma": "Demonikos 2a",
-    "previous": "Demokritos 6",
     "next": "Demophon 10",
     "chapters": [
       {
@@ -3603,7 +3605,6 @@
   {
     "lemma": "Hipparches b",
     "previous": "Hipparches a",
-    "next": "Hippeios",
     "chapters": [
       {
         "start": 746,
@@ -3613,9 +3614,14 @@
     ]
   },
   {
-    "lemma": "Hippeios",
-    "previous": "Hipparches b",
-    "next": "Hippias 9a",
+    "lemma": "Ἱππάρχης",
+    "next": "Ἱππεῖος"
+  },
+  {
+    "lemma": "Ἱππεῖος",
+    "previous": "Ἱππάρχης",
+    "next": "Hippias 4",
+    "sort_key": "Hippeios",
     "chapters": [
       {
         "start": 746,
@@ -3625,9 +3631,12 @@
     ]
   },
   {
+    "lemma": "Hippias 4",
+    "previous": "Ἱππεῖος"
+  },
+  {
     "lemma": "Hippias 9a",
-    "previous": "Hippeios",
-    "next": "Hippikos 2",
+    "next": "Ἱππικός",
     "chapters": [
       {
         "start": 747,
@@ -3637,20 +3646,14 @@
     ]
   },
   {
-    "lemma": "Hippikos 2",
+    "lemma": "Ἱππικός",
     "previous": "Hippias 9a",
     "next": "Hippodamas 1a",
-    "chapters": [
-      {
-        "start": 747,
-        "end": 747,
-        "author": "Bilabel"
-      }
-    ]
+    "sort_key": "Hippikos"
   },
   {
     "lemma": "Hippodamas 1a",
-    "previous": "Hippikos 2",
+    "previous": "Ἱππικός",
     "next": "Hippokles 1a",
     "chapters": [
       {
@@ -3775,6 +3778,8 @@
     "lemma": "Hyäne",
     "previous": "Ὁρμοφυλακία",
     "next": "Hydarnes 1",
+    "sort_key": "Hyaene",
+    "wp_link": "w:de:Hyänen",
     "chapters": [
       {
         "start": 761,
@@ -3863,7 +3868,6 @@
   {
     "lemma": "Ὑδροφύλαξ",
     "previous": "Hydrophoros",
-    "next": "Hydarnes 1",
     "sort_key": "Hydrophylax",
     "chapters": [
       {
@@ -3875,6 +3879,7 @@
   },
   {
     "lemma": "Hylas 4a",
+    "previous": "Hydarnes 3",
     "next": "Hyle 3",
     "chapters": [
       {
@@ -4025,6 +4030,7 @@
     "lemma": "Ὑποτελής",
     "previous": "Ὑποστράτηγος",
     "next": "Hypozoma",
+    "sort_key": "Hypoteles",
     "chapters": [
       {
         "start": 775,
