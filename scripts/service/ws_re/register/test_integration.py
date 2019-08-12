@@ -1,10 +1,37 @@
 from unittest import skipUnless, TestCase, skip
 
+from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.registers import Registers
 from tools import INTEGRATION_TEST
 
 
 _MAX_SIZE_WIKI_PAGE = 2_098_175
+
+class TestAuthors(TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.authors = Authors()
+
+    def test_all_mappings_have_target(self):
+        errors = []
+        authors_in_mappings = set()
+        for mapping in self.authors._mapping.values():
+            if isinstance(mapping, str):
+                authors_in_mappings.add(mapping)
+            else:
+                for author in mapping.values():
+                    authors_in_mappings.add(author)
+        for author in authors_in_mappings:
+            try:
+                self.authors.get_author(author)
+            except KeyError:
+                errors.append(f"Mapping target {author} not there.")
+        if errors:  # pragma: no cover
+            count = len(errors)
+            errors.insert(0, f"COUNT ERRORS: {count}")
+            errors.append(f"COUNT ERRORS: {count}")
+            raise AssertionError("\n".join(errors))
+
 
 
 @skipUnless(INTEGRATION_TEST, "only execute in integration test")
