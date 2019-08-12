@@ -467,11 +467,11 @@
   },
   {
     "lemma": "Cocceius 3",
-    "previous": "Clementius 1a"
+    "previous": "Clementius 1a",
+    "next": "Cocceius 12"
   },
   {
     "lemma": "Chersonesos 5",
-    "previous": "Χειροτέχνιον",
     "next": "χρηματισμός",
     "sort_key": "Cheirotechnion"
   },
@@ -494,6 +494,7 @@
   },
   {
     "lemma": "Cocceius 12",
+    "previous": "Cocceius 3",
     "next": "Codicarii 2"
   },
   {
@@ -633,10 +634,17 @@
   },
   {
     "lemma": "Δεῖγμα",
-    "previous": "Dasumius 1a"
+    "previous": "Dasumius 1a",
+    "next": "Δειγματοάρτης"
+  },
+  {
+    "lemma": "Δειγματοάρτης",
+    "previous": "Δεῖγμα",
+    "next": "Δειγματοκαταγωγός"
   },
   {
     "lemma": "Δειγματοκαταγωγός",
+    "previous": "Δειγματοάρτης",
     "next": "Dekane"
   },
   {

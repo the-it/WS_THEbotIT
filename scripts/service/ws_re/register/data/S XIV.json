@@ -2534,7 +2534,7 @@
   {
     "lemma": "Avidius 1b",
     "previous": "Avidius 1a",
-    "next": "Aurelius 5a",
+    "next": "Avillius 2c",
     "chapters": [
       {
         "start": 67,
@@ -2544,9 +2544,14 @@
     ]
   },
   {
-    "lemma": "Aurelius 5a",
+    "lemma": "Avillius 2c",
     "previous": "Avidius 1b",
-    "next": "Aurelius 37aa) = 37b",
+    "next": "Aurelius 5a"
+  },
+  {
+    "lemma": "Aurelius 5a",
+    "previous": "Avillius 2c",
+    "next": "Aurelius 37b",
     "chapters": [
       {
         "start": 67,
@@ -2556,9 +2561,12 @@
     ]
   },
   {
-    "lemma": "Aurelius 37aa) = 37b",
+    "lemma": "Aurelius 37b",
     "previous": "Aurelius 5a",
-    "next": "Aurelius 63aa",
+    "next": "Aurelius 63aa"
+  },
+  {
+    "lemma": "Aurelius 37aa) = 37b",
     "chapters": [
       {
         "start": 68,
@@ -2569,7 +2577,7 @@
   },
   {
     "lemma": "Aurelius 63aa",
-    "previous": "Aurelius 37aa) = 37b",
+    "previous": "Aurelius 37b",
     "next": "Aurelius 65a",
     "chapters": [
       {
@@ -2640,18 +2648,6 @@
   {
     "lemma": "Aurelius 192e",
     "previous": "Aurelius 192d",
-    "next": "Pompeianus 1a",
-    "chapters": [
-      {
-        "start": 69,
-        "end": 70,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
-    "lemma": "Pompeianus 1a",
-    "previous": "Aurelius 192e",
     "next": "Aurelius 221a",
     "chapters": [
       {
@@ -2662,8 +2658,18 @@
     ]
   },
   {
+    "lemma": "Pompeianus 1a",
+    "chapters": [
+      {
+        "start": 69,
+        "end": 70,
+        "author": "Eck"
+      }
+    ]
+  },
+  {
     "lemma": "Aurelius 221a",
-    "previous": "Pompeianus 1a",
+    "previous": "Aurelius 192e",
     "next": "Aurelius 232a",
     "chapters": [
       {
