@@ -29,7 +29,6 @@
   },
   {
     "lemma": "Aburnius 2",
-    "next": "Acutius 1b",
     "chapters": [
       {
         "start": 1,
@@ -40,7 +39,8 @@
   },
   {
     "lemma": "Acutius 1b",
-    "previous": "Aburnius 2",
+    "previous": "Acilius 16",
+    "next": "Aelius 75a",
     "chapters": [
       {
         "start": 1,
@@ -116,12 +116,16 @@
   },
   {
     "lemma": "Aiacius 2",
+    "previous": "Agesistratos"
+  },
+  {
+    "lemma": "Aiacius 3",
     "previous": "Agesistratos",
     "next": "Albiobola"
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 2",
+    "previous": "Aiacius 3",
     "next": "Alexandros 90a",
     "chapters": [
       {
@@ -163,6 +167,7 @@
     "lemma": "Annius 26a",
     "previous": "Anisa",
     "next": "Annius 30",
+    "sort_key": "Annius 026a",
     "chapters": [
       {
         "start": 7,
@@ -217,6 +222,7 @@
     "lemma": "Antonius 36a",
     "previous": "Antistius 50",
     "next": "Antonius 58a",
+    "sort_key": "Antonius 036a",
     "chapters": [
       {
         "start": 8,
@@ -265,6 +271,7 @@
     "lemma": "Aponius 8a",
     "previous": "Apollodoros 61",
     "next": "Appius 13a",
+    "sort_key": "Aponius 08a",
     "chapters": [
       {
         "start": 9,
@@ -460,6 +467,7 @@
     "lemma": "Avidius 7a",
     "previous": "Avidius 6",
     "next": "Aurelius 111a",
+    "sort_key": "Avidius 07a",
     "chapters": [
       {
         "start": 18,
@@ -495,6 +503,7 @@
   {
     "lemma": "Baebius 36a",
     "previous": "Aurelius 140a",
+    "next": "Bruttius 5a",
     "chapters": [
       {
         "start": 18,
@@ -504,7 +513,14 @@
     ]
   },
   {
+    "lemma": "Bruttius 5a",
+    "previous": "Baebius 36a",
+    "next": "Brutus 3",
+    "sort_key": "Bruttius 05a"
+  },
+  {
     "lemma": "Brutus 3",
+    "previous": "Bruttius 5a",
     "next": "Butra"
   },
   {
@@ -1187,7 +1203,7 @@
   {
     "lemma": "Cuspius 3",
     "previous": "Curtius 18",
-    "next": "Dardanos",
+    "next": "Dardanos 11",
     "chapters": [
       {
         "start": 25,
@@ -1197,11 +1213,13 @@
     ]
   },
   {
-    "lemma": "Dardanos",
-    "previous": "Cuspius 3"
+    "lemma": "Dardanos 11",
+    "previous": "Cuspius 3",
+    "next": "Dasumius 1a"
   },
   {
     "lemma": "Dasumius 1a",
+    "previous": "Dardanos 11",
     "next": "Delphion 3"
   },
   {
@@ -2795,7 +2813,6 @@
   {
     "lemma": "Maximus 128",
     "previous": "Maximinus 5",
-    "next": "Media provincia",
     "chapters": [
       {
         "start": 289,
@@ -2805,8 +2822,12 @@
     ]
   },
   {
+    "lemma": "Maximus 26",
+    "next": "Media provincia"
+  },
+  {
     "lemma": "Media provincia",
-    "previous": "Maximus 128",
+    "previous": "Maximus 26",
     "next": "Meidylides 1",
     "chapters": [
       {

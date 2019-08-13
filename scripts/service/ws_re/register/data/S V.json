@@ -82,10 +82,12 @@
   },
   {
     "lemma": "Antigonos 24",
-    "previous": "Antidotos 6"
+    "previous": "Antidotos 6",
+    "next": "Antiochos 68"
   },
   {
     "lemma": "Antiochos 68",
+    "previous": "Antigonos 24",
     "next": "Antiochos 65"
   },
   {
@@ -4298,6 +4300,7 @@
     "lemma": "Meclodunum",
     "previous": "Mebarsapes",
     "next": "Medericus",
+    "wp_link": "w:de:Melun",
     "chapters": [
       {
         "start": 704,
