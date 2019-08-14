@@ -674,11 +674,11 @@
   },
   {
     "lemma": "Derkylos 2",
-    "previous": "δημοσίωσις"
+    "previous": "δημοσίωσις",
+    "next": "Diadochos a"
   },
   {
     "lemma": "Δεκατηλόγος",
-    "previous": "Dekane",
     "next": "Demetrios 100a",
     "sort_key": "Dekatelogos",
     "chapters": [
@@ -5890,7 +5890,6 @@
   {
     "lemma": "Stiftungen",
     "previous": "Stiela oder Stiala",
-    "next": "Stratonikeia-Hadrianopolis",
     "chapters": [
       {
         "start": 1236,
@@ -5900,8 +5899,12 @@
     ]
   },
   {
+    "lemma": "Straßenraub",
+    "next": "Stratonikeia-Hadrianopolis"
+  },
+  {
     "lemma": "Stratonikeia-Hadrianopolis",
-    "previous": "Stiftungen",
+    "previous": "Straßenraub",
     "next": "Streik",
     "chapters": [
       {

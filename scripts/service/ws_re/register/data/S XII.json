@@ -1936,7 +1936,6 @@
   {
     "lemma": "Dasumius aa",
     "previous": "Cutius 1a",
-    "next": "Demokritos 6",
     "chapters": [
       {
         "start": 193,
@@ -1946,11 +1945,17 @@
     ]
   },
   {
+    "lemma": "Dasumius 1a",
+    "next": "Demokritos 6"
+  },
+  {
     "lemma": "Demokritos 6",
-    "previous": "Dasumius aa"
+    "previous": "Dasumius 1a",
+    "next": "Deraia"
   },
   {
     "lemma": "Deraia",
+    "previous": "Demokritos 6",
     "next": "Didius 10a",
     "chapters": [
       {
