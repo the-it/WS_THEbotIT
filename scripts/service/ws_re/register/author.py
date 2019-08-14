@@ -72,7 +72,7 @@ class Authors:
         return author
 
     def get_author(self, author_key: str):
-        author = self._authors[author_key]
+        author = self._authors[author_key.replace("|", "")]
         if author.redirect:
             author = self._authors[author.redirect]
         return author

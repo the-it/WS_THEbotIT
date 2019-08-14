@@ -39,6 +39,8 @@ class TestAuthors(BaseTestRegister):
         compare("Abert", author.name)
         compare(1927, author.death)
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
+        author = authors.get_author("Abert|")
+        compare("Abert", author.name)
 
     def test_set_mapping(self):
         authors = Authors()
