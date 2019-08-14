@@ -18,6 +18,10 @@ class TestAuthor(TestCase):
         compare(None, register_author.death)
         compare(1999, register_author.birth)
 
+        register_author = Author("Test Name", {"redirect": "Tada"})
+        compare(None, register_author.death)
+        compare("Tada", register_author.redirect)
+
 
 class TestAuthors(BaseTestRegister):
     def test_load_data(self):
@@ -31,6 +35,9 @@ class TestAuthors(BaseTestRegister):
         author = authors.get_author_by_mapping("Abel", "XVI,1")
         compare("Abel", author.name)
         compare(1987, author.death)
+        author = authors.get_author_by_mapping("redirect.", "XVI,1")
+        compare("Abert", author.name)
+        compare(1927, author.death)
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
 
     def test_set_mapping(self):

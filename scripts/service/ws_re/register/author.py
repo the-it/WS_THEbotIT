@@ -6,7 +6,7 @@ from scripts.service.ws_re.register import _REGISTER_PATH
 
 
 class Author:
-    def __init__(self, name: str, author_dict: Dict[str, int]):
+    def __init__(self, name: str, author_dict: Dict[str, Union[int, str]]):
         self._dict = author_dict
         if "_" in name:
             name = name.split("_")[0]
@@ -25,6 +25,12 @@ class Author:
     def birth(self) -> Union[int, None]:
         if "birth" in self._dict.keys():
             return self._dict["birth"]
+        return None
+
+    @property
+    def redirect(self) -> Union[str, None]:
+        if "redirect" in self._dict.keys():
+            return self._dict["redirect"]
         return None
 
     @property
@@ -66,7 +72,10 @@ class Authors:
         return author
 
     def get_author(self, author_key: str):
-        return self._authors[author_key]
+        author = self._authors[author_key]
+        if author.redirect:
+            author = self._authors[author.redirect]
+        return author
 
     def set_mappings(self, mapping: Mapping):
         self._mapping.update(mapping)
