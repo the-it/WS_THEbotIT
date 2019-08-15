@@ -60,7 +60,7 @@
   {
     "lemma": "Abano",
     "previous": "Abacus 9",
-    "next": "Abas 12",
+    "next": "Abas",
     "wp_link": "w:de:Abano Terme",
     "chapters": [
       {
@@ -71,11 +71,16 @@
     ]
   },
   {
+    "lemma": "Abas",
+    "previous": "Abano"
+  },
+  {
     "lemma": "Abas 12",
     "previous": "Abano"
   },
   {
     "lemma": "Abas",
+
     "next": "Abbo 2"
   },
   {
@@ -148,6 +153,7 @@
   },
   {
     "lemma": "Absalom 1",
+    "previous": "Abronius",
     "next": "Absalom 2",
     "chapters": [
       {
@@ -9714,7 +9720,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium 3",
+    "next": "Capitolium vetus",
     "chapters": [
       {
         "start": 233,
@@ -9724,11 +9730,13 @@
     ]
   },
   {
-    "lemma": "Capitolium vetus"
+    "lemma": "Capitolium vetus",
+    "previous": "Capienacus oder Capionacus",
+    "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium 3",
+    "previous": "Capitolium vetus",
     "next": "Caprasius",
     "chapters": [
       {
@@ -12753,6 +12761,7 @@
   {
     "lemma": "Demochares 8",
     "previous": "Demo 2a",
+    "next": "Demodes",
     "chapters": [
       {
         "start": 333,
@@ -12763,7 +12772,6 @@
   },
   {
     "lemma": "Demokrates 14",
-    "previous": "Demodokos 8",
     "next": "Demokritos 3a",
     "chapters": [
       {
@@ -12933,7 +12941,6 @@
   {
     "lemma": "Δεσπότης",
     "previous": "Dertallos",
-    "next": "Detalla",
     "sort_key": "Despotes",
     "chapters": [
       {
@@ -12945,6 +12952,7 @@
   },
   {
     "lemma": "Demodes",
+    "previous": "Demochares 8",
     "next": "Demodokos 8",
     "chapters": [
       {
@@ -12957,6 +12965,7 @@
   {
     "lemma": "Demodokos 8",
     "previous": "Demodes",
+    "next": "Demokrates 14",
     "chapters": [
       {
         "start": 334,
@@ -12967,7 +12976,6 @@
   },
   {
     "lemma": "Detalla",
-    "previous": "Δεσπότης",
     "next": "Deuterius 2",
     "chapters": [
       {
