@@ -1621,7 +1621,6 @@
   {
     "lemma": "Afranius 6a",
     "previous": "Afiniana",
-    "next": "Agabana",
     "sort_key": "Afranius 06a",
     "chapters": [
       {
@@ -1632,12 +1631,7 @@
     ]
   },
   {
-    "lemma": "Afranius  6a",
-    "next": "Afrius"
-  },
-  {
     "lemma": "Afrius",
-    "previous": "Afranius  6a",
     "next": "Agabana",
     "chapters": [
       {
@@ -4658,12 +4652,7 @@
   },
   {
     "lemma": "Alkippos",
-    "previous": "Alkinoe 4"
-  },
-  {
-    "lemma": "Alkippos 1",
     "previous": "Alkinoe 4",
-    "sort_key": "Alkippos 1",
     "chapters": [
       {
         "start": 62,
@@ -5554,7 +5543,6 @@
   {
     "lemma": "Amphineis 1",
     "previous": "Amphimysione",
-    "next": "Amphipolis 1",
     "chapters": [
       {
         "start": 72,
@@ -10680,12 +10668,7 @@
     ]
   },
   {
-    "lemma": "Arkadianai",
-    "next": "Arkadion"
-  },
-  {
     "lemma": "Arkadion",
-    "previous": "Arkadianai",
     "next": "Arkas 4",
     "chapters": [
       {
@@ -13558,6 +13541,7 @@
       }
     ]
   },
+  {"lemma": "Axius 5"},
   {
     "lemma": "Axius 8a",
     "previous": "Axius 5",
@@ -13633,6 +13617,7 @@
     "previous": "Azeia",
     "next": "Azochis"
   },
+  {"lemma":  "Azochis"},
   {
     "lemma": "Baal-Harrân",
     "next": "Baalmelek",
