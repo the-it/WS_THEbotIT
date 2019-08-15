@@ -1490,8 +1490,14 @@
     "previous": "Aemilius 163a"
   },
   {
+    "lemma": "Aequum Tuticum",
+    "next": "Aër"
+  },
+  {
     "lemma": "Aër",
-    "next": "Aere"
+    "previous": "Aequum Tuticum",
+    "next": "Aere",
+    "sort_key": "Aer"
   },
   {
     "lemma": "Aere",
@@ -4641,7 +4647,6 @@
   {
     "lemma": "Alkippos 1",
     "previous": "Alkinoe 4",
-    "next": "Alkithos",
     "sort_key": "Alkippos 1",
     "chapters": [
       {
@@ -4653,7 +4658,7 @@
   },
   {
     "lemma": "Alkithos",
-    "previous": "Alkippos 1",
+    "previous": "Alkippos",
     "next": "Alkmaion 1"
   },
   {
@@ -11361,7 +11366,6 @@
   {
     "lemma": "Arvius",
     "previous": "Arvernicus",
-    "next": "Arx 3",
     "chapters": [
       {
         "start": 146,
@@ -11371,8 +11375,12 @@
     ]
   },
   {
+    "lemma": "Arvius 1",
+    "next": "Arx 3"
+  },
+  {
     "lemma": "Arx 3",
-    "previous": "Arvius",
+    "previous": "Arvius 1",
     "next": "Arxama"
   },
   {
@@ -12120,8 +12128,8 @@
   },
   {
     "lemma": "Ἄτης λόφος",
+    "previous": "Aternus",
     "next": "Ateste",
-        "previous": "Aternus",
     "sort_key": "Ateslophos",
     "chapters": [
       {
@@ -14521,11 +14529,10 @@
   {
     "lemma": "Batis 2",
     "previous": "Bathyllos 4a",
-    "next": "Batnai 1"
+    "next": "Batnai"
   },
   {
     "lemma": "Batnai 1",
-    "previous": "Batis 2",
     "chapters": [
       {
         "start": 245,
@@ -14876,10 +14883,17 @@
   },
   {
     "lemma": "Beroia 5",
-    "previous": "Bergaios"
+    "previous": "Bergaios",
+    "next": "Berossos 4"
+  },
+  {
+    "lemma": "Berossos 4",
+    "previous": "Beroia 5",
+    "next": "Bersima"
   },
   {
     "lemma": "Bersima",
+    "previous": "Berossos 4",
     "next": "Beryllos 1"
   },
   {
