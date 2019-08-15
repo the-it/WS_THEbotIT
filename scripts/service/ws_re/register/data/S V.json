@@ -175,6 +175,7 @@
     "lemma": "Aristeides 23a",
     "previous": "Aristarche",
     "next": "Ariston 62a",
+    "wp_link": "w:de:Aristeides",
     "chapters": [
       {
         "start": 46,
@@ -186,7 +187,7 @@
   {
     "lemma": "Ariston 62a",
     "previous": "Aristeides 23a",
-    "next": "Asalmanos",
+    "next": "Ἀσάλμανος",
     "chapters": [
       {
         "start": 46,
@@ -196,15 +197,14 @@
     ]
   },
   {
-    "lemma": "Asalmanos",
+    "lemma": "Ἀσάλμανος",
     "previous": "Ariston 62a",
     "next": "Asklepiades 51"
   },
   {
     "lemma": "Asklepiades 51",
-    "previous": "Asalmanos",
+    "previous": "Ἀσάλμανος",
     "next": "Athenagoras 9a",
-    "redirect": true,
     "chapters": [
       {
         "start": 46,
@@ -216,6 +216,7 @@
     "lemma": "Athenagoras 9a",
     "previous": "Asklepiades 51",
     "next": "Athenodoros 19",
+    "sort_key": "Athenagoras 09a",
     "chapters": [
       {
         "start": 46,

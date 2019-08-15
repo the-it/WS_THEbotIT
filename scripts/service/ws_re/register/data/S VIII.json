@@ -106,6 +106,7 @@
     "lemma": "Ameisenlöwe",
     "previous": "Amblichos",
     "next": "Amphimedusa",
+    "wp_link": "w:de:Ameisenlöwe",
     "chapters": [
       {
         "start": 3,
@@ -539,6 +540,7 @@
     "lemma": "Caerulea aqua",
     "previous": "Bulis 4",
     "next": "Casius mons",
+    "redirect": "Caeruleus fons",
     "chapters": [
       {
         "start": 19,
@@ -609,6 +611,8 @@
   {
     "lemma": "Dalmatia",
     "previous": "Conclusa aqua",
+    "next": "Damokritos 4",
+    "wp_link": "w:de:Dalmatia",
     "chapters": [
       {
         "start": 21,
@@ -619,7 +623,6 @@
   },
   {
     "lemma": "Claudius 354a",
-    "previous": "Claudia aqua",
     "chapters": [
       {
         "start": 22,
@@ -721,7 +724,6 @@
   },
   {
     "lemma": "Drakontides 3a",
-    "next": "Drusia aqua",
     "chapters": [
       {
         "start": 60,
@@ -732,8 +734,9 @@
   },
   {
     "lemma": "Drusia aqua",
-    "previous": "Drakontides 3a",
-    "next": "Engye",
+    "previous": "Drakontides",
+    "next": "Ἐγγύη",
+    "redirect": "Damnata aqua",
     "chapters": [
       {
         "start": 60,
@@ -743,8 +746,11 @@
     ]
   },
   {
+    "lemma": "Ἐγγύη",
+    "previous": "Drusia aqua"
+  },
+  {
     "lemma": "Engye",
-    "previous": "Drusia aqua",
     "next": "Engyesis",
     "chapters": [
       {
@@ -925,7 +931,6 @@
   {
     "lemma": "Felix 23a",
     "previous": "Eutyches 7b",
-    "next": "Finken",
     "chapters": [
       {
         "start": 169,
@@ -935,9 +940,14 @@
     ]
   },
   {
+    "lemma": "Eutyches 23a",
+    "next": "Finken"
+  },
+  {
     "lemma": "Finken",
-    "previous": "Felix 23a",
+    "previous": "Eutyches 23a",
     "next": "Flamingo",
+    "wp_link": "w:de:Finken",
     "chapters": [
       {
         "start": 169,
@@ -950,6 +960,7 @@
     "lemma": "Flamingo",
     "previous": "Finken",
     "next": "Fliegenfänger",
+    "wp_link": "w:de:Flamingos",
     "chapters": [
       {
         "start": 172,
