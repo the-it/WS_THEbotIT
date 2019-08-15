@@ -76,11 +76,17 @@
   },
   {
     "lemma": "Abas 12",
+    "previous": "Abano"
+  },
+  {
+    "lemma": "Abas",
+
     "next": "Abbo 2"
   },
   {
     "lemma": "Abbo 2",
-    "previous": "Abas 12",
+    "previous": "Abas",
+    "next": "abecedarius, -a, -um",
     "chapters": [
       {
         "start": 13,
@@ -1146,6 +1152,7 @@
     "lemma": "Aisne",
     "previous": "Aire",
     "next": "Aitolos",
+    "wp_link": "w:de:Aisne (Oise)",
     "chapters": [
       {
         "start": 69,
@@ -1262,6 +1269,7 @@
     "lemma": "Albanus 3",
     "previous": "Albanus 1a",
     "next": "Albillus",
+    "sort_key": "Albanus 3",
     "chapters": [
       {
         "start": 71,
@@ -1314,6 +1322,8 @@
     "lemma": "Albinus 7c",
     "previous": "Albinus 7b",
     "next": "Albucius 3",
+    "sort_key": "Albinus 7c",
+    "wp_link": "w:de:Albinus",
     "chapters": [
       {
         "start": 71,
@@ -1356,6 +1366,8 @@
   {
     "lemma": "Alençon, Notre Dame d'-",
     "previous": "Albus 2",
+    "next": "Alesia 1",
+    "sort_key": "Alençon, Notre Dame d,-,",
     "chapters": [
       {
         "start": 78,
@@ -1363,6 +1375,10 @@
         "author": "Keune"
       }
     ]
+  },
+  {
+    "lemma": "Alesia 1",
+    "previous": "Alençon, Notre Dame d'-"
   },
   {
     "lemma": "Ἀλευρομαντεία",
@@ -1463,7 +1479,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1473,8 +1489,7 @@
     ]
   },
   {
-    "lemma": "Alexias 5",
-    "previous": "Alexinos 2"
+    "lemma": "Alexias 5"
   },
   {
     "lemma": "Alexios",
@@ -1861,6 +1876,7 @@
     "lemma": "Altmühl",
     "previous": "Altlinster",
     "next": "Altrip",
+    "wp_link": "w:de:Altmühl",
     "chapters": [
       {
         "start": 88,
@@ -1873,6 +1889,7 @@
     "lemma": "Altrip",
     "previous": "Altmühl",
     "next": "Altstadt",
+    "wp_link": "w:de:Altrip",
     "chapters": [
       {
         "start": 88,
@@ -2011,6 +2028,7 @@
     "lemma": "Amberloup",
     "previous": "Ambarri",
     "next": "Ambiani",
+    "wp_link": "w:de:fr:Amberloup",
     "chapters": [
       {
         "start": 89,
@@ -2122,6 +2140,7 @@
     "lemma": "Amiens",
     "previous": "Amenus",
     "next": "Ammonios 12a",
+    "wp_link": "w:de:Amiens",
     "chapters": [
       {
         "start": 90,
@@ -2257,6 +2276,7 @@
     "lemma": "Amsoldingen",
     "previous": "Amphoteros 4a",
     "next": "Ampsiani",
+    "wp_link": "w:de:Amsoldingen",
     "chapters": [
       {
         "start": 95,
@@ -2319,6 +2339,7 @@
     "lemma": "Ἀνατολικός",
     "previous": "Anathyrosis",
     "next": "Anaxippe",
+    "sort_key": "Anatolikos",
     "chapters": [
       {
         "start": 98,
@@ -2421,6 +2442,7 @@
     "lemma": "Andernach",
     "previous": "Anderitum",
     "next": "Andethanna",
+    "wp_link": "w:de:Andernach",
     "chapters": [
       {
         "start": 99,
@@ -2477,6 +2499,7 @@
     "lemma": "Anesus",
     "previous": "Androsthenes 11",
     "next": "Angelos a",
+    "wp_link": "w:de:Enns (Fluss)",
     "chapters": [
       {
         "start": 101,
@@ -2502,6 +2525,7 @@
     "lemma": "Angers",
     "previous": "Angelos a",
     "next": "Angoulême",
+    "wp_link": "w:de:Angers",
     "chapters": [
       {
         "start": 115,
@@ -2514,6 +2538,7 @@
     "lemma": "Angoulême",
     "previous": "Angers",
     "next": "Anhausen",
+    "wp_link": "w:de:Angoulême",
     "chapters": [
       {
         "start": 115,
@@ -2526,6 +2551,7 @@
     "lemma": "Anhausen",
     "previous": "Angoulême",
     "next": "Anicium",
+    "wp_link": "w:de:Anhausen",
     "chapters": [
       {
         "start": 115,
@@ -2543,6 +2569,7 @@
     "lemma": "Anjou",
     "previous": "Anicium",
     "next": "Anisatus, Aenisatus",
+    "wp_link": "w:de:Anjou",
     "chapters": [
       {
         "start": 115,
@@ -2637,6 +2664,7 @@
     "lemma": "Antibes",
     "previous": "Anthus",
     "next": "Antidoros 5",
+    "wp_link": "w:de:Antibes",
     "chapters": [
       {
         "start": 119,
@@ -2649,6 +2677,7 @@
     "lemma": "Antidoros 5",
     "previous": "Antibes",
     "next": "Antidoros 6",
+    "sort_key": "Antidoros 05",
     "chapters": [
       {
         "start": 119,
@@ -2661,6 +2690,7 @@
     "lemma": "Antidoros 6",
     "previous": "Antidoros 5",
     "next": "Antidoros 7",
+    "sort_key": "Antidoros 06",
     "chapters": [
       {
         "start": 120,
@@ -2673,6 +2703,7 @@
     "lemma": "Antidoros 7",
     "previous": "Antidoros 6",
     "next": "Antidoros 8",
+    "sort_key": "Antidoros 07",
     "chapters": [
       {
         "start": 120,
@@ -2685,6 +2716,7 @@
     "lemma": "Antidoros 8",
     "previous": "Antidoros 7",
     "next": "Antidoros 9",
+    "sort_key": "Antidoros 08",
     "chapters": [
       {
         "start": 121,
@@ -2697,6 +2729,7 @@
     "lemma": "Antidoros 9",
     "previous": "Antidoros 8",
     "next": "Antidoros 10",
+    "sort_key": "Antidoros 09",
     "chapters": [
       {
         "start": 121,
@@ -2721,6 +2754,7 @@
     "lemma": "Antigny",
     "previous": "Antidoros 10",
     "next": "Antigonis 4",
+    "wp_link": "w:de:Antigny (Vienne)",
     "chapters": [
       {
         "start": 123,
@@ -2755,6 +2789,8 @@
   {
     "lemma": "Antinoos 4a",
     "previous": "Antinoitai",
+    "next": "Antiochos 42a",
+    "wp_link": "w:de:Antinoos (Begriffsklärung)",
     "chapters": [
       {
         "start": 124,
@@ -2765,7 +2801,6 @@
   },
   {
     "lemma": "Antiochos 13a",
-    "previous": "Antiochos 42a",
     "next": "Antiochos 74",
     "chapters": [
       {
@@ -2781,6 +2816,9 @@
   },
   {
     "lemma": "Antiochos 42a",
+    "previous": "Antinoos 4a",
+    "next": "Antiochos 13a",
+    "wp_link": "w:de:Antiochos",
     "chapters": [
       {
         "start": 124,
@@ -2791,7 +2829,6 @@
   },
   {
     "lemma": "Antiope 1",
-    "previous": "Antiochos 74",
     "next": "Antipatros 20a"
   },
   {
@@ -2926,12 +2963,13 @@
   {
     "lemma": "Antunnacum",
     "previous": "Antonius 39",
-    "next": "Anunus",
     "redirect": "Andernach"
   },
   {
     "lemma": "Anwen",
-    "next": "Anunus",
+    "previous": "Anunus",
+    "next": "Anytos 1",
+    "wp_link": "w:de:Niederanven",
     "chapters": [
       {
         "start": 127,
@@ -2942,7 +2980,7 @@
   },
   {
     "lemma": "Anunus",
-    "previous": "Anwen",
+    "next": "Anwen",
     "chapters": [
       {
         "start": 127,
@@ -2953,7 +2991,6 @@
   },
   {
     "lemma": "Anytos 1",
-    "previous": "Anwen",
     "next": "Ἀοιδός"
   },
   {
@@ -2973,6 +3010,7 @@
     "lemma": "Aosta",
     "previous": "Ἀοιδός",
     "next": "Aoste",
+    "wp_link": "w:de:Aosta",
     "chapters": [
       {
         "start": 127,
@@ -2985,6 +3023,7 @@
     "lemma": "Aoste",
     "previous": "Aosta",
     "next": "Aouste-en-Diois",
+    "wp_link": "w:de:Aostatal",
     "chapters": [
       {
         "start": 127,
@@ -2997,6 +3036,7 @@
     "lemma": "Aouste-en-Diois",
     "previous": "Aoste",
     "next": "Ἀπαγορεύειν",
+    "wp_link": "w:de:Aouste-sur-Sye",
     "chapters": [
       {
         "start": 127,
@@ -3063,6 +3103,7 @@
     "lemma": "Aper 8",
     "previous": "Aper 7",
     "next": "Aper 9",
+    "wp_link": "w:de:Aper",
     "chapters": [
       {
         "start": 132,
@@ -3075,6 +3116,7 @@
     "lemma": "Aper 9",
     "previous": "Aper 8",
     "next": "Aperienses",
+    "wp_link": "w:de:Aper",
     "chapters": [
       {
         "start": 132,
@@ -3087,6 +3129,7 @@
     "lemma": "Aperienses",
     "previous": "Aper 9",
     "next": "Aphneïs",
+    "wp_link": "w:de:Kalhausen",
     "chapters": [
       {
         "start": 132,
@@ -6885,6 +6928,7 @@
     "lemma": "Aurelianorum (Aurelianensis) civitas, Aureliani",
     "previous": "Aurelia Aquensis",
     "next": "Aurelius 92",
+    "wp_link": "w:de:Orléans",
     "chapters": [
       {
         "start": 189,
@@ -7394,10 +7438,13 @@
   },
   {
     "lemma": "Barbarus a",
-    "previous": "Barba 2a"
+    "previous": "Barba 2a",
+    "next": "Barbarus 2",
+    "sort_key": "Barbarus 0a"
   },
   {
     "lemma": "Barbarus 2",
+    "previous": "Barbarus a",
     "next": "Barga"
   },
   {
@@ -11381,7 +11428,12 @@
     ]
   },
   {
+    "lemma": "Cornelius 373",
+    "next": "Cornelius 385"
+  },
+  {
     "lemma": "Cornelius 385",
+    "previous": "Cornelius 373",
     "next": "Cornelius 407"
   },
   {
@@ -12442,11 +12494,13 @@
   },
   {
     "lemma": "Decempagi",
-    "previous": "Debre"
+    "previous": "Debre",
+    "next": "Decius 7"
   },
   {
     "lemma": "Decius 7",
-    "next": "Decmanus",
+    "previous": "Decempagi",
+    "next": "Decmanus 1",
     "chapters": [
       {
         "start": 327,
@@ -12456,7 +12510,6 @@
   },
   {
     "lemma": "Decmanus",
-    "previous": "Decius 7",
     "chapters": [
       {
         "start": 328,
@@ -12600,6 +12653,7 @@
   {
     "lemma": "Demarchos 5a",
     "previous": "Delos 1a",
+    "next": "Demeter",
     "chapters": [
       {
         "start": 329,
@@ -12785,6 +12839,7 @@
     "lemma": "Demosthenes 1a",
     "previous": "Demosion",
     "next": "Demosthenes 3a",
+    "sort_key": "Demosthenes 01a",
     "chapters": [
       {
         "start": 333,
@@ -12797,6 +12852,7 @@
     "lemma": "Demosthenes 3a",
     "previous": "Demosthenes 1a",
     "next": "Demostratos 15",
+    "sort_key": "Demosthenes 03a",
     "chapters": [
       {
         "start": 333,
@@ -14469,7 +14525,7 @@
   {
     "lemma": "Eppillius",
     "previous": "Eporedorix",
-    "next": "Eppius 3a",
+    "next": "Eppius 2",
     "chapters": [
       {
         "start": 439,
@@ -14479,8 +14535,11 @@
     ]
   },
   {
+    "lemma": "Eppius 2",
+    "previous": "Eppillius"
+  },
+  {
     "lemma": "Eppius 3a",
-    "previous": "Eppillius",
     "next": "Equa....",
     "chapters": [
       {

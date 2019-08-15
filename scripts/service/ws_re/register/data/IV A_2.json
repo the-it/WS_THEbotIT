@@ -3032,10 +3032,15 @@
     "lemma": "Tres Tabernae 2"
   },
   {
-    "lemma": "Tres Tabernae 3"
+    "lemma": "Tres Tabernae 3",
+    "next": "Tres Tabernae 4"
   },
   {
-    "lemma": "Tres Tabernae 4"
+    "lemma": "Tres Tabernae 4",
+    "previous": "Tres Tabernae 3",
+    "next": "Tres Tabernae 5",
+    "sort_key": "Tabernaez 4",
+    "wp_link": "w:de:Saverne"
   },
   {
     "lemma": "Tres Tabernae 5",
