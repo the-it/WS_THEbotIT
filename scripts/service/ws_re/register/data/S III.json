@@ -80,7 +80,6 @@
   },
   {
     "lemma": "Abas",
-
     "next": "Abbo 2"
   },
   {
@@ -381,7 +380,6 @@
   {
     "lemma": "Acutus 2",
     "previous": "Acutus 1",
-    "next": "Ad-",
     "chapters": [
       {
         "start": 19,
@@ -392,7 +390,7 @@
   },
   {
     "lemma": "Ad-",
-    "previous": "Acutus 2",
+    "previous": "Acutus 1",
     "next": "Adad 2",
     "sort_key": "Ad",
     "chapters": [
@@ -2812,11 +2810,11 @@
   },
   {
     "lemma": "Antiochos 74",
-    "previous": "Antiochos 13a"
+    "previous": "Antiochos 13a",
+    "next": "Antiope 1"
   },
   {
     "lemma": "Antiochos 42a",
-    "previous": "Antinoos 4a",
     "next": "Antiochos 13a",
     "wp_link": "w:de:Antiochos",
     "chapters": [
@@ -3179,6 +3177,7 @@
   {
     "lemma": "Apollinaris 13",
     "previous": "Aphrodite",
+    "next": "Apollodoros 26a",
     "wp_link": "w:de:Apollinaris",
     "chapters": [
       {
@@ -3219,6 +3218,7 @@
   {
     "lemma": "Apollonios 82",
     "previous": "Apollonia 10",
+    "next": "Apollonios 126a",
     "chapters": [
       {
         "start": 133,
@@ -3229,7 +3229,6 @@
   },
   {
     "lemma": "Apollodoros 26a",
-    "previous": "Apollinaris 13",
     "next": "Apollodoros 76b",
     "wp_link": "w:de:Apollodoros (Diener Kleopatras)",
     "chapters": [
@@ -11591,6 +11590,7 @@
   {
     "lemma": "Cotus 1",
     "previous": "Cotulo",
+    "next": "Cr....",
     "chapters": [
       {
         "start": 262,
@@ -12761,7 +12761,6 @@
   {
     "lemma": "Demochares 8",
     "previous": "Demo 2a",
-    "next": "Demodes",
     "chapters": [
       {
         "start": 333,
@@ -12772,6 +12771,7 @@
   },
   {
     "lemma": "Demokrates 14",
+    "previous": "Demodokos 8",
     "next": "Demokritos 3a",
     "chapters": [
       {
@@ -12941,6 +12941,7 @@
   {
     "lemma": "Δεσπότης",
     "previous": "Dertallos",
+    "next": "Detalla",
     "sort_key": "Despotes",
     "chapters": [
       {
@@ -12952,7 +12953,6 @@
   },
   {
     "lemma": "Demodes",
-    "previous": "Demochares 8",
     "next": "Demodokos 8",
     "chapters": [
       {
@@ -12965,7 +12965,6 @@
   {
     "lemma": "Demodokos 8",
     "previous": "Demodes",
-    "next": "Demokrates 14",
     "chapters": [
       {
         "start": 334,
@@ -12976,6 +12975,7 @@
   },
   {
     "lemma": "Detalla",
+    "previous": "Δεσπότης",
     "next": "Deuterius 2",
     "chapters": [
       {
