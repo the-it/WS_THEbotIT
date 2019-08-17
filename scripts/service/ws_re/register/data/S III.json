@@ -41,22 +41,11 @@
     ]
   },
   {
-    "lemma": "Abacus 3-5",
-    "chapters": [
-      {
-        "start": 1,
-        "end": 4,
-        "author": "Fiechter"
-      }
-    ]
-  },
-  {
     "lemma": "Abacus",
     "next": "Abacus 9"
   },
   {
-    "lemma": "Abacus 9",
-    "next": "Epona"
+    "lemma": "Abacus 9"
   },
   {
     "lemma": "Abano",
@@ -70,14 +59,6 @@
         "author": "Keune"
       }
     ]
-  },
-  {
-    "lemma": "Abas",
-    "previous": "Abano"
-  },
-  {
-    "lemma": "Abas 12",
-    "previous": "Abano"
   },
   {
     "lemma": "Abas",
@@ -96,12 +77,7 @@
     ]
   },
   {
-    "lemma": "Abbo",
-    "next": "abecedarius, -a, -um"
-  },
-  {
     "lemma": "abecedarius, -a, -um",
-    "previous": "Abbo",
     "next": "Abella",
     "redirect": "Alphabet",
     "chapters": [
@@ -146,12 +122,7 @@
   },
   {
     "lemma": "Abronius",
-    "previous": "Abrincatui",
-    "next": "Absalom"
-  },
-  {
-    "lemma": "Absalom",
-    "previous": "Abronius"
+    "previous": "Abrincatui"
   },
   {
     "lemma": "Absalom 1",
@@ -215,20 +186,6 @@
         "start": 16,
         "end": 16,
         "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Accaus Postumius",
-    "previous": "Acaunus"
-  },
-  {
-    "lemma": "Accaus 3",
-    "chapters": [
-      {
-        "start": 16,
-        "end": 16,
-        "author": "Gerth"
       }
     ]
   },
@@ -339,7 +296,6 @@
   {
     "lemma": "Acqualagna",
     "previous": "Aco 2",
-    "next": "-acus, -iacus",
     "chapters": [
       {
         "start": 17,
@@ -349,15 +305,10 @@
     ]
   },
   {
-    "lemma": "-acus, -iacus",
-    "previous": "Acqualagna"
-  },
-  {
     "lemma": "Acronus"
   },
   {
     "lemma": "-acus, -iacus",
-    "previous": "Acqualagna",
     "next": "Acutus 1",
     "sort_key": "acusiacus",
     "chapters": [
@@ -393,7 +344,6 @@
   },
   {
     "lemma": "Ad-",
-    "previous": "Acutus 1",
     "next": "Adad 2",
     "sort_key": "Ad",
     "chapters": [
@@ -497,16 +447,6 @@
     "lemma": "Adrabaecampi",
     "previous": "Adour",
     "next": "Adria 2"
-  },
-  {
-    "lemma": "Ad Iuvense",
-    "chapters": [
-      {
-        "start": 21,
-        "end": 21,
-        "author": "Keune"
-      }
-    ]
   },
   {
     "lemma": "Adria 2",
@@ -1187,10 +1127,6 @@
     ]
   },
   {
-    "lemma": "Akanthos 5a",
-    "sort_key": "Akanthos 5a"
-  },
-  {
     "lemma": "Akanthos 1",
     "next": "Akatos 2",
     "chapters": [
@@ -1494,9 +1430,6 @@
         "author": "Oldfather"
       }
     ]
-  },
-  {
-    "lemma": "Alexias 5"
   },
   {
     "lemma": "Alexios",
@@ -2807,6 +2740,18 @@
     ]
   },
   {
+    "lemma": "Antiochos 42a",
+    "next": "Antiochos 13a",
+    "wp_link": "w:de:Antiochos",
+    "chapters": [
+      {
+        "start": 124,
+        "end": 124,
+        "author": "Oldfather"
+      }
+    ]
+  },
+  {
     "lemma": "Antiochos 13a",
     "next": "Antiochos 74",
     "chapters": [
@@ -2821,18 +2766,6 @@
     "lemma": "Antiochos 74",
     "previous": "Antiochos 13a",
     "next": "Antiope 1"
-  },
-  {
-    "lemma": "Antiochos 42a",
-    "next": "Antiochos 13a",
-    "wp_link": "w:de:Antiochos",
-    "chapters": [
-      {
-        "start": 124,
-        "end": 124,
-        "author": "Oldfather"
-      }
-    ]
   },
   {
     "lemma": "Antiope 1",
@@ -2973,6 +2906,17 @@
     "redirect": "Andernach"
   },
   {
+    "lemma": "Anunus",
+    "next": "Anwen",
+    "chapters": [
+      {
+        "start": 127,
+        "end": 127,
+        "author": "Hähnle"
+      }
+    ]
+  },
+  {
     "lemma": "Anwen",
     "previous": "Anunus",
     "next": "Anytos 1",
@@ -2982,17 +2926,6 @@
         "start": 127,
         "end": 127,
         "author": "Keune"
-      }
-    ]
-  },
-  {
-    "lemma": "Anunus",
-    "next": "Anwen",
-    "chapters": [
-      {
-        "start": 127,
-        "end": 127,
-        "author": "Hähnle"
       }
     ]
   },
@@ -3197,12 +3130,31 @@
     ]
   },
   {
-    "lemma": "Apollodoros 76a",
-    "next": "Apollon"
+    "lemma": "Apollodoros 26a",
+    "next": "Apollodoros 76b",
+    "wp_link": "w:de:Apollodoros (Diener Kleopatras)",
+    "chapters": [
+      {
+        "start": 134,
+        "end": 134,
+        "author": "Stähelin"
+      }
+    ]
+  },
+  {
+    "lemma": "Apollodoros 76b",
+    "previous": "Apollodoros 26a",
+    "chapters": [
+      {
+        "start": 134,
+        "end": 134,
+        "author": "Lippold, Georg"
+      }
+    ]
   },
   {
     "lemma": "Apollon",
-    "previous": "Apollodoros 76a",
+    "previous": "Apollodoros 76b",
     "next": "Apollonia 10",
     "chapters": [
       {
@@ -3233,29 +3185,6 @@
         "start": 133,
         "end": 134,
         "author": "Müller, B.A."
-      }
-    ]
-  },
-  {
-    "lemma": "Apollodoros 26a",
-    "next": "Apollodoros 76b",
-    "wp_link": "w:de:Apollodoros (Diener Kleopatras)",
-    "chapters": [
-      {
-        "start": 134,
-        "end": 134,
-        "author": "Stähelin"
-      }
-    ]
-  },
-  {
-    "lemma": "Apollodoros 76b",
-    "previous": "Apollodoros 26a",
-    "chapters": [
-      {
-        "start": 134,
-        "end": 134,
-        "author": "Lippold, Georg"
       }
     ]
   },
@@ -5009,21 +4938,6 @@
     "previous": "Argentius"
   },
   {
-    "lemma": "Aristeides 21",
-    "next": "Aristianae"
-  },
-  {
-    "lemma": "Aristianae",
-    "previous": "Aristeides 21",
-    "redirect": "Arestianae",
-    "chapters": [
-      {
-        "start": 155,
-        "end": 155
-      }
-    ]
-  },
-  {
     "lemma": "Argos 19",
     "next": "Argynna"
   },
@@ -5076,16 +4990,6 @@
     ]
   },
   {
-    "lemma": "Aricius",
-    "chapters": [
-      {
-        "start": 156,
-        "end": 156,
-        "author": "Hähnle"
-      }
-    ]
-  },
-  {
     "lemma": "Aristagoras 14",
     "previous": "Ariccus",
     "next": "Aristaioi",
@@ -5122,6 +5026,21 @@
         "start": 158,
         "end": 158,
         "author": "Oldfather"
+      }
+    ]
+  },
+  {
+    "lemma": "Aristeides 21",
+    "next": "Aristianae"
+  },
+  {
+    "lemma": "Aristianae",
+    "previous": "Aristeides 21",
+    "redirect": "Arestianae",
+    "chapters": [
+      {
+        "start": 155,
+        "end": 155
       }
     ]
   },
@@ -5422,28 +5341,6 @@
         "start": 161,
         "end": 161,
         "author": "Keune"
-      }
-    ]
-  },
-  {
-    "lemma": "Arsames 5",
-    "next": "Arsames 6",
-    "chapters": [
-      {
-        "start": 161,
-        "end": 161,
-        "author": "Stähelin"
-      }
-    ]
-  },
-  {
-    "lemma": "Arsames 6",
-    "previous": "Arsames 5",
-    "chapters": [
-      {
-        "start": 161,
-        "end": 162,
-        "author": "Stähelin"
       }
     ]
   },
@@ -5963,7 +5860,6 @@
   },
   {
     "lemma": "Athanadas 7",
-    "previous": "Athanadas",
     "next": "Athanaios",
     "chapters": [
       {
@@ -6274,6 +6170,18 @@
     ]
   },
   {
+    "lemma": "Attius 32a",
+    "previous": "Atisius",
+    "next": "Atri",
+    "chapters": [
+      {
+        "start": 180,
+        "end": 180,
+        "author": "Hähnle"
+      }
+    ]
+  },
+  {
     "lemma": "Atri",
     "previous": "Attius 32a",
     "next": "Atta 3",
@@ -6305,18 +6213,6 @@
   {
     "lemma": "Attalos 27",
     "previous": "Attales"
-  },
-  {
-    "lemma": "Attius 32a",
-    "previous": "Atisius",
-    "next": "Atri",
-    "chapters": [
-      {
-        "start": 180,
-        "end": 180,
-        "author": "Hähnle"
-      }
-    ]
   },
   {
     "lemma": "Attianus 2",
@@ -6627,7 +6523,6 @@
   },
   {
     "lemma": "Augeiai 1",
-    "previous": "Avetedo",
     "next": "Augenärzte"
   },
   {
@@ -6736,8 +6631,7 @@
   },
   {
     "lemma": "Augustobona",
-    "previous": "Augustinus 3",
-    "next": "Augustobriga"
+    "previous": "Augustinus 3"
   },
   {
     "lemma": "Augustobriga 1",
@@ -6746,16 +6640,6 @@
   {
     "lemma": "Augustodunum",
     "previous": "Augustobriga 1"
-  },
-  {
-    "lemma": "Augustobriga",
-    "chapters": [
-      {
-        "start": 186,
-        "end": 186,
-        "author": "Keune"
-      }
-    ]
   },
   {
     "lemma": "Augustoritum",
@@ -7101,6 +6985,30 @@
     "previous": "Auxois"
   },
   {
+    "lemma": "Axima 2",
+    "next": "Axius 8b"
+  },
+  {
+    "lemma": "Axius 8b",
+    "previous": "Axima 2",
+    "chapters": [
+      {
+        "start": 192,
+        "end": 192,
+        "author": "Kroll"
+      }
+    ]
+  },
+  {
+    "lemma": "Axius 8a",
+    "next": "Azizos 1"
+  },
+  {
+    "lemma": "Azizos 1",
+    "previous": "Axius 8a",
+    "next": "Babullius"
+  },
+  {
     "lemma": "Babullius",
     "next": "Baden"
   },
@@ -7142,30 +7050,7 @@
       }
     ]
   },
-  {
-    "lemma": "Axima 2",
-    "next": "Axius 8b"
-  },
-  {
-    "lemma": "Axius 8b",
-    "previous": "Axima 2",
-    "chapters": [
-      {
-        "start": 192,
-        "end": 192,
-        "author": "Kroll"
-      }
-    ]
-  },
-  {
-    "lemma": "Axius 8a",
-    "next": "Azizos 1"
-  },
-  {
-    "lemma": "Azizos 1",
-    "previous": "Axius 8a",
-    "next": "Babullius"
-  },
+
   {
     "lemma": "Baebius 51",
     "next": "Baebius 52",
@@ -7408,12 +7293,8 @@
     ]
   },
   {
-    "lemma": "Balbinus 4",
-    "next": "Balbus 5"
-  },
-  {
     "lemma": "Balbus 5",
-    "previous": "Balbinus 4",
+    "previous": "Balbinus 5",
     "next": "Banassac",
     "chapters": [
       {
@@ -9157,6 +9038,36 @@
     ]
   },
   {
+    "lemma": "Byriadas",
+    "previous": "Butzbach",
+    "next": "Βυταεύς"
+  },
+  {
+    "lemma": "Βυταεύς",
+    "previous": "Byriadas",
+    "next": "Bytios",
+    "sort_key": "Bytaeus",
+    "chapters": [
+      {
+        "start": 222,
+        "end": 222,
+        "author": "Oldfather"
+      }
+    ]
+  },
+  {
+    "lemma": "Bytios",
+    "previous": "Βυταεύς",
+    "next": "Cabuca",
+    "chapters": [
+      {
+        "start": 222,
+        "end": 222,
+        "author": "Oldfather"
+      }
+    ]
+  },
+  {
     "lemma": "Cabuca",
     "previous": "Bytios",
     "next": "Cacunius",
@@ -9209,36 +9120,6 @@
         "start": 221,
         "end": 222,
         "author": "Münzer"
-      }
-    ]
-  },
-  {
-    "lemma": "Byriadas",
-    "previous": "Butzbach",
-    "next": "Βυταεύς"
-  },
-  {
-    "lemma": "Βυταεύς",
-    "previous": "Byriadas",
-    "next": "Bytios",
-    "sort_key": "Bytaeus",
-    "chapters": [
-      {
-        "start": 222,
-        "end": 222,
-        "author": "Oldfather"
-      }
-    ]
-  },
-  {
-    "lemma": "Bytios",
-    "previous": "Βυταεύς",
-    "next": "Cabuca",
-    "chapters": [
-      {
-        "start": 222,
-        "end": 222,
-        "author": "Oldfather"
       }
     ]
   },
@@ -9529,26 +9410,6 @@
     ]
   },
   {
-    "lemma": "Calvus 1",
-    "next": "Calvus 2",
-    "chapters": [
-      {
-        "start": 231,
-        "end": 231
-      }
-    ]
-  },
-  {
-    "lemma": "Calvus 2",
-    "previous": "Calvus 1",
-    "chapters": [
-      {
-        "start": 231,
-        "end": 231
-      }
-    ]
-  },
-  {
     "lemma": "Calvus 4",
     "previous": "Calus",
     "next": "Calvus 5",
@@ -9620,26 +9481,6 @@
     ]
   },
   {
-    "lemma": "Camulodunum",
-    "next": "Camulus"
-  },
-  {
-    "lemma": "Camulus",
-    "previous": "Camulodunum",
-    "next": "Caninianae figlinae"
-  },
-  {
-    "lemma": "Caninianae figlinae",
-    "previous": "Camulus",
-    "chapters": [
-      {
-        "start": 231,
-        "end": 231,
-        "author": "Keune"
-      }
-    ]
-  },
-  {
     "lemma": "Campanus 4",
     "previous": "Camloriga",
     "next": "Camulatus 2",
@@ -9660,6 +9501,26 @@
         "start": 232,
         "end": 232,
         "author": "Hähnle"
+      }
+    ]
+  },
+  {
+    "lemma": "Camulodunum",
+    "next": "Camulus"
+  },
+  {
+    "lemma": "Camulus",
+    "previous": "Camulodunum",
+    "next": "Caninianae figlinae"
+  },
+  {
+    "lemma": "Caninianae figlinae",
+    "previous": "Camulus",
+    "chapters": [
+      {
+        "start": 231,
+        "end": 231,
+        "author": "Keune"
       }
     ]
   },
@@ -9722,7 +9583,6 @@
   },
   {
     "lemma": "ad Cantunas novas",
-    "previous": "Canrucatus",
     "next": "Cantus",
     "sort_key": "Cantunas novas, ad",
     "chapters": [
@@ -9771,16 +9631,6 @@
         "start": 234,
         "end": 234,
         "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Capitolium 3",
-    "chapters": [
-      {
-        "start": 234,
-        "end": 234,
-        "author": "Achelis"
       }
     ]
   },
@@ -9867,12 +9717,7 @@
     ]
   },
   {
-    "lemma": "Caratacus",
-    "next": "Carisius a"
-  },
-  {
     "lemma": "Carisius a",
-    "previous": "Caratacus",
     "next": "Carisso",
     "chapters": [
       {
@@ -9936,31 +9781,6 @@
     ]
   },
   {
-    "lemma": "Cassiolus",
-    "next": "Cassius 20",
-    "chapters": [
-      {
-        "start": 236,
-        "end": 236,
-        "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Cassius 20",
-    "previous": "Cassiolus",
-    "next": "Cassius 65"
-  },
-  {
-    "lemma": "Cassius 65",
-    "previous": "Cassius 20",
-    "next": "Cassius 70"
-  },
-  {
-    "lemma": "Cassius 70",
-    "previous": "Cassius 65"
-  },
-  {
     "lemma": "Caruces",
     "previous": "Cartoriana",
     "next": "Cascellius 1"
@@ -9992,6 +9812,31 @@
         "author": "Keune"
       }
     ]
+  },
+  {
+    "lemma": "Cassiolus",
+    "next": "Cassius 20",
+    "chapters": [
+      {
+        "start": 236,
+        "end": 236,
+        "author": "Hähnle"
+      }
+    ]
+  },
+  {
+    "lemma": "Cassius 20",
+    "previous": "Cassiolus",
+    "next": "Cassius 65"
+  },
+  {
+    "lemma": "Cassius 65",
+    "previous": "Cassius 20",
+    "next": "Cassius 70"
+  },
+  {
+    "lemma": "Cassius 70",
+    "previous": "Cassius 65"
   },
   {
     "lemma": "Cassius 85",
@@ -19992,5 +19837,8 @@
         "end": 1304
       }
     ]
-  }
+  },
+  {"lemma": "Ad Iuglandem"},
+  {"lemma": "Abacus 9"},
+  {"lemma": "Epona"}
 ]
