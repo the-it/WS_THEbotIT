@@ -245,7 +245,6 @@
   {
     "lemma": "Battus, Bacchus",
     "previous": "Attius 10a",
-    "next": "Autrico",
     "chapters": [
       {
         "start": 55,
@@ -273,16 +272,16 @@
   },
   {
     "lemma": "Berothe",
-    "previous": "Battus"
+    "previous": "Battus",
+    "next": "Bias 10"
   },
   {
     "lemma": "Bias 10",
-    "next": "Caecilius 141"
+    "previous": "Berothe",
+    "next": "Caecilia Trebulla"
   },
   {
     "lemma": "Caecilius 141",
-    "previous": "Bias 10",
-    "next": "Celsus 18a",
     "chapters": [
       {
         "start": 57,
@@ -293,6 +292,7 @@
   },
   {
     "lemma": "Caecilia Trebulla",
+    "previous": "Bias 10",
     "next": "Celsus 18a",
     "wp_link": "w:de:Caecilia Trebulla"
   },
