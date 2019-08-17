@@ -30,7 +30,8 @@
   {
     "lemma": "Aare",
     "previous": "Aalen",
-    "next": "Abacus 3-5",
+    "next": "Abacus",
+    "wp_link": "w:de:Aare",
     "chapters": [
       {
         "start": 1,
@@ -55,7 +56,7 @@
   },
   {
     "lemma": "Abacus 9",
-    "next": "Abano"
+    "next": "Epona"
   },
   {
     "lemma": "Abano",
@@ -112,15 +113,17 @@
   },
   {
     "lemma": "Abella",
-    "previous": "abecedarius, -a, -um"
+    "previous": "abecedarius, -a, -um",
+    "next": "Abdera 1"
   },
   {
-    "lemma": "Abdera",
+    "lemma": "Abdera 1",
+    "previous": "Abella",
     "next": "Abdere"
   },
   {
     "lemma": "Abdere",
-    "previous": "Abdera",
+    "previous": "Abdera 1",
     "next": "Abderos",
     "chapters": [
       {
@@ -685,7 +688,6 @@
   {
     "lemma": "Africanus 9",
     "previous": "Afer 3",
-    "next": "Afrius",
     "chapters": [
       {
         "start": 36,
@@ -695,11 +697,17 @@
     ]
   },
   {
+    "lemma": "Afer",
+    "next": "Afrius"
+  },
+  {
     "lemma": "Afrius",
-    "previous": "Africanus 9"
+    "previous": "Afer",
+    "next": "Agasias 2"
   },
   {
     "lemma": "Agasias 2",
+    "previous": "Afrius",
     "next": "Agasilaos"
   },
   {
@@ -764,11 +772,12 @@
   },
   {
     "lemma": "Agathinos 8",
-    "previous": "Agathias 3"
+    "previous": "Agathias 3",
+    "next": "Agathinos 10"
   },
   {
     "lemma": "Agathinos 10",
-    "previous": "Agathias 3",
+    "previous": "Agathinos 8",
     "next": "Agathodaimon 1",
     "chapters": [
       {
@@ -3443,7 +3452,22 @@
   },
   {
     "lemma": "Aqua, Aquae 36",
-    "previous": "Aqua, Aquae 20"
+    "previous": "Aqua, Aquae 20",
+    "next": "Aqua, Aquae 46"
+  },
+  {
+    "lemma": "Aqua, Aquae 46",
+    "previous": "Aqua, Aquae 36",
+    "next": "Aqua, Aquae 55"
+  },
+  {
+    "lemma": "Aqua, Aquae 55",
+    "previous": "Aqua, Aquae 46",
+    "next": "Aqua, Aquae 59"
+  },
+  {
+    "lemma": "Aqua, Aquae 59",
+    "previous": "Aqua, Aquae 55"
   },
   {
     "lemma": "Aqua, Aquae 63",
@@ -6734,7 +6758,12 @@
     ]
   },
   {
+    "lemma": "Augustoritum",
+    "next": "Augustum 1"
+  },
+  {
     "lemma": "Augustum 1",
+    "previous": "Augustoritum",
     "next": "Augustum 2",
     "redirect": "Aoste"
   },
@@ -18268,7 +18297,12 @@
     ]
   },
   {
+    "lemma": "Hekate",
+    "next": "Helena 1"
+  },
+  {
     "lemma": "Helena 1",
+    "previous": "Hekate",
     "next": "Helena 1a"
   },
   {
