@@ -6631,13 +6631,12 @@
   {
     "lemma": "Anicius 8a",
     "previous": "Anicius 6a",
-    "next": "Anicius 10",
+    "next": "Anicius 16a",
     "sort_key": "Anicius 08a",
     "redirect": "Crispinus 7a"
   },
   {
     "lemma": "Anicius 10",
-    "previous": "Anicius 8a",
     "next": "Anicius 16a"
   },
   {
@@ -7432,7 +7431,12 @@
     "previous": "Antonius 66a"
   },
   {
+    "lemma": "Antonius 88",
+    "next": "Antonius 95"
+  },
+  {
     "lemma": "Antonius 95",
+    "previous": "Antonius 88",
     "next": "Antonius 96"
   },
   {
@@ -12156,7 +12160,6 @@
     "previous": "Ἀτελής",
     "next": "Atepomarus 1"
   },
-
   {
     "lemma": "Atepomarus 1",
     "previous": "Atella",
@@ -18174,10 +18177,20 @@
   },
   {
     "lemma": "Claudius 164",
-    "previous": "Claudius 154"
+    "previous": "Claudius 154",
+    "next": "Claudius 179"
+  },
+  {
+    "lemma": "Claudius 179",
+    "previous": "Claudius 164"
+  },
+  {
+    "lemma": "Claudius 218",
+    "next": "Claudius 243"
   },
   {
     "lemma": "Claudius 243",
+    "previous": "Claudius 218",
     "next": "Claudius 246"
   },
   {
@@ -19153,6 +19166,7 @@
   },
   {
     "lemma": "Damea",
+    "previous": "Damatrios 2a",
     "next": "Damis 2a",
     "chapters": [
       {

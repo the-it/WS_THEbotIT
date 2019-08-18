@@ -42,10 +42,12 @@
   },
   {
     "lemma": "Abacus",
+    "previous": "Aare",
     "next": "Abacus 9"
   },
   {
-    "lemma": "Abacus 9"
+    "lemma": "Abacus 9",
+    "previous": "Abacus"
   },
   {
     "lemma": "Abano",
@@ -78,6 +80,7 @@
   },
   {
     "lemma": "abecedarius, -a, -um",
+    "previous": "Abbo 2",
     "next": "Abella",
     "redirect": "Alphabet",
     "chapters": [
@@ -2741,6 +2744,7 @@
   },
   {
     "lemma": "Antiochos 42a",
+    "previous": "Antinoos 4a",
     "next": "Antiochos 13a",
     "wp_link": "w:de:Antiochos",
     "chapters": [
@@ -3144,6 +3148,7 @@
   {
     "lemma": "Apollodoros 76b",
     "previous": "Apollodoros 26a",
+    "next": "Apollon",
     "chapters": [
       {
         "start": 134,
@@ -4838,7 +4843,13 @@
   },
   {
     "lemma": "Arel",
-    "previous": "Aregenua"
+    "previous": "Aregenua",
+    "next": "Arelate 1",
+    "redirect": true
+  },
+  {
+    "lemma": "Arelate 1",
+    "previous": "Arel"
   },
   {
     "lemma": "Arenacum",
@@ -4862,6 +4873,7 @@
   },
   {
     "lemma": "Areopolis 2",
+    "previous": "Arentsburg",
     "next": "Ares 2"
   },
   {
@@ -4935,7 +4947,13 @@
   },
   {
     "lemma": "Argentoialum",
-    "previous": "Argentius"
+    "previous": "Argentius",
+    "next": "Argentorate",
+    "redirect": "Argenteuil"
+  },
+  {
+    "lemma": "Argentorate",
+    "previous": "Argentoialum"
   },
   {
     "lemma": "Argos 19",
@@ -5036,6 +5054,7 @@
   {
     "lemma": "Aristianae",
     "previous": "Aristeides 21",
+    "next": "Aristobulos 3a",
     "redirect": "Arestianae",
     "chapters": [
       {
@@ -5448,10 +5467,18 @@
   },
   {
     "lemma": "Artio dea",
-    "previous": "Articianus"
+    "previous": "Articianus",
+    "next": "Artois"
+  },
+  {
+    "lemma": "Artois",
+    "previous": "Artio dea",
+    "next": "Arverni",
+    "redirect": "Arras"
   },
   {
     "lemma": "Arverni",
+    "previous": "Artois",
     "next": "Arvernicus 2"
   },
   {
@@ -5473,7 +5500,9 @@
   },
   {
     "lemma": "Arura",
-    "previous": "Arvius 2"
+    "previous": "Arvius 2",
+    "next": "Arxanes",
+    "redirect": "Aare"
   },
   {
     "lemma": "Arvius 1",
@@ -5487,6 +5516,7 @@
   },
   {
     "lemma": "Arxanes",
+    "previous": "Arura",
     "next": "Aryses",
     "redirect": "Arsames 4"
   },
@@ -7050,7 +7080,6 @@
       }
     ]
   },
-
   {
     "lemma": "Baebius 51",
     "next": "Baebius 52",
@@ -19838,7 +19867,13 @@
       }
     ]
   },
-  {"lemma": "Ad Iuglandem"},
-  {"lemma": "Abacus 9"},
-  {"lemma": "Epona"}
+  {
+    "lemma": "Ad Iuglandem"
+  },
+  {
+    "lemma": "Abacus 9"
+  },
+  {
+    "lemma": "Epona"
+  }
 ]
