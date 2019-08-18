@@ -1442,10 +1442,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε"
+    "next": "Ἀρχε(..."
   },
   {
-    "lemma": "Ἀρχε",
+    "lemma": "Ἀρχε(...",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1459,7 +1459,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε",
+    "previous": "Ἀρχε(...",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -2343,12 +2343,13 @@
   },
   {
     "lemma": "Charias 2",
+    "previous": "Chares 12",
     "next": "Charidemos 4a"
   },
   {
     "lemma": "Charidemos 4a",
     "previous": "Charias 2",
-    "next": "Chirographum",
+    "next": "χειρόγραφον",
     "chapters": [
       {
         "start": 126,
@@ -2358,13 +2359,15 @@
     ]
   },
   {
-    "lemma": "Chirographum",
-    "previous": "Charidemos 4a",
+    "lemma": "Chirographum"
+  },
+  {
+    "lemma": "χειρόγραφον",
     "next": "Choraules"
   },
   {
     "lemma": "Choraules",
-    "previous": "Chirographum",
+    "previous": "χειρόγραφον",
     "next": "Chryses 3"
   },
   {
@@ -2452,6 +2455,7 @@
   {
     "lemma": "Claudius 242a",
     "previous": "Claudius 10a",
+    "next": "Clodius 73",
     "chapters": [
       {
         "start": 132,
@@ -3666,7 +3670,12 @@
     ]
   },
   {
+    "lemma": "Chairemon 5",
+    "next": "Chairestratos 1"
+  },
+  {
     "lemma": "Chairestratos 1",
+    "previous": "Chairemon 5",
     "next": "Chairestratos 1a"
   },
   {

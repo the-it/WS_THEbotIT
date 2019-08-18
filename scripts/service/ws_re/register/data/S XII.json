@@ -585,11 +585,15 @@
   },
   {
     "lemma": "Amelas",
-    "previous": "In Alpe Iulia"
+    "previous": "In Alpe Iulia",
+    "next": "Anaxagoras 4"
+  },
+  {
+    "lemma": "Anaxagoras 4",
+    "previous": "Amelas"
   },
   {
     "lemma": "Andautonia",
-    "previous": "Andania 1",
     "next": "Andeda"
   },
   {
@@ -1575,7 +1579,8 @@
   },
   {
     "lemma": "Claudius 285",
-    "previous": "Claudius 262"
+    "previous": "Claudius 262",
+    "next": "Claudius 288aaa"
   },
   {
     "lemma": "Claudius 288a",
@@ -1936,6 +1941,7 @@
   {
     "lemma": "Dasumius aa",
     "previous": "Cutius 1a",
+    "next": "Demokritos 6",
     "chapters": [
       {
         "start": 193,

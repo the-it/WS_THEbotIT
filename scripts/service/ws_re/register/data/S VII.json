@@ -277,7 +277,6 @@
   {
     "lemma": "Attributio",
     "previous": "Ἀσκληπιαις",
-    "next": "Auction 1",
     "chapters": [
       {
         "start": 65,
@@ -288,6 +287,7 @@
   },
   {
     "lemma": "Aurelius 39a",
+    "previous": "Aurelius 63a",
     "next": "Aurelius 56b",
     "sort_key": "Aurelius 039a",
     "chapters": [
@@ -426,7 +426,7 @@
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
-    "next": "Chirographum",
+    "next": "χειρόγραφον",
     "chapters": [
       {
         "start": 83,
@@ -436,8 +436,7 @@
     ]
   },
   {
-    "lemma": "Chirographum",
-    "previous": "Canaliclarius"
+    "lemma": "Chirographum"
   },
   {
     "lemma": "χειρόγραφον",
@@ -490,11 +489,11 @@
   },
   {
     "lemma": "Claudius 207",
-    "previous": "χρηματισμός"
+    "previous": "χρηματισμός",
+    "next": "Clementius 1"
   },
   {
     "lemma": "Cocceius 12",
-    "previous": "Cocceius 3",
     "next": "Codicarii 2"
   },
   {
