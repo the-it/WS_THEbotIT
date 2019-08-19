@@ -125,7 +125,8 @@
   },
   {
     "lemma": "Abronius",
-    "previous": "Abrincatui"
+    "previous": "Abrincatui",
+    "next": "Absalom 1"
   },
   {
     "lemma": "Absalom 1",
@@ -1327,7 +1328,12 @@
     "previous": "Alençon, Notre Dame d'-"
   },
   {
+    "lemma": "Aleuas 5",
+    "next": "Ἀλευρομαντεία"
+  },
+  {
     "lemma": "Ἀλευρομαντεία",
+    "previous": "Aleuas 5",
     "next": "Alexandra 4",
     "sort_key": "Aleuromanteia"
   },
@@ -2757,6 +2763,7 @@
   },
   {
     "lemma": "Antiochos 13a",
+    "previous": "Antiochos 42a",
     "next": "Antiochos 74",
     "chapters": [
       {
@@ -2773,6 +2780,7 @@
   },
   {
     "lemma": "Antiope 1",
+    "previous": "Antiochos 74",
     "next": "Antipatros 20a"
   },
   {
@@ -3135,6 +3143,7 @@
   },
   {
     "lemma": "Apollodoros 26a",
+    "previous": "Apollinaris 13",
     "next": "Apollodoros 76b",
     "wp_link": "w:de:Apollodoros (Diener Kleopatras)",
     "chapters": [
@@ -5039,6 +5048,7 @@
   {
     "lemma": "Aristarchos 6a",
     "previous": "Aristaios 7",
+    "next": "Aristeides 21",
     "chapters": [
       {
         "start": 158,
@@ -5049,6 +5059,7 @@
   },
   {
     "lemma": "Aristeides 21",
+    "previous": "Aristarchos 6a",
     "next": "Aristianae"
   },
   {
@@ -7082,6 +7093,7 @@
   },
   {
     "lemma": "Baebius 51",
+    "previous": "Badenweiler",
     "next": "Baebius 52",
     "chapters": [
       {
@@ -8221,6 +8233,7 @@
   {
     "lemma": "Boa 2",
     "previous": "Blondelia",
+    "next": "Boagrios",
     "chapters": [
       {
         "start": 209,
@@ -10184,7 +10197,6 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
-    "next": "Ceraria (Caeraria, Geraria) figlina",
     "chapters": [
       {
         "start": 241,
@@ -10195,7 +10207,7 @@
   },
   {
     "lemma": "Ceraria (Caeraria, Geraria) figlina",
-    "previous": "Cepariae figlinae",
+    "previous": "Centurion(ica) praedia",
     "next": "Cercina",
     "chapters": [
       {
