@@ -471,7 +471,13 @@
   },
   {
     "lemma": "Aguntum",
-    "previous": "Agesilaos 8"
+    "previous": "Agesilaos 8",
+    "next": "Aigosthena"
+  },
+  {
+    "lemma": "Aigosthena",
+    "previous": "Aguntum",
+    "next": "Αἰνύρων χῶρος"
   },
   {
     "lemma": "Agesilaos 7b",
@@ -485,6 +491,7 @@
   },
   {
     "lemma": "Αἰνύρων χῶρος",
+    "previous": "Aigosthena",
     "next": "Akephalos"
   },
   {
@@ -837,8 +844,14 @@
     ]
   },
   {
+    "lemma": "Antonius 76",
+    "next": "Antonius 80"
+  },
+  {
     "lemma": "Antonius 80",
-    "next": "Antonius 107"
+    "previous": "Antonius 76",
+    "next": "Antonius 107",
+    "sort_key": "Antonius 080"
   },
   {
     "lemma": "Antonius 107",
@@ -860,15 +873,15 @@
   {
     "lemma": "Aponius 8",
     "previous": "Apicatus",
-    "next": "Appuleius 13",
     "sort_key": "Aponius 08"
   },
   {
     "lemma": "Argura 1",
-    "next": "Ἀριαῖοι"
+    "previous": "Arcani",
+    "next": "Ariaioi"
   },
   {
-    "lemma": "Ἀριαῖοι",
+    "lemma": "Ariaioi",
     "previous": "Argura 1",
     "next": "Arrabona",
     "sort_key": "Ariaioi",
@@ -882,7 +895,7 @@
   },
   {
     "lemma": "Arrabona",
-    "previous": "Ἀριαῖοι",
+    "previous": "Ariaioi",
     "next": "Arrecinus 2"
   },
   {
@@ -1489,6 +1502,7 @@
   },
   {
     "lemma": "Celeia",
+    "previous": "Catius 4",
     "next": "Cestius 6a"
   },
   {
@@ -1667,10 +1681,17 @@
   },
   {
     "lemma": "Cocceius 19a",
-    "previous": "Cocceius 19"
+    "previous": "Cocceius 19",
+    "next": "Coelius 7a"
+  },
+  {
+    "lemma": "Coelius 7a",
+    "previous": "Cocceius 19a",
+    "next": "Coelius 18"
   },
   {
     "lemma": "Coelius 18",
+    "previous": "Coelius 7a",
     "next": "Coelius 22a"
   },
   {
@@ -3659,12 +3680,16 @@
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1",
+    "previous": "Anaximandros 1"
+  },
+  {
+    "lemma": "Anaximenes 1",
     "next": "Andania 1"
   },
   {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 2"
+    "previous": "Anaximenes 1",
+    "next": "Andautonia"
   },
   {
     "lemma": "Arborius 5",

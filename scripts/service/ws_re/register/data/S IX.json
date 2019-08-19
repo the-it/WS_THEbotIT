@@ -88,7 +88,17 @@
   },
   {
     "lemma": "Alea 1",
-    "previous": "Aipion"
+    "previous": "Aipion",
+    "next": "Alfenus 4"
+  },
+  {
+    "lemma": "Alfenus 4",
+    "previous": "Alea 1",
+    "next": "Aliphera"
+  },
+  {
+    "lemma": "Aliphera",
+    "previous": "Alfenus 4"
   },
   {
     "lemma": "Ankyron polis",
@@ -181,11 +191,11 @@
   },
   {
     "lemma": "Apesas 1",
-    "previous": "Antonius 95a"
+    "previous": "Antonius 95a",
+    "next": "Aquilinus 7"
   },
   {
     "lemma": "Arekrat",
-    "previous": "Areimanios",
     "next": "Argyra 1",
     "chapters": [
       {
@@ -379,11 +389,11 @@
   },
   {
     "lemma": "Buphagion",
-    "previous": "Bomos Athenas"
+    "previous": "Bomos Athenas",
+    "next": "Bura 1"
   },
   {
     "lemma": "Aurelius 163a",
-    "previous": "Aurelius 157a",
     "next": "Aurelius 217a",
     "chapters": [
       {
@@ -408,7 +418,6 @@
   {
     "lemma": "Automedusa 2",
     "previous": "Aurelius 217a",
-    "next": "Bobiensia epigrammata",
     "chapters": [
       {
         "start": 18,
@@ -418,7 +427,12 @@
     ]
   },
   {
+    "lemma": "Bura 1",
+    "next": "Buraïkos 1"
+  },
+  {
     "lemma": "Buraïkos 1",
+    "previous": "Bura 1",
     "next": "Cassius 84"
   },
   {

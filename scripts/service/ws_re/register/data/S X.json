@@ -1292,10 +1292,17 @@
   },
   {
     "lemma": "Apollas 1",
-    "previous": "Apolaustus 8"
+    "previous": "Apolaustus 8",
+    "next": "Apollodoros 41b"
+  },
+  {
+    "lemma": "Apollodoros 41b",
+    "previous": "Apollas 1",
+    "next": "Apollodoros 41c"
   },
   {
     "lemma": "Apollodoros 41c",
+    "previous": "Apollodoros 41b",
     "next": "Apollodoros 78"
   },
   {
@@ -1334,10 +1341,12 @@
   },
   {
     "lemma": "Apollonios 4",
-    "previous": "Apollonides 17"
+    "previous": "Apollonides 17",
+    "next": "Apollonios 34"
   },
   {
     "lemma": "Apollonios 34",
+    "previous": "Apollonios 4",
     "next": "Apollonios 48"
   },
   {
@@ -1442,10 +1451,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε(..."
+    "next": "Ἀρχε"
   },
   {
-    "lemma": "Ἀρχε(...",
+    "lemma": "Ἀρχε",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1459,7 +1468,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε(...",
+    "previous": "Ἀρχε",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -2349,7 +2358,7 @@
   {
     "lemma": "Charidemos 4a",
     "previous": "Charias 2",
-    "next": "χειρόγραφον",
+    "next": "Chirographum",
     "chapters": [
       {
         "start": 126,
@@ -2359,7 +2368,9 @@
     ]
   },
   {
-    "lemma": "Chirographum"
+    "lemma": "Chirographum",
+    "previous": "Charidemos 4a",
+    "next": "Choraules"
   },
   {
     "lemma": "χειρόγραφον",
@@ -2403,6 +2414,7 @@
   {
     "lemma": "Cillae",
     "previous": "Cicereia lex",
+    "next": "Clarus 6a",
     "chapters": [
       {
         "start": 128,
@@ -2413,7 +2425,6 @@
   },
   {
     "lemma": "Clodius 73",
-    "previous": "Claudius 242a",
     "next": "cohortes urbanae",
     "chapters": [
       {
@@ -2426,6 +2437,7 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
+    "next": "Collegium",
     "redirect": "urbanae cohortes"
   },
   {
@@ -2455,7 +2467,6 @@
   {
     "lemma": "Claudius 242a",
     "previous": "Claudius 10a",
-    "next": "Clodius 73",
     "chapters": [
       {
         "start": 132,
@@ -2466,6 +2477,7 @@
   },
   {
     "lemma": "Collegium",
+    "previous": "cohortes urbanae",
     "next": "Constantiniani"
   },
   {
@@ -2543,7 +2555,6 @@
   {
     "lemma": "Cornuti",
     "previous": "Cornelius 459a",
-    "next": "creditum",
     "chapters": [
       {
         "start": 133,
@@ -2554,6 +2565,7 @@
   },
   {
     "lemma": "Daduchos 3",
+    "previous": "creditum",
     "next": "Damatros",
     "chapters": [
       {

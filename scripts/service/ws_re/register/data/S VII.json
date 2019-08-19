@@ -301,11 +301,11 @@
   {
     "lemma": "Aurelius 56b",
     "previous": "Aurelius 39a",
+    "next": "Aurelius 145aaa",
     "sort_key": "Aurelius 056b"
   },
   {
     "lemma": "Auction 1",
-    "previous": "Attributio",
     "next": "Aurelius 63a"
   },
   {
@@ -426,7 +426,7 @@
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
-    "next": "χειρόγραφον",
+    "next": "Chirographum",
     "chapters": [
       {
         "start": 83,
@@ -436,7 +436,9 @@
     ]
   },
   {
-    "lemma": "Chirographum"
+    "lemma": "Chirographum",
+    "previous": "Canaliclarius",
+    "next": "Χειροτέχνιον"
   },
   {
     "lemma": "χειρόγραφον",
@@ -450,6 +452,7 @@
   },
   {
     "lemma": "Clementius 1",
+    "previous": "Claudius 207",
     "next": "Clementius 1a"
   },
   {
@@ -2833,7 +2836,12 @@
     ]
   },
   {
+    "lemma": "Lex Vibia (oder Leges Vibiae)",
+    "next": "Libella 1"
+  },
+  {
     "lemma": "Libella 1",
+    "previous": "Lex Vibia (oder Leges Vibiae)",
     "next": "Licinius 151a"
   },
   {
