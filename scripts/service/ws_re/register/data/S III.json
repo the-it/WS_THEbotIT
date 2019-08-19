@@ -4867,7 +4867,6 @@
   {
     "lemma": "Arentsburg",
     "previous": "Arenacum",
-    "next": "Areopolis 3",
     "chapters": [
       {
         "start": 154,
@@ -4875,10 +4874,6 @@
         "author": "Keune"
       }
     ]
-  },
-  {
-    "lemma": "Areopolis 3",
-    "previous": "Arentsburg"
   },
   {
     "lemma": "Areopolis 2",
@@ -5514,16 +5509,6 @@
     "previous": "Arvius 2",
     "next": "Arxanes",
     "redirect": "Aare"
-  },
-  {
-    "lemma": "Arvius 1",
-    "chapters": [
-      {
-        "start": 163,
-        "end": 163,
-        "author": "Hähnle"
-      }
-    ]
   },
   {
     "lemma": "Arxanes",
@@ -8243,12 +8228,7 @@
     ]
   },
   {
-    "lemma": "Boa",
-    "next": "Boagrios"
-  },
-  {
     "lemma": "Boagrios",
-    "previous": "Boa",
     "next": "Boconiana"
   },
   {
@@ -9955,7 +9935,6 @@
   {
     "lemma": "Castus 6",
     "previous": "Castus 5",
-    "next": "Cataracta",
     "chapters": [
       {
         "start": 237,
@@ -10207,7 +10186,6 @@
   },
   {
     "lemma": "Ceraria (Caeraria, Geraria) figlina",
-    "previous": "Centurion(ica) praedia",
     "next": "Cercina",
     "chapters": [
       {
@@ -15273,30 +15251,10 @@
     ]
   },
   {
-    "lemma": "Castus 2b",
-    "next": "Cataracta"
-  },
-  {
-    "lemma": "Cataracta",
-    "previous": "Castus 2b",
-    "next": "Catius 8",
-    "redirect": "Fallgatter",
-    "chapters": [
-      {
-        "start": 479,
-        "end": 479
-      }
-    ]
-  },
-  {
-    "lemma": "Catius 8",
-    "previous": "Cataracta",
-    "next": "Catius 8a",
-    "sort_key": "Catius 08"
+    "lemma": "Castus 2b"
   },
   {
     "lemma": "Catius 8a",
-    "previous": "Catius 8",
     "sort_key": "Catius 08a"
   },
   {

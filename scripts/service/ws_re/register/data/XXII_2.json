@@ -4090,7 +4090,6 @@
   {
     "lemma": "Priscianus 4",
     "previous": "Priscianus 3",
-    "next": "Praefectura",
     "chapters": [
       {
         "start": 2346,
@@ -4100,20 +4099,7 @@
     ]
   },
   {
-    "lemma": "Praefectura",
-    "previous": "Poseidonia",
-    "next": "Praefectus Aegypti",
-    "chapters": [
-      {
-        "start": 2347,
-        "end": 2353,
-        "author": "Sachers"
-      }
-    ]
-  },
-  {
     "lemma": "Priscianus 5",
-    "previous": "Praefectura",
     "next": "Priscianus 6",
     "chapters": [
       {
@@ -4174,7 +4160,6 @@
   {
     "lemma": "Priscianus 10",
     "previous": "Priscianus 9",
-    "next": "Praefectus Aegypti",
     "chapters": [
       {
         "start": 2348,
@@ -4183,9 +4168,21 @@
       }
     ]
   },
+  {"lemma": "Poseidonia"},
+  {
+    "lemma": "Praefectura",
+    "previous": "Poseidonia",
+    "next": "Praefectus Aegypti",
+    "chapters": [
+      {
+        "start": 2347,
+        "end": 2353,
+        "author": "Sachers"
+      }
+    ]
+  },
   {
     "lemma": "Praefectus Aegypti",
-    "previous": "Priscianus 10",
     "next": "Praefectus iure dicundo",
     "chapters": [
       {
