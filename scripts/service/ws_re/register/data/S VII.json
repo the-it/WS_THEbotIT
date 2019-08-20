@@ -277,6 +277,7 @@
   {
     "lemma": "Attributio",
     "previous": "Ἀσκληπιαις",
+    "next": "Auction 1",
     "chapters": [
       {
         "start": 65,
@@ -287,7 +288,6 @@
   },
   {
     "lemma": "Aurelius 39a",
-    "previous": "Aurelius 63a",
     "next": "Aurelius 56b",
     "sort_key": "Aurelius 039a",
     "chapters": [
@@ -301,11 +301,11 @@
   {
     "lemma": "Aurelius 56b",
     "previous": "Aurelius 39a",
-    "next": "Aurelius 145aaa",
     "sort_key": "Aurelius 056b"
   },
   {
     "lemma": "Auction 1",
+    "previous": "Attributio",
     "next": "Aurelius 63a"
   },
   {
@@ -469,17 +469,20 @@
   },
   {
     "lemma": "Cocceius 3",
-    "previous": "Clementius 1a",
-    "next": "Cocceius 12"
+    "previous": "Clementius 1a"
   },
   {
-    "lemma": "Chersonesos 5",
-    "next": "χρηματισμός",
+    "lemma": "Χειροτέχνιον",
+    "previous": "χειρόγραφον",
+    "next": "Chersonesos 5",
     "sort_key": "Cheirotechnion"
   },
   {
+    "lemma": "Chersonesos 5",
+    "previous": "Χειροτέχνιον"
+  },
+  {
     "lemma": "χρηματισμός",
-    "previous": "Chersonesos 5",
     "next": "Claudius 207",
     "sort_key": "Chrematismos",
     "chapters": [

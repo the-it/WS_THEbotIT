@@ -597,7 +597,8 @@
   },
   {
     "lemma": "Anaxagoras 4",
-    "previous": "Amelas"
+    "previous": "Amelas",
+    "next": "Anaximandros 1"
   },
   {
     "lemma": "Andautonia",
@@ -835,6 +836,7 @@
   {
     "lemma": "Arcani",
     "previous": "Aquilius 30",
+    "next": "Argura 1",
     "chapters": [
       {
         "start": 89,
@@ -878,10 +880,10 @@
   {
     "lemma": "Argura 1",
     "previous": "Arcani",
-    "next": "Ariaioi"
+    "next": "Ἀριαῖοι"
   },
   {
-    "lemma": "Ariaioi",
+    "lemma": "Ἀριαῖοι",
     "previous": "Argura 1",
     "next": "Arrabona",
     "sort_key": "Ariaioi",
@@ -895,7 +897,7 @@
   },
   {
     "lemma": "Arrabona",
-    "previous": "Ariaioi",
+    "previous": "Ἀριαῖοι",
     "next": "Arrecinus 2"
   },
   {
@@ -1044,7 +1046,12 @@
     "previous": "Aufidius 41"
   },
   {
+    "lemma": "Avidius 7",
+    "next": "Aulis 1"
+  },
+  {
     "lemma": "Aulis 1",
+    "previous": "Avidius 7",
     "next": "Aurelius 88"
   },
   {
@@ -1084,10 +1091,17 @@
   },
   {
     "lemma": "Baebius 28",
-    "previous": "Aurelius 141b"
+    "previous": "Aurelius 141b",
+    "next": "Baebius 28a"
+  },
+  {
+    "lemma": "Baebius 28a",
+    "previous": "Baebius 28",
+    "next": "Baebius 32"
   },
   {
     "lemma": "Baebius 32",
+    "previous": "Baebius 28a",
     "next": "Baebius 47"
   },
   {
@@ -1213,7 +1227,8 @@
   {
     "lemma": "Bruttius 5",
     "previous": "Bononius 2",
-    "next": "Caecilius 33a"
+    "next": "Caecilius 33a",
+    "sort_key": "Bruttius 05"
   },
   {
     "lemma": "Caecilius 33a",
@@ -1239,10 +1254,17 @@
   },
   {
     "lemma": "Caecilius 108",
-    "previous": "Caecilius 56"
+    "previous": "Caecilius 56",
+    "next": "Caecilius 121"
+  },
+  {
+    "lemma": "Caecilius 121",
+    "previous": "Caecilius 108",
+    "next": "Caecilius 121a"
   },
   {
     "lemma": "Caecilius 121a",
+    "previous": "Caecilius 121",
     "next": "Caecilius 124a"
   },
   {
@@ -2764,7 +2786,12 @@
     ]
   },
   {
+    "lemma": "Iunius 75a",
+    "next": "Iunius 78"
+  },
+  {
     "lemma": "Iunius 78",
+    "previous": "Iunius 75a",
     "next": "Iunius 114a"
   },
   {
@@ -3676,11 +3703,10 @@
   {
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
-    "next": "Anaximenes 2"
+    "next": "Arborius 5"
   },
   {
-    "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1"
+    "lemma": "Anaximenes 2"
   },
   {
     "lemma": "Anaximenes 1",
@@ -3688,11 +3714,11 @@
   },
   {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 1",
-    "next": "Andautonia"
+    "previous": "Anaximenes 1"
   },
   {
     "lemma": "Arborius 5",
+    "previous": "Anaximandros 1",
     "next": "Archedemos 5",
     "chapters": [
       {
