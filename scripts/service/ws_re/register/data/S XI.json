@@ -339,12 +339,15 @@
   },
   {
     "lemma": "Amythaon 2",
-    "previous": "Ammatas",
+    "previous": "Ammatas"
+  },
+  {
+    "lemma": "Anaitis",
     "next": "Anakreon 1"
   },
   {
     "lemma": "Anakreon 1",
-    "previous": "Amythaon 2",
+    "previous": "Anaitis",
     "next": "Anaphe"
   },
   {
@@ -366,11 +369,12 @@
   },
   {
     "lemma": "Anatomie",
-    "previous": "Anartii"
+    "previous": "Anartii",
+    "next": "Andreas 11"
   },
   {
     "lemma": "Andreas 11",
-    "previous": "Anartii",
+    "previous": "Anatomie",
     "next": "Androkles 11"
   },
   {
@@ -994,7 +998,12 @@
     ]
   },
   {
+    "lemma": "Eudemos 1",
+    "next": "Euripides 4"
+  },
+  {
     "lemma": "Euripides 4",
+    "previous": "Eudemos 1",
     "next": "Eurylochos 11"
   },
   {

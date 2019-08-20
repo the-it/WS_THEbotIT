@@ -98,20 +98,22 @@
   },
   {
     "lemma": "Aliphera",
-    "previous": "Alfenus 4"
+    "previous": "Alfenus 4",
+    "next": "Alisca"
   },
   {
-    "lemma": "Ankyron polis",
-    "chapters": [
-      {
-        "start": 8,
-        "end": 8,
-        "author": "Helck"
-      }
-    ]
+    "lemma": "Alisca",
+    "previous": "Aliphera",
+    "next": "Alta ripa 1"
+  },
+  {
+    "lemma": "Alta ripa 1",
+    "previous": "Alisca",
+    "next": "Altinum 1"
   },
   {
     "lemma": "Altinum 1",
+    "previous": "Alta ripa 1",
     "next": "Anicius 47"
   },
   {
