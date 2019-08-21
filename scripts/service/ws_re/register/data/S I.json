@@ -17416,10 +17416,12 @@
   },
   {
     "lemma": "Cestius 18",
-    "previous": "Cestius 14"
+    "previous": "Cestius 14",
+    "next": "Chabora"
   },
   {
     "lemma": "Chabora",
+    "previous": "Cestius 18",
     "next": "Chairekla"
   },
   {
@@ -18108,10 +18110,12 @@
   },
   {
     "lemma": "Chrysippos 15",
-    "previous": "Chrysippos 14b"
+    "previous": "Chrysippos 14b",
+    "next": "Chrysippos 16"
   },
   {
     "lemma": "Chrysippos 16",
+    "previous": "Chrysippos 15",
     "next": "Chudukka"
   },
   {
@@ -19040,7 +19044,12 @@
   },
   {
     "lemma": "Cornelius 135",
-    "previous": "Cornelius 110a"
+    "previous": "Cornelius 110a",
+    "next": "Cornelius 136"
+  },
+  {
+    "lemma": "Cornelius 136",
+    "previous": "Cornelius 135"
   },
   {
     "lemma": "Cornelius 351",
@@ -19171,12 +19180,15 @@
   },
   {
     "lemma": "Culleolus a",
-    "previous": "Cubi",
+    "previous": "Cubi"
+  },
+  {
+    "lemma": "Culleolus",
     "next": "Cura 4"
   },
   {
     "lemma": "Cura 4",
-    "previous": "Culleolus a",
+    "previous": "Culleolus",
     "next": "Currodrepanus"
   },
   {

@@ -85,11 +85,12 @@
   {
     "lemma": "Aemilius 54b",
     "previous": "Aemilius 43",
+    "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
   },
   {
     "lemma": "Aemilius 79",
-    "previous": "Aemilius 43",
+    "previous": "Aemilius 54b",
     "next": "Afranius 10a"
   },
   {
@@ -1047,11 +1048,11 @@
   },
   {
     "lemma": "Cincius 9",
-    "previous": "Chelidonioi"
+    "previous": "Chelidonioi",
+    "next": "Claudius 71"
   },
   {
     "lemma": "Coeba(?)",
-    "previous": "Claudius 415",
     "next": "Coelius 7a",
     "chapters": [
       {
@@ -1125,11 +1126,16 @@
   },
   {
     "lemma": "Claudius 188",
-    "previous": "Claudius 187"
+    "previous": "Claudius 187",
+    "next": "Claudius 194",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 194",
+    "previous": "Claudius 188"
   },
   {
     "lemma": "Claudius 415",
-    "previous": "Claudius 357",
     "next": "Coeba(?)",
     "chapters": [
       {

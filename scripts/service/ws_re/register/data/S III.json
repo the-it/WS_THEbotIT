@@ -7084,10 +7084,12 @@
   {
     "lemma": "Axima 2",
     "previous": "Axia 1",
-    "next": "Axius 8a"
+    "next": "Axius 8b"
   },
   {
     "lemma": "Axius 8b",
+    "previous": "Axima 2",
+    "next": "Azizos 1",
     "chapters": [
       {
         "start": 192,
@@ -7381,7 +7383,6 @@
   {
     "lemma": "Balbinus 5",
     "previous": "Bakchylides 2",
-    "next": "Balbus 5",
     "chapters": [
       {
         "start": 195,
@@ -7391,8 +7392,12 @@
     ]
   },
   {
+    "lemma": "Balbinus 4",
+    "next": "Balbus 5"
+  },
+  {
     "lemma": "Balbus 5",
-    "previous": "Balbinus 5",
+    "previous": "Balbinus 4",
     "next": "Banassac",
     "chapters": [
       {
@@ -9630,6 +9635,7 @@
   {
     "lemma": "Caninianae figlinae",
     "previous": "Camulus",
+    "next": "Caninius a",
     "chapters": [
       {
         "start": 231,
@@ -9640,6 +9646,7 @@
   },
   {
     "lemma": "Caninius a",
+    "previous": "Caninianae figlinae",
     "next": "Caninius 4",
     "chapters": [
       {
@@ -9687,6 +9694,7 @@
   {
     "lemma": "Cantaber",
     "previous": "Canrucatus",
+    "next": "ad Cantunas novas",
     "chapters": [
       {
         "start": 233,
@@ -10268,6 +10276,7 @@
   {
     "lemma": "Cepariae figlinae",
     "previous": "Centurion(ica) praedia",
+    "next": "Ceraria (Caeraria, Geraria) figlina",
     "chapters": [
       {
         "start": 241,
@@ -10278,6 +10287,7 @@
   },
   {
     "lemma": "Ceraria (Caeraria, Geraria) figlina",
+    "previous": "Cepariae figlinae",
     "next": "Cercina",
     "chapters": [
       {
@@ -10965,6 +10975,7 @@
   {
     "lemma": "Clodius 47",
     "previous": "Clodius 5a",
+    "next": "Clodius 55a",
     "sort_key": "Clodius 05"
   },
   {
@@ -11005,11 +11016,15 @@
   },
   {
     "lemma": "Clemens 11",
-    "previous": "Claudius 381",
-    "next": "Cleppius"
+    "previous": "Claudius 381"
+  },
+  {
+    "lemma": "Clodius 47",
+    "next": "Clodius 55a"
   },
   {
     "lemma": "Clodius 55a",
+    "previous": "Clodius 47",
     "next": "Clonius a",
     "chapters": [
       {
@@ -11352,10 +11367,27 @@
   },
   {
     "lemma": "Cornelius 141",
-    "previous": "Cornelius 105"
+    "previous": "Cornelius 105",
+    "next": "Cornelius 177"
+  },
+  {
+    "lemma": "Cornelius 177",
+    "previous": "Cornelius 141",
+    "next": "Cornelius 186"
+  },
+  {
+    "lemma": "Cornelius 186",
+    "previous": "Cornelius 177",
+    "next": "Cornelius 193"
+  },
+  {
+    "lemma": "Cornelius 193",
+    "previous": "Cornelius 186",
+    "next": "Cornelius 202"
   },
   {
     "lemma": "Cornelius 202",
+    "previous": "Cornelius 193",
     "next": "Cornelius 202a"
   },
   {
@@ -11387,7 +11419,12 @@
   },
   {
     "lemma": "Cornelius 219",
-    "previous": "Cornelius 209"
+    "previous": "Cornelius 209",
+    "next": "Cornelius 317ff."
+  },
+  {
+    "lemma": "Cornelius 317ff.",
+    "previous": "Cornelius 219"
   },
   {
     "lemma": "Cornelius 208",
@@ -16770,10 +16807,12 @@
   },
   {
     "lemma": "Gemenus",
-    "previous": "Gemellus 10"
+    "previous": "Gemellus 10",
+    "next": "Geminius 3"
   },
   {
     "lemma": "Geminius 3",
+    "previous": "Gemenus",
     "next": "Geminius 20a"
   },
   {

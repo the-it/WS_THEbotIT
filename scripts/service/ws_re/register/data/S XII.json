@@ -1043,11 +1043,14 @@
   },
   {
     "lemma": "Avidius 6",
-    "previous": "Aufidius 41"
+    "previous": "Aufidius 41",
+    "next": "Avidius 7"
   },
   {
     "lemma": "Avidius 7",
-    "next": "Aulis 1"
+    "previous": "Avidius 6",
+    "next": "Aulis 1",
+    "sort_key": "Avidius 07"
   },
   {
     "lemma": "Aulis 1",
@@ -3703,10 +3706,12 @@
   {
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
-    "next": "Arborius 5"
+    "next": "Anaximenes 2"
   },
   {
-    "lemma": "Anaximenes 2"
+    "lemma": "Anaximenes 2",
+    "previous": "Anaximandros 1",
+    "next": "Andania 1"
   },
   {
     "lemma": "Anaximenes 1",
@@ -3851,10 +3856,11 @@
   {
     "lemma": "Carnuntum",
     "previous": "Carniola",
-    "next": "Ephesos"
+    "next": "Chilperich"
   },
   {
     "lemma": "Chilperich",
+    "previous": "Carnuntum",
     "next": "Ephesos",
     "chapters": [
       {
