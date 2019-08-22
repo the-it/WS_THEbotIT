@@ -11789,7 +11789,12 @@
   },
   {
     "lemma": "Asinius 27",
-    "previous": "Asinius 19"
+    "previous": "Asinius 19",
+    "next": "Asinius 28"
+  },
+  {
+    "lemma": "Asinius 28",
+    "previous": "Asinius 27"
   },
   {
     "lemma": "Askalos",
@@ -15645,16 +15650,16 @@
   {
     "lemma": "Boriennus",
     "previous": "Boreios",
-    "next": "Borillus"
+    "next": "Borillus 1"
   },
   {
-    "lemma": "Borillus",
+    "lemma": "Borillus 1",
     "previous": "Boriennus",
     "next": "Borion"
   },
   {
     "lemma": "Borion",
-    "previous": "Borillus",
+    "previous": "Borillus 1",
     "next": "Borissos",
     "chapters": [
       {
@@ -16479,10 +16484,18 @@
   {
     "lemma": "Calpurnius 21",
     "previous": "Calpurnius 20",
+    "next": "Calpurnius 25",
     "sort_key": "Calpurnius 021"
   },
   {
+    "lemma": "Calpurnius 25",
+    "previous": "Calpurnius 21",
+    "next": "Calpurnius 28",
+    "sort_key": "Calpurnius 025"
+  },
+  {
     "lemma": "Calpurnius 28",
+    "previous": "Calpurnius 25",
     "next": "Calpurnius 29",
     "sort_key": "Calpurnius 028"
   },
@@ -17012,10 +17025,12 @@
   },
   {
     "lemma": "Cassius 25",
-    "previous": "Cassius 24a"
+    "previous": "Cassius 24a",
+    "next": "Cassius 27"
   },
   {
     "lemma": "Cassius 27",
+    "previous": "Cassius 25",
     "next": "Cassius 28"
   },
   {
@@ -17217,6 +17232,7 @@
   },
   {
     "lemma": "Catabana",
+    "previous": "Casus a",
     "next": "Catellius 1a",
     "chapters": [
       {
@@ -17268,6 +17284,7 @@
   {
     "lemma": "Cato 2",
     "previous": "Catius 10a",
+    "next": "Caularis",
     "chapters": [
       {
         "start": 279,
@@ -18403,10 +18420,17 @@
   },
   {
     "lemma": "Claudius 179",
-    "previous": "Claudius 164"
+    "previous": "Claudius 164",
+    "next": "Claudius 213"
+  },
+  {
+    "lemma": "Claudius 213",
+    "previous": "Claudius 179",
+    "next": "Claudius 218"
   },
   {
     "lemma": "Claudius 218",
+    "previous": "Claudius 213",
     "next": "Claudius 243"
   },
   {
@@ -18464,10 +18488,27 @@
   },
   {
     "lemma": "Claudius 310",
-    "previous": "Claudius 299"
+    "previous": "Claudius 299",
+    "next": "Claudius 317"
+  },
+  {
+    "lemma": "Claudius 317",
+    "previous": "Claudius 310",
+    "next": "Claudius 324"
+  },
+  {
+    "lemma": "Claudius 324",
+    "previous": "Claudius 317",
+    "next": "Claudius 347"
+  },
+  {
+    "lemma": "Claudius 347",
+    "previous": "Claudius 324",
+    "next": "Claudius 348"
   },
   {
     "lemma": "Claudius 348",
+    "previous": "Claudius 347",
     "next": "Claudius 350"
   },
   {
@@ -19049,7 +19090,12 @@
   },
   {
     "lemma": "Cornelius 136",
-    "previous": "Cornelius 135"
+    "previous": "Cornelius 135",
+    "next": "Cornelius 141"
+  },
+  {
+    "lemma": "Cornelius 141",
+    "previous": "Cornelius 136"
   },
   {
     "lemma": "Cornelius 351",
