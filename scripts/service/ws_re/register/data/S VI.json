@@ -707,10 +707,12 @@
   },
   {
     "lemma": "Calpurnius 101",
-    "previous": "Calpurnius 99"
+    "previous": "Calpurnius 99",
+    "next": "Calvisius 7"
   },
   {
     "lemma": "Calvisius 7",
+    "previous": "Calpurnius 101",
     "next": "Calvisius 9",
     "sort_key": "Calvisius 07"
   },
@@ -1097,14 +1099,28 @@
     ]
   },
   {
+    "lemma": "Claudius 186",
+    "next": "Claudius 187"
+  },
+  {
+    "lemma": "Claudius 187",
+    "previous": "Claudius 186",
+    "next": "Claudius 188",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 188",
+    "previous": "Claudius 187"
+  },
+  {
     "lemma": "Claudius 194",
-    "previous": "Claudius 187",
     "next": "Claudius 357",
     "sort_key": "Claudius"
   },
   {
     "lemma": "Claudius 357",
-    "previous": "Claudius 194"
+    "previous": "Claudius 194",
+    "sort_key": "Claudius"
   },
   {
     "lemma": "Claudius 71",

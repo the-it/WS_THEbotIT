@@ -9132,6 +9132,7 @@
   {
     "lemma": "Butzbach",
     "previous": "Buttos",
+    "next": "Byriadas",
     "wp_link": "w:de:Butzbach",
     "chapters": [
       {
@@ -9303,10 +9304,17 @@
   {
     "lemma": "Caelius 6",
     "previous": "Caelianae figlinae",
+    "next": "Caelius 17",
     "sort_key": "Caelius 06"
   },
   {
+    "lemma": "Caelius 17",
+    "previous": "Caelius 6",
+    "next": "Caelius 35"
+  },
+  {
     "lemma": "Caelius 35",
+    "previous": "Caelius 17",
     "next": "Caepioniana praedia"
   },
   {
@@ -9625,6 +9633,7 @@
   },
   {
     "lemma": "Camulodunum",
+    "previous": "Camulatus 2",
     "next": "Camulus"
   },
   {
@@ -9705,6 +9714,7 @@
   },
   {
     "lemma": "ad Cantunas novas",
+    "previous": "Cantaber",
     "next": "Cantus",
     "sort_key": "Cantunas novas, ad",
     "chapters": [
@@ -9730,7 +9740,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium vetus",
+    "next": "Capitolium 3",
     "chapters": [
       {
         "start": 233,
@@ -9740,13 +9750,15 @@
     ]
   },
   {
-    "lemma": "Capitolium vetus",
-    "previous": "Capienacus oder Capionacus",
+    "lemma": "Capitolium vetus"
+  },
+  {
+    "lemma": "Capitolium 3",
     "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium vetus",
+    "previous": "Capitolium 3",
     "next": "Caprasius",
     "chapters": [
       {
@@ -9840,6 +9852,7 @@
   },
   {
     "lemma": "Carisius a",
+    "previous": "Caratacus 2",
     "next": "Carisso",
     "chapters": [
       {
@@ -9927,6 +9940,7 @@
   {
     "lemma": "Casius 2",
     "previous": "Casillus",
+    "next": "Cassiolus",
     "chapters": [
       {
         "start": 237,
@@ -9937,6 +9951,7 @@
   },
   {
     "lemma": "Cassiolus",
+    "previous": "Casius 2",
     "next": "Cassius 20",
     "chapters": [
       {
@@ -9958,7 +9973,8 @@
   },
   {
     "lemma": "Cassius 70",
-    "previous": "Cassius 65"
+    "previous": "Cassius 65",
+    "next": "Cassius 85"
   },
   {
     "lemma": "Cassius 85",
@@ -10023,6 +10039,7 @@
   },
   {
     "lemma": "Castus 5",
+    "previous": "Castricius 6",
     "next": "Castus 6",
     "chapters": [
       {
@@ -10035,6 +10052,7 @@
   {
     "lemma": "Castus 6",
     "previous": "Castus 5",
+    "next": "Cataracta",
     "chapters": [
       {
         "start": 237,
@@ -10042,6 +10060,10 @@
         "author": "Hähnle"
       }
     ]
+  },
+  {
+    "lemma": "Cataracta",
+    "previous": "Castus 6"
   },
   {
     "lemma": "Catius 9",
@@ -10078,6 +10100,7 @@
   },
   {
     "lemma": "Catullus 6b",
+    "previous": "Catullus 6a",
     "next": "Caturniacus 1"
   },
   {
@@ -10922,7 +10945,8 @@
   },
   {
     "lemma": "Claudius 122",
-    "previous": "Claudius 98"
+    "previous": "Claudius 98",
+    "next": "Claudius 225"
   },
   {
     "lemma": "Clemens 10",
@@ -10975,11 +10999,11 @@
   {
     "lemma": "Clodius 47",
     "previous": "Clodius 5a",
-    "next": "Clodius 55a",
     "sort_key": "Clodius 05"
   },
   {
     "lemma": "Claudius 225",
+    "previous": "Claudius 122",
     "next": "Claudius 251"
   },
   {
@@ -11424,7 +11448,12 @@
   },
   {
     "lemma": "Cornelius 317ff.",
-    "previous": "Cornelius 219"
+    "previous": "Cornelius 219",
+    "next": "Cornelius 335"
+  },
+  {
+    "lemma": "Cornelius 335",
+    "previous": "Cornelius 317ff."
   },
   {
     "lemma": "Cornelius 208",
@@ -12625,7 +12654,12 @@
     ]
   },
   {
+    "lemma": "Deiotarus 2",
+    "next": "Deiotarus 4"
+  },
+  {
     "lemma": "Deiotarus 4",
+    "previous": "Deiotarus 2",
     "next": "Deiotaros 5"
   },
   {
@@ -15386,8 +15420,18 @@
     "lemma": "Castus 2b"
   },
   {
+    "lemma": "Catius 8",
+    "next": "Catius 8a"
+  },
+  {
     "lemma": "Catius 8a",
+    "previous": "Catius 8",
+    "next": "Catullus 6a",
     "sort_key": "Catius 08a"
+  },
+  {
+    "lemma": "Catullus 6a",
+    "previous": "Catius 8a"
   },
   {
     "lemma": "Fannius 1",

@@ -32,7 +32,8 @@
   },
   {
     "lemma": "Cassius 74",
-    "previous": "Cassius 45a"
+    "previous": "Cassius 45a",
+    "next": "Castra, Castrum 1a"
   },
   {
     "lemma": "Cornelius 295a",
@@ -597,11 +598,11 @@
   },
   {
     "lemma": "Anaxagoras 4",
-    "previous": "Amelas",
-    "next": "Anaximandros 1"
+    "previous": "Amelas"
   },
   {
     "lemma": "Andautonia",
+    "previous": "Andania 1",
     "next": "Andeda"
   },
   {
@@ -787,6 +788,7 @@
   {
     "lemma": "Antonius 75",
     "previous": "Antonius 65",
+    "next": "Antonius 76",
     "sort_key": "Antonius 075"
   },
   {
@@ -836,7 +838,6 @@
   {
     "lemma": "Arcani",
     "previous": "Aquilius 30",
-    "next": "Argura 1",
     "chapters": [
       {
         "start": 89,
@@ -847,7 +848,9 @@
   },
   {
     "lemma": "Antonius 76",
-    "next": "Antonius 80"
+    "previous": "Antonius 75",
+    "next": "Antonius 80",
+    "sort_key": "Antonius 076"
   },
   {
     "lemma": "Antonius 80",
@@ -875,11 +878,11 @@
   {
     "lemma": "Aponius 8",
     "previous": "Apicatus",
+    "next": "Appuleius 13",
     "sort_key": "Aponius 08"
   },
   {
     "lemma": "Argura 1",
-    "previous": "Arcani",
     "next": "Ἀριαῖοι"
   },
   {
@@ -1566,7 +1569,12 @@
   },
   {
     "lemma": "Charax 19",
-    "previous": "Chalke 2"
+    "previous": "Chalke 2",
+    "next": "Chrysippos 14"
+  },
+  {
+    "lemma": "Chrysippos 14",
+    "previous": "Charax 19"
   },
   {
     "lemma": "Cilnius 3",
@@ -3856,11 +3864,10 @@
   {
     "lemma": "Carnuntum",
     "previous": "Carniola",
-    "next": "Chilperich"
+    "next": "Ephesos"
   },
   {
     "lemma": "Chilperich",
-    "previous": "Carnuntum",
     "next": "Ephesos",
     "chapters": [
       {
