@@ -545,7 +545,6 @@
   {
     "lemma": "Aemilius 63c",
     "previous": "Aemilius 63b",
-    "next": "Aenus 1",
     "sort_key": "Aemilius 063c",
     "chapters": [
       {
@@ -554,10 +553,6 @@
         "author": "Hähnle"
       }
     ]
-  },
-  {
-    "lemma": "Aenus 1",
-    "previous": "Aemilius 63c"
   },
   {
     "lemma": "Aenus",
@@ -967,7 +962,6 @@
   },
   {
     "lemma": "Agrianome 2",
-    "previous": "Agreus, Agreutes 1",
     "next": "Agroitas 2",
     "chapters": [
       {
@@ -2388,19 +2382,13 @@
   },
   {
     "lemma": "Andecavi",
-    "previous": "Andarta dea",
-    "next": "Andemantunnum"
-  },
-  {
-    "lemma": "Andemantunnum",
-    "previous": "Andecavi"
+    "previous": "Andarta dea"
   },
   {
     "lemma": "Andematunnum"
   },
   {
     "lemma": "Anderitum",
-    "previous": "Andemantunnum",
     "next": "Andernach"
   },
   {
@@ -4818,12 +4806,7 @@
     "sort_key": "Archiphylakites a"
   },
   {
-    "lemma": "Ἀρχιφυλακίτης",
-    "next": "Ἀρχιφύλαξ"
-  },
-  {
     "lemma": "Ἀρχιφύλαξ",
-    "previous": "Ἀρχιφυλακίτης",
     "next": "Archytas 6",
     "sort_key": "Archiphylax",
     "redirect": "Ἀρχιφυλακίτης a"
@@ -5294,12 +5277,8 @@
     ]
   },
   {
-    "lemma": "Arkison",
-    "next": "Arles"
-  },
-  {
     "lemma": "Arles",
-    "previous": "Arkison",
+    "previous": "Arkison 2",
     "next": "Arlon",
     "wp_link": "w:de:Arles",
     "chapters": [
@@ -6759,7 +6738,6 @@
   {
     "lemma": "Avignon",
     "previous": "Augustum 2",
-    "next": "Avillius 1",
     "wp_link": "w:de:Avignon",
     "chapters": [
       {
@@ -6768,10 +6746,6 @@
         "author": "Keune"
       }
     ]
-  },
-  {
-    "lemma": "Avillius 1",
-    "previous": "Avignon"
   },
   {
     "lemma": "Avillius 2a",
@@ -6792,12 +6766,7 @@
     ]
   },
   {
-    "lemma": "Avitianae",
-    "next": "Avitus 8"
-  },
-  {
     "lemma": "Avitus 8",
-    "previous": "Avitianae",
     "next": "Avitus 9",
     "sort_key": "Avitus 08",
     "chapters": [
@@ -7104,12 +7073,7 @@
     ]
   },
   {
-    "lemma": "Axius 8a",
-    "next": "Azizos 1"
-  },
-  {
     "lemma": "Azizos 1",
-    "previous": "Axius 8a",
     "next": "Babullius"
   },
   {
@@ -7382,28 +7346,16 @@
   },
   {
     "lemma": "Bakchylides 2",
-    "previous": "Bakchon 10",
-    "next": "Balbinus 5"
+    "previous": "Bakchon 10"
   },
+
   {
     "lemma": "Balbinus 5",
-    "previous": "Bakchylides 2",
-    "next": "Balbus 5",
-    "chapters": [
-      {
-        "start": 195,
-        "end": 195,
-        "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Balbinus 4",
     "next": "Balbus 5"
   },
   {
     "lemma": "Balbus 5",
-    "previous": "Balbinus 4",
+    "previous": "Balbinus 5",
     "next": "Banassac",
     "chapters": [
       {
@@ -8606,8 +8558,7 @@
   },
   {
     "lemma": "Bosporos 1",
-    "previous": "Borillus 2",
-    "next": "Botrys 5"
+    "previous": "Borillus 2"
   },
   {
     "lemma": "Byzantion 1",
@@ -9759,9 +9710,6 @@
     ]
   },
   {
-    "lemma": "Capitolium vetus"
-  },
-  {
     "lemma": "Capitolium 3",
     "next": "Capitolinus 8"
   },
@@ -10039,17 +9987,11 @@
   {
     "lemma": "Castricius 6",
     "previous": "Castricianae figlinae",
-    "next": "Castus 2a",
     "sort_key": "Castricius 06"
-  },
-  {
-    "lemma": "Castus 2a",
-    "previous": "Castricius 6"
   },
   {
     "lemma": "Castus 5",
     "previous": "Castricius 6",
-    "next": "Castus 6",
     "chapters": [
       {
         "start": 237,
@@ -10059,57 +10001,10 @@
     ]
   },
   {
-    "lemma": "Castus 6",
-    "previous": "Castus 5",
-    "next": "Cataracta",
-    "chapters": [
-      {
-        "start": 237,
-        "end": 237,
-        "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Cataracta",
-    "previous": "Castus 6"
-  },
-  {
-    "lemma": "Catius 9",
-    "next": "Catullus 1",
-    "chapters": [
-      {
-        "start": 238,
-        "end": 238
-      }
-    ]
-  },
-  {
-    "lemma": "Catullus 1",
-    "previous": "Catius 9",
-    "next": "Catullus 2",
-    "chapters": [
-      {
-        "start": 238,
-        "end": 238,
-        "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Catullus 2",
-    "previous": "Catullus 1",
-    "chapters": [
-      {
-        "start": 238,
-        "end": 239,
-        "author": "Hähnle"
-      }
-    ]
+    "lemma": "Cataracta"
   },
   {
     "lemma": "Catullus 6b",
-    "previous": "Catullus 6a",
     "next": "Caturniacus 1"
   },
   {
@@ -10958,7 +10853,44 @@
     "next": "Claudius 225"
   },
   {
-    "lemma": "Clemens 10",
+    "lemma": "Claudius 225",
+    "previous": "Claudius 122",
+    "next": "Claudius 251"
+  },
+  {
+    "lemma": "Claudius 251",
+    "previous": "Claudius 225",
+    "next": "Claudius 252"
+  },
+  {
+    "lemma": "Claudius 252",
+    "previous": "Claudius 251",
+    "next": "Claudius 295"
+  },
+  {
+    "lemma": "Claudius 295",
+    "previous": "Claudius 252",
+    "next": "Claudius 298"
+  },
+  {
+    "lemma": "Claudius 298",
+    "previous": "Claudius 295",
+    "next": "Claudius 381"
+  },
+  {
+    "lemma": "Claudius 381",
+    "previous": "Claudius 298",
+    "next": "Clemens 11",
+    "chapters": [
+      {
+        "start": 254,
+        "end": 254,
+        "author": "Stähelin"
+      }
+    ]
+  },
+  {
+    "lemma": "Clemens 11",
     "chapters": [
       {
         "start": 253,
@@ -11004,53 +10936,6 @@
         "author": "Münzer"
       }
     ]
-  },
-  {
-    "lemma": "Clodius 47",
-    "previous": "Clodius 5a",
-    "sort_key": "Clodius 05"
-  },
-  {
-    "lemma": "Claudius 225",
-    "previous": "Claudius 122",
-    "next": "Claudius 251"
-  },
-  {
-    "lemma": "Claudius 251",
-    "previous": "Claudius 225",
-    "next": "Claudius 252"
-  },
-  {
-    "lemma": "Claudius 252",
-    "previous": "Claudius 251",
-    "next": "Claudius 295"
-  },
-  {
-    "lemma": "Claudius 295",
-    "previous": "Claudius 252",
-    "next": "Claudius 298"
-  },
-  {
-    "lemma": "Claudius 298",
-    "previous": "Claudius 295",
-    "next": "Claudius 381"
-  },
-  {
-    "lemma": "Claudius 381",
-    "previous": "Claudius 298",
-    "next": "Clemens 11",
-    "chapters": [
-      {
-        "start": 254,
-        "end": 254,
-        "author": "Stähelin"
-      }
-    ]
-  },
-  {
-    "lemma": "Clemens 11",
-    "previous": "Claudius 381",
-    "next": "Cleppius"
   },
   {
     "lemma": "Clodius 47",
@@ -11225,7 +11110,6 @@
   },
   {
     "lemma": "Cominius 10",
-    "previous": "Colubrarius mons",
     "next": "Cominius 2a"
   },
   {
@@ -11323,7 +11207,6 @@
   },
   {
     "lemma": "Coocus",
-    "previous": "Contrebia 1",
     "next": "Corcoras",
     "chapters": [
       {
@@ -11567,16 +11450,6 @@
     ]
   },
   {
-    "lemma": "Cossutius 2a",
-    "chapters": [
-      {
-        "start": 262,
-        "end": 262,
-        "author": "Lippold, Georg"
-      }
-    ]
-  },
-  {
     "lemma": "Cossutius 3a",
     "previous": "Cosius 3",
     "next": "Costillus",
@@ -11661,12 +11534,7 @@
     ]
   },
   {
-    "lemma": "Cotus",
-    "next": "Cr...."
-  },
-  {
     "lemma": "Cr....",
-    "previous": "Cotus",
     "next": "Cracuna"
   },
   {
@@ -11776,15 +11644,6 @@
     ]
   },
   {
-    "lemma": "Cr(---) of(ficina)",
-    "chapters": [
-      {
-        "start": 263,
-        "end": 263
-      }
-    ]
-  },
-  {
     "lemma": "Cresconius 4",
     "previous": "Crescens 8b",
     "next": "Crestio",
@@ -11882,16 +11741,6 @@
     ]
   },
   {
-    "lemma": "Critonius",
-    "chapters": [
-      {
-        "start": 265,
-        "end": 265,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
     "lemma": "Critonius a",
     "previous": "Cristinus",
     "next": "Crummus",
@@ -11921,16 +11770,6 @@
     "next": "Cunissa"
   },
   {
-    "lemma": "Crutisiones coloni",
-    "chapters": [
-      {
-        "start": 265,
-        "end": 265,
-        "author": "Keune"
-      }
-    ]
-  },
-  {
     "lemma": "Cunissa",
     "previous": "Crutisiones",
     "next": "Cupa, Cuparius",
@@ -11939,15 +11778,6 @@
         "start": 265,
         "end": 265,
         "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Cupa; Cuparius",
-    "chapters": [
-      {
-        "start": 265,
-        "end": 265
       }
     ]
   },
@@ -12318,16 +12148,6 @@
     ]
   },
   {
-    "lemma": "Damokleidas 3",
-    "chapters": [
-      {
-        "start": 324,
-        "end": 324,
-        "author": "Oldfather"
-      }
-    ]
-  },
-  {
     "lemma": "Damokles 6b",
     "previous": "Damokleidas 2a",
     "next": "Damon 1a",
@@ -12570,16 +12390,6 @@
     ]
   },
   {
-    "lemma": "Decmanus",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Hähnle"
-      }
-    ]
-  },
-  {
     "lemma": "Decmanus 1",
     "previous": "Decius 7",
     "next": "Decminus"
@@ -12624,9 +12434,6 @@
     "lemma": "Dedicatio",
     "previous": "Decuminus",
     "next": "Deiotaros 1"
-  },
-  {
-    "lemma": "Deiotarus 1"
   },
   {
     "lemma": "Deiotaros 1",
@@ -12731,12 +12538,7 @@
     ]
   },
   {
-    "lemma": "Demarchos 5",
-    "next": "Demeter"
-  },
-  {
     "lemma": "Demeter",
-    "previous": "Demarchos 5",
     "next": "Demetrianus 1a"
   },
   {
@@ -12834,6 +12636,28 @@
         "start": 333,
         "end": 334,
         "author": "Ziegler"
+      }
+    ]
+  },
+  {
+    "lemma": "Demodes",
+    "next": "Demodokos 8",
+    "chapters": [
+      {
+        "start": 334,
+        "end": 334,
+        "author": "Hähnle"
+      }
+    ]
+  },
+  {
+    "lemma": "Demodokos 8",
+    "previous": "Demodes",
+    "chapters": [
+      {
+        "start": 334,
+        "end": 334,
+        "author": "Kahrstedt"
       }
     ]
   },
@@ -13016,28 +12840,6 @@
         "start": 333,
         "end": 334,
         "author": "Kern"
-      }
-    ]
-  },
-  {
-    "lemma": "Demodes",
-    "next": "Demodokos 8",
-    "chapters": [
-      {
-        "start": 334,
-        "end": 334,
-        "author": "Hähnle"
-      }
-    ]
-  },
-  {
-    "lemma": "Demodokos 8",
-    "previous": "Demodes",
-    "chapters": [
-      {
-        "start": 334,
-        "end": 334,
-        "author": "Kahrstedt"
       }
     ]
   },
@@ -13295,16 +13097,6 @@
         "start": 336,
         "end": 336,
         "author": "Kazarow"
-      }
-    ]
-  },
-  {
-    "lemma": "Diodoros 38",
-    "chapters": [
-      {
-        "start": 336,
-        "end": 337,
-        "author": "Knaack"
       }
     ]
   },
@@ -14269,7 +14061,16 @@
   {
     "lemma": "Elius oder Helius",
     "previous": "Elis 4a",
-    "next": "Elpinike 1a",
+    "chapters": [
+      {
+        "start": 429,
+        "end": 429,
+        "author": "Hähnle"
+      }
+    ]
+  },
+  {
+    "lemma": "Eluissa",
     "chapters": [
       {
         "start": 429,
@@ -14280,24 +14081,11 @@
   },
   {
     "lemma": "Elpinike 1a",
-    "previous": "Elius oder Helius",
-    "next": "Eluissa",
     "chapters": [
       {
         "start": 429,
         "end": 429,
         "author": "Oldfather"
-      }
-    ]
-  },
-  {
-    "lemma": "Eluissa",
-    "previous": "Elpinike 1a",
-    "chapters": [
-      {
-        "start": 429,
-        "end": 429,
-        "author": "Hähnle"
       }
     ]
   },
@@ -19764,18 +19552,7 @@
     "next": "Jonquières"
   },
   {
-    "lemma": "Ad Ioglandum",
-    "next": "Jonquières",
-    "chapters": [
-      {
-        "start": 1241,
-        "end": 1241
-      }
-    ]
-  },
-  {
     "lemma": "Jonquières",
-    "previous": "Ad Ioglandum",
     "next": "Jouey",
     "chapters": [
       {

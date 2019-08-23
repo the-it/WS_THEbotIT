@@ -2703,7 +2703,7 @@
   {
     "lemma": "Aigeidas",
     "previous": "Aiga 2",
-    "next": "Aigeira 1",
+    "next": "Aigeira",
     "chapters": [
       {
         "start": 34,
@@ -2711,10 +2711,6 @@
         "author": "Kirchner"
       }
     ]
-  },
-  {
-    "lemma": "Aigeira 1",
-    "previous": "Aigeidas"
   },
   {
     "lemma": "Aigeira",
@@ -2892,12 +2888,7 @@
   },
   {
     "lemma": "Aigle 5",
-    "previous": "Aigle 4",
-    "next": "Aigon"
-  },
-  {
-    "lemma": "Aigon",
-    "previous": "Aigle 5"
+    "previous": "Aigle 4"
   },
   {
     "lemma": "Aigon 2",
@@ -9413,12 +9404,7 @@
     "next": "Archon 3"
   },
   {
-    "lemma": "Architimos 2",
-    "next": "Archon 3"
-  },
-  {
     "lemma": "Archon 3",
-    "previous": "Architimos 2",
     "next": "Archon 4"
   },
   {
@@ -10741,7 +10727,7 @@
     "previous": "Aristophon 6"
   },
   {
-    "lemma": "Aristoteles 8.9",
+    "lemma": "Aristoteles 8",
     "chapters": [
       {
         "start": 136,
@@ -10752,22 +10738,10 @@
   },
   {
     "lemma": "Aristoteles 9",
-    "previous": "Aristos 10",
-    "next": "Aristoteles 12a",
     "sort_key": "Aristoteles 09"
   },
   {
-    "lemma": "Aristos 10"
-  },
-  {
-    "lemma": "Aristoteles 8",
-    "previous": "Aristos 5",
-    "next": "Aristoteles 12a",
-    "sort_key": "Aristoteles 08"
-  },
-  {
     "lemma": "Aristoteles 12a",
-    "previous": "Aristoteles 8",
     "next": "Aristoteles 13",
     "chapters": [
       {
@@ -11546,19 +11520,7 @@
   {
     "lemma": "Arvernicus",
     "previous": "Arverni",
-    "next": "Arvius",
     "sort_key": "Arvernicus 1",
-    "chapters": [
-      {
-        "start": 146,
-        "end": 146,
-        "author": "Robert"
-      }
-    ]
-  },
-  {
-    "lemma": "Arvius",
-    "previous": "Arvernicus",
     "chapters": [
       {
         "start": 146,
@@ -11572,7 +11534,6 @@
   },
   {
     "lemma": "Arx 3",
-    "previous": "Arvius",
     "next": "Arxama"
   },
   {
@@ -11630,28 +11591,6 @@
     "lemma": "Arzygius",
     "previous": "Arzanene",
     "next": "As"
-  },
-  {
-    "lemma": "Arzygius a",
-    "next": "Arzygius 1",
-    "chapters": [
-      {
-        "start": 148,
-        "end": 148,
-        "author": "Wissowa"
-      }
-    ]
-  },
-  {
-    "lemma": "Arzygius 1",
-    "previous": "Arzygius a",
-    "chapters": [
-      {
-        "start": 148,
-        "end": 148,
-        "author": "Wissowa"
-      }
-    ]
   },
   {
     "lemma": "As",
@@ -13055,7 +12994,6 @@
   },
   {
     "lemma": "Avidius 4",
-    "previous": "Avidius 1",
     "next": "Avidius 8",
     "sort_key": "Avidius 04"
   },
@@ -13860,7 +13798,6 @@
   },
   {
     "lemma": "Azochis",
-    "previous": "Azochis",
     "next": "Baal-Harrân"
   },
   {
@@ -17316,12 +17253,7 @@
     ]
   },
   {
-    "lemma": "Cato",
-    "next": "Caularis"
-  },
-  {
     "lemma": "Caularis",
-    "previous": "Cato",
     "next": "Cazaci",
     "chapters": [
       {
@@ -17622,7 +17554,6 @@
   {
     "lemma": "Charax 16a",
     "previous": "Charax",
-    "next": "Charcha 1",
     "chapters": [
       {
         "start": 283,
@@ -17630,10 +17561,6 @@
         "author": "Streck"
       }
     ]
-  },
-  {
-    "lemma": "Charcha 1",
-    "previous": "Charax 16a"
   },
   {
     "lemma": "Charcha",
@@ -19248,19 +19175,13 @@
   },
   {
     "lemma": "Cubi",
-    "previous": "Cuavus",
-    "next": "Culleolus"
+    "previous": "Cuavus"
   },
   {
     "lemma": "Culleolus a"
   },
   {
-    "lemma": "Culleolus",
-    "next": "Cura 4"
-  },
-  {
     "lemma": "Cura 4",
-    "previous": "Culleolus",
     "next": "Currodrepanus"
   },
   {
