@@ -957,7 +957,6 @@
   {
     "lemma": "Agriadas",
     "previous": "Agreus, Agreutes 1",
-    "next": "Agrianome 2",
     "chapters": [
       {
         "start": 61,
@@ -968,7 +967,7 @@
   },
   {
     "lemma": "Agrianome 2",
-    "previous": "Agriadas",
+    "previous": "Agreus, Agreutes 1",
     "next": "Agroitas 2",
     "chapters": [
       {
@@ -4905,6 +4904,7 @@
   {
     "lemma": "Arentsburg",
     "previous": "Arenacum",
+    "next": "Areopolis 2",
     "chapters": [
       {
         "start": 154,
@@ -5284,6 +5284,7 @@
   {
     "lemma": "Arkison 2",
     "previous": "Arkadia 4a",
+    "next": "Arles",
     "chapters": [
       {
         "start": 160,
@@ -5926,6 +5927,7 @@
   {
     "lemma": "Athanadas 6",
     "previous": "Athanadas 5",
+    "next": "Athanadas 7",
     "chapters": [
       {
         "start": 175,
@@ -5936,6 +5938,7 @@
   },
   {
     "lemma": "Athanadas 7",
+    "previous": "Athanadas 6",
     "next": "Athanaios",
     "chapters": [
       {
@@ -6773,11 +6776,13 @@
   {
     "lemma": "Avillius 2a",
     "previous": "Avignon",
-    "next": "Avitianae",
+    "next": "Avitianae figlinae",
     "sort_key": "Auillius 2a"
   },
   {
     "lemma": "Avitianae figlinae",
+    "previous": "Avillius 2a",
+    "next": "Avitus 8",
     "chapters": [
       {
         "start": 187,
@@ -7383,6 +7388,7 @@
   {
     "lemma": "Balbinus 5",
     "previous": "Bakchylides 2",
+    "next": "Balbus 5",
     "chapters": [
       {
         "start": 195,
@@ -9506,10 +9512,13 @@
   },
   {
     "lemma": "Calpurnius 93",
-    "previous": "Calpurnius 90"
+    "previous": "Calpurnius 90",
+    "next": "Calpurnius 96",
+    "sort_key": "Calpurnius 093"
   },
   {
     "lemma": "Calpurnius 96",
+    "previous": "Calpurnius 93",
     "next": "Calpurnius 98",
     "sort_key": "Calpurnius 096"
   },
@@ -11040,7 +11049,8 @@
   },
   {
     "lemma": "Clemens 11",
-    "previous": "Claudius 381"
+    "previous": "Claudius 381",
+    "next": "Cleppius"
   },
   {
     "lemma": "Clodius 47",
@@ -12613,11 +12623,10 @@
   {
     "lemma": "Dedicatio",
     "previous": "Decuminus",
-    "next": "Deiotarus 1"
+    "next": "Deiotaros 1"
   },
   {
-    "lemma": "Deiotarus 1",
-    "previous": "Dedicatio"
+    "lemma": "Deiotarus 1"
   },
   {
     "lemma": "Deiotaros 1",

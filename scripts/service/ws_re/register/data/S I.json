@@ -14795,6 +14795,7 @@
   },
   {
     "lemma": "Batnai 2",
+    "previous": "Batnai 1",
     "next": "Batromios",
     "chapters": [
       {
@@ -14918,6 +14919,7 @@
   {
     "lemma": "Βελλεροφόντειος δῆμος",
     "previous": "Bella",
+    "next": "Bellicenses",
     "sort_key": "Bellerophonteios",
     "chapters": [
       {
@@ -16540,10 +16542,30 @@
   {
     "lemma": "Calpurnius 73",
     "previous": "Calpurnius 70",
+    "next": "Calpurnius 74",
     "sort_key": "Calpurnius 073"
   },
   {
+    "lemma": "Calpurnius 74",
+    "previous": "Calpurnius 73",
+    "next": "Calpurnius 82",
+    "sort_key": "Calpurnius 074"
+  },
+  {
+    "lemma": "Calpurnius 82",
+    "previous": "Calpurnius 74",
+    "next": "Calpurnius 88",
+    "sort_key": "Calpurnius 082"
+  },
+  {
+    "lemma": "Calpurnius 88",
+    "previous": "Calpurnius 82",
+    "next": "Calpurnius 90",
+    "sort_key": "Calpurnius 088"
+  },
+  {
     "lemma": "Calpurnius 90",
+    "previous": "Calpurnius 88",
     "next": "Calpurnius 93",
     "sort_key": "Calpurnius 090"
   },
@@ -19098,7 +19120,12 @@
     "previous": "Cornelius 136"
   },
   {
+    "lemma": "Cornelius 350",
+    "next": "Cornelius 351"
+  },
+  {
     "lemma": "Cornelius 351",
+    "previous": "Cornelius 350",
     "next": "Cornelius 376ff."
   },
   {
@@ -19222,11 +19249,10 @@
   {
     "lemma": "Cubi",
     "previous": "Cuavus",
-    "next": "Culleolus a"
+    "next": "Culleolus"
   },
   {
-    "lemma": "Culleolus a",
-    "previous": "Cubi"
+    "lemma": "Culleolus a"
   },
   {
     "lemma": "Culleolus",
