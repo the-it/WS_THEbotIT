@@ -342,7 +342,12 @@
     "previous": "Ammatas"
   },
   {
+    "lemma": "Anaitis",
+    "next": "Anakreon 1"
+  },
+  {
     "lemma": "Anakreon 1",
+    "previous": "Anaitis",
     "next": "Anaphe"
   },
   {
@@ -847,7 +852,8 @@
   },
   {
     "lemma": "Demetrios 85",
-    "previous": "Darnithithi"
+    "previous": "Darnithithi",
+    "next": "Diaios"
   },
   {
     "lemma": "Darnithithi (Gen.",
@@ -992,7 +998,12 @@
     ]
   },
   {
+    "lemma": "Eudemos 1",
+    "next": "Euripides 4"
+  },
+  {
     "lemma": "Euripides 4",
+    "previous": "Eudemos 1",
     "next": "Eurylochos 11"
   },
   {
@@ -1566,7 +1577,12 @@
   },
   {
     "lemma": "Parrhasia",
-    "previous": "Parka"
+    "previous": "Parka",
+    "next": "Parthenion 1"
+  },
+  {
+    "lemma": "Parthenion 1",
+    "previous": "Parrhasia"
   },
   {
     "lemma": "Parrharia",

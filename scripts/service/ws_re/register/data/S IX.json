@@ -88,20 +88,32 @@
   },
   {
     "lemma": "Alea 1",
-    "previous": "Aipion"
+    "previous": "Aipion",
+    "next": "Alfenus 4"
   },
   {
-    "lemma": "Ankyron polis",
-    "chapters": [
-      {
-        "start": 8,
-        "end": 8,
-        "author": "Helck"
-      }
-    ]
+    "lemma": "Alfenus 4",
+    "previous": "Alea 1",
+    "next": "Aliphera"
+  },
+  {
+    "lemma": "Aliphera",
+    "previous": "Alfenus 4",
+    "next": "Alisca"
+  },
+  {
+    "lemma": "Alisca",
+    "previous": "Aliphera",
+    "next": "Alta ripa 1"
+  },
+  {
+    "lemma": "Alta ripa 1",
+    "previous": "Alisca",
+    "next": "Altinum 1"
   },
   {
     "lemma": "Altinum 1",
+    "previous": "Alta ripa 1",
     "next": "Anicius 47"
   },
   {
@@ -181,7 +193,8 @@
   },
   {
     "lemma": "Apesas 1",
-    "previous": "Antonius 95a"
+    "previous": "Antonius 95a",
+    "next": "Aquilinus 7"
   },
   {
     "lemma": "Arekrat",
@@ -265,6 +278,7 @@
   },
   {
     "lemma": "Ἀσπὶς ἄκρα",
+    "previous": "Ascheion",
     "next": "Asprenas 1a",
     "sort_key": "Aspis akra"
   },
@@ -416,7 +430,12 @@
     ]
   },
   {
+    "lemma": "Bura 1",
+    "next": "Buraïkos 1"
+  },
+  {
     "lemma": "Buraïkos 1",
+    "previous": "Bura 1",
     "next": "Cassius 84"
   },
   {
@@ -554,6 +573,7 @@
   },
   {
     "lemma": "Demetrias 1",
+    "previous": "Deire 1",
     "next": "Demonassa 6"
   },
   {

@@ -48,7 +48,8 @@
   },
   {
     "lemma": "Alexandrina aqua",
-    "previous": "Aisopos 6"
+    "previous": "Aisopos 6",
+    "next": "Alko"
   },
   {
     "lemma": "Alexandri(a)na aqua",
@@ -106,6 +107,7 @@
     "lemma": "Ameisenlöwe",
     "previous": "Amblichos",
     "next": "Amphimedusa",
+    "wp_link": "w:de:Ameisenlöwe",
     "chapters": [
       {
         "start": 3,
@@ -539,6 +541,7 @@
     "lemma": "Caerulea aqua",
     "previous": "Bulis 4",
     "next": "Casius mons",
+    "redirect": "Caeruleus fons",
     "chapters": [
       {
         "start": 19,
@@ -609,6 +612,7 @@
   {
     "lemma": "Dalmatia",
     "previous": "Conclusa aqua",
+    "wp_link": "w:de:Dalmatia",
     "chapters": [
       {
         "start": 21,
@@ -690,6 +694,7 @@
   {
     "lemma": "Demetrios 125b",
     "previous": "December 2",
+    "next": "Demokydes",
     "chapters": [
       {
         "start": 60,
@@ -721,7 +726,6 @@
   },
   {
     "lemma": "Drakontides 3a",
-    "next": "Drusia aqua",
     "chapters": [
       {
         "start": 60,
@@ -732,8 +736,9 @@
   },
   {
     "lemma": "Drusia aqua",
-    "previous": "Drakontides 3a",
-    "next": "Engye",
+    "previous": "Drakontides",
+    "next": "Ἐγγύη",
+    "redirect": "Damnata aqua",
     "chapters": [
       {
         "start": 60,
@@ -743,8 +748,11 @@
     ]
   },
   {
+    "lemma": "Ἐγγύη",
+    "previous": "Drusia aqua"
+  },
+  {
     "lemma": "Engye",
-    "previous": "Drusia aqua",
     "next": "Engyesis",
     "chapters": [
       {
@@ -925,7 +933,6 @@
   {
     "lemma": "Felix 23a",
     "previous": "Eutyches 7b",
-    "next": "Finken",
     "chapters": [
       {
         "start": 169,
@@ -935,9 +942,14 @@
     ]
   },
   {
+    "lemma": "Eutyches 23a",
+    "next": "Finken"
+  },
+  {
     "lemma": "Finken",
-    "previous": "Felix 23a",
+    "previous": "Eutyches 23a",
     "next": "Flamingo",
+    "wp_link": "w:de:Finken",
     "chapters": [
       {
         "start": 169,
@@ -950,6 +962,7 @@
     "lemma": "Flamingo",
     "previous": "Finken",
     "next": "Fliegenfänger",
+    "wp_link": "w:de:Flamingos",
     "chapters": [
       {
         "start": 172,
@@ -3677,10 +3690,12 @@
   {
     "lemma": "Antonius 30",
     "previous": "Achilleus 8a",
+    "next": "Apollonios 23",
     "sort_key": "Antonius 030"
   },
   {
     "lemma": "Apollonios 23",
+    "previous": "Antonius 30",
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
@@ -5913,7 +5928,7 @@
   {
     "lemma": "Damon 20",
     "previous": "Chremetides",
-    "next": "Dionysios  50a",
+    "next": "Dionysios 50a",
     "chapters": [
       {
         "start": 1267,
@@ -5923,11 +5938,11 @@
     ]
   },
   {
-    "lemma": "Dionysios  50a",
-    "previous": "Damon 20"
+    "lemma": "Dionysios  50a"
   },
   {
     "lemma": "Dionysios 50a",
+    "previous": "Damon 20",
     "next": "Ergoteles 3",
     "chapters": [
       {

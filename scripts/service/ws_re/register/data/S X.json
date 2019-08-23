@@ -1292,10 +1292,17 @@
   },
   {
     "lemma": "Apollas 1",
-    "previous": "Apolaustus 8"
+    "previous": "Apolaustus 8",
+    "next": "Apollodoros 41b"
+  },
+  {
+    "lemma": "Apollodoros 41b",
+    "previous": "Apollas 1",
+    "next": "Apollodoros 41c"
   },
   {
     "lemma": "Apollodoros 41c",
+    "previous": "Apollodoros 41b",
     "next": "Apollodoros 78"
   },
   {
@@ -1334,10 +1341,12 @@
   },
   {
     "lemma": "Apollonios 4",
-    "previous": "Apollonides 17"
+    "previous": "Apollonides 17",
+    "next": "Apollonios 34"
   },
   {
     "lemma": "Apollonios 34",
+    "previous": "Apollonios 4",
     "next": "Apollonios 48"
   },
   {
@@ -2343,6 +2352,7 @@
   },
   {
     "lemma": "Charias 2",
+    "previous": "Chares 12",
     "next": "Charidemos 4a"
   },
   {
@@ -2363,8 +2373,12 @@
     "next": "Choraules"
   },
   {
+    "lemma": "χειρόγραφον",
+    "next": "Choraules"
+  },
+  {
     "lemma": "Choraules",
-    "previous": "Chirographum",
+    "previous": "χειρόγραφον",
     "next": "Chryses 3"
   },
   {
@@ -2423,6 +2437,7 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
+    "next": "Collegium",
     "redirect": "urbanae cohortes"
   },
   {
@@ -2462,6 +2477,7 @@
   },
   {
     "lemma": "Collegium",
+    "previous": "cohortes urbanae",
     "next": "Constantiniani"
   },
   {
@@ -2627,7 +2643,8 @@
   },
   {
     "lemma": "Decuria",
-    "previous": "Dativa"
+    "previous": "Dativa",
+    "next": "Demeas 1"
   },
   {
     "lemma": "Demetrios 32ee",
@@ -2641,6 +2658,7 @@
   },
   {
     "lemma": "Demeas 1",
+    "previous": "Decuria",
     "next": "Demetrios 32d"
   },
   {
@@ -3664,7 +3682,13 @@
     ]
   },
   {
+    "lemma": "Chairemon 5",
+    "previous": "Castronius",
+    "next": "Chairestratos 1"
+  },
+  {
     "lemma": "Chairestratos 1",
+    "previous": "Chairemon 5",
     "next": "Chairestratos 1a"
   },
   {

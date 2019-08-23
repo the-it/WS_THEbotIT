@@ -82,10 +82,12 @@
   },
   {
     "lemma": "Antigonos 24",
-    "previous": "Antidotos 6"
+    "previous": "Antidotos 6",
+    "next": "Antiochos 68"
   },
   {
     "lemma": "Antiochos 68",
+    "previous": "Antigonos 24",
     "next": "Antiochos 65"
   },
   {
@@ -173,6 +175,7 @@
     "lemma": "Aristeides 23a",
     "previous": "Aristarche",
     "next": "Ariston 62a",
+    "wp_link": "w:de:Aristeides",
     "chapters": [
       {
         "start": 46,
@@ -202,7 +205,6 @@
     "lemma": "Asklepiades 51",
     "previous": "Asalmanos",
     "next": "Athenagoras 9a",
-    "redirect": true,
     "chapters": [
       {
         "start": 46,
@@ -214,6 +216,7 @@
     "lemma": "Athenagoras 9a",
     "previous": "Asklepiades 51",
     "next": "Athenodoros 19",
+    "sort_key": "Athenagoras 09a",
     "chapters": [
       {
         "start": 46,
@@ -241,8 +244,6 @@
   },
   {
     "lemma": "Battus, Bacchus",
-    "previous": "Attius 10a",
-    "next": "Autrico",
     "chapters": [
       {
         "start": 55,
@@ -270,10 +271,12 @@
   },
   {
     "lemma": "Berothe",
-    "previous": "Battus"
+    "previous": "Battus",
+    "next": "Bias 10"
   },
   {
     "lemma": "Bias 10",
+    "previous": "Berothe",
     "next": "Caecilius 141"
   },
   {
@@ -4298,6 +4301,7 @@
     "lemma": "Meclodunum",
     "previous": "Mebarsapes",
     "next": "Medericus",
+    "wp_link": "w:de:Melun",
     "chapters": [
       {
         "start": 704,

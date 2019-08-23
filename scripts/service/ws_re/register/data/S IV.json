@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Abammon",
+    "previous": "Abacus",
     "next": "Achilleus 8",
     "chapters": [
       {
@@ -145,6 +146,7 @@
     "lemma": "Aion 1a",
     "previous": "Aineias 5",
     "next": "Aischylos 7a",
+    "sort_key": "Aion 1a",
     "chapters": [
       {
         "start": 11,
@@ -651,7 +653,8 @@
   },
   {
     "lemma": "Aphneïs",
-    "previous": "Aphamios 3"
+    "previous": "Aphamios 3",
+    "next": "Aphobetos"
   },
   {
     "lemma": "Aphobetos 2",
@@ -1516,6 +1519,7 @@
   {
     "lemma": "Bulagoras 2",
     "previous": "Boupares",
+    "next": "Cercina",
     "chapters": [
       {
         "start": 214,
@@ -1786,7 +1790,7 @@
   {
     "lemma": "Damon 15b",
     "previous": "Damokrita",
-    "next": "Daulios",
+    "next": "Daphnus 1",
     "chapters": [
       {
         "start": 218,
@@ -1796,8 +1800,13 @@
     ]
   },
   {
-    "lemma": "Daulios",
+    "lemma": "Daphnus 1",
     "previous": "Damon 15b",
+    "next": "Daulios"
+  },
+  {
+    "lemma": "Daulios",
+    "previous": "Daphnus 1",
     "next": "Δειγματοάρτης",
     "chapters": [
       {
@@ -1948,6 +1957,7 @@
   {
     "lemma": "Dexandros 2",
     "previous": "Derdas 4",
+    "next": "Diakrier 2",
     "chapters": [
       {
         "start": 224,
@@ -2499,7 +2509,8 @@
   {
     "lemma": "Essener",
     "previous": "Erotylos",
-    "next": "Euandros",
+    "next": "Euandros 4a",
+    "wp_link": "w:de:Essener",
     "chapters": [
       {
         "start": 386,
@@ -2510,7 +2521,6 @@
   },
   {
     "lemma": "Euandros",
-    "previous": "Essener",
     "chapters": [
       {
         "start": 430,
@@ -2521,6 +2531,7 @@
   },
   {
     "lemma": "Euandros 4a",
+    "previous": "Erotylos",
     "next": "Euboia 1"
   },
   {
@@ -3615,7 +3626,9 @@
   },
   {
     "lemma": "Ἱππάρχης",
-    "next": "Ἱππεῖος"
+    "previous": "Himeraios",
+    "next": "Ἱππεῖος",
+    "sort_key": "Hipparches"
   },
   {
     "lemma": "Ἱππεῖος",
@@ -6886,7 +6899,12 @@
   {
     "lemma": "Kyros 6a",
     "previous": "Kyros 6",
+    "next": "Λαβασσάρασκος",
     "wp_link": "w:de:Kyros der Jüngere"
+  },
+  {
+    "lemma": "Λαβασσάρασκος",
+    "previous": "Kyros 6a"
   },
   {
     "lemma": "Kyros 7",

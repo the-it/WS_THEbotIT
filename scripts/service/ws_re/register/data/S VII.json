@@ -437,7 +437,8 @@
   },
   {
     "lemma": "Chirographum",
-    "previous": "Canaliclarius"
+    "previous": "Canaliclarius",
+    "next": "Χειροτέχνιον"
   },
   {
     "lemma": "χειρόγραφον",
@@ -451,6 +452,7 @@
   },
   {
     "lemma": "Clementius 1",
+    "previous": "Claudius 207",
     "next": "Clementius 1a"
   },
   {
@@ -471,7 +473,13 @@
     "next": "Cocceius 12"
   },
   {
+    "lemma": "Χειροτέχνιον",
+    "next": "Chersonesos 5",
+    "sort_key": "Cheirotechnion"
+  },
+  {
     "lemma": "Chersonesos 5",
+    "previous": "Χειροτέχνιον",
     "next": "χρηματισμός",
     "sort_key": "Cheirotechnion"
   },
@@ -2834,7 +2842,12 @@
     ]
   },
   {
+    "lemma": "Lex Vibia (oder Leges Vibiae)",
+    "next": "Libella 1"
+  },
+  {
     "lemma": "Libella 1",
+    "previous": "Lex Vibia (oder Leges Vibiae)",
     "next": "Licinius 151a"
   },
   {
@@ -5177,7 +5190,6 @@
   {
     "lemma": "Periporphyros agon",
     "previous": "Peripatos",
-    "next": "Petra 7a",
     "chapters": [
       {
         "start": 949,
@@ -5187,9 +5199,18 @@
     ]
   },
   {
+    "lemma": "Persius 5",
+    "next": "Pescennius"
+  },
+  {
+    "lemma": "Pescennius",
+    "previous": "Persius 5",
+    "next": "Petra 7a"
+  },
+  {
     "lemma": "Petra 7a",
-    "previous": "Periporphyros agon",
-    "next": "Petra 8a",
+    "previous": "Pescennius",
+    "next": "Petra 8",
     "chapters": [
       {
         "start": 980,
@@ -5199,8 +5220,11 @@
     ]
   },
   {
+    "lemma": "Petra 8",
+    "previous": "Petra 7a"
+  },
+  {
     "lemma": "Petra 8a",
-    "previous": "Petra 7a",
     "next": "Pfandrecht",
     "chapters": [
       {
@@ -5884,7 +5908,6 @@
   {
     "lemma": "Stiftungen",
     "previous": "Stiela oder Stiala",
-    "next": "Stratonikeia-Hadrianopolis",
     "chapters": [
       {
         "start": 1236,
@@ -5894,8 +5917,12 @@
     ]
   },
   {
+    "lemma": "Straßenraub",
+    "next": "Stratonikeia-Hadrianopolis"
+  },
+  {
     "lemma": "Stratonikeia-Hadrianopolis",
-    "previous": "Stiftungen",
+    "previous": "Straßenraub",
     "next": "Streik",
     "chapters": [
       {
