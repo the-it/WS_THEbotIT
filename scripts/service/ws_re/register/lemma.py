@@ -3,7 +3,7 @@ import sys
 import unicodedata
 from collections import OrderedDict
 from datetime import datetime
-from typing import Dict, Union, List, Tuple, KeysView
+from typing import Dict, Union, List, Tuple, KeysView, Optional
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
@@ -70,7 +70,7 @@ class LemmaChapter:
         return self._dict["end"]
 
     @property
-    def author(self) -> Union[str, None]:
+    def author(self) -> Optional[str]:
         if "author" in self._dict.keys():
             return self._dict["author"]
         return None

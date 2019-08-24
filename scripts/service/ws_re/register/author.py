@@ -1,7 +1,7 @@
 import json
 import re
 import sys
-from typing import Dict, Union, List, Tuple
+from typing import Dict, Union, List, Tuple, Optional
 
 from scripts.service.ws_re.register.base import _REGISTER_PATH
 
@@ -30,13 +30,13 @@ class Author:
         return f"<{self.__class__.__name__} - name:{self.name}, birth:{self.birth}, death:{self.death}>"
 
     @property
-    def death(self) -> Union[int, None]:
+    def death(self) -> Optional[int]:
         if "death" in self._dict.keys():
             return self._dict["death"]
         return None
 
     @property
-    def birth(self) -> Union[int, None]:
+    def birth(self) -> Optional[int]:
         if "birth" in self._dict.keys():
             return self._dict["birth"]
         return None
@@ -65,7 +65,7 @@ class Authors:
             for author in json_dict:
                 self._authors[author] = Author(author, json_dict[author])
 
-    def get_author_by_mapping(self, name: str, issue: str) -> Union[Author, None]:
+    def get_author_by_mapping(self, name: str, issue: str) -> Optional[Author]:
         author = None
         try:
             mapping = self._mapping[name]
@@ -189,7 +189,7 @@ class AuthorCrawler:
         return names[1].strip(), names[0].strip()
 
     @staticmethod
-    def _extract_years(years: str) -> Tuple[Union[int, None], Union[int, None]]:
+    def _extract_years(years: str) -> Tuple[Optional[int], Optional[int]]:
         hit = re.search(r"(?<!\")(\d{4})–?(\d{4})?", years)
         if hit:
             return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None

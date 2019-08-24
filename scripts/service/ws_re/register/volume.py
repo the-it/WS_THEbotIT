@@ -1,5 +1,5 @@
 import json
-from typing import Union, Dict
+from typing import Union, Dict, Optional
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
@@ -70,7 +70,7 @@ class VolumeRegister(Register):
     def __getitem__(self, idx: int) -> Lemma:
         return self.lemmas[idx]
 
-    def get_lemma_by_name(self, lemma_name: str, self_supplement: bool = False) -> Union[Lemma, None]:
+    def get_lemma_by_name(self, lemma_name: str, self_supplement: bool = False) -> Optional[Lemma]:
         found_before = False
         for lemma in self.lemmas:
             if lemma["lemma"] == lemma_name:
@@ -79,7 +79,7 @@ class VolumeRegister(Register):
                 found_before = True
         return None
 
-    def get_lemma_by_sort_key(self, sort_key: str, self_supplement: bool = False) -> Union[Lemma, None]:
+    def get_lemma_by_sort_key(self, sort_key: str, self_supplement: bool = False) -> Optional[Lemma]:
         # normalize it
         sort_key = Lemma.make_sort_key(sort_key)
         found_before = False
@@ -91,7 +91,7 @@ class VolumeRegister(Register):
         return None
 
     def get_index_of_lemma(self, lemma: Union[str, Lemma],
-                           self_supplement: bool = False) -> Union[int, None]:
+                           self_supplement: bool = False) -> Optional[int]:
         if isinstance(lemma, str):
             lemma = self.get_lemma_by_name(lemma, self_supplement)
         if lemma:
