@@ -5,7 +5,7 @@ class RegisterException(Exception):
     pass
 
 
-class Register(ABC):  # pylint: disable=too-few-public-methods
+class Register(ABC):
     @staticmethod
     def squash_lemmas(lemmas):
         return_lemmas = []

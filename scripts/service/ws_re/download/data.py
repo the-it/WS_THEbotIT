@@ -105,7 +105,8 @@ _MAPPINGS = {
     "S X": {"source": ("PaulySupp", "Supp10 Accaus Uttiedius"), "pages": ((-1, 100002, 100294),)},
     "S XI": {"source": ("PaulySupp", "Supp11 Abragila Zengisa"), "pages": ((-1, 110002, 110341),)},
     "S XII": {"source": ("PaulySupp", "Supp12 Abdigidus Thukydides"), "pages": ((-1, 120002, 120427),)},
-    "S XIII": {"source": ("PaulySupp", "Supp13 Africa Proconsularis Viae publicae Romanae"), "pages": ((-1, 130002, 130422),)}
+    "S XIII": {"source": ("PaulySupp", "Supp13 Africa Proconsularis Viae publicae Romanae"),
+               "pages": ((-1, 130002, 130422),)}
 }
 
 _MISSING_PAGES = (

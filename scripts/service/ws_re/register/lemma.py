@@ -5,26 +5,24 @@ from collections import OrderedDict
 from datetime import datetime
 from typing import Dict, Union, List, Tuple, KeysView
 
-if sys.version_info >= (3, 8):
-    from typing import TypedDict
-
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.volumes import Volume
 
+if sys.version_info >= (3, 8):
+    from typing import TypedDict  # pylint: disable=no-name-in-module
+
 # type hints
 if sys.version_info >= (3, 8):
     # typed dicts
-    class CHAPTER_DICT(TypedDict):
+    class ChapterDict(TypedDict):
         author: str
         start: int
         end: int
 
+    LemmaItems = Union[str, bool, ChapterDict]
 
-    LEMMA_ITEMS = Union[str, bool, CHAPTER_DICT]
-
-
-    class LEMMA_DICT(TypedDict):
+    class LemmaDict(TypedDict):
         lemma: str
         previous: str
         next: str
@@ -32,18 +30,17 @@ if sys.version_info >= (3, 8):
         redirect: Union[str, bool]
         wp_link: str
         ws_link: str
-        chapters: List[CHAPTER_DICT]
+        chapters: List[ChapterDict]
 else:
-    CHAPTER_DICT = Dict[str, Union[str, int]]
-    LEMMA_ITEMS = Union[str, bool, CHAPTER_DICT]
-    LEMMA_DICT = Dict[str, LEMMA_ITEMS]
-
+    ChapterDict = Dict[str, Union[str, int]]
+    LemmaItems = Union[str, bool, ChapterDict]
+    LemmaDict = Dict[str, LemmaItems]
 
 
 class LemmaChapter:
     _keys = ["start", "end", "author"]
 
-    def __init__(self, chapter_dict: CHAPTER_DICT):
+    def __init__(self, chapter_dict: ChapterDict):
         self._dict = chapter_dict
 
     def __repr__(self):  # pragma: no cover
@@ -57,7 +54,7 @@ class LemmaChapter:
             pass
         return False
 
-    def get_dict(self) -> CHAPTER_DICT:
+    def get_dict(self) -> ChapterDict:
         return_dict = OrderedDict()
         for property_key in self._keys:
             if property_key in self._dict:
@@ -152,7 +149,7 @@ class Lemma():
     _keys = ["lemma", "previous", "next", "sort_key", "redirect", "wp_link", "ws_link", "chapters"]
 
     def __init__(self,
-                 lemma_dict: LEMMA_DICT,
+                 lemma_dict: LemmaDict,
                  volume: Volume,
                  authors: Authors):
         self._lemma_dict = lemma_dict
@@ -236,7 +233,7 @@ class Lemma():
         return self._lemma_dict.keys()
 
     @property
-    def lemma_dict(self) -> LEMMA_DICT:
+    def lemma_dict(self) -> LemmaDict:
         return_dict = OrderedDict()
         for property_key in self._keys:
             if property_key in self.keys():
@@ -248,7 +245,7 @@ class Lemma():
                     return_dict[property_key] = value
         return return_dict
 
-    def _get_chapter_dicts(self) -> List[CHAPTER_DICT]:
+    def _get_chapter_dicts(self) -> List[ChapterDict]:
         chapter_list = []
         for chapter in self.chapters:
             chapter_list.append(chapter.get_dict())
@@ -368,7 +365,7 @@ class Lemma():
                 year_format = red
         return year_format
 
-    def update_lemma_dict(self, update_dict: LEMMA_DICT, remove_items: List[str] = None):
+    def update_lemma_dict(self, update_dict: LemmaDict, remove_items: List[str] = None):
         for item_key in update_dict:
             self._lemma_dict[item_key] = update_dict[item_key]
         if remove_items:
