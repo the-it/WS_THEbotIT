@@ -1,12 +1,26 @@
 import json
 import re
-from typing import Dict, Union, Mapping, Sequence, List, Tuple
+import sys
+from typing import Dict, Union, List, Tuple
 
 from scripts.service.ws_re.register.base import _REGISTER_PATH
 
+if sys.version_info >= (3, 8):
+    from typing import TypedDict  # pylint: disable=no-name-in-module
+
+# type hints
+if sys.version_info >= (3, 8):
+    # typed dicts
+    class AuthorDict(TypedDict):
+        birth: int
+        death: int
+else:
+    AuthorDict = Dict[str, int]
+CrawlerDict = Dict[str, Union[str, Dict[str, str]]]
+
 
 class Author:
-    def __init__(self, name: str, author_dict: Dict[str, int]):
+    def __init__(self, name: str, author_dict: AuthorDict):
         self._dict = author_dict
         if "_" in name:
             name = name.split("_")[0]
@@ -31,10 +45,10 @@ class Author:
     def name(self) -> str:
         return self._name
 
-    def update_internal_dict(self, author_dict: Dict):
+    def update_internal_dict(self, author_dict: AuthorDict):
         self._dict.update(author_dict)
 
-    def to_dict(self):
+    def to_dict(self) -> AuthorDict:
         return self._dict
 
 
@@ -65,20 +79,20 @@ class Authors:
             pass
         return author
 
-    def get_author(self, author_key: str):
+    def get_author(self, author_key: str) -> Author:
         return self._authors[author_key]
 
-    def set_mappings(self, mapping: Mapping):
+    def set_mappings(self, mapping: Dict[str, str]):
         self._mapping.update(mapping)
 
-    def set_author(self, mapping: Mapping):
+    def set_author(self, mapping: Dict[str, AuthorDict]):
         for author_key in mapping:
             if author_key in self._authors:
                 self._authors[author_key].update_internal_dict(mapping[author_key])
             else:
                 self._authors[author_key] = Author(author_key, mapping[author_key])
 
-    def _to_dict(self):
+    def _to_dict(self) -> Dict[str, AuthorDict]:
         author_dict = dict()
         for dict_key in sorted(self._authors.keys()):
             author_dict[dict_key] = self._authors[dict_key].to_dict()
@@ -98,14 +112,14 @@ class AuthorCrawler:
     _complex_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\{([^\}]*)\}")
 
     @classmethod
-    def get_mapping(cls, mapping: str) -> Dict[str, Union[str, Dict[str, str]]]:
+    def get_mapping(cls, mapping: str) -> CrawlerDict:
         mapping_dict = {}
         for single_mapping in cls._split_mappings(mapping):
             mapping_dict.update(cls._extract_mapping(single_mapping))
         return mapping_dict
 
     @staticmethod
-    def _split_mappings(mapping: str) -> Sequence[str]:
+    def _split_mappings(mapping: str) -> List[str]:
         mapping = re.sub(r"^return \{\n", "", mapping)
         mapping = re.sub(r"\}\s?$", "", mapping)
         splitted_mapping = mapping.split("\n[")
@@ -114,14 +128,14 @@ class AuthorCrawler:
         return splitted_mapping
 
     @classmethod
-    def _extract_mapping(cls, single_mapping: str) -> Dict[str, Union[str, Dict[str, str]]]:
+    def _extract_mapping(cls, single_mapping: str) -> CrawlerDict:
         if "{" in single_mapping:
             return cls._extract_complex_mapping(single_mapping)
         hit = cls._simple_mapping_regex.search(single_mapping)
         return {hit.group(1): hit.group(2)}
 
     @classmethod
-    def _extract_complex_mapping(cls, single_mapping: str) -> Dict[str, Dict[str, str]]:
+    def _extract_complex_mapping(cls, single_mapping: str) -> CrawlerDict:
         hit = cls._complex_mapping_regex.search(single_mapping)
         sub_dict = {}
         for sub_mapping in hit.group(2).split(",\n"):
@@ -134,7 +148,7 @@ class AuthorCrawler:
         return {hit.group(1): sub_dict}
 
     @classmethod
-    def get_authors(cls, text: str):
+    def get_authors(cls, text: str) -> Dict[str, AuthorDict]:
         return_dict = {}
         author_list = cls._split_author_table(text)
         for author_sub_table in author_list:
@@ -182,7 +196,7 @@ class AuthorCrawler:
         return None, None
 
     @classmethod
-    def _get_author(cls, author_lines: str) -> Mapping:
+    def _get_author(cls, author_lines: str) -> Dict[str, AuthorDict]:
         lines = cls._split_author(author_lines)
         author_tuple = cls._extract_author_name(lines[0])
         years = cls._extract_years(lines[1])
@@ -193,5 +207,3 @@ class AuthorCrawler:
         if years[1]:
             author_dict[author]["death"] = years[1]
         return author_dict
-
-    # after that get complete mapping
