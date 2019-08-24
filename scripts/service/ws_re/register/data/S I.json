@@ -10742,6 +10742,7 @@
   },
   {
     "lemma": "Aristoteles 12a",
+    "previous": "Aristoteles 8",
     "next": "Aristoteles 13",
     "chapters": [
       {
@@ -13794,10 +13795,12 @@
   },
   {
     "lemma": "Azizos 1",
-    "previous": "Azeia"
+    "previous": "Azeia",
+    "next": "Azochis"
   },
   {
     "lemma": "Azochis",
+    "previous": "Azizos 1",
     "next": "Baal-Harrân"
   },
   {
@@ -17554,6 +17557,7 @@
   {
     "lemma": "Charax 16a",
     "previous": "Charax",
+    "next": "Charcha",
     "chapters": [
       {
         "start": 283,

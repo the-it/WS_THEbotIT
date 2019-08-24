@@ -99,12 +99,15 @@
   },
   {
     "lemma": "Abdera 1",
-    "previous": "Abella",
+    "previous": "Abella"
+  },
+  {
+    "lemma": "Abdera",
     "next": "Abdere"
   },
   {
     "lemma": "Abdere",
-    "previous": "Abdera 1",
+    "previous": "Abdera",
     "next": "Abderos",
     "chapters": [
       {
@@ -318,6 +321,7 @@
   },
   {
     "lemma": "-acus, -iacus",
+    "previous": "Acronus",
     "next": "Acutus 1",
     "sort_key": "acusiacus",
     "chapters": [
@@ -343,6 +347,7 @@
   {
     "lemma": "Acutus 2",
     "previous": "Acutus 1",
+    "next": "Ad-",
     "chapters": [
       {
         "start": 19,
@@ -353,6 +358,7 @@
   },
   {
     "lemma": "Ad-",
+    "previous": "Acutus 2",
     "next": "Adad 2",
     "sort_key": "Ad",
     "chapters": [
@@ -545,6 +551,7 @@
   {
     "lemma": "Aemilius 63c",
     "previous": "Aemilius 63b",
+    "next": "Aenus",
     "sort_key": "Aemilius 063c",
     "chapters": [
       {
@@ -633,6 +640,7 @@
   {
     "lemma": "Africanus 9",
     "previous": "Afer 3",
+    "next": "Afrius",
     "chapters": [
       {
         "start": 36,
@@ -717,12 +725,11 @@
   },
   {
     "lemma": "Agathinos 8",
-    "previous": "Agathias 3",
-    "next": "Agathinos 10"
+    "previous": "Agathias 3"
   },
   {
     "lemma": "Agathinos 10",
-    "previous": "Agathinos 8",
+    "previous": "Agathias 3",
     "next": "Agathodaimon 1",
     "chapters": [
       {
@@ -952,6 +959,7 @@
   {
     "lemma": "Agriadas",
     "previous": "Agreus, Agreutes 1",
+    "next": "Agrianome 2",
     "chapters": [
       {
         "start": 61,
@@ -962,6 +970,7 @@
   },
   {
     "lemma": "Agrianome 2",
+    "previous": "Agriadas",
     "next": "Agroitas 2",
     "chapters": [
       {
@@ -1130,8 +1139,11 @@
     ]
   },
   {
+    "lemma": "Akanthos 5a",
+    "sort_key": "Akanthos 5a"
+  },
+  {
     "lemma": "Akanthos 1",
-    "previous": "Aix 3",
     "next": "Akatos 2",
     "chapters": [
       {
@@ -1174,10 +1186,10 @@
   {
     "lemma": "Aktor 1",
     "previous": "Akestor 6",
-    "next": "Alanoviiamuthis"
+    "next": "Alanouiiamuthis"
   },
   {
-    "lemma": "Alanoviiamuthis",
+    "lemma": "Alanouiiamuthis",
     "previous": "Aktor 1",
     "next": "Albacina",
     "chapters": [
@@ -1190,7 +1202,7 @@
   },
   {
     "lemma": "Albacina",
-    "previous": "Alanoviiamuthis",
+    "previous": "Alanouiiamuthis",
     "next": "Albanus 1a",
     "chapters": [
       {
@@ -1442,12 +1454,15 @@
   },
   {
     "lemma": "Alexias 5",
-    "previous": "Alexinos 2",
+    "previous": "Alexinos 2"
+  },
+  {
+    "lemma": "Alexios",
     "next": "Alfius 6"
   },
   {
     "lemma": "Alfius 6",
-    "previous": "Alexias 5",
+    "previous": "Alexios",
     "next": "Algalsos"
   },
   {
@@ -3548,6 +3563,7 @@
   },
   {
     "lemma": "Arcanus 2",
+    "previous": "Arbor Felix",
     "next": "Archelaos 27a",
     "chapters": [
       {
@@ -7074,6 +7090,7 @@
   },
   {
     "lemma": "Azizos 1",
+    "previous": "Axius 8b",
     "next": "Babullius"
   },
   {
@@ -7348,7 +7365,6 @@
     "lemma": "Bakchylides 2",
     "previous": "Bakchon 10"
   },
-
   {
     "lemma": "Balbinus 5",
     "next": "Balbus 5"
@@ -11371,7 +11387,12 @@
     ]
   },
   {
+    "lemma": "Cornelius 354",
+    "next": "Cornelius 373"
+  },
+  {
     "lemma": "Cornelius 373",
+    "previous": "Cornelius 354",
     "next": "Cornelius 385"
   },
   {
@@ -16393,7 +16414,12 @@
   },
   {
     "lemma": "Gamus 1",
-    "previous": "Gallus 15"
+    "previous": "Gallus 15",
+    "next": "Gangra 1"
+  },
+  {
+    "lemma": "Gangra 1",
+    "previous": "Gamus 1"
   },
   {
     "lemma": "Ganiccius",
