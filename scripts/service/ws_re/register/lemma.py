@@ -1,18 +1,49 @@
 import re
+import sys
 import unicodedata
 from collections import OrderedDict
 from datetime import datetime
-from typing import Dict, Union, List, Tuple
+from typing import Dict, Union, List, Tuple, KeysView
+
+if sys.version_info >= (3, 8):
+    from typing import TypedDict
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.volumes import Volume
 
+# type hints
+if sys.version_info >= (3, 8):
+    # typed dicts
+    class CHAPTER_DICT(TypedDict):
+        author: str
+        start: int
+        end: int
+
+
+    LEMMA_ITEMS = Union[str, bool, CHAPTER_DICT]
+
+
+    class LEMMA_DICT(TypedDict):
+        lemma: str
+        previous: str
+        next: str
+        sort_key: str
+        redirect: Union[str, bool]
+        wp_link: str
+        ws_link: str
+        chapters: List[CHAPTER_DICT]
+else:
+    CHAPTER_DICT = Dict[str, Union[str, int]]
+    LEMMA_ITEMS = Union[str, bool, CHAPTER_DICT]
+    LEMMA_DICT = Dict[str, LEMMA_ITEMS]
+
+
 
 class LemmaChapter:
     _keys = ["start", "end", "author"]
 
-    def __init__(self, chapter_dict: Dict[str, Union[str, int]]):
+    def __init__(self, chapter_dict: CHAPTER_DICT):
         self._dict = chapter_dict
 
     def __repr__(self):  # pragma: no cover
@@ -26,7 +57,7 @@ class LemmaChapter:
             pass
         return False
 
-    def get_dict(self) -> Dict[str, str]:
+    def get_dict(self) -> CHAPTER_DICT:
         return_dict = OrderedDict()
         for property_key in self._keys:
             if property_key in self._dict:
@@ -121,7 +152,7 @@ class Lemma():
     _keys = ["lemma", "previous", "next", "sort_key", "redirect", "wp_link", "ws_link", "chapters"]
 
     def __init__(self,
-                 lemma_dict: Dict[str, Union[str, list]],
+                 lemma_dict: LEMMA_DICT,
                  volume: Volume,
                  authors: Authors):
         self._lemma_dict = lemma_dict
@@ -147,7 +178,7 @@ class Lemma():
         return f"<{self.__class__.__name__} - lemma:{self['lemma']}, previous:{self['previous']}, " \
             f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
 
-    def __getitem__(self, item):
+    def __getitem__(self, item: str):
         try:
             return self._lemma_dict[item]
         except KeyError:
@@ -160,15 +191,15 @@ class Lemma():
         return iter(self._lemma_dict)
 
     @property
-    def volume(self):
+    def volume(self) -> Volume:
         return self._volume
 
     @property
-    def chapters(self):
+    def chapters(self) -> List[LemmaChapter]:
         return self._chapters
 
     @property
-    def sort_key(self):
+    def sort_key(self) -> str:
         return self._sort_key
 
     def _set_sort_key(self):
@@ -179,12 +210,12 @@ class Lemma():
         self._sort_key = self.make_sort_key(lemma)
 
     @staticmethod
-    def _strip_accents(accent_string):
+    def _strip_accents(accent_string: str) -> str:
         return ''.join(unicode_char for unicode_char in unicodedata.normalize('NFD', accent_string)
                        if unicodedata.category(unicode_char) != 'Mn')
 
     @classmethod
-    def make_sort_key(cls, lemma: str):
+    def make_sort_key(cls, lemma: str) -> str:
         lemma = lemma.casefold()
         # handle some things that need regex with accents
         for regex in _1ST_REGEX_LIST:
@@ -201,11 +232,11 @@ class Lemma():
         lemma = lemma.replace(".", " ")
         return lemma.strip()
 
-    def keys(self):
+    def keys(self) -> KeysView[str]:
         return self._lemma_dict.keys()
 
     @property
-    def lemma_dict(self) -> Dict[str, Union[str, List[Dict[str, str]]]]:
+    def lemma_dict(self) -> LEMMA_DICT:
         return_dict = OrderedDict()
         for property_key in self._keys:
             if property_key in self.keys():
@@ -217,7 +248,7 @@ class Lemma():
                     return_dict[property_key] = value
         return return_dict
 
-    def _get_chapter_dicts(self) -> List[Dict[str, str]]:
+    def _get_chapter_dicts(self) -> List[CHAPTER_DICT]:
         chapter_list = []
         for chapter in self.chapters:
             chapter_list.append(chapter.get_dict())
@@ -337,7 +368,7 @@ class Lemma():
                 year_format = red
         return year_format
 
-    def update_lemma_dict(self, update_dict: Dict, remove_items: List = None):
+    def update_lemma_dict(self, update_dict: LEMMA_DICT, remove_items: List[str] = None):
         for item_key in update_dict:
             self._lemma_dict[item_key] = update_dict[item_key]
         if remove_items:
