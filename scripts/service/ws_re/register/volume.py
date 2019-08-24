@@ -1,9 +1,8 @@
 import json
 from typing import Union, Dict
 
-from scripts.service.ws_re.register import _REGISTER_PATH
 from scripts.service.ws_re.register.author import Authors
-from scripts.service.ws_re.register.base import Register
+from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
 from scripts.service.ws_re.register.lemma import Lemma
 from scripts.service.ws_re.volumes import Volume
 

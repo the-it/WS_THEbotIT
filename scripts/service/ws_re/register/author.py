@@ -2,7 +2,7 @@ import json
 import re
 from typing import Dict, Union, Mapping, Sequence, List, Tuple
 
-from scripts.service.ws_re.register import _REGISTER_PATH
+from scripts.service.ws_re.register.base import _REGISTER_PATH
 
 
 class Author:

@@ -1,7 +1,6 @@
 from typing import Union, Dict, List, Any
 
-from scripts.service.ws_re.register import _REGISTER_PATH
-from scripts.service.ws_re.register.base import RegisterException
+from scripts.service.ws_re.register.base import RegisterException, _REGISTER_PATH
 from scripts.service.ws_re.register.lemma import Lemma
 from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.volumes import VolumeType
