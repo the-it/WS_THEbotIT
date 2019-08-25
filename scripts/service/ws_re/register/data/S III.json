@@ -65,12 +65,15 @@
   },
   {
     "lemma": "Abas 12",
-    "previous": "Abano",
+    "previous": "Abano"
+  },
+  {
+    "lemma": "Abas",
     "next": "Abbo 2"
   },
   {
     "lemma": "Abbo 2",
-    "previous": "Abas 12",
+    "previous": "Abas",
     "next": "abecedarius, -a, -um",
     "chapters": [
       {
@@ -1443,7 +1446,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1453,8 +1456,7 @@
     ]
   },
   {
-    "lemma": "Alexias 5",
-    "previous": "Alexinos 2"
+    "lemma": "Alexias 5"
   },
   {
     "lemma": "Alexios",
@@ -12560,6 +12562,7 @@
   },
   {
     "lemma": "Demeter",
+    "previous": "Demarchos 5a",
     "next": "Demetrianus 1a"
   },
   {
