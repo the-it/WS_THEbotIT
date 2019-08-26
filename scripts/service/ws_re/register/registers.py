@@ -1,4 +1,5 @@
 from collections import OrderedDict
+from typing import Dict
 
 from scripts.service.ws_re.register.alphabetic import AlphabeticRegister
 from scripts.service.ws_re.register.author import Authors
@@ -13,8 +14,8 @@ class Registers:
 
     def __init__(self):
         self._authors = Authors()
-        self._registers = OrderedDict()
-        self._alphabetic_registers = OrderedDict()
+        self._registers = OrderedDict()   # type: Dict[str, VolumeRegister]
+        self._alphabetic_registers = OrderedDict()  # type: Dict[str, AlphabeticRegister]
         for volume in Volumes().all_volumes:
             try:
                 self._registers[volume.name] = VolumeRegister(volume, self._authors)
