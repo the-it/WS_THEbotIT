@@ -53,7 +53,7 @@
   {
     "lemma": "Abano",
     "previous": "Abacus 9",
-    "next": "Abas 12",
+    "next": "Abas",
     "wp_link": "w:de:Abano Terme",
     "chapters": [
       {
@@ -64,8 +64,7 @@
     ]
   },
   {
-    "lemma": "Abas 12",
-    "previous": "Abano"
+    "lemma": "Abas 12"
   },
   {
     "lemma": "Abas",
@@ -9718,7 +9717,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium 3",
+    "next": "Capitolium vetus",
     "chapters": [
       {
         "start": 233,
@@ -9728,12 +9727,13 @@
     ]
   },
   {
-    "lemma": "Capitolium 3",
+    "lemma": "Capitolium vetus",
+    "previous": "Capienacus oder Capionacus",
     "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium 3",
+    "previous": "Capitolium vetus",
     "next": "Caprasius",
     "chapters": [
       {
@@ -12655,6 +12655,7 @@
   {
     "lemma": "Demochares 8",
     "previous": "Demo 2a",
+    "next": "Demodes",
     "chapters": [
       {
         "start": 333,
@@ -12665,6 +12666,7 @@
   },
   {
     "lemma": "Demodes",
+    "previous": "Demochares 8",
     "next": "Demodokos 8",
     "chapters": [
       {
@@ -12677,6 +12679,7 @@
   {
     "lemma": "Demodokos 8",
     "previous": "Demodes",
+    "next": "Demokrates 14",
     "chapters": [
       {
         "start": 334,
@@ -14105,6 +14108,7 @@
   },
   {
     "lemma": "Elpinike 1a",
+    "next": "Emeia",
     "chapters": [
       {
         "start": 429,
