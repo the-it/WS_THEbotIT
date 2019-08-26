@@ -3,8 +3,8 @@ import shutil
 from pathlib import Path
 from unittest import TestCase
 
-from scripts.service.ws_re.register import _REGISTER_PATH
 from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.base import _REGISTER_PATH
 from scripts.service.ws_re.register.volume import VolumeRegister
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")

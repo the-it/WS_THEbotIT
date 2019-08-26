@@ -3,8 +3,8 @@ from unittest import mock
 from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
-from scripts.service.ws_re.register import _REGISTER_PATH
 from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.base import _REGISTER_PATH
 from scripts.service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH, \
     copy_tst_data
 from scripts.service.ws_re.register.volume import VolumeRegister
