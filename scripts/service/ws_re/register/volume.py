@@ -1,5 +1,5 @@
 import json
-from typing import Union, Dict, Optional
+from typing import Union, Dict, Optional, List
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
@@ -16,29 +16,29 @@ class VolumeRegister(Register):
         with open(self._REGISTER_PATH.joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
             lemma_list = json.load(json_file)
-        self._lemmas = []
+        self._lemmas = []  # type: List[Lemma]
         for lemma in lemma_list:
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
-    def __repr__(self):  # pragma: no cover
+    def __repr__(self):
         return f"<{self.__class__.__name__} - volume:{self.volume.name}, lemmas:{len(self.lemmas)}>"
 
     def __len__(self):
         return len(self._lemmas)
 
     @property
-    def volume(self):
+    def volume(self) -> Volume:
         return self._volume
 
     @property
-    def authors(self):
+    def authors(self) -> Authors:
         return self._authors
 
     @property
-    def lemmas(self):
+    def lemmas(self) -> List[Lemma]:
         return self._lemmas
 
-    def _get_table(self):
+    def _get_table(self) -> str:
         header = """{|class="wikitable sortable"
 !Artikel
 !Wikilinks
@@ -51,12 +51,12 @@ class VolumeRegister(Register):
         table.append("|}")
         return "\n".join(table)
 
-    def _get_footer(self):
+    def _get_footer(self) -> str:
         return f"[[Kategorie:RE:Register|!]]\nZahl der Artikel: {len(self._lemmas)}, " \
                f"davon [[:Kategorie:RE:Band {self._volume.name}" \
                f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
 
-    def get_register_str(self):
+    def get_register_str(self) -> str:
         return f"{self._get_table()}\n{self._get_footer()}"
 
     def persist(self):
