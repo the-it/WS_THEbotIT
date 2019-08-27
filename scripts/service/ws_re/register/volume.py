@@ -1,5 +1,5 @@
 import json
-from typing import Union, Dict, Optional, List
+from typing import Union, Optional, List
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
@@ -16,7 +16,7 @@ class VolumeRegister(Register):
         with open(self._REGISTER_PATH.joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
             lemma_list = json.load(json_file)
-        self._lemmas = []  # type: List[Lemma]
+        self._lemmas: List[Lemma] = []
         for lemma in lemma_list:
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 

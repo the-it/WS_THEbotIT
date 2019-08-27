@@ -21,7 +21,7 @@ class ReImporter(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(year=2019, month=1, day=21, hour=10)
         self.folder = Path(__file__).parent.joinpath(self._register_folder)
-        self.authors = {}  # type: Dict[str, Dict[str, Dict[str, str]]]
+        self.authors: Dict[str, Dict[str, Dict[str, str]]] = {}
         self.current_volume = ""
 
     def task(self):  # pragma: no cover

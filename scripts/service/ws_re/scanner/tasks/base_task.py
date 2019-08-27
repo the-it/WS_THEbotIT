@@ -17,7 +17,7 @@ class ReScannerTask:
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
-        self.re_page = None  # type: Optional[RePage]
+        self.re_page: Optional[RePage] = None
         self.processed_pages = []
         self.timeout = timedelta(minutes=1)
         self.load_task()

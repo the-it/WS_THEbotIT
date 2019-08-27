@@ -22,7 +22,7 @@ class SCANTask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers()
-        self._strategies = {}  # type: Dict[str, List[str]]
+        self._strategies: Dict[str, List[str]] = {}
 
     def task(self):
         self._fetch_from_article_list()
