@@ -25,7 +25,7 @@ class ERROTask(ReScannerTask):
         body = "\n".join(entries)
         return caption + body
 
-    def _data_exists(self):
+    def _data_exists(self) -> bool:
         return bool(self.data)
 
     def finish_task(self):

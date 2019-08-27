@@ -2,13 +2,13 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Mapping, List, Tuple, Dict, Any
+from typing import List, Tuple, Dict, Any
 
 import pywikibot
 from git import Repo
 from github import Github
 
-from scripts.service.ws_re.register.author import AuthorCrawler
+from scripts.service.ws_re.register.author import AuthorCrawler, AuthorDict, CrawlerDict
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.register.updater import Updater
@@ -43,13 +43,13 @@ class SCANTask(ReScannerTask):
         self.registers.persist()
         self._push_changes()
 
-    def _fetch_author_infos(self) -> Mapping:
+    def _fetch_author_infos(self) -> Dict[str, AuthorDict]:
         text = fetch_text_from_wiki_site(self.wiki,
                                          "Paulys Realencyclopädie der classischen "
                                          "Altertumswissenschaft/Autoren")
         return AuthorCrawler.get_authors(text)
 
-    def _fetch_mapping(self) -> Mapping:
+    def _fetch_mapping(self) -> CrawlerDict:
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
