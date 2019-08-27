@@ -658,7 +658,6 @@
   {
     "lemma": "Dekane",
     "previous": "Δειγματοκαταγωγός",
-    "next": "Δεκατηλόγος",
     "wp_link": "w:de:Dekan (Astrologie)",
     "chapters": [
       {
@@ -670,6 +669,7 @@
   },
   {
     "lemma": "δημοσίωσις",
+    "previous": "Demetrios 100a",
     "next": "Derkylos 2",
     "sort_key": "demosiosis",
     "chapters": [
@@ -5199,7 +5199,12 @@
     ]
   },
   {
+    "lemma": "Peristylium",
+    "next": "Persius 5"
+  },
+  {
     "lemma": "Persius 5",
+    "previous": "Peristylium",
     "next": "Pescennius"
   },
   {

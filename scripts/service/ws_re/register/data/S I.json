@@ -4545,16 +4545,18 @@
   {
     "lemma": "Alisanus",
     "previous": "Aliphenoi",
-    "next": "Alkainetos"
+    "next": "Alkainetos 1"
   },
   {
-    "lemma": "Alkainetos",
-    "previous": "Alisanus",
-    "next": "Alkainetos 2"
+    "lemma": "Alkainetos 1",
+    "previous": "Alisanus"
+  },
+  {
+    "lemma": "Alkainetos"
   },
   {
     "lemma": "Alkainetos 2",
-    "previous": "Alkainetos",
+    "previous": "Alkainetos 1",
     "next": "Alkaios 11",
     "chapters": [
       {
@@ -11738,7 +11740,12 @@
   },
   {
     "lemma": "Asinius 28",
-    "previous": "Asinius 27"
+    "previous": "Asinius 27",
+    "next": "Asioi"
+  },
+  {
+    "lemma": "Asioi",
+    "previous": "Asinius 28"
   },
   {
     "lemma": "Askalos",
@@ -14482,7 +14489,7 @@
   {
     "lemma": "Baris 5b",
     "previous": "Baris 5a",
-    "next": "Baris 9",
+    "next": "Barium",
     "chapters": [
       {
         "start": 241,
@@ -14493,7 +14500,6 @@
   },
   {
     "lemma": "Baris 9",
-    "previous": "Baris 5b",
     "next": "Barium"
   },
   {
@@ -15600,12 +15606,16 @@
   },
   {
     "lemma": "Borillus 1",
+    "previous": "Boriennus"
+  },
+  {
+    "lemma": "Borillus",
     "previous": "Boriennus",
     "next": "Borion"
   },
   {
     "lemma": "Borion",
-    "previous": "Borillus 1",
+    "previous": "Borillus",
     "next": "Borissos",
     "chapters": [
       {
@@ -19183,13 +19193,17 @@
   },
   {
     "lemma": "Cubi",
-    "previous": "Cuavus"
+    "previous": "Cuavus",
+    "next": "Culleolus a"
   },
   {
-    "lemma": "Culleolus a"
+    "lemma": "Culleolus a",
+    "previous": "Cubi",
+    "next": "Cura 4"
   },
   {
     "lemma": "Cura 4",
+    "previous": "Culleolus a",
     "next": "Currodrepanus"
   },
   {
@@ -19952,6 +19966,7 @@
   {
     "lemma": "Demetrios 84a",
     "previous": "Demetrios 44a",
+    "next": "Demetrios 130",
     "sort_key": "Demetrios 084a",
     "wp_link": "w:de:Demetrios",
     "chapters": [
@@ -19964,6 +19979,7 @@
   },
   {
     "lemma": "Demetrios 130",
+    "previous": "Demetrios 84a",
     "next": "Demo 6"
   },
   {
