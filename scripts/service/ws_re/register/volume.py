@@ -3,7 +3,7 @@ from typing import Union, Dict, Optional, List
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
-from scripts.service.ws_re.register.lemma import Lemma
+from scripts.service.ws_re.register.lemma import Lemma, LemmaDict
 from scripts.service.ws_re.volumes import Volume
 
 
@@ -102,7 +102,7 @@ class VolumeRegister(Register):
         return bool(self.get_lemma_by_name(lemma_name))
 
     @staticmethod
-    def normalize_sort_key(lemma_dict: Dict[str, str]) -> str:
+    def normalize_sort_key(lemma_dict: LemmaDict) -> str:
         if "sort_key" in lemma_dict:
             return Lemma.make_sort_key(lemma_dict["sort_key"])
         return Lemma.make_sort_key(lemma_dict["lemma"])

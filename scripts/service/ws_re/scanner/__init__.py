@@ -92,7 +92,7 @@ class ReScanner(CanonicalBot):
             active_tasks.append(task(wiki=self.wiki, debug=self.debug, logger=self.logger))
         return active_tasks
 
-    def _save_re_page(self, re_page: RePage, list_of_done_tasks: list):
+    def _save_re_page(self, re_page: RePage, list_of_done_tasks: List[str]):
         if not self.debug:
             save_message = f"ReScanner hat folgende Aufgaben bearbeitet: " \
                 f"{', '.join(list_of_done_tasks)}"
@@ -102,7 +102,7 @@ class ReScanner(CanonicalBot):
             except ReDatenException:
                 self.logger.error("RePage can't be saved.")
 
-    def _add_lemma_to_data(self, lemma):
+    def _add_lemma_to_data(self, lemma: str):
         self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
 
     def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> str:
@@ -121,7 +121,7 @@ class ReScanner(CanonicalBot):
                 self.logger.error(f"Error in {task.name}/{lemma}, no data where altered.")
         return task_name
 
-    def get_oldest_datetime(self):
+    def get_oldest_datetime(self) -> datetime:
         datetime_str = min(self.data.values())
         return datetime.strptime(datetime_str, "%Y%m%d%H%M%S")
 
