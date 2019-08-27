@@ -20,7 +20,7 @@ pylint :
 
 bandit :
 	echo "############ BANDIT ############"
-	bandit -r .
+	bandit -r scripts tools
 
 gource :
 	echo "############ GOURCE ############"
