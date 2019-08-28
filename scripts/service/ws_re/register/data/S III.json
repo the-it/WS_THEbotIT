@@ -101,7 +101,8 @@
   },
   {
     "lemma": "Abdera 1",
-    "previous": "Abella"
+    "previous": "Abella",
+    "next": "Abdere"
   },
   {
     "lemma": "Abdera",
@@ -727,11 +728,12 @@
   },
   {
     "lemma": "Agathinos 8",
-    "previous": "Agathias 3"
+    "previous": "Agathias 3",
+    "next": "Agathinos 10"
   },
   {
     "lemma": "Agathinos 10",
-    "previous": "Agathias 3",
+    "previous": "Agathinos 8",
     "next": "Agathodaimon 1",
     "chapters": [
       {
@@ -10019,7 +10021,10 @@
     ]
   },
   {
-    "lemma": "Cataracta"
+    "lemma": "Cataracta",
+    "previous": "Castus 2b",
+    "next": "Catius 8",
+    "redirect": "Fallgatter"
   },
   {
     "lemma": "Catullus 6b",
@@ -19846,12 +19851,19 @@
     ]
   },
   {
-    "lemma": "Ad Iuglandem"
+    "lemma": "Ad Iuglandem",
+    "next": "Abacus 9"
   },
   {
-    "lemma": "Abacus 9"
+    "lemma": "Abacus 9",
+    "previous": "Ad Iuglandem"
   },
   {
-    "lemma": "Epona"
+    "lemma": "Epistula"
+  },
+  {
+    "lemma": "Epona",
+    "previous": "Abacus",
+    "next": "Giganten"
   }
 ]

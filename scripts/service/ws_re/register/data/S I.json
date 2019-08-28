@@ -2025,10 +2025,10 @@
   {
     "lemma": "Ageio",
     "previous": "Agedius",
-    "next": "Ἀγέλαστος πέτϱα"
+    "next": "Ἀγέλαστος πέτρα"
   },
   {
-    "lemma": "Ἀγέλαστος πέτϱα",
+    "lemma": "Ἀγέλαστος πέτρα",
     "previous": "Ageio",
     "next": "Agenor 1a",
     "sort_key": "Agelastos petra",
@@ -2042,7 +2042,7 @@
   },
   {
     "lemma": "Agenor 1a",
-    "previous": "Ἀγέλαστος πέτϱα",
+    "previous": "Ἀγέλαστος πέτρα",
     "next": "Agesandros 4",
     "chapters": [
       {
@@ -2888,7 +2888,8 @@
   },
   {
     "lemma": "Aigle 5",
-    "previous": "Aigle 4"
+    "previous": "Aigle 4",
+    "next": "Aigon 2"
   },
   {
     "lemma": "Aigon 2",
@@ -9407,6 +9408,7 @@
   },
   {
     "lemma": "Archon 3",
+    "previous": "Archon 2",
     "next": "Archon 4"
   },
   {
@@ -10726,7 +10728,13 @@
   },
   {
     "lemma": "Aristos 5",
-    "previous": "Aristophon 6"
+    "previous": "Aristophon 6",
+    "next": "Aristos 10",
+    "sort_key": "Aristos 05"
+  },
+  {
+    "lemma": "Aristos 10",
+    "previous": "Aristos 5"
   },
   {
     "lemma": "Aristoteles 8",
@@ -14489,7 +14497,7 @@
   {
     "lemma": "Baris 5b",
     "previous": "Baris 5a",
-    "next": "Barium",
+    "next": "Baris 9",
     "chapters": [
       {
         "start": 241,
@@ -14500,6 +14508,7 @@
   },
   {
     "lemma": "Baris 9",
+    "previous": "Baris 5b",
     "next": "Barium"
   },
   {
@@ -15602,11 +15611,10 @@
   {
     "lemma": "Boriennus",
     "previous": "Boreios",
-    "next": "Borillus 1"
+    "next": "Borillus"
   },
   {
-    "lemma": "Borillus 1",
-    "previous": "Boriennus"
+    "lemma": "Borillus 1"
   },
   {
     "lemma": "Borillus",
