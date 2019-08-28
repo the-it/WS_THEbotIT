@@ -3,7 +3,7 @@ import json
 import re
 from enum import Enum
 from pathlib import Path
-from typing import Union, Generator
+from typing import Union, Generator, Optional
 
 import roman
 
@@ -25,7 +25,7 @@ _REGEX_MAPPING = {VolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:
 
 
 class Volume:
-    def __init__(self, name: str, year: Union[str, int], start: str = None, end: str = None):
+    def __init__(self, name: str, year: Union[str, int], start: Optional[str] = None, end: Optional[str] = None):
         self._name = name
         self._year = str(year)
         self._start = start
@@ -45,25 +45,25 @@ class Volume:
         return self.name.replace(",", "_")
 
     @property
-    def year(self):
+    def year(self) -> str:
         return self._year
 
     @property
-    def start(self):
+    def start(self) -> Optional[str]:
         return self._start
 
     @property
-    def end(self):
+    def end(self) -> Optional[str]:
         return self._end
 
     @property
-    def type(self):
+    def type(self) -> VolumeType:
         for re_volume_type in _REGEX_MAPPING:
             if _REGEX_MAPPING[re_volume_type].match(self.name):
                 return re_volume_type
         raise ReDatenException(f"Name of Volume {self.name} is malformed.")
 
-    def _compute_sortkey(self):
+    def _compute_sortkey(self) -> str:
         match = _REGEX_MAPPING[self.type].search(self.name)
         key = "4"
         latin_number = 0

@@ -5,6 +5,9 @@ from scripts.service.ws_re.register.lemma import Lemma, LemmaDict
 from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.volumes import VolumeType
 
+# type hints
+RemoveList = List[str]
+
 
 class Updater():
     _REGISTER_PATH = _REGISTER_PATH
@@ -21,7 +24,7 @@ class Updater():
     def __repr__(self):
         return f"<{self.__class__.__name__} - register:{self._register.volume.name}>"
 
-    def update_lemma(self, lemma_dict: LemmaDict, remove_items: List[str], self_supplement: bool = False) -> str:
+    def update_lemma(self, lemma_dict: LemmaDict, remove_items: RemoveList, self_supplement: bool = False) -> str:
         sort_key = VolumeRegister.normalize_sort_key(lemma_dict)
 
         if "lemma" in lemma_dict and self._register.get_lemma_by_name(lemma_dict["lemma"], self_supplement):
@@ -47,7 +50,7 @@ class Updater():
                                 f"with the dict {lemma_dict} is not possible. "
                                 f"No strategy available")
 
-    def _update_lemma_by_name(self, lemma_dict: LemmaDict, remove_items: List[str], self_supplement: bool):
+    def _update_lemma_by_name(self, lemma_dict: LemmaDict, remove_items: RemoveList, self_supplement: bool):
         lemma_to_update = self._register.get_lemma_by_name(lemma_dict["lemma"], self_supplement)
         if self._register.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
             self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
@@ -55,7 +58,7 @@ class Updater():
             lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
             self._try_update_next_and_previous(lemma_dict, lemma_to_update)
 
-    def _update_by_sortkey(self, lemma_dict: LemmaDict, remove_items: List[str]):
+    def _update_by_sortkey(self, lemma_dict: LemmaDict, remove_items: RemoveList):
         lemma_to_update = self._register.get_lemma_by_sort_key(self._register.normalize_sort_key(lemma_dict))
         if self._register.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
             self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
@@ -67,7 +70,7 @@ class Updater():
     def _update_in_supplements_with_neighbour_creation(self,
                                                        lemma_to_update: Lemma,
                                                        lemma_dict: LemmaDict,
-                                                       remove_items: List[str]):
+                                                       remove_items: RemoveList):
         lemma_to_update.update_lemma_dict(lemma_dict, remove_items)
         idx = self._register.get_index_of_lemma(lemma_to_update)
         if idx - 1 >= 0:
