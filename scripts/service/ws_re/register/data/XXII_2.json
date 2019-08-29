@@ -4169,7 +4169,8 @@
     ]
   },
   {
-    "lemma": "Poseidonia"
+    "lemma": "Poseidonia",
+    "next": "Praefectura"
   },
   {
     "lemma": "Praefectura",
@@ -4185,6 +4186,7 @@
   },
   {
     "lemma": "Praefectus Aegypti",
+    "previous": "Praefectura",
     "next": "Praefectus iure dicundo",
     "chapters": [
       {
