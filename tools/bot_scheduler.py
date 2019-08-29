@@ -1,6 +1,6 @@
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Optional
 
 from pywikibot import Site
 
@@ -9,10 +9,10 @@ from tools.bots import BotException, CanonicalBot, OneTimeBot
 
 class BotScheduler(CanonicalBot):
     def __init__(self, wiki: Site, debug: bool):
-        self._daily_bots = None  # type: Tuple[type(CanonicalBot)]
-        self._weekly_bots = None  # type: Dict[int, Tuple[type(CanonicalBot)]]
-        self._monthly_bots = None  # type: Dict[int, Tuple[type(CanonicalBot)]]
-        self._bots_on_last_day_of_month = None  # type: Tuple[type(CanonicalBot)]
+        self._daily_bots: Optional[Tuple[type(CanonicalBot)]] = None
+        self._weekly_bots: Optional[Dict[int, Tuple[type(CanonicalBot)]]] = None
+        self._monthly_bots: Optional[Dict[int, Tuple[type(CanonicalBot)]]] = None
+        self._bots_on_last_day_of_month: Optional[Tuple[type(CanonicalBot)]] = None
         CanonicalBot.__init__(self, wiki, debug)
         self._now = datetime.now()
 

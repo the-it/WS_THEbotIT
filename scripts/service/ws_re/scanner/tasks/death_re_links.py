@@ -40,7 +40,7 @@ class DEALTask(ERROTask):
                     self._check_link(potential_link)
         return True
 
-    def _check_link(self, link_to_check):
+    def _check_link(self, link_to_check: str):
         if link_to_check[0].lower() in self._start_characters:
             if not pywikibot.Page(self.wiki, f"RE:{link_to_check}").exists():
                 self.data.append((link_to_check, self.re_page.lemma_without_prefix))

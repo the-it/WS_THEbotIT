@@ -1,6 +1,7 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta
+from typing import Optional
 
 import pywikibot
 
@@ -16,7 +17,7 @@ class ReScannerTask:
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
-        self.re_page = None  # type: RePage
+        self.re_page: Optional[RePage] = None
         self.processed_pages = []
         self.timeout = timedelta(minutes=1)
         self.load_task()
@@ -53,5 +54,5 @@ class ReScannerTask:
         self.logger.info(f"closing task {self.name}")
 
     @property
-    def name(self):
+    def name(self) -> str:
         return re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)

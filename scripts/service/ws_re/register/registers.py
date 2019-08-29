@@ -14,8 +14,8 @@ class Registers:
 
     def __init__(self):
         self._authors = Authors()
-        self._registers = OrderedDict()   # type: Dict[str, VolumeRegister]
-        self._alphabetic_registers = OrderedDict()  # type: Dict[str, AlphabeticRegister]
+        self._registers: Dict[str, VolumeRegister] = OrderedDict()
+        self._alphabetic_registers: Dict[str, AlphabeticRegister] = OrderedDict()
         for volume in Volumes().all_volumes:
             try:
                 self._registers[volume.name] = VolumeRegister(volume, self._authors)

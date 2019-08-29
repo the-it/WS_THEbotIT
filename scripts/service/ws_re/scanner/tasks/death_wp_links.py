@@ -49,5 +49,5 @@ class DEWPTask(ERROTask):
         body = "\n".join(entries)
         return caption + body
 
-    def _data_exists(self):
+    def _data_exists(self) -> bool:
         return bool(self.data["not_exists"]) or bool(self.data["redirect"])

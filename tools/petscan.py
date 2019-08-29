@@ -1,12 +1,30 @@
-__author__ = "Erik Sommer"
-
+# pylint: disable=ungrouped-imports
+import sys
 import datetime
 import json
+from typing import Dict, Union, List
 from urllib.parse import quote
 
 import requests
 
 from tools import ToolException
+
+if sys.version_info >= (3, 8):
+    from typing import TypedDict  # pylint: disable=no-name-in-module
+
+# type hints
+if sys.version_info >= (3, 8):
+    # typed dicts
+    class PetscanLemma(TypedDict):
+        id: int
+        len: int
+        n: str
+        namespace: int
+        nstext: str
+        title: str
+        touched: str
+else:
+    PetscanLemma = Dict[str, Union[str, int]]
 
 NAMESPACE_MAPPING = {"Article": 0,
                      "Diskussion": 1,
@@ -289,7 +307,7 @@ class PetScan:
         question_string.append("&format=json&doit=1")
         return "".join(question_string)
 
-    def run(self):
+    def run(self) -> List[PetscanLemma]:
         """
         Execute the search query und returns the results as a list.
         @return: list of result dicionaries.
