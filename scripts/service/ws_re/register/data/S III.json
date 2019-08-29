@@ -4921,8 +4921,12 @@
     "next": "Ares 2"
   },
   {
+    "lemma": "Areopolis 3",
+    "next": "Ares 2"
+  },
+  {
     "lemma": "Ares 2",
-    "previous": "Areopolis 2",
+    "previous": "Areopolis 3",
     "next": "Arestianae"
   },
   {
@@ -10914,6 +10918,7 @@
   },
   {
     "lemma": "Clemens 11",
+    "previous": "Claudius 381",
     "chapters": [
       {
         "start": 253,
@@ -15252,7 +15257,9 @@
   },
   {
     "lemma": "Catius 8",
-    "next": "Catius 8a"
+    "previous": "Cataracta",
+    "next": "Catius 8a",
+    "sort_key": "Catius 08"
   },
   {
     "lemma": "Catius 8a",
