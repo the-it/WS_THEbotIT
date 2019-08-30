@@ -878,15 +878,15 @@
   {
     "lemma": "Aponius 8",
     "previous": "Apicatus",
-    "next": "Appuleius 13",
     "sort_key": "Aponius 08"
   },
   {
     "lemma": "Argura 1",
-    "next": "Ἀριαῖοι"
+    "previous": "Arcani",
+    "next": "Ariaioi"
   },
   {
-    "lemma": "Ἀριαῖοι",
+    "lemma": "Ariaioi",
     "previous": "Argura 1",
     "next": "Arrabona",
     "sort_key": "Ariaioi",
@@ -900,7 +900,7 @@
   },
   {
     "lemma": "Arrabona",
-    "previous": "Ἀριαῖοι",
+    "previous": "Ariaioi",
     "next": "Arrecinus 2"
   },
   {
@@ -3727,11 +3727,11 @@
   },
   {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 1"
+    "previous": "Anaximenes 1",
+    "next": "Andautonia"
   },
   {
     "lemma": "Arborius 5",
-    "previous": "Anaximandros 1",
     "next": "Archedemos 5",
     "chapters": [
       {

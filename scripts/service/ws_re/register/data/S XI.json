@@ -339,7 +339,8 @@
   },
   {
     "lemma": "Amythaon 2",
-    "previous": "Ammatas"
+    "previous": "Ammatas",
+    "next": "Anakreon 1"
   },
   {
     "lemma": "Anaitis",
@@ -369,12 +370,11 @@
   },
   {
     "lemma": "Anatomie",
-    "previous": "Anartii",
-    "next": "Andreas 11"
+    "previous": "Anartii"
   },
   {
     "lemma": "Andreas 11",
-    "previous": "Anatomie",
+    "previous": "Anartii",
     "next": "Androkles 11"
   },
   {
@@ -762,11 +762,11 @@
   {
     "lemma": "Chamaileon 1",
     "previous": "Celamantia",
-    "next": "Claudius 211a",
     "redirect": true
   },
   {
     "lemma": "Clementianus 2",
+    "previous": "Claudius 211a",
     "next": "Constantia 6",
     "chapters": [
       {
