@@ -2025,10 +2025,10 @@
   {
     "lemma": "Ageio",
     "previous": "Agedius",
-    "next": "Ἀγέλαστος πέτρα"
+    "next": "Ἀγέλαστος πέτϱα"
   },
   {
-    "lemma": "Ἀγέλαστος πέτρα",
+    "lemma": "Ἀγέλαστος πέτϱα",
     "previous": "Ageio",
     "next": "Agenor 1a",
     "sort_key": "Agelastos petra",
@@ -2042,7 +2042,7 @@
   },
   {
     "lemma": "Agenor 1a",
-    "previous": "Ἀγέλαστος πέτρα",
+    "previous": "Ἀγέλαστος πέτϱα",
     "next": "Agesandros 4",
     "chapters": [
       {
@@ -4553,11 +4553,13 @@
     "previous": "Alisanus"
   },
   {
-    "lemma": "Alkainetos"
+    "lemma": "Alkainetos",
+    "previous": "Alisanus",
+    "next": "Alkainetos 2"
   },
   {
     "lemma": "Alkainetos 2",
-    "previous": "Alkainetos 1",
+    "previous": "Alkainetos",
     "next": "Alkaios 11",
     "chapters": [
       {
@@ -6082,7 +6084,8 @@
   },
   {
     "lemma": "Anaxandros 5",
-    "previous": "Anaxandrides 1"
+    "previous": "Anaxandrides 1",
+    "next": "Anaximandros 1"
   },
   {
     "lemma": "Anaxagoras 5",
@@ -7430,7 +7433,12 @@
     "previous": "Antistius 48"
   },
   {
+    "lemma": "Antium 1",
+    "next": "Antius 8"
+  },
+  {
     "lemma": "Antius 8",
+    "previous": "Antium 1",
     "next": "Antius 10"
   },
   {
@@ -10745,6 +10753,8 @@
   {
     "lemma": "Aristoteles 8",
     "previous": "Aristos 10",
+    "next": "Aristoteles 9",
+    "sort_key": "Aristoteles 08",
     "chapters": [
       {
         "start": 136,
@@ -10755,11 +10765,13 @@
   },
   {
     "lemma": "Aristoteles 9",
+    "previous": "Aristoteles 8",
+    "next": "Aristoteles 12a",
     "sort_key": "Aristoteles 09"
   },
   {
     "lemma": "Aristoteles 12a",
-    "previous": "Aristoteles 8",
+    "previous": "Aristoteles 9",
     "next": "Aristoteles 13",
     "chapters": [
       {
@@ -11760,7 +11772,18 @@
   },
   {
     "lemma": "Asioi",
-    "previous": "Asinius 28"
+    "previous": "Asinius 28",
+    "next": "Asisium"
+  },
+  {
+    "lemma": "Asisium",
+    "previous": "Asioi",
+    "next": "Askalis"
+  },
+  {
+    "lemma": "Askalis",
+    "previous": "Asisium",
+    "next": "Askalos"
   },
   {
     "lemma": "Askalis",
@@ -14426,10 +14449,17 @@
   },
   {
     "lemma": "Bambyke",
-    "previous": "Baltis"
+    "previous": "Baltis",
+    "next": "Bandua"
+  },
+  {
+    "lemma": "Bandua",
+    "previous": "Bambyke",
+    "next": "Bandusiae fons"
   },
   {
     "lemma": "Bandusiae fons",
+    "previous": "Bandua",
     "next": "Bantem"
   },
   {
@@ -16282,7 +16312,17 @@
   },
   {
     "lemma": "Caecilius 86",
-    "previous": "Caecilius 69ff."
+    "previous": "Caecilius 69ff.",
+    "next": "Caecilius 94"
+  },
+  {
+    "lemma": "Caecilius 94",
+    "previous": "Caecilius 86",
+    "next": "Caecilius 99"
+  },
+  {
+    "lemma": "Caecilius 99",
+    "previous": "Caecilius 94"
   },
   {
     "lemma": "Caecilius 104",

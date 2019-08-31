@@ -1006,7 +1006,6 @@
   {
     "lemma": "Arridaios 8",
     "previous": "Aristophanes 8a",
-    "next": "Arybas 2",
     "chapters": [
       {
         "start": 48,
@@ -1017,6 +1016,8 @@
   },
   {
     "lemma": "Arsakes 9",
+    "previous": "Arybas 2",
+    "next": "Arsames 7",
     "chapters": [
       {
         "start": 48,
@@ -1027,8 +1028,6 @@
   },
   {
     "lemma": "Arybas 2",
-    "previous": "Arridaios 8",
-    "next": "Arsakes 9",
     "chapters": [
       {
         "start": 48,
@@ -1039,6 +1038,7 @@
   },
   {
     "lemma": "Arsames 7",
+    "previous": "Arsakes 9",
     "next": "Arsames 8",
     "chapters": [
       {
@@ -3627,11 +3627,11 @@
   {
     "lemma": "Ἱππάρχης",
     "previous": "Himeraios",
-    "next": "Ἱππεῖος",
+    "next": "Hippeios",
     "sort_key": "Hipparches"
   },
   {
-    "lemma": "Ἱππεῖος",
+    "lemma": "Hippeios",
     "previous": "Ἱππάρχης",
     "next": "Hippias 4",
     "sort_key": "Hippeios",
@@ -3645,7 +3645,7 @@
   },
   {
     "lemma": "Hippias 4",
-    "previous": "Ἱππεῖος"
+    "previous": "Hippeios"
   },
   {
     "lemma": "Hippias 9a",
@@ -3881,6 +3881,7 @@
   {
     "lemma": "Ὑδροφύλαξ",
     "previous": "Hydrophoros",
+    "next": "Hydarnes 1",
     "sort_key": "Hydrophylax",
     "chapters": [
       {
@@ -3892,7 +3893,6 @@
   },
   {
     "lemma": "Hylas 4a",
-    "previous": "Hydarnes 3",
     "next": "Hyle 3",
     "chapters": [
       {

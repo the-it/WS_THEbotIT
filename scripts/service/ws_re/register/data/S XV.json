@@ -597,6 +597,7 @@
   },
   {
     "lemma": "Aelius 38a",
+    "previous": "Aelius 36a",
     "next": "Aelius 51a",
     "chapters": [
       {
@@ -608,6 +609,7 @@
   },
   {
     "lemma": "Aelius 51a",
+    "previous": "Aelius 38a",
     "next": "Aelius 69a",
     "chapters": [
       {
@@ -619,6 +621,7 @@
   },
   {
     "lemma": "Aelius 69a",
+    "previous": "Aelius 51a",
     "next": "Aelius 140aa",
     "chapters": [
       {
@@ -631,6 +634,7 @@
   {
     "lemma": "Aelius 140aa",
     "previous": "Aelius 69a",
+    "next": "Aelius 140a",
     "chapters": [
       {
         "start": 3,
@@ -641,6 +645,8 @@
   },
   {
     "lemma": "Aelius 140a",
+    "previous": "Aelius 140aa",
+    "next": "Aemilius 23a",
     "chapters": [
       {
         "start": 3,
@@ -1030,12 +1036,11 @@
   {
     "lemma": "Aurelius 37c",
     "previous": "Aurelius 27",
-    "next": "Aurelius 54a",
     "sort_key": "Aurelius 037c"
   },
   {
     "lemma": "Aurelius 54a",
-    "previous": "Aurelius 37c",
+    "previous": "Aurelius 27",
     "next": "Aurelius 54b",
     "sort_key": "Aurelius 054a",
     "chapters": [
