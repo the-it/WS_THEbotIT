@@ -7422,7 +7422,12 @@
   },
   {
     "lemma": "Antistius 48",
-    "previous": "Antistius 27"
+    "previous": "Antistius 27",
+    "next": "Antitheos 1"
+  },
+  {
+    "lemma": "Antitheos 1",
+    "previous": "Antistius 48"
   },
   {
     "lemma": "Antius 8",
@@ -10734,10 +10739,12 @@
   },
   {
     "lemma": "Aristos 10",
-    "previous": "Aristos 5"
+    "previous": "Aristos 5",
+    "next": "Aristoteles 8"
   },
   {
     "lemma": "Aristoteles 8",
+    "previous": "Aristos 10",
     "chapters": [
       {
         "start": 136,
@@ -11756,7 +11763,12 @@
     "previous": "Asinius 28"
   },
   {
+    "lemma": "Askalis",
+    "next": "Askalos"
+  },
+  {
     "lemma": "Askalos",
+    "previous": "Askalis",
     "next": "Askania 3"
   },
   {
@@ -13007,13 +13019,17 @@
   {
     "lemma": "Avidius 1",
     "previous": "Avida",
+    "next": "Avidius 3",
     "sort_key": "Avidius 01"
   },
   {
-    "lemma": "Avidius 3"
+    "lemma": "Avidius 3",
+    "previous": "Avidius 1",
+    "next": "Avidius 4"
   },
   {
     "lemma": "Avidius 4",
+    "previous": "Avidius 3",
     "next": "Avidius 8",
     "sort_key": "Avidius 04"
   },
@@ -16269,7 +16285,12 @@
     "previous": "Caecilius 69ff."
   },
   {
+    "lemma": "Caecilius 104",
+    "next": "Caecilius 112"
+  },
+  {
     "lemma": "Caecilius 112",
+    "previous": "Caecilius 104",
     "next": "Caecilius 117"
   },
   {
