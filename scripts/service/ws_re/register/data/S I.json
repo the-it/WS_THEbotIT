@@ -11786,6 +11786,10 @@
     "next": "Askalos"
   },
   {
+    "lemma": "Askalis",
+    "next": "Askalos"
+  },
+  {
     "lemma": "Askalos",
     "previous": "Askalis",
     "next": "Askania 3"
@@ -13038,10 +13042,12 @@
   {
     "lemma": "Avidius 1",
     "previous": "Avida",
+    "next": "Avidius 3",
     "sort_key": "Avidius 01"
   },
   {
     "lemma": "Avidius 3",
+    "previous": "Avidius 1",
     "next": "Avidius 4"
   },
   {
@@ -16319,7 +16325,12 @@
     "previous": "Caecilius 94"
   },
   {
+    "lemma": "Caecilius 104",
+    "next": "Caecilius 112"
+  },
+  {
     "lemma": "Caecilius 112",
+    "previous": "Caecilius 104",
     "next": "Caecilius 117"
   },
   {

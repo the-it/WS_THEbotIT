@@ -107,15 +107,16 @@
   {
     "lemma": "Agesistratos",
     "previous": "Afranius 10a",
-    "next": "Aiacius 3",
+    "next": "Aiacius 2",
     "redirect": "Athenaios 23"
   },
   {
-    "lemma": "Aiacius 2"
+    "lemma": "Aiacius 2",
+    "previous": "Agesistratos",
+    "next": "Albiobola"
   },
   {
     "lemma": "Aiacius 3",
-    "previous": "Agesistratos",
     "next": "Albiobola"
   },
   {
@@ -1149,7 +1150,13 @@
     "previous": "Claudius 188"
   },
   {
+    "lemma": "Claudius 357",
+    "next": "Claudius 415"
+  },
+  {
     "lemma": "Claudius 415",
+    "previous": "Claudius 357",
+    "next": "Coeba(?)",
     "chapters": [
       {
         "start": 24,
@@ -1159,7 +1166,6 @@
   },
   {
     "lemma": "Comberania",
-    "previous": "Colonia 34a",
     "next": "Cornelius 145",
     "chapters": [
       {

@@ -2,7 +2,7 @@
 
 set -x
 sudo apt-get update
-sudo apt-get install -y python-pip git python3-apt
+sudo apt-get install -y python-pip git
 sudo pip install ansible
 ANSIBLE_REPO="ansible_roles"
 if [ ! -d "$ANSIBLE_REPO" ] ; then
