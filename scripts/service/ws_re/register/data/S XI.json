@@ -370,11 +370,12 @@
   },
   {
     "lemma": "Anatomie",
-    "previous": "Anartii"
+    "previous": "Anartii",
+    "next": "Andreas 11"
   },
   {
     "lemma": "Andreas 11",
-    "previous": "Anartii",
+    "previous": "Anatomie",
     "next": "Androkles 11"
   },
   {
@@ -762,11 +763,11 @@
   {
     "lemma": "Chamaileon 1",
     "previous": "Celamantia",
+    "next": "Claudius 211a",
     "redirect": true
   },
   {
     "lemma": "Clementianus 2",
-    "previous": "Claudius 211a",
     "next": "Constantia 6",
     "chapters": [
       {
@@ -779,11 +780,12 @@
   {
     "lemma": "Constantia 6",
     "previous": "Clementianus 2",
+    "next": "Cornacates",
     "sort_key": "Constantia 06"
   },
   {
     "lemma": "Claudius 211a",
-    "previous": "Chamaileon 1",
+    "next": "Clementianus 2",
     "chapters": [
       {
         "start": 372,
@@ -794,7 +796,6 @@
   },
   {
     "lemma": "Cornacates",
-    "previous": "Constantia 6",
     "next": "Cornelius 395"
   },
   {

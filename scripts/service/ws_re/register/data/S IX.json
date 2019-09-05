@@ -13,7 +13,6 @@
   {
     "lemma": "Aelius 42a",
     "previous": "Acilius 28a",
-    "next": "Aelius 92a",
     "sort_key": "Aelius 042a",
     "chapters": [
       {
@@ -25,6 +24,7 @@
   },
   {
     "lemma": "Aelius 122a",
+    "previous": "Aelius 92a",
     "chapters": [
       {
         "start": 1,
@@ -134,6 +134,7 @@
   {
     "lemma": "Antimachidas",
     "previous": "Annamatia",
+    "next": "Antonius 95a",
     "chapters": [
       {
         "start": 11,
@@ -144,7 +145,6 @@
   },
   {
     "lemma": "Aquilinus 7",
-    "previous": "Apesas 1",
     "next": "Aratza",
     "sort_key": "Aquilinus 07",
     "chapters": [
@@ -193,11 +193,11 @@
   },
   {
     "lemma": "Apesas 1",
-    "previous": "Antonius 95a",
-    "next": "Aquilinus 7"
+    "previous": "Antonius 95a"
   },
   {
     "lemma": "Arekrat",
+    "previous": "Areimanios",
     "next": "Argyra 1",
     "chapters": [
       {
@@ -391,11 +391,11 @@
   },
   {
     "lemma": "Buphagion",
-    "previous": "Bomos Athenas"
+    "previous": "Bomos Athenas",
+    "next": "Bura 1"
   },
   {
     "lemma": "Aurelius 163a",
-    "previous": "Aurelius 157a",
     "next": "Aurelius 217a",
     "chapters": [
       {

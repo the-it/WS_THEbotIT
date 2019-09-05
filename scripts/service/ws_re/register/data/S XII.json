@@ -327,10 +327,11 @@
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 57",
-    "next": "Aelius 134b"
+    "next": "Aelius 78a"
   },
   {
     "lemma": "Aelius 78a",
+    "previous": "Aelius 76",
     "next": "Aelius 134b"
   },
   {
@@ -883,10 +884,10 @@
   {
     "lemma": "Argura 1",
     "previous": "Arcani",
-    "next": "Ariaioi"
+    "next": "Ἀριαῖοι"
   },
   {
-    "lemma": "Ariaioi",
+    "lemma": "Ἀριαῖοι",
     "previous": "Argura 1",
     "next": "Arrabona",
     "sort_key": "Ariaioi",
@@ -900,7 +901,7 @@
   },
   {
     "lemma": "Arrabona",
-    "previous": "Ariaioi",
+    "previous": "Ἀριαῖοι",
     "next": "Arrecinus 2"
   },
   {
@@ -1154,6 +1155,7 @@
   {
     "lemma": "Balchobaudes",
     "previous": "Bainobaudes 3",
+    "next": "Bappo 2",
     "chapters": [
       {
         "start": 131,
@@ -1164,7 +1166,6 @@
   },
   {
     "lemma": "Barbius 1a",
-    "previous": "Bappo 2",
     "next": "Bassa 2",
     "chapters": [
       {
@@ -1469,6 +1470,7 @@
   {
     "lemma": "Caravantius",
     "previous": "Caravantis",
+    "next": "Cassius 45a",
     "chapters": [
       {
         "start": 137,
@@ -1479,7 +1481,6 @@
   },
   {
     "lemma": "Castra, Castrum 1a",
-    "previous": "Cassius 45a",
     "next": "Catienus 1a",
     "chapters": [
       {
@@ -3727,11 +3728,11 @@
   },
   {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 1",
-    "next": "Andautonia"
+    "previous": "Anaximenes 1"
   },
   {
     "lemma": "Arborius 5",
+    "previous": "Anaximandros 1",
     "next": "Archedemos 5",
     "chapters": [
       {

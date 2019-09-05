@@ -85,11 +85,12 @@
   {
     "lemma": "Aemilius 54b",
     "previous": "Aemilius 43",
+    "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
   },
   {
     "lemma": "Aemilius 79",
-    "previous": "Aemilius 43",
+    "previous": "Aemilius 54b",
     "next": "Afranius 10a"
   },
   {
@@ -1099,7 +1100,9 @@
   },
   {
     "lemma": "Claudius 186",
-    "next": "Claudius 187"
+    "previous": "Claudius 71",
+    "next": "Claudius 187",
+    "sort_key": "Claudius"
   },
   {
     "lemma": "Claudius 187",
@@ -1109,10 +1112,16 @@
   },
   {
     "lemma": "Claudius 188",
-    "previous": "Claudius 187"
+    "previous": "Claudius 187",
+    "sort_key": "Claudius"
+  },
+  {
+    "lemma": "Claudius 187",
+    "next": "Claudius 194"
   },
   {
     "lemma": "Claudius 194",
+    "previous": "Claudius 187",
     "next": "Claudius 357",
     "sort_key": "Claudius"
   },

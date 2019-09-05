@@ -8617,7 +8617,7 @@
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Bosporos 1",
+    "previous": "Byzantion 1",
     "next": "Boudillus"
   },
   {
@@ -9234,7 +9234,28 @@
   },
   {
     "lemma": "Caecilius 73",
-    "previous": "Caecilius 72"
+    "previous": "Caecilius 72",
+    "next": "Caecilius 76"
+  },
+  {
+    "lemma": "Caecilius 76",
+    "previous": "Caecilius 73",
+    "next": "Caecilius 82"
+  },
+  {
+    "lemma": "Caecilius 82",
+    "previous": "Caecilius 76",
+    "next": "Caecilius 83",
+    "sort_key": "Caecilius 082"
+  },
+  {
+    "lemma": "Caecilius 83",
+    "previous": "Caecilius 82",
+    "next": "Caecilius 84"
+  },
+  {
+    "lemma": "Caecilius 84",
+    "previous": "Caecilius 83"
   },
   {
     "lemma": "Caecilius 73. 76",
@@ -9247,7 +9268,12 @@
     ]
   },
   {
+    "lemma": "Caecilius 91",
+    "next": "Caecilius 94"
+  },
+  {
     "lemma": "Caecilius 94",
+    "previous": "Caecilius 91",
     "next": "Caecilius 96"
   },
   {
@@ -9761,7 +9787,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium vetus",
+    "next": "Capitolium 3",
     "chapters": [
       {
         "start": 233,
@@ -9771,13 +9797,15 @@
     ]
   },
   {
-    "lemma": "Capitolium vetus",
-    "previous": "Capienacus oder Capionacus",
+    "lemma": "Capitolium vetus"
+  },
+  {
+    "lemma": "Capitolium 3",
     "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium vetus",
+    "previous": "Capitolium 3",
     "next": "Caprasius",
     "chapters": [
       {
@@ -10049,11 +10077,13 @@
   {
     "lemma": "Castricius 6",
     "previous": "Castricianae figlinae",
+    "next": "Castus 5",
     "sort_key": "Castricius 06"
   },
   {
     "lemma": "Castus 5",
     "previous": "Castricius 6",
+    "next": "Castus 6",
     "chapters": [
       {
         "start": 237,
@@ -10063,13 +10093,18 @@
     ]
   },
   {
+    "lemma": "Castus 6",
+    "previous": "Castus 5",
+    "next": "Cataracta"
+  },
+  {
     "lemma": "Cataracta",
-    "previous": "Castus 2b",
-    "next": "Catius 8",
+    "previous": "Castus 6",
     "redirect": "Fallgatter"
   },
   {
     "lemma": "Catullus 6b",
+    "previous": "Catullus 6a",
     "next": "Caturniacus 1"
   },
   {
@@ -10957,6 +10992,7 @@
   {
     "lemma": "Clemens 11",
     "previous": "Claudius 381",
+    "next": "Cleppius",
     "chapters": [
       {
         "start": 253,
@@ -11414,7 +11450,12 @@
   },
   {
     "lemma": "Cornelius 335",
-    "previous": "Cornelius 317ff."
+    "previous": "Cornelius 317ff.",
+    "next": "Cornelius 336"
+  },
+  {
+    "lemma": "Cornelius 336",
+    "previous": "Cornelius 335"
   },
   {
     "lemma": "Cornelius 208",
@@ -15309,7 +15350,8 @@
   },
   {
     "lemma": "Catullus 6a",
-    "previous": "Catius 8a"
+    "previous": "Catius 8a",
+    "next": "Catullus 6b"
   },
   {
     "lemma": "Fannius 1",
