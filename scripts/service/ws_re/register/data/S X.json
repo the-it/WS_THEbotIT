@@ -1451,10 +1451,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε"
+    "next": "Ἀρχε(..."
   },
   {
-    "lemma": "Ἀρχε",
+    "lemma": "Ἀρχε(...",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1468,7 +1468,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε",
+    "previous": "Ἀρχε(...",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -1838,7 +1838,7 @@
   {
     "lemma": "Athanias 3",
     "previous": "Astydamas 2",
-    "next": "Ἀθη...",
+    "next": "Ἀθη-",
     "chapters": [
       {
         "start": 47,
@@ -1848,9 +1848,9 @@
     ]
   },
   {
-    "lemma": "Ἀθη...",
+    "lemma": "Ἀθη-",
     "previous": "Athanias 3",
-    "next": "Athenai 1A",
+    "next": "Athenai 1b",
     "sort_key": "Athe(...",
     "chapters": [
       {
@@ -1861,13 +1861,15 @@
     ]
   },
   {
-    "lemma": "Athenai 1A",
-    "previous": "Ἀθη...",
-    "next": "Athenaios 28"
+    "lemma": "Athenai 1b",
+    "previous": "Ἀθη-",
+    "next": "Athenaios 28",
+    "wp_link": "w:de:Athen",
+    "ws_link": "s:de:Athen"
   },
   {
     "lemma": "Athenaios 28",
-    "previous": "Athenai 1A",
+    "previous": "Athenai 1b",
     "next": "Athenodoros 9",
     "chapters": [
       {
@@ -2150,11 +2152,11 @@
   {
     "lemma": "Autolykos 6",
     "previous": "Αὐτο(...",
-    "next": "Βαβύλλιος",
+    "next": "Babyllios",
     "sort_key": "Auto(---"
   },
   {
-    "lemma": "Βαβύλλιος",
+    "lemma": "Babyllios",
     "previous": "Autolykos 6",
     "next": "Βακχ(---)",
     "sort_key": "Babyllios",
@@ -2168,7 +2170,7 @@
   },
   {
     "lemma": "Βακχ(---)",
-    "previous": "Βαβύλλιος",
+    "previous": "Babyllios",
     "next": "Βασιλείδης 1a",
     "sort_key": "Bakch",
     "chapters": [
@@ -2195,10 +2197,10 @@
   {
     "lemma": "Bathyllos 7",
     "previous": "Βασιλείδης 1a",
-    "next": "Βελεμινάτου"
+    "next": "(Βελε)μινάτου"
   },
   {
-    "lemma": "Βελεμινάτου",
+    "lemma": "(Βελε)μινάτου",
     "previous": "Bathyllos 7",
     "next": "Beste",
     "sort_key": "Beleminatu",
@@ -2212,7 +2214,7 @@
   },
   {
     "lemma": "Beste",
-    "previous": "Βελεμινάτου",
+    "previous": "(Βελε)μινάτου",
     "next": "Bestia deselutia",
     "redirect": "Bestia deselutia",
     "chapters": [
@@ -2466,6 +2468,7 @@
   {
     "lemma": "Claudius 242a",
     "previous": "Claudius 10a",
+    "next": "Clodius 73",
     "chapters": [
       {
         "start": 132,
@@ -2476,7 +2479,6 @@
   },
   {
     "lemma": "Collegium",
-    "previous": "cohortes urbanae",
     "next": "Constantiniani"
   },
   {
