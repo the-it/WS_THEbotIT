@@ -1840,11 +1840,11 @@
   },
   {
     "lemma": "Cornelius 297",
-    "previous": "Cornelius 296a"
+    "previous": "Cornelius 296a",
+    "next": "Cornelius 297a"
   },
   {
     "lemma": "Cornelius 366",
-    "previous": "Cornelius 359",
     "next": "Cornelius 398a"
   },
   {
@@ -3715,11 +3715,10 @@
   {
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
-    "next": "Anaximenes 2"
+    "next": "Arborius 5"
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1",
     "next": "Andania 1"
   },
   {
@@ -3865,10 +3864,11 @@
   {
     "lemma": "Carnuntum",
     "previous": "Carniola",
-    "next": "Ephesos"
+    "next": "Chilperich"
   },
   {
     "lemma": "Chilperich",
+    "previous": "Carnuntum",
     "next": "Ephesos",
     "chapters": [
       {

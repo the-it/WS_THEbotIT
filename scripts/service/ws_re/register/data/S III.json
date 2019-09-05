@@ -11041,7 +11041,9 @@
   },
   {
     "lemma": "Clodius 47",
-    "next": "Clodius 55a"
+    "previous": "Clodius 5a",
+    "next": "Clodius 55a",
+    "sort_key": "Clodius 05"
   },
   {
     "lemma": "Clodius 55a",
@@ -11213,12 +11215,11 @@
   },
   {
     "lemma": "Cominius 10",
-    "previous": "Comicato",
-    "next": "Cominius 2a"
+    "previous": "Comicato"
   },
   {
     "lemma": "Cominius 2a",
-    "previous": "Cominius 10",
+    "previous": "Comicato",
     "next": "Comisillus",
     "chapters": [
       {
@@ -11307,10 +11308,12 @@
   },
   {
     "lemma": "Contrebia 2",
-    "previous": "Contrebia 1"
+    "previous": "Contrebia 1",
+    "next": "Coocus"
   },
   {
     "lemma": "Coocus",
+    "previous": "Contrebia 2",
     "next": "Corcoras",
     "chapters": [
       {
@@ -11480,7 +11483,22 @@
     ]
   },
   {
+    "lemma": "Cornelius 338",
+    "next": "Cornelius 347"
+  },
+  {
+    "lemma": "Cornelius 347",
+    "previous": "Cornelius 338",
+    "next": "Cornelius 351"
+  },
+  {
+    "lemma": "Cornelius 351",
+    "previous": "Cornelius 347",
+    "next": "Cornelius 354"
+  },
+  {
     "lemma": "Cornelius 354",
+    "previous": "Cornelius 351",
     "next": "Cornelius 373"
   },
   {
@@ -12552,6 +12570,7 @@
   },
   {
     "lemma": "Deiotaros 1",
+    "previous": "Dedicatio",
     "next": "Deiotaros 2",
     "chapters": [
       {
@@ -12586,6 +12605,7 @@
   },
   {
     "lemma": "Deiotarus 2",
+    "previous": "Dedicatio",
     "next": "Deiotarus 4"
   },
   {
@@ -19681,6 +19701,7 @@
   },
   {
     "lemma": "Jonquières",
+    "previous": "Iolaos 6",
     "next": "Jouey",
     "chapters": [
       {
@@ -19945,7 +19966,8 @@
   },
   {
     "lemma": "Abacus 9",
-    "previous": "Ad Iuglandem"
+    "previous": "Ad Iuglandem",
+    "next": "Epona"
   },
   {
     "lemma": "Epistula"

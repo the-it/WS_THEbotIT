@@ -4718,7 +4718,6 @@
     "lemma": "Alkinoe 4",
     "previous": "Alkimos 17a",
     "next": "Alkippos",
-    "wp_link": "w:de:Alkinoe",
     "chapters": [
       {
         "start": 62,
@@ -19135,10 +19134,30 @@
   },
   {
     "lemma": "Cornelius 141",
-    "previous": "Cornelius 136"
+    "previous": "Cornelius 136",
+    "next": "Cornelius 143"
+  },
+  {
+    "lemma": "Cornelius 143",
+    "previous": "Cornelius 141",
+    "next": "Cornelius 146"
+  },
+  {
+    "lemma": "Cornelius 146",
+    "previous": "Cornelius 143"
+  },
+  {
+    "lemma": "Cornelius 335",
+    "next": "Cornelius 337"
+  },
+  {
+    "lemma": "Cornelius 337",
+    "previous": "Cornelius 335",
+    "next": "Cornelius 350"
   },
   {
     "lemma": "Cornelius 350",
+    "previous": "Cornelius 337",
     "next": "Cornelius 351"
   },
   {
