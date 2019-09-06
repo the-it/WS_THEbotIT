@@ -1451,10 +1451,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε(..."
+    "next": "Ἀρχε..."
   },
   {
-    "lemma": "Ἀρχε(...",
+    "lemma": "Ἀρχε...",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1468,7 +1468,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε(...",
+    "previous": "Ἀρχε...",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -1511,10 +1511,10 @@
   {
     "lemma": "Arimnestos 6a",
     "previous": "Ἀρι...",
-    "next": "Ἀριστ(..."
+    "next": "Ἀριστ..."
   },
   {
-    "lemma": "Ἀριστ(...",
+    "lemma": "Ἀριστ...",
     "previous": "Arimnestos 6a",
     "next": "Aristagoras 9a",
     "sort_key": "Arist...",
@@ -1528,7 +1528,7 @@
   },
   {
     "lemma": "Aristagoras 9a",
-    "previous": "Ἀριστ(...",
+    "previous": "Ἀριστ...",
     "next": "Aristarchos 10"
   },
   {
@@ -2197,10 +2197,10 @@
   {
     "lemma": "Bathyllos 7",
     "previous": "Βασιλείδης 1a",
-    "next": "(Βελε)μινάτου"
+    "next": "Βελεμινάτου"
   },
   {
-    "lemma": "(Βελε)μινάτου",
+    "lemma": "Βελεμινάτου",
     "previous": "Bathyllos 7",
     "next": "Beste",
     "sort_key": "Beleminatu",
@@ -2214,7 +2214,7 @@
   },
   {
     "lemma": "Beste",
-    "previous": "(Βελε)μινάτου",
+    "previous": "Βελεμινάτου",
     "next": "Bestia deselutia",
     "redirect": "Bestia deselutia",
     "chapters": [
@@ -2360,7 +2360,7 @@
   {
     "lemma": "Charidemos 4a",
     "previous": "Charias 2",
-    "next": "χειρόγραφον",
+    "next": "Chirographum",
     "chapters": [
       {
         "start": 126,
@@ -2371,6 +2371,7 @@
   },
   {
     "lemma": "Chirographum",
+    "previous": "Charidemos 4a",
     "next": "Choraules"
   },
   {

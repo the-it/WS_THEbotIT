@@ -730,12 +730,11 @@
   },
   {
     "lemma": "Agathinos 8",
-    "previous": "Agathias 3",
-    "next": "Agathinos 10"
+    "previous": "Agathias 3"
   },
   {
     "lemma": "Agathinos 10",
-    "previous": "Agathinos 8",
+    "previous": "Agathias 3",
     "next": "Agathodaimon 1",
     "chapters": [
       {
@@ -1134,7 +1133,7 @@
   {
     "lemma": "Aix 3",
     "previous": "Aitolos",
-    "next": "Akanthos 1",
+    "next": "Akanthos 5a",
     "sort_key": "Aix 3",
     "chapters": [
       {
@@ -1146,11 +1145,16 @@
   },
   {
     "lemma": "Akanthos 5a",
+    "previous": "Aix 3",
+    "next": "Akatos",
     "sort_key": "Akanthos 5a"
   },
   {
+    "lemma": "Akatos",
+    "previous": "Akanthos 5a"
+  },
+  {
     "lemma": "Akanthos 1",
-    "previous": "Aix 3",
     "next": "Akatos 2",
     "chapters": [
       {
@@ -1193,10 +1197,10 @@
   {
     "lemma": "Aktor 1",
     "previous": "Akestor 6",
-    "next": "Alanoviiamuthis"
+    "next": "Alanouiiamuthis"
   },
   {
-    "lemma": "Alanoviiamuthis",
+    "lemma": "Alanouiiamuthis",
     "previous": "Aktor 1",
     "next": "Albacina",
     "chapters": [
@@ -1209,7 +1213,7 @@
   },
   {
     "lemma": "Albacina",
-    "previous": "Alanoviiamuthis",
+    "previous": "Alanouiiamuthis",
     "next": "Albanus 1a",
     "chapters": [
       {
@@ -1450,7 +1454,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1460,12 +1464,15 @@
     ]
   },
   {
-    "lemma": "Alexias 5",
-    "previous": "Alexinos 2",
-    "next": "Alfius 6"
+    "lemma": "Alexias 5"
+  },
+  {
+    "lemma": "Alexinos",
+    "next": "Alexios"
   },
   {
     "lemma": "Alexios",
+    "previous": "Alexinos",
     "next": "Alfius 6"
   },
   {
@@ -5643,11 +5650,10 @@
   {
     "lemma": "Aschenurnen",
     "previous": "Aschaffenburg",
-    "next": "Ascia"
+    "next": "Asciacus"
   },
   {
     "lemma": "Ascia",
-    "previous": "Aschenurnen",
     "next": "Asciacus"
   },
   {
