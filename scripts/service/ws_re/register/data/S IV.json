@@ -3626,11 +3626,11 @@
   {
     "lemma": "Ἱππάρχης",
     "previous": "Himeraios",
-    "next": "Hippeios",
+    "next": "Ἱππεῖος",
     "sort_key": "Hipparches"
   },
   {
-    "lemma": "Hippeios",
+    "lemma": "Ἱππεῖος",
     "previous": "Ἱππάρχης",
     "next": "Hippias 4",
     "sort_key": "Hippeios",
@@ -3644,7 +3644,7 @@
   },
   {
     "lemma": "Hippias 4",
-    "previous": "Hippeios"
+    "previous": "Ἱππεῖος"
   },
   {
     "lemma": "Hippias 9a",
@@ -3880,7 +3880,6 @@
   {
     "lemma": "Ὑδροφύλαξ",
     "previous": "Hydrophoros",
-    "next": "Hydarnes 1",
     "sort_key": "Hydrophylax",
     "chapters": [
       {
@@ -3892,6 +3891,7 @@
   },
   {
     "lemma": "Hylas 4a",
+    "previous": "Hydarnes 3",
     "next": "Hyle 3",
     "chapters": [
       {
