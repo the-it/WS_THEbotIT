@@ -9762,9 +9762,6 @@
     ]
   },
   {
-    "lemma": "Capitolium vetus"
-  },
-  {
     "lemma": "Capitolium 3",
     "next": "Capitolinus 8"
   },
@@ -10066,6 +10063,16 @@
     "lemma": "Cataracta",
     "previous": "Castus 6",
     "redirect": "Fallgatter"
+  },
+  {
+    "lemma": "Catius 8a",
+    "next": "Catullus 6a",
+    "sort_key": "Catius 08a"
+  },
+  {
+    "lemma": "Catullus 6a",
+    "previous": "Catius 8a",
+    "next": "Catullus 6b"
   },
   {
     "lemma": "Catullus 6b",
@@ -11184,7 +11191,6 @@
   },
   {
     "lemma": "Cominius 2a",
-    "previous": "Comicato",
     "next": "Comisillus",
     "chapters": [
       {
@@ -12567,16 +12573,6 @@
         "author": "Rosenberg"
       }
     ]
-  },
-  {
-    "lemma": "Deiotarus 2",
-    "previous": "Dedicatio",
-    "next": "Deiotarus 4"
-  },
-  {
-    "lemma": "Deiotarus 4",
-    "previous": "Deiotarus 2",
-    "next": "Deiotaros 5"
   },
   {
     "lemma": "Deiotaros 5",
@@ -14469,9 +14465,10 @@
     ]
   },
   {
-    "lemma": "Epistula 1",
+    "lemma": "Epistula",
     "previous": "Ἐπιστάτης εἰρήνης"
   },
+  {"lemma": "Epona"},
   {
     "lemma": "Eporedorix",
     "next": "Eppillius",
@@ -15317,26 +15314,6 @@
         "author": "Gossen"
       }
     ]
-  },
-  {
-    "lemma": "Castus 2b"
-  },
-  {
-    "lemma": "Catius 8",
-    "previous": "Cataracta",
-    "next": "Catius 8a",
-    "sort_key": "Catius 08"
-  },
-  {
-    "lemma": "Catius 8a",
-    "previous": "Catius 8",
-    "next": "Catullus 6a",
-    "sort_key": "Catius 08a"
-  },
-  {
-    "lemma": "Catullus 6a",
-    "previous": "Catius 8a",
-    "next": "Catullus 6b"
   },
   {
     "lemma": "Fannius 1",
@@ -19935,11 +19912,7 @@
     "next": "Epona"
   },
   {
-    "lemma": "Epistula"
-  },
-  {
     "lemma": "Epona",
-    "previous": "Abacus",
     "next": "Giganten"
   }
 ]
