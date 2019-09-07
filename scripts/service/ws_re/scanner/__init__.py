@@ -142,6 +142,9 @@ class ReScanner(CanonicalBot):
                 error_task.task(lemma, error)
                 self._add_lemma_to_data(lemma)
                 continue
+            except pywikibot.exceptions.TimeoutError:
+                self.logger.error(f"Timeout at lemma ({lemma}) creation")
+                continue
             if re_page.has_changed():
                 list_of_done_tasks.append("BASE")
             for task in active_tasks:
