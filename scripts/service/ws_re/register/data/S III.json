@@ -70,7 +70,7 @@
   },
   {
     "lemma": "Abbo 2",
-    "previous": "Abas",
+    "previous": "Abas 12",
     "next": "abecedarius, -a, -um",
     "chapters": [
       {
@@ -1140,6 +1140,7 @@
   },
   {
     "lemma": "Akanthos 1",
+    "previous": "Aix 3",
     "next": "Akatos 2",
     "chapters": [
       {
@@ -1182,10 +1183,10 @@
   {
     "lemma": "Aktor 1",
     "previous": "Akestor 6",
-    "next": "Alanouiiamuthis"
+    "next": "Alanoviiamuthis"
   },
   {
-    "lemma": "Alanouiiamuthis",
+    "lemma": "Alanoviiamuthis",
     "previous": "Aktor 1",
     "next": "Albacina",
     "chapters": [
@@ -1198,7 +1199,7 @@
   },
   {
     "lemma": "Albacina",
-    "previous": "Alanouiiamuthis",
+    "previous": "Alanoviiamuthis",
     "next": "Albanus 1a",
     "chapters": [
       {
@@ -1439,7 +1440,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexios",
+    "next": "Alexias 5",
     "chapters": [
       {
         "start": 80,
@@ -1449,13 +1450,13 @@
     ]
   },
   {
-    "lemma": "Alexios",
-    "previous": "Alexinos",
+    "lemma": "Alexias 5",
+    "previous": "Alexinos 2",
     "next": "Alfius 6"
   },
   {
     "lemma": "Alfius 6",
-    "previous": "Alexios",
+    "previous": "Alexias 5",
     "next": "Algalsos"
   },
   {
@@ -4913,6 +4914,7 @@
   },
   {
     "lemma": "Ares 2",
+    "previous": "Areopolis 2",
     "next": "Arestianae"
   },
   {
@@ -9752,7 +9754,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium 3",
+    "next": "Capitolium vetus",
     "chapters": [
       {
         "start": 233,
@@ -9762,12 +9764,13 @@
     ]
   },
   {
-    "lemma": "Capitolium 3",
+    "lemma": "Capitolium vetus",
+    "previous": "Capienacus oder Capionacus",
     "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium 3",
+    "previous": "Capitolium vetus",
     "next": "Caprasius",
     "chapters": [
       {
@@ -14454,7 +14457,7 @@
   {
     "lemma": "Ἐπιστάτης εἰρήνης",
     "previous": "Epimenes 1a",
-    "next": "Epistula 1",
+    "next": "Epistula",
     "sort_key": "Epistates eirenes",
     "redirect": "Εἰρηνοφύλακες",
     "chapters": [
@@ -14466,11 +14469,17 @@
   },
   {
     "lemma": "Epistula",
-    "previous": "Ἐπιστάτης εἰρήνης"
+    "previous": "Ἐπιστάτης εἰρήνης",
+    "next": "Epona"
   },
-  {"lemma": "Epona"},
+  {
+    "lemma": "Epona",
+    "previous": "Epistula",
+    "next": "Eporedorix"
+  },
   {
     "lemma": "Eporedorix",
+    "previous": "Epona",
     "next": "Eppillius",
     "chapters": [
       {
@@ -19913,6 +19922,7 @@
   },
   {
     "lemma": "Epona",
+    "previous": "Abacus 9",
     "next": "Giganten"
   }
 ]

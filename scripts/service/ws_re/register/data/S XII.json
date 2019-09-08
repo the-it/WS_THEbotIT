@@ -599,11 +599,11 @@
   },
   {
     "lemma": "Anaxagoras 4",
-    "previous": "Amelas"
+    "previous": "Amelas",
+    "next": "Anaximandros 1"
   },
   {
     "lemma": "Andautonia",
-    "previous": "Andania 1",
     "next": "Andeda"
   },
   {
@@ -879,11 +879,11 @@
   {
     "lemma": "Aponius 8",
     "previous": "Apicatus",
+    "next": "Appuleius 13",
     "sort_key": "Aponius 08"
   },
   {
     "lemma": "Argura 1",
-    "previous": "Arcani",
     "next": "Ariaioi"
   },
   {
@@ -3715,10 +3715,11 @@
   {
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
-    "next": "Arborius 5"
+    "next": "Anaximenes 2"
   },
   {
     "lemma": "Anaximenes 2",
+    "previous": "Anaximandros 1",
     "next": "Andania 1"
   },
   {

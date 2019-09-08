@@ -642,10 +642,13 @@
   },
   {
     "lemma": "Aphneïs",
-    "previous": "Aphamios 3"
+    "previous": "Aphamios 3",
+    "next": "Aphobetos 2"
   },
   {
     "lemma": "Aphobetos 2",
+    "previous": "Aphneïs",
+    "next": "Aphrikes",
     "chapters": [
       {
         "start": 44,
@@ -656,6 +659,7 @@
   },
   {
     "lemma": "Aphrikes",
+    "previous": "Aphobetos 2",
     "next": "Apollodoros 41a",
     "chapters": [
       {
@@ -1737,7 +1741,7 @@
       }
     ]
   },
-    {
+  {
     "lemma": "Demarchos 6",
     "previous": "Deinokrates 5a",
     "next": "Demetrios 48a",
