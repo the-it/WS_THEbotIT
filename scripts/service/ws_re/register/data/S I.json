@@ -2025,10 +2025,10 @@
   {
     "lemma": "Ageio",
     "previous": "Agedius",
-    "next": "Ἀγέλαστος πέτρα"
+    "next": "Ἀγέλαστος πέτϱα"
   },
   {
-    "lemma": "Ἀγέλαστος πέτρα",
+    "lemma": "Ἀγέλαστος πέτϱα",
     "previous": "Ageio",
     "next": "Agenor 1a",
     "sort_key": "Agelastos petra",
@@ -2042,7 +2042,7 @@
   },
   {
     "lemma": "Agenor 1a",
-    "previous": "Ἀγέλαστος πέτρα",
+    "previous": "Ἀγέλαστος πέτϱα",
     "next": "Agesandros 4",
     "chapters": [
       {
@@ -4546,7 +4546,7 @@
   {
     "lemma": "Alisanus",
     "previous": "Aliphenoi",
-    "next": "Alkainetos 1"
+    "next": "Alkainetos"
   },
   {
     "lemma": "Alkainetos",
@@ -6084,6 +6084,7 @@
   },
   {
     "lemma": "Anaximandros 1",
+    "previous": "Anaxandros 5",
     "next": "Anaximandros 3"
   },
   {
@@ -9741,7 +9742,7 @@
   {
     "lemma": "Argennos 3",
     "previous": "Argeias",
-    "next": "ab Argento",
+    "next": "ab argento",
     "chapters": [
       {
         "start": 128,
@@ -9751,7 +9752,7 @@
     ]
   },
   {
-    "lemma": "ab Argento",
+    "lemma": "ab argento",
     "previous": "Argennos 3",
     "next": "Argetini",
     "sort_key": "Argento",
@@ -9765,7 +9766,7 @@
   },
   {
     "lemma": "Argetini",
-    "previous": "ab Argento",
+    "previous": "ab argento",
     "next": "Argilios",
     "chapters": [
       {
