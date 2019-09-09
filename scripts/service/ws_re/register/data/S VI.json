@@ -40,7 +40,6 @@
   {
     "lemma": "Acutius 1b",
     "previous": "Acilius 16",
-    "next": "Aelius 75a",
     "chapters": [
       {
         "start": 1,
@@ -51,6 +50,7 @@
   },
   {
     "lemma": "Acutius 1a",
+    "previous": "Acilius 16",
     "next": "Aelius 75a"
   },
   {
@@ -85,12 +85,11 @@
   {
     "lemma": "Aemilius 54b",
     "previous": "Aemilius 43",
-    "next": "Aemilius 79",
     "sort_key": "Aemilius 054b"
   },
   {
     "lemma": "Aemilius 79",
-    "previous": "Aemilius 54b",
+    "previous": "Aemilius 43",
     "next": "Afranius 10a"
   },
   {
@@ -108,12 +107,11 @@
   {
     "lemma": "Agesistratos",
     "previous": "Afranius 10a",
-    "next": "Aiacius 2",
+    "next": "Aiacius 3",
     "redirect": "Athenaios 23"
   },
   {
     "lemma": "Aiacius 2",
-    "previous": "Agesistratos",
     "next": "Albiobola"
   },
   {
