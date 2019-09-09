@@ -104,6 +104,7 @@
   },
   {
     "lemma": "Abdere",
+    "previous": "Abdera 1",
     "next": "Abderos",
     "chapters": [
       {
@@ -716,10 +717,12 @@
   },
   {
     "lemma": "Agathinos 8",
-    "previous": "Agathias 3"
+    "previous": "Agathias 3",
+    "next": "Agathinos 10"
   },
   {
     "lemma": "Agathinos 10",
+    "previous": "Agathinos 8",
     "next": "Agathodaimon 1",
     "chapters": [
       {
@@ -1451,12 +1454,15 @@
   },
   {
     "lemma": "Alexias 5",
-    "previous": "Alexinos 2",
+    "previous": "Alexinos 2"
+  },
+  {
+    "lemma": "Alexios",
     "next": "Alfius 6"
   },
   {
     "lemma": "Alfius 6",
-    "previous": "Alexias 5",
+    "previous": "Alexios",
     "next": "Algalsos"
   },
   {
@@ -8579,12 +8585,11 @@
     "next": "Byzantion 1"
   },
   {
-    "lemma": "Byzantion 1",
-    "next": "Botrys 5"
+    "lemma": "Byzantion 1"
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Byzantion 1",
+    "previous": "Bosporos 1",
     "next": "Boudillus"
   },
   {

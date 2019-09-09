@@ -270,22 +270,20 @@
   {
     "lemma": "Battus",
     "previous": "Autrico",
-    "next": "Berothe"
+    "next": "Βηρώθε"
   },
   {
-    "lemma": "Berothe",
+    "lemma": "Βηρώθε",
     "previous": "Battus",
     "next": "Bias 10"
   },
   {
     "lemma": "Bias 10",
-    "previous": "Berothe",
-    "next": "Caecilius 141"
+    "previous": "Βηρώθε",
+    "next": "Caecilia Trebulla"
   },
   {
     "lemma": "Caecilius 141",
-    "previous": "Bias 10",
-    "next": "Celsus 18a",
     "chapters": [
       {
         "start": 57,
@@ -296,6 +294,7 @@
   },
   {
     "lemma": "Caecilia Trebulla",
+    "previous": "Bias 10",
     "next": "Celsus 18a",
     "wp_link": "w:de:Caecilia Trebulla"
   },
