@@ -3754,7 +3754,6 @@
   {
     "lemma": "Cluvius 10c",
     "previous": "Cluvius 10b",
-    "next": "Coelius 19",
     "chapters": [
       {
         "start": 105,
@@ -3765,12 +3764,14 @@
   },
   {
     "lemma": "computus",
+    "previous": "Comius 2",
     "next": "Concors",
     "redirect": "digitorum computus"
   },
   {
     "lemma": "Concors",
     "previous": "computus",
+    "next": "Cordus 1a",
     "chapters": [
       {
         "start": 106,
@@ -3781,7 +3782,6 @@
   },
   {
     "lemma": "Coelius 19",
-    "previous": "Cluvius 10c",
     "next": "Cominius 22"
   },
   {

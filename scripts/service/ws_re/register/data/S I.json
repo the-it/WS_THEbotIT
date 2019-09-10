@@ -7,6 +7,7 @@
   },
   {
     "lemma": "Aba 1a",
+    "previous": "Abkürzungen (Supplementband I)",
     "next": "Abaiokritos",
     "chapters": [
       {
@@ -9741,7 +9742,7 @@
   {
     "lemma": "Argennos 3",
     "previous": "Argeias",
-    "next": "ab argento",
+    "next": "ab Argento",
     "chapters": [
       {
         "start": 128,
@@ -9751,7 +9752,7 @@
     ]
   },
   {
-    "lemma": "ab argento",
+    "lemma": "ab Argento",
     "previous": "Argennos 3",
     "next": "Argetini",
     "sort_key": "Argento",
@@ -9765,7 +9766,7 @@
   },
   {
     "lemma": "Argetini",
-    "previous": "ab argento",
+    "previous": "ab Argento",
     "next": "Argilios",
     "chapters": [
       {
@@ -10758,11 +10759,12 @@
   {
     "lemma": "Aristoteles 9",
     "previous": "Aristoteles 8",
+    "next": "Aristoteles 12a",
     "sort_key": "Aristoteles 09"
   },
   {
     "lemma": "Aristoteles 12a",
-    "previous": "Aristoteles 8",
+    "previous": "Aristoteles 9",
     "next": "Aristoteles 13",
     "chapters": [
       {
@@ -19128,7 +19130,17 @@
   },
   {
     "lemma": "Cornelius 146",
-    "previous": "Cornelius 143"
+    "previous": "Cornelius 143",
+    "next": "Cornelius 198"
+  },
+  {
+    "lemma": "Cornelius 198",
+    "previous": "Cornelius 146",
+    "next": "Cornelius 210"
+  },
+  {
+    "lemma": "Cornelius 210",
+    "previous": "Cornelius 198"
   },
   {
     "lemma": "Cornelius 335",
