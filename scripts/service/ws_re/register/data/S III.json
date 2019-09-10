@@ -648,6 +648,7 @@
   },
   {
     "lemma": "Afrius",
+    "previous": "Africanus 9",
     "next": "Agasias 2"
   },
   {
@@ -3559,7 +3560,7 @@
   {
     "lemma": "Arbor Felix",
     "previous": "Arausio 1",
-    "next": "Arcanus"
+    "next": "Arcanus 2"
   },
   {
     "lemma": "Arcanus 2",
@@ -6710,7 +6711,8 @@
   },
   {
     "lemma": "Augustobona",
-    "previous": "Augustinus 3"
+    "previous": "Augustinus 3",
+    "next": "Augustobriga 1"
   },
   {
     "lemma": "Augustobriga 1",
@@ -8585,7 +8587,8 @@
     "next": "Byzantion 1"
   },
   {
-    "lemma": "Byzantion 1"
+    "lemma": "Byzantion 1",
+    "previous": "Bosporos 1"
   },
   {
     "lemma": "Botrys 5",
@@ -10064,13 +10067,21 @@
   },
   {
     "lemma": "Castus 6",
-    "previous": "Castus 5",
+    "previous": "Castus 5"
+  },
+  {
+    "lemma": "Castus 2b",
     "next": "Cataracta"
   },
   {
     "lemma": "Cataracta",
-    "previous": "Castus 6",
+    "previous": "Castus 2b",
+    "next": "Catius 8",
     "redirect": "Fallgatter"
+  },
+  {
+    "lemma": "Catius 8",
+    "previous": "Cataracta"
   },
   {
     "lemma": "Catius 8a",
@@ -11195,10 +11206,12 @@
   },
   {
     "lemma": "Cominius 10",
-    "previous": "Comicato"
+    "previous": "Comicato",
+    "next": "Cominius 2a"
   },
   {
     "lemma": "Cominius 2a",
+    "previous": "Cominius 10",
     "next": "Comisillus",
     "chapters": [
       {
@@ -11437,7 +11450,12 @@
   },
   {
     "lemma": "Cornelius 336",
-    "previous": "Cornelius 335"
+    "previous": "Cornelius 335",
+    "next": "Cornelius 337"
+  },
+  {
+    "lemma": "Cornelius 337",
+    "previous": "Cornelius 336"
   },
   {
     "lemma": "Cornelius 208",
@@ -12581,6 +12599,16 @@
         "author": "Rosenberg"
       }
     ]
+  },
+  {
+    "lemma": "Deiotarus 2",
+    "previous": "Dedicatio",
+    "next": "Deiotarus 4"
+  },
+  {
+    "lemma": "Deiotarus 4",
+    "previous": "Deiotarus 2",
+    "next": "Deiotaros 5"
   },
   {
     "lemma": "Deiotaros 5",
@@ -14462,7 +14490,7 @@
   {
     "lemma": "Ἐπιστάτης εἰρήνης",
     "previous": "Epimenes 1a",
-    "next": "Epistula",
+    "next": "Epistula 1",
     "sort_key": "Epistates eirenes",
     "redirect": "Εἰρηνοφύλακες",
     "chapters": [
@@ -14473,8 +14501,11 @@
     ]
   },
   {
+    "lemma": "Epistula 1",
+    "previous": "Ἐπιστάτης εἰρήνης"
+  },
+  {
     "lemma": "Epistula",
-    "previous": "Ἐπιστάτης εἰρήνης",
     "next": "Epona"
   },
   {

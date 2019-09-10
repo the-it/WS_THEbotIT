@@ -589,7 +589,6 @@
   {
     "lemma": "Claudia aqua",
     "previous": "Charinos 11",
-    "next": "Claudius 354a",
     "chapters": [
       {
         "start": 20,
@@ -600,6 +599,7 @@
   },
   {
     "lemma": "Conclusa aqua",
+    "previous": "Claudius 354a",
     "next": "Dalmatia",
     "chapters": [
       {
@@ -624,8 +624,6 @@
   },
   {
     "lemma": "Claudius 354a",
-    "previous": "Claudia aqua",
-    "next": "Conclusa aqua",
     "chapters": [
       {
         "start": 22,
@@ -636,6 +634,8 @@
   },
   {
     "lemma": "Damokritos 4",
+    "previous": "Dalmatia",
+    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -646,7 +646,6 @@
   },
   {
     "lemma": "Demokydes",
-    "previous": "Demetrios 125b",
     "next": "Die(i)trephes",
     "redirect": true,
     "chapters": [
