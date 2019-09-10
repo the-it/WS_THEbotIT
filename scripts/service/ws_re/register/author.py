@@ -1,3 +1,4 @@
+import contextlib
 import json
 import re
 import sys
@@ -67,7 +68,7 @@ class Authors:
 
     def get_author_by_mapping(self, name: str, issue: str) -> Optional[Author]:
         author = None
-        try:
+        with contextlib.suppress(KeyError):
             mapping = self._mapping[name]
             if isinstance(mapping, dict):
                 try:
@@ -75,8 +76,6 @@ class Authors:
                 except KeyError:
                     mapping = mapping["*"]
             author = self.get_author(mapping)
-        except KeyError:
-            pass
         return author
 
     def get_author(self, author_key: str) -> Author:

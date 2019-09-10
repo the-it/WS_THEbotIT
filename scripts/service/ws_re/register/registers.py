@@ -1,3 +1,4 @@
+import contextlib
 from collections import OrderedDict
 from typing import Dict
 
@@ -17,21 +18,16 @@ class Registers:
         self._registers: Dict[str, VolumeRegister] = OrderedDict()
         self._alphabetic_registers: Dict[str, AlphabeticRegister] = OrderedDict()
         for volume in Volumes().all_volumes:
-            try:
+            with contextlib.suppress(FileNotFoundError):
                 self._registers[volume.name] = VolumeRegister(volume, self._authors)
-            except FileNotFoundError:
-                pass
         self._init_alphabetic_registers()
 
     def _init_alphabetic_registers(self):
         for idx, start in enumerate(self._RE_ALPHABET):
             end = "zzzzzz"
-            try:
+            with contextlib.suppress(IndexError):
                 end = self._RE_ALPHABET[idx + 1]
-            except IndexError:
-                pass
-            finally:
-                self._alphabetic_registers[start] = AlphabeticRegister(start, end, self._registers)
+            self._alphabetic_registers[start] = AlphabeticRegister(start, end, self._registers)
 
     def __getitem__(self, item) -> VolumeRegister:
         return self._registers[item]

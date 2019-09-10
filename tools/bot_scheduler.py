@@ -1,3 +1,4 @@
+import contextlib
 import sys
 from datetime import datetime, timedelta
 from typing import Dict, Tuple, Optional
@@ -75,19 +76,15 @@ class BotScheduler(CanonicalBot):
 
     def run_weeklys(self):
         if self.weekly_bots:
-            try:
+            with contextlib.suppress(KeyError):
                 for weekly_bot in self.weekly_bots[self.now().weekday()]:
                     self.run_bot(weekly_bot(wiki=self.wiki, debug=self.debug))
-            except KeyError:
-                pass
 
     def run_monthlys(self):
         if self.monthly_bots:
-            try:
+            with contextlib.suppress(KeyError):
                 for monthly_bot in self.monthly_bots[self.now().day]:
                     self.run_bot(monthly_bot(wiki=self.wiki, debug=self.debug))
-            except KeyError:
-                pass
         if self.bots_on_last_day_of_month:
             if self._last_day_of_month():
                 for last_day_monthly_bot in self.bots_on_last_day_of_month:

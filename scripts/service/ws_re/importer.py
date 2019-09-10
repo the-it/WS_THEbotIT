@@ -1,3 +1,4 @@
+import contextlib
 import json
 import os
 import re
@@ -46,17 +47,13 @@ class ReImporter(CanonicalBot):
         # this indicates that the data was older then the timestamp in self.new_data_model
         if not self.timestamp.last_run:
             self.remove_all_register()
-        try:
+        with contextlib.suppress(FileExistsError):
             os.mkdir(self.folder)
-        except FileExistsError:
-            pass
 
     def remove_all_register(self):
         self.logger.warning("The dumped registers are outdated and must be replaced.")
-        try:
+        with contextlib.suppress(FileNotFoundError):
             shutil.rmtree(self.folder)
-        except FileNotFoundError:
-            pass
 
     @staticmethod
     def _optimize_register(raw_register: Sequence) -> Sequence:
