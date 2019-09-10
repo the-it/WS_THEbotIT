@@ -59,16 +59,6 @@
     ]
   },
   {
-    "lemma": "Anaxenor 2",
-    "chapters": [
-      {
-        "start": 1,
-        "end": 1,
-        "author": "Hiller von Gaertringen"
-      }
-    ]
-  },
-  {
     "lemma": "Antidotos 6",
     "previous": "Anaxenor 1",
     "next": "Antigonos 24",
@@ -246,16 +236,6 @@
     ]
   },
   {
-    "lemma": "Battus, Bacchus",
-    "chapters": [
-      {
-        "start": 55,
-        "end": 55,
-        "author": "Hosius"
-      }
-    ]
-  },
-  {
     "lemma": "Autrico",
     "previous": "Attius 10a",
     "next": "Battus",
@@ -281,16 +261,6 @@
     "lemma": "Bias 10",
     "previous": "Βηρώθε",
     "next": "Caecilia Trebulla"
-  },
-  {
-    "lemma": "Caecilius 141",
-    "chapters": [
-      {
-        "start": 57,
-        "end": 57,
-        "author": "Hosius"
-      }
-    ]
   },
   {
     "lemma": "Caecilia Trebulla",
@@ -626,7 +596,6 @@
   {
     "lemma": "Gifte",
     "previous": "Geneleos",
-    "next": "Flavius 83a",
     "chapters": [
       {
         "start": 223,
@@ -636,20 +605,29 @@
     ]
   },
   {
-    "lemma": "Flavius 83a",
-    "previous": "Gifte",
-    "next": "Hephaistodoros",
+    "lemma": "Glykon 6",
+    "next": "Goneus",
     "chapters": [
       {
-        "start": 224,
-        "end": 224,
-        "author": "Hosius"
+        "start": 228,
+        "end": 228,
+        "author": "Lippold, Georg"
+      }
+    ]
+  },
+  {
+    "lemma": "Goneus",
+    "previous": "Glykon 6",
+    "chapters": [
+      {
+        "start": 228,
+        "end": 228,
+        "author": "Lippold, Georg"
       }
     ]
   },
   {
     "lemma": "Hephaistodoros",
-    "previous": "Flavius 83a",
     "next": "Herakleidas 5a",
     "chapters": [
       {
@@ -674,47 +652,10 @@
   {
     "lemma": "Herakleides 62a",
     "previous": "Herakleidas 5a",
-    "next": "Aurelius 141c",
     "chapters": [
       {
         "start": 227,
         "end": 227,
-        "author": "Lippold, Georg"
-      }
-    ]
-  },
-  {
-    "lemma": "Aurelius 141c",
-    "previous": "Herakleides 62a",
-    "next": "Glykon 6",
-    "chapters": [
-      {
-        "start": 228,
-        "end": 228,
-        "author": "Lippold, Georg"
-      }
-    ]
-  },
-  {
-    "lemma": "Glykon 6",
-    "previous": "Aurelius 141c",
-    "next": "Goneus",
-    "chapters": [
-      {
-        "start": 228,
-        "end": 228,
-        "author": "Lippold, Georg"
-      }
-    ]
-  },
-  {
-    "lemma": "Goneus",
-    "previous": "Glykon 6",
-    "next": "Hephaistodoros",
-    "chapters": [
-      {
-        "start": 228,
-        "end": 228,
         "author": "Lippold, Georg"
       }
     ]
@@ -4077,18 +4018,7 @@
   {
     "lemma": "Maximus 127",
     "previous": "Maximus 126",
-    "next": "Maximus 127a",
-    "chapters": [
-      {
-        "start": 679,
-        "end": 679,
-        "author": "Enßlin"
-      }
-    ]
-  },
-  {
-    "lemma": "Maximus 127a",
-    "previous": "Maximus 127",
+    "next": "Maximus 128",
     "chapters": [
       {
         "start": 679,
@@ -4110,19 +4040,7 @@
     ]
   },
   {
-    "lemma": "Mazdaismus",
-    "next": "Maximus 129",
-    "chapters": [
-      {
-        "start": 679,
-        "end": 679,
-        "author": "Clemen"
-      }
-    ]
-  },
-  {
     "lemma": "Maximus 129",
-    "previous": "Mazdaismus",
     "next": "Maximus 129a",
     "chapters": [
       {
@@ -4266,7 +4184,6 @@
   {
     "lemma": "Maximus 133",
     "previous": "Maximus 132",
-    "next": "Mazuca",
     "chapters": [
       {
         "start": 680,
@@ -4276,8 +4193,17 @@
     ]
   },
   {
+    "lemma": "Mazdaismus",
+    "chapters": [
+      {
+        "start": 679,
+        "end": 679,
+        "author": "Clemen"
+      }
+    ]
+  },
+  {
     "lemma": "Mazuca",
-    "previous": "Maximus 133",
     "next": "Mebarsapes",
     "chapters": [
       {
@@ -5126,19 +5052,7 @@
     "next": "Spaleia"
   },
   {
-    "lemma": "Sotiates oder Sottiates",
-    "next": "Spaleia",
-    "chapters": [
-      {
-        "start": 989,
-        "end": 989,
-        "author": "Keune"
-      }
-    ]
-  },
-  {
     "lemma": "Spaleia",
-    "previous": "Sotiates oder Sottiates",
     "next": "Spania",
     "chapters": [
       {
