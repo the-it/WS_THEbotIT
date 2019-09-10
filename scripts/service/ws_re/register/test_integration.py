@@ -1,3 +1,4 @@
+import contextlib
 from unittest import skipUnless, TestCase, skip
 
 from scripts.service.ws_re.register.registers import Registers
@@ -25,13 +26,11 @@ class TestIntegrationRegister(TestCase):
                 if pre_lemma and pre_lemma["next"]:
                     if not pre_lemma["next"] == lemma["lemma"]:  # pragma: no cover
                         errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register.volume.name} not the same as pre lemma")
-                try:
+                with contextlib.suppress(IndexError):
                     post_lemma = register[i + 1]
                     if post_lemma and post_lemma["previous"]:
                         if not post_lemma["previous"] == lemma["lemma"]:  # pragma: no cover
                             errors.append(f"POST lemma name {lemma['lemma']} /{i} in register {register.volume.name} not the same as post lemma")
-                except IndexError:
-                    pass
 
         if errors:  # pragma: no cover
             count = len(errors)
