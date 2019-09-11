@@ -15646,16 +15646,16 @@
   {
     "lemma": "Boriennus",
     "previous": "Boreios",
-    "next": "Borillus"
+    "next": "Borillus 1"
   },
   {
-    "lemma": "Borillus",
+    "lemma": "Borillus 1",
     "previous": "Boriennus",
     "next": "Borion"
   },
   {
     "lemma": "Borion",
-    "previous": "Borillus",
+    "previous": "Borillus 1",
     "next": "Borissos",
     "chapters": [
       {
@@ -19143,7 +19143,17 @@
     "previous": "Cornelius 198"
   },
   {
+    "lemma": "Cornelius 322",
+    "next": "Cornelius 334"
+  },
+  {
+    "lemma": "Cornelius 334",
+    "previous": "Cornelius 322",
+    "next": "Cornelius 335"
+  },
+  {
     "lemma": "Cornelius 335",
+    "previous": "Cornelius 334",
     "next": "Cornelius 337"
   },
   {
