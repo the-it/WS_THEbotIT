@@ -468,7 +468,7 @@
   {
     "lemma": "Anaxikrates 5a",
     "previous": "Anaxagoras 1a",
-    "next": "Androkles 13a",
+    "next": "Androkles 3a",
     "chapters": [
       {
         "start": 23,
@@ -479,7 +479,6 @@
   },
   {
     "lemma": "Androkles 13a",
-    "next": "Andronikos 16a",
     "chapters": [
       {
         "start": 23,
@@ -489,8 +488,13 @@
     ]
   },
   {
+    "lemma": "Androkles 3a",
+    "previous": "Anaxikrates 5a",
+    "next": "Andronikos 16a"
+  },
+  {
     "lemma": "Andronikos 16a",
-    "previous": "Androkles 13a",
+    "previous": "Androkles 3a",
     "next": "Anleihen",
     "chapters": [
       {
@@ -959,6 +963,7 @@
   {
     "lemma": "Aristophanes 8a",
     "previous": "Aristonymos 12",
+    "next": "Arridaios 8",
     "sort_key": "Aristophanes 08a",
     "chapters": [
       {
@@ -969,7 +974,13 @@
     ]
   },
   {
+    "lemma": "Arridaios 8",
+    "previous": "Aristophanes 8a",
+    "next": "Arybas 2"
+  },
+  {
     "lemma": "Arybas 2",
+    "previous": "Arridaios 8",
     "next": "Arsakes 9",
     "chapters": [
       {
@@ -993,6 +1004,7 @@
   },
   {
     "lemma": "Arsames 7",
+    "previous": "Arsakes 9",
     "next": "Arsames 8",
     "chapters": [
       {
@@ -1225,6 +1237,8 @@
   },
   {
     "lemma": "Attylos",
+    "previous": "Attinas 2",
+    "next": "Auranos",
     "chapters": [
       {
         "start": 57,

@@ -9230,7 +9230,13 @@
   },
   {
     "lemma": "Caecilius 84",
-    "previous": "Caecilius 83"
+    "previous": "Caecilius 83",
+    "next": "Caecilius 85"
+  },
+  {
+    "lemma": "Caecilius 85",
+    "previous": "Caecilius 84",
+    "next": "Caecilius 91"
   },
   {
     "lemma": "Caecilius 73. 76",
@@ -9244,6 +9250,7 @@
   },
   {
     "lemma": "Caecilius 91",
+    "previous": "Caecilius 85",
     "next": "Caecilius 94"
   },
   {
@@ -9762,7 +9769,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium vetus",
+    "next": "Capitolium 3",
     "chapters": [
       {
         "start": 233,
@@ -9772,13 +9779,15 @@
     ]
   },
   {
-    "lemma": "Capitolium vetus",
-    "previous": "Capienacus oder Capionacus",
+    "lemma": "Capitolium vetus"
+  },
+  {
+    "lemma": "Capitolium 3",
     "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium vetus",
+    "previous": "Capitolium 3",
     "next": "Caprasius",
     "chapters": [
       {
@@ -10067,7 +10076,8 @@
   },
   {
     "lemma": "Castus 6",
-    "previous": "Castus 5"
+    "previous": "Castus 5",
+    "next": "Cataracta"
   },
   {
     "lemma": "Castus 2b",
@@ -10081,10 +10091,13 @@
   },
   {
     "lemma": "Catius 8",
-    "previous": "Cataracta"
+    "previous": "Cataracta",
+    "next": "Catius 8a",
+    "sort_key": "Catius 08"
   },
   {
     "lemma": "Catius 8a",
+    "previous": "Catius 8",
     "next": "Catullus 6a",
     "sort_key": "Catius 08a"
   },
@@ -11455,7 +11468,8 @@
   },
   {
     "lemma": "Cornelius 337",
-    "previous": "Cornelius 336"
+    "previous": "Cornelius 336",
+    "next": "Cornelius 338"
   },
   {
     "lemma": "Cornelius 208",
@@ -11481,6 +11495,7 @@
   },
   {
     "lemma": "Cornelius 338",
+    "previous": "Cornelius 337",
     "next": "Cornelius 347"
   },
   {

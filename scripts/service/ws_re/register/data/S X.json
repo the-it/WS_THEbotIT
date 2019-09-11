@@ -1451,10 +1451,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε"
+    "next": "Ἀρχε(..."
   },
   {
-    "lemma": "Ἀρχε",
+    "lemma": "Ἀρχε(...",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1468,7 +1468,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε",
+    "previous": "Ἀρχε(...",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -1511,10 +1511,10 @@
   {
     "lemma": "Arimnestos 6a",
     "previous": "Ἀρι...",
-    "next": "Ἀριστ..."
+    "next": "Ἀριστ(..."
   },
   {
-    "lemma": "Ἀριστ...",
+    "lemma": "Ἀριστ(...",
     "previous": "Arimnestos 6a",
     "next": "Aristagoras 9a",
     "sort_key": "Arist...",
@@ -1528,7 +1528,7 @@
   },
   {
     "lemma": "Aristagoras 9a",
-    "previous": "Ἀριστ...",
+    "previous": "Ἀριστ(...",
     "next": "Aristarchos 10"
   },
   {
@@ -1838,7 +1838,7 @@
   {
     "lemma": "Athanias 3",
     "previous": "Astydamas 2",
-    "next": "Ἀθη-",
+    "next": "Ἀθη...",
     "chapters": [
       {
         "start": 47,
@@ -1848,9 +1848,9 @@
     ]
   },
   {
-    "lemma": "Ἀθη-",
+    "lemma": "Ἀθη...",
     "previous": "Athanias 3",
-    "next": "Athenai 1b",
+    "next": "Athenai 1A",
     "sort_key": "Athe(...",
     "chapters": [
       {
@@ -1859,6 +1859,10 @@
         "author": "Bonaria"
       }
     ]
+  },
+  {
+    "lemma": "Athenai 1A",
+    "previous": "Ἀθη..."
   },
   {
     "lemma": "Athenai 1b",
@@ -2152,11 +2156,11 @@
   {
     "lemma": "Autolykos 6",
     "previous": "Αὐτο(...",
-    "next": "Babyllios",
+    "next": "Βαβύλλιος",
     "sort_key": "Auto(---"
   },
   {
-    "lemma": "Babyllios",
+    "lemma": "Βαβύλλιος",
     "previous": "Autolykos 6",
     "next": "Βακχ(---)",
     "sort_key": "Babyllios",
@@ -2170,7 +2174,7 @@
   },
   {
     "lemma": "Βακχ(---)",
-    "previous": "Babyllios",
+    "previous": "Βαβύλλιος",
     "next": "Βασιλείδης 1a",
     "sort_key": "Bakch",
     "chapters": [
@@ -2375,12 +2379,11 @@
     "next": "Choraules"
   },
   {
-    "lemma": "χειρόγραφον",
-    "next": "Choraules"
+    "lemma": "χειρόγραφον"
   },
   {
     "lemma": "Choraules",
-    "previous": "χειρόγραφον",
+    "previous": "Chirographum",
     "next": "Chryses 3"
   },
   {
@@ -2439,11 +2442,11 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
-    "next": "Collegium",
     "redirect": "urbanae cohortes"
   },
   {
     "lemma": "Clarus 6a",
+    "previous": "Cillae",
     "next": "Claudius 10a",
     "chapters": [
       {
@@ -2469,6 +2472,7 @@
   {
     "lemma": "Claudius 242a",
     "previous": "Claudius 10a",
+    "next": "Clodius 73",
     "chapters": [
       {
         "start": 132,
@@ -2479,7 +2483,6 @@
   },
   {
     "lemma": "Collegium",
-    "previous": "cohortes urbanae",
     "next": "Constantiniani"
   },
   {
