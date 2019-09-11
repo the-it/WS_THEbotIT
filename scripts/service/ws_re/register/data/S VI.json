@@ -897,12 +897,7 @@
     "next": "Castellum 5a"
   },
   {
-    "lemma": "Cassius",
-    "next": "Castellum 5a"
-  },
-  {
     "lemma": "Castellum 5a",
-    "previous": "Cassius",
     "next": "Catilius 4",
     "chapters": [
       {
@@ -1023,86 +1018,7 @@
   },
   {
     "lemma": "Cincius 9",
-    "previous": "Chelidonioi",
-    "next": "Claudius 71"
-  },
-  {
-    "lemma": "Coeba(?)",
-    "next": "Coelius 7a",
-    "chapters": [
-      {
-        "start": 23,
-        "end": 23,
-        "author": "Geisau"
-      }
-    ]
-  },
-  {
-    "lemma": "Coelius 7a",
-    "previous": "Coeba(?)",
-    "next": "Colonia 34a",
-    "chapters": [
-      {
-        "start": 23,
-        "end": 23,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
-    "lemma": "Colonia 34a",
-    "previous": "Coelius 7a",
-    "next": "Comberania",
-    "chapters": [
-      {
-        "start": 23,
-        "end": 25,
-        "author": "Fluss"
-      }
-    ]
-  },
-  {
-    "lemma": "Claudius 187. 188. 194",
-    "chapters": [
-      {
-        "start": 24,
-        "end": 24,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
-    "lemma": "Claudius 186",
-    "previous": "Claudius 71",
-    "next": "Claudius 187",
-    "sort_key": "Claudius"
-  },
-  {
-    "lemma": "Claudius 187",
-    "previous": "Claudius 186",
-    "next": "Claudius 188",
-    "sort_key": "Claudius"
-  },
-  {
-    "lemma": "Claudius 188",
-    "previous": "Claudius 187",
-    "next": "Claudius 194",
-    "sort_key": "Claudius"
-  },
-  {
-    "lemma": "Claudius 187",
-    "next": "Claudius 194"
-  },
-  {
-    "lemma": "Claudius 194",
-    "previous": "Claudius 187",
-    "next": "Claudius 357",
-    "sort_key": "Claudius"
-  },
-  {
-    "lemma": "Claudius 357",
-    "previous": "Claudius 194",
-    "sort_key": "Claudius"
+    "previous": "Chelidonioi"
   },
   {
     "lemma": "Claudius 71",
@@ -1144,6 +1060,40 @@
       {
         "start": 24,
         "end": 24
+      }
+    ]
+  },
+  {
+    "lemma": "Coeba(?)",
+    "next": "Coelius 7a",
+    "chapters": [
+      {
+        "start": 23,
+        "end": 23,
+        "author": "Geisau"
+      }
+    ]
+  },
+  {
+    "lemma": "Coelius 7a",
+    "previous": "Coeba(?)",
+    "next": "Colonia 34a",
+    "chapters": [
+      {
+        "start": 23,
+        "end": 23,
+        "author": "Groag"
+      }
+    ]
+  },
+  {
+    "lemma": "Colonia 34a",
+    "previous": "Coelius 7a",
+    "chapters": [
+      {
+        "start": 23,
+        "end": 25,
+        "author": "Fluss"
       }
     ]
   },
@@ -1210,7 +1160,6 @@
   {
     "lemma": "Cuspius 3",
     "previous": "Curtius 18",
-    "next": "Dardanos",
     "chapters": [
       {
         "start": 25,
@@ -1218,10 +1167,6 @@
         "author": "Groag"
       }
     ]
-  },
-  {
-    "lemma": "Dardanos",
-    "previous": "Cuspius 3"
   },
   {
     "lemma": "Dardanos 11",
@@ -2834,12 +2779,7 @@
     ]
   },
   {
-    "lemma": "Maximus 26",
-    "next": "Media provincia"
-  },
-  {
     "lemma": "Media provincia",
-    "previous": "Maximus 26",
     "next": "Meidylides 1",
     "chapters": [
       {
@@ -4506,6 +4446,7 @@
       }
     ]
   },
+  {"lemma": "Manichäismus"},
   {
     "lemma": "Marius 14",
     "previous": "Manichäismus",
@@ -4525,24 +4466,12 @@
     "previous": "Marius 14"
   },
   {
-    "lemma": "Regina castra",
-    "next": "Sarapion 4",
+    "lemma": "Régĭna castra",
     "chapters": [
       {
         "start": 1427,
         "end": 1434,
         "author": "Franke"
-      }
-    ]
-  },
-  {
-    "lemma": "Sarapion 4",
-    "previous": "Regina castra",
-    "chapters": [
-      {
-        "start": 1434,
-        "end": 1434,
-        "author": "Fluss"
       }
     ]
   },
