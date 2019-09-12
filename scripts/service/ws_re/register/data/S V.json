@@ -101,7 +101,7 @@
   {
     "lemma": "Apelles 5a",
     "previous": "Antisemitismus",
-    "next": "Apollodoros 41e",
+    "next": "Apollodoros 41a",
     "chapters": [
       {
         "start": 43,
@@ -111,11 +111,11 @@
     ]
   },
   {
-    "lemma": "Apollodoros 41e",
-    "previous": "Apelles 5a"
+    "lemma": "Apollodoros 41e"
   },
   {
     "lemma": "Apollodoros 41a",
+    "previous": "Apelles 5a",
     "next": "Apollonios 114"
   },
   {
@@ -617,6 +617,7 @@
   {
     "lemma": "Goneus",
     "previous": "Glykon 6",
+    "next": "Hephaistodoros",
     "chapters": [
       {
         "start": 228,
@@ -627,6 +628,7 @@
   },
   {
     "lemma": "Hephaistodoros",
+    "previous": "Goneus",
     "next": "Herakleidas 5a",
     "chapters": [
       {
@@ -4040,6 +4042,7 @@
   },
   {
     "lemma": "Maximus 129",
+    "previous": "Maximus 128",
     "next": "Maximus 129a",
     "chapters": [
       {
