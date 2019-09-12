@@ -14,6 +14,7 @@
   {
     "lemma": "Aburnius 1a",
     "previous": "Abretten(us)",
+    "next": "Acilius 16",
     "chapters": [
       {
         "start": 1,
@@ -24,11 +25,15 @@
   },
   {
     "lemma": "Acilius 16",
-    "next": "Acutius 1a"
+    "previous": "Aburnius 1a",
+    "next": "Acutius 1b"
+  },
+  {
+    "lemma": "Acutius 1b",
+    "previous": "Acilius 16"
   },
   {
     "lemma": "Acutius 1a",
-    "previous": "Acilius 16",
     "next": "Aelius 75a"
   },
   {
@@ -91,6 +96,7 @@
   },
   {
     "lemma": "Aiacius 3",
+    "previous": "Agesistratos",
     "next": "Albiobola"
   },
   {
@@ -2780,6 +2786,7 @@
   },
   {
     "lemma": "Media provincia",
+    "previous": "Maximus 128",
     "next": "Meidylides 1",
     "chapters": [
       {
@@ -4446,7 +4453,9 @@
       }
     ]
   },
-  {"lemma": "Manichäismus"},
+  {
+    "lemma": "Manichäismus"
+  },
   {
     "lemma": "Marius 14",
     "previous": "Manichäismus",

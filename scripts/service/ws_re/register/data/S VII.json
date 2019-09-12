@@ -276,7 +276,9 @@
       }
     ]
   },
-  {"lemma": "Auction 1"},
+  {
+    "lemma": "Auction 1"
+  },
   {
     "lemma": "Aurelius 63a",
     "next": "Aurelius 39a",
@@ -427,6 +429,7 @@
   },
   {
     "lemma": "Χειροτέχνιον",
+    "previous": "Chirographum",
     "chapters": [
       {
         "start": 84,
@@ -478,10 +481,12 @@
   },
   {
     "lemma": "Cocceius 3",
-    "previous": "Clementius 1a"
+    "previous": "Clementius 1a",
+    "next": "Cocceius 12"
   },
   {
     "lemma": "Cocceius 12",
+    "previous": "Cocceius 3",
     "next": "Codicarii 2"
   },
   {
@@ -4796,6 +4801,7 @@
   },
   {
     "lemma": "Peculatus",
+    "previous": "Origanum",
     "next": "Pedion 3",
     "chapters": [
       {
@@ -4807,6 +4813,7 @@
   },
   {
     "lemma": "Pedion 3",
+    "previous": "Peculatus",
     "next": "Pedius 6a",
     "chapters": [
       {

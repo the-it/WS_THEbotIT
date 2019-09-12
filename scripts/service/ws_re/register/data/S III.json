@@ -1444,7 +1444,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1454,11 +1454,15 @@
     ]
   },
   {
-    "lemma": "Alexias 5",
-    "previous": "Alexinos 2"
+    "lemma": "Alexias 5"
+  },
+  {
+    "lemma": "Alexinos",
+    "next": "Alexios"
   },
   {
     "lemma": "Alexios",
+    "previous": "Alexinos",
     "next": "Alfius 6"
   },
   {
@@ -5628,10 +5632,11 @@
   {
     "lemma": "Aschenurnen",
     "previous": "Aschaffenburg",
-    "next": "Asciacus"
+    "next": "Ascia"
   },
   {
     "lemma": "Ascia",
+    "previous": "Aschenurnen",
     "next": "Asciacus"
   },
   {
@@ -8588,11 +8593,12 @@
   },
   {
     "lemma": "Byzantion 1",
-    "previous": "Bosporos 1"
+    "previous": "Bosporos 1",
+    "next": "Botrys 5"
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Bosporos 1",
+    "previous": "Byzantion 1",
     "next": "Boudillus"
   },
   {
