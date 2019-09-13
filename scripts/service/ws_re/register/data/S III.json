@@ -1444,7 +1444,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexios",
+    "next": "Alexias 5",
     "chapters": [
       {
         "start": 80,
@@ -1454,7 +1454,9 @@
     ]
   },
   {
-    "lemma": "Alexias 5"
+    "lemma": "Alexias 5",
+    "previous": "Alexinos 2",
+    "next": "Alfius 6"
   },
   {
     "lemma": "Alexinos",
@@ -9775,7 +9777,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium 3",
+    "next": "Capitolium vetus",
     "chapters": [
       {
         "start": 233,
@@ -9785,7 +9787,9 @@
     ]
   },
   {
-    "lemma": "Capitolium vetus"
+    "lemma": "Capitolium vetus",
+    "previous": "Capienacus oder Capionacus",
+    "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolium 3",
