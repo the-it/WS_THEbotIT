@@ -1,7 +1,7 @@
 import traceback
 from datetime import timedelta, datetime
 from operator import itemgetter
-from typing import List
+from typing import List, Optional, Dict
 
 import pywikibot
 
@@ -14,7 +14,7 @@ from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.template import ReDatenException
 from scripts.service.ws_re.template.re_page import RePage
 from tools.bots import CanonicalBot, BotException
-from tools.petscan import PetScan, PetScanException
+from tools.petscan import PetScan, PetScanException, PetscanLemma
 
 
 class ReScanner(CanonicalBot):
@@ -25,7 +25,7 @@ class ReScanner(CanonicalBot):
         self.tasks: List[type(ReScannerTask)] = [KSCHTask, DEALTask, DEWPTask, SCANTask]
         if self.debug:
             self.tasks = self.tasks + []
-        self.statistic = {}
+        self.statistic: Dict[str, int] = {}
 
     def __enter__(self):
         super().__enter__()
@@ -59,7 +59,7 @@ class ReScanner(CanonicalBot):
         self.logger.info("Searching for lemmas")
         searcher = self._prepare_searcher()
         self.logger.info(f"[{searcher} {searcher}]")
-        raw_lemma_list = []
+        raw_lemma_list: List[PetscanLemma] = []
         try:
             raw_lemma_list = searcher.run()
         except PetScanException:
@@ -105,7 +105,7 @@ class ReScanner(CanonicalBot):
     def _add_lemma_to_data(self, lemma: str):
         self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
 
-    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> str:
+    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> Optional[str]:
         task_name = None
         with task:
             result = task.run(re_page)
