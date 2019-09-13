@@ -64,6 +64,14 @@ safety: &safety
       . venv/bin/activate
       make safety
 
+mypy: &mypy
+  run:
+    name: mypy
+    when: always
+    command: |
+      . venv/bin/activate
+      make mypy || true
+
 run_coverage: &run_coverage
   run:
     name: run coverage
@@ -110,6 +118,7 @@ quality_steps: &quality_steps
     - <<: *pylint
     - <<: *safety
     - <<: *bandit
+    - <<: *mypy
 
 coverage_steps: &coverage_steps
   steps:

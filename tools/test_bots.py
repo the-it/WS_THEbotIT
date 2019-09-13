@@ -186,7 +186,7 @@ class TestOneTimeBot(TestCase):
         pass
 
     def test_not_implemented(self):
-        with self.assertRaises(NotImplementedError):
+        with self.assertRaises(TypeError):
             self.NoTaskBot()
 
     def test_basic_run(self):

@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import sys
+from abc import abstractmethod, ABC
 from collections.abc import Mapping
 from datetime import datetime, timedelta
 
@@ -173,26 +174,25 @@ class PersistedTimestamp():
             raise TypeError("success_this_run is a boolean value.")
 
 
-class OneTimeBot():
-    task = None
-
+class OneTimeBot(ABC):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
-        self.success = False
-        self.log_to_screen = log_to_screen
-        self.log_to_wiki = log_to_wiki
+        self.success: bool = False
+        self.log_to_screen: bool = log_to_screen
+        self.log_to_wiki: bool = log_to_wiki
         if not self.task:
             raise NotImplementedError("The class function \"task\" must be implemented!\n"
                                       "Example:\n"
                                       "class DoSomethingBot(OneTimeBot):\n"
                                       "    def task(self):\n"
                                       "        do_stuff()")
-        self.timestamp = PersistedTimestamp(bot_name=self.bot_name)
-        self.wiki = wiki
-        self.debug = debug
-        self.timeout = timedelta(days=1)
-        self.logger = WikiLogger(self.bot_name, self.timestamp.start_of_run,
-                                 log_to_screen=self.log_to_screen)
+        self.timestamp: PersistedTimestamp = PersistedTimestamp(bot_name=self.bot_name)
+        self.wiki: Page = wiki
+        self.debug: bool = debug
+        self.timeout: timedelta = timedelta(days=1)
+        self.logger: WikiLogger = WikiLogger(self.bot_name,
+                                             self.timestamp.start_of_run,
+                                             log_to_screen=self.log_to_screen)
 
     def __enter__(self):
         self.timestamp.__enter__()
@@ -208,6 +208,10 @@ class OneTimeBot():
         if self.log_to_wiki:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
+
+    @abstractmethod
+    def task(self) -> bool:
+        pass
 
     @classmethod
     def get_bot_name(cls):
@@ -310,7 +314,7 @@ class PersistedData(Mapping):
         self._recover_data("deprecated")
 
 
-class CanonicalBot(OneTimeBot):
+class CanonicalBot(OneTimeBot, ABC):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         OneTimeBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
@@ -337,6 +341,10 @@ class CanonicalBot(OneTimeBot):
             self.logger.critical("There was an error in the general procedure. "
                                  "The broken data and a backup of the old will be keept.")
         OneTimeBot.__exit__(self, exc_type, exc_val, exc_tb)
+
+    @abstractmethod
+    def task(self) -> bool:
+        pass
 
     def create_timestamp_for_search(self, days_in_past=1) -> datetime:
         if self.last_run_successful:

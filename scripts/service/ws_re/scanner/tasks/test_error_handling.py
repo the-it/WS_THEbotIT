@@ -16,10 +16,10 @@ class TestERROTask(TestCase):
     def test_process(self):
         with LogCapture():
             task = ERROTask(None, self.logger)
-            task.task(":RE:Lemma1", "scripts.service.ws_re.template.ReDatenException: "
-                                    "The count of start templates doesn't match the count of end templates.")
-            task.task(":RE:Lemma2", "scripts.service.ws_re.template.ReDatenException: "
-                                    "REDaten has wrong key word. --> {'key': 'GEMEINFREI', 'value': '2024'}")
+            task.append_error(":RE:Lemma1", "scripts.service.ws_re.template.ReDatenException: "
+                                            "The count of start templates doesn't match the count of end templates.")
+            task.append_error(":RE:Lemma2", "scripts.service.ws_re.template.ReDatenException: "
+                                            "REDaten has wrong key word. --> {'key': 'GEMEINFREI', 'value': '2024'}")
             self.assertRegex(task._build_entry(), "\n\n==\\d{4}-\\d{2}-\\d{2}==\n\n"
                                                   "\\* \\[\\[:RE:Lemma1\\]\\]\n"
                                                   "\\*\\* scripts\\.service\\.ws_re\\.template\\.ReDatenException: The count of start templates doesn't match the count of end templates.\n"
@@ -33,8 +33,8 @@ class TestERROTask(TestCase):
                 type(page_mock).text = text_mock
                 with LogCapture():
                     task = ERROTask(None, self.logger, debug=False)
-                    task.task(":RE:Lemma1", "scripts.service.ws_re.template.ReDatenException: "
-                                            "The count of start templates doesn't match the count of end templates.")
+                    task.append_error(":RE:Lemma1", "scripts.service.ws_re.template.ReDatenException: "
+                                                    "The count of start templates doesn't match the count of end templates.")
                     task.finish_task()
                     self.assertEqual(1, page_mock.call_count)
 
