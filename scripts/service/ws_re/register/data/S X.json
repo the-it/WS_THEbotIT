@@ -431,16 +431,6 @@
     ]
   },
   {
-    "lemma": "Aelius 27",
-    "chapters": [
-      {
-        "start": 3,
-        "end": 4,
-        "author": "Bonaria"
-      }
-    ]
-  },
-  {
     "lemma": "Aelius 27aaa",
     "previous": "Aelius 17a",
     "next": "Aelius 33a",
@@ -1850,7 +1840,6 @@
   {
     "lemma": "Ἀθη...",
     "previous": "Athanias 3",
-    "next": "Athenai 1A",
     "sort_key": "Athe(...",
     "chapters": [
       {
@@ -1861,13 +1850,14 @@
     ]
   },
   {
-    "lemma": "Athenai 1A",
-    "previous": "Ἀθη...",
-    "next": "Athenaios 28"
+    "lemma": "Athenai 1b",
+    "next": "Athenaios 28",
+    "wp_link": "w:de:Athen",
+    "ws_link": "s:de:Athen"
   },
   {
     "lemma": "Athenaios 28",
-    "previous": "Athenai 1A",
+    "previous": "Athenai 1b",
     "next": "Athenodoros 9",
     "chapters": [
       {
@@ -2150,11 +2140,11 @@
   {
     "lemma": "Autolykos 6",
     "previous": "Αὐτο(...",
-    "next": "Βαβύλλιος",
+    "next": "Babyllios",
     "sort_key": "Auto(---"
   },
   {
-    "lemma": "Βαβύλλιος",
+    "lemma": "Babyllios",
     "previous": "Autolykos 6",
     "next": "Βακχ(---)",
     "sort_key": "Babyllios",
@@ -2168,7 +2158,7 @@
   },
   {
     "lemma": "Βακχ(---)",
-    "previous": "Βαβύλλιος",
+    "previous": "Babyllios",
     "next": "Βασιλείδης 1a",
     "sort_key": "Bakch",
     "chapters": [
@@ -2195,10 +2185,10 @@
   {
     "lemma": "Bathyllos 7",
     "previous": "Βασιλείδης 1a",
-    "next": "Βελεμινάτου"
+    "next": "(Βελε)μινάτου"
   },
   {
-    "lemma": "Βελεμινάτου",
+    "lemma": "(Βελε)μινάτου",
     "previous": "Bathyllos 7",
     "next": "Beste",
     "sort_key": "Beleminatu",
@@ -2212,7 +2202,7 @@
   },
   {
     "lemma": "Beste",
-    "previous": "Βελεμινάτου",
+    "previous": "(Βελε)μινάτου",
     "next": "Bestia deselutia",
     "redirect": "Bestia deselutia",
     "chapters": [
@@ -2289,16 +2279,6 @@
     ]
   },
   {
-    "lemma": "Candidianae",
-    "chapters": [
-      {
-        "start": 120,
-        "end": 120,
-        "author": "Danoff"
-      }
-    ]
-  },
-  {
     "lemma": "Candidiana",
     "previous": "Caesonius 7a",
     "next": "Caramallus"
@@ -2351,6 +2331,27 @@
     ]
   },
   {
+    "lemma": "Chairestratos 1",
+    "next": "Chairestratos 1a"
+  },
+  {
+    "lemma": "Chairestratos 1a",
+    "previous": "Chairestratos 1",
+    "next": "Chares 12",
+    "chapters": [
+      {
+        "start": 215,
+        "end": 215,
+        "author": "Bonaria"
+      }
+    ]
+  },
+  {
+    "lemma": "Chares 12",
+    "previous": "Chairestratos 1a",
+    "next": "Charias 2"
+  },
+  {
     "lemma": "Charias 2",
     "previous": "Chares 12",
     "next": "Charidemos 4a"
@@ -2373,12 +2374,8 @@
     "next": "Choraules"
   },
   {
-    "lemma": "χειρόγραφον",
-    "next": "Choraules"
-  },
-  {
     "lemma": "Choraules",
-    "previous": "χειρόγραφον",
+    "previous": "Chirographum",
     "next": "Chryses 3"
   },
   {
@@ -2414,6 +2411,7 @@
   {
     "lemma": "Cillae",
     "previous": "Cicereia lex",
+    "next": "Clarus 6a",
     "chapters": [
       {
         "start": 128,
@@ -2423,25 +2421,8 @@
     ]
   },
   {
-    "lemma": "Clodius 73",
-    "previous": "Claudius 242a",
-    "next": "cohortes urbanae",
-    "chapters": [
-      {
-        "start": 131,
-        "end": 132,
-        "author": "Kröner"
-      }
-    ]
-  },
-  {
-    "lemma": "cohortes urbanae",
-    "previous": "Clodius 73",
-    "next": "Collegium",
-    "redirect": "urbanae cohortes"
-  },
-  {
     "lemma": "Clarus 6a",
+    "previous": "Cillae",
     "next": "Claudius 10a",
     "chapters": [
       {
@@ -2467,6 +2448,7 @@
   {
     "lemma": "Claudius 242a",
     "previous": "Claudius 10a",
+    "next": "Clodius 73",
     "chapters": [
       {
         "start": 132,
@@ -2476,8 +2458,23 @@
     ]
   },
   {
+    "lemma": "Clodius 73",
+    "next": "cohortes urbanae",
+    "chapters": [
+      {
+        "start": 131,
+        "end": 132,
+        "author": "Kröner"
+      }
+    ]
+  },
+  {
+    "lemma": "cohortes urbanae",
+    "previous": "Clodius 73",
+    "redirect": "urbanae cohortes"
+  },
+  {
     "lemma": "Collegium",
-    "previous": "cohortes urbanae",
     "next": "Constantiniani"
   },
   {
@@ -2564,6 +2561,7 @@
       }
     ]
   },
+  {"lemma": "creditum"},
   {
     "lemma": "Daduchos 3",
     "next": "Damatros",
@@ -2645,16 +2643,6 @@
     "lemma": "Decuria",
     "previous": "Dativa",
     "next": "Demeas 1"
-  },
-  {
-    "lemma": "Demetrios 32ee",
-    "chapters": [
-      {
-        "start": 135,
-        "end": 136,
-        "author": "Bonaria"
-      }
-    ]
   },
   {
     "lemma": "Demeas 1",
@@ -3680,33 +3668,6 @@
         "author": "Sachers"
       }
     ]
-  },
-  {
-    "lemma": "Chairemon 5",
-    "previous": "Castronius",
-    "next": "Chairestratos 1"
-  },
-  {
-    "lemma": "Chairestratos 1",
-    "previous": "Chairemon 5",
-    "next": "Chairestratos 1a"
-  },
-  {
-    "lemma": "Chairestratos 1a",
-    "previous": "Chairestratos 1",
-    "next": "Chares 12",
-    "chapters": [
-      {
-        "start": 215,
-        "end": 215,
-        "author": "Bonaria"
-      }
-    ]
-  },
-  {
-    "lemma": "Chares 12",
-    "previous": "Chairestratos 1a",
-    "next": "Charias 2"
   },
   {
     "lemma": "Fabius 174a",
@@ -9960,6 +9921,7 @@
       }
     ]
   },
+  {"lemma": "Ulpius 1"},
   {
     "lemma": "Ulpius 1a",
     "previous": "Ulpius 1",
@@ -9979,6 +9941,7 @@
       }
     ]
   },
+  {"lemma": "Ulpius 3a"},
   {
     "lemma": "Ummidius 2a",
     "next": "Urbanae cohortes",
@@ -10205,18 +10168,6 @@
     ]
   },
   {
-    "lemma": "creditum",
-    "previous": "Cornuti",
-    "next": "Daduchos 3",
-    "chapters": [
-      {
-        "start": 1151,
-        "end": 1168,
-        "author": "D’Ors"
-      }
-    ]
-  },
-  {
     "lemma": "Ursus 1a",
     "next": "Ursus 1b",
     "chapters": [
@@ -10254,7 +10205,6 @@
   {
     "lemma": "Uttiedius 1",
     "previous": "Uruca",
-    "next": "intercisi dies",
     "chapters": [
       {
         "start": 1152,
@@ -10263,9 +10213,9 @@
       }
     ]
   },
+  {"lemma": "creditum"},
   {
     "lemma": "intercisi dies",
-    "previous": "Uttiedius 1",
     "next": "Vinalia",
     "chapters": [
       {

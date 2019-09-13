@@ -408,6 +408,7 @@
     "lemma": "Camunni",
     "previous": "Camum",
     "next": "Camurius 1",
+    "wp_link": "w:de:Camunni",
     "chapters": [
       {
         "start": 1450,
@@ -15773,7 +15774,6 @@
     "lemma": "Cenae",
     "previous": "Cenaculum",
     "next": "Cenaxis palus",
-    "wp_link": "w:de:Cenae",
     "chapters": [
       {
         "start": 1898,
@@ -19105,7 +19105,7 @@
   {
     "lemma": "Χαβρίου 1",
     "previous": "Chabrios",
-    "next": "Χαβρίου 2",
+    "next": "Chabriu 2",
     "sort_key": "Chabriu 1",
     "chapters": [
       {
@@ -19116,7 +19116,7 @@
     ]
   },
   {
-    "lemma": "Χαβρίου 2",
+    "lemma": "Chabriu 2",
     "previous": "Χαβρίου 1",
     "next": "Chabryes",
     "sort_key": "Chabriu 2",
@@ -19130,7 +19130,7 @@
   },
   {
     "lemma": "Chabryes",
-    "previous": "Χαβρίου 2",
+    "previous": "Chabriu 2",
     "next": "Chabuata",
     "chapters": [
       {
@@ -26285,7 +26285,7 @@
   {
     "lemma": "Cheirokrates",
     "previous": "Cheirogonia",
-    "next": "Χειροκριτἠς",
+    "next": "Χειροκριτής",
     "chapters": [
       {
         "start": 2222,
@@ -26295,7 +26295,7 @@
     ]
   },
   {
-    "lemma": "Χειροκριτἠς",
+    "lemma": "Χειροκριτής",
     "previous": "Cheirokrates",
     "next": "Χειρομάχα",
     "sort_key": "Cheirokrites",
@@ -26309,7 +26309,7 @@
   },
   {
     "lemma": "Χειρομάχα",
-    "previous": "Χειροκριτἠς",
+    "previous": "Χειροκριτής",
     "next": "Χειρόμακτρον",
     "sort_key": "Cheiromacha",
     "chapters": [
@@ -32881,7 +32881,6 @@
     "lemma": "Chrysokeras",
     "previous": "Χρυσογραφία",
     "next": "Χρυσοκόλλα 1",
-    "wp_link": "w:de:Chrysokeras",
     "chapters": [
       {
         "start": 2513,
@@ -43066,6 +43065,27 @@
   },
   {
     "lemma": "Bellona",
-    "previous": "Beellefarus"
+    "previous": "Beellefarus",
+    "next": "Bereiaros"
+  },
+  {
+    "lemma": "Bereiaros",
+    "previous": "Bellona",
+    "next": "Baumkultus"
+  },
+  {
+    "lemma": "Baumkultus",
+    "previous": "Bereiaros",
+    "next": "Boerebista"
+  },
+  {
+    "lemma": "Boerebista",
+    "previous": "Baumkultus",
+    "next": "Briana",
+    "redirect": "Burebista"
+  },
+  {
+    "lemma": "Briana",
+    "previous": "Boerebista"
   }
 ]

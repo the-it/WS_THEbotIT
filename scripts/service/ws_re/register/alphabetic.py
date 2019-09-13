@@ -22,6 +22,14 @@ class AlphabeticRegister(Register):
     def __getitem__(self, item: int) -> Lemma:
         return self._lemmas[item]
 
+    @property
+    def start(self):
+        return self._start
+
+    @property
+    def end(self):
+        return self._end
+
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:

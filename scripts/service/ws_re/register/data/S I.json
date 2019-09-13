@@ -4546,18 +4546,16 @@
   {
     "lemma": "Alisanus",
     "previous": "Aliphenoi",
-    "next": "Alkainetos 1"
+    "next": "Alkainetos"
   },
   {
-    "lemma": "Alkainetos 1",
-    "previous": "Alisanus"
-  },
-  {
-    "lemma": "Alkainetos"
+    "lemma": "Alkainetos",
+    "previous": "Alisanus",
+    "next": "Alkainetos 2"
   },
   {
     "lemma": "Alkainetos 2",
-    "previous": "Alkainetos 1",
+    "previous": "Alkainetos",
     "next": "Alkaios 11",
     "chapters": [
       {
@@ -4716,7 +4714,6 @@
     "lemma": "Alkinoe 4",
     "previous": "Alkimos 17a",
     "next": "Alkippos",
-    "wp_link": "w:de:Alkinoe",
     "chapters": [
       {
         "start": 62,
@@ -6082,15 +6079,12 @@
   },
   {
     "lemma": "Anaxandros 5",
-    "previous": "Anaxandrides 1"
-  },
-  {
-    "lemma": "Anaxagoras 5",
+    "previous": "Anaxandrides 1",
     "next": "Anaximandros 1"
   },
   {
     "lemma": "Anaximandros 1",
-    "previous": "Anaxagoras 5",
+    "previous": "Anaxandros 5",
     "next": "Anaximandros 3"
   },
   {
@@ -7422,10 +7416,22 @@
   },
   {
     "lemma": "Antistius 48",
-    "previous": "Antistius 27"
+    "previous": "Antistius 27",
+    "next": "Antitheos 1"
+  },
+  {
+    "lemma": "Antitheos 1",
+    "previous": "Antistius 48",
+    "next": "Antium 1"
+  },
+  {
+    "lemma": "Antium 1",
+    "previous": "Antitheos 1",
+    "next": "Antius 8"
   },
   {
     "lemma": "Antius 8",
+    "previous": "Antium 1",
     "next": "Antius 10"
   },
   {
@@ -10734,10 +10740,14 @@
   },
   {
     "lemma": "Aristos 10",
-    "previous": "Aristos 5"
+    "previous": "Aristos 5",
+    "next": "Aristoteles 8"
   },
   {
     "lemma": "Aristoteles 8",
+    "previous": "Aristos 10",
+    "next": "Aristoteles 9",
+    "sort_key": "Aristoteles 08",
     "chapters": [
       {
         "start": 136,
@@ -10748,11 +10758,13 @@
   },
   {
     "lemma": "Aristoteles 9",
+    "previous": "Aristoteles 8",
+    "next": "Aristoteles 12a",
     "sort_key": "Aristoteles 09"
   },
   {
     "lemma": "Aristoteles 12a",
-    "previous": "Aristoteles 8",
+    "previous": "Aristoteles 9",
     "next": "Aristoteles 13",
     "chapters": [
       {
@@ -11753,10 +11765,22 @@
   },
   {
     "lemma": "Asioi",
-    "previous": "Asinius 28"
+    "previous": "Asinius 28",
+    "next": "Asisium"
+  },
+  {
+    "lemma": "Asisium",
+    "previous": "Asioi",
+    "next": "Askalis"
+  },
+  {
+    "lemma": "Askalis",
+    "previous": "Asisium",
+    "next": "Askalos"
   },
   {
     "lemma": "Askalos",
+    "previous": "Askalis",
     "next": "Askania 3"
   },
   {
@@ -13007,13 +13031,17 @@
   {
     "lemma": "Avidius 1",
     "previous": "Avida",
+    "next": "Avidius 3",
     "sort_key": "Avidius 01"
   },
   {
-    "lemma": "Avidius 3"
+    "lemma": "Avidius 3",
+    "previous": "Avidius 1",
+    "next": "Avidius 4"
   },
   {
     "lemma": "Avidius 4",
+    "previous": "Avidius 3",
     "next": "Avidius 8",
     "sort_key": "Avidius 04"
   },
@@ -14410,10 +14438,17 @@
   },
   {
     "lemma": "Bambyke",
-    "previous": "Baltis"
+    "previous": "Baltis",
+    "next": "Bandua"
+  },
+  {
+    "lemma": "Bandua",
+    "previous": "Bambyke",
+    "next": "Bandusiae fons"
   },
   {
     "lemma": "Bandusiae fons",
+    "previous": "Bandua",
     "next": "Bantem"
   },
   {
@@ -15611,19 +15646,16 @@
   {
     "lemma": "Boriennus",
     "previous": "Boreios",
-    "next": "Borillus"
+    "next": "Borillus 1"
   },
   {
-    "lemma": "Borillus 1"
-  },
-  {
-    "lemma": "Borillus",
+    "lemma": "Borillus 1",
     "previous": "Boriennus",
     "next": "Borion"
   },
   {
     "lemma": "Borion",
-    "previous": "Borillus",
+    "previous": "Borillus 1",
     "next": "Borissos",
     "chapters": [
       {
@@ -16266,10 +16298,27 @@
   },
   {
     "lemma": "Caecilius 86",
-    "previous": "Caecilius 69ff."
+    "previous": "Caecilius 69ff.",
+    "next": "Caecilius 94"
+  },
+  {
+    "lemma": "Caecilius 94",
+    "previous": "Caecilius 86",
+    "next": "Caecilius 99"
+  },
+  {
+    "lemma": "Caecilius 99",
+    "previous": "Caecilius 94",
+    "next": "Caecilius 104"
+  },
+  {
+    "lemma": "Caecilius 104",
+    "previous": "Caecilius 99",
+    "next": "Caecilius 112"
   },
   {
     "lemma": "Caecilius 112",
+    "previous": "Caecilius 104",
     "next": "Caecilius 117"
   },
   {
@@ -17279,6 +17328,7 @@
   },
   {
     "lemma": "Caularis",
+    "previous": "Cato 2",
     "next": "Cazaci",
     "chapters": [
       {
@@ -19070,10 +19120,50 @@
   },
   {
     "lemma": "Cornelius 141",
-    "previous": "Cornelius 136"
+    "previous": "Cornelius 136",
+    "next": "Cornelius 143"
+  },
+  {
+    "lemma": "Cornelius 143",
+    "previous": "Cornelius 141",
+    "next": "Cornelius 146"
+  },
+  {
+    "lemma": "Cornelius 146",
+    "previous": "Cornelius 143",
+    "next": "Cornelius 198"
+  },
+  {
+    "lemma": "Cornelius 198",
+    "previous": "Cornelius 146",
+    "next": "Cornelius 210"
+  },
+  {
+    "lemma": "Cornelius 210",
+    "previous": "Cornelius 198"
+  },
+  {
+    "lemma": "Cornelius 322",
+    "next": "Cornelius 334"
+  },
+  {
+    "lemma": "Cornelius 334",
+    "previous": "Cornelius 322",
+    "next": "Cornelius 335"
+  },
+  {
+    "lemma": "Cornelius 335",
+    "previous": "Cornelius 334",
+    "next": "Cornelius 337"
+  },
+  {
+    "lemma": "Cornelius 337",
+    "previous": "Cornelius 335",
+    "next": "Cornelius 350"
   },
   {
     "lemma": "Cornelius 350",
+    "previous": "Cornelius 337",
     "next": "Cornelius 351"
   },
   {

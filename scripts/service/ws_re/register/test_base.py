@@ -1,3 +1,4 @@
+import contextlib
 import os
 import shutil
 from pathlib import Path
@@ -17,13 +18,10 @@ def copy_tst_data(source: str, destination: str):
 
 
 def clear_tst_path(renew_path=True):
-    try:
+    with contextlib.suppress(FileNotFoundError):
         shutil.rmtree(_TEST_REGISTER_PATH)
-    except FileNotFoundError:
-        pass
-    finally:
-        if renew_path:
-            os.mkdir(_TEST_REGISTER_PATH)
+    if renew_path:
+        os.mkdir(_TEST_REGISTER_PATH)
 
 
 class BaseTestRegister(TestCase):

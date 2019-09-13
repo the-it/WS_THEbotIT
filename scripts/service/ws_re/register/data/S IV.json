@@ -468,18 +468,7 @@
   {
     "lemma": "Anaxikrates 5a",
     "previous": "Anaxagoras 1a",
-    "next": "Androkles 13a",
-    "chapters": [
-      {
-        "start": 23,
-        "end": 23,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
-    "lemma": "Androkles 3a",
-    "next": "Andronikos 16a",
+    "next": "Androkles 3a",
     "chapters": [
       {
         "start": 23,
@@ -490,7 +479,6 @@
   },
   {
     "lemma": "Androkles 13a",
-    "next": "Andronikos 16a",
     "chapters": [
       {
         "start": 23,
@@ -500,8 +488,13 @@
     ]
   },
   {
+    "lemma": "Androkles 3a",
+    "previous": "Anaxikrates 5a",
+    "next": "Andronikos 16a"
+  },
+  {
     "lemma": "Andronikos 16a",
-    "previous": "Androkles 13a",
+    "previous": "Androkles 3a",
     "next": "Anleihen",
     "chapters": [
       {
@@ -654,10 +647,12 @@
   {
     "lemma": "Aphneïs",
     "previous": "Aphamios 3",
-    "next": "Aphobetos"
+    "next": "Aphobetos 2"
   },
   {
     "lemma": "Aphobetos 2",
+    "previous": "Aphneïs",
+    "next": "Aphrikes",
     "chapters": [
       {
         "start": 44,
@@ -667,29 +662,14 @@
     ]
   },
   {
-    "lemma": "Aphobetos",
-    "previous": "Aphneïs",
-    "next": "Aphrikes"
-  },
-  {
     "lemma": "Aphrikes",
-    "previous": "Aphobetos",
+    "previous": "Aphobetos 2",
     "next": "Apollodoros 41a",
     "chapters": [
       {
         "start": 44,
         "end": 44,
         "author": "Berve"
-      }
-    ]
-  },
-  {
-    "lemma": "Apollodoros 41d",
-    "chapters": [
-      {
-        "start": 44,
-        "end": 44,
-        "author": "Schoch"
       }
     ]
   },
@@ -891,16 +871,6 @@
     ]
   },
   {
-    "lemma": "Aristobulos 14a",
-    "chapters": [
-      {
-        "start": 47,
-        "end": 47,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
     "lemma": "Aristodemos 8a",
     "previous": "Aristobulos 4c",
     "next": "Aristodemos 16",
@@ -1006,6 +976,12 @@
   {
     "lemma": "Arridaios 8",
     "previous": "Aristophanes 8a",
+    "next": "Arybas 2"
+  },
+  {
+    "lemma": "Arybas 2",
+    "previous": "Arridaios 8",
+    "next": "Arsakes 9",
     "chapters": [
       {
         "start": 48,
@@ -1023,16 +999,6 @@
         "start": 48,
         "end": 48,
         "author": "Berve"
-      }
-    ]
-  },
-  {
-    "lemma": "Arybas 2",
-    "chapters": [
-      {
-        "start": 48,
-        "end": 48,
-        "author": "Schoch"
       }
     ]
   },
@@ -1136,16 +1102,6 @@
     "lemma": "Asklepiades 2a",
     "previous": "Asklepiades 1a",
     "next": "Aspis 17"
-  },
-  {
-    "lemma": "Asklepiades 2a) = 14a",
-    "chapters": [
-      {
-        "start": 50,
-        "end": 50,
-        "author": "Berve"
-      }
-    ]
   },
   {
     "lemma": "Aspis 17",
@@ -1280,12 +1236,8 @@
     ]
   },
   {
-    "lemma": "Attinas",
-    "next": "Attylos"
-  },
-  {
     "lemma": "Attylos",
-    "previous": "Attinas",
+    "previous": "Attinas 2",
     "next": "Auranos",
     "chapters": [
       {
@@ -1529,12 +1481,8 @@
     ]
   },
   {
-    "lemma": "Bulagoras",
-    "next": "Cercina"
-  },
-  {
     "lemma": "Cercina",
-    "previous": "Bulagoras",
+    "previous": "Bulagoras 2",
     "next": "Chaireas 5a"
   },
   {
@@ -1622,16 +1570,6 @@
     ]
   },
   {
-    "lemma": "Chersanippos",
-    "chapters": [
-      {
-        "start": 216,
-        "end": 216,
-        "author": "Preisigke"
-      }
-    ]
-  },
-  {
     "lemma": "Χερσέφιππος",
     "previous": "Χειριστής",
     "next": "Chiton 2",
@@ -1702,40 +1640,6 @@
       {
         "start": 216,
         "end": 216,
-        "author": "Preisigke"
-      }
-    ]
-  },
-  {
-    "lemma": "Chrematistes 2",
-    "next": "Chrematistes 3",
-    "chapters": [
-      {
-        "start": 217,
-        "end": 217,
-        "author": "Preisigke"
-      }
-    ]
-  },
-  {
-    "lemma": "Chrematistes 3",
-    "previous": "Chrematistes 2",
-    "next": "Chrysones (Chryson",
-    "chapters": [
-      {
-        "start": 217,
-        "end": 217,
-        "author": "Preisigke"
-      }
-    ]
-  },
-  {
-    "lemma": "Chrysones (Chryson",
-    "previous": "Chrematistes 3",
-    "chapters": [
-      {
-        "start": 217,
-        "end": 217,
         "author": "Preisigke"
       }
     ]
@@ -1845,11 +1749,37 @@
   {
     "lemma": "Deinokrates 5a",
     "previous": "Δειγματοκαταγωγός",
+    "next": "Demarchos 6",
     "chapters": [
       {
         "start": 219,
         "end": 219,
         "author": "Schoch"
+      }
+    ]
+  },
+  {
+    "lemma": "Demarchos 6",
+    "previous": "Deinokrates 5a",
+    "next": "Demetrios 48a",
+    "chapters": [
+      {
+        "start": 220,
+        "end": 220,
+        "author": "Schoch"
+      }
+    ]
+  },
+  {
+    "lemma": "Demetrios 48a",
+    "previous": "Demarchos 6",
+    "next": "Demokrates 10a",
+    "sort_key": "Demetrios 048a",
+    "chapters": [
+      {
+        "start": 220,
+        "end": 220,
+        "author": "Berve"
       }
     ]
   },
@@ -1874,29 +1804,6 @@
         "start": 219,
         "end": 219,
         "author": "Hammer-Jensen"
-      }
-    ]
-  },
-  {
-    "lemma": "Demarchos 6",
-    "next": "Demetrios 48a",
-    "chapters": [
-      {
-        "start": 220,
-        "end": 220,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
-    "lemma": "Demetrios 48a",
-    "previous": "Demarchos 6",
-    "sort_key": "Demetrios 048a",
-    "chapters": [
-      {
-        "start": 220,
-        "end": 220,
-        "author": "Berve"
       }
     ]
   },
@@ -1967,12 +1874,8 @@
     ]
   },
   {
-    "lemma": "Dexandros",
-    "next": "Diakrier 2"
-  },
-  {
     "lemma": "Diakrier 2",
-    "previous": "Dexandros",
+    "previous": "Dexandros 2",
     "next": "Didas 2",
     "chapters": [
       {
@@ -2509,23 +2412,12 @@
   {
     "lemma": "Essener",
     "previous": "Erotylos",
-    "next": "Euandros 4a",
     "wp_link": "w:de:Essener",
     "chapters": [
       {
         "start": 386,
         "end": 386,
         "author": "Bauer, [Walter]"
-      }
-    ]
-  },
-  {
-    "lemma": "Euandros",
-    "chapters": [
-      {
-        "start": 430,
-        "end": 430,
-        "author": "Schoch"
       }
     ]
   },
@@ -2631,19 +2523,8 @@
     ]
   },
   {
-    "lemma": "Euphranor 3b",
-    "next": "Euphranor 4a",
-    "chapters": [
-      {
-        "start": 450,
-        "end": 450,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
     "lemma": "Euphranor 4a",
-    "previous": "Euphranor 3b",
+    "previous": "Euphranor 3a",
     "next": "Eupolis 2a",
     "chapters": [
       {
@@ -3592,35 +3473,12 @@
   {
     "lemma": "Himeraios",
     "previous": "Hieronymos 5a",
-    "next": "Hipparches a",
+    "next": "Ἱππάρχης",
     "chapters": [
       {
         "start": 743,
         "end": 743,
         "author": "Berve"
-      }
-    ]
-  },
-  {
-    "lemma": "Hipparches a",
-    "previous": "Himeraios",
-    "next": "Hipparches b",
-    "chapters": [
-      {
-        "start": 743,
-        "end": 743,
-        "author": "Bilabel"
-      }
-    ]
-  },
-  {
-    "lemma": "Hipparches b",
-    "previous": "Hipparches a",
-    "chapters": [
-      {
-        "start": 746,
-        "end": 746,
-        "author": "Bilabel"
       }
     ]
   },
@@ -3802,61 +3660,7 @@
     ]
   },
   {
-    "lemma": "Hydarnes 1",
-    "previous": "Hyäne",
-    "next": "Hydarnes 2",
-    "chapters": [
-      {
-        "start": 767,
-        "end": 767,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
-    "lemma": "Hydarnes 2",
-    "previous": "Hydarnes 1",
-    "next": "Hydarnes 3",
-    "chapters": [
-      {
-        "start": 767,
-        "end": 767,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
-    "lemma": "Hydarnes 3",
-    "previous": "Hydarnes 2",
-    "next": "Hydarnes 4",
-    "chapters": [
-      {
-        "start": 768,
-        "end": 768,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
-    "lemma": "Hydarnes 4",
-    "previous": "Hydarnes 3",
-    "next": "Hydrakes",
-    "chapters": [
-      {
-        "start": 768,
-        "end": 768,
-        "author": "Berve"
-      },
-      {
-        "start": 768,
-        "end": 768,
-        "author": "Schoch"
-      }
-    ]
-  },
-  {
     "lemma": "Hydrakes",
-    "previous": "Hydarnes 4",
     "next": "Hydrophoros",
     "chapters": [
       {
@@ -3881,6 +3685,7 @@
   {
     "lemma": "Ὑδροφύλαξ",
     "previous": "Hydrophoros",
+    "next": "Hydarnes 1",
     "sort_key": "Hydrophylax",
     "chapters": [
       {
@@ -3889,6 +3694,14 @@
         "author": "Bilabel"
       }
     ]
+  },
+  {
+    "lemma": "Hydarnes 1",
+    "previous": "Ὑδροφύλαξ"
+  },
+  {
+    "lemma": "Hydarnes 3",
+    "next": "Hylas 4a"
   },
   {
     "lemma": "Hylas 4a",

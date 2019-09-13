@@ -1,3 +1,4 @@
+import contextlib
 import re
 import sys
 import unicodedata
@@ -47,11 +48,9 @@ class LemmaChapter:
         return f"<{self.__class__.__name__} - start:{self.start}, end:{self.end}, author:{self.author}>"
 
     def is_valid(self) -> bool:
-        try:
+        with contextlib.suppress(TypeError):
             if "start" in self._dict and "end" in self._dict:
                 return True
-        except TypeError:
-            pass
         return False
 
     def get_dict(self) -> ChapterDict:
@@ -163,11 +162,9 @@ class Lemma():
 
     def _init_chapters(self):
         self._chapters = []
-        try:
+        with contextlib.suppress(KeyError):
             for chapter in self._lemma_dict["chapters"]:
                 self._chapters.append(LemmaChapter(chapter))
-        except KeyError:
-            pass
         if not self.is_valid():
             raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
 

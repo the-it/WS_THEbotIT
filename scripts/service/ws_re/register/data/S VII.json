@@ -22,16 +22,6 @@
     "next": "Agri decumates"
   },
   {
-    "lemma": "Adule, Adulis",
-    "chapters": [
-      {
-        "start": 1,
-        "end": 1,
-        "author": "Littmann"
-      }
-    ]
-  },
-  {
     "lemma": "Agri decumates",
     "previous": "Adulitai",
     "next": "Aguntum",
@@ -287,6 +277,20 @@
     ]
   },
   {
+    "lemma": "Auction 1"
+  },
+  {
+    "lemma": "Aurelius 63a",
+    "next": "Aurelius 39a",
+    "chapters": [
+      {
+        "start": 72,
+        "end": 72,
+        "author": "Saria"
+      }
+    ]
+  },
+  {
     "lemma": "Aurelius 39a",
     "next": "Aurelius 56b",
     "sort_key": "Aurelius 039a",
@@ -304,24 +308,7 @@
     "sort_key": "Aurelius 056b"
   },
   {
-    "lemma": "Auction 1",
-    "previous": "Attributio",
-    "next": "Aurelius 63a"
-  },
-  {
-    "lemma": "Aurelius 63a",
-    "previous": "Auction 1",
-    "chapters": [
-      {
-        "start": 72,
-        "end": 72,
-        "author": "Saria"
-      }
-    ]
-  },
-  {
     "lemma": "Aurelius 145aaa",
-    "previous": "Aurelius 56b",
     "next": "Aurelius 184",
     "chapters": [
       {
@@ -441,7 +428,8 @@
     "next": "Χειροτέχνιον"
   },
   {
-    "lemma": "χειρόγραφον",
+    "lemma": "Χειροτέχνιον",
+    "previous": "Chirographum",
     "chapters": [
       {
         "start": 84,
@@ -449,33 +437,6 @@
         "author": "Ziebarth"
       }
     ]
-  },
-  {
-    "lemma": "Clementius 1",
-    "previous": "Claudius 207",
-    "next": "Clementius 1a"
-  },
-  {
-    "lemma": "Clementius 1a",
-    "previous": "Clementius 1",
-    "next": "Cocceius 3",
-    "chapters": [
-      {
-        "start": 89,
-        "end": 89,
-        "author": "Stein, O[tto]"
-      }
-    ]
-  },
-  {
-    "lemma": "Cocceius 3",
-    "previous": "Clementius 1a",
-    "next": "Cocceius 12"
-  },
-  {
-    "lemma": "Χειροτέχνιον",
-    "next": "Chersonesos 5",
-    "sort_key": "Cheirotechnion"
   },
   {
     "lemma": "Chersonesos 5",
@@ -498,7 +459,30 @@
   },
   {
     "lemma": "Claudius 207",
-    "previous": "χρηματισμός"
+    "previous": "χρηματισμός",
+    "next": "Clementius 1"
+  },
+  {
+    "lemma": "Clementius 1",
+    "previous": "Claudius 207",
+    "next": "Clementius 1a"
+  },
+  {
+    "lemma": "Clementius 1a",
+    "previous": "Clementius 1",
+    "next": "Cocceius 3",
+    "chapters": [
+      {
+        "start": 89,
+        "end": 89,
+        "author": "Stein, O[tto]"
+      }
+    ]
+  },
+  {
+    "lemma": "Cocceius 3",
+    "previous": "Clementius 1a",
+    "next": "Cocceius 12"
   },
   {
     "lemma": "Cocceius 12",
@@ -557,16 +541,6 @@
     "lemma": "Crepereius 3a",
     "previous": "Dea Coryphea",
     "next": "Crepereius 5a",
-    "chapters": [
-      {
-        "start": 98,
-        "end": 98,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Crepereius 3b",
     "chapters": [
       {
         "start": 98,
@@ -658,6 +632,7 @@
   {
     "lemma": "Dekane",
     "previous": "Δειγματοκαταγωγός",
+    "next": "Δεκατηλόγος",
     "wp_link": "w:de:Dekan (Astrologie)",
     "chapters": [
       {
@@ -666,23 +641,6 @@
         "author": "Gundel, Wilhelm"
       }
     ]
-  },
-  {
-    "lemma": "δημοσίωσις",
-    "previous": "Demetrios 100a",
-    "next": "Derkylos 2",
-    "sort_key": "demosiosis",
-    "chapters": [
-      {
-        "start": 123,
-        "end": 123,
-        "author": "Ziebarth"
-      }
-    ]
-  },
-  {
-    "lemma": "Derkylos 2",
-    "previous": "δημοσίωσις"
   },
   {
     "lemma": "Δεκατηλόγος",
@@ -708,6 +666,22 @@
         "author": "Kroll"
       }
     ]
+  },
+  {
+    "lemma": "δημοσίωσις",
+    "next": "Derkylos 2",
+    "sort_key": "demosiosis",
+    "chapters": [
+      {
+        "start": 123,
+        "end": 123,
+        "author": "Ziebarth"
+      }
+    ]
+  },
+  {
+    "lemma": "Derkylos 2",
+    "previous": "δημοσίωσις"
   },
   {
     "lemma": "Diadochos a",
@@ -4807,12 +4781,21 @@
   {
     "lemma": "Origanum",
     "previous": "Oreine",
-    "next": "Peculatus",
     "chapters": [
       {
         "start": 813,
         "end": 813,
         "author": "Steier"
+      }
+    ]
+  },
+  {
+    "lemma": "Orphanene",
+    "chapters": [
+      {
+        "start": 818,
+        "end": 818,
+        "author": "Ruge"
       }
     ]
   },
@@ -4829,19 +4812,8 @@
     ]
   },
   {
-    "lemma": "Orphanene",
-    "next": "Pedion 3",
-    "chapters": [
-      {
-        "start": 818,
-        "end": 818,
-        "author": "Ruge"
-      }
-    ]
-  },
-  {
     "lemma": "Pedion 3",
-    "previous": "Orphanene",
+    "previous": "Peculatus",
     "next": "Pedius 6a",
     "chapters": [
       {
