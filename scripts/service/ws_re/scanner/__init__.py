@@ -22,7 +22,7 @@ class ReScanner(CanonicalBot):
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(minutes=120)
-        self.tasks = [KSCHTask, DEALTask, DEWPTask, SCANTask]
+        self.tasks: List[type(ReScannerTask)] = [KSCHTask, DEALTask, DEWPTask, SCANTask]
         if self.debug:
             self.tasks = self.tasks + []
         self.statistic = {}
@@ -139,7 +139,7 @@ class ReScanner(CanonicalBot):
             except ReDatenException:
                 error = traceback.format_exc().splitlines()[-1]
                 self.logger.error(f"The initiation of {lemma} went wrong: {error}")
-                error_task.task(lemma, error)
+                error_task.append_error(lemma, error)
                 self._add_lemma_to_data(lemma)
                 continue
             if re_page.has_changed():

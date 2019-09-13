@@ -2,17 +2,19 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.scanner.tasks.error_handling import ERROTask
+from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner.tasks.base_task import ReporterMixin
 from scripts.service.ws_re.template.article import Article
 from tools.bots import WikiLogger
 
 
-class DEWPTask(ERROTask):
+class DEWPTask(ReScannerTask, ReporterMixin):
     _wiki_page = "RE:Wartung:Tote Links nach Wikipedia"
     _reason = "Neue tote Links"
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
-        super().__init__(wiki, logger, debug)
+        ReScannerTask.__init__(self, wiki, logger, debug)
+        ReporterMixin.__init__(self, wiki)
         self.wp_wiki = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
         self.data = {"not_exists": [], "redirect": []}
 
@@ -51,3 +53,7 @@ class DEWPTask(ERROTask):
 
     def _data_exists(self) -> bool:
         return bool(self.data["not_exists"]) or bool(self.data["redirect"])
+
+    def finish_task(self):
+        self.report_data_entries()
+        super().finish_task()

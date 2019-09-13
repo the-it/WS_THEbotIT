@@ -3,12 +3,12 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.scanner.tasks.error_handling import ERROTask
+from scripts.service.ws_re.scanner.tasks.base_task import ReporterMixin, ReScannerTask
 from scripts.service.ws_re.template.article import Article
 from tools.bots import WikiLogger
 
 
-class DEALTask(ERROTask):
+class DEALTask(ReScannerTask, ReporterMixin):
     _wiki_page = "RE:Wartung:Tote Links"
     _reason = "Neue tote Links"
 
@@ -18,13 +18,14 @@ class DEALTask(ERROTask):
                          )
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
-        super().__init__(wiki, logger, debug)
+        ReScannerTask.__init__(self, wiki, logger, debug)
+        ReporterMixin.__init__(self, wiki)
         regex_start_characters = ''.join(self._start_characters)
         regex_start_characters = regex_start_characters + regex_start_characters.upper()
         self.re_siehe_regex = re.compile(rf"(?:\{{\{{RE siehe\||\[\[RE:)"
                                          rf"([{regex_start_characters}][^\|\}}\]]+)")
 
-    def task(self):  # pylint: disable=arguments-differ
+    def task(self):
         for article in self.re_page:
             # check properties of REDaten Block first
             if isinstance(article, Article):
@@ -52,3 +53,7 @@ class DEALTask(ERROTask):
             entries.append(f"* [[RE:{item[0]}]] verlinkt von [[RE:{item[1]}]]")
         body = "\n".join(entries)
         return caption + body
+
+    def finish_task(self):
+        self.report_data_entries()
+        super().finish_task()
