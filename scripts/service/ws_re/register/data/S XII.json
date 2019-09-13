@@ -839,7 +839,6 @@
   {
     "lemma": "Arcani",
     "previous": "Aquilius 30",
-    "next": "Argura 1",
     "chapters": [
       {
         "start": 89,
@@ -850,6 +849,7 @@
   },
   {
     "lemma": "Antonius 76",
+    "previous": "Antonius 75",
     "next": "Antonius 80",
     "sort_key": "Antonius 076"
   },
@@ -3715,10 +3715,11 @@
   {
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
-    "next": "Arborius 5"
+    "next": "Anaximenes 2"
   },
   {
     "lemma": "Anaximenes 2",
+    "previous": "Anaximandros 1",
     "next": "Andania 1"
   },
   {
@@ -3727,11 +3728,11 @@
   },
   {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 1"
+    "previous": "Anaximenes 1",
+    "next": "Andautonia"
   },
   {
     "lemma": "Arborius 5",
-    "previous": "Anaximandros 1",
     "next": "Archedemos 5",
     "chapters": [
       {
