@@ -23,17 +23,6 @@
     ]
   },
   {
-    "lemma": "Aelius 122a",
-    "previous": "Aelius 92a",
-    "chapters": [
-      {
-        "start": 1,
-        "end": 1,
-        "author": "Winkler"
-      }
-    ]
-  },
-  {
     "lemma": "Aelius 92a",
     "previous": "Aelius 42a",
     "next": "Aelius 122a",
@@ -42,6 +31,17 @@
       {
         "start": 2,
         "end": 2,
+        "author": "Winkler"
+      }
+    ]
+  },
+  {
+    "lemma": "Aelius 122a",
+    "previous": "Aelius 92a",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
         "author": "Winkler"
       }
     ]
@@ -144,6 +144,23 @@
     ]
   },
   {
+    "lemma": "Antonius 95a",
+    "next": "Apesas 1",
+    "sort_key": "Antonius 095a",
+    "chapters": [
+      {
+        "start": 12,
+        "end": 12,
+        "author": "Thomasson"
+      }
+    ]
+  },
+  {
+    "lemma": "Apesas 1",
+    "previous": "Antonius 95a",
+    "next": "Aquilinus 7"
+  },
+  {
     "lemma": "Aquilinus 7",
     "next": "Aratza",
     "sort_key": "Aquilinus 07",
@@ -178,23 +195,6 @@
         "author": "Hinz"
       }
     ]
-  },
-  {
-    "lemma": "Antonius 95a",
-    "next": "Apesas 1",
-    "sort_key": "Antonius 095a",
-    "chapters": [
-      {
-        "start": 12,
-        "end": 12,
-        "author": "Thomasson"
-      }
-    ]
-  },
-  {
-    "lemma": "Apesas 1",
-    "previous": "Antonius 95a",
-    "next": "Aquilinus 7"
   },
   {
     "lemma": "Arekrat",
@@ -262,12 +262,13 @@
   },
   {
     "lemma": "Ascheion",
-    "previous": "Arsatzia",
-    "next": "Aspis 10a"
+    "previous": "Arsatzia"
   },
   {
-    "lemma": "Aspis 10a",
+    "lemma": "Ἀσπὶς ἄκρα",
     "previous": "Ascheion",
+    "next": "Asprenas 1a",
+    "sort_key": "Aspis akra",
     "chapters": [
       {
         "start": 15,
@@ -275,12 +276,6 @@
         "author": "Treidler"
       }
     ]
-  },
-  {
-    "lemma": "Ἀσπὶς ἄκρα",
-    "previous": "Ascheion",
-    "next": "Asprenas 1a",
-    "sort_key": "Aspis akra"
   },
   {
     "lemma": "Asprenas 1a",
@@ -295,12 +290,7 @@
     ]
   },
   {
-    "lemma": "Asprenas",
-    "next": "Asprius"
-  },
-  {
     "lemma": "Asprius",
-    "previous": "Asprenas",
     "next": "Asterope 6",
     "chapters": [
       {
@@ -367,34 +357,6 @@
     ]
   },
   {
-    "lemma": "Bobiensia epigrammata",
-    "next": "Bomos Athenas",
-    "redirect": "Epigrammata Bobiensia",
-    "chapters": [
-      {
-        "start": 17,
-        "end": 17
-      }
-    ]
-  },
-  {
-    "lemma": "Bomos Athenas",
-    "previous": "Bobiensia epigrammata",
-    "next": "Buphagion",
-    "chapters": [
-      {
-        "start": 17,
-        "end": 17,
-        "author": "Helck"
-      }
-    ]
-  },
-  {
-    "lemma": "Buphagion",
-    "previous": "Bomos Athenas",
-    "next": "Bura 1"
-  },
-  {
     "lemma": "Aurelius 163a",
     "next": "Aurelius 217a",
     "chapters": [
@@ -427,6 +389,34 @@
         "author": "Brommer"
       }
     ]
+  },
+  {
+    "lemma": "Bobiensia epigrammata",
+    "next": "Bomos Athenas",
+    "redirect": "Epigrammata Bobiensia",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "lemma": "Bomos Athenas",
+    "previous": "Bobiensia epigrammata",
+    "next": "Buphagion",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Helck"
+      }
+    ]
+  },
+  {
+    "lemma": "Buphagion",
+    "previous": "Bomos Athenas",
+    "next": "Bura 1"
   },
   {
     "lemma": "Bura 1",
@@ -553,16 +543,6 @@
     "lemma": "Deire 1",
     "previous": "Daitos",
     "next": "Demetrias 1",
-    "chapters": [
-      {
-        "start": 24,
-        "end": 24,
-        "author": "Helck"
-      }
-    ]
-  },
-  {
-    "lemma": "Deire 2",
     "chapters": [
       {
         "start": 24,
@@ -1739,6 +1719,16 @@
     ]
   },
   {
+    "lemma": "Neratius 15a",
+    "chapters": [
+      {
+        "start": 416,
+        "end": 416,
+        "author": "Thomasson"
+      }
+    ]
+  },
+  {
     "lemma": "Nerion",
     "next": "νεῦσις"
   },
@@ -1752,16 +1742,6 @@
         "start": 415,
         "end": 461,
         "author": "Böker"
-      }
-    ]
-  },
-  {
-    "lemma": "Neratius 15a",
-    "chapters": [
-      {
-        "start": 416,
-        "end": 416,
-        "author": "Thomasson"
       }
     ]
   },
@@ -2261,8 +2241,6 @@
   },
   {
     "lemma": "Pontos Euxeinos",
-    "previous": "Iberia",
-    "next": "Seuthopolis",
     "chapters": [
       {
         "start": 866,
@@ -4709,5 +4687,10 @@
         "author": "Treidler"
       }
     ]
+  },
+  {
+    "lemma": "Pontos Euxeinos",
+    "previous": "Iberia",
+    "next": "Seuthopolis"
   }
 ]

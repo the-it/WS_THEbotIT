@@ -44,7 +44,7 @@ class Mapping(DownloadTarget):
                     for idx, page in enumerate(range(page_mapping[1], page_mapping[2] + 1)):
                         try:
                             symlink(Path(self.path_raw_files, _photo_mapping[page]),
-                                    Path(self.path_mapping, f"{offset + (4*idx)}.tif"))
+                                    Path(self.path_mapping, f"{offset + (4*idx):04d}.tif"))
                         except KeyError as error:
                             # known absent pages
                             if error.args[0] in _MISSING_PAGES:

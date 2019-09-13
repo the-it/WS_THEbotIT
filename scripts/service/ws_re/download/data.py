@@ -93,20 +93,20 @@ _MAPPINGS = {
                                                                             (1235, 170312, 170322),)},
     "IX A,2": {"source": ("PaulyWissowa5466", "Vulcanius Zenius"), "pages": ((1279, 180002, 180302),)},
     "X A": {"source": ("PaulyWissowa5466", "Zenobia Zythos"), "pages": ((-1, 190002, 190213),)},
-    "S I": {"source": ("PaulySupp", "Supp01 Aba Demokratia"), "pages": ((-1, 10002, 10093),)},
-    "S II": {"source": ("PaulySupp", "Supp02 Herodes Herodotos"), "pages": ((-1, 20002, 20131),)},
-    "S III": {"source": ("PaulySupp", "Supp03 Aachen Iuglandem"), "pages": ((-1, 30002, 30326),)},
-    "S IV": {"source": ("PaulySupp", "Supp04 Abacus Ledon"), "pages": ((-1, 40002, 40358),)},
-    "S V": {"source": ("PaulySupp", "Supp05 Agamemnon Statilius"), "pages": ((-1, 50002, 50249),)},
-    "S VI": {"source": ("PaulySupp", "Supp06  Abtreten Thunudromon"), "pages": ((-1, 60002, 60358),)},
-    "S VII": {"source": ("PaulySupp", "Supp07 Adobogiona Triakadieis"), "pages": ((-1, 70002, 70413),)},
-    "S VIII": {"source": ("PaulySupp", "Supp08 Achaios Valerius"), "pages": ((-1, 80002, 80314),)},
-    "S IX": {"source": ("PaulySupp", "Supp09 Acilius Utis"), "pages": ((-1, 90002, 90481),)},
-    "S X": {"source": ("PaulySupp", "Supp10 Accaus Uttiedius"), "pages": ((-1, 100002, 100294),)},
-    "S XI": {"source": ("PaulySupp", "Supp11 Abragila Zengisa"), "pages": ((-1, 110002, 110341),)},
-    "S XII": {"source": ("PaulySupp", "Supp12 Abdigidus Thukydides"), "pages": ((-1, 120002, 120427),)},
+    "S I": {"source": ("PaulySupp", "Supp01 Aba Demokratia"), "pages": ((-1, 10002, 10095),)},
+    "S II": {"source": ("PaulySupp", "Supp02 Herodes Herodotos"), "pages": ((-1, 20002, 20132),)},
+    "S III": {"source": ("PaulySupp", "Supp03 Aachen Iuglandem"), "pages": ((-1, 30002, 30328),)},
+    "S IV": {"source": ("PaulySupp", "Supp04 Abacus Ledon"), "pages": ((-1, 40002, 40362),)},
+    "S V": {"source": ("PaulySupp", "Supp05 Agamemnon Statilius"), "pages": ((-1, 50002, 50253),)},
+    "S VI": {"source": ("PaulySupp", "Supp06  Abtreten Thunudromon"), "pages": ((-1, 60002, 60360),)},
+    "S VII": {"source": ("PaulySupp", "Supp07 Adobogiona Triakadieis"), "pages": ((-1, 70002, 70418),)},
+    "S VIII": {"source": ("PaulySupp", "Supp08 Achaios Valerius"), "pages": ((-1, 80002, 80319),)},
+    "S IX": {"source": ("PaulySupp", "Supp09 Acilius Utis"), "pages": ((-1, 90002, 90482),)},
+    "S X": {"source": ("PaulySupp", "Supp10 Accaus Uttiedius"), "pages": ((-1, 100002, 100296),)},
+    "S XI": {"source": ("PaulySupp", "Supp11 Abragila Zengisa"), "pages": ((-1, 110002, 110346),)},
+    "S XII": {"source": ("PaulySupp", "Supp12 Abdigidus Thukydides"), "pages": ((-1, 120002, 120430),)},
     "S XIII": {"source": ("PaulySupp", "Supp13 Africa Proconsularis Viae publicae Romanae"),
-               "pages": ((-1, 130002, 130422),)}
+               "pages": ((-1, 130002, 130423),)}
 }
 
 _MISSING_PAGES = (
