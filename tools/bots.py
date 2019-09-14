@@ -5,6 +5,7 @@ import sys
 from abc import abstractmethod, ABC
 from collections.abc import Mapping
 from datetime import datetime, timedelta
+from typing import Dict
 
 from pywikibot import Page, Site
 
@@ -253,7 +254,7 @@ class OneTimeBot(ABC):
 
 class PersistedData(Mapping):
     def __init__(self, bot_name: str):
-        self.data = {}
+        self.data: Dict = {}
         self.botname = bot_name
         self.data_folder = _get_data_path()
         self.file_name = self.data_folder + os.sep + bot_name + ".data.json"

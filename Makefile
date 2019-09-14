@@ -28,7 +28,7 @@ gource :
 
 mypy :
 	echo "############# MYPY #############"
-	mypy scripts tools
+	mypy scripts tools || true
 
 safety :
 	echo "############ SAFETY ############"
