@@ -155,11 +155,11 @@ jobs:
     working_directory: ~/repo
     <<: *coverage_steps
 
-  unittest38:
+  coverage38:
     docker:
       - image: circleci/python:3.8-rc
     working_directory: ~/repo
-    <<: *unittest_steps
+    <<: *coverage_steps
 
 # dependencies for the workflow
 
@@ -173,7 +173,7 @@ workflows:
             branches:
               ignore:
                 - /.*updating_registers.*/
-      - unittest38:
+      - coverage38:
           context: python38
           requires:
             - quality
