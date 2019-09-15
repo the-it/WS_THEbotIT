@@ -16,10 +16,6 @@ else:
     ParameterDict = Dict[str, Optional[str]]
 ParameterList = List[ParameterDict]
 
-
-class TemplateHandlerException(Exception):
-    pass
-
 REGEX_TITLE = r"\A[^\|]+"
 REGEX_NO_KEY = r"\A[^\|]*"
 REGEX_TEMPLATE = r"\A\{\{.*?\}\}"
@@ -31,8 +27,12 @@ REGEX_KEY_EMBEDDED_TEMPLATE_OR_LINK = \
 REGEX_TEMPLATE_LINK = r"\A[^\|]*(\{\{|\[\[)[^\|]*\|"
 
 
+class TemplateHandlerException(Exception):
+    pass
+
+
 class TemplateHandler:
-    def __init__(self, template_str: str =''):
+    def __init__(self, template_str: str = ''):
         self.title: str = ''
         self.parameters: ParameterList = []
         if template_str:
@@ -69,7 +69,7 @@ class TemplateHandler:
     def get_parameter(self, key) -> ParameterDict:
         return [item for item in self.parameters if item["key"] == key][0]
 
-    def get_str(self, str_complex: bool =True) -> str:
+    def get_str(self, str_complex: bool = True) -> str:
         list_for_template: List[str] = ["{{" + self.title]
         for parameter in self.parameters:
             if parameter["key"]:

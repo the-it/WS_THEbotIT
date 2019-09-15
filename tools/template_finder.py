@@ -16,7 +16,6 @@ else:
     TemplatePositionDict = Dict[str, Union[str, Tuple[int, int]]]
 
 
-
 class TemplateFinderException(Exception):
     pass
 
