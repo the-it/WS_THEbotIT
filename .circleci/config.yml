@@ -145,7 +145,7 @@ unittest_steps: &unittest_steps
 jobs:
   quality:
     docker:
-      - image: circleci/python:3.7
+      - image: circleci/python:3.8-rc
     working_directory: ~/repo
     <<: *quality_steps
 

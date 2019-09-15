@@ -1,6 +1,26 @@
 import re
+import sys
+from typing import Optional, Dict, List
 
-REGEX_TITLE = r"\A[^\|]*"
+if sys.version_info >= (3, 8):
+    from typing import TypedDict  # pylint: disable=no-name-in-module
+
+# type hints
+if sys.version_info >= (3, 8):
+    # typed dicts
+    class ParameterDict(TypedDict):
+        key: Optional[str]
+        value: str
+
+else:
+    ParameterDict = Dict[str, Optional[str]]
+ParameterList = List[ParameterDict]
+
+
+class TemplateHandlerException(Exception):
+    pass
+
+REGEX_TITLE = r"\A[^\|]+"
 REGEX_NO_KEY = r"\A[^\|]*"
 REGEX_TEMPLATE = r"\A\{\{.*?\}\}"
 REGEX_INTERWIKI = r"\A\[\[.*?\]\][^|\}]*"
@@ -12,21 +32,20 @@ REGEX_TEMPLATE_LINK = r"\A[^\|]*(\{\{|\[\[)[^\|]*\|"
 
 
 class TemplateHandler:
-    def __init__(self, template_str=''):
-        '''
-
-        :param template_str:
-        :return:
-        '''
-        self.title = ''
-        self.parameters = []
+    def __init__(self, template_str: str =''):
+        self.title: str = ''
+        self.parameters: ParameterList = []
         if template_str:
             self._process_template_str(template_str)
 
     def _process_template_str(self, template_str: str):
         template_str = re.sub("\n", '', template_str)  # get rid of all linebreaks
         template_str = template_str[2:-2]  # get rid of the surrounding brackets
-        self.title = re.search(REGEX_TITLE, template_str).group()  # extract the title
+        match = re.search(REGEX_TITLE, template_str)
+        if match:
+            self.title = match.group()  # extract the title
+        else:
+            raise TemplateHandlerException("First Character is |, there is no title")
         template_str = re.sub(self.title + r"\|?", '', template_str)  # get rid of the title
 
         while template_str:  # analyse the arguments
@@ -44,19 +63,19 @@ class TemplateHandler:
             else:  # an argument without a key
                 template_str = self._save_argument(REGEX_NO_KEY, template_str, False)
 
-    def get_parameterlist(self):
+    def get_parameterlist(self) -> ParameterList:
         return self.parameters
 
-    def get_parameter(self, key):
+    def get_parameter(self, key) -> ParameterDict:
         return [item for item in self.parameters if item["key"] == key][0]
 
-    def get_str(self, str_complex=True):
-        list_for_template = ["{{" + self.title]
+    def get_str(self, str_complex: bool =True) -> str:
+        list_for_template: List[str] = ["{{" + self.title]
         for parameter in self.parameters:
             if parameter["key"]:
-                list_for_template.append("|" + parameter["key"] + "=" + parameter["value"])
+                list_for_template.append(f"|{parameter['key']}={parameter['value']}")
             else:
-                list_for_template.append("|" + parameter["value"])
+                list_for_template.append(f"|{parameter['value']}")
         list_for_template.append("}}")
         if str_complex:
             ret_str = "\n"
@@ -64,71 +83,28 @@ class TemplateHandler:
             ret_str = ''
         return ret_str.join(list_for_template)
 
-    def update_parameters(self, dict_parameters):
+    def update_parameters(self, dict_parameters: ParameterList):
         self.parameters = dict_parameters
 
-    def set_title(self, title):
+    def set_title(self, title: str):
         self.title = title
 
     @staticmethod
-    def _cut_spaces(raw_string):
-        return re.sub(r"(\A[ ]|[ ]\Z)", "", raw_string)
+    def _cut_spaces(raw_string: str) -> str:
+        return re.sub(r"(\A | \Z)", "", raw_string)
 
-    def _save_argument(self, search_pattern, template_str, has_key):
-        par_template = re.search(search_pattern, template_str).group()
-        if has_key is True:
-            par_template = re.search(r"\A([^\=]*)[ ]?=[ ]?(.*)\Z", par_template)
-            self.parameters.append({"key": self._cut_spaces(par_template.group(1)),
-                                    "value": self._cut_spaces(par_template.group(2))})
-        else:
-            self.parameters.append({"key": None, "value": self._cut_spaces(par_template)})
-        return re.sub(search_pattern + r"\|?", "", template_str)
-
-
-class TemplateFinderException(Exception):
-    pass
-
-
-class TemplateFinder():
-    def __init__(self, text_to_search: str):
-        self.text = text_to_search
-
-    def get_positions(self, template_name: str):
-        templates = list()
-        for start_position_template in \
-                self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
-            pos_start_brackets = \
-                self.get_start_positions_of_regex(r"\{\{", self.text[start_position_template + 2:])
-            pos_start_brackets.reverse()
-            pos_end_brackets = \
-                self.get_start_positions_of_regex(r"\}\}", self.text[start_position_template + 2:])
-            pos_end_brackets.reverse()
-            open_brackets = 1
-            while pos_end_brackets:
-                if pos_start_brackets and (pos_end_brackets[-1] > pos_start_brackets[-1]):
-                    open_brackets += 1
-                    pos_start_brackets.pop(-1)
-                else:
-                    open_brackets -= 1
-                    if open_brackets == 0:
-                        # detected end of the template
-                        end_position_template = pos_end_brackets[-1]
-                        # add offset for start and end brackets
-                        end_position_template += 4
-                        # add start position (end only searched after)
-                        end_position_template += start_position_template
-                        templates.append({"pos": (start_position_template, end_position_template),
-                                          "text": self.text[start_position_template:
-                                                            end_position_template]})
-                        break
-                    pos_end_brackets.pop(-1)
+    def _save_argument(self, search_pattern: str, template_str: str, has_key: bool) -> str:
+        par_template_match = re.search(search_pattern, template_str)
+        if par_template_match:
+            par_template = par_template_match.group()
+            if has_key is True:
+                par_template_match = re.search(r"\A([^=]*) ?= ?(.*)\Z", par_template)
+                if par_template_match:
+                    self.parameters.append({"key": self._cut_spaces(par_template_match.group(1)),
+                                            "value": self._cut_spaces(par_template_match.group(2))})
             else:
-                raise TemplateFinderException(f"No end of the template found for {template_name}")
-        return templates
-
-    @staticmethod
-    def get_start_positions_of_regex(regex_pattern: str, text: str):
-        list_of_positions = list()
-        for match in re.finditer(regex_pattern, text):
-            list_of_positions.append(match.regs[0][0])
-        return list_of_positions
+                self.parameters.append({"key": None, "value": self._cut_spaces(par_template)})
+        else:
+            raise TemplateHandlerException(f"Cannot save {template_str} "
+                                           f"with pattern {search_pattern}, should not happen.")
+        return re.sub(search_pattern + r"\|?", "", template_str)
