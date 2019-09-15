@@ -2471,10 +2471,12 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
+    "next": "Collegium",
     "redirect": "urbanae cohortes"
   },
   {
     "lemma": "Collegium",
+    "previous": "cohortes urbanae",
     "next": "Constantiniani"
   },
   {
@@ -2561,7 +2563,9 @@
       }
     ]
   },
-  {"lemma": "creditum"},
+  {
+    "lemma": "creditum"
+  },
   {
     "lemma": "Daduchos 3",
     "next": "Damatros",
@@ -9921,7 +9925,9 @@
       }
     ]
   },
-  {"lemma": "Ulpius 1"},
+  {
+    "lemma": "Ulpius 1"
+  },
   {
     "lemma": "Ulpius 1a",
     "previous": "Ulpius 1",
@@ -9941,7 +9947,9 @@
       }
     ]
   },
-  {"lemma": "Ulpius 3a"},
+  {
+    "lemma": "Ulpius 3a"
+  },
   {
     "lemma": "Ummidius 2a",
     "next": "Urbanae cohortes",
@@ -10213,7 +10221,9 @@
       }
     ]
   },
-  {"lemma": "creditum"},
+  {
+    "lemma": "creditum"
+  },
   {
     "lemma": "intercisi dies",
     "next": "Vinalia",
