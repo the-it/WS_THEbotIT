@@ -4,7 +4,7 @@ import pywikibot
 
 from scripts.service.ws_re.template import RE_DATEN, RE_ABSCHNITT, RE_AUTHOR, ReDatenException
 from scripts.service.ws_re.template.article import Article
-from tools.template_handler import TemplateFinder, TemplateFinderException
+from tools.template_finder import TemplateFinderException, TemplateFinder
 
 
 class RePage():

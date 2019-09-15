@@ -3,7 +3,8 @@ from typing import Union, Tuple, Generator
 
 from scripts.service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
 from scripts.service.ws_re.template.property import Property
-from tools.template_handler import TemplateFinder, TemplateHandler
+from tools.template_finder import TemplateFinder
+from tools.template_handler import TemplateHandler
 
 
 class Article(collections.MutableMapping):
