@@ -100,12 +100,7 @@
     "next": "Aelius 134b"
   },
   {
-    "lemma": "Aelius 78a",
-    "next": "Aelius 134b"
-  },
-  {
     "lemma": "Aelius 134b",
-    "previous": "Aelius 78a",
     "next": "Aelius 140a",
     "chapters": [
       {
@@ -121,7 +116,7 @@
     "next": "Aelius 168a"
   },
   {
-    "lemma": "Aelius 169a",
+    "lemma": "Aelius 168a",
     "chapters": [
       {
         "start": 3,
@@ -251,16 +246,6 @@
     "next": "Αἰνύρων χῶρος"
   },
   {
-    "lemma": "Agesilaos 7b",
-    "chapters": [
-      {
-        "start": 4,
-        "end": 4,
-        "author": "Hanslik"
-      }
-    ]
-  },
-  {
     "lemma": "Αἰνύρων χῶρος",
     "previous": "Aigosthena",
     "next": "Akephalos"
@@ -371,6 +356,7 @@
     "previous": "Amelas",
     "next": "Anaximandros 1"
   },
+  {"lemma": "Anaximandros 1"},
   {
     "lemma": "Andautonia",
     "next": "Andeda"
@@ -562,14 +548,39 @@
     "sort_key": "Antonius 075"
   },
   {
-    "lemma": "Antonius 75.76",
+    "lemma": "Antonius 76",
+    "previous": "Antonius 75",
+    "next": "Antonius 80",
+    "sort_key": "Antonius 076"
+  },
+  {
+    "lemma": "Antonius 80",
+    "previous": "Antonius 76",
+    "next": "Antonius 107",
+    "sort_key": "Antonius 080"
+  },
+  {
+    "lemma": "Antonius 107",
+    "previous": "Antonius 80",
+    "next": "Apicatus"
+  },
+  {
+    "lemma": "Apicatus",
+    "previous": "Antonius 107",
+    "next": "Aponius 8",
     "chapters": [
       {
-        "start": 88,
-        "end": 89,
+        "start": 90,
+        "end": 90,
         "author": "Hanslik"
       }
     ]
+  },
+  {
+    "lemma": "Aponius 8",
+    "previous": "Apicatus",
+    "next": "Appuleius 13",
+    "sort_key": "Aponius 08"
   },
   {
     "lemma": "Appuleius 13",
@@ -615,41 +626,6 @@
         "author": "Demandt"
       }
     ]
-  },
-  {
-    "lemma": "Antonius 76",
-    "previous": "Antonius 75",
-    "next": "Antonius 80",
-    "sort_key": "Antonius 076"
-  },
-  {
-    "lemma": "Antonius 80",
-    "previous": "Antonius 76",
-    "next": "Antonius 107",
-    "sort_key": "Antonius 080"
-  },
-  {
-    "lemma": "Antonius 107",
-    "previous": "Antonius 80",
-    "next": "Apicatus"
-  },
-  {
-    "lemma": "Apicatus",
-    "previous": "Antonius 107",
-    "next": "Aponius 8",
-    "chapters": [
-      {
-        "start": 90,
-        "end": 90,
-        "author": "Hanslik"
-      }
-    ]
-  },
-  {
-    "lemma": "Aponius 8",
-    "previous": "Apicatus",
-    "next": "Appuleius 13",
-    "sort_key": "Aponius 08"
   },
   {
     "lemma": "Argura 1",
@@ -934,6 +910,16 @@
     ]
   },
   {
+    "lemma": "Bappo 2",
+    "chapters": [
+      {
+        "start": 132,
+        "end": 132,
+        "author": "Demandt"
+      }
+    ]
+  },
+  {
     "lemma": "Barbius 1a",
     "next": "Bassa 2",
     "chapters": [
@@ -953,16 +939,6 @@
         "start": 131,
         "end": 131,
         "author": "Hanslik"
-      }
-    ]
-  },
-  {
-    "lemma": "Bappo 2",
-    "chapters": [
-      {
-        "start": 132,
-        "end": 132,
-        "author": "Demandt"
       }
     ]
   },
@@ -1238,7 +1214,6 @@
   {
     "lemma": "Caravantius",
     "previous": "Caravantis",
-    "next": "Cassius 45a",
     "chapters": [
       {
         "start": 137,
@@ -1286,16 +1261,6 @@
     "lemma": "Catius 4",
     "previous": "Catienus 1b",
     "next": "Celeia"
-  },
-  {
-    "lemma": "Egrilius 2a",
-    "chapters": [
-      {
-        "start": 141,
-        "end": 141,
-        "author": "Hanslik"
-      }
-    ]
   },
   {
     "lemma": "Celeia",
@@ -1397,16 +1362,6 @@
     "lemma": "Claudius 285",
     "previous": "Claudius 262",
     "next": "Claudius 288aaa"
-  },
-  {
-    "lemma": "Claudius 288a",
-    "chapters": [
-      {
-        "start": 156,
-        "end": 157,
-        "author": "Winkler"
-      }
-    ]
   },
   {
     "lemma": "Claudius 288aaa",
@@ -1734,28 +1689,6 @@
     ]
   },
   {
-    "lemma": "Curtius 36c",
-    "next": "Curtius 36b",
-    "chapters": [
-      {
-        "start": 191,
-        "end": 192,
-        "author": "Hanslik"
-      }
-    ]
-  },
-  {
-    "lemma": "Curtius 36b",
-    "previous": "Curtius 36c",
-    "chapters": [
-      {
-        "start": 192,
-        "end": 192,
-        "author": "Hanslik"
-      }
-    ]
-  },
-  {
     "lemma": "Curtius 37a",
     "previous": "Cupressenus",
     "next": "Curtius 37b"
@@ -1790,12 +1723,7 @@
     ]
   },
   {
-    "lemma": "Dasumius 1a",
-    "next": "Demokritos 6"
-  },
-  {
     "lemma": "Demokritos 6",
-    "previous": "Dasumius 1a",
     "next": "Deraia"
   },
   {
@@ -3500,19 +3428,6 @@
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
     "next": "Arborius 5"
-  },
-  {
-    "lemma": "Anaximenes 2",
-    "next": "Andania 1"
-  },
-  {
-    "lemma": "Anaximenes 1",
-    "next": "Andania 1"
-  },
-  {
-    "lemma": "Andania 1",
-    "previous": "Anaximenes 1",
-    "next": "Andautonia"
   },
   {
     "lemma": "Arborius 5",

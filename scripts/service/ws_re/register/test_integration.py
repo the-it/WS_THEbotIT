@@ -22,7 +22,7 @@ class TestIntegrationRegister(TestCase):
     def _raise_count_errors(self, errors):
         if errors:  # pragma: no cover
             count = len(errors)
-            banner = "\n" + Figlet(font="basic").renderText(f"ERRORS: {count}")
+            banner = "\n" + Figlet(font="big").renderText(f"ERRORS: {count}")
             errors.insert(0, banner)
             errors.append(banner)
             raise AssertionError("\n".join(errors))
