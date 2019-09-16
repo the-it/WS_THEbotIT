@@ -1027,7 +1027,8 @@
   },
   {
     "lemma": "Cincius 9",
-    "previous": "Chelidonioi"
+    "previous": "Chelidonioi",
+    "next": "Claudius 71"
   },
   {
     "lemma": "Claudius 71",
@@ -1074,6 +1075,7 @@
   },
   {
     "lemma": "Coeba(?)",
+    "previous": "Claudius 415",
     "next": "Coelius 7a",
     "chapters": [
       {
@@ -1098,6 +1100,7 @@
   {
     "lemma": "Colonia 34a",
     "previous": "Coelius 7a",
+    "next": "Comberania",
     "chapters": [
       {
         "start": 23,
@@ -1108,6 +1111,7 @@
   },
   {
     "lemma": "Comberania",
+    "previous": "Colonia 34a",
     "next": "Cornelius 145",
     "chapters": [
       {
@@ -1169,6 +1173,7 @@
   {
     "lemma": "Cuspius 3",
     "previous": "Curtius 18",
+    "next": "Dardanos 11",
     "chapters": [
       {
         "start": 25,
@@ -4457,7 +4462,8 @@
     ]
   },
   {
-    "lemma": "Manichäismus"
+    "lemma": "Manichäismus",
+    "next": "Marius 14"
   },
   {
     "lemma": "Marius 14",

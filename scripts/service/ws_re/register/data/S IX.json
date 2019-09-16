@@ -2239,10 +2239,13 @@
     ]
   },
   {
-    "lemma": "Pontius 44"
+    "lemma": "Pontius 44",
+    "next": "Pontos Euxeinos"
   },
   {
     "lemma": "Pontos Euxeinos",
+    "previous": "Pontius 44",
+    "next": "M. Porcius Verus 45",
     "chapters": [
       {
         "start": 866,
@@ -2252,7 +2255,8 @@
     ]
   },
   {
-    "lemma": "M. Porcius Verus 45"
+    "lemma": "M. Porcius Verus 45",
+    "previous": "Pontos Euxeinos"
   },
   {
     "lemma": "praeteritio 1",
@@ -4682,6 +4686,7 @@
   {
     "lemma": "Iberia",
     "previous": "Hysminos",
+    "next": "Pontos Euxeinos",
     "chapters": [
       {
         "start": 1899,
