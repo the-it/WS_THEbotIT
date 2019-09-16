@@ -125,6 +125,7 @@ _2ND_REGEX_RAW_LIST = [
     (r"αυ", "au"),
     (r"ευ", "eu"),
     (r"ου", "u"),
+    (r"γγ", "ng"),
 ]
 
 _2ND_REGEX_LIST = []
