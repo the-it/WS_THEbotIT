@@ -97,11 +97,10 @@
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 57",
-    "next": "Aelius 78a"
+    "next": "Aelius 134b"
   },
   {
     "lemma": "Aelius 78a",
-    "previous": "Aelius 76",
     "next": "Aelius 134b"
   },
   {
@@ -649,11 +648,11 @@
   {
     "lemma": "Aponius 8",
     "previous": "Apicatus",
+    "next": "Appuleius 13",
     "sort_key": "Aponius 08"
   },
   {
     "lemma": "Argura 1",
-    "previous": "Arcani",
     "next": "Ἀριαῖοι"
   },
   {
@@ -1613,7 +1612,23 @@
     "next": "Cornelius 297a"
   },
   {
+    "lemma": "Cornelius 297a",
+    "previous": "Cornelius 297",
+    "next": "Cornelius 311a"
+  },
+  {
+    "lemma": "Cornelius 311a",
+    "previous": "Cornelius 297a",
+    "next": "Cornelius 359"
+  },
+  {
+    "lemma": "Cornelius 359",
+    "previous": "Cornelius 311a",
+    "next": "Cornelius 366"
+  },
+  {
     "lemma": "Cornelius 366",
+    "previous": "Cornelius 359",
     "next": "Cornelius 398a"
   },
   {
@@ -3484,11 +3499,10 @@
   {
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
-    "next": "Anaximenes 2"
+    "next": "Arborius 5"
   },
   {
     "lemma": "Anaximenes 2",
-    "previous": "Anaximandros 1",
     "next": "Andania 1"
   },
   {
@@ -3634,10 +3648,11 @@
   {
     "lemma": "Carnuntum",
     "previous": "Carniola",
-    "next": "Ephesos"
+    "next": "Chilperich"
   },
   {
     "lemma": "Chilperich",
+    "previous": "Carnuntum",
     "next": "Ephesos",
     "chapters": [
       {

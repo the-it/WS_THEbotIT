@@ -9742,7 +9742,7 @@
   {
     "lemma": "Argennos 3",
     "previous": "Argeias",
-    "next": "ab Argento",
+    "next": "ab argento",
     "chapters": [
       {
         "start": 128,
@@ -9752,7 +9752,7 @@
     ]
   },
   {
-    "lemma": "ab Argento",
+    "lemma": "ab argento",
     "previous": "Argennos 3",
     "next": "Argetini",
     "sort_key": "Argento",
@@ -9766,7 +9766,7 @@
   },
   {
     "lemma": "Argetini",
-    "previous": "ab Argento",
+    "previous": "ab argento",
     "next": "Argilios",
     "chapters": [
       {
@@ -15646,16 +15646,19 @@
   {
     "lemma": "Boriennus",
     "previous": "Boreios",
-    "next": "Borillus 1"
+    "next": "Borillus"
   },
   {
-    "lemma": "Borillus 1",
+    "lemma": "Borillus 1"
+  },
+  {
+    "lemma": "Borillus",
     "previous": "Boriennus",
     "next": "Borion"
   },
   {
     "lemma": "Borion",
-    "previous": "Borillus 1",
+    "previous": "Borillus",
     "next": "Borissos",
     "chapters": [
       {
@@ -19140,10 +19143,25 @@
   },
   {
     "lemma": "Cornelius 210",
-    "previous": "Cornelius 198"
+    "previous": "Cornelius 198",
+    "next": "Cornelius 218"
+  },
+  {
+    "lemma": "Cornelius 218",
+    "previous": "Cornelius 210"
+  },
+  {
+    "lemma": "Cornelius 295",
+    "next": "Cornelius 296"
+  },
+  {
+    "lemma": "Cornelius 296",
+    "previous": "Cornelius 295",
+    "next": "Cornelius 322"
   },
   {
     "lemma": "Cornelius 322",
+    "previous": "Cornelius 296",
     "next": "Cornelius 334"
   },
   {

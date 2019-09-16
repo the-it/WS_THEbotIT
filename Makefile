@@ -28,7 +28,7 @@ gource :
 
 mypy :
 	echo "############# MYPY #############"
-	mypy tools
+	mypy scripts tools || true
 
 safety :
 	echo "############ SAFETY ############"
@@ -94,6 +94,6 @@ clean : clean-pyc clean-coverage clean-code-climate
 
 pre-commit : quality integrationtest
 
-quality : bandit flake8 pycodestyle pylint
+quality : bandit flake8 pycodestyle pylint mypy
 
 .PHONY : clean, code-climate, quality, pre-commit

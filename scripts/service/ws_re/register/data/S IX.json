@@ -382,6 +382,7 @@
   {
     "lemma": "Automedusa 2",
     "previous": "Aurelius 217a",
+    "next": "Bobiensia epigrammata",
     "chapters": [
       {
         "start": 18,
@@ -392,6 +393,7 @@
   },
   {
     "lemma": "Bobiensia epigrammata",
+    "previous": "Automedusa 2",
     "next": "Bomos Athenas",
     "redirect": "Epigrammata Bobiensia",
     "chapters": [
@@ -2237,10 +2239,13 @@
     ]
   },
   {
-    "lemma": "Pontius 44"
+    "lemma": "Pontius 44",
+    "next": "Pontos Euxeinos"
   },
   {
     "lemma": "Pontos Euxeinos",
+    "previous": "Pontius 44",
+    "next": "M. Porcius Verus 45",
     "chapters": [
       {
         "start": 866,
@@ -2250,7 +2255,8 @@
     ]
   },
   {
-    "lemma": "M. Porcius Verus 45"
+    "lemma": "M. Porcius Verus 45",
+    "previous": "Pontos Euxeinos"
   },
   {
     "lemma": "praeteritio 1",
@@ -4680,6 +4686,7 @@
   {
     "lemma": "Iberia",
     "previous": "Hysminos",
+    "next": "Pontos Euxeinos",
     "chapters": [
       {
         "start": 1899,

@@ -494,6 +494,7 @@
   },
   {
     "lemma": "Cornacates",
+    "previous": "Constantia 6",
     "next": "Cornelius 395"
   },
   {
@@ -556,6 +557,7 @@
   },
   {
     "lemma": "Diaios",
+    "previous": "Demetrios 85",
     "next": "Diolkos 2",
     "chapters": [
       {
@@ -1533,8 +1535,12 @@
       }
     ]
   },
-  {"lemma": "protectores"},
-  {"lemma": "Proxenos 10a"},
+  {
+    "lemma": "protectores"
+  },
+  {
+    "lemma": "Proxenos 10a"
+  },
   {
     "lemma": "Psellos",
     "previous": "Proxenos 10a",

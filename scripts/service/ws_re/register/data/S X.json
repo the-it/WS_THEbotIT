@@ -2459,6 +2459,7 @@
   },
   {
     "lemma": "Clodius 73",
+    "previous": "Claudius 242a",
     "next": "cohortes urbanae",
     "chapters": [
       {
@@ -2471,10 +2472,12 @@
   {
     "lemma": "cohortes urbanae",
     "previous": "Clodius 73",
+    "next": "Collegium",
     "redirect": "urbanae cohortes"
   },
   {
     "lemma": "Collegium",
+    "previous": "cohortes urbanae",
     "next": "Constantiniani"
   },
   {
@@ -2561,9 +2564,14 @@
       }
     ]
   },
-  {"lemma": "creditum"},
+  {
+    "lemma": "creditum",
+    "previous": "Cornuti",
+    "next": "Daduchos 3"
+  },
   {
     "lemma": "Daduchos 3",
+    "previous": "creditum",
     "next": "Damatros",
     "chapters": [
       {
@@ -9921,7 +9929,10 @@
       }
     ]
   },
-  {"lemma": "Ulpius 1"},
+  {
+    "lemma": "Ulpius 1",
+    "next": "Ulpius 1a"
+  },
   {
     "lemma": "Ulpius 1a",
     "previous": "Ulpius 1",
@@ -9941,7 +9952,10 @@
       }
     ]
   },
-  {"lemma": "Ulpius 3a"},
+  {
+    "lemma": "Ulpius 3a",
+    "previous": "Ulpius 1a"
+  },
   {
     "lemma": "Ummidius 2a",
     "next": "Urbanae cohortes",
@@ -10213,9 +10227,18 @@
       }
     ]
   },
-  {"lemma": "creditum"},
+  {
+    "lemma": "T. Uttiedius Venerianus",
+    "next": "creditum"
+  },
+  {
+    "lemma": "creditum",
+    "previous": "T. Uttiedius Venerianus",
+    "next": "intercisi dies"
+  },
   {
     "lemma": "intercisi dies",
+    "previous": "creditum",
     "next": "Vinalia",
     "chapters": [
       {

@@ -56,3 +56,25 @@ class ReScannerTask:
     @property
     def name(self) -> str:
         return re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
+
+
+class ReporterMixin:
+    _wiki_page = "Wiki lemma to report to"
+    _reason = "Reason to save report page"
+
+    def __init__(self, report_wiki: pywikibot.Site):
+        self.data = []
+        self.report_wiki = report_wiki
+
+    @abstractmethod
+    def _build_entry(self):
+        pass
+
+    def _data_exists(self) -> bool:
+        return bool(self.data)
+
+    def report_data_entries(self):
+        if self._data_exists():
+            page = pywikibot.Page(self.report_wiki, self._wiki_page)
+            page.text = page.text + self._build_entry()
+            page.save(self._reason, botflag=True)

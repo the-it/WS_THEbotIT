@@ -3,18 +3,22 @@ from datetime import datetime
 import pywikibot
 
 from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner.tasks.base_task import ReporterMixin
 from tools.bots import WikiLogger
 
 
-class ERROTask(ReScannerTask):
+class ERROTask(ReScannerTask, ReporterMixin):
     _wiki_page = "RE:Wartung:Strukturfehler"
     _reason = "Neue Fehlermeldungen"
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
-        super().__init__(wiki, logger, debug)
-        self.data = []
+        ReScannerTask.__init__(self, wiki, logger, debug)
+        ReporterMixin.__init__(self, wiki)
 
-    def task(self, lemma: str, reason: str):  # pylint: disable=arguments-differ
+    def task(self):
+        pass
+
+    def append_error(self, lemma: str, reason: str):
         self.data.append((lemma, reason))
 
     def _build_entry(self) -> str:
@@ -25,13 +29,6 @@ class ERROTask(ReScannerTask):
         body = "\n".join(entries)
         return caption + body
 
-    def _data_exists(self) -> bool:
-        return bool(self.data)
-
     def finish_task(self):
-        if self._data_exists():
-            if not self.debug:
-                page = pywikibot.Page(self.wiki, self._wiki_page)
-                page.text = page.text + self._build_entry()
-                page.save(self._reason, botflag=True)
+        self.report_data_entries()
         super().finish_task()

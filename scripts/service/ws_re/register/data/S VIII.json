@@ -333,7 +333,7 @@
       }
     ]
   },
-{
+  {
     "lemma": "Asklepiodoros 13",
     "next": "Attica aqua",
     "chapters": [
@@ -585,6 +585,7 @@
   },
   {
     "lemma": "Conclusa aqua",
+    "previous": "Claudius 354a",
     "next": "Dalmatia",
     "chapters": [
       {
@@ -597,6 +598,7 @@
   {
     "lemma": "Dalmatia",
     "previous": "Conclusa aqua",
+    "next": "Damokritos 4",
     "wp_link": "w:de:Dalmatia",
     "chapters": [
       {
@@ -606,9 +608,10 @@
       }
     ]
   },
-
   {
     "lemma": "Damokritos 4",
+    "previous": "Dalmatia",
+    "next": "December 2",
     "chapters": [
       {
         "start": 59,
@@ -1003,7 +1006,6 @@
       }
     ]
   },
-
   {
     "lemma": "Herculea aqua",
     "next": "Hermeias 15",
@@ -5836,7 +5838,8 @@
     ]
   },
   {
-    "lemma": "Serapion 7b"
+    "lemma": "Serapion 7b",
+    "next": "Aleximachos 3"
   },
   {
     "lemma": "Aleximachos 3",

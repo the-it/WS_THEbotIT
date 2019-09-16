@@ -277,10 +277,13 @@
     ]
   },
   {
-    "lemma": "Auction 1"
+    "lemma": "Auction 1",
+    "previous": "Attributio",
+    "next": "Aurelius 63a"
   },
   {
     "lemma": "Aurelius 63a",
+    "previous": "Auction 1",
     "next": "Aurelius 39a",
     "chapters": [
       {
@@ -292,6 +295,7 @@
   },
   {
     "lemma": "Aurelius 39a",
+    "previous": "Aurelius 63a",
     "next": "Aurelius 56b",
     "sort_key": "Aurelius 039a",
     "chapters": [
@@ -305,10 +309,12 @@
   {
     "lemma": "Aurelius 56b",
     "previous": "Aurelius 39a",
+    "next": "Aurelius 145aaa",
     "sort_key": "Aurelius 056b"
   },
   {
     "lemma": "Aurelius 145aaa",
+    "previous": "Aurelius 56b",
     "next": "Aurelius 184",
     "chapters": [
       {
@@ -669,6 +675,7 @@
   },
   {
     "lemma": "δημοσίωσις",
+    "previous": "Demetrios 100a",
     "next": "Derkylos 2",
     "sort_key": "demosiosis",
     "chapters": [
@@ -681,10 +688,12 @@
   },
   {
     "lemma": "Derkylos 2",
-    "previous": "δημοσίωσις"
+    "previous": "δημοσίωσις",
+    "next": "Diadochos a"
   },
   {
     "lemma": "Diadochos a",
+    "previous": "Derkylos 2",
     "next": "Dieramatites",
     "chapters": [
       {
