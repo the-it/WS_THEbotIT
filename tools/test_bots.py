@@ -153,7 +153,7 @@ class TestPersistedTimestamp(TestCase):
         timestamp = PersistedTimestamp("other_bot")
         self.assertFalse(timestamp.success_last_run)
         self.assertAlmostEqual(reference.timestamp(), timestamp.start_of_run.timestamp(), delta=self._precision)
-        self.assertIsNone(timestamp.last_run)
+        self.assertEqual(timestamp.last_run, datetime(year=1970, month=1, day=1))
 
     def test_devalidate_timestamp_of_last_run(self):
         self.timestamp.last_run = None
@@ -456,7 +456,7 @@ class TestPersistedData(TestCase):
     def test_update_data(self):
         self.data["a"] = 1
         self.data.update({"b": 2})
-        self.assertDictEqual({"a": 1, "b": 2}, self.data.data)
+        self.assertDictEqual({"a": 1, "b": 2}, self.data._data)
 
     def test_get_back_from_broken(self):
         self._make_json_file()
@@ -464,9 +464,9 @@ class TestPersistedData(TestCase):
         self.data["b"] = 2
         self.data.dump(success=False)
         new_run_data = PersistedData("TestBot")
-        self.assertDictEqual({}, new_run_data.data)
+        self.assertDictEqual({}, new_run_data._data)
         new_run_data.get_broken()
-        self.assertDictEqual({"a": [1, 2], "b": 2}, new_run_data.data)
+        self.assertDictEqual({"a": [1, 2], "b": 2}, new_run_data._data)
 
     def test_get_back_from_deprecated(self):
         self._make_json_file()
@@ -474,9 +474,9 @@ class TestPersistedData(TestCase):
         self.data["b"] = 2
         self.data.dump(success=False)
         new_run_data = PersistedData("TestBot")
-        self.assertDictEqual({}, new_run_data.data)
+        self.assertDictEqual({}, new_run_data._data)
         new_run_data.get_deprecated()
-        self.assertDictEqual({"a": [1, 2]}, new_run_data.data)
+        self.assertDictEqual({"a": [1, 2]}, new_run_data._data)
 
     def test_get_back_data_no_data_there(self):
         self._make_json_file()
@@ -521,18 +521,18 @@ class TestCanonicalBot(TestCase):
         self.create_data("MinimalCanonicalBot")
         self.create_timestamp("MinimalCanonicalBot")
         with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertDictEqual({"a": 1}, bot.data.data)
+            self.assertDictEqual({"a": 1}, bot.data._data)
             bot.run()
             bot.data["b"] = 2
 
         with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertDictEqual({"a": 1, "b": 2}, bot.data.data)
+            self.assertDictEqual({"a": 1, "b": 2}, bot.data._data)
 
     def test_last_run_failure(self):
         self.create_data("MinimalCanonicalBot")
         self.create_timestamp("MinimalCanonicalBot", success=False)
         with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertDictEqual({}, bot.data.data)
+            self.assertDictEqual({}, bot.data._data)
 
     class DataOutdatedBot(CanonicalBot):
         def __init__(self, **kwargs):
@@ -549,7 +549,7 @@ class TestCanonicalBot(TestCase):
             with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
                 log_catcher.check(("DataOutdatedBot", "INFO", "Start the bot DataOutdatedBot."),
                                   ("DataOutdatedBot", "WARNING", "The data is thrown away. It is out of date"))
-                self.assertDictEqual({}, bot.data.data)
+                self.assertDictEqual({}, bot.data._data)
                 bot.run()
 
     class DataThrowException(CanonicalBot):
@@ -604,17 +604,17 @@ class TestCanonicalBot(TestCase):
         self.create_data("DataOutdatedBot")
         with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertIsNone(bot.timestamp.last_run)  # indicator for a successful run of the data_outdated function
-            self.assertDictEqual({}, bot.data.data)
+            self.assertDictEqual({}, bot.data._data)
 
     def test_data_outdated_not_outdated_1(self):
         self.create_timestamp("DataOutdatedBot", date=datetime(2001, 12, 31))
         self.create_data("DataOutdatedBot")
         with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(2001, 12, 31), bot.timestamp.last_run)
-            self.assertDictEqual({"a": 1}, bot.data.data)
+            self.assertDictEqual({"a": 1}, bot.data._data)
 
     def test_data_outdated_not_outdated_2(self):
         self.create_data("DataOutdatedBot")
         with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertIsNone(bot.timestamp.last_run)
-            self.assertDictEqual({}, bot.data.data)
+            self.assertDictEqual({}, bot.data._data)
