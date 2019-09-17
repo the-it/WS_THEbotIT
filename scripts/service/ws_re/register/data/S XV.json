@@ -165,26 +165,6 @@
     ]
   },
   {
-    "lemma": "Alexandros 93b",
-    "next": "Alexandros 93c",
-    "chapters": [
-      {
-        "start": 5,
-        "end": 5
-      }
-    ]
-  },
-  {
-    "lemma": "Alexandros 93c",
-    "previous": "Alexandros 93b",
-    "chapters": [
-      {
-        "start": 5,
-        "end": 5
-      }
-    ]
-  },
-  {
     "lemma": "Allogenes",
     "previous": "Alexandros 93a",
     "next": "Alpes 1",
@@ -339,7 +319,6 @@
   },
   {
     "lemma": "Apronius 8a",
-    "previous": "Apokryphe Apostelakten",
     "next": "Apronius 12",
     "sort_key": "Apronius 08a",
     "chapters": [
@@ -517,16 +496,6 @@
       {
         "start": 77,
         "end": 77,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
-    "lemma": "Aurelius 159a",
-    "chapters": [
-      {
-        "start": 77,
-        "end": 78,
         "author": "Eck"
       }
     ]
@@ -1087,6 +1056,22 @@
     ]
   },
   {
+    "lemma": "Cornelianus 3a",
+    "previous": "Corellius 1b",
+    "next": "Demostratos 16",
+    "chapters": [
+      {
+        "start": 94,
+        "end": 94,
+        "author": "Eck"
+      }
+    ]
+  },
+  {
+    "lemma": "Demostratos 16",
+    "previous": "Cornelianus 3a"
+  },
+  {
     "lemma": "Diopeithes 14",
     "next": "Diophanes 8a",
     "chapters": [
@@ -1119,22 +1104,6 @@
         "author": "Eck"
       }
     ]
-  },
-  {
-    "lemma": "Cornelianus 3a",
-    "previous": "Corellius 1b",
-    "next": "Demostratos 16",
-    "chapters": [
-      {
-        "start": 94,
-        "end": 94,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
-    "lemma": "Demostratos 16",
-    "previous": "Cornelianus 3a"
   },
   {
     "lemma": "Drys 1a",

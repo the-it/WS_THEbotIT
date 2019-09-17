@@ -405,16 +405,6 @@
     "next": "Antius 11a"
   },
   {
-    "lemma": "Turranius",
-    "chapters": [
-      {
-        "start": 48,
-        "end": 48,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
     "lemma": "Antius 11a",
     "previous": "Antiphellos",
     "next": "Antius 12a",
@@ -681,16 +671,6 @@
     ]
   },
   {
-    "lemma": "Articuleius a",
-    "chapters": [
-      {
-        "start": 60,
-        "end": 60,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
     "lemma": "Arsada",
     "previous": "Arruntius 16a",
     "next": "Articuleius 4"
@@ -875,16 +855,6 @@
     "next": "Aurelius 63aa"
   },
   {
-    "lemma": "Aurelius 37aa) = 37b",
-    "chapters": [
-      {
-        "start": 68,
-        "end": 68,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
     "lemma": "Aurelius 63aa",
     "previous": "Aurelius 37b",
     "next": "Aurelius 65a",
@@ -958,16 +928,6 @@
     "lemma": "Aurelius 192e",
     "previous": "Aurelius 192d",
     "next": "Aurelius 221a",
-    "chapters": [
-      {
-        "start": 69,
-        "end": 70,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
-    "lemma": "Pompeianus 1a",
     "chapters": [
       {
         "start": 69,
@@ -1968,16 +1928,6 @@
     ]
   },
   {
-    "lemma": "Clodius 30a",
-    "chapters": [
-      {
-        "start": 103,
-        "end": 104,
-        "author": "Thomas"
-      }
-    ]
-  },
-  {
     "lemma": "Claudius 418a",
     "previous": "Claudius 414a",
     "next": "Claudius 429a",
@@ -2028,7 +1978,6 @@
   {
     "lemma": "Claudius 440a",
     "previous": "Claudius 437a",
-    "next": "Clodius 30a",
     "chapters": [
       {
         "start": 104,
@@ -2084,23 +2033,6 @@
     ]
   },
   {
-    "lemma": "computus",
-    "previous": "Comius 2",
-    "next": "Concors",
-    "redirect": "digitorum computus"
-  },
-  {
-    "lemma": "Concors",
-    "previous": "computus",
-    "chapters": [
-      {
-        "start": 106,
-        "end": 106,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
     "lemma": "Coelius 19",
     "previous": "Cluvius 10c",
     "next": "Cominius 22"
@@ -2114,6 +2046,23 @@
     "lemma": "Comius 2",
     "previous": "Cominius 22",
     "next": "computus",
+    "chapters": [
+      {
+        "start": 106,
+        "end": 106,
+        "author": "Eck"
+      }
+    ]
+  },
+  {
+    "lemma": "computus",
+    "previous": "Comius 2",
+    "next": "Concors",
+    "redirect": "digitorum computus"
+  },
+  {
+    "lemma": "Concors",
+    "previous": "computus",
     "chapters": [
       {
         "start": 106,
@@ -4128,7 +4077,6 @@
   {
     "lemma": "Pinarius 10a",
     "previous": "Phintias 6",
-    "next": "Plautius 64a",
     "chapters": [
       {
         "start": 384,
@@ -4138,8 +4086,29 @@
     ]
   },
   {
+    "lemma": "Plancius 7",
+    "next": "Plancius 8",
+    "chapters": [
+      {
+        "start": 386,
+        "end": 386,
+        "author": "Eck"
+      }
+    ]
+  },
+  {
+    "lemma": "Plancius 8",
+    "previous": "Plancius 7",
+    "chapters": [
+      {
+        "start": 386,
+        "end": 386,
+        "author": "Eck"
+      }
+    ]
+  },
+  {
     "lemma": "Plautius 64a",
-    "previous": "Pinarius 10a",
     "next": "Plorucensis statio",
     "chapters": [
       {
@@ -4173,28 +4142,6 @@
         "start": 385,
         "end": 387,
         "author": "Meyer, Ernst"
-      }
-    ]
-  },
-  {
-    "lemma": "Plancius 7",
-    "next": "Plancius 8",
-    "chapters": [
-      {
-        "start": 386,
-        "end": 386,
-        "author": "Eck"
-      }
-    ]
-  },
-  {
-    "lemma": "Plancius 8",
-    "previous": "Plancius 7",
-    "chapters": [
-      {
-        "start": 386,
-        "end": 386,
-        "author": "Eck"
       }
     ]
   },
