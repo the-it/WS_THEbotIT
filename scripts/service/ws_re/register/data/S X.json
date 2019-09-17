@@ -1441,10 +1441,10 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε"
+    "next": "Ἀρχε(..."
   },
   {
-    "lemma": "Ἀρχε",
+    "lemma": "Ἀρχε(...",
     "previous": "Arbuscula",
     "next": "Archias 11",
     "sort_key": "Arche...",
@@ -1458,7 +1458,7 @@
   },
   {
     "lemma": "Archias 11",
-    "previous": "Ἀρχε",
+    "previous": "Ἀρχε(...",
     "next": "Archias 17b",
     "sort_key": "Archias 011"
   },
@@ -1840,6 +1840,7 @@
   {
     "lemma": "Ἀθη...",
     "previous": "Athanias 3",
+    "next": "Athenai 1b",
     "sort_key": "Athe(...",
     "chapters": [
       {
@@ -1851,13 +1852,13 @@
   },
   {
     "lemma": "Athenai 1b",
+    "previous": "Ἀθη...",
     "next": "Athenaios 28",
     "wp_link": "w:de:Athen",
     "ws_link": "s:de:Athen"
   },
   {
     "lemma": "Athenaios 28",
-    "previous": "Athenai 1b",
     "next": "Athenodoros 9",
     "chapters": [
       {
@@ -2140,11 +2141,11 @@
   {
     "lemma": "Autolykos 6",
     "previous": "Αὐτο(...",
-    "next": "Babyllios",
+    "next": "Βαβύλλιος",
     "sort_key": "Auto(---"
   },
   {
-    "lemma": "Babyllios",
+    "lemma": "Βαβύλλιος",
     "previous": "Autolykos 6",
     "next": "Βακχ(---)",
     "sort_key": "Babyllios",
@@ -2158,7 +2159,7 @@
   },
   {
     "lemma": "Βακχ(---)",
-    "previous": "Babyllios",
+    "previous": "Βαβύλλιος",
     "next": "Βασιλείδης 1a",
     "sort_key": "Bakch",
     "chapters": [
@@ -2322,6 +2323,7 @@
   {
     "lemma": "Castronius",
     "previous": "Carmen adversus paganos",
+    "next": "Chairemon 5",
     "chapters": [
       {
         "start": 124,
@@ -2331,7 +2333,13 @@
     ]
   },
   {
+    "lemma": "Chairemon 5",
+    "previous": "Castronius",
+    "next": "Chairestratos 1"
+  },
+  {
     "lemma": "Chairestratos 1",
+    "previous": "Chairemon 5",
     "next": "Chairestratos 1a"
   },
   {

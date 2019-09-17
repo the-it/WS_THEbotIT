@@ -1122,7 +1122,6 @@
   {
     "lemma": "Aix 3",
     "previous": "Aitolos",
-    "next": "Akanthos 5a",
     "sort_key": "Aix 3",
     "chapters": [
       {
@@ -1133,30 +1132,7 @@
     ]
   },
   {
-    "lemma": "Akanthos 5a",
-    "previous": "Aix 3",
-    "next": "Akatos",
-    "sort_key": "Akanthos 5a"
-  },
-  {
-    "lemma": "Akatos",
-    "previous": "Akanthos 5a"
-  },
-  {
-    "lemma": "Akanthos 1",
-    "previous": "Aix 3",
-    "next": "Akatos 2",
-    "chapters": [
-      {
-        "start": 70,
-        "end": 70,
-        "author": "Adler"
-      }
-    ]
-  },
-  {
     "lemma": "Akatos 2",
-    "previous": "Akanthos 1",
     "next": "Akazie",
     "sort_key": "Akatos 2",
     "chapters": [
@@ -1444,7 +1420,6 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
     "chapters": [
       {
         "start": 80,
@@ -1454,17 +1429,7 @@
     ]
   },
   {
-    "lemma": "Alexias 5",
-    "previous": "Alexinos 2",
-    "next": "Alfius 6"
-  },
-  {
-    "lemma": "Alexinos",
-    "next": "Alexios"
-  },
-  {
     "lemma": "Alexios",
-    "previous": "Alexinos",
     "next": "Alfius 6"
   },
   {
@@ -8595,11 +8560,12 @@
   },
   {
     "lemma": "Byzantion 1",
-    "previous": "Bosporos 1"
+    "previous": "Bosporos 1",
+    "next": "Botrys 5"
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Bosporos 1",
+    "previous": "Byzantion 1",
     "next": "Boudillus"
   },
   {
@@ -9246,16 +9212,6 @@
     "next": "Caecilius 91"
   },
   {
-    "lemma": "Caecilius 73. 76",
-    "chapters": [
-      {
-        "start": 221,
-        "end": 222,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
     "lemma": "Caecilius 91",
     "previous": "Caecilius 85",
     "next": "Caecilius 94"
@@ -9776,7 +9732,6 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium vetus",
     "chapters": [
       {
         "start": 233,
@@ -9787,16 +9742,10 @@
   },
   {
     "lemma": "Capitolium vetus",
-    "previous": "Capienacus oder Capionacus",
-    "next": "Capitolinus 8"
-  },
-  {
-    "lemma": "Capitolium 3",
     "next": "Capitolinus 8"
   },
   {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium 3",
     "next": "Caprasius",
     "chapters": [
       {
@@ -10089,12 +10038,7 @@
     "next": "Cataracta"
   },
   {
-    "lemma": "Castus 2b",
-    "next": "Cataracta"
-  },
-  {
     "lemma": "Cataracta",
-    "previous": "Castus 2b",
     "next": "Catius 8",
     "redirect": "Fallgatter"
   },
@@ -11481,28 +11425,6 @@
     "next": "Cornelius 338"
   },
   {
-    "lemma": "Cornelius 208",
-    "next": "Cornelius 208b",
-    "chapters": [
-      {
-        "start": 260,
-        "end": 260,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
-    "lemma": "Cornelius 208b",
-    "previous": "Cornelius 208",
-    "chapters": [
-      {
-        "start": 260,
-        "end": 260,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
     "lemma": "Cornelius 338",
     "previous": "Cornelius 337",
     "next": "Cornelius 347"
@@ -12586,43 +12508,7 @@
   },
   {
     "lemma": "Dedicatio",
-    "previous": "Decuminus",
-    "next": "Deiotaros 1"
-  },
-  {
-    "lemma": "Deiotaros 1",
-    "previous": "Dedicatio",
-    "next": "Deiotaros 2",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Rosenberg"
-      }
-    ]
-  },
-  {
-    "lemma": "Deiotaros 2",
-    "previous": "Deiotaros 1",
-    "next": "Deiotaros 4",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Rosenberg"
-      }
-    ]
-  },
-  {
-    "lemma": "Deiotaros 4",
-    "previous": "Deiotaros 2",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Rosenberg"
-      }
-    ]
+    "previous": "Decuminus"
   },
   {
     "lemma": "Deiotarus 2",
@@ -14502,7 +14388,7 @@
   {
     "lemma": "Epimenes 1a",
     "previous": "Epikrates 3",
-    "next": "Ἐπισττης εἰρήνης",
+    "next": "Ἐπιστάτης εἰρήνης",
     "chapters": [
       {
         "start": 435,
@@ -14512,7 +14398,7 @@
     ]
   },
   {
-    "lemma": "Ἐπισττης εἰρήνης",
+    "lemma": "Ἐπιστάτης εἰρήνης",
     "previous": "Epimenes 1a",
     "next": "Epistula 1",
     "sort_key": "Epistates eirenes",
@@ -14526,7 +14412,7 @@
   },
   {
     "lemma": "Epistula 1",
-    "previous": "Ἐπισττης εἰρήνης"
+    "previous": "Ἐπιστάτης εἰρήνης"
   },
   {
     "lemma": "Epistula",
