@@ -97,10 +97,16 @@
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 57",
+    "next": "Aelius 78a"
+  },
+  {
+    "lemma": "Aelius 78a",
+    "previous": "Aelius 76",
     "next": "Aelius 134b"
   },
   {
     "lemma": "Aelius 134b",
+    "previous": "Aelius 78a",
     "next": "Aelius 140a",
     "chapters": [
       {
@@ -117,6 +123,8 @@
   },
   {
     "lemma": "Aelius 168a",
+    "previous": "Aelius 140a",
+    "next": "Aelius 174a",
     "chapters": [
       {
         "start": 3,
@@ -356,7 +364,9 @@
     "previous": "Amelas",
     "next": "Anaximandros 1"
   },
-  {"lemma": "Anaximandros 1"},
+  {
+    "lemma": "Anaximandros 1"
+  },
   {
     "lemma": "Andautonia",
     "next": "Andeda"
@@ -619,6 +629,7 @@
   {
     "lemma": "Arcani",
     "previous": "Aquilius 30",
+    "next": "Argura 1",
     "chapters": [
       {
         "start": 89,
@@ -629,6 +640,7 @@
   },
   {
     "lemma": "Argura 1",
+    "previous": "Arcani",
     "next": "Ἀριαῖοι"
   },
   {
@@ -911,6 +923,8 @@
   },
   {
     "lemma": "Bappo 2",
+    "previous": "Balchobaudes",
+    "next": "Barbius 1a",
     "chapters": [
       {
         "start": 132,
@@ -921,6 +935,7 @@
   },
   {
     "lemma": "Barbius 1a",
+    "previous": "Bappo 2",
     "next": "Bassa 2",
     "chapters": [
       {
@@ -1123,12 +1138,10 @@
   },
   {
     "lemma": "Caesius 15a",
-    "chapters": [
-      {
-        "start": 0,
-        "end": 0
-      }
-    ]
+    "previous": "Caesilianus"
+  },
+  {
+    "lemma": "Caesius 14a"
   },
   {
     "lemma": "Calestrius 3",
@@ -1214,6 +1227,7 @@
   {
     "lemma": "Caravantius",
     "previous": "Caravantis",
+    "next": "Carniola",
     "chapters": [
       {
         "start": 137,
@@ -3431,6 +3445,7 @@
   },
   {
     "lemma": "Arborius 5",
+    "previous": "Anaximandros 1",
     "next": "Archedemos 5",
     "chapters": [
       {
@@ -3557,17 +3572,20 @@
   },
   {
     "lemma": "Carniola",
-    "previous": "Camundus",
+    "previous": "Caravantius",
     "next": "Carnuntum"
   },
   {
     "lemma": "Carnuntum",
     "previous": "Carniola",
-    "next": "Chilperich"
+    "next": "Cassius 45a"
+  },
+  {
+    "lemma": "Cassius 45a",
+    "previous": "Carnuntum"
   },
   {
     "lemma": "Chilperich",
-    "previous": "Carnuntum",
     "next": "Ephesos",
     "chapters": [
       {

@@ -49,6 +49,7 @@
   },
   {
     "lemma": "Anakreon 1",
+    "previous": "Amythaon 2",
     "next": "Anaphe"
   },
   {
@@ -70,10 +71,12 @@
   },
   {
     "lemma": "Anatomie",
-    "previous": "Anartii"
+    "previous": "Anartii",
+    "next": "Andreas 11"
   },
   {
     "lemma": "Andreas 11",
+    "previous": "Anatomie",
     "next": "Androkles 11"
   },
   {
@@ -466,6 +469,7 @@
   },
   {
     "lemma": "Claudius 211a",
+    "previous": "Chamaileon 1",
     "next": "Clementianus 2",
     "chapters": [
       {
@@ -477,6 +481,7 @@
   },
   {
     "lemma": "Clementianus 2",
+    "previous": "Claudius 211a",
     "next": "Constantia 6",
     "chapters": [
       {
@@ -1539,11 +1544,13 @@
     "lemma": "protectores"
   },
   {
-    "lemma": "Proxenos 10a"
+    "lemma": "Proxenos 10a",
+    "next": "Psellos"
   },
   {
     "lemma": "Psellos",
     "previous": "Proxenos 10a",
+    "next": "Psiax",
     "chapters": [
       {
         "start": 1124,
@@ -1551,6 +1558,10 @@
         "author": "Kriaras"
       }
     ]
+  },
+  {
+    "lemma": "Psiax",
+    "previous": "Psellos"
   },
   {
     "lemma": "publicani",

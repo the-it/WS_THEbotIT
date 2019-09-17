@@ -1824,7 +1824,13 @@
     ]
   },
   {
+    "lemma": "Claudius 147a",
+    "previous": "Claudius 107b",
+    "next": "Claudius 167"
+  },
+  {
     "lemma": "Claudius 167",
+    "previous": "Claudius 147a",
     "next": "Claudius 197a"
   },
   {
@@ -1935,6 +1941,7 @@
   {
     "lemma": "Claudius 410a",
     "previous": "Claudius 369a",
+    "next": "Claudius 412",
     "chapters": [
       {
         "start": 103,
@@ -1944,8 +1951,14 @@
     ]
   },
   {
+    "lemma": "Claudius 412",
+    "previous": "Claudius 410a",
+    "next": "Claudius 414a"
+  },
+  {
     "lemma": "Claudius 414a",
     "previous": "Claudius 412",
+    "next": "Claudius 418a",
     "chapters": [
       {
         "start": 103,
@@ -1956,8 +1969,6 @@
   },
   {
     "lemma": "Clodius 30a",
-    "previous": "Claudius 440a",
-    "next": "Clodius 58a",
     "chapters": [
       {
         "start": 103,
@@ -1968,6 +1979,7 @@
   },
   {
     "lemma": "Claudius 418a",
+    "previous": "Claudius 414a",
     "next": "Claudius 429a",
     "chapters": [
       {
@@ -2016,6 +2028,7 @@
   {
     "lemma": "Claudius 440a",
     "previous": "Claudius 437a",
+    "next": "Clodius 30a",
     "chapters": [
       {
         "start": 104,
@@ -2026,7 +2039,6 @@
   },
   {
     "lemma": "Clodius 58a",
-    "previous": "Clodius 30a",
     "next": "Clodius 62a",
     "chapters": [
       {
