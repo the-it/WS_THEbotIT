@@ -1420,7 +1420,6 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
     "chapters": [
       {
         "start": 80,
@@ -1430,17 +1429,7 @@
     ]
   },
   {
-    "lemma": "Alexias 5",
-    "previous": "Alexinos 2",
-    "next": "Alfius 6"
-  },
-  {
-    "lemma": "Alexinos",
-    "next": "Alexios"
-  },
-  {
     "lemma": "Alexios",
-    "previous": "Alexinos",
     "next": "Alfius 6"
   },
   {
@@ -10049,12 +10038,7 @@
     "next": "Cataracta"
   },
   {
-    "lemma": "Castus 2b",
-    "next": "Cataracta"
-  },
-  {
     "lemma": "Cataracta",
-    "previous": "Castus 2b",
     "next": "Catius 8",
     "redirect": "Fallgatter"
   },
@@ -12524,43 +12508,7 @@
   },
   {
     "lemma": "Dedicatio",
-    "previous": "Decuminus",
-    "next": "Deiotaros 1"
-  },
-  {
-    "lemma": "Deiotaros 1",
-    "previous": "Dedicatio",
-    "next": "Deiotaros 2",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Rosenberg"
-      }
-    ]
-  },
-  {
-    "lemma": "Deiotaros 2",
-    "previous": "Deiotaros 1",
-    "next": "Deiotaros 4",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Rosenberg"
-      }
-    ]
-  },
-  {
-    "lemma": "Deiotaros 4",
-    "previous": "Deiotaros 2",
-    "chapters": [
-      {
-        "start": 328,
-        "end": 328,
-        "author": "Rosenberg"
-      }
-    ]
+    "previous": "Decuminus"
   },
   {
     "lemma": "Deiotarus 2",
