@@ -90,8 +90,7 @@ class VolumeRegister(Register):
                 found_before = True
         return None
 
-    def get_index_of_lemma(self, lemma: Union[str, Lemma],
-                           self_supplement: bool = False) -> Optional[int]:
+    def get_index_of_lemma(self, lemma: Union[str, Lemma], self_supplement: bool = False) -> Optional[int]:
         if isinstance(lemma, str):
             lemma = self.get_lemma_by_name(lemma, self_supplement)
         if lemma:

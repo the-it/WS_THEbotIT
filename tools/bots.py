@@ -26,6 +26,7 @@ else:
     LoggerNameDict = Dict[str, str]
     LastRunDict = Dict[str, Union[bool, str]]
 
+
 class BotException(Exception):
     pass
 
@@ -44,7 +45,7 @@ class WikiLogger():
     _logger_date_format: str = "%H:%M:%S"
     _wiki_timestamp_format: str = "%y-%m-%d_%H:%M:%S"
 
-    def __init__(self, bot_name: str, start_time: datetime, log_to_screen: bool =True):
+    def __init__(self, bot_name: str, start_time: datetime, log_to_screen: bool = True):
         self._bot_name: str = bot_name
         self._start_time: datetime = start_time
         self._data_path: str = _get_data_path()
@@ -294,7 +295,7 @@ class PersistedData(Mapping):
         else:
             raise BotException(f"{new_dict} has the wrong type. It must be a dictionary.")
 
-    def dump(self, success: bool =True):
+    def dump(self, success: bool = True):
         if success:
             with open(self.file_name, mode="w") as json_file:
                 json.dump(self._data, json_file, indent=2)

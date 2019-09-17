@@ -322,4 +322,3 @@ class PetScan:
         response_byte = response.content
         response_dict = json.loads(response_byte.decode("utf8"))
         return response_dict["*"][0]["a"]["*"]  # type: ignore
-
