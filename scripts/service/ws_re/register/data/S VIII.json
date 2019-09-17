@@ -53,6 +53,7 @@
   },
   {
     "lemma": "Alko",
+    "previous": "Alexandrina aqua",
     "next": "Alsietina aqua",
     "chapters": [
       {
@@ -335,6 +336,7 @@
   },
   {
     "lemma": "Asklepiodoros 13",
+    "previous": "Asklepiades 48a",
     "next": "Attica aqua",
     "chapters": [
       {
@@ -394,6 +396,7 @@
   },
   {
     "lemma": "Bathykleia",
+    "previous": "Aurelia aqua",
     "next": "Benenatus 1",
     "chapters": [
       {
@@ -429,6 +432,7 @@
   },
   {
     "lemma": "Benenatus 3",
+    "previous": "Benenatus 2",
     "next": "Benenatus 4",
     "chapters": [
       {
@@ -987,6 +991,7 @@
   },
   {
     "lemma": "Hegetorides 3",
+    "next": "Herakleides 61b",
     "chapters": [
       {
         "start": 178,
@@ -998,6 +1003,7 @@
   {
     "lemma": "Herakleides 61b",
     "previous": "Hegetorides 3",
+    "next": "Herculea aqua",
     "chapters": [
       {
         "start": 177,
@@ -1008,6 +1014,7 @@
   },
   {
     "lemma": "Herculea aqua",
+    "previous": "Herakleides 61b",
     "next": "Hermeias 15",
     "chapters": [
       {
@@ -3638,18 +3645,18 @@
   {
     "lemma": "Antonius 30",
     "previous": "Achilleus 8a",
-    "next": "Apollodoros 23",
+    "next": "Apollonios 23",
     "sort_key": "Antonius 030"
   },
   {
-    "lemma": "Apollodoros 23",
+    "lemma": "Apollonios 23",
     "previous": "Antonius 30",
     "next": "Caesaris thronus",
     "sort_key": "Apollonios 023"
   },
   {
     "lemma": "Caesaris thronus",
-    "previous": "Apollodoros 23",
+    "previous": "Apollonios 23",
     "next": "Damolyte",
     "chapters": [
       {

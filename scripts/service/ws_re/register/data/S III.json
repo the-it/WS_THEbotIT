@@ -8595,11 +8595,12 @@
   },
   {
     "lemma": "Byzantion 1",
-    "previous": "Bosporos 1"
+    "previous": "Bosporos 1",
+    "next": "Botrys 5"
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Bosporos 1",
+    "previous": "Byzantion 1",
     "next": "Boudillus"
   },
   {
@@ -9776,7 +9777,7 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium vetus",
+    "next": "Capitolium 3",
     "chapters": [
       {
         "start": 233,
@@ -9787,7 +9788,6 @@
   },
   {
     "lemma": "Capitolium vetus",
-    "previous": "Capienacus oder Capionacus",
     "next": "Capitolinus 8"
   },
   {
@@ -14502,7 +14502,7 @@
   {
     "lemma": "Epimenes 1a",
     "previous": "Epikrates 3",
-    "next": "Ἐπισττης εἰρήνης",
+    "next": "Ἐπιστάτης εἰρήνης",
     "chapters": [
       {
         "start": 435,
@@ -14512,7 +14512,7 @@
     ]
   },
   {
-    "lemma": "Ἐπισττης εἰρήνης",
+    "lemma": "Ἐπιστάτης εἰρήνης",
     "previous": "Epimenes 1a",
     "next": "Epistula 1",
     "sort_key": "Epistates eirenes",
@@ -14526,7 +14526,7 @@
   },
   {
     "lemma": "Epistula 1",
-    "previous": "Ἐπισττης εἰρήνης"
+    "previous": "Ἐπιστάτης εἰρήνης"
   },
   {
     "lemma": "Epistula",

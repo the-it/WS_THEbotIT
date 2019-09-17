@@ -15646,14 +15646,15 @@
   {
     "lemma": "Boriennus",
     "previous": "Boreios",
-    "next": "Borillus"
+    "next": "Borillus 1"
   },
   {
-    "lemma": "Borillus 1"
+    "lemma": "Borillus 1",
+    "previous": "Boriennus",
+    "next": "Borion"
   },
   {
     "lemma": "Borillus",
-    "previous": "Boriennus",
     "next": "Borion"
   },
   {
@@ -19148,7 +19149,12 @@
   },
   {
     "lemma": "Cornelius 218",
-    "previous": "Cornelius 210"
+    "previous": "Cornelius 210",
+    "next": "Cornelius 238"
+  },
+  {
+    "lemma": "Cornelius 238",
+    "previous": "Cornelius 218"
   },
   {
     "lemma": "Cornelius 295",
