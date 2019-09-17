@@ -1122,7 +1122,6 @@
   {
     "lemma": "Aix 3",
     "previous": "Aitolos",
-    "next": "Akanthos 5a",
     "sort_key": "Aix 3",
     "chapters": [
       {
@@ -1133,30 +1132,7 @@
     ]
   },
   {
-    "lemma": "Akanthos 5a",
-    "previous": "Aix 3",
-    "next": "Akatos",
-    "sort_key": "Akanthos 5a"
-  },
-  {
-    "lemma": "Akatos",
-    "previous": "Akanthos 5a"
-  },
-  {
-    "lemma": "Akanthos 1",
-    "previous": "Aix 3",
-    "next": "Akatos 2",
-    "chapters": [
-      {
-        "start": 70,
-        "end": 70,
-        "author": "Adler"
-      }
-    ]
-  },
-  {
     "lemma": "Akatos 2",
-    "previous": "Akanthos 1",
     "next": "Akazie",
     "sort_key": "Akatos 2",
     "chapters": [
@@ -9247,16 +9223,6 @@
     "next": "Caecilius 91"
   },
   {
-    "lemma": "Caecilius 73. 76",
-    "chapters": [
-      {
-        "start": 221,
-        "end": 222,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
     "lemma": "Caecilius 91",
     "previous": "Caecilius 85",
     "next": "Caecilius 94"
@@ -9777,7 +9743,6 @@
   {
     "lemma": "Capienacus oder Capionacus",
     "previous": "Cantus",
-    "next": "Capitolium 3",
     "chapters": [
       {
         "start": 233,
@@ -9791,12 +9756,7 @@
     "next": "Capitolinus 8"
   },
   {
-    "lemma": "Capitolium 3",
-    "next": "Capitolinus 8"
-  },
-  {
     "lemma": "Capitolinus 8",
-    "previous": "Capitolium 3",
     "next": "Caprasius",
     "chapters": [
       {
@@ -11479,28 +11439,6 @@
     "lemma": "Cornelius 337",
     "previous": "Cornelius 336",
     "next": "Cornelius 338"
-  },
-  {
-    "lemma": "Cornelius 208",
-    "next": "Cornelius 208b",
-    "chapters": [
-      {
-        "start": 260,
-        "end": 260,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
-    "lemma": "Cornelius 208b",
-    "previous": "Cornelius 208",
-    "chapters": [
-      {
-        "start": 260,
-        "end": 260,
-        "author": "Münzer"
-      }
-    ]
   },
   {
     "lemma": "Cornelius 338",

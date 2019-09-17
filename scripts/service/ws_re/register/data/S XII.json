@@ -1127,7 +1127,6 @@
   {
     "lemma": "Caesilianus",
     "previous": "Caesennius 13a",
-    "next": "Caesius 15a",
     "chapters": [
       {
         "start": 134,
@@ -1137,15 +1136,10 @@
     ]
   },
   {
-    "lemma": "Caesius 15a",
-    "previous": "Caesilianus"
-  },
-  {
     "lemma": "Caesius 14a"
   },
   {
     "lemma": "Calestrius 3",
-    "previous": "Caesius 15a",
     "next": "Calpetanus 3"
   },
   {
@@ -1236,6 +1230,7 @@
       }
     ]
   },
+  {"lemma": "Carniola"},
   {
     "lemma": "Castra, Castrum 1a",
     "next": "Catienus 1a",
@@ -3489,12 +3484,7 @@
     "redirect": "Zangenae"
   },
   {
-    "lemma": "Ἀζανία",
-    "next": "Camundus"
-  },
-  {
     "lemma": "Camundus",
-    "previous": "Ἀζανία",
     "next": "Carniola",
     "chapters": [
       {
@@ -3505,84 +3495,12 @@
     ]
   },
   {
-    "lemma": "Poreston",
-    "next": "Scoldium",
-    "chapters": [
-      {
-        "start": 1569,
-        "end": 1575,
-        "author": "Šašel"
-      }
-    ]
-  },
-  {
-    "lemma": "Scoldium",
-    "previous": "Poreston",
-    "next": "Sedo",
-    "chapters": [
-      {
-        "start": 1569,
-        "end": 1569
-      }
-    ]
-  },
-  {
-    "lemma": "Sedo",
-    "previous": "Scoldium",
-    "next": "Selunto",
-    "chapters": [
-      {
-        "start": 1569,
-        "end": 1569
-      }
-    ]
-  },
-  {
-    "lemma": "Selunto",
-    "previous": "Sedo",
-    "next": "Seution",
-    "chapters": [
-      {
-        "start": 1569,
-        "end": 1575,
-        "author": "Šašel"
-      }
-    ]
-  },
-  {
-    "lemma": "Seution",
-    "previous": "Selunto",
-    "next": "Sorbam",
-    "chapters": [
-      {
-        "start": 1569,
-        "end": 1569
-      }
-    ]
-  },
-  {
-    "lemma": "Sorbam",
-    "previous": "Seution",
-    "chapters": [
-      {
-        "start": 1569,
-        "end": 1569
-      }
-    ]
-  },
-  {
     "lemma": "Carniola",
-    "previous": "Caravantius",
     "next": "Carnuntum"
   },
   {
     "lemma": "Carnuntum",
-    "previous": "Carniola",
-    "next": "Cassius 45a"
-  },
-  {
-    "lemma": "Cassius 45a",
-    "previous": "Carnuntum"
+    "previous": "Carniola"
   },
   {
     "lemma": "Chilperich",
