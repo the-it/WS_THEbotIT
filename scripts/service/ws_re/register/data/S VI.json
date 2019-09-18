@@ -26,11 +26,14 @@
   {
     "lemma": "Acilius 16",
     "previous": "Aburnius 1a",
-    "next": "Acutius 1a"
+    "next": "Acutius 1b"
+  },
+  {
+    "lemma": "Acutius 1b",
+    "previous": "Acilius 16"
   },
   {
     "lemma": "Acutius 1a",
-    "previous": "Acilius 16",
     "next": "Aelius 75a"
   },
   {
@@ -93,15 +96,15 @@
   },
   {
     "lemma": "Aiacius 3",
-    "previous": "Agesistratos"
-  },
-  {
-    "lemma": "Aiacius 2",
+    "previous": "Agesistratos",
     "next": "Albiobola"
   },
   {
+    "lemma": "Aiacius 2"
+  },
+  {
     "lemma": "Albiobola",
-    "previous": "Aiacius 2",
+    "previous": "Aiacius 3",
     "next": "Alexandros 90a",
     "chapters": [
       {
