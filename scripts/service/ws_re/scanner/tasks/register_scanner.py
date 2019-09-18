@@ -10,7 +10,7 @@ from github import Github
 
 from scripts.service.ws_re.register.author import AuthorCrawler, AuthorDict, CrawlerDict
 from scripts.service.ws_re.register.base import RegisterException
-from scripts.service.ws_re.register.lemma import LemmaDict
+from scripts.service.ws_re.register.lemma import LemmaDict, ChapterDict
 from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.register.updater import Updater, RemoveList
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
@@ -108,6 +108,23 @@ class SCANTask(ReScannerTask):
         if next_lemma and next_lemma != "OFF":
             return {"next": next_lemma}, []
         return {}, ["next"]
+
+    @staticmethod
+    def _fetch_pages(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+        if len(article_list) == 1:
+            article = article_list[0]
+            spalte_start = int(article["SPALTE_START"].value)
+            spalte_end = article["SPALTE_END"].value
+            if spalte_end and spalte_end != "OFF":
+                spalte_end = int(spalte_end)
+            else:
+                spalte_end = spalte_start
+            single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
+            author = article.author[0]
+            if author != "OFF":
+                single_article_dict["author"] = author
+            return {"chapters": [single_article_dict]}, []
+        return {}, []
 
     def _fetch_from_article_list(self):
         function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key, self._fetch_lemma,

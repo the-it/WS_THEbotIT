@@ -203,6 +203,62 @@ text.
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({}, ["next"]), SCANTask._fetch_next(article))
 
+    def test_pages(self):
+        task = SCANTask(None, self.logger)
+        self.title_mock.return_value = "RE:Aal"
+
+        self.text_mock.return_value = """{{REDaten
+|BAND=S I
+|SPALTE_START=264
+|SPALTE_END=265
+}}
+text.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+        task.re_page = re_page
+        article = re_page.splitted_article_list[0]
+        expected_dict = {"chapters": [{"start": 264,  "end": 265, "author": "Autor."}]}
+        compare((expected_dict, []), task._fetch_pages(article))
+
+        self.text_mock.return_value = """{{REDaten
+|BAND=S I
+|SPALTE_START=264
+|SPALTE_END=OFF
+}}
+text.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+        task.re_page = re_page
+        article = re_page.splitted_article_list[0]
+        expected_dict = {"chapters": [{"start": 264, "end": 264, "author": "Autor."}]}
+        compare((expected_dict, []), task._fetch_pages(article))
+
+        self.text_mock.return_value = """{{REDaten
+|BAND=S I
+|SPALTE_START=264
+|SPALTE_END=
+}}
+text.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+        task.re_page = re_page
+        article = re_page.splitted_article_list[0]
+        expected_dict = {"chapters": [{"start": 264, "end": 264, "author": "Autor."}]}
+        compare((expected_dict, []), task._fetch_pages(article))
+
+        self.text_mock.return_value = """{{REDaten
+|BAND=S I
+|SPALTE_START=264
+|SPALTE_END=264
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        task.re_page = re_page
+        article = re_page.splitted_article_list[0]
+        expected_dict = {"chapters": [{"start": 264, "end": 264}]}
+        compare((expected_dict, []), task._fetch_pages(article))
+
     def test_fetch_from_properties(self):
         self.title_mock.return_value = "RE:Aal"
         self.text_mock.return_value = """{{REDaten
