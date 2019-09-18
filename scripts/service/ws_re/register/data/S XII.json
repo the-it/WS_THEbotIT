@@ -368,7 +368,12 @@
     "lemma": "Anaximandros 1"
   },
   {
+    "lemma": "Andania 1",
+    "next": "Andautonia"
+  },
+  {
     "lemma": "Andautonia",
+    "previous": "Andania 1",
     "next": "Andeda"
   },
   {
@@ -1230,7 +1235,9 @@
       }
     ]
   },
-  {"lemma": "Carniola"},
+  {
+    "lemma": "Carniola"
+  },
   {
     "lemma": "Castra, Castrum 1a",
     "next": "Catienus 1a",
@@ -3485,6 +3492,7 @@
   },
   {
     "lemma": "Camundus",
+    "previous": "Azania 2",
     "next": "Carniola",
     "chapters": [
       {
@@ -3496,6 +3504,7 @@
   },
   {
     "lemma": "Carniola",
+    "previous": "Camundus",
     "next": "Carnuntum"
   },
   {

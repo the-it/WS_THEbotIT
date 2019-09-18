@@ -676,6 +676,7 @@
   {
     "lemma": "Diodoros 13",
     "previous": "Die(i)trephes",
+    "next": "Dionysios 161b",
     "chapters": [
       {
         "start": 59,
@@ -686,6 +687,7 @@
   },
   {
     "lemma": "Dionysios 161b",
+    "previous": "Diodoros 13",
     "next": "Drakontides",
     "redirect": "Dionysios 161",
     "chapters": [
@@ -698,7 +700,8 @@
   },
   {
     "lemma": "Drakontides",
-    "previous": "Dionysios 161b"
+    "previous": "Dionysios 161b",
+    "next": "Drusia aqua"
   },
   {
     "lemma": "Drusia aqua",
@@ -964,6 +967,7 @@
   {
     "lemma": "Glaukos 48a",
     "previous": "Gareas 2",
+    "next": "Gorgias 13",
     "chapters": [
       {
         "start": 177,
@@ -2041,6 +2045,7 @@
   {
     "lemma": "Parthenis 5",
     "previous": "Parthenis 4",
+    "next": "Paulus 26",
     "chapters": [
       {
         "start": 431,
@@ -5900,7 +5905,6 @@
     "lemma": "Ergoteles 3",
     "previous": "Dionysios 50a"
   },
-
   {
     "lemma": "Karanos 3",
     "next": "Kordaphos",

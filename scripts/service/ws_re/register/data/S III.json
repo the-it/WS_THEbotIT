@@ -1122,6 +1122,7 @@
   {
     "lemma": "Aix 3",
     "previous": "Aitolos",
+    "next": "Akanthos 5a",
     "sort_key": "Aix 3",
     "chapters": [
       {
@@ -1132,7 +1133,17 @@
     ]
   },
   {
+    "lemma": "Akanthos 5a",
+    "previous": "Aix 3",
+    "sort_key": "Akanthos 5a"
+  },
+  {
+    "lemma": "Akanthos 1",
+    "next": "Akatos 2"
+  },
+  {
     "lemma": "Akatos 2",
+    "previous": "Akanthos 1",
     "next": "Akazie",
     "sort_key": "Akatos 2",
     "chapters": [
@@ -1420,6 +1431,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1430,6 +1442,7 @@
   },
   {
     "lemma": "Alexios",
+    "previous": "Alexinos 2",
     "next": "Alfius 6"
   },
   {
