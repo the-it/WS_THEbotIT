@@ -109,25 +109,29 @@ class SCANTask(ReScannerTask):
             return {"next": next_lemma}, []
         return {}, ["next"]
 
-    @staticmethod
-    def _fetch_pages(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         if len(article_list) == 1:
-            article = article_list[0]
-            try:
-                spalte_start = int(article["SPALTE_START"].value)
-            except ValueError:
-                return {}, []
-            spalte_end = article["SPALTE_END"].value
-            if spalte_end and spalte_end != "OFF":
-                spalte_end = int(spalte_end)
-            else:
-                spalte_end = spalte_start
-            single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
-            author = article.author[0]
-            if author != "OFF":
-                single_article_dict["author"] = author
-            return {"chapters": [single_article_dict]}, []
+            return {"chapters": [self._analyse_simple_article_list(article_list)]}, []
+        self.logger.error(f"{self.re_page.lemma_without_prefix} has a too complex article list.")
         return {}, []
+
+    def _analyse_simple_article_list(self, article_list: List[Article]) -> ChapterDict:
+        article = article_list[0]
+        try:
+            spalte_start = int(article["SPALTE_START"].value)
+        except ValueError:
+            self.logger.error(f"{self.re_page.lemma_without_prefix} has no correct start column.")
+            return {}
+        spalte_end = article["SPALTE_END"].value
+        if spalte_end and spalte_end != "OFF":
+            spalte_end = int(spalte_end)
+        else:
+            spalte_end = spalte_start
+        single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
+        author = article.author[0]
+        if author != "OFF":
+            single_article_dict["author"] = author
+        return single_article_dict
 
     def _process_from_article_list(self):
         function_list_properties = []

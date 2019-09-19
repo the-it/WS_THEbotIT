@@ -331,4 +331,5 @@ text.
         task.re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
             task._process_from_article_list()
-            log_catcher.check(("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")))
+            print(log_catcher.records)
+            log_catcher.check(mock.ANY, ("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")))
