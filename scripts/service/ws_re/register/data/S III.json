@@ -271,7 +271,7 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -1667,17 +1667,38 @@
   {
     "lemma": "Alope 1",
     "previous": "Alogune",
-    "next": "Alope 2"
+    "next": "Alope 2",
+    "chapters": [
+      {
+        "start": 83,
+        "end": 83,
+        "author": "Oldfather."
+      }
+    ]
   },
   {
     "lemma": "Alope 2",
     "previous": "Alope 1",
-    "next": "Alope 3"
+    "next": "Alope 3",
+    "chapters": [
+      {
+        "start": 83,
+        "end": 84,
+        "author": "Oldfather."
+      }
+    ]
   },
   {
     "lemma": "Alope 3",
     "previous": "Alope 2",
-    "next": "Alorcus"
+    "next": "Alorcus",
+    "chapters": [
+      {
+        "start": 84,
+        "end": 84,
+        "author": "Oldfather."
+      }
+    ]
   },
   {
     "lemma": "Alorcus",
@@ -2048,7 +2069,14 @@
   {
     "lemma": "Ambra",
     "previous": "Ambix",
-    "next": "Ameinokrates"
+    "next": "Ameinokrates",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 90,
+        "author": "Hopfner."
+      }
+    ]
   },
   {
     "lemma": "Ameinokrates",
@@ -2133,7 +2161,14 @@
   {
     "lemma": "Ammudates",
     "previous": "Ammos",
-    "next": "Amon"
+    "next": "Amon",
+    "chapters": [
+      {
+        "start": 91,
+        "end": 91,
+        "author": "Martin."
+      }
+    ]
   },
   {
     "lemma": "Amon",
@@ -5634,7 +5669,13 @@
   {
     "lemma": "Asciburgium",
     "previous": "Asciacus",
-    "next": "Ascoli"
+    "next": "Ascoli",
+    "chapters": [
+      {
+        "start": 169,
+        "end": 169
+      }
+    ]
   },
   {
     "lemma": "Ascoli",
@@ -6930,7 +6971,14 @@
   {
     "lemma": "Aurelius 92",
     "previous": "Aurelianorum (Aurelianensis) civitas, Aureliani",
-    "next": "Aurelius 107"
+    "next": "Aurelius 107",
+    "chapters": [
+      {
+        "start": 189,
+        "end": 189,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 107",
@@ -12605,7 +12653,7 @@
       {
         "start": 329,
         "end": 329,
-        "author": "Brandt"
+        "author": "S. Brandt."
       }
     ]
   },
@@ -14502,7 +14550,14 @@
   {
     "lemma": "Erasistratos 1",
     "previous": "Erasippos 2",
-    "next": "Ἐρημοφύλακες"
+    "next": "Ἐρημοφύλακες",
+    "chapters": [
+      {
+        "start": 440,
+        "end": 440,
+        "author": "S. Brandt."
+      }
+    ]
   },
   {
     "lemma": "Ἐρημοφύλακες",
