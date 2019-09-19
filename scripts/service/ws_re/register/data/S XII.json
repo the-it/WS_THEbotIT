@@ -251,7 +251,14 @@
   {
     "lemma": "Aigosthena",
     "previous": "Aguntum",
-    "next": "Αἰνύρων χῶρος"
+    "next": "Αἰνύρων χῶρος",
+    "chapters": [
+      {
+        "start": 9,
+        "end": 9,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Αἰνύρων χῶρος",
@@ -285,7 +292,14 @@
   {
     "lemma": "Albinus 4",
     "previous": "Alba 6a",
-    "next": "Albius 14"
+    "next": "Albius 14",
+    "chapters": [
+      {
+        "start": 14,
+        "end": 22,
+        "author": "Heinrich Dörrie."
+      }
+    ]
   },
   {
     "lemma": "Albius 14",
@@ -366,10 +380,24 @@
   },
   {
     "lemma": "Anaximandros 1",
-    "previous": "Anaxagoras 4"
+    "previous": "Anaxagoras 4",
+    "next": "Anaximenes 2"
+  },
+  {
+    "lemma": "Anaximenes 2",
+    "previous": "Anaximandros 1",
+    "next": "Andania 1",
+    "chapters": [
+      {
+        "start": 69,
+        "end": 71,
+        "author": "Carl Joachim Classen."
+      }
+    ]
   },
   {
     "lemma": "Andania 1",
+    "previous": "Anaximenes 2",
     "next": "Andautonia"
   },
   {
@@ -872,7 +900,14 @@
   {
     "lemma": "Baebius 32",
     "previous": "Baebius 28a",
-    "next": "Baebius 47"
+    "next": "Baebius 47",
+    "chapters": [
+      {
+        "start": 130,
+        "end": 130,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Baebius 47",
