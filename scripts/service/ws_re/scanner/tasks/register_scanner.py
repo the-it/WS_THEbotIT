@@ -112,8 +112,8 @@ class SCANTask(ReScannerTask):
     def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         if len(article_list) == 1:
             return {"chapters": [self._analyse_simple_article_list(article_list)]}, []
-        self.logger.error(f"{self.re_page.lemma_without_prefix} has a too complex article list.")
-        return {}, []
+        else:
+            return {"chapters": [self._analyse_complex_article_list(article_list)]}, []
 
     def _analyse_simple_article_list(self, article_list: List[Article]) -> ChapterDict:
         article = article_list[0]
@@ -132,6 +132,23 @@ class SCANTask(ReScannerTask):
         if author != "OFF":
             single_article_dict["author"] = author
         return single_article_dict
+
+    def _analyse_complex_article_list(self, article_list: List[Article]) -> List[ChapterDict]:
+        simple_dict = self._analyse_simple_article_list(article_list)
+        article_start = simple_dict["start"]
+        chapter_list: List[ChapterDict] = []
+        for article in article_list:
+            # if there is something outside an article ignore it
+            if isinstance(article, str):
+                continue
+
+            findings = list(re.finditer(r"\{\{Seite\|(\d{1,4})", article.text))
+            if findings:
+                first_finding = findings[0]
+                start = int(first_finding.group(1))
+                if first_finding.start(0) > 0:
+                    start -= 1
+        return simple_dict
 
     def _process_from_article_list(self):
         function_list_properties = []

@@ -203,7 +203,7 @@ text.
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({}, ["next"]), SCANTask._fetch_next(article))
 
-    def test_pages(self):
+    def test_pages_simple(self):
         task = SCANTask(None, self.logger)
         self.title_mock.return_value = "RE:Aal"
 
@@ -257,6 +257,20 @@ text.
         task.re_page = re_page
         article = re_page.splitted_article_list[0]
         expected_dict = {"chapters": [{"start": 264, "end": 264}]}
+        compare((expected_dict, []), task._fetch_pages(article))
+
+    def test_pages_complex(self):
+        task = SCANTask(None, self.logger)
+        self.title_mock.return_value = "RE:Aal"
+
+        with open("test_data/RE_Bithynia.txt") as test_file:
+            self.text_mock.return_value = test_file.read()
+        re_page = RePage(self.page_mock)
+        task.re_page = re_page
+        article = re_page.splitted_article_list[0]
+        expected_dict = {"chapters": [{"start": 507, "end": 510, "author": "Ruge."},
+                                      {"start": 510, "end": 524, "author": "Ed. Meyer."},
+                                      {"start": 524, "end": 539, "author": "Brandis."}]}
         compare((expected_dict, []), task._fetch_pages(article))
 
     def test_fetch_from_properties(self):
