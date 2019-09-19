@@ -274,7 +274,7 @@ text.
 {{REAutor|OFF}}"""
         task = SCANTask(None, self.logger)
         task.re_page = RePage(self.page_mock)
-        task._fetch_from_article_list()
+        task._process_from_article_list()
         post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
         compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
@@ -306,7 +306,7 @@ text.
 {{REAutor|OFF}}"""
         task = SCANTask(None, self.logger)
         task.re_page = RePage(self.page_mock)
-        task._fetch_from_article_list()
+        task._process_from_article_list()
         post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
         compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
         compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
@@ -330,5 +330,5 @@ text.
         task = SCANTask(None, self.logger)
         task.re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
-            task._fetch_from_article_list()
+            task._process_from_article_list()
             log_catcher.check(("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")))

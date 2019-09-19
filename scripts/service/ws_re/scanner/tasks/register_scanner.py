@@ -26,7 +26,7 @@ class SCANTask(ReScannerTask):
         self._strategies: Dict[str, List[str]] = {}
 
     def task(self):
-        self._fetch_from_article_list()
+        self._process_from_article_list()
 
     def finish_task(self):
         super().finish_task()
@@ -36,21 +36,21 @@ class SCANTask(ReScannerTask):
                 self.logger.info(f"{self._strategies[strategy]}")
         self.logger.info("Fetch changes for the authors.")
         authors = self.registers.authors
-        authors.set_mappings(self._fetch_mapping())
-        authors.set_author(self._fetch_author_infos())
+        authors.set_mappings(self._get_author_mapping())
+        authors.set_author(self._process_author_infos())
         self.logger.info("Persist the author data.")
         authors.persist()
         self.logger.info("Persist the register data.")
         self.registers.persist()
         self._push_changes()
 
-    def _fetch_author_infos(self) -> Dict[str, AuthorDict]:
+    def _process_author_infos(self) -> Dict[str, AuthorDict]:
         text = fetch_text_from_wiki_site(self.wiki,
                                          "Paulys Realencyclopädie der classischen "
                                          "Altertumswissenschaft/Autoren")
         return AuthorCrawler.get_authors(text)
 
-    def _fetch_mapping(self) -> CrawlerDict:
+    def _get_author_mapping(self) -> CrawlerDict:
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
@@ -113,7 +113,10 @@ class SCANTask(ReScannerTask):
     def _fetch_pages(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         if len(article_list) == 1:
             article = article_list[0]
-            spalte_start = int(article["SPALTE_START"].value)
+            try:
+                spalte_start = int(article["SPALTE_START"].value)
+            except ValueError:
+                return {}, []
             spalte_end = article["SPALTE_END"].value
             if spalte_end and spalte_end != "OFF":
                 spalte_end = int(spalte_end)
@@ -126,9 +129,11 @@ class SCANTask(ReScannerTask):
             return {"chapters": [single_article_dict]}, []
         return {}, []
 
-    def _fetch_from_article_list(self):
-        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key, self._fetch_lemma,
-                                    self._fetch_redirect, self._fetch_previous, self._fetch_next)
+    def _process_from_article_list(self):
+        function_list_properties = []
+        for item in dir(self):
+            if "_fetch" in item:
+                function_list_properties.append(getattr(self, item))
         issues_in_articles = set()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
