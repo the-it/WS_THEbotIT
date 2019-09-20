@@ -182,6 +182,7 @@ class AuthorCrawler:
         author = re.sub(r"\{\{.*?\}\}", "", author)
         # replace all comments
         author = re.sub(r"<!--.*?-->", "", author)
+        author = re.sub(r"<nowiki>.*?</nowiki>", "", author)
         # replace all brackets
         author = re.sub(r"\(.*?\)", "", author)
         # if it's a link use only the second part

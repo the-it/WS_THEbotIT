@@ -193,6 +193,7 @@ class TestAuthorCrawler(TestCase):
         compare(("Friedrich Walter", "Lenz"), self.crawler._extract_author_name("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
         compare(("Eduard", "Thraemer"), self.crawler._extract_author_name("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
         compare(("Buren s. Van Buren", ""), self.crawler._extract_author_name("Buren s. Van Buren"))
+        compare(("Karl", "Praechter"), self.crawler._extract_author_name("Praechter, K[arl]<nowiki></nowiki>"))
 
     def test_extract_years(self):
         compare((1906, 1988), self.crawler._extract_years("1906–1988"))

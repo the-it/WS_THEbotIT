@@ -17,6 +17,8 @@ def _raise_count_errors(errors):
         errors.append(banner)
         raise AssertionError("\n".join(errors))
 
+
+@skipUnless(INTEGRATION_TEST, "only execute in integration test")
 class TestAuthors(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
