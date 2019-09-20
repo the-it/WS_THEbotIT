@@ -179,7 +179,11 @@ class AuthorCrawler:
     def _extract_author_name(author: str) -> Tuple[str, str]:
         author = author.lstrip("|")
         # replace all templates
-        author = re.sub(r"\{\{[^\}]*\}\}", "", author)
+        author = re.sub(r"\{\{.*?\}\}", "", author)
+        # replace all comments
+        author = re.sub(r"<!--.*?-->", "", author)
+        # replace all brackets
+        author = re.sub(r"\(.*?\)", "", author)
         # if it's a link use only the second part
         if re.search(r"\[\[", author):
             author = author.split("|")[1]

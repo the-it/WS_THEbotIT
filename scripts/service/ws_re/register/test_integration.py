@@ -9,6 +9,14 @@ from tools import INTEGRATION_TEST
 
 _MAX_SIZE_WIKI_PAGE = 2_098_175
 
+def _raise_count_errors(errors):
+    if errors:  # pragma: no cover
+        count = len(errors)
+        banner = "\n" + Figlet(font="big").renderText(f"ERRORS: {count}")
+        errors.insert(0, banner)
+        errors.append(banner)
+        raise AssertionError("\n".join(errors))
+
 class TestAuthors(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -28,12 +36,7 @@ class TestAuthors(TestCase):
                 self.authors.get_author(author)
             except KeyError:
                 errors.append(f"Mapping target {author} not there.")
-        if errors:  # pragma: no cover
-            count = len(errors)
-            errors.insert(0, f"COUNT ERRORS: {count}")
-            errors.append(f"COUNT ERRORS: {count}")
-            raise AssertionError("\n".join(errors))
-
+        _raise_count_errors(errors)
 
 
 @skipUnless(INTEGRATION_TEST, "only execute in integration test")
@@ -45,14 +48,6 @@ class TestIntegrationRegister(TestCase):
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
             self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()), f"register {register} is now to big.")
-
-    def _raise_count_errors(self, errors):
-        if errors:  # pragma: no cover
-            count = len(errors)
-            banner = "\n" + Figlet(font="big").renderText(f"ERRORS: {count}")
-            errors.insert(0, banner)
-            errors.append(banner)
-            raise AssertionError("\n".join(errors))
 
     def test_previous_next_in_order(self):
         errors = []
@@ -67,7 +62,7 @@ class TestIntegrationRegister(TestCase):
                     if post_lemma and post_lemma["previous"]:
                         if not post_lemma["previous"] == lemma["lemma"]:  # pragma: no cover
                             errors.append(f"POST lemma name {lemma['lemma']} /{i} in register {register.volume.name} not the same as post lemma")
-        self._raise_count_errors(errors)
+        _raise_count_errors(errors)
 
     _DOUBLE_LEMMAS = {"Orpheus 1", "Victor 69"}
 
@@ -85,7 +80,7 @@ class TestIntegrationRegister(TestCase):
                         if lemma not in self._DOUBLE_LEMMAS:
                             errors.append(f"distance problem {register.volume.name}, {lemma} , {lemmas[lemma]}, {i}")
                     lemmas[lemma] = i
-        self._raise_count_errors(errors)
+        _raise_count_errors(errors)
 
     @skip("only for analysis")
     def test_no_double_lemma(self):  # pragma: no cover

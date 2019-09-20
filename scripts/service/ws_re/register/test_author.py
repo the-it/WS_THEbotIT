@@ -290,3 +290,28 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
                   "Walther Abel": {"birth": 1906, "death": 1987},
                   "Johannes Zwicker": {"birth": 1881, "death": 1969}}
         compare(expect, author_mapping)
+
+    table_head = "{{|class=\"wikitable sortable\"\n|-\n!width=\"200\" | Name/Sigel\n!width=\"75\" | Lebenszeit\n!width=\"300\" | Mitarbeit\n!Personenartikel\n"
+    table_bottom = "\n|}}\n\n[[Kategorie:RE:Autoren|!]]"
+
+    def test_bug_kazarow(self):
+        author = """|-
+|Kazarow, Gabriel (Katsarov, Gavril I.) 
+|2222–3333
+|
+|"""
+        author_table = self.table_head + author + self.table_bottom
+        author_mapping = self.crawler.get_authors(author_table)
+        expect = {"Gabriel Kazarow": {"birth": 2222, "death": 3333}}
+        compare(expect, author_mapping)
+
+    def test_bug_groebe(self):
+        author = """|-
+|Groebe, P[aul]<!--Schreibung auch Gröbe-->
+|2222–3333
+|
+|"""
+        author_table = self.table_head + author + self.table_bottom
+        author_mapping = self.crawler.get_authors(author_table)
+        expect = {"Paul Groebe": {"birth": 2222, "death": 3333}}
+        compare(expect, author_mapping)
