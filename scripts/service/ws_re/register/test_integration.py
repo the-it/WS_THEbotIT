@@ -84,6 +84,16 @@ class TestIntegrationRegister(TestCase):
                     lemmas[lemma] = i
         _raise_count_errors(errors)
 
+    def test_all_authors_has_a_target_in_mapping(self):
+        errors = []
+        mappings = set(self.registers.authors._mapping.keys())
+        for register in self.registers.volumes.values():
+            for lemma in register:
+                for chapter in lemma.chapters:
+                    if chapter.author and chapter.author not in mappings:
+                        errors.append(f"Author {chapter.author}, {lemma['lemma']}, {register.volume.name} not in mappings.")
+        _raise_count_errors(errors)
+
     @skip("only for analysis")
     def test_no_double_lemma(self):  # pragma: no cover
         for register in self.registers.volumes.values():
