@@ -18,6 +18,10 @@ class TestAuthor(TestCase):
         compare(None, register_author.death)
         compare(1999, register_author.birth)
 
+        register_author = Author("Test Name", {"redirect": "Tada"})
+        compare(None, register_author.death)
+        compare("Tada", register_author.redirect)
+
 
 class TestAuthors(BaseTestRegister):
     def test_load_data(self):
@@ -31,7 +35,12 @@ class TestAuthors(BaseTestRegister):
         author = authors.get_author_by_mapping("Abel", "XVI,1")
         compare("Abel", author.name)
         compare(1987, author.death)
+        author = authors.get_author_by_mapping("redirect.", "XVI,1")
+        compare("Abert", author.name)
+        compare(1927, author.death)
         compare(None, authors.get_author_by_mapping("Tada", "XVI,1"))
+        author = authors.get_author("Abert|")
+        compare("Abert", author.name)
 
     def test_set_mapping(self):
         authors = Authors()
@@ -184,6 +193,7 @@ class TestAuthorCrawler(TestCase):
         compare(("Friedrich Walter", "Lenz"), self.crawler._extract_author_name("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
         compare(("Eduard", "Thraemer"), self.crawler._extract_author_name("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
         compare(("Buren s. Van Buren", ""), self.crawler._extract_author_name("Buren s. Van Buren"))
+        compare(("Karl", "Praechter"), self.crawler._extract_author_name("Praechter, K[arl]<nowiki></nowiki>"))
 
     def test_extract_years(self):
         compare((1906, 1988), self.crawler._extract_years("1906–1988"))
@@ -280,4 +290,29 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
                   "Karlhans Abel": {"birth": 1919, "death": 1998},
                   "Walther Abel": {"birth": 1906, "death": 1987},
                   "Johannes Zwicker": {"birth": 1881, "death": 1969}}
+        compare(expect, author_mapping)
+
+    table_head = "{{|class=\"wikitable sortable\"\n|-\n!width=\"200\" | Name/Sigel\n!width=\"75\" | Lebenszeit\n!width=\"300\" | Mitarbeit\n!Personenartikel\n"
+    table_bottom = "\n|}}\n\n[[Kategorie:RE:Autoren|!]]"
+
+    def test_bug_kazarow(self):
+        author = """|-
+|Kazarow, Gabriel (Katsarov, Gavril I.) 
+|2222–3333
+|
+|"""
+        author_table = self.table_head + author + self.table_bottom
+        author_mapping = self.crawler.get_authors(author_table)
+        expect = {"Gabriel Kazarow": {"birth": 2222, "death": 3333}}
+        compare(expect, author_mapping)
+
+    def test_bug_groebe(self):
+        author = """|-
+|Groebe, P[aul]<!--Schreibung auch Gröbe-->
+|2222–3333
+|
+|"""
+        author_table = self.table_head + author + self.table_bottom
+        author_mapping = self.crawler.get_authors(author_table)
+        expect = {"Paul Groebe": {"birth": 2222, "death": 3333}}
         compare(expect, author_mapping)
