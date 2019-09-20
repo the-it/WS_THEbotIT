@@ -292,7 +292,7 @@ class TestReScanner(TestCase):
 
     class WAITTask(ReScannerTask):
         def task(self):
-            time.sleep(0.3)
+            time.sleep(0.4)
 
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
