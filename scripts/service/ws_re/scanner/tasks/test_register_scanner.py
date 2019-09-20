@@ -1,3 +1,4 @@
+from pathlib import Path
 from unittest import mock
 
 from git import Repo
@@ -260,22 +261,51 @@ text.
         compare((expected_dict, []), task._fetch_pages(article))
 
     def test_pages_complex(self):
-        task = SCANTask(None, self.logger)
-        self.title_mock.return_value = "RE:Aal"
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            self.title_mock.return_value = "RE:Aal"
 
-        with open("test_data/RE_Bithynia.txt") as test_file:
-            self.text_mock.return_value = test_file.read()
-        re_page = RePage(self.page_mock)
-        task.re_page = re_page
-        article = re_page.splitted_article_list[0]
-        expected_dict = {"chapters": [{"start": 507, "end": 510, "author": "Ruge."},
-                                      {"start": 510, "end": 524, "author": "Ed. Meyer."},
-                                      {"start": 524, "end": 539, "author": "Brandis."}]}
-        compare((expected_dict, []), task._fetch_pages(article))
+            with open(Path(__file__).parent.joinpath("test_data/RE_Bithynia.txt"), encoding="utf-8") as test_file:
+                self.text_mock.return_value = test_file.read()
+            re_page = RePage(self.page_mock)
+            task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            expected_dict = {"chapters": [{"start": 507, "end": 510, "author": "Ruge."},
+                                          {"start": 511, "end": 524, "author": "Ed. Meyer."},
+                                          {"start": 524, "end": 539, "author": "Brandis."}]}
+            compare((expected_dict, []), task._fetch_pages(article))
+
+            with open(Path(__file__).parent.joinpath("test_data/RE_Elis 1.txt"), encoding="utf-8") as test_file:
+                self.text_mock.return_value = test_file.read()
+            re_page = RePage(self.page_mock)
+            task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            expected_dict = {"chapters": [{"start": 2369, "end": 2369, "author": "Philippson."},
+                                          {"start": 2369, "end": 2432, "author": "Swoboda."}]}
+            compare((expected_dict, []), task._fetch_pages(article))
+
+            with open(Path(__file__).parent.joinpath("test_data/RE_L. Abuccius.txt"), encoding="utf-8") as test_file:
+                self.text_mock.return_value = test_file.read()
+            re_page = RePage(self.page_mock)
+            task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            expected_dict = {"chapters": [{"start": 124, "end": 124, "author": "Klebs."},
+                                          {"start": 125, "end": 125, "author": "v. Rohden."}]}
+            compare((expected_dict, []), task._fetch_pages(article))
+
+            # if the re_page is too complex (import of other pages during page construction) return empty result sets
+            with open(Path(__file__).parent.joinpath("test_data/RE_Plinius 5.txt"), encoding="utf-8") as test_file:
+                self.text_mock.return_value = test_file.read()
+            re_page = RePage(self.page_mock)
+            task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            expected_dict = {}
+            compare((expected_dict, []), task._fetch_pages(article))
 
     def test_fetch_from_properties(self):
-        self.title_mock.return_value = "RE:Aal"
-        self.text_mock.return_value = """{{REDaten
+        with LogCapture():
+            self.title_mock.return_value = "RE:Aal"
+            self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |VORGÄNGER=Lemma Previous
 |NACHFOLGER=Lemma Next
@@ -286,21 +316,22 @@ text.
 }}
 text.
 {{REAutor|OFF}}"""
-        task = SCANTask(None, self.logger)
-        task.re_page = RePage(self.page_mock)
-        task._process_from_article_list()
-        post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
-        compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
-        compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
-        compare("Aal", post_lemma.lemma_dict["sort_key"])
-        compare(True, post_lemma.lemma_dict["redirect"])
-        compare("Lemma Previous", post_lemma.lemma_dict["previous"])
-        compare("Lemma Next", post_lemma.lemma_dict["next"])
+            task = SCANTask(None, self.logger)
+            task.re_page = RePage(self.page_mock)
+            task._process_from_article_list()
+            post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
+            compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
+            compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
+            compare("Aal", post_lemma.lemma_dict["sort_key"])
+            compare(True, post_lemma.lemma_dict["redirect"])
+            compare("Lemma Previous", post_lemma.lemma_dict["previous"])
+            compare("Lemma Next", post_lemma.lemma_dict["next"])
 
     def test_fetch_from_properties_self_append(self):
-        copy_tst_data("I_1_self_append", "I_1")
-        self.title_mock.return_value = "RE:Aal"
-        self.text_mock.return_value = """{{REDaten
+        with LogCapture():
+            copy_tst_data("I_1_self_append", "I_1")
+            self.title_mock.return_value = "RE:Aal"
+            self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 |VORGÄNGER=Lemma Previous
 |NACHFOLGER=Lemma Next
@@ -318,19 +349,19 @@ text.
 }}
 text.
 {{REAutor|OFF}}"""
-        task = SCANTask(None, self.logger)
-        task.re_page = RePage(self.page_mock)
-        task._process_from_article_list()
-        post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
-        compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
-        compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
-        compare("Aal", post_lemma.lemma_dict["sort_key"])
-        compare(True, post_lemma.lemma_dict["redirect"])
-        compare("Lemma Previous", post_lemma.lemma_dict["previous"])
-        compare("Lemma Next", post_lemma.lemma_dict["next"])
-        post_lemma_append = task.registers["I,1"].get_lemma_by_name("Aal", self_supplement=True)
-        compare("Lemma Previous2", post_lemma_append.lemma_dict["previous"])
-        compare("Lemma Next2", post_lemma_append.lemma_dict["next"])
+            task = SCANTask(None, self.logger)
+            task.re_page = RePage(self.page_mock)
+            task._process_from_article_list()
+            post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
+            compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
+            compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
+            compare("Aal", post_lemma.lemma_dict["sort_key"])
+            compare(True, post_lemma.lemma_dict["redirect"])
+            compare("Lemma Previous", post_lemma.lemma_dict["previous"])
+            compare("Lemma Next", post_lemma.lemma_dict["next"])
+            post_lemma_append = task.registers["I,1"].get_lemma_by_name("Aal", self_supplement=True)
+            compare("Lemma Previous2", post_lemma_append.lemma_dict["previous"])
+            compare("Lemma Next2", post_lemma_append.lemma_dict["next"])
 
     def test_fetch_from_properties_lemma_not_found(self):
         self.title_mock.return_value = "RE:Aas"
@@ -345,5 +376,4 @@ text.
         task.re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
             task._process_from_article_list()
-            print(log_catcher.records)
             log_catcher.check(mock.ANY, ("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")))

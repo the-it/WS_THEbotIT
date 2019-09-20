@@ -110,10 +110,12 @@ class SCANTask(ReScannerTask):
         return {}, ["next"]
 
     def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+        if self.re_page.complex_construction:
+            self.logger.error(f"The construct of {self.re_page.lemma_without_prefix} is too complex, can't analyse.")
+            return {}, []
         if len(article_list) == 1:
             return {"chapters": [self._analyse_simple_article_list(article_list)]}, []
-        else:
-            return {"chapters": [self._analyse_complex_article_list(article_list)]}, []
+        return {"chapters": self._analyse_complex_article_list(article_list)}, []
 
     def _analyse_simple_article_list(self, article_list: List[Article]) -> ChapterDict:
         article = article_list[0]
@@ -135,20 +137,26 @@ class SCANTask(ReScannerTask):
 
     def _analyse_complex_article_list(self, article_list: List[Article]) -> List[ChapterDict]:
         simple_dict = self._analyse_simple_article_list(article_list)
-        article_start = simple_dict["start"]
+        # if there is something outside an article ignore it
+        article_list = [article for article in article_list if isinstance(article, Article)]
+        article_start = int(simple_dict["start"])
         chapter_list: List[ChapterDict] = []
         for article in article_list:
-            # if there is something outside an article ignore it
-            if isinstance(article, str):
-                continue
-
+            # if there will be no findings of the regex, the article continues on the next page as the predecessor
+            start: int = article_start
+            end: int = article_start
             findings = list(re.finditer(r"\{\{Seite\|(\d{1,4})", article.text))
             if findings:
                 first_finding = findings[0]
                 start = int(first_finding.group(1))
                 if first_finding.start(0) > 0:
                     start -= 1
-        return simple_dict
+                end = int(findings[-1].group(1))
+            if article is article_list[-1]:
+                end = int(simple_dict["end"])
+            chapter_list.append({"start": start, "end": end, "author": article.author[0]})
+            article_start = end
+        return chapter_list
 
     def _process_from_article_list(self):
         function_list_properties = []
