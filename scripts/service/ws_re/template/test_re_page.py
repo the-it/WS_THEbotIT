@@ -246,3 +246,12 @@ text
         compare(2, len(splitted_list[1]))
         self.assertTrue(isinstance(splitted_list[0][0], str))
         self.assertTrue(isinstance(splitted_list[1][1], str))
+
+    def test_complex_page(self):
+        complex = """{{#lst:RE:Plinius 5/I}}
+{{#lst:RE:Plinius 5/II}}
+{{#lst:RE:Plinius 5/III}}
+{{#lst:RE:Plinius 5/IV}}"""
+        self.text_mock.return_value = complex
+        re_page = RePage(self.page_mock)
+        self.assertTrue(re_page.complex_construction)

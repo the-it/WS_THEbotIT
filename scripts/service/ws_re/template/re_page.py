@@ -1,3 +1,4 @@
+import re
 from typing import Union, List
 
 import pywikibot
@@ -135,3 +136,13 @@ class RePage():
                 except IndexError:
                     splitted_list.append([article])
         return splitted_list
+
+    @property
+    def complex_construction(self) -> bool:
+        """
+        todo: make this obsolete by construction the page as rendered in wiki
+        raise a flag is the page has a complex construction, marked by sub lemmas inserted via ... {{#lst: ...
+        """
+        if re.search(r"\{\{#lst:", self.page.text):
+            return True
+        return False
