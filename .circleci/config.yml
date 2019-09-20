@@ -5,15 +5,15 @@ version: 2
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v7-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
-      - v7-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
-      - v7-dependencies-{{ .Environment.PYTHON_VERSION }}-
+      - v8-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+      - v8-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
+      - v8-dependencies-{{ .Environment.PYTHON_VERSION }}-
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v7-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+    key: v8-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
 
 install_dependencies: &install_dependencies
   run:
@@ -64,6 +64,14 @@ safety: &safety
       . venv/bin/activate
       make safety
 
+mypy: &mypy
+  run:
+    name: mypy
+    when: always
+    command: |
+      . venv/bin/activate
+      make mypy
+
 run_coverage: &run_coverage
   run:
     name: run coverage
@@ -110,6 +118,7 @@ quality_steps: &quality_steps
     - <<: *pylint
     - <<: *safety
     - <<: *bandit
+    - <<: *mypy
 
 coverage_steps: &coverage_steps
   steps:
@@ -136,7 +145,7 @@ unittest_steps: &unittest_steps
 jobs:
   quality:
     docker:
-      - image: circleci/python:3.7
+      - image: circleci/python:3.8-rc
     working_directory: ~/repo
     <<: *quality_steps
 
@@ -146,11 +155,11 @@ jobs:
     working_directory: ~/repo
     <<: *coverage_steps
 
-  unittest38:
+  coverage38:
     docker:
       - image: circleci/python:3.8-rc
     working_directory: ~/repo
-    <<: *unittest_steps
+    <<: *coverage_steps
 
 # dependencies for the workflow
 
@@ -164,7 +173,7 @@ workflows:
             branches:
               ignore:
                 - /.*updating_registers.*/
-      - unittest38:
+      - coverage38:
           context: python38
           requires:
             - quality

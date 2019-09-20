@@ -1,18 +1,19 @@
 import re
 from datetime import datetime
+from typing import Tuple, List
 
 from pywikibot import Page, Site
 
 from tools import make_html_color
 from tools.bots import CanonicalBot
-from tools.petscan import PetScan
+from tools.petscan import PetScan, PetscanLemma
 
 
 class ReStatus(CanonicalBot):
-    def __init__(self, wiki, debug):
+    def __init__(self, wiki: Site, debug: bool):
         CanonicalBot.__init__(self, wiki, debug)
 
-    def task(self):
+    def task(self) -> bool:
         fertig = self.get_sum_of_cat(["RE:Fertig"],
                                      ["RE:Teilkorrigiert", "RE:Korrigiert",
                                       "RE:Unkorrigiert", "RE:Unvollständig"])
@@ -23,7 +24,7 @@ class ReStatus(CanonicalBot):
         self.history(fertig, korrigiert, unkorrigiert)
         return True
 
-    def user_page_the_it(self, korrigiert):
+    def user_page_the_it(self, korrigiert: Tuple[int, int]):
         status_string = []
 
         color = make_html_color(20e6, 22e6, korrigiert[0])
@@ -47,7 +48,7 @@ class ReStatus(CanonicalBot):
         user_page.text = temp_text
         user_page.save("todo RE aktualisiert")
 
-    def history(self, fertig, korrigiert, unkorrigiert):
+    def history(self, fertig: Tuple[int, int], korrigiert: Tuple[int, int], unkorrigiert: Tuple[int, int]):
         page = Page(self.wiki, "Benutzer:THEbotIT/" + self.bot_name)
         temp_text = page.text
         composed_text = "".join(["|-\n", "|", self.timestamp.start_of_run.strftime("%Y%m%d-%H%M"),
@@ -62,14 +63,14 @@ class ReStatus(CanonicalBot):
         page.text = temp_text
         page.save("RE Statistik aktualisiert", botflag=True)
 
-    def get_sum_of_cat(self, cats, negacats):
+    def get_sum_of_cat(self, cats: List[str], negacats: List[str]) -> Tuple[int, int]:
         list_of_lemmas = self.petscan(cats, negacats)
         byte_sum = 0
         for lemma in list_of_lemmas:
             byte_sum += int(lemma["len"])
         return byte_sum, len(list_of_lemmas)
 
-    def petscan(self, categories, negative_categories):
+    def petscan(self, categories: List[str], negative_categories: List[str]) -> List[PetscanLemma]:
         searcher = PetScan()
         for category in categories:
             searcher.add_positive_category(category)

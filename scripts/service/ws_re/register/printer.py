@@ -5,7 +5,7 @@ from tools.bots import CanonicalBot
 
 
 class ReRegisterPrinter(CanonicalBot):
-    def task(self):  # pragma: no cover
+    def task(self):
         registers = Registers()
         self.logger.info("Print volume register.")
         for register in registers.volumes.values():

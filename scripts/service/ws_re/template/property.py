@@ -1,13 +1,15 @@
-from typing import Union
+from typing import Union, Optional
+
+ValueType = Union[str, bool]
 
 
 class Property:
-    def __init__(self, name: str, default: Union[str, bool]):
+    def __init__(self, name: str, default: ValueType):
         self._name = name
-        self._default = default
-        self._value = None
+        self._default: ValueType = default
+        self._value: Optional[ValueType] = None
 
-    def _return_by_type(self, value: Union[str, bool]) -> str:
+    def _return_by_type(self, value: ValueType) -> ValueType:
         ret = value
         if not isinstance(self._default, (bool, str)):
             raise TypeError(f"Default value ({self._default}) is invalid")
@@ -26,7 +28,7 @@ class Property:
         return ret
 
     @property
-    def value(self) -> Union[str, bool]:
+    def value(self) -> ValueType:
         if self._value:
             ret = self._value
         else:
@@ -34,12 +36,14 @@ class Property:
         return ret
 
     @value.setter
-    def value(self, new_value: Union[str, bool]):
+    def value(self, new_value: ValueType):
         if isinstance(new_value, str):
             new_value = new_value.strip()
         if isinstance(new_value, type(self._default)):
             self._value = new_value
-        elif new_value in ("ON", "OFF", "", "on", "off") and isinstance(self._default, bool):
+        elif new_value in ("ON", "OFF", "", "on", "off") \
+                and isinstance(new_value, str) \
+                and isinstance(self._default, bool):
             if new_value == "":
                 self._value = self._default
             self._value = self._set_bool_by_str(new_value)

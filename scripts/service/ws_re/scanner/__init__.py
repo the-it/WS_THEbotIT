@@ -1,7 +1,7 @@
 import traceback
 from datetime import timedelta, datetime
 from operator import itemgetter
-from typing import List
+from typing import List, Optional, Dict
 
 import pywikibot
 
@@ -14,7 +14,7 @@ from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.template import ReDatenException
 from scripts.service.ws_re.template.re_page import RePage
 from tools.bots import CanonicalBot, BotException
-from tools.petscan import PetScan, PetScanException
+from tools.petscan import PetScan, PetScanException, PetscanLemma
 
 
 class ReScanner(CanonicalBot):
@@ -22,10 +22,10 @@ class ReScanner(CanonicalBot):
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(minutes=120)
-        self.tasks = [KSCHTask, DEALTask, DEWPTask, SCANTask]  # type: List[type[ReScannerTask]]
+        self.tasks: List[type(ReScannerTask)] = [KSCHTask, DEALTask, DEWPTask, SCANTask]
         if self.debug:
             self.tasks = self.tasks + []
-        self.statistic = {}
+        self.statistic: Dict[str, int] = {}
 
     def __enter__(self):
         super().__enter__()
@@ -59,7 +59,7 @@ class ReScanner(CanonicalBot):
         self.logger.info("Searching for lemmas")
         searcher = self._prepare_searcher()
         self.logger.info(f"[{searcher} {searcher}]")
-        raw_lemma_list = []
+        raw_lemma_list: List[PetscanLemma] = []
         try:
             raw_lemma_list = searcher.run()
         except PetScanException:
@@ -92,7 +92,7 @@ class ReScanner(CanonicalBot):
             active_tasks.append(task(wiki=self.wiki, debug=self.debug, logger=self.logger))
         return active_tasks
 
-    def _save_re_page(self, re_page: RePage, list_of_done_tasks: list):
+    def _save_re_page(self, re_page: RePage, list_of_done_tasks: List[str]):
         if not self.debug:
             save_message = f"ReScanner hat folgende Aufgaben bearbeitet: " \
                 f"{', '.join(list_of_done_tasks)}"
@@ -102,10 +102,10 @@ class ReScanner(CanonicalBot):
             except ReDatenException:
                 self.logger.error("RePage can't be saved.")
 
-    def _add_lemma_to_data(self, lemma):
+    def _add_lemma_to_data(self, lemma: str):
         self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
 
-    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> str:
+    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> Optional[str]:
         task_name = None
         with task:
             result = task.run(re_page)
@@ -121,7 +121,7 @@ class ReScanner(CanonicalBot):
                 self.logger.error(f"Error in {task.name}/{lemma}, no data where altered.")
         return task_name
 
-    def get_oldest_datetime(self):
+    def get_oldest_datetime(self) -> datetime:
         datetime_str = min(self.data.values())
         return datetime.strptime(datetime_str, "%Y%m%d%H%M%S")
 
@@ -139,8 +139,11 @@ class ReScanner(CanonicalBot):
             except ReDatenException:
                 error = traceback.format_exc().splitlines()[-1]
                 self.logger.error(f"The initiation of {lemma} went wrong: {error}")
-                error_task.task(lemma, error)
+                error_task.append_error(lemma, error)
                 self._add_lemma_to_data(lemma)
+                continue
+            except pywikibot.exceptions.TimeoutError:
+                self.logger.error(f"Timeout at lemma ({lemma}) creation")
                 continue
             if re_page.has_changed():
                 list_of_done_tasks.append("BASE")

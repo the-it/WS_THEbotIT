@@ -1,18 +1,21 @@
+import contextlib
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, Tuple
+from typing import Dict, Optional, List, Type
 
 from pywikibot import Site
 
 from tools.bots import BotException, CanonicalBot, OneTimeBot
 
+BotList = Optional[List[Type[CanonicalBot]]]
+
 
 class BotScheduler(CanonicalBot):
     def __init__(self, wiki: Site, debug: bool):
-        self._daily_bots = None  # type: Tuple[type(CanonicalBot)]
-        self._weekly_bots = None  # type: Dict[int, Tuple[type(CanonicalBot)]]
-        self._monthly_bots = None  # type: Dict[int, Tuple[type(CanonicalBot)]]
-        self._bots_on_last_day_of_month = None  # type: Tuple[type(CanonicalBot)]
+        self._daily_bots: BotList = []
+        self._weekly_bots: Dict[int, BotList] = {}
+        self._monthly_bots: Dict[int, BotList] = {}
+        self._bots_on_last_day_of_month: BotList = []
         CanonicalBot.__init__(self, wiki, debug)
         self._now = datetime.now()
 
@@ -23,35 +26,35 @@ class BotScheduler(CanonicalBot):
         return (self.now() + timedelta(days=1)).day == 1
 
     @property
-    def daily_bots(self) -> Tuple[type(CanonicalBot)]:
+    def daily_bots(self) -> BotList:
         return self._daily_bots
 
     @daily_bots.setter
-    def daily_bots(self, new_config: Tuple[type(CanonicalBot)]):
+    def daily_bots(self, new_config: BotList):
         self._daily_bots = new_config
 
     @property
-    def weekly_bots(self) -> Dict[int, Tuple[type(CanonicalBot)]]:
+    def weekly_bots(self) -> Dict[int, BotList]:
         return self._weekly_bots
 
     @weekly_bots.setter
-    def weekly_bots(self, new_config: Dict[int, Tuple[type(CanonicalBot)]]):
+    def weekly_bots(self, new_config: Dict[int, BotList]):
         self._weekly_bots = new_config
 
     @property
-    def monthly_bots(self) -> Dict[int, Tuple[type(CanonicalBot)]]:
+    def monthly_bots(self) -> Dict[int, BotList]:
         return self._monthly_bots
 
     @monthly_bots.setter
-    def monthly_bots(self, new_config: Dict[int, Tuple[type(CanonicalBot)]]):
+    def monthly_bots(self, new_config: Dict[int, BotList]):
         self._monthly_bots = new_config
 
     @property
-    def bots_on_last_day_of_month(self) -> Tuple[type(CanonicalBot)]:
+    def bots_on_last_day_of_month(self) -> BotList:
         return self._bots_on_last_day_of_month
 
     @bots_on_last_day_of_month.setter
-    def bots_on_last_day_of_month(self, new_config: Tuple[type(CanonicalBot)]):
+    def bots_on_last_day_of_month(self, new_config: BotList):
         self._bots_on_last_day_of_month = new_config
 
     def run_bot(self, bot_to_run: OneTimeBot) -> bool:
@@ -75,19 +78,15 @@ class BotScheduler(CanonicalBot):
 
     def run_weeklys(self):
         if self.weekly_bots:
-            try:
+            with contextlib.suppress(KeyError):
                 for weekly_bot in self.weekly_bots[self.now().weekday()]:
                     self.run_bot(weekly_bot(wiki=self.wiki, debug=self.debug))
-            except KeyError:
-                pass
 
     def run_monthlys(self):
         if self.monthly_bots:
-            try:
+            with contextlib.suppress(KeyError):
                 for monthly_bot in self.monthly_bots[self.now().day]:
                     self.run_bot(monthly_bot(wiki=self.wiki, debug=self.debug))
-            except KeyError:
-                pass
         if self.bots_on_last_day_of_month:
             if self._last_day_of_month():
                 for last_day_monthly_bot in self.bots_on_last_day_of_month:

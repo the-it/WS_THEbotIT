@@ -39,7 +39,6 @@ MONTH_MAPPING = {"Januar": "01",
 
 
 class DateConversion:
-    # pylint: disable=too-few-public-methods
     def __init__(self, rawstring):
         self.rawstring = rawstring
 

@@ -1,18 +1,19 @@
-from collections import OrderedDict
+from typing import Dict
 
 from scripts.service.ws_re.register.base import Register
 from scripts.service.ws_re.register.lemma import Lemma
+from scripts.service.ws_re.register.volume import VolumeRegister
 
 
 class AlphabeticRegister(Register):
-    def __init__(self, start: str, end: str, registers: OrderedDict):
+    def __init__(self, start: str, end: str, registers: Dict[str, VolumeRegister]):
         self._start = start
         self._end = end
         self._registers = registers
         self._lemmas = []
         self._init_lemmas()
 
-    def __repr__(self):  # pragma: no cover
+    def __repr__(self):
         return f"<{self.__class__.__name__} - start:{self._start}, end:{self._end}, lemmas:{len(self)}>"
 
     def __len__(self):
@@ -25,6 +26,10 @@ class AlphabeticRegister(Register):
     def start(self):
         return self._start
 
+    @property
+    def end(self):
+        return self._end
+
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
@@ -33,7 +38,7 @@ class AlphabeticRegister(Register):
                     lemmas.append(lemma)
         self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
 
-    def _is_lemma_in_range(self, lemma):
+    def _is_lemma_in_range(self, lemma: Lemma) -> bool:
         append = True
         # include start
         if lemma.sort_key < self._start:
@@ -43,7 +48,7 @@ class AlphabeticRegister(Register):
             append = False
         return append
 
-    def _get_table(self):
+    def _get_table(self) -> str:
         header = """{|class="wikitable sortable"
 !Artikel
 !Band
@@ -70,9 +75,9 @@ class AlphabeticRegister(Register):
         table.append("|}")
         return "\n".join(table)
 
-    def _get_footer(self):
+    def _get_footer(self) -> str:
         return "[[Kategorie:RE:Register|!]]\n" \
                f"Zahl der Artikel: {len(self._lemmas)}, "
 
-    def get_register_str(self):
+    def get_register_str(self) -> str:
         return f"{self._get_table()}\n{self._get_footer()}"
