@@ -67,8 +67,7 @@
     "chapters": [
       {
         "start": 2,
-        "end": 3,
-        "author": "Fitz"
+        "end": 3
       }
     ]
   },
@@ -87,7 +86,13 @@
   {
     "lemma": "Aipion",
     "previous": "Aeronius",
-    "next": "Alea 1"
+    "next": "Alea 1",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3
+      }
+    ]
   },
   {
     "lemma": "Alea 1",
@@ -104,17 +109,37 @@
   {
     "lemma": "Alfenus 4",
     "previous": "Alea 1",
-    "next": "Aliphera"
+    "next": "Aliphera",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 4
+      }
+    ]
   },
   {
     "lemma": "Aliphera",
     "previous": "Alfenus 4",
-    "next": "Alisca"
+    "next": "Alisca",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Alisca",
     "previous": "Aliphera",
-    "next": "Alta ripa 1"
+    "next": "Alta ripa 1",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 6,
+        "author": "Jenő Fitz."
+      }
+    ]
   },
   {
     "lemma": "Alta ripa 1",
@@ -4552,12 +4577,26 @@
   {
     "lemma": "Achaios 6",
     "previous": "Utis",
-    "next": "Achaios 7"
+    "next": "Achaios 7",
+    "chapters": [
+      {
+        "start": 1895,
+        "end": 1895,
+        "author": "F. Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Achaios 7",
     "previous": "Achaios 6",
-    "next": "Agathon 13"
+    "next": "Agathon 13",
+    "chapters": [
+      {
+        "start": 1895,
+        "end": 1895,
+        "author": "F. Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Agathon 13",
@@ -4567,7 +4606,7 @@
       {
         "start": 1895,
         "end": 1895,
-        "author": "Stoessl"
+        "author": "F. Stoessl."
       }
     ]
   },

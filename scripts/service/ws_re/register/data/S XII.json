@@ -18,7 +18,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -42,27 +42,62 @@
   {
     "lemma": "Acerronius 2",
     "previous": "Accaeus",
-    "next": "Accius 2"
+    "next": "Accius 2",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Accius 2",
     "previous": "Acerronius 2",
-    "next": "Achaios 6"
+    "next": "Achaios 6",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Achaios 6",
     "previous": "Accius 2",
-    "next": "Acilius 42"
+    "next": "Acilius 42",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 2,
+        "author": "Franz Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Acilius 42",
     "previous": "Achaios 6",
-    "next": "Acilius 52"
+    "next": "Acilius 52",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Acilius 52",
     "previous": "Acilius 42",
-    "next": "Ad Malum"
+    "next": "Ad Malum",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Ad Malum",
@@ -92,16 +127,29 @@
   {
     "lemma": "Aelius 57",
     "previous": "Ad Vicesimum",
-    "next": "Aelius 76"
+    "next": "Aelius 76",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 57",
-    "next": "Aelius 78a"
+    "next": "Aelius 134b",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Aelius 78a",
-    "previous": "Aelius 76",
     "next": "Aelius 134b"
   },
   {
@@ -212,7 +260,14 @@
   {
     "lemma": "Aemilius 135",
     "previous": "Aemilius 102a",
-    "next": "Aemilius 150a"
+    "next": "Aemilius 150a",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 150a",
@@ -241,7 +296,14 @@
   {
     "lemma": "Agesilaos 8",
     "previous": "Aemilius 171a",
-    "next": "Aguntum"
+    "next": "Aguntum",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Aguntum",
@@ -263,7 +325,14 @@
   {
     "lemma": "Αἰνύρων χῶρος",
     "previous": "Aigosthena",
-    "next": "Akephalos"
+    "next": "Akephalos",
+    "chapters": [
+      {
+        "start": 9,
+        "end": 9,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Akephalos",
@@ -328,7 +397,14 @@
   {
     "lemma": "Aliphera",
     "previous": "Albucius 5",
-    "next": "Alkmaion 6"
+    "next": "Alkmaion 6",
+    "chapters": [
+      {
+        "start": 22,
+        "end": 22,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Alkmaion 6",
@@ -430,7 +506,7 @@
       {
         "start": 86,
         "end": 87,
-        "author": "Abel"
+        "author": "Karlhans Abel."
       }
     ]
   },
@@ -493,7 +569,14 @@
     "lemma": "Annius 73a",
     "previous": "Annius 72",
     "next": "Annius 93",
-    "sort_key": "Annius 073a"
+    "sort_key": "Annius 073a",
+    "chapters": [
+      {
+        "start": 87,
+        "end": 87,
+        "author": "Gerhard Winkler."
+      }
+    ]
   },
   {
     "lemma": "Annius 93",
@@ -516,17 +599,36 @@
   {
     "lemma": "Antistius 41",
     "previous": "Antipatros 15a",
-    "next": "Antistius 52"
+    "next": "Antistius 52",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 88,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antistius 52",
     "previous": "Antistius 41",
-    "next": "Antius 10"
+    "next": "Antius 10",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 88
+      }
+    ]
   },
   {
     "lemma": "Antius 10",
     "previous": "Antistius 52",
-    "next": "Antonius 35a"
+    "next": "Antonius 35a",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 88
+      }
+    ]
   },
   {
     "lemma": "Antonius 35a",
@@ -624,7 +726,14 @@
     "lemma": "Aponius 8",
     "previous": "Apicatus",
     "next": "Appuleius 13",
-    "sort_key": "Aponius 08"
+    "sort_key": "Aponius 08",
+    "chapters": [
+      {
+        "start": 89,
+        "end": 89,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Appuleius 13",
@@ -634,7 +743,7 @@
       {
         "start": 89,
         "end": 89,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -646,19 +755,32 @@
       {
         "start": 89,
         "end": 89,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Aquilius 18",
     "previous": "Appuleius 14",
-    "next": "Aquilius 30"
+    "next": "Aquilius 30",
+    "chapters": [
+      {
+        "start": 89,
+        "end": 89
+      }
+    ]
   },
   {
     "lemma": "Aquilius 30",
     "previous": "Aquilius 18",
-    "next": "Arcani"
+    "next": "Arcani",
+    "chapters": [
+      {
+        "start": 89,
+        "end": 89,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Arcani",
@@ -710,7 +832,14 @@
   {
     "lemma": "Arrius 14a",
     "previous": "Arrecinus 2",
-    "next": "Arrius 17a"
+    "next": "Arrius 17a",
+    "chapters": [
+      {
+        "start": 98,
+        "end": 98,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Arrius 17a",
@@ -1013,7 +1142,14 @@
   {
     "lemma": "Bellicius 1",
     "previous": "Bassilla",
-    "next": "Bitheridus"
+    "next": "Bitheridus",
+    "chapters": [
+      {
+        "start": 132,
+        "end": 133,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Bitheridus",
@@ -2568,7 +2704,14 @@
   {
     "lemma": "Iunius 78",
     "previous": "Iunius 75a",
-    "next": "Iunius 114a"
+    "next": "Iunius 114a",
+    "chapters": [
+      {
+        "start": 510,
+        "end": 510,
+        "author": "OFF"
+      }
+    ]
   },
   {
     "lemma": "Iunius 114a",
@@ -3496,7 +3639,13 @@
   {
     "lemma": "Archedemos 5",
     "previous": "Arborius 5",
-    "next": "Archedemos 6"
+    "next": "Archedemos 6",
+    "chapters": [
+      {
+        "start": 1356,
+        "end": 1392
+      }
+    ]
   },
   {
     "lemma": "Archedemos 6",

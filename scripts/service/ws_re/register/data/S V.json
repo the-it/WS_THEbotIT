@@ -123,7 +123,14 @@
   {
     "lemma": "Apollonios 122",
     "previous": "Apollonios 114",
-    "next": "Apollonios 126b"
+    "next": "Apollonios 126b",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 45,
+        "author": "Lippold."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 126b",
@@ -144,8 +151,8 @@
     "chapters": [
       {
         "start": 45,
-        "end": 45,
-        "author": "Hosius"
+        "end": 46,
+        "author": "Hosius."
       }
     ]
   },
@@ -240,14 +247,21 @@
       {
         "start": 56,
         "end": 56,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
   {
     "lemma": "Battus",
     "previous": "Autrico",
-    "next": "Βηρώθε"
+    "next": "Βηρώθε",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 55,
+        "author": "Hosius."
+      }
+    ]
   },
   {
     "lemma": "Βηρώθε",
@@ -256,12 +270,28 @@
   },
   {
     "lemma": "Bias 10",
-    "previous": "Βηρώθε"
+    "previous": "Βηρώθε",
+    "next": "Caecilia Trebulla",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 56,
+        "author": "Regling."
+      }
+    ]
   },
   {
     "lemma": "Caecilia Trebulla",
+    "previous": "Bias 10",
     "next": "Celsus 18a",
-    "wp_link": "w:de:Caecilia Trebulla"
+    "wp_link": "w:de:Caecilia Trebulla",
+    "chapters": [
+      {
+        "start": 57,
+        "end": 57,
+        "author": "Hosius."
+      }
+    ]
   },
   {
     "lemma": "Celsus 18a",
@@ -271,7 +301,7 @@
       {
         "start": 57,
         "end": 57,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -308,7 +338,7 @@
       {
         "start": 59,
         "end": 59,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -362,7 +392,7 @@
       {
         "start": 153,
         "end": 153,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -469,8 +499,8 @@
     "chapters": [
       {
         "start": 182,
-        "end": 182,
-        "author": "Kroll"
+        "end": 183,
+        "author": "Kroll."
       }
     ]
   },
@@ -487,8 +517,8 @@
     "chapters": [
       {
         "start": 185,
-        "end": 185,
-        "author": "Sykutris"
+        "end": 220,
+        "author": "Sykutris."
       }
     ]
   },
@@ -572,7 +602,7 @@
       {
         "start": 223,
         "end": 223,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -5003,8 +5033,8 @@
     "chapters": [
       {
         "start": 981,
-        "end": 981,
-        "author": "Sykutris"
+        "end": 987,
+        "author": "Sykutris."
       }
     ]
   },
@@ -5039,15 +5069,22 @@
     "chapters": [
       {
         "start": 988,
-        "end": 988,
-        "author": "Keune"
+        "end": 989,
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Sotiates",
     "previous": "Soti",
-    "next": "Spaleia"
+    "next": "Spaleia",
+    "chapters": [
+      {
+        "start": 989,
+        "end": 992,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Spaleia",
@@ -5083,8 +5120,8 @@
     "chapters": [
       {
         "start": 993,
-        "end": 993,
-        "author": "Geffcken"
+        "end": 994,
+        "author": "Geffcken."
       }
     ]
   },
