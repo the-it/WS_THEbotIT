@@ -19,7 +19,14 @@
   {
     "lemma": "Adulitai",
     "previous": "Adule",
-    "next": "Agri decumates"
+    "next": "Agri decumates",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 3,
+        "author": "E. Littmann."
+      }
+    ]
   },
   {
     "lemma": "Agri decumates",
@@ -28,8 +35,8 @@
     "chapters": [
       {
         "start": 3,
-        "end": 3,
-        "author": "Sontheimer"
+        "end": 15,
+        "author": "Walther Sontheimer."
       }
     ]
   },
@@ -136,7 +143,14 @@
     "lemma": "Apollonia 7",
     "previous": "Apollodoros 27",
     "next": "Apomoira",
-    "sort_key": "Apollonia 07"
+    "sort_key": "Apollonia 07",
+    "chapters": [
+      {
+        "start": 40,
+        "end": 43,
+        "author": "E. Kirsten."
+      }
+    ]
   },
   {
     "lemma": "Apomoira",
@@ -166,7 +180,14 @@
   {
     "lemma": "Arbion",
     "previous": "Aqua, Aquae 77a",
-    "next": "Archisomatophylakes"
+    "next": "Archisomatophylakes",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 46,
+        "author": "E. Kirsten."
+      }
+    ]
   },
   {
     "lemma": "Archisomatophylakes",
@@ -183,7 +204,14 @@
   {
     "lemma": "Architectura",
     "previous": "Archisomatophylakes",
-    "next": "Aristolaos 2"
+    "next": "Aristolaos 2",
+    "chapters": [
+      {
+        "start": 49,
+        "end": 49,
+        "author": "E. Fabricius."
+      }
+    ]
   },
   {
     "lemma": "Aristolaos 2",
@@ -317,7 +345,14 @@
     "lemma": "Aurelius 56b",
     "previous": "Aurelius 39a",
     "next": "Aurelius 145aaa",
-    "sort_key": "Aurelius 056b"
+    "sort_key": "Aurelius 056b",
+    "chapters": [
+      {
+        "start": 73,
+        "end": 73,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 145aaa",

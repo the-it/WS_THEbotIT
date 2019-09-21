@@ -7,7 +7,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },
@@ -26,11 +26,17 @@
   {
     "lemma": "Acilius 16",
     "previous": "Aburnius 1a",
-    "next": "Acutius 1b"
+    "next": "Acutius 1a",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Groag."
+      }
+    ]
   },
   {
-    "lemma": "Acutius 1b",
-    "previous": "Acilius 16"
+    "lemma": "Acutius 1b"
   },
   {
     "lemma": "Acutius 1a",
@@ -52,18 +58,39 @@
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 75a",
-    "next": "Aelius 155"
+    "next": "Aelius 155",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aelius 155",
     "previous": "Aelius 76",
-    "next": "Aemilius 43"
+    "next": "Aemilius 43",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 2,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 43",
     "previous": "Aelius 155",
     "next": "Aemilius 54b",
-    "sort_key": "Aemilius 043"
+    "sort_key": "Aemilius 043",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 54b",
@@ -74,7 +101,14 @@
   {
     "lemma": "Aemilius 79",
     "previous": "Aemilius 54b",
-    "next": "Afranius 10a"
+    "next": "Afranius 10a",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Afranius 10a",
@@ -91,17 +125,24 @@
   {
     "lemma": "Agesistratos",
     "previous": "Afranius 10a",
-    "next": "Aiacius 3",
+    "next": "Aiacius 2",
     "redirect": "Athenaios 23"
   },
   {
-    "lemma": "Aiacius 3",
+    "lemma": "Aiacius 2",
     "previous": "Agesistratos",
-    "next": "Albiobola"
+    "next": "Albiobola",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 3",
+    "previous": "Aiacius 2",
     "next": "Alexandros 90a",
     "chapters": [
       {
@@ -127,12 +168,26 @@
   {
     "lemma": "Anaxilaos 5",
     "previous": "Alexandros 90a",
-    "next": "Androtion"
+    "next": "Androtion",
+    "chapters": [
+      {
+        "start": 5,
+        "end": 7,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Androtion",
     "previous": "Anaxilaos 5",
-    "next": "Anisa"
+    "next": "Anisa",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Anisa",
@@ -175,7 +230,14 @@
   {
     "lemma": "Antistius 41",
     "previous": "Annius 72",
-    "next": "Antistius 49a"
+    "next": "Antistius 49a",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Antistius 49a",
@@ -192,7 +254,14 @@
   {
     "lemma": "Antistius 50",
     "previous": "Antistius 49a",
-    "next": "Antonius 36a"
+    "next": "Antonius 36a",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Antonius 36a",
@@ -289,17 +358,38 @@
   {
     "lemma": "Aquilius 30",
     "previous": "Appuleius 17a",
-    "next": "Aradius 1"
+    "next": "Aradius 1",
+    "chapters": [
+      {
+        "start": 10,
+        "end": 10,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aradius 1",
     "previous": "Aquilius 30",
-    "next": "Archelaos 34"
+    "next": "Archelaos 34",
+    "chapters": [
+      {
+        "start": 10,
+        "end": 10,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Archelaos 34",
     "previous": "Aradius 1",
-    "next": "Areliascus"
+    "next": "Areliascus",
+    "chapters": [
+      {
+        "start": 11,
+        "end": 12,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Areliascus",
@@ -316,7 +406,14 @@
   {
     "lemma": "Aresaces",
     "previous": "Areliascus",
-    "next": "Aretalogoi"
+    "next": "Aretalogoi",
+    "chapters": [
+      {
+        "start": 12,
+        "end": 13,
+        "author": "Alfred Franke."
+      }
+    ]
   },
   {
     "lemma": "Aretalogoi",
@@ -379,7 +476,14 @@
   {
     "lemma": "Athenaios 23",
     "previous": "Asinius 18a",
-    "next": "Atidius 3"
+    "next": "Atidius 3",
+    "chapters": [
+      {
+        "start": 16,
+        "end": 17,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Atidius 3",
@@ -4513,7 +4617,7 @@
       {
         "start": 1434,
         "end": 1434,
-        "author": "Tomaschek"
+        "author": "W. Tomaschek † – Max Fluss."
       }
     ]
   }

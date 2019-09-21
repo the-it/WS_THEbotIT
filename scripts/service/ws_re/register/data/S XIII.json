@@ -1,10 +1,18 @@
 [
   {
     "lemma": "Africa 2",
-    "next": "Alpium Iuliarum Claustra"
+    "next": "Alpium Iuliarum Claustra",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 11,
+        "author": "Bengt E. Thomasson."
+      }
+    ]
   },
   {
     "lemma": "Alpium Iuliarum Claustra",
+    "previous": "Africa 2",
     "next": "Apollonios 71",
     "chapters": [
       {

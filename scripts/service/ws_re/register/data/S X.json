@@ -356,7 +356,14 @@
   {
     "lemma": "Acilius 58",
     "previous": "Acilius 29a",
-    "next": "Actiani"
+    "next": "Actiani",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Actiani",
@@ -478,7 +485,14 @@
   {
     "lemma": "Aelius 118",
     "previous": "Aelius 67a",
-    "next": "Aelius 169"
+    "next": "Aelius 169",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aelius 169",
@@ -536,7 +550,14 @@
   {
     "lemma": "Aemilius 144",
     "previous": "Aemilius 51a",
-    "next": "Aemilius 164a"
+    "next": "Aemilius 164a",
+    "chapters": [
+      {
+        "start": 5,
+        "end": 5,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 164a",
@@ -601,17 +622,38 @@
   {
     "lemma": "Agathemeros 1",
     "previous": "Agatharchos 16",
-    "next": "Agathodoros 2"
+    "next": "Agathodoros 2",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 6,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Agathodoros 2",
     "previous": "Agathemeros 1",
-    "next": "Agathokles 14"
+    "next": "Agathokles 14",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 6,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Agathokles 14",
     "previous": "Agathodoros 2",
-    "next": "Agathokles 37"
+    "next": "Agathokles 37",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 6,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Agathokles 37",
@@ -640,7 +682,14 @@
   {
     "lemma": "Agaue 3",
     "previous": "Agathophanes",
-    "next": "Agetor 4"
+    "next": "Agetor 4",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 7,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Agetor 4",
@@ -703,7 +752,14 @@
   {
     "lemma": "Aischines 15",
     "previous": "Aigokeros 1",
-    "next": "Aischylos 6a"
+    "next": "Aischylos 6a",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 8,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aischylos 6a",
@@ -725,12 +781,26 @@
   {
     "lemma": "Aisopos 3",
     "previous": "Aischyne",
-    "next": "Akesios 2"
+    "next": "Akesios 2",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 8,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Akesios 2",
     "previous": "Aisopos 3",
-    "next": "Alastos 2"
+    "next": "Alastos 2",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 8,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Alastos 2",
@@ -764,13 +834,27 @@
   {
     "lemma": "Alexandros 39",
     "previous": "Alba 2a",
-    "next": "Alexandros 51"
+    "next": "Alexandros 51",
+    "chapters": [
+      {
+        "start": 12,
+        "end": 13,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Alexandros 51",
     "previous": "Alexandros 39",
     "next": "Alexandros 104a",
-    "sort_key": "Alexandros"
+    "sort_key": "Alexandros",
+    "chapters": [
+      {
+        "start": 13,
+        "end": 13,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Alexandros 104a",
@@ -793,7 +877,7 @@
       {
         "start": 13,
         "end": 13,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -825,7 +909,14 @@
     "lemma": "Alfius 5",
     "previous": "Alfenus 10",
     "next": "Alfius 8a",
-    "sort_key": "Alfius 05"
+    "sort_key": "Alfius 05",
+    "chapters": [
+      {
+        "start": 13,
+        "end": 15,
+        "author": "Jenö Fitz."
+      }
+    ]
   },
   {
     "lemma": "Alfius 8a",
@@ -855,7 +946,14 @@
     "lemma": "Alfius 9",
     "previous": "Alfius 8b",
     "next": "Alkimachos 5a",
-    "sort_key": "Alfius 09"
+    "sort_key": "Alfius 09",
+    "chapters": [
+      {
+        "start": 16,
+        "end": 16,
+        "author": "Jenö Fitz."
+      }
+    ]
   },
   {
     "lemma": "Alkimachos 5a",
@@ -901,7 +999,14 @@
   {
     "lemma": "Ameinias 16",
     "previous": "Ambron",
-    "next": "Amnax"
+    "next": "Amnax",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Amnax",
@@ -1336,27 +1441,62 @@
   {
     "lemma": "Apollogenes",
     "previous": "Apollodoros 79",
-    "next": "Apollonides 17"
+    "next": "Apollonides 17",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 26,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Apollonides 17",
     "previous": "Apollogenes",
-    "next": "Apollonios 4"
+    "next": "Apollonios 4",
+    "chapters": [
+      {
+        "start": 25,
+        "end": 25,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 4",
     "previous": "Apollonides 17",
-    "next": "Apollonios 34"
+    "next": "Apollonios 34",
+    "chapters": [
+      {
+        "start": 25,
+        "end": 25,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 34",
     "previous": "Apollonios 4",
-    "next": "Apollonios 48"
+    "next": "Apollonios 48",
+    "chapters": [
+      {
+        "start": 25,
+        "end": 25,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 48",
     "previous": "Apollonios 34",
-    "next": "Apollonios 105a"
+    "next": "Apollonios 105a",
+    "chapters": [
+      {
+        "start": 25,
+        "end": 25,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 105a",
@@ -1421,12 +1561,26 @@
   {
     "lemma": "Araros 2",
     "previous": "Appius 12b",
-    "next": "Aratos 6"
+    "next": "Aratos 6",
+    "chapters": [
+      {
+        "start": 26,
+        "end": 26,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aratos 6",
     "previous": "Araros 2",
-    "next": "Araxes 5"
+    "next": "Araxes 5",
+    "chapters": [
+      {
+        "start": 26,
+        "end": 39,
+        "author": "Walther Ludwig."
+      }
+    ]
   },
   {
     "lemma": "Araxes 5",
@@ -1455,7 +1609,14 @@
   {
     "lemma": "Arbuscula",
     "previous": "Araxes 6",
-    "next": "Ἀρχε(..."
+    "next": "Ἀρχε(...",
+    "chapters": [
+      {
+        "start": 40,
+        "end": 40,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Ἀρχε(...",
@@ -2242,7 +2403,14 @@
   {
     "lemma": "Biotos",
     "previous": "Bestia deselutia",
-    "next": "bona damnatorum"
+    "next": "bona damnatorum",
+    "chapters": [
+      {
+        "start": 96,
+        "end": 96,
+        "author": "Franz Stoessl."
+      }
+    ]
   },
   {
     "lemma": "bona damnatorum",
@@ -2371,7 +2539,14 @@
   {
     "lemma": "Chares 12",
     "previous": "Chairestratos 1a",
-    "next": "Charias 2"
+    "next": "Charias 2",
+    "chapters": [
+      {
+        "start": 125,
+        "end": 125,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Charias 2",
