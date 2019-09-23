@@ -383,14 +383,20 @@
     ]
   },
   {
-    "lemma": "Pontinius",
+    "lemma": "Pontinius 3",
     "previous": "Pontilius 3",
     "next": "Pontinos",
-    "redirect": "Pomptinus"
+    "redirect": "Pomptinus",
+    "chapters": [
+      {
+        "start": 28,
+        "end": 28
+      }
+    ]
   },
   {
     "lemma": "Pontinos",
-    "previous": "Pontinius",
+    "previous": "Pontinius 3",
     "next": "Pontios 1",
     "chapters": [
       {
@@ -1189,8 +1195,7 @@
     "chapters": [
       {
         "start": 45,
-        "end": 45,
-        "author": "Enßlin"
+        "end": 45
       }
     ]
   },
@@ -1382,7 +1387,13 @@
     "lemma": "Pontos Euxeinos",
     "previous": "Pontos 2",
     "next": "Pontyris",
-    "wp_link": "w:de:Schwarzes Meer"
+    "wp_link": "w:de:Schwarzes Meer",
+    "chapters": [
+      {
+        "start": 48,
+        "end": 48
+      }
+    ]
   },
   {
     "lemma": "Pontyris",

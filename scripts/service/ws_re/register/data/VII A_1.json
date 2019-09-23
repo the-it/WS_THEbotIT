@@ -1123,7 +1123,8 @@
     "chapters": [
       {
         "start": 151,
-        "end": 151
+        "end": 151,
+        "author": "OFF"
       }
     ]
   },
@@ -1280,7 +1281,14 @@
     "previous": "Τρικρίνων",
     "next": "Trileukon",
     "sort_key": "Trileukois",
-    "redirect": "Trileukon"
+    "redirect": "Trileukon",
+    "chapters": [
+      {
+        "start": 155,
+        "end": 155,
+        "author": "OFF"
+      }
+    ]
   },
   {
     "lemma": "Trileukon",
@@ -3995,7 +4003,7 @@
       {
         "start": 695,
         "end": 695,
-        "author": "Kroll"
+        "author": "W. Kroll."
       }
     ]
   },
@@ -4317,7 +4325,7 @@
       {
         "start": 707,
         "end": 707,
-        "author": "Nagl"
+        "author": "Assunta Nagl."
       }
     ]
   },
@@ -6615,24 +6623,14 @@
     "ws_link": "s:de:Cicero",
     "chapters": [
       {
-        "start": 827,
-        "end": 827,
-        "author": "Gelzer"
-      },
-      {
-        "start": 1091,
-        "end": 1091,
-        "author": "Kroll"
+        "start": 826,
+        "end": 1103,
+        "author": "W. Kroll."
       },
       {
         "start": 1104,
-        "end": 1104,
-        "author": "Philippson"
-      },
-      {
-        "start": 1192,
-        "end": 1192,
-        "author": "Büchner"
+        "end": 1274,
+        "author": "Philippson."
       }
     ]
   },

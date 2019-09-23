@@ -133,7 +133,14 @@
   {
     "lemma": "Aigina 1",
     "previous": "Aemilius 150b",
-    "next": "Alexandros 62a"
+    "next": "Alexandros 62a",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 5,
+        "author": "Hans Walter."
+      }
+    ]
   },
   {
     "lemma": "Alexandros 62a",
@@ -191,7 +198,7 @@
       {
         "start": 6,
         "end": 9,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -212,7 +219,13 @@
     "lemma": "Annianus 8",
     "previous": "Andromeda 3",
     "next": "Annius 51a",
-    "redirect": "Lucretius 15a"
+    "redirect": "Lucretius 15a",
+    "chapters": [
+      {
+        "start": 10,
+        "end": 10
+      }
+    ]
   },
   {
     "lemma": "Annius 51a",
@@ -2576,7 +2589,13 @@
   {
     "lemma": "Pontifex, Pontifex maximus, Pontificii Libri",
     "previous": "Pomponius 51a",
-    "next": "Pontos 2"
+    "next": "Pontos 2",
+    "chapters": [
+      {
+        "start": 331,
+        "end": 396
+      }
+    ]
   },
   {
     "lemma": "Pontos 2",
