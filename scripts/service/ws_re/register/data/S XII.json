@@ -447,17 +447,30 @@
   {
     "lemma": "Amelas",
     "previous": "In Alpe Iulia",
-    "next": "Anaxagoras 4"
+    "next": "Anaxagoras 4",
+    "chapters": [
+      {
+        "start": 27,
+        "end": 28,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Anaxagoras 4",
-    "previous": "Amelas",
-    "next": "Anaximandros 1"
+    "previous": "Amelas"
   },
   {
     "lemma": "Anaximandros 1",
-    "previous": "Anaxagoras 4",
-    "next": "Anaximenes 2"
+    "previous": "Amelas",
+    "next": "Anaximenes 2",
+    "chapters": [
+      {
+        "start": 30,
+        "end": 69,
+        "author": "Carl Joachim Classen."
+      }
+    ]
   },
   {
     "lemma": "Anaximenes 2",
@@ -1912,7 +1925,15 @@
   },
   {
     "lemma": "Demokritos 6",
-    "next": "Deraia"
+    "previous": "Dasumius aa",
+    "next": "Deraia",
+    "chapters": [
+      {
+        "start": 191,
+        "end": 223,
+        "author": "Horst Steckel."
+      }
+    ]
   },
   {
     "lemma": "Deraia",
@@ -1922,7 +1943,7 @@
       {
         "start": 223,
         "end": 223,
-        "author": "Meyer, Ernst"
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -1960,8 +1981,7 @@
     "chapters": [
       {
         "start": 233,
-        "end": 236,
-        "author": "Hanslik"
+        "end": 236
       }
     ]
   },
@@ -3611,18 +3631,37 @@
     "lemma": "Ambito",
     "previous": "Thukydides 1",
     "next": "Amithoscatta",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 1355,
+        "end": 1355
+      }
+    ]
   },
   {
     "lemma": "Amithoscatta",
     "previous": "Ambito",
     "next": "Anaximandros 1",
-    "redirect": "Zangenae"
+    "redirect": "Zangenae",
+    "chapters": [
+      {
+        "start": 1355,
+        "end": 1355
+      }
+    ]
   },
   {
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
-    "next": "Arborius 5"
+    "next": "Arborius 5",
+    "chapters": [
+      {
+        "start": 1355,
+        "end": 1355,
+        "author": "C. Joachim Classen."
+      }
+    ]
   },
   {
     "lemma": "Arborius 5",
@@ -3667,7 +3706,14 @@
   {
     "lemma": "Aristophanes 12",
     "previous": "Arinthaeus 3",
-    "next": "Azania 2"
+    "next": "Azania 2",
+    "chapters": [
+      {
+        "start": 1392,
+        "end": 1569,
+        "author": "OFF"
+      }
+    ]
   },
   {
     "lemma": "Azania 2",

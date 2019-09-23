@@ -499,8 +499,7 @@
     "chapters": [
       {
         "start": 20,
-        "end": 20,
-        "author": "Fitz"
+        "end": 20
       }
     ]
   },
@@ -604,14 +603,21 @@
       {
         "start": 24,
         "end": 24,
-        "author": "Helck"
+        "author": "Wolfgang Helck."
       }
     ]
   },
   {
     "lemma": "Demetrias 1",
     "previous": "Deire 1",
-    "next": "Demonassa 6"
+    "next": "Demonassa 6",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Demonassa 6",
@@ -621,7 +627,7 @@
       {
         "start": 27,
         "end": 27,
-        "author": "Brommer"
+        "author": "Frank Brommer."
       }
     ]
   },
@@ -633,7 +639,7 @@
       {
         "start": 27,
         "end": 27,
-        "author": "Grosse"
+        "author": "Robert Grosse."
       }
     ]
   },
@@ -2305,7 +2311,7 @@
       {
         "start": 866,
         "end": 1175,
-        "author": "Danoff"
+        "author": "Chr. M. Danoff."
       }
     ]
   },
@@ -4613,7 +4619,14 @@
   {
     "lemma": "Akestor 4",
     "previous": "Agathon 13",
-    "next": "Aristarchos 21"
+    "next": "Aristarchos 21",
+    "chapters": [
+      {
+        "start": 1895,
+        "end": 1895,
+        "author": "F. Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Aristarchos 21",
@@ -4767,6 +4780,13 @@
   {
     "lemma": "Pontos Euxeinos",
     "previous": "Iberia",
-    "next": "Seuthopolis"
+    "next": "Seuthopolis",
+    "chapters": [
+      {
+        "start": 1911,
+        "end": 1920,
+        "author": "Chr. M. Danoff."
+      }
+    ]
   }
 ]

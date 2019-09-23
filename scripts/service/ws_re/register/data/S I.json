@@ -43,7 +43,14 @@
   {
     "lemma": "Abakaina",
     "previous": "Abakagna",
-    "next": "Abarne"
+    "next": "Abarne",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Abarne",
@@ -61,7 +68,14 @@
     "lemma": "Abas 3",
     "previous": "Abarne",
     "next": "Abas 11",
-    "sort_key": "Abas 03"
+    "sort_key": "Abas 03",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Abas 11",
@@ -145,8 +159,7 @@
     "chapters": [
       {
         "start": 2,
-        "end": 2,
-        "author": "Ruge"
+        "end": 2
       }
     ]
   },
@@ -165,12 +178,26 @@
   {
     "lemma": "Abellinum",
     "previous": "Abeikta",
-    "next": "Abellio"
+    "next": "Abellio",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Abellio",
     "previous": "Abellinum",
-    "next": "Abercius"
+    "next": "Abercius",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Abercius",
@@ -220,7 +247,7 @@
       {
         "start": 4,
         "end": 4,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -239,7 +266,14 @@
   {
     "lemma": "Abnoba",
     "previous": "Abibenoi",
-    "next": "Abolani"
+    "next": "Abolani",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Abolani",
@@ -304,7 +338,14 @@
   {
     "lemma": "Abradatas",
     "previous": "Abozenos",
-    "next": "Abraham 2"
+    "next": "Abraham 2",
+    "chapters": [
+      {
+        "start": 5,
+        "end": 5,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Abraham 2",
@@ -315,17 +356,25 @@
       {
         "start": 5,
         "end": 5,
-        "author": "Boll"
+        "author": "Boll."
       }
     ]
   },
   {
     "lemma": "Abrettenos",
-    "previous": "Abraham 2"
+    "previous": "Abraham 2",
+    "next": "Abricus",
+    "chapters": [
+      {
+        "start": 5,
+        "end": 5,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Abricus",
-    "previous": "Abraham 2",
+    "previous": "Abrettenos",
     "next": "Abrincatui",
     "chapters": [
       {
@@ -338,7 +387,14 @@
   {
     "lemma": "Abrincatui",
     "previous": "Abricus",
-    "next": "Abucini portus"
+    "next": "Abucini portus",
+    "chapters": [
+      {
+        "start": 5,
+        "end": 5,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Abucini portus",
@@ -438,12 +494,25 @@
   {
     "lemma": "Aceruntia",
     "previous": "Acerronius 3",
-    "next": "Achaikaros"
+    "next": "Achaikaros",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 6,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Achaikaros",
     "previous": "Aceruntia",
-    "next": "Achaimenes 4"
+    "next": "Achaimenes 4",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 6
+      }
+    ]
   },
   {
     "lemma": "Achaimenes 4",
@@ -568,7 +637,14 @@
   {
     "lemma": "Achmet 2",
     "previous": "Achlada",
-    "next": "Achmet 3"
+    "next": "Achmet 3",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 8,
+        "author": "Boll."
+      }
+    ]
   },
   {
     "lemma": "Achmet 3",
@@ -737,8 +813,7 @@
     "chapters": [
       {
         "start": 9,
-        "end": 9,
-        "author": "Hülsen"
+        "end": 9
       }
     ]
   },
@@ -926,12 +1001,26 @@
   {
     "lemma": "Adonaea",
     "previous": "Adobogiona",
-    "next": "Adonia"
+    "next": "Adonia",
+    "chapters": [
+      {
+        "start": 10,
+        "end": 10,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Adonia",
     "previous": "Adonaea",
-    "next": "Adoniastai"
+    "next": "Adoniastai",
+    "chapters": [
+      {
+        "start": 11,
+        "end": 11,
+        "author": "Ed. Meyer."
+      }
+    ]
   },
   {
     "lemma": "Adoniastai",
@@ -941,7 +1030,7 @@
       {
         "start": 11,
         "end": 11,
-        "author": "Oehler, J[ohann]"
+        "author": "J. Oehler."
       }
     ]
   },
@@ -1134,8 +1223,7 @@
     "chapters": [
       {
         "start": 13,
-        "end": 13,
-        "author": "Niese"
+        "end": 13
       }
     ]
   },
@@ -1172,7 +1260,8 @@
     "chapters": [
       {
         "start": 13,
-        "end": 13
+        "end": 13,
+        "author": "OFF"
       }
     ]
   },
@@ -1233,7 +1322,14 @@
     "previous": "Aelius 26a",
     "next": "Aelius 27a",
     "sort_key": "Aelius 026b",
-    "wp_link": "w:de:Aelius"
+    "wp_link": "w:de:Aelius",
+    "chapters": [
+      {
+        "start": 13,
+        "end": 13,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aelius 27a",
@@ -1363,7 +1459,7 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Rohden"
+        "author": "v. Rohden."
       }
     ]
   },
@@ -1474,14 +1570,21 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Rohden"
+        "author": "v. Rohden."
       }
     ]
   },
   {
     "lemma": "Aelius 138",
     "previous": "Aelius 134a",
-    "next": "Aelius 144"
+    "next": "Aelius 144",
+    "chapters": [
+      {
+        "start": 14,
+        "end": 15,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aelius 144",
@@ -1504,7 +1607,8 @@
     "chapters": [
       {
         "start": 15,
-        "end": 15
+        "end": 15,
+        "author": "OFF"
       }
     ]
   },
@@ -1528,7 +1632,7 @@
       {
         "start": 15,
         "end": 15,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -1704,7 +1808,7 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -1750,7 +1854,14 @@
   {
     "lemma": "Aemilius 38",
     "previous": "Aemilius 26b",
-    "next": "Aemilius 48a"
+    "next": "Aemilius 48a",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 48a",
@@ -1793,22 +1904,50 @@
   {
     "lemma": "Aemilius 68",
     "previous": "Aemilius 62a",
-    "next": "Aemilius 75"
+    "next": "Aemilius 75",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 75",
     "previous": "Aemilius 68",
-    "next": "Aemilius 82"
+    "next": "Aemilius 82",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 82",
     "previous": "Aemilius 75",
-    "next": "Aemilius 86"
+    "next": "Aemilius 86",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 86",
     "previous": "Aemilius 82",
-    "next": "Aemilius 90"
+    "next": "Aemilius 90",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 90",
@@ -1826,7 +1965,14 @@
   {
     "lemma": "Aemilius 115",
     "previous": "Aemilius 90",
-    "next": "Aemilius 124"
+    "next": "Aemilius 124",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 124",
@@ -1855,7 +2001,14 @@
   {
     "lemma": "Aemilius 127",
     "previous": "Aemilius 125",
-    "next": "Aemilius 163a"
+    "next": "Aemilius 163a",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 163a",
@@ -1884,7 +2037,14 @@
   {
     "lemma": "Aequana",
     "previous": "Aenaria",
-    "next": "Aequi, Aequiculi"
+    "next": "Aequi, Aequiculi",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 19,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Aequi, Aequiculi",
@@ -2017,7 +2177,7 @@
       {
         "start": 19,
         "end": 19,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -2054,7 +2214,7 @@
       {
         "start": 20,
         "end": 20,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -2066,7 +2226,7 @@
       {
         "start": 20,
         "end": 20,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -2698,7 +2858,14 @@
   {
     "lemma": "Agimenes",
     "previous": "Agilochos",
-    "next": "Agiptria"
+    "next": "Agiptria",
+    "chapters": [
+      {
+        "start": 27,
+        "end": 27,
+        "author": "Capps."
+      }
+    ]
   },
   {
     "lemma": "Agiptria",
@@ -3311,7 +3478,7 @@
       {
         "start": 34,
         "end": 34,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -3335,7 +3502,7 @@
       {
         "start": 34,
         "end": 34,
-        "author": "Crönert"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3390,7 +3557,13 @@
   {
     "lemma": "Aigialos 5",
     "previous": "Aigiale 3",
-    "next": "Aigialos 6"
+    "next": "Aigialos 6",
+    "chapters": [
+      {
+        "start": 35,
+        "end": 35
+      }
+    ]
   },
   {
     "lemma": "Aigialos 6",
@@ -3430,12 +3603,26 @@
   {
     "lemma": "Aigimios 3",
     "previous": "Aigilia 1",
-    "next": "Aigina 1"
+    "next": "Aigina 1",
+    "chapters": [
+      {
+        "start": 36,
+        "end": 36,
+        "author": "M. Wellmann."
+      }
+    ]
   },
   {
     "lemma": "Aigina 1",
     "previous": "Aigimios 3",
-    "next": "Aigiros 1"
+    "next": "Aigiros 1",
+    "chapters": [
+      {
+        "start": 36,
+        "end": 36,
+        "author": "Büttner-Wobst."
+      }
+    ]
   },
   {
     "lemma": "Aigiros 1",
@@ -3513,7 +3700,14 @@
   {
     "lemma": "Aigle 1",
     "previous": "Aigle a",
-    "next": "Aigle 2"
+    "next": "Aigle 2",
+    "chapters": [
+      {
+        "start": 36,
+        "end": 36,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Aigle 2",
@@ -3554,7 +3748,14 @@
   {
     "lemma": "Aigle 5",
     "previous": "Aigle 4",
-    "next": "Aigon 2"
+    "next": "Aigon 2",
+    "chapters": [
+      {
+        "start": 36,
+        "end": 36,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Aigon 2",
@@ -3583,7 +3784,14 @@
   {
     "lemma": "Aigyptos 1",
     "previous": "Aigoteoi",
-    "next": "Ailiotai"
+    "next": "Ailiotai",
+    "chapters": [
+      {
+        "start": 37,
+        "end": 37,
+        "author": "Pietschmann."
+      }
+    ]
   },
   {
     "lemma": "Ailiotai",
@@ -3624,7 +3832,14 @@
   {
     "lemma": "Aineias 2",
     "previous": "Aimyndos",
-    "next": "Aineias 3a"
+    "next": "Aineias 3a",
+    "chapters": [
+      {
+        "start": 37,
+        "end": 38,
+        "author": "O. Rossbach."
+      }
+    ]
   },
   {
     "lemma": "Aineias 3a",
@@ -3746,7 +3961,14 @@
   {
     "lemma": "Aion 1",
     "previous": "Aiolis 3a",
-    "next": "Airai 1"
+    "next": "Airai 1",
+    "chapters": [
+      {
+        "start": 38,
+        "end": 38,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Airai 1",
@@ -4046,8 +4268,7 @@
     "chapters": [
       {
         "start": 41,
-        "end": 41,
-        "author": "Bürchner"
+        "end": 41
       }
     ]
   },
@@ -4249,12 +4470,26 @@
   {
     "lemma": "Akestor 5",
     "previous": "Akesaios",
-    "next": "Akestorides 4"
+    "next": "Akestorides 4",
+    "chapters": [
+      {
+        "start": 43,
+        "end": 43,
+        "author": "C. Robert."
+      }
+    ]
   },
   {
     "lemma": "Akestorides 4",
     "previous": "Akestor 5",
-    "next": "Akikaros"
+    "next": "Akikaros",
+    "chapters": [
+      {
+        "start": 43,
+        "end": 44,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Akikaros",
@@ -4276,7 +4511,7 @@
       {
         "start": 44,
         "end": 44,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -4337,7 +4572,8 @@
     "chapters": [
       {
         "start": 44,
-        "end": 44
+        "end": 44,
+        "author": "OFF"
       }
     ]
   },
@@ -4704,8 +4940,7 @@
     "chapters": [
       {
         "start": 50,
-        "end": 50,
-        "author": "Ruge"
+        "end": 50
       }
     ]
   },
@@ -4725,7 +4960,14 @@
   {
     "lemma": "Alator",
     "previous": "Alastos 1a",
-    "next": "Alazeir"
+    "next": "Alazeir",
+    "chapters": [
+      {
+        "start": 50,
+        "end": 50,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Alazeir",
@@ -4766,17 +5008,38 @@
   {
     "lemma": "Alba Fucens",
     "previous": "Alba Docilia",
-    "next": "Alba Longa"
+    "next": "Alba Longa",
+    "chapters": [
+      {
+        "start": 50,
+        "end": 50,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Alba Longa",
     "previous": "Alba Fucens",
-    "next": "Albania 1"
+    "next": "Albania 1",
+    "chapters": [
+      {
+        "start": 50,
+        "end": 51,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Albania 1",
     "previous": "Alba Longa",
-    "next": "Albania 2"
+    "next": "Albania 2",
+    "chapters": [
+      {
+        "start": 51,
+        "end": 51,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Albania 2",
@@ -4902,7 +5165,14 @@
   {
     "lemma": "Alektryon 1",
     "previous": "Alektoria",
-    "next": "Aleon"
+    "next": "Aleon",
+    "chapters": [
+      {
+        "start": 52,
+        "end": 52,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Aleon",
@@ -4943,7 +5213,14 @@
   {
     "lemma": "Aleria",
     "previous": "Alepikre",
-    "next": "Alesion 1"
+    "next": "Alesion 1",
+    "chapters": [
+      {
+        "start": 52,
+        "end": 52,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Alesion 1",
@@ -4965,8 +5242,7 @@
     "chapters": [
       {
         "start": 52,
-        "end": 52,
-        "author": "Hülsen"
+        "end": 52
       }
     ]
   },
@@ -5069,7 +5345,14 @@
   {
     "lemma": "Alexandros 18",
     "previous": "Alexandrinische Litteratur",
-    "next": "Alexandros 22"
+    "next": "Alexandros 22",
+    "chapters": [
+      {
+        "start": 54,
+        "end": 54,
+        "author": "Büttner-Wobst."
+      }
+    ]
   },
   {
     "lemma": "Alexandros 22",
@@ -5105,7 +5388,14 @@
   {
     "lemma": "Alexandros 35",
     "previous": "Alexandros 34b",
-    "next": "Alexandros 65"
+    "next": "Alexandros 65",
+    "chapters": [
+      {
+        "start": 54,
+        "end": 54,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Alexandros 65",
@@ -5161,12 +5451,26 @@
   {
     "lemma": "Alexandros 99",
     "previous": "Alexandros 86a",
-    "next": "Alexandros 105"
+    "next": "Alexandros 105",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 55,
+        "author": "M. Wellmann."
+      }
+    ]
   },
   {
     "lemma": "Alexandros 105",
     "previous": "Alexandros 99",
-    "next": "Alexarchos 2"
+    "next": "Alexarchos 2",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 56,
+        "author": "C. Robert."
+      }
+    ]
   },
   {
     "lemma": "Alexarchos 2",
@@ -5426,7 +5730,14 @@
   {
     "lemma": "Alilat",
     "previous": "Alikadra",
-    "next": "Alimne"
+    "next": "Alimne",
+    "chapters": [
+      {
+        "start": 57,
+        "end": 60,
+        "author": "Baumstark."
+      }
+    ]
   },
   {
     "lemma": "Alimne",
@@ -5662,19 +5973,33 @@
       {
         "start": 62,
         "end": 62,
-        "author": "Bethe"
+        "author": "Bethe."
       }
     ]
   },
   {
     "lemma": "Alkippos",
     "previous": "Alkinoe 4",
-    "next": "Alkithos"
+    "next": "Alkithos",
+    "chapters": [
+      {
+        "start": 62,
+        "end": 62,
+        "author": "C. Robert."
+      }
+    ]
   },
   {
     "lemma": "Alkithos",
     "previous": "Alkippos",
-    "next": "Alkmaion 1"
+    "next": "Alkmaion 1",
+    "chapters": [
+      {
+        "start": 62,
+        "end": 62,
+        "author": "Büttner-Wobst."
+      }
+    ]
   },
   {
     "lemma": "Alkmaion 1",
@@ -5741,7 +6066,13 @@
     "lemma": "Allât",
     "previous": "Allage",
     "next": "Allienus 2",
-    "redirect": "Alilat"
+    "redirect": "Alilat",
+    "chapters": [
+      {
+        "start": 63,
+        "end": 63
+      }
+    ]
   },
   {
     "lemma": "Allienus 2",
@@ -5867,7 +6198,14 @@
   {
     "lemma": "Alontion",
     "previous": "Aloanda",
-    "next": "Alopekai"
+    "next": "Alopekai",
+    "chapters": [
+      {
+        "start": 63,
+        "end": 64,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Alopekai",
@@ -5937,7 +6275,7 @@
       {
         "start": 64,
         "end": 65,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -6218,7 +6556,14 @@
   {
     "lemma": "Ambarri",
     "previous": "Amazonokorakia",
-    "next": "Ambitarvius"
+    "next": "Ambitarvius",
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Ambitarvius",
@@ -6360,7 +6705,7 @@
       {
         "start": 68,
         "end": 68,
-        "author": "Hill"
+        "author": "Hill."
       }
     ]
   },
@@ -6437,7 +6782,7 @@
       {
         "start": 68,
         "end": 68,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -6698,7 +7043,7 @@
       {
         "start": 72,
         "end": 72,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -6717,7 +7062,14 @@
   {
     "lemma": "Amphipolis 1",
     "previous": "Amphineis 2",
-    "next": "Amphistratos 2"
+    "next": "Amphistratos 2",
+    "chapters": [
+      {
+        "start": 72,
+        "end": 72,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Amphistratos 2",
@@ -6744,7 +7096,14 @@
   {
     "lemma": "Amulett",
     "previous": "Ampliatus 2",
-    "next": "Amurius"
+    "next": "Amurius",
+    "chapters": [
+      {
+        "start": 72,
+        "end": 72,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Amurius",
@@ -6894,7 +7253,14 @@
   {
     "lemma": "Amyrgioi Sakai",
     "previous": "Amyntas 21a",
-    "next": "Anabaseidion"
+    "next": "Anabaseidion",
+    "chapters": [
+      {
+        "start": 74,
+        "end": 74,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Anabaseidion",
@@ -6979,7 +7345,14 @@
   {
     "lemma": "Anaitis",
     "previous": "Ἀναγραφεύς 3",
-    "next": "Anakreon 1"
+    "next": "Anakreon 1",
+    "chapters": [
+      {
+        "start": 76,
+        "end": 76,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Anakreon 1",
@@ -7096,7 +7469,7 @@
       {
         "start": 77,
         "end": 77,
-        "author": "Cumont"
+        "author": "Cumont."
       }
     ]
   },
@@ -7162,7 +7535,14 @@
   {
     "lemma": "Anaximandros 1",
     "previous": "Anaxandros 5",
-    "next": "Anaximandros 3"
+    "next": "Anaximandros 3",
+    "chapters": [
+      {
+        "start": 78,
+        "end": 78,
+        "author": "E. Wellmann."
+      }
+    ]
   },
   {
     "lemma": "Anaximandros 3",
@@ -7238,7 +7618,13 @@
     "lemma": "Andaga",
     "previous": "Andacas",
     "next": "Andenus",
-    "redirect": "Andacas"
+    "redirect": "Andacas",
+    "chapters": [
+      {
+        "start": 79,
+        "end": 79
+      }
+    ]
   },
   {
     "lemma": "Andenus",
@@ -7522,7 +7908,7 @@
       {
         "start": 81,
         "end": 81,
-        "author": "Baumstark"
+        "author": "Baumstark."
       }
     ]
   },
@@ -7570,7 +7956,7 @@
       {
         "start": 82,
         "end": 82,
-        "author": "Capps"
+        "author": "Capps."
       }
     ]
   },
@@ -7594,7 +7980,7 @@
       {
         "start": 82,
         "end": 82,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -7602,7 +7988,13 @@
     "lemma": "Anelion",
     "previous": "Androtion 2",
     "next": "Anemoi",
-    "redirect": "Aimilion und Anelion"
+    "redirect": "Aimilion und Anelion",
+    "chapters": [
+      {
+        "start": 82,
+        "end": 82
+      }
+    ]
   },
   {
     "lemma": "Anemoi",
@@ -7779,7 +8171,13 @@
     "previous": "Anicius 6a",
     "next": "Anicius 10",
     "sort_key": "Anicius 08a",
-    "redirect": "Crispinus 7a"
+    "redirect": "Crispinus 7a",
+    "chapters": [
+      {
+        "start": 84,
+        "end": 84
+      }
+    ]
   },
   {
     "lemma": "Anicius 10",
@@ -7801,7 +8199,7 @@
       {
         "start": 84,
         "end": 84,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -7953,7 +8351,7 @@
       {
         "start": 87,
         "end": 87,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -8288,7 +8686,7 @@
       {
         "start": 91,
         "end": 91,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -8327,7 +8725,7 @@
       {
         "start": 91,
         "end": 91,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -8369,22 +8767,50 @@
   {
     "lemma": "Antiochos 21",
     "previous": "Antiochos 19a",
-    "next": "Antiochos 22"
+    "next": "Antiochos 22",
+    "chapters": [
+      {
+        "start": 92,
+        "end": 92,
+        "author": "O. Rossbach."
+      }
+    ]
   },
   {
     "lemma": "Antiochos 22",
     "previous": "Antiochos 21",
-    "next": "Antiochos 25"
+    "next": "Antiochos 25",
+    "chapters": [
+      {
+        "start": 92,
+        "end": 92,
+        "author": "O. Rossbach."
+      }
+    ]
   },
   {
     "lemma": "Antiochos 25",
     "previous": "Antiochos 22",
-    "next": "Antiochos 27"
+    "next": "Antiochos 27",
+    "chapters": [
+      {
+        "start": 92,
+        "end": 92,
+        "author": "O. Rossbach."
+      }
+    ]
   },
   {
     "lemma": "Antiochos 27",
     "previous": "Antiochos 25",
-    "next": "Antiochos 44"
+    "next": "Antiochos 44",
+    "chapters": [
+      {
+        "start": 92,
+        "end": 92,
+        "author": "O. Rossbach."
+      }
+    ]
   },
   {
     "lemma": "Antiochos 44",
@@ -8682,7 +9108,14 @@
   {
     "lemma": "Antonius 30",
     "previous": "Antonius 28",
-    "next": "Antonius 34a"
+    "next": "Antonius 34a",
+    "chapters": [
+      {
+        "start": 96,
+        "end": 96,
+        "author": "Groebe."
+      }
+    ]
   },
   {
     "lemma": "Antonius 34a",
@@ -9042,7 +9475,19 @@
   {
     "lemma": "Aphaia",
     "previous": "Aper 2",
-    "next": "Aphareus 4"
+    "next": "Aphareus 4",
+    "chapters": [
+      {
+        "start": 100,
+        "end": 101,
+        "author": "Hiller v. Gaertringen."
+      },
+      {
+        "start": 101,
+        "end": 101,
+        "author": "Robert."
+      }
+    ]
   },
   {
     "lemma": "Aphareus 4",
@@ -9230,7 +9675,7 @@
       {
         "start": 108,
         "end": 108,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -9348,7 +9793,12 @@
       {
         "start": 109,
         "end": 109,
-        "author": "Kazarow"
+        "author": "Kazarow."
+      },
+      {
+        "start": 109,
+        "end": 109,
+        "author": "Hill."
       }
     ]
   },
@@ -9403,7 +9853,14 @@
   {
     "lemma": "Apollonia 33",
     "previous": "Apollonia 20",
-    "next": "Ἀπολλωνιασταί"
+    "next": "Ἀπολλωνιασταί",
+    "chapters": [
+      {
+        "start": 111,
+        "end": 111,
+        "author": "Stengel."
+      }
+    ]
   },
   {
     "lemma": "Ἀπολλωνιασταί",
@@ -9889,7 +10346,14 @@
   {
     "lemma": "Aquileia 1",
     "previous": "Aquatores",
-    "next": "Aquilius 16"
+    "next": "Aquilius 16",
+    "chapters": [
+      {
+        "start": 113,
+        "end": 114,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Aquilius 16",
@@ -10574,7 +11038,14 @@
   {
     "lemma": "Archiadas 1",
     "previous": "Archia",
-    "next": "Archiadas 2"
+    "next": "Archiadas 2",
+    "chapters": [
+      {
+        "start": 119,
+        "end": 119,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Archiadas 2",
@@ -10590,7 +11061,7 @@
       {
         "start": 119,
         "end": 119,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -10647,7 +11118,14 @@
   {
     "lemma": "Ἀρχιατρός",
     "previous": "Archias 17b",
-    "next": "Archibucolus"
+    "next": "Archibucolus",
+    "chapters": [
+      {
+        "start": 119,
+        "end": 120,
+        "author": "Baumstark."
+      }
+    ]
   },
   {
     "lemma": "Archibucolus",
@@ -10877,7 +11355,14 @@
   {
     "lemma": "Archon 3",
     "previous": "Archon 2",
-    "next": "Archon 4"
+    "next": "Archon 4",
+    "chapters": [
+      {
+        "start": 123,
+        "end": 123,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Archon 4",
@@ -10906,7 +11391,14 @@
   {
     "lemma": "Archytas 3",
     "previous": "Archon 4a",
-    "next": "Ardabau"
+    "next": "Ardabau",
+    "chapters": [
+      {
+        "start": 123,
+        "end": 123,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Ardabau",
@@ -11045,7 +11537,14 @@
   {
     "lemma": "Aretaios",
     "previous": "Aretades 2",
-    "next": "Aretas a"
+    "next": "Aretas a",
+    "chapters": [
+      {
+        "start": 125,
+        "end": 125,
+        "author": "J. Hirschberg."
+      }
+    ]
   },
   {
     "lemma": "Aretas a",
@@ -11223,7 +11722,7 @@
       {
         "start": 128,
         "end": 128,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -11296,7 +11795,7 @@
       {
         "start": 128,
         "end": 128,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -11313,7 +11812,7 @@
       {
         "start": 128,
         "end": 128,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -11369,7 +11868,14 @@
   {
     "lemma": "Ariminum",
     "previous": "Arima 2",
-    "next": "Arimnestos 6a"
+    "next": "Arimnestos 6a",
+    "chapters": [
+      {
+        "start": 129,
+        "end": 129,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Arimnestos 6a",
@@ -11488,7 +11994,8 @@
     "chapters": [
       {
         "start": 130,
-        "end": 130
+        "end": 130,
+        "author": "OFF"
       }
     ]
   },
@@ -11676,7 +12183,13 @@
     "lemma": "Aristeia",
     "previous": "Aristarchos 22",
     "next": "Aristeides 23",
-    "redirect": "Ἀρίστιον"
+    "redirect": "Ἀρίστιον",
+    "chapters": [
+      {
+        "start": 132,
+        "end": 132
+      }
+    ]
   },
   {
     "lemma": "Aristeides 23",
@@ -11691,7 +12204,14 @@
   {
     "lemma": "Aristias 2",
     "previous": "Aristeus 2",
-    "next": "Ἀρίστιον"
+    "next": "Ἀρίστιον",
+    "chapters": [
+      {
+        "start": 132,
+        "end": 132,
+        "author": "Capps."
+      }
+    ]
   },
   {
     "lemma": "Ἀρίστιον",
@@ -12125,7 +12645,7 @@
       {
         "start": 135,
         "end": 135,
-        "author": "Capps"
+        "author": "Capps."
       }
     ]
   },
@@ -12137,7 +12657,14 @@
   {
     "lemma": "Aristonophos",
     "previous": "Ariston 58",
-    "next": "Aristonymos a"
+    "next": "Aristonymos a",
+    "chapters": [
+      {
+        "start": 135,
+        "end": 135,
+        "author": "C. Robert."
+      }
+    ]
   },
   {
     "lemma": "Aristonymos a",
@@ -12159,7 +12686,14 @@
   {
     "lemma": "Aristonymos 7",
     "previous": "Aristonymos 6",
-    "next": "Aristonymos 8a"
+    "next": "Aristonymos 8a",
+    "chapters": [
+      {
+        "start": 135,
+        "end": 135,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Aristonymos 8a",
@@ -12177,7 +12711,14 @@
   {
     "lemma": "Aristonymos 9",
     "previous": "Aristonymos 8a",
-    "next": "Aristophantos a"
+    "next": "Aristophantos a",
+    "chapters": [
+      {
+        "start": 135,
+        "end": 135,
+        "author": "Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Aristophantos a",
@@ -12226,12 +12767,26 @@
     "lemma": "Aristos 5",
     "previous": "Aristophon 6",
     "next": "Aristos 10",
-    "sort_key": "Aristos 05"
+    "sort_key": "Aristos 05",
+    "chapters": [
+      {
+        "start": 136,
+        "end": 136,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Aristos 10",
     "previous": "Aristos 5",
-    "next": "Aristoteles 8"
+    "next": "Aristoteles 8",
+    "chapters": [
+      {
+        "start": 136,
+        "end": 136,
+        "author": "C. Robert."
+      }
+    ]
   },
   {
     "lemma": "Aristoteles 8",
@@ -12242,7 +12797,7 @@
       {
         "start": 136,
         "end": 136,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -12250,7 +12805,14 @@
     "lemma": "Aristoteles 9",
     "previous": "Aristoteles 8",
     "next": "Aristoteles 12a",
-    "sort_key": "Aristoteles 09"
+    "sort_key": "Aristoteles 09",
+    "chapters": [
+      {
+        "start": 136,
+        "end": 136,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Aristoteles 12a",
@@ -12284,7 +12846,14 @@
   {
     "lemma": "Aristotheros",
     "previous": "Aristotheos 2",
-    "next": "Aristoxenos 2a"
+    "next": "Aristoxenos 2a",
+    "chapters": [
+      {
+        "start": 136,
+        "end": 136,
+        "author": "Hultsch."
+      }
+    ]
   },
   {
     "lemma": "Aristoxenos 2a",
@@ -12356,7 +12925,7 @@
       {
         "start": 137,
         "end": 137,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -12403,7 +12972,7 @@
       {
         "start": 137,
         "end": 137,
-        "author": "Niese"
+        "author": "OFF"
       }
     ]
   },
@@ -12603,7 +13172,14 @@
   {
     "lemma": "Arpinum",
     "previous": "Arnefa",
-    "next": "Arra 1a"
+    "next": "Arra 1a",
+    "chapters": [
+      {
+        "start": 139,
+        "end": 139,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Arra 1a",
@@ -12625,7 +13201,14 @@
   {
     "lemma": "Arrapachitis",
     "previous": "Arrapa",
-    "next": "Arreneides 1"
+    "next": "Arreneides 1",
+    "chapters": [
+      {
+        "start": 140,
+        "end": 140,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Arreneides 1",
@@ -12904,7 +13487,14 @@
   {
     "lemma": "Artemis 2",
     "previous": "Ἀρτέμιδος ναός",
-    "next": "Artemisia 4"
+    "next": "Artemisia 4",
+    "chapters": [
+      {
+        "start": 145,
+        "end": 145,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Artemisia 4",
@@ -13015,7 +13605,14 @@
   {
     "lemma": "Artorius 7",
     "previous": "Artorius 5",
-    "next": "Artorius 9"
+    "next": "Artorius 9",
+    "chapters": [
+      {
+        "start": 146,
+        "end": 146,
+        "author": "v. Rohden."
+      }
+    ]
   },
   {
     "lemma": "Artorius 9",
@@ -13067,7 +13664,7 @@
       {
         "start": 146,
         "end": 146,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -13086,7 +13683,14 @@
   {
     "lemma": "Arx 3",
     "previous": "Arvius 1",
-    "next": "Arxama"
+    "next": "Arxama",
+    "chapters": [
+      {
+        "start": 146,
+        "end": 146,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Arxama",
@@ -13159,7 +13763,14 @@
   {
     "lemma": "Asaak",
     "previous": "As",
-    "next": "Asarakon"
+    "next": "Asarakon",
+    "chapters": [
+      {
+        "start": 151,
+        "end": 151,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Asarakon",
@@ -13891,7 +14502,14 @@
   {
     "lemma": "Atella",
     "previous": "Ἀτελής",
-    "next": "Atepomarus 1"
+    "next": "Atepomarus 1",
+    "chapters": [
+      {
+        "start": 157,
+        "end": 157,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Atepomarus 1",
@@ -13913,7 +14531,7 @@
       {
         "start": 158,
         "end": 158,
-        "author": "Niese"
+        "author": "Niese."
       }
     ]
   },
@@ -13938,7 +14556,14 @@
   {
     "lemma": "Ateste",
     "previous": "Ἄτης λόφος",
-    "next": "Athamas 2"
+    "next": "Athamas 2",
+    "chapters": [
+      {
+        "start": 158,
+        "end": 158,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Athamas 2",
@@ -14235,7 +14860,14 @@
   {
     "lemma": "Atlas 3",
     "previous": "Atlantis 2",
-    "next": "Atrapitoi"
+    "next": "Atrapitoi",
+    "chapters": [
+      {
+        "start": 222,
+        "end": 223,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Atrapitoi",
@@ -14432,7 +15064,7 @@
       {
         "start": 226,
         "end": 226,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -14538,7 +15170,13 @@
     "lemma": "Aufidius 46a",
     "previous": "Aufidius 23",
     "next": "Augenärzte",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 227,
+        "end": 227
+      }
+    ]
   },
   {
     "lemma": "Augenärzte",
@@ -14584,8 +15222,7 @@
     "chapters": [
       {
         "start": 227,
-        "end": 227,
-        "author": "Hülsen"
+        "end": 227
       }
     ]
   },
@@ -14621,15 +15258,21 @@
     "chapters": [
       {
         "start": 228,
-        "end": 228,
-        "author": "Ihm"
+        "end": 228
       }
     ]
   },
   {
     "lemma": "Augustonemetum",
     "previous": "Augusta 20a",
-    "next": "Avida"
+    "next": "Avida",
+    "chapters": [
+      {
+        "start": 228,
+        "end": 228,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Avida",
@@ -14648,7 +15291,14 @@
     "lemma": "Avidius 1",
     "previous": "Avida",
     "next": "Avidius 3",
-    "sort_key": "Avidius 01"
+    "sort_key": "Avidius 01",
+    "chapters": [
+      {
+        "start": 228,
+        "end": 228,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Avidius 3",
@@ -14659,7 +15309,14 @@
     "lemma": "Avidius 4",
     "previous": "Avidius 3",
     "next": "Avidius 8",
-    "sort_key": "Avidius 04"
+    "sort_key": "Avidius 04",
+    "chapters": [
+      {
+        "start": 228,
+        "end": 228,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Avidius 8",
@@ -14689,7 +15346,7 @@
       {
         "start": 228,
         "end": 228,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -14846,8 +15503,7 @@
     "chapters": [
       {
         "start": 229,
-        "end": 229,
-        "author": "Stein, [Arthur]"
+        "end": 229
       }
     ]
   },
@@ -14957,7 +15613,13 @@
     "lemma": "Aurelius 145a",
     "previous": "Aurelius 141",
     "next": "Aurelius 152a",
-    "redirect": "Aurelius 220a"
+    "redirect": "Aurelius 220a",
+    "chapters": [
+      {
+        "start": 230,
+        "end": 230
+      }
+    ]
   },
   {
     "lemma": "Aurelius 152a",
@@ -15472,19 +16134,33 @@
       {
         "start": 234,
         "end": 234,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Azizos 1",
     "previous": "Azeia",
-    "next": "Azochis"
+    "next": "Azochis",
+    "chapters": [
+      {
+        "start": 234,
+        "end": 234,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Azochis",
     "previous": "Azizos 1",
-    "next": "Baal-Harrân"
+    "next": "Baal-Harrân",
+    "chapters": [
+      {
+        "start": 234,
+        "end": 234,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Baal-Harrân",
@@ -16069,7 +16745,14 @@
   {
     "lemma": "Ballspiel",
     "previous": "Ballaios",
-    "next": "Balmarcodes"
+    "next": "Balmarcodes",
+    "chapters": [
+      {
+        "start": 240,
+        "end": 240,
+        "author": "Mau."
+      }
+    ]
   },
   {
     "lemma": "Balmarcodes",
@@ -16145,12 +16828,26 @@
   {
     "lemma": "Barcae",
     "previous": "Barca",
-    "next": "Barduli 2"
+    "next": "Barduli 2",
+    "chapters": [
+      {
+        "start": 241,
+        "end": 241,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Barduli 2",
     "previous": "Barcae",
-    "next": "Barene"
+    "next": "Barene",
+    "chapters": [
+      {
+        "start": 241,
+        "end": 241,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Barene",
@@ -16172,7 +16869,14 @@
   {
     "lemma": "Bariani",
     "previous": "Bargates",
-    "next": "Baris 5a"
+    "next": "Baris 5a",
+    "chapters": [
+      {
+        "start": 241,
+        "end": 241,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Baris 5a",
@@ -16213,12 +16917,26 @@
   {
     "lemma": "Barium",
     "previous": "Baris 9",
-    "next": "Barkanioi"
+    "next": "Barkanioi",
+    "chapters": [
+      {
+        "start": 242,
+        "end": 242,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Barkanioi",
     "previous": "Barium",
-    "next": "Barpsis"
+    "next": "Barpsis",
+    "chapters": [
+      {
+        "start": 242,
+        "end": 242,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Barpsis",
@@ -16233,7 +16951,14 @@
   {
     "lemma": "Barsampse",
     "previous": "Barros",
-    "next": "Barsaphthas"
+    "next": "Barsaphthas",
+    "chapters": [
+      {
+        "start": 242,
+        "end": 242,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Barsaphthas",
@@ -16262,7 +16987,14 @@
   {
     "lemma": "Basaboiates",
     "previous": "Barsemius",
-    "next": "Basentus 2"
+    "next": "Basentus 2",
+    "chapters": [
+      {
+        "start": 243,
+        "end": 243,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Basentus 2",
@@ -16284,7 +17016,7 @@
       {
         "start": 243,
         "end": 243,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -16316,17 +17048,38 @@
   {
     "lemma": "Basileus 1",
     "previous": "Βασιλέων οἶκοι",
-    "next": "Basileus 2"
+    "next": "Basileus 2",
+    "chapters": [
+      {
+        "start": 243,
+        "end": 243,
+        "author": "Stähelin."
+      }
+    ]
   },
   {
     "lemma": "Basileus 2",
     "previous": "Basileus 1",
-    "next": "Basilica"
+    "next": "Basilica",
+    "chapters": [
+      {
+        "start": 243,
+        "end": 243,
+        "author": "Jessen."
+      }
+    ]
   },
   {
     "lemma": "Basilica",
     "previous": "Basileus 2",
-    "next": "Basilios"
+    "next": "Basilios",
+    "chapters": [
+      {
+        "start": 243,
+        "end": 244,
+        "author": "Mau."
+      }
+    ]
   },
   {
     "lemma": "Basilios",
@@ -16415,7 +17168,7 @@
       {
         "start": 244,
         "end": 244,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -16458,7 +17211,14 @@
   {
     "lemma": "Batis 2",
     "previous": "Bathyllos 4a",
-    "next": "Batnai 1"
+    "next": "Batnai 1",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 245,
+        "author": "W. Crönert."
+      }
+    ]
   },
   {
     "lemma": "Batnai 1",
@@ -16468,7 +17228,7 @@
       {
         "start": 245,
         "end": 245,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -16480,7 +17240,7 @@
       {
         "start": 245,
         "end": 245,
-        "author": "Cumont"
+        "author": "Cumont."
       }
     ]
   },
@@ -16499,7 +17259,14 @@
   {
     "lemma": "Battakes 1",
     "previous": "Batromios",
-    "next": "Battos 11"
+    "next": "Battos 11",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 245,
+        "author": "Stähelin."
+      }
+    ]
   },
   {
     "lemma": "Battos 11",
@@ -16516,17 +17283,38 @@
   {
     "lemma": "Bauli",
     "previous": "Battos 11",
-    "next": "Baxeae"
+    "next": "Baxeae",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 245,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Baxeae",
     "previous": "Bauli",
-    "next": "Bechuni"
+    "next": "Bechuni",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 245,
+        "author": "Mau."
+      }
+    ]
   },
   {
     "lemma": "Bechuni",
     "previous": "Baxeae",
-    "next": "Beeïa"
+    "next": "Beeïa",
+    "chapters": [
+      {
+        "start": 245,
+        "end": 245,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Beeïa",
@@ -16553,7 +17341,7 @@
       {
         "start": 246,
         "end": 246,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -16585,12 +17373,26 @@
   {
     "lemma": "Belenus",
     "previous": "Belatullus",
-    "next": "Belisaria porta"
+    "next": "Belisaria porta",
+    "chapters": [
+      {
+        "start": 246,
+        "end": 246,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Belisaria porta",
     "previous": "Belenus",
-    "next": "Belistiche"
+    "next": "Belistiche",
+    "chapters": [
+      {
+        "start": 246,
+        "end": 246,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Belistiche",
@@ -16600,7 +17402,14 @@
   {
     "lemma": "Bella",
     "previous": "Belistiche",
-    "next": "Βελλεροφόντειος δῆμος"
+    "next": "Βελλεροφόντειος δῆμος",
+    "chapters": [
+      {
+        "start": 246,
+        "end": 246,
+        "author": "Oberhummer."
+      }
+    ]
   },
   {
     "lemma": "Βελλεροφόντειος δῆμος",
@@ -16611,14 +17420,21 @@
       {
         "start": 246,
         "end": 246,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Bellicenses",
     "previous": "Βελλεροφόντειος δῆμος",
-    "next": "Bellicius 9"
+    "next": "Bellicius 9",
+    "chapters": [
+      {
+        "start": 246,
+        "end": 246,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Bellicius 9",
@@ -16628,7 +17444,7 @@
       {
         "start": 246,
         "end": 246,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -16676,22 +17492,50 @@
   {
     "lemma": "Bellunum",
     "previous": "Bellum a",
-    "next": "Bemiluciovi"
+    "next": "Bemiluciovi",
+    "chapters": [
+      {
+        "start": 247,
+        "end": 247,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Bemiluciovi",
     "previous": "Bellunum",
-    "next": "Bendideios"
+    "next": "Bendideios",
+    "chapters": [
+      {
+        "start": 247,
+        "end": 247,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Bendideios",
     "previous": "Bemiluciovi",
-    "next": "Bendis"
+    "next": "Bendis",
+    "chapters": [
+      {
+        "start": 247,
+        "end": 247,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Bendis",
     "previous": "Bendideios",
-    "next": "Benefal"
+    "next": "Benefal",
+    "chapters": [
+      {
+        "start": 247,
+        "end": 247,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Benefal",
@@ -16720,7 +17564,14 @@
   {
     "lemma": "Beneventum 2",
     "previous": "Benetoi",
-    "next": "Benkasos"
+    "next": "Benkasos",
+    "chapters": [
+      {
+        "start": 248,
+        "end": 248,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Benkasos",
@@ -16773,7 +17624,13 @@
   {
     "lemma": "Beregrani",
     "previous": "Berbulidion",
-    "next": "Bereiaros"
+    "next": "Bereiaros",
+    "chapters": [
+      {
+        "start": 248,
+        "end": 248
+      }
+    ]
   },
   {
     "lemma": "Bereiaros",
@@ -16790,7 +17647,14 @@
   {
     "lemma": "Berekyntia",
     "previous": "Bereiaros",
-    "next": "Berenike 19"
+    "next": "Berenike 19",
+    "chapters": [
+      {
+        "start": 248,
+        "end": 248,
+        "author": "Jessen."
+      }
+    ]
   },
   {
     "lemma": "Berenike 19",
@@ -16843,7 +17707,19 @@
   {
     "lemma": "Beroia 5",
     "previous": "Bergaios",
-    "next": "Berossos 4"
+    "next": "Berossos 4",
+    "chapters": [
+      {
+        "start": 248,
+        "end": 249,
+        "author": "Streck."
+      },
+      {
+        "start": 249,
+        "end": 249,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Berossos 4",
@@ -16924,8 +17800,7 @@
     "chapters": [
       {
         "start": 249,
-        "end": 249,
-        "author": "Streck"
+        "end": 249
       }
     ]
   },
@@ -17314,7 +18189,13 @@
     "lemma": "Boerebista",
     "previous": "Boëdromia",
     "next": "Boëthos 7",
-    "redirect": "Burebista"
+    "redirect": "Burebista",
+    "chapters": [
+      {
+        "start": 253,
+        "end": 253
+      }
+    ]
   },
   {
     "lemma": "Boëthos 7",
@@ -17481,7 +18362,14 @@
   {
     "lemma": "Bononia 1",
     "previous": "Bomos 2",
-    "next": "Bonoxus"
+    "next": "Bonoxus",
+    "chapters": [
+      {
+        "start": 255,
+        "end": 255,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Bonoxus",
@@ -17630,12 +18518,26 @@
   {
     "lemma": "Bosa",
     "previous": "Borza",
-    "next": "Bosporos 1"
+    "next": "Bosporos 1",
+    "chapters": [
+      {
+        "start": 257,
+        "end": 257,
+        "author": "Hülsen."
+      }
+    ]
   },
   {
     "lemma": "Bosporos 1",
     "previous": "Bosa",
-    "next": "Botrum magnum"
+    "next": "Botrum magnum",
+    "chapters": [
+      {
+        "start": 257,
+        "end": 257,
+        "author": "Oberhummer."
+      }
+    ]
   },
   {
     "lemma": "Botrum magnum",
@@ -17956,7 +18858,13 @@
     "lemma": "Bullensis campus",
     "previous": "Bulis 2",
     "next": "Bunos a",
-    "redirect": "Armenianensis fundus"
+    "redirect": "Armenianensis fundus",
+    "chapters": [
+      {
+        "start": 261,
+        "end": 261
+      }
+    ]
   },
   {
     "lemma": "Bunos a",
@@ -18142,7 +19050,14 @@
   {
     "lemma": "Cabillonum",
     "previous": "Cabeon",
-    "next": "Cabuniaeginus"
+    "next": "Cabuniaeginus",
+    "chapters": [
+      {
+        "start": 265,
+        "end": 265,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Cabuniaeginus",
@@ -18164,7 +19079,14 @@
   {
     "lemma": "Cacus",
     "previous": "Caca 2",
-    "next": "Cadra"
+    "next": "Cadra",
+    "chapters": [
+      {
+        "start": 266,
+        "end": 267,
+        "author": "Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Cadra",
@@ -18267,7 +19189,14 @@
   {
     "lemma": "Caecilius 94",
     "previous": "Caecilius 86",
-    "next": "Caecilius 99"
+    "next": "Caecilius 99",
+    "chapters": [
+      {
+        "start": 267,
+        "end": 268,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Caecilius 99",
@@ -18493,7 +19422,14 @@
     "previous": "Calpurnius 29",
     "next": "Calpurnius 53a",
     "sort_key": "Calpurnius 050a",
-    "redirect": "Arrius 17a"
+    "redirect": "Arrius 17a",
+    "chapters": [
+      {
+        "start": 271,
+        "end": 271,
+        "author": "OFF"
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 53a",
@@ -18570,7 +19506,7 @@
       {
         "start": 272,
         "end": 272,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -18994,7 +19930,13 @@
     "lemma": "Casilo",
     "previous": "Carvilius 9",
     "next": "Cassianum",
-    "redirect": "Claudius 100a"
+    "redirect": "Claudius 100a",
+    "chapters": [
+      {
+        "start": 276,
+        "end": 276
+      }
+    ]
   },
   {
     "lemma": "Cassianum",
@@ -19024,7 +19966,13 @@
     "lemma": "Cassius 24a",
     "previous": "Cassius 21a",
     "next": "Cassius 25",
-    "redirect": "Claudius 93"
+    "redirect": "Claudius 93",
+    "chapters": [
+      {
+        "start": 277,
+        "end": 277
+      }
+    ]
   },
   {
     "lemma": "Cassius 25",
@@ -19080,7 +20028,14 @@
   {
     "lemma": "Cassius 59",
     "previous": "Cassius 52a",
-    "next": "Cassius 72"
+    "next": "Cassius 72",
+    "chapters": [
+      {
+        "start": 277,
+        "end": 277,
+        "author": "O. Rossbach."
+      }
+    ]
   },
   {
     "lemma": "Cassius 72",
@@ -19248,7 +20203,7 @@
       {
         "start": 279,
         "end": 279,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19311,7 +20266,7 @@
       {
         "start": 279,
         "end": 279,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -19619,7 +20574,7 @@
       {
         "start": 283,
         "end": 283,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19764,7 +20719,14 @@
   {
     "lemma": "Charta",
     "previous": "Charra",
-    "next": "Chaskauge"
+    "next": "Chaskauge",
+    "chapters": [
+      {
+        "start": 285,
+        "end": 286,
+        "author": "Wünsch."
+      }
+    ]
   },
   {
     "lemma": "Chaskauge",
@@ -19927,7 +20889,14 @@
   {
     "lemma": "Χλαμύς",
     "previous": "Χλαῖνα",
-    "next": "Χλανίς"
+    "next": "Χλανίς",
+    "chapters": [
+      {
+        "start": 294,
+        "end": 295,
+        "author": "Amelung."
+      }
+    ]
   },
   {
     "lemma": "Χλανίς",
@@ -20070,7 +21039,14 @@
   {
     "lemma": "Chronos 2",
     "previous": "Chronica Italica",
-    "next": "Chryseïs 5"
+    "next": "Chryseïs 5",
+    "chapters": [
+      {
+        "start": 298,
+        "end": 298,
+        "author": "Waser."
+      }
+    ]
   },
   {
     "lemma": "Chryseïs 5",
@@ -20092,7 +21068,7 @@
       {
         "start": 298,
         "end": 298,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -20157,7 +21133,14 @@
   {
     "lemma": "Chrysippos 16",
     "previous": "Chrysippos 15",
-    "next": "Chudukka"
+    "next": "Chudukka",
+    "chapters": [
+      {
+        "start": 299,
+        "end": 299,
+        "author": "M. Wellmann."
+      }
+    ]
   },
   {
     "lemma": "Chudukka",
@@ -20281,7 +21264,7 @@
       {
         "start": 300,
         "end": 317,
-        "author": "Kornemann"
+        "author": "Kornemann."
       }
     ]
   },
@@ -20343,7 +21326,13 @@
     "previous": "Claudius 38",
     "next": "Claudius 71",
     "sort_key": "Claudius 039a",
-    "redirect": "Alexandros 65b"
+    "redirect": "Alexandros 65b",
+    "chapters": [
+      {
+        "start": 317,
+        "end": 317
+      }
+    ]
   },
   {
     "lemma": "Claudius 71",
@@ -20493,7 +21482,13 @@
     "lemma": "Claudius 288a",
     "previous": "Claudius 272a",
     "next": "Claudius 296",
-    "redirect": "Ptolemaios 66"
+    "redirect": "Ptolemaios 66",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320
+      }
+    ]
   },
   {
     "lemma": "Claudius 296",
@@ -20863,13 +21858,26 @@
   {
     "lemma": "Cognomen",
     "previous": "Cognitor 2",
-    "next": "Coira"
+    "next": "Coira",
+    "chapters": [
+      {
+        "start": 325,
+        "end": 325,
+        "author": "Mau."
+      }
+    ]
   },
   {
     "lemma": "Coira",
     "previous": "Cognomen",
     "next": "Colchion",
-    "redirect": "Cura 4"
+    "redirect": "Cura 4",
+    "chapters": [
+      {
+        "start": 326,
+        "end": 326
+      }
+    ]
   },
   {
     "lemma": "Colchion",
@@ -20934,7 +21942,7 @@
       {
         "start": 326,
         "end": 327,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
@@ -20983,13 +21991,25 @@
     "lemma": "Corioco",
     "previous": "Coria 2",
     "next": "Coriopis",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 327,
+        "end": 327
+      }
+    ]
   },
   {
     "lemma": "Coriopis",
     "previous": "Corioco",
     "next": "Corma",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 327,
+        "end": 327
+      }
+    ]
   },
   {
     "lemma": "Corma",
@@ -21001,7 +22021,13 @@
     "lemma": "Cornan",
     "previous": "Corma",
     "next": "Corne",
-    "redirect": "Carnon"
+    "redirect": "Carnon",
+    "chapters": [
+      {
+        "start": 327,
+        "end": 327
+      }
+    ]
   },
   {
     "lemma": "Corne",
@@ -21066,7 +22092,14 @@
   {
     "lemma": "Cornelius 69",
     "previous": "Cornelius 40",
-    "next": "Cornelius 82"
+    "next": "Cornelius 82",
+    "chapters": [
+      {
+        "start": 328,
+        "end": 328,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 82",
@@ -21318,7 +22351,14 @@
   {
     "lemma": "Cubi",
     "previous": "Cuavus",
-    "next": "Culleolus a"
+    "next": "Culleolus a",
+    "chapters": [
+      {
+        "start": 332,
+        "end": 332,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Culleolus a",
@@ -21328,7 +22368,14 @@
   {
     "lemma": "Cura 4",
     "previous": "Culleolus a",
-    "next": "Currodrepanus"
+    "next": "Currodrepanus",
+    "chapters": [
+      {
+        "start": 332,
+        "end": 332,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Currodrepanus",
@@ -21479,7 +22526,14 @@
   {
     "lemma": "Damagetos 3",
     "previous": "Dalana(?)",
-    "next": "Damaios a"
+    "next": "Damaios a",
+    "chapters": [
+      {
+        "start": 334,
+        "end": 334,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Damaios a",
@@ -21548,7 +22602,7 @@
       {
         "start": 335,
         "end": 335,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -22049,7 +23103,7 @@
       {
         "start": 342,
         "end": 342,
-        "author": "Capps"
+        "author": "Capps."
       }
     ]
   },
@@ -22061,7 +23115,7 @@
       {
         "start": 342,
         "end": 342,
-        "author": "Capps"
+        "author": "Capps."
       }
     ]
   },
@@ -22139,7 +23193,7 @@
       {
         "start": 345,
         "end": 345,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -22173,7 +23227,14 @@
   {
     "lemma": "Demodike 6",
     "previous": "Demochares 2",
-    "next": "Demodokos 6a"
+    "next": "Demodokos 6a",
+    "chapters": [
+      {
+        "start": 346,
+        "end": 346,
+        "author": "Alfred Körte."
+      }
+    ]
   },
   {
     "lemma": "Demodokos 6a",

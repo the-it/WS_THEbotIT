@@ -276,7 +276,7 @@
       {
         "start": 5,
         "end": 6,
-        "author": "Riemann"
+        "author": "H. Riemann."
       }
     ]
   },
@@ -313,7 +313,7 @@
       {
         "start": 6,
         "end": 7,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -505,7 +505,7 @@
       {
         "start": 16,
         "end": 19,
-        "author": "Gossen"
+        "author": "Hans Gossen."
       }
     ]
   },
@@ -1507,7 +1507,13 @@
     "lemma": "Lamprias 6",
     "previous": "Lamprias 5",
     "next": "Libelle",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 258,
+        "end": 258
+      }
+    ]
   },
   {
     "lemma": "Libelle",
@@ -3658,7 +3664,14 @@
     "lemma": "Antonius 30",
     "previous": "Achilleus 8a",
     "next": "Apollodoros 23",
-    "sort_key": "Antonius 030"
+    "sort_key": "Antonius 030",
+    "chapters": [
+      {
+        "start": 917,
+        "end": 917,
+        "author": "Brommer."
+      }
+    ]
   },
   {
     "lemma": "Apollodoros 23",
@@ -5899,7 +5912,7 @@
       {
         "start": 1267,
         "end": 1267,
-        "author": "Brommer"
+        "author": "Frank Brommer."
       }
     ]
   },

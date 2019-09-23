@@ -125,12 +125,21 @@
   {
     "lemma": "Agesistratos",
     "previous": "Afranius 10a",
-    "next": "Aiacius 2",
-    "redirect": "Athenaios 23"
+    "next": "Aiacius 3",
+    "redirect": "Athenaios 23",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "lemma": "Aiacius 3",
+    "previous": "Agesistratos"
   },
   {
     "lemma": "Aiacius 2",
-    "previous": "Agesistratos",
     "next": "Albiobola",
     "chapters": [
       {
@@ -1233,7 +1242,14 @@
   {
     "lemma": "Cornelius 236",
     "previous": "Cornelius 145",
-    "next": "Cornelius 279"
+    "next": "Cornelius 279",
+    "chapters": [
+      {
+        "start": 25,
+        "end": 25,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 279",
@@ -1304,7 +1320,7 @@
       {
         "start": 26,
         "end": 26,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },

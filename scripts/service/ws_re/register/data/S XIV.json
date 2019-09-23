@@ -110,7 +110,7 @@
       {
         "start": 3,
         "end": 13,
-        "author": "Šašel"
+        "author": "Jaroslav Šašel."
       }
     ]
   },
@@ -2134,7 +2134,13 @@
     "lemma": "computus",
     "previous": "Comius 2",
     "next": "Concors",
-    "redirect": "digitorum computus"
+    "redirect": "digitorum computus",
+    "chapters": [
+      {
+        "start": 106,
+        "end": 106
+      }
+    ]
   },
   {
     "lemma": "Concors",
@@ -2389,7 +2395,7 @@
       {
         "start": 111,
         "end": 112,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2401,7 +2407,7 @@
       {
         "start": 112,
         "end": 112,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2413,7 +2419,7 @@
       {
         "start": 111,
         "end": 111,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2425,7 +2431,7 @@
       {
         "start": 111,
         "end": 111,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2437,7 +2443,7 @@
       {
         "start": 111,
         "end": 111,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -4216,8 +4222,7 @@
     "chapters": [
       {
         "start": 385,
-        "end": 387,
-        "author": "Meyer, Ernst"
+        "end": 387
       }
     ]
   },
@@ -4955,7 +4960,13 @@
   {
     "lemma": "Raetia",
     "previous": "Raecius 6a",
-    "next": "Ragonius 4a"
+    "next": "Ragonius 4a",
+    "chapters": [
+      {
+        "start": 582,
+        "end": 586
+      }
+    ]
   },
   {
     "lemma": "Ragonius 4a",
@@ -6249,13 +6260,7 @@
     "chapters": [
       {
         "start": 786,
-        "end": 794,
-        "author": "Sirch"
-      },
-      {
-        "start": 794,
-        "end": 796,
-        "author": "Hinz"
+        "end": 796
       }
     ]
   },
