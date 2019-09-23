@@ -260,7 +260,7 @@ text.
         expected_dict = {"chapters": [{"start": 264, "end": 264}]}
         compare((expected_dict, []), task._fetch_pages(article))
 
-    def test_pages_complex(self):
+    def test_pages_complex_bithynia(self):
         with LogCapture():
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
@@ -275,6 +275,10 @@ text.
                                           {"start": 524, "end": 539, "author": "Brandis."}]}
             compare((expected_dict, []), task._fetch_pages(article))
 
+    def test_pages_complex_elis(self):
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            self.title_mock.return_value = "RE:Aal"
             with open(Path(__file__).parent.joinpath("test_data/RE_Elis 1.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
@@ -284,6 +288,10 @@ text.
                                           {"start": 2369, "end": 2432, "author": "Swoboda."}]}
             compare((expected_dict, []), task._fetch_pages(article))
 
+    def test_pages_complex_abuccius(self):
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            self.title_mock.return_value = "RE:Aal"
             with open(Path(__file__).parent.joinpath("test_data/RE_L. Abuccius.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
@@ -293,6 +301,10 @@ text.
                                           {"start": 125, "end": 125, "author": "v. Rohden."}]}
             compare((expected_dict, []), task._fetch_pages(article))
 
+    def test_pages_complex_plinius(self):
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            self.title_mock.return_value = "RE:Aal"
             # if the re_page is too complex (import of other pages during page construction) return empty result sets
             with open(Path(__file__).parent.joinpath("test_data/RE_Plinius 5.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
@@ -300,6 +312,32 @@ text.
             task.re_page = re_page
             article = re_page.splitted_article_list[0]
             expected_dict = {}
+            compare((expected_dict, []), task._fetch_pages(article))
+
+    def test_pages_complex_mitarbeiter(self):
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            self.title_mock.return_value = "RE:Aal"
+            # if the pages are non numeric return nothing
+            with open(Path(__file__).parent.joinpath("test_data/RE_Mitarbeiter-Verzeichnis.txt"), encoding="utf-8") as test_file:
+                self.text_mock.return_value = test_file.read()
+            re_page = RePage(self.page_mock)
+            task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            expected_dict = {}
+            compare((expected_dict, []), task._fetch_pages(article))
+
+    def test_pages_complex_abs(self):
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            self.title_mock.return_value = "RE:Aal"
+            # if the pages are non numeric return nothing
+            with open(Path(__file__).parent.joinpath("test_data/abs.txt"), encoding="utf-8") as test_file:
+                self.text_mock.return_value = test_file.read()
+            re_page = RePage(self.page_mock)
+            task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            expected_dict = {"chapters": [{"start": 116, "end": 116}]}
             compare((expected_dict, []), task._fetch_pages(article))
 
     def test_fetch_from_properties(self):
