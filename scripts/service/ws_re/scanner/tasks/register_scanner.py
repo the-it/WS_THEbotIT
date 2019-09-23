@@ -137,7 +137,7 @@ class SCANTask(ReScannerTask):
             spalte_end = spalte_start
         single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
         author = article.author[0]
-        if author != "OFF":
+        if author.lower().strip() != "off":
             single_article_dict["author"] = author
         return single_article_dict
 

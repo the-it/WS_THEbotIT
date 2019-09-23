@@ -327,6 +327,19 @@ text.
             expected_dict = {}
             compare((expected_dict, []), task._fetch_pages(article))
 
+    def test_pages_complex_abs(self):
+        with LogCapture():
+            task = SCANTask(None, self.logger)
+            self.title_mock.return_value = "RE:Aal"
+            # if the pages are non numeric return nothing
+            with open(Path(__file__).parent.joinpath("test_data/abs.txt"), encoding="utf-8") as test_file:
+                self.text_mock.return_value = test_file.read()
+            re_page = RePage(self.page_mock)
+            task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            expected_dict = {"chapters": [{"start": 116, "end": 116}]}
+            compare((expected_dict, []), task._fetch_pages(article))
+
     def test_fetch_from_properties(self):
         with LogCapture():
             self.title_mock.return_value = "RE:Aal"
