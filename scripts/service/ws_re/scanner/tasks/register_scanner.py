@@ -110,11 +110,17 @@ class SCANTask(ReScannerTask):
         return {}, ["next"]
 
     def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+        # if there is something outside an article ignore it
+        article_list = [article for article in article_list if isinstance(article, Article)]
         if self.re_page.complex_construction:
             self.logger.error(f"The construct of {self.re_page.lemma_without_prefix} is too complex, can't analyse.")
             return {}, []
         if len(article_list) == 1:
-            return {"chapters": [self._analyse_simple_article_list(article_list)]}, []
+            chapter_dict = self._analyse_simple_article_list(article_list)
+            if chapter_dict:
+                return {"chapters": [chapter_dict]}, []
+            else:
+                return {}, []
         return {"chapters": self._analyse_complex_article_list(article_list)}, []
 
     def _analyse_simple_article_list(self, article_list: List[Article]) -> ChapterDict:
@@ -137,8 +143,6 @@ class SCANTask(ReScannerTask):
 
     def _analyse_complex_article_list(self, article_list: List[Article]) -> List[ChapterDict]:
         simple_dict = self._analyse_simple_article_list(article_list)
-        # if there is something outside an article ignore it
-        article_list = [article for article in article_list if isinstance(article, Article)]
         article_start = int(simple_dict["start"])
         chapter_list: List[ChapterDict] = []
         for article in article_list:
