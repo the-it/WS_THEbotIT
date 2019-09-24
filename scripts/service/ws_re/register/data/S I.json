@@ -18972,7 +18972,7 @@
       {
         "start": 264,
         "end": 264,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -19267,7 +19267,7 @@
       {
         "start": 269,
         "end": 269,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -19325,12 +19325,26 @@
   {
     "lemma": "Cagiri",
     "previous": "Caesius 30a",
-    "next": "Caiva dea"
+    "next": "Caiva dea",
+    "chapters": [
+      {
+        "start": 270,
+        "end": 270,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Caiva dea",
     "previous": "Cagiri",
-    "next": "Caldis"
+    "next": "Caldis",
+    "chapters": [
+      {
+        "start": 270,
+        "end": 270,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Caldis",
@@ -19347,7 +19361,14 @@
   {
     "lemma": "Caleti",
     "previous": "Caldis",
-    "next": "Callicome"
+    "next": "Callicome",
+    "chapters": [
+      {
+        "start": 270,
+        "end": 270,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Callicome",
@@ -19377,7 +19398,14 @@
   {
     "lemma": "Calpurnianus 2",
     "previous": "Calones 2",
-    "next": "Calpurnius 20"
+    "next": "Calpurnius 20",
+    "chapters": [
+      {
+        "start": 270,
+        "end": 270,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 20",
@@ -19395,19 +19423,40 @@
     "lemma": "Calpurnius 25",
     "previous": "Calpurnius 21",
     "next": "Calpurnius 28",
-    "sort_key": "Calpurnius 025"
+    "sort_key": "Calpurnius 025",
+    "chapters": [
+      {
+        "start": 270,
+        "end": 270,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 28",
     "previous": "Calpurnius 25",
     "next": "Calpurnius 29",
-    "sort_key": "Calpurnius 028"
+    "sort_key": "Calpurnius 028",
+    "chapters": [
+      {
+        "start": 270,
+        "end": 270,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 29",
     "previous": "Calpurnius 28",
     "next": "Calpurnius 50a",
-    "sort_key": "Calpurnius 029"
+    "sort_key": "Calpurnius 029",
+    "chapters": [
+      {
+        "start": 270,
+        "end": 270,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 50a",
@@ -19439,7 +19488,13 @@
     "lemma": "Calpurnius 69",
     "previous": "Calpurnius 53a",
     "next": "Calpurnius 70",
-    "sort_key": "Calpurnius 069"
+    "sort_key": "Calpurnius 069",
+    "chapters": [
+      {
+        "start": 271,
+        "end": 271
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 70",
@@ -19451,37 +19506,79 @@
     "lemma": "Calpurnius 73",
     "previous": "Calpurnius 70",
     "next": "Calpurnius 74",
-    "sort_key": "Calpurnius 073"
+    "sort_key": "Calpurnius 073",
+    "chapters": [
+      {
+        "start": 271,
+        "end": 271,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 74",
     "previous": "Calpurnius 73",
     "next": "Calpurnius 82",
-    "sort_key": "Calpurnius 074"
+    "sort_key": "Calpurnius 074",
+    "chapters": [
+      {
+        "start": 271,
+        "end": 271,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 82",
     "previous": "Calpurnius 74",
     "next": "Calpurnius 88",
-    "sort_key": "Calpurnius 082"
+    "sort_key": "Calpurnius 082",
+    "chapters": [
+      {
+        "start": 271,
+        "end": 271,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 88",
     "previous": "Calpurnius 82",
     "next": "Calpurnius 90",
-    "sort_key": "Calpurnius 088"
+    "sort_key": "Calpurnius 088",
+    "chapters": [
+      {
+        "start": 271,
+        "end": 271,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 90",
     "previous": "Calpurnius 88",
     "next": "Calpurnius 93",
-    "sort_key": "Calpurnius 090"
+    "sort_key": "Calpurnius 090",
+    "chapters": [
+      {
+        "start": 272,
+        "end": 272,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 93",
     "previous": "Calpurnius 90",
     "next": "Calpurnius 99",
-    "sort_key": "Calpurnius 093"
+    "sort_key": "Calpurnius 093",
+    "chapters": [
+      {
+        "start": 272,
+        "end": 272,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 99",
@@ -19528,7 +19625,7 @@
       {
         "start": 273,
         "end": 273,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -19571,7 +19668,14 @@
   {
     "lemma": "Camilla 1",
     "previous": "Camia",
-    "next": "Camogenis"
+    "next": "Camogenis",
+    "chapters": [
+      {
+        "start": 273,
+        "end": 273,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Camogenis",
@@ -19630,31 +19734,66 @@
   {
     "lemma": "Candidus 1",
     "previous": "Canas",
-    "next": "Caninius 3"
+    "next": "Caninius 3",
+    "chapters": [
+      {
+        "start": 273,
+        "end": 273,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Caninius 3",
     "previous": "Candidus 1",
     "next": "Caninius 4",
-    "sort_key": "Caninius 03"
+    "sort_key": "Caninius 03",
+    "chapters": [
+      {
+        "start": 273,
+        "end": 273,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Caninius 4",
     "previous": "Caninius 3",
     "next": "Caninius 5",
-    "sort_key": "Caninius 04"
+    "sort_key": "Caninius 04",
+    "chapters": [
+      {
+        "start": 273,
+        "end": 273,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Caninius 5",
     "previous": "Caninius 4",
     "next": "Caninius 9",
-    "sort_key": "Caninius 05"
+    "sort_key": "Caninius 05",
+    "chapters": [
+      {
+        "start": 273,
+        "end": 273,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Caninius 9",
     "previous": "Caninius 5",
     "next": "Canius a",
-    "sort_key": "Caninius 09"
+    "sort_key": "Caninius 09",
+    "chapters": [
+      {
+        "start": 273,
+        "end": 274,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Canius a",
@@ -19664,7 +19803,7 @@
       {
         "start": 274,
         "end": 274,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -19676,7 +19815,7 @@
       {
         "start": 274,
         "end": 274,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19689,7 +19828,7 @@
       {
         "start": 274,
         "end": 274,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -19701,7 +19840,7 @@
       {
         "start": 274,
         "end": 274,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -19720,7 +19859,14 @@
   {
     "lemma": "Caparenses",
     "previous": "Canus 5",
-    "next": "Capersane"
+    "next": "Capersane",
+    "chapters": [
+      {
+        "start": 274,
+        "end": 274,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Capersane",
@@ -19730,7 +19876,7 @@
       {
         "start": 274,
         "end": 274,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19742,7 +19888,7 @@
       {
         "start": 274,
         "end": 275,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19754,7 +19900,7 @@
       {
         "start": 275,
         "end": 275,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -19765,14 +19911,22 @@
     "chapters": [
       {
         "start": 275,
-        "end": 275
+        "end": 275,
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Capreolus 4",
     "previous": "Capitolinus 2",
-    "next": "Capussa"
+    "next": "Capussa",
+    "chapters": [
+      {
+        "start": 275,
+        "end": 275,
+        "author": "Stadler."
+      }
+    ]
   },
   {
     "lemma": "Capussa",
@@ -19782,14 +19936,21 @@
       {
         "start": 275,
         "end": 275,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
   {
     "lemma": "Carbantorate",
     "previous": "Capussa",
-    "next": "Carbestrio"
+    "next": "Carbestrio",
+    "chapters": [
+      {
+        "start": 275,
+        "end": 275,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Carbestrio",
@@ -19799,7 +19960,7 @@
       {
         "start": 275,
         "end": 275,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19811,7 +19972,7 @@
       {
         "start": 275,
         "end": 275,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19823,7 +19984,7 @@
       {
         "start": 275,
         "end": 275,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -19835,7 +19996,7 @@
       {
         "start": 275,
         "end": 276,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19847,24 +20008,45 @@
       {
         "start": 276,
         "end": 276,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Carinus 1",
     "previous": "Carema",
-    "next": "Caristanius 1"
+    "next": "Caristanius 1",
+    "chapters": [
+      {
+        "start": 276,
+        "end": 276,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Caristanius 1",
     "previous": "Carinus 1",
-    "next": "Carminius 5"
+    "next": "Carminius 5",
+    "chapters": [
+      {
+        "start": 276,
+        "end": 276,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Carminius 5",
     "previous": "Caristanius 1",
-    "next": "Carminius 5a"
+    "next": "Carminius 5a",
+    "chapters": [
+      {
+        "start": 276,
+        "end": 276,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Carminius 5a",
@@ -19874,14 +20056,21 @@
       {
         "start": 276,
         "end": 276,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
   {
     "lemma": "Carnon",
     "previous": "Carminius 5a",
-    "next": "Carrinas 7"
+    "next": "Carrinas 7",
+    "chapters": [
+      {
+        "start": 276,
+        "end": 276,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Carrinas 7",
@@ -19891,7 +20080,7 @@
       {
         "start": 276,
         "end": 276,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -19903,19 +20092,33 @@
       {
         "start": 276,
         "end": 276,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Carventanus",
     "previous": "Carsagis",
-    "next": "Carvilius 9"
+    "next": "Carvilius 9",
+    "chapters": [
+      {
+        "start": 276,
+        "end": 276,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Carvilius 9",
     "previous": "Carventanus",
-    "next": "Casilo"
+    "next": "Casilo",
+    "chapters": [
+      {
+        "start": 276,
+        "end": 276,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Casilo",
@@ -19949,7 +20152,7 @@
       {
         "start": 277,
         "end": 277,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -19968,12 +20171,26 @@
   {
     "lemma": "Cassius 25",
     "previous": "Cassius 24a",
-    "next": "Cassius 27"
+    "next": "Cassius 27",
+    "chapters": [
+      {
+        "start": 277,
+        "end": 277,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cassius 27",
     "previous": "Cassius 25",
-    "next": "Cassius 28"
+    "next": "Cassius 28",
+    "chapters": [
+      {
+        "start": 277,
+        "end": 277,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cassius 28",
@@ -19995,14 +20212,21 @@
       {
         "start": 277,
         "end": 277,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Cassius 49",
     "previous": "Cassius 29a",
-    "next": "Cassius 52a"
+    "next": "Cassius 52a",
+    "chapters": [
+      {
+        "start": 277,
+        "end": 277,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cassius 52a",
@@ -20012,7 +20236,7 @@
       {
         "start": 277,
         "end": 277,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -20031,7 +20255,14 @@
   {
     "lemma": "Cassius 72",
     "previous": "Cassius 59",
-    "next": "Cassius 82a"
+    "next": "Cassius 82a",
+    "chapters": [
+      {
+        "start": 277,
+        "end": 277,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cassius 82a",
@@ -20041,7 +20272,7 @@
       {
         "start": 278,
         "end": 278,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -20053,14 +20284,21 @@
       {
         "start": 278,
         "end": 278,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Cassius 87",
     "previous": "Cassius 84a",
-    "next": "Cassius 92a"
+    "next": "Cassius 92a",
+    "chapters": [
+      {
+        "start": 278,
+        "end": 278,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cassius 92a",
@@ -20082,7 +20320,7 @@
       {
         "start": 278,
         "end": 278,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -20101,7 +20339,14 @@
   {
     "lemma": "Castillum",
     "previous": "Castabola",
-    "next": "Castra, Castrum 32a"
+    "next": "Castra, Castrum 32a",
+    "chapters": [
+      {
+        "start": 278,
+        "end": 278,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Castra, Castrum 32a",
@@ -20111,7 +20356,7 @@
       {
         "start": 278,
         "end": 278,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20131,7 +20376,14 @@
     "lemma": "Castricius 9",
     "previous": "Castra, Castrum 43a",
     "next": "Castrillum",
-    "sort_key": "Castricius 09"
+    "sort_key": "Castricius 09",
+    "chapters": [
+      {
+        "start": 278,
+        "end": 278,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Castrillum",
@@ -20141,7 +20393,7 @@
       {
         "start": 278,
         "end": 278,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20153,7 +20405,7 @@
       {
         "start": 278,
         "end": 279,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -20172,7 +20424,14 @@
   {
     "lemma": "Castus 4",
     "previous": "Castus 3a",
-    "next": "Casus a"
+    "next": "Casus a",
+    "chapters": [
+      {
+        "start": 279,
+        "end": 279,
+        "author": "Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Casus a",
@@ -20206,24 +20465,45 @@
       {
         "start": 279,
         "end": 279,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
   {
     "lemma": "Catilius 3",
     "previous": "Catellius 1a",
-    "next": "Catilius 4"
+    "next": "Catilius 4",
+    "chapters": [
+      {
+        "start": 279,
+        "end": 279,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Catilius 4",
     "previous": "Catilius 3",
-    "next": "Catius 6"
+    "next": "Catius 6",
+    "chapters": [
+      {
+        "start": 279,
+        "end": 279,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Catius 6",
     "previous": "Catilius 4",
-    "next": "Catius 10a"
+    "next": "Catius 10a",
+    "chapters": [
+      {
+        "start": 279,
+        "end": 279,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Catius 10a",
@@ -20233,7 +20513,7 @@
       {
         "start": 279,
         "end": 279,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -20245,7 +20525,7 @@
       {
         "start": 279,
         "end": 279,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -20269,7 +20549,7 @@
       {
         "start": 279,
         "end": 279,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20277,12 +20557,26 @@
     "lemma": "Ceionius 6",
     "previous": "Cazaci",
     "next": "Celeia",
-    "sort_key": "Ceionius 06"
+    "sort_key": "Ceionius 06",
+    "chapters": [
+      {
+        "start": 279,
+        "end": 279,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Celeia",
     "previous": "Ceionius 6",
-    "next": "Celer 1a"
+    "next": "Celer 1a",
+    "chapters": [
+      {
+        "start": 279,
+        "end": 280,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Celer 1a",
@@ -20292,7 +20586,7 @@
       {
         "start": 280,
         "end": 280,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -20303,9 +20597,9 @@
     "sort_key": "Celer 09",
     "chapters": [
       {
-        "start": 279,
-        "end": 279,
-        "author": "Groag"
+        "start": 280,
+        "end": 280,
+        "author": "Groag."
       }
     ]
   },
@@ -20329,7 +20623,7 @@
       {
         "start": 280,
         "end": 280,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20353,7 +20647,7 @@
       {
         "start": 280,
         "end": 280,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20365,7 +20659,7 @@
       {
         "start": 280,
         "end": 280,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -20377,29 +20671,55 @@
       {
         "start": 280,
         "end": 280,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Cestius 8",
     "previous": "Cestilius 2",
-    "next": "Cestius 14"
+    "next": "Cestius 14",
+    "chapters": [
+      {
+        "start": 280,
+        "end": 280,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cestius 14",
     "previous": "Cestius 8",
-    "next": "Cestius 18"
+    "next": "Cestius 18",
+    "chapters": [
+      {
+        "start": 280,
+        "end": 280
+      }
+    ]
   },
   {
     "lemma": "Cestius 18",
     "previous": "Cestius 14",
-    "next": "Chabora"
+    "next": "Chabora",
+    "chapters": [
+      {
+        "start": 280,
+        "end": 280
+      }
+    ]
   },
   {
     "lemma": "Chabora",
     "previous": "Cestius 18",
-    "next": "Chairekla"
+    "next": "Chairekla",
+    "chapters": [
+      {
+        "start": 280,
+        "end": 281,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chairekla",
@@ -20455,7 +20775,14 @@
   {
     "lemma": "Chala",
     "previous": "Chaitos 2",
-    "next": "Chalasar"
+    "next": "Chalasar",
+    "chapters": [
+      {
+        "start": 281,
+        "end": 281,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chalasar",
@@ -20472,7 +20799,14 @@
   {
     "lemma": "Chalkis 13",
     "previous": "Chalasar",
-    "next": "Chalkitis 4"
+    "next": "Chalkitis 4",
+    "chapters": [
+      {
+        "start": 281,
+        "end": 281,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chalkitis 4",
@@ -20494,17 +20828,38 @@
   {
     "lemma": "Chalonitis",
     "previous": "Chalkostamnon",
-    "next": "Chalybon"
+    "next": "Chalybon",
+    "chapters": [
+      {
+        "start": 281,
+        "end": 282,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chalybon",
     "previous": "Chalonitis",
-    "next": "Chalybonitis"
+    "next": "Chalybonitis",
+    "chapters": [
+      {
+        "start": 282,
+        "end": 282,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chalybonitis",
     "previous": "Chalybon",
-    "next": "Chambritrasos"
+    "next": "Chambritrasos",
+    "chapters": [
+      {
+        "start": 282,
+        "end": 282,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chambritrasos",
@@ -20521,17 +20876,38 @@
   {
     "lemma": "Cham(m)anene",
     "previous": "Chambritrasos",
-    "next": "Chamogamision"
+    "next": "Chamogamision",
+    "chapters": [
+      {
+        "start": 282,
+        "end": 282,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chamogamision",
     "previous": "Cham(m)anene",
-    "next": "Chamyne"
+    "next": "Chamyne",
+    "chapters": [
+      {
+        "start": 282,
+        "end": 282,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chamyne",
     "previous": "Chamogamision",
-    "next": "Chanaranges"
+    "next": "Chanaranges",
+    "chapters": [
+      {
+        "start": 282,
+        "end": 282,
+        "author": "Jessen."
+      }
+    ]
   },
   {
     "lemma": "Chanaranges",
@@ -20601,7 +20977,14 @@
   {
     "lemma": "Charinos 1",
     "previous": "Charimortos",
-    "next": "Charixenos 4"
+    "next": "Charixenos 4",
+    "chapters": [
+      {
+        "start": 284,
+        "end": 284,
+        "author": "Dittenberger."
+      }
+    ]
   },
   {
     "lemma": "Charixenos 4",
@@ -20642,17 +21025,38 @@
   {
     "lemma": "Charmande",
     "previous": "Charixenos 6",
-    "next": "Charmandros 2"
+    "next": "Charmandros 2",
+    "chapters": [
+      {
+        "start": 284,
+        "end": 284,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Charmandros 2",
     "previous": "Charmande",
-    "next": "Charmidas 2"
+    "next": "Charmidas 2",
+    "chapters": [
+      {
+        "start": 284,
+        "end": 284,
+        "author": "Boll."
+      }
+    ]
   },
   {
     "lemma": "Charmidas 2",
     "previous": "Charmandros 2",
-    "next": "Charmylos 2"
+    "next": "Charmylos 2",
+    "chapters": [
+      {
+        "start": 284,
+        "end": 284,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Charmylos 2",
@@ -20669,7 +21073,14 @@
   {
     "lemma": "Charon 1",
     "previous": "Charmylos 2",
-    "next": "Charops 11"
+    "next": "Charops 11",
+    "chapters": [
+      {
+        "start": 284,
+        "end": 284,
+        "author": "Waser."
+      }
+    ]
   },
   {
     "lemma": "Charops 11",
@@ -20703,7 +21114,7 @@
       {
         "start": 285,
         "end": 285,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20758,24 +21169,52 @@
   {
     "lemma": "Cheimon",
     "previous": "Chedrolioi",
-    "next": "Χειριδωτὸς χιτών"
+    "next": "Χειριδωτὸς χιτών",
+    "chapters": [
+      {
+        "start": 286,
+        "end": 286,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Χειριδωτὸς χιτών",
     "previous": "Cheimon",
     "next": "Χειρίς",
-    "sort_key": "Cheiridotos chiton"
+    "sort_key": "Cheiridotos chiton",
+    "chapters": [
+      {
+        "start": 286,
+        "end": 286,
+        "author": "Amelung."
+      }
+    ]
   },
   {
     "lemma": "Χειρίς",
     "previous": "Χειριδωτὸς χιτών",
     "next": "Cheirogastores",
-    "sort_key": "Cheiris"
+    "sort_key": "Cheiris",
+    "chapters": [
+      {
+        "start": 286,
+        "end": 287,
+        "author": "Amelung."
+      }
+    ]
   },
   {
     "lemma": "Cheirogastores",
     "previous": "Χειρίς",
-    "next": "Chellon"
+    "next": "Chellon",
+    "chapters": [
+      {
+        "start": 287,
+        "end": 287,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Chellon",
@@ -20810,14 +21249,21 @@
       {
         "start": 287,
         "end": 287,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Chimaira 3",
     "previous": "Χέρρεως φρούριον, τὸ",
-    "next": "Chindaioi"
+    "next": "Chindaioi",
+    "chapters": [
+      {
+        "start": 288,
+        "end": 288,
+        "author": "Bethe."
+      }
+    ]
   },
   {
     "lemma": "Chindaioi",
@@ -20827,7 +21273,7 @@
       {
         "start": 288,
         "end": 288,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20839,7 +21285,7 @@
       {
         "start": 288,
         "end": 288,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -20851,7 +21297,7 @@
       {
         "start": 288,
         "end": 288,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -20870,7 +21316,14 @@
   {
     "lemma": "Chiton 1",
     "previous": "Chiron 1a",
-    "next": "Χλαῖνα"
+    "next": "Χλαῖνα",
+    "chapters": [
+      {
+        "start": 288,
+        "end": 294,
+        "author": "Amelung."
+      }
+    ]
   },
   {
     "lemma": "Χλαῖνα",
@@ -20892,7 +21345,14 @@
   {
     "lemma": "Χλανίς",
     "previous": "Χλαμύς",
-    "next": "Chloros"
+    "next": "Chloros",
+    "chapters": [
+      {
+        "start": 295,
+        "end": 295,
+        "author": "Amelung."
+      }
+    ]
   },
   {
     "lemma": "Chloros",
@@ -20902,7 +21362,7 @@
       {
         "start": 295,
         "end": 295,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -20921,12 +21381,26 @@
   {
     "lemma": "Choara",
     "previous": "Chlydai",
-    "next": "Choliatai"
+    "next": "Choliatai",
+    "chapters": [
+      {
+        "start": 295,
+        "end": 295,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Choliatai",
     "previous": "Choara",
-    "next": "Cholimma"
+    "next": "Cholimma",
+    "chapters": [
+      {
+        "start": 295,
+        "end": 295,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Cholimma",
@@ -20936,19 +21410,33 @@
       {
         "start": 295,
         "end": 296,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Cholmadara",
     "previous": "Cholimma",
-    "next": "Chondria"
+    "next": "Chondria",
+    "chapters": [
+      {
+        "start": 296,
+        "end": 296,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chondria",
     "previous": "Cholmadara",
-    "next": "Chondrochyte"
+    "next": "Chondrochyte",
+    "chapters": [
+      {
+        "start": 296,
+        "end": 296,
+        "author": "Bürchner."
+      }
+    ]
   },
   {
     "lemma": "Chondrochyte",
@@ -20970,14 +21458,21 @@
       {
         "start": 296,
         "end": 296,
-        "author": "Körte"
+        "author": "Alfred Körte."
       }
     ]
   },
   {
     "lemma": "Chorochoad",
     "previous": "Choregos 2",
-    "next": "Chremas"
+    "next": "Chremas",
+    "chapters": [
+      {
+        "start": 296,
+        "end": 296,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chremas",
@@ -20987,7 +21482,7 @@
       {
         "start": 296,
         "end": 296,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -21011,7 +21506,7 @@
       {
         "start": 296,
         "end": 296,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -21071,7 +21566,7 @@
       {
         "start": 298,
         "end": 298,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -21083,14 +21578,21 @@
       {
         "start": 298,
         "end": 298,
-        "author": "Capps"
+        "author": "Capps."
       }
     ]
   },
   {
     "lemma": "Chrysippos 10",
     "previous": "Chrysippos 8a",
-    "next": "Chrysippos 14a"
+    "next": "Chrysippos 14a",
+    "chapters": [
+      {
+        "start": 298,
+        "end": 298,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Chrysippos 14a",
@@ -21100,7 +21602,7 @@
       {
         "start": 298,
         "end": 299,
-        "author": "Körte"
+        "author": "Alfred Körte."
       }
     ]
   },
@@ -21119,7 +21621,14 @@
   {
     "lemma": "Chrysippos 15",
     "previous": "Chrysippos 14b",
-    "next": "Chrysippos 16"
+    "next": "Chrysippos 16",
+    "chapters": [
+      {
+        "start": 299,
+        "end": 299,
+        "author": "M. Wellmann."
+      }
+    ]
   },
   {
     "lemma": "Chrysippos 16",
@@ -21141,7 +21650,7 @@
       {
         "start": 299,
         "end": 299,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -21153,7 +21662,7 @@
       {
         "start": 299,
         "end": 299,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -21165,14 +21674,21 @@
       {
         "start": 299,
         "end": 299,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Chumdan",
     "previous": "Chumbane",
-    "next": "Chytrieioi"
+    "next": "Chytrieioi",
+    "chapters": [
+      {
+        "start": 299,
+        "end": 299,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Chytrieioi",
@@ -21231,7 +21747,7 @@
       {
         "start": 300,
         "end": 300,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -21262,7 +21778,14 @@
   {
     "lemma": "Clarius",
     "previous": "Civitas 2",
-    "next": "Clartius"
+    "next": "Clartius",
+    "chapters": [
+      {
+        "start": 317,
+        "end": 317,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Clartius",
@@ -21284,20 +21807,34 @@
       {
         "start": 317,
         "end": 317,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Clavariatis",
     "previous": "Classicus 1a",
-    "next": "Claudius 31a"
+    "next": "Claudius 31a",
+    "chapters": [
+      {
+        "start": 317,
+        "end": 317,
+        "author": "Ihm."
+      }
+    ]
   },
   {
     "lemma": "Claudius 31a",
     "previous": "Clavariatis",
     "next": "Claudius 38",
-    "sort_key": "Claudius 031a"
+    "sort_key": "Claudius 031a",
+    "chapters": [
+      {
+        "start": 317,
+        "end": 317,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 38",
@@ -21308,7 +21845,7 @@
       {
         "start": 317,
         "end": 317,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21329,13 +21866,27 @@
     "lemma": "Claudius 71",
     "previous": "Claudius 39a",
     "next": "Claudius 72",
-    "sort_key": "Claudius 071"
+    "sort_key": "Claudius 071",
+    "chapters": [
+      {
+        "start": 317,
+        "end": 317,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 72",
     "previous": "Claudius 71",
     "next": "Claudius 87",
-    "sort_key": "Claudius 072"
+    "sort_key": "Claudius 072",
+    "chapters": [
+      {
+        "start": 317,
+        "end": 318,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 87",
@@ -21347,7 +21898,14 @@
     "lemma": "Claudius 93",
     "previous": "Claudius 87",
     "next": "Claudius 100a",
-    "sort_key": "Claudius 093"
+    "sort_key": "Claudius 093",
+    "chapters": [
+      {
+        "start": 318,
+        "end": 318,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 100a",
@@ -21370,35 +21928,69 @@
       {
         "start": 318,
         "end": 318,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Claudius 105",
     "previous": "Claudius 102a",
-    "next": "Claudius 137"
+    "next": "Claudius 137",
+    "chapters": [
+      {
+        "start": 318,
+        "end": 318,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Claudius 137",
     "previous": "Claudius 105",
-    "next": "Claudius 139"
+    "next": "Claudius 139",
+    "chapters": [
+      {
+        "start": 318,
+        "end": 318,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 139",
     "previous": "Claudius 137",
-    "next": "Claudius 141"
+    "next": "Claudius 141",
+    "chapters": [
+      {
+        "start": 318,
+        "end": 319,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Claudius 141",
     "previous": "Claudius 139",
-    "next": "Claudius 149"
+    "next": "Claudius 149",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 319,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 149",
     "previous": "Claudius 141",
     "next": "Claudius 150a",
-    "redirect": "Claudius 375a"
+    "redirect": "Claudius 375a",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 319
+      }
+    ]
   },
   {
     "lemma": "Claudius 150a",
@@ -21408,54 +22000,116 @@
       {
         "start": 319,
         "end": 319,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Claudius 154",
     "previous": "Claudius 150a",
-    "next": "Claudius 164"
+    "next": "Claudius 164",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 319,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 164",
     "previous": "Claudius 154",
-    "next": "Claudius 179"
+    "next": "Claudius 179",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 319,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 179",
     "previous": "Claudius 164",
-    "next": "Claudius 213"
+    "next": "Claudius 213",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 319,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 213",
     "previous": "Claudius 179",
-    "next": "Claudius 218"
+    "next": "Claudius 218",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 319,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 218",
     "previous": "Claudius 213",
-    "next": "Claudius 243"
+    "next": "Claudius 243",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 319,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 243",
     "previous": "Claudius 218",
-    "next": "Claudius 246"
+    "next": "Claudius 246",
+    "chapters": [
+      {
+        "start": 319,
+        "end": 320,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Claudius 246",
     "previous": "Claudius 243",
-    "next": "Claudius 265"
+    "next": "Claudius 265",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 265",
     "previous": "Claudius 246",
-    "next": "Claudius 272"
+    "next": "Claudius 272",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 272",
     "previous": "Claudius 265",
-    "next": "Claudius 272a"
+    "next": "Claudius 272a",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320
+      }
+    ]
   },
   {
     "lemma": "Claudius 272a",
@@ -21465,7 +22119,7 @@
       {
         "start": 320,
         "end": 320,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -21484,47 +22138,110 @@
   {
     "lemma": "Claudius 296",
     "previous": "Claudius 288a",
-    "next": "Claudius 297"
+    "next": "Claudius 297",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 297",
     "previous": "Claudius 296",
-    "next": "Claudius 299"
+    "next": "Claudius 299",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 299",
     "previous": "Claudius 297",
-    "next": "Claudius 310"
+    "next": "Claudius 310",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 310",
     "previous": "Claudius 299",
-    "next": "Claudius 317"
+    "next": "Claudius 317",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 317",
     "previous": "Claudius 310",
-    "next": "Claudius 324"
+    "next": "Claudius 324",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 324",
     "previous": "Claudius 317",
-    "next": "Claudius 347"
+    "next": "Claudius 347",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 320,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 347",
     "previous": "Claudius 324",
-    "next": "Claudius 348"
+    "next": "Claudius 348",
+    "chapters": [
+      {
+        "start": 320,
+        "end": 321,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 348",
     "previous": "Claudius 347",
-    "next": "Claudius 350"
+    "next": "Claudius 350",
+    "chapters": [
+      {
+        "start": 321,
+        "end": 321,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 350",
     "previous": "Claudius 348",
-    "next": "Claudius 375a"
+    "next": "Claudius 375a",
+    "chapters": [
+      {
+        "start": 321,
+        "end": 321,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Claudius 375a",
@@ -21534,14 +22251,21 @@
       {
         "start": 321,
         "end": 321,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Claudius 376",
     "previous": "Claudius 375a",
-    "next": "Claudius 393"
+    "next": "Claudius 393",
+    "chapters": [
+      {
+        "start": 321,
+        "end": 321,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Claudius 393",
@@ -21551,7 +22275,7 @@
       {
         "start": 321,
         "end": 322,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -21563,7 +22287,7 @@
       {
         "start": 322,
         "end": 322,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21575,7 +22299,7 @@
       {
         "start": 322,
         "end": 322,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21587,7 +22311,7 @@
       {
         "start": 322,
         "end": 322,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21599,7 +22323,7 @@
       {
         "start": 322,
         "end": 322,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21611,7 +22335,7 @@
       {
         "start": 322,
         "end": 322,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21622,7 +22346,8 @@
     "chapters": [
       {
         "start": 322,
-        "end": 322
+        "end": 322,
+        "author": "Stähelin."
       }
     ]
   },
@@ -21634,7 +22359,7 @@
       {
         "start": 322,
         "end": 322,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -21646,7 +22371,7 @@
       {
         "start": 321,
         "end": 322,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -21658,7 +22383,7 @@
       {
         "start": 323,
         "end": 323,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -21670,7 +22395,7 @@
       {
         "start": 323,
         "end": 323,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -21701,7 +22426,14 @@
   {
     "lemma": "Clodius 12",
     "previous": "Clodius 10a",
-    "next": "Clodius 17a"
+    "next": "Clodius 17a",
+    "chapters": [
+      {
+        "start": 323,
+        "end": 323,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Clodius 17a",
@@ -21718,12 +22450,26 @@
   {
     "lemma": "Clodius 20",
     "previous": "Clodius 17a",
-    "next": "Clodius 36"
+    "next": "Clodius 36",
+    "chapters": [
+      {
+        "start": 323,
+        "end": 323,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Clodius 36",
     "previous": "Clodius 20",
-    "next": "Clodius 42a"
+    "next": "Clodius 42a",
+    "chapters": [
+      {
+        "start": 323,
+        "end": 323,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Clodius 42a",
@@ -21775,7 +22521,7 @@
       {
         "start": 324,
         "end": 324,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21792,7 +22538,7 @@
       {
         "start": 324,
         "end": 324,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21812,17 +22558,38 @@
   {
     "lemma": "Coelius 8",
     "previous": "Codrus a",
-    "next": "Coelius 9"
+    "next": "Coelius 9",
+    "chapters": [
+      {
+        "start": 325,
+        "end": 325,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Coelius 9",
     "previous": "Coelius 8",
-    "next": "Coelius 12"
+    "next": "Coelius 12",
+    "chapters": [
+      {
+        "start": 325,
+        "end": 325,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Coelius 12",
     "previous": "Coelius 9",
-    "next": "Coelius 31a"
+    "next": "Coelius 31a",
+    "chapters": [
+      {
+        "start": 325,
+        "end": 325,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Coelius 31a",
@@ -21832,14 +22599,21 @@
       {
         "start": 325,
         "end": 325,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Cognitio 2",
     "previous": "Coelius 31a",
-    "next": "Cognitor 2"
+    "next": "Cognitor 2",
+    "chapters": [
+      {
+        "start": 325,
+        "end": 325,
+        "author": "Kleinfeller."
+      }
+    ]
   },
   {
     "lemma": "Cognitor 2",
@@ -21873,7 +22647,14 @@
   {
     "lemma": "Colchion",
     "previous": "Coira",
-    "next": "Colchis 1"
+    "next": "Colchis 1",
+    "chapters": [
+      {
+        "start": 326,
+        "end": 326,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Colchis 1",
@@ -21883,7 +22664,7 @@
       {
         "start": 326,
         "end": 326,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -21896,7 +22677,7 @@
       {
         "start": 326,
         "end": 326,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -21908,7 +22689,7 @@
       {
         "start": 326,
         "end": 326,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -21945,14 +22726,21 @@
       {
         "start": 327,
         "end": 327,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Convivium",
     "previous": "Conpasin",
-    "next": "Copo"
+    "next": "Copo",
+    "chapters": [
+      {
+        "start": 327,
+        "end": 327,
+        "author": "Mau."
+      }
+    ]
   },
   {
     "lemma": "Copo",
@@ -21974,7 +22762,7 @@
       {
         "start": 327,
         "end": 327,
-        "author": "Streck"
+        "author": "Mau."
       }
     ]
   },
@@ -22006,7 +22794,14 @@
     "lemma": "Corma",
     "previous": "Coriopis",
     "next": "Cornan",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 327,
+        "end": 327,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Cornan",
@@ -22060,7 +22855,14 @@
   {
     "lemma": "Cornelius 10a",
     "previous": "Cornelius a",
-    "next": "Cornelius 10b"
+    "next": "Cornelius 10b",
+    "chapters": [
+      {
+        "start": 328,
+        "end": 328,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 10b",
@@ -22078,7 +22880,14 @@
   {
     "lemma": "Cornelius 40",
     "previous": "Cornelius 10b",
-    "next": "Cornelius 69"
+    "next": "Cornelius 69",
+    "chapters": [
+      {
+        "start": 328,
+        "end": 328,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 69",
@@ -22095,12 +22904,26 @@
   {
     "lemma": "Cornelius 82",
     "previous": "Cornelius 69",
-    "next": "Cornelius 99"
+    "next": "Cornelius 99",
+    "chapters": [
+      {
+        "start": 328,
+        "end": 328,
+        "author": "Knaack."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 99",
     "previous": "Cornelius 82",
-    "next": "Cornelius 103"
+    "next": "Cornelius 103",
+    "chapters": [
+      {
+        "start": 328,
+        "end": 328,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 103",
@@ -22110,14 +22933,21 @@
       {
         "start": 328,
         "end": 328,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Cornelius 108",
     "previous": "Cornelius 103",
-    "next": "Cornelius 110a"
+    "next": "Cornelius 110a",
+    "chapters": [
+      {
+        "start": 328,
+        "end": 328,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 110a",
@@ -22127,102 +22957,274 @@
       {
         "start": 328,
         "end": 329,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Cornelius 135",
     "previous": "Cornelius 110a",
-    "next": "Cornelius 136"
+    "next": "Cornelius 136",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 329,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 136",
     "previous": "Cornelius 135",
-    "next": "Cornelius 141"
+    "next": "Cornelius 141",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 329,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 141",
     "previous": "Cornelius 136",
-    "next": "Cornelius 143"
+    "next": "Cornelius 143",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 329,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 143",
     "previous": "Cornelius 141",
-    "next": "Cornelius 146"
+    "next": "Cornelius 146",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 329,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 146",
     "previous": "Cornelius 143",
-    "next": "Cornelius 198"
+    "next": "Cornelius 198",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 329,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 198",
     "previous": "Cornelius 146",
-    "next": "Cornelius 210"
+    "next": "Cornelius 210",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 329,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 210",
     "previous": "Cornelius 198",
-    "next": "Cornelius 218"
+    "next": "Cornelius 218",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 329,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 218",
     "previous": "Cornelius 210",
-    "next": "Cornelius 238"
+    "next": "Cornelius 238",
+    "chapters": [
+      {
+        "start": 329,
+        "end": 330,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 238",
-    "previous": "Cornelius 218"
+    "previous": "Cornelius 218",
+    "next": "Cornelius 274a",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Cornelius 274a",
+    "previous": "Cornelius 238",
+    "next": "Cornelius 279",
+    "redirect": "Cornelius 58",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Cornelius 279",
+    "previous": "Cornelius 274a",
+    "next": "Cornelius 290",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Groag."
+      }
+    ]
+  },
+  {
+    "lemma": "Cornelius 290",
+    "previous": "Cornelius 279",
+    "next": "Cornelius 295",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 295",
-    "next": "Cornelius 296"
+    "previous": "Cornelius 290",
+    "next": "Cornelius 296",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 296",
     "previous": "Cornelius 295",
-    "next": "Cornelius 322"
+    "next": "Cornelius 322",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 322",
     "previous": "Cornelius 296",
-    "next": "Cornelius 334"
+    "next": "Cornelius 334",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 334",
     "previous": "Cornelius 322",
-    "next": "Cornelius 335"
+    "next": "Cornelius 335",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 335",
     "previous": "Cornelius 334",
-    "next": "Cornelius 337"
+    "next": "Cornelius 337",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 331,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 337",
     "previous": "Cornelius 335",
-    "next": "Cornelius 350"
+    "next": "Cornelius 350",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 331,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 350",
     "previous": "Cornelius 337",
-    "next": "Cornelius 351"
+    "next": "Cornelius 351",
+    "chapters": [
+      {
+        "start": 330,
+        "end": 331,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 351",
     "previous": "Cornelius 350",
-    "next": "Cornelius 376ff."
+    "next": "Cornelius 376ff.",
+    "chapters": [
+      {
+        "start": 331,
+        "end": 331,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 376ff.",
     "previous": "Cornelius 351",
-    "next": "Cornificius 7"
+    "next": "Cornificius 7",
+    "chapters": [
+      {
+        "start": 331,
+        "end": 331,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cornificius 7",
     "previous": "Cornelius 376ff.",
-    "next": "Cosaba"
+    "next": "Cosaba",
+    "chapters": [
+      {
+        "start": 331,
+        "end": 331,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cosaba",
@@ -22232,7 +23234,7 @@
       {
         "start": 331,
         "end": 331,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -22244,7 +23246,7 @@
       {
         "start": 331,
         "end": 331,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -22256,14 +23258,21 @@
       {
         "start": 331,
         "end": 331,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Cossutianus 1",
     "previous": "Cossion",
-    "next": "Crescens 8"
+    "next": "Crescens 8",
+    "chapters": [
+      {
+        "start": 331,
+        "end": 331,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Crescens 8",
@@ -22286,7 +23295,7 @@
       {
         "start": 332,
         "end": 332,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -22311,7 +23320,7 @@
       {
         "start": 332,
         "end": 332,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -22354,7 +23363,14 @@
   {
     "lemma": "Culleolus a",
     "previous": "Cubi",
-    "next": "Cura 4"
+    "next": "Cura 4",
+    "chapters": [
+      {
+        "start": 332,
+        "end": 332,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Cura 4",
@@ -22388,7 +23404,7 @@
       {
         "start": 333,
         "end": 334,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -22412,19 +23428,33 @@
       {
         "start": 334,
         "end": 334,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Dabana 1",
     "previous": "Cyrituca",
-    "next": "Dabausa"
+    "next": "Dabausa",
+    "chapters": [
+      {
+        "start": 333,
+        "end": 333,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Dabausa",
     "previous": "Dabana 1",
-    "next": "Dabithac"
+    "next": "Dabithac",
+    "chapters": [
+      {
+        "start": 333,
+        "end": 333,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Dabithac",
@@ -22434,19 +23464,33 @@
       {
         "start": 333,
         "end": 333,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Dachareni",
     "previous": "Dabithac",
-    "next": "Dacicus"
+    "next": "Dacicus",
+    "chapters": [
+      {
+        "start": 333,
+        "end": 333,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Dacicus",
     "previous": "Dachareni",
-    "next": "Dagala"
+    "next": "Dagala",
+    "chapters": [
+      {
+        "start": 333,
+        "end": 333,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Dagala",
@@ -22456,7 +23500,7 @@
       {
         "start": 333,
         "end": 333,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -22468,14 +23512,21 @@
       {
         "start": 333,
         "end": 333,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
   {
     "lemma": "Daiara",
     "previous": "Dahel",
-    "next": "Daidalos 6"
+    "next": "Daidalos 6",
+    "chapters": [
+      {
+        "start": 333,
+        "end": 334,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Daidalos 6",
@@ -22510,7 +23561,7 @@
       {
         "start": 334,
         "end": 334,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -22542,12 +23593,26 @@
   {
     "lemma": "Damasias 1",
     "previous": "Damaios a",
-    "next": "Damasias 3"
+    "next": "Damasias 3",
+    "chapters": [
+      {
+        "start": 334,
+        "end": 334,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Damasias 3",
     "previous": "Damasias 1",
-    "next": "Damasippos 3a"
+    "next": "Damasippos 3a",
+    "chapters": [
+      {
+        "start": 334,
+        "end": 334,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Damasippos 3a",
@@ -22636,7 +23701,14 @@
   {
     "lemma": "Damokrates 2",
     "previous": "Damokles 6a",
-    "next": "Damokrates 2a"
+    "next": "Damokrates 2a",
+    "chapters": [
+      {
+        "start": 335,
+        "end": 335,
+        "author": "Streck."
+      }
+    ]
   },
   {
     "lemma": "Damokrates 2a",
@@ -22677,7 +23749,14 @@
   {
     "lemma": "Damon 8",
     "previous": "Damokritos 1a",
-    "next": "Damon 8a"
+    "next": "Damon 8a",
+    "chapters": [
+      {
+        "start": 335,
+        "end": 335,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Damon 8a",
@@ -22708,7 +23787,14 @@
   {
     "lemma": "Damon 9",
     "previous": "Damon 8b",
-    "next": "Damon 15a"
+    "next": "Damon 15a",
+    "chapters": [
+      {
+        "start": 336,
+        "end": 336,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Damon 15a",
@@ -22737,12 +23823,26 @@
   {
     "lemma": "Damotimos 2",
     "previous": "Damoteles 5",
-    "next": "Damoxenos 1"
+    "next": "Damoxenos 1",
+    "chapters": [
+      {
+        "start": 337,
+        "end": 337,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Damoxenos 1",
     "previous": "Damotimos 2",
-    "next": "Damoxenos 1a"
+    "next": "Damoxenos 1a",
+    "chapters": [
+      {
+        "start": 337,
+        "end": 337,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Damoxenos 1a",
@@ -22813,7 +23913,7 @@
       {
         "start": 337,
         "end": 337,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -22821,7 +23921,14 @@
     "lemma": "Dandes",
     "previous": "Danas",
     "next": "Danipasos",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 338,
+        "end": 338,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Danipasos",
@@ -22850,7 +23957,14 @@
   {
     "lemma": "Daochos",
     "previous": "Dankasmene",
-    "next": "Daorsoi"
+    "next": "Daorsoi",
+    "chapters": [
+      {
+        "start": 338,
+        "end": 338,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Daorsoi",
@@ -22891,7 +24005,14 @@
   {
     "lemma": "Daphnephoria",
     "previous": "Daphne 5b",
-    "next": "Daphnion"
+    "next": "Daphnion",
+    "chapters": [
+      {
+        "start": 338,
+        "end": 338,
+        "author": "Stengel."
+      }
+    ]
   },
   {
     "lemma": "Daphnion",
@@ -22909,7 +24030,14 @@
     "lemma": "Δαφνοειδές",
     "previous": "Daphnion",
     "next": "Dareios a",
-    "sort_key": "Daphnoeides"
+    "sort_key": "Daphnoeides",
+    "chapters": [
+      {
+        "start": 338,
+        "end": 338,
+        "author": "Stadler."
+      }
+    ]
   },
   {
     "lemma": "Dareios a",
@@ -22920,7 +24048,7 @@
       {
         "start": 338,
         "end": 338,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -22944,14 +24072,21 @@
       {
         "start": 339,
         "end": 339,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
   {
     "lemma": "Deimos",
     "previous": "Deïdameia 6",
-    "next": "Deinicha"
+    "next": "Deinicha",
+    "chapters": [
+      {
+        "start": 339,
+        "end": 339,
+        "author": "Waser."
+      }
+    ]
   },
   {
     "lemma": "Deinicha",
@@ -22961,7 +24096,7 @@
       {
         "start": 339,
         "end": 339,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -22992,7 +24127,14 @@
   {
     "lemma": "Deïokes",
     "previous": "Deinon 7b",
-    "next": "Dektadas"
+    "next": "Dektadas",
+    "chapters": [
+      {
+        "start": 340,
+        "end": 340,
+        "author": "J. Miller."
+      }
+    ]
   },
   {
     "lemma": "Dektadas",
@@ -23009,12 +24151,26 @@
   {
     "lemma": "Deliades 1",
     "previous": "Dektadas",
-    "next": "Deloptes"
+    "next": "Deloptes",
+    "chapters": [
+      {
+        "start": 340,
+        "end": 340,
+        "author": "Stengel."
+      }
+    ]
   },
   {
     "lemma": "Deloptes",
     "previous": "Deliades 1",
-    "next": "Demaratos 3a"
+    "next": "Demaratos 3a",
+    "chapters": [
+      {
+        "start": 340,
+        "end": 340,
+        "author": "Cumont."
+      }
+    ]
   },
   {
     "lemma": "Demaratos 3a",
@@ -23031,7 +24187,14 @@
   {
     "lemma": "Demeas 1",
     "previous": "Demaratos 3a",
-    "next": "Demeas 3"
+    "next": "Demeas 3",
+    "chapters": [
+      {
+        "start": 340,
+        "end": 340,
+        "author": "Capps."
+      }
+    ]
   },
   {
     "lemma": "Demeas 3",
@@ -23041,14 +24204,21 @@
       {
         "start": 340,
         "end": 341,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
   {
     "lemma": "Demetria 1",
     "previous": "Demeas 3",
-    "next": "Demetrias 1a"
+    "next": "Demetrias 1a",
+    "chapters": [
+      {
+        "start": 341,
+        "end": 341,
+        "author": "Stengel."
+      }
+    ]
   },
   {
     "lemma": "Demetrias 1a",
@@ -23070,7 +24240,7 @@
       {
         "start": 342,
         "end": 342,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -23082,7 +24252,7 @@
       {
         "start": 342,
         "end": 342,
-        "author": "Capps"
+        "author": "Capps."
       }
     ]
   },
@@ -23208,12 +24378,26 @@
   {
     "lemma": "Demochares 1",
     "previous": "Demo 6",
-    "next": "Demochares 2"
+    "next": "Demochares 2",
+    "chapters": [
+      {
+        "start": 346,
+        "end": 346,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Demochares 2",
     "previous": "Demochares 1",
-    "next": "Demodike 6"
+    "next": "Demodike 6",
+    "chapters": [
+      {
+        "start": 346,
+        "end": 346,
+        "author": "Kirchner."
+      }
+    ]
   },
   {
     "lemma": "Demodike 6",
