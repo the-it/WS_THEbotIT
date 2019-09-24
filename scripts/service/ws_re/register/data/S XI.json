@@ -1,7 +1,14 @@
 [
   {
     "lemma": "Abragila",
-    "next": "Aelius 15a"
+    "next": "Aelius 15a",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "H.-J. Diesner."
+      }
+    ]
   },
   {
     "lemma": "Aelius 15a",
@@ -11,7 +18,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -59,7 +66,7 @@
       {
         "start": 29,
         "end": 29,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -115,7 +122,7 @@
       {
         "start": 48,
         "end": 48,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
@@ -127,7 +134,7 @@
       {
         "start": 48,
         "end": 48,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -168,7 +175,7 @@
       {
         "start": 61,
         "end": 61,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
@@ -180,7 +187,7 @@
       {
         "start": 61,
         "end": 61,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -192,7 +199,7 @@
       {
         "start": 61,
         "end": 61,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -204,7 +211,7 @@
       {
         "start": 61,
         "end": 62,
-        "author": "Alföldy"
+        "author": "G. Alföldy."
       }
     ]
   },
@@ -216,7 +223,7 @@
       {
         "start": 62,
         "end": 62,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -273,7 +280,7 @@
       {
         "start": 136,
         "end": 136,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
@@ -307,7 +314,7 @@
       {
         "start": 336,
         "end": 336,
-        "author": "Moraux"
+        "author": "Paul Moraux."
       }
     ]
   },
@@ -332,7 +339,7 @@
       {
         "start": 343,
         "end": 343,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -361,7 +368,7 @@
       {
         "start": 343,
         "end": 344,
-        "author": "Gross"
+        "author": "W. H. Gross."
       }
     ]
   },
@@ -373,7 +380,7 @@
       {
         "start": 344,
         "end": 344,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -390,7 +397,7 @@
       {
         "start": 346,
         "end": 346,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -431,7 +438,7 @@
       {
         "start": 355,
         "end": 355,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
@@ -443,7 +450,7 @@
       {
         "start": 355,
         "end": 355,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -465,7 +472,7 @@
       {
         "start": 357,
         "end": 357,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -478,7 +485,7 @@
       {
         "start": 357,
         "end": 357,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -490,14 +497,21 @@
       {
         "start": 357,
         "end": 357,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
   {
     "lemma": "Campona",
     "previous": "Campilius",
-    "next": "Caragonius"
+    "next": "Caragonius",
+    "chapters": [
+      {
+        "start": 357,
+        "end": 368,
+        "author": "Ferenc Fülep."
+      }
+    ]
   },
   {
     "lemma": "Caragonius",
@@ -507,7 +521,7 @@
       {
         "start": 368,
         "end": 368,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -519,7 +533,7 @@
       {
         "start": 368,
         "end": 368,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -539,13 +553,27 @@
     "lemma": "Celamantia",
     "previous": "Ceangli",
     "next": "Chamaileon 1",
-    "redirect": "Pannonia"
+    "redirect": "Pannonia",
+    "chapters": [
+      {
+        "start": 368,
+        "end": 368,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Chamaileon 1",
     "previous": "Celamantia",
     "next": "Claudius 211a",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 368,
+        "end": 372,
+        "author": "F. Wehrli."
+      }
+    ]
   },
   {
     "lemma": "Claudius 211a",
@@ -555,7 +583,7 @@
       {
         "start": 372,
         "end": 372,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -567,7 +595,7 @@
       {
         "start": 371,
         "end": 371,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -575,12 +603,26 @@
     "lemma": "Constantia 6",
     "previous": "Clementianus 2",
     "next": "Cornacates",
-    "sort_key": "Constantia 06"
+    "sort_key": "Constantia 06",
+    "chapters": [
+      {
+        "start": 371,
+        "end": 372,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Cornacates",
     "previous": "Constantia 6",
-    "next": "Cornelius 395"
+    "next": "Cornelius 395",
+    "chapters": [
+      {
+        "start": 373,
+        "end": 373,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 395",
@@ -590,7 +632,7 @@
       {
         "start": 373,
         "end": 512,
-        "author": "Borzsák"
+        "author": "St. Borzsák."
       }
     ]
   },
@@ -602,7 +644,7 @@
       {
         "start": 512,
         "end": 513,
-        "author": "Kröner"
+        "author": "Hans-Otto Kröner."
       }
     ]
   },
@@ -614,7 +656,7 @@
       {
         "start": 513,
         "end": 513,
-        "author": "Kröner"
+        "author": "Hans-Otto Kröner."
       }
     ]
   },
@@ -626,7 +668,7 @@
       {
         "start": 513,
         "end": 513,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -1371,7 +1413,14 @@
   {
     "lemma": "Parrhasia",
     "previous": "Parka",
-    "next": "Parthenion 1"
+    "next": "Parthenion 1",
+    "chapters": [
+      {
+        "start": 1029,
+        "end": 1033,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Parthenion 1",
@@ -2091,7 +2140,7 @@
       {
         "start": 1365,
         "end": 1365,
-        "author": "Borzsák"
+        "author": "Stefan Borzsák."
       }
     ]
   },
