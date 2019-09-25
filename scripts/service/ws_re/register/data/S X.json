@@ -521,7 +521,7 @@
       {
         "start": 5,
         "end": 5,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -533,7 +533,7 @@
       {
         "start": 5,
         "end": 5,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -593,7 +593,7 @@
       {
         "start": 5,
         "end": 5,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -604,8 +604,8 @@
     "chapters": [
       {
         "start": 5,
-        "end": 5,
-        "author": "Geisau"
+        "end": 6,
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -629,7 +629,7 @@
       {
         "start": 6,
         "end": 6,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -677,7 +677,7 @@
       {
         "start": 6,
         "end": 6,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -689,7 +689,7 @@
       {
         "start": 6,
         "end": 6,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -730,7 +730,7 @@
       {
         "start": 7,
         "end": 7,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -742,7 +742,7 @@
       {
         "start": 7,
         "end": 7,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -754,7 +754,7 @@
       {
         "start": 7,
         "end": 7,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -831,7 +831,7 @@
       {
         "start": 8,
         "end": 8,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -848,7 +848,7 @@
       {
         "start": 8,
         "end": 12,
-        "author": "Widmann"
+        "author": "Hans Widmann."
       }
     ]
   },
@@ -885,7 +885,7 @@
       {
         "start": 13,
         "end": 13,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -989,7 +989,7 @@
       {
         "start": 16,
         "end": 16,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -1037,7 +1037,7 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -1049,7 +1049,7 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -1066,7 +1066,7 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -1449,12 +1449,26 @@
   {
     "lemma": "Apollodoros 41b",
     "previous": "Apollas 1",
-    "next": "Apollodoros 41c"
+    "next": "Apollodoros 41c",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Apollodoros 41c",
     "previous": "Apollodoros 41b",
-    "next": "Apollodoros 78"
+    "next": "Apollodoros 78",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Apollodoros 78",
@@ -1683,7 +1697,14 @@
     "lemma": "Archias 17b",
     "previous": "Archias 11",
     "next": "Archimimus",
-    "sort_key": "Archias 017b"
+    "sort_key": "Archias 017b",
+    "chapters": [
+      {
+        "start": 40,
+        "end": 40,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Archimimus",
@@ -1718,7 +1739,14 @@
   {
     "lemma": "Arimnestos 6a",
     "previous": "Ἀρι...",
-    "next": "Ἀριστ(..."
+    "next": "Ἀριστ(...",
+    "chapters": [
+      {
+        "start": 41,
+        "end": 41,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Ἀριστ(...",
@@ -1736,12 +1764,26 @@
   {
     "lemma": "Aristagoras 9a",
     "previous": "Ἀριστ(...",
-    "next": "Aristarchos 10"
+    "next": "Aristarchos 10",
+    "chapters": [
+      {
+        "start": 41,
+        "end": 41,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aristarchos 10",
     "previous": "Aristagoras 9a",
-    "next": "Aristias 2"
+    "next": "Aristias 2",
+    "chapters": [
+      {
+        "start": 41,
+        "end": 41,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aristias 2",
@@ -1770,7 +1812,14 @@
   {
     "lemma": "Aristippos 3",
     "previous": "Aristion 18",
-    "next": "Aristodemos 37"
+    "next": "Aristodemos 37",
+    "chapters": [
+      {
+        "start": 42,
+        "end": 42,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aristodemos 37",
@@ -1788,7 +1837,14 @@
     "lemma": "Aristokrates 7",
     "previous": "Aristodemos 37",
     "next": "Aristokrates 29",
-    "sort_key": "Aristokrates 07"
+    "sort_key": "Aristokrates 07",
+    "chapters": [
+      {
+        "start": 42,
+        "end": 42,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aristokrates 29",
@@ -1805,13 +1861,27 @@
   {
     "lemma": "Aristokritos 1",
     "previous": "Aristokrates 29",
-    "next": "Aristomachos 5"
+    "next": "Aristomachos 5",
+    "chapters": [
+      {
+        "start": 42,
+        "end": 42,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aristomachos 5",
     "previous": "Aristokritos 1",
     "next": "Aristomachos 23",
-    "sort_key": "Aristomachos 05"
+    "sort_key": "Aristomachos 05",
+    "chapters": [
+      {
+        "start": 42,
+        "end": 43,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aristomachos 23",
@@ -1852,12 +1922,26 @@
   {
     "lemma": "Ariston 39a",
     "previous": "Aristomenes 12a",
-    "next": "Ariston 39b"
+    "next": "Ariston 39b",
+    "chapters": [
+      {
+        "start": 43,
+        "end": 43,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Ariston 39b",
     "previous": "Ariston 39a",
-    "next": "Ariston 39d"
+    "next": "Ariston 39d",
+    "chapters": [
+      {
+        "start": 43,
+        "end": 43,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Ariston 39d",
@@ -1911,7 +1995,14 @@
   {
     "lemma": "Arkesilaos 12",
     "previous": "Ἄριστυς",
-    "next": "Armogast"
+    "next": "Armogast",
+    "chapters": [
+      {
+        "start": 44,
+        "end": 44,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Armogast",
@@ -2025,12 +2116,26 @@
   {
     "lemma": "Asklapon 2",
     "previous": "Asinius 21b",
-    "next": "Asklepiodoros 11a"
+    "next": "Asklepiodoros 11a",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 45,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Asklepiodoros 11a",
     "previous": "Asklapon 2",
-    "next": "Asklepiodoros 14"
+    "next": "Asklepiodoros 14",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 45,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Asklepiodoros 14",
@@ -2047,7 +2152,14 @@
   {
     "lemma": "Astydamas 2",
     "previous": "Asklepiodoros 14",
-    "next": "Athanias 3"
+    "next": "Athanias 3",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 47,
+        "author": "Franz Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Athanias 3",
@@ -2079,7 +2191,14 @@
     "previous": "Ἀθη...",
     "next": "Athenaios 28",
     "wp_link": "w:de:Athen",
-    "ws_link": "s:de:Athen"
+    "ws_link": "s:de:Athen",
+    "chapters": [
+      {
+        "start": 48,
+        "end": 89,
+        "author": "Johannes Papastavrou."
+      }
+    ]
   },
   {
     "lemma": "Athenaios 28",
@@ -2096,7 +2215,14 @@
   {
     "lemma": "Athenodoros 9",
     "previous": "Athenaios 28",
-    "next": "Atherion"
+    "next": "Atherion",
+    "chapters": [
+      {
+        "start": 89,
+        "end": 89,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Atherion",
@@ -2199,13 +2325,27 @@
     "lemma": "Avianius 7",
     "previous": "Aufidius 44b",
     "next": "Aurelius 32",
-    "sort_key": "Auianius 07"
+    "sort_key": "Auianius 07",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 90,
+        "author": "H.-O. Kröner."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 32",
     "previous": "Avianius 7",
     "next": "Aurelius 36a",
-    "sort_key": "Aurelius 032"
+    "sort_key": "Aurelius 032",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 91,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 36a",
@@ -2255,7 +2395,7 @@
       {
         "start": 93,
         "end": 93,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -2324,7 +2464,14 @@
   {
     "lemma": "Aurelius 200",
     "previous": "Aurelius 192aa",
-    "next": "Aurelius 200a"
+    "next": "Aurelius 200a",
+    "chapters": [
+      {
+        "start": 93,
+        "end": 94,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 200a",
@@ -2367,7 +2514,14 @@
     "lemma": "Autolykos 6",
     "previous": "Αὐτο(...",
     "next": "Βαβύλλιος",
-    "sort_key": "Auto(---"
+    "sort_key": "Auto(---",
+    "chapters": [
+      {
+        "start": 94,
+        "end": 94,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Βαβύλλιος",
@@ -2378,7 +2532,7 @@
       {
         "start": 94,
         "end": 94,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -2391,7 +2545,7 @@
       {
         "start": 95,
         "end": 95,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -2411,7 +2565,14 @@
   {
     "lemma": "Bathyllos 7",
     "previous": "Βασιλείδης 1a",
-    "next": "(Βελε)μινάτου"
+    "next": "(Βελε)μινάτου",
+    "chapters": [
+      {
+        "start": 95,
+        "end": 95,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "(Βελε)μινάτου",
@@ -2646,7 +2807,14 @@
   {
     "lemma": "Chirographum",
     "previous": "Charidemos 4a",
-    "next": "Choraules"
+    "next": "Choraules",
+    "chapters": [
+      {
+        "start": 126,
+        "end": 127,
+        "author": "Erich Berneker."
+      }
+    ]
   },
   {
     "lemma": "Choraules",
@@ -7333,7 +7501,14 @@
   {
     "lemma": "Pauperies",
     "previous": "Paulus 29",
-    "next": "Pausanias 12a"
+    "next": "Pausanias 12a",
+    "chapters": [
+      {
+        "start": 521,
+        "end": 529,
+        "author": "Lothar Müller."
+      }
+    ]
   },
   {
     "lemma": "Pausanias 12a",
