@@ -147,7 +147,6 @@
   },
   {
     "lemma": "Aiacius 2",
-    "next": "Albiobola",
     "chapters": [
       {
         "start": 3,
@@ -158,13 +157,13 @@
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 2",
+    "previous": "Aiacius 3",
     "next": "Alexandros 90a",
     "chapters": [
       {
         "start": 3,
         "end": 3,
-        "author": "Franke"
+        "author": "Alfred Franke."
       }
     ]
   },
@@ -177,7 +176,7 @@
       {
         "start": 3,
         "end": 5,
-        "author": "Kubitschek"
+        "author": "Wilh. Kubitschek."
       }
     ]
   },
@@ -345,7 +344,14 @@
     "lemma": "Appius 13a",
     "previous": "Aponius 8a",
     "next": "Appuleius 16a",
-    "redirect": "Maximus 1"
+    "redirect": "Maximus 1",
+    "chapters": [
+      {
+        "start": 9,
+        "end": 9,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Appuleius 16a",
@@ -415,7 +421,7 @@
       {
         "start": 12,
         "end": 12,
-        "author": "Geisau"
+        "author": "v. Geisau."
       }
     ]
   },
@@ -434,7 +440,14 @@
   {
     "lemma": "Aretalogoi",
     "previous": "Aresaces",
-    "next": "Arinistae"
+    "next": "Arinistae",
+    "chapters": [
+      {
+        "start": 13,
+        "end": 15,
+        "author": "Wolf Aly."
+      }
+    ]
   },
   {
     "lemma": "Arinistae",
@@ -451,7 +464,14 @@
   {
     "lemma": "Arrius 13",
     "previous": "Arinistae",
-    "next": "Arrius 19a"
+    "next": "Arrius 19a",
+    "chapters": [
+      {
+        "start": 16,
+        "end": 16,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Arrius 19a",
@@ -533,7 +553,14 @@
   {
     "lemma": "Aufidius 41",
     "previous": "Atilius 54a",
-    "next": "Aufidius 44a"
+    "next": "Aufidius 44a",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aufidius 44a",
@@ -551,13 +578,27 @@
     "lemma": "Avidius 5",
     "previous": "Aufidius 44a",
     "next": "Avidius 6",
-    "sort_key": "Avidius 05"
+    "sort_key": "Avidius 05",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Avidius 6",
     "previous": "Avidius 5",
     "next": "Avidius 7a",
-    "sort_key": "Avidius 06"
+    "sort_key": "Avidius 06",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 18,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Avidius 7a",
@@ -617,7 +658,14 @@
   {
     "lemma": "Brutus 3",
     "previous": "Bruttius 5a",
-    "next": "Butra"
+    "next": "Butra",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Max Fluss."
+      }
+    ]
   },
   {
     "lemma": "Butra",
@@ -627,7 +675,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },
@@ -639,19 +687,33 @@
       {
         "start": 18,
         "end": 19,
-        "author": "Geisau"
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Caecina 22",
     "previous": "Caburriates",
-    "next": "Caecina 23"
+    "next": "Caecina 23",
+    "chapters": [
+      {
+        "start": 19,
+        "end": 19,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Caecina 23",
     "previous": "Caecina 22",
-    "next": "Caedici(i)"
+    "next": "Caedici(i)",
+    "chapters": [
+      {
+        "start": 19,
+        "end": 19,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Caedici(i)",
@@ -802,12 +864,26 @@
     "lemma": "Calpurnius 99",
     "previous": "Calouitanus Portus",
     "next": "Calpurnius 101",
-    "sort_key": "Calpurnius 099"
+    "sort_key": "Calpurnius 099",
+    "chapters": [
+      {
+        "start": 20,
+        "end": 20,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Calpurnius 101",
     "previous": "Calpurnius 99",
-    "next": "Calvisius 7"
+    "next": "Calvisius 7",
+    "chapters": [
+      {
+        "start": 20,
+        "end": 20,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Calvisius 7",
@@ -843,7 +919,7 @@
       {
         "start": 20,
         "end": 20,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -867,7 +943,7 @@
       {
         "start": 20,
         "end": 20,
-        "author": "Geisau"
+        "author": "v. Geisau."
       }
     ]
   },
