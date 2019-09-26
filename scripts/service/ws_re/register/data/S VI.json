@@ -19,14 +19,14 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
   {
     "lemma": "Acilius 16",
     "previous": "Aburnius 1a",
-    "next": "Acutius 1a",
+    "next": "Acutius 1b",
     "chapters": [
       {
         "start": 1,
@@ -36,7 +36,16 @@
     ]
   },
   {
-    "lemma": "Acutius 1b"
+    "lemma": "Acutius 1b",
+    "previous": "Acilius 16",
+    "next": "Aelius 75a",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Acutius 1a",
@@ -51,7 +60,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -125,7 +134,7 @@
       {
         "start": 3,
         "end": 3,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -143,10 +152,19 @@
   },
   {
     "lemma": "Aiacius 3",
-    "previous": "Agesistratos"
+    "previous": "Agesistratos",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Aiacius 2",
+    "previous": "Agesistratos",
+    "next": "Albiobola",
     "chapters": [
       {
         "start": 3,
@@ -157,7 +175,7 @@
   },
   {
     "lemma": "Albiobola",
-    "previous": "Aiacius 3",
+    "previous": "Aiacius 2",
     "next": "Alexandros 90a",
     "chapters": [
       {
@@ -207,7 +225,14 @@
   {
     "lemma": "Anisa",
     "previous": "Androtion",
-    "next": "Annius 26a"
+    "next": "Annius 26a",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Annius 26a",
@@ -218,29 +243,57 @@
       {
         "start": 7,
         "end": 7,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
   {
     "lemma": "Annius 30",
     "previous": "Annius 26a",
-    "next": "Annius 66"
+    "next": "Annius 66",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Annius 66",
     "previous": "Annius 30",
-    "next": "Annius 69"
+    "next": "Annius 69",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Annius 69",
     "previous": "Annius 66",
-    "next": "Annius 72"
+    "next": "Annius 72",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Annius 72",
     "previous": "Annius 69",
-    "next": "Antistius 41"
+    "next": "Antistius 41",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Antistius 41",
@@ -262,7 +315,7 @@
       {
         "start": 7,
         "end": 7,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -287,7 +340,7 @@
       {
         "start": 8,
         "end": 8,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -300,7 +353,7 @@
       {
         "start": 8,
         "end": 8,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -312,7 +365,7 @@
       {
         "start": 8,
         "end": 8,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -323,7 +376,8 @@
     "chapters": [
       {
         "start": 8,
-        "end": 10
+        "end": 10,
+        "author": "Atenstädt."
       }
     ]
   },
@@ -336,7 +390,7 @@
       {
         "start": 9,
         "end": 9,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -361,7 +415,7 @@
       {
         "start": 9,
         "end": 9,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -373,7 +427,7 @@
       {
         "start": 9,
         "end": 9,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -481,7 +535,7 @@
       {
         "start": 16,
         "end": 16,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -493,7 +547,7 @@
       {
         "start": 16,
         "end": 16,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -505,7 +559,7 @@
       {
         "start": 16,
         "end": 16,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -524,7 +578,14 @@
   {
     "lemma": "Atidius 3",
     "previous": "Athenaios 23",
-    "next": "Atilius 45a"
+    "next": "Atilius 45a",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Atilius 45a",
@@ -534,7 +595,7 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -546,7 +607,7 @@
       {
         "start": 17,
         "end": 18,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -570,7 +631,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -609,7 +670,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -621,7 +682,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -633,7 +694,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -645,7 +706,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -653,7 +714,14 @@
     "lemma": "Bruttius 5a",
     "previous": "Baebius 36a",
     "next": "Brutus 3",
-    "sort_key": "Bruttius 05a"
+    "sort_key": "Bruttius 05a",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Brutus 3",
@@ -3169,7 +3237,7 @@
       {
         "start": 289,
         "end": 290,
-        "author": "Opitz"
+        "author": "H. G. Opitz."
       }
     ]
   },
@@ -3181,7 +3249,7 @@
       {
         "start": 289,
         "end": 291,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },
@@ -3372,7 +3440,7 @@
       {
         "start": 373,
         "end": 374,
-        "author": "Opitz"
+        "author": "H. G. Opitz."
       }
     ]
   },
@@ -3564,7 +3632,7 @@
       {
         "start": 509,
         "end": 520,
-        "author": "Poland"
+        "author": "F. Poland."
       }
     ]
   },
