@@ -25,7 +25,14 @@
   {
     "lemma": "Aburnius 1a",
     "previous": "Aburius 3",
-    "next": "Accaeus"
+    "next": "Accaeus",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Accaeus",
@@ -480,11 +487,19 @@
   },
   {
     "lemma": "Anaxagoras 4",
-    "previous": "Amelas"
+    "previous": "Amelas",
+    "next": "Anaximandros 1",
+    "chapters": [
+      {
+        "start": 28,
+        "end": 30,
+        "author": "Carl Joachim Classen."
+      }
+    ]
   },
   {
     "lemma": "Anaximandros 1",
-    "previous": "Amelas",
+    "previous": "Anaxagoras 4",
     "next": "Anaximenes 2",
     "chapters": [
       {
@@ -507,19 +522,44 @@
     ]
   },
   {
+    "lemma": "Anaximenes 1",
+    "next": "Andania 1"
+  },
+  {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 2",
-    "next": "Andautonia"
+    "previous": "Anaximenes 1",
+    "next": "Andautonia",
+    "chapters": [
+      {
+        "start": 71,
+        "end": 71,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Andautonia",
     "previous": "Andania 1",
-    "next": "Andeda"
+    "next": "Andeda",
+    "chapters": [
+      {
+        "start": 71,
+        "end": 75,
+        "author": "Jaroslav Šašel."
+      }
+    ]
   },
   {
     "lemma": "Andeda",
     "previous": "Andautonia",
-    "next": "Andreas 11a"
+    "next": "Andreas 11a",
+    "chapters": [
+      {
+        "start": 75,
+        "end": 85,
+        "author": "Barbara Levick."
+      }
+    ]
   },
   {
     "lemma": "Andreas 11a",
@@ -598,7 +638,14 @@
   {
     "lemma": "Annius 72",
     "previous": "Annius 66a",
-    "next": "Annius 73a"
+    "next": "Annius 73a",
+    "chapters": [
+      {
+        "start": 87,
+        "end": 87,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Annius 73a",
@@ -617,7 +664,14 @@
     "lemma": "Annius 93",
     "previous": "Annius 73a",
     "next": "Antipatros 15a",
-    "sort_key": "Annius 093"
+    "sort_key": "Annius 093",
+    "chapters": [
+      {
+        "start": 87,
+        "end": 87,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antipatros 15a",
@@ -682,7 +736,14 @@
     "lemma": "Antonius 36",
     "previous": "Antonius 35a",
     "next": "Antonius 51a",
-    "sort_key": "Antonius 036"
+    "sort_key": "Antonius 036",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 88,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antonius 51a",
@@ -701,7 +762,14 @@
     "lemma": "Antonius 58a",
     "previous": "Antonius 51a",
     "next": "Antonius 63a",
-    "sort_key": "Antonius 058a"
+    "sort_key": "Antonius 058a",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 88,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antonius 63a",
@@ -720,30 +788,65 @@
     "lemma": "Antonius 65",
     "previous": "Antonius 63a",
     "next": "Antonius 75",
-    "sort_key": "Antonius 065"
+    "sort_key": "Antonius 065",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 88,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antonius 75",
     "previous": "Antonius 65",
     "next": "Antonius 76",
-    "sort_key": "Antonius 075"
+    "sort_key": "Antonius 075",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 89,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antonius 76",
     "previous": "Antonius 75",
     "next": "Antonius 80",
-    "sort_key": "Antonius 076"
+    "sort_key": "Antonius 076",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 89,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antonius 80",
     "previous": "Antonius 76",
     "next": "Antonius 107",
-    "sort_key": "Antonius 080"
+    "sort_key": "Antonius 080",
+    "chapters": [
+      {
+        "start": 89,
+        "end": 89,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Antonius 107",
     "previous": "Antonius 80",
-    "next": "Apicatus"
+    "next": "Apicatus",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 90,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Apicatus",
@@ -874,7 +977,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -905,7 +1008,14 @@
   {
     "lemma": "Arrius 19a",
     "previous": "Arrius 17a",
-    "next": "Arrius 31a"
+    "next": "Arrius 31a",
+    "chapters": [
+      {
+        "start": 98,
+        "end": 98,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Arrius 31a",
@@ -1152,12 +1262,26 @@
   {
     "lemma": "Baebius 28",
     "previous": "Aurelius 141b",
-    "next": "Baebius 28a"
+    "next": "Baebius 28a",
+    "chapters": [
+      {
+        "start": 130,
+        "end": 130,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Baebius 28a",
     "previous": "Baebius 28",
-    "next": "Baebius 32"
+    "next": "Baebius 32",
+    "chapters": [
+      {
+        "start": 130,
+        "end": 130,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Baebius 32",
@@ -1174,7 +1298,14 @@
   {
     "lemma": "Baebius 47",
     "previous": "Baebius 32",
-    "next": "Bainobaudes 1"
+    "next": "Bainobaudes 1",
+    "chapters": [
+      {
+        "start": 130,
+        "end": 130,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Bainobaudes 1",
@@ -4166,7 +4297,14 @@
   {
     "lemma": "Archedemos 6",
     "previous": "Archedemos 5",
-    "next": "Arinthaeus 3"
+    "next": "Arinthaeus 3",
+    "chapters": [
+      {
+        "start": 1356,
+        "end": 1392,
+        "author": "Ernst Günther Schmidt."
+      }
+    ]
   },
   {
     "lemma": "Arinthaeus 3",
