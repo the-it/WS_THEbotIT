@@ -14,12 +14,26 @@
   {
     "lemma": "Adule",
     "previous": "Adobogiona",
-    "next": "Adulitai"
+    "next": "Adulitai",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 2,
+        "author": "E. Littmann."
+      }
+    ]
   },
   {
     "lemma": "Adulitai",
     "previous": "Adule",
-    "next": "Agri decumates"
+    "next": "Agri decumates",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 3,
+        "author": "E. Littmann."
+      }
+    ]
   },
   {
     "lemma": "Agri decumates",
@@ -28,8 +42,8 @@
     "chapters": [
       {
         "start": 3,
-        "end": 3,
-        "author": "Sontheimer"
+        "end": 15,
+        "author": "Walther Sontheimer."
       }
     ]
   },
@@ -40,8 +54,8 @@
     "chapters": [
       {
         "start": 15,
-        "end": 15,
-        "author": "Swoboda, E[rich]"
+        "end": 21,
+        "author": "E. Swoboda."
       }
     ]
   },
@@ -53,14 +67,21 @@
       {
         "start": 21,
         "end": 21,
-        "author": "Walter"
+        "author": "Otto Walter."
       }
     ]
   },
   {
     "lemma": "Alexandros 17",
     "previous": "Aischetades",
-    "next": "Alum Gallicum"
+    "next": "Alum Gallicum",
+    "chapters": [
+      {
+        "start": 21,
+        "end": 22,
+        "author": "Fritz Heichelheim."
+      }
+    ]
   },
   {
     "lemma": "Alum Gallicum",
@@ -69,15 +90,22 @@
     "chapters": [
       {
         "start": 22,
-        "end": 22,
-        "author": "Steier"
+        "end": 26,
+        "author": "Steier."
       }
     ]
   },
   {
     "lemma": "Amnisos 1",
     "previous": "Alum Gallicum",
-    "next": "Amphinomos 6"
+    "next": "Amphinomos 6",
+    "chapters": [
+      {
+        "start": 26,
+        "end": 38,
+        "author": "E. Kirsten."
+      }
+    ]
   },
   {
     "lemma": "Amphinomos 6",
@@ -86,8 +114,8 @@
     "chapters": [
       {
         "start": 38,
-        "end": 38,
-        "author": "Fritz"
+        "end": 39,
+        "author": "K. v. Fritz."
       }
     ]
   },
@@ -99,7 +127,7 @@
       {
         "start": 39,
         "end": 39,
-        "author": "Fritz"
+        "author": "K. v. Fritz."
       }
     ]
   },
@@ -111,25 +139,46 @@
       {
         "start": 39,
         "end": 39,
-        "author": "Dumrese"
+        "author": "Dumrese."
       }
     ]
   },
   {
     "lemma": "Antipatros 29",
     "previous": "Antiochos 65",
-    "next": "Apollodoros 27"
+    "next": "Apollodoros 27",
+    "chapters": [
+      {
+        "start": 39,
+        "end": 40,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Apollodoros 27",
     "previous": "Antipatros 29",
-    "next": "Apollonia 7"
+    "next": "Apollonia 7",
+    "chapters": [
+      {
+        "start": 40,
+        "end": 40,
+        "author": "Fritz Heichelheim."
+      }
+    ]
   },
   {
     "lemma": "Apollonia 7",
     "previous": "Apollodoros 27",
     "next": "Apomoira",
-    "sort_key": "Apollonia 07"
+    "sort_key": "Apollonia 07",
+    "chapters": [
+      {
+        "start": 40,
+        "end": 43,
+        "author": "E. Kirsten."
+      }
+    ]
   },
   {
     "lemma": "Apomoira",
@@ -138,8 +187,8 @@
     "chapters": [
       {
         "start": 43,
-        "end": 43,
-        "author": "Kortenbeutel"
+        "end": 44,
+        "author": "H. Kortenbeutel."
       }
     ]
   },
@@ -152,14 +201,21 @@
       {
         "start": 45,
         "end": 45,
-        "author": "Saria"
+        "author": "B. Saria."
       }
     ]
   },
   {
     "lemma": "Arbion",
     "previous": "Aqua, Aquae 77a",
-    "next": "Archisomatophylakes"
+    "next": "Archisomatophylakes",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 46,
+        "author": "E. Kirsten."
+      }
+    ]
   },
   {
     "lemma": "Archisomatophylakes",
@@ -168,15 +224,22 @@
     "chapters": [
       {
         "start": 46,
-        "end": 46,
-        "author": "Kortenbeutel"
+        "end": 49,
+        "author": "H. Kortenbeutel."
       }
     ]
   },
   {
     "lemma": "Architectura",
     "previous": "Archisomatophylakes",
-    "next": "Aristolaos 2"
+    "next": "Aristolaos 2",
+    "chapters": [
+      {
+        "start": 49,
+        "end": 49,
+        "author": "E. Fabricius."
+      }
+    ]
   },
   {
     "lemma": "Aristolaos 2",
@@ -186,7 +249,7 @@
       {
         "start": 49,
         "end": 49,
-        "author": "Heichelheim"
+        "author": "Fritz Heichelheim."
       }
     ]
   },
@@ -198,7 +261,7 @@
       {
         "start": 49,
         "end": 49,
-        "author": "Kubitschek"
+        "author": "W. Kubitschek †."
       }
     ]
   },
@@ -210,7 +273,7 @@
       {
         "start": 49,
         "end": 49,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -221,8 +284,8 @@
     "chapters": [
       {
         "start": 49,
-        "end": 49,
-        "author": "Stein, [Arthur]"
+        "end": 50,
+        "author": "Stein."
       }
     ]
   },
@@ -234,7 +297,7 @@
       {
         "start": 50,
         "end": 50,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -246,8 +309,8 @@
     "chapters": [
       {
         "start": 50,
-        "end": 50,
-        "author": "Hopfner"
+        "end": 64,
+        "author": "Th. Hopfner."
       }
     ]
   },
@@ -259,8 +322,8 @@
     "chapters": [
       {
         "start": 64,
-        "end": 64,
-        "author": "Dumrese"
+        "end": 65,
+        "author": "Dumrese."
       }
     ]
   },
@@ -271,15 +334,22 @@
     "chapters": [
       {
         "start": 65,
-        "end": 65,
-        "author": "Kornemann"
+        "end": 71,
+        "author": "Ernst Kornemann."
       }
     ]
   },
   {
     "lemma": "Auction 1",
     "previous": "Attributio",
-    "next": "Aurelius 63a"
+    "next": "Aurelius 63a",
+    "chapters": [
+      {
+        "start": 72,
+        "end": 72,
+        "author": "Erich Ziebarth."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 63a",
@@ -289,7 +359,7 @@
       {
         "start": 72,
         "end": 72,
-        "author": "Saria"
+        "author": "B. Saria."
       }
     ]
   },
@@ -301,8 +371,8 @@
     "chapters": [
       {
         "start": 72,
-        "end": 72,
-        "author": "Stein, [Arthur]"
+        "end": 73,
+        "author": "Stein."
       }
     ]
   },
@@ -310,7 +380,14 @@
     "lemma": "Aurelius 56b",
     "previous": "Aurelius 39a",
     "next": "Aurelius 145aaa",
-    "sort_key": "Aurelius 056b"
+    "sort_key": "Aurelius 056b",
+    "chapters": [
+      {
+        "start": 73,
+        "end": 73,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 145aaa",
@@ -319,15 +396,21 @@
     "chapters": [
       {
         "start": 73,
-        "end": 73,
-        "author": "Stein, [Arthur]"
+        "end": 74,
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Aurelius 184",
     "previous": "Aurelius 145aaa",
-    "next": "Aurelius 216a"
+    "next": "Aurelius 216a",
+    "chapters": [
+      {
+        "start": 74,
+        "end": 74
+      }
+    ]
   },
   {
     "lemma": "Aurelius 216a",
@@ -336,8 +419,8 @@
     "chapters": [
       {
         "start": 74,
-        "end": 74,
-        "author": "Stein, [Arthur]"
+        "end": 75,
+        "author": "Stein."
       }
     ]
   },
@@ -349,7 +432,7 @@
       {
         "start": 75,
         "end": 75,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -361,7 +444,7 @@
       {
         "start": 75,
         "end": 75,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -372,20 +455,34 @@
     "chapters": [
       {
         "start": 75,
-        "end": 75,
-        "author": "Littmann"
+        "end": 80,
+        "author": "E. Littmann."
       }
     ]
   },
   {
     "lemma": "Biennos 1",
     "previous": "Axomis",
-    "next": "Brogitarus"
+    "next": "Brogitarus",
+    "chapters": [
+      {
+        "start": 79,
+        "end": 82,
+        "author": "E. Kirsten."
+      }
+    ]
   },
   {
     "lemma": "Brogitarus",
     "previous": "Biennos 1",
-    "next": "Caecilius 33a"
+    "next": "Caecilius 33a",
+    "chapters": [
+      {
+        "start": 82,
+        "end": 83,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Caecilius 33a",
@@ -395,14 +492,21 @@
       {
         "start": 83,
         "end": 83,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
   {
     "lemma": "Caecina 24",
     "previous": "Caecilius 33a",
-    "next": "Caelius 7a"
+    "next": "Caelius 7a",
+    "chapters": [
+      {
+        "start": 83,
+        "end": 83,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Caelius 7a",
@@ -412,7 +516,7 @@
       {
         "start": 83,
         "end": 83,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -423,15 +527,22 @@
     "chapters": [
       {
         "start": 83,
-        "end": 83,
-        "author": "Saria"
+        "end": 84,
+        "author": "B. Saria."
       }
     ]
   },
   {
     "lemma": "Chirographum",
     "previous": "Canaliclarius",
-    "next": "Χειροτέχνιον"
+    "next": "Χειροτέχνιον",
+    "chapters": [
+      {
+        "start": 84,
+        "end": 84,
+        "author": "Erich Ziebarth."
+      }
+    ]
   },
   {
     "lemma": "Χειροτέχνιον",
@@ -442,7 +553,7 @@
       {
         "start": 84,
         "end": 84,
-        "author": "Ziebarth"
+        "author": "Erich Ziebarth."
       }
     ]
   },
@@ -450,7 +561,14 @@
     "lemma": "Chersonesos 5",
     "previous": "Χειροτέχνιον",
     "next": "χρηματισμός",
-    "sort_key": "Cheirotechnion"
+    "sort_key": "Cheirotechnion",
+    "chapters": [
+      {
+        "start": 84,
+        "end": 90,
+        "author": "E. Kirsten."
+      }
+    ]
   },
   {
     "lemma": "χρηματισμός",
@@ -461,19 +579,33 @@
       {
         "start": 90,
         "end": 90,
-        "author": "Ziebarth"
+        "author": "Erich Ziebarth."
       }
     ]
   },
   {
     "lemma": "Claudius 207",
     "previous": "χρηματισμός",
-    "next": "Clementius 1"
+    "next": "Clementius 1",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 90,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Clementius 1",
     "previous": "Claudius 207",
-    "next": "Clementius 1a"
+    "next": "Clementius 1a",
+    "chapters": [
+      {
+        "start": 89,
+        "end": 89,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Clementius 1a",
@@ -482,20 +614,34 @@
     "chapters": [
       {
         "start": 89,
-        "end": 89,
-        "author": "Stein, O[tto]"
+        "end": 90,
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Cocceius 3",
     "previous": "Clementius 1a",
-    "next": "Cocceius 12"
+    "next": "Cocceius 12",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 90,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Cocceius 12",
     "previous": "Cocceius 3",
-    "next": "Codicarii 2"
+    "next": "Codicarii 2",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 90,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Codicarii 2",
@@ -504,8 +650,8 @@
     "chapters": [
       {
         "start": 90,
-        "end": 90,
-        "author": "Saria"
+        "end": 91,
+        "author": "B. Saria."
       }
     ]
   },
@@ -516,8 +662,8 @@
     "chapters": [
       {
         "start": 91,
-        "end": 91,
-        "author": "Kornemann"
+        "end": 96,
+        "author": "Ernst Kornemann."
       }
     ]
   },
@@ -528,8 +674,8 @@
     "chapters": [
       {
         "start": 96,
-        "end": 96,
-        "author": "Ehrhardt"
+        "end": 97,
+        "author": "Arnold Ehrhardt."
       }
     ]
   },
@@ -540,8 +686,8 @@
     "chapters": [
       {
         "start": 97,
-        "end": 97,
-        "author": "Saria"
+        "end": 98,
+        "author": "B. Saria."
       }
     ]
   },
@@ -553,7 +699,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -565,7 +711,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -576,8 +722,8 @@
     "chapters": [
       {
         "start": 98,
-        "end": 98,
-        "author": "Hanslik"
+        "end": 100,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -587,9 +733,9 @@
     "next": "Daitos",
     "chapters": [
       {
-        "start": 99,
-        "end": 99,
-        "author": "Pfister"
+        "start": 100,
+        "end": 114,
+        "author": "Friedrich Pfister."
       }
     ]
   },
@@ -600,15 +746,22 @@
     "chapters": [
       {
         "start": 114,
-        "end": 114,
-        "author": "Walter"
+        "end": 115,
+        "author": "Otto Walter."
       }
     ]
   },
   {
     "lemma": "Dasumius 1",
     "previous": "Daitos",
-    "next": "Dasumius 1a"
+    "next": "Dasumius 1a",
+    "chapters": [
+      {
+        "start": 115,
+        "end": 115,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Dasumius 1a",
@@ -618,24 +771,45 @@
       {
         "start": 115,
         "end": 115,
-        "author": "Saria"
+        "author": "B. Saria."
       }
     ]
   },
   {
     "lemma": "Δεῖγμα",
     "previous": "Dasumius 1a",
-    "next": "Δειγματοάρτης"
+    "next": "Δειγματοάρτης",
+    "chapters": [
+      {
+        "start": 116,
+        "end": 116,
+        "author": "Erich Ziebarth."
+      }
+    ]
   },
   {
     "lemma": "Δειγματοάρτης",
     "previous": "Δεῖγμα",
-    "next": "Δειγματοκαταγωγός"
+    "next": "Δειγματοκαταγωγός",
+    "chapters": [
+      {
+        "start": 116,
+        "end": 116,
+        "author": "Erich Ziebarth."
+      }
+    ]
   },
   {
     "lemma": "Δειγματοκαταγωγός",
     "previous": "Δειγματοάρτης",
-    "next": "Dekane"
+    "next": "Dekane",
+    "chapters": [
+      {
+        "start": 116,
+        "end": 116,
+        "author": "Erich Ziebarth."
+      }
+    ]
   },
   {
     "lemma": "Dekane",
@@ -645,8 +819,8 @@
     "chapters": [
       {
         "start": 116,
-        "end": 116,
-        "author": "Gundel, Wilhelm"
+        "end": 124,
+        "author": "W. Gundel."
       }
     ]
   },
@@ -659,7 +833,7 @@
       {
         "start": 124,
         "end": 124,
-        "author": "Ziebarth"
+        "author": "Erich Ziebarth."
       }
     ]
   },
@@ -671,7 +845,7 @@
       {
         "start": 124,
         "end": 124,
-        "author": "Kroll"
+        "author": "W. Kroll."
       }
     ]
   },
@@ -684,14 +858,21 @@
       {
         "start": 123,
         "end": 123,
-        "author": "Ziebarth"
+        "author": "E. Ziebarth."
       }
     ]
   },
   {
     "lemma": "Derkylos 2",
     "previous": "δημοσίωσις",
-    "next": "Diadochos a"
+    "next": "Diadochos a",
+    "chapters": [
+      {
+        "start": 123,
+        "end": 124,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Diadochos a",
@@ -2833,7 +3014,13 @@
   {
     "lemma": "Libella 1",
     "previous": "Lex Vibia (oder Leges Vibiae)",
-    "next": "Licinius 151a"
+    "next": "Licinius 151a",
+    "chapters": [
+      {
+        "start": 415,
+        "end": 418
+      }
+    ]
   },
   {
     "lemma": "Licinius 151a",
@@ -4802,6 +4989,7 @@
   },
   {
     "lemma": "Orphanene",
+    "next": "Peculatus",
     "chapters": [
       {
         "start": 818,
@@ -4812,12 +5000,13 @@
   },
   {
     "lemma": "Peculatus",
+    "previous": "Orphanene",
     "next": "Pedion 3",
     "chapters": [
       {
         "start": 817,
-        "end": 817,
-        "author": "Brecht"
+        "end": 832,
+        "author": "Christoph Brecht."
       }
     ]
   },
@@ -4949,7 +5138,7 @@
       {
         "start": 836,
         "end": 836,
-        "author": "Krause, M[ax]"
+        "author": "M. Krause."
       }
     ]
   },
@@ -5187,7 +5376,14 @@
   {
     "lemma": "Persius 5",
     "previous": "Peristylium",
-    "next": "Pescennius"
+    "next": "Pescennius",
+    "chapters": [
+      {
+        "start": 972,
+        "end": 979,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Pescennius",
@@ -5202,7 +5398,7 @@
       {
         "start": 980,
         "end": 980,
-        "author": "Ruge"
+        "author": "W. Ruge."
       }
     ]
   },
@@ -5914,8 +6110,8 @@
     "chapters": [
       {
         "start": 1244,
-        "end": 1244,
-        "author": "Ruge"
+        "end": 1250,
+        "author": "Ruge."
       }
     ]
   },

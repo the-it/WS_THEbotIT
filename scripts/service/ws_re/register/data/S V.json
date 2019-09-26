@@ -6,7 +6,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Fiehn"
+        "author": "Fiehn."
       }
     ]
   },
@@ -18,7 +18,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -30,7 +30,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -42,7 +42,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -54,7 +54,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Hiller von Gaertringen"
+        "author": "v. Hiller."
       }
     ]
   },
@@ -65,25 +65,46 @@
     "chapters": [
       {
         "start": 1,
-        "end": 1,
-        "author": "Lippold, Georg"
+        "end": 2,
+        "author": "Lippold."
       }
     ]
   },
   {
     "lemma": "Antigonos 24",
     "previous": "Antidotos 6",
-    "next": "Antiochos 68"
+    "next": "Antiochos 68",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Antiochos 68",
     "previous": "Antigonos 24",
-    "next": "Antiochos 65"
+    "next": "Antiochos 65",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 3,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Antiochos 65",
     "previous": "Antiochos 68",
-    "next": "Antisemitismus"
+    "next": "Antisemitismus",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3,
+        "author": "Hosius."
+      }
+    ]
   },
   {
     "lemma": "Antisemitismus",
@@ -93,8 +114,8 @@
     "chapters": [
       {
         "start": 3,
-        "end": 3,
-        "author": "Heinemann"
+        "end": 43,
+        "author": "I. Heinemann."
       }
     ]
   },
@@ -106,24 +127,45 @@
       {
         "start": 43,
         "end": 43,
-        "author": "Heichelheim"
+        "author": "Heichelheim."
       }
     ]
   },
   {
     "lemma": "Apollodoros 41a",
     "previous": "Apelles 5a",
-    "next": "Apollonios 114"
+    "next": "Apollonios 114",
+    "chapters": [
+      {
+        "start": 43,
+        "end": 44,
+        "author": "Fiehn."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 114",
     "previous": "Apollodoros 41a",
-    "next": "Apollonios 122"
+    "next": "Apollonios 122",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 45,
+        "author": "Kroll."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 122",
     "previous": "Apollonios 114",
-    "next": "Apollonios 126b"
+    "next": "Apollonios 126b",
+    "chapters": [
+      {
+        "start": 45,
+        "end": 45,
+        "author": "Lippold."
+      }
+    ]
   },
   {
     "lemma": "Apollonios 126b",
@@ -133,7 +175,7 @@
       {
         "start": 45,
         "end": 45,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -144,8 +186,8 @@
     "chapters": [
       {
         "start": 45,
-        "end": 45,
-        "author": "Hosius"
+        "end": 46,
+        "author": "Hosius."
       }
     ]
   },
@@ -157,7 +199,7 @@
       {
         "start": 46,
         "end": 46,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -170,7 +212,7 @@
       {
         "start": 46,
         "end": 46,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -182,14 +224,21 @@
       {
         "start": 46,
         "end": 46,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
   {
     "lemma": "Asalmanos",
     "previous": "Ariston 62a",
-    "next": "Asklepiades 51"
+    "next": "Asklepiades 51",
+    "chapters": [
+      {
+        "start": 46,
+        "end": 46,
+        "author": "Hölscher."
+      }
+    ]
   },
   {
     "lemma": "Asklepiades 51",
@@ -198,7 +247,8 @@
     "chapters": [
       {
         "start": 46,
-        "end": 46
+        "end": 46,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -211,14 +261,21 @@
       {
         "start": 46,
         "end": 46,
-        "author": "Kroll"
+        "author": "W. Kroll."
       }
     ]
   },
   {
     "lemma": "Athenodoros 19",
     "previous": "Athenagoras 9a",
-    "next": "Attius 10a"
+    "next": "Attius 10a",
+    "chapters": [
+      {
+        "start": 47,
+        "end": 55,
+        "author": "Philippson."
+      }
+    ]
   },
   {
     "lemma": "Attius 10a",
@@ -227,8 +284,8 @@
     "chapters": [
       {
         "start": 55,
-        "end": 55,
-        "author": "Lippold, Georg"
+        "end": 56,
+        "author": "Lippold."
       }
     ]
   },
@@ -240,14 +297,21 @@
       {
         "start": 56,
         "end": 56,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
   {
     "lemma": "Battus",
     "previous": "Autrico",
-    "next": "Βηρώθε"
+    "next": "Βηρώθε",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 55,
+        "author": "Hosius."
+      }
+    ]
   },
   {
     "lemma": "Βηρώθε",
@@ -256,12 +320,28 @@
   },
   {
     "lemma": "Bias 10",
-    "previous": "Βηρώθε"
+    "previous": "Βηρώθε",
+    "next": "Caecilia Trebulla",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 56,
+        "author": "Regling."
+      }
+    ]
   },
   {
     "lemma": "Caecilia Trebulla",
+    "previous": "Bias 10",
     "next": "Celsus 18a",
-    "wp_link": "w:de:Caecilia Trebulla"
+    "wp_link": "w:de:Caecilia Trebulla",
+    "chapters": [
+      {
+        "start": 57,
+        "end": 57,
+        "author": "Hosius."
+      }
+    ]
   },
   {
     "lemma": "Celsus 18a",
@@ -271,7 +351,7 @@
       {
         "start": 57,
         "end": 57,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -282,8 +362,8 @@
     "chapters": [
       {
         "start": 57,
-        "end": 57,
-        "author": "Fiehn"
+        "end": 58,
+        "author": "Fiehn."
       }
     ]
   },
@@ -294,8 +374,8 @@
     "chapters": [
       {
         "start": 58,
-        "end": 58,
-        "author": "Lippold, Georg"
+        "end": 59,
+        "author": "Lippold."
       }
     ]
   },
@@ -308,7 +388,7 @@
       {
         "start": 59,
         "end": 59,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -316,7 +396,14 @@
     "lemma": "Claudius 82",
     "previous": "Claudius 41a",
     "next": "Cornelius 371a",
-    "sort_key": "Claudius 082"
+    "sort_key": "Claudius 082",
+    "chapters": [
+      {
+        "start": 59,
+        "end": 60,
+        "author": "W. Kroll."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 371a",
@@ -325,8 +412,8 @@
     "chapters": [
       {
         "start": 59,
-        "end": 59,
-        "author": "Kroll"
+        "end": 61,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -350,7 +437,7 @@
       {
         "start": 152,
         "end": 152,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -362,7 +449,7 @@
       {
         "start": 153,
         "end": 153,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -469,8 +556,8 @@
     "chapters": [
       {
         "start": 182,
-        "end": 182,
-        "author": "Kroll"
+        "end": 183,
+        "author": "Kroll."
       }
     ]
   },
@@ -487,8 +574,8 @@
     "chapters": [
       {
         "start": 185,
-        "end": 185,
-        "author": "Sykutris"
+        "end": 220,
+        "author": "Sykutris."
       }
     ]
   },
@@ -572,7 +659,7 @@
       {
         "start": 223,
         "end": 223,
-        "author": "Hosius"
+        "author": "Hosius."
       }
     ]
   },
@@ -618,7 +705,7 @@
       {
         "start": 228,
         "end": 228,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -919,7 +1006,7 @@
       {
         "start": 355,
         "end": 355,
-        "author": "Kroll"
+        "author": "W. Kroll."
       }
     ]
   },
@@ -959,8 +1046,8 @@
     "chapters": [
       {
         "start": 369,
-        "end": 369,
-        "author": "Münzer"
+        "end": 385,
+        "author": "Münzer."
       }
     ]
   },
@@ -1380,7 +1467,7 @@
       {
         "start": 546,
         "end": 546,
-        "author": "Hölscher"
+        "author": "Hölscher."
       }
     ]
   },
@@ -4031,8 +4118,8 @@
     "chapters": [
       {
         "start": 679,
-        "end": 679,
-        "author": "Enßlin"
+        "end": 680,
+        "author": "Enßlin."
       }
     ]
   },
@@ -4231,8 +4318,8 @@
     "chapters": [
       {
         "start": 704,
-        "end": 704,
-        "author": "Zeiss"
+        "end": 705,
+        "author": "Zeiß."
       }
     ]
   },
@@ -5003,8 +5090,8 @@
     "chapters": [
       {
         "start": 981,
-        "end": 981,
-        "author": "Sykutris"
+        "end": 987,
+        "author": "Sykutris."
       }
     ]
   },
@@ -5039,15 +5126,22 @@
     "chapters": [
       {
         "start": 988,
-        "end": 988,
-        "author": "Keune"
+        "end": 989,
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Sotiates",
     "previous": "Soti",
-    "next": "Spaleia"
+    "next": "Spaleia",
+    "chapters": [
+      {
+        "start": 989,
+        "end": 992,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Spaleia",
@@ -5083,8 +5177,8 @@
     "chapters": [
       {
         "start": 993,
-        "end": 993,
-        "author": "Geffcken"
+        "end": 994,
+        "author": "Geffcken."
       }
     ]
   },

@@ -1,7 +1,14 @@
 [
   {
     "lemma": "Abragila",
-    "next": "Aelius 15a"
+    "next": "Aelius 15a",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "H.-J. Diesner."
+      }
+    ]
   },
   {
     "lemma": "Aelius 15a",
@@ -11,24 +18,45 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
   {
     "lemma": "Aischylos 13",
     "previous": "Aelius 15a",
-    "next": "Alkaios 9"
+    "next": "Alkaios 9",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 8,
+        "author": "Franz Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Alkaios 9",
     "previous": "Aischylos 13",
-    "next": "Alkman"
+    "next": "Alkman",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 19,
+        "author": "Max Treu."
+      }
+    ]
   },
   {
     "lemma": "Alkman",
     "previous": "Alkaios 9",
-    "next": "Ammatas"
+    "next": "Ammatas",
+    "chapters": [
+      {
+        "start": 19,
+        "end": 29,
+        "author": "Max Treu."
+      }
+    ]
   },
   {
     "lemma": "Ammatas",
@@ -38,24 +66,45 @@
       {
         "start": 29,
         "end": 29,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
   {
     "lemma": "Amythaon 2",
     "previous": "Ammatas",
-    "next": "Anakreon 1"
+    "next": "Anakreon 1",
+    "chapters": [
+      {
+        "start": 29,
+        "end": 30,
+        "author": "Markwart Michler."
+      }
+    ]
   },
   {
     "lemma": "Anakreon 1",
     "previous": "Amythaon 2",
-    "next": "Anaphe"
+    "next": "Anaphe",
+    "chapters": [
+      {
+        "start": 30,
+        "end": 37,
+        "author": "Max Treu."
+      }
+    ]
   },
   {
     "lemma": "Anaphe",
     "previous": "Anakreon 1",
-    "next": "Anartii"
+    "next": "Anartii",
+    "chapters": [
+      {
+        "start": 38,
+        "end": 38,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Anartii",
@@ -65,19 +114,33 @@
       {
         "start": 38,
         "end": 38,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
   {
     "lemma": "Anatomie",
     "previous": "Anartii",
-    "next": "Andreas 11"
+    "next": "Andreas 11",
+    "chapters": [
+      {
+        "start": 38,
+        "end": 48,
+        "author": "Fridolf Kudlien."
+      }
+    ]
   },
   {
     "lemma": "Andreas 11",
     "previous": "Anatomie",
-    "next": "Androkles 11"
+    "next": "Androkles 11",
+    "chapters": [
+      {
+        "start": 48,
+        "end": 48,
+        "author": "Markwart Michler."
+      }
+    ]
   },
   {
     "lemma": "Androkles 11",
@@ -87,7 +150,7 @@
       {
         "start": 48,
         "end": 48,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
@@ -99,7 +162,7 @@
       {
         "start": 48,
         "end": 48,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -118,12 +181,25 @@
   {
     "lemma": "Antigonos 16",
     "previous": "Angeiologia",
-    "next": "Antiocheia 15"
+    "next": "Antiocheia 15",
+    "chapters": [
+      {
+        "start": 48,
+        "end": 49
+      }
+    ]
   },
   {
     "lemma": "Antiocheia 15",
     "previous": "Antigonos 16",
-    "next": "Antiphilos 3c"
+    "next": "Antiphilos 3c",
+    "chapters": [
+      {
+        "start": 49,
+        "end": 61,
+        "author": "Barbara Levick."
+      }
+    ]
   },
   {
     "lemma": "Antiphilos 3c",
@@ -133,7 +209,7 @@
       {
         "start": 61,
         "end": 61,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
@@ -145,7 +221,7 @@
       {
         "start": 61,
         "end": 61,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -157,7 +233,7 @@
       {
         "start": 61,
         "end": 61,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -169,7 +245,7 @@
       {
         "start": 61,
         "end": 62,
-        "author": "Alföldy"
+        "author": "G. Alföldy."
       }
     ]
   },
@@ -181,19 +257,31 @@
       {
         "start": 62,
         "end": 62,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
   {
     "lemma": "Aqua, Aquae 18",
     "previous": "Apollinarios 2",
-    "next": "Aquincum"
+    "next": "Aquincum",
+    "chapters": [
+      {
+        "start": 61,
+        "end": 61
+      }
+    ]
   },
   {
     "lemma": "Aquincum",
     "previous": "Aqua, Aquae 18",
-    "next": "Arabiates"
+    "next": "Arabiates",
+    "chapters": [
+      {
+        "start": 61,
+        "end": 131
+      }
+    ]
   },
   {
     "lemma": "Arabiates",
@@ -202,15 +290,21 @@
     "chapters": [
       {
         "start": 131,
-        "end": 131,
-        "author": "Mócsy"
+        "end": 131
       }
     ]
   },
   {
     "lemma": "Aravisci",
     "previous": "Arabiates",
-    "next": "Archelaos 10a"
+    "next": "Archelaos 10a",
+    "chapters": [
+      {
+        "start": 132,
+        "end": 136,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Archelaos 10a",
@@ -220,24 +314,45 @@
       {
         "start": 136,
         "end": 136,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
   {
     "lemma": "Archilochos 2",
     "previous": "Archelaos 10a",
-    "next": "Ariston 52"
+    "next": "Ariston 52",
+    "chapters": [
+      {
+        "start": 136,
+        "end": 156,
+        "author": "Max Treu."
+      }
+    ]
   },
   {
     "lemma": "Ariston 52",
     "previous": "Archilochos 2",
-    "next": "Aristoteles 18"
+    "next": "Aristoteles 18",
+    "chapters": [
+      {
+        "start": 156,
+        "end": 159,
+        "author": "F. Wehrli."
+      }
+    ]
   },
   {
     "lemma": "Aristoteles 18",
     "previous": "Ariston 52",
-    "next": "Aristoteles 25"
+    "next": "Aristoteles 25",
+    "chapters": [
+      {
+        "start": 159,
+        "end": 336,
+        "author": "Ingemar Düring."
+      }
+    ]
   },
   {
     "lemma": "Aristoteles 25",
@@ -247,7 +362,7 @@
       {
         "start": 336,
         "end": 336,
-        "author": "Moraux"
+        "author": "Paul Moraux."
       }
     ]
   },
@@ -255,7 +370,14 @@
     "lemma": "Aristoxenos 7",
     "previous": "Aristoteles 25",
     "next": "Arsaciana",
-    "sort_key": "Aristoxenos 07"
+    "sort_key": "Aristoxenos 07",
+    "chapters": [
+      {
+        "start": 336,
+        "end": 343,
+        "author": "Fritz Wehrli."
+      }
+    ]
   },
   {
     "lemma": "Arsaciana",
@@ -265,7 +387,7 @@
       {
         "start": 343,
         "end": 343,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -273,12 +395,25 @@
     "lemma": "Arteriotomia",
     "previous": "Arsaciana",
     "next": "Asea 1",
-    "redirect": "Periskythismos"
+    "redirect": "Periskythismos",
+    "chapters": [
+      {
+        "start": 343,
+        "end": 343
+      }
+    ]
   },
   {
     "lemma": "Asea 1",
     "previous": "Arteriotomia",
-    "next": "Asklepiades 52"
+    "next": "Asklepiades 52",
+    "chapters": [
+      {
+        "start": 343,
+        "end": 343,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Asklepiades 52",
@@ -288,7 +423,7 @@
       {
         "start": 343,
         "end": 344,
-        "author": "Gross"
+        "author": "W. H. Gross."
       }
     ]
   },
@@ -300,14 +435,21 @@
       {
         "start": 344,
         "end": 344,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
   {
     "lemma": "Azaloi",
     "previous": "Aurelius 127b",
-    "next": "Bacensis civitas"
+    "next": "Bacensis civitas",
+    "chapters": [
+      {
+        "start": 344,
+        "end": 346,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Bacensis civitas",
@@ -317,14 +459,21 @@
       {
         "start": 346,
         "end": 346,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
   {
     "lemma": "Bagaudae",
     "previous": "Bacensis civitas",
-    "next": "Basoretensis vicus"
+    "next": "Basoretensis vicus",
+    "chapters": [
+      {
+        "start": 346,
+        "end": 354,
+        "author": "Samuel Szádeczky-Kardoss."
+      }
+    ]
   },
   {
     "lemma": "Basoretensis vicus",
@@ -334,14 +483,21 @@
       {
         "start": 353,
         "end": 354,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
   {
     "lemma": "Bathinus",
     "previous": "Basoretensis vicus",
-    "next": "Bianor 5a"
+    "next": "Bianor 5a",
+    "chapters": [
+      {
+        "start": 355,
+        "end": 355,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Bianor 5a",
@@ -351,7 +507,7 @@
       {
         "start": 355,
         "end": 355,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
@@ -363,19 +519,33 @@
       {
         "start": 355,
         "end": 355,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
   {
     "lemma": "Brauron",
     "previous": "Bilachiniensis statio",
-    "next": "Bryson 1"
+    "next": "Bryson 1",
+    "chapters": [
+      {
+        "start": 355,
+        "end": 356,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Bryson 1",
     "previous": "Brauron",
-    "next": "Calcinius"
+    "next": "Calcinius",
+    "chapters": [
+      {
+        "start": 356,
+        "end": 357,
+        "author": "M. Plessner."
+      }
+    ]
   },
   {
     "lemma": "Calcinius",
@@ -385,7 +555,7 @@
       {
         "start": 357,
         "end": 357,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -398,7 +568,7 @@
       {
         "start": 357,
         "end": 357,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -410,14 +580,21 @@
       {
         "start": 357,
         "end": 357,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
   {
     "lemma": "Campona",
     "previous": "Campilius",
-    "next": "Caragonius"
+    "next": "Caragonius",
+    "chapters": [
+      {
+        "start": 357,
+        "end": 368,
+        "author": "Ferenc Fülep."
+      }
+    ]
   },
   {
     "lemma": "Caragonius",
@@ -427,7 +604,7 @@
       {
         "start": 368,
         "end": 368,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -439,7 +616,7 @@
       {
         "start": 368,
         "end": 368,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -459,13 +636,27 @@
     "lemma": "Celamantia",
     "previous": "Ceangli",
     "next": "Chamaileon 1",
-    "redirect": "Pannonia"
+    "redirect": "Pannonia",
+    "chapters": [
+      {
+        "start": 368,
+        "end": 368,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Chamaileon 1",
     "previous": "Celamantia",
     "next": "Claudius 211a",
-    "redirect": true
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 368,
+        "end": 372,
+        "author": "F. Wehrli."
+      }
+    ]
   },
   {
     "lemma": "Claudius 211a",
@@ -475,7 +666,7 @@
       {
         "start": 372,
         "end": 372,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -487,7 +678,7 @@
       {
         "start": 371,
         "end": 371,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -495,12 +686,26 @@
     "lemma": "Constantia 6",
     "previous": "Clementianus 2",
     "next": "Cornacates",
-    "sort_key": "Constantia 06"
+    "sort_key": "Constantia 06",
+    "chapters": [
+      {
+        "start": 371,
+        "end": 372,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Cornacates",
     "previous": "Constantia 6",
-    "next": "Cornelius 395"
+    "next": "Cornelius 395",
+    "chapters": [
+      {
+        "start": 373,
+        "end": 373,
+        "author": "Andreas Mócsy."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 395",
@@ -510,7 +715,7 @@
       {
         "start": 373,
         "end": 512,
-        "author": "Borzsák"
+        "author": "St. Borzsák."
       }
     ]
   },
@@ -522,7 +727,7 @@
       {
         "start": 512,
         "end": 513,
-        "author": "Kröner"
+        "author": "Hans-Otto Kröner."
       }
     ]
   },
@@ -534,7 +739,7 @@
       {
         "start": 513,
         "end": 513,
-        "author": "Kröner"
+        "author": "Hans-Otto Kröner."
       }
     ]
   },
@@ -546,19 +751,33 @@
       {
         "start": 513,
         "end": 513,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
   {
     "lemma": "Darnithithi",
     "previous": "Cyrila 2",
-    "next": "Demetrios 85"
+    "next": "Demetrios 85",
+    "chapters": [
+      {
+        "start": 513,
+        "end": 514,
+        "author": "C. Daicoviciu."
+      }
+    ]
   },
   {
     "lemma": "Demetrios 85",
     "previous": "Darnithithi",
-    "next": "Diaios"
+    "next": "Diaios",
+    "chapters": [
+      {
+        "start": 514,
+        "end": 522,
+        "author": "Fritz Wehrli."
+      }
+    ]
   },
   {
     "lemma": "Diaios",
@@ -698,7 +917,13 @@
   {
     "lemma": "Euripides 4",
     "previous": "Eudemos 1",
-    "next": "Eurylochos 11"
+    "next": "Eurylochos 11",
+    "chapters": [
+      {
+        "start": 658,
+        "end": 670
+      }
+    ]
   },
   {
     "lemma": "Eurylochos 11",
@@ -907,7 +1132,13 @@
   {
     "lemma": "Isthmos 1",
     "previous": "Iosista",
-    "next": "Iucundus 3a"
+    "next": "Iucundus 3a",
+    "chapters": [
+      {
+        "start": 850,
+        "end": 854
+      }
+    ]
   },
   {
     "lemma": "Iucundus 3a",
@@ -1272,7 +1503,14 @@
   {
     "lemma": "Parrhasia",
     "previous": "Parka",
-    "next": "Parthenion 1"
+    "next": "Parthenion 1",
+    "chapters": [
+      {
+        "start": 1029,
+        "end": 1033,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Parthenion 1",
@@ -1555,7 +1793,7 @@
       {
         "start": 1124,
         "end": 1182,
-        "author": "Kriaras"
+        "author": "E. Kriaras."
       }
     ]
   },
@@ -1992,7 +2230,7 @@
       {
         "start": 1365,
         "end": 1365,
-        "author": "Borzsák"
+        "author": "Stefan Borzsák."
       }
     ]
   },

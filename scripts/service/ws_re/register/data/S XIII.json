@@ -1,30 +1,52 @@
 [
   {
     "lemma": "Africa 2",
-    "next": "Alpium Iuliarum Claustra"
+    "next": "Alpium Iuliarum Claustra",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 11,
+        "author": "Bengt E. Thomasson."
+      }
+    ]
   },
   {
     "lemma": "Alpium Iuliarum Claustra",
+    "previous": "Africa 2",
     "next": "Apollonios 71",
     "chapters": [
       {
         "start": 11,
         "end": 14,
-        "author": "Šašel"
+        "author": "Jaroslav Šašel."
       }
     ]
   },
   {
     "lemma": "Apollonios 71",
     "previous": "Alpium Iuliarum Claustra",
-    "next": "Athenai 1c"
+    "next": "Athenai 1c",
+    "chapters": [
+      {
+        "start": 15,
+        "end": 56,
+        "author": "Hans Herter."
+      }
+    ]
   },
   {
     "lemma": "Athenai 1c",
     "previous": "Apollonios 71",
     "next": "Chlodovechus",
     "wp_link": "w:de:Athen",
-    "ws_link": "s:de:Athen"
+    "ws_link": "s:de:Athen",
+    "chapters": [
+      {
+        "start": 56,
+        "end": 140,
+        "author": "Willy Zschietzschmann."
+      }
+    ]
   },
   {
     "lemma": "Chlodovechus",
@@ -35,7 +57,7 @@
       {
         "start": 139,
         "end": 174,
-        "author": "Lippold, Adolf"
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -145,8 +167,7 @@
     "chapters": [
       {
         "start": 1045,
-        "end": 1238,
-        "author": "Herter"
+        "end": 1238
       }
     ]
   },

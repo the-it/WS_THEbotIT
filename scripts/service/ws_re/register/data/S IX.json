@@ -6,7 +6,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -19,7 +19,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -32,7 +32,7 @@
       {
         "start": 2,
         "end": 2,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -42,9 +42,9 @@
     "next": "Aelius 160a",
     "chapters": [
       {
-        "start": 1,
-        "end": 1,
-        "author": "Winkler"
+        "start": 2,
+        "end": 2,
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -56,7 +56,7 @@
       {
         "start": 2,
         "end": 2,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -67,8 +67,7 @@
     "chapters": [
       {
         "start": 2,
-        "end": 3,
-        "author": "Fitz"
+        "end": 3
       }
     ]
   },
@@ -80,59 +79,127 @@
       {
         "start": 3,
         "end": 3,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
   {
     "lemma": "Aipion",
     "previous": "Aeronius",
-    "next": "Alea 1"
+    "next": "Alea 1",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3
+      }
+    ]
   },
   {
     "lemma": "Alea 1",
     "previous": "Aipion",
-    "next": "Alfenus 4"
+    "next": "Alfenus 4",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Alfenus 4",
     "previous": "Alea 1",
-    "next": "Aliphera"
+    "next": "Aliphera",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 4
+      }
+    ]
   },
   {
     "lemma": "Aliphera",
     "previous": "Alfenus 4",
-    "next": "Alisca"
+    "next": "Alisca",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Alisca",
     "previous": "Aliphera",
-    "next": "Alta ripa 1"
+    "next": "Alta ripa 1",
+    "chapters": [
+      {
+        "start": 4,
+        "end": 6,
+        "author": "Jenő Fitz."
+      }
+    ]
   },
   {
     "lemma": "Alta ripa 1",
     "previous": "Alisca",
-    "next": "Altinum 1"
+    "next": "Altinum 1",
+    "chapters": [
+      {
+        "start": 6,
+        "end": 7,
+        "author": "Jenő Fitz."
+      }
+    ]
   },
   {
     "lemma": "Altinum 1",
     "previous": "Alta ripa 1",
-    "next": "Anicius 47"
+    "next": "Anicius 47",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 8,
+        "author": "Jenő Fitz."
+      }
+    ]
   },
   {
     "lemma": "Anicius 47",
     "previous": "Altinum 1",
-    "next": "Ἀγκυρῶν πόλις"
+    "next": "Ἀγκυρῶν πόλις",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 8,
+        "author": "Sc. Mariotti."
+      }
+    ]
   },
   {
     "lemma": "Ἀγκυρῶν πόλις",
     "previous": "Anicius 47",
-    "next": "Annamatia"
+    "next": "Annamatia",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 8,
+        "author": "Wolfgang Helck."
+      }
+    ]
   },
   {
     "lemma": "Annamatia",
     "previous": "Ἀγκυρῶν πόλις",
-    "next": "Antimachidas"
+    "next": "Antimachidas",
+    "chapters": [
+      {
+        "start": 8,
+        "end": 11,
+        "author": "Jenő Fitz."
+      }
+    ]
   },
   {
     "lemma": "Antimachidas",
@@ -142,7 +209,7 @@
       {
         "start": 11,
         "end": 12,
-        "author": "Brommer"
+        "author": "Frank Brommer."
       }
     ]
   },
@@ -155,14 +222,21 @@
       {
         "start": 12,
         "end": 12,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
   {
     "lemma": "Apesas 1",
     "previous": "Antonius 95a",
-    "next": "Aquilinus 7"
+    "next": "Aquilinus 7",
+    "chapters": [
+      {
+        "start": 12,
+        "end": 12,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Aquilinus 7",
@@ -173,7 +247,7 @@
       {
         "start": 11,
         "end": 11,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -185,7 +259,7 @@
       {
         "start": 11,
         "end": 11,
-        "author": "Grosse"
+        "author": "Robert Grosse."
       }
     ]
   },
@@ -197,7 +271,7 @@
       {
         "start": 11,
         "end": 13,
-        "author": "Hinz"
+        "author": "Walther Hinz."
       }
     ]
   },
@@ -209,14 +283,21 @@
       {
         "start": 13,
         "end": 14,
-        "author": "Grosse"
+        "author": "Robert Grosse."
       }
     ]
   },
   {
     "lemma": "Argyra 1",
     "previous": "Arekrat",
-    "next": "Arranius 1"
+    "next": "Arranius 1",
+    "chapters": [
+      {
+        "start": 14,
+        "end": 14,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Arranius 1",
@@ -226,7 +307,7 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -238,7 +319,7 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -250,7 +331,7 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Grosse"
+        "author": "Robert Grosse."
       }
     ]
   },
@@ -262,14 +343,21 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Grosse"
+        "author": "Robert Grosse."
       }
     ]
   },
   {
     "lemma": "Ascheion",
     "previous": "Arsatzia",
-    "next": "Ἀσπὶς ἄκρα"
+    "next": "Ἀσπὶς ἄκρα",
+    "chapters": [
+      {
+        "start": 15,
+        "end": 15,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Ἀσπὶς ἄκρα",
@@ -280,7 +368,7 @@
       {
         "start": 15,
         "end": 15,
-        "author": "Treidler"
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -292,7 +380,7 @@
       {
         "start": 15,
         "end": 15,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -304,14 +392,21 @@
       {
         "start": 15,
         "end": 16,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
   {
     "lemma": "Asterope 6",
     "previous": "Asprius",
-    "next": "Attikos 15"
+    "next": "Attikos 15",
+    "chapters": [
+      {
+        "start": 16,
+        "end": 16,
+        "author": "Frank Brommer."
+      }
+    ]
   },
   {
     "lemma": "Attikos 15",
@@ -321,19 +416,33 @@
       {
         "start": 16,
         "end": 16,
-        "author": "Mariotti"
+        "author": "Sc. Mariotti."
       }
     ]
   },
   {
     "lemma": "Attius 23",
     "previous": "Attikos 15",
-    "next": "Aulis 1"
+    "next": "Aulis 1",
+    "chapters": [
+      {
+        "start": 16,
+        "end": 16,
+        "author": "Jenő Fitz."
+      }
+    ]
   },
   {
     "lemma": "Aulis 1",
     "previous": "Attius 23",
-    "next": "Aurelius 145aa"
+    "next": "Aurelius 145aa",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 145aa",
@@ -343,14 +452,21 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
   {
     "lemma": "Aurelius 155",
     "previous": "Aurelius 145aa",
-    "next": "Aurelius 157a"
+    "next": "Aurelius 157a",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 17,
+        "author": "Gerhard Winkler."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 157a",
@@ -360,7 +476,7 @@
       {
         "start": 17,
         "end": 18,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -372,7 +488,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -384,7 +500,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
@@ -396,7 +512,7 @@
       {
         "start": 18,
         "end": 18,
-        "author": "Brommer"
+        "author": "Frank Brommer."
       }
     ]
   },
@@ -420,30 +536,58 @@
       {
         "start": 17,
         "end": 17,
-        "author": "Helck"
+        "author": "Wolfgang Helck."
       }
     ]
   },
   {
     "lemma": "Buphagion",
     "previous": "Bomos Athenas",
-    "next": "Bura 1"
+    "next": "Bura 1",
+    "chapters": [
+      {
+        "start": 17,
+        "end": 18,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Bura 1",
     "previous": "Buphagion",
-    "next": "Buraïkos 1"
+    "next": "Buraïkos 1",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 19,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Buraïkos 1",
     "previous": "Bura 1",
-    "next": "Cassius 84"
+    "next": "Cassius 84",
+    "chapters": [
+      {
+        "start": 18,
+        "end": 19,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Cassius 84",
     "previous": "Buraïkos 1",
     "next": "Claudius 149a",
-    "sort_key": "Cassius 084"
+    "sort_key": "Cassius 084",
+    "chapters": [
+      {
+        "start": 19,
+        "end": 20,
+        "author": "Jenö Fitz."
+      }
+    ]
   },
   {
     "lemma": "Claudius 149a",
@@ -453,8 +597,7 @@
     "chapters": [
       {
         "start": 20,
-        "end": 20,
-        "author": "Fitz"
+        "end": 20
       }
     ]
   },
@@ -466,7 +609,7 @@
       {
         "start": 21,
         "end": 21,
-        "author": "Mariotti"
+        "author": "Sc. Mariotti."
       }
     ]
   },
@@ -478,14 +621,21 @@
       {
         "start": 21,
         "end": 21,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
   {
     "lemma": "Cornelius 284",
     "previous": "Clodius 21a",
-    "next": "Cornelius 171"
+    "next": "Cornelius 171",
+    "chapters": [
+      {
+        "start": 21,
+        "end": 22,
+        "author": "Jenö Fitz."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 171",
@@ -495,7 +645,7 @@
       {
         "start": 22,
         "end": 22,
-        "author": "Fitz"
+        "author": "Jenö Fitz."
       }
     ]
   },
@@ -507,7 +657,7 @@
       {
         "start": 22,
         "end": 23,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -519,14 +669,21 @@
       {
         "start": 23,
         "end": 23,
-        "author": "Thomasson"
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
   {
     "lemma": "Cossinius 5",
     "previous": "Cornelius 398a",
-    "next": "Crambianae"
+    "next": "Crambianae",
+    "chapters": [
+      {
+        "start": 23,
+        "end": 24,
+        "author": "Jenö Fitz."
+      }
+    ]
   },
   {
     "lemma": "Crambianae",
@@ -536,19 +693,33 @@
       {
         "start": 24,
         "end": 24,
-        "author": "Danoff"
+        "author": "Chr. M. Danoff."
       }
     ]
   },
   {
     "lemma": "Cumodina",
     "previous": "Crambianae",
-    "next": "Daitos"
+    "next": "Daitos",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24,
+        "author": "Chr. M. Danoff."
+      }
+    ]
   },
   {
     "lemma": "Daitos",
     "previous": "Cumodina",
-    "next": "Deire 1"
+    "next": "Deire 1",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24,
+        "author": "Konrat Ziegler."
+      }
+    ]
   },
   {
     "lemma": "Deire 1",
@@ -558,14 +729,21 @@
       {
         "start": 24,
         "end": 24,
-        "author": "Helck"
+        "author": "Wolfgang Helck."
       }
     ]
   },
   {
     "lemma": "Demetrias 1",
     "previous": "Deire 1",
-    "next": "Demonassa 6"
+    "next": "Demonassa 6",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Demonassa 6",
@@ -575,7 +753,7 @@
       {
         "start": 27,
         "end": 27,
-        "author": "Brommer"
+        "author": "Frank Brommer."
       }
     ]
   },
@@ -587,7 +765,7 @@
       {
         "start": 27,
         "end": 27,
-        "author": "Grosse"
+        "author": "Robert Grosse."
       }
     ]
   },
@@ -1752,7 +1930,7 @@
       {
         "start": 415,
         "end": 461,
-        "author": "Böker"
+        "author": "Robert Böker."
       }
     ]
   },
@@ -1764,7 +1942,7 @@
       {
         "start": 461,
         "end": 461,
-        "author": "Helck"
+        "author": "Wolfgang Helck."
       }
     ]
   },
@@ -2259,7 +2437,7 @@
       {
         "start": 866,
         "end": 1175,
-        "author": "Danoff"
+        "author": "Chr. M. Danoff."
       }
     ]
   },
@@ -3479,7 +3657,19 @@
   {
     "lemma": "Umbri, Umbria",
     "previous": "Umbonius 2",
-    "next": "Umbricius 5"
+    "next": "Umbricius 5",
+    "chapters": [
+      {
+        "start": 1745,
+        "end": 1745,
+        "author": "Gerhard Radke."
+      },
+      {
+        "start": 1745,
+        "end": 1827,
+        "author": "OFF"
+      }
+    ]
   },
   {
     "lemma": "Umbricius 5",
@@ -3489,7 +3679,7 @@
       {
         "start": 1827,
         "end": 1827,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -3525,7 +3715,7 @@
       {
         "start": 1827,
         "end": 1831,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -4464,7 +4654,7 @@
       {
         "start": 1868,
         "end": 1868,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -4531,12 +4721,26 @@
   {
     "lemma": "Achaios 6",
     "previous": "Utis",
-    "next": "Achaios 7"
+    "next": "Achaios 7",
+    "chapters": [
+      {
+        "start": 1895,
+        "end": 1895,
+        "author": "F. Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Achaios 7",
     "previous": "Achaios 6",
-    "next": "Agathon 13"
+    "next": "Agathon 13",
+    "chapters": [
+      {
+        "start": 1895,
+        "end": 1895,
+        "author": "F. Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Agathon 13",
@@ -4546,19 +4750,33 @@
       {
         "start": 1895,
         "end": 1895,
-        "author": "Stoessl"
+        "author": "F. Stoessl."
       }
     ]
   },
   {
     "lemma": "Akestor 4",
     "previous": "Agathon 13",
-    "next": "Aristarchos 21"
+    "next": "Aristarchos 21",
+    "chapters": [
+      {
+        "start": 1895,
+        "end": 1895,
+        "author": "F. Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Aristarchos 21",
     "previous": "Akestor 4",
-    "next": "Dipolia"
+    "next": "Dipolia",
+    "chapters": [
+      {
+        "start": 1895,
+        "end": 1896,
+        "author": "F. Stoessl."
+      }
+    ]
   },
   {
     "lemma": "Dipolia",
@@ -4707,6 +4925,13 @@
   {
     "lemma": "Pontos Euxeinos",
     "previous": "Iberia",
-    "next": "Seuthopolis"
+    "next": "Seuthopolis",
+    "chapters": [
+      {
+        "start": 1911,
+        "end": 1920,
+        "author": "Chr. M. Danoff."
+      }
+    ]
   }
 ]

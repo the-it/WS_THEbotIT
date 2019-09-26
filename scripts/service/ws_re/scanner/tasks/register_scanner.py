@@ -10,7 +10,7 @@ from github import Github
 
 from scripts.service.ws_re.register.author import AuthorCrawler, AuthorDict, CrawlerDict
 from scripts.service.ws_re.register.base import RegisterException
-from scripts.service.ws_re.register.lemma import LemmaDict
+from scripts.service.ws_re.register.lemma import LemmaDict, ChapterDict
 from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.register.updater import Updater, RemoveList
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
@@ -26,7 +26,7 @@ class SCANTask(ReScannerTask):
         self._strategies: Dict[str, List[str]] = {}
 
     def task(self):
-        self._fetch_from_article_list()
+        self._process_from_article_list()
 
     def finish_task(self):
         super().finish_task()
@@ -36,21 +36,21 @@ class SCANTask(ReScannerTask):
                 self.logger.info(f"{self._strategies[strategy]}")
         self.logger.info("Fetch changes for the authors.")
         authors = self.registers.authors
-        authors.set_mappings(self._fetch_mapping())
-        authors.set_author(self._fetch_author_infos())
+        authors.set_mappings(self._get_author_mapping())
+        authors.set_author(self._process_author_infos())
         self.logger.info("Persist the author data.")
         authors.persist()
         self.logger.info("Persist the register data.")
         self.registers.persist()
         self._push_changes()
 
-    def _fetch_author_infos(self) -> Dict[str, AuthorDict]:
+    def _process_author_infos(self) -> Dict[str, AuthorDict]:
         text = fetch_text_from_wiki_site(self.wiki,
                                          "Paulys Realencyclopädie der classischen "
                                          "Altertumswissenschaft/Autoren")
         return AuthorCrawler.get_authors(text)
 
-    def _fetch_mapping(self) -> CrawlerDict:
+    def _get_author_mapping(self) -> CrawlerDict:
         text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
         return AuthorCrawler.get_mapping(text)
 
@@ -109,9 +109,63 @@ class SCANTask(ReScannerTask):
             return {"next": next_lemma}, []
         return {}, ["next"]
 
-    def _fetch_from_article_list(self):
-        function_list_properties = (self._fetch_wp_link, self._fetch_ws_link, self._fetch_sort_key, self._fetch_lemma,
-                                    self._fetch_redirect, self._fetch_previous, self._fetch_next)
+    def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+        # if there is something outside an article ignore it
+        article_list = [article for article in article_list if isinstance(article, Article)]
+        if self.re_page.complex_construction:
+            self.logger.error(f"The construct of {self.re_page.lemma_without_prefix} is too complex, can't analyse.")
+            return {}, []
+        if len(article_list) == 1:
+            chapter_dict = self._analyse_simple_article_list(article_list)
+            if chapter_dict:
+                return {"chapters": [chapter_dict]}, []
+            return {}, []
+        return {"chapters": self._analyse_complex_article_list(article_list)}, []
+
+    def _analyse_simple_article_list(self, article_list: List[Article]) -> ChapterDict:
+        article = article_list[0]
+        try:
+            spalte_start = int(article["SPALTE_START"].value)
+        except ValueError:
+            self.logger.error(f"{self.re_page.lemma_without_prefix} has no correct start column.")
+            return {}
+        spalte_end = article["SPALTE_END"].value
+        if spalte_end and spalte_end != "OFF":
+            spalte_end = int(spalte_end)
+        else:
+            spalte_end = spalte_start
+        single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
+        author = article.author[0]
+        if author.lower().strip() != "off":
+            single_article_dict["author"] = author
+        return single_article_dict
+
+    def _analyse_complex_article_list(self, article_list: List[Article]) -> List[ChapterDict]:
+        simple_dict = self._analyse_simple_article_list(article_list)
+        article_start = int(simple_dict["start"])
+        chapter_list: List[ChapterDict] = []
+        for article in article_list:
+            # if there will be no findings of the regex, the article continues on the next page as the predecessor
+            start: int = article_start
+            end: int = article_start
+            findings = list(re.finditer(r"\{\{Seite\|(\d{1,4})", article.text))
+            if findings:
+                first_finding = findings[0]
+                start = int(first_finding.group(1))
+                if first_finding.start(0) > 0:
+                    start -= 1
+                end = int(findings[-1].group(1))
+            if article is article_list[-1]:
+                end = int(simple_dict["end"])
+            chapter_list.append({"start": start, "end": end, "author": article.author[0]})
+            article_start = end
+        return chapter_list
+
+    def _process_from_article_list(self):
+        function_list_properties = []
+        for item in dir(self):
+            if "_fetch" in item:
+                function_list_properties.append(getattr(self, item))
         issues_in_articles = set()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties

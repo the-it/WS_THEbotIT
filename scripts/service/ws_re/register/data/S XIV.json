@@ -1,7 +1,14 @@
 [
   {
     "lemma": "Aelius 75a",
-    "next": "Aelius 89a"
+    "next": "Aelius 89a",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aelius 89a",
@@ -11,7 +18,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -24,7 +31,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -36,7 +43,7 @@
       {
         "start": 1,
         "end": 1,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -48,7 +55,7 @@
       {
         "start": 1,
         "end": 2,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -60,7 +67,7 @@
       {
         "start": 2,
         "end": 2,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -68,7 +75,14 @@
     "lemma": "Aemilius 43",
     "previous": "Aemilianus 17",
     "next": "Aemilius 54a",
-    "sort_key": "Aemilius 043"
+    "sort_key": "Aemilius 043",
+    "chapters": [
+      {
+        "start": 2,
+        "end": 2,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aemilius 54a",
@@ -79,7 +93,7 @@
       {
         "start": 2,
         "end": 2,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -91,7 +105,7 @@
       {
         "start": 2,
         "end": 2,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -103,7 +117,7 @@
       {
         "start": 3,
         "end": 13,
-        "author": "Šašel"
+        "author": "Jaroslav Šašel."
       }
     ]
   },
@@ -115,7 +129,7 @@
       {
         "start": 13,
         "end": 13,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -126,7 +140,8 @@
     "chapters": [
       {
         "start": 13,
-        "end": 13
+        "end": 13,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -138,7 +153,7 @@
       {
         "start": 13,
         "end": 13,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -150,7 +165,7 @@
       {
         "start": 13,
         "end": 14,
-        "author": "Gross"
+        "author": "Walter H. Gross."
       }
     ]
   },
@@ -162,7 +177,7 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Gross"
+        "author": "Walter H. Gross."
       }
     ]
   },
@@ -174,14 +189,21 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Aiacius 1",
     "previous": "Aginatius 4",
-    "next": "Aiacius 1a"
+    "next": "Aiacius 1a",
+    "chapters": [
+      {
+        "start": 14,
+        "end": 14,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aiacius 1a",
@@ -191,20 +213,33 @@
       {
         "start": 14,
         "end": 14,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Aiacius 2",
     "previous": "Aiacius 1a",
-    "next": "Aimyndos"
+    "next": "Aimyndos",
+    "chapters": [
+      {
+        "start": 14,
+        "end": 15,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aimyndos",
     "previous": "Aiacius 2",
     "next": "Aisopos 1",
-    "redirect": "Priaponesos"
+    "redirect": "Priaponesos",
+    "chapters": [
+      {
+        "start": 14,
+        "end": 15
+      }
+    ]
   },
   {
     "lemma": "Aisopos 1",
@@ -214,7 +249,7 @@
       {
         "start": 15,
         "end": 40,
-        "author": "Josifović"
+        "author": "Stevan Josifović."
       }
     ]
   },
@@ -226,14 +261,21 @@
       {
         "start": 40,
         "end": 41,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Akalissos",
     "previous": "Aius 2",
-    "next": "Akomena"
+    "next": "Akomena",
+    "chapters": [
+      {
+        "start": 41,
+        "end": 42,
+        "author": "Shelag Jameson."
+      }
+    ]
   },
   {
     "lemma": "Akomena",
@@ -243,7 +285,7 @@
       {
         "start": 42,
         "end": 42,
-        "author": "Gross"
+        "author": "Walter H. Gross."
       }
     ]
   },
@@ -255,7 +297,7 @@
       {
         "start": 43,
         "end": 43,
-        "author": "Gross"
+        "author": "Walter H. Gross."
       }
     ]
   },
@@ -267,7 +309,7 @@
       {
         "start": 43,
         "end": 43,
-        "author": "Gross"
+        "author": "Walter H. Gross."
       }
     ]
   },
@@ -280,7 +322,7 @@
       {
         "start": 43,
         "end": 43,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -292,7 +334,7 @@
       {
         "start": 43,
         "end": 43,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -304,7 +346,7 @@
       {
         "start": 43,
         "end": 44,
-        "author": "Benedum"
+        "author": "Jost Benedum."
       }
     ]
   },
@@ -316,7 +358,7 @@
       {
         "start": 44,
         "end": 44,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -328,7 +370,7 @@
       {
         "start": 44,
         "end": 47,
-        "author": "Schmitthenner"
+        "author": "Walter Schmitthenner."
       }
     ]
   },
@@ -340,14 +382,21 @@
       {
         "start": 47,
         "end": 47,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Annius 61",
     "previous": "Annius 41a",
-    "next": "Annius 65b"
+    "next": "Annius 65b",
+    "chapters": [
+      {
+        "start": 48,
+        "end": 48,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Annius 65b",
@@ -358,7 +407,7 @@
       {
         "start": 48,
         "end": 48,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -371,7 +420,7 @@
       {
         "start": 48,
         "end": 48,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -383,7 +432,7 @@
       {
         "start": 48,
         "end": 48,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -395,14 +444,21 @@
       {
         "start": 48,
         "end": 49,
-        "author": "Benedum"
+        "author": "Jost Benedum."
       }
     ]
   },
   {
     "lemma": "Antiphellos",
     "previous": "Antiochis 8",
-    "next": "Antius 11a"
+    "next": "Antius 11a",
+    "chapters": [
+      {
+        "start": 49,
+        "end": 50,
+        "author": "Shelag Jameson."
+      }
+    ]
   },
   {
     "lemma": "Antius 11a",
@@ -412,7 +468,7 @@
       {
         "start": 50,
         "end": 50,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -424,7 +480,7 @@
       {
         "start": 50,
         "end": 50,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -436,7 +492,7 @@
       {
         "start": 50,
         "end": 50,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -449,7 +505,7 @@
       {
         "start": 50,
         "end": 50,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -457,7 +513,14 @@
     "lemma": "Antonius 36",
     "previous": "Antonius 1a",
     "next": "Antonius 94a",
-    "sort_key": "Antonius 036"
+    "sort_key": "Antonius 036",
+    "chapters": [
+      {
+        "start": 50,
+        "end": 51,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Antonius 94a",
@@ -468,7 +531,7 @@
       {
         "start": 51,
         "end": 51,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -480,14 +543,21 @@
       {
         "start": 51,
         "end": 52,
-        "author": "Jameson"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Apicatus",
     "previous": "Aperlai",
-    "next": "Apollonides 33c"
+    "next": "Apollonides 33c",
+    "chapters": [
+      {
+        "start": 53,
+        "end": 54,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Apollonides 33c",
@@ -497,20 +567,34 @@
       {
         "start": 53,
         "end": 53,
-        "author": "Benedum"
+        "author": "Jost Benedum."
       }
     ]
   },
   {
     "lemma": "Apsines",
     "previous": "Apollonides 33c",
-    "next": "Aqua, Aquae 97"
+    "next": "Aqua, Aquae 97",
+    "chapters": [
+      {
+        "start": 53,
+        "end": 53,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aqua, Aquae 97",
     "previous": "Apsines",
     "next": "Aradius 1a",
-    "sort_key": "Aquae 097"
+    "sort_key": "Aquae 097",
+    "chapters": [
+      {
+        "start": 53,
+        "end": 54,
+        "author": "Jaroslav Šašel."
+      }
+    ]
   },
   {
     "lemma": "Aradius 1a",
@@ -520,7 +604,7 @@
       {
         "start": 54,
         "end": 54,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -532,19 +616,33 @@
       {
         "start": 54,
         "end": 54,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Aratos 6",
     "previous": "Aradius 3a",
-    "next": "Araxa"
+    "next": "Araxa",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 55,
+        "author": "Walther Ludwig."
+      }
+    ]
   },
   {
     "lemma": "Araxa",
     "previous": "Aratos 6",
-    "next": "Archelaos 37a"
+    "next": "Archelaos 37a",
+    "chapters": [
+      {
+        "start": 55,
+        "end": 56,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Archelaos 37a",
@@ -554,7 +652,7 @@
       {
         "start": 56,
         "end": 56,
-        "author": "Benedum"
+        "author": "Jost Benedum."
       }
     ]
   },
@@ -566,7 +664,7 @@
       {
         "start": 56,
         "end": 56,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -578,7 +676,7 @@
       {
         "start": 56,
         "end": 57,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -590,14 +688,21 @@
       {
         "start": 57,
         "end": 57,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Arneai",
     "previous": "Arminius 4",
-    "next": "Arrecinus 2"
+    "next": "Arrecinus 2",
+    "chapters": [
+      {
+        "start": 57,
+        "end": 58,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Arrecinus 2",
@@ -607,7 +712,7 @@
       {
         "start": 58,
         "end": 58,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -619,14 +724,21 @@
       {
         "start": 58,
         "end": 58,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Arrius 17a",
     "previous": "Arrianus 9a",
-    "next": "Arrius 23a"
+    "next": "Arrius 23a",
+    "chapters": [
+      {
+        "start": 58,
+        "end": 58,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Arrius 23a",
@@ -636,14 +748,21 @@
       {
         "start": 58,
         "end": 58,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Arrius 43a",
     "previous": "Arrius 23a",
-    "next": "Arruntius 9a"
+    "next": "Arruntius 9a",
+    "chapters": [
+      {
+        "start": 58,
+        "end": 59,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Arruntius 9a",
@@ -654,7 +773,7 @@
       {
         "start": 59,
         "end": 59,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -666,14 +785,21 @@
       {
         "start": 59,
         "end": 60,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Arsada",
     "previous": "Arruntius 16a",
-    "next": "Articuleius 4"
+    "next": "Articuleius 4",
+    "chapters": [
+      {
+        "start": 60,
+        "end": 60,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Articuleius 4",
@@ -683,14 +809,21 @@
       {
         "start": 60,
         "end": 60,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Arykanda",
     "previous": "Articuleius 4",
-    "next": "Asinius 17b"
+    "next": "Asinius 17b",
+    "chapters": [
+      {
+        "start": 60,
+        "end": 62,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Asinius 17b",
@@ -700,7 +833,7 @@
       {
         "start": 62,
         "end": 62,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -712,14 +845,21 @@
       {
         "start": 62,
         "end": 62,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Asinius 28",
     "previous": "Asinius 19a",
-    "next": "Asinius 32a"
+    "next": "Asinius 32a",
+    "chapters": [
+      {
+        "start": 62,
+        "end": 62,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Asinius 32a",
@@ -729,7 +869,7 @@
       {
         "start": 62,
         "end": 63,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -741,14 +881,21 @@
       {
         "start": 63,
         "end": 63,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Ateius 12",
     "previous": "Asinius 32b",
-    "next": "Atilius 36a"
+    "next": "Atilius 36a",
+    "chapters": [
+      {
+        "start": 63,
+        "end": 63,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Atilius 36a",
@@ -758,14 +905,21 @@
       {
         "start": 63,
         "end": 63,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Attalos 18",
     "previous": "Atilius 36a",
-    "next": "Attius 11a"
+    "next": "Attius 11a",
+    "chapters": [
+      {
+        "start": 63,
+        "end": 66,
+        "author": "Jost Benedum."
+      }
+    ]
   },
   {
     "lemma": "Attius 11a",
@@ -775,7 +929,7 @@
       {
         "start": 66,
         "end": 66,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -787,7 +941,7 @@
       {
         "start": 66,
         "end": 66,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -799,14 +953,21 @@
       {
         "start": 66,
         "end": 66,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Aufidius 19",
     "previous": "Attius 35b",
-    "next": "Avidius 1a"
+    "next": "Avidius 1a",
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Avidius 1a",
@@ -816,7 +977,7 @@
       {
         "start": 67,
         "end": 67,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -828,14 +989,21 @@
       {
         "start": 67,
         "end": 67,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Avillius 2c",
     "previous": "Avidius 1b",
-    "next": "Aurelius 5a"
+    "next": "Aurelius 5a",
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 5a",
@@ -845,14 +1013,21 @@
       {
         "start": 67,
         "end": 68,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Aurelius 37b",
     "previous": "Aurelius 5a",
-    "next": "Aurelius 63aa"
+    "next": "Aurelius 63aa",
+    "chapters": [
+      {
+        "start": 68,
+        "end": 68,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 63aa",
@@ -862,7 +1037,7 @@
       {
         "start": 68,
         "end": 68,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -874,19 +1049,33 @@
       {
         "start": 68,
         "end": 68,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Aurelius 136",
     "previous": "Aurelius 65a",
-    "next": "Aurelius 141a"
+    "next": "Aurelius 141a",
+    "chapters": [
+      {
+        "start": 68,
+        "end": 68,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 141a",
     "previous": "Aurelius 136",
-    "next": "Aurelius 158a"
+    "next": "Aurelius 158a",
+    "chapters": [
+      {
+        "start": 69,
+        "end": 69,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Aurelius 158a",
@@ -896,7 +1085,7 @@
       {
         "start": 69,
         "end": 69,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -908,7 +1097,7 @@
       {
         "start": 69,
         "end": 69,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -920,7 +1109,7 @@
       {
         "start": 69,
         "end": 69,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -932,7 +1121,7 @@
       {
         "start": 69,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -942,9 +1131,9 @@
     "next": "Aurelius 232a",
     "chapters": [
       {
-        "start": 70,
+        "start": 69,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -956,7 +1145,7 @@
       {
         "start": 70,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -968,7 +1157,7 @@
       {
         "start": 70,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -980,7 +1169,7 @@
       {
         "start": 70,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -992,7 +1181,7 @@
       {
         "start": 70,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1004,7 +1193,7 @@
       {
         "start": 70,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1016,14 +1205,21 @@
       {
         "start": 70,
         "end": 70,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Baebius 21",
     "previous": "Baburius 4",
-    "next": "Baebius 24a"
+    "next": "Baebius 24a",
+    "chapters": [
+      {
+        "start": 70,
+        "end": 71,
+        "author": "Gerhard Winkler."
+      }
+    ]
   },
   {
     "lemma": "Baebius 24a",
@@ -1033,7 +1229,7 @@
       {
         "start": 71,
         "end": 71,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1045,19 +1241,33 @@
       {
         "start": 71,
         "end": 72,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
       }
     ]
   },
   {
     "lemma": "Baius",
     "previous": "Baienus",
-    "next": "Balbura"
+    "next": "Balbura",
+    "chapters": [
+      {
+        "start": 72,
+        "end": 72,
+        "author": "Gerhard Winkler."
+      }
+    ]
   },
   {
     "lemma": "Balbura",
     "previous": "Baius",
-    "next": "Bassus 8a"
+    "next": "Bassus 8a",
+    "chapters": [
+      {
+        "start": 72,
+        "end": 74,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Bassus 8a",
@@ -1068,7 +1278,7 @@
       {
         "start": 73,
         "end": 73,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1080,7 +1290,7 @@
       {
         "start": 73,
         "end": 73,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1092,7 +1302,7 @@
       {
         "start": 73,
         "end": 75,
-        "author": "Šašel"
+        "author": "Jaroslav Šašel."
       }
     ]
   },
@@ -1104,14 +1314,21 @@
       {
         "start": 75,
         "end": 75,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Boiodurum",
     "previous": "Bennius 2",
-    "next": "Bononius 2"
+    "next": "Bononius 2",
+    "chapters": [
+      {
+        "start": 75,
+        "end": 76,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Bononius 2",
@@ -1121,7 +1338,7 @@
       {
         "start": 76,
         "end": 76,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1134,7 +1351,7 @@
       {
         "start": 76,
         "end": 76,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1147,19 +1364,33 @@
       {
         "start": 77,
         "end": 77,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Bruttius 5",
     "previous": "Bruttius 4a",
-    "next": "Bubon 1"
+    "next": "Bubon 1",
+    "chapters": [
+      {
+        "start": 77,
+        "end": 77,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Bubon 1",
     "previous": "Bruttius 5",
-    "next": "Burennius"
+    "next": "Burennius",
+    "chapters": [
+      {
+        "start": 77,
+        "end": 78,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Burennius",
@@ -1169,14 +1400,21 @@
       {
         "start": 79,
         "end": 79,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Caecilius 37",
     "previous": "Burennius",
-    "next": "Caecilius 54b"
+    "next": "Caecilius 54b",
+    "chapters": [
+      {
+        "start": 79,
+        "end": 79,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Caecilius 54b",
@@ -1186,7 +1424,7 @@
       {
         "start": 79,
         "end": 79,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1198,7 +1436,7 @@
       {
         "start": 79,
         "end": 79,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1210,14 +1448,21 @@
       {
         "start": 79,
         "end": 79,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Caecilius 117",
     "previous": "Caecilius 104a",
-    "next": "Caecilius 121a"
+    "next": "Caecilius 121a",
+    "chapters": [
+      {
+        "start": 79,
+        "end": 79,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Caecilius 121a",
@@ -1227,7 +1472,7 @@
       {
         "start": 79,
         "end": 79,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1239,7 +1484,7 @@
       {
         "start": 79,
         "end": 80,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1251,7 +1496,7 @@
       {
         "start": 80,
         "end": 80,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1263,20 +1508,34 @@
       {
         "start": 80,
         "end": 80,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Caelius 26a",
     "previous": "Caecilius 140",
-    "next": "Caerellius 9"
+    "next": "Caerellius 9",
+    "chapters": [
+      {
+        "start": 80,
+        "end": 80,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Caerellius 9",
     "previous": "Caelius 26a",
     "next": "Caesellius 1a",
-    "sort_key": "Caerellius 09"
+    "sort_key": "Caerellius 09",
+    "chapters": [
+      {
+        "start": 80,
+        "end": 80,
+        "author": "Gerhard Winkler."
+      }
+    ]
   },
   {
     "lemma": "Caesellius 1a",
@@ -1286,14 +1545,21 @@
       {
         "start": 80,
         "end": 80,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Caesennius 13a",
     "previous": "Caesellius 1a",
-    "next": "Caesernius 6"
+    "next": "Caesernius 6",
+    "chapters": [
+      {
+        "start": 80,
+        "end": 81,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Caesernius 6",
@@ -1303,7 +1569,7 @@
       {
         "start": 81,
         "end": 81,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1315,7 +1581,7 @@
       {
         "start": 81,
         "end": 81,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1327,7 +1593,7 @@
       {
         "start": 81,
         "end": 81,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1335,7 +1601,14 @@
     "lemma": "Caesonius 9",
     "previous": "Caesius 22b",
     "next": "Caetronius 2a",
-    "sort_key": "Caesonius 09"
+    "sort_key": "Caesonius 09",
+    "chapters": [
+      {
+        "start": 81,
+        "end": 83,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Caetronius 2a",
@@ -1345,14 +1618,21 @@
       {
         "start": 83,
         "end": 83,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Calestrius 3",
     "previous": "Caetronius 2a",
-    "next": "Calestrius 4"
+    "next": "Calestrius 4",
+    "chapters": [
+      {
+        "start": 83,
+        "end": 85,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Calestrius 4",
@@ -1362,7 +1642,7 @@
       {
         "start": 84,
         "end": 85,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1374,7 +1654,7 @@
       {
         "start": 85,
         "end": 85,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1387,7 +1667,7 @@
       {
         "start": 85,
         "end": 85,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1399,7 +1679,7 @@
       {
         "start": 85,
         "end": 85,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1411,7 +1691,7 @@
       {
         "start": 85,
         "end": 85,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1423,7 +1703,7 @@
       {
         "start": 85,
         "end": 85,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1435,14 +1715,21 @@
       {
         "start": 86,
         "end": 86,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cammius",
     "previous": "Calvisius 8a",
-    "next": "Caninius 17a"
+    "next": "Caninius 17a",
+    "chapters": [
+      {
+        "start": 86,
+        "end": 86,
+        "author": "Gerhard Winkler."
+      }
+    ]
   },
   {
     "lemma": "Caninius 17a",
@@ -1452,7 +1739,7 @@
       {
         "start": 86,
         "end": 86,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1464,7 +1751,7 @@
       {
         "start": 86,
         "end": 86,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1476,7 +1763,7 @@
       {
         "start": 86,
         "end": 87,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1500,7 +1787,7 @@
       {
         "start": 87,
         "end": 87,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1512,7 +1799,7 @@
       {
         "start": 87,
         "end": 87,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1524,14 +1811,21 @@
       {
         "start": 87,
         "end": 87,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Catius 6",
     "previous": "Castus 1a",
-    "next": "Catius 6a"
+    "next": "Catius 6a",
+    "chapters": [
+      {
+        "start": 87,
+        "end": 88,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Catius 6a",
@@ -1541,7 +1835,7 @@
       {
         "start": 88,
         "end": 88,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1553,7 +1847,8 @@
     "chapters": [
       {
         "start": 88,
-        "end": 88
+        "end": 88,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1576,7 +1871,8 @@
     "chapters": [
       {
         "start": 88,
-        "end": 88
+        "end": 88,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1587,7 +1883,8 @@
     "chapters": [
       {
         "start": 88,
-        "end": 88
+        "end": 88,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1595,12 +1892,26 @@
     "lemma": "Ceionius 4",
     "previous": "Catius 17",
     "next": "Ceionius 24",
-    "sort_key": "Ceionius 04"
+    "sort_key": "Ceionius 04",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 88,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Ceionius 24",
     "previous": "Ceionius 4",
-    "next": "Ceionius 24a"
+    "next": "Ceionius 24a",
+    "chapters": [
+      {
+        "start": 88,
+        "end": 89,
+        "author": "Garth Thomas."
+      }
+    ]
   },
   {
     "lemma": "Ceionius 24a",
@@ -1608,9 +1919,9 @@
     "next": "Celer 16",
     "chapters": [
       {
-        "start": 88,
-        "end": 88,
-        "author": "Thomas"
+        "start": 89,
+        "end": 89,
+        "author": "Garth Thomas."
       }
     ]
   },
@@ -1621,15 +1932,22 @@
     "chapters": [
       {
         "start": 89,
-        "end": 90,
-        "author": "Eck"
+        "end": 89,
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cerellius 1",
     "previous": "Celer 16",
-    "next": "Cerellius 5"
+    "next": "Cerellius 5",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 90,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Cerellius 5",
@@ -1639,14 +1957,21 @@
       {
         "start": 90,
         "end": 90,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cetius mons",
     "previous": "Cerellius 5",
-    "next": "Charmides 5"
+    "next": "Charmides 5",
+    "chapters": [
+      {
+        "start": 90,
+        "end": 95,
+        "author": "Gerhard Winkler."
+      }
+    ]
   },
   {
     "lemma": "Charmides 5",
@@ -1656,14 +1981,21 @@
       {
         "start": 95,
         "end": 96,
-        "author": "Benedum"
+        "author": "Jost Benedum."
       }
     ]
   },
   {
     "lemma": "Choma 3",
     "previous": "Charmides 5",
-    "next": "Cilnius 1a"
+    "next": "Cilnius 1a",
+    "chapters": [
+      {
+        "start": 96,
+        "end": 96,
+        "author": "Shelagh Jameson."
+      }
+    ]
   },
   {
     "lemma": "Cilnius 1a",
@@ -1673,7 +2005,7 @@
       {
         "start": 96,
         "end": 97,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1685,7 +2017,7 @@
       {
         "start": 97,
         "end": 98,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1697,7 +2029,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1710,7 +2042,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1723,7 +2055,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1731,7 +2063,14 @@
     "lemma": "Claudius 41b",
     "previous": "Claudius 32a",
     "next": "Claudius 75a",
-    "sort_key": "Claudius 041b"
+    "sort_key": "Claudius 041b",
+    "chapters": [
+      {
+        "start": 98,
+        "end": 98,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Claudius 75a",
@@ -1742,7 +2081,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1755,7 +2094,7 @@
       {
         "start": 98,
         "end": 98,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1767,7 +2106,7 @@
       {
         "start": 99,
         "end": 100,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1779,19 +2118,33 @@
       {
         "start": 100,
         "end": 100,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Claudius 147a",
     "previous": "Claudius 107b",
-    "next": "Claudius 167"
+    "next": "Claudius 167",
+    "chapters": [
+      {
+        "start": 100,
+        "end": 100,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Claudius 167",
     "previous": "Claudius 147a",
-    "next": "Claudius 197a"
+    "next": "Claudius 197a",
+    "chapters": [
+      {
+        "start": 100,
+        "end": 101,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Claudius 197a",
@@ -1801,7 +2154,7 @@
       {
         "start": 101,
         "end": 101,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1813,7 +2166,7 @@
       {
         "start": 101,
         "end": 101,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1825,7 +2178,7 @@
       {
         "start": 101,
         "end": 101,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1837,14 +2190,21 @@
       {
         "start": 101,
         "end": 101,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Claudius 242",
     "previous": "Claudius 241a",
-    "next": "Claudius 273a"
+    "next": "Claudius 273a",
+    "chapters": [
+      {
+        "start": 101,
+        "end": 101,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Claudius 273a",
@@ -1854,14 +2214,21 @@
       {
         "start": 101,
         "end": 101,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Claudius 319",
     "previous": "Claudius 273a",
-    "next": "Claudius 342a"
+    "next": "Claudius 342a",
+    "chapters": [
+      {
+        "start": 101,
+        "end": 102,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Claudius 342a",
@@ -1871,7 +2238,7 @@
       {
         "start": 102,
         "end": 102,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1882,7 +2249,8 @@
     "chapters": [
       {
         "start": 102,
-        "end": 102
+        "end": 102,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1894,7 +2262,7 @@
       {
         "start": 102,
         "end": 103,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1906,14 +2274,21 @@
       {
         "start": 103,
         "end": 103,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Claudius 412",
     "previous": "Claudius 410a",
-    "next": "Claudius 414a"
+    "next": "Claudius 414a",
+    "chapters": [
+      {
+        "start": 103,
+        "end": 103,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Claudius 414a",
@@ -1923,7 +2298,7 @@
       {
         "start": 103,
         "end": 104,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1935,7 +2310,7 @@
       {
         "start": 104,
         "end": 104,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1947,7 +2322,7 @@
       {
         "start": 104,
         "end": 104,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1959,7 +2334,7 @@
       {
         "start": 104,
         "end": 104,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1971,29 +2346,43 @@
       {
         "start": 104,
         "end": 104,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Claudius 440a",
     "previous": "Claudius 437a",
+    "next": "Clodius 30a",
     "chapters": [
       {
         "start": 104,
         "end": 104,
-        "author": "Eck"
+        "author": "Werner Eck."
+      }
+    ]
+  },
+  {
+    "lemma": "Clodius 30a",
+    "previous": "Claudius 440a",
+    "next": "Clodius 58a",
+    "chapters": [
+      {
+        "start": 104,
+        "end": 105,
+        "author": "Garth Thomas."
       }
     ]
   },
   {
     "lemma": "Clodius 58a",
+    "previous": "Clodius 30a",
     "next": "Clodius 62a",
     "chapters": [
       {
-        "start": 104,
-        "end": 104,
-        "author": "Eck"
+        "start": 105,
+        "end": 105,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2005,7 +2394,7 @@
       {
         "start": 104,
         "end": 105,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2015,32 +2404,47 @@
     "next": "Cluvius 10c",
     "chapters": [
       {
-        "start": 105,
+        "start": 104,
         "end": 105,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cluvius 10c",
     "previous": "Cluvius 10b",
+    "next": "Coelius 19",
     "chapters": [
       {
-        "start": 105,
+        "start": 104,
         "end": 105,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Coelius 19",
     "previous": "Cluvius 10c",
-    "next": "Cominius 22"
+    "next": "Cominius 22",
+    "chapters": [
+      {
+        "start": 105,
+        "end": 106,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Cominius 22",
     "previous": "Coelius 19",
-    "next": "Comius 2"
+    "next": "Comius 2",
+    "chapters": [
+      {
+        "start": 106,
+        "end": 106,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Comius 2",
@@ -2050,7 +2454,7 @@
       {
         "start": 106,
         "end": 106,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2058,27 +2462,35 @@
     "lemma": "computus",
     "previous": "Comius 2",
     "next": "Concors",
-    "redirect": "digitorum computus"
+    "redirect": "digitorum computus",
+    "chapters": [
+      {
+        "start": 106,
+        "end": 106
+      }
+    ]
   },
   {
     "lemma": "Concors",
     "previous": "computus",
+    "next": "Cordus 1a",
     "chapters": [
       {
         "start": 106,
         "end": 106,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cordus 1a",
+    "previous": "Concors",
     "next": "Corellius 1a",
     "chapters": [
       {
         "start": 106,
         "end": 106,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2090,14 +2502,21 @@
       {
         "start": 106,
         "end": 107,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Corellius 2",
     "previous": "Corellius 1a",
-    "next": "Cornelius 124a"
+    "next": "Cornelius 124a",
+    "chapters": [
+      {
+        "start": 106,
+        "end": 107,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 124a",
@@ -2107,14 +2526,21 @@
       {
         "start": 107,
         "end": 107,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cornelius 146",
     "previous": "Cornelius 124a",
-    "next": "Cornelius 154a"
+    "next": "Cornelius 154a",
+    "chapters": [
+      {
+        "start": 107,
+        "end": 107,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 154a",
@@ -2124,14 +2550,21 @@
       {
         "start": 107,
         "end": 107,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cornelius 276",
     "previous": "Cornelius 154a",
-    "next": "Cornelius 283a"
+    "next": "Cornelius 283a",
+    "chapters": [
+      {
+        "start": 107,
+        "end": 108,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 283a",
@@ -2141,7 +2574,7 @@
       {
         "start": 108,
         "end": 108,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2153,7 +2586,7 @@
       {
         "start": 108,
         "end": 108,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2165,7 +2598,7 @@
       {
         "start": 108,
         "end": 109,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2177,19 +2610,33 @@
       {
         "start": 109,
         "end": 109,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cornelius 359",
     "previous": "Cornelius 333a",
-    "next": "Cornelius 398a"
+    "next": "Cornelius 398a",
+    "chapters": [
+      {
+        "start": 109,
+        "end": 109,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 398a",
     "previous": "Cornelius 359",
-    "next": "Cornelius 442a"
+    "next": "Cornelius 442a",
+    "chapters": [
+      {
+        "start": 109,
+        "end": 109,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Cornelius 442a",
@@ -2199,7 +2646,7 @@
       {
         "start": 109,
         "end": 109,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2211,7 +2658,7 @@
       {
         "start": 109,
         "end": 109,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2223,7 +2670,7 @@
       {
         "start": 109,
         "end": 109,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2235,7 +2682,7 @@
       {
         "start": 110,
         "end": 110,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2247,7 +2694,7 @@
       {
         "start": 110,
         "end": 110,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2259,14 +2706,21 @@
       {
         "start": 110,
         "end": 110,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Cutius 1a",
     "previous": "Cuspius 1a",
-    "next": "Damocharis 2"
+    "next": "Damocharis 2",
+    "chapters": [
+      {
+        "start": 110,
+        "end": 110,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Damocharis 2",
@@ -2276,7 +2730,7 @@
       {
         "start": 110,
         "end": 110,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2288,7 +2742,7 @@
       {
         "start": 110,
         "end": 110,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2300,7 +2754,7 @@
       {
         "start": 110,
         "end": 111,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2313,7 +2767,7 @@
       {
         "start": 111,
         "end": 112,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2325,7 +2779,7 @@
       {
         "start": 112,
         "end": 112,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2337,7 +2791,7 @@
       {
         "start": 111,
         "end": 111,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2349,7 +2803,7 @@
       {
         "start": 111,
         "end": 111,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -2361,7 +2815,7 @@
       {
         "start": 111,
         "end": 111,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -4140,8 +4594,7 @@
     "chapters": [
       {
         "start": 385,
-        "end": 387,
-        "author": "Meyer, Ernst"
+        "end": 387
       }
     ]
   },
@@ -4153,7 +4606,7 @@
       {
         "start": 387,
         "end": 412,
-        "author": "Saake"
+        "author": "Helmut Saake."
       }
     ]
   },
@@ -4879,7 +5332,13 @@
   {
     "lemma": "Raetia",
     "previous": "Raecius 6a",
-    "next": "Ragonius 4a"
+    "next": "Ragonius 4a",
+    "chapters": [
+      {
+        "start": 582,
+        "end": 586
+      }
+    ]
   },
   {
     "lemma": "Ragonius 4a",
@@ -5076,7 +5535,14 @@
   {
     "lemma": "Saevinius 2",
     "previous": "Sabinus 11m",
-    "next": "Saevinius 3"
+    "next": "Saevinius 3",
+    "chapters": [
+      {
+        "start": 591,
+        "end": 591,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "Saevinius 3",
@@ -6166,13 +6632,7 @@
     "chapters": [
       {
         "start": 786,
-        "end": 794,
-        "author": "Sirch"
-      },
-      {
-        "start": 794,
-        "end": 796,
-        "author": "Hinz"
+        "end": 796
       }
     ]
   },
