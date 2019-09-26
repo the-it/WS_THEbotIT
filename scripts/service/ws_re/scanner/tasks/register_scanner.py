@@ -119,8 +119,7 @@ class SCANTask(ReScannerTask):
             chapter_dict = self._analyse_simple_article_list(article_list)
             if chapter_dict:
                 return {"chapters": [chapter_dict]}, []
-            else:
-                return {}, []
+            return {}, []
         return {"chapters": self._analyse_complex_article_list(article_list)}, []
 
     def _analyse_simple_article_list(self, article_list: List[Article]) -> ChapterDict:
