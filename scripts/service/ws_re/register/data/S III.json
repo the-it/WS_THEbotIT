@@ -1716,7 +1716,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexios",
+    "next": "Alexias 5",
     "chapters": [
       {
         "start": 80,
@@ -1727,6 +1727,8 @@
   },
   {
     "lemma": "Alexias 5",
+    "previous": "Alexinos 2",
+    "next": "Alfius 6",
     "chapters": [
       {
         "start": 80,
@@ -1737,7 +1739,6 @@
   },
   {
     "lemma": "Alexios",
-    "previous": "Alexinos 2",
     "next": "Alfius 6",
     "chapters": [
       {
@@ -10133,7 +10134,6 @@
   {
     "lemma": "Byzantion 1",
     "previous": "Bosporos 1",
-    "next": "Botrys 5",
     "chapters": [
       {
         "start": 213,
@@ -10144,7 +10144,7 @@
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Byzantion 1",
+    "previous": "Bosporos 1",
     "next": "Boudillus",
     "chapters": [
       {
