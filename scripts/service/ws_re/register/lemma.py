@@ -23,7 +23,7 @@ if sys.version_info >= (3, 8):
 
     LemmaItems = Union[str, bool, ChapterDict]
 
-    class LemmaDict(TypedDict):
+    class LemmaDict(TypedDict, total=False):
         lemma: str
         previous: str
         next: str
