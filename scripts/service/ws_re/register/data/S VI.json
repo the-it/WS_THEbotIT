@@ -153,17 +153,6 @@
   {
     "lemma": "Aiacius 3",
     "previous": "Agesistratos",
-    "chapters": [
-      {
-        "start": 3,
-        "end": 3,
-        "author": "Groag."
-      }
-    ]
-  },
-  {
-    "lemma": "Aiacius 2",
-    "previous": "Agesistratos",
     "next": "Albiobola",
     "chapters": [
       {
@@ -174,8 +163,18 @@
     ]
   },
   {
+    "lemma": "Aiacius 2",
+    "chapters": [
+      {
+        "start": 3,
+        "end": 3,
+        "author": "Groag."
+      }
+    ]
+  },
+  {
     "lemma": "Albiobola",
-    "previous": "Aiacius 2",
+    "previous": "Aiacius 3",
     "next": "Alexandros 90a",
     "chapters": [
       {
