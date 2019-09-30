@@ -1,10 +1,11 @@
 import contextlib
 import re
 import sys
-import unicodedata
 from collections import OrderedDict
 from datetime import datetime
 from typing import Dict, Union, List, Tuple, KeysView, Optional
+
+import unicodedata
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
@@ -328,7 +329,7 @@ class Lemma():
             mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
                                                                 self._volume.name)
             if mapped_author:
-                author_str = mapped_author.name
+                author_str = "".join([author.name for author in mapped_author])
             else:
                 author_str = lemma_chapter.author
         return author_str

@@ -33,10 +33,6 @@ class TestLemmaChapter(TestCase):
 
 
 class TestLemma(BaseTestRegister):
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-
     def setUp(self):
         self.authors = Authors()
         self.volumes = Volumes()
