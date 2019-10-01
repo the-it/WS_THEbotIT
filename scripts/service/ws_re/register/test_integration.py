@@ -39,7 +39,7 @@ class TestAuthors(TestCase):
         for author in authors_in_mappings:
             try:
                 self.authors.get_author(author)
-            except KeyError:
+            except KeyError:  # pragma: no cover
                 errors.append(f"Mapping target {author} not there.")
         _raise_count_errors(errors)
 
@@ -93,7 +93,7 @@ class TestIntegrationRegister(TestCase):
         for register in self.registers.volumes.values():
             for lemma in register:
                 for chapter in lemma.chapters:
-                    if chapter.author and chapter.author not in mappings:
+                    if chapter.author and chapter.author not in mappings:  # pragma: no cover
                         errors.append(f"Author {chapter.author}, {lemma['lemma']}, {register.volume.name} not in mappings.")
         _raise_count_errors(errors)
 
