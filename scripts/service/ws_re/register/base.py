@@ -18,9 +18,8 @@ class Register(ABC):
                 if lemma["lemma"] == last_lemmas[-1]["lemma"]:
                     last_lemmas.append(lemma)
                     continue
-                else:
-                    return_lemmas.append(last_lemmas)
-                    last_lemmas = []
+                return_lemmas.append(last_lemmas)
+                last_lemmas = []
             last_lemmas.append(lemma)
         if last_lemmas:
             return_lemmas.append(last_lemmas)
