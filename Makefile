@@ -92,7 +92,7 @@ codacy :
 
 clean : clean-pyc clean-coverage clean-code-climate
 
-pre-commit : quality integrationtest
+pre-commit : pip3 quality integrationtest
 
 quality : bandit flake8 pycodestyle pylint mypy
 
