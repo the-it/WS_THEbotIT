@@ -1352,7 +1352,6 @@
   {
     "lemma": "Aix 3",
     "previous": "Aitolos",
-    "next": "Akanthos 5a",
     "sort_key": "Aix 3",
     "chapters": [
       {
@@ -1363,26 +1362,10 @@
     ]
   },
   {
-    "lemma": "Akanthos 5a",
-    "previous": "Aix 3",
-    "next": "Akatos",
-    "sort_key": "Akanthos 5a",
-    "chapters": [
-      {
-        "start": 70,
-        "end": 70,
-        "author": "Adler."
-      }
-    ]
-  },
-  {
-    "lemma": "Akatos",
-    "previous": "Akanthos 5a"
-  },
-  {
     "lemma": "Akanthos 1",
     "previous": "Aix 3",
     "next": "Akatos 2",
+    "sort_key": "Akanthos 5a",
     "chapters": [
       {
         "start": 70,
@@ -1738,19 +1721,7 @@
     ]
   },
   {
-    "lemma": "Alexios",
-    "next": "Alfius 6",
-    "chapters": [
-      {
-        "start": 80,
-        "end": 80,
-        "author": "Oldfather."
-      }
-    ]
-  },
-  {
     "lemma": "Alfius 6",
-    "previous": "Alexios",
     "next": "Algalsos",
     "chapters": [
       {
@@ -13392,7 +13363,6 @@
   {
     "lemma": "Comicato",
     "previous": "Colubrarius mons",
-    "next": "Cominius 10",
     "chapters": [
       {
         "start": 256,
@@ -13400,10 +13370,6 @@
         "author": "Hähnle."
       }
     ]
-  },
-  {
-    "lemma": "Cominius 10",
-    "previous": "Comicato"
   },
   {
     "lemma": "Cominius 2a",
