@@ -30,6 +30,9 @@ class TestAuthors(TestCase):
         for mapping in self.authors._mapping.values():
             if isinstance(mapping, str):
                 authors_in_mappings.add(mapping)
+            elif isinstance(mapping, list):
+                for author in mapping:
+                    authors_in_mappings.add(author)
             else:
                 for author in mapping.values():
                     authors_in_mappings.add(author)

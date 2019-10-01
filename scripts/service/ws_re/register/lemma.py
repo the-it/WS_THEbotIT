@@ -329,7 +329,7 @@ class Lemma():
             mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
                                                                 self._volume.name)
             if mapped_author:
-                author_str = "".join([author.name for author in mapped_author])
+                author_str = ", ".join([author.name for author in mapped_author])
             else:
                 author_str = lemma_chapter.author
         return author_str
@@ -340,7 +340,8 @@ class Lemma():
             mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
                                                                 self._volume.name)
             if mapped_author:
-                year = str(mapped_author.death) if mapped_author.death else ""
+                years = [author.death for author in mapped_author if author.death]
+                year = str(max(years)) if years else ""
             else:
                 year = "????"
         return year
