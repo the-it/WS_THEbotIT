@@ -33,10 +33,6 @@ class TestLemmaChapter(TestCase):
 
 
 class TestLemma(BaseTestRegister):
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-
     def setUp(self):
         self.authors = Authors()
         self.volumes = Volumes()
@@ -114,6 +110,12 @@ class TestLemma(BaseTestRegister):
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
         compare("", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "Abbott"})))
+
+        # check use case one chapter several authors
+        compare("1998", re_register_lemma._get_death_year(
+            LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
+        compare("Abert, Abel", re_register_lemma._get_author_str(
+            LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
 
         # check if author not there
         compare("????", re_register_lemma._get_death_year(

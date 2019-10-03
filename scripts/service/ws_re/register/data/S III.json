@@ -1352,7 +1352,7 @@
   {
     "lemma": "Aix 3",
     "previous": "Aitolos",
-    "next": "Akanthos 5a",
+    "next": "Akanthos 1",
     "sort_key": "Aix 3",
     "chapters": [
       {
@@ -1363,26 +1363,10 @@
     ]
   },
   {
-    "lemma": "Akanthos 5a",
-    "previous": "Aix 3",
-    "next": "Akatos",
-    "sort_key": "Akanthos 5a",
-    "chapters": [
-      {
-        "start": 70,
-        "end": 70,
-        "author": "Adler."
-      }
-    ]
-  },
-  {
-    "lemma": "Akatos",
-    "previous": "Akanthos 5a"
-  },
-  {
     "lemma": "Akanthos 1",
     "previous": "Aix 3",
     "next": "Akatos 2",
+    "sort_key": "Akanthos 5a",
     "chapters": [
       {
         "start": 70,
@@ -1716,7 +1700,7 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
+    "next": "Alexios",
     "chapters": [
       {
         "start": 80,
@@ -1726,7 +1710,7 @@
     ]
   },
   {
-    "lemma": "Alexias 5",
+    "lemma": "Alexios",
     "previous": "Alexinos 2",
     "next": "Alfius 6",
     "chapters": [
@@ -1738,7 +1722,7 @@
     ]
   },
   {
-    "lemma": "Alexios",
+    "lemma": "Alexias 5",
     "next": "Alfius 6",
     "chapters": [
       {
@@ -1750,7 +1734,7 @@
   },
   {
     "lemma": "Alfius 6",
-    "previous": "Alexios",
+    "previous": "Alexias 5",
     "next": "Algalsos",
     "chapters": [
       {
@@ -13392,7 +13376,7 @@
   {
     "lemma": "Comicato",
     "previous": "Colubrarius mons",
-    "next": "Cominius 10",
+    "next": "Cominius 2a",
     "chapters": [
       {
         "start": 256,
@@ -13400,10 +13384,6 @@
         "author": "Hähnle."
       }
     ]
-  },
-  {
-    "lemma": "Cominius 10",
-    "previous": "Comicato"
   },
   {
     "lemma": "Cominius 2a",

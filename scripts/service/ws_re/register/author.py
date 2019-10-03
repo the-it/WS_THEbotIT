@@ -72,8 +72,8 @@ class Authors:
             for author in json_dict:
                 self._authors[author] = Author(author, json_dict[author])
 
-    def get_author_by_mapping(self, name: str, issue: str) -> Optional[Author]:
-        author = None
+    def get_author_by_mapping(self, name: str, issue: str) -> List[Author]:
+        author_list = []
         with contextlib.suppress(KeyError):
             mapping = self._mapping[name]
             if isinstance(mapping, dict):
@@ -81,8 +81,11 @@ class Authors:
                     mapping = mapping[issue]
                 except KeyError:
                     mapping = mapping["*"]
-            author = self.get_author(mapping)
-        return author
+            if isinstance(mapping, str):
+                mapping = [mapping]
+            for item in mapping:
+                author_list.append(self.get_author(item))
+        return author_list
 
     def get_author(self, author_key: str) -> Author:
         author = self._authors[author_key.replace("|", "")]

@@ -1,6 +1,11 @@
 {
+  "?": "?",
   "A. Gudeman.": "Alfred Gudeman",
   "A. Jülicher.": "Adolf Jülicher",
+  "A. Jülicher; H. G. Opitz.": [
+    "Adolf Jülicher",
+    "Hans-Georg Opitz"
+  ],
   "A. Körte.": "Alfred Körte",
   "A. Marx.": "August Marx",
   "A. Nagl.": "Alfred Nagl",
@@ -93,7 +98,19 @@
   "Bayer": "Bayer",
   "Becher": "Becher",
   "Beer": "Beer",
+  "Beer-Honigmann.": [
+    "Georg Beer",
+    "Ernst Honigmann"
+  ],
+  "Beer-Moritz.": [
+    "Georg Beer",
+    "Bernhard Moritz"
+  ],
   "Beer.": "Georg Beer",
+  "Begonnen von K. Fitzler, ehe ein allzufrüher Heldentod ihn der Wissenschaft raubte, mit Hilfe des von ihm gesammelten Materials vollendet von O. Seeck.": [
+    "Kurt Fitzler",
+    "Otto Seeck"
+  ],
   "Benedum": "Benedum",
   "Bengt E. Thomasson.": "Bengt E. Thomasson",
   "Bengtson": "Bengtson",
@@ -215,6 +232,10 @@
   "C. Daicoviciu.": "Constantin Daicoviciu",
   "C. Joachim Classen.": "Carl Joachim Classen",
   "C. Robert.": "Carl Robert",
+  "C. Robert.  O. Rossbach.": [
+    "Carl Robert",
+    "Otto Rossbach"
+  ],
   "Calza": "Calza",
   "Campenhausen": "Campenhausen",
   "Capelle": "Capelle",
@@ -282,6 +303,10 @@
   "Deubner": "Deubner",
   "Diehl, Erich": "Diehl, Erich",
   "Diehl, Ernst": "Diehl, Ernst",
+  "Diehl-Oldfather.": [
+    "Ernst Diehl",
+    "William Abbott Oldfather"
+  ],
   "Diehl.": "Ernst Diehl",
   "Diesner": "Diesner",
   "Dieterich": "Dieterich",
@@ -340,6 +365,10 @@
   "E. Polaschek.": "Erich Polaschek",
   "E. Sachers.": "Erich Sachers",
   "E. Schwartz.": "Eduard Schwartz",
+  "E. Schwyzer (unter Verwertung der Materialien von W. Riemschneider).": [
+    "Eduard Schwyzer",
+    "Wilhelm Riemschneider"
+  ],
   "E. Schwyzer.": "Eduard Schwyzer",
   "E. Swoboda.": "Erich Swoboda",
   "E. Vetter.": "Emil Vetter",
@@ -445,6 +474,10 @@
   "Fluss": "Fluss",
   "Fluss.": "Max Fluß",
   "Foerster": "Foerster",
+  "Foerster (†)-Münscher.": [
+    "Richard Foerster",
+    "Karl Münscher"
+  ],
   "Foerster.": "Richard Foerster",
   "Fontenrose": "Fontenrose",
   "Forbes": "Forbes",
@@ -540,6 +573,10 @@
   "Gerth": "Gerth",
   "Gerth.": "Karl Gerth",
   "Gertrud Herzog-Hauser.": "Gertrud Herzog-Hauser",
+  "Gertrud Herzog-Hauser–Friedrich Wotke.": [
+    "Gertrud Herzog-Hauser",
+    "Friedrich Wotke"
+  ],
   "Geyer": "Geyer",
   "Geyer.": "Fritz Geyer| (Historiker)",
   "Gigante": "Gigante",
@@ -556,6 +593,10 @@
   "Goldfinger.": "Robert Goldfinger",
   "Gordon": "Gordon",
   "Gossen": "Gossen",
+  "Gossen-Steier.": [
+    "Hans Gossen",
+    "August Steier"
+  ],
   "Gossen.": "Hans Gossen",
   "Graef": "Graef",
   "Graef.": "Botho Graef",
@@ -592,6 +633,10 @@
   "Gunning.": "Johannes Hermanus Gunning",
   "Gutenbrunner": "Gutenbrunner",
   "Gärtner": "Gärtner",
+  "Gärtner & Wünsch.": [
+    "Hans Gärtner",
+    "Albert Wünsch"
+  ],
   "Gärtner.": "Hans Gärtner",
   "Göbel": "Göbel",
   "Göber": "Göber",
@@ -1139,8 +1184,16 @@
   "Münzel": "Münzel",
   "Münzel.": "Robert Münzel",
   "Münzer": "Münzer",
+  "Münzer und Vonder Mühll.": [
+    "Friedrich Münzer",
+    "Friedrich von der Mühll"
+  ],
   "Münzer.": "Friedrich Münzer",
   "Müri": "Müri",
+  "Nach Dittenberger Bischoff.": [
+    "Wilhelm Dittenberger",
+    "Ernst Bischoff"
+  ],
   "Nachod": "Nachod",
   "Nagl": {
     "*": "Nagl",
@@ -1199,6 +1252,10 @@
   "Oehler.": "Johann Oehler",
   "Oertel": "Oertel",
   "Olck": "Olck",
+  "Olck-Steier.": [
+    "Franz Olck",
+    "August Steier"
+  ],
   "Olck.": "Franz Olck",
   "Oldfather": "Oldfather",
   "Oldfather.": "William Abbott Oldfather",
@@ -1308,6 +1365,10 @@
   "Preisigke.": "Friedrich Preisigke",
   "Premerstein": "Premerstein",
   "Preuner": "Preuner",
+  "Preuner-Reitzenstein.": [
+    "Erich Preuner",
+    "Richard Reitzenstein"
+  ],
   "Preuner.": "Erich Preuner",
   "Professor D. Dr. Hans Lietzmann": "Hans Lietzmann",
   "Puchstein": "Puchstein",
@@ -1697,6 +1758,10 @@
   "W. Ruge.": "Walther Ruge",
   "W. Schmid.": "Wilhelm Schmid",
   "W. Schultz.": "Wolfgang Schultz",
+  "W. Tomaschek † – Max Fluss.": [
+    "Wilhelm Tomaschek",
+    "Max Fluß"
+  ],
   "W. Tomaschek.": "Wilhelm Tomaschek",
   "W. Zschietzschmann.": "Willy Zschietzschmann",
   "W. v. Uxkull.": "Woldemar Graf Uxkull-Gyllenband",
