@@ -1352,6 +1352,7 @@
   {
     "lemma": "Aix 3",
     "previous": "Aitolos",
+    "next": "Akanthos 1",
     "sort_key": "Aix 3",
     "chapters": [
       {
@@ -1699,7 +1700,19 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexias 5",
+    "next": "Alexios",
+    "chapters": [
+      {
+        "start": 80,
+        "end": 80,
+        "author": "Oldfather."
+      }
+    ]
+  },
+  {
+    "lemma": "Alexios",
+    "previous": "Alexinos 2",
+    "next": "Alfius 6",
     "chapters": [
       {
         "start": 80,
@@ -1710,7 +1723,6 @@
   },
   {
     "lemma": "Alexias 5",
-    "previous": "Alexinos 2",
     "next": "Alfius 6",
     "chapters": [
       {
@@ -10106,6 +10118,7 @@
   {
     "lemma": "Byzantion 1",
     "previous": "Bosporos 1",
+    "next": "Botrys 5",
     "chapters": [
       {
         "start": 213,
@@ -10116,7 +10129,7 @@
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Bosporos 1",
+    "previous": "Byzantion 1",
     "next": "Boudillus",
     "chapters": [
       {
@@ -13363,6 +13376,7 @@
   {
     "lemma": "Comicato",
     "previous": "Colubrarius mons",
+    "next": "Cominius 2a",
     "chapters": [
       {
         "start": 256,
