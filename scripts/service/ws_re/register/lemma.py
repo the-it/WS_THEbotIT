@@ -30,12 +30,13 @@ if sys.version_info >= (3, 8):
         next: str
         sort_key: str
         redirect: Union[str, bool]
+        proof_read: int
         wp_link: str
         ws_link: str
         chapters: List[ChapterDict]
 else:
     ChapterDict = Dict[str, Union[str, int]]
-    LemmaItems = Union[str, bool, ChapterDict]
+    LemmaItems = Union[str, bool, int, ChapterDict]
     LemmaDict = Dict[str, LemmaItems]
 
 
@@ -147,7 +148,7 @@ for regex_pair in _1ST_REGEX_RAW_LIST:
 
 
 class Lemma():
-    _keys = ["lemma", "previous", "next", "sort_key", "redirect", "wp_link", "ws_link", "chapters"]
+    _keys = ["lemma", "previous", "next", "sort_key", "redirect", "proof_read", "wp_link", "ws_link", "chapters"]
 
     def __init__(self,
                  lemma_dict: LemmaDict,

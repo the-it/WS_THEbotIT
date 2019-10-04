@@ -115,6 +115,52 @@ text.
         task.re_page =  re_page
         compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
 
+    def test_proof_read(self):
+        self.title_mock.return_value = "RE:Aal"
+        self.text_mock.return_value = """{{REDaten
+|KORREKTURSTAND=korrigiert
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        article = re_page.splitted_article_list[0]
+        task = SCANTask(None, self.logger)
+        task.re_page = re_page
+        compare(({"proof_read": 2}, []), task._fetch_proof_read(article))
+
+        self.text_mock.return_value = """{{REDaten
+|KORREKTURSTAND=Fertig
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        article = re_page.splitted_article_list[0]
+        task = SCANTask(None, self.logger)
+        task.re_page = re_page
+        compare(({"proof_read": 3}, []), task._fetch_proof_read(article))
+
+        self.text_mock.return_value = """{{REDaten
+|KORREKTURSTAND=UnKorrigiert
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        article = re_page.splitted_article_list[0]
+        task = SCANTask(None, self.logger)
+        task.re_page = re_page
+        compare(({"proof_read": 1}, []), task._fetch_proof_read(article))
+
+        self.text_mock.return_value = """{{REDaten
+|KORREKTURSTAND=bla
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        article = re_page.splitted_article_list[0]
+        task = SCANTask(None, self.logger)
+        task.re_page = re_page
+        compare(({}, ["proof_read"]), task._fetch_proof_read(article))
+
     def test_redirect(self):
         task = SCANTask(None, self.logger)
         # redirect from the properties
@@ -351,6 +397,7 @@ text.
 |WS=Aal_ws_link
 |SORTIERUNG=Aal
 |VERWEIS=ON
+|KORREKTURSTAND=korrigiert
 }}
 text.
 {{REAutor|OFF}}"""
@@ -361,6 +408,7 @@ text.
             compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
             compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
             compare("Aal", post_lemma.lemma_dict["sort_key"])
+            compare(2, post_lemma.lemma_dict["proof_read"])
             compare(True, post_lemma.lemma_dict["redirect"])
             compare("Lemma Previous", post_lemma.lemma_dict["previous"])
             compare("Lemma Next", post_lemma.lemma_dict["next"])
