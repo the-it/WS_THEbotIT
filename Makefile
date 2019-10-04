@@ -86,10 +86,6 @@ codecov :
 	echo "########### CODECOV ############"
 	codecov
 
-codacy :
-	echo "############ CODACY ############"
-	python-codacy-coverage -r coverage.xml
-
 clean : clean-pyc clean-coverage clean-code-climate
 
 pre-commit : pip3 quality integrationtest
