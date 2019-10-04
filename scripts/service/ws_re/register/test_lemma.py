@@ -237,6 +237,7 @@ class TestLemma(BaseTestRegister):
         reverse_dict = {"chapters": [{"start": 1, "author": "Abel", "end": 1},
                                      {"start": 1, "end": 2, "author": "Abbott"}],
                         "wp_link": "tada",
+                        "proof_read": 2,
                         "ws_link": "tadü",
                         "sort_key": "something",
                         "redirect": True,
@@ -251,6 +252,7 @@ class TestLemma(BaseTestRegister):
                                      ("next", "next"),
                                      ("sort_key", "something"),
                                      ("redirect", True),
+                                     ("proof_read", 2),
                                      ("wp_link", "tada"),
                                      ("ws_link", "tadü"),
                                      ("chapters", [chapter_dict_1, chapter_dict_2])])
