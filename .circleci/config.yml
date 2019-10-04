@@ -86,13 +86,6 @@ run_unittest: &run_unittest
       . venv/bin/activate
       make unittest
 
-report_codacy: &report_codacy
-  run:
-    name: report codacy
-    command: |
-      . venv/bin/activate
-      make codacy
-
 report_codecov: &report_codecov
   run:
     name: report codecov
@@ -128,7 +121,6 @@ coverage_steps: &coverage_steps
     - <<: *install_dependencies
     - <<: *save_cache
     - <<: *run_coverage
-    - <<: *report_codacy
     - <<: *report_codecov
 
 unittest_steps: &unittest_steps
