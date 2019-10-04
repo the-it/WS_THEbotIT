@@ -1366,7 +1366,6 @@
     "lemma": "Akanthos 1",
     "previous": "Aix 3",
     "next": "Akatos 2",
-    "sort_key": "Akanthos 5a",
     "chapters": [
       {
         "start": 70,
@@ -1712,7 +1711,6 @@
   {
     "lemma": "Alexios",
     "previous": "Alexinos 2",
-    "next": "Alfius 6",
     "chapters": [
       {
         "start": 80,
@@ -1723,6 +1721,7 @@
   },
   {
     "lemma": "Alexias 5",
+    "previous": "Alexinos 2",
     "next": "Alfius 6",
     "chapters": [
       {
@@ -10118,7 +10117,6 @@
   {
     "lemma": "Byzantion 1",
     "previous": "Bosporos 1",
-    "next": "Botrys 5",
     "chapters": [
       {
         "start": 213,
@@ -10129,7 +10127,7 @@
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Byzantion 1",
+    "previous": "Bosporos 1",
     "next": "Boudillus",
     "chapters": [
       {
