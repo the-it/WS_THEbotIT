@@ -1366,7 +1366,6 @@
     "lemma": "Akanthos 1",
     "previous": "Aix 3",
     "next": "Akatos 2",
-    "sort_key": "Akanthos 5a",
     "chapters": [
       {
         "start": 70,
@@ -1712,7 +1711,6 @@
   {
     "lemma": "Alexios",
     "previous": "Alexinos 2",
-    "next": "Alfius 6",
     "chapters": [
       {
         "start": 80,
@@ -1723,6 +1721,7 @@
   },
   {
     "lemma": "Alexias 5",
+    "previous": "Alexinos 2",
     "next": "Alfius 6",
     "chapters": [
       {
@@ -10118,7 +10117,6 @@
   {
     "lemma": "Byzantion 1",
     "previous": "Bosporos 1",
-    "next": "Botrys 5",
     "chapters": [
       {
         "start": 213,
@@ -10129,7 +10127,7 @@
   },
   {
     "lemma": "Botrys 5",
-    "previous": "Byzantion 1",
+    "previous": "Bosporos 1",
     "next": "Boudillus",
     "chapters": [
       {
@@ -12659,6 +12657,7 @@
     "lemma": "Chersaias",
     "previous": "Chelkias",
     "next": "Chersis 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 245,
@@ -12671,6 +12670,7 @@
     "lemma": "Chersis 4",
     "previous": "Chersaias",
     "next": "Chilon 5a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 245,
@@ -12683,6 +12683,7 @@
     "lemma": "Chilon 5a",
     "previous": "Chersis 4",
     "next": "Χιουργές",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 245,
@@ -12696,6 +12697,7 @@
     "previous": "Chilon 5a",
     "next": "Christophoros 2",
     "sort_key": "Chiurges",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 245,
@@ -12720,6 +12722,7 @@
     "lemma": "Chryseros 3a",
     "previous": "Christophoros 2",
     "next": "Chrysis 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 248,
@@ -12732,6 +12735,7 @@
     "lemma": "Chrysis 5",
     "previous": "Chryseros 3a",
     "next": "Chthonopatra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 249,
@@ -12756,6 +12760,7 @@
     "lemma": "Chytra",
     "previous": "Chthonopatra",
     "next": "Chytrogaulos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 249,
@@ -12768,6 +12773,7 @@
     "lemma": "Chytrogaulos",
     "previous": "Chytra",
     "next": "Ciamilus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 250,
@@ -12780,6 +12786,7 @@
     "lemma": "Ciamilus",
     "previous": "Chytrogaulos",
     "next": "Cibisus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 250,
@@ -12792,6 +12799,7 @@
     "lemma": "Cibisus",
     "previous": "Ciamilus",
     "next": "Cicarus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 250,
@@ -12816,6 +12824,7 @@
     "lemma": "Cincius",
     "previous": "Cicarus",
     "next": "Cinges",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 250,
@@ -12828,6 +12837,7 @@
     "lemma": "Cinges",
     "previous": "Cincius",
     "next": "Cinna 5a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 250,
@@ -12852,6 +12862,7 @@
     "lemma": "Cinnamus",
     "previous": "Cinna 5a",
     "next": "Cinniana 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 251,
@@ -12864,6 +12875,7 @@
     "lemma": "Cinniana 2",
     "previous": "Cinnamus",
     "next": "Cintugnatus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 251,
@@ -12876,6 +12888,7 @@
     "lemma": "Cintugnatus",
     "previous": "Cinniana 2",
     "next": "Cintusmus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 251,
@@ -12924,6 +12937,7 @@
     "lemma": "Cispius 2a",
     "previous": "Ciruca",
     "next": "Citiergesetz",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 252,
@@ -12936,6 +12950,7 @@
     "lemma": "Citiergesetz",
     "previous": "Cispius 2a",
     "next": "Claudiana tegula",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 252,
@@ -12947,6 +12962,7 @@
     "lemma": "Claudiana tegula",
     "previous": "Citiergesetz",
     "next": "Claudius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 252,
@@ -13120,6 +13136,7 @@
     "lemma": "Cleppius",
     "previous": "Clemens 11",
     "next": "Clodius 3a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
@@ -13133,6 +13150,7 @@
     "previous": "Cleppius",
     "next": "Clodius 5a",
     "sort_key": "Clodius 03a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
@@ -13146,6 +13164,7 @@
     "previous": "Clodius 3a",
     "next": "Clodius 47",
     "sort_key": "Clodius 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
@@ -13159,6 +13178,7 @@
     "previous": "Clodius 5a",
     "next": "Clodius 55a",
     "sort_key": "Clodius 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
@@ -13171,6 +13191,7 @@
     "lemma": "Clodius 55a",
     "previous": "Clodius 47",
     "next": "Clonius a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 254,
@@ -13183,6 +13204,7 @@
     "lemma": "Clonius a",
     "previous": "Clodius 55a",
     "next": "Cluentius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 254,
@@ -13220,6 +13242,7 @@
     "previous": "Clunia 1",
     "next": "Cluvius 10a",
     "sort_key": "Cluvius 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 254,
@@ -13232,6 +13255,7 @@
     "lemma": "Cluvius 10a",
     "previous": "Cluvius 3",
     "next": "Cluvius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13244,6 +13268,7 @@
     "lemma": "Cluvius 14",
     "previous": "Cluvius 10a",
     "next": "Cobnertus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13256,6 +13281,7 @@
     "lemma": "Cobnertus 1",
     "previous": "Cluvius 14",
     "next": "Cobnertus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13268,6 +13294,7 @@
     "lemma": "Cobnertus 2",
     "previous": "Cobnertus 1",
     "next": "Cocillus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13280,6 +13307,7 @@
     "lemma": "Cocillus",
     "previous": "Cobnertus 2",
     "next": "Cocisius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13292,6 +13320,7 @@
     "lemma": "Cocisius",
     "previous": "Cocillus",
     "next": "Cocus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13304,6 +13333,7 @@
     "lemma": "Cocus",
     "previous": "Cocisius",
     "next": "Coelius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13317,6 +13347,7 @@
     "previous": "Cocus",
     "next": "Coelius 12",
     "sort_key": "Coelius 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
@@ -13329,6 +13360,7 @@
     "lemma": "Coelius 12",
     "previous": "Coelius 6",
     "next": "Coius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
@@ -13341,6 +13373,7 @@
     "lemma": "Coius",
     "previous": "Coelius 12",
     "next": "Coloniae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
@@ -13365,6 +13398,7 @@
     "lemma": "Colubrarius mons",
     "previous": "Coloniae",
     "next": "Comicato",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
@@ -13377,6 +13411,7 @@
     "lemma": "Comicato",
     "previous": "Colubrarius mons",
     "next": "Cominius 2a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
@@ -13389,6 +13424,7 @@
     "lemma": "Cominius 2a",
     "previous": "Comicato",
     "next": "Comisillus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 256,
@@ -13401,6 +13437,7 @@
     "lemma": "Comisillus",
     "previous": "Cominius 2a",
     "next": "Comitialis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
@@ -13413,6 +13450,7 @@
     "lemma": "Comitialis",
     "previous": "Comisillus",
     "next": "Conatius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
@@ -13425,6 +13463,7 @@
     "lemma": "Conatius",
     "previous": "Comitialis",
     "next": "Concordius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 257,
@@ -13437,6 +13476,7 @@
     "lemma": "Concordius 3",
     "previous": "Conatius",
     "next": "Constans 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 257,
@@ -13449,6 +13489,7 @@
     "lemma": "Constans 8",
     "previous": "Concordius 3",
     "next": "Contouca",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 257,
@@ -13461,6 +13502,7 @@
     "lemma": "Contouca",
     "previous": "Constans 8",
     "next": "Contrebia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 257,
@@ -13473,6 +13515,7 @@
     "lemma": "Contrebia 1",
     "previous": "Contouca",
     "next": "Contrebia 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 257,
@@ -13485,6 +13528,7 @@
     "lemma": "Contrebia 2",
     "previous": "Contrebia 1",
     "next": "Coocus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 257,
@@ -13509,6 +13553,7 @@
     "lemma": "Corcoras",
     "previous": "Coocus",
     "next": "Cornelius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 257,
@@ -13598,6 +13643,7 @@
     "lemma": "Cornelius 105",
     "previous": "Cornelius 42a",
     "next": "Cornelius 141",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 259,
@@ -13610,6 +13656,7 @@
     "lemma": "Cornelius 141",
     "previous": "Cornelius 105",
     "next": "Cornelius 177",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 259,
@@ -13622,6 +13669,7 @@
     "lemma": "Cornelius 177",
     "previous": "Cornelius 141",
     "next": "Cornelius 186",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 259,
@@ -13634,6 +13682,7 @@
     "lemma": "Cornelius 186",
     "previous": "Cornelius 177",
     "next": "Cornelius 193",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 259,
@@ -13646,6 +13695,7 @@
     "lemma": "Cornelius 193",
     "previous": "Cornelius 186",
     "next": "Cornelius 202",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 259,
@@ -13658,6 +13708,7 @@
     "lemma": "Cornelius 202",
     "previous": "Cornelius 193",
     "next": "Cornelius 202a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 259,
@@ -13670,6 +13721,7 @@
     "lemma": "Cornelius 202a",
     "previous": "Cornelius 202",
     "next": "Cornelius 203",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 259,
@@ -13682,6 +13734,7 @@
     "lemma": "Cornelius 203",
     "previous": "Cornelius 202a",
     "next": "Cornelius 208a. b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 260,
@@ -13694,6 +13747,7 @@
     "lemma": "Cornelius 208a. b",
     "previous": "Cornelius 203",
     "next": "Cornelius 209",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 260,
@@ -13706,6 +13760,7 @@
     "lemma": "Cornelius 209",
     "previous": "Cornelius 208a. b",
     "next": "Cornelius 219",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 260,
@@ -13718,6 +13773,7 @@
     "lemma": "Cornelius 219",
     "previous": "Cornelius 209",
     "next": "Cornelius 317ff.",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 260,
@@ -13730,6 +13786,7 @@
     "lemma": "Cornelius 317ff.",
     "previous": "Cornelius 219",
     "next": "Cornelius 335",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 260,
@@ -13778,6 +13835,7 @@
     "lemma": "Cornelius 338",
     "previous": "Cornelius 337",
     "next": "Cornelius 347",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13790,6 +13848,7 @@
     "lemma": "Cornelius 347",
     "previous": "Cornelius 338",
     "next": "Cornelius 351",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13802,6 +13861,7 @@
     "lemma": "Cornelius 351",
     "previous": "Cornelius 347",
     "next": "Cornelius 354",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13814,6 +13874,7 @@
     "lemma": "Cornelius 354",
     "previous": "Cornelius 351",
     "next": "Cornelius 373",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13826,6 +13887,7 @@
     "lemma": "Cornelius 373",
     "previous": "Cornelius 354",
     "next": "Cornelius 385",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13838,6 +13900,7 @@
     "lemma": "Cornelius 385",
     "previous": "Cornelius 373",
     "next": "Cornelius 407",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13850,6 +13913,7 @@
     "lemma": "Cornelius 407",
     "previous": "Cornelius 385",
     "next": "Cornificius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13862,6 +13926,7 @@
     "lemma": "Cornificius 5",
     "previous": "Cornelius 407",
     "next": "Cornutus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13874,6 +13939,7 @@
     "lemma": "Cornutus 6",
     "previous": "Cornificius 5",
     "next": "Cosconius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 261,
@@ -13887,6 +13953,7 @@
     "previous": "Cornutus 6",
     "next": "Cosconius 9",
     "sort_key": "Cosconius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13900,6 +13967,7 @@
     "previous": "Cosconius 3",
     "next": "Cosius 1",
     "sort_key": "Cosconius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13912,6 +13980,7 @@
     "lemma": "Cosius 1",
     "previous": "Cosconius 9",
     "next": "Cosius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13924,6 +13993,7 @@
     "lemma": "Cosius 2",
     "previous": "Cosius 1",
     "next": "Cosius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13936,6 +14006,7 @@
     "lemma": "Cosius 3",
     "previous": "Cosius 2",
     "next": "Cossutius 3a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13948,6 +14019,7 @@
     "lemma": "Cossutius 3a",
     "previous": "Cosius 3",
     "next": "Costillus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13960,6 +14032,7 @@
     "lemma": "Costillus",
     "previous": "Cossutius 3a",
     "next": "Costio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13972,6 +14045,7 @@
     "lemma": "Costio",
     "previous": "Costillus",
     "next": "Cottalus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -13984,6 +14058,7 @@
     "lemma": "Cottalus",
     "previous": "Costio",
     "next": "Cotto",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -14008,6 +14083,7 @@
     "lemma": "Cotulo",
     "previous": "Cotto",
     "next": "Cotus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 262,
@@ -14044,6 +14120,7 @@
     "lemma": "Cracuna",
     "previous": "Cr....",
     "next": "Crassicius 1a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 263,
@@ -14056,6 +14133,7 @@
     "lemma": "Crassicius 1a",
     "previous": "Cracuna",
     "next": "Crassicius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 263,
@@ -14068,6 +14146,7 @@
     "lemma": "Crassicius 3",
     "previous": "Crassicius 1a",
     "next": "Crassicius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 263,
@@ -14080,6 +14159,7 @@
     "lemma": "Crassicius 4",
     "previous": "Crassicius 3",
     "next": "Crassicius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 263,
@@ -14092,6 +14172,7 @@
     "lemma": "Crassicius 5",
     "previous": "Crassicius 4",
     "next": "Crassicius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 263,
@@ -14140,6 +14221,7 @@
     "lemma": "Crescens 8a",
     "previous": "Cremona",
     "next": "Crescens 8b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 263,
@@ -14152,6 +14234,7 @@
     "lemma": "Crescens 8b",
     "previous": "Crescens 8a",
     "next": "Cresconius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 263,
@@ -14164,6 +14247,7 @@
     "lemma": "Cresconius 4",
     "previous": "Crescens 8b",
     "next": "Crestio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
@@ -14176,6 +14260,7 @@
     "lemma": "Crestio",
     "previous": "Cresconius 4",
     "next": "a creta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
@@ -14189,6 +14274,7 @@
     "previous": "Crestio",
     "next": "Criciro 1",
     "sort_key": "creta a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
@@ -14201,6 +14287,7 @@
     "lemma": "Criciro 1",
     "previous": "a creta",
     "next": "Criciro 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
@@ -14213,6 +14300,7 @@
     "lemma": "Criciro 2",
     "previous": "Criciro 1",
     "next": "Crispus 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
@@ -14225,6 +14313,7 @@
     "lemma": "Crispus 10",
     "previous": "Criciro 2",
     "next": "Crissio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
@@ -14237,6 +14326,7 @@
     "lemma": "Crissio",
     "previous": "Crispus 10",
     "next": "Cristinus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14249,6 +14339,7 @@
     "lemma": "Cristinus",
     "previous": "Crissio",
     "next": "Critonius a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14261,6 +14352,7 @@
     "lemma": "Critonius a",
     "previous": "Cristinus",
     "next": "Crummus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14273,6 +14365,7 @@
     "lemma": "Crummus",
     "previous": "Critonius a",
     "next": "Crutisiones",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14285,6 +14378,7 @@
     "lemma": "Crutisiones",
     "previous": "Crummus",
     "next": "Cunissa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14297,6 +14391,7 @@
     "lemma": "Cunissa",
     "previous": "Crutisiones",
     "next": "Cupa, Cuparius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14321,6 +14416,7 @@
     "lemma": "Cupitus",
     "previous": "Cupa, Cuparius",
     "next": "Curiunnus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14333,6 +14429,7 @@
     "lemma": "Curiunnus",
     "previous": "Cupitus",
     "next": "Curius 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 265,
@@ -14345,6 +14442,7 @@
     "lemma": "Curius 3",
     "previous": "Curiunnus",
     "next": "Curius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14357,6 +14455,7 @@
     "lemma": "Curius 8",
     "previous": "Curius 3",
     "next": "Curmillus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 265,
@@ -14369,6 +14468,7 @@
     "lemma": "Curmillus",
     "previous": "Curius 8",
     "next": "Curtianae figlinae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14381,6 +14481,7 @@
     "lemma": "Curtianae figlinae",
     "previous": "Curmillus",
     "next": "Curtius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14393,6 +14494,7 @@
     "lemma": "Curtius 7",
     "previous": "Curtianae figlinae",
     "next": "Curtius 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14405,6 +14507,7 @@
     "lemma": "Curtius 22",
     "previous": "Curtius 7",
     "next": "Curtius 26",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14417,6 +14520,7 @@
     "lemma": "Curtius 26",
     "previous": "Curtius 22",
     "next": "Curubis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14429,6 +14533,7 @@
     "lemma": "Curubis",
     "previous": "Curtius 26",
     "next": "Cusiacus, Cussiacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14441,6 +14546,7 @@
     "lemma": "Cusiacus, Cussiacus",
     "previous": "Curubis",
     "next": "Cusius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14453,6 +14559,7 @@
     "lemma": "Cusius",
     "previous": "Cusiacus, Cussiacus",
     "next": "Dabatopeios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
@@ -14465,6 +14572,7 @@
     "lemma": "Dabatopeios",
     "previous": "Cusius",
     "next": "Daccius",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 267,
@@ -14477,6 +14585,7 @@
     "lemma": "Daccius",
     "previous": "Dabatopeios",
     "next": "Daccus, Daccius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14489,6 +14598,7 @@
     "lemma": "Daccus, Daccius 1",
     "previous": "Daccius",
     "next": "Daccus, Daccius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14501,6 +14611,7 @@
     "lemma": "Daccus, Daccius 2",
     "previous": "Daccus, Daccius 1",
     "next": "Daccus, Daccius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14513,6 +14624,7 @@
     "lemma": "Daccus, Daccius 3",
     "previous": "Daccus, Daccius 2",
     "next": "Daccus, Daccius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14525,6 +14637,7 @@
     "lemma": "Daccus, Daccius 4",
     "previous": "Daccus, Daccius 3",
     "next": "Daccus, Daccius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14537,6 +14650,7 @@
     "lemma": "Daccus, Daccius 5",
     "previous": "Daccus, Daccius 4",
     "next": "Dagodubnus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14549,6 +14663,7 @@
     "lemma": "Dagodubnus",
     "previous": "Daccus, Daccius 5",
     "next": "Dagomarus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14561,6 +14676,7 @@
     "lemma": "Dagomarus",
     "previous": "Dagodubnus",
     "next": "Daimon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
@@ -14585,6 +14701,7 @@
     "lemma": "Daïpylos",
     "previous": "Daimon",
     "next": "Dalatarba 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 322,
@@ -14597,6 +14714,7 @@
     "lemma": "Dalatarba 1",
     "previous": "Daïpylos",
     "next": "Dalatarba 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 322,
@@ -14609,6 +14727,7 @@
     "lemma": "Dalatarba 2",
     "previous": "Dalatarba 1",
     "next": "Dalheim",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 322,
@@ -14621,6 +14740,7 @@
     "lemma": "Dalheim",
     "previous": "Dalatarba 2",
     "next": "Damagetos 3",
+    "proof_read": 2,
     "wp_link": "w:de:Ricciacum",
     "chapters": [
       {
@@ -14658,6 +14778,7 @@
     "lemma": "Damasalkida(?)",
     "previous": "Damalis 1a",
     "next": "Damasippe 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 323,
@@ -14670,6 +14791,7 @@
     "lemma": "Damasippe 2",
     "previous": "Damasalkida(?)",
     "next": "Dameas 3a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 323,
@@ -14682,6 +14804,7 @@
     "lemma": "Dameas 3a",
     "previous": "Damasippe 2",
     "next": "Daminus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 323,
@@ -14694,6 +14817,7 @@
     "lemma": "Daminus",
     "previous": "Dameas 3a",
     "next": "Damnippos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 323,
@@ -14706,6 +14830,7 @@
     "lemma": "Damnippos",
     "previous": "Daminus",
     "next": "Damokleidas 2a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 323,
@@ -14718,6 +14843,7 @@
     "lemma": "Damokleidas 2a",
     "previous": "Damnippos",
     "next": "Damokles 6b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 324,
@@ -14730,6 +14856,7 @@
     "lemma": "Damokles 6b",
     "previous": "Damokleidas 2a",
     "next": "Damon 1a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 324,
@@ -14754,6 +14881,7 @@
     "lemma": "Damon 2c",
     "previous": "Damon 1a",
     "next": "Damon 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 324,
@@ -14790,6 +14918,7 @@
     "lemma": "Damonikos 1",
     "previous": "Damonax",
     "next": "Damonikos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
@@ -14802,6 +14931,7 @@
     "lemma": "Damonikos 2",
     "previous": "Damonikos 1",
     "next": "Damonus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
@@ -14814,6 +14944,7 @@
     "lemma": "Damonus",
     "previous": "Damonikos 2",
     "next": "Damosthenes 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
@@ -14826,6 +14957,7 @@
     "lemma": "Damosthenes 5",
     "previous": "Damonus",
     "next": "Damoteles 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
@@ -14838,6 +14970,7 @@
     "lemma": "Damoteles 6",
     "previous": "Damosthenes 5",
     "next": "Damotimos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
@@ -14850,6 +14983,7 @@
     "lemma": "Damotimos 3",
     "previous": "Damoteles 6",
     "next": "Damoxenos 1c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
@@ -14862,6 +14996,7 @@
     "lemma": "Damoxenos 1c",
     "previous": "Damotimos 3",
     "next": "Danomarus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
@@ -14874,6 +15009,7 @@
     "lemma": "Danomarus",
     "previous": "Damoxenos 1c",
     "next": "Daphnus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 326,
@@ -14886,6 +15022,7 @@
     "lemma": "Daphnus 4",
     "previous": "Danomarus",
     "next": "Dario",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 326,
@@ -14898,6 +15035,7 @@
     "lemma": "Dario",
     "previous": "Daphnus 4",
     "next": "Darra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
@@ -14910,6 +15048,7 @@
     "lemma": "Darra",
     "previous": "Dario",
     "next": "Dassenus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
@@ -14922,6 +15061,7 @@
     "lemma": "Dassenus",
     "previous": "Darra",
     "next": "Daunion 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
@@ -14958,6 +15098,7 @@
     "lemma": "Debre",
     "previous": "Daurises",
     "next": "Decempagi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
@@ -14970,6 +15111,7 @@
     "lemma": "Decempagi",
     "previous": "Debre",
     "next": "Decius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
@@ -14982,6 +15124,7 @@
     "lemma": "Decius 7",
     "previous": "Decempagi",
     "next": "Decmanus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
@@ -14994,6 +15137,7 @@
     "lemma": "Decmanus 1",
     "previous": "Decius 7",
     "next": "Decminus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15006,6 +15150,7 @@
     "lemma": "Decminus",
     "previous": "Decmanus 1",
     "next": "Decmus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15018,6 +15163,7 @@
     "lemma": "Decmus",
     "previous": "Decminus",
     "next": "Decuminus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15030,6 +15176,7 @@
     "lemma": "Decuminus",
     "previous": "Decmus",
     "next": "Dedicatio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15042,6 +15189,7 @@
     "lemma": "Dedicatio",
     "previous": "Decuminus",
     "next": "Deiotarus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15054,6 +15202,7 @@
     "lemma": "Deiotarus 1",
     "previous": "Dedicatio",
     "next": "Deiotarus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15066,6 +15215,7 @@
     "lemma": "Deiotarus 2",
     "previous": "Deiotarus 1",
     "next": "Deiotarus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15078,6 +15228,7 @@
     "lemma": "Deiotarus 4",
     "previous": "Deiotarus 2",
     "next": "Deiotaros 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15090,6 +15241,7 @@
     "lemma": "Deiotaros 5",
     "previous": "Deiotarus 4",
     "next": "Dekaineos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15102,6 +15254,7 @@
     "lemma": "Dekaineos",
     "previous": "Deiotaros 5",
     "next": "Delme",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15114,6 +15267,7 @@
     "lemma": "Delme",
     "previous": "Dekaineos",
     "next": "Delos 1a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
@@ -15126,6 +15280,7 @@
     "lemma": "Delos 1a",
     "previous": "Delme",
     "next": "Demarchos 5a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 329,
@@ -15138,6 +15293,7 @@
     "lemma": "Demarchos 5a",
     "previous": "Delos 1a",
     "next": "Demeter",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 329,
@@ -15186,6 +15342,7 @@
     "lemma": "Demetrios 22a",
     "previous": "Demetrias 1",
     "next": "Demetrios 89",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 329,
@@ -15222,6 +15379,7 @@
     "lemma": "Demetrios 125a",
     "previous": "Demetrios 124",
     "next": "Demetrios 126a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
@@ -15234,6 +15392,7 @@
     "lemma": "Demetrios 126a",
     "previous": "Demetrios 125a",
     "next": "Demetrios 127a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
@@ -15258,6 +15417,7 @@
     "lemma": "Demo 2a",
     "previous": "Demetrios 127a",
     "next": "Demochares 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
@@ -15270,6 +15430,7 @@
     "lemma": "Demochares 8",
     "previous": "Demo 2a",
     "next": "Demodes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15282,6 +15443,7 @@
     "lemma": "Demodes",
     "previous": "Demochares 8",
     "next": "Demodokos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15294,6 +15456,7 @@
     "lemma": "Demodokos 8",
     "previous": "Demodes",
     "next": "Demokrates 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15306,6 +15469,7 @@
     "lemma": "Demokrates 14",
     "previous": "Demodokos 8",
     "next": "Demokritos 3a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15318,6 +15482,7 @@
     "lemma": "Demokritos 3a",
     "previous": "Demokrates 14",
     "next": "Demoleon 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15354,6 +15519,7 @@
     "lemma": "Demosiates",
     "previous": "Demonax 4",
     "next": "Demosion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15366,6 +15532,7 @@
     "lemma": "Demosion",
     "previous": "Demosiates",
     "next": "Demosthenes 1a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15404,6 +15571,7 @@
     "lemma": "Demostratos 15",
     "previous": "Demosthenes 3a",
     "next": "Denizos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15416,6 +15584,7 @@
     "lemma": "Denizos",
     "previous": "Demostratos 15",
     "next": "Dento 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15428,6 +15597,7 @@
     "lemma": "Dento 1",
     "previous": "Denizos",
     "next": "Deras",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15440,6 +15610,7 @@
     "lemma": "Deras",
     "previous": "Dento 1",
     "next": "Derbera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15452,6 +15623,7 @@
     "lemma": "Derbera",
     "previous": "Deras",
     "next": "Derdenis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15464,6 +15636,7 @@
     "lemma": "Derdenis",
     "previous": "Derbera",
     "next": "Dertallos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15476,6 +15649,7 @@
     "lemma": "Dertallos",
     "previous": "Derdenis",
     "next": "Δεσπότης",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15489,6 +15663,7 @@
     "previous": "Dertallos",
     "next": "Detalla",
     "sort_key": "Despotes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
@@ -15501,6 +15676,7 @@
     "lemma": "Detalla",
     "previous": "Δεσπότης",
     "next": "Deuterius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15513,6 +15689,7 @@
     "lemma": "Deuterius 2",
     "previous": "Detalla",
     "next": "Dexitheos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15525,6 +15702,7 @@
     "lemma": "Dexitheos 2",
     "previous": "Deuterius 2",
     "next": "Dexius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15537,6 +15715,7 @@
     "lemma": "Dexius 3",
     "previous": "Dexitheos 2",
     "next": "Dexter 11a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15549,6 +15728,7 @@
     "lemma": "Dexter 11a",
     "previous": "Dexius 3",
     "next": "Diacos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15561,6 +15741,7 @@
     "lemma": "Diacos",
     "previous": "Dexter 11a",
     "next": "Διαδρομή",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 334,
@@ -15574,6 +15755,7 @@
     "previous": "Diacos",
     "next": "Diakonia",
     "sort_key": "Diadrome",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
@@ -15586,6 +15768,7 @@
     "lemma": "Diakonia",
     "previous": "Διαδρομή",
     "next": "Διακοσιάπρωτοι",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
@@ -15599,6 +15782,7 @@
     "previous": "Diakonia",
     "next": "Diakrier 1",
     "sort_key": "Diakosiaprotoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
@@ -15611,6 +15795,7 @@
     "lemma": "Diakrier 1",
     "previous": "Διακοσιάπρωτοι",
     "next": "Dianius pagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
@@ -15623,6 +15808,7 @@
     "lemma": "Dianius pagus",
     "previous": "Diakrier 1",
     "next": "Dicator",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
@@ -15635,6 +15821,7 @@
     "lemma": "Dicator",
     "previous": "Dianius pagus",
     "next": "Didius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
@@ -15659,6 +15846,7 @@
     "lemma": "Didymmon",
     "previous": "Didius 5",
     "next": "Diedenhofen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15671,6 +15859,7 @@
     "lemma": "Diedenhofen",
     "previous": "Didymmon",
     "next": "Diiesure",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15683,6 +15872,7 @@
     "lemma": "Diiesure",
     "previous": "Diedenhofen",
     "next": "Dikaiarchos 1a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15695,6 +15885,7 @@
     "lemma": "Dikaiarchos 1a",
     "previous": "Diiesure",
     "next": "Dikaios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15707,6 +15898,7 @@
     "lemma": "Dikaios 3",
     "previous": "Dikaiarchos 1a",
     "next": "Dikaiosyne 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15719,6 +15911,7 @@
     "lemma": "Dikaiosyne 4",
     "previous": "Dikaios 3",
     "next": "Dimeranos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15731,6 +15924,7 @@
     "lemma": "Dimeranos",
     "previous": "Dikaiosyne 4",
     "next": "Dimissos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15743,6 +15937,7 @@
     "lemma": "Dimissos",
     "previous": "Dimeranos",
     "next": "Dingion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15755,6 +15950,7 @@
     "lemma": "Dingion",
     "previous": "Dimissos",
     "next": "Diocletianopolis 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15767,6 +15963,7 @@
     "lemma": "Diocletianopolis 4",
     "previous": "Dingion",
     "next": "Diodoros 40a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 336,
@@ -15803,6 +16000,7 @@
     "lemma": "Diomedes 17",
     "previous": "Diogenes 22a",
     "next": "Dionysikles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 337,
@@ -16635,6 +16833,7 @@
     "previous": "Eirenis",
     "next": "Εἰσαγωγεῖς",
     "sort_key": "Eirenophylakes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 423,
@@ -16989,6 +17188,7 @@
     "previous": "Epikles 4a",
     "next": "Epikrates 1a",
     "sort_key": "Epiklesis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 435,
@@ -17001,6 +17201,7 @@
     "lemma": "Epikrates 1a",
     "previous": "Ἐπίκλησις",
     "next": "Epikrates 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 435,
@@ -18498,6 +18699,7 @@
     "lemma": "ad Flexum 3",
     "previous": "Flavius 216a",
     "next": "Floreius pagus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 526,
@@ -19184,6 +19386,7 @@
     "lemma": "Gaudiosus 3",
     "previous": "Gaudiacus",
     "next": "Gaudotos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
@@ -19196,6 +19399,7 @@
     "lemma": "Gaudotos",
     "previous": "Gaudiosus 3",
     "next": "Gavius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
@@ -19209,6 +19413,7 @@
     "previous": "Gaudotos",
     "next": "Gavius 8a",
     "sort_key": "Gavius 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
@@ -19246,6 +19451,7 @@
     "lemma": "Gaulos a",
     "previous": "Gavius 13a",
     "next": "Gauros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
@@ -19258,6 +19464,7 @@
     "lemma": "Gauros 2",
     "previous": "Gaulos a",
     "next": "Gaza 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 541,
@@ -19270,6 +19477,7 @@
     "lemma": "Gaza 4",
     "previous": "Gauros 2",
     "next": "Gebal 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 541,
@@ -19306,6 +19514,7 @@
     "lemma": "Geizagera",
     "previous": "Gebalene",
     "next": "Gellius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 541,
@@ -19336,6 +19545,7 @@
     "lemma": "Gelupara",
     "previous": "Gellius 17",
     "next": "Gemella a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 542,
@@ -19348,6 +19558,7 @@
     "lemma": "Gemella a",
     "previous": "Gelupara",
     "next": "Gemellus 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 542,
@@ -19360,6 +19571,7 @@
     "lemma": "Gemellus 10",
     "previous": "Gemella a",
     "next": "Gemenus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 542,
@@ -19372,6 +19584,7 @@
     "lemma": "Gemenus",
     "previous": "Gemellus 10",
     "next": "Geminius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 542,
@@ -19384,6 +19597,7 @@
     "lemma": "Geminius 3",
     "previous": "Gemenus",
     "next": "Geminius 20a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 542,
@@ -22313,6 +22527,7 @@
     "lemma": "Iolaos 6",
     "previous": "Ad Ioglandem",
     "next": "Jonquières",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1242,
