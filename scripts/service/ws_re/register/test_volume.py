@@ -17,7 +17,20 @@ class TestRegister(BaseTestRegister):
     def test_get_table(self):
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        expected_table = """{|class="wikitable sortable"
+        expected_table = """{{RERegister
+|BAND=I,1
+|ALPHABET=
+|AUTHOR=
+|VG=
+|NF=I,2
+|NFNF=
+|SUM=2
+|UNK=0
+|KOR=1
+|FER=1
+}}
+
+{|class="wikitable sortable"
 !Artikel
 !Wikilinks
 !Seite
