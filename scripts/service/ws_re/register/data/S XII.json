@@ -150,7 +150,7 @@
   {
     "lemma": "Aelius 76",
     "previous": "Aelius 57",
-    "next": "Aelius 134b",
+    "next": "Aelius 78a",
     "proof_read": 3,
     "chapters": [
       {
@@ -162,6 +162,7 @@
   },
   {
     "lemma": "Aelius 78a",
+    "previous": "Aelius 76",
     "next": "Aelius 134b",
     "proof_read": 2,
     "chapters": [
@@ -503,6 +504,7 @@
   {
     "lemma": "Anaxagoras 4",
     "previous": "Amelas",
+    "next": "Anaximandros 1",
     "chapters": [
       {
         "start": 28,
@@ -513,7 +515,7 @@
   },
   {
     "lemma": "Anaximandros 1",
-    "previous": "Amelas",
+    "previous": "Anaxagoras 4",
     "next": "Anaximenes 2",
     "chapters": [
       {
