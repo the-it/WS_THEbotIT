@@ -2258,7 +2258,7 @@
     "next": "Dendrolibanos",
     "sort_key": "Dendroeides",
     "redirect": "Tithymalus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 216,
@@ -4274,7 +4274,7 @@
     "lemma": "Deuso(n)",
     "previous": "Deusios",
     "next": "Δευτεραγωνιστής",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 281,
@@ -22403,11 +22403,13 @@
     "lemma": "Doliola",
     "previous": "Dolichus",
     "next": "Dolion",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1283,
         "end": 1283,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
@@ -22415,11 +22417,13 @@
     "lemma": "Dolion",
     "previous": "Doliola",
     "next": "Doliones",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1283,
         "end": 1283,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -22427,11 +22431,13 @@
     "lemma": "Doliones",
     "previous": "Dolion",
     "next": "Dolionia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1283,
         "end": 1283,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
