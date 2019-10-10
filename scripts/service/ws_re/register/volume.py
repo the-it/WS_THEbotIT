@@ -4,7 +4,7 @@ from typing import Union, Optional, List
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
 from scripts.service.ws_re.register.lemma import Lemma, LemmaDict
-from scripts.service.ws_re.volumes import Volume
+from scripts.service.ws_re.volumes import Volume, Volumes
 
 
 class VolumeRegister(Register):
@@ -54,11 +54,12 @@ class VolumeRegister(Register):
     def _get_header(self) -> str:
         header = ["RERegister"]
         header.append(f"BAND={self.volume.name}")
-        header.append("ALPHABET=")
-        header.append("AUTHOR=")
+        #calculate pre and post issue
+        volumes = Volumes()
+        volumes.get_neighbours()
+        raise Exception("continue here")
         header.append("VG=")
         header.append("NF=I,2")
-        header.append("NFNF=")
         header.append("SUM=2")
         header.append("UNK=0")
         header.append("KOR=1")

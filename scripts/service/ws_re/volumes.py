@@ -3,7 +3,7 @@ import json
 import re
 from enum import Enum
 from pathlib import Path
-from typing import Union, Generator, Optional
+from typing import Union, Generator, Optional, Tuple
 
 import roman
 
@@ -144,3 +144,6 @@ class Volumes(collections.MutableMapping):
     def all_volumes(self) -> Generator[Volume, None, None]:
         for volume_key in self:
             yield self[volume_key]
+
+    def get_neighbours(self, volume_str: str) -> Tuple[str, str]:
+        pass

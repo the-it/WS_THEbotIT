@@ -25,11 +25,8 @@ class TestRegister(BaseTestRegister):
         register = VolumeRegister(Volumes()["I,1"], Authors())
         expected_table = """{{RERegister
 |BAND=I,1
-|ALPHABET=
-|AUTHOR=
 |VG=
 |NF=I,2
-|NFNF=
 |SUM=2
 |UNK=0
 |KOR=1
