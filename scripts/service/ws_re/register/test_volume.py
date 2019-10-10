@@ -14,6 +14,12 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         VolumeRegister(Volumes()["I,1"], Authors())
 
+    def test_header_band(self):
+        copy_tst_data("I_1_base", "I_1")
+        self.assertTrue("BAND=I,1" in VolumeRegister(Volumes()["I,1"], Authors())._get_header())
+        copy_tst_data("I_1_base", "S I")
+        self.assertTrue("BAND=S I" in VolumeRegister(Volumes()["S I"], Authors())._get_header())
+
     def test_get_table(self):
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
@@ -63,6 +69,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
   {
     "lemma": "Aal",
     "next": "Aarassos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1,
@@ -74,6 +81,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
   {
     "lemma": "Aarassos",
     "previous": "Aal",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 4,
