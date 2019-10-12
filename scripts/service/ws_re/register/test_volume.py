@@ -1,6 +1,6 @@
 from unittest import TestCase, skip
 
-from testfixtures import compare
+from testfixtures import compare, StringComparison
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
@@ -19,6 +19,24 @@ class TestRegister(BaseTestRegister):
         self.assertTrue("BAND=I,1" in VolumeRegister(Volumes()["I,1"], Authors())._get_header())
         copy_tst_data("I_1_base", "S I")
         self.assertTrue("BAND=S I" in VolumeRegister(Volumes()["S I"], Authors())._get_header())
+
+    def test_header_vg_nf(self):
+        copy_tst_data("I_1_base", "I_1")
+        i1 = VolumeRegister(Volumes()["I,1"], Authors())._get_header()
+        self.assertTrue("VG=" in i1)
+        self.assertTrue("NF=I,2" in i1)
+        copy_tst_data("I_1_base", "S I")
+        si = VolumeRegister(Volumes()["S I"], Authors())._get_header()
+        self.assertTrue("VG=X A" in si)
+        self.assertTrue("NF=S II" in si)
+
+    def test_header_proof_read(self):
+        copy_tst_data("I_1_base", "I_1")
+        i1 = VolumeRegister(Volumes()["I,1"], Authors())._get_header().replace("\n", "")
+        compare(StringComparison(".*SUM=8.*"), i1)
+        compare(StringComparison(".*UNK=1.*"), i1)
+        compare(StringComparison(".*KOR=2.*"), i1)
+        compare(StringComparison(".*FER=3.*"), i1)
 
     def test_get_table(self):
         copy_tst_data("I_1_two_entries", "I_1")

@@ -1,5 +1,6 @@
 from abc import ABC
 from pathlib import Path
+from typing import Tuple
 
 _REGISTER_PATH = Path(__file__).parent.joinpath("data")
 
@@ -24,3 +25,17 @@ class Register(ABC):
         if last_lemmas:
             return_lemmas.append(last_lemmas)
         return return_lemmas
+
+    @staticmethod
+    def proof_read(lemmas) -> Tuple[int, int, int]:
+        fer = kor = unk = 0
+        for lemma in lemmas:
+            proof_read = lemma["proof_read"]
+            if proof_read:
+                if proof_read == 3:
+                    fer += 1
+                elif proof_read == 2:
+                    kor += 1
+                elif proof_read == 1:
+                    unk += 1
+        return fer, kor, unk

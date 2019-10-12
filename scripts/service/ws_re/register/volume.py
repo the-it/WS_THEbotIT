@@ -54,16 +54,17 @@ class VolumeRegister(Register):
     def _get_header(self) -> str:
         header = ["RERegister"]
         header.append(f"BAND={self.volume.name}")
-        #calculate pre and post issue
+        # calculate pre and post issue
         volumes = Volumes()
-        volumes.get_neighbours()
-        raise Exception("continue here")
-        header.append("VG=")
-        header.append("NF=I,2")
-        header.append("SUM=2")
-        header.append("UNK=0")
-        header.append("KOR=1")
-        header.append("FER=1")
+        vg, nf = volumes.get_neighbours(self.volume.name)
+        header.append(f"VG={vg}")
+        header.append(f"NF={nf}")
+        header.append(f"SUM={len(self.lemmas)}")
+        # calculate proof_read status
+        fer, kor, unk = self.proof_read(self.lemmas)
+        header.append(f"UNK={unk}")
+        header.append(f"KOR={kor}")
+        header.append(f"FER={fer}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def _get_footer(self) -> str:

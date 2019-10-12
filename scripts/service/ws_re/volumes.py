@@ -90,10 +90,10 @@ class Volumes(collections.MutableMapping):
         path_to_file = Path(__file__).parent.joinpath("volumes.json")
         with open(str(path_to_file), encoding="utf-8") as json_file:
             _volume_list = json.load(json_file)
-        _volume_mapping = collections.OrderedDict()
+        self._volume_mapping = collections.OrderedDict()
         for item in _volume_list:
-            _volume_mapping[item["name"]] = Volume(**item)
-        self._volume_mapping = _volume_mapping
+            self._volume_mapping[item["name"]] = Volume(**item)
+        self._volume_list = list(self._volume_mapping.keys())
 
     def __getitem__(self, item: str) -> Volume:
         try:
@@ -146,4 +146,10 @@ class Volumes(collections.MutableMapping):
             yield self[volume_key]
 
     def get_neighbours(self, volume_str: str) -> Tuple[str, str]:
-        pass
+        idx = self._volume_list.index(volume_str)
+        pre = post = ""
+        if idx > 0:
+            pre = self._volume_list[idx - 1]
+        if idx + 1 < len(self._volume_list):
+            post = self._volume_list[idx + 1]
+        return pre, post
