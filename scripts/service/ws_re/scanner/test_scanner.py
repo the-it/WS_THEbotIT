@@ -4,20 +4,17 @@ import time
 from datetime import datetime
 from unittest import TestCase, mock, skip
 
-import pywikibot
 from testfixtures import LogCapture
 
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
 from scripts.service.ws_re.template import ReDatenException
-from scripts.service.ws_re.template.re_page import RePage
-from tools.petscan import PetScan
 from tools.test_bots import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 
 
 class TestReScanner(TestCase):
     def setUp(self):
-        self.petscan_patcher = mock.patch("scripts.service.ws_re.scanner.PetScan", autospec=PetScan)
+        self.petscan_patcher = mock.patch("scripts.service.ws_re.scanner.PetScan")
         self.petscan_mock = self.petscan_patcher.start()
         self.run_mock = mock.Mock()
         self.petscan_mock.return_value = mock.Mock(run=self.run_mock)
@@ -118,17 +115,16 @@ class TestReScanner(TestCase):
     def _mock_surroundings(self):
         lemma_patcher = mock.patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
                                    mock.Mock())
-        page_patcher = mock.patch("scripts.service.ws_re.scanner.pywikibot.Page", autospec=pywikibot.Page)
-        page_patcher_error = mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page", autospec=pywikibot.Page)
-        re_page_patcher = mock.patch("scripts.service.ws_re.scanner.RePage", autospec=RePage)
+        page_patcher = mock.patch("scripts.service.ws_re.scanner.pywikibot.Page")
+        page_patcher_error = mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page")
+        re_page_patcher = mock.patch("scripts.service.ws_re.scanner.RePage")
         self.lemma_mock = lemma_patcher.start()
         self.page_mock = page_patcher.start()
         self.page_error_mock = page_patcher_error.start()
         self.re_page_mock = re_page_patcher.start()
 
     def _mock_task(self):
-        task_patcher = mock.patch("scripts.service.ws_re.scanner.ReScannerTask.run",
-                             autospec=ReScannerTask.run)
+        task_patcher = mock.patch("scripts.service.ws_re.scanner.ReScannerTask.run")
         self.task_mock = task_patcher.start()
 
     def test_one_tasks_one_lemma(self):
