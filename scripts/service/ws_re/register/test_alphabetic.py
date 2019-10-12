@@ -53,7 +53,18 @@ class TestAlphabeticRegister(BaseTestRegister):
 
     def test_make_table(self):
         b_register = AlphabeticRegister("be", "zzzzzz", self.registers)
-        expected_table = """{|class="wikitable sortable"
+        expected_table = """{{RERegister
+|ALPHABET=be
+|VG=a
+|NF=
+|NFNF=
+|SUM=1000
+|UNK=100
+|KOR=300
+|FER=500
+}}
+
+{|class="wikitable sortable"
 !Artikel
 !Band
 !Wikilinks
