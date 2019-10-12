@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 from shutil import rmtree
 from unittest import TestCase, mock
 
-from pywikibot import Page
 from testfixtures import LogCapture, compare
 
 from tools.bots import BotException, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, \
@@ -167,8 +166,8 @@ class TestOneTimeBot(TestCase):
     def setUp(self):
         setup_data_path(self)
         self.addCleanup(mock.patch.stopall)
-        self.log_patcher = mock.patch.object(WikiLogger, "debug", autospec=True)
-        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, "debug", autospec=True)
+        self.log_patcher = mock.patch.object(WikiLogger, "debug")
+        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, "debug")
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):
@@ -276,7 +275,7 @@ class TestOneTimeBot(TestCase):
             self.assertTrue(bot.run())
 
     def test_send_log_to_wiki(self):
-        with mock.patch("tools.bots.Page", autospec=Page) as mock_page:
+        with mock.patch("tools.bots.Page") as mock_page:
             with self.MinimalBot(wiki=None, log_to_screen=False) as bot:
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
@@ -284,17 +283,17 @@ class TestOneTimeBot(TestCase):
             self.assertEqual(mock.call().save("Update of Bot MinimalBot", botflag=True),
                              mock_page.mock_calls[2])
 
-    @mock.patch("tools.test_bots.Page", autospec=Page)
-    @mock.patch("tools.test_bots.Page.text", new_callable=mock.PropertyMock)
-    def test_save_if_changed_positive(self, text_mock, page_mock):
+    def test_save_if_changed_positive(self):
+        page_mock = mock.Mock()
+        text_mock = mock.PropertyMock()
         type(page_mock).text = text_mock
         text_mock.return_value = "2"
         self.MinimalBot.save_if_changed(page_mock, "1", "changed")
         compare(mock.call.save("changed", botflag=True), page_mock.mock_calls[0])
 
-    @mock.patch("tools.test_bots.Page", autospec=Page)
-    @mock.patch("tools.test_bots.Page.text", new_callable=mock.PropertyMock)
-    def test_save_if_changed_negativ(self, text_mock, page_mock):
+    def test_save_if_changed_negativ(self):
+        page_mock = mock.Mock()
+        text_mock = mock.PropertyMock()
         type(page_mock).text = text_mock
         text_mock.return_value = "1"
         self.MinimalBot.save_if_changed(page_mock, "1", "changed")
@@ -488,8 +487,8 @@ class TestCanonicalBot(TestCase):
     def setUp(self):
         setup_data_path(self)
         self.addCleanup(mock.patch.stopall)
-        self.log_patcher = mock.patch.object(WikiLogger, "debug", autospec=True)
-        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, "debug", autospec=True)
+        self.log_patcher = mock.patch.object(WikiLogger, "debug")
+        self.timestamp_patcher = mock.patch.object(PersistedTimestamp, "debug")
         self.wiki_logger_mock = self.log_patcher.start()
 
     def tearDown(self):

@@ -291,7 +291,7 @@ class Lemma():
         if redirect:
             link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self['lemma']}}}}}'']]"
             if isinstance(redirect, str):
-                link += f" → {{{{RE siehe|{redirect}|'''{redirect}'''}}}}"
+                link += f" → '''[[{redirect}]]'''"
         else:
             link = f"[[RE:{self['lemma']}|'''{{{{Anker2|{self['lemma']}}}}}''']]"
         return link

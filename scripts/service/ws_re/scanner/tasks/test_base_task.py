@@ -1,7 +1,6 @@
 from datetime import datetime
 from unittest import TestCase, mock
 
-import pywikibot
 from testfixtures import LogCapture, compare
 
 from scripts.service.ws_re.scanner import ReScannerTask
@@ -11,7 +10,7 @@ from tools.bots import WikiLogger
 
 class TaskTestCase(TestCase):
     # Todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs some investigation
-    @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page", autospec=pywikibot.Page)
+    @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page")
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.text", new_callable=mock.PropertyMock)
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.title", new_callable=mock.Mock)
     def setUp(self, title_mock, text_mock, page_mock):

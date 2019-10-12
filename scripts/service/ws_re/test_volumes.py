@@ -135,3 +135,9 @@ class TestVolumes(TestCase):
         with self.assertRaises(ReDatenException):
             print(self.re_volumes[1])
         compare("I,1", self.re_volumes["I,1"].name)
+
+    def test_pre_post(self):
+        compare(("", "I,2"), self.re_volumes.get_neighbours("I,1"))
+        compare(("I,2", "II,2"), self.re_volumes.get_neighbours("II,1"))
+        compare(("XXIV", "I A,2"), self.re_volumes.get_neighbours("I A,1"))
+        compare(("S XV", ""), self.re_volumes.get_neighbours("R"))

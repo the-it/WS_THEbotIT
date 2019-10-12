@@ -9,7 +9,7 @@ from scripts.service.ws_re.template.re_page import RePage
 
 
 class TestRePage(TestCase):
-    @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page", autospec=pywikibot.Page)
+    @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page")
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.text",
                 new_callable=mock.PropertyMock)
     def setUp(self, text_mock, page_mock):

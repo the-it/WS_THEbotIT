@@ -1,18 +1,16 @@
 from unittest import TestCase, mock
 
-from tools.petscan import PetScan
 from .hilbert_timer import HilbertTimer
 
 
 class TestHilbertTimer(TestCase):
     def test_get_count(self):
         with mock.patch("scripts.archive.archive_2018.hilbert_timer.PetScan.run",
-                        autospec=PetScan, return_value=[1,2,3]):
+                        return_value=[1,2,3]):
             self.assertEqual(3, HilbertTimer.get_count())
 
     def test_full_run(self):
-        with mock.patch("scripts.archive.archive_2018.hilbert_timer.PetScan.run",
-                        autospec=PetScan) as searcher_mock:
+        with mock.patch("scripts.archive.archive_2018.hilbert_timer.PetScan.run") as searcher_mock:
             searcher_mock.return_value = [1,2,3]
             with mock.patch(
                     "scripts.archive.archive_2018.hilbert_timer.HilbertTimer.get_days_to_end_of_2018",
@@ -22,8 +20,7 @@ class TestHilbertTimer(TestCase):
                                  HilbertTimer.replace_in_page("<!--Hilbert-->dummy<!--Hilbert-->"))
 
     def test_green(self):
-        with mock.patch("scripts.archive.archive_2018.hilbert_timer.PetScan.run",
-                        autospec=PetScan) as searcher_mock:
+        with mock.patch("scripts.archive.archive_2018.hilbert_timer.PetScan.run") as searcher_mock:
             searcher_mock.return_value = [1, 2, 3]
             with mock.patch(
                     "scripts.archive.archive_2018.hilbert_timer.HilbertTimer.get_days_to_end_of_2018",
@@ -33,8 +30,7 @@ class TestHilbertTimer(TestCase):
                     HilbertTimer.replace_in_page("<!--Hilbert-->dummy<!--Hilbert-->"))
 
     def test_red(self):
-        with mock.patch("scripts.archive.archive_2018.hilbert_timer.PetScan.run",
-                        autospec=PetScan) as searcher_mock:
+        with mock.patch("scripts.archive.archive_2018.hilbert_timer.PetScan.run") as searcher_mock:
             searcher_mock.return_value = [1, 2, 3]
             with mock.patch(
                     "scripts.archive.archive_2018.hilbert_timer.HilbertTimer.get_days_to_end_of_2018",

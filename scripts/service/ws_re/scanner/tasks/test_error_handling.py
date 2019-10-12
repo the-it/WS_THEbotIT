@@ -1,7 +1,6 @@
 from datetime import datetime
 from unittest import TestCase, mock
 
-import pywikibot
 from testfixtures import LogCapture
 
 from scripts.service.ws_re.scanner import ERROTask
@@ -28,7 +27,7 @@ class TestERROTask(TestCase):
                              )
 
     def test_finish_up(self):
-        with mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page", autospec=pywikibot.Page) as page_mock:
+        with mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page") as page_mock:
             with mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
                 type(page_mock).text = text_mock
                 with LogCapture():
@@ -39,7 +38,7 @@ class TestERROTask(TestCase):
                     self.assertEqual(1, page_mock.call_count)
 
     def test_finish_up_no_errors(self):
-        with mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page", autospec=pywikibot.Page) as page_mock:
+        with mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page") as page_mock:
             with mock.patch("scripts.service.ws_re.scanner.tasks.base_task.pywikibot.Page.text", new_callable=mock.PropertyMock(return_value="bla")) as text_mock:
                 type(page_mock).text = text_mock
                 with LogCapture():
