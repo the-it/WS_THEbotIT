@@ -5,15 +5,15 @@ version: 2
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v8-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
-      - v8-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
-      - v8-dependencies-{{ .Environment.PYTHON_VERSION }}-
+      - v9-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+      - v9-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
+      - v9-dependencies-{{ .Environment.PYTHON_VERSION }}-
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v8-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+    key: v9-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
 
 install_dependencies: &install_dependencies
   run:
@@ -160,7 +160,7 @@ workflows:
   test-and-quality:
     jobs:
       - quality:
-          context: python37
+          context: python38
           filters:
             branches:
               ignore:
