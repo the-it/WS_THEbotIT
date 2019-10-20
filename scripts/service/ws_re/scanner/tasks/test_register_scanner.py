@@ -30,6 +30,7 @@ class TaskTestWithRegister(TaskTestCase):
 
 
 class TestSCANTask(TaskTestWithRegister):
+    # pylint: disable=arguments-differ
     def setUp(self):
         super().setUp()
         copy_tst_data("I_1_base", "I_1")

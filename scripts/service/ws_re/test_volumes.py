@@ -78,11 +78,11 @@ class TestVolumes(TestCase):
             iterator.__next__()
         self.assertEqual("XXIV", iterator.__next__())
         self.assertEqual("I A,1", iterator.__next__())
-        for i in range(0, 17):
+        for _ in range(0, 17):
             iterator.__next__()
         self.assertEqual("X A", iterator.__next__())
         self.assertEqual("S I", iterator.__next__())
-        for i in range(0, 13):
+        for _ in range(0, 13):
             iterator.__next__()
         self.assertEqual("S XV", iterator.__next__())
         self.assertEqual("R", iterator.__next__())

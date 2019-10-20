@@ -9,10 +9,12 @@ from tools.bots import WikiLogger
 
 
 class TaskTestCase(TestCase):
+    # pylint: disable=fixme
     # Todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs work
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page")
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.text", new_callable=mock.PropertyMock)
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.title", new_callable=mock.Mock)
+    # pylint: disable=arguments-differ
     def setUp(self, title_mock, text_mock, page_mock):
         self.page_mock = page_mock
         self.text_mock = text_mock

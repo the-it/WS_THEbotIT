@@ -55,10 +55,10 @@ class TestReArticle(TestCase):
         self.assertEqual(next(iterator).name, "BAND")
         self.assertEqual(next(iterator).name, "SPALTE_START")
         self.assertEqual(next(iterator).name, "SPALTE_END")
-        for i in range(5):
+        for _ in range(5):
             next(iterator)
         self.assertEqual(next(iterator).name, "WIKISOURCE")
-        for i in range(6):
+        for _ in range(6):
             next(iterator)
         self.assertEqual(next(iterator).name, "NACHTRAG")
         self.assertEqual(next(iterator).name, "ÜBERSCHRIFT")
