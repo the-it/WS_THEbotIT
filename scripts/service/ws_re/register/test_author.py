@@ -9,7 +9,8 @@ from scripts.service.ws_re.register.test_base import BaseTestRegister
 
 
 class TestAuthor(TestCase):
-    def test_author(self):
+    @staticmethod
+    def test_author():
         register_author = Author("Test Name", {"death": 1999})
         compare("Test Name", register_author.name)
         compare(1999, register_author.death)
@@ -25,7 +26,8 @@ class TestAuthor(TestCase):
 
 
 class TestAuthors(BaseTestRegister):
-    def test_load_data(self):
+    @staticmethod
+    def test_load_data():
         authors = Authors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
         compare("Abbott", author[0].name)
@@ -55,7 +57,8 @@ class TestAuthors(BaseTestRegister):
         compare("Abbott_new", authors._mapping["Abbott"])
         compare("New", authors._mapping["New"])
 
-    def test_set_author(self):
+    @staticmethod
+    def test_set_author():
         authors = Authors()
 
         author = authors.get_author_by_mapping("Abel", "I,1")
@@ -73,7 +76,8 @@ class TestAuthors(BaseTestRegister):
         compare("Abel2", author.name)
         compare(1950, author.birth)
 
-    def test_persist(self):
+    @staticmethod
+    def test_persist():
         authors = Authors()
         authors.set_mappings({"Foo": "Bar"})
         authors.set_author({"Foo Bar": {"birth": 1234}})
@@ -166,7 +170,7 @@ class TestAuthorCrawler(TestCase):
 	["R"] = "Albert Wünsch"
 }"""
         expect = {"Wünsch.": {"*": "Richard Wünsch",
-                            "R": "Albert Wünsch"}}
+                              "R": "Albert Wünsch"}}
         compare(expect, self.crawler._extract_mapping(mapping_text))
 
     def test_get_mapping(self):

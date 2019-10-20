@@ -115,7 +115,7 @@ text.
         re_page = RePage(self.page_mock)
         article = re_page.splitted_article_list[0]
         task = SCANTask(None, self.logger)
-        task.re_page =  re_page
+        task.re_page = re_page
         compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
 
     def test_proof_read(self):
@@ -267,7 +267,7 @@ text.
         re_page = RePage(self.page_mock)
         task.re_page = re_page
         article = re_page.splitted_article_list[0]
-        expected_dict = {"chapters": [{"start": 264,  "end": 265, "author": "Autor."}]}
+        expected_dict = {"chapters": [{"start": 264, "end": 265, "author": "Autor."}]}
         compare((expected_dict, []), task._fetch_pages(article))
 
         self.text_mock.return_value = """{{REDaten

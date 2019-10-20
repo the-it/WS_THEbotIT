@@ -149,8 +149,8 @@ class TestCatScan(TestCase):
 
     def test_construct_options(self):
         self.petscan.options = {"max_age": "1234",
-                                 "get_q": "1",
-                                 "show_redirects": "yes"}
+                                "get_q": "1",
+                                "show_redirects": "yes"}
         self.assertEqual("&max_age=1234" in str(self.petscan), True)
         self.assertEqual("&get_q=1" in str(self.petscan), True)
         self.assertEqual("&show_redirects=yes" in str(self.petscan), True)

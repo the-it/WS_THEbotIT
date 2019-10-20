@@ -8,7 +8,8 @@ from scripts.service.gl.status import GlStatus
 
 
 class TestGlStatus(TestCase):
-    def test_projektstand(self):
+    @staticmethod
+    def test_projektstand():
         given_file = """aaa
 <!--new line: Liste wird von einem Bot aktuell gehalten.-->
 bbb"""
@@ -22,7 +23,8 @@ bbb"""
         compare(result, bot.projektstand(temp_text=given_file, alle=50000, fertig=10000,
                                          korrigiert=15000, unkorrigiert=25000, articles=9250))
 
-    def test_to_percent(self):
+    @staticmethod
+    def test_to_percent():
         test_array = (((0, 1), " (0,00 %)"),
                       ((1, 4), " (25,00 %)"),
                       ((1, 3), " (33,33 %)"),

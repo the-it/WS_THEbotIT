@@ -114,6 +114,7 @@ class TestReScanner(TestCase):
                 self.assertEqual(ReScannerTask, type(item).__bases__[0])
 
     def _mock_surroundings(self):
+        # pylint: disable=attribute-defined-outside-init
         lemma_patcher = mock.patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
                                    mock.Mock())
         page_patcher = mock.patch("scripts.service.ws_re.scanner.pywikibot.Page")
@@ -125,6 +126,7 @@ class TestReScanner(TestCase):
         self.re_page_mock = re_page_patcher.start()
 
     def _mock_task(self):
+        # pylint: disable=attribute-defined-outside-init
         task_patcher = mock.patch("scripts.service.ws_re.scanner.ReScannerTask.run")
         self.task_mock = task_patcher.start()
 
@@ -276,7 +278,7 @@ class TestReScanner(TestCase):
                     expected_logging = (("ReScanner", "DEBUG",
                                          "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                         ("ReScanner", "INFO", "I"),
-                                        ("ReScanner", "DEBUG","ReScanner hat folgende Aufgaben bearbeitet: BASE"),
+                                        ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"),
                                         ("ReScanner", "INFO", "closing task ONE1"))
                     log_catcher.check_present(*expected_logging, order_matters=True)
 
@@ -286,9 +288,9 @@ class TestReScanner(TestCase):
         def side_effect(*args, **kwargs):
             raise ReDatenException(args, kwargs)
         save_mock = mock.patch("scripts.service.ws_re.scanner.RePage.save",
-                    new_callable=mock.Mock()).start()
+                               new_callable=mock.Mock()).start()
         type(self.re_page_mock).save = save_mock.start()
-        save_mock.side_effect=side_effect
+        save_mock.side_effect = side_effect
         self.lemma_mock.return_value = [":RE:Lemma1"]
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:

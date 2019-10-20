@@ -14,7 +14,8 @@ from scripts.service.ws_re.volumes import Volumes
 
 
 class TestLemmaChapter(TestCase):
-    def test_error_in_is_valid(self):
+    @staticmethod
+    def test_error_in_is_valid():
         lemma_chapter = LemmaChapter(1)
         compare(False, lemma_chapter.is_valid())
         lemma_chapter = LemmaChapter({"end": 2})
@@ -24,11 +25,13 @@ class TestLemmaChapter(TestCase):
         lemma_chapter = LemmaChapter({"start": 1, "end": 2})
         compare(True, lemma_chapter.is_valid())
 
-    def test_no_author(self):
+    @staticmethod
+    def test_no_author():
         lemma_chapter = LemmaChapter({"start": 1, "end": 2})
         compare(None, lemma_chapter.author)
 
-    def test_return_dict(self):
+    @staticmethod
+    def test_return_dict():
         lemma_chapter = LemmaChapter({"author": "bla", "end": 2, "start": 1})
         compare(OrderedDict((("start", 1), ("end", 2), ("author", "bla"))), lemma_chapter.get_dict())
 
@@ -132,7 +135,8 @@ class TestLemma(BaseTestRegister):
         compare("", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2})))
 
-    def test_year_format(self):
+    @staticmethod
+    def test_year_format():
         year_free_content = datetime.now().year - 71
         compare("style=\"background:#B9FFC5\"", Lemma._get_year_format(str(year_free_content)))
         compare("style=\"background:#FFCBCB\"", Lemma._get_year_format(str(year_free_content + 1)))
@@ -188,10 +192,12 @@ class TestLemma(BaseTestRegister):
 ||"""
         compare(expected_row, re_register_lemma.get_table_row())
 
-    def test_strip_accents(self):
+    @staticmethod
+    def test_strip_accents():
         compare("Αβαλας λιμηνaoueeeec", Lemma._strip_accents("Ἀβάλας λιμήνäöüèéêëç"))
 
-    def test_sort_key(self):
+    @staticmethod
+    def test_sort_key():
         compare("uuuiiissceaouesoaceeeeiioouusu", Lemma.make_sort_key("Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"))
         compare("flexum", Lemma.make_sort_key("ad Flexum"))
         compare("epistulis", Lemma.make_sort_key("ab epistulis"))
@@ -289,7 +295,7 @@ class TestLemma(BaseTestRegister):
         compare([{"start": 1, "end": 3, "author": "Abel"},
                  {"start": 3, "end": 3, "author": "Abbott"}],
                 update_lemma.lemma_dict["chapters"])
-        update_lemma.update_lemma_dict(update_dict, remove_items= remove_item)
+        update_lemma.update_lemma_dict(update_dict, remove_items=remove_item)
         compare("lemma2", update_lemma["lemma"])
         compare("previous1", update_lemma["previous"])
         compare("next", update_lemma["next"])

@@ -115,7 +115,8 @@ class TestIntegrationRegister(TestCase):
 
 @skip("only for analysis")
 class TestAnalyse(TestCase):
-    def test_compare_lemma(self):  # pragma: no cover
+    @staticmethod
+    def test_compare_lemma():  # pragma: no cover
         lemma_1 = "lemma 1"
         lemma_2 = "lemma 1"
         for i in range(len(lemma_1)):

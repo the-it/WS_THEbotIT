@@ -8,23 +8,26 @@ from scripts.service.ws_re.volumes import Volumes
 
 
 class TestRegisters(BaseTestRegister):
-    def test_init(self):
+    @staticmethod
+    def test_init():
         for volume in Volumes().all_volumes:
             copy_tst_data("I_1_base", volume.file_name)
         registers = Registers()
         iterator = iter(registers.volumes.values())
         compare("I,1", next(iterator).volume.name)
-        for i in range(83):
+        for _ in range(83):
             last = next(iterator)
         compare("R", last.volume.name)
         compare(84, len(registers.volumes))
         compare("IV,1", registers["IV,1"].volume.name)
 
-    def test_not_all_there(self):
+    @staticmethod
+    def test_not_all_there():
         copy_tst_data("I_1_base", "I_1")
         Registers()
 
-    def test_alphabetic(self):
+    @staticmethod
+    def test_alphabetic():
         copy_tst_data("I_1_alpha", "I_1")
         copy_tst_data("III_1_alpha", "III_1")
         registers = Registers()

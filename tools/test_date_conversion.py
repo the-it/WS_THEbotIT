@@ -8,6 +8,7 @@ from tools.date_conversion import DateConversion
 
 @ddt
 class TestDateConversion(TestCase):
+    # pylint: disable=no-self-use
     @file_data("test_date_conversion.json")
     def test_data_provider(self, value):
         for item in value:
