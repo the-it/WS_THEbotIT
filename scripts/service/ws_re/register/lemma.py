@@ -1,43 +1,35 @@
 import contextlib
 import re
-import sys
+import unicodedata
 from collections import OrderedDict
 from datetime import datetime
-from typing import Dict, Union, List, Tuple, KeysView, Optional
-
-import unicodedata
+from typing import Union, List, Tuple, KeysView, Optional, TypedDict
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.volumes import Volume
 
-if sys.version_info >= (3, 8):
-    from typing import TypedDict  # pylint: disable=no-name-in-module,ungrouped-imports
 
 # type hints
-if sys.version_info >= (3, 8):
-    # typed dicts
-    class ChapterDict(TypedDict):
-        author: str
-        start: int
-        end: int
+class ChapterDict(TypedDict):
+    author: str
+    start: int
+    end: int
 
-    LemmaItems = Union[str, bool, ChapterDict]
 
-    class LemmaDict(TypedDict):
-        lemma: str
-        previous: str
-        next: str
-        sort_key: str
-        redirect: Union[str, bool]
-        proof_read: int
-        wp_link: str
-        ws_link: str
-        chapters: List[ChapterDict]
-else:
-    ChapterDict = Dict[str, Union[str, int]]
-    LemmaItems = Union[str, bool, int, ChapterDict]
-    LemmaDict = Dict[str, LemmaItems]
+LemmaItems = Union[str, bool, ChapterDict]
+
+
+class LemmaDict(TypedDict):
+    lemma: str
+    previous: str
+    next: str
+    sort_key: str
+    redirect: Union[str, bool]
+    proof_read: int
+    wp_link: str
+    ws_link: str
+    chapters: List[ChapterDict]
 
 
 class LemmaChapter:
@@ -291,7 +283,7 @@ class Lemma():
         if redirect:
             link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self['lemma']}}}}}'']]"
             if isinstance(redirect, str):
-                link += f" → '''[[{redirect}]]'''"
+                link += f" → '''[[RE:{redirect}|{redirect}]]'''"
         else:
             link = f"[[RE:{self['lemma']}|'''{{{{Anker2|{self['lemma']}}}}}''']]"
         return link

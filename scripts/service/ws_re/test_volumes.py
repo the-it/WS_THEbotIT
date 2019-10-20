@@ -7,7 +7,8 @@ from scripts.service.ws_re.volumes import Volume, Volumes, VolumeType
 
 
 class TestVolume(TestCase):
-    def test_init(self):
+    @staticmethod
+    def test_init():
         volume = Volume("I,1", "1900", "Aal", "Bethel")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
@@ -15,7 +16,8 @@ class TestVolume(TestCase):
         compare("Aal", volume.start)
         compare("Bethel", volume.end)
 
-    def test_init_by_name(self):
+    @staticmethod
+    def test_init_by_name():
         volume = Volume(name="I,1", year="1900", start="Aal", end="Bethel")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
@@ -30,7 +32,8 @@ class TestVolume(TestCase):
         self.assertIsNone(volume.start)
         self.assertIsNone(volume.end)
 
-    def test_init_year_as_int(self):
+    @staticmethod
+    def test_init_year_as_int():
         volume = Volume(name="S I", year=1900)
         compare("S I", volume.name)
         compare("1900", volume.year)
@@ -47,7 +50,8 @@ class TestVolume(TestCase):
         with self.assertRaises(ReDatenException):
             print(Volume("R I", "1900", "Aal", "Bethel").type)
 
-    def test_sort_key(self):
+    @staticmethod
+    def test_sort_key():
         volume = Volume("I,1", "1900", "Aal", "Bethel")
         compare("1_01_1", volume.sort_key)
         volume = Volume("IX A,2", "1900", "Aal", "Bethel")
@@ -70,15 +74,15 @@ class TestVolumes(TestCase):
     def test_iter(self):
         iterator = iter(self.re_volumes)
         self.assertEqual("I,1", iterator.__next__())
-        for i in range(0, 47):
+        for _ in range(0, 47):
             iterator.__next__()
         self.assertEqual("XXIV", iterator.__next__())
         self.assertEqual("I A,1", iterator.__next__())
-        for i in range(0, 17):
+        for _ in range(0, 17):
             iterator.__next__()
         self.assertEqual("X A", iterator.__next__())
         self.assertEqual("S I", iterator.__next__())
-        for i in range(0, 13):
+        for _ in range(0, 13):
             iterator.__next__()
         self.assertEqual("S XV", iterator.__next__())
         self.assertEqual("R", iterator.__next__())

@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from datetime import datetime
 from unittest import TestCase, mock
 
@@ -18,9 +19,9 @@ class TestBotScheduler(TestCase):
 
     def test_get_weekday(self):
         expectation = (4, 5, 6, 0, 1, 2, 3, 4)
-        for i in range(1,9):
+        for i in range(1, 9):
             self.now_mock.return_value = datetime(year=2010, month=1, day=i)
-            compare(expectation[i - 1] , self.bot_scheduler.now().weekday())
+            compare(expectation[i - 1], self.bot_scheduler.now().weekday())
 
     def test_last_day_of_month(self):
         dates = (datetime(year=2010, month=1, day=31),

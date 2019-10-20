@@ -137,19 +137,13 @@ unittest_steps: &unittest_steps
 jobs:
   quality:
     docker:
-      - image: circleci/python:3.8-rc
+      - image: circleci/python:3.8
     working_directory: ~/repo
     <<: *quality_steps
 
-  coverage37:
-    docker:
-      - image: circleci/python:3.7
-    working_directory: ~/repo
-    <<: *coverage_steps
-
   coverage38:
     docker:
-      - image: circleci/python:3.8-rc
+      - image: circleci/python:3.8
     working_directory: ~/repo
     <<: *coverage_steps
 
@@ -167,9 +161,5 @@ workflows:
                 - /.*updating_registers.*/
       - coverage38:
           context: python38
-          requires:
-            - quality
-      - coverage37:
-          context: python37
           requires:
             - quality
