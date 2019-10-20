@@ -1,30 +1,24 @@
 # pylint: disable=ungrouped-imports
-import sys
 import datetime
 import json
-from typing import Dict, Union, List
+from typing import List, TypedDict
 from urllib.parse import quote
 
 import requests
 
 from tools import ToolException
 
-if sys.version_info >= (3, 8):
-    from typing import TypedDict  # pylint: disable=no-name-in-module
 
 # type hints
-if sys.version_info >= (3, 8):
-    # typed dicts
-    class PetscanLemma(TypedDict):
-        id: int
-        len: int
-        n: str
-        namespace: int
-        nstext: str
-        title: str
-        touched: str
-else:
-    PetscanLemma = Dict[str, Union[str, int]]
+class PetscanLemma(TypedDict):
+    id: int
+    len: int
+    n: str
+    namespace: int
+    nstext: str
+    title: str
+    touched: str
+
 
 NAMESPACE_MAPPING = {"Article": 0,
                      "Diskussion": 1,
