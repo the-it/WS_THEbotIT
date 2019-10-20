@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 import json
 import os
 import time
@@ -113,6 +114,7 @@ class TestReScanner(TestCase):
                 self.assertEqual(ReScannerTask, type(item).__bases__[0])
 
     def _mock_surroundings(self):
+        # pylint: disable=attribute-defined-outside-init
         lemma_patcher = mock.patch("scripts.service.ws_re.scanner.ReScanner.compile_lemma_list",
                                    mock.Mock())
         page_patcher = mock.patch("scripts.service.ws_re.scanner.pywikibot.Page")
@@ -124,6 +126,7 @@ class TestReScanner(TestCase):
         self.re_page_mock = re_page_patcher.start()
 
     def _mock_task(self):
+        # pylint: disable=attribute-defined-outside-init
         task_patcher = mock.patch("scripts.service.ws_re.scanner.ReScannerTask.run")
         self.task_mock = task_patcher.start()
 
@@ -138,7 +141,8 @@ class TestReScanner(TestCase):
                 expected_logging = (("ReScanner", "INFO", "opening task ONE1"),
                                     ("ReScanner", "INFO", "opening task ERRO"),
                                     ("ReScanner", "INFO", "Start processing the lemmas."),
-                                    ("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                                    ("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "INFO", "I"),
                                     ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"),
                                     ("ReScanner", "INFO", "closing task ONE1"),
@@ -157,7 +161,8 @@ class TestReScanner(TestCase):
                                     ("ReScanner", "INFO", "opening task TWO2"),
                                     ("ReScanner", "INFO", "opening task ERRO"),
                                     ("ReScanner", "INFO", "Start processing the lemmas."),
-                                    ("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                                    ("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "INFO", "I"),
                                     ("ReScanner", "INFO", "II"),
                                     ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"),
@@ -175,7 +180,9 @@ class TestReScanner(TestCase):
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "ERROR", "The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.template.ReDatenException"),)
+                expected_logging = (("ReScanner", "ERROR",
+                                     "The initiation of :RE:Lemma1 went wrong: "
+                                     "scripts.service.ws_re.template.ReDatenException"),)
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_lemma_raise_exception_second_not(self):
@@ -187,9 +194,13 @@ class TestReScanner(TestCase):
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
-                                    ("ReScanner", "ERROR", "The initiation of :RE:Lemma1 went wrong: scripts.service.ws_re.template.ReDatenException"),
-                                    ("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]"),
+                expected_logging = (("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                                    ("ReScanner", "ERROR",
+                                     "The initiation of :RE:Lemma1 went wrong: "
+                                     "scripts.service.ws_re.template.ReDatenException"),
+                                    ("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]"),
                                     ("ReScanner", "INFO", "I"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
@@ -203,7 +214,8 @@ class TestReScanner(TestCase):
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                expected_logging = (("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
@@ -217,7 +229,8 @@ class TestReScanner(TestCase):
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                expected_logging = (("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
@@ -231,7 +244,8 @@ class TestReScanner(TestCase):
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                expected_logging = (("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "ERROR", "Error in ONE1/:RE:Lemma1, no data where altered."),
                                     ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
@@ -246,8 +260,10 @@ class TestReScanner(TestCase):
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
-                                    ("ReScanner", "CRITICAL", "Error in ONE1/:RE:Lemma1, but altered the page ... critical"))
+                expected_logging = (("ReScanner", "DEBUG",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                                    ("ReScanner", "CRITICAL",
+                                     "Error in ONE1/:RE:Lemma1, but altered the page ... critical"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_watchdog(self):
@@ -259,9 +275,10 @@ class TestReScanner(TestCase):
                     log_catcher.clear()
                     bot.tasks = [self.ONE1Task]
                     bot.run()
-                    expected_logging = (("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                    expected_logging = (("ReScanner", "DEBUG",
+                                         "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                         ("ReScanner", "INFO", "I"),
-                                        ("ReScanner", "DEBUG","ReScanner hat folgende Aufgaben bearbeitet: BASE"),
+                                        ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"),
                                         ("ReScanner", "INFO", "closing task ONE1"))
                     log_catcher.check_present(*expected_logging, order_matters=True)
 
@@ -271,16 +288,17 @@ class TestReScanner(TestCase):
         def side_effect(*args, **kwargs):
             raise ReDatenException(args, kwargs)
         save_mock = mock.patch("scripts.service.ws_re.scanner.RePage.save",
-                    new_callable=mock.Mock()).start()
+                               new_callable=mock.Mock()).start()
         type(self.re_page_mock).save = save_mock.start()
-        save_mock.side_effect=side_effect
+        save_mock.side_effect = side_effect
         self.lemma_mock.return_value = [":RE:Lemma1"]
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
                 log_catcher.clear()
                 bot.tasks = [self.ONE1Task]
                 bot.run()
-                expected_logging = (("ReScanner", "INFO", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                expected_logging = (("ReScanner", "INFO",
+                                     "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "INFO", "I"),
                                     ("ReScanner", "INFO", "ReScanner hat folgende Aufgaben bearbeitet: BASE"),
                                     ("ReScanner", "ERROR", "RePage can\'t be saved."))
@@ -322,7 +340,8 @@ class TestReScanner(TestCase):
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False):
                 expected_logging = (("ReScanner", "INFO", "Start the bot ReScanner."),
-                                    ("ReScanner", "WARNING", "The last run wasn't successful. The data is thrown away."),
+                                    ("ReScanner", "WARNING",
+                                     "The last run wasn't successful. The data is thrown away."),
                                     ("ReScanner", "WARNING", "Try to get the deprecated data back."),
                                     ("ReScanner", "WARNING", "There isn't deprecated data to reload."))
                 log_catcher.check_present(*expected_logging, order_matters=True)

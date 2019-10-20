@@ -1,19 +1,11 @@
 import re
-import sys
-from typing import List, Dict, Tuple, Union
+from typing import List, Tuple, TypedDict
 
-if sys.version_info >= (3, 8):
-    from typing import TypedDict  # pylint: disable=no-name-in-module
 
 # type hints
-if sys.version_info >= (3, 8):
-    # typed dicts
-    class TemplatePositionDict(TypedDict):
-        pos: Tuple[int, int]
-        text: str
-
-else:
-    TemplatePositionDict = Dict[str, Union[str, Tuple[int, int]]]
+class TemplatePositionDict(TypedDict):
+    pos: Tuple[int, int]
+    text: str
 
 
 class TemplateFinderException(Exception):

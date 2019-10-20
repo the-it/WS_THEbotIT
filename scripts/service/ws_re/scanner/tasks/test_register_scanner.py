@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from pathlib import Path
 from unittest import mock
 
@@ -29,6 +30,7 @@ class TaskTestWithRegister(TaskTestCase):
 
 
 class TestSCANTask(TaskTestWithRegister):
+    # pylint: disable=arguments-differ
     def setUp(self):
         super().setUp()
         copy_tst_data("I_1_base", "I_1")
@@ -37,7 +39,8 @@ class TestSCANTask(TaskTestWithRegister):
         self.task = SCANTask(None, self.logger)
 
     def test_pushing_nothing_to_push(self):
-        with mock.patch("scripts.service.ws_re.scanner.tasks.register_scanner.Repo", mock.Mock(spec=Repo)) as repo_mock:
+        with mock.patch("scripts.service.ws_re.scanner.tasks.register_scanner.Repo",
+                        mock.Mock(spec=Repo)) as repo_mock:
             repo_mock().index.diff.return_value = []
             self.task._push_changes()
             compare(3, len(repo_mock.mock_calls))
@@ -46,7 +49,8 @@ class TestSCANTask(TaskTestWithRegister):
 
     def test_pushing_changes(self):
         with LogCapture():
-            with mock.patch("scripts.service.ws_re.scanner.tasks.register_scanner.Repo", mock.Mock(spec=Repo)) as repo_mock:
+            with mock.patch("scripts.service.ws_re.scanner.tasks.register_scanner.Repo",
+                            mock.Mock(spec=Repo)) as repo_mock:
                 repo_mock().index.diff.return_value = ["Something has changed"]
                 self.task._push_changes()
                 compare(8, len(repo_mock.mock_calls))
@@ -112,7 +116,7 @@ text.
         re_page = RePage(self.page_mock)
         article = re_page.splitted_article_list[0]
         task = SCANTask(None, self.logger)
-        task.re_page =  re_page
+        task.re_page = re_page
         compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
 
     def test_proof_read(self):
@@ -264,7 +268,7 @@ text.
         re_page = RePage(self.page_mock)
         task.re_page = re_page
         article = re_page.splitted_article_list[0]
-        expected_dict = {"chapters": [{"start": 264,  "end": 265, "author": "Autor."}]}
+        expected_dict = {"chapters": [{"start": 264, "end": 265, "author": "Autor."}]}
         compare((expected_dict, []), task._fetch_pages(article))
 
         self.text_mock.return_value = """{{REDaten
@@ -365,7 +369,8 @@ text.
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
             # if the pages are non numeric return nothing
-            with open(Path(__file__).parent.joinpath("test_data/RE_Mitarbeiter-Verzeichnis.txt"), encoding="utf-8") as test_file:
+            with open(Path(__file__).parent.joinpath("test_data/RE_Mitarbeiter-Verzeichnis.txt"),
+                      encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
             task.re_page = re_page
@@ -462,4 +467,6 @@ text.
         task.re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
             task._process_from_article_list()
-            log_catcher.check(mock.ANY, ("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")))
+            log_catcher.check(mock.ANY, ("Test", "ERROR",
+                                         StringComparison("No available Lemma in Registers for issue I,1 "
+                                                          ".* Reason is:.*")))

@@ -1,22 +1,17 @@
 import contextlib
 import json
 import re
-import sys
-from typing import Dict, Union, List, Tuple, Optional
+from typing import Dict, Union, List, Tuple, Optional, TypedDict
 
 from scripts.service.ws_re.register.base import _REGISTER_PATH
 
-if sys.version_info >= (3, 8):
-    from typing import TypedDict  # pylint: disable=no-name-in-module
 
 # type hints
-if sys.version_info >= (3, 8):
-    # typed dicts
-    class AuthorDict(TypedDict):
-        birth: int
-        death: int
-else:
-    AuthorDict = Dict[str, int]
+class AuthorDict(TypedDict):
+    birth: int
+    death: int
+
+
 CrawlerDict = Dict[str, Union[str, Dict[str, str]]]
 
 
