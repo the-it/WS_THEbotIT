@@ -1,19 +1,13 @@
 import re
-import sys
-from typing import Optional, Dict, List
+from typing import Optional, List, TypedDict
 
-if sys.version_info >= (3, 8):
-    from typing import TypedDict  # pylint: disable=no-name-in-module
 
 # type hints
-if sys.version_info >= (3, 8):
-    # typed dicts
-    class ParameterDict(TypedDict):
-        key: Optional[str]
-        value: str
+class ParameterDict(TypedDict):
+    key: Optional[str]
+    value: str
 
-else:
-    ParameterDict = Dict[str, Optional[str]]
+
 ParameterList = List[ParameterDict]
 
 REGEX_TITLE = r"\A[^\|]+"

@@ -8,7 +8,7 @@ pip3 :
 
 cloc :
 	echo "########## COUNT LOC ###########"
-	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml .
+	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
 
 pycodestyle :
 	echo "########## PYCODESTYLE #########"

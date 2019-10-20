@@ -13,7 +13,7 @@ ignore=venv,
 
 # Add files or directories matching the regex patterns to the blacklist. The
 # regex matches against base names, not paths.
-ignore-patterns=test_.*.py
+# ignore-patterns=test_.*.py
 
 # Python code to execute, usually for sys.path manipulation such as
 # pygtk.require().
@@ -56,7 +56,7 @@ confidence=
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use"--disable=all --enable=classes
 # --disable=W"
-disable=missing-docstring,F0401,too-few-public-methods,syntax-error,invalid-name
+disable=missing-docstring,F0401,too-few-public-methods,syntax-error,invalid-name,too-many-public-methods
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

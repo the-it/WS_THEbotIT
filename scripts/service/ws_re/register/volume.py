@@ -4,7 +4,7 @@ from typing import Union, Optional, List
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
 from scripts.service.ws_re.register.lemma import Lemma, LemmaDict
-from scripts.service.ws_re.volumes import Volume
+from scripts.service.ws_re.volumes import Volume, Volumes
 
 
 class VolumeRegister(Register):
@@ -51,13 +51,29 @@ class VolumeRegister(Register):
         table.append("|}")
         return "\n".join(table)
 
+    def _get_header(self) -> str:
+        header = ["RERegister"]
+        header.append(f"BAND={self.volume.name}")
+        # calculate pre and post issue
+        volumes = Volumes()
+        vg, nf = volumes.get_neighbours(self.volume.name)
+        header.append(f"VG={vg}")
+        header.append(f"NF={nf}")
+        header.append(f"SUM={len(self.lemmas)}")
+        # calculate proof_read status
+        fer, kor, unk = self.proof_read(self.lemmas)
+        header.append(f"UNK={unk}")
+        header.append(f"KOR={kor}")
+        header.append(f"FER={fer}")
+        return "{{" + "\n|".join(header) + "\n}}\n"
+
     def _get_footer(self) -> str:
         return f"[[Kategorie:RE:Register|!]]\nZahl der Artikel: {len(self._lemmas)}, " \
                f"davon [[:Kategorie:RE:Band {self._volume.name}" \
                f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
 
     def get_register_str(self) -> str:
-        return f"{self._get_table()}\n{self._get_footer()}"
+        return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"
 
     def persist(self):
         persist_list = []

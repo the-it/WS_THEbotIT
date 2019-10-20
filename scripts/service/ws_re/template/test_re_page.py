@@ -9,9 +9,10 @@ from scripts.service.ws_re.template.re_page import RePage
 
 
 class TestRePage(TestCase):
-    @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page", autospec=pywikibot.Page)
+    @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page")
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.text",
                 new_callable=mock.PropertyMock)
+    # pylint: disable=arguments-differ
     def setUp(self, text_mock, page_mock):
         self.page_mock = page_mock
         self.text_mock = text_mock
@@ -248,10 +249,10 @@ text
         self.assertTrue(isinstance(splitted_list[1][1], str))
 
     def test_complex_page(self):
-        complex = """{{#lst:RE:Plinius 5/I}}
+        complex_article = """{{#lst:RE:Plinius 5/I}}
 {{#lst:RE:Plinius 5/II}}
 {{#lst:RE:Plinius 5/III}}
 {{#lst:RE:Plinius 5/IV}}"""
-        self.text_mock.return_value = complex
+        self.text_mock.return_value = complex_article
         re_page = RePage(self.page_mock)
         self.assertTrue(re_page.complex_construction)

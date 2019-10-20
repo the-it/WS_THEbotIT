@@ -1,6 +1,7 @@
+# pylint: disable=protected-access
 from unittest import TestCase, skip
 
-from testfixtures import compare
+from testfixtures import compare, StringComparison
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
@@ -10,14 +11,51 @@ from scripts.service.ws_re.volumes import Volumes
 
 
 class TestRegister(BaseTestRegister):
-    def test_init(self):
+    @staticmethod
+    def test_init():
         copy_tst_data("I_1_base", "I_1")
         VolumeRegister(Volumes()["I,1"], Authors())
 
-    def test_get_table(self):
+    def test_header_band(self):
+        copy_tst_data("I_1_base", "I_1")
+        self.assertTrue("BAND=I,1" in VolumeRegister(Volumes()["I,1"], Authors())._get_header())
+        copy_tst_data("I_1_base", "S I")
+        self.assertTrue("BAND=S I" in VolumeRegister(Volumes()["S I"], Authors())._get_header())
+
+    def test_header_vg_nf(self):
+        copy_tst_data("I_1_base", "I_1")
+        i1 = VolumeRegister(Volumes()["I,1"], Authors())._get_header()
+        self.assertTrue("VG=" in i1)
+        self.assertTrue("NF=I,2" in i1)
+        copy_tst_data("I_1_base", "S I")
+        si = VolumeRegister(Volumes()["S I"], Authors())._get_header()
+        self.assertTrue("VG=X A" in si)
+        self.assertTrue("NF=S II" in si)
+
+    @staticmethod
+    def test_header_proof_read():
+        copy_tst_data("I_1_base", "I_1")
+        i1 = VolumeRegister(Volumes()["I,1"], Authors())._get_header().replace("\n", "")
+        compare(StringComparison(".*SUM=8.*"), i1)
+        compare(StringComparison(".*UNK=1.*"), i1)
+        compare(StringComparison(".*KOR=2.*"), i1)
+        compare(StringComparison(".*FER=3.*"), i1)
+
+    @staticmethod
+    def test_get_table():
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        expected_table = """{|class="wikitable sortable"
+        expected_table = """{{RERegister
+|BAND=I,1
+|VG=
+|NF=I,2
+|SUM=2
+|UNK=0
+|KOR=1
+|FER=1
+}}
+
+{|class="wikitable sortable"
 !Artikel
 !Wikilinks
 !Seite
@@ -40,7 +78,8 @@ class TestRegister(BaseTestRegister):
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
         compare(expected_table, register.get_register_str())
 
-    def test_persist(self):
+    @staticmethod
+    def test_persist():
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         register._lemmas[0]._lemma_dict["previous"] = None
@@ -50,6 +89,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
   {
     "lemma": "Aal",
     "next": "Aarassos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1,
@@ -61,6 +101,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
   {
     "lemma": "Aarassos",
     "previous": "Aal",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 4,
@@ -73,7 +114,8 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             compare(expect, register_file.read())
 
-    def test_normalize_sort_key(self):
+    @staticmethod
+    def test_normalize_sort_key():
         compare("aaa", VolumeRegister.normalize_sort_key({"lemma": "ååå"}))
         compare("bbb", VolumeRegister.normalize_sort_key({"lemma": "ååå", "sort_key": "bbb"}))
 
@@ -91,7 +133,8 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         compare("Aarassos", lemma["previous"])
         self.assertIsNone(register.get_lemma_by_name("Abracadabra"))
 
-    def test_get_lemma_self_append(self):
+    @staticmethod
+    def test_get_lemma_self_append():
         copy_tst_data("I_1_self_append", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma_by_name("Aal")
@@ -109,9 +152,10 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         lemma = register[2]
         compare("Aarassos", lemma["previous"])
         with self.assertRaises(IndexError):
-            register[8]
+            print(register[8])
 
-    def test_get_id_of_lemma(self):
+    @staticmethod
+    def test_get_id_of_lemma():
         copy_tst_data("I_1_self_append", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         compare(0, register.get_index_of_lemma("Aal"))
@@ -124,7 +168,8 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
 
 @skip("only for analysis")
 class TestIntegrationRegister(TestCase):
-    def test_json_integrity(self):  # pragma: no cover
+    @staticmethod
+    def test_json_integrity():  # pragma: no cover
         for volume in Volumes().all_volumes:
             print(volume)
             VolumeRegister(volume, Authors)

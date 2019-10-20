@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 import contextlib
 import os
 import shutil

@@ -4,12 +4,8 @@ from tools.template_finder import TemplateFinder, TemplateFinderException
 
 
 class TestTemplateFinder(TestCase):
-    def test_initialize(self):
-        finder = TemplateFinder("No Template here")
-
     def test_find_simple_template(self):
         finder = TemplateFinder("{{Template}}")
-        result = finder.get_positions("Template")
         self.assertListEqual([{"pos": (0, 12), "text": "{{Template}}"}], finder.get_positions("Template"))
 
     def test_find_simple_template_fail(self):
@@ -43,4 +39,4 @@ class TestTemplateFinder(TestCase):
 
     def test_get_start_positions_of_regex(self):
         finder = TemplateFinder("{{a{{b{{")
-        self.assertListEqual([0,3,6], finder.get_start_positions_of_regex("{{", "{{a{{b{{"))
+        self.assertListEqual([0, 3, 6], finder.get_start_positions_of_regex("{{", "{{a{{b{{"))

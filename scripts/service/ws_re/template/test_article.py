@@ -55,10 +55,10 @@ class TestReArticle(TestCase):
         self.assertEqual(next(iterator).name, "BAND")
         self.assertEqual(next(iterator).name, "SPALTE_START")
         self.assertEqual(next(iterator).name, "SPALTE_END")
-        for i in range(5):
+        for _ in range(5):
             next(iterator)
         self.assertEqual(next(iterator).name, "WIKISOURCE")
-        for i in range(6):
+        for _ in range(6):
             next(iterator)
         self.assertEqual(next(iterator).name, "NACHTRAG")
         self.assertEqual(next(iterator).name, "ÜBERSCHRIFT")
@@ -159,7 +159,8 @@ class TestReArticle(TestCase):
                                     "Article has the wrong structure. Wrong order of templates."):
             Article.from_text(article_text)
 
-    def test_complete_article(self):
+    @staticmethod
+    def test_complete_article():
         article_text = ARTICLE_TEMPLATE
         Article.from_text(article_text)
 
@@ -215,7 +216,8 @@ text
         self.article["SPALTE_START"].value = "1000"
         self.assertNotEqual(pre_hash, hash(self.article))
 
-    def test_bug_1(self):
+    @staticmethod
+    def test_bug_1():
         test_string = """{{REDaten
 |BAND=IV,1
 |SPALTE_START=610
@@ -237,7 +239,8 @@ text
 {{REAutor|Stein.}}"""
         Article.from_text(test_string)
 
-    def test_bug_2(self):
+    @staticmethod
+    def test_bug_2():
         test_string = """{{REDaten
 |BAND=XIV,1
 |SPALTE_START=46
