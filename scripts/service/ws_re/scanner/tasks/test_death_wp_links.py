@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from unittest import mock
 
 from testfixtures import compare
@@ -86,7 +87,8 @@ class TestDEWPTask(TaskTestCase):
 
     def test_build_entries(self):
         task = DEWPTask(None, self.logger)
-        task.data = {"not_exists": [("One", "First_Lemma"), ("Two", "Second_Lemma")], "redirect": [("Three", "Second_Lemma")]}
+        task.data = {"not_exists": [("One", "First_Lemma"), ("Two", "Second_Lemma")],
+                     "redirect": [("Three", "Second_Lemma")]}
         expect = [
             "=== Artikel existieren in Wikipedia nicht ===",
             "* Wikpedia Artikel: [[w:One]] (verlinkt von [[RE:First_Lemma]]) existiert nicht",

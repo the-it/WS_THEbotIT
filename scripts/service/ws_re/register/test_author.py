@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from pathlib import Path
 from unittest import TestCase
 
@@ -190,12 +191,15 @@ class TestAuthorCrawler(TestCase):
         compare(("Klaus", "Alpers"), self.crawler._extract_author_name("|Alpers, Klaus"))
         compare(("Franz", "Altheim"), self.crawler._extract_author_name("Altheim, [Franz]"))
         compare(("Wolfgang", "Aly"), self.crawler._extract_author_name("|[[Wolfgang Aly|Aly, Wolf[gang]]]"))
-        compare(("Walter", "Amelung"), self.crawler._extract_author_name("|'''[[Walter Amelung|Amelung, [Walter]]]'''"))
+        compare(("Walter", "Amelung"),
+                self.crawler._extract_author_name("|'''[[Walter Amelung|Amelung, [Walter]]]'''"))
         compare(("Hermann", "Abert"), self.crawler._extract_author_name("|'''[[Hermann Abert|Abert, [Hermann]]]"))
         compare(("Martin", "Bang"), self.crawler._extract_author_name("Bang, [Martin]{{Anker | B}}"))
         compare(("Johannes", "Zwicker"), self.crawler._extract_author_name("Zwicker, Joh[annes = Hanns]"))
-        compare(("Friedrich Walter", "Lenz"), self.crawler._extract_author_name("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
-        compare(("Eduard", "Thraemer"), self.crawler._extract_author_name("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
+        compare(("Friedrich Walter", "Lenz"),
+                self.crawler._extract_author_name("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
+        compare(("Eduard", "Thraemer"),
+                self.crawler._extract_author_name("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
         compare(("Buren s. Van Buren", ""), self.crawler._extract_author_name("Buren s. Van Buren"))
         compare(("Karl", "Praechter"), self.crawler._extract_author_name("Praechter, K[arl]<nowiki></nowiki>"))
 
@@ -206,6 +210,7 @@ class TestAuthorCrawler(TestCase):
         compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" |* 1933"))
         compare((None, None), self.crawler._extract_years(""))
 
+    # pylint: disable=line-too-long
     author_table = """Das '''Autorenverzeichnis''' für ''[[Paulys Realencyclopädie der classischen Altertumswissenschaft]]'' basiert auf dem ''Verzeichnis der Autoren'' im Registerband 1980 (S. 235–250), enthält aber anders als dieses biografische Angaben und Verweise zu ggf. existierenden Wikipedia-Artikeln. Die Autoren, deren Werke gemeinfrei sind, werden '''fett''' hervorgehoben.
 
 Die Redaktion der RE fügte ihrem Registerband ein Verzeichnis mit 1096 Autorennamen an (die 119 Autoren des ersten Bandes sind hervorgehoben), das von Gerhard Winkler erstellt wurde. Die Identifizierungen sind teilweise falsch, darum ist weitere Recherche empfohlen. Darüber hinaus tauchen manche Autoren, die nachweislich Beiträge erstellt haben, gar nicht auf. Auch in den Vorreden werden Personen als Beiträger genannt, die in Winklers Verzeichnis fehlen. Ob diese Personen tatsächlich Artikel verfasst oder der Redaktion nur Hinweise gegeben haben, bleibt zu untersuchen.
@@ -296,7 +301,8 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
                   "Johannes Zwicker": {"birth": 1881, "death": 1969}}
         compare(expect, author_mapping)
 
-    table_head = "{{|class=\"wikitable sortable\"\n|-\n!width=\"200\" | Name/Sigel\n!width=\"75\" | Lebenszeit\n!width=\"300\" | Mitarbeit\n!Personenartikel\n"
+    table_head = "{{|class=\"wikitable sortable\"\n|-\n!width=\"200\" | Name/Sigel\n!width=\"75\" " \
+                 "| Lebenszeit\n!width=\"300\" | Mitarbeit\n!Personenartikel\n"
     table_bottom = "\n|}}\n\n[[Kategorie:RE:Autoren|!]]"
 
     def test_bug_kazarow(self):

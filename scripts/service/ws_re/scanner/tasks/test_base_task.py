@@ -9,7 +9,7 @@ from tools.bots import WikiLogger
 
 
 class TaskTestCase(TestCase):
-    # Todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs some investigation
+    # Todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs work
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page")
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.text", new_callable=mock.PropertyMock)
     @mock.patch("scripts.service.ws_re.template.re_page.pywikibot.Page.title", new_callable=mock.Mock)
@@ -39,7 +39,8 @@ class TestReScannerTask(TaskTestCase):
     def test_name(self):
         bot = self.NAMETask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAME", bot.name)
-        bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
+        bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
+                                                            log_to_screen=False))
         self.assertEqual("NAME", bot.name)
         bot = self.NAM1Task(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAM1", bot.name)

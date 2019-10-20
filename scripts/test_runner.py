@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 import os
 import time
 from datetime import datetime
@@ -176,8 +177,10 @@ class TestBotScheduler(TestCase):
             file_pointer.write("import something_not_exist\n\nprint(\"blub\")")
         self._copy_bot_to_run_dir("bot_2")
         with mock.patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
-            with mock.patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
-                with mock.patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
+            with mock.patch.object(self.bot_it_scheduler,
+                                   "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
+                with mock.patch.object(self.bot_it_scheduler,
+                                       "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
                     self.bot_it_scheduler.task()
                     compare(1, super_mock.call_count)
                     compare(2, run_mock.call_count)
@@ -188,8 +191,10 @@ class TestBotScheduler(TestCase):
 
     def test_complete_task_no_files_to_process(self):
         with mock.patch("tools.bot_scheduler.BotScheduler.task", mock.Mock()) as super_mock:
-            with mock.patch.object(self.bot_it_scheduler, "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
-                with mock.patch.object(self.bot_it_scheduler, "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
+            with mock.patch.object(self.bot_it_scheduler,
+                                   "_run_bot_from_file", mock.Mock(side_effect=[True, False])) as run_mock:
+                with mock.patch.object(self.bot_it_scheduler,
+                                       "_push_files", mock.Mock(side_effect=[True, False])) as push_mock:
                     self.bot_it_scheduler.task()
                     compare(1, super_mock.call_count)
                     compare(0, run_mock.call_count)

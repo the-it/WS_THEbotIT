@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from datetime import datetime
 from unittest import TestCase
 
@@ -87,7 +88,8 @@ class TestCatScan(TestCase):
         self.petscan.set_last_edit_bots(True)
         self.petscan.set_last_edit_anons(False)
         self.petscan.set_last_edit_flagged()
-        self.assertDictEqual({"edits[bots]": "yes", "edits[anons]": "no", "edits[flagged]": "yes"}, self.petscan.options)
+        self.assertDictEqual({"edits[bots]": "yes", "edits[anons]": "no", "edits[flagged]": "yes"},
+                             self.petscan.options)
 
     def test_construct_cat_string(self):
         self.petscan.add_positive_category("pos 1")
@@ -108,7 +110,11 @@ class TestCatScan(TestCase):
         self.petscan.add_no_template("no1")
         self.petscan.add_no_template("no2")
         self.assertEqual(str(self.petscan),
-                         "https://petscan.wmflabs.org/?language=de&project=wikisource&templates_yes=yes1%0D%0Ayes2&templates_any=any1%0D%0Aany2%0D%0Aany3&templates_no=no1%0D%0Ano2")
+                         "https://petscan.wmflabs.org/?language=de"
+                         "&project=wikisource"
+                         "&templates_yes=yes1%0D%0Ayes2"
+                         "&templates_any=any1%0D%0Aany2%0D%0Aany3"
+                         "&templates_no=no1%0D%0Ano2")
 
     def test_construct_outlinks(self):
         self.petscan.add_yes_outlink("yes1")
@@ -119,7 +125,11 @@ class TestCatScan(TestCase):
         self.petscan.add_no_outlink("no1")
         self.petscan.add_no_outlink("no2")
         self.assertEqual(str(self.petscan),
-                         "https://petscan.wmflabs.org/?language=de&project=wikisource&outlinks_yes=yes1%0D%0Ayes2&outlinks_any=any1%0D%0Aany2%0D%0Aany3&outlinks_no=no1%0D%0Ano2")
+                         "https://petscan.wmflabs.org/?language=de"
+                         "&project=wikisource"
+                         "&outlinks_yes=yes1%0D%0Ayes2"
+                         "&outlinks_any=any1%0D%0Aany2%0D%0Aany3"
+                         "&outlinks_no=no1%0D%0Ano2")
 
     def test_construct_links_to(self):
         self.petscan.add_yes_links_to("yes1")
@@ -130,7 +140,11 @@ class TestCatScan(TestCase):
         self.petscan.add_no_links_to("no1")
         self.petscan.add_no_links_to("no2")
         self.assertEqual(str(self.petscan),
-                         "https://petscan.wmflabs.org/?language=de&project=wikisource&links_to_all=yes1%0D%0Ayes2&links_to_any=any1%0D%0Aany2%0D%0Aany3&links_to_no=no1%0D%0Ano2")
+                         "https://petscan.wmflabs.org/?language=de"
+                         "&project=wikisource"
+                         "&links_to_all=yes1%0D%0Ayes2"
+                         "&links_to_any=any1%0D%0Aany2%0D%0Aany3"
+                         "&links_to_no=no1%0D%0Ano2")
 
 
     def test_construct_options(self):

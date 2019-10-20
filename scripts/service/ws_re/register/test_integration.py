@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 import contextlib
 from unittest import skipUnless, TestCase, skip
 
@@ -52,7 +53,8 @@ class TestIntegrationRegister(TestCase):
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic.values():
-            self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()), f"register {register} is now to big.")
+            self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()),
+                               f"register {register} is now to big.")
 
     def test_previous_next_in_order(self):
         errors = []
@@ -61,12 +63,14 @@ class TestIntegrationRegister(TestCase):
                 pre_lemma = register[i -1] if i > 0 else None
                 if pre_lemma and pre_lemma["next"]:
                     if not pre_lemma["next"] == lemma["lemma"]:  # pragma: no cover
-                        errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register.volume.name} not the same as pre lemma")
+                        errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register.volume.name} "
+                                      f"not the same as pre lemma")
                 with contextlib.suppress(IndexError):
                     post_lemma = register[i + 1]
                     if post_lemma and post_lemma["previous"]:
                         if not post_lemma["previous"] == lemma["lemma"]:  # pragma: no cover
-                            errors.append(f"POST lemma name {lemma['lemma']} /{i} in register {register.volume.name} not the same as post lemma")
+                            errors.append(f"POST lemma name {lemma['lemma']} /{i} in register {register.volume.name} "
+                                          f"not the same as post lemma")
         _raise_count_errors(errors)
 
     _DOUBLE_LEMMAS = {"Orpheus 1", "Victor 69"}
@@ -94,7 +98,8 @@ class TestIntegrationRegister(TestCase):
             for lemma in register:
                 for chapter in lemma.chapters:
                     if chapter.author and chapter.author not in mappings:  # pragma: no cover
-                        errors.append(f"Author {chapter.author}, {lemma['lemma']}, {register.volume.name} not in mappings.")
+                        errors.append(f"Author {chapter.author}, {lemma['lemma']}, "
+                                      f"{register.volume.name} not in mappings.")
         _raise_count_errors(errors)
 
     @skip("only for analysis")
@@ -115,4 +120,5 @@ class TestAnalyse(TestCase):
         lemma_2 = "lemma 1"
         for i in range(len(lemma_1)):
             if lemma_1[i] != lemma_2[i]:
-                raise AssertionError(f"position {i} {lemma_1[i]}({ord(lemma_1[i])}) != {lemma_2[i]}({ord(lemma_2[i])})")
+                raise AssertionError(f"position {i} {lemma_1[i]}({ord(lemma_1[i])}) "
+                                     f"!= {lemma_2[i]}({ord(lemma_2[i])})")

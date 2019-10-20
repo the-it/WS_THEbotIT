@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 import json
 import os
 import time
@@ -122,7 +123,9 @@ class TestPersistedTimestamp(TestCase):
         teardown_data_path()
 
     def test_start_timestamp(self):
-        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
+        self.assertAlmostEqual(self.reference.timestamp(),
+                               self.timestamp.start_of_run.timestamp(),
+                               delta=self._precision)
 
     def test_last_run_timestamp(self):
         self.timestamp.set_up()
@@ -130,7 +133,9 @@ class TestPersistedTimestamp(TestCase):
         self.assertAlmostEqual(datetime(year=2000, month=1, day=1).timestamp(),
                                self.timestamp.last_run.timestamp(),
                                delta=self._precision)
-        self.assertAlmostEqual(self.reference.timestamp(), self.timestamp.start_of_run.timestamp(), delta=self._precision)
+        self.assertAlmostEqual(self.reference.timestamp(),
+                               self.timestamp.start_of_run.timestamp(),
+                               delta=self._precision)
 
     def test_persist_timestamp(self):
         self.timestamp.success_this_run = True
@@ -197,7 +202,8 @@ class TestOneTimeBot(TestCase):
             self.logger.info("Test")
             time.sleep(0.1)
 
-    @mock.patch("tools.bots.PersistedTimestamp.start_of_run", new_callable=mock.PropertyMock(return_value=datetime(2000, 1, 1)))
+    @mock.patch("tools.bots.PersistedTimestamp.start_of_run",
+                new_callable=mock.PropertyMock(return_value=datetime(2000, 1, 1)))
     def test_timestamp_return_start_time(self, mock_timestamp_start):
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(2000, 1, 1), bot.timestamp.start_of_run)
@@ -578,7 +584,8 @@ class TestCanonicalBot(TestCase):
     def test_set_timestamp_for_searcher_no_successful_run(self):
         self.create_timestamp("MinimalCanonicalBot", success=False)
         self.create_data("MinimalCanonicalBot")
-        with mock.patch("tools.bots.PersistedTimestamp.start_of_run", mock.PropertyMock(return_value=datetime(2001, 1, 1))):
+        with mock.patch("tools.bots.PersistedTimestamp.start_of_run",
+                        mock.PropertyMock(return_value=datetime(2001, 1, 1))):
             with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
                 self.assertEqual(datetime(2001, 1, 1)-timedelta(days=10), bot.create_timestamp_for_search(10))
 

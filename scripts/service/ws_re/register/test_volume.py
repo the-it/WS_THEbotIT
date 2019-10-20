@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from unittest import TestCase, skip
 
 from testfixtures import compare, StringComparison

@@ -97,7 +97,11 @@ class TestUpdater(BaseTestRegister):
     def test_update_no_update_possible(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        update_dict = {"lemma": "bubum", "redirect": True, "sort_key": "babam", "previous": "rubbish", "next": "something"}
+        update_dict = {"lemma": "bubum",
+                       "redirect": True,
+                       "sort_key": "babam",
+                       "previous": "rubbish",
+                       "next": "something"}
         with self.assertRaisesRegex(RegisterException, "No strategy available"):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])

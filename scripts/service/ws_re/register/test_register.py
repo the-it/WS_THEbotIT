@@ -1,12 +1,10 @@
-from unittest import skipUnless, TestCase, skip
-
+# pylint: disable=protected-access
 from testfixtures import compare
 
 from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
     _TEST_REGISTER_PATH
 from scripts.service.ws_re.volumes import Volumes
-from tools import INTEGRATION_TEST
 
 
 class TestRegisters(BaseTestRegister):
