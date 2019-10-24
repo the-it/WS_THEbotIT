@@ -84,7 +84,7 @@ run_unittest: &run_unittest
     name: run unittest
     command: |
       . venv/bin/activate
-      make unittest
+      make integrationtest
 
 report_codecov: &report_codecov
   run:
@@ -155,10 +155,6 @@ workflows:
     jobs:
       - quality:
           context: python38
-          filters:
-            branches:
-              ignore:
-                - /.*updating_registers.*/
       - coverage38:
           context: python38
           requires:
