@@ -79,13 +79,6 @@ run_coverage: &run_coverage
       . venv/bin/activate
       make coverage
 
-run_unittest: &run_unittest
-  run:
-    name: run unittest
-    command: |
-      . venv/bin/activate
-      make unittest
-
 report_codecov: &report_codecov
   run:
     name: report codecov
@@ -123,15 +116,6 @@ coverage_steps: &coverage_steps
     - <<: *run_coverage
     - <<: *report_codecov
 
-unittest_steps: &unittest_steps
-  steps:
-    - checkout
-    - <<: *restore_cache
-    - <<: *show_python_version
-    - <<: *install_dependencies
-    - <<: *save_cache
-    - <<: *run_unittest
-
 # job definitions
 
 jobs:
@@ -155,10 +139,6 @@ workflows:
     jobs:
       - quality:
           context: python38
-          filters:
-            branches:
-              ignore:
-                - /.*updating_registers.*/
       - coverage38:
           context: python38
           requires:
