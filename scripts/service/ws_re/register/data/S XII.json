@@ -538,12 +538,7 @@
     ]
   },
   {
-    "lemma": "Anaximenes 1",
-    "next": "Andania 1"
-  },
-  {
     "lemma": "Andania 1",
-    "previous": "Anaximenes 1",
     "next": "Andautonia",
     "chapters": [
       {
@@ -1856,7 +1851,6 @@
   {
     "lemma": "Caravantius",
     "previous": "Caravantis",
-    "next": "Carniola",
     "proof_read": 1,
     "chapters": [
       {
@@ -1866,16 +1860,28 @@
       }
     ]
   },
-  {
-    "lemma": "Carniola",
-    "previous": "Caravantius",
-    "next": "Carnuntum",
-    "proof_read": 1,
+    {
+    "lemma": "Cassius 45a",
+    "next": "Cassius 74",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1569,
-        "end": 1575,
-        "author": "Jaroslav Šašel."
+        "start": 138,
+        "end": 138,
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Cassius 74",
+    "previous": "Cassius 45a",
+    "next": "Castra, Castrum 1a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 138,
+        "end": 138,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -4509,7 +4515,6 @@
   {
     "lemma": "Carnuntum",
     "previous": "Carniola",
-    "next": "Cassius 45a",
     "proof_read": 1,
     "chapters": [
       {
@@ -4520,33 +4525,7 @@
     ]
   },
   {
-    "lemma": "Cassius 45a",
-    "previous": "Carnuntum",
-    "next": "Cassius 74",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 138,
-        "end": 138,
-        "author": "Rudolf Hanslik."
-      }
-    ]
-  },
-  {
-    "lemma": "Cassius 74",
-    "previous": "Cassius 45a",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 138,
-        "end": 138,
-        "author": "Rudolf Hanslik."
-      }
-    ]
-  },
-  {
     "lemma": "Chilperich",
-    "previous": "Carnuntum",
     "next": "Ephesos",
     "proof_read": 2,
     "chapters": [
