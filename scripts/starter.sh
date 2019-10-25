@@ -8,7 +8,7 @@ cd ${BASE_DIR}
 git checkout master
 git pull
 git reset --hard master
-sudo /usr/local/bin/python3.7 -m pip install -r requirements.txt
+sudo /usr/local/bin/python3.8 -m pip install -r requirements.txt
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
 source /etc/environment
-/usr/local/bin/python3.7 scripts/runner.py
+/usr/local/bin/python3.8 scripts/runner.py

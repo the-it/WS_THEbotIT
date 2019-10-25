@@ -1821,20 +1821,6 @@
   {
     "lemma": "Alexinos 2",
     "previous": "Alexidamos",
-    "next": "Alexios",
-    "proof_read": 3,
-    "chapters": [
-      {
-        "start": 80,
-        "end": 80,
-        "author": "Oldfather."
-      }
-    ]
-  },
-  {
-    "lemma": "Alexios",
-    "previous": "Alexinos 2",
-    "next": "Alfius 6",
     "proof_read": 3,
     "chapters": [
       {
@@ -1846,6 +1832,7 @@
   },
   {
     "lemma": "Alexias 5",
+    "previous": "Alexinos 2",
     "next": "Alfius 6",
     "proof_read": 3,
     "chapters": [

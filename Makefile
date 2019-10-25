@@ -53,6 +53,7 @@ integrationtest :
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
+	export INTEGRATION=1 && \
 	coverage run tst_runner.py && \
 	coverage xml
 
