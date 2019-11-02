@@ -82,6 +82,7 @@ run_coverage: &run_coverage
 report_codecov: &report_codecov
   run:
     name: report codecov
+    when: always
     command: |
       . venv/bin/activate
       codecov -F $PYTHON_VERSION
