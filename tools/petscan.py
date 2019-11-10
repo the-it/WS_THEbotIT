@@ -1,6 +1,6 @@
 # pylint: disable=ungrouped-imports
-import datetime
 import json
+from datetime import datetime
 from typing import List, TypedDict
 from urllib.parse import quote
 

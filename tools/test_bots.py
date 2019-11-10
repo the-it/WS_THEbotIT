@@ -317,19 +317,19 @@ class TestOneTimeBot(TestCase):
                 self.assertFalse(bot.success)
 
 
+JSON_TEST = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
+JSON_TEST_EXTEND = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
+DATA_TEST = {"a": [1, 2]}
+DATA_TEST_EXTEND = {"a": [1, 2], "b": 1}
+
+
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
         super(TestPersistedData, self).__init__(*args, **kwargs)
         self.data_path = _DATA_PATH_TEST
-        self.json_test = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
-        self.json_test_extend = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
-        self.data_test = {"a": [1, 2]}
-        self.data_test_extend = {"a": [1, 2], "b": 1}
 
-    def _make_json_file(self, filename: str = "TestBot.data.json", data: str = None):
+    def _make_json_file(self, filename: str = "TestBot.data.json", data: str = JSON_TEST):
         with open(self.data_path + os.sep + filename, mode="w") as data_file:
-            if not data:
-                data = self.json_test
             data_file.write(data)
 
     def setUp(self):
@@ -375,10 +375,10 @@ class TestPersistedData(TestCase):
         self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
 
     def test_dump_value_is_correct(self):
-        self.data.assign_dict(self.data_test)
+        self.data.assign_dict(DATA_TEST)
         self.data.dump()
         with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
-            self.assertEqual(self.json_test, file.read())
+            self.assertEqual(JSON_TEST, file.read())
 
     def test_dump_different_keys(self):
         self.data[1] = 1
@@ -410,27 +410,27 @@ class TestPersistedData(TestCase):
         self._make_json_file()
         self.data.load()
         with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
-            self.assertDictEqual(self.data_test, json.load(json_file))
+            self.assertDictEqual(DATA_TEST, json.load(json_file))
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
         self.data["b"] = 1
         self.data.dump(True)
         with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as json_file:
-            self.assertDictEqual(self.data_test_extend, json.load(json_file))
+            self.assertDictEqual(DATA_TEST_EXTEND, json.load(json_file))
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
 
     def test_flag_old_file_as_deprecated_keep_broken_file(self):
         self._make_json_file()
         self.data.load()
         with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
-            self.assertDictEqual(self.data_test, json.load(json_file))
+            self.assertDictEqual(DATA_TEST, json.load(json_file))
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
         self.data["b"] = 1
         self.data.dump(False)
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
         with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
-            self.assertDictEqual(self.data_test, json.load(json_file))
+            self.assertDictEqual(DATA_TEST, json.load(json_file))
         with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
-            self.assertDictEqual(self.data_test_extend, json.load(json_file))
+            self.assertDictEqual(DATA_TEST_EXTEND, json.load(json_file))
 
     def test_flag_data_as_broken(self):
         self._make_json_file()
@@ -583,7 +583,7 @@ class TestCanonicalBot(TestCase):
         with mock.patch("tools.bots.PersistedTimestamp.start_of_run",
                         mock.PropertyMock(return_value=datetime(2001, 1, 1))):
             with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
-                self.assertEqual(datetime(2001, 1, 1)-timedelta(days=10), bot.create_timestamp_for_search(10))
+                self.assertEqual(datetime(2000, 1, 1), bot.create_timestamp_for_search(10))
 
     def test_last_run_successful_true(self):
         self.create_timestamp("MinimalCanonicalBot", success=True)
