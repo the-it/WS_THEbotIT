@@ -5,26 +5,20 @@ import sys
 from abc import abstractmethod, ABC
 from collections.abc import Mapping
 from datetime import datetime, timedelta
-from typing import Dict, Union, Any, Iterator
+from typing import Dict, Any, Iterator
+from typing import TypedDict  # pylint: disable=no-name-in-module
 
 from pywikibot import Page, Site
 
-if sys.version_info >= (3, 8):
-    from typing import TypedDict  # pylint: disable=no-name-in-module
 
 # type hints
-if sys.version_info >= (3, 8):
-    # typed dicts
-    class LoggerNameDict(TypedDict):
-        info: str
-        debug: str
+class LoggerNameDict(TypedDict):
+    info: str
+    debug: str
 
-    class LastRunDict(TypedDict):
-        success: bool
-        timestamp: str
-else:
-    LoggerNameDict = Dict[str, str]
-    LastRunDict = Dict[str, Union[bool, str]]
+class LastRunDict(TypedDict):
+    success: bool
+    timestamp: str
 
 
 class BotException(Exception):
@@ -69,11 +63,9 @@ class WikiLogger():
         logging.shutdown()
 
     def _get_logger_names(self) -> LoggerNameDict:
-        log_file_names: LoggerNameDict = {}
-        for log_type in ("info", "debug"):
-            log_file_names.update({log_type: f"{self._bot_name}_{log_type.upper()}_"
-                                             f"{self._start_time.strftime('%y%m%d%H%M%S')}.log"})
-        return log_file_names
+        start_time = self._start_time.strftime('%y%m%d%H%M%S')
+        return {"info": f"{self._bot_name}_INFO_{start_time}.log",
+                "debug": f"{self._bot_name}_DEBUG_{start_time}.log"}
 
     def _setup_logger_properties(self):
         self._logger.setLevel(logging.DEBUG)
