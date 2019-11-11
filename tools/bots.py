@@ -16,6 +16,7 @@ class LoggerNameDict(TypedDict):
     info: str
     debug: str
 
+
 class LastRunDict(TypedDict):
     success: bool
     timestamp: str
