@@ -1,9 +1,9 @@
-import collections
 import json
 import re
+from collections import OrderedDict
 from enum import Enum
 from pathlib import Path
-from typing import Union, Generator, Optional, Tuple
+from typing import Union, Generator, Optional, Tuple, Iterator, List, Dict
 
 import roman
 
@@ -65,35 +65,38 @@ class Volume:
 
     def _compute_sortkey(self) -> str:
         match = _REGEX_MAPPING[self.type].search(self.name)
-        key = "4"
-        latin_number = 0
-        first_or_second_half = 0
-        if self.name != "R":
-            latin_number = roman.fromRoman(match.group(1))
-            if self.type != VolumeType.SUPPLEMENTS:
-                first_or_second_half = match.group(2) if match.group(2) else 0
-        if self.type == VolumeType.FIRST_SERIES:
-            key = f"1_{latin_number:02d}_{first_or_second_half}"
-        elif self.type == VolumeType.SECOND_SERIES:
-            key = f"2_{latin_number:02d}_{first_or_second_half}"
-        elif self.type == VolumeType.SUPPLEMENTS:
-            key = f"3_{latin_number:02d}"
-        return key
+        if match:
+            key = "4"
+            latin_number = 0
+            first_or_second_half = 0
+            if self.name != "R":
+                latin_number = roman.fromRoman(match.group(1))
+                if self.type != VolumeType.SUPPLEMENTS:
+                    first_or_second_half = int(match.group(2) if match.group(2) else 0)
+            if self.type == VolumeType.FIRST_SERIES:
+                key = f"1_{latin_number:02d}_{first_or_second_half}"
+            elif self.type == VolumeType.SECOND_SERIES:
+                key = f"2_{latin_number:02d}_{first_or_second_half}"
+            elif self.type == VolumeType.SUPPLEMENTS:
+                key = f"3_{latin_number:02d}"
+            return key
+        raise ValueError(f"{self.name} not compatible to {_REGEX_MAPPING[self.type]}")
 
     @property
     def sort_key(self) -> str:
         return self._sortkey
 
 
-class Volumes(collections.MutableMapping):
+class Volumes(OrderedDict):
     def __init__(self):
+        super().__init__()
         path_to_file = Path(__file__).parent.joinpath("volumes.json")
         with open(str(path_to_file), encoding="utf-8") as json_file:
             _volume_list = json.load(json_file)
-        self._volume_mapping = collections.OrderedDict()
+        self._volume_mapping: Dict[str, Volume] = OrderedDict()
         for item in _volume_list:
             self._volume_mapping[item["name"]] = Volume(**item)
-        self._volume_list = list(self._volume_mapping.keys())
+        self._volume_list: List[str] = list(self._volume_mapping.keys())
 
     def __getitem__(self, item: str) -> Volume:
         try:
@@ -110,7 +113,7 @@ class Volumes(collections.MutableMapping):
     def __len__(self) -> int:
         return len(self._volume_mapping.keys())
 
-    def __iter__(self) -> str:
+    def __iter__(self) -> Iterator[str]:
         for key in self._volume_mapping:
             yield key
 
