@@ -18,7 +18,7 @@ class Register(ABC):
     @staticmethod
     def squash_lemmas(lemmas: List[Lemma]) -> List[List[Lemma]]:
         return_lemmas = []
-        last_lemmas = []
+        last_lemmas: List[Lemma] = []
         for lemma in lemmas:
             if last_lemmas:
                 if lemma["lemma"] == last_lemmas[-1]["lemma"]:
