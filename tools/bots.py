@@ -154,7 +154,7 @@ class PersistedTimestamp():
                       persist_json)
 
     @property
-    def last_run(self):
+    def last_run(self) -> datetime:
         return self._last_run
 
     @last_run.setter
@@ -366,9 +366,9 @@ class CanonicalBot(OneTimeBot, ABC):
         if self.new_data_model and self.timestamp.last_run:
             if self.timestamp.last_run < self.new_data_model:
                 outdated = True
-                self.timestamp.last_run = None
+                self.timestamp.last_run = datetime(year=1970, month=1, day=1)
         return outdated
 
     @property
     def last_run_successful(self) -> bool:
-        return self.timestamp.last_run and self.timestamp.success_last_run
+        return bool(self.timestamp.last_run and self.timestamp.success_last_run)

@@ -316,6 +316,11 @@ class TestOneTimeBot(TestCase):
                 log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
                 self.assertFalse(bot.success)
 
+JSON_TEST = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
+JSON_TEST_EXTEND = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
+DATA_TEST = {"a": [1, 2]}
+DATA_TEST_EXTEND = {"a": [1, 2], "b": 1}
+
 
 JSON_TEST = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
 JSON_TEST_EXTEND = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
