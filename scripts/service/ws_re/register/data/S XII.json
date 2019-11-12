@@ -539,6 +539,7 @@
   },
   {
     "lemma": "Andania 1",
+    "previous": "Anaximenes 2",
     "next": "Andautonia",
     "chapters": [
       {
@@ -1851,6 +1852,7 @@
   {
     "lemma": "Caravantius",
     "previous": "Caravantis",
+    "next": "Cassius 45a",
     "proof_read": 1,
     "chapters": [
       {
@@ -1860,8 +1862,9 @@
       }
     ]
   },
-    {
+  {
     "lemma": "Cassius 45a",
+    "previous": "Caravantius",
     "next": "Cassius 74",
     "proof_read": 2,
     "chapters": [
@@ -1887,6 +1890,7 @@
   },
   {
     "lemma": "Castra, Castrum 1a",
+    "previous": "Cassius 74",
     "next": "Catienus 1a",
     "proof_read": 2,
     "chapters": [
@@ -4510,11 +4514,20 @@
   {
     "lemma": "Carniola",
     "previous": "Camundus",
-    "next": "Carnuntum"
+    "next": "Carnuntum",
+    "proof_read": 1,
+    "chapters": [
+      {
+        "start": 1569,
+        "end": 1575,
+        "author": "Jaroslav Šašel."
+      }
+    ]
   },
   {
     "lemma": "Carnuntum",
     "previous": "Carniola",
+    "next": "Chilperich",
     "proof_read": 1,
     "chapters": [
       {
@@ -4526,6 +4539,7 @@
   },
   {
     "lemma": "Chilperich",
+    "previous": "Carnuntum",
     "next": "Ephesos",
     "proof_read": 2,
     "chapters": [
