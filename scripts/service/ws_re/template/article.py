@@ -42,9 +42,12 @@ class Article(collections.MutableMapping):
                  re_daten_properties: ArticleProperties = None,
                  text: str = "",
                  author: Tuple[str, str] = ("", "")):
-        self._article_type = article_type
-        self._text = text
-        self._author = author
+        self._article_type = ""
+        self.article_type = article_type
+        self._text = ""
+        self.text = text
+        self._author = ("", "")
+        self.author = author
         self._properties = (Property("BAND", ""),
                             Property("SPALTE_START", ""),
                             Property("SPALTE_END", ""),
