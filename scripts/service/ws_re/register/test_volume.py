@@ -172,4 +172,4 @@ class TestIntegrationRegister(TestCase):
     def test_json_integrity():  # pragma: no cover
         for volume in Volumes().all_volumes:
             print(volume)
-            VolumeRegister(volume, Authors)
+            VolumeRegister(volume, Authors())
