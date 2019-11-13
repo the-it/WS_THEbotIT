@@ -1,3 +1,5 @@
+from typing import TypedDict, Tuple, Dict, Sequence
+
 _ARCHIVES = {
     "Pauly Supp.rar": "PaulySupp",
     "Pauly-Wissowa_54-66.rar": "PaulyWissowa5466",
@@ -18,7 +20,13 @@ _RAW_FILES = {
     "PaulyWissowa110": "Pauly-Wissowa_1-10.rar",
 }
 
-_MAPPINGS = {
+
+class MappingEntryType(TypedDict):
+    source: Tuple[str, str]
+    pages: Sequence[Tuple[int, int, int]]
+
+
+_MAPPINGS: Dict[str, MappingEntryType] = {
     "I,1": {"source": ("PaulyWissowa110", "Aal Apollokrates"), "pages": ((-1, 10010, 10370),)},
     "I,2": {"source": ("PaulyWissowa110", "Aal Apollokrates"), "pages": ((1439, 10370, 10735),)},
     "II,1": {"source": ("PaulyWissowa110", "Apollon Artemis"), "pages": ((-1, 30002, 30362),)},
