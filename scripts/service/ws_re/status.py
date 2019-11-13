@@ -77,7 +77,7 @@ class ReStatus(CanonicalBot):
         for neg_category in negative_categories:
             searcher.add_negative_category(neg_category)
         searcher.set_logic_union()
-        self.logger.debug(searcher)
+        self.logger.debug(str(searcher))
         return searcher.run()
 
 

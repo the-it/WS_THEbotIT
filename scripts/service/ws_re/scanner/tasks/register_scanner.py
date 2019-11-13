@@ -73,7 +73,7 @@ class SCANTask(ReScannerTask):
     @staticmethod
     def _fetch_sort_key(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         article = article_list[0]
-        sort_key = article["SORTIERUNG"].value
+        sort_key = str(article["SORTIERUNG"].value)
         if sort_key:
             return {"sort_key": sort_key}, []
         return {}, ["sort_key"]
@@ -96,7 +96,7 @@ class SCANTask(ReScannerTask):
     @staticmethod
     def _fetch_previous(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         article = article_list[0]
-        previous = article["VORGÄNGER"].value
+        previous = str(article["VORGÄNGER"].value)
         if previous and previous != "OFF":
             return {"previous": previous}, []
         return {}, ["previous"]
@@ -104,7 +104,7 @@ class SCANTask(ReScannerTask):
     @staticmethod
     def _fetch_next(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         article = article_list[0]
-        next_lemma = article["NACHFOLGER"].value
+        next_lemma = str(article["NACHFOLGER"].value)
         if next_lemma and next_lemma != "OFF":
             return {"next": next_lemma}, []
         return {}, ["next"]
@@ -129,9 +129,9 @@ class SCANTask(ReScannerTask):
         except ValueError:
             self.logger.error(f"{self.re_page.lemma_without_prefix} has no correct start column.")
             return {}
-        spalte_end = article["SPALTE_END"].value
-        if spalte_end and spalte_end != "OFF":
-            spalte_end = int(spalte_end)
+        spalte_end_raw = article["SPALTE_END"].value
+        if spalte_end_raw and spalte_end_raw != "OFF":
+            spalte_end = int(spalte_end_raw)
         else:
             spalte_end = spalte_start
         single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
@@ -164,7 +164,7 @@ class SCANTask(ReScannerTask):
     @staticmethod
     def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         article = article_list[0]
-        proof_read = article["KORREKTURSTAND"].value.lower().strip()
+        proof_read = str(article["KORREKTURSTAND"].value).lower().strip()
         if proof_read:
             if proof_read == "fertig":
                 return {"proof_read": 3}, []

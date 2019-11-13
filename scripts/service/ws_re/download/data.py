@@ -1,4 +1,4 @@
-from typing import TypedDict, Tuple, Dict, Sequence
+from typing import TypedDict, Tuple, Dict
 
 _ARCHIVES = {
     "Pauly Supp.rar": "PaulySupp",
@@ -23,7 +23,7 @@ _RAW_FILES = {
 
 class MappingEntryType(TypedDict):
     source: Tuple[str, str]
-    pages: Sequence[Tuple[int, int, int]]
+    pages: Tuple[Tuple[int, int, int], ...]
 
 
 _MAPPINGS: Dict[str, MappingEntryType] = {
