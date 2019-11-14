@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from collections import OrderedDict
 
 from testfixtures import compare
@@ -21,8 +22,8 @@ class TestAlphabeticRegister(BaseTestRegister):
         self.registers["III,1"] = VolumeRegister(self.volumes["III,1"], self.authors)
 
     def test_init(self):
-        a_register = AlphabeticRegister("a", "be", self.registers)
-        b_register = AlphabeticRegister("be", "zzzzzz", self.registers)
+        a_register = AlphabeticRegister("a", "be", None, "zzzzzz", self.registers)
+        b_register = AlphabeticRegister("be", "zzzzzz", "a", None, self.registers)
         compare(5, len(a_register))
         compare(5, len(b_register))
         compare("Aal", a_register[0]["lemma"])
@@ -32,7 +33,7 @@ class TestAlphabeticRegister(BaseTestRegister):
         compare("Ueee", b_register[5]["lemma"])
 
     def test_squash_lemmas(self):
-        register = AlphabeticRegister("a", "be", OrderedDict())
+        register = AlphabeticRegister("a", "be", None, "zzzzzz", OrderedDict())
         lemma1 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
                        Volumes()["I,1"],
                        self.authors)
@@ -48,13 +49,62 @@ class TestAlphabeticRegister(BaseTestRegister):
 
     @staticmethod
     def test_squash_lemmas_empty():
-        register = AlphabeticRegister("a", "be", OrderedDict())
+        register = AlphabeticRegister("a", "be", None, None, OrderedDict())
         expection = []
         compare(expection, register.squash_lemmas([]))
 
+    def test_make_header(self):
+        a_register = AlphabeticRegister("a", "be", None, "c", self.registers)
+        b_register = AlphabeticRegister("be", "c", "a", "zzzzzz", self.registers)
+        c_register = AlphabeticRegister("c", "zzzzzz", "be", None, self.registers)
+        expected_header = """{{RERegister
+|ALPHABET=a
+|NF=be
+|NFNF=c
+|SUM=5
+|UNK=2
+|KOR=1
+|FER=1
+}}
+"""
+        compare(expected_header, a_register._get_header())
+        expected_header = """{{RERegister
+|ALPHABET=be
+|VG=a
+|NF=c
+|NFNF=zzzzzz
+|SUM=2
+|UNK=1
+|KOR=0
+|FER=1
+}}
+"""
+        compare(expected_header, b_register._get_header())
+        expected_header = """{{RERegister
+|ALPHABET=c
+|VG=be
+|NF=zzzzzz
+|SUM=4
+|UNK=0
+|KOR=1
+|FER=2
+}}
+"""
+        compare(expected_header, c_register._get_header())
+
     def test_make_table(self):
-        b_register = AlphabeticRegister("be", "zzzzzz", self.registers)
-        expected_table = """{|class="wikitable sortable"
+        b_register = AlphabeticRegister("be", "zzzzzz", "a", None, self.registers)
+        expected_table = """{{RERegister
+|ALPHABET=be
+|VG=a
+|NF=zzzzzz
+|SUM=6
+|UNK=1
+|KOR=1
+|FER=3
+}}
+
+{|class="wikitable sortable"
 !Artikel
 !Band
 !Wikilinks

@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from scripts.service.ws_re.register.base import Register
 from scripts.service.ws_re.register.lemma import Lemma
@@ -6,9 +6,16 @@ from scripts.service.ws_re.register.volume import VolumeRegister
 
 
 class AlphabeticRegister(Register):
-    def __init__(self, start: str, end: str, registers: Dict[str, VolumeRegister]):
+    def __init__(self,
+                 start: str,
+                 end: str,
+                 before_start: Optional[str],
+                 after_next_start: Optional[str],
+                 registers: Dict[str, VolumeRegister]):
         self._start: str = start
         self._end: str = end
+        self._before_start = before_start
+        self._after_next_start = after_next_start
         self._registers = registers
         self._lemmas: List[Lemma] = []
         self._init_lemmas()
@@ -75,9 +82,25 @@ class AlphabeticRegister(Register):
         table.append("|}")
         return "\n".join(table)
 
+    def _get_header(self) -> str:
+        header = ["RERegister"]
+        header.append(f"ALPHABET={self.start}")
+        if self._before_start:
+            header.append(f"VG={self._before_start}")
+        header.append(f"NF={self.end}")
+        if self._after_next_start:
+            header.append(f"NFNF={self._after_next_start}")
+        header.append(f"SUM={len(self._lemmas)}")
+        # calculate proof_read status
+        fer, kor, unk = self.proof_read(self._lemmas)
+        header.append(f"UNK={unk}")
+        header.append(f"KOR={kor}")
+        header.append(f"FER={fer}")
+        return "{{" + "\n|".join(header) + "\n}}\n"
+
     def _get_footer(self) -> str:
         return "[[Kategorie:RE:Register|!]]\n" \
                f"Zahl der Artikel: {len(self._lemmas)}, "
 
     def get_register_str(self) -> str:
-        return f"{self._get_table()}\n{self._get_footer()}"
+        return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"

@@ -25,9 +25,17 @@ class Registers:
     def _init_alphabetic_registers(self):
         for idx, start in enumerate(self._RE_ALPHABET):
             end = "zzzzzz"
+            before_start = None
+            after_next_start = None
             with contextlib.suppress(IndexError):
                 end = self._RE_ALPHABET[idx + 1]
-            self._alphabetic_registers[start] = AlphabeticRegister(start, end, self._registers)
+            with contextlib.suppress(IndexError):
+                before_start = self._RE_ALPHABET[idx - 1]
+            with contextlib.suppress(IndexError):
+                after_next_start = self._RE_ALPHABET[idx + 2]
+            self._alphabetic_registers[start] = AlphabeticRegister(start, end,
+                                                                   before_start, after_next_start,
+                                                                   self._registers)
 
     def __getitem__(self, item) -> VolumeRegister:
         return self._registers[item]

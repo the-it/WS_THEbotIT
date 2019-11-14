@@ -2,6 +2,7 @@
   {
     "lemma": "Adam",
     "next": "Beta",
+    "proof_read": 1,
     "chapters": [
       {
         "start": 1,
@@ -13,12 +14,14 @@
   {
     "lemma": "Beta",
     "previous": "Adam",
-    "next": "Charlie"
+    "next": "Charlie",
+    "proof_read": 1
   },
   {
     "lemma": "Charlie",
     "previous": "Beta",
     "next": "Delta",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 4,
@@ -31,6 +34,7 @@
     "lemma": "Delta",
     "previous": "Charlie",
     "next": "Vaaa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 4,
@@ -43,6 +47,7 @@
     "lemma": "Vaaa",
     "previous": "Delta",
     "next": "Ueee",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 4,
