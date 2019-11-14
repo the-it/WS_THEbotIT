@@ -1,4 +1,4 @@
-# pylint: disable=protected-access
+# pylint: disable=protected-access, no-self-use
 from ddt import ddt, data
 from testfixtures import compare
 
@@ -11,6 +11,10 @@ from scripts.service.ws_re.volumes import Volumes
 
 
 class TestUpdater(BaseTestRegister):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+
     def test_update_lemma(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
@@ -21,8 +25,7 @@ class TestUpdater(BaseTestRegister):
         self.assertTrue(post_lemma["redirect"])
         self.assertIsNone(post_lemma["next"])
 
-    @staticmethod
-    def test_update_lemma_by_sortkey():
+    def test_update_lemma_by_sortkey(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äal", "redirect": True, "sort_key": "Aal", "next": "Aarassos"}
@@ -34,8 +37,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next = register.get_lemma_by_name("Aarassos")
         compare("Äal", post_lemma_next["previous"])
 
-    @staticmethod
-    def test_update_lemma_by_sortkey_pre_and_post():
+    def test_update_lemma_by_sortkey_pre_and_post(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal", "next": "Aba 1"}
@@ -48,8 +50,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next = register.get_lemma_by_name("Aba 1")
         compare("Äarassos", post_lemma_next["previous"])
 
-    @staticmethod
-    def test_update_lemma_by_sortkey_pre_and_next_lemma_other_name():
+    def test_update_lemma_by_sortkey_pre_and_next_lemma_other_name(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Ö", "sort_key": "O", "previous": "Ä", "next": "Ü"}
@@ -110,8 +111,7 @@ class TestUpdater(BaseTestRegister):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
 
-    @staticmethod
-    def test_update_next_and_previous():
+    def test_update_next_and_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
@@ -122,8 +122,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next = register.get_lemma_by_name("Ü")
         compare("O", post_lemma_next["previous"])
 
-    @staticmethod
-    def test_update_next_and_previous_in_normal_update():
+    def test_update_next_and_previous_in_normal_update(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "O", "previous": "Ä", "next": "Ü"}
@@ -137,8 +136,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next = register.get_lemma_by_name("Ü")
         compare("O", post_lemma_next["previous"])
 
-    @staticmethod
-    def test_update_next_and_previous_in_update_by_sortkey():
+    def test_update_next_and_previous_in_update_by_sortkey(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Ö", "previous": "Ä", "next": "Ü"}
@@ -152,8 +150,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next = register.get_lemma_by_name("Ü")
         compare("Ö", post_lemma_next["previous"])
 
-    @staticmethod
-    def test_update_by_insert():
+    def test_update_by_insert(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä", "next": "Ö"}
@@ -171,8 +168,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next_next = register.get_lemma_by_name("U")
         compare("Ö", post_lemma_next_next["previous"])
 
-    @staticmethod
-    def test_update_by_replace():
+    def test_update_by_replace(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä", "next": "Ü"}
@@ -190,8 +186,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next_next = register.get_lemma_by_name("D")
         compare("Ü", post_lemma_next_next["previous"])
 
-    @staticmethod
-    def test_update_by_insert_after_previous():
+    def test_update_by_insert_after_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä", "next": "Something"}
@@ -207,8 +202,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next = register.get_lemma_by_name("O")
         compare(None, post_lemma_next["previous"])
 
-    @staticmethod
-    def test_update_by_insert_no_next_exists():
+    def test_update_by_insert_no_next_exists(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Ä"}
@@ -241,8 +235,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next_next = register.get_lemma_by_name("U")
         compare("Ö", post_lemma_next_next["previous"])
 
-    @staticmethod
-    def test_update_by_insert_before_next_no_previous():
+    def test_update_by_insert_before_next_no_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "next": "Ö"}
@@ -360,8 +353,7 @@ class TestUpdater(BaseTestRegister):
 
 
 class TestBugUpdates(BaseTestRegister):
-    @staticmethod
-    def test_duplicate_lemmas_in_supplements():
+    def test_duplicate_lemmas_in_supplements(self):
         copy_tst_data("S_I_no_dublicates", "S I")
         register = VolumeRegister(Volumes()["S I"], Authors())
         update_dict = {"lemma": "Abdymon", "previous": "Abd Hadad", "next": "Abeikta"}
@@ -413,8 +405,7 @@ class TestBugUpdates(BaseTestRegister):
                         register.get_index_of_lemma("blub") <
                         register.get_index_of_lemma("Ö"))
 
-    @staticmethod
-    def test_acutius_1a():
+    def test_acutius_1a(self):
         copy_tst_data("acutius_1a_bug", "S I")
         register = VolumeRegister(Volumes()["S I"], Authors())
         update_dict = {"lemma": "Acutius a", "previous": "Acronoma", "next": "Acutius 1a", "sort_key": "Acutius 0a"}

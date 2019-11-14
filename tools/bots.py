@@ -5,36 +5,48 @@ import sys
 from abc import abstractmethod, ABC
 from collections.abc import Mapping
 from datetime import datetime, timedelta
-from typing import Dict
+from typing import Dict, Any, Iterator
+from typing import TypedDict  # pylint: disable=no-name-in-module
 
 from pywikibot import Page, Site
+
+
+# type hints
+class LoggerNameDict(TypedDict):
+    info: str
+    debug: str
+
+
+class LastRunDict(TypedDict):
+    success: bool
+    timestamp: str
 
 
 class BotException(Exception):
     pass
 
 
-_DATA_PATH = os.path.expanduser("~") + os.sep + ".wiki_bot"
+_DATA_PATH: str = os.path.expanduser("~") + os.sep + ".wiki_bot"
 
 
-def _get_data_path():
+def _get_data_path() -> str:
     if not os.path.exists(_DATA_PATH):
         os.mkdir(_DATA_PATH)
     return _DATA_PATH
 
 
 class WikiLogger():
-    _logger_format = "[%(asctime)s] [%(levelname)-8s] [%(message)s]"
-    _logger_date_format = "%H:%M:%S"
-    _wiki_timestamp_format = "%y-%m-%d_%H:%M:%S"
+    _logger_format: str = "[%(asctime)s] [%(levelname)-8s] [%(message)s]"
+    _logger_date_format: str = "%H:%M:%S"
+    _wiki_timestamp_format: str = "%y-%m-%d_%H:%M:%S"
 
-    def __init__(self, bot_name: str, start_time: datetime, log_to_screen=True):
-        self._bot_name = bot_name
-        self._start_time = start_time
-        self._data_path = _get_data_path()
-        self._logger = logging.getLogger(self._bot_name)
-        self._logger_names = self._get_logger_names()
-        self._log_to_screen = log_to_screen
+    def __init__(self, bot_name: str, start_time: datetime, log_to_screen: bool = True):
+        self._bot_name: str = bot_name
+        self._start_time: datetime = start_time
+        self._data_path: str = _get_data_path()
+        self._logger: logging.Logger = logging.getLogger(self._bot_name)
+        self._logger_names: LoggerNameDict = self._get_logger_names()
+        self._log_to_screen: bool = log_to_screen
 
     def __enter__(self):
         self._setup_logger_properties()
@@ -51,12 +63,10 @@ class WikiLogger():
         sys.stdout.flush()
         logging.shutdown()
 
-    def _get_logger_names(self):
-        log_file_names = {}
-        for log_type in ("info", "debug"):
-            log_file_names.update({log_type: f"{self._bot_name}_{log_type.upper()}_"
-                                             f"{self._start_time.strftime('%y%m%d%H%M%S')}.log"})
-        return log_file_names
+    def _get_logger_names(self) -> LoggerNameDict:
+        start_time = self._start_time.strftime('%y%m%d%H%M%S')
+        return {"info": f"{self._bot_name}_INFO_{start_time}.log",
+                "debug": f"{self._bot_name}_DEBUG_{start_time}.log"}
 
     def _setup_logger_properties(self):
         self._logger.setLevel(logging.DEBUG)
@@ -96,9 +106,8 @@ class WikiLogger():
     def exception(self, msg: str, exc_info):
         self._logger.exception(msg=msg, exc_info=exc_info)
 
-    def create_wiki_log_lines(self):
-        with open(self._data_path + os.sep + self._logger_names["info"], encoding="utf8") \
-                as filepointer:
+    def create_wiki_log_lines(self) -> str:
+        with open(self._data_path + os.sep + self._logger_names["info"], encoding="utf8") as filepointer:
             line_list = list()
             for line in filepointer:
                 line_list.append(line.strip())
@@ -113,15 +122,15 @@ class WikiLogger():
 
 
 class PersistedTimestamp():
-    _timeformat = "%Y-%m-%d_%H:%M:%S"
+    _timeformat: str = "%Y-%m-%d_%H:%M:%S"
 
     def __init__(self, bot_name: str):
-        self._last_run = None
-        self._success_last_run = False
-        self._success_this_run = False
-        self._start = datetime.now()
-        self._data_path = _get_data_path()
-        self._full_filename = self._data_path + os.sep + f"{bot_name}.last_run.json"
+        self._last_run: datetime = datetime.utcfromtimestamp(0)
+        self._success_last_run: bool = False
+        self._success_this_run: bool = False
+        self._start: datetime = datetime.now()
+        self._data_path: str = _get_data_path()
+        self._full_filename: str = self._data_path + os.sep + f"{bot_name}.last_run.json"
 
     def __enter__(self):
         self.set_up()
@@ -132,39 +141,37 @@ class PersistedTimestamp():
     def set_up(self):
         try:
             with open(self._full_filename, mode="r") as persist_json:
-                last_run_dict = json.load(persist_json)
+                last_run_dict: LastRunDict = json.load(persist_json)
                 self._last_run = datetime.strptime(last_run_dict["timestamp"], self._timeformat)
                 self._success_last_run = last_run_dict["success"]
             os.remove(self._full_filename)
         except FileNotFoundError:
-            self._success_last_run = False
-            self._last_run = None
+            pass
 
     def tear_down(self):
         with open(self._full_filename, mode="w") as persist_json:
-            json.dump({"timestamp": self._start.strftime(self._timeformat),
-                       "success": self.success_this_run},
+            json.dump({"timestamp": self._start.strftime(self._timeformat), "success": self.success_this_run},
                       persist_json)
 
     @property
-    def last_run(self):
+    def last_run(self) -> datetime:
         return self._last_run
 
     @last_run.setter
-    def last_run(self, value):
-        if value is None:
+    def last_run(self, value: datetime):
+        if isinstance(value, datetime):
             self._last_run = value
 
     @property
-    def start_of_run(self):
+    def start_of_run(self) -> datetime:
         return self._start
 
     @property
-    def success_last_run(self):
+    def success_last_run(self) -> bool:
         return self._success_last_run
 
     @property
-    def success_this_run(self):
+    def success_this_run(self) -> bool:
         return self._success_this_run
 
     @success_this_run.setter
@@ -215,14 +222,14 @@ class OneTimeBot(ABC):
         pass
 
     @classmethod
-    def get_bot_name(cls):
+    def get_bot_name(cls) -> str:
         return cls.__name__
 
     @property
-    def bot_name(self):
+    def bot_name(self) -> str:
         return self.get_bot_name()
 
-    def run(self):
+    def run(self) -> bool:
         try:
             self.success = bool(self.task())  # pylint: disable=not-callable
         except Exception as catched_exception:  # pylint: disable=broad-except
@@ -230,8 +237,8 @@ class OneTimeBot(ABC):
             self.success = False
         return self.success
 
-    def _watchdog(self):
-        time_over = False
+    def _watchdog(self) -> bool:
+        time_over: bool = False
         if self.timeout:
             diff = datetime.now() - self.timestamp.start_of_run
             if diff > self.timeout:
@@ -254,52 +261,52 @@ class OneTimeBot(ABC):
 
 class PersistedData(Mapping):
     def __init__(self, bot_name: str):
-        self.data: Dict = {}
-        self.botname = bot_name
-        self.data_folder = _get_data_path()
-        self.file_name = self.data_folder + os.sep + bot_name + ".data.json"
+        self._data: Dict = {}
+        self.bot_name: str = bot_name
+        self.data_folder: str = _get_data_path()
+        self.file_name: str = self.data_folder + os.sep + bot_name + ".data.json"
 
-    def __getitem__(self, item):
-        return self.data[item]
+    def __getitem__(self, item) -> Any:
+        return self._data[item]
 
-    def __setitem__(self, key, value):
-        self.data[key] = value
+    def __setitem__(self, key: str, value: Any):
+        self._data[key] = value
 
-    def __delitem__(self, key):
-        del self.data[key]
+    def __delitem__(self, key: str):
+        del self._data[key]
 
-    def __len__(self):
-        return len(self.data)
+    def __len__(self) -> int:
+        return len(self._data)
 
-    def __iter__(self):
-        return iter(self.data)
+    def __iter__(self) -> Iterator:
+        return iter(self._data)
 
-    def assign_dict(self, new_dict: dict):
+    def assign_dict(self, new_dict: Dict):
         if isinstance(new_dict, dict):
-            self.data = new_dict
+            self._data = new_dict
         else:
             raise BotException(f"{new_dict} has the wrong type. It must be a dictionary.")
 
-    def dump(self, success=True):
+    def dump(self, success: bool = True):
         if success:
             with open(self.file_name, mode="w") as json_file:
-                json.dump(self.data, json_file, indent=2)
+                json.dump(self._data, json_file, indent=2)
             if os.path.isfile(self.file_name + ".deprecated"):
                 os.remove(self.file_name + ".deprecated")
         else:
             with open(self.file_name + ".broken", mode="w") as json_file:
-                json.dump(self.data, json_file, indent=2)
+                json.dump(self._data, json_file, indent=2)
 
     def load(self):
         if os.path.exists(self.file_name):
             with open(self.file_name, mode="r") as json_file:
-                self.data = json.load(json_file)
+                self._data = json.load(json_file)
             os.rename(self.file_name, self.file_name + ".deprecated")
         else:
             raise BotException("No data to load.")
 
-    def update(self, dict_to_update: dict):
-        self.data.update(dict_to_update)
+    def update(self, dict_to_update: Dict):
+        self._data.update(dict_to_update)
 
     def _recover_data(self, type_of_data: str):
         try:
@@ -348,10 +355,9 @@ class CanonicalBot(OneTimeBot, ABC):
         pass
 
     def create_timestamp_for_search(self, days_in_past=1) -> datetime:
+        start_of_search: datetime = self.timestamp.last_run
         if self.last_run_successful:
             start_of_search = self.timestamp.last_run - timedelta(days=days_in_past)
-        else:
-            start_of_search = self.timestamp.start_of_run - timedelta(days=days_in_past)
         return start_of_search
 
     def data_outdated(self) -> bool:
@@ -359,9 +365,9 @@ class CanonicalBot(OneTimeBot, ABC):
         if self.new_data_model and self.timestamp.last_run:
             if self.timestamp.last_run < self.new_data_model:
                 outdated = True
-                self.timestamp.last_run = None
+                self.timestamp.last_run = datetime(1970, 1, 1)
         return outdated
 
     @property
     def last_run_successful(self) -> bool:
-        return self.timestamp.last_run and self.timestamp.success_last_run
+        return bool(self.timestamp.last_run and self.timestamp.success_last_run)

@@ -10,9 +10,9 @@ from tools.template_finder import TemplateFinderException, TemplateFinder
 
 class RePage():
     def __init__(self, wiki_page: pywikibot.Page):
-        self.page = wiki_page
-        self.pre_text = self.page.text
-        self._article_list = list()
+        self.page: pywikibot.Page = wiki_page
+        self.pre_text: str = self.page.text
+        self._article_list: List[Union[Article, str]] = list()
         self._init_page_dict()
 
     def _init_page_dict(self):
@@ -126,7 +126,7 @@ class RePage():
 
     @property
     def splitted_article_list(self) -> List[List[Union[Article, str]]]:
-        splitted_list = list()
+        splitted_list: List[List[Union[Article, str]]] = []
         for article in self._article_list:
             if isinstance(article, Article) and article.article_type == RE_DATEN:
                 splitted_list.append([article])

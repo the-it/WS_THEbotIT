@@ -1,6 +1,11 @@
+from __future__ import annotations
+
 from abc import ABC
 from pathlib import Path
-from typing import Tuple
+from typing import Tuple, List, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from scripts.service.ws_re.register.lemma import Lemma
 
 _REGISTER_PATH = Path(__file__).parent.joinpath("data")
 
@@ -11,9 +16,9 @@ class RegisterException(Exception):
 
 class Register(ABC):
     @staticmethod
-    def squash_lemmas(lemmas):
+    def squash_lemmas(lemmas: List[Lemma]) -> List[List[Lemma]]:
         return_lemmas = []
-        last_lemmas = []
+        last_lemmas: List[Lemma] = []
         for lemma in lemmas:
             if last_lemmas:
                 if lemma["lemma"] == last_lemmas[-1]["lemma"]:

@@ -23,7 +23,7 @@ def _raise_count_errors(errors):
 class TestAuthors(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.authors = Authors()
+        cls.authors = Authors()  # type: ignore
 
     def test_all_mappings_have_target(self):
         errors = []

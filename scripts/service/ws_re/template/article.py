@@ -1,10 +1,19 @@
 import collections
-from typing import Union, Tuple, Generator
+from typing import Union, Tuple, Generator, Optional, Dict, TypedDict, List
 
 from scripts.service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
-from scripts.service.ws_re.template.property import Property
+from scripts.service.ws_re.template.property import Property, ValueType
 from tools.template_finder import TemplateFinder
 from tools.template_handler import TemplateHandler
+
+
+# type hints
+class KeyValuePair(TypedDict):
+    key: str
+    value: ValueType
+
+
+ArticleProperties = Dict[str, ValueType]
 
 
 class Article(collections.MutableMapping):
@@ -30,14 +39,14 @@ class Article(collections.MutableMapping):
 
     def __init__(self,
                  article_type: str = RE_DATEN,
-                 re_daten_properties: dict = None,
+                 re_daten_properties: ArticleProperties = None,
                  text: str = "",
-                 author: Union[Tuple[str, str], str] = ("", "")):
-        self._article_type = None
+                 author: Tuple[str, str] = ("", "")):
+        self._article_type = ""
         self.article_type = article_type
-        self._text = None
+        self._text = ""
         self.text = text
-        self._author = None
+        self._author = ("", "")
         self.author = author
         self._properties = (Property("BAND", ""),
                             Property("SPALTE_START", ""),
@@ -117,7 +126,7 @@ class Article(collections.MutableMapping):
     def __delitem__(self, key):
         pass
 
-    def _init_properties(self, properties_dict: dict):
+    def _init_properties(self, properties_dict: Optional[ArticleProperties]):
         if properties_dict:
             for item in properties_dict.items():
                 if item[0] in self:
@@ -180,7 +189,7 @@ class Article(collections.MutableMapping):
                        author=(author_name, author_issue))
 
     @classmethod
-    def _extract_properties(cls, parameters: list) -> dict:
+    def _extract_properties(cls, parameters: List[KeyValuePair]) -> ArticleProperties:
         """
         initialise all properties from the template handler to the article dict.
         If a wrong parameter is in the list the function will raise a ReDatenException.

@@ -1,7 +1,7 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta
-from typing import Optional
+from typing import List, Any
 
 import pywikibot
 
@@ -17,8 +17,8 @@ class ReScannerTask:
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
-        self.re_page: Optional[RePage] = None
-        self.processed_pages = []
+        self.re_page: RePage
+        self.processed_pages: List[str] = []
         self.timeout = timedelta(minutes=1)
         self.load_task()
 
@@ -55,7 +55,10 @@ class ReScannerTask:
 
     @property
     def name(self) -> str:
-        return re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__)).group(1)
+        hit = re.search("([A-Z0-9]{4})[A-Za-z]*?Task", str(self.__class__))
+        if hit:
+            return hit.group(1)
+        raise ValueError(f"Class name {self.__class__} has wrong format.")
 
 
 class ReporterMixin:
@@ -63,7 +66,7 @@ class ReporterMixin:
     _reason = "Reason to save report page"
 
     def __init__(self, report_wiki: pywikibot.Site):
-        self.data = []
+        self.data: Any = []
         self.report_wiki = report_wiki
 
     @abstractmethod

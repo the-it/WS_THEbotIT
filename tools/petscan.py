@@ -1,6 +1,6 @@
 # pylint: disable=ungrouped-imports
-import datetime
 import json
+from datetime import datetime
 from typing import List, TypedDict
 from urllib.parse import quote
 
@@ -315,4 +315,4 @@ class PetScan:
             raise PetScanException("Request wasn't a success")
         response_byte = response.content
         response_dict = json.loads(response_byte.decode("utf8"))
-        return response_dict["*"][0]["a"]["*"]
+        return response_dict["*"][0]["a"]["*"]  # type: ignore
