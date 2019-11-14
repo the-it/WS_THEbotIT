@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, List
 
 from scripts.service.ws_re.register.base import Register
 from scripts.service.ws_re.register.lemma import Lemma
@@ -7,10 +7,10 @@ from scripts.service.ws_re.register.volume import VolumeRegister
 
 class AlphabeticRegister(Register):
     def __init__(self, start: str, end: str, registers: Dict[str, VolumeRegister]):
-        self._start = start
-        self._end = end
+        self._start: str = start
+        self._end: str = end
         self._registers = registers
-        self._lemmas = []
+        self._lemmas: List[Lemma] = []
         self._init_lemmas()
 
     def __repr__(self):

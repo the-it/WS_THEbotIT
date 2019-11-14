@@ -3,7 +3,7 @@ import re
 import unicodedata
 from collections import OrderedDict
 from datetime import datetime
-from typing import Union, List, Tuple, KeysView, Optional, TypedDict
+from typing import Union, List, Tuple, KeysView, Optional, TypedDict, Literal
 
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.base import RegisterException
@@ -11,16 +11,19 @@ from scripts.service.ws_re.volumes import Volume
 
 
 # type hints
-class ChapterDict(TypedDict):
+class ChapterDict(TypedDict, total=False):
     author: str
     start: int
     end: int
 
 
-LemmaItems = Union[str, bool, ChapterDict]
+LemmaDictKeys = Literal["lemma", "previous", "next", "sort_key", "redirect",
+                        "proof_read", "wp_link", "ws_link", "chapters"]
+
+LemmaDictItems = Union[str, bool, int, List[ChapterDict]]
 
 
-class LemmaDict(TypedDict):
+class LemmaDict(TypedDict, total=False):
     lemma: str
     previous: str
     next: str
@@ -48,10 +51,10 @@ class LemmaChapter:
         return False
 
     def get_dict(self) -> ChapterDict:
-        return_dict = OrderedDict()
+        return_dict: ChapterDict = OrderedDict()  # type: ignore
         for property_key in self._keys:
             if property_key in self._dict:
-                return_dict[property_key] = self._dict[property_key]
+                return_dict[property_key] = self._dict[property_key]   # type: ignore
         return return_dict
 
     @property
@@ -69,34 +72,34 @@ class LemmaChapter:
         return None
 
 
-_TRANSLATION_DICT = {"a": "α",
-                     "b": "β",
-                     "ch": "χ",
-                     "d": "δ",
-                     "e": "εη",
-                     "g": "γ",
-                     "i": "jι",
-                     "k": "κ",
-                     "l": "λ",
-                     "m": "μ",
-                     "n": "ν",
-                     "o": "ωο",  # don't get confused this is an omikron
-                     "p": "π",
-                     "ph": "φ",
-                     "ps": "ψ",
-                     "r": "ρ",
-                     "s": "σ",
-                     "t": "τ",
-                     "th": "θ",
-                     "u": "vw",
-                     "x": "ξ",
-                     "y": "υ",
-                     "z": "ζ",
-                     "": "()?\'ʾʿ–-"}
+_TRANSLATION_DICT_RAW = {"a": "α",
+                         "b": "β",
+                         "ch": "χ",
+                         "d": "δ",
+                         "e": "εη",
+                         "g": "γ",
+                         "i": "jι",
+                         "k": "κ",
+                         "l": "λ",
+                         "m": "μ",
+                         "n": "ν",
+                         "o": "ωο",  # don't get confused this is an omikron
+                         "p": "π",
+                         "ph": "φ",
+                         "ps": "ψ",
+                         "r": "ρ",
+                         "s": "σ",
+                         "t": "τ",
+                         "th": "θ",
+                         "u": "vw",
+                         "x": "ξ",
+                         "y": "υ",
+                         "z": "ζ",
+                         "": "()?\'ʾʿ–-"}
 _TMP_DICT = {}
 
-for key in _TRANSLATION_DICT:
-    for character in _TRANSLATION_DICT[key]:
+for key in _TRANSLATION_DICT_RAW:
+    for character in _TRANSLATION_DICT_RAW[key]:
         _TMP_DICT[character] = key
 _TRANSLATION_DICT = str.maketrans(_TMP_DICT)
 
@@ -146,12 +149,15 @@ class Lemma():
                  lemma_dict: LemmaDict,
                  volume: Volume,
                  authors: Authors):
-        self._lemma_dict = lemma_dict
-        self._authors = authors
+        self._lemma_dict: LemmaDict = lemma_dict
+        self._authors: Authors = authors
         self._volume = volume
-        self._chapters = []
+        self._chapters: List[LemmaChapter] = []
         self._sort_key = ""
-        if "chapters" in lemma_dict and lemma_dict["chapters"]:
+        self._recalc_lemma()
+
+    def _recalc_lemma(self):
+        if "chapters" in self._lemma_dict and self._lemma_dict["chapters"]:
             self._init_chapters()
         self._set_sort_key()
 
@@ -167,7 +173,7 @@ class Lemma():
         return f"<{self.__class__.__name__} - lemma:{self['lemma']}, previous:{self['previous']}, " \
             f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
 
-    def __getitem__(self, item: str):
+    def __getitem__(self, item: LemmaDictKeys) -> Optional[LemmaDictItems]:
         try:
             return self._lemma_dict[item]
         except KeyError:
@@ -222,19 +228,19 @@ class Lemma():
         return lemma.strip()
 
     def keys(self) -> KeysView[str]:
-        return self._lemma_dict.keys()
+        return self._lemma_dict.keys()  # type: ignore  # mypy don't get that TypedDicts are Dicts?
 
     @property
     def lemma_dict(self) -> LemmaDict:
-        return_dict = OrderedDict()
+        return_dict: LemmaDict = {}
         for property_key in self._keys:
             if property_key in self.keys():
                 if property_key == "chapters":
                     value = self._get_chapter_dicts()
                 else:
-                    value = self._lemma_dict[property_key]
+                    value = self._lemma_dict[property_key]  # type: ignore # TypedDict only works with string literals
                 if value:
-                    return_dict[property_key] = value
+                    return_dict[property_key] = value  # type: ignore # TypedDict only works with string literals
         return return_dict
 
     def _get_chapter_dicts(self) -> List[ChapterDict]:
@@ -294,11 +300,11 @@ class Lemma():
         links = []
         sort_keys = []
         if "wp_link" in self:
-            parts = self['wp_link'].split(":")
+            parts = self._lemma_dict['wp_link'].split(":")
             links.append(f"[[{self['wp_link']}|{parts[2]}<sup>(WP {parts[1]})</sup>]]")
             sort_keys.append(f"{parts[0]}:{parts[1]}:{self.make_sort_key(parts[2])}")
         if "ws_link" in self:
-            parts = self['ws_link'].split(":")
+            parts = self._lemma_dict['ws_link'].split(":")
             links.append(f"[[{self['ws_link']}|{parts[2]}<sup>(WS {parts[1]})</sup>]]")
             sort_keys.append(f"{parts[0]}:{parts[1]}:{self.make_sort_key(parts[2])}")
         if links:
@@ -330,8 +336,10 @@ class Lemma():
     def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
         year = ""
         if self._get_author_str(lemma_chapter):
-            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
-                                                                self._volume.name)
+            mapped_author = None
+            if lemma_chapter.author:
+                mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
+                                                                    self._volume.name)
             if mapped_author:
                 years = [author.death for author in mapped_author if author.death]
                 year = str(max(years)) if years else ""
@@ -348,9 +356,8 @@ class Lemma():
             year_format = gray
         else:
             try:
-                year = int(year)
                 content_free_year = datetime.now().year - 71
-                if year <= content_free_year:
+                if int(year) <= content_free_year:
                     year_format = green
                 else:
                     year_format = red
@@ -360,10 +367,10 @@ class Lemma():
 
     def update_lemma_dict(self, update_dict: LemmaDict, remove_items: List[str] = None):
         for item_key in update_dict:
-            self._lemma_dict[item_key] = update_dict[item_key]
+            # TypedDict only works with string literals
+            self._lemma_dict[item_key] = update_dict[item_key]  # type: ignore
         if remove_items:
             for item in remove_items:
                 if item in self._lemma_dict:
-                    del self._lemma_dict[item]
-        self._init_chapters()
-        self._set_sort_key()
+                    del self._lemma_dict[item]  # type: ignore
+        self._recalc_lemma()

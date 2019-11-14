@@ -7,9 +7,10 @@ from scripts.service.ws_re.register.base import _REGISTER_PATH
 
 
 # type hints
-class AuthorDict(TypedDict):
+class AuthorDict(TypedDict, total=False):
     birth: int
     death: int
+    redirect: str
 
 
 CrawlerDict = Dict[str, Union[str, Dict[str, str]]]
@@ -38,7 +39,7 @@ class Author:
         return None
 
     @property
-    def redirect(self) -> Union[str, None]:
+    def redirect(self) -> Optional[str]:
         if "redirect" in self._dict.keys():
             return self._dict["redirect"]
         return None
@@ -60,7 +61,7 @@ class Authors:
     def __init__(self):
         with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
-        self._authors = {}
+        self._authors: Dict[str, Author] = {}
         with open(self._REGISTER_PATH.joinpath("authors.json"), "r",
                   encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
@@ -114,8 +115,8 @@ class Authors:
 
 
 class AuthorCrawler:
-    _simple_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
-    _complex_mapping_regex = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\{([^\}]*)\}")
+    _SIMPLE_REGEX_MAPPING = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
+    _COMPLEX_REGEX_MAPPING = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\{([^\}]*)\}")
 
     @classmethod
     def get_mapping(cls, mapping: str) -> CrawlerDict:
@@ -137,21 +138,25 @@ class AuthorCrawler:
     def _extract_mapping(cls, single_mapping: str) -> CrawlerDict:
         if "{" in single_mapping:
             return cls._extract_complex_mapping(single_mapping)
-        hit = cls._simple_mapping_regex.search(single_mapping)
-        return {hit.group(1): hit.group(2)}
+        hit = cls._SIMPLE_REGEX_MAPPING.search(single_mapping)
+        if hit:
+            return {hit.group(1): hit.group(2)}
+        raise ValueError(f"{single_mapping} don't compatible to regex.")
 
     @classmethod
     def _extract_complex_mapping(cls, single_mapping: str) -> CrawlerDict:
-        hit = cls._complex_mapping_regex.search(single_mapping)
-        sub_dict = {}
-        for sub_mapping in hit.group(2).split(",\n"):
-            sub_hit = cls._simple_mapping_regex.search(sub_mapping)
-            if sub_hit:
-                sub_dict[sub_hit.group(1)] = sub_hit.group(2)
-            else:
+        hit = cls._COMPLEX_REGEX_MAPPING.search(single_mapping)
+        if hit:
+            sub_dict = {}
+            for sub_mapping in hit.group(2).split(",\n"):
+                sub_hit = cls._SIMPLE_REGEX_MAPPING.search(sub_mapping)
+                if sub_hit:
+                    sub_dict[sub_hit.group(1)] = sub_hit.group(2)
+                else:
 
-                sub_dict["*"] = sub_mapping.strip().strip("\"")
-        return {hit.group(1): sub_dict}
+                    sub_dict["*"] = sub_mapping.strip().strip("\"")
+            return {hit.group(1): sub_dict}
+        raise ValueError(f"{single_mapping} not compliant to regex")
 
     @classmethod
     def get_authors(cls, text: str) -> Dict[str, AuthorDict]:
@@ -163,11 +168,14 @@ class AuthorCrawler:
 
     @staticmethod
     def _split_author_table(raw_table: str) -> List[str]:
-        table = re.search(r"\{\|class=\"wikitable sortable\"\s+\|-\s+(.*)\s+\|\}",
-                          raw_table, re.DOTALL).group(1)
-        splitted_table = table.split("\n|-\n")
-        del splitted_table[0]
-        return splitted_table
+        hit = re.search(r"\{\|class=\"wikitable sortable\"\s+\|-\s+(.*)\s+\|\}",
+                        raw_table, re.DOTALL)
+        if hit:
+            table = hit.group(1)
+            splitted_table = table.split("\n|-\n")
+            del splitted_table[0]
+            return splitted_table
+        raise ValueError(f"{raw_table} not compatible to regex.")
 
     @staticmethod
     def _split_author(author_sub_table: str) -> List[str]:
@@ -212,9 +220,11 @@ class AuthorCrawler:
         author_tuple = cls._extract_author_name(lines[0])
         years = cls._extract_years(lines[1])
         author = f"{author_tuple[0]} {author_tuple[1]}"
-        author_dict = {author: {}}
-        if years[0]:
-            author_dict[author]["birth"] = years[0]
-        if years[1]:
-            author_dict[author]["death"] = years[1]
+        author_dict: Dict[str, AuthorDict] = {author: {}}
+        birth_year = years[0]
+        if birth_year:
+            author_dict[author]["birth"] = birth_year
+        death_year = years[1]
+        if death_year:
+            author_dict[author]["death"] = death_year
         return author_dict
