@@ -158,9 +158,8 @@ class PersistedTimestamp():
         return self._last_run
 
     @last_run.setter
-    def last_run(self, value):
-        # todo: this is wrong ... defintive wrong
-        if value is None:
+    def last_run(self, value: datetime):
+        if isinstance(value, datetime):
             self._last_run = value
 
     @property
@@ -366,7 +365,7 @@ class CanonicalBot(OneTimeBot, ABC):
         if self.new_data_model and self.timestamp.last_run:
             if self.timestamp.last_run < self.new_data_model:
                 outdated = True
-                self.timestamp.last_run = datetime(year=1970, month=1, day=1)
+                self.timestamp.last_run = datetime(1970, 1, 1)
         return outdated
 
     @property

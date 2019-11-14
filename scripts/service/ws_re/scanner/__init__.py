@@ -1,7 +1,7 @@
 import traceback
 from datetime import timedelta, datetime
 from operator import itemgetter
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Callable
 
 import pywikibot
 
@@ -22,7 +22,7 @@ class ReScanner(CanonicalBot):
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(minutes=300)
-        self.tasks: List[type[ReScannerTask]] = [KSCHTask, DEALTask, DEWPTask, SCANTask]
+        self.tasks: List[Callable] = [KSCHTask, DEALTask, DEWPTask, SCANTask]
         if self.debug:
             self.tasks = self.tasks + []
         self.statistic: Dict[str, int] = {}

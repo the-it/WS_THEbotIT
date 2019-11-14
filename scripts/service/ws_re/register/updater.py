@@ -195,8 +195,8 @@ class Updater():
     # it will fail if there is no previous lemma and the next is able to update
     def try_update_previous_next_of_surrounding_lemmas(self, lemma_dict: LemmaDict, lemma_to_update: Lemma):
         idx = self._register.get_index_of_lemma(lemma_to_update)
-        if not idx:
-            raise RegisterException(f"Can't get idx of {lemma_to_update}")
+        if idx is None:
+            return
         previous_test = False
         pre_lemma = None
         if lemma_to_update["previous"]:
