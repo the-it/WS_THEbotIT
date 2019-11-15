@@ -417,6 +417,15 @@ class TestBugUpdates(BaseTestRegister):
         # don't create a new lemma, because Acutius a !=  Acutius 0a
         compare(5, len(register.lemmas))
 
+    def test_prokleides_2(self):
+        copy_tst_data("prokleides_2_bug", "XXIII_1")
+        register = VolumeRegister(Volumes()["XXIII,1"], Authors())
+        update_dict = {"lemma": "Prokleides 2", "previous": "Prokleides", "next": "Prokles"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
+        compare(None, register.lemmas[0]["previous"])
+        compare(None, register.lemmas[2]["next"])
+
 
 @ddt
 class TestMissingIndices(BaseTestRegister):

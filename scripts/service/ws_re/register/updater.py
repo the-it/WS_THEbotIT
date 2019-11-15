@@ -1,5 +1,5 @@
 import contextlib
-from typing import List
+from typing import List, Optional
 
 from scripts.service.ws_re.register.base import RegisterException, _REGISTER_PATH
 from scripts.service.ws_re.register.lemma import Lemma, LemmaDict
@@ -169,8 +169,10 @@ class Updater():
                 with contextlib.suppress(IndexError):
                     next_lemma = self._register[idx + 1]
                     next_lemma_dict: LemmaDict = {"lemma": new_lemma_dict["next"],
-                                                  "previous": new_lemma_dict["lemma"],
-                                                  "next": str(next_lemma["next"])}
+                                                  "previous": new_lemma_dict["lemma"]}
+                    next_next_lemma: Optional[str] = str(next_lemma["next"]) if next_lemma["next"] else None
+                    if next_next_lemma:
+                        next_lemma_dict["next"] = next_next_lemma
                     if Lemma.make_sort_key(str(next_lemma_dict["lemma"])) == next_lemma.sort_key:
                         next_lemma.update_lemma_dict(next_lemma_dict)
                         with contextlib.suppress(RegisterException):
@@ -184,8 +186,10 @@ class Updater():
                     return
                 pre_lemma = self._register[idx - 1]
                 pre_lemma_dict: LemmaDict = {"lemma": new_lemma_dict["previous"],
-                                             "previous": str(pre_lemma["previous"]),
                                              "next": new_lemma_dict["lemma"]}
+                pre_pre_lemma: Optional[str] = str(pre_lemma["previous"]) if pre_lemma["previous"] else None
+                if pre_pre_lemma:
+                    pre_lemma_dict["previous"] = pre_pre_lemma
                 if Lemma.make_sort_key(pre_lemma_dict["lemma"]) == pre_lemma.sort_key:
                     pre_lemma.update_lemma_dict(pre_lemma_dict)
                     with contextlib.suppress(RegisterException):
