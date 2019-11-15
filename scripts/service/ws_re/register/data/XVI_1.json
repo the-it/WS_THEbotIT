@@ -13204,7 +13204,7 @@
   {
     "lemma": "Mysanda",
     "previous": "Mysaion",
-    "next": "Mysarches",
+    "next": "Μυσάρχης",
     "chapters": [
       {
         "start": 1186,
@@ -13214,7 +13214,7 @@
     ]
   },
   {
-    "lemma": "Mysarches",
+    "lemma": "Μυσάρχης",
     "previous": "Mysanda",
     "next": "Mysaris promunturium",
     "chapters": [
@@ -13227,13 +13227,14 @@
   },
   {
     "lemma": "Mysaris promunturium",
-    "previous": "Mysarches",
+    "previous": "Μυσάρχης",
     "next": "Mysecros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1187,
         "end": 1187,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },
@@ -13265,6 +13266,8 @@
     "lemma": "Mysia 1",
     "previous": "Myshemihekton",
     "next": "Mysia 2",
+    "sort_key": "Mummius 07a",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1187,
@@ -13288,11 +13291,12 @@
     "lemma": "Mysia 3",
     "previous": "Mysia 2",
     "next": "Mysia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1187,
-        "end": 1187,
-        "author": "Fluss"
+        "end": 1188,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -13300,11 +13304,12 @@
     "lemma": "Mysia 4",
     "previous": "Mysia 3",
     "next": "Mysia 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1188,
         "end": 1188,
-        "author": "Sturm"
+        "author": "J. Sturm."
       }
     ]
   },

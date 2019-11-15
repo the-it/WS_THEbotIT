@@ -3807,10 +3807,12 @@
   },
   {
     "lemma": "Hippias 4",
-    "previous": "Ἱππεῖος"
+    "previous": "Ἱππεῖος",
+    "next": "None"
   },
   {
     "lemma": "Hippias 9a",
+    "previous": "None",
     "next": "Ἱππικός",
     "chapters": [
       {
@@ -3977,10 +3979,12 @@
   },
   {
     "lemma": "Hydarnes 1",
-    "previous": "Hyäne"
+    "previous": "Hyäne",
+    "next": "None"
   },
   {
     "lemma": "Hydrakes",
+    "previous": "None",
     "next": "Hydrophoros",
     "chapters": [
       {
@@ -4084,7 +4088,8 @@
   },
   {
     "lemma": "Hyperbolos 1",
-    "previous": "Hyperanthes 2"
+    "previous": "Hyperanthes 2",
+    "next": "None"
   },
   {
     "lemma": "Hyperbolos 2",
@@ -4110,6 +4115,7 @@
   },
   {
     "lemma": "Hyperbolos",
+    "previous": "None",
     "next": "Ὑπηρέτης"
   },
   {
@@ -7056,7 +7062,8 @@
   },
   {
     "lemma": "Λαβασσάρασκος",
-    "previous": "Kyros 6a"
+    "previous": "Kyros 6a",
+    "next": "None"
   },
   {
     "lemma": "Kyros 7",
