@@ -134,10 +134,7 @@ class SCANTask(ReScannerTask):
             spalte_end = int(spalte_end_raw)
         else:
             spalte_end = spalte_start
-        single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
-        author = article.author[0]
-        if author.lower().strip() != "off":
-            single_article_dict["author"] = author
+        single_article_dict = self._create_chapter_dict(article, spalte_end, spalte_start)
         return single_article_dict
 
     def _analyse_complex_article_list(self, article_list: List[Article]) -> List[ChapterDict]:
@@ -146,20 +143,29 @@ class SCANTask(ReScannerTask):
         chapter_list: List[ChapterDict] = []
         for article in article_list:
             # if there will be no findings of the regex, the article continues on the next page as the predecessor
-            start: int = article_start
-            end: int = article_start
+            spalte_start: int = article_start
+            spalte_end: int = article_start
             findings = list(re.finditer(r"\{\{Seite\|(\d{1,4})", article.text))
             if findings:
                 first_finding = findings[0]
-                start = int(first_finding.group(1))
+                spalte_start = int(first_finding.group(1))
                 if first_finding.start(0) > 0:
-                    start -= 1
-                end = int(findings[-1].group(1))
+                    spalte_start -= 1
+                spalte_end = int(findings[-1].group(1))
             if article is article_list[-1]:
-                end = int(simple_dict["end"])
-            chapter_list.append({"start": start, "end": end, "author": article.author[0]})
-            article_start = end
+                spalte_end = int(simple_dict["end"])
+            single_article_dict = self._create_chapter_dict(article, spalte_end, spalte_start)
+            chapter_list.append(single_article_dict)
+            article_start = spalte_end
         return chapter_list
+
+    @staticmethod
+    def _create_chapter_dict(article: Article, spalte_end: int, spalte_start: int) -> ChapterDict:
+        single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
+        author = article.author[0]
+        if author.lower().strip() != "off":
+            single_article_dict["author"] = author
+        return single_article_dict
 
     @staticmethod
     def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
