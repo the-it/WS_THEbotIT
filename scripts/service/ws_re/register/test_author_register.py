@@ -26,15 +26,13 @@ class TestAlphabeticRegister(BaseTestRegister):
         compare(4, len(abel_register))
 
     def test_make_table(self):
-        b_register = AlphabeticRegister("be", "zzzzzz", "a", None, self.registers)
+        abel_register = AuthorRegister(self.authors.get_author("Abel"), self.authors, self.registers)
         expected_table = """{{RERegister
-|ALPHABET=be
-|VG=a
-|NF=zzzzzz
-|SUM=6
-|UNK=1
+|AUTHOR=Abel
+|SUM=4
+|UNK=0
 |KOR=1
-|FER=3
+|FER=2
 }}
 
 {|class="wikitable sortable"
@@ -45,7 +43,21 @@ class TestAlphabeticRegister(BaseTestRegister):
 !Autor
 !Sterbejahr
 |-
-|rowspan=3 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
+|data-sort-value="aba 001"|[[RE:Aba 1|'''{{Anker2|Aba 1}}''']]
+||I,1
+||
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
+|Abel
+|style="background:#FFCBCB"|1998
+|-
+|data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
+||I,1
+||
+|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
+|Abel
+|style="background:#FFCBCB"|1998
+|-
+|rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=2 |I,1
 |rowspan=2 |
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
@@ -56,37 +68,13 @@ class TestAlphabeticRegister(BaseTestRegister):
 |Abel
 |style="background:#FFCBCB"|1998
 |-
-||III,1
-||
-|-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||III,1
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abel
 |style="background:#FFCBCB"|1998
-|-
-|data-sort-value="delta"|[[RE:Delta|'''{{Anker2|Delta}}''']]
-||III,1
-||
-|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
-|Abert
-|style="background:#B9FFC5"|1927
-|-
-|data-sort-value="uaaa"|[[RE:Vaaa|'''{{Anker2|Vaaa}}''']]
-||III,1
-||
-|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
-|Abert
-|style="background:#B9FFC5"|1927
-|-
-|data-sort-value="ueee"|[[RE:Ueee|'''{{Anker2|Ueee}}''']]
-||III,1
-||
-|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
-|Abert
-|style="background:#B9FFC5"|1927
 |}
 [[Kategorie:RE:Register|!]]
-Zahl der Artikel: 6, """
-        compare(expected_table, b_register.get_register_str())
+Zahl der Artikel: 4, """
+        compare(expected_table, abel_register.get_register_str())

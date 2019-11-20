@@ -70,12 +70,7 @@ class AuthorRegister(Register):
 
     def _get_header(self) -> str:
         header = ["RERegister"]
-        header.append(f"ALPHABET={self.start}")
-        if self._before_start:
-            header.append(f"VG={self._before_start}")
-        header.append(f"NF={self.end}")
-        if self._after_next_start:
-            header.append(f"NFNF={self._after_next_start}")
+        header.append(f"AUTHOR={self._author.name}")
         header.append(f"SUM={len(self._lemmas)}")
         # calculate proof_read status
         fer, kor, unk = self.proof_read(self._lemmas)
