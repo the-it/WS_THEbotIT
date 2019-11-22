@@ -9315,7 +9315,7 @@
   {
     "lemma": "Rodiopolis",
     "previous": "Rodion peraia",
-    "next": "Rodios 1",
+    "next": "Ῥόδιος 1",
     "chapters": [
       {
         "start": 956,
@@ -9324,9 +9324,9 @@
     ]
   },
   {
-    "lemma": "Rodios 1",
+    "lemma": "Ῥόδιος 1",
     "previous": "Rodiopolis",
-    "next": "Rodios 2",
+    "next": "Ῥόδιος 2",
     "chapters": [
       {
         "start": 956,
@@ -9336,21 +9336,25 @@
     ]
   },
   {
-    "lemma": "Rodios 2",
-    "previous": "Rodios 1",
-    "next": "Rododendron",
+    "lemma": "Ῥόδιος 2",
+    "previous": "Ῥόδιος 1",
+    "next": "Ῥοδοδένδρον",
+    "sort_key": "Rhodios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 956,
         "end": 956,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Rododendron",
-    "previous": "Rodios 2",
-    "next": "Rodoe",
+    "lemma": "Ῥοδοδένδρον",
+    "previous": "Ῥόδιος 2",
+    "next": "Ῥοδόη",
+    "sort_key": "Rhododendron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 956,
@@ -9359,8 +9363,8 @@
     ]
   },
   {
-    "lemma": "Rodoe",
-    "previous": "Rododendron",
+    "lemma": "Ῥοδόη",
+    "previous": "Ῥοδοδένδρον",
     "next": "Rodogune",
     "chapters": [
       {
@@ -9372,7 +9376,7 @@
   },
   {
     "lemma": "Rodogune",
-    "previous": "Rodoe",
+    "previous": "Ῥοδόη",
     "next": "Rodogune 1",
     "chapters": [
       {
