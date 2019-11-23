@@ -3,7 +3,6 @@ from collections import OrderedDict
 
 from testfixtures import compare
 
-from scripts.service.ws_re.register.alphabetic import AlphabeticRegister
 from scripts.service.ws_re.register.author import Authors
 from scripts.service.ws_re.register.author_register import AuthorRegister
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
@@ -11,7 +10,7 @@ from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 
-class TestAlphabeticRegister(BaseTestRegister):
+class TestAuthorRegister(BaseTestRegister):
     def setUp(self):
         copy_tst_data("I_1_alpha", "I_1")
         copy_tst_data("III_1_alpha", "III_1")

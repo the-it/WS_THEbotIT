@@ -1,5 +1,6 @@
 # pylint: disable=protected-access
 import contextlib
+import copy
 from unittest import skipUnless, TestCase, skip
 
 from pyfiglet import Figlet
@@ -50,10 +51,15 @@ class TestCleanAuthors(TestCase):
         cls.authors = Authors()  # type: ignore
 
     def test_show_authors_without_mapping_and_delete_them(self):
-        author_set = set()
+        raw_author_set = set(self.authors._authors.keys())
+        author_set = copy.copy(raw_author_set)
         mapping_set = set()
-        for author in self.authors._authors:
-            author_set.add(author)
+        for author in raw_author_set:
+            author_obj = self.authors._authors[author]
+            if author_obj.redirect:
+                author_set.remove(author)
+                author_set.remove(author_obj.redirect)
+
         for mapping_key in self.authors._mapping:
             mapping_value = self.authors._mapping[mapping_key]
             if isinstance(mapping_value, str):
