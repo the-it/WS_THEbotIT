@@ -1,4 +1,4 @@
-# pylint: disable=protected-access
+# pylint: disable=protected-access,no-self-use
 from pathlib import Path
 from unittest import TestCase
 
@@ -26,8 +26,7 @@ class TestAuthor(TestCase):
 
 
 class TestAuthors(BaseTestRegister):
-    @staticmethod
-    def test_load_data():
+    def test_load_data(self):
         authors = Authors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
         compare("Abbott", author[0].name)
@@ -57,8 +56,7 @@ class TestAuthors(BaseTestRegister):
         compare("Abbott_new", authors._mapping["Abbott"])
         compare("New", authors._mapping["New"])
 
-    @staticmethod
-    def test_set_author():
+    def test_set_author(self):
         authors = Authors()
 
         author = authors.get_author_by_mapping("Abel", "I,1")
@@ -76,8 +74,7 @@ class TestAuthors(BaseTestRegister):
         compare("Abel2", author.name)
         compare(1950, author.birth)
 
-    @staticmethod
-    def test_persist():
+    def test_persist(self):
         authors = Authors()
         authors.set_mappings({"Foo": "Bar"})
         authors.set_author({"Foo Bar": {"birth": 1234}})

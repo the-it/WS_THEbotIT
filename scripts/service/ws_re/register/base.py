@@ -7,7 +7,7 @@ from typing import Tuple, List, TYPE_CHECKING
 if TYPE_CHECKING:
     from scripts.service.ws_re.register.lemma import Lemma
 
-_REGISTER_PATH = Path(__file__).parent.joinpath("data")
+_REGISTER_PATH: Path = Path(__file__).parent.joinpath("data")
 
 
 class RegisterException(Exception):

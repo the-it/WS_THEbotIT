@@ -1,6 +1,5 @@
 # pylint: disable=protected-access
 import contextlib
-import copy
 from unittest import skipUnless, TestCase, skip
 
 from pyfiglet import Figlet
@@ -44,37 +43,6 @@ class TestAuthors(TestCase):
             except KeyError:  # pragma: no cover
                 errors.append(f"Mapping target {author} not there.")
         _raise_count_errors(errors)
-
-class TestCleanAuthors(TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls.authors = Authors()  # type: ignore
-
-    def test_show_authors_without_mapping_and_delete_them(self):
-        raw_author_set = set(self.authors._authors.keys())
-        author_set = copy.copy(raw_author_set)
-        mapping_set = set()
-        for author in raw_author_set:
-            author_obj = self.authors._authors[author]
-            if author_obj.redirect:
-                author_set.remove(author)
-                author_set.remove(author_obj.redirect)
-
-        for mapping_key in self.authors._mapping:
-            mapping_value = self.authors._mapping[mapping_key]
-            if isinstance(mapping_value, str):
-                mapping_set.add(mapping_value)
-            elif isinstance(mapping_value, list):
-                for item in mapping_value:
-                    mapping_set.add(item)
-            elif isinstance(mapping_value, dict):
-                for item in mapping_value.values():
-                    mapping_set.add(item)
-        for item in sorted(author_set.difference(mapping_set)):
-            print(item)
-            del self.authors._authors[item]
-        self.authors.persist()
-
 
 
 @skipUnless(INTEGRATION_TEST, "only execute in integration test")

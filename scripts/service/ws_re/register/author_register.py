@@ -36,9 +36,10 @@ class AuthorRegister(Register):
 
     def _is_lemma_of_author(self, lemma: Lemma) -> bool:
         for chapter in lemma.chapters:
-            authors_of_lemma = self._authors.get_author_by_mapping(chapter.author, lemma.volume.name)
-            if self._author in authors_of_lemma:
-                return True
+            if chapter.author:
+                authors_of_lemma = self._authors.get_author_by_mapping(chapter.author, lemma.volume.name)
+                if self._author in authors_of_lemma:
+                    return True
         return False
 
     def _get_table(self) -> str:

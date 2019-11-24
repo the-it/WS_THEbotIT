@@ -113,6 +113,14 @@ class Authors:
                   encoding="utf-8") as json_file:
             json.dump(self._to_dict(), json_file, sort_keys=True, indent=2, ensure_ascii=False)
 
+    @property
+    def authors_dict(self) -> Dict[str, Author]:
+        return self._authors
+
+    @property
+    def authors_mapping(self):
+        return self._mapping
+
 
 class AuthorCrawler:
     _SIMPLE_REGEX_MAPPING = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
