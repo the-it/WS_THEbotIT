@@ -24,13 +24,13 @@ class CleanAuthors:
         for mapping_key in self.authors.authors_mapping:
             mapping_value = self.authors.authors_mapping[mapping_key]
             if isinstance(mapping_value, str):
-                mapping_set.add(mapping_value)
+                mapping_set.add(mapping_value.replace("|", ""))
             elif isinstance(mapping_value, list):
                 for item in mapping_value:
-                    mapping_set.add(item)
+                    mapping_set.add(item.replace("|", ""))
             elif isinstance(mapping_value, dict):
                 for item in mapping_value.values():
-                    mapping_set.add(item)
+                    mapping_set.add(item.replace("|", ""))
         return mapping_set
 
     def delete_authors_without_mapping(self):
