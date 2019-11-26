@@ -16,10 +16,18 @@ class TestCleanAuthors(BaseTestRegister):
         super().setUpClass()
         copy_tst_data("authors_clean", "authors")
         copy_tst_data("authors_mapping_clean", "authors_mapping")
+        copy_tst_data("I_1_clean", "I_1")
 
     def test_clean_authors(self):
         cleaner = CleanAuthors()
         cleaner.delete_authors_without_mapping()
         with open(BASE_PATH.joinpath("test_data/authors_clean_expection.json")) as expection_file, \
                 open(_TEST_REGISTER_PATH.joinpath("authors.json")) as cleaned_file:
+            compare(json.load(expection_file), json.load(cleaned_file))
+
+    def test_clean_mapping(self):
+        cleaner = CleanAuthors()
+        cleaner.delete_mappings_without_use()
+        with open(BASE_PATH.joinpath("test_data/authors_mapping_clean_expection.json")) as expection_file, \
+                open(_TEST_REGISTER_PATH.joinpath("authors_mapping.json")) as cleaned_file:
             compare(json.load(expection_file), json.load(cleaned_file))

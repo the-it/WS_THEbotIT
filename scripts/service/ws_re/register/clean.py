@@ -2,11 +2,13 @@ import copy
 from typing import Set
 
 from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.registers import Registers
 
 
 class CleanAuthors:
     def __init__(self):
         self.authors = Authors()
+        self.registers = Registers()
 
     def _get_deletable_authors(self):
         raw_author_set = set(self.authors.authors_dict.keys())
@@ -38,7 +40,19 @@ class CleanAuthors:
                 del self.authors.authors_dict[item]
         self.authors.persist()
 
+    def delete_mappings_without_use(self):
+        register_authors = set()
+        for register in self.registers.volumes.values():
+            for lemma in register:
+                for chapter in lemma.chapters:
+                    if chapter.author:
+                        register_authors.add(chapter.author)
+        for key in set(self.authors.authors_mapping.keys()).difference(register_authors):
+            del self.authors.authors_mapping[key]
+        self.authors.persist()
+
 
 if __name__ == "__main__":  # pragma: no cover
     cleaner = CleanAuthors()
+    cleaner.delete_mappings_without_use()
     cleaner.delete_authors_without_mapping()
