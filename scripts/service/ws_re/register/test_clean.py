@@ -31,3 +31,18 @@ class TestCleanAuthors(BaseTestRegister):
         with open(BASE_PATH.joinpath("test_data/authors_mapping_clean_expection.json")) as expection_file, \
                 open(_TEST_REGISTER_PATH.joinpath("authors_mapping.json")) as cleaned_file:
             compare(json.load(expection_file), json.load(cleaned_file))
+
+
+class TestRemapAuthors(BaseTestRegister):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        copy_tst_data("authors_remap", "authors")
+        copy_tst_data("authors_mapping_remap", "authors_mapping")
+
+    def test_remap(self):
+        cleaner = CleanAuthors()
+        cleaner.remap()
+        with open(BASE_PATH.joinpath("test_data/authors_mapping_remap_expection.json")) as expection_file, \
+                open(_TEST_REGISTER_PATH.joinpath("authors_mapping.json")) as cleaned_file:
+            compare(json.load(expection_file), json.load(cleaned_file))
