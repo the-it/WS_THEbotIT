@@ -3,7 +3,10 @@ import json
 import re
 from typing import Dict, Union, List, Tuple, Optional, TypedDict
 
+from pywikibot import Site
+
 from scripts.service.ws_re.register.base import _REGISTER_PATH
+from tools import fetch_text_from_wiki_site
 
 
 # type hints
@@ -236,3 +239,15 @@ class AuthorCrawler:
         if death_year:
             author_dict[author]["death"] = death_year
         return author_dict
+
+    @classmethod
+    def _process_author_infos(cls, wiki: Site) -> Dict[str, AuthorDict]:
+        text = fetch_text_from_wiki_site(wiki,
+                                         "Paulys Realencyclopädie der classischen "
+                                         "Altertumswissenschaft/Autoren")
+        return cls.get_authors(text)
+
+    @classmethod
+    def _get_author_mapping(cls, wiki: Site) -> CrawlerDict:
+        text = fetch_text_from_wiki_site(wiki, "Modul:RE/Autoren")
+        return cls.get_mapping(text)
