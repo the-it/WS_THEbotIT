@@ -105,6 +105,6 @@ if __name__ == "__main__":  # pragma: no cover
     cleaner.delete_mappings_without_use()
     cleaner.delete_authors_without_mapping()
     wiki = Site(code="de", fam="wikisource", user="THEbotIT")
-    cleaner.authors.set_mappings(AuthorCrawler._get_author_mapping(wiki))
-    cleaner.authors.set_author(AuthorCrawler._process_author_infos(wiki))
+    cleaner.authors.set_mappings(AuthorCrawler.get_author_mapping(wiki))
+    cleaner.authors.set_author(AuthorCrawler.process_author_infos(wiki))
     cleaner.authors.persist()

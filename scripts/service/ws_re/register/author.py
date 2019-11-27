@@ -241,13 +241,13 @@ class AuthorCrawler:
         return author_dict
 
     @classmethod
-    def _process_author_infos(cls, wiki: Site) -> Dict[str, AuthorDict]:
+    def process_author_infos(cls, wiki: Site) -> Dict[str, AuthorDict]:
         text = fetch_text_from_wiki_site(wiki,
                                          "Paulys Realencyclopädie der classischen "
                                          "Altertumswissenschaft/Autoren")
         return cls.get_authors(text)
 
     @classmethod
-    def _get_author_mapping(cls, wiki: Site) -> CrawlerDict:
+    def get_author_mapping(cls, wiki: Site) -> CrawlerDict:
         text = fetch_text_from_wiki_site(wiki, "Modul:RE/Autoren")
         return cls.get_mapping(text)
