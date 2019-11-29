@@ -26,6 +26,10 @@ class AuthorRegister(Register):
     def __getitem__(self, item: int) -> Lemma:
         return self._lemmas[item]
 
+    @property
+    def author(self):
+        return self._author
+
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:

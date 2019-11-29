@@ -69,11 +69,7 @@ class CleanAuthors:
         new_candidates = self._create_candidates(old_author)
         if len(new_candidates) > 1:
             new_candidates = self._filter_candidates(new_candidates, old_author)
-            print(old_author.name)
-            print(f"  OLD: {old_author}")
-            print(f"  NEW: {new_candidates}")
             if len(new_candidates) == 1:
-                print(f"####{new_candidates[0].name} replace {old_author.name}")
                 self.authors.set_mappings({old_author.name: new_candidates[0].name})
 
     def _create_candidates(self, old_author: Author) -> List[Author]:

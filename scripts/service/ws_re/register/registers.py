@@ -1,9 +1,10 @@
 import contextlib
 from collections import OrderedDict
-from typing import Dict
+from typing import Dict, Generator
 
 from scripts.service.ws_re.register.alphabetic import AlphabeticRegister
 from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.author_register import AuthorRegister
 from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
@@ -14,7 +15,7 @@ class Registers:
                     "t", "th", "ti", "u", "uf", "x", "y", "z"]
 
     def __init__(self):
-        self._authors = Authors()
+        self._authors: Authors = Authors()
         self._registers: Dict[str, VolumeRegister] = OrderedDict()
         self._alphabetic_registers: Dict[str, AlphabeticRegister] = OrderedDict()
         for volume in Volumes().all_volumes:
@@ -41,15 +42,22 @@ class Registers:
         return self._registers[item]
 
     @property
-    def alphabetic(self):
+    def alphabetic(self) -> Dict[str, AlphabeticRegister]:
         return self._alphabetic_registers
 
     @property
-    def volumes(self):
+    def author(self) -> Generator[AuthorRegister, None, None]:
+        for author in self.authors:
+            register = AuthorRegister(author, self.authors, self._registers)
+            if len(register) > 0:
+                yield register
+
+    @property
+    def volumes(self) -> Dict[str, VolumeRegister]:
         return self._registers
 
     @property
-    def authors(self):
+    def authors(self) -> Authors:
         return self._authors
 
     def persist(self):

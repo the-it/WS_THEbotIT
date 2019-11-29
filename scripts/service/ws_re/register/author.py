@@ -1,7 +1,7 @@
 import contextlib
 import json
 import re
-from typing import Dict, Union, List, Tuple, Optional, TypedDict
+from typing import Dict, Union, List, Tuple, Optional, TypedDict, Generator
 
 from pywikibot import Site
 
@@ -70,6 +70,11 @@ class Authors:
             json_dict = json.load(json_file)
             for author in json_dict:
                 self._authors[author] = Author(author, json_dict[author])
+
+    def __iter__(self) -> Generator[Author, None, None]:
+        for author in self.authors_dict.values():
+            if not author.redirect:
+                yield author
 
     def get_author_by_mapping(self, name: str, issue: str) -> List[Author]:
         author_list = []

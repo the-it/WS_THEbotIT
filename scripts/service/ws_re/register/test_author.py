@@ -85,6 +85,15 @@ class TestAuthors(BaseTestRegister):
         with open(str(base_path.joinpath("authors.json")), mode="r", encoding="utf8") as authors:
             compare(True, "  \"Foo Bar\": {\n    \"birth\": 1234\n  }" in authors.read())
 
+    def test_iter(self):
+        authors = iter(Authors())
+        compare("Abbott", next(authors).name)
+        compare("Abel", next(authors).name)
+        compare("Abel", next(authors).name)
+        compare("Abert", next(authors).name)
+        with self.assertRaises(StopIteration):
+            # redirects doesn't count
+            next(authors)
 
 class TestAuthorCrawler(TestCase):
     def setUp(self):

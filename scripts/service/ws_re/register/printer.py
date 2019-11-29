@@ -22,7 +22,6 @@ class ReRegisterPrinter(CanonicalBot):
                                       f"Altertumswissenschaft/Register/{register.start}"),
                                  register.get_register_str(),
                                  "Register aktualisiert")
-
         return True
 
 
