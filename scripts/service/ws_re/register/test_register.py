@@ -27,13 +27,24 @@ class TestRegisters(BaseTestRegister):
     def test_alphabetic(self):
         copy_tst_data("I_1_alpha", "I_1")
         copy_tst_data("III_1_alpha", "III_1")
-        registers = Registers()
-        compare(44, len(registers.alphabetic))
-        compare(4, len(registers.alphabetic["a"]))
-        compare(2, len(registers.alphabetic["b"]))
-        compare(1, len(registers.alphabetic["ch"]))
-        compare(1, len(registers.alphabetic["d"]))
-        compare(2, len(registers.alphabetic["u"]))
+        i = 0
+        for i, register in enumerate(Registers().alphabetic):
+            if register.start == "a":
+                compare(4, len(register))
+                continue
+            if register.start == "b":
+                compare(2, len(register))
+                continue
+            if register.start == "ch":
+                compare(1, len(register))
+                continue
+            if register.start == "d":
+                compare(1, len(register))
+                continue
+            if register.start == "u":
+                compare(2, len(register))
+                continue
+        compare(43, i)
 
     def test_author(self):
         copy_tst_data("I_1_author", "I_1")

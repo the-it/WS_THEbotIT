@@ -21,9 +21,12 @@ class Registers:
         for volume in Volumes().all_volumes:
             with contextlib.suppress(FileNotFoundError):
                 self._registers[volume.name] = VolumeRegister(volume, self._authors)
-        self._init_alphabetic_registers()
 
-    def _init_alphabetic_registers(self):
+    def __getitem__(self, item) -> VolumeRegister:
+        return self._registers[item]
+
+    @property
+    def alphabetic(self) -> Generator[AlphabeticRegister, None, None]:
         for idx, start in enumerate(self._RE_ALPHABET):
             end = "zzzzzz"
             before_start = None
@@ -34,16 +37,9 @@ class Registers:
                 before_start = self._RE_ALPHABET[idx - 1]
             with contextlib.suppress(IndexError):
                 after_next_start = self._RE_ALPHABET[idx + 2]
-            self._alphabetic_registers[start] = AlphabeticRegister(start, end,
-                                                                   before_start, after_next_start,
-                                                                   self._registers)
-
-    def __getitem__(self, item) -> VolumeRegister:
-        return self._registers[item]
-
-    @property
-    def alphabetic(self) -> Dict[str, AlphabeticRegister]:
-        return self._alphabetic_registers
+            yield AlphabeticRegister(start, end,
+                                     before_start, after_next_start,
+                                     self._registers)
 
     @property
     def author(self) -> Generator[AuthorRegister, None, None]:

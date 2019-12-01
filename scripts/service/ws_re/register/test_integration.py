@@ -52,7 +52,7 @@ class TestIntegrationRegister(TestCase):
         cls.registers = Registers()
 
     def test_length_of_alphabetic(self):
-        for register in self.registers.alphabetic.values():
+        for register in self.registers.alphabetic:
             self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()),
                                f"register {register} is now to big.")
 
