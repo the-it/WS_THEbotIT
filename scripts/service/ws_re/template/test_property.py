@@ -1,3 +1,4 @@
+# pylint: disable=no-self-use,protected-access
 from unittest import TestCase
 
 from testfixtures import compare
@@ -58,7 +59,6 @@ class TestReProperty(TestCase):
         re_property.value = "value"
         self.assertNotEqual(pre_hash, hash(re_property))
 
-    @staticmethod
-    def test_repr():
+    def test_repr(self):
         re_property = Property(name="Test", default=False)
         compare("<Property (name: Test, value: False, type: bool)>", repr(re_property))

@@ -16,13 +16,14 @@ class ReRegisterPrinter(CanonicalBot):
                                  "Register aktualisiert")
 
         self.logger.info("Print alphabetic register register.")
-        for register in registers.alphabetic.values():
+        for register in registers.alphabetic:
             self.save_if_changed(Page(self.wiki,
                                       f"Paulys Realencyclopädie der classischen "
                                       f"Altertumswissenschaft/Register/{register.start}"),
                                  register.get_register_str(),
                                  "Register aktualisiert")
-
+        for i, register in enumerate(registers.author):
+            print(f"|-\n|{i:4}||{len(register):4}||{register.author.name}")
         return True
 
 

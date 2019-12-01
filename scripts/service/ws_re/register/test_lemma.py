@@ -1,4 +1,4 @@
-# pylint: disable=protected-access
+# pylint: disable=no-self-use,protected-access
 import copy
 from collections import OrderedDict
 from datetime import datetime
@@ -6,7 +6,7 @@ from unittest import TestCase
 
 from testfixtures import compare
 
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.register.lemma import LemmaChapter, Lemma
 from scripts.service.ws_re.register.test_base import BaseTestRegister
@@ -14,8 +14,7 @@ from scripts.service.ws_re.volumes import Volumes
 
 
 class TestLemmaChapter(TestCase):
-    @staticmethod
-    def test_error_in_is_valid():
+    def test_error_in_is_valid(self):
         lemma_chapter = LemmaChapter(1)
         compare(False, lemma_chapter.is_valid())
         lemma_chapter = LemmaChapter({"end": 2})
@@ -25,13 +24,11 @@ class TestLemmaChapter(TestCase):
         lemma_chapter = LemmaChapter({"start": 1, "end": 2})
         compare(True, lemma_chapter.is_valid())
 
-    @staticmethod
-    def test_no_author():
+    def test_no_author(self):
         lemma_chapter = LemmaChapter({"start": 1, "end": 2})
         compare(None, lemma_chapter.author)
 
-    @staticmethod
-    def test_return_dict():
+    def test_return_dict(self):
         lemma_chapter = LemmaChapter({"author": "bla", "end": 2, "start": 1})
         compare(OrderedDict((("start", 1), ("end", 2), ("author", "bla"))), lemma_chapter.get_dict())
 
@@ -41,8 +38,8 @@ class TestLemma(BaseTestRegister):
         self.authors = Authors()
         self.volumes = Volumes()
         self.basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                           "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
-                                                          {"start": 1, "end": 2, "author": "Abbott"}]}
+                           "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Herman Abel"},
+                                                          {"start": 1, "end": 2, "author": "William Abbott"}]}
 
     def test_from_dict_errors(self):
         for entry in ["lemma"]:
@@ -61,8 +58,8 @@ class TestLemma(BaseTestRegister):
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])
         compare(True, re_register_lemma["redirect"])
-        compare([{"start": 1, "end": 1, "author": "Abel"},
-                 {"start": 1, "end": 2, "author": "Abbott"}],
+        compare([{"start": 1, "end": 1, "author": "Herman Abel"},
+                 {"start": 1, "end": 2, "author": "William Abbott"}],
                 re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
 
@@ -121,7 +118,7 @@ class TestLemma(BaseTestRegister):
         # check use case one chapter several authors
         compare("1998", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
-        compare("Abert, Abel", re_register_lemma._get_author_str(
+        compare("Abert, Herman Abel", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
 
         # check if author not there
@@ -135,8 +132,7 @@ class TestLemma(BaseTestRegister):
         compare("", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2})))
 
-    @staticmethod
-    def test_year_format():
+    def test_year_format(self):
         year_free_content = datetime.now().year - 71
         compare("style=\"background:#B9FFC5\"", Lemma._get_year_format(str(year_free_content)))
         compare("style=\"background:#FFCBCB\"", Lemma._get_year_format(str(year_free_content + 1)))
@@ -160,7 +156,7 @@ class TestLemma(BaseTestRegister):
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
 |data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
         two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
@@ -172,11 +168,11 @@ class TestLemma(BaseTestRegister):
 |rowspan=2 data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
 |rowspan=2 data-sort-value="w:en:lemm"|[[w:en:Lemm|Lemm<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
-|Abbott
+|William Abbott
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
         expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|'''{{Anker2|lemma}}''']]", "|I,1")
@@ -192,12 +188,10 @@ class TestLemma(BaseTestRegister):
 ||"""
         compare(expected_row, re_register_lemma.get_table_row())
 
-    @staticmethod
-    def test_strip_accents():
+    def test_strip_accents(self):
         compare("Αβαλας λιμηνaoueeeec", Lemma._strip_accents("Ἀβάλας λιμήνäöüèéêëç"))
 
-    @staticmethod
-    def test_sort_key():
+    def test_sort_key(self):
         compare("uuuiiissceaouesoaceeeeiioouusu", Lemma.make_sort_key("Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"))
         compare("flexum", Lemma.make_sort_key("ad Flexum"))
         compare("epistulis", Lemma.make_sort_key("ab epistulis"))

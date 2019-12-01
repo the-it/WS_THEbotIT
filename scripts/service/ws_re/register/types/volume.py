@@ -1,7 +1,7 @@
 import json
 from typing import Union, Optional, List
 
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import Register, _REGISTER_PATH
 from scripts.service.ws_re.register.lemma import Lemma, LemmaDict
 from scripts.service.ws_re.volumes import Volume, Volumes

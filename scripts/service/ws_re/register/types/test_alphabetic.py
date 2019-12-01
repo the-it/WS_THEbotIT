@@ -1,13 +1,13 @@
-# pylint: disable=protected-access
+# pylint: disable=no-self-use,protected-access
 from collections import OrderedDict
 
 from testfixtures import compare
 
-from scripts.service.ws_re.register.alphabetic import AlphabeticRegister
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.lemma import Lemma
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
-from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.register.types.alphabetic import AlphabeticRegister
+from scripts.service.ws_re.register.types.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 
@@ -47,8 +47,7 @@ class TestAlphabeticRegister(BaseTestRegister):
         expection = [[lemma1, lemma2], [lemma3]]
         compare(expection, register.squash_lemmas(lemmas))
 
-    @staticmethod
-    def test_squash_lemmas_empty():
+    def test_squash_lemmas_empty(self):
         register = AlphabeticRegister("a", "be", None, None, OrderedDict())
         expection = []
         compare(expection, register.squash_lemmas([]))
@@ -120,7 +119,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |style="background:#B9FFC5"|1927
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]-5
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 ||III,1
@@ -130,7 +129,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||III,1
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="delta"|[[RE:Delta|'''{{Anker2|Delta}}''']]

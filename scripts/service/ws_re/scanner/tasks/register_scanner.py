@@ -8,14 +8,13 @@ import pywikibot
 from git import Repo
 from github import Github
 
-from scripts.service.ws_re.register.author import AuthorCrawler, AuthorDict, CrawlerDict
+from scripts.service.ws_re.register.author_crawler import AuthorCrawler
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.register.lemma import LemmaDict, ChapterDict
 from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.register.updater import Updater, RemoveList
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
 from scripts.service.ws_re.template.article import Article
-from tools import fetch_text_from_wiki_site
 from tools.bots import WikiLogger
 
 
@@ -36,23 +35,13 @@ class SCANTask(ReScannerTask):
                 self.logger.info(f"{self._strategies[strategy]}")
         self.logger.info("Fetch changes for the authors.")
         authors = self.registers.authors
-        authors.set_mappings(self._get_author_mapping())
-        authors.set_author(self._process_author_infos())
+        authors.set_mappings(AuthorCrawler.get_author_mapping(self.wiki))
+        authors.set_author(AuthorCrawler.process_author_infos(self.wiki))
         self.logger.info("Persist the author data.")
         authors.persist()
         self.logger.info("Persist the register data.")
         self.registers.persist()
         self._push_changes()
-
-    def _process_author_infos(self) -> Dict[str, AuthorDict]:
-        text = fetch_text_from_wiki_site(self.wiki,
-                                         "Paulys Realencyclopädie der classischen "
-                                         "Altertumswissenschaft/Autoren")
-        return AuthorCrawler.get_authors(text)
-
-    def _get_author_mapping(self) -> CrawlerDict:
-        text = fetch_text_from_wiki_site(self.wiki, "Modul:RE/Autoren")
-        return AuthorCrawler.get_mapping(text)
 
     @staticmethod
     def _fetch_wp_link(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:

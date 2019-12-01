@@ -1,10 +1,10 @@
-# pylint: disable=protected-access
+# pylint: disable=no-self-use,protected-access
 import contextlib
 from unittest import skipUnless, TestCase, skip
 
 from pyfiglet import Figlet
 
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.registers import Registers
 from tools import INTEGRATION_TEST
 
@@ -52,7 +52,7 @@ class TestIntegrationRegister(TestCase):
         cls.registers = Registers()
 
     def test_length_of_alphabetic(self):
-        for register in self.registers.alphabetic.values():
+        for register in self.registers.alphabetic:
             self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()),
                                f"register {register} is now to big.")
 
@@ -115,8 +115,7 @@ class TestIntegrationRegister(TestCase):
 
 @skip("only for analysis")
 class TestAnalyse(TestCase):
-    @staticmethod
-    def test_compare_lemma():  # pragma: no cover
+    def test_compare_lemma(self):  # pragma: no cover
         lemma_1 = "lemma 1"
         lemma_2 = "lemma 1"
         for i, _ in enumerate(lemma_1):
