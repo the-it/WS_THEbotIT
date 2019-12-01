@@ -1,3 +1,4 @@
+# pylint: disable=no-self-use,protected-access
 from unittest import TestCase
 
 from testfixtures import compare
@@ -7,8 +8,7 @@ from scripts.service.ws_re.volumes import Volume, Volumes, VolumeType
 
 
 class TestVolume(TestCase):
-    @staticmethod
-    def test_init():
+    def test_init(self):
         volume = Volume("I,1", "1900", "Aal", "Bethel")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
@@ -16,8 +16,7 @@ class TestVolume(TestCase):
         compare("Aal", volume.start)
         compare("Bethel", volume.end)
 
-    @staticmethod
-    def test_init_by_name():
+    def test_init_by_name(self):
         volume = Volume(name="I,1", year="1900", start="Aal", end="Bethel")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
@@ -32,8 +31,7 @@ class TestVolume(TestCase):
         self.assertIsNone(volume.start)
         self.assertIsNone(volume.end)
 
-    @staticmethod
-    def test_init_year_as_int():
+    def test_init_year_as_int(self):
         volume = Volume(name="S I", year=1900)
         compare("S I", volume.name)
         compare("1900", volume.year)
@@ -50,8 +48,7 @@ class TestVolume(TestCase):
         with self.assertRaises(ReDatenException):
             print(Volume("R I", "1900", "Aal", "Bethel").type)
 
-    @staticmethod
-    def test_sort_key():
+    def test_sort_key(self):
         volume = Volume("I,1", "1900", "Aal", "Bethel")
         compare("1_01_1", volume.sort_key)
         volume = Volume("IX A,2", "1900", "Aal", "Bethel")

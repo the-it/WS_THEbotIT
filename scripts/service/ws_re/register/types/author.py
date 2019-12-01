@@ -1,9 +1,10 @@
 from typing import Dict, List
 
-from scripts.service.ws_re.register.author import Authors, Author
+from scripts.service.ws_re.register.author import Author
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import Register
 from scripts.service.ws_re.register.lemma import Lemma
-from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.register.types.volume import VolumeRegister
 
 
 class AuthorRegister(Register):

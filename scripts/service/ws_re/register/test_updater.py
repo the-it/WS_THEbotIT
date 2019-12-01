@@ -2,11 +2,11 @@
 from ddt import ddt, data
 from testfixtures import compare
 
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
+from scripts.service.ws_re.register.types.volume import VolumeRegister
 from scripts.service.ws_re.register.updater import Updater
-from scripts.service.ws_re.register.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 
@@ -218,8 +218,7 @@ class TestUpdater(BaseTestRegister):
         post_lemma_next = register.get_lemma_by_name("O")
         compare(None, post_lemma_next["previous"])
 
-    @staticmethod
-    def test_update_by_insert_before_next():
+    def test_update_by_insert_before_next(self):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "Something", "next": "Ö"}

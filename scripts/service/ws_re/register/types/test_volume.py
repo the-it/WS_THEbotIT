@@ -1,18 +1,17 @@
-# pylint: disable=protected-access
+# pylint: disable=no-self-use,protected-access
 from unittest import TestCase, skip
 
 from testfixtures import compare, StringComparison
 
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
     _TEST_REGISTER_PATH
-from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.register.types.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 
 class TestRegister(BaseTestRegister):
-    @staticmethod
-    def test_init():
+    def test_init(self):
         copy_tst_data("I_1_base", "I_1")
         VolumeRegister(Volumes()["I,1"], Authors())
 
@@ -32,8 +31,7 @@ class TestRegister(BaseTestRegister):
         self.assertTrue("VG=X A" in si)
         self.assertTrue("NF=S II" in si)
 
-    @staticmethod
-    def test_header_proof_read():
+    def test_header_proof_read(self):
         copy_tst_data("I_1_base", "I_1")
         i1 = VolumeRegister(Volumes()["I,1"], Authors())._get_header().replace("\n", "")
         compare(StringComparison(".*SUM=8.*"), i1)
@@ -41,8 +39,7 @@ class TestRegister(BaseTestRegister):
         compare(StringComparison(".*KOR=2.*"), i1)
         compare(StringComparison(".*FER=3.*"), i1)
 
-    @staticmethod
-    def test_get_table():
+    def test_get_table(self):
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         expected_table = """{{RERegister
@@ -78,8 +75,7 @@ class TestRegister(BaseTestRegister):
 Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
         compare(expected_table, register.get_register_str())
 
-    @staticmethod
-    def test_persist():
+    def test_persist(self):
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         register._lemmas[0]._lemma_dict["previous"] = None
@@ -114,8 +110,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             compare(expect, register_file.read())
 
-    @staticmethod
-    def test_normalize_sort_key():
+    def test_normalize_sort_key(self):
         compare("aaa", VolumeRegister.normalize_sort_key({"lemma": "ååå"}))
         compare("bbb", VolumeRegister.normalize_sort_key({"lemma": "ååå", "sort_key": "bbb"}))
 
@@ -133,8 +128,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         compare("Aarassos", lemma["previous"])
         self.assertIsNone(register.get_lemma_by_name("Abracadabra"))
 
-    @staticmethod
-    def test_get_lemma_self_append():
+    def test_get_lemma_self_append(self):
         copy_tst_data("I_1_self_append", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma_by_name("Aal")
@@ -154,8 +148,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
         with self.assertRaises(IndexError):
             print(register[8])
 
-    @staticmethod
-    def test_get_id_of_lemma():
+    def test_get_id_of_lemma(self):
         copy_tst_data("I_1_self_append", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         compare(0, register.get_index_of_lemma("Aal"))
@@ -168,8 +161,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
 
 @skip("only for analysis")
 class TestIntegrationRegister(TestCase):
-    @staticmethod
-    def test_json_integrity():  # pragma: no cover
+    def test_json_integrity(self):  # pragma: no cover
         for volume in Volumes().all_volumes:
             print(volume)
             VolumeRegister(volume, Authors())

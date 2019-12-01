@@ -2,7 +2,7 @@ from typing import Dict, List, Optional
 
 from scripts.service.ws_re.register.base import Register
 from scripts.service.ws_re.register.lemma import Lemma
-from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.register.types.volume import VolumeRegister
 
 
 class AlphabeticRegister(Register):

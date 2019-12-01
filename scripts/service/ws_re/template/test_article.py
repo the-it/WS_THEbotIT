@@ -1,3 +1,4 @@
+# pylint: disable=no-self-use,protected-access
 from unittest import TestCase
 
 from testfixtures import compare
@@ -159,8 +160,7 @@ class TestReArticle(TestCase):
                                     "Article has the wrong structure. Wrong order of templates."):
             Article.from_text(article_text)
 
-    @staticmethod
-    def test_complete_article():
+    def test_complete_article(self):
         article_text = ARTICLE_TEMPLATE
         Article.from_text(article_text)
 

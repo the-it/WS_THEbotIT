@@ -5,7 +5,7 @@ from collections import OrderedDict
 from datetime import datetime
 from typing import Union, List, Tuple, KeysView, Optional, TypedDict, Literal
 
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.volumes import Volume
 

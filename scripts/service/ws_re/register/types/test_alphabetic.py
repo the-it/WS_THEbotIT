@@ -1,13 +1,13 @@
-# pylint: disable=protected-access
+# pylint: disable=no-self-use,protected-access
 from collections import OrderedDict
 
 from testfixtures import compare
 
-from scripts.service.ws_re.register.alphabetic import AlphabeticRegister
-from scripts.service.ws_re.register.author import Authors
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.lemma import Lemma
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
-from scripts.service.ws_re.register.volume import VolumeRegister
+from scripts.service.ws_re.register.types.alphabetic import AlphabeticRegister
+from scripts.service.ws_re.register.types.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 
@@ -47,8 +47,7 @@ class TestAlphabeticRegister(BaseTestRegister):
         expection = [[lemma1, lemma2], [lemma3]]
         compare(expection, register.squash_lemmas(lemmas))
 
-    @staticmethod
-    def test_squash_lemmas_empty():
+    def test_squash_lemmas_empty(self):
         register = AlphabeticRegister("a", "be", None, None, OrderedDict())
         expection = []
         compare(expection, register.squash_lemmas([]))

@@ -8,7 +8,7 @@ import pywikibot
 from git import Repo
 from github import Github
 
-from scripts.service.ws_re.register.author import AuthorCrawler
+from scripts.service.ws_re.register.author_crawler import AuthorCrawler
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.register.lemma import LemmaDict, ChapterDict
 from scripts.service.ws_re.register.registers import Registers

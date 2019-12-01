@@ -3,7 +3,9 @@ from typing import Set, List
 
 from pywikibot import Site
 
-from scripts.service.ws_re.register.author import Authors, Author, AuthorCrawler
+from scripts.service.ws_re.register.author import Author
+from scripts.service.ws_re.register.author_crawler import AuthorCrawler
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.registers import Registers
 
 
