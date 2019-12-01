@@ -13,6 +13,8 @@ from tools import fetch_text_from_wiki_site
 class AuthorDict(TypedDict, total=False):
     birth: int
     death: int
+    first_name: str
+    last_name: str
     redirect: str
 
 
@@ -39,6 +41,18 @@ class Author:
     def birth(self) -> Optional[int]:
         if "birth" in self._dict.keys():
             return self._dict["birth"]
+        return None
+
+    @property
+    def first_name(self) -> Optional[str]:
+        if "first_name" in self._dict.keys():
+            return self._dict["first_name"]
+        return None
+
+    @property
+    def last_name(self) -> Optional[str]:
+        if "last_name" in self._dict.keys():
+            return self._dict["last_name"]
         return None
 
     @property
@@ -130,6 +144,9 @@ class Authors:
         return self._mapping
 
 
+TRANS_DICT = str.maketrans({"[": "", "]": "", "'": ""})
+
+
 class AuthorCrawler:
     _SIMPLE_REGEX_MAPPING = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
     _COMPLEX_REGEX_MAPPING = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\{([^\}]*)\}")
@@ -210,8 +227,7 @@ class AuthorCrawler:
         # if it's a link use only the second part
         if re.search(r"\[\[", author):
             author = author.split("|")[1]
-        translation_dict = str.maketrans({"[": "", "]": "", "'": ""})  # todo: field
-        author = author.translate(translation_dict)
+        author = author.translate(TRANS_DICT)
         names = author.split(",")
         # handle funky things with a "="-character
         try:

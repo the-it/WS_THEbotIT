@@ -120,7 +120,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |style="background:#B9FFC5"|1927
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]-5
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 ||III,1
@@ -130,7 +130,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||III,1
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="delta"|[[RE:Delta|'''{{Anker2|Delta}}''']]

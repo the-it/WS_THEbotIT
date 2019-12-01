@@ -20,6 +20,12 @@ class TestAuthor(TestCase):
         compare(None, register_author.death)
         compare(1999, register_author.birth)
 
+        register_author = Author("Test Name", {"first_name": "Test"})
+        compare("Test", register_author.first_name)
+
+        register_author = Author("Test Name", {"last_name": "Name"})
+        compare("Name", register_author.last_name)
+
         register_author = Author("Test Name", {"redirect": "Tada"})
         compare(None, register_author.death)
         compare("Tada", register_author.redirect)
@@ -29,10 +35,10 @@ class TestAuthors(BaseTestRegister):
     def test_load_data(self):
         authors = Authors()
         author = authors.get_author_by_mapping("Abbott", "I,1")
-        compare("Abbott", author[0].name)
+        compare("William Abbott", author[0].name)
         compare(None, author[0].death)
         author = authors.get_author_by_mapping("Abel", "I,1")
-        compare("Abel", author[0].name)
+        compare("Herman Abel", author[0].name)
         compare(1998, author[0].death)
         author = authors.get_author_by_mapping("Abel", "XVI,1")
         compare("Abel", author[0].name)
@@ -42,7 +48,7 @@ class TestAuthors(BaseTestRegister):
         compare(1927, author[0].death)
         author = authors.get_author_by_mapping("redirect_list", "XVI,1")
         compare("Abert", author[0].name)
-        compare("Abel", author[1].name)
+        compare("Herman Abel", author[1].name)
         compare(1927, author[0].death)
         compare([], authors.get_author_by_mapping("Tada", "XVI,1"))
         author = authors.get_author("Abert|")
@@ -50,22 +56,22 @@ class TestAuthors(BaseTestRegister):
 
     def test_set_mapping(self):
         authors = Authors()
-        compare("Abbott", authors._mapping["Abbott"])
+        compare("William Abbott", authors._mapping["Abbott"])
         self.assertFalse("New" in authors._mapping)
-        authors.set_mappings({"Abbott": "Abbott_new", "New": "New"})
-        compare("Abbott_new", authors._mapping["Abbott"])
+        authors.set_mappings({"William Abbott": "Abbott_new", "New": "New"})
+        compare("Abbott_new", authors._mapping["William Abbott"])
         compare("New", authors._mapping["New"])
 
     def test_set_author(self):
         authors = Authors()
 
         author = authors.get_author_by_mapping("Abel", "I,1")
-        compare("Abel", author[0].name)
+        compare("Herman Abel", author[0].name)
         compare(1998, author[0].death)
         compare(None, author[0].birth)
-        authors.set_author({"Abel": {"birth": 1900, "death": 1990}})
+        authors.set_author({"Herman Abel": {"birth": 1900, "death": 1990}})
         author = authors.get_author_by_mapping("Abel", "I,1")
-        compare("Abel", author[0].name)
+        compare("Herman Abel", author[0].name)
         compare(1990, author[0].death)
         compare(1900, author[0].birth)
 
@@ -87,10 +93,10 @@ class TestAuthors(BaseTestRegister):
 
     def test_iter(self):
         authors = iter(Authors())
-        compare("Abbott", next(authors).name)
-        compare("Abel", next(authors).name)
+        compare("William Abbott", next(authors).name)
         compare("Abel", next(authors).name)
         compare("Abert", next(authors).name)
+        compare("Herman Abel", next(authors).name)
         with self.assertRaises(StopIteration):
             # redirects doesn't count
             next(authors)

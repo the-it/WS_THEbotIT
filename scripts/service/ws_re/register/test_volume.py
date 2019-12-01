@@ -65,7 +65,7 @@ class TestRegister(BaseTestRegister):
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]

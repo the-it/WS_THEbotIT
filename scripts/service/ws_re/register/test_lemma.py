@@ -41,8 +41,8 @@ class TestLemma(BaseTestRegister):
         self.authors = Authors()
         self.volumes = Volumes()
         self.basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                           "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
-                                                          {"start": 1, "end": 2, "author": "Abbott"}]}
+                           "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Herman Abel"},
+                                                          {"start": 1, "end": 2, "author": "William Abbott"}]}
 
     def test_from_dict_errors(self):
         for entry in ["lemma"]:
@@ -61,8 +61,8 @@ class TestLemma(BaseTestRegister):
         compare("previous", re_register_lemma["previous"])
         compare("next", re_register_lemma["next"])
         compare(True, re_register_lemma["redirect"])
-        compare([{"start": 1, "end": 1, "author": "Abel"},
-                 {"start": 1, "end": 2, "author": "Abbott"}],
+        compare([{"start": 1, "end": 1, "author": "Herman Abel"},
+                 {"start": 1, "end": 2, "author": "William Abbott"}],
                 re_register_lemma["chapters"])
         compare(5, len(re_register_lemma))
 
@@ -121,7 +121,7 @@ class TestLemma(BaseTestRegister):
         # check use case one chapter several authors
         compare("1998", re_register_lemma._get_death_year(
             LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
-        compare("Abert, Abel", re_register_lemma._get_author_str(
+        compare("Abert, Herman Abel", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
 
         # check if author not there
@@ -160,7 +160,7 @@ class TestLemma(BaseTestRegister):
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
 |data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
         two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
@@ -172,11 +172,11 @@ class TestLemma(BaseTestRegister):
 |rowspan=2 data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
 |rowspan=2 data-sort-value="w:en:lemm"|[[w:en:Lemm|Lemm<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
-|Abbott
+|William Abbott
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
         expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|'''{{Anker2|lemma}}''']]", "|I,1")

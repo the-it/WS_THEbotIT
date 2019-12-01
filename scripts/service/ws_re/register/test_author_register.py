@@ -21,13 +21,13 @@ class TestAuthorRegister(BaseTestRegister):
         self.registers["III,1"] = VolumeRegister(self.volumes["III,1"], self.authors)
 
     def test_init(self):
-        abel_register = AuthorRegister(self.authors.get_author("Abel"), self.authors, self.registers)
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
         compare(4, len(abel_register))
 
     def test_make_table(self):
-        abel_register = AuthorRegister(self.authors.get_author("Abel"), self.authors, self.registers)
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
         expected_table = """{{RERegister
-|AUTHOR=Abel
+|AUTHOR=Herman Abel
 |SUM=4
 |UNK=0
 |KOR=1
@@ -46,14 +46,14 @@ class TestAuthorRegister(BaseTestRegister):
 ||I,1
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||I,1
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
@@ -64,14 +64,14 @@ class TestAuthorRegister(BaseTestRegister):
 |style="background:#B9FFC5"|1927
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]-5
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||III,1
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
-|Abel
+|Herman Abel
 |style="background:#FFCBCB"|1998
 |}
 [[Kategorie:RE:Register|!]]
