@@ -210,7 +210,7 @@ class TestAuthorCrawler(TestCase):
                 self.crawler._extract_author_name("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
         compare(("Eduard", "Thraemer"),
                 self.crawler._extract_author_name("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
-        compare(("Buren s. Van Buren", ""), self.crawler._extract_author_name("Buren s. Van Buren"))
+        compare(("", "Buren s. Van Buren"), self.crawler._extract_author_name("Buren s. Van Buren"))
         compare(("Karl", "Praechter"), self.crawler._extract_author_name("Praechter, K[arl]<nowiki></nowiki>"))
 
     def test_extract_years(self):
@@ -258,6 +258,11 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 |XVI,1
 |[[w:Walther Abel|Wikipedia]]
 |-
+|Wolf [?]
+|
+|XXI,2–XXII,1
+|<!-- siehe Diskussionsseite -->
+|-
 |Zwicker, Joh[annes = Hanns]
 |1881–1969
 |VII,2–IX,1, XI,1, XVI,1, XVII,2–XIX,1, XX,1–XXI,2, I A,2–III A,1, S V
@@ -269,7 +274,7 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
     def test_split_author_table(self):
 
         splitted_table = self.crawler._split_author_table(self.author_table)
-        compare(4, len(splitted_table))
+        compare(5, len(splitted_table))
         expected_entry = """|Abbott, K[enneth] M[organ]{{Anker|A}}
 |1906–1988
 |XIX,2
@@ -294,21 +299,22 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 |XIX,2
 |[[w:Kenneth Morgan Abbott|Wikipedia]]"""
 
-        expect = {"Kenneth Morgan Abbott": {"death": 1988, "birth": 1906}}
+        expect = {"Kenneth Morgan Abbott": {"death": 1988, "birth": 1906, "first_name": "Kenneth Morgan", "last_name": "Abbott"}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906–1988")))
 
-        expect = {"Kenneth Morgan Abbott": {"birth": 1906}}
+        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "first_name": "Kenneth Morgan", "last_name": "Abbott"}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906")))
 
-        expect = {"Kenneth Morgan Abbott": {}}
+        expect = {"Kenneth Morgan Abbott": {"first_name": "Kenneth Morgan", "last_name": "Abbott"}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "")))
 
     def test_get_complete_authors(self):
         author_mapping = self.crawler.get_authors(self.author_table)
-        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988},
-                  "Karlhans Abel": {"birth": 1919, "death": 1998},
-                  "Walther Abel": {"birth": 1906, "death": 1987},
-                  "Johannes Zwicker": {"birth": 1881, "death": 1969}}
+        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988, "first_name": "Kenneth Morgan", "last_name": "Abbott"},
+                  "Karlhans Abel": {"birth": 1919, "death": 1998, "first_name": "Karlhans", "last_name": "Abel"},
+                  "Walther Abel": {"birth": 1906, "death": 1987, "first_name": "Walther", "last_name": "Abel"},
+                  "Wolf ?": {"last_name": "Wolf ?"},
+                  "Johannes Zwicker": {"birth": 1881, "death": 1969, "first_name": "Johannes", "last_name": "Zwicker"}}
         compare(expect, author_mapping)
 
     table_head = "{{|class=\"wikitable sortable\"\n|-\n!width=\"200\" | Name/Sigel\n!width=\"75\" " \
@@ -323,7 +329,7 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 |"""
         author_table = self.table_head + author + self.table_bottom
         author_mapping = self.crawler.get_authors(author_table)
-        expect = {"Gabriel Kazarow": {"birth": 2222, "death": 3333}}
+        expect = {"Gabriel Kazarow": {"birth": 2222, "death": 3333, "first_name": "Gabriel", "last_name": "Kazarow"}}
         compare(expect, author_mapping)
 
     def test_bug_groebe(self):
@@ -334,5 +340,5 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 |"""
         author_table = self.table_head + author + self.table_bottom
         author_mapping = self.crawler.get_authors(author_table)
-        expect = {"Paul Groebe": {"birth": 2222, "death": 3333}}
+        expect = {"Paul Groebe": {"birth": 2222, "death": 3333, "first_name": "Paul", "last_name": "Groebe"}}
         compare(expect, author_mapping)

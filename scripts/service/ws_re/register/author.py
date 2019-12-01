@@ -210,7 +210,7 @@ class AuthorCrawler:
         # if it's a link use only the second part
         if re.search(r"\[\[", author):
             author = author.split("|")[1]
-        translation_dict = str.maketrans({"[": "", "]": "", "'": ""})
+        translation_dict = str.maketrans({"[": "", "]": "", "'": ""})  # todo: field
         author = author.translate(translation_dict)
         names = author.split(",")
         # handle funky things with a "="-character
@@ -220,7 +220,7 @@ class AuthorCrawler:
             if "=" in names[1]:
                 names[1] = names[1].split("=")[0].strip()
         except IndexError:
-            return names[0].strip(), ""
+            return "", names[0].strip()
         return names[1].strip(), names[0].strip()
 
     @staticmethod
@@ -235,8 +235,10 @@ class AuthorCrawler:
         lines = cls._split_author(author_lines)
         author_tuple = cls._extract_author_name(lines[0])
         years = cls._extract_years(lines[1])
-        author = f"{author_tuple[0]} {author_tuple[1]}"
-        author_dict: Dict[str, AuthorDict] = {author: {}}
+        author = f"{author_tuple[0]} {author_tuple[1]}".strip()
+        author_dict: Dict[str, AuthorDict] = {author: {"last_name": author_tuple[1]}}
+        if author_tuple[0]:
+            author_dict[author]["first_name"] = author_tuple[0]
         birth_year = years[0]
         if birth_year:
             author_dict[author]["birth"] = birth_year
