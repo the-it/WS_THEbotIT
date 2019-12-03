@@ -3,7 +3,7 @@ from typing import List, Optional
 
 from scripts.service.ws_re.register.base import RegisterException, _REGISTER_PATH
 from scripts.service.ws_re.register.lemma import Lemma, LemmaDict
-from scripts.service.ws_re.register.types.volume import VolumeRegister
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.volumes import VolumeType
 
 # type hints

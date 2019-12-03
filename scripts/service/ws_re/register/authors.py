@@ -1,5 +1,6 @@
 import contextlib
 import json
+from functools import lru_cache
 from typing import Dict, Generator, List
 
 from scripts.service.ws_re.register.author import Author, AuthorDict
@@ -24,6 +25,7 @@ class Authors:
             if not author.redirect:
                 yield author
 
+    @lru_cache(maxsize=1000)
     def get_author_by_mapping(self, name: str, issue: str) -> List[Author]:
         author_list = []
         with contextlib.suppress(KeyError):

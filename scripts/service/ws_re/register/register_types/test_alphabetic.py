@@ -6,8 +6,8 @@ from testfixtures import compare
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.lemma import Lemma
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
-from scripts.service.ws_re.register.types.alphabetic import AlphabeticRegister
-from scripts.service.ws_re.register.types.volume import VolumeRegister
+from scripts.service.ws_re.register.register_types.alphabetic import AlphabeticRegister
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 

@@ -3,9 +3,9 @@ from collections import OrderedDict
 from typing import Dict, Generator
 
 from scripts.service.ws_re.register.authors import Authors
-from scripts.service.ws_re.register.types.alphabetic import AlphabeticRegister
-from scripts.service.ws_re.register.types.author import AuthorRegister
-from scripts.service.ws_re.register.types.volume import VolumeRegister
+from scripts.service.ws_re.register.register_types.alphabetic import AlphabeticRegister
+from scripts.service.ws_re.register.register_types.author import AuthorRegister
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 

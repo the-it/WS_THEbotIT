@@ -9,7 +9,7 @@ from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import _REGISTER_PATH
 from scripts.service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH, \
     copy_tst_data
-from scripts.service.ws_re.register.types.volume import VolumeRegister
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from scripts.service.ws_re.template.re_page import RePage

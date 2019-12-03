@@ -1,27 +1,25 @@
-from typing import Dict, List, Optional
+from typing import Dict, List
 
+from scripts.service.ws_re.register.author import Author
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import Register
 from scripts.service.ws_re.register.lemma import Lemma
-from scripts.service.ws_re.register.types.volume import VolumeRegister
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 
 
-class AlphabeticRegister(Register):
+class AuthorRegister(Register):
     def __init__(self,
-                 start: str,
-                 end: str,
-                 before_start: Optional[str],
-                 after_next_start: Optional[str],
+                 author: Author,
+                 authors: Authors,
                  registers: Dict[str, VolumeRegister]):
-        self._start: str = start
-        self._end: str = end
-        self._before_start = before_start
-        self._after_next_start = after_next_start
+        self._author: Author = author
+        self._authors: Authors = authors
         self._registers = registers
         self._lemmas: List[Lemma] = []
         self._init_lemmas()
 
     def __repr__(self):
-        return f"<{self.__class__.__name__} - start:{self._start}, end:{self._end}, lemmas:{len(self)}>"
+        return f"<{self.__class__.__name__} - author:{self._author}, lemmas:{len(self)}>"
 
     def __len__(self):
         return len(self.squash_lemmas(self._lemmas))
@@ -30,30 +28,24 @@ class AlphabeticRegister(Register):
         return self._lemmas[item]
 
     @property
-    def start(self):
-        return self._start
-
-    @property
-    def end(self):
-        return self._end
+    def author(self):
+        return self._author
 
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
             for lemma in self._registers[volume_str].lemmas:
-                if self._is_lemma_in_range(lemma):
+                if self._is_lemma_of_author(lemma):
                     lemmas.append(lemma)
         self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
 
-    def _is_lemma_in_range(self, lemma: Lemma) -> bool:
-        append = True
-        # include start
-        if lemma.sort_key < self._start:
-            append = False
-        # exclude end
-        elif lemma.sort_key >= self._end:
-            append = False
-        return append
+    def _is_lemma_of_author(self, lemma: Lemma) -> bool:
+        for chapter in lemma.chapters:
+            if chapter.author:
+                authors_of_lemma = self._authors.get_author_by_mapping(chapter.author, lemma.volume.name)
+                if self._author in authors_of_lemma:
+                    return True
+        return False
 
     def _get_table(self) -> str:
         header = """{|class="wikitable sortable"
@@ -84,12 +76,7 @@ class AlphabeticRegister(Register):
 
     def _get_header(self) -> str:
         header = ["RERegister"]
-        header.append(f"ALPHABET={self.start}")
-        if self._before_start:
-            header.append(f"VG={self._before_start}")
-        header.append(f"NF={self.end}")
-        if self._after_next_start:
-            header.append(f"NFNF={self._after_next_start}")
+        header.append(f"AUTHOR={self._author.name}")
         header.append(f"SUM={len(self._lemmas)}")
         # calculate proof_read status
         fer, kor, unk = self.proof_read(self._lemmas)
