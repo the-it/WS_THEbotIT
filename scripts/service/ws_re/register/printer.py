@@ -7,25 +7,23 @@ from tools.bots import CanonicalBot
 class ReRegisterPrinter(CanonicalBot):
     def task(self):
         registers = Registers()
-        # self.logger.info("Print volume register.")
-        # for register in registers.volumes.values():
-        #     self.logger.info(register)
-        #     string = register.get_register_str()
-        #     # self.save_if_changed(Page(self.wiki,
-        #     #                           f"Paulys Realencyclopädie der classischen "
-        #     #                           f"Altertumswissenschaft/Register/{register.volume.name}"),
-        #     #                      register.get_register_str(),
-        #     #                      "Register aktualisiert")
-        #
-        # self.logger.info("Print alphabetic register.")
-        # for register in registers.alphabetic:
-        #     self.logger.debug(register)
-        #     string = register.get_register_str()
-        #     # self.save_if_changed(Page(self.wiki,
-        #     #                           f"Paulys Realencyclopädie der classischen "
-        #     #                           f"Altertumswissenschaft/Register/{register.start}"),
-        #     #                      register.get_register_str(),
-        #     #                      "Register aktualisiert")
+        self.logger.info("Print volume register.")
+        for register in registers.volumes.values():
+            self.logger.info(register)
+            self.save_if_changed(Page(self.wiki,
+                                      f"Paulys Realencyclopädie der classischen "
+                                      f"Altertumswissenschaft/Register/{register.volume.name}"),
+                                 register.get_register_str(),
+                                 "Register aktualisiert")
+
+        self.logger.info("Print alphabetic register.")
+        for register in registers.alphabetic:
+            self.logger.debug(register)
+            self.save_if_changed(Page(self.wiki,
+                                      f"Paulys Realencyclopädie der classischen "
+                                      f"Altertumswissenschaft/Register/{register.start}"),
+                                 register.get_register_str(),
+                                 "Register aktualisiert")
         self.logger.info("Print author register.")
         for i, register in enumerate(registers.author):
             self.logger.debug(f"|-\n|{i:4}||{len(register):4}||{register.author.name}")

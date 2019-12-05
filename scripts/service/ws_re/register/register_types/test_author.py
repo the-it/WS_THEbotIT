@@ -4,9 +4,9 @@ from collections import OrderedDict
 from testfixtures import compare
 
 from scripts.service.ws_re.register.authors import Authors
-from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from scripts.service.ws_re.register.register_types.author import AuthorRegister
 from scripts.service.ws_re.register.register_types.volume import VolumeRegister
+from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from scripts.service.ws_re.volumes import Volumes
 
 
@@ -37,6 +37,7 @@ class TestAuthorRegister(BaseTestRegister):
 {|class="wikitable sortable"
 !Artikel
 !Band
+!Status
 !Wikilinks
 !Seite
 !Autor
@@ -44,6 +45,7 @@ class TestAuthorRegister(BaseTestRegister):
 |-
 |data-sort-value="aba 001"|[[RE:Aba 1|'''{{Anker2|Aba 1}}''']]
 ||I,1
+|style="background:#AA0000"|UNK
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Herman Abel
@@ -51,6 +53,7 @@ class TestAuthorRegister(BaseTestRegister):
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||I,1
+|style="background:#556B2F"|KOR
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Herman Abel
@@ -58,6 +61,7 @@ class TestAuthorRegister(BaseTestRegister):
 |-
 |rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=2 |I,1
+|rowspan=2 style="background:#669966"|FER
 |rowspan=2 |
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
@@ -69,6 +73,7 @@ class TestAuthorRegister(BaseTestRegister):
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||III,1
+|style="background:#669966"|FER
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Herman Abel

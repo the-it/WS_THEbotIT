@@ -5,9 +5,9 @@ from testfixtures import compare
 
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.lemma import Lemma
-from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from scripts.service.ws_re.register.register_types.alphabetic import AlphabeticRegister
 from scripts.service.ws_re.register.register_types.volume import VolumeRegister
+from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from scripts.service.ws_re.volumes import Volumes
 
 
@@ -106,6 +106,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 {|class="wikitable sortable"
 !Artikel
 !Band
+!Status
 !Wikilinks
 !Seite
 !Autor
@@ -113,6 +114,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |-
 |rowspan=3 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=2 |I,1
+|rowspan=2 style="background:#669966"|FER
 |rowspan=2 |
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert
@@ -123,10 +125,12 @@ class TestAlphabeticRegister(BaseTestRegister):
 |style="background:#FFCBCB"|1998
 |-
 ||III,1
+|style="background:#AA0000"|UNK
 ||
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||III,1
+|style="background:#669966"|FER
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Herman Abel
@@ -134,6 +138,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |-
 |data-sort-value="delta"|[[RE:Delta|'''{{Anker2|Delta}}''']]
 ||III,1
+|style="background:#556B2F"|KOR
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert
@@ -141,6 +146,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |-
 |data-sort-value="uaaa"|[[RE:Vaaa|'''{{Anker2|Vaaa}}''']]
 ||III,1
+|style="background:#669966"|FER
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert
@@ -148,6 +154,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |-
 |data-sort-value="ueee"|[[RE:Ueee|'''{{Anker2|Ueee}}''']]
 ||III,1
+|style="background:#AA0000"|UNK
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Abert

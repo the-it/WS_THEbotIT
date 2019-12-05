@@ -261,6 +261,7 @@ class Lemma():
     def get_table_row(self, print_volume: bool = False) -> str:
         row_string = ["|-"]
         interwiki_links, interwiki_sort_key = self.get_wiki_links()
+        proof_color, proof_state = self.get_proofread()
         if print_volume:
             link_or_volume = self.volume.name
             sort_value = ""
@@ -269,9 +270,11 @@ class Lemma():
             sort_value = f"data-sort-value=\"{self.sort_key}\""
         if len(self._chapters) > 1:
             row_string.append(f"rowspan={len(self._chapters)} {sort_value}|{link_or_volume}")
+            row_string.append(f"rowspan={len(self._chapters)} style=\"background:{proof_color}\"|{proof_state}")
             row_string.append(f"rowspan={len(self._chapters)} {interwiki_sort_key}|{interwiki_links}")
         else:
             row_string.append(f"{sort_value}|{link_or_volume}")
+            row_string.append(f"style=\"background:{proof_color}\"|{proof_state}")
             row_string.append(f"{interwiki_sort_key}|{interwiki_links}")
         for chapter in self._chapters:
             row_string.append(self._get_pages(chapter))
@@ -283,6 +286,18 @@ class Lemma():
         if row_string[-1] == "-":
             row_string.pop(-1)
         return "\n|".join(row_string)
+
+    def get_proofread(self) -> Tuple[str, str]:
+        color = "#AA0000"
+        status = "UNK"
+        proof_state = self["proof_read"]
+        if proof_state == 3:
+            color = "#669966"
+            status = "FER"
+        elif proof_state == 2:
+            color = "#556B2F"
+            status = "KOR"
+        return color, status
 
     def get_link(self) -> str:
         redirect = self.lemma_dict["redirect"] if "redirect" in self.lemma_dict else False

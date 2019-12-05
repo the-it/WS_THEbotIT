@@ -51,6 +51,7 @@ class AuthorRegister(Register):
         header = """{|class="wikitable sortable"
 !Artikel
 !Band
+!Status
 !Wikilinks
 !Seite
 !Autor
