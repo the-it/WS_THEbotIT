@@ -5,29 +5,41 @@ from tools.bots import CanonicalBot
 
 
 class ReRegisterPrinter(CanonicalBot):
-    def task(self):
-        registers = Registers()
-        self.logger.info("Print volume register.")
-        for register in registers.volumes.values():
-            self.logger.info(register)
-            self.save_if_changed(Page(self.wiki,
-                                      f"Paulys Realencyclopädie der classischen "
-                                      f"Altertumswissenschaft/Register/{register.volume.name}"),
-                                 register.get_register_str(),
-                                 "Register aktualisiert")
+    def __init__(self, wiki: Site = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
+        super().__init__(wiki, debug, log_to_screen, log_to_wiki)
+        self.registers = Registers()
 
+    def task(self):
+        self._print_volume()
+        self._print_alphabetic()
+        self._print_author()
+        return True
+
+    def _print_author(self):
+        self.logger.info("Print author register.")
+        for i, register in enumerate(self.registers.author):
+            self.logger.debug(f"|-\n|{i:4}||{len(register):4}||{register.author.name}")
+
+    def _print_alphabetic(self):
         self.logger.info("Print alphabetic register.")
-        for register in registers.alphabetic:
+        for register in self.registers.alphabetic:
             self.logger.debug(register)
             self.save_if_changed(Page(self.wiki,
                                       f"Paulys Realencyclopädie der classischen "
                                       f"Altertumswissenschaft/Register/{register.start}"),
                                  register.get_register_str(),
                                  "Register aktualisiert")
-        self.logger.info("Print author register.")
-        for i, register in enumerate(registers.author):
-            self.logger.debug(f"|-\n|{i:4}||{len(register):4}||{register.author.name}")
-        return True
+
+    def _print_volume(self):
+        self.logger.info("Print volume register.")
+        for register in self.registers.volumes.values():
+            self.logger.info(register)
+            self.save_if_changed(Page(self.wiki,
+                                      f"Paulys Realencyclopädie der classischen "
+                                      f"Altertumswissenschaft/Register/{register.volume.name}"),
+                                 register.get_register_str(),
+                                 "Register aktualisiert")
 
 
 if __name__ == "__main__":  # pragma: no cover
