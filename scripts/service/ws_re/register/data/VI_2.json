@@ -436,53 +436,57 @@
     "lemma": "Exadios",
     "previous": "Exactus",
     "next": "Exagium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1547,
         "end": 1547,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
   {
     "lemma": "Exagium",
     "previous": "Exadios",
-    "next": "Exagoge",
+    "next": "Ἐξαγωγή",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1547,
         "end": 1547,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
   {
-    "lemma": "Exagoge",
+    "lemma": "Ἐξαγωγή",
     "previous": "Exagium",
-    "next": "Exaireseos dike",
+    "next": "Ἐξαιρέσεως δίκη",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1547,
         "end": 1548,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
   {
-    "lemma": "Exaireseos dike",
-    "previous": "Exagoge",
-    "next": "Exairesimos hemera",
+    "lemma": "Ἐξαιρέσεως δίκη",
+    "previous": "Ἐξαγωγή",
+    "next": "Ἐξαιρέσιμος ἡμέρα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1548,
         "end": 1549,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
   {
-    "lemma": "Exairesimos hemera",
-    "previous": "Exaireseos dike",
+    "lemma": "Ἐξαιρέσιμος ἡμέρα",
+    "previous": "Ἐξαιρέσεως δίκη",
     "next": "Exainetos 1",
     "chapters": [
       {
@@ -494,7 +498,7 @@
   },
   {
     "lemma": "Exainetos 1",
-    "previous": "Exairesimos hemera",
+    "previous": "Ἐξαιρέσιμος ἡμέρα",
     "next": "Exainetos 2",
     "chapters": [
       {
@@ -16913,11 +16917,12 @@
     "lemma": "Forculus",
     "previous": "Foratianensis",
     "next": "Forceps",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2850,
         "end": 2851,
-        "author": "Wissowa"
+        "author": "Wissowa."
       }
     ]
   },

@@ -8543,11 +8543,13 @@
     "lemma": "Oinoe 1",
     "previous": "Oinochoë",
     "next": "Oinoe 2",
+    "sort_key": "Oinoe 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2235,
         "end": 2235,
-        "author": "Keyßner"
+        "author": "Karl Keyßner."
       }
     ]
   },
@@ -8555,11 +8557,12 @@
     "lemma": "Oinoe 2",
     "previous": "Oinoe 1",
     "next": "Oinoe 3",
+    "sort_key": "Oinoe 02",
     "chapters": [
       {
         "start": 2235,
-        "end": 2235,
-        "author": "Keyßner"
+        "end": 2236,
+        "author": "Karl Keyßner."
       }
     ]
   },
@@ -8567,11 +8570,12 @@
     "lemma": "Oinoe 3",
     "previous": "Oinoe 2",
     "next": "Oinoë 4",
+    "sort_key": "Oinoe 03",
     "chapters": [
       {
         "start": 2236,
         "end": 2236,
-        "author": "Keyßner"
+        "author": "Karl Keyßner."
       }
     ]
   },
@@ -8579,6 +8583,9 @@
     "lemma": "Oinoë 4",
     "previous": "Oinoe 3",
     "next": "Oinoe 5",
+    "sort_key": "Oinoe 04",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2236,
@@ -8590,6 +8597,9 @@
     "lemma": "Oinoe 5",
     "previous": "Oinoë 4",
     "next": "Oinoe 6",
+    "sort_key": "Oinoe 05",
+    "redirect": "Oineon, Oinoe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2236,
@@ -8601,11 +8611,13 @@
     "lemma": "Oinoe 6",
     "previous": "Oinoe 5",
     "next": "Oinoë 7",
+    "sort_key": "Oinoe 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2236,
         "end": 2236,
-        "author": "Bölte"
+        "author": "F. Bölte."
       }
     ]
   },
@@ -8665,7 +8677,7 @@
       {
         "start": 2244,
         "end": 2244,
-        "author": "Schmidt"
+        "author": "Johanna Schmidt."
       }
     ]
   },
