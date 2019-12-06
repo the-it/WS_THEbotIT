@@ -49,3 +49,16 @@ class TestReRegisterPrinter(BaseTestRegister):
             compare(
                 call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Autorenübersicht'),
                 page_mock.call_args_list[2])
+
+    def test_task(self):
+        printer = ReRegisterPrinter()
+        volume_mock: mock.Mock = mock.Mock()
+        alphabetic_mock = mock.Mock()
+        author_mock = mock.Mock()
+        printer._print_volume = volume_mock
+        printer._print_alphabetic = alphabetic_mock
+        printer._print_author = author_mock
+        printer.task()
+        self.assertTrue(volume_mock.called)
+        self.assertTrue(alphabetic_mock.called)
+        self.assertTrue(author_mock.called)
