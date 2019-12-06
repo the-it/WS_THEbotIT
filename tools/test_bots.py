@@ -196,7 +196,7 @@ class TestOneTimeBot(TestCase):
     class LogBot(OneTimeBot):
         def task(self):
             self.logger.info("Test")
-            time.sleep(0.1)
+            time.sleep(0.001)
 
     def test_timestamp_return_start_time(self):
         with mock.patch("tools.bots.PersistedTimestamp.start_of_run",
@@ -262,13 +262,13 @@ class TestOneTimeBot(TestCase):
         class WatchdogBot(OneTimeBot):
             def __init__(self, **kwargs):
                 super().__init__(**kwargs)
-                self.timeout = timedelta(seconds=0.2)
+                self.timeout = timedelta(seconds=0.002)
 
             def task(self):
                 while True:
                     if self._watchdog():
                         raise Exception("watchdog must not fire")  # pragma: no cover
-                    time.sleep(0.4)
+                    time.sleep(0.004)
                     if self._watchdog():
                         return True
                     raise Exception("watchdog must fire")  # pragma: no cover
