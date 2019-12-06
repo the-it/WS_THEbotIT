@@ -5,6 +5,8 @@ from tools.bots import CanonicalBot
 
 
 class ReRegisterPrinter(CanonicalBot):
+    LEMMA_AUTHOR_SIZE = 1000
+
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
@@ -18,8 +20,27 @@ class ReRegisterPrinter(CanonicalBot):
 
     def _print_author(self):
         self.logger.info("Print author register.")
-        for i, register in enumerate(self.registers.author):
-            self.logger.debug(f"|-\n|{i:4}||{len(register):4}||{register.author.name}")
+        overview = ["{|class =\"wikitable sortable\"\n!Autor\n!Artikel"]
+        for register in self.registers.author:
+            if register.author.last_name:
+                self.logger.debug(register)
+                if len(register) >= self.LEMMA_AUTHOR_SIZE:
+                    self.save_if_changed(Page(self.wiki,
+                                              f"Paulys Realencyclopädie der classischen "
+                                              f"Altertumswissenschaft/Register/{register.author.name}"),
+                                         register.get_register_str(),
+                                         "Register aktualisiert")
+                    overview.append(f"|-\n"
+                                    f"|data-sort-value=\"{register.author.last_name}, {register.author.first_name}\""
+                                    f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
+                                    f"{register.author.name}|{register.author.name}]]\n"
+                                    f"|data-sort-value=\"{len(register):4}\"|{len(register)}")
+        overview.append("|}")
+        self.save_if_changed(Page(self.wiki,
+                                  f"Paulys Realencyclopädie der classischen "
+                                  f"Altertumswissenschaft/Register/Autorenübersicht"),
+                             "\n".join(overview),
+                             "Register aktualisiert")
 
     def _print_alphabetic(self):
         self.logger.info("Print alphabetic register.")

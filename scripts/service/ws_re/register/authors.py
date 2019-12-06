@@ -21,7 +21,7 @@ class Authors:
                 self._authors[author] = Author(author, json_dict[author])
 
     def __iter__(self) -> Generator[Author, None, None]:
-        for author in self.authors_dict.values():
+        for author in sorted(self.authors_dict.values(), key=lambda item: f"{item.last_name}, {item.first_name}"):
             if not author.redirect:
                 yield author
 

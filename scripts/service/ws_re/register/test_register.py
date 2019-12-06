@@ -51,14 +51,15 @@ class TestRegisters(BaseTestRegister):
         copy_tst_data("III_1_author", "III_1")
         author_registers = iter(Registers().author)
         register = next(author_registers)
-        compare("William Abbott", register.author.name)
-        compare(2, len(register))
+        compare("Herman Abel", register.author.name)
+        compare(4, len(register))
         register = next(author_registers)
         compare("Abert", register.author.name)
         compare(5, len(register))
         register = next(author_registers)
-        compare("Herman Abel", register.author.name)
-        compare(4, len(register))
+        compare("William Abbott", register.author.name)
+        compare(2, len(register))
+
 
     def test_persist(self):
         copy_tst_data("I_1_alpha", "I_1")

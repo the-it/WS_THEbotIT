@@ -35,3 +35,17 @@ class TestReRegisterPrinter(BaseTestRegister):
                     page_mock.call_args_list[1])
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/z'),
                     page_mock.call_args_list[43])
+
+    def test_print_author(self):
+        with mock.patch("scripts.service.ws_re.register.printer.Page") as page_mock:
+            printer = ReRegisterPrinter()
+            printer.LEMMA_AUTHOR_SIZE = 3
+            printer._print_author()
+            compare(3, len(page_mock.call_args_list))
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel'),
+                    page_mock.call_args_list[0])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Abert'),
+                    page_mock.call_args_list[1])
+            compare(
+                call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Autorenübersicht'),
+                page_mock.call_args_list[2])
