@@ -15,14 +15,14 @@ if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())  # type: ignore
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
-    SCHEDULER.daily_bots = [AuthorList]
+    SCHEDULER.daily_bots = [AuthorList, ReRegisterPrinter]
     SCHEDULER.weekly_bots = {0: [ReScanner],  # monday
                              1: [],
                              2: [],
                              3: [],
                              4: [ReScanner],
                              5: [],
-                             6: [ReStatus, GlCreateMagazine, ReRegisterPrinter]}  # sunday
+                             6: [ReStatus, GlCreateMagazine]}  # sunday
     SCHEDULER.monthly_bots = {1: [GlStatus]}
     SCHEDULER.bots_on_last_day_of_month = []
     with SCHEDULER as bot:

@@ -66,31 +66,14 @@ clean-coverage :
 	echo "######## CLEAN COVERAGE ########"
 	rm -rf .coverage coverage.xml .coverage_html || :
 
-code-climate-pre :
-	echo "####### CODE CLIMATE PRE #######"
-	curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && \
-	chmod +x ./cc-test-reporter && \
-	./cc-test-reporter before-build
-
-code-climate-post :
-	echo "####### CODE CLIMATE POST ######"
-	./cc-test-reporter format-coverage --output "coverage/codeclimate.${N}.json" && \
-	./cc-test-reporter after-build --exit-code 0
-
-clean-code-climate :
-	echo "###### CLEAN CODE CLIMATE ######"
-	rm -rf cc-test-reporter coverage || :
-
-code-climate : clean-code-climate code-climate-pre coverage code-climate-post
-
 codecov :
 	echo "########### CODECOV ############"
 	codecov
 
-clean : clean-pyc clean-coverage clean-code-climate
+clean : clean-pyc clean-coverage
 
 pre-commit : pip3 quality integrationtest
 
 quality : bandit flake8 pycodestyle pylint mypy
 
-.PHONY : clean, code-climate, quality, pre-commit
+.PHONY : clean, quality, pre-commit

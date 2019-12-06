@@ -69,10 +69,10 @@ class TestAuthors(BaseTestRegister):
 
     def test_iter(self):
         authors = iter(Authors())
-        compare("William Abbott", next(authors).name)
+        compare("Herman Abel", next(authors).name)
         compare("Abel", next(authors).name)
         compare("Abert", next(authors).name)
-        compare("Herman Abel", next(authors).name)
+        compare("William Abbott", next(authors).name)
         with self.assertRaises(StopIteration):
             # redirects doesn't count
             next(authors)

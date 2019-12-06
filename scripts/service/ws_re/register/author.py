@@ -42,10 +42,10 @@ class Author:
         return None
 
     @property
-    def last_name(self) -> Optional[str]:
+    def last_name(self) -> str:
         if "last_name" in self._dict.keys():
             return self._dict["last_name"]
-        return None
+        return ""
 
     @property
     def redirect(self) -> Optional[str]:

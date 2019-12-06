@@ -5,7 +5,7 @@ from testfixtures import compare
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import RegisterException
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
-from scripts.service.ws_re.register.types.volume import VolumeRegister
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.register.updater import Updater
 from scripts.service.ws_re.volumes import Volumes
 

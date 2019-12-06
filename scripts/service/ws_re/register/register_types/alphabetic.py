@@ -2,7 +2,7 @@ from typing import Dict, List, Optional
 
 from scripts.service.ws_re.register.base import Register
 from scripts.service.ws_re.register.lemma import Lemma
-from scripts.service.ws_re.register.types.volume import VolumeRegister
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 
 
 class AlphabeticRegister(Register):
@@ -59,6 +59,7 @@ class AlphabeticRegister(Register):
         header = """{|class="wikitable sortable"
 !Artikel
 !Band
+!Status
 !Wikilinks
 !Seite
 !Autor

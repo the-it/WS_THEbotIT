@@ -154,6 +154,7 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+|style="background:#AA0000"|UNK
 |data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Herman Abel
@@ -166,6 +167,7 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |rowspan=2 data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+|rowspan=2 style="background:#AA0000"|UNK
 |rowspan=2 data-sort-value="w:en:lemm"|[[w:en:Lemm|Lemm<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
 |Herman Abel
@@ -185,6 +187,7 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+|style="background:#AA0000"|UNK
 ||"""
         compare(expected_row, re_register_lemma.get_table_row())
 

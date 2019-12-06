@@ -4,9 +4,9 @@ from unittest import TestCase, skip
 from testfixtures import compare, StringComparison
 
 from scripts.service.ws_re.register.authors import Authors
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
     _TEST_REGISTER_PATH
-from scripts.service.ws_re.register.types.volume import VolumeRegister
 from scripts.service.ws_re.volumes import Volumes
 
 
@@ -54,18 +54,21 @@ class TestRegister(BaseTestRegister):
 
 {|class="wikitable sortable"
 !Artikel
+!Status
 !Wikilinks
 !Seite
 !Autor
 !Sterbejahr
 |-
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
+|style="background:#669966"|FER
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
 |Herman Abel
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
+|style="background:#556B2F"|KOR
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Abert

@@ -41,6 +41,7 @@ class VolumeRegister(Register):
     def _get_table(self) -> str:
         header = """{|class="wikitable sortable"
 !Artikel
+!Status
 !Wikilinks
 !Seite
 !Autor
