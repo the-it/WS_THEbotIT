@@ -5,7 +5,7 @@ from tools.bots import CanonicalBot
 
 
 class ReRegisterPrinter(CanonicalBot):
-    LEMMA_AUTHOR_SIZE = 1000
+    LEMMA_AUTHOR_SIZE = 10
 
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
@@ -30,17 +30,26 @@ class ReRegisterPrinter(CanonicalBot):
                                               f"Altertumswissenschaft/Register/{register.author.name}"),
                                          register.get_register_str(),
                                          "Register aktualisiert")
-                    overview.append(f"|-\n"
-                                    f"|data-sort-value=\"{register.author.last_name}, {register.author.first_name}\""
-                                    f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
-                                    f"{register.author.name}|{register.author.name}]]\n"
-                                    f"|data-sort-value=\"{len(register):4}\"|{len(register)}")
+                    overview.append(self._create_overview_line(register, True))
+                else:
+                    overview.append(self._create_overview_line(register, False))
         overview.append("|}")
         self.save_if_changed(Page(self.wiki,
                                   f"Paulys Realencyclopädie der classischen "
                                   f"Altertumswissenschaft/Register/Autorenübersicht"),
                              "\n".join(overview),
                              "Register aktualisiert")
+
+    @staticmethod
+    def _create_overview_line(register, link):
+        line = ["|-", f"|data-sort-value=\"{register.author.last_name}, {register.author.first_name}\""]
+        if link:
+            line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
+                        f"{register.author.name}|{register.author.name}]]")
+        else:
+            line.append(f"|{register.author.name}")
+        line.append(f"|data-sort-value=\"{len(register):04d}\"|{len(register)}")
+        return "\n".join(line)
 
     def _print_alphabetic(self):
         self.logger.info("Print alphabetic register.")
