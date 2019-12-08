@@ -50,6 +50,20 @@ class TestReRegisterPrinter(BaseTestRegister):
                 call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Autorenübersicht'),
                 page_mock.call_args_list[2])
 
+    def test_overview_line(self):
+        printer = ReRegisterPrinter()
+        register = next(printer.registers.author)
+        compare("|-\n"
+                "|data-sort-value=\"Abel, Herman\"\n"
+                "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
+                "|data-sort-value=\"0004\"|4",
+                printer._create_overview_line(register, True))
+        compare("|-\n"
+                "|data-sort-value=\"Abel, Herman\"\n"
+                "|Herman Abel\n"
+                "|data-sort-value=\"0004\"|4",
+                printer._create_overview_line(register, False))
+
     def test_task(self):
         printer = ReRegisterPrinter()
         volume_mock: mock.Mock = mock.Mock()
