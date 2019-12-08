@@ -42,14 +42,14 @@ class ReRegisterPrinter(CanonicalBot):
 
     @staticmethod
     def _create_overview_line(register, link):
-        line = ["|-", f"|data-sort-value=\"{register.author.last_name}, {register.author.first_name}\""]
+        line = ["|-\n", f"|data-sort-value=\"{register.author.last_name}, {register.author.first_name}\""]
         if link:
             line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
-                        f"{register.author.name}|{register.author.name}]]")
+                        f"{register.author.name}|{register.author.name}]]\n")
         else:
-            line.append(f"|{register.author.name}")
+            line.append(f"|{register.author.name}\n")
         line.append(f"|data-sort-value=\"{len(register):04d}\"|{len(register)}")
-        return "\n".join(line)
+        return "".join(line)
 
     def _print_alphabetic(self):
         self.logger.info("Print alphabetic register.")

@@ -87,7 +87,7 @@ class AuthorRegister(Register):
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def _get_footer(self) -> str:
-        return "[[Kategorie:RE:Register|!]]\n" \
+        return f"[[Kategorie:RE:Register|{self.author.last_name}, {self.author.first_name}]]\n" \
                f"Zahl der Artikel: {len(self._lemmas)}, "
 
     def get_register_str(self) -> str:

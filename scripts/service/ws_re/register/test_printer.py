@@ -54,13 +54,12 @@ class TestReRegisterPrinter(BaseTestRegister):
         printer = ReRegisterPrinter()
         register = next(printer.registers.author)
         compare("|-\n"
-                "|data-sort-value=\"Abel, Herman\"\n"
+                "|data-sort-value=\"Abel, Herman\""
                 "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
                 "|data-sort-value=\"0004\"|4",
                 printer._create_overview_line(register, True))
         compare("|-\n"
-                "|data-sort-value=\"Abel, Herman\"\n"
-                "|Herman Abel\n"
+                "|data-sort-value=\"Abel, Herman\"|Herman Abel\n"
                 "|data-sort-value=\"0004\"|4",
                 printer._create_overview_line(register, False))
 
