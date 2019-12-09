@@ -487,36 +487,39 @@
   {
     "lemma": "Ἐξαιρέσιμος ἡμέρα",
     "previous": "Ἐξαιρέσεως δίκη",
-    "next": "Exainetos 1",
+    "next": "Ἐξαίρεσις",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1549,
         "end": 1550,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
   {
     "lemma": "Exainetos 1",
-    "previous": "Ἐξαιρέσιμος ἡμέρα",
+    "previous": "Ἐξάλειπτρον",
     "next": "Exainetos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1550,
         "end": 1550,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
   {
     "lemma": "Exainetos 2",
     "previous": "Exainetos 1",
-    "next": "Exairesis",
+    "next": "Exakesterios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1550,
         "end": 1550,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -534,13 +537,14 @@
   },
   {
     "lemma": "Exakesterios",
-    "previous": "Exairesis",
-    "next": "Exaleiptron",
+    "previous": "Exainetos 2",
+    "next": "Exakestidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1550,
         "end": 1551,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -558,13 +562,14 @@
   },
   {
     "lemma": "Exakestidas",
-    "previous": "Exaleiptron",
+    "previous": "Exakesterios",
     "next": "Examinator",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -572,11 +577,12 @@
     "lemma": "Examinator",
     "previous": "Exakestidas",
     "next": "Exampaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -584,11 +590,12 @@
     "lemma": "Exampaios",
     "previous": "Examinator",
     "next": "Exarchos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1552,
-        "author": "Kiessling, Max"
+        "author": "Kiessling."
       }
     ]
   },
@@ -596,11 +603,12 @@
     "lemma": "Exarchos 1",
     "previous": "Exampaios",
     "next": "Exarchos 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1552,
         "end": 1552,
-        "author": "Niese"
+        "author": "Niese."
       }
     ]
   },
@@ -608,11 +616,12 @@
     "lemma": "Exarchos 2",
     "previous": "Exarchos 1",
     "next": "Exarchos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1552,
         "end": 1552,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -620,11 +629,12 @@
     "lemma": "Exarchos 3",
     "previous": "Exarchos 2",
     "next": "Exathres",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1552,
         "end": 1553,
-        "author": "Benjamin"
+        "author": "Benjamin."
       }
     ]
   },
@@ -632,11 +642,12 @@
     "lemma": "Exathres",
     "previous": "Exarchos 3",
     "next": "Exauctorare",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1553,
         "end": 1553,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -644,11 +655,12 @@
     "lemma": "Exauctorare",
     "previous": "Exathres",
     "next": "Exceptio 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1553,
         "end": 1553,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -16569,11 +16581,12 @@
     "lemma": "Fonteius 13",
     "previous": "Fonteius 12",
     "next": "Fonteius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2845,
         "end": 2846,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16581,11 +16594,12 @@
     "lemma": "Fonteius 14",
     "previous": "Fonteius 13",
     "next": "Fonteius 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2846,
         "end": 2846,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16593,11 +16607,12 @@
     "lemma": "Fonteius 15",
     "previous": "Fonteius 14",
     "next": "Fonteius 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2846,
         "end": 2846,
-        "author": "Münzer"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -16605,11 +16620,12 @@
     "lemma": "Fonteius 16",
     "previous": "Fonteius 15",
     "next": "Fonteius 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2846,
         "end": 2846,
-        "author": "Münzer"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -16617,11 +16633,12 @@
     "lemma": "Fonteius 17",
     "previous": "Fonteius 16",
     "next": "Fonteius 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2846,
         "end": 2846,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16629,11 +16646,12 @@
     "lemma": "Fonteius 18",
     "previous": "Fonteius 17",
     "next": "Fonteius 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2846,
         "end": 2847,
-        "author": "Kappelmacher"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -16641,11 +16659,12 @@
     "lemma": "Fonteius 19",
     "previous": "Fonteius 18",
     "next": "Fonteius 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2847,
         "end": 2847,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16653,11 +16672,12 @@
     "lemma": "Fonteius 20",
     "previous": "Fonteius 19",
     "next": "Fonteius 21",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2847,
         "end": 2847,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16665,11 +16685,12 @@
     "lemma": "Fonteius 21",
     "previous": "Fonteius 20",
     "next": "Fonteius 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2847,
         "end": 2848,
-        "author": "Kappelmacher"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -16677,11 +16698,12 @@
     "lemma": "Fonteius 22",
     "previous": "Fonteius 21",
     "next": "Fonteius 23",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2848,
         "end": 2848,
-        "author": "Kappelmacher"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -16689,11 +16711,12 @@
     "lemma": "Fonteius 23",
     "previous": "Fonteius 22",
     "next": "Fonteius 24",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2848,
         "end": 2848,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16701,11 +16724,12 @@
     "lemma": "Fonteius 24",
     "previous": "Fonteius 23",
     "next": "Fonteius 25",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2848,
         "end": 2848,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16713,11 +16737,12 @@
     "lemma": "Fonteius 25",
     "previous": "Fonteius 24",
     "next": "Fonteius 26",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2848,
         "end": 2848,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16725,11 +16750,12 @@
     "lemma": "Fonteius 26",
     "previous": "Fonteius 25",
     "next": "Fonteius 27",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2848,
         "end": 2848,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16737,11 +16763,12 @@
     "lemma": "Fonteius 27",
     "previous": "Fonteius 26",
     "next": "Fonteius 28",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2848,
         "end": 2848,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16749,11 +16776,12 @@
     "lemma": "Fonteius 28",
     "previous": "Fonteius 27",
     "next": "Fonteius 29",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2848,
         "end": 2849,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -16761,6 +16789,7 @@
     "lemma": "Fonteius 29",
     "previous": "Fonteius 28",
     "next": "Fonteius 30",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2849,
@@ -16865,6 +16894,7 @@
     "lemma": "C. For.....",
     "previous": "Fontes Mattiaci",
     "next": "Forantes",
+    "sort_key": "For..... C.",
     "proof_read": 2,
     "chapters": [
       {
@@ -17097,23 +17127,25 @@
     "lemma": "Fornacalia",
     "previous": "Formula",
     "next": "Fornaces",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2876,
         "end": 2876,
-        "author": "Wissowa"
+        "author": "Wissowa."
       }
     ]
   },
   {
     "lemma": "Fornaces",
     "previous": "Fornacalia",
-    "next": "Eudalagines",
+    "next": "Fornax",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2876,
         "end": 2876,
-        "author": "Hübner"
+        "author": "Hübner."
       }
     ]
   },
