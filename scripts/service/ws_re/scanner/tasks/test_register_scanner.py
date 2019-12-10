@@ -7,9 +7,9 @@ from testfixtures import compare, LogCapture, StringComparison
 
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import _REGISTER_PATH
+from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH, \
     copy_tst_data
-from scripts.service.ws_re.register.register_types.volume import VolumeRegister
 from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from scripts.service.ws_re.template.re_page import RePage
@@ -152,10 +152,22 @@ text.
         article = re_page.splitted_article_list[0]
         task = SCANTask(None, self.logger)
         task.re_page = re_page
-        compare(({"proof_read": 1}, []), task._fetch_proof_read(article))
+        compare(({}, ["proof_read"]), task._fetch_proof_read(article))
 
         self.text_mock.return_value = """{{REDaten
 |KORREKTURSTAND=bla
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        article = re_page.splitted_article_list[0]
+        task = SCANTask(None, self.logger)
+        task.re_page = re_page
+        compare(({}, ["proof_read"]), task._fetch_proof_read(article))
+
+        self.text_mock.return_value = """{{REDaten
+|KORREKTURSTAND=korrigiert
+|TODESJAHR=9999
 }}
 text.
 {{REAutor|OFF}}"""

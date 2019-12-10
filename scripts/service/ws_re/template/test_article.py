@@ -312,4 +312,3 @@ text
         self.assertFalse(article.common_free)
         article["KEINE_SCHÖPFUNGSHÖHE"].value = True
         self.assertTrue(article.common_free)
-
