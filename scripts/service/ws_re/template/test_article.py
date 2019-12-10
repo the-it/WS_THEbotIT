@@ -1,4 +1,5 @@
 # pylint: disable=no-self-use,protected-access
+from datetime import datetime
 from unittest import TestCase
 
 from testfixtures import compare
@@ -216,8 +217,7 @@ text
         self.article["SPALTE_START"].value = "1000"
         self.assertNotEqual(pre_hash, hash(self.article))
 
-    @staticmethod
-    def test_bug_1():
+    def test_bug_1(self):
         test_string = """{{REDaten
 |BAND=IV,1
 |SPALTE_START=610
@@ -233,14 +233,13 @@ text
 |EXTSCAN_START={{REIA|IV,1|607}}
 |EXTSCAN_END=
 |VW=
-}} 
+}}
 '''24)''' ''L. Cominius Vipsanius Salutaris, domo Roma, subproc(urator) ludi magni, proc(urator) alimentor(um) per Apuliam Calabriam Lucaniam Bruttios, proc. prov(inciae) Sicil(iae), proc. capiend(orum) vec(tigalium) (?), proc. prov. Baet(icae), a cognitionib(us) domini n(ostri) Imp(eratoris) etc. etc. <!-- L. Septimi Severi Pertinac(is) Augusti, p(erfectissimus) v(ir), optimus vir et integrissimus'', CIL II 1085 = [[Hermann Dessau|{{SperrSchrift|Dessau}}]] 1406 (Ilipa); die Ehrung durch einen Untergebenen in der Baetica erfolgte bei seinem Abgang aus der Provinz, als er zu den Cognitiones des Kaisers berufen wurde. Die ''Cominia L. fil. Vipsania Dignitas c(larissima)f(emina)'', CIL IX 2336, könnte seine Tochter sein. -->
 
 {{REAutor|Stein.}}"""
         Article.from_text(test_string)
 
-    @staticmethod
-    def test_bug_2():
+    def test_bug_2(self):
         test_string = """{{REDaten
 |BAND=XIV,1
 |SPALTE_START=46
@@ -286,3 +285,30 @@ text
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|A. Author.}}"
         article = Article.from_text(article_text)
         self.assertIn("{{REAutor|A. Author.}}", article.to_text())
+
+    def test_common_free(self):
+        year_common_free = datetime.now().year -71
+        article = Article()
+        self.assertTrue(article.common_free)
+        # long enough dead
+        article["TODESJAHR"].value = str(year_common_free)
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = False
+        self.assertTrue(article.common_free)
+        # author dead not 71 year or more ago
+        article["TODESJAHR"].value = str(year_common_free + 10)
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = False
+        self.assertFalse(article.common_free)
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = True
+        self.assertTrue(article.common_free)
+
+        article = Article()
+        # author Geburtsjahr
+        article["GEBURTSJAHR"].value = str(year_common_free - 100)
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = False
+        self.assertTrue(article.common_free)
+        # author birth not 171 year or more ago
+        article["GEBURTSJAHR"].value = str(year_common_free - 90)
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = False
+        self.assertFalse(article.common_free)
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = True
+        self.assertTrue(article.common_free)

@@ -1,4 +1,5 @@
 import collections
+from datetime import datetime
 from typing import Union, Tuple, Generator, Optional, Dict, TypedDict, List
 
 from scripts.service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
@@ -106,6 +107,17 @@ class Article(collections.MutableMapping):
             self._author = new_value
         else:
             raise ReDatenException("Property author must be a tuple of strings or one string.")
+
+    @property
+    def common_free(self) -> bool:
+        current_year = datetime.now().year
+        if self["TODESJAHR"].value and int(self["TODESJAHR"].value) > current_year - 71:
+            if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
+                return False
+        if self["GEBURTSJAHR"].value and int(self["GEBURTSJAHR"].value) > current_year - 171:
+            if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
+                return False
+        return True
 
     def __len__(self) -> int:
         return len(self._properties)
