@@ -18,11 +18,11 @@ if __name__ == "__main__":
     SCHEDULER.daily_bots = [AuthorList, ReRegisterPrinter]
     SCHEDULER.weekly_bots = {0: [ReScanner],  # monday
                              1: [],
-                             2: [],
+                             2: [ReScanner],
                              3: [],
                              4: [ReScanner],
                              5: [],
-                             6: [ReStatus, GlCreateMagazine]}  # sunday
+                             6: [ReStatus, GlCreateMagazine, ReScanner]}  # sunday
     SCHEDULER.monthly_bots = {1: [GlStatus]}
     SCHEDULER.bots_on_last_day_of_month = []
     with SCHEDULER as bot:
