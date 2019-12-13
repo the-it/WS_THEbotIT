@@ -6,6 +6,7 @@ from pyfiglet import Figlet
 
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.registers import Registers
+from scripts.service.ws_re.register.test_base import BaseTestRegister
 from tools import INTEGRATION_TEST
 
 _MAX_SIZE_WIKI_PAGE = 2_098_175
@@ -19,8 +20,14 @@ def _raise_count_errors(errors):
         raise AssertionError("\n".join(errors))
 
 
+if INTEGRATION_TEST:
+    parent_class = TestCase
+else:
+    parent_class = BaseTestRegister # type: ignore
+
+
 @skipUnless(INTEGRATION_TEST, "only execute in integration test")
-class TestAuthors(TestCase):
+class TestAuthors(parent_class):
     @classmethod
     def setUpClass(cls) -> None:
         cls.authors = Authors()  # type: ignore
@@ -46,7 +53,7 @@ class TestAuthors(TestCase):
 
 
 @skipUnless(INTEGRATION_TEST, "only execute in integration test")
-class TestIntegrationRegister(TestCase):
+class TestIntegrationRegister(parent_class):
     @classmethod
     def setUpClass(cls):
         cls.registers = Registers()
