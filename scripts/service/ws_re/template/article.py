@@ -1,4 +1,5 @@
 import collections
+import contextlib
 from datetime import datetime
 from typing import Union, Tuple, Generator, Optional, Dict, TypedDict, List
 
@@ -111,12 +112,13 @@ class Article(collections.MutableMapping):
     @property
     def common_free(self) -> bool:
         current_year = datetime.now().year
-        if self["TODESJAHR"].value and int(self["TODESJAHR"].value) > current_year - 71:
-            if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
-                return False
-        if self["GEBURTSJAHR"].value and int(self["GEBURTSJAHR"].value) > current_year - 171:
-            if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
-                return False
+        with contextlib.suppress(ValueError):
+            if self["TODESJAHR"].value and int(self["TODESJAHR"].value) > current_year - 71:
+                if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
+                    return False
+            if self["GEBURTSJAHR"].value and int(self["GEBURTSJAHR"].value) > current_year - 171:
+                if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
+                    return False
         return True
 
     def __len__(self) -> int:

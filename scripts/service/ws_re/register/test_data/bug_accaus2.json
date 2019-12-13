@@ -1,0 +1,37 @@
+[
+  {
+    "lemma": "Volusius 12a",
+    "previous": "Volusius 9a",
+    "next": "Accaus 2",
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "lemma": "Accaus 2",
+    "next": "Acharneus",
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "Mario Bonaria."
+      }
+    ]
+  },
+  {
+    "lemma": "Acharneus",
+    "previous": "Accaus 2",
+    "next": "Achilleus 9",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1,
+        "end": 1,
+        "author": "H. v. Geisau."
+      }
+    ]
+  }
+]

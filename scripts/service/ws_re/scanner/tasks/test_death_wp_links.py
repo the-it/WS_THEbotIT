@@ -1,6 +1,7 @@
 # pylint: disable=protected-access
 from unittest import mock
 
+import pywikibot
 from testfixtures import compare
 
 from scripts.service.ws_re.scanner import DEWPTask
@@ -109,3 +110,15 @@ class TestDEWPTask(TaskTestCase):
         task.data = {"not_exists": [],
                      "redirect": []}
         self.assertFalse(task._data_exists())
+
+    def test_bug_invalid_title(self):
+        with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
+            self.text_mock.return_value = """{{REDaten|WP=<!-- Nicht Megiddo -->}}
+{{REAutor|Autor.}}"""
+            self.title_mock.return_value = "Re:Title"
+            page_mock.return_value.exists.side_effect = \
+                pywikibot.exceptions.InvalidTitle("contains illegal char(s) '<'")
+            re_page = RePage(self.page_mock)
+            task = DEWPTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare({"not_exists": [('<!-- Nicht Megiddo -->', 'Title')], "redirect": []}, task.data)
