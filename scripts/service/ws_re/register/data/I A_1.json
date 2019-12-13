@@ -2553,7 +2553,6 @@
     "previous": "Ραρία",
     "next": "Ράριον",
     "sort_key": "Rarias",
-    "proof_read": 2,
     "chapters": [
       {
         "start": 251,
@@ -9304,7 +9303,7 @@
   {
     "lemma": "Rodion peraia",
     "previous": "Rodion nesoi",
-    "next": "Rodiopolis",
+    "next": "Ῥοδιόπολις",
     "chapters": [
       {
         "start": 956,
@@ -9313,7 +9312,7 @@
     ]
   },
   {
-    "lemma": "Rodiopolis",
+    "lemma": "Ῥοδιόπολις",
     "previous": "Rodion peraia",
     "next": "Ῥόδιος 1",
     "chapters": [
@@ -9325,6 +9324,7 @@
   },
   {
     "lemma": "Ῥόδιος 1",
+    "previous": "Ῥοδιόπολις",
     "next": "Ῥόδιος 2",
     "sort_key": "Rodios 1",
     "proof_read": 2,
