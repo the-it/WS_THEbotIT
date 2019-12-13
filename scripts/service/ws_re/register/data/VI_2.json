@@ -718,24 +718,10 @@
   {
     "lemma": "Excingomagus",
     "previous": "Excerpta Barbari",
-    "next": "Excubiae",
     "chapters": [
       {
         "start": 1576,
         "end": 1576
-      }
-    ]
-  },
-  {
-    "lemma": "Excubiae",
-    "previous": "Exscium",
-    "next": "Excubitor",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 1576,
-        "end": 1577,
-        "author": "Fiebiger."
       }
     ]
   },
@@ -749,6 +735,19 @@
         "start": 1576,
         "end": 1576,
         "author": "Ihm."
+      }
+    ]
+  },
+  {
+    "lemma": "Excubiae",
+    "previous": "Exscium",
+    "next": "Excubitor",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1576,
+        "end": 1577,
+        "author": "Fiebiger."
       }
     ]
   },
