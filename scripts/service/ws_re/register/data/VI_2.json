@@ -498,10 +498,30 @@
     ]
   },
   {
-    "lemma": "Ἐξαίρεσις"
+    "lemma": "Ἐξαίρεσις",
+    "previous": "Ἐξαιρέσιμος ἡμέρα",
+    "next": "Ἐξάλειπτρον",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1550,
+        "end": 1550,
+        "author": "Wachsmuth."
+      }
+    ]
   },
   {
-    "lemma": "Ἐξάλειπτρον"
+    "lemma": "Ἐξάλειπτρον",
+    "previous": "Ἐξαίρεσις",
+    "next": "Exainetos 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1550,
+        "end": 1550,
+        "author": "Mau."
+      }
+    ]
   },
   {
     "lemma": "Exainetos 1",
@@ -674,11 +694,12 @@
     "lemma": "Exceptor",
     "previous": "Exceptio 2",
     "next": "Excerpta Barbari",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1565,
         "end": 1566,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -707,37 +728,40 @@
   },
   {
     "lemma": "Excubiae",
-    "previous": "Excingomagus",
-    "next": "Exscium",
+    "previous": "Exscium",
+    "next": "Excubitor",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1576,
         "end": 1577,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
   {
     "lemma": "Exscium",
-    "previous": "Excubiae",
-    "next": "Excubitor",
+    "previous": "Excingomagus",
+    "next": "Excubiae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1576,
         "end": 1576,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
   {
     "lemma": "Excubitor",
-    "previous": "Exscium",
+    "previous": "Excubiae",
     "next": "Excubitores",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -745,11 +769,12 @@
     "lemma": "Excubitores",
     "previous": "Excubitor",
     "next": "Excubitorium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -757,11 +782,12 @@
     "lemma": "Excubitorium",
     "previous": "Excubitores",
     "next": "Excusatio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1578,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -769,11 +795,12 @@
     "lemma": "Excusatio",
     "previous": "Excubitorium",
     "next": "Exedares",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1578,
         "end": 1581,
-        "author": "Klingmüller"
+        "author": "Klingmüller."
       }
     ]
   },
