@@ -1,3 +1,4 @@
+import contextlib
 from datetime import datetime
 from typing import Dict
 
@@ -27,10 +28,11 @@ class DEWPTask(ReScannerTask, ReporterMixin):
                 if link_to_check:
                     page = pywikibot.Page(self.wp_wiki, link_to_check)
                     reason = "not_exists"
-                    if page.exists():
-                        if not page.isRedirectPage():
-                            continue
-                        reason = "redirect"
+                    with contextlib.suppress(pywikibot.exceptions.InvalidTitle):
+                        if page.exists():
+                            if not page.isRedirectPage():
+                                continue
+                            reason = "redirect"
                     self.data[reason].append((link_to_check, self.re_page.lemma_without_prefix))
         return True
 

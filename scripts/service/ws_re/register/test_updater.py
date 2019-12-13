@@ -4,8 +4,8 @@ from testfixtures import compare
 
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.register.base import RegisterException
-from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from scripts.service.ws_re.register.register_types.volume import VolumeRegister
+from scripts.service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from scripts.service.ws_re.register.updater import Updater
 from scripts.service.ws_re.volumes import Volumes
 
@@ -424,6 +424,13 @@ class TestBugUpdates(BaseTestRegister):
             updater.update_lemma(update_dict, [])
         compare(None, register.lemmas[0]["previous"])
         compare(None, register.lemmas[2]["next"])
+
+    def test_bug_no_previous_but_not(self):
+        copy_tst_data("bug_accaus2", "S I")
+        register = VolumeRegister(Volumes()["S I"], Authors())
+        update_dict = {"lemma": "Accaus 2", "next": "Acharneus"}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
 
 
 @ddt
