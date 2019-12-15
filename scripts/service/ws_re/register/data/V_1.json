@@ -1052,7 +1052,6 @@
     "lemma": "Demonikos 3",
     "previous": "Demonikos 2",
     "next": "Demonikos 4",
-    "proof_read": 2,
     "chapters": [
       {
         "start": 144,
@@ -5609,7 +5608,6 @@
     "lemma": "Diabolis",
     "previous": "Διαβολά",
     "next": "Diacatochia",
-    "proof_read": 2,
     "chapters": [
       {
         "start": 302,
@@ -10493,7 +10491,7 @@
     "lemma": "Diocletianopolis 2",
     "previous": "Diocletianopolis 1",
     "next": "Diocletianopolis 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 658,
@@ -17315,11 +17313,12 @@
     "lemma": "Dionysios 159",
     "previous": "Dionysios 158",
     "next": "Dionysios 160",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1000,
         "end": 1000,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -17327,11 +17326,12 @@
     "lemma": "Dionysios 160",
     "previous": "Dionysios 159",
     "next": "Dionysios 161",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1000,
         "end": 1000,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -17339,11 +17339,12 @@
     "lemma": "Dionysios 161",
     "previous": "Dionysios 160",
     "next": "Dionysios 162",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1000,
         "end": 1001,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -17351,11 +17352,12 @@
     "lemma": "Dionysios 162",
     "previous": "Dionysios 161",
     "next": "Dionysios 163",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
         "end": 1001,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -17363,11 +17365,12 @@
     "lemma": "Dionysios 163",
     "previous": "Dionysios 162",
     "next": "Dionysios 164",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
         "end": 1001,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -17375,11 +17378,12 @@
     "lemma": "Dionysios 164",
     "previous": "Dionysios 163",
     "next": "Dionysios 165",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
         "end": 1001,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -17387,23 +17391,25 @@
     "lemma": "Dionysios 165",
     "previous": "Dionysios 164",
     "next": "Dionysios 166",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
         "end": 1002,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
   {
     "lemma": "Dionysios 166",
     "previous": "Dionysios 165",
-    "next": "Dionysios 167",
+    "next": "Dionysios 166",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1002,
         "end": 1002,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -17411,11 +17417,12 @@
     "lemma": "Dionysios 167",
     "previous": "Dionysios 166",
     "next": "Dionysische Vereine",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1002,
         "end": 1003,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
@@ -17423,6 +17430,8 @@
     "lemma": "Dionysische Vereine",
     "previous": "Dionysios 167",
     "next": "Dionysius Cato",
+    "redirect": "Τεχνῖται",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1003,
@@ -17434,6 +17443,8 @@
     "lemma": "Dionysius Cato",
     "previous": "Dionysische Vereine",
     "next": "Dionysodoros 1",
+    "redirect": "Dicta Catonis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1003,
@@ -17445,11 +17456,13 @@
     "lemma": "Dionysodoros 1",
     "previous": "Dionysius Cato",
     "next": "Dionysodoros 2",
+    "sort_key": "Dionysodoros 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1003,
         "end": 1003,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17457,11 +17470,13 @@
     "lemma": "Dionysodoros 2",
     "previous": "Dionysodoros 1",
     "next": "Dionysodoros 3",
+    "sort_key": "Dionysodoros 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1003,
         "end": 1003,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17469,11 +17484,13 @@
     "lemma": "Dionysodoros 3",
     "previous": "Dionysodoros 2",
     "next": "Dionysodoros 4",
+    "sort_key": "Dionysodoros 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1003,
         "end": 1003,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17481,11 +17498,13 @@
     "lemma": "Dionysodoros 4",
     "previous": "Dionysodoros 3",
     "next": "Dionysodoros 5",
+    "sort_key": "Dionysodoros 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1003,
         "end": 1003,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17493,11 +17512,13 @@
     "lemma": "Dionysodoros 5",
     "previous": "Dionysodoros 4",
     "next": "Dionysodoros 6",
+    "sort_key": "Dionysodoros 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1003,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17505,11 +17526,13 @@
     "lemma": "Dionysodoros 6",
     "previous": "Dionysodoros 5",
     "next": "Dionysodoros 7",
+    "sort_key": "Dionysodoros 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17517,11 +17540,13 @@
     "lemma": "Dionysodoros 7",
     "previous": "Dionysodoros 6",
     "next": "Dionysodoros 8",
+    "sort_key": "Dionysodoros 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17529,11 +17554,13 @@
     "lemma": "Dionysodoros 8",
     "previous": "Dionysodoros 7",
     "next": "Dionysodoros 9",
+    "sort_key": "Dionysodoros 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17541,11 +17568,13 @@
     "lemma": "Dionysodoros 9",
     "previous": "Dionysodoros 8",
     "next": "Dionysodoros 10",
+    "sort_key": "Dionysodoros 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17553,11 +17582,12 @@
     "lemma": "Dionysodoros 10",
     "previous": "Dionysodoros 9",
     "next": "Dionysodoros 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17565,11 +17595,12 @@
     "lemma": "Dionysodoros 11",
     "previous": "Dionysodoros 10",
     "next": "Dionysodoros 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17577,11 +17608,12 @@
     "lemma": "Dionysodoros 12",
     "previous": "Dionysodoros 11",
     "next": "Dionysodoros 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17589,11 +17621,12 @@
     "lemma": "Dionysodoros 13",
     "previous": "Dionysodoros 12",
     "next": "Dionysodoros 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -17601,11 +17634,12 @@
     "lemma": "Dionysodoros 14",
     "previous": "Dionysodoros 13",
     "next": "Dionysodoros 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -17613,11 +17647,12 @@
     "lemma": "Dionysodoros 15",
     "previous": "Dionysodoros 14",
     "next": "Dionysodoros 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Schwartz"
+        "author": "Schwartz."
       }
     ]
   },
@@ -17625,11 +17660,12 @@
     "lemma": "Dionysodoros 16",
     "previous": "Dionysodoros 15",
     "next": "Dionysodoros 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1004,
-        "author": "Wellmann, E[duard]"
+        "author": "E. Wellmann."
       }
     ]
   },
@@ -17637,11 +17673,12 @@
     "lemma": "Dionysodoros 17",
     "previous": "Dionysodoros 16",
     "next": "Dionysodoros 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1004,
         "end": 1005,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -17649,11 +17686,12 @@
     "lemma": "Dionysodoros 18",
     "previous": "Dionysodoros 17",
     "next": "Dionysodoros 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1005,
         "end": 1005,
-        "author": "Cohn"
+        "author": "Cohn."
       }
     ]
   },
@@ -17661,16 +17699,19 @@
     "lemma": "Dionysodoros 19",
     "previous": "Dionysodoros 18",
     "next": "Dionysodoros 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1005,
         "end": 1005,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
   {
     "lemma": "Dionysodoros 20",
+    "previous": "Dionysodoros 19",
+    "next": "Dionysodoros 21",
     "proof_read": 2,
     "chapters": [
       {
@@ -17684,11 +17725,12 @@
     "lemma": "Dionysodoros 21",
     "previous": "Dionysodoros 20",
     "next": "Dionysodoros 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1006,
         "end": 1006,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -17696,11 +17738,12 @@
     "lemma": "Dionysodoros 22",
     "previous": "Dionysodoros 21",
     "next": "Dionysodoros 23",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1006,
         "end": 1006,
-        "author": "Graf"
+        "author": "Graf."
       }
     ]
   },
@@ -17708,11 +17751,12 @@
     "lemma": "Dionysodoros 23",
     "previous": "Dionysodoros 22",
     "next": "Dionysodoros 24",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1006,
         "end": 1006,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -17720,11 +17764,12 @@
     "lemma": "Dionysodoros 24",
     "previous": "Dionysodoros 23",
     "next": "Dionysodotos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1006,
         "end": 1007,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -17732,11 +17777,12 @@
     "lemma": "Dionysodotos 1",
     "previous": "Dionysodoros 24",
     "next": "Dionysodotos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1007,
         "end": 1007,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -17744,11 +17790,12 @@
     "lemma": "Dionysodotos 2",
     "previous": "Dionysodotos 1",
     "next": "Dionysogenes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1007,
         "end": 1007,
-        "author": "Crusius"
+        "author": "Crusius."
       }
     ]
   },
@@ -17756,71 +17803,78 @@
     "lemma": "Dionysogenes",
     "previous": "Dionysodotos 2",
     "next": "Dionysokles",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1007,
         "end": 1007,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
   {
     "lemma": "Dionysokles",
     "previous": "Dionysogenes",
-    "next": "Dionysokolakes",
+    "next": "Διονυσοκόλακες",
     "chapters": [
       {
         "start": 1007,
         "end": 1007,
-        "author": "Radermacher"
+        "author": "Radermacher."
       }
     ]
   },
   {
-    "lemma": "Dionysokolakes",
+    "lemma": "Διονυσοκόλακες",
     "previous": "Dionysokles",
     "next": "Dionysophanes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1007,
         "end": 1008,
-        "author": "Reisch"
+        "author": "Reisch."
       }
     ]
   },
   {
     "lemma": "Dionysophanes",
-    "previous": "Dionysokolakes",
-    "next": "ta Dionysophanus",
+    "previous": "Διονυσοκόλακες",
+    "next": "τὰ Διονυσοφάνους",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1008,
         "end": 1008,
-        "author": "Wellmann, E[duard]"
+        "author": "E. Wellmann."
       }
     ]
   },
   {
-    "lemma": "ta Dionysophanus",
+    "lemma": "τὰ Διονυσοφάνους",
     "previous": "Dionysophanes",
     "next": "Dionysopolis 1",
+    "sort_key": "Dionysophanus, ta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1008,
         "end": 1008,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Dionysopolis 1",
-    "previous": "ta Dionysophanus",
+    "previous": "τὰ Διονυσοφάνους",
     "next": "Dionysopolis 2",
+    "sort_key": "Dionysophanus, ta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1008,
-        "end": 1009,
-        "author": "Brandis"
+        "end": 1008,
+        "author": "Brandis."
       }
     ]
   },
@@ -17828,11 +17882,12 @@
     "lemma": "Dionysopolis 2",
     "previous": "Dionysopolis 1",
     "next": "Dionysopolis 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1009,
         "end": 1009,
-        "author": "Ruge"
+        "author": "Enge."
       }
     ]
   },
@@ -17840,11 +17895,12 @@
     "lemma": "Dionysopolis 3",
     "previous": "Dionysopolis 2",
     "next": "Dionysopolis 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1009,
         "end": 1010,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -17852,11 +17908,12 @@
     "lemma": "Dionysopolis 4",
     "previous": "Dionysopolis 3",
     "next": "Dionysos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1010,
         "end": 1010,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -17945,11 +18002,13 @@
     "lemma": "Diopeithes 1",
     "previous": "Diopatra",
     "next": "Diopeithes 2",
+    "sort_key": "Diopeithes 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1046,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17957,11 +18016,13 @@
     "lemma": "Diopeithes 2",
     "previous": "Diopeithes 1",
     "next": "Diopeithes 3",
+    "sort_key": "Diopeithes 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1046,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17969,11 +18030,13 @@
     "lemma": "Diopeithes 3",
     "previous": "Diopeithes 2",
     "next": "Diopeithes 4",
+    "sort_key": "Diopeithes 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1046,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17981,11 +18044,13 @@
     "lemma": "Diopeithes 4",
     "previous": "Diopeithes 3",
     "next": "Diopeithes 5",
+    "sort_key": "Diopeithes 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1046,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -17993,11 +18058,13 @@
     "lemma": "Diopeithes 5",
     "previous": "Diopeithes 4",
     "next": "Diopeithes 6",
+    "sort_key": "Diopeithes 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1046,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18005,11 +18072,13 @@
     "lemma": "Diopeithes 6",
     "previous": "Diopeithes 5",
     "next": "Diopeithes 7",
+    "sort_key": "Diopeithes 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1046,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18017,11 +18086,13 @@
     "lemma": "Diopeithes 7",
     "previous": "Diopeithes 6",
     "next": "Diopeithes 8",
+    "sort_key": "Diopeithes 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1046,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18029,11 +18100,13 @@
     "lemma": "Diopeithes 8",
     "previous": "Diopeithes 7",
     "next": "Diopeithes 9",
+    "sort_key": "Diopeithes 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1046,
         "end": 1047,
-        "author": "Swoboda, [Heinrich]"
+        "author": "Swoboda."
       }
     ]
   },
