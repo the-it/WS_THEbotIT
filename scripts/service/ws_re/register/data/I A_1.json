@@ -9784,7 +9784,7 @@
   {
     "lemma": "Rogatus 2",
     "previous": "Rogatus 1",
-    "next": "Roge",
+    "next": "Ῥώγη",
     "chapters": [
       {
         "start": 1001,
@@ -9794,8 +9794,9 @@
     ]
   },
   {
-    "lemma": "Roge",
+    "lemma": "Ῥώγη",
     "previous": "Rogatus 2",
+    "next": "Ῥογκίον",
     "chapters": [
       {
         "start": 1001,
@@ -9805,10 +9806,22 @@
     ]
   },
   {
-    "lemma": "Ῥογκίον"
+    "lemma": "Ῥογκίον",
+    "previous": "Ῥώγη",
+    "next": "Ῥωγμοί",
+    "sort_key": "Ronkion",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1001,
+        "end": 1001,
+        "author": "Bürchner."
+      }
+    ]
   },
   {
-    "lemma": "Rogmoi",
+    "lemma": "Ῥωγμοί",
+    "previous": "Ῥογκίον",
     "next": "Rogmorum",
     "chapters": [
       {
@@ -9819,7 +9832,7 @@
   },
   {
     "lemma": "Rogmorum",
-    "previous": "Rogmoi",
+    "previous": "Ῥωγμοί",
     "next": "Rogomanius",
     "chapters": [
       {
