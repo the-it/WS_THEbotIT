@@ -987,7 +987,7 @@
   {
     "lemma": "Exemplum",
     "previous": "Ἐξελιγμοί",
-    "next": "Exengyesis",
+    "next": "Ἐξεγγύησις",
     "chapters": [
       {
         "start": 1586,
@@ -997,26 +997,28 @@
     ]
   },
   {
-    "lemma": "Exengyesis",
+    "lemma": "Ἐξεγγύησις",
     "previous": "Exemplum",
-    "next": "Exercitator",
+    "next": "Ecercitator",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1588,
         "end": 1588,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
   {
     "lemma": "Exercitator",
-    "previous": "Exengyesis",
-    "next": "Exercitus",
+    "previous": "Ἐξεγγύησις",
+    "next": "Ecercitus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1588,
         "end": 1589,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
