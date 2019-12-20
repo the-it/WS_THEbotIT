@@ -17887,7 +17887,7 @@
       {
         "start": 1009,
         "end": 1009,
-        "author": "Enge."
+        "author": "Ruge."
       }
     ]
   },
@@ -18114,11 +18114,13 @@
     "lemma": "Diopeithes 9",
     "previous": "Diopeithes 8",
     "next": "Diopeithes 10",
+    "sort_key": "Diopeithes 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1047,
         "end": 1048,
-        "author": "Swoboda, [Heinrich]"
+        "author": "Swoboda."
       }
     ]
   },
@@ -18126,11 +18128,12 @@
     "lemma": "Diopeithes 10",
     "previous": "Diopeithes 9",
     "next": "Diopeithes 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1048,
         "end": 1048,
-        "author": "Swoboda, [Heinrich]"
+        "author": "Swoboda."
       }
     ]
   },
@@ -18138,11 +18141,12 @@
     "lemma": "Diopeithes 11",
     "previous": "Diopeithes 10",
     "next": "Diophanes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1048,
         "end": 1048,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -18150,11 +18154,13 @@
     "lemma": "Diophanes 1",
     "previous": "Diopeithes 11",
     "next": "Diophanes 2",
+    "sort_key": "Diophanes 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1048,
         "end": 1048,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18162,11 +18168,13 @@
     "lemma": "Diophanes 2",
     "previous": "Diophanes 1",
     "next": "Diophanes 3",
+    "sort_key": "Diophanes 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1048,
         "end": 1048,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18174,11 +18182,13 @@
     "lemma": "Diophanes 3",
     "previous": "Diophanes 2",
     "next": "Diophanes 4",
+    "sort_key": "Diophanes 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1048,
         "end": 1048,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18186,11 +18196,13 @@
     "lemma": "Diophanes 4",
     "previous": "Diophanes 3",
     "next": "Diophanes 5",
+    "sort_key": "Diophanes 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1048,
         "end": 1049,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -18198,11 +18210,13 @@
     "lemma": "Diophanes 5",
     "previous": "Diophanes 4",
     "next": "Diophanes 6",
+    "sort_key": "Diophanes 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Reitzenstein"
+        "author": "Reitzenstein."
       }
     ]
   },
@@ -18210,6 +18224,9 @@
     "lemma": "Diophanes 6",
     "previous": "Diophanes 5",
     "next": "Diophanes 7",
+    "sort_key": "Diophanes 06",
+    "redirect": "Diophantos 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
@@ -18221,11 +18238,13 @@
     "lemma": "Diophanes 7",
     "previous": "Diophanes 6",
     "next": "Diophanes 8",
+    "sort_key": "Diophanes 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Arnim"
+        "author": "v. Arnim."
       }
     ]
   },
@@ -18233,11 +18252,13 @@
     "lemma": "Diophanes 8",
     "previous": "Diophanes 7",
     "next": "Diophanes 9",
+    "sort_key": "Diophanes 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Schmid"
+        "author": "W. Schmid."
       }
     ]
   },
@@ -18257,11 +18278,12 @@
     "lemma": "Diophanes 10",
     "previous": "Diophanes 9",
     "next": "Diophantes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -18269,6 +18291,8 @@
     "lemma": "Diophantes",
     "previous": "Diophanes 10",
     "next": "Diophantos 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
@@ -18280,11 +18304,13 @@
     "lemma": "Diophantos 1",
     "previous": "Diophantes",
     "next": "Diophantos 2",
+    "sort_key": "Diophantos 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18292,11 +18318,13 @@
     "lemma": "Diophantos 2",
     "previous": "Diophantos 1",
     "next": "Diophantos 3",
+    "sort_key": "Diophantos 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18304,11 +18332,13 @@
     "lemma": "Diophantos 3",
     "previous": "Diophantos 2",
     "next": "Diophantos 4",
+    "sort_key": "Diophantos 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18316,11 +18346,13 @@
     "lemma": "Diophantos 4",
     "previous": "Diophantos 3",
     "next": "Diophantos 5",
+    "sort_key": "Diophantos 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18328,11 +18360,13 @@
     "lemma": "Diophantos 5",
     "previous": "Diophantos 4",
     "next": "Diophantos 6",
+    "sort_key": "Diophantos 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1049,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18340,11 +18374,13 @@
     "lemma": "Diophantos 6",
     "previous": "Diophantos 5",
     "next": "Diophantos 7",
+    "sort_key": "Diophantos 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1049,
         "end": 1050,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18352,11 +18388,13 @@
     "lemma": "Diophantos 7",
     "previous": "Diophantos 6",
     "next": "Diophantos 8",
+    "sort_key": "Diophantos 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1050,
         "end": 1050,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18364,11 +18402,13 @@
     "lemma": "Diophantos 8",
     "previous": "Diophantos 7",
     "next": "Diophantos 9",
+    "sort_key": "Diophantos 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1050,
         "end": 1050,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18376,11 +18416,13 @@
     "lemma": "Diophantos 9",
     "previous": "Diophantos 8",
     "next": "Diophantos 10",
+    "sort_key": "Diophantos 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1050,
         "end": 1050,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18388,11 +18430,12 @@
     "lemma": "Diophantos 10",
     "previous": "Diophantos 9",
     "next": "Diophantos 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1050,
         "end": 1050,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18413,11 +18456,12 @@
     "lemma": "Diophantos 12",
     "previous": "Diophantos 11",
     "next": "Diophantos 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1050,
         "end": 1051,
-        "author": "Crusius"
+        "author": "Crusius."
       }
     ]
   },
@@ -18425,11 +18469,12 @@
     "lemma": "Diophantos 13",
     "previous": "Diophantos 12",
     "next": "Diophantos 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1051,
         "end": 1051,
-        "author": "Kaibel"
+        "author": "Kaibel."
       }
     ]
   },
@@ -18437,11 +18482,12 @@
     "lemma": "Diophantos 14",
     "previous": "Diophantos 13",
     "next": "Diophantos 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1051,
         "end": 1051,
-        "author": "Schwartz"
+        "author": "Schwartz."
       }
     ]
   },
@@ -18449,11 +18495,12 @@
     "lemma": "Diophantos 15",
     "previous": "Diophantos 14",
     "next": "Diophantos 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1051,
         "end": 1051,
-        "author": "Wellmann, E[duard]"
+        "author": "E. Wellmann."
       }
     ]
   },
@@ -18465,7 +18512,7 @@
       {
         "start": 1051,
         "end": 1051,
-        "author": "Schmid"
+        "author": "W. Schmid."
       }
     ]
   },
@@ -18473,11 +18520,12 @@
     "lemma": "Diophantos 17",
     "previous": "Diophantos 16",
     "next": "Diophantos 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1051,
         "end": 1051,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -18497,11 +18545,12 @@
     "lemma": "Diopithes",
     "previous": "Diophantos 18",
     "next": "Dioplethes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1073,
         "end": 1073,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -18509,11 +18558,12 @@
     "lemma": "Dioplethes",
     "previous": "Diopithes",
     "next": "Diopos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1073,
         "end": 1073,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -18521,11 +18571,12 @@
     "lemma": "Diopos",
     "previous": "Dioplethes",
     "next": "Dioptra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1073,
         "end": 1073,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -18545,6 +18596,7 @@
     "lemma": "Diorduloi",
     "previous": "Dioptra",
     "next": "Diores 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
@@ -18556,11 +18608,12 @@
     "lemma": "Diores 1",
     "previous": "Diorduloi",
     "next": "Diores 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -18568,11 +18621,12 @@
     "lemma": "Diores 2",
     "previous": "Diores 1",
     "next": "Diores 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -18580,11 +18634,12 @@
     "lemma": "Diores 3",
     "previous": "Diores 2",
     "next": "Diores 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -18592,71 +18647,79 @@
     "lemma": "Diores 4",
     "previous": "Diores 3",
     "next": "Diores 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
   {
     "lemma": "Diores 5",
     "previous": "Diores 4",
-    "next": "Diorphon oros",
+    "next": "Δίορφον ὄρος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
   {
-    "lemma": "Diorphon oros",
+    "lemma": "Δίορφον ὄρος",
     "previous": "Diores 5",
     "next": "Diorphos",
+    "sort_key": "Diorphon oros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
   {
     "lemma": "Diorphos",
-    "previous": "Diorphon oros",
-    "next": "Diorthoteres",
+    "previous": "Δίορφον ὄρος",
+    "next": "Διορθωτῆρες",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
   {
-    "lemma": "Diorthoteres",
+    "lemma": "Διορθωτῆρες",
     "previous": "Diorphos",
     "next": "Dioryx 1",
+    "sort_key": "Diorthoteres",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Szanto"
+        "author": "Szanto."
       }
     ]
   },
   {
     "lemma": "Dioryx 1",
-    "previous": "Diorthoteres",
+    "previous": "Διορθωτῆρες",
     "next": "Dioryx 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1079,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -18664,11 +18727,12 @@
     "lemma": "Dioryx 2",
     "previous": "Dioryx 1",
     "next": "Dios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1079,
         "end": 1080,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
