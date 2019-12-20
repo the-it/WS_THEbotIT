@@ -341,7 +341,6 @@
     "lemma": "Euydrion",
     "previous": "Euxynthetos",
     "next": "Euypnos",
-    "proof_read": 2,
     "chapters": [
       {
         "start": 1540,
@@ -718,6 +717,7 @@
   {
     "lemma": "Excingomagus",
     "previous": "Excerpta Barbari",
+    "next": "Exscium",
     "chapters": [
       {
         "start": 1576,
@@ -818,36 +818,40 @@
   {
     "lemma": "Exedra",
     "previous": "Exedares",
-    "next": "Exegetai",
+    "next": "Ἐξεγηταί",
+    "proof_read": 2,
+    "wp_link": "w:de:Exedra",
     "chapters": [
       {
         "start": 1581,
         "end": 1583,
-        "author": "Mau, [August]"
+        "author": "Mau."
       }
     ]
   },
   {
-    "lemma": "Exegetai",
+    "lemma": "Ἐξεγηταί",
     "previous": "Exedra",
     "next": "Exekestides 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1583,
         "end": 1584,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Exekestides 1",
-    "previous": "Exegetai",
+    "previous": "Ἐξεγηταί",
     "next": "Exekestides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1584,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -855,11 +859,12 @@
     "lemma": "Exekestides 2",
     "previous": "Exekestides 1",
     "next": "Exekestides 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1584,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -867,11 +872,12 @@
     "lemma": "Exekestides 3",
     "previous": "Exekestides 2",
     "next": "Exekestides 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1584,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -879,11 +885,12 @@
     "lemma": "Exekestides 4",
     "previous": "Exekestides 3",
     "next": "Exekestides 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1584,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -891,11 +898,12 @@
     "lemma": "Exekestides 5",
     "previous": "Exekestides 4",
     "next": "Exekestides 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1584,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -903,11 +911,12 @@
     "lemma": "Exekestides 6",
     "previous": "Exekestides 5",
     "next": "Exekestos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1584,
-        "author": "Graf"
+        "author": "Graf."
       }
     ]
   },
@@ -915,11 +924,12 @@
     "lemma": "Exekestos 1",
     "previous": "Exekestides 6",
     "next": "Exekestos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1584,
-        "author": "Niese"
+        "author": "Niese."
       }
     ]
   },
@@ -939,42 +949,45 @@
     "lemma": "Exekestos 3",
     "previous": "Exekestos 2",
     "next": "Exekias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1585,
         "end": 1585,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
   {
     "lemma": "Exekias",
     "previous": "Exekestos 3",
-    "next": "Exeligmoi",
+    "next": "Ἐξελιγμοί",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1585,
         "end": 1586,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
   {
-    "lemma": "Exeligmoi",
+    "lemma": "Ἐξελιγμοί",
     "previous": "Exekias",
     "next": "Exemplum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1586,
         "end": 1586,
-        "author": "Droysen"
+        "author": "Droysen."
       }
     ]
   },
   {
     "lemma": "Exemplum",
-    "previous": "Exeligmoi",
-    "next": "Exengyesis",
+    "previous": "Ἐξελιγμοί",
+    "next": "Ἐξεγγύησις",
     "chapters": [
       {
         "start": 1586,
@@ -984,26 +997,28 @@
     ]
   },
   {
-    "lemma": "Exengyesis",
+    "lemma": "Ἐξεγγύησις",
     "previous": "Exemplum",
-    "next": "Exercitator",
+    "next": "Ecercitator",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1588,
         "end": 1588,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
   {
     "lemma": "Exercitator",
-    "previous": "Exengyesis",
-    "next": "Exercitus",
+    "previous": "Ἐξεγγύησις",
+    "next": "Ecercitus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1588,
         "end": 1589,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
