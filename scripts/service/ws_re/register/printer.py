@@ -1,7 +1,7 @@
 from pywikibot import Site, Page
 
 from scripts.service.ws_re.register.registers import Registers
-from tools.bots import CanonicalBot
+from tools.bots.pi import CanonicalBot
 
 
 class ReRegisterPrinter(CanonicalBot):

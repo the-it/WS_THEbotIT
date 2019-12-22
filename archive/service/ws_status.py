@@ -1,10 +1,11 @@
-import re
 import datetime
+import re
 
 from pywikibot import Page
+from tools.bots.pi.pi import BotException
+from tools.bots.pi.pi import CanonicalBot
+
 from tools.petscan import PetScan
-from tools.bots import CanonicalBot
-from tools.bots import BotException
 
 
 class RowBasic():
