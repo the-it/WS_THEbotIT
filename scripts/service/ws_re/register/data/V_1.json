@@ -18740,11 +18740,13 @@
     "lemma": "Dios 1",
     "previous": "Dioryx 2",
     "next": "Dios 2",
+    "sort_key": "Dios 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -18752,11 +18754,13 @@
     "lemma": "Dios 2",
     "previous": "Dios 1",
     "next": "Dios 3",
+    "sort_key": "Dios 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -18764,11 +18768,13 @@
     "lemma": "Dios 3",
     "previous": "Dios 2",
     "next": "Dios 4",
+    "sort_key": "Dios 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -18776,11 +18782,13 @@
     "lemma": "Dios 4",
     "previous": "Dios 3",
     "next": "Dios 5",
+    "sort_key": "Dios 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -18788,11 +18796,13 @@
     "lemma": "Dios 5",
     "previous": "Dios 4",
     "next": "Dios 6",
+    "sort_key": "Dios 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -18800,11 +18810,13 @@
     "lemma": "Dios 6",
     "previous": "Dios 5",
     "next": "Dios 7",
+    "sort_key": "Dios 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -18812,11 +18824,13 @@
     "lemma": "Dios 7",
     "previous": "Dios 6",
     "next": "Dios 8",
+    "sort_key": "Dios 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -18824,10 +18838,14 @@
     "lemma": "Dios 8",
     "previous": "Dios 7",
     "next": "Dios 9",
+    "sort_key": "Dios 08",
+    "redirect": "Dias 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
-        "end": 1080
+        "end": 1080,
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -18835,11 +18853,13 @@
     "lemma": "Dios 9",
     "previous": "Dios 8",
     "next": "Dios 10",
+    "sort_key": "Dios 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -18847,11 +18867,12 @@
     "lemma": "Dios 10",
     "previous": "Dios 9",
     "next": "Dios 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -18859,11 +18880,12 @@
     "lemma": "Dios 11",
     "previous": "Dios 10",
     "next": "Dios 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Wellmann, E[duard]"
+        "author": "E. Wellmann."
       }
     ]
   },
@@ -18871,65 +18893,73 @@
     "lemma": "Dios 12",
     "previous": "Dios 11",
     "next": "Dios 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1080,
-        "author": "Cohn"
+        "author": "Cohn."
       }
     ]
   },
   {
     "lemma": "Dios 13",
     "previous": "Dios 12",
-    "next": "Dios akra",
+    "next": "Διὸς ἄκρα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
         "end": 1082,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
   {
-    "lemma": "Dios akra",
+    "lemma": "Διὸς ἄκρα",
     "previous": "Dios 13",
-    "next": "Dios akron",
+    "next": "Διὸς ἄκρον",
+    "sort_key": "Dios akra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1082,
         "end": 1082,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
   {
-    "lemma": "Dios akron",
-    "previous": "Dios akra",
-    "next": "Dios anthos",
+    "lemma": "Διὸς ἄκρον",
+    "previous": "Διὸς ἄκρα",
+    "next": "Διὸς ἄνθος",
+    "sort_key": "Dios akron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1082,
         "end": 1082,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Dios anthos",
-    "previous": "Dios akron",
-    "next": "Diosatabyriastai",
+    "lemma": "Διὸς ἄνθος",
+    "previous": "Διὸς ἄκρον",
+    "next": "Διοσαταβυριασταί",
+    "sort_key": "Dios anthos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1082,
         "end": 1083,
-        "author": "Olck"
+        "author": "Olck."
       }
     ]
   },
   {
-    "lemma": "Diosatabyriastai",
-    "previous": "Dios anthos",
+    "lemma": "Διοσαταβυριασταί",
+    "previous": "Διὸς ἄνθος",
     "next": "Dios balanos",
     "chapters": [
       {
@@ -18941,7 +18971,7 @@
   },
   {
     "lemma": "Dios balanos",
-    "previous": "Diosatabyriastai",
+    "previous": "Διοσαταβυριασταί",
     "next": "Dios bous",
     "chapters": [
       {
