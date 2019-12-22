@@ -10165,11 +10165,12 @@
     "lemma": "Galeotai",
     "previous": "Γαλεός",
     "next": "Galeotes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 597,
         "end": 597,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -10177,11 +10178,12 @@
     "lemma": "Galeotes",
     "previous": "Galeotai",
     "next": "Galepsos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 597,
         "end": 597,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -10189,11 +10191,12 @@
     "lemma": "Galepsos 1",
     "previous": "Galeotes",
     "next": "Galepsos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 597,
         "end": 597,
-        "author": "Tümpel"
+        "author": "Tümpel."
       }
     ]
   },
@@ -10201,11 +10204,12 @@
     "lemma": "Galepsos 2",
     "previous": "Galepsos 1",
     "next": "Galepsos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 597,
         "end": 597,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -10213,11 +10217,12 @@
     "lemma": "Galepsos 3",
     "previous": "Galepsos 2",
     "next": "Galeria 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 597,
         "end": 597,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -10242,7 +10247,7 @@
       {
         "start": 597,
         "end": 598,
-        "author": "Weiss, J[akob]"
+        "author": "Weiss."
       }
     ]
   },
@@ -10250,6 +10255,8 @@
     "lemma": "Galerianus",
     "previous": "Galeria 2",
     "next": "Galerius 1",
+    "redirect": "Calpurnius 46",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 598,
@@ -10261,11 +10268,12 @@
     "lemma": "Galerius 1",
     "previous": "Galerianus",
     "next": "Galerius 2",
+    "sort_key": "Galerius 01",
     "chapters": [
       {
         "start": 598,
         "end": 598,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -10273,6 +10281,9 @@
     "lemma": "Galerius 2",
     "previous": "Galerius 1",
     "next": "Galerius 3",
+    "sort_key": "Galerius 02",
+    "redirect": "Iulius 96",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 598,
@@ -10284,6 +10295,9 @@
     "lemma": "Galerius 3",
     "previous": "Galerius 2",
     "next": "Galerius 4",
+    "sort_key": "Galerius 03",
+    "redirect": "Iulius 159a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 598,
@@ -10295,11 +10309,13 @@
     "lemma": "Galerius 4",
     "previous": "Galerius 3",
     "next": "Galerius 5",
+    "sort_key": "Galerius 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 598,
         "end": 598,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -10307,11 +10323,12 @@
     "lemma": "Galerius 5",
     "previous": "Galerius 4",
     "next": "Galerius 6",
+    "sort_key": "Galerius 05",
     "chapters": [
       {
         "start": 598,
         "end": 599,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },

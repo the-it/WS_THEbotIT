@@ -1012,7 +1012,7 @@
   {
     "lemma": "Exercitator",
     "previous": "Ἐξεγγύησις",
-    "next": "Ecercitus",
+    "next": "Exercitus",
     "proof_read": 2,
     "chapters": [
       {
@@ -1025,7 +1025,7 @@
   {
     "lemma": "Exercitus",
     "previous": "Exercitator",
-    "next": "Exetastai",
+    "next": "Ἐξετασταί",
     "chapters": [
       {
         "start": 1589,
@@ -1035,20 +1035,21 @@
     ]
   },
   {
-    "lemma": "Exetastai",
+    "lemma": "Ἐξετασταί",
     "previous": "Exercitus",
     "next": "Exheredatio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1679,
         "end": 1680,
-        "author": "Szanto"
+        "author": "Szanto."
       }
     ]
   },
   {
     "lemma": "Exheredatio",
-    "previous": "Exetastai",
+    "previous": "Ἐξετασταί",
     "next": "Exilium",
     "chapters": [
       {
