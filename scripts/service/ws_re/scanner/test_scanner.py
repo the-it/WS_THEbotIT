@@ -6,11 +6,11 @@ from datetime import datetime
 from unittest import TestCase, mock, skip
 
 from testfixtures import LogCapture
-from tools.bots.test_bots import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 
 from scripts.service.ws_re.scanner import ReScanner
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
 from scripts.service.ws_re.template import ReDatenException
+from tools.bots.test_pi import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 
 
 class TestReScanner(TestCase):
