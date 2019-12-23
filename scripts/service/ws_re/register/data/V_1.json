@@ -13589,7 +13589,8 @@
     "previous": "Diokles 42",
     "next": "Diokles 44",
     "redirect": "Valerius 142",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Diokletian",
     "chapters": [
       {
         "start": 796,
@@ -13602,7 +13603,7 @@
     "lemma": "Diokles 44",
     "previous": "Diokles 43",
     "next": "Diokles 45",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 796,
@@ -13629,6 +13630,7 @@
     "previous": "Diokles 45",
     "next": "Diokles 47",
     "proof_read": 2,
+    "wp_link": "w:de:Diokles (Komödiendichter)",
     "chapters": [
       {
         "start": 796,
@@ -13642,6 +13644,7 @@
     "previous": "Diokles 46",
     "next": "Diokles 48",
     "proof_read": 2,
+    "wp_link": "w:de:Diokles von Peparethos",
     "chapters": [
       {
         "start": 797,
@@ -14867,7 +14870,7 @@
     "lemma": "Dionius",
     "previous": "Dione",
     "next": "Dionoristene",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 880,
@@ -18584,11 +18587,13 @@
     "lemma": "Dioptra",
     "previous": "Diopos",
     "next": "Diorduloi",
+    "proof_read": 2,
+    "wp_link": "w:de:Diopter",
     "chapters": [
       {
         "start": 1073,
         "end": 1079,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -18867,7 +18872,7 @@
     "lemma": "Dios 10",
     "previous": "Dios 9",
     "next": "Dios 11",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1080,
@@ -18960,19 +18965,24 @@
   {
     "lemma": "Διοσαταβυριασταί",
     "previous": "Διὸς ἄνθος",
-    "next": "Dios balanos",
+    "next": "Διὸς βάλανος",
+    "sort_key": "Diosatabyriastai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1083,
         "end": 1083,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
   {
-    "lemma": "Dios balanos",
+    "lemma": "Διὸς βάλανος",
     "previous": "Διοσαταβυριασταί",
-    "next": "Dios bous",
+    "next": "Διὸς βοῦς",
+    "sort_key": "Dios balanos",
+    "redirect": "Kastanie",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1083,
@@ -18981,21 +18991,23 @@
     ]
   },
   {
-    "lemma": "Dios bous",
-    "previous": "Dios balanos",
-    "next": "Diosemia",
+    "lemma": "Διὸς βοῦς",
+    "previous": "Διὸς βάλανος",
+    "next": "Διοσημία",
+    "sort_key": "Dios bous",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1083,
         "end": 1083,
-        "author": "Stengel"
+        "author": "Stengel."
       }
     ]
   },
   {
-    "lemma": "Diosemia",
-    "previous": "Dios bous",
-    "next": "Dios hieron 1",
+    "lemma": "Διοσημία",
+    "previous": "Διὸς βοῦς",
+    "next": "Διὸς ἱερόν 1",
     "chapters": [
       {
         "start": 1083,
@@ -19005,20 +19017,22 @@
     ]
   },
   {
-    "lemma": "Dios hieron 1",
-    "previous": "Diosemia",
-    "next": "Dios hieron 2",
+    "lemma": "Διὸς ἱερόν 1",
+    "previous": "Διοσημία",
+    "next": "Διὸς ἱερόν 2",
+    "sort_key": "Dios hieron 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1083,
         "end": 1084,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Dios hieron 2",
-    "previous": "Dios hieron 1",
+    "lemma": "Διὸς ἱερόν 2",
+    "previous": "Διὸς ἱερόν 1",
     "next": "Dios kodion",
     "chapters": [
       {
@@ -19030,7 +19044,7 @@
   },
   {
     "lemma": "Dios kodion",
-    "previous": "Dios hieron 2",
+    "previous": "Διὸς ἱερόν 2",
     "next": "Dios kome",
     "chapters": [
       {
