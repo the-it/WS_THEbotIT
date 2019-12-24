@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
-from typing import TypedDict, Any, Dict, Optional
+from typing import TypedDict, Any, Dict, Optional, Union
 
 
 # typehints
@@ -9,9 +9,9 @@ class StatusDictType(TypedDict):
     bot_name: str
     success: bool
     finish: bool
-    start_time: datetime
-    finish_time: datetime
-    output: Optional[Dict[str, Any]]
+    start_time: str
+    finish_time: str
+    output: Optional[Dict[str, Union[int, str, bool]]]
 
 
 @dataclass
@@ -36,12 +36,15 @@ class Status:
         return Status(**class_dict)
 
     def to_dict(self) -> StatusDictType:
-        return_dict = {}
-        for key in self.__dict__:
-            if key.find("time") != -1:
-                return_dict[key] = self.__dict__[key].isoformat()
-            else:
-                return_dict[key] = self.__dict__[key]
+        return_dict: StatusDictType = {
+            "id": self.id,
+            "bot_name": self.bot_name,
+            "success": self.success,
+            "finish": self.finish,
+            "start_time": self.start_time.isoformat(),
+            "finish_time": self.finish_time.isoformat(),
+            "output": self.output
+        }
         return return_dict
 
     def close_run(self, success: bool, finish: bool) -> StatusDictType:
