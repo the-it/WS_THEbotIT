@@ -23,9 +23,15 @@ class TestStatus(TestCase):
         compare(False, status.finish)
 
     def test_from_dict(self):
-        status = Status.from_dict({"id": 2, "bot_name": "TestBot"})
+        status = Status.from_dict({"id": 2,
+                                   "bot_name": "TestBot",
+                                   "start_time": '2000-01-01T00:00:00',
+                                   "finish_time": '2000-01-01T00:10:00'
+                                   })
         compare(2, status.id)
         compare("TestBot", status.bot_name)
+        compare(datetime(year=2000, month=1, day=1), status.start_time)
+        compare(datetime(year=2000, month=1, day=1, minute=10), status.finish_time)
 
     def test_to_dict(self):
         status = Status(id=1, bot_name="TestBot")
@@ -34,7 +40,7 @@ class TestStatus(TestCase):
                  "success": False,
                  "finish": False,
                  "start_time": mock.ANY,
-                 "finish_time": datetime.min,
+                 "finish_time": '0001-01-01T00:00:00',
                  "output": None},
                 status.to_dict())
 

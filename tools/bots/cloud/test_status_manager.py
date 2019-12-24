@@ -1,56 +1,35 @@
 # pylint: disable=protected-access,no-member,no-self-use
-import decimal
-from unittest import TestCase
+from unittest import mock
 
-import boto3
-from moto import mock_dynamodb2
+from testfixtures import compare
+
+from tools.bots.cloud.status_manager import StatusManager
+from tools.bots.cloud.test_base import TestCloudBase
+
+StatusManager.MANAGE_TABLE = "wiki_bots_manage_table_tst"
 
 
-@mock_dynamodb2
-class TestStatusManager(TestCase):
-    def test_run(self):
-        dynamodb = boto3.resource('dynamodb', region_name='eu-central-1')
+class TestStatusManager(TestCloudBase):
+    def test_init(self):
+        status_manager = StatusManager("TestBot")
+        compare(1, status_manager.current_run.id)
+        compare({"id": 1,
+                 "bot_name": "TestBot",
+                 "finish": mock.ANY,
+                 "success": mock.ANY,
+                 "start_time": mock.ANY,
+                 "finish_time": mock.ANY,
+                 "output": mock.ANY},
+                self.manage_table.get_item(Key={"id": 1})["Item"])
 
-        dynamodb.create_table(
-            TableName='Movies',
-            KeySchema=[
-                {
-                    'AttributeName': 'year',
-                    'KeyType': 'HASH'  # Partition key
-                },
-                {
-                    'AttributeName': 'title',
-                    'KeyType': 'RANGE'  # Sort key
-                }
-            ],
-            AttributeDefinitions=[
-                {
-                    'AttributeName': 'year',
-                    'AttributeType': 'N'
-                },
-                {
-                    'AttributeName': 'title',
-                    'AttributeType': 'S'
-                },
 
-            ],
-            ProvisionedThroughput={
-                'ReadCapacityUnits': 10,
-                'WriteCapacityUnits': 10
-            }
-        )
-        table = dynamodb.Table('Movies')
+    def test_unique_id(self):
+        status_manager = StatusManager("TestBot")
+        compare(1, status_manager.current_run.id)
+        compare(1, self.manage_table.get_item(Key={"id": 1})["Item"]["id"])
+        status_manager_2 = StatusManager("TestBot2")
+        compare(2, status_manager_2.current_run.id)
+        compare(2, self.manage_table.get_item(Key={"id": 2})["Item"]["id"])
 
-        title = "The Big New Movie"
-        year = 2015
-
-        table.put_item(
-            Item={
-                'year': year,
-                'title': title,
-                'info': {
-                    'plot': "Nothing happens at all.",
-                    'rating': decimal.Decimal(0)
-                }
-            }
-        )
+    def test_3(self):
+        pass

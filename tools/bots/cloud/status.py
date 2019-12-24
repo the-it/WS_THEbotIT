@@ -25,14 +25,24 @@ class Status:
     output: Optional[Dict[str, Any]] = None
 
     def __post_init__(self):
-        self.start_time = datetime.now()
+        if self.start_time == datetime.min:
+            self.start_time = datetime.now()
 
     @classmethod
     def from_dict(cls, class_dict):
+        for key in class_dict:
+            if key.find("time") != -1:
+                class_dict[key] = datetime.fromisoformat(class_dict[key])
         return Status(**class_dict)
 
     def to_dict(self) -> StatusDictType:
-        return self.__dict__  # type: ignore
+        return_dict = {}
+        for key in self.__dict__:
+            if key.find("time") != -1:
+                return_dict[key] = self.__dict__[key].isoformat()
+            else:
+                return_dict[key] = self.__dict__[key]
+        return return_dict
 
     def close_run(self, success: bool, finish: bool) -> StatusDictType:
         self.finish_time = datetime.now()
