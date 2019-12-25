@@ -78,10 +78,10 @@ text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({"wp_link": "w:de:Lemma"}, []), self.task._fetch_wp_link(article))
-        compare(({"ws_link": "s:de:WsLemma"}, []), SCANTask._fetch_ws_link(article))
+        compare(({"ws_link": "s:de:WsLemma"}, []), self.task._fetch_ws_link(article))
 
     def test_fetch_wikipedia_link_no_link(self):
-        with mock.patch("scripts.service.ws_re.scanner.tasks.register_scanner.SCANTask._get_wp_link_from_wd",
+        with mock.patch("scripts.service.ws_re.scanner.tasks.register_scanner.SCANTask._get_link_from_wd",
                         mock.Mock(return_value=None)):
             self.text_mock.return_value = """{{REDaten
 |BAND=I,1
@@ -92,7 +92,7 @@ text.
             self.task.re_page = re_page
             article = re_page.splitted_article_list[0]
             compare(({}, ["wp_link"]), self.task._fetch_wp_link(article))
-            compare(({}, ["ws_link"]), SCANTask._fetch_ws_link(article))
+            compare(({}, ["ws_link"]), self.task._fetch_ws_link(article))
 
     def test_sortkey(self):
         self.text_mock.return_value = """{{REDaten
