@@ -49,7 +49,7 @@ class SCANTask(ReScannerTask):
         if article['WIKIPEDIA'].value:
             wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
         else:
-            wp_link = self._get_link_from_wd(("dewiki", "enwiki", "frwiki"))
+            wp_link = self._get_link_from_wd(("dewiki", "enwiki", "frwiki", "itwiki", "arwiki", "elwiki", "lawiki"))
         if wp_link:
             return {"wp_link": wp_link}, []
         return {}, ["wp_link"]
@@ -59,7 +59,8 @@ class SCANTask(ReScannerTask):
         if article['WIKISOURCE'].value:
             ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
         else:
-            ws_link = self._get_link_from_wd(("dewikisource",))
+            ws_link = self._get_link_from_wd(("dewikisource", "enwikisource", "frwikisource", "itwikisource",
+                                              "arwikisource", "elwikisource", "lawikisource"))
         if ws_link:
             return {"ws_link": ws_link}, []
         return {}, ["ws_link"]
