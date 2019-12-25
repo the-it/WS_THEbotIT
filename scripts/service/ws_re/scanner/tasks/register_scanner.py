@@ -1,8 +1,9 @@
+import contextlib
 import os
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Optional, Sequence
 
 import pywikibot
 from git import Repo
@@ -43,21 +44,38 @@ class SCANTask(ReScannerTask):
         self.registers.persist()
         self._push_changes()
 
-    @staticmethod
-    def _fetch_wp_link(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         article = article_list[0]
-        wp_link = article["WIKIPEDIA"].value
+        if article['WIKIPEDIA'].value:
+            wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
+        else:
+            wp_link = self._get_link_from_wd(("dewiki", "enwiki", "frwiki", "itwiki", "arwiki", "elwiki", "lawiki"))
         if wp_link:
-            return {"wp_link": f"w:de:{wp_link}"}, []
+            return {"wp_link": wp_link}, []
         return {}, ["wp_link"]
 
-    @staticmethod
-    def _fetch_ws_link(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
         article = article_list[0]
-        wp_link = article["WIKISOURCE"].value
-        if wp_link:
-            return {"ws_link": f"s:de:{wp_link}"}, []
+        if article['WIKISOURCE'].value:
+            ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
+        else:
+            ws_link = self._get_link_from_wd(("dewikisource", "enwikisource", "frwikisource", "itwikisource",
+                                              "arwikisource", "elwikisource", "lawikisource"))
+        if ws_link:
+            return {"ws_link": ws_link}, []
         return {}, ["ws_link"]
+
+    def _get_link_from_wd(self, possible_source_wikis: Sequence) -> Optional[str]:
+        with contextlib.suppress(pywikibot.exceptions.NoPage):
+            wp_item = self.re_page.page.data_item()
+            with contextlib.suppress(KeyError):
+                target = wp_item.claims["P921"][0].target
+                for sitelink in possible_source_wikis:
+                    with contextlib.suppress(pywikibot.exceptions.NoPage):
+                        link = f"w:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
+                        self.logger.info(f"Found link {link}")
+                        return link
+        return None
 
     @staticmethod
     def _fetch_sort_key(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:

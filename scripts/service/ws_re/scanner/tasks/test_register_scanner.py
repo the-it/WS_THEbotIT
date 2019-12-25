@@ -1,7 +1,8 @@
 # pylint: disable=protected-access
 from pathlib import Path
-from unittest import mock
+from unittest import mock, skipUnless
 
+import pywikibot
 from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
@@ -13,6 +14,7 @@ from scripts.service.ws_re.register.test_base import clear_tst_path, _TEST_REGIS
 from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from scripts.service.ws_re.template.re_page import RePage
+from tools import INTEGRATION_TEST
 
 
 class TaskTestWithRegister(TaskTestCase):
@@ -75,18 +77,22 @@ class TestSCANTask(TaskTestWithRegister):
 text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"wp_link": "w:de:Lemma"}, []), SCANTask._fetch_wp_link(article))
-        compare(({"ws_link": "s:de:WsLemma"}, []), SCANTask._fetch_ws_link(article))
+        compare(({"wp_link": "w:de:Lemma"}, []), self.task._fetch_wp_link(article))
+        compare(({"ws_link": "s:de:WsLemma"}, []), self.task._fetch_ws_link(article))
 
     def test_fetch_wikipedia_link_no_link(self):
-        self.text_mock.return_value = """{{REDaten
+        with mock.patch("scripts.service.ws_re.scanner.tasks.register_scanner.SCANTask._get_link_from_wd",
+                        mock.Mock(return_value=None)):
+            self.text_mock.return_value = """{{REDaten
 |BAND=I,1
 }}
 text.
 {{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["wp_link"]), SCANTask._fetch_wp_link(article))
-        compare(({}, ["ws_link"]), SCANTask._fetch_ws_link(article))
+            re_page = RePage(self.page_mock)
+            self.task.re_page = re_page
+            article = re_page.splitted_article_list[0]
+            compare(({}, ["wp_link"]), self.task._fetch_wp_link(article))
+            compare(({}, ["ws_link"]), self.task._fetch_ws_link(article))
 
     def test_sortkey(self):
         self.text_mock.return_value = """{{REDaten
@@ -496,3 +502,12 @@ text.
             log_catcher.check(mock.ANY, ("Test", "ERROR",
                                          StringComparison("No available Lemma in Registers for issue I,1 "
                                                           ".* Reason is:.*")))
+
+    @skipUnless(INTEGRATION_TEST, "only execute in integration test")
+    def test_get_wd_sitelink(self):
+        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+        self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Demetrios 79"))
+        compare(({'wp_link': 'w:en:Demetrius the Chronographer'}, []),
+                self.task._fetch_wp_link(self.task.re_page.splitted_article_list[0]))
+        compare(({'ws_link': 'w:de:Apokryphen/Demetrius der Chronograph'}, []),
+                self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]))

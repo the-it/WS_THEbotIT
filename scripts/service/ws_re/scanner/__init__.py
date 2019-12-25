@@ -168,5 +168,5 @@ class ReScanner(CanonicalBot):
 
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-    with ReScanner(wiki=WS_WIKI, debug=True) as bot:
+    with ReScanner(wiki=WS_WIKI, debug=False) as bot:
         bot.run()

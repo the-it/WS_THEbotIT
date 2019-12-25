@@ -6,7 +6,7 @@ from typing import Union, Tuple, Generator, Optional, Dict, TypedDict, List
 from scripts.service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
 from scripts.service.ws_re.template.property import Property, ValueType
 from tools.template_finder import TemplateFinder
-from tools.template_handler import TemplateHandler
+from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 
 # type hints
@@ -183,13 +183,17 @@ class Article(collections.MutableMapping):
             raise ReDatenException("Article has the wrong structure. Wrong order of templates.")
         # it can only exists text between the start and the end template.
         if find_re_start[0]["pos"][0] != 0:
-            raise ReDatenException("Article has the wrong structure. "
-                                   "There is text in front of the article.")
+            raise ReDatenException("Article has the wrong structure. There is text in front of the article.")
         if find_re_author[0]["pos"][1] != len(article_text):
-            raise ReDatenException("Article has the wrong structure. "
-                                   "There is text after the article.")
-        re_start = TemplateHandler(find_re_start[0]["text"])
-        re_author = TemplateHandler(find_re_author[0]["text"])
+            raise ReDatenException("Article has the wrong structure. There is text after the article.")
+        try:
+            re_start = TemplateHandler(find_re_start[0]["text"])
+        except TemplateHandlerException:
+            raise ReDatenException("Start-Template has the wrong structure.")
+        try:
+            re_author = TemplateHandler(find_re_author[0]["text"])
+        except TemplateHandlerException:
+            raise ReDatenException("Author-Template has the wrong structure.")
         properties_dict = cls._extract_properties(re_start.parameters)
         author_name = re_author.parameters[0]["value"]
         try:

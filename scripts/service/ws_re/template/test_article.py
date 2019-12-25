@@ -260,6 +260,28 @@ text
 {{REAutor|Kahrstedt.}}"""
         Article.from_text(test_string)
 
+    def test_bug_corrupt_author(self):
+        with self.assertRaises(ReDatenException):
+            test_string = """{{REDaten
+|BAND=V,1
+|SPALTE_START=1128
+|SPALTE_END=OFF
+}}
+'''6)'''  Zu unterscheiden von diesem D. ist Dioskorides von Nikopolis, von welchem Anth. Pal. VII 178 (ausserhalb der Reihen) ein Epigramm erhalten ist. Unsicher ist VII 167.
+{{REAutor|[Reitzenstein.}}"""
+            Article.from_text(test_string)
+
+    def test_bug_corrupt_start_template(self):
+        with self.assertRaises(ReDatenException):
+            test_string = """{{REDaten
+|{BAND=V,1
+|SPALTE_START=1128
+|SPALTE_END=OFF
+}}
+'''6)'''  Zu unterscheiden von diesem D. ist Dioskorides von Nikopolis, von welchem Anth. Pal. VII 178 (ausserhalb der Reihen) ein Epigramm erhalten ist. Unsicher ist VII 167.
+{{REAutor|[Reitzenstein.}}"""
+            Article.from_text(test_string)
+
     def test_correct_case(self):
         article_text = "{{REDaten\n|Nachtrag=OFF|Ksch=OFF\n}}\ntext\n{{REAutor|Autor.}}"
         article = Article.from_text(article_text)
