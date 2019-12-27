@@ -12835,6 +12835,7 @@
     "next": "Diognetos 19",
     "proof_read": 3,
     "wp_link": "w:de:Brief an Diognet",
+    "ws_link": "w:en:Epistle to Diognetus",
     "chapters": [
       {
         "start": 786,
@@ -14113,7 +14114,7 @@
     "lemma": "Diomedes 10",
     "previous": "Diomedes 9",
     "next": "Diomedes 11",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 826,
@@ -14166,6 +14167,8 @@
     "previous": "Diomedes 13",
     "next": "Diomedes 15",
     "proof_read": 2,
+    "wp_link": "w:de:Diomedes Grammaticus",
+    "ws_link": "w:it:Autore:Diomede Grammatico",
     "chapters": [
       {
         "start": 827,
@@ -14634,7 +14637,8 @@
     "previous": "Dion 11",
     "next": "Dion 13",
     "redirect": "Cassius 41",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Cassius Dio (Konsul 291)",
     "chapters": [
       {
         "start": 847,
@@ -17223,6 +17227,7 @@
     "next": "Dionysios 153",
     "proof_read": 3,
     "wp_link": "w:de:Dionysius (Bischof von Rom)",
+    "ws_link": "w:en:Author:Dionysius (d. 268)",
     "chapters": [
       {
         "start": 994,
@@ -17237,6 +17242,7 @@
     "next": "Dionysios 154",
     "proof_read": 3,
     "wp_link": "w:de:Dionysius von Alexandria",
+    "ws_link": "w:en:Author:Dionysius of Alexandria",
     "chapters": [
       {
         "start": 995,
@@ -17251,6 +17257,7 @@
     "next": "Dionysios 155",
     "proof_read": 3,
     "wp_link": "w:de:Dionysius Areopagita",
+    "ws_link": "w:en:Author:Dionysius the Areopagite",
     "chapters": [
       {
         "start": 996,
@@ -19033,48 +19040,55 @@
   {
     "lemma": "Διὸς ἱερόν 2",
     "previous": "Διὸς ἱερόν 1",
-    "next": "Dios kodion",
+    "next": "Διὸς κώδιον",
+    "sort_key": "Dios hieron 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1084,
         "end": 1084,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Dios kodion",
+    "lemma": "Διὸς κώδιον",
     "previous": "Διὸς ἱερόν 2",
-    "next": "Dios kome",
+    "next": "Διὸς κώμη",
+    "sort_key": "Dios kodion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1084,
         "end": 1084,
-        "author": "Stengel"
+        "author": "Stengel."
       }
     ]
   },
   {
-    "lemma": "Dios kome",
-    "previous": "Dios kodion",
+    "lemma": "Διὸς κώμη",
+    "previous": "Διὸς κώδιον",
     "next": "Dioskonis",
+    "sort_key": "Dios kome",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1084,
         "end": 1084,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Dioskonis",
-    "previous": "Dios kome",
+    "previous": "Διὸς κώμη",
     "next": "Dioskorides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1084,
         "end": 1084,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -19082,6 +19096,8 @@
     "lemma": "Dioskorides",
     "previous": "Dioskonis",
     "next": "Dioskorios",
+    "redirect": "Dioskurides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1085,
@@ -19092,36 +19108,40 @@
   {
     "lemma": "Dioskorios",
     "previous": "Dioskorides",
-    "next": "Dioskoron limen",
+    "next": "Διοσκόρων λιμήν",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1085,
         "end": 1086,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
   {
-    "lemma": "Dioskoron limen",
+    "lemma": "Διοσκόρων λιμήν",
     "previous": "Dioskorios",
     "next": "Dioskoros 1",
+    "sort_key": "Dioskoron limen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1086,
         "end": 1086,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
   {
     "lemma": "Dioskoros 1",
-    "previous": "Dioskoron limen",
+    "previous": "Διοσκόρων λιμήν",
     "next": "Dioskoros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1086,
         "end": 1086,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -19129,11 +19149,12 @@
     "lemma": "Dioskoros 2",
     "previous": "Dioskoros 1",
     "next": "Dioskoros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1086,
         "end": 1086,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -19141,11 +19162,12 @@
     "lemma": "Dioskoros 3",
     "previous": "Dioskoros 2",
     "next": "Dioskoros 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1086,
         "end": 1086,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -19153,11 +19175,12 @@
     "lemma": "Dioskoros 4",
     "previous": "Dioskoros 3",
     "next": "Dioskoros 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1086,
         "end": 1086,
-        "author": "Berger"
+        "author": "Berger."
       }
     ]
   },
@@ -19165,11 +19188,12 @@
     "lemma": "Dioskoros 5",
     "previous": "Dioskoros 4",
     "next": "Dioskoros 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1086,
         "end": 1086,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -19177,11 +19201,13 @@
     "lemma": "Dioskoros 6",
     "previous": "Dioskoros 5",
     "next": "Dioskuren",
+    "proof_read": 2,
+    "wp_link": "w:de:Dioskoros I. von Alexandria",
     "chapters": [
       {
         "start": 1086,
         "end": 1087,
-        "author": "Jülicher"
+        "author": "Jülicher."
       }
     ]
   },
@@ -19189,11 +19215,12 @@
     "lemma": "Dioskuren",
     "previous": "Dioskoros 6",
     "next": "Dioskurias 1",
+    "wp_link": "w:de:Dioskuren",
     "chapters": [
       {
         "start": 1087,
         "end": 1123,
-        "author": "Bethe"
+        "author": "Bethe."
       }
     ]
   },
@@ -19201,47 +19228,52 @@
     "lemma": "Dioskurias 1",
     "previous": "Dioskuren",
     "next": "Dioskurias 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1123,
-        "end": 1123,
-        "author": "Sethe"
+        "start": 1023,
+        "end": 1023,
+        "author": "Sethe."
       }
     ]
   },
   {
     "lemma": "Dioskurias 2",
     "previous": "Dioskurias 1",
-    "next": "Dioskuriastai",
+    "next": "Διοσκουριασταί",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1123,
         "end": 1125,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
   {
-    "lemma": "Dioskuriastai",
+    "lemma": "Διοσκουριασταί",
     "previous": "Dioskurias 2",
     "next": "Dioskurides 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1125,
         "end": 1125,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
   {
     "lemma": "Dioskurides 1",
-    "previous": "Dioskuriastai",
+    "previous": "Διοσκουριασταί",
     "next": "Dioskurides 2",
+    "sort_key": "Dioskurides 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1125,
         "end": 1125,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -19249,11 +19281,13 @@
     "lemma": "Dioskurides 2",
     "previous": "Dioskurides 1",
     "next": "Dioskurides 3",
+    "sort_key": "Dioskurides 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1125,
         "end": 1125,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -19261,11 +19295,13 @@
     "lemma": "Dioskurides 3",
     "previous": "Dioskurides 2",
     "next": "Dioskurides 4",
+    "sort_key": "Dioskurides 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1125,
         "end": 1125,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -19273,11 +19309,13 @@
     "lemma": "Dioskurides 4",
     "previous": "Dioskurides 3",
     "next": "Dioskurides 5",
+    "sort_key": "Dioskurides 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1125,
         "end": 1125,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -19285,11 +19323,13 @@
     "lemma": "Dioskurides 5",
     "previous": "Dioskurides 4",
     "next": "Dioskurides 6",
+    "sort_key": "Dioskurides 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1125,
         "end": 1128,
-        "author": "Reitzenstein"
+        "author": "Reitzenstein."
       }
     ]
   },
@@ -19297,11 +19337,13 @@
     "lemma": "Dioskurides 6",
     "previous": "Dioskurides 5",
     "next": "Dioskurides 7",
+    "sort_key": "Dioskurides 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1128,
         "end": 1128,
-        "author": "Reitzenstein"
+        "author": "Reitzenstein."
       }
     ]
   },
@@ -19309,11 +19351,13 @@
     "lemma": "Dioskurides 7",
     "previous": "Dioskurides 6",
     "next": "Dioskurides 8",
+    "sort_key": "Dioskurides 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1128,
         "end": 1129,
-        "author": "Schwartz"
+        "author": "Schwartz."
       }
     ]
   },
@@ -19321,11 +19365,13 @@
     "lemma": "Dioskurides 8",
     "previous": "Dioskurides 7",
     "next": "Dioskurides 9",
+    "sort_key": "Dioskurides 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1129,
         "end": 1129,
-        "author": "Arnim"
+        "author": "v. Arnim."
       }
     ]
   },
@@ -19333,11 +19379,13 @@
     "lemma": "Dioskurides 9",
     "previous": "Dioskurides 8",
     "next": "Dioskurides 10",
+    "sort_key": "Dioskurides 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1129,
         "end": 1129,
-        "author": "Arnim"
+        "author": "v. Arnim."
       }
     ]
   },
@@ -19345,11 +19393,12 @@
     "lemma": "Dioskurides 10",
     "previous": "Dioskurides 9",
     "next": "Dioskurides 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1129,
         "end": 1130,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -19357,11 +19406,12 @@
     "lemma": "Dioskurides 11",
     "previous": "Dioskurides 10",
     "next": "Dioskurides 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1130,
         "end": 1131,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -19384,11 +19434,12 @@
     "lemma": "Dioskurides 13",
     "previous": "Dioskurides 12",
     "next": "Dioskurides 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1142,
         "end": 1143,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -19396,11 +19447,12 @@
     "lemma": "Dioskurides 14",
     "previous": "Dioskurides 13",
     "next": "Dioskurides 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1143,
         "end": 1143,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -19408,78 +19460,87 @@
     "lemma": "Dioskurides 15",
     "previous": "Dioskurides 14",
     "next": "Dioskurides 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1143,
         "end": 1143,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
   {
     "lemma": "Dioskurides 16",
     "previous": "Dioskurides 15",
-    "next": "Dioskuritai",
+    "next": "Διοσκουρῖται",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1143,
         "end": 1143,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
   {
-    "lemma": "Dioskuritai",
+    "lemma": "Διοσκουρῖται",
     "previous": "Dioskurides 16",
-    "next": "Dioskuron kome",
+    "next": "Διοσκούρων κώμη",
+    "sort_key": "Dioskuritai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1144,
-        "author": "Sethe"
+        "author": "Ziebarth."
       }
     ]
   },
   {
-    "lemma": "Dioskuron kome",
-    "previous": "Dioskuritai",
+    "lemma": "Διοσκούρων κώμη",
+    "previous": "Διοσκουρῖται",
     "next": "Dioskuros",
+    "sort_key": "Dioskuron kome",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1144,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
   {
     "lemma": "Dioskuros",
-    "previous": "Dioskuron kome",
-    "next": "Diosmilichiastai",
+    "previous": "Διοσκούρων κώμη",
+    "next": "Διοσμιλιχιασταί",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1144,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
-    "lemma": "Diosmilichiastai",
+    "lemma": "Διοσμιλιχιασταί",
     "previous": "Dioskuros",
-    "next": "Dios ophrya",
+    "next": "Διὸς ὀφρύα",
+    "sort_key": "Diosmilichiastai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1144,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
   {
-    "lemma": "Dios ophrya",
-    "previous": "Diosmilichiastai",
-    "next": "Dios oros",
+    "lemma": "Διὸς ὀφρύα",
+    "previous": "Διοσμιλιχιασταί",
+    "next": "Διὸς ὄρος",
     "chapters": [
       {
         "start": 1144,
@@ -19489,26 +19550,29 @@
     ]
   },
   {
-    "lemma": "Dios oros",
-    "previous": "Dios ophrya",
+    "lemma": "Διὸς ὄρος",
+    "previous": "Διὸς ὀφρύα",
     "next": "Diospage",
+    "sort_key": "Dios oros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1144,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Diospage",
-    "previous": "Dios oros",
+    "previous": "Διὸς ὄρος",
     "next": "Διὸς φώς",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1144,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -19516,11 +19580,13 @@
     "lemma": "Διὸς φώς",
     "previous": "Diospage",
     "next": "Diospolis 1",
+    "sort_key": "Dios phos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1144,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -19658,11 +19724,13 @@
     "lemma": "Διοσσωτηριασταί",
     "previous": "Diospolis 9. 10",
     "next": "Διὸς Θεοδοσία",
+    "sort_key": "Diossoteriastai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1145,
         "end": 1145,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
@@ -19684,11 +19752,12 @@
     "lemma": "Diosthyos",
     "previous": "Διὸς Θεοδοσία",
     "next": "Διοσξενιασταί",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1146,
         "end": 1146,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
@@ -19696,11 +19765,13 @@
     "lemma": "Διοσξενιασταί",
     "previous": "Diosthyos",
     "next": "Diotahi",
+    "sort_key": "Dioxeniastai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1146,
         "end": 1146,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
@@ -20043,11 +20114,12 @@
     "lemma": "Diotimos 21",
     "previous": "Diotimos 20",
     "next": "Diotimos 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Arnim"
+        "author": "v. Arnim."
       }
     ]
   },
@@ -20055,11 +20127,12 @@
     "lemma": "Diotimos 22",
     "previous": "Diotimos 21",
     "next": "Diotimos 23",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -20067,11 +20140,12 @@
     "lemma": "Diotimos 23",
     "previous": "Diotimos 22",
     "next": "Diotogenes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -20079,11 +20153,12 @@
     "lemma": "Diotogenes",
     "previous": "Diotimos 23",
     "next": "Diotrephes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Wellmann, E[duard]"
+        "author": "E. Wellmann."
       }
     ]
   },
@@ -20091,11 +20166,12 @@
     "lemma": "Diotrephes 1",
     "previous": "Diotogenes",
     "next": "Diotrephes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20103,11 +20179,12 @@
     "lemma": "Diotrephes 2",
     "previous": "Diotrephes 1",
     "next": "Dioxandros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Radermacher"
+        "author": "Radermacher."
       }
     ]
   },
@@ -20115,11 +20192,12 @@
     "lemma": "Dioxandros",
     "previous": "Diotrephes 2",
     "next": "Dioxippe 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20127,11 +20205,12 @@
     "lemma": "Dioxippe 1",
     "previous": "Dioxandros",
     "next": "Dioxippe 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1150,
         "end": 1150,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -20139,11 +20218,12 @@
     "lemma": "Dioxippe 2",
     "previous": "Dioxippe 1",
     "next": "Dioxippe 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -20151,11 +20231,12 @@
     "lemma": "Dioxippe 3",
     "previous": "Dioxippe 2",
     "next": "Dioxippe 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -20163,11 +20244,12 @@
     "lemma": "Dioxippe 4",
     "previous": "Dioxippe 3",
     "next": "Dioxippe 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -20175,11 +20257,12 @@
     "lemma": "Dioxippe 5",
     "previous": "Dioxippe 4",
     "next": "Dioxippos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -20187,11 +20270,12 @@
     "lemma": "Dioxippos 1",
     "previous": "Dioxippe 5",
     "next": "Dioxippos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -20199,11 +20283,12 @@
     "lemma": "Dioxippos 2",
     "previous": "Dioxippos 1",
     "next": "Dioxippos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20211,47 +20296,51 @@
     "lemma": "Dioxippos 3",
     "previous": "Dioxippos 2",
     "next": "Dipaia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Kaibel"
+        "author": "Kaibel."
       }
     ]
   },
   {
     "lemma": "Dipaia",
     "previous": "Dioxippos 3",
-    "next": "Dipanamia",
+    "next": "Διπανάμια",
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
   {
-    "lemma": "Dipanamia",
+    "lemma": "Διπανάμια",
     "previous": "Dipaia",
     "next": "Diphilos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1152,
-        "author": "Stengel"
+        "author": "Stengel."
       }
     ]
   },
   {
     "lemma": "Diphilos 1",
-    "previous": "Dipanamia",
+    "previous": "Διπανάμια",
     "next": "Diphilos 2",
+    "sort_key": "Diphilos 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20259,11 +20348,13 @@
     "lemma": "Diphilos 2",
     "previous": "Diphilos 1",
     "next": "Diphilos 3",
+    "sort_key": "Diphilos 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20271,11 +20362,13 @@
     "lemma": "Diphilos 3",
     "previous": "Diphilos 2",
     "next": "Diphilos 4",
+    "sort_key": "Diphilos 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20283,11 +20376,13 @@
     "lemma": "Diphilos 4",
     "previous": "Diphilos 3",
     "next": "Diphilos 5",
+    "sort_key": "Diphilos 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20295,11 +20390,13 @@
     "lemma": "Diphilos 5",
     "previous": "Diphilos 4",
     "next": "Diphilos 6",
+    "sort_key": "Diphilos 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20307,11 +20404,13 @@
     "lemma": "Diphilos 6",
     "previous": "Diphilos 5",
     "next": "Diphilos 7",
+    "sort_key": "Diphilos 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20319,11 +20418,13 @@
     "lemma": "Diphilos 7",
     "previous": "Diphilos 6",
     "next": "Diphilos 8",
+    "sort_key": "Diphilos 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20331,11 +20432,13 @@
     "lemma": "Diphilos 8",
     "previous": "Diphilos 7",
     "next": "Diphilos 9",
+    "sort_key": "Diphilos 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20343,11 +20446,13 @@
     "lemma": "Diphilos 9",
     "previous": "Diphilos 8",
     "next": "Diphilos 10",
+    "sort_key": "Diphilos 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -20355,11 +20460,12 @@
     "lemma": "Diphilos 10",
     "previous": "Diphilos 9",
     "next": "Diphilos 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1152,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -20367,11 +20473,12 @@
     "lemma": "Diphilos 11",
     "previous": "Diphilos 10",
     "next": "Diphilos 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1152,
         "end": 1153,
-        "author": "Crusius"
+        "author": "Crusius."
       }
     ]
   },
@@ -20392,11 +20499,12 @@
     "lemma": "Diphilos 13",
     "previous": "Diphilos 12",
     "next": "Diphilos 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
         "end": 1155,
-        "author": "Natorp"
+        "author": "Natorp."
       }
     ]
   },
@@ -20404,11 +20512,12 @@
     "lemma": "Diphilos 14",
     "previous": "Diphilos 13",
     "next": "Diphilos 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
         "end": 1155,
-        "author": "Arnim"
+        "author": "v. Arnim."
       }
     ]
   },
@@ -20416,11 +20525,12 @@
     "lemma": "Diphilos 15",
     "previous": "Diphilos 14",
     "next": "Diphilos 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
         "end": 1155,
-        "author": "Arnim"
+        "author": "v. Arnim."
       }
     ]
   },
@@ -20428,11 +20538,12 @@
     "lemma": "Diphilos 16",
     "previous": "Diphilos 15",
     "next": "Diphilos 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
         "end": 1155,
-        "author": "Schmid"
+        "author": "W. Schmid."
       }
     ]
   },
@@ -20440,11 +20551,12 @@
     "lemma": "Diphilos 17",
     "previous": "Diphilos 16",
     "next": "Diphilos 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
         "end": 1155,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -21897,11 +22009,12 @@
     "lemma": "Dizeros",
     "previous": "Dizeres",
     "next": "Dizezeia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1248,
         "end": 1248,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -21909,6 +22022,8 @@
     "lemma": "Dizezeia",
     "previous": "Dizeros",
     "next": "Dmasagoras",
+    "redirect": "Decetia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1248,
@@ -23972,6 +24087,7 @@
     "next": "Domitius 22",
     "sort_key": "Domitius 021",
     "proof_read": 2,
+    "wp_link": "w:de:Gnaeus Domitius Ahenobarbus (Konsul 96 v. Chr.)",
     "chapters": [
       {
         "start": 1324,
@@ -23986,6 +24102,7 @@
     "next": "Domitius 23",
     "sort_key": "Domitius 022",
     "proof_read": 2,
+    "wp_link": "w:en:Gnaeus Domitius Ahenobarbus (died 81 BC)",
     "chapters": [
       {
         "start": 1327,
@@ -24144,6 +24261,7 @@
     "next": "Domitius 34",
     "sort_key": "Domitius 033",
     "proof_read": 2,
+    "wp_link": "w:de:Lucius Domitius Apollinaris",
     "chapters": [
       {
         "start": 1347,

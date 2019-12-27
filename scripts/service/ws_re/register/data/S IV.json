@@ -2180,8 +2180,8 @@
     "chapters": [
       {
         "start": 225,
-        "end": 225,
-        "author": "Schoch"
+        "end": 226,
+        "author": "Schoch."
       }
     ]
   },
@@ -2284,12 +2284,13 @@
   },
   {
     "lemma": "Diophanes 2a",
+    "previous": "Dionysios 98b",
     "next": "Diophantes 2",
     "chapters": [
       {
         "start": 226,
         "end": 226,
-        "author": "Schoch"
+        "author": "Schoch."
       }
     ]
   },
@@ -2301,43 +2302,46 @@
       {
         "start": 227,
         "end": 227,
-        "author": "Schoch"
+        "author": "Schoch."
       }
     ]
   },
   {
     "lemma": "Diophantos 9a",
     "previous": "Diophantes 2",
-    "next": "Dioxenos(?)",
+    "next": "Dioxenos",
+    "sort_key": "Diophantos 09a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
         "end": 227,
-        "author": "Berve"
+        "author": "Berve."
       }
     ]
   },
   {
-    "lemma": "Dioxenos(?)",
+    "lemma": "Dioxenos",
     "previous": "Diophantos 9a",
     "next": "Disoteria",
     "chapters": [
       {
         "start": 227,
         "end": 227,
-        "author": "Berve"
+        "author": "Berve."
       }
     ]
   },
   {
     "lemma": "Disoteria",
-    "previous": "Dioxenos(?)",
+    "previous": "Dioxenos",
     "next": "Doloaspis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
         "end": 227,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -2349,7 +2353,7 @@
       {
         "start": 227,
         "end": 227,
-        "author": "Berve"
+        "author": "Berve."
       }
     ]
   },
