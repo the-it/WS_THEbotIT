@@ -17,12 +17,12 @@ if __name__ == "__main__":
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
     SCHEDULER.daily_bots = [AuthorList, ReRegisterPrinter]
     SCHEDULER.weekly_bots = {0: [ReScanner],  # monday
-                             1: [],
+                             1: [ReScanner],
                              2: [ReScanner],
-                             3: [],
+                             3: [ReScanner],
                              4: [ReScanner],
-                             5: [],
-                             6: [ReStatus, GlCreateMagazine, ReScanner]}  # sunday
+                             5: [ReScanner],
+                             6: [ReScanner, ReStatus, GlCreateMagazine, ReScanner]}  # sunday
     SCHEDULER.monthly_bots = {1: [GlStatus]}
     SCHEDULER.bots_on_last_day_of_month = []
     with SCHEDULER as bot:
