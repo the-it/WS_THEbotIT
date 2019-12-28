@@ -509,5 +509,5 @@ text.
         self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Demetrios 79"))
         compare(({'wp_link': 'w:en:Demetrius the Chronographer'}, []),
                 self.task._fetch_wp_link(self.task.re_page.splitted_article_list[0]))
-        compare(({'ws_link': 'w:de:Apokryphen/Demetrius der Chronograph'}, []),
+        compare(({'ws_link': 's:de:Apokryphen/Demetrius der Chronograph'}, []),
                 self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]))
