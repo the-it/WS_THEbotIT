@@ -72,7 +72,8 @@ class SCANTask(ReScannerTask):
                 target = wp_item.claims["P921"][0].target
                 for sitelink in possible_source_wikis:
                     with contextlib.suppress(pywikibot.exceptions.NoPage):
-                        link = f"w:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
+                        wiki_prefix = "s" if sitelink.find("wikisource") > 0 else "w"
+                        link = f"{wiki_prefix}:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
                         self.logger.info(f"Found link {link}")
                         return link
         return None
