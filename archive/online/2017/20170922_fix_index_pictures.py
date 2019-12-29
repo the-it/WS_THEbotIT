@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 __author__ = 'eso'
-import sys
 import re
+import sys
+
 sys.path.append('../../')
 
 from pywikibot import Site
 from pywikibot import Page
-from tools.bots import OneTimeBot
+from tools.bots.pi import OneTimeBot
 from tools.petscan import PetScan
 
 regex_picture = re.compile('\|BILD=\[\[(.*?)\]\]')

@@ -5,7 +5,7 @@ from typing import Tuple, List
 from pywikibot import Page, Site
 
 from tools import make_html_color
-from tools.bots import CanonicalBot
+from tools.bots.pi import CanonicalBot
 from tools.petscan import PetScan, PetscanLemma
 
 

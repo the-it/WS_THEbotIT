@@ -13,7 +13,8 @@ from scripts.service.ws_re.scanner.tasks.keine_schoepfungshoehe import KSCHTask
 from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.template import ReDatenException
 from scripts.service.ws_re.template.re_page import RePage
-from tools.bots import CanonicalBot, BotException
+from tools.bots import BotException
+from tools.bots.pi import CanonicalBot
 from tools.petscan import PetScan, PetScanException, PetscanLemma
 
 

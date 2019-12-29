@@ -5,7 +5,8 @@ from typing import Iterator
 from pywikibot import Page, Site
 from pywikibot.proofreadpage import ProofreadPage, IndexPage
 
-from tools.bots import CanonicalBot, BotException
+from tools.bots import BotException
+from tools.bots.pi import CanonicalBot
 from tools.petscan import PetScan
 
 

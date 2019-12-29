@@ -9,7 +9,8 @@ from unittest import TestCase, mock
 
 from testfixtures import LogCapture, compare
 
-from tools.bots import BotException, CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, \
+from tools.bots import BotException
+from tools.bots.pi import CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, \
     WikiLogger, \
     _DATA_PATH, _get_data_path
 
@@ -23,7 +24,7 @@ def _remove_data_folder():
 
 def setup_data_path(test_class: TestCase):
     test_class.addCleanup(mock.patch.stopall)
-    mock.patch("tools.bots._DATA_PATH", _DATA_PATH_TEST).start()
+    mock.patch("tools.bots.pi._DATA_PATH", _DATA_PATH_TEST).start()
     _remove_data_folder()
     os.mkdir(_DATA_PATH_TEST)
 
@@ -40,13 +41,13 @@ class TestGetDataPath(TestCase):
         teardown_data_path()
 
     def test_folder_exist(self):
-        with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
+        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
             self.assertEqual(_DATA_PATH_TEST, _get_data_path())
             mock_mkdir.assert_not_called()
 
     def test_make_folder(self):
         os.rmdir(_DATA_PATH_TEST)
-        with mock.patch("tools.bots.os.mkdir") as mock_mkdir:
+        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
             self.assertEqual(_DATA_PATH_TEST, _get_data_path())
             self.assertEqual(1, mock_mkdir.call_count)
 
@@ -199,7 +200,7 @@ class TestOneTimeBot(TestCase):
             time.sleep(0.001)
 
     def test_timestamp_return_start_time(self):
-        with mock.patch("tools.bots.PersistedTimestamp.start_of_run",
+        with mock.patch("tools.bots.pi.PersistedTimestamp.start_of_run",
                         new_callable=mock.PropertyMock(return_value=datetime(2000, 1, 1))):
             with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
                 self.assertEqual(datetime(2000, 1, 1), bot.timestamp.start_of_run)
@@ -277,7 +278,7 @@ class TestOneTimeBot(TestCase):
             self.assertTrue(bot.run())
 
     def test_send_log_to_wiki(self):
-        with mock.patch("tools.bots.Page") as mock_page:
+        with mock.patch("tools.bots.pi.Page") as mock_page:
             with self.MinimalBot(wiki=None, log_to_screen=False) as bot:
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
@@ -561,7 +562,7 @@ class TestCanonicalBot(TestCase):
         self.create_data("DataThrowException")
         self.create_timestamp("DataThrowException")
         with LogCapture() as log_catcher:
-            with mock.patch("tools.bots.PersistedData.dump") as mock_dump:
+            with mock.patch("tools.bots.pi.PersistedData.dump") as mock_dump:
                 with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
                     log_catcher.clear()
                     bot.run()
@@ -580,7 +581,7 @@ class TestCanonicalBot(TestCase):
     def test_set_timestamp_for_searcher_no_successful_run(self):
         self.create_timestamp("MinimalCanonicalBot", success=False)
         self.create_data("MinimalCanonicalBot")
-        with mock.patch("tools.bots.PersistedTimestamp.start_of_run",
+        with mock.patch("tools.bots.pi.PersistedTimestamp.start_of_run",
                         mock.PropertyMock(return_value=datetime(2001, 1, 1))):
             with self.MinimalCanonicalBot(log_to_screen=False, log_to_wiki=False) as bot:
                 self.assertEqual(datetime(2000, 1, 1), bot.create_timestamp_for_search(10))
