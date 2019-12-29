@@ -229,6 +229,7 @@
     "previous": "Androtion",
     "next": "Annius 26a",
     "proof_read": 3,
+    "wp_link": "w:de:Kültepe",
     "chapters": [
       {
         "start": 7,
@@ -519,6 +520,7 @@
     "lemma": "Aretalogoi",
     "previous": "Aresaces",
     "next": "Arinistae",
+    "wp_link": "w:de:Aretalogie (Religion)",
     "chapters": [
       {
         "start": 13,
@@ -1764,13 +1766,31 @@
     "previous": "Delphion 3"
   },
   {
+    "lemma": "Dillius 1",
+    "next": "Diophanes 9"
+  },
+  {
+    "lemma": "Diophanes 9",
+    "previous": "Dillius 1",
+    "next": "Dioskoros 7",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 27,
+        "end": 27,
+        "author": "W. Kroll."
+      }
+    ]
+  },
+  {
     "lemma": "Dioskoros 7",
+    "previous": "Diophanes 9",
     "next": "Donuca",
     "chapters": [
       {
         "start": 27,
         "end": 29,
-        "author": "Keydell"
+        "author": "Keydell."
       }
     ]
   },
@@ -1778,11 +1798,12 @@
     "lemma": "Donuca",
     "previous": "Dioskoros 7",
     "next": "Drosica",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 29,
         "end": 29,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },

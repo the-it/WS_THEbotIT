@@ -6912,6 +6912,7 @@
     "lemma": "Eretria 1",
     "previous": "Eretmeus",
     "next": "Eretria 2",
+    "wp_link": "w:de:Eretria",
     "chapters": [
       {
         "start": 422,
@@ -6935,7 +6936,7 @@
   {
     "lemma": "Eretria 3",
     "previous": "Eretria 2",
-    "next": "Ἐρετριακά",
+    "next": "Eretriaka",
     "proof_read": 3,
     "chapters": [
       {
@@ -6946,7 +6947,7 @@
     ]
   },
   {
-    "lemma": "Ἐρετριακά",
+    "lemma": "Eretriaka",
     "previous": "Eretria 3",
     "next": "Eretrieus",
     "proof_read": 3,
@@ -6960,7 +6961,7 @@
   },
   {
     "lemma": "Eretrieus",
-    "previous": "Ἐρετριακά",
+    "previous": "Eretriaka",
     "next": "Eretrische Schule",
     "proof_read": 3,
     "chapters": [
@@ -8280,6 +8281,7 @@
     "next": "Erinona",
     "proof_read": 3,
     "wp_link": "w:de:Erinna",
+    "ws_link": "w:it:Autore:Erinna",
     "chapters": [
       {
         "start": 455,
@@ -15065,6 +15067,8 @@
     "previous": "Euchenor 3",
     "next": "Eucherius 1",
     "proof_read": 3,
+    "wp_link": "w:en:Eucheria",
+    "ws_link": "w:fr:Auteur:Euchérie",
     "chapters": [
       {
         "start": 881,
@@ -28130,11 +28134,12 @@
     "lemma": "Eustathios 13",
     "previous": "Eustathios 12",
     "next": "Eustathios 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1450,
         "end": 1450,
-        "author": "Benjamin"
+        "author": "Benjamin."
       }
     ]
   },
