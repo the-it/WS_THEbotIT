@@ -366,6 +366,7 @@
     "previous": "Agathodoros 2",
     "next": "Agathokles 37",
     "proof_read": 3,
+    "wp_link": "w:de:Agathokles",
     "chapters": [
       {
         "start": 6,
@@ -492,6 +493,8 @@
     "lemma": "Aischines 15",
     "previous": "Aigokeros 1",
     "next": "Aischylos 6a",
+    "wp_link": "w:de:Aischines (Athen)",
+    "ws_link": "w:de:Aischines (Athen)",
     "chapters": [
       {
         "start": 7,
@@ -568,6 +571,7 @@
     "lemma": "Alba 2",
     "previous": "Alastos 2",
     "next": "Alba 2a",
+    "wp_link": "w:de:Schwäbische Alb",
     "chapters": [
       {
         "start": 8,
@@ -743,6 +747,7 @@
     "lemma": "Alopeke 4",
     "previous": "Alkisthenes 5",
     "next": "Ambron",
+    "wp_link": "w:de:Alopeke",
     "chapters": [
       {
         "start": 17,
@@ -1335,6 +1340,7 @@
     "previous": "Apollogenes",
     "next": "Apollonios 4",
     "proof_read": 2,
+    "wp_link": "w:de:Apollonides",
     "chapters": [
       {
         "start": 25,
@@ -1347,6 +1353,7 @@
     "lemma": "Apollonios 4",
     "previous": "Apollonides 17",
     "next": "Apollonios 34",
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 25,
@@ -1360,6 +1367,7 @@
     "previous": "Apollonios 4",
     "next": "Apollonios 48",
     "proof_read": 2,
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 25,
@@ -1373,6 +1381,7 @@
     "previous": "Apollonios 34",
     "next": "Apollonios 105a",
     "proof_read": 2,
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 25,
@@ -1458,6 +1467,8 @@
     "lemma": "Aratos 6",
     "previous": "Araros 2",
     "next": "Araxes 5",
+    "wp_link": "w:de:Aratos von Soloi",
+    "ws_link": "w:de:Aratos von Soloi",
     "chapters": [
       {
         "start": 26,
@@ -3543,7 +3554,7 @@
   {
     "lemma": "Dionysios 126b",
     "previous": "Dionysios 126a",
-    "next": "Dionysodoros 21a",
+    "next": "Dionysodoros 8",
     "chapters": [
       {
         "start": 141,
@@ -3553,8 +3564,21 @@
     ]
   },
   {
-    "lemma": "Dionysodoros 21a",
+    "lemma": "Dionysodoros 8",
     "previous": "Dionysios 126b",
+    "next": "Dionysodoros 21a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 141,
+        "end": 141,
+        "author": "Mario Bonaria."
+      }
+    ]
+  },
+  {
+    "lemma": "Dionysodoros 21a",
+    "previous": "Dionysodoros 8",
     "next": "Dios 9a",
     "chapters": [
       {
