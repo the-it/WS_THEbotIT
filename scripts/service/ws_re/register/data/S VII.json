@@ -16,6 +16,7 @@
     "lemma": "Adule",
     "previous": "Adobogiona",
     "next": "Adulitai",
+    "wp_link": "w:de:Adulis",
     "chapters": [
       {
         "start": 1,
@@ -356,6 +357,7 @@
     "previous": "Attributio",
     "next": "Aurelius 63a",
     "proof_read": 2,
+    "wp_link": "w:de:Auktion",
     "chapters": [
       {
         "start": 72,
@@ -911,7 +913,6 @@
   {
     "lemma": "Diadochos a",
     "previous": "Derkylos 2",
-    "next": "Dieramatites",
     "chapters": [
       {
         "start": 124,
@@ -921,8 +922,19 @@
     ]
   },
   {
-    "lemma": "Dieramatites",
-    "previous": "Diadochos a",
+    "lemma": "Didius 9",
+    "next": "διεραματίτης",
+    "chapters": [
+      {
+        "start": 127,
+        "end": 127,
+        "author": "Stein."
+      }
+    ]
+  },
+  {
+    "lemma": "διεραματίτης",
+    "previous": "Didius 9",
     "next": "Diokles 34b",
     "chapters": [
       {
@@ -934,7 +946,7 @@
   },
   {
     "lemma": "Diokles 34b",
-    "previous": "Dieramatites",
+    "previous": "διεραματίτης",
     "next": "Dipsios",
     "chapters": [
       {
@@ -5415,6 +5427,8 @@
     "previous": "Peristylium",
     "next": "Pescennius",
     "proof_read": 3,
+    "wp_link": "w:de:Aulus Persius Flaccus",
+    "ws_link": "s:de:Aulus Persius Flaccus",
     "chapters": [
       {
         "start": 972,

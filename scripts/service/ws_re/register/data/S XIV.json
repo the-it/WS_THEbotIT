@@ -113,6 +113,7 @@
     "lemma": "Aenona",
     "previous": "Aemilius 131a",
     "next": "Aetrius 2",
+    "wp_link": "w:de:Nin",
     "chapters": [
       {
         "start": 3,
@@ -2024,7 +2025,7 @@
     "previous": "Cerellius 5",
     "next": "Charmides 5",
     "wp_link": "w:de:St. Pölten",
-    "ws_link": "w:de:St. Pölten",
+    "ws_link": "s:de:St. Pölten",
     "chapters": [
       {
         "start": 90,
@@ -2629,6 +2630,7 @@
     "lemma": "Cornelius 276",
     "previous": "Cornelius 154a",
     "next": "Cornelius 283a",
+    "wp_link": "w:de:Marcus Cornelius Nigrinus Curiatius Maternus",
     "chapters": [
       {
         "start": 107,
@@ -2904,22 +2906,46 @@
   },
   {
     "lemma": "Didius 6",
-    "previous": "Dexius 4"
-  },
-  {
-    "lemma": "digitorum computus",
-    "next": "Domitius 63a",
+    "previous": "Dexius 4",
+    "next": "Didius 10a",
     "chapters": [
       {
-        "start": 112,
-        "end": 113,
-        "author": "Hommel"
+        "start": 111,
+        "end": 111,
+        "author": "Werner Eck."
       }
     ]
   },
   {
+    "lemma": "Didius 10a",
+    "previous": "Didius 6",
+    "next": "digitorum computus",
+    "chapters": [
+      {
+        "start": 112,
+        "end": 112,
+        "author": "Werner Eck."
+      }
+    ]
+  },
+  {
+    "lemma": "digitorum computus",
+    "previous": "Didius 10a",
+    "next": "Diophantos 17",
+    "chapters": [
+      {
+        "start": 112,
+        "end": 113,
+        "author": "Hildebrecht Hommel."
+      }
+    ]
+  },
+  {
+    "lemma": "Diophantos 17",
+    "previous": "digitorum computus"
+  },
+  {
     "lemma": "Domitius 63a",
-    "previous": "digitorum computus",
     "next": "Domitius 108a",
     "chapters": [
       {
@@ -5416,6 +5442,8 @@
     "lemma": "Raetia",
     "previous": "Raecius 6a",
     "next": "Ragonius 4a",
+    "wp_link": "w:de:Raetia",
+    "ws_link": "s:en:1911 Encyclopædia Britannica/Raetia",
     "chapters": [
       {
         "start": 582,

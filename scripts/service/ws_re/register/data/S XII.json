@@ -527,6 +527,8 @@
     "lemma": "Anaximandros 1",
     "previous": "Anaxagoras 4",
     "next": "Anaximenes 2",
+    "wp_link": "w:de:Anaximander",
+    "ws_link": "s:en:Author:Anaximander",
     "chapters": [
       {
         "start": 30,
@@ -2393,6 +2395,7 @@
     "previous": "Cornelius 291",
     "next": "Cornelius 296a",
     "proof_read": 2,
+    "wp_link": "w:de:Quintus Cornelius Proculus",
     "chapters": [
       {
         "start": 189,
@@ -2690,6 +2693,8 @@
     "lemma": "Demokritos 6",
     "previous": "Dasumius aa",
     "next": "Deraia",
+    "wp_link": "w:de:Demokrit",
+    "ws_link": "s:en:Author:Democritus",
     "chapters": [
       {
         "start": 191,
@@ -2712,28 +2717,49 @@
   },
   {
     "lemma": "Didius 6",
-    "previous": "Deraia"
-  },
-  {
-    "lemma": "Didius 10a",
-    "next": "Diodoros 61",
+    "previous": "Deraia",
+    "next": "Didius 10a",
     "chapters": [
       {
         "start": 223,
         "end": 223,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Didius 10a",
+    "previous": "Didius 6",
+    "next": "Dine",
+    "chapters": [
+      {
+        "start": 223,
+        "end": 223,
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Dine",
+    "previous": "Didius 10a",
+    "next": "Diodoros 61",
+    "chapters": [
+      {
+        "start": 224,
+        "end": 224,
+        "author": "Ernst Meyer."
       }
     ]
   },
   {
     "lemma": "Diodoros 61",
-    "previous": "Didius 10a",
+    "previous": "Dine",
     "next": "Diogenes 42",
     "chapters": [
       {
         "start": 224,
         "end": 232,
-        "author": "Kienast"
+        "author": "Dietmar Kienast."
       }
     ]
   },
@@ -2741,10 +2767,13 @@
     "lemma": "Diogenes 42",
     "previous": "Diodoros 61",
     "next": "Domitius 33",
+    "wp_link": "w:de:Diogenes von Apollonia",
+    "ws_link": "s:en:Author:Diogenes of Apollonia",
     "chapters": [
       {
         "start": 233,
-        "end": 236
+        "end": 236,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -4420,6 +4449,8 @@
     "lemma": "Anaximandros 1",
     "previous": "Amithoscatta",
     "next": "Arborius 5",
+    "wp_link": "w:de:Anaximander",
+    "ws_link": "s:en:Author:Anaximander",
     "chapters": [
       {
         "start": 1355,

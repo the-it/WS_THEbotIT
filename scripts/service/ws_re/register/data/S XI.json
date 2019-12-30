@@ -203,6 +203,7 @@
     "lemma": "Antiocheia 15",
     "previous": "Antigonos 16",
     "next": "Antiphilos 3c",
+    "wp_link": "w:de:Antiochia in Pisidien",
     "chapters": [
       {
         "start": 49,
@@ -276,6 +277,7 @@
     "lemma": "Aqua, Aquae 18",
     "previous": "Apollinarios 2",
     "next": "Aquincum",
+    "wp_link": "w:de:Daruvar",
     "chapters": [
       {
         "start": 61,
@@ -358,6 +360,8 @@
     "lemma": "Aristoteles 18",
     "previous": "Ariston 52",
     "next": "Aristoteles 25",
+    "wp_link": "w:de:Aristoteles",
+    "ws_link": "s:de:Aristoteles",
     "chapters": [
       {
         "start": 159,
@@ -736,7 +740,7 @@
     "previous": "Cornacates",
     "next": "Cuneus 4",
     "wp_link": "w:de:Tacitus",
-    "ws_link": "w:de:Tacitus",
+    "ws_link": "s:de:Tacitus",
     "chapters": [
       {
         "start": 373,
@@ -808,24 +812,39 @@
   {
     "lemma": "Diaios",
     "previous": "Demetrios 85",
-    "next": "Diolkos 2",
+    "next": "Dikaiarchos 3",
     "chapters": [
       {
         "start": 521,
         "end": 526,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
+      }
+    ]
+  },
+  {
+    "lemma": "Dikaiarchos 3",
+    "previous": "Diaios",
+    "next": "Diolkos 2",
+    "wp_link": "w:de:Dikaiarchos",
+    "ws_link": "s:it:Autore:Dicearco da Messina",
+    "chapters": [
+      {
+        "start": 526,
+        "end": 534,
+        "author": "Fritz Wehrli."
       }
     ]
   },
   {
     "lemma": "Diolkos 2",
-    "previous": "Diaios",
+    "previous": "Dikaiarchos 3",
     "next": "Diophanes 1a",
+    "wp_link": "w:de:Diolkos",
     "chapters": [
       {
         "start": 534,
         "end": 534,
-        "author": "Meyer, Ernst"
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -837,25 +856,29 @@
       {
         "start": 534,
         "end": 538,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
   {
     "lemma": "Doecis",
     "previous": "Diophanes 1a",
-    "next": "Dorcatius 1",
+    "next": "Dorcatius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 538,
         "end": 539,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
   {
+    "lemma": "Dorcatius",
+    "previous": "Doecis"
+  },
+  {
     "lemma": "Dorcatius 1",
-    "previous": "Doecis",
     "next": "Dorcatius 2",
     "chapters": [
       {
@@ -944,6 +967,8 @@
     "lemma": "Euripides 4",
     "previous": "Eudemos 1",
     "next": "Eurylochos 11",
+    "wp_link": "w:de:Euripides",
+    "ws_link": "s:de:Euripides",
     "chapters": [
       {
         "start": 658,
@@ -2256,7 +2281,7 @@
     "previous": "Zeugisa",
     "next": "Maes Titianus",
     "wp_link": "w:de:Tacitus",
-    "ws_link": "w:de:Tacitus",
+    "ws_link": "s:de:Tacitus",
     "chapters": [
       {
         "start": 1365,
