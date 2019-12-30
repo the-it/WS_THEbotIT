@@ -1644,6 +1644,7 @@
     "previous": "Cornelius 145",
     "next": "Cornelius 279",
     "proof_read": 2,
+    "wp_link": "w:de:Publius Cornelius Lentulus Scipio (Suffektkonsul 24)",
     "chapters": [
       {
         "start": 25,
@@ -1657,6 +1658,7 @@
     "previous": "Cornelius 236",
     "next": "Cornelius 279a",
     "proof_read": 2,
+    "wp_link": "w:de:Aulus Cornelius Palma Frontonianus",
     "chapters": [
       {
         "start": 25,
@@ -1709,6 +1711,7 @@
     "previous": "Cossonius 3a",
     "next": "Cuspius 3",
     "proof_read": 2,
+    "wp_link": "w:de:Gaius Curtius Iustus",
     "chapters": [
       {
         "start": 25,
@@ -1771,7 +1774,28 @@
   },
   {
     "lemma": "Diades 2",
-    "previous": "Delphion 3"
+    "previous": "Delphion 3",
+    "next": "Dillius 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 25,
+        "end": 27,
+        "author": "W. Kroll."
+      }
+    ]
+  },
+  {
+    "lemma": "Dillius 1",
+    "previous": "Diades 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 27,
+        "end": 27,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Dioskoros 7",

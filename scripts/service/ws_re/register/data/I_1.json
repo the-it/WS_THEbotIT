@@ -118,6 +118,7 @@
     "next": "Abacus",
     "redirect": "Abigeatus",
     "proof_read": 3,
+    "wp_link": "w:en:Cattle raiding",
     "chapters": [
       {
         "start": 4,
@@ -248,6 +249,7 @@
     "previous": "Abacus 8",
     "next": "Abaddir",
     "proof_read": 3,
+    "wp_link": "w:de:Abakus (Rechenhilfsmittel)",
     "chapters": [
       {
         "start": 5,
@@ -424,6 +426,7 @@
     "next": "Abalites",
     "redirect": "Alienatio",
     "proof_read": 3,
+    "wp_link": "w:de:Veräußerung",
     "chapters": [
       {
         "start": 13,
@@ -464,6 +467,7 @@
     "next": "Abalus",
     "proof_read": 3,
     "wp_link": "w:de:Avallon",
+    "ws_link": "s:en:1911 Encyclopædia Britannica/Avallon",
     "chapters": [
       {
         "start": 13,
@@ -1751,6 +1755,7 @@
     "previous": "Abensa",
     "next": "Aberglaube",
     "proof_read": 3,
+    "wp_link": "w:fr:Abéona et Adéona",
     "chapters": [
       {
         "start": 29,
@@ -1823,6 +1828,7 @@
     "next": "Abgar, Abgaros 3",
     "sort_key": "Abgar 02",
     "proof_read": 3,
+    "wp_link": "w:de:Abgar II.",
     "chapters": [
       {
         "start": 94,
@@ -1893,6 +1899,7 @@
     "next": "Abgar, Abgaros 8",
     "sort_key": "Abgar 07",
     "proof_read": 3,
+    "wp_link": "w:en:Abgar VI",
     "chapters": [
       {
         "start": 94,
@@ -2658,6 +2665,7 @@
     "next": "Abnozos 1",
     "proof_read": 3,
     "wp_link": "w:de:Schwarzwald",
+    "ws_link": "s:de:Schwarzwald",
     "chapters": [
       {
         "start": 104,
@@ -3260,6 +3268,8 @@
     "previous": "Abron",
     "next": "Abronychos",
     "proof_read": 3,
+    "wp_link": "w:en:Abronius Silo",
+    "ws_link": "s:it:Autore:Abronio Silo",
     "chapters": [
       {
         "start": 115,
@@ -3821,6 +3831,7 @@
     "previous": "Aburius 3",
     "next": "Aburnius 2",
     "proof_read": 3,
+    "wp_link": "w:de:Quintus Aburnius Caedicianus",
     "chapters": [
       {
         "start": 127,
@@ -8131,6 +8142,8 @@
     "next": "Acontia",
     "redirect": "Paulina",
     "proof_read": 3,
+    "wp_link": "w:en:Aconia Fabia Paulina",
+    "ws_link": "s:la:Scriptor:Aconia Fabia Paulina",
     "chapters": [
       {
         "start": 284,
@@ -10189,6 +10202,7 @@
     "previous": "Adeona",
     "next": "Aderco",
     "proof_read": 3,
+    "wp_link": "w:de:Adephagia",
     "chapters": [
       {
         "start": 357,
@@ -11545,6 +11559,7 @@
     "next": "Adraa",
     "redirect": "Adraa",
     "proof_read": 3,
+    "wp_link": "w:de:Darʿā",
     "chapters": [
       {
         "start": 402,
@@ -12767,6 +12782,7 @@
     "previous": "Adurnus",
     "next": "Adusios",
     "proof_read": 3,
+    "wp_link": "w:de:Bakırçay",
     "chapters": [
       {
         "start": 440,
@@ -13424,6 +13440,7 @@
     "previous": "Aedinius",
     "next": "Aedius",
     "proof_read": 3,
+    "wp_link": "w:de:Küster",
     "chapters": [
       {
         "start": 465,
@@ -14435,6 +14452,7 @@
     "sort_key": "Aelius 024",
     "proof_read": 3,
     "wp_link": "w:de:Antoninus Pius",
+    "ws_link": "s:en:Author:Titus Fulvius Aelius Hadrianus Antoninus Augustus Pius",
     "chapters": [
       {
         "start": 490,
@@ -14537,6 +14555,7 @@
     "sort_key": "Aelius 031",
     "proof_read": 3,
     "wp_link": "w:de:Mark Aurel",
+    "ws_link": "s:de:Mark Aurel",
     "chapters": [
       {
         "start": 490,
@@ -14751,6 +14770,7 @@
     "redirect": "Diogenianos 4",
     "proof_read": 3,
     "wp_link": "w:de:Diogenianos Grammatikos",
+    "ws_link": "s:it:Autore:Diogeniano",
     "chapters": [
       {
         "start": 492,
@@ -15039,6 +15059,7 @@
     "sort_key": "Aelius 066",
     "proof_read": 3,
     "wp_link": "w:de:Antoninus Pius",
+    "ws_link": "s:en:Author:Titus Fulvius Aelius Hadrianus Antoninus Augustus Pius",
     "chapters": [
       {
         "start": 521,
@@ -16842,7 +16863,7 @@
   {
     "lemma": "Aemiliana 2",
     "previous": "Aemiliana 1",
-    "next": "Aemilianus 1",
+    "next": "Aemilianus",
     "proof_read": 3,
     "chapters": [
       {
@@ -16853,8 +16874,22 @@
     ]
   },
   {
-    "lemma": "Aemilianus 1",
+    "lemma": "Aemilianus",
     "previous": "Aemiliana 2",
+    "next": "Aemilianus 1",
+    "sort_key": "Aemilianus 00",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 541,
+        "end": 541,
+        "author": "v. Rohden."
+      }
+    ]
+  },
+  {
+    "lemma": "Aemilianus 1",
+    "previous": "Aemilianus",
     "next": "Aemilianus 2",
     "sort_key": "Aemilianus 01",
     "proof_read": 3,
@@ -17055,6 +17090,7 @@
     "next": "Aemilianus 16",
     "redirect": "Dexter 7",
     "proof_read": 3,
+    "wp_link": "w:it:Nummio Emiliano Destro (prefetto del pretorio)",
     "chapters": [
       {
         "start": 542,
@@ -17065,8 +17101,9 @@
   {
     "lemma": "Aemilianus 16",
     "previous": "Aemilianus 15",
-    "next": "Aemilianus 16a-f",
+    "next": "Aemilianus 16a–f",
     "proof_read": 3,
+    "wp_link": "w:ca:Emilià de Nicea",
     "chapters": [
       {
         "start": 542,
@@ -17076,7 +17113,7 @@
     ]
   },
   {
-    "lemma": "Aemilianus 16a-f",
+    "lemma": "Aemilianus 16a–f",
     "previous": "Aemilianus 16",
     "next": "Aemilia porticus",
     "proof_read": 3,
@@ -17090,7 +17127,7 @@
   },
   {
     "lemma": "Aemilia porticus",
-    "previous": "Aemilianus 16a-f",
+    "previous": "Aemilianus 16a–f",
     "next": "Aemilia tribus",
     "sort_key": "Aemiliaporticus",
     "proof_read": 3,
@@ -17690,6 +17727,7 @@
     "next": "Aemilius 39",
     "sort_key": "Aemilius 038",
     "proof_read": 3,
+    "wp_link": "w:de:Lucius Aemilius Carus",
     "chapters": [
       {
         "start": 548,
@@ -18086,6 +18124,7 @@
     "next": "Aemilius 67",
     "sort_key": "Aemilius 066",
     "proof_read": 3,
+    "wp_link": "w:de:Marcus Aemilius Lepidus (Konsul 232 v. Chr.)",
     "chapters": [
       {
         "start": 552,
@@ -18114,6 +18153,7 @@
     "next": "Aemilius 69",
     "sort_key": "Aemilius 068",
     "proof_read": 3,
+    "wp_link": "w:de:Marcus Aemilius Lepidus (Konsul 187 v. Chr.)",
     "chapters": [
       {
         "start": 552,
@@ -18331,6 +18371,7 @@
     "next": "Aemilius 84",
     "sort_key": "Aemilius 083",
     "proof_read": 3,
+    "wp_link": "w:en:Marcus Aemilius Lepidus Porcina",
     "chapters": [
       {
         "start": 566,
@@ -18374,6 +18415,7 @@
     "sort_key": "Aemilius 086",
     "proof_read": 3,
     "wp_link": "w:de:Aemilius Macer",
+    "ws_link": "s:it:Autore:Emilio Macro",
     "chapters": [
       {
         "start": 567,
@@ -19330,6 +19372,7 @@
     "previous": "Aemilius 153",
     "next": "Aemilius 155",
     "proof_read": 3,
+    "wp_link": "w:de:Aemilia (Tochter des Marcus Aemilius Scaurus)",
     "chapters": [
       {
         "start": 591,
@@ -21432,6 +21475,7 @@
     "previous": "Aetios 2",
     "next": "Aetios 4",
     "proof_read": 3,
+    "wp_link": "w:en:Aetius (praetorian prefect)",
     "chapters": [
       {
         "start": 701,
@@ -21500,6 +21544,8 @@
     "previous": "Aetios 7",
     "next": "Aëtites",
     "proof_read": 3,
+    "wp_link": "w:de:Aëtios von Amida",
+    "ws_link": "s:it:Autore:Aezio di Amida",
     "chapters": [
       {
         "start": 703,
@@ -21798,6 +21844,7 @@
     "sort_key": "Afranius 05",
     "proof_read": 3,
     "wp_link": "w:de:Lucius Afranius (Dichter)",
+    "ws_link": "s:en:Author:Lucius Afranius",
     "chapters": [
       {
         "start": 708,
@@ -22935,6 +22982,7 @@
     "previous": "Agapetos 8",
     "next": "Agapios 2",
     "proof_read": 3,
+    "wp_link": "w:en:Agapius (physician)",
     "chapters": [
       {
         "start": 735,
@@ -22948,6 +22996,7 @@
     "previous": "Agapios 1",
     "next": "Agapios 3",
     "proof_read": 3,
+    "wp_link": "w:en:Agapius (Manichaean)",
     "chapters": [
       {
         "start": 735,
@@ -22961,6 +23010,7 @@
     "previous": "Agapios 2",
     "next": "Agaptolemos",
     "proof_read": 3,
+    "wp_link": "w:de:Agapios (Neuplatoniker)",
     "chapters": [
       {
         "start": 735,
@@ -27207,6 +27257,7 @@
     "previous": "Agippos",
     "next": "Agis 1",
     "proof_read": 3,
+    "wp_link": "w:de:Daroca",
     "chapters": [
       {
         "start": 816,
@@ -30105,6 +30156,7 @@
     "previous": "Agroecius 2",
     "next": "Agroeira",
     "proof_read": 3,
+    "wp_link": "w:en:Agroecius (Bishop of Sens)",
     "ws_link": "s:de:Agroecius",
     "chapters": [
       {
@@ -30714,6 +30766,7 @@
     "previous": "Ahinehae",
     "next": "Aia 1",
     "proof_read": 3,
+    "wp_link": "w:de:Ahorne",
     "chapters": [
       {
         "start": 917,
@@ -32104,6 +32157,7 @@
     "next": "Aigeoneus",
     "sort_key": "Aigeis",
     "proof_read": 3,
+    "wp_link": "w:de:Aigeis (Phyle)",
     "chapters": [
       {
         "start": 951,
@@ -32570,6 +32624,7 @@
     "next": "Aigina 2",
     "proof_read": 3,
     "wp_link": "w:de:Ägina",
+    "ws_link": "s:en:1911 Encyclopædia Britannica/Aegina",
     "chapters": [
       {
         "start": 964,
@@ -32583,6 +32638,7 @@
     "previous": "Aigina 1",
     "next": "Aiginaia",
     "proof_read": 3,
+    "wp_link": "w:de:Aigina",
     "chapters": [
       {
         "start": 968,
@@ -32796,6 +32852,7 @@
     "previous": "Aiglaer",
     "next": "Aigle 2",
     "proof_read": 3,
+    "wp_link": "w:fr:Églé (Hespéride)",
     "chapters": [
       {
         "start": 975,
@@ -33357,6 +33414,7 @@
     "previous": "Aïklos",
     "next": "Αἴλου κώμη",
     "proof_read": 3,
+    "wp_link": "w:de:Akaba (Jordanien)",
     "chapters": [
       {
         "start": 1008,
@@ -33993,6 +34051,8 @@
     "next": "Ainikos",
     "redirect": "Ainos 10",
     "proof_read": 3,
+    "wp_link": "w:de:Rätsel",
+    "ws_link": "s:de:Rätsel",
     "chapters": [
       {
         "start": 1028,
@@ -34533,6 +34593,7 @@
     "previous": "Αἰόλου πύλαι",
     "next": "Aion 2",
     "proof_read": 3,
+    "wp_link": "w:de:Äon (Philosophie)",
     "chapters": [
       {
         "start": 1042,
@@ -35327,6 +35388,7 @@
     "previous": "Aischrion 6",
     "next": "Aischrion 8",
     "proof_read": 3,
+    "wp_link": "w:en:Aeschrion of Samos",
     "chapters": [
       {
         "start": 1063,
@@ -38306,6 +38368,8 @@
     "previous": "Akellon",
     "next": "Akes 1",
     "proof_read": 3,
+    "wp_link": "w:ca:Aceratos",
+    "ws_link": "s:el:Συγγραφέας:Ακήρατος ο γραμματικός",
     "chapters": [
       {
         "start": 1162,
@@ -38610,6 +38674,7 @@
     "previous": "Akestor 3",
     "next": "Akestor 5",
     "proof_read": 3,
+    "wp_link": "w:it:Acestore",
     "chapters": [
       {
         "start": 1166,
@@ -38623,6 +38688,7 @@
     "previous": "Akestor 4",
     "next": "Akestorides 1",
     "proof_read": 3,
+    "wp_link": "w:de:Akestor (Bildhauer)",
     "chapters": [
       {
         "start": 1167,
@@ -45749,6 +45815,7 @@
     "previous": "Alektrona 2",
     "next": "Alektryon 2",
     "proof_read": 3,
+    "wp_link": "w:de:Alektryon (Wächter des Ares)",
     "chapters": [
       {
         "start": 1364,
@@ -45789,6 +45856,7 @@
     "previous": "Alektryon 3",
     "next": "Alele",
     "proof_read": 3,
+    "wp_link": "w:de:Anaktoropolis",
     "chapters": [
       {
         "start": 1364,
@@ -47176,6 +47244,7 @@
     "sort_key": "Alexandros 010",
     "proof_read": 3,
     "wp_link": "w:de:Alexander der Große",
+    "ws_link": "s:en:Author:Alexander III of Macedon",
     "chapters": [
       {
         "start": 1412,
