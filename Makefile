@@ -6,6 +6,11 @@ pip3 :
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt
 
+update_pip3 :
+	echo "##### UPDATE REQUIREMENTS ######"
+	pip-compile requirements.in
+	pip-sync
+
 cloc :
 	echo "########## COUNT LOC ###########"
 	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
