@@ -76,7 +76,6 @@ class SCANTask(ReScannerTask):
                     with contextlib.suppress(pywikibot.exceptions.NoPage):
                         wiki_prefix = "s" if sitelink.find("wikisource") > 0 else "w"
                         link = f"{wiki_prefix}:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
-                        self.logger.info(f"Found link {link}")
                         return link
         return None
 
