@@ -4,7 +4,7 @@
     "next": "Ephoros 2",
     "proof_read": 3,
     "wp_link": "w:de:Ephoros von Kyme",
-    "ws_link": "w:it:Autore:Eforo di Cuma",
+    "ws_link": "s:it:Autore:Eforo di Cuma",
     "chapters": [
       {
         "start": 1,
@@ -3352,7 +3352,7 @@
     "sort_key": "Epiphanios 03",
     "proof_read": 3,
     "wp_link": "w:de:Epiphanios von Salamis",
-    "ws_link": "w:en:Author:Epiphanius of Salamis",
+    "ws_link": "s:en:Author:Epiphanius of Salamis",
     "chapters": [
       {
         "start": 193,
@@ -6917,6 +6917,7 @@
     "lemma": "Eretria 1",
     "previous": "Eretmeus",
     "next": "Eretria 2",
+    "wp_link": "w:de:Eretria",
     "chapters": [
       {
         "start": 422,
@@ -6940,7 +6941,7 @@
   {
     "lemma": "Eretria 3",
     "previous": "Eretria 2",
-    "next": "Ἐρετριακά",
+    "next": "Eretriaka",
     "proof_read": 3,
     "chapters": [
       {
@@ -6951,7 +6952,7 @@
     ]
   },
   {
-    "lemma": "Ἐρετριακά",
+    "lemma": "Eretriaka",
     "previous": "Eretria 3",
     "next": "Eretrieus",
     "proof_read": 3,
@@ -6965,7 +6966,7 @@
   },
   {
     "lemma": "Eretrieus",
-    "previous": "Ἐρετριακά",
+    "previous": "Eretriaka",
     "next": "Eretrische Schule",
     "proof_read": 3,
     "chapters": [
@@ -8285,6 +8286,7 @@
     "next": "Erinona",
     "proof_read": 3,
     "wp_link": "w:de:Erinna",
+    "ws_link": "s:it:Autore:Erinna",
     "chapters": [
       {
         "start": 455,
@@ -12535,7 +12537,7 @@
     "next": "Euagrius 7",
     "proof_read": 3,
     "wp_link": "w:de:Euagrios Pontikos",
-    "ws_link": "w:fr:Auteur:Évagre le Pontique",
+    "ws_link": "s:fr:Auteur:Évagre le Pontique",
     "chapters": [
       {
         "start": 832,
@@ -15071,6 +15073,8 @@
     "previous": "Euchenor 3",
     "next": "Eucherius 1",
     "proof_read": 3,
+    "wp_link": "w:en:Eucheria",
+    "ws_link": "s:fr:Auteur:Euchérie",
     "chapters": [
       {
         "start": 881,
@@ -16162,6 +16166,7 @@
     "previous": "Eudoros 11",
     "next": "Eudoso",
     "proof_read": 3,
+    "wp_link": "w:es:Eudusios",
     "chapters": [
       {
         "start": 917,
@@ -17538,7 +17543,7 @@
     "next": "Eugiton 1",
     "proof_read": 3,
     "wp_link": "w:de:Eugippius",
-    "ws_link": "w:la:Scriptor:Eugippius",
+    "ws_link": "s:la:Scriptor:Eugippius",
     "chapters": [
       {
         "start": 988,
@@ -28146,11 +28151,13 @@
     "lemma": "Eustathios 13",
     "previous": "Eustathios 12",
     "next": "Eustathios 14",
+    "proof_read": 3,
+    "wp_link": "w:de:it:Eustazio (prefetto del pretorio)",
     "chapters": [
       {
         "start": 1450,
         "end": 1450,
-        "author": "Benjamin"
+        "author": "Benjamin."
       }
     ]
   },
@@ -29545,7 +29552,7 @@
     "next": "Eutolmius 1",
     "proof_read": 3,
     "wp_link": "w:de:Eutokios",
-    "ws_link": "w:en:Author:Eutocius of Ascalon",
+    "ws_link": "s:en:Author:Eutocius of Ascalon",
     "chapters": [
       {
         "start": 1518,
@@ -29908,6 +29915,7 @@
     "previous": "Eutyches 5",
     "next": "Eutyches 7",
     "proof_read": 3,
+    "wp_link": "w:ca:Eutiques (escriptor)",
     "chapters": [
       {
         "start": 1529,
@@ -29921,6 +29929,7 @@
     "previous": "Eutyches 6",
     "next": "Eutyches 8",
     "proof_read": 3,
+    "wp_link": "w:ca:Eutiques de Bitínia",
     "chapters": [
       {
         "start": 1529,
@@ -29934,6 +29943,7 @@
     "previous": "Eutyches 7",
     "next": "Eutychia 1",
     "proof_read": 3,
+    "wp_link": "w:ca:Eutiques (orfebre)",
     "chapters": [
       {
         "start": 1530,

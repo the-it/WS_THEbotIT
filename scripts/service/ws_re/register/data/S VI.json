@@ -234,6 +234,7 @@
     "previous": "Androtion",
     "next": "Annius 26a",
     "proof_read": 3,
+    "wp_link": "w:de:Kültepe",
     "chapters": [
       {
         "start": 7,
@@ -396,7 +397,7 @@
     "next": "Aponius 8a",
     "proof_read": 3,
     "wp_link": "w:de:Apollodor von Athen (Schriftsteller)",
-    "ws_link": "w:de:Apollodor von Athen",
+    "ws_link": "s:de:Apollodor von Athen",
     "chapters": [
       {
         "start": 8,
@@ -528,6 +529,7 @@
     "lemma": "Aretalogoi",
     "previous": "Aresaces",
     "next": "Arinistae",
+    "wp_link": "w:de:Aretalogie (Religion)",
     "chapters": [
       {
         "start": 13,
@@ -1788,6 +1790,7 @@
   {
     "lemma": "Dillius 1",
     "previous": "Diades 2",
+    "next": "Diophanes 9",
     "proof_read": 2,
     "chapters": [
       {
@@ -1798,13 +1801,27 @@
     ]
   },
   {
+    "lemma": "Diophanes 9",
+    "previous": "Dillius 1",
+    "next": "Dioskoros 7",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 27,
+        "end": 27,
+        "author": "W. Kroll."
+      }
+    ]
+  },
+  {
     "lemma": "Dioskoros 7",
+    "previous": "Diophanes 9",
     "next": "Donuca",
     "chapters": [
       {
         "start": 27,
         "end": 29,
-        "author": "Keydell"
+        "author": "Keydell."
       }
     ]
   },
@@ -1812,11 +1829,12 @@
     "lemma": "Donuca",
     "previous": "Dioskoros 7",
     "next": "Drosica",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 29,
         "end": 29,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },

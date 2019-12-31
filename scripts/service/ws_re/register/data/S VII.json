@@ -5,6 +5,7 @@
     "sort_key": "Adobogiona",
     "redirect": "Brogitarus",
     "proof_read": 3,
+    "wp_link": "w:en:Adobogiona",
     "chapters": [
       {
         "start": 1,
@@ -42,6 +43,7 @@
     "lemma": "Agri decumates",
     "previous": "Adulitai",
     "next": "Aguntum",
+    "sort_key": "Agridecumates",
     "wp_link": "w:de:Agri decumates",
     "chapters": [
       {
@@ -104,6 +106,7 @@
     "lemma": "Amnisos 1",
     "previous": "Alum Gallicum",
     "next": "Amphinomos 6",
+    "wp_link": "w:de:Amnisos",
     "chapters": [
       {
         "start": 26,
@@ -153,6 +156,7 @@
     "lemma": "Antipatros 29",
     "previous": "Antiochos 65",
     "next": "Apollodoros 27",
+    "wp_link": "w:de:Antipatros",
     "chapters": [
       {
         "start": 39,
@@ -467,6 +471,7 @@
     "lemma": "Axomis",
     "previous": "Aurelius 244a",
     "next": "Biennos 1",
+    "wp_link": "w:de:Aksum",
     "chapters": [
       {
         "start": 75,
@@ -492,6 +497,7 @@
     "previous": "Biennos 1",
     "next": "Caecilius 33a",
     "proof_read": 2,
+    "wp_link": "w:en:Brogitarus",
     "chapters": [
       {
         "start": 82,
@@ -922,7 +928,20 @@
     ]
   },
   {
+    "lemma": "Diakrioi",
+    "next": "Didius 9",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 126,
+        "end": 127,
+        "author": "Hiller v. Gaertringen."
+      }
+    ]
+  },
+  {
     "lemma": "Didius 9",
+    "previous": "Diakrioi",
     "next": "διεραματίτης",
     "chapters": [
       {
@@ -936,53 +955,63 @@
     "lemma": "διεραματίτης",
     "previous": "Didius 9",
     "next": "Diokles 34b",
+    "sort_key": "dieramatites",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
         "end": 127,
-        "author": "Ziebarth"
+        "author": "Erich Ziebarth."
       }
     ]
   },
   {
     "lemma": "Diokles 34b",
     "previous": "διεραματίτης",
-    "next": "Dipsios",
+    "next": "Δίψιος μήν",
     "chapters": [
       {
         "start": 127,
         "end": 127,
-        "author": "Heichelheim"
+        "author": "Fritz Heichelheim."
       }
     ]
   },
   {
-    "lemma": "Dipsios",
-    "previous": "Diokles 34b",
+    "lemma": "Δίψιος μήν",
+    "previous": "Diokles 34b"
+  },
+  {
+    "lemma": "Δίψιος",
     "next": "Discoduraterae",
+    "sort_key": "Dipsios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
         "end": 127,
-        "author": "Hiller von Gaertringen"
+        "author": "v. Hiller."
       }
     ]
   },
   {
     "lemma": "Discoduraterae",
-    "previous": "Dipsios",
-    "next": "Ehe",
+    "previous": "Δίψιος",
+    "next": "Dreros",
     "chapters": [
       {
         "start": 128,
         "end": 128,
-        "author": "Kazarow"
+        "author": "Gawril Kazarow."
       }
     ]
   },
   {
+    "lemma": "Dreros",
+    "previous": "Discoduraterae"
+  },
+  {
     "lemma": "Ehe",
-    "previous": "Discoduraterae",
     "next": "Ekmartyresis",
     "chapters": [
       {
