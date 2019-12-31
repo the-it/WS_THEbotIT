@@ -2,6 +2,7 @@
   {
     "lemma": "Acilius 57",
     "next": "Adelphius a",
+    "wp_link": "w:de:Lucius Acilius Strabo",
     "chapters": [
       {
         "start": 1,
@@ -134,6 +135,8 @@
     "lemma": "Aigina 1",
     "previous": "Aemilius 150b",
     "next": "Alexandros 62a",
+    "wp_link": "w:de:Ägina",
+    "ws_link": "s:en:1911 Encyclopædia Britannica/Aegina",
     "chapters": [
       {
         "start": 4,
@@ -194,6 +197,8 @@
     "lemma": "Alpes 1",
     "previous": "Allogenes",
     "next": "Andromeda 3",
+    "wp_link": "w:de:Alpen",
+    "ws_link": "s:de:Alpen",
     "chapters": [
       {
         "start": 6,
@@ -1198,16 +1203,26 @@
   },
   {
     "lemma": "Demostratos 16",
-    "previous": "Cornelianus 3a"
-  },
-  {
-    "lemma": "Diopeithes 14",
-    "next": "Diophanes 8a",
+    "previous": "Cornelianus 3a",
+    "next": "Diopeithes 14",
     "chapters": [
       {
         "start": 93,
         "end": 93,
-        "author": "Eck"
+        "author": "Eitel Fischer."
+      }
+    ]
+  },
+  {
+    "lemma": "Diopeithes 14",
+    "previous": "Demostratos 16",
+    "next": "Diophanes 8a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 93,
+        "end": 93,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1219,7 +1234,7 @@
       {
         "start": 93,
         "end": 93,
-        "author": "Fischer"
+        "author": "Eitel Fischer."
       }
     ]
   },
@@ -2692,6 +2707,7 @@
     "lemma": "Pontifex, Pontifex maximus, Pontificii Libri",
     "previous": "Pomponius 51a",
     "next": "Pontos 2",
+    "wp_link": "w:de:Pontifex",
     "chapters": [
       {
         "start": 331,
@@ -2703,6 +2719,7 @@
     "lemma": "Pontos 2",
     "previous": "Pontifex, Pontifex maximus, Pontificii Libri",
     "next": "Porcius 34a",
+    "wp_link": "w:de:Königreich Pontos",
     "chapters": [
       {
         "start": 396,

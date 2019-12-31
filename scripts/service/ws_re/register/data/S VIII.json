@@ -52,6 +52,7 @@
     "lemma": "Alexandrina aqua",
     "previous": "Aisopos 6",
     "next": "Alko",
+    "wp_link": "w:de:Aqua Alexandrina",
     "chapters": [
       {
         "start": 1,
@@ -527,6 +528,7 @@
     "previous": "Bewässerungsanlagen",
     "next": "Bulis 4",
     "proof_read": 2,
+    "wp_link": "w:de:Bremsen",
     "chapters": [
       {
         "start": 16,
@@ -711,7 +713,7 @@
       {
         "start": 59,
         "end": 59,
-        "author": "Riemann"
+        "author": "H. Riemann."
       }
     ]
   },
@@ -723,7 +725,7 @@
       {
         "start": 59,
         "end": 60,
-        "author": "Riemann"
+        "author": "H. Riemann."
       }
     ]
   },
@@ -744,7 +746,14 @@
   {
     "lemma": "Drakontides",
     "previous": "Dionysios 161b",
-    "next": "Drusia aqua"
+    "next": "Drusia aqua",
+    "chapters": [
+      {
+        "start": 60,
+        "end": 60,
+        "author": "H. Riemann."
+      }
+    ]
   },
   {
     "lemma": "Drusia aqua",
@@ -3709,6 +3718,8 @@
     "previous": "Achilleus 8a",
     "next": "Apollodoros 23",
     "sort_key": "Antonius 030",
+    "wp_link": "w:de:Marcus Antonius",
+    "ws_link": "s:en:Author:Marcus Antonius",
     "chapters": [
       {
         "start": 917,

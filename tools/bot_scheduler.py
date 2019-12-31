@@ -5,7 +5,8 @@ from typing import Dict, Optional, List, Type
 
 from pywikibot import Site
 
-from tools.bots import BotException, CanonicalBot, OneTimeBot
+from tools.bots import BotException
+from tools.bots.pi import CanonicalBot, OneTimeBot
 
 BotList = Optional[List[Type[CanonicalBot]]]
 

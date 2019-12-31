@@ -201,6 +201,7 @@
     "previous": "Aelius 118",
     "next": "Aelius 174b",
     "proof_read": 3,
+    "wp_link": "w:de:Aelius",
     "chapters": [
       {
         "start": 5,
@@ -366,6 +367,7 @@
     "previous": "Agathodoros 2",
     "next": "Agathokles 37",
     "proof_read": 3,
+    "wp_link": "w:de:Agathokles",
     "chapters": [
       {
         "start": 6,
@@ -492,6 +494,8 @@
     "lemma": "Aischines 15",
     "previous": "Aigokeros 1",
     "next": "Aischylos 6a",
+    "wp_link": "w:de:Aischines (Athen)",
+    "ws_link": "w:de:Aischines (Athen)",
     "chapters": [
       {
         "start": 7,
@@ -568,6 +572,7 @@
     "lemma": "Alba 2",
     "previous": "Alastos 2",
     "next": "Alba 2a",
+    "wp_link": "w:de:Schwäbische Alb",
     "chapters": [
       {
         "start": 8,
@@ -743,6 +748,7 @@
     "lemma": "Alopeke 4",
     "previous": "Alkisthenes 5",
     "next": "Ambron",
+    "wp_link": "w:de:Alopeke",
     "chapters": [
       {
         "start": 17,
@@ -832,6 +838,7 @@
     "lemma": "Amphipolis 1",
     "previous": "Amphidamas 9",
     "next": "Amyklas 1a",
+    "wp_link": "w:de:Amphipolis",
     "chapters": [
       {
         "start": 17,
@@ -855,18 +862,18 @@
   {
     "lemma": "Anaxippos 4",
     "previous": "Amyklas 1a",
-    "next": "Ancilius 1",
+    "next": "Disciplina militaris",
+    "redirect": "Anaxippos 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 19,
-        "end": 19,
-        "author": "Mario Bonaria."
+        "start": 142,
+        "end": 142
       }
     ]
   },
   {
     "lemma": "Ancilius 1",
-    "previous": "Anaxippos 4",
     "next": "Ancilius 2",
     "chapters": [
       {
@@ -981,6 +988,8 @@
     "lemma": "Annius 94",
     "previous": "Anicetiani",
     "next": "Anomia",
+    "wp_link": "w:de:Mark Aurel",
+    "ws_link": "s:de:Mark Aurel",
     "chapters": [
       {
         "start": 21,
@@ -1080,6 +1089,7 @@
     "lemma": "Antiphon 12",
     "previous": "Antiphanes 24",
     "next": "Antiphon 13",
+    "wp_link": "w:en:Antiphon (tragic poet)",
     "chapters": [
       {
         "start": 22,
@@ -1335,6 +1345,7 @@
     "previous": "Apollogenes",
     "next": "Apollonios 4",
     "proof_read": 2,
+    "wp_link": "w:de:Apollonides",
     "chapters": [
       {
         "start": 25,
@@ -1347,6 +1358,7 @@
     "lemma": "Apollonios 4",
     "previous": "Apollonides 17",
     "next": "Apollonios 34",
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 25,
@@ -1360,6 +1372,7 @@
     "previous": "Apollonios 4",
     "next": "Apollonios 48",
     "proof_read": 2,
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 25,
@@ -1373,6 +1386,7 @@
     "previous": "Apollonios 34",
     "next": "Apollonios 105a",
     "proof_read": 2,
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 25,
@@ -1458,6 +1472,8 @@
     "lemma": "Aratos 6",
     "previous": "Araros 2",
     "next": "Araxes 5",
+    "wp_link": "w:de:Aratos von Soloi",
+    "ws_link": "w:de:Aratos von Soloi",
     "chapters": [
       {
         "start": 26,
@@ -1638,6 +1654,7 @@
     "lemma": "Aristias 2",
     "previous": "Aristarchos 10",
     "next": "Aristion 18",
+    "wp_link": "w:it:Aristia (tragico)",
     "chapters": [
       {
         "start": 41,
@@ -3045,6 +3062,7 @@
     "lemma": "Decuria",
     "previous": "Dativa",
     "next": "Demeas 1",
+    "wp_link": "w:de:Decurie",
     "chapters": [
       {
         "start": 135,
@@ -3305,7 +3323,6 @@
   {
     "lemma": "Dikte 1",
     "previous": "Dikaiopolis 2",
-    "next": "Diktys 2",
     "chapters": [
       {
         "start": 137,
@@ -3316,13 +3333,13 @@
   },
   {
     "lemma": "Diktys 2",
-    "previous": "Dikte 1",
+    "previous": "Dikaiopolis 2",
     "next": "Diktys 3",
     "chapters": [
       {
         "start": 138,
         "end": 139,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -3330,11 +3347,12 @@
     "lemma": "Diktys 3",
     "previous": "Diktys 2",
     "next": "Diktys 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 139,
         "end": 139,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -3342,11 +3360,12 @@
     "lemma": "Diktys 4",
     "previous": "Diktys 3",
     "next": "Diktys 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 139,
         "end": 139,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -3354,11 +3373,12 @@
     "lemma": "Diktys 5",
     "previous": "Diktys 4",
     "next": "Diodoros 23",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 139,
         "end": 139,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -3369,7 +3389,8 @@
     "chapters": [
       {
         "start": 139,
-        "end": 139
+        "end": 139,
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3377,34 +3398,49 @@
     "lemma": "Diodoros 23b",
     "previous": "Diodoros 23",
     "next": "Diodoros 36",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 139,
         "end": 139,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Diodoros 36",
     "previous": "Diodoros 23b",
-    "next": "Diogenes 17a",
+    "next": "Diogeiton 2",
     "chapters": [
       {
         "start": 139,
-        "end": 139
+        "end": 139,
+        "author": "Mario Bonaria."
+      }
+    ]
+  },
+  {
+    "lemma": "Diogeiton 2",
+    "previous": "Diodoros 36",
+    "next": "Diogenes 17a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 139,
+        "end": 139,
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Diogenes 17a",
-    "previous": "Diodoros 36",
+    "previous": "Diogeiton 2",
     "next": "Diogenes 17b",
     "chapters": [
       {
         "start": 139,
         "end": 139,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3412,11 +3448,12 @@
     "lemma": "Diogenes 17b",
     "previous": "Diogenes 17a",
     "next": "Diokles 11a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 139,
         "end": 139,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3424,11 +3461,12 @@
     "lemma": "Diokles 11a",
     "previous": "Diogenes 17b",
     "next": "Diomedes 12a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 139,
         "end": 140,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3436,11 +3474,12 @@
     "lemma": "Diomedes 12a",
     "previous": "Diokles 11a",
     "next": "Dion 3a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 140,
         "end": 140,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3452,7 +3491,7 @@
       {
         "start": 140,
         "end": 140,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3464,7 +3503,7 @@
       {
         "start": 140,
         "end": 140,
-        "author": "Diesner"
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -3472,11 +3511,12 @@
     "lemma": "Dionysios 42a",
     "previous": "Dionysia 3",
     "next": "Dionysios 42b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 140,
         "end": 140,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3484,11 +3524,13 @@
     "lemma": "Dionysios 42b",
     "previous": "Dionysios 42a",
     "next": "Dionysios 42c",
+    "sort_key": "Dionysios 042b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 140,
         "end": 140,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3500,7 +3542,7 @@
       {
         "start": 140,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3508,59 +3550,91 @@
     "lemma": "Dionysios 42d",
     "previous": "Dionysios 42c",
     "next": "Dionysios 42e",
+    "sort_key": "Dionysios 042d",
     "chapters": [
       {
         "start": 141,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Dionysios 42e",
     "previous": "Dionysios 42d",
-    "next": "Dionysios 126a",
+    "next": "Dionysios 45",
+    "sort_key": "Dionysios 042e",
     "chapters": [
       {
         "start": 141,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
+      }
+    ]
+  },
+  {
+    "lemma": "Dionysios 45",
+    "previous": "Dionysios 42e",
+    "next": "Dionysios 126a",
+    "sort_key": "Dionysios 045",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 141,
+        "end": 141,
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Dionysios 126a",
-    "previous": "Dionysios 42e",
+    "previous": "Dionysios 45",
     "next": "Dionysios 126b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 141,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Dionysios 126b",
     "previous": "Dionysios 126a",
-    "next": "Dionysodoros 21a",
+    "next": "Dionysodoros 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 141,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
+      }
+    ]
+  },
+  {
+    "lemma": "Dionysodoros 8",
+    "previous": "Dionysios 126b",
+    "next": "Dionysodoros 21a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 141,
+        "end": 141,
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Dionysodoros 21a",
-    "previous": "Dionysios 126b",
+    "previous": "Dionysodoros 8",
     "next": "Dios 9a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 141,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3568,11 +3642,12 @@
     "lemma": "Dios 9a",
     "previous": "Dionysodoros 21a",
     "next": "Dioskurides 2a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 141,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3580,11 +3655,12 @@
     "lemma": "Dioskurides 2a",
     "previous": "Dios 9a",
     "next": "Dioskurides 2b",
+    "sort_key": "Dioskurides 2a",
     "chapters": [
       {
         "start": 141,
         "end": 141,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -3592,28 +3668,34 @@
     "lemma": "Dioskurides 2b",
     "previous": "Dioskurides 2a",
     "next": "Diotimos 11a",
+    "sort_key": "Dioskurides 02b",
     "chapters": [
       {
         "start": 142,
         "end": 142,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Diotimos 11a",
     "previous": "Dioskurides 2b",
-    "next": "Disciplina militaris",
+    "next": "Dioxippos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 142,
-        "end": 142
+        "end": 142,
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
+    "lemma": "Dioxippos 4",
+    "previous": "Diotimos 11a"
+  },
+  {
     "lemma": "Disciplina militaris",
-    "previous": "Diotimos 11a",
     "next": "Diurnus",
     "chapters": [
       {
@@ -8637,6 +8719,8 @@
     "previous": "Psaltria",
     "next": "Ptolemaios 79a",
     "sort_key": "Ptolemaios 66",
+    "wp_link": "w:de:Claudius Ptolemäus",
+    "ws_link": "s:en:Author:Ptolemy",
     "chapters": [
       {
         "start": 680,

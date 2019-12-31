@@ -1,10 +1,10 @@
 import re
 from datetime import timedelta, datetime
-
 from math import ceil
+
 from pywikibot import ItemPage, Page, Site
 
-from tools.bots import CanonicalBot
+from tools.bots.pi import CanonicalBot
 from tools.date_conversion import DateConversion
 from tools.petscan import PetScan
 from tools.template_handler import TemplateHandler

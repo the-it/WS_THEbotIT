@@ -26,6 +26,8 @@
     "lemma": "Aischylos 13",
     "previous": "Aelius 15a",
     "next": "Alkaios 9",
+    "wp_link": "w:de:Aischylos",
+    "ws_link": "w:de:Aischylos",
     "chapters": [
       {
         "start": 1,
@@ -38,6 +40,8 @@
     "lemma": "Alkaios 9",
     "previous": "Aischylos 13",
     "next": "Alkman",
+    "wp_link": "w:de:Alkaios von Lesbos",
+    "ws_link": "w:en:Author:Alcaeus of Mytilene",
     "chapters": [
       {
         "start": 8,
@@ -50,6 +54,8 @@
     "lemma": "Alkman",
     "previous": "Alkaios 9",
     "next": "Ammatas",
+    "wp_link": "w:de:Alkman",
+    "ws_link": "s:fr:Auteur:Alcman",
     "chapters": [
       {
         "start": 19,
@@ -86,6 +92,8 @@
     "lemma": "Anakreon 1",
     "previous": "Amythaon 2",
     "next": "Anaphe",
+    "wp_link": "w:de:Anakreon",
+    "ws_link": "s:de:Anakreon",
     "chapters": [
       {
         "start": 30,
@@ -98,6 +106,7 @@
     "lemma": "Anaphe",
     "previous": "Anakreon 1",
     "next": "Anartii",
+    "wp_link": "w:de:Anafi",
     "chapters": [
       {
         "start": 38,
@@ -195,6 +204,7 @@
     "lemma": "Antiocheia 15",
     "previous": "Antigonos 16",
     "next": "Antiphilos 3c",
+    "wp_link": "w:de:Antiochia in Pisidien",
     "chapters": [
       {
         "start": 49,
@@ -268,6 +278,7 @@
     "lemma": "Aqua, Aquae 18",
     "previous": "Apollinarios 2",
     "next": "Aquincum",
+    "wp_link": "w:de:Daruvar",
     "chapters": [
       {
         "start": 61,
@@ -279,6 +290,7 @@
     "lemma": "Aquincum",
     "previous": "Aqua, Aquae 18",
     "next": "Arabiates",
+    "wp_link": "w:de:Aquincum",
     "chapters": [
       {
         "start": 61,
@@ -325,6 +337,8 @@
     "lemma": "Archilochos 2",
     "previous": "Archelaos 10a",
     "next": "Ariston 52",
+    "wp_link": "w:de:Archilochos",
+    "ws_link": "s:en:Author:Archilochus",
     "chapters": [
       {
         "start": 136,
@@ -337,6 +351,7 @@
     "lemma": "Ariston 52",
     "previous": "Archilochos 2",
     "next": "Aristoteles 18",
+    "wp_link": "w:en:Aristo of Ceos",
     "chapters": [
       {
         "start": 156,
@@ -349,6 +364,8 @@
     "lemma": "Aristoteles 18",
     "previous": "Ariston 52",
     "next": "Aristoteles 25",
+    "wp_link": "w:de:Aristoteles",
+    "ws_link": "s:de:Aristoteles",
     "chapters": [
       {
         "start": 159,
@@ -374,6 +391,8 @@
     "previous": "Aristoteles 25",
     "next": "Arsaciana",
     "sort_key": "Aristoxenos 07",
+    "wp_link": "w:de:Aristoxenos",
+    "ws_link": "w:de:Aristoxenos",
     "chapters": [
       {
         "start": 336,
@@ -471,6 +490,7 @@
     "lemma": "Bagaudae",
     "previous": "Bacensis civitas",
     "next": "Basoretensis vicus",
+    "wp_link": "w:de:Bagauden",
     "chapters": [
       {
         "start": 346,
@@ -595,6 +615,7 @@
     "lemma": "Campona",
     "previous": "Campilius",
     "next": "Caragonius",
+    "wp_link": "w:de:Kastell Campona",
     "chapters": [
       {
         "start": 357,
@@ -722,6 +743,8 @@
     "lemma": "Cornelius 395",
     "previous": "Cornacates",
     "next": "Cuneus 4",
+    "wp_link": "w:de:Tacitus",
+    "ws_link": "s:de:Tacitus",
     "chapters": [
       {
         "start": 373,
@@ -782,6 +805,8 @@
     "lemma": "Demetrios 85",
     "previous": "Darnithithi",
     "next": "Diaios",
+    "wp_link": "w:de:Demetrios von Phaleron",
+    "ws_link": "s:en:Author:Demetrius of Phalerum",
     "chapters": [
       {
         "start": 514,
@@ -793,24 +818,39 @@
   {
     "lemma": "Diaios",
     "previous": "Demetrios 85",
-    "next": "Diolkos 2",
+    "next": "Dikaiarchos 3",
     "chapters": [
       {
         "start": 521,
         "end": 526,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
+      }
+    ]
+  },
+  {
+    "lemma": "Dikaiarchos 3",
+    "previous": "Diaios",
+    "next": "Diolkos 2",
+    "wp_link": "w:de:Dikaiarchos",
+    "ws_link": "s:it:Autore:Dicearco da Messina",
+    "chapters": [
+      {
+        "start": 526,
+        "end": 534,
+        "author": "Fritz Wehrli."
       }
     ]
   },
   {
     "lemma": "Diolkos 2",
-    "previous": "Diaios",
+    "previous": "Dikaiarchos 3",
     "next": "Diophanes 1a",
+    "wp_link": "w:de:Diolkos",
     "chapters": [
       {
         "start": 534,
         "end": 534,
-        "author": "Meyer, Ernst"
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -822,25 +862,29 @@
       {
         "start": 534,
         "end": 538,
-        "author": "Deininger"
+        "author": "Jürgen Deininger."
       }
     ]
   },
   {
     "lemma": "Doecis",
     "previous": "Diophanes 1a",
-    "next": "Dorcatius 1",
+    "next": "Dorcatius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 538,
         "end": 539,
-        "author": "Mócsy"
+        "author": "Andreas Mócsy."
       }
     ]
   },
   {
+    "lemma": "Dorcatius",
+    "previous": "Doecis"
+  },
+  {
     "lemma": "Dorcatius 1",
-    "previous": "Doecis",
     "next": "Dorcatius 2",
     "chapters": [
       {
@@ -929,6 +973,8 @@
     "lemma": "Euripides 4",
     "previous": "Eudemos 1",
     "next": "Eurylochos 11",
+    "wp_link": "w:de:Euripides",
+    "ws_link": "s:de:Euripides",
     "chapters": [
       {
         "start": 658,
@@ -1144,6 +1190,7 @@
     "lemma": "Isthmos 1",
     "previous": "Iosista",
     "next": "Iucundus 3a",
+    "wp_link": "w:de:Isthmus von Korinth",
     "chapters": [
       {
         "start": 850,
@@ -1800,6 +1847,8 @@
     "lemma": "Psellos",
     "previous": "Proxenos 10a",
     "next": "Psiax",
+    "wp_link": "w:de:Michael Psellos",
+    "ws_link": "s:en:Author:Michael Psellos",
     "chapters": [
       {
         "start": 1124,
@@ -2237,6 +2286,8 @@
     "lemma": "Cornelius 395",
     "previous": "Zeugisa",
     "next": "Maes Titianus",
+    "wp_link": "w:de:Tacitus",
+    "ws_link": "s:de:Tacitus",
     "chapters": [
       {
         "start": 1365,

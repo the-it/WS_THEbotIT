@@ -4,7 +4,7 @@ import pywikibot
 
 from scripts.service.ws_re.scanner import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.base_task import ReporterMixin
-from tools.bots import WikiLogger
+from tools.bots.pi import WikiLogger
 
 
 class ERROTask(ReScannerTask, ReporterMixin):

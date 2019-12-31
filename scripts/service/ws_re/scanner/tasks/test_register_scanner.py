@@ -1,6 +1,6 @@
 # pylint: disable=protected-access
 from pathlib import Path
-from unittest import mock, skipUnless
+from unittest import mock, skip
 
 import pywikibot
 from git import Repo
@@ -14,7 +14,6 @@ from scripts.service.ws_re.register.test_base import clear_tst_path, _TEST_REGIS
 from scripts.service.ws_re.scanner.tasks.register_scanner import SCANTask
 from scripts.service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from scripts.service.ws_re.template.re_page import RePage
-from tools import INTEGRATION_TEST
 
 
 class TaskTestWithRegister(TaskTestCase):
@@ -503,7 +502,7 @@ text.
                                          StringComparison("No available Lemma in Registers for issue I,1 "
                                                           ".* Reason is:.*")))
 
-    @skipUnless(INTEGRATION_TEST, "only execute in integration test")
+    @skip("I must mock this")
     def test_get_wd_sitelink(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Demetrios 79"))

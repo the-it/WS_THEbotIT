@@ -113,6 +113,7 @@
     "lemma": "Aenona",
     "previous": "Aemilius 131a",
     "next": "Aetrius 2",
+    "wp_link": "w:de:Nin",
     "chapters": [
       {
         "start": 3,
@@ -223,6 +224,7 @@
     "lemma": "Aiacius 2",
     "previous": "Aiacius 1a",
     "next": "Aimyndos",
+    "wp_link": "w:de:Quintus Aiacius Modestus Crescentianus",
     "chapters": [
       {
         "start": 14,
@@ -248,6 +250,8 @@
     "lemma": "Aisopos 1",
     "previous": "Aimyndos",
     "next": "Aius 2",
+    "wp_link": "w:de:Äsop",
+    "ws_link": "w:en:Author:Aesop",
     "chapters": [
       {
         "start": 15,
@@ -396,6 +400,7 @@
     "lemma": "Annius 61",
     "previous": "Annius 41a",
     "next": "Annius 65b",
+    "wp_link": "w:de:Marcus Annius Libo (Suffektkonsul 161)",
     "chapters": [
       {
         "start": 48,
@@ -585,6 +590,7 @@
     "previous": "Apollonides 33c",
     "next": "Aqua, Aquae 97",
     "proof_read": 2,
+    "wp_link": "w:en:Apsines",
     "chapters": [
       {
         "start": 53,
@@ -634,6 +640,8 @@
     "lemma": "Aratos 6",
     "previous": "Aradius 3a",
     "next": "Araxa",
+    "wp_link": "w:de:Aratos von Soloi",
+    "ws_link": "w:de:Aratos von Soloi",
     "chapters": [
       {
         "start": 55,
@@ -708,6 +716,7 @@
     "lemma": "Arneai",
     "previous": "Arminius 4",
     "next": "Arrecinus 2",
+    "wp_link": "w:de:Arneai",
     "chapters": [
       {
         "start": 57,
@@ -829,6 +838,7 @@
     "lemma": "Arykanda",
     "previous": "Articuleius 4",
     "next": "Asinius 17b",
+    "wp_link": "w:de:Arykanda",
     "chapters": [
       {
         "start": 60,
@@ -1076,6 +1086,7 @@
     "lemma": "Aurelius 136",
     "previous": "Aurelius 65a",
     "next": "Aurelius 141a",
+    "wp_link": "w:de:Titus Aurelius Fulvus (Konsul 85)",
     "chapters": [
       {
         "start": 68,
@@ -1351,6 +1362,7 @@
     "lemma": "Boiodurum",
     "previous": "Bennius 2",
     "next": "Bononius 2",
+    "wp_link": "w:de:Innstadt",
     "chapters": [
       {
         "start": 75,
@@ -1402,6 +1414,7 @@
     "lemma": "Bruttius 5",
     "previous": "Bruttius 4a",
     "next": "Bubon 1",
+    "wp_link": "w:de:Gaius Bruttius Praesens (Konsul 139)",
     "chapters": [
       {
         "start": 77,
@@ -1941,6 +1954,7 @@
     "next": "Ceionius 24",
     "sort_key": "Ceionius 04",
     "proof_read": 2,
+    "wp_link": "w:de:Marcus Vettulenus Civica Barbarus",
     "chapters": [
       {
         "start": 88,
@@ -2014,6 +2028,8 @@
     "lemma": "Cetius mons",
     "previous": "Cerellius 5",
     "next": "Charmides 5",
+    "wp_link": "w:de:St. Pölten",
+    "ws_link": "s:de:St. Pölten",
     "chapters": [
       {
         "start": 90,
@@ -2618,6 +2634,7 @@
     "lemma": "Cornelius 276",
     "previous": "Cornelius 154a",
     "next": "Cornelius 283a",
+    "wp_link": "w:de:Marcus Cornelius Nigrinus Curiatius Maternus",
     "chapters": [
       {
         "start": 107,
@@ -2893,22 +2910,55 @@
   },
   {
     "lemma": "Didius 6",
-    "previous": "Dexius 4"
+    "previous": "Dexius 4",
+    "next": "Didius 10a",
+    "chapters": [
+      {
+        "start": 111,
+        "end": 111,
+        "author": "Werner Eck."
+      }
+    ]
+  },
+  {
+    "lemma": "Didius 10a",
+    "previous": "Didius 6",
+    "next": "digitorum computus",
+    "chapters": [
+      {
+        "start": 112,
+        "end": 112,
+        "author": "Werner Eck."
+      }
+    ]
   },
   {
     "lemma": "digitorum computus",
-    "next": "Domitius 63a",
+    "previous": "Didius 10a",
+    "next": "Diophantos 17",
     "chapters": [
       {
         "start": 112,
         "end": 113,
-        "author": "Hommel"
+        "author": "Hildebrecht Hommel."
+      }
+    ]
+  },
+  {
+    "lemma": "Diophantos 17",
+    "previous": "digitorum computus",
+    "next": "Domitius 63a",
+    "chapters": [
+      {
+        "start": 113,
+        "end": 114,
+        "author": "Jost Benedum."
       }
     ]
   },
   {
     "lemma": "Domitius 63a",
-    "previous": "digitorum computus",
+    "previous": "Diophantos 17",
     "next": "Domitius 108a",
     "chapters": [
       {
@@ -5405,6 +5455,8 @@
     "lemma": "Raetia",
     "previous": "Raecius 6a",
     "next": "Ragonius 4a",
+    "wp_link": "w:de:Raetia",
+    "ws_link": "s:en:1911 Encyclopædia Britannica/Raetia",
     "chapters": [
       {
         "start": 582,

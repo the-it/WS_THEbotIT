@@ -53,6 +53,7 @@
     "previous": "Amanus",
     "next": "Antidotos 6",
     "proof_read": 2,
+    "wp_link": "w:de:Anaxenor",
     "chapters": [
       {
         "start": 1,
@@ -79,6 +80,7 @@
     "previous": "Antidotos 6",
     "next": "Antiochos 68",
     "proof_read": 2,
+    "wp_link": "w:ca:Antígon de Nicea",
     "chapters": [
       {
         "start": 2,
@@ -157,6 +159,7 @@
     "previous": "Apollodoros 41a",
     "next": "Apollonios 122",
     "proof_read": 3,
+    "wp_link": "w:de:Apollonios",
     "chapters": [
       {
         "start": 45,
@@ -343,6 +346,8 @@
     "previous": "Βηρώθε",
     "next": "Caecilia Trebulla",
     "proof_read": 3,
+    "wp_link": "w:de:Bias von Priene",
+    "ws_link": "w:it:Autore:Biante",
     "chapters": [
       {
         "start": 55,
@@ -485,11 +490,12 @@
     "lemma": "Dimon",
     "previous": "Didius 16a",
     "next": "Diogenes 47a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 153,
         "end": 153,
-        "author": "Hölscher"
+        "author": "Hölscher."
       }
     ]
   },
@@ -497,59 +503,66 @@
     "lemma": "Diogenes 47a",
     "previous": "Dimon",
     "next": "Diogenes 47b",
+    "proof_read": 2,
+    "wp_link": "w:de:Diogenes von Oinoanda",
     "chapters": [
       {
         "start": 153,
-        "end": 153,
-        "author": "Philippson"
+        "end": 170,
+        "author": "Philippson."
       }
     ]
   },
   {
     "lemma": "Diogenes 47b",
     "previous": "Diogenes 47a",
-    "next": "Dioryktos 1",
+    "next": "Διόρυκτος 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "end": 170,
-        "author": "Philippson"
+        "end": 172,
+        "author": "Philippson."
       }
     ]
   },
   {
-    "lemma": "Dioryktos 1",
+    "lemma": "Διόρυκτος 1",
     "previous": "Diogenes 47b",
-    "next": "Dioryktos 2",
+    "next": "Διόρυκτος 2",
+    "sort_key": "Dioryktos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 172,
         "end": 172,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Dioryktos 2",
-    "previous": "Dioryktos 1",
+    "lemma": "Διόρυκτος 2",
+    "previous": "Διόρυκτος 1",
     "next": "Dioskurides 14a",
+    "sort_key": "Dioryktos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 172,
         "end": 172,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Dioskurides 14a",
-    "previous": "Dioryktos 2",
+    "previous": "Διόρυκτος 2",
     "next": "Dostoneis",
     "chapters": [
       {
         "start": 172,
         "end": 172,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -557,11 +570,12 @@
     "lemma": "Dostoneis",
     "previous": "Dioskurides 14a",
     "next": "Drogen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 172,
         "end": 172,
-        "author": "Lamer"
+        "author": "Lamer."
       }
     ]
   },

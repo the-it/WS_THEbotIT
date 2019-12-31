@@ -10,8 +10,10 @@ from typing import TypedDict  # pylint: disable=no-name-in-module
 
 from pywikibot import Page, Site
 
-
 # type hints
+from tools.bots import BotException
+
+
 class LoggerNameDict(TypedDict):
     info: str
     debug: str
@@ -20,10 +22,6 @@ class LoggerNameDict(TypedDict):
 class LastRunDict(TypedDict):
     success: bool
     timestamp: str
-
-
-class BotException(Exception):
-    pass
 
 
 _DATA_PATH: str = os.path.expanduser("~") + os.sep + ".wiki_bot"

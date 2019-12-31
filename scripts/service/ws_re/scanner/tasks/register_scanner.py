@@ -16,7 +16,7 @@ from scripts.service.ws_re.register.registers import Registers
 from scripts.service.ws_re.register.updater import Updater, RemoveList
 from scripts.service.ws_re.scanner.tasks.base_task import ReScannerTask
 from scripts.service.ws_re.template.article import Article
-from tools.bots import WikiLogger
+from tools.bots.pi import WikiLogger
 
 
 class SCANTask(ReScannerTask):
