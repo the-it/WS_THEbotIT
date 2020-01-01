@@ -18,7 +18,7 @@ class ChapterDict(TypedDict, total=False):
 
 
 LemmaDictKeys = Literal["lemma", "previous", "next", "sort_key", "redirect",
-                        "proof_read", "wp_link", "ws_link", "chapters"]
+                        "proof_read", "wp_link", "ws_link", "wd_link", "chapters"]
 
 LemmaDictItems = Union[str, bool, int, List[ChapterDict]]
 
@@ -32,6 +32,7 @@ class LemmaDict(TypedDict, total=False):
     proof_read: int
     wp_link: str
     ws_link: str
+    wd_link: str
     chapters: List[ChapterDict]
 
 
@@ -322,6 +323,9 @@ class Lemma():
             parts = self._lemma_dict['ws_link'].split(":")
             links.append(f"[[{self['ws_link']}|{parts[2]}<sup>(WS {parts[1]})</sup>]]")
             sort_keys.append(f"{parts[0]}:{parts[1]}:{self.make_sort_key(parts[2])}")
+        if "wd_link" in self:
+            links.append(f"[[{self['wd_link']}|WD-Item]]")
+            sort_keys.append(f"{self['wd_link']}")
         if links:
             link = "<br/>".join(links)
             sort_key = f"data-sort-value=\"{sort_keys[0]}\""
