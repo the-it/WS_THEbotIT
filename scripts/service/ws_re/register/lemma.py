@@ -144,7 +144,8 @@ for regex_pair in _1ST_REGEX_RAW_LIST:
 
 
 class Lemma():
-    _keys = ["lemma", "previous", "next", "sort_key", "redirect", "proof_read", "wp_link", "ws_link", "chapters"]
+    _keys = ["lemma", "previous", "next", "sort_key", "redirect", "proof_read", "wp_link", "ws_link", "wd_link",
+             "chapters"]
 
     def __init__(self,
                  lemma_dict: LemmaDict,

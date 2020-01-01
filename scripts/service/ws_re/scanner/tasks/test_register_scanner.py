@@ -502,7 +502,7 @@ text.
                                          StringComparison("No available Lemma in Registers for issue I,1 "
                                                           ".* Reason is:.*")))
 
-    @skip("I must mock this")
+    @skip("I must mock this. For now I use this test in development.")
     def test_get_wd_sitelink(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Demetrios 79"))
@@ -510,3 +510,5 @@ text.
                 self.task._fetch_wp_link(self.task.re_page.splitted_article_list[0]))
         compare(({'ws_link': 's:de:Apokryphen/Demetrius der Chronograph'}, []),
                 self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]))
+        compare(({'wd_link': 'd:Q3705296'}, []),
+                self.task._fetch_wd_link(self.task.re_page.splitted_article_list[0]))

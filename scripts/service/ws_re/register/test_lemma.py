@@ -99,7 +99,9 @@ class TestLemma(BaseTestRegister):
         altered_dict["ws_link"] = "s:de:Lemma"
         altered_dict["wd_link"] = "d:Q123456"
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
-        compare(("[[w:de:Lemma|Lemma<sup>(WP de)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]<br/>[[d:Q123456|WD-Item]]",
+        compare(("[[w:de:Lemma|Lemma<sup>(WP de)</sup>]]<br/>"
+                 "[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]<br/>"
+                 "[[d:Q123456|WD-Item]]",
                  "data-sort-value=\"w:de:lemma\""),
                 re_register_lemma.get_wiki_links())
 
