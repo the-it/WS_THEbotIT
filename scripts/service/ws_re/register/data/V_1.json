@@ -558,7 +558,7 @@
     "previous": "Demokrates 13",
     "next": "Demokritos 1",
     "wp_link": "w:de:Demokratie",
-    "ws_link": "w:de:Demokratie",
+    "ws_link": "s:de:Demokratie",
     "chapters": [
       {
         "start": 135,
@@ -7299,7 +7299,7 @@
     "next": "Didakai",
     "proof_read": 3,
     "wp_link": "w:de:Didache",
-    "ws_link": "w:en:Didache",
+    "ws_link": "s:en:Didache",
     "chapters": [
       {
         "start": 392,
@@ -12570,7 +12570,7 @@
     "next": "Diogenidai",
     "proof_read": 3,
     "wp_link": "w:de:Diogenianos Grammatikos",
-    "ws_link": "w:it:Autore:Diogeniano",
+    "ws_link": "s:it:Autore:Diogeniano",
     "chapters": [
       {
         "start": 778,
@@ -21001,11 +21001,12 @@
     "lemma": "Diria",
     "previous": "Δίρησις",
     "next": "Diribitores",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1167,
         "end": 1167,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
@@ -21040,11 +21041,12 @@
     "lemma": "Dirica",
     "previous": "Diribitorium",
     "next": "Diridotis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1168,
         "end": 1168,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -21052,10 +21054,12 @@
     "lemma": "Diridotis",
     "previous": "Dirica",
     "next": "Dirigothia",
+    "redirect": "Teredon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1169,
-        "end": 1169
+        "start": 1168,
+        "end": 1168
       }
     ]
   },
@@ -21063,10 +21067,12 @@
     "lemma": "Dirigothia",
     "previous": "Diridotis",
     "next": "Dirke",
+    "redirect": "Dinogetia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1169,
-        "end": 1169
+        "start": 1168,
+        "end": 1168
       }
     ]
   },
@@ -21074,11 +21080,12 @@
     "lemma": "Dirke",
     "previous": "Dirigothia",
     "next": "Dirona",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1169,
-        "end": 1170,
-        "author": "Bethe"
+        "end": 1169,
+        "author": "Bethe."
       }
     ]
   },
@@ -21086,6 +21093,8 @@
     "lemma": "Dirona",
     "previous": "Dirke",
     "next": "Dirphys",
+    "redirect": "Sirona",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1170,
@@ -21101,7 +21110,7 @@
       {
         "start": 1170,
         "end": 1170,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -21109,11 +21118,13 @@
     "lemma": "Dirutia",
     "previous": "Dirphys",
     "next": "Disaph",
+    "redirect": "Paquius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1170,
         "end": 1170,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -21121,11 +21132,12 @@
     "lemma": "Disaph",
     "previous": "Dirutia",
     "next": "Discens",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1170,
         "end": 1171,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -21919,7 +21931,7 @@
     "next": "Diur 1",
     "proof_read": 3,
     "wp_link": "w:de:Scheidung",
-    "ws_link": "w:en:Divorce",
+    "ws_link": "s:en:Divorce",
     "chapters": [
       {
         "start": 1241,
