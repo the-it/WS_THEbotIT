@@ -67,16 +67,27 @@ class SCANTask(ReScannerTask):
             return {"ws_link": ws_link}, []
         return {}, ["ws_link"]
 
+    def _fetch_wd_link(self, _) -> Tuple[LemmaDict, RemoveList]:
+        target = self._get_target_from_wd()
+        if target:
+            return {"wd_link": f"d:{target.id}"}, []
+        return {}, ["wd_link"]
+
     def _get_link_from_wd(self, possible_source_wikis: Sequence) -> Optional[str]:
+        target = self._get_target_from_wd()
+        if target:
+            for sitelink in possible_source_wikis:
+                with contextlib.suppress(pywikibot.exceptions.NoPage):
+                    wiki_prefix = "s" if sitelink.find("wikisource") > 0 else "w"
+                    link = f"{wiki_prefix}:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
+                    return link
+        return None
+
+    def _get_target_from_wd(self) -> Optional[pywikibot.ItemPage]:
         with contextlib.suppress(pywikibot.exceptions.NoPage):
             wp_item = self.re_page.page.data_item()
             with contextlib.suppress(KeyError):
-                target = wp_item.claims["P921"][0].target
-                for sitelink in possible_source_wikis:
-                    with contextlib.suppress(pywikibot.exceptions.NoPage):
-                        wiki_prefix = "s" if sitelink.find("wikisource") > 0 else "w"
-                        link = f"{wiki_prefix}:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
-                        return link
+                return wp_item.claims["P921"][0].target
         return None
 
     @staticmethod
