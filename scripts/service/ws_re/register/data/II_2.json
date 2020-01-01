@@ -27782,7 +27782,7 @@
     "sort_key": "Auitus 07",
     "proof_read": 3,
     "wp_link": "w:de:Avitus von Vienne",
-    "ws_link": "w:it:Autore:Alcimo Ecdicio Avito",
+    "ws_link": "s:it:Autore:Alcimo Ecdicio Avito",
     "chapters": [
       {
         "start": 2398,
@@ -47050,7 +47050,14 @@
   {
     "lemma": "Apollonios 113",
     "previous": "Ἀπολλωνιασταί",
-    "next": "Archebiades 2"
+    "next": "Archebiades 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2859,
+        "end": 2859
+      }
+    ]
   },
   {
     "lemma": "Archebiades 2",
