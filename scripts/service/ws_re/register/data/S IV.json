@@ -120,6 +120,7 @@
     "previous": "Agesias 4",
     "next": "Aigias",
     "wp_link": "w:de:Agio",
+    "wd_link": "d:Q393902",
     "chapters": [
       {
         "start": 9,
@@ -1002,6 +1003,7 @@
     "previous": "Aristodemos 8a",
     "next": "Aristogeiton 1a",
     "wp_link": "w:de:Aristodemos von Milet",
+    "wd_link": "d:Q1229944",
     "chapters": [
       {
         "start": 47,
@@ -2155,10 +2157,13 @@
     "lemma": "Diodoros 19a",
     "previous": "Didas 2",
     "next": "Diodoros 19b",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 225,
-        "end": 225
+        "end": 225,
+        "author": "Schoch."
       }
     ]
   },
@@ -2166,11 +2171,12 @@
     "lemma": "Diodoros 19b",
     "previous": "Diodoros 19a",
     "next": "Diognis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 225,
         "end": 225,
-        "author": "Schoch"
+        "author": "Schoch."
       }
     ]
   },
@@ -2178,11 +2184,12 @@
     "lemma": "Diognis",
     "previous": "Diodoros 19b",
     "next": "Diokleidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 225,
         "end": 225,
-        "author": "Schoch"
+        "author": "Schoch."
       }
     ]
   },
@@ -3951,6 +3958,7 @@
     "sort_key": "Hyaene",
     "proof_read": 2,
     "wp_link": "w:de:Hyänen",
+    "wd_link": "d:Q42046",
     "chapters": [
       {
         "start": 761,
@@ -7030,6 +7038,7 @@
     "next": "Λαβασσάρασκος",
     "proof_read": 2,
     "wp_link": "w:de:Kyros der Jüngere",
+    "wd_link": "d:Q297960",
     "chapters": [
       {
         "start": 1166,

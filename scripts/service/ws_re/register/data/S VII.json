@@ -157,6 +157,7 @@
     "previous": "Antiochos 65",
     "next": "Apollodoros 27",
     "wp_link": "w:de:Antipatros",
+    "wd_link": "d:Q581623",
     "chapters": [
       {
         "start": 39,
@@ -322,6 +323,7 @@
     "next": "Ἀσκληπιαις",
     "proof_read": 2,
     "wp_link": "w:de:Askese",
+    "wd_link": "d:Q179807",
     "chapters": [
       {
         "start": 50,
@@ -498,6 +500,7 @@
     "next": "Caecilius 33a",
     "proof_read": 2,
     "wp_link": "w:en:Brogitarus",
+    "wd_link": "d:Q3781179",
     "chapters": [
       {
         "start": 82,
@@ -928,7 +931,12 @@
     ]
   },
   {
+    "lemma": "Diadochos",
+    "next": "Diakrioi"
+  },
+  {
     "lemma": "Diakrioi",
+    "previous": "Diadochos",
     "next": "Didius 9",
     "proof_read": 2,
     "chapters": [
@@ -983,6 +991,7 @@
   },
   {
     "lemma": "Δίψιος",
+    "previous": "Diokles 34b",
     "next": "Discoduraterae",
     "sort_key": "Dipsios",
     "proof_read": 2,
