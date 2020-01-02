@@ -850,6 +850,7 @@
   {
     "lemma": "Amyklas 1a",
     "previous": "Amphipolis 1",
+    "next": "Anaxippos 4",
     "chapters": [
       {
         "start": 19,
@@ -859,10 +860,20 @@
     ]
   },
   {
-    "lemma": "Anaxippos 4"
+    "lemma": "Anaxippos 4",
+    "previous": "Amyklas 1a",
+    "next": "Ancilius 1",
+    "chapters": [
+      {
+        "start": 19,
+        "end": 19,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Ancilius 1",
+    "previous": "Anaxippos 4",
     "next": "Ancilius 2",
     "chapters": [
       {
@@ -2064,6 +2075,7 @@
     "next": "Athenaios 28",
     "wp_link": "w:de:Athen",
     "ws_link": "s:de:Athen",
+    "wd_link": "d:Q1524",
     "chapters": [
       {
         "start": 48,
@@ -3312,7 +3324,6 @@
   {
     "lemma": "Dikte 1",
     "previous": "Dikaiopolis 2",
-    "next": "Diktys 2",
     "chapters": [
       {
         "start": 137,
@@ -3323,7 +3334,7 @@
   },
   {
     "lemma": "Diktys 2",
-    "previous": "Dikte 1",
+    "previous": "Dikaiopolis 2",
     "next": "Diktys 3",
     "chapters": [
       {
@@ -3682,10 +3693,20 @@
   },
   {
     "lemma": "Dioxippos 4",
-    "previous": "Diotimos 11a"
+    "previous": "Diotimos 11a",
+    "next": "Disciplina militaris",
+    "redirect": "Anaxippos 4",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 142,
+        "end": 142
+      }
+    ]
   },
   {
     "lemma": "Disciplina militaris",
+    "previous": "Dioxippos 4",
     "next": "Diurnus",
     "chapters": [
       {
@@ -8711,6 +8732,7 @@
     "sort_key": "Ptolemaios 66",
     "wp_link": "w:de:Claudius Ptolemäus",
     "ws_link": "s:en:Author:Ptolemy",
+    "wd_link": "d:Q34943",
     "chapters": [
       {
         "start": 680,
