@@ -22,12 +22,20 @@ class TestCloudBase(TestCase):
                 {
                     'AttributeName': 'id',
                     'KeyType': 'HASH'  # Partition key
+                },
+                {
+                    'AttributeName': 'bot_name',
+                    'KeyType': 'HASH'  # Partition key
                 }
             ],
             AttributeDefinitions=[
                 {
                     'AttributeName': 'id',
                     'AttributeType': 'N'
+                },
+                {
+                    'AttributeName': 'bot_name',
+                    'AttributeType': 'S'
                 }
             ],
             BillingMode="PAY_PER_REQUEST"
