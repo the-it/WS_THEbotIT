@@ -17,13 +17,13 @@ class StatusManager:
         self.current_run = Status(self._manage_table.item_count, bot_name)
         self.bot_name = bot_name
         self._manage_table.put_item(Item=self.current_run.to_dict())  # type: ignore
-        self._last_runs = []
+        self._last_runs: List[Status] = []
 
     @property
     def last_runs(self) -> List[Status]:
         if not self._last_runs:
-            raw_list = self._manage_table.scan(FilterExpression=Key('bot_name').eq(self.bot_name))["Items"][:-1]
-            self._last_runs = [Status.from_dict(status_dict) for status_dict in raw_list[::-1]]
+            raw_list = self._manage_table.scan(FilterExpression=Key('bot_name').eq(self.bot_name))  # type: ignore
+            self._last_runs = [Status.from_dict(status_dict) for status_dict in raw_list["Items"][:-1][::-1]]
         return self._last_runs
 
     @property
@@ -34,10 +34,9 @@ class StatusManager:
     def last_successful_runs(self) -> List[Status]:
         return [status for status in self.last_runs if status.success]
 
-    def finish_run(self, success: bool =False):
+    def finish_run(self, success: bool = False):
         self.current_run.finish = True
         self.current_run.finish_time = datetime.now()
         if success:
             self.current_run.success = success
         self._manage_table.put_item(Item=self.current_run.to_dict())  # type: ignore
-
