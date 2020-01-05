@@ -25,7 +25,7 @@ class TestCloudBase(TestCase):
                 },
                 {
                     'AttributeName': 'bot_name',
-                    'KeyType': 'HASH'  # Partition key
+                    'KeyType': 'RANGE'  # Partition key
                 }
             ],
             AttributeDefinitions=[
