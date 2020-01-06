@@ -18,12 +18,7 @@ class WikiLogger():
         self._logger: logging.Logger = logging.getLogger(self._bot_name)
         self._logger_name: str = self._get_logger_name()
         self._log_to_screen: bool = log_to_screen
-
-    def __enter__(self):
         self._setup_logger_properties()
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.tear_down()
 
     def tear_down(self):
         for handler in self._logger.handlers[:]:

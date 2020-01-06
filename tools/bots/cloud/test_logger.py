@@ -14,7 +14,6 @@ class TestWikilogger(TestCase):
     def setUp(self):
         setup_data_path()
         self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), log_to_screen=False)
-        self.logger._setup_logger_properties()
 
     def tearDown(self):
         self.logger.tear_down()
