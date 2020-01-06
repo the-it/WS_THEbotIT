@@ -21324,11 +21324,12 @@
     "lemma": "Disciplina militaris",
     "previous": "Disciplina Etrusca",
     "next": "Discordia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1176,
         "end": 1183,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -21336,11 +21337,12 @@
     "lemma": "Discordia 1",
     "previous": "Disciplina militaris",
     "next": "Discordia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1183,
         "end": 1183,
-        "author": "Aust"
+        "author": "Aust."
       }
     ]
   },
@@ -21348,11 +21350,12 @@
     "lemma": "Discordia 2",
     "previous": "Discordia 1",
     "next": "Discussor",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1183,
         "end": 1183,
-        "author": "Aust"
+        "author": "Aust."
       }
     ]
   },
@@ -21360,11 +21363,12 @@
     "lemma": "Discussor",
     "previous": "Discordia 2",
     "next": "Disetus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1183,
         "end": 1187,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -21384,11 +21388,12 @@
     "lemma": "Diskobolia",
     "previous": "Disetus",
     "next": "Diskontion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1187,
         "end": 1188,
-        "author": "Bürchner"
+        "author": "Jüthner."
       }
     ]
   },
@@ -21396,11 +21401,12 @@
     "lemma": "Diskontion",
     "previous": "Diskobolia",
     "next": "Diskos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1188,
         "end": 1188,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -21408,35 +21414,52 @@
     "lemma": "Diskos 1",
     "previous": "Diskontion",
     "next": "Diskos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1188,
         "end": 1188,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
   {
     "lemma": "Diskos 2",
     "previous": "Diskos 1",
-    "next": "Dispargum",
+    "next": "Disma",
+    "proof_read": 2,
+    "wp_link": "w:de:Diskos",
     "chapters": [
       {
         "start": 1188,
         "end": 1189,
-        "author": "Jüthner"
+        "author": "Jüthner."
+      }
+    ]
+  },
+  {
+    "lemma": "Disma",
+    "previous": "Diskos 2",
+    "next": "Dispargum",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1189,
+        "end": 1189,
+        "author": "Tomaschek."
       }
     ]
   },
   {
     "lemma": "Dispargum",
-    "previous": "Diskos 2",
+    "previous": "Disma",
     "next": "Dis pater",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1189,
         "end": 1189,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -21444,6 +21467,8 @@
     "lemma": "Dis pater",
     "previous": "Dispargum",
     "next": "Dispensator",
+    "redirect": "Pluton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1189,
@@ -21455,11 +21480,12 @@
     "lemma": "Dispensator",
     "previous": "Dis pater",
     "next": "Dispunctor",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1189,
         "end": 1198,
-        "author": "Liebenam"
+        "author": "Liebenam."
       }
     ]
   },
@@ -21467,11 +21493,12 @@
     "lemma": "Dispunctor",
     "previous": "Dispensator",
     "next": "Dissignatores 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1198,
         "end": 1199,
-        "author": "Liebenam"
+        "author": "Liebenam."
       }
     ]
   },
@@ -21531,11 +21558,12 @@
     "lemma": "Distamenos",
     "previous": "Dista",
     "next": "Διστεγία",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1200,
         "end": 1200,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -21557,11 +21585,13 @@
     "lemma": "Distel",
     "previous": "Διστεγία",
     "next": "Disticha Catonis",
+    "proof_read": 2,
+    "wp_link": "w:de:Distel",
     "chapters": [
       {
         "start": 1200,
         "end": 1202,
-        "author": "Schmidt, Max C[arl] P[aul]"
+        "author": "Max C. P. Schmidt."
       }
     ]
   },
@@ -21569,6 +21599,8 @@
     "lemma": "Disticha Catonis",
     "previous": "Distel",
     "next": "Distrete",
+    "redirect": "Dicta Catonis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1202,
@@ -21580,11 +21612,12 @@
     "lemma": "Distrete",
     "previous": "Disticha Catonis",
     "next": "Ditalco",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1203,
         "end": 1203,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -21592,11 +21625,12 @@
     "lemma": "Ditalco",
     "previous": "Distrete",
     "next": "Dithyrambos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1203,
         "end": 1203,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
