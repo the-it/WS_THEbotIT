@@ -8,7 +8,8 @@ pip3 :
 
 update_pip3 :
 	echo "##### UPDATE REQUIREMENTS ######"
-	pip-compile requirements.in
+	pip install pip-tools -U
+	pip-compile --output-file requirements.txt requirements.in
 	pip-sync
 
 cloc :
