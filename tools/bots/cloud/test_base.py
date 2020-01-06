@@ -1,8 +1,40 @@
 # pylint: disable=protected-access,no-member,no-self-use
-from unittest import TestCase
+import os
+from shutil import rmtree
+from unittest import TestCase, mock
 
 import boto3
 from moto import mock_dynamodb2
+
+from tools.bots.cloud.base import DATA_PATH, get_data_path
+
+
+def teardown_data_path():
+    if os.path.exists(DATA_PATH):
+        rmtree(DATA_PATH)
+
+def setup_data_path():
+    teardown_data_path()
+    os.mkdir(DATA_PATH)
+
+
+class TestGetDataPath(TestCase):
+    def setUp(self):
+        setup_data_path()
+
+    def tearDown(self):
+        teardown_data_path()
+
+    def test_folder_exist(self):
+        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
+            self.assertEqual(DATA_PATH, get_data_path())
+            mock_mkdir.assert_not_called()
+
+    def test_make_folder(self):
+        os.rmdir(DATA_PATH)
+        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
+            self.assertEqual(DATA_PATH, get_data_path())
+            self.assertEqual(1, mock_mkdir.call_count)
 
 
 @mock_dynamodb2
