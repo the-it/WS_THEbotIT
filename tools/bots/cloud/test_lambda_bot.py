@@ -1,12 +1,10 @@
-import json
-import os
+# pylint: disable=protected-access,no-member,no-self-use
 import time
-from datetime import timedelta, datetime
+from datetime import timedelta
 from unittest import mock
 
 from testfixtures import LogCapture, compare
 
-from tools.bots.cloud.base import TMP_WIKI_BOT_PATH
 from tools.bots.cloud.lambda_bot import LambdaBot
 from tools.bots.cloud.test_base import setup_data_path, teardown_data_path, TestCloudBase
 from tools.bots.cloud.logger import WikiLogger
@@ -70,7 +68,7 @@ class TestLambdaBot(TestCloudBase):
             log_catcher.clear()
             with self.LogBot(log_to_screen=False, log_to_wiki=False) as bot:
                 # logging on enter
-                # log_catcher.check(("LogBot", "INFO", "Start the bot LogBot.")) # todo: kann raus?
+                # log_catcher.check(("LogBot", "INFO", "Start the bot LogBot."))
                 log_catcher.clear()
                 bot.run()
                 # logging on run
