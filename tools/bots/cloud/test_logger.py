@@ -5,7 +5,7 @@ from unittest import TestCase
 
 from testfixtures import compare
 
-from tools.bots.cloud.base import DATA_PATH
+from tools.bots.cloud.base import TMP_WIKI_BOT_PATH
 from tools.bots.cloud.logger import WikiLogger
 from tools.bots.cloud.test_base import teardown_data_path, setup_data_path
 
@@ -14,6 +14,7 @@ class TestWikilogger(TestCase):
     def setUp(self):
         setup_data_path()
         self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), log_to_screen=False)
+        self.logger.__enter__()
 
     def tearDown(self):
         self.logger.tear_down()
@@ -25,15 +26,15 @@ class TestWikilogger(TestCase):
     def test_log_message(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        with open(DATA_PATH + os.sep + "test_bot_INFO_000101000000.log") as info_file:
+        with open(TMP_WIKI_BOT_PATH + os.sep + "test_bot_INFO_000101000000.log") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
 
     def test_tear_down(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        self.assertTrue(os.path.isfile(DATA_PATH + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertTrue(os.path.isfile(TMP_WIKI_BOT_PATH + os.sep + "test_bot_INFO_000101000000.log"))
         self.logger.tear_down()
-        self.assertFalse(os.path.isfile(DATA_PATH + os.sep + "test_bot_INFO_000101000000.log"))
+        self.assertFalse(os.path.isfile(TMP_WIKI_BOT_PATH + os.sep + "test_bot_INFO_000101000000.log"))
 
     def test_format_log_lines_for_wiki(self):
         self.logger.info("info")

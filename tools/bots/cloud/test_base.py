@@ -6,19 +6,27 @@ from unittest import TestCase, mock
 import boto3
 from moto import mock_dynamodb2
 
-from tools.bots.cloud.base import DATA_PATH, get_data_path
+from tools.bots.cloud.base import TMP_WIKI_BOT_PATH, get_data_path
 
 
 def teardown_data_path():
-    if os.path.exists(DATA_PATH):
-        rmtree(DATA_PATH)
+    if os.path.exists(TMP_WIKI_BOT_PATH):
+        rmtree(TMP_WIKI_BOT_PATH)
 
 def setup_data_path():
     teardown_data_path()
-    os.mkdir(DATA_PATH)
+    os.mkdir(TMP_WIKI_BOT_PATH)
 
 
 class TestGetDataPath(TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        pass
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        pass
+
     def setUp(self):
         setup_data_path()
 
@@ -27,13 +35,13 @@ class TestGetDataPath(TestCase):
 
     def test_folder_exist(self):
         with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
-            self.assertEqual(DATA_PATH, get_data_path())
+            self.assertEqual(TMP_WIKI_BOT_PATH, get_data_path())
             mock_mkdir.assert_not_called()
 
     def test_make_folder(self):
-        os.rmdir(DATA_PATH)
+        os.rmdir(TMP_WIKI_BOT_PATH)
         with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
-            self.assertEqual(DATA_PATH, get_data_path())
+            self.assertEqual(TMP_WIKI_BOT_PATH, get_data_path())
             self.assertEqual(1, mock_mkdir.call_count)
 
 
@@ -42,14 +50,14 @@ class TestCloudBase(TestCase):
     def setUp(self) -> None:
         self.dynamodb = boto3.resource('dynamodb', region_name='eu-central-1')
         self._create_manage_table()
-        self.manage_table = self.dynamodb.Table('wiki_bots_manage_table_tst')
+        self.manage_table = self.dynamodb.Table('wiki_bots_manage_table')
 
     def tearDown(self) -> None:
         self.manage_table.delete()
 
     def _create_manage_table(self):
         self.dynamodb.create_table(
-            TableName='wiki_bots_manage_table_tst',
+            TableName='wiki_bots_manage_table',
             KeySchema=[
                 {
                     'AttributeName': 'id',

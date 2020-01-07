@@ -348,10 +348,6 @@ class CanonicalBot(OneTimeBot, ABC):
                                  "The broken data and a backup of the old will be keept.")
         OneTimeBot.__exit__(self, exc_type, exc_val, exc_tb)
 
-    @abstractmethod
-    def task(self) -> bool:
-        pass
-
     def create_timestamp_for_search(self, days_in_past=1) -> datetime:
         start_of_search: datetime = self.timestamp.last_run
         if self.last_run_successful:

@@ -1,9 +1,9 @@
 import os
 
-DATA_PATH: str = "/tmp/.wiki_bot"
+TMP_WIKI_BOT_PATH: str = "/tmp/.wiki_bot"
 
 
 def get_data_path() -> str:
-    if not os.path.exists(DATA_PATH):
-        os.mkdir(DATA_PATH)
-    return DATA_PATH
+    if not os.path.exists(TMP_WIKI_BOT_PATH):
+        os.mkdir(TMP_WIKI_BOT_PATH)
+    return TMP_WIKI_BOT_PATH

@@ -9,8 +9,6 @@ from tools.bots.cloud.status import Status
 from tools.bots.cloud.status_manager import StatusManager
 from tools.bots.cloud.test_base import TestCloudBase
 
-StatusManager.MANAGE_TABLE = "wiki_bots_manage_table_tst"
-
 
 class TestStatusManager(TestCloudBase):
     def test_init(self):
