@@ -8,8 +8,7 @@ from tools.bots.cloud.status_manager import StatusManager
 
 
 class LambdaBot(ABC):
-    def __init__(self, wiki: Site = None, debug: bool = True,
-                 log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
