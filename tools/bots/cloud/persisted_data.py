@@ -9,7 +9,7 @@ class PersistedData(Mapping):
     def __init__(self, bot_name: str):
         self._data: Dict = {}
         self.bot_name: str = bot_name
-        self.file_name: str = self.data_folder + os.sep + bot_name + ".data.json"
+        self.key_name: str = bot_name + ".data.json"
 
     def __getitem__(self, item) -> Any:
         return self._data[item]
@@ -34,19 +34,19 @@ class PersistedData(Mapping):
 
     def dump(self, success: bool = True):
         if success:
-            with open(self.file_name, mode="w") as json_file:
+            with open(self.key_name, mode="w") as json_file:
                 json.dump(self._data, json_file, indent=2)
-            if os.path.isfile(self.file_name + ".deprecated"):
-                os.remove(self.file_name + ".deprecated")
+            if os.path.isfile(self.key_name + ".deprecated"):
+                os.remove(self.key_name + ".deprecated")
         else:
-            with open(self.file_name + ".broken", mode="w") as json_file:
+            with open(self.key_name + ".broken", mode="w") as json_file:
                 json.dump(self._data, json_file, indent=2)
 
     def load(self):
-        if os.path.exists(self.file_name):
-            with open(self.file_name, mode="r") as json_file:
+        if os.path.exists(self.key_name):
+            with open(self.key_name, mode="r") as json_file:
                 self._data = json.load(json_file)
-            os.rename(self.file_name, self.file_name + ".deprecated")
+            os.rename(self.key_name, self.key_name + ".deprecated")
         else:
             raise BotException("No data to load.")
 
@@ -55,7 +55,7 @@ class PersistedData(Mapping):
 
     def _recover_data(self, type_of_data: str):
         try:
-            with open(f"{self.file_name}.{type_of_data}", mode="r") as json_file:
+            with open(f"{self.key_name}.{type_of_data}", mode="r") as json_file:
                 self.assign_dict(json.load(json_file))
         except FileNotFoundError:
             raise BotException(f"There is no {type_of_data} data to load.")
