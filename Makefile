@@ -2,11 +2,15 @@ clean-pyc :
 	echo "######## CLEAN PY CACHE ########"
 	find . | grep -E "__pycache__" | xargs rm -rf
 
-pip3 :
+update_pip_tool :
+	echo "########## UPDATE PIP ##########"
+	pip install --upgrade pip
+
+pip3 : update_pip_tool
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt
 
-update_pip3 :
+update_pip3 : update_pip_tool
 	echo "##### UPDATE REQUIREMENTS ######"
 	pip install pip-tools -U
 	pip-compile --output-file requirements.txt requirements.in
