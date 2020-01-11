@@ -1,3 +1,7 @@
+import json
+
+from testfixtures import compare
+
 from tools.bots import BotException
 from tools.bots.cloud.persisted_data import PersistedData
 from tools.bots.cloud.test_base import TestCloudBase
@@ -7,14 +11,27 @@ JSON_TEST_EXTEND = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
 DATA_TEST = {"a": [1, 2]}
 DATA_TEST_EXTEND = {"a": [1, 2], "b": 1}
 
+BUCKET_NAME = "wiki_bots_persisted_data"
+
 class TestPersistedData(TestCloudBase):
     def _make_json_file(self, filename: str = "TestBot.data.json", data: str = JSON_TEST):
-        with open(self.data_path + os.sep + filename, mode="w") as data_file:
-            data_file.write(data)
+        self.s3_client.put_object(Bucket=BUCKET_NAME, Key=filename, Body=data.encode("utf-8"))
 
     def setUp(self):
         super().setUp()
         self.data = PersistedData("TestBot")
+
+    def test_load_from_bucket(self):
+        self._make_json_file()
+        self.data.load()
+        compare(1, self.data["a"][0])
+        deprecated_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json.deprecated")
+            ["Body"].read().decode("utf-8"))
+        compare(1, deprecated_data["a"][0])
+
+    def test_load_from_bucket_no_data(self):
+        with self.assertRaises(BotException):
+            self.data.load()
 
     def test_delete_key(self):
         self.data["a"] = 1
@@ -73,12 +90,6 @@ class TestPersistedData(TestCloudBase):
         with self.assertRaises(BotException):
             self.data.load()
         self.assertFalse(self.data.keys())
-
-    def test_flag_old_file_as_deprecated(self):
-        self._make_json_file()
-        self.data.load()
-        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
-        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
 
     def test_delete_old_data_file(self):
         self._make_json_file()
