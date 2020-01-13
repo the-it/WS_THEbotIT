@@ -59,7 +59,7 @@ class TestCloudBase(TestCase):
 
     def tearDown(self) -> None:
         self.manage_table.delete()
-        self.data_bucket.objects.all().delete()
+        self.data_bucket.objects.all().delete()  # type: ignore
         self.data_bucket.delete()
 
     def _create_data_bucket(self) -> None:

@@ -1,3 +1,4 @@
+# pylint: disable=protected-access,no-member,no-self-use
 import json
 
 from testfixtures import compare
@@ -21,12 +22,12 @@ class TestPersistedData(TestCloudBase):
         super().setUp()
         self.data = PersistedData("TestBot")
 
-    def test_load_from_bucket(self):
+    def test_load_from_bucket_copy_to_deprecated(self):
         self._make_json_file()
         self.data.load()
         compare(1, self.data["a"][0])
         deprecated_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json.deprecated")
-            ["Body"].read().decode("utf-8"))
+                                     ["Body"].read().decode("utf-8"))
         compare(1, deprecated_data["a"][0])
 
     def test_load_from_bucket_no_data(self):
@@ -62,26 +63,26 @@ class TestPersistedData(TestCloudBase):
             self.data.assign_dict(1)
 
     def test_dump(self):
+        self.data["tada"] = "tada"
         self.data.dump()
-        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
+        data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json")
+                          ["Body"].read().decode("utf-8"))
+        compare("tada", data["tada"])
 
-    def test_dump_value_is_correct(self):
-        self.data.assign_dict(DATA_TEST)
-        self.data.dump()
-        with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
-            self.assertEqual(JSON_TEST, file.read())
-
-    def test_dump_different_keys(self):
-        self.data[1] = 1
-        self.data["2"] = "2"
-        self.data.dump()
-
-    def test_load_data_from_file(self):
+    def test_dump_unsucessful(self):
         self._make_json_file()
         self.data.load()
-        self.assertEqual([1, 2], self.data["a"])
+        del self.data["a"]
+        self.data["tada"] = "tada"
+        self.data.dump(success=False)
+        deprecated_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json.deprecated")
+                                     ["Body"].read().decode("utf-8"))
+        compare([1, 2], deprecated_data["a"])
+        broken_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json.broken")
+                                 ["Body"].read().decode("utf-8"))
+        compare("tada", broken_data["tada"])
 
-    def test_load_data_from_old_file(self):
+    def test_load_data_from_file_no_format(self):
         self._make_json_file(data="{\"a\": [1, 2]}")
         self.data.load()
         self.assertEqual([1, 2], self.data["a"])
@@ -90,46 +91,6 @@ class TestPersistedData(TestCloudBase):
         with self.assertRaises(BotException):
             self.data.load()
         self.assertFalse(self.data.keys())
-
-    def test_delete_old_data_file(self):
-        self._make_json_file()
-        self.data.load()
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
-            self.assertDictEqual(DATA_TEST, json.load(json_file))
-        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
-        self.data["b"] = 1
-        self.data.dump(True)
-        with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as json_file:
-            self.assertDictEqual(DATA_TEST_EXTEND, json.load(json_file))
-        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
-
-    def test_flag_old_file_as_deprecated_keep_broken_file(self):
-        self._make_json_file()
-        self.data.load()
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
-            self.assertDictEqual(DATA_TEST, json.load(json_file))
-        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
-        self.data["b"] = 1
-        self.data.dump(False)
-        self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
-            self.assertDictEqual(DATA_TEST, json.load(json_file))
-        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
-            self.assertDictEqual(DATA_TEST_EXTEND, json.load(json_file))
-
-    def test_flag_data_as_broken(self):
-        self._make_json_file()
-        self.data.load()
-        self.data["b"] = 2
-        self.data.dump(success=False)
-        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
-        self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.broken"))
-        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
-            json_dict = json.load(json_file)
-        self.assertEqual(2, json_dict["b"])
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
-            json_dict = json.load(json_file)
-        self.assertEqual(["a"], list(json_dict.keys()))
 
     def test_for_boolean_value(self):
         self.data.assign_dict(dict())
