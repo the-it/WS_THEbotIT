@@ -69,13 +69,6 @@ class PersistedData(Mapping):
     def update(self, dict_to_update: Dict):
         self._data.update(dict_to_update)
 
-    def _recover_data(self, type_of_data: str):
-        try:
-            with open(f"{self.key_name}.{type_of_data}", mode="r") as json_file:
-                self.assign_dict(json.load(json_file))
-        except FileNotFoundError:
-            raise BotException(f"There is no {type_of_data} data to load.")
-
     def get_broken(self):
         self._load_from_bucket(key_appendix=".broken")
 
