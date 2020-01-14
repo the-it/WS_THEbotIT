@@ -1,0 +1,18 @@
+-c requirements.txt
+
+bandit
+beautifulsoup4
+boto3-stubs[essential]
+codecov
+coverage
+ddt
+flake8
+moto
+mypy
+nose
+patool
+pyfiglet
+pylint
+requests-mock
+safety
+testfixtures

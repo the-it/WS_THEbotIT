@@ -10,11 +10,17 @@ pip3 : update_pip_tool
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt
 
+pip3-dev : update_pip_tool
+	echo "##### INSTALL REQUIREMENTS #####"
+	pip3 install -r requirements.txt -r requirements-dev.txt
+
 update_pip3 : update_pip_tool
 	echo "##### UPDATE REQUIREMENTS ######"
 	pip install pip-tools -U
 	pip-compile --output-file requirements.txt requirements.in
-	pip-sync
+	pip-compile --output-file requirements-dev.txt requirements-dev.in
+	pip-sync requirements.txt requirements-dev.txt
+
 
 cloc :
 	echo "########## COUNT LOC ###########"
