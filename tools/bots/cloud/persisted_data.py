@@ -1,5 +1,6 @@
-from collections.abc import Mapping
 import json
+from collections.abc import Mapping
+from datetime import datetime
 from typing import Dict, Any, Iterator
 
 import boto3
@@ -42,17 +43,19 @@ class PersistedData(Mapping):
         if success:
             self.s3_client.put_object(Bucket=self._bucket_name,
                                       Key=self.key_name,
-                                      Body=json.dumps(self._data, indent=2).encode("utf-8"))
+                                      Body=json.dumps({"time": str(datetime.now()), "data": self._data}, indent=2)
+                                      .encode("utf-8"))
         else:
             self.s3_client.put_object(Bucket=self._bucket_name,
                                       Key=self.key_name + ".broken",
-                                      Body=json.dumps(self._data, indent=2).encode("utf-8"))
+                                      Body=json.dumps({"time": str(datetime.now()), "data": self._data}, indent=2)
+                                      .encode("utf-8"))
 
     def _load_from_bucket(self, key_appendix: str = ""):
         try:
             self._data = json.loads(
                 self.s3_client.get_object(Bucket=self._bucket_name, Key=self.key_name + key_appendix)
-                ["Body"].read().decode("utf-8"))  # type: ignore
+                ["Body"].read().decode("utf-8"))["data"]  # type: ignore
         except exceptions.ClientError as exception:
             if exception.response['Error']['Code'] == 'NoSuchKey':
                 raise BotException(f"The data for {self._bucket_name + key_appendix} doesn't exists")

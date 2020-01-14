@@ -1,16 +1,18 @@
 # pylint: disable=protected-access,no-member,no-self-use
 import json
 
+from freezegun import freeze_time
 from testfixtures import compare
 
 from tools.bots import BotException
 from tools.bots.cloud.persisted_data import PersistedData
 from tools.bots.cloud.test_base import TestCloudBase
 
-JSON_TEST = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
-JSON_TEST_EXTEND = "{\n  \"a\": [\n    1,\n    2\n  ],\n  \"b\": 1\n}"
-DATA_TEST = {"a": [1, 2]}
-DATA_TEST_EXTEND = {"a": [1, 2], "b": 1}
+JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
+JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \
+                   '\n  "time": "2020-01-14 00:00:00"\n}'
+DATA_TEST = {'data': {'a': [1, 2]}, 'time': '2020-01-14 00:00:00'}
+DATA_TEST_EXTEND = {'data': {'a': [1, 2], 'b': 2}, 'time': '2020-01-14 00:00:00'}
 
 BUCKET_NAME = "wiki_bots_persisted_data"
 
@@ -28,7 +30,7 @@ class TestPersistedData(TestCloudBase):
         compare(1, self.data["a"][0])
         deprecated_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json.deprecated")
                                      ["Body"].read().decode("utf-8"))
-        compare(1, deprecated_data["a"][0])
+        compare(1, deprecated_data["data"]["a"][0])
 
     def test_load_from_bucket_no_data(self):
         with self.assertRaises(BotException):
@@ -67,7 +69,7 @@ class TestPersistedData(TestCloudBase):
         self.data.dump()
         data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json")
                           ["Body"].read().decode("utf-8"))
-        compare("tada", data["tada"])
+        compare("tada", data["data"]["tada"])
 
     def test_dump_unsucessful(self):
         self._make_json_file()
@@ -77,13 +79,13 @@ class TestPersistedData(TestCloudBase):
         self.data.dump(success=False)
         deprecated_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json.deprecated")
                                      ["Body"].read().decode("utf-8"))
-        compare([1, 2], deprecated_data["a"])
+        compare([1, 2], deprecated_data["data"]["a"])
         broken_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json.broken")
                                  ["Body"].read().decode("utf-8"))
-        compare("tada", broken_data["tada"])
+        compare("tada", broken_data["data"]["tada"])
 
     def test_load_data_from_file_no_format(self):
-        self._make_json_file(data="{\"a\": [1, 2]}")
+        self._make_json_file(data='{"data":{"a":[1,2]},"time":"2020-01-14 00:00:00"}')
         self.data.load()
         self.assertEqual([1, 2], self.data["a"])
 
@@ -129,3 +131,11 @@ class TestPersistedData(TestCloudBase):
         self._make_json_file()
         with self.assertRaises(BotException):
             self.data.get_deprecated()
+
+    @freeze_time("2020-01-14")
+    def test_persitence_date(self):
+        self.data["data"] = "present"
+        self.data.dump()
+        data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json")
+                          ["Body"].read().decode("utf-8"))
+        compare("2020-01-14 00:00:00", data["time"])
