@@ -22,7 +22,7 @@ class ReScanner(CanonicalBot):
     def __init__(self, wiki: pywikibot.Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(minutes=30)
+        self.timeout = timedelta(hours=1)
         self.tasks: List[Callable] = [KSCHTask, DEALTask, DEWPTask, SCANTask]
         if self.debug:
             self.tasks = self.tasks + []
@@ -95,8 +95,7 @@ class ReScanner(CanonicalBot):
 
     def _save_re_page(self, re_page: RePage, list_of_done_tasks: List[str]):
         if not self.debug:
-            save_message = f"ReScanner hat folgende Aufgaben bearbeitet: " \
-                f"{', '.join(list_of_done_tasks)}"
+            save_message = f"ReScanner hat folgende Aufgaben bearbeitet: {', '.join(list_of_done_tasks)}"
             self.logger.debug(save_message)
             try:
                 re_page.save(save_message)
@@ -115,8 +114,7 @@ class ReScanner(CanonicalBot):
                     task_name = task.name
             else:
                 if result["changed"]:
-                    error_message = f"Error in {task.name}/{lemma}, " \
-                                    f"but altered the page ... critical"
+                    error_message = f"Error in {task.name}/{lemma}, but altered the page ... critical"
                     self.logger.critical(error_message)
                     raise RuntimeError(error_message)
                 self.logger.error(f"Error in {task.name}/{lemma}, no data where altered.")
