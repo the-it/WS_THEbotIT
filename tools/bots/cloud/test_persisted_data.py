@@ -6,20 +6,10 @@ from testfixtures import compare
 
 from tools.bots import BotException
 from tools.bots.cloud.persisted_data import PersistedData
-from tools.bots.cloud.test_base import TestCloudBase
+from tools.bots.cloud.test_base import TestCloudBase, BUCKET_NAME
 
-JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
-JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \
-                   '\n  "time": "2020-01-14 00:00:00"\n}'
-DATA_TEST = {'data': {'a': [1, 2]}, 'time': '2020-01-14 00:00:00'}
-DATA_TEST_EXTEND = {'data': {'a': [1, 2], 'b': 2}, 'time': '2020-01-14 00:00:00'}
-
-BUCKET_NAME = "wiki_bots_persisted_data"
 
 class TestPersistedData(TestCloudBase):
-    def _make_json_file(self, filename: str = "TestBot.data.json", data: str = JSON_TEST):
-        self.s3_client.put_object(Bucket=BUCKET_NAME, Key=filename, Body=data.encode("utf-8"))
-
     def setUp(self):
         super().setUp()
         self.data = PersistedData("TestBot")
