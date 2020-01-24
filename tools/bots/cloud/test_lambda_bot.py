@@ -1,13 +1,15 @@
 # pylint: disable=protected-access,no-member,no-self-use
 import time
-from datetime import timedelta
+from datetime import timedelta, datetime
 from unittest import mock
 
+from freezegun import freeze_time
 from testfixtures import LogCapture, compare
 
 from tools.bots.cloud.lambda_bot import LambdaBot
-from tools.bots.cloud.test_base import setup_data_path, teardown_data_path, TestCloudBase
 from tools.bots.cloud.logger import WikiLogger
+from tools.bots.cloud.status_manager import StatusManager
+from tools.bots.cloud.test_base import setup_data_path, teardown_data_path, TestCloudBase
 
 
 class TestLambdaBot(TestCloudBase):
@@ -24,7 +26,7 @@ class TestLambdaBot(TestCloudBase):
 
     class MinimalBot(LambdaBot):
         def task(self):
-            pass
+            return True
 
     def test_get_bot_name(self):
         self.assertEqual("MinimalBot", self.MinimalBot.get_bot_name())
@@ -134,3 +136,111 @@ class TestLambdaBot(TestCloudBase):
                 bot.run()
                 log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
                 self.assertFalse(bot.success)
+
+    class AddDataBot(LambdaBot):
+        def task(self):
+            self.data["b"] = 2
+            return True
+
+    def test_load_and_store_data(self):
+        self._make_json_file(filename="AddDataBot.data.json")
+        StatusManager("AddDataBot").finish_run(success=True)
+        with self.AddDataBot(log_to_screen=False, log_to_wiki=False) as bot:
+            compare({"a": [1, 2]}, bot.data._data)
+            bot.run()
+        with self.AddDataBot(log_to_screen=False, log_to_wiki=False) as bot:
+            compare({"a": [1, 2], "b": 2}, bot.data._data)
+
+    def test_last_run_failure(self):
+        self._make_json_file(filename="AddDataBot.data.json")
+        StatusManager("AddDataBot").finish_run(success=False)
+        with self.AddDataBot(log_to_screen=False, log_to_wiki=False) as bot:
+            compare({}, bot.data._data)
+
+    class DataOutdatedBot(LambdaBot):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.new_data_model = datetime(2001, 1, 1)
+
+        def task(self):
+            return True
+
+    @freeze_time("2000-12-31")
+    def test_no_load_model_outdated(self):
+        self._make_json_file(filename="DataOutdatedBot.data.json")
+        StatusManager("DataOutdatedBot").finish_run(success=True)
+        with LogCapture() as log_catcher:
+            with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
+                self.assertIn("DataOutdatedBot WARNING\n  The data is thrown away. It is out of date",
+                              str(log_catcher))
+                self.assertDictEqual({}, bot.data._data)
+                bot.run()
+
+    class DataThrowException(LambdaBot):
+        def task(self):
+            raise Exception
+
+    def test_keep_broken_data(self):
+        self._make_json_file(filename="DataThrowException.data.json")
+        StatusManager("DataThrowException").finish_run(success=True)
+        with LogCapture() as log_catcher:
+            with mock.patch("tools.bots.cloud.lambda_bot.PersistedData.dump") as mock_dump:
+                with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
+                    log_catcher.clear()
+                    bot.run()
+                mock_dump.assert_called_once_with(success=False)
+                self.assertIn("DataThrowException CRITICAL\n"
+                              "  There was an error in the general procedure. "
+                              "The broken data and a backup of the old will be keept.",
+                              str(log_catcher))
+
+    @freeze_time("2001-01-01")
+    def test_set_timestamp_for_searcher(self):
+        self._make_json_file(filename="MinimalBot.data.json")
+        StatusManager("MinimalBot").finish_run(success=True)
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertEqual(datetime(2000, 12, 31), bot.create_timestamp_for_search(offset=timedelta(days=1)))
+
+    def test_set_timestamp_for_searcher_no_successful_run(self):
+        self.create_timestamp("MinimalCanonicalBot", success=False)
+        self.create_data("MinimalCanonicalBot")
+        with mock.patch("tools.bots.pi.PersistedTimestamp.start_of_run",
+                        mock.PropertyMock(return_value=datetime(2001, 1, 1))):
+            with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
+                self.assertEqual(datetime(2000, 1, 1), bot.create_timestamp_for_search(10))
+
+    def test_last_run_successful_true(self):
+        self.create_timestamp("MinimalCanonicalBot", success=True)
+        self.create_data("MinimalCanonicalBot")
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertTrue(bot.last_run_successful)
+
+    def test_last_run_successful_false_1(self):
+        self.create_timestamp("MinimalCanonicalBot", success=False)
+        self.create_data("MinimalCanonicalBot")
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertFalse(bot.last_run_successful)
+
+    def test_last_run_successful_false_2(self):
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertFalse(bot.last_run_successful)
+
+    def test_data_outdated(self):
+        self.create_timestamp("DataOutdatedBot", date=datetime(2000, 12, 31))
+        self.create_data("DataOutdatedBot")
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertTrue(bot.data_outdated())
+            self.assertDictEqual({}, bot.data._data)
+
+    def test_data_outdated_not_outdated_1(self):
+        self.create_timestamp("DataOutdatedBot", date=datetime(2001, 12, 31))
+        self.create_data("DataOutdatedBot")
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertFalse(bot.data_outdated())
+            self.assertDictEqual({"a": 1}, bot.data._data)
+
+    def test_data_outdated_not_outdated_2(self):
+        self.create_data("DataOutdatedBot")
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertTrue(bot.data_outdated())
+            self.assertDictEqual({}, bot.data._data)

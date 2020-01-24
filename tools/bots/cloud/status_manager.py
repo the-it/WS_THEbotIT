@@ -1,12 +1,11 @@
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 import boto3
 from boto3.dynamodb.conditions import Key
 from mypy_boto3 import dynamodb
 
 from tools.bots.cloud.status import Status
-
 
 MANAGE_TABLE = "wiki_bots_manage_table"
 
@@ -24,8 +23,14 @@ class StatusManager:
     def last_runs(self) -> List[Status]:
         if not self._last_runs:
             raw_list = self._manage_table.scan(FilterExpression=Key('bot_name').eq(self.bot_name))  # type: ignore
-            self._last_runs = [Status.from_dict(status_dict) for status_dict in raw_list["Items"][:-1][::-1]]
+            self._last_runs = [Status.from_dict(status_dict) for status_dict in raw_list["Items"][:-1][::-1] if status_dict["id"] != self.current_run.id]
         return self._last_runs
+
+    @property
+    def last_run(self) -> Optional[Status]:
+        if self.last_runs:
+            return self.last_runs[0]
+        return None
 
     @property
     def last_finished_runs(self) -> List[Status]:
@@ -34,6 +39,12 @@ class StatusManager:
     @property
     def last_successful_runs(self) -> List[Status]:
         return [status for status in self.last_runs if status.success]
+
+    @property
+    def last_successful_run(self) -> Optional[Status]:
+        if self.last_successful_runs:
+            return self.last_successful_runs[0]
+        return None
 
     def finish_run(self, success: bool = False):
         self.current_run.finish = True

@@ -58,7 +58,7 @@ class PersistedData(Mapping):
                 ["Body"].read().decode("utf-8"))["data"]  # type: ignore
         except exceptions.ClientError as exception:
             if exception.response['Error']['Code'] == 'NoSuchKey':
-                raise BotException(f"The data for {self._bucket_name + key_appendix} doesn't exists")
+                raise BotException(f"The data for {self.key_name + key_appendix} doesn't exists")
             raise
 
     def _copy_to_deprecated(self):

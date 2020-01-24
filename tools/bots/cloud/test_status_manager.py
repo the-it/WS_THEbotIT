@@ -45,6 +45,13 @@ class TestStatusManager(TestCloudBase):
         compare(2, status_manager_last_runs.last_runs[0].id)
         compare(0, status_manager_last_runs.last_runs[1].id)
 
+    def test_get_last_run(self):
+        no_run_status = StatusManager("TestBot")
+        compare(None, no_run_status.last_run)
+        one_run_status = StatusManager("TestBot")
+        compare(None, no_run_status.last_run)
+        compare(0, one_run_status.last_run.id)
+
     def test_get_last_finished_runs(self):
         manager = StatusManager("TestBot")
         manager.finish_run()
