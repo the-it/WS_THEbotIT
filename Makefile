@@ -1,6 +1,18 @@
+# tools
+
 clean-pyc :
 	echo "######## CLEAN PY CACHE ########"
 	find . | grep -E "__pycache__" | xargs rm -rf
+
+cloc :
+	echo "########## COUNT LOC ###########"
+	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
+
+gource :
+	echo "############ GOURCE ############"
+	gource -s 0.1 .
+
+# dependency management
 
 install_pip :
 	echo "########## UPDATE PIP ##########"
@@ -22,10 +34,7 @@ update_pip3 : install_pip
 	pip-compile --output-file requirements-dev.txt requirements-dev.in
 	pip-sync requirements.txt requirements-dev.txt
 
-
-cloc :
-	echo "########## COUNT LOC ###########"
-	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
+# quality
 
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
@@ -33,15 +42,11 @@ pycodestyle :
 
 pylint :
 	echo "############ PYLINT ############"
-	pylint -j4 --rcfile .pylintrc scripts tools
+	pylint -j4 --rcfile .pylintrc scripts tools infrastructure
 
 bandit :
 	echo "############ BANDIT ############"
-	bandit -r scripts tools
-
-gource :
-	echo "############ GOURCE ############"
-	gource -s 0.1 .
+	bandit -r scripts tools infrastructure
 
 mypy :
 	echo "############# MYPY #############"
@@ -54,6 +59,8 @@ safety :
 flake8 :
 	echo "############ FLAKE8 ############"
 	flake8
+
+# testing and coverage
 
 unittest :
 	echo "########### UNITTEST ###########"
@@ -86,6 +93,20 @@ clean-coverage :
 codecov :
 	echo "########### CODECOV ############"
 	codecov
+
+# infrastructure
+
+aws_deploy :
+	echo "######## AWS DEPLOY #########"
+	cdk bootstrap
+	cdk deploy
+
+aws_diff :
+	echo "######### AWS DIFF ##########"
+	cdk bootstrap
+	cdk diff
+
+# phony targets
 
 clean : clean-pyc clean-coverage
 
