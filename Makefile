@@ -2,14 +2,26 @@ clean-pyc :
 	echo "######## CLEAN PY CACHE ########"
 	find . | grep -E "__pycache__" | xargs rm -rf
 
-pip3 :
+install_pip :
+	echo "########## UPDATE PIP ##########"
+	pip install --upgrade pip
+
+pip3 : install_pip
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt
 
-update_pip3 :
+pip3-dev : install_pip
+	echo "##### INSTALL REQUIREMENTS #####"
+	pip3 install -r requirements.txt -r requirements-dev.txt
+
+update_pip3 : install_pip
 	echo "##### UPDATE REQUIREMENTS ######"
-	pip-compile requirements.in
-	pip-sync
+	pip install pip-tools -U
+	rm requirements.txt requirements-dev.txt
+	pip-compile --output-file requirements.txt requirements.in
+	pip-compile --output-file requirements-dev.txt requirements-dev.in
+	pip-sync requirements.txt requirements-dev.txt
+
 
 cloc :
 	echo "########## COUNT LOC ###########"
@@ -77,7 +89,7 @@ codecov :
 
 clean : clean-pyc clean-coverage
 
-pre-commit : pip3 quality integrationtest
+pre-commit : update_pip3 quality integrationtest
 
 quality : bandit flake8 pycodestyle pylint mypy
 
