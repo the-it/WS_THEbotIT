@@ -13,13 +13,13 @@ class LambdaBot(ABC):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
-        self.status_manager: StatusManager = StatusManager(bot_name=self.bot_name)
+        self.status: StatusManager = StatusManager(bot_name=self.bot_name)
         self.data: PersistedData = PersistedData(bot_name=self.bot_name)
         self.wiki: Page = wiki
         self.debug: bool = debug
         self.timeout: timedelta = timedelta(days=1)
         self.logger: WikiLogger = WikiLogger(self.bot_name,
-                                             self.status_manager.current_run.start_time,
+                                             self.status.current_run.start_time,
                                              log_to_screen=self.log_to_screen)
         self.new_data_model = datetime.min
 
@@ -27,7 +27,20 @@ class LambdaBot(ABC):
         # self.timestamp.__enter__()
         self.logger.__enter__()
         self.logger.info(f"Start the bot {self.bot_name}.")
-        if not self.status_manager.last_run or not self.status_manager.last_run.success:
+        self._load_data()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self._dump_data()
+        self.status.finish_run(self.success)
+        self.logger.info(f"Finish bot {self.bot_name} in "
+                         f"{datetime.now() - self.status.current_run.start_time}.")
+        if self.log_to_wiki:
+            self.send_log_to_wiki()
+        self.logger.__exit__(exc_type, exc_val, exc_tb)
+
+    def _load_data(self):
+        if not self.status.last_run or not self.status.last_run.success:
             self.data.assign_dict({})
             self.logger.warning("The last run wasn\'t successful. The data is thrown away.")
         elif self.data_outdated():
@@ -35,21 +48,14 @@ class LambdaBot(ABC):
             self.logger.warning("The data is thrown away. It is out of date")
         else:
             self.data.load()
-        return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def _dump_data(self):
         if self.success:
             self.data.dump(success=True)
         else:
             self.data.dump(success=False)
             self.logger.critical("There was an error in the general procedure. "
                                  "The broken data and a backup of the old will be keept.")
-        self.status_manager.finish_run(self.success)
-        self.logger.info(f"Finish bot {self.bot_name} in "
-                         f"{datetime.now() - self.status_manager.current_run.start_time}.")
-        if self.log_to_wiki:
-            self.send_log_to_wiki()
-        self.logger.__exit__(exc_type, exc_val, exc_tb)
 
     @abstractmethod
     def task(self) -> bool:
@@ -74,7 +80,7 @@ class LambdaBot(ABC):
     def _watchdog(self) -> bool:
         time_over: bool = False
         if self.timeout:
-            diff = datetime.now() - self.status_manager.current_run.start_time
+            diff = datetime.now() - self.status.current_run.start_time
             if diff > self.timeout:
                 self.logger.warning("Bot finished by timeout.")
                 time_over = True
@@ -94,6 +100,13 @@ class LambdaBot(ABC):
 
     def data_outdated(self) -> bool:
         outdated = False
-        if self.status_manager.last_successful_run.start_time < self.new_data_model:
+        if not self.status.last_successful_run:
+            outdated = True
+        elif self.status.last_successful_run.start_time < self.new_data_model:
             outdated = True
         return outdated
+
+    def create_timestamp_for_search(self, offset: timedelta = timedelta(seconds=0)) -> datetime:
+        if self.status.last_run and self.status.last_run.success:
+            return self.status.last_run.start_time - offset
+        return datetime.min

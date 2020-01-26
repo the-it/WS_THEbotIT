@@ -23,7 +23,10 @@ class StatusManager:
     def last_runs(self) -> List[Status]:
         if not self._last_runs:
             raw_list = self._manage_table.scan(FilterExpression=Key('bot_name').eq(self.bot_name))  # type: ignore
-            self._last_runs = [Status.from_dict(status_dict) for status_dict in raw_list["Items"][:-1][::-1] if status_dict["id"] != self.current_run.id]
+            self._last_runs = [Status.from_dict(status_dict)
+                               for status_dict
+                               in raw_list["Items"][:-1][::-1]
+                               if status_dict["id"] != self.current_run.id]
         return self._last_runs
 
     @property

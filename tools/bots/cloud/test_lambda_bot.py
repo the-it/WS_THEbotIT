@@ -176,6 +176,21 @@ class TestLambdaBot(TestCloudBase):
                 self.assertDictEqual({}, bot.data._data)
                 bot.run()
 
+    @freeze_time("2001-12-31")
+    def test_data_outdated_not_outdated_1(self):
+        self._make_json_file(filename="DataOutdatedBot.data.json")
+        StatusManager("DataOutdatedBot").finish_run(success=True)
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertFalse(bot.data_outdated())
+            self.assertDictEqual({"a": [1, 2]}, bot.data._data)
+
+    @freeze_time("2001-12-31")
+    def test_data_outdated_not_outdated_2(self):
+        self._make_json_file(filename="DataOutdatedBot.data.json")
+        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertTrue(bot.data_outdated())
+            self.assertDictEqual({}, bot.data._data)
+
     class DataThrowException(LambdaBot):
         def task(self):
             raise Exception
@@ -202,45 +217,23 @@ class TestLambdaBot(TestCloudBase):
             self.assertEqual(datetime(2000, 12, 31), bot.create_timestamp_for_search(offset=timedelta(days=1)))
 
     def test_set_timestamp_for_searcher_no_successful_run(self):
-        self.create_timestamp("MinimalCanonicalBot", success=False)
-        self.create_data("MinimalCanonicalBot")
-        with mock.patch("tools.bots.pi.PersistedTimestamp.start_of_run",
-                        mock.PropertyMock(return_value=datetime(2001, 1, 1))):
-            with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
-                self.assertEqual(datetime(2000, 1, 1), bot.create_timestamp_for_search(10))
+        self._make_json_file(filename="MinimalBot.data.json")
+        StatusManager("MinimalBot").finish_run(success=False)
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertEqual(datetime(1, 1, 1), bot.create_timestamp_for_search(offset=timedelta(days=1)))
 
     def test_last_run_successful_true(self):
-        self.create_timestamp("MinimalCanonicalBot", success=True)
-        self.create_data("MinimalCanonicalBot")
+        self._make_json_file(filename="MinimalBot.data.json")
+        StatusManager("MinimalBot").finish_run(success=True)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertTrue(bot.last_run_successful)
+            self.assertTrue(bot.status.last_run.success)
 
     def test_last_run_successful_false_1(self):
-        self.create_timestamp("MinimalCanonicalBot", success=False)
-        self.create_data("MinimalCanonicalBot")
+        self._make_json_file(filename="MinimalBot.data.json")
+        StatusManager("MinimalBot").finish_run(success=False)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertFalse(bot.last_run_successful)
+            self.assertFalse(bot.status.last_run.success)
 
     def test_last_run_successful_false_2(self):
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertFalse(bot.last_run_successful)
-
-    def test_data_outdated(self):
-        self.create_timestamp("DataOutdatedBot", date=datetime(2000, 12, 31))
-        self.create_data("DataOutdatedBot")
-        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertTrue(bot.data_outdated())
-            self.assertDictEqual({}, bot.data._data)
-
-    def test_data_outdated_not_outdated_1(self):
-        self.create_timestamp("DataOutdatedBot", date=datetime(2001, 12, 31))
-        self.create_data("DataOutdatedBot")
-        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertFalse(bot.data_outdated())
-            self.assertDictEqual({"a": 1}, bot.data._data)
-
-    def test_data_outdated_not_outdated_2(self):
-        self.create_data("DataOutdatedBot")
-        with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertTrue(bot.data_outdated())
-            self.assertDictEqual({}, bot.data._data)
+            compare(None, bot.status.last_run)
