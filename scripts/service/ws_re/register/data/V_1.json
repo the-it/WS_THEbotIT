@@ -5532,7 +5532,9 @@
     "lemma": "Diabas",
     "previous": "Dia 17",
     "next": "Diabate",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Diyala (Fluss)",
+    "wd_link": "d:Q304413",
     "chapters": [
       {
         "start": 300,
@@ -22346,11 +22348,12 @@
     "lemma": "Doanas",
     "previous": "Dmois",
     "next": "Doara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1248,
         "end": 1249,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -22358,11 +22361,12 @@
     "lemma": "Doara",
     "previous": "Doanas",
     "next": "Doasa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1249,
         "end": 1249,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -22370,40 +22374,67 @@
     "lemma": "Doasa",
     "previous": "Doara",
     "next": "Doberes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1249,
         "end": 1249,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Doberes",
     "previous": "Doasa",
-    "next": "Dochi",
+    "next": "Doberos",
     "chapters": [
       {
         "start": 1249,
         "end": 1249,
-        "author": "Philippson"
+        "author": "Philippson."
+      }
+    ]
+  },
+  {
+    "lemma": "Doberos",
+    "previous": "Doberes",
+    "next": "Dobuni",
+    "chapters": [
+      {
+        "start": 1249,
+        "end": 1250,
+        "author": "Philippson."
+      }
+    ]
+  },
+  {
+    "lemma": "Dobuni",
+    "previous": "Doberos",
+    "next": "Dochi",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1250,
+        "end": 1250,
+        "author": "Hübner."
       }
     ]
   },
   {
     "lemma": "Dochi",
-    "previous": "Doberes",
-    "next": "Dochme",
+    "previous": "Dobuni",
+    "next": "Δοχμή",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1250,
         "end": 1250,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
   {
-    "lemma": "Dochme",
+    "lemma": "Δοχμή",
     "previous": "Dochi",
     "next": "Docidava",
     "chapters": [
@@ -22416,7 +22447,7 @@
   },
   {
     "lemma": "Docidava",
-    "previous": "Dochme",
+    "previous": "Δοχμή",
     "next": "Docilis",
     "chapters": [
       {
