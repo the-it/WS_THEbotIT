@@ -24349,11 +24349,13 @@
     "lemma": "Judenburg",
     "previous": "Iuba 4",
     "next": "Jülich",
+    "proof_read": 2,
+    "wp_link": "w:de:Judenburg",
     "chapters": [
       {
         "start": 1303,
         "end": 1303,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -24361,11 +24363,13 @@
     "lemma": "Jülich",
     "previous": "Judenburg",
     "next": "Iuensianae figulinae",
+    "redirect": "Iuliacus",
+    "proof_read": 2,
+    "wp_link": "w:de:Jülich",
     "chapters": [
       {
         "start": 1303,
-        "end": 1303,
-        "author": "Keune"
+        "end": 1303
       }
     ]
   },
@@ -24384,6 +24388,10 @@
   {
     "lemma": "Jünkerath",
     "previous": "Iuensianae figulinae",
+    "next": "Ad Iuglandem",
+    "redirect": "Icorigium",
+    "proof_read": 3,
+    "wp_link": "w:de:Jünkerath",
     "chapters": [
       {
         "start": 1304,
@@ -24393,7 +24401,17 @@
   },
   {
     "lemma": "Ad Iuglandem",
-    "next": "Abacus 9"
+    "previous": "Jünkerath",
+    "next": "Abacus 9",
+    "sort_key": "Iuglandem ad",
+    "redirect": "Ad Ioglandem",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1304,
+        "end": 1304
+      }
+    ]
   },
   {
     "lemma": "Abacus 9",
