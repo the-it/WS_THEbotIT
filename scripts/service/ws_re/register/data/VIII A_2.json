@@ -6152,6 +6152,7 @@
   {
     "lemma": "Ad Vicesimum 1",
     "previous": "Vicesima 2",
+    "next": "Ad Vicesimum 2",
     "sort_key": "Vicesimum 1, ad",
     "proof_read": 2,
     "chapters": [
@@ -6166,11 +6167,13 @@
     "lemma": "Ad Vicesimum 2",
     "previous": "Ad Vicesimum 1",
     "next": "Ad Vicesimum 3",
+    "sort_key": "Vicesimum 2, ad",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2053,
         "end": 2053,
-        "author": "Wuilleumier"
+        "author": "P. Wuilleumier."
       }
     ]
   },
@@ -6178,11 +6181,13 @@
     "lemma": "Ad Vicesimum 3",
     "previous": "Ad Vicesimum 2",
     "next": "Ad Vicesimum 4",
+    "sort_key": "Vicesimum 3, ad",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2053,
         "end": 2053,
-        "author": "Wuilleumier"
+        "author": "P. Wuilleumier."
       }
     ]
   },
@@ -6190,11 +6195,13 @@
     "lemma": "Ad Vicesimum 4",
     "previous": "Ad Vicesimum 3",
     "next": "Ad Vicesimum 5ff.",
+    "sort_key": "Vicesimum 4, ad",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2053,
         "end": 2053,
-        "author": "Wuilleumier"
+        "author": "P. Wuilleumier."
       }
     ]
   },
@@ -10712,11 +10719,13 @@
     "lemma": "Ad Vice(n)simum 5",
     "previous": "vicesima manumissionum",
     "next": "Ad Vice(n)simum 6",
+    "sort_key": "Vice(n)simum 5, ad",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
         "end": 2479,
-        "author": "Radke"
+        "author": "Gerhard Radke."
       }
     ]
   },
@@ -10724,11 +10733,12 @@
     "lemma": "Ad Vice(n)simum 6",
     "previous": "Ad Vice(n)simum 5",
     "next": "Ad Vice(n)simum 7",
+    "sort_key": "Vice(n)simum 6, ad",
     "chapters": [
       {
         "start": 2479,
         "end": 2479,
-        "author": "Radke"
+        "author": "Gerhard Radke."
       }
     ]
   },
@@ -10736,11 +10746,12 @@
     "lemma": "Ad Vice(n)simum 7",
     "previous": "Ad Vice(n)simum 6",
     "next": "vici magister",
+    "sort_key": "Vice(n)simum 7 ad",
     "chapters": [
       {
         "start": 2479,
-        "end": 2479,
-        "author": "Kirsten"
+        "end": 2480,
+        "author": "Ernst Kirsten."
       }
     ]
   },
