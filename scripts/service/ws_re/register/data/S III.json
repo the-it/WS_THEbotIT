@@ -17797,7 +17797,7 @@
   {
     "lemma": "Doccius",
     "previous": "Dixtus",
-    "next": "Docilis",
+    "next": "Docilis 2",
     "proof_read": 2,
     "chapters": [
       {
@@ -17809,17 +17809,19 @@
   },
   {
     "lemma": "Docilis 2",
+    "previous": "Doccius",
+    "next": "Dodoparos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 341,
         "end": 341,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
   {
     "lemma": "Docilis",
-    "previous": "Doccius",
     "next": "Dodoparos",
     "proof_read": 2,
     "chapters": [
