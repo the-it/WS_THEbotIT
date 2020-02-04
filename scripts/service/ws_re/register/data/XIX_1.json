@@ -461,11 +461,14 @@
     "lemma": "Pedanius 8",
     "previous": "Pedanius 7",
     "next": "Pedanius 9",
+    "sort_key": "Pedanius 08",
+    "proof_read": 2,
+    "wp_link": "w:de:Gnaeus Pedanius Fuscus Salinator (Konsul 61)",
     "chapters": [
       {
         "start": 23,
         "end": 23,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -473,11 +476,14 @@
     "lemma": "Pedanius 9",
     "previous": "Pedanius 8",
     "next": "Pedanius 10",
+    "sort_key": "Pedanius 09",
+    "proof_read": 2,
+    "wp_link": "w:de:Lucius Pedanius Secundus",
     "chapters": [
       {
         "start": 23,
-        "end": 23,
-        "author": "Groag"
+        "end": 25,
+        "author": "Groag."
       }
     ]
   },
@@ -485,11 +491,12 @@
     "lemma": "Pedanius 10",
     "previous": "Pedanius 9",
     "next": "Pedarii",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 25,
         "end": 25,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -522,11 +529,12 @@
     "lemma": "Pedasa",
     "previous": "Pedaritos",
     "next": "Pedasis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 26,
-        "end": 26,
-        "author": "Ruge"
+        "start": 25,
+        "end": 29,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -534,6 +542,8 @@
     "lemma": "Pedasis",
     "previous": "Pedasa",
     "next": "Pedasos 1",
+    "redirect": "Pedasa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 29,
@@ -545,11 +555,12 @@
     "lemma": "Pedasos 1",
     "previous": "Pedasis",
     "next": "Pedasos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 29,
         "end": 29,
-        "author": "Meyer, Herbert"
+        "author": "H. Meyer."
       }
     ]
   },
@@ -569,11 +580,12 @@
     "lemma": "Pedasos 3",
     "previous": "Pedasos 2",
     "next": "Pedasos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 29,
         "end": 29,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
@@ -581,23 +593,25 @@
     "lemma": "Pedasos 4",
     "previous": "Pedasos 3",
     "next": "Pedatrirae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 29,
-        "end": 29,
-        "author": "Ruge"
+        "end": 30,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Pedatrirae",
     "previous": "Pedasos 4",
-    "next": "Pede, Pedai",
+    "next": "Πέδη",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 30,
+        "start": 29,
         "end": 30,
-        "author": "Stein, O[tto]"
+        "author": "O. Stein."
       }
     ]
   },
