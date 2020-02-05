@@ -5525,6 +5525,8 @@
     "lemma": "Magister 1",
     "previous": "Magirios",
     "next": "Magister 2",
+    "redirect": "Auction 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
@@ -5536,6 +5538,8 @@
     "lemma": "Magister 2",
     "previous": "Magister 1",
     "next": "Magister 3",
+    "redirect": "Collegium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
@@ -5547,11 +5551,12 @@
     "lemma": "Magister 3",
     "previous": "Magister 2",
     "next": "Magister 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
-        "end": 399,
-        "author": "Kroll"
+        "end": 400,
+        "author": "Kroll."
       }
     ]
   },
@@ -5559,11 +5564,12 @@
     "lemma": "Magister 4",
     "previous": "Magister 3",
     "next": "Magister 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 400,
         "end": 400,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -5571,6 +5577,8 @@
     "lemma": "Magister 5",
     "previous": "Magister 4",
     "next": "Magister 6",
+    "redirect": "a libellis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 400,
@@ -5582,11 +5590,12 @@
     "lemma": "Magister 6",
     "previous": "Magister 5",
     "next": "Magister 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 400,
         "end": 400,
-        "author": "Enßlin"
+        "author": "Enßlin."
       }
     ]
   },
