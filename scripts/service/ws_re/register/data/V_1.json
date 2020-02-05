@@ -22660,11 +22660,12 @@
     "lemma": "Dodona 1",
     "previous": "Dodon",
     "next": "Dodona 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1257,
         "end": 1264,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -22762,18 +22763,21 @@
     "lemma": "Doëtos",
     "previous": "Dodrans",
     "next": "Dogana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1266,
         "end": 1266,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
   {
     "lemma": "Dogana",
     "previous": "Doëtos",
-    "next": "Dogma ton symmachon",
+    "next": "Δόγμα τῶν συμμάχων",
+    "redirect": "Dagona",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1266,
@@ -22782,9 +22786,12 @@
     ]
   },
   {
-    "lemma": "Dogma ton symmachon",
+    "lemma": "Δόγμα τῶν συμμάχων",
     "previous": "Dogana",
-    "next": "Doiantos pedion",
+    "next": "Δοίαντος πεδίον",
+    "sort_key": "Dogma ton symmachon",
+    "redirect": "Συνέδριον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1266,
@@ -22793,26 +22800,29 @@
     ]
   },
   {
-    "lemma": "Doiantos pedion",
-    "previous": "Dogma ton symmachon",
+    "lemma": "Δοίαντος πεδίον",
+    "previous": "Δόγμα τῶν συμμάχων",
     "next": "Doidalses 1",
+    "sort_key": "Doiantos pedion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1266,
         "end": 1266,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Doidalses 1",
-    "previous": "Doiantos pedion",
+    "previous": "Δοίαντος πεδίον",
     "next": "Doidalses 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1266,
         "end": 1266,
-        "author": "Meyer, Eduard"
+        "author": "Eduard Meyer."
       }
     ]
   },
@@ -22820,11 +22830,12 @@
     "lemma": "Doidalses 2",
     "previous": "Doidalses 1",
     "next": "Doidye",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1266,
         "end": 1267,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -22889,11 +22900,14 @@
     "lemma": "Δοκιμασία",
     "previous": "Δοκηταί",
     "next": "Dokimeion",
+    "sort_key": "Dokimasia",
+    "proof_read": 2,
+    "wp_link": "w:de:Dokimasie",
     "chapters": [
       {
         "start": 1268,
         "end": 1273,
-        "author": "Koch, [Emil]"
+        "author": "Koch."
       }
     ]
   },
@@ -22901,11 +22915,12 @@
     "lemma": "Dokimeion",
     "previous": "Δοκιμασία",
     "next": "Dokimos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1273,
         "end": 1274,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -22913,11 +22928,12 @@
     "lemma": "Dokimos 1",
     "previous": "Dokimeion",
     "next": "Dokimos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
         "end": 1274,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -22925,11 +22941,12 @@
     "lemma": "Dokimos 2",
     "previous": "Dokimos 1",
     "next": "Dokimos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
         "end": 1274,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -22937,11 +22954,12 @@
     "lemma": "Dokimos 3",
     "previous": "Dokimos 2",
     "next": "Dokimos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
         "end": 1274,
-        "author": "Kaerst"
+        "author": "Kaerst."
       }
     ]
   },
@@ -22949,11 +22967,12 @@
     "lemma": "Dokimos 4",
     "previous": "Dokimos 3",
     "next": "Dokimos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
         "end": 1274,
-        "author": "Kaerst"
+        "author": "Kaerst."
       }
     ]
   },
@@ -22961,11 +22980,12 @@
     "lemma": "Dokimos 5",
     "previous": "Dokimos 4",
     "next": "Dokonos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
         "end": 1274,
-        "author": "Kaerst"
+        "author": "Kaerst."
       }
     ]
   },
@@ -22973,11 +22993,12 @@
     "lemma": "Dokonos",
     "previous": "Dokimos 5",
     "next": "Dolabella",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
         "end": 1274,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -23000,6 +23021,8 @@
     "lemma": "Dolabellina",
     "previous": "Dolabella",
     "next": "Dolabra",
+    "redirect": "Cornelius 435",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
