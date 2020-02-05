@@ -96,13 +96,15 @@ codecov :
 
 # infrastructure
 
-aws_deploy :
-	echo "######## AWS DEPLOY #########"
+aws_deploy_tst :
+	echo "####### AWS DEPLOY TST ########"
+	export AWS_PROFILE=tst
 	cdk bootstrap
-	cdk deploy
+	cdk deploy infrastructure1 infrastructure2
 
 aws_diff :
-	echo "######### AWS DIFF ##########"
+	echo "########## AWS DIFF ###########"
+	export AWS_PROFILE=tst
 	cdk bootstrap
 	cdk diff
 
