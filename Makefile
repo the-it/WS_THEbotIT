@@ -65,7 +65,7 @@ flake8 :
 unittest :
 	echo "########### UNITTEST ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
-	nosetests
+	python tst_runner.py
 
 integrationtest :
 	echo "######## INTEGRATIONTEST #######"
