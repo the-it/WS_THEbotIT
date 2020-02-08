@@ -165,7 +165,7 @@ class TestLambdaBot(TestCloudBase):
         def task(self):
             return True
 
-    @freeze_time("2000-12-31")
+    @freeze_time("2000-12-31", auto_tick_seconds=60)
     def test_no_load_model_outdated(self):
         self._make_json_file(filename="DataOutdatedBot.data.json")
         StatusManager("DataOutdatedBot").finish_run(success=True)
@@ -176,7 +176,7 @@ class TestLambdaBot(TestCloudBase):
                 self.assertDictEqual({}, bot.data._data)
                 bot.run()
 
-    @freeze_time("2001-12-31")
+    @freeze_time("2001-12-31", auto_tick_seconds=60)
     def test_data_outdated_not_outdated_1(self):
         self._make_json_file(filename="DataOutdatedBot.data.json")
         StatusManager("DataOutdatedBot").finish_run(success=True)
@@ -209,12 +209,12 @@ class TestLambdaBot(TestCloudBase):
                               "The broken data and a backup of the old will be keept.",
                               str(log_catcher))
 
-    @freeze_time("2001-01-01")
+    @freeze_time("2001-01-01", auto_tick_seconds=60)
     def test_set_timestamp_for_searcher(self):
         self._make_json_file(filename="MinimalBot.data.json")
         StatusManager("MinimalBot").finish_run(success=True)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertEqual(datetime(2000, 12, 31), bot.create_timestamp_for_search(offset=timedelta(days=1)))
+            self.assertEqual(datetime(2000, 12, 31, 0, 2), bot.create_timestamp_for_search(offset=timedelta(days=1)))
 
     def test_set_timestamp_for_searcher_no_successful_run(self):
         self._make_json_file(filename="MinimalBot.data.json")

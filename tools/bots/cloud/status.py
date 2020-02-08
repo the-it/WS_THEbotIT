@@ -5,7 +5,6 @@ from typing import TypedDict, Any, Dict, Optional, Union
 
 # typehints
 class StatusDictType(TypedDict):
-    id: int
     bot_name: str
     success: bool
     finish: bool
@@ -16,7 +15,6 @@ class StatusDictType(TypedDict):
 
 @dataclass
 class Status:
-    id: int
     bot_name: str
     success: bool = False
     finish: bool = False
@@ -37,7 +35,6 @@ class Status:
 
     def to_dict(self) -> StatusDictType:
         return_dict: StatusDictType = {
-            "id": self.id,
             "bot_name": self.bot_name,
             "success": self.success,
             "finish": self.finish,

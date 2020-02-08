@@ -2,12 +2,12 @@
 import os
 import typing
 from shutil import rmtree
-from unittest import TestCase, mock
+from unittest import TestCase
 
 import boto3
 from moto import mock_dynamodb2, mock_s3
 
-from tools.bots.cloud.base import TMP_WIKI_BOT_PATH, get_data_path
+from tools.bots.cloud.base import TMP_WIKI_BOT_PATH
 
 
 def teardown_data_path():
@@ -33,17 +33,6 @@ class TestGetDataPath(TestCase):
 
     def tearDown(self):
         teardown_data_path()
-
-    def test_folder_exist(self):
-        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
-            self.assertEqual(TMP_WIKI_BOT_PATH, get_data_path())
-            mock_mkdir.assert_not_called()
-
-    def test_make_folder(self):
-        os.rmdir(TMP_WIKI_BOT_PATH)
-        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
-            self.assertEqual(TMP_WIKI_BOT_PATH, get_data_path())
-            self.assertEqual(1, mock_mkdir.call_count)
 
 JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
 JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \
@@ -96,21 +85,21 @@ class TestCloudBase(TestCase):
             TableName="wiki_bots_manage_table",
             KeySchema=[
                 {
-                    "AttributeName": "id",
+                    "AttributeName": "bot_name",
                     "KeyType": "HASH"  # Partition key
                 },
                 {
-                    "AttributeName": "bot_name",
+                    "AttributeName": "start_time",
                     "KeyType": "RANGE"  # Partition key
                 }
             ],
             AttributeDefinitions=[
                 {
-                    "AttributeName": "id",
-                    "AttributeType": "N"
+                    "AttributeName": "bot_name",
+                    "AttributeType": "S"
                 },
                 {
-                    "AttributeName": "bot_name",
+                    "AttributeName": "start_time",
                     "AttributeType": "S"
                 }
             ],
@@ -123,7 +112,7 @@ class TestCloudBase(TestCase):
             for each in scan["Items"]:
                 batch.delete_item(
                     Key={
-                        "id": each["id"],
-                        "bot_name": each["bot_name"]
+                        "bot_name": each["bot_name"],
+                        "start_time": each["start_time"],
                     }
                 )
