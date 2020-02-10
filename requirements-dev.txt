@@ -83,7 +83,7 @@ requests-mock==1.7.0
 requests==2.22.0          # via codecov, docker, internetarchive, moto, requests-mock, responses, safety
 responses==0.10.9         # via moto
 rsa==4.0                  # via python-jose
-s3transfer==0.3.2         # via boto3
+s3transfer==0.3.3         # via boto3
 safety==1.8.5
 schema==0.7.1             # via internetarchive
 six==1.14.0               # via astroid, aws-sam-translator, bandit, cfn-lint, cryptography, docker, dparse, ecdsa, freezegun, internetarchive, jsonschema, moto, packaging, pyrsistent, python-dateutil, python-jose, requests-mock, responses, stevedore, websocket-client
