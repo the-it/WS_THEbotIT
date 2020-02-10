@@ -27,7 +27,7 @@ contextlib2==0.6.0.post1        # via schema
 coverage==5.0.3
 cryptography==2.8         # via moto, sshpubkeys
 ddt==1.2.2
-docker==4.1.0             # via moto
+docker==4.2.0             # via moto
 docopt==0.6.2             # via internetarchive
 docutils==0.15.2          # via botocore
 dparse==0.4.1             # via safety
