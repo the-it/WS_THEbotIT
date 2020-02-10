@@ -224,6 +224,11 @@ class Article(collections.MutableMapping):
                     pass
                 elif keyword in cls.keywords.keys():
                     keyword = cls.keywords[keyword]
+                elif keyword in "".join(cls.keywords.values()):
+                    for full_keyword in cls.keywords.values():
+                        if keyword in full_keyword:
+                            keyword = full_keyword
+                            break
                 else:
                     raise ReDatenException(f"REDaten has wrong key word. --> {template_property}")
                 properties_dict.update({keyword: template_property["value"]})

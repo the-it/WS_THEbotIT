@@ -8,7 +8,7 @@ from scripts.service.ws_re.template.article import Article
 from tools.template_finder import TemplateFinderException, TemplateFinder
 
 
-class RePage():
+class RePage:
     def __init__(self, wiki_page: pywikibot.Page):
         self.page: pywikibot.Page = wiki_page
         self.pre_text: str = self.page.text

@@ -287,6 +287,11 @@ text
         article = Article.from_text(article_text)
         self.assertEqual(ARTICLE_TEMPLATE, article.to_text())
 
+    def test_bug_shortened_parameter(self):
+        article_text = "{{REDaten\n|GEBURTS=1900\n}}\ntest.\n{{REAutor|Author.}}"
+        article = Article.from_text(article_text)
+        self.assertEqual("1900", article["GEBURTSJAHR"].value)
+
     def test_bug_dot_added_to_author(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|S.A.†}}"
         article = Article.from_text(article_text)
