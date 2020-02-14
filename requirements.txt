@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-boto3==1.11.14
+boto3==1.11.17
 botocore==1.14.14         # via boto3, s3transfer
 certifi==2019.11.28       # via requests
 chardet==3.0.4            # via requests
