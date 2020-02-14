@@ -1737,7 +1737,7 @@
   {
     "lemma": "Albus 2",
     "previous": "Albucius 3a",
-    "next": "Alençon, Notre Dame d'-",
+    "next": "Alençon, Notre Dame d’-",
     "proof_read": 3,
     "chapters": [
       {
@@ -1748,8 +1748,11 @@
     ]
   },
   {
+    "lemma": "Alençon, Notre Dame d’-",
+    "previous": "Albus 2"
+  },
+  {
     "lemma": "Alençon, Notre Dame d'-",
-    "previous": "Albus 2",
     "next": "Alesia 1",
     "sort_key": "Alençon, Notre Dame d,-,",
     "proof_read": 3,
@@ -8410,7 +8413,6 @@
     "next": "Avanacus vicus",
     "proof_read": 2,
     "wp_link": "w:de:Avallon",
-    "ws_link": "s:en:1911 Encyclopædia Britannica/Avallon",
     "wd_link": "d:Q207572",
     "chapters": [
       {
@@ -17702,7 +17704,15 @@
   {
     "lemma": "Ditalco",
     "previous": "Disetus",
-    "next": "Διθυράμβιος"
+    "next": "Διθυράμβιος",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 340,
+        "end": 340,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Διθυράμβιος",
@@ -17747,7 +17757,7 @@
   {
     "lemma": "Divicus",
     "previous": "Divicatus 1",
-    "next": "Divixtus",
+    "next": "Divixtus 1",
     "proof_read": 2,
     "chapters": [
       {
@@ -17759,8 +17769,6 @@
   },
   {
     "lemma": "Divixtus",
-    "previous": "Divicus",
-    "next": "Dixtus",
     "proof_read": 3,
     "chapters": [
       {
@@ -17771,8 +17779,12 @@
     ]
   },
   {
+    "lemma": "Divixtus 1",
+    "next": "Dixtus"
+  },
+  {
     "lemma": "Dixtus",
-    "previous": "Divixtus",
+    "previous": "Divixtus 1",
     "next": "Doccius",
     "proof_read": 2,
     "chapters": [
@@ -17811,6 +17823,7 @@
   },
   {
     "lemma": "Dodoparos",
+    "previous": "Docilis 2",
     "next": "Doeccus",
     "proof_read": 2,
     "chapters": [
