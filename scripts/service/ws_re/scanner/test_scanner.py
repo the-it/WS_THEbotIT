@@ -181,7 +181,7 @@ class TestReScanner(TestCase):
                 bot.tasks = [self.ONE1Task]
                 bot.run()
                 expected_logging = (("ReScanner", "ERROR",
-                                     "The initiation of :RE:Lemma1 went wrong: "
+                                     "The initiation of [[:RE:Lemma1]] went wrong: "
                                      "scripts.service.ws_re.template.ReDatenException"),)
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
@@ -197,7 +197,7 @@ class TestReScanner(TestCase):
                 expected_logging = (("ReScanner", "DEBUG",
                                      "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "ERROR",
-                                     "The initiation of :RE:Lemma1 went wrong: "
+                                     "The initiation of [[:RE:Lemma1]] went wrong: "
                                      "scripts.service.ws_re.template.ReDatenException"),
                                     ("ReScanner", "DEBUG",
                                      "Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]"),
