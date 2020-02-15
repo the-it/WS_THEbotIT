@@ -1749,7 +1749,17 @@
   },
   {
     "lemma": "Alençon, Notre Dame d’-",
-    "previous": "Albus 2"
+    "previous": "Albus 2",
+    "next": "Alesia 1",
+    "sort_key": "Alençon, Notre Dame d,-,",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 78,
+        "end": 78,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Alençon, Notre Dame d'-",
@@ -17771,6 +17781,8 @@
   },
   {
     "lemma": "Divixtus",
+    "previous": "Divicus",
+    "next": "Dixtus",
     "proof_read": 3,
     "chapters": [
       {
@@ -17860,10 +17872,21 @@
   },
   {
     "lemma": "Dolium",
-    "previous": "Δογματογράφοι"
+    "previous": "Δογματογράφοι",
+    "next": "Domis",
+    "sort_key": "Dolium",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 342,
+        "end": 346,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Domis",
+    "previous": "Dolium",
     "next": "Domitianae figlinae",
     "chapters": [
       {
