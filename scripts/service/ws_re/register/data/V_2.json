@@ -14593,8 +14593,6 @@
   },
   {
     "lemma": "Elaphonnesos 3",
-    "previous": "Elaphonnesos 2",
-    "next": "Elaphorios 1",
     "chapters": [
       {
         "start": 2234,
@@ -14603,34 +14601,9 @@
       }
     ]
   },
-  {
-    "lemma": "Elaphorios 1",
-    "previous": "Elaphonnesos 3",
-    "next": "Elaphorios 2",
-    "chapters": [
-      {
-        "start": 2234,
-        "end": 2234,
-        "author": "Jessen"
-      }
-    ]
-  },
-  {
-    "lemma": "Elaphorios 2",
-    "previous": "Elaphorios 1",
-    "next": "Elaphos",
-    "chapters": [
-      {
-        "start": 2234,
-        "end": 2234,
-        "author": "Dittenberger"
-      }
-    ]
-  },
+  {"lemma": "Elaphonnesos 4"},
   {
     "lemma": "Elaphos",
-    "previous": "Elaphorios 2",
-    "next": "Elara",
     "chapters": [
       {
         "start": 2234,
@@ -14640,8 +14613,27 @@
     ]
   },
   {
+    "lemma": "Elaphrios 1",
+    "chapters": [
+      {
+        "start": 2234,
+        "end": 2234,
+        "author": "Jessen"
+      }
+    ]
+  },
+  {
+    "lemma": "Elaphrios 2",
+    "chapters": [
+      {
+        "start": 2234,
+        "end": 2234,
+        "author": "Dittenberger"
+      }
+    ]
+  },
+  {
     "lemma": "Elara",
-    "previous": "Elaphos",
     "next": "Elarion",
     "chapters": [
       {

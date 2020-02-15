@@ -5993,7 +5993,6 @@
   {
     "lemma": "Pentobolon",
     "previous": "Penthilos 2",
-    "next": "Chorion Peon",
     "chapters": [
       {
         "start": 550,
@@ -6003,20 +6002,7 @@
     ]
   },
   {
-    "lemma": "Chorion Peon",
-    "previous": "Pentobolon",
-    "next": "Pentonkion",
-    "chapters": [
-      {
-        "start": 551,
-        "end": 551,
-        "author": "Ruge"
-      }
-    ]
-  },
-  {
     "lemma": "Pentonkion",
-    "previous": "Chorion Peon",
     "next": "Pentri",
     "chapters": [
       {
@@ -6041,7 +6027,6 @@
   {
     "lemma": "Penus Vestae",
     "previous": "Pentri",
-    "next": "Peos Artemidos",
     "chapters": [
       {
         "start": 551,
@@ -6049,9 +6034,9 @@
       }
     ]
   },
+  {"lemma": "Χωρίον Πεῶν"},
   {
     "lemma": "Peos Artemidos",
-    "previous": "Penus Vestae",
     "next": "Peparethos 1",
     "chapters": [
       {

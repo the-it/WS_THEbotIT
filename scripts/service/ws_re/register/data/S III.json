@@ -8785,8 +8785,10 @@
     ]
   },
   {
-    "lemma": "Augustobriga 1",
-    "previous": "Augustobona",
+    "lemma": "Augustobriga 1"
+  },
+  {
+    "lemma": "Augustobriga 2",
     "next": "Augustodunum",
     "proof_read": 3,
     "wp_link": "w:de:Ciudad Rodrigo",
@@ -8801,7 +8803,7 @@
   },
   {
     "lemma": "Augustodunum",
-    "previous": "Augustobriga 1",
+    "previous": "Augustobriga 2",
     "next": "Augustodurum",
     "proof_read": 3,
     "wp_link": "w:de:Autun",
@@ -17757,7 +17759,7 @@
   {
     "lemma": "Divicus",
     "previous": "Divicatus 1",
-    "next": "Divixtus 1",
+    "next": "Divixtus",
     "proof_read": 2,
     "chapters": [
       {
@@ -17779,12 +17781,7 @@
     ]
   },
   {
-    "lemma": "Divixtus 1",
-    "next": "Dixtus"
-  },
-  {
     "lemma": "Dixtus",
-    "previous": "Divixtus 1",
     "next": "Doccius",
     "proof_read": 2,
     "chapters": [
