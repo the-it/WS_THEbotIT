@@ -19333,6 +19333,7 @@
     "lemma": "Dioskuren",
     "previous": "Dioskoros 6",
     "next": "Dioskurias 1",
+    "proof_read": 2,
     "wp_link": "w:de:Dioskuren",
     "chapters": [
       {
@@ -20877,7 +20878,6 @@
   {
     "lemma": "Dipoinos",
     "previous": "Dipoina",
-    "next": "Δώρεια",
     "proof_read": 2,
     "wp_link": "w:de:Dipoinos",
     "chapters": [
@@ -20889,22 +20889,7 @@
     ]
   },
   {
-    "lemma": "Δώρεια",
-    "previous": "Dipoinos",
-    "next": "Dipolis 1",
-    "sort_key": "Doreia",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 1161,
-        "end": 1161,
-        "author": "Stengel."
-      }
-    ]
-  },
-  {
     "lemma": "Dipolis 1",
-    "previous": "Δώρεια",
     "next": "Dipolis 2",
     "proof_read": 2,
     "chapters": [
@@ -21033,7 +21018,7 @@
       {
         "start": 1164,
         "end": 1164,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -21646,11 +21631,13 @@
     "lemma": "Dithyrambos 1",
     "previous": "Ditalco",
     "next": "Dithyrambos 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Dithyrambos",
     "chapters": [
       {
         "start": 1203,
         "end": 1230,
-        "author": "Crusius"
+        "author": "Crusius."
       }
     ]
   },
@@ -22453,11 +22440,12 @@
     "lemma": "Docidava",
     "previous": "Δοχμή",
     "next": "Docilis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1251,
         "end": 1251,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -22465,11 +22453,12 @@
     "lemma": "Docilis",
     "previous": "Docidava",
     "next": "Doclea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1251,
         "end": 1251,
-        "author": "Pollack"
+        "author": "Pollack."
       }
     ]
   },
@@ -22751,11 +22740,12 @@
     "lemma": "Dodrans",
     "previous": "Dodonos",
     "next": "Doëtos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1265,
         "end": 1266,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -23007,8 +22997,8 @@
     "previous": "Dokonos",
     "next": "Dolabellina",
     "proof_read": 3,
-    "wp_link": "w:de:Dolabella",
-    "wd_link": "d:Q1133780",
+    "wp_link": "w:de:Cornelius Dolabella",
+    "wd_link": "d:Q27899725",
     "chapters": [
       {
         "start": 1274,
@@ -23022,7 +23012,7 @@
     "previous": "Dolabella",
     "next": "Dolabra",
     "redirect": "Cornelius 435",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1274,
@@ -23033,36 +23023,40 @@
   {
     "lemma": "Dolabra",
     "previous": "Dolabellina",
-    "next": "Dolanon",
+    "next": "Δωλανῶν",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1274,
         "end": 1275,
-        "author": "Mau, [August]"
+        "author": "Mau."
       }
     ]
   },
   {
-    "lemma": "Dolanon",
+    "lemma": "Δωλανῶν",
     "previous": "Dolabra",
     "next": "Dolba",
+    "sort_key": "Dolanon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1275,
         "end": 1275,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Dolba",
-    "previous": "Dolanon",
+    "previous": "Δωλανῶν",
     "next": "Dolccus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1275,
         "end": 1275,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
@@ -23070,11 +23064,12 @@
     "lemma": "Dolccus",
     "previous": "Dolba",
     "next": "Dolicha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1275,
         "end": 1275,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -23097,11 +23092,12 @@
     "lemma": "Doliche 1",
     "previous": "Dolicha",
     "next": "Doliche 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1275,
         "end": 1275,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -23109,11 +23105,12 @@
     "lemma": "Doliche 2",
     "previous": "Doliche 1",
     "next": "Doliche 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1275,
         "end": 1275,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -23125,7 +23122,7 @@
       {
         "start": 1275,
         "end": 1276,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -23148,11 +23145,13 @@
     "lemma": "Dolichenus",
     "previous": "Doliche 4",
     "next": "Dolichios",
+    "proof_read": 2,
+    "wp_link": "w:de:Iupiter Dolichenus",
     "chapters": [
       {
         "start": 1276,
         "end": 1281,
-        "author": "Cumont"
+        "author": "Cumont."
       }
     ]
   },
@@ -23160,6 +23159,8 @@
     "lemma": "Dolichios",
     "previous": "Dolichenus",
     "next": "Dolichiste",
+    "redirect": "Dolichos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1281,
@@ -23171,11 +23172,12 @@
     "lemma": "Dolichiste",
     "previous": "Dolichios",
     "next": "Dolichos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1281,
         "end": 1281,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -23183,11 +23185,12 @@
     "lemma": "Dolichos 1",
     "previous": "Dolichiste",
     "next": "Dolichos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1281,
         "end": 1281,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -23195,11 +23198,12 @@
     "lemma": "Dolichos 2",
     "previous": "Dolichos 1",
     "next": "Dolichos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1281,
         "end": 1281,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -23207,11 +23211,12 @@
     "lemma": "Dolichos 3",
     "previous": "Dolichos 2",
     "next": "Dolichos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1281,
         "end": 1282,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -23219,11 +23224,12 @@
     "lemma": "Dolichos 4",
     "previous": "Dolichos 3",
     "next": "Dolichos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1282,
         "end": 1283,
-        "author": "Jüthner"
+        "author": "Jüthner."
       }
     ]
   },
@@ -23231,11 +23237,12 @@
     "lemma": "Dolichos 5",
     "previous": "Dolichos 4",
     "next": "Dolichos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1283,
         "end": 1283,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -23314,11 +23321,12 @@
     "lemma": "Dolionia",
     "previous": "Doliones",
     "next": "Dolios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1283,
         "end": 1283,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -23326,11 +23334,12 @@
     "lemma": "Dolios 1",
     "previous": "Dolionia",
     "next": "Dolios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1283,
         "end": 1284,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -23338,11 +23347,12 @@
     "lemma": "Dolios 2",
     "previous": "Dolios 1",
     "next": "Dolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1284,
         "end": 1284,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -23350,11 +23360,12 @@
     "lemma": "Dolis",
     "previous": "Dolios 2",
     "next": "Dolium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1284,
         "end": 1284,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -23362,11 +23373,12 @@
     "lemma": "Dolium",
     "previous": "Dolis",
     "next": "Dolomene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1284,
         "end": 1286,
-        "author": "Mau, [August]"
+        "author": "Mau."
       }
     ]
   },
@@ -23374,11 +23386,12 @@
     "lemma": "Dolomene",
     "previous": "Dolium",
     "next": "Dolomeni",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1286,
         "end": 1287,
-        "author": "Seeck"
+        "author": "Streck."
       }
     ]
   },
@@ -23386,11 +23399,12 @@
     "lemma": "Dolomeni",
     "previous": "Dolomene",
     "next": "Dolomitai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1287,
         "end": 1287,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -23411,11 +23425,12 @@
     "lemma": "Dolon 1",
     "previous": "Dolomitai",
     "next": "Dolon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1287,
         "end": 1288,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -23423,11 +23438,12 @@
     "lemma": "Dolon 2",
     "previous": "Dolon 1",
     "next": "Dolon 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1288,
         "end": 1288,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -23435,11 +23451,12 @@
     "lemma": "Dolon 3",
     "previous": "Dolon 2",
     "next": "Dolonkoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1288,
         "end": 1289,
-        "author": "Assmann"
+        "author": "Assmann."
       }
     ]
   },
@@ -23447,11 +23464,12 @@
     "lemma": "Dolonkoi",
     "previous": "Dolon 3",
     "next": "Dolonkos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1289,
         "end": 1289,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -23459,11 +23477,12 @@
     "lemma": "Dolonkos",
     "previous": "Dolonkoi",
     "next": "Dolopes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1289,
         "end": 1289,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -23471,11 +23490,12 @@
     "lemma": "Dolopes 1",
     "previous": "Dolonkos",
     "next": "Dolopes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1289,
         "end": 1290,
-        "author": "Miller"
+        "author": "J. Miller."
       }
     ]
   },
@@ -23483,11 +23503,12 @@
     "lemma": "Dolopes 2",
     "previous": "Dolopes 1",
     "next": "Dolopia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1290,
         "end": 1290,
-        "author": "Fischer"
+        "author": "Fischer."
       }
     ]
   },
@@ -23499,7 +23520,7 @@
       {
         "start": 1290,
         "end": 1291,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -23507,11 +23528,12 @@
     "lemma": "Dolopion 1",
     "previous": "Dolopia",
     "next": "Dolopion 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1291,
         "end": 1291,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -23519,11 +23541,12 @@
     "lemma": "Dolopion 2",
     "previous": "Dolopion 1",
     "next": "Dolops 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1291,
         "end": 1291,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -23531,11 +23554,12 @@
     "lemma": "Dolops 1",
     "previous": "Dolopion 2",
     "next": "Dolops 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1291,
         "end": 1291,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -23543,11 +23567,12 @@
     "lemma": "Dolops 2",
     "previous": "Dolops 1",
     "next": "Dolops 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1291,
         "end": 1291,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -23555,11 +23580,12 @@
     "lemma": "Dolops 3",
     "previous": "Dolops 2",
     "next": "Dolops 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1291,
         "end": 1291,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -23567,11 +23593,12 @@
     "lemma": "Dolops 4",
     "previous": "Dolops 3",
     "next": "Dolor",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1291,
         "end": 1291,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -23579,11 +23606,12 @@
     "lemma": "Dolor",
     "previous": "Dolops 4",
     "next": "Dolucensis vicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1291,
         "end": 1292,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -23591,11 +23619,12 @@
     "lemma": "Dolucensis vicus",
     "previous": "Dolor",
     "next": "Dolus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1292,
         "end": 1292,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -23603,11 +23632,12 @@
     "lemma": "Dolus 1",
     "previous": "Dolucensis vicus",
     "next": "Dolus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1292,
         "end": 1292,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -23615,11 +23645,13 @@
     "lemma": "Dolus 2",
     "previous": "Dolus 1",
     "next": "Dolus 3",
+    "proof_read": 2,
+    "wp_link": "w:de:Dolus-le-Sec",
     "chapters": [
       {
         "start": 1292,
         "end": 1292,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -23631,7 +23663,7 @@
       {
         "start": 1292,
         "end": 1292,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -23639,11 +23671,12 @@
     "lemma": "Dolus 4",
     "previous": "Dolus 3",
     "next": "Domai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1292,
         "end": 1294,
-        "author": "Tomaschek"
+        "author": "Kleinfeller."
       }
     ]
   },
@@ -23651,11 +23684,12 @@
     "lemma": "Domai",
     "previous": "Dolus 4",
     "next": "Domana 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1294,
         "end": 1294,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -23663,11 +23697,12 @@
     "lemma": "Domana 1",
     "previous": "Domai",
     "next": "Domana 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1294,
         "end": 1294,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -23675,11 +23710,12 @@
     "lemma": "Domana 2",
     "previous": "Domana 1",
     "next": "Domanitis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1294,
         "end": 1294,
-        "author": "Wissowa"
+        "author": "Wissowa."
       }
     ]
   },
@@ -23687,11 +23723,12 @@
     "lemma": "Domanitis",
     "previous": "Domana 2",
     "next": "Domatia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1294,
         "end": 1294,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -23699,11 +23736,12 @@
     "lemma": "Domatia",
     "previous": "Domanitis",
     "next": "Domatites",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1294,
         "end": 1294,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -23711,11 +23749,12 @@
     "lemma": "Domatites",
     "previous": "Domatia",
     "next": "Domavia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1294,
         "end": 1294,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -23723,11 +23762,12 @@
     "lemma": "Domavia",
     "previous": "Domatites",
     "next": "Domazenes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1294,
         "end": 1296,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -23735,11 +23775,12 @@
     "lemma": "Domazenes",
     "previous": "Domavia",
     "next": "Domeasusuemecus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1296,
         "end": 1296,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -23747,6 +23788,8 @@
     "lemma": "Domeasusuemecus",
     "previous": "Domazenes",
     "next": "Domeros",
+    "redirect": "Cusuneneoecus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1296,
@@ -23758,6 +23801,8 @@
     "lemma": "Domeros",
     "previous": "Domeasusuemecus",
     "next": "Domesticae",
+    "redirect": "Doberes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1296,
@@ -23769,11 +23814,12 @@
     "lemma": "Domesticae",
     "previous": "Domeros",
     "next": "Domesticus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1296,
         "end": 1296,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -23781,11 +23827,13 @@
     "lemma": "Domesticus 1",
     "previous": "Domesticae",
     "next": "Domesticus 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Domesticus (Römisches Reich)",
     "chapters": [
       {
         "start": 1296,
         "end": 1299,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -23793,10 +23841,13 @@
     "lemma": "Domesticus 2",
     "previous": "Domesticus 1",
     "next": "Dometos",
+    "redirect": "protectores",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1299,
-        "end": 1299
+        "end": 1299,
+        "author": "Seeck."
       }
     ]
   },
@@ -23804,11 +23855,12 @@
     "lemma": "Dometos",
     "previous": "Domesticus 2",
     "next": "Domicilium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1299,
         "end": 1299,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -23816,11 +23868,12 @@
     "lemma": "Domicilium",
     "previous": "Dometos",
     "next": "Domiduca",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1299,
         "end": 1301,
-        "author": "Leonhard"
+        "author": "R. Leonhard."
       }
     ]
   },
@@ -23828,11 +23881,12 @@
     "lemma": "Domiduca",
     "previous": "Domicilium",
     "next": "Domina, Dominus, Dominae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1301,
         "end": 1301,
-        "author": "Aust"
+        "author": "Aust."
       }
     ]
   },
@@ -23840,11 +23894,12 @@
     "lemma": "Domina, Dominus, Dominae",
     "previous": "Domiduca",
     "next": "Dominator",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1301,
         "end": 1302,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -23852,11 +23907,12 @@
     "lemma": "Dominator",
     "previous": "Domina, Dominus, Dominae",
     "next": "Dominium",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1302,
         "end": 1302,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -23888,11 +23944,12 @@
     "lemma": "Dominus 2",
     "previous": "Dominus 1",
     "next": "Dominus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1309,
         "end": 1309,
-        "author": "Wissowa"
+        "author": "Wissowa."
       }
     ]
   },
@@ -23915,11 +23972,12 @@
     "lemma": "Dominus 4",
     "previous": "Dominus 3",
     "next": "Domitiae horti",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1310,
         "end": 1311,
-        "author": "Pollack"
+        "author": "Pollack."
       }
     ]
   },
@@ -23970,7 +24028,7 @@
       {
         "start": 1311,
         "end": 1311,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -23982,7 +24040,7 @@
       {
         "start": 1311,
         "end": 1312,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -23990,11 +24048,13 @@
     "lemma": "Domitianus 3",
     "previous": "Domitianus 2",
     "next": "Domitianus 4",
+    "proof_read": 2,
+    "wp_link": "w:de:Domitian",
     "chapters": [
       {
         "start": 1312,
         "end": 1312,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -24076,11 +24136,13 @@
     "lemma": "Domitianus 9",
     "previous": "Domitianus 8",
     "next": "Domitianus 10",
+    "sort_key": "Domitianus 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1313,
         "end": 1313,
-        "author": "Schmid"
+        "author": "W. Schmid."
       }
     ]
   },
@@ -24115,11 +24177,12 @@
     "lemma": "Domitiopolis",
     "previous": "Domitilla",
     "next": "Domitius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1313,
         "end": 1313,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -24350,7 +24413,7 @@
     "previous": "Domitius 14",
     "next": "Domitius 16",
     "sort_key": "Domitius 015",
-    "redirect": "Domitius Domitius 23",
+    "redirect": "Domitius 23",
     "proof_read": 3,
     "chapters": [
       {
@@ -24364,7 +24427,7 @@
     "previous": "Domitius 15",
     "next": "Domitius 17",
     "sort_key": "Domitius 016",
-    "redirect": "Domitius Domitius 65",
+    "redirect": "Domitius 65",
     "proof_read": 2,
     "chapters": [
       {
@@ -24379,7 +24442,7 @@
     "previous": "Domitius 16",
     "next": "Domitius 18",
     "sort_key": "Domitius 017",
-    "redirect": "Domitius Domitius 84",
+    "redirect": "Domitius 84",
     "proof_read": 2,
     "chapters": [
       {
@@ -24950,11 +25013,13 @@
     "lemma": "Domitius 56",
     "previous": "Domitius 55",
     "next": "Domitius 57",
+    "sort_key": "Domitius 056",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1427,
         "end": 1427,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -24962,11 +25027,13 @@
     "lemma": "Domitius 57",
     "previous": "Domitius 56",
     "next": "Domitius 58",
+    "sort_key": "Domitius 057",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1427,
         "end": 1427,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -24974,6 +25041,9 @@
     "lemma": "Domitius 58",
     "previous": "Domitius 57",
     "next": "Domitius 59",
+    "sort_key": "Domitius 058",
+    "redirect": "Eutropius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1427,
@@ -24985,11 +25055,13 @@
     "lemma": "Domitius 59",
     "previous": "Domitius 58",
     "next": "Domitius 60",
+    "sort_key": "Domitius 059",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1427,
         "end": 1427,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -24997,11 +25069,13 @@
     "lemma": "Domitius 60",
     "previous": "Domitius 59",
     "next": "Domitius 61",
+    "sort_key": "Domitius 060",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1427,
         "end": 1427,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25009,11 +25083,13 @@
     "lemma": "Domitius 61",
     "previous": "Domitius 60",
     "next": "Domitius 62",
+    "sort_key": "Domitius 061",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1427,
         "end": 1427,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25021,11 +25097,12 @@
     "lemma": "Domitius 62",
     "previous": "Domitius 61",
     "next": "Domitius 63",
+    "sort_key": "Domitius 062",
     "chapters": [
       {
         "start": 1427,
         "end": 1428,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25033,6 +25110,9 @@
     "lemma": "Domitius 63",
     "previous": "Domitius 62",
     "next": "Domitius 64",
+    "sort_key": "Domitius 063",
+    "redirect": "Latronianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1428,
@@ -25044,6 +25124,9 @@
     "lemma": "Domitius 64",
     "previous": "Domitius 63",
     "next": "Domitius 65",
+    "sort_key": "Domitius 064",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1428,
@@ -25055,11 +25138,13 @@
     "lemma": "Domitius 65",
     "previous": "Domitius 64",
     "next": "Domitius 66",
+    "sort_key": "Domitius 065",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1428,
         "end": 1430,
-        "author": "Kappelmacher"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -25067,11 +25152,14 @@
     "lemma": "Domitius 66",
     "previous": "Domitius 65",
     "next": "Domitius 67",
+    "sort_key": "Domitius 066",
+    "proof_read": 2,
+    "wp_link": "w:de:Domitius Marsus",
     "chapters": [
       {
         "start": 1430,
         "end": 1432,
-        "author": "Skutsch, [Franz]"
+        "author": "Skutsch."
       }
     ]
   },
@@ -25079,6 +25167,9 @@
     "lemma": "Domitius 67",
     "previous": "Domitius 66",
     "next": "Domitius 68",
+    "sort_key": "Domitius 067",
+    "redirect": "Modestus 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1432,
@@ -25090,11 +25181,13 @@
     "lemma": "Domitius 68",
     "previous": "Domitius 67",
     "next": "Domitius 69",
+    "sort_key": "Domitius 068",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1432,
         "end": 1432,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25102,11 +25195,12 @@
     "lemma": "Domitius 69",
     "previous": "Domitius 68",
     "next": "Domitius 70",
+    "sort_key": "Domitius 069",
     "chapters": [
       {
         "start": 1432,
         "end": 1432,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25114,6 +25208,9 @@
     "lemma": "Domitius 70",
     "previous": "Domitius 69",
     "next": "Domitius 71",
+    "sort_key": "Domitius 070",
+    "redirect": "Domitius 111",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1432,
@@ -25125,11 +25222,14 @@
     "lemma": "Domitius 71",
     "previous": "Domitius 70",
     "next": "Domitius 72",
+    "sort_key": "Domitius 071",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1432,
         "end": 1432,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25137,11 +25237,13 @@
     "lemma": "Domitius 72",
     "previous": "Domitius 71",
     "next": "Domitius 73",
+    "sort_key": "Domitius 072",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1432,
         "end": 1432,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25149,11 +25251,13 @@
     "lemma": "Domitius 73",
     "previous": "Domitius 72",
     "next": "Domitius 74",
+    "sort_key": "Domitius 073",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1432,
         "end": 1433,
-        "author": "Rossbach"
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -25161,6 +25265,9 @@
     "lemma": "Domitius 74",
     "previous": "Domitius 73",
     "next": "Domitius 75",
+    "sort_key": "Domitius 074",
+    "redirect": "Annaeus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1433,
@@ -25171,115 +25278,23 @@
   {
     "lemma": "Domitius 75",
     "previous": "Domitius 74",
-    "next": "Domitius 77",
+    "next": "Domitius 76",
+    "sort_key": "Domitius 075",
     "chapters": [
       {
         "start": 1433,
         "end": 1433,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
-    "lemma": "Domitius 77",
+    "lemma": "Domitius 76",
     "previous": "Domitius 75",
-    "next": "Domitius 78",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1433,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Domitius 78",
-    "previous": "Domitius 77",
-    "next": "Domitius 79",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1433,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Domitius 79",
-    "previous": "Domitius 78",
-    "next": "Domitius 80",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1433,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Domitius 80",
-    "previous": "Domitius 79",
-    "next": "Domitius 81",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1433,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
-    "lemma": "Domitius 81",
-    "previous": "Domitius 80",
-    "next": "Domitius 82",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1433,
-        "author": "Stein, [Arthur]"
-      }
-    ]
-  },
-  {
-    "lemma": "Domitius 82",
-    "previous": "Domitius 81",
-    "next": "Domitius 83",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1433,
-        "author": "Münzer"
-      }
-    ]
-  },
-  {
-    "lemma": "Domitius 83",
-    "previous": "Domitius 82",
-    "next": "Domitius 84",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1433,
-        "author": "Groag"
-      }
-    ]
-  },
-  {
-    "lemma": "Domitius 84",
-    "previous": "Domitius 83",
-    "next": "Salvius Domitius Rufinus, C. 76",
-    "chapters": [
-      {
-        "start": 1433,
-        "end": 1435,
-        "author": "Kappelmacher"
-      }
-    ]
-  },
-  {
-    "lemma": "Salvius Domitius Rufinus, C. 76",
-    "previous": "Domitius 84",
-    "next": "Domitius 85",
+    "next": "Domitius 77",
+    "sort_key": "Domitius 076",
+    "redirect": "Salvius 12d",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1433,
@@ -25288,14 +25303,128 @@
     ]
   },
   {
+    "lemma": "Domitius 77",
+    "previous": "Domitius 76",
+    "next": "Domitius 78",
+    "sort_key": "Domitius 077",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1433,
+        "author": "Stein."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 78",
+    "previous": "Domitius 77",
+    "next": "Domitius 79",
+    "sort_key": "Domitius 078",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1433,
+        "author": "Stein."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 79",
+    "previous": "Domitius 78",
+    "next": "Domitius 80",
+    "sort_key": "Domitius 079",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1433,
+        "author": "Stein."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 80",
+    "previous": "Domitius 79",
+    "next": "Domitius 81",
+    "sort_key": "Domitius 080",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1433,
+        "author": "Groag."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 81",
+    "previous": "Domitius 80",
+    "next": "Domitius 82",
+    "sort_key": "Domitius 081",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1433,
+        "author": "Stein."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 82",
+    "previous": "Domitius 81",
+    "next": "Domitius 83",
+    "sort_key": "Domitius 082",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1433,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 83",
+    "previous": "Domitius 82",
+    "next": "Domitius 84",
+    "sort_key": "Domitius 083",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1433,
+        "author": "Groag."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 84",
+    "previous": "Domitius 83",
+    "next": "Domitius 85",
+    "sort_key": "Domitius 084",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1433,
+        "end": 1435,
+        "author": "Kappelmacher."
+      }
+    ]
+  },
+  {
     "lemma": "Domitius 85",
-    "previous": "Salvius Domitius Rufinus, C. 76",
+    "previous": "Domitius 84",
     "next": "Domitius 86",
+    "sort_key": "Domitius 085",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
         "end": 1435,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25303,6 +25432,9 @@
     "lemma": "Domitius 86",
     "previous": "Domitius 85",
     "next": "Domitius 87",
+    "sort_key": "Domitius 086",
+    "redirect": "Servilius 54a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
@@ -25314,11 +25446,13 @@
     "lemma": "Domitius 87",
     "previous": "Domitius 86",
     "next": "Domitius 88",
+    "sort_key": "Domitius 087",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
         "end": 1435,
-        "author": "Wissowa"
+        "author": "Wissowa."
       }
     ]
   },
@@ -25338,6 +25472,9 @@
     "lemma": "Domitius 89",
     "previous": "Domitius 88",
     "next": "Domitius 90",
+    "sort_key": "Domitius 089",
+    "redirect": "Zenophilos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1509,
@@ -25349,11 +25486,13 @@
     "lemma": "Domitius 90",
     "previous": "Domitius 89",
     "next": "Domitius 91",
+    "sort_key": "Domitius 090",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1509,
         "end": 1509,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -25361,11 +25500,12 @@
     "lemma": "Domitius 91",
     "previous": "Domitius 90",
     "next": "Domitius 92",
+    "sort_key": "Domitius 091",
     "chapters": [
       {
         "start": 1509,
         "end": 1510,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25373,11 +25513,13 @@
     "lemma": "Domitius 92",
     "previous": "Domitius 91",
     "next": "Domitius 93",
+    "sort_key": "Domitius 092",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1510,
         "end": 1510,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25385,11 +25527,13 @@
     "lemma": "Domitius 93",
     "previous": "Domitius 92",
     "next": "Domitius 94",
+    "sort_key": "Domitius 093",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1510,
         "end": 1510,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -25397,11 +25541,13 @@
     "lemma": "Domitius 94",
     "previous": "Domitius 93",
     "next": "Domitius 95",
+    "sort_key": "Domitius 094",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1510,
         "end": 1511,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25409,11 +25555,13 @@
     "lemma": "Domitius 95",
     "previous": "Domitius 94",
     "next": "Domitius 96",
+    "sort_key": "Domitius 095",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1511,
         "end": 1511,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25421,11 +25569,13 @@
     "lemma": "Domitius 96",
     "previous": "Domitius 95",
     "next": "Domitius 97",
+    "sort_key": "Domitius 096",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1511,
         "end": 1511,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25433,11 +25583,13 @@
     "lemma": "Domitius 97",
     "previous": "Domitius 96",
     "next": "Domitius 98",
+    "sort_key": "Domitius 097",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1511,
         "end": 1511,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25445,11 +25597,12 @@
     "lemma": "Domitius 98",
     "previous": "Domitius 97",
     "next": "Domitius 99",
+    "sort_key": "Domitius 098",
     "chapters": [
       {
         "start": 1511,
         "end": 1511,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25457,11 +25610,13 @@
     "lemma": "Domitius 99",
     "previous": "Domitius 98",
     "next": "Domitius 100",
+    "sort_key": "Domitius 099",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1511,
         "end": 1511,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25482,11 +25637,12 @@
     "lemma": "Domitius 101",
     "previous": "Domitius 100",
     "next": "Domitius 102",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1511,
         "end": 1511,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25494,11 +25650,12 @@
     "lemma": "Domitius 102",
     "previous": "Domitius 101",
     "next": "Domitius 103",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1511,
         "end": 1513,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25518,11 +25675,12 @@
     "lemma": "Domitius 104",
     "previous": "Domitius 103",
     "next": "Domitius 105",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1516,
         "end": 1518,
-        "author": "Kappelmacher"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -25530,11 +25688,12 @@
     "lemma": "Domitius 105",
     "previous": "Domitius 104",
     "next": "Domitius 106",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1518,
         "end": 1519,
-        "author": "Kappelmacher"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -25542,11 +25701,12 @@
     "lemma": "Domitius 106",
     "previous": "Domitius 105",
     "next": "Domitius 107",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1519,
         "end": 1519,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25554,11 +25714,12 @@
     "lemma": "Domitius 107",
     "previous": "Domitius 106",
     "next": "Domitius 108",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1519,
         "end": 1519,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25570,7 +25731,7 @@
       {
         "start": 1519,
         "end": 1520,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25578,6 +25739,8 @@
     "lemma": "Domitius 109",
     "previous": "Domitius 108",
     "next": "Domitius 110",
+    "redirect": "Calpurnius 136",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1520,
@@ -25589,11 +25752,12 @@
     "lemma": "Domitius 110",
     "previous": "Domitius 109",
     "next": "Domitius 111",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1520,
         "end": 1520,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -25601,11 +25765,12 @@
     "lemma": "Domitius 111",
     "previous": "Domitius 110",
     "next": "Domitius 112",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1520,
         "end": 1520,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25613,11 +25778,12 @@
     "lemma": "Domitius 112",
     "previous": "Domitius 111",
     "next": "Domitius deus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1520,
         "end": 1520,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -25625,11 +25791,12 @@
     "lemma": "Domitius deus",
     "previous": "Domitius 112",
     "next": "Domitus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1520,
         "end": 1520,
-        "author": "Aust"
+        "author": "Aust."
       }
     ]
   },
@@ -25637,11 +25804,12 @@
     "lemma": "Domitus",
     "previous": "Domitius deus",
     "next": "Domnacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1520,
         "end": 1520,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -25649,11 +25817,13 @@
     "lemma": "Domnacus",
     "previous": "Domitus",
     "next": "Domnekleios",
+    "proof_read": 3,
+    "wp_link": "w:de:Dumnacus",
     "chapters": [
       {
         "start": 1520,
         "end": 1520,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -25661,11 +25831,12 @@
     "lemma": "Domnekleios",
     "previous": "Domnacus",
     "next": "Domnentiolos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1521,
         "end": 1521,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -25673,11 +25844,12 @@
     "lemma": "Domnentiolos",
     "previous": "Domnekleios",
     "next": "Domnica 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1521,
         "end": 1521,
-        "author": "Hartmann, [Ludo Moritz]"
+        "author": "Hartmann."
       }
     ]
   },
@@ -25804,11 +25976,12 @@
     "lemma": "Domninos 4",
     "previous": "Domninos 3",
     "next": "Domninos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1521,
         "end": 1525,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -25816,6 +25989,8 @@
     "lemma": "Domninos 5",
     "previous": "Domninos 4",
     "next": "Domninos 6",
+    "redirect": "Malalas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1526,
@@ -25827,11 +26002,12 @@
     "lemma": "Domninos 6",
     "previous": "Domninos 5",
     "next": "Domninos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1526,
         "end": 1526,
-        "author": "Jörs"
+        "author": "Jörs."
       }
     ]
   },
@@ -25839,11 +26015,12 @@
     "lemma": "Domninos 7",
     "previous": "Domninos 6",
     "next": "Domnio 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1526,
         "end": 1526,
-        "author": "Schmid"
+        "author": "W. Schmid."
       }
     ]
   },
@@ -25929,11 +26106,12 @@
     "lemma": "Domnus 3",
     "previous": "Domnus 2",
     "next": "Domnus Fidus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1526,
         "end": 1526,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -25941,11 +26119,12 @@
     "lemma": "Domnus Fidus",
     "previous": "Domnus 3",
     "next": "Domus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1527,
         "end": 1527,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -25968,11 +26147,12 @@
     "lemma": "Domus divina",
     "previous": "Domus",
     "next": "Dona",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1527,
         "end": 1527,
-        "author": "Neumann, K[arl] J[ohannes]"
+        "author": "Neumann."
       }
     ]
   },
@@ -25993,11 +26173,12 @@
     "lemma": "Donakinos",
     "previous": "Dona",
     "next": "Donakis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1527,
         "end": 1527,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -26005,11 +26186,12 @@
     "lemma": "Donakis",
     "previous": "Donakinos",
     "next": "Donakos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1527,
         "end": 1527,
-        "author": "Kirchner"
+        "author": "Escher."
       }
     ]
   },
@@ -26017,11 +26199,12 @@
     "lemma": "Donakos",
     "previous": "Donakis",
     "next": "Donaktas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1527,
         "end": 1527,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -26029,11 +26212,12 @@
     "lemma": "Donaktas",
     "previous": "Donakos",
     "next": "Donakus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1527,
         "end": 1528,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -26041,11 +26225,12 @@
     "lemma": "Donakus",
     "previous": "Donaktas",
     "next": "Dona militaria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1528,
         "end": 1528,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -26053,11 +26238,12 @@
     "lemma": "Dona militaria",
     "previous": "Donakus",
     "next": "Donaria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1528,
         "end": 1531,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },

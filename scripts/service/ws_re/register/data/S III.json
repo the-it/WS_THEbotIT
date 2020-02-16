@@ -1737,7 +1737,7 @@
   {
     "lemma": "Albus 2",
     "previous": "Albucius 3a",
-    "next": "Alençon, Notre Dame d'-",
+    "next": "Alençon, Notre Dame d’-",
     "proof_read": 3,
     "chapters": [
       {
@@ -1748,7 +1748,7 @@
     ]
   },
   {
-    "lemma": "Alençon, Notre Dame d'-",
+    "lemma": "Alençon, Notre Dame d’-",
     "previous": "Albus 2",
     "next": "Alesia 1",
     "sort_key": "Alençon, Notre Dame d,-,",
@@ -1763,7 +1763,7 @@
   },
   {
     "lemma": "Alesia 1",
-    "previous": "Alençon, Notre Dame d'-"
+    "previous": "Alençon, Notre Dame d’-"
   },
   {
     "lemma": "Aleuas 5",
@@ -8410,7 +8410,6 @@
     "next": "Avanacus vicus",
     "proof_read": 2,
     "wp_link": "w:de:Avallon",
-    "ws_link": "s:en:1911 Encyclopædia Britannica/Avallon",
     "wd_link": "d:Q207572",
     "chapters": [
       {
@@ -8783,8 +8782,10 @@
     ]
   },
   {
-    "lemma": "Augustobriga 1",
-    "previous": "Augustobona",
+    "lemma": "Augustobriga 1"
+  },
+  {
+    "lemma": "Augustobriga 2",
     "next": "Augustodunum",
     "proof_read": 3,
     "wp_link": "w:de:Ciudad Rodrigo",
@@ -8799,7 +8800,7 @@
   },
   {
     "lemma": "Augustodunum",
-    "previous": "Augustobriga 1",
+    "previous": "Augustobriga 2",
     "next": "Augustodurum",
     "proof_read": 3,
     "wp_link": "w:de:Autun",
@@ -17702,7 +17703,15 @@
   {
     "lemma": "Ditalco",
     "previous": "Disetus",
-    "next": "Διθυράμβιος"
+    "next": "Διθυράμβιος",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 340,
+        "end": 340,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Διθυράμβιος",
@@ -17747,7 +17756,7 @@
   {
     "lemma": "Divicus",
     "previous": "Divicatus 1",
-    "next": "Divixtus 1",
+    "next": "Divixtus",
     "proof_read": 2,
     "chapters": [
       {
@@ -17758,10 +17767,10 @@
     ]
   },
   {
-    "lemma": "Divixtus 1",
+    "lemma": "Divixtus",
     "previous": "Divicus",
     "next": "Dixtus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 341,
@@ -17772,7 +17781,6 @@
   },
   {
     "lemma": "Dixtus",
-    "previous": "Divixtus 1",
     "next": "Doccius",
     "proof_read": 2,
     "chapters": [
@@ -17811,6 +17819,7 @@
   },
   {
     "lemma": "Dodoparos",
+    "previous": "Docilis 2",
     "next": "Doeccus",
     "proof_read": 2,
     "chapters": [
@@ -17850,10 +17859,21 @@
   },
   {
     "lemma": "Dolium",
-    "previous": "Δογματογράφοι"
+    "previous": "Δογματογράφοι",
+    "next": "Domis",
+    "sort_key": "Dolium",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 342,
+        "end": 346,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Domis",
+    "previous": "Dolium",
     "next": "Domitianae figlinae",
     "chapters": [
       {
@@ -24153,7 +24173,7 @@
     "lemma": "Ad Ioglandem",
     "previous": "Intaranum",
     "next": "Iolaos 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1241,

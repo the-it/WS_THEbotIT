@@ -235,6 +235,7 @@ class TestLemma(BaseTestRegister):
         # compare("drimylon oros", Lemma.make_sort_key("Δριμύλον ὅρος"))
         compare("hea", Lemma.make_sort_key("Ἑα"))
         compare("ea", Lemma.make_sort_key("Ἐα"))
+        compare("iabadiu nesos", Lemma.make_sort_key("Ἰαβαδίου νῆσος"))
 
 
     def test_sort_key_provide_by_lemma(self):

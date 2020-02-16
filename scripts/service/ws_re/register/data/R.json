@@ -31,6 +31,9 @@
     ]
   },
   {
+    "lemma": "Acilius 22"
+  },
+  {
     "lemma": "Acilius 40",
     "next": "Acilius 40a"
   },
@@ -107,6 +110,9 @@
   {
     "lemma": "Acilius 42",
     "previous": "Acilius 40e"
+  },
+  {
+    "lemma": "Acilius 57"
   },
   {
     "lemma": "Aelius 23a",
@@ -398,7 +404,6 @@
   {
     "lemma": "Albania 2",
     "previous": "Akanthos 5a",
-    "next": "Alkmeonides 1",
     "redirect": true,
     "chapters": [
       {
@@ -407,9 +412,11 @@
       }
     ]
   },
+    {
+    "lemma": "Alexandreia 23"
+  },
   {
     "lemma": "Alkmeonides 1",
-    "previous": "Albania 2",
     "next": "Allât",
     "redirect": true,
     "chapters": [
@@ -482,7 +489,6 @@
   {
     "lemma": "Amithoscatta",
     "previous": "Ambito",
-    "next": "Ancharius 1a",
     "redirect": true,
     "chapters": [
       {
@@ -491,9 +497,9 @@
       }
     ]
   },
+  {"lemma": "Anamares"},
   {
     "lemma": "Ancharius 1a",
-    "previous": "Amithoscatta",
     "next": "Andaga",
     "redirect": true,
     "chapters": [
@@ -575,7 +581,6 @@
   {
     "lemma": "Annianus 8",
     "previous": "Anicius 54a",
-    "next": "Antinoitai",
     "redirect": true,
     "chapters": [
       {
@@ -584,10 +589,10 @@
       }
     ]
   },
+  {"lemma": "Annius 9b"},
+  {"lemma": "Annius 9c"},
   {
     "lemma": "Antinoitai",
-    "previous": "Annianus 8",
-    "next": "Antistius",
     "redirect": true,
     "chapters": [
       {
@@ -597,20 +602,16 @@
     ]
   },
   {
-    "lemma": "Antistius",
-    "previous": "Antinoitai",
-    "next": "Antius 6a",
-    "redirect": true,
-    "chapters": [
-      {
-        "start": 32,
-        "end": 32
-      }
-    ]
+    "lemma": "Antistius 24"
+  },
+  {
+    "lemma": "Antistius 25"
+  },
+  {
+    "lemma": "Antistius 26"
   },
   {
     "lemma": "Antius 6a",
-    "previous": "Antistius",
     "next": "Antonius 121a",
     "redirect": true,
     "chapters": [
@@ -704,7 +705,6 @@
   {
     "lemma": "Aquilinus 6",
     "previous": "Apronius 4a",
-    "next": "Archiphylax 2",
     "chapters": [
       {
         "start": 37,
@@ -712,9 +712,11 @@
       }
     ]
   },
+    {
+    "lemma": "Aradius 1"
+  },
   {
     "lemma": "Archiphylax 2",
-    "previous": "Aquilinus 6",
     "next": "Arel",
     "chapters": [
       {
@@ -3917,7 +3919,6 @@
   {
     "lemma": "Likymnios a",
     "previous": "Libanotis",
-    "next": "Livila",
     "chapters": [
       {
         "start": 157,
@@ -3925,9 +3926,9 @@
       }
     ]
   },
+  {"lemma": "Litra"},
   {
     "lemma": "Livila",
-    "previous": "Likymnios a",
     "next": "Lucillus 2a",
     "chapters": [
       {
