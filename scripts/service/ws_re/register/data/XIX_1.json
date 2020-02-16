@@ -6027,6 +6027,7 @@
   {
     "lemma": "Penus Vestae",
     "previous": "Pentri",
+    "next": "Χωρίον Πεῶν",
     "chapters": [
       {
         "start": 551,
@@ -6034,9 +6035,23 @@
       }
     ]
   },
-  {"lemma": "Χωρίον Πεῶν"},
+  {
+    "lemma": "Χωρίον Πεῶν",
+    "previous": "Penus Vestae",
+    "next": "Peos Artemidos",
+    "sort_key": "Chorion Peon",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 551,
+        "end": 551,
+        "author": "W. Ruge."
+      }
+    ]
+  },
   {
     "lemma": "Peos Artemidos",
+    "previous": "Χωρίον Πεῶν",
     "next": "Peparethos 1",
     "chapters": [
       {

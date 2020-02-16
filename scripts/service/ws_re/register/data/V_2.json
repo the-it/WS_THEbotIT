@@ -35,7 +35,7 @@
       {
         "start": 1542,
         "end": 1542,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -67,11 +67,13 @@
     "lemma": "Donatus 2",
     "previous": "Donatus 1",
     "next": "Donatus 3",
+    "sort_key": "Donatus 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1545,
         "end": 1545,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -239,7 +241,7 @@
       {
         "start": 1548,
         "end": 1548,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -251,7 +253,7 @@
       {
         "start": 1548,
         "end": 1548,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -259,11 +261,12 @@
     "lemma": "Dontas",
     "previous": "Donnus",
     "next": "Dontus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1548,
         "end": 1548,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -271,11 +274,12 @@
     "lemma": "Dontus",
     "previous": "Dontas",
     "next": "Donusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1548,
         "end": 1548,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -283,11 +287,12 @@
     "lemma": "Donusa",
     "previous": "Dontus",
     "next": "Dora 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1548,
         "end": 1549,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -363,11 +368,12 @@
     "lemma": "Doranum",
     "previous": "Dorakta",
     "next": "Dorath",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -375,11 +381,12 @@
     "lemma": "Dorath",
     "previous": "Doranum",
     "next": "Dorbeta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
@@ -387,41 +394,45 @@
     "lemma": "Dorbeta",
     "previous": "Dorath",
     "next": "Dordomana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Streck"
+        "author": "Streck."
       }
     ]
   },
   {
     "lemma": "Dordomana",
     "previous": "Dorbeta",
-    "next": "Dorea",
+    "next": "Δωρεά",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
   {
-    "lemma": "Dorea",
+    "lemma": "Δωρεά",
     "previous": "Dordomana",
     "next": "Doreïa",
+    "sort_key": "Dorea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
   {
     "lemma": "Doreïa",
-    "previous": "Dorea",
+    "previous": "Δωρεά",
     "next": "Doreia",
     "chapters": [
       {
@@ -14606,6 +14617,7 @@
   },
   {
     "lemma": "Elaphonnesos 3",
+    "next": "Elaphonnesos 4",
     "chapters": [
       {
         "start": 2234,
@@ -14614,9 +14626,22 @@
       }
     ]
   },
-  {"lemma": "Elaphonnesos 4"},
+  {
+    "lemma": "Elaphonnesos 4",
+    "previous": "Elaphonnesos 3",
+    "next": "Elaphos",
+    "redirect": "Halone",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 2234,
+        "end": 2234
+      }
+    ]
+  },
   {
     "lemma": "Elaphos",
+    "previous": "Elaphonnesos 4",
     "chapters": [
       {
         "start": 2234,

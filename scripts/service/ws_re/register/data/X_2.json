@@ -17783,6 +17783,7 @@
   {
     "lemma": "Kaidris",
     "previous": "Kaboure",
+    "next": "Kairos 1",
     "chapters": [
       {
         "start": 2535,
@@ -17791,9 +17792,25 @@
       }
     ]
   },
-  {"lemma": "Kairos 1"},
+  {
+    "lemma": "Kairos 1",
+    "previous": "Kaidris",
+    "next": "Kakyron",
+    "sort_key": "Kairos 1",
+    "proof_read": 3,
+    "wp_link": "w:de:Kairos",
+    "wd_link": "d:Q845756",
+    "chapters": [
+      {
+        "start": 2535,
+        "end": 2535,
+        "author": "Lamer."
+      }
+    ]
+  },
   {
     "lemma": "Kakyron",
+    "previous": "Kairos 1",
     "next": "Kalaureia 2",
     "chapters": [
       {

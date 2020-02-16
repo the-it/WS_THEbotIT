@@ -9213,6 +9213,7 @@
     "previous": "Marius 13",
     "next": "Marius 15",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1811,
@@ -13818,21 +13819,27 @@
       }
     ]
   },
-  {"lemma": "Massa Veternensis"},
   {
-    "lemma": "Massabatike",
+    "lemma": "Massa Veternensis",
+    "next": "Μασσαβατική"
+  },
+  {
+    "lemma": "Μασσαβατική",
+    "previous": "Massa Veternensis",
     "next": "Massaesyli",
+    "sort_key": "Massabatike",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2123,
         "end": 2123,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Massaesyli",
-    "previous": "Massabatike",
+    "previous": "Μασσαβατική",
     "next": "Massaga",
     "chapters": [
       {

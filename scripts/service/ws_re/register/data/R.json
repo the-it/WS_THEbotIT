@@ -31,7 +31,27 @@
     ]
   },
   {
-    "lemma": "Acilius 22"
+    "lemma": "Acilius 18a",
+    "next": "Acilius 22"
+  },
+  {
+    "lemma": "Acilius 22",
+    "previous": "Acilius 18a",
+    "next": "Acilius 28a",
+    "proof_read": 3,
+    "wp_link": "w:de:Manius Acilius Aviola (Konsul 54)",
+    "wd_link": "d:Q716693",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7,
+        "author": "Gärtner & Wünsch."
+      }
+    ]
+  },
+  {
+    "lemma": "Acilius 28a",
+    "previous": "Acilius 22"
   },
   {
     "lemma": "Acilius 40",
@@ -112,7 +132,25 @@
     "previous": "Acilius 40e"
   },
   {
-    "lemma": "Acilius 57"
+    "lemma": "Acilius 52",
+    "next": "Acilius 57"
+  },
+  {
+    "lemma": "Acilius 57",
+    "previous": "Acilius 52",
+    "next": "Acilius 57a",
+    "wp_link": "w:de:Lucius Acilius Strabo",
+    "wd_link": "d:Q716698",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "lemma": "Acilius 57a",
+    "previous": "Acilius 57"
   },
   {
     "lemma": "Aelius 23a",
@@ -412,8 +450,24 @@
       }
     ]
   },
-    {
-    "lemma": "Alexandreia 23"
+  {
+    "lemma": "Alexandreia 21a",
+    "next": "Alexandreia 23"
+  },
+  {
+    "lemma": "Alexandreia 23",
+    "previous": "Alexandreia 21a",
+    "next": "Alexandreion 3",
+    "chapters": [
+      {
+        "start": 19,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "lemma": "Alexandreion 3",
+    "previous": "Alexandreia 23"
   },
   {
     "lemma": "Alkmeonides 1",
@@ -497,7 +551,26 @@
       }
     ]
   },
-  {"lemma": "Anamares"},
+  {
+    "lemma": "Analemma",
+    "next": "Anamares"
+  },
+  {
+    "lemma": "Anamares",
+    "previous": "Analemma",
+    "next": "Anamta",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 26,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "lemma": "Anamta",
+    "previous": "Anamares"
+  },
   {
     "lemma": "Ancharius 1a",
     "next": "Andaga",
@@ -589,8 +662,42 @@
       }
     ]
   },
-  {"lemma": "Annius 9b"},
-  {"lemma": "Annius 9c"},
+  {
+    "lemma": "Annianus 9",
+    "next": "Annius 9b"
+  },
+  {
+    "lemma": "Annius 9b",
+    "previous": "Annianus 9",
+    "next": "Annius 9c",
+    "sort_key": "Annius 009b",
+    "redirect": true,
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 29,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "lemma": "Annius 9c",
+    "previous": "Annius 9b",
+    "next": "Antikles 6a",
+    "sort_key": "Annius 009c",
+    "redirect": true,
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 29,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "lemma": "Antikles 6a",
+    "previous": "Annius 9c"
+  },
   {
     "lemma": "Antinoitai",
     "redirect": true,
@@ -602,13 +709,57 @@
     ]
   },
   {
-    "lemma": "Antistius 24"
+    "lemma": "Antistii",
+    "next": "Antistius 24"
   },
   {
-    "lemma": "Antistius 25"
+    "lemma": "Antistius 24",
+    "previous": "Antistii",
+    "next": "Antistius 25",
+    "proof_read": 3,
+    "wp_link": "w:de:Antistius",
+    "wd_link": "d:Q583588",
+    "chapters": [
+      {
+        "start": 32,
+        "end": 32,
+        "author": "Gärtner & Wünsch."
+      }
+    ]
   },
   {
-    "lemma": "Antistius 26"
+    "lemma": "Antistius 25",
+    "previous": "Antistius 24",
+    "next": "Antistius 26",
+    "proof_read": 3,
+    "wp_link": "w:de:Antistius",
+    "wd_link": "d:Q583588",
+    "chapters": [
+      {
+        "start": 32,
+        "end": 32,
+        "author": "Gärtner & Wünsch."
+      }
+    ]
+  },
+  {
+    "lemma": "Antistius 26",
+    "previous": "Antistius 25",
+    "next": "Antistius 27",
+    "proof_read": 3,
+    "wp_link": "w:de:Antistius",
+    "wd_link": "d:Q583588",
+    "chapters": [
+      {
+        "start": 32,
+        "end": 32,
+        "author": "Gärtner & Wünsch."
+      }
+    ]
+  },
+  {
+    "lemma": "Antistius 27",
+    "previous": "Antistius 26"
   },
   {
     "lemma": "Antius 6a",
@@ -712,8 +863,24 @@
       }
     ]
   },
-    {
-    "lemma": "Aradius 1"
+  {
+    "lemma": "Aradius a",
+    "next": "Aradius 1"
+  },
+  {
+    "lemma": "Aradius 1",
+    "previous": "Aradius a",
+    "next": "Aradius 1a",
+    "chapters": [
+      {
+        "start": 38,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "lemma": "Aradius 1a",
+    "previous": "Aradius 1"
   },
   {
     "lemma": "Archiphylax 2",
@@ -3926,7 +4093,27 @@
       }
     ]
   },
-  {"lemma": "Litra"},
+  {
+    "lemma": "Lithinos pyrgos",
+    "next": "Litra"
+  },
+  {
+    "lemma": "Litra",
+    "previous": "Lithinos pyrgos",
+    "next": "Litteriacus",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 158,
+        "end": 158,
+        "author": "Gärtner & Wünsch."
+      }
+    ]
+  },
+  {
+    "lemma": "Litteriacus",
+    "previous": "Litra"
+  },
   {
     "lemma": "Livila",
     "next": "Lucillus 2a",

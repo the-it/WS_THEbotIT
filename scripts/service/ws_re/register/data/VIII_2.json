@@ -1,7 +1,13 @@
 [
-  {"lemma": "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913"},
+  {
+    "lemma": "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913",
+    "next": "Hestiaia 1",
+    "sort_key": "!Autoren1913",
+    "proof_read": 3
+  },
   {
     "lemma": "Hestiaia 1",
+    "previous": "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913",
     "next": "Hestiaia 2",
     "proof_read": 3,
     "chapters": [
