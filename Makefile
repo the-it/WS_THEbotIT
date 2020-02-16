@@ -1,3 +1,6 @@
+#####################
+### PACKAGE STUFF ###
+#####################
 clean-pyc :
 	echo "######## CLEAN PY CACHE ########"
 	find . | grep -E "__pycache__" | xargs rm -rf
@@ -22,11 +25,9 @@ update_pip3 : install_pip
 	pip-compile --output-file requirements-dev.txt requirements-dev.in
 	pip-sync requirements.txt requirements-dev.txt
 
-
-cloc :
-	echo "########## COUNT LOC ###########"
-	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
-
+###############
+### QUALITY ###
+###############
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
 	pycodestyle --show-source --statistics --count
@@ -38,10 +39,6 @@ pylint :
 bandit :
 	echo "############ BANDIT ############"
 	bandit -r scripts tools
-
-gource :
-	echo "############ GOURCE ############"
-	gource -s 0.1 .
 
 mypy :
 	echo "############# MYPY #############"
@@ -55,6 +52,9 @@ flake8 :
 	echo "############ FLAKE8 ############"
 	flake8
 
+############################
+### TESTING AND COVERAGE ###
+############################
 unittest :
 	echo "########### UNITTEST ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
@@ -87,6 +87,20 @@ codecov :
 	echo "########### CODECOV ############"
 	codecov
 
+#############
+### STUFF ###
+#############
+gource :
+	echo "############ GOURCE ############"
+	gource -s 0.1 .
+
+cloc :
+	echo "########## COUNT LOC ###########"
+	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
+
+#############
+### PHONY ###
+#############
 clean : clean-pyc clean-coverage
 
 pre-commit : update_pip3 quality integrationtest
