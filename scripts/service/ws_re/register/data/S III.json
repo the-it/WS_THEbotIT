@@ -8795,11 +8795,9 @@
     ]
   },
   {
-    "lemma": "Augustobriga 1"
-  },
-  {
-    "lemma": "Augustobriga 2",
-    "next": "Augustodunum",
+    "lemma": "Augustobriga 1",
+    "previous": "Augustobona",
+    "next": "Augustobriga 2",
     "proof_read": 3,
     "wp_link": "w:de:Ciudad Rodrigo",
     "wd_link": "d:Q820476",
@@ -8808,6 +8806,20 @@
         "start": 186,
         "end": 186,
         "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Augustobriga 2",
+    "previous": "Augustobriga 1",
+    "next": "Augustodunum",
+    "proof_read": 3,
+    "wp_link": "w:de:Ágreda",
+    "wd_link": "d:Q39856",
+    "chapters": [
+      {
+        "start": 186,
+        "end": 186
       }
     ]
   },
@@ -17794,6 +17806,7 @@
   },
   {
     "lemma": "Dixtus",
+    "previous": "Divixtus",
     "next": "Doccius",
     "proof_read": 2,
     "chapters": [
@@ -21228,7 +21241,7 @@
     "lemma": "Gemellus 10",
     "previous": "Gemella a",
     "next": "Gemenus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 542,

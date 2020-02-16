@@ -148,6 +148,7 @@
   {
     "lemma": "Alexandros 35",
     "previous": "Alexandros 34",
+    "next": "Alexandros 36. 37",
     "sort_key": "Alexandros 035",
     "proof_read": 3,
     "chapters": [
@@ -159,7 +160,22 @@
     ]
   },
   {
+    "lemma": "Alexandros 36. 37",
+    "previous": "Alexandros 35",
+    "next": "Alexandros 38",
+    "sort_key": "Alexandros 036",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1443,
+        "end": 1443,
+        "author": "Wilhelm."
+      }
+    ]
+  },
+  {
     "lemma": "Alexandros 38",
+    "previous": "Alexandros 36. 37",
     "next": "Alexandros 39",
     "sort_key": "Alexandros 038",
     "proof_read": 3,
@@ -9259,7 +9275,7 @@
     "lemma": "Alychme",
     "previous": "Alybe 2",
     "next": "Alychmios",
-    "redirect": "Alimala",
+    "redirect": "Alimala (?)",
     "proof_read": 3,
     "chapters": [
       {

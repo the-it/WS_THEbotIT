@@ -1,5 +1,10 @@
 [
-  {"lemma": "Vorwort (Band I)"},
+  {
+    "lemma": "Vorwort (Band I)",
+    "next": "Abkürzungen",
+    "sort_key": "!Vorwort Band 1",
+    "proof_read": 3
+  },
   {
     "lemma": "Abkürzungen",
     "previous": "Vorwort (Band I)",
@@ -37850,6 +37855,8 @@
     "previous": "Aitymandroi",
     "next": "Aiurensis",
     "proof_read": 3,
+    "wp_link": "w:de:Agiulf (Warnen)",
+    "wd_link": "d:Q600482",
     "chapters": [
       {
         "start": 1129,
