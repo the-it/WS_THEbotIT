@@ -11,7 +11,7 @@ chardet==3.0.4            # via requests
 defusedxml==0.6.0
 deprecated==1.2.7         # via pygithub
 docutils==0.16          # via botocore
-gitdb2==3.0.0             # via gitpython
+gitdb2==3.0.2             # via gitpython
 gitpython==3.0.7
 idna==2.8                 # via requests
 jmespath==0.9.4           # via boto3, botocore
