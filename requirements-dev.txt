@@ -36,7 +36,7 @@ entrypoints==0.3          # via flake8
 flake8==3.7.9
 freezegun==0.3.14
 future==0.18.2            # via aws-xray-sdk
-gitdb2==3.0.0             # via gitpython
+gitdb2==3.0.2             # via gitpython
 gitpython==3.0.7          # via bandit
 idna==2.8                 # via moto, requests
 internetarchive==1.9.0
