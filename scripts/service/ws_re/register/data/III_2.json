@@ -36931,6 +36931,7 @@
   {
     "lemma": "Chus",
     "previous": "Churitae",
+    "next": "Χοῦς",
     "proof_read": 2,
     "chapters": [
       {
@@ -36942,6 +36943,7 @@
   },
   {
     "lemma": "Χοῦς",
+    "previous": "Chus",
     "next": "Chusa",
     "proof_read": 2,
     "chapters": [
@@ -47126,8 +47128,13 @@
       }
     ]
   },
-  {"lemma": "Burebista"},
-  {"lemma": "Caelus"},
+  {
+    "lemma": "Burebista"
+  },
+  {
+    "lemma": "Caelus",
+    "next": "Carthago nova"
+  },
   {
     "lemma": "Carthago nova",
     "previous": "Caelus",

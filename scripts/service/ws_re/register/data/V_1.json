@@ -20878,6 +20878,7 @@
   {
     "lemma": "Dipoinos",
     "previous": "Dipoina",
+    "next": "Dipolis 1",
     "proof_read": 2,
     "wp_link": "w:de:Dipoinos",
     "chapters": [
@@ -20890,6 +20891,7 @@
   },
   {
     "lemma": "Dipolis 1",
+    "previous": "Dipoinos",
     "next": "Dipolis 2",
     "proof_read": 2,
     "chapters": [
@@ -22428,11 +22430,13 @@
     "lemma": "Δοχμή",
     "previous": "Dochi",
     "next": "Docidava",
+    "sort_key": "Dochme",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1250,
         "end": 1251,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
