@@ -97,7 +97,7 @@ typing-extensions==3.7.4.1  # via mypy
 urllib3==1.25.8           # via botocore, requests
 websocket-client==0.57.0  # via docker
 werkzeug==1.0.0           # via moto
-wrapt==1.11.2             # via astroid, aws-xray-sdk
+wrapt==1.12.0             # via astroid, aws-xray-sdk
 xmltodict==0.12.0         # via moto
 
 # The following packages are considered to be unsafe in a requirements file:
