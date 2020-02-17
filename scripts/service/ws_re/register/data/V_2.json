@@ -433,72 +433,83 @@
   {
     "lemma": "Doreïa",
     "previous": "Δωρεά",
-    "next": "Doreia",
+    "next": "Δώρεια",
+    "sort_key": "Doreia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Doreia",
+    "lemma": "Δώρεια",
     "previous": "Doreïa",
     "next": "Dores",
+    "sort_key": "Doreia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
         "end": 1551,
-        "author": "Stengel"
+        "author": "Stengel."
       }
     ]
   },
   {
     "lemma": "Dores",
-    "previous": "Doreia",
-    "next": "Doriadai",
+    "previous": "Δώρεια",
+    "next": "Δωριάδαι",
+    "proof_read": 2,
+    "wp_link": "w:de:Dorer",
     "chapters": [
       {
         "start": 1551,
         "end": 1558,
-        "author": "Miller"
+        "author": "J. Miller."
       }
     ]
   },
   {
-    "lemma": "Doriadai",
+    "lemma": "Δωριάδαι",
     "previous": "Dores",
-    "next": "Doriarcheon",
+    "next": "Δωριαρχέων",
+    "sort_key": "Doriadai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
   {
-    "lemma": "Doriarcheon",
-    "previous": "Doriadai",
+    "lemma": "Δωριαρχέων",
+    "previous": "Δωριάδαι",
     "next": "Dorias",
+    "sort_key": "Doriarcheon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Szanto"
+        "author": "Szanto."
       }
     ]
   },
   {
     "lemma": "Dorias",
-    "previous": "Doriarcheon",
+    "previous": "Δωριαρχέων",
     "next": "Doricae insulae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -506,11 +517,12 @@
     "lemma": "Doricae insulae",
     "previous": "Dorias",
     "next": "Dorichos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -518,11 +530,12 @@
     "lemma": "Dorichos",
     "previous": "Doricae insulae",
     "next": "Doridas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Niese"
+        "author": "Niese."
       }
     ]
   },
@@ -530,11 +543,12 @@
     "lemma": "Doridas",
     "previous": "Dorichos",
     "next": "Dories",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -555,11 +569,12 @@
     "lemma": "Dorieus 1",
     "previous": "Dories",
     "next": "Dorieus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -567,11 +582,12 @@
     "lemma": "Dorieus 2",
     "previous": "Dorieus 1",
     "next": "Dorieus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1558,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -2023,7 +2039,7 @@
   {
     "lemma": "Dosiadas 2",
     "previous": "Dosiadas 1",
-    "next": "Dosis",
+    "next": "Δόσις",
     "chapters": [
       {
         "start": 1597,
@@ -2033,26 +2049,29 @@
     ]
   },
   {
-    "lemma": "Dosis",
+    "lemma": "Δόσις",
     "previous": "Dosiadas 2",
     "next": "Dositheanum fragmentum",
+    "sort_key": "Dosis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1598,
         "end": 1603,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
   {
     "lemma": "Dositheanum fragmentum",
-    "previous": "Dosis",
+    "previous": "Δόσις",
     "next": "Dositheos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1603,
         "end": 1605,
-        "author": "Jörs"
+        "author": "Jörs."
       }
     ]
   },
