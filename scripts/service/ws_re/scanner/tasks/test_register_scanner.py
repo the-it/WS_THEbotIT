@@ -54,18 +54,14 @@ class TestSCANTask(TaskTestWithRegister):
                             mock.Mock(spec=Repo)) as repo_mock:
                 repo_mock().index.diff.return_value = ["Something has changed"]
                 self.task._push_changes()
-                compare(8, len(repo_mock.mock_calls))
+                compare(6, len(repo_mock.mock_calls))
                 compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[1])
                 compare("().index.diff", repo_mock.mock_calls[2][0])
-                compare("().git.checkout", repo_mock.mock_calls[3][0])
-                compare("-b", repo_mock.mock_calls[3][1][0])
-                compare(StringComparison(r"\d{6}_\d{6}_updating_registers"), repo_mock.mock_calls[3][1][1])
-                compare("().git.add", repo_mock.mock_calls[4][0])
-                compare(StringComparison(r".*/scripts/service/ws_re/register/data"), repo_mock.mock_calls[4][1][0])
-                compare("().index.commit", repo_mock.mock_calls[5][0])
-                compare(StringComparison(r"Updating the register at \d{6}_\d{6}"), repo_mock.mock_calls[5][1][0])
-                compare("().git.push", repo_mock.mock_calls[6][0])
-                compare("().git.checkout", repo_mock.mock_calls[7][0])
+                compare("().git.add", repo_mock.mock_calls[3][0])
+                compare(StringComparison(r".*/scripts/service/ws_re/register/data"), repo_mock.mock_calls[3][1][0])
+                compare("().index.commit", repo_mock.mock_calls[4][0])
+                compare(StringComparison(r"Updating the register at \d{6}_\d{6}"), repo_mock.mock_calls[4][1][0])
+                compare("().git.push", repo_mock.mock_calls[5][0])
 
     def test_fetch_wikipedia_wikisource_link(self):
         self.text_mock.return_value = """{{REDaten

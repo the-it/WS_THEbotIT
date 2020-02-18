@@ -1,5 +1,4 @@
 import contextlib
-import os
 import re
 from datetime import datetime
 from pathlib import Path
@@ -7,7 +6,6 @@ from typing import List, Tuple, Dict, Optional, Sequence
 
 import pywikibot
 from git import Repo
-from github import Github
 
 from scripts.service.ws_re.register.author_crawler import AuthorCrawler
 from scripts.service.ws_re.register.base import RegisterException
@@ -242,29 +240,9 @@ class SCANTask(ReScannerTask):
     def _push_changes(self):
         repo = Repo(search_parent_directories=True)
         if repo.index.diff(None):
-            master = repo.active_branch
-            now = datetime.now().strftime("%y%m%d_%H%M%S")
-            branch_name = f"{now}_updating_registers"
-            self.logger.info(f"Pushing changes to \"{branch_name}\"")
-            repo.git.checkout("-b", branch_name)
             repo.git.add(str(Path(__file__).parent.parent.parent.joinpath("register").joinpath("data")))
+            now = datetime.now().strftime("%y%m%d_%H%M%S")
             repo.index.commit(f"Updating the register at {now}")
             repo.git.push("origin", repo.active_branch.name)
-            repo.git.checkout(master.name)
-            if "GITHUB_USER" in os.environ:  # pragma: no cover
-                self.logger.info(f"Opening Pullrequest for \"{branch_name}\"")
-                self._open_pullrequest(branch_name)
-            else:
-                self.logger.error("No env variable GITHUB_USER")
         else:
             self.logger.info("No Changes to push today.")
-
-    @staticmethod
-    def _open_pullrequest(branch_name: str):  # pragma: no cover
-        github = Github(os.environ["GITHUB_USER"], os.environ["GITHUB_PASSWORD"])
-        github_repo = github.get_repo("the-it/WS_THEbotIT")
-        github_repo.create_pull(title=branch_name,
-                                head=branch_name,
-                                base="master",
-                                body="Update registers",
-                                maintainer_can_modify=True)
