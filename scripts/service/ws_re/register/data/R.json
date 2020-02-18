@@ -1,7 +1,10 @@
 [
   {
     "lemma": "Abercius a",
+    "previous": "Abellio",
     "next": "Abercius b",
+    "redirect": "Avircius",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 5,
@@ -12,7 +15,9 @@
   {
     "lemma": "Abercius b",
     "previous": "Abercius a",
-    "next": "Achaikaros",
+    "next": "Aberglaube",
+    "redirect": "Avircius",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 5,
@@ -21,8 +26,11 @@
     ]
   },
   {
+    "lemma": "Aberglaube",
+    "previous": "Abercius b"
+  },
+  {
     "lemma": "Achaikaros",
-    "previous": "Abercius b",
     "chapters": [
       {
         "start": 6,
@@ -153,8 +161,14 @@
     "previous": "Acilius 57"
   },
   {
+    "lemma": "Aelius 17a",
+    "next": "Aelius 23a"
+  },
+  {
     "lemma": "Aelius 23a",
-    "next": "Aelius 26b",
+    "previous": "Aelius 17a",
+    "next": "Aelius 24a",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 9,
@@ -163,8 +177,11 @@
     ]
   },
   {
+    "lemma": "Aelius 24a",
+    "previous": "Aelius 23a"
+  },
+  {
     "lemma": "Aelius 26b",
-    "previous": "Aelius 23a",
     "next": "Aelius 27aa",
     "chapters": [
       {

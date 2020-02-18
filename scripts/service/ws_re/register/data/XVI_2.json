@@ -431,7 +431,7 @@
   {
     "lemma": "Myzonius",
     "previous": "Myxos",
-    "next": "Naadubada",
+    "next": "Νααδουβάδα",
     "redirect": true,
     "chapters": [
       {
@@ -441,34 +441,40 @@
     ]
   },
   {
-    "lemma": "Naadubada",
+    "lemma": "Νααδουβάδα",
     "previous": "Myzonius",
-    "next": "Naagramma",
+    "next": "Νααγράμμα",
+    "sort_key": "Naadubada",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1439,
         "end": 1439,
-        "author": "Stein, O[tto]"
+        "author": "O. Stein."
       }
     ]
   },
   {
-    "lemma": "Naagramma",
-    "previous": "Naadubada",
-    "next": "Naagrammon",
+    "lemma": "Νααγράμμα",
+    "previous": "Νααδουβάδα",
+    "next": "Νάαγραμμον",
+    "sort_key": "Naagramma",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1439,
         "end": 1439,
-        "author": "Stein, O[tto]"
+        "author": "O. Stein."
       }
     ]
   },
   {
-    "lemma": "Naagrammon",
-    "previous": "Naagramma",
+    "lemma": "Νάαγραμμον",
+    "previous": "Νααγράμμα",
     "next": "Naaman",
-    "redirect": true,
+    "sort_key": "Naagrammon",
+    "redirect": "Maagrammon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1439,
@@ -478,9 +484,10 @@
   },
   {
     "lemma": "Naaman",
-    "previous": "Naagrammon",
+    "previous": "Νάαγραμμον",
     "next": "Naamas",
-    "redirect": true,
+    "redirect": "Nuʿman 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1439,
@@ -493,6 +500,7 @@
     "previous": "Naaman",
     "next": "Naana",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1439,
@@ -503,17 +511,18 @@
   {
     "lemma": "Naana",
     "previous": "Naamas",
-    "next": "Naarda",
+    "next": "Νάαρδα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1439,
         "end": 1439,
-        "author": "Herrmann"
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
-    "lemma": "Naarda",
+    "lemma": "Νάαρδα",
     "previous": "Naana",
     "next": "Naarmalcha",
     "chapters": [
@@ -526,7 +535,7 @@
   },
   {
     "lemma": "Naarmalcha",
-    "previous": "Naarda",
+    "previous": "Νάαρδα",
     "next": "Naarre",
     "chapters": [
       {

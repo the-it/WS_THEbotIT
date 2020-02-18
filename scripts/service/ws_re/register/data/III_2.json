@@ -47126,8 +47126,13 @@
       }
     ]
   },
-  {"lemma": "Burebista"},
-  {"lemma": "Caelus"},
+  {
+    "lemma": "Burebista",
+    "previous": "Britomartis"
+  },
+  {
+    "lemma": "Caelus"
+  },
   {
     "lemma": "Carthago nova",
     "previous": "Caelus",
