@@ -715,28 +715,31 @@
     "lemma": "Dorion 2",
     "previous": "Dorion 1",
     "next": "Dorion 3",
+    "sort_key": "Dorion 2",
     "chapters": [
       {
         "start": 1563,
         "end": 1563,
-        "author": "Radermacher"
+        "author": "Radermacher."
       }
     ]
   },
   {
     "lemma": "Dorion 3",
     "previous": "Dorion 2",
-    "next": "Dorion 04",
+    "next": "Dorion 4",
+    "sort_key": "Dorion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1563,
         "end": 1563,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
   {
-    "lemma": "Dorion 04",
+    "lemma": "Dorion 4",
     "previous": "Dorion 3",
     "next": "Dorion 4",
     "chapters": [
@@ -749,13 +752,15 @@
   },
   {
     "lemma": "Dorion 4",
-    "previous": "Dorion 04",
+    "previous": "Dorion 4",
     "next": "Dorion 5",
+    "sort_key": "Dorion 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1563,
         "end": 1564,
-        "author": "Jan"
+        "author": "v. Jan."
       }
     ]
   },
@@ -763,47 +768,53 @@
     "lemma": "Dorion 5",
     "previous": "Dorion 4",
     "next": "Doriones",
+    "sort_key": "Dorion 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1564,
         "end": 1564,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
   {
     "lemma": "Doriones",
     "previous": "Dorion 5",
-    "next": "Dorion pedion",
+    "next": "Δώριον πεδίον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1564,
         "end": 1564,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
   {
-    "lemma": "Dorion pedion",
+    "lemma": "Δώριον πεδίον",
     "previous": "Doriones",
     "next": "Dorippe 1",
+    "sort_key": "Dorion pedion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1564,
         "end": 1564,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Dorippe 1",
-    "previous": "Dorion pedion",
+    "previous": "Δώριον πεδίον",
     "next": "Dorippe 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1564,
         "end": 1564,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -811,11 +822,12 @@
     "lemma": "Dorippe 2",
     "previous": "Dorippe 1",
     "next": "Doris 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1564,
         "end": 1564,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -823,11 +835,12 @@
     "lemma": "Doris 1",
     "previous": "Dorippe 2",
     "next": "Doris 2",
+    "wp_link": "w:de:Doris (Griechenland)",
     "chapters": [
       {
         "start": 1564,
         "end": 1565,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -965,11 +978,12 @@
     "lemma": "Dorkeus 2",
     "previous": "Dorkeus 1",
     "next": "Dorkis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -977,11 +991,12 @@
     "lemma": "Dorkis 1",
     "previous": "Dorkeus 2",
     "next": "Dorkis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -989,11 +1004,12 @@
     "lemma": "Dorkis 2",
     "previous": "Dorkis 1",
     "next": "Dorkon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -1001,11 +1017,12 @@
     "lemma": "Dorkon",
     "previous": "Dorkis 2",
     "next": "Dorkylidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -1013,11 +1030,12 @@
     "lemma": "Dorkylidas",
     "previous": "Dorkon",
     "next": "Dorkylos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -1025,11 +1043,12 @@
     "lemma": "Dorkylos",
     "previous": "Dorkylidas",
     "next": "Dorminus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -1037,11 +1056,12 @@
     "lemma": "Dorminus",
     "previous": "Dorkylos",
     "next": "Dormothea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -1049,11 +1069,12 @@
     "lemma": "Dormothea",
     "previous": "Dorminus",
     "next": "Dornonia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -1074,11 +1095,12 @@
     "lemma": "Dornstrauch",
     "previous": "Dornonia",
     "next": "Doro 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Schmidt, Max C[arl] P[aul]"
+        "author": "Max C. P. Schmidt."
       }
     ]
   },
@@ -1086,11 +1108,12 @@
     "lemma": "Doro 1",
     "previous": "Dornstrauch",
     "next": "Doro 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -1098,11 +1121,12 @@
     "lemma": "Doro 2",
     "previous": "Doro 1",
     "next": "Dorocortorum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -1122,36 +1146,40 @@
   {
     "lemma": "Dorodoche",
     "previous": "Dorocortorum",
-    "next": "Doron",
+    "next": "Δῶρον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
         "end": 1568,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
   {
-    "lemma": "Doron",
+    "lemma": "Δῶρον",
     "previous": "Dorodoche",
     "next": "Δώρων γραφή",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1569,
         "end": 1569,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
   {
     "lemma": "Δώρων γραφή",
-    "previous": "Doron",
+    "previous": "Δῶρον",
     "next": "Doronicum",
+    "sort_key": "Doron graphe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1569,
         "end": 1569,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
@@ -1174,11 +1202,12 @@
     "lemma": "Doros 1",
     "previous": "Doronicum",
     "next": "Doros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1569,
         "end": 1569,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -1186,11 +1215,12 @@
     "lemma": "Doros 2",
     "previous": "Doros 1",
     "next": "Doros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1569,
         "end": 1569,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -1198,11 +1228,12 @@
     "lemma": "Doros 3",
     "previous": "Doros 2",
     "next": "Doros 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1570,
         "end": 1570,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -1210,11 +1241,12 @@
     "lemma": "Doros 4",
     "previous": "Doros 3",
     "next": "Doros 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1570,
         "end": 1570,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -1222,11 +1254,12 @@
     "lemma": "Doros 5",
     "previous": "Doros 4",
     "next": "Doros 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1570,
         "end": 1570,
-        "author": "Knaack"
+        "author": "Knaack."
       }
     ]
   },
@@ -1260,11 +1293,13 @@
     "lemma": "Dorotheos 1",
     "previous": "Doros 7",
     "next": "Dorotheos 2",
+    "sort_key": "Dorotheos 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1570,
         "end": 1570,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -1272,11 +1307,13 @@
     "lemma": "Dorotheos 2",
     "previous": "Dorotheos 1",
     "next": "Dorotheos 3",
+    "sort_key": "Dorotheos 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1570,
         "end": 1570,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -1284,11 +1321,13 @@
     "lemma": "Dorotheos 3",
     "previous": "Dorotheos 2",
     "next": "Dorotheos 4",
+    "sort_key": "Dorotheos 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1570,
         "end": 1570,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -1296,11 +1335,13 @@
     "lemma": "Dorotheos 4",
     "previous": "Dorotheos 3",
     "next": "Dorotheos 5",
+    "sort_key": "Dorotheos 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1570,
         "end": 1570,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
