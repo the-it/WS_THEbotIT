@@ -56,6 +56,9 @@
     "lemma": "Donatus 1",
     "previous": "Donativum",
     "next": "Donatus 2",
+    "sort_key": "Donatus 01",
+    "redirect": "Iunius 73",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1545,
@@ -595,11 +598,12 @@
     "lemma": "Dorieus 3",
     "previous": "Dorieus 2",
     "next": "Dorieus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1558,
         "end": 1560,
-        "author": "Niese"
+        "author": "Niese."
       }
     ]
   },
@@ -607,11 +611,12 @@
     "lemma": "Dorieus 4",
     "previous": "Dorieus 3",
     "next": "Dorieus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1560,
         "end": 1561,
-        "author": "Swoboda, [Heinrich]"
+        "author": "Swoboda."
       }
     ]
   },
@@ -619,11 +624,12 @@
     "lemma": "Dorieus 5",
     "previous": "Dorieus 4",
     "next": "Dorieus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1561,
         "end": 1561,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -631,11 +637,12 @@
     "lemma": "Dorieus 6",
     "previous": "Dorieus 5",
     "next": "Dorillos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1561,
         "end": 1561,
-        "author": "Reitzenstein"
+        "author": "Reitzenstein."
       }
     ]
   },
@@ -643,53 +650,58 @@
     "lemma": "Dorillos",
     "previous": "Dorieus 6",
     "next": "Dorimachos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1562,
         "end": 1562,
-        "author": "Dieterich"
+        "author": "Dieterich."
       }
     ]
   },
   {
     "lemma": "Dorimachos",
     "previous": "Dorillos",
-    "next": "Dorion 01",
+    "next": "Δώριον 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1562,
         "end": 1562,
-        "author": "Wissowa"
+        "author": "Wissowa."
       }
     ]
   },
   {
-    "lemma": "Dorion 01",
+    "lemma": "Δώριον 01",
     "previous": "Dorimachos",
-    "next": "Dorion 02",
+    "next": "Δώριον 02",
+    "sort_key": "Dorion 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1562,
         "end": 1562,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Dorion 02",
-    "previous": "Dorion 01",
-    "next": "Dorion 03",
+    "lemma": "Δώριον 02",
+    "previous": "Δώριον 01",
+    "next": "Δώριον 03",
+    "sort_key": "Dorion 02",
     "chapters": [
       {
         "start": 1562,
         "end": 1562,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
   {
-    "lemma": "Dorion 03",
-    "previous": "Dorion 02",
+    "lemma": "Δώριον 03",
+    "previous": "Δώριον 02",
     "next": "Dorion 1",
     "chapters": [
       {
@@ -701,13 +713,15 @@
   },
   {
     "lemma": "Dorion 1",
-    "previous": "Dorion 03",
+    "previous": "Δώριον 03",
     "next": "Dorion 2",
+    "sort_key": "Dorion 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1563,
         "end": 1563,
-        "author": "Bethe"
+        "author": "Bethe."
       }
     ]
   },
