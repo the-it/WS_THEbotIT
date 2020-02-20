@@ -79,6 +79,13 @@ run_coverage: &run_coverage
       . venv/bin/activate
       make coverage
 
+run_integrationtest: &run_integrationtest
+  run:
+    name: run integration test
+    command: |
+      . venv/bin/activate
+      make integrationtest
+
 report_codecov: &report_codecov
   run:
     name: report codecov
@@ -117,6 +124,16 @@ coverage_steps: &coverage_steps
     - <<: *run_coverage
     - <<: *report_codecov
 
+nightly_steps: &nightly_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
+    - <<: *show_python_version
+    - <<: *install_dependencies
+    - <<: *save_cache
+    - <<: *run_integrationtest
+    - <<: *report_codecov
+
 # job definitions
 
 jobs:
@@ -132,6 +149,12 @@ jobs:
     working_directory: ~/repo
     <<: *coverage_steps
 
+  nightly:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: ~/repo
+    <<: *nightly_steps
+
 # dependencies for the workflow
 
 workflows:
@@ -144,3 +167,14 @@ workflows:
           context: python38
           requires:
             - quality
+  integrationtest:
+    triggers:
+      - schedule:
+          cron: "0 0 * * 0"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - nightly:
+          context: python38
