@@ -452,7 +452,7 @@
     "previous": "Doreïa",
     "next": "Dores",
     "sort_key": "Doreia",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1551,
@@ -702,18 +702,20 @@
   {
     "lemma": "Δώριον 03",
     "previous": "Δώριον 02",
-    "next": "Dorion 1",
+    "next": "Δώριον 04",
+    "sort_key": "Dorion 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1562,
         "end": 1562,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Dorion 1",
-    "previous": "Δώριον 03",
+    "previous": "Δώριον 04",
     "next": "Dorion 2",
     "sort_key": "Dorion 1",
     "proof_read": 2,
@@ -1772,11 +1774,12 @@
     "lemma": "Dorulatus",
     "previous": "Dorticum",
     "next": "Dory",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1576,
         "end": 1576,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -1784,11 +1787,12 @@
     "lemma": "Dory",
     "previous": "Dorulatus",
     "next": "Dory 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1576,
-        "end": 1577,
-        "author": "Droysen"
+        "end": 1576,
+        "author": "Tomaschek."
       }
     ]
   },
@@ -1796,11 +1800,12 @@
     "lemma": "Dory 2",
     "previous": "Dory",
     "next": "Dorykleidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1576,
-        "end": 1576,
-        "author": "Tomaschek"
+        "end": 1577,
+        "author": "Droysen."
       }
     ]
   },
@@ -1808,11 +1813,12 @@
     "lemma": "Dorykleidas",
     "previous": "Dory 2",
     "next": "Dorykleus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -1820,11 +1826,12 @@
     "lemma": "Dorykleus",
     "previous": "Dorykleidas",
     "next": "Doryklos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -1832,11 +1839,12 @@
     "lemma": "Doryklos 1",
     "previous": "Dorykleus",
     "next": "Doryklos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -1844,11 +1852,12 @@
     "lemma": "Doryklos 2",
     "previous": "Doryklos 1",
     "next": "Doryklos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -1856,11 +1865,12 @@
     "lemma": "Doryklos 3",
     "previous": "Doryklos 2",
     "next": "Doryklos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -1868,41 +1878,45 @@
     "lemma": "Doryklos 4",
     "previous": "Doryklos 3",
     "next": "Doryklos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
   {
     "lemma": "Doryklos 5",
     "previous": "Doryklos 4",
-    "next": "Doryknion",
+    "next": "Δορύκνιον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
   {
-    "lemma": "Doryknion",
+    "lemma": "Δορύκνιον",
     "previous": "Doryklos 5",
     "next": "Dorylaion",
+    "sort_key": "Doryknion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1577,
         "end": 1577,
-        "author": "Schmidt, Max C[arl] P[aul]"
+        "author": "Max C. P. Schmidt."
       }
     ]
   },
   {
     "lemma": "Dorylaion",
-    "previous": "Doryknion",
+    "previous": "Δορύκνιον",
     "next": "Dorylaos 1",
     "chapters": [
       {
