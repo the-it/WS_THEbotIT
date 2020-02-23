@@ -78,14 +78,14 @@ class Updater():
         if lemma_to_update:
             idx = self._register.get_index_of_lemma(lemma_to_update)
             if idx:
-                if idx - 1 >= 0:
+                if idx > 0:
                     self._u_i_s_w_n_c_1(idx, lemma_dict, lemma_to_update)
                 with contextlib.suppress(IndexError):
                     idx = self._register.get_index_of_lemma(lemma_to_update)
                     if idx:
                         self._u_i_s_w_n_c_2(idx, lemma_dict, lemma_to_update)
 
-    def _u_i_s_w_n_c_2(self, idx, lemma_dict, lemma_to_update):
+    def _u_i_s_w_n_c_2(self, idx: int, lemma_dict: LemmaDict, lemma_to_update: Lemma):
         if self._register[idx + 1].sort_key == Lemma.make_sort_key(lemma_dict["next"]) \
                 or Lemma.make_sort_key(str(self._register[idx + 1]["lemma"])) \
                 == Lemma.make_sort_key(lemma_dict["next"]):
@@ -99,7 +99,7 @@ class Updater():
                                                    self._register.volume,
                                                    self._register.authors))
 
-    def _u_i_s_w_n_c_1(self, idx, lemma_dict, lemma_to_update):
+    def _u_i_s_w_n_c_1(self, idx: int, lemma_dict: LemmaDict, lemma_to_update: Lemma):
         existing_pre_sortkey: str = self._register[idx - 1].sort_key
         processed_pre_sortkey = Lemma.make_sort_key(str(self._register[idx - 1]["lemma"]))
         if "previous" in lemma_dict:
@@ -154,6 +154,8 @@ class Updater():
         post_lemma = self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]))
         if post_lemma:
             post_idx = self._register.get_index_of_lemma(post_lemma)
+        else:
+            return
         # remove previous and next for gap
         if post_idx:
             if post_idx - 1 > 0:
