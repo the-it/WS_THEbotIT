@@ -38,7 +38,7 @@ freezegun==0.3.15
 future==0.18.2            # via aws-xray-sdk
 gitdb2==4.0.1             # via gitpython
 gitpython==3.1.0          # via bandit
-idna==2.8                 # via moto, requests
+idna==2.9                 # via moto, requests
 internetarchive==1.9.0
 isort==4.3.21             # via pylint
 jinja2==2.11.1            # via moto
