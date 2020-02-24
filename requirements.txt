@@ -23,5 +23,5 @@ requests==2.23.0
 roman==3.2
 s3transfer==0.3.3         # via boto3
 six==1.14.0               # via python-dateutil
-smmap2==2.0.5             # via gitdb2
+smmap2==3.0.0             # via gitdb2
 urllib3==1.25.8           # via botocore, requests
