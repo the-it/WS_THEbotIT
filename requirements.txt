@@ -10,7 +10,7 @@ certifi==2019.11.28       # via requests
 chardet==3.0.4            # via requests
 defusedxml==0.6.0
 docutils==0.16          # via botocore
-gitdb2==3.0.2             # via gitpython
+gitdb2==4.0.1             # via gitpython
 gitpython==3.0.8
 idna==2.8                 # via requests
 jmespath==0.9.4           # via boto3, botocore
