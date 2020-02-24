@@ -11,7 +11,7 @@ chardet==3.0.4            # via requests
 defusedxml==0.6.0
 docutils==0.16          # via botocore
 gitdb2==4.0.1             # via gitpython
-gitpython==3.0.8
+gitpython==3.1.0
 idna==2.8                 # via requests
 jmespath==0.9.4           # via boto3, botocore
 oauthlib==3.1.0
