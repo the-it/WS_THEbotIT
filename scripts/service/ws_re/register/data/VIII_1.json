@@ -4148,11 +4148,12 @@
     "lemma": "Heraclea 2",
     "previous": "Heraclea 1",
     "next": "Heraclea 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -4160,11 +4161,12 @@
     "lemma": "Heraclea 3",
     "previous": "Heraclea 2",
     "next": "Heraclea 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -4172,11 +4174,12 @@
     "lemma": "Heraclea 4",
     "previous": "Heraclea 3",
     "next": "Heraclea 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -4184,6 +4187,8 @@
     "lemma": "Heraclea 5",
     "previous": "Heraclea 4",
     "next": "Heracleanus 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
@@ -4195,11 +4200,12 @@
     "lemma": "Heracleanus 1",
     "previous": "Heraclea 5",
     "next": "Heracleanus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Benjamin"
+        "author": "Benjamin."
       }
     ]
   },
@@ -4207,6 +4213,8 @@
     "lemma": "Heracleanus 2",
     "previous": "Heracleanus 1",
     "next": "Heracleum flumen et promunturium",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
@@ -4218,11 +4226,12 @@
     "lemma": "Heracleum flumen et promunturium",
     "previous": "Heracleanus 2",
     "next": "Heraclianus 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Kiessling, Max"
+        "author": "Kiessling."
       }
     ]
   },
@@ -4230,11 +4239,12 @@
     "lemma": "Heraclianus 1",
     "previous": "Heracleum flumen et promunturium",
     "next": "Heraclianus 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -4242,11 +4252,12 @@
     "lemma": "Heraclianus 2",
     "previous": "Heraclianus 1",
     "next": "Heraclianus 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -4254,11 +4265,12 @@
     "lemma": "Heraclianus 3",
     "previous": "Heraclianus 2",
     "next": "Heraclianus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -4266,11 +4278,12 @@
     "lemma": "Heraclianus 4",
     "previous": "Heraclianus 3",
     "next": "Heraclianus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -4278,11 +4291,12 @@
     "lemma": "Heraclianus 5",
     "previous": "Heraclianus 4",
     "next": "Heraclianus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
         "end": 405,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -4290,11 +4304,12 @@
     "lemma": "Heraclianus 6",
     "previous": "Heraclianus 5",
     "next": "Heraclianus 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
-        "end": 406,
-        "author": "Seeck"
+        "end": 405,
+        "author": "Seeck."
       }
     ]
   },
@@ -4302,6 +4317,8 @@
     "lemma": "Heraclianus 7",
     "previous": "Heraclianus 6",
     "next": "Heraclidas",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 406,
@@ -4313,6 +4330,8 @@
     "lemma": "Heraclidas",
     "previous": "Heraclianus 7",
     "next": "Heraclitus 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 406,
@@ -10693,11 +10712,13 @@
     "lemma": "Hermogenes 1",
     "previous": "Hermodotos",
     "next": "Hermogenes 2",
+    "sort_key": "Hermogenes 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
         "end": 862,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -10705,11 +10726,13 @@
     "lemma": "Hermogenes 2",
     "previous": "Hermogenes 1",
     "next": "Hermogenes 3",
+    "sort_key": "Hermogenes 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
         "end": 862,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -10717,11 +10740,13 @@
     "lemma": "Hermogenes 3",
     "previous": "Hermogenes 2",
     "next": "Hermogenes 4",
+    "sort_key": "Hermogenes 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
         "end": 862,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -10729,11 +10754,13 @@
     "lemma": "Hermogenes 4",
     "previous": "Hermogenes 3",
     "next": "Hermogenes 5",
+    "sort_key": "Hermogenes 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
         "end": 862,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -10741,11 +10768,13 @@
     "lemma": "Hermogenes 5",
     "previous": "Hermogenes 4",
     "next": "Hermogenes 6",
+    "sort_key": "Hermogenes 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
         "end": 862,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -10753,11 +10782,13 @@
     "lemma": "Hermogenes 6",
     "previous": "Hermogenes 5",
     "next": "Hermogenes 7",
+    "sort_key": "Hermogenes 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
         "end": 863,
-        "author": "Otto, Walter"
+        "author": "Walter Otto."
       }
     ]
   },
@@ -10765,11 +10796,13 @@
     "lemma": "Hermogenes 7",
     "previous": "Hermogenes 6",
     "next": "Hermogenes 8",
+    "sort_key": "Hermogenes 07",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 863,
         "end": 863,
-        "author": "Otto, Walter"
+        "author": "Walter Otto."
       }
     ]
   },
@@ -10777,11 +10810,13 @@
     "lemma": "Hermogenes 8",
     "previous": "Hermogenes 7",
     "next": "Hermogenes 9",
+    "sort_key": "Hermogenes 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 863,
         "end": 863,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -10789,11 +10824,13 @@
     "lemma": "Hermogenes 9",
     "previous": "Hermogenes 8",
     "next": "Hermogenes 10",
+    "sort_key": "Hermogenes 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 863,
         "end": 863,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -10801,11 +10838,12 @@
     "lemma": "Hermogenes 10",
     "previous": "Hermogenes 9",
     "next": "Hermogenes 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 863,
         "end": 863,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -10828,6 +10866,8 @@
     "previous": "Hermogenes 11",
     "next": "Hermogenes 13",
     "proof_read": 3,
+    "wp_link": "w:it:Aurelio Ermogene",
+    "wd_link": "d:Q3629807",
     "chapters": [
       {
         "start": 863,
@@ -10841,6 +10881,8 @@
     "previous": "Hermogenes 12",
     "next": "Hermogenes 14",
     "proof_read": 3,
+    "wp_link": "w:ca:Hermògenes d'Egipte",
+    "wd_link": "d:Q11925499",
     "chapters": [
       {
         "start": 864,
@@ -10854,6 +10896,8 @@
     "previous": "Hermogenes 13",
     "next": "Hermogenes 15",
     "proof_read": 3,
+    "wp_link": "w:ca:Hermògenes (oficial)",
+    "wd_link": "d:Q11925498",
     "chapters": [
       {
         "start": 864,
@@ -10880,6 +10924,8 @@
     "previous": "Hermogenes 15",
     "next": "Hermogenes 17",
     "proof_read": 3,
+    "wp_link": "w:en:Flavius Hermogenes",
+    "wd_link": "d:Q3732072",
     "chapters": [
       {
         "start": 864,
@@ -10932,6 +10978,8 @@
     "previous": "Hermogenes 19",
     "next": "Hermogenes 21",
     "proof_read": 3,
+    "wp_link": "w:en:Hermogenes (magister officiorum)",
+    "wd_link": "d:Q1561789",
     "chapters": [
       {
         "start": 865,
@@ -10945,6 +10993,8 @@
     "previous": "Hermogenes 20",
     "next": "Hermogenes 22",
     "proof_read": 3,
+    "wp_link": "w:de:Hermogenes (Philosoph)",
+    "wd_link": "d:Q1336424",
     "chapters": [
       {
         "start": 865,
@@ -10969,11 +11019,12 @@
     "lemma": "Hermogenes 23",
     "previous": "Hermogenes 22",
     "next": "Hermogenes 24",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 877,
         "end": 878,
-        "author": "Gossen"
+        "author": "Gossen."
       }
     ]
   },
@@ -10981,11 +11032,12 @@
     "lemma": "Hermogenes 24",
     "previous": "Hermogenes 23",
     "next": "Hermogenes 25",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 878,
         "end": 878,
-        "author": "Gossen"
+        "author": "Gossen."
       }
     ]
   },
@@ -10994,6 +11046,8 @@
     "previous": "Hermogenes 24",
     "next": "Hermogenes 26",
     "proof_read": 3,
+    "wp_link": "w:ca:Hermògenes de Citera",
+    "wd_link": "d:Q11925500",
     "chapters": [
       {
         "start": 878,
@@ -11007,6 +11061,8 @@
     "previous": "Hermogenes 25",
     "next": "Hermogenes 27",
     "proof_read": 3,
+    "wp_link": "w:de:Hermogenes (Häretiker)",
+    "wd_link": "d:Q11925501",
     "chapters": [
       {
         "start": 878,
