@@ -8799,7 +8799,6 @@
   {
     "lemma": "Augustobriga 2",
     "previous": "Augustobriga 1",
-    "next": "Augustodunum",
     "proof_read": 3,
     "wp_link": "w:de:Ágreda",
     "wd_link": "d:Q39856",
@@ -8812,7 +8811,7 @@
   },
   {
     "lemma": "Augustodunum",
-    "previous": "Augustobriga 2",
+    "previous": "Augustobriga 1",
     "next": "Augustodurum",
     "proof_read": 3,
     "wp_link": "w:de:Autun",
@@ -17892,7 +17891,7 @@
       {
         "start": 346,
         "end": 346,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -17900,11 +17899,12 @@
     "lemma": "Domitianae figlinae",
     "previous": "Domis",
     "next": "Domitianus 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 346,
         "end": 348,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -17912,40 +17912,86 @@
     "lemma": "Domitianus 11",
     "previous": "Domitianae figlinae",
     "next": "Domitius pagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 348,
         "end": 348,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
   {
     "lemma": "Domitius pagus",
     "previous": "Domitianus 11",
-    "next": "Domitius 5a",
+    "next": "Domitius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 348,
         "end": 349,
-        "author": "Keune"
+        "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius",
+    "previous": "Domitius pagus",
+    "next": "Domitius 5a",
+    "proof_read": 2,
+    "wp_link": "w:de:Domitius",
+    "wd_link": "d:Q908366",
+    "chapters": [
+      {
+        "start": 349,
+        "end": 349,
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Domitius 5a",
-    "previous": "Domitius pagus",
+    "previous": "Domitius",
+    "next": "Domitius 11",
+    "sort_key": "Domitius 005a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 349,
         "end": 349,
-        "author": "Hähnle"
+        "author": "Hähnle."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 11",
+    "previous": "Domitius 5a",
+    "next": "Domitius 20",
+    "sort_key": "Domitius 011",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 349,
+        "end": 349,
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Domitius 20",
-    "next": "Domitius 29"
+    "previous": "Domitius 11",
+    "next": "Domitius 29",
+    "sort_key": "Domitius 020",
+    "proof_read": 2,
+    "wp_link": "w:de:Gnaeus Domitius Ahenobarbus (Konsul 122 v. Chr.)",
+    "wd_link": "d:Q445777",
+    "chapters": [
+      {
+        "start": 349,
+        "end": 349,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Domitius 29",
@@ -17964,7 +18010,18 @@
   {
     "lemma": "Domitius 43",
     "previous": "Domitius 29",
-    "next": "Domitius 50"
+    "next": "Domitius 50",
+    "sort_key": "Domitius 043",
+    "proof_read": 2,
+    "wp_link": "w:de:Gnaeus Domitius Calvinus",
+    "wd_link": "d:Q383846",
+    "chapters": [
+      {
+        "start": 394,
+        "end": 394,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Domitius 50",
@@ -17982,24 +18039,32 @@
   {
     "lemma": "Domitius 89a",
     "previous": "Domitius 50",
-    "next": "Domnos",
+    "next": "Domitus",
+    "sort_key": "Domitius 089a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 410,
         "end": 411,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
-    "lemma": "Domnos",
+    "lemma": "Domitus",
     "previous": "Domitius 89a",
+    "next": "Domnos"
+  },
+  {
+    "lemma": "Domnos",
+    "previous": "Domitus",
     "next": "Donatus 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
         "end": 411,
-        "author": "Gerth"
+        "author": "Gerth."
       }
     ]
   },
@@ -18007,11 +18072,12 @@
     "lemma": "Donatus 11",
     "previous": "Domnos",
     "next": "Donatus 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
         "end": 411,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18019,11 +18085,12 @@
     "lemma": "Donatus 12",
     "previous": "Donatus 11",
     "next": "Donax 1a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
         "end": 411,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18031,11 +18098,12 @@
     "lemma": "Donax 1a",
     "previous": "Donatus 12",
     "next": "Donicatus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
         "end": 411,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -18043,11 +18111,12 @@
     "lemma": "Donicatus",
     "previous": "Donax 1a",
     "next": "Donnaucus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
         "end": 411,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18055,11 +18124,12 @@
     "lemma": "Donnaucus",
     "previous": "Donicatus",
     "next": "Donon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
         "end": 411,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18067,28 +18137,40 @@
     "lemma": "Donon",
     "previous": "Donnaucus",
     "next": "Dordas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
         "end": 412,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Dordas",
     "previous": "Donon",
+    "next": "Doricha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 412,
         "end": 412,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
   {
     "lemma": "Doricha",
-    "next": "Doris 4a"
+    "previous": "Dordas",
+    "next": "Doris 4a",
+    "redirect": "Rodopis",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 412,
+        "end": 412
+      }
+    ]
   },
   {
     "lemma": "Doris 4a",
@@ -18106,18 +18188,22 @@
   {
     "lemma": "Dorotheos 15a",
     "previous": "Doris 4a",
-    "next": "Drabos",
+    "next": "Dorotheos 21",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 412,
         "end": 412,
-        "author": "Kahrstedt"
+        "author": "Kahrstedt."
       }
     ]
   },
   {
+    "lemma": "Dorotheos 21",
+    "previous": "Dorotheos 15a"
+  },
+  {
     "lemma": "Drabos",
-    "previous": "Dorotheos 15a",
     "next": "Drakon 18",
     "chapters": [
       {
