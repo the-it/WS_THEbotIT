@@ -2823,28 +2823,44 @@
   },
   {
     "lemma": "Domitius 33",
-    "previous": "Diogenes 42"
+    "previous": "Diogenes 42",
+    "next": "Domitius 73"
   },
   {
-    "lemma": "Domitius 73a",
-    "next": "Dorion 6",
+    "lemma": "Domitius 73",
+    "previous": "Domitius 33",
+    "next": "Domitius 84",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 236,
         "end": 236,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 84",
+    "previous": "Domitius 73",
+    "next": "Dorion 6",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 236,
+        "end": 236,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Dorion 6",
-    "previous": "Domitius 73a",
+    "previous": "Domitius 84",
     "next": "Dravus 1",
     "chapters": [
       {
         "start": 236,
         "end": 239,
-        "author": "Meyer, Ernst"
+        "author": "Ernst Meyer."
       }
     ]
   },

@@ -902,30 +902,31 @@
   },
   {
     "lemma": "Dorcatius 1",
-    "next": "Dorcatius 2",
+    "previous": "Doecis",
+    "next": "Durovigutum",
     "chapters": [
       {
         "start": 539,
         "end": 540,
-        "author": "Kröner"
+        "author": "Hans-Otto Kröner."
       }
     ]
   },
   {
-    "lemma": "Dorcatius 2",
+    "lemma": "Durovigutum",
     "previous": "Dorcatius 1",
     "next": "Echedamos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 539,
-        "end": 539,
-        "author": "Kröner"
+        "start": 540,
+        "end": 540
       }
     ]
   },
   {
     "lemma": "Echedamos 2",
-    "previous": "Dorcatius 2",
+    "previous": "Durovigutum",
     "next": "Elpidoforus",
     "chapters": [
       {

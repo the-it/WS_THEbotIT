@@ -18200,16 +18200,27 @@
   },
   {
     "lemma": "Dorotheos 21",
-    "previous": "Dorotheos 15a"
+    "previous": "Dorotheos 15a",
+    "next": "Drabos",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 412,
+        "end": 414,
+        "author": "Kroll."
+      }
+    ]
   },
   {
     "lemma": "Drabos",
+    "previous": "Dorotheos 21",
     "next": "Drakon 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 414,
         "end": 414,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
