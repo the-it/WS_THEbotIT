@@ -1243,16 +1243,32 @@
   {
     "lemma": "Domitius 46a",
     "previous": "Diophanes 8a",
+    "next": "Domnacus",
+    "sort_key": "Domitius 046a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 93,
         "end": 94,
-        "author": "Eck"
+        "author": "Werner Eck."
+      }
+    ]
+  },
+  {
+    "lemma": "Domnacus",
+    "previous": "Domitius 46a",
+    "next": "Drys 1a",
+    "chapters": [
+      {
+        "start": 94,
+        "end": 94,
+        "author": "Herbert Bannert."
       }
     ]
   },
   {
     "lemma": "Drys 1a",
+    "previous": "Domnacus",
     "next": "Eustorgius",
     "chapters": [
       {
