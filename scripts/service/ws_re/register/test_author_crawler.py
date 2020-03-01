@@ -147,7 +147,7 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 {{TOC}}
 
 
-{|class="wikitable sortable" 
+{|class="wikitable sortable"
 |-
 !width="200" | Name/Sigel
 !width="75" | Lebenszeit
@@ -234,7 +234,7 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 
     def test_bug_kazarow(self):
         author = """|-
-|Kazarow, Gabriel (Katsarov, Gavril I.) 
+|Kazarow, Gabriel (Katsarov, Gavril I.)
 |2222–3333
 |
 |"""

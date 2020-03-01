@@ -20,7 +20,7 @@ pip3-dev : install_pip
 update_pip3 : install_pip
 	echo "##### UPDATE REQUIREMENTS ######"
 	pip install pip-tools -U
-	rm requirements.txt requirements-dev.txt
+	rm requirements.txt requirements-dev.txt || true
 	pip-compile --output-file requirements.txt requirements.in
 	pip-compile --output-file requirements-dev.txt requirements-dev.in
 	pip-sync requirements.txt requirements-dev.txt
