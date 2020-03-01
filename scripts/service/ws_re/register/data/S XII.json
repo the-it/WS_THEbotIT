@@ -2723,6 +2723,8 @@
     "previous": "Cutius 1a",
     "next": "Demokritos 6",
     "proof_read": 2,
+    "wp_link": "w:fr:Lucius Dasumius Hadrianus",
+    "wd_link": "d:Q85854004",
     "chapters": [
       {
         "start": 192,
@@ -2824,11 +2826,33 @@
   {
     "lemma": "Domitius 33",
     "previous": "Diogenes 42",
-    "next": "Domitius 73"
+    "next": "Domitius 73a",
+    "proof_read": 2,
+    "wp_link": "w:de:Lucius Domitius Apollinaris",
+    "wd_link": "d:Q12285185",
+    "chapters": [
+      {
+        "start": 236,
+        "end": 236,
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Domitius 73a",
+    "previous": "Domitius 33",
+    "next": "Domitius 84",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 236,
+        "end": 236,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Domitius 73",
-    "previous": "Domitius 33",
     "next": "Domitius 84",
     "proof_read": 2,
     "chapters": [
