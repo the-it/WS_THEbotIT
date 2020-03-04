@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913",
+    "next": "Hestiaia 1",
     "sort_key": "!Autoren1913",
     "proof_read": 3
   },
@@ -1682,7 +1683,7 @@
   {
     "lemma": "Hiereis",
     "previous": "Hierax 14",
-    "next": "Hieres",
+    "next": "Ἱερῆς",
     "chapters": [
       {
         "start": 1411,
@@ -1692,9 +1693,12 @@
     ]
   },
   {
-    "lemma": "Hieres",
+    "lemma": "Ἱερῆς",
     "previous": "Hiereis",
     "next": "Hieria",
+    "sort_key": "Hieres",
+    "redirect": "Malier",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
@@ -1704,8 +1708,10 @@
   },
   {
     "lemma": "Hieria",
-    "previous": "Hieres",
+    "previous": "Ἱερῆς",
     "next": "Hierinos",
+    "redirect": "Plotius 21",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
@@ -1717,11 +1723,12 @@
     "lemma": "Hierinos",
     "previous": "Hieria",
     "next": "Hierios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
         "end": 1457,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -1729,11 +1736,13 @@
     "lemma": "Hierios 1",
     "previous": "Hierinos",
     "next": "Hierios 2",
+    "sort_key": "Hierios 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
         "end": 1457,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -1741,11 +1750,13 @@
     "lemma": "Hierios 2",
     "previous": "Hierios 1",
     "next": "Hierios 3",
+    "sort_key": "Hierios 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
         "end": 1458,
-        "author": "Seeck"
+        "author": "Seeck-Praechter."
       }
     ]
   },
@@ -1753,11 +1764,13 @@
     "lemma": "Hierios 3",
     "previous": "Hierios 2",
     "next": "Hierios 4",
+    "sort_key": "Hierios 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1458,
         "end": 1458,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -1765,11 +1778,13 @@
     "lemma": "Hierios 4",
     "previous": "Hierios 3",
     "next": "Hierios 5",
+    "sort_key": "Hierios 04",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1458,
         "end": 1458,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -1777,11 +1792,13 @@
     "lemma": "Hierios 5",
     "previous": "Hierios 4",
     "next": "Hierios 6",
+    "sort_key": "Hierios 05",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1458,
         "end": 1458,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -1789,11 +1806,13 @@
     "lemma": "Hierios 6",
     "previous": "Hierios 5",
     "next": "Hierios 7",
+    "sort_key": "Hierios 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1458,
         "end": 1458,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -1801,11 +1820,12 @@
     "lemma": "Hierios 7",
     "previous": "Hierios 6",
     "next": "Hierios 8",
+    "sort_key": "Hierios 07",
     "chapters": [
       {
         "start": 1458,
         "end": 1458,
-        "author": "Radermacher"
+        "author": "Radermacher."
       }
     ]
   },
@@ -1813,11 +1833,13 @@
     "lemma": "Hierios 8",
     "previous": "Hierios 7",
     "next": "Hierios 9",
+    "sort_key": "Hierios 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1458,
         "end": 1459,
-        "author": "Praechter"
+        "author": "Praechter."
       }
     ]
   },
