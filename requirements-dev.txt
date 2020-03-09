@@ -68,7 +68,7 @@ patool==1.12              # via -r requirements-dev.in
 pbr==5.4.4                # via stevedore
 pyasn1==0.4.8             # via python-jose, rsa
 pycodestyle==2.5.0        # via flake8
-pycparser==2.19           # via cffi
+pycparser==2.20           # via cffi
 pyfiglet==0.8.post1       # via -r requirements-dev.in
 pyflakes==2.1.1           # via flake8
 pylint==2.4.4             # via -r requirements-dev.in
