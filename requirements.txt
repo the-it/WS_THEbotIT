@@ -15,7 +15,7 @@ gitpython==3.1.0          # via -r requirements.in
 idna==2.9                 # via requests
 jmespath==0.9.5           # via boto3, botocore
 oauthlib==3.1.0           # via -r requirements.in, requests-oauthlib
-pycparser==2.19           # via pywikibot
+pycparser==2.20           # via pywikibot
 python-dateutil==2.8.1    # via botocore
 pywikibot==3.0.20200111   # via -r requirements.in
 requests-oauthlib==1.3.0  # via -r requirements.in
