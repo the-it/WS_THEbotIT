@@ -20,7 +20,7 @@ certifi==2019.11.28       # via requests
 cffi==1.14.0              # via cryptography
 cfn-lint==0.28.4          # via moto
 chardet==3.0.4            # via requests
-click==7.0                # via safety
+click==7.1.1                # via safety
 clint==0.5.1              # via internetarchive
 codecov==2.0.16           # via -r requirements-dev.in
 contextlib2==0.5.5        # via schema
