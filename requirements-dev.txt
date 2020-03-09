@@ -80,7 +80,7 @@ pytz==2019.3              # via moto
 pyyaml==5.3               # via bandit, cfn-lint, dparse, moto
 requests-mock==1.7.0      # via -r requirements-dev.in
 requests==2.23.0          # via codecov, docker, internetarchive, moto, requests-mock, responses, safety
-responses==0.10.11        # via moto
+responses==0.10.12        # via moto
 rsa==4.0                  # via python-jose
 s3transfer==0.3.3         # via boto3
 safety==1.8.5             # via -r requirements-dev.in
