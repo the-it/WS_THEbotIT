@@ -4,8 +4,8 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-boto3==1.12.11            # via -r requirements.in
-botocore==1.15.11         # via boto3, s3transfer
+boto3==1.12.17            # via -r requirements.in
+botocore==1.15.17         # via boto3, s3transfer
 certifi==2019.11.28       # via requests
 chardet==3.0.4            # via requests
 defusedxml==0.6.0         # via -r requirements.in
@@ -15,9 +15,9 @@ gitpython==3.1.0          # via -r requirements.in
 idna==2.8                 # via requests
 jmespath==0.9.5           # via boto3, botocore
 oauthlib==3.1.0           # via -r requirements.in, requests-oauthlib
-pycparser==2.19           # via pywikibot
+pycparser==2.20           # via pywikibot
 python-dateutil==2.8.1    # via botocore
-pywikibot==3.0.20200111   # via -r requirements.in
+pywikibot==3.0.20200306   # via -r requirements.in
 requests-oauthlib==1.3.0  # via -r requirements.in
 requests==2.23.0          # via -r requirements.in, pywikibot, requests-oauthlib
 roman==3.2                # via -r requirements.in
