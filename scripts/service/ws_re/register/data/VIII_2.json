@@ -1852,11 +1852,13 @@
     "lemma": "Hierios 9",
     "previous": "Hierios 8",
     "next": "Hierios 10",
+    "sort_key": "Hierios 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1459,
         "end": 1459,
-        "author": "Praechter"
+        "author": "Praechter."
       }
     ]
   },
@@ -1864,11 +1866,12 @@
     "lemma": "Hierios 10",
     "previous": "Hierios 9",
     "next": "Hieriphthon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1459,
         "end": 1459,
-        "author": "Praechter"
+        "author": "Praechter."
       }
     ]
   },
@@ -1876,6 +1879,8 @@
     "lemma": "Hieriphthon",
     "previous": "Hierios 10",
     "next": "Hierna",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1459,
@@ -1887,6 +1892,8 @@
     "lemma": "Hierna",
     "previous": "Hieriphthon",
     "next": "Hiero",
+    "redirect": "Hibernia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1459,
@@ -1902,7 +1909,7 @@
       {
         "start": 1459,
         "end": 1459,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -1910,6 +1917,8 @@
     "lemma": "Hierobolos",
     "previous": "Hiero",
     "next": "Hierocharax",
+    "redirect": "Iaribolos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1459,
@@ -1921,6 +1930,8 @@
     "lemma": "Hierocharax",
     "previous": "Hierobolos",
     "next": "Hieroduloi",
+    "redirect": "Siocharax",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1459,
