@@ -16222,7 +16222,6 @@
   {
     "lemma": "Arrianus 12",
     "previous": "Arrianus 2a",
-    "next": "Arrius 14a",
     "proof_read": 3,
     "chapters": [
       {
@@ -16233,8 +16232,12 @@
     ]
   },
   {
+    "lemma": "Arrius 12",
+    "next": "Arrius 14a"
+  },
+  {
     "lemma": "Arrius 14a",
-    "previous": "Arrianus 12",
+    "previous": "Arrius 12",
     "next": "Arrius 17a",
     "proof_read": 3,
     "chapters": [
