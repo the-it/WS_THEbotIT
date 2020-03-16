@@ -39,7 +39,7 @@ future==0.18.2            # via aws-xray-sdk
 gitdb==4.0.2              # via gitpython
 gitpython==3.1.0          # via bandit
 idna==2.9                 # via moto, requests
-internetarchive==1.9.0    # via -r requirements-dev.in
+internetarchive==1.9.2    # via -r requirements-dev.in
 isort==4.3.21             # via pylint
 jinja2==2.11.1            # via moto
 jmespath==0.9.5           # via boto3, botocore
