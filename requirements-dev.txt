@@ -30,7 +30,7 @@ ddt==1.3.0                # via -r requirements-dev.in
 docker==4.2.0             # via moto
 docopt==0.6.2             # via internetarchive
 docutils==0.16          # via botocore
-dparse==0.4.1             # via safety
+dparse==0.5.0             # via safety
 ecdsa==0.15               # via python-jose, sshpubkeys
 entrypoints==0.3          # via flake8
 flake8==3.7.9             # via -r requirements-dev.in
