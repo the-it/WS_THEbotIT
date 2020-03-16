@@ -23,7 +23,7 @@ chardet==3.0.4            # via requests
 click==7.1.1              # via safety
 clint==0.5.1              # via internetarchive
 codecov==2.0.16           # via -r requirements-dev.in
-contextlib2==0.5.5        # via schema
+contextlib2==0.6.0.post1        # via schema
 coverage==5.0.3           # via -r requirements-dev.in, codecov
 cryptography==2.8         # via moto, sshpubkeys
 ddt==1.3.0                # via -r requirements-dev.in
