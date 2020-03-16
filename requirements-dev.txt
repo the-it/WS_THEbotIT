@@ -62,7 +62,7 @@ mypy-boto3-s3==1.12.17.1  # via boto3-stubs
 mypy-boto3-sqs==1.12.17.1  # via boto3-stubs
 mypy-boto3==1.12.17.1     # via boto3-stubs
 mypy-extensions==0.4.3    # via mypy
-mypy==0.761               # via -r requirements-dev.in
+mypy==0.770               # via -r requirements-dev.in
 packaging==20.3           # via dparse, safety
 patool==1.12              # via -r requirements-dev.in
 pbr==5.4.4                # via stevedore
