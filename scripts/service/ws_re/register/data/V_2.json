@@ -713,7 +713,9 @@
       }
     ]
   },
-  {"lemma": "Δώριον 04"},
+  {
+    "lemma": "Δώριον 04"
+  },
   {
     "lemma": "Dorion 1",
     "previous": "Δώριον 04",
@@ -2751,7 +2753,7 @@
     "lemma": "Dracontes",
     "previous": "Draconis",
     "next": "Dracontius 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1635,
@@ -2764,7 +2766,7 @@
     "lemma": "Dracontius 1",
     "previous": "Dracontes",
     "next": "Dracontius 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1635,
@@ -2777,7 +2779,7 @@
     "lemma": "Dracontius 2",
     "previous": "Dracontius 1",
     "next": "Dracontius 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1635,
@@ -2790,7 +2792,7 @@
     "lemma": "Dracontius 3",
     "previous": "Dracontius 2",
     "next": "Dracontius 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1635,
@@ -3088,11 +3090,13 @@
     "lemma": "Drakon 8",
     "previous": "Drakon 7",
     "next": "Drakon 9",
+    "sort_key": "Drakon 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1648,
         "end": 1662,
-        "author": "Miller"
+        "author": "J. Miller."
       }
     ]
   },
