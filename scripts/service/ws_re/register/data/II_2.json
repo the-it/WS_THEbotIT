@@ -5002,7 +5002,7 @@
   {
     "lemma": "Asinianus",
     "previous": "Asinia basilica",
-    "next": "Asinius 1",
+    "next": "Asinius",
     "proof_read": 3,
     "chapters": [
       {
@@ -5013,8 +5013,23 @@
     ]
   },
   {
-    "lemma": "Asinius 1",
+    "lemma": "Asinius",
     "previous": "Asinianus",
+    "next": "Asinius 1",
+    "sort_key": "Asinius 00",
+    "proof_read": 3,
+    "wp_link": "w:de:Asinius",
+    "chapters": [
+      {
+        "start": 1583,
+        "end": 1583,
+        "author": "Klebs."
+      }
+    ]
+  },
+  {
+    "lemma": "Asinius 1",
+    "previous": "Asinius",
     "next": "Asinius 2",
     "sort_key": "Asinius 01",
     "proof_read": 3,
@@ -5046,6 +5061,7 @@
     "next": "Asinius 4",
     "sort_key": "Asinius 03",
     "proof_read": 3,
+    "wd_link": "d:Q58104048",
     "chapters": [
       {
         "start": 1583,
