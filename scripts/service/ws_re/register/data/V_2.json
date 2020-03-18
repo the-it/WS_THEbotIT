@@ -714,7 +714,8 @@
     ]
   },
   {
-    "lemma": "Δώριον 04"
+    "lemma": "Δώριον 04",
+    "next": "Dorion 1"
   },
   {
     "lemma": "Dorion 1",
@@ -2634,11 +2635,13 @@
     "lemma": "Drachme",
     "previous": "Drachamai",
     "next": "Dracilianus",
+    "proof_read": 2,
+    "wp_link": "w:de:Griechische Drachme",
     "chapters": [
       {
         "start": 1613,
         "end": 1633,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },

@@ -16399,8 +16399,10 @@
   },
   {
     "lemma": "Ruthusia",
-    "previous": "Ruhtusia",
+    "previous": "Ruteni",
     "next": "Rutila",
+    "redirect": "Rusguniae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
@@ -16412,11 +16414,12 @@
     "lemma": "Rutila",
     "previous": "Ruthusia",
     "next": "Rutiliana actio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
         "end": 1247,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -16424,11 +16427,12 @@
     "lemma": "Rutiliana actio",
     "previous": "Rutila",
     "next": "Rutilianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
         "end": 1247,
-        "author": "Leonhard"
+        "author": "R. Leonhard."
       }
     ]
   },
@@ -16436,6 +16440,8 @@
     "lemma": "Rutilianus",
     "previous": "Rutiliana actio",
     "next": "Rutilius",
+    "redirect": "Bellicius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
@@ -16447,11 +16453,13 @@
     "lemma": "Rutilius",
     "previous": "Rutilianus",
     "next": "Rutilius 1",
+    "sort_key": "Rutilius 0",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
         "end": 1247,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -16459,6 +16467,9 @@
     "lemma": "Rutilius 1",
     "previous": "Rutilius",
     "next": "Rutilius 2",
+    "sort_key": "Rutilius 01",
+    "redirect": "Rutilius 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
@@ -16470,10 +16481,13 @@
     "lemma": "Rutilius 2",
     "previous": "Rutilius 1",
     "next": "Rutilius 3",
+    "sort_key": "Rutilius 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
-        "end": 1247
+        "end": 1247,
+        "author": "Münzer."
       }
     ]
   },
