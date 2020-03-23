@@ -13,7 +13,7 @@ backports.csv==1.0.7      # via internetarchive
 bandit==1.6.2             # via -r requirements-dev.in
 beautifulsoup4==4.8.2     # via -c requirements.txt, -r requirements-dev.in
 boto3-stubs[essential]==1.12.23.0  # via -r requirements-dev.in
-boto3==1.12.23            # via -c requirements.txt, aws-sam-translator, moto, mypy-boto3
+boto3==1.12.27            # via -c requirements.txt, aws-sam-translator, moto, mypy-boto3
 boto==2.49.0              # via moto
 botocore==1.15.23         # via -c requirements.txt, aws-xray-sdk, boto3, moto, s3transfer
 certifi==2019.11.28       # via -c requirements.txt, pipenv, requests
