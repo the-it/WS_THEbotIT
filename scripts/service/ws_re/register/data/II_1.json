@@ -20439,6 +20439,8 @@
     "next": "Arethusa 9",
     "sort_key": "Arethusa 08",
     "proof_read": 3,
+    "wp_link": "w:en:Arethusa (Mygdonia)",
+    "wd_link": "d:Q4789100",
     "chapters": [
       {
         "start": 679,
@@ -39916,7 +39918,7 @@
   {
     "lemma": "Arruntanus",
     "previous": "Arruns 4",
-    "next": "Arruntius 1",
+    "next": "Arruntius",
     "proof_read": 3,
     "chapters": [
       {
@@ -39927,8 +39929,23 @@
     ]
   },
   {
-    "lemma": "Arruntius 1",
+    "lemma": "Arruntius",
     "previous": "Arruntanus",
+    "next": "Arruntius 1",
+    "sort_key": "Arruntius 00",
+    "proof_read": 3,
+    "wp_link": "w:de:en:Arruntia (gens)",
+    "chapters": [
+      {
+        "start": 1261,
+        "end": 1261,
+        "author": "Klebs."
+      }
+    ]
+  },
+  {
+    "lemma": "Arruntius 1",
+    "previous": "Arruntius",
     "next": "Arruntius 2",
     "sort_key": "Arruntius 01",
     "proof_read": 3,
