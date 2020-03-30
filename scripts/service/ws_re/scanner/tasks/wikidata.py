@@ -1,3 +1,5 @@
+import json
+from string import Template
 from typing import Dict, Callable
 
 import dictdiffer
@@ -13,6 +15,8 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.site.DataSite = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
+        with open("non_properties.json") as non_properties_json:
+            self._non_properties_template = Template(non_properties_json.read())
 
     def task(self):
         try:
@@ -28,6 +32,8 @@ class DATATask(ReScannerTask):
 
         # data_item.save()
 
+    # NON PROPERTIES functionality
+
     def _update_non_properties(self, item: pywikibot.ItemPage):
         non_properties = self._non_properties
         if self._labels_and_sitelinks_has_changed(item, non_properties):
@@ -35,20 +41,9 @@ class DATATask(ReScannerTask):
 
     @property
     def _non_properties(self) -> Dict:
-        non_properties = {"labels": {
-            "de": {"language": "de", "value": f"{self.re_page.lemma_without_prefix} (Pauly-Wissowa)"},
-            "en": {"language": "en", "value": f"{self.re_page.lemma_without_prefix} (Pauly-Wissowa)"},
-            "fr": {"language": "fr", "value": f"{self.re_page.lemma_without_prefix} (Pauly-Wissowa)"},
-            "nl": {"language": "nl", "value": f"{self.re_page.lemma_without_prefix} (Pauly-Wissowa)"},
-        },
-            "descriptions": {
-                "de": {"language": "de", "value": "Enzyklopädischer Artikel in Wikisource"},
-                "en": {"language": "en", "value": "wikisource encyclopedic article"},
-                "fr": {"language": "fr", "value": "article d'encyclopédie de wikisource"},
-                "nl": {"language": "nl", "value": "wikisource encyclopedisch artikel"},
-            },
-            "sitelinks": [{'site': 'dewikisource', 'title': self.re_page.page.title(), "badges": []}]
-        }
+        replaced_json = self._non_properties_template.substitute(lemma=self.re_page.lemma_without_prefix,
+                                                                 lemma_with_prefix=self.re_page.lemma)
+        non_properties = json.loads(replaced_json)
         return non_properties
 
     def _labels_and_sitelinks_has_changed(self, item: pywikibot.ItemPage, new_non_properties: Dict) -> bool:
@@ -64,6 +59,8 @@ class DATATask(ReScannerTask):
                                                           in old_non_properties[labels_or_descriptions].items()
                                                           if key in self._languages}
         return bool(tuple(dictdiffer.diff(new_non_properties, old_non_properties)))
+
+    # PROPERTIES functionality
 
     def _get_property_functions(self) -> Dict[str, Callable]:
         property_functions = {}

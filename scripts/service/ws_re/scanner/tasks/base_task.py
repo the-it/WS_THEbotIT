@@ -1,7 +1,7 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta
-from typing import List, Any
+from typing import List, Any, Dict
 
 import pywikibot
 
@@ -32,7 +32,7 @@ class ReScannerTask:
     def task(self):
         pass
 
-    def run(self, re_page: RePage):
+    def run(self, re_page: RePage) -> Dict[str, bool]:
         self.re_page = re_page
         preprocessed_hash = hash(self.re_page)
         result = {SUCCESS: False, CHANGED: False}
