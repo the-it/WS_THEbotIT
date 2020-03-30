@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from string import Template
 from typing import Dict, Callable
 
@@ -15,7 +16,7 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.site.DataSite = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
-        with open("non_properties.json") as non_properties_json:
+        with open(Path(__file__).parent.joinpath("non_properties.json")) as non_properties_json:
             self._non_properties_template = Template(non_properties_json.read())
 
     def task(self):
