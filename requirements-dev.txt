@@ -97,7 +97,7 @@ stevedore==1.32.0         # via bandit
 testfixtures==6.14.0      # via -r requirements-dev.in
 toml==0.10.0              # via dparse
 total-ordering==0.1.0     # via internetarchive
-tqdm==4.43.0              # via internetarchive
+tqdm==4.44.1              # via internetarchive
 typed-ast==1.4.1          # via mypy
 typing-extensions==3.7.4.1  # via mypy
 urllib3==1.25.8           # via -c requirements.txt, botocore, requests
