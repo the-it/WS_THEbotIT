@@ -3565,11 +3565,12 @@
     "lemma": "Drenkon",
     "previous": "Δρήκων",
     "next": "Drepana 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1696,
         "end": 1696,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -3577,23 +3578,25 @@
     "lemma": "Drepana 1",
     "previous": "Drenkon",
     "next": "Drepana 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1696,
         "end": 1696,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Drepana 2",
     "previous": "Drepana 1",
-    "next": "Drapanius",
+    "next": "Drepane",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1696,
         "end": 1697,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3610,8 +3613,10 @@
   },
   {
     "lemma": "Drepane",
-    "previous": "Drapanius",
+    "previous": "Drepana 2",
     "next": "Drepanius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
@@ -3636,11 +3641,12 @@
     "lemma": "Drepanon",
     "previous": "Drepanius",
     "next": "Drepanon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3648,11 +3654,12 @@
     "lemma": "Drepanon 1",
     "previous": "Drepanon",
     "next": "Drepanon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3664,7 +3671,7 @@
       {
         "start": 1697,
         "end": 1697,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -3672,11 +3679,12 @@
     "lemma": "Drepanon 3",
     "previous": "Drepanon 2",
     "next": "Drepanon 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -3684,11 +3692,12 @@
     "lemma": "Drepanon 4",
     "previous": "Drepanon 3",
     "next": "Drepanon 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
