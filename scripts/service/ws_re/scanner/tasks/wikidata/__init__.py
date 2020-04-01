@@ -83,9 +83,6 @@ class DATATask(ReScannerTask):
             if self._claim_list_has_changed(new_claim_list, old_claim_list):
                 claims_to_add[claim_str]=new_claim_list
                 claims_to_remove += old_claim_list
-        data_item.get()
-        for claim in data_item.claims["P31"]:
-            data_item.removeClaims(claim, summary=u'test')
         data_item.removeClaims(claims_to_remove)
         data_item.editEntity({"claims": claims_to_add})
         print(data_item.toJSON())
@@ -107,7 +104,7 @@ class DATATask(ReScannerTask):
         return processed_claim_list
 
 
-    # from here on all functions are related to one specific claim
+    # CLAIM FACTORIES from here on all functions are related to one specific claim
 
     def _p31(self) -> List[pywikibot.Claim]:
         """
