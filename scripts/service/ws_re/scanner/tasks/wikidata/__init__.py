@@ -1,7 +1,8 @@
 import json
+import re
 from pathlib import Path
 from string import Template
-from typing import Dict, Callable
+from typing import Dict, Callable, List
 
 import dictdiffer
 import pywikibot
@@ -15,23 +16,21 @@ class DATATask(ReScannerTask):
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
-        self.wikidata: pywikibot.site.DataSite = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
+        self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
+        self._claim_functions = self._get_claim_functions()
 
     def task(self):
         try:
             # edit existing wikidata item
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+            data_item.get()
             self._update_non_claims(data_item)
+            self._update_claims(data_item)
         except pywikibot.NoPage:
             # create a new one from scratch
             data_item: pywikibot.ItemPage = self.wikidata.createNewItemFromPage(page=self.re_page.page)
-
-        self._get_claim_functions()
-        # data_item.editEntity(new_values)
-
-        # data_item.save()
 
     # NON CLAIM functionality
 
@@ -67,17 +66,54 @@ class DATATask(ReScannerTask):
         """
         Returns a dictionary of claim generation functions. The key represents the name of the claim.
         Each function will return a pywikibot.Claim. The functions are parsed by their name. So every function that
-        returns a propery
+        returns a claim must be names as _pXXXX.
         """
         claim_functions = {}
         for item in dir(self):
-            if "_p" in item:
+            if re.search(r"^_p\d{1,6}", item):
                 claim_functions[item[1:].upper()] = getattr(self, item)
         return claim_functions
 
+    def _update_claims(self, data_item: pywikibot.ItemPage):
+        claims_to_add: Dict[str, List[pywikibot.Claim]] = {}
+        claims_to_remove: List[pywikibot.Claim] = []
+        for claim_str, claim_function in self._claim_functions.items():
+            new_claim_list = claim_function()
+            old_claim_list = data_item.claims[claim_str]
+            if self._claim_list_has_changed(new_claim_list, old_claim_list):
+                claims_to_add[claim_str]=new_claim_list
+                claims_to_remove += old_claim_list
+        data_item.get()
+        for claim in data_item.claims["P31"]:
+            data_item.removeClaims(claim, summary=u'test')
+        data_item.removeClaims(claims_to_remove)
+        data_item.editEntity({"claims": claims_to_add})
+        print(data_item.toJSON())
+
+
+    def _claim_list_has_changed(self, new_claim_list: List[pywikibot.Claim] ,
+                                old_claim_list: List[pywikibot.Claim]) -> bool:
+        new_processed_claim_list = self._preprocess_claim_list(new_claim_list)
+        old_processed_claim_list = self._preprocess_claim_list(old_claim_list)
+        return bool(tuple(dictdiffer.diff(new_processed_claim_list, old_processed_claim_list)))
+
+    def _preprocess_claim_list(self, claim_list: List[pywikibot.Claim]) -> List[Dict]:
+        processed_claim_list = []
+        for claim_object in claim_list:
+            processed_claim = claim_object.toJSON()
+            if "id" in processed_claim:
+                del processed_claim["id"]
+            processed_claim_list.append(processed_claim)
+        return processed_claim_list
+
+
     # from here on all functions are related to one specific claim
-    def _p31(self) -> pywikibot.Claim:
+
+    def _p31(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **instance of** -> **encyclopedic article**
+        """
         claim = pywikibot.Claim(self.wikidata, 'P31')
         target = pywikibot.ItemPage(self.wikidata, "Q13433827")
         claim.setTarget(target)
-        return claim
+        return [claim]
