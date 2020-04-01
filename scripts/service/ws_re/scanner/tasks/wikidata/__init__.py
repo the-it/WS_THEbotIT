@@ -114,3 +114,12 @@ class DATATask(ReScannerTask):
         target = pywikibot.ItemPage(self.wikidata, "Q13433827")
         claim.setTarget(target)
         return [claim]
+
+    def _p361(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **part of** -> **Paulys Realenzyklopädie der klassischen Altertumswissenschaft**
+        """
+        claim = pywikibot.Claim(self.wikidata, 'P361')
+        target = pywikibot.ItemPage(self.wikidata, "Q1138524")
+        claim.setTarget(target)
+        return [claim]
