@@ -22,8 +22,13 @@ class DATATask(ReScannerTask):
         self._claim_functions = self._get_claim_functions()
 
     def task(self):
+        self._first_article = self.re_page[0]
         try:
             # edit existing wikidata item
+            #######################################
+
+            #############################
+            return True
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
             data_item.get()
             self._update_non_claims(data_item)
@@ -122,4 +127,28 @@ class DATATask(ReScannerTask):
         claim = pywikibot.Claim(self.wikidata, 'P361')
         target = pywikibot.ItemPage(self.wikidata, "Q1138524")
         claim.setTarget(target)
+        return [claim]
+
+    def _p921(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **main subject** -> **<Item of wikipedia article>**
+        """
+        wp_article = self._first_article["WIKIPEDIA"].value
+        # if no wp_article is present, there is nothing to connect
+        if not wp_article:
+            return []
+        # handle the case of an implicit de:
+        if ":" not in wp_article:
+            wp_article = f"de:{wp_article}"
+        language, wp_page_str = wp_article.split(":")
+        wp_site: pywikibot.Site = pywikibot.Site(code=language, fam="wikipedia")
+        wp_page: pywikibot.Page = pywikibot.Page(wp_site, wp_page_str)
+        # try to fetch the data item of the page, if not there is nothing to connect
+        try:
+            wp_data_item: pywikibot.ItemPage = wp_page.data_item()
+        except pywikibot.NoPage:
+            return []
+        # finally create the claim
+        claim = pywikibot.Claim(self.wikidata, 'P921')
+        claim.setTarget(wp_data_item)
         return [claim]
