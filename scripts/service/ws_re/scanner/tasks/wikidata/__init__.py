@@ -7,6 +7,7 @@ from typing import Dict, Callable, List
 import dictdiffer
 import pywikibot
 
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
 from tools.bots.pi import WikiLogger
 
@@ -20,13 +21,14 @@ class DATATask(ReScannerTask):
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
         self._claim_functions = self._get_claim_functions()
+        self._authors = Authors()
 
     def task(self):
         self._first_article = self.re_page[0]
         try:
             # edit existing wikidata item
             #######################################
-
+            self._p50()
             #############################
             return True
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
@@ -119,6 +121,34 @@ class DATATask(ReScannerTask):
         target = pywikibot.ItemPage(self.wikidata, "Q13433827")
         claim.setTarget(target)
         return [claim]
+
+    def _p50(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **author** -> **<Item of author of RE lemma>**
+        """
+        author_items = self._p50_get_author_list()
+        claim_list = List[pywikibot.Claim]
+        for author in author_items:
+            claim = pywikibot.Claim(self.wikidata, 'P31')
+            claim.setTarget(author)
+        return claim_list
+
+    def _p50_get_author_list(self) -> List[pywikibot.Claim]:
+        author_items: List[pywikibot.Claim] = []
+        for article_part in self.re_page.splitted_article_list[0]:
+            author = article_part.author[0]
+            band = self._first_article["BAND"].value
+            author_list = self._authors.get_author_by_mapping(author, band)
+            if len(author_list) == 1:
+                author_lemma = pywikibot.Page(self.wiki, author_list[0].name)
+                if not author_lemma.exists():
+                    continue
+                try:
+                    # append the item of the author, if it exists
+                    author_items.append(author_lemma.data_item())
+                except pywikibot.NoPage:
+                    continue
+        return author_items
 
     def _p361(self) -> List[pywikibot.Claim]:
         """
