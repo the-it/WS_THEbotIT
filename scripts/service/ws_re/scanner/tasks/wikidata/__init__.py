@@ -9,6 +9,7 @@ import pywikibot
 
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.template.article import Article
 from tools.bots.pi import WikiLogger
 
 
@@ -22,6 +23,7 @@ class DATATask(ReScannerTask):
             self._non_claims_template = Template(non_claims_json.read())
         self._claim_functions = self._get_claim_functions()
         self._authors = Authors()
+        self._first_article: Article
 
     def task(self):
         self._first_article = self.re_page[0]
@@ -49,7 +51,7 @@ class DATATask(ReScannerTask):
     @property
     def _non_claims(self) -> Dict:
         replaced_json = self._non_claims_template.substitute(lemma=self.re_page.lemma_without_prefix,
-                                                                 lemma_with_prefix=self.re_page.lemma)
+                                                             lemma_with_prefix=self.re_page.lemma)
         non_claims = json.loads(replaced_json)
         return non_claims
 
@@ -62,9 +64,9 @@ class DATATask(ReScannerTask):
         # remove all languages, that are not set by this bot
         for labels_or_descriptions in ("labels", "descriptions"):
             old_non_claims[labels_or_descriptions] = {key: value
-                                                          for (key, value)
-                                                          in old_non_claims[labels_or_descriptions].items()
-                                                          if key in self._languages}
+                                                      for (key, value)
+                                                      in old_non_claims[labels_or_descriptions].items()
+                                                      if key in self._languages}
         return bool(tuple(dictdiffer.diff(new_non_claims, old_non_claims)))
 
     # CLAIM functionality
@@ -77,8 +79,8 @@ class DATATask(ReScannerTask):
         """
         claim_functions = {}
         for item in dir(self):
-            if re.search(r"^_p\d{1,6}", item):
-                claim_functions[item[1:].upper()] = getattr(self, item)
+            if re.search(r"^p\d{1,6}", item):
+                claim_functions[item.upper()] = getattr(self, item)
         return claim_functions
 
     def _update_claims(self, data_item: pywikibot.ItemPage):
@@ -88,14 +90,13 @@ class DATATask(ReScannerTask):
             new_claim_list = claim_function()
             old_claim_list = data_item.claims[claim_str]
             if self._claim_list_has_changed(new_claim_list, old_claim_list):
-                claims_to_add[claim_str]=new_claim_list
+                claims_to_add[claim_str] = new_claim_list
                 claims_to_remove += old_claim_list
         data_item.removeClaims(claims_to_remove)
         data_item.editEntity({"claims": claims_to_add})
         print(data_item.toJSON())
 
-
-    def _claim_list_has_changed(self, new_claim_list: List[pywikibot.Claim] ,
+    def _claim_list_has_changed(self, new_claim_list: List[pywikibot.Claim],
                                 old_claim_list: List[pywikibot.Claim]) -> bool:
         new_processed_claim_list = self._preprocess_claim_list(new_claim_list)
         old_processed_claim_list = self._preprocess_claim_list(old_claim_list)
@@ -110,10 +111,9 @@ class DATATask(ReScannerTask):
             processed_claim_list.append(processed_claim)
         return processed_claim_list
 
-
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
-    def _p31(self) -> List[pywikibot.Claim]:
+    def p31(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **instance of** -> **encyclopedic article**
         """
@@ -122,15 +122,16 @@ class DATATask(ReScannerTask):
         claim.setTarget(target)
         return [claim]
 
-    def _p50(self) -> List[pywikibot.Claim]:
+    def p50(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **author** -> **<Item of author of RE lemma>**
         """
         author_items = self._p50_get_author_list()
-        claim_list = List[pywikibot.Claim]
+        claim_list: List[pywikibot.Claim] = []
         for author in author_items:
             claim = pywikibot.Claim(self.wikidata, 'P31')
             claim.setTarget(author)
+            claim_list.append(claim)
         return claim_list
 
     def _p50_get_author_list(self) -> List[pywikibot.Claim]:
@@ -150,7 +151,7 @@ class DATATask(ReScannerTask):
                     continue
         return author_items
 
-    def _p361(self) -> List[pywikibot.Claim]:
+    def p361(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **part of** -> **Paulys Realenzyklopädie der klassischen Altertumswissenschaft**
         """
@@ -159,7 +160,7 @@ class DATATask(ReScannerTask):
         claim.setTarget(target)
         return [claim]
 
-    def _p921(self) -> List[pywikibot.Claim]:
+    def p921(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **main subject** -> **<Item of wikipedia article>**
         """
