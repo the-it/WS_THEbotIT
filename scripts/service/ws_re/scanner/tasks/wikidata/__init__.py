@@ -32,7 +32,8 @@ class DATATask(ReScannerTask):
         try:
             # edit existing wikidata item
             #######################################
-            self.p577()
+            self.p155()
+            self.p156()
             #############################
             return True
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
@@ -152,6 +153,34 @@ class DATATask(ReScannerTask):
                 except pywikibot.NoPage:
                     continue
         return author_items
+
+    def p155(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **follows** -> **<Item of predecessor article>**
+        """
+        lemma_before_this_str = f"RE:{self._first_article['VORGÄNGER'].value}"
+        lemma_before_this = pywikibot.Page(self.wiki, lemma_before_this_str)
+        try:
+            item_before_this = lemma_before_this.data_item()
+            claim = pywikibot.Claim(self.wikidata, 'P155')
+            claim.setTarget(item_before_this)
+            return [claim]
+        except pywikibot.NoPage:
+            return []
+
+    def p156(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **followed by** -> **<Item of following article>**
+        """
+        lemma_after_this_str = f"RE:{self._first_article['NACHFOLGER'].value}"
+        lemma_after_this = pywikibot.Page(self.wiki, lemma_after_this_str)
+        try:
+            item_after_this = lemma_after_this.data_item()
+            claim = pywikibot.Claim(self.wikidata, 'P156')
+            claim.setTarget(item_after_this)
+            return [claim]
+        except pywikibot.NoPage:
+            return []
 
     def p361(self) -> List[pywikibot.Claim]:
         """
