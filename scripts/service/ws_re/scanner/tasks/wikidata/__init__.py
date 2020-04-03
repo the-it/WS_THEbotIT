@@ -10,7 +10,7 @@ import pywikibot
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
 from scripts.service.ws_re.template.article import Article
-from scripts.service.ws_re.volumes import Volumes
+from scripts.service.ws_re.volumes import Volumes, Volume
 from tools.bots.pi import WikiLogger
 
 
@@ -195,13 +195,12 @@ class DATATask(ReScannerTask):
         """
         Returns the Claim **publication date** -> **<Year of publication of RE lemma>**
         """
-        publication_year = self._get_publication_year()
         claim = pywikibot.Claim(self.wikidata, 'P577')
-        claim.setTarget(pywikibot.WbTime(year=publication_year))
+        claim.setTarget(pywikibot.WbTime(year=int(self._get_volume().year)))
         return [claim]
 
-    def _get_publication_year(self):
-        return int(self._volumes[self._first_article["BAND"].value].year)
+    def _get_volume(self) -> Volume:
+        return self._volumes[self._first_article["BAND"].value]
 
     def p921(self) -> List[pywikibot.Claim]:
         """
@@ -225,4 +224,12 @@ class DATATask(ReScannerTask):
         # finally create the claim
         claim = pywikibot.Claim(self.wikidata, 'P921')
         claim.setTarget(wp_data_item)
+        return [claim]
+
+    def p1433(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **published in** -> **<item of the category of the issue>**
+        """
+        claim = pywikibot.Claim(self.wikidata, 'P1433')
+        claim.setTarget(self._get_volume().data_item)
         return [claim]
