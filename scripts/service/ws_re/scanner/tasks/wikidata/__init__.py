@@ -1,14 +1,17 @@
 import json
 import re
+from datetime import datetime
 from pathlib import Path
 from string import Template
-from typing import Dict, Callable, List
+from typing import Dict, Callable, List, Optional
 
 import dictdiffer
 import pywikibot
 
+from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner.tasks.wikidata.copyright_status_claims import PublicDomainClaims
 from scripts.service.ws_re.template.article import Article
 from scripts.service.ws_re.volumes import Volumes, Volume
 from tools.bots.pi import WikiLogger
@@ -26,13 +29,15 @@ class DATATask(ReScannerTask):
         self._authors = Authors()
         self._first_article: Article
         self._volumes = Volumes()
+        self._current_year = datetime.now().year
+        self._public_domain_claims = PublicDomainClaims(self.wikidata)
 
     def task(self):
         self._first_article = self.re_page[0]
         try:
             # edit existing wikidata item
             #######################################
-            self.p3903()
+            self.p6216()
             #############################
             return True
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
@@ -138,20 +143,27 @@ class DATATask(ReScannerTask):
 
     def _p50_get_author_list(self) -> List[pywikibot.Claim]:
         author_items: List[pywikibot.Claim] = []
+        for author in self._authors_of_first_article:
+            author_lemma = pywikibot.Page(self.wiki, author.name)
+            if not author_lemma.exists():
+                continue
+            try:
+                # append the item of the author, if it exists
+                author_items.append(author_lemma.data_item())
+            except pywikibot.NoPage:
+                continue
+        return author_items
+
+    @property
+    def _authors_of_first_article(self) -> List[Author]:
+        author_list: List[Author] = []
         for article_part in self.re_page.splitted_article_list[0]:
             author = article_part.author[0]
             band = self._first_article["BAND"].value
-            author_list = self._authors.get_author_by_mapping(author, band)
-            if len(author_list) == 1:
-                author_lemma = pywikibot.Page(self.wiki, author_list[0].name)
-                if not author_lemma.exists():
-                    continue
-                try:
-                    # append the item of the author, if it exists
-                    author_items.append(author_lemma.data_item())
-                except pywikibot.NoPage:
-                    continue
-        return author_items
+            possible_authors = self._authors.get_author_by_mapping(author, band)
+            if len(possible_authors) == 1:
+                author_list.append(possible_authors[0])
+        return author_list
 
     def p155(self) -> List[pywikibot.Claim]:
         """
@@ -195,10 +207,11 @@ class DATATask(ReScannerTask):
         Returns the Claim **publication date** -> **<Year of publication of RE lemma>**
         """
         claim = pywikibot.Claim(self.wikidata, 'P577')
-        claim.setTarget(pywikibot.WbTime(year=int(self._get_volume().year)))
+        claim.setTarget(pywikibot.WbTime(year=int(self._volume_of_first_article.year)))
         return [claim]
 
-    def _get_volume(self) -> Volume:
+    @property
+    def _volume_of_first_article(self) -> Volume:
         return self._volumes[self._first_article["BAND"].value]
 
     def p921(self) -> List[pywikibot.Claim]:
@@ -230,7 +243,7 @@ class DATATask(ReScannerTask):
         Returns the Claim **published in** -> **<item of the category of the issue>**
         """
         claim = pywikibot.Claim(self.wikidata, 'P1433')
-        claim.setTarget(self._get_volume().data_item)
+        claim.setTarget(self._volume_of_first_article.data_item)
         return [claim]
 
     def p3903(self) -> List[pywikibot.Claim]:
@@ -245,3 +258,33 @@ class DATATask(ReScannerTask):
             target = f"{start}–{end}"
         claim.setTarget(target)
         return [claim]
+
+    def p6216(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **copyright status** ->
+        **<public domain statements dependend on publication age and death of author>**
+        """
+        claim_list: List[pywikibot.Claim] = []
+        if self._current_year - int(self._volume_of_first_article.year) > 95:
+            claim_list.append(self._public_domain_claims.CLAIM_PUBLISHED_95_YEARS_AGO)
+        pma_claim = self._6216_min_years_since_death
+        if pma_claim:
+            claim_list.append(pma_claim)
+        return claim_list
+
+    @property
+    def _6216_min_years_since_death(self) -> Optional[pywikibot.Claim]:
+        max_death_year = 0
+        for author in self._authors_of_first_article:
+            if author.death > max_death_year:
+                max_death_year = author.death
+        years_since_death = self._current_year - max_death_year
+        if years_since_death > 100:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER
+        if years_since_death > 80:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER
+        if years_since_death > 70:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER
+        if years_since_death > 50:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER
+        return None
