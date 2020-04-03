@@ -32,8 +32,7 @@ class DATATask(ReScannerTask):
         try:
             # edit existing wikidata item
             #######################################
-            self.p155()
-            self.p156()
+            self.p3903()
             #############################
             return True
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
@@ -232,4 +231,17 @@ class DATATask(ReScannerTask):
         """
         claim = pywikibot.Claim(self.wikidata, 'P1433')
         claim.setTarget(self._get_volume().data_item)
+        return [claim]
+
+    def p3903(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **column** -> **<start column>[–<end column>]**
+        """
+        claim = pywikibot.Claim(self.wikidata, 'P3903')
+        start = self._first_article["SPALTE_START"].value
+        end = self._first_article["SPALTE_END"].value
+        target = start
+        if end and start != end:
+            target = f"{start}–{end}"
+        claim.setTarget(target)
         return [claim]
