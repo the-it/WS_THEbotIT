@@ -10,6 +10,7 @@ import pywikibot
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
 from scripts.service.ws_re.template.article import Article
+from scripts.service.ws_re.volumes import Volumes
 from tools.bots.pi import WikiLogger
 
 
@@ -24,13 +25,14 @@ class DATATask(ReScannerTask):
         self._claim_functions = self._get_claim_functions()
         self._authors = Authors()
         self._first_article: Article
+        self._volumes = Volumes()
 
     def task(self):
         self._first_article = self.re_page[0]
         try:
             # edit existing wikidata item
             #######################################
-            self._p50()
+            self.p577()
             #############################
             return True
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
@@ -159,6 +161,18 @@ class DATATask(ReScannerTask):
         target = pywikibot.ItemPage(self.wikidata, "Q1138524")
         claim.setTarget(target)
         return [claim]
+
+    def p577(self) -> List[pywikibot.Claim]:
+        """
+        Returns the Claim **publication date** -> **<Year of publication of RE lemma>**
+        """
+        publication_year = self._get_publication_year()
+        claim = pywikibot.Claim(self.wikidata, 'P577')
+        claim.setTarget(pywikibot.WbTime(year=publication_year))
+        return [claim]
+
+    def _get_publication_year(self):
+        return int(self._volumes[self._first_article["BAND"].value].year)
 
     def p921(self) -> List[pywikibot.Claim]:
         """
