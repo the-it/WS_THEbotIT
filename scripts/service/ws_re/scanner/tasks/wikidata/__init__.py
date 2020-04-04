@@ -147,7 +147,7 @@ class DATATask(ReScannerTask):
         author_items = self._p50_get_author_list()
         claim_list: List[pywikibot.Claim] = []
         for author in author_items:
-            claim = pywikibot.Claim(self.wikidata, 'P31')
+            claim = pywikibot.Claim(self.wikidata, 'P50')
             claim.setTarget(author)
             claim_list.append(claim)
         return claim_list
@@ -263,8 +263,11 @@ class DATATask(ReScannerTask):
         Returns the Claim **column** -> **<start column>[–<end column>]**
         """
         claim = pywikibot.Claim(self.wikidata, 'P3903')
-        start = self._first_article["SPALTE_START"].value
-        end = self._first_article["SPALTE_END"].value
+        start = int(self._first_article["SPALTE_START"].value)
+        try:
+            end = int(self._first_article["SPALTE_END"].value)
+        except ValueError:
+            end = None
         target = start
         if end and start != end:
             target = f"{start}–{end}"
