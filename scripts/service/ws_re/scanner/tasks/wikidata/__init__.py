@@ -23,6 +23,11 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
+        # dummy_item = pywikibot.ItemPage(self.wikidata, "Q5296")
+        # print(1)
+        # dummy_item.get()
+        # print(2)
+        # print(json.dumps(dummy_item.toJSON(), indent=2))
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
         self._claim_functions = self._get_claim_functions()
@@ -36,13 +41,9 @@ class DATATask(ReScannerTask):
         self._first_article = self.re_page[0]
         try:
             # edit existing wikidata item
-            #######################################
-            self.p6216()
-            #############################
-            return True
             data_item: pywikibot.ItemPage = self.re_page.page.data_item()
             data_item.get()
-            self._update_non_claims(data_item)
+            # self._update_non_claims(data_item)
             self._update_claims(data_item)
         except pywikibot.NoPage:
             # create a new one from scratch
@@ -95,13 +96,23 @@ class DATATask(ReScannerTask):
         claims_to_remove: List[pywikibot.Claim] = []
         for claim_str, claim_function in self._claim_functions.items():
             new_claim_list = claim_function()
-            old_claim_list = data_item.claims[claim_str]
+            try:
+                old_claim_list = data_item.claims[claim_str]
+            except KeyError:
+                old_claim_list = []
             if self._claim_list_has_changed(new_claim_list, old_claim_list):
                 claims_to_add[claim_str] = new_claim_list
                 claims_to_remove += old_claim_list
-        data_item.removeClaims(claims_to_remove)
-        data_item.editEntity({"claims": claims_to_add})
-        print(data_item.toJSON())
+        # bug in pywikibot prevents this for the moment
+        # data_item.removeClaims(claims_to_remove)
+        # print(json.dumps(data_item.toJSON(), indent=2))
+        claims_to_add_seralized = {}
+        for key, claim_list in claims_to_add.items():
+            claim_list_serialized = []
+            for claim in claim_list:
+                claim_list_serialized.append(claim.toJSON())
+            claims_to_add_seralized[key] = claim_list_serialized
+        data_item.editEntity({"claims": claims_to_add_seralized})
 
     def _claim_list_has_changed(self, new_claim_list: List[pywikibot.Claim],
                                 old_claim_list: List[pywikibot.Claim]) -> bool:
@@ -243,7 +254,8 @@ class DATATask(ReScannerTask):
         Returns the Claim **published in** -> **<item of the category of the issue>**
         """
         claim = pywikibot.Claim(self.wikidata, 'P1433')
-        claim.setTarget(self._volume_of_first_article.data_item)
+        data_item = pywikibot.ItemPage(self.wikidata, self._volume_of_first_article.data_item)
+        claim.setTarget(data_item)
         return [claim]
 
     def p3903(self) -> List[pywikibot.Claim]:
