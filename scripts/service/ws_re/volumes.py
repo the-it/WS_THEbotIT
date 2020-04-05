@@ -25,9 +25,15 @@ _REGEX_MAPPING = {VolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:
 
 
 class Volume:
-    def __init__(self, name: str, year: Union[str, int], start: Optional[str] = None, end: Optional[str] = None):
+    def __init__(self,
+                 name: str,
+                 year: Union[str, int],
+                 data_item: str,
+                 start: Optional[str] = None,
+                 end: Optional[str] = None):
         self._name = name
         self._year = str(year)
+        self._data_item = data_item
         self._start = start
         self._end = end
         self._sortkey = self._compute_sortkey()
@@ -47,6 +53,10 @@ class Volume:
     @property
     def year(self) -> str:
         return self._year
+
+    @property
+    def data_item(self) -> str:
+        return self._data_item
 
     @property
     def start(self) -> Optional[str]:
