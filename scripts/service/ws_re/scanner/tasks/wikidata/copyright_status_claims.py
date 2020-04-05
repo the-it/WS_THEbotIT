@@ -23,6 +23,8 @@ class PublicDomainClaims():
     _100_YEARS_AFTER_AUTHORS_DEATH = "Q29940705"
     _COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER = "Q60332278"
 
+    _THRESHOLD_OF_ORIGINALITY = "Q707401"
+
     def __init__(self, wikidata: pywikibot.Site):
         self.wikidata = wikidata
         self._public_domain_item = pywikibot.ItemPage(self.wikidata, self._PUBLIC_DOMAIN)
@@ -31,6 +33,7 @@ class PublicDomainClaims():
         self.CLAIM_COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER = self._init_xx_years_after_authors_death(70)
         self.CLAIM_COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER = self._init_xx_years_after_authors_death(80)
         self.CLAIM_COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER = self._init_xx_years_after_authors_death(100)
+        self.CLAIM_THRESHOLD_OF_ORIGINALITY = self._init_threshold_of_originality()
 
     def _init_published_more_than_95_years_ago(self) -> pywikibot.Claim:
         claim = pywikibot.Claim(self.wikidata, self._COPYRIGHT_STATUS)
@@ -56,6 +59,15 @@ class PublicDomainClaims():
         target_determination = pywikibot.ItemPage(self.wikidata, getattr(self, f"_{years}_YEARS_AFTER_AUTHORS_DEATH"))
         qualifier_determination.setTarget(target_determination)
         claim.addQualifier(qualifier_jurisdiction)
+        claim.addQualifier(qualifier_determination)
+        return claim
+
+    def _init_threshold_of_originality(self) -> pywikibot.Claim:
+        claim = pywikibot.Claim(self.wikidata, self._COPYRIGHT_STATUS)
+        claim.setTarget(self._public_domain_item)
+        qualifier_determination = pywikibot.Claim(self.wikidata, self._DETERMINATION_METHOD)
+        target_determination = pywikibot.ItemPage(self.wikidata, self._THRESHOLD_OF_ORIGINALITY)
+        qualifier_determination.setTarget(target_determination)
         claim.addQualifier(qualifier_determination)
         return claim
 

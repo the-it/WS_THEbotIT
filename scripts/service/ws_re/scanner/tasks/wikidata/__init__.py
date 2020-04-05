@@ -34,9 +34,9 @@ class DATATask(ReScannerTask):
 
     def task(self):
         self._first_article = self.re_page[0]
+        start_time = datetime.now()
         if self._counter < 50:
             try:
-                start_time = datetime.now()
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
@@ -307,6 +307,8 @@ class DATATask(ReScannerTask):
         pma_claim = self._6216_min_years_since_death
         if pma_claim:
             claim_list.append(pma_claim)
+        if self._first_article["KEINE_SCHÖPFUNGSHÖHE"]:
+            claim_list.append(self._public_domain_claims.CLAIM_THRESHOLD_OF_ORIGINALITY)
         return claim_list
 
     @property
