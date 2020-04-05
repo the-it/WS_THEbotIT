@@ -90,6 +90,7 @@ class SCANTask(ReScannerTask):
             return None
         except pywikibot.exceptions.MaxlagTimeoutError:
             self.logger.error(f"No WD target, because of timeout at {self.re_page.lemma_as_link}")
+            return None
 
     @staticmethod
     def _fetch_sort_key(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:

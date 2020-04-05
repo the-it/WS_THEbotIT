@@ -9,7 +9,7 @@ from scripts.service.ws_re.volumes import Volume, Volumes, VolumeType
 
 class TestVolume(TestCase):
     def test_init(self):
-        volume = Volume("I,1", "1900", "Q26414644",  "Aal", "Bethel")
+        volume = Volume("I,1", "1900", "Q26414644", "Aal", "Bethel")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
         compare("1900", volume.year)

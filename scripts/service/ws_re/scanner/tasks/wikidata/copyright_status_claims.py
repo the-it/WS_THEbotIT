@@ -31,7 +31,6 @@ class PublicDomainClaims():
         self.CLAIM_COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER = self._init_xx_years_after_authors_death(70)
         self.CLAIM_COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER = self._init_xx_years_after_authors_death(80)
         self.CLAIM_COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER = self._init_xx_years_after_authors_death(100)
-        
 
     def _init_published_more_than_95_years_ago(self) -> pywikibot.Claim:
         claim = pywikibot.Claim(self.wikidata, self._COPYRIGHT_STATUS)

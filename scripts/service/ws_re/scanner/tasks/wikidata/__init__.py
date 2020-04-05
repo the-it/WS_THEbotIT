@@ -40,8 +40,8 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                    # bug in pywikibot prevents this for the moment. I must wait for the next release. Then it will be possible
-                    # to edit existing items.
+                    # bug in pywikibot prevents this for the moment. I must wait for the next release.
+                    # Then it will be possible to edit existing items.
                     # data_item.get()
                     # self._update_non_claims(data_item)
                     # self._update_claims(data_item)
@@ -50,7 +50,7 @@ class DATATask(ReScannerTask):
                     data_item: pywikibot.ItemPage = self.wikidata.createNewItemFromPage(page=self.re_page.page)
                     data_item.get()
                     claims_to_add, _ = self._get_claimes_to_change(data_item)
-                    item_dict_add= {"claims": self._serialize_claims_to_add(claims_to_add)}
+                    item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_add)}
                     item_dict_add.update(self._non_claims)
                     data_item.editEntity(item_dict_add)
                     self._counter += 1
@@ -70,19 +70,19 @@ class DATATask(ReScannerTask):
     def _non_claims(self) -> Dict:
         replaced_json = self._non_claims_template.substitute(lemma=self.re_page.lemma_without_prefix,
                                                              lemma_with_prefix=self.re_page.lemma)
-        non_claims = json.loads(replaced_json)
+        non_claims: Dict = json.loads(replaced_json)
         return non_claims
 
     @property
-    def _languages(self) -> Tuple[str]:
-        return tuple(self._non_claims["labels"].keys())
+    def _languages(self) -> List[str]:
+        return [str(language) for language in self._non_claims["labels"].keys()]
 
     def _labels_and_sitelinks_has_changed(self, item: pywikibot.ItemPage, new_non_claims: Dict) -> bool:
         old_non_claims = item.toJSON()
         # claims are not relevant here
         del old_non_claims["claims"]
         # reformat sitelinks (toJSON has different format then editEntity accepts)
-        old_non_claims["sitelinks"] = [sitelink for sitelink in old_non_claims["sitelinks"].values()]
+        old_non_claims["sitelinks"] = list(old_non_claims["sitelinks"].values())
         # remove all languages, that are not set by this bot
         for labels_or_descriptions in ("labels", "descriptions"):
             old_non_claims[labels_or_descriptions] = {key: value
@@ -140,7 +140,8 @@ class DATATask(ReScannerTask):
         old_processed_claim_list = self._preprocess_claim_list(old_claim_list)
         return bool(tuple(dictdiffer.diff(new_processed_claim_list, old_processed_claim_list)))
 
-    def _preprocess_claim_list(self, claim_list: List[pywikibot.Claim]) -> List[Dict]:
+    @staticmethod
+    def _preprocess_claim_list(claim_list: List[pywikibot.Claim]) -> List[Dict]:
         processed_claim_list = []
         for claim_object in claim_list:
             processed_claim = claim_object.toJSON()
@@ -189,6 +190,8 @@ class DATATask(ReScannerTask):
     def _authors_of_first_article(self) -> List[Author]:
         author_list: List[Author] = []
         for article_part in self.re_page.splitted_article_list[0]:
+            if isinstance(article_part, str):
+                continue
             author = article_part.author[0]
             band = self._first_article["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)
@@ -243,13 +246,13 @@ class DATATask(ReScannerTask):
 
     @property
     def _volume_of_first_article(self) -> Volume:
-        return self._volumes[self._first_article["BAND"].value]
+        return self._volumes[str(self._first_article["BAND"].value)]
 
     def p921(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **main subject** -> **<Item of wikipedia article>**
         """
-        wp_article = self._first_article["WIKIPEDIA"].value
+        wp_article = str(self._first_article["WIKIPEDIA"].value)
         # if no wp_article is present, there is nothing to connect
         if not wp_article:
             return []
@@ -283,15 +286,14 @@ class DATATask(ReScannerTask):
         Returns the Claim **column** -> **<start column>[–<end column>]**
         """
         claim = pywikibot.Claim(self.wikidata, 'P3903')
-        start = int(self._first_article["SPALTE_START"].value)
-        try:
-            end = int(self._first_article["SPALTE_END"].value)
-        except ValueError:
-            end = None
+        start = str(self._first_article["SPALTE_START"].value)
+        end: str = ""
+        if self._first_article["SPALTE_START"].value not in ("", "OFF"):
+            end = str(self._first_article["SPALTE_START"].value)
         target = start
         if end and start != end:
             target = f"{start}–{end}"
-        claim.setTarget(str(target))
+        claim.setTarget(target)
         return [claim]
 
     def p6216(self) -> List[pywikibot.Claim]:
@@ -311,7 +313,9 @@ class DATATask(ReScannerTask):
     def _6216_min_years_since_death(self) -> Optional[pywikibot.Claim]:
         max_death_year = 0
         for author in self._authors_of_first_article:
-            if author.death > max_death_year:
+            if not author.death:
+                max_death_year = self._current_year
+            elif author.death > max_death_year:
                 max_death_year = author.death
         years_since_death = self._current_year - max_death_year
         if years_since_death > 100:
