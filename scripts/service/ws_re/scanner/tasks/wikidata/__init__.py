@@ -3,7 +3,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 from string import Template
-from typing import Dict, Callable, List, Optional
+from typing import Dict, Callable, List, Optional, Tuple
 
 import dictdiffer
 import pywikibot
@@ -18,16 +18,9 @@ from tools.bots.pi import WikiLogger
 
 
 class DATATask(ReScannerTask):
-    _languages = ("de", "en", "fr", "nl")
-
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
-        # dummy_item = pywikibot.ItemPage(self.wikidata, "Q5296")
-        # print(1)
-        # dummy_item.get()
-        # print(2)
-        # print(json.dumps(dummy_item.toJSON(), indent=2))
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
         self._claim_functions = self._get_claim_functions()
@@ -36,18 +29,35 @@ class DATATask(ReScannerTask):
         self._volumes = Volumes()
         self._current_year = datetime.now().year
         self._public_domain_claims = PublicDomainClaims(self.wikidata)
+        # debug functions
+        self._counter = 0
 
     def task(self):
         self._first_article = self.re_page[0]
-        try:
-            # edit existing wikidata item
-            data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-            data_item.get()
-            # self._update_non_claims(data_item)
-            self._update_claims(data_item)
-        except pywikibot.NoPage:
-            # create a new one from scratch
-            data_item: pywikibot.ItemPage = self.wikidata.createNewItemFromPage(page=self.re_page.page)
+        if self._counter < 50:
+            try:
+                start_time = datetime.now()
+                try:
+                    # edit existing wikidata item
+                    data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+                    # bug in pywikibot prevents this for the moment. I must wait for the next release. Then it will be possible
+                    # to edit existing items.
+                    # data_item.get()
+                    # self._update_non_claims(data_item)
+                    # self._update_claims(data_item)
+                except pywikibot.exceptions.NoPage:
+                    # create a new one from scratch
+                    data_item: pywikibot.ItemPage = self.wikidata.createNewItemFromPage(page=self.re_page.page)
+                    data_item.get()
+                    claims_to_add, _ = self._get_claimes_to_change(data_item)
+                    item_dict_add= {"claims": self._serialize_claims_to_add(claims_to_add)}
+                    item_dict_add.update(self._non_claims)
+                    data_item.editEntity(item_dict_add)
+                    self._counter += 1
+                    self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
+            except pywikibot.exceptions.MaxlagTimeoutError:
+                self.logger.error(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
+                                  f", after {datetime.now() - start_time}")
 
     # NON CLAIM functionality
 
@@ -62,6 +72,10 @@ class DATATask(ReScannerTask):
                                                              lemma_with_prefix=self.re_page.lemma)
         non_claims = json.loads(replaced_json)
         return non_claims
+
+    @property
+    def _languages(self) -> Tuple[str]:
+        return tuple(self._non_claims["labels"].keys())
 
     def _labels_and_sitelinks_has_changed(self, item: pywikibot.ItemPage, new_non_claims: Dict) -> bool:
         old_non_claims = item.toJSON()
@@ -92,6 +106,21 @@ class DATATask(ReScannerTask):
         return claim_functions
 
     def _update_claims(self, data_item: pywikibot.ItemPage):
+        claims_to_add, claims_to_remove = self._get_claimes_to_change(data_item)
+        data_item.removeClaims(claims_to_remove)
+        data_item.editEntity({"claims": self._serialize_claims_to_add(claims_to_add)})
+
+    @staticmethod
+    def _serialize_claims_to_add(claims_to_add) -> Dict[str, List[Dict]]:
+        claims_to_add_serialized = {}
+        for key, claim_list in claims_to_add.items():
+            claim_list_serialized = []
+            for claim in claim_list:
+                claim_list_serialized.append(claim.toJSON())
+            claims_to_add_serialized[key] = claim_list_serialized
+        return claims_to_add_serialized
+
+    def _get_claimes_to_change(self, data_item) -> Tuple[Dict[str, List[pywikibot.Claim]], List[pywikibot.Claim]]:
         claims_to_add: Dict[str, List[pywikibot.Claim]] = {}
         claims_to_remove: List[pywikibot.Claim] = []
         for claim_str, claim_function in self._claim_functions.items():
@@ -103,16 +132,7 @@ class DATATask(ReScannerTask):
             if self._claim_list_has_changed(new_claim_list, old_claim_list):
                 claims_to_add[claim_str] = new_claim_list
                 claims_to_remove += old_claim_list
-        # bug in pywikibot prevents this for the moment
-        # data_item.removeClaims(claims_to_remove)
-        # print(json.dumps(data_item.toJSON(), indent=2))
-        claims_to_add_seralized = {}
-        for key, claim_list in claims_to_add.items():
-            claim_list_serialized = []
-            for claim in claim_list:
-                claim_list_serialized.append(claim.toJSON())
-            claims_to_add_seralized[key] = claim_list_serialized
-        data_item.editEntity({"claims": claims_to_add_seralized})
+        return claims_to_add, claims_to_remove
 
     def _claim_list_has_changed(self, new_claim_list: List[pywikibot.Claim],
                                 old_claim_list: List[pywikibot.Claim]) -> bool:
@@ -271,7 +291,7 @@ class DATATask(ReScannerTask):
         target = start
         if end and start != end:
             target = f"{start}–{end}"
-        claim.setTarget(target)
+        claim.setTarget(str(target))
         return [claim]
 
     def p6216(self) -> List[pywikibot.Claim]:

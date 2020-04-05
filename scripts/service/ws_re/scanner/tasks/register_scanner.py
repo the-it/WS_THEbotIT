@@ -82,11 +82,14 @@ class SCANTask(ReScannerTask):
         return None
 
     def _get_target_from_wd(self) -> Optional[pywikibot.ItemPage]:
-        with contextlib.suppress(pywikibot.exceptions.NoPage):
-            wp_item = self.re_page.page.data_item()
-            with contextlib.suppress(KeyError):
-                return wp_item.claims["P921"][0].target
-        return None
+        try:
+            with contextlib.suppress(pywikibot.exceptions.NoPage):
+                wp_item = self.re_page.page.data_item()
+                with contextlib.suppress(KeyError):
+                    return wp_item.claims["P921"][0].target
+            return None
+        except pywikibot.exceptions.MaxlagTimeoutError:
+            self.logger.error(f"No WD target, because of timeout at {self.re_page.lemma_as_link}")
 
     @staticmethod
     def _fetch_sort_key(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
