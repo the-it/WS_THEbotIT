@@ -11,7 +11,7 @@ aws-sam-translator==1.22.0  # via cfn-lint
 aws-xray-sdk==2.4.3       # via moto
 backports.csv==1.0.7      # via internetarchive
 bandit==1.6.2             # via -r requirements-dev.in
-beautifulsoup4==4.8.2     # via -c requirements.txt, -r requirements-dev.in
+beautifulsoup4==4.9.0     # via -c requirements.txt, -r requirements-dev.in
 boto3-stubs[essential]==1.12.36.0  # via -r requirements-dev.in
 boto3==1.12.36            # via -c requirements.txt, aws-sam-translator, moto, mypy-boto3
 boto==2.49.0              # via moto
