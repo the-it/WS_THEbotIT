@@ -40,16 +40,19 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                    # bug in pywikibot prevents this for the moment. I must wait for the next release.
-                    # Then it will be possible to edit existing items.
-                    # data_item.get()
-                    # self._update_non_claims(data_item)
-                    # self._update_claims(data_item)
+                    data_item.get()
+                    self._update_non_claims(data_item)
+                    claims_to_add, claims_to_remove = self._get_claimes_to_change(data_item)
+                    data_item.removeClaims(claims_to_remove)
+                    item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_add)}
+                    item_dict_add.update(self._non_claims)
+                    data_item.editEntity(item_dict_add)
+                    self._counter += 1
+                    self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
                 except pywikibot.exceptions.NoPage:
                     # create a new one from scratch
-                    data_item: pywikibot.ItemPage = self.wikidata.createNewItemFromPage(page=self.re_page.page)
-                    data_item.get()
-                    claims_to_add, _ = self._get_claimes_to_change(data_item)
+                    data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
+                    claims_to_add, _ = self._get_claimes_to_change(None)
                     item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_add)}
                     item_dict_add.update(self._non_claims)
                     data_item.editEntity(item_dict_add)
@@ -105,11 +108,6 @@ class DATATask(ReScannerTask):
                 claim_functions[item.upper()] = getattr(self, item)
         return claim_functions
 
-    def _update_claims(self, data_item: pywikibot.ItemPage):
-        claims_to_add, claims_to_remove = self._get_claimes_to_change(data_item)
-        data_item.removeClaims(claims_to_remove)
-        data_item.editEntity({"claims": self._serialize_claims_to_add(claims_to_add)})
-
     @staticmethod
     def _serialize_claims_to_add(claims_to_add) -> Dict[str, List[Dict]]:
         claims_to_add_serialized = {}
@@ -120,14 +118,18 @@ class DATATask(ReScannerTask):
             claims_to_add_serialized[key] = claim_list_serialized
         return claims_to_add_serialized
 
-    def _get_claimes_to_change(self, data_item) -> Tuple[Dict[str, List[pywikibot.Claim]], List[pywikibot.Claim]]:
+    def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
+        -> Tuple[Dict[str, List[pywikibot.Claim]], List[pywikibot.Claim]]:
         claims_to_add: Dict[str, List[pywikibot.Claim]] = {}
         claims_to_remove: List[pywikibot.Claim] = []
         for claim_str, claim_function in self._claim_functions.items():
             new_claim_list = claim_function()
-            try:
-                old_claim_list = data_item.claims[claim_str]
-            except KeyError:
+            if data_item:
+                try:
+                    old_claim_list = data_item.claims[claim_str]
+                except KeyError:
+                    old_claim_list = []
+            else:
                 old_claim_list = []
             if self._claim_list_has_changed(new_claim_list, old_claim_list):
                 claims_to_add[claim_str] = new_claim_list
