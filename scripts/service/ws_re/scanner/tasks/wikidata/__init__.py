@@ -309,7 +309,7 @@ class DATATask(ReScannerTask):
         pma_claim = self._6216_min_years_since_death
         if pma_claim:
             claim_list.append(pma_claim)
-        if self._first_article["KEINE_SCHÖPFUNGSHÖHE"]:
+        if self._first_article["KEINE_SCHÖPFUNGSHÖHE"].value:
             claim_list.append(self._public_domain_claims.CLAIM_THRESHOLD_OF_ORIGINALITY)
         return claim_list
 
