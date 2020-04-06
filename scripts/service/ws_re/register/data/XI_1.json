@@ -54,11 +54,13 @@
     "lemma": "Katoptis",
     "previous": "Katopterios",
     "next": "Katoptromanteia",
+    "sort_key": "Katoptis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 27,
         "end": 27,
-        "author": "Adler"
+        "author": "Adler."
       }
     ]
   },
@@ -373,11 +375,13 @@
     "lemma": "Kaukaseus",
     "previous": "Kaukasa",
     "next": "Kaukasiai Pylai",
+    "sort_key": "Kaukaseus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 58,
         "end": 58,
-        "author": "Adler"
+        "author": "Adler."
       }
     ]
   },
@@ -396,7 +400,16 @@
   {
     "lemma": "Kaukasis",
     "previous": "Kaukasiai Pylai",
-    "next": "Καύκασος 1"
+    "next": "Καύκασος 1",
+    "sort_key": "Kaukasis",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 58,
+        "end": 58,
+        "author": "Adler."
+      }
+    ]
   },
   {
     "lemma": "Καύκασος 1",
