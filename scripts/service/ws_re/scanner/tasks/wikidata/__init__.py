@@ -40,6 +40,7 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+                    return # for the moment the editing  of existing items doesn't work so well, must improve diff calc
                     data_item.get()
                     self._update_non_claims(data_item)
                     claims_to_add, claims_to_remove = self._get_claimes_to_change(data_item)
