@@ -2307,9 +2307,6 @@
     "next": "Dositheos 9",
     "sort_key": "Dositheos 08",
     "proof_read": 2,
-    "wp_link": "w:en:Dositheus Magister",
-    "ws_link": "s:el:Συγγραφέας:Ψευδο-Δωσίθεος",
-    "wd_link": "d:Q987125",
     "chapters": [
       {
         "start": 1606,
@@ -4216,47 +4213,53 @@
     "lemma": "Dromedarii",
     "previous": "Dromeas",
     "next": "Dromeïos",
+    "proof_read": 2,
+    "wp_link": "w:de:Dromedar",
     "chapters": [
       {
         "start": 1712,
         "end": 1713,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
   {
     "lemma": "Dromeïos",
     "previous": "Dromedarii",
-    "next": "Dromena",
+    "next": "Δρώμενα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1713,
         "end": 1713,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
   {
-    "lemma": "Dromena",
+    "lemma": "Δρώμενα",
     "previous": "Dromeïos",
     "next": "Dromeus 1",
+    "sort_key": "Dromena",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1713,
         "end": 1714,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Dromeus 1",
-    "previous": "Dromena",
+    "previous": "Δρώμενα",
     "next": "Dromeus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1714,
         "end": 1714,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4264,11 +4267,12 @@
     "lemma": "Dromeus 2",
     "previous": "Dromeus 1",
     "next": "Dromeus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1714,
         "end": 1714,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4276,11 +4280,12 @@
     "lemma": "Dromeus 3",
     "previous": "Dromeus 2",
     "next": "Dromichaites 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1714,
         "end": 1715,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
@@ -4292,7 +4297,7 @@
       {
         "start": 1715,
         "end": 1715,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -4304,7 +4309,7 @@
       {
         "start": 1715,
         "end": 1715,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -4312,11 +4317,12 @@
     "lemma": "Dromichaites 3",
     "previous": "Dromichaites 2",
     "next": "Dromios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -4324,11 +4330,12 @@
     "lemma": "Dromios",
     "previous": "Dromichaites 3",
     "next": "Dromiskos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -4336,11 +4343,12 @@
     "lemma": "Dromiskos",
     "previous": "Dromios",
     "next": "Dromitai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -4361,11 +4369,13 @@
     "lemma": "Δρόμοι Ἀζανίας",
     "previous": "Dromitai",
     "next": "Dromokleides 1",
+    "sort_key": "Dromoi Azanias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -4373,11 +4383,12 @@
     "lemma": "Dromokleides 1",
     "previous": "Δρόμοι Ἀζανίας",
     "next": "Dromokleides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -9006,7 +9017,6 @@
     "next": "Eccela",
     "proof_read": 3,
     "wp_link": "w:de:Ibiza",
-    "wd_link": "d:Q52631",
     "chapters": [
       {
         "start": 1903,
@@ -17819,7 +17829,6 @@
     "previous": "Elis",
     "next": "Elis 2",
     "wp_link": "w:de:Elis",
-    "wd_link": "d:Q6536845",
     "chapters": [
       {
         "start": 2369,
@@ -17838,7 +17847,6 @@
     "previous": "Elis 1",
     "next": "Elis 3",
     "wp_link": "w:de:Elis (Stadt)",
-    "wd_link": "d:Q217667",
     "chapters": [
       {
         "start": 2432,
