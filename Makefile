@@ -102,7 +102,7 @@ cloc :
 #############
 clean : clean-pyc clean-coverage
 
-pre-commit : update_pip3 quality integrationtest
+pre-commit : update_pip3 quality unittest
 
 quality : bandit flake8 pycodestyle pylint mypy
 
