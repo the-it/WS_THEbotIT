@@ -112,7 +112,8 @@ class DATATask(ReScannerTask):
                 claim_functions[item.upper()] = getattr(self, item)
         return claim_functions
 
-    def _serialize_claims_to_add(self, claims_to_add) -> Dict[str, List[Dict]]:
+    @staticmethod
+    def _serialize_claims_to_add(claims_to_add) -> Dict[str, List[Dict]]:
         claims_to_add_serialized = {}
         for key, claim_list in claims_to_add.items():
             claim_list_serialized = []
@@ -122,7 +123,7 @@ class DATATask(ReScannerTask):
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
-        -> Tuple[Dict[str, List[pywikibot.Claim]], List[pywikibot.Claim]]:
+            -> Tuple[Dict[str, List[pywikibot.Claim]], List[pywikibot.Claim]]:
         claims_to_add: Dict[str, List[pywikibot.Claim]] = {}
         claims_to_remove: List[pywikibot.Claim] = []
         for claim_str, claim_function in self._claim_functions.items():
@@ -142,10 +143,10 @@ class DATATask(ReScannerTask):
                 claims_to_remove += filtered_old_claim_list
         return claims_to_add, claims_to_remove
 
-    def _filter_new_vs_old_claim_list(self,
-                                      new_claim_list: List[pywikibot.Claim],
-                                      old_claim_list: List[pywikibot.Claim])\
-        -> Tuple[List[pywikibot.Claim], List[pywikibot.Claim]]:
+    @staticmethod
+    def _filter_new_vs_old_claim_list(new_claim_list: List[pywikibot.Claim],
+                                      old_claim_list: List[pywikibot.Claim]) -> Tuple[List[pywikibot.Claim],
+                                                                                      List[pywikibot.Claim]]:
         filtered_new_claim_list = []
         for new_claim in new_claim_list:
             for old_claim in old_claim_list:
