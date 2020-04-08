@@ -113,14 +113,13 @@ class DATATask(ReScannerTask):
                 claim_functions[item.upper()] = getattr(self, item)
         return claim_functions
 
-    @staticmethod
-    def _serialize_claims_to_add(claims_to_add) -> Dict[str, List[Dict]]:
+    def _serialize_claims_to_add(self, claims_to_add) -> Dict[str, List[Dict]]:
         claims_to_add_serialized = {}
         for key, claim_list in claims_to_add.items():
             claim_list_serialized = []
             for claim in claim_list:
                 claim_list_serialized.append(claim.toJSON())
-            claims_to_add_serialized[key] = claim_list_serialized
+            claims_to_add_serialized[key] = self._preprocess_claim_list(claim_list)
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
@@ -136,12 +135,33 @@ class DATATask(ReScannerTask):
                     old_claim_list = []
             else:
                 old_claim_list = []
-            new_processed_claim_list = self._preprocess_claim_list(new_claim_list)
-            old_processed_claim_list = self._preprocess_claim_list(old_claim_list)
-            if bool(tuple(dictdiffer.diff(new_processed_claim_list, old_processed_claim_list))):
-                claims_to_add[claim_str] = new_claim_list
-                claims_to_remove += old_claim_list
+            filtered_new_claim_list, filtered_old_claim_list = self._filter_new_vs_old_claim_list(new_claim_list,
+                                                                                                  old_claim_list)
+            if filtered_new_claim_list:
+                claims_to_add[claim_str] = filtered_new_claim_list
+            if filtered_old_claim_list:
+                claims_to_remove += filtered_old_claim_list
         return claims_to_add, claims_to_remove
+
+    def _filter_new_vs_old_claim_list(self,
+                                      new_claim_list: List[pywikibot.Claim],
+                                      old_claim_list: List[pywikibot.Claim])\
+        -> Tuple[List[pywikibot.Claim], List[pywikibot.Claim]]:
+        processed_new_claim_list = self._preprocess_claim_list(new_claim_list)
+        processed_old_claim_list = self._preprocess_claim_list(old_claim_list)
+        zipped_new_claim_list = list(zip(new_claim_list, processed_new_claim_list))
+        zipped_old_claim_list = list(zip(old_claim_list, processed_old_claim_list))
+        filtered_new_claim_list = []
+        for zipped_new_claim in zipped_new_claim_list:
+            for zipped_old_claim in zipped_old_claim_list:
+                if not bool(tuple(dictdiffer.diff(zipped_new_claim[1], zipped_old_claim[1]))):
+                    zipped_old_claim_list.remove(zipped_old_claim)
+                    break
+            else:
+                # not match found, no old claim matches this new one
+                filtered_new_claim_list.append(zipped_new_claim[0])
+        filtered_old_claim_list = [zipped_old_claim[0] for zipped_old_claim in zipped_old_claim_list]
+        return filtered_new_claim_list, filtered_old_claim_list
 
     @staticmethod
     def _preprocess_claim_list(claim_list: List[pywikibot.Claim]) -> List[Dict]:
