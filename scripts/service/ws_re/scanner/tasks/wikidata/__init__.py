@@ -41,7 +41,6 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                    #return # for the moment the editing  of existing items doesn't work so well, must improve diff calc
                     data_item.get()
                     item_dict_add = {}
                     # process claims, if they differ
@@ -119,7 +118,7 @@ class DATATask(ReScannerTask):
             claim_list_serialized = []
             for claim in claim_list:
                 claim_list_serialized.append(claim.toJSON())
-            claims_to_add_serialized[key] = self._preprocess_claim_list(claim_list)
+            claims_to_add_serialized[key] = [claim.toJSON() for claim in claim_list]
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
@@ -135,8 +134,8 @@ class DATATask(ReScannerTask):
                     old_claim_list = []
             else:
                 old_claim_list = []
-            filtered_new_claim_list, filtered_old_claim_list = self._filter_new_vs_old_claim_list(new_claim_list,
-                                                                                                  old_claim_list)
+            filtered_new_claim_list, filtered_old_claim_list = \
+                self._filter_new_vs_old_claim_list(new_claim_list, old_claim_list)
             if filtered_new_claim_list:
                 claims_to_add[claim_str] = filtered_new_claim_list
             if filtered_old_claim_list:
@@ -147,38 +146,16 @@ class DATATask(ReScannerTask):
                                       new_claim_list: List[pywikibot.Claim],
                                       old_claim_list: List[pywikibot.Claim])\
         -> Tuple[List[pywikibot.Claim], List[pywikibot.Claim]]:
-        processed_new_claim_list = self._preprocess_claim_list(new_claim_list)
-        processed_old_claim_list = self._preprocess_claim_list(old_claim_list)
-        zipped_new_claim_list = list(zip(new_claim_list, processed_new_claim_list))
-        zipped_old_claim_list = list(zip(old_claim_list, processed_old_claim_list))
         filtered_new_claim_list = []
-        for zipped_new_claim in zipped_new_claim_list:
-            for zipped_old_claim in zipped_old_claim_list:
-                if not bool(tuple(dictdiffer.diff(zipped_new_claim[1], zipped_old_claim[1]))):
-                    zipped_old_claim_list.remove(zipped_old_claim)
+        for new_claim in new_claim_list:
+            for old_claim in old_claim_list:
+                if new_claim.same_as(old_claim):
+                    old_claim_list.remove(old_claim)
                     break
             else:
                 # not match found, no old claim matches this new one
-                filtered_new_claim_list.append(zipped_new_claim[0])
-        filtered_old_claim_list = [zipped_old_claim[0] for zipped_old_claim in zipped_old_claim_list]
-        return filtered_new_claim_list, filtered_old_claim_list
-
-    @staticmethod
-    def _preprocess_claim_list(claim_list: List[pywikibot.Claim]) -> List[Dict]:
-        processed_claim_list = []
-        for claim_object in claim_list:
-            processed_claim = claim_object.toJSON()
-            # a claim gets an id if persisted at WD
-            if "id" in processed_claim:
-                del processed_claim["id"]
-            # qualifiers hash a hash value for already present qualifiers at WD
-            if "qualifiers" in processed_claim:
-                for qualifier_list in processed_claim["qualifiers"].values():
-                    for qualifier in qualifier_list:
-                        if "hash" in qualifier:
-                            del qualifier["hash"]
-            processed_claim_list.append(processed_claim)
-        return processed_claim_list
+                filtered_new_claim_list.append(new_claim)
+        return filtered_new_claim_list, old_claim_list
 
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
