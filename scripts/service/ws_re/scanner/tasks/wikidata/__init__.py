@@ -1,5 +1,6 @@
 import json
 import re
+from contextlib import suppress
 from datetime import datetime
 from pathlib import Path
 from string import Template
@@ -40,16 +41,24 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                    return # for the moment the editing  of existing items doesn't work so well, must improve diff calc
+                    #return # for the moment the editing  of existing items doesn't work so well, must improve diff calc
                     data_item.get()
-                    self._update_non_claims(data_item)
+                    item_dict_add = {}
+                    # process claims, if they differ
                     claims_to_add, claims_to_remove = self._get_claimes_to_change(data_item)
-                    data_item.removeClaims(claims_to_remove)
-                    item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_add)}
-                    item_dict_add.update(self._non_claims)
-                    data_item.editEntity(item_dict_add)
-                    self._counter += 1
-                    self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
+                    if claims_to_remove:
+                        # if there are claims, that aren't up to date remove them
+                        data_item.removeClaims(claims_to_remove)
+                    if claims_to_add:
+                        item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_add)})
+                    # process if non claims differ
+                    if self._labels_and_sitelinks_has_changed(data_item.toJSON(), self._non_claims):
+                        item_dict_add.update(self._non_claims)
+                    # if a diff exists alter the wikidata item
+                    if item_dict_add:
+                        data_item.editEntity(item_dict_add)
+                        self._counter += 1
+                        self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
                 except pywikibot.exceptions.NoPage:
                     # create a new one from scratch
                     data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
@@ -65,11 +74,6 @@ class DATATask(ReScannerTask):
 
     # NON CLAIM functionality
 
-    def _update_non_claims(self, item: pywikibot.ItemPage):
-        non_claims = self._non_claims
-        if self._labels_and_sitelinks_has_changed(item, non_claims):
-            item.editEntity(non_claims)
-
     @property
     def _non_claims(self) -> Dict:
         replaced_json = self._non_claims_template.substitute(lemma=self.re_page.lemma_without_prefix,
@@ -81,10 +85,10 @@ class DATATask(ReScannerTask):
     def _languages(self) -> List[str]:
         return [str(language) for language in self._non_claims["labels"].keys()]
 
-    def _labels_and_sitelinks_has_changed(self, item: pywikibot.ItemPage, new_non_claims: Dict) -> bool:
-        old_non_claims = item.toJSON()
+    def _labels_and_sitelinks_has_changed(self, old_non_claims: Dict, new_non_claims: Dict) -> bool:
         # claims are not relevant here
-        del old_non_claims["claims"]
+        with suppress(KeyError):
+            del old_non_claims["claims"]
         # reformat sitelinks (toJSON has different format then editEntity accepts)
         old_non_claims["sitelinks"] = list(old_non_claims["sitelinks"].values())
         # remove all languages, that are not set by this bot
@@ -132,24 +136,27 @@ class DATATask(ReScannerTask):
                     old_claim_list = []
             else:
                 old_claim_list = []
-            if self._claim_list_has_changed(new_claim_list, old_claim_list):
+            new_processed_claim_list = self._preprocess_claim_list(new_claim_list)
+            old_processed_claim_list = self._preprocess_claim_list(old_claim_list)
+            if bool(tuple(dictdiffer.diff(new_processed_claim_list, old_processed_claim_list))):
                 claims_to_add[claim_str] = new_claim_list
                 claims_to_remove += old_claim_list
         return claims_to_add, claims_to_remove
-
-    def _claim_list_has_changed(self, new_claim_list: List[pywikibot.Claim],
-                                old_claim_list: List[pywikibot.Claim]) -> bool:
-        new_processed_claim_list = self._preprocess_claim_list(new_claim_list)
-        old_processed_claim_list = self._preprocess_claim_list(old_claim_list)
-        return bool(tuple(dictdiffer.diff(new_processed_claim_list, old_processed_claim_list)))
 
     @staticmethod
     def _preprocess_claim_list(claim_list: List[pywikibot.Claim]) -> List[Dict]:
         processed_claim_list = []
         for claim_object in claim_list:
             processed_claim = claim_object.toJSON()
+            # a claim gets an id if persisted at WD
             if "id" in processed_claim:
                 del processed_claim["id"]
+            # qualifiers hash a hash value for already present qualifiers at WD
+            if "qualifiers" in processed_claim:
+                for qualifier_list in processed_claim["qualifiers"].values():
+                    for qualifier in qualifier_list:
+                        if "hash" in qualifier:
+                            del qualifier["hash"]
             processed_claim_list.append(processed_claim)
         return processed_claim_list
 
