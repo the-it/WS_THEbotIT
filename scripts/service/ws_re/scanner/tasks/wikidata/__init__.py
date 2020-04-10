@@ -296,8 +296,8 @@ class DATATask(ReScannerTask):
         claim = pywikibot.Claim(self.wikidata, 'P3903')
         start = str(self._first_article["SPALTE_START"].value)
         end: str = ""
-        if self._first_article["SPALTE_START"].value not in ("", "OFF"):
-            end = str(self._first_article["SPALTE_START"].value)
+        if self._first_article["SPALTE_END"].value not in ("", "OFF"):
+            end = str(self._first_article["SPALTE_END"].value)
         target = start
         if end and start != end:
             target = f"{start}–{end}"
