@@ -36,7 +36,7 @@ class DATATask(ReScannerTask):
     def task(self):
         self._first_article = self.re_page[0]
         start_time = datetime.now()
-        if self._counter < 50:
+        if self._counter < 100:
             try:
                 try:
                     # edit existing wikidata item
