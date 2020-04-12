@@ -144,38 +144,14 @@ class DATATask(ReScannerTask):
             else:
                 old_claim_list = []
             filtered_new_claim_list, filtered_old_claim_list = \
-                self._filter_new_vs_old_claim_list(new_claim_list, old_claim_list)
+                [], []
             if filtered_new_claim_list:
                 claims_to_add[claim_str] = filtered_new_claim_list
             if filtered_old_claim_list:
                 claims_to_remove += filtered_old_claim_list
         return claims_to_add, claims_to_remove
 
-    @staticmethod
-    def _filter_new_vs_old_claim_list(new_claim_list: List[pywikibot.Claim],
-                                      old_claim_list: List[pywikibot.Claim]) -> Tuple[List[pywikibot.Claim],
-                                                                                      List[pywikibot.Claim]]:
-        filtered_new_claim_list = []
-        for new_claim in new_claim_list:
-            for old_claim in old_claim_list:
-                if new_claim.same_as(old_claim):
-                    old_claim_list.remove(old_claim)
-                    break
-            else:
-                # not match found, no old claim matches this new one
-                filtered_new_claim_list.append(new_claim)
-        return filtered_new_claim_list, old_claim_list
-
     # CLAIM FACTORIES from here on all functions are related to one specific claim
-
-    def p31(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **instance of** -> **encyclopedic article**
-        """
-        claim = pywikibot.Claim(self.wikidata, 'P31')
-        target = pywikibot.ItemPage(self.wikidata, "Q13433827")
-        claim.setTarget(target)
-        return [claim]
 
     def p50(self) -> List[pywikibot.Claim]:
         """

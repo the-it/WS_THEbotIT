@@ -22,19 +22,24 @@ class TestClaimFactory(TestCase):
                                        'datavalue': {'value': 'a', 'type': 'string'}},
                           'type': 'statement',
                           'rank': 'normal'}
+        self.a = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
+        self.base_json["mainsnak"]["datavalue"]["value"] = "b"
+        self.b = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
+        self.base_json["mainsnak"]["datavalue"]["value"] = "c"
+        self.c = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
+        self.base_json["mainsnak"]["datavalue"]["value"] = "d"
+        self.d = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
 
     def test_property_string(self):
         compare("P1234", self.P1234FactoryDummy.get_property_string())
 
     def test__filter_new_vs_old_claim_list(self):
-        a = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
-        self.base_json["mainsnak"]["datavalue"]["value"] = "b"
-        b = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
-        self.base_json["mainsnak"]["datavalue"]["value"] = "c"
-        c = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
-        self.base_json["mainsnak"]["datavalue"]["value"] = "d"
-        d = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
-        compare(([a, c], [d]), self.factory_dummy._filter_new_vs_old_claim_list([a, b, c], [b, d]))
-        compare(([a], []), self.factory_dummy._filter_new_vs_old_claim_list([a], []))
-        compare(([], [a]), self.factory_dummy._filter_new_vs_old_claim_list([], [a]))
-        compare(([], []), self.factory_dummy._filter_new_vs_old_claim_list([a, b, c], [a, b, c]))
+        compare(([self.a, self.c], [self.d]),
+                self.factory_dummy._filter_new_vs_old_claim_list([self.a, self.b, self.c], [self.b, self.d]))
+        compare(([self.a], []), self.factory_dummy._filter_new_vs_old_claim_list([self.a], []))
+        compare(([], [self.a]), self.factory_dummy._filter_new_vs_old_claim_list([], [self.a]))
+        compare(([], []),
+                self.factory_dummy._filter_new_vs_old_claim_list([self.a, self.b, self.c], [self.a, self.b, self.c]))
+
+    def test__create_claim_dictionary(self):
+

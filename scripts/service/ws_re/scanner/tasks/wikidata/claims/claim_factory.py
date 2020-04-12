@@ -19,6 +19,9 @@ class ChangedClaimsDict(TypedDict):
 
 
 class ClaimFactory:
+    def __init__(self, wikidata: pywikibot.Site):
+        self.wikidata = wikidata
+
     @abstractmethod
     def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
@@ -71,3 +74,9 @@ class ClaimFactory:
                 # not match found, no old claim matches this new one
                 filtered_new_claim_list.append(new_claim)
         return filtered_new_claim_list, old_claim_list
+
+    def _create_claim_dictionary(self, claims_to_add: ClaimList, claims_to_remove: ClaimList) -> ClaimDictionary:
+        claims_to_add_dict = {}
+        if claims_to_add:
+            claims_to_add_dict[self.get_property_string()] = claims_to_add
+        return {"add": claims_to_add_dict, "remove": claims_to_remove}
