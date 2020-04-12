@@ -12,6 +12,8 @@ import pywikibot
 from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
+    SerializedClaimDictionary, ClaimList
 from scripts.service.ws_re.scanner.tasks.wikidata.copyright_status_claims import PublicDomainClaims
 from scripts.service.ws_re.template.article import Article
 from scripts.service.ws_re.volumes import Volumes, Volume
@@ -113,7 +115,7 @@ class DATATask(ReScannerTask):
         return claim_functions
 
     @staticmethod
-    def _serialize_claims_to_add(claims_to_add) -> Dict[str, List[Dict]]:
+    def _serialize_claims_to_add(claims_to_add: ClaimDictionary) -> SerializedClaimDictionary:
         claims_to_add_serialized = {}
         for key, claim_list in claims_to_add.items():
             claim_list_serialized = []
@@ -123,7 +125,13 @@ class DATATask(ReScannerTask):
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
-            -> Tuple[Dict[str, List[pywikibot.Claim]], List[pywikibot.Claim]]:
+            -> Tuple[ClaimDictionary, ClaimList]:
+        """
+        DEPRECATED
+
+        :param data_item:
+        :return:
+        """
         claims_to_add: Dict[str, List[pywikibot.Claim]] = {}
         claims_to_remove: List[pywikibot.Claim] = []
         for claim_str, claim_function in self._claim_functions.items():
