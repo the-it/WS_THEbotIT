@@ -8,7 +8,7 @@ appdirs==1.4.3            # via virtualenv
 astroid==2.3.3            # via pylint
 attrs==19.3.0             # via jsonschema
 aws-sam-translator==1.22.0  # via cfn-lint
-aws-xray-sdk==2.4.3       # via moto
+aws-xray-sdk==2.5.0       # via moto
 backports.csv==1.0.7      # via internetarchive
 bandit==1.6.2             # via -r requirements-dev.in
 beautifulsoup4==4.9.0     # via -c requirements.txt, -r requirements-dev.in
