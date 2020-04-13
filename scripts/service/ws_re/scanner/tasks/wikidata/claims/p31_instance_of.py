@@ -21,4 +21,4 @@ class P31InstanceOf(ClaimFactory):
         claim.setTarget(target)
         old_claims = data_item.claims[self.get_property_string()]
         claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list([claim], old_claims)
-        return {""}
+        return self._create_claim_dictionary(claims_to_add, claims_to_remove)
