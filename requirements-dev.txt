@@ -43,7 +43,7 @@ gitpython==3.1.1          # via -c requirements.txt, bandit
 idna==2.9                 # via -c requirements.txt, moto, requests
 internetarchive==1.9.3    # via -r requirements-dev.in
 isort==4.3.21             # via pylint
-jinja2==2.11.1            # via moto
+jinja2==2.11.2            # via moto
 jmespath==0.9.5           # via -c requirements.txt, boto3, botocore
 jsondiff==1.1.2           # via moto
 jsonpatch==1.25           # via cfn-lint, internetarchive
