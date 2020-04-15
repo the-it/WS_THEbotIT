@@ -15,7 +15,10 @@ class BaseTestClaimFactory(TestCase):
     def setUpClass(cls):
         cls.wikidata = None
 
-    def _create_mock_item(self, claims: Dict[str, List[pywikibot.Claim]] = None):
+    def _create_mock_item(self,
+                          site: pywikibot.Site = None,
+                          title: str = "Q1",
+                          claims: Dict[str, List[pywikibot.Claim]] = None):
         mock_item = MagicMock()
         if claims:
             claims_mock = PropertyMock(return_value=claims)
