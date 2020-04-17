@@ -153,31 +153,6 @@ class DATATask(ReScannerTask):
 
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
-    def p50(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **author** -> **<Item of author of RE lemma>**
-        """
-        author_items = self._p50_get_author_list()
-        claim_list: List[pywikibot.Claim] = []
-        for author in author_items:
-            claim = pywikibot.Claim(self.wikidata, 'P50')
-            claim.setTarget(author)
-            claim_list.append(claim)
-        return claim_list
-
-    def _p50_get_author_list(self) -> List[pywikibot.Claim]:
-        author_items: List[pywikibot.Claim] = []
-        for author in self._authors_of_first_article:
-            author_lemma = pywikibot.Page(self.wiki, author.name)
-            if not author_lemma.exists():
-                continue
-            try:
-                # append the item of the author, if it exists
-                author_items.append(author_lemma.data_item())
-            except pywikibot.NoPage:
-                continue
-        return author_items
-
     @property
     def _authors_of_first_article(self) -> List[Author]:
         author_list: List[Author] = []

@@ -5,6 +5,7 @@ from typing import Dict, List, Tuple, TypedDict
 
 import pywikibot
 
+from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.template.re_page import RePage
 
 # type hints
@@ -115,3 +116,18 @@ class ClaimFactory:
         else:
             raise BotException(f"target_type \"{target_type}\" not supported")
         return claim_json
+
+    # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
+
+    @property
+    def _authors_of_first_article(self) -> List[Author]:
+        author_list: List[Author] = []
+        for article_part in self.re_page.splitted_article_list[0]:
+            if isinstance(article_part, str):
+                continue
+            author = article_part.author[0]
+            band = self._first_article["BAND"].value
+            possible_authors = self._authors.get_author_by_mapping(author, band)
+            if len(possible_authors) == 1:
+                author_list.append(possible_authors[0])
+        return author_list
