@@ -20,27 +20,6 @@ class BaseTestClaimFactory(TestCase):
         patch.stopall()
 
     @staticmethod
-    def _create_mock_item(site: pywikibot.Site = None,
-                          title: str = "Q1",
-                          claims: Dict[str, List[pywikibot.Claim]] = None) -> MagicMock:
-        """
-
-        :param site: mocked parameter for patching pywikibot.ItemPage constructor
-        :param title: title of the item at wikidata, also mocked parameter for patching pywikibot.ItemPage constructor
-        :param claims: list of claims that are returned by the mocked item
-        :param type:  possible values'wikibase-item', 'string', 'commonsMedia', 'globe-coordinate', 'url', 'time',
-                      'quantity', 'monolingualtext', 'math', 'external-id', 'geo-shape', 'tabular-data'
-        :return: a mocked pywikibot.ItemPage
-        """
-        mock_item = MagicMock()
-        if claims:
-            claims_mock = PropertyMock(return_value=claims)
-            type(mock_item).claims = claims_mock
-        id_mock = PropertyMock(return_value=title)
-        type(mock_item).id = id_mock
-        return mock_item
-
-    @staticmethod
     def _create_mock_page(text: str = None, title: str = None):
         mock_item = MagicMock()
         if text:
@@ -50,17 +29,6 @@ class BaseTestClaimFactory(TestCase):
             title_mock = Mock(return_value=title)
             type(mock_item).title = title_mock
         return RePage(mock_item)
-
-    def method_name(self, modul: str):
-        # mock all calls to ItemPage, to not really create Items at Wikidata
-        item_mock = patch(
-            f"scripts.service.ws_re.scanner.tasks.wikidata.claims.{modul}.pywikibot.ItemPage").start()
-        item_mock.side_effect = self._create_mock_item
-        # sadly I have to mock some pywikibot internals to be able to call Claim.setTarget()
-        types_mock = patch(
-            f"scripts.service.ws_re.scanner.tasks.wikidata.claims.{modul}.pywikibot.Claim.types").start()
-        types_mock.__getitem__.return_value = MagicMock
-        return item_mock, types_mock
 
 
 class TestClaimFactory(BaseTestClaimFactory):

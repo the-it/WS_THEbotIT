@@ -1,3 +1,5 @@
+from typing import List
+
 import pywikibot
 
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
@@ -9,30 +11,15 @@ class P31InstanceOf(ClaimFactory):
     """
     Returns the Claim **instance of** -> **(encyclopedic article|cross-reference)**
     """
-    ENCYCLOPEDIC_ARTICLE_ITEM = 13433827
-    CROSS_REFERENCE_ITEM = 1302249
+    ENCYCLOPEDIC_ARTICLE_ITEM = "Q13433827"
+    CROSS_REFERENCE_ITEM = "Q1302249"
 
-    def __init__(self, wikidata: pywikibot.Site):
-        super().__init__(wikidata)
-        self.CLAIM_DICT = {'mainsnak': {'snaktype': 'value',
-                                        'property': self.get_property_string(),
-                                        "datatype": "wikibase-item",
-                                        "datavalue": {
-                                            "value": {
-                                                "entity-type": "item",
-                                                "numeric-id": self.ENCYCLOPEDIC_ARTICLE_ITEM
-                                            },
-                                            "type": "wikibase-entityid"
-                                        }},
-                           'type': 'statement',
-                           'rank': 'normal'}
+    def _get_claim_json(self, re_page: RePage):
+        if re_page[0]["VERWEIS"].value:
+            return self.create_claim_json(self.get_property_string(), "wikibase-item", self.CROSS_REFERENCE_ITEM)
+        else:
+            return self.create_claim_json(self.get_property_string(), "wikibase-item", self.ENCYCLOPEDIC_ARTICLE_ITEM)
 
     def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
-        if re_page[0]["VERWEIS"].value:
-            self.CLAIM_DICT["mainsnak"]["datavalue"]["value"]["numeric-id"] = self.CROSS_REFERENCE_ITEM
-        else:
-            self.CLAIM_DICT["mainsnak"]["datavalue"]["value"]["numeric-id"] = self.ENCYCLOPEDIC_ARTICLE_ITEM
-        claim = pywikibot.Claim.fromJSON(self.wikidata, self.CLAIM_DICT)
-        old_claims = data_item.claims[self.get_property_string()]
-        claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list([claim], old_claims)
-        return self._create_claim_dictionary(claims_to_add, claims_to_remove)
+        claim = pywikibot.Claim.fromJSON(self.wikidata, self._get_claim_json(re_page))
+        return self.get_diff_claims_for_replacement([claim], data_item)

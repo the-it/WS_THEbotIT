@@ -14,42 +14,12 @@ class TestP31InstanceOf(BaseTestClaimFactory):
         site_mock = mock.MagicMock()
         self.factory = P31InstanceOf(site_mock)
 
-    def test_get_claims_to_update_different_claim(self):
+    def test__get_claim_json_main_aritcle(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
-        claim_dict = {'mainsnak': {'snaktype': 'value',
-                                   'property': "P31",
-                                   "datatype": "wikibase-item",
-                                   "datavalue": {
-                                       "value": {
-                                           "entity-type": "item",
-                                           "numeric-id": 1234
-                                       },
-                                       "type": "wikibase-entityid"
-                                   }},
-                      'type': 'statement',
-                      'rank': 'normal'}
-        claim = pywikibot.Claim.fromJSON(self.wikidata, claim_dict)
-        diffenrent_claims = self._create_mock_item(claims={"P31": [claim]})
-        claim_dict = self.factory.get_claims_to_update(re_page, diffenrent_claims)
-        compare("Q13433827", str(claim_dict["add"]["P31"][0].target))
-        compare("Q1234", str(claim_dict["remove"][0].target))
+        claim_json = self.factory._get_claim_json(re_page)
+        compare(13433827, claim_json["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
-    def test_get_claims_to_update_identic_claim(self):
-        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
-        claim_dict = {'mainsnak': {'snaktype': 'value',
-                                   'property': "P31",
-                                   "datatype": "wikibase-item",
-                                   "datavalue": {
-                                       "value": {
-                                           "entity-type": "item",
-                                           "numeric-id": 13433827
-                                       },
-                                       "type": "wikibase-entityid"
-                                   }},
-                      'type': 'statement',
-                      'rank': 'normal'}
-        claim = pywikibot.Claim.fromJSON(self.wikidata, claim_dict)
-        diffenrent_claims = self._create_mock_item(claims={"P31": [claim]})
-        claim_dict = self.factory.get_claims_to_update(re_page, diffenrent_claims)
-        compare({}, claim_dict["add"])
-        compare([], claim_dict["remove"])
+    def test__get_claim_json_main_cross_reference(self):
+        re_page = self._create_mock_page(text="{{REDaten|VERWEIS=ON}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
+        claim_json = self.factory._get_claim_json(re_page)
+        compare(1302249, claim_json["mainsnak"]["datavalue"]["value"]["numeric-id"])

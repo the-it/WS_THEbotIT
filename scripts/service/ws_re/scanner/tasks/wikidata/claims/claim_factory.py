@@ -84,8 +84,23 @@ class ClaimFactory:
             claims_to_add_dict[self.get_property_string()] = claims_to_add
         return {"add": claims_to_add_dict, "remove": claims_to_remove}
 
+    def get_diff_claims_for_replacement(self, claim_list: ClaimList, data_item: pywikibot.ItemPage):
+        old_claims = data_item.claims[self.get_property_string()]
+        claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list(claim_list, old_claims)
+        return self._create_claim_dictionary(claims_to_add, claims_to_remove)
+
     @staticmethod
     def create_claim_json(property_str: str, target_type: str, target: str) -> Dict:
+        """
+        This factory function create json representations of claims from some basic parameters.
+
+        :param property_str: Number of the Property, example "P1234"
+        :param target_type: Value of the target. Possible values: 'wikibase-item', 'string', 'commonsMedia',
+                            'globe-coordinate', 'url', 'time', 'quantity', 'monolingualtext', 'math', 'external-id',
+                            'geo-shape', 'tabular-data'
+        :param target: actual value of the target
+        :return: dictionary representation of a claim
+        """
         claim_json: Dict = {'mainsnak': {'snaktype': 'value'},
                             'type': 'statement',
                             'rank': 'normal'}
