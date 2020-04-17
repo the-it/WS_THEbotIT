@@ -11,13 +11,14 @@ class P31InstanceOf(ClaimFactory):
     """
     ENCYCLOPEDIC_ARTICLE_ITEM = "Q13433827"
     CROSS_REFERENCE_ITEM = "Q1302249"
+    ItemPageCopy = pywikibot.ItemPage
 
     def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         claim = pywikibot.Claim(self.wikidata, self.get_property_string())
         if re_page[0]["VERWEIS"].value:
-            target = pywikibot.ItemPage(self.wikidata, self.CROSS_REFERENCE_ITEM)
+            target = self.ItemPageCopy(self.wikidata, self.CROSS_REFERENCE_ITEM)
         else:
-            target = pywikibot.ItemPage(self.wikidata, self.ENCYCLOPEDIC_ARTICLE_ITEM)
+            target = self.ItemPageCopy(self.wikidata, self.ENCYCLOPEDIC_ARTICLE_ITEM)
         claim.setTarget(target)
         old_claims = data_item.claims[self.get_property_string()]
         claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list([claim], old_claims)

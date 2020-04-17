@@ -19,6 +19,15 @@ class BaseTestClaimFactory(TestCase):
                           site: pywikibot.Site = None,
                           title: str = "Q1",
                           claims: Dict[str, List[pywikibot.Claim]] = None):
+        """
+
+        :param site: mocked parameter for patching pywikibot.ItemPage constructor
+        :param title: title of the item at wikidata, also mocked parameter for patching pywikibot.ItemPage constructor
+        :param claims: list of claims that are returned by the mocked item
+        :param type:  possible values'wikibase-item', 'string', 'commonsMedia', 'globe-coordinate', 'url', 'time',
+                      'quantity', 'monolingualtext', 'math', 'external-id', 'geo-shape', 'tabular-data'
+        :return: a mocked pywikibot.ItemPage
+        """
         mock_item = MagicMock()
         if claims:
             claims_mock = PropertyMock(return_value=claims)
@@ -32,7 +41,7 @@ class BaseTestClaimFactory(TestCase):
             type(mock_item).text = text_mock
         if title:
             title_mock = Mock(return_value=title)
-            type(mock_item).title = title
+            type(mock_item).title = title_mock
         return RePage(mock_item)
 
 
