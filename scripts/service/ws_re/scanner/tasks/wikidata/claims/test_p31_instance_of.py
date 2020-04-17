@@ -1,6 +1,8 @@
 from unittest import mock
 
+import pywikibot
 from pywikibot import ItemPage
+from testfixtures import compare
 
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
@@ -11,21 +13,43 @@ class TestP31InstanceOf(BaseTestClaimFactory):
     def setUp(self) -> None:
         site_mock = mock.MagicMock()
         self.factory = P31InstanceOf(site_mock)
-        # mock all calls to ItemPage, to not really create Items at Wikidata
-        self.item_mock = mock.patch(
-            "scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of.pywikibot.ItemPage").start()
-        self.item_mock.side_effect = self._create_mock_item
-        # sadly I have to mock some pywikibot internals to be able to call Claim.setTarget()
-        self.types_mock = mock.patch(
-            "scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of.pywikibot.Claim.types").start()
-        self.types_mock.__getitem__.return_value = mock.MagicMock
 
-    def tearDown(self) -> None:
-        mock.patch.stopall()
-
-    def test_get_claims_to_update(self):
+    def test_get_claims_to_update_different_claim(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
-        no_claims = self._create_mock_item(claims={"P31": []})
-        print(self.factory.get_claims_to_update(re_page, no_claims))
+        claim_dict = {'mainsnak': {'snaktype': 'value',
+                                   'property': "P31",
+                                   "datatype": "wikibase-item",
+                                   "datavalue": {
+                                       "value": {
+                                           "entity-type": "item",
+                                           "numeric-id": 1234
+                                       },
+                                       "type": "wikibase-entityid"
+                                   }},
+                      'type': 'statement',
+                      'rank': 'normal'}
+        claim = pywikibot.Claim.fromJSON(self.wikidata, claim_dict)
+        diffenrent_claims = self._create_mock_item(claims={"P31": [claim]})
+        claim_dict = self.factory.get_claims_to_update(re_page, diffenrent_claims)
+        compare("Q13433827", str(claim_dict["add"]["P31"][0].target))
+        compare("Q1234", str(claim_dict["remove"][0].target))
 
-
+    def test_get_claims_to_update_identic_claim(self):
+        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
+        claim_dict = {'mainsnak': {'snaktype': 'value',
+                                   'property': "P31",
+                                   "datatype": "wikibase-item",
+                                   "datavalue": {
+                                       "value": {
+                                           "entity-type": "item",
+                                           "numeric-id": 13433827
+                                       },
+                                       "type": "wikibase-entityid"
+                                   }},
+                      'type': 'statement',
+                      'rank': 'normal'}
+        claim = pywikibot.Claim.fromJSON(self.wikidata, claim_dict)
+        diffenrent_claims = self._create_mock_item(claims={"P31": [claim]})
+        claim_dict = self.factory.get_claims_to_update(re_page, diffenrent_claims)
+        compare({}, claim_dict["add"])
+        compare([], claim_dict["remove"])
