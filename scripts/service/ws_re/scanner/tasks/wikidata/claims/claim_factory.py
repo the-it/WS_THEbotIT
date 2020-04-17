@@ -1,5 +1,6 @@
 import re
 from abc import abstractmethod
+from copy import deepcopy
 from typing import Dict, List, Tuple, TypedDict
 
 import pywikibot
@@ -7,6 +8,8 @@ import pywikibot
 from scripts.service.ws_re.template.re_page import RePage
 
 # type hints
+from tools.bots import BotException
+
 ClaimList = List[pywikibot.Claim]
 ClaimDictionary = Dict[str, ClaimList]
 SerializedClaimList = List[Dict]
@@ -44,7 +47,7 @@ class ClaimFactory:
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList, old_claim_list: ClaimList) \
-            -> Tuple[ClaimList, ClaimList]:
+        -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -80,3 +83,20 @@ class ClaimFactory:
         if claims_to_add:
             claims_to_add_dict[self.get_property_string()] = claims_to_add
         return {"add": claims_to_add_dict, "remove": claims_to_remove}
+
+    @staticmethod
+    def create_claim_json(property_str: str, target_type: str, target: str) -> Dict:
+        claim_json: Dict = {'mainsnak': {'snaktype': 'value'},
+                            'type': 'statement',
+                            'rank': 'normal'}
+        claim_json["mainsnak"]["property"] = property_str
+        if target_type == "wikibase-item":
+            claim_json["mainsnak"]["datatype"] = target_type
+            claim_json["mainsnak"]["datavalue"] = {"value": {"entity-type": "item",
+                                                             "numeric-id": int(target.strip("Q"))
+                                                             },
+                                                   "type": "wikibase-entityid"
+                                                   }
+        else:
+            raise BotException(f"target_type \"{target_type}\" not supported")
+        return claim_json

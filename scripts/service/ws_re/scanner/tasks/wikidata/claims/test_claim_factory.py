@@ -8,6 +8,7 @@ from testfixtures import compare
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
     ChangedClaimsDict
 from scripts.service.ws_re.template.re_page import RePage
+from tools.bots import BotException
 
 
 class BaseTestClaimFactory(TestCase):
@@ -97,3 +98,24 @@ class TestClaimFactory(BaseTestClaimFactory):
     def test__create_claim_dictionary(self):
         compare({"add": {"P1234": [self.a, self.b]}, "remove": [self.c, self.d]},
                 self.factory_dummy._create_claim_dictionary([self.a, self.b], [self.c, self.d]))
+
+    def test__create_claim_json_wikibase_item(self):
+        expect = {'mainsnak': {'snaktype': 'value',
+                               'property': "P31",
+                               "datatype": "wikibase-item",
+                               "datavalue": {
+                                   "value": {
+                                       "entity-type": "item",
+                                       "numeric-id": 123
+                                   },
+                                   "type": "wikibase-entityid"
+                               }},
+                  'type': 'statement',
+                  'rank': 'normal'}
+
+        compare(expect, ClaimFactory.create_claim_json("P31", "wikibase-item", "Q123"))
+        compare(expect, ClaimFactory.create_claim_json("P31", "wikibase-item", "123"))
+
+    def test__create_claim_json_exception(self):
+        with self.assertRaises(BotException):
+            ClaimFactory.create_claim_json("P31", "tada", "123")
