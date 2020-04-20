@@ -1,4 +1,3 @@
-from typing import Dict, List
 from unittest import TestCase
 from unittest.mock import MagicMock, PropertyMock, Mock, patch
 

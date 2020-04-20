@@ -1,7 +1,5 @@
 from unittest import mock
 
-import pywikibot
-from pywikibot import ItemPage
 from testfixtures import compare
 
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
@@ -11,8 +9,9 @@ from scripts.service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory impo
 
 class TestP31InstanceOf(BaseTestClaimFactory):
     def setUp(self) -> None:
-        site_mock = mock.MagicMock()
-        self.factory = P31InstanceOf(site_mock)
+        wikidata_site_mock = mock.MagicMock()
+        wikisource_site_mock = mock.MagicMock()
+        self.factory = P31InstanceOf(wikidata_site_mock, wikisource_site_mock)
 
     def test__get_claim_json_main_aritcle(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")

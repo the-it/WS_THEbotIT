@@ -1,13 +1,11 @@
 import re
 from abc import abstractmethod
-from copy import deepcopy
 from typing import Dict, List, Tuple, TypedDict
 
 import pywikibot
 
 from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.template.re_page import RePage
-
 # type hints
 from tools.bots import BotException
 
@@ -23,8 +21,9 @@ class ChangedClaimsDict(TypedDict):
 
 
 class ClaimFactory:
-    def __init__(self, wikidata: pywikibot.Site):
+    def __init__(self, wikidata: pywikibot.Site, wikisource: pywikibot.Site):
         self.wikidata = wikidata
+        self.wikisource = wikisource
 
     @abstractmethod
     def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
