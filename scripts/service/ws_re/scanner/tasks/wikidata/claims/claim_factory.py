@@ -1,10 +1,11 @@
 import re
 from abc import abstractmethod
-from typing import Dict, List, Tuple, TypedDict
+from typing import Dict, List, Tuple, TypedDict, Union
 
 import pywikibot
 
 from scripts.service.ws_re.register.author import Author
+from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.template.re_page import RePage
 # type hints
 from tools.bots import BotException
@@ -20,10 +21,32 @@ class ChangedClaimsDict(TypedDict):
     remove: ClaimList
 
 
+JsonValueDict = TypedDict('JsonValueDict', {'entity-type': str, 'numeric-id': int})
+
+
+class JsonDataValue(TypedDict):
+    value: Union[str, JsonValueDict]
+    type: str
+
+
+class JsonSnakDict(TypedDict):
+    snaktype: str
+    property: str
+    datatype: str
+    datavalue: JsonDataValue
+
+
+class JsonClaimDict(TypedDict):
+    mainsnak: JsonSnakDict
+    type: str
+    rank: str
+
+
 class ClaimFactory:
     def __init__(self, wikidata: pywikibot.Site, wikisource: pywikibot.Site):
         self.wikidata = wikidata
         self.wikisource = wikisource
+        self._authors = Authors()
 
     @abstractmethod
     def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
@@ -84,13 +107,13 @@ class ClaimFactory:
             claims_to_add_dict[self.get_property_string()] = claims_to_add
         return {"add": claims_to_add_dict, "remove": claims_to_remove}
 
-    def get_diff_claims_for_replacement(self, claim_list: ClaimList, data_item: pywikibot.ItemPage):
+    def get_diff_claims_for_replacement(self, claim_list: ClaimList, data_item: pywikibot.ItemPage) -> ClaimDictionary:
         old_claims = data_item.claims[self.get_property_string()]
         claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list(claim_list, old_claims)
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
 
     @staticmethod
-    def create_claim_json(property_str: str, target_type: str, target: str) -> Dict:
+    def create_claim_json(property_str: str, target_type: str, target: str) -> JsonClaimDict:
         """
         This factory function create json representations of claims from some basic parameters.
 
@@ -119,13 +142,13 @@ class ClaimFactory:
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
     @property
-    def _authors_of_first_article(self) -> List[Author]:
+    def _authors_of_first_article(self, re_page: RePage) -> List[Author]:
         author_list: List[Author] = []
-        for article_part in self.re_page.splitted_article_list[0]:
+        for article_part in re_page.splitted_article_list[0]:
             if isinstance(article_part, str):
                 continue
             author = article_part.author[0]
-            band = self._first_article["BAND"].value
+            band = re_page[0]["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)
             if len(possible_authors) == 1:
                 author_list.append(possible_authors[0])

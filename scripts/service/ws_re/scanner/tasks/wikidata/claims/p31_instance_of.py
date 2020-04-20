@@ -3,7 +3,7 @@ from typing import List
 import pywikibot
 
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    ChangedClaimsDict
+    ChangedClaimsDict, JsonClaimDict
 from scripts.service.ws_re.template.re_page import RePage
 
 
@@ -14,7 +14,7 @@ class P31InstanceOf(ClaimFactory):
     ENCYCLOPEDIC_ARTICLE_ITEM = "Q13433827"
     CROSS_REFERENCE_ITEM = "Q1302249"
 
-    def _get_claim_json(self, re_page: RePage):
+    def _get_claim_json(self, re_page: RePage) -> JsonClaimDict:
         if re_page[0]["VERWEIS"].value:
             return self.create_claim_json(self.get_property_string(), "wikibase-item", self.CROSS_REFERENCE_ITEM)
         else:

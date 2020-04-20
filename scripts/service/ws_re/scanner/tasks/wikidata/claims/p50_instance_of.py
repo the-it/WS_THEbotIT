@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 
 import pywikibot
 
@@ -7,41 +7,28 @@ from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import Cl
 from scripts.service.ws_re.template.re_page import RePage
 
 
-def p50(self) -> List[pywikibot.Claim]:
-    """
-
-    """
-    author_items = self._p50_get_author_list()
-    claim_list: List[pywikibot.Claim] = []
-    for author in author_items:
-        claim = pywikibot.Claim(self.wikidata, 'P50')
-        claim.setTarget(author)
-        claim_list.append(claim)
-    return claim_list
-
-
-
-
 class P50Author(ClaimFactory):
     """
     Returns the Claim **author** -> **<Item of author of RE lemma>**
     """
-    def _get_claim_json(self, re_page: RePage):
+
+    def _get_claim_json(self, re_page: RePage) -> List[ChangedClaimsDict]:
         pass
 
     def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
-        claim = pywikibot.Claim.fromJSON(self.wikidata, self._get_claim_json(re_page))
-        return self.get_diff_claims_for_replacement([claim], data_item)
+        claim_list  = [pywikibot.Claim.fromJSON(self.wikidata, claim_json)
+                       for claim_json in self._get_claim_json(re_page)]
+        return self.get_diff_claims_for_replacement(claim_list, data_item)
 
-    def _get_author_list(self) -> List[pywikibot.Claim]:
-        author_items: List[pywikibot.Claim] = []
+    def _get_author_list(self) -> List[str]:
+        author_items: List[str] = []
         for author in self._authors_of_first_article:
-            author_lemma = pywikibot.Page(self.wiki, author.name)
+            author_lemma = pywikibot.Page(self.wikisource, author.name)
             if not author_lemma.exists():
                 continue
             try:
                 # append the item of the author, if it exists
-                author_items.append(author_lemma.data_item())
+                author_items.append(author_lemma.data_item().id)
             except pywikibot.NoPage:
                 continue
         return author_items

@@ -11,12 +11,9 @@ from tools.bots import BotException
 
 
 class BaseTestClaimFactory(TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.wikidata = None
-
-    def tearDown(self) -> None:
-        patch.stopall()
+    def setUp(self) -> None:
+        self.wikidata_site_mock = MagicMock()
+        self.wikisource_site_mock = MagicMock()
 
     @staticmethod
     def _create_mock_page(text: str = None, title: str = None):
@@ -36,20 +33,20 @@ class TestClaimFactory(BaseTestClaimFactory):
             return {"add": {self.get_property_string(): []}, "remove": []}
 
     def setUp(self) -> None:
-        self.factory_dummy = self.P1234FactoryDummy(self.wikidata)
+        self.factory_dummy = self.P1234FactoryDummy(self.wikidata_site_mock, self.wikisource_site_mock)
         self.base_json = {'mainsnak': {'snaktype': 'value',
                                        'property': 'P1234',
                                        'datatype': 'string',
                                        'datavalue': {'value': 'a', 'type': 'string'}},
                           'type': 'statement',
                           'rank': 'normal'}
-        self.a = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
+        self.a = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
         self.base_json["mainsnak"]["datavalue"]["value"] = "b"
-        self.b = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
+        self.b = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
         self.base_json["mainsnak"]["datavalue"]["value"] = "c"
-        self.c = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
+        self.c = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
         self.base_json["mainsnak"]["datavalue"]["value"] = "d"
-        self.d = pywikibot.Claim.fromJSON(self.wikidata, self.base_json)
+        self.d = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
 
     def test_property_string(self):
         compare("P1234", self.P1234FactoryDummy.get_property_string())

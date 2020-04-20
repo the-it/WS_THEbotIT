@@ -3,15 +3,15 @@ from unittest import mock
 from testfixtures import compare
 
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
+from scripts.service.ws_re.scanner.tasks.wikidata.claims.p50_instance_of import P50Author
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
     BaseTestClaimFactory
 
 
 class TestP31InstanceOf(BaseTestClaimFactory):
     def setUp(self) -> None:
-        wikidata_site_mock = mock.MagicMock()
-        wikisource_site_mock = mock.MagicMock()
-        self.factory = P31InstanceOf(wikidata_site_mock, wikisource_site_mock)
+        super().setUp()
+        self.factory = P50Author(self.wikidata_site_mock, self.wikisource_site_mock)
 
     def test__get_claim_json_main_aritcle(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
