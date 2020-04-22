@@ -141,7 +141,6 @@ class ClaimFactory:
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
-    @property
     def _authors_of_first_article(self, re_page: RePage) -> List[Author]:
         author_list: List[Author] = []
         for article_part in re_page.splitted_article_list[0]:
