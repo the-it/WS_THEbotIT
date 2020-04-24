@@ -43,13 +43,14 @@ class JsonClaimDict(TypedDict):
 
 
 class ClaimFactory:
-    def __init__(self, wikidata: pywikibot.Site, wikisource: pywikibot.Site):
-        self.wikidata = wikidata
-        self.wikisource = wikisource
+    def __init__(self, re_page: RePage):
+        self.wikidata = re_page.page.data_repository
+        self.wikisource = re_page.page.site
+        self.re_page = re_page
         self._authors = Authors()
 
     @abstractmethod
-    def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
+    def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
         Every claim that is updated can possible add new claims, but can also remove existing claims at the item.
         Which claims is removed or added depends of the specific implementation of the property factory.

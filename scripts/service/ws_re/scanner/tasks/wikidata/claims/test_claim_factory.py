@@ -1,5 +1,5 @@
 from unittest import TestCase
-from unittest.mock import MagicMock, PropertyMock, Mock, patch
+from unittest.mock import MagicMock, PropertyMock, Mock
 
 import pywikibot
 from testfixtures import compare
@@ -29,11 +29,12 @@ class BaseTestClaimFactory(TestCase):
 
 class TestClaimFactory(BaseTestClaimFactory):
     class P1234FactoryDummy(ClaimFactory):
-        def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
+        def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
             return {"add": {self.get_property_string(): []}, "remove": []}
 
     def setUp(self) -> None:
-        self.factory_dummy = self.P1234FactoryDummy(self.wikidata_site_mock, self.wikisource_site_mock)
+        super().setUp()
+        self.factory_dummy = self.P1234FactoryDummy(MagicMock())
         self.base_json = {'mainsnak': {'snaktype': 'value',
                                        'property': 'P1234',
                                        'datatype': 'string',

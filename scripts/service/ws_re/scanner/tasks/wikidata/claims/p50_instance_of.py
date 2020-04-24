@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List
 
 import pywikibot
 
@@ -12,13 +12,13 @@ class P50Author(ClaimFactory):
     Returns the Claim **author** -> **<Item of author of RE lemma>**
     """
 
-    def _get_claim_json(self, re_page: RePage) -> List[JsonClaimDict]:
+    def _get_claim_json(self) -> List[JsonClaimDict]:
         return [self.create_claim_json(self.get_property_string(), "wikibase-item", id)
-                for id in self._get_author_list(re_page)]
+                for id in self._get_author_list(self.re_page)]
 
-    def get_claims_to_update(self, re_page: RePage, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
+    def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         claim_list  = [pywikibot.Claim.fromJSON(self.wikidata, claim_json)
-                       for claim_json in self._get_claim_json(re_page)]
+                       for claim_json in self._get_claim_json()]
         return self.get_diff_claims_for_replacement(claim_list, data_item)
 
     def _get_author_list(self, re_page: RePage) -> List[str]:
