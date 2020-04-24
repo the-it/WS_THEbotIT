@@ -1,19 +1,21 @@
 import json
-import re
 from contextlib import suppress
 from datetime import datetime
 from pathlib import Path
 from string import Template
-from typing import Dict, Callable, List, Optional, Tuple
+from typing import Dict, List, Optional
 
 import dictdiffer
 import pywikibot
 
+import scripts.service.ws_re.scanner.tasks.wikidata.claims as claim_package
 from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
-    SerializedClaimDictionary, ClaimList
+    SerializedClaimDictionary, ClaimList, ClaimFactory, ChangedClaimsDict
+from scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
+from scripts.service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from scripts.service.ws_re.scanner.tasks.wikidata.copyright_status_claims import PublicDomainClaims
 from scripts.service.ws_re.template.article import Article
 from scripts.service.ws_re.volumes import Volumes, Volume
@@ -21,12 +23,13 @@ from tools.bots.pi import WikiLogger
 
 
 class DATATask(ReScannerTask):
+    claim_factories = {"P31": P31InstanceOf, "P50": P50Author}
+
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
-        self._claim_functions = self._get_claim_functions()
         self._authors = Authors()
         self._first_article: Article
         self._volumes = Volumes()
@@ -46,12 +49,12 @@ class DATATask(ReScannerTask):
                     data_item.get()
                     item_dict_add = {}
                     # process claims, if they differ
-                    claims_to_add, claims_to_remove = self._get_claimes_to_change(data_item)
-                    if claims_to_remove:
+                    claims_to_change = self._get_claimes_to_change(data_item)
+                    if claims_to_change["remove"]:
                         # if there are claims, that aren't up to date remove them
-                        data_item.removeClaims(claims_to_remove)
-                    if claims_to_add:
-                        item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_add)})
+                        data_item.removeClaims(claims_to_change["remove"])
+                    if claims_to_change["add"]:
+                        item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
                     # process if non claims differ
                     if self._labels_and_sitelinks_has_changed(data_item.toJSON(), self._non_claims):
                         item_dict_add.update(self._non_claims)
@@ -63,8 +66,8 @@ class DATATask(ReScannerTask):
                 except pywikibot.exceptions.NoPage:
                     # create a new one from scratch
                     data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
-                    claims_to_add, _ = self._get_claimes_to_change(None)
-                    item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_add)}
+                    claims_to_change = self._get_claimes_to_change(None)
+                    item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
                     item_dict_add.update(self._non_claims)
                     data_item.editEntity(item_dict_add)
                     self._counter += 1
@@ -102,18 +105,6 @@ class DATATask(ReScannerTask):
 
     # CLAIM functionality
 
-    def _get_claim_functions(self) -> Dict[str, Callable]:
-        """
-        Returns a dictionary of claim generation functions. The key represents the name of the claim.
-        Each function will return a pywikibot.Claim. The functions are parsed by their name. So every function that
-        returns a claim must be names as _pXXXX.
-        """
-        claim_functions = {}
-        for item in dir(self):
-            if re.search(r"^p\d{1,6}", item):
-                claim_functions[item.upper()] = getattr(self, item)
-        return claim_functions
-
     @staticmethod
     def _serialize_claims_to_add(claims_to_add: ClaimDictionary) -> SerializedClaimDictionary:
         claims_to_add_serialized = {}
@@ -125,31 +116,24 @@ class DATATask(ReScannerTask):
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
-            -> Tuple[ClaimDictionary, ClaimList]:
+            -> ChangedClaimsDict:
         """
-        DEPRECATED
+        Iterates throw all claim factories and aggregates the claims, that should be remove, and the claims, that
+        should be added.
 
-        :param data_item:
+        :param data_item: current
         :return:
         """
-        claims_to_add: Dict[str, List[pywikibot.Claim]] = {}
-        claims_to_remove: List[pywikibot.Claim] = []
-        for claim_str, claim_function in self._claim_functions.items():
-            new_claim_list = claim_function()
-            if data_item:
-                try:
-                    old_claim_list = data_item.claims[claim_str]
-                except KeyError:
-                    old_claim_list = []
-            else:
-                old_claim_list = []
-            filtered_new_claim_list, filtered_old_claim_list = \
-                [], []
-            if filtered_new_claim_list:
-                claims_to_add[claim_str] = filtered_new_claim_list
-            if filtered_old_claim_list:
-                claims_to_remove += filtered_old_claim_list
-        return claims_to_add, claims_to_remove
+        claims_to_add: ClaimDictionary = {}
+        claims_to_remove: ClaimList = []
+        for claim_str, claim_factory_class in self.claim_factories.items():
+            claim_factory = claim_factory_class(self.re_page)
+            claims_to_change_dict = claim_factory.get_claims_to_update(data_item)
+            if claims_to_change_dict["add"]:
+                claims_to_add[claim_str] = claims_to_change_dict["add"]
+            if claims_to_change_dict["remove"]:
+                claims_to_remove += claims_to_change_dict["remove"]
+        return {"add": claims_to_add, "remove": claims_to_remove}
 
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
