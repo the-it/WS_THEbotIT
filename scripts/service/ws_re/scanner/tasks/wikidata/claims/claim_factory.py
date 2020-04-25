@@ -109,7 +109,10 @@ class ClaimFactory:
         return {"add": claims_to_add_dict, "remove": claims_to_remove}
 
     def get_diff_claims_for_replacement(self, claim_list: ClaimList, data_item: pywikibot.ItemPage) -> ClaimDictionary:
-        old_claims = data_item.claims[self.get_property_string()]
+        try:
+            old_claims = data_item.claims[self.get_property_string()]
+        except KeyError:
+            old_claims = []
         claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list(claim_list, old_claims)
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
 
