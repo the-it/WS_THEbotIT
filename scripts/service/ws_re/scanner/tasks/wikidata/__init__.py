@@ -10,14 +10,12 @@ import pywikibot
 
 import scripts.service.ws_re.scanner.tasks.wikidata.claims as claim_package
 from scripts.service.ws_re.register.author import Author
-from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.scanner import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ClaimFactory, ChangedClaimsDict
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from scripts.service.ws_re.scanner.tasks.wikidata.copyright_status_claims import PublicDomainClaims
-from scripts.service.ws_re.template.article import Article
 from scripts.service.ws_re.volumes import Volumes, Volume
 from tools.bots.pi import WikiLogger
 
@@ -30,8 +28,6 @@ class DATATask(ReScannerTask):
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
-        self._authors = Authors()
-        self._first_article: Article
         self._volumes = Volumes()
         self._current_year = datetime.now().year
         self._public_domain_claims = PublicDomainClaims(self.wikidata)
@@ -39,7 +35,6 @@ class DATATask(ReScannerTask):
         self._counter = 0
 
     def task(self):
-        self._first_article = self.re_page[0]
         start_time = datetime.now()
         if self._counter < 100:
             try:
@@ -150,19 +145,7 @@ class DATATask(ReScannerTask):
                 author_list.append(possible_authors[0])
         return author_list
 
-    def p155(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **follows** -> **<Item of predecessor article>**
-        """
-        lemma_before_this_str = f"RE:{self._first_article['VORGÄNGER'].value}"
-        lemma_before_this = pywikibot.Page(self.wiki, lemma_before_this_str)
-        try:
-            item_before_this = lemma_before_this.data_item()
-            claim = pywikibot.Claim(self.wikidata, 'P155')
-            claim.setTarget(item_before_this)
-            return [claim]
-        except pywikibot.NoPage:
-            return []
+
 
     def p156(self) -> List[pywikibot.Claim]:
         """

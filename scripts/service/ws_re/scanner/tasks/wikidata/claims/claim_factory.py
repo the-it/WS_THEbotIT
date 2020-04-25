@@ -6,6 +6,7 @@ import pywikibot
 
 from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.register.authors import Authors
+from scripts.service.ws_re.template.article import Article
 from scripts.service.ws_re.template.re_page import RePage
 # type hints
 from tools.bots import BotException
@@ -50,17 +51,27 @@ class ClaimFactory:
         self._authors = Authors()
 
     @abstractmethod
+    def _get_claim_json(self) -> JsonClaimDict:
+        """
+
+        """
+        pass
+
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
         Every claim that is updated can possible add new claims, but can also remove existing claims at the item.
-        Which claims is removed or added depends of the specific implementation of the property factory.
+        Which claims is removed or added depends of the specific implementation of the property factory. The standart
+        implementation will update all claims as expected by the factory (this include removing possible existing
+        claims).
 
-        :param: re_page: data representation of the RE lemma at wikisource
         :param: data_item: item where the specific property is going to be altered
 
-        :returns: Two collections of claims are returned.
+        :returns: A dictionary with claims to add and to remove is returned
         """
-        pass
+
+        claim_list = [pywikibot.Claim.fromJSON(self.wikidata, claim_json)
+                      for claim_json in self._get_claim_json()]
+        return self.get_diff_claims_for_replacement(claim_list, data_item)
 
     @classmethod
     def get_property_string(cls) -> str:
@@ -68,6 +79,13 @@ class ClaimFactory:
         Returns the property string for this class
         """
         return re.search(r"^P\d{1,6}", cls.__name__).group(0)
+
+    @property
+    def _first_article(self) -> Article:
+        """
+        Holds the first article of the RE lemma to analyse
+        """
+        return self.re_page[0]
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList, old_claim_list: ClaimList) \
