@@ -9,6 +9,7 @@ from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.template.article import Article
 from scripts.service.ws_re.template.re_page import RePage
 # type hints
+from scripts.service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
 
 ClaimList = List[pywikibot.Claim]
@@ -44,11 +45,13 @@ class JsonClaimDict(TypedDict):
 
 
 class ClaimFactory:
+    _authors = Authors()
+    _volumes = Volumes()
+
     def __init__(self, re_page: RePage):
         self.wikidata = re_page.page.data_repository
         self.wikisource = re_page.page.site
         self.re_page = re_page
-        self._authors = Authors()
 
     @abstractmethod
     def _get_claim_json(self) -> JsonClaimDict:
@@ -163,14 +166,18 @@ class ClaimFactory:
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
-    def _authors_of_first_article(self, re_page: RePage) -> List[Author]:
+    def _authors_of_first_article(self) -> List[Author]:
         author_list: List[Author] = []
-        for article_part in re_page.splitted_article_list[0]:
+        for article_part in self.re_page.splitted_article_list[0]:
             if isinstance(article_part, str):
                 continue
             author = article_part.author[0]
-            band = re_page[0]["BAND"].value
+            band = self.re_page[0]["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)
             if len(possible_authors) == 1:
                 author_list.append(possible_authors[0])
         return author_list
+
+    @property
+    def _volume_of_first_article(self) -> Volume:
+        return self._volumes[str(self._first_article["BAND"].value)]

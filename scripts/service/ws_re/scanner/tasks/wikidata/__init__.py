@@ -9,14 +9,12 @@ import dictdiffer
 import pywikibot
 
 import scripts.service.ws_re.scanner.tasks.wikidata.claims as claim_package
-from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.scanner import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ClaimFactory, ChangedClaimsDict
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from scripts.service.ws_re.scanner.tasks.wikidata.copyright_status_claims import PublicDomainClaims
-from scripts.service.ws_re.volumes import Volumes, Volume
 from tools.bots.pi import WikiLogger
 
 
@@ -28,7 +26,6 @@ class DATATask(ReScannerTask):
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
-        self._volumes = Volumes()
         self._current_year = datetime.now().year
         self._public_domain_claims = PublicDomainClaims(self.wikidata)
         # debug functions
@@ -132,35 +129,6 @@ class DATATask(ReScannerTask):
 
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
-    @property
-    def _authors_of_first_article(self) -> List[Author]:
-        author_list: List[Author] = []
-        for article_part in self.re_page.splitted_article_list[0]:
-            if isinstance(article_part, str):
-                continue
-            author = article_part.author[0]
-            band = self._first_article["BAND"].value
-            possible_authors = self._authors.get_author_by_mapping(author, band)
-            if len(possible_authors) == 1:
-                author_list.append(possible_authors[0])
-        return author_list
-
-
-
-    def p156(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **followed by** -> **<Item of following article>**
-        """
-        lemma_after_this_str = f"RE:{self._first_article['NACHFOLGER'].value}"
-        lemma_after_this = pywikibot.Page(self.wiki, lemma_after_this_str)
-        try:
-            item_after_this = lemma_after_this.data_item()
-            claim = pywikibot.Claim(self.wikidata, 'P156')
-            claim.setTarget(item_after_this)
-            return [claim]
-        except pywikibot.NoPage:
-            return []
-
     def p361(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **part of** -> **Paulys Realenzyklopädie der klassischen Altertumswissenschaft**
@@ -178,9 +146,7 @@ class DATATask(ReScannerTask):
         claim.setTarget(pywikibot.WbTime(year=int(self._volume_of_first_article.year)))
         return [claim]
 
-    @property
-    def _volume_of_first_article(self) -> Volume:
-        return self._volumes[str(self._first_article["BAND"].value)]
+
 
     def p921(self) -> List[pywikibot.Claim]:
         """
