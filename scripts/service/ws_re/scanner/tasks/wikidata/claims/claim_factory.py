@@ -153,13 +153,25 @@ class ClaimFactory:
                             'type': 'statement',
                             'rank': 'normal'}
         claim_json["mainsnak"]["property"] = property_str
+        claim_json["mainsnak"]["datatype"] = target_type
         if target_type == "wikibase-item":
-            claim_json["mainsnak"]["datatype"] = target_type
             claim_json["mainsnak"]["datavalue"] = {"value": {"entity-type": "item",
                                                              "numeric-id": int(target.strip("Q"))
                                                              },
                                                    "type": "wikibase-entityid"
                                                    }
+        elif target_type == "time":
+            # only for years at the moment ... extend if necessary
+            claim_json["mainsnak"]["datavalue"] = {"value": {
+                "time": f"+0000000{int(target)}-01-01T00:00:00Z",
+                "precision": 9,
+                "after": 0,
+                "before": 0,
+                "timezone": 0,
+                "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+                "type": "time"
+            }
         else:
             raise BotException(f"target_type \"{target_type}\" not supported")
         return claim_json

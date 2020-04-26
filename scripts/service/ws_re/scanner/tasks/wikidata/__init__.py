@@ -12,14 +12,25 @@ import scripts.service.ws_re.scanner.tasks.wikidata.claims as claim_package
 from scripts.service.ws_re.scanner import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ClaimFactory, ChangedClaimsDict
+from scripts.service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import \
+    P155Follows, \
+    P156FollowedBy
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
+from scripts.service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from scripts.service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
+from scripts.service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import \
+    P577PublicationDate
 from scripts.service.ws_re.scanner.tasks.wikidata.copyright_status_claims import PublicDomainClaims
 from tools.bots.pi import WikiLogger
 
 
 class DATATask(ReScannerTask):
-    claim_factories = {"P31": P31InstanceOf, "P50": P50Author}
+    claim_factories = (P31InstanceOf,
+                       P50Author,
+                       P155Follows,
+                       P156FollowedBy,
+                       P361PartOf,
+                       P577PublicationDate)
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
@@ -118,7 +129,7 @@ class DATATask(ReScannerTask):
         """
         claims_to_add: ClaimDictionary = {}
         claims_to_remove: ClaimList = []
-        for claim_str, claim_factory_class in self.claim_factories.items():
+        for claim_factory_class in self.claim_factories:
             claim_factory = claim_factory_class(self.re_page)
             claims_to_change_dict = claim_factory.get_claims_to_update(data_item)
             if claims_to_change_dict["add"]:
@@ -130,13 +141,6 @@ class DATATask(ReScannerTask):
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
 
-    def p577(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **publication date** -> **<Year of publication of RE lemma>**
-        """
-        claim = pywikibot.Claim(self.wikidata, 'P577')
-        claim.setTarget(pywikibot.WbTime(year=int(self._volume_of_first_article.year)))
-        return [claim]
 
 
 
