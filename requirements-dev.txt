@@ -5,7 +5,7 @@
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
 appdirs==1.4.3            # via virtualenv
-astroid==2.3.3            # via pylint
+astroid==2.4.0            # via pylint
 attrs==19.3.0             # via jsonschema
 aws-sam-translator==1.22.0  # via cfn-lint
 aws-xray-sdk==2.4.3       # via moto
