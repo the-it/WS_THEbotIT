@@ -8,9 +8,10 @@ from scripts.service.ws_re.register.author import Author
 from scripts.service.ws_re.register.authors import Authors
 from scripts.service.ws_re.template.article import Article
 from scripts.service.ws_re.template.re_page import RePage
-# type hints
 from scripts.service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
+
+# type hints
 
 ClaimList = List[pywikibot.Claim]
 ClaimDictionary = Dict[str, ClaimList]
@@ -159,6 +160,10 @@ class ClaimFactory:
                                                              "numeric-id": int(target.strip("Q"))
                                                              },
                                                    "type": "wikibase-entityid"
+                                                   }
+        elif target_type == "string":
+            claim_json["mainsnak"]["datavalue"] = {"value": target,
+                                                   "type": "string"
                                                    }
         elif target_type == "time":
             # only for years at the moment ... extend if necessary

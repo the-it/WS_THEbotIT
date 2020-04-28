@@ -1,6 +1,6 @@
 import re
 
-from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner.scanner import ReScannerTask
 from scripts.service.ws_re.template.article import Article
 
 

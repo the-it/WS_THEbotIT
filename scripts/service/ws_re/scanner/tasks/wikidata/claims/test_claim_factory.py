@@ -100,6 +100,18 @@ class TestClaimFactory(BaseTestClaimFactory):
 
         compare(expect, ClaimFactory.create_claim_json("P31", "time", "1234"))
 
+    def test__create_claim_json_string(self):
+        expect = {'mainsnak': {'snaktype': 'value',
+                               'property': "P31",
+                               "datatype": "string",
+                               "datavalue": {"value": "texttexttext",
+                                             "type": "string"
+                                             }},
+                  'type': 'statement',
+                  'rank': 'normal'}
+
+        compare(expect, ClaimFactory.create_claim_json("P31", "string", "texttexttext"))
+
     def test__create_claim_json_exception(self):
         with self.assertRaises(BotException):
             ClaimFactory.create_claim_json("P31", "tada", "123")

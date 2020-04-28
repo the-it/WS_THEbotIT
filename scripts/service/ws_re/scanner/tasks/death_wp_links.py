@@ -4,7 +4,7 @@ from typing import Dict
 
 import pywikibot
 
-from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner.scanner import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.base_task import ReporterMixin
 from scripts.service.ws_re.template.article import Article
 from tools.bots.pi import WikiLogger

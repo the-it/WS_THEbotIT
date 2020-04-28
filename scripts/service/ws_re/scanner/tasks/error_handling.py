@@ -2,7 +2,7 @@ from datetime import datetime
 
 import pywikibot
 
-from scripts.service.ws_re.scanner import ReScannerTask
+from scripts.service.ws_re.scanner.scanner import ReScannerTask
 from scripts.service.ws_re.scanner.tasks.base_task import ReporterMixin
 from tools.bots.pi import WikiLogger
 

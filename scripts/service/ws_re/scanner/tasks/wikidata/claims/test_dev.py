@@ -1,5 +1,5 @@
 import json
-from unittest.case import TestCase
+from unittest.case import TestCase, skip
 
 import pywikibot
 
@@ -8,7 +8,7 @@ from scripts.service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_follo
 from scripts.service.ws_re.template.re_page import RePage
 
 
-# @skip("development")
+@skip("development")
 class TestDev(TestCase):
     def test_development(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
