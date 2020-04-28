@@ -1,7 +1,7 @@
 from typing import List
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict
+    JsonClaimDict, SnakParameter
 
 
 class P361PartOf(ClaimFactory):
@@ -12,4 +12,7 @@ class P361PartOf(ClaimFactory):
     ITEM_RE = "Q1138524"
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        return [self.create_claim_json(self.get_property_string(), "wikibase-item", self.ITEM_RE)]
+        snak_parameter = SnakParameter(property_str=self.get_property_string(),
+                                       target_type="wikibase-item",
+                                       target=self.ITEM_RE)
+        return [self.create_claim_json(snak_parameter)]

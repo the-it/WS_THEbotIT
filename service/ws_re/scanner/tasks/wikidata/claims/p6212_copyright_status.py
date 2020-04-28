@@ -1,3 +1,8 @@
+from typing import List
+
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
+    JsonClaimDict, SnakParameter
+
 import pywikibot
 
 
@@ -71,6 +76,59 @@ class PublicDomainClaims():
         claim.addQualifier(qualifier_determination)
         return claim
 
+    def p6216(self) -> List[pywikibot.Claim]:
+
+        claim_list: List[pywikibot.Claim] = []
+        if self._current_year - int(self._volume_of_first_article.year) > 95:
+            claim_list.append(self._public_domain_claims.CLAIM_PUBLISHED_95_YEARS_AGO)
+        pma_claim = self._6216_min_years_since_death
+        if pma_claim:
+            claim_list.append(pma_claim)
+        if self._first_article["KEINE_SCHÖPFUNGSHÖHE"].value:
+            claim_list.append(self._public_domain_claims.CLAIM_THRESHOLD_OF_ORIGINALITY)
+        return claim_list
+
+    @property
+    def _6216_min_years_since_death(self) -> Optional[pywikibot.Claim]:
+        max_death_year = 0
+        for author in self._authors_of_first_article:
+            if not author.death:
+                max_death_year = self._current_year
+            elif author.death > max_death_year:
+                max_death_year = author.death
+        years_since_death = self._current_year - max_death_year
+        if years_since_death > 100:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER
+        if years_since_death > 80:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER
+        if years_since_death > 70:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER
+        if years_since_death > 50:
+            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER
+        return None
+
 
 if __name__ == "__main__":
     PublicDomainClaims(pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT"))
+
+
+
+
+class P6212CopyrightStatus(ClaimFactory):
+    """
+    Returns the Claim **copyright status** ->
+    **<public domain statements dependend on publication age and death of author>**
+    """
+
+    def _get_claim_json(self) -> List[JsonClaimDict]:
+        start = str(self._first_article["SPALTE_START"].value)
+        end: str = ""
+        if self._first_article["SPALTE_END"].value not in ("", "OFF"):
+            end = str(self._first_article["SPALTE_END"].value)
+        columns = start
+        if end and start != end:
+            columns = f"{start}–{end}"
+        snak = SnakParameter(property_str=self.get_property_string(),
+                             target_type="string",
+                             target=columns)
+        return [self.create_claim_json(snak)]

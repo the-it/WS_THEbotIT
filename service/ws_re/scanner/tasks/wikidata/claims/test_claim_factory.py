@@ -5,7 +5,7 @@ import pywikibot
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    ChangedClaimsDict
+    ChangedClaimsDict, SnakParameter
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 
@@ -78,8 +78,10 @@ class TestClaimFactory(BaseTestClaimFactory):
                   'type': 'statement',
                   'rank': 'normal'}
 
-        compare(expect, ClaimFactory.create_claim_json("P31", "wikibase-item", "Q123"))
-        compare(expect, ClaimFactory.create_claim_json("P31", "wikibase-item", "123"))
+        compare(expect, ClaimFactory.create_claim_json(
+            SnakParameter(property_str="P31", target_type="wikibase-item", target="Q123")))
+        compare(expect, ClaimFactory.create_claim_json(
+            SnakParameter(property_str="P31", target_type="wikibase-item", target="123")))
 
     def test__create_claim_json_time_just_year(self):
         expect = {'mainsnak': {'snaktype': 'value',
@@ -98,7 +100,8 @@ class TestClaimFactory(BaseTestClaimFactory):
                   'type': 'statement',
                   'rank': 'normal'}
 
-        compare(expect, ClaimFactory.create_claim_json("P31", "time", "1234"))
+        compare(expect, ClaimFactory.create_claim_json(
+            SnakParameter(property_str="P31", target_type="time", target="1234")))
 
     def test__create_claim_json_string(self):
         expect = {'mainsnak': {'snaktype': 'value',
@@ -110,10 +113,10 @@ class TestClaimFactory(BaseTestClaimFactory):
                   'type': 'statement',
                   'rank': 'normal'}
 
-        compare(expect, ClaimFactory.create_claim_json("P31", "string", "texttexttext"))
+        compare(expect, ClaimFactory.create_claim_json(SnakParameter(property_str="P31", target_type="string", target="texttexttext")))
 
     def test__create_claim_json_exception(self):
         with self.assertRaises(BotException):
-            ClaimFactory.create_claim_json("P31", "tada", "123")
+            ClaimFactory.create_claim_json(SnakParameter(property_str="P31", target_type="tada", target="123"))
         with self.assertRaises(ValueError):
-            ClaimFactory.create_claim_json("P31", "time", "tada")
+            ClaimFactory.create_claim_json(SnakParameter(property_str="P31", target_type="time", target="tada"))

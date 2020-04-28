@@ -1,5 +1,7 @@
+from typing import List
+
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict
+    JsonClaimDict, SnakParameter
 
 
 class P31InstanceOf(ClaimFactory):
@@ -9,8 +11,13 @@ class P31InstanceOf(ClaimFactory):
     ENCYCLOPEDIC_ARTICLE_ITEM = "Q13433827"
     CROSS_REFERENCE_ITEM = "Q1302249"
 
-    def _get_claim_json(self) -> JsonClaimDict:
+    def _get_claim_json(self) -> List[JsonClaimDict]:
         if self.re_page[0]["VERWEIS"].value:
-            return self.create_claim_json(self.get_property_string(), "wikibase-item", self.CROSS_REFERENCE_ITEM)
+            snak_parameter = SnakParameter(property_str=self.get_property_string(),
+                                           target_type="wikibase-item",
+                                           target=self.CROSS_REFERENCE_ITEM)
         else:
-            return self.create_claim_json(self.get_property_string(), "wikibase-item", self.ENCYCLOPEDIC_ARTICLE_ITEM)
+            snak_parameter = SnakParameter(property_str=self.get_property_string(),
+                                           target_type="wikibase-item",
+                                           target=self.ENCYCLOPEDIC_ARTICLE_ITEM)
+        return [self.create_claim_json(snak_parameter)]

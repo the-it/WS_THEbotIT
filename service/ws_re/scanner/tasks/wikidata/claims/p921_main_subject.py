@@ -3,7 +3,7 @@ from typing import List
 import pywikibot
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict, ChangedClaimsDict
+    JsonClaimDict, ChangedClaimsDict, SnakParameter
 
 
 class P921MainSubject(ClaimFactory):
@@ -28,7 +28,10 @@ class P921MainSubject(ClaimFactory):
         except pywikibot.NoPage:
             return []
         # finally create the claim
-        return [self.create_claim_json(self.get_property_string(), "wikibase-item", wp_data_item.id)]
+        snak = SnakParameter(property_str=self.get_property_string(),
+                             target_type="wikibase-item",
+                             target=wp_data_item.id)
+        return [self.create_claim_json(snak)]
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """

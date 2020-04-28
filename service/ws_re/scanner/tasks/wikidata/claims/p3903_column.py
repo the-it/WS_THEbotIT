@@ -1,7 +1,7 @@
 from typing import List
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict
+    JsonClaimDict, SnakParameter
 
 
 class P3903Column(ClaimFactory):
@@ -17,4 +17,7 @@ class P3903Column(ClaimFactory):
         columns = start
         if end and start != end:
             columns = f"{start}–{end}"
-        return [self.create_claim_json(self.get_property_string(), "string", columns)]
+        snak_parameter = SnakParameter(property_str=self.get_property_string(),
+                                       target_type="string",
+                                       target=columns)
+        return [self.create_claim_json(snak_parameter)]

@@ -4,7 +4,7 @@ import pywikibot
 from pywikibot import ItemPage
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict
+    JsonClaimDict, SnakParameter
 
 
 class Neighbour(ClaimFactory):
@@ -15,7 +15,10 @@ class Neighbour(ClaimFactory):
     def _get_claim_json(self) -> List[JsonClaimDict]:
         predecessor_item = self._get_item_of_neighbour_lemma()
         if predecessor_item:
-            return [self.create_claim_json(self.get_property_string(), "wikibase-item", predecessor_item.id)]
+            snak_parameter = SnakParameter(property_str=self.get_property_string(),
+                                           target_type="wikibase-item",
+                                           target=predecessor_item.id)
+            return [self.create_claim_json(snak_parameter)]
         return []
 
     def _get_item_of_neighbour_lemma(self) -> Optional[ItemPage]:

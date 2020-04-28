@@ -1,7 +1,7 @@
 from typing import List
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict
+    JsonClaimDict, SnakParameter
 
 
 class P577PublicationDate(ClaimFactory):
@@ -10,6 +10,7 @@ class P577PublicationDate(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        return [self.create_claim_json(self.get_property_string(),
-                                       "time",
-                                       self._volume_of_first_article.year)]
+        snak = SnakParameter(property_str=self.get_property_string(),
+                             target_type="wikibase-item",
+                             target=self._volume_of_first_article.year)
+        return [self.create_claim_json(snak)]

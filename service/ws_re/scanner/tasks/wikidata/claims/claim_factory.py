@@ -1,5 +1,6 @@
 import re
 from abc import abstractmethod
+from dataclasses import dataclass
 from typing import Dict, List, Tuple, TypedDict, Union
 
 import pywikibot
@@ -45,6 +46,24 @@ class JsonClaimDict(TypedDict):
     rank: str
 
 
+# data classes
+
+@dataclass
+class SnakParameter:
+    '''
+    Class for keeping track of Snak parameters
+
+    :param property_str: Number of the Property, example "P1234"
+    :param target_type: Value of the target. Possible values: 'wikibase-item', 'string', 'commonsMedia',
+                        'globe-coordinate', 'url', 'time', 'quantity', 'monolingualtext', 'math', 'external-id',
+                        'geo-shape', 'tabular-data'
+    :param target: actual value of the target
+    '''
+    property_str: str
+    target_type: str
+    target: str
+
+
 class ClaimFactory:
     _authors = Authors()
     _volumes = Volumes()
@@ -55,7 +74,7 @@ class ClaimFactory:
         self.re_page = re_page
 
     @abstractmethod
-    def _get_claim_json(self) -> JsonClaimDict:
+    def _get_claim_json(self) -> List[JsonClaimDict]:
         """
 
         """
@@ -139,36 +158,36 @@ class ClaimFactory:
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
 
     @staticmethod
-    def create_claim_json(property_str: str, target_type: str, target: str) -> JsonClaimDict:
+    def create_claim_json(snak_parameter: SnakParameter) -> JsonClaimDict:
         """
         This factory function create json representations of claims from some basic parameters.
 
-        :param property_str: Number of the Property, example "P1234"
-        :param target_type: Value of the target. Possible values: 'wikibase-item', 'string', 'commonsMedia',
-                            'globe-coordinate', 'url', 'time', 'quantity', 'monolingualtext', 'math', 'external-id',
-                            'geo-shape', 'tabular-data'
-        :param target: actual value of the target
+        :param snak_parameter: parameters for the actual claim
+
         :return: dictionary representation of a claim
         """
-        claim_json: Dict = {'mainsnak': {'snaktype': 'value'},
-                            'type': 'statement',
-                            'rank': 'normal'}
-        claim_json["mainsnak"]["property"] = property_str
-        claim_json["mainsnak"]["datatype"] = target_type
-        if target_type == "wikibase-item":
-            claim_json["mainsnak"]["datavalue"] = {"value": {"entity-type": "item",
-                                                             "numeric-id": int(target.strip("Q"))
-                                                             },
-                                                   "type": "wikibase-entityid"
-                                                   }
-        elif target_type == "string":
-            claim_json["mainsnak"]["datavalue"] = {"value": target,
-                                                   "type": "string"
-                                                   }
-        elif target_type == "time":
+        snak = ClaimFactory.create_snak_json(snak_parameter)
+        return {"mainsnak": snak,
+                "type": "statement",
+                "rank": "normal"}
+
+    @staticmethod
+    def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
+        snak = {'snaktype': 'value', "property": snak_parameter.property_str, "datatype": snak_parameter.target_type}
+        if snak_parameter.target_type == "wikibase-item":
+            snak["datavalue"] = {"value": {"entity-type": "item",
+                                           "numeric-id": int(snak_parameter.target.strip("Q"))
+                                           },
+                                 "type": "wikibase-entityid"
+                                 }
+        elif snak_parameter.target_type == "string":
+            snak["datavalue"] = {"value": snak_parameter.target,
+                                 "type": "string"
+                                 }
+        elif snak_parameter.target_type == "time":
             # only for years at the moment ... extend if necessary
-            claim_json["mainsnak"]["datavalue"] = {"value": {
-                "time": f"+0000000{int(target)}-01-01T00:00:00Z",
+            snak["datavalue"] = {"value": {
+                "time": f"+0000000{int(snak_parameter.target)}-01-01T00:00:00Z",
                 "precision": 9,
                 "after": 0,
                 "before": 0,
@@ -178,8 +197,8 @@ class ClaimFactory:
                 "type": "time"
             }
         else:
-            raise BotException(f"target_type \"{target_type}\" not supported")
-        return claim_json
+            raise BotException(f"target_type \"{snak_parameter.target_type}\" not supported")
+        return snak
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 

@@ -8,7 +8,6 @@ from typing import Dict, List, Optional
 import dictdiffer
 import pywikibot
 
-import service.ws_re.scanner.tasks.wikidata.claims as claim_package
 from service.ws_re.scanner.scanner import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ClaimFactory, ChangedClaimsDict
@@ -20,7 +19,6 @@ from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import \
     P577PublicationDate
-from service.ws_re.scanner.tasks.wikidata.copyright_status_claims import PublicDomainClaims
 from tools.bots.pi import WikiLogger
 
 
@@ -38,7 +36,6 @@ class DATATask(ReScannerTask):
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
         self._current_year = datetime.now().year
-        self._public_domain_claims = PublicDomainClaims(self.wikidata)
         # debug functions
         self._counter = 0
 
@@ -139,37 +136,3 @@ class DATATask(ReScannerTask):
         return {"add": claims_to_add, "remove": claims_to_remove}
 
     # CLAIM FACTORIES from here on all functions are related to one specific claim
-
-    def p6216(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **copyright status** ->
-        **<public domain statements dependend on publication age and death of author>**
-        """
-        claim_list: List[pywikibot.Claim] = []
-        if self._current_year - int(self._volume_of_first_article.year) > 95:
-            claim_list.append(self._public_domain_claims.CLAIM_PUBLISHED_95_YEARS_AGO)
-        pma_claim = self._6216_min_years_since_death
-        if pma_claim:
-            claim_list.append(pma_claim)
-        if self._first_article["KEINE_SCHÖPFUNGSHÖHE"].value:
-            claim_list.append(self._public_domain_claims.CLAIM_THRESHOLD_OF_ORIGINALITY)
-        return claim_list
-
-    @property
-    def _6216_min_years_since_death(self) -> Optional[pywikibot.Claim]:
-        max_death_year = 0
-        for author in self._authors_of_first_article:
-            if not author.death:
-                max_death_year = self._current_year
-            elif author.death > max_death_year:
-                max_death_year = author.death
-        years_since_death = self._current_year - max_death_year
-        if years_since_death > 100:
-            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER
-        if years_since_death > 80:
-            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER
-        if years_since_death > 70:
-            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER
-        if years_since_death > 50:
-            return self._public_domain_claims.CLAIM_COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER
-        return None
