@@ -173,8 +173,21 @@ class ClaimFactory:
                       "type": "statement",
                       "rank": "normal"}
         if qualifiers:
-            #todo ... add stuff here
+            qualifiers_dict, qualifiers_order_list=ClaimFactory._add_qualifiers(qualifiers)
+            claim_json["qualifiers"] = qualifiers_dict
+            claim_json["qualifiers-order"] = qualifiers_order_list
         return claim_json
+
+    @staticmethod
+    def _add_qualifiers(qualifiers) -> Tuple[Dict[str, List[JsonSnakDict]], List[str]]:
+        qualifiers_dict = {}
+        qualifiers_order_list = []
+        for qualifier in qualifiers:
+            qualifier_snak = ClaimFactory.create_snak_json(qualifier)
+            qualifiers_dict[qualifier.property_str] = [qualifier_snak]
+            qualifiers_order_list.append(qualifier.property_str)
+        return qualifiers_dict, qualifiers_order_list
+
 
     @staticmethod
     def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
