@@ -140,15 +140,6 @@ class DATATask(ReScannerTask):
 
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
-    def p1433(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **published in** -> **<item of the category of the issue>**
-        """
-        claim = pywikibot.Claim(self.wikidata, 'P1433')
-        data_item = pywikibot.ItemPage(self.wikidata, self._volume_of_first_article.data_item)
-        claim.setTarget(data_item)
-        return [claim]
-
     def p3903(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **column** -> **<start column>[–<end column>]**

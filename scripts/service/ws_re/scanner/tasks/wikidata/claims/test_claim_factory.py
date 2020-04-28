@@ -81,6 +81,27 @@ class TestClaimFactory(BaseTestClaimFactory):
         compare(expect, ClaimFactory.create_claim_json("P31", "wikibase-item", "Q123"))
         compare(expect, ClaimFactory.create_claim_json("P31", "wikibase-item", "123"))
 
+    def test__create_claim_json_time_just_year(self):
+        expect = {'mainsnak': {'snaktype': 'value',
+                               'property': "P31",
+                               "datatype": "time",
+                               "datavalue": {"value": {
+                                   "time": f"+00000001234-01-01T00:00:00Z",
+                                   "precision": 9,
+                                   "after": 0,
+                                   "before": 0,
+                                   "timezone": 0,
+                                   "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                               },
+                                   "type": "time"
+                               }},
+                  'type': 'statement',
+                  'rank': 'normal'}
+
+        compare(expect, ClaimFactory.create_claim_json("P31", "time", "1234"))
+
     def test__create_claim_json_exception(self):
         with self.assertRaises(BotException):
             ClaimFactory.create_claim_json("P31", "tada", "123")
+        with self.assertRaises(ValueError):
+            ClaimFactory.create_claim_json("P31", "time", "tada")
