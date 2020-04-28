@@ -35,12 +35,12 @@ class TestClaimFactory(BaseTestClaimFactory):
     def setUp(self) -> None:
         super().setUp()
         self.factory_dummy = self.P1234FactoryDummy(MagicMock())
-        self.base_json = {'mainsnak': {'snaktype': 'value',
-                                       'property': 'P1234',
-                                       'datatype': 'string',
-                                       'datavalue': {'value': 'a', 'type': 'string'}},
-                          'type': 'statement',
-                          'rank': 'normal'}
+        self.base_json = {"mainsnak": {"snaktype": "value",
+                                       "property": "P1234",
+                                       "datatype": "string",
+                                       "datavalue": {"value": "a", "type": "string"}},
+                          "type": "statement",
+                          "rank": "normal"}
         self.a = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
         self.base_json["mainsnak"]["datavalue"]["value"] = "b"
         self.b = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
@@ -65,8 +65,8 @@ class TestClaimFactory(BaseTestClaimFactory):
                 self.factory_dummy._create_claim_dictionary([self.a, self.b], [self.c, self.d]))
 
     def test__create_claim_json_wikibase_item(self):
-        expect = {'mainsnak': {'snaktype': 'value',
-                               'property': "P31",
+        expect = {"mainsnak": {"snaktype": "value",
+                               "property": "P31",
                                "datatype": "wikibase-item",
                                "datavalue": {
                                    "value": {
@@ -75,8 +75,8 @@ class TestClaimFactory(BaseTestClaimFactory):
                                    },
                                    "type": "wikibase-entityid"
                                }},
-                  'type': 'statement',
-                  'rank': 'normal'}
+                  "type": "statement",
+                  "rank": "normal"}
 
         compare(expect, ClaimFactory.create_claim_json(
             SnakParameter(property_str="P31", target_type="wikibase-item", target="Q123")))
@@ -84,8 +84,8 @@ class TestClaimFactory(BaseTestClaimFactory):
             SnakParameter(property_str="P31", target_type="wikibase-item", target="123")))
 
     def test__create_claim_json_time_just_year(self):
-        expect = {'mainsnak': {'snaktype': 'value',
-                               'property': "P31",
+        expect = {"mainsnak": {"snaktype": "value",
+                               "property": "P31",
                                "datatype": "time",
                                "datavalue": {"value": {
                                    "time": f"+00000001234-01-01T00:00:00Z",
@@ -97,23 +97,71 @@ class TestClaimFactory(BaseTestClaimFactory):
                                },
                                    "type": "time"
                                }},
-                  'type': 'statement',
-                  'rank': 'normal'}
+                  "type": "statement",
+                  "rank": "normal"}
 
         compare(expect, ClaimFactory.create_claim_json(
             SnakParameter(property_str="P31", target_type="time", target="1234")))
 
     def test__create_claim_json_string(self):
-        expect = {'mainsnak': {'snaktype': 'value',
-                               'property': "P31",
+        expect = {"mainsnak": {"snaktype": "value",
+                               "property": "P31",
                                "datatype": "string",
                                "datavalue": {"value": "texttexttext",
                                              "type": "string"
                                              }},
-                  'type': 'statement',
-                  'rank': 'normal'}
+                  "type": "statement",
+                  "rank": "normal"}
 
-        compare(expect, ClaimFactory.create_claim_json(SnakParameter(property_str="P31", target_type="string", target="texttexttext")))
+        compare(expect, ClaimFactory.create_claim_json(
+            SnakParameter(property_str="P31", target_type="string", target="texttexttext")))
+
+    def test__create_claim_json_with_qualifier(self):
+        expect = {"mainsnak": {"snaktype": "value",
+                               "property": "P31",
+                               "datatype": "string",
+                               "datavalue": {"value": "texttexttext",
+                                             "type": "string"
+                                             }},
+                  "type": "statement",
+                  "rank": "normal",
+                  "qualifiers": {
+                      "P1234": [
+                          {
+                              "snaktype": "value",
+                              "property": "P1234",
+                              "datatype": "string",
+                              "datavalue": {
+                                  "value": "text",
+                                  "type": "string"
+                              }
+                          }
+                      ],
+                      "P5678": [
+                          {
+                              "snaktype": "value",
+                              "property": "P5678",
+                              "datatype": "wikibase-item",
+                              "datavalue": {
+                                  "value": {
+                                      "entity-type": "item",
+                                      "numeric-id": 123456
+                                  },
+                                  "type": "wikibase-entityid"
+                              }
+                          }
+                      ]
+                  },
+                  "qualifiers-order": [
+                      "P1234",
+                      "P5678"
+                  ]
+                  }
+
+        main_parameter = SnakParameter(property_str="P31", target_type="string", target="texttexttext")
+        quali_snak_1 = SnakParameter(property_str="P1234", target_type="string", target="text")
+        quali_snak_2 = SnakParameter(property_str="P5678", target_type="wikibase-item", target="Q123456")
+        compare(expect, ClaimFactory.create_claim_json(main_parameter, qualifiers=[quali_snak_1, quali_snak_2]))
 
     def test__create_claim_json_exception(self):
         with self.assertRaises(BotException):

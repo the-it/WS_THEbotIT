@@ -1,7 +1,7 @@
 import re
 from abc import abstractmethod
 from dataclasses import dataclass
-from typing import Dict, List, Tuple, TypedDict, Union
+from typing import Dict, List, Tuple, TypedDict, Union, Optional
 
 import pywikibot
 
@@ -158,18 +158,23 @@ class ClaimFactory:
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
 
     @staticmethod
-    def create_claim_json(snak_parameter: SnakParameter) -> JsonClaimDict:
+    def create_claim_json(snak_parameter: SnakParameter,
+                          qualifiers: Optional[List[SnakParameter]] = None) -> JsonClaimDict:
         """
         This factory function create json representations of claims from some basic parameters.
 
         :param snak_parameter: parameters for the actual claim
+        :param qualifiers: optional parameters for qualifiers
 
         :return: dictionary representation of a claim
         """
         snak = ClaimFactory.create_snak_json(snak_parameter)
-        return {"mainsnak": snak,
-                "type": "statement",
-                "rank": "normal"}
+        claim_json = {"mainsnak": snak,
+                      "type": "statement",
+                      "rank": "normal"}
+        if qualifiers:
+            #todo ... add stuff here
+        return claim_json
 
     @staticmethod
     def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
