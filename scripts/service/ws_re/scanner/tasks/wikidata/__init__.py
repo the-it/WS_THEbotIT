@@ -140,34 +140,6 @@ class DATATask(ReScannerTask):
 
     # CLAIM FACTORIES from here on all functions are related to one specific claim
 
-
-
-
-
-    def p921(self) -> List[pywikibot.Claim]:
-        """
-        Returns the Claim **main subject** -> **<Item of wikipedia article>**
-        """
-        wp_article = str(self._first_article["WIKIPEDIA"].value)
-        # if no wp_article is present, there is nothing to connect
-        if not wp_article:
-            return []
-        # handle the case of an implicit de:
-        if ":" not in wp_article:
-            wp_article = f"de:{wp_article}"
-        language, wp_page_str = wp_article.split(":")
-        wp_site: pywikibot.Site = pywikibot.Site(code=language, fam="wikipedia")
-        wp_page: pywikibot.Page = pywikibot.Page(wp_site, wp_page_str)
-        # try to fetch the data item of the page, if not there is nothing to connect
-        try:
-            wp_data_item: pywikibot.ItemPage = wp_page.data_item()
-        except pywikibot.NoPage:
-            return []
-        # finally create the claim
-        claim = pywikibot.Claim(self.wikidata, 'P921')
-        claim.setTarget(wp_data_item)
-        return [claim]
-
     def p1433(self) -> List[pywikibot.Claim]:
         """
         Returns the Claim **published in** -> **<item of the category of the issue>**
