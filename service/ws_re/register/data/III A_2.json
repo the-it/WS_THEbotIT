@@ -1086,7 +1086,7 @@
   {
     "lemma": "Sphaerus",
     "previous": "Speusippos 2",
-    "next": "Sphagia",
+    "next": "Σφάγια",
     "redirect": true,
     "chapters": [
       {
@@ -1096,32 +1096,38 @@
     ]
   },
   {
-    "lemma": "Sphagia",
+    "lemma": "Σφάγια",
     "previous": "Sphaerus",
-    "next": "Sphagia, Sphagiai",
+    "next": "Σφαγία, Σφαγίαι",
+    "sort_key": "Sphagia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1669,
-        "end": 1669,
-        "author": "Ziehen"
+        "end": 1679,
+        "author": "Ziehen."
       }
     ]
   },
   {
-    "lemma": "Sphagia, Sphagiai",
-    "previous": "Sphagia",
-    "next": "Sphagites",
+    "lemma": "Σφαγία, Σφαγίαι",
+    "previous": "Σφάγια",
+    "next": "Σφαγίτης",
+    "sort_key": "Sphagia, Sphagiai",
+    "proof_read": 2,
+    "wp_link": "w:de:Sfaktiria",
+    "wd_link": "d:Q1303524",
     "chapters": [
       {
         "start": 1679,
-        "end": 1679,
-        "author": "Bürchner"
+        "end": 1680,
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Sphagites",
-    "previous": "Sphagia, Sphagiai",
+    "lemma": "Σφαγίτης",
+    "previous": "Σφαγία, Σφαγίαι",
     "next": "Sphaira",
     "chapters": [
       {
@@ -1133,7 +1139,7 @@
   },
   {
     "lemma": "Sphaira",
-    "previous": "Sphagites",
+    "previous": "Σφαγίτης",
     "next": "Sphairia 1",
     "redirect": true,
     "chapters": [

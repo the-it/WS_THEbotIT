@@ -58,7 +58,7 @@
     "next": "Donatus 2",
     "sort_key": "Donatus 01",
     "redirect": "Iunius 73",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1545,
@@ -3539,11 +3539,14 @@
     "lemma": "Dreifuss",
     "previous": "Dravus",
     "next": "Δρήκων",
+    "proof_read": 2,
+    "wp_link": "w:de:Dreifuß",
+    "wd_link": "d:Q915527",
     "chapters": [
       {
         "start": 1669,
         "end": 1696,
-        "author": "Reisch"
+        "author": "Reisch."
       }
     ]
   },
@@ -3565,11 +3568,12 @@
     "lemma": "Drenkon",
     "previous": "Δρήκων",
     "next": "Drepana 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1696,
         "end": 1696,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -3577,23 +3581,25 @@
     "lemma": "Drepana 1",
     "previous": "Drenkon",
     "next": "Drepana 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1696,
         "end": 1696,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Drepana 2",
     "previous": "Drepana 1",
-    "next": "Drapanius",
+    "next": "Drepane",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1696,
         "end": 1697,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3610,8 +3616,10 @@
   },
   {
     "lemma": "Drepane",
-    "previous": "Drapanius",
+    "previous": "Drepana 2",
     "next": "Drepanius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
@@ -3636,11 +3644,12 @@
     "lemma": "Drepanon",
     "previous": "Drepanius",
     "next": "Drepanon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3648,11 +3657,12 @@
     "lemma": "Drepanon 1",
     "previous": "Drepanon",
     "next": "Drepanon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3664,7 +3674,7 @@
       {
         "start": 1697,
         "end": 1697,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -3672,11 +3682,12 @@
     "lemma": "Drepanon 3",
     "previous": "Drepanon 2",
     "next": "Drepanon 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -3684,11 +3695,12 @@
     "lemma": "Drepanon 4",
     "previous": "Drepanon 3",
     "next": "Drepanon 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1697,
         "end": 1697,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -3696,11 +3708,12 @@
     "lemma": "Drepanon 5",
     "previous": "Drepanon 4",
     "next": "Drepanon 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1698,
         "end": 1698,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -3708,11 +3721,12 @@
     "lemma": "Drepanon 6",
     "previous": "Drepanon 5",
     "next": "Drepanon 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1698,
         "end": 1698,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -3720,11 +3734,12 @@
     "lemma": "Drepanon 7",
     "previous": "Drepanon 6",
     "next": "Drepanon 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1698,
         "end": 1698,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -3732,11 +3747,12 @@
     "lemma": "Drepanon 8",
     "previous": "Drepanon 7",
     "next": "Drepanon 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1698,
         "end": 1698,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -3744,11 +3760,12 @@
     "lemma": "Drepanon 9",
     "previous": "Drepanon 8",
     "next": "Drepsa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1698,
         "end": 1698,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
@@ -3756,11 +3773,12 @@
     "lemma": "Drepsa",
     "previous": "Drepanon 9",
     "next": "Dreros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1698,
         "end": 1699,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -3768,11 +3786,12 @@
     "lemma": "Dreros",
     "previous": "Drepsa",
     "next": "Dres",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1699,
         "end": 1699,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -3780,11 +3799,12 @@
     "lemma": "Dres",
     "previous": "Dreros",
     "next": "Dresaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1699,
         "end": 1700,
-        "author": "Bethe"
+        "author": "Bethe."
       }
     ]
   },
@@ -3792,11 +3812,12 @@
     "lemma": "Dresaios",
     "previous": "Dres",
     "next": "Dreschen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1700,
         "end": 1700,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -3804,11 +3825,13 @@
     "lemma": "Dreschen",
     "previous": "Dresaios",
     "next": "Dresia",
+    "proof_read": 2,
+    "wp_link": "w:de:Dreschen",
     "chapters": [
       {
         "start": 1700,
         "end": 1706,
-        "author": "Olck"
+        "author": "Olck."
       }
     ]
   },
@@ -3816,11 +3839,12 @@
     "lemma": "Dresia",
     "previous": "Dreschen",
     "next": "Dresos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1706,
         "end": 1706,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -3828,11 +3852,12 @@
     "lemma": "Dresos",
     "previous": "Dresia",
     "next": "Dribykes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1706,
         "end": 1706,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -3840,11 +3865,12 @@
     "lemma": "Dribykes",
     "previous": "Dresos",
     "next": "Dricca",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1706,
         "end": 1706,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -3852,11 +3878,12 @@
     "lemma": "Dricca",
     "previous": "Dribykes",
     "next": "Drilai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1706,
         "end": 1706,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -3864,23 +3891,26 @@
     "lemma": "Drilai",
     "previous": "Dricca",
     "next": "Drilon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1706,
         "end": 1706,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
   {
     "lemma": "Drilon",
-    "previous": "Drilai",
+    "previous": "Dricca",
     "next": "Drilophyllitai",
+    "proof_read": 2,
+    "wp_link": "w:de:Drina",
     "chapters": [
       {
         "start": 1707,
         "end": 1707,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -3888,11 +3918,12 @@
     "lemma": "Drilophyllitai",
     "previous": "Drilon",
     "next": "Drimakos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1707,
         "end": 1708,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -3900,11 +3931,12 @@
     "lemma": "Drimakos",
     "previous": "Drilophyllitai",
     "next": "Drimo 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1708,
         "end": 1708,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -3912,11 +3944,12 @@
     "lemma": "Drimo 1",
     "previous": "Drimakos",
     "next": "Drimo 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1708,
         "end": 1708,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -3937,11 +3970,14 @@
     "lemma": "Δριμύλον ὅρος",
     "previous": "Drimo 2",
     "next": "Drinius",
+    "sort_key": "Drimylon horos",
+    "proof_read": 2,
+    "wp_link": "w:de:Drina",
     "chapters": [
       {
         "start": 1708,
         "end": 1708,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -3949,6 +3985,8 @@
     "lemma": "Drinius",
     "previous": "Δριμύλον ὅρος",
     "next": "ad Drinum 1",
+    "redirect": "Drilon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1708,
@@ -3960,11 +3998,13 @@
     "lemma": "ad Drinum 1",
     "previous": "Drinius",
     "next": "ad Drinum 2",
+    "sort_key": "Drinum ad 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1708,
         "end": 1708,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -3972,11 +4012,13 @@
     "lemma": "ad Drinum 2",
     "previous": "ad Drinum 1",
     "next": "Drinus",
+    "sort_key": "Drinum ad 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1708,
         "end": 1709,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -3984,11 +4026,13 @@
     "lemma": "Drinus",
     "previous": "ad Drinum 2",
     "next": "Driodones",
+    "proof_read": 2,
+    "wp_link": "w:de:Drina",
     "chapters": [
       {
         "start": 1709,
         "end": 1709,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -3996,11 +4040,12 @@
     "lemma": "Driodones",
     "previous": "Drinus",
     "next": "Drion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
         "end": 1709,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -4008,11 +4053,12 @@
     "lemma": "Drion",
     "previous": "Driodones",
     "next": "Drios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
         "end": 1709,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
@@ -4020,11 +4066,12 @@
     "lemma": "Drios 1",
     "previous": "Drion",
     "next": "Drios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
         "end": 1709,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -4032,11 +4079,12 @@
     "lemma": "Drios 2",
     "previous": "Drios 1",
     "next": "Drippa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
         "end": 1709,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -4044,11 +4092,12 @@
     "lemma": "Drippa",
     "previous": "Drios 2",
     "next": "Dripsinum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1710,
         "end": 1710,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -4056,11 +4105,12 @@
     "lemma": "Dripsinum",
     "previous": "Drippa",
     "next": "Drizipara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1710,
         "end": 1710,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
@@ -4068,6 +4118,8 @@
     "lemma": "Drizipara",
     "previous": "Dripsinum",
     "next": "Drobeta",
+    "redirect": "Drusipara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1710,
@@ -4079,11 +4131,13 @@
     "lemma": "Drobeta",
     "previous": "Drizipara",
     "next": "Drom...",
+    "proof_read": 2,
+    "wp_link": "w:de:Drobeta Turnu Severin",
     "chapters": [
       {
         "start": 1710,
         "end": 1712,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -4091,11 +4145,12 @@
     "lemma": "Drom...",
     "previous": "Drobeta",
     "next": "Dromaia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1712,
         "end": 1712,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -4103,11 +4158,12 @@
     "lemma": "Dromaia",
     "previous": "Drom...",
     "next": "Dromaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1712,
         "end": 1712,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -4115,11 +4171,12 @@
     "lemma": "Dromaios",
     "previous": "Dromaia",
     "next": "Dromares",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1712,
         "end": 1712,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -4127,11 +4184,12 @@
     "lemma": "Dromares",
     "previous": "Dromaios",
     "next": "Dromas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1712,
         "end": 1712,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4139,11 +4197,12 @@
     "lemma": "Dromas",
     "previous": "Dromares",
     "next": "Dromeas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1712,
         "end": 1712,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -4151,11 +4210,12 @@
     "lemma": "Dromeas",
     "previous": "Dromas",
     "next": "Dromedarii",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1712,
         "end": 1712,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4163,47 +4223,54 @@
     "lemma": "Dromedarii",
     "previous": "Dromeas",
     "next": "Dromeïos",
+    "proof_read": 2,
+    "wp_link": "w:de:Dromedar",
+    "wd_link": "d:Q71516",
     "chapters": [
       {
         "start": 1712,
         "end": 1713,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
   {
     "lemma": "Dromeïos",
     "previous": "Dromedarii",
-    "next": "Dromena",
+    "next": "Δρώμενα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1713,
         "end": 1713,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
   {
-    "lemma": "Dromena",
+    "lemma": "Δρώμενα",
     "previous": "Dromeïos",
     "next": "Dromeus 1",
+    "sort_key": "Dromena",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1713,
         "end": 1714,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Dromeus 1",
-    "previous": "Dromena",
+    "previous": "Δρώμενα",
     "next": "Dromeus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1714,
         "end": 1714,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4211,11 +4278,12 @@
     "lemma": "Dromeus 2",
     "previous": "Dromeus 1",
     "next": "Dromeus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1714,
         "end": 1714,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4223,11 +4291,12 @@
     "lemma": "Dromeus 3",
     "previous": "Dromeus 2",
     "next": "Dromichaites 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1714,
         "end": 1715,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
@@ -4239,7 +4308,7 @@
       {
         "start": 1715,
         "end": 1715,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -4251,7 +4320,7 @@
       {
         "start": 1715,
         "end": 1715,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -4259,11 +4328,12 @@
     "lemma": "Dromichaites 3",
     "previous": "Dromichaites 2",
     "next": "Dromios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -4271,11 +4341,12 @@
     "lemma": "Dromios",
     "previous": "Dromichaites 3",
     "next": "Dromiskos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -4283,11 +4354,12 @@
     "lemma": "Dromiskos",
     "previous": "Dromios",
     "next": "Dromitai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -4308,11 +4380,13 @@
     "lemma": "Δρόμοι Ἀζανίας",
     "previous": "Dromitai",
     "next": "Dromokleides 1",
+    "sort_key": "Dromoi Azanias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -4320,11 +4394,12 @@
     "lemma": "Dromokleides 1",
     "previous": "Δρόμοι Ἀζανίας",
     "next": "Dromokleides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1715,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4332,11 +4407,12 @@
     "lemma": "Dromokleides 2",
     "previous": "Dromokleides 1",
     "next": "Dromokleides 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
         "end": 1716,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4344,11 +4420,12 @@
     "lemma": "Dromokleides 3",
     "previous": "Dromokleides 2",
     "next": "Dromokles",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1716,
         "end": 1716,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4356,11 +4433,12 @@
     "lemma": "Dromokles",
     "previous": "Dromokleides 3",
     "next": "Dromon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1716,
         "end": 1716,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4368,11 +4446,12 @@
     "lemma": "Dromon",
     "previous": "Dromokles",
     "next": "Dromonarii",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1716,
         "end": 1716,
-        "author": "Kaibel"
+        "author": "Kaibel."
       }
     ]
   },
@@ -4380,11 +4459,12 @@
     "lemma": "Dromonarii",
     "previous": "Dromon",
     "next": "Dromones",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1716,
         "end": 1716,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -4392,11 +4472,14 @@
     "lemma": "Dromones",
     "previous": "Dromonarii",
     "next": "Dromos 1",
+    "proof_read": 2,
+    "wp_link": "w:de:Dromone",
+    "wd_link": "d:Q731662",
     "chapters": [
       {
         "start": 1716,
         "end": 1716,
-        "author": "Assmann"
+        "author": "Assmann."
       }
     ]
   },
@@ -4404,11 +4487,12 @@
     "lemma": "Dromos 1",
     "previous": "Dromones",
     "next": "Dromos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1716,
         "end": 1717,
-        "author": "Wachsmuth"
+        "author": "Wachsmuth."
       }
     ]
   },
@@ -4416,11 +4500,12 @@
     "lemma": "Dromos 2",
     "previous": "Dromos 1",
     "next": "Dronanus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1717,
         "end": 1720,
-        "author": "Jüthner"
+        "author": "Jüthner."
       }
     ]
   },
@@ -4454,11 +4539,12 @@
     "lemma": "Drooi",
     "previous": "Dronana",
     "next": "Dropides 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1720,
         "end": 1720,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -4466,11 +4552,12 @@
     "lemma": "Dropides 1",
     "previous": "Drooi",
     "next": "Dropides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1720,
         "end": 1720,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4478,11 +4565,12 @@
     "lemma": "Dropides 2",
     "previous": "Dropides 1",
     "next": "Dropides 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1720,
         "end": 1720,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4490,11 +4578,12 @@
     "lemma": "Dropides 3",
     "previous": "Dropides 2",
     "next": "Dropides 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1720,
         "end": 1720,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -4502,47 +4591,52 @@
     "lemma": "Dropides 4",
     "previous": "Dropides 3",
     "next": "Dropides 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1720,
         "end": 1721,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
   {
     "lemma": "Dropides 5",
     "previous": "Dropides 4",
-    "next": "Dropikoi",
+    "next": "Δροπικοί",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1721,
         "end": 1721,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
   {
-    "lemma": "Dropikoi",
+    "lemma": "Δροπικοί",
     "previous": "Dropides 5",
     "next": "Dropion",
+    "sort_key": "Dropikoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1721,
         "end": 1721,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Dropion",
-    "previous": "Dropikoi",
+    "previous": "Δροπικοί",
     "next": "Drosache",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1721,
         "end": 1721,
-        "author": "Kaerst"
+        "author": "Kaerst."
       }
     ]
   },
@@ -4550,11 +4644,12 @@
     "lemma": "Drosache",
     "previous": "Dropion",
     "next": "Drosera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1721,
         "end": 1721,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -4575,11 +4670,13 @@
     "lemma": "Drossel",
     "previous": "Drosera",
     "next": "Droviae",
+    "proof_read": 2,
+    "wp_link": "w:de:Drossel",
     "chapters": [
       {
         "start": 1721,
         "end": 1729,
-        "author": "Olck"
+        "author": "Olck."
       }
     ]
   },
@@ -4587,11 +4684,14 @@
     "lemma": "Droviae",
     "previous": "Drossel",
     "next": "Druantium",
+    "proof_read": 2,
+    "wp_link": "w:de:Drossel",
+    "wd_link": "d:Q1260567",
     "chapters": [
       {
         "start": 1729,
         "end": 1729,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -4599,6 +4699,7 @@
     "lemma": "Druantium",
     "previous": "Droviae",
     "next": "Drubeta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1729,
@@ -4624,6 +4725,7 @@
     "lemma": "Druentia",
     "previous": "Drubeta",
     "next": "Drugeri",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1730,
@@ -4636,23 +4738,26 @@
     "lemma": "Drugeri",
     "previous": "Druentia",
     "next": "Druidae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1730,
         "end": 1730,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
   {
     "lemma": "Druidae",
     "previous": "Drugeri",
-    "next": "Drous",
+    "next": "Drullos",
+    "proof_read": 2,
+    "wp_link": "w:de:Druide",
     "chapters": [
       {
         "start": 1730,
         "end": 1738,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -4670,13 +4775,14 @@
   },
   {
     "lemma": "Drullos",
-    "previous": "Drous",
+    "previous": "Druidae",
     "next": "Druma",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1738,
         "end": 1738,
-        "author": "Patsch"
+        "author": "Patsch."
       }
     ]
   },
@@ -4684,11 +4790,12 @@
     "lemma": "Druma",
     "previous": "Drullos",
     "next": "Druna",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1738,
         "end": 1738,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -4696,11 +4803,12 @@
     "lemma": "Druna",
     "previous": "Druma",
     "next": "Druncianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1738,
         "end": 1738,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -4708,18 +4816,22 @@
     "lemma": "Druncianus",
     "previous": "Druna",
     "next": "Drunemetum",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1738,
         "end": 1738,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
   {
     "lemma": "Drunemetum",
     "previous": "Druncianus",
-    "next": "Druseios",
+    "next": "Δροῦς",
+    "redirect": "Druidae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1738,
@@ -4729,13 +4841,14 @@
   },
   {
     "lemma": "Druseios",
-    "previous": "Drunemetum",
+    "previous": "Δροῦς",
     "next": "Drusiana aqua",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1738,
         "end": 1739,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
@@ -4756,11 +4869,13 @@
     "lemma": "Δρουσιανὰ ξίφη",
     "previous": "Drusiana aqua",
     "next": "Drusianus",
+    "sort_key": "Drusiana xife",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1739,
         "end": 1740,
-        "author": "Pollack"
+        "author": "Pollack."
       }
     ]
   },
@@ -4781,11 +4896,12 @@
     "lemma": "Drusianus pes",
     "previous": "Drusianus",
     "next": "Drusi arcus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1740,
         "end": 1740,
-        "author": "Hultsch"
+        "author": "Hultsch."
       }
     ]
   },
@@ -4793,11 +4909,12 @@
     "lemma": "Drusi arcus",
     "previous": "Drusianus pes",
     "next": "Drusias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1740,
         "end": 1741,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
@@ -4818,11 +4935,12 @@
     "lemma": "Drusiliana",
     "previous": "Drusias",
     "next": "Drusilla 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1741,
         "end": 1741,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
@@ -4834,7 +4952,7 @@
       {
         "start": 1741,
         "end": 1741,
-        "author": "Stein, [Arthur]"
+        "author": "Dessau."
       }
     ]
   },
@@ -4868,11 +4986,12 @@
     "lemma": "Drusipara",
     "previous": "Drusilla 3",
     "next": "Drusomagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1741,
         "end": 1742,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -4880,11 +4999,13 @@
     "lemma": "Drusomagus",
     "previous": "Drusipara",
     "next": "Drusius",
+    "proof_read": 2,
+    "wp_link": "w:de:Sitten",
     "chapters": [
       {
         "start": 1742,
         "end": 1742,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -4892,11 +5013,12 @@
     "lemma": "Drusius",
     "previous": "Drusomagus",
     "next": "Drusus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1742,
         "end": 1742,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -4944,11 +5066,12 @@
     "lemma": "Drusus 4",
     "previous": "Drusus 3",
     "next": "Druzon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1742,
         "end": 1742,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -4969,11 +5092,12 @@
     "lemma": "Dryades 1",
     "previous": "Druzon",
     "next": "Dryades 2",
+    "wp_link": "w:de:Dryade",
     "chapters": [
       {
         "start": 1742,
         "end": 1743,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -4994,11 +5118,12 @@
     "lemma": "Dryaina",
     "previous": "Dryades 2",
     "next": "Dryainos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1743,
         "end": 1743,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -5006,11 +5131,12 @@
     "lemma": "Dryainos",
     "previous": "Dryaina",
     "next": "Dryalos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1743,
         "end": 1743,
-        "author": "Tümpel"
+        "author": "Tümpel."
       }
     ]
   },
@@ -5018,11 +5144,12 @@
     "lemma": "Dryalos",
     "previous": "Dryainos",
     "next": "Dryantiades",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1743,
         "end": 1743,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
@@ -5030,11 +5157,12 @@
     "lemma": "Dryantiades",
     "previous": "Dryalos",
     "next": "Dryantianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1743,
         "end": 1743,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5081,11 +5209,12 @@
     "lemma": "Dryas 1",
     "previous": "Dryantilla 2",
     "next": "Dryas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1743,
         "end": 1743,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5093,11 +5222,12 @@
     "lemma": "Dryas 2",
     "previous": "Dryas 1",
     "next": "Dryas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1743,
         "end": 1744,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5105,11 +5235,12 @@
     "lemma": "Dryas 3",
     "previous": "Dryas 2",
     "next": "Dryas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1744,
         "end": 1744,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5117,11 +5248,12 @@
     "lemma": "Dryas 4",
     "previous": "Dryas 3",
     "next": "Dryas 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1744,
         "end": 1744,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5129,11 +5261,12 @@
     "lemma": "Dryas 5",
     "previous": "Dryas 4",
     "next": "Drybaktai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1744,
         "end": 1744,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5141,11 +5274,12 @@
     "lemma": "Drybaktai",
     "previous": "Dryas 5",
     "next": "Dryitai 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1744,
         "end": 1744,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -5153,11 +5287,12 @@
     "lemma": "Dryitai 1",
     "previous": "Drybaktai",
     "next": "Dryitai 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1744,
         "end": 1745,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -5165,11 +5300,12 @@
     "lemma": "Dryitai 2",
     "previous": "Dryitai 1",
     "next": "Dryitai 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1745,
         "end": 1745,
-        "author": "Hiller von Gaertringen"
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -5194,7 +5330,7 @@
       {
         "start": 1745,
         "end": 1745,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -5202,11 +5338,12 @@
     "lemma": "Drymas 1",
     "previous": "Drymaia",
     "next": "Drymas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1745,
         "end": 1745,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -5214,11 +5351,12 @@
     "lemma": "Drymas 2",
     "previous": "Drymas 1",
     "next": "Drymides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1745,
         "end": 1745,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -5230,7 +5368,7 @@
       {
         "start": 1745,
         "end": 1745,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -5238,11 +5376,12 @@
     "lemma": "Drymo",
     "previous": "Drymides",
     "next": "Drymon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1745,
         "end": 1745,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5250,11 +5389,12 @@
     "lemma": "Drymon",
     "previous": "Drymo",
     "next": "Drymos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1745,
         "end": 1745,
-        "author": "Wellmann, E[duard]"
+        "author": "E. Wellmann."
       }
     ]
   },
@@ -5262,11 +5402,12 @@
     "lemma": "Drymos 1",
     "previous": "Drymon",
     "next": "Drymos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1745,
         "end": 1746,
-        "author": "Milchhöfer"
+        "author": "Milchhöfer."
       }
     ]
   },
@@ -5274,6 +5415,8 @@
     "lemma": "Drymos 2",
     "previous": "Drymos 1",
     "next": "Drymos 3",
+    "redirect": "Drymaia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1746,
@@ -5285,11 +5428,12 @@
     "lemma": "Drymos 3",
     "previous": "Drymos 2",
     "next": "Drymos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1746,
         "end": 1746,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -5310,11 +5454,12 @@
     "lemma": "Drymusa",
     "previous": "Drymos 4",
     "next": "Drynemeton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1746,
         "end": 1746,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -5322,11 +5467,12 @@
     "lemma": "Drynemeton",
     "previous": "Drymusa",
     "next": "Dryope 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1746,
         "end": 1746,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -5334,11 +5480,12 @@
     "lemma": "Dryope 1",
     "previous": "Drynemeton",
     "next": "Dryope 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1746,
         "end": 1747,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5346,11 +5493,12 @@
     "lemma": "Dryope 2",
     "previous": "Dryope 1",
     "next": "Dryope 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1747,
         "end": 1747,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5358,11 +5506,12 @@
     "lemma": "Dryope 3",
     "previous": "Dryope 2",
     "next": "Dryope 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1747,
         "end": 1747,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5370,11 +5519,12 @@
     "lemma": "Dryope 4",
     "previous": "Dryope 3",
     "next": "Dryope 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1747,
         "end": 1747,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5382,11 +5532,12 @@
     "lemma": "Dryope 5",
     "previous": "Dryope 4",
     "next": "Dryope 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1747,
         "end": 1747,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5394,11 +5545,12 @@
     "lemma": "Dryope 6",
     "previous": "Dryope 5",
     "next": "Dryopes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1747,
         "end": 1747,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -5406,11 +5558,12 @@
     "lemma": "Dryopes",
     "previous": "Dryope 6",
     "next": "Dryops 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1747,
         "end": 1749,
-        "author": "Miller"
+        "author": "J. Miller."
       }
     ]
   },
@@ -5418,30 +5571,35 @@
     "lemma": "Dryops 1",
     "previous": "Dryopes",
     "next": "Dryops 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1749,
         "end": 1750,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
   {
     "lemma": "Dryops 2",
     "previous": "Dryops 1",
-    "next": "Dryopteris",
+    "next": "Δρυοπτερίς",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1750,
         "end": 1750,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
   {
-    "lemma": "Dryopteris",
+    "lemma": "Δρυοπτερίς",
     "previous": "Dryops 2",
     "next": "Dryos Kephalai",
+    "sort_key": "Dryopteris",
+    "redirect": "Farnkräuter",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1750,
@@ -5451,13 +5609,14 @@
   },
   {
     "lemma": "Dryos Kephalai",
-    "previous": "Dryopteris",
+    "previous": "Δρυοπτερίς",
     "next": "Drypetina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1750,
         "end": 1750,
-        "author": "Milchhöfer"
+        "author": "Milchhöfer."
       }
     ]
   },
@@ -5469,7 +5628,7 @@
       {
         "start": 1750,
         "end": 1750,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -5477,11 +5636,12 @@
     "lemma": "Drys 1",
     "previous": "Drypetina",
     "next": "Drys 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1750,
         "end": 1750,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -5489,6 +5649,8 @@
     "lemma": "Drys 2",
     "previous": "Drys 1",
     "next": "Dryusa 1",
+    "redirect": "Eiche",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1750,
@@ -5500,42 +5662,47 @@
     "lemma": "Dryusa 1",
     "previous": "Drys 2",
     "next": "Dryusa 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1750,
         "end": 1750,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Dryusa 2",
     "previous": "Dryusa 1",
-    "next": "Du..... Balbinus",
+    "next": "Duae viae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1750,
         "end": 1751,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Du..... Balbinus",
-    "previous": "Dryusa 2",
-    "next": "Duae viae",
+    "previous": "Duae viae",
+    "next": "Dubios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Duae viae",
-    "previous": "Du..... Balbinus",
-    "next": "Dubios",
+    "previous": "Dryusa 2",
+    "next": "Du..... Balbinus",
+    "redirect": "Didache",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1751,
@@ -5545,13 +5712,14 @@
   },
   {
     "lemma": "Dubios",
-    "previous": "Duae viae",
+    "previous": "Du..... Balbinus",
     "next": "Dubis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Baumgartner"
+        "author": "Baumgartner."
       }
     ]
   },
@@ -5559,11 +5727,12 @@
     "lemma": "Dubis",
     "previous": "Dubios",
     "next": "Dubius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -5571,11 +5740,12 @@
     "lemma": "Dubius",
     "previous": "Dubis",
     "next": "Dubra 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -5583,11 +5753,13 @@
     "lemma": "Dubra 1",
     "previous": "Dubius",
     "next": "Dubra 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Portus Dubris",
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Hübner"
+        "author": "Hübner."
       }
     ]
   },
@@ -5595,11 +5767,12 @@
     "lemma": "Dubra 2",
     "previous": "Dubra 1",
     "next": "Ducacavius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -5607,11 +5780,12 @@
     "lemma": "Ducacavius",
     "previous": "Dubra 2",
     "next": "Ducarius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -5619,11 +5793,13 @@
     "lemma": "Ducarius",
     "previous": "Ducacavius",
     "next": "Ducenarii equi",
+    "proof_read": 3,
+    "wp_link": "w:de:en:Ducarius",
     "chapters": [
       {
         "start": 1751,
         "end": 1751,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -5631,11 +5807,12 @@
     "lemma": "Ducenarii equi",
     "previous": "Ducarius",
     "next": "Ducenarius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1752,
         "end": 1752,
-        "author": "Pollack"
+        "author": "Pollack."
       }
     ]
   },
@@ -5643,11 +5820,13 @@
     "lemma": "Ducenarius 1",
     "previous": "Ducenarii equi",
     "next": "Ducenarius 2",
+    "proof_read": 3,
+    "wp_link": "w:de:ca:Ducenari",
     "chapters": [
       {
         "start": 1752,
         "end": 1752,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -5786,11 +5965,12 @@
     "lemma": "Dudada",
     "previous": "Duda",
     "next": "Dudistius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1755,
         "end": 1755,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -5798,11 +5978,12 @@
     "lemma": "Dudistius",
     "previous": "Dudada",
     "next": "Dudusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1755,
-        "end": 1756,
-        "author": "Münzer"
+        "end": 1755,
+        "author": "Münzer."
       }
     ]
   },
@@ -5810,11 +5991,12 @@
     "lemma": "Dudusa",
     "previous": "Dudistius",
     "next": "Duebon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1756,
         "end": 1756,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -5822,11 +6004,12 @@
     "lemma": "Duebon",
     "previous": "Dudusa",
     "next": "Duecaledones",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1756,
         "end": 1756,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
@@ -6042,6 +6225,8 @@
     "previous": "Duina",
     "next": "Dulciarius",
     "proof_read": 2,
+    "wp_link": "w:de:Duketios",
+    "wd_link": "d:Q1264648",
     "chapters": [
       {
         "start": 1782,

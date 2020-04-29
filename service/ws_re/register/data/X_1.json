@@ -698,6 +698,8 @@
     "previous": "Iulianos 32",
     "next": "Iulianos 34",
     "proof_read": 3,
+    "wp_link": "w:it:Marco Ceionio Giuliano Camenio",
+    "wd_link": "d:Q3846002",
     "chapters": [
       {
         "start": 93,
@@ -776,6 +778,8 @@
     "previous": "Iulianos 38",
     "next": "Iulianos 40",
     "proof_read": 3,
+    "wp_link": "w:it:Giuliano (comes Orientis)",
+    "wd_link": "d:Q47036883",
     "chapters": [
       {
         "start": 94,
@@ -7777,10 +7781,13 @@
     "lemma": "Iulius 541",
     "previous": "Iulius 540",
     "next": "Iulius 542",
+    "proof_read": 2,
+    "wp_link": "w:de:Iulia (Ehefrau des Marius)",
     "chapters": [
       {
         "start": 892,
-        "end": 892
+        "end": 892,
+        "author": "Münzer."
       }
     ]
   },
@@ -7788,10 +7795,12 @@
     "lemma": "Iulius 542",
     "previous": "Iulius 541",
     "next": "Iulius 543",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 892,
-        "end": 892
+        "end": 892,
+        "author": "Münzer."
       }
     ]
   },
@@ -7799,10 +7808,14 @@
     "lemma": "Iulius 543",
     "previous": "Iulius 542",
     "next": "Iulius 544",
+    "proof_read": 2,
+    "wp_link": "w:de:Iulia (Mutter des Marcus Antonius)",
+    "wd_link": "d:Q6485329",
     "chapters": [
       {
         "start": 892,
-        "end": 893
+        "end": 893,
+        "author": "Münzer."
       }
     ]
   },
@@ -7810,10 +7823,12 @@
     "lemma": "Iulius 544",
     "previous": "Iulius 543",
     "next": "Iulius 545",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 893,
-        "end": 893
+        "end": 893,
+        "author": "Münzer."
       }
     ]
   },
@@ -7821,10 +7836,14 @@
     "lemma": "Iulius 545",
     "previous": "Iulius 544",
     "next": "Iulius 546",
+    "proof_read": 2,
+    "wp_link": "w:de:Iulia (Schwester Caesars)",
+    "wd_link": "d:Q2743448",
     "chapters": [
       {
         "start": 893,
-        "end": 894
+        "end": 894,
+        "author": "Münzer."
       }
     ]
   },
@@ -7832,10 +7851,14 @@
     "lemma": "Iulius 546",
     "previous": "Iulius 545",
     "next": "Iulius 547",
+    "proof_read": 2,
+    "wp_link": "w:de:Iulia (Großmutter des Augustus)",
+    "wd_link": "d:Q241143",
     "chapters": [
       {
         "start": 894,
-        "end": 894
+        "end": 894,
+        "author": "Münzer."
       }
     ]
   },
@@ -7843,10 +7866,14 @@
     "lemma": "Iulius 547",
     "previous": "Iulius 546",
     "next": "Iulius 548",
+    "proof_read": 2,
+    "wp_link": "w:de:Iulia (Tochter Caesars)",
+    "wd_link": "d:Q235087",
     "chapters": [
       {
         "start": 894,
-        "end": 895
+        "end": 895,
+        "author": "Münzer."
       }
     ]
   },
@@ -7979,11 +8006,13 @@
     "lemma": "Iulius 557",
     "previous": "Iulius 556",
     "next": "Iulius 558",
+    "wp_link": "w:de:Aquilia Severa",
+    "wd_link": "d:Q242457",
     "chapters": [
       {
         "start": 915,
         "end": 915,
-        "author": "Lackeit"
+        "author": "Lackeit."
       }
     ]
   },
@@ -8003,11 +8032,12 @@
     "lemma": "Iulius 559",
     "previous": "Iulius 558",
     "next": "Iulius 560",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 923,
         "end": 925,
-        "author": "Thiele"
+        "author": "Thiele."
       }
     ]
   },
@@ -8015,6 +8045,8 @@
     "lemma": "Iulius 560",
     "previous": "Iulius 559",
     "next": "Iulius 561",
+    "redirect": "Berenike 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 925,
@@ -8026,10 +8058,12 @@
     "lemma": "Iulius 561",
     "previous": "Iulius 560",
     "next": "Iulius 562",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 925,
-        "end": 925
+        "end": 925,
+        "author": "Gert. Herzog."
       }
     ]
   },
@@ -8074,9 +8108,9 @@
     "next": "Iulius 566",
     "chapters": [
       {
-        "start": 926,
-        "end": 926,
-        "author": "Stein, [Arthur]"
+        "start": 925,
+        "end": 925,
+        "author": "Stein."
       }
     ]
   },
@@ -8126,6 +8160,8 @@
     "lemma": "Iulius 569",
     "previous": "Iulius 568",
     "next": "Iulius 570",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 938,
@@ -8137,11 +8173,12 @@
     "lemma": "Iulius 570",
     "previous": "Iulius 569",
     "next": "Iulius 571",
+    "redirect": true,
     "chapters": [
       {
         "start": 938,
         "end": 938,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -9464,6 +9501,8 @@
     "next": "Iunius 49",
     "sort_key": "Iunius 048",
     "proof_read": 2,
+    "wp_link": "w:de:Marcus Iunius Brutus (Konsul 178 v. Chr.)",
+    "wd_link": "d:Q3656292",
     "chapters": [
       {
         "start": 970,
@@ -9478,6 +9517,8 @@
     "next": "Iunius 50",
     "sort_key": "Iunius 049",
     "proof_read": 2,
+    "wp_link": "w:de:Marcus Iunius Brutus (Jurist)",
+    "wd_link": "d:Q11935164",
     "chapters": [
       {
         "start": 971,
@@ -9492,6 +9533,8 @@
     "next": "Iunius 51",
     "sort_key": "Iunius 050",
     "proof_read": 2,
+    "wp_link": "w:ca:Marc Juni Brut Acusador",
+    "wd_link": "d:Q11935165",
     "chapters": [
       {
         "start": 971,
@@ -9506,6 +9549,8 @@
     "next": "Iunius 52",
     "sort_key": "Iunius 051",
     "proof_read": 2,
+    "wp_link": "w:ca:Marc Juni Brut (senador)",
+    "wd_link": "d:Q11935166",
     "chapters": [
       {
         "start": 972,
@@ -9803,6 +9848,8 @@
     "next": "Iunius 74",
     "sort_key": "Iunius 073",
     "proof_read": 3,
+    "wp_link": "w:en:Gaius Junius Donatus",
+    "wd_link": "d:Q663433",
     "chapters": [
       {
         "start": 1034,
@@ -10965,10 +11012,12 @@
     "lemma": "Iunius 170",
     "previous": "Iunius 169",
     "next": "Iunius 171",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1095,
-        "end": 1095
+        "end": 1095,
+        "author": "Münzer."
       }
     ]
   },
@@ -10976,11 +11025,12 @@
     "lemma": "Iunius 171",
     "previous": "Iunius 170",
     "next": "Iunius 172",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1095,
         "end": 1095,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -10988,11 +11038,12 @@
     "lemma": "Iunius 172",
     "previous": "Iunius 171",
     "next": "Iunius 173",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1095,
         "end": 1096,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -11003,7 +11054,8 @@
     "chapters": [
       {
         "start": 1096,
-        "end": 1097
+        "end": 1097,
+        "author": "Hohl."
       }
     ]
   },
