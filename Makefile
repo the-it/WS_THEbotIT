@@ -34,15 +34,15 @@ pycodestyle :
 
 pylint :
 	echo "############ PYLINT ############"
-	pylint -j4 --rcfile .pylintrc scripts tools
+	pylint -j4 --rcfile .pylintrc service tools
 
 bandit :
 	echo "############ BANDIT ############"
-	bandit -r scripts tools
+	bandit -r service tools
 
 mypy :
 	echo "############# MYPY #############"
-	mypy scripts tools
+	mypy service tools
 
 safety :
 	echo "############ SAFETY ############"

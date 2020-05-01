@@ -114,7 +114,7 @@ class DATATask(ReScannerTask):
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
-        -> ChangedClaimsDict:
+            -> ChangedClaimsDict:
         """
         Iterates throw all claim factories and aggregates the claims, that should be remove, and the claims, that
         should be added.

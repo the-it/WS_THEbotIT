@@ -114,7 +114,7 @@ class ClaimFactory:
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList, old_claim_list: ClaimList) \
-        -> Tuple[ClaimList, ClaimList]:
+            -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -175,7 +175,7 @@ class ClaimFactory:
                       "type": "statement",
                       "rank": "normal"}
         if qualifiers:
-            qualifiers_dict, qualifiers_order_list=ClaimFactory._add_qualifiers(qualifiers)
+            qualifiers_dict, qualifiers_order_list = ClaimFactory._add_qualifiers(qualifiers)
             claim_json["qualifiers"] = qualifiers_dict
             claim_json["qualifiers-order"] = qualifiers_order_list
         return claim_json
@@ -189,7 +189,6 @@ class ClaimFactory:
             qualifiers_dict[qualifier.property_str] = [qualifier_snak]
             qualifiers_order_list.append(qualifier.property_str)
         return qualifiers_dict, qualifiers_order_list
-
 
     @staticmethod
     def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
