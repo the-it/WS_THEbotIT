@@ -1,6 +1,7 @@
 import re
 from abc import abstractmethod
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Dict, List, Tuple, TypedDict, Union, Optional
 
 import pywikibot
@@ -72,6 +73,7 @@ class ClaimFactory:
         self.wikidata = re_page.page.data_repository
         self.wikisource = re_page.page.site
         self.re_page = re_page
+        self._current_year = datetime.now().year
 
     @abstractmethod
     def _get_claim_json(self) -> List[JsonClaimDict]:
@@ -220,6 +222,7 @@ class ClaimFactory:
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
+    @property
     def _authors_of_first_article(self) -> List[Author]:
         author_list: List[Author] = []
         for article_part in self.re_page.splitted_article_list[0]:

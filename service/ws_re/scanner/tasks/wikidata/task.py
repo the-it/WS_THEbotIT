@@ -10,32 +10,30 @@ import pywikibot
 
 from service.ws_re.scanner.scanner import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
-    SerializedClaimDictionary, ClaimList, ClaimFactory, ChangedClaimsDict
-from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import \
-    P155Follows, \
-    P156FollowedBy
-from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
-from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
-from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
-from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import \
-    P577PublicationDate
+    SerializedClaimDictionary, ClaimList, ChangedClaimsDict
+from service.ws_re.scanner.tasks.wikidata.claims.p6212_copyright_status import P6212CopyrightStatus
 from tools.bots.pi import WikiLogger
 
 
 class DATATask(ReScannerTask):
-    claim_factories = (P31InstanceOf,
-                       P50Author,
-                       P155Follows,
-                       P156FollowedBy,
-                       P361PartOf,
-                       P577PublicationDate)
+    claim_factories = (
+        # P31InstanceOf,
+        # P50Author,
+        # P155Follows,
+        # P156FollowedBy,
+        # P361PartOf,
+        # P577PublicationDate,
+        # P921MainSubject,
+        # P1433PublishedIn,
+        # P3903Column,
+        P6212CopyrightStatus,
+    )
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
         with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
             self._non_claims_template = Template(non_claims_json.read())
-        self._current_year = datetime.now().year
         # debug functions
         self._counter = 0
 
@@ -134,5 +132,3 @@ class DATATask(ReScannerTask):
             if claims_to_change_dict["remove"]:
                 claims_to_remove += claims_to_change_dict["remove"]
         return {"add": claims_to_add, "remove": claims_to_remove}
-
-    # CLAIM FACTORIES from here on all functions are related to one specific claim

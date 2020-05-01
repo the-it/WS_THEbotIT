@@ -5,15 +5,15 @@
 #    pip-compile --output-file=requirements.txt requirements.in
 #
 beautifulsoup4==4.9.0     # via -r requirements.in
-boto3==1.12.39            # via -r requirements.in
-botocore==1.15.39         # via boto3, s3transfer
+boto3==1.13.0             # via -r requirements.in
+botocore==1.16.0          # via boto3, s3transfer
 certifi==2020.4.5.1       # via requests
 chardet==3.0.4            # via requests
 defusedxml==0.6.0         # via -r requirements.in
 dictdiffer==0.8.1         # via -r requirements.in
 docutils==0.15.2          # via botocore
-gitdb==4.0.2              # via gitpython
-gitpython==3.1.0          # via -r requirements.in
+gitdb==4.0.4              # via gitpython
+gitpython==3.1.1          # via -r requirements.in
 idna==2.8                 # via -r requirements.in, requests
 jmespath==0.9.5           # via boto3, botocore
 oauthlib==3.1.0           # via -r requirements.in, requests-oauthlib
@@ -24,6 +24,6 @@ requests==2.23.0          # via -r requirements.in, pywikibot, requests-oauthlib
 roman==3.2                # via -r requirements.in
 s3transfer==0.3.3         # via boto3
 six==1.14.0               # via python-dateutil
-smmap==3.0.1              # via gitdb
+smmap==3.0.2              # via gitdb
 soupsieve==2.0            # via beautifulsoup4
-urllib3==1.25.8           # via botocore, requests
+urllib3==1.25.9           # via botocore, requests
