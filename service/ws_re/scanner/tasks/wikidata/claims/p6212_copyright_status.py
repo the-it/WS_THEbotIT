@@ -108,9 +108,6 @@ class PublicDomainClaims():
         return None
 
 
-if __name__ == "__main__":
-    PublicDomainClaims(pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT"))
-
 
 
 
@@ -120,7 +117,42 @@ class P6212CopyrightStatus(ClaimFactory):
     **<public domain statements dependend on publication age and death of author>**
     """
 
+    _COPYRIGHT_STATUS = "P6216"
+    _PUBLIC_DOMAIN = "Q19652"
+
+    _APPLIES_TO_JURISDICTION = "P1001"
+    _DETERMINATION_METHOD = "P459"
+
+    _UNITED_STATES_OF_AMERICA = "Q30"
+    _PUBLISHED_MORE_THAN_THAN_95_YEARS_AGO = "Q47246828"
+
+    _50_YEARS_AFTER_AUTHORS_DEATH = "Q29870405"
+    _COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER = "Q59621182"
+
+    _70_YEARS_AFTER_AUTHORS_DEATH = "Q29870196"
+    _COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER = "Q59542795"
+
+    _80_YEARS_AFTER_AUTHORS_DEATH = "Q29940641"
+    _COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER = "Q61830521"
+
+    _100_YEARS_AFTER_AUTHORS_DEATH = "Q29940705"
+    _COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER = "Q60332278"
+
+    _THRESHOLD_OF_ORIGINALITY = "Q707401"
+
     def _get_claim_json(self) -> List[JsonClaimDict]:
+        claim_list: List[pywikibot.Claim] = []
+        if self._current_year - int(self._volume_of_first_article.year) > 95:
+            claim_list.append(self._public_domain_claims.CLAIM_PUBLISHED_95_YEARS_AGO)
+        pma_claim = self._6216_min_years_since_death
+        if pma_claim:
+            claim_list.append(pma_claim)
+        if self._first_article["KEINE_SCHÖPFUNGSHÖHE"].value:
+            claim_list.append(self._public_domain_claims.CLAIM_THRESHOLD_OF_ORIGINALITY)
+        return claim_list
+
+
+
         start = str(self._first_article["SPALTE_START"].value)
         end: str = ""
         if self._first_article["SPALTE_END"].value not in ("", "OFF"):
