@@ -71,7 +71,7 @@ pyasn1==0.4.8             # via python-jose, rsa
 pycodestyle==2.5.0        # via flake8
 pycparser==2.20           # via cffi
 pyfiglet==0.8.post1       # via -r requirements-dev.in
-pyflakes==2.1.1           # via flake8
+pyflakes==2.2.0           # via flake8
 pylint==2.5.0             # via -r requirements-dev.in
 pyparsing==2.4.7          # via packaging
 pyrsistent==0.16.0        # via jsonschema
