@@ -8,7 +8,7 @@ from typing import Dict, List, Optional
 import dictdiffer
 import pywikibot
 
-from service.ws_re.scanner.scanner import ReScannerTask
+from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ClaimFactory, ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import \

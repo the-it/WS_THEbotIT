@@ -1,7 +1,7 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta
-from typing import List, Any, Dict
+from typing import List, Dict, Any
 
 import pywikibot
 

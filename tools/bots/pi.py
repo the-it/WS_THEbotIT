@@ -8,10 +8,13 @@ from datetime import datetime, timedelta
 from typing import Dict, Any, Iterator
 from typing import TypedDict  # pylint: disable=no-name-in-module
 
-from pywikibot import Page, Site
+from pywikibot import Page, Site, Category
+from pywikibot.pagegenerators import CategorizedPageGenerator
+
+from tools.bots import BotException
+
 
 # type hints
-from tools.bots import BotException
 
 
 class LoggerNameDict(TypedDict):
@@ -111,11 +114,11 @@ class WikiLogger():
                 line_list.append(line.strip())
             log_lines = ""
             log_lines = log_lines \
-                + "\n\n" \
-                + f"=={self._start_time.strftime(self._wiki_timestamp_format)}==" \
-                + "\n\n" \
-                + "\n\n".join(line_list) \
-                + "\n--~~~~"
+                        + "\n\n" \
+                        + f"=={self._start_time.strftime(self._wiki_timestamp_format)}==" \
+                        + "\n\n" \
+                        + "\n\n".join(line_list) \
+                        + "\n--~~~~"
             return log_lines
 
 
@@ -255,6 +258,11 @@ class OneTimeBot(ABC):
         if text.rstrip() != page.text:
             page.text = text
             page.save(change_msg, botflag=True)
+
+    def get_lemma_str_from_cat(self, category: str):
+        page = Category(self.wiki, category)
+        cat_list = [str(lemma).strip("[]")[2:] for lemma in CategorizedPageGenerator(page)]
+        return cat_list
 
 
 class PersistedData(Mapping):
