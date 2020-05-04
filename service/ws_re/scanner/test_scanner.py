@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 from unittest import TestCase, mock, skip
 
+import pywikibot
 from testfixtures import LogCapture
 
 from service.ws_re.scanner.scanner import ReScanner
@@ -64,6 +65,9 @@ class TestReScanner(TestCase):
             self.assertTrue(checker.is_part_of_searchstring("&sortby=date"))
             self.assertTrue(checker.is_part_of_searchstring("&sortorder=descending"))
             self.assertTrue(checker.is_empty())
+
+    def test_new_search(self):
+        ReScanner(wiki=pywikibot.Site(code="de", fam="wikisource", user="THEbotIT"))._get_raw_list()
 
     result_of_searcher = [{"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
                            "title": "RE:Lemma1", "touched": "20010101232359"},

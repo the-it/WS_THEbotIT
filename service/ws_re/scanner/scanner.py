@@ -41,39 +41,21 @@ class ReScanner(CanonicalBot):
                 self.logger.warning("There isn't deprecated data to reload.")
         return self
 
-    def _prepare_searcher(self) -> PetScan:
-        searcher = PetScan()
-        searcher.add_yes_template("REDaten")
-
-        if self.debug:
-            searcher.add_namespace(2)
-        else:
-            searcher.add_namespace(0)
-            searcher.add_positive_category("RE:Fertig")
-            searcher.add_positive_category("RE:Korrigiert")
-            searcher.add_positive_category("RE:Platzhalter")
-            searcher.set_logic_union()
-            searcher.set_sort_criteria("date")
-            searcher.set_sortorder_decending()
-            searcher.set_timeout(120)
-        return searcher
+    def _get_raw_list(self) -> List[str]:
+        return self.get_lemma_str_from_cat("RE:Fertig") + \
+               self.get_lemma_str_from_cat("RE:Korrigiert") + \
+               self.get_lemma_str_from_cat("RE:Platzhalter")
 
     def compile_lemma_list(self) -> List[str]:
         self.logger.info("Compile the lemma list")
         self.logger.info("Searching for lemmas")
-        searcher = self._prepare_searcher()
-        self.logger.info(f"[{searcher} {searcher}]")
-        raw_lemma_list: List[PetscanLemma] = []
-        try:
-            raw_lemma_list = searcher.run()
-        except PetScanException:
-            self.logger.error("Search timed out.")
+        #raw_lemma_list = self._petscan_search()
+        raw_lemma_list = self._get_raw_list()
         self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
         self.logger.info("Filter new_lemma_list")
         # all items which wasn't process before
         new_lemma_list = []
-        for item in raw_lemma_list:
-            lemma = item["nstext"] + ":" + item["title"]
+        for lemma in raw_lemma_list:
             try:
                 self.data[lemma]
             except KeyError:
@@ -89,6 +71,39 @@ class ReScanner(CanonicalBot):
                          f"new: {self.statistic['len_new_lemma_list']}, "
                          f"old: {self.statistic['len_old_lemma_list']}")
         return new_lemma_list + old_lemma_list
+
+    def _petscan_search(self) -> List[str]:
+        """
+        TODO: DEPRECATED
+        """
+        searcher = self._prepare_searcher()
+        self.logger.info(f"[{searcher} {searcher}]")
+        raw_lemma_list: List[PetscanLemma] = []
+        try:
+            raw_lemma_list = searcher.run()
+        except PetScanException:
+            self.logger.error("Search timed out.")
+        return [item["nstext"] + ":" + item["title"] for item in raw_lemma_list]
+
+    def _prepare_searcher(self) -> PetScan:
+        """
+        TODO: DEPRECATED
+        """
+        searcher = PetScan()
+        searcher.add_yes_template("REDaten")
+
+        if self.debug:
+            searcher.add_namespace(2)
+        else:
+            searcher.add_namespace(0)
+            searcher.add_positive_category("RE:Fertig")
+            searcher.add_positive_category("RE:Korrigiert")
+            searcher.add_positive_category("RE:Platzhalter")
+            searcher.set_logic_union()
+            searcher.set_sort_criteria("date")
+            searcher.set_sortorder_decending()
+            searcher.set_timeout(120)
+        return searcher
 
     def _activate_tasks(self) -> List[ReScannerTask]:
         active_tasks = []
