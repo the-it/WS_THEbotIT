@@ -7,7 +7,7 @@ from service.author_list import AuthorList
 from service.gl.create_magazine import GlCreateMagazine
 from service.gl.status import GlStatus
 from service.ws_re.register.printer import ReRegisterPrinter
-from service.ws_re.scanner import ReScanner
+from service.ws_re.scanner.base import ReScanner
 from service.ws_re.status import ReStatus
 from tools.bot_scheduler import BotScheduler
 

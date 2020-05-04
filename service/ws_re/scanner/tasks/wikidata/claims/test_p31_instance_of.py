@@ -1,8 +1,5 @@
-from testfixtures import compare
+# pylint: disable=protected-access
 
-from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
-from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
-    BaseTestClaimFactory
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf

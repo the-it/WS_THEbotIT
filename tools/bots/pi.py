@@ -114,11 +114,11 @@ class WikiLogger():
                 line_list.append(line.strip())
             log_lines = ""
             log_lines = log_lines \
-                        + "\n\n" \
-                        + f"=={self._start_time.strftime(self._wiki_timestamp_format)}==" \
-                        + "\n\n" \
-                        + "\n\n".join(line_list) \
-                        + "\n--~~~~"
+                + "\n\n" \
+                + f"=={self._start_time.strftime(self._wiki_timestamp_format)}==" \
+                + "\n\n" \
+                + "\n\n".join(line_list) \
+                + "\n--~~~~"
             return log_lines
 
 

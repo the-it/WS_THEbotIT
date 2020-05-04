@@ -17,7 +17,7 @@ ignore=venv,
 
 # Python code to execute, usually for sys.path manipulation such as
 # pygtk.require().
-#init-hook=
+init-hook='import sys; sys.path.append(""); print(__file__)'
 
 # Use multiple processes to speed up Pylint.
 jobs=1

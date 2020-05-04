@@ -250,9 +250,9 @@ class Updater():
             if pre_lemma:
                 pre_lemma.update_lemma_dict({"next": lemma_dict["lemma"]})
             else:
-                raise RegisterException(f"Here went something wrong, pre_lemma is None.")
+                raise RegisterException("Here went something wrong, pre_lemma is None.")
         if next_test:
             if next_lemma:
                 next_lemma.update_lemma_dict({"previous": lemma_dict["lemma"]})
             else:
-                raise RegisterException(f"Here went something wrong, next_lemma is None.")
+                raise RegisterException("Here went something wrong, next_lemma is None.")

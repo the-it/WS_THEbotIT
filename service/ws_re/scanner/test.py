@@ -8,7 +8,7 @@ from unittest import TestCase, mock, skip
 import pywikibot
 from testfixtures import LogCapture
 
-from service.ws_re.scanner.scanner import ReScanner
+from service.ws_re.scanner.base import ReScanner
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template import ReDatenException
 from tools.bots.test_pi import setup_data_path, teardown_data_path, _DATA_PATH_TEST

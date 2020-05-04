@@ -3,7 +3,7 @@ from unittest import TestCase, mock
 
 from testfixtures import LogCapture, compare
 
-from service.ws_re.scanner.scanner import ReScannerTask
+from service.ws_re.scanner.base import ReScannerTask
 from service.ws_re.template.re_page import RePage
 from tools.bots.pi import WikiLogger
 

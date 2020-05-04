@@ -43,13 +43,13 @@ class ReScanner(CanonicalBot):
 
     def _get_raw_list(self) -> List[str]:
         return self.get_lemma_str_from_cat("RE:Fertig") + \
-               self.get_lemma_str_from_cat("RE:Korrigiert") + \
-               self.get_lemma_str_from_cat("RE:Platzhalter")
+            self.get_lemma_str_from_cat("RE:Korrigiert") + \
+            self.get_lemma_str_from_cat("RE:Platzhalter")
 
     def compile_lemma_list(self) -> List[str]:
         self.logger.info("Compile the lemma list")
         self.logger.info("Searching for lemmas")
-        #raw_lemma_list = self._petscan_search()
+        # raw_lemma_list = self._petscan_search()
         raw_lemma_list = self._get_raw_list()
         self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
         self.logger.info("Filter new_lemma_list")

@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column

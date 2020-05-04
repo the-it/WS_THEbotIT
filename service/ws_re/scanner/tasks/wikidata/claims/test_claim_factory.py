@@ -1,3 +1,5 @@
+# pylint: disable=protected-access,no-self-use
+from typing import List
 from unittest import TestCase
 from unittest.mock import MagicMock, PropertyMock, Mock
 
@@ -5,7 +7,7 @@ import pywikibot
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    ChangedClaimsDict, SnakParameter
+    ChangedClaimsDict, SnakParameter, JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 
@@ -29,8 +31,8 @@ class BaseTestClaimFactory(TestCase):
 
 class TestClaimFactory(BaseTestClaimFactory):
     class P1234FactoryDummy(ClaimFactory):
-        def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
-            return {"add": {self.get_property_string(): []}, "remove": []}
+        def _get_claim_json(self) -> List[JsonClaimDict]:
+            return []
 
     def setUp(self) -> None:
         super().setUp()
@@ -87,16 +89,16 @@ class TestClaimFactory(BaseTestClaimFactory):
         expect = {"mainsnak": {"snaktype": "value",
                                "property": "P31",
                                "datatype": "time",
-                               "datavalue": {"value": {
-                                   "time": f"+00000001234-01-01T00:00:00Z",
-                                   "precision": 9,
-                                   "after": 0,
-                                   "before": 0,
-                                   "timezone": 0,
-                                   "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-                               },
-                                   "type": "time"
-                               }},
+                               "datavalue": {
+                                   "value": {
+                                       "time": "+00000001234-01-01T00:00:00Z",
+                                       "precision": 9,
+                                       "after": 0,
+                                       "before": 0,
+                                       "timezone": 0,
+                                       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                   },
+                                   "type": "time"}},
                   "type": "statement",
                   "rank": "normal"}
 
