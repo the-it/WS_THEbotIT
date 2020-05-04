@@ -1,0 +1,372 @@
+Testing started at 14:51 ...
+/home/esommer/workspace/WS_THEbotIT/venv/bin/python /home/esommer/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/201.6668.115/plugins/python/helpers/pycharm/_jb_unittest_runner.py --target test.TestDATATask.test_develop
+Launching unittests with arguments python -m unittest test.TestDATATask.test_develop in /home/esommer/workspace/WS_THEbotIT/scripts/service/ws_re/scanner/tasks/wikidata
+
+
+Process finished with exit code 0
+WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:120: DeprecationWarning: pywikibot.version.getversion_svn is deprecated for 5 years; use getversion_svn_setuptools instead.
+  (tag, rev, date, hsh) = vcs_func(_program_dir)
+
+WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:271: DeprecationWarning: pywikibot.version.svn_rev_info is deprecated for 5 years; use getversion_svn_setuptools instead.
+  tag, rev, date = svn_rev_info(_program_dir)
+
+
+
+Ran 1 test in 0.822s
+
+OK
+{
+  "labels": {
+    "de": {
+      "language": "de",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "en": {
+      "language": "en",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "nl": {
+      "language": "nl",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "da": {
+      "language": "da",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "es": {
+      "language": "es",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "el": {
+      "language": "el",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "it": {
+      "language": "it",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "pl": {
+      "language": "pl",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    },
+    "sv": {
+      "language": "sv",
+      "value": "Rutilius 44 (Pauly-Wissowa)"
+    }
+  },
+  "descriptions": {
+    "de": {
+      "language": "de",
+      "value": "Enzyklop\u00e4discher Artikel in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "en": {
+      "language": "en",
+      "value": "encyclopedic article in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "article d'encyclop\u00e9die \u00e0 Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "nl": {
+      "language": "nl",
+      "value": "encyclopedisch artikel uit Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "da": {
+      "language": "da",
+      "value": "encyklop\u00e6diartikel i Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "es": {
+      "language": "es",
+      "value": "Art\u00edculo de enciclopedia en Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "el": {
+      "language": "el",
+      "value": "\u0395\u03b3\u03ba\u03c5\u03ba\u03bb\u03bf\u03c0\u03b1\u03af\u03b4\u03b5\u03b9\u03b1 \u03ac\u03c1\u03b8\u03c1\u03bf \u03c3\u03c4\u03bf Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "it": {
+      "language": "it",
+      "value": "articolo dell'enciclopedia in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "pl": {
+      "language": "pl",
+      "value": "artigo de enciclop\u00e9dia em Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    },
+    "sv": {
+      "language": "sv",
+      "value": "encyklopediartikel i Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+    }
+  },
+  "claims": {
+    "P1433": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1433",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 26459260
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$BD057B92-3C71-4619-9DEB-0D1B4CE18C85",
+        "rank": "normal"
+      }
+    ],
+    "P361": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P361",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 1138524
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$05F91E04-9C44-4E62-92CF-D1992F436B33",
+        "rank": "normal"
+      }
+    ],
+    "P577": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P577",
+          "datatype": "time",
+          "datavalue": {
+            "value": {
+              "time": "+00000001914-01-01T00:00:00Z",
+              "precision": 9,
+              "after": 0,
+              "before": 0,
+              "timezone": 0,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$A416B270-22D6-466C-BDCA-DC9882AABC38",
+        "rank": "normal"
+      }
+    ],
+    "P31": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P31",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 13433827
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$150BE1CC-3CB5-4AAD-A57C-53DA332D8EC1",
+        "rank": "normal"
+      }
+    ],
+    "P50": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P50",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 18628968
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$E7B255A3-6F65-4C07-B386-EAC388E24CA7",
+        "rank": "normal"
+      }
+    ],
+    "P155": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P155",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 89651054
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$DB2BC5F8-48BF-4C45-8D85-6C47196900C7",
+        "rank": "normal"
+      }
+    ],
+    "P6216": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P6216",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 19652
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$6D088CE0-61A4-4822-8AF0-22DABF781F62",
+        "rank": "normal",
+        "qualifiers": {
+          "P1001": [
+            {
+              "snaktype": "value",
+              "property": "P1001",
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 30
+                },
+                "type": "wikibase-entityid"
+              }
+            }
+          ],
+          "P459": [
+            {
+              "snaktype": "value",
+              "property": "P459",
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 47246828
+                },
+                "type": "wikibase-entityid"
+              },
+              "hash": "e8a997f8c7723e2bc8daa542a8b44577d4b3b7eb"
+            }
+          ]
+        },
+        "qualifiers-order": [
+          "P1001",
+          "P459"
+        ]
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P6216",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 19652
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$9EB2EB8B-1F68-4DAA-AC29-AECBA49952F0",
+        "rank": "normal",
+        "qualifiers": {
+          "P1001": [
+            {
+              "snaktype": "value",
+              "property": "P1001",
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 59542795
+                },
+                "type": "wikibase-entityid"
+              },
+              "hash": "150a1cb6fbace9068c45a349bc8e4f744e512b25"
+            }
+          ],
+          "P459": [
+            {
+              "snaktype": "value",
+              "property": "P459",
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 29870196
+                },
+                "type": "wikibase-entityid"
+              },
+              "hash": "327050eb235f08bbd27dd414244f003fac41a09c"
+            }
+          ]
+        },
+        "qualifiers-order": [
+          "P1001",
+          "P459"
+        ]
+      }
+    ],
+    "P156": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P156",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 88395487
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$38887FBC-C677-426A-8F3A-E60BBF849014",
+        "rank": "normal"
+      }
+    ],
+    "P3903": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P3903",
+          "datatype": "string",
+          "datavalue": {
+            "value": "1281",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$34CCE0A1-E053-4A55-9526-E62C7500F8EE",
+        "rank": "normal"
+      }
+    ]
+  },
+  "sitelinks": {
+    "dewikisource": {
+      "site": "dewikisource",
+      "title": "RE:Rutilius 44",
+      "badges": []
+    }
+  }
+}
