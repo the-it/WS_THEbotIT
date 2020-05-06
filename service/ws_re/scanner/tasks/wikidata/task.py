@@ -44,8 +44,10 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
-        with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
-            self._non_claims_template = Template(non_claims_json.read())
+        with open(Path(__file__).parent.joinpath("non_claims_article.json")) as non_claims_json:
+            self._non_claims_template_article = Template(non_claims_json.read())
+        with open(Path(__file__).parent.joinpath("non_claims_crossref.json")) as non_claims_json:
+            self._non_claims_template_crossref = Template(non_claims_json.read())
         # debug functions
         self._counter = 0
 
@@ -90,8 +92,12 @@ class DATATask(ReScannerTask):
 
     @property
     def _non_claims(self) -> Dict:
-        replaced_json = self._non_claims_template.substitute(lemma=self.re_page.lemma_without_prefix,
-                                                             lemma_with_prefix=self.re_page.lemma)
+        if self.re_page[0]["VERWEIS"]:
+            replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix,
+                                                                          lemma_with_prefix=self.re_page.lemma)
+        else:
+            replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix,
+                                                                         lemma_with_prefix=self.re_page.lemma)
         non_claims: Dict = json.loads(replaced_json)
         return non_claims
 
@@ -126,7 +132,7 @@ class DATATask(ReScannerTask):
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
-            -> ChangedClaimsDict:
+        -> ChangedClaimsDict:
         """
         Iterates throw all claim factories and aggregates the claims, that should be remove, and the claims, that
         should be added.

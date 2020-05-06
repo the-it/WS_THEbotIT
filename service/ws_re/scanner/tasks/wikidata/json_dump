@@ -1,20 +1,3 @@
-Testing started at 14:51 ...
-/home/esommer/workspace/WS_THEbotIT/venv/bin/python /home/esommer/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/201.6668.115/plugins/python/helpers/pycharm/_jb_unittest_runner.py --target test.TestDATATask.test_develop
-Launching unittests with arguments python -m unittest test.TestDATATask.test_develop in /home/esommer/workspace/WS_THEbotIT/scripts/service/ws_re/scanner/tasks/wikidata
-
-
-Process finished with exit code 0
-WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:120: DeprecationWarning: pywikibot.version.getversion_svn is deprecated for 5 years; use getversion_svn_setuptools instead.
-  (tag, rev, date, hsh) = vcs_func(_program_dir)
-
-WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:271: DeprecationWarning: pywikibot.version.svn_rev_info is deprecated for 5 years; use getversion_svn_setuptools instead.
-  tag, rev, date = svn_rev_info(_program_dir)
-
-
-
-Ran 1 test in 0.822s
-
-OK
 {
   "labels": {
     "de": {
@@ -162,44 +145,6 @@ OK
         "rank": "normal"
       }
     ],
-    "P31": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P31",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 13433827
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q88396548$150BE1CC-3CB5-4AAD-A57C-53DA332D8EC1",
-        "rank": "normal"
-      }
-    ],
-    "P50": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P50",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 18628968
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q88396548$E7B255A3-6F65-4C07-B386-EAC388E24CA7",
-        "rank": "normal"
-      }
-    ],
     "P155": [
       {
         "mainsnak": {
@@ -248,7 +193,8 @@ OK
                   "numeric-id": 30
                 },
                 "type": "wikibase-entityid"
-              }
+              },
+              "hash": "fd03a46bac885aad8c96834e86183c078494dce6"
             }
           ],
           "P459": [
@@ -358,6 +304,44 @@ OK
         },
         "type": "statement",
         "id": "Q88396548$34CCE0A1-E053-4A55-9526-E62C7500F8EE",
+        "rank": "normal"
+      }
+    ],
+    "P31": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P31",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 13433827
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$E2622D31-CFC8-4B4A-ADB9-69229FF0D847",
+        "rank": "normal"
+      }
+    ],
+    "P50": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P50",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 18628968
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$CDC4044A-4326-4D11-82F4-FE57D9B78306",
         "rank": "normal"
       }
     ]
