@@ -26,11 +26,18 @@ class ChangedClaimsDict(TypedDict):
     remove: ClaimList
 
 
-JsonValueDict = TypedDict('JsonValueDict', {'entity-type': str, 'numeric-id': int})
+JsonValueDictItem = TypedDict("JsonValueDictItem", {"entity-type": str, "numeric-id": int})
+JsonValueDictTime = TypedDict("JsonValueDictTime", {"time": str,
+                                                    "precision": int,
+                                                    "after": int,
+                                                    "before": int,
+                                                    "timezone": int,
+                                                    "calendarmodel": str})
+JsonValueDictMonolingualtext = TypedDict("JsonValueDictMonolingualtext", {"text": str, "language": str})
 
 
 class JsonDataValue(TypedDict):
-    value: Union[str, JsonValueDict]
+    value: Union[str, JsonValueDictItem, JsonValueDictTime, JsonValueDictMonolingualtext]
     type: str
 
 
@@ -51,15 +58,15 @@ class JsonClaimDict(TypedDict):
 
 @dataclass
 class SnakParameter:
-    '''
+    """
     Class for keeping track of Snak parameters
 
     :param property_str: Number of the Property, example "P1234"
-    :param target_type: Value of the target. Possible values: 'wikibase-item', 'string', 'commonsMedia',
-                        'globe-coordinate', 'url', 'time', 'quantity', 'monolingualtext', 'math', 'external-id',
-                        'geo-shape', 'tabular-data'
+    :param target_type: Value of the target. Possible values: "wikibase-item", "string", "commonsMedia",
+                        "globe-coordinate", "url", "time", "quantity", "monolingualtext", "math", "external-id",
+                        "geo-shape", "tabular-data"
     :param target: actual value of the target
-    '''
+    """
     property_str: str
     target_type: str
     target: str
@@ -114,7 +121,7 @@ class ClaimFactory:
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList, old_claim_list: ClaimList) \
-            -> Tuple[ClaimList, ClaimList]:
+        -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -192,7 +199,7 @@ class ClaimFactory:
 
     @staticmethod
     def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
-        snak = {'snaktype': 'value', "property": snak_parameter.property_str, "datatype": snak_parameter.target_type}
+        snak = {"snaktype": "value", "property": snak_parameter.property_str, "datatype": snak_parameter.target_type}
         if snak_parameter.target_type == "wikibase-item":
             snak["datavalue"] = {"value": {"entity-type": "item",
                                            "numeric-id": int(snak_parameter.target.strip("Q"))
@@ -215,6 +222,12 @@ class ClaimFactory:
             },
                 "type": "time"
             }
+        elif snak_parameter.target_type == "monolingualtext":
+            snak["datavalue"] = {"value": {"text": snak_parameter.target,
+                                           "language": "de"
+                                           },
+                                 "type": "monolingualtext"
+                                 }
         else:
             raise BotException(f"target_type \"{snak_parameter.target_type}\" not supported")
         return snak

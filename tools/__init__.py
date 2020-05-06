@@ -24,3 +24,4 @@ def fetch_text_from_wiki_site(wiki: Site, lemma: str) -> str:  # pragma: no cove
 
 
 INTEGRATION_TEST = "INTEGRATION" in os.environ
+MOCK_WIKI_TEST = "MOCK_WIKI" in os.environ

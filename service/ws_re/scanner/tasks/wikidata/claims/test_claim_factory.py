@@ -7,7 +7,7 @@ import pywikibot
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    ChangedClaimsDict, SnakParameter, JsonClaimDict
+    SnakParameter, JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 
