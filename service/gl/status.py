@@ -111,6 +111,7 @@ class GlStatus(CanonicalBot):
 
     def petscan(self, categories, not_categories=None, article=False, year=None):
         searcher = PetScan()
+        searcher.set_timeout(120)
         if article:
             searcher.add_namespace("Article")
         else:
