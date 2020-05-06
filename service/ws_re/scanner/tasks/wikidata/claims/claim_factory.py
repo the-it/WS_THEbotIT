@@ -168,12 +168,14 @@ class ClaimFactory:
 
     @staticmethod
     def create_claim_json(snak_parameter: SnakParameter,
-                          qualifiers: Optional[List[SnakParameter]] = None) -> JsonClaimDict:
+                          qualifiers: Optional[List[SnakParameter]] = None,
+                          references: Optional[List[List[SnakParameter]]] = None) -> JsonClaimDict:
         """
         This factory function create json representations of claims from some basic parameters.
 
         :param snak_parameter: parameters for the actual claim
         :param qualifiers: optional parameters for qualifiers
+        :param references: optional parameters for references
 
         :return: dictionary representation of a claim
         """
@@ -185,7 +187,22 @@ class ClaimFactory:
             qualifiers_dict, qualifiers_order_list = ClaimFactory._add_qualifiers(qualifiers)
             claim_json["qualifiers"] = qualifiers_dict
             claim_json["qualifiers-order"] = qualifiers_order_list
+        if references:
+            references_list = ClaimFactory._add_references(references)
+            claim_json["references"] = references_list
         return claim_json
+
+    @staticmethod
+    def _add_references(references) -> List[Dict[str, Optional[Union[List[str], Dict[str, List[JsonSnakDict]]]]]]:
+        references_snak = []
+        for reference_list in references:
+            reference_list_snak = {}
+            reference_list_snak_order = []
+            for reference in reference_list:
+                reference_list_snak[reference.property_str] = [ClaimFactory.create_snak_json(reference)]
+                reference_list_snak_order.append(reference.property_str)
+            references_snak.append({"snaks": reference_list_snak, "snaks-order": reference_list_snak_order})
+        return references_snak
 
     @staticmethod
     def _add_qualifiers(qualifiers) -> Tuple[Dict[str, List[JsonSnakDict]], List[str]]:
