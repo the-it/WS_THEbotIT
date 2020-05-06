@@ -11,22 +11,30 @@ import pywikibot
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ChangedClaimsDict
-from service.ws_re.scanner.tasks.wikidata.claims.p6212_copyright_status import P6212CopyrightStatus
+from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
+from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, P156FollowedBy
+from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
+from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
+from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
+from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
+from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
+from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
+from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
 from tools.bots.pi import WikiLogger
 
 
 class DATATask(ReScannerTask):
     claim_factories = (
-        # P31InstanceOf,
-        # P50Author,
-        # P155Follows,
-        # P156FollowedBy,
-        # P361PartOf,
-        # P577PublicationDate,
-        # P921MainSubject,
-        # P1433PublishedIn,
-        # P3903Column,
-        P6212CopyrightStatus,
+        P31InstanceOf,
+        P50Author,
+        P155Follows,
+        P156FollowedBy,
+        P361PartOf,
+        P577PublicationDate,
+        P921MainSubject,
+        P1433PublishedIn,
+        P3903Column,
+        P6216CopyrightStatus,
     )
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):

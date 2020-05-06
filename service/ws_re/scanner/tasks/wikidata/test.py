@@ -10,7 +10,7 @@ from service.ws_re.template.re_page import RePage
 
 
 class TestDATATask(TaskTestCase):
-    @skip("just for development")
+    # @skip("just for development")
     def test_develop(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         # lemma = pywikibot.Page(WS_WIKI, "RE:Aba 1") # existing wikidata_item
