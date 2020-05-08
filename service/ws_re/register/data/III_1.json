@@ -11283,6 +11283,8 @@
     "previous": "Berelis",
     "next": "Berenicis",
     "proof_read": 3,
+    "wp_link": "w:fr:Bérimund",
+    "wd_link": "d:Q20045654",
     "chapters": [
       {
         "start": 280,
@@ -13423,6 +13425,7 @@
     "previous": "Besippo",
     "next": "Bessa 1",
     "proof_read": 3,
+    "wp_link": "w:de:Publius Besius Betuinianus Gaius Marius Memmius Sabinus",
     "chapters": [
       {
         "start": 327,
@@ -18066,7 +18069,7 @@
   },
   {
     "lemma": "Birrus",
-    "previous": "Birrius 2",
+    "previous": "Birrius 1",
     "next": "Birsama",
     "proof_read": 3,
     "chapters": [
@@ -28306,7 +28309,7 @@
   },
   {
     "lemma": "Brebeta",
-    "previous": "Brebate",
+    "previous": "Brea",
     "next": "Brectenus",
     "proof_read": 3,
     "chapters": [
@@ -30299,7 +30302,7 @@
     "lemma": "Brittomaris",
     "previous": "Brittius 2",
     "next": "Brittones",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:en:Britomaris",
     "wd_link": "d:Q2925767",
     "chapters": [
@@ -30811,7 +30814,7 @@
     "lemma": "Brogitarus",
     "previous": "Brodiontii",
     "next": "Bromagus",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:en:Brogitarus",
     "wd_link": "d:Q3781179",
     "chapters": [
@@ -31723,7 +31726,7 @@
     "previous": "Bruttius",
     "next": "Bruttius 2",
     "sort_key": "Bruttius 01",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 911,
@@ -33053,7 +33056,7 @@
     "lemma": "Bucilianus",
     "previous": "Buchsbaum",
     "next": "Bucina 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 986,
@@ -43471,7 +43474,7 @@
   {
     "lemma": "Caere",
     "previous": "Caeracates",
-    "next": "Caerellius 1",
+    "next": "Caerellius",
     "proof_read": 2,
     "wp_link": "w:de:Caere",
     "wd_link": "d:Q242505",
@@ -43484,8 +43487,23 @@
     ]
   },
   {
-    "lemma": "Caerellius 1",
+    "lemma": "Caerellius",
     "previous": "Caere",
+    "next": "Caerellius 1",
+    "sort_key": "Caerellius 00",
+    "proof_read": 3,
+    "wp_link": "w:de:Caerellius",
+    "chapters": [
+      {
+        "start": 1283,
+        "end": 1283,
+        "author": "Groag."
+      }
+    ]
+  },
+  {
+    "lemma": "Caerellius 1",
+    "previous": "Caerellius",
     "next": "Caerellius 2",
     "sort_key": "Caerellius 01",
     "proof_read": 3,
@@ -43615,6 +43633,8 @@
     "previous": "Caerellius 9",
     "next": "Caerellius 11",
     "proof_read": 3,
+    "wp_link": "w:de:Caerellia",
+    "wd_link": "d:Q23662495",
     "chapters": [
       {
         "start": 1284,
@@ -48578,7 +48598,7 @@
     "previous": "Calpurnius 76",
     "next": "Calpurnius 78",
     "sort_key": "Calpurnius 077",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1384,
@@ -48648,7 +48668,9 @@
     "previous": "Calpurnius 81",
     "next": "Calpurnius 83",
     "sort_key": "Calpurnius 082",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Lucius Calpurnius Piso (Konsul 175)",
+    "wd_link": "d:Q1873551",
     "chapters": [
       {
         "start": 1386,
@@ -49848,7 +49870,7 @@
     "previous": "Calvisius 14",
     "next": "Calvisius 16",
     "proof_read": 3,
-    "wp_link": "w:en:Gaius Calvisius Sabinus (consul AD 26)",
+    "wp_link": "w:en:Gaius Calvisius Sabinus (consul 26)",
     "wd_link": "d:Q1242043",
     "chapters": [
       {
