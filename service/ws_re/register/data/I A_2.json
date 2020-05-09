@@ -7611,13 +7611,14 @@
   },
   {
     "lemma": "Sallustius 40",
-    "previous": "Sallustius 38",
+    "previous": "Sallustius 39",
     "next": "Sallustius 41",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1970,
         "end": 1970,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -7625,11 +7626,12 @@
     "lemma": "Sallustius 41",
     "previous": "Sallustius 40",
     "next": "Sallustius 42",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1970,
         "end": 1970,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -7637,11 +7639,12 @@
     "lemma": "Sallustius 42",
     "previous": "Sallustius 41",
     "next": "Sallustius 43",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1970,
         "end": 1970,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -7649,11 +7652,12 @@
     "lemma": "Sallustius 43",
     "previous": "Sallustius 42",
     "next": "Sallustius 44",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1970,
         "end": 1970,
-        "author": "Nagl"
+        "author": "Nagl."
       }
     ]
   },
@@ -7661,11 +7665,12 @@
     "lemma": "Sallustius 44",
     "previous": "Sallustius 43",
     "next": "Salluvi, Salyes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1970,
         "end": 1970,
-        "author": "Nagl"
+        "author": "Nagl."
       }
     ]
   },
@@ -7673,11 +7678,12 @@
     "lemma": "Salluvi, Salyes",
     "previous": "Sallustius 44",
     "next": "Salluvius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1970,
         "end": 1975,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -12921,11 +12927,12 @@
     "lemma": "Saphta",
     "previous": "Saphri",
     "next": "Sapidianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2323,
         "end": 2323,
-        "author": "Moritz, [Bernhard]"
+        "author": "Moritz."
       }
     ]
   },
@@ -12933,11 +12940,12 @@
     "lemma": "Sapidianus",
     "previous": "Saphta",
     "next": "Sapinates",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2323,
         "end": 2323,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -12945,6 +12953,8 @@
     "lemma": "Sapinates",
     "previous": "Sapidianus",
     "next": "Sapinia tribus",
+    "redirect": "Sapis",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2323,
@@ -12955,7 +12965,9 @@
   {
     "lemma": "Sapinia tribus",
     "previous": "Sapinates",
-    "next": "Sapinitai",
+    "next": "Σαπινιταί",
+    "redirect": "Sapis",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2323,
@@ -12964,9 +12976,12 @@
     ]
   },
   {
-    "lemma": "Sapinitai",
+    "lemma": "Σαπινιταί",
     "previous": "Sapinia tribus",
     "next": "Sapires, Sapiri",
+    "sort_key": "Sapinitai",
+    "redirect": "Σαμνῖται",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2323,
@@ -12976,8 +12991,11 @@
   },
   {
     "lemma": "Sapires, Sapiri",
-    "previous": "Sapinitai",
+    "previous": "Σαπινιταί",
     "next": "Sapis",
+    "redirect": "Saspeires",
+    "proof_read": 3,
+    "wp_link": "w:de:en:Saspeires",
     "chapters": [
       {
         "start": 2323,
@@ -13000,17 +13018,17 @@
   {
     "lemma": "Sapo",
     "previous": "Sapis",
-    "next": "Sapolos",
+    "next": "Σάπολος",
     "chapters": [
       {
         "start": 2323,
         "end": 2324,
-        "author": "Hug"
+        "author": "Hug."
       }
     ]
   },
   {
-    "lemma": "Sapolos",
+    "lemma": "Σάπολος",
     "previous": "Sapo",
     "next": "Saponaria",
     "chapters": [
@@ -13023,7 +13041,7 @@
   },
   {
     "lemma": "Saponaria",
-    "previous": "Sapolos",
+    "previous": "Σάπολος",
     "next": "Sapor 1",
     "chapters": [
       {

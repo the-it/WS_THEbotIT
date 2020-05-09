@@ -1,7 +1,6 @@
 [
   {
     "lemma": "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913",
-    "next": "Hestiaia 1",
     "sort_key": "!Autoren1913",
     "proof_read": 3
   },
@@ -10965,6 +10964,7 @@
     "next": "Horatius 2",
     "sort_key": "Horatius 02ff.",
     "proof_read": 2,
+    "wp_link": "w:de:Horatier",
     "chapters": [
       {
         "start": 2321,
@@ -11065,6 +11065,8 @@
     "next": "Horatius 9",
     "sort_key": "Horatius 08",
     "proof_read": 2,
+    "wp_link": "w:de:Marcus Horatius Barbatus",
+    "wd_link": "d:Q612508",
     "chapters": [
       {
         "start": 2328,
@@ -11079,6 +11081,8 @@
     "next": "Horatius 10",
     "sort_key": "Horatius 09",
     "proof_read": 2,
+    "wp_link": "w:de:Horatius Cocles",
+    "wd_link": "d:Q1115859",
     "chapters": [
       {
         "start": 2331,
@@ -11765,6 +11769,8 @@
     "next": "Hortensius 1",
     "sort_key": "Hortensius 0",
     "proof_read": 2,
+    "wp_link": "w:en:Hortensia (gens)",
+    "wd_link": "d:Q12097159",
     "chapters": [
       {
         "start": 2465,
@@ -11807,6 +11813,8 @@
     "next": "Hortensius 4",
     "sort_key": "Hortensius 03",
     "proof_read": 2,
+    "wp_link": "w:es:Lucio Hortensio (tribuno de la plebe)",
+    "wd_link": "d:Q12285280",
     "chapters": [
       {
         "start": 2466,
@@ -11821,6 +11829,8 @@
     "next": "Hortensius 5",
     "sort_key": "Hortensius 04",
     "proof_read": 2,
+    "wp_link": "w:es:Lucio Hortensio",
+    "wd_link": "d:Q2064913",
     "chapters": [
       {
         "start": 2466,
@@ -11851,6 +11861,8 @@
     "next": "Hortensius 7",
     "sort_key": "Hortensius 06",
     "proof_read": 2,
+    "wp_link": "w:ca:Luci Hortensi (llegat)",
+    "wd_link": "d:Q20005208",
     "chapters": [
       {
         "start": 2466,
@@ -12757,11 +12769,13 @@
     "lemma": "Hostius 1",
     "previous": "Hostius",
     "next": "Hostius 2",
+    "proof_read": 2,
+    "wp_link": "w:de:en:Hostius",
     "chapters": [
       {
         "start": 2516,
         "end": 2516,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
