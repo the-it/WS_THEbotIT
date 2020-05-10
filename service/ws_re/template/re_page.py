@@ -1,5 +1,5 @@
 import re
-from typing import Union, List
+from typing import Union, List, Optional
 
 import pywikibot
 
@@ -146,3 +146,13 @@ class RePage:
         if re.search(r"\{\{#lst:", self.page.text):
             return True
         return False
+
+    def add_error_category(self, category: str, note: Optional[str] =None):
+        error = f"[[Kategorie:{category}]]"
+        if note:
+            error = f"{error}<!--{note}-->"
+        if not error in self._article_list[-1]:
+            self._article_list.append(error)
+
+    def remove_error_category(self, category: str):
+

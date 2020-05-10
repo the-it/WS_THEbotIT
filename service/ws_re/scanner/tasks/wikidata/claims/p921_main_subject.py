@@ -40,7 +40,6 @@ class P921MainSubject(ClaimFactory):
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
-        TODO: the diff must handled differently here
         Every claim that is updated can possible add new claims, but can also remove existing claims at the item.
         Which claims is removed or added depends of the specific implementation of the property factory. The standart
         implementation will update all claims as expected by the factory (this include removing possible existing
@@ -50,7 +49,13 @@ class P921MainSubject(ClaimFactory):
 
         :returns: A dictionary with claims to add and to remove is returned
         """
-
-        claim_list = [pywikibot.Claim.fromJSON(self.wikidata, claim_json)
-                      for claim_json in self._get_claim_json()]
-        return self.get_diff_claims_for_replacement(claim_list, data_item)
+        claim_json = self._get_claim_json()
+        if not claim_json:
+            return self._create_claim_dictionary([], [])
+        new_claim: pywikibot.Claim = pywikibot.Claim.fromJSON(claim_json[0])
+        old_claims = data_item.claims[self.get_property_string()]
+        if not old_claims:
+            return self._create_claim_dictionary([new_claim], [])
+        if not new_claim.same_as(old_claims[0]):
+            #todo: add error cat here
+        return self._create_claim_dictionary([], [])

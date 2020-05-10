@@ -14,6 +14,7 @@ from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
 
 # type hints
+from tools.bots.pi import WikiLogger
 
 ClaimList = List[pywikibot.Claim]
 ClaimDictionary = Dict[str, ClaimList]
@@ -76,10 +77,11 @@ class ClaimFactory:
     _authors = Authors()
     _volumes = Volumes()
 
-    def __init__(self, re_page: RePage):
+    def __init__(self, re_page: RePage, logger: WikiLogger):
         self.wikidata = re_page.page.data_repository
         self.wikisource = re_page.page.site
         self.re_page = re_page
+        self.logger = logger
         self._current_year = datetime.now().year
 
     @abstractmethod
@@ -152,7 +154,7 @@ class ClaimFactory:
                 filtered_new_claim_list.append(new_claim)
         return filtered_new_claim_list, old_claim_list
 
-    def _create_claim_dictionary(self, claims_to_add: ClaimList, claims_to_remove: ClaimList) -> ClaimDictionary:
+    def _create_claim_dictionary(self, claims_to_add: ClaimList, claims_to_remove: ClaimList) -> ChangedClaimsDict:
         claims_to_add_dict = {}
         if claims_to_add:
             claims_to_add_dict[self.get_property_string()] = claims_to_add
