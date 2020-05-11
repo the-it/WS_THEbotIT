@@ -14,7 +14,7 @@ dictdiffer==0.8.1         # via -r requirements.in
 docutils==0.16          # via botocore
 gitdb==4.0.5              # via gitpython
 gitpython==3.1.2          # via -r requirements.in
-idna==2.8                 # via -r requirements.in, requests
+idna==2.9                 # via -r requirements.in, requests
 jmespath==0.9.5           # via boto3, botocore
 oauthlib==3.1.0           # via -r requirements.in, requests-oauthlib
 python-dateutil==2.8.1    # via botocore
