@@ -28,7 +28,7 @@ ddt==1.4.0                # via -r requirements-dev.in
 decorator==4.4.2          # via networkx
 docker==4.2.0             # via moto
 docopt==0.6.2             # via internetarchive
-docutils==0.15.2          # via -c requirements.txt, botocore
+docutils==0.16          # via -c requirements.txt, botocore
 dparse==0.5.1             # via safety
 ecdsa==0.15               # via python-jose, sshpubkeys
 entrypoints==0.3          # via flake8
