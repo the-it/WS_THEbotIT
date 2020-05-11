@@ -35,7 +35,7 @@ entrypoints==0.3          # via flake8
 flake8==3.7.9             # via -r requirements-dev.in
 freezegun==0.3.15         # via -r requirements-dev.in
 future==0.18.2            # via aws-xray-sdk
-gitdb==4.0.4              # via -c requirements.txt, gitpython
+gitdb==4.0.5              # via -c requirements.txt, gitpython
 gitpython==3.1.1          # via -c requirements.txt, bandit
 idna==2.8                 # via -c requirements.txt, moto, requests
 importlib-metadata==1.6.0  # via jsonpickle
