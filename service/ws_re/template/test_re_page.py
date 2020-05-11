@@ -264,6 +264,14 @@ text
         compare(2, len(re_page))
         compare("[[Kategorie:Name_of_Cat]]", re_page[1])
 
+    def test_add_error_cat_no_dublicate_category(self):
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
+                                      f"\n[[Kategorie:Name_of_Cat]]"
+        re_page = RePage(self.page_mock)
+        re_page.add_error_category("Name_of_Cat")
+        compare(2, len(re_page))
+        compare("[[Kategorie:Name_of_Cat]]", re_page[1])
+
     def test_add_error_cat_with_note(self):
         self.text_mock.return_value = ARTICLE_TEMPLATE
         re_page = RePage(self.page_mock)

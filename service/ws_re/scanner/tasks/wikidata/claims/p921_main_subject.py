@@ -57,5 +57,5 @@ class P921MainSubject(ClaimFactory):
         if not old_claims:
             return self._create_claim_dictionary([new_claim], [])
         if not new_claim.same_as(old_claims[0]):
-            #todo: add error cat here
+            self.re_page.add_error_category("RE:Wartung Wikidata (WD!=WS)")
         return self._create_claim_dictionary([], [])
