@@ -11,29 +11,43 @@ import pywikibot
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ChangedClaimsDict
-from service.ws_re.scanner.tasks.wikidata.claims.p6212_copyright_status import P6212CopyrightStatus
+from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
+from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
+from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, P156FollowedBy
+from service.ws_re.scanner.tasks.wikidata.claims.p1680_subtitle import P1680Subtitle
+from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
+from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
+from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
+from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
+from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
+from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
+from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
 from tools.bots.pi import WikiLogger
 
 
 class DATATask(ReScannerTask):
     claim_factories = (
-        # P31InstanceOf,
-        # P50Author,
-        # P155Follows,
-        # P156FollowedBy,
-        # P361PartOf,
-        # P577PublicationDate,
-        # P921MainSubject,
-        # P1433PublishedIn,
-        # P3903Column,
-        P6212CopyrightStatus,
+        P31InstanceOf,
+        P50Author,
+        P155Follows,
+        P156FollowedBy,
+        P361PartOf,
+        P577PublicationDate,
+        P921MainSubject,
+        P1433PublishedIn,
+        P1476Title,
+        P1680Subtitle,
+        P3903Column,
+        P6216CopyrightStatus,
     )
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
-        with open(Path(__file__).parent.joinpath("non_claims.json")) as non_claims_json:
-            self._non_claims_template = Template(non_claims_json.read())
+        with open(Path(__file__).parent.joinpath("non_claims_article.json")) as non_claims_json:
+            self._non_claims_template_article = Template(non_claims_json.read())
+        with open(Path(__file__).parent.joinpath("non_claims_crossref.json")) as non_claims_json:
+            self._non_claims_template_crossref = Template(non_claims_json.read())
         # debug functions
         self._counter = 0
 
@@ -78,8 +92,12 @@ class DATATask(ReScannerTask):
 
     @property
     def _non_claims(self) -> Dict:
-        replaced_json = self._non_claims_template.substitute(lemma=self.re_page.lemma_without_prefix,
-                                                             lemma_with_prefix=self.re_page.lemma)
+        if self.re_page[0]["VERWEIS"]:
+            replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix,
+                                                                          lemma_with_prefix=self.re_page.lemma)
+        else:
+            replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix,
+                                                                         lemma_with_prefix=self.re_page.lemma)
         non_claims: Dict = json.loads(replaced_json)
         return non_claims
 
@@ -114,7 +132,7 @@ class DATATask(ReScannerTask):
         return claims_to_add_serialized
 
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
-            -> ChangedClaimsDict:
+        -> ChangedClaimsDict:
         """
         Iterates throw all claim factories and aggregates the claims, that should be remove, and the claims, that
         should be added.

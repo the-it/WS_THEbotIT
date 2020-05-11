@@ -256,3 +256,58 @@ text
         self.text_mock.return_value = complex_article
         re_page = RePage(self.page_mock)
         self.assertTrue(re_page.complex_construction)
+
+    def test_add_error_cat(self):
+        self.text_mock.return_value = ARTICLE_TEMPLATE
+        re_page = RePage(self.page_mock)
+        re_page.add_error_category("Name_of_Cat")
+        compare(2, len(re_page))
+        compare("[[Kategorie:Name_of_Cat]]", re_page[1])
+
+    def test_add_error_cat_no_dublicate_category(self):
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
+                                      f"\n[[Kategorie:Name_of_Cat]]"
+        re_page = RePage(self.page_mock)
+        re_page.add_error_category("Name_of_Cat")
+        compare(2, len(re_page))
+        compare("[[Kategorie:Name_of_Cat]]", re_page[1])
+
+    def test_add_error_cat_with_note(self):
+        self.text_mock.return_value = ARTICLE_TEMPLATE
+        re_page = RePage(self.page_mock)
+        re_page.add_error_category("Name_of_Cat", "note")
+        compare(2, len(re_page))
+        compare("[[Kategorie:Name_of_Cat]]<!--note-->", re_page[1])
+
+    def test_add_error_cat_with_already_there(self):
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
+                                      f"\n[[Kategorie:Name_of_Cat]]<!--note-->" \
+                                      f"\n[[Kategorie:Other_Cat]]<!--other_error-->"
+        re_page = RePage(self.page_mock)
+        re_page.add_error_category("Name_of_Cat", "note")
+        compare(2, len(re_page))
+        compare("[[Kategorie:Name_of_Cat]]<!--note-->"
+                "\n[[Kategorie:Other_Cat]]<!--other_error-->", re_page[1])
+
+    def test_remove_error_cat(self):
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
+                                      f"\n[[Kategorie:Name_of_Cat]]<!--note-->"
+        re_page = RePage(self.page_mock)
+        re_page.remove_error_category("Name_of_Cat")
+        compare(1, len(re_page))
+
+    def test_remove_error_cat_other_cat_exists(self):
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
+                                      f"\n[[Kategorie:Name_of_Cat]]<!--note-->" \
+                                      f"\n[[Kategorie:Other_Cat]]<!--note-->"
+        re_page = RePage(self.page_mock)
+        re_page.remove_error_category("Name_of_Cat")
+        compare(2, len(re_page))
+        compare("[[Kategorie:Other_Cat]]<!--note-->", re_page[1])
+
+    def test_remove_error_cat_no_cat_there(self):
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}"
+        re_page = RePage(self.page_mock)
+        re_page.remove_error_category("Name_of_Cat")
+        compare(1, len(re_page))
+

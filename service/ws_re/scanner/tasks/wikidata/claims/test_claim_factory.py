@@ -7,7 +7,7 @@ import pywikibot
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    ChangedClaimsDict, SnakParameter, JsonClaimDict
+    SnakParameter, JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 
@@ -118,6 +118,22 @@ class TestClaimFactory(BaseTestClaimFactory):
         compare(expect, ClaimFactory.create_claim_json(
             SnakParameter(property_str="P31", target_type="string", target="texttexttext")))
 
+    def test__create_claim_json_monolingualtext(self):
+        expect = {"mainsnak": {"snaktype": "value",
+                               "property": "P31",
+                               "datatype": "monolingualtext",
+                               "datavalue": {"value": {
+                                   "text": "texttexttext",
+                                   "language": "de"
+                               },
+                                   "type": "monolingualtext"
+                               }},
+                  "type": "statement",
+                  "rank": "normal"}
+
+        compare(expect, ClaimFactory.create_claim_json(
+            SnakParameter(property_str="P31", target_type="monolingualtext", target="texttexttext")))
+
     def test__create_claim_json_with_qualifier(self):
         expect = {"mainsnak": {"snaktype": "value",
                                "property": "P31",
@@ -164,6 +180,92 @@ class TestClaimFactory(BaseTestClaimFactory):
         quali_snak_1 = SnakParameter(property_str="P1234", target_type="string", target="text")
         quali_snak_2 = SnakParameter(property_str="P5678", target_type="wikibase-item", target="Q123456")
         compare(expect, ClaimFactory.create_claim_json(main_parameter, qualifiers=[quali_snak_1, quali_snak_2]))
+
+    def test__create_claim_json_with_reference(self):
+        expect = {
+            "mainsnak": {
+                "snaktype": "value",
+                "property": "P1234",
+                "datatype": "string",
+                "datavalue": {
+                    "value": "value",
+                    "type": "string"
+                }
+            },
+            "type": "statement",
+            "rank": "normal",
+            "references": [
+                {
+                    "snaks": {
+                        "P123": [
+                            {
+                                "snaktype": "value",
+                                "property": "P123",
+                                "datatype": "string",
+                                "datavalue": {
+                                    "value": "ref1",
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "P234": [
+                            {
+                                "snaktype": "value",
+                                "property": "P234",
+                                "datatype": "string",
+                                "datavalue": {
+                                    "value": "ref2",
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "snaks-order": [
+                        "P123",
+                        "P234"
+                    ]
+                },
+                {
+                    "snaks": {
+                        "P345": [
+                            {
+                                "snaktype": "value",
+                                "property": "P345",
+                                "datatype": "string",
+                                "datavalue": {
+                                    "value": "ref3",
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "P456": [
+                            {
+                                "snaktype": "value",
+                                "property": "P456",
+                                "datatype": "string",
+                                "datavalue": {
+                                    "value": "ref4",
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "snaks-order": [
+                        "P345",
+                        "P456"
+                    ]
+                }
+            ]
+        }
+
+        main_parameter = SnakParameter(property_str="P1234", target_type="string", target="value")
+        ref_snak_1 = SnakParameter(property_str="P123", target_type="string", target="ref1")
+        ref_snak_2 = SnakParameter(property_str="P234", target_type="string", target="ref2")
+        ref_snak_3 = SnakParameter(property_str="P345", target_type="string", target="ref3")
+        ref_snak_4 = SnakParameter(property_str="P456", target_type="string", target="ref4")
+        compare(expect, ClaimFactory.create_claim_json(snak_parameter=main_parameter,
+                                                       references=[[ref_snak_1, ref_snak_2],
+                                                                   [ref_snak_3, ref_snak_4]]))
 
     def test__create_claim_json_exception(self):
         with self.assertRaises(BotException):

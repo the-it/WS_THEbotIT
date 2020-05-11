@@ -1,20 +1,15 @@
-Testing started at 14:51 ...
+Testing started at 21:13 ...
 /home/esommer/workspace/WS_THEbotIT/venv/bin/python /home/esommer/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/201.6668.115/plugins/python/helpers/pycharm/_jb_unittest_runner.py --target test.TestDATATask.test_develop
-Launching unittests with arguments python -m unittest test.TestDATATask.test_develop in /home/esommer/workspace/WS_THEbotIT/scripts/service/ws_re/scanner/tasks/wikidata
+Launching unittests with arguments python -m unittest test.TestDATATask.test_develop in /home/esommer/workspace/WS_THEbotIT/service/ws_re/scanner/tasks/wikidata
 
 
 Process finished with exit code 0
-WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:120: DeprecationWarning: pywikibot.version.getversion_svn is deprecated for 5 years; use getversion_svn_setuptools instead.
+WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:120: DeprecationWarning: pywikibot.version.getversion_svn is deprecated for 5 years and 1 month; use getversion_svn_setuptools instead.
   (tag, rev, date, hsh) = vcs_func(_program_dir)
 
-WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:271: DeprecationWarning: pywikibot.version.svn_rev_info is deprecated for 5 years; use getversion_svn_setuptools instead.
+WARNING: /home/esommer/workspace/WS_THEbotIT/venv/lib/python3.8/site-packages/pywikibot/version.py:271: DeprecationWarning: pywikibot.version.svn_rev_info is deprecated for 5 years and 1 month; use getversion_svn_setuptools instead.
   tag, rev, date = svn_rev_info(_program_dir)
 
-
-
-Ran 1 test in 0.822s
-
-OK
 {
   "labels": {
     "de": {
@@ -61,43 +56,43 @@ OK
   "descriptions": {
     "de": {
       "language": "de",
-      "value": "Enzyklop\u00e4discher Artikel in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "Verweisung in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "en": {
       "language": "en",
-      "value": "encyclopedic article in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "cross-reference in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "fr": {
       "language": "fr",
-      "value": "article d'encyclop\u00e9die \u00e0 Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "cross-reference en Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "nl": {
       "language": "nl",
-      "value": "encyclopedisch artikel uit Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "verwijzing naar naslagwerk in Paulys Realenzyklop\u00e4die der classischen Altertumswissenschaft"
     },
     "da": {
       "language": "da",
-      "value": "encyklop\u00e6diartikel i Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "krydshenvisning i Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "es": {
       "language": "es",
-      "value": "Art\u00edculo de enciclopedia en Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "referencia cruzada en Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "el": {
       "language": "el",
-      "value": "\u0395\u03b3\u03ba\u03c5\u03ba\u03bb\u03bf\u03c0\u03b1\u03af\u03b4\u03b5\u03b9\u03b1 \u03ac\u03c1\u03b8\u03c1\u03bf \u03c3\u03c4\u03bf Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "\u03c0\u03b1\u03c1\u03b1\u03c0\u03bf\u03bc\u03c0\u03ae \u03c3\u03c4\u03bf Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "it": {
       "language": "it",
-      "value": "articolo dell'enciclopedia in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "riferimento incrociato in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "pl": {
       "language": "pl",
-      "value": "artigo de enciclop\u00e9dia em Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "refer\u00eancia cruzada em Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     },
     "sv": {
       "language": "sv",
-      "value": "encyklopediartikel i Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+      "value": "korsreferens i Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
     }
   },
   "claims": {
@@ -162,44 +157,6 @@ OK
         "rank": "normal"
       }
     ],
-    "P31": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P31",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 13433827
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q88396548$150BE1CC-3CB5-4AAD-A57C-53DA332D8EC1",
-        "rank": "normal"
-      }
-    ],
-    "P50": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P50",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 18628968
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q88396548$E7B255A3-6F65-4C07-B386-EAC388E24CA7",
-        "rank": "normal"
-      }
-    ],
     "P155": [
       {
         "mainsnak": {
@@ -248,7 +205,8 @@ OK
                   "numeric-id": 30
                 },
                 "type": "wikibase-entityid"
-              }
+              },
+              "hash": "fd03a46bac885aad8c96834e86183c078494dce6"
             }
           ],
           "P459": [
@@ -360,6 +318,140 @@ OK
         "id": "Q88396548$34CCE0A1-E053-4A55-9526-E62C7500F8EE",
         "rank": "normal"
       }
+    ],
+    "P31": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P31",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 13433827
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$E2622D31-CFC8-4B4A-ADB9-69229FF0D847",
+        "rank": "normal"
+      }
+    ],
+    "P50": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P50",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 18628968
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$CDC4044A-4326-4D11-82F4-FE57D9B78306",
+        "rank": "normal"
+      }
+    ],
+    "P1476": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1476",
+          "datatype": "monolingualtext",
+          "datavalue": {
+            "value": {
+              "text": "Rutilius 44",
+              "language": "de"
+            },
+            "type": "monolingualtext"
+          }
+        },
+        "type": "statement",
+        "id": "Q88396548$BCE5AAB4-BE90-446F-BE0B-6ECC9936147F",
+        "rank": "normal",
+        "references": [
+          {
+            "snaks": {
+              "P248": [
+                {
+                  "snaktype": "value",
+                  "property": "P248",
+                  "datatype": "wikibase-item",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 2426
+                    },
+                    "type": "wikibase-entityid"
+                  }
+                }
+              ],
+              "P813": [
+                {
+                  "snaktype": "value",
+                  "property": "P813",
+                  "datatype": "time",
+                  "datavalue": {
+                    "value": {
+                      "time": "+00000001900-00-00T00:00:00Z",
+                      "precision": 9,
+                      "after": 0,
+                      "before": 0,
+                      "timezone": 0,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  }
+                }
+              ]
+            },
+            "snaks-order": [
+              "P248",
+              "P813"
+            ],
+            "hash": "6142a84b2c21e4325c71b55b9dd115c53a2eef9a"
+          },
+          {
+            "snaks": {
+              "P854": [
+                {
+                  "snaktype": "value",
+                  "property": "P854",
+                  "datatype": "url",
+                  "datavalue": {
+                    "value": "https://bla.com",
+                    "type": "string"
+                  }
+                }
+              ],
+              "P21": [
+                {
+                  "snaktype": "value",
+                  "property": "P21",
+                  "datatype": "wikibase-item",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 6581072
+                    },
+                    "type": "wikibase-entityid"
+                  }
+                }
+              ]
+            },
+            "snaks-order": [
+              "P854",
+              "P21"
+            ],
+            "hash": "025c67cd0c9eaa178a1ac38f3c90e5468a799aed"
+          }
+        ]
+      }
     ]
   },
   "sitelinks": {
@@ -370,3 +462,9 @@ OK
     }
   }
 }
+Sleeping for 5.2 seconds, 2020-05-06 21:13:08
+
+
+Ran 1 test in 11.019s
+
+OK

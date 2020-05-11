@@ -4,7 +4,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFacto
     JsonClaimDict, SnakParameter
 
 
-class P6212CopyrightStatus(ClaimFactory):
+class P6216CopyrightStatus(ClaimFactory):
     """
     Returns the Claim **copyright status** ->
     **<public domain statements dependend on publication age and death of author>**

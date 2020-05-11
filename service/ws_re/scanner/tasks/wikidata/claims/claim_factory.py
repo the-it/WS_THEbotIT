@@ -14,6 +14,7 @@ from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
 
 # type hints
+from tools.bots.pi import WikiLogger
 
 ClaimList = List[pywikibot.Claim]
 ClaimDictionary = Dict[str, ClaimList]
@@ -26,11 +27,18 @@ class ChangedClaimsDict(TypedDict):
     remove: ClaimList
 
 
-JsonValueDict = TypedDict('JsonValueDict', {'entity-type': str, 'numeric-id': int})
+JsonValueDictItem = TypedDict("JsonValueDictItem", {"entity-type": str, "numeric-id": int})
+JsonValueDictTime = TypedDict("JsonValueDictTime", {"time": str,
+                                                    "precision": int,
+                                                    "after": int,
+                                                    "before": int,
+                                                    "timezone": int,
+                                                    "calendarmodel": str})
+JsonValueDictMonolingualtext = TypedDict("JsonValueDictMonolingualtext", {"text": str, "language": str})
 
 
 class JsonDataValue(TypedDict):
-    value: Union[str, JsonValueDict]
+    value: Union[str, JsonValueDictItem, JsonValueDictTime, JsonValueDictMonolingualtext]
     type: str
 
 
@@ -51,15 +59,15 @@ class JsonClaimDict(TypedDict):
 
 @dataclass
 class SnakParameter:
-    '''
+    """
     Class for keeping track of Snak parameters
 
     :param property_str: Number of the Property, example "P1234"
-    :param target_type: Value of the target. Possible values: 'wikibase-item', 'string', 'commonsMedia',
-                        'globe-coordinate', 'url', 'time', 'quantity', 'monolingualtext', 'math', 'external-id',
-                        'geo-shape', 'tabular-data'
+    :param target_type: Value of the target. Possible values: "wikibase-item", "string", "commonsMedia",
+                        "globe-coordinate", "url", "time", "quantity", "monolingualtext", "math", "external-id",
+                        "geo-shape", "tabular-data"
     :param target: actual value of the target
-    '''
+    """
     property_str: str
     target_type: str
     target: str
@@ -69,10 +77,11 @@ class ClaimFactory:
     _authors = Authors()
     _volumes = Volumes()
 
-    def __init__(self, re_page: RePage):
+    def __init__(self, re_page: RePage, logger: WikiLogger):
         self.wikidata = re_page.page.data_repository
         self.wikisource = re_page.page.site
         self.re_page = re_page
+        self.logger = logger
         self._current_year = datetime.now().year
 
     @abstractmethod
@@ -114,7 +123,7 @@ class ClaimFactory:
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList, old_claim_list: ClaimList) \
-            -> Tuple[ClaimList, ClaimList]:
+        -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -145,7 +154,7 @@ class ClaimFactory:
                 filtered_new_claim_list.append(new_claim)
         return filtered_new_claim_list, old_claim_list
 
-    def _create_claim_dictionary(self, claims_to_add: ClaimList, claims_to_remove: ClaimList) -> ClaimDictionary:
+    def _create_claim_dictionary(self, claims_to_add: ClaimList, claims_to_remove: ClaimList) -> ChangedClaimsDict:
         claims_to_add_dict = {}
         if claims_to_add:
             claims_to_add_dict[self.get_property_string()] = claims_to_add
@@ -161,12 +170,14 @@ class ClaimFactory:
 
     @staticmethod
     def create_claim_json(snak_parameter: SnakParameter,
-                          qualifiers: Optional[List[SnakParameter]] = None) -> JsonClaimDict:
+                          qualifiers: Optional[List[SnakParameter]] = None,
+                          references: Optional[List[List[SnakParameter]]] = None) -> JsonClaimDict:
         """
         This factory function create json representations of claims from some basic parameters.
 
         :param snak_parameter: parameters for the actual claim
         :param qualifiers: optional parameters for qualifiers
+        :param references: optional parameters for references
 
         :return: dictionary representation of a claim
         """
@@ -178,7 +189,22 @@ class ClaimFactory:
             qualifiers_dict, qualifiers_order_list = ClaimFactory._add_qualifiers(qualifiers)
             claim_json["qualifiers"] = qualifiers_dict
             claim_json["qualifiers-order"] = qualifiers_order_list
+        if references:
+            references_list = ClaimFactory._add_references(references)
+            claim_json["references"] = references_list
         return claim_json
+
+    @staticmethod
+    def _add_references(references) -> List[Dict[str, Optional[Union[List[str], Dict[str, List[JsonSnakDict]]]]]]:
+        references_snak = []
+        for reference_list in references:
+            reference_list_snak = {}
+            reference_list_snak_order = []
+            for reference in reference_list:
+                reference_list_snak[reference.property_str] = [ClaimFactory.create_snak_json(reference)]
+                reference_list_snak_order.append(reference.property_str)
+            references_snak.append({"snaks": reference_list_snak, "snaks-order": reference_list_snak_order})
+        return references_snak
 
     @staticmethod
     def _add_qualifiers(qualifiers) -> Tuple[Dict[str, List[JsonSnakDict]], List[str]]:
@@ -192,7 +218,7 @@ class ClaimFactory:
 
     @staticmethod
     def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
-        snak = {'snaktype': 'value', "property": snak_parameter.property_str, "datatype": snak_parameter.target_type}
+        snak = {"snaktype": "value", "property": snak_parameter.property_str, "datatype": snak_parameter.target_type}
         if snak_parameter.target_type == "wikibase-item":
             snak["datavalue"] = {"value": {"entity-type": "item",
                                            "numeric-id": int(snak_parameter.target.strip("Q"))
@@ -215,6 +241,12 @@ class ClaimFactory:
             },
                 "type": "time"
             }
+        elif snak_parameter.target_type == "monolingualtext":
+            snak["datavalue"] = {"value": {"text": snak_parameter.target,
+                                           "language": "de"
+                                           },
+                                 "type": "monolingualtext"
+                                 }
         else:
             raise BotException(f"target_type \"{snak_parameter.target_type}\" not supported")
         return snak
