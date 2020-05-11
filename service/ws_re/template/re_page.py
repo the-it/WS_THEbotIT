@@ -148,6 +148,12 @@ class RePage:
         return False
 
     def add_error_category(self, category: str, note: Optional[str] =None):
+        """
+        Adds an error category at the end of the RE lemma
+
+        :param category: the name of the category
+        :param note: additional notice, e.g. what error exists
+        """
         error = f"[[Kategorie:{category}]]"
         if note:
             error = f"{error}<!--{note}-->"
@@ -155,4 +161,13 @@ class RePage:
             self._article_list.append(error)
 
     def remove_error_category(self, category: str):
+        """
+        Remove an existing error category. If no category is set, nothing happens.
+
+        :param category: Category that should be removed
+        """
+        if isinstance(self._article_list[-1], str):
+            self._article_list[-1] = re.sub(f"\n?\[\[Kategorie:{category}\]\][^\n]*", "", self._article_list[-1]).strip()
+            if not self._article_list[-1]:
+                del self._article_list[-1]
 
