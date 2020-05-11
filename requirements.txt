@@ -24,6 +24,6 @@ requests==2.23.0          # via -r requirements.in, pywikibot, requests-oauthlib
 roman==3.2                # via -r requirements.in
 s3transfer==0.3.3         # via boto3
 six==1.14.0               # via python-dateutil
-smmap==3.0.2              # via gitdb
+smmap==3.0.4              # via gitdb
 soupsieve==2.0            # via beautifulsoup4
 urllib3==1.25.9           # via botocore, requests
