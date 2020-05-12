@@ -52,7 +52,7 @@ class P921MainSubject(ClaimFactory):
         claim_json = self._get_claim_json()
         if not claim_json:
             return self._create_claim_dictionary([], [])
-        new_claim: pywikibot.Claim = pywikibot.Claim.fromJSON(claim_json[0])
+        new_claim: pywikibot.Claim = pywikibot.Claim.fromJSON(self.wikisource, claim_json[0])
         old_claims = data_item.claims[self.get_property_string()]
         if not old_claims:
             return self._create_claim_dictionary([new_claim], [])

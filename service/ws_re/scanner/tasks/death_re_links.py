@@ -34,7 +34,11 @@ class DEALTask(ReScannerTask, ReporterMixin):
                     if link_to_check:
                         self._check_link(link_to_check)
                 # then links in text
-                for potential_link in self.re_siehe_regex.findall(article.text):
+                for idx, potential_link in enumerate(self.re_siehe_regex.findall(article.text)):
+                    # todo: do this with async tools, but for the moment check only the first 50 links
+                    # relevant for RE:Register (Band XI)
+                    if idx > 50:
+                        break
                     self._check_link(potential_link)
             elif isinstance(article, str):
                 for potential_link in self.re_siehe_regex.findall(article):

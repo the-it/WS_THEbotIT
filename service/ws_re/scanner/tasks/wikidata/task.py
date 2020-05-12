@@ -69,6 +69,7 @@ class DATATask(ReScannerTask):
                     if claims_to_change["add"]:
                         item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
                     # process if non claims differ
+                    # todo: detection for diffs not working correctly, ok for save edits, bad dor requests
                     if self._labels_and_sitelinks_has_changed(data_item.toJSON(), self._non_claims):
                         item_dict_add.update(self._non_claims)
                     # if a diff exists alter the wikidata item
