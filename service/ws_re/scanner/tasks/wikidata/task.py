@@ -93,7 +93,7 @@ class DATATask(ReScannerTask):
 
     @property
     def _non_claims(self) -> Dict:
-        if self.re_page[0]["VERWEIS"]:
+        if self.re_page[0]["VERWEIS"].value:
             replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix,
                                                                           lemma_with_prefix=self.re_page.lemma)
         else:
