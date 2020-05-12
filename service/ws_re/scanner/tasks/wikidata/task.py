@@ -13,7 +13,8 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDicti
     SerializedClaimDictionary, ClaimList, ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
-from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, P156FollowedBy
+from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
+    P156FollowedBy
 from service.ws_re.scanner.tasks.wikidata.claims.p1680_subtitle import P1680Subtitle
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
@@ -143,7 +144,7 @@ class DATATask(ReScannerTask):
         claims_to_add: ClaimDictionary = {}
         claims_to_remove: ClaimList = []
         for claim_factory_class in self.claim_factories:
-            claim_factory = claim_factory_class(self.re_page)
+            claim_factory = claim_factory_class(self.re_page, self.logger)
             claims_to_change_dict = claim_factory.get_claims_to_update(data_item)
             if claims_to_change_dict["add"]:
                 claims_to_add.update(claims_to_change_dict["add"])
