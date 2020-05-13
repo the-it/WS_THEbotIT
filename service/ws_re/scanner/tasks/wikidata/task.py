@@ -18,6 +18,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by i
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
+from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
@@ -32,6 +33,7 @@ class DATATask(ReScannerTask):
         P155Follows,
         P156FollowedBy,
         P361PartOf,
+        P407LanguageOfWorkOrName,
         P577PublicationDate,
         P921MainSubject,
         P1433PublishedIn,
@@ -136,7 +138,7 @@ class DATATask(ReScannerTask):
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
         -> ChangedClaimsDict:
         """
-        Iterates throw all claim factories and aggregates the claims, that should be remove, and the claims, that
+        Iterates through all claim factories and aggregates the claims, that should be remove, and the claims, that
         should be added.
 
         :param data_item: current
