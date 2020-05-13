@@ -15,7 +15,6 @@ from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
     P156FollowedBy
-from service.ws_re.scanner.tasks.wikidata.claims.p1680_subtitle import P1680Subtitle
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
@@ -37,7 +36,6 @@ class DATATask(ReScannerTask):
         P921MainSubject,
         P1433PublishedIn,
         P1476Title,
-        P1680Subtitle,
         P3903Column,
         P6216CopyrightStatus,
     )
