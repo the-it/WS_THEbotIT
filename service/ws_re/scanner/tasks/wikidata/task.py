@@ -57,6 +57,8 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+                    # todo: remove this. But for testing only new creations
+                    return
                     data_item.get()
                     item_dict_add = {}
                     # process claims, if they differ
