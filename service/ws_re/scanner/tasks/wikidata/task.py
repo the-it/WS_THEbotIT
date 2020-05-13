@@ -15,15 +15,39 @@ from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
     P156FollowedBy
-from service.ws_re.scanner.tasks.wikidata.claims.p1680_subtitle import P1680Subtitle
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
+from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
+from service.ws_re.template.re_page import RePage
 from tools.bots.pi import WikiLogger
+
+
+def get_article_type(re_page: RePage) -> str:
+    INDEX_LIST = (
+        "Register (Band XI)",
+        "Mitarbeiter-Verzeichnis (Band II)",
+        "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913",
+    )
+    PROLOGUE_LIST = (
+        "Abkürzungen",
+        "Abkürzungen (Supplementband I)",
+        "Vorwort (Band I)",
+        "Vorwort (Supplementband I)",
+        "Wilhelm Kroll †",
+    )
+    if re_page.lemma_without_prefix in INDEX_LIST:
+        return "index"
+    if re_page.lemma_without_prefix in PROLOGUE_LIST:
+        return "prologue"
+    elif re_page[0]["VERWEIS"].value:
+        return "crossref"
+    else:
+        return "article"
 
 
 class DATATask(ReScannerTask):
@@ -33,11 +57,11 @@ class DATATask(ReScannerTask):
         P155Follows,
         P156FollowedBy,
         P361PartOf,
+        P407LanguageOfWorkOrName,
         P577PublicationDate,
         P921MainSubject,
         P1433PublishedIn,
         P1476Title,
-        P1680Subtitle,
         P3903Column,
         P6216CopyrightStatus,
     )
@@ -49,6 +73,10 @@ class DATATask(ReScannerTask):
             self._non_claims_template_article = Template(non_claims_json.read())
         with open(Path(__file__).parent.joinpath("non_claims_crossref.json")) as non_claims_json:
             self._non_claims_template_crossref = Template(non_claims_json.read())
+        with open(Path(__file__).parent.joinpath("non_claims_index.json")) as non_claims_json:
+            self._non_claims_template_index = Template(non_claims_json.read())
+        with open(Path(__file__).parent.joinpath("non_claims_prologue.json")) as non_claims_json:
+            self._non_claims_template_prologue = Template(non_claims_json.read())
         # debug functions
         self._counter = 0
 
@@ -59,6 +87,8 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+                    # todo: remove this. But for testing only new creations
+                    return
                     data_item.get()
                     item_dict_add = {}
                     # process claims, if they differ
@@ -94,7 +124,14 @@ class DATATask(ReScannerTask):
 
     @property
     def _non_claims(self) -> Dict:
-        if self.re_page[0]["VERWEIS"].value:
+        article_type = get_article_type(self.re_page)
+        if article_type == "index":
+            replaced_json = self._non_claims_template_index.substitute(lemma=self.re_page.lemma_without_prefix,
+                                                                       lemma_with_prefix=self.re_page.lemma)
+        elif article_type == "prologue":
+            replaced_json = self._non_claims_template_prologue.substitute(lemma=self.re_page.lemma_without_prefix,
+                                                                          lemma_with_prefix=self.re_page.lemma)
+        elif article_type == "crossref":
             replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix,
                                                                           lemma_with_prefix=self.re_page.lemma)
         else:
@@ -136,7 +173,7 @@ class DATATask(ReScannerTask):
     def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) \
         -> ChangedClaimsDict:
         """
-        Iterates throw all claim factories and aggregates the claims, that should be remove, and the claims, that
+        Iterates through all claim factories and aggregates the claims, that should be remove, and the claims, that
         should be added.
 
         :param data_item: current

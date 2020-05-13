@@ -25,7 +25,7 @@ class ReScanner(CanonicalBot):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(hours=6)
         self.tasks: List[Callable] = [KSCHTask, DEALTask, DEWPTask, SCANTask]
-        if datetime.now() < datetime(2020, 5, 13, 12):  # for now approve every nightly run of DATATask
+        if datetime.now() < datetime(2020, 5, 14, 12):  # for now approve every nightly run of DATATask
             self.tasks.append(DATATask)
         if self.debug:
             self.tasks = self.tasks + []
