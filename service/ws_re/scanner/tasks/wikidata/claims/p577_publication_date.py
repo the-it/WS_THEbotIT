@@ -11,6 +11,6 @@ class P577PublicationDate(ClaimFactory):
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
         snak = SnakParameter(property_str=self.get_property_string(),
-                             target_type="wikibase-item",
+                             target_type="time",
                              target=self._volume_of_first_article.year)
         return [self.create_claim_json(snak)]
