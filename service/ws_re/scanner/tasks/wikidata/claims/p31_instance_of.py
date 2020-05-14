@@ -2,7 +2,7 @@ from typing import List
 
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
     JsonClaimDict, SnakParameter
-from service.ws_re.scanner.tasks.wikidata.task import get_article_type
+from service.ws_re.scanner.tasks.wikidata.base import get_article_type
 
 
 class P31InstanceOf(ClaimFactory):

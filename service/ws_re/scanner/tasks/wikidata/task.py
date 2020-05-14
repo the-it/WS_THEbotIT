@@ -9,6 +9,7 @@ import dictdiffer
 import pywikibot
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
+from service.ws_re.scanner.tasks.wikidata.base import get_article_type
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
     SerializedClaimDictionary, ClaimList, ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
@@ -23,31 +24,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
-from service.ws_re.template.re_page import RePage
 from tools.bots.pi import WikiLogger
-
-
-def get_article_type(re_page: RePage) -> str:
-    INDEX_LIST = (
-        "Register (Band XI)",
-        "Mitarbeiter-Verzeichnis (Band II)",
-        "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913",
-    )
-    PROLOGUE_LIST = (
-        "Abkürzungen",
-        "Abkürzungen (Supplementband I)",
-        "Vorwort (Band I)",
-        "Vorwort (Supplementband I)",
-        "Wilhelm Kroll †",
-    )
-    if re_page.lemma_without_prefix in INDEX_LIST:
-        return "index"
-    if re_page.lemma_without_prefix in PROLOGUE_LIST:
-        return "prologue"
-    elif re_page[0]["VERWEIS"].value:
-        return "crossref"
-    else:
-        return "article"
 
 
 class DATATask(ReScannerTask):
