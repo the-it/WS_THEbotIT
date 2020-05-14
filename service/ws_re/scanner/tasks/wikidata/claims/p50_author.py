@@ -9,6 +9,8 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFacto
 class P50Author(ClaimFactory):
     """
     Returns the Claim **author** -> **<Item of author of RE lemma>**
+
+    # todo: wrong author RE:Dymas 1
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
