@@ -19,7 +19,8 @@ from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by i
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
-from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
+from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import \
+    P407LanguageOfWorkOrName
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
@@ -64,8 +65,6 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                    # todo: remove this. But for testing only new creations
-                    return
                     data_item.get()
                     item_dict_add = {}
                     # process claims, if they differ
