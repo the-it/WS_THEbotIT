@@ -4894,7 +4894,7 @@
   },
   {
     "lemma": "Drusianus pes",
-    "previous": "Δρουσιανὰ ξίφη",
+    "previous": "Drusianus",
     "next": "Drusi arcus",
     "proof_read": 2,
     "chapters": [
@@ -8029,11 +8029,12 @@
     "lemma": "Dyaios",
     "previous": "Dux",
     "next": "Dyaleis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1875,
         "end": 1875,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -8041,11 +8042,12 @@
     "lemma": "Dyaleis",
     "previous": "Dyaios",
     "next": "Dyalos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1875,
         "end": 1875,
-        "author": "Wissowa"
+        "author": "Wissowa."
       }
     ]
   },
@@ -8053,11 +8055,12 @@
     "lemma": "Dyalos",
     "previous": "Dyaleis",
     "next": "Dyardenes",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1875,
         "end": 1875,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -8090,11 +8093,12 @@
     "lemma": "Dymas 1",
     "previous": "Dymanes",
     "next": "Dymas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1876,
         "end": 1877,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -8102,11 +8106,12 @@
     "lemma": "Dymas 2",
     "previous": "Dymas 1",
     "next": "Dymas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1877,
         "end": 1877,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -8114,11 +8119,12 @@
     "lemma": "Dymas 3",
     "previous": "Dymas 2",
     "next": "Dymas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1877,
         "end": 1877,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -8126,11 +8132,12 @@
     "lemma": "Dymas 4",
     "previous": "Dymas 3",
     "next": "Dymas 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1877,
         "end": 1877,
-        "author": "Wagner"
+        "author": "Wagner."
       }
     ]
   },
@@ -8138,11 +8145,12 @@
     "lemma": "Dymas 5",
     "previous": "Dymas 4",
     "next": "Dyme 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1877,
         "end": 1877,
-        "author": "Dieterich"
+        "author": "Dieterich."
       }
     ]
   },
@@ -8154,7 +8162,7 @@
       {
         "start": 1877,
         "end": 1878,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -8162,11 +8170,12 @@
     "lemma": "Dyme 2",
     "previous": "Dyme 1",
     "next": "Dyme 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1878,
         "end": 1878,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
       }
     ]
   },
@@ -8187,11 +8196,12 @@
     "lemma": "Dynamene",
     "previous": "Dyme 3",
     "next": "Dynamis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1878,
         "end": 1878,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -8199,11 +8209,13 @@
     "lemma": "Dynamis",
     "previous": "Dynamene",
     "next": "Dynamius 1",
+    "wp_link": "w:de:Dynamis",
+    "wd_link": "d:Q273612",
     "chapters": [
       {
         "start": 1879,
         "end": 1880,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -8211,11 +8223,14 @@
     "lemma": "Dynamius 1",
     "previous": "Dynamis",
     "next": "Dynamius 2",
+    "proof_read": 3,
+    "wp_link": "w:de:pt:Dinâmio (corretor)",
+    "wd_link": "d:Q3707828",
     "chapters": [
       {
         "start": 1880,
         "end": 1880,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -8223,76 +8238,87 @@
     "lemma": "Dynamius 2",
     "previous": "Dynamius 1",
     "next": "Dynaste",
+    "proof_read": 3,
+    "wp_link": "w:de:en:Claudius Julius Ecclesius Dynamius",
     "chapters": [
       {
         "start": 1880,
         "end": 1880,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
   {
     "lemma": "Dynaste",
     "previous": "Dynamius 2",
-    "next": "Dynasteia",
+    "next": "Δυναστεία",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
         "end": 1880,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
   {
-    "lemma": "Dynasteia",
+    "lemma": "Δυναστεία",
     "previous": "Dynaste",
     "next": "Dyndason",
+    "sort_key": "Dynasteia",
+    "proof_read": 2,
+    "wp_link": "w:de:Dynastie",
+    "wd_link": "d:Q164950",
     "chapters": [
       {
         "start": 1880,
         "end": 1880,
-        "author": "Szanto"
+        "author": "Szanto."
       }
     ]
   },
   {
     "lemma": "Dyndason",
-    "previous": "Dynasteia",
-    "next": "Dyo bunon to phrurion",
+    "previous": "Δυναστεία",
+    "next": "Δύο βουνῶν τὸ φρούριον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
         "end": 1880,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Dyo bunon to phrurion",
+    "lemma": "Δύο βουνῶν τὸ φρούριον",
     "previous": "Dyndason",
     "next": "Dyodekateus",
+    "sort_key": "Dyo bunon to phrurion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
         "end": 1880,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Dyodekateus",
-    "previous": "Dyo bunon to phrurion",
-    "next": "Dyo korakon limen",
+    "previous": "Δύο βουνῶν τὸ φρούριον",
+    "next": "Δύο κοράκων λιμήν",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
         "end": 1881,
-        "author": "Dittenberger"
+        "author": "Dittenberger."
       }
     ]
   },
   {
-    "lemma": "Dyo korakon limen",
+    "lemma": "Δύο κοράκων λιμήν",
     "previous": "Dyodekateus",
     "next": "Dyos",
     "chapters": [
@@ -8305,8 +8331,10 @@
   },
   {
     "lemma": "Dyos",
-    "previous": "Dyo korakon limen",
+    "previous": "Δύο κοράκων λιμήν",
     "next": "Dyras",
+    "redirect": "Diur 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1881,
@@ -8322,7 +8350,7 @@
       {
         "start": 1881,
         "end": 1881,
-        "author": "Philippson"
+        "author": "Philippson."
       }
     ]
   },
@@ -8330,11 +8358,12 @@
     "lemma": "Dyraspes",
     "previous": "Dyras",
     "next": "Dyrbaioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1881,
         "end": 1881,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -8342,11 +8371,12 @@
     "lemma": "Dyrbaioi",
     "previous": "Dyraspes",
     "next": "Dyrin",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1881,
         "end": 1882,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -8354,11 +8384,12 @@
     "lemma": "Dyrin",
     "previous": "Dyrbaioi",
     "next": "Dyritai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1882,
         "end": 1882,
-        "author": "Fischer"
+        "author": "Fischer."
       }
     ]
   },
@@ -8366,11 +8397,12 @@
     "lemma": "Dyritai",
     "previous": "Dyrin",
     "next": "Dyrrhachion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1882,
         "end": 1882,
-        "author": "Fischer"
+        "author": "Fischer."
       }
     ]
   },
@@ -8390,11 +8422,12 @@
     "lemma": "Dyrrhachos",
     "previous": "Dyrrhachion",
     "next": "Dyrta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1887,
         "end": 1888,
-        "author": "Escher"
+        "author": "Escher."
       }
     ]
   },
@@ -8402,11 +8435,12 @@
     "lemma": "Dyrta",
     "previous": "Dyrrhachos",
     "next": "Dyrzela",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1888,
+        "start": 1887,
         "end": 1888,
-        "author": "Tomaschek"
+        "author": "Tomaschek."
       }
     ]
   },
@@ -8414,11 +8448,12 @@
     "lemma": "Dyrzela",
     "previous": "Dyrta",
     "next": "Dysaules",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1888,
+        "start": 1887,
         "end": 1888,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -8426,11 +8461,12 @@
     "lemma": "Dysaules",
     "previous": "Dyrzela",
     "next": "Dyscelados",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1888,
         "end": 1889,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -8463,11 +8499,12 @@
     "lemma": "Dysmai",
     "previous": "Dysis",
     "next": "Dysmainai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1889,
         "end": 1889,
-        "author": "Sethe"
+        "author": "Sethe."
       }
     ]
   },
@@ -8475,11 +8512,12 @@
     "lemma": "Dysmainai",
     "previous": "Dysmai",
     "next": "Dysniketos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1889,
         "end": 1889,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -8487,11 +8525,12 @@
     "lemma": "Dysniketos",
     "previous": "Dysmainai",
     "next": "Dysnomie",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1889,
         "end": 1889,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -8499,11 +8538,12 @@
     "lemma": "Dysnomie",
     "previous": "Dysniketos",
     "next": "Dysoron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1889,
         "end": 1889,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -8523,11 +8563,12 @@
     "lemma": "Dysponteus",
     "previous": "Dysoron",
     "next": "Dyspontion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1889,
         "end": 1889,
-        "author": "Hoefer"
+        "author": "Hoefer."
       }
     ]
   },
