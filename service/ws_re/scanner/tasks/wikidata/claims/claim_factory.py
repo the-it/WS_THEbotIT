@@ -12,7 +12,6 @@ from service.ws_re.template.article import Article
 from service.ws_re.template.re_page import RePage
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
-
 # type hints
 from tools.bots.pi import WikiLogger
 
@@ -76,6 +75,9 @@ class SnakParameter:
 class ClaimFactory:
     _authors = Authors()
     _volumes = Volumes()
+    _IMPORTED_FROM_WIKISOURCE = SnakParameter(property_str="P143",
+                                              target_type="wikibase-item",
+                                              target="Q15522295")
 
     def __init__(self, re_page: RePage, logger: WikiLogger):
         self.wikidata = re_page.page.data_repository

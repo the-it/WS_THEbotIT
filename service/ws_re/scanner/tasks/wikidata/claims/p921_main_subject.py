@@ -10,8 +10,6 @@ class P921MainSubject(ClaimFactory):
     """
     Returns the Claim **main subject** -> **<Item of wikipedia article>**
     """
-    IMPORTED_FROM_WIKIMEDIA_PROJECT = "P143"
-    GERMAN_WIKISOURCE = "Q15522295"
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
         wp_article = str(self._first_article["WIKIPEDIA"].value)
@@ -33,10 +31,8 @@ class P921MainSubject(ClaimFactory):
         snak = SnakParameter(property_str=self.get_property_string(),
                              target_type="wikibase-item",
                              target=wp_data_item.id)
-        ref_snak = SnakParameter(property_str=self.IMPORTED_FROM_WIKIMEDIA_PROJECT,
-                             target_type="wikibase-item",
-                             target=self.GERMAN_WIKISOURCE)
-        return [self.create_claim_json(snak, references=[[ref_snak]])]
+
+        return [self.create_claim_json(snak, references=[[self._IMPORTED_FROM_WIKISOURCE]])]
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
