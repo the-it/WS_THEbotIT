@@ -9769,7 +9769,7 @@
     "lemma": "Banaurides",
     "previous": "Banassac",
     "next": "Banuus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 196,
@@ -18270,24 +18270,39 @@
   {
     "lemma": "Draponus",
     "previous": "Drakon 18",
-    "next": "Drasdea",
+    "next": "Drappus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 414,
         "end": 414,
-        "author": "Hähnle"
+        "author": "Hähnle."
+      }
+    ]
+  },
+  {
+    "lemma": "Drappus 1",
+    "previous": "Draponus",
+    "next": "Drasdea",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 414,
+        "end": 414,
+        "author": "Hähnle."
       }
     ]
   },
   {
     "lemma": "Drasdea",
-    "previous": "Draponus",
+    "previous": "Drappus 1",
     "next": "Dreiheiligen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 414,
         "end": 414,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
@@ -18295,11 +18310,13 @@
     "lemma": "Dreiheiligen",
     "previous": "Drasdea",
     "next": "Drombus",
+    "proof_read": 2,
+    "ws_link": "s:de:Dreiheiligen",
     "chapters": [
       {
         "start": 415,
         "end": 415,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -18307,11 +18324,12 @@
     "lemma": "Drombus",
     "previous": "Dreiheiligen",
     "next": "Drongilon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 415,
         "end": 415,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18319,11 +18337,12 @@
     "lemma": "Drongilon",
     "previous": "Drombus",
     "next": "Drusus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 415,
         "end": 415,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
@@ -18331,11 +18350,12 @@
     "lemma": "Drusus 5",
     "previous": "Drongilon",
     "next": "Drypetis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 415,
         "end": 415,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18347,7 +18367,7 @@
       {
         "start": 415,
         "end": 415,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -18355,11 +18375,12 @@
     "lemma": "Dubitatus",
     "previous": "Drypetis",
     "next": "Dunius a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 415,
         "end": 415,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18367,11 +18388,12 @@
     "lemma": "Dunius a",
     "previous": "Dubitatus",
     "next": "Dunon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 415,
         "end": 416,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -18379,11 +18401,12 @@
     "lemma": "Dunon",
     "previous": "Dunius a",
     "next": "Durnium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
         "end": 416,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -18391,11 +18414,12 @@
     "lemma": "Durnium",
     "previous": "Dunon",
     "next": "Duros, duron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
         "end": 416,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -18403,53 +18427,60 @@
     "lemma": "Duros, duron",
     "previous": "Durnium",
     "next": "Durotelis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
         "end": 416,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Durotelis",
     "previous": "Duros, duron",
-    "next": "Durucu(s",
+    "next": "ucu(s)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
         "end": 416,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
   {
-    "lemma": "Durucu(s",
+    "lemma": "ucu(s)",
     "previous": "Durotelis",
     "next": "Dyseris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
         "end": 416,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
   {
     "lemma": "Dyseris",
-    "previous": "Durucu(s",
-    "next": "Ebreis",
+    "previous": "ucu(s)",
+    "next": "Eboreus pagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
         "end": 416,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
   {
+    "lemma": "Eboreus pagus",
+    "previous": "Dyseris"
+  },
+  {
     "lemma": "Ebreis",
-    "previous": "Dyseris",
     "next": "Eburus",
     "chapters": [
       {
