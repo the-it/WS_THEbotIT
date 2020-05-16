@@ -5,7 +5,7 @@ import sys
 from abc import abstractmethod, ABC
 from collections.abc import Mapping
 from datetime import datetime, timedelta
-from typing import Dict, Any, Iterator
+from typing import Dict, Any, Iterator, List
 from typing import TypedDict  # pylint: disable=no-name-in-module
 
 from pywikibot import Page, Site, Category
@@ -259,7 +259,7 @@ class OneTimeBot(ABC):
             page.text = text
             page.save(change_msg, botflag=True)
 
-    def get_lemma_str_from_cat(self, category: str):
+    def get_lemma_str_from_cat(self, category: str) -> List[str]:
         page = Category(self.wiki, category)
         cat_list = [str(lemma).strip("[]")[2:] for lemma in CategorizedPageGenerator(page)]
         return cat_list
