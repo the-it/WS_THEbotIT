@@ -19,7 +19,8 @@ from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by i
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
-from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
+from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import \
+    P407LanguageOfWorkOrName
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
@@ -64,8 +65,6 @@ class DATATask(ReScannerTask):
                 try:
                     # edit existing wikidata item
                     data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                    # todo: remove this. But for testing only new creations
-                    return
                     data_item.get()
                     item_dict_add = {}
                     # process claims, if they differ
@@ -76,7 +75,6 @@ class DATATask(ReScannerTask):
                     if claims_to_change["add"]:
                         item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
                     # process if non claims differ
-                    # todo: detection for diffs not working correctly, ok for save edits, bad dor requests
                     if self._labels_and_sitelinks_has_changed(data_item.toJSON(), self._non_claims):
                         item_dict_add.update(self._non_claims)
                     # if a diff exists alter the wikidata item
@@ -117,9 +115,8 @@ class DATATask(ReScannerTask):
         non_claims: Dict = json.loads(replaced_json)
         return non_claims
 
-    @property
-    def _languages(self) -> List[str]:
-        return [str(language) for language in self._non_claims["labels"].keys()]
+    def _languages(self, labels_or_descriptions: str) -> List[str]:
+        return [str(language) for language in self._non_claims[labels_or_descriptions].keys()]
 
     def _labels_and_sitelinks_has_changed(self, old_non_claims: Dict, new_non_claims: Dict) -> bool:
         # claims are not relevant here
@@ -132,7 +129,7 @@ class DATATask(ReScannerTask):
             old_non_claims[labels_or_descriptions] = {key: value
                                                       for (key, value)
                                                       in old_non_claims[labels_or_descriptions].items()
-                                                      if key in self._languages}
+                                                      if key in self._languages(labels_or_descriptions)}
         return bool(tuple(dictdiffer.diff(new_non_claims, old_non_claims)))
 
     # CLAIM functionality
