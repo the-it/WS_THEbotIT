@@ -1,4 +1,5 @@
 # pylint: disable=protected-access,no-self-use
+from datetime import datetime
 from typing import List
 from unittest import TestCase
 from unittest.mock import MagicMock, PropertyMock, Mock
@@ -10,12 +11,17 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFacto
     SnakParameter, JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
+from tools.bots.pi import WikiLogger
 
 
 class BaseTestClaimFactory(TestCase):
+
     def setUp(self) -> None:
         self.wikidata_site_mock = MagicMock()
         self.wikisource_site_mock = MagicMock()
+        self.logger = WikiLogger(bot_name="Test",
+                                 start_time=datetime(2000, 1, 1),
+                                 log_to_screen=False)
 
     @staticmethod
     def _create_mock_page(text: str = None, title: str = None):
@@ -36,20 +42,20 @@ class TestClaimFactory(BaseTestClaimFactory):
 
     def setUp(self) -> None:
         super().setUp()
-        self.factory_dummy = self.P1234FactoryDummy(MagicMock(), None)
-        self.base_json = {"mainsnak": {"snaktype": "value",
-                                       "property": "P1234",
-                                       "datatype": "string",
-                                       "datavalue": {"value": "a", "type": "string"}},
-                          "type": "statement",
-                          "rank": "normal"}
-        self.a = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
-        self.base_json["mainsnak"]["datavalue"]["value"] = "b"
-        self.b = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
-        self.base_json["mainsnak"]["datavalue"]["value"] = "c"
-        self.c = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
-        self.base_json["mainsnak"]["datavalue"]["value"] = "d"
-        self.d = pywikibot.Claim.fromJSON(self.wikidata_site_mock, self.base_json)
+        self.factory_dummy = self.P1234FactoryDummy(MagicMock(), self.logger)
+
+        def get_json(letter: str):
+            return {"mainsnak": {"snaktype": "value",
+                                 "property": "P1234",
+                                 "datatype": "string",
+                                 "datavalue": {"value": letter, "type": "string"}},
+                    "type": "statement",
+                    "rank": "normal"}
+
+        self.a = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("a"))
+        self.b = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("b"))
+        self.c = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("c"))
+        self.d = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("d"))
 
     def test_property_string(self):
         compare("P1234", self.P1234FactoryDummy.get_property_string())

@@ -310,3 +310,9 @@ text
         re_page = RePage(self.page_mock)
         re_page.remove_error_category("Name_of_Cat")
         compare(1, len(re_page))
+
+    def test_filter_just_articles_from_article_list(self):
+        self.text_mock.return_value = f"bla\n{ARTICLE_TEMPLATE}\nbla\n{ARTICLE_TEMPLATE}"
+        re_page = RePage(self.page_mock)
+        just_articles = re_page.only_articles
+        compare(2, len(just_articles))

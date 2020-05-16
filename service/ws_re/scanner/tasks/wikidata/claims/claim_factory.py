@@ -1,5 +1,4 @@
 import re
-from abc import abstractmethod
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Dict, List, Tuple, TypedDict, Union, Optional
@@ -8,7 +7,6 @@ import pywikibot
 
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
-from service.ws_re.template.article import Article
 from service.ws_re.template.re_page import RePage
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
@@ -48,10 +46,17 @@ class JsonSnakDict(TypedDict):
     datavalue: JsonDataValue
 
 
-class JsonClaimDict(TypedDict):
-    mainsnak: JsonSnakDict
-    type: str
-    rank: str
+ReferencesList = List[Dict[str, Optional[Union[List[str], Dict[str, List[JsonSnakDict]]]]]]
+
+JsonClaimDict = TypedDict("JsonClaimDict",
+                          {"mainsnak": JsonSnakDict,
+                           "type": str,
+                           "rank": str,
+                           "qualifiers": Dict[str, List[JsonSnakDict]],
+                           "qualifiers-order": List[str],
+                           "references": ReferencesList
+                           },
+                          total=False)
 
 
 # data classes
@@ -86,9 +91,8 @@ class ClaimFactory:
         self.logger = logger
         self._current_year = datetime.now().year
 
-    @abstractmethod
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        ...
+        raise NotImplementedError
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
@@ -111,14 +115,9 @@ class ClaimFactory:
         """
         Returns the property string for this class
         """
-        return re.search(r"^P\d{1,6}", cls.__name__).group(0)
-
-    @property
-    def _first_article(self) -> Article:
-        """
-        Holds the first article of the RE lemma to analyse
-        """
-        return self.re_page[0]
+        if regex_hit := re.search(r"^P\d{1,6}", cls.__name__):
+            return regex_hit.group(0)
+        return ""
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList,
@@ -159,14 +158,16 @@ class ClaimFactory:
             claims_to_add_dict[self.get_property_string()] = claims_to_add
         return {"add": claims_to_add_dict, "remove": claims_to_remove}
 
-    def get_diff_claims_for_replacement(self, claim_list: ClaimList, data_item: pywikibot.ItemPage) -> ClaimDictionary:
+    def get_diff_claims_for_replacement(self,
+                                        claim_list: ClaimList,
+                                        data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         old_claims = self.get_old_claims(data_item)
         claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list(claim_list, old_claims)
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
 
     def get_old_claims(self, data_item) -> List[pywikibot.Claim]:
         try:
-            old_claims = data_item.claims[self.get_property_string()]
+            old_claims: List[pywikibot.Claim] = data_item.claims[self.get_property_string()]
         except (AttributeError, KeyError):
             # if data_item didn't existed -> AttributeError, if claim not exists -> KeyError
             old_claims = []
@@ -186,9 +187,9 @@ class ClaimFactory:
         :return: dictionary representation of a claim
         """
         snak = ClaimFactory.create_snak_json(snak_parameter)
-        claim_json = {"mainsnak": snak,
-                      "type": "statement",
-                      "rank": "normal"}
+        claim_json: JsonClaimDict = {"mainsnak": snak,
+                                     "type": "statement",
+                                     "rank": "normal"}
         if qualifiers:
             qualifiers_dict, qualifiers_order_list = ClaimFactory._add_qualifiers(qualifiers)
             claim_json["qualifiers"] = qualifiers_dict
@@ -199,8 +200,8 @@ class ClaimFactory:
         return claim_json
 
     @staticmethod
-    def _add_references(references) -> List[Dict[str, Optional[Union[List[str], Dict[str, List[JsonSnakDict]]]]]]:
-        references_snak = []
+    def _add_references(references) -> ReferencesList:
+        references_snak: ReferencesList = []
         for reference_list in references:
             reference_list_snak = {}
             reference_list_snak_order = []
@@ -222,37 +223,40 @@ class ClaimFactory:
 
     @staticmethod
     def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
-        snak = {"snaktype": "value", "property": snak_parameter.property_str, "datatype": snak_parameter.target_type}
+        datavalue: JsonDataValue
         if snak_parameter.target_type == "wikibase-item":
-            snak["datavalue"] = {"value": {"entity-type": "item",
-                                           "numeric-id": int(snak_parameter.target.strip("Q"))
-                                           },
-                                 "type": "wikibase-entityid"
-                                 }
+            datavalue = {"value": {"entity-type": "item",
+                                   "numeric-id": int(snak_parameter.target.strip("Q"))
+                                   },
+                         "type": "wikibase-entityid"
+                         }
         elif snak_parameter.target_type == "string":
-            snak["datavalue"] = {"value": snak_parameter.target,
-                                 "type": "string"
-                                 }
+            datavalue = {"value": snak_parameter.target,
+                         "type": "string"
+                         }
         elif snak_parameter.target_type == "time":
             # only for years at the moment ... extend if necessary
-            snak["datavalue"] = {"value": {"time": f"+0000000{int(snak_parameter.target)}-01-01T00:00:00Z",
-                                           "precision": 9,
-                                           "after": 0,
-                                           "before": 0,
-                                           "timezone": 0,
-                                           "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-                                           },
-                                 "type": "time"
-                                 }
+            datavalue = {"value": {"time": f"+0000000{int(snak_parameter.target)}-01-01T00:00:00Z",
+                                   "precision": 9,
+                                   "after": 0,
+                                   "before": 0,
+                                   "timezone": 0,
+                                   "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                   },
+                         "type": "time"
+                         }
         elif snak_parameter.target_type == "monolingualtext":
-            snak["datavalue"] = {"value": {"text": snak_parameter.target,
-                                           "language": "de"
-                                           },
-                                 "type": "monolingualtext"
-                                 }
+            datavalue = {"value": {"text": snak_parameter.target,
+                                   "language": "de"
+                                   },
+                         "type": "monolingualtext"
+                         }
         else:
             raise BotException(f"target_type \"{snak_parameter.target_type}\" not supported")
-        return snak
+        return {"snaktype": "value",
+                "property": snak_parameter.property_str,
+                "datatype": snak_parameter.target_type,
+                "datavalue": datavalue}
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
@@ -263,7 +267,7 @@ class ClaimFactory:
             if isinstance(article_part, str):
                 continue
             author = article_part.author[0]
-            band = self.re_page[0]["BAND"].value
+            band = self.re_page.first_article["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)
             if len(possible_authors) == 1:
                 author_list.append(possible_authors[0])
@@ -271,4 +275,4 @@ class ClaimFactory:
 
     @property
     def _volume_of_first_article(self) -> Volume:
-        return self._volumes[str(self._first_article["BAND"].value)]
+        return self._volumes[str(self.re_page.first_article["BAND"].value)]

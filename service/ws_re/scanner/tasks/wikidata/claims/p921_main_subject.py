@@ -12,7 +12,7 @@ class P921MainSubject(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        wp_article = str(self._first_article["WIKIPEDIA"].value)
+        wp_article = str(self.re_page.first_article["WIKIPEDIA"].value)
         # if no wp_article is present, there is nothing to connect
         if not wp_article:
             return []

@@ -15,7 +15,7 @@ from tools.bots.test_pi import setup_data_path, teardown_data_path, _DATA_PATH_T
 
 class TestReScanner(TestCase):
     def setUp(self):
-        self.petscan_patcher = mock.patch("service.ws_re.scanner.scanner.PetScan")
+        self.petscan_patcher = mock.patch("service.ws_re.scanner.base.PetScan")
         self.petscan_mock = self.petscan_patcher.start()
         self.run_mock = mock.Mock()
         self.petscan_mock.return_value = mock.Mock(run=self.run_mock)
@@ -113,11 +113,11 @@ class TestReScanner(TestCase):
 
     def _mock_surroundings(self):
         # pylint: disable=attribute-defined-outside-init
-        lemma_patcher = mock.patch("service.ws_re.scanner.scanner.ReScanner.compile_lemma_list",
+        lemma_patcher = mock.patch("service.ws_re.scanner.base.ReScanner.compile_lemma_list",
                                    mock.Mock())
-        page_patcher = mock.patch("service.ws_re.scanner.scanner.pywikibot.Page")
+        page_patcher = mock.patch("service.ws_re.scanner.base.pywikibot.Page")
         page_patcher_error = mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page")
-        re_page_patcher = mock.patch("service.ws_re.scanner.scanner.RePage")
+        re_page_patcher = mock.patch("service.ws_re.scanner.base.RePage")
         self.lemma_mock = lemma_patcher.start()
         self.page_mock = page_patcher.start()
         self.page_error_mock = page_patcher_error.start()
@@ -125,7 +125,7 @@ class TestReScanner(TestCase):
 
     def _mock_task(self):
         # pylint: disable=attribute-defined-outside-init
-        task_patcher = mock.patch("service.ws_re.scanner.scanner.ReScannerTask.run")
+        task_patcher = mock.patch("service.ws_re.scanner.base.ReScannerTask.run")
         self.task_mock = task_patcher.start()
 
     def test_one_tasks_one_lemma(self):
@@ -267,7 +267,7 @@ class TestReScanner(TestCase):
     def test_watchdog(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [":RE:Lemma1", ":RE:Lemma2"]
-        with mock.patch("service.ws_re.scanner.scanner.ReScanner._watchdog", mock.Mock(return_value=True)):
+        with mock.patch("service.ws_re.scanner.base.ReScanner._watchdog", mock.Mock(return_value=True)):
             with LogCapture() as log_catcher:
                 with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
                     log_catcher.clear()

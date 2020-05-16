@@ -40,7 +40,7 @@ class P6216CopyrightStatus(ClaimFactory):
         pma_claim = self.min_years_since_death
         if pma_claim:
             claim_list.append(pma_claim)
-        if self._first_article["KEINE_SCHÖPFUNGSHÖHE"].value:
+        if self.re_page.first_article["KEINE_SCHÖPFUNGSHÖHE"].value:
             claim_list.append(self.threshold_of_originality)
         return claim_list
 

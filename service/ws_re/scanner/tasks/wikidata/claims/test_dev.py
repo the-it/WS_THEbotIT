@@ -1,6 +1,6 @@
 # pylint: skip-file
 import json
-from unittest.case import TestCase
+from unittest.case import TestCase, skip
 
 import pywikibot
 
@@ -8,7 +8,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P
 from service.ws_re.template.re_page import RePage
 
 
-# @skip("development")
+@skip("development")
 class TestDev(TestCase):
     def test_development(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")

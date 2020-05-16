@@ -125,6 +125,14 @@ class RePage:
         return f"[[{self.lemma}|{self.lemma_without_prefix}]]"
 
     @property
+    def only_articles(self) -> List[Article]:
+        return [article for article in self._article_list if isinstance(article, Article)]
+
+    @property
+    def first_article(self) -> Article:
+        return self.only_articles[0]
+
+    @property
     def splitted_article_list(self) -> List[List[Union[Article, str]]]:
         splitted_list: List[List[Union[Article, str]]] = []
         for article in self._article_list:
