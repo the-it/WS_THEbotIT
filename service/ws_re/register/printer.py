@@ -35,8 +35,8 @@ class ReRegisterPrinter(CanonicalBot):
                     overview.append(self._create_overview_line(register, False))
         overview.append("|}")
         self.save_if_changed(Page(self.wiki,
-                                  f"Paulys Realencyclopädie der classischen "
-                                  f"Altertumswissenschaft/Register/Autorenübersicht"),
+                                  "Paulys Realencyclopädie der classischen "
+                                  "Altertumswissenschaft/Register/Autorenübersicht"),
                              "\n".join(overview),
                              "Register aktualisiert")
 

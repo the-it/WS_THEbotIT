@@ -36,7 +36,7 @@ class TestClaimFactory(BaseTestClaimFactory):
 
     def setUp(self) -> None:
         super().setUp()
-        self.factory_dummy = self.P1234FactoryDummy(MagicMock())
+        self.factory_dummy = self.P1234FactoryDummy(MagicMock(), None)
         self.base_json = {"mainsnak": {"snaktype": "value",
                                        "property": "P1234",
                                        "datatype": "string",
@@ -122,12 +122,11 @@ class TestClaimFactory(BaseTestClaimFactory):
         expect = {"mainsnak": {"snaktype": "value",
                                "property": "P31",
                                "datatype": "monolingualtext",
-                               "datavalue": {"value": {
-                                   "text": "texttexttext",
-                                   "language": "de"
+                               "datavalue": {"value": {"text": "texttexttext",
+                                                       "language": "de"},
+                                             "type": "monolingualtext"
+                                             }
                                },
-                                   "type": "monolingualtext"
-                               }},
                   "type": "statement",
                   "rank": "normal"}
 

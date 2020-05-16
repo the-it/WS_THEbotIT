@@ -5,7 +5,6 @@ import time
 from datetime import datetime
 from unittest import TestCase, mock, skip
 
-import pywikibot
 from testfixtures import LogCapture
 
 from service.ws_re.scanner.base import ReScanner
@@ -57,17 +56,12 @@ class TestReScanner(TestCase):
                 "https://petscan.wmflabs.org/?language=de&project=wikisource"))
             self.assertTrue(checker.is_part_of_searchstring(
                 "&categories=RE:Fertig%0D%0ARE:Korrigiert%0D%0ARE:Platzhalter"))
-            #self.assertTrue(checker.is_part_of_searchstring(
-            #    "&negcats=Wikisource:Gemeinfreiheit%7C2"))
             self.assertTrue(checker.is_part_of_searchstring("&templates_yes=REDaten"))
             self.assertTrue(checker.is_part_of_searchstring("&ns%5B0%5D=1"))
             self.assertTrue(checker.is_part_of_searchstring("&combination=union"))
             self.assertTrue(checker.is_part_of_searchstring("&sortby=date"))
             self.assertTrue(checker.is_part_of_searchstring("&sortorder=descending"))
             self.assertTrue(checker.is_empty())
-
-    def test_new_search(self):
-        ReScanner(wiki=pywikibot.Site(code="de", fam="wikisource", user="THEbotIT"))._get_raw_list()
 
     result_of_searcher = [{"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
                            "title": "RE:Lemma1", "touched": "20010101232359"},
@@ -289,8 +283,10 @@ class TestReScanner(TestCase):
     @skip("I quit this task for the moment")
     def test_save_going_wrong(self):
         self._mock_surroundings()
+
         def side_effect(*args, **kwargs):
             raise ReDatenException(args, kwargs)
+
         save_mock = mock.patch("service.ws_re.scanner.RePage.save",
                                new_callable=mock.Mock()).start()
         type(self.re_page_mock).save = save_mock.start()

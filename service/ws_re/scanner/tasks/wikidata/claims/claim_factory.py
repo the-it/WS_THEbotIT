@@ -88,10 +88,7 @@ class ClaimFactory:
 
     @abstractmethod
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        """
-
-        """
-        pass
+        ...
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
@@ -124,8 +121,8 @@ class ClaimFactory:
         return self.re_page[0]
 
     @staticmethod
-    def _filter_new_vs_old_claim_list(new_claim_list: ClaimList, old_claim_list: ClaimList) \
-        -> Tuple[ClaimList, ClaimList]:
+    def _filter_new_vs_old_claim_list(new_claim_list: ClaimList,
+                                      old_claim_list: ClaimList) -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -238,16 +235,15 @@ class ClaimFactory:
                                  }
         elif snak_parameter.target_type == "time":
             # only for years at the moment ... extend if necessary
-            snak["datavalue"] = {"value": {
-                "time": f"+0000000{int(snak_parameter.target)}-01-01T00:00:00Z",
-                "precision": 9,
-                "after": 0,
-                "before": 0,
-                "timezone": 0,
-                "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-            },
-                "type": "time"
-            }
+            snak["datavalue"] = {"value": {"time": f"+0000000{int(snak_parameter.target)}-01-01T00:00:00Z",
+                                           "precision": 9,
+                                           "after": 0,
+                                           "before": 0,
+                                           "timezone": 0,
+                                           "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                           },
+                                 "type": "time"
+                                 }
         elif snak_parameter.target_type == "monolingualtext":
             snak["datavalue"] = {"value": {"text": snak_parameter.target,
                                            "language": "de"

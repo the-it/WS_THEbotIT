@@ -310,4 +310,3 @@ text
         re_page = RePage(self.page_mock)
         re_page.remove_error_category("Name_of_Cat")
         compare(1, len(re_page))
-
