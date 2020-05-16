@@ -39,16 +39,10 @@ class ReScanner(CanonicalBot):
                 self.logger.warning("There isn't deprecated data to reload.")
         return self
 
-    def _get_raw_list(self) -> List[str]:
-        return self.get_lemma_str_from_cat("RE:Fertig") + \
-            self.get_lemma_str_from_cat("RE:Korrigiert") + \
-            self.get_lemma_str_from_cat("RE:Platzhalter")
-
     def compile_lemma_list(self) -> List[str]:
         self.logger.info("Compile the lemma list")
         self.logger.info("Searching for lemmas")
-        # raw_lemma_list = self._petscan_search()
-        raw_lemma_list = self._get_raw_list()
+        raw_lemma_list = self._petscan_search()
         self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
         self.logger.info("Filter new_lemma_list")
         # all items which wasn't process before
@@ -71,9 +65,6 @@ class ReScanner(CanonicalBot):
         return new_lemma_list + old_lemma_list
 
     def _petscan_search(self) -> List[str]:
-        """
-        TODO: DEPRECATED
-        """
         searcher = self._prepare_searcher()
         self.logger.info(f"[{searcher} {searcher}]")
         raw_lemma_list: List[PetscanLemma] = []
@@ -84,9 +75,6 @@ class ReScanner(CanonicalBot):
         return [item["nstext"] + ":" + item["title"] for item in raw_lemma_list]
 
     def _prepare_searcher(self) -> PetScan:
-        """
-        TODO: DEPRECATED
-        """
         searcher = PetScan()
         searcher.add_yes_template("REDaten")
 

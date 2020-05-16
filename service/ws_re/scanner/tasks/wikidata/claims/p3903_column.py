@@ -10,10 +10,10 @@ class P3903Column(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        start = str(self._first_article["SPALTE_START"].value)
+        start = str(self.re_page.first_article["SPALTE_START"].value)
         end: str = ""
-        if self._first_article["SPALTE_END"].value not in ("", "OFF"):
-            end = str(self._first_article["SPALTE_END"].value)
+        if self.re_page.first_article["SPALTE_END"].value not in ("", "OFF"):
+            end = str(self.re_page.first_article["SPALTE_END"].value)
         columns = start
         if end and start != end:
             columns = f"{start}–{end}"

@@ -5,7 +5,6 @@ import time
 from datetime import datetime
 from unittest import TestCase, mock, skip
 
-import pywikibot
 from testfixtures import LogCapture
 
 from service.ws_re.scanner.base import ReScanner
@@ -16,7 +15,7 @@ from tools.bots.test_pi import setup_data_path, teardown_data_path, _DATA_PATH_T
 
 class TestReScanner(TestCase):
     def setUp(self):
-        self.petscan_patcher = mock.patch("service.ws_re.scanner.scanner.PetScan")
+        self.petscan_patcher = mock.patch("service.ws_re.scanner.base.PetScan")
         self.petscan_mock = self.petscan_patcher.start()
         self.run_mock = mock.Mock()
         self.petscan_mock.return_value = mock.Mock(run=self.run_mock)
@@ -57,17 +56,12 @@ class TestReScanner(TestCase):
                 "https://petscan.wmflabs.org/?language=de&project=wikisource"))
             self.assertTrue(checker.is_part_of_searchstring(
                 "&categories=RE:Fertig%0D%0ARE:Korrigiert%0D%0ARE:Platzhalter"))
-            #self.assertTrue(checker.is_part_of_searchstring(
-            #    "&negcats=Wikisource:Gemeinfreiheit%7C2"))
             self.assertTrue(checker.is_part_of_searchstring("&templates_yes=REDaten"))
             self.assertTrue(checker.is_part_of_searchstring("&ns%5B0%5D=1"))
             self.assertTrue(checker.is_part_of_searchstring("&combination=union"))
             self.assertTrue(checker.is_part_of_searchstring("&sortby=date"))
             self.assertTrue(checker.is_part_of_searchstring("&sortorder=descending"))
             self.assertTrue(checker.is_empty())
-
-    def test_new_search(self):
-        ReScanner(wiki=pywikibot.Site(code="de", fam="wikisource", user="THEbotIT"))._get_raw_list()
 
     result_of_searcher = [{"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
                            "title": "RE:Lemma1", "touched": "20010101232359"},
@@ -119,11 +113,11 @@ class TestReScanner(TestCase):
 
     def _mock_surroundings(self):
         # pylint: disable=attribute-defined-outside-init
-        lemma_patcher = mock.patch("service.ws_re.scanner.scanner.ReScanner.compile_lemma_list",
+        lemma_patcher = mock.patch("service.ws_re.scanner.base.ReScanner.compile_lemma_list",
                                    mock.Mock())
-        page_patcher = mock.patch("service.ws_re.scanner.scanner.pywikibot.Page")
+        page_patcher = mock.patch("service.ws_re.scanner.base.pywikibot.Page")
         page_patcher_error = mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page")
-        re_page_patcher = mock.patch("service.ws_re.scanner.scanner.RePage")
+        re_page_patcher = mock.patch("service.ws_re.scanner.base.RePage")
         self.lemma_mock = lemma_patcher.start()
         self.page_mock = page_patcher.start()
         self.page_error_mock = page_patcher_error.start()
@@ -131,7 +125,7 @@ class TestReScanner(TestCase):
 
     def _mock_task(self):
         # pylint: disable=attribute-defined-outside-init
-        task_patcher = mock.patch("service.ws_re.scanner.scanner.ReScannerTask.run")
+        task_patcher = mock.patch("service.ws_re.scanner.base.ReScannerTask.run")
         self.task_mock = task_patcher.start()
 
     def test_one_tasks_one_lemma(self):
@@ -273,7 +267,7 @@ class TestReScanner(TestCase):
     def test_watchdog(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [":RE:Lemma1", ":RE:Lemma2"]
-        with mock.patch("service.ws_re.scanner.scanner.ReScanner._watchdog", mock.Mock(return_value=True)):
+        with mock.patch("service.ws_re.scanner.base.ReScanner._watchdog", mock.Mock(return_value=True)):
             with LogCapture() as log_catcher:
                 with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
                     log_catcher.clear()
@@ -289,8 +283,10 @@ class TestReScanner(TestCase):
     @skip("I quit this task for the moment")
     def test_save_going_wrong(self):
         self._mock_surroundings()
+
         def side_effect(*args, **kwargs):
             raise ReDatenException(args, kwargs)
+
         save_mock = mock.patch("service.ws_re.scanner.RePage.save",
                                new_callable=mock.Mock()).start()
         type(self.re_page_mock).save = save_mock.start()
