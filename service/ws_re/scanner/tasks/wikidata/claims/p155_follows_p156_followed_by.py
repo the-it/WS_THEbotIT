@@ -22,7 +22,7 @@ class Neighbour(ClaimFactory):
         return []
 
     def _get_item_of_neighbour_lemma(self) -> Optional[ItemPage]:
-        lemma_neighbour_str = f"RE:{self._first_article[self.neighbour].value}"
+        lemma_neighbour_str = f"RE:{self.re_page.first_article[self.neighbour].value}"
         lemma_neighbour = pywikibot.Page(self.wikisource, lemma_neighbour_str)
         try:
             return lemma_neighbour.data_item()

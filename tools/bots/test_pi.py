@@ -4,7 +4,6 @@ import os
 import time
 from datetime import datetime, timedelta
 from shutil import rmtree
-from typing import Mapping
 from unittest import TestCase, mock
 
 from testfixtures import LogCapture, compare
@@ -339,9 +338,6 @@ class TestPersistedData(TestCase):
 
     def tearDown(self):
         teardown_data_path()
-
-    def test_is_mapping(self):
-        self.assertTrue(isinstance(self.data, Mapping))
 
     def test_delete_key(self):
         self.data["a"] = 1

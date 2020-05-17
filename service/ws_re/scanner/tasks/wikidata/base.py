@@ -18,7 +18,6 @@ def get_article_type(re_page: RePage) -> str:
         return "index"
     if re_page.lemma_without_prefix in PROLOGUE_LIST:
         return "prologue"
-    elif re_page[0]["VERWEIS"].value:
+    if re_page.only_articles[0]["VERWEIS"].value:
         return "crossref"
-    else:
-        return "article"
+    return "article"
