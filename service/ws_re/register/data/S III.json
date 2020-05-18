@@ -7514,7 +7514,9 @@
     "lemma": "Askos a",
     "previous": "Asklepios 2",
     "next": "Asmosata",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Askos",
+    "wd_link": "d:Q732286",
     "chapters": [
       {
         "start": 171,
@@ -16688,6 +16690,7 @@
   {
     "lemma": "Deiotarus 1",
     "previous": "Dedicatio",
+    "next": "Deiotarus 2",
     "proof_read": 2,
     "chapters": [
       {
@@ -16699,7 +16702,7 @@
   },
   {
     "lemma": "Deiotarus 2",
-    "previous": "Dedicatio",
+    "previous": "Deiotarus 1",
     "next": "Deiotarus 4",
     "proof_read": 2,
     "wp_link": "w:de:Deiotaros",
@@ -18049,7 +18052,10 @@
   {
     "lemma": "Domitius 50",
     "previous": "Domitius 43",
+    "next": "Domitius 89a",
     "sort_key": "Domitius 050",
+    "wp_link": "w:de:Gnaeus Domitius Corbulo",
+    "wd_link": "d:Q313066",
     "chapters": [
       {
         "start": 394,
@@ -18060,7 +18066,7 @@
   },
   {
     "lemma": "Domitius 89a",
-    "previous": "Domitius 43",
+    "previous": "Domitius 50",
     "next": "Domitus",
     "sort_key": "Domitius 089a",
     "proof_read": 2,
