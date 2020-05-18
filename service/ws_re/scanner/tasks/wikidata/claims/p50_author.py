@@ -11,6 +11,7 @@ class P50Author(ClaimFactory):
     Returns the Claim **author** -> **<Item of author of RE lemma>**
 
     # todo: wrong author RE:Dymas 1
+    # todo: no author RE:Arderikka 2
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
