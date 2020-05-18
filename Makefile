@@ -67,6 +67,12 @@ integrationtest : clean-coverage
 	coverage run tst_runner.py && \
 	coverage xml
 
+wikitest : clean-coverage
+	echo "########### WIKITEST ###########"
+	export REAL_WIKI=1 && \
+	coverage run tst_runner.py && \
+	coverage xml
+
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \

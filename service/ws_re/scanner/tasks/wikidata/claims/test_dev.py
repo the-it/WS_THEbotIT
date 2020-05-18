@@ -1,17 +1,19 @@
 # pylint: skip-file
 import json
-from unittest.case import TestCase, skip
+from unittest.case import TestCase, skip, skipUnless
 
 import pywikibot
 
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.template.re_page import RePage
+from tools import REAL_WIKI_TEST
 
 
-@skip("development")
+@skipUnless(REAL_WIKI_TEST, "only execute in integration test")
 class TestDev(TestCase):
     def test_development(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         lemma = pywikibot.Page(WS_WIKI, "RE:Rutilius 44")  # existing wikidata_item
         factory = P6216CopyrightStatus(RePage(lemma), None)
-        print(json.dumps(factory._get_claim_json(), indent=2))
+        #print(json.dumps(factory._get_claim_json(), indent=2))
+        print("tada")
