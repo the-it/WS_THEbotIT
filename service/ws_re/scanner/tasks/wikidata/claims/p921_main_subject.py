@@ -11,6 +11,8 @@ class P921MainSubject(ClaimFactory):
     Returns the Claim **main subject** -> **<Item of wikipedia article>**
     """
 
+    ERROR_CAT = "RE:Wartung Wikidata (WD!=WS)"
+
     def _get_claim_json(self) -> List[JsonClaimDict]:
         wp_article = str(self.re_page.first_article["WIKIPEDIA"].value)
         # if no wp_article is present, there is nothing to connect
@@ -53,5 +55,8 @@ class P921MainSubject(ClaimFactory):
         if not old_claims:
             return self._create_claim_dictionary([new_claim], [])
         if not new_claim.same_as(old_claims[0]):
-            self.re_page.add_error_category("RE:Wartung Wikidata (WD!=WS)")
+            self.logger.error(f"{self.re_page.lemma_as_link} has diff to WD main subject")
+            self.re_page.add_error_category(self.ERROR_CAT)
+        else:
+            self.re_page.remove_error_category(self.ERROR_CAT)
         return self._create_claim_dictionary([], [])
