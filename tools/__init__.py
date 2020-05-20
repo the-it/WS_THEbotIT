@@ -23,5 +23,5 @@ def fetch_text_from_wiki_site(wiki: Site, lemma: str) -> str:  # pragma: no cove
     return text
 
 
-INTEGRATION_TEST = "INTEGRATION" in os.environ
-REAL_WIKI_TEST = "REAL_WIKI" in os.environ
+REAL_DATA_TEST = "WS_REAL_DATA" in os.environ
+REAL_WIKI_TEST = "WS_REAL_WIKI" in os.environ

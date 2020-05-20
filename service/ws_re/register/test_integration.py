@@ -7,7 +7,7 @@ from pyfiglet import Figlet
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.registers import Registers
 from service.ws_re.register.test_base import BaseTestRegister
-from tools import INTEGRATION_TEST
+from tools import REAL_DATA_TEST
 
 _MAX_SIZE_WIKI_PAGE = 2_098_175
 
@@ -20,13 +20,13 @@ def _raise_count_errors(errors):
         raise AssertionError("\n".join(errors))
 
 
-if INTEGRATION_TEST:
+if REAL_DATA_TEST:
     parent_class = TestCase
 else:
     parent_class = BaseTestRegister # type: ignore
 
 
-@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+@skipUnless(REAL_DATA_TEST, "only execute in integration test")
 class TestAuthors(parent_class):
     @classmethod
     def setUpClass(cls) -> None:
@@ -52,7 +52,7 @@ class TestAuthors(parent_class):
         _raise_count_errors(errors)
 
 
-@skipUnless(INTEGRATION_TEST, "only execute in integration test")
+@skipUnless(REAL_DATA_TEST, "only execute in integration test")
 class TestIntegrationRegister(parent_class):
     @classmethod
     def setUpClass(cls):
