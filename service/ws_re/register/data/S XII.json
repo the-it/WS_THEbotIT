@@ -2889,29 +2889,46 @@
     "lemma": "Dravus 1",
     "previous": "Dorion 6",
     "next": "Dravus 2",
+    "wp_link": "w:de:Drau",
     "chapters": [
       {
         "start": 239,
         "end": 240,
-        "author": "Piccottini"
+        "author": "Gernot Piccotini."
       }
     ]
   },
   {
     "lemma": "Dravus 2",
     "previous": "Dravus 1",
-    "next": "Eggius 4",
+    "next": "Ducenius 5",
     "chapters": [
       {
         "start": 240,
         "end": 240,
-        "author": "Piccottini"
+        "author": "Gernot Piccotini."
+      }
+    ]
+  },
+  {
+    "lemma": "Ducenius 5",
+    "previous": "Dravus 2"
+  },
+  {
+    "lemma": "Ecuno",
+    "next": "Eggius 4",
+    "redirect": "Carniola",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 240,
+        "end": 240
       }
     ]
   },
   {
     "lemma": "Eggius 4",
-    "previous": "Dravus 2",
+    "previous": "Ecuno",
     "next": "Erythrai 5",
     "chapters": [
       {

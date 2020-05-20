@@ -3798,16 +3798,26 @@
   },
   {
     "lemma": "Drakon 12",
-    "previous": "Dorotheos 10"
+    "previous": "Dorotheos 10",
+    "next": "Drama",
+    "chapters": [
+      {
+        "start": 180,
+        "end": 180,
+        "author": "Mario Bonaria."
+      }
+    ]
   },
   {
     "lemma": "Drama",
+    "previous": "Drakon 12",
     "next": "Echenikos",
+    "wp_link": "w:de:Drama",
     "chapters": [
       {
         "start": 180,
         "end": 182,
-        "author": "Stoessl"
+        "author": "Franz Stoessl."
       }
     ]
   },
