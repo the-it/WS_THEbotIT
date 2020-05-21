@@ -13,6 +13,7 @@ class P50Author(ClaimFactory):
     # todo: wrong author RE:Dymas 1
     # todo: no author RE:Arderikka 2
     # todo: no author RE:Ἄτιμος, RE:Ἀτίμητος ἀγών
+    # todo: not author RE:Livius 38
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
