@@ -2,17 +2,10 @@ from unittest import skip
 
 import pywikibot
 from testfixtures import compare
-from timeout_decorator import timeout_decorator
 
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.template.re_page import RePage
-
-def wikidata_test(func):
-    wrapper = timeout_decorator.timeout(2,
-                                        timeout_exception=AssertionError,
-                                        exception_message="Test took to long. Wikidata seems to be down")(func)
-    return wrapper
 
 
 class TestDATATask(TaskTestCase):

@@ -7,7 +7,7 @@ from pyfiglet import Figlet
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.registers import Registers
 from service.ws_re.register.test_base import BaseTestRegister
-from tools import REAL_DATA_TEST
+from tools.test import REAL_DATA_TEST
 
 _MAX_SIZE_WIKI_PAGE = 2_098_175
 

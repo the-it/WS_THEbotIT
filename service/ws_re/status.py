@@ -4,7 +4,6 @@ from typing import Tuple, List
 
 from pywikibot import Page, Site
 
-from tools import make_html_color
 from tools.bots.pi import CanonicalBot
 from tools.petscan import PetScan, PetscanLemma
 
@@ -85,3 +84,12 @@ if __name__ == "__main__":
     WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReStatus(wiki=WIKI, debug=True) as bot:
         bot.run()
+
+
+def make_html_color(min_value, max_value, value):
+    if max_value >= min_value:
+        color = (1 - (value - min_value) / (max_value - min_value)) * 255
+    else:
+        color = ((value - max_value) / (min_value - max_value)) * 255
+    color = max(0, min(255, color))
+    return str(hex(round(color)))[2:].zfill(2).upper()
