@@ -634,6 +634,7 @@
     "previous": "Annaeus 21",
     "next": "Annidius (Adsidius?) Severus",
     "proof_read": 2,
+    "wp_link": "w:de:Gaius Annianus Verus",
     "chapters": [
       {
         "start": 86,
@@ -781,6 +782,7 @@
     "next": "Antonius 36",
     "sort_key": "Antonius 035a",
     "proof_read": 2,
+    "wp_link": "w:de:Lucius Antonius Albus (Konsul 102)",
     "chapters": [
       {
         "start": 88,
@@ -1146,6 +1148,7 @@
     "previous": "Arsinoë 15",
     "next": "Artorius 7a",
     "proof_read": 2,
+    "wp_link": "w:de:Quintus Articuleius Paetus (Konsul 78)",
     "chapters": [
       {
         "start": 99,
@@ -2913,10 +2916,20 @@
   },
   {
     "lemma": "Ducenius 5",
-    "previous": "Dravus 2"
+    "previous": "Dravus 2",
+    "next": "Ecuno",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 240,
+        "end": 240,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Ecuno",
+    "previous": "Ducenius 5",
     "next": "Eggius 4",
     "redirect": "Carniola",
     "proof_read": 2,
