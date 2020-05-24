@@ -77,20 +77,26 @@ class AuthorCrawler:
         return author_sub_table.split("\n|")
 
     @staticmethod
-    def _extract_author_name(author: str) -> Tuple[str, str]:
+    def _extract_author_infos(author: str) -> Tuple[str, str, str]:
         author = author.lstrip("|")
         # replace all templates
         author = re.sub(r"\{\{.*?\}\}", "", author)
         # replace all comments
         author = re.sub(r"<!--.*?-->", "", author)
         author = re.sub(r"<nowiki>.*?</nowiki>", "", author)
-        # replace all brackets
-        author = re.sub(r"\(.*?\)", "", author)
         # if it's a link use only the second part
         if re.search(r"\[\[", author):
-            author = author.split("|")[1]
-        author = author.translate(TRANS_DICT)
-        names = author.split(",")
+            splitting = author.split("|")
+            author_name = splitting[1]
+            author_lemma = splitting[0]
+        else:
+            author_name = author
+            author_lemma = ""
+        if author_lemma:
+            author_lemma = author_lemma.translate(TRANS_DICT)
+        author_name = author_name.translate(TRANS_DICT)
+        author_name = re.sub(r"\(.*?\)", "", author_name)
+        names = author_name.split(",")
         # handle funky things with a "="-character
         try:
             if "=" in names[0]:
@@ -98,8 +104,8 @@ class AuthorCrawler:
             if "=" in names[1]:
                 names[1] = names[1].split("=")[0].strip()
         except IndexError:
-            return "", names[0].strip()
-        return names[1].strip(), names[0].strip()
+            return "", names[0].strip(), author_lemma
+        return names[1].strip(), names[0].strip(), author_lemma
 
     @staticmethod
     def _extract_years(years: str) -> Tuple[Optional[int], Optional[int]]:
@@ -111,12 +117,14 @@ class AuthorCrawler:
     @classmethod
     def _get_author(cls, author_lines: str) -> Dict[str, AuthorDict]:
         lines = cls._split_author(author_lines)
-        author_tuple = cls._extract_author_name(lines[0])
+        author_tuple = cls._extract_author_infos(lines[0])
         years = cls._extract_years(lines[1])
         author = f"{author_tuple[0]} {author_tuple[1]}".strip()
         author_dict: Dict[str, AuthorDict] = {author: {"last_name": author_tuple[1]}}
         if author_tuple[0]:
             author_dict[author]["first_name"] = author_tuple[0]
+        if author_tuple[2]:
+            author_dict[author]["lemma"] = author_tuple[2]
         birth_year = years[0]
         if birth_year:
             author_dict[author]["birth"] = birth_year

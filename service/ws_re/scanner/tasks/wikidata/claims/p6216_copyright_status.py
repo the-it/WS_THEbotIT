@@ -8,6 +8,8 @@ class P6216CopyrightStatus(ClaimFactory):
     """
     Returns the Claim **copyright status** ->
     **<public domain statements dependend on publication age and death of author>**
+
+    todo: bug RE:Atreus
     """
 
     _COPYRIGHT_STATUS = "P6216"

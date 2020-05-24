@@ -12,13 +12,17 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFacto
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 from tools.bots.pi import WikiLogger
+from tools.test import REAL_WIKI_TEST
 
 
 class BaseTestClaimFactory(TestCase):
-
     def setUp(self) -> None:
-        self.wikidata_site_mock = MagicMock()
-        self.wikisource_site_mock = MagicMock()
+        if REAL_WIKI_TEST:
+            self.wikisource_site = pywikibot.Site(code='de', fam='wikisource', user='THEbotIT')
+            self.wikidata_site = self.wikisource_site.data_repository()
+        else:
+            self.wikidata_site = MagicMock()
+            self.wikisource_site = MagicMock()
         self.logger = WikiLogger(bot_name="Test",
                                  start_time=datetime(2000, 1, 1),
                                  log_to_screen=False)
@@ -52,10 +56,10 @@ class TestClaimFactory(BaseTestClaimFactory):
                     "type": "statement",
                     "rank": "normal"}
 
-        self.a = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("a"))
-        self.b = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("b"))
-        self.c = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("c"))
-        self.d = pywikibot.Claim.fromJSON(self.wikidata_site_mock, get_json("d"))
+        self.a = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("a"))
+        self.b = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("b"))
+        self.c = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("c"))
+        self.d = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("d"))
 
     def test_property_string(self):
         compare("P1234", self.P1234FactoryDummy.get_property_string())

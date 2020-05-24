@@ -83,13 +83,13 @@ class TestLambdaBot(TestCloudBase):
         class WatchdogBot(LambdaBot):
             def __init__(self, **kwargs):
                 super().__init__(**kwargs)
-                self.timeout = timedelta(seconds=0.1)
+                self.timeout = timedelta(seconds=0.3)
 
             def task(self):
                 while True:
                     if self._watchdog():
                         raise Exception("watchdog must not fire")  # pragma: no cover
-                    time.sleep(0.1)
+                    time.sleep(0.3)
                     if self._watchdog():
                         return True
                     raise Exception("watchdog must fire")  # pragma: no cover
