@@ -26,3 +26,11 @@ class TestP50Author(BaseTestClaimFactory):
         claim_json = factory._get_claim_json()
         # should be Richard Wagner (not the composer) (https://www.wikidata.org/wiki/Q2150844)
         compare(2150844, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+    @wikidata_test
+    def test__get_claim_json_bug_Arderikka_2(self):
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Arderikka 2"))
+        factory = P50Author(re_page, self.logger)
+        claim_json = factory._get_claim_json()
+        # should be Franz Heinrich Weißbach (https://www.wikidata.org/wiki/Q106027)
+        compare(106027, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
