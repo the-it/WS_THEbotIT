@@ -19,7 +19,7 @@ class TestP50Author(BaseTestClaimFactory):
         # should be Eugen Oder (https://www.wikidata.org/wiki/Q1372802)
         compare(1372802, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
-    #@wikidata_test
+    @wikidata_test
     def test__get_claim_json_bug_wagner(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Dymas 1"))
         factory = P50Author(re_page, self.logger)
