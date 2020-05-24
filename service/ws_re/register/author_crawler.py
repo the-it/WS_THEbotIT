@@ -91,7 +91,7 @@ class AuthorCrawler:
             author_lemma = splitting[0]
         else:
             author_name = author
-            author_lemma = None
+            author_lemma = ""
         if author_lemma:
             author_lemma = author_lemma.translate(TRANS_DICT)
         author_name = author_name.translate(TRANS_DICT)

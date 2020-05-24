@@ -109,22 +109,26 @@ class TestAuthorCrawler(TestCase):
         compare(expect, self.crawler.get_mapping(test_str))
 
     def test_extract_author_infos(self):
-        compare(("Klaus", "Alpers", None), self.crawler._extract_author_infos("|Alpers, Klaus"))
-        compare(("Franz", "Altheim", None), self.crawler._extract_author_infos("Altheim, [Franz]"))
-        compare(("Wolfgang", "Aly", "Wolfgang Aly"), self.crawler._extract_author_infos("|[[Wolfgang Aly|Aly, Wolf[gang]]]"))
+        compare(("Klaus", "Alpers", ""), self.crawler._extract_author_infos("|Alpers, Klaus"))
+        compare(("Franz", "Altheim", ""), self.crawler._extract_author_infos("Altheim, [Franz]"))
+        compare(("Wolfgang", "Aly", "Wolfgang Aly"),
+                self.crawler._extract_author_infos("|[[Wolfgang Aly|Aly, Wolf[gang]]]"))
         compare(("Walter", "Amelung", "Walter Amelung"),
                 self.crawler._extract_author_infos("|'''[[Walter Amelung|Amelung, [Walter]]]'''"))
-        compare(("Hermann", "Abert", "Hermann Abert"), self.crawler._extract_author_infos("|'''[[Hermann Abert|Abert, [Hermann]]]"))
-        compare(("Martin", "Bang", None), self.crawler._extract_author_infos("Bang, [Martin]{{Anker | B}}"))
-        compare(("Johannes", "Zwicker", None), self.crawler._extract_author_infos("Zwicker, Joh[annes = Hanns]"))
-        compare(("Friedrich Walter", "Lenz", None),
+        compare(("Hermann", "Abert", "Hermann Abert"),
+                self.crawler._extract_author_infos("|'''[[Hermann Abert|Abert, [Hermann]]]"))
+        compare(("Martin", "Bang", ""), self.crawler._extract_author_infos("Bang, [Martin]{{Anker | B}}"))
+        compare(("Johannes", "Zwicker", ""), self.crawler._extract_author_infos("Zwicker, Joh[annes = Hanns]"))
+        compare(("Friedrich Walter", "Lenz", ""),
                 self.crawler._extract_author_infos("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
         compare(("Eduard", "Thraemer", "Eduard Thraemer"),
                 self.crawler._extract_author_infos("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
-        compare(("", "Buren s. Van Buren", None), self.crawler._extract_author_infos("Buren s. Van Buren"))
-        compare(("Karl", "Praechter", None), self.crawler._extract_author_infos("Praechter, K[arl]<nowiki></nowiki>"))
-        compare(("Richard", "Wagner", "Richard Wagner (Philologe)"), self.crawler._extract_author_infos("'''[[Richard Wagner (Philologe)|Wagner, [Richard]]]'''"))
-        compare(("Anton", "Baumstark", "Anton Baumstark junior"),self.crawler._extract_author_infos("'''[[Anton Baumstark junior|Baumstark, [Anton (jr.)]]]'''"))
+        compare(("", "Buren s. Van Buren", ""), self.crawler._extract_author_infos("Buren s. Van Buren"))
+        compare(("Karl", "Praechter", ""), self.crawler._extract_author_infos("Praechter, K[arl]<nowiki></nowiki>"))
+        compare(("Richard", "Wagner", "Richard Wagner (Philologe)"),
+                self.crawler._extract_author_infos("'''[[Richard Wagner (Philologe)|Wagner, [Richard]]]'''"))
+        compare(("Anton", "Baumstark", "Anton Baumstark junior"),
+                self.crawler._extract_author_infos("'''[[Anton Baumstark junior|Baumstark, [Anton (jr.)]]]'''"))
 
 
 
