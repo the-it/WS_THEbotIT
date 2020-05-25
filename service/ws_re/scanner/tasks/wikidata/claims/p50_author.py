@@ -9,11 +9,6 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFacto
 class P50Author(ClaimFactory):
     """
     Returns the Claim **author** -> **<Item of author of RE lemma>**
-
-    # todo: wrong author RE:Dymas 1, I must create a fetching for ws lemma in author_crawler
-    # todo: no author RE:Arderikka 2
-    # todo: no author RE:Ἄτιμος, RE:Ἀτίμητος ἀγών
-    # todo: not author RE:Livius 38
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
