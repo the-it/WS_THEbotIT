@@ -15,8 +15,6 @@ from tools.bots.pi import WikiLogger
 
 ClaimList = List[pywikibot.Claim]
 ClaimDictionary = Dict[str, ClaimList]
-SerializedClaimList = List[Dict]
-SerializedClaimDictionary = Dict[str, SerializedClaimList]
 
 
 class ChangedClaimsDict(TypedDict):

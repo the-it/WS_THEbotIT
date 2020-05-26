@@ -11,7 +11,7 @@ import pywikibot
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.base import get_article_type
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
-    SerializedClaimDictionary, ClaimList, ChangedClaimsDict
+    ClaimList, ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
@@ -26,6 +26,9 @@ from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P5
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
 from tools.bots.pi import WikiLogger
+
+SerializedClaimList = List[Dict]
+SerializedClaimDictionary = Dict[str, SerializedClaimList]
 
 
 class DATATask(ReScannerTask):
@@ -60,11 +63,11 @@ class DATATask(ReScannerTask):
 
     def task(self):
         start_time = datetime.now()
-        if self._counter < 100:
+        try:
             try:
-                try:
-                    # edit existing wikidata item
-                    data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+                # edit existing wikidata item
+                data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+                if self._counter < 100:
                     data_item.get()
                     item_dict_add = {}
                     # process claims, if they differ
@@ -82,18 +85,17 @@ class DATATask(ReScannerTask):
                         data_item.editEntity(item_dict_add)
                         self._counter += 1
                         self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
-                except pywikibot.exceptions.NoPage:
-                    # create a new one from scratch
-                    data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
-                    claims_to_change = self._get_claimes_to_change(None)
-                    item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
-                    item_dict_add.update(self._non_claims)
-                    data_item.editEntity(item_dict_add)
-                    self._counter += 1
-                    self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
-            except pywikibot.exceptions.MaxlagTimeoutError:
-                self.logger.error(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
-                                  f", after {datetime.now() - start_time}")
+            except pywikibot.exceptions.NoPage:
+                # create a new one from scratch
+                data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
+                claims_to_change = self._get_claimes_to_change(None)
+                item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
+                item_dict_add.update(self._non_claims)
+                data_item.editEntity(item_dict_add)
+                self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
+        except pywikibot.exceptions.MaxlagTimeoutError:
+            self.logger.error(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
+                              f", after {datetime.now() - start_time}")
 
     # NON CLAIM functionality
 
