@@ -124,7 +124,7 @@ class AuthorCrawler:
         if author_tuple[0]:
             author_dict[author]["first_name"] = author_tuple[0]
         if author_tuple[2]:
-            author_dict[author]["lemma"] = author_tuple[2]
+            author_dict[author]["ws_lemma"] = author_tuple[2]
         birth_year = years[0]
         if birth_year:
             author_dict[author]["birth"] = birth_year

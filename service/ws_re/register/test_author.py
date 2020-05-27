@@ -27,6 +27,6 @@ class TestAuthor(TestCase):
         compare(None, register_author.death)
         compare("Tada", register_author.redirect)
 
-        register_author = Author("Test Name", {"lemma": "Tada_lemma"})
+        register_author = Author("Test Name", {"ws_lemma": "Tada_lemma"})
         compare(None, register_author.death)
-        compare("Tada_lemma", register_author.lemma)
+        compare("Tada_lemma", register_author.ws_lemma)

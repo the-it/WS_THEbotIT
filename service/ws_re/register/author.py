@@ -7,7 +7,7 @@ class AuthorDict(TypedDict, total=False):
     death: int
     first_name: str
     last_name: str
-    lemma: str
+    ws_lemma: str
     redirect: str
 
 
@@ -55,9 +55,9 @@ class Author:
         return None
 
     @property
-    def lemma(self) -> Optional[str]:
-        if "lemma" in self._dict.keys():
-            return self._dict["lemma"]
+    def ws_lemma(self) -> Optional[str]:
+        if "ws_lemma" in self._dict.keys():
+            return self._dict["ws_lemma"]
         return None
 
     @property

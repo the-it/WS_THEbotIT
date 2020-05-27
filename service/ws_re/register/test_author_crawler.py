@@ -230,7 +230,7 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
     def test_get_complete_authors(self):
         author_mapping = self.crawler.get_authors(self.author_table)
         expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988, "first_name": "Kenneth Morgan", "last_name": "Abbott"},
-                  "Karlhans Abel": {"birth": 1919, "death": 1998, "first_name": "Karlhans", "last_name": "Abel", "lemma": "Karlhans Abel"},
+                  "Karlhans Abel": {"birth": 1919, "death": 1998, "first_name": "Karlhans", "last_name": "Abel", "ws_lemma": "Karlhans Abel"},
                   "Walther Abel": {"birth": 1906, "death": 1987, "first_name": "Walther", "last_name": "Abel"},
                   "Wolf ?": {"last_name": "Wolf ?"},
                   "Johannes Zwicker": {"birth": 1881, "death": 1969, "first_name": "Johannes", "last_name": "Zwicker"}}
