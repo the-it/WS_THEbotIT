@@ -30,3 +30,7 @@ class TestAuthor(TestCase):
         register_author = Author("Test Name", {"ws_lemma": "Tada_lemma"})
         compare(None, register_author.death)
         compare("Tada_lemma", register_author.ws_lemma)
+
+        register_author = Author("Test Name", {"wp_lemma": "Tada_lemma"})
+        compare(None, register_author.death)
+        compare("Tada_lemma", register_author.wp_lemma)
