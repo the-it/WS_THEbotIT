@@ -114,23 +114,33 @@ class AuthorCrawler:
             return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
         return None, None
 
+    @staticmethod
+    def _extract_wp_lemma(wp_column: str) -> Optional[str]:
+        hit = re.search(r"\[\[w:([^\|]*)\|", wp_column)
+        if hit:
+            return hit.group(1)
+        return None
+
     @classmethod
     def _get_author(cls, author_lines: str) -> Dict[str, AuthorDict]:
         lines = cls._split_author(author_lines)
         author_tuple = cls._extract_author_infos(lines[0])
         years = cls._extract_years(lines[1])
+        wp_lemma = cls._extract_wp_lemma(lines[3])
         author = f"{author_tuple[0]} {author_tuple[1]}".strip()
         author_dict: Dict[str, AuthorDict] = {author: {"last_name": author_tuple[1]}}
         if author_tuple[0]:
             author_dict[author]["first_name"] = author_tuple[0]
         if author_tuple[2]:
-            author_dict[author]["lemma"] = author_tuple[2]
+            author_dict[author]["ws_lemma"] = author_tuple[2]
         birth_year = years[0]
         if birth_year:
             author_dict[author]["birth"] = birth_year
         death_year = years[1]
         if death_year:
             author_dict[author]["death"] = death_year
+        if wp_lemma:
+            author_dict[author]["wp_lemma"] = wp_lemma
         return author_dict
 
     @classmethod

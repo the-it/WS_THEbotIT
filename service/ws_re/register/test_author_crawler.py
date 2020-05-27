@@ -130,14 +130,16 @@ class TestAuthorCrawler(TestCase):
         compare(("Anton", "Baumstark", "Anton Baumstark junior"),
                 self.crawler._extract_author_infos("'''[[Anton Baumstark junior|Baumstark, [Anton (jr.)]]]'''"))
 
-
-
     def test_extract_years(self):
         compare((1906, 1988), self.crawler._extract_years("1906–1988"))
         compare((1908, None), self.crawler._extract_years("1908–?"))
         compare((1933, None), self.crawler._extract_years("* 1933"))
         compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" |* 1933"))
         compare((None, None), self.crawler._extract_years(""))
+
+    def test_extract_wp_lemma(self):
+        compare("Kenneth Morgan Abbott", self.crawler._extract_wp_lemma("[[w:Kenneth Morgan Abbott|Wikipedia]]"))
+        compare(None, self.crawler._extract_wp_lemma(""))
 
     # pylint: disable=line-too-long
     author_table = """Das '''Autorenverzeichnis''' für ''[[Paulys Realencyclopädie der classischen Altertumswissenschaft]]'' basiert auf dem ''Verzeichnis der Autoren'' im Registerband 1980 (S. 235–250), enthält aber anders als dieses biografische Angaben und Verweise zu ggf. existierenden Wikipedia-Artikeln. Die Autoren, deren Werke gemeinfrei sind, werden '''fett''' hervorgehoben.
@@ -191,7 +193,6 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 [[Kategorie:RE:Autoren|!]]"""
 
     def test_split_author_table(self):
-
         splitted_table = self.crawler._split_author_table(self.author_table)
         compare(5, len(splitted_table))
         expected_entry = """|Abbott, K[enneth] M[organ]{{Anker|A}}
@@ -218,22 +219,28 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 |XIX,2
 |[[w:Kenneth Morgan Abbott|Wikipedia]]"""
 
-        expect = {"Kenneth Morgan Abbott": {"death": 1988, "birth": 1906, "first_name": "Kenneth Morgan", "last_name": "Abbott"}}
+        expect = {"Kenneth Morgan Abbott": {"death": 1988, "birth": 1906, "first_name": "Kenneth Morgan",
+                                            "last_name": "Abbott", "wp_lemma": "Kenneth Morgan Abbott"}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906–1988")))
 
-        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "first_name": "Kenneth Morgan", "last_name": "Abbott"}}
+        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "first_name": "Kenneth Morgan", "last_name": "Abbott",
+                                            "wp_lemma": "Kenneth Morgan Abbott"}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906")))
 
-        expect = {"Kenneth Morgan Abbott": {"first_name": "Kenneth Morgan", "last_name": "Abbott"}}
+        expect = {"Kenneth Morgan Abbott": {"first_name": "Kenneth Morgan", "last_name": "Abbott",
+                                            "wp_lemma": "Kenneth Morgan Abbott"}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "")))
 
     def test_get_complete_authors(self):
         author_mapping = self.crawler.get_authors(self.author_table)
-        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988, "first_name": "Kenneth Morgan", "last_name": "Abbott"},
-                  "Karlhans Abel": {"birth": 1919, "death": 1998, "first_name": "Karlhans", "last_name": "Abel", "lemma": "Karlhans Abel"},
-                  "Walther Abel": {"birth": 1906, "death": 1987, "first_name": "Walther", "last_name": "Abel"},
+        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988, "first_name": "Kenneth Morgan",
+                                            "last_name": "Abbott", "wp_lemma": "Kenneth Morgan Abbott"},
+                  "Karlhans Abel": {"birth": 1919, "death": 1998, "first_name": "Karlhans", "last_name": "Abel",
+                                    "ws_lemma": "Karlhans Abel", "wp_lemma": "Karlhans Abel"},
+                  "Walther Abel": {"birth": 1906, "death": 1987, "first_name": "Walther", "last_name": "Abel", "wp_lemma": "Walther Abel"},
                   "Wolf ?": {"last_name": "Wolf ?"},
-                  "Johannes Zwicker": {"birth": 1881, "death": 1969, "first_name": "Johannes", "last_name": "Zwicker"}}
+                  "Johannes Zwicker": {"birth": 1881, "death": 1969, "first_name": "Johannes", "last_name": "Zwicker",
+                                       "wp_lemma": "Johannes Zwicker"}}
         compare(expect, author_mapping)
 
     table_head = "{{|class=\"wikitable sortable\"\n|-\n!width=\"200\" | Name/Sigel\n!width=\"75\" " \
