@@ -85,6 +85,7 @@ class ClaimFactory:
     def __init__(self, re_page: RePage, logger: WikiLogger):
         self.wikidata = re_page.page.data_repository
         self.wikisource = re_page.page.site
+        self.wikipedia = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
         self.re_page = re_page
         self.logger = logger
         self._current_year = datetime.now().year
