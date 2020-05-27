@@ -10,6 +10,7 @@ class P6216CopyrightStatus(ClaimFactory):
     **<public domain statements dependend on publication age and death of author>**
 
     todo: bug RE:Atreus
+    todo: bug cross reference no
     """
 
     _COPYRIGHT_STATUS = "P6216"
