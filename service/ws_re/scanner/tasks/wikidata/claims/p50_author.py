@@ -20,15 +20,15 @@ class P50Author(ClaimFactory):
     def _get_author_list(self) -> List[str]:
         author_items: List[str] = []
         for author in self._authors_of_first_article:
+            author_lemma = None
             if author.ws_lemma:
                 author_lemma = pywikibot.Page(self.wikisource, author.ws_lemma)
             elif author.wp_lemma:
                 author_lemma = pywikibot.Page(self.wikipedia, author.wp_lemma)
-            else:
-                continue
-            try:
-                # append the item of the author, if it exists
-                author_items.append(author_lemma.data_item().id)
-            except pywikibot.NoPage:
-                continue
+            if author_lemma:
+                try:
+                    # append the item of the author, if it exists
+                    author_items.append(author_lemma.data_item().id)
+                except pywikibot.NoPage:
+                    continue
         return author_items

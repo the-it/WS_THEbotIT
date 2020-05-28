@@ -11,15 +11,6 @@ from tools.test import wikidata_test, real_wiki_test
 
 @real_wiki_test
 class TestP50Author(BaseTestClaimFactory):
-    # @wikidata_test
-    # def test__get_claim_json(self):
-    #     re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Aal"))
-    #     factory = P50Author(re_page, self.logger)
-    #     claim_json = factory._get_claim_json()
-    #     # should be Eugen Oder (https://www.wikidata.org/wiki/Q1372802)
-    #     compare(1372802, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
-
-    @wikidata_test
     def test__get_claim_json_bug_wagner(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Dymas 1"))
         factory = P50Author(re_page, self.logger)
@@ -27,7 +18,6 @@ class TestP50Author(BaseTestClaimFactory):
         # should be Richard Wagner (not the composer) (https://www.wikidata.org/wiki/Q2150844)
         compare(2150844, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
-    @wikidata_test
     def test__get_claim_json_bug_Arderikka_2(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Arderikka 2"))
         factory = P50Author(re_page, self.logger)
@@ -35,7 +25,6 @@ class TestP50Author(BaseTestClaimFactory):
         # should be Franz Heinrich Weißbach (https://www.wikidata.org/wiki/Q106027)
         compare(106027, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
-    @wikidata_test
     def test__get_claim_json_bug_find_author_without_ws_lemma(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Campatius 1"))
         factory = P50Author(re_page, self.logger)
@@ -43,7 +32,6 @@ class TestP50Author(BaseTestClaimFactory):
         # should be Arthur Stein (Althistoriker) (https://www.wikidata.org/wiki/Q711593)
         compare(711593, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
-    @wikidata_test
     def test__get_claim_json_bug_author_from_non_de_wikipedia(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Holmberg}}", title="RE:Bla")
         factory = P50Author(re_page, self.logger)

@@ -12,7 +12,6 @@ from service.ws_re.template.re_page import RePage
 
 @real_wiki_test
 class TestDev(TestCase):
-    @wikidata_test
     def test_development(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         lemma = pywikibot.Page(WS_WIKI, "RE:Rutilius 44")  # existing wikidata_item
