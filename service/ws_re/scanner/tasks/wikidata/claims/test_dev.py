@@ -6,13 +6,12 @@ from unittest.case import TestCase
 import pywikibot
 
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
-from tools.test import wikidata_test, real_wiki_test
+from tools.test import real_wiki_test
 from service.ws_re.template.re_page import RePage
 
 
 @real_wiki_test
 class TestDev(TestCase):
-    @wikidata_test
     def test_development(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         lemma = pywikibot.Page(WS_WIKI, "RE:Rutilius 44")  # existing wikidata_item

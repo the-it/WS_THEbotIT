@@ -262,13 +262,13 @@ class TestOneTimeBot(TestCase):
         class WatchdogBot(OneTimeBot):
             def __init__(self, **kwargs):
                 super().__init__(**kwargs)
-                self.timeout = timedelta(seconds=0.002)
+                self.timeout = timedelta(seconds=0.02)
 
             def task(self):
                 while True:
                     if self._watchdog():
                         raise Exception("watchdog must not fire")  # pragma: no cover
-                    time.sleep(0.004)
+                    time.sleep(0.04)
                     if self._watchdog():
                         return True
                     raise Exception("watchdog must fire")  # pragma: no cover
