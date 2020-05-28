@@ -7,7 +7,7 @@ from timeout_decorator import timeout
 def wikidata_test(func):
     # pylint: disable=no-value-for-parameter
     # todo: improve this https://stackoverflow.com/questions/11349183/how-to-wrap-every-method-of-a-class
-    wrapper = timeout(5,
+    wrapper = timeout(10,
                       timeout_exception=AssertionError,
                       exception_message="Test took to long. Wikidatas Maxlag is too high.",
                       use_signals=False)(func)

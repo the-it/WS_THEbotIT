@@ -79,6 +79,20 @@ run_coverage: &run_coverage
       . venv/bin/activate
       make coverage
 
+create_pywikibot_file: &create_pywikibot_file
+  run:
+    name: create_pywikibot_file
+    command: |
+      mkdir -p ~/.pywikibot
+      echo $PYWIKIBOT_FILE > ~/.pywikibot/user-config.py
+
+run_wikitest: &run_wikitest
+  run:
+    name: run wikitest
+    command: |
+      . venv/bin/activate
+      make wikitest
+
 run_integrationtest: &run_integrationtest
   run:
     name: run integration test
@@ -93,6 +107,14 @@ report_codecov: &report_codecov
     command: |
       . venv/bin/activate
       codecov -F $PYTHON_VERSION
+
+report_codecov_wikitest: &report_codecov_wikitest
+  run:
+    name: report codecov
+    when: always
+    command: |
+      . venv/bin/activate
+      codecov -F wikitest
 
 show_python_version: &show_python_version
   run:
@@ -119,10 +141,17 @@ coverage_steps: &coverage_steps
     - checkout
     - <<: *restore_cache
     - <<: *show_python_version
-    - <<: *install_dependencies
-    - <<: *save_cache
     - <<: *run_coverage
     - <<: *report_codecov
+
+wiki_steps: &wiki_steps
+  steps:
+    - checkout
+    - <<: *create_pywikibot_file
+    - <<: *restore_cache
+    - <<: *show_python_version
+    - <<: *run_wikitest
+    - <<: *report_codecov_wikitest
 
 nightly_steps: &nightly_steps
   steps:
@@ -149,6 +178,12 @@ jobs:
     working_directory: ~/repo
     <<: *coverage_steps
 
+  wikitest:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: ~/repo
+    <<: *wiki_steps
+
   nightly:
     docker:
       - image: circleci/python:3.8
@@ -164,6 +199,10 @@ workflows:
       - quality:
           context: python38
       - coverage38:
+          context: python38
+          requires:
+            - quality
+      - wikitest:
           context: python38
           requires:
             - quality
