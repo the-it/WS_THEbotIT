@@ -6,7 +6,7 @@ from unittest.case import TestCase
 import pywikibot
 
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
-from tools.test import wikidata_test, real_wiki_test
+from tools.test import real_wiki_test
 from service.ws_re.template.re_page import RePage
 
 
