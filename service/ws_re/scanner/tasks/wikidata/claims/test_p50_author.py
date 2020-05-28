@@ -11,13 +11,13 @@ from tools.test import wikidata_test, real_wiki_test
 
 @real_wiki_test
 class TestP50Author(BaseTestClaimFactory):
-    @wikidata_test
-    def test__get_claim_json(self):
-        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Aal"))
-        factory = P50Author(re_page, self.logger)
-        claim_json = factory._get_claim_json()
-        # should be Eugen Oder (https://www.wikidata.org/wiki/Q1372802)
-        compare(1372802, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+    # @wikidata_test
+    # def test__get_claim_json(self):
+    #     re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Aal"))
+    #     factory = P50Author(re_page, self.logger)
+    #     claim_json = factory._get_claim_json()
+    #     # should be Eugen Oder (https://www.wikidata.org/wiki/Q1372802)
+    #     compare(1372802, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
     @wikidata_test
     def test__get_claim_json_bug_wagner(self):
