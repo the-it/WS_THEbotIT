@@ -79,6 +79,13 @@ run_coverage: &run_coverage
       . venv/bin/activate
       make coverage
 
+create_pywikibot_file: &create_pywikibot_file
+  run:
+    name: create_pywikibot_file
+    command: |
+      mkdir -p ~/.pywikibot
+      echo $PYWIKIBOT_FILE > ~/.pywikibot/user-config.py
+
 run_wikitest: &run_wikitest
   run:
     name: run wikitest
@@ -99,7 +106,7 @@ report_codecov: &report_codecov
     when: always
     command: |
       . venv/bin/activate
-      codecov -F unittest
+      codecov -F $PYTHON_VERSION
 
 report_codecov_wikitest: &report_codecov_wikitest
   run:
@@ -140,6 +147,7 @@ coverage_steps: &coverage_steps
 wiki_steps: &wiki_steps
   steps:
     - checkout
+    - <<: *create_pywikibot_file
     - <<: *restore_cache
     - <<: *show_python_version
     - <<: *install_dependencies
