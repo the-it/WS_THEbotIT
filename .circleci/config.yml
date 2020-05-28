@@ -150,7 +150,6 @@ wiki_steps: &wiki_steps
     - <<: *create_pywikibot_file
     - <<: *restore_cache
     - <<: *show_python_version
-    - <<: *install_dependencies
     - <<: *run_wikitest
     - <<: *report_codecov_wikitest
 
