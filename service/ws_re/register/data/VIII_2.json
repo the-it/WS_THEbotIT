@@ -1191,11 +1191,13 @@
     "lemma": "Hiera 8",
     "previous": "Hiera 7",
     "next": "Hiera 9",
+    "sort_key": "Hiera 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1397,
         "end": 1397,
-        "author": "Weiss, J[akob]"
+        "author": "Weiss."
       }
     ]
   },
@@ -1203,11 +1205,13 @@
     "lemma": "Hiera 9",
     "previous": "Hiera 8",
     "next": "Hiera Akra",
+    "sort_key": "Hiera 09",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1397,
         "end": 1398,
-        "author": "Tkáč"
+        "author": "Tkač."
       }
     ]
   },
@@ -1215,41 +1219,46 @@
     "lemma": "Hiera Akra",
     "previous": "Hiera 9",
     "next": "Hiera Germe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
         "end": 1398,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Hiera Germe",
     "previous": "Hiera Akra",
-    "next": "Hiera gerusia",
+    "next": "Ἱερὰ γερουσία",
+    "redirect": "Germe 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1398,
         "end": 1398,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Hiera gerusia",
+    "lemma": "Ἱερὰ γερουσία",
     "previous": "Hiera Germe",
     "next": "Hiera nesos, Hieronesos",
+    "sort_key": "Hiera gerusia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
         "end": 1399,
-        "author": "Link"
+        "author": "Link."
       }
     ]
   },
   {
     "lemma": "Hiera nesos, Hieronesos",
-    "previous": "Hiera gerusia",
+    "previous": "Ἱερὰ γερουσία",
     "next": "Hiera hodos",
     "chapters": [
       {
@@ -8189,11 +8198,13 @@
     "lemma": "Hippotes 1",
     "previous": "Hippoteles",
     "next": "Hippotes 2",
+    "proof_read": 3,
+    "wp_link": "w:de:fr:Hippotès fils de Mimas",
     "chapters": [
       {
         "start": 1923,
         "end": 1923,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -8201,11 +8212,13 @@
     "lemma": "Hippotes 2",
     "previous": "Hippotes 1",
     "next": "Hippotes 3",
+    "proof_read": 2,
+    "wp_link": "w:de:Hippotes (Sohn des Phylas)",
     "chapters": [
       {
         "start": 1923,
         "end": 1923,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -8213,11 +8226,13 @@
     "lemma": "Hippotes 3",
     "previous": "Hippotes 2",
     "next": "Hippotes 4",
+    "proof_read": 3,
+    "wp_link": "w:de:Hippotes (Sohn des Kreon)",
     "chapters": [
       {
         "start": 1923,
         "end": 1923,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -8225,11 +8240,13 @@
     "lemma": "Hippotes 4",
     "previous": "Hippotes 3",
     "next": "Hippothales",
+    "proof_read": 2,
+    "wp_link": "w:de:Hippotes (Sohn des Kreon)",
     "chapters": [
       {
         "start": 1923,
         "end": 1923,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
