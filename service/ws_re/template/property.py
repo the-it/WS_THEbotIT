@@ -1,15 +1,15 @@
-from typing import Union, Optional
+from typing import Optional
 
-ValueType = Union[str, bool]
+from service.ws_re.template._typing import PropertyValueType
 
 
 class Property:
-    def __init__(self, name: str, default: ValueType):
+    def __init__(self, name: str, default: PropertyValueType):
         self._name = name
-        self._default: ValueType = default
-        self._value: Optional[ValueType] = None
+        self._default: PropertyValueType = default
+        self._value: Optional[PropertyValueType] = None
 
-    def _return_by_type(self, value: ValueType) -> ValueType:
+    def _return_by_type(self, value: PropertyValueType) -> PropertyValueType:
         ret = value
         if not isinstance(self._default, (bool, str)):
             raise TypeError(f"Default value ({self._default}) is invalid")
@@ -28,7 +28,7 @@ class Property:
         return ret
 
     @property
-    def value(self) -> ValueType:
+    def value(self) -> PropertyValueType:
         if self._value:
             ret = self._value
         else:
@@ -36,7 +36,7 @@ class Property:
         return ret
 
     @value.setter
-    def value(self, new_value: ValueType):
+    def value(self, new_value: PropertyValueType):
         if isinstance(new_value, str):
             new_value = new_value.strip()
         if isinstance(new_value, type(self._default)):

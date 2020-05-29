@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest import TestCase
 
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.base import _REGISTER_PATH
+from service.ws_re.register._base import _REGISTER_PATH
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")

@@ -3,37 +3,12 @@ import re
 import unicodedata
 from collections import OrderedDict
 from datetime import datetime
-from typing import Union, List, Tuple, KeysView, Optional, TypedDict, Literal
+from typing import List, Tuple, KeysView, Optional
 
+from service.ws_re.register._base import RegisterException
+from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.base import RegisterException
 from service.ws_re.volumes import Volume
-
-
-# type hints
-class ChapterDict(TypedDict, total=False):
-    author: str
-    start: int
-    end: int
-
-
-LemmaDictKeys = Literal["lemma", "previous", "next", "sort_key", "redirect",
-                        "proof_read", "wp_link", "ws_link", "wd_link", "chapters"]
-
-LemmaDictItems = Union[str, bool, int, List[ChapterDict]]
-
-
-class LemmaDict(TypedDict, total=False):
-    lemma: str
-    previous: str
-    next: str
-    sort_key: str
-    redirect: Union[str, bool]
-    proof_read: int
-    wp_link: str
-    ws_link: str
-    wd_link: str
-    chapters: List[ChapterDict]
 
 
 class LemmaChapter:
@@ -55,7 +30,7 @@ class LemmaChapter:
         return_dict: ChapterDict = OrderedDict()  # type: ignore
         for property_key in self._keys:
             if property_key in self._dict:
-                return_dict[property_key] = self._dict[property_key]   # type: ignore
+                return_dict[property_key] = self._dict[property_key]  # type: ignore
         return return_dict
 
     @property
@@ -173,7 +148,7 @@ class Lemma():
 
     def __repr__(self):  # pragma: no cover
         return f"<{self.__class__.__name__} - lemma:{self['lemma']}, previous:{self['previous']}, " \
-            f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
+               f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
 
     def __getitem__(self, item: LemmaDictKeys) -> Optional[LemmaDictItems]:
         try:
@@ -337,7 +312,7 @@ class Lemma():
         if start_page_scan % 2 == 0:
             start_page_scan -= 1
         pages_str = f"[[Special:Filepath/Pauly-Wissowa_{self._volume.name}," \
-            f"_{start_page_scan:04d}.jpg|{lemma_chapter.start}]]"
+                    f"_{start_page_scan:04d}.jpg|{lemma_chapter.start}]]"
         if lemma_chapter.start != lemma_chapter.end:
             pages_str += f"-{lemma_chapter.end}"
         return pages_str

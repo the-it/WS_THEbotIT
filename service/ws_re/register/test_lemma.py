@@ -7,7 +7,7 @@ from unittest import TestCase
 from testfixtures import compare
 
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.base import RegisterException
+from service.ws_re.register._base import RegisterException
 from service.ws_re.register.lemma import LemmaChapter, Lemma
 from service.ws_re.register.test_base import BaseTestRegister
 from service.ws_re.volumes import Volumes

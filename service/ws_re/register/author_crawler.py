@@ -3,7 +3,7 @@ from typing import List, Dict, Tuple, Optional
 
 from pywikibot import Site
 
-from service.ws_re.register.author import CrawlerDict, AuthorDict
+from service.ws_re.register._typing import AuthorDict, CrawlerDict
 from tools import fetch_text_from_wiki_site
 
 TRANS_DICT = str.maketrans({"[": "", "]": "", "'": ""})

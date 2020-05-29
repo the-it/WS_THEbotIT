@@ -3,8 +3,9 @@ import json
 from functools import lru_cache
 from typing import Dict, Generator, List
 
-from service.ws_re.register.author import Author, AuthorDict
-from service.ws_re.register.base import _REGISTER_PATH
+from service.ws_re.register.author import Author
+from service.ws_re.register._typing import AuthorDict
+from service.ws_re.register._base import _REGISTER_PATH
 
 
 class Authors:

@@ -7,8 +7,9 @@ from unittest.mock import MagicMock, PropertyMock, Mock
 import pywikibot
 from testfixtures import compare
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    SnakParameter, JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
+from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 from tools.bots.pi import WikiLogger
