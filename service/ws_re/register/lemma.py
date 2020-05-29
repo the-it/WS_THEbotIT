@@ -1,52 +1,14 @@
 import contextlib
 import re
 import unicodedata
-from collections import OrderedDict
 from datetime import datetime
 from typing import List, Tuple, KeysView, Optional
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
 from service.ws_re.register.authors import Authors
+from service.ws_re.register.lemma_chapter import LemmaChapter
 from service.ws_re.volumes import Volume
-
-
-class LemmaChapter:
-    _keys = ["start", "end", "author"]
-
-    def __init__(self, chapter_dict: ChapterDict):
-        self._dict = chapter_dict
-
-    def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} - start:{self.start}, end:{self.end}, author:{self.author}>"
-
-    def is_valid(self) -> bool:
-        with contextlib.suppress(TypeError):
-            if "start" in self._dict and "end" in self._dict:
-                return True
-        return False
-
-    def get_dict(self) -> ChapterDict:
-        return_dict: ChapterDict = OrderedDict()  # type: ignore
-        for property_key in self._keys:
-            if property_key in self._dict:
-                return_dict[property_key] = self._dict[property_key]  # type: ignore
-        return return_dict
-
-    @property
-    def start(self) -> int:
-        return self._dict["start"]
-
-    @property
-    def end(self) -> int:
-        return self._dict["end"]
-
-    @property
-    def author(self) -> Optional[str]:
-        if "author" in self._dict.keys():
-            return self._dict["author"]
-        return None
-
 
 _TRANSLATION_DICT_RAW = {"a": "α",
                          "b": "β",
