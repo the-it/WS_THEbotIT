@@ -92,6 +92,7 @@ run_wikitest: &run_wikitest
     command: |
       . venv/bin/activate
       make wikitest
+    no_output_timeout: 10s
 
 run_integrationtest: &run_integrationtest
   run:
