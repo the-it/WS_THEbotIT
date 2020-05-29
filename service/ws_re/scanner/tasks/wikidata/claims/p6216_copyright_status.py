@@ -78,7 +78,10 @@ class P6216CopyrightStatus(ClaimFactory):
                 max_death_year = self._current_year
             elif author.death > max_death_year:
                 max_death_year = author.death
-        years_since_death = self._current_year - max_death_year
+        if max_death_year:
+            years_since_death = self._current_year - max_death_year
+        else:
+            years_since_death = 0
         if years_since_death > 100:
             return self.xx_years_after_authors_death(100)
         if years_since_death > 80:
