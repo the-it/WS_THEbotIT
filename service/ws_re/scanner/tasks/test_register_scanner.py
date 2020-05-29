@@ -7,7 +7,7 @@ from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.base import _REGISTER_PATH
+from service.ws_re.register._base import _REGISTER_PATH
 from service.ws_re.register.register_types.volume import VolumeRegister
 from service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH, \
     copy_tst_data

@@ -5,7 +5,8 @@ from typing import Tuple, List
 from pywikibot import Page, Site
 
 from tools.bots.pi import CanonicalBot
-from tools.petscan import PetScan, PetscanLemma
+from tools.petscan import PetScan
+from tools._typing import PetscanLemma
 
 
 class ReStatus(CanonicalBot):

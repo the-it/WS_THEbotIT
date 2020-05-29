@@ -1,24 +1,13 @@
 # pylint: disable=ungrouped-imports
 import json
 from datetime import datetime
-from typing import List, TypedDict
+from typing import List
 from urllib.parse import quote
 
 import requests
 
 from tools import ToolException
-
-
-# type hints
-class PetscanLemma(TypedDict):
-    id: int
-    len: int
-    n: str
-    namespace: int
-    nstext: str
-    title: str
-    touched: str
-
+from tools._typing import PetscanLemma
 
 NAMESPACE_MAPPING = {"Article": 0,
                      "Diskussion": 1,

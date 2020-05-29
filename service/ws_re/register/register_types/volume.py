@@ -2,8 +2,9 @@ import json
 from typing import Union, Optional, List
 
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.base import Register, _REGISTER_PATH
-from service.ws_re.register.lemma import Lemma, LemmaDict
+from service.ws_re.register._base import Register, _REGISTER_PATH
+from service.ws_re.register.lemma import Lemma
+from service.ws_re.register._typing import LemmaDict
 from service.ws_re.volumes import Volume, Volumes
 
 

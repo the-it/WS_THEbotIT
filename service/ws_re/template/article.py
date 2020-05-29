@@ -1,21 +1,13 @@
 import collections
 import contextlib
 from datetime import datetime
-from typing import Union, Tuple, Generator, Optional, Dict, TypedDict, List
+from typing import Union, Tuple, Generator, Optional, List
 
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
-from service.ws_re.template.property import Property, ValueType
+from service.ws_re.template._typing import KeyValuePair, ArticleProperties
+from service.ws_re.template.property import Property
 from tools.template_finder import TemplateFinder
 from tools.template_handler import TemplateHandler, TemplateHandlerException
-
-
-# type hints
-class KeyValuePair(TypedDict):
-    key: str
-    value: ValueType
-
-
-ArticleProperties = Dict[str, ValueType]
 
 
 class Article(collections.MutableMapping):

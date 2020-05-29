@@ -10,8 +10,7 @@ import pywikibot
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.base import get_article_type
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimDictionary, \
-    ClaimList, ChangedClaimsDict
+from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \

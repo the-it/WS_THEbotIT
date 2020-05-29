@@ -8,10 +8,10 @@ import pywikibot
 from git import Repo
 
 from service.ws_re.register.author_crawler import AuthorCrawler
-from service.ws_re.register.base import RegisterException
-from service.ws_re.register.lemma import LemmaDict, ChapterDict
+from service.ws_re.register._base import RegisterException
+from service.ws_re.register._typing import ChapterDict, LemmaDict, UpdaterRemoveList
 from service.ws_re.register.registers import Registers
-from service.ws_re.register.updater import Updater, RemoveList
+from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
 from tools.bots.pi import WikiLogger
@@ -42,7 +42,7 @@ class SCANTask(ReScannerTask):
         self.registers.persist()
         self._push_changes()
 
-    def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         if article['WIKIPEDIA'].value:
             wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
@@ -56,7 +56,7 @@ class SCANTask(ReScannerTask):
             return {"wp_link": wp_link}, []
         return {}, ["wp_link"]
 
-    def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         if article['WIKISOURCE'].value:
             ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
@@ -71,7 +71,7 @@ class SCANTask(ReScannerTask):
             return {"ws_link": ws_link}, []
         return {}, ["ws_link"]
 
-    def _fetch_wd_link(self, _) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_wd_link(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         try:
             target = self._get_target_from_wd()
         except pywikibot.exceptions.MaxlagTimeoutError:
@@ -102,19 +102,19 @@ class SCANTask(ReScannerTask):
             raise exception
 
     @staticmethod
-    def _fetch_sort_key(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_sort_key(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         sort_key = str(article["SORTIERUNG"].value)
         if sort_key:
             return {"sort_key": sort_key}, []
         return {}, ["sort_key"]
 
-    def _fetch_lemma(self, _) -> Tuple[LemmaDict, RemoveList]:  # pylint: disable=unused-argument
+    def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:  # pylint: disable=unused-argument
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
     _REGEX_REDIRECT = re.compile(r"[sS]\..*?(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
 
-    def _fetch_redirect(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_redirect(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         redirect = article["VERWEIS"].value
         if redirect:
@@ -125,7 +125,7 @@ class SCANTask(ReScannerTask):
         return {}, ["redirect"]
 
     @staticmethod
-    def _fetch_previous(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_previous(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         previous = str(article["VORGÄNGER"].value)
         if previous and previous != "OFF":
@@ -133,14 +133,14 @@ class SCANTask(ReScannerTask):
         return {}, ["previous"]
 
     @staticmethod
-    def _fetch_next(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_next(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         next_lemma = str(article["NACHFOLGER"].value)
         if next_lemma and next_lemma != "OFF":
             return {"next": next_lemma}, []
         return {}, ["next"]
 
-    def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         # if there is something outside an article ignore it
         article_list = [article for article in article_list if isinstance(article, Article)]
         if self.re_page.complex_construction:
@@ -200,7 +200,7 @@ class SCANTask(ReScannerTask):
         return single_article_dict
 
     @staticmethod
-    def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, RemoveList]:
+    def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         proof_read = str(article["KORREKTURSTAND"].value).lower().strip()
         if article.common_free:
@@ -231,7 +231,11 @@ class SCANTask(ReScannerTask):
                 issues_in_articles.add(band_info)
                 self._update_lemma(band_info, delete_list, self_supplement, update_dict)
 
-    def _update_lemma(self, band_info: str, delete_list: RemoveList, self_supplement: bool, update_dict: LemmaDict):
+    def _update_lemma(self,
+                      band_info: str,
+                      delete_list: UpdaterRemoveList,
+                      self_supplement: bool,
+                      update_dict: LemmaDict):
         register = self.registers.volumes[band_info]
         if register:
             try:

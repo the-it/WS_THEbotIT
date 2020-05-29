@@ -1,18 +1,6 @@
-from typing import Dict, Union, Optional, TypedDict
+from typing import Optional
 
-
-# type hints
-class AuthorDict(TypedDict, total=False):
-    birth: int
-    death: int
-    first_name: str
-    last_name: str
-    wp_lemma: str
-    ws_lemma: str
-    redirect: str
-
-
-CrawlerDict = Dict[str, Union[str, Dict[str, str]]]
+from service.ws_re.register._typing import AuthorDict
 
 
 class Author:

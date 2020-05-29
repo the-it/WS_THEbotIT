@@ -2,8 +2,9 @@ from typing import List
 
 import pywikibot
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict, SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
+from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 
 
 class P50Author(ClaimFactory):

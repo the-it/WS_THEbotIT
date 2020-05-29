@@ -1,7 +1,8 @@
 from typing import List
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict, SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
+from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 
 
 class P407LanguageOfWorkOrName(ClaimFactory):

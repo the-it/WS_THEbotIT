@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional
 
-from service.ws_re.register.base import Register
+from service.ws_re.register._base import Register
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types.volume import VolumeRegister
 

@@ -3,8 +3,9 @@ from typing import List, Optional
 import pywikibot
 from pywikibot import ItemPage
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory, \
-    JsonClaimDict, SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
+from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 
 
 class Neighbour(ClaimFactory):

@@ -1,78 +1,18 @@
 import re
-from dataclasses import dataclass
 from datetime import datetime
-from typing import Dict, List, Tuple, TypedDict, Union, Optional
+from typing import Dict, List, Tuple, Optional
 
 import pywikibot
 
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
+from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ChangedClaimsDict, JsonDataValue, \
+    JsonSnakDict, ReferencesList, JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
-# type hints
 from tools.bots.pi import WikiLogger
-
-ClaimList = List[pywikibot.Claim]
-ClaimDictionary = Dict[str, ClaimList]
-
-
-class ChangedClaimsDict(TypedDict):
-    add: ClaimDictionary
-    remove: ClaimList
-
-
-JsonValueDictItem = TypedDict("JsonValueDictItem", {"entity-type": str, "numeric-id": int})
-JsonValueDictTime = TypedDict("JsonValueDictTime", {"time": str,
-                                                    "precision": int,
-                                                    "after": int,
-                                                    "before": int,
-                                                    "timezone": int,
-                                                    "calendarmodel": str})
-JsonValueDictMonolingualtext = TypedDict("JsonValueDictMonolingualtext", {"text": str, "language": str})
-
-
-class JsonDataValue(TypedDict):
-    value: Union[str, JsonValueDictItem, JsonValueDictTime, JsonValueDictMonolingualtext]
-    type: str
-
-
-class JsonSnakDict(TypedDict):
-    snaktype: str
-    property: str
-    datatype: str
-    datavalue: JsonDataValue
-
-
-ReferencesList = List[Dict[str, Optional[Union[List[str], Dict[str, List[JsonSnakDict]]]]]]
-
-JsonClaimDict = TypedDict("JsonClaimDict",
-                          {"mainsnak": JsonSnakDict,
-                           "type": str,
-                           "rank": str,
-                           "qualifiers": Dict[str, List[JsonSnakDict]],
-                           "qualifiers-order": List[str],
-                           "references": ReferencesList
-                           },
-                          total=False)
-
-
-# data classes
-
-@dataclass
-class SnakParameter:
-    """
-    Class for keeping track of Snak parameters
-
-    :param property_str: Number of the Property, example "P1234"
-    :param target_type: Value of the target. Possible values: "wikibase-item", "string", "commonsMedia",
-                        "globe-coordinate", "url", "time", "quantity", "monolingualtext", "math", "external-id",
-                        "geo-shape", "tabular-data"
-    :param target: actual value of the target
-    """
-    property_str: str
-    target_type: str
-    target: str
 
 
 class ClaimFactory:

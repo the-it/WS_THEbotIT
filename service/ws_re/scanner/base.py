@@ -16,7 +16,8 @@ from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 from tools.bots.pi import CanonicalBot
-from tools.petscan import PetScan, PetScanException, PetscanLemma
+from tools.petscan import PetScan, PetScanException
+from tools._typing import PetscanLemma
 
 
 class ReScanner(CanonicalBot):
