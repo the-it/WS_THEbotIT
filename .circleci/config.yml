@@ -163,6 +163,8 @@ nightly_steps: &nightly_steps
     - <<: *save_cache
     - <<: *run_integrationtest
     - <<: *report_codecov
+    - <<: *run_wikitest
+    - <<: *report_codecov_wikitest
 
 # job definitions
 

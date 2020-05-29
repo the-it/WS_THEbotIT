@@ -85,7 +85,7 @@ coverage : clean-coverage
 	coverage run tst_runner.py && \
 	coverage xml
 
-coverage-html : coverage
+coverage-html : wikitest
 	echo "######### COVERAGE HTML ########"
 	coverage html -d .coverage_html
 	python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
