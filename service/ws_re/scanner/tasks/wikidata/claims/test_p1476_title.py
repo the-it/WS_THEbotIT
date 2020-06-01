@@ -13,3 +13,4 @@ class TestP1476Title(BaseTestClaimFactory):
         factory = P1476Title(re_page, None)
         claim_json = factory._get_claim_json()
         compare("Bla", claim_json[0]["mainsnak"]["datavalue"]["value"]["text"])
+        compare("mul", claim_json[0]["mainsnak"]["datavalue"]["value"]["language"])
