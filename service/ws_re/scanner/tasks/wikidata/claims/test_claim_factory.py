@@ -134,7 +134,7 @@ class TestClaimFactory(BaseTestClaimFactory):
                                "property": "P31",
                                "datatype": "monolingualtext",
                                "datavalue": {"value": {"text": "texttexttext",
-                                                       "language": "de"},
+                                                       "language": "mul"},
                                              "type": "monolingualtext"
                                              }
                                },

@@ -186,7 +186,7 @@ class ClaimFactory:
                          }
         elif snak_parameter.target_type == "monolingualtext":
             datavalue = {"value": {"text": snak_parameter.target,
-                                   "language": "de"
+                                   "language": "mul"
                                    },
                          "type": "monolingualtext"
                          }
