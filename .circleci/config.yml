@@ -123,13 +123,18 @@ show_python_version: &show_python_version
     command: |
       python -c "import sys; print (sys.version)"
 
-quality_steps: &quality_steps
+dependency_steps: &dependency_steps
   steps:
     - checkout
     - <<: *restore_cache
     - <<: *show_python_version
     - <<: *install_dependencies
     - <<: *save_cache
+
+quality_steps: &quality_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
     - <<: *flake8
     - <<: *pycodestyle
     - <<: *pylint
@@ -169,6 +174,12 @@ nightly_steps: &nightly_steps
 # job definitions
 
 jobs:
+  dependency:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: ~/repo
+    <<: *dependency_steps
+
   quality:
     docker:
       - image: circleci/python:3.8
@@ -199,12 +210,20 @@ workflows:
   version: 2
   test-and-quality:
     jobs:
+      - dependency:
+          context: python38
       - quality:
           context: python38
+          requires:
+            - dependency
       - coverage38:
           context: python38
+          requires:
+            - dependency
       - wikitest:
           context: python38
+          requires:
+            - dependency
   integrationtest:
     triggers:
       - schedule:
