@@ -167,9 +167,7 @@ nightly_steps: &nightly_steps
     - <<: *install_dependencies
     - <<: *save_cache
     - <<: *run_integrationtest
-    - <<: *report_codecov
     - <<: *run_wikitest
-    - <<: *report_codecov_wikitest
 
 # job definitions
 
