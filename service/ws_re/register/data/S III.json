@@ -18496,16 +18496,19 @@
   },
   {
     "lemma": "Eboreus pagus",
-    "previous": "Dyseris"
+    "previous": "Dyseris",
+    "next": "Ebreis"
   },
   {
     "lemma": "Ebreis",
+    "previous": "Eboreus pagus",
     "next": "Eburus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 417,
         "end": 417,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
@@ -18513,11 +18516,12 @@
     "lemma": "Eburus",
     "previous": "Ebreis",
     "next": "Echanoreis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 417,
         "end": 417,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -18525,35 +18529,41 @@
     "lemma": "Echanoreis",
     "previous": "Eburus",
     "next": "Echekrateia",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 417,
         "end": 417,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Echekrateia",
     "previous": "Echanoreis",
-    "next": "Echekratidas 1",
+    "next": "Echekrates 3",
     "chapters": [
       {
         "start": 417,
         "end": 417,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
   {
-    "lemma": "Echekratidas 1",
+    "lemma": "Echekrates 3",
     "previous": "Echekrateia",
+    "next": "Echekratidas 1"
+  },
+  {
+    "lemma": "Echekratidas 1",
+    "previous": "Echekrates 3",
     "next": "Echekratidas 2",
     "chapters": [
       {
         "start": 418,
         "end": 418,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
@@ -18565,25 +18575,29 @@
       {
         "start": 418,
         "end": 418,
-        "author": "Stähelin"
+        "author": "Stähelin."
       }
     ]
   },
   {
     "lemma": "Echemmas",
     "previous": "Echekratidas 2",
-    "next": "Edeatros",
+    "next": "Echinos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 418,
         "end": 418,
-        "author": "Oldfather"
+        "author": "Oldfather."
       }
     ]
   },
   {
+    "lemma": "Echinos 7",
+    "previous": "Echemmas"
+  },
+  {
     "lemma": "Edeatros",
-    "previous": "Echemmas",
     "next": "Egirca",
     "chapters": [
       {
