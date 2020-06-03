@@ -2963,7 +2963,7 @@
       {
         "start": 175,
         "end": 175,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -2971,10 +2971,12 @@
     "lemma": "Iulius 112",
     "previous": "Iulius 111",
     "next": "Iulius 113",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 175,
-        "end": 175
+        "end": 175,
+        "author": "Groag."
       }
     ]
   },
@@ -2982,10 +2984,12 @@
     "lemma": "Iulius 113",
     "previous": "Iulius 112",
     "next": "Iulius 114",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 175,
-        "end": 176
+        "end": 176,
+        "author": "Groag."
       }
     ]
   },
@@ -2993,11 +2997,13 @@
     "lemma": "Iulius 114",
     "previous": "Iulius 113",
     "next": "Iulius 115",
+    "proof_read": 2,
+    "wp_link": "w:de:bg:Квинт Юлий Балб (консул 129 г.)",
     "chapters": [
       {
         "start": 176,
         "end": 176,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -3008,7 +3014,8 @@
     "chapters": [
       {
         "start": 176,
-        "end": 176
+        "end": 176,
+        "author": "Stein."
       }
     ]
   },
@@ -3020,7 +3027,7 @@
       {
         "start": 176,
         "end": 177,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -3028,6 +3035,8 @@
     "lemma": "Iulius 117",
     "previous": "Iulius 116",
     "next": "Iulius 118",
+    "redirect": "Iulius 262",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 177,
@@ -3039,10 +3048,12 @@
     "lemma": "Iulius 118",
     "previous": "Iulius 117",
     "next": "Iulius 119",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 177,
-        "end": 178
+        "end": 178,
+        "author": "Fluss."
       }
     ]
   },
@@ -3050,11 +3061,12 @@
     "lemma": "Iulius 119",
     "previous": "Iulius 118",
     "next": "Iulius 120",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 178,
         "end": 178,
-        "author": "Fluss"
+        "author": "Fluss."
       }
     ]
   },
@@ -3066,7 +3078,7 @@
       {
         "start": 178,
         "end": 178,
-        "author": "Hohl"
+        "author": "Hohl."
       }
     ]
   },
@@ -3078,7 +3090,7 @@
       {
         "start": 178,
         "end": 180,
-        "author": "Gerth"
+        "author": "Gerth."
       }
     ]
   },
@@ -3086,34 +3098,48 @@
     "lemma": "Iulius 122",
     "previous": "Iulius 121",
     "next": "Iulius 123",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 180,
         "end": 181,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
   {
     "lemma": "Iulius 123",
     "previous": "Iulius 122",
+    "next": "Iulius 124",
+    "chapters": [
+      {
+        "start": 181,
+        "end": 181,
+        "author": "Stein."
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 124",
+    "previous": "Iulius 123",
     "next": "Iulius 125",
     "chapters": [
       {
         "start": 181,
-        "end": 181
+        "end": 181,
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Iulius 125",
-    "previous": "Iulius 123",
+    "previous": "Iulius 124",
     "next": "Iulius 126",
     "chapters": [
       {
         "start": 181,
         "end": 181,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -3121,11 +3147,12 @@
     "lemma": "Iulius 126",
     "previous": "Iulius 125",
     "next": "Iulius 127ff.",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 181,
         "end": 182,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
