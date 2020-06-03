@@ -57,8 +57,6 @@ class DATATask(ReScannerTask):
             self._non_claims_template_index = Template(non_claims_json.read())
         with open(Path(__file__).parent.joinpath("non_claims_prologue.json")) as non_claims_json:
             self._non_claims_template_prologue = Template(non_claims_json.read())
-        # debug functions
-        self._counter = 0
 
     def task(self):
         start_time = datetime.now()
@@ -66,24 +64,22 @@ class DATATask(ReScannerTask):
             try:
                 # edit existing wikidata item
                 data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                if self._counter < 500:
-                    data_item.get()
-                    item_dict_add = {}
-                    # process claims, if they differ
-                    claims_to_change = self._get_claimes_to_change(data_item)
-                    if claims_to_change["remove"]:
-                        # if there are claims, that aren't up to date remove them
-                        data_item.removeClaims(claims_to_change["remove"])
-                    if claims_to_change["add"]:
-                        item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
-                    # process if non claims differ
-                    if self._labels_and_sitelinks_has_changed(data_item.toJSON(), self._non_claims):
-                        item_dict_add.update(self._non_claims)
-                    # if a diff exists alter the wikidata item
-                    if item_dict_add:
-                        data_item.editEntity(item_dict_add)
-                        self._counter += 1
-                        self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
+                data_item.get()
+                item_dict_add = {}
+                # process claims, if they differ
+                claims_to_change = self._get_claimes_to_change(data_item)
+                if claims_to_change["remove"]:
+                    # if there are claims, that aren't up to date remove them
+                    data_item.removeClaims(claims_to_change["remove"])
+                if claims_to_change["add"]:
+                    item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
+                # process if non claims differ
+                if self._labels_and_sitelinks_has_changed(data_item.toJSON(), self._non_claims):
+                    item_dict_add.update(self._non_claims)
+                # if a diff exists alter the wikidata item
+                if item_dict_add:
+                    data_item.editEntity(item_dict_add)
+                    self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
             except pywikibot.exceptions.NoPage:
                 # create a new one from scratch
                 data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
