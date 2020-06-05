@@ -13,22 +13,36 @@ class Neighbour(ClaimFactory):
     def neighbour(self):
         raise NotImplementedError
 
+    def execute_pre_action(self):
+        lemma_neighbour = self._get_lemma_of_neighbour()
+        if lemma_neighbour.exists():
+            try:
+                lemma_neighbour.data_item()
+            except pywikibot.NoPage:
+                self.logger.info(f"An item was created for {lemma_neighbour}, "
+                                 f"because it is a neighbour of {self.re_page.lemma_as_link}.")
+                self.wikidata.createNewItemFromPage(lemma_neighbour, summary="Create Item for neighbour Item")
+
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        predecessor_item = self._get_item_of_neighbour_lemma()
-        if predecessor_item:
+        neighbour_item = self._get_item_of_neighbour_lemma()
+        if neighbour_item:
             snak_parameter = SnakParameter(property_str=self.get_property_string(),
                                            target_type="wikibase-item",
-                                           target=predecessor_item.id)
+                                           target=neighbour_item.id)
             return [self.create_claim_json(snak_parameter)]
         return []
 
     def _get_item_of_neighbour_lemma(self) -> Optional[ItemPage]:
-        lemma_neighbour_str = f"RE:{self.re_page.first_article[self.neighbour].value}"
-        lemma_neighbour = pywikibot.Page(self.wikisource, lemma_neighbour_str)
+        lemma_neighbour = self._get_lemma_of_neighbour()
         try:
             return lemma_neighbour.data_item()
         except pywikibot.NoPage:
             return None
+
+    def _get_lemma_of_neighbour(self) -> pywikibot.Page:
+        lemma_neighbour_str = f"RE:{self.re_page.first_article[self.neighbour].value}"
+        lemma_neighbour = pywikibot.Page(self.wikisource, lemma_neighbour_str)
+        return lemma_neighbour
 
 
 class P155Follows(Neighbour):

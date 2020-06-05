@@ -153,6 +153,7 @@ class DATATask(ReScannerTask):
         claims_to_remove: ClaimList = []
         for claim_factory_class in self.claim_factories:
             claim_factory = claim_factory_class(self.re_page, self.logger)
+            claim_factory.execute_pre_action()
             claims_to_change_dict = claim_factory.get_claims_to_update(data_item)
             if claims_to_change_dict["add"]:
                 claims_to_add.update(claims_to_change_dict["add"])
