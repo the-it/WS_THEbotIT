@@ -23,15 +23,18 @@ class ClaimFactory:
                                               target="Q15522295")
 
     def __init__(self, re_page: RePage, logger: WikiLogger):
-        self.wikidata = re_page.page.data_repository
-        self.wikisource = re_page.page.site
-        self.wikipedia = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
+        self.wikidata: pywikibot.site.DataSite = re_page.page.data_repository
+        self.wikisource: pywikibot.Site = re_page.page.site
+        self.wikipedia: pywikibot.Site = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
         self.re_page = re_page
         self.logger = logger
         self._current_year = datetime.now().year
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
         raise NotImplementedError
+
+    def execute_pre_action(self):
+        pass
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
