@@ -68,9 +68,6 @@ class DATATask(ReScannerTask):
                 item_dict_add = {}
                 # process claims, if they differ
                 claims_to_change = self._get_claimes_to_change(data_item)
-                if claims_to_change["remove"]:
-                    # if there are claims, that aren't up to date remove them
-                    data_item.removeClaims(claims_to_change["remove"])
                 if claims_to_change["add"]:
                     item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
                 # process if non claims differ
@@ -78,8 +75,11 @@ class DATATask(ReScannerTask):
                     item_dict_add.update(self._non_claims)
                 # if a diff exists alter the wikidata item
                 if item_dict_add:
-                    data_item.editEntity(item_dict_add)
-                    self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
+                    data_item.editEntity(item_dict_add, asynchronous=True)
+                    self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
+                if claims_to_change["remove"]:
+                    # if there are claims, that aren't up to date remove them
+                    data_item.removeClaims(claims_to_change["remove"])
             except pywikibot.exceptions.NoPage:
                 # create a new one from scratch
                 data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
@@ -87,7 +87,7 @@ class DATATask(ReScannerTask):
                 item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
                 item_dict_add.update(self._non_claims)
                 data_item.editEntity(item_dict_add)
-                self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
+                self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
         except pywikibot.exceptions.MaxlagTimeoutError:
             self.logger.error(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
                               f", after {datetime.now() - start_time}")
