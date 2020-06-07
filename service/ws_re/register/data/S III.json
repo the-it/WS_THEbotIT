@@ -18054,7 +18054,6 @@
   {
     "lemma": "Domitius 50",
     "previous": "Domitius 43",
-    "next": "Domitius 89a",
     "sort_key": "Domitius 050",
     "wp_link": "w:de:Gnaeus Domitius Corbulo",
     "wd_link": "d:Q313066",
@@ -18068,7 +18067,7 @@
   },
   {
     "lemma": "Domitius 89a",
-    "previous": "Domitius 50",
+    "previous": "Domitius 43",
     "next": "Domitus",
     "sort_key": "Domitius 089a",
     "proof_read": 2,
@@ -18497,7 +18496,15 @@
   {
     "lemma": "Eboreus pagus",
     "previous": "Dyseris",
-    "next": "Ebreis"
+    "next": "Ebreis",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 417,
+        "end": 417,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Ebreis",
@@ -24627,6 +24634,7 @@
     "next": "Jülich",
     "proof_read": 2,
     "wp_link": "w:de:Judenburg",
+    "wd_link": "d:Q263107",
     "chapters": [
       {
         "start": 1303,
@@ -24642,6 +24650,7 @@
     "redirect": "Iuliacus",
     "proof_read": 2,
     "wp_link": "w:de:Jülich",
+    "wd_link": "d:Q16045",
     "chapters": [
       {
         "start": 1303,
