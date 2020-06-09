@@ -10,7 +10,8 @@ import pywikibot
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.base import get_article_type
-from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, ChangedClaimsDict
+from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, \
+    ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
@@ -75,11 +76,12 @@ class DATATask(ReScannerTask):
                     item_dict_add.update(self._non_claims)
                 # if a diff exists alter the wikidata item
                 if item_dict_add:
-                    data_item.editEntity(item_dict_add)
+                    data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
                     self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
-                if claims_to_change["remove"]:
+                claims_to_remove = claims_to_change["remove"]
+                if claims_to_remove:
                     # if there are claims, that aren't up to date remove them
-                    data_item.removeClaims(claims_to_change["remove"])
+                    data_item.removeClaims(claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
             except pywikibot.exceptions.NoPage:
                 # create a new one from scratch
                 data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
@@ -97,6 +99,23 @@ class DATATask(ReScannerTask):
                                   f", after {datetime.now() - start_time}")
             else:
                 raise exception
+
+    @staticmethod
+    def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:
+        summary = []
+        for claim in claims_to_remove:
+            if claim.id not in summary:
+                summary.append(claim.id)
+        return ", ".join(summary)
+
+    @staticmethod
+    def _create_add_summary(item_dict_add: Dict) -> str:
+        summary = []
+        if "sitelinks" in item_dict_add:
+            summary.append("non_claims")
+        for key in item_dict_add["claims"]:
+            summary.append(key)
+        return ", ".join(summary)
 
     # NON CLAIM functionality
 
