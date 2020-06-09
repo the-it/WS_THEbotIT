@@ -1,3 +1,4 @@
+# pylint: disable=protected-access,no-self-use
 from unittest import TestCase
 
 from testfixtures import compare

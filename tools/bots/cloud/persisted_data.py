@@ -1,6 +1,7 @@
 import json
 from collections.abc import Mapping
 from datetime import datetime
+from io import BytesIO
 from typing import Dict, Any, Iterator
 
 import boto3
@@ -40,16 +41,15 @@ class PersistedData(Mapping):
             raise BotException(f"{new_dict} has the wrong type. It must be a dictionary.")
 
     def dump(self, success: bool = True):
-        if success:
-            self.s3_client.put_object(Bucket=self._bucket_name,
-                                      Key=self.key_name,
-                                      Body=json.dumps({"time": str(datetime.now()), "data": self._data}, indent=2)
-                                      .encode("utf-8"))
-        else:
-            self.s3_client.put_object(Bucket=self._bucket_name,
-                                      Key=self.key_name + ".broken",
-                                      Body=json.dumps({"time": str(datetime.now()), "data": self._data}, indent=2)
-                                      .encode("utf-8"))
+        key_name = self.key_name
+        if not success:
+            key_name += ".broken"
+        self.s3_client.put_object(Bucket=self._bucket_name,
+                                  Key=key_name,
+                                  Body=BytesIO(json.dumps({"time": str(datetime.now()),
+                                                           "data": self._data},
+                                                          indent=2)
+                                               .encode("utf-8")))
 
     def _load_from_bucket(self, key_appendix: str = ""):
         try:

@@ -76,7 +76,7 @@ class DATATask(ReScannerTask):
                     item_dict_add.update(self._non_claims)
                 # if a diff exists alter the wikidata item
                 if item_dict_add:
-                    data_item.editEntity(item_dict_add, summary=self._create_add_summary())
+                    data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
                     self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
                 claims_to_remove = claims_to_change["remove"]
                 if claims_to_remove:
