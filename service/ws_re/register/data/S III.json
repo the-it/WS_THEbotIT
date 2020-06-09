@@ -7219,6 +7219,8 @@
     "previous": "Articianus",
     "next": "Artois",
     "proof_read": 3,
+    "wp_link": "w:de:Artio",
+    "wd_link": "d:Q713105",
     "chapters": [
       {
         "start": 163,
@@ -7394,6 +7396,8 @@
     "previous": "Aschenurnen",
     "next": "Asciacus",
     "proof_read": 3,
+    "wp_link": "w:de:Axt",
+    "wd_link": "d:Q39397",
     "chapters": [
       {
         "start": 166,
@@ -7650,7 +7654,7 @@
     "lemma": "Atalante 1",
     "previous": "Astyoche 9",
     "next": "Ateius 3a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 174,
@@ -7689,7 +7693,7 @@
     "lemma": "Atepomarus 2",
     "previous": "Atenicus",
     "next": "Athanadas",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 175,
@@ -7702,7 +7706,7 @@
     "lemma": "Athanadas",
     "previous": "Atepomarus 2",
     "next": "Athanadas 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 175,
@@ -7806,7 +7810,7 @@
     "lemma": "Athanaios",
     "previous": "Athanadas 7",
     "next": "Athenadas",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 176,
@@ -7832,7 +7836,7 @@
     "lemma": "Athenades",
     "previous": "Athenadas",
     "next": "Athenades 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 176,
@@ -18054,6 +18058,7 @@
   {
     "lemma": "Domitius 50",
     "previous": "Domitius 43",
+    "next": "Domitius 89a",
     "sort_key": "Domitius 050",
     "wp_link": "w:de:Gnaeus Domitius Corbulo",
     "wd_link": "d:Q313066",
@@ -18067,7 +18072,7 @@
   },
   {
     "lemma": "Domitius 89a",
-    "previous": "Domitius 43",
+    "previous": "Domitius 50",
     "next": "Domitus",
     "sort_key": "Domitius 089a",
     "proof_read": 2,
@@ -18560,7 +18565,17 @@
   {
     "lemma": "Echekrates 3",
     "previous": "Echekrateia",
-    "next": "Echekratidas 1"
+    "next": "Echekratidas 1",
+    "proof_read": 2,
+    "wp_link": "w:de:Echekrates",
+    "wd_link": "d:Q962486",
+    "chapters": [
+      {
+        "start": 417,
+        "end": 418,
+        "author": "Oldfather."
+      }
+    ]
   },
   {
     "lemma": "Echekratidas 1",
@@ -24678,6 +24693,7 @@
     "redirect": "Icorigium",
     "proof_read": 3,
     "wp_link": "w:de:Jünkerath",
+    "wd_link": "d:Q553521",
     "chapters": [
       {
         "start": 1304,
