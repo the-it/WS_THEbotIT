@@ -98,7 +98,7 @@ class SCANTask(ReScannerTask):
                     return wp_item.claims["P921"][0].target
             return None
         except pywikibot.exceptions.MaxlagTimeoutError as exception:
-            self.logger.error(f"No WD target, because of timeout at {self.re_page.lemma_as_link}")
+            self.logger.debug(f"No WD target, because of timeout at {self.re_page.lemma_as_link}")
             raise exception
 
     @staticmethod
