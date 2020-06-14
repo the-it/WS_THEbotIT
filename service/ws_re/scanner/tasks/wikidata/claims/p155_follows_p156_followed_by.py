@@ -13,16 +13,6 @@ class Neighbour(ClaimFactory):
     def neighbour(self):
         raise NotImplementedError
 
-    def execute_pre_action(self):
-        lemma_neighbour = self._get_lemma_of_neighbour()
-        if lemma_neighbour.exists():
-            try:
-                lemma_neighbour.data_item()
-            except pywikibot.NoPage:
-                self.logger.info(f"An item was created for {lemma_neighbour}, "
-                                 f"because it is a neighbour of {self.re_page.lemma_as_link}.")
-                self.wikidata.createNewItemFromPage(lemma_neighbour, summary="Create Item for neighbour Item")
-
     def _get_claim_json(self) -> List[JsonClaimDict]:
         neighbour_item = self._get_item_of_neighbour_lemma()
         if neighbour_item:
