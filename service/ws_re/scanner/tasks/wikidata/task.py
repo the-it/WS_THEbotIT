@@ -91,14 +91,14 @@ class DATATask(ReScannerTask):
                 data_item.editEntity(item_dict_add)
                 self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
         except pywikibot.exceptions.MaxlagTimeoutError:
-            self.logger.error(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
+            self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
                               f", after {datetime.now() - start_time}")
         except pywikibot.exceptions.OtherPageSaveError as exception:
-            if "maxlag" in exception.message.lower():
-                self.logger.error(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
+            if "maxlag" in exception.reason.lower():
+                self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
                                   f", after {datetime.now() - start_time}")
             else:
-                raise exception
+                raise
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:
