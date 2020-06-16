@@ -23,9 +23,9 @@ class ClaimFactory:
                                               target="Q15522295")
 
     def __init__(self, re_page: RePage, logger: WikiLogger):
-        self.wikidata: pywikibot.site.DataSite = re_page.page.data_repository
-        self.wikisource: pywikibot.Site = re_page.page.site
+        self.wikisource: pywikibot.Site = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         self.wikipedia: pywikibot.Site = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
+        self.wikidata: pywikibot.site.DataSite = self.wikisource.data_repository()
         self.re_page = re_page
         self.logger = logger
         self._current_year = datetime.now().year
