@@ -94,7 +94,7 @@ class DATATask(ReScannerTask):
             self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
                               f", after {datetime.now() - start_time}")
         except pywikibot.exceptions.OtherPageSaveError as exception:
-            if isinstance(exception.reason, MaxlagTimeoutError):
+            if isinstance(exception.reason, pywikibot.exceptions.MaxlagTimeoutError):
                 self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
                                   f", after {datetime.now() - start_time}")
             else:
