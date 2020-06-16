@@ -94,7 +94,7 @@ class DATATask(ReScannerTask):
             self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
                               f", after {datetime.now() - start_time}")
         except pywikibot.exceptions.OtherPageSaveError as exception:
-            if "maxlag" in exception.reason.lower():
+            if isinstance(exception.reason, pywikibot.exceptions.MaxlagTimeoutError):
                 self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
                                   f", after {datetime.now() - start_time}")
             else:
@@ -148,10 +148,14 @@ class DATATask(ReScannerTask):
         old_non_claims["sitelinks"] = list(old_non_claims["sitelinks"].values())
         # remove all languages, that are not set by this bot
         for labels_or_descriptions in ("labels", "descriptions"):
-            old_non_claims[labels_or_descriptions] = {key: value
-                                                      for (key, value)
-                                                      in old_non_claims[labels_or_descriptions].items()
-                                                      if key in self._languages(labels_or_descriptions)}
+            try:
+                old_non_claims[labels_or_descriptions] = {key: value
+                                                          for (key, value)
+                                                          in old_non_claims[labels_or_descriptions].items()
+                                                          if key in self._languages(labels_or_descriptions)}
+            except KeyError:
+                # if there is no key, doesn't matter, the diff will show it then.
+                pass
         return bool(tuple(dictdiffer.diff(new_non_claims, old_non_claims)))
 
     # CLAIM functionality
