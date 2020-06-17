@@ -1,5 +1,4 @@
 # pylint: disable=protected-access
-import pywikibot
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
