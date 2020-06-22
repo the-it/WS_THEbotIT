@@ -6,7 +6,7 @@
 #
 astroid==2.4.2            # via pylint
 attrs==19.3.0             # via jsonschema
-aws-sam-translator==1.24.0  # via cfn-lint
+aws-sam-translator==1.25.0  # via cfn-lint
 aws-xray-sdk==2.6.0       # via moto
 backports.csv==1.0.7      # via internetarchive
 bandit==1.6.2             # via -r requirements-dev.in
