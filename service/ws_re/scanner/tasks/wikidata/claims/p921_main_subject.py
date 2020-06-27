@@ -2,9 +2,9 @@ from typing import List
 
 import pywikibot
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ChangedClaimsDict, JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 
 
 class P921MainSubject(ClaimFactory):
@@ -28,7 +28,7 @@ class P921MainSubject(ClaimFactory):
         # try to fetch the data item of the page, if not there is nothing to connect
         try:
             wp_data_item: pywikibot.ItemPage = wp_page.data_item()
-        except pywikibot.NoPage:
+        except (pywikibot.NoPage, pywikibot.exceptions.InvalidTitle):
             return []
         # finally create the claim
         snak = SnakParameter(property_str=self.get_property_string(),
@@ -39,10 +39,7 @@ class P921MainSubject(ClaimFactory):
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
-        Every claim that is updated can possible add new claims, but can also remove existing claims at the item.
-        Which claims is removed or added depends of the specific implementation of the property factory. The standart
-        implementation will update all claims as expected by the factory (this include removing possible existing
-        claims).
+        Only add claims, if no claim already exist. Alert with an error if existing claim and added claim
 
         :param: data_item: item where the specific property is going to be altered
 

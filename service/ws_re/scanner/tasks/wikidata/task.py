@@ -113,8 +113,11 @@ class DATATask(ReScannerTask):
         summary = []
         if "sitelinks" in item_dict_add:
             summary.append("non_claims")
-        for key in item_dict_add["claims"]:
-            summary.append(key)
+        try:
+            for key in item_dict_add["claims"]:
+                summary.append(key)
+        except KeyError:
+            pass
         return ", ".join(summary)
 
     # NON CLAIM functionality
