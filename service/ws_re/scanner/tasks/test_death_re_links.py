@@ -93,7 +93,7 @@ class TestDEALTask(TaskTestCase):
 {{RE siehe|Anderer Quatsch}}
 {{REAutor|Autor.}}
 {{REDaten}}
-{{RE siehe|Besserer Quatsch}}
+{{RE siehe|Dada Quatsch}}
 {{REAutor|Autor.}}
 {{REDaten}}
 {{RE siehe|Nicht hiernach suchen}}
@@ -103,7 +103,7 @@ class TestDEALTask(TaskTestCase):
             re_page = RePage(self.page_mock)
             task = DEALTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
-            compare([("Aal", "Title"), ("Besserer Quatsch", "Title")], task.data)
+            compare([("Aal", "Title"), ("Dada Quatsch", "Title")], task.data)
 
     def test_build_entries(self):
         task = DEALTask(None, self.logger)
