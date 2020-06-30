@@ -95,7 +95,6 @@
   {
     "lemma": "Acilius 42",
     "previous": "Achaios 6",
-    "next": "Acilius 52",
     "proof_read": 3,
     "wp_link": "w:de:Manius Acilius Glabrio (Konsul 152)",
     "wd_link": "d:Q1237530",
@@ -109,7 +108,7 @@
   },
   {
     "lemma": "Acilius 52",
-    "previous": "Acilius 42",
+    "previous": "Achaios 6",
     "next": "Ad Malum",
     "wp_link": "w:de:Lucius Acilius Rufus",
     "wd_link": "d:Q343799",
@@ -1268,6 +1267,8 @@
     "lemma": "Aufidius 41",
     "previous": "Attaleia 3",
     "next": "Avidius 6",
+    "wp_link": "w:de:Gaius Aufidius Victorinus (Konsul 183)",
+    "wd_link": "d:Q329569",
     "chapters": [
       {
         "start": 129,
@@ -3359,7 +3360,6 @@
   {
     "lemma": "Iulianos 62",
     "previous": "Iulianos 61",
-    "next": "Iulius 11a",
     "chapters": [
       {
         "start": 503,
@@ -3369,30 +3369,52 @@
     ]
   },
   {
+    "lemma": "Iulianus 62",
+    "next": "Iulius 11a"
+  },
+  {
     "lemma": "Iulius 11a",
-    "previous": "Iulianos 62",
-    "next": "Iulius 159a",
+    "previous": "Iulianus 62",
+    "next": "Iulius 60",
+    "sort_key": "Iulius 011a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 503,
-        "end": 503
+        "end": 503,
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 60",
+    "previous": "Iulius 11a",
+    "next": "Iulius 159a",
+    "sort_key": "Iulius 060",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 503,
+        "end": 503,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 159a",
-    "previous": "Iulius 11a",
-    "next": "Iulius 162a",
+    "previous": "Iulius 60",
+    "next": "Iulius 166a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 503,
-        "end": 503
+        "end": 503,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 162a",
-    "previous": "Iulius 159a",
     "next": "Iulius 164b",
     "chapters": [
       {
@@ -3404,28 +3426,60 @@
   {
     "lemma": "Iulius 164b",
     "previous": "Iulius 162a",
-    "next": "Iulius 185a",
     "chapters": [
       {
         "start": 504,
         "end": 504
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 166a",
+    "next": "Iulius 166b"
+  },
+  {
+    "lemma": "Iulius 166b",
+    "previous": "Iulius 166a",
+    "next": "Iulius 185a",
+    "chapters": [
+      {
+        "start": 504,
+        "end": 504,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 185a",
-    "previous": "Iulius 164b",
-    "next": "Iulius 258a",
+    "previous": "Iulius 166b",
+    "next": "Iulius 192a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 504,
-        "end": 504
+        "end": 504,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
-    "lemma": "Iulius 258a",
+    "lemma": "Iulius 192a",
     "previous": "Iulius 185a",
+    "next": "Iulius 193",
+    "chapters": [
+      {
+        "start": 504,
+        "end": 504,
+        "author": "Gerhard Winkler."
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 193",
+    "previous": "Iulius 192a"
+  },
+  {
+    "lemma": "Iulius 258a",
     "next": "Iulius 283a",
     "chapters": [
       {

@@ -3529,6 +3529,7 @@
     "next": "Iulius 152",
     "proof_read": 2,
     "wp_link": "w:de:Sextus Iulius Caesar (Konsul 91 v. Chr.)",
+    "wd_link": "d:Q302813",
     "chapters": [
       {
         "start": 476,
@@ -3556,6 +3557,7 @@
     "next": "Iulius 154",
     "proof_read": 2,
     "wp_link": "w:de:Sextus Iulius Caesar (Quästor 48 v. Chr.)",
+    "wd_link": "d:Q1234276",
     "chapters": [
       {
         "start": 477,
@@ -3582,7 +3584,8 @@
     "lemma": "Iulius 155",
     "previous": "Iulius 154",
     "next": "Iulius 156",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wd_link": "d:Q91340775",
     "chapters": [
       {
         "start": 536,
@@ -3597,6 +3600,7 @@
     "next": "Iulius 157",
     "proof_read": 2,
     "wp_link": "w:de:Tiberius Gemellus",
+    "wd_link": "d:Q319410",
     "chapters": [
       {
         "start": 536,
@@ -3622,6 +3626,8 @@
     "previous": "Iulius 157",
     "next": "Iulius 159",
     "proof_read": 2,
+    "wp_link": "w:ca:Luci Juli Càlid",
+    "wd_link": "d:Q4270018",
     "chapters": [
       {
         "start": 537,
@@ -3635,7 +3641,7 @@
     "previous": "Iulius 158",
     "next": "Iulius 160",
     "redirect": "Iulius 306",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 537,
@@ -3726,6 +3732,7 @@
     "next": "Iulius 167",
     "proof_read": 2,
     "wp_link": "w:de:Tiberius Iulius Candidus Marius Celsus",
+    "wd_link": "d:Q768013",
     "chapters": [
       {
         "start": 539,
@@ -4123,7 +4130,8 @@
     "chapters": [
       {
         "start": 576,
-        "end": 577
+        "end": 577,
+        "author": "Stein."
       }
     ]
   },
@@ -4133,9 +4141,9 @@
     "next": "Iulius 199",
     "chapters": [
       {
-        "start": 577,
-        "end": 577,
-        "author": "Stein, [Arthur]"
+        "start": 575,
+        "end": 575,
+        "author": "Stein."
       }
     ]
   },
@@ -4143,11 +4151,12 @@
     "lemma": "Iulius 199",
     "previous": "Iulius 198",
     "next": "Iulius 200",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 577,
-        "end": 577,
-        "author": "Hohl"
+        "start": 575,
+        "end": 575,
+        "author": "Hohl."
       }
     ]
   },
@@ -4155,11 +4164,12 @@
     "lemma": "Iulius 200",
     "previous": "Iulius 199",
     "next": "Iulius 201",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 577,
-        "end": 578,
-        "author": "Groag"
+        "start": 575,
+        "end": 576,
+        "author": "Groag."
       }
     ]
   },
@@ -4167,10 +4177,12 @@
     "lemma": "Iulius 201",
     "previous": "Iulius 200",
     "next": "Iulius 202",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 578,
-        "end": 578
+        "start": 576,
+        "end": 576,
+        "author": "Stein."
       }
     ]
   },
@@ -4178,10 +4190,12 @@
     "lemma": "Iulius 202",
     "previous": "Iulius 201",
     "next": "Iulius 203",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 578,
-        "end": 578
+        "start": 576,
+        "end": 576,
+        "author": "Stein."
       }
     ]
   },
@@ -4189,10 +4203,12 @@
     "lemma": "Iulius 203",
     "previous": "Iulius 202",
     "next": "Iulius 204",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 578,
-        "end": 578
+        "start": 576,
+        "end": 576,
+        "author": "Stein."
       }
     ]
   },
@@ -4200,11 +4216,12 @@
     "lemma": "Iulius 204",
     "previous": "Iulius 203",
     "next": "Iulius 205",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 578,
-        "end": 578,
-        "author": "Stein, [Arthur]"
+        "start": 576,
+        "end": 576,
+        "author": "Stein."
       }
     ]
   },
@@ -4212,10 +4229,12 @@
     "lemma": "Iulius 205",
     "previous": "Iulius 204",
     "next": "Iulius 206",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 578,
-        "end": 578
+        "start": 576,
+        "end": 576
       }
     ]
   },
