@@ -1589,7 +1589,7 @@
   {
     "lemma": "Archippos 16",
     "previous": "Archimimus",
-    "next": "Ἀρι...",
+    "next": "Ἀρι(...",
     "chapters": [
       {
         "start": 41,
@@ -1599,7 +1599,7 @@
     ]
   },
   {
-    "lemma": "Ἀρι...",
+    "lemma": "Ἀρι(...",
     "previous": "Archippos 16",
     "next": "Arimnestos 6a",
     "sort_key": "Ari...",
@@ -1614,7 +1614,7 @@
   },
   {
     "lemma": "Arimnestos 6a",
-    "previous": "Ἀρι...",
+    "previous": "Ἀρι(...",
     "next": "Ἀριστ(...",
     "proof_read": 2,
     "chapters": [
@@ -5216,11 +5216,12 @@
     "lemma": "Iulius 38b",
     "previous": "Isokrates 3",
     "next": "Iulius 119a",
+    "sort_key": "Iulius 038b",
     "chapters": [
       {
         "start": 331,
         "end": 331,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -5228,10 +5229,12 @@
     "lemma": "Iulius 119a",
     "previous": "Iulius 38b",
     "next": "Iulius 192a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
-        "end": 331
+        "end": 331,
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -5249,7 +5252,6 @@
   {
     "lemma": "Iulius 192b",
     "previous": "Iulius 192a",
-    "next": "Iulius 196a",
     "chapters": [
       {
         "start": 331,
@@ -5259,19 +5261,18 @@
   },
   {
     "lemma": "Iulius 196a",
-    "previous": "Iulius 192b",
-    "next": "Isylos",
+    "previous": "Iulius 192a",
+    "next": "Iulius 196b",
     "chapters": [
       {
         "start": 331,
-        "end": 331
+        "end": 331,
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Isylos",
-    "previous": "Iulius 196a",
-    "next": "Iulius 196b",
     "chapters": [
       {
         "start": 332,
@@ -5282,12 +5283,14 @@
   },
   {
     "lemma": "Iulius 196b",
-    "previous": "Isylos",
+    "previous": "Iulius 196a",
     "next": "Iulius 276a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 332,
-        "end": 332
+        "end": 332,
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -5295,10 +5298,12 @@
     "lemma": "Iulius 276a",
     "previous": "Iulius 196b",
     "next": "Iulius 288a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 332,
-        "end": 332
+        "end": 332,
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -5306,10 +5311,12 @@
     "lemma": "Iulius 288a",
     "previous": "Iulius 276a",
     "next": "Iulius 559a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 332,
-        "end": 332
+        "end": 332,
+        "author": "Mario Bonaria."
       }
     ]
   },

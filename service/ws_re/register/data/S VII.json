@@ -1601,7 +1601,6 @@
   {
     "lemma": "Isonomia",
     "previous": "Isidoros 3a",
-    "next": "Iulius 62a",
     "chapters": [
       {
         "start": 293,
@@ -1611,31 +1610,49 @@
     ]
   },
   {
+    "lemma": "Istron",
+    "next": "Iulius 62a"
+  },
+  {
     "lemma": "Iulius 62a",
-    "previous": "Isonomia",
-    "next": "Iulius 86a",
+    "previous": "Istron",
+    "next": "Iulius 80",
+    "sort_key": "Iulius 062a",
     "chapters": [
       {
         "start": 309,
-        "end": 309
+        "end": 309,
+        "author": "Stein."
       }
     ]
   },
   {
+    "lemma": "Iulius 80",
+    "previous": "Iulius 62a"
+  },
+  {
+    "lemma": "Iulius 83",
+    "next": "Iulius 86a"
+  },
+  {
     "lemma": "Iulius 86a",
-    "previous": "Iulius 62a",
-    "next": "Iulius 348a",
+    "previous": "Iulius 83",
+    "next": "Iulius 118",
+    "sort_key": "Iulius 086a",
     "chapters": [
       {
         "start": 310,
         "end": 310,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
+    "lemma": "Iulius 118",
+    "previous": "Iulius 86a"
+  },
+  {
     "lemma": "Iulius 348a",
-    "previous": "Iulius 86a",
     "next": "Iulius 357",
     "chapters": [
       {
