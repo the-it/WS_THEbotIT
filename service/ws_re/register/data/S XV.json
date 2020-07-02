@@ -1731,10 +1731,12 @@
     "lemma": "Iulius 65aa",
     "previous": "Josippus",
     "next": "Iulius 203a",
+    "sort_key": "Iulius 065aa",
     "chapters": [
       {
         "start": 123,
-        "end": 123
+        "end": 123,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -1742,27 +1744,33 @@
     "lemma": "Iulius 203a",
     "previous": "Iulius 65aa",
     "next": "Iulius 228a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 123,
-        "end": 123
+        "end": 123,
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Iulius 228a",
     "previous": "Iulius 203a",
-    "next": "Iulius 279a",
+    "next": "Iulius 253",
     "chapters": [
       {
         "start": 123,
-        "end": 123
+        "end": 123,
+        "author": "Werner Eck."
       }
     ]
   },
   {
+    "lemma": "Iulius 253",
+    "previous": "Iulius 228a"
+  },
+  {
     "lemma": "Iulius 279a",
-    "previous": "Iulius 228a",
     "next": "Iulius 316a",
     "chapters": [
       {

@@ -3648,7 +3648,6 @@
   {
     "lemma": "Iulianos 17a",
     "previous": "Insteius 8a",
-    "next": "Iulius 65a",
     "chapters": [
       {
         "start": 205,
@@ -3658,13 +3657,19 @@
     ]
   },
   {
+    "lemma": "Iulianus 17a",
+    "next": "Iulius 65a"
+  },
+  {
     "lemma": "Iulius 65a",
-    "previous": "Iulianos 17a",
+    "previous": "Iulianus 17a",
     "next": "Iulius 105a",
+    "sort_key": "Iulius 065a",
     "chapters": [
       {
         "start": 205,
-        "end": 206
+        "end": 206,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -3675,7 +3680,8 @@
     "chapters": [
       {
         "start": 206,
-        "end": 207
+        "end": 207,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -3683,49 +3689,62 @@
     "lemma": "Iulius 163a",
     "previous": "Iulius 105a",
     "next": "Iulius 164a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 207,
-        "end": 207
+        "end": 207,
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Iulius 164a",
     "previous": "Iulius 163a",
-    "next": "Iulius 172a",
+    "next": "Iulius 166",
     "chapters": [
       {
         "start": 207,
-        "end": 207
+        "end": 207,
+        "author": "Werner Eck."
       }
     ]
   },
   {
-    "lemma": "Iulius 172a",
+    "lemma": "Iulius 166",
     "previous": "Iulius 164a",
+    "next": "Iulius 172a"
+  },
+  {
+    "lemma": "Iulius 172a",
+    "previous": "Iulius 166",
     "next": "Iulius 195a",
     "chapters": [
       {
         "start": 207,
-        "end": 207
+        "end": 207,
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Iulius 195a",
     "previous": "Iulius 172a",
-    "next": "Iulius 251a",
+    "next": "Iulius 196",
     "chapters": [
       {
         "start": 207,
-        "end": 208
+        "end": 208,
+        "author": "Werner Eck."
       }
     ]
   },
   {
+    "lemma": "Iulius 196",
+    "previous": "Iulius 195a"
+  },
+  {
     "lemma": "Iulius 251a",
-    "previous": "Iulius 195a",
     "next": "Iulius 290a",
     "chapters": [
       {
