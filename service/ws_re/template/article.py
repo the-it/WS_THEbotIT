@@ -71,6 +71,7 @@ class Article(collections.MutableMapping):
 
     @article_type.setter
     def article_type(self, new_value: str):
+        new_value = new_value.strip()
         if new_value in (RE_DATEN, RE_ABSCHNITT):
             self._article_type = new_value
         else:
