@@ -184,6 +184,11 @@ class TestReArticle(TestCase):
                                     "There is text after the article."):
             Article.from_text(article_text)
 
+    def test_from_text_bug_bad_whitespace(self):
+        article_text = "{{REDaten \n|BAND=I,1}}\ntext\n{{REAutor|Some Author.}}"
+        article = Article.from_text(article_text)
+        self.assertEqual(article.article_type, "REDaten")
+
     def test_to_text_simple(self):
         self.article.author = "Autor."
         self.article.text = "text"
