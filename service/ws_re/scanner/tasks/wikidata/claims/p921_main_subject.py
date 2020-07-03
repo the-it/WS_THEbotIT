@@ -53,7 +53,6 @@ class P921MainSubject(ClaimFactory):
         if not old_claims:
             return self._create_claim_dictionary([new_claim], [])
         if not new_claim.same_as(old_claims[0]):
-            self.logger.error(f"{self.re_page.lemma_as_link} has diff to WD main subject")
             self.re_page.add_error_category(self.ERROR_CAT)
         else:
             self.re_page.remove_error_category(self.ERROR_CAT)
