@@ -95,7 +95,6 @@
   {
     "lemma": "Acilius 42",
     "previous": "Achaios 6",
-    "next": "Acilius 52",
     "proof_read": 3,
     "wp_link": "w:de:Manius Acilius Glabrio (Konsul 152)",
     "wd_link": "d:Q1237530",
@@ -109,7 +108,7 @@
   },
   {
     "lemma": "Acilius 52",
-    "previous": "Acilius 42",
+    "previous": "Achaios 6",
     "next": "Ad Malum",
     "wp_link": "w:de:Lucius Acilius Rufus",
     "wd_link": "d:Q343799",
@@ -3438,12 +3437,23 @@
   },
   {
     "lemma": "Iulius 166a",
-    "next": "Iulius 166b"
+    "previous": "Iulius 159a",
+    "next": "Iulius 166b",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 503,
+        "end": 504,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Iulius 166b",
     "previous": "Iulius 166a",
     "next": "Iulius 185a",
+    "wp_link": "w:de:Tiberius Iulius Candidus Capito",
+    "wd_link": "d:Q12296329",
     "chapters": [
       {
         "start": 504,
@@ -3493,7 +3503,19 @@
   },
   {
     "lemma": "Iulius 202",
-    "previous": "Iulius 193"
+    "previous": "Iulius 193",
+    "next": "Iulius 220",
+    "chapters": [
+      {
+        "start": 505,
+        "end": 505,
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 220",
+    "previous": "Iulius 202"
   },
   {
     "lemma": "Iulius 258a",

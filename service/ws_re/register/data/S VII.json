@@ -1628,11 +1628,31 @@
   },
   {
     "lemma": "Iulius 80",
-    "previous": "Iulius 62a"
+    "previous": "Iulius 62a",
+    "next": "Iulius 83",
+    "sort_key": "Iulius 080",
+    "wd_link": "d:Q12276073",
+    "chapters": [
+      {
+        "start": 309,
+        "end": 309,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Iulius 83",
-    "next": "Iulius 86a"
+    "previous": "Iulius 80",
+    "next": "Iulius 86a",
+    "sort_key": "Iulius 083",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 310,
+        "end": 310,
+        "author": "Groag."
+      }
+    ]
   },
   {
     "lemma": "Iulius 86a",
@@ -1649,7 +1669,20 @@
   },
   {
     "lemma": "Iulius 118",
-    "previous": "Iulius 86a"
+    "previous": "Iulius 86a",
+    "next": "Iulius 348",
+    "redirect": "Iulius 425a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 310,
+        "end": 310
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 348",
+    "previous": "Iulius 118"
   },
   {
     "lemma": "Iulius 348a",
