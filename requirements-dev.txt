@@ -42,7 +42,7 @@ internetarchive==1.9.4    # via -r requirements-dev.in
 isort==5.0.4             # via pylint
 jinja2==2.11.2            # via moto
 jmespath==0.10.0          # via -c requirements.txt, boto3, botocore
-jsondiff==1.1.2           # via moto
+jsondiff==1.2.0           # via moto
 jsonpatch==1.26           # via cfn-lint, internetarchive
 jsonpickle==1.4.1         # via aws-xray-sdk
 jsonpointer==2.0          # via jsonpatch
