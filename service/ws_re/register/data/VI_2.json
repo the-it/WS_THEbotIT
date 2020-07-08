@@ -16023,24 +16023,42 @@
   {
     "lemma": "Florus 9",
     "previous": "Florus 8",
-    "next": "Flosis",
+    "next": "Florus 10",
+    "sort_key": "Florus 09",
+    "proof_read": 2,
+    "wp_link": "w:de:Florus",
+    "ws_link": "s:de::la:Florus",
     "chapters": [
       {
         "start": 2761,
+        "end": 2770,
+        "author": "O. Rossbach."
+      }
+    ]
+  },
+  {
+    "lemma": "Florus 10",
+    "previous": "Florus 9",
+    "next": "Flosis",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2770,
         "end": 2771,
-        "author": "Münscher"
+        "author": "Münscher."
       }
     ]
   },
   {
     "lemma": "Flosis",
-    "previous": "Florus 9",
+    "previous": "Florus 10",
     "next": "Fluch",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2771,
         "end": 2771,
-        "author": "Hülsen"
+        "author": "Hülsen."
       }
     ]
   },
