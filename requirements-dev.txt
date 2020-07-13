@@ -39,7 +39,7 @@ gitpython==3.1.7          # via -c requirements.txt, bandit
 idna==2.10                 # via -c requirements.txt, moto, requests
 importlib-metadata==1.7.0  # via jsonpickle
 internetarchive==1.9.4    # via -r requirements-dev.in
-isort==4.3.21             # via pylint
+isort==5.0.9             # via pylint
 jinja2==2.11.2            # via moto
 jmespath==0.10.0          # via -c requirements.txt, boto3, botocore
 jsondiff==1.1.2           # via moto
