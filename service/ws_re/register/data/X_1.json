@@ -4779,6 +4779,7 @@
     "proof_read": 2,
     "wp_link": "w:de:Sextus Iulius Frontinus",
     "ws_link": "s:en:Author:Sextus Julius Frontinus",
+    "wd_link": "d:Q297377",
     "chapters": [
       {
         "start": 591,
@@ -4896,6 +4897,8 @@
     "previous": "Iulius 251",
     "next": "Iulius 253",
     "proof_read": 2,
+    "wp_link": "w:de:Lucius Iulius Frugi",
+    "wd_link": "d:Q12285296",
     "chapters": [
       {
         "start": 607,
@@ -4909,6 +4912,8 @@
     "previous": "Iulius 252",
     "next": "Iulius 254",
     "proof_read": 2,
+    "wp_link": "w:de:Lucius Iulius Frugi",
+    "wd_link": "d:Q12285296",
     "chapters": [
       {
         "start": 608,
@@ -4933,7 +4938,7 @@
     "lemma": "Iulius 255",
     "previous": "Iulius 254",
     "next": "Iulius 256",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 609,
@@ -4947,7 +4952,7 @@
     "previous": "Iulius 255",
     "next": "Iulius 257",
     "redirect": "Claudius 276",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 609,
@@ -4971,7 +4976,9 @@
     "lemma": "Iulius 258",
     "previous": "Iulius 257",
     "next": "Iulius 259",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Gaius Iulius Gallus",
+    "wd_link": "d:Q12276076",
     "chapters": [
       {
         "start": 609,
@@ -5633,10 +5640,12 @@
     "lemma": "Iulius 309",
     "previous": "Iulius 308",
     "next": "Iulius 310",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 658,
-        "end": 660
+        "end": 660,
+        "author": "Groag."
       }
     ]
   },
@@ -5644,10 +5653,12 @@
     "lemma": "Iulius 310",
     "previous": "Iulius 309",
     "next": "Iulius 311",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 660,
-        "end": 661
+        "end": 661,
+        "author": "Groag."
       }
     ]
   },
@@ -5655,11 +5666,12 @@
     "lemma": "Iulius 311",
     "previous": "Iulius 310",
     "next": "Iulius 312",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 661,
         "end": 661,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
@@ -5671,7 +5683,7 @@
       {
         "start": 661,
         "end": 662,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -5679,6 +5691,8 @@
     "lemma": "Iulius 313",
     "previous": "Iulius 312",
     "next": "Iulius 314",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 662,
@@ -5690,10 +5704,12 @@
     "lemma": "Iulius 314",
     "previous": "Iulius 313",
     "next": "Iulius 315",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 662,
-        "end": 662
+        "end": 662,
+        "author": "Stein."
       }
     ]
   },
@@ -5701,10 +5717,12 @@
     "lemma": "Iulius 315",
     "previous": "Iulius 314",
     "next": "Iulius 316",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 662,
-        "end": 662
+        "end": 662,
+        "author": "Stein."
       }
     ]
   },
@@ -5716,7 +5734,7 @@
       {
         "start": 662,
         "end": 662,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -5728,7 +5746,7 @@
       {
         "start": 662,
         "end": 662,
-        "author": "Hohl"
+        "author": "Hohl."
       }
     ]
   },
@@ -5736,11 +5754,12 @@
     "lemma": "Iulius 318",
     "previous": "Iulius 317",
     "next": "Iulius 319",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 662,
         "end": 662,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -5748,11 +5767,12 @@
     "lemma": "Iulius 319",
     "previous": "Iulius 318",
     "next": "Iulius 320",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 662,
         "end": 662,
-        "author": "Riba"
+        "author": "Riba."
       }
     ]
   },
