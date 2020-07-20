@@ -5,8 +5,8 @@ from datetime import datetime
 
 from testfixtures import compare
 
-from service.ws_re.register.authors import Authors
 from service.ws_re.register._base import RegisterException
+from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.lemma_chapter import LemmaChapter
 from service.ws_re.register.test_base import BaseTestRegister
@@ -83,6 +83,18 @@ class TestLemma(BaseTestRegister):
                  "[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]<br/>"
                  "[[d:Q123456|WD-Item]]",
                  "data-sort-value=\"w:de:lemma\""),
+                re_register_lemma.get_wiki_links())
+
+    def test_wiki_links_bug_multipart_lemma(self):
+        re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
+        compare(("", ""), re_register_lemma.get_wiki_links())
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["ws_link"] = "s:it:Autore:Lemma"
+        altered_dict["wp_link"] = "w:it:Autore:Lemma"
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
+        compare(("[[w:it:Autore:Lemma|Lemma<sup>(WP it)</sup>]]<br/>"
+                 "[[s:it:Autore:Lemma|Lemma<sup>(WS it)</sup>]]",
+                 "data-sort-value=\"w:it:autore:lemma\""),
                 re_register_lemma.get_wiki_links())
 
     def test_get_pages(self):
