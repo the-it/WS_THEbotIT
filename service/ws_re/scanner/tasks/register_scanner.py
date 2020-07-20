@@ -7,9 +7,9 @@ from typing import List, Tuple, Dict, Optional, Sequence
 import pywikibot
 from git import Repo
 
-from service.ws_re.register.author_crawler import AuthorCrawler
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDict, UpdaterRemoveList
+from service.ws_re.register.author_crawler import AuthorCrawler
 from service.ws_re.register.registers import Registers
 from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
@@ -18,6 +18,8 @@ from tools.bots.pi import WikiLogger
 
 
 class SCANTask(ReScannerTask):
+    ERROR_CAT = "RE:Nicht ins Register einsortierbar"
+
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers()
@@ -246,6 +248,7 @@ class SCANTask(ReScannerTask):
                 self.logger.error(f"No available Lemma in Registers for issue {band_info} "
                                   f"and lemma {self.re_page.lemma_as_link}. "
                                   f"Reason is: {error.args[0]}")
+                self.re_page.add_error_category(self.ERROR_CAT)
 
     def _write_strategy_statistic(self, strategy: str, update_dict: LemmaDict, issue_no: str):
         entry = f"{update_dict['lemma']}/{issue_no}"
