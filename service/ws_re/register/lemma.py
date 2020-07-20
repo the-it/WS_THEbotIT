@@ -2,7 +2,7 @@ import contextlib
 import re
 import unicodedata
 from datetime import datetime
-from typing import List, Tuple, KeysView, Optional
+from typing import List, Tuple, KeysView, Optional, Literal
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
@@ -254,13 +254,13 @@ class Lemma():
         links = []
         sort_keys = []
         if "wp_link" in self:
-            parts = self._lemma_dict['wp_link'].split(":")
-            links.append(f"[[{self['wp_link']}|{parts[2]}<sup>(WP {parts[1]})</sup>]]")
-            sort_keys.append(f"{parts[0]}:{parts[1]}:{self.make_sort_key(parts[2])}")
+            link, sort_key = self._process_wiki_link("wp")
+            links.append(link)
+            sort_keys.append(sort_key)
         if "ws_link" in self:
-            parts = self._lemma_dict['ws_link'].split(":")
-            links.append(f"[[{self['ws_link']}|{parts[2]}<sup>(WS {parts[1]})</sup>]]")
-            sort_keys.append(f"{parts[0]}:{parts[1]}:{self.make_sort_key(parts[2])}")
+            link, sort_key = self._process_wiki_link("ws")
+            links.append(link)
+            sort_keys.append(sort_key)
         if "wd_link" in self:
             links.append(f"[[{self['wd_link']}|WD-Item]]")
             sort_keys.append(f"{self['wd_link']}")
@@ -268,6 +268,14 @@ class Lemma():
             link = "<br/>".join(links)
             sort_key = f"data-sort-value=\"{sort_keys[0]}\""
         return link, sort_key
+
+    def _process_wiki_link(self, wiki_type: Literal["wp", "ws"]) -> Tuple[str, str]:
+        link_type: Literal["ws_link", "wp_link"] = "ws_link"
+        if wiki_type == "wp":
+            link_type = "wp_link"
+        parts = self._lemma_dict[link_type].split(":")
+        return f"[[{self[link_type]}|{parts[-1]}<sup>({wiki_type.upper()} {parts[1]})</sup>]]", \
+               f"{parts[0]}:{parts[1]}:{self.make_sort_key(':'.join(parts[2:]))}"
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
         start_page_scan = lemma_chapter.start
