@@ -244,6 +244,7 @@ class SCANTask(ReScannerTask):
                 with Updater(register) as updater:
                     strategy = updater.update_lemma(update_dict, delete_list, self_supplement)
                 self._write_strategy_statistic(strategy, update_dict, band_info)
+                self.re_page.remove_error_category(self.ERROR_CAT)
             except RegisterException as error:
                 self.logger.error(f"No available Lemma in Registers for issue {band_info} "
                                   f"and lemma {self.re_page.lemma_as_link}. "
