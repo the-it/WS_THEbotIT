@@ -1682,23 +1682,25 @@
   },
   {
     "lemma": "Iulius 348",
-    "previous": "Iulius 118"
+    "previous": "Iulius 118",
+    "next": "Iulius 348a"
   },
   {
     "lemma": "Iulius 348a",
+    "previous": "Iulius 348",
     "next": "Iulius 357",
     "chapters": [
       {
         "start": 310,
         "end": 310,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Iulius 357",
     "previous": "Iulius 348a",
-    "next": "Iulius 422a",
+    "next": "Iulius 418",
     "chapters": [
       {
         "start": 311,
@@ -1708,44 +1710,74 @@
     ]
   },
   {
-    "lemma": "Iulius 422a",
+    "lemma": "Iulius 418",
     "previous": "Iulius 357",
+    "next": "Iulius 422a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 311,
+        "end": 311,
+        "author": "Groag."
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 422a",
+    "previous": "Iulius 418",
     "next": "Iulius 425a",
     "chapters": [
       {
         "start": 311,
         "end": 311,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Iulius 425a",
     "previous": "Iulius 422a",
-    "next": "Iulius 472a",
+    "next": "Iulius 462",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 311,
-        "end": 311,
-        "author": "Groag"
+        "end": 312,
+        "author": "Groag."
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 462",
+    "previous": "Iulius 425a",
+    "next": "Iulius 472a",
+    "chapters": [
+      {
+        "start": 312,
+        "end": 312,
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Iulius 472a",
-    "previous": "Iulius 425a",
-    "next": "Iunius 105a",
+    "previous": "Iulius 462",
+    "next": "Iulius 536",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 312,
         "end": 312,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },
   {
+    "lemma": "Iulius 536",
+    "previous": "Iulius 472a"
+  },
+  {
     "lemma": "Iunius 105a",
-    "previous": "Iulius 472a",
     "next": "Iuratores",
     "chapters": [
       {
