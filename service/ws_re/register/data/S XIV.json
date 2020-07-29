@@ -3766,44 +3766,57 @@
   },
   {
     "lemma": "Iulius 243",
-    "previous": "Iulius 196"
+    "previous": "Iulius 196",
+    "next": "Iulius 251a"
   },
   {
     "lemma": "Iulius 251a",
-    "next": "Iulius 290a",
+    "previous": "Iulius 243",
+    "next": "Iulius 252",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 209,
-        "end": 209
+        "end": 209,
+        "author": "Werner Eck."
       }
     ]
   },
   {
-    "lemma": "Iulius 290a",
+    "lemma": "Iulius 252",
     "previous": "Iulius 251a",
+    "next": "Iulius 290a"
+  },
+  {
+    "lemma": "Iulius 290a",
+    "previous": "Iulius 252",
     "next": "Iulius 379b",
     "chapters": [
       {
         "start": 209,
-        "end": 209
+        "end": 209,
+        "author": "Werner Eck."
       }
     ]
   },
   {
     "lemma": "Iulius 379b",
     "previous": "Iulius 290a",
-    "next": "Iulius 500a",
+    "next": "Iulius 425a",
     "chapters": [
       {
         "start": 209,
         "end": 209,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
   {
+    "lemma": "Iulius 425a",
+    "previous": "Iulius 379b"
+  },
+  {
     "lemma": "Iulius 500a",
-    "previous": "Iulius 379b",
     "next": "Iulius 556a",
     "chapters": [
       {

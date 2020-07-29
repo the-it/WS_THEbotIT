@@ -3519,12 +3519,19 @@
     "previous": "Iulius 258a"
   },
   {
+    "lemma": "Iulius 263",
+    "next": "Iulius 283a"
+  },
+  {
     "lemma": "Iulius 283a",
+    "previous": "Iulius 263",
     "next": "Iulius 313",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 506,
-        "end": 506
+        "end": 506,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -3542,7 +3549,6 @@
   {
     "lemma": "Iulius 342",
     "previous": "Iulius 313",
-    "next": "Iulius 357a",
     "chapters": [
       {
         "start": 506,
@@ -3552,38 +3558,50 @@
     ]
   },
   {
+    "lemma": "Iulius 357",
+    "next": "Iulius 357a"
+  },
+  {
     "lemma": "Iulius 357a",
-    "previous": "Iulius 342",
+    "previous": "Iulius 357",
     "next": "Iulius 368a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 506,
         "end": 506,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 368a",
     "previous": "Iulius 357a",
-    "next": "Iulius 382a",
+    "next": "Iulius 379",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 507,
         "end": 507,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
-    "lemma": "Iulius 382a",
+    "lemma": "Iulius 379",
     "previous": "Iulius 368a",
+    "next": "Iulius 382a"
+  },
+  {
+    "lemma": "Iulius 382a",
+    "previous": "Iulius 379",
     "next": "Iulius 393",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 507,
         "end": 507,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -3602,54 +3620,78 @@
   {
     "lemma": "Iulius 405a",
     "previous": "Iulius 393",
-    "next": "Iulius 420a",
+    "next": "Iulius 410a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 507,
         "end": 507,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
+      }
+    ]
+  },
+  {
+    "lemma": "Iulius 410a",
+    "previous": "Iulius 405a",
+    "next": "Iulius 420a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 507,
+        "end": 507,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 420a",
-    "previous": "Iulius 405a",
-    "next": "Iulius 436a",
+    "previous": "Iulius 410a",
+    "next": "Iulius 425",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 507,
         "end": 507,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
-    "lemma": "Iulius 436a",
+    "lemma": "Iulius 425",
     "previous": "Iulius 420a",
+    "next": "Iulius 436a"
+  },
+  {
+    "lemma": "Iulius 436a",
+    "previous": "Iulius 425",
     "next": "Iulius 449a",
     "chapters": [
       {
         "start": 507,
         "end": 507,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 449a",
     "previous": "Iulius 436a",
-    "next": "Iulius 463",
+    "next": "Iulius 460",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 507,
         "end": 507,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
+    "lemma": "Iulius 460",
+    "previous": "Iulius 449a"
+  },
+  {
     "lemma": "Iulius 463",
-    "previous": "Iulius 449a",
     "next": "Iulius 463a",
     "chapters": [
       {
@@ -3667,25 +3709,28 @@
       {
         "start": 508,
         "end": 508,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 465a",
     "previous": "Iulius 463a",
-    "next": "Iulius 498",
+    "next": "Iulius 494",
     "chapters": [
       {
         "start": 508,
         "end": 509,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
+    "lemma": "Iulius 494",
+    "previous": "Iulius 465a"
+  },
+  {
     "lemma": "Iulius 498",
-    "previous": "Iulius 465a",
     "next": "Iulius 507a",
     "chapters": [
       {
