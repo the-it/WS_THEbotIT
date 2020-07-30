@@ -64,6 +64,7 @@ class TestP50Author(BaseTestClaimFactory):
         factory = P50Author(re_page, self.logger)
         claim_json = factory._get_claim_json()
         compare(2, len(claim_json))
-        # should be Johannes Schmidt, the epigrapher (https://www.wikidata.org/wiki/Q1296093)
+        # should be Erwin Pollack (https://www.wikidata.org/wiki/Q1363334)
         compare(1363334, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+        # should be Christian Hülsen (https://www.wikidata.org/wiki/Q69896)
         compare(69896, claim_json[1]["mainsnak"]["datavalue"]["value"]["numeric-id"])
