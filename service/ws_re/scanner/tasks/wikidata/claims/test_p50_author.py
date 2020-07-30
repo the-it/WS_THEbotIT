@@ -55,3 +55,15 @@ class TestP50Author(BaseTestClaimFactory):
         claim_json = factory._get_claim_json()
         # should be Johannes Schmidt, the epigrapher (https://www.wikidata.org/wiki/Q1296093)
         compare(1296093, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+    def test__get_claim_json_bug_circus(self):
+        re_page = self._create_mock_page(text="{{REDaten\n|BAND=III,2\n}}\ntext\n{{REAutor|Pollack.}}\n"
+                                              "{{REAbschnitt}}\ntext\n{{REAutor|Hülsen.}}\n"
+                                              "{{REAbschnitt}}\ntext\n{{REAutor|Pollack.}}",
+                                         title="RE:Bla")
+        factory = P50Author(re_page, self.logger)
+        claim_json = factory._get_claim_json()
+        compare(2, len(claim_json))
+        # should be Johannes Schmidt, the epigrapher (https://www.wikidata.org/wiki/Q1296093)
+        compare(1363334, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+        compare(69896, claim_json[1]["mainsnak"]["datavalue"]["value"]["numeric-id"])
