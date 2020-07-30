@@ -2,9 +2,9 @@ from typing import List
 
 import pywikibot
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 
 
 class P50Author(ClaimFactory):
@@ -28,8 +28,9 @@ class P50Author(ClaimFactory):
                 author_lemma = pywikibot.Page(self.wikipedia, author.wp_lemma)
             if author_lemma:
                 try:
-                    # append the item of the author, if it exists
-                    author_items.append(author_lemma.data_item().id)
+                    # append the item of the author, if it exists and is not already in the list
+                    if (author_wikidata_id := author_lemma.data_item().id) not in author_items:
+                        author_items.append(author_wikidata_id)
                 except pywikibot.NoPage:
                     continue
         return author_items
