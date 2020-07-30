@@ -158,6 +158,16 @@ class Volumes(OrderedDict):
         for volume_key in self:
             yield self[volume_key]
 
+    @property
+    def main_volumes(self) -> Generator[str, None, None]:
+        main_volumes = []
+        for volume_key in self:
+            main_volume = re.sub(r"\,[1-4]", "", volume_key)
+            if main_volume not in main_volumes:
+                main_volumes.append(main_volume)
+        for volume_key in main_volumes:
+            yield volume_key
+
     def get_neighbours(self, volume_str: str) -> Tuple[str, str]:
         idx = self._volume_list.index(volume_str)
         pre = post = ""

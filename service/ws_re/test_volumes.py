@@ -134,6 +134,12 @@ class TestVolumes(TestCase):
             counter += 1
         compare(84, counter)
 
+    def test_iter_supplements(self):
+        counter = 0
+        for volume in self.re_volumes.main_volumes:
+            counter += 1
+        compare(50, counter)
+
     def test_get(self):
         with self.assertRaises(ReDatenException):
             print(self.re_volumes["tada"])
