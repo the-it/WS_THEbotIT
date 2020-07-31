@@ -11,7 +11,7 @@ class ShortRegister(Register):
                  registers: Dict[str, VolumeRegister]):
         self._main_issue: str = main_issue
         self._registers = registers
-        self._lemmas: List[Lemma] = []
+        self._lemmas: List[List[Lemma]] = []
         self._init_lemmas()
 
     def __repr__(self):
@@ -27,13 +27,11 @@ class ShortRegister(Register):
                 for lemma in self._registers[volume_str].lemmas:
                     if lemma not in lemmas:
                         lemmas.append(lemma)
-        self._lemmas = lemmas
-
-    def _get_table(self) -> str:
-        table = []
-        for lemma in self._lemmas:
-            table.append(f"[[RE:{lemma}|{lemma}]]")
-        return " |\n".join(table)
+        self._lemmas = self.squash_lemmas(sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key)))
 
     def get_register_str(self) -> str:
-        return self._get_table()
+        table = []
+        for lemma in self._lemmas:
+            lemma_str = lemma[0]["lemma"]
+            table.append(f"[[RE:{lemma_str}|{lemma_str}]]")
+        return " |\n".join(table)
