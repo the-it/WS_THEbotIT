@@ -95,7 +95,6 @@
   {
     "lemma": "Acilius 42",
     "previous": "Achaios 6",
-    "next": "Acilius 52",
     "proof_read": 3,
     "wp_link": "w:de:Manius Acilius Glabrio (Konsul 152)",
     "wd_link": "d:Q1237530",
@@ -109,7 +108,7 @@
   },
   {
     "lemma": "Acilius 52",
-    "previous": "Acilius 42",
+    "previous": "Achaios 6",
     "next": "Ad Malum",
     "wp_link": "w:de:Lucius Acilius Rufus",
     "wd_link": "d:Q343799",
@@ -3499,7 +3498,16 @@
   {
     "lemma": "Iulius 220",
     "previous": "Iulius 202",
-    "next": "Iulius 258a"
+    "next": "Iulius 258a",
+    "wp_link": "w:de:Eurykles von Sparta",
+    "wd_link": "d:Q1378466",
+    "chapters": [
+      {
+        "start": 505,
+        "end": 506,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Iulius 258a",
@@ -3516,11 +3524,32 @@
   },
   {
     "lemma": "Iulius 260",
-    "previous": "Iulius 258a"
+    "previous": "Iulius 258a",
+    "next": "Iulius 263",
+    "proof_read": 2,
+    "wp_link": "w:de:Gaius Iulius Geminus Capellianus",
+    "wd_link": "d:Q75173205",
+    "chapters": [
+      {
+        "start": 506,
+        "end": 506,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Iulius 263",
-    "next": "Iulius 283a"
+    "previous": "Iulius 260",
+    "next": "Iulius 283a",
+    "wp_link": "w:de:Lucius Iulius Graecinus",
+    "wd_link": "d:Q1241495",
+    "chapters": [
+      {
+        "start": 506,
+        "end": 506,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Iulius 283a",
@@ -3539,27 +3568,39 @@
     "lemma": "Iulius 313",
     "previous": "Iulius 283a",
     "next": "Iulius 342",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 506,
-        "end": 506
+        "end": 506,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 342",
     "previous": "Iulius 313",
+    "next": "Iulius 357",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 506,
         "end": 506,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulius 357",
-    "next": "Iulius 357a"
+    "previous": "Iulius 342",
+    "next": "Iulius 357a",
+    "chapters": [
+      {
+        "start": 506,
+        "end": 506,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Iulius 357a",
@@ -3590,7 +3631,15 @@
   {
     "lemma": "Iulius 379",
     "previous": "Iulius 368a",
-    "next": "Iulius 382a"
+    "next": "Iulius 382a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 507,
+        "end": 507,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Iulius 382a",
@@ -3613,7 +3662,7 @@
       {
         "start": 507,
         "end": 507,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },

@@ -1683,7 +1683,14 @@
   {
     "lemma": "Iulius 348",
     "previous": "Iulius 118",
-    "next": "Iulius 348a"
+    "next": "Iulius 348a",
+    "chapters": [
+      {
+        "start": 310,
+        "end": 310,
+        "author": "Stein."
+      }
+    ]
   },
   {
     "lemma": "Iulius 348a",
@@ -1701,11 +1708,12 @@
     "lemma": "Iulius 357",
     "previous": "Iulius 348a",
     "next": "Iulius 418",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 311,
         "end": 311,
-        "author": "Groag"
+        "author": "Groag."
       }
     ]
   },

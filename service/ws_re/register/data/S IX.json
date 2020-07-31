@@ -1266,7 +1266,7 @@
   {
     "lemma": "Iulius 68a",
     "previous": "iudicium domesticum",
-    "next": "Iulius 375",
+    "next": "Iulius 357",
     "sort_key": "Iulius 068a",
     "proof_read": 2,
     "chapters": [
@@ -1278,12 +1278,19 @@
     ]
   },
   {
-    "lemma": "Iulius 375",
-    "previous": "Iulius 68a"
+    "lemma": "Iulius 375"
   },
   {
     "lemma": "Iulius 357",
-    "next": "Iulius 379a"
+    "previous": "Iulius 68a",
+    "next": "Iulius 379a",
+    "chapters": [
+      {
+        "start": 375,
+        "end": 377,
+        "author": "Jenö Fitz."
+      }
+    ]
   },
   {
     "lemma": "Iulius 379a",
