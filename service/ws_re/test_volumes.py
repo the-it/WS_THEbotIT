@@ -152,3 +152,10 @@ class TestVolumes(TestCase):
         compare(("I,2", "II,2"), self.re_volumes.get_neighbours("II,1"))
         compare(("XXIV", "I A,2"), self.re_volumes.get_neighbours("I A,1"))
         compare(("S XV", ""), self.re_volumes.get_neighbours("R"))
+
+    def test__volume_part_of_main_volume(self):
+        compare(True, Volumes.is_volume_part_of_main_volume("I,1", "I"))
+        compare(False, Volumes.is_volume_part_of_main_volume("II,1", "I"))
+        compare(False, Volumes.is_volume_part_of_main_volume("I,1", "II"))
+        compare(False, Volumes.is_volume_part_of_main_volume("I,1", "XI"))
+        compare(True, Volumes.is_volume_part_of_main_volume("II,1", "II"))

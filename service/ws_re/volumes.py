@@ -162,11 +162,19 @@ class Volumes(OrderedDict):
     def main_volumes(self) -> Generator[str, None, None]:
         main_volumes = []
         for volume_key in self:
-            main_volume = re.sub(r"\,[1-4]", "", volume_key)
+            main_volume = self._main_volume_of_volume(volume_key)
             if main_volume not in main_volumes:
                 main_volumes.append(main_volume)
         for volume_key in main_volumes:
             yield volume_key
+
+    @staticmethod
+    def _main_volume_of_volume(volume_key):
+        return re.sub(r"\,[1-4]", "", volume_key)
+
+    @staticmethod
+    def is_volume_part_of_main_volume(volume: str, main_volume: str) -> bool:
+        return main_volume == Volumes._main_volume_of_volume(volume)
 
     def get_neighbours(self, volume_str: str) -> Tuple[str, str]:
         idx = self._volume_list.index(volume_str)

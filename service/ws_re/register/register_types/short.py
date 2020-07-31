@@ -3,6 +3,7 @@ from typing import Dict, List
 from service.ws_re.register._base import Register
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types.volume import VolumeRegister
+from service.ws_re.volumes import Volumes
 
 
 class ShortRegister(Register):
@@ -23,7 +24,7 @@ class ShortRegister(Register):
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
-            if self.main_issue in volume_str:
+            if Volumes.is_volume_part_of_main_volume(volume_str, self.main_issue):
                 for lemma in self._registers[volume_str].lemmas:
                     if lemma not in lemmas:
                         lemmas.append(lemma)

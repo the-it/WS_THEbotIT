@@ -16,6 +16,7 @@ class ReRegisterPrinter(CanonicalBot):
         self._print_volume()
         self._print_alphabetic()
         self._print_author()
+        self._print_short()
         return True
 
     def _print_author(self):
