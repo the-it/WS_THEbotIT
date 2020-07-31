@@ -36,7 +36,7 @@ class TestReRegisterPrinter(BaseTestRegister):
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/z'),
                     page_mock.call_args_list[43])
 
-    def test_print_main_volume(self):
+    def test_print_short(self):
         with mock.patch("service.ws_re.register.printer.Page") as page_mock:
             printer = ReRegisterPrinter()
             printer._print_short()
