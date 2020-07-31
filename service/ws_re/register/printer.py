@@ -61,6 +61,16 @@ class ReRegisterPrinter(CanonicalBot):
                                  register.get_register_str(),
                                  "Register aktualisiert")
 
+    def _print_short(self):
+        self.logger.info("Print short register.")
+        for register in self.registers.short_volumes:
+            self.logger.debug(register)
+            self.save_if_changed(Page(self.wiki,
+                                      f"Paulys Realencyclopädie der classischen "
+                                      f"Altertumswissenschaft/Register/{register.main_issue} kurz"),
+                                 register.get_register_str(),
+                                 "Register aktualisiert")
+
     def _print_volume(self):
         self.logger.info("Print volume register.")
         for register in self.registers.volumes.values():

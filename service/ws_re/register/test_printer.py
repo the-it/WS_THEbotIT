@@ -36,6 +36,24 @@ class TestReRegisterPrinter(BaseTestRegister):
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/z'),
                     page_mock.call_args_list[43])
 
+    def test_print_main_volume(self):
+        with mock.patch("service.ws_re.register.printer.Page") as page_mock:
+            printer = ReRegisterPrinter()
+            printer._print_short()
+            compare(50, len(page_mock.call_args_list))
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/I kurz'),
+                    page_mock.call_args_list[0])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/XI kurz'),
+                    page_mock.call_args_list[10])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/XXI kurz'),
+                    page_mock.call_args_list[20])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/VII A kurz'),
+                    page_mock.call_args_list[30])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/S VII kurz'),
+                    page_mock.call_args_list[40])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/R kurz'),
+                    page_mock.call_args_list[49])
+
     def test_print_author(self):
         with mock.patch("service.ws_re.register.printer.Page") as page_mock:
             printer = ReRegisterPrinter()

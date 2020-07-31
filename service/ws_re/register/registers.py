@@ -5,6 +5,7 @@ from typing import Dict, Generator
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.alphabetic import AlphabeticRegister
 from service.ws_re.register.register_types.author import AuthorRegister
+from service.ws_re.register.register_types.short import ShortRegister
 from service.ws_re.register.register_types.volume import VolumeRegister
 from service.ws_re.volumes import Volumes
 
@@ -47,6 +48,12 @@ class Registers:
             register = AuthorRegister(author, self.authors, self._registers)
             if len(register) > 0:
                 yield register
+
+    @property
+    def short_volumes(self) -> Generator[ShortRegister, None, None]:
+        for main_volume in Volumes().main_volumes:
+            register = ShortRegister(main_volume, self._registers)
+            yield register
 
     @property
     def volumes(self) -> Dict[str, VolumeRegister]:
