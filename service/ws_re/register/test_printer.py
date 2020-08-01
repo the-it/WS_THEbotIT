@@ -1,4 +1,5 @@
 # pylint: disable=protected-access,no-self-use
+from datetime import datetime
 from unittest import mock
 from unittest.mock import call
 
@@ -53,6 +54,21 @@ class TestReRegisterPrinter(BaseTestRegister):
                     page_mock.call_args_list[40])
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/R kurz'),
                     page_mock.call_args_list[49])
+
+    def test_print_pd(self):
+        with mock.patch("service.ws_re.register.printer.Page") as page_mock:
+            printer = ReRegisterPrinter()
+            printer._print_pd()
+            current_year = datetime.now().year
+            compare(10, len(page_mock.call_args_list))
+            compare(call(None,
+                         f'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/'
+                         f'PD {current_year - 5}'),
+                    page_mock.call_args_list[0])
+            compare(call(None,
+                         f'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/'
+                         f'PD {current_year + 4}'),
+                    page_mock.call_args_list[9])
 
     def test_print_author(self):
         with mock.patch("service.ws_re.register.printer.Page") as page_mock:
