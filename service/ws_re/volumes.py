@@ -174,7 +174,7 @@ class Volumes(OrderedDict):
 
     @staticmethod
     def is_volume_part_of_main_volume(volume: str, main_volume: str) -> bool:
-        return main_volume == Volumes._main_volume_of_volume(volume)
+        return bool(main_volume == Volumes._main_volume_of_volume(volume))
 
     def get_neighbours(self, volume_str: str) -> Tuple[str, str]:
         idx = self._volume_list.index(volume_str)

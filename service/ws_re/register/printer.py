@@ -13,10 +13,11 @@ class ReRegisterPrinter(CanonicalBot):
         self.registers = Registers()
 
     def task(self):
-        self._print_volume()
-        self._print_alphabetic()
-        self._print_author()
-        self._print_short()
+        # self._print_volume()
+        # self._print_alphabetic()
+        # self._print_author()
+        # self._print_short()
+        self._print_pd()
         return True
 
     def _print_author(self):
@@ -62,9 +63,19 @@ class ReRegisterPrinter(CanonicalBot):
                                  register.get_register_str(),
                                  "Register aktualisiert")
 
+    def _print_pd(self):
+        self.logger.info("Print public domain register.")
+        for register in self.registers.pd:
+            self.logger.debug(register)
+            self.save_if_changed(Page(self.wiki,
+                                      f"Paulys Realencyclopädie der classischen "
+                                      f"Altertumswissenschaft/Register/PD {register.year}"),
+                                 register.get_register_str(),
+                                 "Register aktualisiert")
+
     def _print_short(self):
         self.logger.info("Print short register.")
-        for register in self.registers.short_volumes:
+        for register in self.registers.short:
             self.logger.debug(register)
             self.save_if_changed(Page(self.wiki,
                                       f"Paulys Realencyclopädie der classischen "
