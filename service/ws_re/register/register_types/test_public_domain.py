@@ -93,5 +93,4 @@ class TestPublicDomainRegister(BaseTestRegister):
 |style="background:#FFCBCB"|1950
 |}
 Zahl der Artikel: 6, """
-        print(pd_2021_register.get_register_str())
         compare(expected_table, pd_2021_register.get_register_str())

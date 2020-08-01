@@ -13,10 +13,10 @@ class ReRegisterPrinter(CanonicalBot):
         self.registers = Registers()
 
     def task(self):
-        # self._print_volume()
-        # self._print_alphabetic()
-        # self._print_author()
-        # self._print_short()
+        self._print_volume()
+        self._print_alphabetic()
+        self._print_author()
+        self._print_short()
         self._print_pd()
         return True
 
