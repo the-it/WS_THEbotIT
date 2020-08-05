@@ -34,6 +34,7 @@ PROOFREAD_BADGES = {"fertig": "Q20748093",
                     "korrigiert": "Q20748092",
                     "unkorrigiert": "Q20748091"}
 
+
 class DATATask(ReScannerTask):
     claim_factories = (
         P31InstanceOf,
@@ -137,19 +138,18 @@ class DATATask(ReScannerTask):
         else:
             replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix)
         non_claims: Dict = json.loads(replaced_json)
-        non_claims["sitelinks"] = {"dewikisource":
-                                       {"site": "dewikisource",
-                                        "title": self.re_page.lemma,
-                                        "badges": self._proofread_badge
-                                        }
-                                   }
+        non_claims["sitelinks"] = {"dewikisource": {
+            "site": "dewikisource",
+            "title": self.re_page.lemma,
+            "badges": self._proofread_badge
+        }}
         return non_claims
 
     @property
     def _proofread_badge(self) -> List[str]:
         proofread_badge = []
         try:
-            proofread_badge.append(PROOFREAD_BADGES[self.re_page.first_article["KORREKTURSTAND"].value.lower()])
+            proofread_badge.append(PROOFREAD_BADGES[str(self.re_page.first_article["KORREKTURSTAND"].value).lower()])
         except KeyError:
             pass
         return proofread_badge
