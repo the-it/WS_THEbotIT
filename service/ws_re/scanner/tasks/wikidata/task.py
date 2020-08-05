@@ -30,6 +30,9 @@ from tools.bots.pi import WikiLogger
 SerializedClaimList = List[Dict]
 SerializedClaimDictionary = Dict[str, SerializedClaimList]
 
+PROOFREAD_BADGES = {"fertig": "Q20748093",
+                    "korrigiert": "Q20748092",
+                    "unkorrigiert": "Q20748091"}
 
 class DATATask(ReScannerTask):
     claim_factories = (
@@ -126,19 +129,30 @@ class DATATask(ReScannerTask):
     def _non_claims(self) -> Dict:
         article_type = get_article_type(self.re_page)
         if article_type == "index":
-            replaced_json = self._non_claims_template_index.substitute(lemma=self.re_page.lemma_without_prefix,
-                                                                       lemma_with_prefix=self.re_page.lemma)
+            replaced_json = self._non_claims_template_index.substitute(lemma=self.re_page.lemma_without_prefix)
         elif article_type == "prologue":
-            replaced_json = self._non_claims_template_prologue.substitute(lemma=self.re_page.lemma_without_prefix,
-                                                                          lemma_with_prefix=self.re_page.lemma)
+            replaced_json = self._non_claims_template_prologue.substitute(lemma=self.re_page.lemma_without_prefix)
         elif article_type == "crossref":
-            replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix,
-                                                                          lemma_with_prefix=self.re_page.lemma)
+            replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix)
         else:
-            replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix,
-                                                                         lemma_with_prefix=self.re_page.lemma)
+            replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix)
         non_claims: Dict = json.loads(replaced_json)
+        non_claims["sitelinks"] = {"dewikisource":
+                                       {"site": "dewikisource",
+                                        "title": self.re_page.lemma,
+                                        "badges": self._proofread_badge
+                                        }
+                                   }
         return non_claims
+
+    @property
+    def _proofread_badge(self) -> List[str]:
+        proofread_badge = []
+        try:
+            proofread_badge.append(PROOFREAD_BADGES[self.re_page.first_article["KORREKTURSTAND"].value.lower()])
+        except KeyError:
+            pass
+        return proofread_badge
 
     def _languages(self, labels_or_descriptions: str) -> List[str]:
         return [str(language) for language in self._non_claims[labels_or_descriptions].keys()]
