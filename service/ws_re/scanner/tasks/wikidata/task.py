@@ -1,17 +1,12 @@
-import json
-from contextlib import suppress
 from datetime import datetime
-from pathlib import Path
-from string import Template
 from typing import Dict, List, Optional
 
-import dictdiffer
 import pywikibot
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from service.ws_re.scanner.tasks.wikidata.base import get_article_type
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, \
     ChangedClaimsDict
+from service.ws_re.scanner.tasks.wikidata.claims.non_claims import NonClaims
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
@@ -29,10 +24,6 @@ from tools.bots.pi import WikiLogger
 
 SerializedClaimList = List[Dict]
 SerializedClaimDictionary = Dict[str, SerializedClaimList]
-
-PROOFREAD_BADGES = {"fertig": "Q20748093",
-                    "korrigiert": "Q20748092",
-                    "unkorrigiert": "Q20748091"}
 
 
 class DATATask(ReScannerTask):
@@ -54,14 +45,6 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
-        with open(Path(__file__).parent.joinpath("non_claims_article.json")) as non_claims_json:
-            self._non_claims_template_article = Template(non_claims_json.read())
-        with open(Path(__file__).parent.joinpath("non_claims_crossref.json")) as non_claims_json:
-            self._non_claims_template_crossref = Template(non_claims_json.read())
-        with open(Path(__file__).parent.joinpath("non_claims_index.json")) as non_claims_json:
-            self._non_claims_template_index = Template(non_claims_json.read())
-        with open(Path(__file__).parent.joinpath("non_claims_prologue.json")) as non_claims_json:
-            self._non_claims_template_prologue = Template(non_claims_json.read())
 
     def task(self):
         start_time = datetime.now()
@@ -76,8 +59,9 @@ class DATATask(ReScannerTask):
                 if claims_to_change["add"]:
                     item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
                 # process if non claims differ
-                if self._labels_and_sitelinks_has_changed(data_item.toJSON(), self._non_claims):
-                    item_dict_add.update(self._non_claims)
+                non_claims = NonClaims(self.re_page)
+                if non_claims.labels_and_sitelinks_has_changed(data_item.toJSON()):
+                    item_dict_add.update(non_claims.dict)
                 # if a diff exists alter the wikidata item
                 if item_dict_add:
                     data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
@@ -91,7 +75,7 @@ class DATATask(ReScannerTask):
                 data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
                 claims_to_change = self._get_claimes_to_change(None)
                 item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
-                item_dict_add.update(self._non_claims)
+                item_dict_add.update(NonClaims(self.re_page).dict)
                 data_item.editEntity(item_dict_add)
                 self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
         except pywikibot.exceptions.MaxlagTimeoutError:
@@ -123,57 +107,6 @@ class DATATask(ReScannerTask):
         except KeyError:
             pass
         return ", ".join(summary)
-
-    # NON CLAIM functionality
-
-    @property
-    def _non_claims(self) -> Dict:
-        article_type = get_article_type(self.re_page)
-        if article_type == "index":
-            replaced_json = self._non_claims_template_index.substitute(lemma=self.re_page.lemma_without_prefix)
-        elif article_type == "prologue":
-            replaced_json = self._non_claims_template_prologue.substitute(lemma=self.re_page.lemma_without_prefix)
-        elif article_type == "crossref":
-            replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix)
-        else:
-            replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix)
-        non_claims: Dict = json.loads(replaced_json)
-        non_claims["sitelinks"] = {"dewikisource": {
-            "site": "dewikisource",
-            "title": self.re_page.lemma,
-            "badges": self._proofread_badge
-        }}
-        return non_claims
-
-    @property
-    def _proofread_badge(self) -> List[str]:
-        proofread_badge = []
-        try:
-            proofread_badge.append(PROOFREAD_BADGES[str(self.re_page.first_article["KORREKTURSTAND"].value).lower()])
-        except KeyError:
-            pass
-        return proofread_badge
-
-    def _languages(self, labels_or_descriptions: str) -> List[str]:
-        return [str(language) for language in self._non_claims[labels_or_descriptions].keys()]
-
-    def _labels_and_sitelinks_has_changed(self, old_non_claims: Dict, new_non_claims: Dict) -> bool:
-        # claims are not relevant here
-        with suppress(KeyError):
-            del old_non_claims["claims"]
-        # reformat sitelinks (toJSON has different format then editEntity accepts)
-        old_non_claims["sitelinks"] = list(old_non_claims["sitelinks"].values())
-        # remove all languages, that are not set by this bot
-        for labels_or_descriptions in ("labels", "descriptions"):
-            try:
-                old_non_claims[labels_or_descriptions] = {key: value
-                                                          for (key, value)
-                                                          in old_non_claims[labels_or_descriptions].items()
-                                                          if key in self._languages(labels_or_descriptions)}
-            except KeyError:
-                # if there is no key, doesn't matter, the diff will show it then.
-                pass
-        return bool(tuple(dictdiffer.diff(new_non_claims, old_non_claims)))
 
     # CLAIM functionality
 
