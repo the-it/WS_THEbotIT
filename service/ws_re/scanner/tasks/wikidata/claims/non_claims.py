@@ -61,8 +61,6 @@ class NonClaims:
         # claims are not relevant here
         with suppress(KeyError):
             del old_non_claims["claims"]
-        # reformat sitelinks (toJSON has different format then editEntity accepts)
-        old_non_claims["sitelinks"] = list(old_non_claims["sitelinks"].values())
         # remove all languages, that are not set by this bot
         for labels_or_descriptions in ("labels", "descriptions"):
             try:

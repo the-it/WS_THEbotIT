@@ -37,6 +37,24 @@ class TestNonClaims(BaseTestClaimFactory):
                 non_claim["descriptions"]["en"]["value"])
         compare(["de", "en"], non_claim["descriptions"].keys())
 
+    def test_badge_fertig(self):
+        re_page = self._create_mock_page(text="{{REDaten|KORREKTURSTAND=Fertig}}\ntext\n{{REAutor|Blub}}",
+                                         title="RE:Wilhelm Kroll †")
+        non_claim = NonClaims(re_page).dict
+        compare("Q20748093", non_claim["sitelinks"]["dewikisource"]["badges"][0])
+
+    def test_badge_korrigiert(self):
+        re_page = self._create_mock_page(text="{{REDaten|KORREKTURSTAND=Korrigiert}}\ntext\n{{REAutor|Blub}}",
+                                         title="RE:Wilhelm Kroll †")
+        non_claim = NonClaims(re_page).dict
+        compare("Q20748092", non_claim["sitelinks"]["dewikisource"]["badges"][0])
+
+    def test_badge_unkorrigiert(self):
+        re_page = self._create_mock_page(text="{{REDaten|KORREKTURSTAND=Unkorrigiert}}\ntext\n{{REAutor|Blub}}",
+                                         title="RE:Wilhelm Kroll †")
+        non_claim = NonClaims(re_page).dict
+        compare("Q20748091", non_claim["sitelinks"]["dewikisource"]["badges"][0])
+
     def test_labels_and_sitelinks_has_changed_no_change(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Blub}}", title="RE:Wilhelm Kroll †")
         non_claim = NonClaims(re_page)
@@ -49,6 +67,71 @@ class TestNonClaims(BaseTestClaimFactory):
                 "en": {
                     "language": "en",
                     "value": "Wilhelm Kroll \u2020 (Pauly-Wissowa)"
+                }
+            },
+            "descriptions": {
+                "en": {
+                    "language": "en",
+                    "value": "prologue in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+                },
+                "de": {
+                    "language": "de",
+                    "value": "Vorwort in Paulys Realencyclop\u00e4die der classischen Altertumswissenschaft (RE)"
+                }
+            },
+            "claims": {
+                "P31": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P31",
+                            "datatype": "wikibase-item",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 920285
+                                },
+                                "type": "wikibase-entityid"
+                            }
+                        },
+                        "type": "statement",
+                        "id": "Q20097915$CA3B6E3A-3963-42F5-936F-DD700D525C4B",
+                        "rank": "normal"
+                    }
+                ]
+            },
+            "sitelinks": {
+                "dewikisource": {
+                    "site": "dewikisource",
+                    "title": "RE:Wilhelm Kroll \u2020",
+                    "badges": []
+                }
+            }
+        }
+        compare(False, non_claim.labels_and_sitelinks_has_changed(old_non_claims))
+
+    def test_labels_and_sitelinks_has_changed_nothing_there(self):
+        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Blub}}", title="RE:Wilhelm Kroll †")
+        non_claim = NonClaims(re_page)
+        old_non_claims = {}
+        compare(True, non_claim.labels_and_sitelinks_has_changed(old_non_claims))
+
+    def test_labels_and_sitelinks_has_changed_more_languages(self):
+        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Blub}}", title="RE:Wilhelm Kroll †")
+        non_claim = NonClaims(re_page)
+        old_non_claims = {
+            "labels": {
+                "de": {
+                    "language": "de",
+                    "value": "Wilhelm Kroll \u2020 (Pauly-Wissowa)"
+                },
+                "en": {
+                    "language": "en",
+                    "value": "Wilhelm Kroll \u2020 (Pauly-Wissowa)"
+                },
+                "xy": {
+                    "language": "xy",
+                    "value": "Fantasy Language, shouldn't be a problem"
                 }
             },
             "descriptions": {
