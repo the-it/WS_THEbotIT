@@ -3845,22 +3845,31 @@
   {
     "lemma": "Iulius 500a",
     "previous": "Iulius 425a",
-    "next": "Iulius 556a",
+    "next": "Iulius 536",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 211,
-        "end": 211
+        "start": 209,
+        "end": 211,
+        "author": "Werner Eck."
       }
     ]
   },
   {
-    "lemma": "Iulius 556a",
+    "lemma": "Iulius 536",
     "previous": "Iulius 500a",
+    "next": "Iulius 556a"
+  },
+  {
+    "lemma": "Iulius 556a",
+    "previous": "Iulius 536",
     "next": "Iulius 595a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 212,
-        "end": 212
+        "end": 212,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -3872,7 +3881,7 @@
       {
         "start": 212,
         "end": 212,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },

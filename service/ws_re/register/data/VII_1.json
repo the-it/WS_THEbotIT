@@ -20699,11 +20699,12 @@
     "lemma": "Germanikopolis 1",
     "previous": "Germanikeios",
     "next": "Germanikopolis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -20711,11 +20712,12 @@
     "lemma": "Germanikopolis 2",
     "previous": "Germanikopolis 1",
     "next": "Germanikopolis 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -20723,18 +20725,21 @@
     "lemma": "Germanikopolis 3",
     "previous": "Germanikopolis 2",
     "next": "Germanikos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Germanikos",
     "previous": "Germanikopolis 3",
-    "next": "Germanioi",
+    "next": "Γερμάνιοι",
+    "redirect": "Germanikeios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
@@ -20743,21 +20748,25 @@
     ]
   },
   {
-    "lemma": "Germanioi",
+    "lemma": "Γερμάνιοι",
     "previous": "Germanikos",
     "next": "Germanorum castra",
+    "sort_key": "Germanioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Germanorum castra",
-    "previous": "Germanioi",
+    "previous": "Γερμάνιοι",
     "next": "Germanos",
+    "redirect": "Castra, Castrum 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
@@ -20769,11 +20778,12 @@
     "lemma": "Germanos",
     "previous": "Germanorum castra",
     "next": "Germanus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -20781,6 +20791,8 @@
     "lemma": "Germanus 1",
     "previous": "Germanos",
     "next": "Germanus 2",
+    "redirect": "Aurelius 142",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
@@ -20792,11 +20804,12 @@
     "lemma": "Germanus 2",
     "previous": "Germanus 1",
     "next": "Germanus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -20804,11 +20817,12 @@
     "lemma": "Germanus 3",
     "previous": "Germanus 2",
     "next": "Germanus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -20816,11 +20830,12 @@
     "lemma": "Germanus 4",
     "previous": "Germanus 3",
     "next": "Germanus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
         "end": 1258,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },

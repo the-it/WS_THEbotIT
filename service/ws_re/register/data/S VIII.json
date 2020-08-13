@@ -1216,7 +1216,6 @@
   {
     "lemma": "Iphthimis (K",
     "previous": "Johannisbrot",
-    "next": "Iulia aqua",
     "chapters": [
       {
         "start": 234,
@@ -1226,32 +1225,40 @@
     ]
   },
   {
+    "lemma": "Iphtimis",
+    "next": "Iulia aqua"
+  },
+  {
     "lemma": "Iulia aqua",
-    "previous": "Iphthimis (K",
+    "previous": "Iphtimis",
     "next": "Iulianos 58a",
     "chapters": [
       {
         "start": 235,
         "end": 235,
-        "author": "Buren"
+        "author": "A. W. Van Buren."
       }
     ]
   },
   {
     "lemma": "Iulianos 58a",
     "previous": "Iulia aqua",
-    "next": "Kalliades 5a",
+    "next": "Käfer",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 235,
         "end": 235,
-        "author": "Lippold, Georg"
+        "author": "Georg Lippold."
       }
     ]
   },
   {
+    "lemma": "Käfer",
+    "previous": "Iulianos 58a"
+  },
+  {
     "lemma": "Kalliades 5a",
-    "previous": "Iulianos 58a",
     "next": "Kallias 17a",
     "chapters": [
       {

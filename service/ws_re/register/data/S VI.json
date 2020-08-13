@@ -2291,7 +2291,6 @@
   {
     "lemma": "Ira 4",
     "previous": "Ionnaria",
-    "next": "Iulius 552a",
     "chapters": [
       {
         "start": 133,
@@ -2302,19 +2301,20 @@
   },
   {
     "lemma": "Iulius 552a",
-    "previous": "Ira 4",
-    "next": "Isamnus",
+    "previous": "Istros 1a",
+    "next": "Iulianum",
+    "proof_read": 2,
+    "wp_link": "w:de:Iulia (Tochter des Titus)",
     "chapters": [
       {
         "start": 133,
         "end": 137,
-        "author": "Fluss"
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Isamnus",
-    "previous": "Iulius 552a",
     "next": "Istris",
     "chapters": [
       {
@@ -2339,7 +2339,6 @@
   {
     "lemma": "Istros 1a",
     "previous": "Istris",
-    "next": "Iulianum",
     "chapters": [
       {
         "start": 134,
@@ -2350,13 +2349,15 @@
   },
   {
     "lemma": "Iulianum",
-    "previous": "Istros 1a",
+    "previous": "Iulius 552a",
     "next": "Iunius 183a",
+    "proof_read": 2,
+    "wp_link": "w:de:Iulia (Tochter des Titus)",
     "chapters": [
       {
         "start": 137,
         "end": 137,
-        "author": "Fluss"
+        "author": "Fluss."
       }
     ]
   },
