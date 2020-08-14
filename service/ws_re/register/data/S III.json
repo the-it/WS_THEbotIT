@@ -18066,6 +18066,7 @@
   {
     "lemma": "Domitius 50",
     "previous": "Domitius 43",
+    "next": "Domitius 89a",
     "sort_key": "Domitius 050",
     "wp_link": "w:de:Gnaeus Domitius Corbulo",
     "wd_link": "d:Q313066",
@@ -18079,7 +18080,7 @@
   },
   {
     "lemma": "Domitius 89a",
-    "previous": "Domitius 43",
+    "previous": "Domitius 50",
     "next": "Domitus",
     "sort_key": "Domitius 089a",
     "proof_read": 2,
@@ -21489,7 +21490,22 @@
   {
     "lemma": "Geminius 20a",
     "previous": "Geminius 3",
-    "next": "Geminus 2a",
+    "next": "Geminus 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 543,
+        "end": 543,
+        "author": "Hähnle."
+      }
+    ]
+  },
+  {
+    "lemma": "Geminus 2",
+    "previous": "Geminius 20a"
+  },
+  {
+    "lemma": "Geminus 2a",
     "chapters": [
       {
         "start": 543,
@@ -21499,44 +21515,54 @@
     ]
   },
   {
-    "lemma": "Geminus 2a",
-    "previous": "Geminius 20a",
+    "lemma": "Geminus 3",
+    "next": "Genialis 3"
+  },
+  {
+    "lemma": "Genialis 3",
+    "previous": "Geminus 3",
     "next": "Genianae figlinae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 543,
         "end": 543,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
   {
     "lemma": "Genianae figlinae",
-    "previous": "Geminus 2a",
+    "previous": "Genialis 3",
     "next": "Genitor 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 543,
         "end": 543,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Genitor 3",
     "previous": "Genianae figlinae",
-    "next": "Geophanion",
+    "next": "Gentinos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 543,
         "end": 543,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
   {
+    "lemma": "Gentinos",
+    "previous": "Genitor 3"
+  },
+  {
     "lemma": "Geophanion",
-    "previous": "Genitor 3",
     "next": "Geranthrai, Geronthrai, Gerenthrai",
     "chapters": [
       {
@@ -21609,7 +21635,6 @@
   {
     "lemma": "Germ(anicae?) figlinae",
     "previous": "Germania",
-    "next": "Germanus 7",
     "chapters": [
       {
         "start": 586,
@@ -21619,14 +21644,19 @@
     ]
   },
   {
+    "lemma": "Germanicum",
+    "next": "Germanus 7"
+  },
+  {
     "lemma": "Germanus 7",
-    "previous": "Germ(anicae?) figlinae",
+    "previous": "Germanicum",
     "next": "Germanus 7a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 586,
         "end": 587,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -21634,11 +21664,12 @@
     "lemma": "Germanus 7a",
     "previous": "Germanus 7",
     "next": "Germanus 7b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 587,
         "end": 587,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -21646,11 +21677,12 @@
     "lemma": "Germanus 7b",
     "previous": "Germanus 7a",
     "next": "Germatza",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 587,
         "end": 587,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -21658,11 +21690,12 @@
     "lemma": "Germatza",
     "previous": "Germanus 7b",
     "next": "Germenne",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 587,
         "end": 587,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
@@ -21670,29 +21703,34 @@
     "lemma": "Germenne",
     "previous": "Germatza",
     "next": "Germetitha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 587,
         "end": 587,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
   {
     "lemma": "Germetitha",
     "previous": "Germenne",
-    "next": "Gesatus",
+    "next": "Geronteion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 587,
         "end": 587,
-        "author": "Kazarow"
+        "author": "Kazarow."
       }
     ]
   },
   {
+    "lemma": "Geronteion",
+    "previous": "Germetitha"
+  },
+  {
     "lemma": "Gesatus",
-    "previous": "Germetitha",
     "next": "Gestistyrum",
     "chapters": [
       {
