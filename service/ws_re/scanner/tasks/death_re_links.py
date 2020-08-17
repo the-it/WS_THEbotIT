@@ -3,6 +3,7 @@ from datetime import datetime
 
 import pywikibot
 
+from service.ws_re.register.lemma import Lemma
 from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
 from service.ws_re.template.article import Article
 from tools.bots.pi import WikiLogger
@@ -47,7 +48,7 @@ class DEALTask(ReScannerTask, ReporterMixin):
         return True
 
     def _check_link(self, link_to_check: str):
-        if link_to_check[0].lower() in self._start_characters:
+        if Lemma.make_sort_key(link_to_check)[0].lower() in self._start_characters:
             if not pywikibot.Page(self.wiki, f"RE:{link_to_check}").exists():
                 self.data.append((link_to_check, self.re_page.lemma_without_prefix))
 
