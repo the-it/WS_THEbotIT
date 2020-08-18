@@ -148,7 +148,7 @@
     "XIII A,2": "Adolf Berger",
     "XIII,1": "Adolf Berger",
     "XIV,1": "Adolf Berger",
-    "XIX,1": "Adolf Berger",
+    "XIX,1": "Adolf BergHer",
     "XV,2": "Adolf Berger",
     "XVI,1": "Adolf Berger",
     "XVI,2": "Adolf Berger",
@@ -692,7 +692,12 @@
   "Hartke": "Werner Hartke",
   "Hartmann, A[lbert]": "Albert Hartmann",
   "Hartmann, R[ichard]": "Richard Hartmann",
-  "Hartmann.": "Ludo Moritz Hartmann",
+  "Hartmann.": {
+    "*": "Ludo Moritz Hartmann",
+    "IX,2": "Richard Hartmann",
+    "S IV": "Richard Hartmann",
+    "X,1": "Richard Hartmann"
+  },
   "Hasebroek.": "Johannes Hasebroek",
   "Haug": "Ferdinand Haug",
   "Haug.": "Ferdinand Haug",
