@@ -72,7 +72,7 @@ pycodestyle==2.6.0        # via flake8
 pycparser==2.20           # via cffi
 pyfiglet==0.8.post1       # via -r requirements-dev.in
 pyflakes==2.2.0           # via flake8
-pylint==2.5.3             # via -r requirements-dev.in
+pylint==2.6.0             # via -r requirements-dev.in
 pyparsing==2.4.7          # via packaging
 pyrsistent==0.16.0        # via jsonschema
 python-dateutil==2.8.1    # via -c requirements.txt, botocore, freezegun, moto
