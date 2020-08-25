@@ -331,7 +331,7 @@
   {
     "lemma": "Battus",
     "previous": "Autrico",
-    "next": "Βηρώθε",
+    "next": "Βηρώθη",
     "proof_read": 3,
     "chapters": [
       {
@@ -342,13 +342,21 @@
     ]
   },
   {
-    "lemma": "Βηρώθε",
+    "lemma": "Βηρώθη",
     "previous": "Battus",
-    "next": "Bias 10"
+    "next": "Bias 10",
+    "redirect": "Μηρώθ",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 55,
+        "end": 55
+      }
+    ]
   },
   {
     "lemma": "Bias 10",
-    "previous": "Βηρώθε",
+    "previous": "Βηρώθη",
     "next": "Caecilia Trebulla",
     "proof_read": 3,
     "wp_link": "w:de:Bias von Priene",
