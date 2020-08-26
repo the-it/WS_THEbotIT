@@ -17775,11 +17775,12 @@
     "lemma": "Sidonius 3",
     "previous": "Sidonius 2",
     "next": "Sidonius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2238,
         "end": 2238,
-        "author": "Klotz"
+        "author": "Klotz."
       }
     ]
   },
@@ -17787,11 +17788,12 @@
     "lemma": "Sidonius 4",
     "previous": "Sidonius 3",
     "next": "Sidumanis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2238,
         "end": 2238,
-        "author": "Fluss"
+        "author": "Fluß."
       }
     ]
   },
@@ -17799,11 +17801,12 @@
     "lemma": "Sidumanis",
     "previous": "Sidonius 4",
     "next": "Siduni",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2238,
         "end": 2238,
-        "author": "MacDonald"
+        "author": "Macdonald."
       }
     ]
   },
@@ -17811,6 +17814,8 @@
     "lemma": "Siduni",
     "previous": "Sidumanis",
     "next": "Siduo",
+    "redirect": "Seduni",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2239,
@@ -17822,11 +17827,12 @@
     "lemma": "Siduo",
     "previous": "Siduni",
     "next": "Sidus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2239,
         "end": 2239,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -17834,11 +17840,12 @@
     "lemma": "Sidus 1",
     "previous": "Siduo",
     "next": "Sidus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2239,
         "end": 2239,
-        "author": "Geyer"
+        "author": "Geyer."
       }
     ]
   },
@@ -17846,11 +17853,12 @@
     "lemma": "Sidus 2",
     "previous": "Sidus 1",
     "next": "Sidus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2239,
         "end": 2239,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -17858,28 +17866,30 @@
     "lemma": "Sidus 3",
     "previous": "Sidus 2",
     "next": "Sidus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2239,
         "end": 2239,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Sidus 4",
     "previous": "Sidus 3",
-    "next": "Sidussa",
+    "next": "Σίδουσσα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2239,
         "end": 2239,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Sidussa",
+    "lemma": "Σίδουσσα",
     "previous": "Sidus 4",
     "next": "Sidyma",
     "chapters": [
@@ -17892,7 +17902,7 @@
   },
   {
     "lemma": "Sidyma",
-    "previous": "Sidussa",
+    "previous": "Σίδουσσα",
     "next": "Sidymos",
     "chapters": [
       {
