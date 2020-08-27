@@ -23822,7 +23822,6 @@
   {
     "lemma": "Hyllis 1",
     "previous": "Hyaila",
-    "next": "Iabadiu",
     "chapters": [
       {
         "start": 1161,
@@ -23832,32 +23831,42 @@
     ]
   },
   {
+    "lemma": "Ὕψισται πύλαι",
+    "next": "Iabadiu"
+  },
+  {
     "lemma": "Iabadiu",
-    "previous": "Hyllis 1",
-    "next": "Jagsthausen",
+    "previous": "Ὕψισται πύλαι",
+    "next": "Iaca",
     "chapters": [
       {
         "start": 1161,
         "end": 1161,
-        "author": "Wecker"
+        "author": "Wecker."
       }
     ]
   },
   {
-    "lemma": "Jagsthausen",
+    "lemma": "Iaca",
     "previous": "Iabadiu",
-    "next": "Hypometheus",
+    "next": "Jagsthausen"
+  },
+  {
+    "lemma": "Jagsthausen",
+    "previous": "Iaca",
+    "next": "Jahreszeiten",
+    "proof_read": 2,
+    "wp_link": "w:de:Jagsthausen",
     "chapters": [
       {
         "start": 1161,
         "end": 1164,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Hypometheus",
-    "previous": "Jagsthausen",
     "next": "Hypsistai pylai",
     "chapters": [
       {
