@@ -318,8 +318,8 @@ class PersistedData(Mapping):
         try:
             with open(f"{self.file_name}.{type_of_data}", mode="r") as json_file:
                 self.assign_dict(json.load(json_file))
-        except FileNotFoundError:
-            raise BotException(f"There is no {type_of_data} data to load.")
+        except FileNotFoundError as error:
+            raise BotException(f"There is no {type_of_data} data to load.") from error
 
     def get_broken(self):
         self._recover_data("broken")

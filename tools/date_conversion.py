@@ -115,8 +115,8 @@ class DateConversion:
         except ValueError:
             try:
                 return MONTH_MAPPING[month]
-            except IndexError:
-                raise ValueError(month)
+            except IndexError as error:
+                raise ValueError(month) from error
 
     @staticmethod
     def _day_to_int(day):

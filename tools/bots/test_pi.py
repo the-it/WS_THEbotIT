@@ -325,7 +325,7 @@ DATA_TEST_EXTEND = {"a": [1, 2], "b": 1}
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
-        super(TestPersistedData, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.data_path = _DATA_PATH_TEST
 
     def _make_json_file(self, filename: str = "TestBot.data.json", data: str = JSON_TEST):

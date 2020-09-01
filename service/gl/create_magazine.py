@@ -105,8 +105,8 @@ class GlCreateMagazine(CanonicalBot):
             tempdata_magzines[year] = set()
             try:
                 dictionary_of_magazines = self.data["indexes"][year]
-            except KeyError:
-                raise BotException(f"The list of indexes is incorrect, {year} is missing.")
+            except KeyError as error:
+                raise BotException(f"The list of indexes is incorrect, {year} is missing.") from error
             for magazine in dictionary_of_magazines:
                 set_of_potential_pages = set(dictionary_of_magazines[magazine])
                 if set_of_potential_pages.intersection(set_of_pages):
@@ -152,15 +152,17 @@ class GlCreateMagazine(CanonicalBot):
                 if int(key) > int(magazine):
                     last_magazine = False
                     break
-        except KeyError:
+        except KeyError as error:
             raise BotException("The list of indexes is incorrect, {year} is missing."
-                               .format(year=year))
+                               .format(year=year)) \
+                from error
         try:
             list_of_pages = self.data["indexes"][year][magazine]
-        except KeyError:
+        except KeyError as error:
             raise BotException("The list of indexes is incorrect, "
                                "year:{year} or mag:{mag} is missing."
-                               .format(year=year, mag=magazine))
+                               .format(year=year, mag=magazine)) \
+                from error
         quality = 4
         for page in list_of_pages:
             try:

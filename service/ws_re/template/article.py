@@ -181,12 +181,12 @@ class Article(collections.MutableMapping):
             raise ReDatenException("Article has the wrong structure. There is text after the article.")
         try:
             re_start = TemplateHandler(find_re_start[0]["text"])
-        except TemplateHandlerException:
-            raise ReDatenException("Start-Template has the wrong structure.")
+        except TemplateHandlerException as error:
+            raise ReDatenException("Start-Template has the wrong structure.") from error
         try:
             re_author = TemplateHandler(find_re_author[0]["text"])
-        except TemplateHandlerException:
-            raise ReDatenException("Author-Template has the wrong structure.")
+        except TemplateHandlerException as error:
+            raise ReDatenException("Author-Template has the wrong structure.") from error
         properties_dict = cls._extract_properties(re_start.parameters)
         author_name = re_author.parameters[0]["value"]
         try:

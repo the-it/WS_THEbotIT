@@ -22,8 +22,8 @@ class RePage:
             re_daten_pos = template_finder.get_positions(RE_DATEN)
             re_abschnitt_pos = template_finder.get_positions(RE_ABSCHNITT)
             re_author_pos = template_finder.get_positions(RE_AUTHOR)
-        except TemplateFinderException:
-            raise ReDatenException("There are corrupt templates.")
+        except TemplateFinderException as error:
+            raise ReDatenException("There are corrupt templates.") from error
         re_starts = re_daten_pos + re_abschnitt_pos
         re_starts.sort(key=lambda x: x["pos"][0])
         if len(re_starts) != len(re_author_pos):
@@ -94,8 +94,8 @@ class RePage:
             if self.is_wirtable:
                 try:
                     self.page.save(summary=reason, botflag=True)
-                except pywikibot.exceptions.LockedPage:
-                    raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.")
+                except pywikibot.exceptions.LockedPage as error:
+                    raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.") from error
             else:
                 raise ReDatenException(f"Page {self.page.title} is protected for normal users, "
                                        f"it can't be saved.")

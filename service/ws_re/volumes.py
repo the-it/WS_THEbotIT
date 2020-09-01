@@ -111,8 +111,8 @@ class Volumes(OrderedDict):
     def __getitem__(self, item: str) -> Volume:
         try:
             return self._volume_mapping[item]
-        except KeyError:
-            raise ReDatenException(f"Register {item} doesn't exists")
+        except KeyError as error:
+            raise ReDatenException(f"Register {item} doesn't exists") from error
 
     def __setitem__(self, key, value):
         pass

@@ -56,9 +56,9 @@ class PersistedData(Mapping):
             self._data = json.loads(
                 self.s3_client.get_object(Bucket=self._bucket_name, Key=self.key_name + key_appendix)
                 ["Body"].read().decode("utf-8"))["data"]  # type: ignore
-        except exceptions.ClientError as exception:
-            if exception.response['Error']['Code'] == 'NoSuchKey':
-                raise BotException(f"The data for {self.key_name + key_appendix} doesn't exists")
+        except exceptions.ClientError as error:
+            if error.response['Error']['Code'] == 'NoSuchKey':
+                raise BotException(f"The data for {self.key_name + key_appendix} doesn't exists") from error
             raise
 
     def _copy_to_deprecated(self):

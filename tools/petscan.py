@@ -298,8 +298,8 @@ class PetScan:
         """
         try:
             response = requests.get(url=self._construct_string(), headers=self.header, timeout=self._timeout)
-        except requests.exceptions.RequestException:
-            raise PetScanException("Get request didn't return correctly")
+        except requests.exceptions.RequestException as error:
+            raise PetScanException("Get request didn't return correctly") from error
         if response.status_code != 200:
             raise PetScanException("Request wasn't a success")
         response_byte = response.content
