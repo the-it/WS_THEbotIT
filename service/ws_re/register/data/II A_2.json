@@ -18266,7 +18266,7 @@
       {
         "start": 2279,
         "end": 2279,
-        "author": "Hug"
+        "author": "Hug."
       }
     ]
   },
@@ -18274,18 +18274,21 @@
     "lemma": "Sigillum 3",
     "previous": "Sigillum 2",
     "next": "Sigimerus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2279,
         "end": 2279,
-        "author": "Hug"
+        "author": "Hug."
       }
     ]
   },
   {
     "lemma": "Sigimerus",
     "previous": "Sigillum 3",
-    "next": "Sigiplosioi",
+    "next": "Σιγιπλώσιοι",
+    "redirect": "Segimerus 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2279,
@@ -18294,26 +18297,29 @@
     ]
   },
   {
-    "lemma": "Sigiplosioi",
+    "lemma": "Σιγιπλώσιοι",
     "previous": "Sigimerus",
     "next": "Sigismer",
+    "sort_key": "Sigiplosioi",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2279,
         "end": 2279,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Sigismer",
-    "previous": "Sigiplosioi",
+    "previous": "Σιγιπλώσιοι",
     "next": "Sigisvultus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2279,
         "end": 2279,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -18321,11 +18327,13 @@
     "lemma": "Sigisvultus",
     "previous": "Sigismer",
     "next": "Siglae",
+    "proof_read": 3,
+    "wp_link": "w:de:en:Sigisvultus",
     "chapters": [
       {
         "start": 2279,
         "end": 2279,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
