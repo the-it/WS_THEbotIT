@@ -12942,12 +12942,13 @@
   {
     "lemma": "Iura",
     "previous": "Iuppiter",
-    "next": "Iourasios, Iourassos",
+    "next": "Iuracius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1144,
         "end": 1146,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -12964,13 +12965,14 @@
   },
   {
     "lemma": "Iuracius",
-    "previous": "Iourasios, Iourassos",
+    "previous": "Iura",
     "next": "Iuras",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1146,
         "end": 1146,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
