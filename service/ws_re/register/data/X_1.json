@@ -12979,19 +12979,36 @@
   {
     "lemma": "Iuras",
     "previous": "Iuracius",
-    "next": "Iures",
+    "next": "Ἰουράσιος, Ἰουρασσός",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1146,
         "end": 1146,
-        "author": "Oberhummer"
+        "author": "Oberhummer."
+      }
+    ]
+  },
+  {
+    "lemma": "Ἰουράσιος, Ἰουρασσός",
+    "previous": "Iuras",
+    "next": "Iures",
+    "sort_key": "Iurasios",
+    "redirect": "Iura",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1146,
+        "end": 1146
       }
     ]
   },
   {
     "lemma": "Iures",
-    "previous": "Iuras",
+    "previous": "Ἰουράσιος, Ἰουρασσός",
     "next": "Iurgium",
+    "redirect": "Iura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1146,
@@ -13003,11 +13020,12 @@
     "lemma": "Iurgium",
     "previous": "Iures",
     "next": "Iuriacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1146,
         "end": 1147,
-        "author": "Leonhard"
+        "author": "R. Leonhard."
       }
     ]
   },
@@ -13015,11 +13033,12 @@
     "lemma": "Iuriacus",
     "previous": "Iurgium",
     "next": "Iuridicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1147,
         "end": 1147,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
