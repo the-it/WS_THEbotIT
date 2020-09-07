@@ -66,7 +66,7 @@ mypy==0.782               # via -r requirements-dev.in
 networkx==2.5             # via cfn-lint
 packaging==20.4           # via dparse, safety
 patool==1.12              # via -r requirements-dev.in
-pbr==5.4.5                # via stevedore
+pbr==5.5.0                # via stevedore
 pyasn1==0.4.8             # via python-jose, rsa
 pycodestyle==2.6.0        # via flake8
 pycparser==2.20           # via cffi
