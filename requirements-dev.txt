@@ -30,7 +30,7 @@ docker==4.3.1             # via moto
 docopt==0.6.2             # via internetarchive
 docutils==0.16          # via -c requirements.txt, botocore
 dparse==0.5.1             # via safety
-ecdsa==0.14.1             # via python-jose, sshpubkeys
+ecdsa==0.16.0             # via python-jose, sshpubkeys
 flake8==3.8.3             # via -r requirements-dev.in
 freezegun==0.3.15         # via -r requirements-dev.in
 future==0.18.2            # via aws-xray-sdk
