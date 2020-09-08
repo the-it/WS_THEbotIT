@@ -13049,11 +13049,12 @@
     "lemma": "Iuridicus",
     "previous": "Iuriacus",
     "next": "Iurisconsulti",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1147,
         "end": 1153,
-        "author": "Rosenberg"
+        "author": "Rosenberg."
       }
     ]
   },
@@ -13065,7 +13066,7 @@
       {
         "start": 1153,
         "end": 1155,
-        "author": "Berger"
+        "author": "Berger."
       }
     ]
   },
@@ -13073,11 +13074,12 @@
     "lemma": "Iurisdictio",
     "previous": "Iurisconsulti",
     "next": "Iurisdictio mandata",
+    "wp_link": "w:de:Jurisdiktion",
     "chapters": [
       {
         "start": 1155,
         "end": 1157,
-        "author": "Steinwenter"
+        "author": "Steinwenter."
       }
     ]
   },
@@ -13089,7 +13091,7 @@
       {
         "start": 1157,
         "end": 1158,
-        "author": "Steinwenter"
+        "author": "Steinwenter."
       }
     ]
   },
@@ -13097,11 +13099,13 @@
     "lemma": "Iurisprudentia",
     "previous": "Iurisdictio mandata",
     "next": "Iuriunnus",
+    "wp_link": "w:de:Rechtswissenschaft",
+    "ws_link": "s:it:Dei difetti della giurisprudenza",
     "chapters": [
       {
         "start": 1159,
         "end": 1200,
-        "author": "Berger"
+        "author": "Berger."
       }
     ]
   },
@@ -13109,11 +13113,12 @@
     "lemma": "Iuriunnus",
     "previous": "Iurisprudentia",
     "next": "Ius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1200,
         "end": 1200,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -13121,11 +13126,14 @@
     "lemma": "Ius",
     "previous": "Iuriunnus",
     "next": "Ius...(?)",
+    "proof_read": 2,
+    "wp_link": "w:de:Recht",
+    "ws_link": "s:de:Recht",
     "chapters": [
       {
         "start": 1200,
         "end": 1202,
-        "author": "Leonhard"
+        "author": "R. Leonhard."
       }
     ]
   },
@@ -13133,11 +13141,12 @@
     "lemma": "Ius...(?)",
     "previous": "Ius",
     "next": "Ius Aelianum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1202,
         "end": 1202,
-        "author": "Vulić"
+        "author": "Vulić."
       }
     ]
   },
@@ -13145,11 +13154,12 @@
     "lemma": "Ius Aelianum",
     "previous": "Ius...(?)",
     "next": "Ius applicationis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1202,
         "end": 1204,
-        "author": "Danneberg"
+        "author": "Danneberg."
       }
     ]
   },
@@ -13157,11 +13167,12 @@
     "lemma": "Ius applicationis",
     "previous": "Ius Aelianum",
     "next": "Ius aquae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1204,
         "end": 1205,
-        "author": "Manigk"
+        "author": "Manigk."
       }
     ]
   },
@@ -13169,23 +13180,25 @@
     "lemma": "Ius aquae",
     "previous": "Ius applicationis",
     "next": "Ius civile",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1205,
         "end": 1206,
-        "author": "Manigk"
+        "author": "Manigk."
       }
     ]
   },
   {
     "lemma": "Ius civile",
     "previous": "Ius aquae",
-    "next": "Ius commune",
+    "next": "Ius civile",
+    "wp_link": "w:de:Ius civile",
     "chapters": [
       {
         "start": 1206,
         "end": 1211,
-        "author": "Weiss, Egon"
+        "author": "E. Weiss."
       }
     ]
   },
@@ -13336,7 +13349,7 @@
   },
   {
     "lemma": "Iunius 21a",
-    "previous": "Iulius 47a",
+    "previous": "Iunius 21",
     "next": "Iunius 22",
     "sort_key": "Iunius 021a",
     "proof_read": 2,
