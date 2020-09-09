@@ -23488,11 +23488,13 @@
     "lemma": "Ἱερώνας",
     "previous": "Hieromykes",
     "next": "Hieros Kolpos",
+    "sort_key": "Hieronas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -23500,29 +23502,34 @@
     "lemma": "Hieros Kolpos",
     "previous": "Ἱερώνας",
     "next": "Hilariacus, -um",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Grohmann"
+        "author": "Grohmann."
       }
     ]
   },
   {
     "lemma": "Hilariacus, -um",
     "previous": "Hieros Kolpos",
-    "next": "Himerios 4",
+    "next": "Himerios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
         "end": 1151,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
+    "lemma": "Himerios 1",
+    "previous": "Hilariacus, -um"
+  },
+  {
     "lemma": "Himerios 4",
-    "previous": "Hilariacus, -um",
     "next": "Himerios 5",
     "chapters": [
       {

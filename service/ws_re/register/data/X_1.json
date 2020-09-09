@@ -610,11 +610,15 @@
     "lemma": "Iulianos 26",
     "previous": "Iulianos 25",
     "next": "Iulianos 27",
+    "proof_read": 2,
+    "wp_link": "w:de:Julian (Kaiser)",
+    "ws_link": "s:en:Author:Flavius Claudius Iulianus",
+    "wd_link": "d:Q33941",
     "chapters": [
       {
         "start": 26,
         "end": 91,
-        "author": "Borries"
+        "author": "E. v. Borries."
       }
     ]
   },
@@ -12947,6 +12951,8 @@
     "previous": "Iuppiter",
     "next": "Iuracius",
     "proof_read": 2,
+    "wp_link": "w:de:Jura (Gebirge)",
+    "wd_link": "d:Q178611",
     "chapters": [
       {
         "start": 1144,
@@ -13192,7 +13198,7 @@
   {
     "lemma": "Ius civile",
     "previous": "Ius aquae",
-    "next": "Ius civile",
+    "next": "Ius commune",
     "wp_link": "w:de:Ius civile",
     "chapters": [
       {
@@ -13206,11 +13212,12 @@
     "lemma": "Ius commune",
     "previous": "Ius civile",
     "next": "Ius divinum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1211,
         "end": 1211,
-        "author": "Leonhard"
+        "author": "R. Leonhard."
       }
     ]
   },
@@ -13218,11 +13225,12 @@
     "lemma": "Ius divinum",
     "previous": "Ius commune",
     "next": "Ius Flavianum",
+    "wp_link": "w:de:Göttliches Recht",
     "chapters": [
       {
         "start": 1212,
         "end": 1215,
-        "author": "Berger"
+        "author": "Berger."
       }
     ]
   },
@@ -13230,11 +13238,12 @@
     "lemma": "Ius Flavianum",
     "previous": "Ius divinum",
     "next": "Ius gentium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1215,
         "end": 1218,
-        "author": "Danneberg"
+        "author": "Danneberg."
       }
     ]
   },
@@ -13242,11 +13251,12 @@
     "lemma": "Ius gentium",
     "previous": "Ius Flavianum",
     "next": "Ius honorarium",
+    "wp_link": "w:de:Ius gentium",
     "chapters": [
       {
         "start": 1218,
         "end": 1231,
-        "author": "Weiss, Egon"
+        "author": "E. Weiss."
       }
     ]
   },
@@ -13254,11 +13264,12 @@
     "lemma": "Ius honorarium",
     "previous": "Ius gentium",
     "next": "Ius honorum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1231,
         "end": 1231,
-        "author": "Kipp"
+        "author": "Kipp."
       }
     ]
   },
@@ -13270,7 +13281,7 @@
       {
         "start": 1231,
         "end": 1238,
-        "author": "Weiss, Egon"
+        "author": "E. Weiss."
       }
     ]
   },
@@ -13282,7 +13293,7 @@
       {
         "start": 1238,
         "end": 1238,
-        "author": "Berger"
+        "author": "Berger."
       }
     ]
   },
@@ -13290,6 +13301,8 @@
     "lemma": "Ius imaginum",
     "previous": "Ius humanum",
     "next": "Ius Italicum",
+    "redirect": "Imagines",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1238,
