@@ -13230,6 +13230,7 @@
     "previous": "Ius commune",
     "next": "Ius Flavianum",
     "wp_link": "w:de:Göttliches Recht",
+    "wd_link": "d:Q1559849",
     "chapters": [
       {
         "start": 1212,
@@ -13243,6 +13244,8 @@
     "previous": "Ius divinum",
     "next": "Ius gentium",
     "proof_read": 2,
+    "wp_link": "w:ca:Ius Civile Flavianum",
+    "wd_link": "d:Q11927007",
     "chapters": [
       {
         "start": 1215,
@@ -13256,6 +13259,7 @@
     "previous": "Ius Flavianum",
     "next": "Ius honorarium",
     "wp_link": "w:de:Ius gentium",
+    "wd_link": "d:Q160085",
     "chapters": [
       {
         "start": 1218,
@@ -13268,7 +13272,10 @@
     "lemma": "Ius honorarium",
     "previous": "Ius gentium",
     "next": "Ius honorum",
-    "proof_read": 2,
+    "redirect": "Edictum",
+    "proof_read": 3,
+    "wp_link": "w:de:Ius honorarium",
+    "wd_link": "d:Q462113",
     "chapters": [
       {
         "start": 1231,
@@ -13281,6 +13288,7 @@
     "lemma": "Ius honorum",
     "previous": "Ius honorarium",
     "next": "Ius humanum",
+    "wd_link": "d:Q99034136",
     "chapters": [
       {
         "start": 1231,
@@ -13369,7 +13377,7 @@
   },
   {
     "lemma": "Iunius 21a",
-    "previous": "Iulius 47a",
+    "previous": "Iunius 21",
     "next": "Iunius 22",
     "sort_key": "Iunius 021a",
     "proof_read": 2,
