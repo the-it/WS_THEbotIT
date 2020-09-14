@@ -22,7 +22,7 @@ chardet==3.0.4            # via -c requirements.txt, requests
 click==7.1.2              # via safety
 codecov==2.1.9            # via -r requirements-dev.in
 contextlib2==0.6.0.post1  # via schema
-coverage==5.2.1           # via -r requirements-dev.in, codecov
+coverage==5.3           # via -r requirements-dev.in, codecov
 cryptography==3.1         # via moto, python-jose, sshpubkeys
 ddt==1.4.1                # via -r requirements-dev.in
 decorator==4.4.2          # via networkx
