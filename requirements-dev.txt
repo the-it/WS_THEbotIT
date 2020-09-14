@@ -74,7 +74,7 @@ pyfiglet==0.8.post1       # via -r requirements-dev.in
 pyflakes==2.2.0           # via flake8
 pylint==2.6.0             # via -r requirements-dev.in
 pyparsing==2.4.7          # via packaging
-pyrsistent==0.16.0        # via jsonschema
+pyrsistent==0.17.3        # via jsonschema
 python-dateutil==2.8.1    # via -c requirements.txt, botocore, freezegun, moto
 python-jose[cryptography]==3.2.0  # via moto
 pytz==2020.1              # via moto
