@@ -156,7 +156,7 @@ class ReScanner(CanonicalBot):
                 processed_task = self._process_task(task, re_page, lemma)
                 if processed_task:
                     list_of_done_tasks.append(processed_task)
-            if list_of_done_tasks and re_page.is_wirtable:
+            if list_of_done_tasks and re_page.is_writable:
                 processed_lemmas += 1
                 if not self.debug:
                     self._save_re_page(re_page, list_of_done_tasks)
