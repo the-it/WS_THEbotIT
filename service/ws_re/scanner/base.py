@@ -1,4 +1,5 @@
 import traceback
+from contextlib import suppress
 from datetime import timedelta, datetime
 from operator import itemgetter
 from typing import List, Optional, Dict, Callable
@@ -145,7 +146,9 @@ class ReScanner(CanonicalBot):
                 error = traceback.format_exc().splitlines()[-1]
                 self.logger.error(f"The initiation of [[{lemma}]] went wrong: {error}")
                 error_task.append_error(lemma, error)
-                self._add_lemma_to_data(lemma)
+                # remove Key from database if it was saved before
+                with suppress(KeyError):
+                    del self.data[lemma]
                 continue
             except pywikibot.exceptions.TimeoutError:
                 self.logger.error(f"Timeout at lemma ({lemma}) creation")

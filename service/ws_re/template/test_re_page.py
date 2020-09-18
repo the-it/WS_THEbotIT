@@ -66,6 +66,11 @@ class TestRePage(TestCase):
         with self.assertRaises(ReDatenException):
             RePage(self.page_mock)
 
+    def test_raise_at_redirect(self):
+        self.text_mock.return_value = "#WEITERLEITUNG [[RE:Bla]]"
+        with self.assertRaises(ReDatenException):
+            RePage(self.page_mock)
+
     def test_wrong_structure_order_of_templates_not_correct(self):
         self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REDaten}}\n{{REAutor|Autor0.}}" \
                                       "\ntext1\n{{REAutor|Autor1.}}"
@@ -249,10 +254,11 @@ text
         self.assertTrue(isinstance(splitted_list[1][1], str))
 
     def test_complex_page(self):
-        complex_article = """{{#lst:RE:Plinius 5/I}}
+        complex_article = """{{REDaten}}\n{{#lst:RE:Plinius 5/I}}
 {{#lst:RE:Plinius 5/II}}
 {{#lst:RE:Plinius 5/III}}
-{{#lst:RE:Plinius 5/IV}}"""
+{{#lst:RE:Plinius 5/IV}}
+{{REAutor|Some Author.}}"""
         self.text_mock.return_value = complex_article
         re_page = RePage(self.page_mock)
         self.assertTrue(re_page.complex_construction)
