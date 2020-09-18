@@ -26,6 +26,8 @@ class RePage:
             raise ReDatenException("There are corrupt templates.") from error
         re_starts = re_daten_pos + re_abschnitt_pos
         re_starts.sort(key=lambda x: x["pos"][0])
+        if not re_starts:
+            raise ReDatenException("No single start template found.")
         if len(re_starts) != len(re_author_pos):
             raise ReDatenException(
                 "The count of start templates doesn't match the count of end templates.")

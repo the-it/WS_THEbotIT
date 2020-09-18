@@ -310,8 +310,8 @@ class TestReScanner(TestCase):
 
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
-        self.lemma_mock.return_value = [':RE:Lemma1', ':RE:Lemma2']
-        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
+        self.lemma_mock.return_value = [':RE:Lemma0', ':RE:Lemma1', ':RE:Lemma2']
+        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
         with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             bot.tasks = [self.WAITTask]
             bot.run()
