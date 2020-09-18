@@ -9820,30 +9820,34 @@
     "lemma": "Iturissa",
     "previous": "Ituraea 4",
     "next": "Iturius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2380,
         "end": 2380,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Iturius",
     "previous": "Iturissa",
-    "next": "Ityke",
+    "next": "Ἰτύκη",
     "chapters": [
       {
         "start": 2380,
         "end": 2381,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
-    "lemma": "Ityke",
+    "lemma": "Ἰτύκη",
     "previous": "Iturius",
     "next": "Itylos",
+    "sort_key": "Ityke",
+    "proof_read": 3,
+    "wp_link": "w:de:Utica (Tunesien)",
     "chapters": [
       {
         "start": 2381,
@@ -9853,13 +9857,14 @@
   },
   {
     "lemma": "Itylos",
-    "previous": "Ityke",
+    "previous": "Ἰτύκη",
     "next": "Itys",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2381,
         "end": 2381,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -9867,11 +9872,12 @@
     "lemma": "Itys",
     "previous": "Itylos",
     "next": "Iuanelius vicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2381,
         "end": 2381,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -9879,11 +9885,12 @@
     "lemma": "Iuanelius vicus",
     "previous": "Itys",
     "next": "Iuanenses",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2381,
         "end": 2381,
-        "author": "Philipp"
+        "author": "Philipp."
       }
     ]
   },
@@ -9895,7 +9902,7 @@
       {
         "start": 2381,
         "end": 2381,
-        "author": "Philipp"
+        "author": "Philipp."
       }
     ]
   },
@@ -9903,11 +9910,12 @@
     "lemma": "Iuanius",
     "previous": "Iuanenses",
     "next": "Iuas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2381,
         "end": 2381,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -9915,11 +9923,12 @@
     "lemma": "Iuas",
     "previous": "Iuanius",
     "next": "Ivaus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2381,
         "end": 2381,
-        "author": "Hähnle"
+        "author": "Hähnle."
       }
     ]
   },
@@ -9927,11 +9936,12 @@
     "lemma": "Ivaus",
     "previous": "Iuas",
     "next": "Iuba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2381,
         "end": 2381,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -9939,11 +9949,12 @@
     "lemma": "Iuba",
     "previous": "Ivaus",
     "next": "Iuba 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2381,
         "end": 2381,
-        "author": "Lenschau"
+        "author": "Lenschau."
       }
     ]
   },
@@ -9951,11 +9962,13 @@
     "lemma": "Iuba 1",
     "previous": "Iuba",
     "next": "Iuba 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Juba I.",
     "chapters": [
       {
         "start": 2381,
         "end": 2384,
-        "author": "Lenschau"
+        "author": "Lenschau."
       }
     ]
   },
@@ -9963,11 +9976,12 @@
     "lemma": "Iuba 2",
     "previous": "Iuba 1",
     "next": "Iuba 3",
+    "wp_link": "w:de:Juba II.",
     "chapters": [
       {
         "start": 2384,
         "end": 2395,
-        "author": "Jacoby, [Felix]"
+        "author": "F. Jacoby."
       }
     ]
   },

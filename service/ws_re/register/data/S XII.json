@@ -3342,7 +3342,6 @@
   {
     "lemma": "Immo",
     "previous": "Ilunum 2",
-    "next": "Iulianos 61",
     "chapters": [
       {
         "start": 502,
@@ -3352,25 +3351,31 @@
     ]
   },
   {
+    "lemma": "Ipneis",
+    "next": "Iulianos 61"
+  },
+  {
     "lemma": "Iulianos 61",
-    "previous": "Immo",
+    "previous": "Ipneis",
     "next": "Iulianos 62",
     "chapters": [
       {
         "start": 503,
         "end": 503,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iulianos 62",
     "previous": "Iulianos 61",
+    "next": "Iulius 11a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 503,
         "end": 503,
-        "author": "Hanslik"
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -3900,15 +3905,36 @@
   },
   {
     "lemma": "Iunius 42",
-    "previous": "Iulius 555"
+    "previous": "Iulius 555",
+    "next": "Iunius 75b",
+    "sort_key": "Iunius 042",
+    "wp_link": "w:de:Quintus Iunius Blaesus (Suffektkonsul 28)",
+    "wd_link": "d:Q1247347",
+    "chapters": [
+      {
+        "start": 510,
+        "end": 510,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
-    "lemma": "Iunius 75a",
-    "next": "Iunius 78"
+    "lemma": "Iunius 75b",
+    "previous": "Iunius 42",
+    "next": "Iunius 78",
+    "sort_key": "Iunius 075b",
+    "redirect": "Iunius 179",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 510,
+        "end": 510
+      }
+    ]
   },
   {
     "lemma": "Iunius 78",
-    "previous": "Iunius 75a",
+    "previous": "Iunius 75b",
     "next": "Iunius 114a",
     "wp_link": "w:de:Lucius Iunius Gallio Annaeanus",
     "wd_link": "d:Q452194",
@@ -3922,56 +3948,89 @@
   {
     "lemma": "Iunius 114a",
     "previous": "Iunius 78",
-    "next": "Iunius 133a",
+    "next": "Iunius 115",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 510,
-        "end": 510
+        "end": 510,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
+    "lemma": "Iunius 115",
+    "previous": "Iunius 114a"
+  },
+  {
+    "lemma": "Iunius 115a",
+    "next": "Iunius 133a"
+  },
+  {
     "lemma": "Iunius 133a",
-    "previous": "Iunius 114a",
-    "next": "Iunius 141a",
+    "previous": "Iunius 115a",
+    "next": "Iunius 138a",
     "chapters": [
       {
         "start": 510,
         "end": 511,
-        "author": "Winkler"
+        "author": "Gerhard Winkler."
+      }
+    ]
+  },
+  {
+    "lemma": "Iunius 138a",
+    "previous": "Iunius 133a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 511,
+        "end": 511,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iunius 141a",
-    "previous": "Iunius 133a",
-    "next": "Iunius 151a",
     "chapters": [
       {
         "start": 511,
         "end": 511
       }
     ]
+  },
+  {
+    "lemma": "Iunius 149",
+    "next": "Iunius 151a"
   },
   {
     "lemma": "Iunius 151a",
-    "previous": "Iunius 141a",
-    "next": "Iunius 183b",
+    "previous": "Iunius 149",
+    "next": "Iunius 153",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 511,
-        "end": 511
+        "end": 511,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
-    "lemma": "Iunius 183b",
+    "lemma": "Iunius 153",
     "previous": "Iunius 151a",
+    "next": "Iunius 183b"
+  },
+  {
+    "lemma": "Iunius 183b",
+    "previous": "Iunius 153",
     "next": "Iunius 183c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 511,
-        "end": 511
+        "end": 511,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -3979,10 +4038,12 @@
     "lemma": "Iunius 183c",
     "previous": "Iunius 183b",
     "next": "Iunius 184a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 511,
-        "end": 511
+        "end": 511,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -3993,25 +4054,29 @@
     "chapters": [
       {
         "start": 511,
-        "end": 511
+        "end": 511,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Iunius 187a",
     "previous": "Iunius 184a",
-    "next": "Kallimandros",
+    "next": "Iuventius 24",
     "chapters": [
       {
-        "start": 512,
-        "end": 512,
-        "author": "Hanslik"
+        "start": 511,
+        "end": 511,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
+    "lemma": "Iuventius 24",
+    "previous": "Iunius 187a"
+  },
+  {
     "lemma": "Kallimandros",
-    "previous": "Iunius 187a",
     "next": "Kleomedon 3",
     "chapters": [
       {

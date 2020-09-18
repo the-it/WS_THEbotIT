@@ -5169,7 +5169,7 @@
   {
     "lemma": "Iovii, Victores",
     "previous": "Ionidai",
-    "next": "Ischandros",
+    "next": "Iranos",
     "chapters": [
       {
         "start": 329,
@@ -5179,14 +5179,27 @@
     ]
   },
   {
-    "lemma": "Ischandros",
+    "lemma": "Iranos",
     "previous": "Iovii, Victores",
+    "next": "Ischandros",
+    "redirect": "Eiranos",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 330,
+        "end": 330
+      }
+    ]
+  },
+  {
+    "lemma": "Ischandros",
+    "previous": "Iranos",
     "next": "Ismenodoros 2",
     "chapters": [
       {
         "start": 330,
         "end": 331,
-        "author": "Ziegler"
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -5194,29 +5207,34 @@
     "lemma": "Ismenodoros 2",
     "previous": "Ischandros",
     "next": "Isokrates 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
         "end": 331,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
     "lemma": "Isokrates 3",
     "previous": "Ismenodoros 2",
-    "next": "Iulius 38b",
+    "next": "Isylos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
         "end": 332,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
   {
+    "lemma": "Isylos",
+    "previous": "Isokrates 3"
+  },
+  {
     "lemma": "Iulius 38b",
-    "previous": "Isokrates 3",
     "next": "Iulius 119a",
     "sort_key": "Iulius 038b",
     "chapters": [
@@ -5332,11 +5350,13 @@
     "lemma": "Iunius 91a",
     "previous": "Iulius 581a",
     "next": "Ius in re",
+    "sort_key": "Iunius 091a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
         "end": 333,
-        "author": "Bonaria"
+        "author": "Mario Bonaria."
       }
     ]
   },
@@ -5348,7 +5368,7 @@
       {
         "start": 333,
         "end": 343,
-        "author": "Wubbe"
+        "author": "Felix Wubbe."
       }
     ]
   },
