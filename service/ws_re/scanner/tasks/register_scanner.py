@@ -146,7 +146,7 @@ class SCANTask(ReScannerTask):
         # if there is something outside an article ignore it
         article_list = [article for article in article_list if isinstance(article, Article)]
         if self.re_page.complex_construction:
-            self.logger.error(f"The construct of [[{self.re_page.lemma_without_prefix}]] "
+            self.logger.error(f"The construct of {self.re_page.lemma_as_link} "
                               f"is too complex, can't analyse.")
             return {}, []
         if len(article_list) == 1:
