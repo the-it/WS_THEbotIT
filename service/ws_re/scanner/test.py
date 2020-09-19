@@ -244,7 +244,7 @@ class TestReScanner(TestCase):
                 bot.run()
                 expected_logging = (("ReScanner", "DEBUG",
                                      "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
-                                    ("ReScanner", "ERROR", "Error in ONE1/:RE:Lemma1, no data where altered."),
+                                    ("ReScanner", "ERROR", "Error in ONE1/[[:RE:Lemma1]], no data where altered."),
                                     ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
@@ -261,7 +261,7 @@ class TestReScanner(TestCase):
                 expected_logging = (("ReScanner", "DEBUG",
                                      "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                                     ("ReScanner", "CRITICAL",
-                                     "Error in ONE1/:RE:Lemma1, but altered the page ... critical"))
+                                     "Error in ONE1/[[:RE:Lemma1]], but altered the page ... critical"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_watchdog(self):
@@ -306,33 +306,34 @@ class TestReScanner(TestCase):
 
     class WAITTask(ReScannerTask):
         def task(self):
-            time.sleep(0.4)
+            time.sleep(0.25)
 
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [':RE:Lemma0', ':RE:Lemma1', ':RE:Lemma2']
         self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
-        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
-            bot.tasks = [self.WAITTask]
-            bot.run()
-            bot.__exit__(None, None, None)
-            with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
-                data = json.load(data_file)
-                self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
-                                 data)
-                self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-                                     datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
-            self.lemma_mock.return_value = [':RE:Lemma3', ":RE:Lemma4"]
-            bot.__enter__()
-            bot.run()
-            bot.__exit__(None, None, None)
-            with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
-                data = json.load(data_file)
-                self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
-                                  ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
-                                 data)
-                self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-                                datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
+        bot = ReScanner(log_to_screen=False, log_to_wiki=False)
+        bot.tasks = [self.WAITTask]
+        bot.__enter__()
+        bot.run()
+        bot.__exit__(None, None, None)
+        with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+            data = json.load(data_file)
+            self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
+                             data)
+            self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                                 datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+        self.lemma_mock.return_value = [':RE:Lemma3', ":RE:Lemma4"]
+        bot.__enter__()
+        bot.run()
+        bot.__exit__(None, None, None)
+        with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+            data = json.load(data_file)
+            self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
+                              ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
+                             data)
+            self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                            datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
 
     def test_reload_deprecated_lemma_data_none_there(self):
         self._mock_surroundings()
