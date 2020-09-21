@@ -103,8 +103,8 @@ class AuthorRegister(Register):
         parts_fertig, parts_korrigiert, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor)
         line.append("|data-sort-value=\"{percent:05.1f}\"|{percent:.1f}%\n"
                     .format(percent=((fer + kor) / len(self)) * 100))
-        line.append(f"|<span style=\"color:#556B2F\">{parts_fertig * '█'}</span>")
-        line.append(f"<span style=\"color:#669966\">{parts_korrigiert * '█'}</span>")
+        line.append(f"|<span style=\"color:#669966\">{parts_fertig * '█'}</span>")
+        line.append(f"<span style=\"color:#556B2F\">{parts_korrigiert * '█'}</span>")
         line.append(f"<span style=\"color:#AA0000\">{parts_unkorrigiert * '█'}</span>")
         return "".join(line)
 
