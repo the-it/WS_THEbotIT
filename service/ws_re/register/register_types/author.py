@@ -92,3 +92,11 @@ class AuthorRegister(Register):
 
     def get_register_str(self) -> str:
         return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"
+
+    @property
+    def overview_line(self):
+        line = ["|-\n", f"|data-sort-value=\"{self.author.last_name}, {self.author.first_name}\""]
+        line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
+                    f"{self.author.name}|{self.author.name}]]\n")
+        line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}")
+        return "".join(line)

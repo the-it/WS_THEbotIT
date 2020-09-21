@@ -82,3 +82,12 @@ class TestAuthorRegister(BaseTestRegister):
 [[Kategorie:RE:Register|Abel, Herman]]
 Zahl der Artikel: 4, """
         compare(expected_table, abel_register.get_register_str())
+
+    def test_overview_line(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        compare("|-\n"
+                "|data-sort-value=\"Abel, Herman\""
+                "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
+                "|data-sort-value=\"0004\"|4",
+                abel_register.overview_line)
+

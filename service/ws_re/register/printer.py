@@ -1,13 +1,10 @@
 from pywikibot import Site, Page
 
-from service.ws_re.register.register_types.author import AuthorRegister
 from service.ws_re.register.registers import Registers
 from tools.bots.pi import CanonicalBot
 
 
 class ReRegisterPrinter(CanonicalBot):
-    LEMMA_AUTHOR_SIZE = 10
-
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
@@ -27,32 +24,18 @@ class ReRegisterPrinter(CanonicalBot):
         for register in self.registers.author:
             if register.author.last_name:
                 self.logger.debug(register)
-                if len(register) >= self.LEMMA_AUTHOR_SIZE:
-                    self.save_if_changed(Page(self.wiki,
-                                              f"Paulys Realencyclopädie der classischen "
-                                              f"Altertumswissenschaft/Register/{register.author.name}"),
-                                         register.get_register_str(),
-                                         "Register aktualisiert")
-                    overview.append(self._create_overview_line(register, True))
-                else:
-                    overview.append(self._create_overview_line(register, False))
+                self.save_if_changed(Page(self.wiki,
+                                          f"Paulys Realencyclopädie der classischen "
+                                          f"Altertumswissenschaft/Register/{register.author.name}"),
+                                     register.get_register_str(),
+                                     "Register aktualisiert")
+                overview.append(register.overview_line)
         overview.append("|}")
         self.save_if_changed(Page(self.wiki,
                                   "Paulys Realencyclopädie der classischen "
                                   "Altertumswissenschaft/Register/Autorenübersicht"),
                              "\n".join(overview),
                              "Register aktualisiert")
-
-    @staticmethod
-    def _create_overview_line(register: AuthorRegister, link: bool):
-        line = ["|-\n", f"|data-sort-value=\"{register.author.last_name}, {register.author.first_name}\""]
-        if link:
-            line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
-                        f"{register.author.name}|{register.author.name}]]\n")
-        else:
-            line.append(f"|{register.author.name}\n")
-        line.append(f"|data-sort-value=\"{len(register):04d}\"|{len(register)}")
-        return "".join(line)
 
     def _print_alphabetic(self):
         self.logger.info("Print alphabetic register.")
