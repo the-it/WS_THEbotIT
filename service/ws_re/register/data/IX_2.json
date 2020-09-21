@@ -10289,11 +10289,12 @@
     "lemma": "Iudas",
     "previous": "Iudaeus",
     "next": "Judas Makkabaios",
+    "wp_link": "w:de:Judas (Chronist)",
     "chapters": [
       {
         "start": 2461,
         "end": 2461,
-        "author": "Jacoby, [Felix]"
+        "author": "F. Jacoby."
       }
     ]
   },
@@ -10301,11 +10302,13 @@
     "lemma": "Judas Makkabaios",
     "previous": "Iudas",
     "next": "Iudex",
+    "proof_read": 2,
+    "wp_link": "w:de:Judas Makkabäus",
     "chapters": [
       {
         "start": 2461,
         "end": 2464,
-        "author": "Wolff"
+        "author": "Wolff."
       }
     ]
   },
@@ -10329,7 +10332,7 @@
       {
         "start": 2474,
         "end": 2474,
-        "author": "Weiss, Egon"
+        "author": "E. Weiss."
       }
     ]
   },
@@ -10337,11 +10340,12 @@
     "lemma": "Iudex quaestionis",
     "previous": "Iudex ducenarius",
     "next": "Iudiacus, -um",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2474,
         "end": 2474,
-        "author": "Pfaff"
+        "author": "Pfaff."
       }
     ]
   },
@@ -10349,11 +10353,12 @@
     "lemma": "Iudiacus, -um",
     "previous": "Iudex quaestionis",
     "next": "Iudicatum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2474,
         "end": 2475,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -10365,7 +10370,7 @@
       {
         "start": 2475,
         "end": 2479,
-        "author": "Steinwenter"
+        "author": "Steinwenter."
       }
     ]
   },
@@ -10373,11 +10378,12 @@
     "lemma": "Iudicium 1",
     "previous": "Iudicatum",
     "next": "Iudicium 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
         "end": 2481,
-        "author": "Leonhard"
+        "author": "R. Leonhard."
       }
     ]
   },
@@ -10385,6 +10391,8 @@
     "lemma": "Iudicium 2",
     "previous": "Iudicium 1",
     "next": "Iudicium contrarium",
+    "redirect": "Iudiacus, -um",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2481,
@@ -10396,11 +10404,12 @@
     "lemma": "Iudicium contrarium",
     "previous": "Iudicium 2",
     "next": "Iudicium de moribus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2481,
         "end": 2483,
-        "author": "Manigk"
+        "author": "Manigk."
       }
     ]
   },
@@ -10408,11 +10417,12 @@
     "lemma": "Iudicium de moribus",
     "previous": "Iudicium contrarium",
     "next": "Iudicium privatum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2483,
         "end": 2485,
-        "author": "Klingmüller"
+        "author": "Klingmüller."
       }
     ]
   },
@@ -10444,6 +10454,8 @@
     "lemma": "Iudicium tutelae",
     "previous": "Iudicium publicum",
     "next": "Ivedius",
+    "redirect": "Tutela 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2505,
@@ -10455,11 +10467,12 @@
     "lemma": "Ivedius",
     "previous": "Iudicium tutelae",
     "next": "Iuenna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2505,
         "end": 2505,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -10467,11 +10480,12 @@
     "lemma": "Iuenna",
     "previous": "Ivedius",
     "next": "Iuerni",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2505,
         "end": 2506,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -10479,6 +10493,8 @@
     "lemma": "Iuerni",
     "previous": "Iuenna",
     "next": "Iversheim",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2506,

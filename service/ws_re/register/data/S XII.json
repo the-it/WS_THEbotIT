@@ -95,7 +95,6 @@
   {
     "lemma": "Acilius 42",
     "previous": "Achaios 6",
-    "next": "Acilius 52",
     "proof_read": 3,
     "wp_link": "w:de:Manius Acilius Glabrio (Konsul 152)",
     "wd_link": "d:Q1237530",
@@ -109,7 +108,7 @@
   },
   {
     "lemma": "Acilius 52",
-    "previous": "Acilius 42",
+    "previous": "Achaios 6",
     "next": "Ad Malum",
     "wp_link": "w:de:Lucius Acilius Rufus",
     "wd_link": "d:Q343799",
@@ -3936,12 +3935,14 @@
     "lemma": "Iunius 78",
     "previous": "Iunius 75b",
     "next": "Iunius 114a",
+    "sort_key": "Iunius 078",
     "wp_link": "w:de:Lucius Iunius Gallio Annaeanus",
     "wd_link": "d:Q452194",
     "chapters": [
       {
         "start": 510,
-        "end": 510
+        "end": 510,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
