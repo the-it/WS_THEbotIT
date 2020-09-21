@@ -15,6 +15,13 @@ class RegisterException(Exception):
 
 
 class Register(ABC):
+    def __init__(self):
+        self._lemmas: List[Lemma] = []
+
+    @property
+    def lemmas(self) -> List[Lemma]:
+        return self._lemmas
+
     @staticmethod
     def squash_lemmas(lemmas: List[Lemma]) -> List[List[Lemma]]:
         return_lemmas = []

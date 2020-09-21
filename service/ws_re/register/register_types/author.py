@@ -1,8 +1,8 @@
-from typing import Dict, List
+from typing import Dict
 
+from service.ws_re.register._base import Register
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
-from service.ws_re.register._base import Register
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types.volume import VolumeRegister
 
@@ -12,10 +12,10 @@ class AuthorRegister(Register):
                  author: Author,
                  authors: Authors,
                  registers: Dict[str, VolumeRegister]):
+        super().__init__()
         self._author: Author = author
         self._authors: Authors = authors
         self._registers = registers
-        self._lemmas: List[Lemma] = []
         self._init_lemmas()
 
     def __repr__(self):

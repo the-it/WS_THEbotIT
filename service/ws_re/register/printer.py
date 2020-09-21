@@ -1,5 +1,6 @@
 from pywikibot import Site, Page
 
+from service.ws_re.register.register_types.author import AuthorRegister
 from service.ws_re.register.registers import Registers
 from tools.bots.pi import CanonicalBot
 
@@ -43,7 +44,7 @@ class ReRegisterPrinter(CanonicalBot):
                              "Register aktualisiert")
 
     @staticmethod
-    def _create_overview_line(register, link):
+    def _create_overview_line(register: AuthorRegister, link: bool):
         line = ["|-\n", f"|data-sort-value=\"{register.author.last_name}, {register.author.first_name}\""]
         if link:
             line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"

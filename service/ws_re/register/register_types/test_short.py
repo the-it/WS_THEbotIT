@@ -23,7 +23,7 @@ class TestShortRegister(BaseTestRegister):
     def test_init(self):
         i_register = ShortRegister("I", self.registers)
         ii_register = ShortRegister("II", self.registers)
-        compare(10, len(ii_register))
+        compare(11, len(ii_register))
         compare(0, len(i_register))
 
     def test_make_table(self):
