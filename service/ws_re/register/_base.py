@@ -38,10 +38,10 @@ class Register(ABC):
             return_lemmas.append(last_lemmas)
         return return_lemmas
 
-    @staticmethod
-    def proof_read(lemmas) -> Tuple[int, int, int]:
+    @property
+    def proof_read(self) -> Tuple[int, int, int]:
         fer = kor = unk = 0
-        for lemma in lemmas:
+        for lemma in self.lemmas:
             proof_read = lemma["proof_read"]
             if proof_read:
                 if proof_read == 3:

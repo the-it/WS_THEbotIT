@@ -93,7 +93,7 @@ class AlphabeticRegister(Register):
             header.append(f"NFNF={self._after_next_start}")
         header.append(f"SUM={len(self._lemmas)}")
         # calculate proof_read status
-        fer, kor, unk = self.proof_read(self._lemmas)
+        fer, kor, unk = self.proof_read
         header.append(f"UNK={unk}")
         header.append(f"KOR={kor}")
         header.append(f"FER={fer}")

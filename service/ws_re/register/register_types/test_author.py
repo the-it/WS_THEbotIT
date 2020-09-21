@@ -88,6 +88,18 @@ Zahl der Artikel: 4, """
         compare("|-\n"
                 "|data-sort-value=\"Abel, Herman\""
                 "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
-                "|data-sort-value=\"0004\"|4",
+                "|data-sort-value=\"0004\"|4\n"
+                "|data-sort-value=\"075.0\"|75.0%\n"
+                "|<span style=\"color:#556B2F\">██████████</span>"
+                "<span style=\"color:#669966\">█████</span>"
+                "<span style=\"color:#AA0000\">█████</span>",
                 abel_register.overview_line)
+
+    def test_proofread_parts_of_20(self):
+        compare((10, 5, 5), AuthorRegister.proofread_parts_of_20(4, 2, 1))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(40, 1, 1))
+        compare((1, 0, 19), AuthorRegister.proofread_parts_of_20(45, 2, 1))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(45, 1, 2))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(79, 1, 1))
+        compare((0, 0, 20), AuthorRegister.proofread_parts_of_20(80, 1, 1))
 

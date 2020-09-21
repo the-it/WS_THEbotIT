@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Tuple
 
 from service.ws_re.register._base import Register
 from service.ws_re.register.author import Author
@@ -80,7 +80,7 @@ class AuthorRegister(Register):
         header.append(f"AUTHOR={self._author.name}")
         header.append(f"SUM={len(self._lemmas)}")
         # calculate proof_read status
-        fer, kor, unk = self.proof_read(self._lemmas)
+        fer, kor, unk = self.proof_read
         header.append(f"UNK={unk}")
         header.append(f"KOR={kor}")
         header.append(f"FER={fer}")
@@ -98,5 +98,19 @@ class AuthorRegister(Register):
         line = ["|-\n", f"|data-sort-value=\"{self.author.last_name}, {self.author.first_name}\""]
         line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
                     f"{self.author.name}|{self.author.name}]]\n")
-        line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}")
+        line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}\n")
+        fer, kor, _ = self.proof_read
+        parts_fertig, parts_korrigiert, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor)
+        line.append("|data-sort-value=\"{percent:05.1f}\"|{percent:.1f}%\n"
+                    .format(percent=((fer + kor) / len(self)) * 100))
+        line.append(f"|<span style=\"color:#556B2F\">{parts_fertig * '█'}</span>")
+        line.append(f"<span style=\"color:#669966\">{parts_korrigiert * '█'}</span>")
+        line.append(f"<span style=\"color:#AA0000\">{parts_unkorrigiert * '█'}</span>")
         return "".join(line)
+
+    @staticmethod
+    def proofread_parts_of_20(all: int, fer: int, kor: int) -> Tuple[int, int, int]:
+        part_fer = round(fer / all * 20)
+        part_kor = round((kor + fer) / all * 20) - part_fer
+        part_unk = 20 - (part_fer + part_kor)
+        return part_fer, part_kor, part_unk

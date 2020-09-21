@@ -20,7 +20,7 @@ class ReRegisterPrinter(CanonicalBot):
 
     def _print_author(self):
         self.logger.info("Print author register.")
-        overview = ["{|class =\"wikitable sortable\"\n!Autor\n!Artikel"]
+        overview = ["{|class =\"wikitable sortable\"\n!Autor\n!Artikel\n!colspan=\"2\"|Erschließungsgrad"]
         for register in self.registers.author:
             if register.author.last_name:
                 self.logger.debug(register)
