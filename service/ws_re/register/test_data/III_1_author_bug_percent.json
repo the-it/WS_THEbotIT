@@ -1,21 +1,8 @@
 [
   {
-    "lemma": "Adam",
-    "next": "Beta",
-    "proof_read": 1,
-    "chapters": [
-      {
-        "start": 1,
-        "end": 4,
-        "author": "Abert"
-      }
-    ]
-  },
-  {
-    "lemma": "Beta",
-    "previous": "Adam",
-    "next": "Charlie",
-    "proof_read": 1,
+    "lemma": "A",
+    "next": "B",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1,
@@ -25,52 +12,27 @@
     ]
   },
   {
-    "lemma": "Charlie",
-    "previous": "Beta",
-    "next": "Delta",
+    "lemma": "B",
+    "previous": "A",
+    "next": "C",
     "proof_read": 3,
     "chapters": [
       {
-        "start": 4,
+        "start": 1,
         "end": 4,
         "author": "Abel"
       }
     ]
   },
   {
-    "lemma": "Delta",
-    "previous": "Charlie",
-    "next": "Vaaa",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 4,
-        "end": 4,
-        "author": "Abert"
-      }
-    ]
-  },
-  {
-    "lemma": "Vaaa",
-    "previous": "Delta",
-    "next": "Ueee",
+    "lemma": "B",
+    "previous": "BB",
     "proof_read": 3,
     "chapters": [
       {
         "start": 4,
         "end": 4,
-        "author": "Abert"
-      }
-    ]
-  },
-  {
-    "lemma": "Ueee",
-    "previous": "Vaaa",
-    "chapters": [
-      {
-        "start": 4,
-        "end": 4,
-        "author": "Abert"
+        "author": "Abel"
       }
     ]
   }

@@ -22,7 +22,7 @@ class AuthorRegister(Register):
         return f"<{self.__class__.__name__} - author:{self._author}, lemmas:{len(self)}>"
 
     def __len__(self):
-        return len(self.squash_lemmas(self._lemmas))
+        return len(self._lemmas)
 
     def __getitem__(self, item: int) -> Lemma:
         return self._lemmas[item]
@@ -78,7 +78,7 @@ class AuthorRegister(Register):
     def _get_header(self) -> str:
         header = ["RERegister"]
         header.append(f"AUTHOR={self._author.name}")
-        header.append(f"SUM={len(self._lemmas)}")
+        header.append(f"SUM={len(self)}")
         # calculate proof_read status
         fer, kor, unk = self.proof_read
         header.append(f"UNK={unk}")
@@ -88,7 +88,7 @@ class AuthorRegister(Register):
 
     def _get_footer(self) -> str:
         return f"[[Kategorie:RE:Register|{self.author.last_name}, {self.author.first_name}]]\n" \
-               f"Zahl der Artikel: {len(self._lemmas)}, "
+               f"Zahl der Artikel: {len(self)}, "
 
     def get_register_str(self) -> str:
         return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"

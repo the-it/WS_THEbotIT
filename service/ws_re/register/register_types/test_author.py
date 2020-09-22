@@ -114,9 +114,9 @@ Zahl der Artikel: 4, """
                 "|data-sort-value=\"Abel, Herman\""
                 "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
                 "|data-sort-value=\"0005\"|5\n"
-                "|data-sort-value=\"060.0\"|60.0%\n"
-                "|<span style=\"color:#669966\">██████████</span>"
-                "<span style=\"color:#556B2F\">█████</span>"
-                "<span style=\"color:#AA0000\">█████</span>",
+                "|data-sort-value=\"100.0\"|100.0%\n"
+                "|<span style=\"color:#669966\">████████████████████</span>"
+                "<span style=\"color:#556B2F\"></span>"
+                "<span style=\"color:#AA0000\"></span>",
                 abel_register.overview_line)
 
