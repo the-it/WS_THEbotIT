@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 from service.ws_re.register._base import Register
 from service.ws_re.register.lemma import Lemma
@@ -12,12 +12,12 @@ class AlphabeticRegister(Register):
                  before_start: Optional[str],
                  after_next_start: Optional[str],
                  registers: Dict[str, VolumeRegister]):
+        super().__init__()
         self._start: str = start
         self._end: str = end
         self._before_start = before_start
         self._after_next_start = after_next_start
         self._registers = registers
-        self._lemmas: List[Lemma] = []
         self._init_lemmas()
 
     def __repr__(self):
@@ -93,7 +93,7 @@ class AlphabeticRegister(Register):
             header.append(f"NFNF={self._after_next_start}")
         header.append(f"SUM={len(self._lemmas)}")
         # calculate proof_read status
-        fer, kor, unk = self.proof_read(self._lemmas)
+        fer, kor, unk = self.proof_read
         header.append(f"UNK={unk}")
         header.append(f"KOR={kor}")
         header.append(f"FER={fer}")

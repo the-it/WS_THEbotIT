@@ -1,4 +1,4 @@
-# pylint: disable=protected-access
+# pylint: disable=no-self-use,protected-access
 from collections import OrderedDict
 
 from testfixtures import compare
@@ -82,3 +82,40 @@ class TestAuthorRegister(BaseTestRegister):
 [[Kategorie:RE:Register|Abel, Herman]]
 Zahl der Artikel: 4, """
         compare(expected_table, abel_register.get_register_str())
+
+    def test_overview_line(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        compare("|-\n"
+                "|data-sort-value=\"Abel, Herman\""
+                "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
+                "|data-sort-value=\"0004\"|4\n"
+                "|data-sort-value=\"075.0\"|75.0%\n"
+                "|<span style=\"color:#669966\">██████████</span>"
+                "<span style=\"color:#556B2F\">█████</span>"
+                "<span style=\"color:#AA0000\">█████</span>",
+                abel_register.overview_line)
+
+    def test_proofread_parts_of_20(self):
+        compare((10, 5, 5), AuthorRegister.proofread_parts_of_20(4, 2, 1))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(40, 1, 1))
+        compare((1, 0, 19), AuthorRegister.proofread_parts_of_20(45, 2, 1))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(45, 1, 2))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(79, 1, 1))
+        compare((0, 0, 20), AuthorRegister.proofread_parts_of_20(80, 1, 1))
+
+    def test_bug_to_much_percent(self):
+        copy_tst_data("I_1_author_bug_percent", "I_1")
+        copy_tst_data("III_1_author_bug_percent", "III_1")
+        registers = OrderedDict()
+        registers["I,1"] = VolumeRegister(self.volumes["I,1"], self.authors)
+        registers["III,1"] = VolumeRegister(self.volumes["III,1"], self.authors)
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, registers)
+        compare("|-\n"
+                "|data-sort-value=\"Abel, Herman\""
+                "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
+                "|data-sort-value=\"0005\"|5\n"
+                "|data-sort-value=\"100.0\"|100.0%\n"
+                "|<span style=\"color:#669966\">████████████████████</span>"
+                "<span style=\"color:#556B2F\"></span>"
+                "<span style=\"color:#AA0000\"></span>",
+                abel_register.overview_line)

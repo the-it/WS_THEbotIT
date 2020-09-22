@@ -73,29 +73,18 @@ class TestReRegisterPrinter(BaseTestRegister):
     def test_print_author(self):
         with mock.patch("service.ws_re.register.printer.Page") as page_mock:
             printer = ReRegisterPrinter()
-            printer.LEMMA_AUTHOR_SIZE = 3
             printer._print_author()
-            compare(3, len(page_mock.call_args_list))
+            compare(4, len(page_mock.call_args_list))
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel'),
                     page_mock.call_args_list[0])
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Abert'),
                     page_mock.call_args_list[1])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/'
+                               'Register/William Abbott'),
+                    page_mock.call_args_list[2])
             compare(
                 call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Autorenübersicht'),
-                page_mock.call_args_list[2])
-
-    def test_overview_line(self):
-        printer = ReRegisterPrinter()
-        register = next(printer.registers.author)
-        compare("|-\n"
-                "|data-sort-value=\"Abel, Herman\""
-                "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
-                "|data-sort-value=\"0004\"|4",
-                printer._create_overview_line(register, True))
-        compare("|-\n"
-                "|data-sort-value=\"Abel, Herman\"|Herman Abel\n"
-                "|data-sort-value=\"0004\"|4",
-                printer._create_overview_line(register, False))
+                page_mock.call_args_list[3])
 
     def test_task(self):
         printer = ReRegisterPrinter()

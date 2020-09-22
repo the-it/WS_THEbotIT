@@ -12,10 +12,10 @@ class PublicDomainRegister(Register):
                  year: int,
                  authors: Authors,
                  registers: Dict[str, VolumeRegister]):
+        super().__init__()
         self.year: int = year
         self._authors: Authors = authors
         self._registers = registers
-        self._lemmas: List[Lemma] = []
         self._pd_authors: List[Author] = self._get_pd_authors()
         self._init_lemmas()
 
