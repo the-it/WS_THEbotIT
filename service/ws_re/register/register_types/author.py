@@ -109,8 +109,8 @@ class AuthorRegister(Register):
         return "".join(line)
 
     @staticmethod
-    def proofread_parts_of_20(all: int, fer: int, kor: int) -> Tuple[int, int, int]:
-        part_fer = round(fer / all * 20)
-        part_kor = round((kor + fer) / all * 20) - part_fer
+    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int) -> Tuple[int, int, int]:
+        part_fer = round(fer / sum_lemmas * 20)
+        part_kor = round((kor + fer) / sum_lemmas * 20) - part_fer
         part_unk = 20 - (part_fer + part_kor)
         return part_fer, part_kor, part_unk

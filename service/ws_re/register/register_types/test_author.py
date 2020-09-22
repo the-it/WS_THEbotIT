@@ -1,4 +1,4 @@
-# pylint: disable=protected-access
+# pylint: disable=no-self-use,protected-access
 from collections import OrderedDict
 
 from testfixtures import compare
@@ -119,4 +119,3 @@ Zahl der Artikel: 4, """
                 "<span style=\"color:#556B2F\"></span>"
                 "<span style=\"color:#AA0000\"></span>",
                 abel_register.overview_line)
-
