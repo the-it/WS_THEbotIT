@@ -4486,7 +4486,7 @@
       {
         "start": 453,
         "end": 453,
-        "author": "Weiss, J[akob]"
+        "author": "Weiss."
       }
     ]
   },
@@ -8458,8 +8458,10 @@
   },
   {
     "lemma": "Ichthyophagoi",
-    "previous": "Icht Mare",
+    "previous": "Ichthyokentauros",
     "next": "Ichthys 1",
+    "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 844,
@@ -8694,12 +8696,14 @@
   {
     "lemma": "Iculisma",
     "previous": "Ictis",
-    "next": "Ida, Ide 1",
+    "next": "Ida, Ide",
+    "proof_read": 2,
+    "wp_link": "w:de:Angoulême",
     "chapters": [
       {
         "start": 858,
         "end": 858,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },

@@ -10253,12 +10253,14 @@
     "lemma": "Iudaeorum Pons",
     "previous": "Iudaeorum castra",
     "next": "Iudaeorum vicus",
-    "redirect": "Iudaeorum vicus",
     "proof_read": 3,
+    "wp_link": "w:de:Ponte dei Quattro Capi",
+    "wd_link": "d:Q944688",
     "chapters": [
       {
         "start": 2460,
-        "end": 2460
+        "end": 2460,
+        "author": "Gall."
       }
     ]
   },
@@ -10682,8 +10684,19 @@
     ]
   },
   {
+    "lemma": "Hyaioi",
+    "previous": "Hippostratos 6a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2516,
+        "end": 2516,
+        "author": "Oldfather."
+      }
+    ]
+  },
+  {
     "lemma": "Hydria",
-    "previous": "Hybristas 1",
     "next": "Hylaithos",
     "proof_read": 2,
     "chapters": [
@@ -10724,59 +10737,65 @@
     "lemma": "Hymnodoi",
     "previous": "Hylister",
     "next": "Hypsis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2520,
         "end": 2522,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
   {
     "lemma": "Hypsis",
     "previous": "Hymnodoi",
-    "next": "Iakchiastai",
+    "next": "Hyria 2",
     "chapters": [
       {
         "start": 2522,
         "end": 2523,
-        "author": "Leonard"
+        "author": "Leonard."
       }
     ]
   },
   {
-    "lemma": "Iakchiastai",
-    "previous": "Hypsis",
-    "next": "Iarzeitha",
+    "lemma": "Ἰακχιασταί",
+    "previous": "Hyria 2",
+    "next": "Ἰάρζειθα",
+    "sort_key": "Iakchiastai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2523,
         "end": 2523,
-        "author": "Ziebarth"
+        "author": "Ziebarth."
       }
     ]
   },
   {
-    "lemma": "Iarzeitha",
-    "previous": "Iakchiastai",
+    "lemma": "Ἰάρζειθα",
+    "previous": "Ἰακχιασταί",
     "next": "Javols",
+    "sort_key": "Iarzeitha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2523,
         "end": 2523,
-        "author": "Fischer"
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Javols",
-    "previous": "Iarzeitha",
+    "previous": "Ἰάρζειθα",
     "next": "Iberingai, Ibethingai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2524,
         "end": 2524,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -10788,7 +10807,7 @@
       {
         "start": 2524,
         "end": 2524,
-        "author": "Wecker"
+        "author": "Wecker."
       }
     ]
   },
@@ -10796,35 +10815,56 @@
     "lemma": "Ibio...oi",
     "previous": "Iberingai, Ibethingai",
     "next": "Ichthyophagi",
+    "sort_key": "Ibio...oi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2524,
         "end": 2524,
-        "author": "Schulthess"
+        "author": "Schultheß."
       }
     ]
   },
   {
-    "lemma": "Ichthyophagi",
-    "previous": "Ibio...oi",
-    "next": "Idenheim",
+    "lemma": "Ichthyophagoi",
+    "previous": "Ἰβιω...οι",
+    "next": "Iculisma",
+    "redirect": "Herodotos 7",
     "chapters": [
       {
         "start": 2524,
+        "end": 2531,
+        "author": "Tkać."
+      }
+    ]
+  },
+  {
+    "lemma": "Iculisma",
+    "previous": "Ichthyophagoi",
+    "next": "Idenheim",
+    "proof_read": 2,
+    "wp_link": "w:de:Angoulême",
+    "wd_link": "d:Q134346",
+    "chapters": [
+      {
+        "start": 2531,
         "end": 2532,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Idenheim",
-    "previous": "Ichthyophagi",
+    "previous": "Iculisma",
     "next": "Ilattia",
+    "proof_read": 2,
+    "wp_link": "w:de:Idenheim",
+    "wd_link": "d:Q553337",
     "chapters": [
       {
         "start": 2532,
         "end": 2532,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -10832,27 +10872,30 @@
     "lemma": "Ilattia",
     "previous": "Idenheim",
     "next": "Ilbeitenoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2532,
-        "end": 2532
+        "end": 2532,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Ilbeitenoi",
     "previous": "Ilattia",
-    "next": "Ileïon pedion",
+    "next": "Ἰλήϊον πέδιον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2532,
         "end": 2532,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Ileïon pedion",
+    "lemma": "Ἰλήϊον πέδιον",
     "previous": "Ilbeitenoi",
     "next": "Illos",
     "chapters": [
@@ -10864,7 +10907,7 @@
   },
   {
     "lemma": "Illos",
-    "previous": "Ileïon pedion",
+    "previous": "Ἰλήϊον πέδιον",
     "next": "Ilva 2",
     "chapters": [
       {
