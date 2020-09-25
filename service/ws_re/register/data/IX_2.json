@@ -8348,13 +8348,16 @@
   },
   {
     "lemma": "Ἴσσα, ἡ 1",
-    "previous": "Israel 5",
+    "previous": "Isse 5",
     "next": "Ἴσσα, ἡ 2",
+    "sort_key": "Issa 1",
+    "proof_read": 2,
+    "wp_link": "w:de:Lesbos",
     "chapters": [
       {
         "start": 2234,
         "end": 2234,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -10295,6 +10298,7 @@
     "previous": "Iudaeus",
     "next": "Judas Makkabaios",
     "wp_link": "w:de:Judas (Chronist)",
+    "wd_link": "d:Q1710869",
     "chapters": [
       {
         "start": 2461,
@@ -10309,6 +10313,7 @@
     "next": "Iudex",
     "proof_read": 2,
     "wp_link": "w:de:Judas Makkabäus",
+    "wd_link": "d:Q111559",
     "chapters": [
       {
         "start": 2461,
@@ -10884,7 +10889,7 @@
   {
     "lemma": "Ilbeitenoi",
     "previous": "Ilattia",
-    "next": "Ἰλήϊον πέδιον",
+    "next": "Ἰλήϊον πεδίον",
     "proof_read": 2,
     "chapters": [
       {
@@ -10895,25 +10900,28 @@
     ]
   },
   {
-    "lemma": "Ἰλήϊον πέδιον",
+    "lemma": "Ἰλήϊον πεδίον",
     "previous": "Ilbeitenoi",
     "next": "Illos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2532,
-        "end": 2532
+        "end": 2532,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Illos",
-    "previous": "Ἰλήϊον πέδιον",
+    "previous": "Ἰλήϊον πεδίον",
     "next": "Ilva 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2532,
         "end": 2541,
-        "author": "Nagl"
+        "author": "Nagl."
       }
     ]
   },
@@ -10925,31 +10933,46 @@
       {
         "start": 2541,
         "end": 2541,
-        "author": "Philipp"
+        "author": "Philipp."
       }
     ]
   },
   {
     "lemma": "Imadochi",
     "previous": "Ilva 2",
-    "next": "Imaon",
+    "next": "Imaginifer",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2541,
         "end": 2541,
-        "author": "Herrmann"
+        "author": "Herrmann."
+      }
+    ]
+  },
+  {
+    "lemma": "Imaginifer",
+    "previous": "Imadochi",
+    "next": "Imaon",
+    "redirect": "Signifer",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2541,
+        "end": 2541
       }
     ]
   },
   {
     "lemma": "Imaon",
-    "previous": "Imadochi",
+    "previous": "Imaginifer",
     "next": "Imaos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2541,
         "end": 2542,
-        "author": "Herrmann"
+        "author": "Herrmann."
       }
     ]
   },
@@ -10961,7 +10984,7 @@
       {
         "start": 2542,
         "end": 2543,
-        "author": "Wecker"
+        "author": "Wecker."
       }
     ]
   },
@@ -10969,11 +10992,12 @@
     "lemma": "Imbros 3",
     "previous": "Imaos",
     "next": "Imbrosgebirge",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2543,
         "end": 2543,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -10981,11 +11005,12 @@
     "lemma": "Imbrosgebirge",
     "previous": "Imbros 3",
     "next": "Imera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2543,
         "end": 2543,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -10993,11 +11018,12 @@
     "lemma": "Imera",
     "previous": "Imbrosgebirge",
     "next": "Imityi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2543,
         "end": 2543,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -11005,18 +11031,34 @@
     "lemma": "Imityi",
     "previous": "Imera",
     "next": "Ina 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2543,
         "end": 2543,
-        "author": "Herrmann"
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Ina 2",
     "previous": "Imityi",
+    "next": "Inapaei",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2543,
+        "end": 2543,
+        "author": "Bürchner."
+      }
+    ]
+  },
+  {
+    "lemma": "Inapaei",
+    "previous": "Ina 2",
     "next": "Infibulatio",
+    "redirect": "Napai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2543,
@@ -11026,7 +11068,7 @@
   },
   {
     "lemma": "Infibulatio",
-    "previous": "Ina 2",
+    "previous": "Inapaei",
     "next": "Io....",
     "chapters": [
       {
