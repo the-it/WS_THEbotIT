@@ -4984,7 +4984,7 @@
   {
     "lemma": "Faesulanus",
     "previous": "Faesulae",
-    "next": "Faflana",
+    "next": "Fafiana",
     "chapters": [
       {
         "start": 1966,
@@ -4994,20 +4994,21 @@
     ]
   },
   {
-    "lemma": "Faflana",
+    "lemma": "Fafiana",
     "previous": "Faesulanus",
     "next": "Fagifulae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1966,
         "end": 1966,
-        "author": "Ihm"
+        "author": "Ihm."
       }
     ]
   },
   {
     "lemma": "Fagifulae",
-    "previous": "Faflana",
+    "previous": "Fafiana",
     "next": "Fago",
     "chapters": [
       {
@@ -6401,8 +6402,10 @@
   },
   {
     "lemma": "Faventia 2",
-    "previous": "Faventia 1",
+    "previous": "Faventina 1",
     "next": "Faventinus 1",
+    "redirect": "Barcino",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2053,
@@ -6414,11 +6417,12 @@
     "lemma": "Faventinus 1",
     "previous": "Faventia 2",
     "next": "Faventinus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2053,
         "end": 2053,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -6426,6 +6430,8 @@
     "lemma": "Faventinus 2",
     "previous": "Faventinus 1",
     "next": "Faventius",
+    "redirect": "Cetius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2053,
@@ -6437,11 +6443,12 @@
     "lemma": "Faventius",
     "previous": "Faventinus 2",
     "next": "Favianenses, Favianis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2054,
         "end": 2054,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -6449,6 +6456,8 @@
     "lemma": "Favianenses, Favianis",
     "previous": "Faventius",
     "next": "Favisae Capitolinae",
+    "redirect": "Fafiana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2054,

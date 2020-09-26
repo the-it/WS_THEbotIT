@@ -6942,30 +6942,45 @@
   {
     "lemma": "Ofella",
     "previous": "Ofatulenus",
-    "next": "Ofellius 1",
+    "next": "Ofellius (-illius, -ilius)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2039,
         "end": 2039,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Ofellius 1",
-    "previous": "Ofella",
-    "next": "Ofellius (-illius, -ilius",
+    "previous": "Ofellius (-illius, -ilius)",
+    "next": "Ofellius 2",
+    "sort_key": "Ofellius 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2039,
         "end": 2039,
-        "author": "Münzer"
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Ofellius 2",
+    "previous": "Ofellius 1",
+    "sort_key": "Ofellius 02",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2039,
+        "end": 2039,
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Ofellius (-illius, -ilius",
-    "previous": "Ofellius 1",
     "next": "Ofillius 2",
     "chapters": [
       {
