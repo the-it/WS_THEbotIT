@@ -10624,6 +10624,7 @@
     "next": "Iugum 2",
     "proof_read": 2,
     "wp_link": "w:de:Joch (Einheit)",
+    "wd_link": "d:Q30332150",
     "chapters": [
       {
         "start": 2508,
@@ -10637,6 +10638,7 @@
     "previous": "Iugum 1",
     "next": "Iugum 3",
     "wp_link": "w:de:Geschirr (Zugtier)#Joch",
+    "wd_link": "d:Q152523",
     "chapters": [
       {
         "start": 2509,
@@ -10663,6 +10665,7 @@
     "next": "Herodes 14",
     "proof_read": 2,
     "wp_link": "w:de:Joch (Fessel)",
+    "wd_link": "d:Q1691013",
     "chapters": [
       {
         "start": 2512,
@@ -10703,6 +10706,20 @@
   {
     "lemma": "Hyaioi",
     "previous": "Hippostratos 6a",
+    "next": "Hybristas 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2516,
+        "end": 2516,
+        "author": "Oldfather."
+      }
+    ]
+  },
+  {
+    "lemma": "Hybristas 1",
+    "previous": "Hyaioi",
+    "next": "Hydria",
     "proof_read": 2,
     "chapters": [
       {
@@ -10714,6 +10731,7 @@
   },
   {
     "lemma": "Hydria",
+    "previous": "Hybristas 1",
     "next": "Hylaithos",
     "proof_read": 2,
     "chapters": [
@@ -11081,12 +11099,15 @@
   {
     "lemma": "Infibulatio",
     "previous": "Inapaei",
-    "next": "Io....",
+    "next": "Intarabus",
+    "redirect": "Oreibasios",
+    "proof_read": 2,
+    "wp_link": "w:de:Infibulation",
     "chapters": [
       {
         "start": 2543,
         "end": 2548,
-        "author": "Jüthner"
+        "author": "Jüthner."
       }
     ]
   },
