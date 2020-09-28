@@ -1,7 +1,6 @@
 __author__ = 'eso'
 
 from tools.petscan import PetScan
-import re
 
 watch_themes = ['Allgemeines, Informations-, Buch- und Bibliothekswesen',
                 'Archäologie',
@@ -33,7 +32,7 @@ def crawler_cat_index_site():
     counter = 1
     for werk in list_werke:
         searcher_sites = PetScan()
-        searcher_sites.add_namespace('Seite')
+        searcher_sites.add_namespace(102)
         searcher_sites.add_positive_category('Fertig')
         searcher_sites.add_positive_category('Korrigiert')
         searcher_sites.add_positive_category('Unkorrigiert')
@@ -49,12 +48,12 @@ def crawler_cat_index_site():
         else:
             searcher_index = PetScan()
             searcher_index.add_any_outlink(werk)
-            searcher_index.add_namespace('Index')
+            searcher_index.add_namespace(104)
             searcher_index.add_positive_category('Index')
             index = searcher_index.run()
             if index:
                 searcher_sites = PetScan()
-                searcher_sites.add_namespace('Seite')
+                searcher_sites.add_namespace(102)
                 searcher_sites.add_positive_category('Fertig')
                 searcher_sites.add_positive_category('Korrigiert')
                 searcher_sites.add_positive_category('Unkorrigiert')
