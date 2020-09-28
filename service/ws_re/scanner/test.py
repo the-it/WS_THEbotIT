@@ -314,9 +314,8 @@ class TestReScanner(TestCase):
         self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
         bot = ReScanner(log_to_screen=False, log_to_wiki=False)
         bot.tasks = [self.WAITTask]
-        bot.__enter__()
-        bot.run()
-        bot.__exit__(None, None, None)
+        with bot:
+            bot.run()
         with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
             data = json.load(data_file)
             self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
@@ -324,9 +323,8 @@ class TestReScanner(TestCase):
             self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
                                  datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
         self.lemma_mock.return_value = [':RE:Lemma3', ":RE:Lemma4"]
-        bot.__enter__()
-        bot.run()
-        bot.__exit__(None, None, None)
+        with bot:
+            bot.run()
         with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
             data = json.load(data_file)
             self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,

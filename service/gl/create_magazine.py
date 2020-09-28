@@ -280,7 +280,7 @@ class GlCreateMagazine(CanonicalBot):
 
     def search_pages(self):
         self.searcher_pages.add_positive_category("Die Gartenlaube")
-        self.searcher_pages.add_namespace("Seite")
+        self.searcher_pages.add_namespace(102)  # namespace Seite
         self.searcher_pages.set_search_depth(1)
         self.searcher_pages.set_timeout(60)
         if self.last_run_successful or self.debug:

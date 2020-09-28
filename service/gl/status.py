@@ -113,9 +113,11 @@ class GlStatus(CanonicalBot):
         searcher = PetScan()
         searcher.set_timeout(120)
         if article:
-            searcher.add_namespace("Article")
+            # Article
+            searcher.add_namespace(0)
         else:
-            searcher.add_namespace("Seite")
+            # Seite
+            searcher.add_namespace(102)
         searcher.set_search_depth(5)
         if year:
             searcher.add_positive_category("Die Gartenlaube (" + str(year) + ")")

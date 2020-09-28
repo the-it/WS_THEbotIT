@@ -28,9 +28,8 @@ class TestCatScan(TestCase):
 
     def test_add_namespace(self):
         self.petscan.add_namespace(0)
-        self.petscan.add_namespace("Datei")
-        self.petscan.add_namespace([2, "Vorlage"])
-        self.assertDictEqual({"ns[0]": "1", "ns[2]": "1", "ns[6]": "1", "ns[10]": "1"}, self.petscan.options)
+        self.petscan.add_namespace([2, 10])
+        self.assertDictEqual({"ns[0]": "1", "ns[2]": "1", "ns[10]": "1"}, self.petscan.options)
 
     def test_activate_redirects(self):
         self.petscan.activate_redirects()
