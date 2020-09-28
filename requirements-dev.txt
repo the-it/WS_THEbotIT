@@ -35,7 +35,7 @@ future==0.18.2            # via aws-xray-sdk
 gitdb==4.0.5              # via -c requirements.txt, gitpython
 gitpython==3.1.8          # via -c requirements.txt, bandit
 idna==2.10                 # via -c requirements.txt, moto, requests
-importlib-metadata==1.7.0  # via jsonpickle
+importlib-metadata==2.0.0  # via jsonpickle
 internetarchive==1.9.5    # via -r requirements-dev.in
 isort==5.5.3              # via pylint
 jinja2==2.11.2            # via moto
