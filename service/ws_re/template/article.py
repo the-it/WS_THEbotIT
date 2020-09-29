@@ -211,24 +211,37 @@ class Article(collections.MutableMapping):
         properties_dict = {}
         #
         for template_property in parameters:
-            if template_property["key"]:
-                keyword = template_property["key"].upper()
-                if keyword in cls.keywords.values():
-                    pass
-                elif keyword in cls.keywords.keys():
-                    keyword = cls.keywords[keyword]
-                elif keyword in "".join(cls.keywords.values()):
-                    for full_keyword in cls.keywords.values():
-                        if keyword in full_keyword:
-                            keyword = full_keyword
-                            break
-                else:
-                    raise ReDatenException(f"REDaten has wrong key word. --> {template_property}")
-                properties_dict.update({keyword: template_property["value"]})
-            else:
-                raise ReDatenException(f"REDaten has property without a key word. --> "
-                                       f"{template_property}")
+            keyword = cls._correct_keyword(template_property)
+            properties_dict.update({keyword: template_property["value"]})
         return properties_dict
+
+    @classmethod
+    def _correct_keyword(cls, template_property: KeyValuePair) -> str:
+        """
+        handles slightly different forms of the expected keywords
+
+        Examples: - KSCH -> KEINE_SCHÖPFUNGSHÖHE
+                  - keine_schöpfungshöhe -> KEINE_SCHÖPFUNGSHÖHE
+                  - SCHÖPFUNGSHÖHE -> KEINE_SCHÖPFUNGSHÖHE
+
+        :param template_property: of parameter extracted by the TemplateHandler.
+        :return: correct form of a keyword
+        """
+        if template_property["key"]:
+            keyword = template_property["key"].upper()
+            if keyword in cls.keywords.keys():
+                keyword = cls.keywords[keyword]
+            elif keyword in "".join(cls.keywords.values()):
+                for full_keyword in cls.keywords.values():
+                    if keyword in full_keyword:
+                        keyword = full_keyword
+                        break
+            else:
+                raise ReDatenException(f"REDaten has wrong key word. --> {template_property}")
+        else:
+            raise ReDatenException(f"REDaten has property without a key word. --> "
+                                   f"{template_property}")
+        return keyword
 
     def _get_pre_text(self):
         template_handler = TemplateHandler()
