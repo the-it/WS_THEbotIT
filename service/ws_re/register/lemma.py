@@ -2,7 +2,7 @@ import contextlib
 import re
 import unicodedata
 from datetime import datetime
-from typing import List, Tuple, KeysView, Optional, Literal
+from typing import List, Tuple, KeysView, Optional, Literal, Pattern
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
@@ -10,74 +10,84 @@ from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma_chapter import LemmaChapter
 from service.ws_re.volumes import Volume
 
-_TRANSLATION_DICT_RAW = {"a": "α",
-                         "b": "β",
-                         "ch": "χ",
-                         "d": "δ",
-                         "e": "εη",
-                         "g": "γ",
-                         "i": "jι",
-                         "k": "κ",
-                         "l": "λ",
-                         "m": "μ",
-                         "n": "ν",
-                         "o": "ωο",  # don't get confused this is an omikron
-                         "p": "π",
-                         "ph": "φ",
-                         "ps": "ψ",
-                         "r": "ρ",
-                         "s": "σ",
-                         "t": "τ",
-                         "th": "θ",
-                         "u": "vw",
-                         "x": "ξ",
-                         "y": "υ",
-                         "z": "ζ",
-                         "": "()?\'ʾʿ–-"}
-_TMP_DICT = {}
 
-for key in _TRANSLATION_DICT_RAW:
-    for character in _TRANSLATION_DICT_RAW[key]:
-        _TMP_DICT[character] = key
-_TRANSLATION_DICT = str.maketrans(_TMP_DICT)
+def _generate_translation_dict():
+    _TRANSLATION_DICT_RAW = {"a": "α",
+                             "b": "β",
+                             "ch": "χ",
+                             "d": "δ",
+                             "e": "εη",
+                             "g": "γ",
+                             "i": "jι",
+                             "k": "κ",
+                             "l": "λ",
+                             "m": "μ",
+                             "n": "ν",
+                             "o": "ωο",  # don't get confused this is an omikron
+                             "p": "π",
+                             "ph": "φ",
+                             "ps": "ψ",
+                             "r": "ρ",
+                             "s": "σ",
+                             "t": "τ",
+                             "th": "θ",
+                             "u": "vw",
+                             "x": "ξ",
+                             "y": "υ",
+                             "z": "ζ",
+                             "": "()?\'ʾʿ–-"}
+    _TMP_DICT = {}
+    for key in _TRANSLATION_DICT_RAW:
+        for character in _TRANSLATION_DICT_RAW[key]:
+            _TMP_DICT[character] = key
+    return str.maketrans(_TMP_DICT)
 
-_3RD_REGEX_RAW_LIST = [
-    # catching of "a ...", "ab ..." and "ad ..."
-    (r"^a[db]? ", ""),
-    # catching of "X. ..."
-    (r"^[a-z]?\. ", ""),
-    # unify numbers
-    (r"(?<!\d)(\d)(?!\d)", r"00\g<1>"),
-    (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>")]
 
-_3RD_REGEX_LIST = []
-for regex_pair in _3RD_REGEX_RAW_LIST:
-    _3RD_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
+def _generate_regex_list(raw_list: List[Tuple[str, str]]) -> List[Tuple[Pattern, str]]:
+    regex_list = []
+    for regex_pair in raw_list:
+        regex_list.append((re.compile(regex_pair[0]), regex_pair[1]))
+    return regex_list
 
-# some regex actions must performed before the TRANSLATION_DICT replacement
 
-_2ND_REGEX_RAW_LIST = [
-    (r"αυ", "au"),
-    (r"ευ", "eu"),
-    (r"ου", "u"),
-    (r"γγ", "ng"),
-]
+def _generate_pre_striping_regex() -> List[Tuple[Pattern, str]]:
+    raw = [
+        (r"(^| )(?:ἅ)", r"\1ha"),
+        (r"(^| )(?:ἑ|ἡ|ἥ)", r"\1he"),
+        (r"(^| )(?:ἱ)", r"\1hi"),
+        (r"(^| )(?:ὁ|ὅ)", r"\1ho"),
+        (r"(^| )(?:ὑ)", r"\1hy"),
+    ]
+    return _generate_regex_list(raw)
 
-_2ND_REGEX_LIST = []
-for regex_pair in _2ND_REGEX_RAW_LIST:
-    _2ND_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
 
-_1ST_REGEX_RAW_LIST = [
-    (r"(^| )(?:ἅ)", r"\1ha"),
-    (r"(^| )(?:ἑ|ἡ|ἥ)", r"\1he"),
-    (r"(^| )(?:ἱ)", r"\1hi"),
-    (r"(^| )(?:ὁ|ὅ)", r"\1ho"),
-    (r"(^| )(?:ὑ)", r"\1hy"),
-]
+def _generate_pre_translate_regex() -> List[Tuple[Pattern, str]]:
+    raw = [
+        (r"αυ", "au"),
+        (r"ευ", "eu"),
+        (r"ου", "u"),
+        (r"γγ", "ng"),
+    ]
+    return _generate_regex_list(raw)
 
-_1ST_REGEX_LIST = []
-for regex_pair in _1ST_REGEX_RAW_LIST:
-    _1ST_REGEX_LIST.append((re.compile(regex_pair[0]), regex_pair[1]))
+
+def _generate_pre_finalize_regex() -> List[Tuple[Pattern, str]]:
+    raw = [
+        # catching of "a ...", "ab ..." and "ad ..."
+        (r"^a[db]? ", ""),
+        # catching of "X. ..."
+        (r"^[a-z]?\. ", ""),
+        # unify numbers
+        (r"(?<!\d)(\d)(?!\d)", r"00\g<1>"),
+        (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>")
+    ]
+    return _generate_regex_list(raw)
+
+
+PRE_ACCENT_STRIPING_REGEX = _generate_pre_striping_regex()
+PRE_TRANSLATE_REGEX = _generate_pre_translate_regex()
+PRE_FINALIZE_REGEX = _generate_pre_finalize_regex()
+TRANSLATION_DICT = _generate_translation_dict()
 
 
 class Lemma():
@@ -152,15 +162,15 @@ class Lemma():
     def make_sort_key(cls, lemma: str) -> str:
         lemma = lemma.casefold()
         # handle some things that need regex with accents
-        for regex in _1ST_REGEX_LIST:
+        for regex in PRE_ACCENT_STRIPING_REGEX:
             lemma = regex[0].sub(regex[1], lemma)
         # remove all accents
         lemma = cls._strip_accents(lemma)
         # simple replacement of single characters
-        for regex in _2ND_REGEX_LIST:
+        for regex in PRE_TRANSLATE_REGEX:
             lemma = regex[0].sub(regex[1], lemma)
-        lemma = lemma.translate(_TRANSLATION_DICT)
-        for regex in _3RD_REGEX_LIST:
+        lemma = lemma.translate(TRANSLATION_DICT)
+        for regex in PRE_FINALIZE_REGEX:
             lemma = regex[0].sub(regex[1], lemma)
         # delete dots at last
         lemma = lemma.replace(".", " ")
