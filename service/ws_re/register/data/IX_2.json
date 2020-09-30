@@ -2289,7 +2289,7 @@
     "previous": "Io....",
     "next": "Ioannes 2",
     "sort_key": "Ioannes 01",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1743,
@@ -2303,7 +2303,7 @@
     "previous": "Ioannes 1",
     "next": "Ioannes 3",
     "sort_key": "Ioannes 02",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1743,
@@ -2317,7 +2317,7 @@
     "previous": "Ioannes 2",
     "next": "Ioannes 4",
     "sort_key": "Ioannes 03",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1743,
@@ -11256,11 +11256,14 @@
     "lemma": "Ivaro, Ivarus",
     "previous": "Ivanum",
     "next": "Ivau 1",
+    "proof_read": 2,
+    "wp_link": "w:de:Salzburg",
+    "ws_link": "s:de:Salzburg",
     "chapters": [
       {
         "start": 2623,
         "end": 2623,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -11268,18 +11271,34 @@
     "lemma": "Ivau 1",
     "previous": "Ivaro, Ivarus",
     "next": "Ivau 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2623,
         "end": 2623,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Ivau 2",
     "previous": "Ivau 1",
-    "next": "Evaunum",
+    "next": "Iuaum",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2623,
+        "end": 2623,
+        "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Iuaum",
+    "previous": "Ivau 2",
+    "next": "Ivaunum",
+    "redirect": "Iuvavum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2623,
@@ -11288,26 +11307,15 @@
     ]
   },
   {
-    "lemma": "Evaunum",
-    "previous": "Ivau 2",
-    "next": "Ivaunum",
-    "chapters": [
-      {
-        "start": 2624,
-        "end": 2624,
-        "author": "Keune"
-      }
-    ]
-  },
-  {
     "lemma": "Ivaunum",
-    "previous": "Evaunum",
+    "previous": "Iuaum",
     "next": "Iuavum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2624,
         "end": 2624,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -11315,7 +11323,8 @@
     "lemma": "Iuavum",
     "previous": "Ivaunum",
     "next": "Jublains",
-    "redirect": true,
+    "redirect": "Iuvavum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2624,
@@ -11326,11 +11335,14 @@
   {
     "lemma": "Jublains",
     "previous": "Iuavum",
+    "next": "Iugurtha",
+    "proof_read": 2,
+    "wp_link": "w:de:Jublains",
     "chapters": [
       {
         "start": 2624,
         "end": 2624,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   }
