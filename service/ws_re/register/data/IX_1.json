@@ -5243,7 +5243,7 @@
       {
         "start": 545,
         "end": 545,
-        "author": "Philipp"
+        "author": "Philipp."
       }
     ]
   },
@@ -5255,7 +5255,7 @@
       {
         "start": 545,
         "end": 555,
-        "author": "Berger"
+        "author": "Berger."
       }
     ]
   },
@@ -5267,7 +5267,7 @@
       {
         "start": 555,
         "end": 555,
-        "author": "Schneider, K[arl]"
+        "author": "K. Schneider."
       }
     ]
   },
@@ -5275,11 +5275,12 @@
     "lemma": "Iaculum",
     "previous": "Iactus 3",
     "next": "Iadatinus vicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 555,
         "end": 556,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -5287,11 +5288,12 @@
     "lemma": "Iadatinus vicus",
     "previous": "Iaculum",
     "next": "Iader",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 556,
         "end": 556,
-        "author": "Philipp"
+        "author": "Philipp."
       }
     ]
   },
@@ -5299,11 +5301,13 @@
     "lemma": "Iader",
     "previous": "Iadatinus vicus",
     "next": "Iades",
+    "proof_read": 2,
+    "wp_link": "w:de:Zadar",
     "chapters": [
       {
         "start": 556,
-        "end": 556,
-        "author": "Vulić"
+        "end": 557,
+        "author": "Vulić."
       }
     ]
   },
@@ -5311,11 +5315,12 @@
     "lemma": "Iades",
     "previous": "Iader",
     "next": "Iadi vicus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 556,
-        "end": 556,
-        "author": "Abert"
+        "start": 557,
+        "end": 557,
+        "author": "Abert."
       }
     ]
   },
@@ -5323,10 +5328,12 @@
     "lemma": "Iadi vicus",
     "previous": "Iades",
     "next": "Iadovi",
+    "redirect": "Radu",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 556,
-        "end": 556
+        "start": 557,
+        "end": 557
       }
     ]
   },
@@ -5334,11 +5341,12 @@
     "lemma": "Iadovi",
     "previous": "Iadi vicus",
     "next": "Iadu",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 556,
-        "end": 556,
-        "author": "Schulten"
+        "start": 557,
+        "end": 557,
+        "author": "Schulten."
       }
     ]
   },
@@ -5346,10 +5354,12 @@
     "lemma": "Iadu",
     "previous": "Iadovi",
     "next": "Jaëzer",
+    "redirect": "Radu",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 556,
-        "end": 556
+        "start": 557,
+        "end": 557
       }
     ]
   },
@@ -5370,11 +5380,12 @@
     "lemma": "Iagath",
     "previous": "Jaëzer",
     "next": "Jagbeha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 557,
         "end": 557,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
@@ -5452,7 +5463,7 @@
       {
         "start": 612,
         "end": 612,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -5460,11 +5471,12 @@
     "lemma": "Iaira 1",
     "previous": "Iaia",
     "next": "Iaira 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 613,
         "end": 613,
-        "author": "Eitrem"
+        "author": "Eitrem."
       }
     ]
   },
@@ -5472,41 +5484,44 @@
     "lemma": "Iaira 2",
     "previous": "Iaira 1",
     "next": "Iaitia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 613,
         "end": 613,
-        "author": "Eitrem"
+        "author": "Eitrem."
       }
     ]
   },
   {
     "lemma": "Iaitia",
     "previous": "Iaira 2",
-    "next": "Iakchagogos",
+    "next": "Ἰακχαγωγός",
     "chapters": [
       {
         "start": 613,
         "end": 613,
-        "author": "Ziegler"
+        "author": "Ziegler."
       }
     ]
   },
   {
-    "lemma": "Iakchagogos",
+    "lemma": "Ἰακχαγωγός",
     "previous": "Iaitia",
     "next": "Iakchai",
+    "sort_key": "Iakchagogos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 613,
         "end": 613,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Iakchai",
-    "previous": "Iakchagogos",
+    "previous": "Ἰακχαγωγός",
     "next": "Iakcheion",
     "chapters": [
       {
