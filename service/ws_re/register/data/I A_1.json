@@ -14554,10 +14554,12 @@
     "lemma": "Rufus 1",
     "previous": "Rufus",
     "next": "Rufus 2",
+    "sort_key": "Rufus 01",
     "chapters": [
       {
         "start": 1204,
-        "end": 1204
+        "end": 1204,
+        "author": "Stein."
       }
     ]
   },
@@ -14565,10 +14567,12 @@
     "lemma": "Rufus 2",
     "previous": "Rufus 1",
     "next": "Rufus 3",
+    "sort_key": "Rufus 02",
     "chapters": [
       {
         "start": 1204,
-        "end": 1204
+        "end": 1204,
+        "author": "Stein."
       }
     ]
   },
@@ -14576,10 +14580,13 @@
     "lemma": "Rufus 3",
     "previous": "Rufus 2",
     "next": "Rufus 4",
+    "sort_key": "Rufus 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1204,
-        "end": 1204
+        "end": 1204,
+        "author": "Stein."
       }
     ]
   },
@@ -14587,10 +14594,12 @@
     "lemma": "Rufus 4",
     "previous": "Rufus 3",
     "next": "Rufus 5",
+    "sort_key": "Rufus 04",
     "chapters": [
       {
         "start": 1204,
-        "end": 1204
+        "end": 1204,
+        "author": "Stein."
       }
     ]
   },
@@ -14598,10 +14607,12 @@
     "lemma": "Rufus 5",
     "previous": "Rufus 4",
     "next": "Rufus 6",
+    "sort_key": "Rufus 05",
     "chapters": [
       {
         "start": 1205,
-        "end": 1205
+        "end": 1205,
+        "author": "Stein."
       }
     ]
   },
@@ -14609,10 +14620,13 @@
     "lemma": "Rufus 6",
     "previous": "Rufus 5",
     "next": "Rufus 7",
+    "sort_key": "Rufus 06",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1205,
-        "end": 1205
+        "end": 1205,
+        "author": "Stein."
       }
     ]
   },
@@ -14620,10 +14634,12 @@
     "lemma": "Rufus 7",
     "previous": "Rufus 6",
     "next": "Rufus 8",
+    "sort_key": "Rufus 07",
     "chapters": [
       {
         "start": 1205,
-        "end": 1206
+        "end": 1206,
+        "author": "Stein."
       }
     ]
   },
@@ -14631,11 +14647,13 @@
     "lemma": "Rufus 8",
     "previous": "Rufus 7",
     "next": "Rufus 9",
+    "sort_key": "Rufus 08",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1206,
         "end": 1206,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -14643,10 +14661,12 @@
     "lemma": "Rufus 9",
     "previous": "Rufus 8",
     "next": "Rufus 10",
+    "sort_key": "Rufus 09",
     "chapters": [
       {
         "start": 1206,
-        "end": 1206
+        "end": 1206,
+        "author": "Stein."
       }
     ]
   },
@@ -14654,10 +14674,12 @@
     "lemma": "Rufus 10",
     "previous": "Rufus 9",
     "next": "Rufus 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1206,
-        "end": 1206
+        "end": 1206,
+        "author": "Stein."
       }
     ]
   },
@@ -14665,10 +14687,12 @@
     "lemma": "Rufus 11",
     "previous": "Rufus 10",
     "next": "Rufus 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1206,
-        "end": 1206
+        "end": 1206,
+        "author": "Stein."
       }
     ]
   },
@@ -14676,11 +14700,12 @@
     "lemma": "Rufus 12",
     "previous": "Rufus 11",
     "next": "Rufus 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1206,
         "end": 1206,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -14688,11 +14713,12 @@
     "lemma": "Rufus 13",
     "previous": "Rufus 12",
     "next": "Rufus 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1206,
         "end": 1206,
-        "author": "Nagl"
+        "author": "Nagl."
       }
     ]
   },
@@ -14700,10 +14726,12 @@
     "lemma": "Rufus 14",
     "previous": "Rufus 13",
     "next": "Rufus 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1206,
-        "end": 1206
+        "end": 1206,
+        "author": "Seeck."
       }
     ]
   },
