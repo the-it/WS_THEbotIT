@@ -6997,12 +6997,26 @@
   {
     "lemma": "Ofellius 3",
     "previous": "Ofellius 2",
+    "next": "Ofellius 4",
     "sort_key": "Ofellius 03",
     "proof_read": 2,
     "chapters": [
       {
         "start": 2040,
         "end": 2040,
+        "author": "F. Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Ofellius 4",
+    "previous": "Ofellius 3",
+    "sort_key": "Ofellius 04",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2040,
+        "end": 2041,
         "author": "F. Münzer."
       }
     ]

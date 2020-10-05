@@ -5303,6 +5303,7 @@
     "next": "Iades",
     "proof_read": 2,
     "wp_link": "w:de:Zadar",
+    "wd_link": "d:Q3370",
     "chapters": [
       {
         "start": 556,
@@ -5549,11 +5550,13 @@
     "lemma": "Iakchos 1",
     "previous": "Iakcheion",
     "next": "Iakchos 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Iakchos",
     "chapters": [
       {
         "start": 613,
         "end": 622,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -5821,30 +5824,33 @@
   {
     "lemma": "Ialysos 4",
     "previous": "Ialysos 3",
-    "next": "Iamba",
+    "next": "Ἴαμβα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 633,
         "end": 633,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Iamba",
+    "lemma": "Ἴαμβα",
     "previous": "Ialysos 4",
-    "next": "Iambadule(s?)",
+    "next": "Ἰαμβαδούλη(ς?)",
+    "sort_key": "Iamba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 633,
         "end": 633,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
   {
-    "lemma": "Iambadule(s?)",
-    "previous": "Iamba",
+    "lemma": "Ἰαμβαδούλη(ς?)",
+    "previous": "Ἴαμβα",
     "next": "Iambe 1",
     "chapters": [
       {
@@ -5856,7 +5862,7 @@
   },
   {
     "lemma": "Iambe 1",
-    "previous": "Iambadule(s?)",
+    "previous": "Ἰαμβαδούλη(ς?)",
     "next": "Iambe 2",
     "chapters": [
       {
