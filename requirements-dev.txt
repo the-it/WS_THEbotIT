@@ -9,7 +9,7 @@ attrs==20.2.0             # via jsonschema
 aws-sam-translator==1.27.0  # via cfn-lint
 aws-xray-sdk==2.6.0       # via moto
 bandit==1.6.2             # via -r requirements-dev.in
-beautifulsoup4==4.9.2     # via -c requirements.txt, -r requirements-dev.in
+beautifulsoup4==4.9.3     # via -c requirements.txt, -r requirements-dev.in
 boto3-stubs[essential]==1.15.7.0  # via -r requirements-dev.in
 boto3==1.15.7             # via -c requirements.txt, aws-sam-translator, moto
 boto==2.49.0              # via moto
