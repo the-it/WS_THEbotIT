@@ -5813,11 +5813,13 @@
     "lemma": "Ialysos 3",
     "previous": "Ialysos 2",
     "next": "Ialysos 4",
+    "proof_read": 2,
+    "wp_link": "w:de:Ialysos (Rhodos)",
     "chapters": [
       {
         "start": 629,
         "end": 633,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -5852,11 +5854,13 @@
     "lemma": "Ἰαμβαδούλη(ς?)",
     "previous": "Ἴαμβα",
     "next": "Iambe 1",
+    "sort_key": "Iambadodules",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 633,
         "end": 633,
-        "author": "Cumont"
+        "author": "Cumont."
       }
     ]
   },
@@ -5868,31 +5872,45 @@
       {
         "start": 633,
         "end": 633,
-        "author": "Maas"
+        "author": "Maas."
       }
     ]
   },
   {
     "lemma": "Iambe 2",
     "previous": "Iambe 1",
-    "next": "Iamblichos 1",
+    "next": "Iambia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 633,
+        "end": 636,
+        "author": "Tkač."
+      }
+    ]
+  },
+  {
+    "lemma": "Iambia",
+    "previous": "Iambe 2",
+    "next": "Iamblichos 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 636,
         "end": 639,
-        "author": "Tkáč"
+        "author": "Tkač."
       }
     ]
   },
   {
     "lemma": "Iamblichos 1",
-    "previous": "Iambe 2",
+    "previous": "Iambia",
     "next": "Iamblichos 2",
     "chapters": [
       {
         "start": 639,
         "end": 640,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -5900,11 +5918,12 @@
     "lemma": "Iamblichos 2",
     "previous": "Iamblichos 1",
     "next": "Iamblichos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 640,
         "end": 645,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -5915,8 +5934,13 @@
     "chapters": [
       {
         "start": 645,
+        "end": 645,
+        "author": "G. Mau."
+      },
+      {
+        "start": 649,
         "end": 651,
-        "author": "Mau, G[eorg]"
+        "author": "Kroll."
       }
     ]
   },
@@ -5924,11 +5948,12 @@
     "lemma": "Iamblichos 4",
     "previous": "Iamblichos 3",
     "next": "Iamblichos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 651,
         "end": 651,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -5936,11 +5961,12 @@
     "lemma": "Iamblichos 5",
     "previous": "Iamblichos 4",
     "next": "Iambographen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 651,
         "end": 651,
-        "author": "Gossen"
+        "author": "Gossen."
       }
     ]
   },
