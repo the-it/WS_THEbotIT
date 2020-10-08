@@ -1,12 +1,15 @@
 [
   {
     "lemma": "Pigranes",
+    "previous": "Pignus",
     "next": "Pigraxes",
+    "proof_read": 2,
+    "wp_link": "w:de:en:Pigranes",
     "chapters": [
       {
         "start": 1313,
         "end": 1313,
-        "author": "Enßlin"
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -76,11 +79,12 @@
     "lemma": "Pigres 4",
     "previous": "Pigres 3",
     "next": "Pigres 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1313,
         "end": 1313,
-        "author": "Hoffmann"
+        "author": "W. Hoffmann."
       }
     ]
   },
@@ -88,11 +92,12 @@
     "lemma": "Pigres 5",
     "previous": "Pigres 4",
     "next": "Pigres 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1313,
         "end": 1313,
-        "author": "Hoffmann"
+        "author": "W. Hoffmann."
       }
     ]
   },
@@ -111,41 +116,46 @@
   {
     "lemma": "Piguntia",
     "previous": "Pigres 6",
-    "next": "Pikendaka",
+    "next": "Πικενδάκα",
+    "redirect": "Pituntium",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1317,
-        "end": 1317
+        "start": 1316,
+        "end": 1316
       }
     ]
   },
   {
-    "lemma": "Pikendaka",
+    "lemma": "Πικενδάκα",
     "previous": "Piguntia",
-    "next": "Pikensioi",
+    "next": "Πικήνσιοι",
+    "sort_key": "Pikendaka",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1317,
-        "end": 1317,
-        "author": "Stein, O[tto]"
+        "start": 1316,
+        "end": 1316,
+        "author": "O. Stein."
       }
     ]
   },
   {
-    "lemma": "Pikensioi",
-    "previous": "Pikendaka",
-    "next": "Pikrai limnai",
+    "lemma": "Πικήνσιοι",
+    "previous": "Πικενδάκα",
+    "next": "Πικραὶ λίμναι",
+    "sort_key": "Pikensioi",
     "chapters": [
       {
         "start": 1317,
         "end": 1317,
-        "author": "Polaschek"
+        "author": "E. Polaschek."
       }
     ]
   },
   {
-    "lemma": "Pikrai limnai",
-    "previous": "Pikensioi",
+    "lemma": "Πικραὶ λίμναι",
+    "previous": "Πικήνσιοι",
     "next": "Pikron hydor",
     "chapters": [
       {
@@ -157,7 +167,7 @@
   },
   {
     "lemma": "Pikron hydor",
-    "previous": "Pikrai limnai",
+    "previous": "Πικραὶ λίμναι",
     "next": "Pila 1",
     "chapters": [
       {
@@ -199,7 +209,7 @@
   {
     "lemma": "Pila 3",
     "previous": "Pila 2",
-    "next": "Piladai",
+    "next": "Πιλάδαι",
     "chapters": [
       {
         "start": 1320,
@@ -209,9 +219,12 @@
     ]
   },
   {
-    "lemma": "Piladai",
-    "previous": "Pila 3",
+    "lemma": "Πιλάδαι",
+    "previous": "Pila Tiburtina",
     "next": "Pilae lusus",
+    "sort_key": "Piladai",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1320,
@@ -221,8 +234,10 @@
   },
   {
     "lemma": "Pilae lusus",
-    "previous": "Piladai",
+    "previous": "Πιλάδαι",
     "next": "Pilais",
+    "redirect": "Ballspiel",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1320,
@@ -234,11 +249,12 @@
     "lemma": "Pilais",
     "previous": "Pilae lusus",
     "next": "Pilani",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1320,
         "end": 1320,
-        "author": "MacDonald"
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -246,6 +262,8 @@
     "lemma": "Pilani",
     "previous": "Pilais",
     "next": "Pilarius",
+    "redirect": "Triarii",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1320,
@@ -279,12 +297,15 @@
   },
   {
     "lemma": "Pilas",
-    "previous": "Pila Tiburtina",
+    "previous": "Pilarius",
     "next": "Pilatus",
+    "redirect": "Κιλίκιαι πύλαι",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1322,
-        "end": 1322
+        "end": 1322,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -292,11 +313,13 @@
     "lemma": "Pilatus",
     "previous": "Pilas",
     "next": "Pilatusakten",
+    "wp_link": "w:de:Pontius Pilatus",
+    "ws_link": "s:en:Author:Pontius Pilate",
     "chapters": [
       {
         "start": 1322,
-        "end": 1322,
-        "author": "Fascher"
+        "end": 1323,
+        "author": "Erich Fascher."
       }
     ]
   },
