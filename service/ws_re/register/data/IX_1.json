@@ -5552,6 +5552,7 @@
     "next": "Iakchos 2",
     "proof_read": 2,
     "wp_link": "w:de:Iakchos",
+    "wd_link": "d:Q690603",
     "chapters": [
       {
         "start": 613,
@@ -5992,11 +5993,12 @@
     "lemma": "Iambos 1",
     "previous": "Iambographen",
     "next": "Iambos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 680,
         "end": 681,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -6004,6 +6006,8 @@
     "lemma": "Iambos 2",
     "previous": "Iambos 1",
     "next": "Iambres",
+    "redirect": "Iambographen",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 681,
@@ -6019,7 +6023,7 @@
       {
         "start": 681,
         "end": 681,
-        "author": "Ganschinietz"
+        "author": "Ganschinietz."
       }
     ]
   },
@@ -6027,11 +6031,12 @@
     "lemma": "Iambulos",
     "previous": "Iambres",
     "next": "Iamidai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 681,
         "end": 683,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
@@ -6039,6 +6044,8 @@
     "lemma": "Iamidai",
     "previous": "Iambulos",
     "next": "Jamnia",
+    "redirect": "Iamos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 683,
@@ -6065,11 +6072,12 @@
     "lemma": "Iamo",
     "previous": "Jamnia",
     "next": "Iamos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 685,
         "end": 685,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
@@ -6081,7 +6089,7 @@
       {
         "start": 685,
         "end": 689,
-        "author": "Hepding"
+        "author": "Hepding."
       }
     ]
   },
@@ -6089,11 +6097,12 @@
     "lemma": "Iamos 2",
     "previous": "Iamos 1",
     "next": "Iamphorina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 689,
         "end": 689,
-        "author": "Hepding"
+        "author": "Hepding."
       }
     ]
   },
@@ -6209,11 +6218,12 @@
     "lemma": "Ianiculensis vicus",
     "previous": "Ianiculensis via",
     "next": "Ianiculum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 691,
         "end": 691,
-        "author": "Gall"
+        "author": "Gall."
       }
     ]
   },
@@ -6221,11 +6231,12 @@
     "lemma": "Ianiculum",
     "previous": "Ianiculensis vicus",
     "next": "Ianitor 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 691,
         "end": 692,
-        "author": "Gall"
+        "author": "Gall."
       }
     ]
   },
@@ -6237,7 +6248,7 @@
       {
         "start": 692,
         "end": 693,
-        "author": "Schneider, K[arl]"
+        "author": "K. Schneider."
       }
     ]
   },
@@ -6245,11 +6256,12 @@
     "lemma": "Ianitor 2",
     "previous": "Ianitor 1",
     "next": "Iannes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 693,
         "end": 693,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -6261,7 +6273,7 @@
       {
         "start": 693,
         "end": 695,
-        "author": "Ganschinietz"
+        "author": "Ganschinietz."
       }
     ]
   },
@@ -6292,13 +6304,15 @@
   },
   {
     "lemma": "Ianthe 1",
-    "previous": "Ianthe",
+    "previous": "Ianoha",
     "next": "Ianthe 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Ianthe",
     "chapters": [
       {
         "start": 695,
         "end": 695,
-        "author": "Eitrem"
+        "author": "Eitrem."
       }
     ]
   },
@@ -6306,11 +6320,12 @@
     "lemma": "Ianthe 2",
     "previous": "Ianthe 1",
     "next": "Ianthe 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 695,
         "end": 695,
-        "author": "Eitrem"
+        "author": "Eitrem."
       }
     ]
   },
@@ -6318,11 +6333,12 @@
     "lemma": "Ianthe 3",
     "previous": "Ianthe 2",
     "next": "Ianthis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 695,
         "end": 695,
-        "author": "Eitrem"
+        "author": "Eitrem."
       }
     ]
   },
@@ -6665,11 +6681,13 @@
     "lemma": "Ianus Quadrifons",
     "previous": "Ianuarius 12",
     "next": "Iao",
+    "proof_read": 2,
+    "wp_link": "w:de:Janusbogen",
     "chapters": [
       {
         "start": 698,
         "end": 698,
-        "author": "Gall"
+        "author": "Gall."
       }
     ]
   },
@@ -6677,11 +6695,12 @@
     "lemma": "Iao",
     "previous": "Ianus Quadrifons",
     "next": "Iaokchos",
+    "wp_link": "w:de:JHWH",
     "chapters": [
       {
         "start": 698,
         "end": 721,
-        "author": "Ganschinietz"
+        "author": "Ganschinietz."
       }
     ]
   },
@@ -6689,11 +6708,13 @@
     "lemma": "Iaokchos",
     "previous": "Iao",
     "next": "Iaon",
+    "sort_key": "Iaokchos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 721,
         "end": 721,
-        "author": "Kern"
+        "author": "Kern."
       }
     ]
   },
@@ -6701,11 +6722,12 @@
     "lemma": "Iaon",
     "previous": "Iaokchos",
     "next": "Iaones",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 721,
         "end": 721,
-        "author": "Fimmen"
+        "author": "Fimmen."
       }
     ]
   },
@@ -6713,11 +6735,12 @@
     "lemma": "Iaones",
     "previous": "Iaon",
     "next": "Iapetos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 721,
         "end": 721,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
