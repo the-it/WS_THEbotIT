@@ -500,7 +500,8 @@
     "lemma": "Ἐξαίρεσις",
     "previous": "Ἐξαιρέσιμος ἡμέρα",
     "next": "Ἐξάλειπτρον",
-    "proof_read": 2,
+    "sort_key": "Exairesis",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1550,
@@ -513,7 +514,8 @@
     "lemma": "Ἐξάλειπτρον",
     "previous": "Ἐξαίρεσις",
     "next": "Exainetos 1",
-    "proof_read": 2,
+    "sort_key": "Exaleiptron",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1550,
@@ -815,7 +817,7 @@
       {
         "start": 1581,
         "end": 1581,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -942,11 +944,12 @@
     "lemma": "Exekestos 2",
     "previous": "Exekestos 1",
     "next": "Exekestos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1584,
         "end": 1585,
-        "author": "Willrich"
+        "author": "Willrich."
       }
     ]
   },
@@ -1009,7 +1012,8 @@
     "lemma": "Ἐξεγγύησις",
     "previous": "Exemplum",
     "next": "Exercitator",
-    "proof_read": 2,
+    "sort_key": "Exenguesis",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1588,
@@ -15067,7 +15071,7 @@
     "lemma": "Flazzus",
     "previous": "Flavus 5",
     "next": "Fledermaus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2740,
@@ -15370,7 +15374,7 @@
   {
     "lemma": "Florentiana",
     "previous": "Florentia 3",
-    "next": "Florentianus",
+    "next": "ad Florentianus",
     "chapters": [
       {
         "start": 2754,
@@ -15380,7 +15384,7 @@
     ]
   },
   {
-    "lemma": "Florentianus",
+    "lemma": "ad Florentianus",
     "previous": "Florentiana",
     "next": "Florentini",
     "chapters": [
@@ -15393,8 +15397,9 @@
   },
   {
     "lemma": "Florentini",
-    "previous": "Florentianus",
+    "previous": "ad Florentianus",
     "next": "Florentinus 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2754,
@@ -15410,7 +15415,7 @@
       {
         "start": 2754,
         "end": 2754,
-        "author": "Weiss, J[akob]"
+        "author": "Weiss."
       }
     ]
   },
@@ -15418,11 +15423,12 @@
     "lemma": "Florentinus 2",
     "previous": "Florentinus 1",
     "next": "Florentinus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2754,
         "end": 2754,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -15430,11 +15436,12 @@
     "lemma": "Florentinus 3",
     "previous": "Florentinus 2",
     "next": "Florentinus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2755,
         "end": 2755,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -16617,7 +16624,7 @@
     "lemma": "Fonteius",
     "previous": "ad Fonteclos",
     "next": "Fonteius 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2841,
@@ -16631,7 +16638,7 @@
     "previous": "Fonteius",
     "next": "Fonteius 2",
     "sort_key": "Fonteius 01",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2841,
@@ -16659,7 +16666,7 @@
     "previous": "Fonteius 2",
     "next": "Fonteius 4",
     "sort_key": "Fonteius 03",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2842,
@@ -16687,7 +16694,7 @@
     "previous": "Fonteius 4",
     "next": "Fonteius 6",
     "sort_key": "Fonteius 05",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2842,
@@ -16795,7 +16802,7 @@
     "lemma": "Fonteius 13",
     "previous": "Fonteius 12",
     "next": "Fonteius 14",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2845,
@@ -16808,7 +16815,7 @@
     "lemma": "Fonteius 14",
     "previous": "Fonteius 13",
     "next": "Fonteius 15",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2846,
@@ -16821,7 +16828,7 @@
     "lemma": "Fonteius 15",
     "previous": "Fonteius 14",
     "next": "Fonteius 16",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2846,
@@ -16847,7 +16854,7 @@
     "lemma": "Fonteius 17",
     "previous": "Fonteius 16",
     "next": "Fonteius 18",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2846,
@@ -16875,7 +16882,7 @@
     "lemma": "Fonteius 19",
     "previous": "Fonteius 18",
     "next": "Fonteius 20",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2847,
@@ -16927,7 +16934,7 @@
     "lemma": "Fonteius 23",
     "previous": "Fonteius 22",
     "next": "Fonteius 24",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2848,
@@ -16940,7 +16947,7 @@
     "lemma": "Fonteius 24",
     "previous": "Fonteius 23",
     "next": "Fonteius 25",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2848,
@@ -16953,7 +16960,7 @@
     "lemma": "Fonteius 25",
     "previous": "Fonteius 24",
     "next": "Fonteius 26",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2848,
@@ -16966,7 +16973,7 @@
     "lemma": "Fonteius 26",
     "previous": "Fonteius 25",
     "next": "Fonteius 27",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2848,
@@ -16979,7 +16986,7 @@
     "lemma": "Fonteius 27",
     "previous": "Fonteius 26",
     "next": "Fonteius 28",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2848,
@@ -17005,7 +17012,7 @@
     "lemma": "Fonteius 29",
     "previous": "Fonteius 28",
     "next": "Fonteius 30",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2849,
