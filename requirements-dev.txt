@@ -60,7 +60,7 @@ mypy-boto3-rds==1.15.7.0  # via boto3-stubs
 mypy-boto3-s3==1.15.7.0   # via boto3-stubs
 mypy-boto3-sqs==1.15.7.0  # via boto3-stubs
 mypy-extensions==0.4.3    # via mypy
-mypy==0.782               # via -r requirements-dev.in
+mypy==0.790               # via -r requirements-dev.in
 networkx==2.5             # via cfn-lint
 packaging==20.4           # via dparse, safety
 patool==1.12              # via -r requirements-dev.in
