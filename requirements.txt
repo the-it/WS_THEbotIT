@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-beautifulsoup4==4.9.2     # via -r requirements.in
+beautifulsoup4==4.9.3     # via -r requirements.in
 boto3==1.15.7             # via -r requirements.in
 botocore==1.18.7          # via boto3, s3transfer
 certifi==2020.6.20        # via requests
