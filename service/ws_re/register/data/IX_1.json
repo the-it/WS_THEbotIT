@@ -5524,7 +5524,7 @@
     "lemma": "Iakchai",
     "previous": "Ἰακχαγωγός",
     "next": "Iakcheion",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 613,
@@ -5537,7 +5537,7 @@
     "lemma": "Iakcheion",
     "previous": "Iakchai",
     "next": "Iakchos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 613,
@@ -5566,7 +5566,7 @@
     "previous": "Iakchos 1",
     "next": "Iakinthis",
     "redirect": true,
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Iakchos",
     "wd_link": "d:Q690603",
     "chapters": [
@@ -5582,7 +5582,7 @@
     "previous": "Iakchos 2",
     "next": "Iakinthos",
     "redirect": "Hyakinthis",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 622,
@@ -5675,7 +5675,7 @@
     "previous": "Iakthiel",
     "next": "Jaldabaoth",
     "redirect": "Iactus 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 624,
@@ -5727,7 +5727,7 @@
     "lemma": "Iallius 2",
     "previous": "Iallius 1",
     "next": "Ialmenos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 626,
@@ -5753,7 +5753,7 @@
     "lemma": "Ialonus",
     "previous": "Ialmenos",
     "next": "Ialysia",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:en:Ialonus Contrebis",
     "wd_link": "d:Q10299604",
     "chapters": [
@@ -5783,7 +5783,7 @@
     "lemma": "Ialysion",
     "previous": "Ialysia",
     "next": "Ialysos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 628,
@@ -5808,7 +5808,7 @@
     "lemma": "Ialysos 2",
     "previous": "Ialysos 1",
     "next": "Ialysos 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 629,
@@ -6005,7 +6005,7 @@
     "lemma": "Iambos 1",
     "previous": "Iambographen",
     "next": "Iambos 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 680,
@@ -6084,7 +6084,7 @@
     "lemma": "Iamo",
     "previous": "Jamnia",
     "next": "Iamos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 685,
@@ -6109,7 +6109,7 @@
     "lemma": "Iamos 2",
     "previous": "Iamos 1",
     "next": "Iamphorina",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 689,
@@ -6122,8 +6122,9 @@
     "lemma": "Iamphorina",
     "previous": "Iamos 2",
     "next": "Ian, Ianna",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:en:Iamphorina",
+    "wd_link": "d:Q11926308",
     "chapters": [
       {
         "start": 690,
@@ -6997,9 +6998,10 @@
     ]
   },
   {
-    "lemma": "άργανον",
+    "lemma": "Ἰάργανον",
     "previous": "Iardanos 4",
     "next": "Ἰαρίβωλος",
+    "sort_key": "Iarganon",
     "redirect": true,
     "proof_read": 2,
     "chapters": [
@@ -7012,7 +7014,7 @@
   },
   {
     "lemma": "Ἰαρίβωλος",
-    "previous": "άργανον",
+    "previous": "Ἰάργανον",
     "next": "Ἰάρμιοι",
     "sort_key": "Iaribolos",
     "proof_read": 2,
@@ -7120,7 +7122,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Ias(s)ii",
+    "next": "Iasikles",
     "chapters": [
       {
         "start": 751,
@@ -7414,11 +7416,12 @@
     "lemma": "Iason 11",
     "previous": "Iason 10",
     "next": "Iason 12",
+    "wp_link": "w:de:Jason von Nysa",
     "chapters": [
       {
         "start": 780,
         "end": 781,
-        "author": "Jacoby, [Felix]"
+        "author": "F. Jacoby."
       }
     ]
   },
@@ -7430,43 +7433,46 @@
       {
         "start": 781,
         "end": 782,
-        "author": "Funaioli"
+        "author": "Funaioli."
       }
     ]
   },
   {
     "lemma": "Iason 13",
     "previous": "Iason 12",
-    "next": "Iasonia akropolis",
+    "next": "Ἰασονία ἀκρόπολις",
     "chapters": [
       {
         "start": 782,
         "end": 782,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
   {
-    "lemma": "Iasonia akropolis",
+    "lemma": "Ἰασονία ἀκρόπολις",
     "previous": "Iason 13",
     "next": "Iasonion",
+    "sort_key": "Iasonia akropolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 782,
         "end": 782,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Iasonion",
-    "previous": "Iasonia akropolis",
+    "previous": "Ἰασονία ἀκρόπολις",
     "next": "Iasonios, Iasonia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 782,
         "end": 782,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
@@ -7474,11 +7480,12 @@
     "lemma": "Iasonios, Iasonia 1",
     "previous": "Iasonion",
     "next": "Iasonios, Iasonia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 782,
         "end": 782,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -7486,11 +7493,12 @@
     "lemma": "Iasonios, Iasonia 2",
     "previous": "Iasonios, Iasonia 1",
     "next": "Iasonius mons",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 782,
         "end": 783,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -7498,11 +7506,12 @@
     "lemma": "Iasonius mons",
     "previous": "Iasonios, Iasonia 2",
     "next": "Iasos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 783,
         "end": 783,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
@@ -7510,11 +7519,17 @@
     "lemma": "Iasos 1",
     "previous": "Iasonius mons",
     "next": "Iasos 2",
+    "sort_key": "Iasos 01",
     "chapters": [
       {
         "start": 783,
         "end": 783,
-        "author": "Weicker"
+        "author": "Bürchner."
+      },
+      {
+        "start": 783,
+        "end": 783,
+        "author": "Weicker."
       }
     ]
   },
@@ -7522,11 +7537,12 @@
     "lemma": "Iasos 2",
     "previous": "Iasos 1",
     "next": "Iasos 3",
+    "sort_key": "Iasos 02",
     "chapters": [
       {
         "start": 783,
         "end": 783,
-        "author": "Weicker"
+        "author": "Weicker."
       }
     ]
   },
