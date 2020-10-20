@@ -5275,7 +5275,7 @@
     "lemma": "Iaculum",
     "previous": "Iactus 3",
     "next": "Iadatinus vicus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 555,
@@ -5288,7 +5288,7 @@
     "lemma": "Iadatinus vicus",
     "previous": "Iaculum",
     "next": "Iader",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 556,
@@ -5316,7 +5316,7 @@
     "lemma": "Iades",
     "previous": "Iader",
     "next": "Iadi vicus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 557,
@@ -5330,7 +5330,7 @@
     "previous": "Iades",
     "next": "Iadovi",
     "redirect": "Radu",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 557,
@@ -5342,7 +5342,7 @@
     "lemma": "Iadovi",
     "previous": "Iadi vicus",
     "next": "Iadu",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 557,
@@ -5356,7 +5356,7 @@
     "previous": "Iadovi",
     "next": "Jaëzer",
     "redirect": "Radu",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 557,
@@ -5381,7 +5381,7 @@
     "lemma": "Iagath",
     "previous": "Jaëzer",
     "next": "Jagbeha",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 557,
@@ -5472,7 +5472,7 @@
     "lemma": "Iaira 1",
     "previous": "Iaia",
     "next": "Iaira 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 613,
@@ -5485,7 +5485,7 @@
     "lemma": "Iaira 2",
     "previous": "Iaira 1",
     "next": "Iaitia",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 613,
@@ -5511,7 +5511,7 @@
     "previous": "Iaitia",
     "next": "Iakchai",
     "sort_key": "Iakchagogos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 613,
@@ -7709,11 +7709,13 @@
     "lemma": "Iasos 15",
     "previous": "Iasos 14",
     "next": "Iasos 16",
+    "proof_read": 2,
+    "wp_link": "w:de:Iasos (Karien)",
     "chapters": [
       {
         "start": 785,
-        "end": 790,
-        "author": "Bürchner"
+        "end": 785,
+        "author": "Bürchner."
       }
     ]
   },
@@ -7721,11 +7723,12 @@
     "lemma": "Iasos 16",
     "previous": "Iasos 15",
     "next": "Iasos 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 790,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -7733,6 +7736,8 @@
     "lemma": "Iasos 17",
     "previous": "Iasos 16",
     "next": "Iasos 18",
+    "redirect": "Ἰασσός 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
@@ -7744,11 +7749,12 @@
     "lemma": "Iasos 18",
     "previous": "Iasos 17",
     "next": "Iasos 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 790,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -7760,50 +7766,58 @@
       {
         "start": 790,
         "end": 790,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
   {
     "lemma": "Iaspis",
     "previous": "Iasos 19",
-    "next": "Iassos 1",
+    "next": "Ἰασσός 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 790,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
   {
-    "lemma": "Iassos 1",
+    "lemma": "Ἰασσός 1",
     "previous": "Iaspis",
-    "next": "Iassos 2",
+    "next": "Ἰασσός 2",
+    "sort_key": "Iassos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 790,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
-    "lemma": "Iassos 2",
-    "previous": "Iassos 1",
-    "next": "Iassos 3",
+    "lemma": "Ἰασσός 2",
+    "previous": "Ἰασσός 1",
+    "next": "Ἰασσός 3",
+    "sort_key": "Iassos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 790,
-        "author": "Baumgartner"
+        "author": "Baumgartner."
       }
     ]
   },
   {
-    "lemma": "Iassos 3",
-    "previous": "Iassos 2",
+    "lemma": "Ἰασσός 3",
+    "previous": "Ἰασσός 2",
     "next": "Iasulones",
+    "sort_key": "Iassos 3",
+    "redirect": "Iasos 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
@@ -7813,13 +7827,14 @@
   },
   {
     "lemma": "Iasulones",
-    "previous": "Iassos 3",
+    "previous": "Ἰασσός 3",
     "next": "Iatadas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 790,
-        "author": "Vulić"
+        "author": "Vulić."
       }
     ]
   },
@@ -7827,11 +7842,12 @@
     "lemma": "Iatadas",
     "previous": "Iasulones",
     "next": "Jatba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 790,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -7852,11 +7868,12 @@
     "lemma": "Iatheos",
     "previous": "Jatba",
     "next": "Jathir",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 790,
         "end": 791,
-        "author": "Bischoff, [Ernst]"
+        "author": "Bischoff."
       }
     ]
   },
@@ -7888,36 +7905,38 @@
   {
     "lemma": "Iatioi",
     "previous": "Iathrippa",
-    "next": "Iatraleiptes",
+    "next": "Ἰατραλείπτης",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 800,
         "end": 800,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
   {
-    "lemma": "Iatraleiptes",
+    "lemma": "Ἰατραλείπτης",
     "previous": "Iatioi",
     "next": "Iatroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 800,
         "end": 801,
-        "author": "Gossen"
+        "author": "Gossen."
       }
     ]
   },
   {
     "lemma": "Iatroi",
-    "previous": "Iatraleiptes",
+    "previous": "Ἰατραλείπτης",
     "next": "Iatrokles 1",
     "chapters": [
       {
         "start": 801,
         "end": 801,
-        "author": "Meyer, Herbert"
+        "author": "Herb. Meyer."
       }
     ]
   },
@@ -7925,11 +7944,12 @@
     "lemma": "Iatrokles 1",
     "previous": "Iatroi",
     "next": "Iatrokles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 801,
         "end": 801,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -7941,7 +7961,7 @@
       {
         "start": 801,
         "end": 801,
-        "author": "Sundwall"
+        "author": "Sundwall."
       }
     ]
   },
@@ -7949,11 +7969,12 @@
     "lemma": "Iatrokles 3",
     "previous": "Iatrokles 2",
     "next": "Iatrokles 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 801,
         "end": 802,
-        "author": "Gossen"
+        "author": "Gossen."
       }
     ]
   },
@@ -7965,7 +7986,7 @@
       {
         "start": 802,
         "end": 802,
-        "author": "Lippold, Georg"
+        "author": "Lippold."
       }
     ]
   },
@@ -7973,11 +7994,12 @@
     "lemma": "Iatromantis",
     "previous": "Iatrokles 4",
     "next": "Iatromathematike",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 802,
         "end": 802,
-        "author": "Neustadt"
+        "author": "Neustadt."
       }
     ]
   },
@@ -7985,11 +8007,12 @@
     "lemma": "Iatromathematike",
     "previous": "Iatromantis",
     "next": "Iatron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 802,
         "end": 804,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
