@@ -7605,7 +7605,8 @@
     "lemma": "Scrithifinni",
     "previous": "Scripulum",
     "next": "Scrofa 1",
-    "redirect": true,
+    "redirect": "Scridifinni",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 907,
@@ -7617,7 +7618,8 @@
     "lemma": "Scrofa 1",
     "previous": "Scrithifinni",
     "next": "Scrofa 2",
-    "redirect": true,
+    "redirect": "Tremelius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 907,
@@ -7629,11 +7631,12 @@
     "lemma": "Scrofa 2",
     "previous": "Scrofa 1",
     "next": "Scrofula",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 907,
         "end": 907,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -7641,7 +7644,8 @@
     "lemma": "Scrofula",
     "previous": "Scrofa 2",
     "next": "Scrofulanus",
-    "redirect": true,
+    "redirect": "Scrofa 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 907,
@@ -7653,11 +7657,12 @@
     "lemma": "Scrofulanus",
     "previous": "Scrofula",
     "next": "Scrupulum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 907,
         "end": 907,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -7665,7 +7670,8 @@
     "lemma": "Scrupulum",
     "previous": "Scrofulanus",
     "next": "Scrupulus",
-    "redirect": true,
+    "redirect": "Scripulum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 907,
@@ -7677,6 +7683,7 @@
     "lemma": "Scrupulus",
     "previous": "Scrupulum",
     "next": "Scubiliacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 907,
@@ -7689,11 +7696,12 @@
     "lemma": "Scubiliacus",
     "previous": "Scrupulus",
     "next": "Scudilio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 908,
         "end": 909,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -7701,11 +7709,12 @@
     "lemma": "Scudilio",
     "previous": "Scubiliacus",
     "next": "Scudilo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 909,
         "end": 909,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -7713,11 +7722,12 @@
     "lemma": "Scudilo",
     "previous": "Scudilio",
     "next": "Scudingius, Scudingum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 909,
         "end": 909,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -7725,6 +7735,8 @@
     "lemma": "Scudingius, Scudingum",
     "previous": "Scudilo",
     "next": "Sculponea",
+    "redirect": "Scotingorum pagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 909,
@@ -7740,7 +7752,7 @@
       {
         "start": 909,
         "end": 909,
-        "author": "Hug"
+        "author": "Hug."
       }
     ]
   },
