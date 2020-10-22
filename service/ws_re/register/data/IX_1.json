@@ -7422,6 +7422,7 @@
     "previous": "Iason 10",
     "next": "Iason 12",
     "wp_link": "w:de:Jason von Nysa",
+    "wd_link": "d:Q4352000",
     "chapters": [
       {
         "start": 780,
@@ -7898,11 +7899,13 @@
     "lemma": "Iathrippa",
     "previous": "Jathir",
     "next": "Iatioi",
+    "proof_read": 2,
+    "wp_link": "w:de:Medina",
     "chapters": [
       {
         "start": 791,
         "end": 800,
-        "author": "Tkáč"
+        "author": "Tkač."
       }
     ]
   },
@@ -8177,7 +8180,7 @@
       {
         "start": 806,
         "end": 806,
-        "author": "Kadlec"
+        "author": "Kadleč."
       }
     ]
   },
@@ -8195,8 +8198,10 @@
   },
   {
     "lemma": "Iazer",
-    "previous": "Iavolenus 2",
-    "next": "Ibe",
+    "previous": "Iaxartes",
+    "next": "Iazyges",
+    "redirect": "Iaezer",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
@@ -8206,13 +8211,14 @@
   },
   {
     "lemma": "Ibe",
-    "previous": "Iazer",
+    "previous": "Iazyges",
     "next": "Iber 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
         "end": 806,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
@@ -8220,11 +8226,12 @@
     "lemma": "Iber 1",
     "previous": "Ibe",
     "next": "Iber 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
         "end": 807,
-        "author": "Weicker"
+        "author": "Weicker."
       }
     ]
   },
@@ -8232,11 +8239,12 @@
     "lemma": "Iber 2",
     "previous": "Iber 1",
     "next": "Ibera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 807,
         "end": 807,
-        "author": "Weicker"
+        "author": "Weicker."
       }
     ]
   },
@@ -8244,18 +8252,35 @@
     "lemma": "Ibera",
     "previous": "Iber 2",
     "next": "Iberer",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 807,
         "end": 807,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Iberer",
     "previous": "Ibera",
+    "next": "Iberia",
+    "redirect": "Hispania",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 807,
+        "end": 807
+      }
+    ]
+  },
+  {
+    "lemma": "Iberia",
+    "previous": "Iberer",
     "next": "Iberinus",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Iberia (byzantinisches Thema)",
     "chapters": [
       {
         "start": 807,
@@ -8265,8 +8290,10 @@
   },
   {
     "lemma": "Iberinus",
-    "previous": "Iberer",
+    "previous": "Iberia",
     "next": "Iberus 1",
+    "redirect": "Claudius 181",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 807,
@@ -8278,11 +8305,12 @@
     "lemma": "Iberus 1",
     "previous": "Iberinus",
     "next": "Iberus 2",
+    "wp_link": "w:de:Ebro",
     "chapters": [
       {
         "start": 807,
         "end": 807,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
@@ -8290,11 +8318,12 @@
     "lemma": "Iberus 2",
     "previous": "Iberus 1",
     "next": "Iberus 3",
+    "wp_link": "w:de:Río Tinto",
     "chapters": [
       {
         "start": 807,
         "end": 807,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
@@ -8302,6 +8331,8 @@
     "lemma": "Iberus 3",
     "previous": "Iberus 2",
     "next": "Ibettes",
+    "redirect": "Hiberus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 807,
@@ -8313,11 +8344,12 @@
     "lemma": "Ibettes",
     "previous": "Iberus 3",
     "next": "Ibion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 808,
         "end": 808,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -8325,6 +8357,7 @@
     "lemma": "Ibion",
     "previous": "Ibettes",
     "next": "Ibirtha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 808,
@@ -8336,11 +8369,12 @@
     "lemma": "Ibirtha",
     "previous": "Ibion",
     "next": "Ibis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 808,
         "end": 808,
-        "author": "Tkáč"
+        "author": "Tkač."
       }
     ]
   },
@@ -8352,7 +8386,7 @@
       {
         "start": 808,
         "end": 815,
-        "author": "Roeder"
+        "author": "Roeder."
       }
     ]
   },
@@ -8364,7 +8398,7 @@
       {
         "start": 815,
         "end": 815,
-        "author": "Kees"
+        "author": "Kees."
       }
     ]
   },
@@ -8372,11 +8406,12 @@
     "lemma": "Ibligo",
     "previous": "Ibiu",
     "next": "Ibliodurum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 815,
         "end": 815,
-        "author": "Philipp"
+        "author": "Philipp."
       }
     ]
   },
@@ -8384,11 +8419,12 @@
     "lemma": "Ibliodurum",
     "previous": "Ibligo",
     "next": "Iboita",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 815,
         "end": 816,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -8396,11 +8432,12 @@
     "lemma": "Iboita",
     "previous": "Ibliodurum",
     "next": "Ibora",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 816,
         "end": 816,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -8408,11 +8445,12 @@
     "lemma": "Ibora",
     "previous": "Iboita",
     "next": "Ibosus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 816,
         "end": 816,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
@@ -8420,11 +8458,12 @@
     "lemma": "Ibosus",
     "previous": "Ibora",
     "next": "Ibykos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 816,
         "end": 816,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -8432,11 +8471,13 @@
     "lemma": "Ibykos 1",
     "previous": "Ibosus",
     "next": "Ibykos 2",
+    "wp_link": "w:de:Ibykos",
+    "ws_link": "s:fr:Auteur:Ibycos",
     "chapters": [
       {
         "start": 816,
         "end": 818,
-        "author": "Maas"
+        "author": "Maas."
       }
     ]
   },
@@ -12680,25 +12721,27 @@
   },
   {
     "lemma": "Iaxartes",
-    "previous": "Iaxartae",
-    "next": "Iazyges",
+    "previous": "Iavolenus 2",
+    "next": "Iazer",
+    "redirect": "Iaxartes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1181,
-        "end": 1189,
-        "author": "Herrmann"
+        "start": 806,
+        "end": 806
       }
     ]
   },
   {
     "lemma": "Iazyges",
-    "previous": "Iaxartes",
-    "next": "Ichnaia",
+    "previous": "Iazer",
+    "next": "Ibe",
+    "redirect": "Iazyges",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1189,
-        "end": 1191,
-        "author": "Vulić"
+        "start": 806,
+        "end": 806
       }
     ]
   },
