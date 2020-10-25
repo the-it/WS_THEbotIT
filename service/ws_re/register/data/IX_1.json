@@ -8486,36 +8486,39 @@
   {
     "lemma": "Ibykos 2",
     "previous": "Ibykos 1",
-    "next": "Ibylla",
+    "next": "Ἴβυλλα",
     "chapters": [
       {
         "start": 818,
         "end": 818,
-        "author": "Maas"
+        "author": "Maas."
       }
     ]
   },
   {
-    "lemma": "Ibylla",
+    "lemma": "Ἴβυλλα",
     "previous": "Ibykos 2",
     "next": "Ica",
+    "sort_key": "Ibylla",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 818,
         "end": 818,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Ica",
-    "previous": "Ibylla",
+    "previous": "Ἴβυλλα",
     "next": "Icadius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 818,
         "end": 818,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -8527,7 +8530,7 @@
       {
         "start": 818,
         "end": 819,
-        "author": "Neustadt"
+        "author": "Neustadt."
       }
     ]
   },
@@ -8535,6 +8538,8 @@
     "lemma": "Icarius",
     "previous": "Icadius",
     "next": "Icauna",
+    "redirect": "Ikarios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 819,
@@ -8546,11 +8551,13 @@
     "lemma": "Icauna",
     "previous": "Icarius",
     "next": "Icaunus",
+    "proof_read": 2,
+    "wp_link": "w:de:Icauna",
     "chapters": [
       {
         "start": 819,
         "end": 819,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -8558,10 +8565,12 @@
     "lemma": "Icaunus",
     "previous": "Icauna",
     "next": "Icciodurum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 819,
-        "end": 819
+        "end": 819,
+        "author": "Keune."
       }
     ]
   },
@@ -8569,11 +8578,13 @@
     "lemma": "Icciodurum",
     "previous": "Icaunus",
     "next": "Icciomagus",
+    "proof_read": 2,
+    "wp_link": "w:de:Yzeures-sur-Creuse",
     "chapters": [
       {
         "start": 819,
         "end": 819,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -8581,11 +8592,13 @@
     "lemma": "Icciomagus",
     "previous": "Icciodurum",
     "next": "Iccius 1",
+    "proof_read": 2,
+    "wp_link": "w:de:Usson-en-Forez",
     "chapters": [
       {
         "start": 819,
         "end": 819,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -8593,11 +8606,12 @@
     "lemma": "Iccius 1",
     "previous": "Icciomagus",
     "next": "Iccius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 819,
         "end": 819,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -8609,7 +8623,7 @@
       {
         "start": 819,
         "end": 820,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -8621,7 +8635,7 @@
       {
         "start": 820,
         "end": 820,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -8629,11 +8643,13 @@
     "lemma": "Iceni",
     "previous": "Icelus",
     "next": "Ichana",
+    "proof_read": 2,
+    "wp_link": "w:de:Icener",
     "chapters": [
       {
         "start": 820,
         "end": 821,
-        "author": "Haverfield"
+        "author": "Haverfield."
       }
     ]
   },
@@ -8645,7 +8661,7 @@
       {
         "start": 821,
         "end": 821,
-        "author": "Ziegler"
+        "author": "Ziegler."
       }
     ]
   },
@@ -8653,6 +8669,8 @@
     "lemma": "Ichara 1",
     "previous": "Ichana",
     "next": "Ichara 2",
+    "redirect": "Ἴκαρος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 821,
@@ -8663,7 +8681,7 @@
   {
     "lemma": "Ichara 2",
     "previous": "Ichara 1",
-    "next": "Ichnai 1",
+    "next": "Ἴχναι 1",
     "chapters": [
       {
         "start": 821,
@@ -8673,20 +8691,22 @@
     ]
   },
   {
-    "lemma": "Ichnai 1",
+    "lemma": "Ἴχναι 1",
     "previous": "Ichara 2",
-    "next": "Ichnai 2",
+    "next": "Ἴχναι 2",
+    "sort_key": "Ichnai 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 829,
         "end": 829,
-        "author": "Stählin"
+        "author": "Stählin."
       }
     ]
   },
   {
-    "lemma": "Ichnai 2",
-    "previous": "Ichnai 1",
+    "lemma": "Ἴχναι 2",
+    "previous": "Ἴχναι 1",
     "next": "Ichnusa",
     "chapters": [
       {
@@ -8698,7 +8718,7 @@
   },
   {
     "lemma": "Ichnusa",
-    "previous": "Ichnai 2",
+    "previous": "Ἴχναι 2",
     "next": "Ichor",
     "chapters": [
       {
@@ -12749,13 +12769,15 @@
   },
   {
     "lemma": "Ichnaia",
-    "previous": "Iazyges",
-    "next": "Ichnaia 1",
+    "previous": "Ἴχναι 2",
+    "next": "Ichnusa",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1191,
-        "end": 1192,
-        "author": "Jessen"
+        "start": 830,
+        "end": 830,
+        "author": "OFF."
       }
     ]
   },
