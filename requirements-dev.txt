@@ -99,7 +99,7 @@ websocket-client==0.57.0  # via docker
 werkzeug==1.0.1           # via moto
 wrapt==1.12.1             # via astroid, aws-xray-sdk
 xmltodict==0.12.0         # via moto
-zipp==3.3.1               # via importlib-metadata, moto
+zipp==3.4.0               # via importlib-metadata, moto
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
