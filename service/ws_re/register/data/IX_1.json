@@ -7123,7 +7123,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Iasikles",
+    "next": "Ias(s)ii",
     "chapters": [
       {
         "start": 751,
@@ -7902,6 +7902,7 @@
     "next": "Iatioi",
     "proof_read": 2,
     "wp_link": "w:de:Medina",
+    "wd_link": "d:Q35484",
     "chapters": [
       {
         "start": 791,
@@ -8283,6 +8284,7 @@
     "redirect": true,
     "proof_read": 2,
     "wp_link": "w:de:Iberia (byzantinisches Thema)",
+    "wd_link": "d:Q1655814",
     "chapters": [
       {
         "start": 807,
@@ -8308,6 +8310,7 @@
     "previous": "Iberinus",
     "next": "Iberus 2",
     "wp_link": "w:de:Ebro",
+    "wd_link": "d:Q10965",
     "chapters": [
       {
         "start": 807,
@@ -8321,6 +8324,7 @@
     "previous": "Iberus 1",
     "next": "Iberus 3",
     "wp_link": "w:de:Río Tinto",
+    "wd_link": "d:Q17744",
     "chapters": [
       {
         "start": 807,
@@ -8475,6 +8479,7 @@
     "next": "Ibykos 2",
     "wp_link": "w:de:Ibykos",
     "ws_link": "s:fr:Auteur:Ibycos",
+    "wd_link": "d:Q332802",
     "chapters": [
       {
         "start": 816,
@@ -8718,8 +8723,10 @@
   },
   {
     "lemma": "Ichnusa",
-    "previous": "Ἴχναι 2",
+    "previous": "Ichnaia",
     "next": "Ichor",
+    "redirect": "Sardinia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 830,
@@ -8735,7 +8742,7 @@
       {
         "start": 830,
         "end": 830,
-        "author": "Zwicker"
+        "author": "Zwicker."
       }
     ]
   },
@@ -8743,11 +8750,13 @@
     "lemma": "Ichthyas",
     "previous": "Ichor",
     "next": "Ichthyoessa, Ichthyussa",
+    "proof_read": 2,
+    "wp_link": "w:de:en:Ichthyas",
     "chapters": [
       {
         "start": 830,
         "end": 830,
-        "author": "Daebritz"
+        "author": "Daebritz."
       }
     ]
   },
@@ -8755,11 +8764,12 @@
     "lemma": "Ichthyoessa, Ichthyussa",
     "previous": "Ichthyas",
     "next": "Ichthyokentauros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 830,
         "end": 830,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -8778,12 +8788,14 @@
   {
     "lemma": "Icht Mare",
     "previous": "Ichthyokentauros",
-    "next": "Ichthyophagoi",
+    "next": "Ichthyas",
+    "proof_read": 2,
+    "wp_link": "w:de:Ärmelkanal",
     "chapters": [
       {
         "start": 830,
         "end": 830,
-        "author": "Haverfield"
+        "author": "Haverfield."
       }
     ]
   },
@@ -8818,11 +8830,12 @@
     "lemma": "Ichthys 2",
     "previous": "Ichthys 1",
     "next": "Iciani",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
         "end": 850,
-        "author": "Fimmen"
+        "author": "Fimmen."
       }
     ]
   },
@@ -8830,10 +8843,12 @@
     "lemma": "Iciani",
     "previous": "Ichthys 2",
     "next": "Icidmagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "end": 850
+        "end": 850,
+        "author": "Haverfield."
       }
     ]
   },
@@ -8841,6 +8856,8 @@
     "lemma": "Icidmagus",
     "previous": "Iciani",
     "next": "Icilius",
+    "redirect": "Icciomagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
@@ -8852,11 +8869,12 @@
     "lemma": "Icilius",
     "previous": "Icidmagus",
     "next": "Icilius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
         "end": 851,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -8864,6 +8882,8 @@
     "lemma": "Icilius 1",
     "previous": "Icilius",
     "next": "Icilius 2",
+    "redirect": "Silicius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
@@ -8875,11 +8895,12 @@
     "lemma": "Icilius 2",
     "previous": "Icilius 1",
     "next": "Icilius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
         "end": 853,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -8887,11 +8908,12 @@
     "lemma": "Icilius 3",
     "previous": "Icilius 2",
     "next": "Icilius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 853,
         "end": 853,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -8899,11 +8921,12 @@
     "lemma": "Icilius 4",
     "previous": "Icilius 3",
     "next": "Icilius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 853,
         "end": 854,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -12743,7 +12766,7 @@
   },
   {
     "lemma": "Iaxartes",
-    "previous": "Iaxartae",
+    "previous": "Iavolenus 2",
     "next": "Iazer",
     "redirect": "Iaxartes",
     "proof_read": 2,
@@ -12770,7 +12793,7 @@
   {
     "lemma": "Ichnaia",
     "previous": "Ἴχναι 2",
-    "next": "Ichnusa",
+    "next": "Ichnaia 1",
     "redirect": true,
     "proof_read": 2,
     "chapters": [
@@ -12783,25 +12806,27 @@
   },
   {
     "lemma": "Ichnaia 1",
-    "previous": "Ichnaia",
+    "previous": "Icauna",
     "next": "Ichnaia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1191,
         "end": 1192,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
   {
     "lemma": "Ichnaia 2",
     "previous": "Ichnaia 1",
-    "next": "Idaios 1a",
+    "next": "Idaios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1192,
         "end": 1192,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
