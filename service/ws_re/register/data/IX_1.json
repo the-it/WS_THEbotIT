@@ -8687,11 +8687,12 @@
     "lemma": "Ichara 2",
     "previous": "Ichara 1",
     "next": "Ἴχναι 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 821,
         "end": 829,
-        "author": "Tkáč"
+        "author": "Tkač."
       }
     ]
   },
@@ -8776,12 +8777,14 @@
   {
     "lemma": "Ichthyokentauros",
     "previous": "Ichthyoessa, Ichthyussa",
-    "next": "Icht Mare",
+    "next": "Ichthyophagoi",
+    "proof_read": 2,
+    "wp_link": "w:de:Ichthyokentauren",
     "chapters": [
       {
         "start": 830,
         "end": 843,
-        "author": "Lamer"
+        "author": "Lamer."
       }
     ]
   },
@@ -8934,30 +8937,35 @@
     "lemma": "Icilius 5",
     "previous": "Icilius 4",
     "next": "Iciniacum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 854,
         "end": 855,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Iciniacum",
     "previous": "Icilius 5",
-    "next": "Iciodurum",
+    "next": "Iciodorum",
+    "proof_read": 2,
+    "wp_link": "w:de:Kastell Theilenhofen",
     "chapters": [
       {
         "start": 855,
         "end": 855,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
   {
-    "lemma": "Iciodurum",
+    "lemma": "Iciodorum",
     "previous": "Iciniacum",
     "next": "Icius",
+    "redirect": "Icciodurum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 855,
@@ -8967,13 +8975,14 @@
   },
   {
     "lemma": "Icius",
-    "previous": "Iciodurum",
+    "previous": "Iciodorum",
     "next": "Iconii",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 855,
         "end": 855,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -8981,11 +8990,12 @@
     "lemma": "Iconii",
     "previous": "Icius",
     "next": "Icorigium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 855,
         "end": 855,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -8993,11 +9003,13 @@
     "lemma": "Icorigium",
     "previous": "Iconii",
     "next": "Icosium",
+    "proof_read": 2,
+    "wp_link": "w:de:Icorigium",
     "chapters": [
       {
         "start": 855,
         "end": 856,
-        "author": "Haug"
+        "author": "Haug-Keune."
       }
     ]
   },
