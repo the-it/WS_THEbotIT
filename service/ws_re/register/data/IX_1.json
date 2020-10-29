@@ -8558,6 +8558,7 @@
     "next": "Icaunus",
     "proof_read": 2,
     "wp_link": "w:de:Icauna",
+    "wd_link": "d:Q15819846",
     "chapters": [
       {
         "start": 819,
@@ -8585,6 +8586,7 @@
     "next": "Icciomagus",
     "proof_read": 2,
     "wp_link": "w:de:Yzeures-sur-Creuse",
+    "wd_link": "d:Q273886",
     "chapters": [
       {
         "start": 819,
@@ -8599,6 +8601,7 @@
     "next": "Iccius 1",
     "proof_read": 2,
     "wp_link": "w:de:Usson-en-Forez",
+    "wd_link": "d:Q1106328",
     "chapters": [
       {
         "start": 819,
@@ -8624,6 +8627,7 @@
     "lemma": "Iccius 2",
     "previous": "Iccius 1",
     "next": "Icelus",
+    "wd_link": "d:Q1095651",
     "chapters": [
       {
         "start": 819,
@@ -8650,6 +8654,7 @@
     "next": "Ichana",
     "proof_read": 2,
     "wp_link": "w:de:Icener",
+    "wd_link": "d:Q211678",
     "chapters": [
       {
         "start": 820,
@@ -8713,12 +8718,14 @@
   {
     "lemma": "Ἴχναι 2",
     "previous": "Ἴχναι 1",
-    "next": "Ichnusa",
+    "next": "Ichnaia",
+    "sort_key": "Ichnai 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 829,
         "end": 830,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
@@ -9018,11 +9025,13 @@
     "lemma": "Icosium",
     "previous": "Icorigium",
     "next": "Icotii",
+    "proof_read": 2,
+    "wp_link": "w:de:en:Icosium",
     "chapters": [
       {
         "start": 856,
         "end": 856,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
@@ -9030,11 +9039,12 @@
     "lemma": "Icotii",
     "previous": "Icosium",
     "next": "Icovellauna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 856,
         "end": 856,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -9042,11 +9052,13 @@
     "lemma": "Icovellauna",
     "previous": "Icotii",
     "next": "Ictis",
+    "proof_read": 2,
+    "wp_link": "w:de:en:Icovellauna",
     "chapters": [
       {
         "start": 856,
         "end": 857,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -9054,18 +9066,19 @@
     "lemma": "Ictis",
     "previous": "Icovellauna",
     "next": "Iculisma",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 857,
         "end": 858,
-        "author": "Haverfield"
+        "author": "Haverfield."
       }
     ]
   },
   {
     "lemma": "Iculisma",
     "previous": "Ictis",
-    "next": "Ida, Ide",
+    "next": "Ida, Ide 1",
     "proof_read": 2,
     "wp_link": "w:de:Angoulême",
     "wd_link": "d:Q134346",
@@ -9081,11 +9094,13 @@
     "lemma": "Ida, Ide 1",
     "previous": "Iculisma",
     "next": "Ida, Ide 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Psiloritis",
     "chapters": [
       {
         "start": 858,
         "end": 862,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -12779,7 +12794,7 @@
   },
   {
     "lemma": "Iaxartes",
-    "previous": "Iavolenus 2",
+    "previous": "Iaxartae",
     "next": "Iazer",
     "redirect": "Iaxartes",
     "proof_read": 2,
@@ -12806,14 +12821,13 @@
   {
     "lemma": "Ichnaia",
     "previous": "Ἴχναι 2",
-    "next": "Ichnaia 1",
+    "next": "Ichnusa",
     "redirect": true,
     "proof_read": 2,
     "chapters": [
       {
         "start": 830,
-        "end": 830,
-        "author": "OFF."
+        "end": 830
       }
     ]
   },
