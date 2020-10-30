@@ -8760,6 +8760,7 @@
     "next": "Ichthyoessa, Ichthyussa",
     "proof_read": 2,
     "wp_link": "w:de:en:Ichthyas",
+    "wd_link": "d:Q2006829",
     "chapters": [
       {
         "start": 830,
@@ -8797,10 +8798,11 @@
   },
   {
     "lemma": "Icht Mare",
-    "previous": "Ichthyokentauros",
+    "previous": "Ichor",
     "next": "Ichthyas",
     "proof_read": 2,
     "wp_link": "w:de:Ärmelkanal",
+    "wd_link": "d:Q34640",
     "chapters": [
       {
         "start": 830,
@@ -9108,11 +9110,12 @@
     "lemma": "Ida, Ide 2",
     "previous": "Ida, Ide 1",
     "next": "Ida, Ide 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
         "end": 864,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -9120,11 +9123,12 @@
     "lemma": "Ida, Ide 3",
     "previous": "Ida, Ide 2",
     "next": "Ida, Ide 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
         "end": 864,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -9132,6 +9136,8 @@
     "lemma": "Ida, Ide 4",
     "previous": "Ida, Ide 3",
     "next": "Idacius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
@@ -9143,6 +9149,8 @@
     "lemma": "Idacius",
     "previous": "Ida, Ide 4",
     "next": "Idaeus mons 1",
+    "redirect": "Idatius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
@@ -9154,10 +9162,12 @@
     "lemma": "Idaeus mons 1",
     "previous": "Idacius",
     "next": "Idaeus mons 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
-        "end": 864
+        "end": 864,
+        "author": "Bürchner."
       }
     ]
   },
@@ -9165,11 +9175,12 @@
     "lemma": "Idaeus mons 2",
     "previous": "Idaeus mons 1",
     "next": "Idaia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
         "end": 864,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -9177,11 +9188,13 @@
     "lemma": "Idaia 1",
     "previous": "Idaeus mons 2",
     "next": "Idaia 2",
+    "sort_key": "Idaia 01",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
         "end": 865,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -9189,11 +9202,13 @@
     "lemma": "Idaia 2",
     "previous": "Idaia 1",
     "next": "Idaia 3",
+    "sort_key": "Idaia 02",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 865,
         "end": 865,
-        "author": "Jessen"
+        "author": "Jessen."
       }
     ]
   },
@@ -9201,11 +9216,13 @@
     "lemma": "Idaia 3",
     "previous": "Idaia 2",
     "next": "Idaia 4",
+    "sort_key": "Idaia 03",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 865,
         "end": 865,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -9213,11 +9230,12 @@
     "lemma": "Idaia 4",
     "previous": "Idaia 3",
     "next": "Idaia 5",
+    "sort_key": "Idaia 04",
     "chapters": [
       {
         "start": 865,
         "end": 866,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -9225,11 +9243,12 @@
     "lemma": "Idaia 5",
     "previous": "Idaia 4",
     "next": "Idaia 6",
+    "sort_key": "Idaia 05",
     "chapters": [
       {
         "start": 866,
         "end": 866,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
