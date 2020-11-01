@@ -7123,7 +7123,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Ias(s)ii",
+    "next": "Iasikles",
     "chapters": [
       {
         "start": 751,
@@ -9497,47 +9497,53 @@
     "lemma": "Idas 1",
     "previous": "Idarne",
     "next": "Idas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 872,
         "end": 876,
-        "author": "Bethe"
+        "author": "Bethe."
       }
     ]
   },
   {
     "lemma": "Idas 2",
     "previous": "Idas 1",
-    "next": "Idassa",
+    "next": "Idassa 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 876,
         "end": 876,
-        "author": "Bethe"
+        "author": "Bethe."
       }
     ]
   },
   {
-    "lemma": "Idassa",
+    "lemma": "Idassa 2",
     "previous": "Idas 2",
     "next": "Idatius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 876,
         "end": 876,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Idatius",
-    "previous": "Idassa",
+    "previous": "Idassa 2",
     "next": "Idbansa",
+    "proof_read": 2,
+    "wp_link": "w:de:Hydatius von Aquae Flaviae",
+    "ws_link": "s:de:Hydatius",
     "chapters": [
       {
         "start": 876,
         "end": 879,
-        "author": "Kappelmacher"
+        "author": "Kappelmacher."
       }
     ]
   },
@@ -9545,11 +9551,12 @@
     "lemma": "Idbansa",
     "previous": "Idatius",
     "next": "Ide 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 879,
         "end": 879,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -9561,7 +9568,7 @@
       {
         "start": 880,
         "end": 880,
-        "author": "Neustadt"
+        "author": "Neustadt."
       }
     ]
   },
@@ -9573,7 +9580,7 @@
       {
         "start": 880,
         "end": 880,
-        "author": "Neustadt"
+        "author": "Neustadt."
       }
     ]
   },
@@ -9585,7 +9592,7 @@
       {
         "start": 880,
         "end": 880,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -9593,11 +9600,12 @@
     "lemma": "Ide 4",
     "previous": "Ide 3",
     "next": "Ide 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 880,
         "end": 880,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
@@ -9605,10 +9613,12 @@
     "lemma": "Ide 5",
     "previous": "Ide 4",
     "next": "Ide 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 880,
-        "end": 880
+        "end": 880,
+        "author": "Ruge."
       }
     ]
   },
@@ -9616,6 +9626,8 @@
     "lemma": "Ide 6",
     "previous": "Ide 5",
     "next": "Idebessos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 880,
@@ -9627,11 +9639,12 @@
     "lemma": "Idebessos",
     "previous": "Ide 6",
     "next": "Ideion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 880,
         "end": 881,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
