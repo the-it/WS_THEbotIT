@@ -9032,6 +9032,7 @@
     "next": "Icotii",
     "proof_read": 2,
     "wp_link": "w:de:en:Icosium",
+    "wd_link": "d:Q3502671",
     "chapters": [
       {
         "start": 856,
@@ -9059,6 +9060,7 @@
     "next": "Ictis",
     "proof_read": 2,
     "wp_link": "w:de:en:Icovellauna",
+    "wd_link": "d:Q941670",
     "chapters": [
       {
         "start": 856,
@@ -9101,6 +9103,7 @@
     "next": "Ida, Ide 2",
     "proof_read": 2,
     "wp_link": "w:de:Psiloritis",
+    "wd_link": "d:Q83659",
     "chapters": [
       {
         "start": 858,
@@ -9652,10 +9655,12 @@
     "lemma": "Ideion",
     "previous": "Idebessos",
     "next": "Ideiphyta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 881,
-        "end": 881
+        "end": 881,
+        "author": "Bürchner."
       }
     ]
   },
@@ -9675,11 +9680,12 @@
     "lemma": "Idennica",
     "previous": "Ideiphyta",
     "next": "Ideus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 881,
         "end": 881,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -9687,11 +9693,12 @@
     "lemma": "Ideus",
     "previous": "Idennica",
     "next": "Idex",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 881,
         "end": 882,
-        "author": "Eitrem"
+        "author": "Eitrem."
       }
     ]
   },
@@ -9699,11 +9706,12 @@
     "lemma": "Idex",
     "previous": "Ideus",
     "next": "Idiatt(a?)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 882,
         "end": 882,
-        "author": "Haug"
+        "author": "Philipp."
       }
     ]
   },
@@ -9711,11 +9719,12 @@
     "lemma": "Idiatt(a?)",
     "previous": "Idex",
     "next": "Idicra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 882,
         "end": 882,
-        "author": "Haug"
+        "author": "Haug."
       }
     ]
   },
@@ -9723,11 +9732,12 @@
     "lemma": "Idicra",
     "previous": "Idiatt(a?)",
     "next": "Idikara 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 882,
         "end": 882,
-        "author": "Dessau"
+        "author": "Dessau."
       }
     ]
   },
@@ -9747,11 +9757,12 @@
     "lemma": "Idikara 2",
     "previous": "Idikara 1",
     "next": "Idiminium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 882,
         "end": 882,
-        "author": "Weissbach"
+        "author": "Weissbach."
       }
     ]
   },
@@ -9759,28 +9770,30 @@
     "lemma": "Idiminium",
     "previous": "Idikara 2",
     "next": "Idimum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 882,
         "end": 882,
-        "author": "Vulić"
+        "author": "Vulić."
       }
     ]
   },
   {
     "lemma": "Idimum",
     "previous": "Idiminium",
-    "next": "Idios logos",
+    "next": "Ἴδιος λόγος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 882,
         "end": 882,
-        "author": "Vulić"
+        "author": "Vulić."
       }
     ]
   },
   {
-    "lemma": "Idios logos",
+    "lemma": "Ἴδιος λόγος",
     "previous": "Idimum",
     "next": "Idiotes",
     "chapters": [
@@ -9793,13 +9806,16 @@
   },
   {
     "lemma": "Idiotes",
-    "previous": "Idios logos",
+    "previous": "Ἴδιος λόγος",
     "next": "Idistaviso",
+    "proof_read": 2,
+    "wp_link": "w:de:Idiot",
+    "wd_link": "d:Q193607",
     "chapters": [
       {
-        "start": 903,
-        "end": 903,
-        "author": "Plaumann"
+        "start": 93,
+        "end": 93,
+        "author": "Plaumann."
       }
     ]
   },
@@ -12153,7 +12169,7 @@
     "next": "Imaion",
     "chapters": [
       {
-        "start": 1197,
+        "start": 1097,
         "end": 1099,
         "author": "K. Schneider."
       },
@@ -12854,7 +12870,7 @@
   },
   {
     "lemma": "Iaxartes",
-    "previous": "Iavolenus 2",
+    "previous": "Iaxartae",
     "next": "Iazer",
     "redirect": "Iaxartes",
     "proof_read": 2,
