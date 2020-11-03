@@ -109,6 +109,23 @@ class TestIntegrationRegister(parent_class):
                                       f"{register.volume.name} not in mappings.")
         _raise_count_errors(errors)
 
+    def test_no_missplaced_lemmas(self):
+        errors = []
+        for register in self.registers.volumes.values():
+            for index, lemma in enumerate(register):
+                try:
+                    if index:
+                        # ... a check for a difference of 5 or 3 would be better, but not possible at the moment
+                        if abs(lemma.chapters[0].start - register[index-1].chapters[-1].end) > 10:  # pragma: no cover
+                            errors.append(f"{lemma['lemma']}, {register.volume.name} "
+                                          f"has difference in columns to pre lemma.")
+                        if abs(lemma.chapters[-1].end - register[index+1].chapters[0].start) > 10:  # pragma: no cover
+                            errors.append(f"{lemma['lemma']}, {register.volume.name} "
+                                          f"has difference in columns to post lemma.")
+                except (IndexError, TypeError):
+                    pass
+        _raise_count_errors(errors)
+
     @skip("only for analysis")
     def test_no_double_lemma(self):  # pragma: no cover
         for register in self.registers.volumes.values():
