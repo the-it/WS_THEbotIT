@@ -16,7 +16,7 @@ class LemmaChapter:
 
     def is_valid(self) -> bool:
         with contextlib.suppress(TypeError):
-            if "start" in self._dict and "end" in self._dict:
+            if "start" in self._dict:
                 return True
         return False
 
@@ -32,8 +32,10 @@ class LemmaChapter:
         return self._dict["start"]
 
     @property
-    def end(self) -> int:
-        return self._dict["end"]
+    def end(self) -> Optional[int]:
+        if "end" in self._dict:
+            return self._dict["end"]
+        return None
 
     @property
     def author(self) -> Optional[str]:

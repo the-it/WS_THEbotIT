@@ -293,7 +293,7 @@ class Lemma():
             start_page_scan -= 1
         pages_str = f"[[Special:Filepath/Pauly-Wissowa_{self._volume.name}," \
                     f"_{start_page_scan:04d}.jpg|{lemma_chapter.start}]]"
-        if lemma_chapter.start != lemma_chapter.end:
+        if lemma_chapter.end and lemma_chapter.start != lemma_chapter.end:
             pages_str += f"-{lemma_chapter.end}"
         return pages_str
 

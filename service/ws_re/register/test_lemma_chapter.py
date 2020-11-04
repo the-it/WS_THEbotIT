@@ -14,7 +14,7 @@ class TestLemmaChapter(TestCase):
         lemma_chapter = LemmaChapter({"end": 2})
         compare(False, lemma_chapter.is_valid())
         lemma_chapter = LemmaChapter({"start": 2})
-        compare(False, lemma_chapter.is_valid())
+        compare(True, lemma_chapter.is_valid())
         lemma_chapter = LemmaChapter({"start": 1, "end": 2})
         compare(True, lemma_chapter.is_valid())
 

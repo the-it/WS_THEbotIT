@@ -102,7 +102,7 @@ class TestLemma(BaseTestRegister):
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|18]]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 18, "end": 18, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter({"start": 18, "author": "Abel"})))
         compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|198]]-200",
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
@@ -143,7 +143,7 @@ class TestLemma(BaseTestRegister):
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
         Lemma(no_chapter_dict, self.volumes["I,1"], self.authors)
-        no_chapter_dict = {"lemma": "lemma", "chapters": [{"start": 1}]}
+        no_chapter_dict = {"lemma": "lemma", "chapters": [{"end": 1}]}
         with self.assertRaises(RegisterException):
             print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
 
