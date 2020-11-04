@@ -11,6 +11,7 @@ from tools.test import REAL_DATA_TEST
 
 _MAX_SIZE_WIKI_PAGE = 2_098_175
 
+
 def _raise_count_errors(errors):
     if errors:  # pragma: no cover
         count = len(errors)
@@ -23,7 +24,7 @@ def _raise_count_errors(errors):
 if REAL_DATA_TEST:
     parent_class = TestCase
 else:
-    parent_class = BaseTestRegister # type: ignore
+    parent_class = BaseTestRegister  # type: ignore
 
 
 @skipUnless(REAL_DATA_TEST, "only execute in integration test")
@@ -67,7 +68,7 @@ class TestIntegrationRegister(parent_class):
         errors = []
         for register in self.registers.volumes.values():
             for i, lemma in enumerate(register):
-                pre_lemma = register[i -1] if i > 0 else None
+                pre_lemma = register[i - 1] if i > 0 else None
                 if pre_lemma and pre_lemma["next"]:
                     if not pre_lemma["next"] == lemma["lemma"]:  # pragma: no cover
                         errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register.volume.name} "
@@ -109,17 +110,21 @@ class TestIntegrationRegister(parent_class):
                                       f"{register.volume.name} not in mappings.")
         _raise_count_errors(errors)
 
+    # ... a check for a difference of 5 or 3 would be better, but not possible at the moment
+    _alarming_distance = 100
+
     def test_no_missplaced_lemmas(self):
         errors = []
         for register in self.registers.volumes.values():
             for index, lemma in enumerate(register):
                 try:
                     if index:
-                        # ... a check for a difference of 5 or 3 would be better, but not possible at the moment
-                        if abs(lemma.chapters[0].start - register[index-1].chapters[-1].end) > 10:  # pragma: no cover
+                        if abs(lemma.chapters[0].start - register[index - 1].chapters[-1].end) \
+                                > self._alarming_distance:  # pragma: no cover
                             errors.append(f"{lemma['lemma']}, {register.volume.name} "
                                           f"has difference in columns to pre lemma.")
-                        if abs(lemma.chapters[-1].end - register[index+1].chapters[0].start) > 10:  # pragma: no cover
+                        if abs(lemma.chapters[-1].end - register[index + 1].chapters[0].start) \
+                                > self._alarming_distance:  # pragma: no cover
                             errors.append(f"{lemma['lemma']}, {register.volume.name} "
                                           f"has difference in columns to post lemma.")
                 except (IndexError, TypeError):
