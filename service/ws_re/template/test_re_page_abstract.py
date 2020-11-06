@@ -1,6 +1,6 @@
+# pylint: disable=no-self-use,protected-access
 from unittest import TestCase, mock
 
-import pywikibot
 from testfixtures import compare
 
 from service.ws_re.template import ReDatenException, ARTICLE_TEMPLATE
@@ -19,9 +19,7 @@ class TestRePage(TestCase):
         type(self.page_mock).text = self.text_mock
 
     class RePageImplMock(RePageAbstract):
-        def __init__(self, wiki_page: pywikibot.Page):
-            super().__init__(wiki_page)
-
+        @property
         def is_writable(self) -> bool:
             return False
 

@@ -1,3 +1,4 @@
+# pylint: disable=no-self-use,protected-access
 from unittest import TestCase, mock
 
 import pywikibot

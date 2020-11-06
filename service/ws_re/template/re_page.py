@@ -11,6 +11,7 @@ from service.ws_re.template.re_page_abstract import RePageAbstract
 class RePage(RePageAbstract):
     def __init__(self, wiki_page: pywikibot.Page):
         super().__init__(wiki_page)
+        self.i = 1
 
     def clean_articles(self):
         """
