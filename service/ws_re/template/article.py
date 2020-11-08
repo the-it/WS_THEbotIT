@@ -10,7 +10,7 @@ from tools.template_finder import TemplateFinder
 from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 
-class Article(collections.MutableMapping):
+class Article(collections.Mapping):
     keywords = {
         "BD": "BAND",
         "SS": "SPALTE_START",
@@ -127,12 +127,6 @@ class Article(collections.MutableMapping):
                 return re_property
         raise KeyError(f"Key {item} not found in self._properties")
 
-    def __setitem__(self, key, value):
-        pass
-
-    def __delitem__(self, key):
-        pass
-
     def _init_properties(self, properties_dict: Optional[ArticleProperties]):
         if properties_dict:
             for item in properties_dict.items():
@@ -145,9 +139,9 @@ class Article(collections.MutableMapping):
 
     def __hash__(self):
         return hash(self._article_type) \
-            + (hash(self._properties) << 1) \
-            + (hash(self._text) << 2) \
-            + (hash(self._author) << 3)
+               + (hash(self._properties) << 1) \
+               + (hash(self._text) << 2) \
+               + (hash(self._author) << 3)
 
     @classmethod
     def from_text(cls, article_text):
