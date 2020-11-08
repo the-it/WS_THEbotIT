@@ -10,7 +10,7 @@ from tools.template_finder import TemplateFinder
 from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 
-class Article(collections.Mapping):
+class Article(collections.abc.Mapping):
     keywords = {
         "BD": "BAND",
         "SS": "SPALTE_START",
