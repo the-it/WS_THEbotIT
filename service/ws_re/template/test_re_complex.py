@@ -6,13 +6,9 @@ from service.ws_re.template.re_page_complex import RePageComplex
 
 
 class TestRePage(TestCase):
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text",
-                new_callable=mock.PropertyMock)
-    # pylint: disable=arguments-differ
-    def setUp(self, text_mock, page_mock):
-        self.page_mock: mock.Mock = page_mock
-        self.text_mock: mock.PropertyMock = text_mock
+    def setUp(self):
+        self.page_mock: mock.Mock = mock.Mock()
+        self.text_mock: mock.PropertyMock = mock.PropertyMock()
         type(self.page_mock).text = self.text_mock
 
     def test_simple_RePage_with_one_article(self):

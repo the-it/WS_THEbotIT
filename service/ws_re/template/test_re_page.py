@@ -10,18 +10,15 @@ from service.ws_re.template.re_page import RePage
 
 
 class TestRePage(TestCase):
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text",
-                new_callable=mock.PropertyMock)
-    # pylint: disable=arguments-differ
-    def setUp(self, text_mock, page_mock):
-        self.page_mock = page_mock
-        self.text_mock = text_mock
+    def setUp(self):
+        self.page_mock = mock.Mock()
+        self.text_mock = mock.PropertyMock()
         type(self.page_mock).text = self.text_mock
 
     def test_save_because_of_changes(self):
         before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         self.text_mock.return_value = before
+        self.page_mock.protection.return_value = {}
         re_page = RePage(self.page_mock)
         re_page.save("reason")
         self.text_mock.assert_called_with(ARTICLE_TEMPLATE)
@@ -60,6 +57,7 @@ class TestRePage(TestCase):
             raise pywikibot.exceptions.LockedPage(self.page_mock)
 
         self.page_mock.save.side_effect = side_effect
+        self.page_mock.protection.return_value = {}
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"
         with self.assertRaises(ReDatenException):
