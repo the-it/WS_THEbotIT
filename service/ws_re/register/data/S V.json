@@ -139,6 +139,7 @@
     "chapters": [
       {
         "start": 43,
+        "end": 43,
         "author": "Heichelheim."
       }
     ]
@@ -772,6 +773,7 @@
     "chapters": [
       {
         "start": 228,
+        "end": 228,
         "author": "Lippold."
       }
     ]
@@ -976,10 +978,12 @@
     "lemma": "Idassa 2",
     "previous": "Hythmitae",
     "next": "Illyrioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 311,
-        "author": "Fluss"
+        "end": 311,
+        "author": "Fluss."
       }
     ]
   },
@@ -998,10 +1002,12 @@
     "lemma": "Insulae Liburnicae",
     "previous": "Illyrioi",
     "next": "Interphrurini",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 345,
-        "author": "Fluss"
+        "end": 346,
+        "author": "Fluss."
       }
     ]
   },
@@ -1009,27 +1015,34 @@
     "lemma": "Interphrurini",
     "previous": "Insulae Liburnicae",
     "next": "Ismeni",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 346,
-        "author": "Fluss"
+        "end": 346,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Ismeni",
     "previous": "Interphrurini",
-    "next": "Issa 3",
+    "next": "Issa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 346,
-        "author": "Fluss"
+        "end": 346,
+        "author": "Fluss."
       }
     ]
   },
   {
+    "lemma": "Issa",
+    "previous": "Ismeni"
+  },
+  {
     "lemma": "Issa 3",
-    "previous": "Ismeni",
     "chapters": [
       {
         "start": 346,
