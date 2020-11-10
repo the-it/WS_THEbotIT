@@ -1428,7 +1428,6 @@
   {
     "lemma": "Hadrianius",
     "previous": "Grapheion",
-    "next": "Helikon 1a",
     "chapters": [
       {
         "start": 223,
@@ -1437,42 +1436,65 @@
     ]
   },
   {
+    "lemma": "Hegias",
+    "next": "Helikon 1a"
+  },
+  {
     "lemma": "Helikon 1a",
-    "previous": "Hadrianius",
+    "previous": "Hegias",
     "next": "Herennius 33a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 277,
-        "author": "Oberhummer"
+        "end": 277,
+        "author": "E. Oberhummer."
       }
     ]
   },
   {
     "lemma": "Herennius 33a",
     "previous": "Helikon 1a",
-    "next": "Hylas 7a",
+    "next": "Hodoidokos",
     "chapters": [
       {
         "start": 277,
-        "author": "Stein, [Arthur]"
+        "end": 278,
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Hylas 7a",
-    "previous": "Herennius 33a",
-    "next": "Hegias 5a",
+    "next": "Hymnodoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 277,
-        "author": "Kroll"
+        "end": 278,
+        "author": "W. Kroll."
       }
     ]
   },
   {
-    "lemma": "Hegias 5a",
+    "lemma": "Hymnodoi",
     "previous": "Hylas 7a",
-    "next": "Homologia gamu",
+    "next": "Hyparchos",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 279,
+        "end": 281,
+        "author": "Ludwig Ziehen."
+      }
+    ]
+  },
+  {
+    "lemma": "Hyparchos",
+    "previous": "Hymnodoi"
+  },
+  {
+    "lemma": "Hegias 5a",
     "chapters": [
       {
         "start": 278,
@@ -1481,19 +1503,34 @@
     ]
   },
   {
-    "lemma": "Homologia gamu",
-    "previous": "Hegias 5a",
-    "next": "Hyparchos 2",
+    "lemma": "Hodoidokos",
+    "previous": "Herennius 33a",
+    "next": "ὁμολογία γάμου",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 278,
-        "author": "Ziebarth"
+        "end": 278,
+        "author": "G. Türk."
+      }
+    ]
+  },
+  {
+    "lemma": "ὁμολογία γάμου",
+    "previous": "Hodoidokos",
+    "next": "Hylas 7a",
+    "sort_key": "homologia gamu",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 278,
+        "end": 278,
+        "author": "E. Ziebarth."
       }
     ]
   },
   {
     "lemma": "Hyparchos 2",
-    "previous": "Homologia gamu",
     "next": "Hypomnema",
     "chapters": [
       {

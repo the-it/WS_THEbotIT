@@ -4162,6 +4162,7 @@
   {
     "lemma": "Hystaspes 5",
     "previous": "Hyrkanos 6",
+    "next": "Ialysos 1",
     "chapters": [
       {
         "start": 783,
@@ -4171,7 +4172,16 @@
   },
   {
     "lemma": "Ialysos 1",
-    "next": "Iamliku"
+    "previous": "Hystaspes 5",
+    "next": "Iamliku",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 783,
+        "end": 783,
+        "author": "Hiller v. Gaertringen."
+      }
+    ]
   },
   {
     "lemma": "Iamliku",

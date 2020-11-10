@@ -2264,11 +2264,13 @@
     "lemma": "Inflation",
     "previous": "Idanum",
     "next": "Ionnaria",
+    "proof_read": 2,
+    "wp_link": "w:de:Inflation",
     "chapters": [
       {
         "start": 127,
         "end": 133,
-        "author": "Mickwitz"
+        "author": "Mickwitz."
       }
     ]
   },
@@ -2276,28 +2278,30 @@
     "lemma": "Ionnaria",
     "previous": "Inflation",
     "next": "Ira 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 133,
-        "author": "Fluss"
+        "end": 133,
+        "author": "Max Fluss."
       }
     ]
   },
   {
     "lemma": "Ira 4",
     "previous": "Ionnaria",
+    "next": "Isamnus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 133,
         "end": 134,
-        "author": "Fluss"
+        "author": "Max Fluss."
       }
     ]
   },
   {
     "lemma": "Iulius 552a",
-    "previous": "Istros 1a",
-    "next": "Iulianum",
     "proof_read": 2,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
     "wd_link": "d:Q239314",
@@ -2311,11 +2315,14 @@
   },
   {
     "lemma": "Isamnus",
+    "previous": "Ira 4",
     "next": "Istris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 134,
-        "author": "Fluss"
+        "end": 134,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -2323,26 +2330,31 @@
     "lemma": "Istris",
     "previous": "Isamnus",
     "next": "Istros 1a",
+    "proof_read": 2,
+    "wp_link": "w:de:Insel Cres",
     "chapters": [
       {
         "start": 134,
-        "author": "Fluss"
+        "end": 134,
+        "author": "Max Fluss."
       }
     ]
   },
   {
     "lemma": "Istros 1a",
     "previous": "Istris",
+    "next": "Iulius 552a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 134,
-        "author": "Fluss"
+        "end": 134,
+        "author": "Max Fluss."
       }
     ]
   },
   {
     "lemma": "Iulianum",
-    "previous": "Iulius 552a",
     "next": "Iunius 183a",
     "proof_read": 2,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
