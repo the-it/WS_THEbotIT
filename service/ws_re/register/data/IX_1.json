@@ -6925,7 +6925,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Iasikles",
+    "next": "Ias(s)ii",
     "chapters": [
       {
         "start": 751,
@@ -9869,12 +9869,12 @@
     "previous": "Idumenia",
     "next": "Idyia",
     "sort_key": "Iduthoi",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 918,
         "end": 918,
-        "author": "Albert."
+        "author": "Abert."
       }
     ]
   },
@@ -10748,11 +10748,13 @@
     "lemma": "Ikaros 2",
     "previous": "Ikaros 1",
     "next": "Ikaros 3",
+    "proof_read": 2,
+    "wp_link": "w:de:Ikarus",
     "chapters": [
       {
         "start": 985,
         "end": 989,
-        "author": "Heeg"
+        "author": "Heeg."
       }
     ]
   },
@@ -10760,10 +10762,12 @@
     "lemma": "Ikaros 3",
     "previous": "Ikaros 2",
     "next": "Ikaros 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 989,
-        "author": "Heeg"
+        "end": 989,
+        "author": "Heeg."
       }
     ]
   },
@@ -10771,10 +10775,12 @@
     "lemma": "Ikaros 4",
     "previous": "Ikaros 3",
     "next": "Ikaros 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 989,
-        "author": "Heeg"
+        "end": 989,
+        "author": "Heeg."
       }
     ]
   },
@@ -10782,9 +10788,12 @@
     "lemma": "Ikaros 5",
     "previous": "Ikaros 4",
     "next": "Ikaros 6",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 989
+        "start": 989,
+        "end": 989
       }
     ]
   },
@@ -10792,10 +10801,12 @@
     "lemma": "Ikaros 6",
     "previous": "Ikaros 5",
     "next": "Ikaros 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 989,
-        "author": "Sundwall"
+        "end": 989,
+        "author": "Sundwall."
       }
     ]
   },
@@ -10803,10 +10814,12 @@
     "lemma": "Ikaros 7",
     "previous": "Ikaros 6",
     "next": "Ikasia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 989,
-        "author": "Weissbach"
+        "end": 989,
+        "author": "Weissbach."
       }
     ]
   },
@@ -10814,10 +10827,12 @@
     "lemma": "Ikasia",
     "previous": "Ikaros 7",
     "next": "Ikelos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 989,
-        "author": "Bürchner"
+        "end": 989,
+        "author": "Bürchner."
       }
     ]
   },
@@ -10828,41 +10843,46 @@
     "chapters": [
       {
         "start": 989,
-        "author": "Eitrem"
+        "end": 989,
+        "author": "Eitrem."
       }
     ]
   },
   {
     "lemma": "Ikkos",
     "previous": "Ikelos",
-    "next": "Ikmainos",
+    "next": "Ikmaios",
     "chapters": [
       {
         "start": 989,
-        "author": "Sundwall"
+        "end": 989,
+        "author": "Sundwall."
       }
     ]
   },
   {
-    "lemma": "Ikmainos",
+    "lemma": "Ikmaios",
     "previous": "Ikkos",
     "next": "Iknion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 989,
         "end": 990,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
   {
     "lemma": "Iknion",
-    "previous": "Ikmainos",
+    "previous": "Ikmaios",
     "next": "Ikonion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 990,
-        "author": "Bürchner"
+        "end": 990,
+        "author": "Bürchner."
       }
     ]
   },
@@ -10870,11 +10890,13 @@
     "lemma": "Ikonion",
     "previous": "Iknion",
     "next": "Ikos",
+    "proof_read": 2,
+    "wp_link": "w:de:Konya",
     "chapters": [
       {
         "start": 990,
         "end": 991,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
