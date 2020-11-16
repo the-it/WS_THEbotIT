@@ -25,4 +25,4 @@ s3transfer==0.3.3         # via boto3
 six==1.15.0               # via python-dateutil
 smmap==3.0.4              # via gitdb
 soupsieve==2.0.1          # via beautifulsoup4
-urllib3==1.25.11          # via botocore, requests
+urllib3==1.26.2          # via botocore, requests
