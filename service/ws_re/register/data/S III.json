@@ -11565,7 +11565,7 @@
     "lemma": "Briançonnet",
     "previous": "Briançon",
     "next": "brica, briga",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Briançonnet",
     "wd_link": "d:Q728101",
     "chapters": [
@@ -11838,7 +11838,6 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
-    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11852,7 +11851,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconice",
+    "previous": "Buconica",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -23965,6 +23964,7 @@
   {
     "lemma": "Jeutz",
     "previous": "IEVRV",
+    "next": "Igabrum",
     "redirect": "Iudiacus",
     "proof_read": 2,
     "chapters": [
@@ -23975,8 +23975,32 @@
     ]
   },
   {
+    "lemma": "Igabrum",
+    "previous": "Jeutz",
+    "next": "Igaeditani",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1201,
+        "end": 1202,
+        "author": "Keune."
+      }
+    ]
+  },
+  {
     "lemma": "Igaeditani",
-    "next": "Igel"
+    "previous": "Igabrum",
+    "next": "Igel",
+    "proof_read": 2,
+    "wp_link": "w:de:Idanha-a-Velha",
+    "wd_link": "d:Q1026697",
+    "chapters": [
+      {
+        "start": 1202,
+        "end": 1205,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Igel",
