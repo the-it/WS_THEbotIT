@@ -229,7 +229,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
     jobs:
       - nightly:
           context: python38

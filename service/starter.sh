@@ -5,9 +5,9 @@ BASE_DIR=${DIR}/..
 echo ${BASE_DIR}
 cd ${BASE_DIR}
 # reset your current branch (master) to origin's master
-git checkout master
+git checkout main
 git pull
-git reset --hard master
+git reset --hard main
 sudo /usr/local/bin/python3.8 -m pip install -r requirements.txt
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
 source /etc/environment
