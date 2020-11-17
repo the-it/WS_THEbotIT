@@ -10979,7 +10979,7 @@
     "lemma": "Böckingen",
     "previous": "Bodus, Boudus",
     "next": "Böhming",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Böckingen",
     "wd_link": "d:Q1019591",
     "chapters": [
@@ -11838,6 +11838,7 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
+    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11851,7 +11852,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconica",
+    "previous": "Buconice",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -11869,7 +11870,7 @@
     "previous": "Buda",
     "next": "Bukatios",
     "sort_key": "Burgel",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Haus Bürgel",
     "wd_link": "d:Q1360812",
     "chapters": [
@@ -24008,6 +24009,7 @@
     "next": "Ignatius 3",
     "proof_read": 2,
     "wp_link": "w:de:Igel (Mosel)",
+    "wd_link": "d:Q543497",
     "chapters": [
       {
         "start": 1205,
@@ -24045,8 +24047,10 @@
   {
     "lemma": "Ikos",
     "previous": "Igonta",
+    "next": "Ilarcuris",
     "proof_read": 2,
     "wp_link": "w:de:Alonnisos",
+    "wd_link": "d:Q647941",
     "chapters": [
       {
         "start": 1206,
@@ -24054,6 +24058,10 @@
         "author": "Kroll."
       }
     ]
+  },
+  {
+    "lemma": "Ilarcuris",
+    "previous": "Ikos"
   },
   {
     "lemma": "Iliberri",

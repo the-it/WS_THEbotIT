@@ -10423,6 +10423,7 @@
     "previous": "Igilgili",
     "next": "Igillus",
     "wp_link": "w:de:Giglio (Insel)",
+    "wd_link": "d:Q13409862",
     "chapters": [
       {
         "start": 966,
@@ -10502,6 +10503,7 @@
     "next": "Igne",
     "proof_read": 2,
     "wp_link": "w:de:en:Ignatios the Deacon",
+    "wd_link": "d:Q3148188",
     "chapters": [
       {
         "start": 967,
@@ -10567,6 +10569,7 @@
     "previous": "Ignoratio",
     "next": "Ihamnagalla",
     "wp_link": "w:de:Gubbio",
+    "wd_link": "d:Q20458",
     "chapters": [
       {
         "start": 968,
@@ -10620,6 +10623,7 @@
     "redirect": "Eikadios",
     "proof_read": 2,
     "wp_link": "w:de:Apollon",
+    "wd_link": "d:Q37340",
     "chapters": [
       {
         "start": 973,
@@ -10672,6 +10676,7 @@
     "next": "Ikarios 2",
     "proof_read": 2,
     "wp_link": "w:de:Ikarios",
+    "wd_link": "d:Q608800",
     "chapters": [
       {
         "start": 973,
@@ -10686,6 +10691,7 @@
     "next": "Ikarios 3",
     "proof_read": 2,
     "wp_link": "w:de:Ikarios (Vater der Penelope)",
+    "wd_link": "d:Q1658054",
     "chapters": [
       {
         "start": 975,
@@ -10726,6 +10732,7 @@
     "next": "Ikaros 1",
     "proof_read": 2,
     "wp_link": "w:de:Ikarisches Meer",
+    "wd_link": "d:Q1640853",
     "chapters": [
       {
         "start": 977,
@@ -10908,6 +10915,7 @@
     "next": "Ikotarion",
     "proof_read": 2,
     "wp_link": "w:de:Alonnisos",
+    "wd_link": "d:Q647941",
     "chapters": [
       {
         "start": 991,
@@ -11123,10 +11131,12 @@
     "lemma": "Ildum",
     "previous": "Ildico",
     "next": "Ileates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Hübner"
+        "end": 999,
+        "author": "Hübner."
       }
     ]
   },
@@ -11134,9 +11144,12 @@
     "lemma": "Ileates",
     "previous": "Ildum",
     "next": "Ilei",
+    "redirect": "Igletes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 999
+        "start": 999,
+        "end": 999
       }
     ]
   },
@@ -11144,9 +11157,12 @@
     "lemma": "Ilei",
     "previous": "Ileates",
     "next": "Ilercavones",
+    "redirect": "Eileoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 999
+        "start": 999,
+        "end": 999
       }
     ]
   },
@@ -11154,9 +11170,12 @@
     "lemma": "Ilercavones",
     "previous": "Ilei",
     "next": "Ilercavonia",
+    "redirect": "Ilurcavones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 999
+        "start": 999,
+        "end": 999
       }
     ]
   },
@@ -11164,10 +11183,12 @@
     "lemma": "Ilercavonia",
     "previous": "Ilercavones",
     "next": "Ilerda",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Schulten"
+        "end": 999,
+        "author": "Schulten."
       }
     ]
   },
@@ -11175,10 +11196,12 @@
     "lemma": "Ilerda",
     "previous": "Ilercavonia",
     "next": "Ilergetes",
+    "wp_link": "w:de:Lleida",
     "chapters": [
       {
         "start": 999,
-        "author": "Schulten"
+        "end": 999,
+        "author": "Schulten."
       }
     ]
   },
@@ -11186,10 +11209,12 @@
     "lemma": "Ilergetes",
     "previous": "Ilerda",
     "next": "Ilex",
+    "wp_link": "w:de:Lleida",
     "chapters": [
       {
         "start": 999,
-        "author": "Schulten"
+        "end": 999,
+        "author": "Schulten."
       }
     ]
   },
@@ -11197,9 +11222,13 @@
     "lemma": "Ilex",
     "previous": "Ilergetes",
     "next": "Ilia 1",
+    "redirect": "Eiche",
+    "proof_read": 3,
+    "wp_link": "w:de:Eiche",
     "chapters": [
       {
-        "start": 999
+        "start": 999,
+        "end": 999
       }
     ]
   },
@@ -11207,11 +11236,12 @@
     "lemma": "Ilia 1",
     "previous": "Ilex",
     "next": "Ilia 2",
+    "wp_link": "w:de:Rhea Silvia",
     "chapters": [
       {
         "start": 999,
         "end": 1000,
-        "author": "Latte"
+        "author": "Latte."
       }
     ]
   },
@@ -11219,10 +11249,12 @@
     "lemma": "Ilia 2",
     "previous": "Ilia 1",
     "next": "Ilias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1000,
-        "author": "Münzer"
+        "end": 1000,
+        "author": "Münzer."
       }
     ]
   },
@@ -11230,11 +11262,14 @@
     "lemma": "Ilias",
     "previous": "Ilia 2",
     "next": "Ilias latina",
+    "proof_read": 2,
+    "wp_link": "w:de:Ilias",
+    "ws_link": "s:en:The Iliad",
     "chapters": [
       {
         "start": 1000,
         "end": 1057,
-        "author": "Mülder"
+        "author": "Mülder."
       }
     ]
   },
