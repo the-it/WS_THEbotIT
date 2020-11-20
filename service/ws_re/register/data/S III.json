@@ -11838,7 +11838,6 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
-    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11852,7 +11851,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconice",
+    "previous": "Buconica",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -24061,16 +24060,44 @@
   },
   {
     "lemma": "Ilarcuris",
-    "previous": "Ikos"
+    "previous": "Ikos",
+    "next": "Ilasarus",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1206,
+        "end": 1206,
+        "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Ilasarus",
+    "previous": "Ilarcuris",
+    "wp_link": "w:de:en:Ilasaros",
+    "wd_link": "d:Q16126069",
+    "chapters": [
+      {
+        "start": 1206,
+        "end": 1206,
+        "author": "Grohmann."
+      }
+    ]
+  },
+  {
+    "lemma": "Ilerda",
+    "next": "Iliberri"
   },
   {
     "lemma": "Iliberri",
+    "previous": "Ilerda",
     "next": "Iliberri 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1210,
         "end": 1211,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },

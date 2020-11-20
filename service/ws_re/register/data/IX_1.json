@@ -10959,6 +10959,7 @@
     "next": "Ila 1",
     "proof_read": 2,
     "wp_link": "w:de:Iktinos",
+    "wd_link": "d:Q311502",
     "chapters": [
       {
         "start": 995,
@@ -11015,6 +11016,7 @@
     "sort_key": "Ilai 2",
     "proof_read": 2,
     "wp_link": "w:de:Ile (Griechenland)",
+    "wd_link": "d:Q1658377",
     "chapters": [
       {
         "start": 997,
@@ -11107,6 +11109,7 @@
     "previous": "Ilaros",
     "next": "Ildico",
     "wp_link": "w:de:en:Ilasaros",
+    "wd_link": "d:Q16126069",
     "chapters": [
       {
         "start": 998,
@@ -11121,6 +11124,7 @@
     "next": "Ildum",
     "proof_read": 2,
     "wp_link": "w:de:Ildico",
+    "wd_link": "d:Q449672",
     "chapters": [
       {
         "start": 999,
@@ -11299,42 +11303,47 @@
       {
         "start": 1060,
         "end": 1061,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Ilici",
     "previous": "Iliberris",
-    "next": "Ilieia",
+    "next": "Ἰλίεια",
+    "wp_link": "w:de:Elche",
     "chapters": [
       {
         "start": 1061,
-        "author": "Schulten"
+        "end": 1061,
+        "author": "Schulten."
       }
     ]
   },
   {
-    "lemma": "Ilieia",
+    "lemma": "Ἰλίεια",
     "previous": "Ilici",
     "next": "Ilienses",
+    "sort_key": "Ilieia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1061,
         "end": 1062,
-        "author": "Stengel"
+        "author": "Stengel."
       }
     ]
   },
   {
     "lemma": "Ilienses",
-    "previous": "Ilieia",
+    "previous": "Ἰλίεια",
     "next": "Ilieon kome",
+    "wp_link": "w:de:en:Ilienses",
     "chapters": [
       {
         "start": 1062,
         "end": 1063,
-        "author": "Philipp"
+        "author": "Philipp."
       }
     ]
   },
