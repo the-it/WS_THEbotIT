@@ -6925,7 +6925,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Ias(s)ii",
+    "next": "Iasikles",
     "chapters": [
       {
         "start": 751,
@@ -11203,6 +11203,7 @@
     "previous": "Ilercavonia",
     "next": "Ilergetes",
     "wp_link": "w:de:Lleida",
+    "wd_link": "d:Q15090",
     "chapters": [
       {
         "start": 999,
@@ -11216,6 +11217,7 @@
     "previous": "Ilerda",
     "next": "Ilex",
     "wp_link": "w:de:Lleida",
+    "wd_link": "d:Q15090",
     "chapters": [
       {
         "start": 999,
@@ -11243,6 +11245,7 @@
     "previous": "Ilex",
     "next": "Ilia 2",
     "wp_link": "w:de:Rhea Silvia",
+    "wd_link": "d:Q219936",
     "chapters": [
       {
         "start": 999,
@@ -11268,9 +11271,9 @@
     "lemma": "Ilias",
     "previous": "Ilia 2",
     "next": "Ilias latina",
-    "proof_read": 2,
     "wp_link": "w:de:Ilias",
     "ws_link": "s:en:The Iliad",
+    "wd_link": "d:Q8275",
     "chapters": [
       {
         "start": 1000,
@@ -11350,22 +11353,43 @@
   {
     "lemma": "Ilieon kome",
     "previous": "Ilienses",
-    "next": "Iliga",
+    "next": "Ilieon polis",
+    "proof_read": 2,
+    "wp_link": "w:de:Troja",
+    "wd_link": "d:Q22647",
     "chapters": [
       {
         "start": 1063,
-        "author": "Bürchner"
+        "end": 1063,
+        "author": "Bürchner."
+      }
+    ]
+  },
+  {
+    "lemma": "Ilieon polis",
+    "previous": "Ilieon kome",
+    "next": "Iliga",
+    "proof_read": 2,
+    "wp_link": "w:de:Troja",
+    "chapters": [
+      {
+        "start": 1063,
+        "end": 1063,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Iliga",
-    "previous": "Ilieon kome",
+    "previous": "Ilieon polis",
     "next": "Iliokolone",
+    "proof_read": 2,
+    "wp_link": "w:de:Ichtiman",
     "chapters": [
       {
         "start": 1063,
-        "author": "Vulić"
+        "end": 1063,
+        "author": "Vulić."
       }
     ]
   },
@@ -11373,10 +11397,12 @@
     "lemma": "Iliokolone",
     "previous": "Iliga",
     "next": "Ilion, Ilios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1063,
-        "author": "Bürchner"
+        "end": 1063,
+        "author": "Bürchner."
       }
     ]
   },
@@ -11384,10 +11410,12 @@
     "lemma": "Ilion, Ilios",
     "previous": "Iliokolone",
     "next": "Ilion, Ilios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1064,
-        "author": "Bürchner"
+        "end": 1064,
+        "author": "Bürchner."
       }
     ]
   },
@@ -11395,10 +11423,12 @@
     "lemma": "Ilion, Ilios 1",
     "previous": "Ilion, Ilios",
     "next": "Ilion, Ilios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1064,
-        "author": "Bürchner"
+        "end": 1064,
+        "author": "Bürchner."
       }
     ]
   },
@@ -11406,11 +11436,12 @@
     "lemma": "Ilion, Ilios 2",
     "previous": "Ilion, Ilios 1",
     "next": "Ilion, Ilios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1064,
         "end": 1065,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },

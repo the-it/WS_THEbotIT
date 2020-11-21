@@ -24074,6 +24074,7 @@
   {
     "lemma": "Ilasarus",
     "previous": "Ilarcuris",
+    "next": "Ildum",
     "wp_link": "w:de:en:Ilasaros",
     "wd_link": "d:Q16126069",
     "chapters": [
@@ -24085,8 +24086,45 @@
     ]
   },
   {
+    "lemma": "Ildum",
+    "previous": "Ilasarus",
+    "next": "Ilercavonia",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1206,
+        "end": 1207,
+        "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Ilercavonia",
+    "previous": "Ildum",
+    "next": "Ilerda",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1207,
+        "end": 1207,
+        "author": "Keune."
+      }
+    ]
+  },
+  {
     "lemma": "Ilerda",
-    "next": "Iliberri"
+    "previous": "Ilercavonia",
+    "next": "Iliberri",
+    "proof_read": 2,
+    "wp_link": "w:de:Lleida",
+    "wd_link": "d:Q15090",
+    "chapters": [
+      {
+        "start": 1207,
+        "end": 1210,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Iliberri",
@@ -24104,17 +24142,19 @@
   {
     "lemma": "Iliberri 1",
     "previous": "Iliberri",
-    "next": "Iresia",
+    "next": "Iliberri 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Granada",
     "chapters": [
       {
         "start": 1211,
-        "end": 1215
+        "end": 1215,
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Iresia",
-    "previous": "Iliberri 1",
     "next": "Iliberri 2",
     "chapters": [
       {
