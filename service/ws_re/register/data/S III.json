@@ -18386,7 +18386,7 @@
     "lemma": "Drusus 5",
     "previous": "Drongilon",
     "next": "Drypetis",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 415,
@@ -18411,7 +18411,7 @@
     "lemma": "Dubitatus",
     "previous": "Drypetis",
     "next": "Dunius a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 415,
@@ -18424,7 +18424,7 @@
     "lemma": "Dunius a",
     "previous": "Dubitatus",
     "next": "Dunon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 415,
@@ -24180,41 +24180,63 @@
     "lemma": "Iliberri 3",
     "previous": "Iliberri 2",
     "next": "Iliberri 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1215,
         "end": 1216,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Iliberri 4",
     "previous": "Iliberri 3",
-    "next": "Ilienses 2",
+    "next": "Ilici",
+    "proof_read": 2,
+    "wp_link": "w:de:Auch",
     "chapters": [
       {
         "start": 1216,
         "end": 1217,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
-    "lemma": "Ilienses 2",
+    "lemma": "Ilici",
     "previous": "Iliberri 4",
-    "next": "Ilipa, Ilipula",
+    "next": "Ilienses 2"
+  },
+  {
+    "lemma": "Ilienses 2",
+    "previous": "Ilici",
+    "next": "Iligga",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1220,
         "end": 1221,
-        "author": "Keune"
+        "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Iligga",
+    "previous": "Ilienses 2",
+    "next": "Ilipa, Ilipula",
+    "redirect": "Ilipa, Ilipula",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1221,
+        "end": 1221
       }
     ]
   },
   {
     "lemma": "Ilipa, Ilipula",
-    "previous": "Ilienses 2",
+    "previous": "Iligga",
     "next": "Ilipa, Ilipula 2",
     "chapters": [
       {
