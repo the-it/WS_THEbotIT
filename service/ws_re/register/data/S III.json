@@ -133,11 +133,24 @@
   {
     "lemma": "Abella",
     "previous": "abecedarius, -a, -um",
-    "next": "Abdera 1"
+    "next": "Abdera",
+    "redirect": "Avella",
+    "proof_read": 3,
+    "wp_link": "w:de:Abella",
+    "wd_link": "d:Q318659",
+    "chapters": [
+      {
+        "start": 13,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "lemma": "Abdera",
+    "previous": "Abella"
   },
   {
     "lemma": "Abdera 1",
-    "previous": "Abella",
     "next": "Abdere",
     "proof_read": 3,
     "wp_link": "w:de:Abdera",
@@ -21295,7 +21308,7 @@
     "lemma": "Gemella a",
     "previous": "Gelupara",
     "next": "Gemellus 10",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 542,
@@ -24206,7 +24219,17 @@
   {
     "lemma": "Ilici",
     "previous": "Iliberri 4",
-    "next": "Ilienses 2"
+    "next": "Ilienses 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Elche",
+    "wd_link": "d:Q10509",
+    "chapters": [
+      {
+        "start": 1217,
+        "end": 1220,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Ilienses 2",
@@ -24238,33 +24261,52 @@
     "lemma": "Ilipa, Ilipula",
     "previous": "Iligga",
     "next": "Ilipa, Ilipula 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1221,
-        "author": "Keune"
+        "end": 1225,
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Ilipa, Ilipula 2",
     "previous": "Ilipa, Ilipula",
-    "next": "Ilipa, Ilipula 4",
+    "next": "Ilipa, Ilipula 3",
+    "proof_read": 2,
+    "wp_link": "w:de:Niebla",
     "chapters": [
       {
         "start": 1225,
-        "author": "Keune"
+        "end": 1225,
+        "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Ilipa, Ilipula 3",
+    "previous": "Ilipa, Ilipula 2",
+    "next": "Ilipa, Ilipula 4",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1225,
+        "end": 1225,
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Ilipa, Ilipula 4",
-    "previous": "Ilipa, Ilipula 2",
+    "previous": "Ilipa, Ilipula 3",
     "next": "Ilipa, Ilipula 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1225,
         "end": 1226,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
@@ -24272,10 +24314,12 @@
     "lemma": "Ilipa, Ilipula 5",
     "previous": "Ilipa, Ilipula 4",
     "next": "Iliturgi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1226,
-        "author": "Keune"
+        "end": 1226,
+        "author": "Keune."
       }
     ]
   },
@@ -24283,29 +24327,42 @@
     "lemma": "Iliturgi",
     "previous": "Ilipa, Ilipula 5",
     "next": "Iliturgicola",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1226,
         "end": 1228,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Iliturgicola",
     "previous": "Iliturgi",
-    "next": "Ilucro(nensis?)",
+    "next": "Illiberis, Illiberris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1228,
         "end": 1229,
-        "author": "Keune"
+        "author": "Keune."
+      }
+    ]
+  },
+  {
+    "lemma": "Illiberis, Illiberris",
+    "previous": "Iliturgicola",
+    "redirect": "Iliberri 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
       }
     ]
   },
   {
     "lemma": "Ilucro(nensis?)",
-    "previous": "Iliturgicola",
     "next": "Ilurci",
     "chapters": [
       {

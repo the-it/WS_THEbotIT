@@ -11315,6 +11315,7 @@
     "previous": "Iliberris",
     "next": "Ἰλίεια",
     "wp_link": "w:de:Elche",
+    "wd_link": "d:Q10509",
     "chapters": [
       {
         "start": 1061,
@@ -11342,6 +11343,7 @@
     "previous": "Ἰλίεια",
     "next": "Ilieon kome",
     "wp_link": "w:de:en:Ilienses",
+    "wd_link": "d:Q636131",
     "chapters": [
       {
         "start": 1062,
@@ -11672,40 +11674,47 @@
     "chapters": [
       {
         "start": 1068,
-        "author": "Eitrem"
+        "end": 1068,
+        "author": "Eitrem."
       }
     ]
   },
   {
     "lemma": "Ilistra",
     "previous": "Ilissiades",
-    "next": "Iliturgicula",
+    "next": "Iliturgicola",
+    "proof_read": 2,
+    "wp_link": "w:de:en:Ilistra",
     "chapters": [
       {
         "start": 1068,
-        "author": "Ruge"
+        "end": 1068,
+        "author": "Ruge."
       }
     ]
   },
   {
-    "lemma": "Iliturgicula",
+    "lemma": "Iliturgicola",
     "previous": "Ilistra",
     "next": "Iliturgis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1068,
-        "author": "Schulten"
+        "end": 1068,
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Iliturgis",
-    "previous": "Iliturgicula",
+    "previous": "Iliturgicola",
     "next": "Iliu polis",
     "chapters": [
       {
         "start": 1068,
-        "author": "Schulten"
+        "end": 1068,
+        "author": "Schulten."
       }
     ]
   },
@@ -11713,10 +11722,12 @@
     "lemma": "Iliu polis",
     "previous": "Iliturgis",
     "next": "Ilixo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1069,
-        "author": "Bürchner"
+        "end": 1069,
+        "author": "Bürchner."
       }
     ]
   },
@@ -11724,10 +11735,12 @@
     "lemma": "Ilixo",
     "previous": "Iliu polis",
     "next": "Illiberris 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1069,
-        "author": "Keune"
+        "end": 1069,
+        "author": "Keune."
       }
     ]
   },
@@ -11735,10 +11748,12 @@
     "lemma": "Illiberris 1",
     "previous": "Ilixo",
     "next": "Illiberris 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1069,
-        "author": "Haug"
+        "end": 1069,
+        "author": "Haug."
       }
     ]
   },
@@ -11746,41 +11761,52 @@
     "lemma": "Illiberris 2",
     "previous": "Illiberris 1",
     "next": "Illinos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1069,
-        "author": "Haug"
+        "end": 1069,
+        "author": "Haug."
       }
     ]
   },
   {
     "lemma": "Illinos",
     "previous": "Illiberris 2",
-    "next": "Illoarudamos",
+    "next": "Ἰλλοαρούδαμος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1069,
-        "author": "Weissbach"
+        "end": 1069,
+        "author": "Weissbach."
       }
     ]
   },
   {
-    "lemma": "Illoarudamos",
+    "lemma": "Ἰλλοαρούδαμος",
     "previous": "Illinos",
     "next": "Illustratus",
+    "sort_key": "Illoarudamos",
+    "redirect": "Evilmerodach",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1069
+        "start": 1069,
+        "end": 1069
       }
     ]
   },
   {
     "lemma": "Illustratus",
-    "previous": "Illoarudamos",
+    "previous": "Ἰλλοαρούδαμος",
     "next": "Illustris",
+    "redirect": "Illustris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1070
+        "start": 1070,
+        "end": 1070
       }
     ]
   },
@@ -11792,7 +11818,7 @@
       {
         "start": 1070,
         "end": 1085,
-        "author": "Berger"
+        "author": "Berger."
       }
     ]
   },
