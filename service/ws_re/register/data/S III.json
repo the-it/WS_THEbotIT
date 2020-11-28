@@ -16658,7 +16658,7 @@
     "lemma": "Decius 7",
     "previous": "Decempagi",
     "next": "Decmanus 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 327,
@@ -24279,6 +24279,7 @@
     "next": "Ilipa, Ilipula 3",
     "proof_read": 2,
     "wp_link": "w:de:Niebla",
+    "wd_link": "d:Q828723",
     "chapters": [
       {
         "start": 1225,
@@ -24355,7 +24356,20 @@
   {
     "lemma": "Illiberis, Illiberris",
     "previous": "Iliturgicola",
+    "next": "Illici",
     "redirect": "Iliberri 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Illici",
+    "previous": "Illiberis, Illiberris",
+    "redirect": "Ilici",
     "proof_read": 2,
     "chapters": [
       {

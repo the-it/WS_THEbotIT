@@ -1721,7 +1721,7 @@
     "lemma": "Hylaithos",
     "previous": "Hylaios 4",
     "next": "Hylamoi",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 109,
@@ -6925,7 +6925,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Iasikles",
+    "next": "Ias(s)ii",
     "chapters": [
       {
         "start": 751,
@@ -11691,6 +11691,7 @@
     "next": "Iliturgicola",
     "proof_read": 2,
     "wp_link": "w:de:en:Ilistra",
+    "wd_link": "d:Q85768994",
     "chapters": [
       {
         "start": 1068,
@@ -12014,7 +12015,7 @@
   {
     "lemma": "Ilunnis",
     "previous": "Ilumber",
-    "next": "Ilunnis",
+    "next": "Ilunnus",
     "proof_read": 2,
     "chapters": [
       {
@@ -12028,9 +12029,12 @@
     "lemma": "Ilunnus",
     "previous": "Ilunnis",
     "next": "Ilunum",
+    "redirect": "Ilunnis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1092
+        "start": 1092,
+        "end": 1092
       }
     ]
   },
@@ -12038,10 +12042,12 @@
     "lemma": "Ilunum",
     "previous": "Ilunnus",
     "next": "Ilu polis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1092,
-        "author": "Schulten"
+        "end": 1092,
+        "author": "Schulten."
       }
     ]
   },
@@ -12049,10 +12055,12 @@
     "lemma": "Ilu polis",
     "previous": "Ilunum",
     "next": "Ilurberrixo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1092,
-        "author": "Bürchner"
+        "end": 1092,
+        "author": "Bürchner."
       }
     ]
   },
@@ -12060,10 +12068,12 @@
     "lemma": "Ilurberrixo",
     "previous": "Ilu polis",
     "next": "Ilurbida",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1092,
-        "author": "Haug"
+        "end": 1092,
+        "author": "Haug."
       }
     ]
   },
@@ -12071,10 +12081,12 @@
     "lemma": "Ilurbida",
     "previous": "Ilurberrixo",
     "next": "Ilurcavones, Ilercavones",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1092,
-        "author": "Schulten"
+        "end": 1092,
+        "author": "Schulten."
       }
     ]
   },
@@ -12086,7 +12098,7 @@
       {
         "start": 1092,
         "end": 1093,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
@@ -12094,9 +12106,11 @@
     "lemma": "Ilurcis",
     "previous": "Ilurcavones, Ilercavones",
     "next": "Ilurco",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1093
+        "start": 1093,
+        "end": 1093
       }
     ]
   },
