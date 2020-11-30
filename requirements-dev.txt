@@ -88,7 +88,7 @@ six==1.15.0               # via -c requirements.txt, astroid, aws-sam-translator
 smmap==3.0.4              # via -c requirements.txt, gitdb
 soupsieve==2.0.1          # via -c requirements.txt, beautifulsoup4
 sshpubkeys==3.1.0         # via moto
-stevedore==3.2.2          # via bandit
+stevedore==3.3.0          # via bandit
 testfixtures==6.15.0      # via -r requirements-dev.in
 toml==0.10.2              # via dparse, pylint
 tqdm==4.51.0              # via internetarchive
