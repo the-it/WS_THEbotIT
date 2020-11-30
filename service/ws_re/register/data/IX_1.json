@@ -6925,7 +6925,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Ias(s)ii",
+    "next": "Iasikles",
     "chapters": [
       {
         "start": 751,
@@ -12545,7 +12545,7 @@
       {
         "start": 1112,
         "end": 1133,
-        "author": "Latte"
+        "author": "Latte."
       }
     ]
   },
@@ -12553,11 +12553,13 @@
     "lemma": "Immunes",
     "previous": "Immolatio",
     "next": "Immunitas",
+    "proof_read": 2,
+    "wp_link": "w:de:Immunes",
     "chapters": [
       {
         "start": 1133,
         "end": 1134,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
@@ -12569,7 +12571,7 @@
       {
         "start": 1134,
         "end": 1136,
-        "author": "Ziegler"
+        "author": "Ziegler."
       }
     ]
   },
@@ -12577,9 +12579,12 @@
     "lemma": "Imolas",
     "previous": "Immunitas",
     "next": "Impedimenta",
+    "redirect": "Forum Corneli 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1136
+        "start": 1136,
+        "end": 1136
       }
     ]
   },
@@ -12587,28 +12592,44 @@
     "lemma": "Impedimenta",
     "previous": "Imolas",
     "next": "Impediti",
+    "proof_read": 2,
+    "wp_link": "w:de:Tross",
     "chapters": [
       {
         "start": 1136,
         "end": 1139,
-        "author": "Fiebiger"
+        "author": "Fiebiger."
       }
     ]
   },
   {
     "lemma": "Impediti",
     "previous": "Impedimenta",
-    "next": "Imperator",
+    "next": "Impensae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1139,
-        "author": "Fiebiger"
+        "end": 1139,
+        "author": "Fiebiger."
+      }
+    ]
+  },
+  {
+    "lemma": "Impensae",
+    "previous": "Impediti",
+    "next": "Imperator",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1139,
+        "end": 1139
       }
     ]
   },
   {
     "lemma": "Imperator",
-    "previous": "Impediti",
+    "previous": "Impensae",
     "next": "Impesae",
     "chapters": [
       {
