@@ -94,7 +94,7 @@ toml==0.10.2              # via dparse, pylint
 tqdm==4.54.0              # via internetarchive
 typed-ast==1.4.1          # via mypy
 typing-extensions==3.7.4.3  # via mypy
-urllib3==1.25.11          # via -c requirements.txt, botocore, requests, responses
+urllib3==1.26.2          # via -c requirements.txt, botocore, requests, responses
 websocket-client==0.57.0  # via docker
 werkzeug==1.0.1           # via moto
 wrapt==1.12.1             # via astroid, aws-xray-sdk
