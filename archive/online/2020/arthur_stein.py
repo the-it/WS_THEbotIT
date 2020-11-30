@@ -20,6 +20,7 @@ class ArthurStein(OneTimeBot):
             lemma = Page(self.wiki, item["title"])
             if self.is_protected(lemma):
                 list_protected.append(lemma.title())
+                lemma.protect(protections={"edit": "autoconfirmed", "move": "autoconfirmed"}, reason="is now common")
             categories = [item.title() for item in lemma.categories()]
             if "Kategorie:RE:Platzhalter" in categories:
                 list_platzhalter.append(lemma.title())
@@ -49,6 +50,7 @@ class ArthurStein(OneTimeBot):
 
 
 if __name__ == "__main__":
-    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
+    WS_WIKI = Site(code="de", fam="wikisource", user="THE IT")
+    WS_WIKI.login()
     with ArthurStein(wiki=WS_WIKI, debug=False, log_to_screen=True, log_to_wiki=False) as bot:
         bot.run()
