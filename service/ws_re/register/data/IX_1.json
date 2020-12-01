@@ -6114,17 +6114,6 @@
     ]
   },
   {
-    "lemma": "Ianthe",
-    "previous": "Ianoha",
-    "next": "Ianthe 1",
-    "chapters": [
-      {
-        "start": 695,
-        "author": "Eitrem"
-      }
-    ]
-  },
-  {
     "lemma": "Ianthe 1",
     "previous": "Ianoha",
     "next": "Ianthe 2",
@@ -6925,7 +6914,6 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
-    "next": "Iasikles",
     "chapters": [
       {
         "start": 751,
@@ -6935,8 +6923,20 @@
     ]
   },
   {
-    "lemma": "Iasikles",
+    "lemma": "Ias(s)ii",
     "previous": "Iasdius 3",
+    "next": "Iasikles",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 752,
+        "end": 752,
+        "author": "Vulić."
+      }
+    ]
+  },
+  {
+    "lemma": "Iasikles",
     "next": "Ἰασικὸς κόλπος",
     "proof_read": 2,
     "chapters": [
@@ -6986,19 +6986,6 @@
         "start": 752,
         "end": 758,
         "author": "Gundel."
-      }
-    ]
-  },
-  {
-    "lemma": "Ias(s)ii",
-    "previous": "Iasdius 3",
-    "next": "Iasikles",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 752,
-        "end": 752,
-        "author": "Vulić."
       }
     ]
   },
@@ -8557,6 +8544,19 @@
       }
     ]
   },
+    {
+    "lemma": "Ichnaia",
+    "previous": "Ἴχναι 2",
+    "next": "Ichnusa",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 830,
+        "end": 830
+      }
+    ]
+  },
   {
     "lemma": "Ichnusa",
     "previous": "Ichnaia",
@@ -8573,7 +8573,6 @@
   {
     "lemma": "Ichor",
     "previous": "Ichnusa",
-    "next": "Ichthyas",
     "chapters": [
       {
         "start": 830,
@@ -8583,8 +8582,22 @@
     ]
   },
   {
-    "lemma": "Ichthyas",
+    "lemma": "Icht Mare",
     "previous": "Ichor",
+    "next": "Ichthyas",
+    "proof_read": 2,
+    "wp_link": "w:de:Ärmelkanal",
+    "wd_link": "d:Q34640",
+    "chapters": [
+      {
+        "start": 830,
+        "end": 830,
+        "author": "Haverfield."
+      }
+    ]
+  },
+  {
+    "lemma": "Ichthyas",
     "next": "Ichthyoessa, Ichthyussa",
     "proof_read": 2,
     "wp_link": "w:de:en:Ichthyas",
@@ -8622,21 +8635,6 @@
         "start": 830,
         "end": 843,
         "author": "Lamer."
-      }
-    ]
-  },
-  {
-    "lemma": "Icht Mare",
-    "previous": "Ichor",
-    "next": "Ichthyas",
-    "proof_read": 2,
-    "wp_link": "w:de:Ärmelkanal",
-    "wd_link": "d:Q34640",
-    "chapters": [
-      {
-        "start": 830,
-        "end": 830,
-        "author": "Haverfield."
       }
     ]
   },
@@ -13052,19 +13050,8 @@
       }
     ]
   },
-  {
-    "lemma": "Ichnaia",
-    "previous": "Ἴχναι 2",
-    "next": "Ichnusa",
-    "redirect": true,
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 830,
-        "end": 830
-      }
-    ]
-  },
+  {"lemma":  "Ibis"},
+  {"lemma":  "Icauna"},
   {
     "lemma": "Ichnaia 1",
     "previous": "Icauna",
@@ -13229,5 +13216,6 @@
         "author": "Jessen."
       }
     ]
-  }
+  },
+  {"lemma": "Idikara 1"}
 ]
