@@ -11665,6 +11665,7 @@
     "next": "Ilissiades",
     "proof_read": 2,
     "wp_link": "w:de:Ilisos",
+    "wd_link": "d:Q1658567",
     "chapters": [
       {
         "start": 1067,
@@ -12651,24 +12652,54 @@
   },
   {
     "lemma": "Hischylos",
-    "previous": "Impesae",
-    "next": "Hygiainon 2",
+    "previous": "Imperator",
+    "next": "Histiaios 4",
+    "wp_link": "w:de:Hischylos",
     "chapters": [
       {
         "start": 1155,
         "end": 1158,
-        "author": "Leonard"
+        "author": "Leonard."
+      }
+    ]
+  },
+  {
+    "lemma": "Histiaios 4",
+    "previous": "Hischylos",
+    "next": "Hyagnis",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1158,
+        "end": 1158,
+        "author": "Lippold."
+      }
+    ]
+  },
+  {
+    "lemma": "Hyagnis",
+    "previous": "Histiaios 4",
+    "next": "Hygiainon 2",
+    "proof_read": 2,
+    "wp_link": "w:en:Hyagnis (mythology)",
+    "wd_link": "d:Q65079958",
+    "chapters": [
+      {
+        "start": 1158,
+        "end": 1158,
+        "author": "Kroll."
       }
     ]
   },
   {
     "lemma": "Hygiainon 2",
-    "previous": "Hischylos",
+    "previous": "Hyagnis",
     "next": "Hypaisia",
     "chapters": [
       {
         "start": 1158,
-        "author": "Leonard"
+        "end": 1158,
+        "author": "Leonard."
       }
     ]
   },
@@ -12676,9 +12707,12 @@
     "lemma": "Hypaisia",
     "previous": "Hygiainon 2",
     "next": "Hypana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1158
+        "start": 1158,
+        "end": 1158,
+        "author": "Bölte."
       }
     ]
   },
