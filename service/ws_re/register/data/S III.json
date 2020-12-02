@@ -16271,7 +16271,7 @@
     "lemma": "Dalheim",
     "previous": "Dalatarba 2",
     "next": "Damagetos 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Ricciacum",
     "wd_link": "d:Q5210859",
     "chapters": [
@@ -16738,7 +16738,7 @@
     "lemma": "Deiotarus 1",
     "previous": "Dedicatio",
     "next": "Deiotarus 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 328,
@@ -24371,7 +24371,20 @@
   {
     "lemma": "Illici",
     "previous": "Illiberis, Illiberris",
+    "next": "Illigyris",
     "redirect": "Ilici",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Illigyris",
+    "previous": "Illici",
+    "redirect": "Iliberri 3",
     "proof_read": 2,
     "chapters": [
       {

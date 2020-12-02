@@ -6914,6 +6914,7 @@
   {
     "lemma": "Iasdius 3",
     "previous": "Iasdius 2",
+    "next": "Ias(s)ii",
     "chapters": [
       {
         "start": 751,
@@ -6937,6 +6938,7 @@
   },
   {
     "lemma": "Iasikles",
+    "previous": "Ias(s)ii",
     "next": "Ἰασικὸς κόλπος",
     "proof_read": 2,
     "chapters": [
@@ -8544,7 +8546,7 @@
       }
     ]
   },
-    {
+  {
     "lemma": "Ichnaia",
     "previous": "Ἴχναι 2",
     "next": "Ichnusa",
@@ -8573,6 +8575,7 @@
   {
     "lemma": "Ichor",
     "previous": "Ichnusa",
+    "next": "Icht Mare",
     "chapters": [
       {
         "start": 830,
@@ -8598,6 +8601,7 @@
   },
   {
     "lemma": "Ichthyas",
+    "previous": "Icht Mare",
     "next": "Ichthyoessa, Ichthyussa",
     "proof_read": 2,
     "wp_link": "w:de:en:Ichthyas",
@@ -13050,8 +13054,25 @@
       }
     ]
   },
-  {"lemma":  "Ibis"},
-  {"lemma":  "Icauna"},
+  {
+    "lemma": "Ibis",
+    "previous": "Iazyges",
+    "next": "Icauna",
+    "proof_read": 2,
+    "wp_link": "w:de:Ibis",
+    "chapters": [
+      {
+        "start": 1191,
+        "end": 1191,
+        "author": "Roeder."
+      }
+    ]
+  },
+  {
+    "lemma": "Icauna",
+    "previous": "Ibis",
+    "next": "Ichnaia 1"
+  },
   {
     "lemma": "Ichnaia 1",
     "previous": "Icauna",
@@ -13217,5 +13238,17 @@
       }
     ]
   },
-  {"lemma": "Idikara 1"}
+  {
+    "lemma": "Idikara 1",
+    "previous": "Idaios 10",
+    "next": "Imperium",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1193,
+        "end": 1202,
+        "author": "Tkač."
+      }
+    ]
+  }
 ]
