@@ -3049,11 +3049,12 @@
     "lemma": "Hyperbolos",
     "previous": "Hyperbolios",
     "next": "Hyperboreer",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 254,
         "end": 258,
-        "author": "Swoboda, [Heinrich]"
+        "author": "Swoboda."
       }
     ]
   },
@@ -12642,12 +12643,15 @@
   {
     "lemma": "Imperator",
     "previous": "Impensae",
-    "next": "Impesae",
+    "next": "Hischylos",
+    "proof_read": 2,
+    "wp_link": "w:de:Imperator",
+    "wd_link": "d:Q725434",
     "chapters": [
       {
         "start": 1139,
         "end": 1154,
-        "author": "Rosenberg"
+        "author": "Rosenberg."
       }
     ]
   },
@@ -12666,6 +12670,7 @@
     "previous": "Imperator",
     "next": "Histiaios 4",
     "wp_link": "w:de:Hischylos",
+    "wd_link": "d:Q1620648",
     "chapters": [
       {
         "start": 1155,
@@ -12731,22 +12736,25 @@
     "lemma": "Hypana",
     "previous": "Hypaisia",
     "next": "Hypaton, Hypatos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1158,
         "end": 1159,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
   {
     "lemma": "Hypaton, Hypatos",
     "previous": "Hypana",
-    "next": "Hyperbolos 1",
+    "next": "Hyperbolos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1160,
-        "author": "Bölte"
+        "end": 1160,
+        "author": "Bölte."
       }
     ]
   },
@@ -12954,10 +12962,12 @@
     "lemma": "Iactus 2",
     "previous": "Ἰαβαδίου νῆσος",
     "next": "Ianassa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1177,
-        "author": "Hepding"
+        "end": 1177,
+        "author": "Berger."
       }
     ]
   },
@@ -12965,9 +12975,12 @@
     "lemma": "Ianassa",
     "previous": "Iactus 2",
     "next": "Iastai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1177
+        "start": 1177,
+        "end": 1177,
+        "author": "Hepding."
       }
     ]
   },
@@ -13081,7 +13094,17 @@
   {
     "lemma": "Icauna",
     "previous": "Ibis",
-    "next": "Ichnaia 1"
+    "next": "Ichnaia 1",
+    "proof_read": 2,
+    "wp_link": "w:de:Icauna",
+    "wd_link": "d:Q15819846",
+    "chapters": [
+      {
+        "start": 1191,
+        "end": 1191,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Ichnaia 1",
