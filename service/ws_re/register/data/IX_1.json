@@ -11734,7 +11734,7 @@
     "lemma": "Iliu polis",
     "previous": "Iliturgis",
     "next": "Ilixo",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1069,
@@ -12771,12 +12771,14 @@
   },
   {
     "lemma": "Hypereia 4",
-    "previous": "Hyperbolos 1",
+    "previous": "Hyperbolos",
     "next": "Hyperesia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1160,
-        "author": "Bölte"
+        "end": 1160,
+        "author": "Bölte."
       }
     ]
   },
@@ -12784,15 +12786,18 @@
     "lemma": "Hyperesia",
     "previous": "Hypereia 4",
     "next": "Hyperteleaton",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1160
+        "start": 1160,
+        "end": 1160,
+        "author": "Bölte."
       }
     ]
   },
   {
     "lemma": "Hyperteleaton",
-    "previous": "Hypereia 4",
+    "previous": "Hyperesia",
     "next": "Hyphanteion",
     "proof_read": 2,
     "chapters": [
@@ -12807,11 +12812,12 @@
     "lemma": "Hyphanteion",
     "previous": "Hyperteleaton",
     "next": "Hypochalkis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1162,
         "end": 1163,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
@@ -12819,10 +12825,12 @@
     "lemma": "Hypochalkis",
     "previous": "Hyphanteion",
     "next": "Hypothebai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1163,
-        "author": "Bölte"
+        "end": 1163,
+        "author": "Bölte."
       }
     ]
   },
@@ -12830,11 +12838,12 @@
     "lemma": "Hypothebai",
     "previous": "Hypochalkis",
     "next": "Hypsa, Hypsoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1163,
         "end": 1164,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
@@ -12842,11 +12851,12 @@
     "lemma": "Hypsa, Hypsoi",
     "previous": "Hypothebai",
     "next": "Hypsion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1164,
         "end": 1165,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
@@ -12854,21 +12864,26 @@
     "lemma": "Hypsion",
     "previous": "Hypsa, Hypsoi",
     "next": "Hypsus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1165,
-        "author": "Bölte"
+        "end": 1165,
+        "author": "Bölte."
       }
     ]
   },
   {
     "lemma": "Hypsus 1",
     "previous": "Hypsion",
-    "next": "Hypsus 1a",
+    "next": "Hypsus 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Hypsus",
     "chapters": [
       {
         "start": 1165,
-        "author": "Bölte"
+        "end": 1165,
+        "author": "Bölte."
       }
     ]
   },
@@ -12885,25 +12900,27 @@
   },
   {
     "lemma": "Hypsus 2",
-    "previous": "Hypsus 1a",
+    "previous": "Hypsus 1",
     "next": "Hyria a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1165,
         "end": 1166,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
   {
     "lemma": "Hyria a",
     "previous": "Hypsus 2",
-    "next": "Hyrmine 1",
+    "next": "Hyrmine",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1166,
         "end": 1169,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },

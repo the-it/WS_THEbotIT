@@ -17788,7 +17788,7 @@
     "lemma": "Ditalco",
     "previous": "Disetus",
     "next": "Διθυράμβιος",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 340,
@@ -17802,7 +17802,7 @@
     "previous": "Ditalco",
     "next": "Diverus",
     "sort_key": "Dithyrambios",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 340,
@@ -17815,7 +17815,7 @@
     "lemma": "Diverus",
     "previous": "Διθυράμβιος",
     "next": "Divicatus 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 340,
@@ -17828,7 +17828,7 @@
     "lemma": "Divicatus 1",
     "previous": "Diverus",
     "next": "Divicus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 341,
@@ -17841,7 +17841,7 @@
     "lemma": "Divicus",
     "previous": "Divicatus 1",
     "next": "Divixtus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 341,
@@ -17867,7 +17867,7 @@
     "lemma": "Dixtus",
     "previous": "Divixtus",
     "next": "Doccius",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 341,
@@ -24384,7 +24384,20 @@
   {
     "lemma": "Illigyris",
     "previous": "Illici",
+    "next": "Illipa, Illipula",
     "redirect": "Iliberri 3",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Illipa, Illipula",
+    "previous": "Illigyris",
+    "redirect": "Ilipa, Ilipula",
     "proof_read": 2,
     "chapters": [
       {
