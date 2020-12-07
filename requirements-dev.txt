@@ -5,7 +5,7 @@
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
 astroid==2.4.2            # via pylint
-attrs==20.2.0             # via jsonschema
+attrs==20.3.0             # via jsonschema
 aws-sam-translator==1.28.1  # via cfn-lint
 aws-xray-sdk==2.6.0       # via moto
 bandit==1.6.2             # via -r requirements-dev.in
