@@ -21191,6 +21191,7 @@
     "lemma": "Gavius 13a",
     "previous": "Gavius 8a",
     "next": "Gaulos a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
@@ -21352,7 +21353,7 @@
     "lemma": "Geminius 3",
     "previous": "Gemenus",
     "next": "Geminius 20a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 542,
@@ -24399,7 +24400,20 @@
   {
     "lemma": "Illipa, Illipula",
     "previous": "Illigyris",
+    "next": "Illiturgi",
     "redirect": "Ilipa, Ilipula",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Illiturgi",
+    "previous": "Illipa, Illipula",
+    "redirect": "Iliturgi",
     "proof_read": 2,
     "chapters": [
       {
