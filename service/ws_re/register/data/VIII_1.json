@@ -6472,6 +6472,7 @@
     "lemma": "Herapion",
     "previous": "Herakon 2",
     "next": "Heras 1",
+    "redirect": "Aurelius 220a",
     "proof_read": 3,
     "chapters": [
       {
@@ -12787,9 +12788,12 @@
     "lemma": "Hesperidum insulae",
     "previous": "Hesperiden",
     "next": "Hesperii Aethiopes",
+    "redirect": "Hesperium promunturium",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1248
+        "start": 1248,
+        "end": 1248
       }
     ]
   },
@@ -12797,41 +12801,52 @@
     "lemma": "Hesperii Aethiopes",
     "previous": "Hesperidum insulae",
     "next": "Hesperinos",
+    "redirect": "Hesperium promunturium",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1248
+        "start": 1248,
+        "end": 1248
       }
     ]
   },
   {
     "lemma": "Hesperinos",
     "previous": "Hesperii Aethiopes",
-    "next": "Hesperios kolpos",
+    "next": "Ἑσπέριος κόλπος",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1248,
-        "author": "Bischoff, [Ernst]"
+        "end": 1248,
+        "author": "Bischoff."
       }
     ]
   },
   {
-    "lemma": "Hesperios kolpos",
+    "lemma": "Ἑσπέριος κόλπος",
     "previous": "Hesperinos",
     "next": "Hesperitae",
+    "sort_key": "Hesperios kolpos",
+    "redirect": "Hesperium promunturium",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1248
+        "start": 1248,
+        "end": 1248
       }
     ]
   },
   {
     "lemma": "Hesperitae",
-    "previous": "Hesperios kolpos",
+    "previous": "Ἑσπέριος κόλπος",
     "next": "Hesperium promunturium",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1248,
-        "author": "Baumgartner"
+        "end": 1248,
+        "author": "Baumgartner."
       }
     ]
   },
@@ -12839,11 +12854,12 @@
     "lemma": "Hesperium promunturium",
     "previous": "Hesperitae",
     "next": "Hesperius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1248,
         "end": 1249,
-        "author": "Fischer"
+        "author": "Fischer."
       }
     ]
   },
@@ -12851,11 +12867,12 @@
     "lemma": "Hesperius 1",
     "previous": "Hesperium promunturium",
     "next": "Hesperius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1249,
         "end": 1250,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -12863,10 +12880,12 @@
     "lemma": "Hesperius 2",
     "previous": "Hesperius 1",
     "next": "Hesperos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1250,
-        "author": "Seeck"
+        "end": 1250,
+        "author": "Seeck."
       }
     ]
   },
