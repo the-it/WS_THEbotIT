@@ -49,7 +49,7 @@ junit-xml==1.9            # via cfn-lint
 lazy-object-proxy==1.5.2  # via astroid
 markupsafe==1.1.1         # via jinja2, moto
 mccabe==0.6.1             # via flake8, pylint
-mock==4.0.2               # via moto
+mock==4.0.3               # via moto
 more-itertools==8.6.0     # via moto
 moto==1.3.16              # via -r requirements-dev.in
 mypy-boto3-cloudformation==1.16.10.0  # via boto3-stubs
