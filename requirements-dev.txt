@@ -86,7 +86,7 @@ safety==1.9.0             # via -r requirements-dev.in
 schema==0.7.3             # via internetarchive
 six==1.15.0               # via -c requirements.txt, astroid, aws-sam-translator, bandit, cfn-lint, cryptography, docker, ecdsa, internetarchive, jsonschema, junit-xml, moto, packaging, python-dateutil, python-jose, requests-mock, responses, websocket-client
 smmap==3.0.4              # via -c requirements.txt, gitdb
-soupsieve==2.0.1          # via -c requirements.txt, beautifulsoup4
+soupsieve==2.1          # via -c requirements.txt, beautifulsoup4
 sshpubkeys==3.1.0         # via moto
 stevedore==3.2.2          # via bandit
 testfixtures==6.15.0      # via -r requirements-dev.in
