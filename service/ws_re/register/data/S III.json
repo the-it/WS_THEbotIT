@@ -24376,7 +24376,7 @@
     "previous": "Illiberis, Illiberris",
     "next": "Illigyris",
     "redirect": "Ilici",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1229,
@@ -24402,7 +24402,7 @@
     "previous": "Illigyris",
     "next": "Illiturgi",
     "redirect": "Ilipa, Ilipula",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1229,
@@ -24413,12 +24413,38 @@
   {
     "lemma": "Illiturgi",
     "previous": "Illipa, Illipula",
+    "next": "Illurco",
     "redirect": "Iliturgi",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1229,
         "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Illurco",
+    "previous": "Illiturgi",
+    "next": "Ilorci",
+    "redirect": "Ilurco",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Ilorci",
+    "previous": "Illurco",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1230,
+        "author": "Keune."
       }
     ]
   },
