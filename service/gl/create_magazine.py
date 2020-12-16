@@ -119,12 +119,9 @@ class GlCreateMagazine(CanonicalBot):
             self.logger.debug(f"make_mag_year {idx_year + 1}/"
                               f"{len(dictionary_of_magazines_by_year)}")
             for idx_mag, magazine in enumerate(magazines):
-                self.logger.debug("make_mag_mag {idx}/{len} ... issue:{year}/{mag}"
-                                  .format(idx=idx_mag + 1, len=len(magazines),
-                                          year=year, mag=magazine))
+                self.logger.debug(f"make_mag_mag {idx_mag + 1}/{len(magazines)} ... issue:{year}/{magazine}")
                 if year == "1986" and magazine == "31":
-                    self.logger.warning("There is magazine 1986, 31, "
-                                        "this is special, no creating here")
+                    self.logger.warning("There is magazine 1986, 31, this is special, no creating here")
                     continue
                 if self.debug:
                     lemma = Page(self.wiki, "Benutzer:THEbotIT/Test")
@@ -133,8 +130,7 @@ class GlCreateMagazine(CanonicalBot):
                 new_text = self.make_magazine(year, magazine)
                 if new_text:
                     if hash(new_text.strip()) != hash(lemma.text.strip()):
-                        self.logger.debug("Print [[Die Gartenlaube ({year})/Heft {magazine}]]."
-                                          .format(year=year, magazine=magazine))
+                        self.logger.debug(f"Print [[Die Gartenlaube ({year})/Heft {magazine}]].")
                         if lemma.text != '':
                             lemma.text = new_text
                             lemma.save("Automatische Aktualisierung des Heftes", botflag=True)
@@ -142,8 +138,7 @@ class GlCreateMagazine(CanonicalBot):
                             lemma.text = new_text
                             lemma.save("automatische Hefterstellung", botflag=True)
                     else:
-                        self.logger.debug("Keine Änderung im Text ({year}/{magazine})."
-                                          .format(year=year, magazine=magazine))
+                        self.logger.debug(f"Keine Änderung im Text ({year}/{magazine}).")
 
     def make_magazine(self, year, magazine):
         last_magazine = True
@@ -153,15 +148,12 @@ class GlCreateMagazine(CanonicalBot):
                     last_magazine = False
                     break
         except KeyError as error:
-            raise BotException("The list of indexes is incorrect, {year} is missing."
-                               .format(year=year)) \
+            raise BotException(f"The list of indexes is incorrect, {year} is missing.") \
                 from error
         try:
             list_of_pages = self.data["indexes"][year][magazine]
         except KeyError as error:
-            raise BotException("The list of indexes is incorrect, "
-                               "year:{year} or mag:{mag} is missing."
-                               .format(year=year, mag=magazine)) \
+            raise BotException(f"The list of indexes is incorrect, year:{year} or mag:{magazine} is missing.") \
                 from error
         quality = 4
         for page in list_of_pages:
@@ -173,13 +165,11 @@ class GlCreateMagazine(CanonicalBot):
                 if page_quality < quality:
                     quality = page_quality
                 if quality < 3:
-                    self.logger.debug("The quality of {year}/{magazine} is too poor."
-                                      .format(year=year, magazine=magazine))
+                    self.logger.debug(f"The quality of {year}/{magazine} is too poor.")
                     return None
             except KeyError:
-                self.logger.warning("The list of pages is incorrect, "
-                                    "year:{year} or page:{page} is missing."
-                                    .format(year=year, page=page))
+                self.logger.warning(f"The list of pages is incorrect, "
+                                    f"year:{year} or page:{page} is missing.")
                 return None
         return self.make_magazine_text(year, magazine, quality, list_of_pages, last_magazine)
 
@@ -202,17 +192,17 @@ class GlCreateMagazine(CanonicalBot):
                            "benachrichtige bitte den Betreiber, THE IT, des Bots.-->\n"
                            "{{Textdaten\n")
         if magazine > 1:
-            string_list.append("|VORIGER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n"
-                               .format(year=year, magazine=magazine - 1))
+            string_list.append(f"|VORIGER=Die Gartenlaube ({year:d})/Heft {magazine - 1:d}\n")
         else:
             string_list.append("|VORIGER=\n")
         if last:
             string_list.append("|NÄCHSTER=\n")
         else:
-            string_list.append("|NÄCHSTER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n"
-                               .format(year=year, magazine=magazine + 1))
-        string_list.append("|AUTOR=Verschiedene\n|TITEL=[[Die Gartenlaube]]\n"
-                           "|SUBTITEL=''Illustrirtes Familienblatt''\n|HERKUNFT=off\n")
+            string_list.append(f"|NÄCHSTER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n")
+        string_list.append(f"|AUTOR=Verschiedene\n"
+                           f"|TITEL=[[Die Gartenlaube ({year})]]\n"
+                           f"|SUBTITEL=''Illustrirtes Familienblatt''\n"
+                           f"|HERKUNFT=off\n")
         if year < 1863:
             string_list.append("|HERAUSGEBER=[[Ferdinand Stolle]]\n")
         elif (year < 1878) or (year == 1878 and magazine < 14):
@@ -221,29 +211,28 @@ class GlCreateMagazine(CanonicalBot):
             string_list.append("|HERAUSGEBER=Ernst Ziel\n")
         else:
             string_list.append("|HERAUSGEBER=Adolf Kröner\n")
-        string_list.append("|ENTSTEHUNGSJAHR={year:d}\n|ERSCHEINUNGSJAHR={year:d}\n"
-                           "|ERSCHEINUNGSORT=Leipzig\n|VERLAG=Ernst Keil\n"
-                           "|WIKIPEDIA=Die Gartenlaube\n".format(year=year))
+        string_list.append(f"|ENTSTEHUNGSJAHR={year:d}\n"
+                           f"|ERSCHEINUNGSJAHR={year:d}\n"
+                           f"|ERSCHEINUNGSORT=Leipzig\n"
+                           f"|VERLAG=Ernst Keil\n"
+                           f"|WIKIPEDIA=Die Gartenlaube\n")
         if year == 1873:
             extension = "JPG"
         else:
             extension = "jpg"
-        string_list.append("|BILD=Die Gartenlaube ({year:d}) {page1}.{extension}\n"
-                           .format(year=year, page1=list_of_pages[0], extension=extension))
-        string_list.append("|QUELLE=[[commons:category:Gartenlaube ({year})|commons]]\n"
-                           .format(year=year))
+        string_list.append(f"|BILD=Die Gartenlaube ({year:d}) {list_of_pages[0]}.{extension}\n")
+        string_list.append(f"|QUELLE=[[commons:category:Gartenlaube ({year})|commons]]\n")
         if quality == 4:
             string_list.append("|BEARBEITUNGSSTAND=fertig\n")
         else:
             string_list.append("|BEARBEITUNGSSTAND=korrigiert\n")
-        string_list.append("|INDEXSEITE=Die Gartenlaube ({year})\n}}}}\n"
-                           "{{{{BlockSatzStart}}}}\n__TOC__\n".format(year=year))
+        string_list.append(f"|INDEXSEITE=Die Gartenlaube ({year})\n}}}}\n"
+                           f"{{{{BlockSatzStart}}}}\n__TOC__\n")
         ref = []
         for page in list_of_pages:
             page_format = self.convert_page_no(page)
             string_list.append(
-                "{{{{SeitePR|{page_format}|Die Gartenlaube ({year}) {page}.{extension}}}}}\n"
-                .format(year=year, page_format=page_format, page=page, extension=extension))
+                f"{{{{SeitePR|{page_format}|Die Gartenlaube ({year}) {page}.{extension}}}}}\n")
             try:
                 page_dict = self.data["pages"][str(year)][page]
                 if "r" in page_dict.keys():
@@ -254,20 +243,18 @@ class GlCreateMagazine(CanonicalBot):
                         if (ref_type != "ref") and (ref_type not in ref):
                             ref.append(ref_type)
             except KeyError:
-                self.logger.error("The list of pages is incorrect, "
-                                  "year:{year} or page:{page} is missing."
-                                  .format(year=year, page=page))
+                self.logger.error(f"The list of pages is incorrect, "
+                                  f"year:{year} or page:{page} is missing.")
                 return None
         if "ref" in ref:
             string_list.append("{{references|x}}\n")
         for ref_type in ref:
             if ref_type != "ref":
-                string_list.append("{{{{references|TIT|{ref}}}}}\n".format(ref=ref_type))
-        string_list.append("{{{{BlockSatzEnd}}}}\n\n[[Kategorie:Deutschland]]\n"
-                           "[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n"
-                           "[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n"
-                           .format(year=year, magazine=magazine))
-        string_list.append("[[Kategorie:{year}0er Jahre]]\n\n".format(year=str(year)[0:3]))
+                string_list.append(f"{{{{references|TIT|{ref_type}}}}}\n")
+        string_list.append(f"{{{{BlockSatzEnd}}}}\n\n[[Kategorie:Deutschland]]\n"
+                           f"[[Kategorie:Neuhochdeutsch]]\n[[Kategorie:Illustrierte Werke]]\n"
+                           f"[[Kategorie:Die Gartenlaube ({year:d}) Hefte| {magazine:02d}]]\n")
+        string_list.append(f"[[Kategorie:{str(year)[0:3]}0er Jahre]]\n\n")
         return ''.join(string_list)
 
     def _get_indexes(self) -> Iterator[IndexPage]:
