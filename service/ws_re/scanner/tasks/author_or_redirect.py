@@ -8,8 +8,9 @@ class REAUTask(ReScannerTask):
     def task(self):
         for article in self.re_page:
             if isinstance(article, Article):
-                if not (article.author[0] != "OFF" or article["VERWEIS"].value):
-                    self.re_page.add_error_category(self.ERROR_CAT)
-                    return True
+                if article.author[0] == "OFF":
+                    if not (article["VERWEIS"].value or article["NACHTRAG"].value):
+                        self.re_page.add_error_category(self.ERROR_CAT)
+                        return True
         self.re_page.remove_error_category(self.ERROR_CAT)
         return True
