@@ -1,9 +1,8 @@
 import logging
 import os
 import sys
+import tempfile
 from datetime import datetime
-
-from tools.bots.cloud.base import get_data_path
 
 
 class WikiLogger():
@@ -14,7 +13,7 @@ class WikiLogger():
     def __init__(self, bot_name: str, start_time: datetime, log_to_screen: bool = True):
         self._bot_name: str = bot_name
         self._start_time: datetime = start_time
-        self._data_path: str = get_data_path()
+        self._data_path: str = tempfile.mkdtemp()
         self._logger: logging.Logger = logging.getLogger(self._bot_name)
         self._logger_name: str = self._get_logger_name()
         self._log_to_screen: bool = log_to_screen

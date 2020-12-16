@@ -1717,7 +1717,7 @@
     "lemma": "Cornelius 279a",
     "previous": "Cornelius 279",
     "next": "Cornelius 296",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 25,
@@ -1745,7 +1745,7 @@
     "lemma": "Cossonius 3a",
     "previous": "Cornelius 296",
     "next": "Curtius 18",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Cossonius Gallus",
     "wd_link": "d:Q1367257",
     "chapters": [
@@ -2239,6 +2239,8 @@
     "lemma": "Iazyges",
     "previous": "Iatrokles 2a",
     "next": "Ibisua",
+    "wp_link": "w:de:Jazygen",
+    "wd_link": "d:Q837791",
     "chapters": [
       {
         "start": 126,
@@ -2304,6 +2306,7 @@
   {
     "lemma": "Ira 4",
     "previous": "Ionnaria",
+    "next": "Isamnus",
     "proof_read": 2,
     "chapters": [
       {
@@ -2315,8 +2318,6 @@
   },
   {
     "lemma": "Iulius 552a",
-    "previous": "Istros 1a",
-    "next": "Iulianum",
     "proof_read": 2,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
     "wd_link": "d:Q239314",
@@ -2330,6 +2331,7 @@
   },
   {
     "lemma": "Isamnus",
+    "previous": "Ira 4",
     "next": "Istris",
     "proof_read": 2,
     "chapters": [
@@ -2345,7 +2347,8 @@
     "previous": "Isamnus",
     "next": "Istros 1a",
     "proof_read": 2,
-    "wp_link": "w:de:Insel Cres",
+    "wp_link": "w:de:Cres",
+    "wd_link": "d:Q13280",
     "chapters": [
       {
         "start": 134,
@@ -2357,6 +2360,7 @@
   {
     "lemma": "Istros 1a",
     "previous": "Istris",
+    "next": "Iulius 552a",
     "proof_read": 2,
     "chapters": [
       {
@@ -2368,7 +2372,6 @@
   },
   {
     "lemma": "Iulianum",
-    "previous": "Iulius 552a",
     "next": "Iunius 183a",
     "proof_read": 2,
     "wp_link": "w:de:Iulia (Tochter des Titus)",

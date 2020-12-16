@@ -11854,7 +11854,6 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
-    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11868,7 +11867,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconice",
+    "previous": "Buconica",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -13038,7 +13037,7 @@
     "lemma": "Caprius a",
     "previous": "Caprasius",
     "next": "Carantinus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 234,
@@ -14388,7 +14387,7 @@
     "lemma": "Ciruca",
     "previous": "Ciriuna",
     "next": "Cispius 2a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 252,
@@ -15072,6 +15071,7 @@
     "previous": "Cornelius 8",
     "next": "Cornelius 16",
     "sort_key": "Cornelius 008a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 258,
@@ -21177,6 +21177,7 @@
     "previous": "Gavius 2",
     "next": "Gavius 13a",
     "sort_key": "Gavius 08a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
@@ -21189,6 +21190,7 @@
     "lemma": "Gavius 13a",
     "previous": "Gavius 8a",
     "next": "Gaulos a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
@@ -21350,7 +21352,7 @@
     "lemma": "Geminius 3",
     "previous": "Gemenus",
     "next": "Geminius 20a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 542,
@@ -24120,6 +24122,8 @@
     "previous": "Ildum",
     "next": "Ilerda",
     "proof_read": 2,
+    "wp_link": "w:de:Tortosa",
+    "wd_link": "d:Q12812",
     "chapters": [
       {
         "start": 1207,
@@ -24373,7 +24377,7 @@
     "previous": "Illiberis, Illiberris",
     "next": "Illigyris",
     "redirect": "Ilici",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1229,
@@ -24397,12 +24401,51 @@
   {
     "lemma": "Illipa, Illipula",
     "previous": "Illigyris",
+    "next": "Illiturgi",
     "redirect": "Ilipa, Ilipula",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1229,
         "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Illiturgi",
+    "previous": "Illipa, Illipula",
+    "next": "Illurco",
+    "redirect": "Iliturgi",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Illurco",
+    "previous": "Illiturgi",
+    "next": "Ilorci",
+    "redirect": "Ilurco",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1229
+      }
+    ]
+  },
+  {
+    "lemma": "Ilorci",
+    "previous": "Illurco",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1229,
+        "end": 1230,
+        "author": "Keune."
       }
     ]
   },
