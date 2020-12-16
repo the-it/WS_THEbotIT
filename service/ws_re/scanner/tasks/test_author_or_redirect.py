@@ -22,6 +22,19 @@ test
             compare({'success': True, 'changed': True}, task.run(re_page))
             self.assertTrue("[[Kategorie:RE:Weder Autor noch Verweis]]" in str(re_page))
 
+    def test_no_cat_if_nachtrag(self):
+        self.text_mock.return_value = """{{REDaten
+|VERWEIS=OFF
+|NACHTRAG=ON
+}}
+test
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = REAUTask(None, self.logger)
+            compare({'success': True, 'changed': False}, task.run(re_page))
+            self.assertFalse("[[Kategorie:RE:Weder Autor noch Verweis]]" in str(re_page))
+
     def test_remove_cat(self):
         self.text_mock.return_value = """{{REDaten
 |VERWEIS=OFF
