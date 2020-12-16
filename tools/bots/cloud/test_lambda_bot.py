@@ -9,20 +9,15 @@ from testfixtures import LogCapture, compare
 from tools.bots.cloud.lambda_bot import LambdaBot
 from tools.bots.cloud.logger import WikiLogger
 from tools.bots.cloud.status_manager import StatusManager
-from tools.bots.cloud.test_base import setup_data_path, teardown_data_path, TestCloudBase
+from tools.bots.cloud.test_base import TestCloudBase
 
 
 class TestLambdaBot(TestCloudBase):
     def setUp(self):
         super().setUp()
-        setup_data_path()
         self.addCleanup(mock.patch.stopall)
         self.log_patcher = mock.patch.object(WikiLogger, "debug")
         self.wiki_logger_mock = self.log_patcher.start()
-
-    def tearDown(self):
-        teardown_data_path()
-        super().tearDown()
 
     class MinimalBot(LambdaBot):
         def task(self):

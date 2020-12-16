@@ -1,49 +1,9 @@
 # pylint: disable=protected-access,no-member,no-self-use
-import os
 import typing
-from shutil import rmtree
-from unittest import TestCase, mock
+from unittest import TestCase
 
 import boto3
 from moto import mock_dynamodb2, mock_s3
-
-from tools.bots.cloud.base import TMP_WIKI_BOT_PATH, get_data_path
-
-
-def teardown_data_path():
-    if os.path.exists(TMP_WIKI_BOT_PATH):
-        rmtree(TMP_WIKI_BOT_PATH)
-
-def setup_data_path():
-    teardown_data_path()
-    os.mkdir(TMP_WIKI_BOT_PATH)
-
-
-class TestGetDataPath(TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-        pass
-
-    @classmethod
-    def tearDownClass(cls) -> None:
-        pass
-
-    def setUp(self):
-        setup_data_path()
-
-    def tearDown(self):
-        teardown_data_path()
-
-    def test_folder_exist(self):
-        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
-            self.assertEqual(TMP_WIKI_BOT_PATH, get_data_path())
-            mock_mkdir.assert_not_called()
-
-    def test_make_folder(self):
-        os.rmdir(TMP_WIKI_BOT_PATH)
-        with mock.patch("tools.bots.pi.os.mkdir") as mock_mkdir:
-            self.assertEqual(TMP_WIKI_BOT_PATH, get_data_path())
-            self.assertEqual(1, mock_mkdir.call_count)
 
 JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
 JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \
