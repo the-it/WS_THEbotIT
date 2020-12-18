@@ -7619,7 +7619,7 @@
     "next": "Iasulones",
     "sort_key": "Iassos 3",
     "redirect": "Iasos 15",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 790,
@@ -8330,7 +8330,7 @@
     "previous": "Ibykos 2",
     "next": "Ica",
     "sort_key": "Ibylla",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 818,
@@ -8967,7 +8967,7 @@
     "lemma": "Ida, Ide 3",
     "previous": "Ida, Ide 2",
     "next": "Ida, Ide 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -9640,11 +9640,13 @@
     "lemma": "Ἴδιος λόγος",
     "previous": "Idimum",
     "next": "Idiotes",
+    "sort_key": "Idios logos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 882,
-        "end": 903,
-        "author": "Plaumann"
+        "end": 904,
+        "author": "Plaumann."
       }
     ]
   },
@@ -9824,11 +9826,12 @@
     "lemma": "Idubeda",
     "previous": "Idrieus 2",
     "next": "Idumaea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 912,
         "end": 913,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
@@ -10315,7 +10318,8 @@
     "chapters": [
       {
         "start": 961,
-        "author": "Ganschinietz"
+        "end": 961,
+        "author": "Ganschinietz."
       }
     ]
   },
@@ -10755,11 +10759,14 @@
     "lemma": "Ikaros 1",
     "previous": "Ikarisches Meer",
     "next": "Ikaros 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Ikaria",
+    "wd_link": "d:Q209576",
     "chapters": [
       {
         "start": 978,
         "end": 985,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -11468,7 +11475,7 @@
     "lemma": "Ilion, Ilios 3",
     "previous": "Ilion, Ilios 2",
     "next": "Ilion, Ilios 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1065,
@@ -12766,10 +12773,12 @@
     "lemma": "Hyperbolos",
     "previous": "Hypaton, Hypatos",
     "next": "Hypereia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1160,
-        "author": "Swoboda, [Heinrich]"
+        "end": 1160,
+        "author": "Swoboda."
       }
     ]
   },
@@ -12788,6 +12797,7 @@
   },
   {
     "lemma": "Hyperesia",
+    "previous": "Hypereia 4",
     "next": "Hyperteleaton",
     "proof_read": 2,
     "chapters": [

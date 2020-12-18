@@ -11854,6 +11854,7 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
+    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11867,7 +11868,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconica",
+    "previous": "Buconice",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -14661,7 +14662,7 @@
     "lemma": "Clodius 47",
     "previous": "Clodius 5a",
     "next": "Clodius 55a",
-    "sort_key": "Clodius 05",
+    "sort_key": "Clodius 47",
     "proof_read": 3,
     "chapters": [
       {
@@ -14847,6 +14848,8 @@
     "previous": "Coelius 6",
     "next": "Coius",
     "proof_read": 2,
+    "wp_link": "w:de:Gaius Coelius Caldus (Konsul 94 v. Chr.)",
+    "wd_link": "d:Q1274785",
     "chapters": [
       {
         "start": 256,
@@ -23972,11 +23975,12 @@
     "lemma": "IEVRV",
     "previous": "Iesso",
     "next": "Jeutz",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1198,
         "end": 1201,
-        "author": "Keune"
+        "author": "Keune."
       }
     ]
   },
