@@ -4919,7 +4919,7 @@
     "lemma": "Aix b",
     "previous": "Aix a",
     "next": "Aiza",
-    "sort_key": "Aix 0b",
+    "sort_key": "Aix b",
     "proof_read": 3,
     "chapters": [
       {
@@ -26934,6 +26934,8 @@
   },
   {
     "lemma": "Χιτών",
+    "previous": "Chiron 1a",
+    "next": "Χλαῖνα",
     "proof_read": 2,
     "wp_link": "w:de:Chiton",
     "wd_link": "d:Q944031",
@@ -26947,7 +26949,7 @@
   },
   {
     "lemma": "Χλαῖνα",
-    "previous": "Chiton 1",
+    "previous": "Χιτών",
     "next": "Χλαμύς",
     "proof_read": 2,
     "chapters": [
@@ -27222,7 +27224,7 @@
     "lemma": "Chrysippos 8a",
     "previous": "Chrysias",
     "next": "Chrysippos 10",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 298,
@@ -28562,12 +28564,12 @@
     "lemma": "Coria 2",
     "previous": "Copo",
     "next": "Corioco",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 327,
         "end": 327,
-        "author": "Mau."
+        "author": "Streck."
       }
     ]
   },
@@ -28923,7 +28925,7 @@
     "previous": "Cornelius 238",
     "next": "Cornelius 279",
     "redirect": "Cornelius 58",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 330,
@@ -30139,7 +30141,6 @@
   {
     "lemma": "Demeas 1",
     "previous": "Demaratos 3a",
-    "next": "Demeas 3",
     "proof_read": 2,
     "chapters": [
       {
@@ -30151,7 +30152,7 @@
   },
   {
     "lemma": "Demeas 3",
-    "previous": "Demeas 1",
+    "previous": "Demaratos 3a",
     "next": "Demetria 1",
     "proof_read": 2,
     "chapters": [
@@ -30217,7 +30218,7 @@
     "lemma": "Demetrios 32c",
     "previous": "Demetrios 32b",
     "next": "Demetrios 32d",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 342,
