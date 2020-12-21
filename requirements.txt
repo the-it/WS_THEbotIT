@@ -6,7 +6,7 @@
 #
 beautifulsoup4==4.9.3     # via -r requirements.in
 boto3==1.16.41            # via -r requirements.in
-botocore==1.19.37         # via boto3, s3transfer
+botocore==1.19.41         # via boto3, s3transfer
 certifi==2020.12.5        # via requests
 chardet==3.0.4            # via requests
 defusedxml==0.6.0         # via -r requirements.in
