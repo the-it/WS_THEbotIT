@@ -82,7 +82,7 @@ requests==2.25.1          # via -c requirements.txt, codecov, docker, internetar
 responses==0.12.1         # via moto
 rsa==4.6                  # via python-jose
 s3transfer==0.3.3         # via -c requirements.txt, boto3
-safety==1.9.0             # via -r requirements-dev.in
+safety==1.10.0             # via -r requirements-dev.in
 schema==0.7.2             # via internetarchive
 six==1.15.0               # via -c requirements.txt, astroid, aws-sam-translator, bandit, cfn-lint, cryptography, docker, ecdsa, internetarchive, jsonschema, junit-xml, moto, python-dateutil, python-jose, requests-mock, responses, websocket-client
 smmap==3.0.4              # via -c requirements.txt, gitdb
