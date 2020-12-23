@@ -11460,10 +11460,12 @@
     "lemma": "Flavius 1",
     "previous": "Flavium amphitheatrum",
     "next": "Flavius 2",
+    "sort_key": "Flavius 001",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Münzer"
+        "end": 2525
       }
     ]
   },
@@ -11471,10 +11473,13 @@
     "lemma": "Flavius 2",
     "previous": "Flavius 1",
     "next": "Flavius 3",
+    "sort_key": "Flavius 002",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Münzer"
+        "end": 2525,
+        "author": "Münzer."
       }
     ]
   },
@@ -11482,10 +11487,13 @@
     "lemma": "Flavius 3",
     "previous": "Flavius 2",
     "next": "Flavius 4",
+    "sort_key": "Flavius 003",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Münzer"
+        "end": 2525,
+        "author": "Münzer."
       }
     ]
   },
@@ -11493,9 +11501,13 @@
     "lemma": "Flavius 4",
     "previous": "Flavius 3",
     "next": "Flavius 5",
+    "sort_key": "Flavius 004",
+    "redirect": "Fabius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2525
+        "start": 2525,
+        "end": 2525
       }
     ]
   },
@@ -11503,9 +11515,13 @@
     "lemma": "Flavius 5",
     "previous": "Flavius 4",
     "next": "Flavius 6",
+    "sort_key": "Flavius 005",
+    "redirect": "Flavius 144",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2525
+        "start": 2525,
+        "end": 2525
       }
     ]
   },
@@ -11513,10 +11529,13 @@
     "lemma": "Flavius 6",
     "previous": "Flavius 5",
     "next": "Flavius 7",
+    "sort_key": "Flavius 006",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Schmid"
+        "end": 2525
       }
     ]
   },
@@ -11524,10 +11543,13 @@
     "lemma": "Flavius 7",
     "previous": "Flavius 6",
     "next": "Flavius 8",
+    "sort_key": "Flavius 007",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Schmid"
+        "end": 2525,
+        "author": "W. Schmid."
       }
     ]
   },
@@ -11535,10 +11557,13 @@
     "lemma": "Flavius 8",
     "previous": "Flavius 7",
     "next": "Flavius 9",
+    "sort_key": "Flavius 008",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Rossbach"
+        "end": 2525,
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -11546,10 +11571,13 @@
     "lemma": "Flavius 9",
     "previous": "Flavius 8",
     "next": "Flavius 10",
+    "sort_key": "Flavius 009",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Stein, [Arthur]"
+        "end": 2525,
+        "author": "Stein."
       }
     ]
   },
@@ -11557,11 +11585,13 @@
     "lemma": "Flavius 10",
     "previous": "Flavius 9",
     "next": "Flavius 11",
+    "sort_key": "Flavius 010",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
         "end": 2526,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -11569,10 +11599,13 @@
     "lemma": "Flavius 11",
     "previous": "Flavius 10",
     "next": "Flavius 12",
+    "sort_key": "Flavius 011",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Münzer"
+        "end": 2526,
+        "author": "Münzer."
       }
     ]
   },
@@ -11580,10 +11613,13 @@
     "lemma": "Flavius 12",
     "previous": "Flavius 11",
     "next": "Flavius 13",
+    "sort_key": "Flavius 012",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Münzer"
+        "end": 2526,
+        "author": "Münzer."
       }
     ]
   },
@@ -11591,10 +11627,13 @@
     "lemma": "Flavius 13",
     "previous": "Flavius 12",
     "next": "Flavius 14",
+    "sort_key": "Flavius 013",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Münzer"
+        "end": 2526,
+        "author": "Münzer."
       }
     ]
   },
@@ -11602,10 +11641,13 @@
     "lemma": "Flavius 14",
     "previous": "Flavius 13",
     "next": "Flavius 15",
+    "sort_key": "Flavius 014",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Goldfinger"
+        "end": 2526,
+        "author": "Goldfinger."
       }
     ]
   },
@@ -11613,11 +11655,14 @@
     "lemma": "Flavius 15",
     "previous": "Flavius 14",
     "next": "Flavius 16",
+    "sort_key": "Flavius 015",
+    "proof_read": 2,
+    "wp_link": "w:de:Gnaeus Flavius",
     "chapters": [
       {
         "start": 2526,
         "end": 2528,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -11625,10 +11670,13 @@
     "lemma": "Flavius 16",
     "previous": "Flavius 15",
     "next": "Flavius 17",
+    "sort_key": "Flavius 016",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2528,
-        "author": "Münzer"
+        "end": 2528,
+        "author": "Münzer."
       }
     ]
   },
@@ -11636,10 +11684,13 @@
     "lemma": "Flavius 17",
     "previous": "Flavius 16",
     "next": "Flavius 18",
+    "sort_key": "Flavius 017",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2528,
-        "author": "Münzer"
+        "end": 2528,
+        "author": "Münzer."
       }
     ]
   },
@@ -11647,10 +11698,13 @@
     "lemma": "Flavius 18",
     "previous": "Flavius 17",
     "next": "Flavius 19",
+    "sort_key": "Flavius 018",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2528,
-        "author": "Münzer"
+        "end": 2528,
+        "author": "Münzer."
       }
     ]
   },
@@ -12454,11 +12508,14 @@
     "lemma": "Flavius 88",
     "previous": "Flavius 87",
     "next": "Flavius 89",
+    "sort_key": "Flavius 088",
+    "proof_read": 2,
+    "wp_link": "w:de:Gaius Flavius Fimbria",
     "chapters": [
       {
         "start": 2599,
         "end": 2601,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -12466,10 +12523,14 @@
     "lemma": "Flavius 89",
     "previous": "Flavius 88",
     "next": "Flavius 90",
+    "sort_key": "Flavius 089",
+    "proof_read": 2,
+    "wp_link": "w:de:Lucius Flavius Fimbria",
     "chapters": [
       {
         "start": 2601,
-        "author": "Groag"
+        "end": 2601,
+        "author": "Groag."
       }
     ]
   },
@@ -12477,10 +12538,13 @@
     "lemma": "Flavius 90",
     "previous": "Flavius 89",
     "next": "Flavius 91",
+    "sort_key": "Flavius 090",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2601,
-        "author": "Münzer"
+        "end": 2601,
+        "author": "Münzer."
       }
     ]
   },
@@ -12488,10 +12552,13 @@
     "lemma": "Flavius 91",
     "previous": "Flavius 90",
     "next": "Flavius 92",
+    "sort_key": "Flavius 091",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2601,
-        "author": "Goldfinger"
+        "end": 2601,
+        "author": "Goldfinger."
       }
     ]
   },
@@ -12499,10 +12566,13 @@
     "lemma": "Flavius 92",
     "previous": "Flavius 91",
     "next": "Flavius 93",
+    "sort_key": "Flavius 092",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2601,
-        "author": "Stein, [Arthur]"
+        "end": 2601,
+        "author": "Stein."
       }
     ]
   },
@@ -12510,10 +12580,13 @@
     "lemma": "Flavius 93",
     "previous": "Flavius 92",
     "next": "Flavius 94",
+    "sort_key": "Flavius 093",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2601,
-        "author": "Stein, [Arthur]"
+        "end": 2601,
+        "author": "Stein."
       }
     ]
   },
@@ -12521,10 +12594,13 @@
     "lemma": "Flavius 94",
     "previous": "Flavius 93",
     "next": "Flavius 95",
+    "sort_key": "Flavius 094",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2601,
-        "author": "Münzer"
+        "end": 2601,
+        "author": "Münzer."
       }
     ]
   },
@@ -12532,11 +12608,13 @@
     "lemma": "Flavius 95",
     "previous": "Flavius 94",
     "next": "Flavius 96",
+    "sort_key": "Flavius 095",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2601,
         "end": 2602,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -12544,10 +12622,13 @@
     "lemma": "Flavius 96",
     "previous": "Flavius 95",
     "next": "Flavius 97",
+    "sort_key": "Flavius 096",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2602,
-        "author": "Stein, [Arthur]"
+        "end": 2602,
+        "author": "Stein."
       }
     ]
   },
@@ -12555,9 +12636,13 @@
     "lemma": "Flavius 97",
     "previous": "Flavius 96",
     "next": "Flavius 98",
+    "sort_key": "Flavius 097",
+    "redirect": "Glaukos 39",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2602
+        "start": 2602,
+        "end": 2602
       }
     ]
   },
@@ -12565,10 +12650,13 @@
     "lemma": "Flavius 98",
     "previous": "Flavius 97",
     "next": "Flavius 99",
+    "sort_key": "Flavius 098",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2602,
-        "author": "Stein, [Arthur]"
+        "end": 2602,
+        "author": "Stein."
       }
     ]
   },
@@ -12576,10 +12664,13 @@
     "lemma": "Flavius 99",
     "previous": "Flavius 98",
     "next": "Flavius 100",
+    "sort_key": "Flavius 099",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2602,
-        "author": "Goldfinger"
+        "end": 2602,
+        "author": "Goldfinger."
       }
     ]
   },
@@ -12587,10 +12678,12 @@
     "lemma": "Flavius 100",
     "previous": "Flavius 99",
     "next": "Flavius 101",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2602,
-        "author": "Stein, [Arthur]"
+        "end": 2602,
+        "author": "Stein."
       }
     ]
   },
@@ -12598,9 +12691,12 @@
     "lemma": "Flavius 101",
     "previous": "Flavius 100",
     "next": "Flavius 102",
+    "redirect": "Josephus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2602
+        "start": 2602,
+        "end": 2602
       }
     ]
   },
@@ -12608,10 +12704,12 @@
     "lemma": "Flavius 102",
     "previous": "Flavius 101",
     "next": "Flavius 103",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2602,
-        "author": "Groag"
+        "end": 2602,
+        "author": "Groag."
       }
     ]
   },
@@ -12619,10 +12717,12 @@
     "lemma": "Flavius 103",
     "previous": "Flavius 102",
     "next": "Flavius 104",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2602,
-        "author": "Groag"
+        "end": 2602,
+        "author": "Groag."
       }
     ]
   },
