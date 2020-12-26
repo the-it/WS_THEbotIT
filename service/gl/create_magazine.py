@@ -200,7 +200,7 @@ class GlCreateMagazine(CanonicalBot):
         else:
             string_list.append(f"|NÄCHSTER=Die Gartenlaube ({year:d})/Heft {magazine:d}\n")
         string_list.append(f"|AUTOR=Verschiedene\n"
-                           f"|TITEL=[[Die Gartenlaube ({year})]]\n"
+                           f"|TITEL=[[Die Gartenlaube|Die Gartenlaube ({year})]]\n"
                            f"|SUBTITEL=''Illustrirtes Familienblatt''\n"
                            f"|HERKUNFT=off\n")
         if year < 1863:
