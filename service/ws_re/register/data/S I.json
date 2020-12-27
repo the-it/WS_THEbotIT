@@ -1980,6 +1980,7 @@
     "lemma": "Aemilia via 1",
     "previous": "Aemiliana 1",
     "next": "Aemilia via 2",
+    "sort_key": "Aemiliavia 1",
     "proof_read": 3,
     "wp_link": "w:de:Via Emilia",
     "wd_link": "d:Q732597",
@@ -1995,6 +1996,7 @@
     "lemma": "Aemilia via 2",
     "previous": "Aemilia via 1",
     "next": "Aemilius 4",
+    "sort_key": "Aemiliavia 2",
     "proof_read": 3,
     "wp_link": "w:de:Via Aemilia Scauri",
     "wd_link": "d:Q1240126",
@@ -5679,6 +5681,7 @@
     "lemma": "Alba Docilia",
     "previous": "Alazoneia",
     "next": "Alba Fucens",
+    "sort_key": "Albado",
     "proof_read": 3,
     "wp_link": "w:it:Alba Docilia",
     "wd_link": "d:Q3607827",
@@ -5694,6 +5697,7 @@
     "lemma": "Alba Fucens",
     "previous": "Alba Docilia",
     "next": "Alba Longa",
+    "sort_key": "Albafucens",
     "proof_read": 3,
     "wp_link": "w:de:Alba Fucens",
     "wd_link": "d:Q944515",
@@ -5709,6 +5713,7 @@
     "lemma": "Alba Longa",
     "previous": "Alba Fucens",
     "next": "Albania 1",
+    "sort_key": "Albalon",
     "proof_read": 3,
     "wp_link": "w:de:Alba Longa",
     "wd_link": "d:Q335070",
@@ -5848,6 +5853,7 @@
     "lemma": "Album Intimilium",
     "previous": "Albocelus",
     "next": "Alebion",
+    "sort_key": "Albumintimilium",
     "proof_read": 3,
     "wp_link": "w:de:Ventimiglia",
     "wd_link": "d:Q191759",
@@ -6608,6 +6614,7 @@
     "lemma": "Alkaios 11",
     "previous": "Alkainetos 2",
     "next": "Alkamenes 4a",
+    "sort_key": "Alkaios11",
     "proof_read": 3,
     "chapters": [
       {
@@ -9566,6 +9573,7 @@
     "lemma": "Anio novus",
     "previous": "Anicius 16a",
     "next": "Anisa",
+    "sort_key": "Anionovus",
     "proof_read": 3,
     "chapters": [
       {
@@ -12233,6 +12241,7 @@
     "lemma": "Appius 11",
     "previous": "Apphadana 1",
     "next": "Appius 13",
+    "sort_key": "Appius11",
     "proof_read": 3,
     "chapters": [
       {
@@ -12260,6 +12269,7 @@
     "lemma": "Appuleius 13",
     "previous": "Appius 13",
     "next": "Apradis",
+    "sort_key": "Appuleius13",
     "proof_read": 3,
     "chapters": [
       {
@@ -12482,6 +12492,7 @@
     "lemma": "Aqua, Aquae 94",
     "previous": "Aqua, Aquae 63",
     "next": "Aquadosa",
+    "sort_key": "Aquae 094",
     "proof_read": 3,
     "wp_link": "w:de:Aqua",
     "wd_link": "d:Q224132",
@@ -15346,6 +15357,7 @@
     "lemma": "Aristomachos 5",
     "previous": "Aristomachos 4",
     "next": "Aristomachos 13a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 134,
@@ -16267,7 +16279,7 @@
   {
     "lemma": "Arrianus 2a",
     "previous": "Arretium",
-    "next": "Arrius 12",
+    "next": "Arrianus 12",
     "sort_key": "Arrianus 02a",
     "proof_read": 3,
     "chapters": [
@@ -16280,6 +16292,7 @@
   },
   {
     "lemma": "Arrianus 12",
+    "previous": "Arrianus 2a",
     "next": "Arrius 12",
     "proof_read": 3,
     "chapters": [
@@ -18342,7 +18355,7 @@
     "lemma": "Athenaios 7",
     "previous": "Athenaia",
     "next": "Athenaios 9a",
-    "sort_key": "Athenaios 08",
+    "sort_key": "Athenaios 07",
     "proof_read": 3,
     "chapters": [
       {
@@ -22852,6 +22865,7 @@
     "lemma": "ad Bivium",
     "previous": "Biturix",
     "next": "Bizana",
+    "sort_key": "Bivium ad",
     "proof_read": 3,
     "chapters": [
       {
@@ -26937,7 +26951,6 @@
   {
     "lemma": "Χιτών",
     "previous": "Chiron 1a",
-    "next": "Χλαῖνα",
     "proof_read": 2,
     "wp_link": "w:de:Chiton",
     "wd_link": "d:Q944031",
@@ -26951,7 +26964,7 @@
   },
   {
     "lemma": "Χλαῖνα",
-    "previous": "Χιτών",
+    "previous": "Chiton 1",
     "next": "Χλαμύς",
     "proof_read": 2,
     "chapters": [
@@ -27657,6 +27670,7 @@
     "lemma": "Claudius 139",
     "previous": "Claudius 137",
     "next": "Claudius 141",
+    "proof_read": 2,
     "wp_link": "w:de:Drusus",
     "wd_link": "d:Q156778",
     "chapters": [

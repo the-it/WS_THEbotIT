@@ -6722,6 +6722,7 @@
     "lemma": "Ofellius 12",
     "previous": "Ofellius 11",
     "next": "Ofellius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2042,
@@ -6760,6 +6761,7 @@
     "lemma": "Ofellius 15",
     "previous": "Ofellius 14",
     "next": "Ofellus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2043,
@@ -6771,22 +6773,38 @@
   {
     "lemma": "Ofellus",
     "previous": "Ofellius 15",
-    "next": "Officinatores monetae",
+    "next": "Officialis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2043,
-        "author": "Münzer"
+        "end": 2043,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Officialis",
+    "previous": "Ofellus",
+    "next": "Officinatores monetae",
+    "redirect": "Officium",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2043,
+        "end": 2043
       }
     ]
   },
   {
     "lemma": "Officinatores monetae",
-    "previous": "Ofellus",
-    "next": "Ofillius Maximus 13",
+    "previous": "Officialis",
+    "next": "Officium",
     "chapters": [
       {
         "start": 2043,
-        "author": "Vittinghoff"
+        "end": 2045,
+        "author": "Friedrich Vittinghoff."
       }
     ]
   },
@@ -6814,12 +6832,13 @@
   },
   {
     "lemma": "Officium",
-    "previous": "Ofillius Rufus, Q. 14",
+    "previous": "Officinatores monetae",
     "next": "Ofilius 1",
     "chapters": [
       {
         "start": 2045,
-        "author": "Boak"
+        "end": 2056,
+        "author": "A. E. R. Boak."
       }
     ]
   },
@@ -6827,9 +6846,12 @@
     "lemma": "Ofilius 1",
     "previous": "Officium",
     "next": "Ofilius medicus 2",
+    "redirect": "Ofellius (-illius, -ilius)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2056
+        "start": 2056,
+        "end": 2056
       }
     ]
   },
@@ -6837,10 +6859,12 @@
     "lemma": "Ofilius medicus 2",
     "previous": "Ofilius 1",
     "next": "Ofonius Tigellinus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2056,
-        "author": "Diller"
+        "end": 2056,
+        "author": "Hans Diller"
       }
     ]
   },
