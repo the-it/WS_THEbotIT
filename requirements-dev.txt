@@ -26,7 +26,7 @@ coverage==5.3.1             # via -r requirements-dev.in, codecov
 cryptography==3.3.1       # via moto, python-jose, sshpubkeys
 ddt==1.4.1                # via -r requirements-dev.in
 decorator==4.4.2          # via networkx
-docker==4.4.0             # via moto
+docker==4.4.1             # via moto
 docopt==0.6.2             # via internetarchive
 dparse==0.5.1             # via safety
 ecdsa==0.14.1             # via moto, python-jose, sshpubkeys
