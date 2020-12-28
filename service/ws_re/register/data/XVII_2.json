@@ -6871,33 +6871,41 @@
   {
     "lemma": "Ofonius Tigellinus",
     "previous": "Ofilius medicus 2",
-    "next": "Ogaliba",
+    "next": "Ὀγάλιβα",
+    "proof_read": 2,
+    "wp_link": "w:de:Tigellinus",
     "chapters": [
       {
         "start": 2056,
-        "author": "Stein, [Arthur]"
+        "end": 2061,
+        "author": "Stein."
       }
     ]
   },
   {
-    "lemma": "Ogaliba",
+    "lemma": "Ὀγάλιβα",
     "previous": "Ofonius Tigellinus",
     "next": "Ogenes",
+    "sort_key": "Ogaliba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2061,
-        "author": "Stein, O[tto]"
+        "end": 2061,
+        "author": "O. Stein."
       }
     ]
   },
   {
     "lemma": "Ogenes",
-    "previous": "Ogaliba",
+    "previous": "Ὀγάλιβα",
     "next": "Ogenia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2061,
-        "author": "Ganschinietz"
+        "end": 2061,
+        "author": "Ganszyniec."
       }
     ]
   },
@@ -6905,10 +6913,12 @@
     "lemma": "Ogenia",
     "previous": "Ogenes",
     "next": "Ogl",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2061,
-        "author": "Kruse"
+        "end": 2062,
+        "author": "gr. Kruse."
       }
     ]
   },
