@@ -3,7 +3,7 @@ from typing import List, Optional
 
 import boto3
 from boto3.dynamodb.conditions import Key
-from mypy_boto3 import dynamodb
+from mypy_boto3_dynamodb import DynamoDBServiceResource
 
 from tools.bots.cloud.status import Status
 
@@ -12,7 +12,7 @@ MANAGE_TABLE = "wiki_bots_manage_table"
 
 class StatusManager:
     def __init__(self, bot_name: str):
-        self._dynamodb: dynamodb.DynamoDBServiceResource = boto3.resource('dynamodb', region_name='eu-central-1')
+        self._dynamodb: DynamoDBServiceResource = boto3.resource('dynamodb', region_name='eu-central-1')
         self._manage_table = self._dynamodb.Table(MANAGE_TABLE)  # pylint: disable=no-member
         self.current_run = Status(bot_name)
         self.bot_name = bot_name

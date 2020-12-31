@@ -1,6 +1,7 @@
 import json
 from collections.abc import Mapping
 from datetime import datetime
+from io import BytesIO
 from typing import Dict, Any, Iterator
 
 import boto3
@@ -40,25 +41,24 @@ class PersistedData(Mapping):
             raise BotException(f"{new_dict} has the wrong type. It must be a dictionary.")
 
     def dump(self, success: bool = True):
-        if success:
-            self.s3_client.put_object(Bucket=self._bucket_name,
-                                      Key=self.key_name,
-                                      Body=json.dumps({"time": str(datetime.now()), "data": self._data}, indent=2)
-                                      .encode("utf-8"))
-        else:
-            self.s3_client.put_object(Bucket=self._bucket_name,
-                                      Key=self.key_name + ".broken",
-                                      Body=json.dumps({"time": str(datetime.now()), "data": self._data}, indent=2)
-                                      .encode("utf-8"))
+        key_name = self.key_name
+        if not success:
+            key_name += ".broken"
+        self.s3_client.put_object(Bucket=self._bucket_name,
+                                  Key=key_name,
+                                  Body=BytesIO(json.dumps({"time": str(datetime.now()),
+                                                           "data": self._data},
+                                                          indent=2)
+                                               .encode("utf-8")))
 
     def _load_from_bucket(self, key_appendix: str = ""):
         try:
             self._data = json.loads(
                 self.s3_client.get_object(Bucket=self._bucket_name, Key=self.key_name + key_appendix)
                 ["Body"].read().decode("utf-8"))["data"]  # type: ignore
-        except exceptions.ClientError as exception:
-            if exception.response['Error']['Code'] == 'NoSuchKey':
-                raise BotException(f"The data for {self.key_name + key_appendix} doesn't exists")
+        except exceptions.ClientError as error:
+            if error.response['Error']['Code'] == 'NoSuchKey':
+                raise BotException(f"The data for {self.key_name + key_appendix} doesn't exists") from error
             raise
 
     def _copy_to_deprecated(self):

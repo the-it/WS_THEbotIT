@@ -1,84 +1,13 @@
 # pylint: disable=ungrouped-imports
 import json
 from datetime import datetime
-from typing import List, TypedDict
+from typing import List, Union
 from urllib.parse import quote
 
 import requests
 
 from tools import ToolException
-
-
-# type hints
-class PetscanLemma(TypedDict):
-    id: int
-    len: int
-    n: str
-    namespace: int
-    nstext: str
-    title: str
-    touched: str
-
-
-NAMESPACE_MAPPING = {"Article": 0,
-                     "Diskussion": 1,
-                     "Benutzer": 2,
-                     "Benutzer Diskussion": 3,
-                     "Wikisource": 4,
-                     "Wikisource Diskussion": 5,
-                     "Wikipedia": 4,
-                     "Wikipedia Diskussion": 5,
-                     "Wikibooks": 4,
-                     "Wikibooks Diskussion": 5,
-                     "Wikiquote": 4,
-                     "Wikiquote Diskussion": 5,
-                     "Wikispecies": 4,
-                     "Wikispecies Diskussion": 5,
-                     "Wikinews": 4,
-                     "Wikinews Diskussion": 5,
-                     "Wikionary": 4,
-                     "Wikionary Diskussion": 5,
-                     "Datei": 6,
-                     "Datei Diskussion": 7,
-                     "MediaWiki": 8,
-                     "MediaWiki Diskussion": 9,
-                     "Vorlage": 10,
-                     "Vorlage Diskussion": 11,
-                     "Hilfe": 12,
-                     "Hilfe Diskussion": 13,
-                     "Kategorie": 14,
-                     "Kategorie Diskussion": 15,
-                     "Portal": 100,
-                     "Portal Diskussion": 101,
-                     "Seite": 102,
-                     "Seite Diskussion": 103,
-                     "Wahl": 102,
-                     "Wahl Diskussion": 103,
-                     "Meinungen": 102,
-                     "Meinungen Diskussion": 103,
-                     "Verzeichnis": 102,
-                     "Verzeichnis Diskussion": 103,
-                     "Index": 104,
-                     "Index Diskussion": 105,
-                     "Thesaurus": 104,
-                     "Thesaurus Diskussion": 105,
-                     "Kurs": 106,
-                     "Kurs Diskussion": 107,
-                     "Reim": 106,
-                     "Reim Diskussion": 107,
-                     "Projekt": 108,
-                     "Projekt Diskussion": 109,
-                     "Flexion": 108,
-                     "Flexion Diskussion": 109,
-                     "Education Program": 446,
-                     "Education Program Diskussion": 447,
-                     "Modul": 828,
-                     "Modul Diskussion": 829,
-                     "Gadget ": 2300,
-                     "Gadget  Diskussion": 2301,
-                     "Gadget-Definition": 2302,
-                     "Gadget-Definition Diskussion": 2303,
-                     "Thema": 2600}
+from tools._typing import PetscanLemma
 
 
 def listify(item) -> list:
@@ -144,15 +73,12 @@ class PetScan:
             category = f"{category}|{search_depth}"
         self.categories["negative"].append(category)
 
-    def add_namespace(self, namespace):
+    def add_namespace(self, namespace: Union[int, List[int]]):
         # is there a list to process or only a single instance
         namespace = listify(namespace)
         for i in namespace:
             # is there a given integer or the string of a namespace
-            if isinstance(i, int):
-                self.add_options({"ns[" + str(i) + "]": "1"})
-            else:
-                self.add_options({"ns[" + str(NAMESPACE_MAPPING[i]) + "]": "1"})
+            self.add_options({"ns[" + str(i) + "]": "1"})
 
     def activate_redirects(self):
         self.add_options({"show_redirects": "yes"})
@@ -309,8 +235,8 @@ class PetScan:
         """
         try:
             response = requests.get(url=self._construct_string(), headers=self.header, timeout=self._timeout)
-        except requests.exceptions.RequestException:
-            raise PetScanException("Get request didn't return correctly")
+        except requests.exceptions.RequestException as error:
+            raise PetScanException("Get request didn't return correctly") from error
         if response.status_code != 200:
             raise PetScanException("Request wasn't a success")
         response_byte = response.content

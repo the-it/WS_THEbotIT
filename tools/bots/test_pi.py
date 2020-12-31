@@ -4,7 +4,6 @@ import os
 import time
 from datetime import datetime, timedelta
 from shutil import rmtree
-from typing import Mapping
 from unittest import TestCase, mock
 
 from testfixtures import LogCapture, compare
@@ -263,13 +262,13 @@ class TestOneTimeBot(TestCase):
         class WatchdogBot(OneTimeBot):
             def __init__(self, **kwargs):
                 super().__init__(**kwargs)
-                self.timeout = timedelta(seconds=0.002)
+                self.timeout = timedelta(seconds=0.02)
 
             def task(self):
                 while True:
                     if self._watchdog():
                         raise Exception("watchdog must not fire")  # pragma: no cover
-                    time.sleep(0.004)
+                    time.sleep(0.04)
                     if self._watchdog():
                         return True
                     raise Exception("watchdog must fire")  # pragma: no cover
@@ -326,7 +325,7 @@ DATA_TEST_EXTEND = {"a": [1, 2], "b": 1}
 
 class TestPersistedData(TestCase):
     def __init__(self, *args, **kwargs):
-        super(TestPersistedData, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.data_path = _DATA_PATH_TEST
 
     def _make_json_file(self, filename: str = "TestBot.data.json", data: str = JSON_TEST):
@@ -339,9 +338,6 @@ class TestPersistedData(TestCase):
 
     def tearDown(self):
         teardown_data_path()
-
-    def test_is_mapping(self):
-        self.assertTrue(isinstance(self.data, Mapping))
 
     def test_delete_key(self):
         self.data["a"] = 1

@@ -1,0 +1,39 @@
+[
+  {
+    "lemma": "A",
+    "next": "B",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1,
+        "end": 4,
+        "author": "Abel"
+      }
+    ]
+  },
+  {
+    "lemma": "B",
+    "previous": "A",
+    "next": "C",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1,
+        "end": 4,
+        "author": "Abel"
+      }
+    ]
+  },
+  {
+    "lemma": "B",
+    "previous": "BB",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 4,
+        "end": 4,
+        "author": "Abel"
+      }
+    ]
+  }
+]

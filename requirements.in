@@ -1,9 +1,11 @@
+beautifulsoup4
 boto3
-GitPython
 defusedxml
+dictdiffer
+GitPython
 oauthlib
-PyGithub
 pywikibot
 requests
+idna==2.8 # must pin this for the moment
 requests-oauthlib
 roman

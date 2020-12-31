@@ -4,9 +4,9 @@ import traceback
 
 from pywikibot import Site, Page
 
-from scripts.service.ws_re.scanner import ERROTask
-from scripts.service.ws_re.template import ReDatenException
-from scripts.service.ws_re.template.re_page import RePage
+from service.ws_re.scanner import ERROTask
+from service.ws_re.template import ReDatenException
+from service.ws_re.template.re_page import RePage
 from tools.bots.pi import OneTimeBot
 from tools.petscan import PetScan
 from tools.template_finder import TemplateFinder

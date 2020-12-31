@@ -5,15 +5,15 @@ version: 2.1
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v12-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
-      - v12-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
-      - v12-dependencies-{{ .Environment.PYTHON_VERSION }}-
+      - v13-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+      - v13-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
+      - v13-dependencies-{{ .Environment.PYTHON_VERSION }}-
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v12-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+    key: v13-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
 
 install_dependencies: &install_dependencies
   run:
@@ -79,6 +79,28 @@ run_coverage: &run_coverage
       . venv/bin/activate
       make coverage
 
+create_pywikibot_file: &create_pywikibot_file
+  run:
+    name: create_pywikibot_file
+    command: |
+      mkdir -p ~/.pywikibot
+      echo $PYWIKIBOT_FILE > ~/.pywikibot/user-config.py
+
+run_wikitest: &run_wikitest
+  run:
+    name: run wikitest
+    command: |
+      . venv/bin/activate
+      make wikitest
+    no_output_timeout: 10s
+
+run_integrationtest: &run_integrationtest
+  run:
+    name: run integration test
+    command: |
+      . venv/bin/activate
+      make integrationtest
+
 report_codecov: &report_codecov
   run:
     name: report codecov
@@ -87,19 +109,32 @@ report_codecov: &report_codecov
       . venv/bin/activate
       codecov -F $PYTHON_VERSION
 
+report_codecov_wikitest: &report_codecov_wikitest
+  run:
+    name: report codecov
+    when: always
+    command: |
+      . venv/bin/activate
+      codecov -F wikitest
+
 show_python_version: &show_python_version
   run:
     name: python version
     command: |
       python -c "import sys; print (sys.version)"
 
-quality_steps: &quality_steps
+dependency_steps: &dependency_steps
   steps:
     - checkout
     - <<: *restore_cache
     - <<: *show_python_version
     - <<: *install_dependencies
     - <<: *save_cache
+
+quality_steps: &quality_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
     - <<: *flake8
     - <<: *pycodestyle
     - <<: *pylint
@@ -112,14 +147,37 @@ coverage_steps: &coverage_steps
     - checkout
     - <<: *restore_cache
     - <<: *show_python_version
-    - <<: *install_dependencies
-    - <<: *save_cache
     - <<: *run_coverage
     - <<: *report_codecov
+
+wiki_steps: &wiki_steps
+  steps:
+    - checkout
+    - <<: *create_pywikibot_file
+    - <<: *restore_cache
+    - <<: *show_python_version
+    - <<: *run_wikitest
+    - <<: *report_codecov_wikitest
+
+nightly_steps: &nightly_steps
+  steps:
+    - checkout
+    - <<: *restore_cache
+    - <<: *show_python_version
+    - <<: *install_dependencies
+    - <<: *save_cache
+    - <<: *run_integrationtest
+    - <<: *run_wikitest
 
 # job definitions
 
 jobs:
+  dependency:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: ~/repo
+    <<: *dependency_steps
+
   quality:
     docker:
       - image: circleci/python:3.8
@@ -132,15 +190,46 @@ jobs:
     working_directory: ~/repo
     <<: *coverage_steps
 
+  wikitest:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: ~/repo
+    <<: *wiki_steps
+
+  nightly:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: ~/repo
+    <<: *nightly_steps
+
 # dependencies for the workflow
 
 workflows:
   version: 2
   test-and-quality:
     jobs:
+      - dependency:
+          context: python38
       - quality:
           context: python38
+          requires:
+            - dependency
       - coverage38:
           context: python38
           requires:
-            - quality
+            - dependency
+      - wikitest:
+          context: python38
+          requires:
+            - dependency
+  integrationtest:
+    triggers:
+      - schedule:
+          cron: "0 0 * * 0"
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - nightly:
+          context: python38

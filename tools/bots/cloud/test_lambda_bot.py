@@ -9,20 +9,15 @@ from testfixtures import LogCapture, compare
 from tools.bots.cloud.lambda_bot import LambdaBot
 from tools.bots.cloud.logger import WikiLogger
 from tools.bots.cloud.status_manager import StatusManager
-from tools.bots.cloud.test_base import setup_data_path, teardown_data_path, TestCloudBase
+from tools.bots.cloud.test_base import TestCloudBase
 
 
 class TestLambdaBot(TestCloudBase):
     def setUp(self):
         super().setUp()
-        setup_data_path()
         self.addCleanup(mock.patch.stopall)
         self.log_patcher = mock.patch.object(WikiLogger, "debug")
         self.wiki_logger_mock = self.log_patcher.start()
-
-    def tearDown(self):
-        teardown_data_path()
-        super().tearDown()
 
     class MinimalBot(LambdaBot):
         def task(self):
@@ -83,13 +78,13 @@ class TestLambdaBot(TestCloudBase):
         class WatchdogBot(LambdaBot):
             def __init__(self, **kwargs):
                 super().__init__(**kwargs)
-                self.timeout = timedelta(seconds=0.1)
+                self.timeout = timedelta(seconds=0.3)
 
             def task(self):
                 while True:
                     if self._watchdog():
                         raise Exception("watchdog must not fire")  # pragma: no cover
-                    time.sleep(0.1)
+                    time.sleep(0.3)
                     if self._watchdog():
                         return True
                     raise Exception("watchdog must fire")  # pragma: no cover

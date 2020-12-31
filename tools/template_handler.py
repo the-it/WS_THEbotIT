@@ -1,14 +1,7 @@
 import re
-from typing import Optional, List, TypedDict
+from typing import List
 
-
-# type hints
-class ParameterDict(TypedDict):
-    key: Optional[str]
-    value: str
-
-
-ParameterList = List[ParameterDict]
+from tools._typing import TemplateParameterDict, TemplateParameterList
 
 REGEX_TITLE = r"\A[^\|]+"
 REGEX_NO_KEY = r"\A[^\|]*"
@@ -28,7 +21,7 @@ class TemplateHandlerException(Exception):
 class TemplateHandler:
     def __init__(self, template_str: str = ''):
         self.title: str = ''
-        self.parameters: ParameterList = []
+        self.parameters: TemplateParameterList = []
         if template_str:
             self._process_template_str(template_str)
 
@@ -57,10 +50,10 @@ class TemplateHandler:
             else:  # an argument without a key
                 template_str = self._save_argument(REGEX_NO_KEY, template_str, False)
 
-    def get_parameterlist(self) -> ParameterList:
+    def get_parameterlist(self) -> TemplateParameterList:
         return self.parameters
 
-    def get_parameter(self, key) -> ParameterDict:
+    def get_parameter(self, key) -> TemplateParameterDict:
         return [item for item in self.parameters if item["key"] == key][0]
 
     def get_str(self, str_complex: bool = True) -> str:
@@ -77,7 +70,7 @@ class TemplateHandler:
             ret_str = ''
         return ret_str.join(list_for_template)
 
-    def update_parameters(self, dict_parameters: ParameterList):
+    def update_parameters(self, dict_parameters: TemplateParameterList):
         self.parameters = dict_parameters
 
     def set_title(self, title: str):

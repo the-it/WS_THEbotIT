@@ -1,5 +1,6 @@
-# tools
-
+#####################
+### PACKAGE STUFF ###
+#####################
 clean-pyc :
 	echo "######## CLEAN PY CACHE ########"
 	find . | grep -E "__pycache__" | xargs rm -rf
@@ -29,20 +30,22 @@ pip3-dev : install_pip
 update_pip3 : install_pip
 	echo "##### UPDATE REQUIREMENTS ######"
 	pip install pip-tools -U
-	rm requirements.txt requirements-dev.txt
+	pip install wheel -U
+	rm requirements.txt requirements-dev.txt || true
 	pip-compile --output-file requirements.txt requirements.in
 	pip-compile --output-file requirements-dev.txt requirements-dev.in
 	pip-sync requirements.txt requirements-dev.txt
 
-# quality
-
+###############
+### QUALITY ###
+###############
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
 	pycodestyle --show-source --statistics --count
 
 pylint :
 	echo "############ PYLINT ############"
-	pylint -j4 --rcfile .pylintrc scripts tools infrastructure
+	pylint -j4 --rcfile .pylintrc service tools infrastructure
 
 bandit :
 	echo "############ BANDIT ############"
@@ -50,7 +53,7 @@ bandit :
 
 mypy :
 	echo "############# MYPY #############"
-	mypy scripts tools
+	mypy service tools
 
 safety :
 	echo "############ SAFETY ############"
@@ -60,28 +63,40 @@ flake8 :
 	echo "############ FLAKE8 ############"
 	flake8
 
-# testing and coverage
-
+############################
+### TESTING AND COVERAGE ###
+############################
 unittest :
 	echo "########### UNITTEST ###########"
+	unset WS_REAL_WIKI && \
+	unset WS_REAL_DATA && \
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
 	python tst_runner.py
 
-integrationtest :
+integrationtest : clean-coverage
 	echo "######## INTEGRATIONTEST #######"
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
-	export INTEGRATION=1 && \
+	export WS_REAL_DATA=1 && \
+	unset WS_REAL_WIKI && \
+	coverage run tst_runner.py && \
+	coverage xml
+
+wikitest : clean-coverage
+	echo "########### WIKITEST ###########"
+	export WS_REAL_WIKI=1 && \
+	unset WS_REAL_DATA && \
 	coverage run tst_runner.py && \
 	coverage xml
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
+	unset WS_REAL_WIKI && \
+	unset WS_REAL_DATA && \
 	export PYWIKIBOT2_NO_USER_CONFIG=1 && \
-	export INTEGRATION=1 && \
 	coverage run tst_runner.py && \
 	coverage xml
 
-coverage-html : coverage
+coverage-html : wikitest
 	echo "######### COVERAGE HTML ########"
 	coverage html -d .coverage_html
 	python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
@@ -94,25 +109,23 @@ codecov :
 	echo "########### CODECOV ############"
 	codecov
 
-# infrastructure
+#############
+### STUFF ###
+#############
+gource :
+	echo "############ GOURCE ############"
+	gource -s 0.1 .
 
-aws_deploy_tst :
-	echo "####### AWS DEPLOY TST ########"
-	export AWS_PROFILE=tst
-	cdk bootstrap
-	cdk deploy infrastructure1 infrastructure2
+cloc :
+	echo "########## COUNT LOC ###########"
+	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
 
-aws_diff :
-	echo "########## AWS DIFF ###########"
-	export AWS_PROFILE=tst
-	cdk bootstrap
-	cdk diff
-
-# phony targets
-
+#############
+### PHONY ###
+#############
 clean : clean-pyc clean-coverage
 
-pre-commit : update_pip3 quality integrationtest
+pre-commit : update_pip3 quality unittest
 
 quality : bandit flake8 pycodestyle pylint mypy
 
