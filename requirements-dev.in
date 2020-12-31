@@ -1,8 +1,5 @@
 -c requirements.txt
 
-aws-cdk.core
-aws-cdk.aws-s3
-aws-cdk.aws-lambda
 bandit
 beautifulsoup4
 boto3-stubs[essential]

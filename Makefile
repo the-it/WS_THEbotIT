@@ -45,11 +45,11 @@ pycodestyle :
 
 pylint :
 	echo "############ PYLINT ############"
-	pylint -j4 --rcfile .pylintrc service tools infrastructure
+	pylint -j4 --rcfile .pylintrc service tools
 
 bandit :
 	echo "############ BANDIT ############"
-	bandit -r scripts tools infrastructure
+	bandit -r service tools
 
 mypy :
 	echo "############# MYPY #############"
