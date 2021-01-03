@@ -1777,11 +1777,31 @@
   },
   {
     "lemma": "Alesia 1",
-    "previous": "Alençon, Notre Dame d’-"
+    "previous": "Alençon, Notre Dame d’-",
+    "next": "Aleuas 5",
+    "redirect": "Alise-Sainte-Reine",
+    "proof_read": 2,
+    "wp_link": "w:de:Alesia",
+    "wd_link": "d:Q835966",
+    "chapters": [
+      {
+        "start": 78,
+        "end": 78
+      }
+    ]
   },
   {
     "lemma": "Aleuas 5",
-    "next": "Ἀλευρομαντεία"
+    "previous": "Alesia 1",
+    "next": "Ἀλευρομαντεία",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 78,
+        "end": 78,
+        "author": "Lippold."
+      }
+    ]
   },
   {
     "lemma": "Ἀλευρομαντεία",
@@ -11866,7 +11886,6 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
-    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11880,7 +11899,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconice",
+    "previous": "Buconica",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
