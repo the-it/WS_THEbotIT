@@ -13,7 +13,7 @@ defusedxml==0.6.0         # via -r requirements.in
 dictdiffer==0.8.1         # via -r requirements.in
 gitdb==4.0.5              # via gitpython
 gitpython==3.1.11         # via -r requirements.in
-idna==2.8                 # via -r requirements.in, requests
+idna==3.1                 # via -r requirements.in, requests
 jmespath==0.10.0          # via boto3, botocore
 oauthlib==3.1.0           # via -r requirements.in, requests-oauthlib
 python-dateutil==2.8.1    # via botocore
