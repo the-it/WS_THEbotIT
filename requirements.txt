@@ -8,7 +8,7 @@ beautifulsoup4==4.9.3     # via -r requirements.in
 boto3==1.16.48            # via -r requirements.in
 botocore==1.19.48         # via boto3, s3transfer
 certifi==2020.12.5        # via requests
-chardet==3.0.4            # via requests
+chardet==4.0.0            # via requests
 defusedxml==0.6.0         # via -r requirements.in
 dictdiffer==0.8.1         # via -r requirements.in
 gitdb==4.0.5              # via gitpython
