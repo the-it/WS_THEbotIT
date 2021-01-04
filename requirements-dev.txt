@@ -89,7 +89,7 @@ smmap==3.0.4              # via -c requirements.txt, gitdb
 soupsieve==2.1            # via -c requirements.txt, beautifulsoup4
 sshpubkeys==3.1.0         # via moto
 stevedore==3.3.0          # via bandit
-testfixtures==6.16.0      # via -r requirements-dev.in
+testfixtures==6.17.0      # via -r requirements-dev.in
 toml==0.10.2              # via dparse, pylint
 tqdm==4.54.1              # via internetarchive
 typed-ast==1.4.1          # via mypy
