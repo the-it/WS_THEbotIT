@@ -37,7 +37,7 @@ gitdb==4.0.5              # via -c requirements.txt, gitpython
 gitpython==3.1.11         # via -c requirements.txt, bandit
 idna==3.1                 # via -c requirements.txt, moto, requests
 internetarchive==1.9.6    # via -r requirements-dev.in
-isort==5.6.4              # via pylint
+isort==5.7.0              # via pylint
 jinja2==2.11.2            # via moto
 jmespath==0.10.0          # via -c requirements.txt, boto3, botocore
 jsondiff==1.2.0           # via moto
