@@ -12,7 +12,7 @@ backports.csv==1.0.7      # via internetarchive
 bandit==1.7.0             # via -r requirements-dev.in
 beautifulsoup4==4.9.3     # via -c requirements.txt, -r requirements-dev.in
 boto3-stubs[essential]==1.16.37.0  # via -r requirements-dev.in
-boto3==1.16.37            # via -c requirements.txt, aws-sam-translator, moto
+boto3==1.16.48            # via -c requirements.txt, aws-sam-translator, moto
 boto==2.49.0              # via moto
 botocore==1.19.37         # via -c requirements.txt, aws-xray-sdk, boto3, moto, s3transfer
 certifi==2020.12.5        # via -c requirements.txt, requests
