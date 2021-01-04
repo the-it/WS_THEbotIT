@@ -35,7 +35,7 @@ freezegun==1.0.0          # via -r requirements-dev.in
 future==0.18.2            # via aws-xray-sdk
 gitdb==4.0.5              # via -c requirements.txt, gitpython
 gitpython==3.1.11         # via -c requirements.txt, bandit
-idna==2.8                 # via -c requirements.txt, moto, requests
+idna==3.1                 # via -c requirements.txt, moto, requests
 internetarchive==1.9.6    # via -r requirements-dev.in
 isort==5.6.4              # via pylint
 jinja2==2.11.2            # via moto
