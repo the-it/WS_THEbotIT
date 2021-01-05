@@ -530,7 +530,7 @@
   {
     "lemma": "Radamaei",
     "previous": "Radagaisus",
-    "next": "Radamanthys",
+    "next": "Ῥαδάμανθυς",
     "redirect": "Rhadamaei",
     "proof_read": 3,
     "chapters": [
@@ -541,26 +541,30 @@
     ]
   },
   {
-    "lemma": "Radamanthys",
+    "lemma": "Ῥαδάμανθυς",
     "previous": "Radamaei",
     "next": "Radamistus",
+    "sort_key": "Radamanthys",
+    "wp_link": "w:de:Rhadamanthys",
     "chapters": [
       {
         "start": 31,
         "end": 35,
-        "author": "Malten"
+        "author": "Malten."
       }
     ]
   },
   {
     "lemma": "Radamistus",
-    "previous": "Radamanthys",
+    "previous": "Ῥαδάμανθυς",
     "next": "Radata",
+    "proof_read": 2,
+    "wp_link": "w:de:Rhadamistos",
     "chapters": [
       {
         "start": 35,
         "end": 36,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -620,11 +624,13 @@
     "lemma": "Ῥαδίνη, Λεόντιχος",
     "previous": "Radices, Radix 3",
     "next": "Ῥαδίνης μνῆμα",
+    "sort_key": "Radine, Leontichos",
+    "wp_link": "w:de:en:Rhadine and Leontichus",
     "chapters": [
       {
         "start": 36,
         "end": 37,
-        "author": "Maas"
+        "author": "Maas."
       }
     ]
   },
@@ -674,11 +680,12 @@
     "lemma": "Radius 1",
     "previous": "Ῥᾳδιουργία",
     "next": "Radius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 38,
         "end": 39,
-        "author": "Hug"
+        "author": "Hug."
       }
     ]
   },
@@ -686,10 +693,12 @@
     "lemma": "Radius 2",
     "previous": "Radius 1",
     "next": "Radius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 39,
-        "author": "Hug"
+        "end": 39,
+        "author": "Hug."
       }
     ]
   },
@@ -697,10 +706,12 @@
     "lemma": "Radius 3",
     "previous": "Radius 2",
     "next": "Radu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 39,
-        "author": "Hug"
+        "end": 39,
+        "author": "Hug."
       }
     ]
   },
@@ -721,10 +732,12 @@
     "lemma": "Radula",
     "previous": "Radu",
     "next": "Raeba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 39,
-        "author": "Hug"
+        "end": 39,
+        "author": "Hug."
       }
     ]
   },
@@ -810,10 +823,12 @@
     "lemma": "Raecius 6",
     "previous": "Raecius 5",
     "next": "Raecius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 40,
-        "author": "Stein, [Arthur]"
+        "end": 40,
+        "author": "Stein."
       }
     ]
   },
@@ -860,11 +875,12 @@
     "lemma": "Raeda",
     "previous": "Raecius 9",
     "next": "Raedestus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 41,
         "end": 42,
-        "author": "Hug"
+        "author": "Hug."
       }
     ]
   },
@@ -1662,11 +1678,13 @@
     "lemma": "Rammius 2",
     "previous": "Rammius 1",
     "next": "Ῥάμναι 1",
+    "proof_read": 2,
+    "wp_link": "w:de:en:Quintus Rammius Martialis",
     "chapters": [
       {
         "start": 135,
-        "end": 136,
-        "author": "Stein, [Arthur]"
+        "end": 135,
+        "author": "Stein."
       }
     ]
   },
@@ -1758,11 +1776,12 @@
     "lemma": "Ῥαμνοῦς 2",
     "previous": "Ῥαμνοῦς 1",
     "next": "Ῥαμνουσία",
+    "sort_key": "Ramnus 2",
     "chapters": [
       {
         "start": 139,
         "end": 140,
-        "author": "Kahrstedt"
+        "author": "Kahrstedt."
       }
     ]
   },
@@ -4834,13 +4853,14 @@
   },
   {
     "lemma": "Regma 2",
-    "previous": "Regma 1",
-    "next": "Renkylias",
+    "previous": "Ranilda",
+    "next": "Rimphaces",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 505,
-        "end": 509,
-        "author": "Tkáč"
+        "start": 1294,
+        "end": 1294,
+        "author": "Tkáč."
       }
     ]
   },
@@ -16728,6 +16748,7 @@
   {
     "lemma": "Ryton",
     "previous": "Ῥύτιον",
+    "next": "Radegundis",
     "redirect": "Pocula",
     "proof_read": 3,
     "chapters": [
@@ -16741,10 +16762,13 @@
     "lemma": "Radegundis",
     "previous": "Ryton",
     "next": "Ragnaris",
+    "wp_link": "w:de:Radegunde",
+    "ws_link": "s:en:Author:Radegund",
     "chapters": [
       {
         "start": 1293,
-        "author": "Stech"
+        "end": 1293,
+        "author": "Stech."
       }
     ]
   },
@@ -16752,21 +16776,25 @@
     "lemma": "Ragnaris",
     "previous": "Radegundis",
     "next": "Ranilda",
+    "wp_link": "w:de:en:Ragnaris",
     "chapters": [
       {
         "start": 1293,
-        "author": "Stech"
+        "end": 1293,
+        "author": "Stech."
       }
     ]
   },
   {
     "lemma": "Ranilda",
     "previous": "Ragnaris",
-    "next": "Rimphaces",
+    "next": "Regma 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1293,
-        "author": "Stech"
+        "end": 1293,
+        "author": "Stech."
       }
     ]
   },

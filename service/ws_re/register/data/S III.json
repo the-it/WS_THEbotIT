@@ -9344,7 +9344,18 @@
   {
     "lemma": "Autricum",
     "previous": "Autophradates",
-    "next": "Autun"
+    "next": "Autun",
+    "proof_read": 3,
+    "wp_link": "w:de:Chartres",
+    "ws_link": "s:fr:Catégorie:Chartres",
+    "wd_link": "d:Q130272",
+    "chapters": [
+      {
+        "start": 191,
+        "end": 191,
+        "author": "Keune."
+      }
+    ]
   },
   {
     "lemma": "Autun",
@@ -11886,6 +11897,7 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
+    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11899,7 +11911,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconica",
+    "previous": "Buconice",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -12300,7 +12312,19 @@
   {
     "lemma": "Caecilius 101",
     "previous": "Caecilius 99",
-    "next": "Caecilius 124c"
+    "next": "Caecilius 124a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 223,
+        "end": 223,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Caecilius 124a",
+    "previous": "Caecilius 101"
   },
   {
     "lemma": "Caecilius 124c",
@@ -14261,7 +14285,7 @@
     "lemma": "Chytrogaulos",
     "previous": "Chytra",
     "next": "Ciamilus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 250,
@@ -14274,7 +14298,7 @@
     "lemma": "Ciamilus",
     "previous": "Chytrogaulos",
     "next": "Cibisus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 250,
@@ -14287,7 +14311,7 @@
     "lemma": "Cibisus",
     "previous": "Ciamilus",
     "next": "Cicarus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 250,
@@ -14300,7 +14324,7 @@
     "lemma": "Cicarus",
     "previous": "Cibisus",
     "next": "Cincius",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 250,
@@ -14328,7 +14352,7 @@
     "lemma": "Cinges",
     "previous": "Cincius",
     "next": "Cinna 5a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 250,
@@ -14786,7 +14810,7 @@
     "lemma": "Cluvius 14",
     "previous": "Cluvius 10a",
     "next": "Cobnertus 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -14799,7 +14823,7 @@
     "lemma": "Cobnertus 1",
     "previous": "Cluvius 14",
     "next": "Cobnertus 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -14812,7 +14836,7 @@
     "lemma": "Cobnertus 2",
     "previous": "Cobnertus 1",
     "next": "Cocillus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -14825,7 +14849,7 @@
     "lemma": "Cocillus",
     "previous": "Cobnertus 2",
     "next": "Cocisius",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -14838,7 +14862,7 @@
     "lemma": "Cocisius",
     "previous": "Cocillus",
     "next": "Cocus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -14851,7 +14875,7 @@
     "lemma": "Cocus",
     "previous": "Cocisius",
     "next": "Coelius 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -18679,7 +18703,7 @@
   {
     "lemma": "Echemmas",
     "previous": "Echekratidas 2",
-    "next": "Echinos 7",
+    "next": "Ἐχῖνος 7",
     "proof_read": 3,
     "chapters": [
       {
@@ -18690,8 +18714,9 @@
     ]
   },
   {
-    "lemma": "Echinos 7",
+    "lemma": "Ἐχῖνος 7",
     "previous": "Echemmas",
+    "next": "Ecua....",
     "proof_read": 2,
     "chapters": [
       {
