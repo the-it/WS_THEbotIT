@@ -54,7 +54,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Herman Abel
-|style="background:#FFCBCB"|1950
+|style="background:#B9FFC5"|1950
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||I,1
@@ -62,7 +62,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
 |Herman Abel
-|style="background:#FFCBCB"|1950
+|style="background:#B9FFC5"|1950
 |-
 |data-sort-value="adam"|[[RE:Adam|'''{{Anker2|Adam}}''']]
 ||III,1
@@ -82,7 +82,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 |-
 |[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]-5
 |Herman Abel
-|style="background:#FFCBCB"|1950
+|style="background:#B9FFC5"|1950
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||III,1
@@ -90,7 +90,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||
 |[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
 |Herman Abel
-|style="background:#FFCBCB"|1950
+|style="background:#B9FFC5"|1950
 |}
 Zahl der Artikel: 6, """
         compare(expected_table, pd_2021_register.get_register_str())
