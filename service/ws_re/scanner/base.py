@@ -11,6 +11,7 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
+from service.ws_re.scanner.tasks.gemeinfrei_2021 import GF21Task
 from service.ws_re.scanner.tasks.keine_schoepfungshoehe import KSCHTask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
@@ -27,7 +28,7 @@ class ReScanner(CanonicalBot):
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(hours=8)
-        self.tasks: List[Callable] = [KSCHTask, DEALTask, DEWPTask, REAUTask, DATATask, SCANTask]
+        self.tasks: List[Callable] = [KSCHTask, DEALTask, DEWPTask, REAUTask, GF21Task, DATATask, SCANTask]
         if self.debug:
             self.tasks = self.tasks + []
         self.statistic: Dict[str, int] = {}
