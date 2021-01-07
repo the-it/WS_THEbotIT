@@ -5,14 +5,6 @@ clean-pyc :
 	echo "######## CLEAN PY CACHE ########"
 	find . | grep -E "__pycache__" | xargs rm -rf
 
-cloc :
-	echo "########## COUNT LOC ###########"
-	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
-
-gource :
-	echo "############ GOURCE ############"
-	gource -s 0.1 .
-
 # dependency management
 
 install_pip :
