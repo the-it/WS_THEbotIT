@@ -62,7 +62,7 @@ bla
             compare({"success": True, "changed": True}, task.run(re_page))
             compare("", re_page[0]["TODESJAHR"].value)
 
-    def test_process_do_nothing(self):
+    def test_process_do_nothing_to_year(self):
         self.text_mock.return_value = """{{REDaten
 |BAND=S I
 |KEINE_SCHÖPFUNGSHÖHE=ON
@@ -73,8 +73,9 @@ bla
         re_page = RePage(self.page_mock)
         with LogCapture():
             task = GF21Task(None, self.logger)
-            compare({"success": True, "changed": False}, task.run(re_page))
+            compare({"success": True, "changed": True}, task.run(re_page))
             compare("", re_page[0]["TODESJAHR"].value)
+            compare(False, re_page[0]["KEINE_SCHÖPFUNGSHÖHE"].value)
 
     def test_process_do_nothing_schoepfungshoehe(self):
         self.text_mock.return_value = """{{REDaten
@@ -89,3 +90,18 @@ bla
             task = GF21Task(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
             compare("1950", re_page[0]["TODESJAHR"].value)
+
+    def test_process_delete_schoepfungshoehe(self):
+        self.text_mock.return_value = """{{REDaten
+|BAND=S I
+|KEINE_SCHÖPFUNGSHÖHE=ON
+|TODESJAHR=1950
+}}
+bla
+{{REAutor|Hug.}}"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = GF21Task(None, self.logger)
+            compare({"success": True, "changed": True}, task.run(re_page))
+            compare("", re_page[0]["TODESJAHR"].value)
+            compare(False, re_page[0]["KEINE_SCHÖPFUNGSHÖHE"].value)

@@ -20,3 +20,4 @@ class GF21Task(ReScannerTask):
                     if author_string in ("Arthur Stein", "Hugo Willrich", "Edward Capps", "August Hug"):
                         if re_article["KEINE_SCHÖPFUNGSHÖHE"].value:
                             re_article["TODESJAHR"].value = ""
+                        re_article["KEINE_SCHÖPFUNGSHÖHE"].value = False
