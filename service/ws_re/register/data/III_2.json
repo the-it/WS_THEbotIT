@@ -31005,6 +31005,7 @@
     "lemma": "Chimaira",
     "previous": "Chimabes",
     "next": "Chimaira 1",
+    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -31377,7 +31378,7 @@
     "lemma": "Chionis 2",
     "previous": "Chionis 1",
     "next": "Chionis 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2286,
@@ -31390,7 +31391,7 @@
     "lemma": "Chionis 3",
     "previous": "Chionis 2",
     "next": "Chionitae",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2286,
@@ -31729,7 +31730,7 @@
   {
     "lemma": "Chisoe",
     "previous": "Chisiduo",
-    "next": "Chiton 1",
+    "next": "Χιτών",
     "proof_read": 3,
     "chapters": [
       {
@@ -31757,7 +31758,7 @@
   },
   {
     "lemma": "Chitone 1",
-    "previous": "Chiton 1",
+    "previous": "Χιτών",
     "next": "Chitone 2",
     "proof_read": 3,
     "chapters": [
@@ -32542,7 +32543,7 @@
     "previous": "Choirilos 5",
     "next": "Choirion",
     "sort_key": "Choirinai",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2363,
@@ -32555,7 +32556,7 @@
     "lemma": "Choirion",
     "previous": "Χοίριναι",
     "next": "Χοίριος νάπη",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2363,
@@ -36080,7 +36081,7 @@
     "lemma": "Chrysogonos 6",
     "previous": "Chrysogonos 5",
     "next": "Chrysogonos 7",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2513,
@@ -36093,7 +36094,7 @@
     "lemma": "Chrysogonos 7",
     "previous": "Chrysogonos 6",
     "next": "Χρυσογραφία",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2513,
@@ -36107,7 +36108,7 @@
     "previous": "Chrysogonos 7",
     "next": "Chrysokeras",
     "sort_key": "Chrysographia",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2513,
@@ -38021,7 +38022,7 @@
     "lemma": "Cilnius 1",
     "previous": "Cilnius",
     "next": "Cilnius 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2546,
@@ -38034,7 +38035,7 @@
     "lemma": "Cilnius 2",
     "previous": "Cilnius 1",
     "next": "Cilnius 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2546,
@@ -44954,7 +44955,7 @@
     "previous": "Claudius 274",
     "next": "Claudius 276",
     "proof_read": 2,
-    "wp_link": "w:de:Tiberius Claudius Pollio",
+    "wp_link": "w:de:Tiberius Claudius Pollio (Eques)",
     "wd_link": "d:Q85519192",
     "chapters": [
       {
@@ -47417,7 +47418,7 @@
     "lemma": "Baumkultus",
     "previous": "Bereiaros",
     "next": "Boerebista",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Baumkult",
     "wd_link": "d:Q811600",
     "chapters": [
@@ -47474,7 +47475,16 @@
   },
   {
     "lemma": "Caelus",
-    "next": "Carthago nova"
+    "previous": "Cacus",
+    "next": "Carthago nova",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2905,
+        "end": 2905,
+        "author": "Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Carthago nova",
