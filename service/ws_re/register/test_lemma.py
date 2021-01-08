@@ -100,7 +100,8 @@ class TestLemma(BaseTestRegister):
         altered_dict = copy.deepcopy(self.basic_dict)
         altered_dict["wp_link"] = "w:de:Lemma = Irgendwas"
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
-        compare(("[[w:de:Lemma = Irgendwas|Lemma {{=}} Irgendwas<sup>(WP de)</sup>]]", "data-sort-value=\"w:de:lemma = irgenduas\""),
+        compare(("[[w:de:Lemma = Irgendwas|Lemma {{=}} Irgendwas<sup>(WP de)</sup>]]",
+                 "data-sort-value=\"w:de:lemma = irgenduas\""),
                 re_register_lemma.get_wiki_links())
 
     def test_wiki_links_bug_multipart_lemma(self):
