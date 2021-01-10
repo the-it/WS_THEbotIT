@@ -248,14 +248,18 @@ class Lemma():
             status = "KOR"
         return color, status
 
+    @staticmethod
+    def _escape_link_for_templates(link: str) -> str:
+        return link.replace("=", "{{=}}")
+
     def get_link(self) -> str:
         redirect = self.lemma_dict["redirect"] if "redirect" in self.lemma_dict else False
         if redirect:
-            link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self['lemma']}}}}}'']]"
+            link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self._escape_link_for_templates(str(self['lemma']))}}}}}'']]"
             if isinstance(redirect, str):
                 link += f" → '''[[RE:{redirect}|{redirect}]]'''"
         else:
-            link = f"[[RE:{self['lemma']}|'''{{{{Anker2|{self['lemma']}}}}}''']]"
+            link = f"[[RE:{self['lemma']}|'''{{{{Anker2|{self._escape_link_for_templates(str(self['lemma']))}}}}}''']]"
         return link
 
     def get_wiki_links(self) -> Tuple[str, str]:
@@ -284,7 +288,8 @@ class Lemma():
         if wiki_type == "wp":
             link_type = "wp_link"
         parts = self._lemma_dict[link_type].split(":")
-        return f"[[{self[link_type]}|{parts[-1]}<sup>({wiki_type.upper()} {parts[1]})</sup>]]", \
+        return f"[[{self[link_type]}|{self._escape_link_for_templates(parts[-1])}" \
+               f"<sup>({wiki_type.upper()} {parts[1]})</sup>]]", \
                f"{parts[0]}:{parts[1]}:{self.make_sort_key(':'.join(parts[2:]))}"
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:

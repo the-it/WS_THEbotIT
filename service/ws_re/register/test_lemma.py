@@ -46,34 +46,46 @@ class TestLemma(BaseTestRegister):
     def test_get_link(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("[[RE:lemma|''{{Anker2|lemma}}'']]", re_register_lemma.get_link())
+
         altered_dict = copy.deepcopy(self.basic_dict)
         altered_dict["redirect"] = False
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
         compare("[[RE:lemma|'''{{Anker2|lemma}}''']]", re_register_lemma.get_link())
+
         altered_dict = copy.deepcopy(self.basic_dict)
         altered_dict["redirect"] = "Some other Lemma"
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
         compare("[[RE:lemma|''{{Anker2|lemma}}'']] → '''[[RE:Some other Lemma|Some other Lemma]]'''",
                 re_register_lemma.get_link())
 
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["lemma"] = "Ist = gleich"
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
+        compare("[[RE:Ist = gleich|''{{Anker2|Ist {{=}} gleich}}'']]",
+                re_register_lemma.get_link())
+
     def test_wiki_links(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare(("", ""), re_register_lemma.get_wiki_links())
+
         altered_dict = copy.deepcopy(self.basic_dict)
         altered_dict["wp_link"] = "w:de:Lemma"
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
         compare(("[[w:de:Lemma|Lemma<sup>(WP de)</sup>]]", "data-sort-value=\"w:de:lemma\""),
                 re_register_lemma.get_wiki_links())
+
         altered_dict = copy.deepcopy(self.basic_dict)
         altered_dict["ws_link"] = "s:de:Lemma"
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
         compare(("[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]", "data-sort-value=\"s:de:lemma\""),
                 re_register_lemma.get_wiki_links())
+
         altered_dict = copy.deepcopy(self.basic_dict)
         altered_dict["wd_link"] = "d:Q123456"
         re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
         compare(("[[d:Q123456|WD-Item]]", "data-sort-value=\"d:Q123456\""),
                 re_register_lemma.get_wiki_links())
+
         altered_dict = copy.deepcopy(self.basic_dict)
         altered_dict["wp_link"] = "w:de:Lemma"
         altered_dict["ws_link"] = "s:de:Lemma"
@@ -83,6 +95,13 @@ class TestLemma(BaseTestRegister):
                  "[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]<br/>"
                  "[[d:Q123456|WD-Item]]",
                  "data-sort-value=\"w:de:lemma\""),
+                re_register_lemma.get_wiki_links())
+
+        altered_dict = copy.deepcopy(self.basic_dict)
+        altered_dict["wp_link"] = "w:de:Lemma = Irgendwas"
+        re_register_lemma = Lemma(altered_dict, self.volumes["I,1"], self.authors)
+        compare(("[[w:de:Lemma = Irgendwas|Lemma {{=}} Irgendwas<sup>(WP de)</sup>]]",
+                 "data-sort-value=\"w:de:lemma = irgenduas\""),
                 re_register_lemma.get_wiki_links())
 
     def test_wiki_links_bug_multipart_lemma(self):
