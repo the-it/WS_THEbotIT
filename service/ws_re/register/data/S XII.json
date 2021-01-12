@@ -2136,11 +2136,21 @@
   },
   {
     "lemma": "Chrysippos 14",
-    "previous": "Charax 19"
+    "previous": "Charax 19",
+    "next": "Cilnius 3"
   },
   {
     "lemma": "Cilnius 3",
-    "next": "Claudius 109"
+    "previous": "Chrysippos 14",
+    "next": "Claudius 109",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 155,
+        "end": 155,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Claudius 109",
