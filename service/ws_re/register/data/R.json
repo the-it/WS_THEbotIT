@@ -58,11 +58,23 @@
   },
   {
     "lemma": "Acilius 28a",
-    "previous": "Acilius 22"
+    "previous": "Acilius 22",
+    "next": "Acilius 40"
   },
   {
     "lemma": "Acilius 40",
-    "next": "Acilius 40a"
+    "previous": "Acilius 28a",
+    "next": "Acilius 40a",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Manius Acilius Glabrio (Konsul 91)",
+    "wd_link": "d:Q672403",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
   },
   {
     "lemma": "Acilius 40a",
@@ -532,6 +544,7 @@
   {
     "lemma": "Amithoscatta",
     "previous": "Ambito",
+    "next": "Analemma",
     "redirect": true,
     "chapters": [
       {
@@ -541,7 +554,18 @@
   },
   {
     "lemma": "Analemma",
-    "next": "Anamares"
+    "previous": "Amithoscatta",
+    "next": "Anamares",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Analemma",
+    "wd_link": "d:Q484737",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24
+      }
+    ]
   },
   {
     "lemma": "Anamares",
@@ -738,10 +762,20 @@
   },
   {
     "lemma": "Antistius 27",
-    "previous": "Antistius 26"
+    "previous": "Antistius 26",
+    "next": "Antius 6a",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 32,
+        "end": 32
+      }
+    ]
   },
   {
     "lemma": "Antius 6a",
+    "previous": "Antistius 27",
     "next": "Antonius 121a",
     "redirect": true,
     "chapters": [
@@ -1372,6 +1406,7 @@
   {
     "lemma": "Baebius 7a",
     "previous": "Baebius 5a",
+    "next": "Bappo",
     "chapters": [
       {
         "start": 60
@@ -1380,7 +1415,17 @@
   },
   {
     "lemma": "Bappo",
-    "next": "Bappo 1"
+    "previous": "Baebius 7a",
+    "next": "Bappo 1",
+    "redirect": true,
+    "proof_read": 2,
+    "wd_link": "d:Q4077528",
+    "chapters": [
+      {
+        "start": 60,
+        "end": 60
+      }
+    ]
   },
   {
     "lemma": "Bappo 1",
@@ -1447,10 +1492,20 @@
   },
   {
     "lemma": "Bizana",
-    "previous": "ad Bivium"
+    "previous": "ad Bivium",
+    "next": "Boconiana officina",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67
+      }
+    ]
   },
   {
     "lemma": "Boconiana officina",
+    "previous": "Bizana",
     "next": "Bodus 2",
     "redirect": true,
     "chapters": [
