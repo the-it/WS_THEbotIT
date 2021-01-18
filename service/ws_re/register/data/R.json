@@ -1601,10 +1601,20 @@
   },
   {
     "lemma": "Boiskos 2",
-    "previous": "Boiskos 1a"
+    "previous": "Boiskos 1a",
+    "next": "Briva",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67
+      }
+    ]
   },
   {
     "lemma": "Briva",
+    "previous": "Boiskos 2",
     "next": "Bur(e)bista",
     "redirect": true,
     "chapters": [
