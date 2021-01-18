@@ -114,7 +114,7 @@ jsonpatch==1.28
     # via
     #   cfn-lint
     #   internetarchive
-jsonpickle==1.4.2
+jsonpickle==1.5.0
     # via aws-xray-sdk
 jsonpointer==2.0
     # via jsonpatch
