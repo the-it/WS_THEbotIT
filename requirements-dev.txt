@@ -218,7 +218,7 @@ responses==0.12.1
     # via moto
 rsa==4.7
     # via python-jose
-s3transfer==0.3.3
+s3transfer==0.3.4
     # via
     #   -c requirements.txt
     #   boto3
