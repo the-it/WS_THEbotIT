@@ -80,7 +80,7 @@ ecdsa==0.16.1
     #   sshpubkeys
 flake8==3.8.4
     # via -r requirements-dev.in
-freezegun==1.0.0
+freezegun==1.1.0
     # via -r requirements-dev.in
 future==0.18.2
     # via aws-xray-sdk
