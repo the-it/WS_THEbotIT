@@ -1082,7 +1082,7 @@
   {
     "lemma": "Ehe",
     "previous": "Dura 2",
-    "next": "Ekmartyresis",
+    "next": "Einatos",
     "chapters": [
       {
         "start": 169,
@@ -1091,8 +1091,20 @@
     ]
   },
   {
-    "lemma": "Ekmartyresis",
+    "lemma": "Einatos",
     "previous": "Ehe",
+    "next": "ἐκμαρτύρησις",
+    "chapters": [
+      {
+        "start": 171,
+        "end": 173,
+        "author": "E. Kirsten."
+      }
+    ]
+  },
+  {
+    "lemma": "ἐκμαρτύρησις",
+    "previous": "Einatos",
     "next": "Elufrius",
     "chapters": [
       {
@@ -1103,7 +1115,7 @@
   },
   {
     "lemma": "Elufrius",
-    "previous": "Ekmartyresis",
+    "previous": "ἐκμαρτύρησις",
     "next": "Enteuxis",
     "chapters": [
       {
@@ -1691,7 +1703,7 @@
     "previous": "Iulius 86a",
     "next": "Iulius 348",
     "redirect": "Iulius 425a",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:en:Gaius Julius Bassus",
     "wd_link": "d:Q5517440",
     "chapters": [

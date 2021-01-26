@@ -27,10 +27,23 @@
   },
   {
     "lemma": "Aberglaube",
-    "previous": "Abercius b"
+    "previous": "Abercius b",
+    "next": "Achaikaros",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Aberglaube",
+    "ws_link": "s:de:Aberglaube",
+    "wd_link": "d:Q133182",
+    "chapters": [
+      {
+        "start": 5,
+        "end": 5
+      }
+    ]
   },
   {
     "lemma": "Achaikaros",
+    "previous": "Aberglaube",
     "chapters": [
       {
         "start": 6
@@ -58,11 +71,23 @@
   },
   {
     "lemma": "Acilius 28a",
-    "previous": "Acilius 22"
+    "previous": "Acilius 22",
+    "next": "Acilius 40"
   },
   {
     "lemma": "Acilius 40",
-    "next": "Acilius 40a"
+    "previous": "Acilius 28a",
+    "next": "Acilius 40a",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Manius Acilius Glabrio (Konsul 91)",
+    "wd_link": "d:Q672403",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
   },
   {
     "lemma": "Acilius 40a",
@@ -136,11 +161,33 @@
   },
   {
     "lemma": "Acilius 42",
-    "previous": "Acilius 40e"
+    "previous": "Acilius 40e",
+    "next": "Acilius 52",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Manius Acilius Glabrio (Konsul 152)",
+    "wd_link": "d:Q1237530",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
   },
   {
     "lemma": "Acilius 52",
-    "next": "Acilius 57"
+    "previous": "Acilius 42",
+    "next": "Acilius 57",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Lucius Acilius Rufus",
+    "wd_link": "d:Q343799",
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
   },
   {
     "lemma": "Acilius 57",
@@ -213,6 +260,7 @@
   {
     "lemma": "Aelius 43a",
     "previous": "Aelius 27aaa",
+    "next": "Aelius 76",
     "chapters": [
       {
         "start": 9
@@ -221,7 +269,19 @@
   },
   {
     "lemma": "Aelius 76",
-    "next": "Aelius 78a"
+    "previous": "Aelius 43a",
+    "next": "Aelius 78a",
+    "sort_key": "Aelius 076",
+    "redirect": "Aelius 75a",
+    "proof_read": 2,
+    "wp_link": "w:de:Lucius Aelius Lamia (Konsul 3)",
+    "wd_link": "d:Q666605",
+    "chapters": [
+      {
+        "start": 9,
+        "end": 9
+      }
+    ]
   },
   {
     "lemma": "Aelius 78a",
@@ -532,6 +592,7 @@
   {
     "lemma": "Amithoscatta",
     "previous": "Ambito",
+    "next": "Analemma",
     "redirect": true,
     "chapters": [
       {
@@ -541,7 +602,18 @@
   },
   {
     "lemma": "Analemma",
-    "next": "Anamares"
+    "previous": "Amithoscatta",
+    "next": "Anamares",
+    "redirect": true,
+    "proof_read": 2,
+    "wp_link": "w:de:Analemma",
+    "wd_link": "d:Q484737",
+    "chapters": [
+      {
+        "start": 24,
+        "end": 24
+      }
+    ]
   },
   {
     "lemma": "Anamares",
@@ -738,10 +810,20 @@
   },
   {
     "lemma": "Antistius 27",
-    "previous": "Antistius 26"
+    "previous": "Antistius 26",
+    "next": "Antius 6a",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 32,
+        "end": 32
+      }
+    ]
   },
   {
     "lemma": "Antius 6a",
+    "previous": "Antistius 27",
     "next": "Antonius 121a",
     "redirect": true,
     "chapters": [
@@ -1372,6 +1454,7 @@
   {
     "lemma": "Baebius 7a",
     "previous": "Baebius 5a",
+    "next": "Bappo",
     "chapters": [
       {
         "start": 60
@@ -1380,7 +1463,17 @@
   },
   {
     "lemma": "Bappo",
-    "next": "Bappo 1"
+    "previous": "Baebius 7a",
+    "next": "Bappo 1",
+    "redirect": true,
+    "proof_read": 3,
+    "wd_link": "d:Q4077528",
+    "chapters": [
+      {
+        "start": 62,
+        "end": 62
+      }
+    ]
   },
   {
     "lemma": "Bappo 1",
@@ -1398,10 +1491,20 @@
   },
   {
     "lemma": "Bappo 2",
-    "previous": "Bappo 1"
+    "previous": "Bappo 1",
+    "next": "Basilia 1",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 60,
+        "end": 60
+      }
+    ]
   },
   {
     "lemma": "Basilia 1",
+    "previous": "Bappo 2",
     "next": "Basilia 2",
     "chapters": [
       {
@@ -1447,10 +1550,20 @@
   },
   {
     "lemma": "Bizana",
-    "previous": "ad Bivium"
+    "previous": "ad Bivium",
+    "next": "Boconiana officina",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67
+      }
+    ]
   },
   {
     "lemma": "Boconiana officina",
+    "previous": "Bizana",
     "next": "Bodus 2",
     "redirect": true,
     "chapters": [
@@ -1488,10 +1601,20 @@
   },
   {
     "lemma": "Boiskos 2",
-    "previous": "Boiskos 1a"
+    "previous": "Boiskos 1a",
+    "next": "Briva",
+    "redirect": true,
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 67,
+        "end": 67
+      }
+    ]
   },
   {
     "lemma": "Briva",
+    "previous": "Boiskos 2",
     "next": "Bur(e)bista",
     "redirect": true,
     "chapters": [

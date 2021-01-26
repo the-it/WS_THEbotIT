@@ -1780,7 +1780,7 @@
     "previous": "Alençon, Notre Dame d’-",
     "next": "Aleuas 5",
     "redirect": "Alise-Sainte-Reine",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Alesia",
     "wd_link": "d:Q835966",
     "chapters": [
@@ -1794,7 +1794,7 @@
     "lemma": "Aleuas 5",
     "previous": "Alesia 1",
     "next": "Ἀλευρομαντεία",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 78,
@@ -11331,7 +11331,7 @@
     "lemma": "Bosporos 1",
     "previous": "Borillus 2",
     "next": "Byzantion 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Bosporus",
     "wd_link": "d:Q35958",
     "chapters": [
@@ -12312,7 +12312,7 @@
     "lemma": "Caecilius 101",
     "previous": "Caecilius 99",
     "next": "Caecilius 124a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 223,
@@ -12369,7 +12369,7 @@
     "previous": "Caecilius 137",
     "next": "Caelianae figlinae",
     "sort_key": "Caecina 02ff.",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Caecina",
     "wd_link": "d:Q1229814",
     "chapters": [
@@ -12746,7 +12746,7 @@
     "previous": "Calpurnius 96",
     "next": "Calvisius 13",
     "sort_key": "Calpurnius 098",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 231,
@@ -12961,7 +12961,7 @@
     "lemma": "Cannicus",
     "previous": "Caninius 4",
     "next": "Canobus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 233,
@@ -13261,7 +13261,7 @@
     "lemma": "Caruces",
     "previous": "Cartoriana",
     "next": "Cascellius 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 236,
@@ -14468,7 +14468,7 @@
     "lemma": "Citiergesetz",
     "previous": "Cispius 2a",
     "next": "Claudiana tegula",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 252,
@@ -15226,7 +15226,7 @@
     "lemma": "Cornelius 177",
     "previous": "Cornelius 141",
     "next": "Cornelius 186",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 259,
@@ -15471,7 +15471,7 @@
     "lemma": "Cornelius 385",
     "previous": "Cornelius 373",
     "next": "Cornelius 407",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 261,
@@ -18562,6 +18562,7 @@
   {
     "lemma": "Durucu(s)",
     "previous": "Durotelis",
+    "next": "Dyseris",
     "proof_read": 2,
     "chapters": [
       {
@@ -18572,21 +18573,8 @@
     ]
   },
   {
-    "lemma": "ucu(s)",
-    "previous": "Durotelis",
-    "next": "Dyseris",
-    "proof_read": 3,
-    "chapters": [
-      {
-        "start": 416,
-        "end": 416,
-        "author": "Hähnle."
-      }
-    ]
-  },
-  {
     "lemma": "Dyseris",
-    "previous": "ucu(s)",
+    "previous": "Durucu(s)",
     "next": "Eboreus pagus",
     "proof_read": 2,
     "chapters": [
@@ -18735,7 +18723,7 @@
     "previous": "Ἐχῖνος",
     "next": "Edeatros",
     "redirect": "Equa....",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 418,
@@ -18944,15 +18932,18 @@
   },
   {
     "lemma": "Empusa",
-    "previous": "Emeia"
+    "previous": "Emeia",
+    "next": "Empusa 2"
   },
   {
     "lemma": "Empusa 2",
+    "previous": "Empusa",
     "next": "Ennius 3a",
     "chapters": [
       {
         "start": 429,
-        "author": "Stähelin"
+        "end": 429,
+        "author": "Stähelin."
       }
     ]
   },
@@ -19169,7 +19160,14 @@
   {
     "lemma": "Epikrates 3",
     "previous": "Epikrates 1a",
-    "next": "Epimenes 1a"
+    "next": "Epimenes 1a",
+    "chapters": [
+      {
+        "start": 435,
+        "end": 435,
+        "author": "Stähelin."
+      }
+    ]
   },
   {
     "lemma": "Epimenes 1a",
@@ -19199,11 +19197,27 @@
   },
   {
     "lemma": "Epistula 1",
-    "previous": "Ἐπιστάτης εἰρήνης"
+    "previous": "Ἐπιστάτης εἰρήνης",
+    "chapters": [
+      {
+        "start": 435,
+        "end": 436,
+        "author": "Weiss."
+      }
+    ]
   },
   {
     "lemma": "Epistula",
-    "next": "Epona"
+    "previous": "Ἐπιστάτης ἐιρήνης",
+    "next": "Epona",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 435,
+        "end": 436,
+        "author": "E. Weiss."
+      }
+    ]
   },
   {
     "lemma": "Epona",
@@ -21016,10 +21030,20 @@
   },
   {
     "lemma": "Gala",
-    "previous": "Gaius 8b"
+    "previous": "Gaius 8b",
+    "next": "Galba a",
+    "redirect": "Gaia 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 537,
+        "end": 537
+      }
+    ]
   },
   {
     "lemma": "Galba a",
+    "previous": "Gala",
     "next": "Galeria 3",
     "chapters": [
       {

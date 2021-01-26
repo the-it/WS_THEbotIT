@@ -162,6 +162,7 @@
     "lemma": "Aelius 76",
     "previous": "Aelius 57",
     "next": "Aelius 78a",
+    "sort_key": "Aelius 076",
     "proof_read": 3,
     "wp_link": "w:de:Lucius Aelius Lamia (Konsul 3)",
     "wd_link": "d:Q666605",
@@ -2136,17 +2137,38 @@
   },
   {
     "lemma": "Chrysippos 14",
-    "previous": "Charax 19"
+    "previous": "Charax 19",
+    "next": "Cilnius 3",
+    "redirect": true,
+    "wp_link": "w:de:Chrysippos von Soloi",
+    "ws_link": "s:it:Autore:Crisippo di Soli",
+    "wd_link": "d:Q211411",
+    "chapters": [
+      {
+        "start": 148,
+        "end": 155,
+        "author": "Heinrich Dörrie."
+      }
+    ]
   },
   {
     "lemma": "Cilnius 3",
-    "next": "Claudius 109"
+    "previous": "Chrysippos 14",
+    "next": "Claudius 109",
+    "redirect": "Neratius 12a",
+    "chapters": [
+      {
+        "start": 155,
+        "end": 155,
+        "author": "Rudolf Hanslik."
+      }
+    ]
   },
   {
     "lemma": "Claudius 109",
     "previous": "Cilnius 3",
     "next": "Claudius 162",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 155,
@@ -2183,7 +2205,7 @@
     "lemma": "Claudius 242",
     "previous": "Claudius 211",
     "next": "Claudius 259a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 156,
@@ -2502,7 +2524,7 @@
     "lemma": "Cornelius 291",
     "previous": "Cornelius 290",
     "next": "Cornelius 294",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 189,
