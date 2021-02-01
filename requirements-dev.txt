@@ -160,7 +160,7 @@ mypy==0.800
     # via -r requirements-dev.in
 networkx==2.5
     # via cfn-lint
-packaging==20.8
+packaging==20.9
     # via
     #   dparse
     #   safety
