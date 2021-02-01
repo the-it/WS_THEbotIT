@@ -6,7 +6,7 @@
 #
 beautifulsoup4==4.9.3
     # via -r requirements.in
-boto3==1.16.59
+boto3==1.16.63
     # via -r requirements.in
 botocore==1.19.59
     # via
