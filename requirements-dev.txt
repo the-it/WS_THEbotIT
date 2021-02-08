@@ -73,7 +73,7 @@ docopt==0.6.2
     # via internetarchive
 dparse==0.5.1
     # via safety
-ecdsa==0.14.1
+ecdsa==0.16.1
     # via
     #   moto
     #   python-jose
