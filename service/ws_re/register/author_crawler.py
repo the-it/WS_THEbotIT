@@ -63,14 +63,13 @@ class AuthorCrawler:
 
     @staticmethod
     def _split_author_table(raw_table: str) -> List[str]:
-        hit = re.search(r"\{\|class=\"wikitable sortable\"\s+\|-\s+(.*)\s+\|\}",
+        hit = re.search(r"\{\|class=\"wikitable sortable\"[^\|]*?\|-\s+(.*)\s+\|\}",
                         raw_table, re.DOTALL)
         if hit:
             table = hit.group(1)
             splitted_table = table.split("\n|-\n")
-            del splitted_table[0]
             return splitted_table
-        raise ValueError(f"{raw_table} not compatible to regex.")
+        raise ValueError("raw_table not compatible to regex.")
 
     @staticmethod
     def _split_author(author_sub_table: str) -> List[str]:
@@ -109,7 +108,7 @@ class AuthorCrawler:
 
     @staticmethod
     def _extract_years(years: str) -> Tuple[Optional[int], Optional[int]]:
-        hit = re.search(r"(?<!\")(\d{4})–?(\d{4})?", years)
+        hit = re.search(r"(?<!\")(\d{4}) ?\|\| ?(\d{4})?", years)
         if hit:
             return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
         return None, None
