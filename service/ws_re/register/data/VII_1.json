@@ -5187,7 +5187,15 @@
   {
     "lemma": "Fura",
     "previous": "Funus",
-    "next": "Furca"
+    "next": "Furca",
+    "redirect": "Furrina",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 305,
+        "end": 305
+      }
+    ]
   },
   {
     "lemma": "Furca",
@@ -12220,10 +12228,20 @@
   },
   {
     "lemma": "Gaphara",
-    "previous": "Gapachi"
+    "previous": "Gapachi",
+    "next": "Gaphara 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 749,
+        "end": 749,
+        "author": "Dessau."
+      }
+    ]
   },
   {
     "lemma": "Gaphara 1",
+    "previous": "Gaphara",
     "next": "Gaphara 2",
     "chapters": [
       {
