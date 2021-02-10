@@ -975,6 +975,7 @@
   {
     "lemma": "Eurea",
     "previous": "Eudemos 11",
+    "next": "Eudemos 1",
     "chapters": [
       {
         "start": 658,
@@ -984,7 +985,16 @@
   },
   {
     "lemma": "Eudemos 1",
-    "next": "Euripides 4"
+    "previous": "Eurea",
+    "next": "Euripides 4",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 658,
+        "end": 658
+      }
+    ]
   },
   {
     "lemma": "Euripides 4",
