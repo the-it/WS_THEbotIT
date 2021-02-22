@@ -156,7 +156,7 @@ mypy-boto3-sqs==1.17.3.0
     # via boto3-stubs
 mypy-extensions==0.4.3
     # via mypy
-mypy==0.800
+mypy==0.812
     # via -r requirements-dev.in
 networkx==2.5
     # via cfn-lint
