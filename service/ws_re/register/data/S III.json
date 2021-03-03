@@ -11892,6 +11892,7 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
+    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11905,7 +11906,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconica",
+    "previous": "Buconice",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -13339,6 +13340,8 @@
     "previous": "Cassius 20",
     "next": "Cassius 70",
     "proof_read": 3,
+    "wp_link": "w:en:Lucius Cassius Longinus (proconsul 48 BC)",
+    "wd_link": "d:Q976168",
     "chapters": [
       {
         "start": 236,
@@ -14581,7 +14584,7 @@
     "lemma": "Claudius 225",
     "previous": "Claudius 122",
     "next": "Claudius 251",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 253,
@@ -15127,7 +15130,9 @@
     "previous": "Cornelius 8",
     "next": "Cornelius 16",
     "sort_key": "Cornelius 008a",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Hauptmann Kornelius",
+    "wd_link": "d:Q435987",
     "chapters": [
       {
         "start": 258,
@@ -18690,7 +18695,7 @@
   {
     "lemma": "Echemmas",
     "previous": "Echekratidas 2",
-    "next": "Echinos 7",
+    "next": "Ἐχῖνος 7",
     "proof_read": 3,
     "chapters": [
       {
@@ -18701,7 +18706,7 @@
     ]
   },
   {
-    "lemma": "Echinos 7",
+    "lemma": "Ἐχῖνος 7",
     "previous": "Echemmas",
     "next": "Ecua....",
     "proof_read": 2,
