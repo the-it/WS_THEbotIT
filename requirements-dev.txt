@@ -81,7 +81,7 @@ jmespath==0.10.0
     #   -c requirements.txt
     #   boto3
     #   botocore
-jsonpatch==1.28
+jsonpatch==1.31
     # via internetarchive
 jsonpointer==2.0
     # via jsonpatch
