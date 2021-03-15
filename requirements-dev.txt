@@ -133,7 +133,7 @@ pycparser==2.20
     # via cffi
 pyfiglet==0.8.post1
     # via -r requirements-dev.in
-pyflakes==2.2.0
+pyflakes==2.3.0
     # via flake8
 pylint==2.7.1
     # via -r requirements-dev.in
