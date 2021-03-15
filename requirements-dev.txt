@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
-astroid==2.5.0
+astroid==2.5.1
     # via pylint
 backports.csv==1.0.7
     # via internetarchive
