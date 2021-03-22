@@ -83,7 +83,7 @@ jmespath==0.10.0
     #   botocore
 jsonpatch==1.32
     # via internetarchive
-jsonpointer==2.0
+jsonpointer==2.1
     # via jsonpatch
 lazy-object-proxy==1.5.2
     # via astroid
