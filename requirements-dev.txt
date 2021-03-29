@@ -48,7 +48,7 @@ coverage==5.5
     #   codecov
 cryptography==3.4.7
     # via moto
-ddt==1.4.1
+ddt==1.4.2
     # via -r requirements-dev.in
 docopt==0.6.2
     # via internetarchive
