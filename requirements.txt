@@ -49,7 +49,7 @@ requests==2.25.1
     #   requests-oauthlib
 roman==3.3
     # via -r requirements.in
-s3transfer==0.3.4
+s3transfer==0.3.6
     # via boto3
 six==1.15.0
     # via python-dateutil
