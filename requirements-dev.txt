@@ -127,7 +127,7 @@ patool==1.12
     # via -r requirements-dev.in
 pbr==5.5.1
     # via stevedore
-pycodestyle==2.6.0
+pycodestyle==2.7.0
     # via flake8
 pycparser==2.20
     # via cffi
