@@ -164,7 +164,7 @@ requests==2.25.1
     #   safety
 responses==0.13.1
     # via moto
-s3transfer==0.3.4
+s3transfer==0.3.6
     # via
     #   -c requirements.txt
     #   boto3
