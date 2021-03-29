@@ -16,7 +16,7 @@ beautifulsoup4==4.9.3
     #   -r requirements-dev.in
 boto3-stubs[essential]==1.17.15.0
     # via -r requirements-dev.in
-boto3==1.17.15
+boto3==1.17.39
     # via
     #   -c requirements.txt
     #   moto
