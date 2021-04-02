@@ -19272,10 +19272,21 @@
   },
   {
     "lemma": "Eppius 2",
-    "previous": "Eppillius"
+    "previous": "Eppillius",
+    "next": "Eppius 3a",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 439,
+        "end": 439,
+        "author": "Münzer."
+      }
+    ]
   },
   {
     "lemma": "Eppius 3a",
+    "previous": "Eppius 2",
     "next": "Equa....",
     "chapters": [
       {
