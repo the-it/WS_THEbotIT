@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
-astroid==2.5.0
+astroid==2.5.2
     # via pylint
 backports.csv==1.0.7
     # via internetarchive
@@ -14,13 +14,13 @@ beautifulsoup4==4.9.3
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3-stubs[essential]==1.17.15.0
+boto3-stubs[essential]==1.17.44.0
     # via -r requirements-dev.in
-boto3==1.17.15
+boto3==1.17.44
     # via
     #   -c requirements.txt
     #   moto
-botocore==1.20.15
+botocore==1.20.44
     # via
     #   -c requirements.txt
     #   boto3
@@ -42,27 +42,27 @@ codecov==2.1.11
     # via -r requirements-dev.in
 contextlib2==0.6.0.post1
     # via schema
-coverage==5.4
+coverage==5.5
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==3.4.6
+cryptography==3.4.7
     # via moto
-ddt==1.4.1
+ddt==1.4.2
     # via -r requirements-dev.in
 docopt==0.6.2
     # via internetarchive
 dparse==0.5.1
     # via safety
-flake8==3.8.4
+flake8==3.9.0
     # via -r requirements-dev.in
 freezegun==1.1.0
     # via -r requirements-dev.in
-gitdb==4.0.5
+gitdb==4.0.7
     # via
     #   -c requirements.txt
     #   gitpython
-gitpython==3.1.13
+gitpython==3.1.14
     # via
     #   -c requirements.txt
     #   bandit
@@ -72,7 +72,7 @@ idna==2.8
     #   requests
 internetarchive==1.9.9
     # via -r requirements-dev.in
-isort==5.7.0
+isort==5.8.0
     # via pylint
 jinja2==2.11.3
     # via moto
@@ -81,11 +81,11 @@ jmespath==0.10.0
     #   -c requirements.txt
     #   boto3
     #   botocore
-jsonpatch==1.28
+jsonpatch==1.32
     # via internetarchive
-jsonpointer==2.0
+jsonpointer==2.1
     # via jsonpatch
-lazy-object-proxy==1.5.2
+lazy-object-proxy==1.6.0
     # via astroid
 markupsafe==1.1.1
     # via
@@ -99,21 +99,21 @@ mock==4.0.3
     # via moto
 more-itertools==8.7.0
     # via moto
-moto==2.0.0
+moto==2.0.4
     # via -r requirements-dev.in
-mypy-boto3-cloudformation==1.17.15.0
+mypy-boto3-cloudformation==1.17.44.0
     # via boto3-stubs
-mypy-boto3-dynamodb==1.17.15.0
+mypy-boto3-dynamodb==1.17.44.0
     # via boto3-stubs
-mypy-boto3-ec2==1.17.15.0
+mypy-boto3-ec2==1.17.44.0
     # via boto3-stubs
-mypy-boto3-lambda==1.17.15.0
+mypy-boto3-lambda==1.17.44.0
     # via boto3-stubs
-mypy-boto3-rds==1.17.15.0
+mypy-boto3-rds==1.17.44.0
     # via boto3-stubs
-mypy-boto3-s3==1.17.15.0
+mypy-boto3-s3==1.17.44.0
     # via boto3-stubs
-mypy-boto3-sqs==1.17.15.0
+mypy-boto3-sqs==1.17.44.0
     # via boto3-stubs
 mypy-extensions==0.4.3
     # via mypy
@@ -127,15 +127,15 @@ patool==1.12
     # via -r requirements-dev.in
 pbr==5.5.1
     # via stevedore
-pycodestyle==2.6.0
+pycodestyle==2.7.0
     # via flake8
 pycparser==2.20
     # via cffi
 pyfiglet==0.8.post1
     # via -r requirements-dev.in
-pyflakes==2.2.0
+pyflakes==2.3.1
     # via flake8
-pylint==2.7.1
+pylint==2.7.4
     # via -r requirements-dev.in
 pyparsing==2.4.7
     # via packaging
@@ -162,9 +162,9 @@ requests==2.25.1
     #   requests-mock
     #   responses
     #   safety
-responses==0.12.1
+responses==0.13.2
     # via moto
-s3transfer==0.3.4
+s3transfer==0.3.6
     # via
     #   -c requirements.txt
     #   boto3
@@ -181,11 +181,11 @@ six==1.15.0
     #   python-dateutil
     #   requests-mock
     #   responses
-smmap==3.0.5
+smmap==4.0.0
     # via
     #   -c requirements.txt
     #   gitdb
-soupsieve==2.2
+soupsieve==2.2.1
     # via
     #   -c requirements.txt
     #   beautifulsoup4
@@ -197,13 +197,13 @@ toml==0.10.2
     # via
     #   dparse
     #   pylint
-tqdm==4.57.0
+tqdm==4.59.0
     # via internetarchive
 typed-ast==1.4.2
     # via mypy
 typing-extensions==3.7.4.3
     # via mypy
-urllib3==1.26.3
+urllib3==1.26.4
     # via
     #   -c requirements.txt
     #   botocore
@@ -215,7 +215,7 @@ wrapt==1.12.1
     # via astroid
 xmltodict==0.12.0
     # via moto
-zipp==3.4.0
+zipp==3.4.1
     # via moto
 
 # The following packages are considered to be unsafe in a requirements file:
