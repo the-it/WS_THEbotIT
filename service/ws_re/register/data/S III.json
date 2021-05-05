@@ -11893,7 +11893,6 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
-    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11907,7 +11906,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconice",
+    "previous": "Buconica",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -19212,7 +19211,6 @@
   {
     "lemma": "Epistula 1",
     "previous": "Ἐπιστάτης εἰρήνης",
-    "next": "Epona",
     "chapters": [
       {
         "start": 435,
@@ -19223,6 +19221,7 @@
   },
   {
     "lemma": "Epistula",
+    "previous": "Ἐπιστάτης ἐιρήνης",
     "next": "Epona",
     "redirect": true,
     "chapters": [
