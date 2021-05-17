@@ -74,7 +74,7 @@ internetarchive==2.0.3
     # via -r requirements-dev.in
 isort==5.8.0
     # via pylint
-jinja2==2.11.3
+jinja2==3.0.0
     # via moto
 jmespath==0.10.0
     # via
