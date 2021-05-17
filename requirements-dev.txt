@@ -87,7 +87,7 @@ jsonpointer==2.1
     # via jsonpatch
 lazy-object-proxy==1.6.0
     # via astroid
-markupsafe==1.1.1
+markupsafe==2.0.0
     # via
     #   jinja2
     #   moto
