@@ -11893,6 +11893,7 @@
   {
     "lemma": "Buconice",
     "previous": "Buconiana",
+    "next": "Buda",
     "proof_read": 3,
     "wp_link": "w:de:Buconica",
     "wd_link": "d:Q1000377",
@@ -11906,7 +11907,7 @@
   },
   {
     "lemma": "Buda",
-    "previous": "Buconica",
+    "previous": "Buconice",
     "next": "Bürgel",
     "proof_read": 3,
     "wp_link": "w:de:Buda",
@@ -12891,7 +12892,7 @@
     "lemma": "Camulodunum",
     "previous": "Camulatus 2",
     "next": "Camulus",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Camulodunum",
     "wd_link": "d:Q630604",
     "chapters": [
@@ -12906,7 +12907,8 @@
     "lemma": "Camulus",
     "previous": "Camulodunum",
     "next": "Caninianae figlinae",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Camulos (Gott)",
     "chapters": [
       {
         "start": 232,
@@ -18073,7 +18075,7 @@
     "previous": "Domitius pagus",
     "next": "Domitius 5a",
     "proof_read": 3,
-    "wp_link": "w:de:Domitius",
+    "wp_link": "w:de:Domitier",
     "wd_link": "d:Q908366",
     "chapters": [
       {
@@ -18160,7 +18162,6 @@
   {
     "lemma": "Domitius 50",
     "previous": "Domitius 43",
-    "next": "Domitius 89a",
     "sort_key": "Domitius 050",
     "proof_read": 2,
     "wp_link": "w:de:Gnaeus Domitius Corbulo",
@@ -18175,7 +18176,7 @@
   },
   {
     "lemma": "Domitius 89a",
-    "previous": "Domitius 50",
+    "previous": "Domitius 43",
     "next": "Domitus",
     "sort_key": "Domitius 089a",
     "proof_read": 2,
