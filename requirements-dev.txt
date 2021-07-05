@@ -172,7 +172,7 @@ safety==1.10.3
     # via -r requirements-dev.in
 schema==0.7.4
     # via internetarchive
-six==1.15.0
+six==1.16.0
     # via
     #   -c requirements.txt
     #   bandit
