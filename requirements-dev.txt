@@ -72,7 +72,7 @@ idna==3.2
     #   requests
 internetarchive==2.0.3
     # via -r requirements-dev.in
-isort==5.8.0
+isort==5.9.1
     # via pylint
 jinja2==2.11.3
     # via moto
