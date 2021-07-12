@@ -117,7 +117,7 @@ mypy-boto3-sqs==1.17.44.0
     # via boto3-stubs
 mypy-extensions==0.4.3
     # via mypy
-mypy==0.812
+mypy==0.910
     # via -r requirements-dev.in
 packaging==20.9
     # via
