@@ -190,7 +190,7 @@ class TestRePage(TestCase):
         self.text_mock.return_value = ARTICLE_TEMPLATE
 
         def side_effect(summary, botflag):
-            raise pywikibot.exceptions.LockedPage(self.page_mock)
+            raise pywikibot.exceptions.LockedPageError(self.page_mock)
         self.page_mock.save.side_effect = side_effect
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"

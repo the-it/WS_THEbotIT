@@ -117,7 +117,7 @@ class TestDEWPTask(TaskTestCase):
 {{REAutor|Autor.}}"""
             self.title_mock.return_value = "Re:Title"
             page_mock.return_value.exists.side_effect = \
-                pywikibot.exceptions.InvalidTitle("contains illegal char(s) '<'")
+                pywikibot.exceptions.InvalidTitleError("contains illegal char(s) '<'")
             re_page = RePage(self.page_mock)
             task = DEWPTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))

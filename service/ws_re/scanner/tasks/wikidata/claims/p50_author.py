@@ -31,6 +31,6 @@ class P50Author(ClaimFactory):
                     # append the item of the author, if it exists and is not already in the list
                     if (author_wikidata_id := author_lemma.data_item().id) not in author_items:
                         author_items.append(author_wikidata_id)
-                except pywikibot.NoPage:
+                except pywikibot.exceptions.NoPageError:
                     continue
         return author_items

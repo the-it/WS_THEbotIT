@@ -28,7 +28,7 @@ class P921MainSubject(ClaimFactory):
         # try to fetch the data item of the page, if not there is nothing to connect
         try:
             wp_data_item: pywikibot.ItemPage = wp_page.data_item()
-        except (pywikibot.NoPage, pywikibot.exceptions.InvalidTitle):
+        except (pywikibot.exceptions.NoPageError, pywikibot.exceptions.InvalidTitleError):
             return []
         # finally create the claim
         snak = SnakParameter(property_str=self.get_property_string(),
