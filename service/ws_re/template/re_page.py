@@ -102,7 +102,7 @@ class RePage:
             if self.is_writable:
                 try:
                     self.page.save(summary=reason, botflag=True)
-                except pywikibot.exceptions.LockedPage as error:
+                except pywikibot.exceptions.LockedPageError as error:
                     raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.") from error
             else:
                 raise ReDatenException(f"Page {self.page.title} is protected for normal users, "

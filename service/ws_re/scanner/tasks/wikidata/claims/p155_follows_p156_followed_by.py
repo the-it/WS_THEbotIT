@@ -26,7 +26,7 @@ class Neighbour(ClaimFactory):
         lemma_neighbour = self._get_lemma_of_neighbour()
         try:
             return lemma_neighbour.data_item()
-        except pywikibot.NoPage:
+        except pywikibot.exceptions.NoPageError:
             return None
 
     def _get_lemma_of_neighbour(self) -> pywikibot.Page:

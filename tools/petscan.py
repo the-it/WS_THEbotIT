@@ -176,7 +176,7 @@ class PetScan:
 
     def _construct_options(self):
         opt_string = ""
-        for key in self.options:
+        for key in self.options:  # pylint: disable=consider-using-dict-items
             opt_string += ("&" + key + "=" + str(self.options[key]))
         return opt_string
 
