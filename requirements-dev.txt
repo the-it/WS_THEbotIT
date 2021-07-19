@@ -164,7 +164,7 @@ requests-mock==1.9.3
     # via -r requirements-dev.in
 responses==0.13.3
     # via moto
-s3transfer==0.4.2
+s3transfer==0.5.0
     # via
     #   -c requirements.txt
     #   boto3
