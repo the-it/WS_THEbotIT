@@ -40,7 +40,7 @@ pywikibot==6.4.0
     # via -r requirements.in
 regex==2021.7.6
     # via wikitextparser
-requests==2.25.1
+requests==2.26.0
     # via
     #   -r requirements.in
     #   pywikibot
