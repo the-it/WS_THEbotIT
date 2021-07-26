@@ -24,7 +24,7 @@ gitdb==4.0.7
     # via gitpython
 gitpython==3.1.19
     # via -r requirements.in
-idna==2.10
+idna==3.2
     # via requests
 jmespath==0.10.0
     # via
