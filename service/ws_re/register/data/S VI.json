@@ -1287,7 +1287,7 @@
     "lemma": "Carnus",
     "previous": "Carnuns",
     "next": "Carrea (Carreum, Correa)",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 21,
@@ -1339,7 +1339,7 @@
     "lemma": "Cassius 67",
     "previous": "Carucla",
     "next": "Castellum 5a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 22,
@@ -1537,7 +1537,7 @@
     "previous": "Cincius 9",
     "next": "Claudius 186",
     "sort_key": "Claudius 071",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Tiberius Claudius Atticus Herodes",
     "wd_link": "d:Q606409",
     "chapters": [
@@ -2321,7 +2321,6 @@
   {
     "lemma": "Ira 4",
     "previous": "Ionnaria",
-    "next": "Isamnus",
     "proof_read": 2,
     "chapters": [
       {
@@ -2333,6 +2332,8 @@
   },
   {
     "lemma": "Iulius 552a",
+    "previous": "Istros 1a",
+    "next": "Iulianum",
     "proof_read": 2,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
     "wd_link": "d:Q239314",
@@ -2346,7 +2347,6 @@
   },
   {
     "lemma": "Isamnus",
-    "previous": "Ira 4",
     "next": "Istris",
     "proof_read": 2,
     "chapters": [
@@ -2375,7 +2375,6 @@
   {
     "lemma": "Istros 1a",
     "previous": "Istris",
-    "next": "Iulius 552a",
     "proof_read": 2,
     "chapters": [
       {
@@ -2387,8 +2386,9 @@
   },
   {
     "lemma": "Iulianum",
+    "previous": "Iulius 552a",
     "next": "Iunius 183a",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
     "wd_link": "d:Q239314",
     "chapters": [
