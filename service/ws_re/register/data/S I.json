@@ -16316,7 +16316,7 @@
   {
     "lemma": "Arrianus 2a",
     "previous": "Arretium",
-    "next": "Arrius 12",
+    "next": "Arrianus 12",
     "sort_key": "Arrianus 02a",
     "proof_read": 3,
     "chapters": [
@@ -16329,6 +16329,7 @@
   },
   {
     "lemma": "Arrianus 12",
+    "previous": "Arrianus 2a",
     "next": "Arrius 12",
     "proof_read": 3,
     "chapters": [
@@ -22525,7 +22526,8 @@
     "chapters": [
       {
         "start": 249,
-        "end": 249
+        "end": 249,
+        "author": "Stein."
       }
     ]
   },
@@ -27008,7 +27010,6 @@
   {
     "lemma": "Χιτών",
     "previous": "Chiron 1a",
-    "next": "Χλαῖνα",
     "proof_read": 2,
     "wp_link": "w:de:Chiton",
     "wd_link": "d:Q944031",
@@ -27022,7 +27023,7 @@
   },
   {
     "lemma": "Χλαῖνα",
-    "previous": "Χιτών",
+    "previous": "Chiton 1",
     "next": "Χλαμύς",
     "proof_read": 2,
     "chapters": [
@@ -27090,7 +27091,7 @@
     "lemma": "Choara",
     "previous": "Chlydai",
     "next": "Choliatai",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 295,
@@ -27392,7 +27393,7 @@
     "lemma": "Chumana",
     "previous": "Chudukka",
     "next": "Chumbane",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 299,
