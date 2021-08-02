@@ -198,7 +198,7 @@ toml==0.10.2
     #   dparse
     #   mypy
     #   pylint
-tqdm==4.61.2
+tqdm==4.62.0
     # via internetarchive
 types-requests==2.25.0
     # via -r requirements-dev.in
