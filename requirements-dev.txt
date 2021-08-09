@@ -200,7 +200,7 @@ toml==0.10.2
     #   pylint
 tqdm==4.62.0
     # via internetarchive
-types-requests==2.25.0
+types-requests==2.25.6
     # via -r requirements-dev.in
 typing-extensions==3.10.0.0
     # via mypy
