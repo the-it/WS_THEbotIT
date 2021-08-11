@@ -44,14 +44,19 @@
   {
     "lemma": "Achaikaros",
     "previous": "Aberglaube",
+    "next": "Acilius 18a",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 6
+        "start": 6,
+        "end": 6
       }
     ]
   },
   {
     "lemma": "Acilius 18a",
+    "previous": "Achaikaros",
     "next": "Acilius 22"
   },
   {
@@ -193,6 +198,7 @@
     "lemma": "Acilius 57",
     "previous": "Acilius 52",
     "next": "Acilius 57a",
+    "proof_read": 2,
     "wp_link": "w:de:Lucius Acilius Strabo",
     "wd_link": "d:Q716698",
     "chapters": [
