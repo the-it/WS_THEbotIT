@@ -57,7 +57,15 @@
   {
     "lemma": "Acilius 18a",
     "previous": "Achaikaros",
-    "next": "Acilius 22"
+    "next": "Acilius 22",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
   },
   {
     "lemma": "Acilius 22",
@@ -210,10 +218,20 @@
   },
   {
     "lemma": "Acilius 57a",
-    "previous": "Acilius 57"
+    "previous": "Acilius 57",
+    "next": "Aelius 17a",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
   },
   {
     "lemma": "Aelius 17a",
+    "previous": "Acilius 57a",
     "next": "Aelius 23a"
   },
   {
