@@ -85,7 +85,14 @@
   {
     "lemma": "Acilius 28a",
     "previous": "Acilius 22",
-    "next": "Acilius 40"
+    "next": "Acilius 40",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 7,
+        "end": 7
+      }
+    ]
   },
   {
     "lemma": "Acilius 40",
@@ -249,10 +256,19 @@
   },
   {
     "lemma": "Aelius 24a",
-    "previous": "Aelius 23a"
+    "previous": "Aelius 23a",
+    "next": "Aelius 26b",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 9,
+        "end": 9
+      }
+    ]
   },
   {
     "lemma": "Aelius 26b",
+    "previous": "Aelius 24a",
     "next": "Aelius 27aa",
     "chapters": [
       {
@@ -956,10 +972,21 @@
   },
   {
     "lemma": "Aradius 1a",
-    "previous": "Aradius 1"
+    "previous": "Aradius 1",
+    "next": "Archiphylax 2",
+    "proof_read": 2,
+    "wp_link": "w:de:Aradius Paternus",
+    "wd_link": "d:Q100234014",
+    "chapters": [
+      {
+        "start": 38,
+        "end": 38
+      }
+    ]
   },
   {
     "lemma": "Archiphylax 2",
+    "previous": "Aradius 1a",
     "next": "Arel",
     "chapters": [
       {
@@ -1683,6 +1710,7 @@
   {
     "lemma": "Calaegia",
     "previous": "Caesius 30a",
+    "next": "Cassius 94",
     "chapters": [
       {
         "start": 73
@@ -1691,7 +1719,15 @@
   },
   {
     "lemma": "Cassius 94",
-    "next": "Cassius 95"
+    "previous": "Calaegia",
+    "next": "Cassius 95",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 78,
+        "end": 78
+      }
+    ]
   },
   {
     "lemma": "Cassius 95",
