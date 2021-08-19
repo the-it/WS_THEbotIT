@@ -59,7 +59,7 @@
     "previous": "Achaikaros",
     "next": "Acilius 22",
     "redirect": true,
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 7,
@@ -228,7 +228,7 @@
     "previous": "Acilius 57",
     "next": "Aelius 17a",
     "redirect": true,
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 7,
@@ -270,9 +270,13 @@
     "lemma": "Aelius 26b",
     "previous": "Aelius 24a",
     "next": "Aelius 27aa",
+    "proof_read": 3,
+    "wp_link": "w:de:Aelier",
+    "wd_link": "d:Q380806",
     "chapters": [
       {
-        "start": 9
+        "start": 9,
+        "end": 9
       }
     ]
   },
@@ -301,9 +305,11 @@
     "lemma": "Aelius 43a",
     "previous": "Aelius 27aaa",
     "next": "Aelius 76",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 9
+        "start": 9,
+        "end": 9
       }
     ]
   },
@@ -511,9 +517,11 @@
     "lemma": "Aianteion 2",
     "previous": "Agenor 1b",
     "next": "Aigialos 5a",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 15
+        "start": 15,
+        "end": 15
       }
     ]
   },
@@ -564,6 +572,7 @@
   {
     "lemma": "Albania 2",
     "previous": "Akanthos 5a",
+    "next": "Alexandreia 21a",
     "redirect": true,
     "chapters": [
       {
@@ -573,7 +582,15 @@
   },
   {
     "lemma": "Alexandreia 21a",
-    "next": "Alexandreia 23"
+    "previous": "Albania 2",
+    "next": "Alexandreia 23",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 19,
+        "end": 19
+      }
+    ]
   },
   {
     "lemma": "Alexandreia 23",
@@ -704,10 +721,19 @@
   },
   {
     "lemma": "Anamta",
-    "previous": "Anamares"
+    "previous": "Anamares",
+    "next": "Ancharius 1a",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 26,
+        "end": 26
+      }
+    ]
   },
   {
     "lemma": "Ancharius 1a",
+    "previous": "Anamta",
     "next": "Andaga",
     "redirect": true,
     "chapters": [
@@ -764,10 +790,13 @@
     "lemma": "Anicius 40",
     "previous": "Anicius 8a",
     "next": "Anicius 54a",
-    "redirect": true,
+    "proof_read": 3,
+    "wp_link": "w:en:Quintus Clodius Hermogenianus Olybrius",
+    "wd_link": "d:Q1148526",
     "chapters": [
       {
-        "start": 29
+        "start": 29,
+        "end": 29
       }
     ]
   },
@@ -829,6 +858,7 @@
   },
   {
     "lemma": "Antinoitai",
+    "next": "Antistii",
     "redirect": true,
     "chapters": [
       {
@@ -838,7 +868,15 @@
   },
   {
     "lemma": "Antistii",
-    "next": "Antistius 24"
+    "previous": "Antinoitai",
+    "next": "Antistius 24",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 32,
+        "end": 32
+      }
+    ]
   },
   {
     "lemma": "Antistius 24",
