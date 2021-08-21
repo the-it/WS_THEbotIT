@@ -6240,11 +6240,15 @@
     "lemma": "Tullius 29",
     "previous": "Tullius 28",
     "next": "Tricasses",
-    "proof_read": 2,
     "wp_link": "w:de:Marcus Tullius Cicero",
     "ws_link": "s:de:Cicero",
     "wd_link": "d:Q1541",
     "chapters": [
+      {
+        "start": 826,
+        "end": 1091,
+        "author": "Matthias Gelzer."
+      },
       {
         "start": 1090,
         "end": 1103,
@@ -6252,8 +6256,13 @@
       },
       {
         "start": 1104,
-        "end": 1274,
+        "end": 1192,
         "author": "Philippson."
+      },
+      {
+        "start": 1192,
+        "end": 1274,
+        "author": "Karl Büchner."
       }
     ]
   },
