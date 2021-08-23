@@ -1910,6 +1910,7 @@
   },
   {
     "lemma": "Neratius 15a",
+    "next": "Nerion",
     "chapters": [
       {
         "start": 416,
@@ -1919,7 +1920,16 @@
   },
   {
     "lemma": "Nerion",
-    "next": "νεῦσις"
+    "previous": "Neratius 15a",
+    "next": "νεῦσις",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 416,
+        "end": 416,
+        "author": "Robert Grosse."
+      }
+    ]
   },
   {
     "lemma": "νεῦσις",
