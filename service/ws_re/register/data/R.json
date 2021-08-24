@@ -58,7 +58,6 @@
     "lemma": "Acilius 18a",
     "previous": "Achaikaros",
     "next": "Acilius 22",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -1465,8 +1464,7 @@
     "lemma": "Athenadas 2",
     "previous": "Athenadas 1",
     "next": "Athenades 1-16",
-    "redirect": true,
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 52,
@@ -1800,7 +1798,6 @@
     "lemma": "Bappo",
     "previous": "Baebius 7a",
     "next": "Bappo 1",
-    "redirect": true,
     "proof_read": 3,
     "wd_link": "d:Q4077528",
     "chapters": [
@@ -2006,7 +2003,7 @@
     "lemma": "Caesennius 14a",
     "previous": "Bur(e)bista",
     "next": "Caesius 30a",
-    "redirect": true,
+    "redirect": "Apronius 11",
     "proof_read": 3,
     "chapters": [
       {
@@ -2117,7 +2114,6 @@
     "lemma": "Catius 8a",
     "previous": "Catius a",
     "next": "Catius 9b",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -2155,7 +2151,6 @@
     "lemma": "Catullus 6b",
     "previous": "Catullus 6a",
     "next": "Ceionius 19",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -3685,10 +3680,12 @@
     "lemma": "Jeutz",
     "previous": "Idaios 1-10",
     "next": "Iligga",
-    "redirect": true,
+    "redirect": "Iudiacus",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 131
+        "start": 131,
+        "end": 131
       }
     ]
   },
@@ -3839,9 +3836,12 @@
     "lemma": "Imaginifer",
     "previous": "Ilunum 1",
     "next": "Inapaei",
+    "redirect": "Imaginarii",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 133
+        "start": 133,
+        "end": 133
       }
     ]
   },
@@ -3849,9 +3849,12 @@
     "lemma": "Inapaei",
     "previous": "Imaginifer",
     "next": "Ipsch",
+    "redirect": "Scythae",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 133
+        "start": 133,
+        "end": 133
       }
     ]
   },
@@ -3924,9 +3927,11 @@
     "previous": "Issa 4",
     "next": "Judas a",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 136
+        "start": 136,
+        "end": 136
       }
     ]
   },
@@ -5830,10 +5835,12 @@
     "lemma": "Tytenos",
     "previous": "en Tyennesso",
     "next": "Wahram Mets",
-    "redirect": true,
+    "redirect": "Tyitenos",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 218
+        "start": 218,
+        "end": 218
       }
     ]
   },
@@ -5841,9 +5848,12 @@
     "lemma": "Wahram Mets",
     "previous": "Tytenos",
     "next": "Valerius 105a",
+    "redirect": "Peroz 1",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 218
+        "start": 218,
+        "end": 218
       }
     ]
   },
@@ -5851,10 +5861,12 @@
     "lemma": "Valerius 105a",
     "previous": "Wahram Mets",
     "next": "Vallius a",
-    "redirect": true,
+    "redirect": "Apsines",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 218
+        "start": 218,
+        "end": 218
       }
     ]
   },
@@ -5862,10 +5874,11 @@
     "lemma": "Vallius a",
     "previous": "Valerius 105a",
     "next": "Vallius 5",
-    "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 219
+        "start": 219,
+        "end": 219
       }
     ]
   },
@@ -5873,9 +5886,11 @@
     "lemma": "Vallius 5",
     "previous": "Vallius a",
     "next": "Vecturiones",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 219
+        "start": 219,
+        "end": 219
       }
     ]
   },
@@ -5883,10 +5898,12 @@
     "lemma": "Vecturiones",
     "previous": "Vallius 5",
     "next": "Velius 4a",
-    "redirect": true,
+    "redirect": "Verturiones",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 220
+        "start": 220,
+        "end": 220
       }
     ]
   },
@@ -5894,10 +5911,12 @@
     "lemma": "Velius 4a",
     "previous": "Vecturiones",
     "next": "Veturius 34aa",
-    "redirect": true,
+    "redirect": "Velius 7",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 221
+        "start": 221,
+        "end": 221
       }
     ]
   },
@@ -5905,10 +5924,11 @@
     "lemma": "Veturius 34aa",
     "previous": "Velius 4a",
     "next": "Vibullius 3",
-    "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 223
+        "start": 223,
+        "end": 223
       }
     ]
   },
@@ -5917,9 +5937,11 @@
     "previous": "Veturius 34aa",
     "next": "Vicesima 1a",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 223
+        "start": 223,
+        "end": 223
       }
     ]
   },
@@ -5927,10 +5949,12 @@
     "lemma": "Vicesima 1a",
     "previous": "Vibullius 3",
     "next": "Victores",
-    "redirect": true,
+    "redirect": "vicesima manumissionum",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 224
+        "start": 224,
+        "end": 224
       }
     ]
   },
@@ -5938,9 +5962,12 @@
     "lemma": "Victores",
     "previous": "Vicesima 1a",
     "next": "Vinalia 1",
+    "redirect": "Iovii, Victores",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 224
+        "start": 224,
+        "end": 224
       }
     ]
   },
@@ -5948,10 +5975,12 @@
     "lemma": "Vinalia 1",
     "previous": "Victores",
     "next": "Vinalia 2",
-    "redirect": true,
+    "redirect": "Vinalia",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
@@ -5959,10 +5988,12 @@
     "lemma": "Vinalia 2",
     "previous": "Vinalia 1",
     "next": "Vitalius a",
-    "redirect": true,
+    "redirect": "Vinalia",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
@@ -5970,10 +6001,12 @@
     "lemma": "Vitalius a",
     "previous": "Vinalia 2",
     "next": "Vitalius 1",
-    "redirect": true,
+    "redirect": "Antius 14a",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 226
+        "start": 226,
+        "end": 226
       }
     ]
   },
@@ -5981,10 +6014,11 @@
     "lemma": "Vitalius 1",
     "previous": "Vitalius a",
     "next": "Umbria",
-    "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 226
+        "start": 226,
+        "end": 226
       }
     ]
   },
@@ -5992,10 +6026,12 @@
     "lemma": "Umbria",
     "previous": "Vitalius 1",
     "next": "Volcacius 9",
-    "redirect": true,
+    "redirect": "Umbri, Umbria",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 229
+        "start": 229,
+        "end": 229
       }
     ]
   },
@@ -6003,10 +6039,12 @@
     "lemma": "Volcacius 9",
     "previous": "Umbria",
     "next": "Voluscius 2",
-    "redirect": true,
+    "redirect": "Volcacius 8",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
@@ -6015,9 +6053,11 @@
     "previous": "Volcacius 9",
     "next": "Volusianus 13",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -6025,10 +6065,12 @@
     "lemma": "Volusianus 13",
     "previous": "Voluscius 2",
     "next": "Volusianus 14-16",
-    "redirect": true,
+    "redirect": "Caecilius 48",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -6036,10 +6078,12 @@
     "lemma": "Volusianus 14-16",
     "previous": "Volusianus 13",
     "next": "Volusianus 17",
-    "redirect": true,
+    "redirect": "Volusianus 14",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -6047,10 +6091,12 @@
     "lemma": "Volusianus 17",
     "previous": "Volusianus 14-16",
     "next": "Zautha",
-    "redirect": true,
+    "redirect": "Volusianus 15",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -6059,9 +6105,11 @@
     "previous": "Volusianus 17",
     "next": "Zeiritai",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 233
+        "start": 233,
+        "end": 233
       }
     ]
   },
@@ -6070,9 +6118,11 @@
     "previous": "Zautha",
     "next": "Zelis",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 233
+        "start": 233,
+        "end": 233
       }
     ]
   },
@@ -6080,20 +6130,25 @@
     "lemma": "Zelis",
     "previous": "Zeiritai",
     "next": "Zezis",
-    "redirect": true,
+    "redirect": "Zulil",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 234
+        "start": 234,
+        "end": 234
       }
     ]
   },
   {
     "lemma": "Zezis",
     "previous": "Zelis",
+    "next": "Zeugitana regio",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 234
+        "start": 234,
+        "end": 234
       }
     ]
   }
