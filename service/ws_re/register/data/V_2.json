@@ -3962,7 +3962,7 @@
     "lemma": "Drilophyllitai",
     "previous": "Drilon",
     "next": "Drimakos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1707,
@@ -4950,7 +4950,7 @@
   },
   {
     "lemma": "Drusianus pes",
-    "previous": "Drusianus",
+    "previous": "Δρουσιανὰ ξίφη",
     "next": "Drusi arcus",
     "proof_read": 3,
     "chapters": [
@@ -7106,7 +7106,7 @@
   },
   {
     "lemma": "ad Duos Pontes",
-    "previous": "Dvoricos",
+    "previous": "ad Duo Flumina",
     "next": "Duoviralis",
     "sort_key": "Duos Pontes, ad",
     "proof_read": 3,
@@ -10876,10 +10876,12 @@
     "lemma": "Edessa 1",
     "previous": "Edesius",
     "next": "Edessa 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1933,
-        "author": "Oberhummer"
+        "end": 1933,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -11126,10 +11128,12 @@
     "lemma": "Edones",
     "previous": "Edomia",
     "next": "Edonis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1974,
-        "author": "Oberhummer"
+        "end": 1974,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -12881,10 +12885,12 @@
     "lemma": "Eikadeis",
     "previous": "Eidyia",
     "next": "Eikadios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2098,
-        "author": "Ziebarth"
+        "end": 2098,
+        "author": "Ziebarth."
       }
     ]
   },
@@ -14635,11 +14641,12 @@
     "lemma": "Elaia 2",
     "previous": "Elaia 1",
     "next": "Elaia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2223,
         "end": 2224,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -14658,10 +14665,12 @@
     "lemma": "Elaia 4",
     "previous": "Elaia 3",
     "next": "Elaia 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2224,
-        "author": "Oberhummer"
+        "end": 2224,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -14669,10 +14678,12 @@
     "lemma": "Elaia 5",
     "previous": "Elaia 4",
     "next": "Elaia 6",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2224,
-        "author": "Ruge"
+        "end": 2224,
+        "author": "Ruge."
       }
     ]
   },
@@ -14680,9 +14691,12 @@
     "lemma": "Elaia 6",
     "previous": "Elaia 5",
     "next": "Elaia 7",
+    "redirect": "Elais 1",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2224
+        "start": 2224,
+        "end": 2224
       }
     ]
   },
@@ -14690,10 +14704,12 @@
     "lemma": "Elaia 7",
     "previous": "Elaia 6",
     "next": "Elaia 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2224,
-        "author": "Fischer"
+        "end": 2224,
+        "author": "Fischer."
       }
     ]
   },
@@ -14701,10 +14717,12 @@
     "lemma": "Elaia 8",
     "previous": "Elaia 7",
     "next": "Elaiagnos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2224,
-        "author": "Hoefer"
+        "end": 2224,
+        "author": "Hoefer."
       }
     ]
   },
