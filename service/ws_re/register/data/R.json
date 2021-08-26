@@ -29,7 +29,6 @@
     "lemma": "Aberglaube",
     "previous": "Abercius b",
     "next": "Achaikaros",
-    "redirect": true,
     "proof_read": 3,
     "wp_link": "w:de:Aberglaube",
     "ws_link": "s:de:Aberglaube",
@@ -1685,9 +1684,11 @@
     "previous": "Aurelius 126a",
     "next": "Aurelius 145a",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 57
+        "start": 57,
+        "end": 57
       }
     ]
   },
@@ -2397,7 +2398,7 @@
     "lemma": "Coira",
     "previous": "cohortes urbanae",
     "next": "computus",
-    "redirect": true,
+    "redirect": "Cura 4",
     "proof_read": 3,
     "chapters": [
       {
@@ -3387,7 +3388,7 @@
     "lemma": "Helvidius",
     "previous": "Helius 2",
     "next": "Heraclitus",
-    "redirect": true,
+    "redirect": "Secundus 8b",
     "proof_read": 3,
     "chapters": [
       {
@@ -3400,7 +3401,7 @@
     "lemma": "Heraclitus",
     "previous": "Helvidius",
     "next": "Herakleides 65",
-    "redirect": true,
+    "redirect": "Aurelius 145aa",
     "proof_read": 3,
     "chapters": [
       {
@@ -3413,7 +3414,6 @@
     "lemma": "Herakleides 65",
     "previous": "Heraclitus",
     "next": "Herakleides 66",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -3426,7 +3426,6 @@
     "lemma": "Herakleides 66",
     "previous": "Herakleides 65",
     "next": "Herakleides 67",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -4314,7 +4313,6 @@
     "lemma": "Kokkos a",
     "previous": "Koiranos 9-11",
     "next": "Korax 2a",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -4327,7 +4325,6 @@
     "lemma": "Korax 2a",
     "previous": "Kokkos a",
     "next": "Korax 2b",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -4340,7 +4337,6 @@
     "lemma": "Korax 2b",
     "previous": "Korax 2a",
     "next": "Korax 2c",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -4353,7 +4349,6 @@
     "lemma": "Korax 2c",
     "previous": "Korax 2b",
     "next": "Korrhagos 5bis",
-    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -4428,6 +4423,7 @@
     "lemma": "Kybos",
     "previous": "Kriton 11a",
     "next": "Kydna",
+    "redirect": "Psegas",
     "proof_read": 3,
     "chapters": [
       {
