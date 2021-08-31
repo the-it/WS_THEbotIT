@@ -4950,7 +4950,7 @@
   },
   {
     "lemma": "Drusianus pes",
-    "previous": "Δρουσιανὰ ξίφη",
+    "previous": "Drusianus",
     "next": "Drusi arcus",
     "proof_read": 3,
     "chapters": [
@@ -11862,10 +11862,12 @@
     "lemma": "Eggius 1",
     "previous": "Eggius",
     "next": "Eggius 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1986,
-        "author": "Stein, [Arthur]"
+        "end": 1986,
+        "author": "Stein."
       }
     ]
   },
@@ -11943,10 +11945,12 @@
     "lemma": "Egira",
     "previous": "Egilius",
     "next": "Egivarri",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1988,
-        "author": "Hülsen"
+        "end": 1988,
+        "author": "Hülsen."
       }
     ]
   },
@@ -12211,10 +12215,12 @@
     "lemma": "Egnatius 11",
     "previous": "Egnatius 10",
     "next": "Egnatius 12",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1996,
-        "author": "Münzer"
+        "end": 1996,
+        "author": "Münzer."
       }
     ]
   },
@@ -12233,10 +12239,12 @@
     "lemma": "Egnatius 13",
     "previous": "Egnatius 12",
     "next": "Egnatius 14",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1996,
-        "author": "Stein, [Arthur]"
+        "end": 1996,
+        "author": "Stein."
       }
     ]
   },
@@ -12384,9 +12392,12 @@
     "lemma": "Egnatius 26",
     "previous": "Egnatius 25",
     "next": "Egnatius 27",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1997
+        "start": 1997,
+        "end": 1997,
+        "author": "Münzer."
       }
     ]
   },
@@ -12426,10 +12437,12 @@
     "lemma": "Egnatius 30",
     "previous": "Egnatius 29",
     "next": "Egnatius 31",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1998,
-        "author": "Groag"
+        "end": 1998,
+        "author": "Groag."
       }
     ]
   },
@@ -12469,9 +12482,12 @@
     "lemma": "Egnatius 34",
     "previous": "Egnatius 33",
     "next": "Egnatius 35",
+    "redirect": "Luxilius",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1999
+        "start": 1999,
+        "end": 1999
       }
     ]
   },
@@ -12502,10 +12518,12 @@
     "lemma": "Egnatius 37",
     "previous": "Egnatius 36",
     "next": "Egnatius 38",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2000,
-        "author": "Münzer"
+        "end": 2000,
+        "author": "Münzer."
       }
     ]
   },
@@ -12523,9 +12541,12 @@
     "lemma": "Egnatius 39",
     "previous": "Egnatius 38",
     "next": "Egnatius 40",
+    "redirect": "Virius 4",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2000
+        "start": 2000,
+        "end": 2000
       }
     ]
   },
@@ -12533,9 +12554,12 @@
     "lemma": "Egnatius 40",
     "previous": "Egnatius 39",
     "next": "Egnatius 41",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2000
+        "start": 2000,
+        "end": 2000,
+        "author": "Groag."
       }
     ]
   },
@@ -12565,10 +12589,12 @@
     "lemma": "Egnatius 43",
     "previous": "Egnatius 42",
     "next": "Egnatius 44",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2003,
-        "author": "Groag"
+        "end": 2003,
+        "author": "Groag."
       }
     ]
   },
@@ -12635,10 +12661,12 @@
     "lemma": "Egnatuleius 3",
     "previous": "Egnatuleius 2",
     "next": "Egnatuleius 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2004,
-        "author": "Groag"
+        "end": 2004,
+        "author": "Groag."
       }
     ]
   },
@@ -14047,7 +14075,7 @@
   {
     "lemma": "Eisphora",
     "previous": "Eiskadia",
-    "next": "Eispoiesis",
+    "next": "Εἰσποίησις",
     "chapters": [
       {
         "start": 2149,
@@ -14057,19 +14085,22 @@
     ]
   },
   {
-    "lemma": "Eispoiesis",
+    "lemma": "Εἰσποίησις",
     "previous": "Eisphora",
     "next": "Eispraxis",
+    "sort_key": "Eispoiesis",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2151,
-        "author": "Thalheim"
+        "end": 2151,
+        "author": "Thalheim."
       }
     ]
   },
   {
     "lemma": "Eispraxis",
-    "previous": "Eispoiesis",
+    "previous": "Εἰσποίησις",
     "next": "Eisvogel",
     "chapters": [
       {
@@ -14141,10 +14172,12 @@
     "lemma": "Eizelos",
     "previous": "Eithar",
     "next": "Ekbasios, Ekbasia",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2155,
-        "author": "Hülsen"
+        "end": 2155,
+        "author": "Hülsen."
       }
     ]
   },
@@ -14495,9 +14528,12 @@
     "lemma": "Ekkritos",
     "previous": "Ekkletos 3",
     "next": "Ekkyklema",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2202
+        "start": 2202,
+        "end": 2202,
+        "author": "Kirchner."
       }
     ]
   },
@@ -14540,10 +14576,12 @@
     "lemma": "Eklektos 2",
     "previous": "Eklektos 1",
     "next": "Ekliptik",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2208,
-        "author": "Stein, [Arthur]"
+        "end": 2208,
+        "author": "Stein."
       }
     ]
   },
@@ -15033,10 +15071,12 @@
     "lemma": "Elais 2",
     "previous": "Elais 1",
     "next": "Elaites",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2226,
-        "author": "Hoefer"
+        "end": 2226,
+        "author": "Hoefer."
       }
     ]
   },
@@ -15055,10 +15095,12 @@
     "lemma": "Elaïtis",
     "previous": "Elaites",
     "next": "Elaius 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2226,
-        "author": "Bürchner"
+        "end": 2226,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15078,10 +15120,12 @@
     "lemma": "Elaius 2",
     "previous": "Elaius 1",
     "next": "Elaius 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2227,
-        "author": "Bürchner"
+        "end": 2227,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15156,10 +15200,12 @@
     "lemma": "Elaiussa 3",
     "previous": "Elaiussa 2",
     "next": "Elaiussa 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2228,
-        "author": "Philippson"
+        "end": 2228,
+        "author": "Philippson."
       }
     ]
   },
@@ -15167,10 +15213,12 @@
     "lemma": "Elaiussa 4",
     "previous": "Elaiussa 3",
     "next": "Elaiussa 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2228,
-        "author": "Milchhöfer"
+        "end": 2228,
+        "author": "Milchhöfer."
       }
     ]
   },
@@ -15201,10 +15249,12 @@
     "lemma": "Elakataion",
     "previous": "Elaiuteichos",
     "next": "Elakataios",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2229,
-        "author": "Hiller von Gaertringen"
+        "end": 2229,
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -15212,10 +15262,12 @@
     "lemma": "Elakataios",
     "previous": "Elakataion",
     "next": "Elakateia",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2229,
-        "author": "Jessen"
+        "end": 2229,
+        "author": "Jessen."
       }
     ]
   },
@@ -15223,10 +15275,12 @@
     "lemma": "Elakateia",
     "previous": "Elakataios",
     "next": "Elakatos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2229,
-        "author": "Stengel"
+        "end": 2229,
+        "author": "Stengel."
       }
     ]
   },
@@ -15381,9 +15435,12 @@
     "lemma": "Elaphoeis",
     "previous": "Elaphitis",
     "next": "Elaphonnesos",
+    "redirect": "Arginusa",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2233
+        "start": 2233,
+        "end": 2233
       }
     ]
   },
@@ -15391,10 +15448,12 @@
     "lemma": "Elaphonnesos",
     "previous": "Elaphoeis",
     "next": "Elaphonnesos 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2233,
-        "author": "Bürchner"
+        "end": 2233,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15402,11 +15461,12 @@
     "lemma": "Elaphonnesos 1",
     "previous": "Elaphonnesos",
     "next": "Elaphonnesos 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2233,
         "end": 2234,
-        "author": "Bürchner"
+        "author": "Bürchner."
       }
     ]
   },
@@ -15423,11 +15483,14 @@
   },
   {
     "lemma": "Elaphonnesos 3",
+    "previous": "Elaphonnesos 2",
     "next": "Elaphonnesos 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2234,
-        "author": "Bürchner"
+        "end": 2234,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15487,10 +15550,12 @@
     "lemma": "Elarion",
     "previous": "Elara",
     "next": "Elaris",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2235,
-        "author": "Philippson"
+        "end": 2235,
+        "author": "Philippson."
       }
     ]
   },
@@ -15525,10 +15590,12 @@
     "lemma": "Elasichthon",
     "previous": "Elasa",
     "next": "Elasioi",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2235,
-        "author": "Jessen"
+        "end": 2235,
+        "author": "Jessen."
       }
     ]
   },
@@ -15536,10 +15603,12 @@
     "lemma": "Elasioi",
     "previous": "Elasichthon",
     "next": "Elasippos 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2235,
-        "author": "Thraemer"
+        "end": 2235,
+        "author": "Thraemer."
       }
     ]
   },
@@ -15547,10 +15616,12 @@
     "lemma": "Elasippos 1",
     "previous": "Elasioi",
     "next": "Elasippos 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2236,
-        "author": "Hoefer"
+        "end": 2236,
+        "author": "Hoefer."
       }
     ]
   },
@@ -15558,10 +15629,12 @@
     "lemma": "Elasippos 2",
     "previous": "Elasippos 1",
     "next": "Elasippos 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2236,
-        "author": "Hoefer"
+        "end": 2236,
+        "author": "Hoefer."
       }
     ]
   },
@@ -15580,10 +15653,12 @@
     "lemma": "Elasos 1",
     "previous": "Elasippos 3",
     "next": "Elasos 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2236,
-        "author": "Tümpel"
+        "end": 2236,
+        "author": "Karl Tümpel."
       }
     ]
   },
@@ -15591,10 +15666,12 @@
     "lemma": "Elasos 2",
     "previous": "Elasos 1",
     "next": "Elasos 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2236,
-        "author": "Tümpel"
+        "end": 2236,
+        "author": "Tümpel."
       }
     ]
   },
@@ -15613,10 +15690,12 @@
     "lemma": "Elasos 4",
     "previous": "Elasos 3",
     "next": "Elatas",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2236,
-        "author": "Waser"
+        "end": 2236,
+        "author": "Waser."
       }
     ]
   },
@@ -15671,10 +15750,12 @@
     "lemma": "Elateia 3",
     "previous": "Elateia 2",
     "next": "Elaterion",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2237,
-        "author": "Philippson"
+        "end": 2237,
+        "author": "Philippson."
       }
     ]
   },
@@ -15797,10 +15878,12 @@
     "lemma": "Elatos 6",
     "previous": "Elatos 5",
     "next": "Elatos 7",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2241,
-        "author": "Waser"
+        "end": 2241,
+        "author": "Waser."
       }
     ]
   },
@@ -15808,11 +15891,12 @@
     "lemma": "Elatos 7",
     "previous": "Elatos 6",
     "next": "Elatos 8",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2241,
         "end": 2242,
-        "author": "Waser"
+        "author": "Waser."
       }
     ]
   },
@@ -15820,10 +15904,12 @@
     "lemma": "Elatos 8",
     "previous": "Elatos 7",
     "next": "Elatos 9",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2242,
-        "author": "Waser"
+        "end": 2242,
+        "author": "Otto Waser."
       }
     ]
   },
@@ -15831,10 +15917,12 @@
     "lemma": "Elatos 9",
     "previous": "Elatos 8",
     "next": "Elatos 10",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2242,
-        "author": "Waser"
+        "end": 2242,
+        "author": "Waser."
       }
     ]
   },
@@ -15842,10 +15930,12 @@
     "lemma": "Elatos 10",
     "previous": "Elatos 9",
     "next": "Elatreia",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2242,
-        "author": "Waser"
+        "end": 2242,
+        "author": "Waser."
       }
     ]
   },
@@ -15864,10 +15954,12 @@
     "lemma": "Elatreus 1",
     "previous": "Elatreia",
     "next": "Elatreus 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2242,
-        "author": "Hoefer"
+        "end": 2242,
+        "author": "Hoefer."
       }
     ]
   },
@@ -15875,10 +15967,12 @@
     "lemma": "Elatreus 2",
     "previous": "Elatreus 1",
     "next": "Elatus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2242,
-        "author": "Hoefer"
+        "end": 2242,
+        "author": "Hoefer."
       }
     ]
   },
@@ -15908,10 +16002,12 @@
     "lemma": "Elavia",
     "previous": "Elaver",
     "next": "Elbestioi",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2242,
-        "author": "Hülsen"
+        "end": 2242,
+        "author": "Hülsen."
       }
     ]
   },
@@ -15990,10 +16086,12 @@
     "lemma": "Eldana 1",
     "previous": "Eldamari",
     "next": "Eldana 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2243,
-        "author": "Kiessling, Max"
+        "end": 2243,
+        "author": "Kiessling."
       }
     ]
   },
@@ -16049,9 +16147,12 @@
     "lemma": "Eleatas",
     "previous": "Eleas",
     "next": "Eleates",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2244
+        "start": 2244,
+        "end": 2244,
+        "author": "Hülsen."
       }
     ]
   },
@@ -16059,10 +16160,12 @@
     "lemma": "Eleates",
     "previous": "Eleatas",
     "next": "Ἐλεάτης κόλπος",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2244,
-        "author": "Hülsen"
+        "end": 2244,
+        "author": "Hülsen."
       }
     ]
   },
@@ -16070,10 +16173,12 @@
     "lemma": "Ἐλεάτης κόλπος",
     "previous": "Eleates",
     "next": "Eleatische Philosophie",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2244,
-        "author": "Hülsen"
+        "end": 2244,
+        "author": "Hülsen."
       }
     ]
   },
@@ -16371,10 +16476,12 @@
     "lemma": "Elegans",
     "previous": "Elefant",
     "next": "Elegarsina",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2257,
-        "author": "Fabricius"
+        "end": 2257,
+        "author": "Fabricius."
       }
     ]
   },
@@ -16439,10 +16546,13 @@
     "lemma": "Elegiae in Maecenatem",
     "previous": "Elegeis",
     "next": "Elegie",
+    "redirect": "Consolatio ad Liviam",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2260,
-        "author": "Crusius"
+        "end": 2260,
+        "author": "Crusius."
       }
     ]
   },
@@ -16604,10 +16714,12 @@
     "lemma": "Eleithyaion 1",
     "previous": "Eleios 6",
     "next": "Eleithyaion 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2309,
-        "author": "Bürchner"
+        "end": 2309,
+        "author": "Bürchner."
       }
     ]
   },
@@ -16637,10 +16749,12 @@
     "lemma": "Elektra 1",
     "previous": "Elektor",
     "next": "Elektra 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2309,
-        "author": "Philippson"
+        "end": 2309,
+        "author": "Philippson."
       }
     ]
   },
@@ -16659,7 +16773,7 @@
   {
     "lemma": "Elektras",
     "previous": "Elektra 2",
-    "next": "Elektras nesos",
+    "next": "Ἠλέκτρας νῆσος",
     "chapters": [
       {
         "start": 2314,
@@ -16668,19 +16782,22 @@
     ]
   },
   {
-    "lemma": "Elektras nesos",
+    "lemma": "Ἠλέκτρας νῆσος",
     "previous": "Elektras",
     "next": "Elektrides",
+    "sort_key": "Elektras nesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2314,
-        "author": "Bürchner"
+        "end": 2314,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Elektrides",
-    "previous": "Elektras nesos",
+    "previous": "Ἠλέκτρας νῆσος",
     "next": "Elektron",
     "chapters": [
       {
@@ -16754,10 +16871,12 @@
     "lemma": "Elektryone 3",
     "previous": "Elektryone 2",
     "next": "Eleleis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2318,
-        "author": "Tümpel"
+        "end": 2318,
+        "author": "Tümpel."
       }
     ]
   },
@@ -16765,10 +16884,12 @@
     "lemma": "Eleleis",
     "previous": "Elektryone 3",
     "next": "Eleleus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2318,
-        "author": "Jessen"
+        "end": 2318,
+        "author": "Jessen."
       }
     ]
   },
@@ -16799,10 +16920,12 @@
     "lemma": "Elelichthon",
     "previous": "Eleleus 2",
     "next": "Elelisphakos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2319,
-        "author": "Jessen"
+        "end": 2319,
+        "author": "Jessen."
       }
     ]
   },
@@ -16821,10 +16944,12 @@
     "lemma": "Elemundus",
     "previous": "Elelisphakos",
     "next": "Elenchos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2319,
-        "author": "Benjamin"
+        "end": 2319,
+        "author": "Benjamin."
       }
     ]
   },
@@ -16855,10 +16980,12 @@
     "lemma": "Eleon 2",
     "previous": "Eleon 1",
     "next": "Eleopoles",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2320,
-        "author": "Tümpel"
+        "end": 2320,
+        "author": "Tümpel."
       }
     ]
   },
@@ -16902,10 +17029,12 @@
     "lemma": "Elephantaria 2",
     "previous": "Elephantaria 1",
     "next": "Elephantaria 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2321,
-        "author": "Hülsen"
+        "end": 2321,
+        "author": "Hülsen."
       }
     ]
   },
@@ -16958,10 +17087,12 @@
     "lemma": "Elephantis 1",
     "previous": "Elephantine",
     "next": "Elephantis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2324,
-        "author": "Escher"
+        "end": 2324,
+        "author": "Escher."
       }
     ]
   },
@@ -17006,10 +17137,12 @@
     "lemma": "Elephas 1",
     "previous": "Elephantophagoi",
     "next": "Elephas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2325,
-        "author": "Kiessling, Max"
+        "end": 2325,
+        "author": "Kiessling."
       }
     ]
   },
@@ -17051,10 +17184,12 @@
     "lemma": "Elera",
     "previous": "Elephenor",
     "next": "Elere",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2327,
-        "author": "Tümpel"
+        "end": 2327,
+        "author": "Tümpel."
       }
     ]
   },
@@ -17370,10 +17505,12 @@
     "lemma": "Eleusis 8",
     "previous": "Eleusis 7",
     "next": "Eleusynios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2342,
-        "author": "Jacoby, [Felix]"
+        "end": 2342,
+        "author": "Jacoby."
       }
     ]
   },
@@ -17443,10 +17580,12 @@
     "lemma": "Eleuther 4",
     "previous": "Eleuther 3",
     "next": "Eleuthera 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2344,
-        "author": "Waser"
+        "end": 2344,
+        "author": "Otto Waser."
       }
     ]
   },
@@ -17560,10 +17699,12 @@
     "lemma": "Eleutherion 1",
     "previous": "Eleutheria 2",
     "next": "Eleutherion 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2348,
-        "author": "Philippson"
+        "end": 2348,
+        "author": "Philippson."
       }
     ]
   },
@@ -17986,10 +18127,12 @@
     "lemma": "Elgos",
     "previous": "Elgovae",
     "next": "Eliae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2366,
-        "author": "Bürchner"
+        "end": 2366,
+        "author": "Bürchner."
       }
     ]
   },
@@ -18008,10 +18151,12 @@
     "lemma": "Elias 1",
     "previous": "Eliae",
     "next": "Elias 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2366,
-        "author": "Benjamin"
+        "end": 2366,
+        "author": "Benjamin."
       }
     ]
   },
@@ -18060,10 +18205,12 @@
     "lemma": "Elicatores",
     "previous": "Eliberre",
     "next": "Elicius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2366,
-        "author": "Puchstein"
+        "end": 2366,
+        "author": "Puchstein."
       }
     ]
   },
@@ -18094,10 +18241,12 @@
     "lemma": "Elieus 2",
     "previous": "Elieus 1",
     "next": "Eligeus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2367,
-        "author": "Jessen"
+        "end": 2367,
+        "author": "Jessen."
       }
     ]
   },
@@ -18191,10 +18340,12 @@
     "lemma": "Elinoi",
     "previous": "Elinga",
     "next": "Elinymenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2368,
-        "author": "Philippson"
+        "end": 2368,
+        "author": "Philippson."
       }
     ]
   },
@@ -18202,10 +18353,12 @@
     "lemma": "Elinymenos",
     "previous": "Elinoi",
     "next": "Eliocroca",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2368,
-        "author": "Jessen"
+        "end": 2368,
+        "author": "Jessen."
       }
     ]
   },
@@ -18224,10 +18377,12 @@
     "lemma": "Elionaios",
     "previous": "Eliocroca",
     "next": "Elipeus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2368,
-        "author": "Willrich"
+        "end": 2368,
+        "author": "Willrich."
       }
     ]
   },
@@ -18384,10 +18539,12 @@
     "lemma": "Elische Schule",
     "previous": "Elisares",
     "next": "Elison",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2435,
-        "author": "Natorp"
+        "end": 2435,
+        "author": "Natorp."
       }
     ]
   },
@@ -18408,10 +18565,12 @@
     "lemma": "Elisphasioi",
     "previous": "Elison",
     "next": "Elissa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2435,
-        "author": "Philippson"
+        "end": 2435,
+        "author": "Philippson."
       }
     ]
   },
@@ -18443,10 +18602,12 @@
     "lemma": "Elitivae",
     "previous": "Elisyces",
     "next": "Eliun",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2435,
-        "author": "Ihm"
+        "end": 2435,
+        "author": "Ihm."
       }
     ]
   },
@@ -18488,10 +18649,12 @@
     "lemma": "Elix 3",
     "previous": "Elix 2",
     "next": "Elix 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2436,
-        "author": "Puchstein"
+        "end": 2436,
+        "author": "Puchstein."
       }
     ]
   },
@@ -18499,10 +18662,12 @@
     "lemma": "Elix 4",
     "previous": "Elix 3",
     "next": "Elixos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2436,
-        "author": "Puchstein"
+        "end": 2436,
+        "author": "Puchstein."
       }
     ]
   },
@@ -18560,10 +18725,12 @@
     "lemma": "Elleporus",
     "previous": "Ellebicus",
     "next": "Ellesie",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2436,
-        "author": "Hülsen"
+        "end": 2436,
+        "author": "Hülsen."
       }
     ]
   },
