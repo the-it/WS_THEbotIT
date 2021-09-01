@@ -16425,9 +16425,12 @@
     "lemma": "Fons Tungrorum",
     "previous": "Fons",
     "next": "Fontanus 1",
+    "redirect": "Tungri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2841
+        "start": 2841,
+        "end": 2841
       }
     ]
   },
@@ -16435,10 +16438,12 @@
     "lemma": "Fontanus 1",
     "previous": "Fons Tungrorum",
     "next": "Fontanus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2841,
-        "author": "Stein, [Arthur]"
+        "end": 2841,
+        "author": "Stein."
       }
     ]
   },
@@ -16446,9 +16451,12 @@
     "lemma": "Fontanus 2",
     "previous": "Fontanus 1",
     "next": "ad Fonteclos",
+    "redirect": "Fons",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2841
+        "start": 2841,
+        "end": 2841
       }
     ]
   },
