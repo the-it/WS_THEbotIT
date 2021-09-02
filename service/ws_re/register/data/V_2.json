@@ -19171,10 +19171,12 @@
     "lemma": "Elucoci",
     "previous": "Eltynaia",
     "next": "Elvetii, Elvetum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2456,
-        "author": "Ihm"
+        "end": 2456,
+        "author": "Ihm."
       }
     ]
   },
@@ -19755,7 +19757,7 @@
   {
     "lemma": "Embasios",
     "previous": "Embasikoite",
-    "next": "Embasis",
+    "next": "Ἔμβασις",
     "chapters": [
       {
         "start": 2485,
@@ -19764,18 +19766,22 @@
     ]
   },
   {
-    "lemma": "Embasis",
+    "lemma": "Ἔμβασις",
     "previous": "Embasios",
     "next": "Embata",
+    "sort_key": "Embasis",
+    "redirect": "Embateia, embateusis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2485
+        "start": 2485,
+        "end": 2485
       }
     ]
   },
   {
     "lemma": "Embata",
-    "previous": "Embasis",
+    "previous": "Ἔμβασις",
     "next": "Embateia, embateusis",
     "chapters": [
       {
@@ -19821,7 +19827,7 @@
   {
     "lemma": "Embaterios",
     "previous": "Embateria",
-    "next": "Embates",
+    "next": "Ἐμβάτης",
     "chapters": [
       {
         "start": 2487,
@@ -19830,18 +19836,22 @@
     ]
   },
   {
-    "lemma": "Embates",
+    "lemma": "Ἐμβάτης",
     "previous": "Embaterios",
     "next": "Emblema",
+    "sort_key": "Embates",
+    "redirect": "Embas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2487
+        "start": 2487,
+        "end": 2487
       }
     ]
   },
   {
     "lemma": "Emblema",
-    "previous": "Embates",
+    "previous": "Ἐμβάτης",
     "next": "Emblo",
     "chapters": [
       {
@@ -19911,10 +19921,12 @@
     "lemma": "Embolos 1",
     "previous": "Embolon 2",
     "next": "Embolos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2493,
-        "author": "Ruge"
+        "end": 2493,
+        "author": "Ruge."
       }
     ]
   },
@@ -19933,10 +19945,12 @@
     "lemma": "Emerense",
     "previous": "Embolos 2",
     "next": "Emerita",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2493,
-        "author": "Dessau"
+        "end": 2493,
+        "author": "Dessau."
       }
     ]
   },
@@ -20098,10 +20112,12 @@
     "lemma": "Emmenidas 1",
     "previous": "Emmenidai",
     "next": "Emmenidas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2501,
-        "author": "Kirchner"
+        "end": 2501,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20109,10 +20125,12 @@
     "lemma": "Emmenidas 2",
     "previous": "Emmenidas 1",
     "next": "Emmenidas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2501,
-        "author": "Kirchner"
+        "end": 2501,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20120,10 +20138,12 @@
     "lemma": "Emmenidas 3",
     "previous": "Emmenidas 2",
     "next": "Emmenidas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2501,
-        "author": "Kirchner"
+        "end": 2501,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20131,10 +20151,12 @@
     "lemma": "Emmenidas 4",
     "previous": "Emmenidas 3",
     "next": "Emmenidas 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2501,
-        "author": "Kirchner"
+        "end": 2501,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20142,10 +20164,12 @@
     "lemma": "Emmenidas 5",
     "previous": "Emmenidas 4",
     "next": "Emmenidas 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2501,
-        "author": "Kirchner"
+        "end": 2501,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20153,10 +20177,12 @@
     "lemma": "Emmenidas 6",
     "previous": "Emmenidas 5",
     "next": "Emmenoi dikai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2501,
-        "author": "Kirchner"
+        "end": 2501,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20164,11 +20190,13 @@
     "lemma": "Emmenoi dikai",
     "previous": "Emmenidas 6",
     "next": "Emmochares",
+    "sort_key": "Emmenoi dikai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2501,
         "end": 2502,
-        "author": "Thalheim"
+        "author": "Thalheim."
       }
     ]
   },
@@ -20176,10 +20204,12 @@
     "lemma": "Emmochares",
     "previous": "Emmenoi dikai",
     "next": "Emnetzur",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2502,
-        "author": "Robert"
+        "end": 2502,
+        "author": "C. Robert."
       }
     ]
   },
@@ -20187,10 +20217,12 @@
     "lemma": "Emnetzur",
     "previous": "Emmochares",
     "next": "Emodon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2502,
-        "author": "Seeck"
+        "end": 2502,
+        "author": "Seeck."
       }
     ]
   },
@@ -20233,10 +20265,12 @@
     "lemma": "Empanda",
     "previous": "Empaistike",
     "next": "Empedias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2506,
-        "author": "Wissowa"
+        "end": 2506,
+        "author": "Wissowa."
       }
     ]
   },
@@ -20244,10 +20278,12 @@
     "lemma": "Empedias",
     "previous": "Empanda",
     "next": "Empedo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2506,
-        "author": "Niese"
+        "end": 2506,
+        "author": "Niese."
       }
     ]
   },
@@ -20255,10 +20291,12 @@
     "lemma": "Empedo",
     "previous": "Empedias",
     "next": "Empedokles 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2506,
-        "author": "Hiller von Gaertringen"
+        "end": 2506,
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
@@ -20278,10 +20316,12 @@
     "lemma": "Empedokles 2",
     "previous": "Empedokles 1",
     "next": "Empedokles 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2507,
-        "author": "Kirchner"
+        "end": 2507,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20301,10 +20341,12 @@
     "lemma": "Empedon 1",
     "previous": "Empedokles 3",
     "next": "Empedon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2512,
-        "author": "Kirchner"
+        "end": 2512,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20312,10 +20354,12 @@
     "lemma": "Empedon 2",
     "previous": "Empedon 1",
     "next": "Empedon 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2512,
-        "author": "Kirchner"
+        "end": 2512,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20323,10 +20367,12 @@
     "lemma": "Empedon 3",
     "previous": "Empedon 2",
     "next": "Empedos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2512,
-        "author": "Kirchner"
+        "end": 2512,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20334,10 +20380,12 @@
     "lemma": "Empedos 1",
     "previous": "Empedon 3",
     "next": "Empedos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2512,
-        "author": "Kirchner"
+        "end": 2512,
+        "author": "Kirchner."
       }
     ]
   },
@@ -20367,10 +20415,12 @@
     "lemma": "Empelathra",
     "previous": "Empektes",
     "next": "Empeloroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2512,
-        "author": "Kiessling, Max"
+        "end": 2512,
+        "author": "Kiessling."
       }
     ]
   },
@@ -20378,10 +20428,13 @@
     "lemma": "Empeloroi",
     "previous": "Empelathra",
     "next": "Empelos",
+    "sort_key": "Empeloroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2512,
-        "author": "Szanto"
+        "end": 2512,
+        "author": "Szanto."
       }
     ]
   },
@@ -20389,10 +20442,12 @@
     "lemma": "Empelos",
     "previous": "Empeloroi",
     "next": "Emperesion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2513,
-        "author": "Bürchner"
+        "end": 2513,
+        "author": "Bürchner."
       }
     ]
   },
@@ -20400,10 +20455,12 @@
     "lemma": "Emperesion",
     "previous": "Empelos",
     "next": "Emphrouroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2513,
-        "author": "Philippson"
+        "end": 2513,
+        "author": "Philippson."
       }
     ]
   },
@@ -20411,10 +20468,13 @@
     "lemma": "Emphrouroi",
     "previous": "Emperesion",
     "next": "Emphyteusis",
+    "sort_key": "Emphrouroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2513,
-        "author": "Szanto"
+        "end": 2513,
+        "author": "Szanto."
       }
     ]
   },
@@ -20458,10 +20518,12 @@
     "lemma": "Ἐμπλόκια",
     "previous": "Emplekton",
     "next": "Empodos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Stengel"
+        "end": 2526,
+        "author": "Stengel."
       }
     ]
   },
@@ -20482,10 +20544,12 @@
     "lemma": "Empolaios",
     "previous": "Empodos",
     "next": "Empolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Jessen"
+        "end": 2526,
+        "author": "Jessen."
       }
     ]
   },
@@ -20493,10 +20557,12 @@
     "lemma": "Empolis",
     "previous": "Empolaios",
     "next": "Emporia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Jessen"
+        "end": 2526,
+        "author": "Jessen."
       }
     ]
   },
@@ -20573,7 +20639,7 @@
   {
     "lemma": "Emporion",
     "previous": "Emporikos kolpos",
-    "next": "Emporion Barbarikon",
+    "next": "Ἐμπόριον Βαρβαρικόν",
     "chapters": [
       {
         "start": 2532,
@@ -20583,23 +20649,29 @@
     ]
   },
   {
-    "lemma": "Emporion Barbarikon",
+    "lemma": "Ἐμπόριον Βαρβαρικόν",
     "previous": "Emporion",
     "next": "Emporium 1",
+    "sort_key": "Emporion Barbarikon",
+    "redirect": "Barbarei",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2534
+        "start": 2534,
+        "end": 2534
       }
     ]
   },
   {
     "lemma": "Emporium 1",
-    "previous": "Emporion Barbarikon",
+    "previous": "Ἐμπόριον Βαρβαρικόν",
     "next": "Emporium 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2534,
-        "author": "Hülsen"
+        "end": 2534,
+        "author": "Hülsen."
       }
     ]
   },
@@ -20607,10 +20679,12 @@
     "lemma": "Emporium 2",
     "previous": "Emporium 1",
     "next": "Emporium 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2534,
-        "author": "Hülsen"
+        "end": 2534,
+        "author": "Hülsen."
       }
     ]
   },
@@ -20618,10 +20692,12 @@
     "lemma": "Emporium 3",
     "previous": "Emporium 2",
     "next": "Emporius orator",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2534,
-        "author": "Hülsen"
+        "end": 2534,
+        "author": "Hülsen."
       }
     ]
   },
@@ -20653,9 +20729,12 @@
     "lemma": "Emptor",
     "previous": "Emptio venditio",
     "next": "Empulum",
+    "redirect": "Emptio venditio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2540
+        "start": 2540,
+        "end": 2540
       }
     ]
   },
@@ -20663,10 +20742,12 @@
     "lemma": "Empulum",
     "previous": "Emptor",
     "next": "Empusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2540,
-        "author": "Hülsen"
+        "end": 2540,
+        "author": "Hülsen."
       }
     ]
   },
@@ -20724,10 +20805,12 @@
     "lemma": "Enagonios",
     "previous": "Enadab",
     "next": "Enagonios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20735,10 +20818,12 @@
     "lemma": "Enagonios 1",
     "previous": "Enagonios",
     "next": "Enagonios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20746,10 +20831,12 @@
     "lemma": "Enagonios 2",
     "previous": "Enagonios 1",
     "next": "Enagonios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20757,10 +20844,12 @@
     "lemma": "Enagonios 3",
     "previous": "Enagonios 2",
     "next": "Enagonios 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20768,10 +20857,12 @@
     "lemma": "Enagonios 4",
     "previous": "Enagonios 3",
     "next": "Enagonios 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20779,10 +20870,12 @@
     "lemma": "Enagonios 5",
     "previous": "Enagonios 4",
     "next": "Enagros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20790,10 +20883,12 @@
     "lemma": "Enagros",
     "previous": "Enagonios 5",
     "next": "Enaimos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20801,10 +20896,13 @@
     "lemma": "Enaimos",
     "previous": "Enagros",
     "next": "Enaisimos 1",
+    "sort_key": "Enaimos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20812,10 +20910,12 @@
     "lemma": "Enaisimos 1",
     "previous": "Enaimos",
     "next": "Enaisimos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
-        "author": "Jessen"
+        "end": 2544,
+        "author": "Jessen."
       }
     ]
   },
@@ -20836,11 +20936,12 @@
     "lemma": "Enakomia",
     "previous": "Enaisimos 2",
     "next": "Enalios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2544,
         "end": 2545,
-        "author": "Tkáč"
+        "author": "Tkáč."
       }
     ]
   },
@@ -20848,10 +20949,12 @@
     "lemma": "Enalios",
     "previous": "Enakomia",
     "next": "Enalios, Enalia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2545,
-        "author": "Tümpel"
+        "end": 2545,
+        "author": "Tümpel."
       }
     ]
   },
@@ -20882,10 +20985,12 @@
     "lemma": "Enarete",
     "previous": "Enalos",
     "next": "Enarsimos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2547,
-        "author": "Hoefer"
+        "end": 2547,
+        "author": "Hoefer."
       }
     ]
   },
@@ -20893,10 +20998,12 @@
     "lemma": "Enarsimos",
     "previous": "Enarete",
     "next": "Enarsphoros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2547,
-        "author": "Escher"
+        "end": 2547,
+        "author": "Escher."
       }
     ]
   },
@@ -20904,10 +21011,12 @@
     "lemma": "Enarsphoros",
     "previous": "Enarsimos",
     "next": "Enaulos kitharisis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2547,
-        "author": "Hoefer"
+        "end": 2547,
+        "author": "Hoefer."
       }
     ]
   },
@@ -20915,9 +21024,13 @@
     "lemma": "Enaulos kitharisis",
     "previous": "Enarsphoros",
     "next": "Enauros",
+    "sort_key": "Enaulos kitharisis",
+    "redirect": "Epigonos 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2547
+        "start": 2547,
+        "end": 2547
       }
     ]
   },
@@ -20925,10 +21038,12 @@
     "lemma": "Enauros",
     "previous": "Enaulos kitharisis",
     "next": "Encarpa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2547,
-        "author": "Jessen"
+        "end": 2547,
+        "author": "Jessen."
       }
     ]
   },
@@ -20947,10 +21062,12 @@
     "lemma": "Encheios",
     "previous": "Encarpa",
     "next": "Encheirogastores",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2547,
-        "author": "Jessen"
+        "end": 2547,
+        "author": "Jessen."
       }
     ]
   },
@@ -21004,10 +21121,12 @@
     "lemma": "Enchesimargos",
     "previous": "Enchelys",
     "next": "Encho",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2551,
-        "author": "Hoefer"
+        "end": 2551,
+        "author": "Hoefer."
       }
     ]
   },
@@ -21015,10 +21134,12 @@
     "lemma": "Encho",
     "previous": "Enchesimargos",
     "next": "Endeides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2551,
-        "author": "Jessen"
+        "end": 2551,
+        "author": "Jessen."
       }
     ]
   },
@@ -21037,10 +21158,12 @@
     "lemma": "Endeis",
     "previous": "Endeides",
     "next": "Endeixis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2551,
-        "author": "Hoefer"
+        "end": 2551,
+        "author": "Hoefer."
       }
     ]
   },
@@ -21083,10 +21206,12 @@
     "lemma": "Endera",
     "previous": "Endendros",
     "next": "Enderum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2553,
-        "author": "Fischer"
+        "end": 2553,
+        "author": "Fischer."
       }
     ]
   },
@@ -21094,10 +21219,12 @@
     "lemma": "Enderum",
     "previous": "Endera",
     "next": "Endiagros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2553,
-        "author": "Patsch"
+        "end": 2553,
+        "author": "Patsch."
       }
     ]
   },
@@ -21105,10 +21232,12 @@
     "lemma": "Endiagros",
     "previous": "Enderum",
     "next": "Endios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2553,
-        "author": "Jessen"
+        "end": 2553,
+        "author": "Jessen."
       }
     ]
   },
