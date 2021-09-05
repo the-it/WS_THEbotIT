@@ -1723,9 +1723,12 @@
     "lemma": "Philoxenos 21",
     "previous": "Philoxenos 20",
     "next": "Philoxenos 22",
+    "redirect": "Xenaia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 192
+        "start": 192,
+        "end": 192
       }
     ]
   },
@@ -2246,7 +2249,7 @@
   {
     "lemma": "Phiops",
     "previous": "Phintys",
-    "next": "Phiraisoi",
+    "next": "Φιραῖσοι",
     "chapters": [
       {
         "start": 251,
@@ -2255,18 +2258,22 @@
     ]
   },
   {
-    "lemma": "Phiraisoi",
+    "lemma": "Φιραῖσοι",
     "previous": "Phiops",
     "next": "Phisadie",
+    "sort_key": "Phiraisoi",
+    "redirect": "Firaesi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
   {
     "lemma": "Phisadie",
-    "previous": "Phiraisoi",
+    "previous": "Φιραῖσοι",
     "next": "Φισῶν",
     "chapters": [
       {
@@ -5838,9 +5845,12 @@
     "lemma": "Photios 10",
     "previous": "Photios 9",
     "next": "Photios 11",
+    "redirect": "Photeinos 13",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 666
+        "start": 666,
+        "end": 666
       }
     ]
   },
@@ -6330,7 +6340,7 @@
   {
     "lemma": "Phraurousioi",
     "previous": "Phratou",
-    "next": "Phrauynes",
+    "next": "Φραυυνης",
     "chapters": [
       {
         "start": 758,
@@ -6339,18 +6349,22 @@
     ]
   },
   {
-    "lemma": "Phrauynes",
+    "lemma": "Φραυυνης",
     "previous": "Phraurousioi",
     "next": "Phrearoos",
+    "sort_key": "Phrauynes",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 758
+        "start": 758,
+        "end": 758
       }
     ]
   },
   {
     "lemma": "Phrearoos",
-    "previous": "Phrauynes",
+    "previous": "Φραυυνης",
     "next": "Phrearrioi",
     "chapters": [
       {
@@ -6642,9 +6656,12 @@
     "lemma": "Phrontidas",
     "previous": "Phronios 2",
     "next": "Phrontis 1",
+    "redirect": "Photidas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 771
+        "start": 771,
+        "end": 771
       }
     ]
   },
@@ -6718,9 +6735,12 @@
     "lemma": "Phrudis",
     "previous": "Phrontistes 2",
     "next": "Phrugin",
+    "redirect": "Frudis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 773
+        "start": 773,
+        "end": 773
       }
     ]
   },
@@ -6761,9 +6781,12 @@
     "lemma": "Phrunoi",
     "previous": "Phrune",
     "next": "Phruraison",
+    "redirect": "Phrynoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 773
+        "start": 773,
+        "end": 773
       }
     ]
   },
@@ -6837,9 +6860,12 @@
     "lemma": "Phruroi neorion 2",
     "previous": "Phruroi neorion 1",
     "next": "Phrygia 1",
+    "redirect": "Phrynoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 781
+        "start": 781,
+        "end": 781
       }
     ]
   },
@@ -6946,9 +6972,12 @@
     "lemma": "Phrygiones",
     "previous": "Phrygion",
     "next": "Phrygios 1",
+    "redirect": "Plumarii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 893
+        "start": 893,
+        "end": 893
       }
     ]
   },
@@ -7436,9 +7465,12 @@
     "lemma": "Phthinthia",
     "previous": "Phthia (Phthiotis) 10",
     "next": "Phthios 1",
+    "redirect": "Phintias 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 960
+        "start": 960,
+        "end": 960
       }
     ]
   },
@@ -7661,9 +7693,12 @@
     "lemma": "Phurgisatis",
     "previous": "Phuphena",
     "next": "Phursethna",
+    "redirect": "Phrurgisatis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 967
+        "start": 967,
+        "end": 967
       }
     ]
   },
@@ -7671,9 +7706,12 @@
     "lemma": "Phursethna",
     "previous": "Phurgisatis",
     "next": "Phusiana",
+    "redirect": "Porsenna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 967
+        "start": 967,
+        "end": 967
       }
     ]
   },
@@ -7779,7 +7817,7 @@
   {
     "lemma": "Phykous",
     "previous": "Phykteus",
-    "next": "Phykoussai",
+    "next": "Φυκοῦσσαι",
     "chapters": [
       {
         "start": 980,
@@ -7788,18 +7826,22 @@
     ]
   },
   {
-    "lemma": "Phykoussai",
+    "lemma": "Φυκοῦσσαι",
     "previous": "Phykous",
     "next": "Phylada",
+    "sort_key": "Phykoussai",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 980
+        "start": 980,
+        "end": 980
       }
     ]
   },
   {
     "lemma": "Phylada",
-    "previous": "Phykoussai",
+    "previous": "Φυκοῦσσαι",
     "next": "Phylaka",
     "chapters": [
       {
@@ -7900,9 +7942,12 @@
     "lemma": "Phylakes",
     "previous": "Phylake 5",
     "next": "Phylakides",
+    "redirect": "Phylax 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 987
+        "start": 987,
+        "end": 987
       }
     ]
   },
@@ -8020,9 +8065,12 @@
     "lemma": "Phylakos 6",
     "previous": "Phylakos 5",
     "next": "Phylakterion",
+    "redirect": "Psylakos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 989
+        "start": 989,
+        "end": 989
       }
     ]
   },
@@ -8030,9 +8078,12 @@
     "lemma": "Phylakterion",
     "previous": "Phylakos 6",
     "next": "Phylamos",
+    "redirect": "Amulett",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 989
+        "start": 989,
+        "end": 989
       }
     ]
   },
@@ -8271,9 +8322,12 @@
     "lemma": "Phylax 13",
     "previous": "Phylax 12",
     "next": "Phylax 14",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 992
+        "start": 992,
+        "end": 992
       }
     ]
   },
@@ -8380,9 +8434,12 @@
     "lemma": "Phyleos",
     "previous": "Phyleis 2",
     "next": "Phyles",
+    "redirect": "Pytheos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1014
+        "start": 1014,
+        "end": 1014
       }
     ]
   },
@@ -8654,9 +8711,12 @@
     "lemma": "Phyllis 8",
     "previous": "Phyllis 7",
     "next": "Phyllis 9",
+    "redirect": "Phillis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1024
+        "start": 1024,
+        "end": 1024
       }
     ]
   },
@@ -8765,9 +8825,12 @@
     "lemma": "Phylogenes",
     "previous": "Phylodike",
     "next": "Phylomache",
+    "redirect": "Philogenes 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1028
+        "start": 1028,
+        "end": 1028
       }
     ]
   },
@@ -8786,9 +8849,12 @@
     "lemma": "Phylomachos",
     "previous": "Phylomache",
     "next": "Phylomedusa",
+    "redirect": "Phyromachos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1029
+        "start": 1029,
+        "end": 1029
       }
     ]
   },
@@ -8961,9 +9027,12 @@
     "lemma": "Physia",
     "previous": "Physadeia 3",
     "next": "Physik",
+    "redirect": "Phoibe 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1034
+        "start": 1034,
+        "end": 1034
       }
     ]
   },
@@ -9103,9 +9172,12 @@
     "lemma": "Physkeis",
     "previous": "Physke",
     "next": "Physkia",
+    "redirect": "Physkos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1165
+        "start": 1165,
+        "end": 1165
       }
     ]
   },
@@ -9113,9 +9185,12 @@
     "lemma": "Physkia",
     "previous": "Physkeis",
     "next": "Physkios",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1165
+        "start": 1165,
+        "end": 1165
       }
     ]
   },
@@ -9123,9 +9198,12 @@
     "lemma": "Physkios",
     "previous": "Physkia",
     "next": "Physkoa",
+    "redirect": "Physkos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1165
+        "start": 1165,
+        "end": 1165
       }
     ]
   },
@@ -9199,9 +9277,12 @@
     "lemma": "Phytalidai",
     "previous": "Phytaion",
     "next": "Phytalmios 1",
+    "redirect": "Phytalos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1175
+        "start": 1175,
+        "end": 1175
       }
     ]
   },
@@ -9263,7 +9344,7 @@
   {
     "lemma": "Phytalos",
     "previous": "Phytalmios 5",
-    "next": "Ph(y)teanoi",
+    "next": "Φ(υ)τεανοί",
     "chapters": [
       {
         "start": 1176,
@@ -9272,18 +9353,22 @@
     ]
   },
   {
-    "lemma": "Ph(y)teanoi",
+    "lemma": "Φ(υ)τεανοί",
     "previous": "Phytalos",
     "next": "Phyteion",
+    "sort_key": "Phyteanoi",
+    "redirect": "Phrygia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1177
+        "start": 1177,
+        "end": 1177
       }
     ]
   },
   {
     "lemma": "Phyteion",
-    "previous": "Ph(y)teanoi",
+    "previous": "Φ(υ)τεανοί",
     "next": "Phyteus 1",
     "chapters": [
       {
@@ -9307,9 +9392,12 @@
     "lemma": "Phyteus 2",
     "previous": "Phyteus 1",
     "next": "Phytia",
+    "redirect": "Pytheos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1178
+        "start": 1178,
+        "end": 1178
       }
     ]
   },
@@ -9460,9 +9548,12 @@
     "lemma": "Piales, Pialos",
     "previous": "Piaculum",
     "next": "Piasos",
+    "redirect": "Pielos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1185
+        "start": 1185,
+        "end": 1185
       }
     ]
   },
@@ -9481,9 +9572,12 @@
     "lemma": "Piavonius",
     "previous": "Piasos",
     "next": "Picarii",
+    "redirect": "Victorinus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1185
+        "start": 1185,
+        "end": 1185
       }
     ]
   },
@@ -9524,9 +9618,12 @@
     "lemma": "Pictavi",
     "previous": "Picenum",
     "next": "Picti",
+    "redirect": "Lemonum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1198
+        "start": 1198,
+        "end": 1198
       }
     ]
   },
@@ -9556,9 +9653,12 @@
     "lemma": "Picumnus",
     "previous": "Pictones (Pictavi)",
     "next": "Picus",
+    "redirect": "Pilumnus, Picumnus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1214
+        "start": 1214,
+        "end": 1214
       }
     ]
   },
@@ -9631,7 +9731,7 @@
   {
     "lemma": "Piera 1",
     "previous": "Pieporus",
-    "next": "Piera 2",
+    "next": "Πιέρα 2",
     "chapters": [
       {
         "start": 1220,
@@ -9640,22 +9740,28 @@
     ]
   },
   {
-    "lemma": "Piera 2",
+    "lemma": "Πιέρα 2",
     "previous": "Piera 1",
     "next": "Pieria 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1220
+        "start": 1220,
+        "end": 1220
       }
     ]
   },
   {
     "lemma": "Pieria 1",
-    "previous": "Piera 2",
+    "previous": "Πιέρα 2",
     "next": "Pieria 2",
+    "redirect": "Seleukis 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1220
+        "start": 1220,
+        "end": 1220
       }
     ]
   },
@@ -9675,9 +9781,11 @@
     "previous": "Pieria 2",
     "next": "Pierides",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1220
+        "start": 1220,
+        "end": 1220
       }
     ]
   },
@@ -9686,9 +9794,11 @@
     "previous": "Pieria 3ff.",
     "next": "Pierius 1",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1220
+        "start": 1220,
+        "end": 1220
       }
     ]
   },
@@ -9729,9 +9839,12 @@
     "lemma": "Pieros",
     "previous": "Pierius 3",
     "next": "Pietas",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1221
+        "start": 1221,
+        "end": 1221
       }
     ]
   },
@@ -9750,9 +9863,12 @@
     "lemma": "Pietas Iulia",
     "previous": "Pietas",
     "next": "Pigmenta",
+    "redirect": "Pola",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1232
+        "start": 1232,
+        "end": 1232
       }
     ]
   },

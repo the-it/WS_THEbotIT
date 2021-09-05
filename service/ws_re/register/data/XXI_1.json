@@ -343,10 +343,12 @@
     "lemma": "Plautius 30",
     "previous": "Plautius 29",
     "next": "Plautius 31",
-    "redirect": true,
+    "redirect": "Plautius 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 22
+        "start": 22,
+        "end": 22
       }
     ]
   },
@@ -842,9 +844,12 @@
     "lemma": "Plautus 4",
     "previous": "Plautus 3",
     "next": "Plebiscita",
+    "redirect": "Maccius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 54
+        "start": 54,
+        "end": 54
       }
     ]
   },
@@ -885,9 +890,12 @@
     "lemma": "Plegerion",
     "previous": "Plectrum",
     "next": "Plegra",
+    "redirect": "Plemyrion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 189
+        "start": 189,
+        "end": 189
       }
     ]
   },
@@ -972,9 +980,12 @@
     "lemma": "Pleistanos",
     "previous": "Pleistainos 3",
     "next": "Pleistarcheia",
+    "redirect": "Pleistainos 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 195
+        "start": 195,
+        "end": 195
       }
     ]
   },
@@ -1048,9 +1059,12 @@
     "lemma": "Pleistheniden",
     "previous": "Pleisthenes 3",
     "next": "Pleistias",
+    "redirect": "Pleisthenes 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 205
+        "start": 205,
+        "end": 205
       }
     ]
   },
@@ -1149,7 +1163,7 @@
   {
     "lemma": "Pleistos",
     "previous": "Pleistoros",
-    "next": "Plektron",
+    "next": "Πλῆκτρον",
     "chapters": [
       {
         "start": 213,
@@ -1158,18 +1172,22 @@
     ]
   },
   {
-    "lemma": "Plektron",
+    "lemma": "Πλῆκτρον",
     "previous": "Pleistos",
     "next": "Pleminius 1",
+    "sort_key": "Plektron",
+    "redirect": "Plectrum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 221
+        "start": 221,
+        "end": 221
       }
     ]
   },
   {
     "lemma": "Pleminius 1",
-    "previous": "Plektron",
+    "previous": "Πλῆκτρον",
     "next": "Pleminius 2",
     "chapters": [
       {
@@ -1237,9 +1255,12 @@
     "lemma": "Plenes",
     "previous": "Plenatius",
     "next": "Pleninenses",
+    "redirect": "Plenios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 226
+        "start": 226,
+        "end": 226
       }
     ]
   },
@@ -1247,9 +1268,12 @@
     "lemma": "Pleninenses",
     "previous": "Plenes",
     "next": "Plenios",
+    "redirect": "Planinenses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 226
+        "start": 226,
+        "end": 226
       }
     ]
   },
@@ -1268,9 +1292,12 @@
     "lemma": "Plen(n)ios",
     "previous": "Plenios",
     "next": "Plentiphanes",
+    "redirect": "Plinius 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 226
+        "start": 226,
+        "end": 226
       }
     ]
   },
@@ -1311,9 +1338,12 @@
     "lemma": "Pleroma",
     "previous": "Pleraei",
     "next": "Pleromarius",
+    "redirect": "Pleromarius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 233
+        "start": 233,
+        "end": 233
       }
     ]
   },
@@ -1768,9 +1798,12 @@
     "lemma": "Plinos",
     "previous": "Plinna",
     "next": "Plinta",
+    "redirect": "Plynos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 457
+        "start": 457,
+        "end": 457
       }
     ]
   },
@@ -1855,9 +1888,12 @@
     "lemma": "Plistine",
     "previous": "Plistica",
     "next": "Plitaniae",
+    "redirect": "Plestinus lacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -2463,9 +2499,12 @@
     "lemma": "Plutarche",
     "previous": "Pluspetitio",
     "next": "Plutarchos 1",
+    "redirect": "Marinos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 635
+        "start": 635,
+        "end": 635
       }
     ]
   },
@@ -2628,9 +2667,11 @@
     "previous": "Pluteus, pluteum",
     "next": "Plutianus 1",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 988
+        "start": 988,
+        "end": 988
       }
     ]
   },
@@ -2682,9 +2723,12 @@
     "lemma": "Plutis",
     "previous": "Plution 2",
     "next": "Pluto 1",
+    "redirect": "Χειρομάχα",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 989
+        "start": 989,
+        "end": 989
       }
     ]
   },
@@ -2714,9 +2758,12 @@
     "lemma": "Plutodoteira",
     "previous": "Pluto 2",
     "next": "Plutodoter",
+    "redirect": "Plutodotes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 989
+        "start": 989,
+        "end": 989
       }
     ]
   },
@@ -2724,9 +2771,12 @@
     "lemma": "Plutodoter",
     "previous": "Plutodoteira",
     "next": "Plutodotes",
+    "redirect": "Plutodotes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 989
+        "start": 989,
+        "end": 989
       }
     ]
   },
@@ -2956,9 +3006,12 @@
     "lemma": "Pnuthios",
     "previous": "Pnups",
     "next": "Pnuthis",
+    "redirect": "Pnuthis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1104
+        "start": 1104,
+        "end": 1104
       }
     ]
   },
@@ -3032,9 +3085,12 @@
     "lemma": "Podalaia",
     "previous": "Podagra",
     "next": "Podaleirios 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1131
+        "start": 1131,
+        "end": 1131
       }
     ]
   },
@@ -3163,9 +3219,12 @@
     "lemma": "Podarke 2",
     "previous": "Podarke 1",
     "next": "Podarkes 1",
+    "redirect": "Podarge 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1142
+        "start": 1142,
+        "end": 1142
       }
     ]
   },
@@ -3338,9 +3397,12 @@
     "lemma": "Poemenia",
     "previous": "Poemana",
     "next": "Poemenius",
+    "redirect": "Poimenia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1152
+        "start": 1152,
+        "end": 1152
       }
     ]
   },
@@ -3348,9 +3410,12 @@
     "lemma": "Poemenius",
     "previous": "Poemenia",
     "next": "Poeni 1",
+    "redirect": "Poimenios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1152
+        "start": 1152,
+        "end": 1152
       }
     ]
   },
@@ -3369,9 +3434,12 @@
     "lemma": "Poeni 2",
     "previous": "Poeni 1",
     "next": "Poeninus 1",
+    "redirect": "Karthago",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1155
+        "start": 1155,
+        "end": 1155
       }
     ]
   },
@@ -3544,9 +3612,12 @@
     "lemma": "Pogonas",
     "previous": "Pogon",
     "next": "Pohoidaia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1184
+        "start": 1184,
+        "end": 1184
       }
     ]
   },
@@ -3621,9 +3692,11 @@
     "previous": "Poias 3",
     "next": "Poieessa 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1188
+        "start": 1188,
+        "end": 1188
       }
     ]
   },
@@ -3632,9 +3705,11 @@
     "previous": "Poieessa 1",
     "next": "Poieessa 3",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1188
+        "start": 1188,
+        "end": 1188
       }
     ]
   },
@@ -3697,9 +3772,12 @@
     "lemma": "Poikile",
     "previous": "Poikilassos",
     "next": "Poikiles",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1191
+        "start": 1191,
+        "end": 1191
       }
     ]
   },
@@ -3784,9 +3862,12 @@
     "lemma": "Poimanenos",
     "previous": "Poimandros",
     "next": "Poimen 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1209
+        "start": 1209,
+        "end": 1209
       }
     ]
   },
@@ -3882,9 +3963,12 @@
     "lemma": "Poimenios 2",
     "previous": "Poimenios 1",
     "next": "Poimenios 3",
+    "redirect": "Aelius 113",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1210
+        "start": 1210,
+        "end": 1210
       }
     ]
   },
@@ -4057,9 +4141,12 @@
     "lemma": "Poinimos",
     "previous": "Poine 2",
     "next": "Poios",
+    "redirect": "Poine 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1215
+        "start": 1215,
+        "end": 1215
       }
     ]
   },
@@ -4067,9 +4154,12 @@
     "lemma": "Poios",
     "previous": "Poinimos",
     "next": "Pois",
+    "redirect": "Ptoion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1215
+        "start": 1215,
+        "end": 1215
       }
     ]
   },
@@ -4121,9 +4211,12 @@
     "lemma": "Poitropios",
     "previous": "Poitropia",
     "next": "Pokios",
+    "redirect": "Poitropia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1217
+        "start": 1217,
+        "end": 1217
       }
     ]
   },
@@ -4186,9 +4279,12 @@
     "lemma": "Polemainetos 2",
     "previous": "Polemainetos 1",
     "next": "Polemaios",
+    "redirect": "Polemainetos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1252
+        "start": 1252,
+        "end": 1252
       }
     ]
   },
@@ -4328,9 +4424,12 @@
     "lemma": "Polemius 7",
     "previous": "Polemius 6",
     "next": "Polemius 8",
+    "redirect": "Polemon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1260
+        "start": 1260,
+        "end": 1260
       }
     ]
   },
@@ -4338,9 +4437,12 @@
     "lemma": "Polemius 8",
     "previous": "Polemius 7",
     "next": "Polemius 9",
+    "redirect": "Iulius 520",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1260
+        "start": 1260,
+        "end": 1260
       }
     ]
   },

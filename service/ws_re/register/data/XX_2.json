@@ -542,7 +542,7 @@
   {
     "lemma": "Pinacotheca",
     "previous": "Pina",
-    "next": "Pinakion 1",
+    "next": "Πινάκιον 1",
     "chapters": [
       {
         "start": 1389,
@@ -551,18 +551,22 @@
     ]
   },
   {
-    "lemma": "Pinakion 1",
+    "lemma": "Πινάκιον 1",
     "previous": "Pinacotheca",
     "next": "Pinakion 2",
+    "sort_key": "Pinakion 1",
+    "redirect": "Pinax 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1390
+        "start": 1390,
+        "end": 1390
       }
     ]
   },
   {
     "lemma": "Pinakion 2",
-    "previous": "Pinakion 1",
+    "previous": "Πινάκιον 1",
     "next": "Pinalos",
     "chapters": [
       {
@@ -2233,9 +2237,12 @@
     "lemma": "Pis...",
     "previous": "Pirustae",
     "next": "Pisa, Pisatis",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1729
+        "start": 1732,
+        "end": 1732
       }
     ]
   },
