@@ -911,9 +911,11 @@
     "previous": "Praetoriae cohortes",
     "next": "Praetorium 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1634
+        "start": 1634,
+        "end": 1634
       }
     ]
   },
@@ -1060,10 +1062,12 @@
     "lemma": "Prainetos",
     "previous": "Pragmatius 2",
     "next": "Praioi",
-    "redirect": true,
+    "redirect": "Preietos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1685
+        "start": 1685,
+        "end": 1685
       }
     ]
   },
@@ -1342,9 +1346,12 @@
     "lemma": "Prasidion",
     "previous": "Prasias limne",
     "next": "Prasion",
+    "redirect": "Praisidion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1699
+        "start": 1699,
+        "end": 1699
       }
     ]
   },
@@ -2202,9 +2209,12 @@
     "lemma": "Praxon",
     "previous": "Praxo 2",
     "next": "Praxonides",
+    "redirect": "Pration",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1812
+        "start": 1812,
+        "end": 1812
       }
     ]
   },
@@ -2279,9 +2289,12 @@
     "lemma": "Praylos 3",
     "previous": "Praylos 2",
     "next": "Praysion",
+    "redirect": "Praylios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1813
+        "start": 1813,
+        "end": 1813
       }
     ]
   },
@@ -2323,9 +2336,12 @@
     "lemma": "Preciani",
     "previous": "Precarium",
     "next": "Precona",
+    "redirect": "Ptiani(i)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1827
+        "start": 1827,
+        "end": 1827
       }
     ]
   },
@@ -2367,9 +2383,12 @@
     "lemma": "Prehensio",
     "previous": "Prediger",
     "next": "Preieteios",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1831
+        "start": 1831,
+        "end": 1831
       }
     ]
   },
@@ -2436,9 +2455,12 @@
     "lemma": "Prelius lacus",
     "previous": "Prekalis",
     "next": "Prema mater",
+    "redirect": "Prilius lacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1836
+        "start": 1836,
+        "end": 1836
       }
     ]
   },
@@ -2468,9 +2490,12 @@
     "lemma": "Prenetos",
     "previous": "Premnosia, Premnusia",
     "next": "Prepelaos",
+    "redirect": "Preietos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1836
+        "start": 1836,
+        "end": 1836
       }
     ]
   },
@@ -2491,9 +2516,11 @@
     "previous": "Prepelaos",
     "next": "Prepesinthos",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1838
+        "start": 1838,
+        "end": 1838
       }
     ]
   },
@@ -2502,9 +2529,11 @@
     "previous": "Prepenissos",
     "next": "Prepis",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1838
+        "start": 1838,
+        "end": 1838
       }
     ]
   },
@@ -2556,9 +2585,12 @@
     "lemma": "Presbeira, Presbiste",
     "previous": "Presba, Presbeira, Presbiste",
     "next": "Presbon 1",
+    "redirect": "Presba, Presbeira, Presbiste",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1838
+        "start": 1838,
+        "end": 1838
       }
     ]
   },
@@ -2611,9 +2643,12 @@
     "lemma": "Presbyteroi",
     "previous": "Presbon 4",
     "next": "Preston",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1839
+        "start": 1839,
+        "end": 1839
       }
     ]
   },
@@ -2621,9 +2656,12 @@
     "lemma": "Preston",
     "previous": "Presbyteroi",
     "next": "Pretania",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1839
+        "start": 1839,
+        "end": 1839
       }
     ]
   },
@@ -2653,9 +2691,12 @@
     "lemma": "Preti",
     "previous": "Pretanos",
     "next": "Pretiosus",
+    "redirect": "Praeti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1839
+        "start": 1839,
+        "end": 1839
       }
     ]
   },
@@ -2798,9 +2839,12 @@
     "lemma": "Priapaios",
     "previous": "Priantae",
     "next": "Priapea",
+    "redirect": "Priepenaios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1907
+        "start": 1907,
+        "end": 1907
       }
     ]
   },
@@ -2831,7 +2875,7 @@
   {
     "lemma": "Priapine",
     "previous": "Priapidos limen",
-    "next": "Priapios",
+    "next": "Πριάπιος",
     "chapters": [
       {
         "start": 1914,
@@ -2840,22 +2884,29 @@
     ]
   },
   {
-    "lemma": "Priapios",
+    "lemma": "Πριάπιος",
     "previous": "Priapine",
     "next": "Priapis",
+    "sort_key": "Priapios",
+    "redirect": "Priapidos limen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1914
+        "start": 1914,
+        "end": 1914
       }
     ]
   },
   {
     "lemma": "Priapis",
-    "previous": "Priapios",
+    "previous": "Πριάπιος",
     "next": "Priapiskos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1914
+        "start": 1914,
+        "end": 1914
       }
     ]
   },
@@ -2863,9 +2914,12 @@
     "lemma": "Priapiskos",
     "previous": "Priapis",
     "next": "Priaponnesos",
+    "redirect": "Priapos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1914
+        "start": 1914,
+        "end": 1914
       }
     ]
   },
@@ -2873,9 +2927,12 @@
     "lemma": "Priaponnesos",
     "previous": "Priapiskos",
     "next": "Priapos 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1914
+        "start": 1914,
+        "end": 1914
       }
     ]
   },
@@ -2962,9 +3019,12 @@
     "lemma": "Prieleus",
     "previous": "Priasos 2",
     "next": "Prieneus",
+    "redirect": "Prieneus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1943
+        "start": 1943,
+        "end": 1943
       }
     ]
   },
@@ -2994,9 +3054,12 @@
     "lemma": "Priepios",
     "previous": "Priepenaios",
     "next": "Priesterkodex",
+    "redirect": "Preieteios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1943
+        "start": 1943,
+        "end": 1943
       }
     ]
   },
@@ -3016,9 +3079,12 @@
     "lemma": "Prietos",
     "previous": "Priesterkodex",
     "next": "Prifernius 1",
+    "redirect": "Preietos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1967
+        "start": 1967,
+        "end": 1967
       }
     ]
   },
@@ -3164,9 +3230,12 @@
     "lemma": "Primianus 2",
     "previous": "Primianus",
     "next": "Primianus 3",
+    "redirect": "Primilianus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1973
+        "start": 1973,
+        "end": 1973
       }
     ]
   },
@@ -3353,9 +3422,12 @@
     "lemma": "Primores",
     "previous": "Primitivus 2",
     "next": "Primosus 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1994
+        "start": 1994,
+        "end": 1994
       }
     ]
   },
@@ -3429,9 +3501,12 @@
     "lemma": "Primupolis",
     "previous": "Primu(lus)",
     "next": "Primus 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1995
+        "start": 1995,
+        "end": 1995
       }
     ]
   },
@@ -3609,9 +3684,12 @@
     "lemma": "Principalis",
     "previous": "Princeps iuventutis",
     "next": "Principes",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2311
+        "start": 2311,
+        "end": 2311
       }
     ]
   },
@@ -3619,9 +3697,12 @@
     "lemma": "Principes",
     "previous": "Principalis",
     "next": "Principia 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2311
+        "start": 2311,
+        "end": 2311
       }
     ]
   },
@@ -3630,9 +3711,11 @@
     "previous": "Principes",
     "next": "Principia 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2311
+        "start": 2311,
+        "end": 2311
       }
     ]
   },
@@ -3763,9 +3846,12 @@
     "lemma": "Prinetos",
     "previous": "Prinetades",
     "next": "Prinkipo",
+    "redirect": "Preietos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -3891,9 +3977,12 @@
     "lemma": "Prisca 3ff.",
     "previous": "Prisca 2",
     "next": "Priscianus 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2328
+        "start": 2328,
+        "end": 2328
       }
     ]
   },
@@ -4144,7 +4233,7 @@
   {
     "lemma": "Prakes",
     "previous": "Praetorium Mobenum",
-    "next": "Prakiai",
+    "next": "Πρακίαι",
     "chapters": [
       {
         "start": 2537,
@@ -4154,19 +4243,22 @@
     ]
   },
   {
-    "lemma": "Prakiai",
+    "lemma": "Πρακίαι",
     "previous": "Prakes",
     "next": "Praktor",
-    "redirect": true,
+    "sort_key": "Prakiai",
+    "redirect": "Prakes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2538
+        "start": 2538,
+        "end": 2538
       }
     ]
   },
   {
     "lemma": "Praktor",
-    "previous": "Prakiai",
+    "previous": "Πρακίαι",
     "next": "Prasii",
     "chapters": [
       {
