@@ -11646,9 +11646,12 @@
     "lemma": "Eficius",
     "previous": "Effundere",
     "next": "Egainetas",
+    "redirect": "Aeficius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1979
+        "start": 1979,
+        "end": 1979
       }
     ]
   },
@@ -12421,7 +12424,7 @@
       {
         "start": 1997,
         "end": 1997,
-        "author": "Edmund Groag."
+        "author": "Groag."
       }
     ]
   },
@@ -14914,6 +14917,7 @@
     "lemma": "Ἐκρηκτικὴ χώρα",
     "previous": "Ekrhegma",
     "next": "Ekron",
+    "sort_key": "Ekrekitke chora",
     "proof_read": 2,
     "chapters": [
       {
@@ -21724,7 +21728,7 @@
   {
     "lemma": "Engyon",
     "previous": "Engyesis",
-    "next": "Engytheke",
+    "next": "Ἐγγυθήκη",
     "chapters": [
       {
         "start": 2568,
@@ -21733,18 +21737,22 @@
     ]
   },
   {
-    "lemma": "Engytheke",
+    "lemma": "Ἐγγυθήκη",
     "previous": "Engyon",
     "next": "Eniautos",
+    "sort_key": "Engytheke",
+    "redirect": "Ἀγγοθήκη",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2568
+        "start": 2568,
+        "end": 2568
       }
     ]
   },
   {
     "lemma": "Eniautos",
-    "previous": "Engytheke",
+    "previous": "Ἐγγυθήκη",
     "next": "Enikoniai",
     "chapters": [
       {
@@ -21983,7 +21991,7 @@
   {
     "lemma": "Enkelados 4",
     "previous": "Enkelados 3",
-    "next": "Enkentrides",
+    "next": "Ἐγκεντρίδες",
     "chapters": [
       {
         "start": 2580,
@@ -21992,18 +22000,22 @@
     ]
   },
   {
-    "lemma": "Enkentrides",
+    "lemma": "Ἐγκεντρίδες",
     "previous": "Enkelados 4",
     "next": "Enkoiota",
+    "sort_key": "Enkentrides",
+    "redirect": "Sporen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2580
+        "start": 2580,
+        "end": 2580
       }
     ]
   },
   {
     "lemma": "Enkoiota",
-    "previous": "Enkentrides",
+    "previous": "Ἐγκεντρίδες",
     "next": "Enkolpios 1",
     "chapters": [
       {
@@ -22071,7 +22083,7 @@
   {
     "lemma": "Enkomion",
     "previous": "Enkomboma",
-    "next": "Enkrateia",
+    "next": "Ἐν κοτίλῃ",
     "chapters": [
       {
         "start": 2581,
@@ -22081,8 +22093,22 @@
     ]
   },
   {
-    "lemma": "Enkrateia",
+    "lemma": "Ἐν κοτίλῃ",
     "previous": "Enkomion",
+    "next": "Enkrateia",
+    "sort_key": "Εnkotile",
+    "redirect": "Ephedrismos",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2583,
+        "end": 2583
+      }
+    ]
+  },
+  {
+    "lemma": "Enkrateia",
+    "previous": "Ἐν κοτίλῃ",
     "next": "en kotile",
     "chapters": [
       {
@@ -23766,9 +23792,12 @@
     "lemma": "Epaphras 2",
     "previous": "Epaphras 1",
     "next": "Epaphroditiani horti",
+    "redirect": "Aphrodisios 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2710
+        "start": 2710,
+        "end": 2710
       }
     ]
   },
@@ -24320,9 +24349,12 @@
     "lemma": "Ephesia 1",
     "previous": "Ephemeron",
     "next": "Ephesia 2",
+    "redirect": "Ephesos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2753
+        "start": 2753,
+        "end": 2753
       }
     ]
   },
@@ -24585,7 +24617,7 @@
   {
     "lemma": "Ephippion",
     "previous": "Ephipnos",
-    "next": "Ephippios",
+    "next": "Ἐφίππιος",
     "chapters": [
       {
         "start": 2853,
@@ -24595,18 +24627,22 @@
     ]
   },
   {
-    "lemma": "Ephippios",
+    "lemma": "Ἐφίππιος",
     "previous": "Ephippion",
     "next": "Ephippos 1",
+    "sort_key": "Ephippios",
+    "redirect": "Dromos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2857
+        "start": 2857,
+        "end": 2857
       }
     ]
   },
   {
     "lemma": "Ephippos 1",
-    "previous": "Ephippios",
+    "previous": "Ἐφίππιος",
     "next": "Ephippos 2",
     "chapters": [
       {

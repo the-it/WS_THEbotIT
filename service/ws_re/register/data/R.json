@@ -442,6 +442,7 @@
     "lemma": "Aenisatus",
     "previous": "Aemilius 54b",
     "next": "Aëtos 3a",
+    "redirect": "Anisatus, Aenisatus",
     "proof_read": 3,
     "chapters": [
       {
@@ -504,6 +505,7 @@
     "lemma": "Agemon 2",
     "previous": "Agathinos 9",
     "next": "Agenor 1b",
+    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -574,9 +576,11 @@
     "previous": "Aisto",
     "next": "Albania 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 17
+        "start": 17,
+        "end": 17
       }
     ]
   },
@@ -1141,7 +1145,6 @@
   {
     "lemma": "Aradius 1a",
     "previous": "Aradius 1",
-    "next": "Archiphylax 2",
     "proof_read": 3,
     "wp_link": "w:de:Aradius Paternus",
     "wd_link": "d:Q100234014",
@@ -1153,8 +1156,12 @@
     ]
   },
   {
+    "lemma": "Arauris",
+    "next": "Archiphylax 2"
+  },
+  {
     "lemma": "Archiphylax 2",
-    "previous": "Aradius 1a",
+    "previous": "Arauris",
     "next": "Arel",
     "redirect": "Archiphylakites",
     "proof_read": 3,
@@ -1464,6 +1471,7 @@
     "lemma": "Athenadas 2",
     "previous": "Athenadas 1",
     "next": "Athenades 1-16",
+    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -3946,9 +3954,12 @@
     "lemma": "Judas aa",
     "previous": "Judas a",
     "next": "Iulius 38a",
+    "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 136
+        "start": 136,
+        "end": 136
       }
     ]
   },
@@ -5926,6 +5937,7 @@
     "lemma": "Vallius a",
     "previous": "Valerius 105a",
     "next": "Vallius 5",
+    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -5976,6 +5988,7 @@
     "lemma": "Veturius 34aa",
     "previous": "Velius 4a",
     "next": "Vibullius 3",
+    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {
@@ -6066,6 +6079,7 @@
     "lemma": "Vitalius 1",
     "previous": "Vitalius a",
     "next": "Umbria",
+    "redirect": true,
     "proof_read": 3,
     "chapters": [
       {

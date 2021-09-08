@@ -1177,7 +1177,7 @@
   {
     "lemma": "Exole",
     "previous": "Exodium",
-    "next": "Exomis",
+    "next": "Ἐξωμίς",
     "chapters": [
       {
         "start": 1689,
@@ -1186,22 +1186,29 @@
     ]
   },
   {
-    "lemma": "Exomis",
+    "lemma": "Ἐξωμίς",
     "previous": "Exole",
     "next": "Exomitae",
+    "sort_key": "Exomis",
+    "redirect": "Χιτών",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1689
+        "start": 1689,
+        "end": 1689
       }
     ]
   },
   {
     "lemma": "Exomitae",
-    "previous": "Exomis",
+    "previous": "Ἐξωμίς",
     "next": "Ἐξωμοσία",
+    "redirect": "Axomis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1689
+        "start": 1689,
+        "end": 1689
       }
     ]
   },
@@ -1670,9 +1677,12 @@
     "lemma": "Faba aegyptia",
     "previous": "Faba",
     "next": "Fabaria",
+    "redirect": "Lotos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1703
+        "start": 1703,
+        "end": 1703
       }
     ]
   },
@@ -1680,9 +1690,12 @@
     "lemma": "Fabaria",
     "previous": "Faba aegyptia",
     "next": "Fabaria portus",
+    "redirect": "Burcana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1703
+        "start": 1703,
+        "end": 1703
       }
     ]
   },
@@ -1701,9 +1714,12 @@
     "lemma": "Fabaris",
     "previous": "Fabaria portus",
     "next": "Fabatius",
+    "redirect": "Farfarus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1703
+        "start": 1703,
+        "end": 1703
       }
     ]
   },
@@ -1733,9 +1749,12 @@
     "lemma": "Fabatus 2",
     "previous": "Fabatus 1",
     "next": "Fabel",
+    "redirect": "Calpurnius 34",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1703
+        "start": 1703,
+        "end": 1703
       }
     ]
   },
@@ -1811,9 +1830,12 @@
     "lemma": "Fabianus 3",
     "previous": "Fabianus 2",
     "next": "Fabianus 4",
+    "redirect": "Annius 39",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737
       }
     ]
   },
@@ -1843,9 +1865,12 @@
     "lemma": "Fabianus 6",
     "previous": "Fabianus 5",
     "next": "Fabianus 7",
+    "redirect": "Fabius 102",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737
       }
     ]
   },
@@ -2095,9 +2120,12 @@
     "lemma": "Fabius 12",
     "previous": "Fabius 11",
     "next": "Fabius 13",
+    "redirect": "Aelianus 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1744
+        "start": 1744,
+        "end": 1744
       }
     ]
   },
@@ -4724,9 +4752,12 @@
     "lemma": "Fadus",
     "previous": "Fadius 13",
     "next": "Fächer",
+    "redirect": "Cuspius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1959
+        "start": 1959,
+        "end": 1959
       }
     ]
   },
@@ -4882,9 +4913,12 @@
     "lemma": "Fahineihae",
     "previous": "Fagutal",
     "next": "Faianius",
+    "redirect": "Fachineihae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1967
+        "start": 1967,
+        "end": 1967
       }
     ]
   },
@@ -5048,9 +5082,12 @@
     "lemma": "Falconilla",
     "previous": "Falco 2",
     "next": "Falerii",
+    "redirect": "Pompeius 126a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1969
+        "start": 1969,
+        "end": 1969
       }
     ]
   },
@@ -5154,9 +5191,12 @@
     "lemma": "Faliscus",
     "previous": "Falisci",
     "next": "Falke",
+    "redirect": "Grattius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1973
+        "start": 1973,
+        "end": 1973
       }
     ]
   },
@@ -5191,9 +5231,12 @@
     "lemma": "Faltonius 1",
     "previous": "Falsum",
     "next": "Faltonius 2",
+    "redirect": "Maecius 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1976
+        "start": 1976,
+        "end": 1976
       }
     ]
   },
@@ -5277,9 +5320,12 @@
     "lemma": "Fama Iulia",
     "previous": "Fama",
     "next": "Fames",
+    "redirect": "Seria 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1979
+        "start": 1979,
+        "end": 1979
       }
     ]
   },
@@ -5314,9 +5360,12 @@
     "lemma": "Familia gladiatoria, venatoria",
     "previous": "Familia",
     "next": "Familia quadrigaria",
+    "redirect": "Gladiatores",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1985
+        "start": 1985,
+        "end": 1985
       }
     ]
   },
@@ -5651,9 +5700,12 @@
     "lemma": "Fanum Aptuchi",
     "previous": "Fanum",
     "next": "Fanum Carisii",
+    "redirect": "Ἀπτούχου ἱερόν",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1996
+        "start": 1996,
+        "end": 1996
       }
     ]
   },
@@ -5661,9 +5713,12 @@
     "lemma": "Fanum Carisii",
     "previous": "Fanum Aptuchi",
     "next": "Fanum Cocidi",
+    "redirect": "Carisi fanum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1996
+        "start": 1996,
+        "end": 1996
       }
     ]
   },
@@ -5671,9 +5726,12 @@
     "lemma": "Fanum Cocidi",
     "previous": "Fanum Carisii",
     "next": "Fanum Fortunae",
+    "redirect": "Cocidius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1996
+        "start": 1996,
+        "end": 1996
       }
     ]
   },
@@ -5737,9 +5795,12 @@
     "lemma": "Fanum Veneris",
     "previous": "Fanum Minervae",
     "next": "Far",
+    "redirect": "Portus Veneris 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1998
+        "start": 1998,
+        "end": 1998
       }
     ]
   },
@@ -5747,9 +5808,12 @@
     "lemma": "Far",
     "previous": "Fanum Veneris",
     "next": "Fara",
+    "redirect": "Spelt",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1998
+        "start": 1998,
+        "end": 1998
       }
     ]
   },
@@ -5757,9 +5821,12 @@
     "lemma": "Fara",
     "previous": "Far",
     "next": "Faraticanus",
+    "redirect": "Phara, Pharai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1998
+        "start": 1998,
+        "end": 1998
       }
     ]
   },
@@ -5767,9 +5834,12 @@
     "lemma": "Faraticanus",
     "previous": "Fara",
     "next": "Faraxen",
+    "redirect": "Farraticanus pagus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1998
+        "start": 1998,
+        "end": 1998
       }
     ]
   },
@@ -5799,9 +5869,12 @@
     "lemma": "Farina",
     "previous": "Farfarus",
     "next": "Farinus",
+    "redirect": "Bäckerei",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1998
+        "start": 1998,
+        "end": 1998
       }
     ]
   },
@@ -5831,9 +5904,12 @@
     "lemma": "Farnkräuter",
     "previous": "Farne",
     "next": "Farnobius",
+    "redirect": "Frauenhaar",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1998
+        "start": 1998,
+        "end": 1998
       }
     ]
   },
@@ -5997,9 +6073,12 @@
     "lemma": "Faseolus",
     "previous": "Fascinum",
     "next": "Faß",
+    "redirect": "Bohne",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2014
+        "start": 2014,
+        "end": 2014
       }
     ]
   },
@@ -6007,9 +6086,12 @@
     "lemma": "Faß",
     "previous": "Faseolus",
     "next": "Fassulae",
+    "redirect": "Dolium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2014
+        "start": 2014,
+        "end": 2014
       }
     ]
   },
@@ -6083,9 +6165,12 @@
     "lemma": "Fata scribunda",
     "previous": "Fastidius",
     "next": "Fatua, Fatuclus, Fatuus",
+    "redirect": "Fatum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2047
+        "start": 2047,
+        "end": 2047
       }
     ]
   },
@@ -6093,9 +6178,12 @@
     "lemma": "Fatua, Fatuclus, Fatuus",
     "previous": "Fata scribunda",
     "next": "Fatum",
+    "redirect": "Faunus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2047
+        "start": 2047,
+        "end": 2047
       }
     ]
   },
@@ -6225,9 +6313,12 @@
     "lemma": "Fauna",
     "previous": "Favisae Capitolinae",
     "next": "Faunus",
+    "redirect": "Faunus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2054
+        "start": 2054,
+        "end": 2054
       }
     ]
   },
@@ -7096,9 +7187,12 @@
     "lemma": "Feban",
     "previous": "Faustus 23",
     "next": "Febiana",
+    "redirect": "Feletheus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2095
+        "start": 2095,
+        "end": 2095
       }
     ]
   },
@@ -7163,9 +7257,12 @@
     "lemma": "Februus",
     "previous": "Februarius",
     "next": "Fecennius",
+    "redirect": "Faunus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2097
+        "start": 2097,
+        "end": 2097
       }
     ]
   },
@@ -7395,9 +7492,12 @@
     "lemma": "Felicitas 1",
     "previous": "Felicissimus 2",
     "next": "Felicitas 2",
+    "redirect": "Sabinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2163
+        "start": 2163,
+        "end": 2163
       }
     ]
   },
@@ -7456,9 +7556,12 @@
     "lemma": "Felix 1",
     "previous": "Feliginates",
     "next": "Felix 2",
+    "redirect": "Antonius 53",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2166
+        "start": 2166,
+        "end": 2166
       }
     ]
   },
@@ -7785,9 +7888,12 @@
     "lemma": "Felix Arabia",
     "previous": "Felix 25",
     "next": "Felsina",
+    "redirect": "Eudaimon Arabia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2171
+        "start": 2171,
+        "end": 2171
       }
     ]
   },
@@ -7818,9 +7924,12 @@
     "lemma": "Feminae",
     "previous": "Felvennis",
     "next": "Fenchel",
+    "redirect": "Fruges",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2172
+        "start": 2172,
+        "end": 2172
       }
     ]
   },
@@ -7931,9 +8040,12 @@
     "lemma": "Fenum graecum",
     "previous": "Fensernia",
     "next": "Fenus",
+    "redirect": "Bockshornklee",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2187
+        "start": 2187,
+        "end": 2187
       }
     ]
   },
@@ -8076,9 +8188,12 @@
     "lemma": "Fereter",
     "previous": "Feresne",
     "next": "Feretrius",
+    "redirect": "Mons Feretrus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2209
+        "start": 2209,
+        "end": 2209
       }
     ]
   },
@@ -8167,9 +8282,12 @@
     "lemma": "Ferinus sinus",
     "previous": "Feridius",
     "next": "Feritrum",
+    "redirect": "Theriodes kolpos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2216
+        "start": 2216,
+        "end": 2216
       }
     ]
   },
@@ -8233,9 +8351,12 @@
     "lemma": "Feroniae lucus",
     "previous": "Feroniae fanum",
     "next": "Ferox",
+    "redirect": "Lucus Feroniae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2219
+        "start": 2219,
+        "end": 2219
       }
     ]
   },
@@ -8322,9 +8443,12 @@
     "lemma": "Fertinates",
     "previous": "Ferreolus",
     "next": "Fertini",
+    "redirect": "Fulfinium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2222
+        "start": 2222,
+        "end": 2222
       }
     ]
   },
@@ -8332,9 +8456,12 @@
     "lemma": "Fertini",
     "previous": "Fertinates",
     "next": "Fertor",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2222
+        "start": 2222,
+        "end": 2222
       }
     ]
   },
@@ -8453,9 +8580,12 @@
     "lemma": "Festinus",
     "previous": "Festi dies",
     "next": "Festivus",
+    "redirect": "Festus 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2224
+        "start": 2224,
+        "end": 2224
       }
     ]
   },
@@ -8463,9 +8593,12 @@
     "lemma": "Festivus",
     "previous": "Festinus",
     "next": "Festuca 1",
+    "redirect": "Aurelius 130",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2224
+        "start": 2224,
+        "end": 2224
       }
     ]
   },
@@ -8473,9 +8606,12 @@
     "lemma": "Festuca 1",
     "previous": "Festivus",
     "next": "Festuca 2",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2224
+        "start": 2224,
+        "end": 2224
       }
     ]
   },
@@ -8494,9 +8630,12 @@
     "lemma": "Festuca 3",
     "previous": "Festuca 2",
     "next": "Festungskrieg",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2224
+        "start": 2224,
+        "end": 2224
       }
     ]
   },
@@ -8524,9 +8663,12 @@
     "lemma": "Festus 1",
     "previous": "Festungskrieg",
     "next": "Festus 2",
+    "redirect": "Calpetanus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2255
+        "start": 2255,
+        "end": 2255
       }
     ]
   },
@@ -8534,9 +8676,13 @@
     "lemma": "Festus 2",
     "previous": "Festus 1",
     "next": "Festus 3",
+    "redirect": "Calpetanus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2255
+        "start": 2255,
+        "end": 2255,
+        "author": "Groag."
       }
     ]
   },
@@ -8756,9 +8902,13 @@
     "lemma": "Fetialis 2",
     "previous": "Fetialis 1",
     "next": "Feva",
+    "redirect": "Annius 43",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2265
+        "start": 2265,
+        "end": 2265,
+        "author": "Goldfinger."
       }
     ]
   },
@@ -8766,9 +8916,12 @@
     "lemma": "Feva",
     "previous": "Fetialis 2",
     "next": "Feugarum",
+    "redirect": "Feletheus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2265
+        "start": 2265,
+        "end": 2265
       }
     ]
   },
@@ -8831,9 +8984,12 @@
     "lemma": "Ficatum",
     "previous": "Ficariensis",
     "next": "Ficedula",
+    "redirect": "Feige",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2265
+        "start": 2265,
+        "end": 2265
       }
     ]
   },
@@ -8841,9 +8997,12 @@
     "lemma": "Ficedula",
     "previous": "Ficatum",
     "next": "Fichte",
+    "redirect": "Feige",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2265
+        "start": 2265,
+        "end": 2265
       }
     ]
   },
@@ -8885,9 +9044,12 @@
     "lemma": "Fictio 1",
     "previous": "Ficolensis via",
     "next": "Fictio 2",
+    "redirect": "Fectio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2269
+        "start": 2269,
+        "end": 2269
       }
     ]
   },
@@ -8963,9 +9125,12 @@
     "lemma": "Ficus",
     "previous": "ad Ficum",
     "next": "Fideicommissum",
+    "redirect": "Feige",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2272
+        "start": 2272,
+        "end": 2272
       }
     ]
   },
@@ -9008,9 +9173,12 @@
     "lemma": "Fidelis 1",
     "previous": "Fidelia",
     "next": "Fidelis 2",
+    "redirect": "Aurelius 131",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2278
+        "start": 2278,
+        "end": 2278
       }
     ]
   },
@@ -9074,9 +9242,12 @@
     "lemma": "Fidentia 2",
     "previous": "Fidentia 1",
     "next": "Fidentinus",
+    "redirect": "Ulia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2279
+        "start": 2279,
+        "end": 2279
       }
     ]
   },
@@ -9095,9 +9266,12 @@
     "lemma": "Fidentiores",
     "previous": "Fidentinus",
     "next": "Fidepromissio",
+    "redirect": "Arretium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2279
+        "start": 2279,
+        "end": 2279
       }
     ]
   },
@@ -9140,9 +9314,12 @@
     "lemma": "Fidicula 1",
     "previous": "Fidicines",
     "next": "Fidicula 2",
+    "redirect": "Pomponia Fidicula 80",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2286
+        "start": 2286,
+        "end": 2286
       }
     ]
   },
@@ -9218,9 +9395,12 @@
     "lemma": "Fidus 1",
     "previous": "Fidulius",
     "next": "Fidus 2",
+    "redirect": "Annaeus 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2316
+        "start": 2316,
+        "end": 2316
       }
     ]
   },
@@ -9228,9 +9408,12 @@
     "lemma": "Fidus 2",
     "previous": "Fidus 1",
     "next": "Fidus 3",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2316
+        "start": 2316,
+        "end": 2316
       }
     ]
   },
@@ -9392,9 +9575,12 @@
     "lemma": "Filix",
     "previous": "Filius",
     "next": "Filomusiacum",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2317
+        "start": 2317,
+        "end": 2317
       }
     ]
   },
@@ -9759,9 +9945,12 @@
     "lemma": "Fingerkraut",
     "previous": "Fines, ad fines 27",
     "next": "Finis",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2325
+        "start": 2325,
+        "end": 2325
       }
     ]
   },
@@ -9814,9 +10003,12 @@
     "lemma": "Finni",
     "previous": "Finnaithae",
     "next": "Finsternisse",
+    "redirect": "Fenni",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2329
+        "start": 2329,
+        "end": 2329
       }
     ]
   },
@@ -9881,9 +10073,12 @@
     "lemma": "Firma",
     "previous": "Fircellius",
     "next": "Firmanus",
+    "redirect": "Astigi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2365
+        "start": 2365,
+        "end": 2365
       }
     ]
   },
@@ -10036,9 +10231,12 @@
     "lemma": "Firminus 6",
     "previous": "Firminus 5",
     "next": "Firmius 1",
+    "redirect": "Caunius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2380
+        "start": 2380,
+        "end": 2380
       }
     ]
   },
@@ -10080,9 +10278,12 @@
     "lemma": "Firmum 2",
     "previous": "Firmum 1",
     "next": "Firmus 1",
+    "redirect": "Sexi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2381
+        "start": 2381,
+        "end": 2381
       }
     ]
   },
@@ -10315,9 +10516,12 @@
     "lemma": "Fistula",
     "previous": "Fisternae",
     "next": "Fitani",
+    "redirect": "Casia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2407
+        "start": 2407,
+        "end": 2407
       }
     ]
   },
@@ -10359,9 +10563,12 @@
     "lemma": "Flabellum",
     "previous": "Fixtinnum",
     "next": "Flacciana",
+    "redirect": "Fächer",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2431
+        "start": 2431,
+        "end": 2431
       }
     ]
   },
@@ -10718,9 +10925,12 @@
     "lemma": "Flamininus",
     "previous": "Flaminia via",
     "next": "Flaminius",
+    "redirect": "Quinctius 40",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2496
+        "start": 2496,
+        "end": 2496
       }
     ]
   },
@@ -10829,9 +11039,12 @@
     "lemma": "Flaminius 9",
     "previous": "Flaminius 8",
     "next": "Flaminius 10",
+    "redirect": "Cuspidius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2503
+        "start": 2503,
+        "end": 2503
       }
     ]
   },
@@ -10861,9 +11074,12 @@
     "lemma": "Flamma",
     "previous": "Flaminius 11",
     "next": "Flamonienses",
+    "redirect": "Antonius 57",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2503
+        "start": 2503,
+        "end": 2503
       }
     ]
   },
@@ -10883,9 +11099,12 @@
     "lemma": "Flanaticus sinus",
     "previous": "Flamonienses",
     "next": "Flania vicus",
+    "redirect": "Flanona",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2504
+        "start": 2504,
+        "end": 2504
       }
     ]
   },
@@ -11406,9 +11625,12 @@
     "lemma": "Flaviobrigantium",
     "previous": "Flaviobriga",
     "next": "Flaviolambris",
+    "redirect": "Brigantio, Brigantium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2515
+        "start": 2515,
+        "end": 2515
       }
     ]
   },
@@ -11439,9 +11661,12 @@
     "lemma": "Flaviopolis 1",
     "previous": "Flavionavia",
     "next": "Flaviopolis 2",
+    "redirect": "Krateia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2516
+        "start": 2516,
+        "end": 2516
       }
     ]
   },
@@ -11449,9 +11674,12 @@
     "lemma": "Flaviopolis 2",
     "previous": "Flaviopolis 1",
     "next": "Flaviopolis 3",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2516
+        "start": 2516,
+        "end": 2516
       }
     ]
   },
@@ -11470,9 +11698,12 @@
     "lemma": "Flaviopolis 4",
     "previous": "Flaviopolis 3",
     "next": "Flavium amphitheatrum",
+    "redirect": "Daldis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2516
+        "start": 2516,
+        "end": 2516
       }
     ]
   },
@@ -15152,9 +15383,12 @@
     "lemma": "Fligadia",
     "previous": "Fliege",
     "next": "Floh",
+    "redirect": "Phligadia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2747
+        "start": 2747,
+        "end": 2747
       }
     ]
   },
@@ -15162,9 +15396,12 @@
     "lemma": "Floh",
     "previous": "Fligadia",
     "next": "Flora 1",
+    "redirect": "Pulex 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2747
+        "start": 2747,
+        "end": 2747
       }
     ]
   },
@@ -15679,9 +15916,12 @@
     "lemma": "Florianus 5",
     "previous": "Florianus 4",
     "next": "Florianus 6",
+    "redirect": "Flavianus 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2759
+        "start": 2759,
+        "end": 2759
       }
     ]
   },
@@ -15689,9 +15929,12 @@
     "lemma": "Florianus 6",
     "previous": "Florianus 5",
     "next": "Florianus 7",
+    "redirect": "Florentius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2759
+        "start": 2759,
+        "end": 2759
       }
     ]
   },
@@ -15710,9 +15953,12 @@
     "lemma": "Florianus 8",
     "previous": "Florianus 7",
     "next": "Florid(ius)",
+    "redirect": "Aelius 55",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2759
+        "start": 2759,
+        "end": 2759
       }
     ]
   },
@@ -16046,9 +16292,12 @@
     "lemma": "Flutausis",
     "previous": "Flußgötter",
     "next": "Fluvius Frigidus",
+    "redirect": "Flatausis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2815
+        "start": 2815,
+        "end": 2815
       }
     ]
   },
@@ -16056,9 +16305,12 @@
     "lemma": "Fluvius Frigidus",
     "previous": "Flutausis",
     "next": "Focale",
+    "redirect": "Frigidus fluvius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2815
+        "start": 2815,
+        "end": 2815
       }
     ]
   },
@@ -16100,9 +16352,12 @@
     "lemma": "Focaria 2",
     "previous": "Focaria 1",
     "next": "Fociana",
+    "redirect": "Concubinatus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2816
+        "start": 2816,
+        "end": 2816
       }
     ]
   },
@@ -16143,9 +16398,12 @@
     "lemma": "Focus 2",
     "previous": "Focus 1",
     "next": "Foda",
+    "redirect": "Herd",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2816
+        "start": 2816,
+        "end": 2816
       }
     ]
   },
@@ -16165,9 +16423,12 @@
     "lemma": "Foederati 1",
     "previous": "Foda",
     "next": "Foederati 2",
+    "redirect": "Foedus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2817
+        "start": 2817,
+        "end": 2817
       }
     ]
   },
@@ -16210,9 +16471,12 @@
     "lemma": "Föhre",
     "previous": "Foegadius",
     "next": "Foetus",
+    "redirect": "Pinus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2827
+        "start": 2827,
+        "end": 2827
       }
     ]
   },
@@ -16254,9 +16518,12 @@
     "lemma": "Folium",
     "previous": "Folianum",
     "next": "Folius",
+    "redirect": "Nardus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2828
+        "start": 2828,
+        "end": 2828
       }
     ]
   },
@@ -16333,9 +16600,13 @@
     "lemma": "Follis 3",
     "previous": "Follis 2",
     "next": "Follis 4",
+    "redirect": "Korykos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2829
+        "start": 2829,
+        "end": 2829,
+        "author": "Mau."
       }
     ]
   },
@@ -16389,9 +16660,12 @@
     "lemma": "Foloë lacus",
     "previous": "Folmius",
     "next": "Fonio",
+    "redirect": "Koloë 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2838
+        "start": 2838,
+        "end": 2838
       }
     ]
   },
@@ -17132,9 +17406,12 @@
     "lemma": "Forina",
     "previous": "Foricularium",
     "next": "Formensis",
+    "redirect": "Furrina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2856
+        "start": 2856,
+        "end": 2856
       }
     ]
   },
