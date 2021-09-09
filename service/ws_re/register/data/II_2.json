@@ -1,10 +1,17 @@
 [
   {
     "lemma": "Mitarbeiter-Verzeichnis (Band II)",
-    "previous": "Titelblatt II,2",
+    "previous": "Artemis 2",
     "next": "Artemisia 1",
     "sort_key": "!02 01 Autoren1896",
-    "proof_read": 3
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0,
+        "author": "Georg Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Artemisia 1",
@@ -48017,7 +48024,7 @@
   {
     "lemma": "Athenaios 23",
     "previous": "Astakides 2",
-    "next": "Augustales 1",
+    "next": "Barbarus 1",
     "proof_read": 3,
     "wp_link": "w:de:Athenaios (Militärschriftsteller)",
     "wd_link": "d:Q755297",

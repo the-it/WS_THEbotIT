@@ -12981,10 +12981,12 @@
     "lemma": "Euanthia",
     "previous": "Euanthes 8",
     "next": "Euanthius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 847,
-        "author": "Bürchner"
+        "end": 847,
+        "author": "Bürchner."
       }
     ]
   },
@@ -12992,10 +12994,12 @@
     "lemma": "Euanthius 1",
     "previous": "Euanthia",
     "next": "Euanthius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 847,
-        "author": "Seeck"
+        "end": 847,
+        "author": "Seeck."
       }
     ]
   },
@@ -13013,7 +13017,7 @@
   {
     "lemma": "Euaratos",
     "previous": "Euanthius 2",
-    "next": "Euarene",
+    "next": "Euarane",
     "chapters": [
       {
         "start": 847,
@@ -13023,19 +13027,21 @@
     ]
   },
   {
-    "lemma": "Euarene",
+    "lemma": "Euarane",
     "previous": "Euaratos",
     "next": "Euarchidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 847,
-        "author": "Ruge"
+        "end": 847,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Euarchidas",
-    "previous": "Euarene",
+    "previous": "Euarane",
     "next": "Euarchides 1",
     "chapters": [
       {

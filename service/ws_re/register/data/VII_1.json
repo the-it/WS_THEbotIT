@@ -260,9 +260,12 @@
     "lemma": "Fortunatus 1",
     "previous": "Fortunatianus 7",
     "next": "Fortunatus 2",
+    "redirect": "Centullius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 55
+        "start": 55,
+        "end": 55
       }
     ]
   },
@@ -414,9 +417,13 @@
     "lemma": "Forum 1",
     "previous": "Foruli 3",
     "next": "Forum 2",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 56
+        "start": 56,
+        "end": 56,
+        "author": "Wissowa."
       }
     ]
   },
@@ -482,9 +489,12 @@
     "lemma": "Forum Augustum",
     "previous": "Forum Appi",
     "next": "Forum Aureli",
+    "redirect": "Libisosa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 65
+        "start": 65,
+        "end": 65
       }
     ]
   },
@@ -525,9 +535,12 @@
     "lemma": "Forum Cambysis",
     "previous": "Forum Brentan(i, -orum?)",
     "next": "Forum Cassi",
+    "redirect": "Tamieia Kambysu",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 65
+        "start": 65,
+        "end": 65
       }
     ]
   },
@@ -725,9 +738,12 @@
     "lemma": "Forum Gigurrorum",
     "previous": "Forum Germa(nici, -norum?)",
     "next": "Forum Hadriani",
+    "redirect": "Gigurri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 68
+        "start": 68,
+        "end": 68
       }
     ]
   },
@@ -803,10 +819,12 @@
     "lemma": "Forum Iulium",
     "previous": "Forum Iuli 4",
     "next": "Forum Iutuntorum",
-    "redirect": true,
+    "redirect": "Iliturgis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 70
+        "start": 70,
+        "end": 70
       }
     ]
   },
@@ -870,9 +888,12 @@
     "lemma": "Forum Limicorum",
     "previous": "Forum Ligneum",
     "next": "Forum Livi",
+    "redirect": "Limia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 71
+        "start": 71,
+        "end": 71
       }
     ]
   },
@@ -1103,9 +1124,12 @@
     "lemma": "Foslius",
     "previous": "Fosi",
     "next": "Fossa, Fossae 1",
+    "redirect": "Folius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 74
+        "start": 74,
+        "end": 74
       }
     ]
   },
@@ -1291,9 +1315,12 @@
     "lemma": "Fossiones",
     "previous": "Fossatum",
     "next": "Fovea rotunda",
+    "redirect": "Fossa, Fossae 15",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 76
+        "start": 76,
+        "end": 76
       }
     ]
   },
@@ -1347,9 +1374,12 @@
     "lemma": "Fragmentum Muratorianum",
     "previous": "Fragmentum de iure fisci",
     "next": "Framea",
+    "redirect": "Canon Muratorianus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 81
+        "start": 81,
+        "end": 81
       }
     ]
   },
@@ -1407,9 +1437,12 @@
     "lemma": "Fraternus",
     "previous": "Fraomarius",
     "next": "ad Fratres",
+    "redirect": "Aemilius 47",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 87
+        "start": 87,
+        "end": 87
       }
     ]
   },
@@ -1417,9 +1450,12 @@
     "lemma": "ad Fratres",
     "previous": "Fraternus",
     "next": "Fratres Arvales",
+    "redirect": "Septem fratres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 87
+        "start": 87,
+        "end": 87
       }
     ]
   },
@@ -1427,9 +1463,12 @@
     "lemma": "Fratres Arvales",
     "previous": "ad Fratres",
     "next": "Fratuentini",
+    "redirect": "Arvales fratres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 87
+        "start": 87,
+        "end": 87
       }
     ]
   },
@@ -1549,9 +1588,12 @@
     "lemma": "Fraxinus",
     "previous": "Fraxinum 2",
     "next": "Fredbalus",
+    "redirect": "Esche",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 92
+        "start": 92,
+        "end": 92
       }
     ]
   },
@@ -1605,9 +1647,12 @@
     "lemma": "Fregellanus",
     "previous": "Fregellae",
     "next": "Fregenae",
+    "redirect": "Pontilius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 94
+        "start": 94,
+        "end": 94
       }
     ]
   },
@@ -1662,9 +1707,12 @@
     "lemma": "Freigelassene. II",
     "previous": "Freigelassene. I",
     "next": "Frentani",
+    "redirect": "Libertini",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 100
+        "start": 100,
+        "end": 100
       }
     ]
   },
@@ -1969,9 +2017,12 @@
     "lemma": "Frisaevones",
     "previous": "Friniates",
     "next": "Frisavae",
+    "redirect": "Frisiavones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 105
+        "start": 105,
+        "end": 105
       }
     ]
   },
@@ -1990,9 +2041,12 @@
     "lemma": "Frisiavi",
     "previous": "Frisavae",
     "next": "Frisiavones",
+    "redirect": "Frisii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 105
+        "start": 105,
+        "end": 105
       }
     ]
   },
@@ -2023,9 +2077,12 @@
     "lemma": "Frisiones, Frisones, Frixones",
     "previous": "Frisii",
     "next": "Fritigernus",
+    "redirect": "Frisii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 107
+        "start": 107,
+        "end": 107
       }
     ]
   },
@@ -2112,9 +2169,12 @@
     "lemma": "Frontina",
     "previous": "Frontiana",
     "next": "Frontinianus",
+    "redirect": "Fonteius 33",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 110
+        "start": 110,
+        "end": 110
       }
     ]
   },
@@ -2122,9 +2182,12 @@
     "lemma": "Frontinianus",
     "previous": "Frontina",
     "next": "Frontinus 1",
+    "redirect": "Aemilius 48",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 110
+        "start": 110,
+        "end": 110
       }
     ]
   },
@@ -2132,9 +2195,12 @@
     "lemma": "Frontinus 1",
     "previous": "Frontinianus",
     "next": "Frontinus 2",
+    "redirect": "Aemilius 49",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 110
+        "start": 110,
+        "end": 110
       }
     ]
   },
@@ -2142,9 +2208,12 @@
     "lemma": "Frontinus 2",
     "previous": "Frontinus 1",
     "next": "Frontinus 3",
+    "redirect": "Calvisius 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 110
+        "start": 110,
+        "end": 110
       }
     ]
   },
@@ -2197,9 +2266,12 @@
     "lemma": "Fronto 1",
     "previous": "Frontinus 6",
     "next": "Fronto 2",
+    "redirect": "Aemilius 50",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 111
+        "start": 111,
+        "end": 111
       }
     ]
   },
@@ -2229,9 +2301,12 @@
     "lemma": "Fronto 4",
     "previous": "Fronto 3",
     "next": "Fronto 5",
+    "redirect": "Iulius 251",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 111
+        "start": 111,
+        "end": 111
       }
     ]
   },
@@ -2473,9 +2548,12 @@
     "lemma": "Frulis",
     "previous": "Frugundiones",
     "next": "Frumarius",
+    "redirect": "Frudis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 122
+        "start": 122,
+        "end": 122
       }
     ]
   },
@@ -2601,9 +2679,12 @@
     "lemma": "Fucentes",
     "previous": "Fu...",
     "next": "Fuchs",
+    "redirect": "Alba Fucens",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 189
+        "start": 189,
+        "end": 189
       }
     ]
   },
@@ -2876,9 +2957,12 @@
     "lemma": "Fufidius 12",
     "previous": "Fufidius 11",
     "next": "Fufidius 13",
+    "redirect": "Neratius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 202
+        "start": 202,
+        "end": 202
       }
     ]
   },
@@ -3167,9 +3251,12 @@
     "lemma": "Fugifulae",
     "previous": "Fuga",
     "next": "Fulcaris",
+    "redirect": "Fagifulae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 211
+        "start": 211,
+        "end": 211
       }
     ]
   },
@@ -3299,9 +3386,12 @@
     "lemma": "Fulcinius 11",
     "previous": "Fulcinius 10",
     "next": "Fulfinium",
+    "redirect": "Pompeius 140",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 213
+        "start": 213,
+        "end": 213
       }
     ]
   },
@@ -3356,9 +3446,12 @@
     "lemma": "Fulgentius 4",
     "previous": "Fulgentius 3",
     "next": "Fulginiae",
+    "redirect": "Ferrandus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 227
+        "start": 227,
+        "end": 227
       }
     ]
   },
@@ -3400,9 +3493,12 @@
     "lemma": "Fulgur",
     "previous": "Fulgora",
     "next": "Fulgurita",
+    "redirect": "Iuppiter",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 228
+        "start": 228,
+        "end": 228
       }
     ]
   },
@@ -3432,9 +3528,12 @@
     "lemma": "Fullones",
     "previous": "Fullofaudes",
     "next": "Fullonius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 228
+        "start": 228,
+        "end": 228
       }
     ]
   },
@@ -3475,9 +3574,12 @@
     "lemma": "Fulvianus 2",
     "previous": "Fulvianus 1",
     "next": "Fulvia via",
+    "redirect": "Annaeus 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 228
+        "start": 228,
+        "end": 228
       }
     ]
   },
@@ -6607,9 +6709,12 @@
     "lemma": "ad Fusciana",
     "previous": "Furtum",
     "next": "Fuscianus",
+    "redirect": "Aufustiana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 405
+        "start": 405,
+        "end": 405
       }
     ]
   },
@@ -6759,9 +6864,12 @@
     "lemma": "Fusus",
     "previous": "Fussalense castellum",
     "next": "Fut",
+    "redirect": "Ἄτρακτος 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 406
+        "start": 406,
+        "end": 406
       }
     ]
   },
@@ -7103,9 +7211,12 @@
     "lemma": "Gabalaeca",
     "previous": "Gabala 6",
     "next": "Gabale",
+    "redirect": "Gebala 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 416
+        "start": 416,
+        "end": 416
       }
     ]
   },
@@ -7124,9 +7235,12 @@
     "lemma": "Gabalene",
     "previous": "Gabale",
     "next": "Gabali",
+    "redirect": "Gebalene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 416
+        "start": 416,
+        "end": 416
       }
     ]
   },
@@ -7145,9 +7259,12 @@
     "lemma": "Gabalitai",
     "previous": "Gabali",
     "next": "Gabaon",
+    "redirect": "Gebalene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 416
+        "start": 416,
+        "end": 416
       }
     ]
   },
@@ -7356,9 +7473,12 @@
     "lemma": "Gabinianus",
     "previous": "Gabiniana via",
     "next": "Gabinius",
+    "redirect": "Iulius 254",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 422
+        "start": 422,
+        "end": 422
       }
     ]
   },
@@ -7613,9 +7733,12 @@
     "lemma": "Gabinus cinctus",
     "previous": "Gabina via",
     "next": "Gabinus lacus",
+    "redirect": "Cinctus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 432
+        "start": 432,
+        "end": 432
       }
     ]
   },
@@ -7812,9 +7935,12 @@
     "lemma": "Gadamala",
     "previous": "Gadalaippus",
     "next": "Gadamarga",
+    "redirect": "Gadamarta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 435
+        "start": 435,
+        "end": 435
       }
     ]
   },
@@ -7822,9 +7948,12 @@
     "lemma": "Gadamarga",
     "previous": "Gadamala",
     "next": "Gadamarla",
+    "redirect": "Gadamarta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 435
+        "start": 435,
+        "end": 435
       }
     ]
   },
@@ -7832,9 +7961,12 @@
     "lemma": "Gadamarla",
     "previous": "Gadamarga",
     "next": "Gadamarta",
+    "redirect": "Gadamarta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 435
+        "start": 435,
+        "end": 435
       }
     ]
   },
@@ -7865,9 +7997,12 @@
     "lemma": "Gadao",
     "previous": "Gadanopydres",
     "next": "Gadara 1",
+    "redirect": "Gaesao",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 436
+        "start": 436,
+        "end": 436
       }
     ]
   },
@@ -8021,9 +8156,12 @@
     "lemma": "Gadeni",
     "previous": "Gadeirtha",
     "next": "Gadenos",
+    "redirect": "Gadini",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 439
+        "start": 439,
+        "end": 439
       }
     ]
   },
@@ -8228,9 +8366,12 @@
     "lemma": "Gaesoriacum",
     "previous": "Gaesati",
     "next": "Gaesum",
+    "redirect": "Gesoriacum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 463
+        "start": 463,
+        "end": 463
       }
     ]
   },
@@ -8273,9 +8414,12 @@
     "lemma": "Gaetulicus 2",
     "previous": "Gaetulicus 1",
     "next": "Gagai",
+    "redirect": "Cornelius 220",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 465
+        "start": 465,
+        "end": 465
       }
     ]
   },
@@ -8295,9 +8439,12 @@
     "lemma": "Gagalike",
     "previous": "Gagai",
     "next": "Gaganae",
+    "redirect": "Herakleia 21",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 466
+        "start": 466,
+        "end": 466
       }
     ]
   },
@@ -8964,9 +9111,12 @@
     "lemma": "Galacteni",
     "previous": "Galabrii",
     "next": "Galacum 1",
+    "redirect": "Kalakta, Kalakte, Kale Akte",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 513
+        "start": 513,
+        "end": 513
       }
     ]
   },
@@ -9132,9 +9282,12 @@
     "lemma": "Galanthis",
     "previous": "Galaneia",
     "next": "Galapha",
+    "redirect": "Galinthias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 515
+        "start": 515,
+        "end": 515
       }
     ]
   },
@@ -9454,9 +9607,12 @@
     "lemma": "Galbana",
     "previous": "Galba 2",
     "next": "Galbilla",
+    "redirect": "Ekdaumaua",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 572
+        "start": 572,
+        "end": 572
       }
     ]
   },
@@ -9464,9 +9620,12 @@
     "lemma": "Galbilla",
     "previous": "Galbana",
     "next": "Galea 1",
+    "redirect": "Sulpicius 118",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 572
+        "start": 572,
+        "end": 572
       }
     ]
   },
@@ -9940,9 +10099,12 @@
     "lemma": "Galerius 13",
     "previous": "Galerius 12",
     "next": "Galerus 1",
+    "redirect": "Lusius 15",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 601
+        "start": 601,
+        "end": 601
       }
     ]
   },
@@ -10049,9 +10211,12 @@
     "lemma": "Galeti",
     "previous": "Galestes 3",
     "next": "Galgala",
+    "redirect": "Caleti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 602
+        "start": 602,
+        "end": 602
       }
     ]
   },
@@ -10493,9 +10658,12 @@
     "lemma": "Gallia Cisalpina",
     "previous": "Gallia",
     "next": "Gallianates 1",
+    "redirect": "Galli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 666
+        "start": 666,
+        "end": 666
       }
     ]
   },
@@ -10503,9 +10671,12 @@
     "lemma": "Gallianates 1",
     "previous": "Gallia Cisalpina",
     "next": "Gallianates 2",
+    "redirect": "Braecorii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 666
+        "start": 666,
+        "end": 666
       }
     ]
   },
@@ -10623,9 +10794,12 @@
     "lemma": "Gallicenae",
     "previous": "Gallicanus 7",
     "next": "Gallicum",
+    "redirect": "Gallizenae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 668
+        "start": 668,
+        "end": 668
       }
     ]
   },
@@ -10699,9 +10873,12 @@
     "lemma": "Gallienus 2",
     "previous": "Gallienus 1",
     "next": "Gallienus 3",
+    "redirect": "Iunius 76",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 669
+        "start": 669,
+        "end": 669
       }
     ]
   },
@@ -10900,9 +11077,12 @@
     "lemma": "Gallitta 4",
     "previous": "Gallitta 3",
     "next": "Gallius 1",
+    "redirect": "Claudius 418",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 671
+        "start": 671,
+        "end": 671
       }
     ]
   },
@@ -11055,9 +11235,12 @@
     "lemma": "Gallonius 4",
     "previous": "Gallonius 3",
     "next": "Gallonius 5",
+    "redirect": "Marcius 107",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 673
+        "start": 673,
+        "end": 673
       }
     ]
   },
@@ -11276,9 +11459,12 @@
     "lemma": "Gallus 9",
     "previous": "Gallus 8",
     "next": "Gallus 10",
+    "redirect": "Iulius 79",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 683
+        "start": 683,
+        "end": 683
       }
     ]
   },
@@ -11549,9 +11735,12 @@
     "lemma": "Gamarga",
     "previous": "Gamalos",
     "next": "Gamavodurum",
+    "redirect": "Gadamarta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 690
+        "start": 690,
+        "end": 690
       }
     ]
   },
@@ -11653,9 +11842,12 @@
     "lemma": "Gameon",
     "previous": "Gamenon",
     "next": "Gamilios",
+    "redirect": "Gamenon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 692
+        "start": 692,
+        "end": 692
       }
     ]
   },
@@ -11674,9 +11866,12 @@
     "lemma": "Gamla",
     "previous": "Gamilios",
     "next": "Gamma",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 692
+        "start": 692,
+        "end": 692
       }
     ]
   },
@@ -12005,9 +12200,12 @@
     "lemma": "Ganis",
     "previous": "Ganicos",
     "next": "Ganna",
+    "redirect": "Ganea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 707
+        "start": 707,
+        "end": 707
       }
     ]
   },
@@ -12026,9 +12224,12 @@
     "lemma": "Gannaria",
     "previous": "Ganna",
     "next": "Gannascus",
+    "redirect": "Galinaria akra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 707
+        "start": 707,
+        "end": 707
       }
     ]
   },
@@ -12216,9 +12417,12 @@
     "lemma": "Gaos",
     "previous": "Ganza(ia)?",
     "next": "Gapachi",
+    "redirect": "Glos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 749
+        "start": 749,
+        "end": 749
       }
     ]
   },
@@ -12390,9 +12594,12 @@
     "lemma": "Garasa",
     "previous": "Garas",
     "next": "Garates",
+    "redirect": "Gerasa 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 754
+        "start": 754,
+        "end": 754
       }
     ]
   },
@@ -12501,9 +12708,12 @@
     "lemma": "Gareathyra",
     "previous": "Gareatai",
     "next": "Garenaioi",
+    "redirect": "Garsauritis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 755
+        "start": 755,
+        "end": 755
       }
     ]
   },
@@ -13056,9 +13266,12 @@
     "lemma": "Garonna",
     "previous": "Garoëbarsius",
     "next": "Garra",
+    "redirect": "Garumna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 768
+        "start": 768,
+        "end": 768
       }
     ]
   },
@@ -13087,7 +13300,7 @@
   {
     "lemma": "Garricus",
     "previous": "Garra 2",
-    "next": "Garroias",
+    "next": "Γαρροίας",
     "chapters": [
       {
         "start": 768,
@@ -13096,22 +13309,29 @@
     ]
   },
   {
-    "lemma": "Garroias",
+    "lemma": "Γαρροίας",
     "previous": "Garricus",
     "next": "Garronenses",
+    "sort_key": "Garroias",
+    "redirect": "Guraios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 768
+        "start": 768,
+        "end": 768
       }
     ]
   },
   {
     "lemma": "Garronenses",
-    "previous": "Garroias",
+    "previous": "Γαρροίας",
     "next": "Garruna",
+    "redirect": "Carronenses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 768
+        "start": 768,
+        "end": 768
       }
     ]
   },
@@ -13119,9 +13339,12 @@
     "lemma": "Garruna",
     "previous": "Garronenses",
     "next": "Garsaboron",
+    "redirect": "Garumna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 768
+        "start": 768,
+        "end": 768
       }
     ]
   },
@@ -13151,9 +13374,12 @@
     "lemma": "Garsi",
     "previous": "Garsauritis",
     "next": "Garsyeris",
+    "redirect": "Karissa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 768
+        "start": 768,
+        "end": 768
       }
     ]
   },
@@ -13229,9 +13455,12 @@
     "lemma": "Garunda",
     "previous": "Garumni",
     "next": "Garunna",
+    "redirect": "Garumna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 851
+        "start": 851,
+        "end": 851
       }
     ]
   },
@@ -13239,9 +13468,12 @@
     "lemma": "Garunna",
     "previous": "Garunda",
     "next": "Garutianus",
+    "redirect": "Garumna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 851
+        "start": 851,
+        "end": 851
       }
     ]
   },
@@ -13249,9 +13481,12 @@
     "lemma": "Garutianus",
     "previous": "Garunna",
     "next": "Gasana",
+    "redirect": "Trebonius 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 851
+        "start": 851,
+        "end": 851
       }
     ]
   },
@@ -13259,9 +13494,12 @@
     "lemma": "Gasana",
     "previous": "Garutianus",
     "next": "Gasandai",
+    "redirect": "Gaana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 851
+        "start": 851,
+        "end": 851
       }
     ]
   },
@@ -13390,9 +13628,12 @@
     "lemma": "Gath",
     "previous": "Gates",
     "next": "Gathar",
+    "redirect": "Geth 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 854
+        "start": 854,
+        "end": 854
       }
     ]
   },
@@ -13490,9 +13731,12 @@
     "lemma": "Gavanodurum",
     "previous": "Gauanes",
     "next": "Gauara",
+    "redirect": "Gamavodurum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 856
+        "start": 856,
+        "end": 856
       }
     ]
   },
@@ -13544,9 +13788,12 @@
     "lemma": "Gaudae",
     "previous": "Gauda",
     "next": "Gaudentios 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 856
+        "start": 856,
+        "end": 856
       }
     ]
   },
@@ -14253,7 +14500,7 @@
   {
     "lemma": "Gaulos 1",
     "previous": "Gaulopes",
-    "next": "Gaulos 2",
+    "next": "Γαῦλος 2",
     "chapters": [
       {
         "start": 875,
@@ -14262,18 +14509,21 @@
     ]
   },
   {
-    "lemma": "Gaulos 2",
+    "lemma": "Γαῦλος 2",
     "previous": "Gaulos 1",
     "next": "Gaulotos",
+    "redirect": "Gaudos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 875
+        "start": 875,
+        "end": 875
       }
     ]
   },
   {
     "lemma": "Gaulotos",
-    "previous": "Gaulos 2",
+    "previous": "Γαῦλος 2",
     "next": "Gaulus",
     "chapters": [
       {
@@ -14736,9 +14986,12 @@
     "lemma": "Gazaufala",
     "previous": "Gazara",
     "next": "Gazelle",
+    "redirect": "Gadiaufala",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 889
+        "start": 889,
+        "end": 889
       }
     ]
   },
@@ -15389,9 +15642,12 @@
     "lemma": "Gelae",
     "previous": "Gela 2",
     "next": "Gelaka",
+    "redirect": "Geli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 962
+        "start": 962,
+        "end": 962
       }
     ]
   },
@@ -15410,9 +15666,12 @@
     "lemma": "Gelani 1",
     "previous": "Gelaka",
     "next": "Gelani 2",
+    "redirect": "Geli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 963
+        "start": 963,
+        "end": 963
       }
     ]
   },
@@ -15511,9 +15770,12 @@
     "lemma": "Gelbis",
     "previous": "Gelbes",
     "next": "Gelbue 1",
+    "redirect": "Celbis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 968
+        "start": 968,
+        "end": 968
       }
     ]
   },
@@ -15597,9 +15859,12 @@
     "lemma": "Geldbeutel",
     "previous": "Gelda",
     "next": "Gelduba",
+    "redirect": "Marsupium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 984
+        "start": 984,
+        "end": 984
       }
     ]
   },
@@ -16296,9 +16561,12 @@
     "lemma": "Gemella 1",
     "previous": "Gemeliacus",
     "next": "Gemella 2",
+    "redirect": "Acci",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1021
+        "start": 1021,
+        "end": 1021
       }
     ]
   },
@@ -16306,9 +16574,12 @@
     "lemma": "Gemella 2",
     "previous": "Gemella 1",
     "next": "Gemellae 1",
+    "redirect": "Tucci 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1021
+        "start": 1021,
+        "end": 1021
       }
     ]
   },
@@ -16382,9 +16653,12 @@
     "lemma": "Gemellinus",
     "previous": "ad Gemellas",
     "next": "Gemellomuntes",
+    "redirect": "Herennius 29",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1022
+        "start": 1022,
+        "end": 1022
       }
     ]
   },
@@ -17094,9 +17368,12 @@
     "lemma": "Genabris",
     "previous": "Gemüsebau",
     "next": "Genabum",
+    "redirect": "Ginnabris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1129
+        "start": 1129,
+        "end": 1129
       }
     ]
   },
@@ -17148,7 +17425,7 @@
   {
     "lemma": "Genauni",
     "previous": "Genava 2",
-    "next": "Gene",
+    "next": "Γένη",
     "chapters": [
       {
         "start": 1130,
@@ -17157,18 +17434,22 @@
     ]
   },
   {
-    "lemma": "Gene",
+    "lemma": "Γένη",
     "previous": "Genauni",
     "next": "Genea",
+    "sort_key": "Gene",
+    "redirect": "Geschlechter",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1130
+        "start": 1130,
+        "end": 1130
       }
     ]
   },
   {
     "lemma": "Genea",
-    "previous": "Gene",
+    "previous": "Γένη",
     "next": "Genena",
     "chapters": [
       {
@@ -17414,9 +17695,12 @@
     "lemma": "Genetiva Urbanorum",
     "previous": "Genetios",
     "next": "Genetor 1",
+    "redirect": "Urso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1149
+        "start": 1149,
+        "end": 1149
       }
     ]
   },
@@ -17470,9 +17754,12 @@
     "lemma": "Geneva",
     "previous": "Genetyllis",
     "next": "Genialis 1",
+    "redirect": "Genava 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1151
+        "start": 1151,
+        "end": 1151
       }
     ]
   },
@@ -17560,9 +17847,12 @@
     "lemma": "Genitor 1",
     "previous": "Genitales",
     "next": "Genitor 2",
+    "redirect": "Iulius 261",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1155
+        "start": 1155,
+        "end": 1155
       }
     ]
   },
@@ -17875,9 +18165,12 @@
     "lemma": "Gensericus",
     "previous": "Gens",
     "next": "Gensis",
+    "redirect": "Geisericus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1198
+        "start": 1198,
+        "end": 1198
       }
     ]
   },
@@ -18019,9 +18312,12 @@
     "lemma": "Gento",
     "previous": "Gentius 2",
     "next": "Gentunis",
+    "redirect": "Gentunis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1204
+        "start": 1204,
+        "end": 1204
       }
     ]
   },
@@ -18063,9 +18359,12 @@
     "lemma": "Genua 3",
     "previous": "Genua 2",
     "next": "Genucilius",
+    "redirect": "Genava 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1206
+        "start": 1206,
+        "end": 1206
       }
     ]
   },
@@ -18372,9 +18671,12 @@
     "lemma": "Genzon",
     "previous": "Genzana",
     "next": "Geoaris",
+    "redirect": "Gentunis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1210
+        "start": 1210,
+        "end": 1210
       }
     ]
   },
@@ -18393,9 +18695,12 @@
     "lemma": "Geographia",
     "previous": "Geoaris",
     "next": "Geogus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1210
+        "start": 1210,
+        "end": 1210
       }
     ]
   },
@@ -18740,9 +19045,12 @@
     "lemma": "Ger",
     "previous": "Gepidae",
     "next": "Geraea",
+    "redirect": "Giz",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1232
+        "start": 1232,
+        "end": 1232
       }
     ]
   },
@@ -19006,9 +19314,12 @@
     "lemma": "Geranthrai",
     "previous": "Geranor 2",
     "next": "Gerara",
+    "redirect": "Geronthrai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1240
+        "start": 1240,
+        "end": 1240
       }
     ]
   },
@@ -19134,9 +19445,12 @@
     "lemma": "Gerastos",
     "previous": "Gerastios",
     "next": "Gerbedisso",
+    "redirect": "Geraistos 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1245
+        "start": 1245,
+        "end": 1245
       }
     ]
   },
@@ -19155,9 +19469,12 @@
     "lemma": "Gerbiatis",
     "previous": "Gerbedisso",
     "next": "Gerbo",
+    "redirect": "Gerulatae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1245
+        "start": 1245,
+        "end": 1245
       }
     ]
   },
@@ -19199,9 +19516,12 @@
     "lemma": "Gereia",
     "previous": "Gere",
     "next": "Gerellanus",
+    "redirect": "Geretae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1246
+        "start": 1246,
+        "end": 1246
       }
     ]
   },
@@ -19490,9 +19810,12 @@
     "lemma": "Gergithos",
     "previous": "Gergithios",
     "next": "Gergovia",
+    "redirect": "Gergis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1249
+        "start": 1249,
+        "end": 1249
       }
     ]
   },
@@ -19534,9 +19857,12 @@
     "lemma": "Germa 2",
     "previous": "Germa 1",
     "next": "Germanae",
+    "redirect": "Germe 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1250
+        "start": 1250,
+        "end": 1250
       }
     ]
   },
@@ -19555,9 +19881,12 @@
     "lemma": "Germani 2",
     "previous": "Germanae",
     "next": "Germanianus 1",
+    "redirect": "Custos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1250
+        "start": 1250,
+        "end": 1250
       }
     ]
   },
@@ -19902,9 +20231,12 @@
     "lemma": "Germinos",
     "previous": "Germinius",
     "next": "Germisara",
+    "redirect": "Paulus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1263
+        "start": 1263,
+        "end": 1263
       }
     ]
   },
@@ -20181,9 +20513,12 @@
     "lemma": "Gerrha 3",
     "previous": "Gerrha 2",
     "next": "Gerrha 4",
+    "redirect": "Girba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1272
+        "start": 1272,
+        "end": 1272
       }
     ]
   },
@@ -20203,9 +20538,12 @@
     "lemma": "Gerrhaicus sinus",
     "previous": "Gerrha 4",
     "next": "Gerrhaiidai",
+    "redirect": "Gerrha 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1273
+        "start": 1273,
+        "end": 1273
       }
     ]
   },
@@ -20381,9 +20719,12 @@
     "lemma": "Gerus",
     "previous": "Gerunium",
     "next": "Gerusa",
+    "redirect": "Gertus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1285
+        "start": 1285,
+        "end": 1285
       }
     ]
   },
@@ -20415,9 +20756,12 @@
     "lemma": "Gesacus",
     "previous": "Geryoneus",
     "next": "Gesahenae",
+    "redirect": "Gisacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1296
+        "start": 1296,
+        "end": 1296
       }
     ]
   },
@@ -20448,9 +20792,12 @@
     "lemma": "Gesati",
     "previous": "Gesalich",
     "next": "Geschütze",
+    "redirect": "Gaesati",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1297
+        "start": 1297,
+        "end": 1297
       }
     ]
   },
@@ -20640,9 +20987,12 @@
     "lemma": "Gessabo",
     "previous": "Gesoriacum",
     "next": "Gessaces mons",
+    "redirect": "Gaesao",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1324
+        "start": 1324,
+        "end": 1324
       }
     ]
   },
@@ -20750,9 +21100,12 @@
     "lemma": "Gessoriacum",
     "previous": "Gessius 6",
     "next": "Gessorienses",
+    "redirect": "Gesoriacum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1328
+        "start": 1328,
+        "end": 1328
       }
     ]
   },
@@ -20760,9 +21113,12 @@
     "lemma": "Gessorienses",
     "previous": "Gessoriacum",
     "next": "Gessus",
+    "redirect": "Iesso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1328
+        "start": 1328,
+        "end": 1328
       }
     ]
   },
@@ -21056,9 +21412,12 @@
     "lemma": "Gezeius",
     "previous": "Gewürznelke",
     "next": "Giarinus",
+    "redirect": "Maternianus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1354
+        "start": 1354,
+        "end": 1354
       }
     ]
   },
@@ -21140,9 +21499,12 @@
     "lemma": "Gichthis",
     "previous": "Gibuldus",
     "next": "Gidithra",
+    "redirect": "Gigthis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1355
+        "start": 1355,
+        "end": 1355
       }
     ]
   },
@@ -21185,9 +21547,12 @@
     "lemma": "Gigantes",
     "previous": "Gigantea",
     "next": "Gigantios",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1355
+        "start": 1355,
+        "end": 1355
       }
     ]
   },
@@ -21739,9 +22104,12 @@
     "lemma": "Gisacum",
     "previous": "de Giru Marcelli, de Giru Tarasi",
     "next": "Gisacus",
+    "redirect": "Gisacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1370
+        "start": 1370,
+        "end": 1370
       }
     ]
   },
@@ -21786,9 +22154,12 @@
     "lemma": "Giskon",
     "previous": "Gisclahadus",
     "next": "Giso",
+    "redirect": "Geskon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1370
+        "start": 1370,
+        "end": 1370
       }
     ]
   },
@@ -21953,9 +22324,12 @@
     "lemma": "Glabrio 4",
     "previous": "Glabrio 3",
     "next": "Gladiatorium",
+    "redirect": "Sibidius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1372
+        "start": 1372,
+        "end": 1372
       }
     ]
   },
@@ -21963,9 +22337,12 @@
     "lemma": "Gladiatorium",
     "previous": "Glabrio 4",
     "next": "Gladius 1",
+    "redirect": "Gladiatores",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1372
+        "start": 1372,
+        "end": 1372
       }
     ]
   },
@@ -21996,9 +22373,12 @@
     "lemma": "Glaesaria",
     "previous": "Gladius 2",
     "next": "Glanatina",
+    "redirect": "Austeravia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1376
+        "start": 1376,
+        "end": 1376
       }
     ]
   },
@@ -22006,9 +22386,12 @@
     "lemma": "Glanatina",
     "previous": "Glaesaria",
     "next": "Glandalicae",
+    "redirect": "Glannatina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1376
+        "start": 1376,
+        "end": 1376
       }
     ]
   },
@@ -22049,9 +22432,12 @@
     "lemma": "Glanis 2",
     "previous": "Glanis 1",
     "next": "Glannatina",
+    "redirect": "Clanis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1376
+        "start": 1376,
+        "end": 1376
       }
     ]
   },
@@ -22173,9 +22559,12 @@
     "lemma": "Glauama",
     "previous": "Glas",
     "next": "Glaudia",
+    "redirect": "Ekdaumaua",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1394
+        "start": 1394,
+        "end": 1394
       }
     ]
   },
@@ -22183,9 +22572,12 @@
     "lemma": "Glaudia",
     "previous": "Glauama",
     "next": "Glaudos",
+    "redirect": "Gaudos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1394
+        "start": 1394,
+        "end": 1394
       }
     ]
   },
@@ -22193,9 +22585,12 @@
     "lemma": "Glaudos",
     "previous": "Glaudia",
     "next": "Glauke 1",
+    "redirect": "Gaudos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1394
+        "start": 1394,
+        "end": 1394
       }
     ]
   },
@@ -23465,9 +23860,12 @@
     "lemma": "Gleba",
     "previous": "Glaukytes",
     "next": "Glechon",
+    "redirect": "Collatio glebalis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1424
+        "start": 1424,
+        "end": 1424
       }
     ]
   },
@@ -23518,9 +23916,12 @@
     "lemma": "Glessaria",
     "previous": "Glenos",
     "next": "Gletes",
+    "redirect": "Glaesaria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1424
+        "start": 1424,
+        "end": 1424
       }
     ]
   },
@@ -23528,9 +23929,12 @@
     "lemma": "Gletes",
     "previous": "Glessaria",
     "next": "Glevum",
+    "redirect": "Igletes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1424
+        "start": 1424,
+        "end": 1424
       }
     ]
   },
@@ -23711,9 +24115,12 @@
     "lemma": "Glykas",
     "previous": "Glychatas",
     "next": "Glyke 1",
+    "redirect": "Ioannes 19",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1467
+        "start": 1467,
+        "end": 1467
       }
     ]
   },
