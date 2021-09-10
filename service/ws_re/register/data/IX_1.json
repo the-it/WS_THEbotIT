@@ -1309,9 +1309,12 @@
     "lemma": "Hydrusa",
     "previous": "Hydruntum",
     "next": "Hydrussa 1",
+    "redirect": "Hydroessa, Hydrusa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 87
+        "start": 87,
+        "end": 87
       }
     ]
   },
@@ -1330,9 +1333,12 @@
     "lemma": "Hydrussa 2",
     "previous": "Hydrussa 1",
     "next": "Hyele",
+    "redirect": "Hydroessa, Hydrusa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 88
+        "start": 88,
+        "end": 88
       }
     ]
   },
@@ -1340,9 +1346,12 @@
     "lemma": "Hyele",
     "previous": "Hydrussa 2",
     "next": "Hyelion",
+    "redirect": "Velia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 88
+        "start": 88,
+        "end": 88
       }
     ]
   },
@@ -1361,9 +1370,12 @@
     "lemma": "Hyeronpotamon",
     "previous": "Hyelion",
     "next": "Hyes 1",
+    "redirect": "Hieronpotamon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 88
+        "start": 88,
+        "end": 88
       }
     ]
   },
@@ -1555,9 +1567,12 @@
     "lemma": "Hyginus 4",
     "previous": "Hyginus 3",
     "next": "Hygreis",
+    "redirect": "Iulius 278",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1565,9 +1580,12 @@
     "lemma": "Hygreis",
     "previous": "Hyginus 4",
     "next": "Hykara, Hykaron",
+    "redirect": "Hyrgis, Syrgis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1575,9 +1593,12 @@
     "lemma": "Hykara, Hykaron",
     "previous": "Hygreis",
     "next": "Hykkara",
+    "redirect": "Hykkara",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1655,9 +1676,12 @@
     "lemma": "Hylai",
     "previous": "Hyla 3",
     "next": "Hylaia",
+    "redirect": "Hyla 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 107
+        "start": 107,
+        "end": 107
       }
     ]
   },
@@ -1802,9 +1826,12 @@
     "lemma": "Hylas 5",
     "previous": "Hylas 4",
     "next": "Hylas 6",
+    "redirect": "Pomponius 47a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 116
+        "start": 116,
+        "end": 116
       }
     ]
   },
@@ -1926,9 +1953,12 @@
     "lemma": "Hylike",
     "previous": "Hylichidai",
     "next": "Hylimos",
+    "redirect": "Hyle 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 120
+        "start": 120,
+        "end": 120
       }
     ]
   },
@@ -2001,7 +2031,7 @@
   {
     "lemma": "Hyllikos",
     "previous": "Hylleus",
-    "next": "Hyllikos limen",
+    "next": "Ὑλλικὸς λιμήν",
     "chapters": [
       {
         "start": 120,
@@ -2011,18 +2041,22 @@
     ]
   },
   {
-    "lemma": "Hyllikos limen",
+    "lemma": "Ὑλλικὸς λιμήν",
     "previous": "Hyllikos",
     "next": "Hyllos 1",
+    "sort_key": "Hyllikos limen",
+    "redirect": "Hyllaikos limen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 122
+        "start": 122,
+        "end": 122
       }
     ]
   },
   {
     "lemma": "Hyllos 1",
-    "previous": "Hyllikos limen",
+    "previous": "Ὑλλικὸς λιμήν",
     "next": "Hyllos 2",
     "chapters": [
       {
@@ -2183,9 +2217,12 @@
     "lemma": "Hymenaeus",
     "previous": "Hymen, Hymenaios",
     "next": "Hymenaios",
+    "redirect": "Aurelius 151",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 130
+        "start": 130,
+        "end": 130
       }
     ]
   },
@@ -2407,9 +2444,12 @@
     "lemma": "Hypaea",
     "previous": "Hypachaioi",
     "next": "Hypagoranomos",
+    "redirect": "Stoechades insulae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 195
+        "start": 195,
+        "end": 195
       }
     ]
   },
@@ -2417,9 +2457,12 @@
     "lemma": "Hypagoranomos",
     "previous": "Hypaea",
     "next": "Hypaipa",
+    "redirect": "Agoranomoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 195
+        "start": 195,
+        "end": 195
       }
     ]
   },
@@ -2498,9 +2541,12 @@
     "lemma": "Hypanis 3",
     "previous": "Hypanis 2",
     "next": "Hypanis 4",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
@@ -2518,9 +2564,12 @@
     "lemma": "Hyparchos",
     "previous": "Hypanis 4",
     "next": "Hyparna",
+    "redirect": "Hypobaros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },

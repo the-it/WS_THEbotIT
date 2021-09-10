@@ -695,9 +695,12 @@
     "lemma": "Helison",
     "previous": "Helisii",
     "next": "Helisson 1",
+    "redirect": "Helisson 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 93
+        "start": 93,
+        "end": 93
       }
     ]
   },
@@ -761,9 +764,12 @@
     "lemma": "Helissus",
     "previous": "Helisson 5",
     "next": "Heliu akra",
+    "redirect": "Helisson 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 95
+        "start": 95,
+        "end": 95
       }
     ]
   },
@@ -771,9 +777,12 @@
     "lemma": "Heliu akra",
     "previous": "Helissus",
     "next": "Heliu nesos",
+    "redirect": "Hiera Akra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 95
+        "start": 95,
+        "end": 95
       }
     ]
   },
@@ -803,9 +812,12 @@
     "lemma": "Heliupolis 2",
     "previous": "Heliupolis 1",
     "next": "Helius",
+    "redirect": "Hiera 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 95
+        "start": 95,
+        "end": 95
       }
     ]
   },
@@ -813,9 +825,12 @@
     "lemma": "Helius",
     "previous": "Heliupolis 2",
     "next": "Helixos 1",
+    "redirect": "Aelius 91",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 95
+        "start": 95,
+        "end": 95
       }
     ]
   },
@@ -1398,9 +1413,12 @@
     "lemma": "Hellenikon",
     "previous": "Hellenike thalatta",
     "next": "Hellenikos topos",
+    "redirect": "Hellenion 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 173
+        "start": 173,
+        "end": 173
       }
     ]
   },
@@ -1534,9 +1552,12 @@
     "lemma": "Helleporus",
     "previous": "Hellenotamiai",
     "next": "Hellespontia 1",
+    "redirect": "Elleporus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 181
+        "start": 181,
+        "end": 181
       }
     ]
   },
@@ -1667,9 +1688,12 @@
     "lemma": "Helliougmounis",
     "previous": "Hellestheaeus",
     "next": "Hellivesa",
+    "redirect": "Heliougmounis deus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 194
+        "start": 194,
+        "end": 194
       }
     ]
   },
@@ -1677,9 +1701,12 @@
     "lemma": "Hellivesa",
     "previous": "Helliougmounis",
     "next": "Helloi",
+    "redirect": "Aveha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 194
+        "start": 194,
+        "end": 194
       }
     ]
   },
@@ -1710,9 +1737,12 @@
     "lemma": "Hellopia 2",
     "previous": "Hellopia 1",
     "next": "Hellopia 3",
+    "redirect": "Hellopion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 196
+        "start": 196,
+        "end": 196
       }
     ]
   },
@@ -1742,9 +1772,12 @@
     "lemma": "Hellotia 1",
     "previous": "Hellopion",
     "next": "Hellotia 2",
+    "redirect": "Hellotis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 196
+        "start": 196,
+        "end": 196
       }
     ]
   },
@@ -2128,9 +2161,12 @@
     "lemma": "Helvidius 1",
     "previous": "Helvetum",
     "next": "Helvidius 2",
+    "redirect": "Modesta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 216
+        "start": 216,
+        "end": 216
       }
     ]
   },
@@ -2138,9 +2174,12 @@
     "lemma": "Helvidius 2",
     "previous": "Helvidius 1",
     "next": "Helvidius 3",
+    "redirect": "Severus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 216
+        "start": 216,
+        "end": 216
       }
     ]
   },
@@ -2307,9 +2346,12 @@
     "lemma": "Helvius 6",
     "previous": "Helvius 5",
     "next": "Helvius 7",
+    "redirect": "Helvius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
@@ -2486,16 +2528,19 @@
     "lemma": "Helymi",
     "previous": "Helvius 21",
     "next": "Hemaithon",
+    "redirect": "Elymi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
   {
     "lemma": "Hemaithon",
     "previous": "Helymi",
-    "next": "Hemedimnon",
+    "next": "Ἡμέδιμνον",
     "chapters": [
       {
         "start": 230,
@@ -2504,18 +2549,22 @@
     ]
   },
   {
-    "lemma": "Hemedimnon",
+    "lemma": "Ἡμέδιμνον",
     "previous": "Hemaithon",
     "next": "Hemera 1",
+    "sort_key": "Hemedimnon",
+    "redirect": "Hemimedimnon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
   {
     "lemma": "Hemera 1",
-    "previous": "Hemedimnon",
+    "previous": "Ἡμέδιμνον",
     "next": "Hemera 2",
     "chapters": [
       {
@@ -2541,9 +2590,12 @@
     "lemma": "Hemerasia 1",
     "previous": "Hemera 2",
     "next": "Hemerasia 2",
+    "redirect": "Hemera 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 232
+        "start": 232,
+        "end": 232
       }
     ]
   },
@@ -2607,16 +2659,19 @@
     "lemma": "Hemeroscopium",
     "previous": "Hemeron",
     "next": "Hemiassarion",
+    "redirect": "Dianium 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 233
+        "start": 233,
+        "end": 233
       }
     ]
   },
   {
     "lemma": "Hemiassarion",
     "previous": "Hemeroscopium",
-    "next": "Hemibolion",
+    "next": "Ἡμιβόλιον",
     "chapters": [
       {
         "start": 233,
@@ -2625,18 +2680,22 @@
     ]
   },
   {
-    "lemma": "Hemibolion",
+    "lemma": "Ἡμιβόλιον",
     "previous": "Hemiassarion",
     "next": "Ἡμίχα",
+    "sort_key": "Hemibolion",
+    "redirect": "Hemiobolion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 233
+        "start": 233,
+        "end": 233
       }
     ]
   },
   {
     "lemma": "Ἡμίχα",
-    "previous": "Hemibolion",
+    "previous": "Ἡμιβόλιον",
     "next": "Ἡμιχόριον",
     "chapters": [
       {
@@ -2740,7 +2799,7 @@
   {
     "lemma": "Hemidrachmon",
     "previous": "Hemidodekaton",
-    "next": "Hemiektaion",
+    "next": "Ἡμιεκταῖον",
     "chapters": [
       {
         "start": 244,
@@ -2749,28 +2808,36 @@
     ]
   },
   {
-    "lemma": "Hemiektaion",
+    "lemma": "Ἡμιεκταῖον",
     "previous": "Hemidrachmon",
-    "next": "Hemiekteon",
+    "next": "Ἡμιεκτέον",
+    "sort_key": "Hemiektaion",
+    "redirect": "Hemiekton 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
   {
-    "lemma": "Hemiekteon",
-    "previous": "Hemiektaion",
+    "lemma": "Ἡμιεκτέον",
+    "previous": "Ἡμιεκταῖον",
     "next": "Hemiekton 1",
+    "sort_key": "Hemiekteon",
+    "redirect": "Hemiekton",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
   {
     "lemma": "Hemiekton 1",
-    "previous": "Hemiekteon",
+    "previous": "Ἡμιεκτέον",
     "next": "Hemiekton 2",
     "chapters": [
       {
@@ -2782,7 +2849,7 @@
   {
     "lemma": "Hemiekton 2",
     "previous": "Hemiekton 1",
-    "next": "Hemikaddion",
+    "next": "Ἡμικάδδιον",
     "chapters": [
       {
         "start": 244,
@@ -2791,39 +2858,51 @@
     ]
   },
   {
-    "lemma": "Hemikaddion",
+    "lemma": "Ἡμικάδδιον",
     "previous": "Hemiekton 2",
-    "next": "Hemikadion",
+    "next": "Ἡμικάδιον",
+    "sort_key": "Hemikaddion",
+    "redirect": "Kados",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
   {
-    "lemma": "Hemikadion",
-    "previous": "Hemikaddion",
-    "next": "Hemikollion",
+    "lemma": "Ἡμικάδιον",
+    "previous": "Ἡμικάδδιον",
+    "next": "Ἡμικόλλιον",
+    "sort_key": "Hemikadion",
+    "redirect": "Kados",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
   {
-    "lemma": "Hemikollion",
-    "previous": "Hemikadion",
+    "lemma": "Ἡμικόλλιον",
+    "previous": "Ἡμικάδιον",
     "next": "Hemikongion",
+    "sort_key": "Hemikollion",
+    "redirect": "Kolia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
   {
     "lemma": "Hemikongion",
-    "previous": "Hemikollion",
-    "next": "Hemikorion",
+    "previous": "Ἡμικόλλιον",
+    "next": "Ἡμικόριον",
     "chapters": [
       {
         "start": 244,
@@ -2832,18 +2911,22 @@
     ]
   },
   {
-    "lemma": "Hemikorion",
+    "lemma": "Ἡμικόριον",
     "previous": "Hemikongion",
     "next": "Hemikotylion",
+    "sort_key": "Hemikorion",
+    "redirect": "Koros 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
   {
     "lemma": "Hemikotylion",
-    "previous": "Hemikorion",
+    "previous": "Ἡμικόριον",
     "next": "Hemikyathon",
     "chapters": [
       {
@@ -2866,7 +2949,7 @@
   {
     "lemma": "Hemikypron",
     "previous": "Hemikyathon",
-    "next": "Hemilitrion",
+    "next": "Ἡμιλίτριον",
     "chapters": [
       {
         "start": 244,
@@ -2876,18 +2959,22 @@
     ]
   },
   {
-    "lemma": "Hemilitrion",
+    "lemma": "Ἡμιλίτριον",
     "previous": "Hemikypron",
     "next": "Hemilitron",
+    "sort_key": "Hemilitrion",
+    "redirect": "Hemilitron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 246
+        "start": 246,
+        "end": 246
       }
     ]
   },
   {
     "lemma": "Hemilitron",
-    "previous": "Hemilitrion",
+    "previous": "Ἡμιλίτριον",
     "next": "Hemimedimnon",
     "chapters": [
       {
@@ -2922,7 +3009,7 @@
   {
     "lemma": "Hemimnaion",
     "previous": "Hemimegiston",
-    "next": "Hemimodion",
+    "next": "Ἡμιμόδιον",
     "chapters": [
       {
         "start": 247,
@@ -2932,19 +3019,23 @@
     ]
   },
   {
-    "lemma": "Hemimodion",
+    "lemma": "Ἡμιμόδιον",
     "previous": "Hemimnaion",
     "next": "Hemina",
+    "sort_key": "Hemimodion",
+    "redirect": "Modius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 248
+        "start": 248,
+        "end": 248
       }
     ]
   },
   {
     "lemma": "Hemina",
-    "previous": "Hemimodion",
-    "next": "Hemiobelion",
+    "previous": "Ἡμιμόδιον",
+    "next": "Ἡμιωβέλιον",
     "chapters": [
       {
         "start": 248,
@@ -2954,28 +3045,36 @@
     ]
   },
   {
-    "lemma": "Hemiobelion",
+    "lemma": "Ἡμιωβέλιον",
     "previous": "Hemina",
-    "next": "Hemiobolion",
+    "next": "Ἡμιοβόλιον",
+    "sort_key": "Hemiobelion",
+    "redirect": "Hemiobolion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 249
+        "start": 249,
+        "end": 249
       }
     ]
   },
   {
-    "lemma": "Hemiobolion",
-    "previous": "Hemiobelion",
+    "lemma": "Ἡμιοβόλιον",
+    "previous": "Ἡμιωβέλιον",
     "next": "Hemiobolion 1",
+    "sort_key": "Hemiobolion",
+    "redirect": "Hemiobolion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 249
+        "start": 249,
+        "end": 249
       }
     ]
   },
   {
     "lemma": "Hemiobolion 1",
-    "previous": "Hemiobolion",
+    "previous": "Ἡμιοβόλιον",
     "next": "Hemiobolion 2",
     "chapters": [
       {
@@ -2988,7 +3087,7 @@
   {
     "lemma": "Hemiobolion 2",
     "previous": "Hemiobolion 1",
-    "next": "Hemiobolon",
+    "next": "Ἡμιώβολον",
     "chapters": [
       {
         "start": 252,
@@ -2997,38 +3096,50 @@
     ]
   },
   {
-    "lemma": "Hemiobolon",
+    "lemma": "Ἡμιώβολον",
     "previous": "Hemiobolion 2",
-    "next": "Hemiodelion",
+    "next": "Ἡμιωδέλιον",
+    "sort_key": "Hemiobolon",
+    "redirect": "Hemiobolion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 252
+        "start": 252,
+        "end": 252
       }
     ]
   },
   {
-    "lemma": "Hemiodelion",
-    "previous": "Hemiobolon",
-    "next": "Hemiodelos",
+    "lemma": "Ἡμιωδέλιον",
+    "previous": "Ἡμιώβολον",
+    "next": "Ἡμιώδελος",
+    "sort_key": "Hemiodelion",
+    "redirect": "Hemiobolion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 252
+        "start": 252,
+        "end": 252
       }
     ]
   },
   {
-    "lemma": "Hemiodelos",
-    "previous": "Hemiodelion",
+    "lemma": "Ἡμιώδελος",
+    "previous": "Ἡμιωδέλιον",
     "next": "Hemiogdoon",
+    "sort_key": "Hemiodelos",
+    "redirect": "Hemiobolion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 252
+        "start": 252,
+        "end": 252
       }
     ]
   },
   {
     "lemma": "Hemiogdoon",
-    "previous": "Hemiodelos",
+    "previous": "Ἡμιώδελος",
     "next": "Hemiolios",
     "chapters": [
       {
@@ -3040,7 +3151,7 @@
   {
     "lemma": "Hemiolios",
     "previous": "Hemiogdoon",
-    "next": "Hemiolkion",
+    "next": "Ἡμιόλκιον",
     "chapters": [
       {
         "start": 252,
@@ -3050,18 +3161,22 @@
     ]
   },
   {
-    "lemma": "Hemiolkion",
+    "lemma": "Ἡμιόλκιον",
     "previous": "Hemiolios",
     "next": "Hemionoi",
+    "sort_key": "Hemiolkion",
+    "redirect": "Holke",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 253
+        "start": 253,
+        "end": 253
       }
     ]
   },
   {
     "lemma": "Hemionoi",
-    "previous": "Hemiolkion",
+    "previous": "Ἡμιόλκιον",
     "next": "Hemioungion",
     "chapters": [
       {
@@ -3073,7 +3188,7 @@
   {
     "lemma": "Hemioungion",
     "previous": "Hemionoi",
-    "next": "Hemipechys",
+    "next": "Ἡμίπηχυς",
     "chapters": [
       {
         "start": 253,
@@ -3082,38 +3197,50 @@
     ]
   },
   {
-    "lemma": "Hemipechys",
+    "lemma": "Ἡμίπηχυς",
     "previous": "Hemioungion",
-    "next": "Hemipelekkon",
+    "next": "Ἡμιπέλεκκον",
+    "sort_key": "Hemipechys",
+    "redirect": "Πῆχυς",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 253
+        "start": 253,
+        "end": 253
       }
     ]
   },
   {
-    "lemma": "Hemipelekkon",
-    "previous": "Hemipechys",
-    "next": "Hemipodion",
+    "lemma": "Ἡμιπέλεκκον",
+    "previous": "Ἡμίπηχυς",
+    "next": "Ἡμιπόδιον",
+    "sort_key": "Hemipelekkon",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 253
+        "start": 253,
+        "end": 253
       }
     ]
   },
   {
-    "lemma": "Hemipodion",
-    "previous": "Hemipelekkon",
+    "lemma": "Ἡμιπόδιον",
+    "previous": "Ἡμιπέλεκκον",
     "next": "Hemisklion",
+    "sort_key": "Hemipodion",
+    "redirect": "pus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 253
+        "start": 253,
+        "end": 253
       }
     ]
   },
   {
     "lemma": "Hemisklion",
-    "previous": "Hemipodion",
+    "previous": "Ἡμιπόδιον",
     "next": "Hemisphaerium",
     "chapters": [
       {
@@ -3125,7 +3252,7 @@
   {
     "lemma": "Hemisphaerium",
     "previous": "Hemisklion",
-    "next": "Hemistadion",
+    "next": "Ἡμιστάδιον",
     "chapters": [
       {
         "start": 253,
@@ -3135,18 +3262,22 @@
     ]
   },
   {
-    "lemma": "Hemistadion",
+    "lemma": "Ἡμιστάδιον",
     "previous": "Hemisphaerium",
     "next": "Hemistateron",
+    "sort_key": "Hemistadion",
+    "redirect": "Stadion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
   {
     "lemma": "Hemistateron",
-    "previous": "Hemistadion",
+    "previous": "Ἡμιστάδιον",
     "next": "Hemisy",
     "chapters": [
       {
@@ -3158,7 +3289,7 @@
   {
     "lemma": "Hemisy",
     "previous": "Hemistateron",
-    "next": "Hemitalanton",
+    "next": "Ἡμιτάλαντον",
     "chapters": [
       {
         "start": 254,
@@ -3167,18 +3298,22 @@
     ]
   },
   {
-    "lemma": "Hemitalanton",
+    "lemma": "Ἡμιτάλαντον",
     "previous": "Hemisy",
     "next": "Hemithea 1",
+    "sort_key": "Hemitalanton",
+    "redirect": "Talent",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
   {
     "lemma": "Hemithea 1",
-    "previous": "Hemitalanton",
+    "previous": "Ἡμιτάλαντον",
     "next": "Hemithea 2",
     "chapters": [
       {
@@ -3271,9 +3406,12 @@
     "lemma": "Heneti",
     "previous": "Hendeka",
     "next": "Henetoi",
+    "redirect": "Veneti 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 257
+        "start": 257,
+        "end": 257
       }
     ]
   },
@@ -3281,9 +3419,12 @@
     "lemma": "Henetoi",
     "previous": "Heneti",
     "next": "Henioche 1",
+    "redirect": "Enetoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 258
+        "start": 258,
+        "end": 258
       }
     ]
   },
@@ -3710,9 +3851,12 @@
     "lemma": "Hephaistios 1",
     "previous": "Hephaistion 9",
     "next": "Hephaistios 2",
+    "redirect": "Hephaistion 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 310
+        "start": 310,
+        "end": 310
       }
     ]
   },
@@ -3742,7 +3886,7 @@
   {
     "lemma": "Hephaistu nesos 1",
     "previous": "Hephaistos",
-    "next": "Hephaistu nesos 2",
+    "next": "Ἡφαίστου νῆσος 2",
     "chapters": [
       {
         "start": 366,
@@ -3751,18 +3895,21 @@
     ]
   },
   {
-    "lemma": "Hephaistu nesos 2",
+    "lemma": "Ἡφαίστου νῆσος 2",
     "previous": "Hephaistu nesos 1",
     "next": "Heplenta",
+    "redirect": "Hephaesti insulae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 366
+        "start": 366,
+        "end": 366
       }
     ]
   },
   {
     "lemma": "Heplenta",
-    "previous": "Hephaistu nesos 2",
+    "previous": "Ἡφαίστου νῆσος 2",
     "next": "Hepta",
     "chapters": [
       {
@@ -4154,9 +4301,12 @@
     "lemma": "Heraclitus 3",
     "previous": "Heraclitus 2",
     "next": "Heraclitus 4",
+    "redirect": "Antonius 98",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 407
+        "start": 407,
+        "end": 407
       }
     ]
   },
@@ -4164,9 +4314,12 @@
     "lemma": "Heraclitus 4",
     "previous": "Heraclitus 3",
     "next": "Heraclius 1",
+    "redirect": "Herakleitos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 407
+        "start": 407,
+        "end": 407
       }
     ]
   },
@@ -4185,9 +4338,12 @@
     "lemma": "Heraclius 2",
     "previous": "Heraclius 1",
     "next": "Heraeis 1",
+    "redirect": "Herakleios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 407
+        "start": 407,
+        "end": 407
       }
     ]
   },
@@ -4195,9 +4351,12 @@
     "lemma": "Heraeis 1",
     "previous": "Heraclius 2",
     "next": "Heraeis 2",
+    "redirect": "Heraia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 407
+        "start": 407,
+        "end": 407
       }
     ]
   },
@@ -4216,9 +4375,12 @@
     "lemma": "Heraeus mons",
     "previous": "Heraeis 2",
     "next": "Heragoras 1",
+    "redirect": "Heraia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 407
+        "start": 407,
+        "end": 407
       }
     ]
   },
@@ -4248,9 +4410,12 @@
     "lemma": "Heragoras 3",
     "previous": "Heragoras 2",
     "next": "Heraia 1",
+    "redirect": "Hereas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 407
+        "start": 407,
+        "end": 407
       }
     ]
   },
@@ -4293,9 +4458,12 @@
     "lemma": "Heraieis",
     "previous": "Heraia 3",
     "next": "Heraion 1",
+    "redirect": "Heraia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 418
+        "start": 418,
+        "end": 418
       }
     ]
   },
@@ -4714,9 +4882,12 @@
     "lemma": "Herakleia 24",
     "previous": "Herakleia 23",
     "next": "Herakleia 25",
+    "redirect": "Chersonesos 19",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 436
+        "start": 436,
+        "end": 436
       }
     ]
   },
@@ -4780,9 +4951,12 @@
     "lemma": "Herakleia 30",
     "previous": "Herakleia 29",
     "next": "Herakleia 31",
+    "redirect": "Heraclea 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 439
+        "start": 439,
+        "end": 439
       }
     ]
   },
@@ -4940,9 +5114,12 @@
     "lemma": "Herakleidas 9",
     "previous": "Herakleidas 8",
     "next": "Herakleides 1",
+    "redirect": "Herakleides 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 457
+        "start": 457,
+        "end": 457
       }
     ]
   },
@@ -5974,9 +6151,12 @@
     "lemma": "Herakleios 18",
     "previous": "Herakleios 17",
     "next": "Herakleistai",
+    "redirect": "Heraclius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 503
+        "start": 503,
+        "end": 503
       }
     ]
   },
@@ -6175,9 +6355,12 @@
     "lemma": "Herakleitos 17",
     "previous": "Herakleitos 16",
     "next": "Herakleodoros 1",
+    "redirect": "Heraclitus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 511
+        "start": 511,
+        "end": 511
       }
     ]
   },
@@ -6298,9 +6481,12 @@
     "lemma": "Herakleopolis 2",
     "previous": "Herakleopolis 1",
     "next": "Herakleopolis 3",
+    "redirect": "Sebastopolis 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 515
+        "start": 515,
+        "end": 515
       }
     ]
   },
@@ -6352,9 +6538,12 @@
     "lemma": "Herakleotes 3",
     "previous": "Herakleotes 2",
     "next": "Herakleotis",
+    "redirect": "Herakleia 29",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 515
+        "start": 515,
+        "end": 515
       }
     ]
   },
@@ -6700,9 +6889,12 @@
     "lemma": "Hercle",
     "previous": "Hercl(anenses?)",
     "next": "Herculaneum 1",
+    "redirect": "Herkle",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 532
+        "start": 532,
+        "end": 532
       }
     ]
   },
@@ -6777,9 +6969,12 @@
     "lemma": "Herculaneus rivus 2",
     "previous": "Herculaneus rivus 1",
     "next": "Herculanus 1",
+    "redirect": "Anio novus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 549
+        "start": 549,
+        "end": 549
       }
     ]
   },
@@ -7085,9 +7280,12 @@
     "lemma": "Herculis insulae 2",
     "previous": "Herculis insulae 1",
     "next": "Herculis insulae 3",
+    "redirect": "Herakleia 29",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 613
+        "start": 613,
+        "end": 613
       }
     ]
   },
@@ -7368,9 +7566,12 @@
     "lemma": "Hereleuva",
     "previous": "Hereditarium ius",
     "next": "Heremigarius",
+    "redirect": "Erelieva",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 648
+        "start": 648,
+        "end": 648
       }
     ]
   },
@@ -7378,9 +7579,12 @@
     "lemma": "Heremigarius",
     "previous": "Hereleuva",
     "next": "Herennianus 1",
+    "redirect": "Hermengarius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 648
+        "start": 648,
+        "end": 648
       }
     ]
   },
@@ -8122,9 +8326,12 @@
     "lemma": "Heres",
     "previous": "Hereos",
     "next": "Heres Martia",
+    "redirect": "Hereditarium ius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 681
+        "start": 681,
+        "end": 681
       }
     ]
   },
@@ -8731,9 +8938,12 @@
     "lemma": "Hermanaricus",
     "previous": "Hermakotas",
     "next": "Hermanifridus",
+    "redirect": "Hermenericus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 714
+        "start": 714,
+        "end": 714
       }
     ]
   },
@@ -9709,9 +9919,12 @@
     "lemma": "Hermione 3",
     "previous": "Hermione 2",
     "next": "Hermione 4",
+    "redirect": "Hermiana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 841
+        "start": 841,
+        "end": 841
       }
     ]
   },
@@ -11062,9 +11275,12 @@
     "lemma": "Hermon 9",
     "previous": "Hermon 8",
     "next": "Hermon 10",
+    "redirect": "Hermonax 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 894
+        "start": 894,
+        "end": 894
       }
     ]
   },
@@ -11105,9 +11321,12 @@
     "lemma": "Hermonaktia",
     "previous": "Hermon 12",
     "next": "Hermonaktos",
+    "redirect": "Herennius 55",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 894
+        "start": 894,
+        "end": 894
       }
     ]
   },
@@ -11285,9 +11504,12 @@
     "lemma": "Hermopolis 5",
     "previous": "Hermopolis 4",
     "next": "Hermos 1",
+    "redirect": "Hermupolis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 903
+        "start": 903,
+        "end": 903
       }
     ]
   },
@@ -11318,9 +11540,12 @@
     "lemma": "Hermos 3",
     "previous": "Hermos 2",
     "next": "Hermostratos",
+    "redirect": "Hermios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 904
+        "start": 904,
+        "end": 904
       }
     ]
   },
@@ -11774,9 +11999,12 @@
     "lemma": "Herodianus 1",
     "previous": "Herodes 14ff.",
     "next": "Herodianus 2",
+    "redirect": "Herennianus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 954
+        "start": 954,
+        "end": 954
       }
     ]
   },
@@ -12908,9 +13136,12 @@
     "lemma": "Hessaioi",
     "previous": "Hesperos",
     "next": "Hessioi 1",
+    "redirect": "Hessioi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1257
+        "start": 1257,
+        "end": 1257
       }
     ]
   },
@@ -12940,9 +13171,12 @@
     "lemma": "Hessos",
     "previous": "Hessioi 2",
     "next": "Hestia",
+    "redirect": "Hessioi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1257
+        "start": 1257,
+        "end": 1257
       }
     ]
   },

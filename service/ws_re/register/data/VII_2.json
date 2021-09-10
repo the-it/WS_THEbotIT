@@ -7840,9 +7840,12 @@
     "lemma": "Haedui",
     "previous": "Hadylion",
     "next": "Haegra",
+    "redirect": "Aedui",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2181
+        "start": 2181,
+        "end": 2181
       }
     ]
   },
@@ -7850,9 +7853,12 @@
     "lemma": "Haegra",
     "previous": "Haedui",
     "next": "Haemimontus",
+    "redirect": "Egra 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2181
+        "start": 2181,
+        "end": 2181
       }
     ]
   },
@@ -7894,9 +7900,12 @@
     "lemma": "Haemus 2",
     "previous": "Haemus 1",
     "next": "Haera",
+    "redirect": "Haimos 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2182
+        "start": 2182,
+        "end": 2182
       }
     ]
   },
@@ -7904,9 +7913,12 @@
     "lemma": "Haera",
     "previous": "Haemus 2",
     "next": "Haera dea",
+    "redirect": "Aeracura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2182
+        "start": 2182,
+        "end": 2182
       }
     ]
   },
@@ -7914,9 +7926,12 @@
     "lemma": "Haera dea",
     "previous": "Haera",
     "next": "Haeresis",
+    "redirect": "Hera 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2182
+        "start": 2182,
+        "end": 2182
       }
     ]
   },
@@ -8028,9 +8043,12 @@
     "lemma": "Hagesias",
     "previous": "Hagesaretos",
     "next": "Hagesistratos",
+    "redirect": "Hegias 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2204
+        "start": 2204,
+        "end": 2204
       }
     ]
   },
@@ -8449,9 +8467,12 @@
     "lemma": "Haifisch",
     "previous": "Hahnenkämpfe",
     "next": "Haimatites",
+    "redirect": "Γαλεός",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2215
+        "start": 2215,
+        "end": 2215
       }
     ]
   },
@@ -8705,9 +8726,12 @@
     "lemma": "Haimonia 5",
     "previous": "Haimonia 4",
     "next": "Haimoniai 1",
+    "redirect": "Haimoniai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2220
+        "start": 2220,
+        "end": 2220
       }
     ]
   },
@@ -8848,9 +8872,12 @@
     "lemma": "Hairai",
     "previous": "Haimos 5",
     "next": "Haius",
+    "redirect": "Airai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2226
+        "start": 2226,
+        "end": 2226
       }
     ]
   },
@@ -8926,9 +8953,12 @@
     "lemma": "Halaisa",
     "previous": "Halai 5",
     "next": "Halaisos",
+    "redirect": "Alaisa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2228
+        "start": 2228,
+        "end": 2228
       }
     ]
   },
@@ -8936,9 +8966,12 @@
     "lemma": "Halaisos",
     "previous": "Halaisa",
     "next": "Halala",
+    "redirect": "Alaisa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2228
+        "start": 2228,
+        "end": 2228
       }
     ]
   },
@@ -8980,9 +9013,12 @@
     "lemma": "Hale",
     "previous": "Halasarna",
     "next": "Haleis",
+    "redirect": "Halieis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2229
+        "start": 2229,
+        "end": 2229
       }
     ]
   },
@@ -9023,9 +9059,12 @@
     "lemma": "Halesa",
     "previous": "Hales, Ales, Halesos 2",
     "next": "Halesion",
+    "redirect": "Alaisa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2229
+        "start": 2229,
+        "end": 2229
       }
     ]
   },
@@ -9157,16 +9196,19 @@
     "lemma": "Halia 7",
     "previous": "Halia 6",
     "next": "Halia 8",
+    "redirect": "Halieis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2233
+        "start": 2233,
+        "end": 2233
       }
     ]
   },
   {
     "lemma": "Halia 8",
     "previous": "Halia 7",
-    "next": "Haliaia",
+    "next": "Ἁλιαία",
     "chapters": [
       {
         "start": 2233,
@@ -9176,18 +9218,22 @@
     ]
   },
   {
-    "lemma": "Haliaia",
+    "lemma": "Ἁλιαία",
     "previous": "Halia 8",
     "next": "Haliaios",
+    "sort_key": "Haliaia",
+    "redirect": "Halia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2241
+        "start": 2241,
+        "end": 2241
       }
     ]
   },
   {
     "lemma": "Haliaios",
-    "previous": "Haliaia",
+    "previous": "Ἁλιαία",
     "next": "Haliakmon",
     "chapters": [
       {
@@ -9222,9 +9268,12 @@
     "lemma": "Haliartia",
     "previous": "Haliardi",
     "next": "Haliartis",
+    "redirect": "Haliartos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2241
+        "start": 2241,
+        "end": 2241
       }
     ]
   },
@@ -9232,9 +9281,12 @@
     "lemma": "Haliartis",
     "previous": "Haliartia",
     "next": "Haliartos 1",
+    "redirect": "Kopais",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2241
+        "start": 2241,
+        "end": 2241
       }
     ]
   },
@@ -9265,9 +9317,12 @@
     "lemma": "Halias",
     "previous": "Haliartos 2",
     "next": "Haliastai",
+    "redirect": "Halieis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2244
+        "start": 2244,
+        "end": 2244
       }
     ]
   },
@@ -9424,9 +9479,12 @@
     "lemma": "Halikyas",
     "previous": "Halikyai",
     "next": "Halimede",
+    "redirect": "Lykos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2266
+        "start": 2266,
+        "end": 2266
       }
     ]
   },
@@ -9468,9 +9526,12 @@
     "lemma": "Halion",
     "previous": "Halimus",
     "next": "Halios 1",
+    "redirect": "Alion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2267
+        "start": 2267,
+        "end": 2267
       }
     ]
   },
@@ -9523,9 +9584,12 @@
     "lemma": "Halios 5",
     "previous": "Halios 4",
     "next": "Haliotropios",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2268
+        "start": 2268,
+        "end": 2268
       }
     ]
   },
@@ -9711,9 +9775,12 @@
     "lemma": "Halkyoneus 2",
     "previous": "Halkyoneus 1",
     "next": "Halkyonis",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2273
+        "start": 2273,
+        "end": 2273
       }
     ]
   },
@@ -9721,9 +9788,12 @@
     "lemma": "Halkyonis",
     "previous": "Halkyoneus 2",
     "next": "Halma",
+    "redirect": "Ἀλκυονὶς θάλαττα",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2273
+        "start": 2273,
+        "end": 2273
       }
     ]
   },
@@ -9764,9 +9834,12 @@
     "lemma": "Halmydessos",
     "previous": "Halmos",
     "next": "Halmyris lacus",
+    "redirect": "Salmydessos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2276
+        "start": 2276,
+        "end": 2276
       }
     ]
   },
@@ -9954,9 +10027,12 @@
     "lemma": "Halotropios",
     "previous": "Halosydne",
     "next": "Halotus",
+    "redirect": "Haliotropios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2283
+        "start": 2283,
+        "end": 2283
       }
     ]
   },
@@ -10033,9 +10109,12 @@
     "lemma": "Halykos 1",
     "previous": "Halykai",
     "next": "Halykos 2",
+    "redirect": "Halieis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2286
+        "start": 2286,
+        "end": 2286
       }
     ]
   },
@@ -10043,9 +10122,12 @@
     "lemma": "Halykos 2",
     "previous": "Halykos 1",
     "next": "Halys",
+    "redirect": "Lykos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2286
+        "start": 2286,
+        "end": 2286
       }
     ]
   },
@@ -11478,9 +11560,12 @@
     "lemma": "Harmaktika",
     "previous": "Harmais",
     "next": "Harmamaxa",
+    "redirect": "Armastika",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2369
+        "start": 2369,
+        "end": 2369
       }
     ]
   },
@@ -11500,9 +11585,12 @@
     "lemma": "Harmastus",
     "previous": "Harmamaxa",
     "next": "Harmatelia",
+    "redirect": "Armastika",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2371
+        "start": 2371,
+        "end": 2371
       }
     ]
   },
@@ -11545,9 +11633,12 @@
     "lemma": "Harmatius",
     "previous": "Har(ma)tios",
     "next": "Harmatus",
+    "redirect": "Armatus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2378
+        "start": 2378,
+        "end": 2378
       }
     ]
   },
@@ -11577,9 +11668,12 @@
     "lemma": "Harmene",
     "previous": "Harmedon",
     "next": "Harmiae",
+    "redirect": "Armene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2378
+        "start": 2378,
+        "end": 2378
       }
     ]
   },
@@ -11859,9 +11953,12 @@
     "lemma": "Harmozike",
     "previous": "Harmozeia",
     "next": "Harouso",
+    "redirect": "Armastika",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2395
+        "start": 2395,
+        "end": 2395
       }
     ]
   },
@@ -11869,9 +11966,12 @@
     "lemma": "Harouso",
     "previous": "Harmozike",
     "next": "Harpages graphe",
+    "redirect": "Harauso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2395
+        "start": 2395,
+        "end": 2395
       }
     ]
   },
@@ -11902,9 +12002,12 @@
     "lemma": "Harpagion",
     "previous": "Harpagia",
     "next": "Harpago",
+    "redirect": "Harpagia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2396
+        "start": 2396,
+        "end": 2396
       }
     ]
   },
@@ -12205,9 +12308,12 @@
     "lemma": "Harpinates",
     "previous": "Harpina",
     "next": "Harpleia",
+    "redirect": "Harpina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2409
+        "start": 2409,
+        "end": 2409
       }
     ]
   },
@@ -12461,9 +12567,12 @@
     "lemma": "Harran",
     "previous": "Harra",
     "next": "Harsiesis",
+    "redirect": "Karrai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2431
+        "start": 2431,
+        "end": 2431
       }
     ]
   },
@@ -12482,9 +12591,12 @@
     "lemma": "Harudes",
     "previous": "Harsiesis",
     "next": "Haruspices",
+    "redirect": "Charudes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2431
+        "start": 2431,
+        "end": 2431
       }
     ]
   },
@@ -12847,9 +12959,12 @@
     "lemma": "Hasta 7",
     "previous": "Hasta 6",
     "next": "Hasta pura",
+    "redirect": "Ninnius 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2508
+        "start": 2508,
+        "end": 2508
       }
     ]
   },
@@ -12893,9 +13008,12 @@
     "lemma": "Hastiliarii",
     "previous": "Hastiferi",
     "next": "Haterianus 1",
+    "redirect": "Hasta 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2512
+        "start": 2512,
+        "end": 2512
       }
     ]
   },
@@ -12903,9 +13021,12 @@
     "lemma": "Haterianus 1",
     "previous": "Hastiliarii",
     "next": "Haterianus 2",
+    "redirect": "Iulius 268",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2512
+        "start": 2512,
+        "end": 2512
       }
     ]
   },
@@ -13060,9 +13181,12 @@
     "lemma": "Hatilius",
     "previous": "Hathna",
     "next": "Hatra",
+    "redirect": "Atilius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2516
+        "start": 2516,
+        "end": 2516
       }
     ]
   },
@@ -13082,9 +13206,12 @@
     "lemma": "Hattana",
     "previous": "Hatra",
     "next": "Hauara",
+    "redirect": "Attana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2523
+        "start": 2523,
+        "end": 2523
       }
     ]
   },
@@ -13092,9 +13219,12 @@
     "lemma": "Hauara",
     "previous": "Hattana",
     "next": "Haus",
+    "redirect": "Auara",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2523
+        "start": 2523,
+        "end": 2523
       }
     ]
   },
@@ -13114,9 +13244,12 @@
     "lemma": "Haza",
     "previous": "Haus",
     "next": "He...",
+    "redirect": "Aza 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2546
+        "start": 2546,
+        "end": 2546
       }
     ]
   },
@@ -13215,9 +13348,12 @@
     "lemma": "Hebe 3",
     "previous": "Hebe 2",
     "next": "Hebeterion 1",
+    "redirect": "Ephebia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2584
+        "start": 2584,
+        "end": 2584
       }
     ]
   },
@@ -13291,9 +13427,12 @@
     "lemma": "Hebraei",
     "previous": "Hebon",
     "next": "Hebromagus",
+    "redirect": "Iudaea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2584
+        "start": 2584,
+        "end": 2584
       }
     ]
   },
@@ -13301,9 +13440,12 @@
     "lemma": "Hebromagus",
     "previous": "Hebraei",
     "next": "Hebron",
+    "redirect": "Eburomagus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2584
+        "start": 2584,
+        "end": 2584
       }
     ]
   },
@@ -13449,9 +13591,12 @@
     "lemma": "Hedoniker",
     "previous": "Hedna",
     "next": "Hedraios",
+    "redirect": "Kyrenaiker",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2592
+        "start": 2592,
+        "end": 2592
       }
     ]
   },
@@ -13483,9 +13628,12 @@
     "lemma": "Hedylion",
     "previous": "Hedyle",
     "next": "Hedylos 1",
+    "redirect": "Hadylion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2592
+        "start": 2592,
+        "end": 2592
       }
     ]
   },
@@ -14046,9 +14194,12 @@
     "lemma": "Hegesias 15",
     "previous": "Hegesias 14",
     "next": "Hegesibulos",
+    "redirect": "Hegias 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2608
+        "start": 2608,
+        "end": 2608
       }
     ]
   },
@@ -14079,9 +14230,12 @@
     "lemma": "Hegesikles",
     "previous": "Hegesidemos",
     "next": "Hegesilaos",
+    "redirect": "Agasikles 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2609
+        "start": 2609,
+        "end": 2609
       }
     ]
   },
@@ -14799,9 +14953,12 @@
     "lemma": "Hekatadoros",
     "previous": "Hekaleios",
     "next": "Hekataie",
+    "redirect": "Hypatodoros 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2666
+        "start": 2666,
+        "end": 2666
       }
     ]
   },
@@ -14923,9 +15080,12 @@
     "lemma": "Hekatebolos",
     "previous": "Hekate",
     "next": "Hekatebeletes",
+    "redirect": "Hekebolos, Hekatebolos, Hekatebeletes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2782
+        "start": 2783,
+        "end": 2783
       }
     ]
   },
@@ -14933,9 +15093,12 @@
     "lemma": "Hekatebeletes",
     "previous": "Hekatebolos",
     "next": "Hekates alsos",
+    "redirect": "Hekebolos, Hekatebolos, Hekatebeletes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2783
+        "start": 2783,
+        "end": 2783
       }
     ]
   },
@@ -14955,9 +15118,12 @@
     "lemma": "Hekatesia 1",
     "previous": "Hekates alsos",
     "next": "Hekatesia 2",
+    "redirect": "Hekate",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2784
+        "start": 2784,
+        "end": 2784
       }
     ]
   },
@@ -14987,9 +15153,12 @@
     "lemma": "Hekatodoros 1",
     "previous": "Hekates nesos",
     "next": "Hekatodoros 2",
+    "redirect": "Hekatadoros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2784
+        "start": 2784,
+        "end": 2784
       }
     ]
   },
@@ -15155,9 +15324,12 @@
     "lemma": "Hekatompedos 2",
     "previous": "Hekatompedos 1",
     "next": "Hekatomphonia",
+    "redirect": "Gewichte",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2790
+        "start": 2790,
+        "end": 2790
       }
     ]
   },
@@ -15176,9 +15348,12 @@
     "lemma": "Hekatompodos",
     "previous": "Hekatomphonia",
     "next": "Hekatompylos 1",
+    "redirect": "Hekatompedos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2790
+        "start": 2790,
+        "end": 2790
       }
     ]
   },
@@ -15479,9 +15654,12 @@
     "lemma": "Helega",
     "previous": "Heleeus",
     "next": "Heleia 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2819
+        "start": 2819,
+        "end": 2819
       }
     ]
   },
@@ -15500,9 +15678,12 @@
     "lemma": "Heleia 2",
     "previous": "Heleia 1",
     "next": "Heleios",
+    "redirect": "Helos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2819
+        "start": 2819,
+        "end": 2819
       }
     ]
   },
@@ -15605,9 +15786,12 @@
     "lemma": "Helena 5",
     "previous": "Helena 4",
     "next": "Helenae thermae",
+    "redirect": "Helene 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2823
+        "start": 2823,
+        "end": 2823
       }
     ]
   },
@@ -15933,9 +16117,12 @@
     "lemma": "Helgas",
     "previous": "Ἑλέπολις",
     "next": "Heliadai",
+    "redirect": "Germanikopolis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2849
+        "start": 2849,
+        "end": 2849
       }
     ]
   },
@@ -16101,9 +16288,12 @@
     "lemma": "Helikeia",
     "previous": "Helike 3",
     "next": "Galbanum",
+    "redirect": "Helike 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2862
+        "start": 2862,
+        "end": 2862
       }
     ]
   },
