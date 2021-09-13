@@ -4557,10 +4557,12 @@
     "lemma": "Zadrame",
     "previous": "Zadrakarta",
     "next": "Zadris",
-    "redirect": true,
+    "redirect": "Zaaram",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2219
+        "start": 2219,
+        "end": 2219
       }
     ]
   },
@@ -4636,9 +4638,12 @@
     "lemma": "Zagora, Zagoron",
     "previous": "Zagmais",
     "next": "Zagoron",
+    "redirect": "Zacoria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2221
+        "start": 2221,
+        "end": 2221
       }
     ]
   },
@@ -4692,7 +4697,7 @@
   {
     "lemma": "Zagurae",
     "previous": "Zagru pylai",
-    "next": "Zagylis kome",
+    "next": "Ζαγυλὶς κώμη",
     "chapters": [
       {
         "start": 2288,
@@ -4701,19 +4706,22 @@
     ]
   },
   {
-    "lemma": "Zagylis kome",
+    "lemma": "Ζαγυλὶς κώμη",
     "previous": "Zagurae",
     "next": "Zagystis",
-    "redirect": true,
+    "sort_key": "Zagylis kome",
+    "redirect": "Zagilis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2288
+        "start": 2288,
+        "end": 2288
       }
     ]
   },
   {
     "lemma": "Zagystis",
-    "previous": "Zagylis kome",
+    "previous": "Ζαγυλὶς κώμη",
     "next": "Zaia",
     "chapters": [
       {
@@ -4804,9 +4812,12 @@
     "lemma": "Zakynthos 1",
     "previous": "Zakoros",
     "next": "Zakynthos 2",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2295
+        "start": 2295,
+        "end": 2295
       }
     ]
   },
@@ -4934,7 +4945,7 @@
   {
     "lemma": "Zaleukos",
     "previous": "Zalenoi",
-    "next": "Zalia",
+    "next": "Ζαλία",
     "chapters": [
       {
         "start": 2298,
@@ -4944,18 +4955,22 @@
     ]
   },
   {
-    "lemma": "Zalia",
+    "lemma": "Ζαλία",
     "previous": "Zaleukos",
     "next": "Zaliches",
+    "sort_key": "Zalia",
+    "redirect": "Zeleia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2301
+        "start": 2301,
+        "end": 2301
       }
     ]
   },
   {
     "lemma": "Zaliches",
-    "previous": "Zalia",
+    "previous": "Ζαλία",
     "next": "Zaliskos",
     "chapters": [
       {
@@ -4968,9 +4983,12 @@
     "lemma": "Zaliskos",
     "previous": "Zaliches",
     "next": "Zalissa",
+    "redirect": "Zalekos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2301
+        "start": 2301,
+        "end": 2301
       }
     ]
   },
@@ -5069,9 +5087,12 @@
     "lemma": "Zamares",
     "previous": "Zamareni",
     "next": "Zamaris",
+    "redirect": "Zambrias 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2308
+        "start": 2308,
+        "end": 2308
       }
     ]
   },
@@ -5215,9 +5236,12 @@
     "lemma": "Zamolxis",
     "previous": "Zamnes",
     "next": "Zanaatha",
+    "redirect": "Zalmoxis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -5247,9 +5271,12 @@
     "lemma": "Zange",
     "previous": "Zandalas",
     "next": "Zangenae",
+    "redirect": "Forceps",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -5279,9 +5306,12 @@
     "lemma": "Zankle",
     "previous": "Zania",
     "next": "Zanoi",
+    "redirect": "Messene 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -5289,9 +5319,12 @@
     "lemma": "Zanoi",
     "previous": "Zankle",
     "next": "Zanserio",
+    "redirect": "Makrones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -5310,9 +5343,12 @@
     "lemma": "Zanter",
     "previous": "Zanserio",
     "next": "Zantikos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2314
+        "start": 2314,
+        "end": 2314
       }
     ]
   },
@@ -5364,9 +5400,12 @@
     "lemma": "Zara 2",
     "previous": "Zara 1",
     "next": "Zaradros",
+    "redirect": "Zoara",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2314
+        "start": 2314,
+        "end": 2314
       }
     ]
   },
@@ -5432,9 +5471,12 @@
     "lemma": "Zarangai",
     "previous": "Zarama",
     "next": "Zaranis",
+    "redirect": "Drangai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2317
+        "start": 2317,
+        "end": 2317
       }
     ]
   },
@@ -5453,9 +5495,12 @@
     "lemma": "Zaras",
     "previous": "Zaranis",
     "next": "Zarasa 1",
+    "redirect": "Zaratas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2317
+        "start": 2317,
+        "end": 2317
       }
     ]
   },
@@ -5555,9 +5600,12 @@
     "lemma": "Zareta",
     "previous": "Zarbienos",
     "next": "Zaretis",
+    "redirect": "Azaritia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2324
+        "start": 2324,
+        "end": 2324
       }
     ]
   },
@@ -5576,9 +5624,12 @@
     "lemma": "Zaretra",
     "previous": "Zaretis",
     "next": "Zargidaua",
+    "redirect": "Zarax 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2324
+        "start": 2324,
+        "end": 2324
       }
     ]
   },
@@ -5645,9 +5696,12 @@
     "lemma": "Zaramanochegas",
     "previous": "Zarina",
     "next": "Zarkaion oros",
+    "redirect": "Zarmaros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2329
+        "start": 2329,
+        "end": 2329
       }
     ]
   },
@@ -5880,9 +5934,12 @@
     "lemma": "Zebinas 1",
     "previous": "Zebennos 2",
     "next": "Zebinas 2",
+    "redirect": "Zabinaios, Za(e)binas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2337
+        "start": 2337,
+        "end": 2337
       }
     ]
   },
@@ -5923,9 +5980,12 @@
     "lemma": "Zeilas",
     "previous": "Zechoi",
     "next": "Zeipoites",
+    "redirect": "Ziaelas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2337
+        "start": 2337,
+        "end": 2337
       }
     ]
   },
@@ -5933,9 +5993,12 @@
     "lemma": "Zeipoites",
     "previous": "Zeilas",
     "next": "Zeirenia",
+    "redirect": "Zipoites",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2337
+        "start": 2337,
+        "end": 2337
       }
     ]
   },
@@ -5966,9 +6029,12 @@
     "lemma": "Zeitha",
     "previous": "Zeiritai",
     "next": "Zeitrechnung",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2338
+        "start": 2338,
+        "end": 2338
       }
     ]
   },
@@ -5989,9 +6055,11 @@
     "previous": "Zeitrechnung",
     "next": "Zela 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2472
+        "start": 2472,
+        "end": 2472
       }
     ]
   },
@@ -6033,9 +6101,12 @@
     "lemma": "Zeleia",
     "previous": "Zelasion",
     "next": "Zellia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2473
+        "start": 2473,
+        "end": 2473
       }
     ]
   },
@@ -6043,9 +6114,12 @@
     "lemma": "Zellia",
     "previous": "Zeleia",
     "next": "Zelos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2473
+        "start": 2473,
+        "end": 2473
       }
     ]
   },
@@ -6199,9 +6273,11 @@
     "previous": "Zenas 4",
     "next": "Zenertis",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2500
+        "start": 2500,
+        "end": 2500
       }
     ]
   },
@@ -6210,9 +6286,11 @@
     "previous": "Zenas 5",
     "next": "Zeneus",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2500
+        "start": 2500,
+        "end": 2500
       }
     ]
   },
@@ -6220,9 +6298,12 @@
     "lemma": "Zeneus",
     "previous": "Zenertis",
     "next": "Zeniketes",
+    "redirect": "Zenis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2500
+        "start": 2500,
+        "end": 2500
       }
     ]
   },
