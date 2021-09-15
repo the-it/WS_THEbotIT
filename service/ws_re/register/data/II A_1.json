@@ -872,9 +872,12 @@
     "lemma": "Sartali",
     "previous": "Sarta tecta",
     "next": "Sarte",
+    "redirect": "Sarnali",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 53
+        "start": 53,
+        "end": 53
       }
     ]
   },
@@ -904,10 +907,12 @@
     "lemma": "Sarva",
     "previous": "Sartiaticum",
     "next": "Saruba",
-    "redirect": true,
+    "redirect": "Sabrina 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 53
+        "start": 53,
+        "end": 53
       }
     ]
   },
@@ -926,10 +931,12 @@
     "lemma": "Saruena",
     "previous": "Saruba",
     "next": "Saruensis",
-    "redirect": true,
+    "redirect": "Saravene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 53
+        "start": 53,
+        "end": 53
       }
     ]
   },
@@ -937,10 +944,12 @@
     "lemma": "Saruensis",
     "previous": "Saruena",
     "next": "Sarvix",
-    "redirect": true,
+    "redirect": "Saravus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 53
+        "start": 53,
+        "end": 53
       }
     ]
   },
@@ -1004,10 +1013,12 @@
     "lemma": "Sarus 2",
     "previous": "Sarus 1",
     "next": "Sarxa",
-    "redirect": true,
+    "redirect": "Sagros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 54
+        "start": 54,
+        "end": 54
       }
     ]
   },
@@ -1196,10 +1207,12 @@
     "lemma": "Sassoferrato",
     "previous": "Sassiacus",
     "next": "Sassumini",
-    "redirect": true,
+    "redirect": "Sentinum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 57
+        "start": 57,
+        "end": 57
       }
     ]
   },
@@ -1486,9 +1499,12 @@
     "lemma": "Satira",
     "previous": "Satipreiza (?)",
     "next": "Satiricon",
+    "redirect": "Satura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 63
+        "start": 63,
+        "end": 63
       }
     ]
   },
@@ -1496,9 +1512,12 @@
     "lemma": "Satiricon",
     "previous": "Satira",
     "next": "Satis",
+    "redirect": "Satura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 63
+        "start": 63,
+        "end": 63
       }
     ]
   },
@@ -1551,9 +1570,12 @@
     "lemma": "Sativ-",
     "previous": "Saphnioeis",
     "next": "Satnioeis",
+    "redirect": "Satanacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 79
+        "start": 79,
+        "end": 79
       }
     ]
   },
@@ -1775,7 +1797,7 @@
   {
     "lemma": "Satrius 5",
     "previous": "Satrius 4",
-    "next": "Satrokentai",
+    "next": "Σατροκένται",
     "chapters": [
       {
         "start": 191,
@@ -1784,18 +1806,22 @@
     ]
   },
   {
-    "lemma": "Satrokentai",
+    "lemma": "Σατροκένται",
     "previous": "Satrius 5",
     "next": "Sattagydai",
+    "sort_key": "Satrokentai",
+    "redirect": "Satrai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 191
+        "start": 191,
+        "end": 191
       }
     ]
   },
   {
     "lemma": "Sattagydai",
-    "previous": "Satrokentai",
+    "previous": "Σατροκένται",
     "next": "Sattia",
     "chapters": [
       {
@@ -1977,9 +2003,12 @@
     "lemma": "Saturnia",
     "previous": "Saturnalia",
     "next": "Saturnina",
+    "redirect": "Saturnius, -ia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 211
+        "start": 211,
+        "end": 211
       }
     ]
   },
@@ -1998,9 +2027,12 @@
     "lemma": "Saturninius",
     "previous": "Saturnina",
     "next": "Saturninus",
+    "redirect": "Salutius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 211
+        "start": 211,
+        "end": 211
       }
     ]
   },
@@ -2398,9 +2430,12 @@
     "lemma": "Satyros 1",
     "previous": "Satyron oros",
     "next": "Satyros 2",
+    "redirect": "Silenos, Satyros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 224
+        "start": 224,
+        "end": 224
       }
     ]
   },
@@ -3095,9 +3130,12 @@
     "lemma": "Säule",
     "previous": "Saul",
     "next": "Sauliacus",
+    "redirect": "Stylos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 259
+        "start": 259,
+        "end": 259
       }
     ]
   },
@@ -3117,9 +3155,12 @@
     "lemma": "Saulieu",
     "previous": "Sauliacus",
     "next": "Saulonum",
+    "redirect": "Sidoloucus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 260
+        "start": 260,
+        "end": 260
       }
     ]
   },
@@ -3149,9 +3190,12 @@
     "lemma": "Saumur",
     "previous": "Saulus",
     "next": "Sauna",
+    "redirect": "Salmurium, Salmurus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 260
+        "start": 260,
+        "end": 260
       }
     ]
   },
@@ -3170,9 +3214,12 @@
     "lemma": "Saunium 1",
     "previous": "Sauna",
     "next": "Saunium 2",
+    "redirect": "Samnium 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 260
+        "start": 260,
+        "end": 260
       }
     ]
   },
@@ -3202,9 +3249,12 @@
     "lemma": "Savoia, Savoyen",
     "previous": "Savo",
     "next": "Savonellius",
+    "redirect": "Sapaudia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 260
+        "start": 260,
+        "end": 260
       }
     ]
   },
@@ -3224,9 +3274,12 @@
     "lemma": "Savonnière",
     "previous": "Savonellius",
     "next": "Saur(...)",
+    "redirect": "Saponaria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 261
+        "start": 261,
+        "end": 261
       }
     ]
   },
@@ -3323,9 +3376,12 @@
     "lemma": "Sauromatae",
     "previous": "Sauromakes",
     "next": "Sauromates, Sauromatae",
+    "redirect": "Sarmatae 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 263
+        "start": 263,
+        "end": 263
       }
     ]
   },
@@ -3594,9 +3650,12 @@
     "lemma": "Saxsanus",
     "previous": "Saxonon nesoi",
     "next": "Saxsetanus",
+    "redirect": "Saxanus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 334
+        "start": 334,
+        "end": 334
       }
     ]
   },
@@ -3604,9 +3663,12 @@
     "lemma": "Saxsetanus",
     "previous": "Saxsanus",
     "next": "Saxula",
+    "redirect": "Saxanus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 334
+        "start": 334,
+        "end": 334
       }
     ]
   },
@@ -3614,9 +3676,12 @@
     "lemma": "Saxula",
     "previous": "Saxsetanus",
     "next": "Saxum ferreum",
+    "redirect": "Cluvius 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 334
+        "start": 334,
+        "end": 334
       }
     ]
   },
@@ -3958,9 +4023,12 @@
     "lemma": "Scamcia",
     "previous": "Scallabis",
     "next": "Scammos",
+    "redirect": "Scancia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 350
+        "start": 350,
+        "end": 350
       }
     ]
   },
@@ -3991,9 +4059,12 @@
     "lemma": "Scampenses",
     "previous": "Scamnum",
     "next": "Scampis",
+    "redirect": "Scampis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 351
+        "start": 351,
+        "end": 351
       }
     ]
   },
@@ -4034,9 +4105,12 @@
     "lemma": "Scandia, Scandinavia, Scandza",
     "previous": "Scancia",
     "next": "Scandilius, P.",
+    "redirect": "Scadinavia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 351
+        "start": 351,
+        "end": 351
       }
     ]
   },
@@ -4099,9 +4173,12 @@
     "lemma": "Scantia 3",
     "previous": "Scantia 2",
     "next": "Scantia silva",
+    "redirect": "Scancia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 352
+        "start": 352,
+        "end": 352
       }
     ]
   },
@@ -4187,9 +4264,12 @@
     "lemma": "Scapiana",
     "previous": "Scantius, M. 2",
     "next": "Scapitani",
+    "redirect": "Scarpiana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 353
+        "start": 353,
+        "end": 353
       }
     ]
   },
@@ -4197,9 +4277,12 @@
     "lemma": "Scapitani",
     "previous": "Scapiana",
     "next": "Scaponna",
+    "redirect": "Saeprus fluvius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 353
+        "start": 353,
+        "end": 353
       }
     ]
   },
@@ -4207,9 +4290,12 @@
     "lemma": "Scaponna",
     "previous": "Scapitani",
     "next": "Scaptius 1",
+    "redirect": "Scarponna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 353
+        "start": 353,
+        "end": 353
       }
     ]
   },
@@ -4283,9 +4369,12 @@
     "lemma": "Scarabaeus",
     "previous": "Scapula 3",
     "next": "Scaras",
+    "redirect": "Skarabäen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 354
+        "start": 354,
+        "end": 354
       }
     ]
   },
@@ -4328,9 +4417,12 @@
     "lemma": "Scarbantio",
     "previous": "Scarbantia",
     "next": "Scarbia",
+    "redirect": "Scarbantia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 356
+        "start": 356,
+        "end": 356
       }
     ]
   },
@@ -4361,9 +4453,12 @@
     "lemma": "Scardonitanus",
     "previous": "Scardona",
     "next": "Scarniunga",
+    "redirect": "Scardona",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 357
+        "start": 357,
+        "end": 357
       }
     ]
   },
@@ -4393,9 +4488,12 @@
     "lemma": "Scarpis",
     "previous": "Scarpiana",
     "next": "Scarponna",
+    "redirect": "Scarb",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 357
+        "start": 357,
+        "end": 357
       }
     ]
   },
@@ -4449,9 +4547,12 @@
     "lemma": "Scato 1",
     "previous": "Scatebra",
     "next": "Scato 2",
+    "redirect": "Vettius 16",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 365
+        "start": 365,
+        "end": 365
       }
     ]
   },
@@ -4470,9 +4571,12 @@
     "lemma": "Scatras",
     "previous": "Scato 2",
     "next": "Scatris",
+    "redirect": "Soatris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 365
+        "start": 365,
+        "end": 365
       }
     ]
   },
@@ -4480,9 +4584,12 @@
     "lemma": "Scatris",
     "previous": "Scatras",
     "next": "Scauriacus",
+    "redirect": "Soatris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 365
+        "start": 365,
+        "end": 365
       }
     ]
   },
@@ -4501,9 +4608,12 @@
     "lemma": "Scaurinus",
     "previous": "Scauriacus",
     "next": "Scaurus 1",
+    "redirect": "Terentius 69",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 365
+        "start": 365,
+        "end": 365
       }
     ]
   },
@@ -4556,9 +4666,12 @@
     "lemma": "Scelatiti",
     "previous": "Sceffeacus",
     "next": "Scellius?",
+    "redirect": "Selatiti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 367
+        "start": 367,
+        "end": 367
       }
     ]
   },
@@ -4577,9 +4690,12 @@
     "lemma": "Scena",
     "previous": "Scellius?",
     "next": "Scenae 1",
+    "redirect": "Skene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 367
+        "start": 367,
+        "end": 367
       }
     ]
   },
@@ -4621,9 +4737,12 @@
     "lemma": "Scene",
     "previous": "Scenae 3",
     "next": "Scenitae",
+    "redirect": "Skenai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 368
+        "start": 368,
+        "end": 368
       }
     ]
   },
@@ -4653,9 +4772,12 @@
     "lemma": "Sceptici",
     "previous": "Scenobardus",
     "next": "Sceptrum",
+    "redirect": "Skeptiker",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 368
+        "start": 368,
+        "end": 368
       }
     ]
   },
@@ -4731,9 +4853,12 @@
     "lemma": "Schahpuhri",
     "previous": "Schaf",
     "next": "Schakal",
+    "redirect": "Sapor 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 399
+        "start": 399,
+        "end": 399
       }
     ]
   },
@@ -4753,16 +4878,19 @@
     "lemma": "Schapur",
     "previous": "Schakal",
     "next": "Schedae",
+    "redirect": "Sapor 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 401
+        "start": 401,
+        "end": 401
       }
     ]
   },
   {
     "lemma": "Schedae",
     "previous": "Schapur",
-    "next": "Schedeion",
+    "next": "Σχεδεῖον",
     "chapters": [
       {
         "start": 401,
@@ -4772,18 +4900,22 @@
     ]
   },
   {
-    "lemma": "Schedeion",
+    "lemma": "Σχεδεῖον",
     "previous": "Schedae",
     "next": "Schedia 1",
+    "sort_key": "Schedeion",
+    "redirect": "Schedios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 401
+        "start": 401,
+        "end": 401
       }
     ]
   },
   {
     "lemma": "Schedia 1",
-    "previous": "Schedeion",
+    "previous": "Σχεδεῖον",
     "next": "Schedia 2",
     "chapters": [
       {
@@ -4899,9 +5031,12 @@
     "lemma": "Scheria",
     "previous": "Schera",
     "next": "Scherie",
+    "redirect": "Scherie",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 406
+        "start": 406,
+        "end": 406
       }
     ]
   },
@@ -5248,9 +5383,12 @@
     "lemma": "Schneehuhn",
     "previous": "Schnecke",
     "next": "Schnepfe",
+    "redirect": "Lagopus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 614
+        "start": 614,
+        "end": 614
       }
     ]
   },
@@ -5281,9 +5419,12 @@
     "lemma": "Schoineis 1",
     "previous": "Schoineia",
     "next": "Schoineis 2",
+    "redirect": "Schoineia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 615
+        "start": 615,
+        "end": 615
       }
     ]
   },
@@ -5433,7 +5574,7 @@
   {
     "lemma": "Schoineus goegr 6",
     "previous": "Schoineus geogr 9",
-    "next": "Schoiniis",
+    "next": "Σχοινιίς",
     "chapters": [
       {
         "start": 617,
@@ -5442,18 +5583,22 @@
     ]
   },
   {
-    "lemma": "Schoiniis",
+    "lemma": "Σχοινιίς",
     "previous": "Schoineus goegr 6",
     "next": "Schoiniklos",
+    "sort_key": "Schoiniis",
+    "redirect": "Schoineis 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
   {
     "lemma": "Schoiniklos",
-    "previous": "Schoiniis",
+    "previous": "Σχοινιίς",
     "next": "Schoinikos",
     "chapters": [
       {
@@ -5466,16 +5611,19 @@
     "lemma": "Schoinikos",
     "previous": "Schoiniklos",
     "next": "Schoinitas",
+    "redirect": "Schoiniklos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
   {
     "lemma": "Schoinitas",
     "previous": "Schoinikos",
-    "next": "Schoinobates",
+    "next": "Σχοινοβάτης",
     "chapters": [
       {
         "start": 618,
@@ -5484,19 +5632,23 @@
     ]
   },
   {
-    "lemma": "Schoinobates",
+    "lemma": "Σχοινοβάτης",
     "previous": "Schoinitas",
     "next": "Schoinophylinda",
+    "sort_key": "Schoinobates",
+    "redirect": "Nethrobates",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
   {
     "lemma": "Schoinophylinda",
-    "previous": "Schoinobates",
-    "next": "Schoinos",
+    "previous": "Σχοινοβάτης",
+    "next": "Σχοῖνος",
     "chapters": [
       {
         "start": 618,
@@ -5505,9 +5657,9 @@
     ]
   },
   {
-    "lemma": "Schoinos",
+    "lemma": "Σχοῖνος",
     "previous": "Schoinophylinda",
-    "next": "Schoinous",
+    "next": "Σχοινοῦς",
     "chapters": [
       {
         "start": 618
@@ -5515,22 +5667,29 @@
     ]
   },
   {
-    "lemma": "Schoinous",
-    "previous": "Schoinos",
+    "lemma": "Σχοινοῦς",
+    "previous": "Σχοῖνος",
     "next": "Schola 1",
+    "sort_key": "Schoinous",
+    "redirect": "Schoineus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
   {
     "lemma": "Schola 1",
-    "previous": "Schoinous",
+    "previous": "Σχοινοῦς",
     "next": "Schola 2",
+    "redirect": "Schulen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
@@ -5538,9 +5697,12 @@
     "lemma": "Schola 2",
     "previous": "Schola 1",
     "next": "Schola 3",
+    "redirect": "Scholae palatinae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
@@ -5806,9 +5968,12 @@
     "lemma": "Schwertwal",
     "previous": "Schwertfisch",
     "next": "Scia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 818
+        "start": 818,
+        "end": 818
       }
     ]
   },
@@ -5816,9 +5981,12 @@
     "lemma": "Scia",
     "previous": "Schwertwal",
     "next": "Sciathis",
+    "redirect": "Scetis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 818
+        "start": 818,
+        "end": 818
       }
     ]
   },
@@ -5826,9 +5994,12 @@
     "lemma": "Sciathis",
     "previous": "Scia",
     "next": "Sciffa",
+    "redirect": "Skiathis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 819
+        "start": 819,
+        "end": 819
       }
     ]
   },
@@ -5847,9 +6018,12 @@
     "lemma": "Scillacaeum",
     "previous": "Sciffa",
     "next": "Scillium",
+    "redirect": "Scyllaeum 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 819
+        "start": 819,
+        "end": 819
       }
     ]
   },
@@ -5904,9 +6078,12 @@
     "lemma": "Scinasium",
     "previous": "Scimpodium",
     "next": "Scingomagus",
+    "redirect": "Semuncla",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 822
+        "start": 822,
+        "end": 822
       }
     ]
   },
@@ -6016,9 +6193,12 @@
     "lemma": "Sciritae",
     "previous": "Sciri",
     "next": "Scironia Saxa",
+    "redirect": "Skiratai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 825
+        "start": 825,
+        "end": 825
       }
     ]
   },
@@ -6150,9 +6330,12 @@
     "lemma": "Scobre",
     "previous": "Scobis",
     "next": "Scociacus",
+    "redirect": "Scodra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 828
+        "start": 828,
+        "end": 828
       }
     ]
   },
@@ -6183,9 +6366,12 @@
     "lemma": "Scodrenses",
     "previous": "Scodra",
     "next": "Scodris",
+    "redirect": "Scodra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 829
+        "start": 829,
+        "end": 829
       }
     ]
   },
@@ -6193,9 +6379,12 @@
     "lemma": "Scodris",
     "previous": "Scodrenses",
     "next": "Scodrus mons",
+    "redirect": "Scodra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 829
+        "start": 829,
+        "end": 829
       }
     ]
   },
@@ -6203,9 +6392,12 @@
     "lemma": "Scodrus mons",
     "previous": "Scodris",
     "next": "Scoedius",
+    "redirect": "Skardon oros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 829
+        "start": 829,
+        "end": 829
       }
     ]
   },
@@ -6225,9 +6417,12 @@
     "lemma": "Scolacium",
     "previous": "Scoedius",
     "next": "Scolacius",
+    "redirect": "Scylletium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 830
+        "start": 830,
+        "end": 830
       }
     ]
   },
@@ -6235,10 +6430,12 @@
     "lemma": "Scolacius",
     "previous": "Scolacium",
     "next": "Scolidoas",
-    "redirect": true,
+    "redirect": "Scylletium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 830
+        "start": 830,
+        "end": 830
       }
     ]
   },
@@ -6346,9 +6543,12 @@
     "lemma": "Scopius 2",
     "previous": "Scopius 1",
     "next": "Scopli m.",
+    "redirect": "Skopas 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 831
+        "start": 831,
+        "end": 831
       }
     ]
   },
@@ -6390,9 +6590,12 @@
     "lemma": "Scordus",
     "previous": "Scordisci",
     "next": "Scorobres",
+    "redirect": "Skardon oros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 835
+        "start": 835,
+        "end": 835
       }
     ]
   },
@@ -6456,9 +6659,12 @@
     "lemma": "Scoti, Scotia",
     "previous": "Scot.",
     "next": "Scotingorum pagus",
+    "redirect": "Scotti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 837
+        "start": 837,
+        "end": 837
       }
     ]
   },
@@ -6489,9 +6695,12 @@
     "lemma": "Scotium",
     "previous": "Scotinus",
     "next": "Scotius",
+    "redirect": "Scittium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 838
+        "start": 838,
+        "end": 838
       }
     ]
   },
@@ -6499,9 +6708,12 @@
     "lemma": "Scotius",
     "previous": "Scotium",
     "next": "Scotnus",
+    "redirect": "Scottius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 838
+        "start": 838,
+        "end": 838
       }
     ]
   },
@@ -6509,9 +6721,12 @@
     "lemma": "Scotnus",
     "previous": "Scotius",
     "next": "Scotta",
+    "redirect": "Scotinus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 838
+        "start": 838,
+        "end": 838
       }
     ]
   },
@@ -6542,9 +6757,12 @@
     "lemma": "Scottici canes",
     "previous": "Scotti",
     "next": "Scottius",
+    "redirect": "Scotti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 846
+        "start": 846,
+        "end": 846
       }
     ]
   },
@@ -6598,9 +6816,12 @@
     "lemma": "Scotus",
     "previous": "Scottus 2",
     "next": "Scptae",
+    "redirect": "Scottius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 848
+        "start": 848,
+        "end": 848
       }
     ]
   },
@@ -6608,9 +6829,12 @@
     "lemma": "Scptae",
     "previous": "Scotus",
     "next": "Scretisca",
+    "redirect": "Scoptitia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 848
+        "start": 848,
+        "end": 848
       }
     ]
   },
@@ -7105,10 +7329,12 @@
     "lemma": "Scriniarius",
     "previous": "Scridifinni",
     "next": "Scrinium",
-    "redirect": true,
+    "redirect": "Scrinium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 893
+        "start": 893,
+        "end": 893
       }
     ]
   },
@@ -7128,10 +7354,12 @@
     "lemma": "Scriptores",
     "previous": "Scrinium",
     "next": "Scriptores historiae Augustae",
-    "redirect": true,
+    "redirect": "Scriba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 904
+        "start": 904,
+        "end": 904
       }
     ]
   },
@@ -7139,10 +7367,12 @@
     "lemma": "Scriptores historiae Augustae",
     "previous": "Scriptores",
     "next": "Scriptulum 1",
-    "redirect": true,
+    "redirect": "Historia Augusta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 904
+        "start": 904,
+        "end": 904
       }
     ]
   },
@@ -7150,10 +7380,12 @@
     "lemma": "Scriptulum 1",
     "previous": "Scriptores historiae Augustae",
     "next": "Scriptulum 2",
-    "redirect": true,
+    "redirect": "Scrupulus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 904
+        "start": 904,
+        "end": 904
       }
     ]
   },
@@ -7161,10 +7393,12 @@
     "lemma": "Scriptulum 2",
     "previous": "Scriptulum 1",
     "next": "Scriptura",
-    "redirect": true,
+    "redirect": "Scripulum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 904
+        "start": 904,
+        "end": 904
       }
     ]
   },
@@ -7365,9 +7599,12 @@
     "lemma": "Scunis",
     "previous": "Scultenna",
     "next": "Scuntra",
+    "redirect": "Scupi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 909
+        "start": 909,
+        "end": 909
       }
     ]
   },
@@ -7387,9 +7624,12 @@
     "lemma": "Scupenses",
     "previous": "Scuntra",
     "next": "Scupi",
+    "redirect": "Scupi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 910
+        "start": 910,
+        "end": 910
       }
     ]
   },
@@ -7408,9 +7648,12 @@
     "lemma": "Scupiliacus",
     "previous": "Scupi",
     "next": "Scupis",
+    "redirect": "Scubiliacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 910
+        "start": 910,
+        "end": 910
       }
     ]
   },
@@ -7418,9 +7661,12 @@
     "lemma": "Scupis",
     "previous": "Scupiliacus",
     "next": "Scupus",
+    "redirect": "Scupi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 910
+        "start": 910,
+        "end": 910
       }
     ]
   },
@@ -7428,9 +7674,12 @@
     "lemma": "Scupus",
     "previous": "Scupis",
     "next": "Scurgum",
+    "redirect": "Scupi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 911
+        "start": 911,
+        "end": 911
       }
     ]
   },
@@ -7484,9 +7733,12 @@
     "lemma": "Scuattara",
     "previous": "Scutara",
     "next": "Scutarii",
+    "redirect": "Scutara",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 913
+        "start": 913,
+        "end": 913
       }
     ]
   },
@@ -7494,9 +7746,12 @@
     "lemma": "Scutarii",
     "previous": "Scuattara",
     "next": "Scutarius 1",
+    "redirect": "Scholae palatinae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 913
+        "start": 913,
+        "end": 913
       }
     ]
   },
@@ -7550,9 +7805,12 @@
     "lemma": "Scylacius",
     "previous": "Scutum",
     "next": "Scyle",
+    "redirect": "Skylakios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 920
+        "start": 920,
+        "end": 920
       }
     ]
   },
@@ -7571,9 +7829,12 @@
     "lemma": "Scylla",
     "previous": "Scyle",
     "next": "Scyllaceum",
+    "redirect": "Skylla 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 920
+        "start": 920,
+        "end": 920
       }
     ]
   },
@@ -7581,9 +7842,12 @@
     "lemma": "Scyllaceum",
     "previous": "Scylla",
     "next": "Scyllaceus sinus",
+    "redirect": "Scylletium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 920
+        "start": 920,
+        "end": 920
       }
     ]
   },
@@ -7591,9 +7855,12 @@
     "lemma": "Scyllaceus sinus",
     "previous": "Scyllaceum",
     "next": "Scyllae",
+    "redirect": "Scylletium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 920
+        "start": 920,
+        "end": 920
       }
     ]
   },
@@ -7601,9 +7868,12 @@
     "lemma": "Scyllae",
     "previous": "Scyllaceus sinus",
     "next": "Scyllaeum 1",
+    "redirect": "Skyllai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 920
+        "start": 920,
+        "end": 920
       }
     ]
   },
@@ -7703,9 +7973,12 @@
     "lemma": "Scythophorius",
     "previous": "Scythini",
     "next": "Scythopolis",
+    "redirect": "Skirophorion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 947
+        "start": 947,
+        "end": 947
       }
     ]
   },
@@ -7728,9 +8001,12 @@
     "lemma": "Scythotauri",
     "previous": "Scythopolis",
     "next": "Sdaleites",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 949
+        "start": 949,
+        "end": 949
       }
     ]
   },
@@ -7760,9 +8036,12 @@
     "lemma": "Sea",
     "previous": "Se.",
     "next": "Searo",
+    "redirect": "Saea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 949
+        "start": 949,
+        "end": 949
       }
     ]
   },
@@ -7770,16 +8049,19 @@
     "lemma": "Searo",
     "previous": "Sea",
     "next": "Sebaciaria, Sebaciarius",
+    "redirect": "Siarum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 949
+        "start": 949,
+        "end": 949
       }
     ]
   },
   {
     "lemma": "Sebaciaria, Sebaciarius",
     "previous": "Searo",
-    "next": "Sebagena",
+    "next": "Σεβάγηνα",
     "chapters": [
       {
         "start": 949,
@@ -7789,18 +8071,22 @@
     ]
   },
   {
-    "lemma": "Sebagena",
+    "lemma": "Σεβάγηνα",
     "previous": "Sebaciaria, Sebaciarius",
     "next": "Sebagini",
+    "sort_key": "Sebagena",
+    "redirect": "Euagena",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 950
+        "start": 950,
+        "end": 950
       }
     ]
   },
   {
     "lemma": "Sebagini",
-    "previous": "Sebagena",
+    "previous": "Σεβάγηνα",
     "next": "Sebana",
     "chapters": [
       {
@@ -7858,9 +8144,12 @@
     "lemma": "Sebaste 3",
     "previous": "Sebaste 2",
     "next": "Sebaste 4",
+    "redirect": "Kabe(i)ra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 952
+        "start": 952,
+        "end": 952
       }
     ]
   },
@@ -7868,9 +8157,12 @@
     "lemma": "Sebaste 4",
     "previous": "Sebaste 3",
     "next": "Sebaste 5",
+    "redirect": "Ankyra 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 952
+        "start": 952,
+        "end": 952
       }
     ]
   },
@@ -8229,9 +8521,12 @@
     "lemma": "Seberritae",
     "previous": "Sebereia",
     "next": "Sebethis",
+    "redirect": "Sebritai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 964
+        "start": 964,
+        "end": 964
       }
     ]
   },
@@ -8350,7 +8645,7 @@
   {
     "lemma": "Sebriapa",
     "previous": "Sebosus 5",
-    "next": "Sebridai",
+    "next": "Σεβρίδαι",
     "chapters": [
       {
         "start": 968,
@@ -8359,18 +8654,22 @@
     ]
   },
   {
-    "lemma": "Sebridai",
+    "lemma": "Σεβρίδαι",
     "previous": "Sebriapa",
     "next": "Sebritai",
+    "sort_key": "Sebridai",
+    "redirect": "Sebritai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 968
+        "start": 968,
+        "end": 968
       }
     ]
   },
   {
     "lemma": "Sebritai",
-    "previous": "Sebridai",
+    "previous": "Σεβρίδαι",
     "next": "Sebros",
     "chapters": [
       {
@@ -8406,9 +8705,12 @@
     "lemma": "Sebuinum",
     "previous": "Sebuini",
     "next": "Sebulon",
+    "redirect": "Sebuini",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 969
+        "start": 969,
+        "end": 969
       }
     ]
   },
@@ -8476,9 +8778,12 @@
     "lemma": "Secanis",
     "previous": "Secande",
     "next": "Secanium",
+    "redirect": "Sechoniense",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 970
+        "start": 970,
+        "end": 970
       }
     ]
   },
@@ -8520,10 +8825,12 @@
     "lemma": "Secchia",
     "previous": "Seccannehae",
     "next": "Secco 1",
-    "redirect": true,
+    "redirect": "Secia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 972
+        "start": 972,
+        "end": 972
       }
     ]
   },
@@ -8554,9 +8861,12 @@
     "lemma": "Secconium",
     "previous": "Secco 2",
     "next": "Secelus",
+    "redirect": "Sechoniense",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 973
+        "start": 973,
+        "end": 973
       }
     ]
   },
@@ -8666,9 +8976,12 @@
     "lemma": "Secies",
     "previous": "Secia 3",
     "next": "Seckingen",
+    "redirect": "Secia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 977
+        "start": 977,
+        "end": 977
       }
     ]
   },
@@ -8676,9 +8989,12 @@
     "lemma": "Seckingen",
     "previous": "Secies",
     "next": "Seckmauern",
+    "redirect": "Sechoniense",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 977
+        "start": 977,
+        "end": 977
       }
     ]
   },
@@ -8698,9 +9014,12 @@
     "lemma": "Seco",
     "previous": "Seckmauern",
     "next": "Secona",
+    "redirect": "Secco 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 978
+        "start": 978,
+        "end": 978
       }
     ]
   },
@@ -8708,9 +9027,12 @@
     "lemma": "Secona",
     "previous": "Seco",
     "next": "Second-",
+    "redirect": "Sequana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 978
+        "start": 978,
+        "end": 978
       }
     ]
   },
@@ -8741,9 +9063,12 @@
     "lemma": "Secorigienses",
     "previous": "Secor",
     "next": "Secretariacus",
+    "redirect": "Segorigium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 979
+        "start": 979,
+        "end": 979
       }
     ]
   },
@@ -8808,9 +9133,12 @@
     "lemma": "Secuana",
     "previous": "Secu....",
     "next": "Secula",
+    "redirect": "Sequana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 983
+        "start": 983,
+        "end": 983
       }
     ]
   },
@@ -8818,9 +9146,12 @@
     "lemma": "Secula",
     "previous": "Secuana",
     "next": "Secun..., ...inius",
+    "redirect": "Secia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 983
+        "start": 983,
+        "end": 983
       }
     ]
   },
@@ -9447,9 +9778,12 @@
     "lemma": "Securispa",
     "previous": "Securisca",
     "next": "Securitas",
+    "redirect": "Securisca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1000
+        "start": 1000,
+        "end": 1000
       }
     ]
   },
@@ -9503,9 +9837,12 @@
     "lemma": "Secusiaui",
     "previous": "Securus 3",
     "next": "Secusses",
+    "redirect": "Segusiavi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1004
+        "start": 1004,
+        "end": 1004
       }
     ]
   },
@@ -9546,9 +9883,12 @@
     "lemma": "Secutor tribuni",
     "previous": "Secutor 2",
     "next": "Seda",
+    "redirect": "Secutor 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1004
+        "start": 1004,
+        "end": 1004
       }
     ]
   },
@@ -9568,9 +9908,12 @@
     "lemma": "Sedaciacus",
     "previous": "Seda",
     "next": "Sedala",
+    "redirect": "Sedatiacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1005
+        "start": 1005,
+        "end": 1005
       }
     ]
   },
@@ -9634,9 +9977,12 @@
     "lemma": "Sedatianus",
     "previous": "Sedatiacus",
     "next": "Sedatinus, -ius",
+    "redirect": "Sedatus b",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1006
+        "start": 1006,
+        "end": 1006
       }
     ]
   },
@@ -9644,9 +9990,12 @@
     "lemma": "Sedatinus, -ius",
     "previous": "Sedatianus",
     "next": "Sedatius 1",
+    "redirect": "Sedatus b",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1006
+        "start": 1006,
+        "end": 1006
       }
     ]
   },
@@ -9677,9 +10026,12 @@
     "lemma": "Sedatius 3",
     "previous": "Sedatius 2",
     "next": "Sedatius 4",
+    "redirect": "Velleius 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1010
+        "start": 1010,
+        "end": 1010
       }
     ]
   },
@@ -9687,9 +10039,12 @@
     "lemma": "Sedatius 4",
     "previous": "Sedatius 3",
     "next": "Sedatus a",
+    "redirect": "Sedatus b",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1010
+        "start": 1010,
+        "end": 1010
       }
     ]
   },
@@ -9732,9 +10087,12 @@
     "lemma": "Sedelaucus",
     "previous": "Seddoneos",
     "next": "Sedelensis",
+    "redirect": "Sidoloucus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1021
+        "start": 1021,
+        "end": 1021
       }
     ]
   },
@@ -9764,9 +10122,12 @@
     "lemma": "Sedetani",
     "previous": "Sedena",
     "next": "Sediae",
+    "redirect": "Edetani",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1021
+        "start": 1021,
+        "end": 1021
       }
     ]
   },
@@ -9785,9 +10146,12 @@
     "lemma": "Sediboniates",
     "previous": "Sediae",
     "next": "Sediboviates",
+    "redirect": "Sediboviates",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1021
+        "start": 1021,
+        "end": 1021
       }
     ]
   },
@@ -9863,9 +10227,12 @@
     "lemma": "Sedon-",
     "previous": "Sedne",
     "next": "Sedularco",
+    "redirect": "Seduni",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1024
+        "start": 1024,
+        "end": 1024
       }
     ]
   },
@@ -9975,9 +10342,12 @@
     "lemma": "Seefeder",
     "previous": "Seeanemone",
     "next": "Seegurke",
+    "redirect": "Koralle",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1034
+        "start": 1034,
+        "end": 1034
       }
     ]
   },
@@ -9985,9 +10355,12 @@
     "lemma": "Seegurke",
     "previous": "Seefeder",
     "next": "Seeigel",
+    "redirect": "Seewalze",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1034
+        "start": 1034,
+        "end": 1034
       }
     ]
   },
@@ -9995,9 +10368,12 @@
     "lemma": "Seeigel",
     "previous": "Seegurke",
     "next": "Seele",
+    "redirect": "Echinos 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1034
+        "start": 1034,
+        "end": 1034
       }
     ]
   },
@@ -10005,9 +10381,12 @@
     "lemma": "Seele",
     "previous": "Seeigel",
     "next": "Seelilie",
+    "redirect": "Psyche 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1034
+        "start": 1034,
+        "end": 1034
       }
     ]
   },
@@ -10015,9 +10394,12 @@
     "lemma": "Seelilie",
     "previous": "Seele",
     "next": "Seenadel",
+    "redirect": "Seestern",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1034
+        "start": 1034,
+        "end": 1034
       }
     ]
   },
@@ -10037,9 +10419,12 @@
     "lemma": "Seenelke",
     "previous": "Seenadel",
     "next": "Seepferdchen",
+    "redirect": "Seeanemone",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1035
+        "start": 1035,
+        "end": 1035
       }
     ]
   },
@@ -10071,9 +10456,12 @@
     "lemma": "Seerose",
     "previous": "Seeraub (Seeräuber, Seeräuberei)",
     "next": "Sées",
+    "redirect": "Seeanemone",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1042
+        "start": 1042,
+        "end": 1042
       }
     ]
   },
@@ -10183,9 +10571,12 @@
     "lemma": "Segadunon",
     "previous": "Seg(...)",
     "next": "Segallauni, Segovellauni",
+    "redirect": "Segodunum 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1047
+        "start": 1047,
+        "end": 1047
       }
     ]
   },
@@ -10205,9 +10596,12 @@
     "lemma": "Segasmala",
     "previous": "Segallauni, Segovellauni",
     "next": "Segeda 1",
+    "redirect": "Egasmala",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1049
+        "start": 1049,
+        "end": 1049
       }
     ]
   },
@@ -10248,9 +10642,12 @@
     "lemma": "Segedunum",
     "previous": "Segeda 3",
     "next": "Segeia",
+    "redirect": "Segodunum 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1049
+        "start": 1049,
+        "end": 1049
       }
     ]
   },
@@ -10326,9 +10723,12 @@
     "lemma": "Segest-",
     "previous": "Segessera",
     "next": "Segesta 1",
+    "redirect": "Segustero",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1055
+        "start": 1055,
+        "end": 1055
       }
     ]
   },
@@ -10371,9 +10771,12 @@
     "lemma": "Segester",
     "previous": "Segesta 3",
     "next": "Segestes",
+    "redirect": "Segustero",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1070
+        "start": 1070,
+        "end": 1070
       }
     ]
   },
@@ -10393,9 +10796,12 @@
     "lemma": "Segestica 1",
     "previous": "Segestes",
     "next": "Segestica 2",
+    "redirect": "Siscia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1071
+        "start": 1071,
+        "end": 1071
       }
     ]
   },
@@ -10436,7 +10842,7 @@
   {
     "lemma": "Seggera",
     "previous": "Segetia",
-    "next": "Sengidon",
+    "next": "Σεγγιδών",
     "chapters": [
       {
         "start": 1072,
@@ -10445,18 +10851,22 @@
     ]
   },
   {
-    "lemma": "Sengidon",
+    "lemma": "Σεγγιδών",
     "previous": "Seggera",
     "next": "Seggo",
+    "sort_key": "Sengidon",
+    "redirect": "Singidunum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1072
+        "start": 1072,
+        "end": 1072
       }
     ]
   },
   {
     "lemma": "Seggo",
-    "previous": "Sengidon",
+    "previous": "Σεγγιδών",
     "next": "Segia",
     "chapters": [
       {
@@ -10580,9 +10990,12 @@
     "lemma": "Segist-",
     "previous": "Segisamunculum",
     "next": "Segister",
+    "redirect": "Segustero",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1074
+        "start": 1074,
+        "end": 1074
       }
     ]
   },
@@ -10590,9 +11003,12 @@
     "lemma": "Segister",
     "previous": "Segist-",
     "next": "Segisu",
+    "redirect": "Segustero",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1074
+        "start": 1074,
+        "end": 1074
       }
     ]
   },
@@ -10612,9 +11028,12 @@
     "lemma": "Segisvultus",
     "previous": "Segisu",
     "next": "Segithank",
+    "redirect": "Sigisvultus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1075
+        "start": 1075,
+        "end": 1075
       }
     ]
   },
@@ -10622,9 +11041,12 @@
     "lemma": "Segithank",
     "previous": "Segisvultus",
     "next": "Segius",
+    "redirect": "Sesithacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1075
+        "start": 1075,
+        "end": 1075
       }
     ]
   },
@@ -10666,9 +11088,12 @@
     "lemma": "Segobi(i ?)",
     "previous": "Segnini",
     "next": "Segobodium",
+    "redirect": "Segovii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1076
+        "start": 1076,
+        "end": 1076
       }
     ]
   },
@@ -10814,9 +11239,12 @@
     "lemma": "Segona",
     "previous": "Segomo",
     "next": "Segonciacus",
+    "redirect": "Sequana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1084
+        "start": 1084,
+        "end": 1084
       }
     ]
   },
@@ -11188,9 +11616,12 @@
     "lemma": "Segusio 2",
     "previous": "Segusio 1",
     "next": "Segusion",
+    "redirect": "Segusion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1107
+        "start": 1107,
+        "end": 1107
       }
     ]
   },
@@ -11256,9 +11687,12 @@
     "lemma": "Segutius",
     "previous": "Segustrum",
     "next": "Sei",
+    "redirect": "Segusius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1111
+        "start": 1111,
+        "end": 1111
       }
     ]
   },
@@ -11289,9 +11723,12 @@
     "lemma": "Seia 2",
     "previous": "Seia 1",
     "next": "Seia Isaurica",
+    "redirect": "Secia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1112
+        "start": 1112,
+        "end": 1112
       }
     ]
   },
@@ -11320,9 +11757,12 @@
     "lemma": "Seide",
     "previous": "Seianus",
     "next": "Seife",
+    "redirect": "Serica",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1112
+        "start": 1112,
+        "end": 1112
       }
     ]
   },
@@ -11521,9 +11961,12 @@
     "lemma": "Seius 10",
     "previous": "Seius 9",
     "next": "Seius 11",
+    "redirect": "Mustela 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1124
+        "start": 1124,
+        "end": 1124
       }
     ]
   },
@@ -11884,9 +12327,12 @@
     "lemma": "Selbyssini",
     "previous": "Selbstmord",
     "next": "Sele 1",
+    "redirect": "Elbestioi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1135
+        "start": 1135,
+        "end": 1135
       }
     ]
   },
@@ -11906,9 +12352,12 @@
     "lemma": "Sele 2",
     "previous": "Sele 1",
     "next": "Selemnos",
+    "redirect": "Sile 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1136
+        "start": 1136,
+        "end": 1136
       }
     ]
   },
@@ -11939,9 +12388,12 @@
     "lemma": "Selene 2",
     "previous": "Selene 1",
     "next": "Selene 3",
+    "redirect": "Kleopatra 23",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1144
+        "start": 1144,
+        "end": 1144
       }
     ]
   },
@@ -12049,9 +12501,12 @@
     "lemma": "Seleucus",
     "previous": "Seleuciana",
     "next": "Seleucus mons",
+    "redirect": "Seleukos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1145
+        "start": 1145,
+        "end": 1145
       }
     ]
   },

@@ -8771,9 +8771,12 @@
     "lemma": "Salues, Salui, Saluvii",
     "previous": "Salventius 2",
     "next": "Salvia 1",
+    "redirect": "Salluvi, Salyes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2016
+        "start": 2016,
+        "end": 2016
       }
     ]
   },
@@ -8970,9 +8973,12 @@
     "lemma": "Salvinus",
     "previous": "Salvinianus",
     "next": "Salvistius",
+    "redirect": "Silvanus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2022
+        "start": 2022,
+        "end": 2022
       }
     ]
   },
@@ -9135,9 +9141,12 @@
     "lemma": "Salvius 13",
     "previous": "Salvius 12",
     "next": "Salvius 14",
+    "redirect": "Ventidius 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2023
+        "start": 2023,
+        "end": 2023
       }
     ]
   },
@@ -9341,9 +9350,12 @@
     "lemma": "Salurnis",
     "previous": "Salurnae",
     "next": "Salus 1",
+    "redirect": "Salurnae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2057
+        "start": 2057,
+        "end": 2057
       }
     ]
   },
@@ -9363,9 +9375,12 @@
     "lemma": "Salus 2",
     "previous": "Salus 1",
     "next": "Salutaris 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2059
+        "start": 2059,
+        "end": 2059
       }
     ]
   },
@@ -9527,9 +9542,12 @@
     "lemma": "Salzig",
     "previous": "Salzburg",
     "next": "Sam...",
+    "redirect": "Salisio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2099
+        "start": 2099,
+        "end": 2099
       }
     ]
   },
@@ -9642,9 +9660,12 @@
     "lemma": "Samarabriva",
     "previous": "Samarabiae",
     "next": "Samarade",
+    "redirect": "Samarobriva",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2102
+        "start": 2102,
+        "end": 2102
       }
     ]
   },
@@ -9717,9 +9738,12 @@
     "lemma": "Samba",
     "previous": "Samas",
     "next": "Sambalaka 1",
+    "redirect": "Sambia, Samba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2119
+        "start": 2119,
+        "end": 2119
       }
     ]
   },
@@ -9748,7 +9772,7 @@
   {
     "lemma": "Sambana",
     "previous": "Sambalaka 2",
-    "next": "Sambastai",
+    "next": "Σαμβασταί",
     "chapters": [
       {
         "start": 2119,
@@ -9757,18 +9781,22 @@
     ]
   },
   {
-    "lemma": "Sambastai",
+    "lemma": "Σαμβασταί",
     "previous": "Sambana",
     "next": "Sambatai",
+    "sort_key": "Sambastai",
+    "redirect": "Sabarcae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2119
+        "start": 2119,
+        "end": 2119
       }
     ]
   },
   {
     "lemma": "Sambatai",
-    "previous": "Sambastai",
+    "previous": "Σαμβασταί",
     "next": "Sambatistai",
     "chapters": [
       {
@@ -9781,9 +9809,12 @@
     "lemma": "Sambatistai",
     "previous": "Sambatai",
     "next": "Sambethe",
+    "redirect": "Sabbatistai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2119
+        "start": 2119,
+        "end": 2119
       }
     ]
   },
@@ -9941,9 +9972,12 @@
     "lemma": "Sambri",
     "previous": "Sambracitanus sinus",
     "next": "Sambroka",
+    "redirect": "Sesambri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2124
+        "start": 2124,
+        "end": 2124
       }
     ]
   },
@@ -10075,16 +10109,19 @@
     "lemma": "Samia 3",
     "previous": "Samia 2",
     "next": "Samia 4",
+    "redirect": "Samos 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2127
+        "start": 2127,
+        "end": 2127
       }
     ]
   },
   {
     "lemma": "Samia 4",
     "previous": "Samia 3",
-    "next": "Samiakos",
+    "next": "Σαμιακός",
     "chapters": [
       {
         "start": 2127,
@@ -10094,22 +10131,29 @@
     ]
   },
   {
-    "lemma": "Samiakos",
+    "lemma": "Σαμιακός",
     "previous": "Samia 4",
     "next": "Samiarii",
+    "sort_key": "Samiakos",
+    "redirect": "Samos 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2128
+        "start": 2128,
+        "end": 2128
       }
     ]
   },
   {
     "lemma": "Samiarii",
-    "previous": "Samiakos",
+    "previous": "Σαμιακός",
     "next": "Samiarius",
+    "redirect": "Samiatores",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2128
+        "start": 2128,
+        "end": 2128
       }
     ]
   },
@@ -10127,7 +10171,7 @@
   {
     "lemma": "Samiatores",
     "previous": "Samiarius",
-    "next": "Samikeus",
+    "next": "Σαμικεύς",
     "chapters": [
       {
         "start": 2128,
@@ -10137,38 +10181,50 @@
     ]
   },
   {
-    "lemma": "Samikeus",
+    "lemma": "Σαμικεύς",
     "previous": "Samiatores",
-    "next": "Samikos",
+    "next": "Σαμικός",
+    "sort_key": "Samikeus",
+    "redirect": "Samos 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2128
+        "start": 2128,
+        "end": 2128
       }
     ]
   },
   {
-    "lemma": "Samikos",
-    "previous": "Samikeus",
-    "next": "Samikon",
+    "lemma": "Σαμικός",
+    "previous": "Σαμικεύς",
+    "next": "Σαμικόν",
+    "sort_key": "Samikos",
+    "redirect": "Samos 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2128
+        "start": 2128,
+        "end": 2128
       }
     ]
   },
   {
-    "lemma": "Samikon",
-    "previous": "Samikos",
+    "lemma": "Σαμικόν",
+    "previous": "Σαμικός",
     "next": "Saminthos",
+    "sort_key": "Samikon",
+    "redirect": "Samos 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2129
+        "start": 2129,
+        "end": 2129
       }
     ]
   },
   {
     "lemma": "Saminthos",
-    "previous": "Samikon",
+    "previous": "Σαμικόν",
     "next": "Samios 1",
     "chapters": [
       {
@@ -10203,9 +10259,12 @@
     "lemma": "Samiramis",
     "previous": "Samios 2",
     "next": "Sammachi",
+    "redirect": "Semiramis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2129
+        "start": 2129,
+        "end": 2129
       }
     ]
   },
@@ -10213,9 +10272,12 @@
     "lemma": "Sammachi",
     "previous": "Samiramis",
     "next": "Sammitai",
+    "redirect": "Sakane",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2129
+        "start": 2129,
+        "end": 2129
       }
     ]
   },
@@ -10223,9 +10285,13 @@
     "lemma": "Sammitai",
     "previous": "Sammachi",
     "next": "Sammonicus",
+    "sort_key": "Sammitai",
+    "redirect": "Samnitai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2129
+        "start": 2129,
+        "end": 2129
       }
     ]
   },
@@ -10245,9 +10311,12 @@
     "lemma": "Samnei",
     "previous": "Sammonicus",
     "next": "Sammuges",
+    "redirect": "Samenoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2129
+        "start": 2129,
+        "end": 2129
       }
     ]
   },
@@ -10255,9 +10324,12 @@
     "lemma": "Sammuges",
     "previous": "Samnei",
     "next": "Samnagenses",
+    "redirect": "Saosdouchinos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2131
+        "start": 2131,
+        "end": 2131
       }
     ]
   },
@@ -10276,9 +10348,12 @@
     "lemma": "Samnagetes",
     "previous": "Samnagenses",
     "next": "Samnes",
+    "redirect": "Samnagenses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2131
+        "start": 2131,
+        "end": 2131
       }
     ]
   },
@@ -10369,9 +10444,12 @@
     "lemma": "Samnum",
     "previous": "Samnius Priscus",
     "next": "Samo",
+    "redirect": "Samnium 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2159
+        "start": 2159,
+        "end": 2159
       }
     ]
   },
@@ -10467,9 +10545,12 @@
     "lemma": "Samorna",
     "previous": "Samonion",
     "next": "Samornia",
+    "redirect": "Samonia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2160
+        "start": 2160,
+        "end": 2160
       }
     ]
   },
@@ -10806,9 +10887,12 @@
     "lemma": "Sanadapa",
     "previous": "Sana 4",
     "next": "Sanagenses",
+    "redirect": "Sagadava",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2229
+        "start": 2229,
+        "end": 2229
       }
     ]
   },
@@ -10826,7 +10910,7 @@
   {
     "lemma": "Sanais",
     "previous": "Sanagenses",
-    "next": "Sanake",
+    "next": "Σανάκη",
     "chapters": [
       {
         "start": 2229,
@@ -10835,18 +10919,22 @@
     ]
   },
   {
-    "lemma": "Sanake",
+    "lemma": "Σανάκη",
     "previous": "Sanais",
     "next": "Sanaos",
+    "sort_key": "Sanake",
+    "redirect": "Sakane",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2229
+        "start": 2229,
+        "end": 2229
       }
     ]
   },
   {
     "lemma": "Sanaos",
-    "previous": "Sanake",
+    "previous": "Σανάκη",
     "next": "Sanape",
     "chapters": [
       {
@@ -10894,9 +10982,12 @@
     "lemma": "Sanatrukes 1",
     "previous": "Sanates",
     "next": "Sanatrukes 2",
+    "redirect": "Sinatrukes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2231
+        "start": 2231,
+        "end": 2231
       }
     ]
   },
@@ -10973,9 +11064,12 @@
     "lemma": "Sancidapa",
     "previous": "Sanciacus",
     "next": "Sancta",
+    "redirect": "Sagadava",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2245
+        "start": 2245,
+        "end": 2245
       }
     ]
   },
@@ -10983,9 +11077,12 @@
     "lemma": "Sancta",
     "previous": "Sancidapa",
     "next": "Sanctiacus",
+    "redirect": "Considius 17",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2245
+        "start": 2245,
+        "end": 2245
       }
     ]
   },
@@ -10993,9 +11090,12 @@
     "lemma": "Sanctiacus",
     "previous": "Sancta",
     "next": "Sanctio 1",
+    "redirect": "Sansiacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2245
+        "start": 2245,
+        "end": 2245
       }
     ]
   },
@@ -11015,9 +11115,12 @@
     "lemma": "Sanctio 2",
     "previous": "Sanctio 1",
     "next": "Sanctio 3",
+    "redirect": "pragmatica sanctio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2246
+        "start": 2246,
+        "end": 2246
       }
     ]
   },
@@ -11049,9 +11152,12 @@
     "lemma": "Sanctoni",
     "previous": "Sanctitas",
     "next": "Sanctus 1",
+    "redirect": "Santoni, Santones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2248
+        "start": 2248,
+        "end": 2248
       }
     ]
   },
@@ -11115,7 +11221,7 @@
   {
     "lemma": "Sancus, Semo",
     "previous": "Sanctus 5",
-    "next": "Sandabal",
+    "next": "Σανδαβάλ",
     "chapters": [
       {
         "start": 2252,
@@ -11125,18 +11231,22 @@
     ]
   },
   {
-    "lemma": "Sandabal",
+    "lemma": "Σανδαβάλ",
     "previous": "Sancus, Semo",
     "next": "Sandaina",
+    "sort_key": "Sandabal",
+    "redirect": "Akesines 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2256
+        "start": 2256,
+        "end": 2256
       }
     ]
   },
   {
     "lemma": "Sandaina",
-    "previous": "Sandabal",
+    "previous": "Σανδαβάλ",
     "next": "Sandake",
     "chapters": [
       {
@@ -11160,9 +11270,12 @@
     "lemma": "Sandakos",
     "previous": "Sandake",
     "next": "Sandalia",
+    "redirect": "Sandon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2256
+        "start": 2256,
+        "end": 2256
       }
     ]
   },
@@ -11226,7 +11339,7 @@
   {
     "lemma": "Sandalion 3",
     "previous": "Sandalion 2",
-    "next": "Sandana",
+    "next": "Σάνδανα",
     "chapters": [
       {
         "start": 2262,
@@ -11235,18 +11348,22 @@
     ]
   },
   {
-    "lemma": "Sandana",
+    "lemma": "Σάνδανα",
     "previous": "Sandalion 3",
     "next": "Sandapila",
+    "sort_key": "Sandana",
+    "redirect": "Sangidava",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2262
+        "start": 2262,
+        "end": 2262
       }
     ]
   },
   {
     "lemma": "Sandapila",
-    "previous": "Sandana",
+    "previous": "Σάνδανα",
     "next": "Sandarake",
     "chapters": [
       {
@@ -11280,7 +11397,7 @@
   {
     "lemma": "Sandario",
     "previous": "Sandarakourgion",
-    "next": "Sandaoua",
+    "next": "Σανδάουα",
     "chapters": [
       {
         "start": 2262,
@@ -11290,22 +11407,29 @@
     ]
   },
   {
-    "lemma": "Sandaoua",
+    "lemma": "Σανδάουα",
     "previous": "Sandario",
     "next": "Sandas",
+    "sort_key": "Sandaoua",
+    "redirect": "Sangidava",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2263
+        "start": 2263,
+        "end": 2263
       }
     ]
   },
   {
     "lemma": "Sandas",
-    "previous": "Sandaoua",
+    "previous": "Σανδάουα",
     "next": "Sande",
+    "redirect": "Sandon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2263
+        "start": 2263,
+        "end": 2263
       }
     ]
   },
@@ -11324,9 +11448,12 @@
     "lemma": "Sanderva",
     "previous": "Sande",
     "next": "Sandes",
+    "redirect": "Anderba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2263
+        "start": 2263,
+        "end": 2263
       }
     ]
   },
@@ -11334,9 +11461,12 @@
     "lemma": "Sandes",
     "previous": "Sanderva",
     "next": "Sandil",
+    "redirect": "Sandon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2263
+        "start": 2263,
+        "end": 2263
       }
     ]
   },
@@ -11388,9 +11518,13 @@
     "lemma": "Sandokandai",
     "previous": "Sandobanes",
     "next": "Sandokes",
+    "sort_key": "Sandokandai",
+    "redirect": "Sindokanda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2263
+        "start": 2263,
+        "end": 2263
       }
     ]
   },
@@ -11409,9 +11543,12 @@
     "lemma": "Sandokos",
     "previous": "Sandokes",
     "next": "Sandon 1",
+    "redirect": "Sandon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2264
+        "start": 2264,
+        "end": 2264
       }
     ]
   },
@@ -11498,9 +11635,12 @@
     "lemma": "Sandura",
     "previous": "Sandrokottos",
     "next": "Saneia",
+    "redirect": "Andura 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2269
+        "start": 2269,
+        "end": 2269
       }
     ]
   },
@@ -11698,9 +11838,12 @@
     "lemma": "Sanis",
     "previous": "Sanina 2",
     "next": "Sanisene",
+    "redirect": "Sanaos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2283
+        "start": 2283,
+        "end": 2283
       }
     ]
   },
@@ -11730,9 +11873,12 @@
     "lemma": "Sanisium",
     "previous": "Sanisera",
     "next": "Sanitium",
+    "redirect": "Sanitium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2283
+        "start": 2283,
+        "end": 2283
       }
     ]
   },
@@ -11783,9 +11929,12 @@
     "lemma": "Sanni",
     "previous": "Sannat",
     "next": "Sannina",
+    "redirect": "Makrones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2284
+        "start": 2284,
+        "end": 2284
       }
     ]
   },
@@ -11827,9 +11976,12 @@
     "lemma": "Sannus",
     "previous": "Sannona",
     "next": "Sannyrion",
+    "redirect": "Salinae 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2285
+        "start": 2285,
+        "end": 2285
       }
     ]
   },
@@ -11859,9 +12011,12 @@
     "lemma": "Sanona",
     "previous": "Sanomus",
     "next": "Sanos",
+    "redirect": "Sannona",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2286
+        "start": 2286,
+        "end": 2286
       }
     ]
   },
@@ -11936,9 +12091,12 @@
     "lemma": "Sansiacus",
     "previous": "Sansat",
     "next": "Santelec",
+    "redirect": "Santiacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2287
+        "start": 2287,
+        "end": 2287
       }
     ]
   },
@@ -12105,9 +12263,12 @@
     "lemma": "Saoconna",
     "previous": "Saocithum",
     "next": "Saoke, Saokes, Saokis",
+    "redirect": "Sauconna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2303
+        "start": 2303,
+        "end": 2303
       }
     ]
   },
@@ -12115,9 +12276,12 @@
     "lemma": "Saoke, Saokes, Saokis",
     "previous": "Saoconna",
     "next": "Saokoras",
+    "redirect": "Samothrake",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2303
+        "start": 2303,
+        "end": 2303
       }
     ]
   },
@@ -12136,10 +12300,12 @@
     "lemma": "Saon 1",
     "previous": "Saokoras",
     "next": "Saon 2",
-    "redirect": true,
+    "redirect": "Samothrake",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2303
+        "start": 2303,
+        "end": 2303
       }
     ]
   },
@@ -12169,9 +12335,12 @@
     "lemma": "Saône",
     "previous": "Saon 3",
     "next": "Saon(os?)",
+    "redirect": "Sauconna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2303
+        "start": 2303,
+        "end": 2303
       }
     ]
   },
@@ -12200,9 +12369,13 @@
     "lemma": "Saos",
     "previous": "Saoros",
     "next": "Saosdouchinos",
+    "sort_key": "Saos",
+    "redirect": "Samas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2304
+        "start": 2304,
+        "end": 2304
       }
     ]
   },
@@ -12789,9 +12962,12 @@
     "lemma": "Sappinates",
     "previous": "Sappi",
     "next": "Sappo",
+    "redirect": "Sapis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2385
+        "start": 2385,
+        "end": 2385
       }
     ]
   },
@@ -12934,9 +13110,12 @@
     "lemma": "Sarabastrae",
     "previous": "Saraballa",
     "next": "Sarabis",
+    "redirect": "Arabastrae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2386
+        "start": 2386,
+        "end": 2386
       }
     ]
   },
@@ -13056,7 +13235,7 @@
   {
     "lemma": "Saraka 3",
     "previous": "Saraka 2",
-    "next": "Sarakaurakoi",
+    "next": "Σαρακαύρακοι",
     "chapters": [
       {
         "start": 2390,
@@ -13065,18 +13244,22 @@
     ]
   },
   {
-    "lemma": "Sarakaurakoi",
+    "lemma": "Σαρακαύρακοι",
     "previous": "Saraka 3",
     "next": "Sarake",
+    "sort_key": "Sarakaurakoi",
+    "redirect": "Sakarauloi, Sakaurakoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2390
+        "start": 2390,
+        "end": 2390
       }
     ]
   },
   {
     "lemma": "Sarake",
-    "previous": "Sarakaurakoi",
+    "previous": "Σαρακαύρακοι",
     "next": "Sarakon",
     "chapters": [
       {
@@ -13122,7 +13305,7 @@
   {
     "lemma": "Saralium",
     "previous": "Saralapis",
-    "next": "Saralos 1",
+    "next": "Σάραλος 1",
     "chapters": [
       {
         "start": 2391,
@@ -13131,28 +13314,36 @@
     ]
   },
   {
-    "lemma": "Saralos 1",
+    "lemma": "Σάραλος 1",
     "previous": "Saralium",
-    "next": "Saralos 2",
+    "next": "Σάραλος 2",
+    "sort_key": "Saralos",
+    "redirect": "Saralium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2391
+        "start": 2391,
+        "end": 2391
       }
     ]
   },
   {
-    "lemma": "Saralos 2",
-    "previous": "Saralos 1",
+    "lemma": "Σάραλος 2",
+    "previous": "Σάραλος 1",
     "next": "Saramanne",
+    "sort_key": "Saralos",
+    "redirect": "Salaros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2391
+        "start": 2391,
+        "end": 2391
       }
     ]
   },
   {
     "lemma": "Saramanne",
-    "previous": "Saralos 2",
+    "previous": "Σάραλος 2",
     "next": "Saramene",
     "chapters": [
       {
@@ -13345,9 +13536,12 @@
     "lemma": "Saraucae",
     "previous": "Sararra",
     "next": "Saraucus vicus",
+    "redirect": "Sacaraucae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2426
+        "start": 2426,
+        "end": 2426
       }
     ]
   },
@@ -13422,9 +13616,12 @@
     "lemma": "Sarbanissa",
     "previous": "Sarbane",
     "next": "Sarbina",
+    "redirect": "Barbanissa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2433
+        "start": 2433,
+        "end": 2433
       }
     ]
   },
@@ -13465,9 +13662,12 @@
     "lemma": "Sarcapos",
     "previous": "Sarbis",
     "next": "Sarcavis",
+    "redirect": "Saeprus fluvius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2434
+        "start": 2434,
+        "end": 2434
       }
     ]
   },
@@ -13713,26 +13913,33 @@
   {
     "lemma": "Sardica",
     "previous": "Sardiates",
-    "next": "Sardike",
+    "next": "Σαρδική",
+    "redirect": "Serdica 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2480
+        "start": 2480,
+        "end": 2480
       }
     ]
   },
   {
-    "lemma": "Sardike",
+    "lemma": "Σαρδική",
     "previous": "Sardica",
     "next": "Sardinia",
+    "sort_key": "Sardike",
+    "redirect": "Serdica 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2480
+        "start": 2480,
+        "end": 2480
       }
     ]
   },
   {
     "lemma": "Sardinia",
-    "previous": "Sardike",
+    "previous": "Σαρδική",
     "next": "Sardius 1",
     "chapters": [
       {
@@ -13768,9 +13975,12 @@
     "lemma": "Sardona",
     "previous": "Sardius 2",
     "next": "Sardones",
+    "redirect": "Scardona",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2496
+        "start": 2496,
+        "end": 2496
       }
     ]
   },
@@ -13914,9 +14124,12 @@
     "lemma": "Sargantha",
     "previous": "Σαρεπτηνός",
     "next": "Sargarausene",
+    "redirect": "Serguntia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2498
+        "start": 2498,
+        "end": 2498
       }
     ]
   },
@@ -13946,9 +14159,12 @@
     "lemma": "Sargatioi",
     "previous": "Sargathon",
     "next": "Sargetae",
+    "redirect": "Satarchae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2498
+        "start": 2498,
+        "end": 2498
       }
     ]
   },
@@ -13956,9 +14172,12 @@
     "lemma": "Sargetae",
     "previous": "Sargatioi",
     "next": "Sargetia",
+    "redirect": "Satarchae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2498
+        "start": 2498,
+        "end": 2498
       }
     ]
   },
@@ -14023,9 +14242,12 @@
     "lemma": "Sariapis",
     "previous": "Saria",
     "next": "Saricevus",
+    "redirect": "Saralapis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2514
+        "start": 2514,
+        "end": 2514
       }
     ]
   },
@@ -14168,9 +14390,12 @@
     "lemma": "Sarmagana",
     "previous": "Sarlatum",
     "next": "Σαρμαλία",
+    "redirect": "Saramanne",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2542
+        "start": 2542,
+        "end": 2542
       }
     ]
   },
