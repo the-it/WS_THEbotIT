@@ -372,28 +372,35 @@
   {
     "lemma": "Psebo chora",
     "previous": "Psebaia ore",
-    "next": "Psebo limne",
+    "next": "Ψεβώ λίμνη",
+    "sort_key": "Psebo chora",
+    "redirect": "Psebaia ore",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1322,
-        "author": "Treidler"
+        "end": 1322,
+        "author": "Hans Treidler."
       }
     ]
   },
   {
-    "lemma": "Psebo limne",
+    "lemma": "Ψεβώ λίμνη",
     "previous": "Psebo chora",
     "next": "Psegas",
-    "redirect": true,
+    "sort_key": "Psebo limne",
+    "redirect": "Psebaia ore",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1322
+        "start": 1322,
+        "end": 1322
       }
     ]
   },
   {
     "lemma": "Psegas",
-    "previous": "Psebo limne",
+    "previous": "Ψεβώ λίμνη",
     "next": "Pseggipta",
     "chapters": [
       {

@@ -1675,9 +1675,12 @@
     "lemma": "Kelados",
     "previous": "Keladone",
     "next": "Keladusa",
+    "redirect": "Keladon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 133
+        "start": 133,
+        "end": 133
       }
     ]
   },
@@ -2181,9 +2184,12 @@
     "lemma": "Kelto",
     "previous": "Keltine",
     "next": "Keltoi",
+    "redirect": "Keltine",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2191,9 +2197,12 @@
     "lemma": "Keltoi",
     "previous": "Kelto",
     "next": "Kelusa",
+    "redirect": "Galli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2201,9 +2210,12 @@
     "lemma": "Kelusa",
     "previous": "Keltoi",
     "next": "Kelydnos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2669,9 +2681,12 @@
     "lemma": "Kephale 2",
     "previous": "Kephale 1",
     "next": "Kephalen",
+    "redirect": "Ionia 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 190
+        "start": 190,
+        "end": 190
       }
     ]
   },
@@ -2815,9 +2830,12 @@
     "lemma": "Kephalon",
     "previous": "Kephaloidion",
     "next": "Kephalonesos",
+    "redirect": "Hegesianax 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 217
+        "start": 217,
+        "end": 217
       }
     ]
   },
@@ -2940,9 +2958,12 @@
     "lemma": "Kephisias",
     "previous": "Kephisia",
     "next": "Kephisios",
+    "redirect": "Kaphisias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
@@ -3480,7 +3501,7 @@
   {
     "lemma": "Kepranos",
     "previous": "Kepouroi",
-    "next": "Keprelon Neon",
+    "next": "Κεπρήλων Νέων",
     "chapters": [
       {
         "start": 252,
@@ -3489,18 +3510,22 @@
     ]
   },
   {
-    "lemma": "Keprelon Neon",
+    "lemma": "Κεπρήλων Νέων",
     "previous": "Kepranos",
     "next": "Keraeitai",
+    "sort_key": "Keprelon Neon",
+    "redirect": "Kestroi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 252
+        "start": 252,
+        "end": 252
       }
     ]
   },
   {
     "lemma": "Keraeitai",
-    "previous": "Keprelon Neon",
+    "previous": "Κεπρήλων Νέων",
     "next": "Keraia, Kerea, Kereai, Kereia 1",
     "chapters": [
       {
@@ -3591,9 +3616,12 @@
     "lemma": "Kerameis 1",
     "previous": "Kerameios",
     "next": "Kerameis 2",
+    "redirect": "Δῆμοι",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
@@ -3749,9 +3777,12 @@
     "lemma": "Keras 4",
     "previous": "Keras 3",
     "next": "Kerasa",
+    "redirect": "Kotyle 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 264
+        "start": 264,
+        "end": 264
       }
     ]
   },
@@ -4130,9 +4161,12 @@
     "lemma": "Kerchneia",
     "previous": "Kerbonios",
     "next": "Kerchnis",
+    "redirect": "Kenchreai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 284
+        "start": 284,
+        "end": 284
       }
     ]
   },
@@ -4140,9 +4174,12 @@
     "lemma": "Kerchnis",
     "previous": "Kerchneia",
     "next": "Kerdemporos",
+    "redirect": "Kenchreai 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 284
+        "start": 284,
+        "end": 284
       }
     ]
   },
@@ -4500,9 +4537,12 @@
     "lemma": "Kerkides",
     "previous": "Kerkidas 2",
     "next": "Kerkinas",
+    "redirect": "Theatron 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 309
+        "start": 309,
+        "end": 309
       }
     ]
   },
@@ -4510,9 +4550,12 @@
     "lemma": "Kerkinas",
     "previous": "Kerkides",
     "next": "Kerkine",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 309
+        "start": 309,
+        "end": 309
       }
     ]
   },
@@ -4610,9 +4653,12 @@
     "lemma": "Kerkuros",
     "previous": "Kerkops",
     "next": "Kerkyon 1",
+    "redirect": "Cercurus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 314
+        "start": 314,
+        "end": 314
       }
     ]
   },
@@ -4699,9 +4745,12 @@
     "lemma": "Kernophoros",
     "previous": "Kerne nesos",
     "next": "Kernos",
+    "redirect": "Kernos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 316
+        "start": 316,
+        "end": 316
       }
     ]
   },
@@ -4766,9 +4815,12 @@
     "lemma": "Keron 2",
     "previous": "Keron 1",
     "next": "Keros",
+    "redirect": "Kereus, Keron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 328
+        "start": 328,
+        "end": 328
       }
     ]
   },
@@ -4776,9 +4828,13 @@
     "lemma": "Keros",
     "previous": "Keron 2",
     "next": "Kerossos",
+    "redirect": "Keraia, Kerea, Kereai, Kereia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 328
+        "start": 328,
+        "end": 328,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4796,7 +4852,7 @@
   {
     "lemma": "Kersa",
     "previous": "Kerossos",
-    "next": "Kersaion",
+    "next": "Κερσαῖον",
     "chapters": [
       {
         "start": 328,
@@ -4805,18 +4861,22 @@
     ]
   },
   {
-    "lemma": "Kersaion",
+    "lemma": "Κερσαῖον",
     "previous": "Kersa",
     "next": "Kersobleptes",
+    "sort_key": "Kersaion",
+    "redirect": "Kersa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 328
+        "start": 328,
+        "end": 328
       }
     ]
   },
   {
     "lemma": "Kersobleptes",
-    "previous": "Kersaion",
+    "previous": "Κερσαῖον",
     "next": "Kersos",
     "chapters": [
       {
@@ -4830,9 +4890,12 @@
     "lemma": "Kersos",
     "previous": "Kersobleptes",
     "next": "Kersullos",
+    "redirect": "Karsos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 330
+        "start": 330,
+        "end": 330
       }
     ]
   },
@@ -4929,9 +4992,12 @@
     "lemma": "Keryllianos",
     "previous": "Kerykte",
     "next": "Keryneia 1",
+    "redirect": "Fabius 63",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 342
+        "start": 342,
+        "end": 342
       }
     ]
   },
@@ -5032,9 +5098,12 @@
     "lemma": "Kesareon",
     "previous": "Keryza",
     "next": "Kesbedion",
+    "redirect": "Kaisarios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 357
+        "start": 357,
+        "end": 357
       }
     ]
   },
@@ -5333,9 +5402,12 @@
     "lemma": "Ketis",
     "previous": "Ketion",
     "next": "Keto 1",
+    "redirect": "K(i)etis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 364
+        "start": 364,
+        "end": 364
       }
     ]
   },
@@ -5443,7 +5515,7 @@
   {
     "lemma": "Kia",
     "previous": "Keyx",
-    "next": "Kiabros potamos",
+    "next": "Κιαβρὸς ποταμός",
     "chapters": [
       {
         "start": 374,
@@ -5452,22 +5524,29 @@
     ]
   },
   {
-    "lemma": "Kiabros potamos",
+    "lemma": "Κιαβρὸς ποταμός",
     "previous": "Kia",
     "next": "Kiakis",
+    "sort_key": "Kiabros potamos",
+    "redirect": "Cebrus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 374
+        "start": 374,
+        "end": 374
       }
     ]
   },
   {
     "lemma": "Kiakis",
-    "previous": "Kiabros potamos",
+    "previous": "Κιαβρὸς ποταμός",
     "next": "Kianika",
+    "redirect": "Ciaca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 374
+        "start": 374,
+        "end": 374
       }
     ]
   },
@@ -5475,9 +5554,12 @@
     "lemma": "Kianika",
     "previous": "Kiakis",
     "next": "Kianis",
+    "redirect": "Ciaca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 374
+        "start": 374,
+        "end": 374
       }
     ]
   },
@@ -5597,9 +5679,12 @@
     "lemma": "Kichyros 3",
     "previous": "Kichyros 2",
     "next": "Kichyros 4",
+    "redirect": "Ephyre 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 378
+        "start": 378,
+        "end": 378
       }
     ]
   },
