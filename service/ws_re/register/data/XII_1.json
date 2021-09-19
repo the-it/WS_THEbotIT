@@ -2081,7 +2081,7 @@
   {
     "lemma": "Kysselis",
     "previous": "Kysis",
-    "next": "Kyssus",
+    "next": "Κυσσοῦς",
     "chapters": [
       {
         "start": 207,
@@ -2090,19 +2090,22 @@
     ]
   },
   {
-    "lemma": "Kyssus",
+    "lemma": "Κυσσοῦς",
     "previous": "Kysselis",
     "next": "Kytaion",
-    "redirect": true,
+    "sort_key": "Kyssus",
+    "redirect": "Kissus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 207
+        "start": 207,
+        "end": 207
       }
     ]
   },
   {
     "lemma": "Kytaion",
-    "previous": "Kyssus",
+    "previous": "Κυσσοῦς",
     "next": "Kythera 1",
     "chapters": [
       {
@@ -2185,10 +2188,12 @@
     "lemma": "Kytheris 1",
     "previous": "Kytherios, Kytheros",
     "next": "Kytheris 2",
-    "redirect": true,
+    "redirect": "Volumna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 218
+        "start": 218,
+        "end": 218
       }
     ]
   },
@@ -2433,10 +2438,12 @@
     "lemma": "Laas",
     "previous": "Laarchos",
     "next": "Lab 1",
-    "redirect": true,
+    "redirect": "Las",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 238
+        "start": 238,
+        "end": 238
       }
     ]
   },
@@ -2466,10 +2473,12 @@
     "lemma": "Lab 3",
     "previous": "Lab 2",
     "next": "Laba",
-    "redirect": true,
+    "redirect": "Labio 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 238
+        "start": 238,
+        "end": 238
       }
     ]
   },
@@ -2961,10 +2970,12 @@
     "lemma": "Laberius 18",
     "previous": "Laberius 17",
     "next": "Laberius 19",
-    "redirect": true,
+    "redirect": "Lusius 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
@@ -2972,10 +2983,12 @@
     "lemma": "Laberius 19",
     "previous": "Laberius 18",
     "next": "Laberius 20",
-    "redirect": true,
+    "redirect": "Etrilius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
@@ -3049,10 +3062,12 @@
     "lemma": "Labicanus ager",
     "previous": "Labes",
     "next": "Labici",
-    "redirect": true,
+    "redirect": "Labici",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 255
+        "start": 255,
+        "end": 255
       }
     ]
   },
@@ -3071,9 +3086,12 @@
     "lemma": "Labicum",
     "previous": "Labici",
     "next": "Labienus",
+    "redirect": "Labici",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 257
+        "start": 257,
+        "end": 257
       }
     ]
   },
@@ -3257,9 +3275,12 @@
     "lemma": "Laboriae",
     "previous": "Labores",
     "next": "Laborosoarchodos",
+    "redirect": "Leboriae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 274
+        "start": 274,
+        "end": 274
       }
     ]
   },
@@ -3509,9 +3530,12 @@
     "lemma": "Labrus",
     "previous": "Labrum",
     "next": "Labrusca",
+    "redirect": "Lambrus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 286
+        "start": 286,
+        "end": 286
       }
     ]
   },
@@ -3519,9 +3543,12 @@
     "lemma": "Labrusca",
     "previous": "Labrus",
     "next": "Labrys",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 286
+        "start": 286,
+        "end": 286
       }
     ]
   },
@@ -3672,9 +3699,12 @@
     "lemma": "Lacas",
     "previous": "Labyrinthos 4",
     "next": "Lacavos",
+    "redirect": "Segortia Lanca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 326
+        "start": 326,
+        "end": 326
       }
     ]
   },
@@ -3693,9 +3723,12 @@
     "lemma": "Lacciacus",
     "previous": "Lacavos",
     "next": "Laccini",
+    "redirect": "Laciacis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 327
+        "start": 327,
+        "end": 327
       }
     ]
   },
@@ -3714,9 +3747,12 @@
     "lemma": "Laccobriga",
     "previous": "Laccini",
     "next": "Laccurris",
+    "redirect": "Lacobriga 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 327
+        "start": 327,
+        "end": 327
       }
     ]
   },
@@ -3789,9 +3825,12 @@
     "lemma": "Lacerta, lacertus 1",
     "previous": "Lacerna 2",
     "next": "Lacerta, lacertus 2",
+    "redirect": "Krokodile und Eidechsen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 329
+        "start": 329,
+        "end": 329
       }
     ]
   },
@@ -3843,9 +3882,12 @@
     "lemma": "Lacetani",
     "previous": "Lacetaner",
     "next": "Lachanis",
+    "redirect": "Laeetani",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 331
+        "start": 331,
+        "end": 331
       }
     ]
   },
@@ -4073,9 +4115,12 @@
     "lemma": "Laches 9",
     "previous": "Laches 8",
     "next": "Laches 10",
+    "redirect": "Cerulus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 339
+        "start": 339,
+        "end": 339
       }
     ]
   },
@@ -4163,9 +4208,12 @@
     "lemma": "Laciaco",
     "previous": "Laciacis",
     "next": "Laciburgium",
+    "redirect": "Laciacis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 344
+        "start": 344,
+        "end": 344
       }
     ]
   },
@@ -4184,9 +4232,12 @@
     "lemma": "Laci(l)bis",
     "previous": "Laciburgium",
     "next": "Lacilbula",
+    "redirect": "Lacilbula",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 345
+        "start": 345,
+        "end": 345
       }
     ]
   },
@@ -4216,9 +4267,12 @@
     "lemma": "Lacinia",
     "previous": "Laci-murga",
     "next": "Laciniensis civitas",
+    "redirect": "Toga 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 345
+        "start": 345,
+        "end": 345
       }
     ]
   },
@@ -4281,9 +4335,12 @@
     "lemma": "Laco 2",
     "previous": "Laco 1",
     "next": "Laco 3",
+    "redirect": "Iulius 309",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 346
+        "start": 346,
+        "end": 346
       }
     ]
   },
@@ -4356,9 +4413,12 @@
     "lemma": "Laconici",
     "previous": "Laconica",
     "next": "Laconicum",
+    "redirect": "Lactuca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 347
+        "start": 347,
+        "end": 347
       }
     ]
   },

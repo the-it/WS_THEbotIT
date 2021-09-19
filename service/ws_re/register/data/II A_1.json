@@ -5648,7 +5648,7 @@
   {
     "lemma": "Schoinophylinda",
     "previous": "Σχοινοβάτης",
-    "next": "Σχοῖνος",
+    "next": "Schoinos",
     "chapters": [
       {
         "start": 618,
@@ -5657,18 +5657,22 @@
     ]
   },
   {
-    "lemma": "Σχοῖνος",
+    "lemma": "Schoinos",
     "previous": "Schoinophylinda",
     "next": "Σχοινοῦς",
+    "sort_key": "Schoinos",
+    "redirect": "Schoineus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
   {
     "lemma": "Σχοινοῦς",
-    "previous": "Σχοῖνος",
+    "previous": "Schoinos",
     "next": "Schola 1",
     "sort_key": "Schoinous",
     "redirect": "Schoineus 1",
