@@ -19221,6 +19221,7 @@
   {
     "lemma": "Epistula 1",
     "previous": "Ἐπιστάτης εἰρήνης",
+    "next": "Epona",
     "chapters": [
       {
         "start": 435,
@@ -19231,7 +19232,6 @@
   },
   {
     "lemma": "Epistula",
-    "previous": "Ἐπιστάτης ἐιρήνης",
     "next": "Epona",
     "redirect": true,
     "chapters": [
@@ -20111,9 +20111,12 @@
     "lemma": "Faorianae figlinae",
     "previous": "Fannius 16",
     "next": "Fato",
+    "redirect": "Favorianae figlinae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 480
+        "start": 480,
+        "end": 480
       }
     ]
   },
@@ -20154,9 +20157,12 @@
     "lemma": "Faviana officina",
     "previous": "Faveria",
     "next": "Faunianae figlinae",
+    "redirect": "Fabianae figlinae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 480
+        "start": 480,
+        "end": 480
       }
     ]
   },
