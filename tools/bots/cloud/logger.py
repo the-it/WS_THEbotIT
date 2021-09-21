@@ -71,7 +71,7 @@ class WikiLogger():
 
     def create_wiki_log_lines(self) -> str:
         with open(self._data_path + os.sep + self._logger_name, encoding="utf8") as filepointer:
-            line_list = list()
+            line_list = []
             for line in filepointer:
                 line_list.append(line.strip())
             log_lines = ""

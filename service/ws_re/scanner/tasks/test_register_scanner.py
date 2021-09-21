@@ -1,5 +1,4 @@
 # pylint: disable=protected-access
-from pathlib import Path
 from unittest import mock, skip
 
 import pywikibot

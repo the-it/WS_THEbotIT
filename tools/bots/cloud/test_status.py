@@ -12,10 +12,10 @@ class TestStatus(TestCase):
     def test_init(self):
         # bot_name is a necessary parameter
         with self.assertRaises(TypeError):
-            Status(id=1)
+            Status(id=1)  # pylint: disable=no-value-for-parameter
         # id is a necessary parameter
         with self.assertRaises(TypeError):
-            Status(bot_name="TestBot")
+            Status(bot_name="TestBot")  # pylint: disable=no-value-for-parameter
         status = Status(id=1, bot_name="TestBot")
         compare(1, status.id)
         compare("TestBot", status.bot_name)

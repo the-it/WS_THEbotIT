@@ -70,7 +70,7 @@ class TestRegisters(BaseTestRegister):
         register_III_1 = registers["III,1"]
         register_III_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
         registers.persist()
-        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r") as register_file:
+        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             self.assertTrue("Siegfried" in register_file.read())
-        with open(_TEST_REGISTER_PATH.joinpath("III_1.json"), mode="r") as register_file:
+        with open(_TEST_REGISTER_PATH.joinpath("III_1.json"), mode="r", encoding="utf-8") as register_file:
             self.assertTrue("Siegfried" in register_file.read())

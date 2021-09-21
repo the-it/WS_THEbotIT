@@ -59,7 +59,7 @@ class Authors:
                 self._authors[author_key] = Author(author_key, mapping[author_key])
 
     def _to_dict(self) -> Dict[str, AuthorDict]:
-        author_dict = dict()
+        author_dict = {}
         for dict_key in sorted(self._authors.keys()):
             author_dict[dict_key] = self._authors[dict_key].to_dict()
         return author_dict
