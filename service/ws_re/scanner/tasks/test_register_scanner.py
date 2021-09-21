@@ -121,63 +121,15 @@ text.
         task.re_page = re_page
         compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
 
-    def test_proof_read(self):
+    @file_data("test_data/register_scanner/test_proof_read.yml")
+    def test_proof_read(self, text, result):
         self.title_mock.return_value = "RE:Aal"
-        self.text_mock.return_value = """{{REDaten
-|KORREKTURSTAND=korrigiert
-}}
-text.
-{{REAutor|OFF}}"""
+        self.text_mock.return_value = text
         re_page = RePage(self.page_mock)
         article = re_page.splitted_article_list[0]
         task = SCANTask(None, self.logger)
         task.re_page = re_page
-        compare(({"proof_read": 2}, []), task._fetch_proof_read(article))
-
-        self.text_mock.return_value = """{{REDaten
-|KORREKTURSTAND=Fertig
-}}
-text.
-{{REAutor|OFF}}"""
-        re_page = RePage(self.page_mock)
-        article = re_page.splitted_article_list[0]
-        task = SCANTask(None, self.logger)
-        task.re_page = re_page
-        compare(({"proof_read": 3}, []), task._fetch_proof_read(article))
-
-        self.text_mock.return_value = """{{REDaten
-|KORREKTURSTAND=UnKorrigiert
-}}
-text.
-{{REAutor|OFF}}"""
-        re_page = RePage(self.page_mock)
-        article = re_page.splitted_article_list[0]
-        task = SCANTask(None, self.logger)
-        task.re_page = re_page
-        compare(({}, ["proof_read"]), task._fetch_proof_read(article))
-
-        self.text_mock.return_value = """{{REDaten
-|KORREKTURSTAND=bla
-}}
-text.
-{{REAutor|OFF}}"""
-        re_page = RePage(self.page_mock)
-        article = re_page.splitted_article_list[0]
-        task = SCANTask(None, self.logger)
-        task.re_page = re_page
-        compare(({}, ["proof_read"]), task._fetch_proof_read(article))
-
-        self.text_mock.return_value = """{{REDaten
-|KORREKTURSTAND=korrigiert
-|TODESJAHR=9999
-}}
-text.
-{{REAutor|OFF}}"""
-        re_page = RePage(self.page_mock)
-        article = re_page.splitted_article_list[0]
-        task = SCANTask(None, self.logger)
-        task.re_page = re_page
-        compare(({}, ["proof_read"]), task._fetch_proof_read(article))
+        compare(result, task._fetch_proof_read(article))
 
     @file_data("test_data/register_scanner/test_redirect.yml")
     def test_redirect(self, text, result):
@@ -186,206 +138,38 @@ text.
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(result, task._fetch_redirect(article))
 
-    def test_previous(self):
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|VG=Lemma Previous
-}}
-text.
-{{REAutor|OFF}}"""
+    @file_data("test_data/register_scanner/test_previous.yml")
+    def test_previous(self, text, result):
+        self.text_mock.return_value = text
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"previous": "Lemma Previous"}, []), SCANTask._fetch_previous(article))
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|VG=OFF
-}}
-text.
-{{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["previous"]), SCANTask._fetch_previous(article))
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-}}
-text.
-{{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["previous"]), SCANTask._fetch_previous(article))
+        compare(result, SCANTask._fetch_previous(article))
 
-    def test_next(self):
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|NF=Lemma Next
-}}
-text.
-{{REAutor|OFF}}"""
+    @file_data("test_data/register_scanner/test_next.yml")
+    def test_next(self, text, result):
+        self.text_mock.return_value = text
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"next": "Lemma Next"}, []), SCANTask._fetch_next(article))
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|NF=OFF
-}}
-text.
-{{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["next"]), SCANTask._fetch_next(article))
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-}}
-text.
-{{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["next"]), SCANTask._fetch_next(article))
+        compare(result, SCANTask._fetch_next(article))
 
-    def test_pages_simple(self):
+    @file_data("test_data/register_scanner/test_pages_simple.yml")
+    def test_pages(self, text, expect):
         task = SCANTask(None, self.logger)
         self.title_mock.return_value = "RE:Aal"
-
-        self.text_mock.return_value = """{{REDaten
-|BAND=S I
-|SPALTE_START=264
-|SPALTE_END=265
-}}
-text.
-{{REAutor|Autor.}}"""
+        self.text_mock.return_value = text
         re_page = RePage(self.page_mock)
         task.re_page = re_page
         article = re_page.splitted_article_list[0]
-        expected_dict = {"chapters": [{"start": 264, "end": 265, "author": "Autor."}]}
-        compare((expected_dict, []), task._fetch_pages(article))
+        compare(expect, task._fetch_pages(article))
 
-        self.text_mock.return_value = """{{REDaten
-|BAND=S I
-|SPALTE_START=264
-|SPALTE_END=OFF
-}}
-text.
-{{REAutor|Autor.}}"""
-        re_page = RePage(self.page_mock)
-        task.re_page = re_page
-        article = re_page.splitted_article_list[0]
-        expected_dict = {"chapters": [{"start": 264, "end": 264, "author": "Autor."}]}
-        compare((expected_dict, []), task._fetch_pages(article))
-
-        self.text_mock.return_value = """{{REDaten
-|BAND=S I
-|SPALTE_START=264
-|SPALTE_END=
-}}
-text.
-{{REAutor|Autor.}}"""
-        re_page = RePage(self.page_mock)
-        task.re_page = re_page
-        article = re_page.splitted_article_list[0]
-        expected_dict = {"chapters": [{"start": 264, "end": 264, "author": "Autor."}]}
-        compare((expected_dict, []), task._fetch_pages(article))
-
-        self.text_mock.return_value = """{{REDaten
-|BAND=S I
-|SPALTE_START=264
-|SPALTE_END=264
-}}
-text.
-{{REAutor|OFF}}"""
-        re_page = RePage(self.page_mock)
-        task.re_page = re_page
-        article = re_page.splitted_article_list[0]
-        expected_dict = {"chapters": [{"start": 264, "end": 264}]}
-        compare((expected_dict, []), task._fetch_pages(article))
-
-    def test_pages_complex_bithynia(self):
+    @file_data("test_data/register_scanner/test_pages_complex.yml")
+    def test_pages_complex(self, text, expect):
         with LogCapture():
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
-
-            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Bithynia.txt"), encoding="utf-8") as test_file:
-                self.text_mock.return_value = test_file.read()
+            self.text_mock.return_value = text
             re_page = RePage(self.page_mock)
             task.re_page = re_page
             article = re_page.splitted_article_list[0]
-            expected_dict = {"chapters": [{"start": 507, "end": 510, "author": "Ruge."},
-                                          {"start": 511, "end": 524, "author": "Ed. Meyer."},
-                                          {"start": 524, "end": 539, "author": "Brandis."}]}
-            compare((expected_dict, []), task._fetch_pages(article))
-
-    def test_pages_complex_elis(self):
-        with LogCapture():
-            task = SCANTask(None, self.logger)
-            self.title_mock.return_value = "RE:Aal"
-            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Elis 1.txt"), encoding="utf-8") as test_file:
-                self.text_mock.return_value = test_file.read()
-            re_page = RePage(self.page_mock)
-            task.re_page = re_page
-            article = re_page.splitted_article_list[0]
-            expected_dict = {"chapters": [{"start": 2369, "end": 2369, "author": "Philippson."},
-                                          {"start": 2369, "end": 2432, "author": "Swoboda."}]}
-            compare((expected_dict, []), task._fetch_pages(article))
-
-    def test_pages_complex_abuccius(self):
-        with LogCapture():
-            task = SCANTask(None, self.logger)
-            self.title_mock.return_value = "RE:Aal"
-            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_L. Abuccius.txt"), encoding="utf-8") as test_file:
-                self.text_mock.return_value = test_file.read()
-            re_page = RePage(self.page_mock)
-            task.re_page = re_page
-            article = re_page.splitted_article_list[0]
-            expected_dict = {"chapters": [{"start": 124, "end": 124, "author": "Klebs."},
-                                          {"start": 125, "end": 125, "author": "v. Rohden."}]}
-            compare((expected_dict, []), task._fetch_pages(article))
-
-    def test_pages_complex_plinius(self):
-        with LogCapture():
-            task = SCANTask(None, self.logger)
-            self.title_mock.return_value = "RE:Aal"
-            # if the re_page is too complex (import of other pages during page construction) return empty result sets
-            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Plinius 5.txt"), encoding="utf-8") as test_file:
-                self.text_mock.return_value = test_file.read()
-            re_page = RePage(self.page_mock)
-            task.re_page = re_page
-            article = re_page.splitted_article_list[0]
-            expected_dict = {}
-            compare((expected_dict, []), task._fetch_pages(article))
-
-    def test_pages_complex_mitarbeiter(self):
-        with LogCapture():
-            task = SCANTask(None, self.logger)
-            self.title_mock.return_value = "RE:Aal"
-            # if the pages are non numeric return nothing
-            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Mitarbeiter-Verzeichnis.txt"),
-                      encoding="utf-8") as test_file:
-                self.text_mock.return_value = test_file.read()
-            re_page = RePage(self.page_mock)
-            task.re_page = re_page
-            article = re_page.splitted_article_list[0]
-            expected_dict = {}
-            compare((expected_dict, []), task._fetch_pages(article))
-
-    def test_pages_complex_abs(self):
-        with LogCapture():
-            task = SCANTask(None, self.logger)
-            self.title_mock.return_value = "RE:Aal"
-            # if the pages are non numeric return nothing
-            with open(Path(__file__).parent.joinpath("test_data/register_scanner/abs.txt"), encoding="utf-8") as test_file:
-                self.text_mock.return_value = test_file.read()
-            re_page = RePage(self.page_mock)
-            task.re_page = re_page
-            article = re_page.splitted_article_list[0]
-            expected_dict = {"chapters": [{"start": 116, "end": 116}]}
-            compare((expected_dict, []), task._fetch_pages(article))
-
-    def test_pages_complex_bug_umbria(self):
-        with LogCapture():
-            task = SCANTask(None, self.logger)
-            self.title_mock.return_value = "RE:Umbri, Umbria"
-            # if the pages are non numeric return nothing
-            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Umbri,_Umbria.tst"), encoding="utf-8") as test_file:
-                self.text_mock.return_value = test_file.read()
-            re_page = RePage(self.page_mock)
-            task.re_page = re_page
-            article = re_page.splitted_article_list[1]
-            expected_dict = {'chapters': [{'author': 'Gerhard Radke.', 'end': 1745, 'start': 1745},
-                                          {'end': 1827, 'start': 1745}]}
-            compare((expected_dict, []), task._fetch_pages(article))
+            compare(expect, task._fetch_pages(article))
 
     def test_fetch_from_properties(self):
         with LogCapture():

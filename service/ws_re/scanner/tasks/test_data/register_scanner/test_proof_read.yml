@@ -1,0 +1,55 @@
+korrigiert:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=korrigiert
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - proof_read: 2
+    - []
+
+fertig:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=Fertig
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - proof_read: 3
+    - []
+
+unkorrigiert:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=Unkorrigert
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["proof_read"]
+
+not_valid:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=bla
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["proof_read"]
+
+not_gemeinfrei:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=korrigiert
+    |TODESJAHR=9999
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["proof_read"]

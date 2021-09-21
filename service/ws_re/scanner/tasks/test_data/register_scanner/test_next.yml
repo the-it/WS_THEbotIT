@@ -1,0 +1,35 @@
+next_found:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |NF=Lemma Next
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - next: "Lemma Next"
+    - []
+
+next_off:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |NF=OFF
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["next"]
+
+no_next:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |NF=
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["next"]
