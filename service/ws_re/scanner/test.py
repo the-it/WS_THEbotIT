@@ -316,7 +316,7 @@ class TestReScanner(TestCase):
         bot.tasks = [self.WAITTask]
         with bot:
             bot.run()
-        with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+        with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
             data = json.load(data_file)
             self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
                              data)
@@ -325,7 +325,7 @@ class TestReScanner(TestCase):
         self.lemma_mock.return_value = [':RE:Lemma3', ":RE:Lemma4"]
         with bot:
             bot.run()
-        with open(bot.data.data_folder + os.sep + "ReScanner.data.json") as data_file:
+        with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
             data = json.load(data_file)
             self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
                               ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
@@ -348,7 +348,8 @@ class TestReScanner(TestCase):
     def test_reload_deprecated_lemma_data(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [":RE:Lemma1"]
-        with open(_DATA_PATH_TEST + os.sep + "ReScanner.data.json.deprecated", mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + "ReScanner.data.json.deprecated", mode="w", encoding="utf-8") \
+                as persist_json:
             json.dump({":RE:Lemma1": "20000101000000"}, persist_json)
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False):

@@ -81,7 +81,7 @@ class VolumeRegister(Register):
         persist_list = []
         for lemma in self.lemmas:
             persist_list.append(lemma.lemma_dict)
-        with open(self._REGISTER_PATH.joinpath("{}.json".format(self._volume.file_name)),
+        with open(self._REGISTER_PATH.joinpath(f"{self._volume.file_name}.json"),
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
 

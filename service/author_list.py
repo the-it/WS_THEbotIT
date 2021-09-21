@@ -34,7 +34,7 @@ class AuthorList(CanonicalBot):
     def __enter__(self):
         CanonicalBot.__enter__(self)
         if self.timestamp.start_of_run.day == 1:
-            self.data.assign_dict(dict())
+            self.data.assign_dict({})
             self.logger.warning("The data is thrown away. It is the first of the month")
         return self
 
@@ -195,7 +195,7 @@ class AuthorList(CanonicalBot):
         list_authors = []
         for key in self.data:
             author_dict = self.data[key]
-            list_author = list()
+            list_author = []
             list_author.append(author_dict["sortkey"])  # 0
             list_author.append(author_dict["title"].replace("_", " "))  # 1
             list_author.append(author_dict["name"])  # 2

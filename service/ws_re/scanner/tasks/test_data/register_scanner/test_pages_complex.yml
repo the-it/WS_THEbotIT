@@ -1,0 +1,254 @@
+abs:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |SPALTE_START=116
+    |SPALTE_END=OFF
+    |VORGÄNGER=Abrytus
+    |NACHFOLGER=Absasalla
+    |SORTIERUNG=Abs
+    |KORREKTURSTAND=fertig
+    |WIKIPEDIA=
+    |WIKISOURCE=
+    |EXTSCAN_START=
+    |EXTSCAN_END=
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    |NACHTRAG=OFF
+    |ÜBERSCHRIFT=OFF
+    |VERWEIS=ON
+    }}
+    '''Abs…''' ({{Polytonisch|Ἄψ}}..) s. {{SperrSchrift|Aps}}…
+    {{REAutor|OFF}}
+    == Anmerkungen (Wikisource) ==
+    S. {{RE siehe|Apsilai}}, {{RE siehe|Apsis 1}}, {{RE siehe|Apsoros}}, {{RE siehe|Apsyrtos 1}}.
+  expect:
+    - "chapters": [ { "start": 116, "end": 116 } ]
+    - [ ]
+
+bithynia:
+  text: |
+    {{REDaten
+    |BAND=III,1
+    |SPALTE_START=507
+    |SPALTE_END=539
+    |VORGÄNGER=Bithyas 2
+    |NACHFOLGER=Bithyniarches
+    |SORTIERUNG=
+    |KORREKTURSTAND=fertig
+    |WIKIPEDIA=Bithynien
+    |WIKISOURCE=
+    |EXTSCAN_START=
+    |EXTSCAN_END=
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    |NACHTRAG=OFF
+    |ÜBERSCHRIFT=OFF
+    |VERWEIS=OFF
+    }}
+    __TOC__
+    == Landschaft. ==
+
+    chselt {{Seite|508}} mit Buschwald und wal
+    rgänzungsbl. {{Seite|510}} (mit l.&nbsp;II.
+    {{REAutor|Ruge.}}
+    {{REAbschnitt}}
+    {{Seite|511||Pauly-Wissowa III,1, 0511.jpg}} die Bithyner also schwerlich nach Asien gekom
+
+    meint, nach {{Seite|524}} B., so gut wie der benachbarte
+    {{REAutor|Ed. Meyer.}}
+    {{REAbschnitt}}
+    == Bithynien als römische Provinz. ==
+
+     dritten {{Seite|525||Pauly-Wissowa III,1, 0525.jpg}} mithradatischen Kst wohl der F inneren Verwaltung und änderte {{Seite|537||Pauly-Wissowa III,1, 0537.jpg}} nicht den Namen ihrer althergebrachten  Augenblick die Erhebung des Pharnakes {{Seite|539||Pauly-Wissowa III,1, 0539.jpg}} nach der Besiegung des Domitius bei Nikopolis Ende 48
+    {{REAutor|Brandis.}}
+  expect:
+    - "chapters":
+        - { "start": 507, "end": 510, "author": "Ruge." }
+        - { "start": 511, "end": 524, "author": "Ed. Meyer." }
+        - { "start": 524, "end": 539, "author": "Brandis." }
+    - [ ]
+
+elis_1:
+  text: |
+    {{REDaten
+    |BAND=V,2
+    |SPALTE_START=2369
+    |SPALTE_END=2432
+    |VORGÄNGER=Elis
+    |NACHFOLGER=Elis 2
+    |SORTIERUNG=
+    |TJ=1953
+    |WIKIPEDIA=Elis
+    |WIKISOURCE=
+    |EXTSCAN_START={{REIA|V,2|2369}}
+    |EXTSCAN_END={{REIA|V,2|2433}}
+    |GND=
+    }}
+    '''1)''' Die {{SperrSchrift|Landschaft}}
+
+    I. {{SperrSchrift|Geographie}} ...
+    {{REAutor|Philippson.}}
+    {{REAbschnitt}}
+    II. {{SperrSchrift|Geschichte}} ...
+    {{REAutor|Swoboda.}}
+  expect:
+    - "chapters":
+        - { "start": 2369, "end": 2369, "author": "Philippson." }
+        - { "start": 2369, "end": 2432, "author": "Swoboda." }
+    - [ ]
+
+abuccius:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |SPALTE_START=124
+    |SPALTE_END=125
+    |VORGÄNGER=Abthartius
+    |NACHFOLGER=Abucini portus
+    |SORTIERUNG=Abuccius
+    |KORREKTURSTAND=fertig
+    |WIKIPEDIA=
+    |WIKISOURCE=
+    |EXTSCAN_START=
+    |EXTSCAN_END=
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    |NACHTRAG=OFF
+    |ÜBERSCHRIFT=OFF
+    |VERWEIS=OFF
+    }}
+    '''L. Abuccius''' (so ist der Name von {{SperrSchrift|Keil}} bei Varro nach der guten Überlieferung statt der Vulgata ''Albucius'' hergestellt), ''homo, ut scitis, adprime doctus, cuius [[RE:Lucilius 4|Luciliano]] charactere sunt libelli, dicebat'' .... Varro r. r. III 2, 17. Nach dem Vorgang des Q. Hortensius beschäftigte er sich mit der Pfauenzucht ibd. III 6, 6. Nach Varro scheint er zur Zeit des Gespräches in Buch III (700 = 54) bereits gestorben zu sein.
+    {{REAutor|Klebs.}}
+    {{REAbschnitt}}
+    {{Seite|125||Pauly-Wissowa I,1, 0125.jpg}} Alle Abuccii führen den Vornamen Lucius. Inschriften ihrer Grabstätte CIL VI 2 p. 1096 bis 1099 Nr. 8117–8172. Vgl. auch das [[RE:Album|Album]] von {{RE siehe|Canusium}} aus dem J. 223, CIL IX 338; ferner CIL X&nbsp;1991.
+    {{REAutor|v. Rohden.}}
+  expect:
+    - "chapters":
+        - { "start": 124, "end": 124, "author": "Klebs." }
+        - { "start": 125, "end": 125, "author": "v. Rohden." }
+    - [ ]
+
+plinius_5:
+  text: |
+    {{REDaten
+    |BAND=XXI,1
+    |SPALTE_START=271
+    |SPALTE_END=439
+    |VORGÄNGER=Plinius 4
+    |NACHFOLGER=Plinius 6
+    |SORTIERUNG=
+    |KORREKTURSTAND=korrigiert
+    |WIKIPEDIA=Plinius der Ältere
+    |WIKISOURCE=Plinius der Ältere
+    |EXTSCAN_START={{REWL|XXI,1|271}}
+    |EXTSCAN_END={{REWL|XXI,1|439}}
+    |GND=118595083
+    }}
+
+
+    '''5)''' <big>C. Plinius Secundus der Ältere</big>
+
+    [[RE:Plinius 5/I|I. Das Leben des P.]]<br />
+    [[RE:Plinius 5/II|II. Die Schriften des P.]]
+
+    *[[RE:Plinius 5/II#A|A. De iaculatione equestri liber unus]].
+    *[[RE:Plinius 5/II#B|B. De vita Pomponii Secundi libri II.]]
+    *[[RE:Plinius 5/III#C|C. Bellorum Germaniae libri XX.]]
+    *[[RE:Plinius 5/III#D|D. A fine Aufidii Bassi libri XXXI.]]
+    *[[RE:Plinius 5/IV#E|E. Studiosi libri III.]]
+    *[[RE:Plinius 5/V#F|F. Dubii sermonis libri VIII.]]
+    *[[RE:Plinius 5/VIII#G|G. Naturalis historiae libri VIII.]]
+    **[[RE:Plinius 5/VI#01|1. Titel.]] [[RE:Plinius 5/VI#02|2. Herausgabe.]] [[RE:Plinius 5/VI#03|3. Praefatio und Buch I]]. [[RE:Plinius 5/VI#04|4. Die Bücher II (Kosmologie)]]. [[RE:Plinius 5/VI#05|5. III–VI (Geographie)]]. [[RE:Plinius 5/VI#06|6. VII–XI (Anthropologie und Zoologie)]]. [[RE:Plinius 5/VI#07|7. XII–XIX (Botanik)]]. [[RE:Plinius 5/VII#08|8. XX–XXXII (Medizin)]]. [[RE:Plinius 5/VIII#09|9. XXXIII–XXXVII (Metalle und Steine; Kunstgeschichte)]]. [[RE:Plinius 5/VIII#10|10. Weltanschauung]]. [[RE:Plinius 5/VIII#11|11. Das Werk.]] [[RE:Plinius 5/VIII#12|12. Die indices auctorum]]. [[RE:Plinius 5/VIII#13|13. Irrtümer]]. [[RE:Plinius 5/VIII#14|14. Nachleben]]. [[RE:Plinius 5/VIII#15|15. Textgeschichte und Überlieferung]]. [[RE:Plinius 5/VIII#16|16. Zustand des Textes]]. [[RE:Plinius 5/VIII#17|17. Textkritik]]. [[RE:Plinius 5/VIII#18|18. Ausgaben]]. [[RE:Plinius 5/VIII#19|19. Die Sprache]]. [[RE:Plinius 5/VIII#20|20. Literatur]].
+    {{REAutor|OFF}}
+    {{#lst:RE:Plinius 5/I}}
+    {{#lst:RE:Plinius 5/II}}
+    {{#lst:RE:Plinius 5/III}}
+    {{#lst:RE:Plinius 5/IV}}
+    {{#lst:RE:Plinius 5/V}}
+    {{#lst:RE:Plinius 5/VI}}
+    {{#lst:RE:Plinius 5/VII}}
+    {{#lst:RE:Plinius 5/VIII}}
+  expect:
+    - { }
+    - [ ]
+
+umbri_umbria:
+  text: |
+    {{REDaten
+    |BAND=S IX
+    |SPALTE_START=1745
+    |SPALTE_END=1827
+    |VORGÄNGER=Umbonius 2
+    |NACHFOLGER=Umbricius 5
+    |SORTIERUNG=
+    |KORREKTURSTAND=
+    |WIKIPEDIA=
+    |WIKISOURCE=
+    |EXTSCAN_START=
+    |EXTSCAN_END=
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=1999
+    |GEBURTSJAHR=
+    |NACHTRAG=ON
+    |ÜBERSCHRIFT=ON
+    |VERWEIS=OFF
+    }}
+    {{REAutor|Gerhard Radke.}}
+    {{REAbschnitt}}
+    '''Umbria''' s. [[#S IX|Umbri]]
+    {{REAutor|OFF}}
+  expect:
+    - "chapters":
+        - { 'author': 'Gerhard Radke.', 'end': 1745, 'start': 1745 }
+        - { 'end': 1827, 'start': 1745 }
+    - [ ]
+
+mitarbeiter_verzeichnis:
+  text: |
+    {{REDaten
+    |BAND=II,2
+    |SPALTE_START=I
+    |SPALTE_END=IV
+    |VORGÄNGER=Titelblatt II,2
+    |NACHFOLGER=Artemisia 1
+    |SORTIERUNG=!Autoren1896
+    |KORREKTURSTAND=fertig
+    |WIKIPEDIA=
+    |WIKISOURCE=
+    |EXTSCAN_START=http://de.wikisource.org/wiki/Spezial:Dateipfad/Pauly-Wissowa_II,2,_x1.png
+    |EXTSCAN_END=http://de.wikisource.org/wiki/Spezial:Dateipfad/Pauly-Wissowa_II,2,_x4.png
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    |NACHTRAG=OFF
+    |ÜBERSCHRIFT=OFF
+    |VERWEIS=OFF
+    }}
+    {{BlockSatzEnd}}
+
+    {{LineCenterSize|120|16|{{SperrSchrift|Pauly-Wissowa}}, Real-Encyclopädie der classischen Altertumswissenschaft.}}
+
+    {{LineCenterSize|150|24|Mitarbeiter-Verzeichnis.}}
+
+    {{BlockSatzStart|20px|20px}}
+
+    Mit * sind die Namen derjenigen Mitarbeiter bezeichnet, deren Mitwirkung bereits ihr Ende gefunden hat oder demnächst findet, mit ** diejenigen, deren Mitwirkung erst im dritten Vollbande beginnt.
+
+    {{BlockSatzEnd}}
+
+    # <nowiki>*</nowiki>'''Dr. F. C. Andreas,''' Schmargendorf bei Berlin: Geographie von Persien.
+
+    #'''Dr. E. Ziebarth,''' Göttingen: Griechische Rechts- und Privataltertümer.
+    {{REAutor|OFF}}
+  expect:
+    - { }
+    - [ ]

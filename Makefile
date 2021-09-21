@@ -61,21 +61,21 @@ unittest :
 	unset WS_REAL_WIKI && \
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
-	python tst_runner.py
+	venv/bin/nose2 -v
 
 integrationtest : clean-coverage
 	echo "######## INTEGRATIONTEST #######"
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export WS_REAL_DATA=1 && \
 	unset WS_REAL_WIKI && \
-	coverage run tst_runner.py && \
+	venv/bin/nose2 -v --with-coverage && \
 	coverage xml
 
 wikitest : clean-coverage
 	echo "########### WIKITEST ###########"
 	export WS_REAL_WIKI=1 && \
 	unset WS_REAL_DATA && \
-	coverage run tst_runner.py && \
+	venv/bin/nose2 -v --with-coverage && \
 	coverage xml
 
 coverage : clean-coverage
@@ -83,7 +83,7 @@ coverage : clean-coverage
 	unset WS_REAL_WIKI && \
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
-	coverage run tst_runner.py && \
+	venv/bin/nose2 -v --with-coverage && \
 	coverage xml
 
 coverage-html : wikitest

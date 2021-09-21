@@ -229,7 +229,7 @@ class Article(collections.MutableMapping):
         """
         if template_property["key"]:
             keyword = template_property["key"].upper()
-            if keyword in cls.keywords.keys():
+            if keyword in cls.keywords:
                 keyword = cls.keywords[keyword]
             elif keyword in "".join(cls.keywords.values()):
                 for full_keyword in cls.keywords.values():
@@ -254,7 +254,7 @@ class Article(collections.MutableMapping):
         return template_handler.get_str(str_complex=True)
 
     def to_text(self):
-        content = list()
+        content = []
         if self.article_type == RE_DATEN:
             content.append(self._get_pre_text())
         else:

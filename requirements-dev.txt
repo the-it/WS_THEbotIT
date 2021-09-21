@@ -4,29 +4,27 @@
 #
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
-astroid==2.6.2
+astroid==2.8.0
     # via pylint
-backports.csv==1.0.7
-    # via internetarchive
 bandit==1.7.0
     # via -r requirements-dev.in
-beautifulsoup4==4.9.3
+beautifulsoup4==4.10.0
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.17.110
+boto3==1.18.44
     # via
     #   -c requirements.txt
     #   moto
-boto3-stubs[essential]==1.17.110
+boto3-stubs[essential]==1.18.44
     # via -r requirements-dev.in
-botocore==1.20.110
+botocore==1.21.44
     # via
     #   -c requirements.txt
     #   boto3
     #   moto
     #   s3transfer
-botocore-stubs==1.20.110
+botocore-stubs==1.21.44
     # via boto3-stubs
 certifi==2021.5.30
     # via
@@ -34,13 +32,13 @@ certifi==2021.5.30
     #   requests
 cffi==1.14.6
     # via cryptography
-chardet==4.0.0
+charset-normalizer==2.0.6
     # via
     #   -c requirements.txt
     #   requests
 click==8.0.1
     # via safety
-codecov==2.1.11
+codecov==2.1.12
     # via -r requirements-dev.in
 contextlib2==21.6.0
     # via schema
@@ -48,7 +46,8 @@ coverage==5.5
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==3.4.7
+    #   nose2
+cryptography==3.4.8
     # via moto
 ddt==1.4.2
     # via -r requirements-dev.in
@@ -64,17 +63,17 @@ gitdb==4.0.7
     # via
     #   -c requirements.txt
     #   gitpython
-gitpython==3.1.18
+gitpython==3.1.24
     # via
     #   -c requirements.txt
     #   bandit
-idna==2.10
+idna==3.2
     # via
     #   -c requirements.txt
     #   requests
-internetarchive==2.0.3
+internetarchive==2.1.0
     # via -r requirements-dev.in
-isort==5.9.2
+isort==5.9.3
     # via pylint
 jinja2==3.0.1
     # via moto
@@ -97,28 +96,30 @@ mccabe==0.6.1
     # via
     #   flake8
     #   pylint
-more-itertools==8.8.0
+more-itertools==8.10.0
     # via moto
-moto==2.0.11
+moto==2.2.7
     # via -r requirements-dev.in
 mypy==0.910
     # via -r requirements-dev.in
-mypy-boto3-cloudformation==1.17.110
+mypy-boto3-cloudformation==1.18.44
     # via boto3-stubs
-mypy-boto3-dynamodb==1.17.110
+mypy-boto3-dynamodb==1.18.44
     # via boto3-stubs
-mypy-boto3-ec2==1.17.110
+mypy-boto3-ec2==1.18.44
     # via boto3-stubs
-mypy-boto3-lambda==1.17.110
+mypy-boto3-lambda==1.18.44
     # via boto3-stubs
-mypy-boto3-rds==1.17.110
+mypy-boto3-rds==1.18.44
     # via boto3-stubs
-mypy-boto3-s3==1.17.110
+mypy-boto3-s3==1.18.44
     # via boto3-stubs
-mypy-boto3-sqs==1.17.110
+mypy-boto3-sqs==1.18.44
     # via boto3-stubs
 mypy-extensions==0.4.3
     # via mypy
+nose2==0.10.0
+    # via -r requirements-dev.in
 packaging==21.0
     # via
     #   dparse
@@ -127,6 +128,8 @@ patool==1.12
     # via -r requirements-dev.in
 pbr==5.6.0
     # via stevedore
+platformdirs==2.3.0
+    # via pylint
 pycodestyle==2.7.0
     # via flake8
 pycparser==2.20
@@ -135,11 +138,11 @@ pyfiglet==0.8.post1
     # via -r requirements-dev.in
 pyflakes==2.3.1
     # via flake8
-pylint==2.9.3
+pylint==2.11.1
     # via -r requirements-dev.in
 pyparsing==2.4.7
     # via packaging
-python-dateutil==2.8.1
+python-dateutil==2.8.2
     # via
     #   -c requirements.txt
     #   botocore
@@ -149,9 +152,10 @@ pytz==2021.1
     # via moto
 pyyaml==5.4.1
     # via
+    #   -r requirements-dev.in
     #   bandit
     #   dparse
-requests==2.25.1
+requests==2.26.0
     # via
     #   -c requirements.txt
     #   codecov
@@ -162,9 +166,9 @@ requests==2.25.1
     #   safety
 requests-mock==1.9.3
     # via -r requirements-dev.in
-responses==0.13.3
+responses==0.14.0
     # via moto
-s3transfer==0.4.2
+s3transfer==0.5.0
     # via
     #   -c requirements.txt
     #   boto3
@@ -177,7 +181,7 @@ six==1.16.0
     #   -c requirements.txt
     #   bandit
     #   internetarchive
-    #   moto
+    #   nose2
     #   python-dateutil
     #   requests-mock
     #   responses
@@ -189,21 +193,26 @@ soupsieve==2.2.1
     # via
     #   -c requirements.txt
     #   beautifulsoup4
-stevedore==3.3.0
+stevedore==3.4.0
     # via bandit
-testfixtures==6.17.1
+testfixtures==6.18.2
     # via -r requirements-dev.in
 toml==0.10.2
     # via
     #   dparse
     #   mypy
     #   pylint
-tqdm==4.61.2
+tqdm==4.62.3
     # via internetarchive
-types-requests==2.25.0
+types-requests==2.25.7
     # via -r requirements-dev.in
-typing-extensions==3.10.0.0
-    # via mypy
+typing-extensions==3.10.0.2
+    # via
+    #   -c requirements.txt
+    #   astroid
+    #   gitpython
+    #   mypy
+    #   pylint
 urllib3==1.26.6
     # via
     #   -c requirements.txt

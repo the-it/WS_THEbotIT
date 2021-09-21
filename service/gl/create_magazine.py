@@ -86,7 +86,7 @@ class GlCreateMagazine(CanonicalBot):
 
     def process_indexes(self):
         for index_lemma, index_page in self._get_indexes():
-            self.logger.debug("[[Index:{}]]".format(index_lemma))
+            self.logger.debug(f"[[Index:{index_lemma}]]")
             magazines = self.regex_magazine_in_index.findall(index_page.text)
             hit_year = self.regex_index.search(index_lemma)
             year = hit_year.group(1)
@@ -186,7 +186,7 @@ class GlCreateMagazine(CanonicalBot):
         # pylint: disable=too-many-arguments,too-many-branches
         magazine = int(magazine)
         year = int(year)
-        string_list = list()
+        string_list = []
         string_list.append("<!--Diese Seite wurde automatisch durch einen Bot erstellt. "
                            "Wenn du einen Fehler findest oder eine Änderung wünscht, "
                            "benachrichtige bitte den Betreiber, THE IT, des Bots.-->\n"
@@ -263,7 +263,7 @@ class GlCreateMagazine(CanonicalBot):
         self.searcher_indexes.set_regex_filter(r".*Die Gartenlaube \(\d{4}\)")
         self.searcher_indexes.set_timeout(60)
         for index in self.searcher_indexes.run():
-            yield index["title"], IndexPage(self.wiki, "Index:{}".format(index["title"]))
+            yield index["title"], IndexPage(self.wiki, f"Index:{index['title']}")
 
     def search_pages(self):
         self.searcher_pages.add_positive_category("Die Gartenlaube")
@@ -276,8 +276,7 @@ class GlCreateMagazine(CanonicalBot):
                 delta = 10
             start_of_search = self.create_timestamp_for_search(delta)
             self.searcher_pages.last_change_after(start_of_search)
-            self.logger.info("The date {} is set to the argument \"after\"."
-                             .format(start_of_search.strftime("%d.%m.%Y")))
+            self.logger.info(f"The date {start_of_search.strftime('%d.%m.%Y')} is set to the argument \"after\".")
         return self.searcher_pages.run()
 
 
