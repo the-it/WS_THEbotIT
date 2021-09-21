@@ -189,6 +189,7 @@ text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({"redirect": True}, []), task._fetch_redirect(article))
+
         # only a property ... no real link
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
@@ -198,6 +199,7 @@ text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({}, ["redirect"]), task._fetch_redirect(article))
+
         # fetch a real link from the text {{RE siehe|...
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
@@ -207,6 +209,7 @@ text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({"redirect": "Turris ad Algam"}, []), task._fetch_redirect(article))
+
         # fetch a real link from the text [[RE:...
         self.text_mock.return_value = """{{REDaten
 |BAND=I,1
@@ -216,6 +219,16 @@ text.
 {{REAutor|OFF}}"""
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(({"redirect": "Amantia 2"}, []), task._fetch_redirect(article))
+
+        # bug no s. provided
+        self.text_mock.return_value = """{{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    ['''5a''']) (K) Eponymos von [[RE:Akanthos 1|A. Nr. 1]] (I 1147). '''S III'''.
+    {{REAutor|OFF}}"""
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"redirect": "Akanthos 1"}, []), task._fetch_redirect(article))
 
     def test_previous(self):
         self.text_mock.return_value = """{{REDaten
