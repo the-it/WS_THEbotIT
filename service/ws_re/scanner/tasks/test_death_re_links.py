@@ -128,7 +128,7 @@ class TestDEALTask(TaskTestCase):
 
     def test_value_exception_bug(self):
         with mock.patch(BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            with open(Path(__file__).parent.joinpath("test_data/bug_value_error_DEAL_task.txt"),
+            with open(Path(__file__).parent.joinpath("test_data/death_re_links/bug_value_error_DEAL_task.txt"),
                       encoding="utf-8") as bug_file:
                 self.text_mock.return_value = bug_file.read()
             self.title_mock.return_value = "Re:Caecilius 54a"

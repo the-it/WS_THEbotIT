@@ -13,7 +13,7 @@ class TemplateFinder():
         self.text = text_to_search
 
     def get_positions(self, template_name: str) -> List[TemplatePositionDict]:
-        templates: List[TemplatePositionDict] = list()
+        templates: List[TemplatePositionDict] = []
         for start_position_template in \
                 self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
             pos_start_brackets = \
@@ -47,7 +47,7 @@ class TemplateFinder():
 
     @staticmethod
     def get_start_positions_of_regex(regex_pattern: str, text: str) -> List[int]:
-        list_of_positions: List[int] = list()
+        list_of_positions: List[int] = []
         for match in re.finditer(regex_pattern, text):
             list_of_positions.append(match.regs[0][0])  # type: ignore # false positive, there is the attribute regs
         return list_of_positions

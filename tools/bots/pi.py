@@ -109,7 +109,7 @@ class WikiLogger():
 
     def create_wiki_log_lines(self) -> str:
         with open(self._data_path + os.sep + self._logger_names["info"], encoding="utf8") as filepointer:
-            line_list = list()
+            line_list = []
             for line in filepointer:
                 line_list.append(line.strip())
             log_lines = ""
@@ -141,7 +141,7 @@ class PersistedTimestamp():
 
     def set_up(self):
         try:
-            with open(self._full_filename, mode="r") as persist_json:
+            with open(self._full_filename, mode="r", encoding="utf-8") as persist_json:
                 last_run_dict: LastRunDict = json.load(persist_json)
                 self._last_run = datetime.strptime(last_run_dict["timestamp"], self._timeformat)
                 self._success_last_run = last_run_dict["success"]
@@ -150,7 +150,7 @@ class PersistedTimestamp():
             pass
 
     def tear_down(self):
-        with open(self._full_filename, mode="w") as persist_json:
+        with open(self._full_filename, mode="w", encoding="utf-8") as persist_json:
             json.dump({"timestamp": self._start.strftime(self._timeformat), "success": self.success_this_run},
                       persist_json)
 
@@ -295,17 +295,17 @@ class PersistedData(Mapping):
 
     def dump(self, success: bool = True):
         if success:
-            with open(self.file_name, mode="w") as json_file:
+            with open(self.file_name, mode="w", encoding="utf-8") as json_file:
                 json.dump(self._data, json_file, indent=2)
             if os.path.isfile(self.file_name + ".deprecated"):
                 os.remove(self.file_name + ".deprecated")
         else:
-            with open(self.file_name + ".broken", mode="w") as json_file:
+            with open(self.file_name + ".broken", mode="w", encoding="utf-8") as json_file:
                 json.dump(self._data, json_file, indent=2)
 
     def load(self):
         if os.path.exists(self.file_name):
-            with open(self.file_name, mode="r") as json_file:
+            with open(self.file_name, mode="r", encoding="utf-8") as json_file:
                 self._data = json.load(json_file)
             os.rename(self.file_name, self.file_name + ".deprecated")
         else:
@@ -316,7 +316,7 @@ class PersistedData(Mapping):
 
     def _recover_data(self, type_of_data: str):
         try:
-            with open(f"{self.file_name}.{type_of_data}", mode="r") as json_file:
+            with open(f"{self.file_name}.{type_of_data}", mode="r", encoding="utf-8") as json_file:
                 self.assign_dict(json.load(json_file))
         except FileNotFoundError as error:
             raise BotException(f"There is no {type_of_data} data to load.") from error

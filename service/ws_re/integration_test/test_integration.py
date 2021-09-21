@@ -87,7 +87,7 @@ class TestIntegrationRegister(parent_class):
         LEMMA_DISTANCE = 40
         errors = []
         for register in self.registers.volumes.values():
-            lemmas = dict()
+            lemmas = {}
             for i, lemma in enumerate(register):
                 lemma = lemma["lemma"]
                 if lemma not in lemmas:

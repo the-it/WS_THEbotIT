@@ -114,7 +114,7 @@ class SCANTask(ReScannerTask):
     def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:  # pylint: disable=unused-argument
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
-    _REGEX_REDIRECT = re.compile(r"[sS]\..*?(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
+    _REGEX_REDIRECT = re.compile(r"(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
 
     def _fetch_redirect(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]

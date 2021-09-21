@@ -38,7 +38,7 @@ class GlStatus(CanonicalBot):
 
     @staticmethod
     def to_percent(counter, denominator):
-        return " ({0:.2f} %)".format(round((counter / denominator) * 100, 2)).replace(".", ",")
+        return f" ({round((counter / denominator) * 100, 2):.2f} %)".replace(".", ",")
 
     def projektstand(self, temp_text, alle, fertig, korrigiert, unkorrigiert, articles):
         # pylint: disable=too-many-arguments
@@ -86,22 +86,20 @@ class GlStatus(CanonicalBot):
         regex = re.compile("<!--GLStatus:" + str(year) + "-->.*?<!---->")
         if rest > 0:
             temp_text = regex.sub(
-                "<!--GLStatus:{year}-->"
+                f"<!--GLStatus:{year}-->"
                 "|span style=\"background-color:#4876FF; "
-                "font-weight: bold\"|ca. {percent} % korrigiert oder fertig"
-                "<!---->"
-                .format(year=year,
-                        percent=str(round(((fertig + korrigiert) / alle) * 100, 1))
-                        .replace(".", ",")), temp_text)
+                f"font-weight: bold\"|ca. {str(round(((fertig + korrigiert) / alle) * 100, 1)).replace('.', ',')} "
+                "% korrigiert oder fertig"
+                "<!---->",
+                temp_text)
         elif korrigiert > 0:
             temp_text = regex.sub(
-                "<!--GLStatus:{year}-->"
+                f"<!--GLStatus:{year}-->"
                 "|span style=\"background-color:#F7D700; "
-                "font-weight: bold\"|{percent_fertig} % fertig, Rest korrigiert"
-                "<!---->"
-                .format(year=year,
-                        percent_fertig=str(round((fertig / alle) * 100, 1))
-                        .replace(".", ",")), temp_text)
+                f"font-weight: bold\"|{str(round((fertig / alle) * 100, 1)).replace('.', ',')} "
+                "% fertig, Rest korrigiert"
+                "<!---->",
+                temp_text)
         else:
             temp_text = regex.sub(
                 f"<!--GLStatus:{year}-->|span style=\"background-color:#00FF00; "

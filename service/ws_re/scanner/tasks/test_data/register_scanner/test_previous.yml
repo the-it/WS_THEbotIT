@@ -1,0 +1,35 @@
+previous_found:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VG=Lemma Previous
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - previous: "Lemma Previous"
+    - []
+
+previous_off:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VG=OFF
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["previous"]
+
+no_previous:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VG=
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["previous"]

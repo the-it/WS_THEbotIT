@@ -1,0 +1,59 @@
+redirect_found:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - redirect: true
+    - []
+
+no_redirect:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=OFF
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["redirect"]
+
+fetch_a_real_link_from_template:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    '''Ad Algam''' s. {{SperrSchrift|{{RE siehe|Turris ad Algam}}}}.
+    {{REAutor|OFF}}
+  result:
+    - redirect: "Turris ad Algam"
+    - []
+
+fetch_a_real_link_from_real_link:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    '''2)''' s. [[RE:Amantia 2|{{SperrSchrift|Amantia}} Nr.&nbsp;2]].
+    {{REAutor|OFF}}
+  result:
+    - redirect: "Amantia 2"
+    - []
+
+bug_no_s_provided:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    ['''5a''']) (K) Eponymos von [[RE:Akanthos 1|A. Nr. 1]] (I 1147). '''S III'''.
+    {{REAutor|OFF}}
+  result:
+    - redirect: "Akanthos 1"
+    - []

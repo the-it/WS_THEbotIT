@@ -17,13 +17,13 @@ PROOFREAD_BADGES = {"fertig": "Q20748093",
 class NonClaims:
     def __init__(self, re_page: RePage):
         self.re_page = re_page
-        with open(Path(__file__).parent.joinpath("non_claims_article.json")) as non_claims_json:
+        with open(Path(__file__).parent.joinpath("non_claims_article.json"), encoding="utf-8") as non_claims_json:
             self._non_claims_template_article = Template(non_claims_json.read())
-        with open(Path(__file__).parent.joinpath("non_claims_crossref.json")) as non_claims_json:
+        with open(Path(__file__).parent.joinpath("non_claims_crossref.json"), encoding="utf-8") as non_claims_json:
             self._non_claims_template_crossref = Template(non_claims_json.read())
-        with open(Path(__file__).parent.joinpath("non_claims_index.json")) as non_claims_json:
+        with open(Path(__file__).parent.joinpath("non_claims_index.json"), encoding="utf-8") as non_claims_json:
             self._non_claims_template_index = Template(non_claims_json.read())
-        with open(Path(__file__).parent.joinpath("non_claims_prologue.json")) as non_claims_json:
+        with open(Path(__file__).parent.joinpath("non_claims_prologue.json"), encoding="utf-8") as non_claims_json:
             self._non_claims_template_prologue = Template(non_claims_json.read())
 
     @property

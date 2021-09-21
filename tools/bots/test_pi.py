@@ -68,9 +68,9 @@ class TestWikilogger(TestCase):
     def test_log_message(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        with open(_DATA_PATH_TEST + os.sep + "test_bot_INFO_000101000000.log") as info_file:
+        with open(_DATA_PATH_TEST + os.sep + "test_bot_INFO_000101000000.log", encoding="utf-8") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
-        with open(_DATA_PATH_TEST + os.sep + "test_bot_DEBUG_000101000000.log") as info_file:
+        with open(_DATA_PATH_TEST + os.sep + "test_bot_DEBUG_000101000000.log", encoding="utf-8") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[DEBUG\s*?\]\s\[debug\]\n"
                                                r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
 
@@ -108,7 +108,7 @@ class TestPersistedTimestamp(TestCase):
 
     def setUp(self):
         setup_data_path(self)
-        with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="w", encoding="utf-8") as persist_json:
             json.dump({"timestamp": "2000-01-01_00:00:00", "success": True}, persist_json)
         self.reference = datetime.now()
         self.timestamp = PersistedTimestamp("test_bot")
@@ -134,7 +134,7 @@ class TestPersistedTimestamp(TestCase):
     def test_persist_timestamp(self):
         self.timestamp.success_this_run = True
         self.timestamp.tear_down()
-        with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="r") as filepointer:
+        with open(_DATA_PATH_TEST + os.sep + "test_bot.last_run.json", mode="r", encoding="utf-8") as filepointer:
             timestamp_dict = json.load(filepointer)
             self.assertTrue(timestamp_dict["success"])
 
@@ -206,13 +206,13 @@ class TestOneTimeBot(TestCase):
                 bot.run()
 
     def test_timestamp_load_last_run(self):
-        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="x", ) as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="x", encoding="utf-8") as persist_json:
             json.dump({"timestamp": "2000-01-01_00:00:00", "success": True}, persist_json)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertEqual(datetime(2000, 1, 1), bot.timestamp.last_run)
             self.assertTrue(bot.timestamp.success_last_run)
 
-        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="w", encoding="utf-8") as persist_json:
             json.dump({"timestamp": "2000-01-01_00:00:00", "success": False}, persist_json)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertFalse(bot.timestamp.success_last_run)
@@ -228,13 +228,13 @@ class TestOneTimeBot(TestCase):
     def test_timestamp_tear_down(self):
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             bot.run()
-        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="r") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + "MinimalBot.last_run.json", mode="r", encoding="utf-8") as persist_json:
             run_dict = json.load(persist_json)
             self.assertFalse(run_dict["success"])
 
         with self.SuccessBot(success=True, log_to_screen=False, log_to_wiki=False) as bot:
             bot.run()
-        with open(_DATA_PATH_TEST + os.sep + "SuccessBot.last_run.json", mode="r") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + "SuccessBot.last_run.json", mode="r", encoding="utf-8") as persist_json:
             run_dict = json.load(persist_json)
             self.assertTrue(run_dict["success"])
 
@@ -329,7 +329,7 @@ class TestPersistedData(TestCase):
         self.data_path = _DATA_PATH_TEST
 
     def _make_json_file(self, filename: str = "TestBot.data.json", data: str = JSON_TEST):
-        with open(self.data_path + os.sep + filename, mode="w") as data_file:
+        with open(self.data_path + os.sep + filename, mode="w", encoding="utf-8") as data_file:
             data_file.write(data)
 
     def setUp(self):
@@ -374,7 +374,7 @@ class TestPersistedData(TestCase):
     def test_dump_value_is_correct(self):
         self.data.assign_dict(DATA_TEST)
         self.data.dump()
-        with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as file:
+        with open(self.data_path + os.sep + "TestBot.data.json", mode="r", encoding="utf-8") as file:
             self.assertEqual(JSON_TEST, file.read())
 
     def test_dump_different_keys(self):
@@ -406,27 +406,27 @@ class TestPersistedData(TestCase):
     def test_delete_old_data_file(self):
         self._make_json_file()
         self.data.load()
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r", encoding="utf-8") as json_file:
             self.assertDictEqual(DATA_TEST, json.load(json_file))
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
         self.data["b"] = 1
         self.data.dump(True)
-        with open(self.data_path + os.sep + "TestBot.data.json", mode="r") as json_file:
+        with open(self.data_path + os.sep + "TestBot.data.json", mode="r", encoding="utf-8") as json_file:
             self.assertDictEqual(DATA_TEST_EXTEND, json.load(json_file))
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
 
     def test_flag_old_file_as_deprecated_keep_broken_file(self):
         self._make_json_file()
         self.data.load()
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r", encoding="utf-8") as json_file:
             self.assertDictEqual(DATA_TEST, json.load(json_file))
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
         self.data["b"] = 1
         self.data.dump(False)
         self.assertFalse(os.path.isfile(self.data_path + os.sep + "TestBot.data.json"))
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r", encoding="utf-8") as json_file:
             self.assertDictEqual(DATA_TEST, json.load(json_file))
-        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
+        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r", encoding="utf-8") as json_file:
             self.assertDictEqual(DATA_TEST_EXTEND, json.load(json_file))
 
     def test_flag_data_as_broken(self):
@@ -436,15 +436,15 @@ class TestPersistedData(TestCase):
         self.data.dump(success=False)
         self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.deprecated"))
         self.assertTrue(os.path.isfile(self.data_path + os.sep + "TestBot.data.json.broken"))
-        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r") as json_file:
+        with open(self.data_path + os.sep + "TestBot.data.json.broken", mode="r", encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
         self.assertEqual(2, json_dict["b"])
-        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r") as json_file:
+        with open(self.data_path + os.sep + "TestBot.data.json.deprecated", mode="r", encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
         self.assertEqual(["a"], list(json_dict.keys()))
 
     def test_for_boolean_value(self):
-        self.data.assign_dict(dict())
+        self.data.assign_dict({})
         self.assertFalse(self.data)
         self.data[1] = 1
         self.assertTrue(self.data)
@@ -495,14 +495,14 @@ class TestCanonicalBot(TestCase):
 
     @staticmethod
     def create_timestamp(bot_name, date=datetime(2000, 1, 1), success=True):
-        with open(_DATA_PATH_TEST + os.sep + f"{bot_name}.last_run.json", mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + f"{bot_name}.last_run.json", mode="w", encoding="utf-8") as persist_json:
             json.dump({"timestamp": date.strftime("%Y-%m-%d_%H:%M:%S"), "success": success}, persist_json)
 
     @staticmethod
     def create_data(bot_name, data=None):
         if not data:
             data = {"a": 1}
-        with open(_DATA_PATH_TEST + os.sep + f"{bot_name}.data.json", mode="w") as persist_json:
+        with open(_DATA_PATH_TEST + os.sep + f"{bot_name}.data.json", mode="w", encoding="utf-8") as persist_json:
             json.dump(data, persist_json)
 
     class MinimalCanonicalBot(CanonicalBot):
