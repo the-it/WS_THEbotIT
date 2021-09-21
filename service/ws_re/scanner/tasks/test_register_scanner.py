@@ -3,6 +3,7 @@ from pathlib import Path
 from unittest import mock, skip
 
 import pywikibot
+from ddt import file_data, ddt
 from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
@@ -29,7 +30,7 @@ class TaskTestWithRegister(TaskTestCase):
         VolumeRegister._REGISTER_PATH = _REGISTER_PATH
         clear_tst_path(renew_path=False)
 
-
+@ddt
 class TestSCANTask(TaskTestWithRegister):
     # pylint: disable=arguments-differ
     def setUp(self):
@@ -178,57 +179,12 @@ text.
         task.re_page = re_page
         compare(({}, ["proof_read"]), task._fetch_proof_read(article))
 
-    def test_redirect(self):
+    @file_data("test_data/register_scanner/test_redirect.yml")
+    def test_redirect(self, text, result):
         task = SCANTask(None, self.logger)
-        # redirect from the properties
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|VERWEIS=ON
-}}
-text.
-{{REAutor|OFF}}"""
+        self.text_mock.return_value = text
         article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"redirect": True}, []), task._fetch_redirect(article))
-
-        # only a property ... no real link
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|VERWEIS=OFF
-}}
-text.
-{{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["redirect"]), task._fetch_redirect(article))
-
-        # fetch a real link from the text {{RE siehe|...
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|VERWEIS=ON
-}}
-'''Ad Algam''' s. {{SperrSchrift|{{RE siehe|Turris ad Algam}}}}.
-{{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"redirect": "Turris ad Algam"}, []), task._fetch_redirect(article))
-
-        # fetch a real link from the text [[RE:...
-        self.text_mock.return_value = """{{REDaten
-|BAND=I,1
-|VERWEIS=ON
-}}
-'''2)''' s. [[RE:Amantia 2|{{SperrSchrift|Amantia}} Nr.&nbsp;2]].
-{{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"redirect": "Amantia 2"}, []), task._fetch_redirect(article))
-
-        # bug no s. provided
-        self.text_mock.return_value = """{{REDaten
-    |BAND=I,1
-    |VERWEIS=ON
-    }}
-    ['''5a''']) (K) Eponymos von [[RE:Akanthos 1|A. Nr. 1]] (I 1147). '''S III'''.
-    {{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"redirect": "Akanthos 1"}, []), task._fetch_redirect(article))
+        compare(result, task._fetch_redirect(article))
 
     def test_previous(self):
         self.text_mock.return_value = """{{REDaten
@@ -341,7 +297,7 @@ text.
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
 
-            with open(Path(__file__).parent.joinpath("test_data/RE_Bithynia.txt"), encoding="utf-8") as test_file:
+            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Bithynia.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
             task.re_page = re_page
@@ -355,7 +311,7 @@ text.
         with LogCapture():
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
-            with open(Path(__file__).parent.joinpath("test_data/RE_Elis 1.txt"), encoding="utf-8") as test_file:
+            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Elis 1.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
             task.re_page = re_page
@@ -368,7 +324,7 @@ text.
         with LogCapture():
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
-            with open(Path(__file__).parent.joinpath("test_data/RE_L. Abuccius.txt"), encoding="utf-8") as test_file:
+            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_L. Abuccius.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
             task.re_page = re_page
@@ -382,7 +338,7 @@ text.
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
             # if the re_page is too complex (import of other pages during page construction) return empty result sets
-            with open(Path(__file__).parent.joinpath("test_data/RE_Plinius 5.txt"), encoding="utf-8") as test_file:
+            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Plinius 5.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
             task.re_page = re_page
@@ -395,7 +351,7 @@ text.
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
             # if the pages are non numeric return nothing
-            with open(Path(__file__).parent.joinpath("test_data/RE_Mitarbeiter-Verzeichnis.txt"),
+            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Mitarbeiter-Verzeichnis.txt"),
                       encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
@@ -409,7 +365,7 @@ text.
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Aal"
             # if the pages are non numeric return nothing
-            with open(Path(__file__).parent.joinpath("test_data/abs.txt"), encoding="utf-8") as test_file:
+            with open(Path(__file__).parent.joinpath("test_data/register_scanner/abs.txt"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
             task.re_page = re_page
@@ -422,7 +378,7 @@ text.
             task = SCANTask(None, self.logger)
             self.title_mock.return_value = "RE:Umbri, Umbria"
             # if the pages are non numeric return nothing
-            with open(Path(__file__).parent.joinpath("test_data/RE_Umbri,_Umbria.tst"), encoding="utf-8") as test_file:
+            with open(Path(__file__).parent.joinpath("test_data/register_scanner/RE_Umbri,_Umbria.tst"), encoding="utf-8") as test_file:
                 self.text_mock.return_value = test_file.read()
             re_page = RePage(self.page_mock)
             task.re_page = re_page

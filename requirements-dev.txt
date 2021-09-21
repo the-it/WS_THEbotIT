@@ -152,6 +152,7 @@ pytz==2021.1
     # via moto
 pyyaml==5.4.1
     # via
+    #   -r requirements-dev.in
     #   bandit
     #   dparse
 requests==2.26.0
