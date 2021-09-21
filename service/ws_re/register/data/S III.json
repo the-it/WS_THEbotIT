@@ -18702,7 +18702,7 @@
   {
     "lemma": "Echemmas",
     "previous": "Echekratidas 2",
-    "next": "Ἐχῖνος 7",
+    "next": "Echinos 7",
     "proof_read": 3,
     "chapters": [
       {
@@ -18713,9 +18713,9 @@
     ]
   },
   {
-    "lemma": "Ἐχῖνος 7",
+    "lemma": "Echinos 7",
     "previous": "Echemmas",
-    "next": "Ecua....",
+    "next": "Ἐχῖνος",
     "sort_key": "Echinos 7",
     "proof_read": 3,
     "chapters": [
@@ -18728,7 +18728,17 @@
   },
   {
     "lemma": "Ἐχῖνος",
-    "next": "Ecua(---)"
+    "previous": "Echinos 7",
+    "next": "Ecua(---)",
+    "sort_key": "Echinos 7",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 418,
+        "end": 418,
+        "author": "Frankenstein."
+      }
+    ]
   },
   {
     "lemma": "Ecua(---)",
@@ -19221,7 +19231,6 @@
   {
     "lemma": "Epistula 1",
     "previous": "Ἐπιστάτης εἰρήνης",
-    "next": "Epona",
     "chapters": [
       {
         "start": 435,
@@ -19232,6 +19241,7 @@
   },
   {
     "lemma": "Epistula",
+    "previous": "Ἐπιστάτης ἐιρήνης",
     "next": "Epona",
     "redirect": true,
     "chapters": [
