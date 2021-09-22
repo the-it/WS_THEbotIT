@@ -465,9 +465,12 @@
     "lemma": "Manutium",
     "previous": "Manus iniectio",
     "next": "Maogamalcha",
+    "redirect": "Mancunium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1402
+        "start": 1402,
+        "end": 1402
       }
     ]
   },
@@ -475,9 +478,12 @@
     "lemma": "Maogamalcha",
     "previous": "Manutium",
     "next": "Maokosmos",
+    "redirect": "Maozamalcha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1402
+        "start": 1402,
+        "end": 1402
       }
     ]
   },
@@ -485,9 +491,12 @@
     "lemma": "Maokosmos",
     "previous": "Maogamalcha",
     "next": "Maon 1",
+    "redirect": "Naskos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1402
+        "start": 1402,
+        "end": 1402
       }
     ]
   },
@@ -549,7 +558,7 @@
   {
     "lemma": "Mapalia",
     "previous": "Maozamalcha",
-    "next": "Mapha",
+    "next": "Μαφά",
     "chapters": [
       {
         "start": 1403,
@@ -558,22 +567,29 @@
     ]
   },
   {
-    "lemma": "Mapha",
+    "lemma": "Μαφά",
     "previous": "Mapalia",
     "next": "Mapharitai",
+    "sort_key": "Mapha",
+    "redirect": "Mizpa, Mizpe 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1403
+        "start": 1403,
+        "end": 1403
       }
     ]
   },
   {
     "lemma": "Mapharitai",
-    "previous": "Mapha",
+    "previous": "Μαφά",
     "next": "Mapharitis",
+    "redirect": "Mapharitis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1403
+        "start": 1403,
+        "end": 1403
       }
     ]
   },
@@ -658,9 +674,12 @@
     "lemma": "Mappalia",
     "previous": "Mappa aurea",
     "next": "Maps",
+    "redirect": "Mapalia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1416
+        "start": 1416,
+        "end": 1416
       }
     ]
   },
@@ -668,9 +687,12 @@
     "lemma": "Maps",
     "previous": "Mappalia",
     "next": "Mapses",
+    "redirect": "Mampsis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1416
+        "start": 1416,
+        "end": 1416
       }
     ]
   },
@@ -678,9 +700,12 @@
     "lemma": "Mapses",
     "previous": "Maps",
     "next": "Mapsis",
+    "redirect": "Mampsis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1416
+        "start": 1416,
+        "end": 1416
       }
     ]
   },
@@ -688,9 +713,12 @@
     "lemma": "Mapsis",
     "previous": "Mapses",
     "next": "Maquiaesus",
+    "redirect": "Mampsis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1416
+        "start": 1416,
+        "end": 1416
       }
     ]
   },
@@ -929,9 +957,12 @@
     "lemma": "Maraba Metropolis",
     "previous": "Marabadus",
     "next": "Marabina",
+    "redirect": "Mara 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1421
+        "start": 1421,
+        "end": 1421
       }
     ]
   },
@@ -950,9 +981,12 @@
     "lemma": "Marabios",
     "previous": "Marabina",
     "next": "Maraccas",
+    "redirect": "Marubios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1421
+        "start": 1421,
+        "end": 1421
       }
     ]
   },
@@ -971,9 +1005,12 @@
     "lemma": "Maraces",
     "previous": "Maraccas",
     "next": "Maracinus",
+    "redirect": "Marakoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1421
+        "start": 1421,
+        "end": 1421
       }
     ]
   },
@@ -1014,9 +1051,12 @@
     "lemma": "Maragentus",
     "previous": "Maraeus",
     "next": "Marakanda",
+    "redirect": "Mara 13",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1421
+        "start": 1421,
+        "end": 1421
       }
     ]
   },
@@ -1035,9 +1075,12 @@
     "lemma": "Marake",
     "previous": "Marakanda",
     "next": "Marakes",
+    "redirect": "Mardache",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1422
+        "start": 1422,
+        "end": 1422
       }
     ]
   },
@@ -1045,9 +1088,12 @@
     "lemma": "Marakes",
     "previous": "Marake",
     "next": "Marakodra",
+    "redirect": "Marakoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1422
+        "start": 1422,
+        "end": 1422
       }
     ]
   },
@@ -1110,9 +1156,12 @@
     "lemma": "Marandara",
     "previous": "Maranas",
     "next": "Marane",
+    "redirect": "Malandara",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1422
+        "start": 1422,
+        "end": 1422
       }
     ]
   },
@@ -1120,9 +1169,12 @@
     "lemma": "Marane",
     "previous": "Marandara",
     "next": "Maranitani",
+    "redirect": "Maranitani",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1422
+        "start": 1422,
+        "end": 1422
       }
     ]
   },
@@ -1196,9 +1248,12 @@
     "lemma": "Maras",
     "previous": "Mararmanis portus",
     "next": "Marata",
+    "redirect": "Mara 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1425
+        "start": 1425,
+        "end": 1425
       }
     ]
   },
@@ -1602,9 +1657,12 @@
     "lemma": "Marcellianus 8",
     "previous": "Marcellianus 7",
     "next": "Marcellianus 9",
+    "redirect": "Marcellinus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1439
+        "start": 1439,
+        "end": 1439
       }
     ]
   },
@@ -1612,9 +1670,12 @@
     "lemma": "Marcellianus 9",
     "previous": "Marcellianus 8",
     "next": "Marcellina 1",
+    "redirect": "Numisius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1439
+        "start": 1439,
+        "end": 1439
       }
     ]
   },
@@ -2876,9 +2937,12 @@
     "lemma": "Marcharidus",
     "previous": "Marchadae",
     "next": "Marcheschet",
+    "redirect": "Marcaridus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1503
+        "start": 1503,
+        "end": 1503
       }
     ]
   },
@@ -2963,9 +3027,12 @@
     "lemma": "Marciana 4",
     "previous": "Marciana 3",
     "next": "Marciana silva",
+    "redirect": "Euphemia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1504
+        "start": 1504,
+        "end": 1504
       }
     ]
   },
@@ -4095,9 +4162,12 @@
     "lemma": "Marcius 13",
     "previous": "Marcius 12",
     "next": "Marcius 14",
+    "redirect": "Marcius 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1544
+        "start": 1544,
+        "end": 1544
       }
     ]
   },
@@ -5928,9 +5998,12 @@
     "lemma": "Marcus 37",
     "previous": "Marcus 36",
     "next": "Marda",
+    "redirect": "Argentarius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1648
+        "start": 1648,
+        "end": 1648
       }
     ]
   },
@@ -5982,9 +6055,12 @@
     "lemma": "Mardes",
     "previous": "Marde",
     "next": "Mardocha",
+    "redirect": "Marda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1648
+        "start": 1648,
+        "end": 1648
       }
     ]
   },
@@ -6112,7 +6188,7 @@
   {
     "lemma": "Marduk",
     "previous": "Mardou limen",
-    "next": "Mardoulamne",
+    "next": "Μαρδουλάμνη",
     "chapters": [
       {
         "start": 1658,
@@ -6121,18 +6197,22 @@
     ]
   },
   {
-    "lemma": "Mardoulamne",
+    "lemma": "Μαρδουλάμνη",
     "previous": "Marduk",
     "next": "Mardyene",
+    "sort_key": "Mardoulamne",
+    "redirect": "Mardou limen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
   {
     "lemma": "Mardyene",
-    "previous": "Mardoulamne",
+    "previous": "Μαρδουλάμνη",
     "next": "Mardyenoi",
     "chapters": [
       {
@@ -6156,9 +6236,12 @@
     "lemma": "Mare adrianum",
     "previous": "Mardyenoi",
     "next": "Mare Adriaticum",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6166,9 +6249,12 @@
     "lemma": "Mare Adriaticum",
     "previous": "Mare adrianum",
     "next": "Mare Atlanticum",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6176,9 +6262,12 @@
     "lemma": "Mare Atlanticum",
     "previous": "Mare Adriaticum",
     "next": "Mare Ausonium",
+    "redirect": "Mare nostrum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6186,9 +6275,12 @@
     "lemma": "Mare Ausonium",
     "previous": "Mare Atlanticum",
     "next": "Mare Etruscum",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6196,9 +6288,12 @@
     "lemma": "Mare Etruscum",
     "previous": "Mare Ausonium",
     "next": "Mare inferum",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6206,9 +6301,12 @@
     "lemma": "Mare inferum",
     "previous": "Mare Etruscum",
     "next": "Mare internum",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6216,9 +6314,12 @@
     "lemma": "Mare internum",
     "previous": "Mare inferum",
     "next": "Mare intestinum",
+    "redirect": "Mare nostrum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6226,9 +6327,12 @@
     "lemma": "Mare intestinum",
     "previous": "Mare internum",
     "next": "Mare mediterraneum",
+    "redirect": "Mare nostrum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6236,9 +6340,12 @@
     "lemma": "Mare mediterraneum",
     "previous": "Mare intestinum",
     "next": "Mare nostrum",
+    "redirect": "Mare nostrum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -6257,9 +6364,12 @@
     "lemma": "Mare Siculum",
     "previous": "Mare nostrum",
     "next": "Mare Superum",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1673
+        "start": 1673,
+        "end": 1673
       }
     ]
   },
@@ -6289,9 +6399,12 @@
     "lemma": "Mare Tuscum",
     "previous": "Marea, Mareotis",
     "next": "Mare Tyrrenum",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1676
+        "start": 1676,
+        "end": 1676
       }
     ]
   },
@@ -6299,9 +6412,12 @@
     "lemma": "Mare Tyrrenum",
     "previous": "Mare Tuscum",
     "next": "Mareades 1",
+    "redirect": "Mare Superum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1676
+        "start": 1676,
+        "end": 1676
       }
     ]
   },
@@ -6309,9 +6425,12 @@
     "lemma": "Mareades 1",
     "previous": "Mare Tyrrenum",
     "next": "Mareades 2",
+    "redirect": "Mariades",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1678
+        "start": 1678,
+        "end": 1678
       }
     ]
   },
@@ -6407,9 +6526,12 @@
     "lemma": "Mareotis",
     "previous": "Marelibata",
     "next": "Mares 1",
+    "redirect": "Marea, Mareotis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
@@ -6428,9 +6550,12 @@
     "lemma": "Mares 2",
     "previous": "Mares 1",
     "next": "Mares 3",
+    "redirect": "Marda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
@@ -6459,9 +6584,12 @@
     "lemma": "Maresa",
     "previous": "Mares 4",
     "next": "Mareu",
+    "redirect": "Maris(s)a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
@@ -6469,9 +6597,12 @@
     "lemma": "Mareu",
     "previous": "Maresa",
     "next": "Mareura",
+    "redirect": "Maria 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
@@ -6490,9 +6621,12 @@
     "lemma": "Margaia",
     "previous": "Mareura",
     "next": "Margala",
+    "redirect": "Marganeis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
@@ -6500,9 +6634,12 @@
     "lemma": "Margala",
     "previous": "Margaia",
     "next": "Margana 1",
+    "redirect": "Marganeis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
@@ -6510,9 +6647,12 @@
     "lemma": "Margana 1",
     "previous": "Margala",
     "next": "Margana 2",
+    "redirect": "Marganeis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
@@ -6718,9 +6858,12 @@
     "lemma": "Margis",
     "previous": "Margion",
     "next": "Margites",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1705
+        "start": 1705,
+        "end": 1705
       }
     ]
   },
@@ -6761,9 +6904,12 @@
     "lemma": "Margum",
     "previous": "Margos 2",
     "next": "Margus 1",
+    "redirect": "Tabula Peutingeriana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1709
+        "start": 1709,
+        "end": 1709
       }
     ]
   },
@@ -6903,9 +7049,13 @@
     "lemma": "Maria 7",
     "previous": "Maria 6",
     "next": "Mariaba",
+    "redirect": "Tulliana 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1713
+        "start": 1713,
+        "end": 1713,
+        "author": "Enßlin."
       }
     ]
   },
@@ -6946,9 +7096,12 @@
     "lemma": "Mariame 2",
     "previous": "Mariame 1",
     "next": "Mariame 3",
+    "redirect": "Herodes 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1745
+        "start": 1745,
+        "end": 1745
       }
     ]
   },
@@ -6978,9 +7131,12 @@
     "lemma": "Mariana 1",
     "previous": "Mariame 4",
     "next": "Mariana 2",
+    "redirect": "Mariane polis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1746
+        "start": 1746,
+        "end": 1746
       }
     ]
   },
@@ -7010,9 +7166,12 @@
     "lemma": "Mariana fossae",
     "previous": "Mariana 3",
     "next": "Mariandynoi",
+    "redirect": "Fossa, Fossae 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1747
+        "start": 1747,
+        "end": 1747
       }
     ]
   },
@@ -7086,9 +7245,12 @@
     "lemma": "Marianum",
     "previous": "Marianoupolis",
     "next": "Marianus 1",
+    "redirect": "Marianon akron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1750
+        "start": 1750,
+        "end": 1750
       }
     ]
   },
@@ -7206,9 +7368,12 @@
     "lemma": "Marianus 11",
     "previous": "Marianus 10",
     "next": "Marianus 12",
+    "redirect": "Maurianus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1752
+        "start": 1752,
+        "end": 1752
       }
     ]
   },
@@ -7348,16 +7513,19 @@
     "lemma": "Marianus mons",
     "previous": "Marianus 23",
     "next": "Maribba Palmalacum",
+    "redirect": "Mons Mariorum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1753
+        "start": 1753,
+        "end": 1753
       }
     ]
   },
   {
     "lemma": "Maribba Palmalacum",
     "previous": "Marianus mons",
-    "next": "Mariboth",
+    "next": "Μαριβώθ",
     "chapters": [
       {
         "start": 1753,
@@ -7366,18 +7534,22 @@
     ]
   },
   {
-    "lemma": "Mariboth",
+    "lemma": "Μαριβώθ",
     "previous": "Maribba Palmalacum",
     "next": "Marica",
+    "sort_key": "Mariboth",
+    "redirect": "Meriba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1754
+        "start": 1754,
+        "end": 1754
       }
     ]
   },
   {
     "lemma": "Marica",
-    "previous": "Mariboth",
+    "previous": "Μαριβώθ",
     "next": "Mariccus",
     "chapters": [
       {
@@ -7401,9 +7573,12 @@
     "lemma": "Marici",
     "previous": "Mariccus",
     "next": "Maricla",
+    "redirect": "Massalia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1755
+        "start": 1755,
+        "end": 1755
       }
     ]
   },
@@ -7465,7 +7640,7 @@
   {
     "lemma": "Marikas",
     "previous": "Marigarri",
-    "next": "Marimoth",
+    "next": "Μαριμώθ",
     "chapters": [
       {
         "start": 1756,
@@ -7474,18 +7649,22 @@
     ]
   },
   {
-    "lemma": "Marimoth",
+    "lemma": "Μαριμώθ",
     "previous": "Marikas",
     "next": "Marina 1",
+    "sort_key": "Marimoth",
+    "redirect": "Meriba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1756
+        "start": 1756,
+        "end": 1756
       }
     ]
   },
   {
     "lemma": "Marina 1",
-    "previous": "Marimoth",
+    "previous": "Μαριμώθ",
     "next": "Marina 2",
     "chapters": [
       {
@@ -7542,9 +7721,12 @@
     "lemma": "Marinianis",
     "previous": "Marina 5",
     "next": "Marinianus 1",
+    "redirect": "Tabula Peutingeriana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1757
+        "start": 1757,
+        "end": 1757
       }
     ]
   },
@@ -7552,9 +7734,12 @@
     "lemma": "Marinianus 1",
     "previous": "Marinianis",
     "next": "Marinianus 2",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1758
+        "start": 1758,
+        "end": 1758
       }
     ]
   },
@@ -8243,9 +8428,12 @@
     "lemma": "Marisus",
     "previous": "Maris(s)a",
     "next": "Maritaios",
+    "redirect": "Strabon 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1809
+        "start": 1809,
+        "end": 1809
       }
     ]
   },
@@ -8275,9 +8463,12 @@
     "lemma": "Maritima 2",
     "previous": "Maritima 1",
     "next": "Mariva",
+    "redirect": "Hiera nesos, Hieronesos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1809
+        "start": 1809,
+        "end": 1809
       }
     ]
   },
@@ -8285,9 +8476,12 @@
     "lemma": "Mariva",
     "previous": "Maritima 2",
     "next": "Marius",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1810
+        "start": 1810,
+        "end": 1810
       }
     ]
   },
@@ -8849,9 +9043,12 @@
     "lemma": "Marius 50",
     "previous": "Marius 49",
     "next": "Marius 51",
+    "redirect": "Venidius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1831
+        "start": 1831,
+        "end": 1831
       }
     ]
   },
@@ -8870,9 +9067,12 @@
     "lemma": "Marius 52",
     "previous": "Marius 51",
     "next": "Marius 53",
+    "redirect": "Besius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1831
+        "start": 1831,
+        "end": 1831
       }
     ]
   },
@@ -8979,9 +9179,12 @@
     "lemma": "Marius 62",
     "previous": "Marius 61",
     "next": "Marius 63",
+    "redirect": "Servius 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1837
+        "start": 1837,
+        "end": 1837
       }
     ]
   },
@@ -8989,9 +9192,12 @@
     "lemma": "Marius 63",
     "previous": "Marius 62",
     "next": "Marius 64",
+    "redirect": "Marius 30",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1837
+        "start": 1837,
+        "end": 1837
       }
     ]
   },
@@ -9043,9 +9249,12 @@
     "lemma": "Marius 68",
     "previous": "Marius 67",
     "next": "Marius 69",
+    "redirect": "Venantius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1839
+        "start": 1839,
+        "end": 1839
       }
     ]
   },
@@ -9526,9 +9735,12 @@
     "lemma": "Marmessos",
     "previous": "Marme",
     "next": "Marmis",
+    "redirect": "Marpessos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1884
+        "start": 1884,
+        "end": 1884
       }
     ]
   },
@@ -9569,9 +9781,12 @@
     "lemma": "Marmor",
     "previous": "Marmolitis",
     "next": "Marmor Parium",
+    "redirect": "Steinbruch",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1885
+        "start": 1885,
+        "end": 1885
       }
     ]
   },
@@ -9612,9 +9827,12 @@
     "lemma": "Marmorea",
     "previous": "Marmorarius 2",
     "next": "Marmyssos",
+    "redirect": "Maronea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1899
+        "start": 1899,
+        "end": 1899
       }
     ]
   },
@@ -9622,9 +9840,12 @@
     "lemma": "Marmyssos",
     "previous": "Marmorea",
     "next": "Marna, Marnas",
+    "redirect": "Marpessos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1899
+        "start": 1899,
+        "end": 1899
       }
     ]
   },
@@ -9698,9 +9919,12 @@
     "lemma": "Marobudum",
     "previous": "Maroboduus",
     "next": "Marodda",
+    "redirect": "Marcomanni 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1910
+        "start": 1910,
+        "end": 1910
       }
     ]
   },
@@ -9730,9 +9954,12 @@
     "lemma": "Marohae",
     "previous": "Maroga",
     "next": "Marom",
+    "redirect": "Maroae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1910
+        "start": 1910,
+        "end": 1910
       }
     ]
   },
@@ -9981,9 +10208,12 @@
     "lemma": "Marriga",
     "previous": "Marriche",
     "next": "Marrinia",
+    "redirect": "Riga",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1918
+        "start": 1918,
+        "end": 1918
       }
     ]
   },
@@ -10171,9 +10401,12 @@
     "lemma": "Marsilla",
     "previous": "Marsigni",
     "next": "Marsippos 1",
+    "redirect": "Kallistratia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1981
+        "start": 1981,
+        "end": 1981
       }
     ]
   },
@@ -10192,9 +10425,12 @@
     "lemma": "Marsippos 2",
     "previous": "Marsippos 1",
     "next": "Marsonia",
+    "redirect": "Manippos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1981
+        "start": 1981,
+        "end": 1981
       }
     ]
   },
@@ -10213,9 +10449,12 @@
     "lemma": "Marsonie",
     "previous": "Marsonia",
     "next": "Marsos",
+    "redirect": "Tabula Peutingeriana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1981
+        "start": 1981,
+        "end": 1981
       }
     ]
   },
@@ -10223,9 +10462,12 @@
     "lemma": "Marsos",
     "previous": "Marsonie",
     "next": "Marsu kome",
+    "redirect": "Marianus 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1981
+        "start": 1981,
+        "end": 1981
       }
     ]
   },
@@ -10397,9 +10639,12 @@
     "lemma": "Martanum",
     "previous": "Marta",
     "next": "Martenoi",
+    "redirect": "Marta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2000
+        "start": 2000,
+        "end": 2000
       }
     ]
   },
@@ -10429,9 +10674,12 @@
     "lemma": "Martha 1",
     "previous": "Martenses",
     "next": "Martha 2",
+    "redirect": "Marta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2001
+        "start": 2001,
+        "end": 2001
       }
     ]
   },
@@ -10494,9 +10742,12 @@
     "lemma": "Marthula",
     "previous": "Marthucle",
     "next": "Martiales",
+    "redirect": "Morthula",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2002
+        "start": 2002,
+        "end": 2002
       }
     ]
   },
@@ -10679,9 +10930,12 @@
     "lemma": "Martiane Limne",
     "previous": "Martialis 15",
     "next": "Martianus 1",
+    "redirect": "Kapauta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2003
+        "start": 2003,
+        "end": 2003
       }
     ]
   },
@@ -10711,9 +10965,12 @@
     "lemma": "Martianus 3",
     "previous": "Martianus 2",
     "next": "Martilos",
+    "redirect": "Marcianus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2016
+        "start": 2016,
+        "end": 2016
       }
     ]
   },
@@ -10721,9 +10978,12 @@
     "lemma": "Martilos",
     "previous": "Martianus 3",
     "next": "Martina",
+    "redirect": "Myrtilos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2016
+        "start": 2016,
+        "end": 2016
       }
     ]
   },
@@ -11259,9 +11519,12 @@
     "lemma": "Martius 7",
     "previous": "Martius 6",
     "next": "Martius ager, campus",
+    "redirect": "Marcius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2025
+        "start": 2025,
+        "end": 2025
       }
     ]
   },
