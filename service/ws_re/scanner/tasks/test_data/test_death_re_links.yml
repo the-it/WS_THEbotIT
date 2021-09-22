@@ -1,0 +1,125 @@
+next_previous_wrong_start_letter:
+  text: |
+    {{REDaten
+    |VG=Bla
+    |NF=Episch
+    }}
+    {{REAutor|Autor.}}
+  title: "Re:Title"
+  exists_mocks: [false]
+  expect:
+    result: {"success": true, "changed": false}
+    data: [["Bla", "Title"]]
+
+next_previous_multiple_aticles:
+  text: |
+    {{REDaten
+    |VG=Bla
+    |NF=Episch
+    }}
+    {{REAutor|Autor.}}
+    {{REDaten
+    |VG=Blub
+    |NF=Chaos
+    }}
+    {{REAutor|Autor.}}
+  title: "Re:Title"
+  exists_mocks: [false, false, false]
+  expect:
+    result: {"success": true, "changed": false}
+    data:
+      - ["Bla", "Title"]
+      - ["Blub", "Title"]
+      - ["Chaos", "Title"]
+
+find_links_in_text:
+  text: |
+    {{REDaten
+    }}
+    {{RE siehe|Aal}}
+    {{RE siehe|Anderer Quatsch}}
+    {{REAutor|Autor.}}
+  title: "Re:Title"
+  exists_mocks: [true, false]
+  expect:
+    result: {"success": true, "changed": false}
+    data:
+      - ["Anderer Quatsch", "Title"]
+
+find_links_in_multiple_articles:
+  text: |
+    {{REDaten}}
+    {{RE siehe|Aal}}
+    {{REAutor|Autor.}}
+    {{REDaten}}
+    {{RE siehe|Anderer Quatsch}}
+    {{REAutor|Autor.}}
+    {{REDaten}}
+    {{RE siehe|Dada Quatsch}}
+    {{REAutor|Autor.}}
+    {{REDaten}}
+    {{RE siehe|Nicht hiernach suchen}}
+    {{REAutor|Autor.}}
+  title: "Re:Title"
+  exists_mocks: [false, true, false, false]
+  expect:
+    result: {"success": true, "changed": false}
+    data:
+      - ["Aal", "Title"]
+      - ["Dada Quatsch", "Title"]
+
+find_red_links:
+  text: |
+    {{REDaten
+    }}
+    {{RE siehe|Aal}}
+    [[RE:Anderer Quatsch]]
+    {{REAutor|Autor.}}
+  title: "Re:Title"
+  exists_mocks: [false, false]
+  expect:
+    result: {"success": true, "changed": false}
+    data:
+      - ["Aal", "Title"]
+      - ["Anderer Quatsch", "Title"]
+
+bug_value_error:
+  text: |
+    {{REDaten
+    |BAND=S I
+    |SPALTE_START=267
+    |SPALTE_END=OFF
+    |VORGÄNGER=Caecilius 44
+    |NACHFOLGER=Caecilius 57
+    |SORTIERUNG=Caecilius 054a
+    |KORREKTURSTAND=fertig
+    |WIKIPEDIA=
+    |WIKISOURCE=
+    |EXTSCAN_START=
+    |EXTSCAN_END=
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    |NACHTRAG=OFF
+    |ÜBERSCHRIFT=OFF
+    |VERWEIS=OFF
+    }}
+    '''54a)''' Caecilius Felix, Legat von [[RE:Arabia 1|Arabia]] unter [[RE:Aurelius 221|Severus Alexander]] (Meilensteine CIL III Suppl. 14&nbsp;149 <sup>9. 14. 27. 45</sup>)<ref group="WS">{{CIL|3|14149}}</ref>.
+    {{REAutor|Groag.}}
+    {{REAbschnitt}}
+    test
+    {{REAutor|Test.}}
+    {{References|TIT|WS}}
+    *Siehe auch '''{{RE siehe|Caecilius 54}}'''.
+
+  title: "Re:Caecilius 54a"
+  exists_mocks: [false, false, false, false, false]
+  expect:
+    result: {"success": true, "changed": false}
+    data:
+      - ['Caecilius 44', 'Caecilius 54a']
+      - ['Caecilius 57', 'Caecilius 54a']
+      - ['Arabia 1', 'Caecilius 54a']
+      - ['Aurelius 221', 'Caecilius 54a']
+      - ['Caecilius 54', 'Caecilius 54a']
