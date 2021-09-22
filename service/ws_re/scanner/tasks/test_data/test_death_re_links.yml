@@ -8,8 +8,7 @@ next_previous_wrong_start_letter:
   title: "Re:Title"
   exists_mocks: [false]
   expect:
-    result: {"success": true, "changed": false}
-    data: [["Bla", "Title"]]
+    - ["Bla", "Title"]
 
 next_previous_multiple_aticles:
   text: |
@@ -26,11 +25,9 @@ next_previous_multiple_aticles:
   title: "Re:Title"
   exists_mocks: [false, false, false]
   expect:
-    result: {"success": true, "changed": false}
-    data:
-      - ["Bla", "Title"]
-      - ["Blub", "Title"]
-      - ["Chaos", "Title"]
+    - ["Bla", "Title"]
+    - ["Blub", "Title"]
+    - ["Chaos", "Title"]
 
 find_links_in_text:
   text: |
@@ -42,9 +39,7 @@ find_links_in_text:
   title: "Re:Title"
   exists_mocks: [true, false]
   expect:
-    result: {"success": true, "changed": false}
-    data:
-      - ["Anderer Quatsch", "Title"]
+    - ["Anderer Quatsch", "Title"]
 
 find_links_in_multiple_articles:
   text: |
@@ -63,10 +58,8 @@ find_links_in_multiple_articles:
   title: "Re:Title"
   exists_mocks: [false, true, false, false]
   expect:
-    result: {"success": true, "changed": false}
-    data:
-      - ["Aal", "Title"]
-      - ["Dada Quatsch", "Title"]
+    - ["Aal", "Title"]
+    - ["Dada Quatsch", "Title"]
 
 find_red_links:
   text: |
@@ -78,10 +71,8 @@ find_red_links:
   title: "Re:Title"
   exists_mocks: [false, false]
   expect:
-    result: {"success": true, "changed": false}
-    data:
-      - ["Aal", "Title"]
-      - ["Anderer Quatsch", "Title"]
+    - ["Aal", "Title"]
+    - ["Anderer Quatsch", "Title"]
 
 bug_value_error:
   text: |
@@ -116,10 +107,8 @@ bug_value_error:
   title: "Re:Caecilius 54a"
   exists_mocks: [false, false, false, false, false]
   expect:
-    result: {"success": true, "changed": false}
-    data:
-      - ['Caecilius 44', 'Caecilius 54a']
-      - ['Caecilius 57', 'Caecilius 54a']
-      - ['Arabia 1', 'Caecilius 54a']
-      - ['Aurelius 221', 'Caecilius 54a']
-      - ['Caecilius 54', 'Caecilius 54a']
+    - ['Caecilius 44', 'Caecilius 54a']
+    - ['Caecilius 57', 'Caecilius 54a']
+    - ['Arabia 1', 'Caecilius 54a']
+    - ['Aurelius 221', 'Caecilius 54a']
+    - ['Caecilius 54', 'Caecilius 54a']

@@ -1,5 +1,4 @@
 # pylint: disable=protected-access
-from pathlib import Path
 from unittest import mock
 
 from ddt import ddt, file_data
@@ -46,8 +45,8 @@ class TestDEALTask(TaskTestCase):
             page_mock.return_value.exists.side_effect = exists_mocks
             re_page = RePage(self.page_mock)
             task = DEALTask(None, self.logger)
-            compare(expect["result"], task.run(re_page))
-            compare(expect["data"], task.data)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare(expect, task.data)
 
     def test_build_entries(self):
         task = DEALTask(None, self.logger)
