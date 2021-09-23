@@ -501,9 +501,12 @@
     "lemma": "Medaba",
     "previous": "Meda 2",
     "next": "Medaillon",
+    "redirect": "Medeba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 18
+        "start": 18,
+        "end": 18
       }
     ]
   },
@@ -533,9 +536,12 @@
     "lemma": "Medama",
     "previous": "Medainum",
     "next": "Medamas",
+    "redirect": "Medma 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 25
+        "start": 25,
+        "end": 25
       }
     ]
   },
@@ -554,9 +560,12 @@
     "lemma": "Medaua",
     "previous": "Medamas",
     "next": "Medaura",
+    "redirect": "Midian",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 26
+        "start": 26,
+        "end": 26
       }
     ]
   },
@@ -564,9 +573,12 @@
     "lemma": "Medaura",
     "previous": "Medaua",
     "next": "Medaurus",
+    "redirect": "Madauros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 26
+        "start": 26,
+        "end": 26
       }
     ]
   },
@@ -595,7 +607,7 @@
   {
     "lemma": "Medeba",
     "previous": "Meddix",
-    "next": "Medebena",
+    "next": "Μηδεβηνά",
     "chapters": [
       {
         "start": 29,
@@ -604,18 +616,22 @@
     ]
   },
   {
-    "lemma": "Medebena",
+    "lemma": "Μηδεβηνά",
     "previous": "Medeba",
     "next": "Medeca",
+    "sort_key": "Medebena",
+    "redirect": "Eusebios 24",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 29
+        "start": 29,
+        "end": 29
       }
     ]
   },
   {
     "lemma": "Medeca",
-    "previous": "Medebena",
+    "previous": "Μηδεβηνά",
     "next": "Medeia",
     "chapters": [
       {
@@ -1214,9 +1230,12 @@
     "lemma": "Medione",
     "previous": "Medion",
     "next": "Medionemeton",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 102
+        "start": 102,
+        "end": 102
       }
     ]
   },
@@ -1290,9 +1309,12 @@
     "lemma": "Mediotautehae",
     "previous": "Medios 5",
     "next": "Medische Mauer",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 106
+        "start": 106,
+        "end": 106
       }
     ]
   },
@@ -1300,9 +1322,12 @@
     "lemma": "Medische Mauer",
     "previous": "Mediotautehae",
     "next": "Meditrinalia",
+    "redirect": "Medias teichos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 106
+        "start": 106,
+        "end": 106
       }
     ]
   },
@@ -1321,9 +1346,12 @@
     "lemma": "Medius Fidius",
     "previous": "Meditrinalia",
     "next": "Medix",
+    "redirect": "Dius Fidius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 107
+        "start": 107,
+        "end": 107
       }
     ]
   },
@@ -1331,9 +1359,12 @@
     "lemma": "Medix",
     "previous": "Medius Fidius",
     "next": "Medma 1",
+    "redirect": "Meddix",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 107
+        "start": 107,
+        "end": 107
       }
     ]
   },
@@ -1374,9 +1405,12 @@
     "lemma": "Medoacus",
     "previous": "Medmasa",
     "next": "Medobriga",
+    "redirect": "Meduacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 108
+        "start": 108,
+        "end": 108
       }
     ]
   },
@@ -1406,9 +1440,12 @@
     "lemma": "Medocius",
     "previous": "Medocia",
     "next": "Medoë",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 108
+        "start": 108,
+        "end": 108
       }
     ]
   },
@@ -1669,9 +1706,12 @@
     "lemma": "Meduacus maior",
     "previous": "Meduacus",
     "next": "Meduacus minor",
+    "redirect": "Meduacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 115
+        "start": 115,
+        "end": 115
       }
     ]
   },
@@ -1679,9 +1719,12 @@
     "lemma": "Meduacus minor",
     "previous": "Meduacus maior",
     "next": "Medulli 1",
+    "redirect": "Meduacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 115
+        "start": 115,
+        "end": 115
       }
     ]
   },
@@ -1766,9 +1809,12 @@
     "lemma": "Medurin",
     "previous": "Meduna",
     "next": "Medus",
+    "redirect": "Mars 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 117
+        "start": 117,
+        "end": 117
       }
     ]
   },
@@ -1787,9 +1833,12 @@
     "lemma": "Medusa",
     "previous": "Medus",
     "next": "Medutius",
+    "redirect": "Gorgo 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 117
+        "start": 117,
+        "end": 117
       }
     ]
   },
@@ -1863,9 +1912,12 @@
     "lemma": "Mefre",
     "previous": "Meflanus",
     "next": "Mefula",
+    "redirect": "Maipha metropolis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 119
+        "start": 119,
+        "end": 119
       }
     ]
   },
@@ -2258,9 +2310,12 @@
     "lemma": "Megalai",
     "previous": "Megala polis",
     "next": "Megalartios",
+    "redirect": "Megale 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 140
+        "start": 140,
+        "end": 140
       }
     ]
   },
@@ -2301,9 +2356,12 @@
     "lemma": "Megale 1",
     "previous": "Megalassos",
     "next": "Megale 2",
+    "redirect": "Megas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 140
+        "start": 140,
+        "end": 140
       }
     ]
   },
@@ -2388,9 +2446,12 @@
     "lemma": "Megalensia",
     "previous": "Megaleas",
     "next": "Megalesios",
+    "redirect": "Ludi publici",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 142
+        "start": 142,
+        "end": 142
       }
     ]
   },
@@ -2464,9 +2525,12 @@
     "lemma": "Megaloi",
     "previous": "Megallos",
     "next": "Megaloi Theoi",
+    "redirect": "Megas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 143
+        "start": 143,
+        "end": 143
       }
     ]
   },
@@ -2474,9 +2538,12 @@
     "lemma": "Megaloi Theoi",
     "previous": "Megaloi",
     "next": "Megalophanes",
+    "redirect": "Kabeiros, Kabeiroi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 143
+        "start": 143,
+        "end": 143
       }
     ]
   },
@@ -2495,9 +2562,12 @@
     "lemma": "Megalopolis 1",
     "previous": "Megalophanes",
     "next": "Megalopolis 2",
+    "redirect": "Megala polis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 143
+        "start": 143,
+        "end": 143
       }
     ]
   },
@@ -2527,9 +2597,12 @@
     "lemma": "Megalopolis 4",
     "previous": "Megalopolis 3",
     "next": "Megalopolitis",
+    "redirect": "Megale 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 144
+        "start": 144,
+        "end": 144
       }
     ]
   },
@@ -2559,9 +2632,12 @@
     "lemma": "Megalossos",
     "previous": "Megalopyleitai",
     "next": "Megalostrata",
+    "redirect": "Megalassos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 145
+        "start": 145,
+        "end": 145
       }
     ]
   },
@@ -2580,9 +2656,12 @@
     "lemma": "Megalula",
     "previous": "Megalostrata",
     "next": "Megamede",
+    "redirect": "Magabula",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 145
+        "start": 145,
+        "end": 145
       }
     ]
   },
@@ -2612,9 +2691,12 @@
     "lemma": "Meganeira",
     "previous": "Megamedes",
     "next": "Meganitas",
+    "redirect": "Alkyoneus 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 145
+        "start": 145,
+        "end": 145
       }
     ]
   },
@@ -2622,9 +2704,12 @@
     "lemma": "Meganitas",
     "previous": "Meganeira",
     "next": "Megapenthes 1",
+    "redirect": "Meiganitas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 145
+        "start": 145,
+        "end": 145
       }
     ]
   },
@@ -2731,9 +2816,12 @@
     "lemma": "Megaravicus",
     "previous": "Megara 6",
     "next": "Megareus 1",
+    "redirect": "Florus 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 215
+        "start": 215,
+        "end": 215
       }
     ]
   },
@@ -2807,9 +2895,12 @@
     "lemma": "Megaris 2",
     "previous": "Megaris 1",
     "next": "Megaristos",
+    "redirect": "Megalia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 220
+        "start": 220,
+        "end": 220
       }
     ]
   },
@@ -2861,9 +2952,12 @@
     "lemma": "Megarsos",
     "previous": "Megaros",
     "next": "Megas",
+    "redirect": "Magarsa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 221
+        "start": 221,
+        "end": 221
       }
     ]
   },
@@ -2893,9 +2987,12 @@
     "lemma": "Megas 3",
     "previous": "Megas 2",
     "next": "Megasthenes 1",
+    "redirect": "Meges 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
@@ -2947,9 +3044,12 @@
     "lemma": "Megeda",
     "previous": "Megatichos",
     "next": "Megentira",
+    "redirect": "Megada",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 327
+        "start": 327,
+        "end": 327
       }
     ]
   },
@@ -3122,9 +3222,12 @@
     "lemma": "Megista",
     "previous": "Megisba",
     "next": "Megistanes",
+    "redirect": "Megiste 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 330
+        "start": 330,
+        "end": 330
       }
     ]
   },
@@ -3143,9 +3246,12 @@
     "lemma": "Megiste 1",
     "previous": "Megistanes",
     "next": "Megiste 2",
+    "redirect": "Megas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 331
+        "start": 331,
+        "end": 331
       }
     ]
   },
@@ -3208,9 +3314,12 @@
     "lemma": "Megistos 1",
     "previous": "Megistonos",
     "next": "Megistos 2",
+    "redirect": "Megas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 332
+        "start": 332,
+        "end": 332
       }
     ]
   },
@@ -3218,9 +3327,12 @@
     "lemma": "Megistos 2",
     "previous": "Megistos 1",
     "next": "Megistotimos",
+    "redirect": "Makestos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 332
+        "start": 332,
+        "end": 332
       }
     ]
   },
@@ -3503,9 +3615,12 @@
     "lemma": "Meilichioi Theoi 6",
     "previous": "Meilichioi Theoi 5",
     "next": "Meilichioi Theoi 7",
+    "redirect": "Meilichioi Theoi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 343
+        "start": 343,
+        "end": 343
       }
     ]
   },
@@ -3513,9 +3628,12 @@
     "lemma": "Meilichioi Theoi 7",
     "previous": "Meilichioi Theoi 6",
     "next": "Meilichioi Theoi 8",
+    "redirect": "Meilichioi Theoi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 343
+        "start": 343,
+        "end": 343
       }
     ]
   },
@@ -3567,9 +3685,12 @@
     "lemma": "Meilichos 1",
     "previous": "Meilichioi Theoi 11",
     "next": "Meilichos 2",
+    "redirect": "Meilichioi Theoi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 345
+        "start": 345,
+        "end": 345
       }
     ]
   },
@@ -3610,9 +3731,12 @@
     "lemma": "Meïnim",
     "previous": "Meineid",
     "next": "Meinoetes",
+    "redirect": "Meunim",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 357
+        "start": 357,
+        "end": 357
       }
     ]
   },
@@ -3719,9 +3843,12 @@
     "lemma": "Mekastos",
     "previous": "Meizon 2",
     "next": "Mekestos",
+    "redirect": "Makestos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 363
+        "start": 363,
+        "end": 363
       }
     ]
   },
@@ -3729,9 +3856,12 @@
     "lemma": "Mekestos",
     "previous": "Mekastos",
     "next": "Mekisteus 1",
+    "redirect": "Makestos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 363
+        "start": 363,
+        "end": 363
       }
     ]
   },
@@ -3750,9 +3880,12 @@
     "lemma": "Mekisteus 2",
     "previous": "Mekisteus 1",
     "next": "Mekiston",
+    "redirect": "Makistios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 363
+        "start": 363,
+        "end": 363
       }
     ]
   },
@@ -3815,9 +3948,12 @@
     "lemma": "Mela 2",
     "previous": "Mela 1",
     "next": "Mela 3",
+    "redirect": "Mella 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 384
+        "start": 384,
+        "end": 384
       }
     ]
   },
@@ -3825,9 +3961,12 @@
     "lemma": "Mela 3",
     "previous": "Mela 2",
     "next": "Melabron",
+    "redirect": "Iustinianopolis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 384
+        "start": 384,
+        "end": 384
       }
     ]
   },
@@ -3846,9 +3985,12 @@
     "lemma": "Melada",
     "previous": "Melabron",
     "next": "Melae",
+    "redirect": "Tabula Peutingeriana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 384
+        "start": 384,
+        "end": 384
       }
     ]
   },
@@ -3856,9 +3998,12 @@
     "lemma": "Melae",
     "previous": "Melada",
     "next": "Melaina 1",
+    "redirect": "Meles 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 384
+        "start": 384,
+        "end": 384
       }
     ]
   },
@@ -3954,9 +4099,12 @@
     "lemma": "Melainai 2",
     "previous": "Melainai 1",
     "next": "Melainai 3",
+    "redirect": "Melaineai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 387
+        "start": 387,
+        "end": 387
       }
     ]
   },
@@ -3964,9 +4112,12 @@
     "lemma": "Melainai 3",
     "previous": "Melainai 2",
     "next": "Melainai 4",
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 387
+        "start": 387,
+        "end": 387
       }
     ]
   },
@@ -4011,9 +4162,12 @@
     "lemma": "Melainis",
     "previous": "Melaineai",
     "next": "Melambrion",
+    "redirect": "Melaina 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 390
+        "start": 390,
+        "end": 390
       }
     ]
   },
@@ -4241,9 +4395,12 @@
     "lemma": "Melampus 11",
     "previous": "Melampus 10",
     "next": "Melampygos",
+    "redirect": "Melampos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 405
+        "start": 405,
+        "end": 405
       }
     ]
   },
@@ -4262,9 +4419,12 @@
     "lemma": "Melanaigis",
     "previous": "Melampygos",
     "next": "Melana ore 1",
+    "redirect": "Melaina 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 406
+        "start": 406,
+        "end": 406
       }
     ]
   },
@@ -4481,9 +4641,12 @@
     "lemma": "Melangitai",
     "previous": "Melangeia",
     "next": "Melania 1",
+    "redirect": "Malangitai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 415
+        "start": 415,
+        "end": 415
       }
     ]
   },
@@ -4491,9 +4654,12 @@
     "lemma": "Melania 1",
     "previous": "Melangitai",
     "next": "Melania 2",
+    "redirect": "Melainai 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 415
+        "start": 415,
+        "end": 415
       }
     ]
   },
@@ -4633,9 +4799,12 @@
     "lemma": "Melanippion",
     "previous": "Melanippides 3",
     "next": "Melanippos?",
+    "redirect": "Melanippe 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 423
+        "start": 423,
+        "end": 423
       }
     ]
   },
@@ -4852,9 +5021,12 @@
     "lemma": "Melanthides",
     "previous": "Melanthia",
     "next": "Melanthios 1",
+    "redirect": "Melaina 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 427
+        "start": 427,
+        "end": 427
       }
     ]
   },
@@ -5040,9 +5212,12 @@
     "lemma": "Melanthos 1",
     "previous": "Melantho",
     "next": "Melanthos 2",
+    "redirect": "Melaina 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 434
+        "start": 434,
+        "end": 434
       }
     ]
   },
@@ -5116,9 +5291,12 @@
     "lemma": "Melanthos 8",
     "previous": "Melanthos 7",
     "next": "Melantia",
+    "redirect": "Melantas 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 436
+        "start": 436,
+        "end": 436
       }
     ]
   },
@@ -5126,9 +5304,12 @@
     "lemma": "Melantia",
     "previous": "Melanthos 8",
     "next": "Melantias",
+    "redirect": "Melaina 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 436
+        "start": 436,
+        "end": 436
       }
     ]
   },
@@ -5146,7 +5327,7 @@
   {
     "lemma": "Melantioi skopeloi",
     "previous": "Melantias",
-    "next": "Melantion oros",
+    "next": "Μελάντιον ὄρος",
     "chapters": [
       {
         "start": 436,
@@ -5155,18 +5336,22 @@
     ]
   },
   {
-    "lemma": "Melantion oros",
+    "lemma": "Μελάντιον ὄρος",
     "previous": "Melantioi skopeloi",
     "next": "Melas 1",
+    "sort_key": "Melantion oros",
+    "redirect": "Mauron oros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 437
+        "start": 437,
+        "end": 437
       }
     ]
   },
   {
     "lemma": "Melas 1",
-    "previous": "Melantion oros",
+    "previous": "Μελάντιον ὄρος",
     "next": "Melas 2",
     "chapters": [
       {
@@ -5421,9 +5606,12 @@
     "lemma": "Melas 24",
     "previous": "Melas 23",
     "next": "Melas 25",
+    "redirect": "Melite 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 440
+        "start": 440,
+        "end": 440
       }
     ]
   },
@@ -5431,9 +5619,12 @@
     "lemma": "Melas 25",
     "previous": "Melas 24",
     "next": "Melas 26",
+    "redirect": "Euphrates 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 440
+        "start": 440,
+        "end": 440
       }
     ]
   },
@@ -5590,9 +5781,12 @@
     "lemma": "Meldita",
     "previous": "Meldis",
     "next": "Meleagrides",
+    "redirect": "Melitida",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 445
+        "start": 445,
+        "end": 445
       }
     ]
   },
@@ -5699,9 +5893,12 @@
     "lemma": "Meledosa",
     "previous": "Meleagru charax",
     "next": "Meleia",
+    "redirect": "Melusa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 490
+        "start": 490,
+        "end": 490
       }
     ]
   },
@@ -5720,9 +5917,12 @@
     "lemma": "Meleios",
     "previous": "Meleia",
     "next": "Melerpanta",
+    "redirect": "Melon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 490
+        "start": 490,
+        "end": 490
       }
     ]
   },
@@ -5862,9 +6062,12 @@
     "lemma": "Melesigenes",
     "previous": "Melesias 2",
     "next": "Melesippos",
+    "redirect": "Meles 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 495
+        "start": 495,
+        "end": 495
       }
     ]
   },
@@ -5883,9 +6086,12 @@
     "lemma": "Melesses",
     "previous": "Melesippos",
     "next": "Melete 1",
+    "redirect": "Maesesses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 496
+        "start": 496,
+        "end": 496
       }
     ]
   },
@@ -5926,9 +6132,12 @@
     "lemma": "Meletides",
     "previous": "Melete 3",
     "next": "Meletinus",
+    "redirect": "Melitides",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 500
+        "start": 500,
+        "end": 500
       }
     ]
   },
@@ -5936,9 +6145,12 @@
     "lemma": "Meletinus",
     "previous": "Meletides",
     "next": "Meletius 1",
+    "redirect": "Melta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 500
+        "start": 500,
+        "end": 500
       }
     ]
   },
@@ -6023,9 +6235,12 @@
     "lemma": "Meletius 8",
     "previous": "Meletius 7",
     "next": "Meletius 9",
+    "redirect": "Melitius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 503
+        "start": 503,
+        "end": 503
       }
     ]
   },
@@ -6088,9 +6303,12 @@
     "lemma": "Meletosa",
     "previous": "Meletos 4",
     "next": "Meletos kolpos",
+    "redirect": "Melusa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 504
+        "start": 504,
+        "end": 504
       }
     ]
   },
@@ -6175,9 +6393,12 @@
     "lemma": "Meliades 1",
     "previous": "meliacr",
     "next": "Meliades 2",
+    "redirect": "Maliades",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 507
+        "start": 507,
+        "end": 507
       }
     ]
   },
@@ -6185,9 +6406,12 @@
     "lemma": "Meliades 2",
     "previous": "Meliades 1",
     "next": "Melias 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 507
+        "start": 507,
+        "end": 507
       }
     ]
   },
@@ -6316,9 +6540,12 @@
     "lemma": "Melichia",
     "previous": "Meliboia 4",
     "next": "Melides",
+    "redirect": "Meilichioi Theoi 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 514
+        "start": 514,
+        "end": 514
       }
     ]
   },
@@ -6326,9 +6553,12 @@
     "lemma": "Melides",
     "previous": "Melichia",
     "next": "Meligedius",
+    "redirect": "Maliades",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 514
+        "start": 514,
+        "end": 514
       }
     ]
   },
@@ -6490,9 +6720,12 @@
     "lemma": "Melissa 2",
     "previous": "Melissa 1",
     "next": "Melissa 3",
+    "redirect": "Μέλιττα",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 525
+        "start": 525,
+        "end": 525
       }
     ]
   },
@@ -6643,9 +6876,12 @@
     "lemma": "Melissos 5",
     "previous": "Melissos 4",
     "next": "Melissosoos",
+    "redirect": "Plutarchos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 532
+        "start": 532,
+        "end": 532
       }
     ]
   },
@@ -6862,9 +7098,12 @@
     "lemma": "Melite 14",
     "previous": "Melite 13",
     "next": "Melite 15",
+    "redirect": "Melitene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 547
+        "start": 547,
+        "end": 547
       }
     ]
   },
@@ -6872,9 +7111,12 @@
     "lemma": "Melite 15",
     "previous": "Melite 14",
     "next": "Melite 16",
+    "redirect": "Melitaia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 547
+        "start": 547,
+        "end": 547
       }
     ]
   },
@@ -6948,9 +7190,12 @@
     "lemma": "Melitina",
     "previous": "Melitides",
     "next": "Melitius 1",
+    "redirect": "Aurelius 258",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 550
+        "start": 550,
+        "end": 550
       }
     ]
   },
@@ -7002,9 +7247,12 @@
     "lemma": "Melitius 5",
     "previous": "Melitius 4",
     "next": "Melitodes",
+    "redirect": "Meletius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 552
+        "start": 552,
+        "end": 552
       }
     ]
   },
@@ -7360,7 +7608,7 @@
     "lemma": "Mellodunum",
     "previous": "Mellesa",
     "next": "Mellon",
-    "redirect": true,
+    "redirect": "Meclodunum",
     "proof_read": 3,
     "wp_link": "w:de:Melun",
     "wd_link": "d:Q41139",
@@ -7594,9 +7842,12 @@
     "lemma": "Melosa",
     "previous": "Melos 2",
     "next": "Melosios",
+    "redirect": "Melusa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 586
+        "start": 586,
+        "end": 586
       }
     ]
   },
@@ -7604,9 +7855,12 @@
     "lemma": "Melosios",
     "previous": "Melosa",
     "next": "Melotis",
+    "redirect": "Melon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 586
+        "start": 586,
+        "end": 586
       }
     ]
   },
@@ -7614,9 +7868,12 @@
     "lemma": "Melotis",
     "previous": "Melosios",
     "next": "Melpeia",
+    "redirect": "Livius 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 586
+        "start": 586,
+        "end": 586
       }
     ]
   },
@@ -7657,9 +7914,12 @@
     "lemma": "Melpis 2",
     "previous": "Melpis 1",
     "next": "Melpomene",
+    "redirect": "Domitius 106",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 586
+        "start": 586,
+        "end": 586
       }
     ]
   },
@@ -7700,9 +7960,12 @@
     "lemma": "Melsiagum",
     "previous": "Melpum",
     "next": "Melsus",
+    "redirect": "Melsyagum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 590
+        "start": 590,
+        "end": 590
       }
     ]
   },
@@ -7842,9 +8105,12 @@
     "lemma": "Melzitanum",
     "previous": "Melussa",
     "next": "Memanturum",
+    "redirect": "Melizitanum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 595
+        "start": 595,
+        "end": 595
       }
     ]
   },
@@ -7863,9 +8129,12 @@
     "lemma": "Membio",
     "previous": "Memanturum",
     "next": "Membles",
+    "redirect": "Membro",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 595
+        "start": 595,
+        "end": 595
       }
     ]
   },
@@ -8455,9 +8724,12 @@
     "lemma": "Memmius 35",
     "previous": "Memmius 34",
     "next": "Memmius 36",
+    "redirect": "Symmachos 27",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 637
+        "start": 637,
+        "end": 637
       }
     ]
   },
@@ -8995,9 +9267,12 @@
     "lemma": "Memsidos",
     "previous": "memrun",
     "next": "Men",
+    "redirect": "Mampsis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 689
+        "start": 689,
+        "end": 689
       }
     ]
   },
@@ -9115,9 +9390,12 @@
     "lemma": "Menainon",
     "previous": "Menaichmos 5",
     "next": "Menalcas",
+    "redirect": "Menai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 702
+        "start": 702,
+        "end": 702
       }
     ]
   },
@@ -9125,9 +9403,12 @@
     "lemma": "Menalcas",
     "previous": "Menainon",
     "next": "Menalippos",
+    "redirect": "Menalkes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 702
+        "start": 702,
+        "end": 702
       }
     ]
   },
@@ -9553,9 +9834,12 @@
     "lemma": "Menandros 24",
     "previous": "Menandros 23",
     "next": "Menapii",
+    "redirect": "Menander 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 766
+        "start": 766,
+        "end": 766
       }
     ]
   },
@@ -9871,9 +10155,12 @@
     "lemma": "Mendici",
     "previous": "Mendeterus",
     "next": "Mendicoleius vicus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 784
+        "start": 784,
+        "end": 784
       }
     ]
   },
@@ -9969,9 +10256,12 @@
     "lemma": "Menecine",
     "previous": "Menebrontes",
     "next": "Menedaios",
+    "redirect": "Menekine",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 786
+        "start": 786,
+        "end": 786
       }
     ]
   },
@@ -11046,9 +11336,12 @@
     "lemma": "Menenius 5",
     "previous": "Menenius 4",
     "next": "Menenius 6",
+    "redirect": "Livius 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 839
+        "start": 839,
+        "end": 839
       }
     ]
   },
@@ -11056,9 +11349,12 @@
     "lemma": "Menenius 6",
     "previous": "Menenius 5",
     "next": "Menenius 7",
+    "redirect": "Menenius 18",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 839
+        "start": 839,
+        "end": 839
       }
     ]
   },
@@ -11099,9 +11395,12 @@
     "lemma": "Menenius 10",
     "previous": "Menenius 9",
     "next": "Menenius 11",
+    "redirect": "Diodoros 38",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 840
+        "start": 840,
+        "end": 840
       }
     ]
   },
@@ -11318,9 +11617,12 @@
     "lemma": "Menesthei portus",
     "previous": "Menesaichmos",
     "next": "Menesthenes",
+    "redirect": "Menesthei Portus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 850
+        "start": 850,
+        "end": 850
       }
     ]
   },
@@ -11771,7 +12073,7 @@
     "previous": "Μενῖκος φρούριον",
     "next": "Meninx",
     "sort_key": "Meninga",
-    "redirect": true,
+    "redirect": "Kyrros",
     "proof_read": 3,
     "chapters": [
       {
@@ -12161,9 +12463,12 @@
     "lemma": "Menlaria",
     "previous": "Menitiamu",
     "next": "Menmanduti(-ae?)",
+    "redirect": "Mellaria 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 895
+        "start": 895,
+        "end": 895
       }
     ]
   },
@@ -12248,9 +12553,12 @@
     "lemma": "Menoba",
     "previous": "Mennius",
     "next": "Menobardi",
+    "redirect": "Maenoba 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 896
+        "start": 896,
+        "end": 896
       }
     ]
   },
@@ -12280,9 +12588,12 @@
     "lemma": "Menochia",
     "previous": "Menochares",
     "next": "Menodora",
+    "redirect": "Menois",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 896
+        "start": 896,
+        "end": 896
       }
     ]
   },
@@ -12290,9 +12601,12 @@
     "lemma": "Menodora",
     "previous": "Menochia",
     "next": "Menodoros 1",
+    "redirect": "Flavonius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 896
+        "start": 896,
+        "end": 896
       }
     ]
   },
@@ -12542,9 +12856,12 @@
     "lemma": "Menoitas",
     "previous": "Menois",
     "next": "Menoites",
+    "redirect": "Menoites",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 918
+        "start": 918,
+        "end": 918
       }
     ]
   },
@@ -13157,9 +13474,12 @@
     "lemma": "Menotyrannos",
     "previous": "Menotharus",
     "next": "Menoviacus",
+    "redirect": "Men",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 931
+        "start": 931,
+        "end": 931
       }
     ]
   },
@@ -13178,9 +13498,12 @@
     "lemma": "Menralia",
     "previous": "Menoviacus",
     "next": "menrva",
+    "redirect": "Mellaria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 931
+        "start": 931,
+        "end": 931
       }
     ]
   },
@@ -13243,9 +13566,12 @@
     "lemma": "Mensis",
     "previous": "Menschenopfer",
     "next": "Mensius 1",
+    "redirect": "Monat",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 956
+        "start": 956,
+        "end": 956
       }
     ]
   },
@@ -13330,9 +13656,12 @@
     "lemma": "Mensura",
     "previous": "Mensulas",
     "next": "Mensurius 1",
+    "redirect": "Gewichte",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 960
+        "start": 960,
+        "end": 960
       }
     ]
   },
@@ -13461,9 +13790,12 @@
     "lemma": "Mentha",
     "previous": "Mentesa 3",
     "next": "Mentius",
+    "redirect": "Minze",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 963
+        "start": 963,
+        "end": 963
       }
     ]
   },
@@ -13636,9 +13968,12 @@
     "lemma": "Menturnae",
     "previous": "Mentovini",
     "next": "Menulla",
+    "redirect": "Minturnae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 968
+        "start": 968,
+        "end": 968
       }
     ]
   },
@@ -13745,9 +14080,12 @@
     "lemma": "Menys",
     "previous": "Menyllos 4",
     "next": "Menysis",
+    "redirect": "Mynes 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 970
+        "start": 970,
+        "end": 970
       }
     ]
   },
@@ -13799,9 +14137,12 @@
     "lemma": "Meobriga",
     "previous": "Meo...",
     "next": "Meon",
+    "redirect": "Lacobriga 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 971
+        "start": 971,
+        "end": 971
       }
     ]
   },
@@ -13809,9 +14150,12 @@
     "lemma": "Meon",
     "previous": "Meobriga",
     "next": "Mephaath",
+    "redirect": "Maion 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 971
+        "start": 971,
+        "end": 971
       }
     ]
   },
@@ -13841,9 +14185,12 @@
     "lemma": "Mephitis",
     "previous": "Mephanias",
     "next": "Meran",
+    "redirect": "Mefitis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 971
+        "start": 971,
+        "end": 971
       }
     ]
   },
@@ -13961,9 +14308,12 @@
     "lemma": "Mercurianus",
     "previous": "Mercurialis pagus",
     "next": "Mercurii promuntorium",
+    "redirect": "Mercurinus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 974
+        "start": 974,
+        "end": 974
       }
     ]
   },
@@ -13971,9 +14321,12 @@
     "lemma": "Mercurii promuntorium",
     "previous": "Mercurianus",
     "next": "Mercurinus",
+    "redirect": "Hermaeum promuntorium 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 974
+        "start": 974,
+        "end": 974
       }
     ]
   },
@@ -14167,16 +14520,19 @@
     "lemma": "Mercurius 12",
     "previous": "Mercurius 11",
     "next": "Mercussa",
+    "redirect": "Ioannes 50",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1017
+        "start": 1017,
+        "end": 1017
       }
     ]
   },
   {
     "lemma": "Mercussa",
     "previous": "Mercurius 12",
-    "next": "Merdocha",
+    "next": "Μερδοχα",
     "chapters": [
       {
         "start": 1017,
@@ -14185,18 +14541,22 @@
     ]
   },
   {
-    "lemma": "Merdocha",
+    "lemma": "Μερδοχα",
     "previous": "Mercussa",
     "next": "Merdoi",
+    "sort_key": "Merdocha",
+    "redirect": "Mardocha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1017
+        "start": 1017,
+        "end": 1017
       }
     ]
   },
   {
     "lemma": "Merdoi",
-    "previous": "Merdocha",
+    "previous": "Μερδοχα",
     "next": "Merenas",
     "chapters": [
       {
@@ -14231,9 +14591,12 @@
     "lemma": "Merenses",
     "previous": "Merenda",
     "next": "Meretrix",
+    "redirect": "Notitia dignitatum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1018
+        "start": 1018,
+        "end": 1018
       }
     ]
   },
@@ -14252,9 +14615,12 @@
     "lemma": "Mergablum",
     "previous": "Meretrix",
     "next": "Mergentini",
+    "redirect": "Mercablum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1027
+        "start": 1027,
+        "end": 1027
       }
     ]
   },
@@ -14273,9 +14639,12 @@
     "lemma": "Mergilius",
     "previous": "Mergentini",
     "next": "Mergnia",
+    "redirect": "Mercello",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1027
+        "start": 1027,
+        "end": 1027
       }
     ]
   },
@@ -14470,9 +14839,12 @@
     "lemma": "Meritus",
     "previous": "Merithates",
     "next": "Merkuriani",
+    "redirect": "Merisos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1036
+        "start": 1036,
+        "end": 1036
       }
     ]
   },
@@ -14502,9 +14874,12 @@
     "lemma": "Merme",
     "previous": "Mermadalis",
     "next": "Mermeros",
+    "redirect": "Marma",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1036
+        "start": 1036,
+        "end": 1036
       }
     ]
   },
@@ -14523,9 +14898,12 @@
     "lemma": "Mermessos",
     "previous": "Mermeros",
     "next": "Mermnadai",
+    "redirect": "Marpessos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1038
+        "start": 1038,
+        "end": 1038
       }
     ]
   },
@@ -14544,9 +14922,12 @@
     "lemma": "Mermnes",
     "previous": "Mermnadai",
     "next": "Mernuphyta",
+    "redirect": "Marmax",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1038
+        "start": 1038,
+        "end": 1038
       }
     ]
   },
@@ -14598,9 +14979,12 @@
     "lemma": "Merobriga",
     "previous": "Merobaudes 3",
     "next": "Merocles",
+    "redirect": "Mirobriga 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1048
+        "start": 1048,
+        "end": 1048
       }
     ]
   },
@@ -14706,7 +15090,7 @@
   {
     "lemma": "Merom",
     "previous": "Merola",
-    "next": "Meromennoi",
+    "next": "Μερομέννοι",
     "chapters": [
       {
         "start": 1055,
@@ -14715,22 +15099,29 @@
     ]
   },
   {
-    "lemma": "Meromennoi",
+    "lemma": "Μερομέννοι",
     "previous": "Merom",
     "next": "Meron",
+    "sort_key": "Meromennoi",
+    "redirect": "Appianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1055
+        "start": 1055,
+        "end": 1055
       }
     ]
   },
   {
     "lemma": "Meron",
-    "previous": "Meromennoi",
+    "previous": "Μερομέννοι",
     "next": "Meronoth",
+    "redirect": "Maron 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1055
+        "start": 1055,
+        "end": 1055
       }
     ]
   },
@@ -14925,9 +15316,12 @@
     "lemma": "Meros 1",
     "previous": "Merorraphes, Merothraphes",
     "next": "Meros 2",
+    "redirect": "Meiros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1067
+        "start": 1067,
+        "end": 1067
       }
     ]
   },
@@ -14968,9 +15362,12 @@
     "lemma": "Meroveus",
     "previous": "Meroth",
     "next": "Merra",
+    "redirect": "Merowech",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1068
+        "start": 1068,
+        "end": 1068
       }
     ]
   },
@@ -14978,16 +15375,20 @@
     "lemma": "Merra",
     "previous": "Meroveus",
     "next": "Merran 1",
+    "sort_key": "Merra",
+    "redirect": "Mara 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1068
+        "start": 1068,
+        "end": 1068
       }
     ]
   },
   {
     "lemma": "Merran 1",
     "previous": "Merra",
-    "next": "Merran 2",
+    "next": "Μερράν 2",
     "chapters": [
       {
         "start": 1068,
@@ -14996,18 +15397,21 @@
     ]
   },
   {
-    "lemma": "Merran 2",
+    "lemma": "Μερράν 2",
     "previous": "Merran 1",
     "next": "Merre",
+    "redirect": "Meran",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1069
+        "start": 1069,
+        "end": 1069
       }
     ]
   },
   {
     "lemma": "Merre",
-    "previous": "Merran 2",
+    "previous": "Μερράν 2",
     "next": "Merrus",
     "chapters": [
       {
@@ -15031,9 +15435,12 @@
     "lemma": "Mersella",
     "previous": "Merrus",
     "next": "Mersieius",
+    "redirect": "Mursella",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1069
+        "start": 1069,
+        "end": 1069
       }
     ]
   },
@@ -15118,9 +15525,12 @@
     "lemma": "Merucra",
     "previous": "Mervasecus",
     "next": "Merula",
+    "redirect": "Marruca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1070
+        "start": 1070,
+        "end": 1070
       }
     ]
   },
@@ -15615,9 +16025,12 @@
     "lemma": "Meses",
     "previous": "Meserkeios",
     "next": "Mesesimordakos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1095
+        "start": 1095,
+        "end": 1095
       }
     ]
   },
@@ -15647,9 +16060,12 @@
     "lemma": "Mesiates 1",
     "previous": "Mesia",
     "next": "Mesiates 2",
+    "redirect": "Magesa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1096
+        "start": 1096,
+        "end": 1096
       }
     ]
   },
@@ -15712,9 +16128,12 @@
     "lemma": "Mesma",
     "previous": "Mesites 2",
     "next": "Mesoa",
+    "redirect": "Medma 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1099
+        "start": 1099,
+        "end": 1099
       }
     ]
   },
@@ -15909,9 +16328,12 @@
     "lemma": "Mesotylos",
     "previous": "Mesostrophoniai",
     "next": "Mesphe",
+    "redirect": "Mezetulus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1163
+        "start": 1163,
+        "end": 1163
       }
     ]
   },
@@ -15952,9 +16374,12 @@
     "lemma": "Messa 1",
     "previous": "Mesrop",
     "next": "Messa 2",
+    "redirect": "Messe",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1164
+        "start": 1164,
+        "end": 1164
       }
     ]
   },
@@ -16072,9 +16497,12 @@
     "lemma": "Messalina",
     "previous": "Messalla 7",
     "next": "Messalinos 6",
+    "redirect": "Valerius 403",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1166
+        "start": 1166,
+        "end": 1166
       }
     ]
   },
@@ -16148,9 +16576,12 @@
     "lemma": "Messalius",
     "previous": "Messalinus 5",
     "next": "Messalon",
+    "redirect": "Messalinus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1166
+        "start": 1166,
+        "end": 1166
       }
     ]
   },
@@ -16158,9 +16589,12 @@
     "lemma": "Messalon",
     "previous": "Messalius",
     "next": "Messana",
+    "redirect": "Mesalum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1166
+        "start": 1166,
+        "end": 1166
       }
     ]
   },
@@ -16168,9 +16602,12 @@
     "lemma": "Messana",
     "previous": "Messalon",
     "next": "Messanicus",
+    "redirect": "Messene 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1166
+        "start": 1166,
+        "end": 1166
       }
     ]
   },
@@ -16651,9 +17088,12 @@
     "lemma": "Messoa",
     "previous": "Messius 16",
     "next": "Messogis",
+    "redirect": "Mesoa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1288
+        "start": 1288,
+        "end": 1288
       }
     ]
   },
@@ -16661,9 +17101,12 @@
     "lemma": "Messogis",
     "previous": "Messoa",
     "next": "Messor",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1288
+        "start": 1288,
+        "end": 1288
       }
     ]
   },
@@ -16671,9 +17114,12 @@
     "lemma": "Messor",
     "previous": "Messogis",
     "next": "Mesteria",
+    "redirect": "Indigitamenta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1288
+        "start": 1288,
+        "end": 1288
       }
     ]
   },
@@ -16691,7 +17137,7 @@
   {
     "lemma": "Mesthles",
     "previous": "Mesteria",
-    "next": "Mestikerton",
+    "next": "Μεστίκερτον",
     "chapters": [
       {
         "start": 1288,
@@ -16700,28 +17146,36 @@
     ]
   },
   {
-    "lemma": "Mestikerton",
+    "lemma": "Μεστίκερτον",
     "previous": "Mesthles",
-    "next": "Mestleta",
+    "next": "Μεστλῆτα",
+    "sort_key": "Mestikerton",
+    "redirect": "Mertikerton",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1288
+        "start": 1288,
+        "end": 1288
       }
     ]
   },
   {
-    "lemma": "Mestleta",
-    "previous": "Mestikerton",
+    "lemma": "Μεστλῆτα",
+    "previous": "Μεστίκερτον",
     "next": "Mestor 1",
+    "sort_key": "Mestleta",
+    "redirect": "Mescheta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1288
+        "start": 1288,
+        "end": 1288
       }
     ]
   },
   {
     "lemma": "Mestor 1",
-    "previous": "Mestleta",
+    "previous": "Μεστλῆτα",
     "next": "Mestor 2",
     "chapters": [
       {
@@ -16800,9 +17254,12 @@
     "lemma": "Mestraïm 1",
     "previous": "Mestra",
     "next": "Mestraim 2",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1291
+        "start": 1291,
+        "end": 1291
       }
     ]
   },
@@ -16931,9 +17388,12 @@
     "lemma": "Mesuion",
     "previous": "Mesua",
     "next": "Mesyla",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1294
+        "start": 1294,
+        "end": 1294
       }
     ]
   },
