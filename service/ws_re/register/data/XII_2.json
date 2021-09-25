@@ -8467,6 +8467,7 @@
     "lemma": "Leges Manilaniae",
     "previous": "Lex Mamilia Roscia Peducaea Alliena Fabia",
     "next": "Lex Manlia",
+    "sort_key": "Lex Manilaniae",
     "redirect": "Mancipatio, mancipium",
     "proof_read": 2,
     "chapters": [
@@ -8876,9 +8877,12 @@
     "lemma": "Lex Pennia",
     "previous": "Lex Peducaea",
     "next": "Lex perfecta",
+    "redirect": "Lex Papia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2401
+        "start": 2401,
+        "end": 2401
       }
     ]
   },
@@ -8886,9 +8890,12 @@
     "lemma": "Lex perfecta",
     "previous": "Lex Pennia",
     "next": "Lex Pesolania",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2401
+        "start": 2401,
+        "end": 2401
       }
     ]
   },
@@ -8929,9 +8936,12 @@
     "lemma": "Lex pignoris",
     "previous": "Lex Petronia 2",
     "next": "Lex Pinaria 1",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -8950,9 +8960,12 @@
     "lemma": "Lex Pinaria 2",
     "previous": "Lex Pinaria 1",
     "next": "Lex Pinaria 3",
+    "redirect": "Legis actio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -9024,9 +9037,12 @@
     "lemma": "Lex plus quam perfecta",
     "previous": "Lex Plautia 3",
     "next": "Lex Poetelia de ambitu",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -9077,9 +9093,13 @@
     "lemma": "Leges Porciae",
     "previous": "Lex Pompeia 2",
     "next": "Lex Pompeia 3",
+    "sort_key": "Lex Porciae",
+    "redirect": "Provocatio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2404
+        "start": 2404,
+        "end": 2404
       }
     ]
   },
@@ -9118,9 +9138,12 @@
     "lemma": "Lex publica",
     "previous": "Lex praediatoria",
     "next": "Lex Publicia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2404
+        "start": 2404,
+        "end": 2404
       }
     ]
   },
@@ -9170,11 +9193,15 @@
   },
   {
     "lemma": "Leges regiae",
-    "previous": "Lex Publilia 3",
-    "next": "Lex Pupia",
+    "previous": "Lex Quinctia",
+    "next": "Lex Remmia",
+    "sort_key": "Lex regiae",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2405
+        "start": 2405,
+        "end": 2405
       }
     ]
   },
@@ -9225,9 +9252,12 @@
     "lemma": "Lex rogata",
     "previous": "Lex Rhodia",
     "next": "Lex Romana Burgundionum",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2405
+        "start": 2405,
+        "end": 2405
       }
     ]
   },
@@ -9887,9 +9917,12 @@
     "lemma": "Lexis 1",
     "previous": "Lexiphanes",
     "next": "Lexis 2",
+    "redirect": "Losung",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2482
+        "start": 2482,
+        "end": 2482
       }
     ]
   },
@@ -9897,9 +9930,12 @@
     "lemma": "Lexis 2",
     "previous": "Lexis 1",
     "next": "Lexobii",
+    "redirect": "Lexi deo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2482
+        "start": 2482,
+        "end": 2482
       }
     ]
   },
@@ -9907,9 +9943,12 @@
     "lemma": "Lexobii",
     "previous": "Lexis 2",
     "next": "Lexovii",
+    "redirect": "Lexovii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2482
+        "start": 2482,
+        "end": 2482
       }
     ]
   },
@@ -9960,7 +9999,7 @@
   {
     "lemma": "Lias",
     "previous": "Liar",
-    "next": "Liba 1",
+    "next": "Λίβα 1",
     "chapters": [
       {
         "start": 2483,
@@ -9969,18 +10008,22 @@
     ]
   },
   {
-    "lemma": "Liba 1",
+    "lemma": "Λίβα 1",
     "previous": "Lias",
     "next": "Liba 2",
+    "sort_key": "Liba",
+    "redirect": "Libba 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2483
+        "start": 2483,
+        "end": 2483
       }
     ]
   },
   {
     "lemma": "Liba 2",
-    "previous": "Liba 1",
+    "previous": "Λίβα 1",
     "next": "Libade",
     "chapters": [
       {
