@@ -6352,17 +6352,8 @@
     ]
   },
   {
-    "lemma": "Leukosyos 1",
-    "next": "Leukosyos 2",
-    "chapters": [
-      {
-        "start": 2293
-      }
-    ]
-  },
-  {
-    "lemma": "Leukosyos 2",
-    "previous": "Leukosyos 1",
+    "lemma": "Leukosyros 2",
+    "previous": "Leukosyros 1",
     "next": "Leukothea 1",
     "chapters": [
       {
@@ -6372,7 +6363,7 @@
   },
   {
     "lemma": "Leukothea 1",
-    "previous": "Leukosyos 2",
+    "previous": "Leukosyros 2",
     "next": "Leukothea 2",
     "chapters": [
       {
@@ -9183,7 +9174,6 @@
   {
     "lemma": "Lex Publilia 3",
     "previous": "Lex Publilia 2",
-    "next": "Leges regiae",
     "chapters": [
       {
         "start": 2404,
@@ -9191,23 +9181,9 @@
       }
     ]
   },
-  {
-    "lemma": "Leges regiae",
-    "previous": "Lex Quinctia",
-    "next": "Lex Remmia",
-    "sort_key": "Lex regiae",
-    "redirect": "Lex",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 2405,
-        "end": 2405
-      }
-    ]
-  },
+  {"lemma": "Lex Publilia 4"},
   {
     "lemma": "Lex Pupia",
-    "previous": "Leges regiae",
     "next": "Lex Quinctia",
     "chapters": [
       {
@@ -9219,7 +9195,6 @@
   {
     "lemma": "Lex Quinctia",
     "previous": "Lex Pupia",
-    "next": "Lex Remmia",
     "chapters": [
       {
         "start": 2405,
@@ -9228,8 +9203,19 @@
     ]
   },
   {
+    "lemma": "Leges regiae",
+    "sort_key": "Lex regiae",
+    "redirect": "Lex",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2405,
+        "end": 2405
+      }
+    ]
+  },
+  {
     "lemma": "Lex Remmia",
-    "previous": "Lex Quinctia",
     "next": "Lex Rhodia",
     "redirect": "Remmius 2",
     "proof_read": 2,
@@ -9429,7 +9415,6 @@
   {
     "lemma": "Lex Scantinia",
     "previous": "Lex Saufeia",
-    "next": "Leges Semproniae 1",
     "chapters": [
       {
         "start": 2413,
@@ -9438,8 +9423,16 @@
     ]
   },
   {
+    "lemma": "Lex Scribonia",
+    "chapters": [
+      {
+        "start": 2414,
+        "author": "Weiss, Egon"
+      }
+    ]
+  },
+  {
     "lemma": "Leges Semproniae 1",
-    "previous": "Lex Scantinia",
     "next": "Leges Semproniae 2",
     "chapters": [
       {
@@ -9462,7 +9455,6 @@
   {
     "lemma": "Leges Serviliae 1",
     "previous": "Leges Semproniae 2",
-    "next": "Lex Scribonia",
     "chapters": [
       {
         "start": 2414,
@@ -9471,20 +9463,7 @@
     ]
   },
   {
-    "lemma": "Lex Scribonia",
-    "previous": "Leges Serviliae 1",
-    "next": "Leges Serviliae 2",
-    "chapters": [
-      {
-        "start": 2414,
-        "author": "Weiss, Egon"
-      }
-    ]
-  },
-  {
     "lemma": "Leges Serviliae 2",
-    "previous": "Lex Scribonia",
-    "next": "Leges Tabellariae",
     "redirect": "Leges agrariae",
     "proof_read": 2,
     "chapters": [
@@ -9495,33 +9474,7 @@
     ]
   },
   {
-    "lemma": "Leges Tabellariae",
-    "previous": "Leges Serviliae 2",
-    "next": "Leges templorum",
-    "chapters": [
-      {
-        "start": 2415,
-        "author": "Weiss, Egon"
-      }
-    ]
-  },
-  {
-    "lemma": "Leges templorum",
-    "previous": "Lex Tappula",
-    "next": "Lex Terentia",
-    "sort_key": "Lex templorum",
-    "redirect": "Lex",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 2415,
-        "end": 2415
-      }
-    ]
-  },
-  {
     "lemma": "Lex Silia 1",
-    "previous": "Leges Serviliae 2",
     "next": "Lex Silia 2",
     "redirect": "Lex Calpurnia 1",
     "proof_read": 2,
@@ -9535,7 +9488,15 @@
   {
     "lemma": "Lex Silia 2",
     "previous": "Lex Silia 1",
-    "next": "Lex Tappula",
+    "chapters": [
+      {
+        "start": 2415,
+        "author": "Weiss, Egon"
+      }
+    ]
+  },
+  {
+    "lemma": "Leges Tabellariae",
     "chapters": [
       {
         "start": 2415,
@@ -9545,8 +9506,6 @@
   },
   {
     "lemma": "Lex Tappula",
-    "previous": "Lex Silia 2",
-    "next": "Leges templorum",
     "redirect": "Lex convivalis",
     "proof_read": 2,
     "chapters": [
@@ -9557,8 +9516,19 @@
     ]
   },
   {
+    "lemma": "Leges templorum",
+    "sort_key": "Lex templorum",
+    "redirect": "Lex",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2415,
+        "end": 2415
+      }
+    ]
+  },
+  {
     "lemma": "Lex Terentia",
-    "previous": "Lex Tappula",
     "next": "Lex Terentia Cassia",
     "chapters": [
       {
