@@ -2501,10 +2501,12 @@
     "lemma": "Epimachos 2",
     "previous": "Epimachos 1",
     "next": "Epimachos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 160,
-        "author": "Stein, [Arthur]"
+        "end": 160,
+        "author": "Stein."
       }
     ]
   },
@@ -2546,10 +2548,12 @@
     "lemma": "Epimedes 2",
     "previous": "Epimedes 1",
     "next": "Epimedusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Kern"
+        "end": 162,
+        "author": "Kern."
       }
     ]
   },
@@ -2557,9 +2561,11 @@
     "lemma": "Epimedusa",
     "previous": "Epimedes 2",
     "next": "Epimeilios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
+        "end": 162,
         "author": "Escher"
       }
     ]
@@ -4370,7 +4376,7 @@
     "previous": "Epitynchanos 3",
     "next": "Epobelia",
     "sort_key": "Epizamion",
-    "redirect": "Epitimion",
+    "redirect": "Epitimion 1",
     "proof_read": 2,
     "chapters": [
       {
@@ -5354,7 +5360,7 @@
     "lemma": "Erafronia",
     "previous": "Eraden",
     "next": "Eragiza",
-    "redirect": "Erraonis",
+    "redirect": "Ravennas Geographus",
     "proof_read": 2,
     "chapters": [
       {
@@ -6485,7 +6491,7 @@
     "lemma": "Eremos",
     "previous": "Eremodicium",
     "next": "Erenucius",
-    "redirect": true,
+    "redirect": "Arabia 1",
     "proof_read": 2,
     "chapters": [
       {
@@ -6533,7 +6539,7 @@
     "lemma": "Eresi",
     "previous": "Erepticium",
     "next": "Eresidai",
-    "redirect": true,
+    "redirect": "Plinius 5",
     "proof_read": 2,
     "chapters": [
       {
@@ -7788,7 +7794,7 @@
     "lemma": "Erikos",
     "previous": "Erikepaios",
     "next": "Erikusa 1",
-    "redirect": true,
+    "redirect": "Ptolemaios 66",
     "proof_read": 2,
     "chapters": [
       {
@@ -12995,7 +13001,7 @@
     "lemma": "Euanthius 1",
     "previous": "Euanthia",
     "next": "Euanthius 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 847,
@@ -14141,7 +14147,7 @@
     "previous": "Eubulos 11",
     "next": "Eubulos 13",
     "redirect": "Aurelius 124",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 877,
@@ -14153,10 +14159,13 @@
     "lemma": "Eubulos 13",
     "previous": "Eubulos 12",
     "next": "Eubulos 14",
+    "proof_read": 2,
+    "wp_link": "w:de:it:Eubulo (prefetto del pretorio)",
     "chapters": [
       {
         "start": 877,
-        "author": "Seeck"
+        "end": 877,
+        "author": "Seeck."
       }
     ]
   },
@@ -20696,7 +20705,7 @@
     "lemma": "Eupeithes 2",
     "previous": "Eupeithes 1",
     "next": "Eupeithios",
-    "redirect": true,
+    "redirect": "Euprepes 2",
     "proof_read": 2,
     "chapters": [
       {
@@ -21777,7 +21786,7 @@
     "lemma": "Euphron 4",
     "previous": "Euphron 3",
     "next": "Euphron 5",
-    "redirect": "Euphronios 8",
+    "redirect": "Plinius 5",
     "proof_read": 2,
     "chapters": [
       {

@@ -164,10 +164,12 @@
     "lemma": "Molis 2",
     "previous": "Molis 1",
     "next": "Molkos",
-    "redirect": true,
+    "redirect": "Miletopolis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 7
+        "start": 7,
+        "end": 7
       }
     ]
   },
@@ -197,10 +199,12 @@
     "lemma": "Molochat",
     "previous": "Moloch",
     "next": "Molodros",
-    "redirect": true,
+    "redirect": "Mulucha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 8
+        "start": 8,
+        "end": 8
       }
     ]
   },
@@ -1160,7 +1164,7 @@
   {
     "lemma": "Mondgottheit",
     "previous": "Mondaia",
-    "next": "Mondu",
+    "next": "Μόνδου",
     "chapters": [
       {
         "start": 107,
@@ -1169,19 +1173,22 @@
     ]
   },
   {
-    "lemma": "Mondu",
+    "lemma": "Μόνδου",
     "previous": "Mondgottheit",
     "next": "Mondu nesos",
-    "redirect": true,
+    "sort_key": "Mondu",
+    "redirect": "Mundu",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 113
+        "start": 113,
+        "end": 113
       }
     ]
   },
   {
     "lemma": "Mondu nesos",
-    "previous": "Mondu",
+    "previous": "Μόνδου",
     "next": "Monduttu",
     "chapters": [
       {
@@ -1205,10 +1212,12 @@
     "lemma": "Monedes",
     "previous": "Monduttu",
     "next": "Moneres",
-    "redirect": true,
+    "redirect": "Monaedes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 113
+        "start": 113,
+        "end": 113
       }
     ]
   },
@@ -1227,9 +1236,12 @@
     "lemma": "Monesi",
     "previous": "Moneres",
     "next": "Moneta",
+    "redirect": "Onesiae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 113
+        "start": 113,
+        "end": 113
       }
     ]
   },
@@ -1248,9 +1260,12 @@
     "lemma": "Moneta falsa",
     "previous": "Moneta",
     "next": "Monetium",
+    "redirect": "Münzverbrechen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 119
+        "start": 119,
+        "end": 119
       }
     ]
   },
@@ -1302,9 +1317,12 @@
     "lemma": "Monime",
     "previous": "ad Monilia",
     "next": "Monimos 1",
+    "redirect": "Mithridates 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 125
+        "start": 125,
+        "end": 125
       }
     ]
   },
@@ -1433,9 +1451,12 @@
     "lemma": "Monitorium",
     "previous": "Moninas",
     "next": "Monnara",
+    "redirect": "Callistratus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 127
+        "start": 127,
+        "end": 127
       }
     ]
   },
@@ -1564,9 +1585,12 @@
     "lemma": "Monocreses",
     "previous": "Monochromata",
     "next": "Monodaktylon oros",
+    "redirect": "Monoecus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 131
+        "start": 131,
+        "end": 131
       }
     ]
   },
@@ -1706,9 +1730,12 @@
     "lemma": "Monokeros",
     "previous": "Monokarton",
     "next": "Monokleros",
+    "redirect": "Nashorn",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 145
+        "start": 145,
+        "end": 145
       }
     ]
   },
@@ -1837,10 +1864,12 @@
     "lemma": "Mons Brisiacus",
     "previous": "Mons",
     "next": "Mons Feletrus",
-    "redirect": true,
+    "redirect": "Brisiacus mons",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 199
+        "start": 199,
+        "end": 199
       }
     ]
   },
@@ -1848,10 +1877,12 @@
     "lemma": "Mons Feletrus",
     "previous": "Mons Brisiacus",
     "next": "Mons Feretratus",
-    "redirect": true,
+    "redirect": "Mons Feretrus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 199
+        "start": 199,
+        "end": 199
       }
     ]
   },
@@ -1859,10 +1890,12 @@
     "lemma": "Mons Feretratus",
     "previous": "Mons Feletrus",
     "next": "Mons Feretrus",
-    "redirect": true,
+    "redirect": "Mons Feretrus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 199
+        "start": 199,
+        "end": 199
       }
     ]
   },
@@ -1936,9 +1969,12 @@
     "lemma": "Mons Seleucus",
     "previous": "Mons sacer",
     "next": "Mons Silicis",
+    "redirect": "Seleucus mons",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 200
+        "start": 200,
+        "end": 200
       }
     ]
   },
@@ -2244,7 +2280,7 @@
     "lemma": "Monteferetrum",
     "previous": "Monte Bulsi",
     "next": "Montemno",
-    "redirect": true,
+    "redirect": "Mons Feretrus",
     "proof_read": 3,
     "chapters": [
       {
@@ -2397,10 +2433,12 @@
     "lemma": "Monumentum Antiochenum",
     "previous": "Monumentum Ancyranum",
     "next": "Monumentum Apolloniense",
-    "redirect": true,
+    "redirect": "Monumentum Ancyranum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -2408,10 +2446,12 @@
     "lemma": "Monumentum Apolloniense",
     "previous": "Monumentum Antiochenum",
     "next": "Monumentum Hannibal(is)",
-    "redirect": true,
+    "redirect": "Monumentum Ancyranum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -2485,9 +2525,12 @@
     "lemma": "Mopates",
     "previous": "Moose",
     "next": "Mophi",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 236
+        "start": 236,
+        "end": 236
       }
     ]
   },
@@ -2505,7 +2548,7 @@
   {
     "lemma": "Mophis 1",
     "previous": "Mophi",
-    "next": "Mophis 2",
+    "next": "Μῶφις 2",
     "chapters": [
       {
         "start": 236,
@@ -2514,18 +2557,21 @@
     ]
   },
   {
-    "lemma": "Mophis 2",
+    "lemma": "Μῶφις 2",
     "previous": "Mophis 1",
     "next": "Mopsion 1",
+    "redirect": "Taxiles",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 236
+        "start": 236,
+        "end": 236
       }
     ]
   },
   {
     "lemma": "Mopsion 1",
-    "previous": "Mophis 2",
+    "previous": "Μῶφις 2",
     "next": "Mopsion 2",
     "chapters": [
       {
@@ -2724,7 +2770,7 @@
   {
     "lemma": "Moras",
     "previous": "Moragocome",
-    "next": "Morathei",
+    "next": "Μωραθεί",
     "chapters": [
       {
         "start": 277,
@@ -2733,18 +2779,22 @@
     ]
   },
   {
-    "lemma": "Morathei",
+    "lemma": "Μωραθεί",
     "previous": "Moras",
     "next": "Morbium",
+    "sort_key": "Morathei",
+    "redirect": "Morescheth",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 277
+        "start": 277,
+        "end": 277
       }
     ]
   },
   {
     "lemma": "Morbium",
-    "previous": "Morathei",
+    "previous": "Μωραθεί",
     "next": "Morbus comitialis",
     "chapters": [
       {
@@ -2790,10 +2840,12 @@
     "lemma": "Mord 2",
     "previous": "Mord 1",
     "next": "Mordiaïon",
-    "redirect": true,
+    "redirect": "Homicidium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 289
+        "start": 289,
+        "end": 289
       }
     ]
   },
@@ -2955,9 +3007,12 @@
     "lemma": "Morgos",
     "previous": "Morginum",
     "next": "Morgyna",
+    "redirect": "Morges 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 302
+        "start": 302,
+        "end": 302
       }
     ]
   },
@@ -3185,9 +3240,12 @@
     "lemma": "Mormolyke",
     "previous": "Mormo",
     "next": "Mormonda, Mormonda mikra",
+    "redirect": "Mormo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 311
+        "start": 311,
+        "end": 311
       }
     ]
   },
@@ -3426,9 +3484,12 @@
     "lemma": "Mortuum mare 1",
     "previous": "Mortis causa capio",
     "next": "Mortuum mare 2",
+    "redirect": "Nordsee",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 322
+        "start": 322,
+        "end": 322
       }
     ]
   },
@@ -3436,9 +3497,12 @@
     "lemma": "Mortuum mare 2",
     "previous": "Mortuum mare 1",
     "next": "Moru",
+    "redirect": "Ἀσφαλτῖτις λίμνη",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 322
+        "start": 322,
+        "end": 322
       }
     ]
   },
@@ -3467,7 +3531,7 @@
   {
     "lemma": "Morum, ad",
     "previous": "Morvennum",
-    "next": "Morunda 1",
+    "next": "Μοροῦνδα 1",
     "chapters": [
       {
         "start": 325,
@@ -3476,18 +3540,22 @@
     ]
   },
   {
-    "lemma": "Morunda 1",
+    "lemma": "Μοροῦνδα 1",
     "previous": "Morum, ad",
     "next": "Morunda 2",
+    "sort_key": "Morunda",
+    "redirect": "Marundai 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 325
+        "start": 325,
+        "end": 325
       }
     ]
   },
   {
     "lemma": "Morunda 2",
-    "previous": "Morunda 1",
+    "previous": "Μοροῦνδα 1",
     "next": "Morychides",
     "chapters": [
       {
@@ -3621,9 +3689,12 @@
     "lemma": "Mosarna",
     "previous": "Mosaios",
     "next": "Moscha",
+    "redirect": "Musarna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 343
+        "start": 343,
+        "end": 343
       }
     ]
   },
@@ -3884,9 +3955,12 @@
     "lemma": "Moschos 5",
     "previous": "Moschos 4",
     "next": "Moschos 6",
+    "redirect": "Volcacius 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 356
+        "start": 356,
+        "end": 356
       }
     ]
   },
@@ -3916,9 +3990,12 @@
     "lemma": "Moschos 8",
     "previous": "Moschos 7",
     "next": "Moschosphragistes",
+    "redirect": "Moschus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 356
+        "start": 356,
+        "end": 356
       }
     ]
   },
@@ -4157,9 +4234,12 @@
     "lemma": "Moses 12",
     "previous": "Moses 11",
     "next": "Mosmes",
+    "redirect": "Musaios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 375
+        "start": 375,
+        "end": 375
       }
     ]
   },
@@ -4189,16 +4269,19 @@
     "lemma": "Moson",
     "previous": "Mosomagus",
     "next": "Mosoritae",
+    "redirect": "Mnizos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 376
+        "start": 376,
+        "end": 376
       }
     ]
   },
   {
     "lemma": "Mosoritae",
     "previous": "Moson",
-    "next": "Mosphotha",
+    "next": "Μοσφοθά",
     "chapters": [
       {
         "start": 376,
@@ -4207,18 +4290,22 @@
     ]
   },
   {
-    "lemma": "Mosphotha",
+    "lemma": "Μοσφοθά",
     "previous": "Mosoritae",
     "next": "Mosseis",
+    "sort_key": "Mosphotha",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 376
+        "start": 376,
+        "end": 376
       }
     ]
   },
   {
     "lemma": "Mosseis",
-    "previous": "Mosphotha",
+    "previous": "Μοσφοθά",
     "next": "Mosses",
     "chapters": [
       {
@@ -4264,9 +4351,12 @@
     "lemma": "Mossyni",
     "previous": "Mossyneus",
     "next": "Mossynoikoi",
+    "redirect": "Mossynoikoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 377
+        "start": 377,
+        "end": 377
       }
     ]
   },
@@ -4307,9 +4397,12 @@
     "lemma": "Mostius mons",
     "previous": "Mostene",
     "next": "Mosychlos",
+    "redirect": "Moscius mons",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 380
+        "start": 380,
+        "end": 380
       }
     ]
   },
@@ -4339,9 +4432,12 @@
     "lemma": "Mosynoi",
     "previous": "Mosyloi",
     "next": "Mosynoikoi",
+    "redirect": "Mossynoikoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 381
+        "start": 381,
+        "end": 381
       }
     ]
   },
@@ -4349,9 +4445,12 @@
     "lemma": "Mosynoikoi",
     "previous": "Mosynoi",
     "next": "Motella",
+    "redirect": "Mossynoikoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 381
+        "start": 381,
+        "end": 381
       }
     ]
   },
@@ -4392,9 +4491,12 @@
     "lemma": "Mothitae",
     "previous": "Mothakes",
     "next": "Motho 1",
+    "redirect": "Maltitae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 384
+        "start": 384,
+        "end": 384
       }
     ]
   },
@@ -4435,9 +4537,12 @@
     "lemma": "Mothone 2",
     "previous": "Mothone 1",
     "next": "Mothones",
+    "redirect": "Methone 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 385
+        "start": 385,
+        "end": 385
       }
     ]
   },
@@ -4456,9 +4561,12 @@
     "lemma": "Mothris",
     "previous": "Mothones",
     "next": "Motiene",
+    "redirect": "Othris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 386
+        "start": 386,
+        "end": 386
       }
     ]
   },
@@ -4598,9 +4706,12 @@
     "lemma": "Mounus",
     "previous": "Mova",
     "next": "Moxeanoi",
+    "redirect": "Mogon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 408
+        "start": 408,
+        "end": 408
       }
     ]
   },
@@ -4652,9 +4763,12 @@
     "lemma": "Moyses",
     "previous": "Moxupolis",
     "next": "Moystius mons",
+    "redirect": "Moses 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 409
+        "start": 409,
+        "end": 409
       }
     ]
   },
@@ -4662,9 +4776,12 @@
     "lemma": "Moystius mons",
     "previous": "Moyses",
     "next": "Moza",
+    "redirect": "Moscius mons",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 409
+        "start": 409,
+        "end": 409
       }
     ]
   },
@@ -4694,9 +4811,12 @@
     "lemma": "Mozota(?)",
     "previous": "Moziata",
     "next": "Mozotcori",
+    "redirect": "Mopta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 410
+        "start": 410,
+        "end": 410
       }
     ]
   },
@@ -4726,9 +4846,12 @@
     "lemma": "Muageris",
     "previous": "Mu...",
     "next": "Muawija",
+    "redirect": "Mugel",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 410
+        "start": 410,
+        "end": 410
       }
     ]
   },
@@ -4736,9 +4859,12 @@
     "lemma": "Muawija",
     "previous": "Muageris",
     "next": "Mucapor",
+    "redirect": "Mavias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 410
+        "start": 410,
+        "end": 410
       }
     ]
   },
@@ -4779,10 +4905,12 @@
     "lemma": "Mucella",
     "previous": "Muc(a t)urris vicus",
     "next": "Mucheiresis",
-    "redirect": true,
+    "redirect": "Mukelle",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 410
+        "start": 410,
+        "end": 410
       }
     ]
   },
@@ -4790,10 +4918,12 @@
     "lemma": "Mucheiresis",
     "previous": "Mucella",
     "next": "Muchhthuzioi",
-    "redirect": true,
+    "redirect": "Mochoresis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 410
+        "start": 410,
+        "end": 410
       }
     ]
   },
@@ -4812,9 +4942,12 @@
     "lemma": "Mucia",
     "previous": "Muchhthuzioi",
     "next": "Muciae arae",
+    "redirect": "Soteria 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 411
+        "start": 411,
+        "end": 411
       }
     ]
   },
@@ -4899,9 +5032,12 @@
     "lemma": "Mucillum",
     "previous": "Mucia prata",
     "next": "Mucipara",
+    "redirect": "Maielli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 411
+        "start": 411,
+        "end": 411
       }
     ]
   },
@@ -4985,9 +5121,12 @@
     "lemma": "Mucius 6",
     "previous": "Mucius 5",
     "next": "Mucius 7",
+    "redirect": "Mucius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 415
+        "start": 415,
+        "end": 415
       }
     ]
   },
@@ -5083,9 +5222,12 @@
     "lemma": "Mucius 15",
     "previous": "Mucius 14",
     "next": "Mucius 16",
+    "redirect": "Mucius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 424
+        "start": 424,
+        "end": 424
       }
     ]
   },
@@ -5269,9 +5411,12 @@
     "lemma": "Mühle",
     "previous": "Mücke",
     "next": "Mündigkeit",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 454
+        "start": 454,
+        "end": 454
       }
     ]
   },
@@ -5378,9 +5523,12 @@
     "lemma": "Muguae",
     "previous": "Mugius",
     "next": "Muicius",
+    "redirect": "Muliensis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 492
+        "start": 492,
+        "end": 492
       }
     ]
   },
@@ -5421,16 +5569,19 @@
     "lemma": "Mukaporis",
     "previous": "Muis",
     "next": "Mukelle",
+    "redirect": "Bosporos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 493
+        "start": 493,
+        "end": 493
       }
     ]
   },
   {
     "lemma": "Mukelle",
     "previous": "Mukaporis",
-    "next": "Mukialle",
+    "next": "Μουκιάλλη",
     "chapters": [
       {
         "start": 493,
@@ -5439,22 +5590,29 @@
     ]
   },
   {
-    "lemma": "Mukialle",
+    "lemma": "Μουκιάλλη",
     "previous": "Mukelle",
     "next": "Mukieia",
+    "sort_key": "Mukialle",
+    "redirect": "Mukelle",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 493
+        "start": 493,
+        "end": 493
       }
     ]
   },
   {
     "lemma": "Mukieia",
-    "previous": "Mukialle",
+    "previous": "Μουκιάλλη",
     "next": "Mukissos",
+    "redirect": "Mucia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 493
+        "start": 493,
+        "end": 493
       }
     ]
   },
@@ -5462,9 +5620,12 @@
     "lemma": "Mukissos",
     "previous": "Mukieia",
     "next": "Mukunoi",
+    "redirect": "Mokisos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 493
+        "start": 493,
+        "end": 493
       }
     ]
   },
@@ -5483,9 +5644,12 @@
     "lemma": "Mula",
     "previous": "Mukunoi",
     "next": "Mulaka(?)",
+    "redirect": "Esel",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 493
+        "start": 493,
+        "end": 493
       }
     ]
   },
@@ -5636,9 +5800,12 @@
     "lemma": "Mullo",
     "previous": "Mulleus",
     "next": "Muloch",
+    "redirect": "Mars 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 496
+        "start": 496,
+        "end": 496
       }
     ]
   },
@@ -5701,9 +5868,12 @@
     "lemma": "Multimammia",
     "previous": "Multicensis",
     "next": "Mulucha",
+    "redirect": "Polymastos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 514
+        "start": 514,
+        "end": 514
       }
     ]
   },
@@ -5788,9 +5958,12 @@
     "lemma": "Mulus",
     "previous": "Mulvius pons",
     "next": "Mumastos",
+    "redirect": "Esel",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 518
+        "start": 518,
+        "end": 518
       }
     ]
   },
@@ -6048,9 +6221,12 @@
     "lemma": "Mummius 19",
     "previous": "Mummius 18",
     "next": "Mummius 20",
+    "redirect": "Valerius 375",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 527
+        "start": 527,
+        "end": 527
       }
     ]
   },
@@ -6069,9 +6245,12 @@
     "lemma": "Mummius 21",
     "previous": "Mummius 20",
     "next": "Mummius 22",
+    "redirect": "Historia Augusta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 528
+        "start": 528,
+        "end": 528
       }
     ]
   },
@@ -6751,9 +6930,12 @@
     "lemma": "Mundhir",
     "previous": "Munderich",
     "next": "Mundicius",
+    "redirect": "Alamundarus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 558
+        "start": 558,
+        "end": 558
       }
     ]
   },
@@ -6772,9 +6954,12 @@
     "lemma": "Mundicius 1",
     "previous": "Mundicius",
     "next": "Mundila",
+    "redirect": "Antistius 38",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 558
+        "start": 558,
+        "end": 558
       }
     ]
   },
@@ -6793,9 +6978,12 @@
     "lemma": "Mundios",
     "previous": "Mundila",
     "next": "Mundiuch",
+    "redirect": "Mundiuch",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 559
+        "start": 559,
+        "end": 559
       }
     ]
   },
@@ -6858,9 +7046,12 @@
     "lemma": "Mundus 4",
     "previous": "Mundus 3",
     "next": "Mundus 5",
+    "redirect": "Decius 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 564
+        "start": 564,
+        "end": 564
       }
     ]
   },
@@ -6868,9 +7059,12 @@
     "lemma": "Mundus 5",
     "previous": "Mundus 4",
     "next": "Mundzuch",
+    "redirect": "Mundo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 564
+        "start": 564,
+        "end": 564
       }
     ]
   },
@@ -6878,9 +7072,12 @@
     "lemma": "Mundzuch",
     "previous": "Mundus 5",
     "next": "Munerarius",
+    "redirect": "Mundiuch",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 564
+        "start": 564,
+        "end": 564
       }
     ]
   },
@@ -6921,9 +7118,12 @@
     "lemma": "Munichia 3",
     "previous": "Munichia 2",
     "next": "Munichion",
+    "redirect": "Munychia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 568
+        "start": 568,
+        "end": 568
       }
     ]
   },
@@ -6975,9 +7175,12 @@
     "lemma": "Munichos, Munychos 3",
     "previous": "Munichos, Munychos 2",
     "next": "Municipium 1",
+    "redirect": "Munychos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 570
+        "start": 570,
+        "end": 570
       }
     ]
   },
@@ -7095,9 +7298,12 @@
     "lemma": "Munitos",
     "previous": "Munition",
     "next": "Munius",
+    "redirect": "Munichos, Munychos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 642
+        "start": 642,
+        "end": 642
       }
     ]
   },
@@ -7171,9 +7377,12 @@
     "lemma": "Muntobriga",
     "previous": "munthu, munth(u)x",
     "next": "Muntzaron",
+    "redirect": "Montobriga",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 644
+        "start": 644,
+        "end": 644
       }
     ]
   },
@@ -7191,7 +7400,7 @@
   {
     "lemma": "Munus",
     "previous": "Muntzaron",
-    "next": "munu(u)x",
+    "next": "munθuχ",
     "chapters": [
       {
         "start": 644,
@@ -7200,23 +7409,29 @@
     ]
   },
   {
-    "lemma": "munu(u)x",
+    "lemma": "munθuχ",
     "previous": "Munus",
     "next": "Munus 2",
+    "sort_key": "munthuch",
+    "redirect": "munthu, munth(u)x",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 644
+        "start": 644,
+        "end": 644
       }
     ]
   },
   {
     "lemma": "Munus 2",
-    "previous": "munu(u)x",
+    "previous": "munθuχ",
     "next": "Munychia",
-    "redirect": true,
+    "redirect": "Gladiatores",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 651
+        "start": 651,
+        "end": 651
       }
     ]
   },
@@ -7224,9 +7439,12 @@
     "lemma": "Munychia",
     "previous": "Munus 2",
     "next": "Munychiatis",
+    "redirect": "Munichia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 651
+        "start": 651,
+        "end": 651
       }
     ]
   },
@@ -7245,9 +7463,12 @@
     "lemma": "Munychion",
     "previous": "Munychiatis",
     "next": "Munychos",
+    "redirect": "Munichion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 652
+        "start": 652,
+        "end": 652
       }
     ]
   },
@@ -7255,9 +7476,12 @@
     "lemma": "Munychos",
     "previous": "Munychion",
     "next": "Muonius(?) Maternus",
+    "redirect": "Munichos, Munychos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 652
+        "start": 652,
+        "end": 652
       }
     ]
   },
@@ -7320,9 +7544,12 @@
     "lemma": "Murbogi",
     "previous": "Muranus",
     "next": "Murcia",
+    "redirect": "Turmogi, Turmogidi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 657
+        "start": 657,
+        "end": 657
       }
     ]
   },
@@ -7373,9 +7600,12 @@
     "lemma": "Murex",
     "previous": "Murena 2",
     "next": "Murgantia",
+    "redirect": "Schnecke",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 660
+        "start": 660,
+        "end": 660
       }
     ]
   },
@@ -7427,9 +7657,12 @@
     "lemma": "Muriane",
     "previous": "Muria",
     "next": "Muriatha",
+    "redirect": "Morimene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 662
+        "start": 662,
+        "end": 662
       }
     ]
   },
@@ -7437,9 +7670,12 @@
     "lemma": "Muriatha",
     "previous": "Muriane",
     "next": "Muridunum",
+    "redirect": "Moriath",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 662
+        "start": 662,
+        "end": 662
       }
     ]
   },
@@ -7447,9 +7683,12 @@
     "lemma": "Muridunum",
     "previous": "Muriatha",
     "next": "Murig 1",
+    "redirect": "Moridunum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 662
+        "start": 662,
+        "end": 662
       }
     ]
   },
@@ -7490,9 +7729,12 @@
     "lemma": "Murimene",
     "previous": "Murileguli",
     "next": "Murionio",
+    "redirect": "Morimene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 662
+        "start": 662,
+        "end": 662
       }
     ]
   },
@@ -7566,9 +7808,12 @@
     "lemma": "Murmunta",
     "previous": "Murmillo",
     "next": "Murmustra",
+    "redirect": "Mormonda, Mormonda mikra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 667
+        "start": 667,
+        "end": 667
       }
     ]
   },
@@ -7686,9 +7931,12 @@
     "lemma": "Murrina 2",
     "previous": "Murrina 1",
     "next": "Murrius 1",
+    "redirect": "Vasa murrina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 669
+        "start": 669,
+        "end": 669
       }
     ]
   },
@@ -7795,9 +8043,12 @@
     "lemma": "Mursia",
     "previous": "Mursi",
     "next": "Mursianus Lacus",
+    "redirect": "Victor 69",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 678
+        "start": 678,
+        "end": 678
       }
     ]
   },
@@ -7827,9 +8078,12 @@
     "lemma": "Mursinense Oppidum",
     "previous": "Mursina",
     "next": "Mursium",
+    "redirect": "Mursa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 679
+        "start": 679,
+        "end": 679
       }
     ]
   },
@@ -7837,10 +8091,12 @@
     "lemma": "Mursium",
     "previous": "Mursinense Oppidum",
     "next": "Mursius",
-    "redirect": true,
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 679
+        "start": 679,
+        "end": 679
       }
     ]
   },
@@ -7881,9 +8137,12 @@
     "lemma": "Murus",
     "previous": "(ad) Murum",
     "next": "Mus",
+    "redirect": "Städtebau",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 679
+        "start": 679,
+        "end": 679
       }
     ]
   },
@@ -7891,9 +8150,12 @@
     "lemma": "Mus",
     "previous": "Murus",
     "next": "Musa 1",
+    "redirect": "Decius 15",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 679
+        "start": 679,
+        "end": 679
       }
     ]
   },
@@ -7922,9 +8184,12 @@
     "lemma": "Musa",
     "previous": "Musa 2",
     "next": "Musaeus",
+    "redirect": "Muza 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 680
+        "start": 680,
+        "end": 680
       }
     ]
   },
@@ -7932,9 +8197,12 @@
     "lemma": "Musaeus",
     "previous": "Musa",
     "next": "Musagetes",
+    "redirect": "Musaios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 680
+        "start": 680,
+        "end": 680
       }
     ]
   },
@@ -8206,9 +8474,12 @@
     "lemma": "Muscio",
     "previous": "Muschg",
     "next": "Musculus",
+    "redirect": "Mustio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 796
+        "start": 796,
+        "end": 796
       }
     ]
   },
@@ -8227,9 +8498,12 @@
     "lemma": "Muscus",
     "previous": "Musculus",
     "next": "Museia",
+    "redirect": "Moose",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 797
+        "start": 797,
+        "end": 797
       }
     ]
   },
@@ -8325,9 +8599,12 @@
     "lemma": "Museus 2",
     "previous": "Museus 1",
     "next": "Musge(-a?)",
+    "redirect": "Musaios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 822
+        "start": 822,
+        "end": 822
       }
     ]
   },
@@ -8357,9 +8634,12 @@
     "lemma": "Musianus",
     "previous": "Musia",
     "next": "Musiaticus",
+    "redirect": "Musonianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 823
+        "start": 823,
+        "end": 823
       }
     ]
   },
@@ -8389,9 +8669,12 @@
     "lemma": "Musice",
     "previous": "Musica",
     "next": "Musicus",
+    "redirect": "Musia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 823
+        "start": 823,
+        "end": 823
       }
     ]
   },
@@ -8454,9 +8737,12 @@
     "lemma": "Musivarii",
     "previous": "Musinus mons",
     "next": "Musius",
+    "redirect": "Mosaik",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 892
+        "start": 892,
+        "end": 892
       }
     ]
   },
@@ -8464,9 +8750,12 @@
     "lemma": "Musius",
     "previous": "Musivarii",
     "next": "Muskanda",
+    "redirect": "Musaios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 892
+        "start": 892,
+        "end": 892
       }
     ]
   },
@@ -8474,9 +8763,12 @@
     "lemma": "Muskanda",
     "previous": "Musius",
     "next": "Muslubium",
+    "redirect": "Musbanda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 892
+        "start": 892,
+        "end": 892
       }
     ]
   },
@@ -8528,9 +8820,12 @@
     "lemma": "Musonianus 1",
     "previous": "Musones",
     "next": "Musonianus 2",
+    "redirect": "Strategius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 893
+        "start": 893,
+        "end": 893
       }
     ]
   },
@@ -8560,10 +8855,12 @@
     "lemma": "Musonius 2",
     "previous": "Musonius 1",
     "next": "Musonius 3",
-    "redirect": true,
+    "redirect": "Musonius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 897
+        "start": 897,
+        "end": 897
       }
     ]
   },
@@ -8692,9 +8989,12 @@
     "lemma": "Musonius 14",
     "previous": "Musonius 13",
     "next": "Musonius 15",
+    "redirect": "Musonianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 898
+        "start": 898,
+        "end": 898
       }
     ]
   },
@@ -8713,9 +9013,12 @@
     "lemma": "Musonius 16",
     "previous": "Musonius 15",
     "next": "Musonius 17",
+    "redirect": "Mizonius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 898
+        "start": 898,
+        "end": 898
       }
     ]
   },
@@ -8943,9 +9246,12 @@
     "lemma": "Mustila",
     "previous": "Mustiae Calmes",
     "next": "Mustilia",
+    "redirect": "Mustela 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 911
+        "start": 911,
+        "end": 911
       }
     ]
   },
@@ -9085,9 +9391,12 @@
     "lemma": "Mutatio",
     "previous": "Mutalaske (-a?)",
     "next": "Mutatio Sunista",
+    "redirect": "Mansio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 935
+        "start": 935,
+        "end": 935
       }
     ]
   },
@@ -9095,9 +9404,12 @@
     "lemma": "Mutatio Sunista",
     "previous": "Mutatio",
     "next": "Mutatorium Caesaris",
+    "redirect": "Itinerarien",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 935
+        "start": 935,
+        "end": 935
       }
     ]
   },
@@ -9149,9 +9461,12 @@
     "lemma": "Muth",
     "previous": "Muteno",
     "next": "Muthis",
+    "redirect": "Mut",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 937
+        "start": 937,
+        "end": 937
       }
     ]
   },
@@ -9192,9 +9507,12 @@
     "lemma": "Mutianus",
     "previous": "Mutia Festa",
     "next": "Mutila",
+    "redirect": "Mucianus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 938
+        "start": 938,
+        "end": 938
       }
     ]
   },
@@ -9246,9 +9564,12 @@
     "lemma": "Mutilius 2",
     "previous": "Mutilius 1",
     "next": "Mutill(ius)",
+    "redirect": "Mutill(ius)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 939
+        "start": 939,
+        "end": 939
       }
     ]
   },
@@ -9289,9 +9610,12 @@
     "lemma": "Mutinus",
     "previous": "Mutina",
     "next": "Mutius",
+    "redirect": "Mutunus Tutunus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 946
+        "start": 946,
+        "end": 946
       }
     ]
   },
@@ -9299,9 +9623,12 @@
     "lemma": "Mutius",
     "previous": "Mutinus",
     "next": "Muttergottheiten",
+    "redirect": "Mucius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 946
+        "start": 946,
+        "end": 946
       }
     ]
   },
@@ -9320,9 +9647,12 @@
     "lemma": "Muttines",
     "previous": "Muttergottheiten",
     "next": "Mutto",
+    "redirect": "Myttones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 978
+        "start": 978,
+        "end": 978
       }
     ]
   },
@@ -9330,10 +9660,12 @@
     "lemma": "Mutto",
     "previous": "Muttines",
     "next": "Mutuantonis",
-    "redirect": true,
+    "redirect": "Titius 33",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 979
+        "start": 979,
+        "end": 979
       }
     ]
   },
@@ -9352,9 +9684,12 @@
     "lemma": "Mutucumenses",
     "previous": "Mutuantonis",
     "next": "Mutuduri",
+    "redirect": "Munienses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 979
+        "start": 979,
+        "end": 979
       }
     ]
   },
@@ -9439,9 +9774,12 @@
     "lemma": "Mutusca",
     "previous": "Mutus",
     "next": "Muucius",
+    "redirect": "Trebula 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 987
+        "start": 987,
+        "end": 987
       }
     ]
   },
@@ -9504,9 +9842,12 @@
     "lemma": "Muzonius",
     "previous": "Muziris",
     "next": "Muzuca",
+    "redirect": "Mizonius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 989
+        "start": 989,
+        "end": 989
       }
     ]
   },
@@ -9536,9 +9877,12 @@
     "lemma": "Mya 2",
     "previous": "Mya 1",
     "next": "Myagros",
+    "redirect": "Mia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 990
+        "start": 990,
+        "end": 990
       }
     ]
   },
@@ -9557,9 +9901,12 @@
     "lemma": "Myanda",
     "previous": "Myagros",
     "next": "Myaneus",
+    "redirect": "Muskanda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 990
+        "start": 990,
+        "end": 990
       }
     ]
   },
@@ -9589,9 +9936,12 @@
     "lemma": "Myceni",
     "previous": "Myania",
     "next": "Mychia",
+    "redirect": "Mykenoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 993
+        "start": 993,
+        "end": 993
       }
     ]
   },
@@ -9599,9 +9949,12 @@
     "lemma": "Mychia",
     "previous": "Myceni",
     "next": "Mychioi Theoi",
+    "redirect": "Mychioi Theoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 993
+        "start": 993,
+        "end": 993
       }
     ]
   },
@@ -9620,9 +9973,12 @@
     "lemma": "Mychios",
     "previous": "Mychioi Theoi",
     "next": "Mychon",
+    "redirect": "Mychioi Theoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 995
+        "start": 995,
+        "end": 995
       }
     ]
   },
@@ -9740,9 +10096,12 @@
     "lemma": "Myes 3",
     "previous": "Myes 2",
     "next": "Myes(s)ioi",
+    "redirect": "Myus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 996
+        "start": 996,
+        "end": 996
       }
     ]
   },
@@ -9750,9 +10109,12 @@
     "lemma": "Myes(s)ioi",
     "previous": "Myes 3",
     "next": "Myeza",
+    "redirect": "Myus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 996
+        "start": 996,
+        "end": 996
       }
     ]
   },
@@ -9760,9 +10122,12 @@
     "lemma": "Myeza",
     "previous": "Myes(s)ioi",
     "next": "Mygalos",
+    "redirect": "Mieza",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 996
+        "start": 996,
+        "end": 996
       }
     ]
   },
@@ -9825,10 +10190,12 @@
     "lemma": "Mygdon 3",
     "previous": "Mygdon 2",
     "next": "Mygdones 1",
-    "redirect": true,
+    "redirect": "Mygdonius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 998
+        "start": 998,
+        "end": 998
       }
     ]
   },
@@ -9935,10 +10302,12 @@
     "lemma": "Mygdum (-us?)",
     "previous": "Mygdonius 2",
     "next": "Mygissos",
-    "redirect": true,
+    "redirect": "Midum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1002
+        "start": 1002,
+        "end": 1002
       }
     ]
   },
@@ -9957,10 +10326,12 @@
     "lemma": "Myia 1",
     "previous": "Mygissos",
     "next": "Myia 2",
-    "redirect": true,
+    "redirect": "Korinna 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1002
+        "start": 1002,
+        "end": 1002
       }
     ]
   },
@@ -10011,9 +10382,12 @@
     "lemma": "Myia 6",
     "previous": "Myia 5",
     "next": "Myia 7",
+    "redirect": "Myrtila",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1003
+        "start": 1003,
+        "end": 1003
       }
     ]
   },
@@ -10043,9 +10417,12 @@
     "lemma": "Myiagros 2",
     "previous": "Myiagros 1",
     "next": "Myio",
+    "redirect": "Myagros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1003
+        "start": 1003,
+        "end": 1003
       }
     ]
   },
@@ -10053,9 +10430,12 @@
     "lemma": "Myio",
     "previous": "Myiagros 2",
     "next": "Myiodes",
+    "redirect": "Myia 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1003
+        "start": 1003,
+        "end": 1003
       }
     ]
   },
@@ -10239,9 +10619,12 @@
     "lemma": "Myklaia",
     "previous": "Mykerodis",
     "next": "Myklos",
+    "redirect": "Amunclae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1029
+        "start": 1029,
+        "end": 1029
       }
     ]
   },
@@ -10370,9 +10753,12 @@
     "lemma": "Mylaon 1",
     "previous": "Mylantia",
     "next": "Mylaon 2",
+    "redirect": "Methydrion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1045
+        "start": 1045,
+        "end": 1045
       }
     ]
   },
@@ -10457,9 +10843,12 @@
     "lemma": "Myle 3",
     "previous": "Myle 2",
     "next": "Myleiton katoikia",
+    "redirect": "Mylai 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1072
+        "start": 1072,
+        "end": 1072
       }
     ]
   },
@@ -10599,9 +10988,12 @@
     "lemma": "Mylon 2",
     "previous": "Mylon 1",
     "next": "Mynatidius",
+    "redirect": "Molon 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1075
+        "start": 1075,
+        "end": 1075
       }
     ]
   },
@@ -10763,9 +11155,12 @@
     "lemma": "Myon",
     "previous": "Myodia",
     "next": "Myonnesos 1",
+    "redirect": "Myania",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1080
+        "start": 1080,
+        "end": 1080
       }
     ]
   },
@@ -10894,9 +11289,12 @@
     "lemma": "Myrichides",
     "previous": "Myriangeloi",
     "next": "Myrike 1",
+    "redirect": "Morychides",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1092
+        "start": 1092,
+        "end": 1092
       }
     ]
   },
@@ -11047,9 +11445,12 @@
     "lemma": "Myrismus 2",
     "previous": "Myrismus 1",
     "next": "Myrkinos",
+    "redirect": "Muris...",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1104
+        "start": 1104,
+        "end": 1104
       }
     ]
   },
@@ -11266,9 +11667,12 @@
     "lemma": "Myro 1",
     "previous": "Myrmissos",
     "next": "Myro 2",
+    "redirect": "Moiro",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1111
+        "start": 1111,
+        "end": 1111
       }
     ]
   },
@@ -11276,9 +11680,12 @@
     "lemma": "Myro 2",
     "previous": "Myro 1",
     "next": "Myrobalanos",
+    "redirect": "Marcius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1111
+        "start": 1111,
+        "end": 1111
       }
     ]
   },
@@ -11308,9 +11715,12 @@
     "lemma": "Myron 1",
     "previous": "Myrocles",
     "next": "Myron 2",
+    "redirect": "Drogen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1115
+        "start": 1115,
+        "end": 1115
       }
     ]
   },
@@ -11547,7 +11957,7 @@
   {
     "lemma": "Myrrhinutta",
     "previous": "Myrde",
-    "next": "Myrsileia",
+    "next": "Μύρση",
     "chapters": [
       {
         "start": 1147,
@@ -11556,8 +11966,22 @@
     ]
   },
   {
-    "lemma": "Myrsileia",
+    "lemma": "Μύρση",
     "previous": "Myrrhinutta",
+    "next": "Myrsileia",
+    "sort_key": "Myrse",
+    "redirect": "Iulianos 26",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1147,
+        "end": 1147
+      }
+    ]
+  },
+  {
+    "lemma": "Myrsileia",
+    "previous": "Μύρση",
     "next": "Myrsilos 1",
     "chapters": [
       {
@@ -11592,9 +12016,12 @@
     "lemma": "Myrsilos 3",
     "previous": "Myrsilos 2",
     "next": "Myrsine",
+    "redirect": "Myrtilos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1150
+        "start": 1150,
+        "end": 1150
       }
     ]
   },
@@ -11712,9 +12139,12 @@
     "lemma": "Myrti(l)ianus",
     "previous": "Myrtila",
     "next": "Myrtilis",
+    "redirect": "Marius 67",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1151
+        "start": 1151,
+        "end": 1151
       }
     ]
   },
@@ -11755,9 +12185,12 @@
     "lemma": "Myrtilos 2",
     "previous": "Myrtilos 1",
     "next": "Myrtilos 3",
+    "redirect": "Kandaules",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1165
+        "start": 1165,
+        "end": 1165
       }
     ]
   },
@@ -11820,9 +12253,12 @@
     "lemma": "Myrtilos 8",
     "previous": "Myrtilos 7",
     "next": "Myrtilos kolpos",
+    "redirect": "Myrsilos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1166
+        "start": 1166,
+        "end": 1166
       }
     ]
   },
@@ -11852,9 +12288,12 @@
     "lemma": "Myrtion 2",
     "previous": "Myrtion 1",
     "next": "Myrtion 3",
+    "redirect": "Myrtenon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1167
+        "start": 1167,
+        "end": 1167
       }
     ]
   },
@@ -11906,9 +12345,12 @@
     "lemma": "Myrtiske",
     "previous": "Myrtis 2",
     "next": "Myrto 1",
+    "redirect": "Myrtenon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1167
+        "start": 1167,
+        "end": 1167
       }
     ]
   },
@@ -11982,9 +12424,12 @@
     "lemma": "Myrtoos",
     "previous": "Myrton",
     "next": "Myrtos",
+    "redirect": "Myrtates",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1171
+        "start": 1171,
+        "end": 1171
       }
     ]
   },
@@ -12023,7 +12468,7 @@
   {
     "lemma": "Myrtusa",
     "previous": "Myrtousion",
-    "next": "Myrullas",
+    "next": "Μυρτούσιον",
     "chapters": [
       {
         "start": 1184,
@@ -12032,8 +12477,22 @@
     ]
   },
   {
-    "lemma": "Myrullas",
+    "lemma": "Μυρτούσιον",
     "previous": "Myrtusa",
+    "next": "Myrullas",
+    "sort_key": "Myrtusion",
+    "redirect": "Myrtusa",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1184,
+        "end": 1184
+      }
+    ]
+  },
+  {
+    "lemma": "Myrullas",
+    "previous": "Μυρτούσιον",
     "next": "Mys 1",
     "chapters": [
       {

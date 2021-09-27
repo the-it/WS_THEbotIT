@@ -215,9 +215,12 @@
     "lemma": "Numerianus 2",
     "previous": "Numerianus 1",
     "next": "Numerianus 3",
+    "redirect": "Numerius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1324
+        "start": 1324,
+        "end": 1324
       }
     ]
   },
@@ -1290,10 +1293,12 @@
     "lemma": "Nuna",
     "previous": "Nun",
     "next": "Nuncupatio",
-    "redirect": true,
+    "redirect": "Nonnos 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1467
+        "start": 1467,
+        "end": 1467
       }
     ]
   },
@@ -1510,10 +1515,12 @@
     "lemma": "Nura 2",
     "previous": "Nura 1",
     "next": "Nure",
-    "redirect": true,
+    "redirect": "Nora 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1489
+        "start": 1489,
+        "end": 1489
       }
     ]
   },
@@ -1587,10 +1594,12 @@
     "lemma": "Nussbaum",
     "previous": "Nusaripa",
     "next": "Nutha",
-    "redirect": true,
+    "redirect": "Haselnuß",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1491
+        "start": 1491,
+        "end": 1491
       }
     ]
   },
@@ -1644,10 +1653,12 @@
     "lemma": "Nuuel",
     "previous": "Nutrix 2",
     "next": "Nux",
-    "redirect": true,
+    "redirect": "Nubel",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1502
+        "start": 1502,
+        "end": 1502
       }
     ]
   },
@@ -1720,7 +1731,7 @@
   {
     "lemma": "Nygbenitai",
     "previous": "Nychia 3",
-    "next": "Nygbenoi",
+    "next": "Νυγβηνοί",
     "chapters": [
       {
         "start": 1509,
@@ -1729,19 +1740,22 @@
     ]
   },
   {
-    "lemma": "Nygbenoi",
+    "lemma": "Νυγβηνοί",
     "previous": "Nygbenitai",
     "next": "Nygdosora",
-    "redirect": true,
+    "sort_key": "Nygbenoi",
+    "redirect": "Nygbenitai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1509
+        "start": 1509,
+        "end": 1509
       }
     ]
   },
   {
     "lemma": "Nygdosora",
-    "previous": "Nygbenoi",
+    "previous": "Νυγβηνοί",
     "next": "Nykpioi",
     "chapters": [
       {
@@ -1797,7 +1811,7 @@
   {
     "lemma": "Nyktelios",
     "previous": "Nyktelia",
-    "next": "Nykteparchos",
+    "next": "Νυκτέπαρχος",
     "chapters": [
       {
         "start": 1510,
@@ -1806,19 +1820,22 @@
     ]
   },
   {
-    "lemma": "Nykteparchos",
+    "lemma": "Νυκτέπαρχος",
     "previous": "Nyktelios",
     "next": "Nykterinos",
-    "redirect": true,
+    "sort_key": "Nykteparchos",
+    "redirect": "praefectus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1511
+        "start": 1511,
+        "end": 1511
       }
     ]
   },
   {
     "lemma": "Nykterinos",
-    "previous": "Nykteparchos",
+    "previous": "Νυκτέπαρχος",
     "next": "Nykteus 1",
     "chapters": [
       {
@@ -1985,10 +2002,12 @@
     "lemma": "Nymbaion",
     "previous": "Nyktostrategos",
     "next": "Nymphadius",
-    "redirect": true,
+    "redirect": "Nymphaion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1517
+        "start": 1517,
+        "end": 1517
       }
     ]
   },
@@ -2062,10 +2081,12 @@
     "lemma": "Nymphaeus 4",
     "previous": "Nymphaeus 3",
     "next": "Nymphagogos",
-    "redirect": true,
+    "redirect": "Nymphaios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1527
+        "start": 1527,
+        "end": 1527
       }
     ]
   },
@@ -2106,10 +2127,12 @@
     "lemma": "Nymphaia 1",
     "previous": "Nymphai 2",
     "next": "Nymphaia 2",
-    "redirect": true,
+    "redirect": "Nymphaea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1599
+        "start": 1599,
+        "end": 1599
       }
     ]
   },
@@ -2194,10 +2217,12 @@
     "lemma": "Nymphaion 4",
     "previous": "Nymphaion 3",
     "next": "Nymphaion 5",
-    "redirect": true,
+    "redirect": "Nymphaeum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1600
+        "start": 1600,
+        "end": 1600
       }
     ]
   },
@@ -2260,10 +2285,12 @@
     "lemma": "Nymphaios 2",
     "previous": "Nymphaios 1",
     "next": "Nymphaïs",
-    "redirect": true,
+    "redirect": "Nymphaeus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1603
+        "start": 1603,
+        "end": 1603
       }
     ]
   },
@@ -2744,10 +2771,12 @@
     "lemma": "Nysa 13",
     "previous": "Nysa 12",
     "next": "Nysaios 1",
-    "redirect": true,
+    "redirect": "Neisa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1661
+        "start": 1661,
+        "end": 1661
       }
     ]
   },
@@ -2843,9 +2872,12 @@
     "lemma": "Nystros",
     "previous": "Nys(s)os",
     "next": "Nyx",
+    "redirect": "Mystos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1663
+        "start": 1663,
+        "end": 1663
       }
     ]
   },
@@ -3197,10 +3229,12 @@
     "lemma": "Obelai",
     "previous": "Obba 2",
     "next": "Obeleses",
-    "redirect": true,
+    "redirect": "Obilai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1705
+        "start": 1705,
+        "end": 1705
       }
     ]
   },
@@ -3252,10 +3286,12 @@
     "lemma": "Obelos",
     "previous": "Obellius 1",
     "next": "Obelum",
-    "redirect": true,
+    "redirect": "Kritische Zeichen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1714
+        "start": 1714,
+        "end": 1714
       }
     ]
   },
@@ -3417,10 +3453,12 @@
     "lemma": "Oboda",
     "previous": "Oboca",
     "next": "Obodas 1",
-    "redirect": true,
+    "redirect": "Nabataioi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1735
+        "start": 1735,
+        "end": 1735
       }
     ]
   },
@@ -3527,10 +3565,12 @@
     "lemma": "Obrimas",
     "previous": "Obriareos",
     "next": "Obrimo",
-    "redirect": true,
+    "redirect": "Maiandros 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1740
+        "start": 1740,
+        "end": 1740
       }
     ]
   },
@@ -3538,10 +3578,12 @@
     "lemma": "Obrimo",
     "previous": "Obrimas",
     "next": "Obrimos 1",
-    "redirect": true,
+    "redirect": "Brimo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1740
+        "start": 1740,
+        "end": 1740
       }
     ]
   },
@@ -3582,10 +3624,12 @@
     "lemma": "Obrogatio",
     "previous": "Obrincas",
     "next": "Obryza",
-    "redirect": true,
+    "redirect": "Abrogatio 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1741
+        "start": 1741,
+        "end": 1741
       }
     ]
   },
@@ -3637,10 +3681,12 @@
     "lemma": "Obsidius",
     "previous": "Obsidian",
     "next": "Obsignatio",
-    "redirect": true,
+    "redirect": "Oblacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1745
+        "start": 1745,
+        "end": 1745
       }
     ]
   },
@@ -3681,10 +3727,12 @@
     "lemma": "Obucola",
     "previous": "Obvagulatio",
     "next": "Obulcius",
-    "redirect": true,
+    "redirect": "Obulcula",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1750
+        "start": 1750,
+        "end": 1750
       }
     ]
   },
@@ -3879,10 +3927,12 @@
     "lemma": "Ocellodurum",
     "previous": "Ocellati (-ae) 2",
     "next": "Ocelon",
-    "redirect": true,
+    "redirect": "Ocelum 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1765
+        "start": 1765,
+        "end": 1765
       }
     ]
   },
@@ -3945,10 +3995,12 @@
     "lemma": "Ocelus",
     "previous": "Ocelum 4",
     "next": "Ochani",
-    "redirect": true,
+    "redirect": "Mars 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1767
+        "start": 1767,
+        "end": 1767
       }
     ]
   },
@@ -3956,10 +4008,12 @@
     "lemma": "Ochani",
     "previous": "Ocelus",
     "next": "Ocharius",
-    "redirect": true,
+    "redirect": "Orciani",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1767
+        "start": 1767,
+        "end": 1767
       }
     ]
   },
@@ -4077,10 +4131,12 @@
     "lemma": "Ochos 3",
     "previous": "Ochos 2",
     "next": "Ochosbates",
-    "redirect": true,
+    "redirect": "Artaxerxes 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1770
+        "start": 1770,
+        "end": 1770
       }
     ]
   },
@@ -4088,10 +4144,12 @@
     "lemma": "Ochosbates",
     "previous": "Ochos 3",
     "next": "Ochra",
-    "redirect": true,
+    "redirect": "Ocherainos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1770
+        "start": 1770,
+        "end": 1770
       }
     ]
   },
@@ -4099,10 +4157,12 @@
     "lemma": "Ochra",
     "previous": "Ochosbates",
     "next": "Ochras",
-    "redirect": true,
+    "redirect": "Ocker",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1770
+        "start": 1770,
+        "end": 1770
       }
     ]
   },
@@ -4165,10 +4225,12 @@
     "lemma": "Ochthomanes",
     "previous": "Ochthoibos",
     "next": "Ocila",
-    "redirect": true,
+    "redirect": "Ocherainos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1771
+        "start": 1771,
+        "end": 1771
       }
     ]
   },
@@ -4176,10 +4238,12 @@
     "lemma": "Ocila",
     "previous": "Ochthomanes",
     "next": "Ocilis",
-    "redirect": true,
+    "redirect": "Okile",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1771
+        "start": 1771,
+        "end": 1771
       }
     ]
   },
@@ -4209,10 +4273,12 @@
     "lemma": "Ocitis",
     "previous": "Ocinarus",
     "next": "Ocker",
-    "redirect": true,
+    "redirect": "Scetis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1772
+        "start": 1772,
+        "end": 1772
       }
     ]
   },
@@ -4242,10 +4308,12 @@
     "lemma": "Ocnus",
     "previous": "Ocl",
     "next": "Ocra 1",
-    "redirect": true,
+    "redirect": "Aucnus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1774
+        "start": 1774,
+        "end": 1774
       }
     ]
   },
@@ -4307,10 +4375,12 @@
     "lemma": "Ocresia",
     "previous": "Ocreae",
     "next": "Ocriculum",
-    "redirect": true,
+    "redirect": "Ocrisia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1780
+        "start": 1780,
+        "end": 1780
       }
     ]
   },
@@ -4384,10 +4454,12 @@
     "lemma": "Octavianus 1",
     "previous": "Octavia",
     "next": "Octavianus 2",
-    "redirect": true,
+    "redirect": "Iulius 132",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1799
+        "start": 1799,
+        "end": 1799
       }
     ]
   },
@@ -4952,9 +5024,12 @@
     "lemma": "Octavius 48",
     "previous": "Octavius 47",
     "next": "Octavius 49",
+    "redirect": "Salvius 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1828
+        "start": 1828,
+        "end": 1828
       }
     ]
   },
@@ -5507,10 +5582,12 @@
     "lemma": "October equus",
     "previous": "Ad octavum",
     "next": "Octocannae",
-    "redirect": true,
+    "redirect": "Hostia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1868
+        "start": 1868,
+        "end": 1868
       }
     ]
   },
@@ -5518,9 +5595,12 @@
     "lemma": "Octocannae",
     "previous": "October equus",
     "next": "Octo durum",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1868
+        "start": 1868,
+        "end": 1868
       }
     ]
   },
@@ -5550,9 +5630,12 @@
     "lemma": "Octogesa",
     "previous": "Octodurus",
     "next": "Octoiuges",
+    "redirect": "Otogesa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1877
+        "start": 1877,
+        "end": 1877
       }
     ]
   },
@@ -5626,9 +5709,12 @@
     "lemma": "Odada",
     "previous": "Ocurura",
     "next": "Odaenathus",
+    "redirect": "Odanda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1880
+        "start": 1880,
+        "end": 1880
       }
     ]
   },
@@ -5801,9 +5887,12 @@
     "lemma": "Odiupolis",
     "previous": "Odites 3",
     "next": "Odmana",
+    "redirect": "Hodiupolis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1888
+        "start": 1888,
+        "end": 1888
       }
     ]
   },
@@ -5877,9 +5966,12 @@
     "lemma": "Odolgan",
     "previous": "Odoka",
     "next": "Odomantike",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1897
+        "start": 1897,
+        "end": 1897
       }
     ]
   },
@@ -5931,9 +6023,12 @@
     "lemma": "Odomus",
     "previous": "Odomas",
     "next": "Odonachos",
+    "redirect": "Odoin",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1898
+        "start": 1898,
+        "end": 1898
       }
     ]
   },
@@ -5996,9 +6091,12 @@
     "lemma": "Odores",
     "previous": "Odontotyrannos",
     "next": "Odothaeus",
+    "redirect": "Drogen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1900
+        "start": 1900,
+        "end": 1900
       }
     ]
   },
@@ -6017,9 +6115,12 @@
     "lemma": "Odotheus",
     "previous": "Odothaeus",
     "next": "Odrangidai",
+    "redirect": "Odothaeus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1900
+        "start": 1900,
+        "end": 1900
       }
     ]
   },
@@ -6038,9 +6139,12 @@
     "lemma": "Odroinos",
     "previous": "Odrangidai",
     "next": "Odrysai",
+    "redirect": "Obrimos 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1900
+        "start": 1900,
+        "end": 1900
       }
     ]
   },
@@ -6070,9 +6174,12 @@
     "lemma": "Odubria",
     "previous": "Odrysses",
     "next": "Oducia",
+    "redirect": "Ira 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1904
+        "start": 1904,
+        "end": 1904
       }
     ]
   },
@@ -6157,9 +6264,12 @@
     "lemma": "Oeaso",
     "previous": "Oeandenses",
     "next": "Oebalia",
+    "redirect": "Oiarso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1996
+        "start": 1996,
+        "end": 1996
       }
     ]
   },
@@ -6211,9 +6321,12 @@
     "lemma": "Oecus",
     "previous": "Oecubaria",
     "next": "Oeinia",
+    "redirect": "Oikos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1997
+        "start": 1997,
+        "end": 1997
       }
     ]
   },
@@ -6265,9 +6378,12 @@
     "lemma": "Oenium",
     "previous": "Oena",
     "next": "Oenotri",
+    "redirect": "Eunias nemus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2023
+        "start": 2023,
+        "end": 2023
       }
     ]
   },
@@ -6286,9 +6402,12 @@
     "lemma": "Oenotria",
     "previous": "Oenotri",
     "next": "Oenotrides",
+    "redirect": "Oenotri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2031
+        "start": 2031,
+        "end": 2031
       }
     ]
   },
@@ -6351,9 +6470,12 @@
     "lemma": "Oesporis",
     "previous": "Oescus",
     "next": "Oestrymnides",
+    "redirect": "Oispois",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2038
+        "start": 2038,
+        "end": 2038
       }
     ]
   },
@@ -7008,9 +7130,12 @@
     "lemma": "Ogonda",
     "previous": "Ogoa",
     "next": "Ogulnius",
+    "redirect": "Mylasa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2064
+        "start": 2064,
+        "end": 2064
       }
     ]
   },
@@ -7095,9 +7220,12 @@
     "lemma": "Ogyges",
     "previous": "Ogulnia 6",
     "next": "Ogygia 1",
+    "redirect": "Ogygos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2066
+        "start": 2066,
+        "end": 2066
       }
     ]
   },
@@ -7248,9 +7376,12 @@
     "lemma": "Ohrgehänge",
     "previous": "Ogyris",
     "next": "Oia 1",
+    "redirect": "Inaures",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2082
+        "start": 2082,
+        "end": 2082
       }
     ]
   },
@@ -7269,9 +7400,12 @@
     "lemma": "Oia 2",
     "previous": "Oia 1",
     "next": "Oiagros 1",
+    "redirect": "Oie",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2082
+        "start": 2082,
+        "end": 2082
       }
     ]
   },
@@ -7334,16 +7468,19 @@
     "lemma": "Oiasso",
     "previous": "Oiarso",
     "next": "Oiax",
+    "redirect": "Oiarso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2091
+        "start": 2091,
+        "end": 2091
       }
     ]
   },
   {
     "lemma": "Oiax",
     "previous": "Oiasso",
-    "next": "Oibalides, oibalis, oibalios",
+    "next": "Οἰβαλίδης, Οἰβαλίς, Οἰβάλιος",
     "chapters": [
       {
         "start": 2091,
@@ -7352,18 +7489,22 @@
     ]
   },
   {
-    "lemma": "Oibalides, oibalis, oibalios",
+    "lemma": "Οἰβαλίδης, Οἰβαλίς, Οἰβάλιος",
     "previous": "Oiax",
     "next": "Oibalos 1",
+    "sort_key": "Oibalides, oibalis, oibalios",
+    "redirect": "Oibalos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2092
+        "start": 2092,
+        "end": 2092
       }
     ]
   },
   {
     "lemma": "Oibalos 1",
-    "previous": "Oibalides, oibalis, oibalios",
+    "previous": "Οἰβαλίδης, Οἰβαλίς, Οἰβάλιος",
     "next": "Oibalos 2",
     "chapters": [
       {
@@ -7508,9 +7649,12 @@
     "lemma": "Oidotheos",
     "previous": "Oidipus",
     "next": "Oie",
+    "redirect": "Odothaeus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2117
+        "start": 2117,
+        "end": 2117
       }
     ]
   },
@@ -7518,9 +7662,12 @@
     "lemma": "Oie",
     "previous": "Oidotheos",
     "next": "Oikea",
+    "redirect": "Oe",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2117
+        "start": 2117,
+        "end": 2117
       }
     ]
   },
@@ -7561,9 +7708,12 @@
     "lemma": "Oikia",
     "previous": "Oiketas",
     "next": "Oikistas 1",
+    "redirect": "Oikos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2117
+        "start": 2117,
+        "end": 2117
       }
     ]
   },
@@ -7658,7 +7808,7 @@
   {
     "lemma": "Oikumene 2",
     "previous": "Oikumene 1",
-    "next": "Oikumenios 2",
+    "next": "Oikumenios 1",
     "chapters": [
       {
         "start": 2174,
@@ -7667,8 +7817,21 @@
     ]
   },
   {
-    "lemma": "Oikumenios 2",
+    "lemma": "Oikumenios 1",
     "previous": "Oikumene 2",
+    "next": "Oikumenios 2",
+    "redirect": "Asklepiodotos 7",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2174,
+        "end": 2174
+      }
+    ]
+  },
+  {
+    "lemma": "Oikumenios 2",
+    "previous": "Oikumenios 1",
     "next": "Oikumenios 3",
     "chapters": [
       {
@@ -7878,9 +8041,12 @@
     "lemma": "Oineanda",
     "previous": "Oine",
     "next": "Oineïs 1",
+    "redirect": "Oinoanda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2191
+        "start": 2191,
+        "end": 2191
       }
     ]
   },
@@ -8009,9 +8175,12 @@
     "lemma": "Oiniandos",
     "previous": "Oiniadas",
     "next": "Oinias",
+    "redirect": "Epiphaneia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2228
+        "start": 2228,
+        "end": 2228
       }
     ]
   },
@@ -8096,9 +8265,12 @@
     "lemma": "Oinobaras",
     "previous": "Oinoatis",
     "next": "Oinobios",
+    "redirect": "Oinoparas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2234
+        "start": 2234,
+        "end": 2234
       }
     ]
   },
@@ -8266,9 +8438,12 @@
     "lemma": "Oinoe 12",
     "previous": "Oinoe 11",
     "next": "Oinoie 1",
+    "redirect": "Oine",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2244
+        "start": 2244,
+        "end": 2244
       }
     ]
   },
@@ -8408,9 +8583,12 @@
     "lemma": "Oinoparalemptes",
     "previous": "Oinone 2",
     "next": "Oinope",
+    "redirect": "Oinologos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2252
+        "start": 2252,
+        "end": 2252
       }
     ]
   },
@@ -8605,9 +8783,12 @@
     "lemma": "Oinorion",
     "previous": "Oinoptai",
     "next": "Oinos 1",
+    "redirect": "Oinopion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2276
+        "start": 2276,
+        "end": 2276
       }
     ]
   },
@@ -8659,9 +8840,12 @@
     "lemma": "Oinotria",
     "previous": "Oinos 4",
     "next": "Oinotropoi",
+    "redirect": "Oenotri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2276
+        "start": 2276,
+        "end": 2276
       }
     ]
   },
@@ -8823,9 +9007,12 @@
     "lemma": "Oioneus",
     "previous": "Oionaia",
     "next": "Oionias",
+    "redirect": "Eioneus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2284
+        "start": 2284,
+        "end": 2284
       }
     ]
   },
@@ -8964,9 +9151,12 @@
     "lemma": "Oistrus",
     "previous": "Oistros 2",
     "next": "Oistrymnis",
+    "redirect": "Ostrys",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2287
+        "start": 2287,
+        "end": 2287
       }
     ]
   },
@@ -9139,9 +9329,12 @@
     "lemma": "Oizenis",
     "previous": "Oitylos",
     "next": "Oka",
+    "redirect": "Trapezus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2302
+        "start": 2302,
+        "end": 2302
       }
     ]
   },
@@ -9204,9 +9397,12 @@
     "lemma": "Okeanos 2",
     "previous": "Okeanos 1",
     "next": "Okelis",
+    "redirect": "Oceanus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2361
+        "start": 2361,
+        "end": 2361
       }
     ]
   },
@@ -9214,9 +9410,12 @@
     "lemma": "Okelis",
     "previous": "Okeanos 2",
     "next": "Okellas",
+    "redirect": "Ocelis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2361
+        "start": 2361,
+        "end": 2361
       }
     ]
   },
@@ -9246,9 +9445,12 @@
     "lemma": "Okgos",
     "previous": "Okellos",
     "next": "Okile",
+    "redirect": "Okos (-on?",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2380
+        "start": 2380,
+        "end": 2380
       }
     ]
   },
@@ -9278,9 +9480,12 @@
     "lemma": "Okinaros",
     "previous": "Okimon",
     "next": "Okkaraba",
+    "redirect": "Ocinarus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2383
+        "start": 2383,
+        "end": 2383
       }
     ]
   },
@@ -9288,9 +9493,12 @@
     "lemma": "Okkaraba",
     "previous": "Okinaros",
     "next": "Okkolenos",
+    "redirect": "Occaraba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2383
+        "start": 2383,
+        "end": 2383
       }
     ]
   },
@@ -9419,9 +9627,12 @@
     "lemma": "Okrinon",
     "previous": "Okridion",
     "next": "Oktabia Apollonia",
+    "redirect": "Ocrion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2386
+        "start": 2386,
+        "end": 2386
       }
     ]
   },
@@ -9517,9 +9728,12 @@
     "lemma": "Oktolophon",
     "previous": "Oktobrios",
     "next": "Okyale",
+    "redirect": "Otolobos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2394
+        "start": 2394,
+        "end": 2394
       }
     ]
   },
@@ -9604,9 +9818,12 @@
     "lemma": "Okypode",
     "previous": "Okypete 2",
     "next": "Okyrrhoë 1",
+    "redirect": "Okypete 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2394
+        "start": 2394,
+        "end": 2394
       }
     ]
   },
@@ -9680,9 +9897,12 @@
     "lemma": "Okythoe",
     "previous": "Okyrrhoë 5",
     "next": "Olabi",
+    "redirect": "Okypete 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2395
+        "start": 2395,
+        "end": 2395
       }
     ]
   },
@@ -9756,9 +9976,12 @@
     "lemma": "Olarso",
     "previous": "Olarion",
     "next": "Olatoni",
+    "redirect": "Oiarso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2397
+        "start": 2397,
+        "end": 2397
       }
     ]
   },
@@ -9799,9 +10022,12 @@
     "lemma": "Olba 2",
     "previous": "Olba 1",
     "next": "Olbasa",
+    "redirect": "Olbe, Olba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2397
+        "start": 2397,
+        "end": 2397
       }
     ]
   },
@@ -9941,9 +10167,12 @@
     "lemma": "Olbiopolis",
     "previous": "Olbiades",
     "next": "Olbios 1",
+    "redirect": "Olbia 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2429
+        "start": 2429,
+        "end": 2429
       }
     ]
   },
@@ -10017,9 +10246,12 @@
     "lemma": "Olcinium",
     "previous": "Olbysioi",
     "next": "Olea 1",
+    "redirect": "Ulcinium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2431
+        "start": 2431,
+        "end": 2431
       }
     ]
   },
@@ -10027,9 +10259,12 @@
     "lemma": "Olea 1",
     "previous": "Olcinium",
     "next": "Olea 2",
+    "redirect": "Oelbaum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2431
+        "start": 2431,
+        "end": 2431
       }
     ]
   },
@@ -10202,9 +10437,13 @@
     "lemma": "Olenos 3",
     "previous": "Olenos 2",
     "next": "Olenos 4",
+    "redirect": "Lethaia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2435
+        "start": 2435,
+        "end": 2435,
+        "author": "Karl Keyßner."
       }
     ]
   },
@@ -10267,9 +10506,12 @@
     "lemma": "Oleoberda",
     "previous": "Olenus Calenus",
     "next": "Oleria",
+    "redirect": "Seleobereia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2451
+        "start": 2451,
+        "end": 2451
       }
     ]
   },
@@ -10431,9 +10673,12 @@
     "lemma": "Oligas",
     "previous": "Oligaithos",
     "next": "Oligyrtos",
+    "redirect": "Olgassys",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2477
+        "start": 2477,
+        "end": 2477
       }
     ]
   },
@@ -10573,9 +10818,12 @@
     "lemma": "Olivarius",
     "previous": "Olitos",
     "next": "Olius",
+    "redirect": "Hercules 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2483
+        "start": 2483,
+        "end": 2483
       }
     ]
   },
@@ -10737,9 +10985,12 @@
     "lemma": "Ollototae",
     "previous": "Ollogabiae",
     "next": "Olludius",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2489
+        "start": 2489,
+        "end": 2489
       }
     ]
   },
@@ -11033,9 +11284,12 @@
     "lemma": "Olpe",
     "previous": "Olpai 2",
     "next": "Olsi",
+    "redirect": "Oinochoë",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2502
+        "start": 2502,
+        "end": 2502
       }
     ]
   },
@@ -11043,9 +11297,12 @@
     "lemma": "Olsi",
     "previous": "Olpe",
     "next": "Olsoi",
+    "redirect": "Volsci",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2502
+        "start": 2502,
+        "end": 2502
       }
     ]
   },
