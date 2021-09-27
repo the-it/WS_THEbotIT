@@ -9231,9 +9231,12 @@
     "lemma": "Lex Remmia",
     "previous": "Lex Quinctia",
     "next": "Lex Rhodia",
+    "redirect": "Remmius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2405
+        "start": 2405,
+        "end": 2405
       }
     ]
   },
@@ -9298,9 +9301,12 @@
     "lemma": "Lex Romana Utinensis",
     "previous": "Lex Romana Wisigotorum",
     "next": "Lex Roscia",
+    "redirect": "Lex Romana Raetica Curiensis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2407
+        "start": 2407,
+        "end": 2407
       }
     ]
   },
@@ -9308,9 +9314,12 @@
     "lemma": "Lex Roscia",
     "previous": "Lex Romana Utinensis",
     "next": "Lex Rubria 1",
+    "redirect": "Roscius 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2412
+        "start": 2412,
+        "end": 2412
       }
     ]
   },
@@ -9318,9 +9327,12 @@
     "lemma": "Lex Rubria 1",
     "previous": "Lex Roscia",
     "next": "Lex Rubria 2",
+    "redirect": "Rubrius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2412
+        "start": 2412,
+        "end": 2412
       }
     ]
   },
@@ -9473,9 +9485,12 @@
     "lemma": "Leges Serviliae 2",
     "previous": "Lex Scribonia",
     "next": "Leges Tabellariae",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
@@ -9492,21 +9507,28 @@
   },
   {
     "lemma": "Leges templorum",
-    "previous": "Leges Tabellariae",
-    "next": "Lex Silia 1",
+    "previous": "Lex Tappula",
+    "next": "Lex Terentia",
+    "sort_key": "Lex templorum",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
   {
     "lemma": "Lex Silia 1",
-    "previous": "Leges templorum",
+    "previous": "Leges Serviliae 2",
     "next": "Lex Silia 2",
+    "redirect": "Lex Calpurnia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
@@ -9524,10 +9546,13 @@
   {
     "lemma": "Lex Tappula",
     "previous": "Lex Silia 2",
-    "next": "Lex Terentia",
+    "next": "Leges templorum",
+    "redirect": "Lex convivalis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
@@ -9557,9 +9582,12 @@
     "lemma": "Lex Thoria",
     "previous": "Lex Terentia Cassia",
     "next": "Lex Titia 1",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
@@ -9567,9 +9595,12 @@
     "lemma": "Lex Titia 1",
     "previous": "Lex Thoria",
     "next": "Lex Titia 2",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
@@ -9599,9 +9630,12 @@
     "lemma": "Lex Trebonia 1",
     "previous": "Lex Titia 3",
     "next": "Lex Trebonia 2",
+    "redirect": "Tribunus 13",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2416
+        "start": 2416,
+        "end": 2416
       }
     ]
   },
@@ -9631,9 +9665,12 @@
     "lemma": "Lex Tullia 1",
     "previous": "Lex tribunicia",
     "next": "Lex Tullia 2",
+    "redirect": "Legatus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2416
+        "start": 2416,
+        "end": 2416
       }
     ]
   },
@@ -9652,9 +9689,12 @@
     "lemma": "Leges Valeriae 1",
     "previous": "Lex Tullia 2",
     "next": "Leges Valeriae 2",
+    "redirect": "Provocatio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9706,9 +9746,12 @@
     "lemma": "Leges Valeriae 6",
     "previous": "Leges Valeriae 5",
     "next": "Leges Valeriae 7",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9716,9 +9759,12 @@
     "lemma": "Leges Valeriae 7",
     "previous": "Leges Valeriae 6",
     "next": "Leges Valeriae 8",
+    "redirect": "Multa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9726,9 +9772,12 @@
     "lemma": "Leges Valeriae 8",
     "previous": "Leges Valeriae 7",
     "next": "Leges Valeriae 9",
+    "redirect": "Vectigal",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9778,9 +9827,12 @@
     "lemma": "Lex Varia",
     "previous": "Leges Vatiniae 3",
     "next": "Lex venditionis",
+    "redirect": "Maiestas 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9788,9 +9840,12 @@
     "lemma": "Lex venditionis",
     "previous": "Lex Varia",
     "next": "Lex Vetti Libici",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9809,9 +9864,12 @@
     "lemma": "Lex viaria",
     "previous": "Lex Vetti Libici",
     "next": "Lex Villia annalis",
+    "redirect": "Lex alimentaria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9819,9 +9877,12 @@
     "lemma": "Lex Villia annalis",
     "previous": "Lex viaria",
     "next": "Lex Visellia 1",
+    "redirect": "Magistratus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -10069,9 +10130,12 @@
     "lemma": "Libana 2",
     "previous": "Libana 1",
     "next": "Libanesia, Phoinike Libanesia",
+    "redirect": "Labbana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2483
+        "start": 2483,
+        "end": 2483
       }
     ]
   },

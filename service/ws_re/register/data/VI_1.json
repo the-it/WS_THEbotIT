@@ -2501,10 +2501,12 @@
     "lemma": "Epimachos 2",
     "previous": "Epimachos 1",
     "next": "Epimachos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 160,
-        "author": "Stein, [Arthur]"
+        "end": 160,
+        "author": "Stein."
       }
     ]
   },
@@ -2546,10 +2548,12 @@
     "lemma": "Epimedes 2",
     "previous": "Epimedes 1",
     "next": "Epimedusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Kern"
+        "end": 162,
+        "author": "Kern."
       }
     ]
   },
@@ -2557,9 +2561,11 @@
     "lemma": "Epimedusa",
     "previous": "Epimedes 2",
     "next": "Epimeilios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
+        "end": 162,
         "author": "Escher"
       }
     ]
