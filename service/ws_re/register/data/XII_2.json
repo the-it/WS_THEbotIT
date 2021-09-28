@@ -6355,9 +6355,12 @@
     "lemma": "Leukosyros 2",
     "previous": "Leukosyros 1",
     "next": "Leukothea 1",
+    "redirect": "Leukosyroi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2293
+        "start": 2293,
+        "end": 2293
       }
     ]
   },
@@ -7502,6 +7505,7 @@
     "lemma": "Leges Clodiae 1",
     "previous": "Lex Claudia 5",
     "next": "Leges Clodiae 2",
+    "sort_key": "Lex Clodiae 1",
     "redirect": "Clodius 48",
     "proof_read": 2,
     "chapters": [
@@ -9181,7 +9185,9 @@
       }
     ]
   },
-  {"lemma": "Lex Publilia 4"},
+  {
+    "lemma": "Lex Publilia 4"
+  },
   {
     "lemma": "Lex Pupia",
     "next": "Lex Quinctia",

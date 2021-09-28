@@ -68,10 +68,12 @@
     "lemma": "Parapanisus 2",
     "previous": "Parapanisus 1",
     "next": "Parapegma",
-    "redirect": true,
+    "redirect": "Paropamisus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1295
+        "start": 1295,
+        "end": 1295
       }
     ]
   },
@@ -510,10 +512,12 @@
     "lemma": "Paredros 3",
     "previous": "Πάρεδρος 2",
     "next": "Paregoros",
-    "redirect": true,
+    "redirect": "Parhedros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1453
+        "start": 1453,
+        "end": 1453
       }
     ]
   },
@@ -531,7 +535,7 @@
   {
     "lemma": "Pareia",
     "previous": "Paregoros",
-    "next": "Pareias",
+    "next": "Παρείας",
     "chapters": [
       {
         "start": 1455,
@@ -540,19 +544,22 @@
     ]
   },
   {
-    "lemma": "Pareias",
+    "lemma": "Παρείας",
     "previous": "Pareia",
     "next": "Parekkyklema",
-    "redirect": true,
+    "sort_key": "Pareias",
+    "redirect": "Schlange",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1455
+        "start": 1455,
+        "end": 1455
       }
     ]
   },
   {
     "lemma": "Parekkyklema",
-    "previous": "Pareias",
+    "previous": "Παρείας",
     "next": "Parembolai 1",
     "chapters": [
       {
@@ -632,9 +639,11 @@
     "previous": "Parenta",
     "next": "Parentium",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1461
+        "start": 1461,
+        "end": 1461
       }
     ]
   },
@@ -675,10 +684,12 @@
     "lemma": "Pargyetai",
     "previous": "Pareutaktos",
     "next": "Parhedros",
-    "redirect": true,
+    "redirect": "Parsietai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1472
+        "start": 1472,
+        "end": 1472
       }
     ]
   },
@@ -730,10 +741,12 @@
     "lemma": "Paricida",
     "previous": "Paricidas (parricida)",
     "next": "Parienna",
-    "redirect": true,
+    "redirect": "Paricidas (parricida)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1479
+        "start": 1479,
+        "end": 1479
       }
     ]
   },
@@ -916,10 +929,12 @@
     "lemma": "Paris",
     "previous": "Paris 3",
     "next": "Paris 4",
-    "redirect": true,
+    "redirect": "Domitius 69",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1538
+        "start": 1538,
+        "end": 1538
       }
     ]
   },
@@ -1202,10 +1217,12 @@
     "lemma": "Parmensis",
     "previous": "Parmenon 3",
     "next": "Parnasse",
-    "redirect": true,
+    "redirect": "Cassius 80",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1572
+        "start": 1572,
+        "end": 1572
       }
     ]
   },
@@ -1268,9 +1285,12 @@
     "lemma": "Parnessios",
     "previous": "Parnes",
     "next": "Parnethios",
+    "redirect": "Parnassios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1665
+        "start": 1665,
+        "end": 1665
       }
     ]
   },
@@ -1344,10 +1364,12 @@
     "lemma": "Parochtheos",
     "previous": "Parochos (parochus)",
     "next": "Parochthiai",
-    "redirect": true,
+    "redirect": "Perochtheos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1684
+        "start": 1684,
+        "end": 1684
       }
     ]
   },
@@ -1421,10 +1443,12 @@
     "lemma": "Parolissos",
     "previous": "Paroimiographoi",
     "next": "Paron 1",
-    "redirect": true,
+    "redirect": "Porolissum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1778
+        "start": 1778,
+        "end": 1778
       }
     ]
   },
@@ -1432,10 +1456,12 @@
     "lemma": "Paron 1",
     "previous": "Parolissos",
     "next": "Paron 2",
-    "redirect": true,
+    "redirect": "Paro",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1778
+        "start": 1778,
+        "end": 1778
       }
     ]
   },
@@ -1553,10 +1579,12 @@
     "lemma": "Paroreia 2",
     "previous": "Paros",
     "next": "Paroreia 3",
-    "redirect": true,
+    "redirect": "Paroreatai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1782
+        "start": 1782,
+        "end": 1782
       }
     ]
   },
@@ -1653,9 +1681,11 @@
     "previous": "Parrasios 1",
     "next": "Parrhasini",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1873
+        "start": 1873,
+        "end": 1873
       }
     ]
   },
@@ -1663,10 +1693,12 @@
     "lemma": "Parrhasini",
     "previous": "Parrharia",
     "next": "Parrasios 2",
-    "redirect": true,
+    "redirect": "Paropamisadai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1873
+        "start": 1873,
+        "end": 1873
       }
     ]
   },
@@ -1696,10 +1728,12 @@
     "lemma": "Parricida",
     "previous": "Parrasios 3",
     "next": "Parsiana",
-    "redirect": true,
+    "redirect": "Paricidas (parricida)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1880
+        "start": 1880,
+        "end": 1880
       }
     ]
   },
@@ -1751,10 +1785,12 @@
     "lemma": "Parsioi 1",
     "previous": "Parsika ore",
     "next": "Parsioi 2",
-    "redirect": true,
+    "redirect": "Paropamisadai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1880
+        "start": 1880,
+        "end": 1880
       }
     ]
   },
@@ -1784,10 +1820,12 @@
     "lemma": "Parsyetai",
     "previous": "Parsondas",
     "next": "Parthamasiris",
-    "redirect": true,
+    "redirect": "Parsietai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1880
+        "start": 1880,
+        "end": 1880
       }
     ]
   },
@@ -1828,10 +1866,12 @@
     "lemma": "Parthaon",
     "previous": "Parthanus",
     "next": "Parthax",
-    "redirect": true,
+    "redirect": "Porthaon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1882
+        "start": 1882,
+        "end": 1882
       }
     ]
   },
@@ -1861,10 +1901,12 @@
     "lemma": "Parthenia",
     "previous": "Parthenes",
     "next": "Partheniai",
-    "redirect": true,
+    "redirect": "Parthenos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1884
+        "start": 1884,
+        "end": 1884
       }
     ]
   },
@@ -1894,10 +1936,12 @@
     "lemma": "Parthenianus",
     "previous": "Parthenia kome",
     "next": "Parthenias",
-    "redirect": true,
+    "redirect": "Aemilius 113",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1886
+        "start": 1886,
+        "end": 1886
       }
     ]
   },
@@ -1961,9 +2005,11 @@
     "previous": "Parthenion 2",
     "next": "Parthenion 4",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1890
+        "start": 1890,
+        "end": 1890
       }
     ]
   },
@@ -2158,10 +2204,12 @@
     "lemma": "Parthenios 13",
     "previous": "Parthenios 12",
     "next": "Parthenios 14",
-    "redirect": true,
+    "redirect": "Imbrasos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1894
+        "start": 1894,
+        "end": 1894
       }
     ]
   },
@@ -2275,10 +2323,12 @@
     "lemma": "Parthenios 23",
     "previous": "Parthenios 22",
     "next": "Parthenis 1",
-    "redirect": true,
+    "redirect": "Claudius 260",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1904
+        "start": 1904,
+        "end": 1904
       }
     ]
   },
@@ -2297,9 +2347,12 @@
     "lemma": "Parthenis 2",
     "previous": "Parthenis 1",
     "next": "Parthenium Mare",
+    "redirect": "Beifuss",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1904
+        "start": 1904,
+        "end": 1904
       }
     ]
   },
@@ -2440,9 +2493,11 @@
     "previous": "Parthenope 6",
     "next": "Parthenopolis 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1936
+        "start": 1936,
+        "end": 1936
       }
     ]
   },
@@ -2505,10 +2560,12 @@
     "lemma": "Parther",
     "previous": "Parthenos 4",
     "next": "Parthia II A",
-    "redirect": true,
+    "redirect": "Parthia II A",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1968
+        "start": 1968,
+        "end": 1968
       }
     ]
   },
@@ -2549,10 +2606,12 @@
     "lemma": "Parthiscus",
     "previous": "Parthini",
     "next": "Parthoi",
-    "redirect": true,
+    "redirect": "Pathissus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2045
+        "start": 2045,
+        "end": 2045
       }
     ]
   },
@@ -2560,10 +2619,12 @@
     "lemma": "Parthoi",
     "previous": "Parthiscus",
     "next": "Parthon",
-    "redirect": true,
+    "redirect": "Parthia II A",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2045
+        "start": 2045,
+        "end": 2045
       }
     ]
   },
@@ -2582,9 +2643,12 @@
     "lemma": "Parthos",
     "previous": "Parthon",
     "next": "Parthyaioi",
+    "redirect": "Parthini",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2045
+        "start": 2045,
+        "end": 2045
       }
     ]
   },
@@ -2592,9 +2656,12 @@
     "lemma": "Parthyaioi",
     "previous": "Parthos",
     "next": "Particulo",
+    "redirect": "Parthia II A",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2045
+        "start": 2045,
+        "end": 2045
       }
     ]
   },
@@ -2690,9 +2757,12 @@
     "lemma": "Pascha",
     "previous": "Pasandra",
     "next": "Paschasius 1",
+    "redirect": "Ostern",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2052
+        "start": 2052,
+        "end": 2052
       }
     ]
   },
@@ -2821,9 +2891,12 @@
     "lemma": "Pasicles",
     "previous": "Pasias 2",
     "next": "P. Pasidienus Firmus",
+    "redirect": "Crassicius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2058
+        "start": 2058,
+        "end": 2058
       }
     ]
   },
@@ -2908,9 +2981,12 @@
     "lemma": "Pasikles 8",
     "previous": "Pasikles 7",
     "next": "Pasikles 9",
+    "redirect": "Tsikles",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2061
+        "start": 2061,
+        "end": 2061
       }
     ]
   },
@@ -2973,9 +3049,12 @@
     "lemma": "Pasikrates 3",
     "previous": "Pasikrates 2",
     "next": "Pasikrates 4",
+    "redirect": "Pasikles 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2063
+        "start": 2063,
+        "end": 2063
       }
     ]
   },
@@ -3016,9 +3095,12 @@
     "lemma": "Pasines",
     "previous": "Pasimachos",
     "next": "Pasion 1",
+    "redirect": "Charax 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2064
+        "start": 2064,
+        "end": 2064
       }
     ]
   },
@@ -3081,9 +3163,12 @@
     "lemma": "Pasiphaessa",
     "previous": "Pasiphaes",
     "next": "Pasiphanes",
+    "redirect": "Pasiphaes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2082
+        "start": 2082,
+        "end": 2082
       }
     ]
   },
@@ -3300,9 +3385,12 @@
     "lemma": "Pason",
     "previous": "Pasithoe",
     "next": "Pasparios",
+    "redirect": "Pauson",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2091
+        "start": 2091,
+        "end": 2091
       }
     ]
   },
@@ -3398,10 +3486,12 @@
     "lemma": "Passer",
     "previous": "Passennus C. f. Serg. Paullus Propertius Blaesus",
     "next": "Passerius",
-    "redirect": true,
+    "redirect": "Petronius 94",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2094
+        "start": 2094,
+        "end": 2094
       }
     ]
   },
@@ -3464,10 +3554,12 @@
     "lemma": "Passienus 4",
     "previous": "Passienus 3",
     "next": "Passienus 5",
-    "redirect": true,
+    "redirect": "Passennus C. f. Serg. Paullus Propertius Blaesus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2098
+        "start": 2098,
+        "end": 2098
       }
     ]
   },
@@ -3508,9 +3600,12 @@
     "lemma": "Passienus 8",
     "previous": "Passienus 7",
     "next": "Passus",
+    "redirect": "Vibius 44",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2099
+        "start": 2099,
+        "end": 2099
       }
     ]
   },
@@ -3660,9 +3755,12 @@
     "lemma": "Pastor Hermae",
     "previous": "Pastor 3",
     "next": "Pasyris",
+    "redirect": "Hermes 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2111
+        "start": 2111,
+        "end": 2111
       }
     ]
   },
@@ -3670,9 +3768,12 @@
     "lemma": "Pasyris",
     "previous": "Pastor Hermae",
     "next": "Patabus",
+    "redirect": "Hypakyris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2111
+        "start": 2111,
+        "end": 2111
       }
     ]
   },
@@ -3680,9 +3781,12 @@
     "lemma": "Patabus",
     "previous": "Pasyris",
     "next": "Patage, Platage",
+    "redirect": "Vacalus, Va(c)halis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2111
+        "start": 2111,
+        "end": 2111
       }
     ]
   },
@@ -3701,10 +3805,12 @@
     "lemma": "Patagiarii",
     "previous": "Patage, Platage",
     "next": "Patagium",
-    "redirect": true,
+    "redirect": "Plumarii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2111
+        "start": 2111,
+        "end": 2111
       }
     ]
   },
@@ -3779,9 +3885,11 @@
     "previous": "Patarbemis",
     "next": "Patavinus",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2114
+        "start": 2114,
+        "end": 2114
       }
     ]
   },
@@ -3789,10 +3897,12 @@
     "lemma": "Patavinus",
     "previous": "Patavinia",
     "next": "Patavissa",
-    "redirect": true,
+    "redirect": "Cassius 81",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2114
+        "start": 2114,
+        "end": 2114
       }
     ]
   },
@@ -3800,10 +3910,12 @@
     "lemma": "Patavissa",
     "previous": "Patavinus",
     "next": "Patavium",
-    "redirect": true,
+    "redirect": "Potaissa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2114
+        "start": 2114,
+        "end": 2114
       }
     ]
   },
@@ -3844,9 +3956,12 @@
     "lemma": "Patena",
     "previous": "Patellarii di",
     "next": "Patens",
+    "redirect": "Patina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2120
+        "start": 2120,
+        "end": 2120
       }
     ]
   },
@@ -3854,9 +3969,12 @@
     "lemma": "Patens",
     "previous": "Patena",
     "next": "Pater 1",
+    "redirect": "Iunius 119",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2120
+        "start": 2120,
+        "end": 2120
       }
     ]
   },
@@ -3995,9 +4113,12 @@
     "lemma": "Paterculianus",
     "previous": "Patera 2",
     "next": "Paterculus",
+    "redirect": "Claudius 70",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2159
+        "start": 2159,
+        "end": 2159
       }
     ]
   },
@@ -4005,9 +4126,12 @@
     "lemma": "Paterculus",
     "previous": "Paterculianus",
     "next": "Paterios 1",
+    "redirect": "Sulpicius 81",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2159
+        "start": 2159,
+        "end": 2159
       }
     ]
   },
@@ -4016,9 +4140,11 @@
     "previous": "Paterculus",
     "next": "Paterios 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2159
+        "start": 2159,
+        "end": 2159
       }
     ]
   },
@@ -4037,10 +4163,12 @@
     "lemma": "Paterna",
     "previous": "Paterios 2",
     "next": "Paterniana",
-    "redirect": true,
+    "redirect": "Cassia 92",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2160
+        "start": 2160,
+        "end": 2160
       }
     ]
   },
@@ -4059,9 +4187,12 @@
     "lemma": "Paternianus",
     "previous": "Paterniana",
     "next": "Paternum",
+    "redirect": "Aelius 107",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2160
+        "start": 2160,
+        "end": 2160
       }
     ]
   },
@@ -4179,9 +4310,12 @@
     "lemma": "Patiores",
     "previous": "T. Patina",
     "next": "Patiscus",
+    "redirect": "Paropos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2170
+        "start": 2170,
+        "end": 2170
       }
     ]
   },
@@ -4276,9 +4410,12 @@
     "lemma": "Patrenses",
     "previous": "Patrai",
     "next": "Patres, patricii",
+    "redirect": "Pontes Isarenses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2222
+        "start": 2222,
+        "end": 2222
       }
     ]
   },
@@ -4308,9 +4445,12 @@
     "lemma": "Patria potestas",
     "previous": "Patreus",
     "next": "Patricius 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2233
+        "start": 2233,
+        "end": 2233
       }
     ]
   },
@@ -4472,9 +4612,12 @@
     "lemma": "Patriotis",
     "previous": "Patrimi et matrimi",
     "next": "Patro",
+    "redirect": "Patroa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2252
+        "start": 2252,
+        "end": 2252
       }
     ]
   },
@@ -4515,9 +4658,12 @@
     "lemma": "Patroclus",
     "previous": "Patrobius",
     "next": "Patrogenides",
+    "redirect": "Aurelius 186",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2253
+        "start": 2253,
+        "end": 2253
       }
     ]
   },
@@ -4612,9 +4758,12 @@
     "lemma": "Patrokles 6",
     "previous": "Patrokles 5",
     "next": "Patrokles 7",
+    "redirect": "Iatrokles 2a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2273
+        "start": 2273,
+        "end": 2273
       }
     ]
   },
@@ -4811,9 +4960,12 @@
     "lemma": "Patronus",
     "previous": "Patronomos",
     "next": "Patrophilus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2306
+        "start": 2306,
+        "end": 2306
       }
     ]
   },
@@ -4821,10 +4973,12 @@
     "lemma": "Patrophilus",
     "previous": "Patronus",
     "next": "Patroxenides",
-    "redirect": true,
+    "redirect": "Calvisius 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2306
+        "start": 2306,
+        "end": 2306
       }
     ]
   },
@@ -4832,10 +4986,12 @@
     "lemma": "Patroxenides",
     "previous": "Patrophilus",
     "next": "Patruchos",
-    "redirect": true,
+    "redirect": "Patrogenides",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2306
+        "start": 2306,
+        "end": 2306
       }
     ]
   },
@@ -4979,9 +5135,12 @@
     "lemma": "Paulianus",
     "previous": "Pauka",
     "next": "Paul(l)a",
+    "redirect": "Anicius 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2325
+        "start": 2325,
+        "end": 2325
       }
     ]
   },
@@ -5250,9 +5409,12 @@
     "lemma": "Paullulus",
     "previous": "Paulinus 16",
     "next": "Paullus",
+    "redirect": "Postumius 49",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2362
+        "start": 2362,
+        "end": 2362
       }
     ]
   },
@@ -5387,9 +5549,12 @@
     "lemma": "Paulus 11",
     "previous": "Paulus 10",
     "next": "Paulus 12",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2372
+        "start": 2372,
+        "end": 2372
       }
     ]
   },
@@ -5397,9 +5562,12 @@
     "lemma": "Paulus 12",
     "previous": "Paulus 11",
     "next": "Paulus 13",
+    "redirect": "Praylos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2372
+        "start": 2372,
+        "end": 2372
       }
     ]
   },
@@ -5610,9 +5778,12 @@
     "lemma": "Pausanias",
     "previous": "Pauperies",
     "next": "Pausanias 3",
+    "redirect": "Cornelius 280",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2397
+        "start": 2397,
+        "end": 2397
       }
     ]
   },
@@ -5832,9 +6003,12 @@
     "lemma": "Pausanias 24",
     "previous": "Pausanias 23",
     "next": "Pausarius",
+    "redirect": "Pausias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -6075,9 +6249,12 @@
     "lemma": "Pautalia",
     "previous": "Pausus",
     "next": "Pautaliotes",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2429
+        "start": 2429,
+        "end": 2429
       }
     ]
   },
