@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 from unittest import TestCase, mock, skip
 
+from freezegun import freeze_time
 from testfixtures import LogCapture
 
 from service.ws_re.scanner.base import ReScanner
@@ -306,8 +307,9 @@ class TestReScanner(TestCase):
 
     class WAITTask(ReScannerTask):
         def task(self):
-            time.sleep(0.3)
+            pass
 
+    @freeze_time("Jan 14th, 2020", auto_tick_seconds=1)
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
         self.lemma_mock.return_value = [':RE:Lemma0', ':RE:Lemma1', ':RE:Lemma2']
@@ -331,6 +333,10 @@ class TestReScanner(TestCase):
                               ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
                              data)
             self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                            datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+            self.assertLess(datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"),
+                            datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"))
+            self.assertLess(datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"),
                             datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
 
     def test_reload_deprecated_lemma_data_none_there(self):
