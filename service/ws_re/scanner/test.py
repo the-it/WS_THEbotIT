@@ -1,7 +1,6 @@
 # pylint: disable=protected-access
 import json
 import os
-import time
 from datetime import datetime
 from unittest import TestCase, mock, skip
 
