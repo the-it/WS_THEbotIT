@@ -9201,6 +9201,7 @@
   {
     "lemma": "Lex Quinctia",
     "previous": "Lex Pupia",
+    "next": "Leges regiae",
     "chapters": [
       {
         "start": 2405,
@@ -9210,6 +9211,8 @@
   },
   {
     "lemma": "Leges regiae",
+    "previous": "Lex Quinctia",
+    "next": "Lex Remmia",
     "sort_key": "Lex regiae",
     "redirect": "Lex",
     "proof_read": 2,
@@ -9222,6 +9225,7 @@
   },
   {
     "lemma": "Lex Remmia",
+    "previous": "Leges regiae",
     "next": "Lex Rhodia",
     "redirect": "Remmius 2",
     "proof_read": 2,
