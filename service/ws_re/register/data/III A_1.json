@@ -211,10 +211,12 @@
     "lemma": "Silarum",
     "previous": "Silanus 4",
     "next": "Silarus 1",
-    "redirect": true,
+    "redirect": "Silarus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 7
+        "start": 7,
+        "end": 7
       }
     ]
   },
@@ -299,10 +301,12 @@
     "lemma": "Silbio",
     "previous": "Silberprägung, Silberwährung",
     "next": "Silbion",
-    "redirect": true,
+    "redirect": "Silvium 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 34
+        "start": 34,
+        "end": 34
       }
     ]
   },
@@ -310,10 +314,12 @@
     "lemma": "Silbion",
     "previous": "Silbio",
     "next": "Silbis",
-    "redirect": true,
+    "redirect": "Siblia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 34
+        "start": 34,
+        "end": 34
       }
     ]
   },
@@ -332,10 +338,12 @@
     "lemma": "Silbium",
     "previous": "Silbis",
     "next": "Silbona",
-    "redirect": true,
+    "redirect": "Silvium 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 34
+        "start": 34,
+        "end": 34
       }
     ]
   },
@@ -354,10 +362,12 @@
     "lemma": "Silbonis",
     "previous": "Silbona",
     "next": "Silda",
-    "redirect": true,
+    "redirect": "Silvium 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 34
+        "start": 34,
+        "end": 34
       }
     ]
   },
@@ -722,9 +732,12 @@
     "lemma": "Siliniacus, Silliniacus",
     "previous": "Silingae",
     "next": "Siliqua",
+    "redirect": "Seliniacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 61
+        "start": 61,
+        "end": 61
       }
     ]
   },
@@ -914,9 +927,12 @@
     "lemma": "Silius 13",
     "previous": "Silius 12",
     "next": "Silius 14",
+    "redirect": "Mevius 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 77
+        "start": 77,
+        "end": 77
       }
     ]
   },
@@ -1183,9 +1199,12 @@
     "lemma": "Silleriacus",
     "previous": "Sillax",
     "next": "Sillikyprion",
+    "redirect": "Seleriacum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1193,9 +1212,12 @@
     "lemma": "Sillikyprion",
     "previous": "Silleriacus",
     "next": "Sillius",
+    "redirect": "Ricinus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1358,9 +1380,12 @@
     "lemma": "Silon",
     "previous": "Silo 5",
     "next": "Silphion",
+    "redirect": "Sigon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 103
+        "start": 103,
+        "end": 103
       }
     ]
   },
@@ -1410,7 +1435,7 @@
   {
     "lemma": "Silumius",
     "previous": "Silpion oros",
-    "next": "Silura",
+    "next": "Σίλουον",
     "chapters": [
       {
         "start": 114,
@@ -1419,8 +1444,22 @@
     ]
   },
   {
-    "lemma": "Silura",
+    "lemma": "Σίλουον",
     "previous": "Silumius",
+    "next": "Silura",
+    "sort_key": "Siluon",
+    "redirect": "Sillyon 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 114,
+        "end": 114
+      }
+    ]
+  },
+  {
+    "lemma": "Silura",
+    "previous": "Σίλουον",
     "next": "Silures",
     "chapters": [
       {
@@ -1455,9 +1494,12 @@
     "lemma": "Silva 1",
     "previous": "Silv.",
     "next": "Silurus 1",
+    "redirect": "Flavius 180",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 115
+        "start": 115,
+        "end": 115
       }
     ]
   },
@@ -1498,9 +1540,12 @@
     "lemma": "Silus 2",
     "previous": "Silus 1",
     "next": "Silutum",
+    "redirect": "Sergius 38",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 115
+        "start": 115,
+        "end": 115
       }
     ]
   },
@@ -1508,9 +1553,12 @@
     "lemma": "Silutum",
     "previous": "Silus 2",
     "next": "Silva 2",
+    "redirect": "Silvium 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 115
+        "start": 115,
+        "end": 115
       }
     ]
   },
@@ -1562,9 +1610,12 @@
     "lemma": "Silvanectes",
     "previous": "Silvana",
     "next": "Silvaniacus",
+    "redirect": "Ulmanectes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 117
+        "start": 117,
+        "end": 117
       }
     ]
   },
@@ -1572,9 +1623,12 @@
     "lemma": "Silvaniacus",
     "previous": "Silvanectes",
     "next": "Silvanianus",
+    "redirect": "Silviniacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 117
+        "start": 117,
+        "end": 117
       }
     ]
   },
@@ -1894,9 +1948,12 @@
     "lemma": "Silvinus 5",
     "previous": "Silvinus 4c",
     "next": "Silvio",
+    "redirect": "Silvius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 129
+        "start": 129,
+        "end": 129
       }
     ]
   },
@@ -1904,9 +1961,12 @@
     "lemma": "Silvio",
     "previous": "Silvinus 5",
     "next": "Silvium 1",
+    "redirect": "Silvus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 129
+        "start": 129,
+        "end": 129
       }
     ]
   },
@@ -1969,9 +2029,12 @@
     "lemma": "Silvius 4",
     "previous": "Silvius 3",
     "next": "Silvus",
+    "redirect": "Silvus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 132
+        "start": 132,
+        "end": 132
       }
     ]
   },
@@ -2045,9 +2108,12 @@
     "lemma": "Simalis",
     "previous": "Simaios",
     "next": "Simalos",
+    "redirect": "Himalis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 135
+        "start": 135,
+        "end": 135
       }
     ]
   },
@@ -2165,9 +2231,12 @@
     "lemma": "Simenus",
     "previous": "Simenoi",
     "next": "Simeon Stylites",
+    "redirect": "Symenos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 140
+        "start": 140,
+        "end": 140
       }
     ]
   },
@@ -2186,9 +2255,12 @@
     "lemma": "Simi",
     "previous": "Simeon Stylites",
     "next": "Simiadai",
+    "redirect": "Simoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 142
+        "start": 142,
+        "end": 142
       }
     ]
   },
@@ -2295,9 +2367,12 @@
     "lemma": "Simios",
     "previous": "Simingitana",
     "next": "Simitthus",
+    "redirect": "Simea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 143
+        "start": 143,
+        "end": 143
       }
     ]
   },
@@ -2657,9 +2732,12 @@
     "lemma": "Simon 13",
     "previous": "Simon 12",
     "next": "Simon 14",
+    "redirect": "Simmias 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 180
+        "start": 180,
+        "end": 180
       }
     ]
   },
@@ -3139,9 +3217,12 @@
     "lemma": "Simpulum",
     "previous": "Simpsimida",
     "next": "Simpuvium",
+    "redirect": "Simpuvium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 213
+        "start": 213,
+        "end": 213
       }
     ]
   },
@@ -3160,9 +3241,12 @@
     "lemma": "Simunda",
     "previous": "Simpuvium",
     "next": "Simylla",
+    "redirect": "Taprobane",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 216
+        "start": 216,
+        "end": 216
       }
     ]
   },
@@ -3262,9 +3346,12 @@
     "lemma": "Sinai 2",
     "previous": "Sinai 1",
     "next": "Sinaios",
+    "redirect": "Thina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 221
+        "start": 221,
+        "end": 221
       }
     ]
   },
@@ -3305,9 +3392,12 @@
     "lemma": "Sinaros 2",
     "previous": "Sinaros 1",
     "next": "Sinas",
+    "redirect": "Saros 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 222
+        "start": 222,
+        "end": 222
       }
     ]
   },
@@ -3359,9 +3449,12 @@
     "lemma": "Sinda 1",
     "previous": "Sinatrukes",
     "next": "Sinda 2",
+    "redirect": "Isinda 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 223
+        "start": 223,
+        "end": 223
       }
     ]
   },
@@ -3369,9 +3462,12 @@
     "lemma": "Sinda 2",
     "previous": "Sinda 1",
     "next": "Sinda 3",
+    "redirect": "Sindica civitas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 223
+        "start": 223,
+        "end": 223
       }
     ]
   },
@@ -3401,9 +3497,12 @@
     "lemma": "Sindai",
     "previous": "Sindaga",
     "next": "Sindai nesoi",
+    "redirect": "Sindoi 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 223
+        "start": 223,
+        "end": 223
       }
     ]
   },
@@ -3455,9 +3554,12 @@
     "lemma": "Sindi",
     "previous": "Sindessos",
     "next": "Sindia",
+    "redirect": "Sindoi 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 224
+        "start": 224,
+        "end": 224
       }
     ]
   },
@@ -3465,9 +3567,12 @@
     "lemma": "Sindia",
     "previous": "Sindi",
     "next": "Sindica civitas",
+    "redirect": "Isinda 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 224
+        "start": 224,
+        "end": 224
       }
     ]
   },
@@ -3585,9 +3690,12 @@
     "lemma": "Sindon 2",
     "previous": "Sindon 1",
     "next": "Sindonaioi",
+    "redirect": "Flachs",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 229
+        "start": 229,
+        "end": 229
       }
     ]
   },
@@ -3727,9 +3835,12 @@
     "lemma": "Sinera 2",
     "previous": "Sinera 1",
     "next": "Sinera 3",
+    "redirect": "Sinoria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -3835,9 +3946,12 @@
     "lemma": "Singerichos",
     "previous": "Singedon",
     "next": "Singidaua",
+    "redirect": "Segericus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 234
+        "start": 234,
+        "end": 234
       }
     ]
   },
@@ -3998,9 +4112,12 @@
     "lemma": "Siniandos",
     "previous": "Siniacus",
     "next": "Sinis 1",
+    "redirect": "Sinethandos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 238
+        "start": 238,
+        "end": 238
       }
     ]
   },
@@ -4019,9 +4136,12 @@
     "lemma": "Sinis 2",
     "previous": "Sinis 1",
     "next": "Sinis kolonia",
+    "redirect": "Siris 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
@@ -4051,9 +4171,12 @@
     "lemma": "Sinisser",
     "previous": "Sinispora",
     "next": "Sinister",
+    "redirect": "Seniser",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
@@ -4259,9 +4382,12 @@
     "lemma": "Sinope 2",
     "previous": "Sinope 1",
     "next": "Sinopion",
+    "redirect": "Sinuessa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 255
+        "start": 255,
+        "end": 255
       }
     ]
   },
@@ -4324,9 +4450,12 @@
     "lemma": "Sinos",
     "previous": "Sinorix",
     "next": "Sinotion",
+    "redirect": "Sindos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 256
+        "start": 256,
+        "end": 256
       }
     ]
   },
@@ -4366,7 +4495,7 @@
   {
     "lemma": "Sinquas",
     "previous": "Sinotion 2",
-    "next": "Sinsioi",
+    "next": "Σίνσιοι",
     "chapters": [
       {
         "start": 257,
@@ -4375,18 +4504,22 @@
     ]
   },
   {
-    "lemma": "Sinsioi",
+    "lemma": "Σίνσιοι",
     "previous": "Sinquas",
     "next": "Sintae",
+    "sort_key": "Sinsioi",
+    "redirect": "Sensioi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 257
+        "start": 257,
+        "end": 257
       }
     ]
   },
   {
     "lemma": "Sintae",
-    "previous": "Sinsioi",
+    "previous": "Σίνσιοι",
     "next": "Sintanius",
     "chapters": [
       {
@@ -4421,9 +4554,12 @@
     "lemma": "Sinthon",
     "previous": "Sinteis",
     "next": "Sinthos",
+    "redirect": "Sindon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 258
+        "start": 258,
+        "end": 258
       }
     ]
   },
@@ -4431,9 +4567,12 @@
     "lemma": "Sinthos",
     "previous": "Sinthon",
     "next": "Sintia",
+    "redirect": "Sindos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 258
+        "start": 258,
+        "end": 258
       }
     ]
   },
@@ -4452,9 +4591,12 @@
     "lemma": "Sintica",
     "previous": "Sintia",
     "next": "Sintier",
+    "redirect": "Sintike",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 258
+        "start": 258,
+        "end": 258
       }
     ]
   },
@@ -4462,9 +4604,12 @@
     "lemma": "Sintier",
     "previous": "Sintica",
     "next": "Sintike",
+    "redirect": "Lemnos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 258
+        "start": 258,
+        "end": 258
       }
     ]
   },
@@ -4571,9 +4716,12 @@
     "lemma": "Sinus",
     "previous": "Sinum, Sinus",
     "next": "Sinzeirisin",
+    "redirect": "Sinum, Sinus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 260
+        "start": 260,
+        "end": 260
       }
     ]
   },
@@ -4636,9 +4784,12 @@
     "lemma": "Sion 3",
     "previous": "Sion 2",
     "next": "Sion 4",
+    "redirect": "Sedunum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 261
+        "start": 261,
+        "end": 261
       }
     ]
   },
@@ -4865,26 +5016,33 @@
   {
     "lemma": "Sipparis",
     "previous": "Sippara 2",
-    "next": "Sipphara",
+    "next": "Σιπφάρα",
+    "redirect": "Siparis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 274
+        "start": 274,
+        "end": 274
       }
     ]
   },
   {
-    "lemma": "Sipphara",
+    "lemma": "Σιπφάρα",
     "previous": "Sipparis",
     "next": "Siproites",
+    "sort_key": "Sipphara",
+    "redirect": "Sippara 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 274
+        "start": 274,
+        "end": 274
       }
     ]
   },
   {
     "lemma": "Siproites",
-    "previous": "Sipphara",
+    "previous": "Σιπφάρα",
     "next": "Sipta",
     "chapters": [
       {
@@ -4963,9 +5121,12 @@
     "lemma": "Siquanna",
     "previous": "Sipylos 4",
     "next": "Sira",
+    "redirect": "Sequana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 282
+        "start": 282,
+        "end": 282
       }
     ]
   },
@@ -4984,9 +5145,12 @@
     "lemma": "Siracellae",
     "previous": "Sira",
     "next": "Sirae 1",
+    "redirect": "Syra(s)cellae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 282
+        "start": 282,
+        "end": 282
       }
     ]
   },
@@ -4994,9 +5158,12 @@
     "lemma": "Sirae 1",
     "previous": "Siracellae",
     "next": "Sirae 2",
+    "redirect": "Siris 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 282
+        "start": 282,
+        "end": 282
       }
     ]
   },

@@ -17,7 +17,17 @@
     ]
   },
   {
-    "lemma": "Olympia"
+    "lemma": "Olympia",
+    "previous": "Wilhelm Kroll †",
+    "next": "Olympia 2",
+    "redirect": true,
+    "chapters": [
+      {
+        "start": 1,
+        "end": 174,
+        "author": "J. Wiesner."
+      }
+    ]
   },
   {
     "lemma": "Olympia 2",
@@ -11348,14 +11358,18 @@
   {
     "lemma": "Olympia",
     "previous": "Orpheus 2",
+    "next": "Onomakritos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1317
+        "start": 1317,
+        "end": 1317
       }
     ]
   },
   {
     "lemma": "Onomakritos",
+    "previous": "Olympia",
     "next": "Ora 2"
   },
   {

@@ -4980,6 +4980,7 @@
   },
   {
     "lemma": "Regni",
+    "previous": "Regma 2",
     "next": "Regnum 1",
     "chapters": [
       {
@@ -17262,10 +17263,22 @@
     ]
   },
   {
-    "lemma": "Regma 2"
+    "lemma": "Regma 2",
+    "previous": "Ranilda",
+    "next": "Rimphaces",
+    "sort_key": "Regma 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1294,
+        "end": 1294,
+        "author": "Tkáč."
+      }
+    ]
   },
   {
     "lemma": "Rimphaces",
+    "previous": "Regma 2",
     "next": "Rota 12",
     "chapters": [
       {
