@@ -39,7 +39,8 @@ class P921MainSubject(ClaimFactory):
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
-        Only add claims, if no claim already exist. Alert with an error if existing claim and added claim
+        Only add claims, if no claim already exist.
+        Alert with an error if existing claim and added claim are different.
 
         :param: data_item: item where the specific property is going to be altered
 
