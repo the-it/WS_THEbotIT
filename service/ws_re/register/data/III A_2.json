@@ -58,10 +58,12 @@
     "lemma": "Spartaria",
     "previous": "Spartakos",
     "next": "Spartarius campus",
-    "redirect": true,
+    "redirect": "Carthago nova",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1537
+        "start": 1537,
+        "end": 1537
       }
     ]
   },
@@ -91,10 +93,12 @@
     "lemma": "Sparthon",
     "previous": "Sparte",
     "next": "Spartianus",
-    "redirect": true,
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1537
+        "start": 1537,
+        "end": 1537
       }
     ]
   },
@@ -369,7 +373,7 @@
   {
     "lemma": "Spathizos",
     "previous": "Spatharios",
-    "next": "Spauta",
+    "next": "Σπαῦτα",
     "chapters": [
       {
         "start": 1546,
@@ -378,19 +382,22 @@
     ]
   },
   {
-    "lemma": "Spauta",
+    "lemma": "Σπαῦτα",
     "previous": "Spathizos",
     "next": "Specht",
-    "redirect": true,
+    "sort_key": "Spauta",
+    "redirect": "Kapauta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1546
+        "start": 1546,
+        "end": 1546
       }
     ]
   },
   {
     "lemma": "Specht",
-    "previous": "Spauta",
+    "previous": "Σπαῦτα",
     "next": "Species nova",
     "chapters": [
       {
@@ -452,10 +459,12 @@
     "lemma": "Spectacula",
     "previous": "Spectabilis",
     "next": "Spectator",
-    "redirect": true,
+    "redirect": "Ludi Capitolini",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1568
+        "start": 1568,
+        "end": 1568
       }
     ]
   },
@@ -507,10 +516,12 @@
     "lemma": "Speculum 1",
     "previous": "Speculatores",
     "next": "Speculum 2",
-    "redirect": true,
+    "redirect": "Katoptron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1586
+        "start": 1586,
+        "end": 1586
       }
     ]
   },
@@ -738,10 +749,12 @@
     "lemma": "Speo",
     "previous": "Spennella",
     "next": "Speos",
-    "redirect": true,
+    "redirect": "Speio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1611
+        "start": 1611,
+        "end": 1611
       }
     ]
   },
@@ -925,9 +938,12 @@
     "lemma": "Spernacus",
     "previous": "Spermos",
     "next": "Spernius",
+    "redirect": "Sparnacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1634
+        "start": 1634,
+        "end": 1634
       }
     ]
   },
@@ -1001,10 +1017,12 @@
     "lemma": "Sphaerus",
     "previous": "Speusippos 2",
     "next": "Σφάγια",
-    "redirect": true,
+    "redirect": "Sphairos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1669
+        "start": 1669,
+        "end": 1669
       }
     ]
   },
@@ -1041,7 +1059,7 @@
   {
     "lemma": "Σφαγίτης",
     "previous": "Σφαγία, Σφαγίαι",
-    "next": "Sphaira",
+    "next": "Σφαῖρα",
     "chapters": [
       {
         "start": 1680,
@@ -1050,19 +1068,22 @@
     ]
   },
   {
-    "lemma": "Sphaira",
+    "lemma": "Σφαῖρα",
     "previous": "Σφαγίτης",
     "next": "Sphairia 1",
-    "redirect": true,
+    "sort_key": "Sphaira",
+    "redirect": "Caestus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1680
+        "start": 1680,
+        "end": 1680
       }
     ]
   },
   {
     "lemma": "Sphairia 1",
-    "previous": "Sphaira",
+    "previous": "Σφαῖρα",
     "next": "Sphairia 2",
     "chapters": [
       {
@@ -1085,7 +1106,7 @@
   {
     "lemma": "Sphairisterion",
     "previous": "Sphairia 2",
-    "next": "Sphairistra",
+    "next": "Σφαιρίστρα",
     "chapters": [
       {
         "start": 1680,
@@ -1094,19 +1115,22 @@
     ]
   },
   {
-    "lemma": "Sphairistra",
+    "lemma": "Σφαιρίστρα",
     "previous": "Sphairisterion",
     "next": "Sphairomachia 1",
-    "redirect": true,
+    "sort_key": "Sphairistra",
+    "redirect": "Sphairisterion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1682
+        "start": 1682,
+        "end": 1682
       }
     ]
   },
   {
     "lemma": "Sphairomachia 1",
-    "previous": "Sphairistra",
+    "previous": "Σφαιρίστρα",
     "next": "Sphairomachia 2",
     "chapters": [
       {
@@ -1387,9 +1411,12 @@
     "lemma": "Sphorakios",
     "previous": "Sphodris",
     "next": "Sphragis 1",
+    "redirect": "Sporakios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1757
+        "start": 1757,
+        "end": 1757
       }
     ]
   },
@@ -1408,9 +1435,12 @@
     "lemma": "Sphragis 2",
     "previous": "Sphragis 1",
     "next": "Sphragistes",
+    "redirect": "Gemmen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1758
+        "start": 1758,
+        "end": 1758
       }
     ]
   },
@@ -1517,9 +1547,12 @@
     "lemma": "Spiegel",
     "previous": "Spiculus",
     "next": "Spiele",
+    "redirect": "Κάτοπτρον",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1762
+        "start": 1762,
+        "end": 1762
       }
     ]
   },
@@ -1625,9 +1658,12 @@
     "lemma": "Spineticum ostium",
     "previous": "Spines potamos",
     "next": "Spiniensis",
+    "redirect": "Spina 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1784
+        "start": 1784,
+        "end": 1784
       }
     ]
   },
@@ -1723,9 +1759,12 @@
     "lemma": "Spinsia",
     "previous": "Spinos potamos",
     "next": "Spintharos 1",
+    "redirect": "Spissia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1813
+        "start": 1813,
+        "end": 1813
       }
     ]
   },
@@ -1810,9 +1849,12 @@
     "lemma": "Spira 2",
     "previous": "Spira 1",
     "next": "Spiraion",
+    "redirect": "Speira 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1814
+        "start": 1814,
+        "end": 1814
       }
     ]
   },
@@ -1820,9 +1862,12 @@
     "lemma": "Spiraion",
     "previous": "Spira 2",
     "next": "Spirarchos",
+    "redirect": "Speiraion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1815
+        "start": 1815,
+        "end": 1815
       }
     ]
   },
@@ -1830,9 +1875,12 @@
     "lemma": "Spirarchos",
     "previous": "Spiraion",
     "next": "Spirliacus",
+    "redirect": "Speira 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1815
+        "start": 1815,
+        "end": 1815
       }
     ]
   },
@@ -1851,9 +1899,12 @@
     "lemma": "Spiropolis",
     "previous": "Spirliacus",
     "next": "Spissia",
+    "redirect": "Bosporos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1815
+        "start": 1815,
+        "end": 1815
       }
     ]
   },
@@ -1981,7 +2032,7 @@
   {
     "lemma": "Splattius",
     "previous": "Splanchnotomos",
-    "next": "Splaunon",
+    "next": "Σπλαῦνον",
     "chapters": [
       {
         "start": 1841,
@@ -1990,19 +2041,22 @@
     ]
   },
   {
-    "lemma": "Splaunon",
+    "lemma": "Σπλαῦνον",
     "previous": "Splattius",
     "next": "Splonistae",
-    "redirect": true,
+    "sort_key": "Splaunon",
+    "redirect": "Cassius 40",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1841
+        "start": 1841,
+        "end": 1841
       }
     ]
   },
   {
     "lemma": "Splonistae",
-    "previous": "Splaunon",
+    "previous": "Σπλαῦνον",
     "next": "Splonum",
     "chapters": [
       {
@@ -2157,9 +2211,12 @@
     "lemma": "Spongia 1",
     "previous": "Spondylos",
     "next": "Spongia 2",
+    "redirect": "Schwamm",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1850
+        "start": 1850,
+        "end": 1850
       }
     ]
   },
@@ -2387,9 +2444,12 @@
     "lemma": "Sprung",
     "previous": "Sporus",
     "next": "Spudaion",
+    "redirect": "Halma",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1888
+        "start": 1888,
+        "end": 1888
       }
     ]
   },
@@ -2529,9 +2589,12 @@
     "lemma": "Squilla",
     "previous": "Sqnnagalla",
     "next": "Sransos",
+    "redirect": "Gavii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1892
+        "start": 1892,
+        "end": 1892
       }
     ]
   },
@@ -2594,9 +2657,12 @@
     "lemma": "Staatsschulden",
     "previous": "Staan",
     "next": "Stab",
+    "redirect": "Anleihen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1894
+        "start": 1894,
+        "end": 1894
       }
     ]
   },
@@ -2626,9 +2692,12 @@
     "lemma": "Stabelacus",
     "previous": "Stabatio",
     "next": "Staberianus",
+    "redirect": "Stabulacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1923
+        "start": 1923,
+        "end": 1923
       }
     ]
   },
@@ -2735,9 +2804,12 @@
     "lemma": "Stablo",
     "previous": "Stablesianoi",
     "next": "Stabula",
+    "redirect": "Stuplo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1926
+        "start": 1926,
+        "end": 1926
       }
     ]
   },
@@ -2789,9 +2861,12 @@
     "lemma": "Stabularius",
     "previous": "Stabulae",
     "next": "Stabulum 1",
+    "redirect": "Stabulum 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1926
+        "start": 1926,
+        "end": 1926
       }
     ]
   },
@@ -3180,10 +3255,12 @@
     "lemma": "Staius 4",
     "previous": "Staius 3",
     "next": "Staius 5",
-    "redirect": true,
+    "redirect": "Statius 15",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2139
+        "start": 2139,
+        "end": 2139
       }
     ]
   },
@@ -3191,9 +3268,12 @@
     "lemma": "Staius 5",
     "previous": "Staius 4",
     "next": "Stalai",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2139
+        "start": 2139,
+        "end": 2139
       }
     ]
   },
@@ -3265,7 +3345,7 @@
   {
     "lemma": "Stamene",
     "previous": "Stamazo",
-    "next": "Stamin",
+    "next": "Σταμίν",
     "chapters": [
       {
         "start": 2140,
@@ -3274,18 +3354,22 @@
     ]
   },
   {
-    "lemma": "Stamin",
+    "lemma": "Σταμίν",
     "previous": "Stamene",
     "next": "Stamis",
+    "sort_key": "Stamin",
+    "redirect": "Stema",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2140
+        "start": 2140,
+        "end": 2140
       }
     ]
   },
   {
     "lemma": "Stamis",
-    "previous": "Stamin",
+    "previous": "Σταμίν",
     "next": "Stamnios",
     "chapters": [
       {
@@ -3320,9 +3404,12 @@
     "lemma": "Stamon",
     "previous": "Stamnos",
     "next": "Stampae",
+    "redirect": "Skamon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2141
+        "start": 2141,
+        "end": 2141
       }
     ]
   },
@@ -3407,9 +3494,12 @@
     "lemma": "Staphylodromoi",
     "previous": "Staphylites",
     "next": "Staphylos 1",
+    "redirect": "Sparta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2145
+        "start": 2145,
+        "end": 2145
       }
     ]
   },
@@ -3560,9 +3650,12 @@
     "lemma": "Stasinos",
     "previous": "Stasimon",
     "next": "Stasioikos 1",
+    "redirect": "Kyklos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2166
+        "start": 2166,
+        "end": 2166
       }
     ]
   },
@@ -3713,9 +3806,12 @@
     "lemma": "Statellates",
     "previous": "Stateira 4",
     "next": "Statelli",
+    "redirect": "Statielli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2172
+        "start": 2172,
+        "end": 2172
       }
     ]
   },
@@ -3723,9 +3819,12 @@
     "lemma": "Statelli",
     "previous": "Statellates",
     "next": "Stater",
+    "redirect": "Statielli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2172
+        "start": 2172,
+        "end": 2172
       }
     ]
   },
@@ -3788,9 +3887,12 @@
     "lemma": "Statia",
     "previous": "Stathmouchos",
     "next": "Statianiense",
+    "redirect": "Statius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2182
+        "start": 2182,
+        "end": 2182
       }
     ]
   },
@@ -3820,9 +3922,12 @@
     "lemma": "Statianus 2",
     "previous": "Statianus 1",
     "next": "Statianus 3",
+    "redirect": "Oppius 34",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2182
+        "start": 2182,
+        "end": 2182
       }
     ]
   },
@@ -3841,9 +3946,12 @@
     "lemma": "Statiellae",
     "previous": "Statianus 3",
     "next": "Statiellae aquae",
+    "redirect": "Statielli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2182
+        "start": 2182,
+        "end": 2182
       }
     ]
   },
@@ -4467,9 +4575,12 @@
     "lemma": "Statio Martis",
     "previous": "Statio 3",
     "next": "Stationarius",
+    "redirect": "ad Martis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2213
+        "start": 2213,
+        "end": 2213
       }
     ]
   },
@@ -4499,9 +4610,12 @@
     "lemma": "Statio Turicensis",
     "previous": "Statios",
     "next": "Statius",
+    "redirect": "Turicum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2213
+        "start": 2213,
+        "end": 2213
       }
     ]
   },
@@ -4608,9 +4722,12 @@
     "lemma": "Statius 9",
     "previous": "Statius 8",
     "next": "Statius 10",
+    "redirect": "Helvius 16",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2216
+        "start": 2216,
+        "end": 2216
       }
     ]
   },
@@ -4903,9 +5020,12 @@
     "lemma": "Statonia",
     "previous": "Staton",
     "next": "Statoniensis lacus",
+    "redirect": "Statoniensis lacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2225
+        "start": 2225,
+        "end": 2225
       }
     ]
   },
@@ -5033,9 +5153,12 @@
     "lemma": "Statuaria",
     "previous": "Statuam",
     "next": "Statuas 1",
+    "redirect": "Erzguß",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2232
+        "start": 2232,
+        "end": 2232
       }
     ]
   },
@@ -5131,9 +5254,12 @@
     "lemma": "Staurakios",
     "previous": "Stauanoi",
     "next": "Staures",
+    "redirect": "Storacius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2236
+        "start": 2236,
+        "end": 2236
       }
     ]
   },
@@ -5265,9 +5391,12 @@
     "lemma": "Steinkunde",
     "previous": "Steinkult",
     "next": "Steinschneidekunst",
+    "redirect": "Gemmen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2305
+        "start": 2305,
+        "end": 2305
       }
     ]
   },
@@ -5275,9 +5404,12 @@
     "lemma": "Steinschneidekunst",
     "previous": "Steinkunde",
     "next": "Steira",
+    "redirect": "Gemmen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2305
+        "start": 2305,
+        "end": 2305
       }
     ]
   },
@@ -5648,10 +5780,12 @@
     "lemma": "Stenographie",
     "previous": "Stenius 3",
     "next": "Stentor",
-    "redirect": true,
+    "redirect": "Tachygraphoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2336
+        "start": 2336,
+        "end": 2336
       }
     ]
   },
@@ -5780,9 +5914,12 @@
     "lemma": "Stephane 5",
     "previous": "Stephane 4",
     "next": "Stephane 6",
+    "redirect": "Praeneste",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2341
+        "start": 2343,
+        "end": 2343
       }
     ]
   },
@@ -5790,9 +5927,12 @@
     "lemma": "Stephane 6",
     "previous": "Stephane 5",
     "next": "Stephanephoria",
+    "redirect": "Corona 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2341
+        "start": 2343,
+        "end": 2343
       }
     ]
   },
@@ -5925,9 +6065,12 @@
     "lemma": "Stephanos 1",
     "previous": "Stephanon 2",
     "next": "Stephanos 2",
+    "redirect": "Corona 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2352
+        "start": 2352,
+        "end": 2352
       }
     ]
   },
@@ -6218,9 +6361,12 @@
     "lemma": "Sterbeverein",
     "previous": "Ster.",
     "next": "Stercorius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2412
+        "start": 2412,
+        "end": 2412
       }
     ]
   },
@@ -6249,7 +6395,7 @@
   {
     "lemma": "Stereobates",
     "previous": "Sterculus",
-    "next": "Stereontion",
+    "next": "Στερεόντιον",
     "chapters": [
       {
         "start": 2412,
@@ -6258,18 +6404,22 @@
     ]
   },
   {
-    "lemma": "Stereontion",
+    "lemma": "Στερεόντιον",
     "previous": "Stereobates",
     "next": "Sternbilder und Sternglaube",
+    "sort_key": "Stereontion",
+    "redirect": "Streontion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2412
+        "start": 2412,
+        "end": 2412
       }
     ]
   },
   {
     "lemma": "Sternbilder und Sternglaube",
-    "previous": "Stereontion",
+    "previous": "Στερεόντιον",
     "next": "Sternops",
     "chapters": [
       {
@@ -7162,9 +7312,12 @@
     "lemma": "Sthenius",
     "previous": "Sthenippos",
     "next": "Sthennis",
+    "redirect": "Stenius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2479
+        "start": 2479,
+        "end": 2479
       }
     ]
   },
@@ -7260,9 +7413,12 @@
     "lemma": "Stichades",
     "previous": "Stiboites",
     "next": "Stichios 1",
+    "redirect": "Stoichades",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2484
+        "start": 2484,
+        "end": 2484
       }
     ]
   },
@@ -7781,9 +7937,12 @@
     "lemma": "Stlengis",
     "previous": "Stlata",
     "next": "Stloga",
+    "redirect": "Strigilis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2552
+        "start": 2552,
+        "end": 2552
       }
     ]
   },

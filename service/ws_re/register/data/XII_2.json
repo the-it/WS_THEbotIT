@@ -9225,7 +9225,7 @@
   },
   {
     "lemma": "Lex Remmia",
-    "previous": "Leges regiae",
+    "previous": "Lex Quinctia",
     "next": "Lex Rhodia",
     "redirect": "Remmius 2",
     "proof_read": 2,
@@ -9474,6 +9474,8 @@
   },
   {
     "lemma": "Leges Serviliae 2",
+    "previous": "Lex Scribonia",
+    "next": "Lex Silia 1",
     "redirect": "Leges agrariae",
     "proof_read": 2,
     "chapters": [
@@ -9485,6 +9487,7 @@
   },
   {
     "lemma": "Lex Silia 1",
+    "previous": "Leges Serviliae 2",
     "next": "Lex Silia 2",
     "redirect": "Lex Calpurnia 1",
     "proof_read": 2,
@@ -9507,6 +9510,7 @@
   },
   {
     "lemma": "Leges Tabellariae",
+    "next": "Lex Tappula",
     "chapters": [
       {
         "start": 2415,
@@ -9516,6 +9520,8 @@
   },
   {
     "lemma": "Lex Tappula",
+    "previous": "Leges Tabellariae",
+    "next": "Leges templorum",
     "redirect": "Lex convivalis",
     "proof_read": 2,
     "chapters": [
@@ -9527,6 +9533,8 @@
   },
   {
     "lemma": "Leges templorum",
+    "previous": "Lex Tappula",
+    "next": "Lex Terentia",
     "sort_key": "Lex templorum",
     "redirect": "Lex",
     "proof_read": 2,
@@ -9539,6 +9547,7 @@
   },
   {
     "lemma": "Lex Terentia",
+    "previous": "Leges templorum",
     "next": "Lex Terentia Cassia",
     "chapters": [
       {
