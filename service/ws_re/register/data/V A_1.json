@@ -1164,7 +1164,7 @@
   {
     "lemma": "Tazbes",
     "previous": "Tazata",
-    "next": "Tazeina",
+    "next": "Ταζεῖνα",
     "chapters": [
       {
         "start": 96,
@@ -1173,18 +1173,22 @@
     ]
   },
   {
-    "lemma": "Tazeina",
+    "lemma": "Ταζεῖνα",
     "previous": "Tazbes",
     "next": "Tazos",
+    "sort_key": "Tazeina",
+    "redirect": "Ταξεῖνα",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 96
+        "start": 96,
+        "end": 96
       }
     ]
   },
   {
     "lemma": "Tazos",
-    "previous": "Tazeina",
+    "previous": "Ταζεῖνα",
     "next": "Teanum Apulum",
     "chapters": [
       {
@@ -1241,9 +1245,12 @@
     "lemma": "Tearkos",
     "previous": "Tear 2",
     "next": "Tearos",
+    "redirect": "Tarkos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 100
+        "start": 100,
+        "end": 100
       }
     ]
   },
@@ -1273,9 +1280,12 @@
     "lemma": "Teate 1",
     "previous": "Teaspis",
     "next": "Teate 2",
+    "redirect": "Teanum Apulum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 100
+        "start": 100,
+        "end": 100
       }
     ]
   },
@@ -1381,7 +1391,7 @@
   {
     "lemma": "Teberianus",
     "previous": "Tebens",
-    "next": "Tebete",
+    "next": "Τεβέτη",
     "chapters": [
       {
         "start": 102,
@@ -1390,18 +1400,22 @@
     ]
   },
   {
-    "lemma": "Tebete",
+    "lemma": "Τεβέτη",
     "previous": "Teberianus",
     "next": "Tebros",
+    "sort_key": "Tebete",
+    "redirect": "Theveste",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 103
+        "start": 103,
+        "end": 103
       }
     ]
   },
   {
     "lemma": "Tebros",
-    "previous": "Tebete",
+    "previous": "Τεβέτη",
     "next": "Tebtynis",
     "chapters": [
       {
@@ -1556,9 +1570,12 @@
     "lemma": "Tedius",
     "previous": "Tedion",
     "next": "Tedius Afer",
+    "redirect": "Teidius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 106
+        "start": 106,
+        "end": 106
       }
     ]
   },
@@ -1577,9 +1594,12 @@
     "lemma": "Tegaza",
     "previous": "Tedius Afer",
     "next": "Tege",
+    "redirect": "Tezaga",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 107
+        "start": 107,
+        "end": 107
       }
     ]
   },
@@ -1664,9 +1684,12 @@
     "lemma": "Tegestra",
     "previous": "Tegessos",
     "next": "Teghag",
+    "redirect": "Tergeste",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 119
+        "start": 119,
+        "end": 119
       }
     ]
   },
@@ -1751,9 +1774,12 @@
     "lemma": "Tegolata",
     "previous": "Tegna",
     "next": "Tegra",
+    "redirect": "Tegulata",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 120
+        "start": 120,
+        "end": 120
       }
     ]
   },
@@ -1805,9 +1831,12 @@
     "lemma": "Tegulicia",
     "previous": "Tegulata",
     "next": "Tegyra",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 124
+        "start": 124,
+        "end": 124
       }
     ]
   },
@@ -1870,10 +1899,12 @@
     "lemma": "Teia 2",
     "previous": "Teia 1",
     "next": "Teia 3",
-    "redirect": true,
+    "redirect": "Theia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 125
+        "start": 125,
+        "end": 125
       }
     ]
   },
@@ -2002,9 +2033,12 @@
     "lemma": "Teimaios",
     "previous": "Teiedius",
     "next": "Teimiusa",
+    "redirect": "Termaios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 128
+        "start": 128,
+        "end": 128
       }
     ]
   },
@@ -2499,9 +2533,12 @@
     "lemma": "Teisippos 1",
     "previous": "Teisiphone 3",
     "next": "Teisippos 2",
+    "redirect": "Telesippos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 152
+        "start": 152,
+        "end": 152
       }
     ]
   },
@@ -2830,7 +2867,7 @@
   {
     "lemma": "Telaiba",
     "previous": "Telada",
-    "next": "Telam",
+    "next": "Τελάμ",
     "chapters": [
       {
         "start": 187,
@@ -2839,18 +2876,22 @@
     ]
   },
   {
-    "lemma": "Telam",
+    "lemma": "Τελάμ",
     "previous": "Telaiba",
     "next": "Telames",
+    "sort_key": "Telam",
+    "redirect": "Telem",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 187
+        "start": 187,
+        "end": 187
       }
     ]
   },
   {
     "lemma": "Telames",
-    "previous": "Telam",
+    "previous": "Τελάμ",
     "next": "Telamon 1",
     "chapters": [
       {
@@ -2940,9 +2981,13 @@
     "lemma": "Telane",
     "previous": "Telandros",
     "next": "Telanissos",
+    "sort_key": "Telane",
+    "redirect": "Telanissos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 193
+        "start": 193,
+        "end": 193
       }
     ]
   },
@@ -3026,9 +3071,12 @@
     "lemma": "Telchinios",
     "previous": "Telchinia 2",
     "next": "Telchinis",
+    "redirect": "Telchinia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
@@ -3056,7 +3104,7 @@
   {
     "lemma": "Telchis 1",
     "previous": "Telchios",
-    "next": "Telchis 2",
+    "next": "Τελχίς 2",
     "chapters": [
       {
         "start": 226,
@@ -3065,18 +3113,22 @@
     ]
   },
   {
-    "lemma": "Telchis 2",
+    "lemma": "Τελχίς 2",
     "previous": "Telchis 1",
     "next": "Telda",
+    "sort_key": "Telchis",
+    "redirect": "Telchios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 226
+        "start": 226,
+        "end": 226
       }
     ]
   },
   {
     "lemma": "Telda",
-    "previous": "Telchis 2",
+    "previous": "Τελχίς 2",
     "next": "Tele 1",
     "chapters": [
       {
@@ -3331,9 +3383,12 @@
     "lemma": "Teleios",
     "previous": "Teleia 4",
     "next": "Telekleas",
+    "redirect": "Teleia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 322
+        "start": 322,
+        "end": 322
       }
     ]
   },
@@ -3517,9 +3572,12 @@
     "lemma": "Telemachus 8",
     "previous": "Telemachos 7",
     "next": "Telemnastos",
+    "redirect": "Claudius 364",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 358
+        "start": 358,
+        "end": 358
       }
     ]
   },
@@ -3593,9 +3651,12 @@
     "lemma": "Teleontes",
     "previous": "Teleon",
     "next": "Teleos",
+    "redirect": "Geleontes 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 359
+        "start": 359,
+        "end": 359
       }
     ]
   },
