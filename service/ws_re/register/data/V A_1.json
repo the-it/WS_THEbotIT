@@ -3818,9 +3818,12 @@
     "lemma": "Telepte",
     "previous": "Telephos 4",
     "next": "Teles 1",
+    "redirect": "Thelepte",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 375
+        "start": 375,
+        "end": 375
       }
     ]
   },
@@ -3883,9 +3886,12 @@
     "lemma": "Telesaura",
     "previous": "Telesarchos 2",
     "next": "Teleseias",
+    "redirect": "Germanikeia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 382
+        "start": 382,
+        "end": 382
       }
     ]
   },
@@ -3915,9 +3921,12 @@
     "lemma": "Telesias",
     "previous": "Telesia",
     "next": "Telesidromos",
+    "redirect": "Telesinos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 384
+        "start": 384,
+        "end": 384
       }
     ]
   },
@@ -3980,9 +3989,12 @@
     "lemma": "Telesinos 5",
     "previous": "Telesinos 3",
     "next": "Telesinos 6",
+    "redirect": "Luccius 2a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 386
+        "start": 386,
+        "end": 386
       }
     ]
   },
@@ -3990,9 +4002,12 @@
     "lemma": "Telesinos 6",
     "previous": "Telesinos 5",
     "next": "Telesinus 4",
+    "redirect": "Pontius 21",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 386
+        "start": 386,
+        "end": 386
       }
     ]
   },
@@ -4054,7 +4069,7 @@
   {
     "lemma": "Telesiurgos",
     "previous": "Telesis 2",
-    "next": "Telesle",
+    "next": "Τελέσλη",
     "chapters": [
       {
         "start": 386,
@@ -4063,18 +4078,22 @@
     ]
   },
   {
-    "lemma": "Telesle",
+    "lemma": "Τελέσλη",
     "previous": "Telesiurgos",
     "next": "Teleson",
+    "sort_key": "Telesle",
+    "redirect": "Theveste",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 387
+        "start": 387,
+        "end": 387
       }
     ]
   },
   {
     "lemma": "Teleson",
-    "previous": "Telesle",
+    "previous": "Τελέσλη",
     "next": "Telesphoros 1",
     "chapters": [
       {
@@ -4318,9 +4337,12 @@
     "lemma": "Teletimos",
     "previous": "Telethusa",
     "next": "Teleus",
+    "redirect": "Telesinos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 398
+        "start": 398,
+        "end": 398
       }
     ]
   },
@@ -4404,7 +4426,7 @@
   {
     "lemma": "Telis 2",
     "previous": "Telis 1",
-    "next": "Telithon(a)",
+    "next": "Τελιθων(α)",
     "chapters": [
       {
         "start": 401,
@@ -4413,18 +4435,22 @@
     ]
   },
   {
-    "lemma": "Telithon(a)",
+    "lemma": "Τελιθων(α)",
     "previous": "Telis 2",
     "next": "Tellegatae",
+    "sort_key": "Telithon(a)",
+    "redirect": "Moab",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 405
+        "start": 405,
+        "end": 405
       }
     ]
   },
   {
     "lemma": "Tellegatae",
-    "previous": "Telithon(a)",
+    "previous": "Τελιθων(α)",
     "next": "Tellenae",
     "chapters": [
       {
@@ -4481,9 +4507,12 @@
     "lemma": "Tellonum",
     "previous": "Tellis 2",
     "next": "Tellos",
+    "redirect": "Telonnum 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 406
+        "start": 406,
+        "end": 406
       }
     ]
   },
@@ -4513,9 +4542,12 @@
     "lemma": "Tellus",
     "previous": "Tellurus",
     "next": "Telmedius",
+    "redirect": "Terra Mater, Tellus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 409
+        "start": 409,
+        "end": 409
       }
     ]
   },
@@ -4534,9 +4566,12 @@
     "lemma": "Telmera",
     "previous": "Telmedius",
     "next": "Telmessias akra",
+    "redirect": "Termera",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 409
+        "start": 409,
+        "end": 409
       }
     ]
   },
@@ -4555,9 +4590,12 @@
     "lemma": "Telmessios",
     "previous": "Telmessias akra",
     "next": "Telmessos",
+    "redirect": "Telmisseus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 409
+        "start": 409,
+        "end": 409
       }
     ]
   },
@@ -4620,9 +4658,12 @@
     "lemma": "Telmiseus",
     "previous": "Telmios",
     "next": "Telmisos kome",
+    "redirect": "Telmisseus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 415
+        "start": 415,
+        "end": 415
       }
     ]
   },
@@ -4674,9 +4715,12 @@
     "lemma": "Telmissos 2",
     "previous": "Telmissos 1",
     "next": "telmun",
+    "redirect": "Telmessos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 416
+        "start": 416,
+        "end": 416
       }
     ]
   },
@@ -4783,9 +4827,12 @@
     "lemma": "Telonius",
     "previous": "Telondes",
     "next": "Telonnesos",
+    "redirect": "Tolenus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 425
+        "start": 425,
+        "end": 425
       }
     ]
   },
@@ -4859,9 +4906,12 @@
     "lemma": "Telphosios",
     "previous": "Telouch",
     "next": "Telphusa",
+    "redirect": "Telphusios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 431
+        "start": 431,
+        "end": 431
       }
     ]
   },
@@ -4869,9 +4919,12 @@
     "lemma": "Telphusa",
     "previous": "Telphosios",
     "next": "Telphusios",
+    "redirect": "Thelphusa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 431
+        "start": 431,
+        "end": 431
       }
     ]
   },
@@ -4901,9 +4954,12 @@
     "lemma": "Telxion",
     "previous": "Telum",
     "next": "Telys",
+    "redirect": "Thelxion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 431
+        "start": 431,
+        "end": 431
       }
     ]
   },
@@ -4944,9 +5000,12 @@
     "lemma": "Temarunda",
     "previous": "Temalas",
     "next": "Temavunt",
+    "redirect": "Maiotis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 432
+        "start": 432,
+        "end": 432
       }
     ]
   },
@@ -5009,9 +5068,12 @@
     "lemma": "Tembrogius",
     "previous": "Tembris",
     "next": "Tembros",
+    "redirect": "Tembris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 434
+        "start": 434,
+        "end": 434
       }
     ]
   },
@@ -5063,9 +5125,12 @@
     "lemma": "Temenia",
     "previous": "Temeneia",
     "next": "Temenion",
+    "redirect": "Temenios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 434
+        "start": 434,
+        "end": 434
       }
     ]
   },
@@ -5095,9 +5160,12 @@
     "lemma": "Temenites",
     "previous": "Temenios",
     "next": "Temenos 1",
+    "redirect": "Temenios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 435
+        "start": 435,
+        "end": 435
       }
     ]
   },
@@ -5138,9 +5206,12 @@
     "lemma": "Temenuchos",
     "previous": "Temenothyrai",
     "next": "Temenuros",
+    "redirect": "Temenios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 459
+        "start": 459,
+        "end": 459
       }
     ]
   },
@@ -5148,9 +5219,12 @@
     "lemma": "Temenuros",
     "previous": "Temenuchos",
     "next": "Temesa",
+    "redirect": "Temenios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 459
+        "start": 459,
+        "end": 459
       }
     ]
   },
@@ -5169,9 +5243,12 @@
     "lemma": "Temese",
     "previous": "Temesa",
     "next": "Temeuse",
+    "redirect": "Temesa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -5179,9 +5256,12 @@
     "lemma": "Temeuse",
     "previous": "Temese",
     "next": "Temisdia",
+    "redirect": "Thelmenissos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -5200,9 +5280,12 @@
     "lemma": "Temissos",
     "previous": "Temisdia",
     "next": "Temmeliso",
+    "redirect": "Telmissos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -5210,9 +5293,12 @@
     "lemma": "Temmeliso",
     "previous": "Temissos",
     "next": "Temmikes",
+    "redirect": "Thelmenissos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -5407,9 +5493,12 @@
     "lemma": "Tempsa",
     "previous": "Templum Veneris",
     "next": "Tempsis",
+    "redirect": "Temesa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 485
+        "start": 485,
+        "end": 485
       }
     ]
   },
@@ -5659,9 +5748,12 @@
     "lemma": "Tenes",
     "previous": "Teneros",
     "next": "Tenesos",
+    "redirect": "Tennes 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 500
+        "start": 500,
+        "end": 500
       }
     ]
   },
@@ -5702,10 +5794,12 @@
     "lemma": "Teniaueh(ae?)",
     "previous": "Tenia",
     "next": "Tenis",
-    "redirect": true,
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 501
+        "start": 501,
+        "end": 501
       }
     ]
   },
@@ -5856,9 +5950,12 @@
     "lemma": "Tentheus",
     "previous": "Ten-Sapur",
     "next": "Tenthredon",
+    "redirect": "Pentheus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 536
+        "start": 536,
+        "end": 536
       }
     ]
   },
@@ -5877,9 +5974,12 @@
     "lemma": "Tentorium",
     "previous": "Tenthredon",
     "next": "Tentyra",
+    "redirect": "Tabernaculum 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 536
+        "start": 536,
+        "end": 536
       }
     ]
   },
@@ -5909,16 +6009,19 @@
     "lemma": "Tenurcium",
     "previous": "Tenupsis",
     "next": "Teos",
+    "redirect": "Tinurtium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 539
+        "start": 539,
+        "end": 539
       }
     ]
   },
   {
     "lemma": "Teos",
     "previous": "Tenurcium",
-    "next": "Tepho",
+    "next": "Τεφώ",
     "chapters": [
       {
         "start": 539,
@@ -5927,18 +6030,22 @@
     ]
   },
   {
-    "lemma": "Tepho",
+    "lemma": "Τεφώ",
     "previous": "Teos",
     "next": "Tephras",
+    "sort_key": "Tepho",
+    "redirect": "Thaphphoue",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 570
+        "start": 570,
+        "end": 570
       }
     ]
   },
   {
     "lemma": "Tephras",
-    "previous": "Tepho",
+    "previous": "Τεφώ",
     "next": "Tephredo",
     "chapters": [
       {
@@ -5951,9 +6058,12 @@
     "lemma": "Tephredo",
     "previous": "Tephras",
     "next": "Tephrike, Tibrike, Tebrike",
+    "redirect": "Pemphredo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 571
+        "start": 571,
+        "end": 571
       }
     ]
   },
@@ -5983,9 +6093,12 @@
     "lemma": "Teppich",
     "previous": "Tepidarium",
     "next": "Teraios",
+    "redirect": "Tapes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 574
+        "start": 574,
+        "end": 574
       }
     ]
   },
@@ -6026,9 +6139,12 @@
     "lemma": "Teramne",
     "previous": "Terambos",
     "next": "Terapse",
+    "redirect": "Interamnia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 575
+        "start": 575,
+        "end": 575
       }
     ]
   },
@@ -6047,9 +6163,12 @@
     "lemma": "Teras",
     "previous": "Terapse",
     "next": "Terasia",
+    "redirect": "Mantike",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 575
+        "start": 575,
+        "end": 575
       }
     ]
   },
@@ -6057,9 +6176,12 @@
     "lemma": "Terasia",
     "previous": "Teras",
     "next": "terasias, teriasals",
+    "redirect": "Therasia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 575
+        "start": 575,
+        "end": 575
       }
     ]
   },
@@ -6110,26 +6232,33 @@
   {
     "lemma": "Terbulia",
     "previous": "Terbintheus",
-    "next": "Terchala",
+    "next": "Τερχαλά",
+    "redirect": "Tarbo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 576
+        "start": 576,
+        "end": 576
       }
     ]
   },
   {
-    "lemma": "Terchala",
+    "lemma": "Τερχαλά",
     "previous": "Terbulia",
     "next": "Terdec",
+    "sort_key": "Terchala",
+    "redirect": "Targala kome",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 576
+        "start": 576,
+        "end": 576
       }
     ]
   },
   {
     "lemma": "Terdec",
-    "previous": "Terchala",
+    "previous": "Τερχαλά",
     "next": "Terdetes",
     "chapters": [
       {
@@ -6175,9 +6304,12 @@
     "lemma": "Terebinthina",
     "previous": "Terebia",
     "next": "Terebinthos 1",
+    "redirect": "Tucca 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 577
+        "start": 577,
+        "end": 577
       }
     ]
   },
@@ -6196,9 +6328,12 @@
     "lemma": "Terebinthos 2",
     "previous": "Terebinthos 1",
     "next": "Terebinthos 3",
+    "redirect": "Mamre",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 581
+        "start": 581,
+        "end": 581
       }
     ]
   },
@@ -6305,9 +6440,12 @@
     "lemma": "Teren",
     "previous": "Tereis",
     "next": "Terenius",
+    "redirect": "Theren",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 587
+        "start": 587,
+        "end": 587
       }
     ]
   },
@@ -6447,9 +6585,12 @@
     "lemma": "Terentini ludi",
     "previous": "Terentilla",
     "next": "Terentius",
+    "redirect": "Tarentum 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 592
+        "start": 592,
+        "end": 592
       }
     ]
   },
@@ -7036,9 +7177,12 @@
     "lemma": "Terentius 52",
     "previous": "Terentius 51",
     "next": "Terentius 53",
+    "redirect": "Terentius 50",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 663
+        "start": 663,
+        "end": 663
       }
     ]
   },
@@ -7634,9 +7778,12 @@
     "lemma": "Terentum",
     "previous": "Terento",
     "next": "Terenuthis",
+    "redirect": "Tarentum 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 718
+        "start": 718,
+        "end": 718
       }
     ]
   },
@@ -7699,10 +7846,12 @@
     "lemma": "Tereventum",
     "previous": "Tereses (Fortunales)",
     "next": "Tereus",
-    "redirect": true,
+    "redirect": "Terventum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 719
+        "start": 719,
+        "end": 719
       }
     ]
   },
@@ -7732,10 +7881,12 @@
     "lemma": "Tergaza",
     "previous": "Terfilius",
     "next": "Tergedum",
-    "redirect": true,
+    "redirect": "Tezaga",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 721
+        "start": 721,
+        "end": 721
       }
     ]
   },
@@ -7831,9 +7982,12 @@
     "lemma": "teriasals",
     "previous": "Terias 2",
     "next": "Tericiae",
+    "redirect": "terasias, teriasals",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 725
+        "start": 725,
+        "end": 725
       }
     ]
   },
@@ -7940,9 +8094,12 @@
     "lemma": "Terinaeus sinus",
     "previous": "Terina 4",
     "next": "Teriolis",
+    "redirect": "Terina 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 727
+        "start": 727,
+        "end": 727
       }
     ]
   },
@@ -7994,9 +8151,12 @@
     "lemma": "Termantia 1",
     "previous": "Termaios",
     "next": "Termantia 2",
+    "redirect": "Termes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 729
+        "start": 729,
+        "end": 729
       }
     ]
   },
@@ -8004,9 +8164,12 @@
     "lemma": "Termantia 2",
     "previous": "Termantia 1",
     "next": "Termantius",
+    "redirect": "Thermantia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 729
+        "start": 729,
+        "end": 729
       }
     ]
   },
@@ -8179,9 +8342,12 @@
     "lemma": "Termintheus",
     "previous": "Terminatio",
     "next": "Terminus",
+    "redirect": "Terbintheus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 781
+        "start": 781,
+        "end": 781
       }
     ]
   },
@@ -8222,9 +8388,12 @@
     "lemma": "Termos",
     "previous": "Termonin",
     "next": "Termunes",
+    "redirect": "Temos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 785
+        "start": 785,
+        "end": 785
       }
     ]
   },
@@ -8408,10 +8577,12 @@
     "lemma": "Terra Cimolia",
     "previous": "Terpyllos",
     "next": "Terra Mater, Tellus",
-    "redirect": true,
+    "redirect": "Kimolia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 791
+        "start": 791,
+        "end": 791
       }
     ]
   },
@@ -8441,9 +8612,12 @@
     "lemma": "Terracina",
     "previous": "Terra Melia",
     "next": "Terrakotten",
+    "redirect": "Tarracina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 808
+        "start": 808,
+        "end": 808
       }
     ]
   },
@@ -8462,9 +8636,12 @@
     "lemma": "Terra Samia",
     "previous": "Terrakotten",
     "next": "Terra Sinopensis",
+    "redirect": "Samos 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 808
+        "start": 808,
+        "end": 808
       }
     ]
   },
@@ -8493,10 +8670,12 @@
     "lemma": "Terrensis",
     "previous": "Terrasidius, T.",
     "next": "Terrinius Gallus",
-    "redirect": true,
+    "redirect": "Tarrensis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 820
+        "start": 820,
+        "end": 820
       }
     ]
   },
@@ -8526,9 +8705,12 @@
     "lemma": "Tersios",
     "previous": "Terruncius, teruncius",
     "next": "Terta",
+    "redirect": "Tarseus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 821
+        "start": 821,
+        "end": 821
       }
     ]
   },
@@ -8591,9 +8773,12 @@
     "lemma": "Tertius",
     "previous": "Tertiolus",
     "next": "Tertulla",
+    "redirect": "Tertia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 822
+        "start": 822,
+        "end": 822
       }
     ]
   },
@@ -8601,9 +8786,12 @@
     "lemma": "Tertulla",
     "previous": "Tertius",
     "next": "Tertullianus 1",
+    "redirect": "Tertullus 20",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 822
+        "start": 822,
+        "end": 822
       }
     ]
   },
@@ -8852,10 +9040,12 @@
     "lemma": "Tertullus 19",
     "previous": "Tertullus 18",
     "next": "Tertullus 20",
-    "redirect": true,
+    "redirect": "Tertia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 847
+        "start": 847,
+        "end": 847
       }
     ]
   },
@@ -8940,9 +9130,12 @@
     "lemma": "Tervanna",
     "previous": "Terua",
     "next": "Terventum",
+    "redirect": "Tarvanna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 848
+        "start": 848,
+        "end": 848
       }
     ]
   },
@@ -8972,9 +9165,12 @@
     "lemma": "Teruncianus, Teruncius",
     "previous": "Tervingi",
     "next": "Terymbas",
+    "redirect": "Terruncius, teruncius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 849
+        "start": 849,
+        "end": 849
       }
     ]
   },
@@ -9059,9 +9255,12 @@
     "lemma": "Tessara",
     "previous": "Tessam",
     "next": "Tessarakonta",
+    "redirect": "Tessata",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 851
+        "start": 851,
+        "end": 851
       }
     ]
   },
@@ -9069,9 +9268,12 @@
     "lemma": "Tessarakonta",
     "previous": "Tessara",
     "next": "Tessarakoste Chia",
+    "redirect": "Δικασταὶ κατὰ δήμους",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 851
+        "start": 851,
+        "end": 851
       }
     ]
   },
@@ -9145,10 +9347,12 @@
     "lemma": "Testament, Altes",
     "previous": "Testaceus mons",
     "next": "Testament, Altes und Neues",
-    "redirect": true,
+    "redirect": "Septuaginta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 856
+        "start": 856,
+        "end": 856
       }
     ]
   },
@@ -9266,9 +9470,12 @@
     "lemma": "Testis",
     "previous": "Testimus",
     "next": "Testrina",
+    "redirect": "Testimonium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1061
+        "start": 1061,
+        "end": 1061
       }
     ]
   },
@@ -9276,16 +9483,19 @@
     "lemma": "Testrina",
     "previous": "Testis",
     "next": "Testrouna",
+    "redirect": "Testrouna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1062
+        "start": 1062,
+        "end": 1062
       }
     ]
   },
   {
     "lemma": "Testrouna",
     "previous": "Testrina",
-    "next": "Testryna",
+    "next": "Τεστρύνα",
     "chapters": [
       {
         "start": 1062,
@@ -9294,18 +9504,22 @@
     ]
   },
   {
-    "lemma": "Testryna",
+    "lemma": "Τεστρύνα",
     "previous": "Testrouna",
     "next": "Testudo 1",
+    "sort_key": "Testryna",
+    "redirect": "Testrouna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1062
+        "start": 1062,
+        "end": 1062
       }
     ]
   },
   {
     "lemma": "Testudo 1",
-    "previous": "Testryna",
+    "previous": "Τεστρύνα",
     "next": "Testudo 2",
     "chapters": [
       {
@@ -9340,9 +9554,12 @@
     "lemma": "Tetagoda",
     "previous": "Testudo 3",
     "next": "Tetarte",
+    "redirect": "Tagoda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1064
+        "start": 1064,
+        "end": 1064
       }
     ]
   },
@@ -9449,9 +9666,12 @@
     "lemma": "Tetis",
     "previous": "Tetios",
     "next": "Tetitius Facundus",
+    "redirect": "Telis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1069
+        "start": 1069,
+        "end": 1069
       }
     ]
   },
@@ -9470,9 +9690,12 @@
     "lemma": "Tetra",
     "previous": "Tetitius Facundus",
     "next": "Tetrachalkon",
+    "redirect": "Tetrapyrgia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1069
+        "start": 1069,
+        "end": 1069
       }
     ]
   },
@@ -9502,9 +9725,12 @@
     "lemma": "Tetrachmon",
     "previous": "Tetracheir",
     "next": "Tetrachoritai",
+    "redirect": "Tetradrachmon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1070
+        "start": 1070,
+        "end": 1070
       }
     ]
   },
@@ -9611,10 +9837,13 @@
     "lemma": "Tetraeteris 2",
     "previous": "Tetraeteris",
     "next": "Tetragoneites",
-    "redirect": true,
+    "redirect": "Zeitrechnung",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1075
+        "start": 1075,
+        "end": 1075,
+        "author": "Walter Sontheimer."
       }
     ]
   },
@@ -9622,9 +9851,12 @@
     "lemma": "Tetragoneites",
     "previous": "Tetraeteris 2",
     "next": "Tetragonos",
+    "redirect": "Tetragonos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1075
+        "start": 1075,
+        "end": 1075
       }
     ]
   },
@@ -9643,9 +9875,12 @@
     "lemma": "Tetrakephalos",
     "previous": "Tetragonos",
     "next": "Tetrakeratos",
+    "redirect": "Tetragonos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1076
+        "start": 1076,
+        "end": 1076
       }
     ]
   },
@@ -9741,9 +9976,12 @@
     "lemma": "Tetraotos",
     "previous": "Tetrao",
     "next": "Tetraphyle(?)",
+    "redirect": "Tetracheir",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1086
+        "start": 1086,
+        "end": 1086
       }
     ]
   },
@@ -9828,9 +10066,12 @@
     "lemma": "Tetraprosopos",
     "previous": "Tetrapolis 5",
     "next": "Tetrapylon",
+    "redirect": "Tetrakore",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1089
+        "start": 1089,
+        "end": 1089
       }
     ]
   },
@@ -9959,9 +10200,12 @@
     "lemma": "Tetrauges",
     "previous": "Tetrastylum Augusti",
     "next": "Tetricus",
+    "redirect": "Tetrakeratos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1099
+        "start": 1099,
+        "end": 1099
       }
     ]
   },
@@ -9969,9 +10213,12 @@
     "lemma": "Tetricus",
     "previous": "Tetrauges",
     "next": "Tetricus mons",
+    "redirect": "Esuvius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1099
+        "start": 1099,
+        "end": 1099
       }
     ]
   },
@@ -10376,9 +10623,12 @@
     "lemma": "Teuchira",
     "previous": "Teucharius",
     "next": "Teucila",
+    "redirect": "Tauchira, Teuchira",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1120
+        "start": 1120,
+        "end": 1120
       }
     ]
   },
@@ -10682,9 +10932,12 @@
     "lemma": "Teutamias",
     "previous": "Teuta",
     "next": "Teutamides",
+    "redirect": "Teutamides",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1150
+        "start": 1150,
+        "end": 1150
       }
     ]
   },
@@ -10703,9 +10956,12 @@
     "lemma": "Teutamies",
     "previous": "Teutamides",
     "next": "Teutamos 1",
+    "redirect": "Teutamides",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1151
+        "start": 1151,
+        "end": 1151
       }
     ]
   },
@@ -10988,9 +11244,12 @@
     "lemma": "Teuthras 11",
     "previous": "Teuthras 10",
     "next": "Teuthrone",
+    "redirect": "Teithras 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1164
+        "start": 1164,
+        "end": 1164
       }
     ]
   },
@@ -11042,9 +11301,12 @@
     "lemma": "Teutobodiaci",
     "previous": "Teutlussa",
     "next": "Teutoboduus",
+    "redirect": "Toutobodiaci",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1165
+        "start": 1165,
+        "end": 1165
       }
     ]
   },
@@ -11184,16 +11446,19 @@
     "lemma": "Thaanat Schilo",
     "previous": "Thaanach",
     "next": "Thabadeos",
+    "redirect": "Thena 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1177
+        "start": 1177,
+        "end": 1177
       }
     ]
   },
   {
     "lemma": "Thabadeos",
     "previous": "Thaanat Schilo",
-    "next": "Thabatha",
+    "next": "Θαβαθά",
     "chapters": [
       {
         "start": 1177,
@@ -11202,18 +11467,22 @@
     ]
   },
   {
-    "lemma": "Thabatha",
+    "lemma": "Θαβαθά",
     "previous": "Thabadeos",
     "next": "Thabba",
+    "sort_key": "Thabatha",
+    "redirect": "Magdal Thawatha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1178
+        "start": 1178,
+        "end": 1178
       }
     ]
   },
   {
     "lemma": "Thabba",
-    "previous": "Thabatha",
+    "previous": "Θαβαθά",
     "next": "Thabena",
     "chapters": [
       {
@@ -11248,9 +11517,12 @@
     "lemma": "Thabor",
     "previous": "Thabilaka",
     "next": "Thabote",
+    "redirect": "Itabyrion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1178
+        "start": 1178,
+        "end": 1178
       }
     ]
   },
@@ -11258,9 +11530,12 @@
     "lemma": "Thabote",
     "previous": "Thabor",
     "next": "Thabraca",
+    "redirect": "Thadute",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1178
+        "start": 1178,
+        "end": 1178
       }
     ]
   },
@@ -11301,9 +11576,12 @@
     "lemma": "Thabunacti, Tabunagdi, Trabunacti",
     "previous": "Thaboudis",
     "next": "Thabusion",
+    "redirect": "Tabuianati",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1180
+        "start": 1180,
+        "end": 1180
       }
     ]
   },
@@ -11322,9 +11600,12 @@
     "lemma": "Thabute",
     "previous": "Thabusion",
     "next": "Thaca",
+    "redirect": "Thadute",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1180
+        "start": 1180,
+        "end": 1180
       }
     ]
   },
@@ -11398,9 +11679,12 @@
     "lemma": "Thaenae",
     "previous": "Thadute",
     "next": "Thagaste",
+    "redirect": "Thenai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1183
+        "start": 1183,
+        "end": 1183
       }
     ]
   },
@@ -11430,16 +11714,19 @@
     "lemma": "Thagines",
     "previous": "Thagimasadas",
     "next": "Thagora",
+    "redirect": "Tacina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1183
+        "start": 1183,
+        "end": 1183
       }
     ]
   },
   {
     "lemma": "Thagora",
     "previous": "Thagines",
-    "next": "Thagulis",
+    "next": "Θαγουλίς",
     "chapters": [
       {
         "start": 1183,
@@ -11448,22 +11735,29 @@
     ]
   },
   {
-    "lemma": "Thagulis",
+    "lemma": "Θαγουλίς",
     "previous": "Thagora",
     "next": "Thagura",
+    "sort_key": "Thagulis",
+    "redirect": "Tagulis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1184
+        "start": 1184,
+        "end": 1184
       }
     ]
   },
   {
     "lemma": "Thagura",
-    "previous": "Thagulis",
+    "previous": "Θαγουλίς",
     "next": "Thaguroi, Thaguron oros",
+    "redirect": "Thacora",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1184
+        "start": 1184,
+        "end": 1184
       }
     ]
   },
@@ -11503,9 +11797,12 @@
     "lemma": "Thaina",
     "previous": "Thaiman",
     "next": "Thainata",
+    "redirect": "Thenai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1184
+        "start": 1184,
+        "end": 1184
       }
     ]
   },
@@ -11513,9 +11810,12 @@
     "lemma": "Thainata",
     "previous": "Thaina",
     "next": "Thais",
+    "redirect": "Thantia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1184
+        "start": 1184,
+        "end": 1184
       }
     ]
   },
@@ -11907,7 +12207,7 @@
   {
     "lemma": "Thalbasaris",
     "previous": "Thalatha",
-    "next": "Thalcha",
+    "next": "Θαλχα",
     "chapters": [
       {
         "start": 1204,
@@ -11916,18 +12216,22 @@
     ]
   },
   {
-    "lemma": "Thalcha",
+    "lemma": "Θαλχα",
     "previous": "Thalbasaris",
     "next": "Thaleia, Thalia 1",
+    "sort_key": "Thalcha",
+    "redirect": "Thala 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1204
+        "start": 1204,
+        "end": 1204
       }
     ]
   },
   {
     "lemma": "Thaleia, Thalia 1",
-    "previous": "Thalcha",
+    "previous": "Θαλχα",
     "next": "Thaleia, Thalia 2",
     "chapters": [
       {
@@ -11973,9 +12277,12 @@
     "lemma": "Thaleioi",
     "previous": "Thaleia, Thalia 4",
     "next": "Thalelaios 1",
+    "redirect": "Korybanten",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1207
+        "start": 1207,
+        "end": 1207
       }
     ]
   },
@@ -12137,9 +12444,12 @@
     "lemma": "Thali",
     "previous": "Thaletas 2",
     "next": "Thaliades",
+    "redirect": "Thateis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1213
+        "start": 1213,
+        "end": 1213
       }
     ]
   },
@@ -12345,10 +12655,12 @@
     "lemma": "Thaluda",
     "previous": "Thalpios",
     "next": "Thalutae",
-    "redirect": true,
+    "redirect": "Tamuda 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1230
+        "start": 1230,
+        "end": 1230
       }
     ]
   },
@@ -12400,9 +12712,12 @@
     "lemma": "Thamalensis",
     "previous": "Thamacon",
     "next": "Thamalla",
+    "redirect": "Turris 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1231
+        "start": 1231,
+        "end": 1231
       }
     ]
   },
@@ -12421,9 +12736,12 @@
     "lemma": "Thamallomensis",
     "previous": "Thamalla",
     "next": "Thamana",
+    "redirect": "Turris 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1231
+        "start": 1231,
+        "end": 1231
       }
     ]
   },
@@ -12485,7 +12803,7 @@
   {
     "lemma": "Thamaritha",
     "previous": "Thamara 2",
-    "next": "Thamaro",
+    "next": "Θαμαρω",
     "chapters": [
       {
         "start": 1232,
@@ -12494,18 +12812,22 @@
     ]
   },
   {
-    "lemma": "Thamaro",
+    "lemma": "Θαμαρω",
     "previous": "Thamaritha",
     "next": "Thamarus",
+    "sort_key": "Thamaro",
+    "redirect": "Thamara 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1232
+        "start": 1232,
+        "end": 1232
       }
     ]
   },
   {
     "lemma": "Thamarus",
-    "previous": "Thamaro",
+    "previous": "Θαμαρω",
     "next": "Thamascaltin",
     "chapters": [
       {
@@ -12551,9 +12873,12 @@
     "lemma": "Thambes",
     "previous": "Thamaudi",
     "next": "Thambradas",
+    "redirect": "Thammes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1233
+        "start": 1233,
+        "end": 1233
       }
     ]
   },
@@ -12670,7 +12995,7 @@
   {
     "lemma": "Thamondokana",
     "previous": "Thamneus",
-    "next": "Thamuda",
+    "next": "Θαμούδα",
     "chapters": [
       {
         "start": 1234,
@@ -12679,18 +13004,22 @@
     ]
   },
   {
-    "lemma": "Thamuda",
+    "lemma": "Θαμούδα",
     "previous": "Thamondokana",
     "next": "Thamugadi(s)",
+    "sort_key": "Thamuda",
+    "redirect": "Tamuda 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1235
+        "start": 1235,
+        "end": 1235
       }
     ]
   },
   {
     "lemma": "Thamugadi(s)",
-    "previous": "Thamuda",
+    "previous": "Θαμούδα",
     "next": "Thamuri",
     "chapters": [
       {
@@ -12703,9 +13032,12 @@
     "lemma": "Thamuri",
     "previous": "Thamugadi(s)",
     "next": "Thamusida",
+    "redirect": "Thannuri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1236
+        "start": 1236,
+        "end": 1236
       }
     ]
   },
@@ -12713,9 +13045,12 @@
     "lemma": "Thamusida",
     "previous": "Thamuri",
     "next": "Thamyras",
+    "redirect": "Tamusida",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1236
+        "start": 1236,
+        "end": 1236
       }
     ]
   },
@@ -12744,7 +13079,7 @@
   {
     "lemma": "Thamyris 2",
     "previous": "Thamyris 1",
-    "next": "Thanak",
+    "next": "Θανάκ",
     "chapters": [
       {
         "start": 1245,
@@ -12753,18 +13088,22 @@
     ]
   },
   {
-    "lemma": "Thanak",
+    "lemma": "Θανάκ",
     "previous": "Thamyris 2",
     "next": "Thanatos",
+    "sort_key": "Thanak",
+    "redirect": "Thaanach",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1245
+        "start": 1245,
+        "end": 1245
       }
     ]
   },
   {
     "lemma": "Thanatos",
-    "previous": "Thanak",
+    "previous": "Θανάκ",
     "next": "Thanna 1",
     "chapters": [
       {
@@ -12843,9 +13182,12 @@
     "lemma": "Thantianus",
     "previous": "Thantia",
     "next": "Thapedon",
+    "redirect": "Thoantinus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1271
+        "start": 1271,
+        "end": 1271
       }
     ]
   },
@@ -12853,9 +13195,12 @@
     "lemma": "Thapedon",
     "previous": "Thantianus",
     "next": "Thaphphu",
+    "redirect": "Tapedon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1271
+        "start": 1271,
+        "end": 1271
       }
     ]
   },
@@ -12863,9 +13208,13 @@
     "lemma": "Thaphphu",
     "previous": "Thapedon",
     "next": "Thaphphue",
+    "sort_key": "Thaphphu",
+    "redirect": "Thaphphue",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1271
+        "start": 1271,
+        "end": 1271
       }
     ]
   },
@@ -12884,9 +13233,13 @@
     "lemma": "Thaphphuth",
     "previous": "Thaphphue",
     "next": "Thapsa 1",
+    "sort_key": "Thaphphuth",
+    "redirect": "Thaphphue",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1271
+        "start": 1271,
+        "end": 1271
       }
     ]
   },
@@ -12905,9 +13258,12 @@
     "lemma": "Thapsa 2",
     "previous": "Thapsa 1",
     "next": "Thapsagum",
+    "redirect": "Thaphphue",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1272
+        "start": 1272,
+        "end": 1272
       }
     ]
   },
@@ -12935,12 +13291,14 @@
   },
   {
     "lemma": "Technitai",
-    "previous": "Thapsakos 1",
-    "next": "Teisandros 5",
+    "previous": "Thapsis",
+    "next": "Thapsos 1",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1279
+        "start": 1279,
+        "end": 1279
       }
     ]
   },
@@ -13002,9 +13360,13 @@
   {
     "lemma": "Thapsis",
     "previous": "Thapsipolis",
+    "next": "Technitai",
+    "redirect": "Thates",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1280
+        "start": 1280,
+        "end": 1280
       }
     ]
   }
