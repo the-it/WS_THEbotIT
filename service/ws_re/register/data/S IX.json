@@ -463,6 +463,7 @@
     "lemma": "Aulis 1",
     "previous": "Attius 23",
     "next": "Aurelius 145aa",
+    "proof_read": 3,
     "wp_link": "w:de:Aulis",
     "wd_link": "d:Q4821780",
     "chapters": [
@@ -576,6 +577,7 @@
     "lemma": "Buphagion",
     "previous": "Bomos Athenas",
     "next": "Bura 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 17,
@@ -605,7 +607,7 @@
     "proof_read": 3,
     "chapters": [
       {
-        "start": 18,
+        "start": 19,
         "end": 19,
         "author": "Ernst Meyer."
       }
@@ -653,7 +655,7 @@
     "lemma": "Clodius 21a",
     "previous": "Clemens aqua",
     "next": "Cornelius 284",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 21,
@@ -1246,7 +1248,7 @@
     "previous": "iudicium domesticum",
     "next": "Iulius 357",
     "sort_key": "Iulius 068a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 375,
@@ -1274,7 +1276,7 @@
     "lemma": "Iulius 379a",
     "previous": "Iulius 357",
     "next": "Iulius 453a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 377,
@@ -1908,6 +1910,7 @@
   },
   {
     "lemma": "Neratius 15a",
+    "next": "Nerion",
     "chapters": [
       {
         "start": 416,
@@ -1917,7 +1920,16 @@
   },
   {
     "lemma": "Nerion",
-    "next": "νεῦσις"
+    "previous": "Neratius 15a",
+    "next": "νεῦσις",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 416,
+        "end": 416,
+        "author": "Robert Grosse."
+      }
+    ]
   },
   {
     "lemma": "νεῦσις",
@@ -1936,7 +1948,7 @@
     "lemma": "Nikochis",
     "previous": "νεῦσις",
     "next": "Ninon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 461,
@@ -3577,15 +3589,12 @@
     "lemma": "Umbri, Umbria",
     "previous": "Umbonius 2",
     "next": "Umbricius 5",
+    "redirect": true,
     "chapters": [
       {
         "start": 1745,
-        "end": 1745,
+        "end": 1827,
         "author": "Gerhard Radke."
-      },
-      {
-        "start": 1745,
-        "end": 1827
       }
     ]
   },

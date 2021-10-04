@@ -60,7 +60,7 @@ class TestBotScheduler(TestCase):
             self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
 
     def test_wrong_type_runner(self):
-        bot = list()
+        bot = []
         with self.assertRaises(BotException):
             self.bot_scheduler.run_bot(bot)
 

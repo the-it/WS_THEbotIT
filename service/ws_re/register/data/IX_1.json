@@ -331,7 +331,7 @@
     "proof_read": 3,
     "chapters": [
       {
-        "start": 22,
+        "start": 23,
         "end": 23
       }
     ]
@@ -452,7 +452,7 @@
     "lemma": "Hyas 5",
     "previous": "Hyas 4",
     "next": "Hybanda",
-    "redirect": true,
+    "redirect": "Hyaden",
     "proof_read": 3,
     "chapters": [
       {
@@ -948,7 +948,7 @@
     "lemma": "Hydra 2",
     "previous": "Hydra 1",
     "next": "Hydra 3",
-    "redirect": true,
+    "redirect": "Hydra 1",
     "proof_read": 3,
     "wp_link": "w:de:Wasserschlange (Sternbild)",
     "wd_link": "d:Q10578",
@@ -1309,9 +1309,12 @@
     "lemma": "Hydrusa",
     "previous": "Hydruntum",
     "next": "Hydrussa 1",
+    "redirect": "Hydroessa, Hydrusa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 87
+        "start": 87,
+        "end": 87
       }
     ]
   },
@@ -1330,9 +1333,12 @@
     "lemma": "Hydrussa 2",
     "previous": "Hydrussa 1",
     "next": "Hyele",
+    "redirect": "Hydroessa, Hydrusa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 88
+        "start": 88,
+        "end": 88
       }
     ]
   },
@@ -1340,9 +1346,12 @@
     "lemma": "Hyele",
     "previous": "Hydrussa 2",
     "next": "Hyelion",
+    "redirect": "Velia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 88
+        "start": 88,
+        "end": 88
       }
     ]
   },
@@ -1361,9 +1370,12 @@
     "lemma": "Hyeronpotamon",
     "previous": "Hyelion",
     "next": "Hyes 1",
+    "redirect": "Hieronpotamon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 88
+        "start": 88,
+        "end": 88
       }
     ]
   },
@@ -1555,9 +1567,12 @@
     "lemma": "Hyginus 4",
     "previous": "Hyginus 3",
     "next": "Hygreis",
+    "redirect": "Iulius 278",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1565,9 +1580,12 @@
     "lemma": "Hygreis",
     "previous": "Hyginus 4",
     "next": "Hykara, Hykaron",
+    "redirect": "Hyrgis, Syrgis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1575,9 +1593,12 @@
     "lemma": "Hykara, Hykaron",
     "previous": "Hygreis",
     "next": "Hykkara",
+    "redirect": "Hykkara",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 97
+        "start": 97,
+        "end": 97
       }
     ]
   },
@@ -1655,9 +1676,12 @@
     "lemma": "Hylai",
     "previous": "Hyla 3",
     "next": "Hylaia",
+    "redirect": "Hyla 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 107
+        "start": 107,
+        "end": 107
       }
     ]
   },
@@ -1802,9 +1826,12 @@
     "lemma": "Hylas 5",
     "previous": "Hylas 4",
     "next": "Hylas 6",
+    "redirect": "Pomponius 47a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 116
+        "start": 116,
+        "end": 116
       }
     ]
   },
@@ -1926,9 +1953,12 @@
     "lemma": "Hylike",
     "previous": "Hylichidai",
     "next": "Hylimos",
+    "redirect": "Hyle 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 120
+        "start": 120,
+        "end": 120
       }
     ]
   },
@@ -2001,7 +2031,7 @@
   {
     "lemma": "Hyllikos",
     "previous": "Hylleus",
-    "next": "Hyllikos limen",
+    "next": "Ὑλλικὸς λιμήν",
     "chapters": [
       {
         "start": 120,
@@ -2011,18 +2041,22 @@
     ]
   },
   {
-    "lemma": "Hyllikos limen",
+    "lemma": "Ὑλλικὸς λιμήν",
     "previous": "Hyllikos",
     "next": "Hyllos 1",
+    "sort_key": "Hyllikos limen",
+    "redirect": "Hyllaikos limen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 122
+        "start": 122,
+        "end": 122
       }
     ]
   },
   {
     "lemma": "Hyllos 1",
-    "previous": "Hyllikos limen",
+    "previous": "Ὑλλικὸς λιμήν",
     "next": "Hyllos 2",
     "chapters": [
       {
@@ -2183,9 +2217,12 @@
     "lemma": "Hymenaeus",
     "previous": "Hymen, Hymenaios",
     "next": "Hymenaios",
+    "redirect": "Aurelius 151",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 130
+        "start": 130,
+        "end": 130
       }
     ]
   },
@@ -2407,9 +2444,12 @@
     "lemma": "Hypaea",
     "previous": "Hypachaioi",
     "next": "Hypagoranomos",
+    "redirect": "Stoechades insulae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 195
+        "start": 195,
+        "end": 195
       }
     ]
   },
@@ -2417,9 +2457,12 @@
     "lemma": "Hypagoranomos",
     "previous": "Hypaea",
     "next": "Hypaipa",
+    "redirect": "Agoranomoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 195
+        "start": 195,
+        "end": 195
       }
     ]
   },
@@ -2498,9 +2541,12 @@
     "lemma": "Hypanis 3",
     "previous": "Hypanis 2",
     "next": "Hypanis 4",
+    "redirect": "Hypasis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
@@ -2518,9 +2564,12 @@
     "lemma": "Hyparchos",
     "previous": "Hypanis 4",
     "next": "Hyparna",
+    "redirect": "Hypobaros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
@@ -2895,9 +2944,12 @@
     "lemma": "Hypephebarchos",
     "previous": "Hypenos",
     "next": "Hyperanthes",
+    "redirect": "Ephebarchos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 252
+        "start": 252,
+        "end": 252
       }
     ]
   },
@@ -3017,9 +3069,12 @@
     "lemma": "Hyperbetheus",
     "previous": "Hyperberitos",
     "next": "Hyperbios",
+    "redirect": "Hyperbereteos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
@@ -3105,6 +3160,7 @@
     "previous": "Hyperboreios Okeanos",
     "next": "Hyperdexion",
     "proof_read": 3,
+    "wd_link": "d:Q107243206",
     "chapters": [
       {
         "start": 280,
@@ -3652,9 +3708,12 @@
     "lemma": "Hyphasis",
     "previous": "Hypeuthynos",
     "next": "Hyphegesis",
+    "redirect": "Hypasis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 322
+        "start": 322,
+        "end": 322
       }
     ]
   },
@@ -3766,9 +3825,12 @@
     "lemma": "Hypogymnasiarchos",
     "previous": "Hypogaion",
     "next": "Hypokosmetes",
+    "redirect": "Gymnasiarchos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 336
+        "start": 336,
+        "end": 336
       }
     ]
   },
@@ -3776,9 +3838,12 @@
     "lemma": "Hypokosmetes",
     "previous": "Hypogymnasiarchos",
     "next": "Hypokremnos",
+    "redirect": "Kosmetes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 336
+        "start": 336,
+        "end": 336
       }
     ]
   },
@@ -3843,9 +3908,12 @@
     "lemma": "Hypopaidotribai",
     "previous": "Hypomosia",
     "next": "Hypoplakioi Thebai",
+    "redirect": "Paidotribes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 338
+        "start": 338,
+        "end": 338
       }
     ]
   },
@@ -3897,9 +3965,12 @@
     "lemma": "Hyposophronistai",
     "previous": "Hyporon",
     "next": "Hypostrategoi",
+    "redirect": "Sophronistai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 343
+        "start": 343,
+        "end": 343
       }
     ]
   },
@@ -3954,9 +4025,12 @@
     "lemma": "Hypsaea",
     "previous": "Hypotheseis",
     "next": "Hypsaltai",
+    "redirect": "Plautius 65",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 424
+        "start": 424,
+        "end": 424
       }
     ]
   },
@@ -4293,9 +4367,12 @@
     "lemma": "Hyria 1",
     "previous": "Hyrgis, Syrgis",
     "next": "Hyria 2",
+    "redirect": "Nola",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 453
+        "start": 453,
+        "end": 453
       }
     ]
   },
@@ -4326,9 +4403,12 @@
     "lemma": "Hyria 4",
     "previous": "Hyria 3",
     "next": "Hyribolum",
+    "redirect": "Seleukeia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 453
+        "start": 453,
+        "end": 453
       }
     ]
   },
@@ -4336,9 +4416,12 @@
     "lemma": "Hyribolum",
     "previous": "Hyria 4",
     "next": "Hyrie",
+    "redirect": "Eribolon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 453
+        "start": 453,
+        "end": 453
       }
     ]
   },
@@ -4346,9 +4429,12 @@
     "lemma": "Hyrie",
     "previous": "Hyribolum",
     "next": "Hyris",
+    "redirect": "Hydra 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 453
+        "start": 453,
+        "end": 453
       }
     ]
   },
@@ -4637,9 +4723,12 @@
     "lemma": "Hysia, Hysiai 2",
     "previous": "Hysia, Hysiai 1",
     "next": "Hysia, Hysiai 3",
+    "redirect": "Hysiai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 539
+        "start": 539,
+        "end": 539
       }
     ]
   },
@@ -4681,9 +4770,12 @@
     "lemma": "Hysiaioi",
     "previous": "Hysiai 2",
     "next": "Hysion",
+    "redirect": "Hyettos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 540
+        "start": 540,
+        "end": 540
       }
     ]
   },
@@ -4746,9 +4838,12 @@
     "lemma": "Hysplex",
     "previous": "Hyspiratis",
     "next": "Hysporos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 540
+        "start": 540,
+        "end": 540
       }
     ]
   },
@@ -4988,6 +5083,8 @@
     "lemma": "Iaca",
     "previous": "Jabruda",
     "next": "Iachura",
+    "wp_link": "w:ca:Iaca",
+    "wd_link": "d:Q11926303",
     "chapters": [
       {
         "start": 545,
@@ -5155,7 +5252,7 @@
     "lemma": "Iadu",
     "previous": "Iadovi",
     "next": "Jaëzer",
-    "redirect": "Radu",
+    "redirect": "Ptolemaios 66",
     "proof_read": 3,
     "chapters": [
       {
@@ -5365,7 +5462,7 @@
     "lemma": "Iakchos 2",
     "previous": "Iakchos 1",
     "next": "Iakinthis",
-    "redirect": true,
+    "redirect": "Iakchos 1",
     "proof_read": 3,
     "wp_link": "w:de:Iakchos",
     "wd_link": "d:Q690603",
@@ -5571,7 +5668,7 @@
     "next": "Ialysion",
     "proof_read": 2,
     "wp_link": "w:de:en:Ialysus",
-    "wd_link": "d:Q62266437",
+    "wd_link": "d:Q29963099",
     "chapters": [
       {
         "start": 628,
@@ -5940,7 +6037,7 @@
     "lemma": "Ian, Ianna",
     "previous": "Iamphorina",
     "next": "Ianeira 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 690,
@@ -6005,7 +6102,7 @@
     "lemma": "Iangaucani",
     "previous": "Ianeira 4",
     "next": "Ianiculensis pagus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 690,
@@ -6018,7 +6115,7 @@
     "lemma": "Ianiculensis pagus",
     "previous": "Iangaucani",
     "next": "Ianiculensis via",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 690,
@@ -6031,7 +6128,7 @@
     "lemma": "Ianiculensis via",
     "previous": "Ianiculensis pagus",
     "next": "Ianiculensis vicus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 690,
@@ -6044,7 +6141,7 @@
     "lemma": "Ianiculensis vicus",
     "previous": "Ianiculensis via",
     "next": "Ianiculum",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 691,
@@ -6149,6 +6246,8 @@
     "previous": "Ianthe 2",
     "next": "Ianthis",
     "proof_read": 3,
+    "wp_link": "w:de:Ianthe (Tochter des Telestes)",
+    "wd_link": "d:Q27780068",
     "chapters": [
       {
         "start": 695,
@@ -6539,7 +6638,7 @@
     "lemma": "Iaon",
     "previous": "Ἰάοκχος",
     "next": "Iaones",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 721,
@@ -6787,7 +6886,7 @@
     "lemma": "Iardanos 4",
     "previous": "Iardanos 3",
     "next": "Ἰάργανον",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 750,
@@ -6801,7 +6900,7 @@
     "previous": "Iardanos 4",
     "next": "Ἰαρίβωλος",
     "sort_key": "Iarganon",
-    "redirect": true,
+    "redirect": "Ptolemaios 66",
     "proof_read": 3,
     "chapters": [
       {
@@ -6830,7 +6929,7 @@
     "previous": "Ἰαρίβωλος",
     "next": "Jarmuth",
     "sort_key": "Iarmioi",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 751,
@@ -6858,7 +6957,7 @@
     "lemma": "Iarsath",
     "previous": "Jarmuth",
     "next": "Ias",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 751,
@@ -6884,7 +6983,7 @@
     "lemma": "Iasaia",
     "previous": "Ias",
     "next": "Iasdius 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 751,
@@ -6909,7 +7008,7 @@
     "lemma": "Iasdius 2",
     "previous": "Iasdius 1",
     "next": "Iasdius 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 751,
@@ -6934,7 +7033,7 @@
     "lemma": "Ias(s)ii",
     "previous": "Iasdius 3",
     "next": "Iasikles",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 752,
@@ -7015,6 +7114,7 @@
     "lemma": "Iasis 1",
     "previous": "Iasios",
     "next": "Iasis 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 758,
@@ -7122,7 +7222,7 @@
     "previous": "Iason 3",
     "next": "Iason 5",
     "sort_key": "Iason 04",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 777,
@@ -7258,7 +7358,7 @@
     "previous": "Iason 13",
     "next": "Iasonion",
     "sort_key": "Iasonia akropolis",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 782,
@@ -7271,7 +7371,7 @@
     "lemma": "Iasonion",
     "previous": "Ἰασονία ἀκρόπολις",
     "next": "Iasonios, Iasonia 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 782,
@@ -7284,7 +7384,7 @@
     "lemma": "Iasonios, Iasonia 1",
     "previous": "Iasonion",
     "next": "Iasonios, Iasonia 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 782,
@@ -7297,7 +7397,7 @@
     "lemma": "Iasonios, Iasonia 2",
     "previous": "Iasonios, Iasonia 1",
     "next": "Iasonius mons",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 782,
@@ -7394,7 +7494,7 @@
     "previous": "Iasos 5",
     "next": "Iasos 7",
     "sort_key": "Iasos 06",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 785,
@@ -7408,7 +7508,7 @@
     "previous": "Iasos 6",
     "next": "Iasos 8",
     "sort_key": "Iasos 07",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 785,
@@ -7435,7 +7535,7 @@
     "previous": "Iasos 8",
     "next": "Iasos 10",
     "sort_key": "Iasos 09",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 785,
@@ -7499,7 +7599,7 @@
     "lemma": "Iasos 14",
     "previous": "Iasos 13",
     "next": "Iasos 15",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 785,
@@ -7518,7 +7618,7 @@
     "chapters": [
       {
         "start": 785,
-        "end": 785,
+        "end": 790,
         "author": "Bürchner."
       }
     ]
@@ -7672,7 +7772,7 @@
     "lemma": "Iatheos",
     "previous": "Jatba",
     "next": "Jathir",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 790,
@@ -7802,7 +7902,7 @@
     "lemma": "Iatromantis",
     "previous": "Iatrokles 4",
     "next": "Iatromathematike",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 802,
@@ -7828,7 +7928,7 @@
     "lemma": "Iatron",
     "previous": "Iatromathematike",
     "next": "Iatros 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 804,
@@ -7870,7 +7970,7 @@
     "previous": "Iatros 2",
     "next": "Iatros 4",
     "sort_key": "Iatros 03",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 805,
@@ -7990,6 +8090,7 @@
     "previous": "Iavolenus 1",
     "next": "Iaxartes",
     "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 806,
@@ -8055,7 +8156,7 @@
     "lemma": "Iber 1",
     "previous": "Ibe",
     "next": "Iber 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 806,
@@ -8176,7 +8277,7 @@
     "lemma": "Ibettes",
     "previous": "Iberus 3",
     "next": "Ibion",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 808,
@@ -8239,7 +8340,7 @@
     "lemma": "Ibligo",
     "previous": "Ibiu",
     "next": "Ibliodurum",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 815,
@@ -8265,7 +8366,7 @@
     "lemma": "Iboita",
     "previous": "Ibliodurum",
     "next": "Ibora",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 816,
@@ -8291,7 +8392,7 @@
     "lemma": "Ibosus",
     "previous": "Ibora",
     "next": "Ibykos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 816,
@@ -8345,7 +8446,7 @@
     "lemma": "Ica",
     "previous": "Ἴβυλλα",
     "next": "Icadius",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 818,
@@ -8411,7 +8512,7 @@
     "lemma": "Icciodurum",
     "previous": "Icaunus",
     "next": "Icciomagus",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Yzeures-sur-Creuse",
     "wd_link": "d:Q273886",
     "chapters": [
@@ -8535,7 +8636,7 @@
     "previous": "Ichara 2",
     "next": "Ἴχναι 2",
     "sort_key": "Ichnai 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 829,
@@ -8562,7 +8663,7 @@
     "lemma": "Ichnaia",
     "previous": "Ἴχναι 2",
     "next": "Ichnusa",
-    "redirect": true,
+    "redirect": "Nemesis",
     "proof_read": 3,
     "chapters": [
       {
@@ -8615,7 +8716,7 @@
     "lemma": "Ichthyas",
     "previous": "Icht Mare",
     "next": "Ichthyoessa, Ichthyussa",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:en:Ichthyas",
     "wd_link": "d:Q2006829",
     "chapters": [
@@ -8630,7 +8731,7 @@
     "lemma": "Ichthyoessa, Ichthyussa",
     "previous": "Ichthyas",
     "next": "Ichthyokentauros",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 830,
@@ -8738,7 +8839,7 @@
     "lemma": "Icilius 1",
     "previous": "Icilius",
     "next": "Icilius 2",
-    "redirect": "Silicius",
+    "redirect": "Appianus 2",
     "proof_read": 3,
     "chapters": [
       {
@@ -8803,7 +8904,7 @@
     "lemma": "Iciniacum",
     "previous": "Icilius 5",
     "next": "Iciodorum",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Kastell Theilenhofen",
     "wd_link": "d:Q1214616",
     "chapters": [
@@ -8844,7 +8945,7 @@
     "lemma": "Iconii",
     "previous": "Icius",
     "next": "Icorigium",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 855,
@@ -8887,7 +8988,7 @@
     "lemma": "Icotii",
     "previous": "Icosium",
     "next": "Icovellauna",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 856,
@@ -8928,7 +9029,7 @@
     "lemma": "Iculisma",
     "previous": "Ictis",
     "next": "Ida, Ide 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Angoulême",
     "wd_link": "d:Q134346",
     "chapters": [
@@ -9051,7 +9152,7 @@
     "previous": "Idaia 1",
     "next": "Idaia 3",
     "sort_key": "Idaia 02",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 865,
@@ -9118,7 +9219,7 @@
     "previous": "Idaia 6",
     "next": "Idaia 8",
     "sort_key": "Idaia 07",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 866,
@@ -9159,7 +9260,7 @@
     "lemma": "Idaia 10",
     "previous": "Idaia 9",
     "next": "Idaia 11",
-    "redirect": "Idaion 2",
+    "redirect": "Ida, Ide 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -9172,7 +9273,7 @@
     "lemma": "Idaia 11",
     "previous": "Idaia 10",
     "next": "Idaia 12",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 867,
@@ -9224,7 +9325,7 @@
     "lemma": "Idaion 2",
     "previous": "Idaion 1",
     "next": "Idaios 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 867,
@@ -9266,7 +9367,7 @@
     "previous": "Idaios 2",
     "next": "Idale",
     "sort_key": "Idaios 03",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 867,
@@ -9358,7 +9459,7 @@
     "lemma": "Idas 2",
     "previous": "Idas 1",
     "next": "Idassa",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 876,
@@ -9371,7 +9472,7 @@
     "lemma": "Idassa",
     "previous": "Idas 2",
     "next": "Idatius",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 876,
@@ -9400,7 +9501,7 @@
     "lemma": "Idbansa",
     "previous": "Idatius",
     "next": "Ide 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 879,
@@ -9437,7 +9538,7 @@
     "lemma": "Ide 3",
     "previous": "Ide 2",
     "next": "Ide 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 880,
@@ -9515,7 +9616,7 @@
     "lemma": "Ideiphyta",
     "previous": "Ideion",
     "next": "Idennica",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 881,
@@ -9541,7 +9642,7 @@
     "lemma": "Ideus",
     "previous": "Idennica",
     "next": "Idex",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 881,
@@ -9554,7 +9655,7 @@
     "lemma": "Idex",
     "previous": "Ideus",
     "next": "Idiatt(a?)",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 882,
@@ -9567,7 +9668,7 @@
     "lemma": "Idiatt(a?)",
     "previous": "Idex",
     "next": "Idicra",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 882,
@@ -9580,7 +9681,7 @@
     "lemma": "Idicra",
     "previous": "Idiatt(a?)",
     "next": "Idikara 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 882,
@@ -9619,7 +9720,7 @@
     "lemma": "Idiminium",
     "previous": "Idikara 2",
     "next": "Idimum",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 882,
@@ -9632,7 +9733,7 @@
     "lemma": "Idimum",
     "previous": "Idiminium",
     "next": "Ἴδιος λόγος",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 882,
@@ -9689,7 +9790,7 @@
     "lemma": "Idomenai",
     "previous": "Idistaviso",
     "next": "Idomene",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 905,
@@ -9831,7 +9932,7 @@
     "lemma": "Idubeda",
     "previous": "Idrieus 2",
     "next": "Idumaea",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 912,
@@ -9859,7 +9960,7 @@
     "lemma": "Idumania",
     "previous": "Idumaea",
     "next": "Idumenia",
-    "redirect": true,
+    "redirect": "Ptolemaios 66",
     "proof_read": 3,
     "chapters": [
       {
@@ -10016,7 +10117,7 @@
     "lemma": "Iegius",
     "previous": "Jebusaei",
     "next": "Ieios",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 920,
@@ -10041,7 +10142,7 @@
     "lemma": "Ielbetai",
     "previous": "Ieios",
     "next": "Ielysos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 922,
@@ -10054,7 +10155,7 @@
     "lemma": "Ielysos",
     "previous": "Ielbetai",
     "next": "Iena",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 922,
@@ -10118,7 +10219,7 @@
     "lemma": "Ieramai",
     "previous": "Ieraclea",
     "next": "Ierasus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 922,
@@ -10185,7 +10286,7 @@
     "lemma": "Iernus",
     "previous": "Ierne",
     "next": "Jerusalem",
-    "redirect": true,
+    "redirect": "Ptolemaios 66",
     "proof_read": 3,
     "chapters": [
       {
@@ -10199,6 +10300,7 @@
     "lemma": "Jerusalem",
     "previous": "Iernus",
     "next": "Iesalenses",
+    "sort_key": "Ierusalem",
     "proof_read": 2,
     "wp_link": "w:de:Jerusalem",
     "wd_link": "d:Q1218",
@@ -10214,7 +10316,7 @@
     "lemma": "Iesalenses",
     "previous": "Jerusalem",
     "next": "Jesimon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 958,
@@ -10255,7 +10357,7 @@
     "lemma": "Iesso",
     "previous": "Jesrael",
     "next": "Ietai",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 960,
@@ -10400,7 +10502,7 @@
     "lemma": "Igabrum",
     "previous": "Ifles",
     "next": "Igaeditani",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 965,
@@ -10413,7 +10515,7 @@
     "lemma": "Igaeditani",
     "previous": "Igabrum",
     "next": "Igilgili",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Idanha-a-Velha",
     "wd_link": "d:Q1026697",
     "chapters": [
@@ -10494,7 +10596,7 @@
     "lemma": "Igmazen",
     "previous": "Igletes",
     "next": "Ignatius 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 966,
@@ -10507,7 +10609,7 @@
     "lemma": "Ignatius 1",
     "previous": "Igmazen",
     "next": "Ignatius 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 967,
@@ -10521,7 +10623,7 @@
     "previous": "Ignatius 1",
     "next": "Igne",
     "proof_read": 2,
-    "wp_link": "w:de:en:Ignatios the Deacon",
+    "wp_link": "w:en:Ignatios the Deacon",
     "wd_link": "d:Q3148188",
     "chapters": [
       {
@@ -10535,7 +10637,7 @@
     "lemma": "Igne",
     "previous": "Ignatius 2",
     "next": "Ignetes",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 967,
@@ -10613,7 +10715,7 @@
     "lemma": "Ikadion 1",
     "previous": "Ihamnagalla",
     "next": "Ikadion 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 973,
@@ -10667,7 +10769,9 @@
     "lemma": "Ikaria 2",
     "previous": "Ikaria 1",
     "next": "Ikarion",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Ikaria",
+    "wd_link": "d:Q209576",
     "chapters": [
       {
         "start": 973,
@@ -10723,7 +10827,7 @@
     "lemma": "Ikarios 3",
     "previous": "Ikarios 2",
     "next": "Ikarios 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 976,
@@ -10794,7 +10898,7 @@
     "lemma": "Ikaros 3",
     "previous": "Ikaros 2",
     "next": "Ikaros 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 989,
@@ -10833,7 +10937,7 @@
     "lemma": "Ikaros 6",
     "previous": "Ikaros 5",
     "next": "Ikaros 7",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 989,
@@ -10859,7 +10963,7 @@
     "lemma": "Ikasia",
     "previous": "Ikaros 7",
     "next": "Ikelos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 989,
@@ -10872,6 +10976,7 @@
     "lemma": "Ikelos",
     "previous": "Ikasia",
     "next": "Ikkos",
+    "wd_link": "d:Q2676344",
     "chapters": [
       {
         "start": 989,
@@ -10884,6 +10989,8 @@
     "lemma": "Ikkos",
     "previous": "Ikelos",
     "next": "Ikmaios",
+    "wp_link": "w:en:Iccus of Taranto",
+    "wd_link": "d:Q1056125",
     "chapters": [
       {
         "start": 989,
@@ -10896,7 +11003,7 @@
     "lemma": "Ikmaios",
     "previous": "Ikkos",
     "next": "Iknion",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 989,
@@ -10909,7 +11016,7 @@
     "lemma": "Iknion",
     "previous": "Ikmaios",
     "next": "Ikonion",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 990,
@@ -10952,7 +11059,7 @@
     "lemma": "Ikotarion",
     "previous": "Ikos",
     "next": "Ἴκριον",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 992,
@@ -10969,7 +11076,7 @@
     "proof_read": 2,
     "chapters": [
       {
-        "start": 991,
+        "start": 992,
         "end": 995,
         "author": "Frickenhaus."
       }
@@ -11008,7 +11115,7 @@
     "previous": "Ila 1",
     "next": "Ἴλαι 1",
     "sort_key": "Ila 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 997,
@@ -11022,7 +11129,7 @@
     "previous": "Ila 2",
     "next": "Ἴλαι 2",
     "sort_key": "Ilai 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 997,
@@ -11065,7 +11172,7 @@
     "previous": "Ilaios",
     "next": "Ilarchos",
     "sort_key": "Ilarches",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 998,
@@ -11160,7 +11267,7 @@
     "lemma": "Ildum",
     "previous": "Ildico",
     "next": "Ileates",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 999,
@@ -11285,7 +11392,7 @@
     "lemma": "Ilia 2",
     "previous": "Ilia 1",
     "next": "Ilias",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1000,
@@ -11384,7 +11491,7 @@
     "lemma": "Ilieon kome",
     "previous": "Ilienses",
     "next": "Ilieon polis",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Troja",
     "wd_link": "d:Q22647",
     "chapters": [
@@ -11399,7 +11506,7 @@
     "lemma": "Ilieon polis",
     "previous": "Ilieon kome",
     "next": "Iliga",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Troja",
     "wd_link": "d:Q22647",
     "chapters": [
@@ -11414,7 +11521,7 @@
     "lemma": "Iliga",
     "previous": "Ilieon polis",
     "next": "Iliokolone",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Ichtiman",
     "wd_link": "d:Q405712",
     "chapters": [
@@ -11429,7 +11536,7 @@
     "lemma": "Iliokolone",
     "previous": "Iliga",
     "next": "Ilion, Ilios",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1063,
@@ -11442,7 +11549,7 @@
     "lemma": "Ilion, Ilios",
     "previous": "Iliokolone",
     "next": "Ilion, Ilios 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1064,
@@ -11455,7 +11562,7 @@
     "lemma": "Ilion, Ilios 1",
     "previous": "Ilion, Ilios",
     "next": "Ilion, Ilios 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1064,
@@ -11494,7 +11601,7 @@
     "lemma": "Ilion, Ilios 4",
     "previous": "Ilion, Ilios 3",
     "next": "Ilion, Ilios 5",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1065,
@@ -11507,7 +11614,7 @@
     "lemma": "Ilion, Ilios 5",
     "previous": "Ilion, Ilios 4",
     "next": "Ilion, Ilios 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1065,
@@ -11546,7 +11653,7 @@
     "lemma": "Ilion, Ilios 8",
     "previous": "Ilion, Ilios 7",
     "next": "Ilione",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1066,
@@ -11718,7 +11825,7 @@
     "lemma": "Ilistra",
     "previous": "Ilissiades",
     "next": "Iliturgicola",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:en:Ilistra",
     "wd_link": "d:Q85768994",
     "chapters": [
@@ -11733,7 +11840,7 @@
     "lemma": "Iliturgicola",
     "previous": "Ilistra",
     "next": "Iliturgis",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1068,
@@ -11784,7 +11891,7 @@
     "lemma": "Illiberris 1",
     "previous": "Ilixo",
     "next": "Illiberris 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1069,
@@ -11797,7 +11904,7 @@
     "lemma": "Illiberris 2",
     "previous": "Illiberris 1",
     "next": "Illinos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1069,
@@ -11891,7 +11998,7 @@
     "lemma": "Ilorci",
     "previous": "Illyrios",
     "next": "Ilos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1089,
@@ -11917,7 +12024,7 @@
     "lemma": "Ilos 2",
     "previous": "Ilos 1",
     "next": "Ilos 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1089,
@@ -11930,7 +12037,7 @@
     "lemma": "Ilos 3",
     "previous": "Ilos 2",
     "next": "Ilos 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1090,
@@ -11943,7 +12050,7 @@
     "lemma": "Ilos 4",
     "previous": "Ilos 3",
     "next": "Ilva",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1090,
@@ -12088,7 +12195,7 @@
     "lemma": "Ilu polis",
     "previous": "Ilunum",
     "next": "Ilurberrixo",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1092,
@@ -12101,7 +12208,7 @@
     "lemma": "Ilurberrixo",
     "previous": "Ilu polis",
     "next": "Ilurbida",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1092,
@@ -12236,7 +12343,7 @@
     "lemma": "Ilu sema",
     "previous": "Ilurso",
     "next": "Iluza",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1093,
@@ -12249,7 +12356,7 @@
     "lemma": "Iluza",
     "previous": "Ilu sema",
     "next": "Imachara",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1093,
@@ -12645,7 +12752,7 @@
     "lemma": "Impediti",
     "previous": "Impedimenta",
     "next": "Impensae",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1139,
@@ -12700,7 +12807,7 @@
     "lemma": "Histiaios 4",
     "previous": "Hischylos",
     "next": "Hyagnis",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1158,
@@ -12713,7 +12820,7 @@
     "lemma": "Hyagnis",
     "previous": "Histiaios 4",
     "next": "Hygiainon 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:en:Hyagnis (mythology)",
     "wd_link": "d:Q65079958",
     "chapters": [
@@ -12779,7 +12886,7 @@
     "lemma": "Hyperbolos",
     "previous": "Hypaton, Hypatos",
     "next": "Hypereia 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1160,
@@ -12792,7 +12899,7 @@
     "lemma": "Hypereia 4",
     "previous": "Hyperbolos",
     "next": "Hyperesia",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1160,
@@ -12883,7 +12990,7 @@
     "lemma": "Hypsion",
     "previous": "Hypsa, Hypsoi",
     "next": "Hypsus 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1165,
@@ -12950,11 +13057,11 @@
     "lemma": "Hyrnethion",
     "previous": "Hyrmine 1",
     "next": "Hysiai a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1171,
-        "end": 1173,
+        "end": 1171,
         "author": "Bölte."
       }
     ]
@@ -12992,7 +13099,7 @@
     "lemma": "Iactus 2",
     "previous": "Ἰαβαδίου νῆσος",
     "next": "Ianassa",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1177,
@@ -13005,7 +13112,7 @@
     "lemma": "Ianassa",
     "previous": "Iactus 2",
     "next": "Iastai",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1177,
@@ -13112,7 +13219,7 @@
     "lemma": "Ibis",
     "previous": "Iazyges",
     "next": "Icauna",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Ibis",
     "chapters": [
       {
@@ -13126,7 +13233,7 @@
     "lemma": "Icauna",
     "previous": "Ibis",
     "next": "Ichnaia 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Icauna",
     "wd_link": "d:Q15819846",
     "chapters": [
@@ -13182,7 +13289,7 @@
     "previous": "Idaios 1",
     "next": "Idaios 3",
     "sort_key": "Idaios 02",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1192,
@@ -13196,7 +13303,7 @@
     "previous": "Idaios 2",
     "next": "Idaios 4",
     "sort_key": "Idaios 03",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1192,
@@ -13310,7 +13417,7 @@
     "chapters": [
       {
         "start": 1193,
-        "end": 1202,
+        "end": 1200,
         "author": "Tkač."
       }
     ]

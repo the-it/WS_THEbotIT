@@ -528,17 +528,19 @@
     "lemma": "Naarre",
     "previous": "Naarmalcha",
     "next": "Naarsafari",
-    "redirect": true,
+    "redirect": "Naharra, Naharre",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1449
+        "start": 1449,
+        "end": 1449
       }
     ]
   },
   {
     "lemma": "Naarsafari",
     "previous": "Naarre",
-    "next": "Naarsares",
+    "next": "Νααρσάρης",
     "chapters": [
       {
         "start": 1449,
@@ -547,19 +549,22 @@
     ]
   },
   {
-    "lemma": "Naarsares",
+    "lemma": "Νααρσάρης",
     "previous": "Naarsafari",
     "next": "Naba",
-    "redirect": true,
+    "sort_key": "Naarsares",
+    "redirect": "Naarmalcha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1449
+        "start": 1449,
+        "end": 1449
       }
     ]
   },
   {
     "lemma": "Naba",
-    "previous": "Naarsares",
+    "previous": "Νααρσάρης",
     "next": "Nababurum",
     "chapters": [
       {
@@ -571,7 +576,7 @@
   {
     "lemma": "Nababurum",
     "previous": "Naba",
-    "next": "Nabadath",
+    "next": "Ναβαδαθ",
     "chapters": [
       {
         "start": 1449,
@@ -580,19 +585,22 @@
     ]
   },
   {
-    "lemma": "Nabadath",
+    "lemma": "Ναβαδαθ",
     "previous": "Nababurum",
     "next": "Nabades",
-    "redirect": true,
+    "sort_key": "Nabadath",
+    "redirect": "Nabatha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1449
+        "start": 1449,
+        "end": 1449
       }
     ]
   },
   {
     "lemma": "Nabades",
-    "previous": "Nabadath",
+    "previous": "Ναβαδαθ",
     "next": "Nabaeus",
     "chapters": [
       {
@@ -605,9 +613,12 @@
     "lemma": "Nabaeus",
     "previous": "Nabades",
     "next": "Nabagath",
+    "redirect": "Nabaros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1450
+        "start": 1450,
+        "end": 1450
       }
     ]
   },
@@ -626,9 +637,12 @@
     "lemma": "Nabaiothes",
     "previous": "Nabagath",
     "next": "Nabalia",
+    "redirect": "Nabataioi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1450
+        "start": 1450,
+        "end": 1450
       }
     ]
   },
@@ -669,9 +683,12 @@
     "lemma": "Nabandes",
     "previous": "Nabaloth(a)",
     "next": "Nabar",
+    "redirect": "Ναμάδης",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1451
+        "start": 1451,
+        "end": 1451
       }
     ]
   },
@@ -888,9 +905,12 @@
     "lemma": "Nabius",
     "previous": "Nabis 2",
     "next": "Nablis",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1482
+        "start": 1482,
+        "end": 1482
       }
     ]
   },
@@ -908,7 +928,7 @@
   {
     "lemma": "Nablium",
     "previous": "Nablis",
-    "next": "Naboandelos",
+    "next": "Ναβοάνδηλος",
     "chapters": [
       {
         "start": 1482,
@@ -917,38 +937,50 @@
     ]
   },
   {
-    "lemma": "Naboandelos",
+    "lemma": "Ναβοάνδηλος",
     "previous": "Nablium",
-    "next": "Nabokodrosoros",
+    "next": "Ναβοκοδρόσορος",
+    "sort_key": "Naboandelos",
+    "redirect": "Nabonadios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1483
+        "start": 1483,
+        "end": 1483
       }
     ]
   },
   {
-    "lemma": "Nabokodrosoros",
-    "previous": "Naboandelos",
-    "next": "Nabokolassaros",
+    "lemma": "Ναβοκοδρόσορος",
+    "previous": "Ναβοάνδηλος",
+    "next": "Ναβοκολάσσαρος",
+    "sort_key": "Nabokodrosoros",
+    "redirect": "Nebukadnezar",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1483
+        "start": 1483,
+        "end": 1483
       }
     ]
   },
   {
-    "lemma": "Nabokolassaros",
-    "previous": "Nabokodrosoros",
+    "lemma": "Ναβοκολάσσαρος",
+    "previous": "Ναβοκοδρόσορος",
     "next": "Nabonadios",
+    "sort_key": "Nabokolassaros",
+    "redirect": "Nebukadnezar",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1483
+        "start": 1483,
+        "end": 1483
       }
     ]
   },
   {
     "lemma": "Nabonadios",
-    "previous": "Nabokolassaros",
+    "previous": "Ναβοκολάσσαρος",
     "next": "Nabonassaros",
     "chapters": [
       {
@@ -1090,16 +1122,19 @@
     "lemma": "Nachtigall",
     "previous": "Nachrichtenwesen",
     "next": "Nacktheit",
+    "redirect": "Luscinia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1541
+        "start": 1541,
+        "end": 1541
       }
     ]
   },
   {
     "lemma": "Nacktheit",
     "previous": "Nachtigall",
-    "next": "Nadabath",
+    "next": "Ναδαβαθ",
     "chapters": [
       {
         "start": 1541,
@@ -1108,18 +1143,22 @@
     ]
   },
   {
-    "lemma": "Nadabath",
+    "lemma": "Ναδαβαθ",
     "previous": "Nacktheit",
     "next": "Nadel",
+    "sort_key": "Nadabath",
+    "redirect": "Nabatha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1549
+        "start": 1549,
+        "end": 1549
       }
     ]
   },
   {
     "lemma": "Nadel",
-    "previous": "Nadabath",
+    "previous": "Ναδαβαθ",
     "next": "Nadiandos",
     "chapters": [
       {
@@ -1132,9 +1171,12 @@
     "lemma": "Nadiandos",
     "previous": "Nadel",
     "next": "Nadios",
+    "redirect": "Nazianzos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1556
+        "start": 1556,
+        "end": 1556
       }
     ]
   },
@@ -1175,9 +1217,12 @@
     "lemma": "Naebis",
     "previous": "Nadubandagar",
     "next": "Naelo, Nelo 1",
+    "redirect": "Nabis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1557
+        "start": 1557,
+        "end": 1557
       }
     ]
   },
@@ -1207,9 +1252,12 @@
     "lemma": "Naema",
     "previous": "Naelo, Nelo 2",
     "next": "Naemorius",
+    "redirect": "Naeva",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1557
+        "start": 1557,
+        "end": 1557
       }
     ]
   },
@@ -1228,9 +1276,12 @@
     "lemma": "Naenia",
     "previous": "Naemorius",
     "next": "Naeratius 1",
+    "redirect": "Nenia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1557
+        "start": 1557,
+        "end": 1557
       }
     ]
   },
@@ -1688,7 +1739,7 @@
   {
     "lemma": "Nagadiboi",
     "previous": "Nagadiba 2",
-    "next": "Nagagura",
+    "next": "Ναγαγούρα",
     "chapters": [
       {
         "start": 1573,
@@ -1697,18 +1748,22 @@
     ]
   },
   {
-    "lemma": "Nagagura",
+    "lemma": "Ναγαγούρα",
     "previous": "Nagadiboi",
     "next": "Nagara 1",
+    "sort_key": "Nagagura",
+    "redirect": "Nagarouraris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1573
+        "start": 1573,
+        "end": 1573
       }
     ]
   },
   {
     "lemma": "Nagara 1",
-    "previous": "Nagagura",
+    "previous": "Ναγαγούρα",
     "next": "Nagara 2",
     "chapters": [
       {
@@ -1868,7 +1923,7 @@
     "lemma": "Naharvali",
     "previous": "Nahartes",
     "next": "Naia 1",
-    "redirect": "Lugii",
+    "redirect": "Nahanarvali",
     "proof_read": 3,
     "wp_link": "w:de:Nahanarvaler",
     "wd_link": "d:Q1963646",
@@ -1884,7 +1939,7 @@
     "lemma": "Naia 1",
     "previous": "Naharvali",
     "next": "Naia 2",
-    "redirect": true,
+    "redirect": "Teuthrone",
     "proof_read": 3,
     "chapters": [
       {
@@ -2049,9 +2104,12 @@
     "lemma": "Nais 6",
     "previous": "Nais 5",
     "next": "Naiskos",
+    "redirect": "Nain",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1587
+        "start": 1587,
+        "end": 1587
       }
     ]
   },
@@ -2092,9 +2150,12 @@
     "lemma": "Naisupolis",
     "previous": "Naissus",
     "next": "Naitienae",
+    "redirect": "Prokopios 21",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1599
+        "start": 1599,
+        "end": 1599
       }
     ]
   },
@@ -2102,16 +2163,19 @@
     "lemma": "Naitienae",
     "previous": "Naisupolis",
     "next": "Nakadouba",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1599
+        "start": 1599,
+        "end": 1599
       }
     ]
   },
   {
     "lemma": "Nakadouba",
     "previous": "Naitienae",
-    "next": "Nakadouma",
+    "next": "Νακαδοῦμα",
     "chapters": [
       {
         "start": 1599,
@@ -2120,18 +2184,22 @@
     ]
   },
   {
-    "lemma": "Nakadouma",
+    "lemma": "Νακαδοῦμα",
     "previous": "Nakadouba",
     "next": "Nakis",
+    "sort_key": "Nakadouma",
+    "redirect": "Nakadouba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1600
+        "start": 1600,
+        "end": 1600
       }
     ]
   },
   {
     "lemma": "Nakis",
-    "previous": "Nakadouma",
+    "previous": "Νακαδοῦμα",
     "next": "Nakle",
     "chapters": [
       {
@@ -2270,9 +2338,12 @@
     "lemma": "Naʾman",
     "previous": "Ναμάδης",
     "next": "Namara",
+    "redirect": "Nuʿman 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1609
+        "start": 1609,
+        "end": 1609
       }
     ]
   },
@@ -2335,9 +2406,12 @@
     "lemma": "Namatianus",
     "previous": "Namastai",
     "next": "Namatius 1",
+    "redirect": "Rutilius 13",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1611
+        "start": 1611,
+        "end": 1611
       }
     ]
   },
@@ -2400,9 +2474,12 @@
     "lemma": "Namausicae",
     "previous": "Namatius 5",
     "next": "Namenwesen",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1611
+        "start": 1611,
+        "end": 1611
       }
     ]
   },
@@ -2476,9 +2553,12 @@
     "lemma": "Namiusa",
     "previous": "Namnetae, Namnetes",
     "next": "Nana 1",
+    "redirect": "Aufidius 31",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1672
+        "start": 1672,
+        "end": 1672
       }
     ]
   },
@@ -2541,9 +2621,12 @@
     "lemma": "Nanasa",
     "previous": "Nanas",
     "next": "Nanassos",
+    "redirect": "Namnasa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1676
+        "start": 1676,
+        "end": 1676
       }
     ]
   },
@@ -2584,9 +2667,12 @@
     "lemma": "Nandum",
     "previous": "Nanduin",
     "next": "Nangalogai",
+    "redirect": "Nanduin",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1676
+        "start": 1676,
+        "end": 1676
       }
     ]
   },
@@ -2693,9 +2779,12 @@
     "lemma": "Nannenus",
     "previous": "Nanneius",
     "next": "Nann(i)enus 1",
+    "redirect": "Nann(i)enus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1682
+        "start": 1682,
+        "end": 1682
       }
     ]
   },
@@ -2725,9 +2814,12 @@
     "lemma": "Nanninus",
     "previous": "Nann(i)enus 2",
     "next": "Nannion 1",
+    "redirect": "Nann(i)enus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1683
+        "start": 1683,
+        "end": 1683
       }
     ]
   },
@@ -2757,9 +2849,12 @@
     "lemma": "Nannius",
     "previous": "Nannion 2",
     "next": "Nanno",
+    "redirect": "Nanneius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1683
+        "start": 1683,
+        "end": 1683
       }
     ]
   },
@@ -2778,9 +2873,12 @@
     "lemma": "Nanos",
     "previous": "Nanno",
     "next": "Nanosbees",
+    "redirect": "Nanas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1683
+        "start": 1683,
+        "end": 1683
       }
     ]
   },
@@ -2821,9 +2919,12 @@
     "lemma": "Nanus",
     "previous": "Nantuatae, Nantuates",
     "next": "Nanybras",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1685
+        "start": 1685,
+        "end": 1685
       }
     ]
   },
@@ -2831,9 +2932,12 @@
     "lemma": "Nanybras",
     "previous": "Nanus",
     "next": "Naoklos",
+    "redirect": "Nanaros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1685
+        "start": 1685,
+        "end": 1685
       }
     ]
   },
@@ -2852,9 +2956,12 @@
     "lemma": "Naopoioi",
     "previous": "Naoklos",
     "next": "Naos 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1685
+        "start": 1685,
+        "end": 1685
       }
     ]
   },
@@ -2873,9 +2980,12 @@
     "lemma": "Naos 2",
     "previous": "Naos 1",
     "next": "Napai",
+    "redirect": "Lacinium promunturium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1685
+        "start": 1685,
+        "end": 1685
       }
     ]
   },
@@ -2960,9 +3070,12 @@
     "lemma": "Naphilos",
     "previous": "Napetinus sinus",
     "next": "Naphtali",
+    "redirect": "Naliphos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1688
+        "start": 1688,
+        "end": 1688
       }
     ]
   },
@@ -2981,9 +3094,12 @@
     "lemma": "Naphthas",
     "previous": "Naphtali",
     "next": "Naphtho",
+    "redirect": "Asphalt",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1692
+        "start": 1692,
+        "end": 1692
       }
     ]
   },
@@ -3068,9 +3184,12 @@
     "lemma": "Narabon",
     "previous": "Nara 2",
     "next": "Naracu Stoma",
+    "redirect": "Arrabo 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1698
+        "start": 1698,
+        "end": 1698
       }
     ]
   },
@@ -3110,9 +3229,12 @@
     "lemma": "Naranus pagus",
     "previous": "Narakon",
     "next": "Narasa",
+    "redirect": "Nares Lucanae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1700
+        "start": 1700,
+        "end": 1700
       }
     ]
   },
@@ -3241,9 +3363,12 @@
     "lemma": "Narcissus 5",
     "previous": "Narcissus 4",
     "next": "Narco, Nargo",
+    "redirect": "Narkissos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1705
+        "start": 1705,
+        "end": 1705
       }
     ]
   },
@@ -3306,9 +3431,12 @@
     "lemma": "Narekos",
     "previous": "Nareae",
     "next": "Nares Lucanae",
+    "redirect": "Apollonios 71",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1715
+        "start": 1715,
+        "end": 1715
       }
     ]
   },
@@ -3349,9 +3477,12 @@
     "lemma": "Nargum",
     "previous": "Narestini",
     "next": "Nariandos",
+    "redirect": "Narco, Nargo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1717
+        "start": 1717,
+        "end": 1717
       }
     ]
   },
@@ -3359,9 +3490,12 @@
     "lemma": "Nariandos",
     "previous": "Nargum",
     "next": "Narienoi",
+    "redirect": "Naryandis 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1717
+        "start": 1717,
+        "end": 1717
       }
     ]
   },
@@ -3402,9 +3536,12 @@
     "lemma": "Narisci",
     "previous": "Narisbareis",
     "next": "Naristi (-ae)",
+    "redirect": "Naristi (-ae)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1717
+        "start": 1717,
+        "end": 1717
       }
     ]
   },
@@ -3445,9 +3582,12 @@
     "lemma": "Narkaios",
     "previous": "Narkaia",
     "next": "Narkasos",
+    "redirect": "Narkaia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1719
+        "start": 1719,
+        "end": 1719
       }
     ]
   },
@@ -3532,9 +3672,12 @@
     "lemma": "Narnakios",
     "previous": "Narmalis",
     "next": "Narnia",
+    "redirect": "Larnakios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1734
+        "start": 1734,
+        "end": 1734
       }
     ]
   },
@@ -3575,9 +3718,12 @@
     "lemma": "Narra",
     "previous": "Narona",
     "next": "Narraga",
+    "redirect": "Νάαρδα",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1755
+        "start": 1755,
+        "end": 1755
       }
     ]
   },
@@ -3596,9 +3742,12 @@
     "lemma": "Narsaios",
     "previous": "Narraga",
     "next": "Narseh",
+    "redirect": "Narses 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1756
+        "start": 1756,
+        "end": 1756
       }
     ]
   },
@@ -3606,9 +3755,12 @@
     "lemma": "Narseh",
     "previous": "Narsaios",
     "next": "Narses 1",
+    "redirect": "Narses 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1756
+        "start": 1756,
+        "end": 1756
       }
     ]
   },
@@ -3802,9 +3954,12 @@
     "lemma": "Narses 18",
     "previous": "Narses 17",
     "next": "Narta",
+    "redirect": "Nerseh",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1760
+        "start": 1760,
+        "end": 1760
       }
     ]
   },
@@ -3812,9 +3967,12 @@
     "lemma": "Narta",
     "previous": "Narses 18",
     "next": "Narthakion",
+    "redirect": "Νάαρδα",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1760
+        "start": 1760,
+        "end": 1760
       }
     ]
   },
@@ -3887,7 +4045,7 @@
   {
     "lemma": "Narthex 3",
     "previous": "Narthex 2",
-    "next": "Narulla",
+    "next": "Ναροῦλλα",
     "chapters": [
       {
         "start": 1772,
@@ -3896,19 +4054,22 @@
     ]
   },
   {
-    "lemma": "Narulla",
+    "lemma": "Ναροῦλλα",
     "previous": "Narthex 3",
     "next": "Naryandis 1",
-    "redirect": true,
+    "sort_key": "Narulla",
+    "redirect": "Nalloura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1772
+        "start": 1772,
+        "end": 1772
       }
     ]
   },
   {
     "lemma": "Naryandis 1",
-    "previous": "Narulla",
+    "previous": "Ναροῦλλα",
     "next": "Naryandis 2",
     "chapters": [
       {
@@ -3965,9 +4126,12 @@
     "lemma": "Narykion, Narykos",
     "previous": "Narykidas",
     "next": "Naryx",
+    "redirect": "Naryka, Naryx",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1776
+        "start": 1776,
+        "end": 1776
       }
     ]
   },
@@ -3975,9 +4139,12 @@
     "lemma": "Naryx",
     "previous": "Narykion, Narykos",
     "next": "Nasabath",
+    "redirect": "Naryka, Naryx",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1776
+        "start": 1776,
+        "end": 1776
       }
     ]
   },
@@ -4029,9 +4196,12 @@
     "lemma": "Nasava",
     "previous": "Nasarduma",
     "next": "Nasaudum",
+    "redirect": "Nasabath",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1779
+        "start": 1779,
+        "end": 1779
       }
     ]
   },
@@ -4039,9 +4209,12 @@
     "lemma": "Nasaudum",
     "previous": "Nasava",
     "next": "Nasbana",
+    "redirect": "Nasarduma",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1779
+        "start": 1779,
+        "end": 1779
       }
     ]
   },
@@ -4071,10 +4244,12 @@
     "lemma": "Nasennius 2",
     "previous": "Nasennius 1",
     "next": "Nashorn",
-    "redirect": true,
+    "redirect": "Nesennius Apollinaris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1780
+        "start": 1780,
+        "end": 1780
       }
     ]
   },
@@ -4256,11 +4431,14 @@
   },
   {
     "lemma": "Naso 2",
-    "previous": "...ale... Naso",
+    "previous": "Naso 1",
     "next": "Naso 3",
+    "redirect": "Aemilius 102a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1793
+        "start": 1793,
+        "end": 1793
       }
     ]
   },
@@ -4345,10 +4523,12 @@
     "lemma": "Nassunia",
     "previous": "Nassete",
     "next": "Nastae",
-    "redirect": true,
+    "redirect": "Nasunia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1794
+        "start": 1794,
+        "end": 1794
       }
     ]
   },
@@ -4356,9 +4536,12 @@
     "lemma": "Nastae",
     "previous": "Nassunia",
     "next": "Nastar",
+    "redirect": "Nastar",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1794
+        "start": 1794,
+        "end": 1794
       }
     ]
   },
@@ -4465,9 +4648,12 @@
     "lemma": "Natalis",
     "previous": "Natalicus",
     "next": "Natalis 1",
+    "redirect": "Genethlios hemera",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1799
+        "start": 1799,
+        "end": 1799
       }
     ]
   },
@@ -4552,9 +4738,12 @@
     "lemma": "Natalis 8",
     "previous": "Natalis 7",
     "next": "Natalis templi",
+    "redirect": "Natalicus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1800
+        "start": 1800,
+        "end": 1800
       }
     ]
   },
@@ -4606,9 +4795,12 @@
     "lemma": "Nateras",
     "previous": "Natembe",
     "next": "Nathabur",
+    "redirect": "Natiras",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1803
+        "start": 1803,
+        "end": 1803
       }
     ]
   },
@@ -4715,9 +4907,12 @@
     "lemma": "Natisio",
     "previous": "natis",
     "next": "Natiso",
+    "redirect": "Natiso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1806
+        "start": 1806,
+        "end": 1806
       }
     ]
   },
@@ -4736,9 +4931,12 @@
     "lemma": "Natissa",
     "previous": "Natiso",
     "next": "Nato",
+    "redirect": "Natiso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1810
+        "start": 1810,
+        "end": 1810
       }
     ]
   },
@@ -4812,9 +5010,12 @@
     "lemma": "Natyras",
     "previous": "Naturgefühl 2",
     "next": "Nava",
+    "redirect": "Natiras",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1885
+        "start": 1885,
+        "end": 1885
       }
     ]
   },
@@ -4869,7 +5070,7 @@
   {
     "lemma": "Nauaris",
     "previous": "Nauarchos, Nauarchie",
-    "next": "Nauaroi",
+    "next": "Ναύαροι",
     "chapters": [
       {
         "start": 1896,
@@ -4878,19 +5079,22 @@
     ]
   },
   {
-    "lemma": "Nauaroi",
+    "lemma": "Ναύαροι",
     "previous": "Nauaris",
     "next": "Nauaron",
-    "redirect": true,
+    "sort_key": "Nauaroi",
+    "redirect": "Neuroi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1896
+        "start": 1896,
+        "end": 1896
       }
     ]
   },
   {
     "lemma": "Nauaron",
-    "previous": "Nauaroi",
+    "previous": "Ναύαροι",
     "next": "Navarri",
     "chapters": [
       {
@@ -4914,9 +5118,12 @@
     "lemma": "Naubaron",
     "previous": "Navarri",
     "next": "Naubolos 1",
+    "redirect": "Nauaron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1897
+        "start": 1897,
+        "end": 1897
       }
     ]
   },
@@ -5100,9 +5307,12 @@
     "lemma": "Navillus",
     "previous": "Nauila (-oi?)",
     "next": "Navilubio",
+    "redirect": "Antonius 82",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1932
+        "start": 1932,
+        "end": 1932
       }
     ]
   },
@@ -5186,10 +5396,12 @@
     "lemma": "Naukleros 2",
     "previous": "Naukleros 1",
     "next": "Naukraria, Naukraros",
-    "redirect": true,
+    "redirect": "Naucerus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1938
+        "start": 1938,
+        "end": 1938
       }
     ]
   },
@@ -5285,9 +5497,12 @@
     "lemma": "Naukydes 1",
     "previous": "Naukratis",
     "next": "Naukydes 2",
+    "redirect": "Nausikydes 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1966
+        "start": 1966,
+        "end": 1966
       }
     ]
   },
@@ -5328,9 +5543,12 @@
     "lemma": "Naulibus",
     "previous": "Naulibis",
     "next": "Naulobatus",
+    "redirect": "Naulibis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1968
+        "start": 1968,
+        "end": 1968
       }
     ]
   },
@@ -5481,9 +5699,12 @@
     "lemma": "Nauos",
     "previous": "Nauna",
     "next": "Naupaktia epe",
+    "redirect": "Nautis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1975
+        "start": 1975,
+        "end": 1975
       }
     ]
   },
@@ -5634,9 +5855,12 @@
     "lemma": "Nausidame",
     "previous": "Nausias",
     "next": "Nausigenes",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2016
+        "start": 2016,
+        "end": 2016
       }
     ]
   },
@@ -5666,9 +5890,12 @@
     "lemma": "Nausikleia",
     "previous": "Nausikaa",
     "next": "Nausikles",
+    "redirect": "Bosporos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2019
+        "start": 2019,
+        "end": 2019
       }
     ]
   },
@@ -5731,9 +5958,12 @@
     "lemma": "Nausimachion",
     "previous": "Nausikydes 3",
     "next": "Nausimedon",
+    "redirect": "Bosporos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2021
+        "start": 2021,
+        "end": 2021
       }
     ]
   },
@@ -5807,9 +6037,12 @@
     "lemma": "Nausithoos 2",
     "previous": "Nausithoos 1",
     "next": "Nausithoos 3",
+    "redirect": "Nausinoos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2027
+        "start": 2027,
+        "end": 2027
       }
     ]
   },
@@ -6178,7 +6411,7 @@
   {
     "lemma": "Naxuana",
     "previous": "Naxos 5",
-    "next": "Nazaba",
+    "next": "Νάζαβα",
     "chapters": [
       {
         "start": 2095,
@@ -6187,18 +6420,22 @@
     ]
   },
   {
-    "lemma": "Nazaba",
+    "lemma": "Νάζαβα",
     "previous": "Naxuana",
     "next": "Nazada",
+    "sort_key": "Nazaba",
+    "redirect": "Nazala",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2095
+        "start": 2095,
+        "end": 2095
       }
     ]
   },
   {
     "lemma": "Nazada",
-    "previous": "Nazaba",
+    "previous": "Νάζαβα",
     "next": "Nazala",
     "chapters": [
       {
@@ -6221,7 +6458,7 @@
   {
     "lemma": "Nazaleon Theos Megas",
     "previous": "Nazala",
-    "next": "Nazama",
+    "next": "Νάζαμα",
     "chapters": [
       {
         "start": 2096,
@@ -6230,28 +6467,36 @@
     ]
   },
   {
-    "lemma": "Nazama",
+    "lemma": "Νάζαμα",
     "previous": "Nazaleon Theos Megas",
-    "next": "Nazara",
+    "next": "Νάζαρα",
+    "sort_key": "Nazama",
+    "redirect": "Nazala",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2096
+        "start": 2096,
+        "end": 2096
       }
     ]
   },
   {
-    "lemma": "Nazara",
-    "previous": "Nazama",
+    "lemma": "Νάζαρα",
+    "previous": "Νάζαμα",
     "next": "Nazaratos",
+    "sort_key": "Nazara",
+    "redirect": "Nazareth",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2096
+        "start": 2096,
+        "end": 2096
       }
     ]
   },
   {
     "lemma": "Nazaratos",
-    "previous": "Nazara",
+    "previous": "Νάζαρα",
     "next": "Nazares",
     "chapters": [
       {
@@ -6352,9 +6597,12 @@
     "lemma": "Nea(i) 2",
     "previous": "Nea(i) 1",
     "next": "Nea Kome 1",
+    "redirect": "Nea Kome 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2102
+        "start": 2102,
+        "end": 2102
       }
     ]
   },
@@ -6538,16 +6786,19 @@
     "lemma": "Neaiton",
     "previous": "Neaira 8",
     "next": "Nealkes",
+    "redirect": "Neton 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2105
+        "start": 2105,
+        "end": 2105
       }
     ]
   },
   {
     "lemma": "Nealkes",
     "previous": "Neaiton",
-    "next": "Neiathos",
+    "next": "Neaithos",
     "chapters": [
       {
         "start": 2105,
@@ -6556,18 +6807,21 @@
     ]
   },
   {
-    "lemma": "Neiathos",
+    "lemma": "Neaithos",
     "previous": "Nealkes",
     "next": "Neandr(e)ia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2105
+        "start": 2105,
+        "end": 2105
       }
     ]
   },
   {
     "lemma": "Neandr(e)ia",
-    "previous": "Neiathos",
+    "previous": "Neaithos",
     "next": "Neandris",
     "chapters": [
       {
@@ -6580,9 +6834,12 @@
     "lemma": "Neandris",
     "previous": "Neandr(e)ia",
     "next": "Neandros 1",
+    "redirect": "Neandr(e)ia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2108
+        "start": 2108,
+        "end": 2108
       }
     ]
   },
@@ -6799,9 +7056,12 @@
     "lemma": "Neapolis 16",
     "previous": "Neapolis 15",
     "next": "Neapolis 17",
+    "redirect": "Phazemon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2127
+        "start": 2127,
+        "end": 2127
       }
     ]
   },
@@ -7083,9 +7343,12 @@
     "lemma": "Nebo",
     "previous": "Nebisoci",
     "next": "Nebres",
+    "redirect": "Nabau 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2155
+        "start": 2155,
+        "end": 2155
       }
     ]
   },
@@ -7115,9 +7378,12 @@
     "lemma": "Nebris",
     "previous": "Nebridai",
     "next": "Nebrissa",
+    "redirect": "Halone 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2156
+        "start": 2156,
+        "end": 2156
       }
     ]
   },
@@ -7125,9 +7391,12 @@
     "lemma": "Nebrissa",
     "previous": "Nebris",
     "next": "Nebritis",
+    "redirect": "Nabrissa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2156
+        "start": 2156,
+        "end": 2156
       }
     ]
   },
@@ -7201,9 +7470,12 @@
     "lemma": "Nechaus",
     "previous": "Necal",
     "next": "Necheila",
+    "redirect": "Nechepso",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2160
+        "start": 2160,
+        "end": 2160
       }
     ]
   },
@@ -7343,9 +7615,12 @@
     "lemma": "Nedisso",
     "previous": "Nedinum",
     "next": "Neditae",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2175
+        "start": 2175,
+        "end": 2175
       }
     ]
   },
@@ -7397,9 +7672,12 @@
     "lemma": "Nee",
     "previous": "Nedymnos",
     "next": "Neekleraba",
+    "redirect": "Nea Kome 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2176
+        "start": 2176,
+        "end": 2176
       }
     ]
   },
@@ -7418,9 +7696,12 @@
     "lemma": "Neeton",
     "previous": "Neekleraba",
     "next": "Nefasti dies",
+    "redirect": "Neton 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2176
+        "start": 2176,
+        "end": 2176
       }
     ]
   },
@@ -7428,9 +7709,12 @@
     "lemma": "Nefasti dies",
     "previous": "Neeton",
     "next": "Negeta",
+    "redirect": "Fasti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2176
+        "start": 2176,
+        "end": 2176
       }
     ]
   },
@@ -7449,9 +7733,12 @@
     "lemma": "Negidius",
     "previous": "Negeta",
     "next": "Negla",
+    "redirect": "A. Agerius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2177
+        "start": 2177,
+        "end": 2177
       }
     ]
   },
@@ -7485,9 +7772,12 @@
     "lemma": "Negra",
     "previous": "Negligemela",
     "next": "Negrana",
+    "redirect": "Nagara 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2177
+        "start": 2177,
+        "end": 2177
       }
     ]
   },
@@ -7495,9 +7785,12 @@
     "lemma": "Negrana",
     "previous": "Negra",
     "next": "Nehalennia",
+    "redirect": "Nagara 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2177
+        "start": 2177,
+        "end": 2177
       }
     ]
   },
@@ -7571,10 +7864,12 @@
     "lemma": "Neikaia 2",
     "previous": "Neikaia 1",
     "next": "Neikos",
-    "redirect": true,
+    "redirect": "Nikaia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2183
+        "start": 2183,
+        "end": 2183
       }
     ]
   },
@@ -7746,7 +8041,7 @@
   {
     "lemma": "Neith",
     "previous": "Neisos",
-    "next": "Nekla",
+    "next": "Νέκλα",
     "chapters": [
       {
         "start": 2189,
@@ -7755,19 +8050,22 @@
     ]
   },
   {
-    "lemma": "Nekla",
+    "lemma": "Νέκλα",
     "previous": "Neith",
     "next": "Nekromantie",
-    "redirect": true,
+    "sort_key": "Nekla",
+    "redirect": "Negla",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2218
+        "start": 2218,
+        "end": 2218
       }
     ]
   },
   {
     "lemma": "Nekromantie",
-    "previous": "Nekla",
+    "previous": "Νέκλα",
     "next": "Nekropolis",
     "chapters": [
       {
@@ -7901,10 +8199,12 @@
     "lemma": "Nektiberes",
     "previous": "Nektarios 8",
     "next": "Nekydaimon",
-    "redirect": true,
+    "redirect": "Nectiberes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2240
+        "start": 2240,
+        "end": 2240
       }
     ]
   },
@@ -7923,10 +8223,12 @@
     "lemma": "Nekyomanteia",
     "previous": "Nekydaimon",
     "next": "Nekysia",
-    "redirect": true,
+    "redirect": "Nekromantie",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2266
+        "start": 2266,
+        "end": 2266
       }
     ]
   },
@@ -8077,10 +8379,12 @@
     "lemma": "Nelia",
     "previous": "Neli",
     "next": "Nelkynda",
-    "redirect": true,
+    "redirect": "Neleia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2281
+        "start": 2281,
+        "end": 2281
       }
     ]
   },
@@ -8330,10 +8634,12 @@
     "lemma": "Nemesianus 1",
     "previous": "Nemeseia 2",
     "next": "Nemesianus 2",
-    "redirect": true,
+    "redirect": "Aurelius 169",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2329
+        "start": 2329,
+        "end": 2329
       }
     ]
   },
@@ -8374,9 +8680,12 @@
     "lemma": "Nemesianus 5",
     "previous": "Nemesianus 4",
     "next": "Nemesianus 6",
+    "redirect": "Nemesion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2337
+        "start": 2337,
+        "end": 2337
       }
     ]
   },
@@ -8417,10 +8726,12 @@
     "lemma": "Nemesion 2",
     "previous": "Nemesion 1",
     "next": "Nemesios",
-    "redirect": true,
+    "redirect": "Nemesius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2338
+        "start": 2338,
+        "end": 2338
       }
     ]
   },
@@ -8429,9 +8740,11 @@
     "previous": "Nemesion 2",
     "next": "Nemesis",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2338
+        "start": 2338,
+        "end": 2338
       }
     ]
   },
@@ -8483,10 +8796,12 @@
     "lemma": "Nemesius 4",
     "previous": "Nemesius 3",
     "next": "Nemesius 5",
-    "redirect": true,
+    "redirect": "Olympios 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2381
+        "start": 2381,
+        "end": 2381
       }
     ]
   },
@@ -8582,10 +8897,12 @@
     "lemma": "Nemetiales",
     "previous": "Nemetes",
     "next": "Nemetobriga",
-    "redirect": true,
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2385
+        "start": 2385,
+        "end": 2385
       }
     ]
   },
@@ -8604,10 +8921,12 @@
     "lemma": "Nemetocenna",
     "previous": "Nemetobriga",
     "next": "Nemeton",
-    "redirect": true,
+    "redirect": "Nemetacum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2385
+        "start": 2385,
+        "end": 2385
       }
     ]
   },
@@ -8615,10 +8934,12 @@
     "lemma": "Nemeton",
     "previous": "Nemetocenna",
     "next": "Nemetona",
-    "redirect": true,
+    "redirect": "Medionemeton",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2385
+        "start": 2385,
+        "end": 2385
       }
     ]
   },
@@ -8692,10 +9013,12 @@
     "lemma": "Nemorius",
     "previous": "Nemorensis lacus",
     "next": "Nemossos",
-    "redirect": true,
+    "redirect": "Naemorius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2389
+        "start": 2389,
+        "end": 2389
       }
     ]
   },
@@ -8725,10 +9048,12 @@
     "lemma": "Nemus 1",
     "previous": "Nemota",
     "next": "Nemus 2",
-    "redirect": true,
+    "redirect": "Nemorensis lacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2390
+        "start": 2390,
+        "end": 2390
       }
     ]
   },
@@ -8791,10 +9116,12 @@
     "lemma": "Nenika",
     "previous": "Nenia",
     "next": "Nenius",
-    "redirect": true,
+    "redirect": "Ninika",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2393
+        "start": 2393,
+        "end": 2393
       }
     ]
   },
@@ -8802,10 +9129,12 @@
     "lemma": "Nenius",
     "previous": "Nenika",
     "next": "Nennic(i, -ae)",
-    "redirect": true,
+    "redirect": "Nen(o)laus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2393
+        "start": 2393,
+        "end": 2393
       }
     ]
   },
@@ -8813,10 +9142,12 @@
     "lemma": "Nennic(i, -ae)",
     "previous": "Nenius",
     "next": "Nen(o)laus",
-    "redirect": true,
+    "redirect": "Nemnici(i, -ae)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2393
+        "start": 2393,
+        "end": 2393
       }
     ]
   },
@@ -8857,10 +9188,12 @@
     "lemma": "Neobigastes",
     "previous": "Nentidava",
     "next": "Neobule",
-    "redirect": true,
+    "redirect": "Nebiogastes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2394
+        "start": 2394,
+        "end": 2394
       }
     ]
   },
@@ -8868,10 +9201,12 @@
     "lemma": "Neobule",
     "previous": "Neobigastes",
     "next": "Neoclaudiopolis",
-    "redirect": true,
+    "redirect": "Lykambes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2394
+        "start": 2394,
+        "end": 2394
       }
     ]
   },
@@ -8890,10 +9225,12 @@
     "lemma": "Neocydes",
     "previous": "Neoclaudiopolis",
     "next": "Neodamodeis",
-    "redirect": true,
+    "redirect": "Claudius 243",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2396
+        "start": 2396,
+        "end": 2396
       }
     ]
   },
@@ -9418,10 +9755,12 @@
     "lemma": "Neopolis 3",
     "previous": "Neopolis 2",
     "next": "Neoptana",
-    "redirect": true,
+    "redirect": "Neapolis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2440
+        "start": 2440,
+        "end": 2440
       }
     ]
   },
@@ -9748,10 +10087,12 @@
     "lemma": "Nepe",
     "previous": "Neothalides",
     "next": "Nepeion, pedion",
-    "redirect": true,
+    "redirect": "Nepet",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2480
+        "start": 2480,
+        "end": 2480
       }
     ]
   },
@@ -9769,7 +10110,7 @@
   {
     "lemma": "Nepet",
     "previous": "Nepeion, pedion",
-    "next": "Neut",
+    "next": "Νεούτ",
     "chapters": [
       {
         "start": 2480,
@@ -9778,24 +10119,29 @@
     ]
   },
   {
-    "lemma": "Neut",
+    "lemma": "Νεούτ",
     "previous": "Nepet",
     "next": "Nepete",
-    "redirect": true,
+    "sort_key": "Neut",
+    "redirect": "Νεσύτ",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2480
+        "start": 2480,
+        "end": 2480
       }
     ]
   },
   {
     "lemma": "Nepete",
-    "previous": "Neut",
+    "previous": "Νεούτ",
     "next": "Nephalia 1",
-    "redirect": true,
+    "redirect": "Nepet",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2481
+        "start": 2481,
+        "end": 2481
       }
     ]
   },
@@ -9902,10 +10248,12 @@
     "lemma": "Nepheros",
     "previous": "Nepheris",
     "next": "Nepherses",
-    "redirect": true,
+    "redirect": "Nopheros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2492
+        "start": 2492,
+        "end": 2492
       }
     ]
   },
@@ -9935,17 +10283,19 @@
     "lemma": "Nephrommis",
     "previous": "Nephremmis",
     "next": "Nephsameemana",
-    "redirect": true,
+    "redirect": "Nephremmis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2494
+        "start": 2494,
+        "end": 2494
       }
     ]
   },
   {
     "lemma": "Nephsameemana",
     "previous": "Nephrommis",
-    "next": "Nephtho",
+    "next": "Νεφθώ",
     "chapters": [
       {
         "start": 2494,
@@ -9954,19 +10304,22 @@
     ]
   },
   {
-    "lemma": "Nephtho",
+    "lemma": "Νεφθώ",
     "previous": "Nephsameemana",
     "next": "Nephthys",
-    "redirect": true,
+    "sort_key": "Nephtho",
+    "redirect": "Naphtho",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2495
+        "start": 2495,
+        "end": 2495
       }
     ]
   },
   {
     "lemma": "Nephthys",
-    "previous": "Nephtho",
+    "previous": "Νεφθώ",
     "next": "Nepista",
     "chapters": [
       {
@@ -10188,10 +10541,12 @@
     "lemma": "Nepotilla",
     "previous": "Nepotianus 9",
     "next": "Neptunalios",
-    "redirect": true,
+    "redirect": "Iulius 582",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2514
+        "start": 2514,
+        "end": 2514
       }
     ]
   },
@@ -10199,10 +10554,12 @@
     "lemma": "Neptunalios",
     "previous": "Nepotilla",
     "next": "Neptunia",
-    "redirect": true,
+    "redirect": "Nepualios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2514
+        "start": 2514,
+        "end": 2514
       }
     ]
   },
@@ -10221,10 +10578,12 @@
     "lemma": "Neptunianus",
     "previous": "Neptunia",
     "next": "Neptunis",
-    "redirect": true,
+    "redirect": "Nepualios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2514
+        "start": 2514,
+        "end": 2514
       }
     ]
   },
@@ -10276,10 +10635,12 @@
     "lemma": "Nepunis",
     "previous": "Nepualios",
     "next": "Nequinium",
-    "redirect": true,
+    "redirect": "Neptunis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2537
+        "start": 2537,
+        "end": 2537
       }
     ]
   },
@@ -10287,10 +10648,12 @@
     "lemma": "Nequinium",
     "previous": "Nepunis",
     "next": "Ner...",
-    "redirect": true,
+    "redirect": "Narnia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2537
+        "start": 2537,
+        "end": 2537
       }
     ]
   },
@@ -10375,10 +10738,12 @@
     "lemma": "Neratius 2",
     "previous": "Neratius 1",
     "next": "Neratius 3",
-    "redirect": true,
+    "redirect": "Marcellus 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2541
+        "start": 2541,
+        "end": 2541
       }
     ]
   },
@@ -10551,10 +10916,12 @@
     "lemma": "Neratius 18",
     "previous": "Neratius 17",
     "next": "Neratius 19",
-    "redirect": true,
+    "redirect": "Anteius 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2552
+        "start": 2552,
+        "end": 2552
       }
     ]
   },
@@ -10606,10 +10973,12 @@
     "lemma": "Neratius 23",
     "previous": "Neratius 22",
     "next": "Nereae",
-    "redirect": true,
+    "redirect": "Naeratius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2553
+        "start": 2553,
+        "end": 2553
       }
     ]
   },

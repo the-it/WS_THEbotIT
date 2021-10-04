@@ -58,7 +58,7 @@ class RowBearbeitungen(RowBasic):
 class RowSeitenstatistik(RowBasic):
     def build_row(self):
         self.logger.info('Searchstrings for genre')
-        list_sites_stats = list()
+        list_sites_stats = []
         list_sites_stats.append(self.get_all_sites())
         list_sites_stats.append(
             self.get_sites_in_cat(['Fertig', 'Korrigiert', 'Unkorrigiert', 'Unvollständig',

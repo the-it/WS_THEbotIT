@@ -1,11 +1,14 @@
 [
   {
     "lemma": "Priscilianus",
+    "previous": "Prisca 5",
     "next": "Priscilla 1",
-    "redirect": true,
+    "redirect": "Priscillianus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1
+        "start": 1,
+        "end": 1
       }
     ]
   },
@@ -114,9 +117,11 @@
     "previous": "Priscillianus 4",
     "next": "Priscinus",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2
+        "start": 2,
+        "end": 2
       }
     ]
   },
@@ -580,7 +585,7 @@
     "lemma": "Priscus 39",
     "previous": "Priscus 38",
     "next": "Priscus 40",
-    "redirect": true,
+    "redirect": "Valerianus 20",
     "proof_read": 3,
     "chapters": [
       {
@@ -683,10 +688,12 @@
     "lemma": "Priscus 48",
     "previous": "Priscus 47",
     "next": "Priscu taberna",
-    "redirect": true,
+    "redirect": "Fulcinius 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 11
+        "start": 11,
+        "end": 11
       }
     ]
   },
@@ -751,9 +758,12 @@
     "lemma": "Pristis",
     "previous": "Pristeus",
     "next": "Pritona",
+    "redirect": "Sexantaprista",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 13
+        "start": 13,
+        "end": 13
       }
     ]
   },
@@ -795,9 +805,12 @@
     "lemma": "Privata",
     "previous": "Priumne",
     "next": "Privatianus 1",
+    "redirect": "Pontius 67",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 14
+        "start": 14,
+        "end": 14
       }
     ]
   },
@@ -939,7 +952,7 @@
   {
     "lemma": "Proagon",
     "previous": "Proagogeia",
-    "next": "Proagogos",
+    "next": "Προάγορος",
     "chapters": [
       {
         "start": 29,
@@ -949,18 +962,22 @@
     ]
   },
   {
-    "lemma": "Proagogos",
+    "lemma": "Προάγορος",
     "previous": "Proagon",
     "next": "Proagoras",
+    "sort_key": "Proagogos",
+    "redirect": "proegoros, proagoros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 30
+        "start": 30,
+        "end": 30
       }
     ]
   },
   {
     "lemma": "Proagoras",
-    "previous": "Proagogos",
+    "previous": "Προάγορος",
     "next": "Proainos",
     "chapters": [
       {
@@ -1052,9 +1069,12 @@
     "lemma": "Proarna",
     "previous": "Proarktouria",
     "next": "Proastianoi theoi",
+    "redirect": "Proerna 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 33
+        "start": 33,
+        "end": 33
       }
     ]
   },
@@ -1264,10 +1284,12 @@
     "lemma": "Probianus 1",
     "previous": "Probatus",
     "next": "Probianus 2",
-    "redirect": true,
+    "redirect": "Anicius 36",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 40
+        "start": 40,
+        "end": 40
       }
     ]
   },
@@ -1486,7 +1508,7 @@
   {
     "lemma": "Probuleuma",
     "previous": "Probolos",
-    "next": "Probulos",
+    "next": "πρόβουλος",
     "chapters": [
       {
         "start": 48,
@@ -1496,18 +1518,22 @@
     ]
   },
   {
-    "lemma": "Probulos",
+    "lemma": "πρόβουλος",
     "previous": "Probuleuma",
     "next": "Probus 1",
+    "sort_key": "Probulos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 55
+        "start": 55,
+        "end": 55
       }
     ]
   },
   {
     "lemma": "Probus 1",
-    "previous": "Probulos",
+    "previous": "πρόβουλος",
     "next": "Probus 2",
     "chapters": [
       {
@@ -1543,10 +1569,12 @@
     "lemma": "Probus 4",
     "previous": "Probus 3",
     "next": "Probus 5",
-    "redirect": true,
+    "redirect": "Anicius 35",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 56
+        "start": 56,
+        "end": 56
       }
     ]
   },
@@ -1588,9 +1616,12 @@
     "lemma": "Probus 8",
     "previous": "Probus 7",
     "next": "Probus 9",
+    "redirect": "Alypios 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 57
+        "start": 57,
+        "end": 57
       }
     ]
   },
@@ -1598,9 +1629,12 @@
     "lemma": "Probus 9",
     "previous": "Probus 8",
     "next": "Probus 10",
+    "redirect": "Anicius 42",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 57
+        "start": 57,
+        "end": 57
       }
     ]
   },
@@ -1664,10 +1698,12 @@
     "lemma": "Probus 15",
     "previous": "Probus 14",
     "next": "Probus 16",
-    "redirect": true,
+    "redirect": "Orestes 13",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 58
+        "start": 58,
+        "end": 58
       }
     ]
   },
@@ -1709,10 +1745,12 @@
     "lemma": "Probus 19",
     "previous": "Probus 18",
     "next": "Probus 20",
-    "redirect": true,
+    "redirect": "Magnus 25",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 59
+        "start": 59,
+        "end": 59
       }
     ]
   },
@@ -1798,9 +1836,12 @@
     "lemma": "Probus 27",
     "previous": "Probus 26",
     "next": "Proca(s) (Silvius)",
+    "redirect": "Aemilius 121",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 64
+        "start": 64,
+        "end": 64
       }
     ]
   },
@@ -1841,7 +1882,7 @@
   {
     "lemma": "Processus 2",
     "previous": "Processus 1",
-    "next": "Prochaireteria",
+    "next": "Προχαιρητήρια",
     "chapters": [
       {
         "start": 65,
@@ -1850,18 +1891,22 @@
     ]
   },
   {
-    "lemma": "Prochaireteria",
+    "lemma": "Προχαιρητήρια",
     "previous": "Processus 2",
     "next": "Procharisia",
+    "sort_key": "Prochaireteria",
+    "redirect": "Procharisteria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 65
+        "start": 65,
+        "end": 65
       }
     ]
   },
   {
     "lemma": "Procharisia",
-    "previous": "Prochaireteria",
+    "previous": "Προχαιρητήρια",
     "next": "Procharisteria",
     "chapters": [
       {
@@ -1909,9 +1954,11 @@
     "previous": "Prochyta 1",
     "next": "Procilius 1",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 68
+        "start": 68,
+        "end": 68
       }
     ]
   },
@@ -1953,9 +2000,12 @@
     "lemma": "Procilla",
     "previous": "Procilius 3",
     "next": "Procillus",
+    "redirect": "Iulius 589",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 69
+        "start": 69,
+        "end": 69
       }
     ]
   },
@@ -1963,9 +2013,12 @@
     "lemma": "Procillus",
     "previous": "Procilla",
     "next": "Procincta classis",
+    "redirect": "Valerius 368",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 69
+        "start": 69,
+        "end": 69
       }
     ]
   },
@@ -1984,9 +2037,12 @@
     "lemma": "Procla",
     "previous": "Procincta classis",
     "next": "Proclamatio ad libertatem",
+    "redirect": "Procula 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 69
+        "start": 69,
+        "end": 69
       }
     ]
   },
@@ -2106,9 +2162,12 @@
     "lemma": "Proclus",
     "previous": "Proclinus 3",
     "next": "Proconsul",
+    "redirect": "Proculus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 71
+        "start": 71,
+        "end": 71
       }
     ]
   },
@@ -2116,9 +2175,12 @@
     "lemma": "Proconsul",
     "previous": "Proclus",
     "next": "Procopius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 71
+        "start": 71,
+        "end": 71
       }
     ]
   },
@@ -2126,9 +2188,12 @@
     "lemma": "Procopius",
     "previous": "Proconsul",
     "next": "Procubitores",
+    "redirect": "Prokopios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 71
+        "start": 71,
+        "end": 71
       }
     ]
   },
@@ -2801,9 +2866,12 @@
     "lemma": "Procurator",
     "previous": "Proculus 41",
     "next": "Procus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 82
+        "start": 82,
+        "end": 82
       }
     ]
   },
@@ -2835,9 +2903,12 @@
     "lemma": "Prodictator",
     "previous": "Procusae",
     "next": "Prodikos 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 84
+        "start": 84,
+        "end": 84
       }
     ]
   },
@@ -2891,9 +2962,12 @@
     "lemma": "Proditio",
     "previous": "Prodikos 4",
     "next": "Proditus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 89
+        "start": 89,
+        "end": 89
       }
     ]
   },
@@ -2911,7 +2985,7 @@
   {
     "lemma": "Prodomeis theoi",
     "previous": "Proditus",
-    "next": "Prodomia",
+    "next": "Προδομία",
     "chapters": [
       {
         "start": 89,
@@ -2920,18 +2994,22 @@
     ]
   },
   {
-    "lemma": "Prodomia",
+    "lemma": "Προδομία",
     "previous": "Prodomeis theoi",
     "next": "Prodomos",
+    "sort_key": "Prodomia",
+    "redirect": "Prodromia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 89
+        "start": 89,
+        "end": 89
       }
     ]
   },
   {
     "lemma": "Prodomos",
-    "previous": "Prodomia",
+    "previous": "Προδομία",
     "next": "Prodoros",
     "chapters": [
       {
@@ -3027,9 +3105,11 @@
     "previous": "prodromos 1",
     "next": "Proechios",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 104
+        "start": 104,
+        "end": 104
       }
     ]
   },
@@ -3284,9 +3364,12 @@
     "lemma": "Progasos",
     "previous": "Progaseia",
     "next": "Progastridion",
+    "redirect": "Progaseia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 113
+        "start": 113,
+        "end": 113
       }
     ]
   },
@@ -3339,9 +3422,12 @@
     "lemma": "Prohaeresius",
     "previous": "Progonoi theoi",
     "next": "Prohedria",
+    "redirect": "Proairesios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 114
+        "start": 114,
+        "end": 114
       }
     ]
   },
@@ -4207,9 +4293,12 @@
     "lemma": "Proklos 8ff.",
     "previous": "Proklos 7",
     "next": "Prokne 1",
+    "redirect": "Proculus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 247
+        "start": 247,
+        "end": 247
       }
     ]
   },
@@ -4566,9 +4655,12 @@
     "lemma": "Prokropos",
     "previous": "Prokris 3",
     "next": "Prokrustes",
+    "redirect": "Πρόκλοπος",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 609
+        "start": 609,
+        "end": 609
       }
     ]
   },
@@ -4714,9 +4806,12 @@
     "lemma": "Promache",
     "previous": "Prologos",
     "next": "Promacheia",
+    "redirect": "Pronome",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 641
+        "start": 641,
+        "end": 641
       }
     ]
   },
@@ -4735,9 +4830,12 @@
     "lemma": "Promachidas",
     "previous": "Promacheia",
     "next": "Promachius",
+    "redirect": "Promathidas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 641
+        "start": 641,
+        "end": 641
       }
     ]
   },
@@ -4981,9 +5079,12 @@
     "lemma": "Promachos 20",
     "previous": "Promachos 19a-c",
     "next": "Promaea",
+    "redirect": "Promathos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 646
+        "start": 646,
+        "end": 646
       }
     ]
   },
@@ -4991,9 +5092,12 @@
     "lemma": "Promaea",
     "previous": "Promachos 20",
     "next": "Promalanges",
+    "redirect": "Promea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 646
+        "start": 646,
+        "end": 646
       }
     ]
   },
@@ -5024,9 +5128,12 @@
     "lemma": "Promantheia",
     "previous": "Promantheus",
     "next": "Promantis 1",
+    "redirect": "Prometheia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 647
+        "start": 647,
+        "end": 647
       }
     ]
   },
@@ -5079,9 +5186,12 @@
     "lemma": "Promathion",
     "previous": "Promathidas",
     "next": "Prome",
+    "redirect": "Promathidas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 650
+        "start": 650,
+        "end": 650
       }
     ]
   },
@@ -5236,9 +5346,12 @@
     "lemma": "Prometheus 2-5",
     "previous": "Prometheus",
     "next": "Promethion",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 730
+        "start": 730,
+        "end": 730
       }
     ]
   },
@@ -5256,7 +5369,7 @@
   {
     "lemma": "Promethos",
     "previous": "Promethion",
-    "next": "Prometretai",
+    "next": "προμετρηταί",
     "chapters": [
       {
         "start": 730,
@@ -5265,18 +5378,22 @@
     ]
   },
   {
-    "lemma": "Prometretai",
+    "lemma": "προμετρηταί",
     "previous": "Promethos",
     "next": "Promeus",
+    "sort_key": "Prometretai",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 730
+        "start": 730,
+        "end": 730
       }
     ]
   },
   {
     "lemma": "Promeus",
-    "previous": "Prometretai",
+    "previous": "προμετρηταί",
     "next": "Promitor",
     "chapters": [
       {
@@ -5324,9 +5441,12 @@
     "lemma": "Promnesos",
     "previous": "Promne",
     "next": "Promolus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 732
+        "start": 732,
+        "end": 732
       }
     ]
   },
@@ -5446,7 +5566,7 @@
   {
     "lemma": "Promylaia",
     "previous": "Promulsis",
-    "next": "Promylios",
+    "next": "Προμύλιος",
     "chapters": [
       {
         "start": 736,
@@ -5455,18 +5575,22 @@
     ]
   },
   {
-    "lemma": "Promylios",
+    "lemma": "Προμύλιος",
     "previous": "Promylaia",
     "next": "Pron",
+    "sort_key": "Promylios",
+    "redirect": "Promylaia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 736
+        "start": 736,
+        "end": 736
       }
     ]
   },
   {
     "lemma": "Pron",
-    "previous": "Promylios",
+    "previous": "Προμύλιος",
     "next": "Pronai",
     "chapters": [
       {
@@ -5592,9 +5716,12 @@
     "lemma": "Proneia",
     "previous": "Pronax",
     "next": "Pronektos",
+    "redirect": "Pronoe 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 741
+        "start": 741,
+        "end": 741
       }
     ]
   },
@@ -5625,9 +5752,13 @@
     "lemma": "Proneos 2",
     "previous": "Proneos 1",
     "next": "Pronesion",
+    "redirect": "Proneus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 742
+        "start": 742,
+        "end": 742,
+        "author": "Hans v. Geisau."
       }
     ]
   },
@@ -5635,9 +5766,12 @@
     "lemma": "Pronesion",
     "previous": "Proneos 2",
     "next": "Pronesos 1",
+    "redirect": "Preietos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 742
+        "start": 742,
+        "end": 742
       }
     ]
   },
@@ -5667,9 +5801,12 @@
     "lemma": "Pronetios",
     "previous": "Pronesos 2",
     "next": "Proneus",
+    "redirect": "Preietos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 742
+        "start": 742,
+        "end": 742
       }
     ]
   },
@@ -6024,9 +6161,13 @@
     "lemma": "Pronoos, Pronus 6",
     "previous": "Pronoos, Pronus 5",
     "next": "Pronopia, Pronopioi",
+    "redirect": "Pronoia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 749
+        "start": 749,
+        "end": 749,
+        "author": "Hans v. Geisau."
       }
     ]
   },
@@ -6102,9 +6243,12 @@
     "lemma": "Prooimion",
     "previous": "Pronuba",
     "next": "Proopsios",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 756
+        "start": 756,
+        "end": 756
       }
     ]
   },
@@ -6428,9 +6572,12 @@
     "lemma": "Propoitos",
     "previous": "Propoitides",
     "next": "Pro poleos",
+    "redirect": "Propoitides",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 827
+        "start": 827,
+        "end": 827
       }
     ]
   },
@@ -6484,9 +6631,12 @@
     "lemma": "Propontis",
     "previous": "Propompos",
     "next": "Propraetor",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 832
+        "start": 832,
+        "end": 832
       }
     ]
   },
@@ -6494,9 +6644,12 @@
     "lemma": "Propraetor",
     "previous": "Propontis",
     "next": "propugnaculum",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 832
+        "start": 832,
+        "end": 832
       }
     ]
   },
@@ -6595,7 +6748,7 @@
   {
     "lemma": "Prora",
     "previous": "Proquaestor",
-    "next": "Prorates",
+    "next": "Πρωράτης",
     "chapters": [
       {
         "start": 838,
@@ -6604,18 +6757,22 @@
     ]
   },
   {
-    "lemma": "Prorates",
+    "lemma": "Πρωράτης",
     "previous": "Prora",
     "next": "Proreta",
+    "sort_key": "Prorates",
+    "redirect": "Proreta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 838
+        "start": 838,
+        "end": 838
       }
     ]
   },
   {
     "lemma": "Proreta",
-    "previous": "Prorates",
+    "previous": "Πρωράτης",
     "next": "Proreus",
     "chapters": [
       {
@@ -6695,7 +6852,7 @@
   {
     "lemma": "Prosda",
     "previous": "Proschion",
-    "next": "Prosdexios",
+    "next": "Προσδέχιος",
     "chapters": [
       {
         "start": 842,
@@ -6705,18 +6862,22 @@
     ]
   },
   {
-    "lemma": "Prosdexios",
+    "lemma": "Προσδέχιος",
     "previous": "Prosda",
     "next": "Prosdochus",
+    "sort_key": "Prosdexios",
+    "redirect": "Proechios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 843
+        "start": 843,
+        "end": 843
       }
     ]
   },
   {
     "lemma": "Prosdochus",
-    "previous": "Prosdexios",
+    "previous": "Προσδέχιος",
     "next": "Prosdocius 1",
     "chapters": [
       {
@@ -7187,9 +7348,12 @@
     "lemma": "Prostatis",
     "previous": "Prostatina",
     "next": "Prostatius",
+    "redirect": "Prostates",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 901
+        "start": 901,
+        "end": 901
       }
     ]
   },
@@ -7264,9 +7428,12 @@
     "lemma": "Prosumnus",
     "previous": "Prosumia",
     "next": "Prosymna 1",
+    "redirect": "Prosymnos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 903
+        "start": 903,
+        "end": 903
       }
     ]
   },
@@ -8096,9 +8263,12 @@
     "lemma": "Protiadai",
     "previous": "Prothytes",
     "next": "Protiaon",
+    "redirect": "Protias, Protis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 979
+        "start": 979,
+        "end": 979
       }
     ]
   },
@@ -8150,9 +8320,12 @@
     "lemma": "Protis 3",
     "previous": "Protis 2",
     "next": "Proto",
+    "redirect": "Protias, Protis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 979
+        "start": 979,
+        "end": 979
       }
     ]
   },
@@ -8450,9 +8623,12 @@
     "lemma": "Protokreon",
     "previous": "Protokles",
     "next": "Protolaos",
+    "redirect": "Protokles",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 984
+        "start": 984,
+        "end": 984
       }
     ]
   },
@@ -8604,7 +8780,7 @@
   {
     "lemma": "Protonoe 2",
     "previous": "Protonoe 1",
-    "next": "Proton xylon",
+    "next": "Πρῶτον ξύλον",
     "chapters": [
       {
         "start": 986,
@@ -8613,18 +8789,22 @@
     ]
   },
   {
-    "lemma": "Proton xylon",
+    "lemma": "Πρῶτον ξύλον",
     "previous": "Protonoe 2",
     "next": "Protophanes",
+    "sort_key": "Protonxylon",
+    "redirect": "Prohedria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 986
+        "start": 986,
+        "end": 986
       }
     ]
   },
   {
     "lemma": "Protophanes",
-    "previous": "Proton xylon",
+    "previous": "Πρῶτον ξύλον",
     "next": "Protopolites",
     "chapters": [
       {
@@ -8783,9 +8963,12 @@
     "lemma": "proverbium",
     "previous": "Protys",
     "next": "Provertuides",
+    "redirect": "Paroimia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 994
+        "start": 994,
+        "end": 994
       }
     ]
   },
@@ -9052,9 +9235,12 @@
     "lemma": "Prucheion",
     "previous": "Proxumae",
     "next": "Prudens",
+    "redirect": "Bruchion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1039
+        "start": 1039,
+        "end": 1039
       }
     ]
   },
@@ -9107,9 +9293,12 @@
     "lemma": "Prumnis",
     "previous": "Prumathe",
     "next": "Pruristra",
+    "redirect": "Prymnis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1071
+        "start": 1071,
+        "end": 1071
       }
     ]
   },
@@ -9117,9 +9306,12 @@
     "lemma": "Pruristra",
     "previous": "Prumnis",
     "next": "Prusa ad Olympum",
+    "redirect": "Pluristra, Pruristra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1071
+        "start": 1071,
+        "end": 1071
       }
     ]
   },
@@ -9197,9 +9389,12 @@
     "lemma": "Pryleie?",
     "previous": "Prusias 5",
     "next": "Pryles",
+    "redirect": "Prynoe?, Pryneie?",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1148
+        "start": 1148,
+        "end": 1148
       }
     ]
   },
@@ -9365,9 +9560,12 @@
     "lemma": "Prytaneia, -neion, -nis",
     "previous": "Prytaneia",
     "next": "Prytanis",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1157
+        "start": 1157,
+        "end": 1157
       }
     ]
   },
@@ -9613,9 +9811,12 @@
     "lemma": "procurator 1",
     "previous": "Proculus 9a",
     "next": "procurator 2",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1240
+        "start": 1240,
+        "end": 1240
       }
     ]
   },

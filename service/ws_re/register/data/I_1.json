@@ -3,7 +3,14 @@
     "lemma": "Vorwort (Band I)",
     "next": "Abkürzungen",
     "sort_key": "!01 01",
-    "proof_read": 3
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0,
+        "author": "Georg Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Abkürzungen",
@@ -11,7 +18,13 @@
     "next": "Aal",
     "sort_key": "!01 02",
     "redirect": true,
-    "proof_read": 3
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
   },
   {
     "lemma": "Aal",
@@ -145,7 +158,7 @@
     "lemma": "Abacus",
     "previous": "Abactores",
     "next": "Abacus 1",
-    "redirect": true,
+    "redirect": "Abacus 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -845,7 +858,7 @@
     "lemma": "Abaris 5",
     "previous": "Abaris 4",
     "next": "Abarnias",
-    "redirect": "Auaris",
+    "redirect": "Aigyptos 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -1428,7 +1441,7 @@
     "wd_link": "d:Q307546",
     "chapters": [
       {
-        "start": 21,
+        "start": 22,
         "end": 22,
         "author": "Wilcken."
       }
@@ -2851,6 +2864,7 @@
     "previous": "Aboccis",
     "next": "Abolla 1",
     "proof_read": 3,
+    "wd_link": "d:Q322732",
     "chapters": [
       {
         "start": 105,
@@ -2864,6 +2878,8 @@
     "previous": "Abolitio",
     "next": "Abolla 2",
     "proof_read": 3,
+    "wp_link": "w:en:Abolla (Sicily)",
+    "wd_link": "d:Q56277533",
     "chapters": [
       {
         "start": 105,
@@ -2877,6 +2893,8 @@
     "previous": "Abolla 1",
     "next": "Abone",
     "proof_read": 3,
+    "wp_link": "w:de:Abolla",
+    "wd_link": "d:Q322758",
     "chapters": [
       {
         "start": 105,
@@ -3123,6 +3141,8 @@
     "previous": "Abragos 3",
     "next": "Abrana",
     "proof_read": 3,
+    "wp_link": "w:de:Abraha",
+    "wd_link": "d:Q323363",
     "chapters": [
       {
         "start": 109,
@@ -4395,6 +4415,8 @@
     "previous": "Accenna 1",
     "next": "Accensi 1",
     "proof_read": 3,
+    "wp_link": "w:de:Marcus Accenna Helvius Agrippa",
+    "wd_link": "d:Q63100508",
     "chapters": [
       {
         "start": 135,
@@ -4762,7 +4784,7 @@
     "chapters": [
       {
         "start": 151,
-        "end": 151,
+        "end": 153,
         "author": "Leonhard."
       }
     ]
@@ -5842,6 +5864,7 @@
     "previous": "Achasa",
     "next": "Achates 2",
     "proof_read": 3,
+    "wd_link": "d:Q106103254",
     "chapters": [
       {
         "start": 211,
@@ -7140,8 +7163,8 @@
     "previous": "Acidii",
     "next": "Acidula",
     "proof_read": 3,
-    "wp_link": "w:de:Manlius",
-    "wd_link": "d:Q409825",
+    "wp_link": "w:en:Acidinus (cognomen)",
+    "wd_link": "d:Q1171934",
     "chapters": [
       {
         "start": 251,
@@ -7195,7 +7218,7 @@
     "previous": "Acili compitum",
     "next": "Acilius 1",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7239,8 +7262,6 @@
     "next": "Acilius 4",
     "sort_key": "Acilius 03",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
-    "wd_link": "d:Q341438",
     "chapters": [
       {
         "start": 251,
@@ -7271,9 +7292,9 @@
     "previous": "Acilius 4",
     "next": "Acilius 6",
     "sort_key": "Acilius 05",
-    "redirect": true,
+    "redirect": "Acilius 17",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7289,7 +7310,7 @@
     "next": "Acilius 7",
     "sort_key": "Acilius 06",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7321,7 +7342,7 @@
     "next": "Acilius 9",
     "sort_key": "Acilius 08",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7337,7 +7358,7 @@
     "next": "Acilius 10",
     "sort_key": "Acilius 09",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7352,7 +7373,7 @@
     "previous": "Acilius 9",
     "next": "Acilius 11",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7367,7 +7388,7 @@
     "previous": "Acilius 10",
     "next": "Acilius 12",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7382,7 +7403,7 @@
     "previous": "Acilius 11",
     "next": "Acilius 13",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7397,7 +7418,7 @@
     "previous": "Acilius 12",
     "next": "Acilius 14",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7412,7 +7433,7 @@
     "previous": "Acilius 13",
     "next": "Acilius 15",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7457,7 +7478,7 @@
     "previous": "Acilius 16",
     "next": "Acilius 18",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7472,7 +7493,7 @@
     "previous": "Acilius 17",
     "next": "Acilius 19",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7487,7 +7508,7 @@
     "previous": "Acilius 18",
     "next": "Acilius 20",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7517,7 +7538,7 @@
     "previous": "Acilius 20",
     "next": "Acilius 22",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7607,7 +7628,7 @@
     "previous": "Acilius 26",
     "next": "Acilius 28",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7622,7 +7643,7 @@
     "previous": "Acilius 27",
     "next": "Acilius 29",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7852,7 +7873,7 @@
     "previous": "Acilius 43",
     "next": "Acilius 45",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7898,7 +7919,7 @@
     "next": "Acilius 48",
     "redirect": "Sibidius",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7927,7 +7948,7 @@
     "next": "Acilius 50",
     "redirect": true,
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -7941,7 +7962,7 @@
     "previous": "Acilius 49",
     "next": "Acilius 51",
     "proof_read": 3,
-    "wp_link": "w:de:Acilius",
+    "wp_link": "w:de:Acilier",
     "wd_link": "d:Q341438",
     "chapters": [
       {
@@ -10039,6 +10060,8 @@
     "previous": "Addida",
     "next": "Addua",
     "proof_read": 3,
+    "wp_link": "w:de:Addix",
+    "wd_link": "d:Q10379856",
     "chapters": [
       {
         "start": 353,
@@ -10618,6 +10641,8 @@
     "previous": "Adganai",
     "next": "Adgentii",
     "proof_read": 3,
+    "wp_link": "w:de:Adgandestrius",
+    "wd_link": "d:Q356520",
     "chapters": [
       {
         "start": 359,
@@ -14255,7 +14280,6 @@
     "next": "Aelianus 1",
     "sort_key": "Aelianus",
     "proof_read": 3,
-    "wp_link": "w:en:Aelian",
     "wd_link": "d:Q21448591",
     "chapters": [
       {
@@ -14487,7 +14511,7 @@
     "next": "Aelius 1",
     "sort_key": "Aelius 000",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q380806",
     "chapters": [
       {
@@ -15432,6 +15456,8 @@
     "next": "Aelius 66",
     "sort_key": "Aelius 065",
     "proof_read": 3,
+    "wp_link": "w:en:Publius Aelius Hadrianus Afer",
+    "wd_link": "d:Q2280800",
     "chapters": [
       {
         "start": 520,
@@ -16248,7 +16274,7 @@
     "chapters": [
       {
         "start": 528,
-        "end": 529,
+        "end": 528,
         "author": "v. Rohden."
       }
     ]
@@ -16460,8 +16486,7 @@
     "previous": "Aelius 137",
     "next": "Aelius 139",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
-    "wd_link": "d:Q380806",
+    "wd_link": "d:Q12291688",
     "chapters": [
       {
         "start": 532,
@@ -16600,6 +16625,7 @@
     "next": "Aelius 148",
     "sort_key": "Aelius 148a",
     "proof_read": 3,
+    "wd_link": "d:Q102278991",
     "chapters": [
       {
         "start": 533,
@@ -16679,6 +16705,8 @@
     "previous": "Aelius 152",
     "next": "Aelius 154",
     "proof_read": 3,
+    "wp_link": "w:de:Quintus Aelius Tubero (Volkstribun 193 v. Chr.)",
+    "wd_link": "d:Q11020521",
     "chapters": [
       {
         "start": 535,
@@ -16692,6 +16720,8 @@
     "previous": "Aelius 153",
     "next": "Aelius 155",
     "proof_read": 3,
+    "wp_link": "w:ca:Quint Eli Tuberó (militar)",
+    "wd_link": "d:Q1243787",
     "chapters": [
       {
         "start": 535,
@@ -16705,6 +16735,8 @@
     "previous": "Aelius 154",
     "next": "Aelius 156",
     "proof_read": 3,
+    "wp_link": "w:de:Quintus Aelius Tubero (Triumvir Capitalis)",
+    "wd_link": "d:Q11035375",
     "chapters": [
       {
         "start": 535,
@@ -16718,6 +16750,8 @@
     "previous": "Aelius 155",
     "next": "Aelius 157",
     "proof_read": 3,
+    "wp_link": "w:de:Quintus Aelius Tubero (Historiker)",
+    "wd_link": "d:Q2123334",
     "chapters": [
       {
         "start": 537,
@@ -16731,6 +16765,9 @@
     "previous": "Aelius 156",
     "next": "Aelius 158",
     "proof_read": 3,
+    "wp_link": "w:de:Quintus Aelius Tubero (Konsul 11 v. Chr.)",
+    "ws_link": "s:it:Autore:Quinto Elio Tuberone",
+    "wd_link": "d:Q950770",
     "chapters": [
       {
         "start": 538,
@@ -16893,8 +16930,7 @@
     "previous": "Aelius 168",
     "next": "Aelius 170",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
-    "wd_link": "d:Q380806",
+    "wd_link": "d:Q12279759",
     "chapters": [
       {
         "start": 538,
@@ -16994,7 +17030,7 @@
     "lemma": "Aelius 176",
     "previous": "Aelius 175",
     "next": "Aelius 177",
-    "redirect": "Euphemia 1",
+    "redirect": "Anthemius 3",
     "proof_read": 3,
     "wp_link": "w:de:Aelia Marciana Euphemia",
     "wd_link": "d:Q380773",
@@ -17855,7 +17891,7 @@
     "previous": "Aemilius 15",
     "next": "Aemilius 17",
     "sort_key": "Aemilius 016",
-    "redirect": true,
+    "redirect": "Aemilius 97",
     "proof_read": 3,
     "chapters": [
       {
@@ -20579,6 +20615,8 @@
     "previous": "Aequi, Aequiculi",
     "next": "Aequinoctium 1",
     "proof_read": 3,
+    "wp_link": "w:de:Aequimelium",
+    "wd_link": "d:Q25383341",
     "chapters": [
       {
         "start": 598,
@@ -22204,6 +22242,7 @@
     "previous": "Aezisis",
     "next": "Afer 1",
     "proof_read": 3,
+    "wd_link": "d:Q102151904",
     "chapters": [
       {
         "start": 705,
@@ -22589,7 +22628,7 @@
     "chapters": [
       {
         "start": 713,
-        "end": 715,
+        "end": 713,
         "author": "Joh. Schmidt."
       }
     ]
@@ -22604,7 +22643,7 @@
     "chapters": [
       {
         "start": 713,
-        "end": 715,
+        "end": 713,
         "author": "Joh. Schmidt."
       }
     ]
@@ -22886,6 +22925,8 @@
     "previous": "Agaklytos 1",
     "next": "Agalasseis",
     "proof_read": 3,
+    "wp_link": "w:en:Agaclytus (freedman)",
+    "wd_link": "d:Q106884140",
     "chapters": [
       {
         "start": 717,
@@ -23118,6 +23159,7 @@
     "previous": "Agamestor 1",
     "next": "Agamestor 3",
     "proof_read": 3,
+    "wd_link": "d:Q12761959",
     "chapters": [
       {
         "start": 729,
@@ -23985,8 +24027,9 @@
     "previous": "Agathagetos",
     "next": "Agathangelos 2",
     "proof_read": 3,
-    "wp_link": "w:de:Agathangelos",
-    "wd_link": "d:Q3606375",
+    "wp_link": "w:de:Agathangelos (Armenier)",
+    "ws_link": "s:fr:Auteur:Agathange",
+    "wd_link": "d:Q391202",
     "chapters": [
       {
         "start": 738,
@@ -28397,6 +28440,9 @@
     "previous": "Aglaos 4",
     "next": "Aglaure",
     "proof_read": 3,
+    "wp_link": "w:it:Aglaostene",
+    "ws_link": "s:it:Autore:Aglaostene",
+    "wd_link": "d:Q22712803",
     "chapters": [
       {
         "start": 825,
@@ -28967,7 +29013,7 @@
     "previous": "Agonis 2",
     "next": "Agonothetes",
     "proof_read": 3,
-    "wp_link": "w:en:Agonalia",
+    "wp_link": "w:de:Agonalia",
     "wd_link": "d:Q972803",
     "chapters": [
       {
@@ -28982,6 +29028,8 @@
     "previous": "Agonium",
     "next": "Agoos",
     "proof_read": 3,
+    "wp_link": "w:en:Agonothetes",
+    "wd_link": "d:Q2827063",
     "chapters": [
       {
         "start": 870,
@@ -30149,6 +30197,8 @@
     "previous": "Agrios 2",
     "next": "Agrios 4",
     "proof_read": 3,
+    "wp_link": "w:de:Agrios (Gigant)",
+    "wd_link": "d:Q14912115",
     "chapters": [
       {
         "start": 896,
@@ -30162,6 +30212,8 @@
     "previous": "Agrios 3",
     "next": "Agrios 5",
     "proof_read": 3,
+    "wp_link": "w:de:Agrios (Kentaur)",
+    "wd_link": "d:Q518658",
     "chapters": [
       {
         "start": 896,
@@ -30190,6 +30242,8 @@
     "previous": "Agrios 5",
     "next": "Agrios 7",
     "proof_read": 3,
+    "wp_link": "w:de:Agrios (Sohn des Odysseus)",
+    "wd_link": "d:Q2827213",
     "chapters": [
       {
         "start": 897,
@@ -30203,6 +30257,7 @@
     "previous": "Agrios 6",
     "next": "Agrios 8",
     "proof_read": 3,
+    "wd_link": "d:Q54563381",
     "chapters": [
       {
         "start": 897,
@@ -30666,6 +30721,7 @@
     "previous": "Agrippinus 3",
     "next": "Agris",
     "proof_read": 3,
+    "wd_link": "d:Q107501500",
     "chapters": [
       {
         "start": 901,
@@ -31401,7 +31457,7 @@
     "lemma": "Ahala",
     "previous": "Agyrtes 2",
     "next": "Aharna",
-    "redirect": true,
+    "redirect": "Servilius 32ff.",
     "proof_read": 3,
     "chapters": [
       {
@@ -31775,7 +31831,7 @@
     "chapters": [
       {
         "start": 923,
-        "end": 926,
+        "end": 925,
         "author": "Toepffer."
       }
     ]
@@ -31882,6 +31938,8 @@
     "previous": "Aianteion",
     "next": "Aiantides 2",
     "proof_read": 3,
+    "wp_link": "w:de:Aiantides von Lampsakos",
+    "wd_link": "d:Q403403",
     "chapters": [
       {
         "start": 929,
@@ -31895,6 +31953,8 @@
     "previous": "Aiantides 1",
     "next": "Aiantides 3",
     "proof_read": 3,
+    "wp_link": "w:de:Aiantides von Milet",
+    "wd_link": "d:Q403408",
     "chapters": [
       {
         "start": 929,
@@ -32317,7 +32377,7 @@
     "previous": "Aïdoneus 1",
     "next": "Aïdoneus 3",
     "sort_key": "Aidoneus 2",
-    "redirect": true,
+    "redirect": "Hades",
     "proof_read": 3,
     "wp_link": "w:de:Hades",
     "wd_link": "d:Q41410",
@@ -32902,6 +32962,7 @@
     "previous": "Aigeïs",
     "next": "Aigestes, Aigestos",
     "proof_read": 3,
+    "wp_link": "w:en:Aegeoneus",
     "wd_link": "d:Q17115124",
     "chapters": [
       {
@@ -36079,7 +36140,7 @@
     "previous": "Aischraios 2",
     "next": "Aischrion 1",
     "proof_read": 3,
-    "wp_link": "w:el:Αισχρηίς",
+    "wp_link": "w:en:Aeschreis",
     "wd_link": "d:Q16330076",
     "chapters": [
       {
@@ -36327,6 +36388,8 @@
     "next": "Aischylos 2",
     "sort_key": "Aischylos 01",
     "proof_read": 3,
+    "wp_link": "w:de:Aischylos (Archon)",
+    "wd_link": "d:Q12761989",
     "chapters": [
       {
         "start": 1065,
@@ -37283,8 +37346,8 @@
     "previous": "Aithion 3",
     "next": "Αἰθιοπικὰ ὄρη",
     "proof_read": 3,
-    "wp_link": "w:de:Äthiopien",
-    "wd_link": "d:Q115",
+    "wp_link": "w:de:Aithiopia",
+    "wd_link": "d:Q410453",
     "chapters": [
       {
         "start": 1095,
@@ -37762,6 +37825,7 @@
     "previous": "Aithusa 4",
     "next": "Aitnaios 1",
     "proof_read": 3,
+    "wd_link": "d:Q21548073",
     "chapters": [
       {
         "start": 1111,
@@ -39487,6 +39551,8 @@
     "previous": "Akestes",
     "next": "Akestor 1",
     "proof_read": 3,
+    "wp_link": "w:en:Acestodorus",
+    "wd_link": "d:Q4673235",
     "chapters": [
       {
         "start": 1166,
@@ -39706,6 +39772,7 @@
     "previous": "Akidas",
     "next": "Akikaros",
     "proof_read": 3,
+    "wp_link": "w:en:Acidusa",
     "wd_link": "d:Q38716201",
     "chapters": [
       {
@@ -39746,7 +39813,7 @@
     "previous": "Akila",
     "next": "Akinakai",
     "proof_read": 3,
-    "wp_link": "w:en:Hachdeanq",
+    "wp_link": "w:en:Acilisene",
     "wd_link": "d:Q5637035",
     "chapters": [
       {
@@ -40414,7 +40481,7 @@
     "lemma": "Akontios 2",
     "previous": "Akontios 1",
     "next": "Akontisma",
-    "redirect": true,
+    "redirect": "Acontius",
     "proof_read": 3,
     "chapters": [
       {
@@ -40517,7 +40584,7 @@
     "chapters": [
       {
         "start": 1186,
-        "end": 1187,
+        "end": 1186,
         "author": "Tomaschek."
       }
     ]
@@ -44083,7 +44150,7 @@
     "previous": "Alathar",
     "next": "Alator",
     "proof_read": 3,
-    "wp_link": "w:en:Alatheus and Saphrax",
+    "wp_link": "w:en:Alatheus",
     "wd_link": "d:Q576127",
     "chapters": [
       {
@@ -45452,7 +45519,7 @@
     "previous": "Albinus 6",
     "next": "Albinus 8",
     "proof_read": 3,
-    "wp_link": "w:en:Albinus (consul 493)",
+    "wp_link": "w:en:Caecina Decius Faustus Albinus",
     "wd_link": "d:Q2695924",
     "chapters": [
       {
@@ -45991,7 +46058,7 @@
     "lemma": "Albula 1",
     "previous": "Albudinus fons",
     "next": "Albula 2",
-    "redirect": true,
+    "redirect": "Tiberis",
     "proof_read": 3,
     "chapters": [
       {
@@ -46459,7 +46526,7 @@
         "author": "Leonhard."
       },
       {
-        "start": 1859,
+        "start": 1359,
         "end": 1359,
         "author": "Hartmann."
       }
@@ -47524,7 +47591,7 @@
     "lemma": "Alex",
     "previous": "Ἀλευρομαντεία",
     "next": "Alexamenos 1",
-    "redirect": "Halex",
+    "redirect": "Bruttii",
     "proof_read": 3,
     "chapters": [
       {
@@ -48152,7 +48219,7 @@
     "lemma": "Alexandropolis 2",
     "previous": "Alexandropolis 1",
     "next": "Alexandropolis 3",
-    "redirect": true,
+    "redirect": "Alexandreia 12",
     "proof_read": 3,
     "wp_link": "w:de:Kandahar",
     "wd_link": "d:Q45604",

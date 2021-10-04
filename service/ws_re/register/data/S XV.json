@@ -213,7 +213,7 @@
     "lemma": "Andromeda 3",
     "previous": "Alpes 1",
     "next": "Annianus 8",
-    "redirect": true,
+    "redirect": "Plinius 5",
     "proof_read": 3,
     "chapters": [
       {
@@ -922,7 +922,7 @@
     "lemma": "Celsianus (inschr.",
     "previous": "Ceionius 30a",
     "next": "Centaretus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 88,
@@ -935,7 +935,7 @@
     "lemma": "Centaretus",
     "previous": "Celsianus (inschr.",
     "next": "Chione 10",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 88,
@@ -1125,7 +1125,7 @@
     "lemma": "Claudius 380a",
     "previous": "Claudius 353",
     "next": "Claudius 407a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 92,
@@ -1138,7 +1138,7 @@
     "lemma": "Claudius 407a",
     "previous": "Claudius 380a",
     "next": "Coiedius 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 92,
@@ -1163,7 +1163,7 @@
     "lemma": "Cominius 2b",
     "previous": "Coiedius 2",
     "next": "Constantinus 8a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 92,
@@ -1176,7 +1176,7 @@
     "lemma": "Constantinus 8a",
     "previous": "Cominius 2b",
     "next": "Corellius 1b",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 93,
@@ -1225,7 +1225,7 @@
     "lemma": "Diopeithes 14",
     "previous": "Demostratos 16",
     "next": "Diophanes 8a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 93,
@@ -1251,7 +1251,7 @@
     "previous": "Diophanes 8a",
     "next": "Domnacus",
     "sort_key": "Domitius 046a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 93,
@@ -1288,10 +1288,19 @@
   },
   {
     "lemma": "Euromos 1",
-    "previous": "Drys 1a"
+    "previous": "Drys 1a",
+    "next": "Eustorgius",
+    "chapters": [
+      {
+        "start": 98,
+        "end": 98,
+        "author": "Ernst Meyer."
+      }
+    ]
   },
   {
     "lemma": "Eustorgius",
+    "previous": "Euromos 1",
     "next": "Fabius 76b",
     "chapters": [
       {
@@ -1721,7 +1730,7 @@
     "lemma": "Iulius 203a",
     "previous": "Iulius 65aa",
     "next": "Iulius 228a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 123,
@@ -2097,7 +2106,7 @@
   {
     "lemma": "Messene 3",
     "previous": "Maximus 27a",
-    "next": "Messius 6a",
+    "next": "Messenien",
     "chapters": [
       {
         "start": 136,
@@ -2111,7 +2120,7 @@
   },
   {
     "lemma": "Messius 6a",
-    "previous": "Messene 3",
+    "previous": "Messenien",
     "next": "Messos",
     "chapters": [
       {
@@ -3230,7 +3239,6 @@
   {
     "lemma": "Veneti 1",
     "previous": "Weihrauch",
-    "next": "Victor 69",
     "chapters": [
       {
         "start": 855,
@@ -3241,18 +3249,23 @@
   },
   {
     "lemma": "Victor 69",
-    "previous": "Veneti 1",
-    "next": "Umbonius 1a",
-    "redirect": true,
+    "previous": "Weltbild",
+    "next": "Konrat Ziegler †",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 914
+        "start": 1583,
+        "end": 1676,
+        "author": "Peter Lebrecht Schmidt."
       }
     ]
   },
   {
+    "lemma": "Konrat Ziegler †",
+    "previous": "Victor 69"
+  },
+  {
     "lemma": "Umbonius 1a",
-    "previous": "Victor 69",
     "next": "Ummidius 1a",
     "chapters": [
       {
@@ -3311,7 +3324,7 @@
   {
     "lemma": "Zebra",
     "previous": "utric(u)larius 2",
-    "next": "Zeuxis 1",
+    "next": "Zeus",
     "chapters": [
       {
         "start": 991,
@@ -3325,7 +3338,7 @@
   },
   {
     "lemma": "Zeuxis 1",
-    "previous": "Zebra",
+    "previous": "Zeus",
     "next": "Ziegelstempel von Rom und Umgebung",
     "chapters": [
       {

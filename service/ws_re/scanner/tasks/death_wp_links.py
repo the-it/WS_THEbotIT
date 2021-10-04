@@ -27,7 +27,7 @@ class DEWPTask(ReScannerTask, ReporterMixin):
                 if link_to_check:
                     page = pywikibot.Page(self.wp_wiki, link_to_check)
                     reason = "not_exists"
-                    with contextlib.suppress(pywikibot.exceptions.InvalidTitle):
+                    with contextlib.suppress(pywikibot.exceptions.InvalidTitleError):
                         if page.exists():
                             if not page.isRedirectPage():
                                 continue

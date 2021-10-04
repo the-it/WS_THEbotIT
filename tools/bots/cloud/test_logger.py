@@ -22,7 +22,7 @@ class TestWikilogger(TestCase):
     def test_log_message(self):
         self.logger.debug("debug")
         self.logger.info("info")
-        with open(self.logger._data_path + os.sep + "test_bot_INFO_000101000000.log") as info_file:
+        with open(self.logger._data_path + os.sep + "test_bot_INFO_000101000000.log", encoding="utf-8") as info_file:
             self.assertRegex(info_file.read(), r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n")
 
     def test_tear_down(self):

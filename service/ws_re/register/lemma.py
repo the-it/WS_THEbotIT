@@ -37,7 +37,7 @@ def _generate_translation_dict():
                              "z": "ζ",
                              "": "()?\'ʾʿ–-"}
     _TMP_DICT = {}
-    for key in _TRANSLATION_DICT_RAW:
+    for key in _TRANSLATION_DICT_RAW:  # pylint: disable=consider-using-dict-items
         for character in _TRANSLATION_DICT_RAW[key]:
             _TMP_DICT[character] = key
     return str.maketrans(_TMP_DICT)

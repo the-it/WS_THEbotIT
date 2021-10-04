@@ -1,17 +1,31 @@
 [
   {
     "lemma": "Vorwort (Supplementband I)",
+    "previous": "Zorambos",
     "next": "Abkürzungen (Supplementband I)",
-    "sort_key": "!S 1 01",
-    "proof_read": 3
+    "sort_key": "!S01 01",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0,
+        "author": "Georg Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Abkürzungen (Supplementband I)",
     "previous": "Vorwort (Supplementband I)",
     "next": "Aba 1a",
-    "sort_key": "!S 1 02 Abkurzungen Supplement 1",
+    "sort_key": "!S01 02 Abkurzungen Supplement 1",
     "redirect": true,
-    "proof_read": 3
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 0,
+        "end": 0
+      }
+    ]
   },
   {
     "lemma": "Aba 1a",
@@ -70,6 +84,8 @@
     "previous": "Abakaina",
     "next": "Abas 3",
     "proof_read": 3,
+    "wp_link": "w:en:Abarna",
+    "wd_link": "d:Q4663519",
     "chapters": [
       {
         "start": 1,
@@ -1055,6 +1071,8 @@
     "previous": "Adenystrai",
     "next": "Adiazane",
     "proof_read": 3,
+    "wp_link": "w:de:Adgandestrius",
+    "wd_link": "d:Q356520",
     "chapters": [
       {
         "start": 10,
@@ -1433,7 +1451,7 @@
     "lemma": "Aelia 2",
     "previous": "Aeipolis",
     "next": "Aelius 24a",
-    "redirect": "Ailiotai",
+    "redirect": "Aelia",
     "proof_read": 3,
     "chapters": [
       {
@@ -1504,7 +1522,7 @@
     "next": "Aelius 27a",
     "sort_key": "Aelius 026b",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q380806",
     "chapters": [
       {
@@ -1643,6 +1661,8 @@
     "previous": "Aelius 60",
     "next": "Aelius 80a",
     "proof_read": 3,
+    "wp_link": "w:en:Publius Aelius Hadrianus Afer",
+    "wd_link": "d:Q2280800",
     "chapters": [
       {
         "start": 14,
@@ -1657,7 +1677,7 @@
     "next": "Aelius 87",
     "sort_key": "Aelius 080a",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q380806",
     "chapters": [
       {
@@ -1782,7 +1802,7 @@
     "next": "Aelius 138",
     "sort_key": "Aelius 134a",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q380806",
     "chapters": [
       {
@@ -1797,8 +1817,7 @@
     "previous": "Aelius 134a",
     "next": "Aelius 144",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
-    "wd_link": "d:Q380806",
+    "wd_link": "d:Q12291688",
     "chapters": [
       {
         "start": 14,
@@ -1829,7 +1848,7 @@
     "next": "Aelius 155",
     "redirect": "Decius 21",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
+    "wp_link": "w:de:Aelier",
     "wd_link": "d:Q380806",
     "chapters": [
       {
@@ -1843,6 +1862,8 @@
     "previous": "Aelius 146a",
     "next": "Aelius 169",
     "proof_read": 3,
+    "wp_link": "w:de:Quintus Aelius Tubero (Triumvir Capitalis)",
+    "wd_link": "d:Q11035375",
     "chapters": [
       {
         "start": 15,
@@ -1856,8 +1877,7 @@
     "previous": "Aelius 155",
     "next": "Aelius 172a",
     "proof_read": 3,
-    "wp_link": "w:de:Aelius",
-    "wd_link": "d:Q380806",
+    "wd_link": "d:Q12279759",
     "chapters": [
       {
         "start": 15,
@@ -2751,7 +2771,7 @@
     "lemma": "Agatharchos 11a",
     "previous": "Agatharchides 3",
     "next": "Agathenor",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 22,
@@ -3168,6 +3188,7 @@
     "previous": "Agesilaos 8",
     "next": "Agesistratos 4",
     "proof_read": 3,
+    "wd_link": "d:Q106416197",
     "chapters": [
       {
         "start": 27,
@@ -3511,7 +3532,7 @@
     "previous": "Agreus, Agreutes 2",
     "next": "Agrielaia",
     "sort_key": "Agridecumates",
-    "redirect": true,
+    "redirect": "Decumates agri",
     "proof_read": 3,
     "wp_link": "w:de:Agri decumates",
     "wd_link": "d:Q396547",
@@ -4092,7 +4113,7 @@
     "lemma": "Aigilia 1",
     "previous": "Aigikoros",
     "next": "Aigimios 3",
-    "redirect": true,
+    "redirect": "Aigelos",
     "proof_read": 3,
     "chapters": [
       {
@@ -6409,6 +6430,8 @@
     "previous": "Alfenus 4",
     "next": "Alfius 8a",
     "proof_read": 3,
+    "wp_link": "w:en:Alfidia",
+    "wd_link": "d:Q2268436",
     "chapters": [
       {
         "start": 57,
@@ -6581,6 +6604,8 @@
     "previous": "Aliphenoi",
     "next": "Alkainetos",
     "proof_read": 3,
+    "wp_link": "w:de:Alisanus",
+    "wd_link": "d:Q311685",
     "chapters": [
       {
         "start": 60,
@@ -8547,7 +8572,7 @@
     "chapters": [
       {
         "start": 76,
-        "end": 110,
+        "end": 76,
         "author": "Streck."
       }
     ]
@@ -9955,6 +9980,8 @@
     "previous": "Antenor 2a",
     "next": "Anthas",
     "proof_read": 3,
+    "wp_link": "w:el:Αντήνωρ ο Μιλήσιος",
+    "wd_link": "d:Q22916736",
     "chapters": [
       {
         "start": 88,
@@ -10284,8 +10311,6 @@
     "previous": "Antimachos 26a",
     "next": "Antiocheia 20",
     "proof_read": 3,
-    "wp_link": "w:de:Antiochia (Begriffsklärung)",
-    "wd_link": "d:Q246780",
     "chapters": [
       {
         "start": 91,
@@ -10359,8 +10384,6 @@
     "previous": "Antiochis 7",
     "next": "Antiochos 17",
     "proof_read": 3,
-    "wp_link": "w:de:Antiochos",
-    "wd_link": "d:Q286181",
     "chapters": [
       {
         "start": 92,
@@ -10387,6 +10410,8 @@
     "previous": "Antiochos 17",
     "next": "Antiochos 21",
     "proof_read": 3,
+    "wp_link": "w:de:Antiochos (Sohn des Echekratides)",
+    "wd_link": "d:Q579545",
     "chapters": [
       {
         "start": 92,
@@ -10461,7 +10486,10 @@
     "lemma": "Antiochos 44",
     "previous": "Antiochos 27",
     "next": "Antiochos 68",
+    "redirect": true,
     "proof_read": 3,
+    "wp_link": "w:de:Septimius Antiochus",
+    "wd_link": "d:Q889264",
     "chapters": [
       {
         "start": 92,
@@ -10474,6 +10502,8 @@
     "previous": "Antiochos 44",
     "next": "Antiochos 74",
     "proof_read": 3,
+    "wp_link": "w:en:Antiochus of Athens",
+    "wd_link": "d:Q220753",
     "chapters": [
       {
         "start": 92,
@@ -10487,8 +10517,6 @@
     "previous": "Antiochos 68",
     "next": "Antipatros 2",
     "proof_read": 3,
-    "wp_link": "w:de:Antiochos",
-    "wd_link": "d:Q286181",
     "chapters": [
       {
         "start": 92,
@@ -10709,8 +10737,6 @@
     "previous": "Antisthenes 9b",
     "next": "Antistius 26",
     "proof_read": 3,
-    "wp_link": "w:de:Antistius",
-    "wd_link": "d:Q583588",
     "chapters": [
       {
         "start": 94,
@@ -10723,8 +10749,8 @@
     "previous": "Antistius 25",
     "next": "Antistius 27",
     "proof_read": 3,
-    "wp_link": "w:de:Antistius",
-    "wd_link": "d:Q583588",
+    "wp_link": "w:de:Quintus Antistius Adventus Postumius Aquilinus",
+    "wd_link": "d:Q1365424",
     "chapters": [
       {
         "start": 94,
@@ -10737,6 +10763,8 @@
     "previous": "Antistius 26",
     "next": "Antistius 48",
     "proof_read": 3,
+    "wp_link": "w:de:Quintus Antistius Adventus Postumius Aquilinus",
+    "wd_link": "d:Q1365424",
     "chapters": [
       {
         "start": 94,
@@ -10966,6 +10994,8 @@
     "previous": "Antonius 66a",
     "next": "Antonius 80",
     "proof_read": 3,
+    "wp_link": "w:de:Antonius Musa",
+    "wd_link": "d:Q772773",
     "chapters": [
       {
         "start": 96,
@@ -11972,8 +12002,8 @@
     "proof_read": 3,
     "chapters": [
       {
-        "start": 111,
-        "end": 111,
+        "start": 109,
+        "end": 109,
         "author": "Stengel."
       }
     ]
@@ -12011,6 +12041,7 @@
     "sort_key": "Apollonios 032a",
     "proof_read": 3,
     "wp_link": "w:de:Apollonios",
+    "ws_link": "s:en:Apollonius",
     "wd_link": "d:Q619387",
     "chapters": [
       {
@@ -12038,7 +12069,7 @@
     "lemma": "Apollonios 65",
     "previous": "Apollonios 57a",
     "next": "Apollonios 98",
-    "redirect": true,
+    "redirect": "Aelius 24b",
     "proof_read": 3,
     "chapters": [
       {
@@ -12082,6 +12113,7 @@
     "next": "Apollonios 118a",
     "proof_read": 3,
     "wp_link": "w:de:Apollonios",
+    "ws_link": "s:en:Apollonius",
     "wd_link": "d:Q619387",
     "chapters": [
       {
@@ -12097,6 +12129,7 @@
     "next": "Apollonios 127",
     "proof_read": 3,
     "wp_link": "w:de:Apollonios",
+    "ws_link": "s:en:Apollonius",
     "wd_link": "d:Q619387",
     "chapters": [
       {
@@ -13995,6 +14028,8 @@
     "previous": "Ares 2",
     "next": "Aretades 2",
     "proof_read": 3,
+    "wp_link": "w:de:Aresaken",
+    "wd_link": "d:Q643055",
     "chapters": [
       {
         "start": 125,
@@ -15931,6 +15966,7 @@
     "previous": "Arkesikerta",
     "next": "Arkesos a",
     "proof_read": 3,
+    "wp_link": "w:en:Arcesine",
     "wd_link": "d:Q63994763",
     "chapters": [
       {
@@ -16295,7 +16331,7 @@
   {
     "lemma": "Arrianus 2a",
     "previous": "Arretium",
-    "next": "Arrianus 12",
+    "next": "Arrius 12",
     "sort_key": "Arrianus 02a",
     "proof_read": 3,
     "chapters": [
@@ -16308,7 +16344,6 @@
   },
   {
     "lemma": "Arrianus 12",
-    "previous": "Arrianus 2a",
     "next": "Arrius 12",
     "proof_read": 3,
     "chapters": [
@@ -21766,6 +21801,8 @@
     "previous": "Bas....lia",
     "next": "Bassus 37",
     "proof_read": 3,
+    "wp_link": "w:de:Marcus Bassaeus Rufus",
+    "wd_link": "d:Q11908680",
     "chapters": [
       {
         "start": 244,
@@ -21979,6 +22016,8 @@
     "previous": "Baxeae",
     "next": "Beeïa",
     "proof_read": 3,
+    "wp_link": "w:de:Bechuni",
+    "wd_link": "d:Q813650",
     "chapters": [
       {
         "start": 245,
@@ -22088,6 +22127,8 @@
     "previous": "Belisaria porta",
     "next": "Bella",
     "proof_read": 3,
+    "wp_link": "w:de:Bilistiche",
+    "wd_link": "d:Q468821",
     "chapters": [
       {
         "start": 246,
@@ -22289,7 +22330,7 @@
     "previous": "Benetoi",
     "next": "Benkasos",
     "proof_read": 3,
-    "wp_link": "w:de:Benevento",
+    "wp_link": "w:de:Benevent",
     "wd_link": "d:Q13437",
     "chapters": [
       {
@@ -22496,10 +22537,12 @@
     "lemma": "Beryllos 1",
     "previous": "Bersima",
     "next": "Berysioi",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 249,
-        "end": 249
+        "end": 249,
+        "author": "Stein."
       }
     ]
   },
@@ -23723,6 +23766,8 @@
     "previous": "Bruttius 6",
     "next": "Bruttius 11",
     "proof_read": 3,
+    "wp_link": "w:de:Gaius Bruttius Praesens (Konsul 217)",
+    "wd_link": "d:Q728993",
     "chapters": [
       {
         "start": 259,
@@ -23868,7 +23913,9 @@
     "lemma": "Bukolik",
     "previous": "Budorai",
     "next": "Bulaios, Bulaia",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Bukolische Dichtung",
+    "wd_link": "d:Q1003292",
     "chapters": [
       {
         "start": 260,
@@ -23938,7 +23985,7 @@
     "lemma": "Bura 2",
     "previous": "Bunos a",
     "next": "Burburus",
-    "redirect": true,
+    "redirect": "Dura 2",
     "proof_read": 3,
     "chapters": [
       {
@@ -23964,7 +24011,7 @@
     "lemma": "Burebista",
     "previous": "Burburus",
     "next": "Buri",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Burebista",
     "wd_link": "d:Q309869",
     "chapters": [
@@ -24116,7 +24163,7 @@
     "lemma": "Byzantion 1",
     "previous": "Byst",
     "next": "Byzantion 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Byzantion",
     "wd_link": "d:Q23725",
     "chapters": [
@@ -24224,7 +24271,7 @@
     "lemma": "Cacus",
     "previous": "Caca 2",
     "next": "Cadra",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Cacus",
     "wd_link": "d:Q754686",
     "chapters": [
@@ -24293,6 +24340,7 @@
     "previous": "Caecilius 28",
     "next": "Caecilius 44",
     "proof_read": 3,
+    "wd_link": "d:Q85510415",
     "chapters": [
       {
         "start": 267,
@@ -24373,7 +24421,7 @@
     "lemma": "Caecilius 69ff.",
     "previous": "Caecilius 65",
     "next": "Caecilius 86",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 267,
@@ -24386,7 +24434,9 @@
     "lemma": "Caecilius 86",
     "previous": "Caecilius 69ff.",
     "next": "Caecilius 94",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Quintus Caecilius Metellus Celer",
+    "wd_link": "d:Q505341",
     "chapters": [
       {
         "start": 267,
@@ -24399,7 +24449,7 @@
     "lemma": "Caecilius 94",
     "previous": "Caecilius 86",
     "next": "Caecilius 99",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Quintus Caecilius Metellus Macedonicus",
     "wd_link": "d:Q355768",
     "chapters": [
@@ -24414,7 +24464,7 @@
     "lemma": "Caecilius 99",
     "previous": "Caecilius 94",
     "next": "Caecilius 104",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Quintus Caecilius Metellus Pius Scipio",
     "wd_link": "d:Q316825",
     "chapters": [
@@ -24470,7 +24520,7 @@
     "lemma": "Caecilius 128a",
     "previous": "Caecilius 117",
     "next": "Caecina 20",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 268,
@@ -24606,7 +24656,7 @@
     "previous": "Caesarea 1",
     "next": "Caesennius 10",
     "sort_key": "Caesennius 04",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Aulus Caesennius Gallus",
     "wd_link": "d:Q100590490",
     "chapters": [
@@ -24621,7 +24671,9 @@
     "lemma": "Caesennius 10",
     "previous": "Caesennius 4",
     "next": "Caesennius 14a",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Lucius Iunius Caesennius Paetus (Konsul 79)",
+    "wd_link": "d:Q12285298",
     "chapters": [
       {
         "start": 269,
@@ -24917,7 +24969,7 @@
     "previous": "Calpurnius 73",
     "next": "Calpurnius 82",
     "sort_key": "Calpurnius 074",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Calpurnius Piso (Konsul 1 v. Chr.)",
     "wd_link": "d:Q662614",
     "chapters": [
@@ -24933,7 +24985,7 @@
     "previous": "Calpurnius 74",
     "next": "Calpurnius 88",
     "sort_key": "Calpurnius 082",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Calpurnius Piso (Konsul 175)",
     "wd_link": "d:Q1873551",
     "chapters": [
@@ -24949,7 +25001,7 @@
     "previous": "Calpurnius 82",
     "next": "Calpurnius 90",
     "sort_key": "Calpurnius 088",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Calpurnius Piso Caesoninus (Konsul 112 v. Chr.)",
     "wd_link": "d:Q334907",
     "chapters": [
@@ -24965,7 +25017,7 @@
     "previous": "Calpurnius 88",
     "next": "Calpurnius 93",
     "sort_key": "Calpurnius 090",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Calpurnius Piso Caesoninus (Konsul 58 v. Chr.)",
     "wd_link": "d:Q365840",
     "chapters": [
@@ -24981,7 +25033,7 @@
     "previous": "Calpurnius 90",
     "next": "Calpurnius 99",
     "sort_key": "Calpurnius 093",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 272,
@@ -24995,7 +25047,9 @@
     "previous": "Calpurnius 93",
     "next": "Calpurnius 131a",
     "sort_key": "Calpurnius 099",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Lucius Calpurnius Piso Pontifex",
+    "wd_link": "d:Q709811",
     "chapters": [
       {
         "start": 272,
@@ -25049,7 +25103,7 @@
     "previous": "Calvisius 3a",
     "next": "Camarum",
     "sort_key": "Calvisius 09",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Publius Calvisius Ruso (Konsul 79)",
     "wd_link": "d:Q12291691",
     "chapters": [
@@ -25131,7 +25185,7 @@
     "lemma": "Campanius 1",
     "previous": "Camogenis",
     "next": "Campi Cauchi",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Marcus Campanius Marcellus",
     "wd_link": "d:Q83394662",
     "chapters": [
@@ -25200,7 +25254,7 @@
     "previous": "Candidus 1",
     "next": "Caninius 4",
     "sort_key": "Caninius 03",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Caninius Gallus (Volkstribun 56 v. Chr.)",
     "wd_link": "d:Q1338903",
     "chapters": [
@@ -25248,7 +25302,7 @@
     "previous": "Caninius 5",
     "next": "Canius a",
     "sort_key": "Caninius 09",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Gaius Caninius Rebilus",
     "wd_link": "d:Q1345437",
     "chapters": [
@@ -25329,7 +25383,7 @@
     "lemma": "Caparenses",
     "previous": "Canus 5",
     "next": "Capersane",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 274,
@@ -25355,7 +25409,7 @@
     "lemma": "Caphrena",
     "previous": "Capersane",
     "next": "Capito 5a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 274,
@@ -25381,7 +25435,7 @@
     "lemma": "Capitolinus 2",
     "previous": "Capito 5a",
     "next": "Capreolus 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 275,
@@ -25394,7 +25448,7 @@
     "lemma": "Capreolus 4",
     "previous": "Capitolinus 2",
     "next": "Capussa",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 275,
@@ -25511,7 +25565,7 @@
     "lemma": "Caristanius 1",
     "previous": "Carinus 1",
     "next": "Carminius 5",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Gaius Caristanius Fronto",
     "wd_link": "d:Q1238443",
     "chapters": [
@@ -25526,7 +25580,7 @@
     "lemma": "Carminius 5",
     "previous": "Caristanius 1",
     "next": "Carminius 5a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 276,
@@ -25539,7 +25593,7 @@
     "lemma": "Carminius 5a",
     "previous": "Carminius 5",
     "next": "Carnon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 276,
@@ -25552,7 +25606,7 @@
     "lemma": "Carnon",
     "previous": "Carminius 5a",
     "next": "Carrinas 7",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 276,
@@ -25591,7 +25645,7 @@
     "lemma": "Carventanus",
     "previous": "Carsagis",
     "next": "Carvilius 9",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 276,
@@ -25604,7 +25658,9 @@
     "lemma": "Carvilius 9",
     "previous": "Carventanus",
     "next": "Casilo",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Spurius Carvilius Maximus",
+    "wd_link": "d:Q1284884",
     "chapters": [
       {
         "start": 276,
@@ -25643,7 +25699,7 @@
     "lemma": "Cassius 21a",
     "previous": "Cassianum",
     "next": "Cassius 24a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 277,
@@ -25669,7 +25725,7 @@
     "lemma": "Cassius 25",
     "previous": "Cassius 24a",
     "next": "Cassius 27",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Marcus Cassius Apollinaris",
     "wd_link": "d:Q12286092",
     "chapters": [
@@ -25684,7 +25740,7 @@
     "lemma": "Cassius 27",
     "previous": "Cassius 25",
     "next": "Cassius 28",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 277,
@@ -25697,7 +25753,7 @@
     "lemma": "Cassius 28",
     "previous": "Cassius 27",
     "next": "Cassius 29a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 277,
@@ -25710,7 +25766,7 @@
     "lemma": "Cassius 29a",
     "previous": "Cassius 28",
     "next": "Cassius 49",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 277,
@@ -25764,7 +25820,7 @@
     "lemma": "Cassius 72",
     "previous": "Cassius 59",
     "next": "Cassius 82a",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Cassius Longinus Ravilla",
     "wd_link": "d:Q289392",
     "chapters": [
@@ -25805,7 +25861,7 @@
     "lemma": "Cassius 87",
     "previous": "Cassius 84a",
     "next": "Cassius 92a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 278,
@@ -25857,7 +25913,7 @@
     "lemma": "Castillum",
     "previous": "Castabola",
     "next": "Castra, Castrum 32a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 278,
@@ -25949,7 +26005,7 @@
     "lemma": "Castus 4",
     "previous": "Castus 3a",
     "next": "Casus a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 279,
@@ -25988,7 +26044,7 @@
     "lemma": "Catellius 1a",
     "previous": "Catabana",
     "next": "Catilius 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 279,
@@ -26014,7 +26070,7 @@
     "lemma": "Catilius 4",
     "previous": "Catilius 3",
     "next": "Catius 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Catilius Severus",
     "wd_link": "d:Q1215819",
     "chapters": [
@@ -26095,7 +26151,7 @@
     "previous": "Cazaci",
     "next": "Celeia",
     "sort_key": "Ceionius 06",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Ceionius Commodus (Konsul 106)",
     "wd_link": "d:Q545266",
     "chapters": [
@@ -26110,8 +26166,8 @@
     "lemma": "Celeia",
     "previous": "Ceionius 6",
     "next": "Celer 1a",
-    "proof_read": 2,
-    "wp_link": "w:de:Celje",
+    "proof_read": 3,
+    "wp_link": "w:en:Celje",
     "wd_link": "d:Q1012",
     "chapters": [
       {
@@ -26246,7 +26302,7 @@
     "previous": "Cestius 8",
     "next": "Cestius 18",
     "redirect": "Ducenius 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 280,
@@ -26270,7 +26326,7 @@
     "lemma": "Chabora",
     "previous": "Cestius 18",
     "next": "Chairekla",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 280,
@@ -26361,7 +26417,7 @@
     "lemma": "Chala",
     "previous": "Chaitos 2",
     "next": "Chalasar",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 281,
@@ -26387,7 +26443,7 @@
     "lemma": "Chalkis 13",
     "previous": "Chalasar",
     "next": "Chalkitis 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 281,
@@ -26426,7 +26482,7 @@
     "lemma": "Chalonitis",
     "previous": "Chalkostamnon",
     "next": "Chalybon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 281,
@@ -26504,7 +26560,7 @@
     "lemma": "Chamyne",
     "previous": "Chamogamision",
     "next": "Chanaranges",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 282,
@@ -26517,7 +26573,7 @@
     "lemma": "Chanaranges",
     "previous": "Chamyne",
     "next": "Charax",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 282,
@@ -26753,7 +26809,7 @@
     "lemma": "Charta",
     "previous": "Charra",
     "next": "Chaskauge",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 285,
@@ -26805,7 +26861,7 @@
     "lemma": "Cheimon",
     "previous": "Chedrolioi",
     "next": "Χειριδωτὸς χιτών",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 286,
@@ -26848,7 +26904,7 @@
     "lemma": "Cheirogastores",
     "previous": "Χειρίς",
     "next": "Chellon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 287,
@@ -26890,7 +26946,7 @@
     "previous": "Chelone 2",
     "next": "Chimaira 3",
     "sort_key": "Cherreos phrurion, to",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 287,
@@ -26903,7 +26959,7 @@
     "lemma": "Chimaira 3",
     "previous": "Χέρρεως φρούριον, τὸ",
     "next": "Chindaioi",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 288,
@@ -26929,7 +26985,7 @@
     "lemma": "Chiomara",
     "previous": "Chindaioi",
     "next": "Chiriphe",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 288,
@@ -27053,7 +27109,7 @@
     "lemma": "Choara",
     "previous": "Chlydai",
     "next": "Choliatai",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 295,
@@ -27066,7 +27122,7 @@
     "lemma": "Choliatai",
     "previous": "Choara",
     "next": "Cholimma",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 295,
@@ -27079,7 +27135,7 @@
     "lemma": "Cholimma",
     "previous": "Choliatai",
     "next": "Cholmadara",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 295,
@@ -27092,7 +27148,7 @@
     "lemma": "Cholmadara",
     "previous": "Cholimma",
     "next": "Chondria",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 296,
@@ -27105,7 +27161,7 @@
     "lemma": "Chondria",
     "previous": "Cholmadara",
     "next": "Chondrochyte",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 296,
@@ -27131,7 +27187,7 @@
     "lemma": "Choregos 2",
     "previous": "Chondrochyte",
     "next": "Chorochoad",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 296,
@@ -27144,7 +27200,7 @@
     "lemma": "Chorochoad",
     "previous": "Choregos 2",
     "next": "Chremas",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 296,
@@ -27182,7 +27238,7 @@
     "lemma": "Christophoros 1",
     "previous": "Chrestos 7",
     "next": "Chronica Italica",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 296,
@@ -27273,7 +27329,7 @@
     "lemma": "Chrysippos 10",
     "previous": "Chrysippos 8a",
     "next": "Chrysippos 14a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 298,
@@ -27355,7 +27411,7 @@
     "lemma": "Chumana",
     "previous": "Chudukka",
     "next": "Chumbane",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 299,
@@ -27525,7 +27581,7 @@
     "lemma": "Clavariatis",
     "previous": "Classicus 1a",
     "next": "Claudius 31a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 317,
@@ -27539,7 +27595,7 @@
     "previous": "Clavariatis",
     "next": "Claudius 38",
     "sort_key": "Claudius 031a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 317,
@@ -27553,7 +27609,7 @@
     "previous": "Claudius 31a",
     "next": "Claudius 39a",
     "sort_key": "Claudius 038",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 317,
@@ -27581,7 +27637,7 @@
     "previous": "Claudius 39a",
     "next": "Claudius 72",
     "sort_key": "Claudius 071",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Tiberius Claudius Atticus Herodes",
     "wd_link": "d:Q606409",
     "chapters": [
@@ -27597,7 +27653,7 @@
     "previous": "Claudius 71",
     "next": "Claudius 87",
     "sort_key": "Claudius 072",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 317,
@@ -27625,7 +27681,7 @@
     "previous": "Claudius 87",
     "next": "Claudius 100a",
     "sort_key": "Claudius 093",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 318,
@@ -27665,7 +27721,7 @@
     "lemma": "Claudius 105",
     "previous": "Claudius 102a",
     "next": "Claudius 137",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 318,
@@ -27678,7 +27734,7 @@
     "lemma": "Claudius 137",
     "previous": "Claudius 105",
     "next": "Claudius 139",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 318,
@@ -27691,7 +27747,7 @@
     "lemma": "Claudius 139",
     "previous": "Claudius 137",
     "next": "Claudius 141",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Drusus",
     "wd_link": "d:Q156778",
     "chapters": [
@@ -27732,7 +27788,7 @@
     "lemma": "Claudius 150a",
     "previous": "Claudius 149",
     "next": "Claudius 154",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 319,
@@ -27745,7 +27801,7 @@
     "lemma": "Claudius 154",
     "previous": "Claudius 150a",
     "next": "Claudius 164",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 319,
@@ -27771,7 +27827,7 @@
     "lemma": "Claudius 179",
     "previous": "Claudius 164",
     "next": "Claudius 213",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 319,
@@ -27784,7 +27840,7 @@
     "lemma": "Claudius 213",
     "previous": "Claudius 179",
     "next": "Claudius 218",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 319,
@@ -27797,7 +27853,7 @@
     "lemma": "Claudius 218",
     "previous": "Claudius 213",
     "next": "Claudius 243",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 319,
@@ -27810,7 +27866,7 @@
     "lemma": "Claudius 243",
     "previous": "Claudius 218",
     "next": "Claudius 246",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 319,
@@ -27823,7 +27879,7 @@
     "lemma": "Claudius 246",
     "previous": "Claudius 243",
     "next": "Claudius 265",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Gaius Claudius Nero",
     "wd_link": "d:Q441191",
     "chapters": [
@@ -27838,7 +27894,7 @@
     "lemma": "Claudius 265",
     "previous": "Claudius 246",
     "next": "Claudius 272",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 320,
@@ -27863,7 +27919,7 @@
     "lemma": "Claudius 272a",
     "previous": "Claudius 272",
     "next": "Claudius 288a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 320,
@@ -27889,7 +27945,7 @@
     "lemma": "Claudius 296",
     "previous": "Claudius 288a",
     "next": "Claudius 297",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Appius Claudius Pulcher (Konsul 79 v. Chr.)",
     "wd_link": "d:Q531923",
     "chapters": [
@@ -27904,7 +27960,7 @@
     "lemma": "Claudius 297",
     "previous": "Claudius 296",
     "next": "Claudius 299",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Appius Claudius Pulcher (Konsul 54 v. Chr.)",
     "wd_link": "d:Q445758",
     "chapters": [
@@ -27919,7 +27975,7 @@
     "lemma": "Claudius 299",
     "previous": "Claudius 297",
     "next": "Claudius 310",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 320,
@@ -27932,7 +27988,7 @@
     "lemma": "Claudius 310",
     "previous": "Claudius 299",
     "next": "Claudius 317",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Tiberius Claudius Quintianus",
     "wd_link": "d:Q657687",
     "chapters": [
@@ -27947,7 +28003,7 @@
     "lemma": "Claudius 317",
     "previous": "Claudius 310",
     "next": "Claudius 324",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 320,
@@ -27960,7 +28016,9 @@
     "lemma": "Claudius 324",
     "previous": "Claudius 317",
     "next": "Claudius 347",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Tiberius Claudius Sacerdos Iulianus",
+    "wd_link": "d:Q3019368",
     "chapters": [
       {
         "start": 320,
@@ -27988,7 +28046,7 @@
     "lemma": "Claudius 348",
     "previous": "Claudius 347",
     "next": "Claudius 350",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 321,
@@ -28001,7 +28059,7 @@
     "lemma": "Claudius 350",
     "previous": "Claudius 348",
     "next": "Claudius 375a",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Gnaeus Claudius Severus Arabianus",
     "wd_link": "d:Q717647",
     "chapters": [
@@ -28016,7 +28074,7 @@
     "lemma": "Claudius 375a",
     "previous": "Claudius 350",
     "next": "Claudius 376",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 321,
@@ -28029,7 +28087,7 @@
     "lemma": "Claudius 376",
     "previous": "Claudius 375a",
     "next": "Claudius 393",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 321,
@@ -28042,7 +28100,7 @@
     "lemma": "Claudius 393",
     "previous": "Claudius 376",
     "next": "Claudius 399a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 321,
@@ -28055,7 +28113,7 @@
     "lemma": "Claudius 399a",
     "previous": "Claudius 393",
     "next": "Claudius 400",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 322,
@@ -28081,7 +28139,7 @@
     "lemma": "Claudius 410",
     "previous": "Claudius 400",
     "next": "Claudius 421a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 322,
@@ -28094,7 +28152,7 @@
     "lemma": "Claudius 421a",
     "previous": "Claudius 410",
     "next": "Claudius 429",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 322,
@@ -28107,7 +28165,7 @@
     "lemma": "Claudius 429",
     "previous": "Claudius 421a",
     "next": "Claudius 451",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 322,
@@ -28120,7 +28178,7 @@
     "lemma": "Claudius 451",
     "previous": "Claudius 429",
     "next": "Claudius 452",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 322,
@@ -28145,7 +28203,7 @@
     "lemma": "Clavicularius",
     "previous": "Claudius 452",
     "next": "Cletabion",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 321,
@@ -28210,7 +28268,7 @@
     "lemma": "Clodius 12",
     "previous": "Clodius 10a",
     "next": "Clodius 17a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 323,
@@ -28302,7 +28360,7 @@
     "lemma": "Cocceius 3",
     "previous": "Cocceius 1a",
     "next": "Cocceius 6a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 323,
@@ -28315,7 +28373,7 @@
     "lemma": "Cocceius 6a",
     "previous": "Cocceius 3",
     "next": "Cocceius 12",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 324,
@@ -28328,7 +28386,7 @@
     "lemma": "Cocceius 12",
     "previous": "Cocceius 6a",
     "next": "Cocceius 19a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 324,
@@ -28341,7 +28399,7 @@
     "lemma": "Cocceius 19a",
     "previous": "Cocceius 12",
     "next": "Codrus a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 324,
@@ -28370,7 +28428,7 @@
     "lemma": "Coelius 8",
     "previous": "Codrus a",
     "next": "Coelius 9",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Publius Coelius Apollinaris (Konsul 169)",
     "wd_link": "d:Q1238486",
     "chapters": [
@@ -28385,7 +28443,7 @@
     "lemma": "Coelius 9",
     "previous": "Coelius 8",
     "next": "Coelius 12",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Publius Coelius Balbinus",
     "wd_link": "d:Q716736",
     "chapters": [
@@ -28400,7 +28458,7 @@
     "lemma": "Coelius 12",
     "previous": "Coelius 9",
     "next": "Coelius 31a",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Gaius Coelius Caldus (Konsul 94 v. Chr.)",
     "wd_link": "d:Q1274785",
     "chapters": [
@@ -28415,7 +28473,7 @@
     "lemma": "Coelius 31a",
     "previous": "Coelius 12",
     "next": "Cognitio 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 325,
@@ -28428,7 +28486,7 @@
     "lemma": "Cognitio 2",
     "previous": "Coelius 31a",
     "next": "Cognitor 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 325,
@@ -28441,7 +28499,7 @@
     "lemma": "Cognitor 2",
     "previous": "Cognitio 2",
     "next": "Cognomen",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 325,
@@ -28562,7 +28620,7 @@
     "lemma": "Conpasin",
     "previous": "Comum",
     "next": "Convivium",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 327,
@@ -28575,7 +28633,7 @@
     "lemma": "Convivium",
     "previous": "Conpasin",
     "next": "Copo",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 327,
@@ -28640,8 +28698,8 @@
     "lemma": "Corma",
     "previous": "Coriopis",
     "next": "Cornan",
-    "redirect": true,
-    "proof_read": 2,
+    "redirect": "Cornelius 395",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 327,
@@ -28707,7 +28765,7 @@
     "lemma": "Cornelius 10a",
     "previous": "Cornelius a",
     "next": "Cornelius 10b",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 328,
@@ -28747,7 +28805,7 @@
     "lemma": "Cornelius 69",
     "previous": "Cornelius 40",
     "next": "Cornelius 82",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 328,
@@ -28760,7 +28818,7 @@
     "lemma": "Cornelius 82",
     "previous": "Cornelius 69",
     "next": "Cornelius 99",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Aulus Cornelius Celsus",
     "ws_link": "s:it:Autore:Aulo Cornelio Celso",
     "wd_link": "d:Q312420",
@@ -28776,7 +28834,7 @@
     "lemma": "Cornelius 99",
     "previous": "Cornelius 82",
     "next": "Cornelius 103",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Servius Cornelius Cethegus",
     "wd_link": "d:Q1239644",
     "chapters": [
@@ -28817,7 +28875,7 @@
     "lemma": "Cornelius 110a",
     "previous": "Cornelius 108",
     "next": "Cornelius 135",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 328,
@@ -28830,7 +28888,7 @@
     "lemma": "Cornelius 135",
     "previous": "Cornelius 110a",
     "next": "Cornelius 136",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Gnaeus Cornelius Dolabella (Prätor 81 v. Chr.)",
     "wd_link": "d:Q721783",
     "chapters": [
@@ -28860,7 +28918,7 @@
     "lemma": "Cornelius 141",
     "previous": "Cornelius 136",
     "next": "Cornelius 143",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Publius Cornelius Dolabella (Konsul 44 v. Chr.)",
     "wd_link": "d:Q451597",
     "chapters": [
@@ -28875,7 +28933,7 @@
     "lemma": "Cornelius 143",
     "previous": "Cornelius 141",
     "next": "Cornelius 146",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Publius Cornelius Dolabella (Konsul 10)",
     "wd_link": "d:Q1236503",
     "chapters": [
@@ -28890,7 +28948,7 @@
     "lemma": "Cornelius 146",
     "previous": "Cornelius 143",
     "next": "Cornelius 198",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Servius Cornelius Dolabella Metilianus Pompeius Marcellus",
     "wd_link": "d:Q179079",
     "chapters": [
@@ -28918,7 +28976,7 @@
     "lemma": "Cornelius 210",
     "previous": "Cornelius 198",
     "next": "Cornelius 218",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 329,
@@ -28931,7 +28989,7 @@
     "lemma": "Cornelius 218",
     "previous": "Cornelius 210",
     "next": "Cornelius 238",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Cornelius Lentulus Crus",
     "wd_link": "d:Q521670",
     "chapters": [
@@ -28946,7 +29004,7 @@
     "lemma": "Cornelius 238",
     "previous": "Cornelius 218",
     "next": "Cornelius 274a",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Publius Cornelius Lentulus Spinther (Konsul 57 v. Chr.)",
     "wd_link": "d:Q51380",
     "chapters": [
@@ -28975,7 +29033,7 @@
     "lemma": "Cornelius 279",
     "previous": "Cornelius 274a",
     "next": "Cornelius 290",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Aulus Cornelius Palma Frontonianus",
     "wd_link": "d:Q772652",
     "chapters": [
@@ -28990,7 +29048,7 @@
     "lemma": "Cornelius 290",
     "previous": "Cornelius 279",
     "next": "Cornelius 295",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 330,
@@ -29016,7 +29074,7 @@
     "lemma": "Cornelius 296",
     "previous": "Cornelius 295",
     "next": "Cornelius 322",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Cornelius Pusio",
     "wd_link": "d:Q1525772",
     "chapters": [
@@ -29031,7 +29089,7 @@
     "lemma": "Cornelius 322",
     "previous": "Cornelius 296",
     "next": "Cornelius 334",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 330,
@@ -29044,7 +29102,7 @@
     "lemma": "Cornelius 334",
     "previous": "Cornelius 322",
     "next": "Cornelius 335",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 330,
@@ -29072,12 +29130,12 @@
     "lemma": "Cornelius 337",
     "previous": "Cornelius 335",
     "next": "Cornelius 350",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Lucius Cornelius Scipio Asiaticus (Konsul 190 v. Chr.)",
     "wd_link": "d:Q361377",
     "chapters": [
       {
-        "start": 330,
+        "start": 331,
         "end": 331,
         "author": "Münzer."
       }
@@ -29087,10 +29145,10 @@
     "lemma": "Cornelius 350",
     "previous": "Cornelius 337",
     "next": "Cornelius 351",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 330,
+        "start": 331,
         "end": 331,
         "author": "Münzer."
       }
@@ -29100,7 +29158,7 @@
     "lemma": "Cornelius 351",
     "previous": "Cornelius 350",
     "next": "Cornelius 376ff.",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 331,
@@ -29113,7 +29171,7 @@
     "lemma": "Cornelius 376ff.",
     "previous": "Cornelius 351",
     "next": "Cornificius 7",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 331,
@@ -29152,7 +29210,7 @@
     "lemma": "Cossinius 5",
     "previous": "Cosaba",
     "next": "Cossion",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 331,
@@ -29179,6 +29237,8 @@
     "previous": "Cossion",
     "next": "Crescens 8",
     "proof_read": 3,
+    "wp_link": "w:de:Cossutianus Capito",
+    "wd_link": "d:Q1136280",
     "chapters": [
       {
         "start": 331,
@@ -29416,7 +29476,7 @@
     "lemma": "Dacicus",
     "previous": "Dachareni",
     "next": "Dagala",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 333,
@@ -29891,8 +29951,8 @@
     "lemma": "Dandes",
     "previous": "Danas",
     "next": "Danipasos",
-    "redirect": true,
-    "proof_read": 2,
+    "redirect": "Oxyrhynchos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 338,
@@ -29983,7 +30043,7 @@
     "lemma": "Daphnephoria",
     "previous": "Daphne 5b",
     "next": "Daphnion",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Daphnephoria",
     "wd_link": "d:Q1813885",
     "chapters": [
@@ -30012,7 +30072,7 @@
     "previous": "Daphnion",
     "next": "Dareios a",
     "sort_key": "Daphnoeides",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 338,
@@ -30025,8 +30085,8 @@
     "lemma": "Dareios a",
     "previous": "Δαφνοειδές",
     "next": "Decanus 3",
-    "redirect": true,
-    "proof_read": 2,
+    "redirect": "Ptolemaios 66",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 338,
@@ -30052,7 +30112,7 @@
     "lemma": "Deïdameia 6",
     "previous": "Decanus 3",
     "next": "Deimos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 339,
@@ -30077,7 +30137,7 @@
     "lemma": "Deinicha",
     "previous": "Deimos",
     "next": "Deinon 7a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 339,
@@ -30116,7 +30176,7 @@
     "lemma": "Deïokes",
     "previous": "Deinon 7b",
     "next": "Dektadas",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 340,
@@ -30142,7 +30202,7 @@
     "lemma": "Deliades 1",
     "previous": "Dektadas",
     "next": "Deloptes",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 340,
@@ -30155,7 +30215,7 @@
     "lemma": "Deloptes",
     "previous": "Deliades 1",
     "next": "Demaratos 3a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 340,
@@ -30180,7 +30240,7 @@
   {
     "lemma": "Demeas 1",
     "previous": "Demaratos 3a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 340,
@@ -30206,7 +30266,7 @@
     "lemma": "Demetria 1",
     "previous": "Demeas 3",
     "next": "Demetrias 1a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 341,
@@ -30247,7 +30307,7 @@
     "previous": "Demetrios 32a",
     "next": "Demetrios 32c",
     "sort_key": "Demetrios 32b",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 342,
@@ -30378,7 +30438,7 @@
     "lemma": "Demetrios 130",
     "previous": "Demetrios 84a",
     "next": "Demo 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 345,
@@ -30404,7 +30464,7 @@
     "lemma": "Demochares 1",
     "previous": "Demo 6",
     "next": "Demochares 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 346,
@@ -30417,7 +30477,7 @@
     "lemma": "Demochares 2",
     "previous": "Demochares 1",
     "next": "Demodike 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 346,
@@ -30430,7 +30490,7 @@
     "lemma": "Demodike 6",
     "previous": "Demochares 2",
     "next": "Demodokos 6a",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 346,

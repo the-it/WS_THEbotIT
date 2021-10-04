@@ -3,7 +3,7 @@
     "lemma": "Pigranes",
     "previous": "Pignus",
     "next": "Pigraxes",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:en:Pigranes",
     "wd_link": "d:Q30934245",
     "chapters": [
@@ -118,8 +118,8 @@
     "proof_read": 3,
     "chapters": [
       {
-        "start": 1316,
-        "end": 1316
+        "start": 1317,
+        "end": 1317
       }
     ]
   },
@@ -131,8 +131,8 @@
     "proof_read": 2,
     "chapters": [
       {
-        "start": 1316,
-        "end": 1316,
+        "start": 1317,
+        "end": 1317,
         "author": "O. Stein."
       }
     ]
@@ -201,11 +201,20 @@
   {
     "lemma": "Pila 3",
     "previous": "Pila 2",
-    "next": "Πιλάδαι",
     "chapters": [
       {
         "start": 1320,
         "author": "Honigmann"
+      }
+    ]
+  },
+  {
+    "lemma": "Pila Tiburtina",
+    "next": "Πιλάδαι",
+    "chapters": [
+      {
+        "start": 1320,
+        "author": "Buren"
       }
     ]
   },
@@ -265,7 +274,7 @@
   {
     "lemma": "Pilarius",
     "previous": "Pilani",
-    "next": "Pila Tiburtina",
+    "next": "Pilas",
     "chapters": [
       {
         "start": 1320,
@@ -274,21 +283,10 @@
     ]
   },
   {
-    "lemma": "Pila Tiburtina",
-    "previous": "Pilarius",
-    "next": "Pilas",
-    "chapters": [
-      {
-        "start": 1320,
-        "author": "Buren"
-      }
-    ]
-  },
-  {
     "lemma": "Pilas",
     "previous": "Pilarius",
     "next": "Pilatus",
-    "redirect": "Kilikiai pylai 1",
+    "redirect": "Itinerarien",
     "proof_read": 3,
     "chapters": [
       {
@@ -339,9 +337,12 @@
     "lemma": "Piliganon",
     "previous": "Pilentum",
     "next": "Pilius",
+    "redirect": "Peliganon",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1326
+        "start": 1326,
+        "end": 1326
       }
     ]
   },
@@ -360,10 +361,12 @@
     "lemma": "Pilius 1",
     "previous": "Pilius",
     "next": "Pilius 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1326,
-        "author": "Münzer"
+        "end": 1326,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -537,7 +540,7 @@
   {
     "lemma": "Pinacotheca",
     "previous": "Pina",
-    "next": "Pinakion 1",
+    "next": "Πινάκιον 1",
     "chapters": [
       {
         "start": 1389,
@@ -546,18 +549,22 @@
     ]
   },
   {
-    "lemma": "Pinakion 1",
+    "lemma": "Πινάκιον 1",
     "previous": "Pinacotheca",
     "next": "Pinakion 2",
+    "sort_key": "Pinakion 1",
+    "redirect": "Pinax 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1390
+        "start": 1390,
+        "end": 1390
       }
     ]
   },
   {
     "lemma": "Pinakion 2",
-    "previous": "Pinakion 1",
+    "previous": "Πινάκιον 1",
     "next": "Pinalos",
     "chapters": [
       {
@@ -581,10 +588,12 @@
     "lemma": "Pinamos",
     "previous": "Pinalos",
     "next": "Pinara 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1391,
-        "author": "Kees"
+        "end": 1391,
+        "author": "Herm. Kees."
       }
     ]
   },
@@ -758,7 +767,7 @@
     "lemma": "Pinarius 11",
     "previous": "Pinarius 10",
     "next": "Pinarius 12",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1400,
@@ -896,10 +905,12 @@
     "lemma": "Pinarius 23",
     "previous": "Pinarius 22",
     "next": "Pinarius 24",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1404,
-        "author": "Stein, [Arthur]"
+        "end": 1404,
+        "author": "Stein."
       }
     ]
   },
@@ -940,10 +951,12 @@
     "lemma": "Pinarius 27",
     "previous": "Pinarius 26",
     "next": "Pinarius 28",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1407,
-        "author": "Münzer"
+        "end": 1407,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1017,9 +1030,12 @@
     "lemma": "Pincensia",
     "previous": "Pinax 3",
     "next": "Pincerna",
+    "redirect": "Pincus 2",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1482
+        "start": 1482,
+        "end": 1482
       }
     ]
   },
@@ -1038,10 +1054,12 @@
     "lemma": "Pinciana aqua",
     "previous": "Pincerna",
     "next": "Pincius mons",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1482,
-        "author": "Buren"
+        "end": 1482,
+        "author": "A. W. Van Buren."
       }
     ]
   },
@@ -1082,9 +1100,12 @@
     "lemma": "Pindarion",
     "previous": "Pincus 2",
     "next": "Pindaros 1",
+    "redirect": "Ptolemaios 79a",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1606
+        "start": 1606,
+        "end": 1606
       }
     ]
   },
@@ -1240,7 +1261,7 @@
     "lemma": "Pindis",
     "previous": "Pindicitora",
     "next": "Pindos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1700,
@@ -1319,10 +1340,12 @@
     "lemma": "Pineta",
     "previous": "Pindusa",
     "next": "Pinetum",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1706,
-        "author": "Scherling"
+        "end": 1706,
+        "author": "Karl Scherling."
       }
     ]
   },
@@ -1330,10 +1353,12 @@
     "lemma": "Pinetum",
     "previous": "Pineta",
     "next": "Pinianus 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1706,
-        "author": "Schulten"
+        "end": 1706,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -1396,10 +1421,12 @@
     "lemma": "Pinnatis",
     "previous": "Pinnas",
     "next": "Pinnes 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1711,
-        "author": "MacDonald"
+        "end": 1711,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -1429,10 +1456,12 @@
     "lemma": "Pinnius 1",
     "previous": "Pinnes 2",
     "next": "Pinnius 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1712,
-        "author": "Münzer"
+        "end": 1712,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1440,10 +1469,12 @@
     "lemma": "Pinnius 2",
     "previous": "Pinnius 1",
     "next": "Pinnius 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1712,
-        "author": "Münzer"
+        "end": 1712,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1495,10 +1526,12 @@
     "lemma": "Pinos",
     "previous": "Pinopygos",
     "next": "Pinta",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1713,
-        "author": "Schulten"
+        "end": 1713,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -1517,9 +1550,12 @@
     "lemma": "Pinthia",
     "previous": "Pinta",
     "next": "Pintia 1",
+    "redirect": "Lutatius 21",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1713
+        "start": 1713,
+        "end": 1713
       }
     ]
   },
@@ -1538,10 +1574,12 @@
     "lemma": "Pintia 2",
     "previous": "Pintia 1",
     "next": "Pintia 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1713,
-        "author": "Schulten"
+        "end": 1713,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -1560,10 +1598,12 @@
     "lemma": "Pintones",
     "previous": "Pintia 3",
     "next": "Pintouaria",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1713,
-        "author": "Schulten"
+        "end": 1713,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -1582,10 +1622,12 @@
     "lemma": "Pinufius (Pinuphios)",
     "previous": "Pintouaria",
     "next": "ad Pinum",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1713,
-        "author": "Enßlin"
+        "end": 1714,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1604,9 +1646,12 @@
     "lemma": "Pinus 1",
     "previous": "ad Pinum",
     "next": "Pinus 2",
+    "redirect": "Pinie",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1714
+        "start": 1714,
+        "end": 1714
       }
     ]
   },
@@ -1669,10 +1714,12 @@
     "lemma": "Pionius 1",
     "previous": "Pionia(i)",
     "next": "Pionius 2",
-    "redirect": true,
+    "redirect": "Diotimos 15",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1717
+        "start": 1717,
+        "end": 1717
       }
     ]
   },
@@ -1702,10 +1749,12 @@
     "lemma": "Pionius 4",
     "previous": "Pionius 3",
     "next": "Pionius 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1718,
-        "author": "Enßlin"
+        "end": 1718,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1724,10 +1773,12 @@
     "lemma": "Pior 1",
     "previous": "Pionius 5",
     "next": "Pior 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1718,
-        "author": "Enßlin"
+        "end": 1718,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1768,9 +1819,12 @@
     "lemma": "Piper",
     "previous": "Pipa 2",
     "next": "Piperios 1",
+    "redirect": "Pfeffer",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1718
+        "start": 1718,
+        "end": 1718
       }
     ]
   },
@@ -1789,10 +1843,12 @@
     "lemma": "Piperios 2",
     "previous": "Piperios 1",
     "next": "Pipius",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1719,
-        "author": "Enßlin"
+        "end": 1719,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1822,9 +1878,12 @@
     "lemma": "Pir-",
     "previous": "Piquentum",
     "next": "Pirae(i)",
+    "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1720
+        "start": 1720,
+        "end": 1720
       }
     ]
   },
@@ -1854,10 +1913,12 @@
     "lemma": "Pirama",
     "previous": "Piragh (Pirak)/Mihrân",
     "next": "Pirângusnasp",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1720,
-        "author": "Ziegler"
+        "end": 1720,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -1898,10 +1959,12 @@
     "lemma": "Pirasius",
     "previous": "Piranus",
     "next": "Pirata",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1721,
-        "author": "Enßlin"
+        "end": 1721,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1909,10 +1972,12 @@
     "lemma": "Pirata",
     "previous": "Pirasius",
     "next": "Piraten",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1721,
-        "author": "Enßlin"
+        "end": 1721,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1920,9 +1985,12 @@
     "lemma": "Piraten",
     "previous": "Pirata",
     "next": "Piratum",
+    "redirect": "Seeraub (Seeräuber, Seeräuberei)",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1721
+        "start": 1721,
+        "end": 1721
       }
     ]
   },
@@ -1930,10 +1998,12 @@
     "lemma": "Piratum",
     "previous": "Piraten",
     "next": "Piretenses",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1721,
-        "author": "Schmidt"
+        "end": 1721,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -1996,9 +2066,12 @@
     "lemma": "Pirina",
     "previous": "Piriboridava",
     "next": "Pirisabora",
+    "redirect": "Pirama",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1724
+        "start": 1724,
+        "end": 1724
       }
     ]
   },
@@ -2039,9 +2112,12 @@
     "lemma": "Pirous",
     "previous": "Piro torto",
     "next": "Piroz",
+    "redirect": "Perous",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1726
+        "start": 1726,
+        "end": 1726
       }
     ]
   },
@@ -2049,9 +2125,12 @@
     "lemma": "Piroz",
     "previous": "Pirous",
     "next": "Pirozes",
+    "redirect": "Peroz 1",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1726
+        "start": 1726,
+        "end": 1726
       }
     ]
   },
@@ -2059,10 +2138,12 @@
     "lemma": "Pirozes",
     "previous": "Piroz",
     "next": "ad Pirum 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1726,
-        "author": "Enßlin"
+        "end": 1726,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2130,9 +2211,12 @@
     "lemma": "Pirus",
     "previous": "ad Pirum 5",
     "next": "Pirustae",
+    "redirect": "Birnbaum",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1729
+        "start": 1729,
+        "end": 1729
       }
     ]
   },
@@ -2151,9 +2235,12 @@
     "lemma": "Pis...",
     "previous": "Pirustae",
     "next": "Pisa, Pisatis",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1729
+        "start": 1732,
+        "end": 1732
       }
     ]
   },
@@ -2183,10 +2270,12 @@
     "lemma": "Pisaion",
     "previous": "Pisae",
     "next": "Pisaios",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1772,
-        "author": "Meyer, Ernst"
+        "end": 1772,
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -2216,9 +2305,12 @@
     "lemma": "Pisanus",
     "previous": "Pisandes",
     "next": "Pisatis",
+    "redirect": "Caetronius 3",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1773
+        "start": 1773,
+        "end": 1773
       }
     ]
   },
@@ -2226,9 +2318,12 @@
     "lemma": "Pisatis",
     "previous": "Pisanus",
     "next": "Pisav",
+    "redirect": "Pisa, Pisatis",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1773
+        "start": 1773,
+        "end": 1773
       }
     ]
   },
@@ -2247,9 +2342,12 @@
     "lemma": "Piscarius",
     "previous": "Pisav",
     "next": "Piscator",
+    "redirect": "Aternus",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1774
+        "start": 1774,
+        "end": 1774
       }
     ]
   },
@@ -2257,9 +2355,12 @@
     "lemma": "Piscator",
     "previous": "Piscarius",
     "next": "Piscatorii ludi",
+    "redirect": "Fischereigewerbe",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1774
+        "start": 1774,
+        "end": 1774
       }
     ]
   },
@@ -2300,9 +2401,12 @@
     "lemma": "Pisciculus",
     "previous": "Pisces",
     "next": "Piscina",
+    "redirect": "Iunius 129",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1783
+        "start": 1783,
+        "end": 1783
       }
     ]
   },
@@ -2354,10 +2458,12 @@
     "lemma": "Pises",
     "previous": "Piseanoi",
     "next": "Pisianax",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1793,
-        "author": "Meyer, Ernst"
+        "end": 1793,
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -2365,9 +2471,12 @@
     "lemma": "Pisianax",
     "previous": "Pises",
     "next": "Pisibanus",
+    "redirect": "Trebatius 3",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1793
+        "start": 1793,
+        "end": 1793
       }
     ]
   },
@@ -2375,9 +2484,12 @@
     "lemma": "Pisibanus",
     "previous": "Pisianax",
     "next": "Pisidia",
+    "redirect": "Cassius 49",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1793
+        "start": 1793,
+        "end": 1793
       }
     ]
   },
@@ -2385,9 +2497,12 @@
     "lemma": "Pisidia",
     "previous": "Pisibanus",
     "next": "Pisidien",
+    "redirect": true,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1793
+        "start": 1793,
+        "end": 1793
       }
     ]
   },
@@ -2417,10 +2532,12 @@
     "lemma": "Pisides",
     "previous": "Pisidike, Pisidikoi",
     "next": "Pisilis",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1798,
-        "author": "Türk"
+        "end": 1798,
+        "author": "G. Türk."
       }
     ]
   },
@@ -2477,10 +2594,13 @@
     "lemma": "Πισίνδων λιμήν",
     "previous": "Pisindelis",
     "next": "Pisingara",
+    "sort_key": "Pisindon",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1799,
-        "author": "Windberg"
+        "end": 1799,
+        "author": "F. Windberg."
       }
     ]
   },
@@ -2552,10 +2672,12 @@
     "lemma": "Piso 1",
     "previous": "Piso",
     "next": "Piso 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1801,
-        "author": "Peek"
+        "end": 1801,
+        "author": "W. Peek."
       }
     ]
   },
@@ -2641,10 +2763,12 @@
     "lemma": "Piso 8",
     "previous": "Piso 7",
     "next": "Piso 9",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1805,
-        "author": "Enßlin"
+        "end": 1805,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2696,10 +2820,12 @@
     "lemma": "Pisonianus 1",
     "previous": "Pison",
     "next": "Pisonianus 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1805,
-        "author": "Stein, [Arthur]"
+        "end": 1805,
+        "author": "Stein."
       }
     ]
   },
@@ -2707,10 +2833,12 @@
     "lemma": "Pisonianus 2",
     "previous": "Pisonianus 1",
     "next": "Pisoninus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1805,
-        "author": "Enßlin"
+        "end": 1805,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2755,10 +2883,12 @@
     "lemma": "Pisoraca 1",
     "previous": "Pisonos",
     "next": "Pisoraca 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1806,
-        "author": "Schulten"
+        "end": 1806,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -2788,10 +2918,12 @@
     "lemma": "Pisos 2",
     "previous": "Pisos 1",
     "next": "Pissa",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1806,
-        "author": "Andrée[-Hanslik]"
+        "end": 1806,
+        "author": "Judith Andrée-Hanslik."
       }
     ]
   },
@@ -2952,9 +3084,12 @@
     "lemma": "Pistiros",
     "previous": "Pistios",
     "next": "Pistis 1",
+    "redirect": "Pistyros",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1812
+        "start": 1812,
+        "end": 1812
       }
     ]
   },
@@ -2995,10 +3130,12 @@
     "lemma": "Pistius",
     "previous": "Pistis Sophia",
     "next": "Piston",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1821,
-        "author": "Enßlin"
+        "end": 1821,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3072,10 +3209,12 @@
     "lemma": "Pistos 2",
     "previous": "Pistos 1",
     "next": "Pistos 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1836,
-        "author": "Enßlin"
+        "end": 1836,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3105,10 +3244,12 @@
     "lemma": "Pistos 5",
     "previous": "Pistos 4",
     "next": "Pistos 6",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1836,
-        "author": "Enßlin"
+        "end": 1836,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3138,10 +3279,12 @@
     "lemma": "Pistos 8",
     "previous": "Pistos 7",
     "next": "Pistoxenos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1836,
-        "author": "Enßlin"
+        "end": 1836,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3271,10 +3414,12 @@
     "lemma": "Pita(?)",
     "previous": "Pit-",
     "next": "Pitaion",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1838,
-        "author": "Keil"
+        "end": 1839,
+        "author": "J. Keil."
       }
     ]
   },
@@ -3339,10 +3484,12 @@
     "lemma": "Piterus",
     "previous": "Pitara",
     "next": "Pithecusa, -ae",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1843,
-        "author": "Enßlin"
+        "end": 1843,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3404,10 +3551,12 @@
     "lemma": "Pithoi(?)",
     "previous": "Pithios",
     "next": "Pithoigia",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1843,
-        "author": "Keil"
+        "end": 1843,
+        "author": "J. Keil."
       }
     ]
   },
@@ -3525,10 +3674,12 @@
     "lemma": "Pitiniana",
     "previous": "Pitinatis Ager",
     "next": "Pitinum 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1850,
-        "author": "Ziegler"
+        "end": 1850,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -3569,9 +3720,12 @@
     "lemma": "Pitio",
     "previous": "Pitinum 3",
     "next": "Pitnissos",
+    "redirect": "Sempronius 74",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1862
+        "start": 1862,
+        "end": 1862
       }
     ]
   },
@@ -3579,9 +3733,13 @@
     "lemma": "Pitnissos",
     "previous": "Pitio",
     "next": "Pitonius",
+    "sort_key": "Pitnissos",
+    "redirect": "Petenissos",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1862
+        "start": 1862,
+        "end": 1862
       }
     ]
   },
@@ -3600,10 +3758,12 @@
     "lemma": "Pittakas",
     "previous": "Pitonius",
     "next": "Pittakos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1862,
-        "author": "Enßlin"
+        "end": 1862,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3644,10 +3804,12 @@
     "lemma": "Pituanius",
     "previous": "Pittheus",
     "next": "Pitulani",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1875,
-        "author": "Stein, [Arthur]"
+        "end": 1875,
+        "author": "Stein."
       }
     ]
   },
@@ -3665,7 +3827,7 @@
   {
     "lemma": "Pituntium",
     "previous": "Pitulani",
-    "next": "Pitoura",
+    "next": "Πιτούρα",
     "chapters": [
       {
         "start": 1875,
@@ -3674,18 +3836,22 @@
     ]
   },
   {
-    "lemma": "Pitoura",
+    "lemma": "Πιτούρα",
     "previous": "Pituntium",
     "next": "Pitya",
+    "sort_key": "Pitura",
+    "redirect": "Pityndra metropolis",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1877
+        "start": 1877,
+        "end": 1877
       }
     ]
   },
   {
     "lemma": "Pitya",
-    "previous": "Pitoura",
+    "previous": "Πιτούρα",
     "next": "Pityassos",
     "chapters": [
       {
@@ -3698,10 +3864,12 @@
     "lemma": "Pityassos",
     "previous": "Pitya",
     "next": "Pityaxes",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1877,
-        "author": "Keil"
+        "end": 1878,
+        "author": "J. Keil."
       }
     ]
   },
@@ -3764,9 +3932,12 @@
     "lemma": "Pityokamptes",
     "previous": "Pityodes",
     "next": "Pityonesos",
+    "redirect": "Sinis 1",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1880
+        "start": 1880,
+        "end": 1880
       }
     ]
   },
@@ -3796,10 +3967,12 @@
     "lemma": "Pityrion",
     "previous": "Pityreus",
     "next": "Pitys 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1881,
-        "author": "Enßlin"
+        "end": 1881,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3851,10 +4024,12 @@
     "lemma": "Pityus 2",
     "previous": "Pityus 1",
     "next": "Pityussa 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1884,
-        "author": "Keil"
+        "end": 1884,
+        "author": "J. Keil."
       }
     ]
   },
@@ -3862,10 +4037,12 @@
     "lemma": "Pityussa 1",
     "previous": "Pityus 2",
     "next": "Pityussa 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1884,
-        "author": "Keil"
+        "end": 1884,
+        "author": "J. Keil."
       }
     ]
   },
@@ -3873,10 +4050,12 @@
     "lemma": "Pityussa 2",
     "previous": "Pityussa 1",
     "next": "Pityussa 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1884,
-        "author": "Keil"
+        "end": 1884,
+        "author": "J. Keil."
       }
     ]
   },
@@ -3895,10 +4074,12 @@
     "lemma": "Pityussa 4",
     "previous": "Pityussa 3",
     "next": "Pityussa 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1885,
-        "author": "Schmidt"
+        "end": 1885,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -3906,10 +4087,12 @@
     "lemma": "Pityussa 5",
     "previous": "Pityussa 4",
     "next": "Pityussa 6",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1885,
-        "author": "Schmidt"
+        "end": 1885,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -3939,9 +4122,12 @@
     "lemma": "Pityussa 8",
     "previous": "Pityussa 7",
     "next": "Pityussai",
+    "redirect": "Pityonesos",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1886
+        "start": 1886,
+        "end": 1886
       }
     ]
   },
@@ -4026,10 +4212,12 @@
     "lemma": "Pius 3",
     "previous": "Pius 2",
     "next": "Pius 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1892,
-        "author": "Enßlin"
+        "end": 1892,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4037,10 +4225,12 @@
     "lemma": "Pius 4",
     "previous": "Pius 3",
     "next": "Pius 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1892,
-        "author": "Enßlin"
+        "end": 1892,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4048,7 +4238,7 @@
     "lemma": "Pius 5",
     "previous": "Pius 4",
     "next": "Pius 6",
-    "redirect": true,
+    "redirect": "Marianus 6",
     "proof_read": 3,
     "chapters": [
       {
@@ -4083,10 +4273,12 @@
     "lemma": "Pius 8",
     "previous": "Pius 7",
     "next": "D. Pius Cassius",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1893,
-        "author": "Enßlin"
+        "end": 1893,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4107,16 +4299,26 @@
   {
     "lemma": "Pixodaros",
     "previous": "D. Pius Cassius",
-    "next": "Pixodaros 1"
+    "next": "Pixodaros 1",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1893,
+        "end": 1893,
+        "author": "J. Miller."
+      }
+    ]
   },
   {
     "lemma": "Pixodaros 1",
     "previous": "Pixodaros",
     "next": "Pixodaros 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1893,
-        "author": "Miller"
+        "end": 1894,
+        "author": "J. Miller."
       }
     ]
   },
@@ -4214,10 +4416,12 @@
     "lemma": "Placianus",
     "previous": "Placia",
     "next": "Placida",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1910,
-        "author": "Enßlin"
+        "end": 1910,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4225,9 +4429,12 @@
     "lemma": "Placida",
     "previous": "Placianus",
     "next": "Placidia 1",
+    "redirect": "Placidus 15",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1910
+        "start": 1910,
+        "end": 1910
       }
     ]
   },
@@ -4290,10 +4497,12 @@
     "lemma": "Placidia 6",
     "previous": "Placidia 5",
     "next": "Placidianus 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1933,
-        "author": "Enßlin"
+        "end": 1933,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4301,10 +4510,12 @@
     "lemma": "Placidianus 1",
     "previous": "Placidia 6",
     "next": "Placidianus 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1933,
-        "author": "Enßlin"
+        "end": 1933,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4312,9 +4523,12 @@
     "lemma": "Placidianus 2",
     "previous": "Placidianus 1",
     "next": "Placidina 1",
+    "redirect": "Iulius 391",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1933
+        "start": 1933,
+        "end": 1933
       }
     ]
   },
@@ -4366,9 +4580,12 @@
     "lemma": "Placidus 3",
     "previous": "Placidus 2",
     "next": "Placidus 4",
+    "redirect": "Severus 27",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1936
+        "start": 1936,
+        "end": 1936
       }
     ]
   },
@@ -4376,9 +4593,12 @@
     "lemma": "Placidus 4",
     "previous": "Placidus 3",
     "next": "Placidus 5",
+    "redirect": "Valentinianus 4",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1936
+        "start": 1936,
+        "end": 1936
       }
     ]
   },
@@ -4408,10 +4628,12 @@
     "lemma": "Placidus 7",
     "previous": "Placidus 6",
     "next": "Placidus 8",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1936,
-        "author": "Enßlin"
+        "end": 1936,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4419,10 +4641,12 @@
     "lemma": "Placidus 8",
     "previous": "Placidus 7",
     "next": "Placidus 9",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1936,
-        "author": "Enßlin"
+        "end": 1936,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4441,10 +4665,12 @@
     "lemma": "Placidus 10",
     "previous": "Placidus 9",
     "next": "Placidus 11",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1937,
-        "author": "Enßlin"
+        "end": 1937,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4463,10 +4689,12 @@
     "lemma": "Placidus 12",
     "previous": "Placidus 11",
     "next": "Placidus 13",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1937,
-        "author": "Wotke"
+        "end": 1937,
+        "author": "F. Wotke."
       }
     ]
   },
@@ -4485,9 +4713,12 @@
     "lemma": "Placidus 14",
     "previous": "Placidus 13",
     "next": "Placidus 15",
+    "redirect": "Annaeus 13",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1944
+        "start": 1944,
+        "end": 1944
       }
     ]
   },
@@ -4495,10 +4726,12 @@
     "lemma": "Placidus 15",
     "previous": "Placidus 14",
     "next": "Placidus 16",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1944,
-        "author": "Enßlin"
+        "end": 1944,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4506,10 +4739,12 @@
     "lemma": "Placidus 16",
     "previous": "Placidus 15",
     "next": "Placidus 17",
+    "redirect": "Galla 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1944,
-        "author": "Enßlin"
+        "end": 1944
       }
     ]
   },
@@ -4517,9 +4752,12 @@
     "lemma": "Placidus 17",
     "previous": "Placidus 16",
     "next": "Placidus 18",
+    "redirect": "Cornelius 447",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 1944
+        "start": 1944,
+        "end": 1944
       }
     ]
   },
@@ -4549,10 +4787,12 @@
     "lemma": "Placitus 2",
     "previous": "Placitus 1",
     "next": "Placitus 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1944,
-        "author": "Enßlin"
+        "end": 1944,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4714,10 +4954,12 @@
     "lemma": "Plaetorius 12",
     "previous": "Plaetorius 11",
     "next": "Plaetorius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1949,
-        "author": "Münzer"
+        "end": 1949,
+        "author": "Münzer."
       }
     ]
   },
@@ -4835,10 +5077,12 @@
     "lemma": "Plagara",
     "previous": "Plaga 2",
     "next": "Plagiaria",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1956,
-        "author": "Schmidt"
+        "end": 1956,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -4846,10 +5090,12 @@
     "lemma": "Plagiaria",
     "previous": "Plagara",
     "next": "Plagiat",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1956,
-        "author": "Schulten"
+        "end": 1956,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -4901,10 +5147,12 @@
     "lemma": "Plaguleius",
     "previous": "Plagula",
     "next": "Plakia 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2007,
-        "author": "Münzer"
+        "end": 2007,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -4934,9 +5182,12 @@
     "lemma": "Plakia 3",
     "previous": "Plakia 2",
     "next": "Plakiane",
+    "redirect": "Placia",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2007
+        "start": 2007,
+        "end": 2007
       }
     ]
   },
@@ -4944,10 +5195,12 @@
     "lemma": "Plakiane",
     "previous": "Plakia 3",
     "next": "Plakilla",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2007,
-        "author": "Schmidt"
+        "end": 2008,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -4955,10 +5208,12 @@
     "lemma": "Plakilla",
     "previous": "Plakiane",
     "next": "Plakillos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2008,
-        "author": "Enßlin"
+        "end": 2008,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5032,10 +5287,12 @@
     "lemma": "Plamos",
     "previous": "Plakus",
     "next": "Planaria 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2009,
-        "author": "Schmidt"
+        "end": 2009,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -5043,9 +5300,12 @@
     "lemma": "Planaria 1",
     "previous": "Plamos",
     "next": "Planaria 2",
+    "redirect": "Fortunatae insulae 1",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2009
+        "start": 2009,
+        "end": 2009
       }
     ]
   },
@@ -5086,9 +5346,12 @@
     "lemma": "Planciades",
     "previous": "Planasia 2",
     "next": "Planciana",
+    "redirect": "Fabius 129",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2011
+        "start": 2011,
+        "end": 2011
       }
     ]
   },
@@ -5096,9 +5359,12 @@
     "lemma": "Planciana",
     "previous": "Planciades",
     "next": "Plancianus",
+    "redirect": "Plancius 4",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2011
+        "start": 2011,
+        "end": 2011
       }
     ]
   },
@@ -5106,9 +5372,12 @@
     "lemma": "Plancianus",
     "previous": "Planciana",
     "next": "Pl(an)cilla",
+    "redirect": "Celsus 11",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2011
+        "start": 2011,
+        "end": 2011
       }
     ]
   },
@@ -5138,9 +5407,12 @@
     "lemma": "Plancina 2",
     "previous": "Plancina 1",
     "next": "Plancius",
+    "redirect": "Aemilius 174",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2012
+        "start": 2012,
+        "end": 2012
       }
     ]
   },
@@ -5148,10 +5420,12 @@
     "lemma": "Plancius",
     "previous": "Plancina 2",
     "next": "Plancius 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2012,
-        "author": "Münzer"
+        "end": 2012,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -5159,10 +5433,12 @@
     "lemma": "Plancius 1",
     "previous": "Plancius",
     "next": "Plancius 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2012,
-        "author": "Münzer"
+        "end": 2012,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -5251,10 +5527,12 @@
     "lemma": "Plangenses",
     "previous": "Planeten",
     "next": "Plangon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2185,
-        "author": "Hanslik"
+        "end": 2185,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -5306,10 +5584,12 @@
     "lemma": "Plania",
     "previous": "Planius",
     "next": "Planktai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2187,
-        "author": "Ziegler"
+        "end": 2187,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -5350,9 +5630,12 @@
     "lemma": "Planta",
     "previous": "Planodaimon",
     "next": "Plantago",
+    "redirect": "Iulius 394",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2200
+        "start": 2200,
+        "end": 2200
       }
     ]
   },
@@ -5393,9 +5676,12 @@
     "lemma": "Plaraioi",
     "previous": "Planudes, Maximos",
     "next": "Plarasa",
+    "redirect": "Pleraei",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2253
+        "start": 2253,
+        "end": 2253
       }
     ]
   },
@@ -5414,9 +5700,12 @@
     "lemma": "Plaria",
     "previous": "Plarasa",
     "next": "Plarianus",
+    "redirect": "Arrius 46",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2253
+        "start": 2253,
+        "end": 2253
       }
     ]
   },
@@ -5424,9 +5713,12 @@
     "lemma": "Plarianus",
     "previous": "Plaria",
     "next": "Plarios",
+    "redirect": "Acilius 51",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2253
+        "start": 2253,
+        "end": 2253
       }
     ]
   },
@@ -5445,9 +5737,12 @@
     "lemma": "Plarius",
     "previous": "Plarios",
     "next": "Plastene",
+    "redirect": "Vigellius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2254
+        "start": 2254,
+        "end": 2254
       }
     ]
   },
@@ -5466,9 +5761,12 @@
     "lemma": "Platage",
     "previous": "Plastene",
     "next": "Platagonion",
+    "redirect": "Patage, Platage",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2254
+        "start": 2254,
+        "end": 2254
       }
     ]
   },
@@ -5498,10 +5796,12 @@
     "lemma": "Plataiai 2",
     "previous": "Plataiai 1",
     "next": "Platamodes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2332,
-        "author": "Meyer, Ernst"
+        "end": 2332,
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -5564,9 +5864,12 @@
     "lemma": "Platanistes",
     "previous": "Platanistenoi",
     "next": "Platanistios",
+    "redirect": "Platanistios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2334
+        "start": 2334,
+        "end": 2334
       }
     ]
   },
@@ -5684,9 +5987,12 @@
     "lemma": "Platanus",
     "previous": "Platanos 3",
     "next": "Plate",
+    "redirect": "Platanistos, Platanus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2339
+        "start": 2339,
+        "end": 2339
       }
     ]
   },
@@ -5727,10 +6033,12 @@
     "lemma": "Plateae",
     "previous": "Platea 2",
     "next": "Plateai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2339,
-        "author": "Schmidt"
+        "end": 2339,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -5782,9 +6090,12 @@
     "lemma": "Plateia",
     "previous": "Plateia 2",
     "next": "Plateiai",
+    "redirect": "Plati",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2341
+        "start": 2341,
+        "end": 2341
       }
     ]
   },
@@ -5792,9 +6103,12 @@
     "lemma": "Plateiai",
     "previous": "Plateia",
     "next": "Plateis 1",
+    "redirect": "Plateai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2341
+        "start": 2341,
+        "end": 2341
       }
     ]
   },
@@ -5868,10 +6182,12 @@
     "lemma": "Platon 3",
     "previous": "Platon 2",
     "next": "Platon 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2541,
-        "author": "Kolf"
+        "end": 2541,
+        "author": "Marie C. van der Kolf."
       }
     ]
   },
@@ -5923,10 +6239,12 @@
     "lemma": "Platon 8",
     "previous": "Platon 7",
     "next": "Platon 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2542,
-        "author": "Schmidt"
+        "end": 2542,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -5934,10 +6252,12 @@
     "lemma": "Platon 9",
     "previous": "Platon 8",
     "next": "Platon 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2542,
-        "author": "Schmidt"
+        "end": 2542,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -5945,10 +6265,12 @@
     "lemma": "Platon 10",
     "previous": "Platon 9",
     "next": "Platon 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2542,
-        "author": "Schmidt"
+        "end": 2542,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -5967,10 +6289,12 @@
     "lemma": "Platon 12",
     "previous": "Platon 11",
     "next": "Platon 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2542,
-        "author": "Schmidt"
+        "end": 2542,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -5978,10 +6302,12 @@
     "lemma": "Platon 13",
     "previous": "Platon 12",
     "next": "Platon 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2542,
-        "author": "Schmidt"
+        "end": 2542,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -6132,10 +6458,12 @@
     "lemma": "Platorius",
     "previous": "Platorius 2",
     "next": "Platorius 3",
-    "redirect": true,
+    "redirect": "Sulpicius 84",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2548
+        "start": 2548,
+        "end": 2548
       }
     ]
   },
@@ -6154,9 +6482,13 @@
     "lemma": "Plattorius",
     "previous": "Platorius 3",
     "next": "Plattwürmer",
+    "redirect": "Plaetorius 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2548
+        "start": 2548,
+        "end": 2548,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -6208,9 +6540,12 @@
     "lemma": "Plautianus",
     "previous": "Plausurnius",
     "next": "Plautilla",
+    "redirect": "Fulvius 101",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2556
+        "start": 2556,
+        "end": 2556
       }
     ]
   },
@@ -6218,9 +6553,12 @@
     "lemma": "Plautilla",
     "previous": "Plautianus",
     "next": "Plautillus",
+    "redirect": "Fulvius 117",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2556
+        "start": 2556,
+        "end": 2556
       }
     ]
   },

@@ -68,7 +68,7 @@ class Volume:
 
     @property
     def type(self) -> VolumeType:
-        for re_volume_type in _REGEX_MAPPING:
+        for re_volume_type in _REGEX_MAPPING:  # pylint: disable=consider-using-dict-items
             if _REGEX_MAPPING[re_volume_type].match(self.name):
                 return re_volume_type
         raise ReDatenException(f"Name of Volume {self.name} is malformed.")

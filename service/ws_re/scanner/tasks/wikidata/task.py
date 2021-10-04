@@ -70,7 +70,7 @@ class DATATask(ReScannerTask):
                 if claims_to_remove:
                     # if there are claims, that aren't up to date remove them
                     data_item.removeClaims(claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
-            except pywikibot.exceptions.NoPage:
+            except pywikibot.exceptions.NoPageError:
                 # create a new one from scratch
                 data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
                 claims_to_change = self._get_claimes_to_change(None)

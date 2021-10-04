@@ -60,6 +60,8 @@
     "previous": "Ephraim 2",
     "next": "Ephraim Syrus",
     "proof_read": 3,
+    "wp_link": "w:en:Ephraim of Antioch",
+    "wd_link": "d:Q2596398",
     "chapters": [
       {
         "start": 17,
@@ -310,9 +312,12 @@
     "lemma": "Epianus",
     "previous": "Epiales",
     "next": "Epiassa",
+    "redirect": "Aelius 29",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 21
+        "start": 21,
+        "end": 21
       }
     ]
   },
@@ -446,9 +451,12 @@
     "lemma": "Epicadus",
     "previous": "ho epi bomo hiereus",
     "next": "Epicaria",
+    "redirect": "Asinius 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 33
+        "start": 33,
+        "end": 33
       }
     ]
   },
@@ -659,9 +667,12 @@
     "lemma": "Epidamnos 1",
     "previous": "Epidamnios",
     "next": "Epidamnos 2",
+    "redirect": "Dyrrhachion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 44
+        "start": 44,
+        "end": 44
       }
     ]
   },
@@ -680,9 +691,12 @@
     "lemma": "Epidamos",
     "previous": "Epidamnos 2",
     "next": "Epidaneizein",
+    "redirect": "Epidemos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 44
+        "start": 44,
+        "end": 44
       }
     ]
   },
@@ -1571,9 +1585,12 @@
     "lemma": "Epikleidas",
     "previous": "Epikichradas",
     "next": "Epikleidia",
+    "redirect": "Eukleidas 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 114
+        "start": 114,
+        "end": 114
       }
     ]
   },
@@ -1703,9 +1720,12 @@
     "lemma": "Epiknemidioi",
     "previous": "Epiklopeios",
     "next": "Epikoinios",
+    "redirect": "Lokris 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 118
+        "start": 118,
+        "end": 118
       }
     ]
   },
@@ -1766,7 +1786,7 @@
     "lemma": "Epikrates 3",
     "previous": "Epikrates 2",
     "next": "Epikrates 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 119,
@@ -2290,9 +2310,12 @@
     "lemma": "Epikylikeios",
     "previous": "Epikyklidios",
     "next": "Epilachon",
+    "redirect": "Epikyklidios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2478,10 +2501,12 @@
     "lemma": "Epimachos 2",
     "previous": "Epimachos 1",
     "next": "Epimachos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 160,
-        "author": "Stein, [Arthur]"
+        "end": 160,
+        "author": "Stein."
       }
     ]
   },
@@ -2523,10 +2548,12 @@
     "lemma": "Epimedes 2",
     "previous": "Epimedes 1",
     "next": "Epimedusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Kern"
+        "end": 162,
+        "author": "Kern."
       }
     ]
   },
@@ -2534,10 +2561,12 @@
     "lemma": "Epimedusa",
     "previous": "Epimedes 2",
     "next": "Epimeilios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Escher"
+        "end": 162,
+        "author": "Escher."
       }
     ]
   },
@@ -3117,9 +3146,12 @@
     "lemma": "Epiphanes 3",
     "previous": "Epiphanes 2",
     "next": "Epiphanes 4",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 193
+        "start": 193,
+        "end": 193
       }
     ]
   },
@@ -3127,9 +3159,12 @@
     "lemma": "Epiphanes 4",
     "previous": "Epiphanes 3",
     "next": "Epiphanios 1",
+    "redirect": "Iulius 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 193
+        "start": 193,
+        "end": 193
       }
     ]
   },
@@ -3291,9 +3326,13 @@
     "lemma": "Ἐπιφορά",
     "previous": "Epiphanios 11",
     "next": "Epiphrades",
+    "sort_key": "Epiphora",
+    "redirect": "Epitimion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 196
+        "start": 196,
+        "end": 196
       }
     ]
   },
@@ -3334,9 +3373,12 @@
     "lemma": "Epipolai",
     "previous": "Epipola",
     "next": "Epipole",
+    "redirect": "Syrakusai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 197
+        "start": 197,
+        "end": 197
       }
     ]
   },
@@ -3444,9 +3486,12 @@
     "lemma": "Epirota",
     "previous": "Epirnytios",
     "next": "Epis",
+    "redirect": "Caecilius 53",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 198
+        "start": 198,
+        "end": 198
       }
     ]
   },
@@ -3679,9 +3724,12 @@
     "lemma": "Epistolographoi",
     "previous": "Epistoleus",
     "next": "Epistomion",
+    "redirect": "ab epistulis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
@@ -3825,6 +3873,8 @@
     "previous": "Epistula 2",
     "next": "Epistylion",
     "sort_key": "epislius ab",
+    "wp_link": "w:en:Ab epistulis",
+    "wd_link": "d:Q14526933",
     "chapters": [
       {
         "start": 210,
@@ -4005,9 +4055,12 @@
     "lemma": "Epithalamion",
     "previous": "Epitermios",
     "next": "Epithalamites",
+    "redirect": "Hymenaios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 220
+        "start": 220,
+        "end": 220
       }
     ]
   },
@@ -4182,9 +4235,12 @@
     "lemma": "Epitonion",
     "previous": "Epitokizein",
     "next": "Epitonos",
+    "redirect": "Epistomion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 222
+        "start": 222,
+        "end": 222
       }
     ]
   },
@@ -4215,9 +4271,12 @@
     "lemma": "Epitrapezios",
     "previous": "Epitragia",
     "next": "Epitrierarchema",
+    "redirect": "Lysippos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 223
+        "start": 223,
+        "end": 223
       }
     ]
   },
@@ -4303,7 +4362,7 @@
   {
     "lemma": "Epitynchanos 3",
     "previous": "Epitynchanos 2",
-    "next": "Epizamion",
+    "next": "Ἐπιζάμιον",
     "chapters": [
       {
         "start": 225,
@@ -4313,18 +4372,22 @@
     ]
   },
   {
-    "lemma": "Epizamion",
+    "lemma": "Ἐπιζάμιον",
     "previous": "Epitynchanos 3",
     "next": "Epobelia",
+    "sort_key": "Epizamion",
+    "redirect": "Epitimion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 226
+        "start": 226,
+        "end": 226
       }
     ]
   },
   {
     "lemma": "Epobelia",
-    "previous": "Epizamion",
+    "previous": "Ἐπιζάμιον",
     "next": "Epochos 1",
     "chapters": [
       {
@@ -4867,7 +4930,8 @@
     "chapters": [
       {
         "start": 259,
-        "author": "Münzer"
+        "end": 259,
+        "author": "Münzer."
       }
     ]
   },
@@ -4967,9 +5031,12 @@
     "lemma": "Epulones",
     "previous": "Epulo 2",
     "next": "Epytides",
+    "redirect": "Septemviri epulonum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 266
+        "start": 266,
+        "end": 266
       }
     ]
   },
@@ -5033,9 +5100,12 @@
     "lemma": "Equester 2",
     "previous": "Equester 1",
     "next": "Equestris",
+    "redirect": "Aemilius 43",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 267
+        "start": 267,
+        "end": 267
       }
     ]
   },
@@ -5043,9 +5113,12 @@
     "lemma": "Equestris",
     "previous": "Equester 2",
     "next": "Equi circenses",
+    "redirect": "Noviodunum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 267
+        "start": 267,
+        "end": 267
       }
     ]
   },
@@ -5237,9 +5310,12 @@
     "lemma": "Equus publicus",
     "previous": "Equus",
     "next": "Equus Tuticus",
+    "redirect": "Equites Romani",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 326
+        "start": 326,
+        "end": 326
       }
     ]
   },
@@ -5247,9 +5323,12 @@
     "lemma": "Equus Tuticus",
     "previous": "Equus publicus",
     "next": "Era",
+    "redirect": "Aequum Tuticum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 326
+        "start": 326,
+        "end": 326
       }
     ]
   },
@@ -5257,9 +5336,12 @@
     "lemma": "Era",
     "previous": "Equus Tuticus",
     "next": "Eraden",
+    "redirect": "Aeracura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 326
+        "start": 326,
+        "end": 326
       }
     ]
   },
@@ -5278,9 +5360,12 @@
     "lemma": "Erafronia",
     "previous": "Eraden",
     "next": "Eragiza",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 326
+        "start": 326,
+        "end": 326
       }
     ]
   },
@@ -5333,7 +5418,7 @@
   {
     "lemma": "Erana 2",
     "previous": "Erana 1",
-    "next": "Eranarches, eranikai dikai, eranikos nomos",
+    "next": "Ἐρανάρχης, ἐρανικαὶ δίκαι, ἐρανικὸς νόμος",
     "chapters": [
       {
         "start": 327,
@@ -5342,18 +5427,22 @@
     ]
   },
   {
-    "lemma": "Eranarches, eranikai dikai, eranikos nomos",
+    "lemma": "Ἐρανάρχης, ἐρανικαὶ δίκαι, ἐρανικὸς νόμος",
     "previous": "Erana 2",
     "next": "Eranno",
+    "sort_key": "Eranarches",
+    "redirect": "Eranos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 327
+        "start": 327,
+        "end": 327
       }
     ]
   },
   {
     "lemma": "Eranno",
-    "previous": "Eranarches, eranikai dikai, eranikos nomos",
+    "previous": "Ἐρανάρχης, ἐρανικαὶ δίκαι, ἐρανικὸς νόμος",
     "next": "Erannoboas",
     "chapters": [
       {
@@ -5989,9 +6078,12 @@
     "lemma": "Erbessus",
     "previous": "Eravisci",
     "next": "Erbrecht",
+    "redirect": "Herbessos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 391
+        "start": 391,
+        "end": 391
       }
     ]
   },
@@ -6072,9 +6164,12 @@
     "lemma": "Ercobriga",
     "previous": "Erchoas",
     "next": "Ercte",
+    "redirect": "Nertobriga 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 399
+        "start": 399,
+        "end": 399
       }
     ]
   },
@@ -6082,9 +6177,12 @@
     "lemma": "Ercte",
     "previous": "Ercobriga",
     "next": "Erculente",
+    "redirect": "Heirkte",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 399
+        "start": 399,
+        "end": 399
       }
     ]
   },
@@ -6393,9 +6491,12 @@
     "lemma": "Eremos",
     "previous": "Eremodicium",
     "next": "Erenucius",
+    "redirect": "Arabia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 419
+        "start": 419,
+        "end": 419
       }
     ]
   },
@@ -6425,9 +6526,12 @@
     "lemma": "Erepticium",
     "previous": "Erepha",
     "next": "Eresi",
+    "redirect": "Bona ereptoria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 419
+        "start": 419,
+        "end": 419
       }
     ]
   },
@@ -6435,9 +6539,12 @@
     "lemma": "Eresi",
     "previous": "Erepticium",
     "next": "Eresidai",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 420
+        "start": 420,
+        "end": 420
       }
     ]
   },
@@ -6445,9 +6552,12 @@
     "lemma": "Eresidai",
     "previous": "Eresi",
     "next": "Eresios 1",
+    "redirect": "Eiresidai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 420
+        "start": 420,
+        "end": 420
       }
     ]
   },
@@ -6892,9 +7002,12 @@
     "lemma": "Ergavica",
     "previous": "Ergatis",
     "next": "Erge",
+    "redirect": "Ercavica",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 432
+        "start": 432,
+        "end": 432
       }
     ]
   },
@@ -7175,7 +7288,8 @@
     "chapters": [
       {
         "start": 436,
-        "author": "Kirchner"
+        "end": 436,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7206,9 +7320,12 @@
     "lemma": "Erguti",
     "previous": "Ergotimos",
     "next": "Eriai pylai",
+    "redirect": "Ercavica",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 437
+        "start": 437,
+        "end": 437
       }
     ]
   },
@@ -7417,9 +7534,12 @@
     "lemma": "Ericussa",
     "previous": "Ericinium",
     "next": "Eridanos 1",
+    "redirect": "Erikusa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 446
+        "start": 446,
+        "end": 446
       }
     ]
   },
@@ -7674,9 +7794,12 @@
     "lemma": "Erikos",
     "previous": "Erikepaios",
     "next": "Erikusa 1",
+    "redirect": "Ptolemaios 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 453
+        "start": 453,
+        "end": 453
       }
     ]
   },
@@ -8007,9 +8130,12 @@
     "lemma": "Eriphos 1",
     "previous": "Eriphios",
     "next": "Eriphos 2",
+    "redirect": "Eriphios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -8096,9 +8222,12 @@
     "lemma": "Erisatheus",
     "previous": "Erisane",
     "next": "Eristhe",
+    "redirect": "Erithaseos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 467
+        "start": 467,
+        "end": 467
       }
     ]
   },
@@ -8240,9 +8369,12 @@
     "lemma": "Erius",
     "previous": "Eriunios, Eriunes",
     "next": "Erius Fannius Geminianus",
+    "redirect": "Herius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 469
+        "start": 469,
+        "end": 469
       }
     ]
   },
@@ -8250,9 +8382,12 @@
     "lemma": "Erius Fannius Geminianus",
     "previous": "Erius",
     "next": "Eriza",
+    "redirect": "Geminianus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 469
+        "start": 469,
+        "end": 469
       }
     ]
   },
@@ -8294,9 +8429,12 @@
     "lemma": "Erkis",
     "previous": "Erkabon",
     "next": "Erle",
+    "redirect": "Erchoas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 470
+        "start": 470,
+        "end": 470
       }
     ]
   },
@@ -8316,9 +8454,12 @@
     "lemma": "Ermengarius",
     "previous": "Erle",
     "next": "Ermenrichus",
+    "redirect": "Hermengarius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 472
+        "start": 472,
+        "end": 472
       }
     ]
   },
@@ -8326,9 +8467,12 @@
     "lemma": "Ermenrichus",
     "previous": "Ermengarius",
     "next": "Ermerium",
+    "redirect": "Hermenericus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 472
+        "start": 472,
+        "end": 472
       }
     ]
   },
@@ -8358,9 +8502,12 @@
     "lemma": "Ernas",
     "previous": "Ernaginum",
     "next": "Ernestum",
+    "redirect": "Hernac",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 472
+        "start": 472,
+        "end": 472
       }
     ]
   },
@@ -8468,9 +8615,12 @@
     "lemma": "Eronioi",
     "previous": "Eroiadai",
     "next": "Eropaei",
+    "redirect": "Erannos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 484
+        "start": 484,
+        "end": 484
       }
     ]
   },
@@ -8489,9 +8639,12 @@
     "lemma": "Erophilos",
     "previous": "Eropaei",
     "next": "Erophyllis",
+    "redirect": "Herophilos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 484
+        "start": 484,
+        "end": 484
       }
     ]
   },
@@ -8722,9 +8875,12 @@
     "lemma": "Erpeditani",
     "previous": "Erotius",
     "next": "Erraonis",
+    "redirect": "Erdini",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 548
+        "start": 548,
+        "end": 548
       }
     ]
   },
@@ -8855,9 +9011,12 @@
     "lemma": "Erucianus",
     "previous": "Erubris",
     "next": "Erucinum",
+    "redirect": "Octavius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 552
+        "start": 552,
+        "end": 552
       }
     ]
   },
@@ -9208,9 +9367,12 @@
     "lemma": "Erymanthos 3",
     "previous": "Erymanthos 2",
     "next": "Erymanthos 4",
+    "redirect": "Etymandros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 570
+        "start": 570,
+        "end": 570
       }
     ]
   },
@@ -9317,9 +9479,12 @@
     "lemma": "Erymnai 2",
     "previous": "Erymnai 1",
     "next": "Erymneus",
+    "redirect": "Eurymenai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 570
+        "start": 570,
+        "end": 570
       }
     ]
   },
@@ -9506,9 +9671,12 @@
     "lemma": "Erythra 1",
     "previous": "Erythinoi",
     "next": "Erythra 2",
+    "redirect": "Erythron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 575
+        "start": 575,
+        "end": 575
       }
     ]
   },
@@ -9880,9 +10048,12 @@
     "lemma": "Esara",
     "previous": "Esaias",
     "next": "Esbonitae",
+    "redirect": "Esia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 612
+        "start": 612,
+        "end": 612
       }
     ]
   },
@@ -10053,9 +10224,12 @@
     "lemma": "Escua",
     "previous": "Esco",
     "next": "Esdilasas",
+    "redirect": "Osca 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 625
+        "start": 625,
+        "end": 625
       }
     ]
   },
@@ -10199,6 +10373,8 @@
     "previous": "Esia",
     "next": "Esioneis",
     "proof_read": 3,
+    "wp_link": "w:en:Sumyafa Ashwa",
+    "wd_link": "d:Q12219120",
     "chapters": [
       {
         "start": 680,
@@ -10409,9 +10585,12 @@
     "lemma": "Essui",
     "previous": "Essioi",
     "next": "Esthaol",
+    "redirect": "Esuvii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 693
+        "start": 693,
+        "end": 693
       }
     ]
   },
@@ -10658,9 +10837,12 @@
     "lemma": "Etelesta",
     "previous": "Eteia",
     "next": "Etene",
+    "redirect": "Egelasta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 706
+        "start": 706,
+        "end": 706
       }
     ]
   },
@@ -10939,9 +11121,12 @@
     "lemma": "Ethanion",
     "previous": "Ethai",
     "next": "Ethaos",
+    "redirect": "Colum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 717
+        "start": 717,
+        "end": 717
       }
     ]
   },
@@ -11025,7 +11210,7 @@
   {
     "lemma": "Ethodaia",
     "previous": "Ethnestes",
-    "next": "Ethologoi",
+    "next": "Ἠθολόγοι",
     "chapters": [
       {
         "start": 718,
@@ -11034,18 +11219,22 @@
     ]
   },
   {
-    "lemma": "Ethologoi",
+    "lemma": "Ἠθολόγοι",
     "previous": "Ethodaia",
     "next": "Ethopia",
+    "sort_key": "Ethologoi",
+    "redirect": "Γελωτοποιοί",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 718
+        "start": 718,
+        "end": 718
       }
     ]
   },
   {
     "lemma": "Ethopia",
-    "previous": "Ethologoi",
+    "previous": "Ἠθολόγοι",
     "next": "Ethravi",
     "chapters": [
       {
@@ -11069,9 +11258,12 @@
     "lemma": "Ethribai",
     "previous": "Ethravi",
     "next": "Etia akra",
+    "redirect": "Athribis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 718
+        "start": 718,
+        "end": 718
       }
     ]
   },
@@ -11145,9 +11337,12 @@
     "lemma": "Etobesa",
     "previous": "Etnosus",
     "next": "Etocetum",
+    "redirect": "Otobesa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 719
+        "start": 719,
+        "end": 719
       }
     ]
   },
@@ -11290,9 +11485,12 @@
     "lemma": "Etruscus 2",
     "previous": "Etruscus 1",
     "next": "Etruscus 3",
+    "redirect": "Claudius 141",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 730
+        "start": 730,
+        "end": 730
       }
     ]
   },
@@ -12264,9 +12462,12 @@
     "lemma": "Euan 1",
     "previous": "Euameros",
     "next": "Euan 2",
+    "redirect": "Euios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 838
+        "start": 838,
+        "end": 838
       }
     ]
   },
@@ -12787,10 +12988,12 @@
     "lemma": "Euanthia",
     "previous": "Euanthes 8",
     "next": "Euanthius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 847,
-        "author": "Bürchner"
+        "end": 847,
+        "author": "Bürchner."
       }
     ]
   },
@@ -12798,10 +13001,12 @@
     "lemma": "Euanthius 1",
     "previous": "Euanthia",
     "next": "Euanthius 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 847,
-        "author": "Seeck"
+        "end": 847,
+        "author": "Seeck."
       }
     ]
   },
@@ -12819,7 +13024,7 @@
   {
     "lemma": "Euaratos",
     "previous": "Euanthius 2",
-    "next": "Euarene",
+    "next": "Euarane",
     "chapters": [
       {
         "start": 847,
@@ -12829,19 +13034,21 @@
     ]
   },
   {
-    "lemma": "Euarene",
+    "lemma": "Euarane",
     "previous": "Euaratos",
     "next": "Euarchidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 847,
-        "author": "Ruge"
+        "end": 847,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Euarchidas",
-    "previous": "Euarene",
+    "previous": "Euarane",
     "next": "Euarchides 1",
     "chapters": [
       {
@@ -13076,9 +13283,12 @@
     "lemma": "Euas 2",
     "previous": "Euas 1",
     "next": "Euaspla",
+    "redirect": "Euios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 849
+        "start": 849,
+        "end": 849
       }
     ]
   },
@@ -13936,9 +14146,12 @@
     "lemma": "Eubulos 12",
     "previous": "Eubulos 11",
     "next": "Eubulos 13",
+    "redirect": "Aurelius 124",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 877
+        "start": 877,
+        "end": 877
       }
     ]
   },
@@ -13946,10 +14159,14 @@
     "lemma": "Eubulos 13",
     "previous": "Eubulos 12",
     "next": "Eubulos 14",
+    "proof_read": 2,
+    "wp_link": "w:de:it:Eubulo (prefetto del pretorio)",
+    "wd_link": "d:Q3734118",
     "chapters": [
       {
         "start": 877,
-        "author": "Seeck"
+        "end": 877,
+        "author": "Seeck."
       }
     ]
   },
@@ -14142,9 +14359,12 @@
     "lemma": "Eucharius 2",
     "previous": "Eucharius 1",
     "next": "Eucharius 3",
+    "redirect": "Epiphanios 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 880
+        "start": 880,
+        "end": 880
       }
     ]
   },
@@ -14336,9 +14556,12 @@
     "lemma": "Eudagina",
     "previous": "Euclerius",
     "next": "Eudaimon 1",
+    "redirect": "Euagena",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 884
+        "start": 884,
+        "end": 884
       }
     ]
   },
@@ -14390,9 +14613,12 @@
     "lemma": "Eudaimon 5",
     "previous": "Eudaimon 4",
     "next": "Eudaimon 6",
+    "redirect": "Claudius 144",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 884
+        "start": 884,
+        "end": 884
       }
     ]
   },
@@ -14680,7 +14906,7 @@
     "lemma": "Eudemos 1",
     "previous": "Eudemia",
     "next": "Eudemos 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 894,
@@ -15607,9 +15833,12 @@
     "lemma": "Eueilmaraduchos",
     "previous": "Eueides",
     "next": "Euelides",
+    "redirect": "Evilmerodach",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 951
+        "start": 951,
+        "end": 951
       }
     ]
   },
@@ -16259,9 +16488,12 @@
     "lemma": "Eugaion",
     "previous": "Euetius",
     "next": "Eugamia",
+    "redirect": "Euagon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 983
+        "start": 983,
+        "end": 983
       }
     ]
   },
@@ -16714,9 +16946,12 @@
     "lemma": "Euhages",
     "previous": "Eugraphius",
     "next": "Euhan",
+    "redirect": "Druidae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 991
+        "start": 991,
+        "end": 991
       }
     ]
   },
@@ -16724,9 +16959,12 @@
     "lemma": "Euhan",
     "previous": "Euhages",
     "next": "Euhe...",
+    "redirect": "Euios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 991
+        "start": 991,
+        "end": 991
       }
     ]
   },
@@ -16734,9 +16972,12 @@
     "lemma": "Euhe...",
     "previous": "Euhan",
     "next": "Evilmerodach",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 991
+        "start": 991,
+        "end": 991
       }
     ]
   },
@@ -16756,9 +16997,12 @@
     "lemma": "Evictio",
     "previous": "Evilmerodach",
     "next": "Evina",
+    "redirect": "Emptio venditio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 992
+        "start": 992,
+        "end": 992
       }
     ]
   },
@@ -16766,9 +17010,12 @@
     "lemma": "Evina",
     "previous": "Evictio",
     "next": "Euios 1",
+    "redirect": "Evena",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 992
+        "start": 992,
+        "end": 992
       }
     ]
   },
@@ -17723,9 +17970,12 @@
     "lemma": "Eukrate",
     "previous": "Eukrante",
     "next": "Eukrateia",
+    "redirect": "Eukrante",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1056
+        "start": 1056,
+        "end": 1056
       }
     ]
   },
@@ -18278,9 +18528,12 @@
     "lemma": "Eulogios 4",
     "previous": "Eulogios 3",
     "next": "Eulogos",
+    "redirect": "Favonius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1072
+        "start": 1072,
+        "end": 1072
       }
     ]
   },
@@ -18469,9 +18722,12 @@
     "lemma": "Eumaridas 3",
     "previous": "Eumaridas 2",
     "next": "Eumaron",
+    "redirect": "Thymaridas 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1075
+        "start": 1075,
+        "end": 1075
       }
     ]
   },
@@ -18613,9 +18869,12 @@
     "lemma": "Eumeides",
     "previous": "Eumedon",
     "next": "Eumeilos",
+    "redirect": "Eumedes 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1078
+        "start": 1078,
+        "end": 1078
       }
     ]
   },
@@ -18824,9 +19083,12 @@
     "lemma": "Eumelos 15",
     "previous": "Eumelos 14",
     "next": "Eumelos 16",
+    "redirect": "Eumenos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1082
+        "start": 1082,
+        "end": 1082
       }
     ]
   },
@@ -19084,6 +19346,8 @@
     "previous": "Eumenius 2",
     "next": "Εὐμένους ἄλσος",
     "proof_read": 3,
+    "wp_link": "w:it:Eumenos",
+    "wd_link": "d:Q15374012",
     "chapters": [
       {
         "start": 1114,
@@ -19232,9 +19496,12 @@
     "lemma": "Eumolpos 3",
     "previous": "Eumolpos 2",
     "next": "Eumon",
+    "redirect": "Claudius 145",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1121
+        "start": 1121,
+        "end": 1121
       }
     ]
   },
@@ -19680,9 +19947,12 @@
     "lemma": "Eunomos 8",
     "previous": "Eunomos 7",
     "next": "Eunomos 9",
+    "redirect": "Eunostos 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1133
+        "start": 1133,
+        "end": 1133
       }
     ]
   },
@@ -20287,9 +20557,12 @@
     "lemma": "Eupator 2",
     "previous": "Eupator 1",
     "next": "Eupatoria 1",
+    "redirect": "Iulius 218",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1161
+        "start": 1161,
+        "end": 1161
       }
     ]
   },
@@ -20433,9 +20706,12 @@
     "lemma": "Eupeithes 2",
     "previous": "Eupeithes 1",
     "next": "Eupeithios",
+    "redirect": "Euprepes 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1165
+        "start": 1165,
+        "end": 1165
       }
     ]
   },
@@ -21406,9 +21682,12 @@
     "lemma": "Euphratensis Syria",
     "previous": "Euphrasios 4",
     "next": "Euphrates 1",
+    "redirect": "Kommagene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1195
+        "start": 1195,
+        "end": 1195
       }
     ]
   },
@@ -21508,9 +21787,12 @@
     "lemma": "Euphron 4",
     "previous": "Euphron 3",
     "next": "Euphron 5",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1219
+        "start": 1219,
+        "end": 1219
       }
     ]
   },
@@ -21976,6 +22258,7 @@
     "previous": "Eupolemos 13",
     "next": "Eupolia 2",
     "proof_read": 3,
+    "wd_link": "d:Q15987053",
     "chapters": [
       {
         "start": 1229,
@@ -23779,9 +24062,12 @@
     "lemma": "Euryelos",
     "previous": "Eurydome",
     "next": "Eurygane, Euryganeia",
+    "redirect": "Syrakusai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1327
+        "start": 1327,
+        "end": 1327
       }
     ]
   },
@@ -23823,9 +24109,12 @@
     "lemma": "Euryke",
     "previous": "Eurykapys",
     "next": "Eurykleia",
+    "redirect": "Euryte 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1328
+        "start": 1328,
+        "end": 1328
       }
     ]
   },
@@ -24014,9 +24303,12 @@
     "lemma": "Eurykrates 2",
     "previous": "Eurykrates 1",
     "next": "Eurykratidas",
+    "redirect": "Eurykratidas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1331
+        "start": 1331,
+        "end": 1331
       }
     ]
   },
@@ -24057,9 +24349,12 @@
     "lemma": "Euryleon 1",
     "previous": "Eurylas",
     "next": "Euryleon 2",
+    "redirect": "Askanios 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1331
+        "start": 1331,
+        "end": 1331
       }
     ]
   },
@@ -25766,9 +26061,12 @@
     "lemma": "Euscinus",
     "previous": "Eurytos 10",
     "next": "Eusebeia 1",
+    "redirect": "Eusignius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1363
+        "start": 1363,
+        "end": 1363
       }
     ]
   },
@@ -25798,9 +26096,12 @@
     "lemma": "Eusebeia 3",
     "previous": "Eusebeia 2",
     "next": "Eusebeia 4",
+    "redirect": "Kaisareia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1363
+        "start": 1363,
+        "end": 1363
       }
     ]
   },
@@ -26191,7 +26492,7 @@
     "next": "Eusebios 25",
     "proof_read": 3,
     "wp_link": "w:de:Eusebius von Caesarea",
-    "ws_link": "s:en:Author:Eusebius of Caesarea",
+    "ws_link": "s:de:Eusebius von Caesarea",
     "wd_link": "d:Q142999",
     "chapters": [
       {
@@ -26237,6 +26538,7 @@
     "next": "Eusebios 28",
     "proof_read": 3,
     "wp_link": "w:de:Eusebius von Vercelli",
+    "ws_link": "s:la:Scriptor:Eusebius Vercellensis",
     "wd_link": "d:Q181489",
     "chapters": [
       {
@@ -26251,6 +26553,8 @@
     "previous": "Eusebios 27",
     "next": "Eusebios 29",
     "proof_read": 3,
+    "wp_link": "w:en:Eusebius of Samosata",
+    "wd_link": "d:Q3503662",
     "chapters": [
       {
         "start": 1443,
@@ -26264,6 +26568,8 @@
     "previous": "Eusebios 28",
     "next": "Eusebios 30",
     "proof_read": 3,
+    "wp_link": "w:en:Eusebius of Alexandria",
+    "wd_link": "d:Q3061108",
     "chapters": [
       {
         "start": 1443,
@@ -26277,6 +26583,8 @@
     "previous": "Eusebios 29",
     "next": "Eusebios 31",
     "proof_read": 3,
+    "wp_link": "w:en:Eusebius of Dorylaeum",
+    "wd_link": "d:Q2561429",
     "chapters": [
       {
         "start": 1444,
@@ -26303,6 +26611,8 @@
     "previous": "Eusebios 31",
     "next": "Eusebios 33",
     "proof_read": 3,
+    "wp_link": "w:en:Eusebius (consul 489)",
+    "wd_link": "d:Q3734999",
     "chapters": [
       {
         "start": 1444,
@@ -27389,6 +27699,8 @@
     "next": "Euthydemos 4",
     "sort_key": "Euthydemos 03",
     "proof_read": 3,
+    "wp_link": "w:de:Euthydemos (Stratege)",
+    "wd_link": "d:Q1378895",
     "chapters": [
       {
         "start": 1503,
@@ -27488,6 +27800,8 @@
     "previous": "Euthydemos 9",
     "next": "Euthydemos 11",
     "proof_read": 3,
+    "wp_link": "w:de:Euthydemos II.",
+    "wd_link": "d:Q878418",
     "chapters": [
       {
         "start": 1504,
@@ -27514,6 +27828,8 @@
     "previous": "Euthydemos 11",
     "next": "Euthydemos 13",
     "proof_read": 3,
+    "wp_link": "w:ca:Eutidem (filòsof)",
+    "wd_link": "d:Q13153001",
     "chapters": [
       {
         "start": 1504,
@@ -27527,6 +27843,8 @@
     "previous": "Euthydemos 12",
     "next": "Euthydemos 14",
     "proof_read": 2,
+    "wp_link": "w:de:Euthydemos (Sophist)",
+    "wd_link": "d:Q2610597",
     "chapters": [
       {
         "start": 1504,
@@ -27553,6 +27871,8 @@
     "previous": "Euthydemos 14",
     "next": "Εὐθυδικία",
     "proof_read": 2,
+    "wp_link": "w:it:Eutidemo di Atene",
+    "wd_link": "d:Q3735076",
     "chapters": [
       {
         "start": 1505,
@@ -27698,9 +28018,12 @@
     "lemma": "Euthykles 7",
     "previous": "Euthykles 6",
     "next": "Euthykles 8",
+    "redirect": "Euthycleus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1507
+        "start": 1507,
+        "end": 1507
       }
     ]
   },
@@ -28101,6 +28424,9 @@
     "previous": "Eutolmius 1",
     "next": "Eutonios",
     "proof_read": 3,
+    "wp_link": "w:ca:Eutolmi (poeta)",
+    "ws_link": "s:el:Συγγραφέας:Ευτόλμιος ο σχολαστικός ο Ιλλούστριος",
+    "wd_link": "d:Q12877410",
     "chapters": [
       {
         "start": 1519,
@@ -28173,6 +28499,8 @@
     "previous": "Eutresites",
     "next": "Eutropia 2",
     "proof_read": 3,
+    "wp_link": "w:de:Eutropia (Frau Maximians)",
+    "wd_link": "d:Q45530",
     "chapters": [
       {
         "start": 1519,
@@ -28468,7 +28796,7 @@
     "previous": "Eutyches 7",
     "next": "Eutychia 1",
     "proof_read": 3,
-    "wp_link": "w:ca:Eutiques (orfebre)",
+    "wp_link": "w:it:Eutiche (incisore)",
     "wd_link": "d:Q19999561",
     "chapters": [
       {
@@ -28538,9 +28866,12 @@
     "lemma": "Eutychianos 2",
     "previous": "Eutychianos 1",
     "next": "Eutychianos 3",
+    "redirect": "Valerius 151a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1531
+        "start": 1531,
+        "end": 1531
       }
     ]
   },
@@ -28769,9 +29100,12 @@
     "lemma": "Eutychos 6",
     "previous": "Eutychos 5",
     "next": "Eutychos 7",
+    "redirect": "Claudius 268",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1536
+        "start": 1536,
+        "end": 1536
       }
     ]
   },

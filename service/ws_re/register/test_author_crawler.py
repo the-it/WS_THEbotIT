@@ -131,10 +131,11 @@ class TestAuthorCrawler(TestCase):
                 self.crawler._extract_author_infos("'''[[Anton Baumstark junior|Baumstark, [Anton (jr.)]]]'''"))
 
     def test_extract_years(self):
-        compare((1906, 1988), self.crawler._extract_years("1906–1988"))
-        compare((1908, None), self.crawler._extract_years("1908–?"))
-        compare((1933, None), self.crawler._extract_years("* 1933"))
-        compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" |* 1933"))
+        compare((1906, 1988), self.crawler._extract_years("1906 || 1988"))
+        compare((1906, 1988), self.crawler._extract_years("1906||1988"))
+        compare((1908, None), self.crawler._extract_years("1908 || ?"))
+        compare((1933, None), self.crawler._extract_years("1933 ||"))
+        compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" | 1933 ||"))
         compare((None, None), self.crawler._extract_years(""))
 
     def test_extract_wp_lemma(self):
@@ -156,36 +157,32 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 
 {{TOC}}
 
-
 {|class="wikitable sortable"
-|-
-!width="200" | Name/Sigel
-!width="75" | Lebenszeit
-!width="300" | Mitarbeit
-!Personenartikel
+
+! Name/Sigel !! * !! † !! Mitarbeit !! Artikel
 |-
 |Abbott, K[enneth] M[organ]{{Anker|A}}
-|1906–1988
+|1906||1988
 |XIX,2
 |[[w:Kenneth Morgan Abbott|Wikipedia]]
 |-
 |[[Karlhans Abel|Abel, Karlhans]]
-|1919–1998
+|1919||1998
 |X A, S XII, S XIV
 |[[w:Karlhans Abel|Wikipedia]]
 |-
 |Abel, Walther
-|1906–1987
+|1906||1987
 |XVI,1
 |[[w:Walther Abel|Wikipedia]]
 |-
 |Wolf [?]
-|
+| ||
 |XXI,2–XXII,1
 |<!-- siehe Diskussionsseite -->
 |-
 |Zwicker, Joh[annes = Hanns]
-|1881–1969
+|1881||1969
 |VII,2–IX,1, XI,1, XVI,1, XVII,2–XIX,1, XX,1–XXI,2, I A,2–III A,1, S V
 |[[w:Johannes Zwicker|Wikipedia]]
 |}
@@ -196,20 +193,20 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
         splitted_table = self.crawler._split_author_table(self.author_table)
         compare(5, len(splitted_table))
         expected_entry = """|Abbott, K[enneth] M[organ]{{Anker|A}}
-|1906–1988
+|1906||1988
 |XIX,2
 |[[w:Kenneth Morgan Abbott|Wikipedia]]"""
         compare(expected_entry, splitted_table[0])
 
     def test_split_author(self):
         author_sub_table = """|Abbott, K[enneth] M[organ]{{Anker|A}}
-|1906–1988
+|1906||1988
 |XIX,2
 |[[w:Kenneth Morgan Abbott|Wikipedia]]"""
         splitted_author = self.crawler._split_author(author_sub_table)
         compare(4, len(splitted_author))
         compare("|Abbott, K[enneth] M[organ]{{Anker|A}}", splitted_author[0])
-        compare("1906–1988", splitted_author[1])
+        compare("1906||1988", splitted_author[1])
         compare("XIX,2", splitted_author[2])
         compare("[[w:Kenneth Morgan Abbott|Wikipedia]]", splitted_author[3])
 
@@ -221,11 +218,11 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 
         expect = {"Kenneth Morgan Abbott": {"death": 1988, "birth": 1906, "first_name": "Kenneth Morgan",
                                             "last_name": "Abbott", "wp_lemma": "Kenneth Morgan Abbott"}}
-        compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906–1988")))
+        compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906 || 1988")))
 
         expect = {"Kenneth Morgan Abbott": {"birth": 1906, "first_name": "Kenneth Morgan", "last_name": "Abbott",
                                             "wp_lemma": "Kenneth Morgan Abbott"}}
-        compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906")))
+        compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906 ||")))
 
         expect = {"Kenneth Morgan Abbott": {"first_name": "Kenneth Morgan", "last_name": "Abbott",
                                             "wp_lemma": "Kenneth Morgan Abbott"}}
@@ -243,14 +240,13 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
                                        "wp_lemma": "Johannes Zwicker"}}
         compare(expect, author_mapping)
 
-    table_head = "{{|class=\"wikitable sortable\"\n|-\n!width=\"200\" | Name/Sigel\n!width=\"75\" " \
-                 "| Lebenszeit\n!width=\"300\" | Mitarbeit\n!Personenartikel\n"
+    table_head = "{|class=\"wikitable sortable\"\n! Name/Sigel !! Leben !! Mitarbeit !! Artikel"
     table_bottom = "\n|}}\n\n[[Kategorie:RE:Autoren|!]]"
 
     def test_bug_kazarow(self):
         author = """|-
 |Kazarow, Gabriel (Katsarov, Gavril I.)
-|2222–3333
+|2222 || 3333
 |
 |"""
         author_table = self.table_head + author + self.table_bottom
@@ -261,7 +257,7 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
     def test_bug_groebe(self):
         author = """|-
 |Groebe, P[aul]<!--Schreibung auch Gröbe-->
-|2222–3333
+|2222 || 3333
 |
 |"""
         author_table = self.table_head + author + self.table_bottom

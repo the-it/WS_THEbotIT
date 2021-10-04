@@ -1,6 +1,7 @@
 [
   {
     "lemma": "Abragila",
+    "previous": "Alfred Druckenmüller †",
     "next": "Aelius 15a",
     "chapters": [
       {
@@ -685,7 +686,7 @@
     "lemma": "Celamantia",
     "previous": "Ceangli",
     "next": "Chamaileon 1",
-    "redirect": "Pannonia",
+    "redirect": "Ptolemaios 66",
     "chapters": [
       {
         "start": 368,
@@ -698,7 +699,6 @@
     "lemma": "Chamaileon 1",
     "previous": "Celamantia",
     "next": "Claudius 211a",
-    "redirect": true,
     "chapters": [
       {
         "start": 368,
@@ -711,7 +711,7 @@
     "lemma": "Claudius 211a",
     "previous": "Chamaileon 1",
     "next": "Clementianus 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 372,
@@ -724,7 +724,7 @@
     "lemma": "Clementianus 2",
     "previous": "Claudius 211a",
     "next": "Constantia 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 371,
@@ -893,7 +893,7 @@
     "lemma": "Doecis",
     "previous": "Diophanes 1a",
     "next": "Dorcatius 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 538,
@@ -975,6 +975,7 @@
   {
     "lemma": "Eurea",
     "previous": "Eudemos 11",
+    "next": "Eudemos 1",
     "chapters": [
       {
         "start": 658,
@@ -984,7 +985,16 @@
   },
   {
     "lemma": "Eudemos 1",
-    "next": "Euripides 4"
+    "previous": "Eurea",
+    "next": "Euripides 4",
+    "redirect": true,
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 658,
+        "end": 658
+      }
+    ]
   },
   {
     "lemma": "Euripides 4",

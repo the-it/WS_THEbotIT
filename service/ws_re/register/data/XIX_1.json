@@ -532,7 +532,7 @@
     "proof_read": 2,
     "chapters": [
       {
-        "start": 25,
+        "start": 26,
         "end": 29,
         "author": "W. Ruge."
       }
@@ -555,7 +555,7 @@
     "lemma": "Pedasos 1",
     "previous": "Pedasis",
     "next": "Pedasos 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 29,
@@ -579,7 +579,7 @@
     "lemma": "Pedasos 3",
     "previous": "Pedasos 2",
     "next": "Pedasos 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 29,
@@ -605,10 +605,10 @@
     "lemma": "Pedatrirae",
     "previous": "Pedasos 4",
     "next": "Πέδη",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 29,
+        "start": 30,
         "end": 30,
         "author": "O. Stein."
       }
@@ -649,10 +649,12 @@
     "lemma": "Pedianoi",
     "previous": "Pediakrates",
     "next": "Pedianomoi",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 31,
-        "author": "Ruge"
+        "end": 31,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -693,9 +695,12 @@
     "lemma": "Pedias 2",
     "previous": "Pedias 1",
     "next": "Pediasius",
+    "redirect": "Paraloi",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 32
+        "start": 32,
+        "end": 32
       }
     ]
   },
@@ -703,10 +708,12 @@
     "lemma": "Pediasius",
     "previous": "Pedias 2",
     "next": "Pediatius",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 32,
-        "author": "Münzer"
+        "end": 32,
+        "author": "Münzer."
       }
     ]
   },
@@ -725,9 +732,12 @@
     "lemma": "Pedica",
     "previous": "Pediatius",
     "next": "Pedieis 1",
+    "redirect": "Πέδη",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 32
+        "start": 32,
+        "end": 32
       }
     ]
   },
@@ -947,10 +957,12 @@
     "lemma": "Pedna",
     "previous": "Pedius 7",
     "next": "Pednelissos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 43,
-        "author": "Herbst"
+        "end": 43,
+        "author": "Rudolf Herbst."
       }
     ]
   },
@@ -1002,10 +1014,13 @@
     "lemma": "Pedo 3",
     "previous": "Pedo 2",
     "next": "Pedo 4",
+    "redirect": "Albinovanus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 45,
-        "author": "Schmidt"
+        "end": 45,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -1013,9 +1028,12 @@
     "lemma": "Pedo 4",
     "previous": "Pedo 3",
     "next": "Pedo 5",
+    "redirect": "Popillius 38a",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 45
+        "start": 45,
+        "end": 45
       }
     ]
   },
@@ -1023,9 +1041,12 @@
     "lemma": "Pedo 5",
     "previous": "Pedo 4",
     "next": "Pedonia 1",
+    "redirect": "Popillius 38b",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 45
+        "start": 45,
+        "end": 45
       }
     ]
   },
@@ -1077,10 +1098,12 @@
     "lemma": "Peducaeus 2",
     "previous": "Peducaeus 1",
     "next": "Peducaeus 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 46,
-        "author": "Münzer"
+        "end": 46,
+        "author": "Münzer."
       }
     ]
   },
@@ -1100,7 +1123,8 @@
     "previous": "Peducaeus 3",
     "next": "Peducaeus 5",
     "proof_read": 2,
-    "wd_link": "d:Q12293519",
+    "wp_link": "w:ca:Sext Peduceu (tribú)",
+    "wd_link": "d:Q11949639",
     "chapters": [
       {
         "start": 47,
@@ -1114,6 +1138,8 @@
     "previous": "Peducaeus 4",
     "next": "Peducaeus 6",
     "proof_read": 2,
+    "wp_link": "w:ca:Sext Peduceu (pretor)",
+    "wd_link": "d:Q11949631",
     "chapters": [
       {
         "start": 48,
@@ -1127,6 +1153,8 @@
     "previous": "Peducaeus 5",
     "next": "Peducaeus 7",
     "proof_read": 2,
+    "wp_link": "w:ca:Sext Peduceu (governador)",
+    "wd_link": "d:Q11949628",
     "chapters": [
       {
         "start": 50,
@@ -1238,10 +1266,13 @@
     "lemma": "Pegai 2",
     "previous": "Pegai 1",
     "next": "Pegai 3",
+    "redirect": "Pagai",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 55,
-        "author": "Meyer, Ernst"
+        "end": 55,
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -1249,10 +1280,12 @@
     "lemma": "Pegai 3",
     "previous": "Pegai 2",
     "next": "Pegaia",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 55,
-        "author": "Ruge"
+        "end": 55,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -1260,10 +1293,12 @@
     "lemma": "Pegaia",
     "previous": "Pegai 3",
     "next": "Pegasa",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 55,
-        "author": "Oberhummer"
+        "end": 55,
+        "author": "Eugen Oberhummer."
       }
     ]
   },
@@ -1271,9 +1306,12 @@
     "lemma": "Pegasa",
     "previous": "Pegaia",
     "next": "Pegaseischer Sumpf",
+    "redirect": "Pedasa",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 55
+        "start": 55,
+        "end": 55
       }
     ]
   },
@@ -1292,10 +1330,12 @@
     "lemma": "Pegasius 1",
     "previous": "Pegaseischer Sumpf",
     "next": "Pegasius 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 56,
-        "author": "Enßlin"
+        "end": 56,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1303,10 +1343,12 @@
     "lemma": "Pegasius 2",
     "previous": "Pegasius 1",
     "next": "Pegasius 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 56,
-        "author": "Enßlin"
+        "end": 56,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1314,10 +1356,12 @@
     "lemma": "Pegasius 3",
     "previous": "Pegasius 2",
     "next": "Pegasius 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 56,
-        "author": "Enßlin"
+        "end": 56,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1336,10 +1380,12 @@
     "lemma": "Pegasius 5",
     "previous": "Pegasius 4",
     "next": "Pegasius 6",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 56,
-        "author": "Enßlin"
+        "end": 56,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1424,9 +1470,12 @@
     "lemma": "Pegeus",
     "previous": "Pegella",
     "next": "Pegma",
+    "redirect": "Phegeus 1",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 66
+        "start": 66,
+        "end": 66
       }
     ]
   },
@@ -1456,10 +1505,12 @@
     "lemma": "Pegon",
     "previous": "Pegomanteia",
     "next": "Peguntium",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 68,
-        "author": "Ruge"
+        "end": 68,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -1467,9 +1518,12 @@
     "lemma": "Peguntium",
     "previous": "Pegon",
     "next": "Pegusa",
+    "redirect": "Piguntia",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 68
+        "start": 68,
+        "end": 68
       }
     ]
   },
@@ -1477,10 +1531,12 @@
     "lemma": "Pegusa",
     "previous": "Peguntium",
     "next": "Peidra (-os)",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 68,
-        "author": "Ruge"
+        "end": 68,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -1499,10 +1555,12 @@
     "lemma": "Peieros",
     "previous": "Peidra (-os)",
     "next": "Peigelasos",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 68,
-        "author": "Ruge"
+        "end": 68,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -1642,9 +1700,12 @@
     "lemma": "Peiraion",
     "previous": "Peiraïkos",
     "next": "Peiraios 1",
+    "redirect": "Peraia",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 100
+        "start": 100,
+        "end": 100
       }
     ]
   },
@@ -1718,10 +1779,12 @@
     "lemma": "Peirasos 2",
     "previous": "Peirasos 1",
     "next": "Πειρᾶται",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 104,
-        "author": "Krischan"
+        "end": 104,
+        "author": "Josef Krischan."
       }
     ]
   },
@@ -1776,10 +1839,12 @@
     "lemma": "Peirene 2",
     "previous": "Peirene 1",
     "next": "Peirene 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 108,
-        "author": "Krischan"
+        "end": 108,
+        "author": "Josef Krischan."
       }
     ]
   },
@@ -1798,9 +1863,12 @@
     "lemma": "Peiresiai",
     "previous": "Peirene 3",
     "next": "Peirethoi",
+    "redirect": "Peirasia",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 114
+        "start": 114,
+        "end": 114
       }
     ]
   },
@@ -1874,10 +1942,12 @@
     "lemma": "Peirithoos 3",
     "previous": "Peirithoos 2",
     "next": "Peiro",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 140,
-        "author": "Fontenrose"
+        "end": 140,
+        "author": "J. E. Fontenrose."
       }
     ]
   },
@@ -1885,9 +1955,12 @@
     "lemma": "Peiro",
     "previous": "Peirithoos 3",
     "next": "Peiroos",
+    "redirect": "Pero",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 140
+        "start": 140,
+        "end": 140
       }
     ]
   },
@@ -1906,10 +1979,12 @@
     "lemma": "Peiros 1",
     "previous": "Peiroos",
     "next": "Peiros 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 140,
-        "author": "Keyßner"
+        "end": 140,
+        "author": "Karl Keyßner."
       }
     ]
   },
@@ -1994,10 +2069,12 @@
     "lemma": "Peisandros 5",
     "previous": "Peisandros 4",
     "next": "Peisandros 6",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 142,
-        "author": "Geisau"
+        "end": 142,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2104,10 +2181,12 @@
     "lemma": "Peisenor 1",
     "previous": "Peisd(i)a",
     "next": "Peisenor 2",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 147,
-        "author": "Andrée[-Hanslik]"
+        "end": 147,
+        "author": "Judith Andrée-Hanslik."
       }
     ]
   },
@@ -2115,10 +2194,12 @@
     "lemma": "Peisenor 2",
     "previous": "Peisenor 1",
     "next": "Peisenor 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 147,
-        "author": "Andrée[-Hanslik]"
+        "end": 147,
+        "author": "Judith Andrée-Hanslik."
       }
     ]
   },
@@ -2126,10 +2207,12 @@
     "lemma": "Peisenor 3",
     "previous": "Peisenor 2",
     "next": "Peisenor 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 147,
-        "author": "Andrée[-Hanslik]"
+        "end": 147,
+        "author": "Judith Andrée-Hanslik."
       }
     ]
   },
@@ -2137,10 +2220,12 @@
     "lemma": "Peisenor 4",
     "previous": "Peisenor 3",
     "next": "Peisianax",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 147,
-        "author": "Andrée[-Hanslik]"
+        "end": 147,
+        "author": "Judith Andrée-Hanslik."
       }
     ]
   },
@@ -2170,10 +2255,12 @@
     "lemma": "Peisias 2",
     "previous": "Peisias 1",
     "next": "Peisias 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 148,
-        "author": "Münzer"
+        "end": 148,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -2192,10 +2279,12 @@
     "lemma": "Peisidike",
     "previous": "Peisias 3",
     "next": "Peisidike 1",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 148,
-        "author": "Oppermann"
+        "end": 148,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -2214,10 +2303,12 @@
     "lemma": "Peisidike 2",
     "previous": "Peisidike 1",
     "next": "Peisidike 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 149,
-        "author": "Oppermann"
+        "end": 149,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -2225,10 +2316,12 @@
     "lemma": "Peisidike 3",
     "previous": "Peisidike 2",
     "next": "Peisidike 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 149,
-        "author": "Oppermann"
+        "end": 149,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -2236,10 +2329,12 @@
     "lemma": "Peisidike 4",
     "previous": "Peisidike 3",
     "next": "Peisidike 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 149,
-        "author": "Oppermann"
+        "end": 149,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -2247,10 +2342,12 @@
     "lemma": "Peisidike 5",
     "previous": "Peisidike 4",
     "next": "Peisidike 6",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 149,
-        "author": "Oppermann"
+        "end": 149,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -2258,10 +2355,12 @@
     "lemma": "Peisidike 6",
     "previous": "Peisidike 5",
     "next": "Peisidike 7",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 149,
-        "author": "Oppermann"
+        "end": 149,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -2269,10 +2368,12 @@
     "lemma": "Peisidike 7",
     "previous": "Peisidike 6",
     "next": "Peisinus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 150,
-        "author": "Oppermann"
+        "end": 150,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -2302,10 +2403,12 @@
     "lemma": "Peisis",
     "previous": "Peision",
     "next": "Peisistratiden",
-    "redirect": true,
+    "redirect": "Pisis",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 150
+        "start": 150,
+        "end": 150
       }
     ]
   },
@@ -2599,9 +2702,12 @@
     "lemma": "Peitholeon",
     "previous": "Peitholaos 2",
     "next": "Peithon 1",
+    "redirect": "Peitholaos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 218
+        "start": 218,
+        "end": 218
       }
     ]
   },
@@ -2675,9 +2781,12 @@
     "lemma": "Pektis",
     "previous": "Peius",
     "next": "Pekysios",
+    "redirect": "Saiteninstrumente",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 222
+        "start": 222,
+        "end": 222
       }
     ]
   },
@@ -2696,9 +2805,12 @@
     "lemma": "Pela",
     "previous": "Pekysios",
     "next": "Pelagaios",
+    "redirect": "pele 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 222
+        "start": 222,
+        "end": 222
       }
     ]
   },
@@ -3256,9 +3368,12 @@
     "lemma": "Pelanor",
     "previous": "Pelaia",
     "next": "Pelanos 1",
+    "redirect": "Gelanor",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 246
+        "start": 246,
+        "end": 246
       }
     ]
   },
@@ -3343,9 +3458,12 @@
     "lemma": "Pelasgiotis",
     "previous": "Pelasgikos",
     "next": "Pelasgis 1",
+    "redirect": "Thessalia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 251
+        "start": 251,
+        "end": 251
       }
     ]
   },
@@ -3947,9 +4065,12 @@
     "lemma": "Pelinaion",
     "previous": "Pelina",
     "next": "Pelinna 1",
+    "redirect": "Pelin(n)aion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 327
+        "start": 327,
+        "end": 327
       }
     ]
   },
@@ -3968,9 +4089,12 @@
     "lemma": "Pelinna 2",
     "previous": "Pelinna 1",
     "next": "Pelin(n)aion",
+    "redirect": "Pelin(n)aion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 338
+        "start": 338,
+        "end": 338
       }
     ]
   },
@@ -4011,9 +4135,12 @@
     "lemma": "Pella 1",
     "previous": "Pelion 2",
     "next": "Pella 2",
+    "redirect": "Pellene, Pallene 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 341
+        "start": 341,
+        "end": 341
       }
     ]
   },
@@ -4087,9 +4214,12 @@
     "lemma": "Pellacontes",
     "previous": "Pella 7",
     "next": "Pellaeus pagus",
+    "redirect": "Pallacontas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 350
+        "start": 350,
+        "end": 350
       }
     ]
   },
@@ -4273,9 +4403,12 @@
     "lemma": "Pellio 2",
     "previous": "Pellio 1",
     "next": "Pellis",
+    "redirect": "Publilius 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 369
+        "start": 369,
+        "end": 369
       }
     ]
   },
@@ -4305,9 +4438,12 @@
     "lemma": "Pelloriarcha",
     "previous": "Pellonia",
     "next": "Pelodes",
+    "redirect": "Peloriarca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 373
+        "start": 373,
+        "end": 373
       }
     ]
   },
@@ -4359,9 +4495,12 @@
     "lemma": "Pelopia 2",
     "previous": "Pelopia 1",
     "next": "Pelopia 3",
+    "redirect": "Niobe 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 374
+        "start": 374,
+        "end": 374
       }
     ]
   },
@@ -4413,9 +4552,12 @@
     "lemma": "Pelopos Nesoi",
     "previous": "Peloponnesos",
     "next": "Pelops 1",
+    "redirect": "Pelopsinselchen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 391
+        "start": 391,
+        "end": 391
       }
     ]
   },
@@ -4424,9 +4566,11 @@
     "previous": "Pelopos Nesoi",
     "next": "Pelops 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 391
+        "start": 391,
+        "end": 391
       }
     ]
   },
@@ -4522,9 +4666,12 @@
     "lemma": "Peloreus",
     "previous": "Pelor 3",
     "next": "Peloria 1",
+    "redirect": "Pelor 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 394
+        "start": 394,
+        "end": 394
       }
     ]
   },
@@ -4554,9 +4701,12 @@
     "lemma": "Peloriaca",
     "previous": "Peloria 2",
     "next": "Peloriarca",
+    "redirect": "Peloriarca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 396
+        "start": 396,
+        "end": 396
       }
     ]
   },
@@ -4630,9 +4780,12 @@
     "lemma": "Peloros 2",
     "previous": "Peloros 1",
     "next": "Peloros 3",
+    "redirect": "Pelor 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 401
+        "start": 401,
+        "end": 401
       }
     ]
   },
@@ -4959,9 +5112,12 @@
     "lemma": "Penne loci",
     "previous": "Penkeleus",
     "next": "Penninus 1",
+    "redirect": "Pennolucos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 498
+        "start": 498,
+        "end": 498
       }
     ]
   },
@@ -4969,9 +5125,12 @@
     "lemma": "Penninus 1",
     "previous": "Penne loci",
     "next": "Penninus 2",
+    "redirect": "Alpes 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 498
+        "start": 498,
+        "end": 498
       }
     ]
   },
@@ -4979,9 +5138,12 @@
     "lemma": "Penninus 2",
     "previous": "Penninus 1",
     "next": "Pennocrucium",
+    "redirect": "Poeninus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 498
+        "start": 498,
+        "end": 498
       }
     ]
   },
@@ -5340,7 +5502,7 @@
   {
     "lemma": "Pentathlon",
     "previous": "Pentateuch",
-    "next": "Pente grammai",
+    "next": "Πέντε γραμμαί",
     "chapters": [
       {
         "start": 524,
@@ -5349,18 +5511,22 @@
     ]
   },
   {
-    "lemma": "Pente grammai",
+    "lemma": "Πέντε γραμμαί",
     "previous": "Pentathlon",
     "next": "Pentekontadrachmon",
+    "sort_key": "Pentegrammai",
+    "redirect": "Lusoria tabula",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 528
+        "start": 528,
+        "end": 528
       }
     ]
   },
   {
     "lemma": "Pentekontadrachmon",
-    "previous": "Pente grammai",
+    "previous": "Πέντε γραμμαί",
     "next": "Pentekontalitron",
     "chapters": [
       {
@@ -5384,9 +5550,12 @@
     "lemma": "Pentekontarchos",
     "previous": "Pentekontalitron",
     "next": "Pentekonteres",
+    "redirect": "Nautai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 529
+        "start": 529,
+        "end": 529
       }
     ]
   },
@@ -5579,9 +5748,12 @@
     "lemma": "Penus Vestae",
     "previous": "Pentri",
     "next": "Χωρίον Πεῶν",
+    "redirect": "Penates (Di)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 551
+        "start": 551,
+        "end": 551
       }
     ]
   },
@@ -5590,7 +5762,7 @@
     "previous": "Penus Vestae",
     "next": "Peos Artemidos",
     "sort_key": "Chorion Peon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 551,
@@ -5680,9 +5852,12 @@
     "lemma": "Pephredo",
     "previous": "Pephrasmenos",
     "next": "Peplos, ho 1",
+    "redirect": "Pemphredo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -5734,9 +5909,12 @@
     "lemma": "Pepylychnos",
     "previous": "Pepuza 2",
     "next": "Pera 1",
+    "redirect": "Kalydnos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 563
+        "start": 563,
+        "end": 563
       }
     ]
   },
@@ -5997,9 +6175,12 @@
     "lemma": "Percernes",
     "previous": "Percennius 7",
     "next": "Perdiccas",
+    "redirect": "Nymphai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 589
+        "start": 589,
+        "end": 589
       }
     ]
   },
@@ -6007,9 +6188,12 @@
     "lemma": "Perdiccas",
     "previous": "Percernes",
     "next": "Perdikes",
+    "redirect": "Dracontius 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 589
+        "start": 589,
+        "end": 589
       }
     ]
   },
@@ -6096,7 +6280,7 @@
     "lemma": "Perdikkas 5",
     "previous": "Perdikkas 4",
     "next": "Perdikkas 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 614,
@@ -6109,7 +6293,7 @@
     "lemma": "Perdikkas 6",
     "previous": "Perdikkas 5",
     "next": "Perdikkas 7",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 614,
@@ -6133,9 +6317,12 @@
     "lemma": "Perdikkas 8",
     "previous": "Perdikkas 7",
     "next": "Perdix 1",
+    "redirect": "Perdiccas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 615
+        "start": 615,
+        "end": 615
       }
     ]
   },
@@ -6252,9 +6439,12 @@
     "lemma": "Peregrinus 8",
     "previous": "Peregrinus 7",
     "next": "Peregrinus 9",
+    "redirect": "Armenius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 656
+        "start": 656,
+        "end": 656
       }
     ]
   },
@@ -6394,9 +6584,12 @@
     "lemma": "Perennis 2",
     "previous": "Perennis 1",
     "next": "Pereus 1",
+    "redirect": "Tigidius Perennis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 663
+        "start": 663,
+        "end": 663
       }
     ]
   },
@@ -6470,9 +6663,12 @@
     "lemma": "Pergamenius",
     "previous": "Pergamene",
     "next": "Pergament",
+    "redirect": "Pergamius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 690
+        "start": 690,
+        "end": 690
       }
     ]
   },
@@ -6480,9 +6676,12 @@
     "lemma": "Pergament",
     "previous": "Pergamenius",
     "next": "Pergamius 1",
+    "redirect": "Membrana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 690
+        "start": 690,
+        "end": 690
       }
     ]
   },
@@ -6534,9 +6733,12 @@
     "lemma": "Pergamon 1",
     "previous": "Pergamius 4",
     "next": "Pergamon 2",
+    "redirect": "Pergamos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 691
+        "start": 691,
+        "end": 691
       }
     ]
   },
@@ -6752,7 +6954,7 @@
   {
     "lemma": "Periblemaia",
     "previous": "Peribaso",
-    "next": "Peribleptos",
+    "next": "περίβλεπτος",
     "chapters": [
       {
         "start": 718,
@@ -6761,18 +6963,22 @@
     ]
   },
   {
-    "lemma": "Peribleptos",
+    "lemma": "περίβλεπτος",
     "previous": "Periblemaia",
     "next": "Periboia 1",
+    "sort_key": "peribleptos",
+    "redirect": "Spectabilis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 718
+        "start": 718,
+        "end": 718
       }
     ]
   },
   {
     "lemma": "Periboia 1",
-    "previous": "Peribleptos",
+    "previous": "περίβλεπτος",
     "next": "Periboia 2",
     "chapters": [
       {
@@ -7577,10 +7783,12 @@
     "lemma": "Perillos 2",
     "previous": "Perillos 1",
     "next": "Perimede 1",
-    "redirect": true,
+    "redirect": "Perilaos 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 798
+        "start": 798,
+        "end": 798
       }
     ]
   },
@@ -8215,9 +8423,12 @@
     "lemma": "Peristera",
     "previous": "Periskelis",
     "next": "Peristere",
+    "redirect": "Taube",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 858
+        "start": 858,
+        "end": 858
       }
     ]
   },
@@ -8258,10 +8469,12 @@
     "lemma": "Peristerius",
     "previous": "Peristerides",
     "next": "Peristhenes 1",
-    "redirect": true,
+    "redirect": "Pompeianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 859
+        "start": 859,
+        "end": 859
       }
     ]
   },
@@ -8302,9 +8515,12 @@
     "lemma": "Peristromata",
     "previous": "Peristiarchos",
     "next": "Peristylium",
+    "redirect": "Toralia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 859
+        "start": 859,
+        "end": 859
       }
     ]
   },
@@ -8334,9 +8550,12 @@
     "lemma": "Peritetanos",
     "previous": "Peritanos",
     "next": "Perithoidai",
+    "redirect": "Peritanos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 860
+        "start": 860,
+        "end": 860
       }
     ]
   },
@@ -8377,9 +8596,12 @@
     "lemma": "Periurium",
     "previous": "Peritios",
     "next": "Perius",
+    "redirect": "Meineid",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 862
+        "start": 862,
+        "end": 862
       }
     ]
   },
@@ -8442,9 +8664,12 @@
     "lemma": "Perlen",
     "previous": "Perkotharioi",
     "next": "Perlhuhn",
+    "redirect": "Margaritai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 865
+        "start": 865,
+        "end": 865
       }
     ]
   },
@@ -8749,10 +8974,12 @@
     "lemma": "Perpenna 1",
     "previous": "Perpendybris",
     "next": "Perpenna 2",
-    "redirect": true,
+    "redirect": "Quadratianus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 890
+        "start": 890,
+        "end": 890
       }
     ]
   },
@@ -8782,9 +9009,12 @@
     "lemma": "Perperius",
     "previous": "Perperene",
     "next": "Perperna",
+    "redirect": "Piperios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 892
+        "start": 892,
+        "end": 892
       }
     ]
   },
@@ -8967,9 +9197,12 @@
     "lemma": "Perramos",
     "previous": "Perpetuus 4",
     "next": "Perranthes",
+    "redirect": "Priamos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 904
+        "start": 904,
+        "end": 904
       }
     ]
   },
@@ -9031,7 +9264,7 @@
   {
     "lemma": "Perrhidai",
     "previous": "Perrhaebi",
-    "next": "Persa 1",
+    "next": "Πέρσα 1",
     "chapters": [
       {
         "start": 909,
@@ -9040,18 +9273,22 @@
     ]
   },
   {
-    "lemma": "Persa 1",
+    "lemma": "Πέρσα 1",
     "previous": "Perrhidai",
     "next": "Persa 2",
+    "sort_key": "Persa",
+    "redirect": "Perre",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 909
+        "start": 909,
+        "end": 909
       }
     ]
   },
   {
     "lemma": "Persa 2",
-    "previous": "Persa 1",
+    "previous": "Πέρσα 1",
     "next": "Persai",
     "chapters": [
       {
@@ -9097,9 +9334,12 @@
     "lemma": "Persaios 3",
     "previous": "Persaios 2",
     "next": "Persakra",
+    "redirect": "Perses 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 931
+        "start": 931,
+        "end": 931
       }
     ]
   },
@@ -9140,9 +9380,12 @@
     "lemma": "Perse 2",
     "previous": "Perse 1",
     "next": "Persea",
+    "redirect": "Pherse",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 940
+        "start": 940,
+        "end": 940
       }
     ]
   },
@@ -9364,7 +9607,7 @@
     "lemma": "Perseus 6",
     "previous": "Perseus 5",
     "next": "Perseus 7",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1021,
@@ -9389,7 +9632,7 @@
     "lemma": "Perseus 8",
     "previous": "Perseus 7",
     "next": "Perseutas",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1022,
@@ -9424,9 +9667,12 @@
     "lemma": "Persicus sinus",
     "previous": "Persica (Pfirsich)",
     "next": "Persidicus",
+    "redirect": "Persischer Meerbusen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1025
+        "start": 1026,
+        "end": 1026
       }
     ]
   },
@@ -9467,9 +9713,12 @@
     "lemma": "Persikos Kolpos",
     "previous": "Persike",
     "next": "Persis 1",
+    "redirect": "Persischer Meerbusen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1029
+        "start": 1029,
+        "end": 1029
       }
     ]
   },
@@ -9478,9 +9727,11 @@
     "previous": "Persikos Kolpos",
     "next": "Persis 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1029
+        "start": 1029,
+        "end": 1029
       }
     ]
   },
@@ -9556,7 +9807,7 @@
     "lemma": "Persius 2",
     "previous": "Persius 1",
     "next": "Persius 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1035,
@@ -9569,7 +9820,7 @@
     "lemma": "Persius 3",
     "previous": "Persius 2",
     "next": "Persius 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1035,
@@ -9582,7 +9833,7 @@
     "lemma": "Persius 4",
     "previous": "Persius 3",
     "next": "Persius 5",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1035,
@@ -9611,7 +9862,7 @@
     "lemma": "Persius 6",
     "previous": "Persius 5",
     "next": "Perso",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1036,
@@ -9729,9 +9980,12 @@
     "lemma": "Pertinax 1",
     "previous": "Perticianenses",
     "next": "Pertinax 2",
+    "redirect": "Helvius 15a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1060
+        "start": 1060,
+        "end": 1060
       }
     ]
   },
@@ -9970,9 +10224,12 @@
     "lemma": "Pesseia",
     "previous": "Pesla",
     "next": "Pesside",
+    "redirect": "Lusoria tabula",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1103
+        "start": 1103,
+        "end": 1103
       }
     ]
   },
@@ -10398,9 +10655,12 @@
     "lemma": "Petia",
     "previous": "Pethion",
     "next": "Petialius",
+    "redirect": "Pitzia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1131
+        "start": 1131,
+        "end": 1131
       }
     ]
   },
@@ -10485,9 +10745,12 @@
     "lemma": "Petilius 3",
     "previous": "Petilius 2",
     "next": "Petillius",
+    "redirect": "Petillius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1136
+        "start": 1136,
+        "end": 1136
       }
     ]
   },
@@ -10663,7 +10926,7 @@
     "lemma": "Petitaros",
     "previous": "Πετίργαλα",
     "next": "Petitio",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1153,
@@ -10687,9 +10950,12 @@
     "lemma": "Petnelissos",
     "previous": "Petitio",
     "next": "Petobrogen",
+    "redirect": "Pednelissos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1162
+        "start": 1162,
+        "end": 1162
       }
     ]
   },
@@ -10707,7 +10973,7 @@
   {
     "lemma": "Petorritum",
     "previous": "Petobrogen",
-    "next": "Petorsai",
+    "next": "Πέτορσοι",
     "chapters": [
       {
         "start": 1163,
@@ -10716,18 +10982,22 @@
     ]
   },
   {
-    "lemma": "Petorsai",
+    "lemma": "Πέτορσοι",
     "previous": "Petorritum",
     "next": "Petosarapis",
+    "sort_key": "Petorsai",
+    "redirect": "Perorsi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1164
+        "start": 1164,
+        "end": 1164
       }
     ]
   },
   {
     "lemma": "Petosarapis",
-    "previous": "Petorsai",
+    "previous": "Πέτορσοι",
     "next": "Petosiris",
     "chapters": [
       {
@@ -10751,9 +11021,12 @@
     "lemma": "Petovio",
     "previous": "Petosiris",
     "next": "Petra 1",
+    "redirect": "Poetovio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1165
+        "start": 1165,
+        "end": 1165
       }
     ]
   },
@@ -11080,9 +11353,12 @@
     "lemma": "Petrella",
     "previous": "Petreius 4",
     "next": "Petrianae",
+    "redirect": "Petrula",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1189
+        "start": 1189,
+        "end": 1189
       }
     ]
   },
@@ -11123,9 +11399,12 @@
     "lemma": "Petrinius",
     "previous": "Petrin",
     "next": "Petrinoi",
+    "redirect": "Petronius 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1190
+        "start": 1190,
+        "end": 1190
       }
     ]
   },
@@ -11133,9 +11412,12 @@
     "lemma": "Petrinoi",
     "previous": "Petrinius",
     "next": "Petrinus vicus",
+    "redirect": "Petra 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1190
+        "start": 1190,
+        "end": 1190
       }
     ]
   },
@@ -11387,9 +11669,12 @@
     "lemma": "Petronius 12",
     "previous": "Petronius 11",
     "next": "Petronius 13",
+    "redirect": "Petrus 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1195
+        "start": 1195,
+        "end": 1195
       }
     ]
   },

@@ -1,10 +1,17 @@
 [
   {
     "lemma": "Mitarbeiter-Verzeichnis (Band II)",
-    "previous": "Titelblatt II,2",
+    "previous": "Artemis 2",
     "next": "Artemisia 1",
     "sort_key": "!02 01 Autoren1896",
-    "proof_read": 3
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1441,
+        "end": 1441,
+        "author": "Georg Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Artemisia 1",
@@ -3544,7 +3551,7 @@
     "lemma": "Ascomarci",
     "previous": "Ascliae",
     "next": "Asconis fossa",
-    "redirect": true,
+    "redirect": "Acascomarci",
     "proof_read": 3,
     "chapters": [
       {
@@ -5042,7 +5049,7 @@
     "next": "Asinius 1",
     "sort_key": "Asinius 00",
     "proof_read": 3,
-    "wp_link": "w:de:Asinius",
+    "wp_link": "w:de:Asinier",
     "wd_link": "d:Q2866649",
     "chapters": [
       {
@@ -5478,7 +5485,7 @@
     "next": "Asinius 32",
     "proof_read": 3,
     "wp_link": "w:de:Asinius Quadratus",
-    "ws_link": "s:el:Συγγραφέας:Ασίνιος Κουαδράτος",
+    "ws_link": "s:it:Autore:Gaio Asinio Quadrato",
     "wd_link": "d:Q563283",
     "chapters": [
       {
@@ -6848,7 +6855,7 @@
     "previous": "Asklepiades 27",
     "next": "Asklepiades 29",
     "proof_read": 3,
-    "wp_link": "w:fr:Asclépiade de Myrlée",
+    "wp_link": "w:en:Asclepiades of Myrlea",
     "ws_link": "s:it:Autore:Asclepiade di Mirlea",
     "wd_link": "d:Q3624868",
     "chapters": [
@@ -7973,6 +7980,7 @@
     "previous": "Asmira",
     "next": "Asmosata",
     "proof_read": 3,
+    "wd_link": "d:Q105714294",
     "chapters": [
       {
         "start": 1702,
@@ -8076,7 +8084,7 @@
     "lemma": "Asooi",
     "previous": "Asonides",
     "next": "Asope",
-    "redirect": true,
+    "redirect": "Assooi",
     "proof_read": 3,
     "chapters": [
       {
@@ -8840,7 +8848,7 @@
     "next": "Aspasia 3",
     "proof_read": 3,
     "wp_link": "w:ca:Aspàsia de Focea",
-    "wd_link": "d:Q16171823",
+    "wd_link": "d:Q106427990",
     "chapters": [
       {
         "start": 1721,
@@ -10235,7 +10243,7 @@
     "lemma": "Assonus lacus",
     "previous": "Asso",
     "next": "Assooi",
-    "redirect": true,
+    "redirect": "Ἀσκανία λίμνη 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -10308,7 +10316,7 @@
     "chapters": [
       {
         "start": 1748,
-        "end": 1750,
+        "end": 1749,
         "author": "Bürchner."
       }
     ]
@@ -10625,6 +10633,8 @@
     "previous": "Astakilis",
     "next": "Astakos 2",
     "proof_read": 3,
+    "wp_link": "w:en:Astakos",
+    "wd_link": "d:Q746362",
     "chapters": [
       {
         "start": 1774,
@@ -18079,6 +18089,8 @@
     "previous": "Athis 1",
     "next": "Athletai",
     "proof_read": 3,
+    "wp_link": "w:de:Athis (Mythologie)",
+    "wd_link": "d:Q3514860",
     "chapters": [
       {
         "start": 2049,
@@ -18722,7 +18734,7 @@
     "previous": "Atilicinus",
     "next": "Atilius 1",
     "proof_read": 3,
-    "wp_link": "w:de:Atilius",
+    "wp_link": "w:de:Atilier",
     "wd_link": "d:Q755905",
     "chapters": [
       {
@@ -18752,6 +18764,8 @@
     "next": "Atilius 3",
     "sort_key": "Atilius 02",
     "proof_read": 3,
+    "wp_link": "w:de:Atilius (Dichter)",
+    "wd_link": "d:Q1164947",
     "chapters": [
       {
         "start": 2076,
@@ -18888,6 +18902,8 @@
     "previous": "Atilius 11",
     "next": "Atilius 13",
     "proof_read": 3,
+    "wp_link": "w:de:Lucius Atilius (Volkstribun 311 v. Chr.)",
+    "wd_link": "d:Q11933548",
     "chapters": [
       {
         "start": 2077,
@@ -18901,6 +18917,8 @@
     "previous": "Atilius 12",
     "next": "Atilius 14",
     "proof_read": 3,
+    "wp_link": "w:de:Lucius Atilius (Quästor)",
+    "wd_link": "d:Q20100978",
     "chapters": [
       {
         "start": 2077,
@@ -18914,6 +18932,8 @@
     "previous": "Atilius 13",
     "next": "Atilius 15",
     "proof_read": 3,
+    "wp_link": "w:de:Lucius Atilius (Militär)",
+    "wd_link": "d:Q16172341",
     "chapters": [
       {
         "start": 2077,
@@ -18927,6 +18947,8 @@
     "previous": "Atilius 14",
     "next": "Atilius 16",
     "proof_read": 3,
+    "wp_link": "w:de:Lucius Atilius (Volkstribun 210 v. Chr.)",
+    "wd_link": "d:Q12285161",
     "chapters": [
       {
         "start": 2077,
@@ -18940,6 +18962,8 @@
     "previous": "Atilius 15",
     "next": "Atilius 17",
     "proof_read": 3,
+    "wp_link": "w:de:Lucius Atilius (Prätor)",
+    "wd_link": "d:Q19713092",
     "chapters": [
       {
         "start": 2077,
@@ -19449,7 +19473,7 @@
     "next": "Atilius 55",
     "proof_read": 3,
     "wp_link": "w:de:Titus Atilius Rufus",
-    "wd_link": "d:Q47452755",
+    "wd_link": "d:Q19997995",
     "chapters": [
       {
         "start": 2094,
@@ -20023,7 +20047,7 @@
     "previous": "Atinius 5",
     "next": "Atinius 7",
     "sort_key": "Atinius 06",
-    "redirect": true,
+    "redirect": "Atinius 3",
     "proof_read": 3,
     "chapters": [
       {
@@ -20037,7 +20061,7 @@
     "previous": "Atinius 6",
     "next": "Atinius 8",
     "sort_key": "Atinius 07",
-    "redirect": true,
+    "redirect": "Latinius 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -20052,7 +20076,7 @@
     "next": "Atinius 9",
     "sort_key": "Atinius 08",
     "proof_read": 3,
-    "wp_link": "w:de:Gaius Atinius Labeo (Volkstribun)",
+    "wp_link": "w:de:Gaius Atinius Labeo (Volkstribun 196 v. Chr.)",
     "wd_link": "d:Q5517416",
     "chapters": [
       {
@@ -20727,7 +20751,7 @@
     "proof_read": 3,
     "chapters": [
       {
-        "start": 2137,
+        "start": 2138,
         "end": 2138,
         "author": "Tümpel."
       }
@@ -22569,7 +22593,7 @@
     "lemma": "Attikos 11",
     "previous": "Attikos 10a–f",
     "next": "Attikos 12",
-    "redirect": true,
+    "redirect": "Claudius 71",
     "proof_read": 3,
     "chapters": [
       {
@@ -23401,6 +23425,7 @@
     "previous": "Attuda",
     "next": "Attusius 1",
     "proof_read": 3,
+    "wd_link": "d:Q107487557",
     "chapters": [
       {
         "start": 2259,
@@ -23415,6 +23440,7 @@
     "next": "Attusius 2",
     "redirect": "Talisius 1",
     "proof_read": 3,
+    "wd_link": "d:Q107500945",
     "chapters": [
       {
         "start": 2259,
@@ -23428,6 +23454,7 @@
     "next": "Atuatuca",
     "redirect": "Sabinus 37",
     "proof_read": 3,
+    "wd_link": "d:Q107500863",
     "chapters": [
       {
         "start": 2259,
@@ -26123,7 +26150,7 @@
     "lemma": "Augeira",
     "previous": "Augeias 2",
     "next": "Augenärzte",
-    "redirect": true,
+    "redirect": "Andeira 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -27557,7 +27584,7 @@
     "next": "Avianius 6",
     "sort_key": "Auianius 05",
     "proof_read": 3,
-    "wp_link": "w:fr:Avianius Evander",
+    "wp_link": "w:de:Gaius Avianius Euandros",
     "wd_link": "d:Q2874270",
     "chapters": [
       {
@@ -28787,6 +28814,7 @@
     "previous": "Aulodes",
     "next": "Aulon 1",
     "proof_read": 3,
+    "wd_link": "d:Q73263678",
     "chapters": [
       {
         "start": 2411,
@@ -30076,7 +30104,7 @@
     "previous": "Aureliupolis",
     "next": "Aurelius 1",
     "proof_read": 3,
-    "wp_link": "w:de:Aurelius",
+    "wp_link": "w:de:Aurelier",
     "wd_link": "d:Q906810",
     "chapters": [
       {
@@ -30517,6 +30545,8 @@
     "next": "Aurelius 32",
     "sort_key": "Aurelius 031",
     "proof_read": 3,
+    "wp_link": "w:en:Lucius Aurelius Agaclytus",
+    "wd_link": "d:Q106884210",
     "chapters": [
       {
         "start": 2433,
@@ -32519,7 +32549,7 @@
     "lemma": "Aurelius 177",
     "previous": "Aurelius 176",
     "next": "Aurelius 178",
-    "redirect": true,
+    "redirect": "Aufidius 32",
     "proof_read": 3,
     "wp_link": "w:en:Gnaeus Aufidius Orestes",
     "wd_link": "d:Q5881568",
@@ -33313,7 +33343,7 @@
     "lemma": "Aurelius 236",
     "previous": "Aurelius 235",
     "next": "Aurelius 237",
-    "redirect": true,
+    "redirect": "Ceionius 8",
     "proof_read": 3,
     "wp_link": "w:de:Lucius Verus",
     "wd_link": "d:Q1433",
@@ -34657,6 +34687,8 @@
     "previous": "Ausci",
     "next": "Auseis",
     "proof_read": 3,
+    "wp_link": "w:de:Ascoli Satriano",
+    "wd_link": "d:Q51892",
     "chapters": [
       {
         "start": 2557,
@@ -35149,7 +35181,7 @@
     "lemma": "Austoriana",
     "previous": "Austicula",
     "next": "Austri cornu",
-    "redirect": true,
+    "redirect": "Austuriani",
     "proof_read": 3,
     "chapters": [
       {
@@ -35972,7 +36004,7 @@
     "previous": "Autolykos 1",
     "next": "Autolykos 3",
     "proof_read": 3,
-    "wp_link": "w:en:Autolycus, son of Deimachus",
+    "wp_link": "w:en:Autolycus (son of Deimachus)",
     "wd_link": "d:Q4056272",
     "chapters": [
       {
@@ -36638,7 +36670,6 @@
     "next": "Autrigones",
     "proof_read": 3,
     "wp_link": "w:de:Chartres",
-    "ws_link": "s:fr:Catégorie:Chartres",
     "wd_link": "d:Q130272",
     "chapters": [
       {
@@ -37626,6 +37657,7 @@
     "previous": "Axiakes",
     "next": "Axieros",
     "proof_read": 3,
+    "wd_link": "d:Q106510599",
     "chapters": [
       {
         "start": 2625,
@@ -40170,6 +40202,8 @@
     "previous": "Bacaudae",
     "next": "Baccae",
     "proof_read": 3,
+    "wp_link": "w:en:Bacax",
+    "wd_link": "d:Q4838603",
     "chapters": [
       {
         "start": 2720,
@@ -40209,6 +40243,8 @@
     "previous": "Baccaei",
     "next": "Baccarae",
     "proof_read": 3,
+    "wp_link": "w:it:Mansio ad Vacanas",
+    "wd_link": "d:Q3844872",
     "chapters": [
       {
         "start": 2720,
@@ -40327,7 +40363,7 @@
     "lemma": "Bacchius",
     "previous": "Bacchiera",
     "next": "Bacchuiana",
-    "redirect": true,
+    "redirect": "Bakchios 4",
     "proof_read": 3,
     "chapters": [
       {
@@ -40460,6 +40496,8 @@
     "previous": "Bachetis",
     "next": "Bachilitae",
     "proof_read": 3,
+    "wp_link": "w:en:Bachiarius",
+    "wd_link": "d:Q4838868",
     "chapters": [
       {
         "start": 2723,
@@ -40579,6 +40617,8 @@
     "previous": "Baculum",
     "next": "Bacurdus",
     "proof_read": 3,
+    "wp_link": "w:en:Bosut (river)",
+    "wd_link": "d:Q2911647",
     "chapters": [
       {
         "start": 2724,
@@ -40806,6 +40846,8 @@
     "previous": "Badia",
     "next": "Badiamaioi",
     "proof_read": 3,
+    "wp_link": "w:de:Badiae",
+    "wd_link": "d:Q15785102",
     "chapters": [
       {
         "start": 2726,
@@ -41093,7 +41135,7 @@
     "previous": "Baebiani Ligures",
     "next": "Baebius 1",
     "proof_read": 3,
-    "wp_link": "w:de:Baebius",
+    "wp_link": "w:de:Baebier",
     "wd_link": "d:Q799721",
     "chapters": [
       {
@@ -43261,7 +43303,7 @@
     "lemma": "Baithakath",
     "previous": "Βαίτη",
     "next": "Baithana",
-    "redirect": true,
+    "redirect": "Bethakad",
     "proof_read": 3,
     "chapters": [
       {
@@ -43274,7 +43316,7 @@
     "lemma": "Baithana",
     "previous": "Baithakath",
     "next": "Baithel, Baithome",
-    "redirect": true,
+    "redirect": "Paithana",
     "proof_read": 3,
     "chapters": [
       {
@@ -43287,7 +43329,7 @@
     "lemma": "Baithel, Baithome",
     "previous": "Baithana",
     "next": "Baithora",
-    "redirect": true,
+    "redirect": "Bethel",
     "proof_read": 3,
     "chapters": [
       {
@@ -43313,7 +43355,7 @@
     "lemma": "Baithsan",
     "previous": "Baithora",
     "next": "Baithsarisath",
-    "redirect": true,
+    "redirect": "Bethsan",
     "proof_read": 3,
     "chapters": [
       {
@@ -43326,7 +43368,7 @@
     "lemma": "Baithsarisath",
     "previous": "Baithsan",
     "next": "Baithsura",
-    "redirect": true,
+    "redirect": "Bethsalisa",
     "proof_read": 3,
     "chapters": [
       {
@@ -43339,7 +43381,7 @@
     "lemma": "Baithsura",
     "previous": "Baithsarisath",
     "next": "Baithzacharia",
-    "redirect": true,
+    "redirect": "Bethsur 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -43352,7 +43394,7 @@
     "lemma": "Baithzacharia",
     "previous": "Baithsura",
     "next": "Βαίτια ὄρη",
-    "redirect": true,
+    "redirect": "Bethzacharia",
     "proof_read": 3,
     "chapters": [
       {
@@ -43563,6 +43605,8 @@
     "previous": "Baiurae",
     "next": "Baka",
     "proof_read": 3,
+    "wp_link": "w:de:Sextus Baius Pudens",
+    "wd_link": "d:Q2275586",
     "chapters": [
       {
         "start": 2781,
@@ -46189,6 +46233,8 @@
     "previous": "Balteus 3",
     "next": "Baltipatna",
     "proof_read": 3,
+    "wp_link": "w:de:Balthen",
+    "wd_link": "d:Q789757",
     "chapters": [
       {
         "start": 2842,
@@ -47124,7 +47170,7 @@
     "previous": "Baptisterium",
     "next": "Bara 1",
     "proof_read": 3,
-    "wp_link": "w:fr:Baquates",
+    "wp_link": "w:en:Baquates",
     "wd_link": "d:Q2883706",
     "chapters": [
       {
@@ -47269,6 +47315,7 @@
     "previous": "Barakura",
     "next": "Barange",
     "proof_read": 3,
+    "wd_link": "d:Q21534248",
     "chapters": [
       {
         "start": 2852,
@@ -47979,7 +48026,7 @@
   {
     "lemma": "Athenaios 23",
     "previous": "Astakides 2",
-    "next": "Augustales 1",
+    "next": "Barbarus 1",
     "proof_read": 3,
     "wp_link": "w:de:Athenaios (Militärschriftsteller)",
     "wd_link": "d:Q755297",

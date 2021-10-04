@@ -12,7 +12,7 @@ class RePage:
     def __init__(self, wiki_page: pywikibot.Page):
         self.page: pywikibot.Page = wiki_page
         self.pre_text: str = self.page.text
-        self._article_list: List[Union[Article, str]] = list()
+        self._article_list: List[Union[Article, str]] = []
         self._init_page_dict()
 
     def _init_page_dict(self):
@@ -102,7 +102,7 @@ class RePage:
             if self.is_writable:
                 try:
                     self.page.save(summary=reason, botflag=True)
-                except pywikibot.exceptions.LockedPage as error:
+                except pywikibot.exceptions.LockedPageError as error:
                     raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.") from error
             else:
                 raise ReDatenException(f"Page {self.page.title} is protected for normal users, "

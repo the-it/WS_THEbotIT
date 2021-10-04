@@ -92,6 +92,8 @@
     "previous": "Legon",
     "next": "Lehrgedicht",
     "proof_read": 3,
+    "wp_link": "w:de:Leherennus",
+    "wd_link": "d:Q1813084",
     "chapters": [
       {
         "start": 1842,
@@ -379,7 +381,7 @@
     "previous": "Leïon",
     "next": "Leipsydrion",
     "sort_key": "Leiopedon",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1870,
@@ -447,9 +449,12 @@
     "lemma": "Lekanios Areios",
     "previous": "Leiturgie",
     "next": "Lekanomanteia",
+    "redirect": "Areios 13",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1879
+        "start": 1879,
+        "end": 1879
       }
     ]
   },
@@ -796,7 +801,7 @@
     "lemma": "Lemesos",
     "previous": "Lemellef",
     "next": "Lemincum",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1896,
@@ -809,7 +814,7 @@
     "lemma": "Lemincum",
     "previous": "Lemesos",
     "next": "Lemna",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1896,
@@ -835,7 +840,7 @@
     "lemma": "Lemnia 1",
     "previous": "Lemna",
     "next": "Lemnia 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1897,
@@ -860,7 +865,7 @@
     "previous": "Lemnia 2",
     "next": "Lemnias",
     "sort_key": "Lemniai nymphai",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1927,
@@ -897,7 +902,7 @@
     "lemma": "Lemnis",
     "previous": "Lemnios",
     "next": "Lemnos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1928,
@@ -936,7 +941,7 @@
     "next": "Lemovices",
     "proof_read": 2,
     "wp_link": "w:de:Poitiers",
-    "wd_link": "d:Q6616",
+    "wd_link": "d:Q20107054",
     "chapters": [
       {
         "start": 1930,
@@ -1089,7 +1094,7 @@
     "lemma": "Lenaios 3",
     "previous": "Lenaios 2",
     "next": "Lenda",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1941,
@@ -1128,7 +1133,7 @@
     "lemma": "Lenius",
     "previous": "Leneus",
     "next": "Lennium",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1942,
@@ -1232,7 +1237,7 @@
   {
     "lemma": "Lentiscus",
     "previous": "Lentienses",
-    "next": "Lentudon",
+    "next": "Λέντουδον",
     "chapters": [
       {
         "start": 1944,
@@ -1241,18 +1246,22 @@
     ]
   },
   {
-    "lemma": "Lentudon",
+    "lemma": "Λέντουδον",
     "previous": "Lentiscus",
     "next": "Lentulis",
+    "sort_key": "Lentudon",
+    "redirect": "Ptolemaios 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1946
+        "start": 1946,
+        "end": 1946
       }
     ]
   },
   {
     "lemma": "Lentulis",
-    "previous": "Lentudon",
+    "previous": "Λέντουδον",
     "next": "Lentulus 1",
     "chapters": [
       {
@@ -1276,9 +1285,12 @@
     "lemma": "Lentulus 2",
     "previous": "Lentulus 1",
     "next": "Lenus",
+    "redirect": "Cornelius 172ff.",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1946
+        "start": 1946,
+        "end": 1946
       }
     ]
   },
@@ -1420,7 +1432,7 @@
     "lemma": "Leochares 1",
     "previous": "Leobotes",
     "next": "Leochares 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1992,
@@ -1550,7 +1562,7 @@
     "lemma": "Leogoras 3",
     "previous": "Leogoras 2",
     "next": "Leokedes",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2000,
@@ -1697,7 +1709,7 @@
     "previous": "Leon 3",
     "next": "Leon 5",
     "sort_key": "Leon 04",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2004,
@@ -1794,7 +1806,7 @@
     "lemma": "Leon 10",
     "previous": "Leon 9",
     "next": "Leon 11",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2005,
@@ -1807,7 +1819,7 @@
     "lemma": "Leon 11",
     "previous": "Leon 10",
     "next": "Leon 12",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2005,
@@ -1820,7 +1832,7 @@
     "lemma": "Leon 12",
     "previous": "Leon 11",
     "next": "Leon 13",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2005,
@@ -1896,7 +1908,7 @@
     "lemma": "Leon 18",
     "previous": "Leon 17",
     "next": "Leon 19",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2008,
@@ -2053,9 +2065,12 @@
     "lemma": "Leonassa",
     "previous": "Leon 30",
     "next": "Leonata",
+    "redirect": "Lanassa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2014
+        "start": 2014,
+        "end": 2014
       }
     ]
   },
@@ -2107,9 +2122,12 @@
     "lemma": "Leonidas",
     "previous": "Leonidaion 2",
     "next": "Leonidas 1",
+    "redirect": "Leonides 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2015
+        "start": 2015,
+        "end": 2015
       }
     ]
   },
@@ -2521,9 +2539,12 @@
     "lemma": "Leontichos 1",
     "previous": "Leontiades 2",
     "next": "Leontichos 2",
+    "redirect": "Ῥαδίνη, Λεόντιχος",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2040
+        "start": 2040,
+        "end": 2040
       }
     ]
   },
@@ -2718,9 +2739,12 @@
     "lemma": "Leontius 1",
     "previous": "Leontiskos 4",
     "next": "Leontius 2",
+    "redirect": "Leo 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2052
+        "start": 2052,
+        "end": 2052
       }
     ]
   },
@@ -2783,7 +2807,7 @@
     "lemma": "Leonton",
     "previous": "Leontomenes 2",
     "next": "Leontophonos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2053,
@@ -3333,9 +3357,12 @@
     "lemma": "Lepidus 9",
     "previous": "Lepidus 8",
     "next": "Lepinus",
+    "redirect": "Lepidos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2067
+        "start": 2067,
+        "end": 2067
       }
     ]
   },
@@ -3825,9 +3852,12 @@
     "lemma": "Lesanici",
     "previous": "Lesa",
     "next": "Λησανῶν κώμη",
+    "redirect": "Lasamici",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2098
+        "start": 2098,
+        "end": 2098
       }
     ]
   },
@@ -3909,7 +3939,7 @@
     "lemma": "Lesbonax",
     "previous": "Lesbokles 2",
     "next": "Lesbonax 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2102,
@@ -4130,9 +4160,12 @@
     "lemma": "Lestai",
     "previous": "Lestadai",
     "next": "Leston chora",
+    "redirect": "Seeraub (Seeräuber, Seeräuberei)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2137
+        "start": 2137,
+        "end": 2137
       }
     ]
   },
@@ -4184,9 +4217,12 @@
     "lemma": "Letandros",
     "previous": "Lesyros",
     "next": "Lete",
+    "redirect": "Oletandros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2138
+        "start": 2138,
+        "end": 2138
       }
     ]
   },
@@ -4304,9 +4340,12 @@
     "lemma": "Lethon",
     "previous": "Lethe 2",
     "next": "Lethos",
+    "redirect": "Lethe 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2144
+        "start": 2144,
+        "end": 2144
       }
     ]
   },
@@ -4336,9 +4375,12 @@
     "lemma": "Leti",
     "previous": "Lethus",
     "next": "Letinno",
+    "redirect": "Liticiani",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2144
+        "start": 2144,
+        "end": 2144
       }
     ]
   },
@@ -4566,9 +4608,12 @@
     "lemma": "Leucada",
     "previous": "Leuca 2",
     "next": "Leucarum",
+    "redirect": "Contrebia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2149
+        "start": 2149,
+        "end": 2149
       }
     ]
   },
@@ -4587,9 +4632,12 @@
     "lemma": "Leucasia",
     "previous": "Leucarum",
     "next": "Leucata",
+    "redirect": "Leucosia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2150
+        "start": 2150,
+        "end": 2150
       }
     ]
   },
@@ -4696,9 +4744,12 @@
     "lemma": "Leucos Tunes",
     "previous": "Leucosia",
     "next": "Leucotheae",
+    "redirect": "Tunes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2153
+        "start": 2153,
+        "end": 2153
       }
     ]
   },
@@ -4783,9 +4834,12 @@
     "lemma": "Leugari",
     "previous": "Leugaisa",
     "next": "Leugosena",
+    "redirect": "Colles Leugari",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2154
+        "start": 2154,
+        "end": 2154
       }
     ]
   },
@@ -5266,9 +5320,12 @@
     "lemma": "Leukathion",
     "previous": "Leukatheon, Leukathion",
     "next": "Leuke 1",
+    "redirect": "Leukatheon, Leukathion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2260
+        "start": 2260,
+        "end": 2260
       }
     ]
   },
@@ -5287,9 +5344,12 @@
     "lemma": "Leuke 2",
     "previous": "Leuke 1",
     "next": "Leuke 5",
+    "redirect": "Leuka 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2260
+        "start": 2260,
+        "end": 2260
       }
     ]
   },
@@ -5297,9 +5357,12 @@
     "lemma": "Leuke 5",
     "previous": "Leuke 2",
     "next": "Leuke akte 1",
+    "redirect": "Pappel",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2261
+        "start": 2261,
+        "end": 2261
       }
     ]
   },
@@ -5384,9 +5447,13 @@
     "lemma": "Leuke nesos",
     "previous": "Leuke kome 3",
     "next": "Leukiane",
+    "sort_key": "Leuke nesos",
+    "redirect": "Leuke 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2262
+        "start": 2262,
+        "end": 2262
       }
     ]
   },
@@ -5460,9 +5527,12 @@
     "lemma": "Leukios 5",
     "previous": "Leukios 4",
     "next": "Leukippe 1",
+    "redirect": "Lucius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2263
+        "start": 2263,
+        "end": 2263
       }
     ]
   },
@@ -5558,9 +5628,12 @@
     "lemma": "Leukippo",
     "previous": "Leukippides",
     "next": "Leukippos",
+    "redirect": "Leukoe",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2264
+        "start": 2264,
+        "end": 2264
       }
     ]
   },
@@ -5744,9 +5817,12 @@
     "lemma": "Leukoion",
     "previous": "Leukogeios",
     "next": "Leukolithi",
+    "redirect": "Veilchen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2277
+        "start": 2277,
+        "end": 2277
       }
     ]
   },
@@ -6072,9 +6148,12 @@
     "lemma": "Leukopolis",
     "previous": "Leukophrys 2",
     "next": "Leukopoloi",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2288
+        "start": 2288,
+        "end": 2288
       }
     ]
   },
@@ -6180,7 +6259,7 @@
   {
     "lemma": "Leukos 7",
     "previous": "Leukos 6",
-    "next": "Leukos chrysos",
+    "next": "Λευκὸς χρυσός",
     "chapters": [
       {
         "start": 2289,
@@ -6189,18 +6268,22 @@
     ]
   },
   {
-    "lemma": "Leukos chrysos",
+    "lemma": "Λευκὸς χρυσός",
     "previous": "Leukos 7",
     "next": "Leukos limen 1",
+    "sort_key": "Leukos chrysos",
+    "redirect": "Elektron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2289
+        "start": 2289,
+        "end": 2289
       }
     ]
   },
   {
     "lemma": "Leukos limen 1",
-    "previous": "Leukos chrysos",
+    "previous": "Λευκὸς χρυσός",
     "next": "Leukosia 1",
     "chapters": [
       {
@@ -6235,16 +6318,19 @@
     "lemma": "Leukosia 2",
     "previous": "Leukos limen 2",
     "next": "Leukosyroi",
+    "redirect": "Leucasia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2291
+        "start": 2291,
+        "end": 2291
       }
     ]
   },
   {
     "lemma": "Leukosyroi",
     "previous": "Leukosia 2",
-    "next": "Leukosyos 1",
+    "next": "Leukosyros 1",
     "chapters": [
       {
         "start": 2291,
@@ -6253,28 +6339,34 @@
     ]
   },
   {
-    "lemma": "Leukosyos 1",
+    "lemma": "Leukosyros 1",
     "previous": "Leukosyroi",
-    "next": "Leukosyos 2",
+    "next": "Leukosyros 2",
+    "redirect": "Pyramos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2293
+        "start": 2293,
+        "end": 2293
       }
     ]
   },
   {
-    "lemma": "Leukosyos 2",
-    "previous": "Leukosyos 1",
+    "lemma": "Leukosyros 2",
+    "previous": "Leukosyros 1",
     "next": "Leukothea 1",
+    "redirect": "Leukosyroi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2293
+        "start": 2293,
+        "end": 2293
       }
     ]
   },
   {
     "lemma": "Leukothea 1",
-    "previous": "Leukosyos 2",
+    "previous": "Leukosyros 2",
     "next": "Leukothea 2",
     "chapters": [
       {
@@ -6309,9 +6401,12 @@
     "lemma": "Leukothea 4",
     "previous": "Leukothea 3",
     "next": "Leukotheion",
+    "redirect": "Leucotheae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2306
+        "start": 2306,
+        "end": 2306
       }
     ]
   },
@@ -6319,9 +6414,12 @@
     "lemma": "Leukotheion",
     "previous": "Leukothea 4",
     "next": "Leukothoe",
+    "redirect": "Leukolla 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2306
+        "start": 2306,
+        "end": 2306
       }
     ]
   },
@@ -6351,9 +6449,12 @@
     "lemma": "Leuktra 2",
     "previous": "Leuktra 1",
     "next": "Leuktra 3",
+    "redirect": "Leuktron 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2307
+        "start": 2307,
+        "end": 2307
       }
     ]
   },
@@ -6361,9 +6462,12 @@
     "lemma": "Leuktra 3",
     "previous": "Leuktra 2",
     "next": "Leuktrides",
+    "redirect": "Leuktron 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2307
+        "start": 2307,
+        "end": 2307
       }
     ]
   },
@@ -6371,9 +6475,12 @@
     "lemma": "Leuktrides",
     "previous": "Leuktra 3",
     "next": "Leuktron 1",
+    "redirect": "Skedasos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2307
+        "start": 2307,
+        "end": 2307
       }
     ]
   },
@@ -6546,9 +6653,12 @@
     "lemma": "Leusino",
     "previous": "Leusinium",
     "next": "Leusos",
+    "redirect": "Tabula Peutingeriana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -6567,9 +6677,12 @@
     "lemma": "Leutarnia",
     "previous": "Leusos",
     "next": "Leuternia",
+    "redirect": "Leuternia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -6599,9 +6712,12 @@
     "lemma": "Leutolis",
     "previous": "Leuthari",
     "next": "Leutuoanum",
+    "redirect": "Itinerarien",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2315
+        "start": 2315,
+        "end": 2315
       }
     ]
   },
@@ -6631,9 +6747,12 @@
     "lemma": "Lex abrogata",
     "previous": "Lex",
     "next": "Lex Acilia Calpurnia de ambitu",
+    "redirect": "Abrogatio 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2319
+        "start": 2319,
+        "end": 2319
       }
     ]
   },
@@ -6685,10 +6804,12 @@
     "lemma": "Lex Aebutia 2",
     "previous": "Lex Aebutia 1",
     "next": "Lex Aelia 1",
-    "redirect": true,
+    "redirect": "Legis actio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2320
+        "start": 2320,
+        "end": 2320
       }
     ]
   },
@@ -6729,9 +6850,12 @@
     "lemma": "Lex Aemilia 1",
     "previous": "Lex Aelia Sentia",
     "next": "Lex Aemilia 2",
+    "redirect": "Censores 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2322
+        "start": 2322,
+        "end": 2322
       }
     ]
   },
@@ -6761,9 +6885,12 @@
     "lemma": "Lex alearia",
     "previous": "Lex Aemilia 3",
     "next": "Lex alimentaria",
+    "redirect": "Alea 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2323
+        "start": 2323,
+        "end": 2323
       }
     ]
   },
@@ -6815,9 +6942,12 @@
     "lemma": "Lex Antistia Asinia",
     "previous": "Lex Antia",
     "next": "Lex Antonia 1",
+    "redirect": "Lex de flaminica diali",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2324
+        "start": 2324,
+        "end": 2324
       }
     ]
   },
@@ -6891,9 +7021,12 @@
     "lemma": "Lex Asinia Antistia",
     "previous": "Lex Aquilia",
     "next": "Lex Atia",
+    "redirect": "Lex de flaminica diali",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2330
+        "start": 2330,
+        "end": 2330
       }
     ]
   },
@@ -7153,7 +7286,7 @@
     "lemma": "Lex Caelia",
     "previous": "Lex Caecilia 4",
     "next": "Lex Calidia",
-    "redirect": "Comitia",
+    "redirect": "Coelius 12",
     "proof_read": 3,
     "chapters": [
       {
@@ -7199,9 +7332,12 @@
     "lemma": "Lex Calpurnia 3",
     "previous": "Lex Calpurnia 2",
     "next": "Lex Calpurnia 4",
+    "redirect": "Lex Gabinia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2338
+        "start": 2338,
+        "end": 2338
       }
     ]
   },
@@ -7286,9 +7422,12 @@
     "lemma": "Lex Censoria",
     "previous": "Lex Cassia 3",
     "next": "Lex Cincia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2340
+        "start": 2340,
+        "end": 2340
       }
     ]
   },
@@ -7296,9 +7435,12 @@
     "lemma": "Lex Cincia",
     "previous": "Lex Censoria",
     "next": "Lex Claudia 1",
+    "redirect": "Donatio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2340
+        "start": 2340,
+        "end": 2340
       }
     ]
   },
@@ -7306,9 +7448,12 @@
     "lemma": "Lex Claudia 1",
     "previous": "Lex Cincia",
     "next": "Lex Claudia 2",
+    "redirect": "Claudius 302",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2340
+        "start": 2340,
+        "end": 2340
       }
     ]
   },
@@ -7360,9 +7505,13 @@
     "lemma": "Leges Clodiae 1",
     "previous": "Lex Claudia 5",
     "next": "Leges Clodiae 2",
+    "sort_key": "Lex Clodiae 1",
+    "redirect": "Clodius 48",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2341
+        "start": 2341,
+        "end": 2341
       }
     ]
   },
@@ -7403,9 +7552,12 @@
     "lemma": "Lex collegii",
     "previous": "Lex Cocceia de nuptiis",
     "next": "Lex conductionis",
+    "redirect": "Collegium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2341
+        "start": 2341,
+        "end": 2341
       }
     ]
   },
@@ -7413,9 +7565,12 @@
     "lemma": "Lex conductionis",
     "previous": "Lex collegii",
     "next": "Lex consularis",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2342
+        "start": 2342,
+        "end": 2342
       }
     ]
   },
@@ -7434,9 +7589,12 @@
     "lemma": "Lex contractus",
     "previous": "Lex consularis",
     "next": "Lex convivalis",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2342
+        "start": 2342,
+        "end": 2342
       }
     ]
   },
@@ -7565,9 +7723,12 @@
     "lemma": "Lex data",
     "previous": "Lex Cornelia Fulvia de ambitu",
     "next": "Lex Decia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2345
+        "start": 2345,
+        "end": 2345
       }
     ]
   },
@@ -7586,9 +7747,12 @@
     "lemma": "Lex decumis vendundis",
     "previous": "Lex Decia",
     "next": "Lex dicta",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2345
+        "start": 2345,
+        "end": 2345
       }
     ]
   },
@@ -7596,9 +7760,12 @@
     "lemma": "Lex dicta",
     "previous": "Lex decumis vendundis",
     "next": "Lex Domitia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2345
+        "start": 2345,
+        "end": 2345
       }
     ]
   },
@@ -7639,9 +7806,12 @@
     "lemma": "Lex emptionis",
     "previous": "Lex Duilia Maenia",
     "next": "Lex Fabia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2346
+        "start": 2346,
+        "end": 2346
       }
     ]
   },
@@ -7693,9 +7863,12 @@
     "lemma": "Lex Fufia 1",
     "previous": "Lex Fannia",
     "next": "Lex Fufia 2",
+    "redirect": "Lex Aelia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2355
+        "start": 2355,
+        "end": 2355
       }
     ]
   },
@@ -7791,9 +7964,12 @@
     "lemma": "Lex de Gallia Cisalpina",
     "previous": "Leges Iciliae 3",
     "next": "Lex Gellia",
+    "redirect": "Lex Rubria 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2361
+        "start": 2361,
+        "end": 2361
       }
     ]
   },
@@ -7801,9 +7977,12 @@
     "lemma": "Lex Gellia",
     "previous": "Lex de Gallia Cisalpina",
     "next": "Lex Genucia",
+    "redirect": "Cornelius 216",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2361
+        "start": 2361,
+        "end": 2361
       }
     ]
   },
@@ -7811,9 +7990,12 @@
     "lemma": "Lex Genucia",
     "previous": "Lex Gellia",
     "next": "Lex Hieronica",
+    "redirect": "Genucius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2361
+        "start": 2361,
+        "end": 2361
       }
     ]
   },
@@ -7832,9 +8014,12 @@
     "lemma": "Lex Horatia",
     "previous": "Lex Hieronica",
     "next": "Lex Hortensia",
+    "redirect": "Gaia Taracia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2361
+        "start": 2361,
+        "end": 2361
       }
     ]
   },
@@ -7842,9 +8027,12 @@
     "lemma": "Lex Hortensia",
     "previous": "Lex Horatia",
     "next": "Lex Hostilia",
+    "redirect": "Hortensius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2361
+        "start": 2361,
+        "end": 2361
       }
     ]
   },
@@ -7874,9 +8062,12 @@
     "lemma": "Lex imperfecta",
     "previous": "Lex Icilia",
     "next": "Leges Iuliae 1",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2362
+        "start": 2362,
+        "end": 2362
       }
     ]
   },
@@ -7975,9 +8166,12 @@
     "lemma": "Lex Iulia Papiria",
     "previous": "Lex Iulia et Titia",
     "next": "Lex Iunia 1",
+    "redirect": "Multa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2392
+        "start": 2392,
+        "end": 2392
       }
     ]
   },
@@ -8018,9 +8212,12 @@
     "lemma": "Lex Iunia 4",
     "previous": "Lex Iunia 3",
     "next": "Lex Iunia 5",
+    "redirect": "Iunius 123",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2393
+        "start": 2393,
+        "end": 2393
       }
     ]
   },
@@ -8028,9 +8225,12 @@
     "lemma": "Lex Iunia 5",
     "previous": "Lex Iunia 4",
     "next": "Lex Iunia Petronia",
+    "redirect": "Iunius 163",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2393
+        "start": 2393,
+        "end": 2393
       }
     ]
   },
@@ -8181,9 +8381,12 @@
     "lemma": "Lex locationis",
     "previous": "Leges Liviae",
     "next": "Lex Maenia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2396
+        "start": 2396,
+        "end": 2396
       }
     ]
   },
@@ -8213,9 +8416,12 @@
     "lemma": "Lex Malacitana",
     "previous": "Lex Maevia",
     "next": "Lex Mamilia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2396
+        "start": 2396,
+        "end": 2396
       }
     ]
   },
@@ -8256,9 +8462,13 @@
     "lemma": "Leges Manilaniae",
     "previous": "Lex Mamilia Roscia Peducaea Alliena Fabia",
     "next": "Lex Manlia",
+    "sort_key": "Lex Manilaniae",
+    "redirect": "Mancipatio, mancipium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2398
+        "start": 2398,
+        "end": 2398
       }
     ]
   },
@@ -8299,9 +8509,12 @@
     "lemma": "Lex Marcia 3",
     "previous": "Lex Marcia 2",
     "next": "Lex Marcia Porcia",
+    "redirect": "Fenus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2398
+        "start": 2398,
+        "end": 2398
       }
     ]
   },
@@ -8309,9 +8522,12 @@
     "lemma": "Lex Marcia Porcia",
     "previous": "Lex Marcia 3",
     "next": "Lex Maria",
+    "redirect": "Triumphus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2398
+        "start": 2398,
+        "end": 2398
       }
     ]
   },
@@ -8352,9 +8568,12 @@
     "lemma": "Lex Menenia Sestia",
     "previous": "Lex Memmia 2",
     "next": "Lex metalli Vipascensis",
+    "redirect": "Multa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2398
+        "start": 2398,
+        "end": 2398
       }
     ]
   },
@@ -8362,9 +8581,12 @@
     "lemma": "Lex metalli Vipascensis",
     "previous": "Lex Menenia Sestia",
     "next": "Lex Metilia 1",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2398
+        "start": 2398,
+        "end": 2398
       }
     ]
   },
@@ -8416,9 +8638,12 @@
     "lemma": "Lex minus quam perfecta",
     "previous": "Lex Minucia",
     "next": "Lex Narbonensis",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8437,9 +8662,12 @@
     "lemma": "Lex Nervae",
     "previous": "Lex Narbonensis",
     "next": "Lex obrogata",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8447,9 +8675,12 @@
     "lemma": "Lex obrogata",
     "previous": "Lex Nervae",
     "next": "Lex Octavia 1",
+    "redirect": "Abrogatio 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8457,9 +8688,12 @@
     "lemma": "Lex Octavia 1",
     "previous": "Lex obrogata",
     "next": "Lex Ogulnia",
+    "redirect": "Frumentum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8467,9 +8701,12 @@
     "lemma": "Lex Ogulnia",
     "previous": "Lex Octavia 1",
     "next": "Lex Ollinia",
+    "redirect": "Sacerdotes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8488,9 +8725,12 @@
     "lemma": "Lex operis",
     "previous": "Lex Ollinia",
     "next": "Lex Oppia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8498,9 +8738,12 @@
     "lemma": "Lex Oppia",
     "previous": "Lex operis",
     "next": "Lex Ovinia",
+    "redirect": "Sumptus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8508,9 +8751,12 @@
     "lemma": "Lex Ovinia",
     "previous": "Lex Oppia",
     "next": "Lex Pacuvia",
+    "redirect": "Senatus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2399
+        "start": 2399,
+        "end": 2399
       }
     ]
   },
@@ -8626,9 +8872,12 @@
     "lemma": "Lex Pennia",
     "previous": "Lex Peducaea",
     "next": "Lex perfecta",
+    "redirect": "Lex Papia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2401
+        "start": 2401,
+        "end": 2401
       }
     ]
   },
@@ -8636,9 +8885,12 @@
     "lemma": "Lex perfecta",
     "previous": "Lex Pennia",
     "next": "Lex Pesolania",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2401
+        "start": 2401,
+        "end": 2401
       }
     ]
   },
@@ -8679,9 +8931,12 @@
     "lemma": "Lex pignoris",
     "previous": "Lex Petronia 2",
     "next": "Lex Pinaria 1",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -8700,9 +8955,12 @@
     "lemma": "Lex Pinaria 2",
     "previous": "Lex Pinaria 1",
     "next": "Lex Pinaria 3",
+    "redirect": "Legis actio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -8774,9 +9032,12 @@
     "lemma": "Lex plus quam perfecta",
     "previous": "Lex Plautia 3",
     "next": "Lex Poetelia de ambitu",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -8827,9 +9088,13 @@
     "lemma": "Leges Porciae",
     "previous": "Lex Pompeia 2",
     "next": "Lex Pompeia 3",
+    "sort_key": "Lex Porciae",
+    "redirect": "Provocatio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2404
+        "start": 2404,
+        "end": 2404
       }
     ]
   },
@@ -8868,9 +9133,12 @@
     "lemma": "Lex publica",
     "previous": "Lex praediatoria",
     "next": "Lex Publicia",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2404
+        "start": 2404,
+        "end": 2404
       }
     ]
   },
@@ -8910,7 +9178,6 @@
   {
     "lemma": "Lex Publilia 3",
     "previous": "Lex Publilia 2",
-    "next": "Leges regiae",
     "chapters": [
       {
         "start": 2404,
@@ -8919,18 +9186,10 @@
     ]
   },
   {
-    "lemma": "Leges regiae",
-    "previous": "Lex Publilia 3",
-    "next": "Lex Pupia",
-    "chapters": [
-      {
-        "start": 2405
-      }
-    ]
+    "lemma": "Lex Publilia 4"
   },
   {
     "lemma": "Lex Pupia",
-    "previous": "Leges regiae",
     "next": "Lex Quinctia",
     "chapters": [
       {
@@ -8942,7 +9201,7 @@
   {
     "lemma": "Lex Quinctia",
     "previous": "Lex Pupia",
-    "next": "Lex Remmia",
+    "next": "Leges regiae",
     "chapters": [
       {
         "start": 2405,
@@ -8951,12 +9210,29 @@
     ]
   },
   {
-    "lemma": "Lex Remmia",
+    "lemma": "Leges regiae",
     "previous": "Lex Quinctia",
-    "next": "Lex Rhodia",
+    "next": "Lex Remmia",
+    "sort_key": "Lex regiae",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2405
+        "start": 2405,
+        "end": 2405
+      }
+    ]
+  },
+  {
+    "lemma": "Lex Remmia",
+    "previous": "Leges regiae",
+    "next": "Lex Rhodia",
+    "redirect": "Remmius 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2405,
+        "end": 2405
       }
     ]
   },
@@ -8975,9 +9251,12 @@
     "lemma": "Lex rogata",
     "previous": "Lex Rhodia",
     "next": "Lex Romana Burgundionum",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2405
+        "start": 2405,
+        "end": 2405
       }
     ]
   },
@@ -9018,9 +9297,12 @@
     "lemma": "Lex Romana Utinensis",
     "previous": "Lex Romana Wisigotorum",
     "next": "Lex Roscia",
+    "redirect": "Lex Romana Raetica Curiensis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2407
+        "start": 2407,
+        "end": 2407
       }
     ]
   },
@@ -9028,9 +9310,12 @@
     "lemma": "Lex Roscia",
     "previous": "Lex Romana Utinensis",
     "next": "Lex Rubria 1",
+    "redirect": "Roscius 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2412
+        "start": 2412,
+        "end": 2412
       }
     ]
   },
@@ -9038,9 +9323,12 @@
     "lemma": "Lex Rubria 1",
     "previous": "Lex Roscia",
     "next": "Lex Rubria 2",
+    "redirect": "Rubrius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2412
+        "start": 2412,
+        "end": 2412
       }
     ]
   },
@@ -9081,9 +9369,12 @@
     "lemma": "Lex Sabinia",
     "previous": "Lex Rupilia",
     "next": "Lex sacrata",
+    "redirect": "Gabinius 6",
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 2413
+        "start": 2413,
+        "end": 2413
       }
     ]
   },
@@ -9134,7 +9425,6 @@
   {
     "lemma": "Lex Scantinia",
     "previous": "Lex Saufeia",
-    "next": "Leges Semproniae 1",
     "chapters": [
       {
         "start": 2413,
@@ -9143,8 +9433,16 @@
     ]
   },
   {
+    "lemma": "Lex Scribonia",
+    "chapters": [
+      {
+        "start": 2414,
+        "author": "Weiss, Egon"
+      }
+    ]
+  },
+  {
     "lemma": "Leges Semproniae 1",
-    "previous": "Lex Scantinia",
     "next": "Leges Semproniae 2",
     "chapters": [
       {
@@ -9167,7 +9465,6 @@
   {
     "lemma": "Leges Serviliae 1",
     "previous": "Leges Semproniae 2",
-    "next": "Lex Scribonia",
     "chapters": [
       {
         "start": 2414,
@@ -9176,30 +9473,34 @@
     ]
   },
   {
-    "lemma": "Lex Scribonia",
-    "previous": "Leges Serviliae 1",
-    "next": "Leges Serviliae 2",
-    "chapters": [
-      {
-        "start": 2414,
-        "author": "Weiss, Egon"
-      }
-    ]
-  },
-  {
     "lemma": "Leges Serviliae 2",
     "previous": "Lex Scribonia",
-    "next": "Leges Tabellariae",
+    "next": "Lex Silia 1",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
   {
-    "lemma": "Leges Tabellariae",
+    "lemma": "Lex Silia 1",
     "previous": "Leges Serviliae 2",
-    "next": "Leges templorum",
+    "next": "Lex Silia 2",
+    "redirect": "Lex Calpurnia 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2415,
+        "end": 2415
+      }
+    ]
+  },
+  {
+    "lemma": "Lex Silia 2",
+    "previous": "Lex Silia 1",
     "chapters": [
       {
         "start": 2415,
@@ -9208,28 +9509,7 @@
     ]
   },
   {
-    "lemma": "Leges templorum",
-    "previous": "Leges Tabellariae",
-    "next": "Lex Silia 1",
-    "chapters": [
-      {
-        "start": 2415
-      }
-    ]
-  },
-  {
-    "lemma": "Lex Silia 1",
-    "previous": "Leges templorum",
-    "next": "Lex Silia 2",
-    "chapters": [
-      {
-        "start": 2415
-      }
-    ]
-  },
-  {
-    "lemma": "Lex Silia 2",
-    "previous": "Lex Silia 1",
+    "lemma": "Leges Tabellariae",
     "next": "Lex Tappula",
     "chapters": [
       {
@@ -9240,17 +9520,34 @@
   },
   {
     "lemma": "Lex Tappula",
-    "previous": "Lex Silia 2",
-    "next": "Lex Terentia",
+    "previous": "Leges Tabellariae",
+    "next": "Leges templorum",
+    "redirect": "Lex convivalis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
+      }
+    ]
+  },
+  {
+    "lemma": "Leges templorum",
+    "previous": "Lex Tappula",
+    "next": "Lex Terentia",
+    "sort_key": "Lex templorum",
+    "redirect": "Lex",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
   {
     "lemma": "Lex Terentia",
-    "previous": "Lex Tappula",
+    "previous": "Leges templorum",
     "next": "Lex Terentia Cassia",
     "chapters": [
       {
@@ -9274,9 +9571,12 @@
     "lemma": "Lex Thoria",
     "previous": "Lex Terentia Cassia",
     "next": "Lex Titia 1",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
@@ -9284,9 +9584,12 @@
     "lemma": "Lex Titia 1",
     "previous": "Lex Thoria",
     "next": "Lex Titia 2",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2415
+        "start": 2415,
+        "end": 2415
       }
     ]
   },
@@ -9316,9 +9619,12 @@
     "lemma": "Lex Trebonia 1",
     "previous": "Lex Titia 3",
     "next": "Lex Trebonia 2",
+    "redirect": "Tribunus 13",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2416
+        "start": 2416,
+        "end": 2416
       }
     ]
   },
@@ -9348,9 +9654,12 @@
     "lemma": "Lex Tullia 1",
     "previous": "Lex tribunicia",
     "next": "Lex Tullia 2",
+    "redirect": "Legatus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2416
+        "start": 2416,
+        "end": 2416
       }
     ]
   },
@@ -9369,9 +9678,12 @@
     "lemma": "Leges Valeriae 1",
     "previous": "Lex Tullia 2",
     "next": "Leges Valeriae 2",
+    "redirect": "Provocatio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9423,9 +9735,12 @@
     "lemma": "Leges Valeriae 6",
     "previous": "Leges Valeriae 5",
     "next": "Leges Valeriae 7",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9433,9 +9748,12 @@
     "lemma": "Leges Valeriae 7",
     "previous": "Leges Valeriae 6",
     "next": "Leges Valeriae 8",
+    "redirect": "Multa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9443,9 +9761,12 @@
     "lemma": "Leges Valeriae 8",
     "previous": "Leges Valeriae 7",
     "next": "Leges Valeriae 9",
+    "redirect": "Vectigal",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9495,9 +9816,12 @@
     "lemma": "Lex Varia",
     "previous": "Leges Vatiniae 3",
     "next": "Lex venditionis",
+    "redirect": "Maiestas 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9505,9 +9829,12 @@
     "lemma": "Lex venditionis",
     "previous": "Lex Varia",
     "next": "Lex Vetti Libici",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9526,9 +9853,12 @@
     "lemma": "Lex viaria",
     "previous": "Lex Vetti Libici",
     "next": "Lex Villia annalis",
+    "redirect": "Lex alimentaria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9536,9 +9866,12 @@
     "lemma": "Lex Villia annalis",
     "previous": "Lex viaria",
     "next": "Lex Visellia 1",
+    "redirect": "Magistratus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9634,9 +9967,12 @@
     "lemma": "Lexis 1",
     "previous": "Lexiphanes",
     "next": "Lexis 2",
+    "redirect": "Losung",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2482
+        "start": 2482,
+        "end": 2482
       }
     ]
   },
@@ -9644,9 +9980,12 @@
     "lemma": "Lexis 2",
     "previous": "Lexis 1",
     "next": "Lexobii",
+    "redirect": "Lexi deo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2482
+        "start": 2482,
+        "end": 2482
       }
     ]
   },
@@ -9654,9 +9993,12 @@
     "lemma": "Lexobii",
     "previous": "Lexis 2",
     "next": "Lexovii",
+    "redirect": "Lexovii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2482
+        "start": 2482,
+        "end": 2482
       }
     ]
   },
@@ -9707,7 +10049,7 @@
   {
     "lemma": "Lias",
     "previous": "Liar",
-    "next": "Liba 1",
+    "next": "Λίβα 1",
     "chapters": [
       {
         "start": 2483,
@@ -9716,18 +10058,22 @@
     ]
   },
   {
-    "lemma": "Liba 1",
+    "lemma": "Λίβα 1",
     "previous": "Lias",
     "next": "Liba 2",
+    "sort_key": "Liba",
+    "redirect": "Libba 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2483
+        "start": 2483,
+        "end": 2483
       }
     ]
   },
   {
     "lemma": "Liba 2",
-    "previous": "Liba 1",
+    "previous": "Λίβα 1",
     "next": "Libade",
     "chapters": [
       {
@@ -9773,9 +10119,12 @@
     "lemma": "Libana 2",
     "previous": "Libana 1",
     "next": "Libanesia, Phoinike Libanesia",
+    "redirect": "Labbana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2483
+        "start": 2483,
+        "end": 2483
       }
     ]
   },

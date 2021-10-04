@@ -601,7 +601,7 @@
   {
     "lemma": "Καυνίων Πάνορμος",
     "previous": "Kaunias",
-    "next": "Kaunos",
+    "next": "Kaunos 1",
     "sort_key": "Kaunion",
     "proof_read": 3,
     "chapters": [
@@ -1675,9 +1675,12 @@
     "lemma": "Kelados",
     "previous": "Keladone",
     "next": "Keladusa",
+    "redirect": "Keladon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 133
+        "start": 133,
+        "end": 133
       }
     ]
   },
@@ -2181,9 +2184,12 @@
     "lemma": "Kelto",
     "previous": "Keltine",
     "next": "Keltoi",
+    "redirect": "Keltine",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2191,9 +2197,12 @@
     "lemma": "Keltoi",
     "previous": "Kelto",
     "next": "Kelusa",
+    "redirect": "Galli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2201,9 +2210,12 @@
     "lemma": "Kelusa",
     "previous": "Keltoi",
     "next": "Kelydnos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2669,9 +2681,12 @@
     "lemma": "Kephale 2",
     "previous": "Kephale 1",
     "next": "Kephalen",
+    "redirect": "Ionia 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 190
+        "start": 190,
+        "end": 190
       }
     ]
   },
@@ -2815,9 +2830,12 @@
     "lemma": "Kephalon",
     "previous": "Kephaloidion",
     "next": "Kephalonesos",
+    "redirect": "Hegesianax 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 217
+        "start": 217,
+        "end": 217
       }
     ]
   },
@@ -2940,9 +2958,12 @@
     "lemma": "Kephisias",
     "previous": "Kephisia",
     "next": "Kephisios",
+    "redirect": "Kaphisias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
@@ -3480,7 +3501,7 @@
   {
     "lemma": "Kepranos",
     "previous": "Kepouroi",
-    "next": "Keprelon Neon",
+    "next": "Κεπρήλων Νέων",
     "chapters": [
       {
         "start": 252,
@@ -3489,18 +3510,22 @@
     ]
   },
   {
-    "lemma": "Keprelon Neon",
+    "lemma": "Κεπρήλων Νέων",
     "previous": "Kepranos",
     "next": "Keraeitai",
+    "sort_key": "Keprelon Neon",
+    "redirect": "Kestroi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 252
+        "start": 252,
+        "end": 252
       }
     ]
   },
   {
     "lemma": "Keraeitai",
-    "previous": "Keprelon Neon",
+    "previous": "Κεπρήλων Νέων",
     "next": "Keraia, Kerea, Kereai, Kereia 1",
     "chapters": [
       {
@@ -3591,9 +3616,12 @@
     "lemma": "Kerameis 1",
     "previous": "Kerameios",
     "next": "Kerameis 2",
+    "redirect": "Δῆμοι",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
@@ -3749,9 +3777,12 @@
     "lemma": "Keras 4",
     "previous": "Keras 3",
     "next": "Kerasa",
+    "redirect": "Kotyle 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 264
+        "start": 264,
+        "end": 264
       }
     ]
   },
@@ -4130,9 +4161,12 @@
     "lemma": "Kerchneia",
     "previous": "Kerbonios",
     "next": "Kerchnis",
+    "redirect": "Kenchreai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 284
+        "start": 284,
+        "end": 284
       }
     ]
   },
@@ -4140,9 +4174,12 @@
     "lemma": "Kerchnis",
     "previous": "Kerchneia",
     "next": "Kerdemporos",
+    "redirect": "Kenchreai 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 284
+        "start": 284,
+        "end": 284
       }
     ]
   },
@@ -4500,9 +4537,12 @@
     "lemma": "Kerkides",
     "previous": "Kerkidas 2",
     "next": "Kerkinas",
+    "redirect": "Theatron 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 309
+        "start": 309,
+        "end": 309
       }
     ]
   },
@@ -4510,9 +4550,12 @@
     "lemma": "Kerkinas",
     "previous": "Kerkides",
     "next": "Kerkine",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 309
+        "start": 309,
+        "end": 309
       }
     ]
   },
@@ -4610,9 +4653,12 @@
     "lemma": "Kerkuros",
     "previous": "Kerkops",
     "next": "Kerkyon 1",
+    "redirect": "Cercurus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 314
+        "start": 314,
+        "end": 314
       }
     ]
   },
@@ -4699,9 +4745,12 @@
     "lemma": "Kernophoros",
     "previous": "Kerne nesos",
     "next": "Kernos",
+    "redirect": "Kernos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 316
+        "start": 316,
+        "end": 316
       }
     ]
   },
@@ -4766,9 +4815,12 @@
     "lemma": "Keron 2",
     "previous": "Keron 1",
     "next": "Keros",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 328
+        "start": 328,
+        "end": 328
       }
     ]
   },
@@ -4776,9 +4828,13 @@
     "lemma": "Keros",
     "previous": "Keron 2",
     "next": "Kerossos",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 328
+        "start": 328,
+        "end": 328,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4796,7 +4852,7 @@
   {
     "lemma": "Kersa",
     "previous": "Kerossos",
-    "next": "Kersaion",
+    "next": "Κερσαῖον",
     "chapters": [
       {
         "start": 328,
@@ -4805,18 +4861,22 @@
     ]
   },
   {
-    "lemma": "Kersaion",
+    "lemma": "Κερσαῖον",
     "previous": "Kersa",
     "next": "Kersobleptes",
+    "sort_key": "Kersaion",
+    "redirect": "Kersa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 328
+        "start": 328,
+        "end": 328
       }
     ]
   },
   {
     "lemma": "Kersobleptes",
-    "previous": "Kersaion",
+    "previous": "Κερσαῖον",
     "next": "Kersos",
     "chapters": [
       {
@@ -4830,9 +4890,12 @@
     "lemma": "Kersos",
     "previous": "Kersobleptes",
     "next": "Kersullos",
+    "redirect": "Karsos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 330
+        "start": 330,
+        "end": 330
       }
     ]
   },
@@ -4929,9 +4992,12 @@
     "lemma": "Keryllianos",
     "previous": "Kerykte",
     "next": "Keryneia 1",
+    "redirect": "Fabius 63",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 342
+        "start": 342,
+        "end": 342
       }
     ]
   },
@@ -5032,9 +5098,12 @@
     "lemma": "Kesareon",
     "previous": "Keryza",
     "next": "Kesbedion",
+    "redirect": "Kaisarios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 357
+        "start": 357,
+        "end": 357
       }
     ]
   },
@@ -5333,9 +5402,12 @@
     "lemma": "Ketis",
     "previous": "Ketion",
     "next": "Keto 1",
+    "redirect": "K(i)etis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 364
+        "start": 364,
+        "end": 364
       }
     ]
   },
@@ -5443,7 +5515,7 @@
   {
     "lemma": "Kia",
     "previous": "Keyx",
-    "next": "Kiabros potamos",
+    "next": "Κιαβρὸς ποταμός",
     "chapters": [
       {
         "start": 374,
@@ -5452,22 +5524,29 @@
     ]
   },
   {
-    "lemma": "Kiabros potamos",
+    "lemma": "Κιαβρὸς ποταμός",
     "previous": "Kia",
     "next": "Kiakis",
+    "sort_key": "Kiabros potamos",
+    "redirect": "Prokopios 21",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 374
+        "start": 374,
+        "end": 374
       }
     ]
   },
   {
     "lemma": "Kiakis",
-    "previous": "Kiabros potamos",
+    "previous": "Κιαβρὸς ποταμός",
     "next": "Kianika",
+    "redirect": "Ciaca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 374
+        "start": 374,
+        "end": 374
       }
     ]
   },
@@ -5475,9 +5554,12 @@
     "lemma": "Kianika",
     "previous": "Kiakis",
     "next": "Kianis",
+    "redirect": "Ciaca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 374
+        "start": 374,
+        "end": 374
       }
     ]
   },
@@ -5597,9 +5679,12 @@
     "lemma": "Kichyros 3",
     "previous": "Kichyros 2",
     "next": "Kichyros 4",
+    "redirect": "Strabon 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 378
+        "start": 378,
+        "end": 378
       }
     ]
   },
@@ -5723,9 +5808,12 @@
     "lemma": "Kiefer",
     "previous": "Kidyessos",
     "next": "Kierion",
+    "redirect": "Pinus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 380
+        "start": 380,
+        "end": 380
       }
     ]
   },
@@ -5777,7 +5865,7 @@
   {
     "lemma": "Kikellia",
     "previous": "Kigbina",
-    "next": "Kiker",
+    "next": "Κίκερ",
     "chapters": [
       {
         "start": 381,
@@ -5786,18 +5874,22 @@
     ]
   },
   {
-    "lemma": "Kiker",
+    "lemma": "Κίκερ",
     "previous": "Kikellia",
     "next": "Kikkabos",
+    "sort_key": "Kiker",
+    "redirect": "Constantinus 16",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 381
+        "start": 381,
+        "end": 381
       }
     ]
   },
   {
     "lemma": "Kikkabos",
-    "previous": "Kiker",
+    "previous": "Κίκερ",
     "next": "Kikon 1",
     "chapters": [
       {
@@ -5910,7 +6002,7 @@
   {
     "lemma": "Kilbianoi",
     "previous": "Kilarios",
-    "next": "Kilbianon pedion",
+    "next": "Κιλβιανὸν πεδίον",
     "chapters": [
       {
         "start": 383,
@@ -5920,18 +6012,22 @@
     ]
   },
   {
-    "lemma": "Kilbianon pedion",
+    "lemma": "Κιλβιανὸν πεδίον",
     "previous": "Kilbianoi",
     "next": "Kilbion oros",
+    "sort_key": "Kilbianon pedion",
+    "redirect": "Strabon 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 384
+        "start": 384,
+        "end": 384
       }
     ]
   },
   {
     "lemma": "Kilbion oros",
-    "previous": "Kilbianon pedion",
+    "previous": "Κιλβιανὸν πεδίον",
     "next": "Kilbis",
     "chapters": [
       {
@@ -6169,7 +6265,7 @@
   {
     "lemma": "Killeia",
     "previous": "Killas",
-    "next": "Killikyrioi",
+    "next": "Κιλλικύριοι",
     "chapters": [
       {
         "start": 393,
@@ -6179,18 +6275,22 @@
     ]
   },
   {
-    "lemma": "Killikyrioi",
+    "lemma": "Κιλλικύριοι",
     "previous": "Killeia",
     "next": "Killuta",
+    "sort_key": "Killikyrioi",
+    "redirect": "Kyllyrioi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 396
+        "start": 396,
+        "end": 396
       }
     ]
   },
   {
     "lemma": "Killuta",
-    "previous": "Killikyrioi",
+    "previous": "Κιλλικύριοι",
     "next": "Kimaion",
     "chapters": [
       {
@@ -6293,9 +6393,12 @@
     "lemma": "Kimmerikos Bosporos",
     "previous": "Kimmerike",
     "next": "Kimmerion 1",
+    "redirect": "Bosporos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 434
+        "start": 434,
+        "end": 434
       }
     ]
   },
@@ -6553,9 +6656,12 @@
     "lemma": "Kinabora",
     "previous": "Kimpsos",
     "next": "Kinabos",
+    "redirect": "Kin(n)abora",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 457
+        "start": 457,
+        "end": 457
       }
     ]
   },
@@ -6609,9 +6715,12 @@
     "lemma": "Kinaidologos",
     "previous": "Kinaidokolpitai",
     "next": "Kinaidos",
+    "redirect": "Kinaidos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 459
+        "start": 459,
+        "end": 459
       }
     ]
   },
@@ -7013,9 +7122,12 @@
     "lemma": "Kiniphos",
     "previous": "Kinesias",
     "next": "Kinna 1",
+    "redirect": "Kinyps",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 481
+        "start": 481,
+        "end": 481
       }
     ]
   },
@@ -7067,9 +7179,12 @@
     "lemma": "Kinnamomon",
     "previous": "Kin(n)abora",
     "next": "Kinnamophoros chora",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 481
+        "start": 481,
+        "end": 481
       }
     ]
   },
@@ -7122,9 +7237,12 @@
     "lemma": "Kinolis",
     "previous": "Kinnamos 3",
     "next": "Kinyphos",
+    "redirect": "Kimolis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 483
+        "start": 483,
+        "end": 483
       }
     ]
   },
@@ -7132,9 +7250,12 @@
     "lemma": "Kinyphos",
     "previous": "Kinolis",
     "next": "Kinyps",
+    "redirect": "Kinyps",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 483
+        "start": 483,
+        "end": 483
       }
     ]
   },
@@ -7266,9 +7387,12 @@
     "lemma": "Kirchenordnungen",
     "previous": "Kirbiaion",
     "next": "Kirchenrechtliche Sammlungen",
+    "redirect": "Kirchenrechtliche Sammlungen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 488
+        "start": 488,
+        "end": 488
       }
     ]
   },
@@ -7334,26 +7458,33 @@
   {
     "lemma": "Kirra",
     "previous": "Kirphis",
-    "next": "Kirradai",
+    "next": "Κιῤῥάδαι",
+    "redirect": "Krisa 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 508
+        "start": 508,
+        "end": 508
       }
     ]
   },
   {
-    "lemma": "Kirradai",
+    "lemma": "Κιῤῥάδαι",
     "previous": "Kirra",
     "next": "Kirrha",
+    "sort_key": "Kirradai",
+    "redirect": "Skiratai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 508
+        "start": 508,
+        "end": 508
       }
     ]
   },
   {
     "lemma": "Kirrha",
-    "previous": "Kirradai",
+    "previous": "Κιῤῥάδαι",
     "next": "Kirrodeeis",
     "chapters": [
       {
@@ -7981,9 +8112,11 @@
     "previous": "Kithai",
     "next": "Kithairon 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 526
+        "start": 526,
+        "end": 526
       }
     ]
   },
@@ -8489,9 +8622,12 @@
     "lemma": "Klaudiunion",
     "previous": "Klaudios 2",
     "next": "Klaundes",
+    "redirect": "Ptolemaios 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 554
+        "start": 554,
+        "end": 554
       }
     ]
   },
@@ -9280,9 +9416,12 @@
     "lemma": "Kleisonymos",
     "previous": "Kleisobora",
     "next": "Kleisophos",
+    "redirect": "Klesonymos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
@@ -9367,9 +9506,12 @@
     "lemma": "Kleitagoras",
     "previous": "Kleitagora",
     "next": "Kleitarchos 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 621
+        "start": 621,
+        "end": 621
       }
     ]
   },
@@ -9533,9 +9675,12 @@
     "lemma": "Kleitomachos 2",
     "previous": "Kleitomachos 1",
     "next": "Kleitomachos 3",
+    "redirect": "Kleinomachos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 659
+        "start": 659,
+        "end": 659
       }
     ]
   },
@@ -9577,9 +9722,12 @@
     "lemma": "Kleitonymos 2",
     "previous": "Kleitonymos 1",
     "next": "Kleitophon 1",
+    "redirect": "Klesonymos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 660
+        "start": 660,
+        "end": 660
       }
     ]
   },
@@ -9779,9 +9927,12 @@
     "lemma": "Kleitos 13",
     "previous": "Kleitos 12",
     "next": "Kleitos 14",
+    "redirect": "Klytos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 668
+        "start": 668,
+        "end": 668
       }
     ]
   },
@@ -10034,6 +10185,8 @@
     "next": "Kleobulos 1",
     "redirect": "Sieben Weise",
     "proof_read": 3,
+    "wp_link": "w:de:Kleobuline",
+    "wd_link": "d:Q2576040",
     "chapters": [
       {
         "start": 671,
@@ -10078,9 +10231,12 @@
     "lemma": "Kleobulos 4",
     "previous": "Kleobulos 3",
     "next": "Kleobulos 5",
+    "redirect": "Sieben Weise",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 672
+        "start": 672,
+        "end": 672
       }
     ]
   },
@@ -11489,8 +11645,8 @@
     "next": "Kleopatra 27",
     "chapters": [
       {
-        "start": 789,
-        "end": 789,
+        "start": 788,
+        "end": 788,
         "author": "Stähelin."
       }
     ]
@@ -11503,8 +11659,8 @@
     "wd_link": "d:Q461784",
     "chapters": [
       {
-        "start": 789,
-        "end": 789,
+        "start": 788,
+        "end": 788,
         "author": "Stähelin."
       }
     ]
@@ -11904,9 +12060,12 @@
     "lemma": "Kleostratos 5",
     "previous": "Kleostratos 4",
     "next": "Kleotimos",
+    "redirect": "Saotes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 806
+        "start": 806,
+        "end": 806
       }
     ]
   },
@@ -12004,9 +12163,12 @@
     "lemma": "Kleroi 3",
     "previous": "Kleroi 2",
     "next": "Kleros orines, politikes",
+    "redirect": "Kleruchoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 813
+        "start": 813,
+        "end": 813
       }
     ]
   },
@@ -12092,9 +12254,12 @@
     "lemma": "Klesides",
     "previous": "Klesbestita",
     "next": "Klesiphon",
+    "redirect": "Ktesikles 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 832
+        "start": 832,
+        "end": 832
       }
     ]
   },
@@ -12102,9 +12267,12 @@
     "lemma": "Klesiphon",
     "previous": "Klesides",
     "next": "Klesis",
+    "redirect": "Ktesiphon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 832
+        "start": 832,
+        "end": 832
       }
     ]
   },
@@ -12147,9 +12315,12 @@
     "lemma": "Kleson 2",
     "previous": "Kleson 1",
     "next": "Klesonymos",
+    "redirect": "Anthologia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 834
+        "start": 834,
+        "end": 834
       }
     ]
   },
@@ -12236,9 +12407,12 @@
     "lemma": "Kletor",
     "previous": "Kletias",
     "next": "Kleuas",
+    "redirect": "Kleitor 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 837
+        "start": 837,
+        "end": 837
       }
     ]
   },
@@ -12472,9 +12646,12 @@
     "lemma": "Klinokosmoi",
     "previous": "Kline 2",
     "next": "Klio 1",
+    "redirect": "Kleinokosmoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 862
+        "start": 862,
+        "end": 862
       }
     ]
   },
@@ -12516,9 +12693,12 @@
     "lemma": "Klistier",
     "previous": "Klisia",
     "next": "Klitai 1",
+    "redirect": "Klyster",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 863
+        "start": 863,
+        "end": 863
       }
     ]
   },
@@ -12560,9 +12740,12 @@
     "lemma": "Klitianos",
     "previous": "Klitai 2",
     "next": "Klitias",
+    "redirect": "Claudius 116",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 864
+        "start": 864,
+        "end": 864
       }
     ]
   },
@@ -12582,9 +12765,12 @@
     "lemma": "Klitor",
     "previous": "Klitias",
     "next": "Klitos",
+    "redirect": "Kleitor 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 875
+        "start": 875,
+        "end": 875
       }
     ]
   },
@@ -12592,9 +12778,12 @@
     "lemma": "Klitos",
     "previous": "Klitor",
     "next": "Klodones",
+    "redirect": "Kleitos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 875
+        "start": 875,
+        "end": 875
       }
     ]
   },
@@ -12737,9 +12926,12 @@
     "lemma": "Kludros",
     "previous": "Kluaka",
     "next": "Klutius",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 878
+        "start": 878,
+        "end": 878
       }
     ]
   },
@@ -13036,10 +13228,12 @@
     "lemma": "Klysonymos",
     "previous": "Klysma",
     "next": "Klyster",
-    "redirect": true,
+    "redirect": "Klesonymos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 881
+        "start": 881,
+        "end": 881
       }
     ]
   },
@@ -13502,10 +13696,12 @@
     "lemma": "Klytomachos",
     "previous": "Klyto 2",
     "next": "Klytomedes",
-    "redirect": true,
+    "redirect": "Kleinomachos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 896
+        "start": 896,
+        "end": 896
       }
     ]
   },
@@ -13557,9 +13753,12 @@
     "lemma": "Klytonymos",
     "previous": "Klytoneus 2",
     "next": "Klytos 1",
+    "redirect": "Kleisonymos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 896
+        "start": 896,
+        "end": 896
       }
     ]
   },
@@ -13791,9 +13990,12 @@
     "lemma": "Knemis 3",
     "previous": "Knemis 2",
     "next": "Knemos",
+    "redirect": "Knemides",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 910
+        "start": 910,
+        "end": 910
       }
     ]
   },
@@ -14343,9 +14545,12 @@
     "lemma": "Kodosia",
     "previous": "Kodon",
     "next": "Kodrana",
+    "redirect": "Kados(s)ia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 983
+        "start": 983,
+        "end": 983
       }
     ]
   },
@@ -14455,7 +14660,7 @@
   {
     "lemma": "Königs-, Priester-, Eponymen-, Beamtenverzeichnisse",
     "previous": "Königshofen",
-    "next": "Koes",
+    "next": "Κόης",
     "chapters": [
       {
         "start": 996,
@@ -14465,18 +14670,22 @@
     ]
   },
   {
-    "lemma": "Koes",
+    "lemma": "Κόης",
     "previous": "Königs-, Priester-, Eponymen-, Beamtenverzeichnisse",
     "next": "Kösching",
+    "sort_key": "Koes",
+    "redirect": "Koies",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1033
+        "start": 1033,
+        "end": 1033
       }
     ]
   },
   {
     "lemma": "Kösching",
-    "previous": "Koes",
+    "previous": "Κόης",
     "next": "Kogamis, Kogamos",
     "chapters": [
       {
@@ -14488,6 +14697,7 @@
   },
   {
     "lemma": "Kogamis, Kogamos",
+    "previous": "Kösching",
     "next": "Κόγχη 1"
   },
   {
@@ -14802,9 +15012,11 @@
     "previous": "Koinodikasterion",
     "next": "Koinon 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1053
+        "start": 1053,
+        "end": 1053
       }
     ]
   },
@@ -14935,26 +15147,33 @@
   {
     "lemma": "Koinyra",
     "previous": "Kointos 2",
-    "next": "Koioles",
+    "next": "Κοιόλης",
+    "redirect": "Αἰνύρων χῶρος",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1058
+        "start": 1058,
+        "end": 1058
       }
     ]
   },
   {
-    "lemma": "Koioles",
+    "lemma": "Κοιόλης",
     "previous": "Koinyra",
     "next": "Koios 1",
+    "sort_key": "Koioles",
+    "redirect": "Koies",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1058
+        "start": 1058,
+        "end": 1058
       }
     ]
   },
   {
     "lemma": "Koios 1",
-    "previous": "Koioles",
+    "previous": "Κοιόλης",
     "next": "Koios 2",
     "chapters": [
       {
@@ -15002,9 +15221,12 @@
     "lemma": "Koiraniden",
     "previous": "Koiraneios ho Choros",
     "next": "Koiranos 1",
+    "redirect": "Kyraniden",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1060
+        "start": 1060,
+        "end": 1060
       }
     ]
   },
@@ -15554,9 +15776,12 @@
     "lemma": "Kolika",
     "previous": "Kolias 3",
     "next": "Koliorga",
+    "redirect": "Koloi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1077
+        "start": 1077,
+        "end": 1077
       }
     ]
   },
@@ -15586,9 +15811,12 @@
     "lemma": "Kolios",
     "previous": "Koliorgon",
     "next": "Kollathon",
+    "redirect": "Keleos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1078
+        "start": 1078,
+        "end": 1078
       }
     ]
   },
@@ -15776,7 +16004,7 @@
   {
     "lemma": "Koloenon katoikia",
     "previous": "Koloëne",
-    "next": "Koloenon polis",
+    "next": "Κολοηνῶν πόλις",
     "chapters": [
       {
         "start": 1109,
@@ -15785,18 +16013,22 @@
     ]
   },
   {
-    "lemma": "Koloenon polis",
+    "lemma": "Κολοηνῶν πόλις",
     "previous": "Koloenon katoikia",
     "next": "Koloi",
+    "sort_key": "Koloenon polis",
+    "redirect": "Koloë 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1109
+        "start": 1109,
+        "end": 1109
       }
     ]
   },
   {
     "lemma": "Koloi",
-    "previous": "Koloenon polis",
+    "previous": "Κολοηνῶν πόλις",
     "next": "Koloios",
     "chapters": [
       {
@@ -15809,9 +16041,12 @@
     "lemma": "Koloios",
     "previous": "Koloi",
     "next": "Kolokasia",
+    "redirect": "Keleos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1109
+        "start": 1109,
+        "end": 1109
       }
     ]
   },
@@ -15830,9 +16065,12 @@
     "lemma": "Kolometrie",
     "previous": "Kolokasia",
     "next": "Kolon",
+    "redirect": "Heliodoros 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1109
+        "start": 1109,
+        "end": 1109
       }
     ]
   },
@@ -15963,9 +16201,12 @@
     "lemma": "Kolonis 1",
     "previous": "Kolonides",
     "next": "Kolonis 2",
+    "redirect": "Plutarchos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1111
+        "start": 1111,
+        "end": 1111
       }
     ]
   },
@@ -16086,7 +16327,7 @@
   {
     "lemma": "Kolophonia 3",
     "previous": "Kolophonia 2",
-    "next": "Kolophonion limen",
+    "next": "Κολοφωνίων Λιμήν",
     "chapters": [
       {
         "start": 1119,
@@ -16095,28 +16336,36 @@
     ]
   },
   {
-    "lemma": "Kolophonion limen",
+    "lemma": "Κολοφωνίων Λιμήν",
     "previous": "Kolophonia 3",
-    "next": "Kolops",
+    "next": "Κόλοψ",
+    "sort_key": "Kolophonion limen",
+    "redirect": "Kolophon 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1119
+        "start": 1119,
+        "end": 1119
       }
     ]
   },
   {
-    "lemma": "Kolops",
-    "previous": "Kolophonion limen",
+    "lemma": "Κόλοψ",
+    "previous": "Κολοφωνίων Λιμήν",
     "next": "Kolose",
+    "sort_key": "Kolops",
+    "redirect": "Cassius 40",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1119
+        "start": 1119,
+        "end": 1119
       }
     ]
   },
   {
     "lemma": "Kolose",
-    "previous": "Kolops",
+    "previous": "Κόλοψ",
     "next": "Kolossaeus",
     "chapters": [
       {
@@ -16152,9 +16401,12 @@
     "lemma": "Kolosseros",
     "previous": "Kolossai",
     "next": "Kolotes 1",
+    "redirect": "Esius Proculus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1120
+        "start": 1120,
+        "end": 1120
       }
     ]
   },
@@ -16264,9 +16516,12 @@
     "lemma": "Koluroi",
     "previous": "Kolura",
     "next": "Kolussa",
+    "redirect": "Kykloi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1124
+        "start": 1124,
+        "end": 1124
       }
     ]
   },
@@ -16465,9 +16720,12 @@
     "lemma": "Komar",
     "previous": "Komanos 2",
     "next": "Komarches",
+    "redirect": "Komarei",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1129
+        "start": 1129,
+        "end": 1129
       }
     ]
   },
@@ -16633,9 +16891,12 @@
     "lemma": "Kombe 2",
     "previous": "Kombe 1",
     "next": "Kombike",
+    "redirect": "Komba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1141
+        "start": 1141,
+        "end": 1141
       }
     ]
   },
@@ -16666,16 +16927,18 @@
     "previous": "Kombreia",
     "next": "Kome 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1141
+        "start": 1141,
+        "end": 1141
       }
     ]
   },
   {
     "lemma": "Kome 2",
     "previous": "Kome 1",
-    "next": "Kome Ilieon",
+    "next": "Κώμη Ἰλιέων",
     "chapters": [
       {
         "start": 1141,
@@ -16684,18 +16947,22 @@
     ]
   },
   {
-    "lemma": "Kome Ilieon",
+    "lemma": "Κώμη Ἰλιέων",
     "previous": "Kome 2",
     "next": "Kome Philadelpheon",
+    "sort_key": "Kome Ilieon",
+    "redirect": "Ilieon polis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1141
+        "start": 1141,
+        "end": 1141
       }
     ]
   },
   {
     "lemma": "Kome Philadelpheon",
-    "previous": "Kome Ilieon",
+    "previous": "Κώμη Ἰλιέων",
     "next": "Komeas",
     "chapters": [
       {
@@ -16719,7 +16986,7 @@
   {
     "lemma": "Komenioi",
     "previous": "Komeas",
-    "next": "Komenoi",
+    "next": "Κόμενοι",
     "chapters": [
       {
         "start": 1142,
@@ -16728,18 +16995,22 @@
     ]
   },
   {
-    "lemma": "Komenoi",
+    "lemma": "Κόμενοι",
     "previous": "Komenioi",
     "next": "Kometas",
+    "sort_key": "Komenoi",
+    "redirect": "Ptolemaios 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1142
+        "start": 1142,
+        "end": 1142
       }
     ]
   },
   {
     "lemma": "Kometas",
-    "previous": "Komenoi",
+    "previous": "Κόμενοι",
     "next": "Kometen",
     "chapters": [
       {
@@ -16820,7 +17091,7 @@
   {
     "lemma": "Komiku",
     "previous": "Kometes 5",
-    "next": "Komioi",
+    "next": "Κομίοι",
     "chapters": [
       {
         "start": 1194,
@@ -16829,18 +17100,22 @@
     ]
   },
   {
-    "lemma": "Komioi",
+    "lemma": "Κομίοι",
     "previous": "Komiku",
     "next": "Komisene",
+    "sort_key": "Komioi",
+    "redirect": "Ptolemaios 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1194
+        "start": 1194,
+        "end": 1194
       }
     ]
   },
   {
     "lemma": "Komisene",
-    "previous": "Komioi",
+    "previous": "Κομίοι",
     "next": "Komistaraos",
     "chapters": [
       {

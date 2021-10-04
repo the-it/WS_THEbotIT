@@ -30,7 +30,7 @@ class SCANTask(ReScannerTask):
 
     def finish_task(self):
         super().finish_task()
-        for strategy in self._strategies:
+        for strategy in self._strategies:  # pylint: disable=consider-using-dict-items
             self.logger.info(f"STRATEGY_{strategy}: {len(self._strategies[strategy])}")
             if strategy != "update_lemma_by_name":
                 self.logger.info(f"{self._strategies[strategy]}")
@@ -86,7 +86,7 @@ class SCANTask(ReScannerTask):
         target = self._get_target_from_wd()
         if target:
             for sitelink in possible_source_wikis:
-                with contextlib.suppress(pywikibot.exceptions.NoPage):
+                with contextlib.suppress(pywikibot.exceptions.NoPageError):
                     wiki_prefix = "s" if sitelink.find("wikisource") > 0 else "w"
                     link = f"{wiki_prefix}:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
                     return link
@@ -94,7 +94,7 @@ class SCANTask(ReScannerTask):
 
     def _get_target_from_wd(self) -> Optional[pywikibot.ItemPage]:
         try:
-            with contextlib.suppress(pywikibot.exceptions.NoPage):
+            with contextlib.suppress(pywikibot.exceptions.NoPageError):
                 wp_item = self.re_page.page.data_item()
                 with contextlib.suppress(KeyError):
                     return wp_item.claims["P921"][0].target
@@ -114,7 +114,7 @@ class SCANTask(ReScannerTask):
     def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:  # pylint: disable=unused-argument
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
-    _REGEX_REDIRECT = re.compile(r"[sS]\..*?(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
+    _REGEX_REDIRECT = re.compile(r"(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
 
     def _fetch_redirect(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]

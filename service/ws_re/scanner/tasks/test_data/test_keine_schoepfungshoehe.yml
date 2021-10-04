@@ -1,0 +1,56 @@
+base:
+  text: |
+    {{REDaten
+    }}
+    {{RE keine Schöpfungshöhe|1950}}
+    text
+    {{REAutor|Autor.}}
+    more text
+  todesjahr: "1950"
+  keine_schoepfungshoehe: true
+  result:
+    success: true
+    changed: true
+
+varing_template:
+  text: |
+    {{REDaten
+    }}
+    {{RE keine Schöpfungshöhe|tada}}
+    text
+    {{REAutor|Autor.}}
+  todesjahr: ""
+  keine_schoepfungshoehe: false
+  result:
+    success: true
+    changed: false
+
+bug_underscore:
+  text: |
+    {{REDaten
+    }}
+    {{RE_keine_Schöpfungshöhe|1960}}
+    text
+    {{REAutor|Autor.}}
+  todesjahr: "1960"
+  keine_schoepfungshoehe: true
+  result:
+    success: true
+    changed: true
+
+no_year_provided:
+  text: |
+    {{REDaten
+    |BAND=VI A,1
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    }}
+    {{RE keine Schöpfungshöhe}}
+    blub
+    {{REAutor|E. Bernert.}}
+  todesjahr: "1905"
+  keine_schoepfungshoehe: true
+  result:
+    success: true
+    changed: true

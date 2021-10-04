@@ -85,7 +85,7 @@ class TestPersistedData(TestCloudBase):
         self.assertFalse(self.data.keys())
 
     def test_for_boolean_value(self):
-        self.data.assign_dict(dict())
+        self.data.assign_dict({})
         self.assertFalse(self.data)
         self.data[1] = 1
         self.assertTrue(self.data)

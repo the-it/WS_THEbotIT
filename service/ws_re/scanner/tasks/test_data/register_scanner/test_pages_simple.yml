@@ -1,0 +1,51 @@
+start_end_page:
+  text: |
+    {{REDaten
+    |BAND=S I
+    |SPALTE_START=264
+    |SPALTE_END=265
+    }}
+    text.
+    {{REAutor|Autor.}}
+  expect:
+    - chapters: [{"start": 264, "end": 265, "author": "Autor."}]
+    - []
+
+end_off:
+  text: |
+    {{REDaten
+    |BAND=S I
+    |SPALTE_START=264
+    |SPALTE_END=OFF
+    }}
+    text.
+    {{REAutor|Autor.}}
+  expect:
+    - chapters: [{"start": 264, "end": 264, "author": "Autor."}]
+    - []
+
+no_end:
+  text: |
+    {{REDaten
+    |BAND=S I
+    |SPALTE_START=264
+    |SPALTE_END=
+    }}
+    text.
+    {{REAutor|Autor.}}
+  expect:
+    - chapters: [{"start": 264, "end": 264, "author": "Autor."}]
+    - []
+
+start_end_same:
+  text: |
+    {{REDaten
+    |BAND=S I
+    |SPALTE_START=264
+    |SPALTE_END=264
+    }}
+    text.
+    {{REAutor|Autor.}}
+  expect:
+    - chapters: [{"start": 264, "end": 264, "author": "Autor."}]
+    - []

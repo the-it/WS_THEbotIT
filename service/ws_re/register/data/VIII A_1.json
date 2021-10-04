@@ -79,10 +79,12 @@
     "lemma": "Valerius 159",
     "previous": "Valerius 158",
     "next": "Valerius 160",
-    "redirect": true,
+    "redirect": "Calpetanus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 3
+        "start": 3,
+        "end": 3
       }
     ]
   },
@@ -1094,7 +1096,7 @@
     "lemma": "Valerius 248-270",
     "previous": "Valerius 247",
     "next": "Valerius 248",
-    "redirect": true,
+    "redirect": "Valerius 261",
     "proof_read": 3,
     "chapters": [
       {
@@ -1401,7 +1403,7 @@
     "lemma": "Valerius 273",
     "previous": "Valerius 272",
     "next": "Valerius 274",
-    "redirect": true,
+    "redirect": "Valerius 272",
     "proof_read": 3,
     "chapters": [
       {
@@ -1415,7 +1417,7 @@
     "lemma": "Valerius 274",
     "previous": "Valerius 273",
     "next": "Valerius 275",
-    "redirect": true,
+    "redirect": "Valerius 272",
     "proof_read": 3,
     "chapters": [
       {
@@ -1429,7 +1431,7 @@
     "lemma": "Valerius 275",
     "previous": "Valerius 274",
     "next": "Valerius 276",
-    "redirect": true,
+    "redirect": "Valerius 272",
     "proof_read": 3,
     "chapters": [
       {
@@ -1608,9 +1610,12 @@
     "lemma": "Valerius 291",
     "previous": "Valerius 290",
     "next": "Valerius 292",
+    "redirect": "Pinianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 175
+        "start": 175,
+        "end": 175
       }
     ]
   },
@@ -2014,9 +2019,12 @@
     "lemma": "Valerius 328",
     "previous": "Valerius 327",
     "next": "Valerius 329",
+    "redirect": "Valerius 193",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 218
+        "start": 218,
+        "end": 218
       }
     ]
   },
@@ -2982,9 +2990,12 @@
     "lemma": "Valesianus",
     "previous": "Valerius 411",
     "next": "Valesium",
+    "redirect": "Anonymus Valesianus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 259
+        "start": 259,
+        "end": 259
       }
     ]
   },
@@ -3135,9 +3146,12 @@
     "lemma": "Valgius 8",
     "previous": "Valgius 7",
     "next": "Valia, Valios",
+    "redirect": "Victor",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 276
+        "start": 276,
+        "end": 276
       }
     ]
   },
@@ -3145,9 +3159,12 @@
     "lemma": "Valia, Valios",
     "previous": "Valgius 8",
     "next": "Valila",
+    "redirect": "Wallia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 276
+        "start": 276,
+        "end": 276
       }
     ]
   },
@@ -3210,9 +3227,12 @@
     "lemma": "Valios",
     "previous": "Walinak 2",
     "next": "Valips",
+    "redirect": "Wallia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 277
+        "start": 277,
+        "end": 277
       }
     ]
   },
@@ -3253,9 +3273,12 @@
     "lemma": "Vallamneihiae",
     "previous": "Vallae",
     "next": "Vallata",
+    "redirect": "Vallabneihiae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 278
+        "start": 278,
+        "end": 278
       }
     ]
   },
@@ -3747,9 +3770,12 @@
     "lemma": "Vandiliarius",
     "previous": "Wandil",
     "next": "Vanesia",
+    "redirect": "Wandalar 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 335
+        "start": 335,
+        "end": 335
       }
     ]
   },
@@ -3779,9 +3805,12 @@
     "lemma": "Vangana",
     "previous": "Vangalia",
     "next": "Vangio",
+    "redirect": "Vangalia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 337
+        "start": 337,
+        "end": 337
       }
     ]
   },
@@ -3811,9 +3840,12 @@
     "lemma": "Vanienses",
     "previous": "Uanias",
     "next": "Vanisnesi",
+    "redirect": "Flamonienses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 337
+        "start": 337,
+        "end": 337
       }
     ]
   },
@@ -3930,7 +3962,7 @@
   {
     "lemma": "Uaphris",
     "previous": "Vapanes",
-    "next": "Uaphrizes",
+    "next": "Οὐαφρίζης",
     "chapters": [
       {
         "start": 352,
@@ -3939,19 +3971,22 @@
     ]
   },
   {
-    "lemma": "Uaphrizes",
+    "lemma": "Οὐαφρίζης",
     "previous": "Uaphris",
     "next": "Vapincum",
-    "redirect": true,
+    "sort_key": "Vaphrizes",
+    "redirect": "Phabrizos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 354
+        "start": 354,
+        "end": 354
       }
     ]
   },
   {
     "lemma": "Vapincum",
-    "previous": "Uaphrizes",
+    "previous": "Οὐαφρίζης",
     "next": "Vapthiae",
     "chapters": [
       {
@@ -3975,9 +4010,12 @@
     "lemma": "Vara",
     "previous": "Vapthiae",
     "next": "Varada",
+    "redirect": "Varis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 360
+        "start": 360,
+        "end": 360
       }
     ]
   },
@@ -4029,9 +4067,12 @@
     "lemma": "Varagri",
     "previous": "Varadetum",
     "next": "Varahran",
+    "redirect": "Veragri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 360
+        "start": 360,
+        "end": 360
       }
     ]
   },
@@ -4039,9 +4080,12 @@
     "lemma": "Varahran",
     "previous": "Varagri",
     "next": "Waralach",
+    "redirect": "Wahram 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 360
+        "start": 360,
+        "end": 360
       }
     ]
   },
@@ -4049,9 +4093,13 @@
     "lemma": "Waralach",
     "previous": "Varahran",
     "next": "Varamus",
+    "sort_key": "Varalach",
+    "redirect": "Baralach",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 360
+        "start": 360,
+        "end": 360
       }
     ]
   },
@@ -4070,9 +4118,12 @@
     "lemma": "Varanes 1",
     "previous": "Varamus",
     "next": "Varanes 2",
+    "redirect": "Wahram 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 360
+        "start": 360,
+        "end": 360
       }
     ]
   },
@@ -4102,9 +4153,12 @@
     "lemma": "Vararanes",
     "previous": "Varanes 3",
     "next": "Vararus",
+    "redirect": "Wahram 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 361
+        "start": 361,
+        "end": 361
       }
     ]
   },
@@ -4112,9 +4166,12 @@
     "lemma": "Vararus",
     "previous": "Vararanes",
     "next": "Varasaldus",
+    "redirect": "Bararus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 361
+        "start": 361,
+        "end": 361
       }
     ]
   },
@@ -4298,9 +4355,13 @@
     "lemma": "Ward",
     "previous": "Varcilenae Nymphae",
     "next": "Vardaei",
+    "sort_key": "Vard",
+    "redirect": "Wardan",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 365
+        "start": 365,
+        "end": 365
       }
     ]
   },
@@ -4429,9 +4490,13 @@
     "lemma": "Wardanuisch",
     "previous": "Filius Vardanis",
     "next": "Wardan-Wsnasp",
+    "sort_key": "Vardanuisch",
+    "redirect": "Wardanducht",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 372
+        "start": 372,
+        "end": 372
       }
     ]
   },
@@ -4450,9 +4515,13 @@
     "lemma": "Wardat",
     "previous": "Wardan-Wsnasp",
     "next": "Vardimissa",
+    "sort_key": "Vardat",
+    "redirect": "Varadatus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 372
+        "start": 372,
+        "end": 372
       }
     ]
   },
@@ -4623,9 +4692,12 @@
     "lemma": "Vargiones",
     "previous": "Varenus 7",
     "next": "Vargunteius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 376
+        "start": 376,
+        "end": 376
       }
     ]
   },
@@ -4710,9 +4782,12 @@
     "lemma": "Varia",
     "previous": "Vari",
     "next": "Varia 1",
+    "redirect": "Vareia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 380
+        "start": 380,
+        "end": 380
       }
     ]
   },
@@ -4742,9 +4817,12 @@
     "lemma": "Varia 3",
     "previous": "Varia 2",
     "next": "Varia 4",
+    "redirect": "Vareia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 381
+        "start": 381,
+        "end": 381
       }
     ]
   },
@@ -4752,10 +4830,12 @@
     "lemma": "Varia 4",
     "previous": "Varia 3",
     "next": "Variana",
-    "redirect": true,
+    "redirect": "Octaviana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 381
+        "start": 381,
+        "end": 381
       }
     ]
   },
@@ -4851,9 +4931,12 @@
     "lemma": "Varini",
     "previous": "Varimadus",
     "next": "Varinius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 382
+        "start": 382,
+        "end": 382
       }
     ]
   },
@@ -4927,9 +5010,12 @@
     "lemma": "Varisti",
     "previous": "Varisidius Nepos",
     "next": "Varius",
+    "redirect": "Naristi (-ae)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 385
+        "start": 385,
+        "end": 385
       }
     ]
   },
@@ -5215,9 +5301,12 @@
     "lemma": "Varizes",
     "previous": "Varius 23",
     "next": "Varna",
+    "redirect": "Wahriz 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 414
+        "start": 414,
+        "end": 414
       }
     ]
   },
@@ -5247,9 +5336,12 @@
     "lemma": "Varo",
     "previous": "Varneno, Varnenus",
     "next": "Varpna",
+    "redirect": "Varis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 414
+        "start": 414,
+        "end": 414
       }
     ]
   },
@@ -5624,9 +5716,12 @@
     "lemma": "Vas",
     "previous": "Varutha",
     "next": "Uasaces",
+    "redirect": "Vadimonium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 430
+        "start": 430,
+        "end": 430
       }
     ]
   },
@@ -5645,9 +5740,12 @@
     "lemma": "Vasada",
     "previous": "Uasaces",
     "next": "Wasak 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 430
+        "start": 430,
+        "end": 430
       }
     ]
   },
@@ -5721,9 +5819,12 @@
     "lemma": "Vasama",
     "previous": "Vasalaiton",
     "next": "Vasampus",
+    "redirect": "Uxama Argela",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 432
+        "start": 432,
+        "end": 432
       }
     ]
   },
@@ -5841,9 +5942,12 @@
     "lemma": "Vasenmalerei",
     "previous": "Vasefanes",
     "next": "Vasidice",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 440
+        "start": 440,
+        "end": 440
       }
     ]
   },
@@ -5884,9 +5988,12 @@
     "lemma": "Vassei",
     "previous": "Vasius, T.",
     "next": "Wasserleitungen",
+    "redirect": "Vasates",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 453
+        "start": 453,
+        "end": 453
       }
     ]
   },
@@ -6215,9 +6322,12 @@
     "lemma": "Vatinianus",
     "previous": "Vatin...",
     "next": "Vatinius",
+    "redirect": "Matius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 494
+        "start": 494,
+        "end": 494
       }
     ]
   },
@@ -6346,9 +6456,12 @@
     "lemma": "Vaturus",
     "previous": "Vatviae",
     "next": "Vatusicus caseus",
+    "redirect": "Vatusicus caseus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 522
+        "start": 522,
+        "end": 522
       }
     ]
   },
@@ -6367,9 +6480,12 @@
     "lemma": "Vatusium",
     "previous": "Vatusicus caseus",
     "next": "Wau",
+    "redirect": "Vatusicus caseus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 523
+        "start": 523,
+        "end": 523
       }
     ]
   },
@@ -6388,9 +6504,12 @@
     "lemma": "Vaunia",
     "previous": "Wau",
     "next": "Uaxine",
+    "redirect": "Vannia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 525
+        "start": 525,
+        "end": 525
       }
     ]
   },
@@ -6398,9 +6517,13 @@
     "lemma": "Uaxine",
     "previous": "Vaunia",
     "next": "Vax Villa Repentina",
+    "sort_key": "Vaxine",
+    "redirect": "Uazaine",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 525
+        "start": 525,
+        "end": 525
       }
     ]
   },
@@ -6628,9 +6751,13 @@
     "lemma": "Ubisci",
     "previous": "Ubii",
     "next": "Ubori",
+    "sort_key": "Vbisci",
+    "redirect": "Vivisci",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 545
+        "start": 545,
+        "end": 545
       }
     ]
   },
@@ -6726,9 +6853,13 @@
     "lemma": "Ucena",
     "previous": "Ucelassicae",
     "next": "Ucenni",
+    "sort_key": "Vcena",
+    "redirect": "Ukena",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 546
+        "start": 546,
+        "end": 546
       }
     ]
   },
@@ -6747,9 +6878,13 @@
     "lemma": "Ucesia",
     "previous": "Ucenni",
     "next": "Ucetia",
+    "sort_key": "Vcesia",
+    "redirect": "Noega 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 547
+        "start": 547,
+        "end": 547
       }
     ]
   },
@@ -6768,9 +6903,13 @@
     "lemma": "Uchalikkeis",
     "previous": "Ucetia",
     "next": "Ucheimerion",
+    "sort_key": "Vchalikkeis",
+    "redirect": "Oecalices",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 549
+        "start": 549,
+        "end": 549
       }
     ]
   },
@@ -6778,9 +6917,13 @@
     "lemma": "Ucheimerion",
     "previous": "Uchalikkeis",
     "next": "Uchi Maius",
+    "sort_key": "Vcheimerion",
+    "redirect": "Uthimereos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 549
+        "start": 549,
+        "end": 549
       }
     ]
   },
@@ -6843,9 +6986,13 @@
     "lemma": "Ucibi",
     "previous": "Ucia",
     "next": "Uciense",
+    "sort_key": "Vcibi",
+    "redirect": "Ucubis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 551
+        "start": 551,
+        "end": 551
       }
     ]
   },
@@ -6853,9 +7000,13 @@
     "lemma": "Uciense",
     "previous": "Ucibi",
     "next": "Ucimath",
+    "sort_key": "Vciense",
+    "redirect": "Ucia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 551
+        "start": 551,
+        "end": 551
       }
     ]
   },
@@ -6874,9 +7025,13 @@
     "lemma": "Ucitana oppida",
     "previous": "Ucimath",
     "next": "Ucres",
+    "sort_key": "Vcitana oppida",
+    "redirect": "Uchi Maius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 552
+        "start": 552,
+        "end": 552
       }
     ]
   },
@@ -7115,9 +7270,13 @@
     "lemma": "Vecilius 2",
     "previous": "Vecilius 1",
     "next": "Vecilius 3",
+    "redirect": "Vecillus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 559
+        "start": 559,
+        "end": 559,
+        "author": "H. Gundel."
       }
     ]
   },
@@ -7169,9 +7328,12 @@
     "lemma": "Vectienus",
     "previous": "Vecillus",
     "next": "Vectigal",
+    "redirect": "Vettienus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -7179,9 +7341,12 @@
     "lemma": "Vectigal",
     "previous": "Vectienus",
     "next": "Vectii",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -7189,9 +7354,12 @@
     "lemma": "Vectii",
     "previous": "Vectigal",
     "next": "Vectilianus",
+    "redirect": "Vettii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -7199,9 +7367,12 @@
     "lemma": "Vectilianus",
     "previous": "Vectii",
     "next": "Vectis",
+    "redirect": "Caesonius 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -7209,9 +7380,12 @@
     "lemma": "Vectis",
     "previous": "Vectilianus",
     "next": "Vectius",
+    "redirect": "Vecta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -7233,10 +7407,12 @@
     "lemma": "Vectones",
     "previous": "Vectius",
     "next": "vectores",
-    "redirect": true,
+    "redirect": "Vettones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -7244,10 +7420,12 @@
     "lemma": "vectores",
     "previous": "Vectones",
     "next": "vectura",
-    "redirect": true,
+    "redirect": "Vectuarii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 560
+        "start": 560,
+        "end": 560
       }
     ]
   },
@@ -7277,9 +7455,12 @@
     "lemma": "Vecu",
     "previous": "Vectuarii",
     "next": "Vediantiae",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 561
+        "start": 561,
+        "end": 561
       }
     ]
   },
@@ -7449,9 +7630,12 @@
     "lemma": "Vedras",
     "previous": "Vedius 9",
     "next": "Veducus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 570
+        "start": 570,
+        "end": 570
       }
     ]
   },
@@ -7470,9 +7654,12 @@
     "lemma": "Vedulia",
     "previous": "Veducus",
     "next": "Vedusia",
+    "redirect": "Budalia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 570
+        "start": 570,
+        "end": 570
       }
     ]
   },
@@ -7546,9 +7733,12 @@
     "lemma": "Vegetinus",
     "previous": "Vegesela 2",
     "next": "Vegetus 1",
+    "redirect": "Marius 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 576
+        "start": 576,
+        "end": 576
       }
     ]
   },
@@ -7589,9 +7779,12 @@
     "lemma": "Vegistum",
     "previous": "Vegium",
     "next": "Veglus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 577
+        "start": 577,
+        "end": 577
       }
     ]
   },
@@ -7752,9 +7945,12 @@
     "lemma": "Veii",
     "previous": "Veiento 3",
     "next": "Veilaunus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 591
+        "start": 591,
+        "end": 591
       }
     ]
   },
@@ -7762,9 +7958,12 @@
     "lemma": "Veilaunus",
     "previous": "Veii",
     "next": "Veilchen",
+    "redirect": "Vellaunus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 591
+        "start": 591,
+        "end": 591
       }
     ]
   },
@@ -7805,9 +8004,13 @@
     "lemma": "Weissrübe",
     "previous": "Weissdorn",
     "next": "Wela",
+    "sort_key": "Veissrübe",
+    "redirect": "Rübe",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 612
+        "start": 612,
+        "end": 612
       }
     ]
   },
@@ -7826,9 +8029,12 @@
     "lemma": "Velabri",
     "previous": "Wela",
     "next": "Velati",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 612
+        "start": 612,
+        "end": 612
       }
     ]
   },
@@ -7857,9 +8063,12 @@
     "lemma": "Velatudorum",
     "previous": "Velatiti, Selatiti",
     "next": "velatura",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 612
+        "start": 612,
+        "end": 612
       }
     ]
   },
@@ -7867,9 +8076,12 @@
     "lemma": "velatura",
     "previous": "Velatudorum",
     "next": "Velatus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 612
+        "start": 612,
+        "end": 612
       }
     ]
   },
@@ -7899,9 +8111,12 @@
     "lemma": "velchans",
     "previous": "Velauni",
     "next": "Veldidena",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 613
+        "start": 613,
+        "end": 613
       }
     ]
   },
@@ -7920,9 +8135,12 @@
     "lemma": "Veldumnianus",
     "previous": "Veldidena",
     "next": "Veleda",
+    "redirect": "Vibius 64",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 617
+        "start": 617,
+        "end": 617
       }
     ]
   },
@@ -7985,9 +8203,12 @@
     "lemma": "velena",
     "previous": "Veleiates Regiates",
     "next": "Velenus",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 623
+        "start": 623,
+        "end": 623
       }
     ]
   },
@@ -8017,9 +8238,12 @@
     "lemma": "Veletia",
     "previous": "veles",
     "next": "Velia",
+    "redirect": "Volana 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 625
+        "start": 625,
+        "end": 625
       }
     ]
   },
@@ -8027,9 +8251,12 @@
     "lemma": "Velia",
     "previous": "Veletia",
     "next": "Veliagun",
+    "redirect": "Veleia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 625
+        "start": 625,
+        "end": 625
       }
     ]
   },
@@ -8081,9 +8308,12 @@
     "lemma": "Veliocasses",
     "previous": "Velinus",
     "next": "Velisci",
+    "redirect": "Vellocasses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 627
+        "start": 627,
+        "end": 627
       }
     ]
   },
@@ -8102,9 +8332,12 @@
     "lemma": "Velites",
     "previous": "Velisci",
     "next": "Velius 1",
+    "redirect": "veles",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 627
+        "start": 627,
+        "end": 627
       }
     ]
   },
@@ -8222,9 +8455,12 @@
     "lemma": "Vella",
     "previous": "Velius 10",
     "next": "Vellabori",
+    "redirect": "Volana 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 634
+        "start": 634,
+        "end": 634
       }
     ]
   },
@@ -8232,9 +8468,12 @@
     "lemma": "Vellabori",
     "previous": "Vella",
     "next": "Vellanis",
+    "redirect": "Velabri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 634
+        "start": 634,
+        "end": 634
       }
     ]
   },
@@ -8297,9 +8536,12 @@
     "lemma": "Vellaunus",
     "previous": "Vellaunodunum",
     "next": "Velleboroi",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 637
+        "start": 637,
+        "end": 637
       }
     ]
   },
@@ -8307,9 +8549,12 @@
     "lemma": "Velleboroi",
     "previous": "Vellaunus",
     "next": "Uellegeia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 637
+        "start": 637,
+        "end": 637
       }
     ]
   },
@@ -8328,9 +8573,12 @@
     "lemma": "Velleia",
     "previous": "Uellegeia",
     "next": "Velleianus",
+    "redirect": "Veleia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 637
+        "start": 637,
+        "end": 637
       }
     ]
   },
@@ -8546,9 +8794,12 @@
     "lemma": "velparum",
     "previous": "Velocius",
     "next": "Wels",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 661
+        "start": 661,
+        "end": 661
       }
     ]
   },
@@ -8589,9 +8840,12 @@
     "lemma": "Veltina tribus",
     "previous": "Veltae",
     "next": "Velvinus",
+    "redirect": "Voltinia tribus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 666
+        "start": 666,
+        "end": 666
       }
     ]
   },
@@ -8632,9 +8886,12 @@
     "lemma": "Vemania 2",
     "previous": "Vemania 1",
     "next": "Vempson",
+    "redirect": "Mevania 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 667
+        "start": 667,
+        "end": 667
       }
     ]
   },
@@ -8675,9 +8932,12 @@
     "lemma": "Venalicium vectigal",
     "previous": "Ven- Attinus, P.",
     "next": "venalicius",
+    "redirect": "Vectigal",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 670
+        "start": 670,
+        "end": 670
       }
     ]
   },
@@ -8685,9 +8945,12 @@
     "lemma": "venalicius",
     "previous": "Venalicium vectigal",
     "next": "Venamanodurum",
+    "redirect": "Mango",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 670
+        "start": 670,
+        "end": 670
       }
     ]
   },
@@ -8695,9 +8958,12 @@
     "lemma": "Venamanodurum",
     "previous": "venalicius",
     "next": "Venami",
+    "redirect": "Venaxamodurum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 670
+        "start": 670,
+        "end": 670
       }
     ]
   },
@@ -8925,9 +9191,12 @@
     "lemma": "Venantodunum",
     "previous": "Venantius 18",
     "next": "Venaria",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 695
+        "start": 695,
+        "end": 695
       }
     ]
   },
@@ -8946,9 +9215,12 @@
     "lemma": "venatio 1",
     "previous": "Venaria",
     "next": "venatio 2",
+    "redirect": "Jagd",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 695
+        "start": 695,
+        "end": 695
       }
     ]
   },
@@ -8956,9 +9228,12 @@
     "lemma": "venatio 2",
     "previous": "venatio 1",
     "next": "Venator",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 695
+        "start": 695,
+        "end": 695
       }
     ]
   },
@@ -8999,9 +9274,12 @@
     "lemma": "Vendelia",
     "previous": "Venaxamodurum",
     "next": "Vendenis",
+    "redirect": "Vindeleia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 696
+        "start": 696,
+        "end": 696
       }
     ]
   },
@@ -9041,9 +9319,12 @@
     "lemma": "Vendon",
     "previous": "Venditio, Venditio bonorum",
     "next": "Veneda",
+    "redirect": "Avendon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 697
+        "start": 697,
+        "end": 697
       }
     ]
   },
@@ -9073,9 +9354,12 @@
     "lemma": "Veneficium",
     "previous": "Venedae",
     "next": "Veneka",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 699
+        "start": 699,
+        "end": 699
       }
     ]
   },
@@ -9094,9 +9378,12 @@
     "lemma": "Venelli",
     "previous": "Veneka",
     "next": "Venenatus",
+    "redirect": "Unelli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 699
+        "start": 699,
+        "end": 699
       }
     ]
   },
@@ -9104,9 +9391,12 @@
     "lemma": "Venenatus",
     "previous": "Venelli",
     "next": "Veneni",
+    "redirect": "Benenatus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 699
+        "start": 699,
+        "end": 699
       }
     ]
   },
@@ -9226,9 +9516,12 @@
     "lemma": "Veneris portus",
     "previous": "Veneris oppidum 2",
     "next": "Venerius 1",
+    "redirect": "Portus Veneris 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 702
+        "start": 704,
+        "end": 704
       }
     ]
   },
@@ -9280,9 +9573,12 @@
     "lemma": "Venerius 5",
     "previous": "Venerius 4",
     "next": "Venerius 6",
+    "redirect": "Veneriosus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 703
+        "start": 703,
+        "end": 703
       }
     ]
   },
@@ -9312,9 +9608,12 @@
     "lemma": "Venestorum insulae",
     "previous": "Venesis ager",
     "next": "Veneris oppidum 3",
+    "redirect": "Veneticae insulae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 703
+        "start": 705,
+        "end": 705
       }
     ]
   },
@@ -9323,9 +9622,11 @@
     "previous": "Venestorum insulae",
     "next": "Veneti 1",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 704
+        "start": 704,
+        "end": 704
       }
     ]
   },
@@ -9334,9 +9635,11 @@
     "previous": "Veneris oppidum 3",
     "next": "Veneti 2",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 705
+        "start": 705,
+        "end": 705
       }
     ]
   },
@@ -9355,9 +9658,12 @@
     "lemma": "Veneti 3",
     "previous": "Veneti 2",
     "next": "Venetia",
+    "redirect": "Venedae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 784
+        "start": 784,
+        "end": 784
       }
     ]
   },
@@ -9365,9 +9671,12 @@
     "lemma": "Venetia",
     "previous": "Veneti 3",
     "next": "Veneticae insulae",
+    "redirect": "Veneti 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 784
+        "start": 784,
+        "end": 784
       }
     ]
   },
@@ -9408,9 +9717,12 @@
     "lemma": "Venetus lacus",
     "previous": "Venetulani",
     "next": "Veniaeses",
+    "redirect": "Brigantinus lacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 786
+        "start": 786,
+        "end": 786
       }
     ]
   },
@@ -9440,9 +9752,12 @@
     "lemma": "Venicones",
     "previous": "Veniatia",
     "next": "Venidius Rogatianus, M.",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 787
+        "start": 787,
+        "end": 787
       }
     ]
   },
@@ -9505,9 +9820,12 @@
     "lemma": "Vennenses",
     "previous": "Vennectis",
     "next": "Vennii",
+    "redirect": "Veniaeses",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 788
+        "start": 788,
+        "end": 788
       }
     ]
   },
@@ -9515,9 +9833,12 @@
     "lemma": "Vennii",
     "previous": "Vennenses",
     "next": "Vennonenses",
+    "redirect": "Cassius 40",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 788
+        "start": 788,
+        "end": 788
       }
     ]
   },
@@ -9635,9 +9956,12 @@
     "lemma": "Vennontes",
     "previous": "Vennonius 6",
     "next": "Vennum",
+    "redirect": "Vennones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 791
+        "start": 791,
+        "end": 791
       }
     ]
   },
@@ -9678,9 +10002,12 @@
     "lemma": "Venta",
     "previous": "Vensana",
     "next": "Ventia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 793
+        "start": 793,
+        "end": 793
       }
     ]
   },
@@ -9797,9 +10124,12 @@
     "lemma": "Ventilator",
     "previous": "Ventidius 8",
     "next": "Ventina",
+    "redirect": "Praestigiator",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 818
+        "start": 818,
+        "end": 818
       }
     ]
   },
@@ -9829,9 +10159,12 @@
     "lemma": "Vento",
     "previous": "Ventipo",
     "next": "Ventriloquus",
+    "redirect": "Perperna 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 819
+        "start": 819,
+        "end": 819
       }
     ]
   },
@@ -10169,9 +10502,12 @@
     "lemma": "Vepitenum",
     "previous": "Venutius",
     "next": "Vepotalus",
+    "redirect": "Vipitenum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 897
+        "start": 898,
+        "end": 898
       }
     ]
   },
@@ -10234,9 +10570,12 @@
     "lemma": "Vera 1",
     "previous": "Ver sacrum",
     "next": "Vera 2",
+    "redirect": "Phraaspa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 923
+        "start": 923,
+        "end": 923
       }
     ]
   },
@@ -10717,9 +11056,12 @@
     "lemma": "Vercondaridubnus",
     "previous": "Vercingetorix",
     "next": "Verconnius Herennianus",
+    "redirect": "Iulius 523",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1008
+        "start": 1008,
+        "end": 1008
       }
     ]
   },
@@ -10727,9 +11069,12 @@
     "lemma": "Verconnius Herennianus",
     "previous": "Vercondaridubnus",
     "next": "Vercustis",
+    "redirect": "Herennianus 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1008
+        "start": 1008,
+        "end": 1008
       }
     ]
   },
@@ -10748,9 +11093,12 @@
     "lemma": "Vereasueca",
     "previous": "Vercustis",
     "next": "Verecunda",
+    "redirect": "Veseiasueca",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1009
+        "start": 1009,
+        "end": 1009
       }
     ]
   },
@@ -10791,9 +11139,12 @@
     "lemma": "Vereda",
     "previous": "Verecundus",
     "next": "Veredarius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1012
+        "start": 1012,
+        "end": 1012
       }
     ]
   },
@@ -10801,9 +11152,12 @@
     "lemma": "Veredarius",
     "previous": "Vereda",
     "next": "Vereia",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1012
+        "start": 1012,
+        "end": 1012
       }
     ]
   },
@@ -10811,9 +11165,12 @@
     "lemma": "Vereia",
     "previous": "Veredarius",
     "next": "Vereis",
+    "redirect": "Vareia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1012
+        "start": 1012,
+        "end": 1012
       }
     ]
   },
@@ -10821,9 +11178,12 @@
     "lemma": "Vereis",
     "previous": "Vereia",
     "next": "Verentanum",
+    "redirect": "Berebis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1012
+        "start": 1012,
+        "end": 1012
       }
     ]
   },
@@ -10930,9 +11290,12 @@
     "lemma": "Vergilianus",
     "previous": "Vergiliae",
     "next": "Vergilio",
+    "redirect": "Flavius 204",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1015
+        "start": 1015,
+        "end": 1015
       }
     ]
   },
@@ -10940,9 +11303,12 @@
     "lemma": "Vergilio",
     "previous": "Vergilianus",
     "next": "Vergilius",
+    "redirect": "Atilius 76",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1015
+        "start": 1015,
+        "end": 1015
       }
     ]
   },

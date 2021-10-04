@@ -214,7 +214,7 @@
     "lemma": "Rabe 2",
     "previous": "Rabe 1",
     "next": "Rabilos",
-    "redirect": "Corvus 4",
+    "redirect": "Sternbilder und Sternglaube",
     "proof_read": 3,
     "chapters": [
       {
@@ -448,7 +448,7 @@
     "lemma": "Rachias",
     "previous": "Racetiu(s)",
     "next": "Ῥαχοί",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 29,
@@ -696,7 +696,7 @@
     "lemma": "Radius 2",
     "previous": "Radius 1",
     "next": "Radius 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 39,
@@ -709,7 +709,7 @@
     "lemma": "Radius 3",
     "previous": "Radius 2",
     "next": "Radu",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 39,
@@ -735,7 +735,7 @@
     "lemma": "Radula",
     "previous": "Radu",
     "next": "Raeba",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 39,
@@ -775,6 +775,8 @@
     "previous": "Raecius 1",
     "next": "Raecius 3",
     "proof_read": 3,
+    "wp_link": "w:es:Marco Recio",
+    "wd_link": "d:Q29587304",
     "chapters": [
       {
         "start": 39,
@@ -1822,7 +1824,7 @@
     "previous": "Ῥαμνουσιάς",
     "next": "Ramoth 1",
     "sort_key": "Ramnusis",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Nemesis",
     "wd_link": "d:Q185747",
     "chapters": [
@@ -2425,7 +2427,6 @@
     "lemma": "Rapraua",
     "previous": "Rappiana",
     "next": "Raps",
-    "redirect": "Arabis 1",
     "proof_read": 2,
     "chapters": [
       {
@@ -2469,7 +2470,7 @@
     "previous": "Ῥάψα 1",
     "next": "Ῥαψεῖς",
     "sort_key": "Rapsa 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 237,
@@ -2745,7 +2746,7 @@
     "lemma": "Rasinius 1",
     "previous": "Rasiermesser",
     "next": "Rasinius 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -2772,7 +2773,7 @@
     "previous": "Rasinius 2",
     "next": "Ῥασκούπορις",
     "sort_key": "Raskos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 255,
@@ -3038,7 +3039,7 @@
     "lemma": "Ratiatum",
     "previous": "Ratiaria",
     "next": "Ratio",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 261,
@@ -3121,7 +3122,7 @@
     "lemma": "Ratis 1",
     "previous": "Ratio privata",
     "next": "Ratis 2",
-    "redirect": "Plinius 5",
+    "redirect": "Eusebios 24",
     "proof_read": 2,
     "chapters": [
       {
@@ -3446,10 +3447,13 @@
     "lemma": "Ravi",
     "previous": "Ravennas Geographus",
     "next": "Ravidus",
-    "redirect": true,
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 310
+        "start": 310,
+        "end": 310,
+        "author": "Münzer."
       }
     ]
   },
@@ -3525,9 +3529,12 @@
     "lemma": "Ravus",
     "previous": "Ravonia",
     "next": "Rax",
+    "redirect": "Annius 75",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 310
+        "start": 310,
+        "end": 310
       }
     ]
   },
@@ -3619,9 +3626,12 @@
     "lemma": "Reatina palus",
     "previous": "Reate",
     "next": "Reatinus portus",
+    "redirect": "Velinus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 347
+        "start": 347,
+        "end": 347
       }
     ]
   },
@@ -3758,7 +3768,7 @@
     "lemma": "Reccimundus",
     "previous": "Reccila",
     "next": "Receptator",
-    "redirect": " Rechimundus",
+    "redirect": "Rechimundus",
     "proof_read": 3,
     "chapters": [
       {
@@ -3844,9 +3854,12 @@
     "lemma": "Receptus",
     "previous": "Receptum argentarii",
     "next": "Rechiarius",
+    "redirect": "Nonius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 379
+        "start": 379,
+        "end": 379
       }
     ]
   },
@@ -3877,9 +3890,12 @@
     "lemma": "Rechimerus",
     "previous": "Rechila",
     "next": "Rechimundus",
+    "redirect": "Richomeres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 380
+        "start": 380,
+        "end": 380
       }
     ]
   },
@@ -3922,9 +3938,12 @@
     "lemma": "Reciacum, -us",
     "previous": "Rechtsunterricht",
     "next": "Recianus",
+    "redirect": "Riciacum, -us",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 405
+        "start": 405,
+        "end": 405
       }
     ]
   },
@@ -3943,9 +3962,12 @@
     "lemma": "Recimer",
     "previous": "Recianus",
     "next": "Reciperatio",
+    "redirect": "Ricimer",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 405
+        "start": 405,
+        "end": 405
       }
     ]
   },
@@ -4023,9 +4045,12 @@
     "lemma": "Rectina 2",
     "previous": "Rectina 1",
     "next": "Rector provinciae",
+    "redirect": "Popillius 41",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -4048,9 +4073,12 @@
     "lemma": "Rectus",
     "previous": "Rector provinciae",
     "next": "Recuperatio",
+    "redirect": "Aemilius 124",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -4058,9 +4086,12 @@
     "lemma": "Recuperatio",
     "previous": "Rectus",
     "next": "Recuperator",
+    "redirect": "Reciperatio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -4068,9 +4099,12 @@
     "lemma": "Recuperator",
     "previous": "Recuperatio",
     "next": "Reda",
+    "redirect": "Reciperator",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -4078,9 +4112,12 @@
     "lemma": "Reda",
     "previous": "Recuperator",
     "next": "Redarator",
+    "redirect": "Raeda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -4088,9 +4125,12 @@
     "lemma": "Redarator",
     "previous": "Reda",
     "next": "Redditus",
+    "redirect": "Reparator",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -4098,9 +4138,12 @@
     "lemma": "Redditus",
     "previous": "Redarator",
     "next": "Redemptor",
+    "redirect": "Caecilius 104",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -4199,9 +4242,12 @@
     "lemma": "Redux",
     "previous": "Redones",
     "next": "Referendarius 1",
+    "redirect": "Fortuna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 461
+        "start": 461,
+        "end": 461
       }
     ]
   },
@@ -4863,9 +4909,12 @@
     "lemma": "Regium flumen",
     "previous": "Regium atrium",
     "next": "Regium Lepidum",
+    "redirect": "Euphrates 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 504
+        "start": 504,
+        "end": 504
       }
     ]
   },
@@ -4873,9 +4922,12 @@
     "lemma": "Regium Lepidum",
     "previous": "Regium flumen",
     "next": "Regium promunturium",
+    "redirect": "Regium 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 504
+        "start": 504,
+        "end": 504
       }
     ]
   },
@@ -4915,31 +4967,20 @@
   },
   {
     "lemma": "Regma 2",
-    "previous": "Ranilda",
-    "next": "Rimphaces",
-    "proof_read": 2,
-    "chapters": [
-      {
-        "start": 1294,
-        "end": 1294,
-        "author": "Tkáč."
-      }
-    ]
-  },
-  {
-    "lemma": "Renkylias",
-    "previous": "Regma 2",
+    "previous": "Regma 1",
     "next": "Regni",
+    "sort_key": "Regma 2",
     "chapters": [
       {
         "start": 505,
-        "author": "Ruge"
+        "end": 509,
+        "author": "Haverfield."
       }
     ]
   },
   {
     "lemma": "Regni",
-    "previous": "Renkylias",
+    "previous": "Regma 2",
     "next": "Regnum 1",
     "chapters": [
       {
@@ -4963,9 +5004,12 @@
     "lemma": "Regnum 2",
     "previous": "Regnum 1",
     "next": "Regula 1",
+    "redirect": "Rex 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 509
+        "start": 509,
+        "end": 509
       }
     ]
   },
@@ -5140,9 +5184,12 @@
     "lemma": "Regulus 6",
     "previous": "Regulus 5",
     "next": "Reh",
+    "redirect": "Aemilius 131",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 512
+        "start": 512,
+        "end": 512
       }
     ]
   },
@@ -5407,7 +5454,7 @@
   {
     "lemma": "Reitoi 4",
     "previous": "Reitoi 3",
-    "next": "Reitos",
+    "next": "Ῥειτος",
     "chapters": [
       {
         "start": 557,
@@ -5416,18 +5463,22 @@
     ]
   },
   {
-    "lemma": "Reitos",
+    "lemma": "Ῥειτος",
     "previous": "Reitoi 4",
     "next": "Rei vindicatio",
+    "sort_key": "Reitos",
+    "redirect": "Reitoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 557
+        "start": 557,
+        "end": 557
       }
     ]
   },
   {
     "lemma": "Rei vindicatio",
-    "previous": "Reitos",
+    "previous": "Ῥειτος",
     "next": "Rekas",
     "chapters": [
       {
@@ -5452,9 +5503,12 @@
     "lemma": "Rekimer",
     "previous": "Rekas",
     "next": "Rekimundus",
+    "redirect": "Ricimer",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 562
+        "start": 562,
+        "end": 562
       }
     ]
   },
@@ -5698,9 +5752,12 @@
     "lemma": "Remista",
     "previous": "Remismundus",
     "next": "Remistheus",
+    "redirect": "Ramista",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 595
+        "start": 595,
+        "end": 595
       }
     ]
   },
@@ -5765,6 +5822,9 @@
     "previous": "Remmius 3",
     "next": "Remmius 5",
     "proof_read": 2,
+    "wp_link": "w:en:Remmius Palaemon",
+    "ws_link": "s:it:Autore:Quinto Remmio Palemone",
+    "wd_link": "d:Q24548",
     "chapters": [
       {
         "start": 596,
@@ -5833,9 +5893,12 @@
     "lemma": "Renatus 2",
     "previous": "Renatus 1",
     "next": "Renbea",
+    "redirect": "Frigeridus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 598
+        "start": 598,
+        "end": 598
       }
     ]
   },
@@ -5899,9 +5962,12 @@
     "lemma": "Renkylias",
     "previous": "Renius",
     "next": "Rennius",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 599
+        "start": 599,
+        "end": 599
       }
     ]
   },
@@ -5944,9 +6010,12 @@
     "lemma": "Renus",
     "previous": "Renuntiatio",
     "next": "Reomithres",
+    "redirect": "Rhenus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 601
+        "start": 601,
+        "end": 601
       }
     ]
   },
@@ -6033,9 +6102,12 @@
     "lemma": "Repentinus",
     "previous": "Reparatus 2",
     "next": "Repetundarum crimen",
+    "redirect": "Calpurnius 108",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 603
+        "start": 603,
+        "end": 603
       }
     ]
   },
@@ -6285,9 +6357,12 @@
     "lemma": "Rescripti codices",
     "previous": "Rescheph",
     "next": "Rescriptum",
+    "redirect": "Palimpsestus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 622
+        "start": 622,
+        "end": 622
       }
     ]
   },
@@ -6332,9 +6407,12 @@
     "lemma": "Resisthon",
     "previous": "Residuae",
     "next": "Resistus",
+    "redirect": "Bisanthe",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 622
+        "start": 622,
+        "end": 622
       }
     ]
   },
@@ -6342,9 +6420,12 @@
     "lemma": "Resistus",
     "previous": "Resisthon",
     "next": "Res iudicata",
+    "redirect": "Raedestus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 622
+        "start": 622,
+        "end": 622
       }
     ]
   },
@@ -6352,9 +6433,13 @@
     "lemma": "Res iudicata",
     "previous": "Resistus",
     "next": "Resius 1",
+    "sort_key": "Resiudicata",
+    "redirect": "Sententia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 622
+        "start": 622,
+        "end": 622
       }
     ]
   },
@@ -6362,9 +6447,12 @@
     "lemma": "Resius 1",
     "previous": "Res iudicata",
     "next": "Resius 2",
+    "redirect": "Aequi, Aequiculi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 622
+        "start": 622,
+        "end": 622
       }
     ]
   },
@@ -6600,9 +6688,12 @@
     "lemma": "Restiarius",
     "previous": "Ressinanensis",
     "next": "Restio",
+    "redirect": "Restio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 674
+        "start": 674,
+        "end": 674
       }
     ]
   },
@@ -6693,6 +6784,8 @@
     "lemma": "Restitutus 4",
     "previous": "Restitutus 3",
     "next": "Restituta 5",
+    "redirect": "Aelius 121",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 685,
@@ -6726,9 +6819,12 @@
     "lemma": "Retavi",
     "previous": "Restutus",
     "next": "Retentio",
+    "redirect": "Rhetavi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 686
+        "start": 686,
+        "end": 686
       }
     ]
   },
@@ -6828,7 +6924,7 @@
   {
     "lemma": "epi retois eisagein",
     "previous": "Reticulum",
-    "next": "Retor",
+    "next": "Ῥήτωρ",
     "chapters": [
       {
         "start": 695,
@@ -6837,18 +6933,22 @@
     ]
   },
   {
-    "lemma": "Retor",
+    "lemma": "Ῥήτωρ",
     "previous": "epi retois eisagein",
     "next": "Retovium",
+    "sort_key": "Retor",
+    "redirect": "Sophisten",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 695
+        "start": 695,
+        "end": 695
       }
     ]
   },
   {
     "lemma": "Retovium",
-    "previous": "Retor",
+    "previous": "Ῥήτωρ",
     "next": "Retractare",
     "chapters": [
       {
@@ -6875,6 +6975,7 @@
     "next": "Rettich",
     "sort_key": "Retrai",
     "proof_read": 3,
+    "wd_link": "d:Q9307616",
     "chapters": [
       {
         "start": 696,
@@ -6957,9 +7058,12 @@
     "lemma": "Revessio",
     "previous": "Reverendus",
     "next": "Revingo",
+    "redirect": "Ruessium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 702
+        "start": 702,
+        "end": 702
       }
     ]
   },
@@ -6989,9 +7093,12 @@
     "lemma": "Rex 1",
     "previous": "Revocare",
     "next": "Rex 2",
+    "redirect": "Marcius 89",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 702
+        "start": 702,
+        "end": 702
       }
     ]
   },
@@ -7011,9 +7118,12 @@
     "lemma": "Rex convivii",
     "previous": "Rex 2",
     "next": "Rexenor 1",
+    "redirect": "Comissatio",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 721
+        "start": 721,
+        "end": 721
       }
     ]
   },
@@ -7092,9 +7202,12 @@
     "lemma": "Rhaga",
     "previous": "Rhadamaei",
     "next": "Rhamae",
+    "redirect": "Raga",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 728
+        "start": 728,
+        "end": 728
       }
     ]
   },
@@ -7102,9 +7215,12 @@
     "lemma": "Rhamae",
     "previous": "Rhaga",
     "next": "Rhazes",
+    "redirect": "Ramae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 728
+        "start": 728,
+        "end": 728
       }
     ]
   },
@@ -7135,9 +7251,12 @@
     "lemma": "Rheginum talentum",
     "previous": "Rhdurqn",
     "next": "Rheinzaberner",
+    "redirect": "Reginum talentum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 731
+        "start": 731,
+        "end": 731
       }
     ]
   },
@@ -7156,9 +7275,13 @@
     "lemma": "ad Rhenum",
     "previous": "Rheinzaberner",
     "next": "Rhenus 1",
+    "sort_key": "Rhenum",
+    "redirect": "Rhenus 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 731
+        "start": 731,
+        "end": 731
       }
     ]
   },
@@ -7235,9 +7358,12 @@
     "lemma": "Rhidagnus",
     "previous": "Rhetavi",
     "next": "Rhinnea",
+    "redirect": "Ridagnus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 756
+        "start": 756,
+        "end": 756
       }
     ]
   },
@@ -7257,9 +7383,12 @@
     "lemma": "Rhipeus",
     "previous": "Rhinnea",
     "next": "Rhisina",
+    "redirect": "Ripheus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 758
+        "start": 758,
+        "end": 758
       }
     ]
   },
@@ -7267,9 +7396,12 @@
     "lemma": "Rhisina",
     "previous": "Rhipeus",
     "next": "Rhiti, Riti",
+    "redirect": "Resaina",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 758
+        "start": 758,
+        "end": 758
       }
     ]
   },
@@ -7288,9 +7420,12 @@
     "lemma": "Rhition",
     "previous": "Rhiti, Riti",
     "next": "Rhoali",
+    "redirect": "Guido",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 758
+        "start": 758,
+        "end": 758
       }
     ]
   },
@@ -7320,9 +7455,12 @@
     "lemma": "Rhodae",
     "previous": "Rhoda",
     "next": "Rhodanus",
+    "redirect": "Rudiae 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 759
+        "start": 759,
+        "end": 759
       }
     ]
   },
@@ -7354,9 +7492,12 @@
     "lemma": "Rhodiae",
     "previous": "Rhodaspes",
     "next": "Rhodios",
+    "redirect": "Rudiae 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 770
+        "start": 770,
+        "end": 770
       }
     ]
   },
@@ -7364,9 +7505,12 @@
     "lemma": "Rhodios",
     "previous": "Rhodiae",
     "next": "Rhodischer Münzfuß",
+    "redirect": "Ῥόδιος 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 770
+        "start": 770,
+        "end": 770
       }
     ]
   },
@@ -7374,9 +7518,12 @@
     "lemma": "Rhodischer Münzfuß",
     "previous": "Rhodios",
     "next": "Rhodo",
+    "redirect": "Drachme",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 770
+        "start": 770,
+        "end": 770
       }
     ]
   },
@@ -7395,9 +7542,12 @@
     "lemma": "Rhoedias",
     "previous": "Rhodo",
     "next": "Rhogonis",
+    "redirect": "Roedias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 770
+        "start": 770,
+        "end": 770
       }
     ]
   },
@@ -7405,9 +7555,12 @@
     "lemma": "Rhogonis",
     "previous": "Rhoedias",
     "next": "Rhondes",
+    "redirect": "Rogomanius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 770
+        "start": 770,
+        "end": 770
       }
     ]
   },
@@ -7425,7 +7578,7 @@
   {
     "lemma": "Rhythmica",
     "previous": "Rhondes",
-    "next": "Ria",
+    "next": "Ῥία",
     "chapters": [
       {
         "start": 770,
@@ -7435,18 +7588,22 @@
     ]
   },
   {
-    "lemma": "Ria",
+    "lemma": "Ῥία",
     "previous": "Rhythmica",
     "next": "Rianos",
+    "sort_key": "Ria",
+    "redirect": "Rieia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 781
+        "start": 781,
+        "end": 781
       }
     ]
   },
   {
     "lemma": "Rianos",
-    "previous": "Ria",
+    "previous": "Ῥία",
     "next": "Ῥίβιοι",
     "chapters": [
       {
@@ -7533,9 +7690,12 @@
     "lemma": "Richimer",
     "previous": "Ricciacum",
     "next": "Richomeres 1",
+    "redirect": "Richomeres 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 796
+        "start": 796,
+        "end": 796
       }
     ]
   },
@@ -7646,9 +7806,12 @@
     "lemma": "Rico",
     "previous": "Ricinus",
     "next": "Ricomagus",
+    "redirect": "Ruclo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 802
+        "start": 802,
+        "end": 802
       }
     ]
   },
@@ -7656,9 +7819,12 @@
     "lemma": "Ricomagus",
     "previous": "Rico",
     "next": "Rictium",
+    "redirect": "Rigomagus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 802
+        "start": 802,
+        "end": 802
       }
     ]
   },
@@ -7666,9 +7832,12 @@
     "lemma": "Rictium",
     "previous": "Ricomagus",
     "next": "Ridagnus",
+    "redirect": "Rittium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 802
+        "start": 802,
+        "end": 802
       }
     ]
   },
@@ -7687,9 +7856,12 @@
     "lemma": "Ridumo",
     "previous": "Ridagnus",
     "next": "Riduna",
+    "redirect": "Moridunum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 802
+        "start": 802,
+        "end": 802
       }
     ]
   },
@@ -7787,7 +7959,7 @@
     "lemma": "Rigomagum",
     "previous": "Ῥιγόδουνον",
     "next": "Rigomagus",
-    "redirect": "Rigomagus 1",
+    "redirect": "Ammianus 4",
     "proof_read": 3,
     "wp_link": "w:de:Remagen",
     "ws_link": "s:de:Remagen",
@@ -7949,9 +8121,12 @@
     "lemma": "Rimismundus",
     "previous": "Rimenianta",
     "next": "Rimmon 1",
+    "redirect": "Remismundus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 807
+        "start": 807,
+        "end": 807
       }
     ]
   },
@@ -8106,9 +8281,12 @@
     "lemma": "Riomao",
     "previous": "Riochatus",
     "next": "Riomo",
+    "redirect": "Rigomagus 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 844
+        "start": 844,
+        "end": 844
       }
     ]
   },
@@ -8116,9 +8294,12 @@
     "lemma": "Riomo",
     "previous": "Riomao",
     "next": "Rion 1",
+    "redirect": "Rigomagus 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 844
+        "start": 844,
+        "end": 844
       }
     ]
   },
@@ -8160,9 +8341,12 @@
     "lemma": "Riotamus",
     "previous": "Rion 3",
     "next": "Riothamus",
+    "redirect": "Riothamus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 845
+        "start": 846,
+        "end": 846
       }
     ]
   },
@@ -8181,9 +8365,12 @@
     "lemma": "Riotimus",
     "previous": "Riothamus",
     "next": "Ripa 1",
+    "redirect": "Riothamus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 845
+        "start": 846,
+        "end": 846
       }
     ]
   },
@@ -8225,9 +8412,12 @@
     "lemma": "Ripari",
     "previous": "Ripaia ore",
     "next": "Riparienses milites",
+    "redirect": "Iordanis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 915
+        "start": 915,
+        "end": 915
       }
     ]
   },
@@ -8324,7 +8514,7 @@
   {
     "lemma": "Ripheus 3",
     "previous": "Ripheus 2",
-    "next": "Ripsaspis",
+    "next": "Ῥίψασπις",
     "chapters": [
       {
         "start": 921,
@@ -8333,22 +8523,29 @@
     ]
   },
   {
-    "lemma": "Ripsaspis",
+    "lemma": "Ῥίψασπις",
     "previous": "Ripheus 3",
     "next": "Riras",
+    "sort_key": "Ripsaspis",
+    "redirect": "Δειλίας γραφή",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 921
+        "start": 921,
+        "end": 921
       }
     ]
   },
   {
     "lemma": "Riras",
-    "previous": "Ripsaspis",
+    "previous": "Ῥίψασπις",
     "next": "Ris",
+    "redirect": "Iuras",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 921
+        "start": 921,
+        "end": 921
       }
     ]
   },
@@ -8368,9 +8565,12 @@
     "lemma": "Risardir",
     "previous": "Ris",
     "next": "Riscus",
+    "redirect": "Rusaddir",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 923
+        "start": 923,
+        "end": 923
       }
     ]
   },
@@ -8388,7 +8588,7 @@
   {
     "lemma": "Rispia",
     "previous": "Riscus",
-    "next": "Rithion",
+    "next": "Ῥίθιον",
     "chapters": [
       {
         "start": 923,
@@ -8397,18 +8597,22 @@
     ]
   },
   {
-    "lemma": "Rithion",
+    "lemma": "Ῥίθιον",
     "previous": "Rispia",
     "next": "Rithymna",
+    "sort_key": "Rithion",
+    "redirect": "Rizaion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 923
+        "start": 923,
+        "end": 923
       }
     ]
   },
   {
     "lemma": "Rithymna",
-    "previous": "Rithion",
+    "previous": "Ῥίθιον",
     "next": "Riti",
     "chapters": [
       {
@@ -8422,9 +8626,12 @@
     "lemma": "Riti",
     "previous": "Rithymna",
     "next": "Ritia",
+    "redirect": "Rhiti, Riti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 924
+        "start": 924,
+        "end": 924
       }
     ]
   },
@@ -8476,9 +8683,12 @@
     "lemma": "Ritubium",
     "previous": "Rituales libri",
     "next": "Ritumagus",
+    "redirect": "Rituvium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 924
+        "start": 924,
+        "end": 924
       }
     ]
   },
@@ -8532,9 +8742,12 @@
     "lemma": "Rixa",
     "previous": "Riusiava",
     "next": "Rixamae",
+    "redirect": "Iuventius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 935
+        "start": 935,
+        "end": 935
       }
     ]
   },
@@ -8642,7 +8855,7 @@
   {
     "lemma": "Rizus 1",
     "previous": "Rizophagoi",
-    "next": "Rizus 2",
+    "next": "Ῥιζοῦς 2",
     "chapters": [
       {
         "start": 940,
@@ -8651,18 +8864,22 @@
     ]
   },
   {
-    "lemma": "Rizus 2",
+    "lemma": "Ῥιζοῦς 2",
     "previous": "Rizus 1",
     "next": "Ῥιζούς 3",
+    "sort_key": "Rizus 2",
+    "redirect": "Rizon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 940
+        "start": 940,
+        "end": 940
       }
     ]
   },
   {
     "lemma": "Ῥιζούς 3",
-    "previous": "Rizus 2",
+    "previous": "Ῥιζοῦς 2",
     "next": "Rkbʾel",
     "chapters": [
       {
@@ -8722,9 +8939,12 @@
     "lemma": "Roas 1",
     "previous": "Roana",
     "next": "Roas 2",
+    "redirect": "Ruas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 943
+        "start": 943,
+        "end": 943
       }
     ]
   },
@@ -8779,9 +8999,12 @@
     "lemma": "Robigo, Robigus",
     "previous": "Robigalia",
     "next": "Robogdii",
+    "redirect": "Robigalia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 951
+        "start": 951,
+        "end": 951
       }
     ]
   },
@@ -8821,7 +9044,7 @@
   {
     "lemma": "Roboretum",
     "previous": "Roboraria",
-    "next": "Roboskoi",
+    "next": "Ῥοβοσκοί",
     "chapters": [
       {
         "start": 951,
@@ -8830,18 +9053,22 @@
     ]
   },
   {
-    "lemma": "Roboskoi",
+    "lemma": "Ῥοβοσκοί",
     "previous": "Roboretum",
     "next": "Robrica",
+    "sort_key": "Roboskoi",
+    "redirect": "Robaskoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 951
+        "start": 951,
+        "end": 951
       }
     ]
   },
   {
     "lemma": "Robrica",
-    "previous": "Roboskoi",
+    "previous": "Ῥοβοσκοί",
     "next": "Robur",
     "chapters": [
       {
@@ -9088,7 +9315,7 @@
   {
     "lemma": "Rodiakon Pelagos",
     "previous": "Rodia 6",
-    "next": "Rodiapolis",
+    "next": "Ῥοδιάπολις",
     "chapters": [
       {
         "start": 956,
@@ -9097,19 +9324,23 @@
     ]
   },
   {
-    "lemma": "Rodiapolis",
+    "lemma": "Ῥοδιάπολις",
     "previous": "Rodiakon Pelagos",
     "next": "Rodion nesoi",
+    "sort_key": "Rodiapolis",
+    "redirect": "Rodia 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 956
+        "start": 956,
+        "end": 956
       }
     ]
   },
   {
     "lemma": "Rodion nesoi",
-    "previous": "Rodiapolis",
-    "next": "Rodion peraia",
+    "previous": "Ῥοδιάπολις",
+    "next": "Ῥοδίων περαία",
     "chapters": [
       {
         "start": 956,
@@ -9118,22 +9349,30 @@
     ]
   },
   {
-    "lemma": "Rodion peraia",
+    "lemma": "Ῥοδίων περαία",
     "previous": "Rodion nesoi",
     "next": "Ῥοδιόπολις",
+    "sort_key": "Rodion peraia",
+    "redirect": "Peraia 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 956
+        "start": 956,
+        "end": 956
       }
     ]
   },
   {
     "lemma": "Ῥοδιόπολις",
-    "previous": "Rodion peraia",
+    "previous": "Ῥοδίων περαία",
     "next": "Ῥόδιος 1",
+    "sort_key": "Rodiopolis",
+    "redirect": "Rodia 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 956
+        "start": 956,
+        "end": 956
       }
     ]
   },
@@ -9239,7 +9478,7 @@
   {
     "lemma": "Rodon",
     "previous": "Rodogune 3",
-    "next": "Rodon 1",
+    "next": "Ῥόδων 1",
     "chapters": [
       {
         "start": 957,
@@ -9248,18 +9487,22 @@
     ]
   },
   {
-    "lemma": "Rodon 1",
+    "lemma": "Ῥόδων 1",
     "previous": "Rodon",
     "next": "Rodon 2",
+    "sort_key": "Rodon 1",
+    "redirect": "Rhodo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 957
+        "start": 957,
+        "end": 957
       }
     ]
   },
   {
     "lemma": "Rodon 2",
-    "previous": "Rodon 1",
+    "previous": "Ῥόδων 1",
     "next": "Rodope 1",
     "chapters": [
       {
@@ -9488,9 +9731,12 @@
     "lemma": "Rogatianus 1",
     "previous": "Rogane",
     "next": "Rogatianus 2",
+    "redirect": "Iulius 428",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 999
+        "start": 999,
+        "end": 999
       }
     ]
   },
@@ -9509,9 +9755,12 @@
     "lemma": "Rogatilla",
     "previous": "Rogatianus 2",
     "next": "Rogatio",
+    "redirect": "Aemilius 176",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 999
+        "start": 999,
+        "end": 999
       }
     ]
   },
@@ -9572,9 +9821,12 @@
     "lemma": "Rogatus 1",
     "previous": "Ῥογατόριον",
     "next": "Rogatus 2",
+    "redirect": "Aelius 110",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1001
+        "start": 1001,
+        "end": 1001
       }
     ]
   },
@@ -9618,9 +9870,13 @@
     "lemma": "Ῥωγμοί",
     "previous": "Ῥογκίον",
     "next": "Rogmorum",
+    "sort_key": "Rogmoi",
+    "redirect": "Regma 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1001
+        "start": 1001,
+        "end": 1001
       }
     ]
   },
@@ -9672,9 +9928,12 @@
     "lemma": "Rohr",
     "previous": "Ronkion",
     "next": "Roikos 1",
+    "redirect": "Kalamos 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1002
+        "start": 1002,
+        "end": 1002
       }
     ]
   },
@@ -9749,9 +10008,12 @@
     "lemma": "Roilas",
     "previous": "Roikos 6",
     "next": "Roimetalkes",
+    "redirect": "Ruas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1003
+        "start": 1003,
+        "end": 1003
       }
     ]
   },
@@ -10165,7 +10427,7 @@
     "previous": "Romanos",
     "next": "Romanus 2",
     "sort_key": "Romanus 01",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1064,
@@ -10514,9 +10776,12 @@
     "lemma": "Romilia",
     "previous": "Rometalca 2",
     "next": "Romilius",
+    "redirect": "Romulia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1071
+        "start": 1071,
+        "end": 1071
       }
     ]
   },
@@ -10580,9 +10845,12 @@
     "lemma": "Romordius",
     "previous": "Romilius 4",
     "next": "Romphaia",
+    "redirect": "Rumoridus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1072
+        "start": 1072,
+        "end": 1072
       }
     ]
   },
@@ -10646,9 +10914,12 @@
     "lemma": "Romula 5",
     "previous": "Romula 4",
     "next": "Romulea",
+    "redirect": "Romulea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1073
+        "start": 1073,
+        "end": 1073
       }
     ]
   },
@@ -10701,9 +10972,12 @@
     "lemma": "Romulius",
     "previous": "Romulianus 2",
     "next": "Romulus 1",
+    "redirect": "Romilius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1074
+        "start": 1074,
+        "end": 1074
       }
     ]
   },
@@ -10811,9 +11085,12 @@
     "lemma": "Romulus 10",
     "previous": "Romulus 9",
     "next": "Romulus 11",
+    "redirect": "Phaedrus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1104
+        "start": 1104,
+        "end": 1104
       }
     ]
   },
@@ -10821,9 +11098,12 @@
     "lemma": "Romulus 11",
     "previous": "Romulus 10",
     "next": "Romulus 12",
+    "redirect": "Nonianus Romulus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1104
+        "start": 1104,
+        "end": 1104
       }
     ]
   },
@@ -10966,7 +11246,7 @@
   {
     "lemma": "Ropographos",
     "previous": "Roplutai",
-    "next": "Ropusa",
+    "next": "Ῥόπουσα",
     "chapters": [
       {
         "start": 1109,
@@ -10975,18 +11255,22 @@
     ]
   },
   {
-    "lemma": "Ropusa",
+    "lemma": "Ῥόπουσα",
     "previous": "Ropographos",
     "next": "Rorarii",
+    "sort_key": "Ropusa",
+    "redirect": "Rodussa, Rodussai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1110
+        "start": 1110,
+        "end": 1110
       }
     ]
   },
   {
     "lemma": "Rorarii",
-    "previous": "Ropusa",
+    "previous": "Ῥόπουσα",
     "next": "Rosalia",
     "chapters": [
       {
@@ -11328,9 +11612,12 @@
     "lemma": "Roscius 21",
     "previous": "Roscius 20",
     "next": "Roscius 22",
+    "redirect": "Pompeius 115",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1126
+        "start": 1126,
+        "end": 1126
       }
     ]
   },
@@ -11394,9 +11681,13 @@
     "lemma": "Roscius 27",
     "previous": "Roscius 26",
     "next": "Roscius 28",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1127
+        "start": 1127,
+        "end": 1127,
+        "author": "Vonder Mühll."
       }
     ]
   },
@@ -11437,9 +11728,12 @@
     "lemma": "Roscius 31",
     "previous": "Roscius 30",
     "next": "Roscius 32",
+    "redirect": "Roscius 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1127
+        "start": 1127,
+        "end": 1127
       }
     ]
   },
@@ -11482,10 +11776,12 @@
     "lemma": "Rosia rura",
     "previous": "Rosea rura",
     "next": "Rosius",
-    "redirect": true,
+    "redirect": "Rosea rura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1128
+        "start": 1128,
+        "end": 1128
       }
     ]
   },
@@ -11584,9 +11880,12 @@
     "lemma": "Rostra",
     "previous": "Rossius 3",
     "next": "Rostrata villa",
+    "redirect": "Rednerbühne",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1147
+        "start": 1147,
+        "end": 1147
       }
     ]
   },
@@ -11617,9 +11916,12 @@
     "lemma": "Rosulanus ager",
     "previous": "Rostrum Nemaviae",
     "next": "Rosus, Rossus",
+    "redirect": "Rosea rura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1148
+        "start": 1148,
+        "end": 1148
       }
     ]
   },
@@ -11686,9 +11988,12 @@
     "lemma": "Rota 5",
     "previous": "Rota 4",
     "next": "Rota 6",
+    "redirect": "Töpferscheibe",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1151
+        "start": 1151,
+        "end": 1151
       }
     ]
   },
@@ -11708,9 +12013,12 @@
     "lemma": "Rota 7",
     "previous": "Rota 6",
     "next": "Rota 8",
+    "redirect": "Rombos 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1152
+        "start": 1152,
+        "end": 1152
       }
     ]
   },
@@ -11796,9 +12104,13 @@
     "lemma": "ad Rotas",
     "previous": "Rotaria",
     "next": "Rotrini fontes",
+    "sort_key": "Rotas",
+    "redirect": "Rotae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1153
+        "start": 1153,
+        "end": 1153
       }
     ]
   },
@@ -11950,7 +12262,7 @@
   {
     "lemma": "Roxane 7",
     "previous": "Roxane 6",
-    "next": "Roxolanoi",
+    "next": "Ῥωξολανοί",
     "chapters": [
       {
         "start": 1156,
@@ -11959,29 +12271,36 @@
     ]
   },
   {
-    "lemma": "Roxolanoi",
+    "lemma": "Ῥωξολανοί",
     "previous": "Roxane 7",
     "next": "Roxonokaia",
+    "sort_key": "Roxolanoi",
+    "redirect": "Roxolani",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1156
+        "start": 1156,
+        "end": 1156
       }
     ]
   },
   {
     "lemma": "Roxonokaia",
-    "previous": "Roxolanoi",
+    "previous": "Ῥωξολανοί",
     "next": "Ru...",
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1156
+        "start": 1156,
+        "end": 1156
       }
     ]
   },
   {
     "lemma": "Ru...",
     "previous": "Roxonokaia",
-    "next": "Ruadis",
+    "next": "Ῥούαδις",
     "chapters": [
       {
         "start": 1156,
@@ -11990,19 +12309,23 @@
     ]
   },
   {
-    "lemma": "Ruadis",
+    "lemma": "Ῥούαδις",
     "previous": "Ru...",
     "next": "Ruaditai",
+    "sort_key": "Ruadis",
+    "redirect": "Adris",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1156
+        "start": 1156,
+        "end": 1156
       }
     ]
   },
   {
     "lemma": "Ruaditai",
-    "previous": "Ruadis",
-    "next": "Ruakensioi",
+    "previous": "Ῥούαδις",
+    "next": "Ῥουακήνσιοι",
     "chapters": [
       {
         "start": 1156,
@@ -12011,18 +12334,22 @@
     ]
   },
   {
-    "lemma": "Ruakensioi",
+    "lemma": "Ῥουακήνσιοι",
     "previous": "Ruaditai",
     "next": "Ruana",
+    "sort_key": "Ruakensioi",
+    "redirect": "Rubrenses 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1156
+        "start": 1156,
+        "end": 1156
       }
     ]
   },
   {
     "lemma": "Ruana",
-    "previous": "Ruakensioi",
+    "previous": "Ῥουακήνσιοι",
     "next": "Ruas",
     "chapters": [
       {
@@ -12057,9 +12384,12 @@
     "lemma": "Rubellius 2",
     "previous": "Rubellius 1",
     "next": "Rubellius 3",
+    "redirect": "Blandus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1157
+        "start": 1157,
+        "end": 1157
       }
     ]
   },
@@ -12182,7 +12512,7 @@
   {
     "lemma": "Rubius",
     "previous": "Rubico",
-    "next": "Rubon",
+    "next": "Ῥούβων",
     "chapters": [
       {
         "start": 1166,
@@ -12191,18 +12521,22 @@
     ]
   },
   {
-    "lemma": "Rubon",
+    "lemma": "Ῥούβων",
     "previous": "Rubius",
     "next": "Rubra 1",
+    "sort_key": "Rubon",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1166
+        "start": 1166,
+        "end": 1166
       }
     ]
   },
   {
     "lemma": "Rubra 1",
-    "previous": "Rubon",
+    "previous": "Ῥούβων",
     "next": "Rubra 2",
     "chapters": [
       {
@@ -12226,9 +12560,12 @@
     "lemma": "Rubra 3",
     "previous": "Rubra 2",
     "next": "Rubrae 1",
+    "redirect": "Saxa rubra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1166
+        "start": 1166,
+        "end": 1166
       }
     ]
   },
@@ -12269,9 +12606,13 @@
     "lemma": "ad Rubras",
     "previous": "Rubraesus",
     "next": "Rubrenses 1",
+    "sort_key": "Rubras",
+    "redirect": "Rubrae 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1167
+        "start": 1167,
+        "end": 1167
       }
     ]
   },
@@ -12290,9 +12631,12 @@
     "lemma": "Rubrenses 2",
     "previous": "Rubrenses 1",
     "next": "Rubrenus 1",
+    "redirect": "Saxa rubra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1167
+        "start": 1167,
+        "end": 1167
       }
     ]
   },
@@ -12367,9 +12711,12 @@
     "lemma": "Rubriensis custodia",
     "previous": "Rubricatus 2",
     "next": "Rubrius",
+    "redirect": "Rubrenses 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1168
+        "start": 1168,
+        "end": 1168
       }
     ]
   },
@@ -12662,7 +13009,7 @@
   {
     "lemma": "Rubrius 27",
     "previous": "Rubrius 26",
-    "next": "Rubune",
+    "next": "Ῥουβούνη",
     "chapters": [
       {
         "start": 1173,
@@ -12671,18 +13018,22 @@
     ]
   },
   {
-    "lemma": "Rubune",
+    "lemma": "Ῥουβούνη",
     "previous": "Rubrius 27",
     "next": "Rubus",
+    "sort_key": "Rubune",
+    "redirect": "Ptolemaios 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1173
+        "start": 1173,
+        "end": 1173
       }
     ]
   },
   {
     "lemma": "Rubus",
-    "previous": "Rubune",
+    "previous": "Ῥουβούνη",
     "next": "Rubustini",
     "chapters": [
       {
@@ -12696,9 +13047,12 @@
     "lemma": "Rubustini",
     "previous": "Rubus",
     "next": "Rucconium",
+    "redirect": "Rubi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1175
+        "start": 1175,
+        "end": 1175
       }
     ]
   },
@@ -12762,9 +13116,12 @@
     "lemma": "Rudae",
     "previous": "Ruda",
     "next": "Ruderichus",
+    "redirect": "Rudiae 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1176
+        "start": 1176,
+        "end": 1176
       }
     ]
   },
@@ -12772,9 +13129,12 @@
     "lemma": "Ruderichus",
     "previous": "Rudae",
     "next": "Ruderit",
+    "redirect": "Ruderit",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1176
+        "start": 1176,
+        "end": 1176
       }
     ]
   },
@@ -13151,7 +13511,7 @@
   {
     "lemma": "Rufinus 6",
     "previous": "Rufinus 5",
-    "next": "Ruphinianai, hai",
+    "next": "Ῥουφινιαναί, αἱ",
     "chapters": [
       {
         "start": 1185,
@@ -13161,18 +13521,22 @@
     ]
   },
   {
-    "lemma": "Ruphinianai, hai",
+    "lemma": "Ῥουφινιαναί, αἱ",
     "previous": "Rufinus 6",
     "next": "Ruphinu",
+    "sort_key": "Ruphinianai, hai",
+    "redirect": "Rufinianae 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1185
+        "start": 1185,
+        "end": 1185
       }
     ]
   },
   {
     "lemma": "Ruphinu",
-    "previous": "Ruphinianai, hai",
+    "previous": "Ῥουφινιαναί, αἱ",
     "next": "Rufinus 7",
     "chapters": [
       {
@@ -13229,6 +13593,7 @@
     "previous": "Rufinus 9",
     "next": "Rufinus 11",
     "proof_read": 3,
+    "wp_link": "w:it:Stazio Rufino",
     "wd_link": "d:Q4441256",
     "chapters": [
       {
@@ -13734,10 +14099,12 @@
     "lemma": "Rufius 10",
     "previous": "Rufius 9",
     "next": "Rufius 11",
-    "redirect": true,
+    "redirect": "Festus 15",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1199
+        "start": 1199,
+        "end": 1199
       }
     ]
   },
@@ -14034,7 +14401,7 @@
     "previous": "Rufus",
     "next": "Rufus 2",
     "sort_key": "Rufus 01",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1204,
@@ -14146,7 +14513,7 @@
     "previous": "Rufus 8",
     "next": "Rufus 10",
     "sort_key": "Rufus 09",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1206,
@@ -14225,7 +14592,7 @@
     "previous": "Rufus 14",
     "next": "Rufus 16",
     "proof_read": 3,
-    "wp_link": "w:de:en:Rufus (consul 457)",
+    "wp_link": "w:en:Rufus (consul 457)",
     "wd_link": "d:Q3655941",
     "chapters": [
       {
@@ -14373,9 +14740,12 @@
     "lemma": "Rugas",
     "previous": "Ruga",
     "next": "Rugi",
+    "redirect": "Ruas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1213
+        "start": 1213,
+        "end": 1213
       }
     ]
   },
@@ -14395,9 +14765,12 @@
     "lemma": "Rugila",
     "previous": "Rugi",
     "next": "Ruginium",
+    "redirect": "Ruas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1223
+        "start": 1223,
+        "end": 1223
       }
     ]
   },
@@ -14567,9 +14940,12 @@
     "lemma": "Rumon 2",
     "previous": "Rumon 1",
     "next": "Rumoridus",
+    "redirect": "Tiberis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1226
+        "start": 1226,
+        "end": 1226
       }
     ]
   },
@@ -14913,9 +15289,12 @@
     "lemma": "Ruscia",
     "previous": "Rusazu",
     "next": "Ruscino 1",
+    "redirect": "Roscianum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1234
+        "start": 1234,
+        "end": 1234
       }
     ]
   },
@@ -14946,9 +15325,12 @@
     "lemma": "Ruscinona",
     "previous": "Ruscino 2",
     "next": "Ruscius Caepio",
+    "redirect": "Rusucmo (?)",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1235
+        "start": 1235,
+        "end": 1235
       }
     ]
   },
@@ -14956,9 +15338,12 @@
     "lemma": "Ruscius Caepio",
     "previous": "Ruscinona",
     "next": "Rusconia",
+    "redirect": "Rustius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1235
+        "start": 1235,
+        "end": 1235
       }
     ]
   },
@@ -14966,9 +15351,12 @@
     "lemma": "Rusconia",
     "previous": "Ruscius Caepio",
     "next": "Ruscus 1",
+    "redirect": "Rusguniae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1235
+        "start": 1235,
+        "end": 1235
       }
     ]
   },
@@ -14976,9 +15364,12 @@
     "lemma": "Ruscus 1",
     "previous": "Rusconia",
     "next": "Ruscus 2",
+    "redirect": "Pinarius 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1235
+        "start": 1235,
+        "end": 1235
       }
     ]
   },
@@ -15054,9 +15445,12 @@
     "lemma": "Rusippisir",
     "previous": "Rusicade",
     "next": "Rusius",
+    "redirect": "Rusubirsir",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1238
+        "start": 1238,
+        "end": 1238
       }
     ]
   },
@@ -15163,9 +15557,12 @@
     "lemma": "Russadir",
     "previous": "Ruspina",
     "next": "Rustica 1",
+    "redirect": "Rusaddir",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1239
+        "start": 1239,
+        "end": 1239
       }
     ]
   },
@@ -15242,7 +15639,7 @@
     "previous": "Rustici",
     "next": "Rusticiana 2",
     "proof_read": 3,
-    "wd_link": "d:Q63346168",
+    "wd_link": "d:Q12292735",
     "chapters": [
       {
         "start": 1240,
@@ -15686,9 +16083,12 @@
     "lemma": "Rustius 6",
     "previous": "Rustius 5",
     "next": "Rustius 7",
+    "redirect": "Marcius 96",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1245
+        "start": 1245,
+        "end": 1245
       }
     ]
   },
@@ -15819,9 +16219,12 @@
     "lemma": "Ruhtusia",
     "previous": "Ruteni",
     "next": "Ruthusia",
+    "redirect": "Rusguniae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1247
+        "start": 1247,
+        "end": 1247
       }
     ]
   },
@@ -15884,7 +16287,7 @@
     "next": "Rutilius 1",
     "sort_key": "Rutilius 0",
     "proof_read": 3,
-    "wp_link": "w:de:Rutilius",
+    "wp_link": "w:de:Rutilier",
     "wd_link": "d:Q11924032",
     "chapters": [
       {
@@ -15998,6 +16401,8 @@
     "next": "Rutilius 9",
     "sort_key": "Rutilius 08",
     "proof_read": 3,
+    "wp_link": "w:es:Publio Rutilio (tribuno de la plebe 169 a. C.)",
+    "wd_link": "d:Q11216672",
     "chapters": [
       {
         "start": 1248,
@@ -16012,6 +16417,8 @@
     "next": "Rutilius 10",
     "sort_key": "Rutilius 09",
     "proof_read": 3,
+    "wp_link": "w:es:Publio Rutilio (tribuno de la plebe 136 a. C.)",
+    "wd_link": "d:Q11214523",
     "chapters": [
       {
         "start": 1248,
@@ -16474,7 +16881,7 @@
     "lemma": "Rutilius 43",
     "previous": "Rutilius 42",
     "next": "Rutilius 44",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1281,
@@ -16535,9 +16942,12 @@
     "lemma": "Rutubis",
     "previous": "Rutuba 2",
     "next": "Rutuli 1",
+    "redirect": "Rusibis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1282
+        "start": 1282,
+        "end": 1282
       }
     ]
   },
@@ -16545,9 +16955,12 @@
     "lemma": "Rutuli 1",
     "previous": "Rutubis",
     "next": "Rutuli 2",
+    "redirect": "Rufuli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1282
+        "start": 1282,
+        "end": 1282
       }
     ]
   },
@@ -16624,7 +17037,7 @@
     "lemma": "Ῥύγχαι",
     "previous": "Ῥυμμικὰ ὄρη",
     "next": "Ῥύγχιον",
-    "sort_key": "Rynchai",
+    "sort_key": "Rygchai",
     "redirect": "Grynchai",
     "proof_read": 3,
     "chapters": [
@@ -16638,7 +17051,7 @@
     "lemma": "Ῥύγχιον",
     "previous": "Ῥύγχαι",
     "next": "Ῥύγχος",
-    "sort_key": "Rynchion",
+    "sort_key": "Rygchion",
     "redirect": "Ῥογκίον",
     "proof_read": 3,
     "chapters": [
@@ -16854,7 +17267,7 @@
     "lemma": "Ranilda",
     "previous": "Ragnaris",
     "next": "Regma 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1293,
@@ -16864,8 +17277,22 @@
     ]
   },
   {
-    "lemma": "Rimphaces",
+    "lemma": "Regma 2",
     "previous": "Ranilda",
+    "next": "Rimphaces",
+    "sort_key": "Regma 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1294,
+        "end": 1294,
+        "author": "Tkáč."
+      }
+    ]
+  },
+  {
+    "lemma": "Rimphaces",
+    "previous": "Regma 2",
     "next": "Rota 12",
     "chapters": [
       {

@@ -286,7 +286,7 @@
     "lemma": "Lysimenes 2",
     "previous": "Lysimenes 1",
     "next": "Lysimenes 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 40,
@@ -625,7 +625,7 @@
     "lemma": "Lysis 1",
     "previous": "Lysippos 9",
     "next": "Lysis 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 64,
@@ -664,7 +664,7 @@
     "lemma": "Lysis 4",
     "previous": "Lysis 3",
     "next": "Lysis 5",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 65,
@@ -677,7 +677,7 @@
     "lemma": "Lysis 5",
     "previous": "Lysis 4",
     "next": "Lysistratos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 65,
@@ -741,7 +741,7 @@
     "previous": "Lysistratos 4",
     "next": "Lysistratos 6",
     "sort_key": "Lysistratos 05",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 65,
@@ -860,7 +860,7 @@
     "lemma": "Lysitheides 3",
     "previous": "Lysitheides 2",
     "next": "Lysitheos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 67,
@@ -923,7 +923,7 @@
     "lemma": "Lysizone",
     "previous": "Lysithoos",
     "next": "Lyson 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 67,
@@ -936,7 +936,7 @@
     "lemma": "Lyson 1",
     "previous": "Lysizone",
     "next": "Lyson 2",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 68,
@@ -967,7 +967,7 @@
     "lemma": "Lyson 3",
     "previous": "Lyson 2",
     "next": "Lyson 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 68,
@@ -1017,7 +1017,7 @@
     "lemma": "Lyssas",
     "previous": "Lyssa",
     "next": "Λυσσόν",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 71,
@@ -1031,7 +1031,7 @@
     "previous": "Lyssas",
     "next": "Lystra",
     "sort_key": "Lysson",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 71,
@@ -1092,11 +1092,11 @@
     "lemma": "Lytarmis",
     "previous": "Lytararizon",
     "next": "Lyterios",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 71,
-        "end": 71,
+        "start": 72,
+        "end": 72,
         "author": "Herrmann."
       }
     ]
@@ -1105,7 +1105,7 @@
     "lemma": "Lyterios",
     "previous": "Lytarmis",
     "next": "Λύτρον",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 72,
@@ -1218,7 +1218,7 @@
   {
     "lemma": "Maanith",
     "previous": "Maamius",
-    "next": "Maapha",
+    "next": "Μααφά",
     "chapters": [
       {
         "start": 92,
@@ -1227,18 +1227,22 @@
     ]
   },
   {
-    "lemma": "Maapha",
+    "lemma": "Μααφά",
     "previous": "Maanith",
     "next": "Maarath",
+    "sort_key": "Maapha",
+    "redirect": "Mizpa, Mizpe 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 92
+        "start": 92,
+        "end": 92
       }
     ]
   },
   {
     "lemma": "Maarath",
-    "previous": "Maapha",
+    "previous": "Μααφά",
     "next": "Maarsares",
     "chapters": [
       {
@@ -1251,9 +1255,13 @@
     "lemma": "Maarsares",
     "previous": "Maarath",
     "next": "Mabartha",
+    "sort_key": "Maarsares",
+    "redirect": "Naarsares",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 92
+        "start": 92,
+        "end": 92
       }
     ]
   },
@@ -1272,9 +1280,12 @@
     "lemma": "Mabog",
     "previous": "Mabartha",
     "next": "Mabsara",
+    "redirect": "Hierapolis 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 93
+        "start": 93,
+        "end": 93
       }
     ]
   },
@@ -1293,9 +1304,12 @@
     "lemma": "Macae",
     "previous": "Mabsara",
     "next": "Macalla",
+    "redirect": "Makai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 93
+        "start": 93,
+        "end": 93
       }
     ]
   },
@@ -1325,9 +1339,12 @@
     "lemma": "Macanitae",
     "previous": "Macameus",
     "next": "Macaraea",
+    "redirect": "Macenites",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 93
+        "start": 93,
+        "end": 93
       }
     ]
   },
@@ -1489,9 +1506,12 @@
     "lemma": "Macatus",
     "previous": "Macarius 13",
     "next": "Macatutae",
+    "redirect": "Livius 24",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 95
+        "start": 95,
+        "end": 95
       }
     ]
   },
@@ -1510,9 +1530,12 @@
     "lemma": "Macchurebi",
     "previous": "Macatutae",
     "next": "Maccius",
+    "redirect": "Makchureboi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 95
+        "start": 95,
+        "end": 95
       }
     ]
   },
@@ -1586,9 +1609,12 @@
     "lemma": "Maceda",
     "previous": "Maccusa",
     "next": "Macedo 1",
+    "redirect": "Makeda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 127
+        "start": 127,
+        "end": 127
       }
     ]
   },
@@ -1794,9 +1820,12 @@
     "lemma": "Macedonius 14",
     "previous": "Macedonius 13",
     "next": "Macellum",
+    "redirect": "Makedonios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 129
+        "start": 129,
+        "end": 129
       }
     ]
   },
@@ -1924,26 +1953,33 @@
   {
     "lemma": "Maces",
     "previous": "Maceria",
-    "next": "Machaberos",
+    "next": "Μαχαβέρως",
+    "redirect": "Makai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 135
+        "start": 135,
+        "end": 135
       }
     ]
   },
   {
-    "lemma": "Machaberos",
+    "lemma": "Μαχαβέρως",
     "previous": "Maces",
     "next": "Machaera",
+    "sort_key": "Machaberos",
+    "redirect": "Machairus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 135
+        "start": 135,
+        "end": 135
       }
     ]
   },
   {
     "lemma": "Machaera",
-    "previous": "Machaberos",
+    "previous": "Μαχαβέρως",
     "next": "Machaireus",
     "chapters": [
       {
@@ -2022,9 +2058,12 @@
     "lemma": "Machalliba",
     "previous": "Machaitegoi",
     "next": "Machameim",
+    "redirect": "Mahelab",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 140
+        "start": 140,
+        "end": 140
       }
     ]
   },
@@ -2043,9 +2082,12 @@
     "lemma": "Machamaeus",
     "previous": "Machameim",
     "next": "Machane Dan",
+    "redirect": "Macameus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 141
+        "start": 141,
+        "end": 141
       }
     ]
   },
@@ -2097,9 +2139,12 @@
     "lemma": "Machanis",
     "previous": "Machanidas",
     "next": "Machanitis",
+    "redirect": "Machaneus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 143
+        "start": 143,
+        "end": 143
       }
     ]
   },
@@ -2151,9 +2196,12 @@
     "lemma": "Macharius",
     "previous": "Machares",
     "next": "Macharon",
+    "redirect": "Macarius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 153
+        "start": 153,
+        "end": 153
       }
     ]
   },
@@ -2216,9 +2264,12 @@
     "lemma": "Machaveron",
     "previous": "Machatas 4",
     "next": "Machbena",
+    "redirect": "Machairus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 153
+        "start": 153,
+        "end": 153
       }
     ]
   },
@@ -2292,9 +2343,12 @@
     "lemma": "Machir",
     "previous": "Machinae",
     "next": "Machlyes, Machryes",
+    "redirect": "Manasse 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 157
+        "start": 157,
+        "end": 157
       }
     ]
   },
@@ -2313,9 +2367,12 @@
     "lemma": "Machmas",
     "previous": "Machlyes, Machryes",
     "next": "Machon",
+    "redirect": "Michmas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 158
+        "start": 158,
+        "end": 158
       }
     ]
   },
@@ -2345,9 +2402,12 @@
     "lemma": "Machorbe",
     "previous": "Machona",
     "next": "Machpela",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 159
+        "start": 159,
+        "end": 159
       }
     ]
   },
@@ -2366,9 +2426,12 @@
     "lemma": "Machures",
     "previous": "Machpela",
     "next": "Machusii",
+    "redirect": "Maccurae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 160
+        "start": 160,
+        "end": 160
       }
     ]
   },
@@ -2376,9 +2439,12 @@
     "lemma": "Machusii",
     "previous": "Machures",
     "next": "Machynoi",
+    "redirect": "Maccurae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 160
+        "start": 160,
+        "end": 160
       }
     ]
   },
@@ -2672,9 +2738,12 @@
     "lemma": "Macrinus 6",
     "previous": "Macrinus 5",
     "next": "Macrinus 7",
+    "redirect": "Pompeius 95",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 168
+        "start": 168,
+        "end": 168
       }
     ]
   },
@@ -2792,9 +2861,12 @@
     "lemma": "Macrobius 5",
     "previous": "Macrobius 4bis",
     "next": "Macrobius 5bis",
+    "redirect": "Longinianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 169
+        "start": 169,
+        "end": 169
       }
     ]
   },
@@ -2802,9 +2874,12 @@
     "lemma": "Macrobius 5bis",
     "previous": "Macrobius 5",
     "next": "Macrobius 6",
+    "redirect": "Maximianus 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 170
+        "start": 170,
+        "end": 170
       }
     ]
   },
@@ -2852,7 +2927,7 @@
     "lemma": "Macrocremnii montes",
     "previous": "Macrocollum",
     "next": "Mactaris",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 199,
@@ -2880,7 +2955,7 @@
     "lemma": "Mactocalingae",
     "previous": "Mactaris",
     "next": "Macua",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 199,
@@ -2893,7 +2968,7 @@
     "lemma": "Macua",
     "previous": "Mactocalingae",
     "next": "Macurebi",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 200,
@@ -2943,7 +3018,7 @@
     "lemma": "Madaena",
     "previous": "Madaba",
     "next": "Madalianus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 200,
@@ -2967,7 +3042,7 @@
     "lemma": "Madarsuma",
     "previous": "Madalianus",
     "next": "Madasara",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 200,
@@ -3039,9 +3114,12 @@
     "lemma": "Madebena",
     "previous": "Madbachos",
     "next": "Madena",
+    "redirect": "Madmanna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
@@ -3049,9 +3127,12 @@
     "lemma": "Madena",
     "previous": "Madebena",
     "next": "Madethubadon",
+    "redirect": "Motene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
@@ -3069,7 +3150,7 @@
   {
     "lemma": "Madia",
     "previous": "Madethubadon",
-    "next": "Madiam 1",
+    "next": "Μαδιάμ 1",
     "chapters": [
       {
         "start": 203,
@@ -3078,19 +3159,23 @@
     ]
   },
   {
-    "lemma": "Madiam 1",
+    "lemma": "Μαδιάμ 1",
     "previous": "Madia",
     "next": "Madiam 2",
+    "sort_key": "Madiam 1",
+    "redirect": "Midian",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
   {
     "lemma": "Madiam 2",
-    "previous": "Madiam 1",
-    "next": "Madiama",
+    "previous": "Μαδιάμ 1",
+    "next": "Μαδιάμα",
     "chapters": [
       {
         "start": 203,
@@ -3099,22 +3184,29 @@
     ]
   },
   {
-    "lemma": "Madiama",
+    "lemma": "Μαδιάμα",
     "previous": "Madiam 2",
     "next": "Madian",
+    "sort_key": "Madiama",
+    "redirect": "Midian",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
   {
     "lemma": "Madian",
-    "previous": "Madiama",
+    "previous": "Μαδιάμα",
     "next": "Madiandynoi",
+    "redirect": "Midian",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
@@ -3133,9 +3225,12 @@
     "lemma": "Madiane",
     "previous": "Madiandynoi",
     "next": "Madis",
+    "redirect": "Midian",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
@@ -3143,9 +3238,12 @@
     "lemma": "Madis",
     "previous": "Madiane",
     "next": "Madmanna",
+    "redirect": "Madytos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
@@ -3208,9 +3306,12 @@
     "lemma": "Madon",
     "previous": "Madoke",
     "next": "Maduateni",
+    "redirect": "Maron 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 204
+        "start": 204,
+        "end": 204
       }
     ]
   },
@@ -3229,9 +3330,12 @@
     "lemma": "Madurus",
     "previous": "Maduateni",
     "next": "Madusius",
+    "redirect": "Madaura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 204
+        "start": 204,
+        "end": 204
       }
     ]
   },
@@ -3349,9 +3453,12 @@
     "lemma": "Maecenas 7",
     "previous": "Maecenas 6",
     "next": "Maecenatis auditorium",
+    "redirect": "Melissus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 229
+        "start": 229,
+        "end": 229
       }
     ]
   },
@@ -3403,9 +3510,12 @@
     "lemma": "Maecianus 3",
     "previous": "Maecianus 2",
     "next": "Maecilius",
+    "redirect": "Volusius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 230
+        "start": 230,
+        "end": 230
       }
     ]
   },
@@ -3435,9 +3545,12 @@
     "lemma": "Maecilius 2",
     "previous": "Maecilius 1",
     "next": "Maecilius 3",
+    "redirect": "Avitianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -3467,9 +3580,12 @@
     "lemma": "Maecilius 5",
     "previous": "Maecilius 4",
     "next": "Maecilius 6",
+    "redirect": "Hilarianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 231
+        "start": 231,
+        "end": 231
       }
     ]
   },
@@ -3576,9 +3692,12 @@
     "lemma": "Maecius 7",
     "previous": "Maecius 6",
     "next": "Maecius 8",
+    "redirect": "Constans 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 235
+        "start": 235,
+        "end": 235
       }
     ]
   },
@@ -3586,9 +3705,12 @@
     "lemma": "Maecius 8",
     "previous": "Maecius 7",
     "next": "Maecius 9",
+    "redirect": "Eggius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 235
+        "start": 235,
+        "end": 235
       }
     ]
   },
@@ -3629,9 +3751,12 @@
     "lemma": "Maecius 12",
     "previous": "Maecius 11",
     "next": "Maecius 13",
+    "redirect": "Gracchus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 235
+        "start": 235,
+        "end": 235
       }
     ]
   },
@@ -3694,9 +3819,12 @@
     "lemma": "Maecius 18",
     "previous": "Maecius 17",
     "next": "Maecius 19",
+    "redirect": "Pomponius 54",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 237
+        "start": 237,
+        "end": 237
       }
     ]
   },
@@ -3726,9 +3854,12 @@
     "lemma": "Maecius 21",
     "previous": "Maecius 20",
     "next": "Maecius 22",
+    "redirect": "Roscius 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 238
+        "start": 238,
+        "end": 238
       }
     ]
   },
@@ -3846,9 +3977,12 @@
     "lemma": "Maenaca",
     "previous": "Maelo",
     "next": "Maenariae",
+    "redirect": "Mainake",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
@@ -3856,9 +3990,12 @@
     "lemma": "Maenariae",
     "previous": "Maenaca",
     "next": "Maenia columna",
+    "redirect": "Menariae insulae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 244
+        "start": 244,
+        "end": 244
       }
     ]
   },
@@ -4141,9 +4278,12 @@
     "lemma": "Maenoba 1",
     "previous": "Maenius 21",
     "next": "Maenoba 2",
+    "redirect": "Mainake",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 253
+        "start": 253,
+        "end": 253
       }
     ]
   },
@@ -4195,10 +4335,12 @@
     "lemma": "Maes",
     "previous": "Märchen",
     "next": "Maesa",
-    "redirect": true,
+    "redirect": "Mais",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 281
+        "start": 281,
+        "end": 281
       }
     ]
   },
@@ -4206,9 +4348,12 @@
     "lemma": "Maesa",
     "previous": "Maes",
     "next": "Maesesses",
+    "redirect": "Iulius 579",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 281
+        "start": 281,
+        "end": 281
       }
     ]
   },
@@ -4260,9 +4405,12 @@
     "lemma": "Maesius 4",
     "previous": "Maesius 3",
     "next": "Maesius 5",
+    "redirect": "Lollianus 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 282
+        "start": 282,
+        "end": 282
       }
     ]
   },
@@ -4446,9 +4594,12 @@
     "lemma": "Mafa",
     "previous": "Maezei",
     "next": "Maforte",
+    "redirect": "Maipha metropolis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 286
+        "start": 286,
+        "end": 286
       }
     ]
   },
@@ -4511,9 +4662,12 @@
     "lemma": "Magadan",
     "previous": "Magada",
     "next": "Magadis",
+    "redirect": "Magdala",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 288
+        "start": 288,
+        "end": 288
       }
     ]
   },
@@ -4532,9 +4686,12 @@
     "lemma": "Magaia",
     "previous": "Magadis",
     "next": "Magaios",
+    "redirect": "Magea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 291
+        "start": 291,
+        "end": 291
       }
     ]
   },
@@ -4542,9 +4699,12 @@
     "lemma": "Magaios",
     "previous": "Magaia",
     "next": "Magalassos",
+    "redirect": "Mosaios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 291
+        "start": 291,
+        "end": 291
       }
     ]
   },
@@ -4618,9 +4778,12 @@
     "lemma": "Magara",
     "previous": "Magantia",
     "next": "Magaratarichon kome",
+    "redirect": "Karthago",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 291
+        "start": 291,
+        "end": 291
       }
     ]
   },
@@ -4705,9 +4868,12 @@
     "lemma": "Magase",
     "previous": "Magas 3",
     "next": "Magasnei",
+    "redirect": "Magassa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 297
+        "start": 297,
+        "end": 297
       }
     ]
   },
@@ -4858,9 +5024,12 @@
     "lemma": "Mageddo",
     "previous": "Magedane",
     "next": "Mageia 1",
+    "redirect": "Megiddo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 301
+        "start": 301,
+        "end": 301
       }
     ]
   },
@@ -4879,9 +5048,12 @@
     "lemma": "Mageia 2",
     "previous": "Mageia 1",
     "next": "Mageiros",
+    "redirect": "Magia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 393
+        "start": 393,
+        "end": 393
       }
     ]
   },
@@ -4900,9 +5072,12 @@
     "lemma": "Magelli",
     "previous": "Mageiros",
     "next": "Magellini",
+    "redirect": "Maielli",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 395
+        "start": 395,
+        "end": 395
       }
     ]
   },
@@ -4910,9 +5085,12 @@
     "lemma": "Magellini",
     "previous": "Magelli",
     "next": "Magesa",
+    "redirect": "Makella",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 396
+        "start": 396,
+        "end": 396
       }
     ]
   },
@@ -4931,9 +5109,12 @@
     "lemma": "Mageth",
     "previous": "Magesa",
     "next": "Magetobriga",
+    "redirect": "Maked",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 396
+        "start": 396,
+        "end": 396
       }
     ]
   },
@@ -4941,9 +5122,12 @@
     "lemma": "Magetobriga",
     "previous": "Mageth",
     "next": "Magi",
+    "redirect": "Admagetobriga",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 396
+        "start": 396,
+        "end": 396
       }
     ]
   },
@@ -5006,9 +5190,12 @@
     "lemma": "Magia 5",
     "previous": "Magia 4",
     "next": "Magianus",
+    "redirect": "Silvanus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 398
+        "start": 398,
+        "end": 398
       }
     ]
   },
@@ -5016,9 +5203,12 @@
     "lemma": "Magianus",
     "previous": "Magia 5",
     "next": "Magiates",
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 398
+        "start": 398,
+        "end": 398
       }
     ]
   },
@@ -5026,9 +5216,12 @@
     "lemma": "Magiates",
     "previous": "Magianus",
     "next": "Magidia",
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 398
+        "start": 398,
+        "end": 398
       }
     ]
   },
@@ -5213,9 +5406,12 @@
     "lemma": "Magister 7",
     "previous": "Magister 6",
     "next": "Magistor",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 400
+        "start": 400,
+        "end": 400
       }
     ]
   },
@@ -5453,9 +5649,12 @@
     "lemma": "Magius 16",
     "previous": "Magius 15",
     "next": "Magius 17",
+    "redirect": "Severianus 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 442
+        "start": 442,
+        "end": 442
       }
     ]
   },
@@ -5518,9 +5717,12 @@
     "lemma": "Magla",
     "previous": "Magius 21",
     "next": "Maglomatonius",
+    "redirect": "Silvanus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 442
+        "start": 442,
+        "end": 442
       }
     ]
   },
@@ -5616,9 +5818,12 @@
     "lemma": "Magna Mater",
     "previous": "Magnalianus, Magnilianus",
     "next": "Magnana",
+    "redirect": "Mater magna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 444
+        "start": 444,
+        "end": 444
       }
     ]
   },
@@ -5758,9 +5963,12 @@
     "lemma": "Magneten",
     "previous": "Magnet",
     "next": "Magneton polis",
+    "redirect": "Magnesia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 486
+        "start": 486,
+        "end": 486
       }
     ]
   },
@@ -5779,9 +5987,12 @@
     "lemma": "Magniacus",
     "previous": "Magneton polis",
     "next": "Magniana",
+    "redirect": "Mercurius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 486
+        "start": 486,
+        "end": 486
       }
     ]
   },
@@ -5911,9 +6122,11 @@
     "previous": "Magnum Promuntorium 1",
     "next": "Magnus 1",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 488
+        "start": 488,
+        "end": 488
       }
     ]
   },
@@ -5943,9 +6156,12 @@
     "lemma": "Magnus 2",
     "previous": "Magnus 1a",
     "next": "Magnus 3",
+    "redirect": "Lukianos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 488
+        "start": 488,
+        "end": 488
       }
     ]
   },
@@ -5975,9 +6191,12 @@
     "lemma": "Magnus 5",
     "previous": "Magnus 4",
     "next": "Magnus 6",
+    "redirect": "Arborius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 488
+        "start": 488,
+        "end": 488
       }
     ]
   },
@@ -6028,9 +6247,12 @@
     "lemma": "Magnus 10",
     "previous": "Magnus 9",
     "next": "Magnus 11",
+    "redirect": "Montius Magnus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 489
+        "start": 489,
+        "end": 489
       }
     ]
   },
@@ -6124,9 +6346,12 @@
     "lemma": "Magnus 19",
     "previous": "Magnus 18",
     "next": "Magnus 20",
+    "redirect": "Censorius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 490
+        "start": 490,
+        "end": 490
       }
     ]
   },
@@ -6321,9 +6546,12 @@
     "lemma": "Magnus portus 3",
     "previous": "Magnus portus 2",
     "next": "Magnus sinus",
+    "redirect": "Portus Magnus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 494
+        "start": 494,
+        "end": 494
       }
     ]
   },
@@ -6532,9 +6760,12 @@
     "lemma": "Magodia",
     "previous": "Magoa",
     "next": "Magog",
+    "redirect": "Simodoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 508
+        "start": 508,
+        "end": 508
       }
     ]
   },
@@ -6613,9 +6844,12 @@
     "lemma": "Magontiacum",
     "previous": "Magonos",
     "next": "Magoras",
+    "redirect": "Mogontiacum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 519
+        "start": 519,
+        "end": 519
       }
     ]
   },
@@ -6711,9 +6945,12 @@
     "lemma": "Magum",
     "previous": "Magulnius",
     "next": "Magur",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 520
+        "start": 520,
+        "end": 520
       }
     ]
   },
@@ -6798,9 +7035,12 @@
     "lemma": "Mahal(inae)",
     "previous": "Magydos",
     "next": "Mahanaim",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 521
+        "start": 521,
+        "end": 521
       }
     ]
   },
@@ -6874,9 +7114,12 @@
     "lemma": "Mahlinehae",
     "previous": "Mahes",
     "next": "Mahlzeiten",
+    "redirect": "Matres",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 524
+        "start": 524,
+        "end": 524
       }
     ]
   },
@@ -7048,9 +7291,12 @@
     "lemma": "Maiandropolis",
     "previous": "Maiandrios 3",
     "next": "Maiandros 1",
+    "redirect": "Maiandrupolis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 535
+        "start": 535,
+        "end": 535
       }
     ]
   },
@@ -7168,9 +7414,12 @@
     "lemma": "Maiesa",
     "previous": "Maielli",
     "next": "Maiesta",
+    "redirect": "Magesa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 542
+        "start": 542,
+        "end": 542
       }
     ]
   },
@@ -7244,9 +7493,12 @@
     "lemma": "Maina 1",
     "previous": "Maimaktes",
     "next": "Maina 2",
+    "redirect": "Makna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 561
+        "start": 561,
+        "end": 561
       }
     ]
   },
@@ -7397,9 +7649,12 @@
     "lemma": "Mainon",
     "previous": "Mainomenos",
     "next": "Maio",
+    "redirect": "Menon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 578
+        "start": 578,
+        "end": 578
       }
     ]
   },
@@ -7509,7 +7764,7 @@
   {
     "lemma": "Maiona",
     "previous": "Maion 6",
-    "next": "Maiones",
+    "next": "Μαίονες",
     "chapters": [
       {
         "start": 582,
@@ -7518,18 +7773,22 @@
     ]
   },
   {
-    "lemma": "Maiones",
+    "lemma": "Μαίονες",
     "previous": "Maiona",
     "next": "Maionia 1",
+    "sort_key": "Maiones",
+    "redirect": "Lydia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 582
+        "start": 582,
+        "end": 582
       }
     ]
   },
   {
     "lemma": "Maionia 1",
-    "previous": "Maiones",
+    "previous": "Μαίονες",
     "next": "Maionia 2",
     "chapters": [
       {
@@ -7586,9 +7845,12 @@
     "lemma": "Maiorica",
     "previous": "Maiorianus 2",
     "next": "Maiorinus 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 590
+        "start": 590,
+        "end": 590
       }
     ]
   },
@@ -7640,9 +7902,12 @@
     "lemma": "Maiozomalcha",
     "previous": "Maiotis 1",
     "next": "Maipa",
+    "redirect": "Maozamalcha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 592
+        "start": 592,
+        "end": 592
       }
     ]
   },
@@ -7881,9 +8146,12 @@
     "lemma": "Maithat",
     "previous": "Maison",
     "next": "Maitona",
+    "redirect": "Maiphath",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 609
+        "start": 609,
+        "end": 609
       }
     ]
   },
@@ -8199,9 +8467,12 @@
     "lemma": "Makaria 8",
     "previous": "Makaria 7",
     "next": "Makaria 9",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 625
+        "start": 625,
+        "end": 625
       }
     ]
   },
@@ -8318,7 +8589,7 @@
   {
     "lemma": "Makas",
     "previous": "Makartatos 3",
-    "next": "Makatutai",
+    "next": "Μακατοῦται",
     "chapters": [
       {
         "start": 635,
@@ -8327,28 +8598,36 @@
     ]
   },
   {
-    "lemma": "Makatutai",
+    "lemma": "Μακατοῦται",
     "previous": "Makas",
-    "next": "Makchida",
+    "next": "Μακχίδα",
+    "sort_key": "Makatutai",
+    "redirect": "Macae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 635
+        "start": 635,
+        "end": 635
       }
     ]
   },
   {
-    "lemma": "Makchida",
-    "previous": "Makatutai",
+    "lemma": "Μακχίδα",
+    "previous": "Μακατοῦται",
     "next": "Makchureboi",
+    "sort_key": "Makchida",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 635
+        "start": 635,
+        "end": 635
       }
     ]
   },
   {
     "lemma": "Makchureboi",
-    "previous": "Makchida",
+    "previous": "Μακχίδα",
     "next": "Maked",
     "chapters": [
       {
@@ -8599,9 +8878,12 @@
     "lemma": "Makephrakta",
     "previous": "Makeloth",
     "next": "Makestos",
+    "redirect": "Macepracta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 773
+        "start": 773,
+        "end": 773
       }
     ]
   },
@@ -8620,9 +8902,12 @@
     "lemma": "Maketa",
     "previous": "Makestos",
     "next": "Maketai, Maketia",
+    "redirect": "Makai 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 773
+        "start": 773,
+        "end": 773
       }
     ]
   },
@@ -8641,9 +8926,12 @@
     "lemma": "Makistia",
     "previous": "Maketai, Maketia",
     "next": "Makistioi",
+    "redirect": "Makiston",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 774
+        "start": 774,
+        "end": 774
       }
     ]
   },
@@ -8651,9 +8939,12 @@
     "lemma": "Makistioi",
     "previous": "Makistia",
     "next": "Makistios",
+    "redirect": "Makiston",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 774
+        "start": 774,
+        "end": 774
       }
     ]
   },
@@ -8694,9 +8985,12 @@
     "lemma": "Makistos 2",
     "previous": "Makistos 1",
     "next": "Makistos 3",
+    "redirect": "Makiston",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 779
+        "start": 779,
+        "end": 779
       }
     ]
   },
@@ -8748,9 +9042,12 @@
     "lemma": "Makkabaioi",
     "previous": "Makkabäerbücher 3",
     "next": "Makkala",
+    "redirect": "Hasmonaeer",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 805
+        "start": 805,
+        "end": 805
       }
     ]
   },
@@ -8780,9 +9077,12 @@
     "lemma": "Makko",
     "previous": "Makkarai",
     "next": "Makkokalingai",
+    "redirect": "Maccus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 806
+        "start": 806,
+        "end": 806
       }
     ]
   },
@@ -8790,9 +9090,12 @@
     "lemma": "Makkokalingai",
     "previous": "Makko",
     "next": "Makkooi",
+    "redirect": "Mactocalingae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 806
+        "start": 806,
+        "end": 806
       }
     ]
   },
@@ -8855,9 +9158,12 @@
     "lemma": "Makoretai",
     "previous": "Makoraba",
     "next": "Makra 1",
+    "redirect": "Mokritai",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 808
+        "start": 808,
+        "end": 808
       }
     ]
   },
@@ -8865,9 +9171,12 @@
     "lemma": "Makra 1",
     "previous": "Makoretai",
     "next": "Makra 2",
+    "redirect": "Makara",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 808
+        "start": 808,
+        "end": 808
       }
     ]
   },
@@ -8897,9 +9206,12 @@
     "lemma": "Makra 4",
     "previous": "Makra 3",
     "next": "Makra kome 1",
+    "redirect": "Macra",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 808
+        "start": 808,
+        "end": 808
       }
     ]
   },
@@ -8961,7 +9273,7 @@
   {
     "lemma": "Makria akra",
     "previous": "Makrele",
-    "next": "Makrinoi",
+    "next": "Μακρινοί",
     "chapters": [
       {
         "start": 814,
@@ -8970,18 +9282,22 @@
     ]
   },
   {
-    "lemma": "Makrinoi",
+    "lemma": "Μακρινοί",
     "previous": "Makria akra",
     "next": "Makris",
+    "sort_key": "Makrinoi",
+    "redirect": "Mariane polis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 814
+        "start": 814,
+        "end": 814
       }
     ]
   },
   {
     "lemma": "Makris",
-    "previous": "Makrinoi",
+    "previous": "Μακρινοί",
     "next": "Makrobioi 1",
     "chapters": [
       {
@@ -9026,7 +9342,7 @@
   {
     "lemma": "Makrokephaloi",
     "previous": "Makrobioi 3",
-    "next": "Makrokremnia ore",
+    "next": "Μακροκρήμνια ὄρη",
     "chapters": [
       {
         "start": 815,
@@ -9035,18 +9351,22 @@
     ]
   },
   {
-    "lemma": "Makrokremnia ore",
+    "lemma": "Μακροκρήμνια ὄρη",
     "previous": "Makrokephaloi",
     "next": "Makrones",
+    "sort_key": "Makrokremnia ore",
+    "redirect": "Macrocremnii montes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 815
+        "start": 815,
+        "end": 815
       }
     ]
   },
   {
     "lemma": "Makrones",
-    "previous": "Makrokremnia ore",
+    "previous": "Μακροκρήμνια ὄρη",
     "next": "Makropedion",
     "chapters": [
       {
@@ -9136,9 +9456,12 @@
     "lemma": "Makyron",
     "previous": "Makyrion",
     "next": "Mal...",
+    "redirect": "Kakyron",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 818
+        "start": 818,
+        "end": 818
       }
     ]
   },
@@ -9212,9 +9535,12 @@
     "lemma": "Malache",
     "previous": "Malachbelos",
     "next": "Malaios",
+    "redirect": "Lamache",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 828
+        "start": 828,
+        "end": 828
       }
     ]
   },
@@ -9244,9 +9570,12 @@
     "lemma": "Malaiu",
     "previous": "Malaita",
     "next": "Malakon",
+    "redirect": "Malene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 828
+        "start": 828,
+        "end": 828
       }
     ]
   },
@@ -9254,9 +9583,12 @@
     "lemma": "Malakon",
     "previous": "Malaiu",
     "next": "Malakos",
+    "redirect": "Lysimachos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 828
+        "start": 828,
+        "end": 828
       }
     ]
   },
@@ -9493,7 +9825,7 @@
   {
     "lemma": "Malchos 4",
     "previous": "Malchos 3",
-    "next": "Malchubioi",
+    "next": "Μαλχούβιοι",
     "chapters": [
       {
         "start": 857,
@@ -9502,22 +9834,29 @@
     ]
   },
   {
-    "lemma": "Malchubioi",
+    "lemma": "Μαλχούβιοι",
     "previous": "Malchos 4",
     "next": "Malchu nesos",
+    "sort_key": "Malchubioi",
+    "redirect": "Marchubi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 858
+        "start": 858,
+        "end": 858
       }
     ]
   },
   {
     "lemma": "Malchu nesos",
-    "previous": "Malchubioi",
+    "previous": "Μαλχούβιοι",
     "next": "Maldra",
+    "redirect": "Malchus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 858
+        "start": 858,
+        "end": 858
       }
     ]
   },
@@ -9612,7 +9951,7 @@
   {
     "lemma": "Malechos",
     "previous": "Malececa",
-    "next": "Maledomnei",
+    "next": "Μαληδομνεί",
     "chapters": [
       {
         "start": 870,
@@ -9621,18 +9960,22 @@
     ]
   },
   {
-    "lemma": "Maledomnei",
+    "lemma": "Μαληδομνεί",
     "previous": "Malechos",
     "next": "Maleficium",
+    "sort_key": "Maledomnei",
+    "redirect": "Eusebios 24",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 870
+        "start": 870,
+        "end": 870
       }
     ]
   },
   {
     "lemma": "Maleficium",
-    "previous": "Maledomnei",
+    "previous": "Μαληδομνεί",
     "next": "Maleiba",
     "chapters": [
       {
@@ -9689,9 +10032,12 @@
     "lemma": "Maleos 2",
     "previous": "Maleos 1",
     "next": "Maleos 3",
+    "redirect": "Malaios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 881
+        "start": 881,
+        "end": 881
       }
     ]
   },
@@ -9699,9 +10045,12 @@
     "lemma": "Maleos 3",
     "previous": "Maleos 2",
     "next": "Maleotes",
+    "redirect": "Malus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 881
+        "start": 881,
+        "end": 881
       }
     ]
   },
@@ -9709,9 +10058,12 @@
     "lemma": "Maleotes",
     "previous": "Maleos 3",
     "next": "Malerei",
+    "redirect": "Maleos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 881
+        "start": 881,
+        "end": 881
       }
     ]
   },
@@ -9741,9 +10093,12 @@
     "lemma": "Maleventum",
     "previous": "Maleros",
     "next": "Maleu kolon",
+    "redirect": "Beneventum 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 898
+        "start": 898,
+        "end": 898
       }
     ]
   },
@@ -9773,9 +10128,12 @@
     "lemma": "Malgis",
     "previous": "Maleus",
     "next": "Mali",
+    "redirect": "Malkitas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 898
+        "start": 898,
+        "end": 898
       }
     ]
   },
@@ -9783,9 +10141,12 @@
     "lemma": "Mali",
     "previous": "Malgis",
     "next": "Malia",
+    "redirect": "Mamali",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 898
+        "start": 898,
+        "end": 898
       }
     ]
   },
@@ -9859,9 +10220,12 @@
     "lemma": "Maliattha",
     "previous": "Maliarpha",
     "next": "Maliba",
+    "redirect": "Malatha",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 899
+        "start": 899,
+        "end": 899
       }
     ]
   },
@@ -9869,9 +10233,12 @@
     "lemma": "Maliba",
     "previous": "Maliattha",
     "next": "Malichai",
+    "redirect": "Maleiba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 899
+        "start": 899,
+        "end": 899
       }
     ]
   },
@@ -9934,9 +10301,12 @@
     "lemma": "Malides",
     "previous": "Malichus",
     "next": "Malier",
+    "redirect": "Maliades",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 900
+        "start": 900,
+        "end": 900
       }
     ]
   },
@@ -10065,9 +10435,12 @@
     "lemma": "Mallaba",
     "previous": "Malla",
     "next": "Mallada",
+    "redirect": "Mallada",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 908
+        "start": 908,
+        "end": 908
       }
     ]
   },
@@ -10317,9 +10690,12 @@
     "lemma": "Mallius 16",
     "previous": "Mallius 15",
     "next": "Mallius 17",
+    "redirect": "Theodoros 70",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 912
+        "start": 912,
+        "end": 912
       }
     ]
   },
@@ -10437,9 +10813,12 @@
     "lemma": "Mallus",
     "previous": "Mallovendus",
     "next": "Malodes",
+    "redirect": "Mallo",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 917
+        "start": 917,
+        "end": 917
       }
     ]
   },
@@ -10458,9 +10837,12 @@
     "lemma": "Maloeis",
     "previous": "Malodes",
     "next": "Maloitas",
+    "redirect": "Maleatas",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 917
+        "start": 917,
+        "end": 917
       }
     ]
   },
@@ -10589,9 +10971,12 @@
     "lemma": "Malta",
     "previous": "Malsonus",
     "next": "Malthaecorae",
+    "redirect": "Melite 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 921
+        "start": 921,
+        "end": 921
       }
     ]
   },
@@ -10654,9 +11039,12 @@
     "lemma": "Malthura",
     "previous": "Malt(h)inus",
     "next": "Maltitae",
+    "redirect": "Mareura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 921
+        "start": 921,
+        "end": 921
       }
     ]
   },
@@ -10686,9 +11074,12 @@
     "lemma": "Maluginensis",
     "previous": "Malve",
     "next": "Maluese",
+    "redirect": "Cornelius 225",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 922
+        "start": 922,
+        "end": 922
       }
     ]
   },
@@ -10794,7 +11185,7 @@
   {
     "lemma": "Mamali",
     "previous": "Mamala",
-    "next": "Mamankia",
+    "next": "Μαμαγκία",
     "chapters": [
       {
         "start": 948,
@@ -10803,28 +11194,36 @@
     ]
   },
   {
-    "lemma": "Mamankia",
+    "lemma": "Μαμαγκία",
     "previous": "Mamali",
-    "next": "Mamantios",
+    "next": "Μαμάντιος",
+    "sort_key": "Mamankia",
+    "redirect": "Hesychios 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 949
+        "start": 949,
+        "end": 949
       }
     ]
   },
   {
-    "lemma": "Mamantios",
-    "previous": "Mamankia",
+    "lemma": "Μαμάντιος",
+    "previous": "Μαμαγκία",
     "next": "Mamarkina",
+    "sort_key": "Mamantios",
+    "redirect": "Mamas 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 949
+        "start": 949,
+        "end": 949
       }
     ]
   },
   {
     "lemma": "Mamarkina",
-    "previous": "Mamantios",
+    "previous": "Μαμάντιος",
     "next": "Mamas 1",
     "chapters": [
       {
@@ -10903,9 +11302,12 @@
     "lemma": "Mambre",
     "previous": "Mambli",
     "next": "Mambri",
+    "redirect": "Mamre",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 949
+        "start": 949,
+        "end": 949
       }
     ]
   },
@@ -10946,9 +11348,12 @@
     "lemma": "Mamechia",
     "previous": "Mamdica",
     "next": "Mamercus 1",
+    "redirect": "Kamechia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 950
+        "start": 950,
+        "end": 950
       }
     ]
   },
@@ -10956,9 +11361,12 @@
     "lemma": "Mamercus 1",
     "previous": "Mamechia",
     "next": "Mamercus 2",
+    "redirect": "Mars 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 950
+        "start": 950,
+        "end": 950
       }
     ]
   },
@@ -11010,9 +11418,12 @@
     "lemma": "Mamers",
     "previous": "Mamerkos 2",
     "next": "Mamersa",
+    "redirect": "Mars 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 951
+        "start": 951,
+        "end": 951
       }
     ]
   },
@@ -11108,9 +11519,12 @@
     "lemma": "Mamertus 1",
     "previous": "Mamertium",
     "next": "Mamertus 2",
+    "redirect": "Mars 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 952
+        "start": 952,
+        "end": 952
       }
     ]
   },
@@ -11129,9 +11543,12 @@
     "lemma": "Mamile",
     "previous": "Mamertus 2",
     "next": "Mamilianus 1",
+    "redirect": "Mannila",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 953
+        "start": 953,
+        "end": 953
       }
     ]
   },
@@ -11457,9 +11874,12 @@
     "lemma": "Mammius 1",
     "previous": "Mammisea tetrarchia",
     "next": "Mammius 2",
+    "redirect": "Mamius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 960
+        "start": 960,
+        "end": 960
       }
     ]
   },
@@ -11522,9 +11942,12 @@
     "lemma": "Mamortha",
     "previous": "Mamopsora",
     "next": "Mampsaroi",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 962
+        "start": 962,
+        "end": 962
       }
     ]
   },
@@ -11598,9 +12021,12 @@
     "lemma": "Mamuralia",
     "previous": "Mamuga",
     "next": "Mamurianus",
+    "redirect": "Mars 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 966
+        "start": 966,
+        "end": 966
       }
     ]
   },
@@ -11740,9 +12166,12 @@
     "lemma": "Mana Genita",
     "previous": "Manaemos 3",
     "next": "Manaichmos",
+    "redirect": "Genita Mana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 968
+        "start": 968,
+        "end": 968
       }
     ]
   },
@@ -11750,9 +12179,12 @@
     "lemma": "Manaichmos",
     "previous": "Mana Genita",
     "next": "Manain",
+    "redirect": "Menaichmos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 969
+        "start": 969,
+        "end": 969
       }
     ]
   },
@@ -11770,7 +12202,7 @@
   {
     "lemma": "Manalis lapis",
     "previous": "Manain",
-    "next": "Manalin",
+    "next": "Μάναλιν",
     "chapters": [
       {
         "start": 969,
@@ -11779,18 +12211,22 @@
     ]
   },
   {
-    "lemma": "Manalin",
+    "lemma": "Μάναλιν",
     "previous": "Manalis lapis",
     "next": "Manalphus",
+    "sort_key": "Manalin",
+    "redirect": "Josephus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 971
+        "start": 971,
+        "end": 971
       }
     ]
   },
   {
     "lemma": "Manalphus",
-    "previous": "Manalin",
+    "previous": "Μάναλιν",
     "next": "Manambis",
     "chapters": [
       {
@@ -11803,9 +12239,12 @@
     "lemma": "Manambis",
     "previous": "Manalphus",
     "next": "Mananalis",
+    "redirect": "Menambis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 971
+        "start": 971,
+        "end": 971
       }
     ]
   },
@@ -11846,9 +12285,12 @@
     "lemma": "Manarmanis portus",
     "previous": "Manapioi",
     "next": "Manasse 1",
+    "redirect": "Mararmanis portus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 972
+        "start": 972,
+        "end": 972
       }
     ]
   },
@@ -11944,9 +12386,12 @@
     "lemma": "Manavia",
     "previous": "Manavi",
     "next": "Manceps",
+    "redirect": "Mona 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 987
+        "start": 987,
+        "end": 987
       }
     ]
   },
@@ -12020,9 +12465,12 @@
     "lemma": "Mancunium",
     "previous": "Mancipatus",
     "next": "Mandaei",
+    "redirect": "Mamucium, Mancunium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1014
+        "start": 1014,
+        "end": 1014
       }
     ]
   },
@@ -12041,9 +12489,12 @@
     "lemma": "Mandaeth",
     "previous": "Mandaei",
     "next": "Mandagara 1",
+    "redirect": "Mandaith",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1014
+        "start": 1014,
+        "end": 1014
       }
     ]
   },
@@ -12150,9 +12601,12 @@
     "lemma": "Mandanis",
     "previous": "Mandane 2",
     "next": "Mandarei",
+    "redirect": "Dandamis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1015
+        "start": 1015,
+        "end": 1015
       }
     ]
   },
@@ -12204,9 +12658,12 @@
     "lemma": "Mandelbaum",
     "previous": "Mandela",
     "next": "Mandi",
+    "redirect": "Ἀμυγδαλῆ",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1025
+        "start": 1025,
+        "end": 1025
       }
     ]
   },
@@ -12269,9 +12726,12 @@
     "lemma": "Mandrabulos",
     "previous": "Mandra 2",
     "next": "Mandragaeum",
+    "redirect": "Mandrobulos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1028
+        "start": 1028,
+        "end": 1028
       }
     ]
   },
@@ -12312,9 +12772,12 @@
     "lemma": "Mandragoritis",
     "previous": "Mandragoras 2",
     "next": "Mandrai",
+    "redirect": "Mandragoras 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1038
+        "start": 1038,
+        "end": 1038
       }
     ]
   },
@@ -12685,10 +13148,12 @@
     "lemma": "Manes 4",
     "previous": "Manes 3",
     "next": "Manesion",
-    "redirect": true,
+    "redirect": "Manicae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1060
+        "start": 1060,
+        "end": 1060
       }
     ]
   },
@@ -12729,9 +13194,12 @@
     "lemma": "Manethon 3",
     "previous": "Manethon 2",
     "next": "Mangentius",
+    "redirect": "Kyphi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1106
+        "start": 1106,
+        "end": 1106
       }
     ]
   },
@@ -12849,9 +13317,12 @@
     "lemma": "Mania 9",
     "previous": "Mania 8",
     "next": "Maniai",
+    "redirect": "Manicae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1111
+        "start": 1111,
+        "end": 1111
       }
     ]
   },
@@ -12892,9 +13363,12 @@
     "lemma": "Maniathe",
     "previous": "Maniana",
     "next": "Manicae",
+    "redirect": "Maanith",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1111
+        "start": 1111,
+        "end": 1111
       }
     ]
   },
@@ -13364,9 +13838,12 @@
     "lemma": "Manipulus",
     "previous": "Manippos",
     "next": "Manitai",
+    "redirect": "Legio 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1146
+        "start": 1146,
+        "end": 1146
       }
     ]
   },
@@ -14660,9 +15137,12 @@
     "lemma": "Manna",
     "previous": "Manlius 108",
     "next": "Mannachius",
+    "redirect": "Mona 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1227
+        "start": 1227,
+        "end": 1227
       }
     ]
   },
@@ -14746,7 +15226,7 @@
   {
     "lemma": "Manninus",
     "previous": "Mannila",
-    "next": "Mannith",
+    "next": "Μαννίθ",
     "chapters": [
       {
         "start": 1228,
@@ -14755,18 +15235,22 @@
     ]
   },
   {
-    "lemma": "Mannith",
+    "lemma": "Μαννίθ",
     "previous": "Manninus",
     "next": "Mannucius",
+    "sort_key": "Mannith",
+    "redirect": "Maanith",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1228
+        "start": 1228,
+        "end": 1228
       }
     ]
   },
   {
     "lemma": "Mannucius",
-    "previous": "Mannith",
+    "previous": "Μαννίθ",
     "next": "Mannus",
     "chapters": [
       {
@@ -14856,9 +15340,12 @@
     "lemma": "Mansa",
     "previous": "Manroballe",
     "next": "Mansio",
+    "redirect": "Mesua",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1231
+        "start": 1231,
+        "end": 1231
       }
     ]
   },
@@ -14888,9 +15375,12 @@
     "lemma": "Mansio Maurianis",
     "previous": "Mansio mala",
     "next": "Mansista",
+    "redirect": "Itinerarien",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1252
+        "start": 1252,
+        "end": 1252
       }
     ]
   },
@@ -14898,9 +15388,12 @@
     "lemma": "Mansista",
     "previous": "Mansio Maurianis",
     "next": "Mansucrinae",
+    "redirect": "Mopsu(h)estia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1252
+        "start": 1252,
+        "end": 1252
       }
     ]
   },
@@ -14908,10 +15401,12 @@
     "lemma": "Mansucrinae",
     "previous": "Mansista",
     "next": "Mansuetae",
-    "redirect": true,
+    "redirect": "Mopsukrene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1252
+        "start": 1252,
+        "end": 1252
       }
     ]
   },
@@ -15084,9 +15579,12 @@
     "lemma": "Manthyrea",
     "previous": "Manthurea",
     "next": "Mantiane limne",
+    "redirect": "Manthurea",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1256
+        "start": 1256,
+        "end": 1256
       }
     ]
   },

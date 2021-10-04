@@ -76,7 +76,7 @@
     "previous": "Libatio",
     "next": "Libba 1",
     "sort_key": "Libaton",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 13,
@@ -271,7 +271,7 @@
     "next": "Liber glossarum",
     "proof_read": 2,
     "wp_link": "w:de:Invektive (Literatur)",
-    "wd_link": "d:Q1663071",
+    "wd_link": "d:Q1054330",
     "chapters": [
       {
         "start": 61,
@@ -659,7 +659,7 @@
     "lemma": "Libistos",
     "previous": "Libisonis Turris",
     "next": "Libitina",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 113,
@@ -762,7 +762,7 @@
     "lemma": "Libo 2",
     "previous": "Libo 1",
     "next": "Libon 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 115,
@@ -788,7 +788,7 @@
     "lemma": "Libon 2",
     "previous": "Libon 1",
     "next": "Libona",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Libon von Elis",
     "wd_link": "d:Q1823070",
     "chapters": [
@@ -901,6 +901,8 @@
     "previous": "Libra 3",
     "next": "Librator 1",
     "proof_read": 2,
+    "wp_link": "w:ca:Librarius",
+    "wd_link": "d:Q97194760",
     "chapters": [
       {
         "start": 137,
@@ -1105,6 +1107,8 @@
     "previous": "Libria",
     "next": "ad Libros",
     "proof_read": 2,
+    "wp_link": "w:it:Libripens",
+    "wd_link": "d:Q1114694",
     "chapters": [
       {
         "start": 140,
@@ -1517,7 +1521,7 @@
     "lemma": "Licates",
     "previous": "Licabrum",
     "next": "Licca",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Likatier",
     "wd_link": "d:Q1824839",
     "chapters": [
@@ -1569,7 +1573,7 @@
     "lemma": "Lichades",
     "previous": "Liceria",
     "next": "Lichas 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 210,
@@ -1641,7 +1645,7 @@
     "lemma": "Licinia atria",
     "previous": "Licini forum",
     "next": "Liciniana",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 213,
@@ -2383,7 +2387,7 @@
     "lemma": "Licinius 55a",
     "previous": "Licinius 55",
     "next": "Licinius 56",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 267,
@@ -2608,6 +2612,8 @@
     "previous": "Licinius 72",
     "next": "Licinius 74",
     "proof_read": 2,
+    "wp_link": "w:en:Marcus Licinius Crassus Frugi (consul 27)",
+    "wd_link": "d:Q1233627",
     "chapters": [
       {
         "start": 338,
@@ -2806,7 +2812,7 @@
     "previous": "Licinius 90",
     "next": "Licinius 92",
     "sort_key": "Licinius 091",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 371,
@@ -2934,7 +2940,7 @@
     "previous": "Licinius 99ff.",
     "next": "Licinius 100",
     "sort_key": "Licinius 099",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 372,
@@ -2947,7 +2953,7 @@
     "lemma": "Licinius 100",
     "previous": "Licinius 99",
     "next": "Licinius 101",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 373,
@@ -2960,7 +2966,7 @@
     "lemma": "Licinius 101",
     "previous": "Licinius 100",
     "next": "Licinius 102",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 373,
@@ -3013,8 +3019,8 @@
     "lemma": "Licinius 105",
     "previous": "Licinius 104",
     "next": "Licinius 106",
-    "redirect": true,
-    "proof_read": 2,
+    "redirect": "Cassius 40",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 414,
@@ -3416,7 +3422,7 @@
     "lemma": "Licinius 138",
     "previous": "Licinius 137",
     "next": "Licinius 139",
-    "proof_read": 2,
+    "proof_read": 3,
     "wp_link": "w:de:Aulus Licinius Nerva Silianus (Konsul 65)",
     "wd_link": "d:Q533877",
     "chapters": [
@@ -4189,9 +4195,12 @@
     "lemma": "Licinnius",
     "previous": "Licinius 204",
     "next": "Licinus",
+    "redirect": "Licinius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 501
+        "start": 501,
+        "end": 501
       }
     ]
   },
@@ -4313,9 +4322,12 @@
     "lemma": "Licus",
     "previous": "Lictor",
     "next": "Lidbir",
+    "redirect": "Lakkoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 518
+        "start": 518,
+        "end": 518
       }
     ]
   },
@@ -4481,9 +4493,12 @@
     "lemma": "Ligii",
     "previous": "Liger",
     "next": "Lignarius",
+    "redirect": "Lugii",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 524
+        "start": 524,
+        "end": 524
       }
     ]
   },
@@ -4524,9 +4539,12 @@
     "lemma": "Ligula 1",
     "previous": "Ligo",
     "next": "Ligula 2",
+    "redirect": "Löffel",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 525
+        "start": 525,
+        "end": 525
       }
     ]
   },
@@ -4647,7 +4665,7 @@
   {
     "lemma": "Ligynae",
     "previous": "Ligyer",
-    "next": "Likatioi",
+    "next": "Λικάτιοι",
     "chapters": [
       {
         "start": 535,
@@ -4656,22 +4674,30 @@
     ]
   },
   {
-    "lemma": "Likatioi",
+    "lemma": "Λικάτιοι",
     "previous": "Ligynae",
     "next": "Λικάττιοι",
+    "sort_key": "Likatioi",
+    "redirect": "Ptolemaios 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 536
+        "start": 536,
+        "end": 536
       }
     ]
   },
   {
     "lemma": "Λικάττιοι",
-    "previous": "Likatioi",
+    "previous": "Λικάτιοι",
     "next": "Λικίας",
+    "sort_key": "Likattioi",
+    "redirect": "Strabon 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 536
+        "start": 536,
+        "end": 536
       }
     ]
   },
@@ -4695,9 +4721,12 @@
     "lemma": "Likineia",
     "previous": "Λικίας",
     "next": "Likmaie",
+    "redirect": "Ekineia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 536
+        "start": 536,
+        "end": 536
       }
     ]
   },
@@ -4761,6 +4790,8 @@
     "previous": "Likymnia",
     "next": "Lilaia",
     "proof_read": 2,
+    "wp_link": "w:de:Likymnios von Chios",
+    "wd_link": "d:Q3238134",
     "chapters": [
       {
         "start": 541,
@@ -4788,7 +4819,7 @@
     "lemma": "Lilaios",
     "previous": "Lilaia",
     "next": "Lilium",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 542,
@@ -4926,9 +4957,12 @@
     "lemma": "Limene",
     "previous": "Limenarches",
     "next": "Limeneia",
+    "redirect": "Lemannus lacus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 570
+        "start": 570,
+        "end": 570
       }
     ]
   },
@@ -5046,9 +5080,12 @@
     "lemma": "Limenormites",
     "previous": "Limenius 2",
     "next": "Limenoskopos",
+    "redirect": "Anthologia 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 571
+        "start": 571,
+        "end": 571
       }
     ]
   },
@@ -5199,9 +5236,12 @@
     "lemma": "Limnai 3",
     "previous": "Limnai 2",
     "next": "Limnai 4",
+    "redirect": "Sparta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 706
+        "start": 706,
+        "end": 706
       }
     ]
   },
@@ -5461,9 +5501,12 @@
     "lemma": "Limonum",
     "previous": "Limon",
     "next": "Limopoios",
+    "redirect": "Lemonum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 710
+        "start": 710,
+        "end": 710
       }
     ]
   },
@@ -5526,9 +5569,12 @@
     "lemma": "Linax",
     "previous": "Limyros",
     "next": "Lince",
+    "redirect": "Zenas 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 712
+        "start": 712,
+        "end": 712
       }
     ]
   },
@@ -5602,9 +5648,12 @@
     "lemma": "Lindos 3",
     "previous": "Lindos 2",
     "next": "Lindum 1",
+    "redirect": "Rhodos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 713
+        "start": 713,
+        "end": 713
       }
     ]
   },
@@ -5634,9 +5683,12 @@
     "lemma": "Line-a",
     "previous": "Lindum 2",
     "next": "Lineojugla",
+    "redirect": "Creta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 714
+        "start": 714,
+        "end": 714
       }
     ]
   },
@@ -5688,9 +5740,12 @@
     "lemma": "Lingos 1",
     "previous": "Lingones",
     "next": "Lingos 2",
+    "redirect": "Lynkos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 715
+        "start": 715,
+        "end": 715
       }
     ]
   },
@@ -5801,9 +5856,12 @@
     "lemma": "Linteum",
     "previous": "Linter",
     "next": "Linthuma",
+    "redirect": "Flachs",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 718
+        "start": 718,
+        "end": 718
       }
     ]
   },
@@ -5833,9 +5891,12 @@
     "lemma": "Linum",
     "previous": "Lintomagus",
     "next": "Linus",
+    "redirect": "Flachs",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 718
+        "start": 718,
+        "end": 718
       }
     ]
   },
@@ -6063,9 +6124,12 @@
     "lemma": "Lirnyteia",
     "previous": "Liris",
     "next": "Lis",
+    "redirect": "Lyrnessos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 729
+        "start": 729,
+        "end": 729
       }
     ]
   },
@@ -6128,9 +6192,12 @@
     "lemma": "Lisinae",
     "previous": "Lisia 2",
     "next": "Lisinius",
+    "redirect": "Ligynae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 730
+        "start": 730,
+        "end": 730
       }
     ]
   },
@@ -6149,16 +6216,19 @@
     "lemma": "Lisius",
     "previous": "Lisinius",
     "next": "Lisos",
+    "redirect": "Lysias 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 730
+        "start": 730,
+        "end": 730
       }
     ]
   },
   {
     "lemma": "Lisos",
     "previous": "Lisius",
-    "next": "Lissa 1",
+    "next": "Λίσσα 1",
     "chapters": [
       {
         "start": 730,
@@ -6167,18 +6237,22 @@
     ]
   },
   {
-    "lemma": "Lissa 1",
+    "lemma": "Λίσσα 1",
     "previous": "Lisos",
     "next": "Lissa 2",
+    "sort_key": "Lissa 1",
+    "redirect": "Lisos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 730
+        "start": 730,
+        "end": 730
       }
     ]
   },
   {
     "lemma": "Lissa 2",
-    "previous": "Lissa 1",
+    "previous": "Λίσσα 1",
     "next": "Lissa 3",
     "chapters": [
       {
@@ -6212,7 +6286,7 @@
   {
     "lemma": "Lissen",
     "previous": "Lissae",
-    "next": "Lisseus",
+    "next": "Λισσεύς",
     "chapters": [
       {
         "start": 731,
@@ -6221,32 +6295,43 @@
     ]
   },
   {
-    "lemma": "Lisseus",
+    "lemma": "Λισσεύς",
     "previous": "Lissen",
-    "next": "Lissios",
+    "next": "Λίσσιος",
+    "sort_key": "Lisseus",
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 731
+        "start": 731,
+        "end": 731
       }
     ]
   },
   {
-    "lemma": "Lissios",
-    "previous": "Lisseus",
+    "lemma": "Λίσσιος",
+    "previous": "Λισσεύς",
     "next": "Lisson",
+    "sort_key": "Lissios",
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 731
+        "start": 731,
+        "end": 731
       }
     ]
   },
   {
     "lemma": "Lisson",
-    "previous": "Lissios",
+    "previous": "Λίσσιος",
     "next": "Lissos 1",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 731
+        "start": 731,
+        "end": 731
       }
     ]
   },
@@ -6287,9 +6372,12 @@
     "lemma": "Lissum",
     "previous": "Lissos 3",
     "next": "Lista",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 737
+        "start": 737,
+        "end": 737
       }
     ]
   },
@@ -6330,9 +6418,12 @@
     "lemma": "Litabrum",
     "previous": "Listria",
     "next": "Litai",
+    "redirect": "Licabrum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 737
+        "start": 737,
+        "end": 737
       }
     ]
   },
@@ -6351,9 +6442,12 @@
     "lemma": "Litaiai",
     "previous": "Litai",
     "next": "Litaios",
+    "redirect": "Stephanos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 738
+        "start": 738,
+        "end": 738
       }
     ]
   },
@@ -6471,9 +6565,12 @@
     "lemma": "Literae principis",
     "previous": "Litenno",
     "next": "Literata",
+    "redirect": "Epistula 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 743
+        "start": 743,
+        "end": 743
       }
     ]
   },
@@ -6481,9 +6578,12 @@
     "lemma": "Literata",
     "previous": "Literae principis",
     "next": "Literator, literatura, literatus",
+    "redirect": "Prokopios 21",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 743
+        "start": 743,
+        "end": 743
       }
     ]
   },
@@ -6502,9 +6602,12 @@
     "lemma": "Literna palus",
     "previous": "Literator, literatura, literatus",
     "next": "Liternius",
+    "redirect": "Liternum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 746
+        "start": 746,
+        "end": 746
       }
     ]
   },
@@ -6534,9 +6637,12 @@
     "lemma": "Liternus amnis",
     "previous": "Liternum",
     "next": "Liteus",
+    "redirect": "Liternum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 747
+        "start": 747,
+        "end": 747
       }
     ]
   },
@@ -6676,9 +6782,12 @@
     "lemma": "Liticiani",
     "previous": "Liticen",
     "next": "Litinomagus",
+    "redirect": "Laeti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 776
+        "start": 776,
+        "end": 776
       }
     ]
   },
@@ -6697,9 +6806,12 @@
     "lemma": "Litis aestimatio 1",
     "previous": "Litinomagus",
     "next": "Litis aestimatio 2",
+    "redirect": "Aestimatio litis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 776
+        "start": 776,
+        "end": 776
       }
     ]
   },
@@ -6707,9 +6819,12 @@
     "lemma": "Litis aestimatio 2",
     "previous": "Litis aestimatio 1",
     "next": "Litis contestatio",
+    "redirect": "Aestimatio litis 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 776
+        "start": 776,
+        "end": 776
       }
     ]
   },
@@ -6900,9 +7015,12 @@
     "lemma": "Liviada",
     "previous": "Lityerses 2",
     "next": "Liviana 1",
+    "redirect": "Libias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 807
+        "start": 807,
+        "end": 807
       }
     ]
   },
@@ -7197,7 +7315,7 @@
     "previous": "Livius 13",
     "next": "Livius 15",
     "proof_read": 2,
-    "wp_link": "w:en:Gaius Livius Drusus (consul)",
+    "wp_link": "w:de:Gaius Livius Drusus (Konsul)",
     "wd_link": "d:Q1270114",
     "chapters": [
       {
@@ -7213,7 +7331,7 @@
     "next": "Livius 16",
     "proof_read": 2,
     "wp_link": "w:de:Gaius Livius Drusus (Jurist)",
-    "wd_link": "d:Q22670462",
+    "wd_link": "d:Q20002267",
     "chapters": [
       {
         "start": 855,
@@ -7492,6 +7610,7 @@
     "previous": "Livius 38",
     "next": "Livius 40",
     "proof_read": 3,
+    "wd_link": "d:Q107217985",
     "chapters": [
       {
         "start": 927,
@@ -7548,9 +7667,12 @@
     "lemma": "Livorin",
     "previous": "Livius pagus",
     "next": "Livvirit",
+    "redirect": "Ravennas Geographus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 928
+        "start": 928,
+        "end": 928
       }
     ]
   },
@@ -7591,9 +7713,12 @@
     "lemma": "Lixus 1",
     "previous": "Lixa",
     "next": "Lixus 2",
+    "redirect": "Lix",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 930
+        "start": 930,
+        "end": 930
       }
     ]
   },
@@ -7623,9 +7748,12 @@
     "lemma": "Lobana",
     "previous": "Loantius",
     "next": "Lobda",
+    "redirect": "Libna 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 931
+        "start": 931,
+        "end": 931
       }
     ]
   },
@@ -7633,9 +7761,12 @@
     "lemma": "Lobda",
     "previous": "Lobana",
     "next": "Lobetani",
+    "redirect": "Libna 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 931
+        "start": 931,
+        "end": 931
       }
     ]
   },
@@ -7654,9 +7785,12 @@
     "lemma": "Lobna",
     "previous": "Lobetani",
     "next": "Lobon",
+    "redirect": "Libna 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 931
+        "start": 931,
+        "end": 931
       }
     ]
   },
@@ -7708,9 +7842,12 @@
     "lemma": "Loca",
     "previous": "Lobrinion",
     "next": "Locanus",
+    "redirect": "Locus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 933
+        "start": 933,
+        "end": 933
       }
     ]
   },
@@ -7718,9 +7855,12 @@
     "lemma": "Locanus",
     "previous": "Loca",
     "next": "Locatio",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 933
+        "start": 933,
+        "end": 933
       }
     ]
   },
@@ -7818,9 +7958,12 @@
     "lemma": "Lochos 1",
     "previous": "Lochias",
     "next": "Lochos 2",
+    "redirect": "Lochagos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 946
+        "start": 946,
+        "end": 946
       }
     ]
   },
@@ -7938,9 +8081,12 @@
     "lemma": "Locusta",
     "previous": "Locus",
     "next": "Locutius",
+    "redirect": "Lucusta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 964
+        "start": 964,
+        "end": 964
       }
     ]
   },
@@ -7959,9 +8105,12 @@
     "lemma": "Lod",
     "previous": "Locutius",
     "next": "Lodabar",
+    "redirect": "Lydda",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 965
+        "start": 965,
+        "end": 965
       }
     ]
   },
@@ -7969,9 +8118,12 @@
     "lemma": "Lodabar",
     "previous": "Lod",
     "next": "Lodone",
+    "redirect": "Lidbir",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 965
+        "start": 965,
+        "end": 965
       }
     ]
   },
@@ -8103,9 +8255,12 @@
     "lemma": "Logeion",
     "previous": "Logbasis",
     "next": "Logeutes",
+    "redirect": "Skene",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 990
+        "start": 990,
+        "end": 990
       }
     ]
   },
@@ -8256,9 +8411,12 @@
     "lemma": "Loidias",
     "previous": "Logothetes",
     "next": "Loidoria",
+    "redirect": "Roedias",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1081
+        "start": 1081,
+        "end": 1081
       }
     ]
   },
@@ -8299,9 +8457,12 @@
     "lemma": "Loisius",
     "previous": "Loïos, Loos",
     "next": "Loitanos",
+    "redirect": "Loesius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1083
+        "start": 1083,
+        "end": 1083
       }
     ]
   },
@@ -8309,9 +8470,12 @@
     "lemma": "Loitanos",
     "previous": "Loisius",
     "next": "Loium",
+    "redirect": "Longanos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1083
+        "start": 1083,
+        "end": 1083
       }
     ]
   },
@@ -8395,7 +8559,7 @@
   {
     "lemma": "Lokria 2",
     "previous": "Lokria 1",
-    "next": "Lokrika asmata",
+    "next": "Λοκρικὰ ᾄσματα",
     "chapters": [
       {
         "start": 1134,
@@ -8404,18 +8568,22 @@
     ]
   },
   {
-    "lemma": "Lokrika asmata",
+    "lemma": "Λοκρικὰ ᾄσματα",
     "previous": "Lokria 2",
     "next": "Lokrion",
+    "sort_key": "Lokrika asmata",
+    "redirect": "Lokris 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1135
+        "start": 1135,
+        "end": 1135
       }
     ]
   },
   {
     "lemma": "Lokrion",
-    "previous": "Lokrika asmata",
+    "previous": "Λοκρικὰ ᾄσματα",
     "next": "Lokris 1",
     "chapters": [
       {
@@ -8440,7 +8608,7 @@
     "lemma": "Lokris 2",
     "previous": "Lokris 1",
     "next": "Litra",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1288,

@@ -47,10 +47,12 @@
     "lemma": "Pyrandros",
     "previous": "Pyramos 4",
     "next": "Pyrante, Pyrantis",
-    "redirect": true,
+    "redirect": "Pyrrhandros 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 11
+        "start": 11,
+        "end": 11
       }
     ]
   },
@@ -125,10 +127,12 @@
     "lemma": "Pyrenaei montes",
     "previous": "Pyremos",
     "next": "Pyrenaei portus",
-    "redirect": true,
+    "redirect": "Pyrene 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 12
+        "start": 12,
+        "end": 12
       }
     ]
   },
@@ -328,10 +332,12 @@
     "lemma": "Pyrgi",
     "previous": "Pyrgeus",
     "next": "Pyrgion 1",
-    "redirect": true,
+    "redirect": "Pyrgoi 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 22
+        "start": 22,
+        "end": 22
       }
     ]
   },
@@ -578,7 +584,7 @@
     "lemma": "Pyrgoteles 2",
     "previous": "Pyrgoteles 1",
     "next": "Pyrgoteles 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 49,
@@ -978,9 +984,12 @@
     "lemma": "Pyroessa",
     "previous": "Pyroeis 4",
     "next": "Pyrogenes",
+    "redirect": "Pyroeis 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 73
+        "start": 73,
+        "end": 73
       }
     ]
   },
@@ -988,9 +997,12 @@
     "lemma": "Pyrogenes",
     "previous": "Pyroessa",
     "next": "Pyrogeri",
+    "redirect": "Pyrigenes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 73
+        "start": 73,
+        "end": 73
       }
     ]
   },
@@ -1053,9 +1065,12 @@
     "lemma": "Pyrophoroi",
     "previous": "Pyronia",
     "next": "Pyropum",
+    "redirect": "Pyrphoroi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 73
+        "start": 73,
+        "end": 73
       }
     ]
   },
@@ -1075,9 +1090,12 @@
     "lemma": "Pyros",
     "previous": "Pyropum",
     "next": "Pyrphoroi",
+    "redirect": "Pyrrhos 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 75
+        "start": 75,
+        "end": 75
       }
     ]
   },
@@ -1109,9 +1127,12 @@
     "lemma": "Pyrphoros 2",
     "previous": "Pyrphoros 1",
     "next": "Pyrphoros 3",
+    "redirect": "Prometheus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 77
+        "start": 77,
+        "end": 77
       }
     ]
   },
@@ -1119,9 +1140,13 @@
     "lemma": "Pyrphoros 3",
     "previous": "Pyrphoros 2",
     "next": "Pyrrha 1",
+    "redirect": "Pyroeis 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 77
+        "start": 77,
+        "end": 77,
+        "author": "Hans v. Geisau."
       }
     ]
   },
@@ -1488,9 +1513,12 @@
     "lemma": "Pyrrhias",
     "previous": "Pyrrhia",
     "next": "Pyrrhias Cyon",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 83
+        "start": 83,
+        "end": 83
       }
     ]
   },
@@ -1520,9 +1548,12 @@
     "lemma": "Pyrrhiche",
     "previous": "Pyrrhichai bous",
     "next": "Pyrrhichos 1",
+    "redirect": "Pyrrhichos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 83
+        "start": 83,
+        "end": 83
       }
     ]
   },
@@ -1608,9 +1639,12 @@
     "lemma": "Pyrrhion",
     "previous": "Pyrrhine",
     "next": "Pyrrhon oros",
+    "redirect": "Pyrgion 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 87
+        "start": 87,
+        "end": 87
       }
     ]
   },
@@ -1889,9 +1923,12 @@
     "lemma": "Pyrrhos 19-20",
     "previous": "Pyrrhos 18",
     "next": "Pyrsanides",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 170
+        "start": 170,
+        "end": 170
       }
     ]
   },
@@ -2202,7 +2239,7 @@
   {
     "lemma": "Pythangelos 3",
     "previous": "Pythangelos 2",
-    "next": "Pythangelou bomoi",
+    "next": "Πυθαγγέλου βωμοί",
     "chapters": [
       {
         "start": 309,
@@ -2211,18 +2248,22 @@
     ]
   },
   {
-    "lemma": "Pythangelou bomoi",
+    "lemma": "Πυθαγγέλου βωμοί",
     "previous": "Pythangelos 3",
     "next": "Pythangelou kynegion",
+    "sort_key": "Pythangelou bomoi",
+    "redirect": "Pythangelou kynegion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 309
+        "start": 309,
+        "end": 309
       }
     ]
   },
   {
     "lemma": "Pythangelou kynegion",
-    "previous": "Pythangelou bomoi",
+    "previous": "Πυθαγγέλου βωμοί",
     "next": "Pythangelou limen",
     "chapters": [
       {
@@ -2270,9 +2311,12 @@
     "lemma": "Pytharchos 1-2",
     "previous": "Pytharatos 2",
     "next": "Pytheas 1",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 314
+        "start": 314,
+        "end": 314
       }
     ]
   },
@@ -2428,7 +2472,7 @@
     "lemma": "Pytheas 14",
     "previous": "Pytheas 13",
     "next": "Pythen",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 370,
@@ -2881,9 +2925,11 @@
     "previous": "Pythion PN 1",
     "next": "Pythionike",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 563
+        "start": 563,
+        "end": 563
       }
     ]
   },
@@ -2985,7 +3031,7 @@
   {
     "lemma": "Pythis 2",
     "previous": "Pythis 1",
-    "next": "Pythis akra",
+    "next": "Πυθὶς ἄκρα",
     "chapters": [
       {
         "start": 569,
@@ -2994,19 +3040,22 @@
     ]
   },
   {
-    "lemma": "Pythis akra",
+    "lemma": "Πυθὶς ἄκρα",
     "previous": "Pythis 2",
     "next": "Pytho 1",
+    "sort_key": "Pythis akra",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 569
+        "start": 569,
+        "end": 569
       }
     ]
   },
   {
     "lemma": "Pytho 1",
-    "previous": "Pythis akra",
+    "previous": "Πυθὶς ἄκρα",
     "next": "Pytho 2",
     "chapters": [
       {
@@ -3075,9 +3124,12 @@
     "lemma": "Pythodemos",
     "previous": "Pythodelos",
     "next": "Pythodikos",
+    "redirect": "Pythodelos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 580
+        "start": 580,
+        "end": 580
       }
     ]
   },
@@ -3417,7 +3469,7 @@
   {
     "lemma": "Pythoios 1",
     "previous": "Pythogenes",
-    "next": "Pythoios 2",
+    "next": "Πυθοῖος 2",
     "chapters": [
       {
         "start": 599,
@@ -3426,18 +3478,22 @@
     ]
   },
   {
-    "lemma": "Pythoios 2",
+    "lemma": "Πυθοῖος 2",
     "previous": "Pythoios 1",
     "next": "Pythokleides",
+    "sort_key": "Pythoios 2",
+    "redirect": "Pythios 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 599
+        "start": 599,
+        "end": 599
       }
     ]
   },
   {
     "lemma": "Pythokleides",
-    "previous": "Pythoios 2",
+    "previous": "Πυθοῖος 2",
     "next": "Pythokles 1",
     "chapters": [
       {
@@ -3651,7 +3707,7 @@
   {
     "lemma": "Pytholaou bomoi",
     "previous": "Pytholaou akroterion",
-    "next": "Pytholaou stelai",
+    "next": "Πυθολάου στῆλαι",
     "chapters": [
       {
         "start": 604,
@@ -3661,18 +3717,22 @@
     ]
   },
   {
-    "lemma": "Pytholaou stelai",
+    "lemma": "Πυθολάου στῆλαι",
     "previous": "Pytholaou bomoi",
     "next": "Pytholetas",
+    "sort_key": "Pytholaou stelai",
+    "redirect": "Pytholaou bomoi",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 606
+        "start": 606,
+        "end": 606
       }
     ]
   },
   {
     "lemma": "Pytholetas",
-    "previous": "Pytholaou stelai",
+    "previous": "Πυθολάου στῆλαι",
     "next": "Pythomantis",
     "chapters": [
       {
@@ -4000,9 +4060,12 @@
     "lemma": "Pytna",
     "previous": "Pythus",
     "next": "Pyttalos",
+    "redirect": "Hierapytna",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 618
+        "start": 618,
+        "end": 618
       }
     ]
   },
@@ -4078,9 +4141,12 @@
     "lemma": "Pyxus",
     "previous": "Pyxurates",
     "next": "Q als Sigle",
+    "redirect": "Buxentum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 620
+        "start": 620,
+        "end": 620
       }
     ]
   },
@@ -4193,9 +4259,12 @@
     "lemma": "Quadranta",
     "previous": "quadrans",
     "next": "quadrantal",
+    "redirect": "Itinerarien",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 667
+        "start": 667,
+        "end": 667
       }
     ]
   },
@@ -4429,10 +4498,12 @@
     "lemma": "Quadratus 10",
     "previous": "Quadratus 9",
     "next": "Quadriburgium 1",
-    "redirect": true,
+    "redirect": "Ninnius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 678
+        "start": 678,
+        "end": 678
       }
     ]
   },
@@ -4509,9 +4580,12 @@
     "lemma": "Quadrigarius",
     "previous": "Quadriga",
     "next": "Quadrigatus",
+    "redirect": "Claudius 308",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 686
+        "start": 686,
+        "end": 686
       }
     ]
   },
@@ -4536,9 +4610,12 @@
     "lemma": "Quadriviae",
     "previous": "Quadrigatus",
     "next": "quadrunx, quatrunx",
+    "redirect": "Quadruviae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 708
+        "start": 708,
+        "end": 708
       }
     ]
   },
@@ -4675,9 +4752,12 @@
     "lemma": "quaestorium",
     "previous": "quaestor",
     "next": "quaestorius 1",
+    "redirect": "quaestor",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 827
+        "start": 827,
+        "end": 827
       }
     ]
   },
@@ -4718,9 +4798,12 @@
     "lemma": "qualesquales",
     "previous": "quaestura",
     "next": "Quariates/Quadiates",
+    "redirect": "Vulgares",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 827
+        "start": 827,
+        "end": 827
       }
     ]
   },
@@ -4914,9 +4997,12 @@
     "lemma": "quattuordecim ordines",
     "previous": "quaternio 2",
     "next": "quattuorviri",
+    "redirect": "Roscius 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 849
+        "start": 849,
+        "end": 849
       }
     ]
   },
@@ -4936,9 +5022,12 @@
     "lemma": "quercus",
     "previous": "quattuorviri",
     "next": "querela (querella)",
+    "redirect": "Eiche",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 857
+        "start": 857,
+        "end": 857
       }
     ]
   },
@@ -4981,9 +5070,12 @@
     "lemma": "Querquerni",
     "previous": "Querolus",
     "next": "Querquetulanae",
+    "redirect": "Quarquerni",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 872
+        "start": 872,
+        "end": 872
       }
     ]
   },
@@ -5114,9 +5206,12 @@
     "lemma": "Quietus",
     "previous": "Quietalis",
     "next": "Quietus 1",
+    "redirect": "Avidius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 879
+        "start": 879,
+        "end": 879
       }
     ]
   },
@@ -5294,9 +5389,12 @@
     "lemma": "Quinctilius 10a",
     "previous": "Quinctilius 10",
     "next": "Quinctilius 11",
+    "redirect": "Quinctilius 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 903
+        "start": 903,
+        "end": 903
       }
     ]
   },
@@ -6542,9 +6640,12 @@
     "lemma": "Quinda",
     "previous": "quincussis",
     "next": "Quindecimviri 1",
+    "redirect": "Anazarba",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1114
+        "start": 1114,
+        "end": 1114
       }
     ]
   },
@@ -6971,10 +7072,12 @@
     "lemma": "Quintilianus 6",
     "previous": "Quintilianus 5",
     "next": "Quintilius",
-    "redirect": true,
+    "redirect": "Aristeides 25",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1268
+        "start": 1268,
+        "end": 1268
       }
     ]
   },
@@ -6982,10 +7085,12 @@
     "lemma": "Quintilius",
     "previous": "Quintilianus 6",
     "next": "Quintilla",
-    "redirect": true,
+    "redirect": "Quinctilius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1268
+        "start": 1268,
+        "end": 1268
       }
     ]
   },
@@ -7185,10 +7290,12 @@
     "lemma": "Quirinalia",
     "previous": "Quiriacus",
     "next": "Quirinalis collis",
-    "redirect": true,
+    "redirect": "Quirinus 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1296
+        "start": 1296,
+        "end": 1296
       }
     ]
   },
@@ -7208,10 +7315,12 @@
     "lemma": "Quirina tribus",
     "previous": "Quirinalis collis",
     "next": "Quirinius",
-    "redirect": true,
+    "redirect": "Tribus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1296
+        "start": 1296,
+        "end": 1296
       }
     ]
   },
@@ -7650,9 +7759,12 @@
     "lemma": "Pyrrhos 21",
     "previous": "Pyrrhos 20",
     "next": "Pytharchos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1429
+        "start": 1429,
+        "end": 1429,
+        "author": "Rudolf Hanslik."
       }
     ]
   },

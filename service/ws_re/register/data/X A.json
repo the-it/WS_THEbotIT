@@ -297,10 +297,12 @@
     "lemma": "Zenodoros 6",
     "previous": "Zenodoros 5",
     "next": "Zenodoter",
-    "redirect": true,
+    "redirect": "Zenodotos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 19
+        "start": 19,
+        "end": 19
       }
     ]
   },
@@ -992,9 +994,12 @@
     "lemma": "Zenophron",
     "previous": "Zenophilos",
     "next": "Zenoposeidon",
+    "redirect": "Zenodoter",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 220
+        "start": 220,
+        "end": 220
       }
     ]
   },
@@ -1209,9 +1214,12 @@
     "lemma": "Zermizegethusa",
     "previous": "Zereia",
     "next": "Zermizirga",
+    "redirect": "Sarmizegethusa",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 236
+        "start": 236,
+        "end": 236
       }
     ]
   },
@@ -1229,7 +1237,7 @@
   {
     "lemma": "Zernes",
     "previous": "Zermizirga",
-    "next": "Zerogerei",
+    "next": "Ζηρογερεῖ",
     "chapters": [
       {
         "start": 236,
@@ -1238,18 +1246,22 @@
     ]
   },
   {
-    "lemma": "Zerogerei",
+    "lemma": "Ζηρογερεῖ",
     "previous": "Zernes",
     "next": "Zervae",
+    "sort_key": "Zerogerei",
+    "redirect": "Larike",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 236
+        "start": 236,
+        "end": 236
       }
     ]
   },
   {
     "lemma": "Zervae",
-    "previous": "Zerogerei",
+    "previous": "Ζηρογερεῖ",
     "next": "Zerynthos",
     "chapters": [
       {
@@ -1275,10 +1287,12 @@
     "lemma": "Zesis",
     "previous": "Zerynthos",
     "next": "Zesutera",
-    "redirect": true,
+    "redirect": "Zexis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 238
+        "start": 238,
+        "end": 238
       }
     ]
   },
@@ -1456,9 +1470,12 @@
     "lemma": "Zeudrakarta",
     "previous": "Zeucharis",
     "next": "Zeugitai",
+    "redirect": "Zadrakarta",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 249
+        "start": 249,
+        "end": 249
       }
     ]
   },
@@ -1779,9 +1796,12 @@
     "lemma": "Zeuxis 1",
     "previous": "Zeuxippos 9",
     "next": "Zeuxis 2",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 381
+        "start": 381,
+        "end": 381
       }
     ]
   },
@@ -1948,9 +1968,12 @@
     "lemma": "Ziboites, Zibytes",
     "previous": "Zibelmios",
     "next": "Ziege",
+    "redirect": "Zipoites",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 398
+        "start": 398,
+        "end": 398
       }
     ]
   },
@@ -1970,9 +1993,12 @@
     "lemma": "Ziegel",
     "previous": "Ziege",
     "next": "Ziegelstempel",
+    "redirect": "Later 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 433
+        "start": 433,
+        "end": 433
       }
     ]
   },
@@ -2014,9 +2040,12 @@
     "lemma": "Zigere",
     "previous": "Zigana",
     "next": "Zigira",
+    "redirect": "Zygere",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 446
+        "start": 446,
+        "end": 446
       }
     ]
   },
@@ -2047,9 +2076,12 @@
     "lemma": "Zilia",
     "previous": "Zigua",
     "next": "Zilmissus",
+    "redirect": "Zulil",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 447
+        "start": 447,
+        "end": 447
       }
     ]
   },
@@ -2204,9 +2236,12 @@
     "lemma": "Zirinae",
     "previous": "Ziridaua",
     "next": "Zisemis",
+    "redirect": "Zervae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -2214,9 +2249,12 @@
     "lemma": "Zisemis",
     "previous": "Zirinae",
     "next": "Zita",
+    "redirect": "Zibelmios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 460
+        "start": 460,
+        "end": 460
       }
     ]
   },
@@ -2247,9 +2285,12 @@
     "lemma": "Zmilis",
     "previous": "Zmarres",
     "next": "Zminthium templum",
+    "redirect": "Smilis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 461
+        "start": 461,
+        "end": 461
       }
     ]
   },
@@ -2257,9 +2298,12 @@
     "lemma": "Zminthium templum",
     "previous": "Zmilis",
     "next": "Zmiris",
+    "redirect": "Plinius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 461
+        "start": 461,
+        "end": 461
       }
     ]
   },
@@ -2503,9 +2547,11 @@
     "previous": "Zoilos 13",
     "next": "Zoilos 15",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 715
+        "start": 715,
+        "end": 715
       }
     ]
   },
@@ -2616,9 +2662,12 @@
     "lemma": "Zonas",
     "previous": "Zonaras, Ioannes",
     "next": "Zone",
+    "redirect": "Diodoros 35",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 763
+        "start": 763,
+        "end": 763
       }
     ]
   },
@@ -2627,9 +2676,11 @@
     "previous": "Zonas",
     "next": "Zonus",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 763
+        "start": 763,
+        "end": 763
       }
     ]
   },
@@ -2955,9 +3006,11 @@
     "previous": "Zopyros 20",
     "next": "Zorava",
     "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 773
+        "start": 773,
+        "end": 773
       }
     ]
   },
@@ -3205,9 +3258,12 @@
     "lemma": "Zosteira",
     "previous": "Zoskales",
     "next": "Zoster 1",
+    "redirect": "Zoster 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 848
+        "start": 848,
+        "end": 848
       }
     ]
   },
@@ -3576,10 +3632,12 @@
     "lemma": "Zypresse",
     "previous": "Zygopolis",
     "next": "Zyras",
-    "redirect": true,
+    "redirect": "Cypresse",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 861
+        "start": 861,
+        "end": 861
       }
     ]
   },
@@ -3632,20 +3690,24 @@
     "lemma": "Zythos",
     "previous": "Zyskos",
     "next": "Zorambos",
-    "redirect": true,
+    "redirect": "Bier",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 862
+        "start": 862,
+        "end": 862
       }
     ]
   },
   {
     "lemma": "Zorambos",
     "previous": "Zythos",
+    "next": "Vorwort (Supplementband I)",
     "chapters": [
       {
         "start": 864,
-        "author": "Ziegler"
+        "end": 864,
+        "author": "Konrat Ziegler."
       }
     ]
   }

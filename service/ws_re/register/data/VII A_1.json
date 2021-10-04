@@ -655,7 +655,7 @@
     "lemma": "Trigetius",
     "previous": "Trigeminus",
     "next": "Triggua",
-    "redirect": true,
+    "redirect": "Trygetius 1",
     "proof_read": 3,
     "chapters": [
       {
@@ -3603,7 +3603,7 @@
     "lemma": "Trophimon Alexandreias",
     "previous": "Trophimoi",
     "next": "Trophimos 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 676,
@@ -5841,7 +5841,7 @@
     "previous": "Tullio",
     "next": "Tullius 1",
     "proof_read": 3,
-    "wp_link": "w:de:Tullius",
+    "wp_link": "w:de:Tullier",
     "wd_link": "d:Q598017",
     "chapters": [
       {
@@ -6240,20 +6240,29 @@
     "lemma": "Tullius 29",
     "previous": "Tullius 28",
     "next": "Tricasses",
-    "proof_read": 2,
     "wp_link": "w:de:Marcus Tullius Cicero",
     "ws_link": "s:de:Cicero",
     "wd_link": "d:Q1541",
     "chapters": [
       {
         "start": 826,
+        "end": 1091,
+        "author": "Matthias Gelzer."
+      },
+      {
+        "start": 1090,
         "end": 1103,
         "author": "W. Kroll."
       },
       {
         "start": 1104,
-        "end": 1274,
+        "end": 1192,
         "author": "Philippson."
+      },
+      {
+        "start": 1192,
+        "end": 1274,
+        "author": "Karl Büchner."
       }
     ]
   },

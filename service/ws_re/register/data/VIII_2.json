@@ -1,9 +1,17 @@
 [
   {
     "lemma": "Verzeichnis der Mitarbeiter nach dem Stand vom 1. Mai 1913",
+    "previous": "Herotimos",
     "next": "Hestiaia 1",
-    "sort_key": "!08 01 Autoren1913",
-    "proof_read": 3
+    "sort_key": "!08 01 Autoren 1913",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1313,
+        "end": 1313,
+        "author": "Georg Wissowa."
+      }
+    ]
   },
   {
     "lemma": "Hestiaia 1",
@@ -688,6 +696,7 @@
     "previous": "Heudanemos",
     "next": "Heuschrecke",
     "proof_read": 3,
+    "wd_link": "d:Q107246803",
     "chapters": [
       {
         "start": 1381,
@@ -1048,8 +1057,8 @@
     "wd_link": "d:Q1617423",
     "chapters": [
       {
-        "start": 1392,
-        "end": 1392,
+        "start": 1393,
+        "end": 1393,
         "author": "Lenschau."
       }
     ]
@@ -1757,6 +1766,8 @@
     "next": "Hierios 4",
     "sort_key": "Hierios 03",
     "proof_read": 3,
+    "wp_link": "w:pt:Hiério (almirante)",
+    "wd_link": "d:Q25443564",
     "chapters": [
       {
         "start": 1458,
@@ -2126,9 +2137,12 @@
     "lemma": "Hierokles 12",
     "previous": "Hierokles 11",
     "next": "Hierokles 13",
+    "redirect": "Licinius 89",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1477
+        "start": 1477,
+        "end": 1477
       }
     ]
   },
@@ -2590,9 +2604,12 @@
     "lemma": "Hieron akroterion",
     "previous": "Hieron 24",
     "next": "Hieron oros",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1530
+        "start": 1530,
+        "end": 1530
       }
     ]
   },
@@ -2678,9 +2695,12 @@
     "lemma": "Hieronesos",
     "previous": "Hierondas",
     "next": "Hieronides",
+    "redirect": "Hiera nesos, Hieronesos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1535
+        "start": 1535,
+        "end": 1535
       }
     ]
   },
@@ -2711,9 +2731,12 @@
     "lemma": "Hieron stoma 2",
     "previous": "Hieronikai",
     "next": "Hieronnesos",
+    "redirect": "Danuvius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1535
+        "start": 1535,
+        "end": 1535
       }
     ]
   },
@@ -2721,9 +2744,12 @@
     "lemma": "Hieronnesos",
     "previous": "Hieron stoma 2",
     "next": "Hieronpotamon",
+    "redirect": "Hiera nesos, Hieronesos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1536
+        "start": 1536,
+        "end": 1536
       }
     ]
   },
@@ -3029,9 +3055,12 @@
     "lemma": "Hieropolis 2",
     "previous": "Hieropolis 1",
     "next": "Hieropolis 3",
+    "redirect": "Kastabala",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1588
+        "start": 1588,
+        "end": 1588
       }
     ]
   },
@@ -3039,9 +3068,12 @@
     "lemma": "Hieropolis 3",
     "previous": "Hieropolis 2",
     "next": "Hierorenses",
+    "redirect": "Komana 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1588
+        "start": 1588,
+        "end": 1588
       }
     ]
   },
@@ -3049,9 +3081,12 @@
     "lemma": "Hierorenses",
     "previous": "Hieropolis 3",
     "next": "Hieros 1",
+    "redirect": "Hyde 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1588
+        "start": 1588,
+        "end": 1588
       }
     ]
   },
@@ -3081,9 +3116,12 @@
     "lemma": "Hieros 3",
     "previous": "Hieros 2",
     "next": "Hieros limen 1",
+    "redirect": "Komana 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1588
+        "start": 1588,
+        "end": 1588
       }
     ]
   },
@@ -3147,9 +3185,12 @@
     "lemma": "Hierosolyma",
     "previous": "Hieros flumen",
     "next": "Hierosylias graphe",
+    "redirect": "Jerusalem",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1589
+        "start": 1589,
+        "end": 1589
       }
     ]
   },
@@ -3180,9 +3221,12 @@
     "lemma": "Hierothysion",
     "previous": "Hierothesion",
     "next": "Hierothytes",
+    "redirect": "Hierothesion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1590
+        "start": 1590,
+        "end": 1590
       }
     ]
   },
@@ -3225,9 +3269,12 @@
     "lemma": "Hiherap(i)ae",
     "previous": "Hiheraiae",
     "next": "Hikanos",
+    "redirect": "Hiheraiae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1592
+        "start": 1592,
+        "end": 1592
       }
     ]
   },
@@ -3371,9 +3418,12 @@
     "lemma": "Hiketesios",
     "previous": "Hiketes",
     "next": "Hilaria",
+    "redirect": "Hikesios 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1597
+        "start": 1597,
+        "end": 1597
       }
     ]
   },
@@ -4125,7 +4175,7 @@
     "lemma": "Himilkon",
     "previous": "Himjaren",
     "next": "Himilkon 1",
-    "redirect": true,
+    "redirect": "Hamilkar",
     "proof_read": 3,
     "chapters": [
       {
@@ -4586,9 +4636,12 @@
     "lemma": "Hipparchos 11",
     "previous": "Hipparchos 10",
     "next": "Hipparchos 12",
+    "redirect": "Claudius 179",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1665
+        "start": 1665,
+        "end": 1665
       }
     ]
   },
@@ -5986,7 +6039,15 @@
   {
     "lemma": "Hippoi",
     "previous": "Hippodromos 4",
-    "next": "Hippoi 1"
+    "next": "Hippoi 1",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1747,
+        "end": 1747,
+        "author": "Bürchner."
+      }
+    ]
   },
   {
     "lemma": "Hippoi 1",
@@ -6128,9 +6189,12 @@
     "lemma": "Hippoklos 1",
     "previous": "Hippokles 3",
     "next": "Hippoklos 2",
+    "redirect": "Hippokles 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1774
+        "start": 1774,
+        "end": 1774
       }
     ]
   },
@@ -6250,9 +6314,12 @@
     "lemma": "Hippokoontiden",
     "previous": "Hippokoon 8",
     "next": "Hippokorona",
+    "redirect": "Hippokoon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1776
+        "start": 1776,
+        "end": 1776
       }
     ]
   },
@@ -7515,9 +7582,12 @@
     "lemma": "Hipporum",
     "previous": "Hippor",
     "next": "Hippos",
+    "redirect": "Hyporon",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1913
+        "start": 1913,
+        "end": 1913
       }
     ]
   },
@@ -8130,9 +8200,12 @@
     "lemma": "Hippothoos 10",
     "previous": "Hippothoos 9",
     "next": "Hippotomades?",
+    "redirect": "Hippothoon 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1925
+        "start": 1925,
+        "end": 1925
       }
     ]
   },
@@ -8163,9 +8236,12 @@
     "lemma": "Hippotrophia",
     "previous": "Hippotoxotai",
     "next": "Hippou mnema",
+    "redirect": "Pferdezucht",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1926
+        "start": 1926,
+        "end": 1926
       }
     ]
   },
@@ -8318,9 +8394,12 @@
     "lemma": "Hira 3",
     "previous": "Hira 2",
     "next": "Hiramis",
+    "redirect": "Iria 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1932
+        "start": 1932,
+        "end": 1932
       }
     ]
   },
@@ -8328,9 +8407,12 @@
     "lemma": "Hiramis",
     "previous": "Hira 3",
     "next": "Hiranus",
+    "redirect": "Hyrminos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1932
+        "start": 1932,
+        "end": 1932
       }
     ]
   },
@@ -8338,9 +8420,12 @@
     "lemma": "Hiranus",
     "previous": "Hiramis",
     "next": "Hire 1",
+    "redirect": "Hyrminos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1932
+        "start": 1932,
+        "end": 1932
       }
     ]
   },
@@ -8382,9 +8467,12 @@
     "lemma": "Hirminius",
     "previous": "Hirene",
     "next": "Hirna",
+    "redirect": "Hyrminos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1933
+        "start": 1933,
+        "end": 1933
       }
     ]
   },
@@ -8460,10 +8548,12 @@
     "lemma": "Hirrius 1",
     "previous": "Hirri",
     "next": "Hirrius 2",
-    "redirect": true,
+    "redirect": "Lucilius 25",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1936
+        "start": 1936,
+        "end": 1936
       }
     ]
   },
@@ -8471,10 +8561,12 @@
     "lemma": "Hirrius 2",
     "previous": "Hirrius 1",
     "next": "Hirrus",
-    "redirect": true,
+    "redirect": "Neratius 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1936
+        "start": 1936,
+        "end": 1936
       }
     ]
   },
@@ -8493,9 +8585,12 @@
     "lemma": "Hirrutus",
     "previous": "Hirrus",
     "next": "Hirsch",
+    "redirect": "Pedius 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1936
+        "start": 1936,
+        "end": 1936
       }
     ]
   },
@@ -8628,9 +8723,12 @@
     "lemma": "Hismenion",
     "previous": "Hirtuleius 4",
     "next": "Hismenos",
+    "redirect": "Ismenion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1963
+        "start": 1963,
+        "end": 1963
       }
     ]
   },
@@ -8638,9 +8736,12 @@
     "lemma": "Hismenos",
     "previous": "Hismenion",
     "next": "Hisopis",
+    "redirect": "Ismenos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1963
+        "start": 1963,
+        "end": 1963
       }
     ]
   },
@@ -8738,9 +8839,12 @@
     "lemma": "Hispo 2",
     "previous": "Hispo 1",
     "next": "Hispulla 1",
+    "redirect": "Eppuleius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2047
+        "start": 2047,
+        "end": 2047
       }
     ]
   },
@@ -8868,7 +8972,7 @@
     "lemma": "Histiaios 4",
     "previous": "Histiaios 3",
     "next": "Histoi",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2050,
@@ -9228,9 +9332,12 @@
     "lemma": "Holmones",
     "previous": "Holmoi 2",
     "next": "Holoios",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2137
+        "start": 2137,
+        "end": 2137
       }
     ]
   },
@@ -9295,9 +9402,12 @@
     "lemma": "Homagyrion",
     "previous": "Holus",
     "next": "Homagyrios",
+    "redirect": "Homarion",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2143
+        "start": 2143,
+        "end": 2143
       }
     ]
   },
@@ -9328,9 +9438,12 @@
     "lemma": "Homarios",
     "previous": "Homarion",
     "next": "Homereion 1",
+    "redirect": "Amarios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2145
+        "start": 2145,
+        "end": 2145
       }
     ]
   },
@@ -10000,9 +10113,12 @@
     "lemma": "Honoratus 8",
     "previous": "Honoratus 7",
     "next": "Honoratus 9",
+    "redirect": "Servius 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2276
+        "start": 2276,
+        "end": 2276
       }
     ]
   },
@@ -10032,9 +10148,12 @@
     "lemma": "Honoratus 11",
     "previous": "Honoratus 10",
     "next": "Honoratus 12",
+    "redirect": "Antoninus 18",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2276
+        "start": 2276,
+        "end": 2276
       }
     ]
   },
@@ -10277,9 +10396,12 @@
     "lemma": "Hoplosmia",
     "previous": "Hoplomachos",
     "next": "Hoplosmios",
+    "redirect": "Hoplosmios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2299
+        "start": 2299,
+        "end": 2299
       }
     ]
   },
@@ -10309,9 +10431,12 @@
     "lemma": "Hora 1",
     "previous": "Hopoleas",
     "next": "Hora 2",
+    "redirect": "Gora",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2299
+        "start": 2299,
+        "end": 2299
       }
     ]
   },
@@ -10319,9 +10444,12 @@
     "lemma": "Hora 2",
     "previous": "Hora 1",
     "next": "Hora Quirini",
+    "redirect": "Itinerarium Alexandri",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2299
+        "start": 2299,
+        "end": 2299
       }
     ]
   },
@@ -10408,9 +10536,12 @@
     "lemma": "Horaka",
     "previous": "Horaiaos, Horaia, Horios, Horia 3",
     "next": "Horapollon",
+    "redirect": "Siocharax",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2313
+        "start": 2313,
+        "end": 2313
       }
     ]
   },
@@ -10748,9 +10879,12 @@
     "lemma": "Hordeonius 4",
     "previous": "Hordeonius 3",
     "next": "Horia",
+    "redirect": "Lollianus 15",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2408
+        "start": 2408,
+        "end": 2408
       }
     ]
   },
@@ -10812,7 +10946,7 @@
   {
     "lemma": "Horkios, Horkioi",
     "previous": "Horistai",
-    "next": "Horkoi",
+    "next": "Ὅρκοι",
     "chapters": [
       {
         "start": 2408,
@@ -10822,18 +10956,22 @@
     ]
   },
   {
-    "lemma": "Horkoi",
+    "lemma": "Ὅρκοι",
     "previous": "Horkios, Horkioi",
     "next": "Horkos",
+    "sort_key": "Horkoi",
+    "redirect": "Eid",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2409
+        "start": 2409,
+        "end": 2409
       }
     ]
   },
   {
     "lemma": "Horkos",
-    "previous": "Horkoi",
+    "previous": "Ὅρκοι",
     "next": "Horkosios",
     "chapters": [
       {
@@ -10904,9 +11042,12 @@
     "lemma": "Hormina",
     "previous": "Hormidae",
     "next": "Hormisdas 1",
+    "redirect": "Hyrmine 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2409
+        "start": 2409,
+        "end": 2409
       }
     ]
   },
@@ -11026,9 +11167,12 @@
     "lemma": "Horoba",
     "previous": "Hornensis locus",
     "next": "Horogeneis",
+    "redirect": "Oroba 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2411
+        "start": 2411,
+        "end": 2411
       }
     ]
   },
@@ -11252,9 +11396,12 @@
     "lemma": "Hortensianus",
     "previous": "Hortenses",
     "next": "Hortensius",
+    "redirect": "Fulvius 102",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2465
+        "start": 2465,
+        "end": 2465
       }
     ]
   },
@@ -11264,7 +11411,7 @@
     "next": "Hortensius 1",
     "sort_key": "Hortensius 0",
     "proof_read": 3,
-    "wp_link": "w:en:Hortensia (gens)",
+    "wp_link": "w:en:Hortensia gens",
     "wd_link": "d:Q12097159",
     "chapters": [
       {
@@ -11416,6 +11563,8 @@
     "previous": "Hortensius 9",
     "next": "Hortensius 11",
     "proof_read": 3,
+    "wp_link": "w:ca:Quint Hortensi Corbió",
+    "wd_link": "d:Q20101622",
     "chapters": [
       {
         "start": 2469,
@@ -11532,9 +11681,12 @@
     "lemma": "Horticulanus pagus",
     "previous": "Horti",
     "next": "Hortona",
+    "redirect": "Articulanus pagus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2488
+        "start": 2488,
+        "end": 2488
       }
     ]
   },
@@ -11680,9 +11832,12 @@
     "lemma": "Hosidius 9",
     "previous": "Hosidius 8",
     "next": "Hosidius 10",
+    "redirect": "Vitorius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2491
+        "start": 2491,
+        "end": 2491
       }
     ]
   },
@@ -11791,9 +11946,12 @@
     "lemma": "Hostanes",
     "previous": "Hospitium",
     "next": "Hostia",
+    "redirect": "Ostanes",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2498
+        "start": 2498,
+        "end": 2498
       }
     ]
   },
@@ -11957,9 +12115,12 @@
     "lemma": "Hostilius 9",
     "previous": "Hostilius 8",
     "next": "Hostilius 10",
+    "redirect": "Cassius 40",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2505
+        "start": 2505,
+        "end": 2505
       }
     ]
   },
@@ -12256,9 +12417,12 @@
     "lemma": "Hostius 4",
     "previous": "Hostius 3",
     "next": "Hostius 5",
+    "redirect": "Hostilius 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2517
+        "start": 2517,
+        "end": 2517
       }
     ]
   },
@@ -12370,9 +12534,12 @@
     "lemma": "Huldin",
     "previous": "Huiusque diei vicus",
     "next": "Huldu",
+    "redirect": "Uldin",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2537
+        "start": 2537,
+        "end": 2537
       }
     ]
   },
@@ -12403,9 +12570,12 @@
     "lemma": "Humana",
     "previous": "Humagum",
     "next": "Humanades",
+    "redirect": "Numana",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2538
+        "start": 2538,
+        "end": 2538
       }
     ]
   },
@@ -12413,9 +12583,12 @@
     "lemma": "Humanades",
     "previous": "Humana",
     "next": "Hummer",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2538
+        "start": 2538,
+        "end": 2538
       }
     ]
   },
@@ -12459,9 +12632,12 @@
     "lemma": "Hunerix",
     "previous": "Hunericus",
     "next": "Hungunverrum",
+    "redirect": "Hunericus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2583
+        "start": 2583,
+        "end": 2583
       }
     ]
   },
@@ -12492,6 +12668,8 @@
     "previous": "Hunila 1",
     "next": "Hunni",
     "proof_read": 3,
+    "wp_link": "w:pt:Hunila",
+    "wd_link": "d:Q20048082",
     "chapters": [
       {
         "start": 2583,
@@ -12591,10 +12769,14 @@
   },
   {
     "lemma": "Herodes 7",
-    "previous": "Ad Herculem castra"
+    "previous": "Ad Herculem castra",
+    "next": "Hippo Regius",
+    "sort_key": "Herodes 07",
+    "proof_read": 2
   },
   {
     "lemma": "Hippo Regius",
+    "previous": "Herodes 7",
     "chapters": [
       {
         "start": 2627,
