@@ -5,6 +5,8 @@ clean-pyc :
 	echo "######## CLEAN PY CACHE ########"
 	find . | grep -E "__pycache__" | xargs rm -rf
 
+# dependency management
+
 install_pip :
 	echo "########## UPDATE PIP ##########"
 	pip install --upgrade pip

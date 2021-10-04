@@ -12,19 +12,19 @@ beautifulsoup4==4.10.0
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.18.44
+boto3==1.18.53
     # via
     #   -c requirements.txt
     #   moto
-boto3-stubs[essential]==1.18.44
+boto3-stubs[essential]==1.18.53
     # via -r requirements-dev.in
-botocore==1.21.44
+botocore==1.21.53
     # via
     #   -c requirements.txt
     #   boto3
     #   moto
     #   s3transfer
-botocore-stubs==1.21.44
+botocore-stubs==1.21.53
     # via boto3-stubs
 certifi==2021.5.30
     # via
@@ -42,14 +42,14 @@ codecov==2.1.12
     # via -r requirements-dev.in
 contextlib2==21.6.0
     # via schema
-coverage==5.5
+coverage==6.0
     # via
     #   -r requirements-dev.in
     #   codecov
     #   nose2
-cryptography==3.4.8
+cryptography==35.0.0
     # via moto
-ddt==1.4.2
+ddt==1.4.3
     # via -r requirements-dev.in
 docopt==0.6.2
     # via internetarchive
@@ -98,23 +98,23 @@ mccabe==0.6.1
     #   pylint
 more-itertools==8.10.0
     # via moto
-moto==2.2.7
+moto==2.2.8
     # via -r requirements-dev.in
 mypy==0.910
     # via -r requirements-dev.in
-mypy-boto3-cloudformation==1.18.44
+mypy-boto3-cloudformation==1.18.53
     # via boto3-stubs
-mypy-boto3-dynamodb==1.18.44
+mypy-boto3-dynamodb==1.18.53
     # via boto3-stubs
-mypy-boto3-ec2==1.18.44
+mypy-boto3-ec2==1.18.53
     # via boto3-stubs
-mypy-boto3-lambda==1.18.44
+mypy-boto3-lambda==1.18.53
     # via boto3-stubs
-mypy-boto3-rds==1.18.44
+mypy-boto3-rds==1.18.53
     # via boto3-stubs
-mypy-boto3-s3==1.18.44
+mypy-boto3-s3==1.18.53
     # via boto3-stubs
-mypy-boto3-sqs==1.18.44
+mypy-boto3-sqs==1.18.53
     # via boto3-stubs
 mypy-extensions==0.4.3
     # via mypy
@@ -128,7 +128,7 @@ patool==1.12
     # via -r requirements-dev.in
 pbr==5.6.0
     # via stevedore
-platformdirs==2.3.0
+platformdirs==2.4.0
     # via pylint
 pycodestyle==2.7.0
     # via flake8
@@ -148,7 +148,7 @@ python-dateutil==2.8.2
     #   botocore
     #   freezegun
     #   moto
-pytz==2021.1
+pytz==2021.3
     # via moto
 pyyaml==5.4.1
     # via
@@ -195,7 +195,7 @@ soupsieve==2.2.1
     #   beautifulsoup4
 stevedore==3.4.0
     # via bandit
-testfixtures==6.18.2
+testfixtures==6.18.3
     # via -r requirements-dev.in
 toml==0.10.2
     # via
@@ -204,7 +204,9 @@ toml==0.10.2
     #   pylint
 tqdm==4.62.3
     # via internetarchive
-types-requests==2.25.7
+types-freezegun==1.1.0
+    # via -r requirements-dev.in
+types-requests==2.25.9
     # via -r requirements-dev.in
 typing-extensions==3.10.0.2
     # via
@@ -213,7 +215,7 @@ typing-extensions==3.10.0.2
     #   gitpython
     #   mypy
     #   pylint
-urllib3==1.26.6
+urllib3==1.26.7
     # via
     #   -c requirements.txt
     #   botocore

@@ -56,21 +56,21 @@ class TestCloudBase(TestCase):
             TableName="wiki_bots_manage_table",
             KeySchema=[
                 {
-                    "AttributeName": "id",
+                    "AttributeName": "bot_name",
                     "KeyType": "HASH"  # Partition key
                 },
                 {
-                    "AttributeName": "bot_name",
+                    "AttributeName": "start_time",
                     "KeyType": "RANGE"  # Partition key
                 }
             ],
             AttributeDefinitions=[
                 {
-                    "AttributeName": "id",
-                    "AttributeType": "N"
+                    "AttributeName": "bot_name",
+                    "AttributeType": "S"
                 },
                 {
-                    "AttributeName": "bot_name",
+                    "AttributeName": "start_time",
                     "AttributeType": "S"
                 }
             ],
@@ -83,7 +83,7 @@ class TestCloudBase(TestCase):
             for each in scan["Items"]:
                 batch.delete_item(
                     Key={
-                        "id": each["id"],
-                        "bot_name": each["bot_name"]
+                        "bot_name": each["bot_name"],
+                        "start_time": each["start_time"],
                     }
                 )

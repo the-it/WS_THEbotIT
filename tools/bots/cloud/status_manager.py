@@ -14,7 +14,7 @@ class StatusManager:
     def __init__(self, bot_name: str):
         self._dynamodb: DynamoDBServiceResource = boto3.resource('dynamodb', region_name='eu-central-1')
         self._manage_table = self._dynamodb.Table(MANAGE_TABLE)  # pylint: disable=no-member
-        self.current_run = Status(self._manage_table.item_count, bot_name)
+        self.current_run = Status(bot_name)
         self.bot_name = bot_name
         self._manage_table.put_item(Item=self.current_run.to_dict())  # type: ignore
         self._last_runs: List[Status] = []
@@ -22,11 +22,12 @@ class StatusManager:
     @property
     def last_runs(self) -> List[Status]:
         if not self._last_runs:
-            raw_list = self._manage_table.scan(FilterExpression=Key('bot_name').eq(self.bot_name))  # type: ignore
+            raw_list = self._manage_table.query(
+                KeyConditionExpression=Key('bot_name').eq(self.bot_name))["Items"]  # type: ignore
             self._last_runs = [Status.from_dict(status_dict)
                                for status_dict
-                               in raw_list["Items"][:-1][::-1]
-                               if status_dict["id"] != self.current_run.id]
+                               in raw_list[:-1][::-1]
+                               if status_dict["start_time"] != self.current_run.start_time.isoformat()]
         return self._last_runs
 
     @property
