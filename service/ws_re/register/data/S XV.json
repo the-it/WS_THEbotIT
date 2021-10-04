@@ -3239,7 +3239,6 @@
   {
     "lemma": "Veneti 1",
     "previous": "Weihrauch",
-    "next": "Victor 69",
     "chapters": [
       {
         "start": 855,
@@ -3250,18 +3249,23 @@
   },
   {
     "lemma": "Victor 69",
-    "previous": "Veneti 1",
-    "next": "Umbonius 1a",
-    "redirect": true,
+    "previous": "Weltbild",
+    "next": "Konrat Ziegler †",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 914
+        "start": 1583,
+        "end": 1676,
+        "author": "Peter Lebrecht Schmidt."
       }
     ]
   },
   {
+    "lemma": "Konrat Ziegler †",
+    "previous": "Victor 69"
+  },
+  {
     "lemma": "Umbonius 1a",
-    "previous": "Victor 69",
     "next": "Ummidius 1a",
     "chapters": [
       {
