@@ -954,6 +954,7 @@
   {
     "lemma": "Felix 23a",
     "previous": "Eutyches 7b",
+    "next": "Eutyches 23a",
     "chapters": [
       {
         "start": 169,
@@ -963,7 +964,16 @@
   },
   {
     "lemma": "Eutyches 23a",
-    "next": "Finken"
+    "previous": "Felix 23a",
+    "next": "Finken",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 169,
+        "end": 169
+      }
+    ]
   },
   {
     "lemma": "Finken",
