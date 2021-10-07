@@ -9916,10 +9916,12 @@
     "lemma": "Kleitos 12",
     "previous": "Kleitos 11",
     "next": "Kleitos 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 668,
-        "author": "Münzer"
+        "end": 668,
+        "author": "Münzer."
       }
     ]
   },
@@ -9940,10 +9942,12 @@
     "lemma": "Kleitos 14",
     "previous": "Kleitos 13",
     "next": "Kleitos 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 668,
-        "author": "Kind"
+        "end": 668,
+        "author": "Kind."
       }
     ]
   },
@@ -9961,33 +9965,40 @@
   {
     "lemma": "Klemachos",
     "previous": "Kleitos 15",
-    "next": "Klemades",
+    "next": "Κλέμαδες",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 668,
-        "author": "Oldfather"
+        "end": 668,
+        "author": "Oldfather."
       }
     ]
   },
   {
-    "lemma": "Klemades",
+    "lemma": "Κλέμαδες",
     "previous": "Klemachos",
     "next": "Klematios 1",
+    "sort_key": "Klemades",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 668,
-        "author": "Fluss"
+        "end": 668,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Klematios 1",
-    "previous": "Klemades",
+    "previous": "Κλέμαδες",
     "next": "Klematios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 668,
-        "author": "Seeck"
+        "end": 668,
+        "author": "Seeck."
       }
     ]
   },
@@ -10005,7 +10016,7 @@
   {
     "lemma": "Klematios 3",
     "previous": "Klematios 2",
-    "next": "Klementiana",
+    "next": "Κλημεντιανά",
     "chapters": [
       {
         "start": 669,
@@ -10014,19 +10025,22 @@
     ]
   },
   {
-    "lemma": "Klementiana",
+    "lemma": "Κλημεντιανά",
     "previous": "Klematios 3",
     "next": "Kleobis 1",
+    "sort_key": "Klementiana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 669,
-        "author": "Bürchner"
+        "end": 669,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kleobis 1",
-    "previous": "Klementiana",
+    "previous": "Κλημεντιανά",
     "next": "Kleobis 2",
     "chapters": [
       {
@@ -10061,10 +10075,12 @@
     "lemma": "Kleoboia 2",
     "previous": "Kleoboia 1",
     "next": "Kleoboia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 669,
-        "author": "Scherling"
+        "end": 669,
+        "author": "Scherling."
       }
     ]
   },
@@ -10072,10 +10088,12 @@
     "lemma": "Kleoboia 3",
     "previous": "Kleoboia 2",
     "next": "Kleoboia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 669,
-        "author": "Scherling"
+        "end": 669,
+        "author": "Scherling."
       }
     ]
   },
@@ -10106,10 +10124,12 @@
     "lemma": "Kleobule 1",
     "previous": "Kleoboia 5",
     "next": "Kleobule 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 670,
-        "author": "Hepding"
+        "end": 670,
+        "author": "Hepding."
       }
     ]
   },
@@ -10117,10 +10137,12 @@
     "lemma": "Kleobule 2",
     "previous": "Kleobule 1",
     "next": "Kleobule 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 670,
-        "author": "Hepding"
+        "end": 670,
+        "author": "Hepding."
       }
     ]
   },
@@ -10139,10 +10161,12 @@
     "lemma": "Kleobule 4",
     "previous": "Kleobule 3",
     "next": "Kleobule 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 670,
-        "author": "Hepding"
+        "end": 670,
+        "author": "Hepding."
       }
     ]
   },
@@ -10255,10 +10279,12 @@
     "lemma": "Kleobulos 6",
     "previous": "Kleobulos 5",
     "next": "Kleobulos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 672,
-        "author": "Kind"
+        "end": 672,
+        "author": "Kind."
       }
     ]
   },
@@ -10266,10 +10292,12 @@
     "lemma": "Kleobulos 7",
     "previous": "Kleobulos 6",
     "next": "Kleochareia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 672,
-        "author": "Kind"
+        "end": 672,
+        "author": "Kind."
       }
     ]
   },
@@ -10277,10 +10305,12 @@
     "lemma": "Kleochareia",
     "previous": "Kleobulos 7",
     "next": "Kleochares 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 672,
-        "author": "Latte"
+        "end": 672,
+        "author": "Latte."
       }
     ]
   },
@@ -10299,10 +10329,12 @@
     "lemma": "Kleochares 2",
     "previous": "Kleochares 1",
     "next": "Kleochares 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 672,
-        "author": "Kroll"
+        "end": 672,
+        "author": "Kroll."
       }
     ]
   },
@@ -10321,10 +10353,12 @@
     "lemma": "Kleochares 4",
     "previous": "Kleochares 3",
     "next": "Kleochares 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 672,
-        "author": "Münzer"
+        "end": 672,
+        "author": "Münzer."
       }
     ]
   },
@@ -10392,10 +10426,12 @@
     "lemma": "Kleodamas",
     "previous": "Kleodaios 2",
     "next": "Kleodamos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 674,
-        "author": "Kroll"
+        "end": 674,
+        "author": "Kroll."
       }
     ]
   },

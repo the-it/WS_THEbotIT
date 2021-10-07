@@ -1353,10 +1353,12 @@
     "lemma": "Hieramai",
     "previous": "Hierakonpolis",
     "next": "Hieramenes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1403,
-        "author": "Bürchner"
+        "end": 1403,
+        "author": "Bürchner."
       }
     ]
   },
@@ -1387,10 +1389,12 @@
     "lemma": "Hierapetra",
     "previous": "Hierapeteia",
     "next": "Hierapolis, Hieropolis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1404,
-        "author": "Bürchner"
+        "end": 1404,
+        "author": "Bürchner."
       }
     ]
   },
@@ -1409,10 +1413,12 @@
     "lemma": "Hierapolis, Hieropolis 2",
     "previous": "Hierapolis, Hieropolis 1",
     "next": "Hierapolis, Hieropolis 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1404,
-        "author": "Bürchner"
+        "end": 1404,
+        "author": "Bürchner."
       }
     ]
   },
@@ -1647,10 +1653,12 @@
     "lemma": "Hierax 12",
     "previous": "Hierax 11",
     "next": "Hierax 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1411,
-        "author": "Gossen"
+        "end": 1411,
+        "author": "Gossen."
       }
     ]
   },
@@ -1671,10 +1679,12 @@
     "lemma": "Hierax 14",
     "previous": "Hierax 13",
     "next": "Hiereis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1411,
-        "author": "Gossen"
+        "end": 1411,
+        "author": "Gossen."
       }
     ]
   },
@@ -2366,9 +2376,12 @@
     "lemma": "Hieron 3",
     "previous": "Hieron 2",
     "next": "Hieron 4",
+    "redirect": "Bosporos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1496
+        "start": 1496,
+        "end": 1496
       }
     ]
   },
@@ -2376,10 +2389,12 @@
     "lemma": "Hieron 4",
     "previous": "Hieron 3",
     "next": "Hieron 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1496,
-        "author": "Kirchner"
+        "end": 1496,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2387,10 +2402,12 @@
     "lemma": "Hieron 5",
     "previous": "Hieron 4",
     "next": "Hieron 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1496,
-        "author": "Sundwall"
+        "end": 1496,
+        "author": "Sundwall."
       }
     ]
   },
@@ -2398,10 +2415,12 @@
     "lemma": "Hieron 6",
     "previous": "Hieron 5",
     "next": "Hieron 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1496,
-        "author": "Sundwall"
+        "end": 1496,
+        "author": "Sundwall."
       }
     ]
   },
@@ -2409,10 +2428,12 @@
     "lemma": "Hieron 7",
     "previous": "Hieron 6",
     "next": "Hieron 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1496,
-        "author": "Sundwall"
+        "end": 1496,
+        "author": "Sundwall."
       }
     ]
   },
@@ -2420,10 +2441,12 @@
     "lemma": "Hieron 8",
     "previous": "Hieron 7",
     "next": "Hieron 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1496,
-        "author": "Sundwall"
+        "end": 1496,
+        "author": "Sundwall."
       }
     ]
   },
@@ -2431,10 +2454,12 @@
     "lemma": "Hieron 9",
     "previous": "Hieron 8",
     "next": "Hieron 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1496,
-        "author": "Sundwall"
+        "end": 1496,
+        "author": "Sundwall."
       }
     ]
   },
@@ -2729,8 +2754,8 @@
   },
   {
     "lemma": "Hieron stoma 2",
-    "previous": "Hieronikai",
-    "next": "Hieronnesos",
+    "previous": "Hieron stoma 1",
+    "next": "Hierondas",
     "redirect": "Danuvius 1",
     "proof_read": 2,
     "chapters": [
@@ -3530,6 +3555,7 @@
     "redirect": "Iulius 274",
     "proof_read": 3,
     "wp_link": "w:es:Quinto Julio Hilariano",
+    "ws_link": "s:la:Scriptor:Julius Hilarianus",
     "wd_link": "d:Q11944269",
     "chapters": [
       {
@@ -5110,10 +5136,12 @@
     "lemma": "Lucretius 33",
     "previous": "Hippeis",
     "next": "Lucretia 37",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1691,
-        "author": "Münzer"
+        "end": 1691,
+        "author": "Münzer."
       }
     ]
   },
@@ -5121,9 +5149,12 @@
     "lemma": "Lucretia 37",
     "previous": "Lucretius 33",
     "next": "Lucretia 38",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1692
+        "start": 1692,
+        "end": 1692,
+        "author": "Münzer."
       }
     ]
   },
