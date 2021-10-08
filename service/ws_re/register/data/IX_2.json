@@ -2076,7 +2076,7 @@
   {
     "lemma": "Interrogatoria actio",
     "previous": "Interrogatio",
-    "next": "Intestabilis",
+    "next": "Intervenire",
     "redirect": "Interrogatio",
     "proof_read": 2,
     "chapters": [
@@ -2087,8 +2087,21 @@
     ]
   },
   {
-    "lemma": "Intestabilis",
+    "lemma": "Intervenire",
     "previous": "Interrogatoria actio",
+    "next": "Intestabilis",
+    "redirect": "Intercessio",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1729,
+        "end": 1729
+      }
+    ]
+  },
+  {
+    "lemma": "Intestabilis",
+    "previous": "Intervenire",
     "next": "Intevenire",
     "chapters": [
       {
@@ -11120,6 +11133,7 @@
     "lemma": "Jublains",
     "previous": "Iuavum",
     "next": "Iugurtha",
+    "sort_key": "Iublains",
     "proof_read": 3,
     "wp_link": "w:de:Jublains",
     "wd_link": "d:Q1060319",
