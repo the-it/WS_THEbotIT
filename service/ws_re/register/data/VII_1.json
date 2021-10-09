@@ -6712,7 +6712,7 @@
     "next": "Fuscianus",
     "sort_key": "Fusciana",
     "redirect": "Aufustiana",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 405,
@@ -6724,10 +6724,12 @@
     "lemma": "Fuscianus",
     "previous": "ad Fusciana",
     "next": "Fuscina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
-        "author": "Groag"
+        "end": 405,
+        "author": "Groag."
       }
     ]
   },
@@ -6735,10 +6737,12 @@
     "lemma": "Fuscina",
     "previous": "Fuscianus",
     "next": "Fuscinus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
-        "author": "Pollack"
+        "end": 405,
+        "author": "Pollack."
       }
     ]
   },
@@ -6746,10 +6750,12 @@
     "lemma": "Fuscinus",
     "previous": "Fuscina",
     "next": "Fuscus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
-        "author": "Stein, [Arthur]"
+        "end": 405,
+        "author": "Stein."
       }
     ]
   },
@@ -6757,9 +6763,12 @@
     "lemma": "Fuscus 1",
     "previous": "Fuscinus",
     "next": "Fuscus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 405
+        "start": 405,
+        "end": 405,
+        "author": "Groag."
       }
     ]
   },
@@ -6767,10 +6776,12 @@
     "lemma": "Fuscus 2",
     "previous": "Fuscus 1",
     "next": "Fuscus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 405,
-        "author": "Groag"
+        "end": 405,
+        "author": "Groag."
       }
     ]
   },
@@ -6913,11 +6924,12 @@
     "lemma": "Fuvius",
     "previous": "Futius",
     "next": "Γαάλα, Γάλλα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 407,
         "end": 408,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },

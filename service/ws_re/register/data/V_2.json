@@ -23687,10 +23687,12 @@
     "lemma": "Epameinondas 2",
     "previous": "Epameinondas 1",
     "next": "Epameinondas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2707,
-        "author": "Swoboda, [Heinrich]"
+        "end": 2707,
+        "author": "Swoboda."
       }
     ]
   },
@@ -23720,10 +23722,12 @@
     "lemma": "Epandros",
     "previous": "Epandrides",
     "next": "Epangelia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2707,
-        "author": "Willrich"
+        "end": 2707,
+        "author": "Willrich."
       }
     ]
   },
@@ -23790,10 +23794,12 @@
     "lemma": "Epaphos 2",
     "previous": "Epaphos 1",
     "next": "Epaphos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2709,
-        "author": "Escher"
+        "end": 2709,
+        "author": "Escher."
       }
     ]
   },
@@ -23801,10 +23807,12 @@
     "lemma": "Epaphos 3",
     "previous": "Epaphos 2",
     "next": "Epaphos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2709,
-        "author": "Escher"
+        "end": 2709,
+        "author": "Escher."
       }
     ]
   },
@@ -23870,10 +23878,12 @@
     "lemma": "Epaphroditos 2",
     "previous": "Epaphroditos 1",
     "next": "Epaphroditos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2710,
-        "author": "Kirchner"
+        "end": 2710,
+        "author": "Kirchner."
       }
     ]
   },
@@ -23928,10 +23938,12 @@
     "lemma": "Eparchides",
     "previous": "Epaphroditos 6",
     "next": "Eparchos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2715,
-        "author": "Jacoby, [Felix]"
+        "end": 2715,
+        "author": "F. Jacoby."
       }
     ]
   },
@@ -23962,10 +23974,12 @@
     "lemma": "Epasnactus",
     "previous": "Eparitoi",
     "next": "Epatiaci portus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2716,
-        "author": "Münzer"
+        "end": 2716,
+        "author": "Münzer."
       }
     ]
   },
@@ -23985,28 +23999,33 @@
   {
     "lemma": "Epaugie",
     "previous": "Epatiaci portus",
-    "next": "Epaulia 1",
+    "next": "Ἐπαύλια 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2716,
-        "author": "Jessen"
+        "end": 2716,
+        "author": "Jessen."
       }
     ]
   },
   {
-    "lemma": "Epaulia 1",
+    "lemma": "Ἐπαύλια 1",
     "previous": "Epaugie",
     "next": "Epaulia 2",
+    "sort_key": "Epaulia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2716,
-        "author": "Thalheim"
+        "end": 2716,
+        "author": "Thalheim."
       }
     ]
   },
   {
     "lemma": "Epaulia 2",
-    "previous": "Epaulia 1",
+    "previous": "Ἐπαύλια 1",
     "next": "Epeigeus",
     "chapters": [
       {
@@ -24124,7 +24143,7 @@
   {
     "lemma": "Epeiros 4",
     "previous": "Epeiros 3",
-    "next": "Epeirotika",
+    "next": "Ἠπειρωτικά",
     "chapters": [
       {
         "start": 2731,
@@ -24133,19 +24152,22 @@
     ]
   },
   {
-    "lemma": "Epeirotika",
+    "lemma": "Ἠπειρωτικά",
     "previous": "Epeiros 4",
     "next": "Epekoos",
+    "sort_key": "Epeirotika",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2731,
-        "author": "Jacoby, [Felix]"
+        "end": 2731,
+        "author": "F. Jacoby."
       }
     ]
   },
   {
     "lemma": "Epekoos",
-    "previous": "Epeirotika",
+    "previous": "Ἠπειρωτικά",
     "next": "Eperastos",
     "chapters": [
       {
@@ -24181,10 +24203,12 @@
     "lemma": "Eperatos 2",
     "previous": "Eperatos 1",
     "next": "Eperitos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2732,
-        "author": "Niese"
+        "end": 2732,
+        "author": "Hoefer."
       }
     ]
   },
