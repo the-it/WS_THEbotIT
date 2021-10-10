@@ -7091,8 +7091,8 @@
   },
   {
     "lemma": "Potnieis",
-    "previous": "Potniades 3",
-    "next": "Potniai 1",
+    "previous": "Potniades",
+    "next": "Potniades 1",
     "redirect": "Potnia, Potna",
     "proof_read": 2,
     "chapters": [
@@ -7359,10 +7359,12 @@
     "lemma": "Poron",
     "previous": "pontem",
     "next": "Poros 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1225,
-        "author": "Lippold, Georg"
+        "end": 1225,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -7382,11 +7384,12 @@
     "lemma": "Praefectianus",
     "previous": "Poros 1",
     "next": "Poros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1225,
         "end": 1226,
-        "author": "Enßlin"
+        "author": "W. Enßlin."
       }
     ]
   },

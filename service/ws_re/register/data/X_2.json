@@ -17270,7 +17270,7 @@
   {
     "lemma": "Kalikantsaros",
     "previous": "Kalauron oros",
-    "next": "Kapaza",
+    "next": "Κάπαζα",
     "chapters": [
       {
         "start": 2541,
@@ -17279,12 +17279,16 @@
     ]
   },
   {
-    "lemma": "Kapaza",
+    "lemma": "Κάπαζα",
     "previous": "Kalikantsaros",
+    "next": "Karrhotos",
+    "sort_key": "Kapaza",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2542,
-        "author": "Kroll"
+        "end": 2542,
+        "author": "Bürchner."
       }
     ]
   }

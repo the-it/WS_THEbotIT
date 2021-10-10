@@ -12621,9 +12621,12 @@
     "lemma": "Petronius 101",
     "previous": "Petronius 100",
     "next": "Petronius 102",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1234
+        "start": 1234,
+        "end": 1234,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12631,9 +12634,12 @@
     "lemma": "Petronius 102",
     "previous": "Petronius 101",
     "next": "Petronius 103",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1234
+        "start": 1234,
+        "end": 1234,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12641,9 +12647,12 @@
     "lemma": "Petronius 103",
     "previous": "Petronius 102",
     "next": "Petronius 104",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1234
+        "start": 1234,
+        "end": 1234,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12651,10 +12660,12 @@
     "lemma": "Petronius 104",
     "previous": "Petronius 103",
     "next": "Petronius 105",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1234,
-        "author": "Enßlin"
+        "end": 1234,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12662,10 +12673,12 @@
     "lemma": "Petronius 105",
     "previous": "Petronius 104",
     "next": "Petronius 106",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1234,
-        "author": "Stein, [Arthur]"
+        "end": 1234,
+        "author": "Stein."
       }
     ]
   },
@@ -12673,10 +12686,12 @@
     "lemma": "Petronius 106",
     "previous": "Petronius 105",
     "next": "Pedachtoë",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1234,
-        "author": "Münzer"
+        "end": 1234,
+        "author": "F. Münzer."
       }
     ]
   },

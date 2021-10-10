@@ -259,7 +259,7 @@
   {
     "lemma": "Praes",
     "previous": "Praerogativa centuria",
-    "next": "Praes(a)epe",
+    "next": "Praescriptio",
     "redirect": true,
     "proof_read": 2,
     "chapters": [
@@ -283,7 +283,7 @@
   },
   {
     "lemma": "Praescriptio",
-    "previous": "Praes(a)epe",
+    "previous": "Praes",
     "next": "Praesens 1-4",
     "redirect": "Zivilprozess",
     "proof_read": 2,
@@ -336,7 +336,7 @@
   {
     "lemma": "Praesenteius",
     "previous": "Praesens 6",
-    "next": "Praesidia",
+    "next": "Praes(a)epe",
     "redirect": true,
     "proof_read": 2,
     "chapters": [
@@ -468,10 +468,12 @@
     "lemma": "Praesidius 2",
     "previous": "Praesidius 1",
     "next": "Praesidius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1565,
-        "author": "Enßlin"
+        "end": 1565,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -526,10 +528,12 @@
     "lemma": "Praesidius 7",
     "previous": "Praesidius 6",
     "next": "Praesii",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1566,
-        "author": "Enßlin"
+        "end": 1566,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -742,10 +746,12 @@
     "lemma": "Praetextatus 4",
     "previous": "Praetextatus 3",
     "next": "Praetextatus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1580,
-        "author": "Enßlin"
+        "end": 1580,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -764,10 +770,12 @@
     "lemma": "Praetextatus 6",
     "previous": "Praetextatus 5",
     "next": "Praetextatus 7a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1580,
-        "author": "Enßlin"
+        "end": 1580,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -775,10 +783,12 @@
     "lemma": "Praetextatus 7a",
     "previous": "Praetextatus 6",
     "next": "Praetextatus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1580,
-        "author": "Enßlin"
+        "end": 1580,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -796,11 +806,13 @@
   {
     "lemma": "Praetextatus 9",
     "previous": "Praetextatus 8",
-    "next": "Praetor",
+    "next": "Praetextatus 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1580,
-        "author": "Enßlin"
+        "end": 1580,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -865,11 +877,13 @@
   {
     "lemma": "Praetextatus 15",
     "previous": "Praetextatus 14",
-    "next": "Praetor Etruriae",
+    "next": "Praetor",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1581,
-        "author": "Enßlin"
+        "end": 1581,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1419,10 +1433,12 @@
     "lemma": "Prassaiboi",
     "previous": "Prason 2",
     "next": "Prastillos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1719,
-        "author": "Saria"
+        "end": 1719,
+        "author": "B. Saria."
       }
     ]
   },
@@ -1465,10 +1481,13 @@
     "lemma": "Prastina Pacata",
     "previous": "Prastina 2",
     "next": "Prasutagus",
+    "sort_key": "Prastinapacata",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1721,
-        "author": "Hanslik"
+        "end": 1721,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -1686,10 +1705,12 @@
     "lemma": "Praxedis 1",
     "previous": "Praxeas",
     "next": "Praxedis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1747,
-        "author": "Meinhold"
+        "end": 1747,
+        "author": "Peter Meinhold."
       }
     ]
   },
@@ -1926,10 +1947,12 @@
     "lemma": "Praxilos",
     "previous": "Praxilleion",
     "next": "Praxion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1769,
-        "author": "Saria"
+        "end": 1769,
+        "author": "B. Saria."
       }
     ]
   },
@@ -2166,10 +2189,12 @@
     "lemma": "Praxithea 5",
     "previous": "Praxithea 4",
     "next": "Praxithea 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1811,
-        "author": "Kolf"
+        "end": 1811,
+        "author": "Marie C. van der Kolf."
       }
     ]
   },
@@ -2177,10 +2202,12 @@
     "lemma": "Praxithea 6",
     "previous": "Praxithea 5",
     "next": "Praxo 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1811,
-        "author": "Kolf"
+        "end": 1811,
+        "author": "Marie C. van der Kolf."
       }
     ]
   },
@@ -2446,10 +2473,12 @@
     "lemma": "Prekalis",
     "previous": "Preiia",
     "next": "Prelius lacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1836,
-        "author": "Saria"
+        "end": 1836,
+        "author": "B. Saria."
       }
     ]
   },
@@ -2752,10 +2781,12 @@
     "lemma": "Prexileos",
     "previous": "Prexaspes 2",
     "next": "Prexinos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1841,
-        "author": "Kübler, Paul"
+        "end": 1841,
+        "author": "P. Kübler."
       }
     ]
   },
@@ -2797,10 +2828,12 @@
     "lemma": "Priamos 3",
     "previous": "Priamos 2",
     "next": "Priamos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1906,
-        "author": "Kolf"
+        "end": 1906,
+        "author": "Marie C. van der Kolf."
       }
     ]
   },
@@ -3186,10 +3219,12 @@
     "lemma": "Prima 3",
     "previous": "Prima 2",
     "next": "Primasius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1971,
-        "author": "Enßlin"
+        "end": 1971,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3209,10 +3244,12 @@
     "lemma": "Primaula",
     "previous": "Primasius",
     "next": "Primianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1972,
-        "author": "Saria"
+        "end": 1972,
+        "author": "B. Saria."
       }
     ]
   },
@@ -3311,10 +3348,12 @@
     "lemma": "Primigenius 3",
     "previous": "Primigenius 2",
     "next": "Primigenius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1974,
-        "author": "Enßlin"
+        "end": 1974,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3322,10 +3361,12 @@
     "lemma": "Primigenius 4",
     "previous": "Primigenius 3",
     "next": "Primigenius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1974,
-        "author": "Enßlin"
+        "end": 1974,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3333,10 +3374,12 @@
     "lemma": "Primigenius 5",
     "previous": "Primigenius 4",
     "next": "Primilianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1974,
-        "author": "Lippold, Georg"
+        "end": 1974,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -3413,10 +3456,12 @@
     "lemma": "Primitivus 2",
     "previous": "Primitivus 1",
     "next": "Primores",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1994,
-        "author": "Enßlin"
+        "end": 1994,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3537,19 +3582,21 @@
   },
   {
     "lemma": "Primus 2",
-    "previous": "Primus, M. 3",
-    "next": "Primus 4",
+    "previous": "Primus 1",
+    "next": "Primus, M. 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1996,
-        "author": "Hanslik"
+        "end": 1996,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
   {
     "lemma": "Primus 4",
     "previous": "Primus 2",
-    "next": "Primus, Flavius Rhodinus 5",
+    "next": "Primus 5",
     "chapters": [
       {
         "start": 1996,
@@ -3559,19 +3606,22 @@
     ]
   },
   {
-    "lemma": "Primus, Flavius Rhodinus 5",
+    "lemma": "Primus 5",
     "previous": "Primus 4",
     "next": "Primus 6",
+    "sort_key": "Primus,flavius rhodinus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1997,
-        "author": "Enßlin"
+        "end": 1997,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
     "lemma": "Primus 6",
-    "previous": "Primus, Flavius Rhodinus 5",
+    "previous": "Primus 5",
     "next": "Primus 7",
     "chapters": [
       {
@@ -3628,10 +3678,12 @@
     "lemma": "Primus 11",
     "previous": "Primus 10",
     "next": "Primus 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1997,
-        "author": "Enßlin"
+        "end": 1997,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3737,10 +3789,12 @@
     "lemma": "Principia 3",
     "previous": "Principia 2",
     "next": "Principius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2312,
-        "author": "Enßlin"
+        "end": 2312,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4004,10 +4058,12 @@
     "lemma": "Priscianus 2",
     "previous": "Priscianus 1",
     "next": "Priscianus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2346,
-        "author": "Hanslik"
+        "end": 2346,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -4015,10 +4071,12 @@
     "lemma": "Priscianus 3",
     "previous": "Priscianus 2",
     "next": "Priscianus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2346,
-        "author": "Enßlin"
+        "end": 2346,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4058,10 +4116,12 @@
     "lemma": "Priscianus 7",
     "previous": "Priscianus 6",
     "next": "Priscianus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2347,
-        "author": "Enßlin"
+        "end": 2347,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4091,16 +4151,28 @@
   {
     "lemma": "Priscianus 10",
     "previous": "Priscianus 9",
+    "next": "Poseidonia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2348,
-        "author": "Enßlin"
+        "end": 2348,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
     "lemma": "Poseidonia",
-    "next": "Praefectura"
+    "previous": "Priscianus 10",
+    "next": "Praefectura",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2348,
+        "end": 2348
+      }
+    ]
   },
   {
     "lemma": "Praefectura",
