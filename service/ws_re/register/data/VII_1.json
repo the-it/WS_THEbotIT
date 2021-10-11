@@ -47,10 +47,12 @@
     "lemma": "Foroba",
     "previous": "ad Fornolus",
     "next": "Foroclaudienses",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 12,
-        "author": "Ruge"
+        "end": 12,
+        "author": "Ruge."
       }
     ]
   },
@@ -110,10 +112,12 @@
     "lemma": "Fortiana",
     "previous": "Fors Fortuna",
     "next": "Fortinenses",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 12,
-        "author": "Patsch"
+        "end": 12,
+        "author": "Patsch."
       }
     ]
   },
@@ -3770,11 +3774,14 @@
   },
   {
     "lemma": "Fulvius 15",
-    "previous": "Fulvius 30-111",
+    "previous": "Fulvius 14",
     "next": "Fulvius 16",
+    "redirect": "Velleius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 233
+        "start": 233,
+        "end": 233
       }
     ]
   },
@@ -3782,9 +3789,12 @@
     "lemma": "Fulvius 16",
     "previous": "Fulvius 15",
     "next": "Fulvius 17",
+    "redirect": "Iulius 243",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 233
+        "start": 233,
+        "end": 233
       }
     ]
   },

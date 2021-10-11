@@ -3292,9 +3292,12 @@
     "lemma": "Lepidus 3",
     "previous": "Lepidus 2",
     "next": "Lepidus 4",
+    "redirect": "Lukianos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2067
+        "start": 2067,
+        "end": 2067
       }
     ]
   },
@@ -3469,9 +3472,12 @@
     "lemma": "Lepsinos",
     "previous": "Lepsimandos",
     "next": "Lepsios",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2070
+        "start": 2070,
+        "end": 2070
       }
     ]
   },
@@ -6105,9 +6111,12 @@
     "lemma": "Leukophanes",
     "previous": "Leukopeus",
     "next": "Leukophryene",
+    "redirect": "Euphemos 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2286
+        "start": 2286,
+        "end": 2286
       }
     ]
   },
@@ -8786,9 +8795,13 @@
     "lemma": "Lex Papia Poppaea",
     "previous": "Lex Papia",
     "next": "Lex Papiria 1",
+    "sort_key": "Lexpapia poppaea",
+    "redirect": "Leges Iuliae 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2400
+        "start": 2400,
+        "end": 2400
       }
     ]
   },
@@ -8818,9 +8831,13 @@
     "lemma": "Lex Papiria 3",
     "previous": "Lex Papiria 2",
     "next": "Lex Papiria 4",
+    "sort_key": "Lexpapiria 3",
+    "redirect": "Comitia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2400
+        "start": 2400,
+        "end": 2400
       }
     ]
   },
@@ -8990,9 +9007,13 @@
     "lemma": "Lex Plaetoria 2",
     "previous": "Lex Plaetoria 1",
     "next": "Lex Plautia 1",
+    "sort_key": "Lexplaetoria 2",
+    "redirect": "Lex Laetoria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -9000,9 +9021,13 @@
     "lemma": "Lex Plautia 1",
     "previous": "Lex Plaetoria 2",
     "next": "Lex Plautia 2",
+    "sort_key": "Lexplautia 1",
+    "redirect": "Leges agrariae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2402
+        "start": 2402,
+        "end": 2402
       }
     ]
   },
@@ -9056,9 +9081,13 @@
     "lemma": "Lex Poetelia Papiria",
     "previous": "Lex Poetelia de ambitu",
     "next": "Lex Pompeia 1",
+    "sort_key": "Lexpoetelia papiria",
+    "redirect": "Nexum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2403
+        "start": 2403,
+        "end": 2403
       }
     ]
   },
@@ -9102,9 +9131,13 @@
     "lemma": "Lex Pompeia 3",
     "previous": "Leges Porciae",
     "next": "Lex Porcia",
+    "sort_key": "Lexpompeia 3",
+    "redirect": "Culleus 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2404
+        "start": 2404,
+        "end": 2404
       }
     ]
   },
@@ -9123,9 +9156,13 @@
     "lemma": "Lex praediatoria",
     "previous": "Lex Porcia",
     "next": "Lex publica",
+    "sort_key": "Lexpraediatoria",
+    "redirect": "Lex",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2404
+        "start": 2404,
+        "end": 2404
       }
     ]
   },
@@ -9785,9 +9822,13 @@
     "lemma": "Leges Vatiniae 1",
     "previous": "Leges Valeriae 9",
     "next": "Leges Vatiniae 2",
+    "sort_key": "Lex vatiniae 1",
+    "redirect": "Iulius 131",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9795,9 +9836,13 @@
     "lemma": "Leges Vatiniae 2",
     "previous": "Leges Vatiniae 1",
     "next": "Leges Vatiniae 3",
+    "sort_key": "Lex vatiniae 2",
+    "redirect": "Reiectio 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2417
+        "start": 2417,
+        "end": 2417
       }
     ]
   },
@@ -9805,10 +9850,13 @@
     "lemma": "Leges Vatiniae 3",
     "previous": "Leges Vatiniae 2",
     "next": "Lex Varia",
+    "sort_key": "Legesvatiniae 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2417,
-        "author": "Weiss, Egon"
+        "end": 2417,
+        "author": "E. Weiss."
       }
     ]
   },
