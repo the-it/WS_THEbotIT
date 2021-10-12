@@ -11646,28 +11646,34 @@
   {
     "lemma": "Nova Castra",
     "previous": "Nova Augusta",
-    "next": "Nouion",
+    "next": "Νοούιον",
+    "sort_key": "Novacastra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1123,
-        "author": "Windberg"
+        "end": 1124,
+        "author": "Windberg."
       }
     ]
   },
   {
-    "lemma": "Nouion",
+    "lemma": "Νοούιον",
     "previous": "Nova Castra",
     "next": "Nova Classis",
-    "redirect": true,
+    "sort_key": "Nouion",
+    "redirect": "Noega 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1123
+        "start": 1123,
+        "end": 1123
       }
     ]
   },
   {
     "lemma": "Nova Classis",
-    "previous": "Nouion",
+    "previous": "Νοούιον",
     "next": "Nova clausula Iuliani",
     "chapters": [
       {
