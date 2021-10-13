@@ -17412,7 +17412,7 @@
   {
     "lemma": "Mesuion",
     "previous": "Mesua",
-    "next": "Mesyla",
+    "next": "Μεσουρίαι",
     "redirect": true,
     "proof_read": 2,
     "chapters": [
@@ -17423,8 +17423,22 @@
     ]
   },
   {
-    "lemma": "Mesyla",
+    "lemma": "Μεσουρίαι",
     "previous": "Mesuion",
+    "next": "Mesyla",
+    "sort_key": "Mesuriai",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1294,
+        "end": 1294,
+        "author": "Obst."
+      }
+    ]
+  },
+  {
+    "lemma": "Mesyla",
+    "previous": "Μεσουρίαι",
     "next": "Mesyros",
     "chapters": [
       {

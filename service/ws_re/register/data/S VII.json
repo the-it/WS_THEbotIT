@@ -3744,10 +3744,12 @@
     "lemma": "Neilammon 3",
     "previous": "Neilammon 2",
     "next": "Neilammon 3a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3755,10 +3757,12 @@
     "lemma": "Neilammon 3a",
     "previous": "Neilammon 3",
     "next": "Neilammon 3b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3766,10 +3770,12 @@
     "lemma": "Neilammon 3b",
     "previous": "Neilammon 3a",
     "next": "Neilammon 3c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3777,10 +3783,12 @@
     "lemma": "Neilammon 3c",
     "previous": "Neilammon 3b",
     "next": "Neilammon 3d",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3788,10 +3796,12 @@
     "lemma": "Neilammon 3d",
     "previous": "Neilammon 3c",
     "next": "Neilammon 3e",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3799,10 +3809,12 @@
     "lemma": "Neilammon 3e",
     "previous": "Neilammon 3d",
     "next": "Neilaras",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3869,10 +3881,12 @@
     "lemma": "Neilos 3",
     "previous": "Neilos 2bis",
     "next": "Neilos 3a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3880,10 +3894,12 @@
     "lemma": "Neilos 3a",
     "previous": "Neilos 3",
     "next": "Neilos 3b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3891,10 +3907,12 @@
     "lemma": "Neilos 3b",
     "previous": "Neilos 3a",
     "next": "Neilos 3c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3902,10 +3920,12 @@
     "lemma": "Neilos 3c",
     "previous": "Neilos 3b",
     "next": "Neilos 3d",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3913,10 +3933,12 @@
     "lemma": "Neilos 3d",
     "previous": "Neilos 3c",
     "next": "Nemea 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 561,
-        "author": "Enßlin"
+        "end": 561,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -6492,7 +6514,6 @@
   {
     "lemma": "Ludi circenses",
     "previous": "Iulius 536a",
-    "next": "Theomnestos 16a",
     "chapters": [
       {
         "start": 1626,
@@ -6502,11 +6523,14 @@
   },
   {
     "lemma": "Theomnestos 16a",
-    "previous": "Ludi circenses",
+    "previous": "Theodotos 56",
+    "next": "Theon 1a",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 3530,
-        "author": "Hoppe"
+        "start": 1353,
+        "end": 1354,
+        "author": "Karl Hoppe."
       }
     ]
   }

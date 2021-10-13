@@ -2017,7 +2017,6 @@
   {
     "lemma": "Magister 3a",
     "previous": "Maecius 20a",
-    "next": "Maximinus 16",
     "chapters": [
       {
         "start": 631,
@@ -2027,18 +2026,19 @@
   },
   {
     "lemma": "Maximinus 16",
-    "previous": "Magister 3a",
-    "next": "Maiandrios 4",
+    "previous": "Maximinus 15",
+    "next": "Maximinus 17",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 644,
-        "author": "Enßlin"
+        "start": 664,
+        "end": 664,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
     "lemma": "Maiandrios 4",
-    "previous": "Maximinus 16",
     "next": "Makrabandon klima",
     "chapters": [
       {
@@ -2204,7 +2204,6 @@
   {
     "lemma": "Marcius 51",
     "previous": "Marcius 50",
-    "next": "Maximus 100",
     "chapters": [
       {
         "start": 653
@@ -2213,18 +2212,19 @@
   },
   {
     "lemma": "Maximus 100",
-    "previous": "Marcius 51",
-    "next": "Marcus 1a",
+    "previous": "Maximus 99",
+    "next": "Maximus 101",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 657,
-        "author": "Enßlin"
+        "end": 657,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
     "lemma": "Marcus 1a",
-    "previous": "Maximus 100",
     "next": "Marimatha",
     "chapters": [
       {
@@ -4823,7 +4823,6 @@
   {
     "lemma": "Silverius 1",
     "previous": "Silvaizan",
-    "next": "Maximus 94",
     "chapters": [
       {
         "start": 974,
@@ -4833,29 +4832,32 @@
   },
   {
     "lemma": "Maximus 94",
-    "previous": "Silverius 1",
+    "previous": "Maximus 93",
     "next": "Maximus 95",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 975,
-        "author": "Enßlin"
+        "start": 675,
+        "end": 675,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
     "lemma": "Maximus 95",
     "previous": "Maximus 94",
-    "next": "Silverius 2",
+    "next": "Maximus 96",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 975,
-        "author": "Enßlin"
+        "end": 975,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
     "lemma": "Silverius 2",
-    "previous": "Maximus 95",
     "next": "Silvester 1",
     "chapters": [
       {

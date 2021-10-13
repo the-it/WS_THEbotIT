@@ -5795,7 +5795,7 @@
     "lemma": "Σισάρα 2",
     "previous": "Sisara 1",
     "next": "Sisaraca",
-    "sort_key": "Sisara",
+    "sort_key": "Sisara 2",
     "redirect": "Sarbane",
     "proof_read": 2,
     "chapters": [
@@ -10829,16 +10829,20 @@
   {
     "lemma": "Σόχχορ",
     "previous": "Socha",
-    "next": "Soci",
+    "next": "Sonchor",
+    "sort_key": "Sochchor",
+    "redirect": "Sonchar, Sonchor",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 772
+        "start": 772,
+        "end": 772
       }
     ]
   },
   {
     "lemma": "Soci",
-    "previous": "Σόχχορ",
+    "previous": "Sonchor",
     "next": "Sociacus",
     "redirect": "Soc.",
     "proof_read": 2,
@@ -13224,8 +13228,8 @@
     "proof_read": 2,
     "chapters": [
       {
-        "start": 992,
-        "end": 992
+        "start": 993,
+        "end": 993
       }
     ]
   },
@@ -13237,8 +13241,8 @@
     "proof_read": 2,
     "chapters": [
       {
-        "start": 992,
-        "end": 992
+        "start": 993,
+        "end": 993
       }
     ]
   },

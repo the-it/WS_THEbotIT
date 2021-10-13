@@ -14104,7 +14104,7 @@
   {
     "lemma": "Eiselastikos agon",
     "previous": "Eisangelia",
-    "next": "Eis emphanon katastasin dike",
+    "next": "Εἰς ἐμφανῶν κατάστασιν δίκη",
     "chapters": [
       {
         "start": 2141,
@@ -14113,19 +14113,22 @@
     ]
   },
   {
-    "lemma": "Eis emphanon katastasin dike",
+    "lemma": "Εἰς ἐμφανῶν κατάστασιν δίκη",
     "previous": "Eiselastikos agon",
     "next": "Eisen",
+    "sort_key": "Eisemphanon katastasin dike",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2142,
-        "author": "Thalheim"
+        "end": 2142,
+        "author": "Thalheim."
       }
     ]
   },
   {
     "lemma": "Eisen",
-    "previous": "Eis emphanon katastasin dike",
+    "previous": "Εἰς ἐμφανῶν κατάστασιν δίκη",
     "next": "Eisirios",
     "chapters": [
       {
@@ -15289,12 +15292,15 @@
   },
   {
     "lemma": "Eleus 3",
-    "previous": "Elaius 5",
-    "next": "Elaius 6",
+    "previous": "Elaius 2",
+    "next": "Elaius 4",
+    "sort_key": "Elaius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2227,
-        "author": "Bürchner"
+        "end": 2227,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15921,12 +15927,15 @@
   },
   {
     "lemma": "Elatia 4",
-    "previous": "Elaterion",
-    "next": "Elates",
+    "previous": "Elateia 3",
+    "next": "Elaterion",
+    "sort_key": "Elateia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2237,
-        "author": "Bürchner"
+        "end": 2237,
+        "author": "Bürchner."
       }
     ]
   },
@@ -22176,11 +22185,13 @@
     "lemma": "Ἔγκυκλον",
     "previous": "Enkyklios",
     "next": "Enna",
+    "sort_key": "Enkyklon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2585,
         "end": 2586,
-        "author": "Amelung"
+        "author": "Amelung."
       }
     ]
   },
@@ -24237,12 +24248,12 @@
     "lemma": "Eperatos 2",
     "previous": "Eperatos 1",
     "next": "Eperitos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2732,
         "end": 2732,
-        "author": "Hoefer."
+        "author": "Niese."
       }
     ]
   },

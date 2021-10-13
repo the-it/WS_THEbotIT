@@ -148,9 +148,13 @@
     "lemma": "Selinus 8-11",
     "previous": "Selinus 7",
     "next": "Selinus 8",
+    "sort_key": "Selinus 7z",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1266
+        "start": 1266,
+        "end": 1266
       }
     ]
   },
@@ -1278,7 +1282,7 @@
   {
     "lemma": "Semones",
     "previous": "Semon 2",
-    "next": "Semnonia",
+    "next": "Semonia",
     "chapters": [
       {
         "start": 1356,
@@ -1288,19 +1292,21 @@
     ]
   },
   {
-    "lemma": "Semnonia",
+    "lemma": "Semonia",
     "previous": "Semones",
     "next": "Semos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1357,
-        "author": "Klotz"
+        "end": 1357,
+        "author": "Klotz."
       }
     ]
   },
   {
     "lemma": "Semos",
-    "previous": "Semnonia",
+    "previous": "Semonia",
     "next": "Semphe",
     "chapters": [
       {

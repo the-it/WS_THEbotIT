@@ -717,7 +717,7 @@
   {
     "lemma": "Mapsis",
     "previous": "Mapses",
-    "next": "Maquiaesus",
+    "next": "Μαποῦρα",
     "redirect": "Mampsis",
     "proof_read": 2,
     "chapters": [
@@ -728,13 +728,29 @@
     ]
   },
   {
-    "lemma": "Maquiaesus",
+    "lemma": "Μαποῦρα",
     "previous": "Mapsis",
-    "next": "Mara 1",
+    "next": "Maquiaesus",
+    "sort_key": "Mapura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1416,
-        "author": "Schulten"
+        "end": 1416,
+        "author": "Herrmann."
+      }
+    ]
+  },
+  {
+    "lemma": "Maquiaesus",
+    "previous": "Μαποῦρα",
+    "next": "Mara 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1416,
+        "end": 1416,
+        "author": "Schulten."
       }
     ]
   },
@@ -6225,7 +6241,7 @@
     "lemma": "Μαρδουλάμνη",
     "previous": "Marduk",
     "next": "Mardyene",
-    "sort_key": "Mardoulamne",
+    "sort_key": "Mardulamne",
     "redirect": "Mardou limen",
     "proof_read": 2,
     "chapters": [
@@ -16343,7 +16359,7 @@
   {
     "lemma": "Maussolos 2",
     "previous": "Maussolos 1",
-    "next": "Manzaniton",
+    "next": "Μαυζανιτῶν",
     "chapters": [
       {
         "start": 2414,
@@ -16352,19 +16368,22 @@
     ]
   },
   {
-    "lemma": "Manzaniton",
+    "lemma": "Μαυζανιτῶν",
     "previous": "Maussolos 2",
     "next": "Maxalas",
+    "sort_key": "Mauzaniton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2416,
-        "author": "Weissbach"
+        "end": 2416,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Maxalas",
-    "previous": "Manzaniton",
+    "previous": "Μαυζανιτῶν",
     "next": "Maxalla",
     "chapters": [
       {

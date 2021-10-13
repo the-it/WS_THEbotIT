@@ -19245,12 +19245,15 @@
   },
   {
     "lemma": "Eumenia 2",
-    "previous": "Eumeneios",
-    "next": "Eumenes 1",
+    "previous": "Eumeneia 1",
+    "next": "Eumeneia",
+    "sort_key": "Eumeneia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1082,
-        "author": "Brandis"
+        "end": 1082,
+        "author": "Brandis."
       }
     ]
   },
@@ -21800,10 +21803,12 @@
     "lemma": "Euphrasios 3",
     "previous": "Euphrasios 2",
     "next": "Euphrasios 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1195,
-        "author": "Seeck"
+        "end": 1195,
+        "author": "Seeck."
       }
     ]
   },
@@ -21811,10 +21816,12 @@
     "lemma": "Euphrasios 4",
     "previous": "Euphrasios 3",
     "next": "Euphratensis Syria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1195,
-        "author": "Seeck"
+        "end": 1195,
+        "author": "Seeck."
       }
     ]
   },
@@ -28538,7 +28545,7 @@
   {
     "lemma": "Euthyrrhemon",
     "previous": "Euthyphron 2",
-    "next": "Eutokios",
+    "next": "Εὐθύτονα",
     "chapters": [
       {
         "start": 1518,
@@ -28547,8 +28554,22 @@
     ]
   },
   {
-    "lemma": "Eutokios",
+    "lemma": "Εὐθύτονα",
     "previous": "Euthyrrhemon",
+    "next": "Eutokios",
+    "sort_key": "Euthytona",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1518,
+        "end": 1518,
+        "author": "Droysen."
+      }
+    ]
+  },
+  {
+    "lemma": "Eutokios",
+    "previous": "Εὐθύτονα",
     "next": "Eutolmius 1",
     "proof_read": 3,
     "wp_link": "w:de:Eutokios",

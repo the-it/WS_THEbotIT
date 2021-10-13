@@ -7773,7 +7773,7 @@
   {
     "lemma": "Scutarius 2",
     "previous": "Scutarius 1",
-    "next": "Scutula",
+    "next": "Scuttara",
     "chapters": [
       {
         "start": 913,
@@ -7782,8 +7782,21 @@
     ]
   },
   {
-    "lemma": "Scutula",
+    "lemma": "Scuttara",
     "previous": "Scutarius 2",
+    "next": "Scutula",
+    "redirect": "Scutara",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 913,
+        "end": 913
+      }
+    ]
+  },
+  {
+    "lemma": "Scutula",
+    "previous": "Scuttara",
     "next": "Scutum",
     "chapters": [
       {
