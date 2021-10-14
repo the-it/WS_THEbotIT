@@ -782,7 +782,7 @@
   {
     "lemma": "Veritas",
     "previous": "Verissimus 2",
-    "next": "Verigodumnus",
+    "next": "Veriugodumnus",
     "chapters": [
       {
         "start": 1551,
@@ -791,7 +791,7 @@
     ]
   },
   {
-    "lemma": "Verigodumnus",
+    "lemma": "Veriugodumnus",
     "previous": "Veritas",
     "next": "Verius",
     "redirect": "Veraudunus, Verigodumnus",
@@ -805,7 +805,7 @@
   },
   {
     "lemma": "Verius",
-    "previous": "Verigodumnus",
+    "previous": "Veriugodumnus",
     "next": "Verlucio",
     "chapters": [
       {
@@ -5691,6 +5691,7 @@
     "lemma": "Vibullius 2ff.",
     "previous": "Vibullius 1",
     "next": "Uica",
+    "sort_key": "Vibullius 1z",
     "redirect": true,
     "proof_read": 2,
     "chapters": [
@@ -5912,6 +5913,7 @@
     "lemma": "vici magister",
     "previous": "Viciesis",
     "next": "Vicinas",
+    "sort_key": "Vicimagister",
     "redirect": true,
     "proof_read": 3,
     "chapters": [
@@ -10098,7 +10100,7 @@
     "lemma": "Ad Vice(n)simum 5",
     "previous": "vicesima manumissionum",
     "next": "Ad Vice(n)simum 6",
-    "sort_key": "Vice(n)simum 5, ad",
+    "sort_key": "Vicesimum 5, ad",
     "proof_read": 3,
     "chapters": [
       {
@@ -10112,7 +10114,7 @@
     "lemma": "Ad Vice(n)simum 6",
     "previous": "Ad Vice(n)simum 5",
     "next": "Ad Vice(n)simum 7",
-    "sort_key": "Vice(n)simum 6, ad",
+    "sort_key": "Vicesimum 6, ad",
     "chapters": [
       {
         "start": 2479,
@@ -10125,7 +10127,7 @@
     "lemma": "Ad Vice(n)simum 7",
     "previous": "Ad Vice(n)simum 6",
     "next": "vici magister",
-    "sort_key": "Vice(n)simum 7 ad",
+    "sort_key": "Vicesimum 7 ad",
     "chapters": [
       {
         "start": 2479,
@@ -10138,6 +10140,7 @@
     "lemma": "vici magister",
     "previous": "Ad Vice(n)simum 7",
     "next": "victimarius",
+    "sort_key": "Vicimagister",
     "chapters": [
       {
         "start": 2480,

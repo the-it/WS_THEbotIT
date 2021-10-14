@@ -5042,6 +5042,7 @@
     "lemma": "Sühne",
     "previous": "Suedius",
     "next": "Sueius",
+    "sort_key": "Suehne",
     "redirect": "Katharmos",
     "proof_read": 2,
     "chapters": [
@@ -5647,7 +5648,7 @@
   },
   {
     "lemma": "Sougdaia",
-    "next": "Sougdia",
+    "next": "Σουγδία",
     "chapters": [
       {
         "start": 662
@@ -5655,12 +5656,16 @@
     ]
   },
   {
-    "lemma": "Sougdia",
+    "lemma": "Σουγδία",
     "previous": "Sougdaia",
     "next": "Sugdiani",
+    "sort_key": "Sugdia",
+    "redirect": "Sucidava",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 662
+        "start": 662,
+        "end": 662
       }
     ]
   },

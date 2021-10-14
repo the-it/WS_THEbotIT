@@ -1978,7 +1978,7 @@
     "lemma": "Ramses 5ff.",
     "previous": "Ramses 4",
     "next": "Ramses 5",
-    "sort_key": "Ramses 05ff.",
+    "sort_key": "Ramses 04z",
     "chapters": [
       {
         "start": 216,
@@ -8357,10 +8357,12 @@
     "lemma": "Riothamus",
     "previous": "Riotamus",
     "next": "Riotimus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 845,
-        "author": "Seeck"
+        "start": 846,
+        "end": 846,
+        "author": "Seeck."
       }
     ]
   },
@@ -8381,10 +8383,12 @@
     "lemma": "Ripa 1",
     "previous": "Riotimus",
     "next": "Ripa 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 845,
-        "author": "Schulten"
+        "start": 846,
+        "end": 846,
+        "author": "Schulten."
       }
     ]
   },
@@ -8392,10 +8396,12 @@
     "lemma": "Ripa 2",
     "previous": "Ripa 1",
     "next": "Ripaia ore",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 845,
-        "author": "Haug"
+        "start": 846,
+        "end": 846,
+        "author": "Haug."
       }
     ]
   },
@@ -8449,12 +8455,15 @@
   },
   {
     "lemma": "Ripa Thraciae",
-    "previous": "Ripanus",
+    "previous": "Riparienses milites",
     "next": "Ripe",
+    "sort_key": "Ripathraciae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 919,
-        "author": "Vulić"
+        "end": 919,
+        "author": "Vulić."
       }
     ]
   },
@@ -16302,7 +16311,7 @@
   },
   {
     "lemma": "Ruthusia",
-    "previous": "Ruhtusia",
+    "previous": "Ruteni",
     "next": "Rutila",
     "redirect": "Rusguniae",
     "proof_read": 3,
@@ -17109,9 +17118,9 @@
   },
   {
     "lemma": "Ῥύγχαι",
-    "previous": "Ῥυμμικὰ ὄρη",
+    "previous": "Rybdos",
     "next": "Ῥύγχιον",
-    "sort_key": "Rynchai",
+    "sort_key": "Rygchai",
     "redirect": "Grynchai",
     "proof_read": 3,
     "chapters": [

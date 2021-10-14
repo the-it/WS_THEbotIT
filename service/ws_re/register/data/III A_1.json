@@ -850,10 +850,13 @@
     "lemma": "Silius 5-6",
     "previous": "Silius 4",
     "next": "Silius 7",
+    "sort_key": "Silius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 71,
-        "author": "Münzer"
+        "end": 72,
+        "author": "Münzer."
       }
     ]
   },
@@ -16800,10 +16803,12 @@
     "lemma": "Sotion 4",
     "previous": "Sotion 3",
     "next": "Sotira 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Münzer"
+        "end": 1239,
+        "author": "Münzer."
       }
     ]
   },
@@ -16824,10 +16829,12 @@
     "lemma": "Sotira 2",
     "previous": "Sotira 1",
     "next": "Sotira 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Ruge"
+        "end": 1239,
+        "author": "Ruge."
       }
     ]
   },
@@ -16835,10 +16842,12 @@
     "lemma": "Sotira 3",
     "previous": "Sotira 2",
     "next": "Sotium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Kind"
+        "end": 1239,
+        "author": "Kind."
       }
     ]
   },
@@ -16870,10 +16879,12 @@
     "lemma": "Sottiates",
     "previous": "Soton",
     "next": "Sottillus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Keune"
+        "end": 1239,
+        "author": "Keune."
       }
     ]
   },
@@ -16894,10 +16905,12 @@
     "lemma": "Sottu",
     "previous": "Sottillus",
     "next": "Souciacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Keune"
+        "end": 1239,
+        "author": "Keune."
       }
     ]
   },
@@ -16905,10 +16918,12 @@
     "lemma": "Souciacus",
     "previous": "Sottu",
     "next": "Souconna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Keune"
+        "end": 1239,
+        "author": "Keune."
       }
     ]
   },
@@ -16916,10 +16931,12 @@
     "lemma": "Souconna",
     "previous": "Souciacus",
     "next": "Soulosse",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Keune"
+        "end": 1239,
+        "author": "Keune."
       }
     ]
   },
@@ -16939,39 +16956,47 @@
   {
     "lemma": "Soxis",
     "previous": "Soulosse",
-    "next": "Soxistra",
+    "next": "Σωξίστρα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Kießling, Emil"
+        "end": 1239,
+        "author": "E. Kießling."
       }
     ]
   },
   {
-    "lemma": "Soxistra",
+    "lemma": "Σωξίστρα",
     "previous": "Soxis",
-    "next": "Soxotai",
+    "next": "Σωξόται",
+    "sort_key": "Soxistra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Herrmann"
+        "end": 1239,
+        "author": "Herrmann."
       }
     ]
   },
   {
-    "lemma": "Soxotai",
-    "previous": "Soxistra",
+    "lemma": "Σωξόται",
+    "previous": "Σωξίστρα",
     "next": "Soyphis",
+    "sort_key": "Soxotai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Herrmann"
+        "end": 1239,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Soyphis",
-    "previous": "Soxotai",
+    "previous": "Σωξόται",
     "next": "Soza",
     "chapters": [
       {
@@ -16984,10 +17009,12 @@
     "lemma": "Soza",
     "previous": "Soyphis",
     "next": "Sozoa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1240,
-        "author": "Herrmann"
+        "end": 1240,
+        "author": "Herrmann."
       }
     ]
   },
@@ -17008,10 +17035,12 @@
     "lemma": "Sozomenos 1",
     "previous": "Sozoa",
     "next": "Sozomenos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1240,
-        "author": "Seeck"
+        "end": 1240,
+        "author": "Seeck."
       }
     ]
   },

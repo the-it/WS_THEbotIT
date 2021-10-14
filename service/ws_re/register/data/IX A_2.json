@@ -5791,7 +5791,7 @@
   {
     "lemma": "Zarkaion oros",
     "previous": "Zaramanochegas",
-    "next": "Zarmantuchd",
+    "next": "Zarmanochegas",
     "chapters": [
       {
         "start": 2329,
@@ -5800,8 +5800,21 @@
     ]
   },
   {
-    "lemma": "Zarmantuchd",
+    "lemma": "Zarmanochegas",
     "previous": "Zarkaion oros",
+    "next": "Zarmantuchd",
+    "redirect": "Zarmaros",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2329,
+        "end": 2329
+      }
+    ]
+  },
+  {
+    "lemma": "Zarmantuchd",
+    "previous": "Zarmanochegas",
     "next": "Zarmaros",
     "chapters": [
       {
