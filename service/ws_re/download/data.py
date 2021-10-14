@@ -82,7 +82,7 @@ _MAPPINGS: Dict[str, MappingEntryType] = {
     "I A,2": {"source": ("PaulyWissowa4153", "Saale Sarmathon"), "pages": ((1295, 20002, 20316),)},
     "II A,1": {"source": ("PaulyWissowa4153", "Sarmatia Selinos"), "pages": ((-1, 30002, 30316),)},
     "II A,2": {"source": ("PaulyWissowa4153", "Selinuntia Sila"), "pages": ((1263, 40002, 40326),)},
-    "III A,1": {"source": ("PaulyWissowa4153", "Silacenis Sparsus"), "pages": ((-1, 50002, 50316),)},
+    "III A,1": {"source": ("PaulyWissowa4153", "Silacenis Sparsus"), "pages": ((-1, 50002, 50318),)},
     "III A,2": {"source": ("PaulyWissowa4153", "Sparta Stluppi"), "pages": ((1263, 60002, 60322),)},
     "IV A,1": {"source": ("PaulyWissowa5466", "Stoa Symposion"), "pages": ((-1, 70002, 70314),)},
     "IV A,2": {"source": ("PaulyWissowa5466", "Symposion Tauris"), "pages": ((1271, 80002, 80321),)},
