@@ -4420,12 +4420,15 @@
   },
   {
     "lemma": "...ale... Naso",
-    "previous": "Naso 1",
-    "next": "Naso 2",
+    "previous": "Naso 3",
+    "next": "Nasoi",
+    "sort_key": "Naso 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1793,
-        "author": "Fluss"
+        "end": 1793,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -10683,10 +10686,13 @@
     "lemma": "Sex. Neranius Capito",
     "previous": "Nerabos",
     "next": "Ner(asti)ni",
+    "sort_key": "Neranius capito",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2538,
-        "author": "Fluss"
+        "end": 2538,
+        "author": "Max Fluss."
       }
     ]
   },

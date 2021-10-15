@@ -4605,7 +4605,7 @@
   {
     "lemma": "Σαιτιανοί",
     "previous": "Saitae",
-    "next": "Saitchamiae, Saithamiae",
+    "next": "Saitchamiae",
     "sort_key": "Saitianoi",
     "redirect": "Ptolemaios 66",
     "proof_read": 2,
@@ -7469,12 +7469,14 @@
   },
   {
     "lemma": "Sallustius 38",
-    "previous": "Sallustius 39",
-    "next": "Sallustius 40",
+    "previous": "Sallustius 37",
+    "next": "Sallustius 39",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1969,
-        "author": "Praechter"
+        "start": 1967,
+        "end": 1967,
+        "author": "Praechter."
       }
     ]
   },
@@ -11369,7 +11371,7 @@
   {
     "lemma": "Sandapila",
     "previous": "Σάνδανα",
-    "next": "Sandarake",
+    "next": "Σανδαράκη",
     "chapters": [
       {
         "start": 2262,
@@ -11378,36 +11380,42 @@
     ]
   },
   {
-    "lemma": "Sandarake",
+    "lemma": "Σανδαράκη",
     "previous": "Sandapila",
     "next": "Sandarakourgion",
+    "sort_key": "Sandarake",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2262,
-        "author": "Ruge"
+        "end": 2262,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Sandarakourgion",
-    "previous": "Sandarake",
+    "previous": "Σανδαράκη",
     "next": "Sandario",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2262,
-        "author": "Ruge"
+        "end": 2262,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Sandario",
     "previous": "Sandarakourgion",
-    "next": "Σανδάουα",
+    "next": "Sandas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2262,
         "end": 2263,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
@@ -11440,12 +11448,14 @@
   },
   {
     "lemma": "Sande",
-    "previous": "Sandas",
+    "previous": "Σανδάουα",
     "next": "Sanderva",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2263,
-        "author": "Arnim"
+        "end": 2263,
+        "author": "v. Arnim."
       }
     ]
   },

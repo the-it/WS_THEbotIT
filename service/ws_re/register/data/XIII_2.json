@@ -3746,7 +3746,7 @@
   {
     "lemma": "Lucretius 32",
     "previous": "Lucretius 31",
-    "next": "Lucretius 34",
+    "next": "Lucretius 33",
     "chapters": [
       {
         "start": 1691,
@@ -3755,8 +3755,21 @@
     ]
   },
   {
-    "lemma": "Lucretius 34",
+    "lemma": "Lucretius 33",
     "previous": "Lucretius 32",
+    "next": "Lucretius 34",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1691,
+        "end": 1691,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Lucretius 34",
+    "previous": "Lucretius 33",
     "next": "Lucretius 35",
     "chapters": [
       {
@@ -3779,7 +3792,7 @@
   {
     "lemma": "Lucretius 36",
     "previous": "Lucretius 35",
-    "next": "Lucretius pagus",
+    "next": "Lucretia 37",
     "chapters": [
       {
         "start": 1691,
@@ -3788,8 +3801,20 @@
     ]
   },
   {
-    "lemma": "Lucretius pagus",
+    "lemma": "Lucretia 37",
     "previous": "Lucretius 36",
+    "sort_key": "Lucretius 37",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1692,
+        "end": 1692,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Lucretius pagus",
     "next": "Lucrii Dii",
     "chapters": [
       {

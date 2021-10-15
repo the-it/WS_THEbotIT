@@ -7429,8 +7429,8 @@
     "proof_read": 3,
     "chapters": [
       {
-        "start": 2163,
-        "end": 2163
+        "start": 2164,
+        "end": 2164
       }
     ]
   },
@@ -7453,8 +7453,8 @@
     "proof_read": 3,
     "chapters": [
       {
-        "start": 2163,
-        "end": 2163,
+        "start": 2164,
+        "end": 2164,
         "author": "Eitrem."
       }
     ]
@@ -14738,7 +14738,7 @@
   {
     "lemma": "Heios",
     "previous": "Eirgmou dike",
-    "next": "Heirktai",
+    "next": "Εἱργμοῦ δίκη",
     "chapters": [
       {
         "start": 2645,
@@ -14747,8 +14747,22 @@
     ]
   },
   {
-    "lemma": "Heirktai",
+    "lemma": "Εἱργμοῦ δίκη",
     "previous": "Heios",
+    "next": "Heirktai",
+    "sort_key": "Heirgmou dike",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2645,
+        "end": 2645,
+        "author": "Thalheim."
+      }
+    ]
+  },
+  {
+    "lemma": "Heirktai",
+    "previous": "Εἱργμοῦ δίκη",
     "next": "Heirkte",
     "chapters": [
       {

@@ -2707,12 +2707,14 @@
   },
   {
     "lemma": "Hierondas",
-    "previous": "Hieron stoma 1",
+    "previous": "Hieron stoma 2",
     "next": "Hieronesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1535,
-        "author": "Sundwall"
+        "end": 1535,
+        "author": "Sundwall."
       }
     ]
   },
@@ -2756,6 +2758,7 @@
     "lemma": "Hieron stoma 2",
     "previous": "Hieron stoma 1",
     "next": "Hierondas",
+    "sort_key": "Hieron stoma 2",
     "redirect": "Danuvius 1",
     "proof_read": 2,
     "chapters": [
@@ -2767,7 +2770,7 @@
   },
   {
     "lemma": "Hieronnesos",
-    "previous": "Hieron stoma 2",
+    "previous": "Hieronikai",
     "next": "Hieronpotamon",
     "redirect": "Hiera nesos, Hieronesos",
     "proof_read": 2,

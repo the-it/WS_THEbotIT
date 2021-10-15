@@ -16822,7 +16822,7 @@
     "lemma": "Gemellus 4",
     "previous": "Gemellus 3",
     "next": "Gemellus 5",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1023,
@@ -16835,7 +16835,7 @@
     "lemma": "Gemellus 5",
     "previous": "Gemellus 4",
     "next": "Gemellus 6",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1023,
@@ -16997,7 +16997,7 @@
     "lemma": "Geminianus",
     "previous": "Geminiacus vicus",
     "next": "Geminius",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1024,
@@ -17043,10 +17043,14 @@
     "lemma": "Geminius 3",
     "previous": "Geminius 2",
     "next": "Geminius 4",
+    "proof_read": 2,
+    "wp_link": "w:de:Geminius (Anhänger des Antonius)",
+    "wd_link": "d:Q1501111",
     "chapters": [
       {
         "start": 1024,
-        "author": "Münzer"
+        "end": 1024,
+        "author": "Münzer."
       }
     ]
   },

@@ -2875,7 +2875,7 @@
   {
     "lemma": "Moreanoi",
     "previous": "Morduloi",
-    "next": "he Morene",
+    "next": "Μωρηνή, ἡ",
     "chapters": [
       {
         "start": 290,
@@ -2884,19 +2884,22 @@
     ]
   },
   {
-    "lemma": "he Morene",
+    "lemma": "Μωρηνή, ἡ",
     "previous": "Moreanoi",
     "next": "Mores",
+    "sort_key": "MoreneHe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 290,
-        "author": "Ruge"
+        "end": 290,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Mores",
-    "previous": "he Morene",
+    "previous": "Μωρηνή, ἡ",
     "next": "Morescheth",
     "chapters": [
       {
@@ -8189,6 +8192,7 @@
     "lemma": "Musa",
     "previous": "Musa 2",
     "next": "Musaeus",
+    "sort_key": "Musa 3",
     "redirect": "Muza 1",
     "proof_read": 2,
     "chapters": [
