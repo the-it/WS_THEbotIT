@@ -1902,10 +1902,13 @@
     "lemma": "Iyngies",
     "previous": "Iyggios",
     "next": "Iygx",
+    "sort_key": "Iyggios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1384,
-        "author": "Adler"
+        "end": 1384,
+        "author": "Adler."
       }
     ]
   },
@@ -9577,7 +9580,7 @@
   {
     "lemma": "Kamelitai",
     "previous": "Kamelboskoi",
-    "next": "Kamephis",
+    "next": "Καμηλοβοσκοί",
     "chapters": [
       {
         "start": 1831,
@@ -9586,8 +9589,22 @@
     ]
   },
   {
-    "lemma": "Kamephis",
+    "lemma": "Καμηλοβοσκοί",
     "previous": "Kamelitai",
+    "next": "Kamephis",
+    "sort_key": "Kameloboskoi",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1831,
+        "end": 1832,
+        "author": "Weissbach."
+      }
+    ]
+  },
+  {
+    "lemma": "Kamephis",
+    "previous": "Καμηλοβοσκοί",
     "next": "Kameson (-is?)",
     "chapters": [
       {

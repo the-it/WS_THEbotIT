@@ -13301,7 +13301,7 @@
     "previous": "Garmias",
     "next": "Garnake",
     "sort_key": "Garnaeportus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 768,
@@ -21764,7 +21764,7 @@
   {
     "lemma": "Gigia",
     "previous": "Gigas",
-    "next": "Giglon",
+    "next": "Γιγκίσηνός",
     "chapters": [
       {
         "start": 1356,
@@ -21773,8 +21773,22 @@
     ]
   },
   {
-    "lemma": "Giglon",
+    "lemma": "Γιγκίσηνός",
     "previous": "Gigia",
+    "next": "Giglon",
+    "sort_key": "Gigkisenos",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1356,
+        "end": 1356,
+        "author": "Cumont."
+      }
+    ]
+  },
+  {
+    "lemma": "Giglon",
+    "previous": "Γιγκίσηνός",
     "next": "Gigon 1",
     "chapters": [
       {

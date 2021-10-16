@@ -788,7 +788,7 @@
   {
     "lemma": "Semasia",
     "previous": "Σημανοῦς",
-    "next": "Kome Semate",
+    "next": "Κώμη Σεμάτη",
     "chapters": [
       {
         "start": 1329,
@@ -798,19 +798,22 @@
     ]
   },
   {
-    "lemma": "Kome Semate",
+    "lemma": "Κώμη Σεμάτη",
     "previous": "Semasia",
     "next": "Sematus",
+    "sort_key": "SemateKome",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1330,
-        "author": "Ruge"
+        "end": 1330,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Sematus",
-    "previous": "Kome Semate",
+    "previous": "Κώμη Σεμάτη",
     "next": "Sembella",
     "redirect": "Sendatus",
     "proof_read": 2,

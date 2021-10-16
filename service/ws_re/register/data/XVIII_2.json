@@ -814,7 +814,7 @@
   {
     "lemma": "Orthon",
     "previous": "Orthomenidas",
-    "next": "en Orthonduokois",
+    "next": "Ὀρθονδουώκοις, ἐν",
     "chapters": [
       {
         "start": 1490,
@@ -823,19 +823,22 @@
     ]
   },
   {
-    "lemma": "en Orthonduokois",
+    "lemma": "Ὀρθονδουώκοις, ἐν",
     "previous": "Orthon",
     "next": "Orthopagos",
+    "sort_key": "Orthonduokois",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1490,
-        "author": "Ruge"
+        "end": 1490,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Orthopagos",
-    "previous": "en Orthonduokois",
+    "previous": "Ὀρθονδουώκοις, ἐν",
     "next": "Orthopolis 1",
     "chapters": [
       {
@@ -4137,10 +4140,13 @@
     "lemma": "O...ulaz(enos)",
     "previous": "Oulamos",
     "next": "Ouliades",
+    "sort_key": "Oulazenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1998,
-        "author": "Ruge"
+        "end": 1998,
+        "author": "W. Ruge."
       }
     ]
   },

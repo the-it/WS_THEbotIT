@@ -6607,10 +6607,13 @@
     "lemma": "Τιάγαρ",
     "previous": "Thyterion",
     "next": "Τιάγουρα",
+    "sort_key": "Tiagar",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 760,
-        "author": "Grohmann"
+        "end": 760,
+        "author": "Adolf Grohmann."
       }
     ]
   },
@@ -8415,7 +8418,7 @@
   {
     "lemma": "Tiliamentus",
     "previous": "Tilenus",
-    "next": "Phrurion to Tilikion",
+    "next": "Φρούριον τὸ Τιλικίων",
     "redirect": "Tilaventus",
     "proof_read": 2,
     "chapters": [
@@ -8426,19 +8429,22 @@
     ]
   },
   {
-    "lemma": "Phrurion to Tilikion",
+    "lemma": "Φρούριον τὸ Τιλικίων",
     "previous": "Tiliamentus",
     "next": "Tilium",
+    "sort_key": "TilikionPhrurion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1037,
-        "author": "Fluss"
+        "end": 1037,
+        "author": "Max Fluss."
       }
     ]
   },
   {
     "lemma": "Tilium",
-    "previous": "Phrurion to Tilikion",
+    "previous": "Φρούριον τὸ Τιλικίων",
     "next": "Tilleus",
     "chapters": [
       {

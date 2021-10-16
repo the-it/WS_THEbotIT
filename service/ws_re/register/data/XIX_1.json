@@ -1633,7 +1633,7 @@
   {
     "lemma": "En Peiraiei 1",
     "previous": "Peiraïdes",
-    "next": "En Peiraiei 2",
+    "next": "Ἐν Πειραιεῖ 2",
     "chapters": [
       {
         "start": 71,
@@ -1642,19 +1642,22 @@
     ]
   },
   {
-    "lemma": "En Peiraiei 2",
+    "lemma": "Ἐν Πειραιεῖ 2",
     "previous": "En Peiraiei 1",
     "next": "Peiraieus 1",
+    "sort_key": "Peiraiei 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 71,
-        "author": "Schmidt"
+        "end": 71,
+        "author": "Johanna Schmidt."
       }
     ]
   },
   {
     "lemma": "Peiraieus 1",
-    "previous": "En Peiraiei 2",
+    "previous": "Ἐν Πειραιεῖ 2",
     "next": "Peiraieus 2",
     "chapters": [
       {

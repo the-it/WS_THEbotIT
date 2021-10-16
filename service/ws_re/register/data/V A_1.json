@@ -5094,7 +5094,7 @@
   {
     "lemma": "Temed",
     "previous": "Tembros",
-    "next": "he en Temenei polis",
+    "next": "Τεμένει πόλις, ἡ ἐν",
     "chapters": [
       {
         "start": 434,
@@ -5103,19 +5103,22 @@
     ]
   },
   {
-    "lemma": "he en Temenei polis",
+    "lemma": "Τεμένει πόλις, ἡ ἐν",
     "previous": "Temed",
     "next": "Temeneia",
+    "sort_key": "Temeneipolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 434,
-        "author": "Ruge"
+        "end": 434,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Temeneia",
-    "previous": "he en Temenei polis",
+    "previous": "Τεμένει πόλις, ἡ ἐν",
     "next": "Temenia",
     "chapters": [
       {
@@ -9581,7 +9584,7 @@
   {
     "lemma": "Tetartemorion",
     "previous": "Tetarte",
-    "next": "to tetarton",
+    "next": "τὸ τέταρτον",
     "chapters": [
       {
         "start": 1064,
@@ -9590,19 +9593,22 @@
     ]
   },
   {
-    "lemma": "to tetarton",
+    "lemma": "τὸ τέταρτον",
     "previous": "Tetartemorion",
     "next": "Tetellus",
+    "sort_key": "Tetarton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1065,
-        "author": "Hölscher"
+        "end": 1065,
+        "author": "G. Hölscher."
       }
     ]
   },
   {
     "lemma": "Tetellus",
-    "previous": "to tetarton",
+    "previous": "τὸ τέταρτον",
     "next": "Tethrin",
     "chapters": [
       {

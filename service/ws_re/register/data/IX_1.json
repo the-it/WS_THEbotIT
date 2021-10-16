@@ -3153,29 +3153,33 @@
   },
   {
     "lemma": "Hyperbereteos, Hyperbetheus",
-    "previous": "Hyperbereteos",
-    "next": "Hyperberitos",
+    "previous": "Hyperbereteas",
+    "next": "Hyperberetos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
-        "author": "Bischoff, [Ernst]"
+        "end": 253,
+        "author": "Bischoff."
       }
     ]
   },
   {
-    "lemma": "Hyperberitos",
+    "lemma": "Hyperberetos",
     "previous": "Hyperbereteos, Hyperbetheus",
     "next": "Hyperbetheus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254,
-        "author": "Bischoff, [Ernst]"
+        "start": 253,
+        "end": 254,
+        "author": "Bischoff."
       }
     ]
   },
   {
     "lemma": "Hyperbetheus",
-    "previous": "Hyperberitos",
+    "previous": "Hyperberetos",
     "next": "Hyperbios",
     "redirect": "Hyperbereteos",
     "proof_read": 2,
