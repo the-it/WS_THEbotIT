@@ -2118,10 +2118,12 @@
     "lemma": "Proclianus 6",
     "previous": "Proclianus 5",
     "next": "Proclinus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 71,
-        "author": "Diller"
+        "end": 71,
+        "author": "Hans Diller."
       }
     ]
   },
@@ -2223,10 +2225,12 @@
     "lemma": "Procula 2",
     "previous": "Procula 1",
     "next": "Procula 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 71,
-        "author": "Hanslik"
+        "end": 71,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -2234,10 +2238,12 @@
     "lemma": "Procula 3",
     "previous": "Procula 2",
     "next": "Procula 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 71,
-        "author": "Hanslik"
+        "end": 71,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -2256,10 +2262,12 @@
     "lemma": "Procula 5",
     "previous": "Procula 4",
     "next": "Procula 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 71,
-        "author": "Tolde"
+        "end": 71,
+        "author": "Eva Tolde."
       }
     ]
   },
@@ -2267,10 +2275,12 @@
     "lemma": "Procula 6",
     "previous": "Procula 5",
     "next": "Procula 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 71,
-        "author": "Tolde"
+        "end": 71,
+        "author": "Eva Tolde."
       }
     ]
   },
@@ -2378,11 +2388,13 @@
   {
     "lemma": "Proculeius 3",
     "previous": "Proculeius 2",
-    "next": "Proculus 1",
+    "next": "Prokulianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 74,
-        "author": "Hanslik"
+        "end": 74,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -2422,12 +2434,15 @@
   },
   {
     "lemma": "Prokulianus",
-    "previous": "Proculus 3",
-    "next": "Proculus 4",
+    "previous": "Proculeius 3",
+    "next": "Proculus 1",
+    "sort_key": "Proculianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 74,
-        "author": "Enßlin"
+        "end": 74,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2435,10 +2450,12 @@
     "lemma": "Proculus 4",
     "previous": "Prokulianus",
     "next": "Proculus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 75,
-        "author": "Hanslik"
+        "end": 75,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -2479,10 +2496,12 @@
     "lemma": "Proculus 8",
     "previous": "Proculus 7",
     "next": "Proculus 8a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 75,
-        "author": "Hanslik"
+        "end": 75,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -2545,10 +2564,12 @@
     "lemma": "Proculus 13",
     "previous": "Proculus 12",
     "next": "Proculus 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 77,
-        "author": "Enßlin"
+        "end": 77,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2612,9 +2633,12 @@
     "lemma": "Proculus 19",
     "previous": "Proculus 18",
     "next": "Proculus 20",
+    "redirect": "Porphyrios 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 79
+        "start": 79,
+        "end": 79
       }
     ]
   },
@@ -2700,10 +2724,12 @@
     "lemma": "Proculus 27",
     "previous": "Proculus 26",
     "next": "Proculus 28",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 80,
-        "author": "Enßlin"
+        "end": 80,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2722,10 +2748,12 @@
     "lemma": "Proculus 29",
     "previous": "Proculus 28",
     "next": "Proculus 30",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 80,
-        "author": "Enßlin"
+        "end": 80,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2812,10 +2840,12 @@
     "lemma": "Proculus 37",
     "previous": "Proculus 36",
     "next": "Proculus 38",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 82,
-        "author": "Enßlin"
+        "end": 82,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2834,10 +2864,12 @@
     "lemma": "Proculus 39",
     "previous": "Proculus 38",
     "next": "Proculus 40",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 82,
-        "author": "Enßlin"
+        "end": 82,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -2856,9 +2888,12 @@
     "lemma": "Proculus 41",
     "previous": "Proculus 40",
     "next": "Procurator",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 82
+        "start": 82,
+        "end": 82
       }
     ]
   },

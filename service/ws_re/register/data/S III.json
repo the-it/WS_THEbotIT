@@ -23746,7 +23746,6 @@
   {
     "lemma": "Hyaila",
     "previous": "Horatia",
-    "next": "Hyllis 1",
     "chapters": [
       {
         "start": 1160,
@@ -23756,18 +23755,29 @@
   },
   {
     "lemma": "Hyllis 1",
-    "previous": "Hyaila",
+    "previous": "Hydrea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1161,
         "end": 1162,
-        "author": "Kroll"
+        "author": "Kroll."
       }
     ]
   },
   {
     "lemma": "Ὕψισται πύλαι",
-    "next": "Iabadiu"
+    "previous": "Hypometheus",
+    "next": "Iabadiu",
+    "sort_key": "Hypsistaipylai",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1162,
+        "end": 1162,
+        "author": "Bölte"
+      }
+    ]
   },
   {
     "lemma": "Iabadiu",
@@ -23799,7 +23809,6 @@
   {
     "lemma": "Jagsthausen",
     "previous": "Iaca",
-    "next": "Jahreszeiten",
     "proof_read": 3,
     "wp_link": "w:de:Jagsthausen",
     "wd_link": "d:Q167823",
@@ -23813,17 +23822,23 @@
   },
   {
     "lemma": "Hypometheus",
-    "next": "Hypsistai pylai",
+    "previous": "Hyllis 1",
+    "next": "Ὕψισται πύλαι",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1162,
-        "author": "Lamer"
+        "end": 1162,
+        "author": "Lamer."
       }
     ]
   },
   {
+    "lemma": "Ὕψισται πύλαι",
+    "previous": "Hypometheus"
+  },
+  {
     "lemma": "Hypsistai pylai",
-    "previous": "Hypometheus",
     "chapters": [
       {
         "start": 1162,

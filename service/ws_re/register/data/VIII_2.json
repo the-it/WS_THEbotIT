@@ -10026,9 +10026,12 @@
     "lemma": "Honorata 1",
     "previous": "Honorarium",
     "next": "Honorata 2",
+    "redirect": "Granius 20",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2275
+        "start": 2275,
+        "end": 2275
       }
     ]
   },
@@ -10036,10 +10039,12 @@
     "lemma": "Honorata 2",
     "previous": "Honorata 1",
     "next": "Honoratianum, in",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2275,
-        "author": "Seeck"
+        "end": 2275,
+        "author": "Seeck."
       }
     ]
   },
@@ -10047,10 +10052,13 @@
     "lemma": "Honoratianum, in",
     "previous": "Honorata 2",
     "next": "Honoratianus 1",
+    "sort_key": "Honoratianum,in",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2275,
-        "author": "Weiss, J[akob]"
+        "end": 2275,
+        "author": "Weiss."
       }
     ]
   },
@@ -10058,10 +10066,12 @@
     "lemma": "Honoratianus 1",
     "previous": "Honoratianum, in",
     "next": "Honoratianus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2275,
-        "author": "Seeck"
+        "end": 2275,
+        "author": "Seeck."
       }
     ]
   },
@@ -10069,10 +10079,12 @@
     "lemma": "Honoratianus 2",
     "previous": "Honoratianus 1",
     "next": "Honoratus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2275,
-        "author": "Seeck"
+        "end": 2275,
+        "author": "Seeck."
       }
     ]
   },
@@ -10080,10 +10092,12 @@
     "lemma": "Honoratus 1",
     "previous": "Honoratianus 2",
     "next": "Honoratus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2275,
-        "author": "Stein, [Arthur]"
+        "end": 2275,
+        "author": "Stein."
       }
     ]
   },
@@ -10091,9 +10105,12 @@
     "lemma": "Honoratus 2",
     "previous": "Honoratus 1",
     "next": "Honoratus 3",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2275
+        "start": 2275,
+        "end": 2275
       }
     ]
   },
@@ -10101,10 +10118,12 @@
     "lemma": "Honoratus 3",
     "previous": "Honoratus 2",
     "next": "Honoratus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2275,
-        "author": "Seeck"
+        "end": 2275,
+        "author": "Seeck."
       }
     ]
   },
@@ -10112,11 +10131,12 @@
     "lemma": "Honoratus 4",
     "previous": "Honoratus 3",
     "next": "Honoratus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2275,
         "end": 2276,
-        "author": "Seeck"
+        "author": "Seeck."
       }
     ]
   },
@@ -10124,10 +10144,12 @@
     "lemma": "Honoratus 5",
     "previous": "Honoratus 4",
     "next": "Honoratus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2276,
-        "author": "Seeck"
+        "end": 2276,
+        "author": "Seeck."
       }
     ]
   },
@@ -10170,10 +10192,12 @@
     "lemma": "Honoratus 9",
     "previous": "Honoratus 8",
     "next": "Honoratus 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2276,
-        "author": "Benjamin"
+        "end": 2276,
+        "author": "Benjamin."
       }
     ]
   },
@@ -10181,10 +10205,12 @@
     "lemma": "Honoratus 10",
     "previous": "Honoratus 9",
     "next": "Honoratus 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2276,
-        "author": "Arnim"
+        "end": 2276,
+        "author": "v. Arnim."
       }
     ]
   },

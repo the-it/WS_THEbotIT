@@ -15195,10 +15195,12 @@
     "lemma": "Sosibios 8",
     "previous": "Sosibios 7",
     "next": "Sosigenes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1153,
-        "author": "Keune"
+        "end": 1153,
+        "author": "Keune."
       }
     ]
   },
@@ -15206,10 +15208,12 @@
     "lemma": "Sosigenes 1",
     "previous": "Sosibios 8",
     "next": "Sosigenes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1153,
-        "author": "Kirchner"
+        "end": 1153,
+        "author": "Kirchner."
       }
     ]
   },
@@ -15217,10 +15221,12 @@
     "lemma": "Sosigenes 2",
     "previous": "Sosigenes 1",
     "next": "Sosigenes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1153,
-        "author": "Kirchner"
+        "end": 1153,
+        "author": "Kirchner."
       }
     ]
   },
@@ -15228,10 +15234,12 @@
     "lemma": "Sosigenes 3",
     "previous": "Sosigenes 2",
     "next": "Sosigenes 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1153,
-        "author": "Kirchner"
+        "end": 1153,
+        "author": "Kirchner."
       }
     ]
   },
@@ -15250,10 +15258,12 @@
     "lemma": "Sosigenes 5",
     "previous": "Sosigenes 4",
     "next": "Sosigenes 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1153,
-        "author": "Rehm"
+        "end": 1153,
+        "author": "Rehm."
       }
     ]
   },
@@ -17272,10 +17282,10 @@
   },
   {
     "lemma": "Σπαλαθραῖος",
-    "previous": "Spalathra",
-    "next": "Spalathron",
+    "previous": "Spalaei",
+    "next": "Spalathra",
     "sort_key": "Spalathraios",
-    "redirect": "Stephanos 12",
+    "redirect": "Spalathra",
     "proof_read": 2,
     "chapters": [
       {
@@ -17286,9 +17296,9 @@
   },
   {
     "lemma": "Spalathron",
-    "previous": "Σπαλαθραῖος",
+    "previous": "Spalathra",
     "next": "Spalatrum",
-    "redirect": "Ravennas Geographus",
+    "redirect": "Spalatum",
     "proof_read": 2,
     "chapters": [
       {
@@ -17301,7 +17311,7 @@
     "lemma": "Spalatrum",
     "previous": "Spalathron",
     "next": "Spalatum",
-    "redirect": "Ravennas Geographus",
+    "redirect": "Spalatum",
     "proof_read": 2,
     "chapters": [
       {
@@ -17361,7 +17371,7 @@
     "previous": "Spalei",
     "next": "Spaneatis",
     "sort_key": "Spalethre",
-    "redirect": "Stephanos 12",
+    "redirect": "Spalathra",
     "proof_read": 2,
     "chapters": [
       {
@@ -17374,7 +17384,7 @@
     "lemma": "Spaneatis",
     "previous": "Σπαλέθρη",
     "next": "Spaneta",
-    "redirect": "Ravennas Geographus",
+    "redirect": "Spaneta",
     "proof_read": 2,
     "chapters": [
       {
