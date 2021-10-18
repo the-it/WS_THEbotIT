@@ -1190,9 +1190,12 @@
     "lemma": "Epigenes 8",
     "previous": "Epigenes 7",
     "next": "Epigenes 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 63
+        "start": 63,
+        "end": 63,
+        "author": "Willrich."
       }
     ]
   },
@@ -1200,9 +1203,12 @@
     "lemma": "Epigenes 9",
     "previous": "Epigenes 8",
     "next": "Epigenes 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 63
+        "start": 63,
+        "end": 63,
+        "author": "Willrich."
       }
     ]
   },
@@ -1254,10 +1260,12 @@
     "lemma": "Epigenes 14",
     "previous": "Epigenes 13",
     "next": "Epigenes 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 64,
-        "author": "Kaibel"
+        "end": 64,
+        "author": "Kaibel."
       }
     ]
   },
@@ -13217,10 +13225,12 @@
     "lemma": "Euarchos 1",
     "previous": "Euarchippos",
     "next": "Euarchos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 848,
-        "author": "Ruge"
+        "end": 848,
+        "author": "Ruge."
       }
     ]
   },
@@ -13228,10 +13238,12 @@
     "lemma": "Euarchos 2",
     "previous": "Euarchos 1",
     "next": "Euarchos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 848,
-        "author": "Kirchner"
+        "end": 848,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13239,10 +13251,12 @@
     "lemma": "Euarchos 3",
     "previous": "Euarchos 2",
     "next": "Euarchos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 848,
-        "author": "Kirchner"
+        "end": 848,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13250,10 +13264,12 @@
     "lemma": "Euarchos 4",
     "previous": "Euarchos 3",
     "next": "Euarchos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 848,
-        "author": "Kirchner"
+        "end": 848,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13287,10 +13303,12 @@
     "lemma": "Euareis",
     "previous": "Euarchos 6",
     "next": "Euares",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Kirchner"
+        "end": 849,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13298,10 +13316,12 @@
     "lemma": "Euares",
     "previous": "Euareis",
     "next": "Euarestos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Escher"
+        "end": 849,
+        "author": "Escher."
       }
     ]
   },
@@ -13309,10 +13329,12 @@
     "lemma": "Euarestos",
     "previous": "Euares",
     "next": "Euarete",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Kirchner"
+        "end": 849,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13320,10 +13342,12 @@
     "lemma": "Euarete",
     "previous": "Euarestos",
     "next": "Euaretos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Hoefer"
+        "end": 849,
+        "author": "Hoefer."
       }
     ]
   },
@@ -13331,10 +13355,12 @@
     "lemma": "Euaretos",
     "previous": "Euarete",
     "next": "Euarios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Dieterich"
+        "end": 849,
+        "author": "Dieterich."
       }
     ]
   },
@@ -13355,10 +13381,12 @@
     "lemma": "Euaristus",
     "previous": "Euarios",
     "next": "Euariza",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Jülicher"
+        "end": 849,
+        "author": "Jülicher."
       }
     ]
   },
@@ -13376,17 +13404,30 @@
   {
     "lemma": "Euarne",
     "previous": "Euariza",
-    "next": "Euas 1",
+    "next": "Euarzia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Escher"
+        "end": 849,
+        "author": "Escher."
+      }
+    ]
+  },
+  {
+    "lemma": "Euarzia",
+    "previous": "Euarne",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 849,
+        "end": 849,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Euas 1",
-    "previous": "Euarne",
     "next": "Euas 2",
     "chapters": [
       {
@@ -13412,10 +13453,12 @@
     "lemma": "Euaspla",
     "previous": "Euas 2",
     "next": "Euathlos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Kiessling, Max"
+        "end": 849,
+        "author": "Kiessling."
       }
     ]
   },
@@ -13423,10 +13466,12 @@
     "lemma": "Euathlos",
     "previous": "Euaspla",
     "next": "Evaunum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Kirchner"
+        "end": 849,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13434,10 +13479,12 @@
     "lemma": "Evaunum",
     "previous": "Euathlos",
     "next": "Euax",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
-        "author": "Ihm"
+        "end": 849,
+        "author": "Ihm."
       }
     ]
   },
@@ -13445,11 +13492,12 @@
     "lemma": "Euax",
     "previous": "Evaunum",
     "next": "Euaza",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 849,
         "end": 850,
-        "author": "Wellmann, M[ax]"
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -13457,10 +13505,12 @@
     "lemma": "Euaza",
     "previous": "Euax",
     "next": "Eubalkes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Bürchner"
+        "end": 850,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13468,10 +13518,12 @@
     "lemma": "Eubalkes",
     "previous": "Euaza",
     "next": "Eubatos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Kirchner"
+        "end": 850,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13479,10 +13531,12 @@
     "lemma": "Eubatos",
     "previous": "Eubalkes",
     "next": "Eubioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Kirchner"
+        "end": 850,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13490,10 +13544,12 @@
     "lemma": "Eubioi",
     "previous": "Eubatos",
     "next": "Eubion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Hülsen"
+        "end": 850,
+        "author": "Hülsen."
       }
     ]
   },
@@ -13501,10 +13557,12 @@
     "lemma": "Eubion",
     "previous": "Eubioi",
     "next": "Eubios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Schmid"
+        "end": 850,
+        "author": "W. Schmid."
       }
     ]
   },
@@ -13512,10 +13570,12 @@
     "lemma": "Eubios 1",
     "previous": "Eubion",
     "next": "Eubios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Hoefer"
+        "end": 850,
+        "author": "Hoefer."
       }
     ]
   },
@@ -13523,10 +13583,12 @@
     "lemma": "Eubios 2",
     "previous": "Eubios 1",
     "next": "Eubios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Hoefer"
+        "end": 850,
+        "author": "Hoefer."
       }
     ]
   },
@@ -13534,10 +13596,12 @@
     "lemma": "Eubios 3",
     "previous": "Eubios 2",
     "next": "Eubios 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Kirchner"
+        "end": 850,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13545,10 +13609,12 @@
     "lemma": "Eubios 4",
     "previous": "Eubios 3",
     "next": "Eubios 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Kirchner"
+        "end": 850,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13556,10 +13622,12 @@
     "lemma": "Eubios 5",
     "previous": "Eubios 4",
     "next": "Eubios 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
-        "author": "Arnim"
+        "end": 850,
+        "author": "v. Arnim."
       }
     ]
   },
@@ -13567,11 +13635,12 @@
     "lemma": "Eubios 6",
     "previous": "Eubios 5",
     "next": "Eubios 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 850,
         "end": 851,
-        "author": "Crusius"
+        "author": "Crusius."
       }
     ]
   },
@@ -13579,10 +13648,12 @@
     "lemma": "Eubios 7",
     "previous": "Eubios 6",
     "next": "Eubiotos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
-        "author": "Robert"
+        "end": 851,
+        "author": "C. Robert."
       }
     ]
   },
@@ -13590,10 +13661,12 @@
     "lemma": "Eubiotos 1",
     "previous": "Eubios 7",
     "next": "Eubiotos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
-        "author": "Kirchner"
+        "end": 851,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13601,38 +13674,45 @@
     "lemma": "Eubiotos 2",
     "previous": "Eubiotos 1",
     "next": "Eubiotos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
-        "author": "Kirchner"
+        "end": 851,
+        "author": "Kirchner."
       }
     ]
   },
   {
     "lemma": "Eubiotos 3",
     "previous": "Eubiotos 2",
-    "next": "Euboeis",
+    "next": "Εὐβοεῖς",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
-        "author": "Kirchner"
+        "end": 851,
+        "author": "Kirchner."
       }
     ]
   },
   {
-    "lemma": "Euboeis",
+    "lemma": "Εὐβοεῖς",
     "previous": "Eubiotos 3",
     "next": "Euboia 1",
+    "sort_key": "Euboeis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
-        "author": "Schiff"
+        "end": 851,
+        "author": "Schiff."
       }
     ]
   },
   {
     "lemma": "Euboia 1",
-    "previous": "Euboeis",
+    "previous": "Εὐβοεῖς",
     "next": "Euboia 2",
     "wp_link": "w:de:Euböa",
     "wd_link": "d:Q173096",

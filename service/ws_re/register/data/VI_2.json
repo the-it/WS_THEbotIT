@@ -1689,7 +1689,7 @@
   {
     "lemma": "Fabaria",
     "previous": "Faba aegyptia",
-    "next": "Fabaria portus",
+    "next": "Fabaria porticus",
     "redirect": "Burcana",
     "proof_read": 2,
     "chapters": [
@@ -1700,19 +1700,22 @@
     ]
   },
   {
-    "lemma": "Fabaria portus",
+    "lemma": "Fabaria porticus",
     "previous": "Fabaria",
     "next": "Fabaris",
+    "sort_key": "Fabariaporticus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1703,
-        "author": "Hülsen"
+        "end": 1703,
+        "author": "Hülsen."
       }
     ]
   },
   {
     "lemma": "Fabaris",
-    "previous": "Fabaria portus",
+    "previous": "Fabaria porticus",
     "next": "Fabatius",
     "redirect": "Farfarus",
     "proof_read": 2,
@@ -1727,10 +1730,12 @@
     "lemma": "Fabatius",
     "previous": "Fabaris",
     "next": "Fabatus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1703,
-        "author": "Groag"
+        "end": 1703,
+        "author": "Groag."
       }
     ]
   },
@@ -1738,10 +1743,12 @@
     "lemma": "Fabatus 1",
     "previous": "Fabatius",
     "next": "Fabatus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1703,
-        "author": "Stein, [Arthur]"
+        "end": 1703,
+        "author": "Stein."
       }
     ]
   },
@@ -1786,10 +1793,12 @@
     "lemma": "Faberius 2",
     "previous": "Faberius 1",
     "next": "Fabia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1737,
-        "author": "Münzer"
+        "end": 1737,
+        "author": "Münzer."
       }
     ]
   },
@@ -1808,10 +1817,12 @@
     "lemma": "Fabianus 1",
     "previous": "Fabia",
     "next": "Fabianus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1737,
-        "author": "Stein, [Arthur]"
+        "end": 1737,
+        "author": "Stein."
       }
     ]
   },
@@ -1819,10 +1830,12 @@
     "lemma": "Fabianus 2",
     "previous": "Fabianus 1",
     "next": "Fabianus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1737,
-        "author": "Stein, [Arthur]"
+        "end": 1737,
+        "author": "Stein."
       }
     ]
   },
@@ -1843,10 +1856,12 @@
     "lemma": "Fabianus 4",
     "previous": "Fabianus 3",
     "next": "Fabianus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1737,
-        "author": "Groag"
+        "end": 1737,
+        "author": "Groag."
       }
     ]
   },
@@ -1878,10 +1893,12 @@
     "lemma": "Fabianus 7",
     "previous": "Fabianus 6",
     "next": "Fabianus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1737,
-        "author": "Seeck"
+        "end": 1737,
+        "author": "Seeck."
       }
     ]
   },

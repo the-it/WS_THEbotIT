@@ -3126,7 +3126,7 @@
   {
     "lemma": "Madena",
     "previous": "Madebena",
-    "next": "Madethubadon",
+    "next": "Μαδεθούβαδον",
     "redirect": "Motene",
     "proof_read": 2,
     "chapters": [
@@ -3137,24 +3137,29 @@
     ]
   },
   {
-    "lemma": "Madethubadon",
+    "lemma": "Μαδεθούβαδον",
     "previous": "Madena",
     "next": "Madia",
+    "sort_key": "Madethubadon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Dessau"
+        "end": 203,
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Madia",
-    "previous": "Madethubadon",
+    "previous": "Μαδεθούβαδον",
     "next": "Μαδιάμ 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Herrmann"
+        "end": 203,
+        "author": "Herrmann."
       }
     ]
   },
@@ -3200,7 +3205,7 @@
   {
     "lemma": "Madian",
     "previous": "Μαδιάμα",
-    "next": "Madiandynoi",
+    "next": "Μαδιανδυνοί",
     "redirect": "Midian",
     "proof_read": 2,
     "chapters": [
@@ -3211,19 +3216,22 @@
     ]
   },
   {
-    "lemma": "Madiandynoi",
+    "lemma": "Μαδιανδυνοί",
     "previous": "Madian",
     "next": "Madiane",
+    "sort_key": "Madiandynoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Herrmann"
+        "end": 203,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Madiane",
-    "previous": "Madiandynoi",
+    "previous": "Μαδιανδυνοί",
     "next": "Madis",
     "redirect": "Midian",
     "proof_read": 2,
@@ -3272,7 +3280,7 @@
   {
     "lemma": "Madmena",
     "previous": "Madmen",
-    "next": "Madnasa",
+    "next": "Μάδνασα",
     "chapters": [
       {
         "start": 203,
@@ -3281,19 +3289,22 @@
     ]
   },
   {
-    "lemma": "Madnasa",
+    "lemma": "Μάδνασα",
     "previous": "Madmena",
     "next": "Madoke",
+    "sort_key": "Madnasa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 204,
-        "author": "Bürchner"
+        "end": 204,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Madoke",
-    "previous": "Madnasa",
+    "previous": "Μάδνασα",
     "next": "Madon",
     "chapters": [
       {
@@ -3376,10 +3387,12 @@
     "lemma": "Maecenas",
     "previous": "Maec... Nep...",
     "next": "Maecenas 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 206,
-        "author": "Münzer"
+        "end": 206,
+        "author": "Münzer."
       }
     ]
   },
@@ -3387,10 +3400,12 @@
     "lemma": "Maecenas 1",
     "previous": "Maecenas",
     "next": "Maecenas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 206,
-        "author": "Münzer"
+        "end": 206,
+        "author": "Münzer."
       }
     ]
   },
@@ -3398,10 +3413,12 @@
     "lemma": "Maecenas 2",
     "previous": "Maecenas 1",
     "next": "Maecenas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 206,
-        "author": "Münzer"
+        "end": 206,
+        "author": "Münzer."
       }
     ]
   },
@@ -3409,10 +3426,12 @@
     "lemma": "Maecenas 3",
     "previous": "Maecenas 2",
     "next": "Maecenas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 206,
-        "author": "Münzer"
+        "end": 206,
+        "author": "Münzer."
       }
     ]
   },
