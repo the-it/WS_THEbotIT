@@ -10183,11 +10183,13 @@
     "lemma": "Ἐς βόθυνον",
     "previous": "Esbonitae",
     "next": "Esbus 1",
+    "sort_key": "Esbothynon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 612,
         "end": 613,
-        "author": "Mau, [August]"
+        "author": "Mau."
       }
     ]
   },
@@ -10825,7 +10827,7 @@
   {
     "lemma": "Esumus",
     "previous": "Esubiani",
-    "next": "Esus",
+    "next": "Esuris",
     "chapters": [
       {
         "start": 694,
@@ -10834,8 +10836,22 @@
     ]
   },
   {
-    "lemma": "Esus",
+    "lemma": "Esuris",
     "previous": "Esumus",
+    "next": "Esus",
+    "sort_key": "Esuris",
+    "redirect": "Aesuri",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 694,
+        "end": 694
+      }
+    ]
+  },
+  {
+    "lemma": "Esus",
+    "previous": "Esuris",
     "next": "Eszris",
     "chapters": [
       {
@@ -13136,8 +13152,8 @@
   },
   {
     "lemma": "Euaratos",
-    "previous": "Euanthius 2",
-    "next": "Euarane",
+    "previous": "Euarane",
+    "next": "Euarchidas",
     "proof_read": 2,
     "chapters": [
       {
@@ -17582,10 +17598,12 @@
     "lemma": "Eukleidas 4",
     "previous": "Eukleidas 3",
     "next": "Eukleidas 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Kirchner"
+        "end": 999,
+        "author": "Kirchner."
       }
     ]
   },
@@ -17593,10 +17611,12 @@
     "lemma": "Eukleidas 5",
     "previous": "Eukleidas 4",
     "next": "Eukleidas 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Kirchner"
+        "end": 999,
+        "author": "Kirchner."
       }
     ]
   },
@@ -17604,10 +17624,12 @@
     "lemma": "Eukleidas 6",
     "previous": "Eukleidas 5",
     "next": "Eukleidas 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Kirchner"
+        "end": 999,
+        "author": "Kirchner."
       }
     ]
   },
@@ -17615,10 +17637,12 @@
     "lemma": "Eukleidas 7",
     "previous": "Eukleidas 6",
     "next": "Eukleidas 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Kirchner"
+        "end": 999,
+        "author": "Kirchner."
       }
     ]
   },
@@ -17626,10 +17650,12 @@
     "lemma": "Eukleidas 8",
     "previous": "Eukleidas 7",
     "next": "Eukleidas 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Kirchner"
+        "end": 999,
+        "author": "Kirchner."
       }
     ]
   },
@@ -24891,10 +24917,12 @@
     "lemma": "Eurylochos 5",
     "previous": "Eurylochos 4",
     "next": "Eurylochos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1332,
-        "author": "Niese"
+        "end": 1332,
+        "author": "Niese."
       }
     ]
   },
@@ -24902,11 +24930,12 @@
     "lemma": "Eurylochos 6",
     "previous": "Eurylochos 5",
     "next": "Eurylochos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1332,
         "end": 1333,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -24940,10 +24969,12 @@
     "lemma": "Eurylochos 9",
     "previous": "Eurylochos 8",
     "next": "Eurylophe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1333,
-        "author": "Arnim"
+        "end": 1333,
+        "author": "v. Arnim."
       }
     ]
   },
@@ -25108,10 +25139,12 @@
     "lemma": "Eurymachos 10",
     "previous": "Eurymachos 9",
     "next": "Eurymede 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1333,
-        "author": "Kirchner"
+        "end": 1333,
+        "author": "Kirchner."
       }
     ]
   },
@@ -25119,10 +25152,12 @@
     "lemma": "Eurymede 1",
     "previous": "Eurymachos 10",
     "next": "Eurymede 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1333,
-        "author": "Tümpel"
+        "end": 1333,
+        "author": "Tümpel."
       }
     ]
   },
@@ -25130,11 +25165,12 @@
     "lemma": "Eurymede 2",
     "previous": "Eurymede 1",
     "next": "Eurymedon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1333,
         "end": 1334,
-        "author": "Tümpel"
+        "author": "Tümpel."
       }
     ]
   },
@@ -29510,7 +29546,7 @@
     "lemma": "Eutychios 2",
     "previous": "Eutychios 1",
     "next": "Eutychios 3",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1535,
