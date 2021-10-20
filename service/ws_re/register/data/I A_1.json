@@ -3364,10 +3364,12 @@
     "lemma": "Raus",
     "previous": "Raurici",
     "next": "Rausai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 294,
-        "author": "Stein, [Arthur]"
+        "end": 294,
+        "author": "Stein."
       }
     ]
   },
@@ -6941,7 +6943,7 @@
   },
   {
     "lemma": "Ῥήτωρ",
-    "previous": "epi retois eisagein",
+    "previous": "ἐπὶ ῥητοῖς εἰσάγειν",
     "next": "Retovium",
     "sort_key": "Retor",
     "redirect": "Sophisten",
@@ -8349,7 +8351,7 @@
     "previous": "Rion 3",
     "next": "Riothamus",
     "redirect": "Riothamus",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 846,
@@ -17279,7 +17281,7 @@
   {
     "lemma": "Rypes",
     "previous": "Ῥύπη",
-    "next": "Rysia",
+    "next": "Ῥυσία",
     "chapters": [
       {
         "start": 1288,
@@ -17289,19 +17291,22 @@
     ]
   },
   {
-    "lemma": "Rysia",
+    "lemma": "Ῥυσία",
     "previous": "Rypes",
     "next": "Ῥύτιον",
+    "sort_key": "Rysia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1292,
-        "author": "Bölte"
+        "end": 1292,
+        "author": "Bölte."
       }
     ]
   },
   {
     "lemma": "Ῥύτιον",
-    "previous": "Rysia",
+    "previous": "Ῥυσία",
     "next": "Ryton",
     "chapters": [
       {

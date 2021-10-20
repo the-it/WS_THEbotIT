@@ -548,10 +548,12 @@
     "lemma": "Iustinopolis 1",
     "previous": "Iustinianus 9",
     "next": "Iustinopolis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1314,
-        "author": "Philipp"
+        "end": 1314,
+        "author": "Philipp."
       }
     ]
   },
@@ -559,10 +561,12 @@
     "lemma": "Iustinopolis 2",
     "previous": "Iustinopolis 1",
     "next": "Iustinus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1314,
-        "author": "Vulić"
+        "end": 1314,
+        "author": "Vulić."
       }
     ]
   },
@@ -610,10 +614,12 @@
     "lemma": "Iustinus 4",
     "previous": "Iustinus 3",
     "next": "Iustinus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1329,
-        "author": "Stein, Ernst"
+        "end": 1329,
+        "author": "Ernst Stein."
       }
     ]
   },
@@ -621,10 +627,12 @@
     "lemma": "Iustinus 5",
     "previous": "Iustinus 4",
     "next": "Iustinus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1329,
-        "author": "Stein, Ernst"
+        "end": 1329,
+        "author": "Ernst Stein."
       }
     ]
   },
@@ -767,11 +775,12 @@
     "lemma": "Iustinus 16",
     "previous": "Iustinus 15",
     "next": "Iustinus 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1338,
         "end": 1339,
-        "author": "Stein, Ernst"
+        "author": "Ernst Stein."
       }
     ]
   },
@@ -816,10 +825,12 @@
     "lemma": "Iustuleius",
     "previous": "Iustitium",
     "next": "Iustus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1340,
-        "author": "Münzer"
+        "end": 1340,
+        "author": "Münzer."
       }
     ]
   },
@@ -827,10 +838,12 @@
     "lemma": "Iustus 1",
     "previous": "Iustuleius",
     "next": "Iustus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1340,
-        "author": "Stein, [Arthur]"
+        "end": 1340,
+        "author": "Stein."
       }
     ]
   },
@@ -912,10 +925,12 @@
     "lemma": "Iustus 7",
     "previous": "Iustus 6",
     "next": "Iustus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1341,
-        "author": "Stein, Ernst"
+        "end": 1341,
+        "author": "Ernst Stein."
       }
     ]
   },
@@ -949,10 +964,12 @@
     "lemma": "Iustus 10",
     "previous": "Iustus 9",
     "next": "Iustus 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1346,
-        "author": "Gossen"
+        "end": 1346,
+        "author": "Gossen."
       }
     ]
   },
@@ -1106,10 +1123,12 @@
     "lemma": "Iuvenalis 1",
     "previous": "Iuvenalia",
     "next": "Iuvenalis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1356,
-        "author": "Stein, [Arthur]"
+        "end": 1356,
+        "author": "Stein."
       }
     ]
   },
@@ -1130,10 +1149,12 @@
     "lemma": "Iuvenalis 3",
     "previous": "Iuvenalis 2",
     "next": "Iuvenalis 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1356,
-        "author": "Groag"
+        "end": 1356,
+        "author": "Groag."
       }
     ]
   },
@@ -1333,10 +1354,12 @@
     "lemma": "Iuventianus 1",
     "previous": "Iuventas",
     "next": "Iuventianus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1361,
-        "author": "Stein, [Arthur]"
+        "end": 1361,
+        "author": "Stein."
       }
     ]
   },
@@ -1927,7 +1950,7 @@
   {
     "lemma": "Iyrkai",
     "previous": "Iygx",
-    "next": "Izabates",
+    "next": "Ἰζαβάτης",
     "chapters": [
       {
         "start": 1386,
@@ -1937,20 +1960,23 @@
     ]
   },
   {
-    "lemma": "Izabates",
+    "lemma": "Ἰζαβάτης",
     "previous": "Iyrkai",
     "next": "Izala",
+    "sort_key": "Izabates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1390,
-        "author": "Weissbach"
+        "end": 1390,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Izala",
-    "previous": "Izabates",
-    "next": "Izan nesopolis",
+    "previous": "Ἰζαβάτης",
+    "next": "Ἴζαν νησόπολις",
     "chapters": [
       {
         "start": 1390,
@@ -1959,19 +1985,22 @@
     ]
   },
   {
-    "lemma": "Izan nesopolis",
+    "lemma": "Ἴζαν νησόπολις",
     "previous": "Izala",
     "next": "Izates 1",
+    "sort_key": "Izannesopolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1390,
-        "author": "Weissbach"
+        "end": 1390,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Izates 1",
-    "previous": "Izan nesopolis",
+    "previous": "Ἴζαν νησόπολις",
     "next": "Izates 2",
     "chapters": [
       {
@@ -1995,33 +2024,40 @@
   {
     "lemma": "Izates 3",
     "previous": "Izates 2",
-    "next": "Izatha",
+    "next": "Ἴζαθα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1392,
-        "author": "Weissbach"
+        "end": 1392,
+        "author": "Weissbach."
       }
     ]
   },
   {
-    "lemma": "Izatha",
+    "lemma": "Ἴζαθα",
     "previous": "Izates 3",
     "next": "Izgi",
+    "sort_key": "Izatha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1392,
-        "author": "Fischer"
+        "end": 1392,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Izgi",
-    "previous": "Izatha",
+    "previous": "Ἴζαθα",
     "next": "Izine",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1392,
-        "author": "Wecker"
+        "end": 1392,
+        "author": "Wecker."
       }
     ]
   },
@@ -2196,7 +2232,7 @@
   {
     "lemma": "Kabana",
     "previous": "Kabalsi",
-    "next": "Kabandene",
+    "next": "Καβανδηνή",
     "chapters": [
       {
         "start": 1395,
@@ -2206,19 +2242,22 @@
     ]
   },
   {
-    "lemma": "Kabandene",
+    "lemma": "Καβανδηνή",
     "previous": "Kabana",
     "next": "Kabarnis",
+    "sort_key": "Kabandene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1396,
-        "author": "Weissbach"
+        "end": 1396,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Kabarnis",
-    "previous": "Kabandene",
+    "previous": "Καβανδηνή",
     "next": "Kabarnoi",
     "chapters": [
       {

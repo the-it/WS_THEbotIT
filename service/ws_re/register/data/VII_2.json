@@ -8662,12 +8662,15 @@
   },
   {
     "lemma": "Haemonides 1",
-    "previous": "Haimonia 1",
+    "previous": "Haimones",
     "next": "Haemonides 2",
+    "sort_key": "Haimonides 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
@@ -8675,21 +8678,27 @@
     "lemma": "Haemonides 2",
     "previous": "Haemonides 1",
     "next": "Haemonides 3",
+    "sort_key": "Haimonides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Haemonides 3",
     "previous": "Haemonides 2",
-    "next": "Haimones",
+    "next": "Haimonieis",
+    "sort_key": "Haimonides 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
@@ -8706,12 +8715,14 @@
   },
   {
     "lemma": "Haimonia 2",
-    "previous": "Haimones",
+    "previous": "Haimonia 1",
     "next": "Haimonia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
@@ -8719,10 +8730,12 @@
     "lemma": "Haimonia 3",
     "previous": "Haimonia 2",
     "next": "Haimonia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
@@ -8730,10 +8743,12 @@
     "lemma": "Haimonia 4",
     "previous": "Haimonia 3",
     "next": "Haimonia 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
@@ -8774,12 +8789,15 @@
   },
   {
     "lemma": "Haimonieis",
-    "previous": "Haimoniai 2",
+    "previous": "Haemonides 3",
     "next": "Haimonios 1",
+    "sort_key": "Haimonieis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
@@ -8797,7 +8815,7 @@
   {
     "lemma": "Haimonios 2",
     "previous": "Haimonios 1",
-    "next": "Haimonis",
+    "next": "Αἱμονίς",
     "chapters": [
       {
         "start": 2220,
@@ -8806,19 +8824,22 @@
     ]
   },
   {
-    "lemma": "Haimonis",
+    "lemma": "Αἱμονίς",
     "previous": "Haimonios 2",
     "next": "Haimos",
+    "sort_key": "Haimonis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2220,
-        "author": "Kern"
+        "end": 2220,
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Haimos",
-    "previous": "Haimonis",
+    "previous": "Αἱμονίς",
     "next": "Haimos 1",
     "chapters": [
       {

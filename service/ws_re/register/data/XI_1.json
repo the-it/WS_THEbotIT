@@ -8350,7 +8350,7 @@
   {
     "lemma": "Kition 2",
     "previous": "Kition 1",
-    "next": "Kiton",
+    "next": "Κιτών",
     "chapters": [
       {
         "start": 545,
@@ -8359,20 +8359,23 @@
     ]
   },
   {
-    "lemma": "Kiton",
+    "lemma": "Κιτών",
     "previous": "Kition 2",
     "next": "Kittos",
+    "sort_key": "Kiton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 545,
-        "author": "Bürchner"
+        "end": 545,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kittos",
-    "previous": "Kiton",
-    "next": "Kitzabis",
+    "previous": "Κιτών",
+    "next": "Κίτζαβις",
     "chapters": [
       {
         "start": 545,
@@ -8382,24 +8385,29 @@
     ]
   },
   {
-    "lemma": "Kitzabis",
+    "lemma": "Κίτζαβις",
     "previous": "Kittos",
     "next": "Kizara",
+    "sort_key": "Kitzabis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 546,
-        "author": "Bürchner"
+        "end": 546,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kizara",
-    "previous": "Kitzabis",
+    "previous": "Κίτζαβις",
     "next": "Kizari",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 546,
-        "author": "Ruge"
+        "end": 546,
+        "author": "Ruge."
       }
     ]
   },
@@ -8407,10 +8415,12 @@
     "lemma": "Kizari",
     "previous": "Kizara",
     "next": "Klaaitos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 546,
-        "author": "Ruge"
+        "end": 546,
+        "author": "Ruge."
       }
     ]
   },
@@ -8418,10 +8428,12 @@
     "lemma": "Klaaitos",
     "previous": "Kizari",
     "next": "Klaametis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 546,
-        "author": "Kroll"
+        "end": 546,
+        "author": "Kroll."
       }
     ]
   },
@@ -14837,6 +14849,8 @@
     "next": "Kogamis, Kogamos",
     "sort_key": "Kösching",
     "proof_read": 2,
+    "wp_link": "w:de:Kastell Kösching",
+    "wd_link": "d:Q1618277",
     "chapters": [
       {
         "start": 1033,

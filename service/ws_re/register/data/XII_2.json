@@ -9216,6 +9216,7 @@
   {
     "lemma": "Lex Publilia 3",
     "previous": "Lex Publilia 2",
+    "next": "Lex Publilia 4",
     "chapters": [
       {
         "start": 2404,
@@ -9224,10 +9225,22 @@
     ]
   },
   {
-    "lemma": "Lex Publilia 4"
+    "lemma": "Lex Publilia 4",
+    "previous": "Lex Publilia 3",
+    "next": "Lex Pupia",
+    "sort_key": "Lex Publilia 4",
+    "redirect": "Lex Maenia 1",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2405,
+        "end": 2405
+      }
+    ]
   },
   {
     "lemma": "Lex Pupia",
+    "previous": "Lex Publilia 4",
     "next": "Lex Quinctia",
     "chapters": [
       {
@@ -9253,7 +9266,7 @@
     "next": "Lex Remmia",
     "sort_key": "Lex regiae",
     "redirect": "Lex",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 2405,
@@ -10073,10 +10086,13 @@
     "lemma": "Lia (?)",
     "previous": "Lexovii",
     "next": "Liada",
+    "sort_key": "Lia(?)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2483,
-        "author": "Ruge"
+        "end": 2483,
+        "author": "Ruge."
       }
     ]
   },
@@ -10084,10 +10100,12 @@
     "lemma": "Liada",
     "previous": "Lia (?)",
     "next": "Liar",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2483,
-        "author": "Ruge"
+        "end": 2483,
+        "author": "Ruge."
       }
     ]
   },
@@ -10095,10 +10113,12 @@
     "lemma": "Liar",
     "previous": "Liada",
     "next": "Lias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2483,
-        "author": "MacDonald"
+        "end": 2483,
+        "author": "Macdonald."
       }
     ]
   },
@@ -10131,10 +10151,12 @@
     "lemma": "Liba 2",
     "previous": "Λίβα 1",
     "next": "Libade",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2483,
-        "author": "Wecker"
+        "end": 2483,
+        "author": "Wecker."
       }
     ]
   },
@@ -10142,10 +10164,12 @@
     "lemma": "Libade",
     "previous": "Liba 2",
     "next": "Libaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2483,
-        "author": "Bürchner"
+        "end": 2483,
+        "author": "Bürchner."
       }
     ]
   },
@@ -10164,10 +10188,12 @@
     "lemma": "Libana 1",
     "previous": "Libaios",
     "next": "Libana 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2483,
-        "author": "Schulten"
+        "end": 2483,
+        "author": "Schulten."
       }
     ]
   },
