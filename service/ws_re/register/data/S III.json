@@ -19974,10 +19974,12 @@
     "lemma": "Fabia 2",
     "previous": "Exscingius",
     "next": "Fabianae figlinae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 459,
-        "author": "Rosenberg"
+        "end": 459,
+        "author": "Rosenberg."
       }
     ]
   },
@@ -19985,10 +19987,13 @@
     "lemma": "Fabianae figlinae",
     "previous": "Fabia 2",
     "next": "Exsobnos",
+    "sort_key": "Fabianaefiglinae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 459,
-        "author": "Keune"
+        "end": 459,
+        "author": "Keune."
       }
     ]
   },
@@ -23775,7 +23780,7 @@
       {
         "start": 1162,
         "end": 1162,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
@@ -23809,7 +23814,6 @@
   {
     "lemma": "Jagsthausen",
     "previous": "Iaca",
-    "next": "Jahreszeiten",
     "proof_read": 3,
     "wp_link": "w:de:Jagsthausen",
     "wd_link": "d:Q167823",
@@ -23823,6 +23827,7 @@
   },
   {
     "lemma": "Hypometheus",
+    "previous": "Hyllis 1",
     "next": "Ὕψισται πύλαι",
     "proof_read": 2,
     "chapters": [
