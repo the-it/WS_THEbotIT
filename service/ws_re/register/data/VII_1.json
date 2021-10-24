@@ -7579,7 +7579,7 @@
   {
     "lemma": "Gabalaeca",
     "previous": "Gabala 6",
-    "next": "Gabale",
+    "next": "Γαβάλη",
     "redirect": "Gebala 1",
     "proof_read": 2,
     "chapters": [
@@ -7590,19 +7590,22 @@
     ]
   },
   {
-    "lemma": "Gabale",
+    "lemma": "Γαβάλη",
     "previous": "Gabalaeca",
     "next": "Gabalene",
+    "sort_key": "Gabale",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
-        "author": "Weissbach"
+        "end": 416,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Gabalene",
-    "previous": "Gabale",
+    "previous": "Γαβάλη",
     "next": "Gabali",
     "redirect": "Gebalene",
     "proof_read": 2,
@@ -7718,7 +7721,7 @@
   {
     "lemma": "Gabellus",
     "previous": "Gabba",
-    "next": "Gabena",
+    "next": "Γαβήνα",
     "chapters": [
       {
         "start": 419,
@@ -7727,24 +7730,29 @@
     ]
   },
   {
-    "lemma": "Gabena",
+    "lemma": "Γαβήνα",
     "previous": "Gabellus",
     "next": "Gaberius",
+    "sort_key": "Gabena",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 419,
-        "author": "Weissbach"
+        "end": 419,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Gaberius",
-    "previous": "Gabena",
+    "previous": "Γαβήνα",
     "next": "Gabia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 419,
-        "author": "Münzer"
+        "end": 419,
+        "author": "Münzer."
       }
     ]
   },
@@ -7775,10 +7783,12 @@
     "lemma": "Gabianus",
     "previous": "Gabiae",
     "next": "Gabiene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 420,
-        "author": "Seeck"
+        "end": 420,
+        "author": "Seeck."
       }
     ]
   },
@@ -7820,10 +7830,12 @@
     "lemma": "Gabilona",
     "previous": "Gabii",
     "next": "Gabiniana via",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 422,
-        "author": "Ihm"
+        "end": 422,
+        "author": "Ihm."
       }
     ]
   },
@@ -7866,10 +7878,12 @@
     "lemma": "Gabinius 1",
     "previous": "Gabinius",
     "next": "Gabinius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 422,
-        "author": "Münzer"
+        "end": 422,
+        "author": "Münzer."
       }
     ]
   },
@@ -7993,9 +8007,12 @@
     "lemma": "Gabinius 12",
     "previous": "Gabinius 11",
     "next": "Gabinius 13",
+    "redirect": "Gabinius 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 430
+        "start": 430,
+        "end": 430
       }
     ]
   },
@@ -8036,10 +8053,12 @@
     "lemma": "Gabinius 16",
     "previous": "Gabinius 15",
     "next": "Gabinius 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 431,
-        "author": "Münzer"
+        "end": 431,
+        "author": "Münzer."
       }
     ]
   },
@@ -8047,9 +8066,12 @@
     "lemma": "Gabinius 17",
     "previous": "Gabinius 16",
     "next": "Gabinius 18",
+    "redirect": "Asconius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 431
+        "start": 431,
+        "end": 431
       }
     ]
   },
@@ -8079,11 +8101,12 @@
     "lemma": "Gabinius 20",
     "previous": "Gabinius 19",
     "next": "Gabina via",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 431,
         "end": 432,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -8138,27 +8161,33 @@
   {
     "lemma": "Gabo",
     "previous": "Gabitha",
-    "next": "Gabra",
+    "next": "Γάβρα",
+    "redirect": "Arunculeius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 432
+        "start": 432,
+        "end": 432
       }
     ]
   },
   {
-    "lemma": "Gabra",
+    "lemma": "Γάβρα",
     "previous": "Gabo",
     "next": "Gabreta",
+    "sort_key": "Gabra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 432,
-        "author": "Weissbach"
+        "end": 432,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Gabreta",
-    "previous": "Gabra",
+    "previous": "Γάβρα",
     "next": "Gabri",
     "chapters": [
       {
@@ -8215,10 +8244,12 @@
     "lemma": "Gabris 2",
     "previous": "Gabris 1",
     "next": "Gabromagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 433,
-        "author": "Weissbach"
+        "end": 433,
+        "author": "Weissbach."
       }
     ]
   },
@@ -8282,10 +8313,12 @@
     "lemma": "Gadabitani",
     "previous": "Gad",
     "next": "Gadalaippus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 435,
-        "author": "Dessau"
+        "end": 435,
+        "author": "Dessau."
       }
     ]
   },
@@ -8293,10 +8326,12 @@
     "lemma": "Gadalaippus",
     "previous": "Gadabitani",
     "next": "Gadamala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 435,
-        "author": "Seeck"
+        "end": 435,
+        "author": "Seeck."
       }
     ]
   },
@@ -8450,10 +8485,12 @@
     "lemma": "Gadasena",
     "previous": "Gadaris 2",
     "next": "Gadda 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 438,
-        "author": "Ruge"
+        "end": 438,
+        "author": "Ruge."
       }
     ]
   },
@@ -8561,10 +8598,12 @@
     "lemma": "Gadias",
     "previous": "Gades",
     "next": "Gadiaufala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 461,
-        "author": "Willrich"
+        "end": 461,
+        "author": "Willrich."
       }
     ]
   },
@@ -9394,10 +9433,13 @@
     "lemma": "Γαιζατόριγος",
     "previous": "Gaius 9",
     "next": "Gaizatorix",
+    "sort_key": "Gaizatorigos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 510,
-        "author": "Ruge"
+        "end": 510,
+        "author": "Ruge."
       }
     ]
   },
@@ -9405,10 +9447,12 @@
     "lemma": "Gaizatorix",
     "previous": "Γαιζατόριγος",
     "next": "Gala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 510,
-        "author": "Willrich"
+        "end": 510,
+        "author": "Willrich."
       }
     ]
   },
@@ -9526,10 +9570,12 @@
     "lemma": "Galaegia",
     "previous": "Galadras",
     "next": "Galaesus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 513,
-        "author": "Ihm"
+        "end": 513,
+        "author": "Ihm."
       }
     ]
   },
@@ -9560,10 +9606,12 @@
     "lemma": "Galaios",
     "previous": "Galaesus 2",
     "next": "Galaistes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 514,
-        "author": "Kirchner"
+        "end": 514,
+        "author": "Kirchner."
       }
     ]
   },
@@ -9582,10 +9630,12 @@
     "lemma": "Galaistes 2",
     "previous": "Galaistes 1",
     "next": "Galaiu paga",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 514,
-        "author": "Willrich"
+        "end": 514,
+        "author": "Willrich."
       }
     ]
   },
@@ -9664,10 +9714,12 @@
     "lemma": "Galapha",
     "previous": "Galanthis",
     "next": "Galas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 515,
-        "author": "Dessau"
+        "end": 515,
+        "author": "Dessau."
       }
     ]
   },
@@ -9866,10 +9918,12 @@
     "lemma": "Galaxaure",
     "previous": "Galaton 2",
     "next": "Galaxia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 559,
-        "author": "Weicker"
+        "end": 559,
+        "author": "Weicker."
       }
     ]
   },
@@ -10002,10 +10056,12 @@
     "lemma": "Galea 1",
     "previous": "Galbilla",
     "next": "Galea 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 572,
-        "author": "Ruge"
+        "end": 572,
+        "author": "Ruge."
       }
     ]
   },
@@ -10025,10 +10081,12 @@
     "lemma": "Galeagra",
     "previous": "Galea 2",
     "next": "Galear",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 576,
-        "author": "Weiss, J[akob]"
+        "end": 576,
+        "author": "Weiss."
       }
     ]
   },
@@ -10091,17 +10149,19 @@
     "lemma": "Galenese",
     "previous": "Galene 2",
     "next": "Galenolimen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 578,
-        "author": "Weiss, J[akob]"
+        "end": 578,
+        "author": "Weiss."
       }
     ]
   },
   {
     "lemma": "Galenolimen",
     "previous": "Galenese",
-    "next": "Galenon chorion",
+    "next": "Γαληνῶν χωρίον",
     "chapters": [
       {
         "start": 578,
@@ -10110,24 +10170,29 @@
     ]
   },
   {
-    "lemma": "Galenon chorion",
+    "lemma": "Γαληνῶν χωρίον",
     "previous": "Galenolimen",
     "next": "Galenos 1",
+    "sort_key": "Galenonchorion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 578,
-        "author": "Ruge"
+        "end": 578,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Galenos 1",
-    "previous": "Galenon chorion",
+    "previous": "Γαληνῶν χωρίον",
     "next": "Galenos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 578,
-        "author": "Hoefer"
+        "end": 578,
+        "author": "Hoefer."
       }
     ]
   },
@@ -10147,10 +10212,12 @@
     "lemma": "Galeo 1",
     "previous": "Galenos 2",
     "next": "Galeo 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 591,
-        "author": "Münzer"
+        "end": 591,
+        "author": "Münzer."
       }
     ]
   },
@@ -10158,10 +10225,12 @@
     "lemma": "Galeo 2",
     "previous": "Galeo 1",
     "next": "Galeoi 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 591,
-        "author": "Stein, [Arthur]"
+        "end": 591,
+        "author": "Stein."
       }
     ]
   },
@@ -10426,9 +10495,12 @@
     "lemma": "Galerius 9",
     "previous": "Galerius 8",
     "next": "Galerius 10",
+    "redirect": "Maximianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 601
+        "start": 601,
+        "end": 601
       }
     ]
   },
@@ -10436,9 +10508,12 @@
     "lemma": "Galerius 10",
     "previous": "Galerius 9",
     "next": "Galerius 11",
+    "redirect": "Annius 119",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 601
+        "start": 601,
+        "end": 601
       }
     ]
   },
@@ -10457,10 +10532,12 @@
     "lemma": "Galerius 12",
     "previous": "Galerius 11",
     "next": "Galerius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 601,
-        "author": "Groag"
+        "end": 601,
+        "author": "Groag."
       }
     ]
   },
@@ -10492,10 +10569,12 @@
     "lemma": "Galerus 2",
     "previous": "Galerus 1",
     "next": "Galerus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 601,
-        "author": "Samter"
+        "end": 601,
+        "author": "Samter."
       }
     ]
   },
@@ -10547,10 +10626,12 @@
     "lemma": "Galestes 1",
     "previous": "Galessioi",
     "next": "Galestes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 601,
-        "author": "Willrich"
+        "end": 601,
+        "author": "Willrich."
       }
     ]
   },
@@ -10558,10 +10639,12 @@
     "lemma": "Galestes 2",
     "previous": "Galestes 1",
     "next": "Galestes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 602,
-        "author": "Willrich"
+        "end": 602,
+        "author": "Willrich."
       }
     ]
   },
@@ -10569,10 +10652,12 @@
     "lemma": "Galestes 3",
     "previous": "Galestes 2",
     "next": "Galeti",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 602,
-        "author": "Willrich"
+        "end": 602,
+        "author": "Willrich."
       }
     ]
   },
@@ -10707,7 +10792,7 @@
   {
     "lemma": "Galillenses",
     "previous": "Galilaea",
-    "next": "Galinaria akra",
+    "next": "Γαλιναρία ἄκρα",
     "chapters": [
       {
         "start": 605,
@@ -10716,19 +10801,22 @@
     ]
   },
   {
-    "lemma": "Galinaria akra",
+    "lemma": "Γαλιναρία ἄκρα",
     "previous": "Galillenses",
     "next": "Galindai",
+    "sort_key": "Galinariaakra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 606,
-        "author": "Dessau"
+        "end": 606,
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Galindai",
-    "previous": "Galinaria akra",
+    "previous": "Γαλιναρία ἄκρα",
     "next": "Galinthiadia, Galinthiasia",
     "chapters": [
       {
@@ -10864,10 +10952,12 @@
     "lemma": "Galla 8",
     "previous": "Galla 7",
     "next": "Galla 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 609,
-        "author": "Stein, [Arthur]"
+        "end": 609,
+        "author": "Stein."
       }
     ]
   },
@@ -10875,10 +10965,12 @@
     "lemma": "Galla 10",
     "previous": "Galla 8",
     "next": "Galla 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 609,
-        "author": "Stein, [Arthur]"
+        "end": 609,
+        "author": "Stein."
       }
     ]
   },
@@ -11088,9 +11180,12 @@
     "lemma": "Gallicanus 1",
     "previous": "Gallica Flavia",
     "next": "Gallicanus 2",
+    "redirect": "Claudius 276",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 668
+        "start": 668,
+        "end": 668
       }
     ]
   },
@@ -11120,10 +11215,12 @@
     "lemma": "Gallicanus 4",
     "previous": "Gallicanus 3",
     "next": "Gallicanus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 668,
-        "author": "Stein, [Arthur]"
+        "end": 668,
+        "author": "Stein."
       }
     ]
   },
@@ -11131,9 +11228,12 @@
     "lemma": "Gallicanus 5",
     "previous": "Gallicanus 4",
     "next": "Gallicanus 6",
+    "redirect": "Claudius 276",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 668
+        "start": 668,
+        "end": 668
       }
     ]
   },
@@ -11188,10 +11288,12 @@
     "lemma": "Gallicus 1",
     "previous": "Gallicum",
     "next": "Gallicus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 669,
-        "author": "Groag"
+        "end": 669,
+        "author": "Groag."
       }
     ]
   },
@@ -11199,10 +11301,12 @@
     "lemma": "Gallicus 2",
     "previous": "Gallicus 1",
     "next": "Gallicus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 669,
-        "author": "Stein, [Arthur]"
+        "end": 669,
+        "author": "Stein."
       }
     ]
   },
@@ -11210,9 +11314,12 @@
     "lemma": "Gallicus 3",
     "previous": "Gallicus 2",
     "next": "Gallicus ager",
+    "redirect": "Flavius 93",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 669
+        "start": 669,
+        "end": 669
       }
     ]
   },
@@ -11289,10 +11396,12 @@
     "lemma": "Gallienus 6",
     "previous": "Gallienus 5",
     "next": "Gallina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 670,
-        "author": "Stein, [Arthur]"
+        "end": 670,
+        "author": "Stein."
       }
     ]
   },
@@ -11300,10 +11409,12 @@
     "lemma": "Gallina",
     "previous": "Gallienus 6",
     "next": "Gallinaria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 670,
-        "author": "Münzer"
+        "end": 670,
+        "author": "Münzer."
       }
     ]
   },
@@ -11424,10 +11535,12 @@
     "lemma": "Gallitta 2",
     "previous": "Gallitta 1",
     "next": "Gallitta 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 671,
-        "author": "Stein, [Arthur]"
+        "end": 671,
+        "author": "Stein."
       }
     ]
   },
@@ -11560,10 +11673,12 @@
     "lemma": "Gallonianus",
     "previous": "Gallograeci",
     "next": "Gallonius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 673,
-        "author": "Seeck"
+        "end": 673,
+        "author": "Seeck."
       }
     ]
   },
@@ -11593,10 +11708,12 @@
     "lemma": "Gallonius 3",
     "previous": "Gallonius 2",
     "next": "Gallonius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 673,
-        "author": "Groag"
+        "end": 673,
+        "author": "Groag."
       }
     ]
   },
@@ -11628,10 +11745,12 @@
     "lemma": "Gallonius 6",
     "previous": "Gallonius 5",
     "next": "Gallorum vicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 673,
-        "author": "Groag"
+        "end": 673,
+        "author": "Groag."
       }
     ]
   },
@@ -11683,10 +11802,12 @@
     "lemma": "Gallos 4",
     "previous": "Gallos 3",
     "next": "Gallos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 674,
-        "author": "Ruge"
+        "end": 674,
+        "author": "Ruge."
       }
     ]
   },
@@ -11806,10 +11927,12 @@
     "lemma": "Gallus 7",
     "previous": "Gallus 6",
     "next": "Gallus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 683,
-        "author": "Stein, [Arthur]"
+        "end": 683,
+        "author": "Stein."
       }
     ]
   },
@@ -12004,10 +12127,12 @@
     "lemma": "Gamala 3",
     "previous": "Gamala 2",
     "next": "Gamalas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 690,
-        "author": "Münzer"
+        "end": 690,
+        "author": "Münzer."
       }
     ]
   },
@@ -12129,10 +12254,12 @@
     "lemma": "Gambaros",
     "previous": "Gamavodurum",
     "next": "Gambreion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 691,
-        "author": "Willrich"
+        "end": 691,
+        "author": "Willrich."
       }
     ]
   },
@@ -12388,10 +12515,12 @@
     "lemma": "Gandeiron",
     "previous": "Gandeia",
     "next": "Gandestrius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 701,
-        "author": "Bürchner"
+        "end": 701,
+        "author": "Bürchner."
       }
     ]
   },
@@ -12399,10 +12528,12 @@
     "lemma": "Gandestrius",
     "previous": "Gandeiron",
     "next": "Ganea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 701,
-        "author": "Ihm"
+        "end": 701,
+        "author": "Ihm."
       }
     ]
   },
@@ -12513,10 +12644,12 @@
     "lemma": "Ganges 2",
     "previous": "Ganges 1",
     "next": "Ganges 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 703,
-        "author": "Waser"
+        "end": 703,
+        "author": "Waser."
       }
     ]
   },
@@ -12558,10 +12691,12 @@
     "lemma": "Ganicos",
     "previous": "Gangra 2",
     "next": "Ganis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 707,
-        "author": "Oxé"
+        "end": 707,
+        "author": "Oxé."
       }
     ]
   },
@@ -12640,10 +12775,12 @@
     "lemma": "Ganodurum",
     "previous": "Gannys",
     "next": "Ganos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 708,
-        "author": "Ihm"
+        "end": 708,
+        "author": "Ihm."
       }
     ]
   },
@@ -12753,10 +12890,12 @@
     "lemma": "Ganymedes 2",
     "previous": "Ganymedes 1",
     "next": "Ganymedes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 749,
-        "author": "Willrich"
+        "end": 749,
+        "author": "Willrich."
       }
     ]
   },
@@ -12836,10 +12975,12 @@
     "lemma": "Gaphara 2",
     "previous": "Gaphara 1",
     "next": "Garada",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 749,
-        "author": "Dessau"
+        "end": 749,
+        "author": "Dessau."
       }
     ]
   },
@@ -12941,10 +13082,13 @@
     "lemma": "Garaphi montes",
     "previous": "Garanus",
     "next": "Garas",
+    "sort_key": "Garaphimontes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 754,
-        "author": "Dessau"
+        "end": 754,
+        "author": "Dessau."
       }
     ]
   },
@@ -12952,10 +13096,12 @@
     "lemma": "Garas",
     "previous": "Garaphi montes",
     "next": "Garasa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 754,
-        "author": "Dessau"
+        "end": 754,
+        "author": "Dessau."
       }
     ]
   },
@@ -13022,10 +13168,12 @@
     "lemma": "Garda",
     "previous": "Garces",
     "next": "Gardellaca",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 755,
-        "author": "Weiss, J[akob]"
+        "end": 755,
+        "author": "Weiss."
       }
     ]
   },
@@ -13090,10 +13238,12 @@
     "lemma": "Garenaioi",
     "previous": "Gareathyra",
     "next": "Gareskos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 755,
-        "author": "Kiessling, Max"
+        "end": 755,
+        "author": "Kiessling."
       }
     ]
   },
@@ -13101,10 +13251,12 @@
     "lemma": "Gareskos",
     "previous": "Garenaioi",
     "next": "Garganus mons",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 755,
-        "author": "Oberhummer"
+        "end": 755,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -13159,10 +13311,12 @@
     "lemma": "Gargara 2",
     "previous": "Gargara 1",
     "next": "Gargara 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 758,
-        "author": "Bürchner"
+        "end": 758,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13170,10 +13324,12 @@
     "lemma": "Gargara 3",
     "previous": "Gargara 2",
     "next": "Gargareis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 758,
-        "author": "Bürchner"
+        "end": 758,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13192,10 +13348,12 @@
     "lemma": "Gargaridai",
     "previous": "Gargareis",
     "next": "Gargaris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 759,
-        "author": "Kiessling, Max"
+        "end": 759,
+        "author": "Kiessling."
       }
     ]
   },
@@ -13247,10 +13405,12 @@
     "lemma": "Gargasos",
     "previous": "Gargarum",
     "next": "Gargaza",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 759,
-        "author": "Hoefer"
+        "end": 759,
+        "author": "Hoefer."
       }
     ]
   },
@@ -13292,10 +13452,12 @@
     "lemma": "Gargilianus",
     "previous": "Gargettos 2",
     "next": "Gargilius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 760,
-        "author": "Stein, [Arthur]"
+        "end": 760,
+        "author": "Stein."
       }
     ]
   },
@@ -13326,10 +13488,12 @@
     "lemma": "Gargilius 3",
     "previous": "Gargilius 2",
     "next": "Gargilius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 762,
-        "author": "Groag"
+        "end": 762,
+        "author": "Groag."
       }
     ]
   },
@@ -13394,10 +13558,12 @@
     "lemma": "Gargonius 2",
     "previous": "Gargonius 1",
     "next": "Gargonius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 764,
-        "author": "Münzer"
+        "end": 764,
+        "author": "Münzer."
       }
     ]
   },
@@ -13405,10 +13571,12 @@
     "lemma": "Gargonius 3",
     "previous": "Gargonius 2",
     "next": "Gargonius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 764,
-        "author": "Münzer"
+        "end": 764,
+        "author": "Münzer."
       }
     ]
   },
@@ -13416,10 +13584,12 @@
     "lemma": "Gargonius 4",
     "previous": "Gargonius 3",
     "next": "Gargonius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 764,
-        "author": "Münzer"
+        "end": 764,
+        "author": "Münzer."
       }
     ]
   },
@@ -13427,10 +13597,12 @@
     "lemma": "Gargonius 5",
     "previous": "Gargonius 4",
     "next": "Gargonius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 764,
-        "author": "Stein, [Arthur]"
+        "end": 764,
+        "author": "Stein."
       }
     ]
   },
@@ -13450,10 +13622,12 @@
     "lemma": "Gargonius 7",
     "previous": "Gargonius 6",
     "next": "Gari",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 765,
-        "author": "Stein, [Arthur]"
+        "end": 765,
+        "author": "Stein."
       }
     ]
   },
@@ -13506,10 +13680,13 @@
     "lemma": "Γάριος τόπος",
     "previous": "Garindaioi",
     "next": "Garis",
+    "sort_key": "Gariostopos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 766,
-        "author": "Ruge"
+        "end": 766,
+        "author": "Ruge."
       }
     ]
   },
@@ -13806,10 +13983,12 @@
     "lemma": "Garuli",
     "previous": "Gartenbau",
     "next": "Garum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 841,
-        "author": "Weiss, J[akob]"
+        "end": 841,
+        "author": "Weiss."
       }
     ]
   },
@@ -13914,10 +14093,12 @@
     "lemma": "Gasepton",
     "previous": "Gasandai",
     "next": "Gasiongaber",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 851,
-        "author": "Bürchner"
+        "end": 851,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13980,10 +14161,12 @@
     "lemma": "Gastron",
     "previous": "Γαστραφέτης",
     "next": "Gastros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 854,
-        "author": "Kirchner"
+        "end": 854,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13991,10 +14174,12 @@
     "lemma": "Gastros",
     "previous": "Gastron",
     "next": "Gatalos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 854,
-        "author": "Kirchner"
+        "end": 854,
+        "author": "Kirchner."
       }
     ]
   },
@@ -14002,10 +14187,12 @@
     "lemma": "Gatalos",
     "previous": "Gastros",
     "next": "Gates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 854,
-        "author": "Willrich"
+        "end": 854,
+        "author": "Willrich."
       }
     ]
   },
@@ -14093,10 +14280,12 @@
     "lemma": "Gatus",
     "previous": "Gattei",
     "next": "Gavadiae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 855,
-        "author": "Oxé"
+        "end": 855,
+        "author": "Oxé."
       }
     ]
   },
@@ -14209,10 +14398,12 @@
     "lemma": "Gaudentios 2",
     "previous": "Gaudentios 1",
     "next": "Gaudentius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 857,
-        "author": "Schmid"
+        "end": 857,
+        "author": "W. Schmid."
       }
     ]
   },
@@ -14379,10 +14570,12 @@
     "lemma": "Gaudianus",
     "previous": "Gaudiacus vicus",
     "next": "Gaudiosus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 861,
-        "author": "Stein, [Arthur]"
+        "end": 861,
+        "author": "Stein."
       }
     ]
   },
@@ -14443,9 +14636,12 @@
     "lemma": "Gavidius 1",
     "previous": "Gaugamela",
     "next": "Gavidius 2",
+    "redirect": "Tebanus 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 865
+        "start": 865,
+        "end": 865
       }
     ]
   },
@@ -14453,10 +14649,12 @@
     "lemma": "Gavidius 2",
     "previous": "Gavidius 1",
     "next": "Gavidius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 865,
-        "author": "Groag"
+        "end": 865,
+        "author": "Groag."
       }
     ]
   },
@@ -14464,10 +14662,12 @@
     "lemma": "Gavidius 3",
     "previous": "Gavidius 2",
     "next": "Gavillius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 865,
-        "author": "Groag"
+        "end": 865,
+        "author": "Groag."
       }
     ]
   },
@@ -14575,10 +14775,12 @@
     "lemma": "Gavius 7",
     "previous": "Gavius 6",
     "next": "Gavius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 866,
-        "author": "Münzer"
+        "end": 866,
+        "author": "Münzer."
       }
     ]
   },
@@ -14608,10 +14810,12 @@
     "lemma": "Gavius 10",
     "previous": "Gavius 9",
     "next": "Gavius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 866,
-        "author": "Münzer"
+        "end": 866,
+        "author": "Münzer."
       }
     ]
   },
@@ -14664,9 +14868,12 @@
     "lemma": "Gavius 15",
     "previous": "Gavius 14",
     "next": "Gavius 16",
+    "redirect": "Fulvius 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 868
+        "start": 868,
+        "end": 868
       }
     ]
   },
@@ -14674,9 +14881,12 @@
     "lemma": "Gavius 16",
     "previous": "Gavius 15",
     "next": "Gavius 17",
+    "redirect": "Fulvius 67",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 868
+        "start": 868,
+        "end": 868
       }
     ]
   },
@@ -14730,10 +14940,12 @@
     "lemma": "Gavius 21",
     "previous": "Gavius 20",
     "next": "Gavius 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 870,
-        "author": "Groag"
+        "end": 870,
+        "author": "Groag."
       }
     ]
   },
@@ -14800,10 +15012,12 @@
     "lemma": "Gavius 27",
     "previous": "Gavius 26",
     "next": "Gavius 28",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 872,
-        "author": "Stein, [Arthur]"
+        "end": 872,
+        "author": "Stein."
       }
     ]
   },
@@ -14922,10 +15136,12 @@
     "lemma": "Gaulotos",
     "previous": "Γαῦλος 2",
     "next": "Gaulus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 875,
-        "author": "Willrich"
+        "end": 875,
+        "author": "Willrich."
       }
     ]
   },
@@ -14956,10 +15172,12 @@
     "lemma": "Gauna 2",
     "previous": "Gauna 1",
     "next": "Gaunia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 876,
-        "author": "Weissbach"
+        "end": 876,
+        "author": "Weissbach."
       }
     ]
   },
@@ -14978,9 +15196,12 @@
     "lemma": "Gaunon 1",
     "previous": "Gaunia",
     "next": "Gaunon 2",
+    "redirect": "Kaunos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 877
+        "start": 877,
+        "end": 877
       }
     ]
   },
@@ -14988,10 +15209,12 @@
     "lemma": "Gaunon 2",
     "previous": "Gaunon 1",
     "next": "Gaura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 877,
-        "author": "Bürchner"
+        "end": 877,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15116,10 +15339,12 @@
     "lemma": "Gaurus",
     "previous": "Gauros",
     "next": "Gaurus mons",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 878,
-        "author": "Stein, [Arthur]"
+        "end": 878,
+        "author": "Stein."
       }
     ]
   },
@@ -15480,10 +15705,12 @@
     "lemma": "Gazos",
     "previous": "Gazoros",
     "next": "Ge",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 891,
-        "author": "Kiessling, Max"
+        "end": 891,
+        "author": "Kiessling."
       }
     ]
   },
@@ -15504,10 +15731,12 @@
     "lemma": "Gea",
     "previous": "Ge",
     "next": "Geapolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 891,
-        "author": "Tkáč"
+        "end": 891,
+        "author": "Tkač."
       }
     ]
   },
@@ -15603,10 +15832,12 @@
     "lemma": "Gebalon",
     "previous": "Gebala 2",
     "next": "Gebatha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 893,
-        "author": "Pieper"
+        "end": 893,
+        "author": "Pieper."
       }
     ]
   },
@@ -15638,10 +15869,12 @@
     "lemma": "Gebbin",
     "previous": "Gebbanitae",
     "next": "Gebeleïzis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 894,
-        "author": "Kiessling, Max"
+        "end": 894,
+        "author": "Kiessling."
       }
     ]
   },
@@ -15686,10 +15919,13 @@
     "lemma": "Gebulion",
     "previous": "Gebeon",
     "next": "Geburtstag",
+    "redirect": "Gabuleum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 894,
-        "author": "Patsch"
+        "end": 894,
+        "author": "Patsch."
       }
     ]
   },
@@ -15886,10 +16122,12 @@
     "lemma": "Geganius 8",
     "previous": "Geganius 7",
     "next": "Gegari",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 929,
-        "author": "Münzer"
+        "end": 929,
+        "author": "Münzer."
       }
     ]
   },
@@ -15897,10 +16135,12 @@
     "lemma": "Gegari",
     "previous": "Geganius 8",
     "next": "Gegeneis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 929,
-        "author": "Kiessling, Max"
+        "end": 929,
+        "author": "Kiessling."
       }
     ]
   },
@@ -16005,10 +16245,12 @@
     "lemma": "Geisirith",
     "previous": "Geisericus",
     "next": "Gela 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 945,
-        "author": "Benjamin"
+        "end": 945,
+        "author": "Benjamin."
       }
     ]
   },
@@ -16052,10 +16294,12 @@
     "lemma": "Gelaka",
     "previous": "Gelae",
     "next": "Gelani 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 963,
-        "author": "Ruge"
+        "end": 963,
+        "author": "Ruge."
       }
     ]
   },
@@ -16098,10 +16342,12 @@
     "lemma": "Gelaris",
     "previous": "Gelanor",
     "next": "Gelasius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 963,
-        "author": "Benjamin"
+        "end": 963,
+        "author": "Benjamin."
       }
     ]
   },
@@ -16145,10 +16391,12 @@
     "lemma": "Gelasius 4",
     "previous": "Gelasius 3",
     "next": "Gelbes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 968,
-        "author": "Seeck"
+        "end": 968,
+        "author": "Seeck."
       }
     ]
   },
@@ -16353,10 +16601,12 @@
     "lemma": "Gelias",
     "previous": "Geli",
     "next": "Gelimer",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 987,
-        "author": "Willrich"
+        "end": 987,
+        "author": "Willrich."
       }
     ]
   },
@@ -16415,7 +16665,7 @@
   {
     "lemma": "Gellias",
     "previous": "Gellianus 3",
-    "next": "Gellios",
+    "next": "Γέλλιος",
     "chapters": [
       {
         "start": 990,
@@ -16425,24 +16675,29 @@
     ]
   },
   {
-    "lemma": "Gellios",
+    "lemma": "Γέλλιος",
     "previous": "Gellias",
     "next": "Gellius",
+    "sort_key": "Gellios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 991,
-        "author": "Kirchner"
+        "end": 991,
+        "author": "Kirchner."
       }
     ]
   },
   {
     "lemma": "Gellius",
-    "previous": "Gellios",
+    "previous": "Γέλλιος",
     "next": "Gellius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 991,
-        "author": "Münzer"
+        "end": 991,
+        "author": "Münzer."
       }
     ]
   },
@@ -16474,9 +16729,12 @@
     "lemma": "Gellius 3",
     "previous": "Gellius 2",
     "next": "Gellius 4",
+    "redirect": "Gellius 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 998
+        "start": 998,
+        "end": 998
       }
     ]
   },
