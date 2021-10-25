@@ -299,10 +299,12 @@
     "lemma": "Ephyros",
     "previous": "Ephyre 9",
     "next": "Epiales",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 21,
-        "author": "Tümpel"
+        "end": 21,
+        "author": "Tümpel."
       }
     ]
   },
@@ -356,7 +358,7 @@
   {
     "lemma": "Epibatae 2",
     "previous": "Epibatai 1",
-    "next": "Epibatae 3",
+    "next": "Ἐπιβάται 3",
     "chapters": [
       {
         "start": 22,
@@ -366,19 +368,22 @@
     ]
   },
   {
-    "lemma": "Epibatae 3",
+    "lemma": "Ἐπιβάται 3",
     "previous": "Epibatae 2",
     "next": "Epibaterios",
+    "sort_key": "Epibatai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 28,
-        "author": "Fiebiger"
+        "end": 28,
+        "author": "Fiebiger."
       }
     ]
   },
   {
     "lemma": "Epibaterios",
-    "previous": "Epibatae 3",
+    "previous": "Ἐπιβάται 3",
     "next": "Epibates",
     "chapters": [
       {
@@ -391,10 +396,12 @@
     "lemma": "Epibates",
     "previous": "Epibaterios",
     "next": "Epibemios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 28,
-        "author": "Bürchner"
+        "end": 28,
+        "author": "Bürchner."
       }
     ]
   },
@@ -608,10 +615,12 @@
     "lemma": "Epichus",
     "previous": "Epicheirotonia",
     "next": "Epichysis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 42,
-        "author": "Dessau"
+        "end": 42,
+        "author": "Dessau."
       }
     ]
   },
@@ -793,10 +802,12 @@
     "lemma": "Epidauros 4",
     "previous": "Epidauros 3",
     "next": "Epidaurum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 51,
-        "author": "Kirchner"
+        "end": 51,
+        "author": "Kirchner."
       }
     ]
   },
@@ -906,27 +917,32 @@
     "lemma": "Epidemos 2",
     "previous": "Epidemos 1",
     "next": "Epidiatheke 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 57,
-        "author": "Robert"
+        "end": 57,
+        "author": "C. Robert."
       }
     ]
   },
   {
-    "lemma": "Epidiatheke 1",
+    "lemma": "Ἐπιδιαθήκη 1",
     "previous": "Epidemos 2",
     "next": "Epidiatheke 2",
+    "sort_key": "Epidiatheke",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 57,
-        "author": "Thalheim"
+        "end": 57,
+        "author": "Thalheim."
       }
     ]
   },
   {
     "lemma": "Epidiatheke 2",
-    "previous": "Epidiatheke 1",
+    "previous": "Ἐπιδιαθήκη 1",
     "next": "Epidikos",
     "chapters": [
       {
@@ -985,11 +1001,12 @@
     "lemma": "Epidius 3",
     "previous": "Epidius 2",
     "next": "Epidius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 59,
         "end": 60,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -997,10 +1014,12 @@
     "lemma": "Epidius 4",
     "previous": "Epidius 3",
     "next": "Epidosis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 60,
-        "author": "Groag"
+        "end": 60,
+        "author": "Groag."
       }
     ]
   },
@@ -1318,9 +1337,12 @@
     "lemma": "Epigenes 19",
     "previous": "Epigenes 18",
     "next": "Epigenes 20",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 66
+        "start": 66,
+        "end": 66,
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -1328,9 +1350,12 @@
     "lemma": "Epigenes 20",
     "previous": "Epigenes 19",
     "next": "Epigenes 21",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 66
+        "start": 66,
+        "end": 66,
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -1552,10 +1577,12 @@
     "lemma": "Epikaste 2",
     "previous": "Epikaste 1",
     "next": "Epikaste 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 112,
-        "author": "Bethe"
+        "end": 112,
+        "author": "Bethe."
       }
     ]
   },
@@ -1563,10 +1590,12 @@
     "lemma": "Epikaste 3",
     "previous": "Epikaste 2",
     "next": "Epikaste 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 112,
-        "author": "Bethe"
+        "end": 112,
+        "author": "Bethe."
       }
     ]
   },
@@ -1574,10 +1603,12 @@
     "lemma": "Epikaste 4",
     "previous": "Epikaste 3",
     "next": "Epikaste 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 112,
-        "author": "Bethe"
+        "end": 112,
+        "author": "Bethe."
       }
     ]
   },
@@ -1630,10 +1661,12 @@
     "lemma": "Epikichradas",
     "previous": "Epikerdes",
     "next": "Epikleidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 114,
-        "author": "Jessen"
+        "end": 114,
+        "author": "Jessen."
       }
     ]
   },
@@ -1677,10 +1710,12 @@
     "lemma": "Epikles 1",
     "previous": "Epikleros",
     "next": "Epikles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 117,
-        "author": "Hoefer"
+        "end": 117,
+        "author": "Hoefer."
       }
     ]
   },
@@ -1688,10 +1723,12 @@
     "lemma": "Epikles 2",
     "previous": "Epikles 1",
     "next": "Epikles 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 117,
-        "author": "Kirchner"
+        "end": 117,
+        "author": "Kirchner."
       }
     ]
   },
@@ -1732,10 +1769,12 @@
     "lemma": "Epikles 6",
     "previous": "Epikles 5",
     "next": "Epikletoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 118,
-        "author": "Graf"
+        "end": 118,
+        "author": "Graf."
       }
     ]
   },
@@ -1789,10 +1828,12 @@
     "lemma": "Epikoinios",
     "previous": "Epiknemidioi",
     "next": "Epikomaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 118,
-        "author": "Jessen"
+        "end": 118,
+        "author": "Jessen."
       }
     ]
   },
@@ -1813,10 +1854,12 @@
     "lemma": "Epikradios",
     "previous": "Epikomaios",
     "next": "Epikrates 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 119,
-        "author": "Kirchner"
+        "end": 119,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2032,10 +2075,12 @@
     "lemma": "Epikrates 17",
     "previous": "Epikrates 16",
     "next": "Epikrates 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 120,
-        "author": "Kirchner"
+        "end": 120,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2127,7 +2172,7 @@
   {
     "lemma": "Epikratinos",
     "previous": "Epikrates 25",
-    "next": "Epikredios",
+    "next": "Ἐπικρήδιος",
     "chapters": [
       {
         "start": 121,
@@ -2136,19 +2181,22 @@
     ]
   },
   {
-    "lemma": "Epikredios",
+    "lemma": "Ἐπικρήδιος",
     "previous": "Epikratinos",
     "next": "Epikrisis",
+    "sort_key": "Epikredios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 121,
-        "author": "Jüthner"
+        "end": 121,
+        "author": "Jüthner."
       }
     ]
   },
   {
     "lemma": "Epikrisis",
-    "previous": "Epikredios",
+    "previous": "Ἐπικρήδιος",
     "next": "Epikrokon",
     "chapters": [
       {
@@ -2173,10 +2221,12 @@
     "lemma": "Epiktemon",
     "previous": "Epikrokon",
     "next": "Epikteta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 123,
-        "author": "Kirchner"
+        "end": 123,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2283,10 +2333,12 @@
     "lemma": "Epikuros 1",
     "previous": "Epikurios, Epikurioi",
     "next": "Epikuros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 132,
-        "author": "Jessen"
+        "end": 132,
+        "author": "Jessen."
       }
     ]
   },
@@ -2294,10 +2346,12 @@
     "lemma": "Epikuros 2",
     "previous": "Epikuros 1",
     "next": "Epikuros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 132,
-        "author": "Kirchner"
+        "end": 132,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2305,11 +2359,12 @@
     "lemma": "Epikuros 3",
     "previous": "Epikuros 2",
     "next": "Epikuros 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 132,
         "end": 133,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -2355,10 +2410,12 @@
     "lemma": "Epikydes 3",
     "previous": "Epikydes 2",
     "next": "Epikydes 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 155,
-        "author": "Niese"
+        "end": 155,
+        "author": "Niese."
       }
     ]
   },
@@ -2436,10 +2493,12 @@
     "lemma": "Epilais",
     "previous": "Epilachon",
     "next": "Epilaos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 157,
-        "author": "Hoefer"
+        "end": 157,
+        "author": "Hoefer."
       }
     ]
   },
@@ -2447,10 +2506,12 @@
     "lemma": "Epilaos",
     "previous": "Epilais",
     "next": "Epilektoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 157,
-        "author": "Hoefer"
+        "end": 157,
+        "author": "Hoefer."
       }
     ]
   },
@@ -2722,10 +2783,12 @@
     "lemma": "Epimeliades",
     "previous": "Epimelia",
     "next": "Epimelides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 172,
-        "author": "Jessen"
+        "end": 172,
+        "author": "Jessen."
       }
     ]
   },
@@ -2756,10 +2819,12 @@
     "lemma": "Epimenes 1",
     "previous": "Epimelios",
     "next": "Epimenes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 173,
-        "author": "Kirchner"
+        "end": 173,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2801,10 +2866,12 @@
     "lemma": "Epimenides 3",
     "previous": "Epimenides 2",
     "next": "Epimenides 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 178,
-        "author": "Kern"
+        "end": 178,
+        "author": "Kern."
       }
     ]
   },
@@ -2927,10 +2994,12 @@
     "lemma": "Epinikos 1",
     "previous": "Epinikion",
     "next": "Epinikos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 184,
-        "author": "Escher"
+        "end": 184,
+        "author": "Escher."
       }
     ]
   },
@@ -2938,10 +3007,12 @@
     "lemma": "Epinikos 2",
     "previous": "Epinikos 1",
     "next": "Epinikos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 184,
-        "author": "Kirchner"
+        "end": 184,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2949,10 +3020,12 @@
     "lemma": "Epinikos 3",
     "previous": "Epinikos 2",
     "next": "Epinikos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 184,
-        "author": "Kirchner"
+        "end": 184,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2960,10 +3033,12 @@
     "lemma": "Epinikos 4",
     "previous": "Epinikos 3",
     "next": "Epinikos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 184,
-        "author": "Kirchner"
+        "end": 184,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2971,10 +3046,12 @@
     "lemma": "Epinikos 5",
     "previous": "Epinikos 4",
     "next": "Epinikos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 184,
-        "author": "Kirchner"
+        "end": 184,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2982,10 +3059,12 @@
     "lemma": "Epinikos 6",
     "previous": "Epinikos 5",
     "next": "Epinikos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 184,
-        "author": "Kirchner"
+        "end": 184,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3004,10 +3083,12 @@
     "lemma": "Epinikos 8",
     "previous": "Epinikos 7",
     "next": "Epinikos 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 184,
-        "author": "Kirchner"
+        "end": 184,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3048,10 +3129,12 @@
     "lemma": "Epio",
     "previous": "Epinomia",
     "next": "Epiocheir",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 186,
-        "author": "Thraemer"
+        "end": 186,
+        "author": "Thraemer."
       }
     ]
   },
@@ -3139,10 +3222,12 @@
     "lemma": "Epiphaneia 1",
     "previous": "Epios",
     "next": "Epiphaneia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 192,
-        "author": "Ruge"
+        "end": 192,
+        "author": "Ruge."
       }
     ]
   },
@@ -3215,10 +3300,12 @@
     "lemma": "Epiphaneia 7",
     "previous": "Epiphaneia 6",
     "next": "Epiphanes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 193,
-        "author": "Weissbach"
+        "end": 193,
+        "author": "Weissbach."
       }
     ]
   },
@@ -3226,10 +3313,12 @@
     "lemma": "Epiphanes 1",
     "previous": "Epiphaneia 7",
     "next": "Epiphanes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 193,
-        "author": "Kirchner"
+        "end": 193,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3601,10 +3690,12 @@
     "lemma": "Epis",
     "previous": "Epirota",
     "next": "Episemon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 198,
-        "author": "Fischer"
+        "end": 198,
+        "author": "Fischer."
       }
     ]
   },
@@ -3724,7 +3815,7 @@
   {
     "lemma": "Epissophos",
     "previous": "Ἐπισπονδορχησταί",
-    "next": "Epistasion",
+    "next": "Ἐπιστάσιον",
     "chapters": [
       {
         "start": 200,
@@ -3733,19 +3824,22 @@
     ]
   },
   {
-    "lemma": "Epistasion",
+    "lemma": "Ἐπιστάσιον",
     "previous": "Epissophos",
     "next": "Epistatai",
+    "sort_key": "Epistasion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 200,
-        "author": "Puchstein"
+        "end": 200,
+        "author": "Puchstein."
       }
     ]
   },
   {
     "lemma": "Epistatai",
-    "previous": "Epistasion",
+    "previous": "Ἐπιστάσιον",
     "next": "Epistaterios",
     "chapters": [
       {
@@ -3759,10 +3853,12 @@
     "lemma": "Epistaterios",
     "previous": "Epistatai",
     "next": "Episteme",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 202,
-        "author": "Jessen"
+        "end": 202,
+        "author": "Jessen."
       }
     ]
   },
@@ -3792,10 +3888,12 @@
     "lemma": "Episthenes 1",
     "previous": "Epistemon",
     "next": "Episthenes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 202,
-        "author": "Kirchner"
+        "end": 202,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3803,10 +3901,12 @@
     "lemma": "Episthenes 2",
     "previous": "Episthenes 1",
     "next": "Epistoleus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 202,
-        "author": "Kirchner"
+        "end": 202,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3852,10 +3952,12 @@
     "lemma": "Epistor",
     "previous": "Epistomion",
     "next": "Epistrategos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Hoefer"
+        "end": 203,
+        "author": "Hoefer."
       }
     ]
   },
@@ -3874,10 +3976,12 @@
     "lemma": "Epistratos",
     "previous": "Epistrategos",
     "next": "Epistrephomene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 204,
-        "author": "Kirchner"
+        "end": 204,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3929,10 +4033,12 @@
     "lemma": "Epistrophos 2",
     "previous": "Epistrophos 1",
     "next": "Epistrophos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 204,
-        "author": "Hoefer"
+        "end": 204,
+        "author": "Hoefer."
       }
     ]
   },
@@ -4478,10 +4584,12 @@
     "lemma": "Epitynchanos 2",
     "previous": "Epitynchanos 1",
     "next": "Epitynchanos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 225,
-        "author": "Seeck"
+        "end": 225,
+        "author": "Seeck."
       }
     ]
   },
@@ -4911,10 +5019,12 @@
     "lemma": "Eporedorix",
     "previous": "Eporedia",
     "next": "Eporedorix 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 250,
-        "author": "Münzer"
+        "end": 250,
+        "author": "Münzer."
       }
     ]
   },
@@ -5351,10 +5461,12 @@
     "lemma": "Equitius 2",
     "previous": "Equitius 1",
     "next": "Equitius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 322,
-        "author": "Seeck"
+        "end": 322,
+        "author": "Seeck."
       }
     ]
   },
@@ -5484,10 +5596,12 @@
     "lemma": "Eraden",
     "previous": "Era",
     "next": "Erafronia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 326,
-        "author": "Bürchner"
+        "end": 326,
+        "author": "Bürchner."
       }
     ]
   },
@@ -5646,10 +5760,12 @@
     "lemma": "Eraria",
     "previous": "Eraos",
     "next": "Erarichus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 330,
-        "author": "Patsch"
+        "end": 330,
+        "author": "Patsch."
       }
     ]
   },
@@ -5740,10 +5856,12 @@
     "lemma": "Erasinos 5",
     "previous": "Erasinos 4",
     "next": "Erasippos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 332,
-        "author": "Hoefer"
+        "end": 332,
+        "author": "Hoefer."
       }
     ]
   },
@@ -5751,10 +5869,12 @@
     "lemma": "Erasippos",
     "previous": "Erasinos 5",
     "next": "Erasistratios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 332,
-        "author": "Hoefer"
+        "end": 332,
+        "author": "Hoefer."
       }
     ]
   },
@@ -5810,10 +5930,12 @@
     "lemma": "Erastos 1",
     "previous": "Erasos",
     "next": "Erastos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 351,
-        "author": "Kirchner"
+        "end": 351,
+        "author": "Kirchner."
       }
     ]
   },
@@ -5922,10 +6044,12 @@
     "lemma": "Erato 2",
     "previous": "Erato 1",
     "next": "Erato 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Escher"
+        "end": 355,
+        "author": "Escher."
       }
     ]
   },
@@ -5933,10 +6057,12 @@
     "lemma": "Erato 3",
     "previous": "Erato 2",
     "next": "Erato 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Escher"
+        "end": 355,
+        "author": "Escher."
       }
     ]
   },
@@ -5944,10 +6070,12 @@
     "lemma": "Erato 4",
     "previous": "Erato 3",
     "next": "Erato 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Escher"
+        "end": 355,
+        "author": "Escher."
       }
     ]
   },
@@ -5955,10 +6083,12 @@
     "lemma": "Erato 5",
     "previous": "Erato 4",
     "next": "Erato 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Escher"
+        "end": 355,
+        "author": "Escher."
       }
     ]
   },
@@ -5966,10 +6096,12 @@
     "lemma": "Erato 6",
     "previous": "Erato 5",
     "next": "Erato 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Escher"
+        "end": 355,
+        "author": "Escher."
       }
     ]
   },
@@ -5977,10 +6109,12 @@
     "lemma": "Erato 7",
     "previous": "Erato 6",
     "next": "Erato 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Escher"
+        "end": 355,
+        "author": "Escher."
       }
     ]
   },
@@ -5988,10 +6122,12 @@
     "lemma": "Erato 8",
     "previous": "Erato 7",
     "next": "Erato 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Escher"
+        "end": 355,
+        "author": "Escher."
       }
     ]
   },
@@ -6033,10 +6169,12 @@
     "lemma": "Eraton 2",
     "previous": "Eraton 1",
     "next": "Eraton 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 356,
-        "author": "Kirchner"
+        "end": 356,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6044,10 +6182,12 @@
     "lemma": "Eraton 3",
     "previous": "Eraton 2",
     "next": "Eraton 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 356,
-        "author": "Kirchner"
+        "end": 356,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6055,10 +6195,12 @@
     "lemma": "Eraton 4",
     "previous": "Eraton 3",
     "next": "Eraton 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 356,
-        "author": "Kirchner"
+        "end": 356,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6066,10 +6208,12 @@
     "lemma": "Eraton 5",
     "previous": "Eraton 4",
     "next": "Eraton 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 357,
-        "author": "Kirchner"
+        "end": 357,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6077,10 +6221,12 @@
     "lemma": "Eraton 6",
     "previous": "Eraton 5",
     "next": "Eraton 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 357,
-        "author": "Kirchner"
+        "end": 357,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6088,10 +6234,12 @@
     "lemma": "Eraton 7",
     "previous": "Eraton 6",
     "next": "Eraton 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 357,
-        "author": "Kirchner"
+        "end": 357,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6099,10 +6247,12 @@
     "lemma": "Eraton 8",
     "previous": "Eraton 7",
     "next": "Eraton 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 357,
-        "author": "Kirchner"
+        "end": 357,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6144,10 +6294,12 @@
     "lemma": "Eratosthenes 2",
     "previous": "Eratosthenes 1",
     "next": "Eratosthenes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 358,
-        "author": "Kirchner"
+        "end": 358,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6277,10 +6429,12 @@
     "lemma": "Erchios",
     "previous": "Erchia",
     "next": "Erchoas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
-        "author": "Escher"
+        "end": 399,
+        "author": "Escher."
       }
     ]
   },
@@ -6288,10 +6442,12 @@
     "lemma": "Erchoas",
     "previous": "Erchios",
     "next": "Ercobriga",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
-        "author": "Steindorff"
+        "end": 399,
+        "author": "Steindorff."
       }
     ]
   },
@@ -6325,10 +6481,12 @@
     "lemma": "Erculente",
     "previous": "Ercte",
     "next": "Erdbeerbaum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
-        "author": "Patsch"
+        "end": 399,
+        "author": "Patsch."
       }
     ]
   },
@@ -6371,10 +6529,12 @@
     "lemma": "Erditse",
     "previous": "Erdini",
     "next": "Erebidae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 402,
-        "author": "Ihm"
+        "end": 402,
+        "author": "Ihm."
       }
     ]
   },
@@ -6467,10 +6627,12 @@
     "lemma": "Erechtheus 3",
     "previous": "Erechtheus 2",
     "next": "Ereike",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 411,
-        "author": "Escher"
+        "end": 411,
+        "author": "Escher."
       }
     ]
   },
@@ -6490,10 +6652,12 @@
     "lemma": "Ereithis",
     "previous": "Ereike",
     "next": "Ereithos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 412,
-        "author": "Steindorff"
+        "end": 412,
+        "author": "Steindorff."
       }
     ]
   },
@@ -6702,10 +6866,12 @@
     "lemma": "Eresios 1",
     "previous": "Eresidai",
     "next": "Eresios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 420,
-        "author": "Jessen"
+        "end": 420,
+        "author": "Jessen."
       }
     ]
   },
@@ -6781,10 +6947,12 @@
     "lemma": "Eretimos",
     "previous": "Erethimios",
     "next": "Eretmeus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 422,
-        "author": "Kirchner"
+        "end": 422,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6792,10 +6960,12 @@
     "lemma": "Eretmeus",
     "previous": "Eretimos",
     "next": "Eretria 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 422,
-        "author": "Hoefer"
+        "end": 422,
+        "author": "Hoefer."
       }
     ]
   },
@@ -6945,10 +7115,12 @@
     "lemma": "Ereuthalion 3",
     "previous": "Ereuthalion 2",
     "next": "Ereutho",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 427,
-        "author": "Escher"
+        "end": 427,
+        "author": "Escher."
       }
     ]
   },
@@ -7025,10 +7197,12 @@
     "lemma": "Ergamenes 2",
     "previous": "Ergamenes 1",
     "next": "Ergamia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 428,
-        "author": "Kirchner"
+        "end": 428,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7061,10 +7235,12 @@
     "lemma": "Ergasos",
     "previous": "Ergane",
     "next": "Ergasteria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 430,
-        "author": "Kirchner"
+        "end": 430,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7105,7 +7281,7 @@
   {
     "lemma": "Ergatai",
     "previous": "Ergastulum",
-    "next": "Ergatia",
+    "next": "Ἐργάτια",
     "chapters": [
       {
         "start": 431,
@@ -7114,24 +7290,29 @@
     ]
   },
   {
-    "lemma": "Ergatia",
+    "lemma": "Ἐργάτια",
     "previous": "Ergatai",
     "next": "Ergatis",
+    "sort_key": "Ergatia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 432,
-        "author": "Stengel"
+        "end": 432,
+        "author": "Stengel."
       }
     ]
   },
   {
     "lemma": "Ergatis",
-    "previous": "Ergatia",
+    "previous": "Ἐργάτια",
     "next": "Ergavica",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 432,
-        "author": "Jessen"
+        "end": 432,
+        "author": "Jessen."
       }
     ]
   },
@@ -7163,10 +7344,12 @@
     "lemma": "Ergeas",
     "previous": "Erge",
     "next": "Ergetium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 432,
-        "author": "Kirchner"
+        "end": 432,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7241,10 +7424,12 @@
     "lemma": "Erginos 3",
     "previous": "Erginos 2",
     "next": "Erginos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 434,
-        "author": "Kirchner"
+        "end": 434,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7411,10 +7596,12 @@
     "lemma": "Ergoteles 2",
     "previous": "Ergoteles 1",
     "next": "Ergoteles 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 436,
-        "author": "Kirchner"
+        "end": 436,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7548,10 +7735,12 @@
     "lemma": "Eriboia 3",
     "previous": "Eriboia 2",
     "next": "Eriboia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 438,
-        "author": "Tümpel"
+        "end": 438,
+        "author": "Tümpel."
       }
     ]
   },
@@ -7559,10 +7748,12 @@
     "lemma": "Eriboia 4",
     "previous": "Eriboia 3",
     "next": "Eribolon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 438,
-        "author": "Tümpel"
+        "end": 438,
+        "author": "Tümpel."
       }
     ]
   },
