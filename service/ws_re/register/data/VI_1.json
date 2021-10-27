@@ -7615,6 +7615,7 @@
     "lemma": "Ergoteles 3",
     "previous": "Ergoteles 2",
     "next": "Ergoteles 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 436,
@@ -12840,10 +12841,12 @@
     "lemma": "Euaion 1",
     "previous": "Euainetos 5",
     "next": "Euaion 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 836,
-        "author": "Kirchner"
+        "end": 836,
+        "author": "Kirchner."
       }
     ]
   },
@@ -12862,10 +12865,12 @@
     "lemma": "Euaion 3",
     "previous": "Euaion 2",
     "next": "Euaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 836,
-        "author": "Natorp"
+        "end": 836,
+        "author": "Natorp."
       }
     ]
   },
@@ -12895,10 +12900,12 @@
     "lemma": "Euakes",
     "previous": "Euaisai",
     "next": "Euakoos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 837,
-        "author": "Willrich"
+        "end": 837,
+        "author": "Willrich."
       }
     ]
   },
@@ -12928,10 +12935,12 @@
     "lemma": "Eualas",
     "previous": "Euakoustos",
     "next": "Eualenoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 837,
-        "author": "Kirchner"
+        "end": 837,
+        "author": "Kirchner."
       }
     ]
   },
@@ -12950,10 +12959,12 @@
     "lemma": "Eualkes 1",
     "previous": "Eualenoi",
     "next": "Eualkes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 837,
-        "author": "Kirchner"
+        "end": 837,
+        "author": "Kirchner."
       }
     ]
   },
@@ -12994,10 +13005,12 @@
     "lemma": "Eualkos 2",
     "previous": "Eualkos 1",
     "next": "Eualosia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 837,
-        "author": "Kirchner"
+        "end": 837,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13075,10 +13088,12 @@
     "lemma": "Euandre",
     "previous": "Euan 2",
     "next": "Euandriana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 839,
-        "author": "Hoefer"
+        "end": 839,
+        "author": "Hoefer."
       }
     ]
   },
@@ -13277,7 +13292,7 @@
   {
     "lemma": "Euangelios",
     "previous": "Euangelia",
-    "next": "Euangelon limen",
+    "next": "Ἐὐαγγέλων λιμήν",
     "chapters": [
       {
         "start": 843,
@@ -13286,19 +13301,22 @@
     ]
   },
   {
-    "lemma": "Euangelon limen",
+    "lemma": "Ἐὐαγγέλων λιμήν",
     "previous": "Euangelios",
     "next": "Euangelos 1",
+    "sort_key": "Euangelonlimen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 843,
-        "author": "Steindorff"
+        "end": 843,
+        "author": "Steindorff."
       }
     ]
   },
   {
     "lemma": "Euangelos 1",
-    "previous": "Euangelon limen",
+    "previous": "Ἐὐαγγέλων λιμήν",
     "next": "Euangelos 2",
     "chapters": [
       {
@@ -13366,10 +13384,12 @@
     "lemma": "Euangelos 7",
     "previous": "Euangelos 6",
     "next": "Euangelos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 844,
-        "author": "Kirchner"
+        "end": 844,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13409,28 +13429,33 @@
   {
     "lemma": "Euanor",
     "previous": "Euanippe",
-    "next": "Euanoreioi",
+    "next": "Εὐανόρειοι",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 845,
-        "author": "Kirchner"
+        "end": 845,
+        "author": "Kirchner."
       }
     ]
   },
   {
-    "lemma": "Euanoreioi",
+    "lemma": "Εὐανόρειοι",
     "previous": "Euanor",
     "next": "Euanoridas",
+    "sort_key": "Euanoreioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 845,
-        "author": "Hiller von Gaertringen"
+        "end": 845,
+        "author": "Hiller v. Gärtringen."
       }
     ]
   },
   {
     "lemma": "Euanoridas",
-    "previous": "Euanoreioi",
+    "previous": "Εὐανόρειοι",
     "next": "Euantetos",
     "chapters": [
       {
@@ -13476,10 +13501,12 @@
     "lemma": "Euanthe 3",
     "previous": "Euanthe 2",
     "next": "Euanthes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 845,
-        "author": "Escher"
+        "end": 845,
+        "author": "Escher."
       }
     ]
   },
@@ -13499,10 +13526,12 @@
     "lemma": "Euanthes 2",
     "previous": "Euanthes 1",
     "next": "Euanthes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 846,
-        "author": "Escher"
+        "end": 846,
+        "author": "Escher."
       }
     ]
   },
@@ -13510,10 +13539,12 @@
     "lemma": "Euanthes 3",
     "previous": "Euanthes 2",
     "next": "Euanthes 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 846,
-        "author": "Kirchner"
+        "end": 846,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13521,10 +13552,12 @@
     "lemma": "Euanthes 4",
     "previous": "Euanthes 3",
     "next": "Euanthes 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 846,
-        "author": "Kirchner"
+        "end": 846,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13611,7 +13644,7 @@
   },
   {
     "lemma": "Euaratos",
-    "previous": "Euanthius 2",
+    "previous": "Euarane",
     "next": "Euarchidas",
     "proof_read": 2,
     "chapters": [
@@ -13625,7 +13658,7 @@
   {
     "lemma": "Euarane",
     "previous": "Euanthius 2",
-    "next": "Euaratos",
+    "next": "Euarchidas",
     "sort_key": "Euarane",
     "proof_read": 2,
     "chapters": [
@@ -13640,10 +13673,12 @@
     "lemma": "Euarchidas",
     "previous": "Euarane",
     "next": "Euarchides 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 848,
-        "author": "Rossbach"
+        "end": 848,
+        "author": "O. Rossbach."
       }
     ]
   },
@@ -14464,10 +14499,12 @@
     "lemma": "Eubuleus 3",
     "previous": "Eubuleus 2",
     "next": "Eubuleus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
-        "author": "Jessen"
+        "end": 864,
+        "author": "Jessen."
       }
     ]
   },
@@ -14488,10 +14525,12 @@
     "lemma": "Eubuleus 5",
     "previous": "Eubuleus 4",
     "next": "Eubuleus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
-        "author": "Jessen"
+        "end": 864,
+        "author": "Jessen."
       }
     ]
   },
@@ -14533,10 +14572,12 @@
     "lemma": "Eubuleus 9",
     "previous": "Eubuleus 8",
     "next": "Eubulidas 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 869,
-        "author": "Jessen"
+        "end": 869,
+        "author": "Jessen."
       }
     ]
   },
@@ -14596,10 +14637,12 @@
     "lemma": "Eubulides 1",
     "previous": "Eubulidas 4",
     "next": "Eubulides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 869,
-        "author": "Kirchner"
+        "end": 869,
+        "author": "Kirchner."
       }
     ]
   },
@@ -14620,10 +14663,12 @@
     "lemma": "Eubulides 3",
     "previous": "Eubulides 2",
     "next": "Eubulides 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 870,
-        "author": "Kirchner"
+        "end": 870,
+        "author": "Kirchner."
       }
     ]
   },
@@ -14670,10 +14715,12 @@
     "lemma": "Eubulides 7",
     "previous": "Eubulides 6",
     "next": "Eubulides 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 870,
-        "author": "Wellmann, E[duard]"
+        "end": 870,
+        "author": "E. Wellmann."
       }
     ]
   },
@@ -14716,10 +14763,12 @@
     "lemma": "Eubulides 12",
     "previous": "Eubulides 10. 11",
     "next": "Eubulos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 875,
-        "author": "Robert"
+        "end": 875,
+        "author": "C. Robert."
       }
     ]
   },
@@ -14750,9 +14799,12 @@
     "lemma": "Eubulos 3",
     "previous": "Eubulos 2",
     "next": "Eubulos 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 875
+        "start": 875,
+        "end": 875,
+        "author": "Kirchner."
       }
     ]
   },
@@ -14786,9 +14838,12 @@
     "lemma": "Eubulos 6",
     "previous": "Eubulos 5",
     "next": "Eubulos 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 875
+        "start": 875,
+        "end": 875,
+        "author": "Kirchner."
       }
     ]
   },
