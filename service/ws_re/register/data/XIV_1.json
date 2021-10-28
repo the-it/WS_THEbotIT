@@ -62,10 +62,12 @@
     "lemma": "Lysimachos 6",
     "previous": "Lysimachos 5",
     "next": "Lysimachos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 31,
-        "author": "Stähelin"
+        "end": 31,
+        "author": "Stähelin."
       }
     ]
   },
@@ -84,10 +86,12 @@
     "lemma": "Lysimachos 8",
     "previous": "Lysimachos 7",
     "next": "Lysimachos 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 31,
-        "author": "Stähelin"
+        "end": 31,
+        "author": "Stähelin."
       }
     ]
   },
@@ -95,10 +99,12 @@
     "lemma": "Lysimachos 9",
     "previous": "Lysimachos 8",
     "next": "Lysimachos 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 31,
-        "author": "Obst"
+        "end": 31,
+        "author": "Obst."
       }
     ]
   },
@@ -106,10 +112,12 @@
     "lemma": "Lysimachos 10",
     "previous": "Lysimachos 9",
     "next": "Lysimachos 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 31,
-        "author": "Obst"
+        "end": 31,
+        "author": "Obst."
       }
     ]
   },
@@ -779,10 +787,12 @@
     "lemma": "Lysistratos 8",
     "previous": "Lysistratos 7",
     "next": "Lysistratos 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 65,
-        "author": "Obst"
+        "end": 65,
+        "author": "Obst."
       }
     ]
   },
@@ -1142,10 +1152,12 @@
     "lemma": "Lyzeia",
     "previous": "Lyttos",
     "next": "Ma",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 76,
-        "author": "Bölte"
+        "end": 76,
+        "author": "Bölte."
       }
     ]
   },
@@ -1176,7 +1188,7 @@
   {
     "lemma": "Maacha",
     "previous": "Ma-",
-    "next": "Maagrammon",
+    "next": "Μαάγραμμον",
     "chapters": [
       {
         "start": 91,
@@ -1185,19 +1197,22 @@
     ]
   },
   {
-    "lemma": "Maagrammon",
+    "lemma": "Μαάγραμμον",
     "previous": "Maacha",
     "next": "Maʿale adummim",
+    "sort_key": "Maagrammon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 91,
-        "author": "Herrmann"
+        "end": 91,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Maʿale adummim",
-    "previous": "Maagrammon",
+    "previous": "Μαάγραμμον",
     "next": "Maamius",
     "chapters": [
       {
@@ -1247,7 +1262,7 @@
   {
     "lemma": "Maarath",
     "previous": "Μααφά",
-    "next": "Maarsares",
+    "next": "Μααρσάρης",
     "chapters": [
       {
         "start": 92,
@@ -1256,7 +1271,7 @@
     ]
   },
   {
-    "lemma": "Maarsares",
+    "lemma": "Μααρσάρης",
     "previous": "Maarath",
     "next": "Mabartha",
     "sort_key": "Maarsares",
@@ -1271,7 +1286,7 @@
   },
   {
     "lemma": "Mabartha",
-    "previous": "Maarsares",
+    "previous": "Μααρσάρης",
     "next": "Mabog",
     "chapters": [
       {
@@ -1356,10 +1371,12 @@
     "lemma": "Macaraea",
     "previous": "Macanitae",
     "next": "Macarius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 93,
-        "author": "Dessau"
+        "end": 93,
+        "author": "Dessau."
       }
     ]
   },
@@ -1402,10 +1419,12 @@
     "lemma": "Macarius 4",
     "previous": "Macarius 3",
     "next": "Macarius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 94,
-        "author": "Enßlin"
+        "end": 94,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1413,10 +1432,12 @@
     "lemma": "Macarius 5",
     "previous": "Macarius 4",
     "next": "Macarius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 94,
-        "author": "Enßlin"
+        "end": 94,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1479,10 +1500,12 @@
     "lemma": "Macarius 11",
     "previous": "Macarius 10",
     "next": "Macarius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 95,
-        "author": "Enßlin"
+        "end": 95,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1490,10 +1513,12 @@
     "lemma": "Macarius 12",
     "previous": "Macarius 11",
     "next": "Macarius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 95,
-        "author": "Enßlin"
+        "end": 95,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1525,10 +1550,12 @@
     "lemma": "Macatutae",
     "previous": "Macatus",
     "next": "Macchurebi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 95,
-        "author": "Dessau"
+        "end": 95,
+        "author": "Dessau."
       }
     ]
   },
@@ -1571,10 +1598,12 @@
     "lemma": "Maccuniana",
     "previous": "Maccues",
     "next": "Maccurae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 126,
-        "author": "Fluss"
+        "end": 126,
+        "author": "Fluss."
       }
     ]
   },
@@ -1604,10 +1633,12 @@
     "lemma": "Maccusa",
     "previous": "Maccus",
     "next": "Maceda",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
-        "author": "Enßlin"
+        "end": 127,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1628,10 +1659,12 @@
     "lemma": "Macedo 1",
     "previous": "Maceda",
     "next": "Macedo 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
-        "author": "Stein, [Arthur]"
+        "end": 127,
+        "author": "Stein."
       }
     ]
   },
@@ -1639,10 +1672,12 @@
     "lemma": "Macedo 2",
     "previous": "Macedo 1",
     "next": "Macedo 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
-        "author": "Stein, [Arthur]"
+        "end": 127,
+        "author": "Stein."
       }
     ]
   },
@@ -1650,10 +1685,12 @@
     "lemma": "Macedo 3",
     "previous": "Macedo 2",
     "next": "Macedo 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
-        "author": "Stein, [Arthur]"
+        "end": 127,
+        "author": "Stein."
       }
     ]
   },
@@ -1661,10 +1698,12 @@
     "lemma": "Macedo 4",
     "previous": "Macedo 3",
     "next": "Macedo 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
-        "author": "Münzer"
+        "end": 127,
+        "author": "Münzer."
       }
     ]
   },
@@ -1760,10 +1799,12 @@
     "lemma": "Macedonius 8",
     "previous": "Macedonius 7",
     "next": "Macedonius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 128,
-        "author": "Enßlin"
+        "end": 128,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1782,10 +1823,12 @@
     "lemma": "Macedonius 10",
     "previous": "Macedonius 9",
     "next": "Macedonius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 129,
-        "author": "Enßlin"
+        "end": 129,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1793,10 +1836,12 @@
     "lemma": "Macedonius 11",
     "previous": "Macedonius 10",
     "next": "Macedonius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 129,
-        "author": "Enßlin"
+        "end": 129,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1987,10 +2032,12 @@
     "lemma": "Machaera",
     "previous": "Μαχαβέρως",
     "next": "Machaireus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 135,
-        "author": "Stein, [Arthur]"
+        "end": 135,
+        "author": "Stein."
       }
     ]
   },
