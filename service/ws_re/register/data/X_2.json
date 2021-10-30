@@ -1611,10 +1611,12 @@
     "lemma": "Iuventius 18",
     "previous": "Iuventius 17",
     "next": "Iuventius 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1367,
-        "author": "Münzer"
+        "end": 1367,
+        "author": "Münzer."
       }
     ]
   },
@@ -1645,10 +1647,12 @@
     "lemma": "Iuventius 21",
     "previous": "Iuventius 20",
     "next": "Iuventius 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1368,
-        "author": "Groag"
+        "end": 1368,
+        "author": "Groag."
       }
     ]
   },
@@ -1702,10 +1706,12 @@
     "lemma": "Iuventius 26",
     "previous": "Iuventius 25",
     "next": "Iuventius 27",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1370,
-        "author": "Münzer"
+        "end": 1370,
+        "author": "Münzer."
       }
     ]
   },
@@ -1736,10 +1742,12 @@
     "lemma": "Iuventius 29",
     "previous": "Iuventius 28",
     "next": "Iuventius 30",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1371,
-        "author": "Münzer"
+        "end": 1371,
+        "author": "Münzer."
       }
     ]
   },
@@ -1877,10 +1885,12 @@
     "lemma": "Ixion 4",
     "previous": "Ixion 3",
     "next": "Ixios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1384,
-        "author": "Waser"
+        "end": 1384,
+        "author": "Waser."
       }
     ]
   },
@@ -1888,10 +1898,12 @@
     "lemma": "Ixios",
     "previous": "Ixion 4",
     "next": "Ixos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1384,
-        "author": "Adler"
+        "end": 1384,
+        "author": "Adler."
       }
     ]
   },
@@ -2002,10 +2014,12 @@
     "lemma": "Izates 1",
     "previous": "Ἴζαν νησόπολις",
     "next": "Izates 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1391,
-        "author": "Weissbach"
+        "end": 1391,
+        "author": "Weissbach."
       }
     ]
   },
@@ -2347,7 +2361,7 @@
   {
     "lemma": "Kabe(i)ra",
     "previous": "Kabbalusa",
-    "next": "Kabeiraia 1",
+    "next": "Καβειραία 1",
     "chapters": [
       {
         "start": 1397,
@@ -2356,30 +2370,35 @@
     ]
   },
   {
-    "lemma": "Kabeiraia 1",
+    "lemma": "Καβειραία 1",
     "previous": "Kabe(i)ra",
-    "next": "Kabeiraia 2",
+    "next": "Καβειραία 2",
+    "sort_key": "Kabeiraia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
-        "author": "Kern"
+        "end": 1398,
+        "author": "Kern."
       }
     ]
   },
   {
-    "lemma": "Kabeiraia 2",
-    "previous": "Kabeiraia 1",
+    "lemma": "Καβειραία 2",
+    "previous": "Καβειραία 1",
     "next": "Kabeiraioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
-        "author": "Kern"
+        "end": 1398,
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Kabeiraioi",
-    "previous": "Kabeiraia 2",
+    "previous": "Καβειραία 2",
     "next": "Kabeiria 1",
     "chapters": [
       {
@@ -2402,7 +2421,7 @@
   {
     "lemma": "Kabeiria 2",
     "previous": "Kabeiria 1",
-    "next": "Kabeirias",
+    "next": "Καβειριὰς",
     "chapters": [
       {
         "start": 1398,
@@ -2411,19 +2430,22 @@
     ]
   },
   {
-    "lemma": "Kabeirias",
+    "lemma": "Καβειριὰς",
     "previous": "Kabeiria 2",
     "next": "Kabeiriazesthai",
+    "sort_key": "Kabeirias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
-        "author": "Kern"
+        "end": 1398,
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Kabeiriazesthai",
-    "previous": "Kabeirias",
+    "previous": "Καβειριὰς",
     "next": "Kabeirides",
     "chapters": [
       {
@@ -2435,7 +2457,7 @@
   {
     "lemma": "Kabeirides",
     "previous": "Kabeiriazesthai",
-    "next": "Kabeirioi",
+    "next": "Καβείριοι",
     "chapters": [
       {
         "start": 1398,
@@ -2444,20 +2466,23 @@
     ]
   },
   {
-    "lemma": "Kabeirioi",
+    "lemma": "Καβείριοι",
     "previous": "Kabeirides",
     "next": "Kabeirion",
+    "sort_key": "Kabeirioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
-        "author": "Kern"
+        "end": 1398,
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Kabeirion",
-    "previous": "Kabeirioi",
-    "next": "Kabeiris",
+    "previous": "Καβείριοι",
+    "next": "Καβειρὶς",
     "chapters": [
       {
         "start": 1398,
@@ -2466,19 +2491,22 @@
     ]
   },
   {
-    "lemma": "Kabeiris",
+    "lemma": "Καβειρὶς",
     "previous": "Kabeirion",
     "next": "Kabeiritai",
+    "sort_key": "Kabeiris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
-        "author": "Kern"
+        "end": 1398,
+        "author": "Kern."
       }
     ]
   },
   {
     "lemma": "Kabeiritai",
-    "previous": "Kabeiris",
+    "previous": "Καβειρὶς",
     "next": "Kabeiro",
     "chapters": [
       {
@@ -2536,7 +2564,7 @@
   {
     "lemma": "Kabellio",
     "previous": "Kabeiros, Kabeiroi 3",
-    "next": "Kaberasa",
+    "next": "Καβηράσα",
     "chapters": [
       {
         "start": 1450,
@@ -2545,19 +2573,22 @@
     ]
   },
   {
-    "lemma": "Kaberasa",
+    "lemma": "Καβηράσα",
     "previous": "Kabellio",
     "next": "Kabesos",
+    "sort_key": "Kaberasa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1450,
-        "author": "Weissbach"
+        "end": 1450,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Kabesos",
-    "previous": "Kaberasa",
+    "previous": "Καβηράσα",
     "next": "Kabessos",
     "chapters": [
       {
@@ -2571,10 +2602,12 @@
     "lemma": "Kabessos",
     "previous": "Kabesos",
     "next": "Kabillonum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1451,
-        "author": "Ruge"
+        "end": 1451,
+        "author": "Ruge."
       }
     ]
   },
@@ -2696,17 +2729,19 @@
     "lemma": "Kachina",
     "previous": "Kachales",
     "next": "Kachrylion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1456,
-        "author": "Moritz, [Bernhard]"
+        "end": 1456,
+        "author": "Moritz."
       }
     ]
   },
   {
     "lemma": "Kachrylion",
     "previous": "Kachina",
-    "next": "Kachoura",
+    "next": "Καχούρα",
     "chapters": [
       {
         "start": 1456,
@@ -2716,19 +2751,22 @@
     ]
   },
   {
-    "lemma": "Kachoura",
+    "lemma": "Καχούρα",
     "previous": "Kachrylion",
     "next": "Kadasenoi",
+    "sort_key": "Kachura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
-        "author": "Weissbach"
+        "end": 1457,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Kadasenoi",
-    "previous": "Kachoura",
+    "previous": "Καχούρα",
     "next": "Kadena",
     "chapters": [
       {
@@ -2923,11 +2961,12 @@
     "lemma": "Kadmos 8",
     "previous": "Kadmos 7",
     "next": "Kadoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1476,
         "end": 1477,
-        "author": "Münzer"
+        "author": "Münzer."
       }
     ]
   },
@@ -2968,10 +3007,12 @@
     "lemma": "Kadrema",
     "previous": "Kados(s)ia",
     "next": "Kadrusoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1477,
-        "author": "Ruge"
+        "end": 1477,
+        "author": "Ruge."
       }
     ]
   },
@@ -3073,12 +3114,15 @@
   },
   {
     "lemma": "Kaër",
-    "previous": "Kälbertshausen",
-    "next": "Käse",
+    "previous": "Käfer",
+    "next": "Kaeira",
+    "sort_key": "Kaeg",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1489,
-        "author": "Bürchner"
+        "end": 1489,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3293,10 +3337,12 @@
     "lemma": "Kaikos 4",
     "previous": "Kaikos 3",
     "next": "Kaikos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1503,
-        "author": "Waser"
+        "end": 1503,
+        "author": "Waser."
       }
     ]
   },
@@ -3394,7 +3440,7 @@
   {
     "lemma": "Kaine",
     "previous": "Kainas 2",
-    "next": "Kaine 1",
+    "next": "Καινὴ 1",
     "chapters": [
       {
         "start": 1504,
@@ -3403,19 +3449,22 @@
     ]
   },
   {
-    "lemma": "Kaine 1",
+    "lemma": "Καινὴ 1",
     "previous": "Kaine",
     "next": "Kaine 2",
+    "sort_key": "Kaine 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1504,
-        "author": "Bürchner"
+        "end": 1504,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kaine 2",
-    "previous": "Kaine 1",
+    "previous": "Καινὴ 1",
     "next": "Kaineiton",
     "chapters": [
       {
@@ -3641,10 +3690,12 @@
     "lemma": "Kairios",
     "previous": "Kairimos",
     "next": "Kairos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1508,
-        "author": "Kroll"
+        "end": 1508,
+        "author": "Kroll."
       }
     ]
   },
@@ -3746,10 +3797,12 @@
     "lemma": "Kaisareia 2",
     "previous": "Kaisareia 1",
     "next": "Kaisareia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1523,
-        "author": "Bürchner"
+        "end": 1523,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3757,10 +3810,12 @@
     "lemma": "Kaisareia 3",
     "previous": "Kaisareia 2",
     "next": "Kaisareia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1523,
-        "author": "Bürchner"
+        "end": 1523,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3863,10 +3918,12 @@
     "lemma": "Kaiser-Augst",
     "previous": "Kaisarios",
     "next": "Kakasbos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1524,
-        "author": "Keune"
+        "end": 1524,
+        "author": "Keune."
       }
     ]
   },
@@ -4011,10 +4068,12 @@
     "lemma": "Kakra",
     "previous": "Kakoza",
     "next": "Kakurgoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1529,
-        "author": "Ziegler"
+        "end": 1529,
+        "author": "Ziegler."
       }
     ]
   },
@@ -4122,7 +4181,7 @@
   {
     "lemma": "Kalakagathios",
     "previous": "Kalais",
-    "next": "Kalakta, Kalakte, Kale Akte",
+    "next": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "redirect": "Kallokagathios",
     "proof_read": 2,
     "chapters": [
@@ -4133,19 +4192,22 @@
     ]
   },
   {
-    "lemma": "Kalakta, Kalakte, Kale Akte",
+    "lemma": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "previous": "Kalakagathios",
     "next": "Kalakta, Kalakte, Kale Akte 1",
+    "sort_key": "Kalakta, Kalakte, kale akte",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1530,
-        "author": "Bürchner"
+        "end": 1530,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kalakta, Kalakte, Kale Akte 1",
-    "previous": "Kalakta, Kalakte, Kale Akte",
+    "previous": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "next": "Kalakta, Kalakte, Kale Akte 2",
     "chapters": [
       {
@@ -4158,7 +4220,7 @@
   {
     "lemma": "Kalakta, Kalakte, Kale Akte 2",
     "previous": "Kalakta, Kalakte, Kale Akte 1",
-    "next": "Kalakta, Kalakte, Kale Akte 3",
+    "next": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή 3",
     "chapters": [
       {
         "start": 1531,
@@ -4167,19 +4229,22 @@
     ]
   },
   {
-    "lemma": "Kalakta, Kalakte, Kale Akte 3",
+    "lemma": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή 3",
     "previous": "Kalakta, Kalakte, Kale Akte 2",
     "next": "Kalama",
-    "redirect": true,
+    "sort_key": "Kalakta,kalakte, kale akte 3",
+    "redirect": "Kale 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1531
+        "start": 1531,
+        "end": 1531
       }
     ]
   },
   {
     "lemma": "Kalama",
-    "previous": "Kalakta, Kalakte, Kale Akte 3",
+    "previous": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή 3",
     "next": "Kalamai",
     "chapters": [
       {
@@ -4330,10 +4395,12 @@
     "lemma": "Kalamon",
     "previous": "Kalamoi 2",
     "next": "Kalamos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1538,
-        "author": "Ruge"
+        "end": 1538,
+        "author": "Ruge."
       }
     ]
   },
@@ -4392,9 +4459,12 @@
     "lemma": "Kalamos 4bis",
     "previous": "Kalamos 4",
     "next": "Kalamos 5",
+    "redirect": "Rohr",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1543
+        "start": 1543,
+        "end": 1543
       }
     ]
   },
@@ -4402,9 +4472,12 @@
     "lemma": "Kalamos 5",
     "previous": "Kalamos 4bis",
     "next": "Kalamyde",
+    "redirect": "Feder",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1544
+        "start": 1544,
+        "end": 1544
       }
     ]
   },
@@ -4423,10 +4496,12 @@
     "lemma": "Kalandos",
     "previous": "Kalamyde",
     "next": "Kalanos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1544,
-        "author": "Bürchner"
+        "end": 1544,
+        "author": "Bürchner."
       }
     ]
   },
