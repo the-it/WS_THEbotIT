@@ -4007,6 +4007,7 @@
     "lemma": "Ypion",
     "previous": "Ypepa",
     "next": "Ypode",
+    "redirect": "Hypios",
     "proof_read": 2,
     "chapters": [
       {
@@ -4504,10 +4505,12 @@
     "lemma": "Zacharias 2",
     "previous": "Zacharias 1",
     "next": "Zacharias 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2211,
-        "author": "Colpe"
+        "end": 2211,
+        "author": "Carsten Colpe."
       }
     ]
   },
@@ -4582,10 +4585,12 @@
     "lemma": "Zacharias 9",
     "previous": "Zacharias 8",
     "next": "Zacharias 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2216,
-        "author": "Lippold, Adolf"
+        "end": 2216,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -4593,10 +4598,12 @@
     "lemma": "Zacharias 10",
     "previous": "Zacharias 9",
     "next": "Zacharias 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2216,
-        "author": "Lippold, Adolf"
+        "end": 2216,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -4604,11 +4611,12 @@
     "lemma": "Zacharias 11",
     "previous": "Zacharias 10",
     "next": "Zacoria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2216,
         "end": 2217,
-        "author": "Lippold, Adolf"
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -4697,7 +4705,7 @@
   {
     "lemma": "Zagilis",
     "previous": "Zageira",
-    "next": "Zagmais",
+    "next": "Ζαγμαΐς",
     "chapters": [
       {
         "start": 2221,
@@ -4706,19 +4714,22 @@
     ]
   },
   {
-    "lemma": "Zagmais",
+    "lemma": "Ζαγμαΐς",
     "previous": "Zagilis",
     "next": "Zagora, Zagoron",
+    "sort_key": "Zagmais",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2221,
-        "author": "Dietrich"
+        "end": 2221,
+        "author": "Albert Dietrich."
       }
     ]
   },
   {
     "lemma": "Zagora, Zagoron",
-    "previous": "Zagmais",
+    "previous": "Ζαγμαΐς",
     "next": "Zagoron",
     "redirect": "Zacoria",
     "proof_read": 2,
@@ -4907,9 +4918,12 @@
     "lemma": "Zakynthos 2",
     "previous": "Zakynthos 1",
     "next": "Zakynthos 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2295
+        "start": 2295,
+        "end": 2295,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -4917,10 +4931,12 @@
     "lemma": "Zakynthos 3",
     "previous": "Zakynthos 2",
     "next": "Zakynthos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2295,
-        "author": "Treidler"
+        "end": 2295,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -4928,10 +4944,12 @@
     "lemma": "Zakynthos 4",
     "previous": "Zakynthos 3",
     "next": "Zakynthos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2295,
-        "author": "Treidler"
+        "end": 2295,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -4939,10 +4957,12 @@
     "lemma": "Zakynthos 5",
     "previous": "Zakynthos 4",
     "next": "Zalachthes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2296,
-        "author": "Treidler"
+        "end": 2296,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -5890,10 +5910,12 @@
     "lemma": "Zatchlas",
     "previous": "Zarzas",
     "next": "Zathraustes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2331,
-        "author": "Ziegler"
+        "end": 2331,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -6252,10 +6274,12 @@
     "lemma": "Zelotos",
     "previous": "Zeloten",
     "next": "Zelpha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2499,
-        "author": "Ziegler"
+        "end": 2499,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -6352,10 +6376,12 @@
     "lemma": "Zenas 3",
     "previous": "Zenas 2",
     "next": "Zenas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2500,
-        "author": "Lippold, Adolf"
+        "end": 2500,
+        "author": "Adolf Lippold."
       }
     ]
   },

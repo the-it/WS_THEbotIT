@@ -1114,11 +1114,12 @@
     "lemma": "Praknos",
     "previous": "Praisidion",
     "next": "Prakterios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1685,
         "end": 1686,
-        "author": "Saria"
+        "author": "B. Saria."
       }
     ]
   },
@@ -1879,10 +1880,12 @@
     "lemma": "Praxiergos 1",
     "previous": "Praxiergidai",
     "next": "Praxiergos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1761,
-        "author": "Geisau"
+        "end": 1761,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2853,10 +2856,12 @@
     "lemma": "Priamos 5",
     "previous": "Priamos 4",
     "next": "Priantae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1907,
-        "author": "Kolf"
+        "end": 1907,
+        "author": "Marie C. van der Kolf."
       }
     ]
   },
@@ -3483,10 +3488,12 @@
     "lemma": "Primosus 1",
     "previous": "Primores",
     "next": "Primosus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1994,
-        "author": "Enßlin"
+        "end": 1994,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3610,7 +3617,6 @@
     "lemma": "Primus 5",
     "previous": "Primus 4",
     "next": "Primus 6",
-    "sort_key": "Primus,flavius rhodinus 5",
     "proof_read": 2,
     "chapters": [
       {
@@ -3836,10 +3842,12 @@
     "lemma": "Principius 4",
     "previous": "Principius 3",
     "next": "Principius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2312,
-        "author": "Enßlin"
+        "end": 2312,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4298,10 +4306,13 @@
     "lemma": "Praetorium Mobenum",
     "previous": "Praetorium 7",
     "next": "Prakes",
+    "sort_key": "Praetoriummobenum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2537,
-        "author": "Hölscher"
+        "end": 2537,
+        "author": "G. Hölscher."
       }
     ]
   },
@@ -4372,10 +4383,13 @@
   {
     "lemma": "Prisca 3-5",
     "previous": "Praylos",
-    "next": "Prisca 4",
+    "next": "Prisca 3",
+    "redirect": "Prisca 3ff.",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2560
+        "start": 2560,
+        "end": 2560
       }
     ]
   },
