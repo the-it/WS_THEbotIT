@@ -8779,7 +8779,7 @@
   {
     "lemma": "Haimoniai 2",
     "previous": "Haimoniai 1",
-    "next": "Haimonieis",
+    "next": "Αἵμονες",
     "chapters": [
       {
         "start": 2220,
@@ -8788,8 +8788,20 @@
     ]
   },
   {
+    "lemma": "Αἵμονες",
+    "previous": "Haimoniai 2",
+    "sort_key": "Haimonib",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2220,
+        "end": 2220,
+        "author": "Kern."
+      }
+    ]
+  },
+  {
     "lemma": "Haimonieis",
-    "previous": "Haemonides 3",
     "next": "Haimonios 1",
     "sort_key": "Haimonieis",
     "proof_read": 2,
@@ -15957,12 +15969,12 @@
     "previous": "Helene 7",
     "next": "Helenes loutron",
     "sort_key": "Heleniea",
+    "redirect": "Ἑλένεια",
     "proof_read": 2,
     "chapters": [
       {
         "start": 2837,
-        "end": 2837,
-        "author": "Stengel."
+        "end": 2837
       }
     ]
   },

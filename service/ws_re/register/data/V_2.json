@@ -12512,9 +12512,12 @@
     "lemma": "Egnatius 29",
     "previous": "Egnatius 28",
     "next": "Egnatius 30",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1998
+        "start": 1998,
+        "end": 1998
       }
     ]
   },
@@ -12793,10 +12796,12 @@
     "lemma": "Egoisokome",
     "previous": "Egodes",
     "next": "Egona",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2005,
-        "author": "Ruge"
+        "end": 2005,
+        "author": "Ruge."
       }
     ]
   },
@@ -13219,10 +13224,12 @@
     "lemma": "Eikasios",
     "previous": "Eikadios",
     "next": "Eikosaprotoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2099,
-        "author": "Kirchner"
+        "end": 2099,
+        "author": "Kirchner."
       }
     ]
   },
@@ -15952,8 +15959,8 @@
   },
   {
     "lemma": "Elatia 4",
-    "previous": "Elaterion",
-    "next": "Elates",
+    "previous": "Elateia 3",
+    "next": "Elaterion",
     "sort_key": "Elateia 4",
     "proof_read": 2,
     "chapters": [
@@ -16719,12 +16726,15 @@
   },
   {
     "lemma": "Elegea 2",
-    "previous": "Elege",
-    "next": "Elegeia 1",
+    "previous": "Elegeia 1",
+    "next": "Elegeis",
+    "sort_key": "Elegeia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2258,
-        "author": "Baumgartner"
+        "end": 2258,
+        "author": "Baumgartner."
       }
     ]
   },
@@ -16949,10 +16959,12 @@
     "lemma": "Elektor",
     "previous": "Eleithyaion 2",
     "next": "Elektra 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2309,
-        "author": "Escher"
+        "end": 2309,
+        "author": "Escher."
       }
     ]
   },
@@ -17264,10 +17276,12 @@
     "lemma": "Elephantaria 4",
     "previous": "Elephantaria 3",
     "next": "Elephantides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2321,
-        "author": "Hülsen"
+        "end": 2321,
+        "author": "Hülsen."
       }
     ]
   },
@@ -18445,10 +18459,12 @@
     "lemma": "Elieus 1",
     "previous": "Elicius",
     "next": "Elieus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2367,
-        "author": "Tümpel"
+        "end": 2367,
+        "author": "Tümpel."
       }
     ]
   },
@@ -18520,10 +18536,12 @@
     "lemma": "Elimeia 2",
     "previous": "Elimeia 1",
     "next": "Elin",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2368,
-        "author": "Oberhummer"
+        "end": 2368,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -19526,10 +19544,12 @@
     "lemma": "Elymaia",
     "previous": "Elygeus",
     "next": "Elymais 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2458,
-        "author": "Jessen"
+        "end": 2458,
+        "author": "Jessen."
       }
     ]
   },
@@ -19704,10 +19724,12 @@
     "lemma": "Elytios",
     "previous": "Elysios",
     "next": "Emancipatio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2476,
-        "author": "Jessen"
+        "end": 2476,
+        "author": "Jessen."
       }
     ]
   },
@@ -19740,10 +19762,12 @@
     "lemma": "Emanio",
     "previous": "Emanenses",
     "next": "Emansor",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
-        "author": "Patsch"
+        "end": 2479,
+        "author": "Patsch."
       }
     ]
   },
@@ -19751,10 +19775,12 @@
     "lemma": "Emansor",
     "previous": "Emanio",
     "next": "Emantion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
-        "author": "Fiebiger"
+        "end": 2479,
+        "author": "Fiebiger."
       }
     ]
   },
@@ -19848,10 +19874,12 @@
     "lemma": "Emathion 2",
     "previous": "Emathion 1",
     "next": "Emathion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2481,
-        "author": "Tümpel"
+        "end": 2481,
+        "author": "Tümpel."
       }
     ]
   },
@@ -19872,10 +19900,12 @@
     "lemma": "Emathion 4",
     "previous": "Emathion 3",
     "next": "Emathion 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2481,
-        "author": "Tümpel"
+        "end": 2481,
+        "author": "Tümpel."
       }
     ]
   },
@@ -19907,10 +19937,12 @@
     "lemma": "Emathios",
     "previous": "Emathion 6",
     "next": "Emathis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2481,
-        "author": "Tümpel"
+        "end": 2481,
+        "author": "Tümpel."
       }
     ]
   },
@@ -19944,10 +19976,12 @@
     "lemma": "Emathis 3",
     "previous": "Emathis 2",
     "next": "Embaros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2482,
-        "author": "Tümpel"
+        "end": 2482,
+        "author": "Tümpel."
       }
     ]
   },

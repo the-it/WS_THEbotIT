@@ -3078,7 +3078,7 @@
   {
     "lemma": "Hemimedimnon",
     "previous": "Hemilitron",
-    "next": "Hemimegiston",
+    "next": "Ἡμιμέγιστον",
     "chapters": [
       {
         "start": 246,
@@ -3088,19 +3088,22 @@
     ]
   },
   {
-    "lemma": "Hemimegiston",
+    "lemma": "Ἡμιμέγιστον",
     "previous": "Hemimedimnon",
     "next": "Hemimnaion",
+    "sort_key": "Hemimegiston",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 247,
-        "author": "Viedebantt"
+        "end": 247,
+        "author": "Viedebantt."
       }
     ]
   },
   {
     "lemma": "Hemimnaion",
-    "previous": "Hemimegiston",
+    "previous": "Ἡμιμέγιστον",
     "next": "Ἡμιμόδιον",
     "chapters": [
       {
@@ -3218,7 +3221,7 @@
   {
     "lemma": "Ἡμιώδελος",
     "previous": "Ἡμιωδέλιον",
-    "next": "Hemiogdoon",
+    "next": "Ἡμιόγδοον",
     "sort_key": "Hemiodelos",
     "redirect": "Hemiobolion 1",
     "proof_read": 2,
@@ -3230,19 +3233,22 @@
     ]
   },
   {
-    "lemma": "Hemiogdoon",
+    "lemma": "Ἡμιόγδοον",
     "previous": "Ἡμιώδελος",
     "next": "Hemiolios",
+    "sort_key": "Hemiogdoon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 252,
-        "author": "Viedebantt"
+        "end": 252,
+        "author": "Viedebantt."
       }
     ]
   },
   {
     "lemma": "Hemiolios",
-    "previous": "Hemiogdoon",
+    "previous": "Ἡμιόγδοον",
     "next": "Ἡμιόλκιον",
     "chapters": [
       {
@@ -3269,7 +3275,7 @@
   {
     "lemma": "Hemionoi",
     "previous": "Ἡμιόλκιον",
-    "next": "Hemioungion",
+    "next": "Ἡμιούγγιον",
     "chapters": [
       {
         "start": 253,
@@ -3278,19 +3284,22 @@
     ]
   },
   {
-    "lemma": "Hemioungion",
+    "lemma": "Ἡμιούγγιον",
     "previous": "Hemionoi",
     "next": "Ἡμίπηχυς",
+    "sort_key": "Hemioungion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
-        "author": "Viedebantt"
+        "end": 253,
+        "author": "Viedebantt."
       }
     ]
   },
   {
     "lemma": "Ἡμίπηχυς",
-    "previous": "Hemioungion",
+    "previous": "Ἡμιούγγιον",
     "next": "Ἡμιπέλεκκον",
     "sort_key": "Hemipechys",
     "redirect": "Πῆχυς",
@@ -3334,10 +3343,12 @@
     "lemma": "Hemisklion",
     "previous": "Ἡμιπόδιον",
     "next": "Hemisphaerium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
-        "author": "Regling"
+        "end": 253,
+        "author": "Regling."
       }
     ]
   },
@@ -3430,7 +3441,7 @@
   {
     "lemma": "Hemithea 3",
     "previous": "Hemithea 2",
-    "next": "Hemition",
+    "next": "Ἡμίτιον",
     "chapters": [
       {
         "start": 256,
@@ -3439,19 +3450,22 @@
     ]
   },
   {
-    "lemma": "Hemition",
+    "lemma": "Ἡμίτιον",
     "previous": "Hemithea 3",
     "next": "Hemixeston",
+    "sort_key": "Hemition",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
-        "author": "Viedebantt"
+        "end": 256,
+        "author": "Viedebantt."
       }
     ]
   },
   {
     "lemma": "Hemixeston",
-    "previous": "Hemition",
+    "previous": "Ἡμίτιον",
     "next": "Hemnatae",
     "chapters": [
       {
@@ -3476,10 +3490,12 @@
     "lemma": "Hemona",
     "previous": "Hemnatae",
     "next": "Hendeka",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 257,
-        "author": "Patsch"
+        "end": 257,
+        "author": "Patsch."
       }
     ]
   },
@@ -3535,10 +3551,12 @@
     "lemma": "Henioche 2",
     "previous": "Henioche 1",
     "next": "Henioche 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 258,
-        "author": "Weicker"
+        "end": 258,
+        "author": "Weicker."
       }
     ]
   },
@@ -3546,10 +3564,12 @@
     "lemma": "Henioche 3",
     "previous": "Henioche 2",
     "next": "Henioche 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 258,
-        "author": "Weicker"
+        "end": 258,
+        "author": "Weicker."
       }
     ]
   },
@@ -3579,10 +3599,12 @@
     "lemma": "Henioche 6",
     "previous": "Henioche 5",
     "next": "Heniochides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 258,
-        "author": "Weicker"
+        "end": 258,
+        "author": "Weicker."
       }
     ]
   },
@@ -3590,10 +3612,12 @@
     "lemma": "Heniochides",
     "previous": "Henioche 6",
     "next": "Heniochoi 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 258,
-        "author": "Kirchner"
+        "end": 258,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3647,7 +3671,7 @@
   {
     "lemma": "Heniochos 3",
     "previous": "Heniochos 2",
-    "next": "Heniochos allos",
+    "next": "Ἡνίοχος ἄλλος",
     "chapters": [
       {
         "start": 283,
@@ -3657,19 +3681,22 @@
     ]
   },
   {
-    "lemma": "Heniochos allos",
+    "lemma": "Ἡνίοχος ἄλλος",
     "previous": "Heniochos 3",
     "next": "Henna",
+    "sort_key": "Heniochosallos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 284,
-        "author": "Rehm"
+        "end": 284,
+        "author": "Rehm."
       }
     ]
   },
   {
     "lemma": "Henna",
-    "previous": "Heniochos allos",
+    "previous": "Ἡνίοχος ἄλλος",
     "next": "Hennetoi",
     "chapters": [
       {
@@ -3717,10 +3744,12 @@
     "lemma": "Heoos 3",
     "previous": "Heoos 2",
     "next": "Heorta 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 288,
-        "author": "Jessen"
+        "end": 288,
+        "author": "Jessen."
       }
     ]
   },
@@ -3763,10 +3792,12 @@
     "lemma": "Heortius",
     "previous": "Heortios",
     "next": "Heorton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 290,
-        "author": "Seeck"
+        "end": 290,
+        "author": "Seeck."
       }
     ]
   },
@@ -3774,10 +3805,12 @@
     "lemma": "Heorton",
     "previous": "Heortius",
     "next": "Heper",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 290,
-        "author": "Bischoff, [Ernst]"
+        "end": 290,
+        "author": "Bischoff."
       }
     ]
   },
@@ -3785,10 +3818,12 @@
     "lemma": "Heper",
     "previous": "Heorton",
     "next": "Hephaestiades insulae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 290,
-        "author": "Seeck"
+        "end": 290,
+        "author": "Seeck."
       }
     ]
   },
@@ -3830,10 +3865,12 @@
     "lemma": "Hephaistiadai",
     "previous": "Hephaistia",
     "next": "Hephaistion 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 291,
-        "author": "Kolbe"
+        "end": 291,
+        "author": "Kolbe."
       }
     ]
   },
@@ -3897,10 +3934,12 @@
     "lemma": "Hephaistion 6",
     "previous": "Hephaistion 5",
     "next": "Hephaistion 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 296,
-        "author": "Seeck"
+        "end": 296,
+        "author": "Seeck."
       }
     ]
   },
@@ -4038,10 +4077,12 @@
     "lemma": "Heptakometai",
     "previous": "Heptagoniai",
     "next": "Heptanesia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 368,
-        "author": "Ruge"
+        "end": 368,
+        "author": "Ruge."
       }
     ]
   },
@@ -4049,17 +4090,19 @@
     "lemma": "Heptanesia",
     "previous": "Heptakometai",
     "next": "Heptanomia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 368,
-        "author": "Kiessling, Max"
+        "end": 368,
+        "author": "Kiessling."
       }
     ]
   },
   {
     "lemma": "Heptanomia",
     "previous": "Heptanesia",
-    "next": "Hepta philon kepion",
+    "next": "Ἓπτὰ φίλων κηπίον",
     "chapters": [
       {
         "start": 368,
@@ -4068,19 +4111,22 @@
     ]
   },
   {
-    "lemma": "Hepta philon kepion",
+    "lemma": "Ἓπτὰ φίλων κηπίον",
     "previous": "Heptanomia",
     "next": "Heptaphonos stoa",
+    "sort_key": "Heptaphilon kepion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 368,
-        "author": "Bürchner"
+        "end": 368,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Heptaphonos stoa",
-    "previous": "Hepta philon kepion",
+    "previous": "Ἓπτὰ φίλων κηπίον",
     "next": "Heptaporos",
     "chapters": [
       {
@@ -4420,10 +4466,12 @@
     "lemma": "Heraclius 1",
     "previous": "Heraclitus 4",
     "next": "Heraclius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 407,
-        "author": "Benjamin"
+        "end": 407,
+        "author": "Benjamin."
       }
     ]
   },
@@ -4492,10 +4540,12 @@
     "lemma": "Heragoras 2",
     "previous": "Heragoras 1",
     "next": "Heragoras 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 407,
-        "author": "Sundwall"
+        "end": 407,
+        "author": "Sundwall."
       }
     ]
   },
@@ -4656,10 +4706,13 @@
     "lemma": "Ἡραΐτης Ὅρμος",
     "previous": "Heraiskos",
     "next": "Heraklammon",
+    "sort_key": "Eraiteshormos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 422,
-        "author": "Bürchner"
+        "end": 422,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4779,10 +4832,12 @@
     "lemma": "Herakleia 7",
     "previous": "Herakleia 6",
     "next": "Herakleia 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 429,
-        "author": "Oberhummer"
+        "end": 429,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -4881,9 +4936,12 @@
     "lemma": "Herakleia 16",
     "previous": "Herakleia 15",
     "next": "Herakleia 17",
+    "redirect": "Herakleia 15",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 432
+        "start": 432,
+        "end": 432
       }
     ]
   },
@@ -4903,10 +4961,12 @@
     "lemma": "Herakleia 18",
     "previous": "Herakleia 17",
     "next": "Herakleia 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 433,
-        "author": "Bürchner"
+        "end": 433,
+        "author": "Bürchner."
       }
     ]
   },
@@ -5043,7 +5103,7 @@
   {
     "lemma": "Herakleia 30",
     "previous": "Herakleia 29",
-    "next": "Herakleia 31",
+    "next": "Ἡρακλείας",
     "redirect": "Heraclea 1",
     "proof_read": 2,
     "chapters": [
@@ -5054,8 +5114,22 @@
     ]
   },
   {
-    "lemma": "Herakleia 31",
+    "lemma": "Ἡρακλείας",
     "previous": "Herakleia 30",
+    "next": "Herakleia 31",
+    "sort_key": "Herakleia 30a",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 439,
+        "end": 439,
+        "author": "F. Jacoby."
+      }
+    ]
+  },
+  {
+    "lemma": "Herakleia 31",
+    "previous": "Ἡρακλείας",
     "next": "Herakleias",
     "chapters": [
       {
@@ -5119,10 +5193,12 @@
     "lemma": "Herakleidas 1",
     "previous": "Herakleidai 2",
     "next": "Herakleidas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 457,
-        "author": "Sundwall"
+        "end": 457,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5130,10 +5206,12 @@
     "lemma": "Herakleidas 2",
     "previous": "Herakleidas 1",
     "next": "Herakleidas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 457,
-        "author": "Sundwall"
+        "end": 457,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5141,10 +5219,12 @@
     "lemma": "Herakleidas 3",
     "previous": "Herakleidas 2",
     "next": "Herakleidas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 457,
-        "author": "Sundwall"
+        "end": 457,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5152,10 +5232,12 @@
     "lemma": "Herakleidas 4",
     "previous": "Herakleidas 3",
     "next": "Herakleidas 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 457,
-        "author": "Sundwall"
+        "end": 457,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5163,10 +5245,12 @@
     "lemma": "Herakleidas 5",
     "previous": "Herakleidas 4",
     "next": "Herakleidas 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 457,
-        "author": "Sundwall"
+        "end": 457,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5254,10 +5338,12 @@
     "lemma": "Herakleides 4",
     "previous": "Herakleides 3",
     "next": "Herakleides 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 458,
-        "author": "Kirchner"
+        "end": 458,
+        "author": "Kirchner."
       }
     ]
   },
@@ -5265,10 +5351,12 @@
     "lemma": "Herakleides 5",
     "previous": "Herakleides 4",
     "next": "Herakleides 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 458,
-        "author": "Sundwall"
+        "end": 458,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5276,10 +5364,12 @@
     "lemma": "Herakleides 6",
     "previous": "Herakleides 5",
     "next": "Herakleides 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 458,
-        "author": "Sundwall"
+        "end": 458,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5287,10 +5377,12 @@
     "lemma": "Herakleides 7",
     "previous": "Herakleides 6",
     "next": "Herakleides 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 458,
-        "author": "Sundwall"
+        "end": 458,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5298,10 +5390,12 @@
     "lemma": "Herakleides 8",
     "previous": "Herakleides 7",
     "next": "Herakleides 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 458,
-        "author": "Sundwall"
+        "end": 458,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5309,10 +5403,12 @@
     "lemma": "Herakleides 9",
     "previous": "Herakleides 8",
     "next": "Herakleides 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 458,
-        "author": "Sundwall"
+        "end": 458,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5320,10 +5416,12 @@
     "lemma": "Herakleides 10",
     "previous": "Herakleides 9",
     "next": "Herakleides 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 458,
-        "author": "Sundwall"
+        "end": 458,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5354,10 +5452,12 @@
     "lemma": "Herakleides 13",
     "previous": "Herakleides 12",
     "next": "Herakleides 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 459,
-        "author": "Sundwall"
+        "end": 459,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5420,10 +5520,12 @@
     "lemma": "Herakleides 19",
     "previous": "Herakleides 18",
     "next": "Herakleides 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 459,
-        "author": "Sundwall"
+        "end": 459,
+        "author": "Sundwall."
       }
     ]
   },
@@ -5510,10 +5612,12 @@
     "lemma": "Herakleides 27",
     "previous": "Herakleides 26",
     "next": "Herakleides 28",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 462,
-        "author": "Lenschau"
+        "end": 462,
+        "author": "Lenschau."
       }
     ]
   },
@@ -5591,10 +5695,12 @@
     "lemma": "Herakleides 34",
     "previous": "Herakleides 33",
     "next": "Herakleides 35",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 468,
-        "author": "Münzer"
+        "end": 468,
+        "author": "Münzer."
       }
     ]
   },
@@ -5602,10 +5708,12 @@
     "lemma": "Herakleides 35",
     "previous": "Herakleides 34",
     "next": "Herakleides 36",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 469,
-        "author": "Seeck"
+        "end": 469,
+        "author": "Seeck."
       }
     ]
   },
@@ -5613,10 +5721,12 @@
     "lemma": "Herakleides 36",
     "previous": "Herakleides 35",
     "next": "Herakleides 37",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 469,
-        "author": "Seeck"
+        "end": 469,
+        "author": "Seeck."
       }
     ]
   },
@@ -5646,10 +5756,12 @@
     "lemma": "Herakleides 39",
     "previous": "Herakleides 38",
     "next": "Herakleides 40",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 469,
-        "author": "Natorp"
+        "end": 469,
+        "author": "Natorp."
       }
     ]
   },
@@ -5772,10 +5884,12 @@
     "lemma": "Herakleides 50",
     "previous": "Herakleides 49",
     "next": "Herakleides 51",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 488,
-        "author": "Daebritz"
+        "end": 488,
+        "author": "Daebritz."
       }
     ]
   },
@@ -5840,10 +5954,12 @@
     "lemma": "Herakleides 56",
     "previous": "Herakleides 55",
     "next": "Herakleides 57",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 496,
-        "author": "Gossen"
+        "end": 496,
+        "author": "Gossen."
       }
     ]
   },
@@ -5851,10 +5967,12 @@
     "lemma": "Herakleides 57",
     "previous": "Herakleides 56",
     "next": "Herakleides 58",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 496,
-        "author": "Gossen"
+        "end": 496,
+        "author": "Gossen."
       }
     ]
   },
@@ -5874,10 +5992,12 @@
     "lemma": "Herakleides 59",
     "previous": "Herakleides 58",
     "next": "Herakleides 60",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 497,
-        "author": "Gossen"
+        "end": 497,
+        "author": "Gossen."
       }
     ]
   },
@@ -5885,10 +6005,12 @@
     "lemma": "Herakleides 60",
     "previous": "Herakleides 59",
     "next": "Herakleides 61",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 497,
-        "author": "Pfuhl"
+        "end": 497,
+        "author": "Pfuhl."
       }
     ]
   },
@@ -5896,10 +6018,12 @@
     "lemma": "Herakleides 61",
     "previous": "Herakleides 60",
     "next": "Herakleides 62",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 497,
-        "author": "Pfuhl"
+        "end": 497,
+        "author": "Pfuhl."
       }
     ]
   },
@@ -6056,10 +6180,12 @@
     "lemma": "Herakleios 2",
     "previous": "Herakleios 1",
     "next": "Herakleios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 501,
-        "author": "Bölte"
+        "end": 501,
+        "author": "Bölte."
       }
     ]
   },
@@ -6123,10 +6249,12 @@
     "lemma": "Herakleios 8",
     "previous": "Herakleios 7",
     "next": "Herakleios 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 502,
-        "author": "Lenschau"
+        "end": 502,
+        "author": "Lenschau."
       }
     ]
   },
@@ -6157,10 +6285,12 @@
     "lemma": "Herakleios 11",
     "previous": "Herakleios 10",
     "next": "Herakleios 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 503,
-        "author": "Münzer"
+        "end": 503,
+        "author": "Münzer."
       }
     ]
   },
@@ -6280,10 +6410,12 @@
     "lemma": "Herakleitos 2",
     "previous": "Herakleitos 1",
     "next": "Herakleitos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 504,
-        "author": "Sundwall"
+        "end": 504,
+        "author": "Sundwall."
       }
     ]
   },
@@ -6291,10 +6423,12 @@
     "lemma": "Herakleitos 3",
     "previous": "Herakleitos 2",
     "next": "Herakleitos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 504,
-        "author": "Sundwall"
+        "end": 504,
+        "author": "Sundwall."
       }
     ]
   },
@@ -6302,10 +6436,12 @@
     "lemma": "Herakleitos 4",
     "previous": "Herakleitos 3",
     "next": "Herakleitos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 504,
-        "author": "Sundwall"
+        "end": 504,
+        "author": "Sundwall."
       }
     ]
   },
@@ -6313,10 +6449,12 @@
     "lemma": "Herakleitos 5",
     "previous": "Herakleitos 4",
     "next": "Herakleitos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 504,
-        "author": "Sundwall"
+        "end": 504,
+        "author": "Sundwall."
       }
     ]
   },
@@ -6414,10 +6552,12 @@
     "lemma": "Herakleitos 14",
     "previous": "Herakleitos 13",
     "next": "Herakleitos 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 510,
-        "author": "Jacoby, [Felix]"
+        "end": 510,
+        "author": "F. Jacoby."
       }
     ]
   },
@@ -6461,10 +6601,12 @@
     "lemma": "Herakleodoros 1",
     "previous": "Herakleitos 17",
     "next": "Herakleodoros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 511,
-        "author": "Kirchner"
+        "end": 511,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6563,10 +6705,12 @@
     "lemma": "Herakleopolis 1",
     "previous": "Herakleon 6",
     "next": "Herakleopolis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 515,
-        "author": "Bürchner"
+        "end": 515,
+        "author": "Bürchner."
       }
     ]
   },
@@ -6598,10 +6742,12 @@
     "lemma": "Herakleopolis 4",
     "previous": "Herakleopolis 3",
     "next": "Herakleotes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 515,
-        "author": "Grapow"
+        "end": 515,
+        "author": "Grapow."
       }
     ]
   },
@@ -6666,7 +6812,7 @@
   {
     "lemma": "Herakleous akron",
     "previous": "Herakleous",
-    "next": "Herakleous bomoi",
+    "next": "Ἡρακλέους",
     "chapters": [
       {
         "start": 516,
@@ -6675,8 +6821,22 @@
     ]
   },
   {
-    "lemma": "Herakleous bomoi",
+    "lemma": "Ἡρακλέους",
     "previous": "Herakleous akron",
+    "next": "Herakleous bomoi",
+    "sort_key": "Herakleous b",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 516,
+        "end": 516,
+        "author": "Bürchner."
+      }
+    ]
+  },
+  {
+    "lemma": "Herakleous bomoi",
+    "previous": "Ἡρακλέους",
     "next": "Ἡρακλέους λιμήν",
     "chapters": [
       {
@@ -6971,10 +7131,12 @@
     "lemma": "Hercl(anenses?)",
     "previous": "Herbita",
     "next": "Hercle",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 532,
-        "author": "Weiss, J[akob]"
+        "end": 532,
+        "author": "Weiss."
       }
     ]
   },
@@ -7018,10 +7180,13 @@
     "lemma": "Herculaneus pagus 1",
     "previous": "Herculaneum 2",
     "next": "Herculaneus pagus 2",
+    "sort_key": "Herculaneuspagus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 548,
-        "author": "Weiss, J[akob]"
+        "end": 548,
+        "author": "Weiss."
       }
     ]
   },
@@ -7029,10 +7194,13 @@
     "lemma": "Herculaneus pagus 2",
     "previous": "Herculaneus pagus 1",
     "next": "Herculaneus pagus 3",
+    "sort_key": "Herculaneuspagus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 548,
-        "author": "Weiss, J[akob]"
+        "end": 548,
+        "author": "Weiss."
       }
     ]
   },
@@ -7040,10 +7208,13 @@
     "lemma": "Herculaneus pagus 3",
     "previous": "Herculaneus pagus 2",
     "next": "Herculaneus rivus 1",
+    "sort_key": "Herculaneuspagus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 548,
-        "author": "Weiss, J[akob]"
+        "end": 548,
+        "author": "Weiss."
       }
     ]
   },
@@ -7306,10 +7477,13 @@
     "lemma": "Herculeus vicus",
     "previous": "Hercules 2",
     "next": "Herculia",
+    "sort_key": "Herculeusvicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 612,
-        "author": "Weiss, J[akob]"
+        "end": 612,
+        "author": "Weiss."
       }
     ]
   },
@@ -7389,10 +7563,13 @@
     "lemma": "Herculis insulae 3",
     "previous": "Herculis insulae 2",
     "next": "Herculis insulae 4",
+    "sort_key": "Herculisinsulae 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 613,
-        "author": "Schulten"
+        "end": 613,
+        "author": "Schulten."
       }
     ]
   },
@@ -7400,10 +7577,13 @@
     "lemma": "Herculis insulae 4",
     "previous": "Herculis insulae 3",
     "next": "Herculis Monoeci portus",
+    "sort_key": "Herculisinsulae 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 613,
-        "author": "Schulten"
+        "end": 613,
+        "author": "Schulten."
       }
     ]
   },
@@ -7422,10 +7602,13 @@
     "lemma": "Herculis petra",
     "previous": "Herculis Monoeci portus",
     "next": "Herculis portus 1",
+    "sort_key": "Herculispetra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 613,
-        "author": "Weiss, J[akob]"
+        "end": 613,
+        "author": "Weiss."
       }
     ]
   },
@@ -7478,10 +7661,13 @@
     "lemma": "Herculis portus 5",
     "previous": "Herculis portus 4",
     "next": "Herculis promunturium 1",
+    "sort_key": "Herculisportus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 614,
-        "author": "Haug"
+        "end": 614,
+        "author": "Haug."
       }
     ]
   },
@@ -7489,10 +7675,13 @@
     "lemma": "Herculis promunturium 1",
     "previous": "Herculis portus 5",
     "next": "Herculis promunturium 2",
+    "sort_key": "Herculispromunturium 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 614,
-        "author": "Weiss, J[akob]"
+        "end": 614,
+        "author": "Weiss."
       }
     ]
   },
@@ -7500,10 +7689,13 @@
     "lemma": "Herculis promunturium 2",
     "previous": "Herculis promunturium 1",
     "next": "Herculius 1",
+    "sort_key": "Herculispromunturium 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 614,
-        "author": "Haug"
+        "end": 614,
+        "author": "Haug."
       }
     ]
   },
@@ -7511,10 +7703,12 @@
     "lemma": "Herculius 1",
     "previous": "Herculis promunturium 2",
     "next": "Herculius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 614,
-        "author": "Seeck"
+        "end": 614,
+        "author": "Seeck."
       }
     ]
   },
@@ -7533,10 +7727,12 @@
     "lemma": "Herculius 3",
     "previous": "Herculius 2",
     "next": "Herculius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 614,
-        "author": "Seeck"
+        "end": 614,
+        "author": "Seeck."
       }
     ]
   },
@@ -7700,10 +7896,12 @@
     "lemma": "Herennianus 2",
     "previous": "Herennianus 1",
     "next": "Herennianus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 649,
-        "author": "Stein, [Arthur]"
+        "end": 649,
+        "author": "Stein."
       }
     ]
   },
@@ -7711,10 +7909,12 @@
     "lemma": "Herennianus 3",
     "previous": "Herennianus 2",
     "next": "Herennianus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 649,
-        "author": "Stein, [Arthur]"
+        "end": 649,
+        "author": "Stein."
       }
     ]
   },
@@ -7722,10 +7922,12 @@
     "lemma": "Herennianus 4",
     "previous": "Herennianus 3",
     "next": "Herennianus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 649,
-        "author": "Stein, [Arthur]"
+        "end": 649,
+        "author": "Stein."
       }
     ]
   },
@@ -7802,10 +8004,12 @@
     "lemma": "Herennius 3",
     "previous": "Herennius 2",
     "next": "Herennius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 662,
-        "author": "Münzer"
+        "end": 662,
+        "author": "Münzer."
       }
     ]
   },
@@ -8026,9 +8230,12 @@
     "lemma": "Herennius 23",
     "previous": "Herennius 22",
     "next": "Herennius 24",
+    "redirect": "Dexippos 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 667
+        "start": 667,
+        "end": 667
       }
     ]
   },
@@ -8036,9 +8243,12 @@
     "lemma": "Herennius 24",
     "previous": "Herennius 23",
     "next": "Herennius 25",
+    "redirect": "Herennius 17",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 667
+        "start": 667,
+        "end": 667
       }
     ]
   },
@@ -8046,9 +8256,12 @@
     "lemma": "Herennius 25",
     "previous": "Herennius 24",
     "next": "Herennius 26",
+    "redirect": "Messius 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 667
+        "start": 667,
+        "end": 667
       }
     ]
   },
@@ -8101,10 +8314,12 @@
     "lemma": "Herennius 30",
     "previous": "Herennius 29",
     "next": "Herennius 31",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 668,
-        "author": "Stein, [Arthur]"
+        "end": 668,
+        "author": "Stein."
       }
     ]
   },
@@ -8124,10 +8339,12 @@
     "lemma": "Herennius 32",
     "previous": "Herennius 31",
     "next": "Herennius 33",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 675,
-        "author": "Groag"
+        "end": 675,
+        "author": "Groag."
       }
     ]
   },
@@ -8158,9 +8375,12 @@
     "lemma": "Herennius 35",
     "previous": "Herennius 34",
     "next": "Herennius 36",
+    "redirect": "Mettius 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 676
+        "start": 676,
+        "end": 676
       }
     ]
   },
@@ -8246,10 +8466,12 @@
     "lemma": "Herennius 43",
     "previous": "Herennius 42",
     "next": "Herennius 44",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 677,
-        "author": "Groag"
+        "end": 677,
+        "author": "Groag."
       }
     ]
   },
@@ -8303,10 +8525,12 @@
     "lemma": "Herennius 48",
     "previous": "Herennius 47",
     "next": "Herennius 49",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 680,
-        "author": "Stein, [Arthur]"
+        "end": 680,
+        "author": "Stein."
       }
     ]
   },
@@ -8326,10 +8550,12 @@
     "lemma": "Herennius 50",
     "previous": "Herennius 49",
     "next": "Herennius 51",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 681,
-        "author": "Stein, [Arthur]"
+        "end": 681,
+        "author": "Stein."
       }
     ]
   },
@@ -8348,9 +8574,12 @@
     "lemma": "Herennius 52",
     "previous": "Herennius 51",
     "next": "Herennius 53",
+    "redirect": "Seius 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 681
+        "start": 681,
+        "end": 681
       }
     ]
   },
@@ -8391,9 +8620,12 @@
     "lemma": "Herennius 56",
     "previous": "Herennius 55",
     "next": "Herennuleius",
+    "redirect": "Iulius 571",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 681
+        "start": 681,
+        "end": 681
       }
     ]
   },
@@ -8401,9 +8633,12 @@
     "lemma": "Herennuleius",
     "previous": "Herennius 56",
     "next": "Hereos",
+    "redirect": "Herennius 7",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 681
+        "start": 681,
+        "end": 681
       }
     ]
   },
@@ -8446,10 +8681,12 @@
     "lemma": "Hergates",
     "previous": "Heres Martia",
     "next": "Heries Iunonis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 682,
-        "author": "Weiss, J[akob]"
+        "end": 682,
+        "author": "Weiss."
       }
     ]
   },
@@ -8469,10 +8706,12 @@
     "lemma": "Herila",
     "previous": "Heries Iunonis",
     "next": "Herillos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 683,
-        "author": "Seeck"
+        "end": 683,
+        "author": "Seeck."
       }
     ]
   },
@@ -8515,10 +8754,12 @@
     "lemma": "Heristhon",
     "previous": "Heris",
     "next": "Herius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 685,
-        "author": "Bürchner"
+        "end": 685,
+        "author": "Bürchner."
       }
     ]
   },
@@ -8538,10 +8779,12 @@
     "lemma": "Herius 2",
     "previous": "Herius 1",
     "next": "Herius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 686,
-        "author": "Groag"
+        "end": 686,
+        "author": "Groag."
       }
     ]
   },
@@ -8572,10 +8815,12 @@
     "lemma": "Herkion",
     "previous": "Herkeios",
     "next": "Herkle",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 687,
-        "author": "Sundwall"
+        "end": 687,
+        "author": "Sundwall."
       }
     ]
   },
@@ -8618,10 +8863,13 @@
     "lemma": "Hermaea insula",
     "previous": "Herkyna",
     "next": "Hermaeum promunturium 1",
+    "sort_key": "Hermaeainsula",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 691,
-        "author": "Weiss, J[akob]"
+        "end": 691,
+        "author": "Weiss."
       }
     ]
   },
@@ -8629,10 +8877,13 @@
     "lemma": "Hermaeum promunturium 1",
     "previous": "Hermaea insula",
     "next": "Hermaeum promunturium 2",
+    "sort_key": "Hermaeumpromunturium 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 691,
-        "author": "Weiss, J[akob]"
+        "end": 691,
+        "author": "Weiss."
       }
     ]
   },
@@ -8640,10 +8891,13 @@
     "lemma": "Hermaeum promunturium 2",
     "previous": "Hermaeum promunturium 1",
     "next": "Hermaeum promunturium 3",
+    "sort_key": "Hermaeumpromunturium 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 691,
-        "author": "Dessau"
+        "end": 691,
+        "author": "Dessau."
       }
     ]
   },
@@ -8673,10 +8927,13 @@
     "lemma": "Hermaeum promunturium 5",
     "previous": "Hermaeum promunturium 4",
     "next": "Hermagoras 1",
+    "sort_key": "Hermaeumpromunturium 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 692,
-        "author": "Dessau"
+        "end": 692,
+        "author": "Dessau."
       }
     ]
   },
@@ -8684,10 +8941,12 @@
     "lemma": "Hermagoras 1",
     "previous": "Hermaeum promunturium 5",
     "next": "Hermagoras 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 692,
-        "author": "Sundwall"
+        "end": 692,
+        "author": "Sundwall."
       }
     ]
   },
@@ -8695,10 +8954,12 @@
     "lemma": "Hermagoras 2",
     "previous": "Hermagoras 1",
     "next": "Hermagoras 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 692,
-        "author": "Sundwall"
+        "end": 692,
+        "author": "Sundwall."
       }
     ]
   },
@@ -8706,10 +8967,12 @@
     "lemma": "Hermagoras 3",
     "previous": "Hermagoras 2",
     "next": "Hermagoras 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 692,
-        "author": "Sundwall"
+        "end": 692,
+        "author": "Sundwall."
       }
     ]
   },
@@ -8738,12 +9001,15 @@
   },
   {
     "lemma": "Hermagoras 5-8",
-    "previous": "Hermagoras 5",
-    "next": "Hermagoras 6",
+    "previous": "Hermagoras 4",
+    "next": "Hermagoras 5",
+    "sort_key": "Hermagoras 4z",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 692,
-        "author": "Radermacher"
+        "end": 692,
+        "author": "Radermacher."
       }
     ]
   },
@@ -8887,10 +9153,12 @@
     "lemma": "Hermaion 5",
     "previous": "Hermaion 4",
     "next": "Hermaion 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 710,
-        "author": "Bürchner"
+        "end": 710,
+        "author": "Bürchner."
       }
     ]
   },
@@ -8898,10 +9166,12 @@
     "lemma": "Hermaion 6",
     "previous": "Hermaion 5",
     "next": "Hermaion 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 710,
-        "author": "Bürchner"
+        "end": 710,
+        "author": "Bürchner."
       }
     ]
   },
@@ -8920,10 +9190,12 @@
     "lemma": "Hermaiondas",
     "previous": "Hermaion 7",
     "next": "Hermaios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 710,
-        "author": "Sundwall"
+        "end": 710,
+        "author": "Sundwall."
       }
     ]
   },
@@ -8943,10 +9215,12 @@
     "lemma": "Hermaios 2",
     "previous": "Hermaios 1",
     "next": "Hermaios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 711,
-        "author": "Sundwall"
+        "end": 711,
+        "author": "Sundwall."
       }
     ]
   },
@@ -9115,10 +9389,12 @@
     "lemma": "Hermarchos 2",
     "previous": "Hermarchos 1",
     "next": "Hermarchos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 722,
-        "author": "Münzer"
+        "end": 722,
+        "author": "Münzer."
       }
     ]
   },
@@ -9126,10 +9402,12 @@
     "lemma": "Hermarchos 3",
     "previous": "Hermarchos 2",
     "next": "Hermas 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 722,
-        "author": "Stein, [Arthur]"
+        "end": 722,
+        "author": "Stein."
       }
     ]
   },
@@ -9204,10 +9482,12 @@
     "lemma": "Hermatus",
     "previous": "Hermathene, Hermerakles",
     "next": "Hermeias 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 726,
-        "author": "Bürchner"
+        "end": 726,
+        "author": "Bürchner."
       }
     ]
   },
