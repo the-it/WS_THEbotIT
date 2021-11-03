@@ -9258,10 +9258,12 @@
     "lemma": "Rodelinda",
     "previous": "Rodeia",
     "next": "Rodia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 955,
-        "author": "Stech"
+        "end": 955,
+        "author": "Stech."
       }
     ]
   },
@@ -9346,7 +9348,7 @@
   {
     "lemma": "Ῥοδιάπολις",
     "previous": "Rodiakon Pelagos",
-    "next": "Rodion nesoi",
+    "next": "Ῥοδίων νῆσοι",
     "sort_key": "Rodiapolis",
     "redirect": "Rodia 4",
     "proof_read": 2,
@@ -9358,19 +9360,22 @@
     ]
   },
   {
-    "lemma": "Rodion nesoi",
+    "lemma": "Ῥοδίων νῆσοι",
     "previous": "Ῥοδιάπολις",
     "next": "Ῥοδίων περαία",
+    "sort_key": "Rodionnesoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 956,
-        "author": "Bürchner"
+        "end": 956,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Ῥοδίων περαία",
-    "previous": "Rodion nesoi",
+    "previous": "Ῥοδίων νῆσοι",
     "next": "Ῥοδιόπολις",
     "sort_key": "Rodion peraia",
     "redirect": "Peraia 2",

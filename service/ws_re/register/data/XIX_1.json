@@ -6391,10 +6391,12 @@
     "lemma": "Peregrinus 3",
     "previous": "Peregrinus 2",
     "next": "Peregrinus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 656,
-        "author": "Enßlin"
+        "end": 656,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -6402,10 +6404,12 @@
     "lemma": "Peregrinus 4",
     "previous": "Peregrinus 3",
     "next": "Peregrinus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 656,
-        "author": "Enßlin"
+        "end": 656,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -6434,10 +6438,12 @@
     "lemma": "Peregrinus 7",
     "previous": "Peregrinus 6",
     "next": "Peregrinus 8",
-    "redirect": true,
+    "redirect": "Iucundius",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 656
+        "start": 656,
+        "end": 656
       }
     ]
   },
@@ -6458,10 +6464,12 @@
     "lemma": "Peregrinus 9",
     "previous": "Peregrinus 8",
     "next": "Peregrinus 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 656,
-        "author": "Enßlin"
+        "end": 656,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -6513,10 +6521,12 @@
     "lemma": "Peregrinus 14",
     "previous": "Peregrinus 13",
     "next": "Peregrinus 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 656,
-        "author": "Enßlin"
+        "end": 656,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -6524,10 +6534,12 @@
     "lemma": "Peregrinus 15",
     "previous": "Peregrinus 14",
     "next": "Peregrinus 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 656,
-        "author": "Enßlin"
+        "end": 656,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12041,9 +12053,12 @@
     "lemma": "Petronius 45",
     "previous": "Petronius 44",
     "next": "Petronius 46",
+    "redirect": "Maximus 32",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1219
+        "start": 1219,
+        "end": 1219
       }
     ]
   },
@@ -12084,9 +12099,12 @@
     "lemma": "Petronius 49",
     "previous": "Petronius 48",
     "next": "Petronius 50",
+    "redirect": "Petronius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1220
+        "start": 1220,
+        "end": 1220
       }
     ]
   },
@@ -12105,9 +12123,12 @@
     "lemma": "Petronius 51",
     "previous": "Petronius 50",
     "next": "Petronius 52",
+    "redirect": "Pontius 40",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1220
+        "start": 1220,
+        "end": 1220
       }
     ]
   },
@@ -12115,10 +12136,12 @@
     "lemma": "Petronius 52",
     "previous": "Petronius 51",
     "next": "Petronius 53",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1220,
-        "author": "Stein, [Arthur]"
+        "end": 1220,
+        "author": "Stein."
       }
     ]
   },
@@ -12159,9 +12182,12 @@
     "lemma": "Petronius 56",
     "previous": "Petronius 55",
     "next": "Petronius 57",
+    "redirect": "Anicius 36",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1222
+        "start": 1222,
+        "end": 1222
       }
     ]
   },
@@ -12169,12 +12195,12 @@
     "lemma": "Petronius 57",
     "previous": "Petronius 56",
     "next": "Petronius 58",
+    "redirect": "Anicius 37",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1222
-      },
-      {
-        "start": 1222
+        "start": 1222,
+        "end": 1222
       }
     ]
   },
@@ -12182,9 +12208,12 @@
     "lemma": "Petronius 58",
     "previous": "Petronius 57",
     "next": "Petronius 59",
+    "redirect": "Anicius 45",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1222
+        "start": 1222,
+        "end": 1222
       }
     ]
   },
@@ -12192,9 +12221,12 @@
     "lemma": "Petronius 59",
     "previous": "Petronius 58",
     "next": "Petronius 60",
+    "redirect": "Anicius 48",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1222
+        "start": 1222,
+        "end": 1222
       }
     ]
   },
@@ -12202,10 +12234,12 @@
     "lemma": "Petronius 60",
     "previous": "Petronius 59",
     "next": "Petronius 61",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1222,
-        "author": "Enßlin"
+        "end": 1222,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12223,10 +12257,12 @@
     "lemma": "Petronius 62",
     "previous": "Petronius 61",
     "next": "Petronius 63",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1222,
-        "author": "Stein, [Arthur]"
+        "end": 1222,
+        "author": "Stein."
       }
     ]
   },
@@ -12234,9 +12270,12 @@
     "lemma": "Petronius 63",
     "previous": "Petronius 62",
     "next": "Petronius 64",
+    "redirect": "Rufinus 28",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1222
+        "start": 1222,
+        "end": 1222
       }
     ]
   },
@@ -12244,10 +12283,12 @@
     "lemma": "Petronius 64",
     "previous": "Petronius 63",
     "next": "Petronius 65",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1222,
-        "author": "Enßlin"
+        "end": 1222,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12255,9 +12296,12 @@
     "lemma": "Petronius 65",
     "previous": "Petronius 64",
     "next": "Petronius 66",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1222
+        "start": 1222,
+        "end": 1222,
+        "author": "Groag."
       }
     ]
   },

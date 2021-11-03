@@ -8899,10 +8899,12 @@
     "lemma": "Musonius 5",
     "previous": "Musonius 4",
     "next": "Musonius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 898,
-        "author": "Enßlin"
+        "end": 898,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8921,10 +8923,12 @@
     "lemma": "Musonius 7",
     "previous": "Musonius 6",
     "next": "Musonius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 898,
-        "author": "Enßlin"
+        "end": 898,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8932,10 +8936,12 @@
     "lemma": "Musonius 8",
     "previous": "Musonius 7",
     "next": "Musonius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 898,
-        "author": "Enßlin"
+        "end": 898,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8943,10 +8949,12 @@
     "lemma": "Musonius 9",
     "previous": "Musonius 8",
     "next": "Musonius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 898,
-        "author": "Enßlin"
+        "end": 898,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8954,10 +8962,12 @@
     "lemma": "Musonius 10",
     "previous": "Musonius 9",
     "next": "Musonius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 898,
-        "author": "Enßlin"
+        "end": 898,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8965,10 +8975,12 @@
     "lemma": "Musonius 11",
     "previous": "Musonius 10",
     "next": "Musonius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 898,
-        "author": "Enßlin"
+        "end": 898,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8976,10 +8988,12 @@
     "lemma": "Musonius 12",
     "previous": "Musonius 11",
     "next": "Musonius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 898,
-        "author": "Enßlin"
+        "end": 898,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -9056,7 +9070,7 @@
   {
     "lemma": "Musonius 19",
     "previous": "Musonius 18",
-    "next": "Musopalle",
+    "next": "Μουσοπάλλη",
     "chapters": [
       {
         "start": 899,
@@ -9065,19 +9079,22 @@
     ]
   },
   {
-    "lemma": "Musopalle",
+    "lemma": "Μουσοπάλλη",
     "previous": "Musonius 19",
     "next": "Musos",
+    "sort_key": "Musopalle",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 899,
-        "author": "Herrmann"
+        "end": 899,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Musos",
-    "previous": "Musopalle",
+    "previous": "Μουσοπάλλη",
     "next": "Mussidius 1",
     "chapters": [
       {

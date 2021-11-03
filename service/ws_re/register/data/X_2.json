@@ -2387,6 +2387,7 @@
     "lemma": "Καβειραία 2",
     "previous": "Καβειραία 1",
     "next": "Kabeiraioi",
+    "sort_key": "Kabeiraia 2",
     "proof_read": 2,
     "chapters": [
       {
@@ -4181,7 +4182,7 @@
   {
     "lemma": "Kalakagathios",
     "previous": "Kalais",
-    "next": "Kalakta, Kalakte, Kale Akte",
+    "next": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "redirect": "Kallokagathios",
     "proof_read": 2,
     "chapters": [
@@ -4192,10 +4193,10 @@
     ]
   },
   {
-    "lemma": "Kalakta, Kalakte, Kale Akte",
+    "lemma": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "previous": "Kalakagathios",
     "next": "Kalakta, Kalakte, Kale Akte 1",
-    "sort_key": "Kalakta,kalakte, kale akte",
+    "sort_key": "Kalakta, Kalakte, kale akte",
     "proof_read": 2,
     "chapters": [
       {
@@ -4207,7 +4208,7 @@
   },
   {
     "lemma": "Kalakta, Kalakte, Kale Akte 1",
-    "previous": "Kalakta, Kalakte, Kale Akte",
+    "previous": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "next": "Kalakta, Kalakte, Kale Akte 2",
     "chapters": [
       {
@@ -8069,9 +8070,12 @@
     "lemma": "Kallistratos 26",
     "previous": "Kallistratos 25",
     "next": "Kallistratos 27",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8079,9 +8083,12 @@
     "lemma": "Kallistratos 27",
     "previous": "Kallistratos 26",
     "next": "Kallistratos 28",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8089,9 +8096,12 @@
     "lemma": "Kallistratos 28",
     "previous": "Kallistratos 27",
     "next": "Kallistratos 29",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8099,9 +8109,12 @@
     "lemma": "Kallistratos 29",
     "previous": "Kallistratos 28",
     "next": "Kallistratos 30",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8109,9 +8122,12 @@
     "lemma": "Kallistratos 30",
     "previous": "Kallistratos 29",
     "next": "Kallistratos 31",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8119,9 +8135,12 @@
     "lemma": "Kallistratos 31",
     "previous": "Kallistratos 30",
     "next": "Kallistratos 32",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8129,9 +8148,12 @@
     "lemma": "Kallistratos 32",
     "previous": "Kallistratos 31",
     "next": "Kallistratos 33",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8139,9 +8161,12 @@
     "lemma": "Kallistratos 33",
     "previous": "Kallistratos 32",
     "next": "Kallistratos 34",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1737
+        "start": 1737,
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8149,10 +8174,12 @@
     "lemma": "Kallistratos 34",
     "previous": "Kallistratos 33",
     "next": "Kallistratos 35",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1737,
-        "author": "Stähelin"
+        "end": 1737,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8160,10 +8187,12 @@
     "lemma": "Kallistratos 35",
     "previous": "Kallistratos 34",
     "next": "Kallistratos 36",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1737,
-        "author": "Stein, [Arthur]"
+        "end": 1737,
+        "author": "Stein."
       }
     ]
   },

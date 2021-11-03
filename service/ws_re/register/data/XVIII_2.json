@@ -38,7 +38,7 @@
   {
     "lemma": "Orra",
     "previous": "Orphne",
-    "next": "Ὄρρεα 1",
+    "next": "Orrea 1",
     "redirect": "Hyria 2",
     "proof_read": 2,
     "chapters": [
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "lemma": "Ὄρρεα 1",
+    "lemma": "Orrea 1",
     "previous": "Orra",
     "next": "Ὄρρεα 2",
     "sort_key": "Orrea 1",
@@ -64,7 +64,7 @@
   },
   {
     "lemma": "Ὄρρεα 2",
-    "previous": "Ὄρρεα 1",
+    "previous": "Orrea 1",
     "next": "Orretum",
     "sort_key": "Orrea 2",
     "redirect": "Horreum 3",
@@ -3371,10 +3371,12 @@
     "lemma": "Oteudanos",
     "previous": "Otesini",
     "next": "Othaea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1870,
-        "author": "Kazarow"
+        "end": 1870,
+        "author": "Gawril Kazarow."
       }
     ]
   },
