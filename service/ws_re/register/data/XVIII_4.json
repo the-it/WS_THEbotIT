@@ -57,10 +57,12 @@
     "lemma": "Parapanisus 1",
     "previous": "Parapanaios",
     "next": "Parapanisus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1295,
-        "author": "Herrmann"
+        "end": 1295,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -546,7 +548,7 @@
   {
     "lemma": "Παρείας",
     "previous": "Pareia",
-    "next": "Parekkyklema",
+    "next": "Παρεκκύκλημα",
     "sort_key": "Pareias",
     "redirect": "Schlange",
     "proof_read": 2,
@@ -558,19 +560,22 @@
     ]
   },
   {
-    "lemma": "Parekkyklema",
+    "lemma": "Παρεκκύκλημα",
     "previous": "Παρείας",
     "next": "Parembolai 1",
+    "sort_key": "Parekkyklema",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1455,
-        "author": "Fensterbusch"
+        "end": 1455,
+        "author": "Fensterbusch."
       }
     ]
   },
   {
     "lemma": "Parembolai 1",
-    "previous": "Parekkyklema",
+    "previous": "Παρεκκύκλημα",
     "next": "Parembolai 2",
     "chapters": [
       {
@@ -583,10 +588,12 @@
     "lemma": "Parembolai 2",
     "previous": "Parembolai 1",
     "next": "Parembole",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1455,
-        "author": "Hölscher"
+        "end": 1455,
+        "author": "G. Hölscher."
       }
     ]
   },
@@ -927,8 +934,8 @@
   },
   {
     "lemma": "Paris",
-    "previous": "Paris 3",
-    "next": "Paris 4",
+    "previous": "Paris 7",
+    "next": "Παρισιηνή",
     "sort_key": "Paris 8",
     "redirect": "Domitius 69",
     "proof_read": 2,
@@ -1020,10 +1027,12 @@
     "lemma": "Parma 2",
     "previous": "Parma 1",
     "next": "Parma 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1545,
-        "author": "Philipp"
+        "end": 1545,
+        "author": "Hans Philipp."
       }
     ]
   },
