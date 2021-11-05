@@ -14686,9 +14686,12 @@
     "lemma": "Matienus 4",
     "previous": "Matienus 3",
     "next": "Matienus 5",
+    "redirect": "Matienus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2204
+        "start": 2204,
+        "end": 2204
       }
     ]
   },
@@ -14740,10 +14743,12 @@
     "lemma": "Matilius",
     "previous": "Matilica",
     "next": "Matilo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2205,
-        "author": "Münzer"
+        "end": 2205,
+        "author": "Münzer."
       }
     ]
   },
@@ -14775,10 +14780,12 @@
     "lemma": "Matini 1",
     "previous": "Matinates",
     "next": "Matini 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2205,
-        "author": "Philipp"
+        "end": 2205,
+        "author": "Philipp."
       }
     ]
   },
@@ -14810,10 +14817,12 @@
     "lemma": "Mation 1",
     "previous": "Matinius",
     "next": "Mation 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2205,
-        "author": "Bürchner"
+        "end": 2205,
+        "author": "Bürchner."
       }
     ]
   },
@@ -14821,10 +14830,12 @@
     "lemma": "Mation 2",
     "previous": "Mation 1",
     "next": "Mation 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2205,
-        "author": "Ruge"
+        "end": 2205,
+        "author": "Ruge."
       }
     ]
   },
@@ -14832,10 +14843,12 @@
     "lemma": "Mation 3",
     "previous": "Mation 2",
     "next": "Mation 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2205,
-        "author": "Ruge"
+        "end": 2205,
+        "author": "Ruge."
       }
     ]
   },
@@ -14843,10 +14856,12 @@
     "lemma": "Mation 4",
     "previous": "Mation 3",
     "next": "Matiopolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2205,
-        "author": "Ruge"
+        "end": 2205,
+        "author": "Ruge."
       }
     ]
   },
@@ -17683,7 +17698,7 @@
   {
     "lemma": "Maxyes",
     "previous": "Maxula",
-    "next": "Mazabda",
+    "next": "Μαζαβδὰ",
     "chapters": [
       {
         "start": 2576,
@@ -17692,7 +17707,7 @@
     ]
   },
   {
-    "lemma": "Mazabda",
+    "lemma": "Μαζαβδὰ",
     "previous": "Maxyes",
     "next": "Mazacae",
     "sort_key": "Mazabda",
@@ -17707,7 +17722,7 @@
   },
   {
     "lemma": "Mazacae",
-    "previous": "Mazabda",
+    "previous": "Μαζαβδὰ",
     "next": "Mazaina",
     "redirect": "Mazamacae",
     "proof_read": 2,

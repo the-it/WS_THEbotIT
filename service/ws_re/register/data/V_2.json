@@ -15287,7 +15287,7 @@
   {
     "lemma": "Elaius 2",
     "previous": "Elaius 1",
-    "next": "Elaius 4",
+    "next": "Eleus 3",
     "proof_read": 3,
     "chapters": [
       {
@@ -15935,7 +15935,7 @@
   {
     "lemma": "Elateia 3",
     "previous": "Elateia 2",
-    "next": "Elaterion",
+    "next": "Elatia 4",
     "proof_read": 3,
     "chapters": [
       {
@@ -16741,7 +16741,7 @@
   {
     "lemma": "Elegeia 1",
     "previous": "Elege",
-    "next": "Elegea 2",
+    "next": "Elegeis",
     "sort_key": "Elegeia 1",
     "proof_read": 2,
     "chapters": [
@@ -20071,7 +20071,7 @@
   {
     "lemma": "Embaterion",
     "previous": "Embateia, embateusis",
-    "next": "Embateria",
+    "next": "Ἐμβατήρια",
     "chapters": [
       {
         "start": 2486,
@@ -20081,23 +20081,29 @@
     ]
   },
   {
-    "lemma": "Embateria",
+    "lemma": "Ἐμβατήρια",
     "previous": "Embaterion",
     "next": "Embaterios",
+    "sort_key": "Embateria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2487
+        "start": 2487,
+        "end": 2487,
+        "author": "Jessen."
       }
     ]
   },
   {
     "lemma": "Embaterios",
-    "previous": "Embateria",
+    "previous": "Ἐμβατήρια",
     "next": "Ἐμβάτης",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2487,
-        "author": "Jessen"
+        "end": 2487,
+        "author": "Jessen."
       }
     ]
   },
@@ -20570,11 +20576,12 @@
     "lemma": "Empedokles 1",
     "previous": "Empedo",
     "next": "Empedokles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2506,
         "end": 2507,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },

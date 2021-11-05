@@ -246,10 +246,12 @@
     "lemma": "Neris 2",
     "previous": "Neris 1",
     "next": "Nerites",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 37,
-        "author": "Meyer, Ernst"
+        "end": 37,
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -292,10 +294,12 @@
     "lemma": "Neriton 2",
     "previous": "Neriton 1",
     "next": "Neriton 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 38,
-        "author": "Herbst"
+        "end": 38,
+        "author": "Rudolf Herbst."
       }
     ]
   },
@@ -327,10 +331,12 @@
     "lemma": "Neritos 2",
     "previous": "Neritos 1",
     "next": "Neritos 3",
-    "redirect": true,
+    "redirect": "Neriton 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 39
+        "start": 39,
+        "end": 39
       }
     ]
   },
@@ -338,10 +344,12 @@
     "lemma": "Neritos 3",
     "previous": "Neritos 2",
     "next": "Neritos 4",
-    "redirect": true,
+    "redirect": "Nerikos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 39
+        "start": 39,
+        "end": 39
       }
     ]
   },
@@ -533,10 +541,12 @@
     "lemma": "Neronius",
     "previous": "Neronias 2",
     "next": "Nersa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 50,
-        "author": "Münzer"
+        "end": 50,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -636,10 +646,12 @@
     "lemma": "Nerva 1",
     "previous": "Nertobriga 2",
     "next": "Nerva 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 55,
-        "author": "Schulten"
+        "end": 55,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -647,10 +659,12 @@
     "lemma": "Nerva 2",
     "previous": "Nerva 1",
     "next": "Nervae forum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 55,
-        "author": "Münzer"
+        "end": 55,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1169,10 +1183,12 @@
     "lemma": "Nesos 1",
     "previous": "Nesope",
     "next": "Nesos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 78,
-        "author": "Geisau"
+        "end": 78,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -1375,9 +1391,13 @@
     "lemma": "Nestaei",
     "previous": "Nestabos 2",
     "next": "Nestane",
+    "redirect": "Nesti",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 87
+        "start": 87,
+        "end": 87,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -1429,10 +1449,12 @@
     "lemma": "Nesteros",
     "previous": "Nesteia 3",
     "next": "Nesti",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 107,
-        "author": "Enßlin"
+        "end": 107,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1473,10 +1495,12 @@
     "lemma": "Nestius",
     "previous": "Nestis",
     "next": "Nestor 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 108,
-        "author": "Fluss"
+        "end": 108,
+        "author": "Max Fluss."
       }
     ]
   },

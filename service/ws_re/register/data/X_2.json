@@ -1453,10 +1453,12 @@
     "lemma": "Iuventius 5",
     "previous": "Iuventius 4",
     "next": "Iuventius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1362,
-        "author": "Münzer"
+        "end": 1362,
+        "author": "Münzer."
       }
     ]
   },
@@ -1478,10 +1480,12 @@
     "lemma": "Iuventius 7",
     "previous": "Iuventius 6",
     "next": "Iuventius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1362,
-        "author": "Münzer"
+        "end": 1362,
+        "author": "Münzer."
       }
     ]
   },
@@ -3452,7 +3456,7 @@
   {
     "lemma": "Καινὴ 1",
     "previous": "Kaine",
-    "next": "Kaine 2",
+    "next": "Καινὴ 2",
     "sort_key": "Kaine 1",
     "proof_read": 2,
     "chapters": [
@@ -3464,19 +3468,22 @@
     ]
   },
   {
-    "lemma": "Kaine 2",
+    "lemma": "Καινὴ 2",
     "previous": "Καινὴ 1",
     "next": "Kaineiton",
+    "sort_key": "Kaine 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1504,
-        "author": "Bürchner"
+        "end": 1504,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kaineiton",
-    "previous": "Kaine 2",
+    "previous": "Καινὴ 2",
     "next": "Kaineus",
     "chapters": [
       {
@@ -3680,10 +3687,12 @@
     "lemma": "Kairimos",
     "previous": "Kaireus",
     "next": "Kairios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1508,
-        "author": "Kirchner"
+        "end": 1508,
+        "author": "Kirchner."
       }
     ]
   },
@@ -4182,7 +4191,7 @@
   {
     "lemma": "Kalakagathios",
     "previous": "Kalais",
-    "next": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
+    "next": "Kalakta, Kalakte, Kale Akte",
     "redirect": "Kallokagathios",
     "proof_read": 2,
     "chapters": [
@@ -4193,7 +4202,7 @@
     ]
   },
   {
-    "lemma": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
+    "lemma": "Kalakta, Kalakte, Kale Akte",
     "previous": "Kalakagathios",
     "next": "Kalakta, Kalakte, Kale Akte 1",
     "sort_key": "Kalakta, Kalakte, kale akte",
@@ -4208,7 +4217,7 @@
   },
   {
     "lemma": "Kalakta, Kalakte, Kale Akte 1",
-    "previous": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
+    "previous": "Kalakta, Kalakte, Kale Akte",
     "next": "Kalakta, Kalakte, Kale Akte 2",
     "chapters": [
       {
@@ -4533,10 +4542,12 @@
     "lemma": "Kalaoidia",
     "previous": "Kalanthia",
     "next": "Kalaon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1546,
-        "author": "Kroll"
+        "end": 1546,
+        "author": "Kroll."
       }
     ]
   },
@@ -4555,10 +4566,12 @@
     "lemma": "Kalaos 1",
     "previous": "Kalaon",
     "next": "Kalaos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1546,
-        "author": "Meyer, Herbert"
+        "end": 1546,
+        "author": "Herb. Meyer."
       }
     ]
   },
@@ -4644,10 +4657,12 @@
     "lemma": "Kalate",
     "previous": "Kalasiris",
     "next": "Kalates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1547,
-        "author": "Bürchner"
+        "end": 1547,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4677,10 +4692,13 @@
     "lemma": "(Kalathassa)",
     "previous": "Kalathana",
     "next": "Kalathion",
+    "sort_key": "Kalathassa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1547,
-        "author": "Geisau"
+        "end": 1547,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -4711,7 +4729,7 @@
   {
     "lemma": "Kalathos 2",
     "previous": "Kalathos 1",
-    "next": "Kalathousa",
+    "next": "Καλάθουσα",
     "chapters": [
       {
         "start": 1549,
@@ -4720,19 +4738,22 @@
     ]
   },
   {
-    "lemma": "Kalathousa",
+    "lemma": "Καλάθουσα",
     "previous": "Kalathos 2",
     "next": "Kalatia",
+    "sort_key": "Kalathusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1549,
-        "author": "Bürchner"
+        "end": 1549,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kalatia",
-    "previous": "Kalathousa",
+    "previous": "Καλάθουσα",
     "next": "Kalatiai",
     "redirect": "Galatia 1",
     "proof_read": 2,
@@ -4783,10 +4804,12 @@
     "lemma": "Kalauria",
     "previous": "Kalaureia 1",
     "next": "Kalauros 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
-        "author": "Ziegler"
+        "end": 1551,
+        "author": "Ziegler."
       }
     ]
   },
@@ -4794,10 +4817,12 @@
     "lemma": "Kalauros 1",
     "previous": "Kalauria",
     "next": "Kalauros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
-        "author": "Meyer, Herbert"
+        "end": 1551,
+        "author": "Herb. Meyer."
       }
     ]
   },
@@ -4805,10 +4830,12 @@
     "lemma": "Kalauros 2",
     "previous": "Kalauros 1",
     "next": "Kalbis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1551,
-        "author": "Meyer, Herbert"
+        "end": 1551,
+        "author": "Herb. Meyer."
       }
     ]
   },
@@ -4932,16 +4959,20 @@
     "lemma": "Kale Akte, Kalakte 2",
     "previous": "Kale Akte, Kalakte 1",
     "next": "Kalendae",
+    "sort_key": "Kaleakte, kalakte 2",
+    "redirect": "Kalakta, Kalakte, Kale Akte",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1560
+        "start": 1560,
+        "end": 1560
       }
     ]
   },
   {
     "lemma": "Kalendae",
     "previous": "Kale Akte, Kalakte 2",
-    "next": "Kale parembole",
+    "next": "Καλὴ παρεμβολή",
     "chapters": [
       {
         "start": 1560,
@@ -4951,18 +4982,22 @@
     ]
   },
   {
-    "lemma": "Kale parembole",
+    "lemma": "Καλὴ παρεμβολή",
     "previous": "Kalendae",
     "next": "Kale Peuke",
+    "sort_key": "Kale parembole",
+    "redirect": "Kalos potamos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1560
+        "start": 1560,
+        "end": 1560
       }
     ]
   },
   {
     "lemma": "Kale Peuke",
-    "previous": "Kale parembole",
+    "previous": "Καλὴ παρεμβολή",
     "next": "Kalendae Ianuariae, Kalendenfest",
     "chapters": [
       {
@@ -5023,10 +5058,12 @@
     "lemma": "Kalendio",
     "previous": "Kalender",
     "next": "Kaleon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1603,
-        "author": "Hähnle"
+        "end": 1603,
+        "author": "Hähnle."
       }
     ]
   },
@@ -5056,10 +5093,13 @@
     "lemma": "Kaleos, Kallos 2",
     "previous": "Kaleos, Kallos 1",
     "next": "Kales",
+    "sort_key": "Kaleos,kallos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1603,
-        "author": "Bürchner"
+        "end": 1603,
+        "author": "Bürchner."
       }
     ]
   },
@@ -5089,10 +5129,12 @@
     "lemma": "Kaletor 1",
     "previous": "Kalesios",
     "next": "Kaletor 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1603,
-        "author": "Heckenbach"
+        "end": 1603,
+        "author": "Heckenbach."
       }
     ]
   },
@@ -5180,7 +5222,7 @@
   {
     "lemma": "Kalippoi",
     "previous": "Kalingai",
-    "next": "Kalis",
+    "next": "Κάλις",
     "redirect": "Zagora, Zagoron",
     "proof_read": 2,
     "chapters": [
@@ -5191,24 +5233,29 @@
     ]
   },
   {
-    "lemma": "Kalis",
+    "lemma": "Κάλις",
     "previous": "Kalippoi",
     "next": "Kaliur",
+    "sort_key": "Kalis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1605,
-        "author": "Fluss"
+        "end": 1605,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Kaliur",
-    "previous": "Kalis",
+    "previous": "Κάλις",
     "next": "Kalk",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1605,
-        "author": "Herrmann"
+        "end": 1605,
+        "author": "Herrmann."
       }
     ]
   },
@@ -5228,10 +5275,12 @@
     "lemma": "Kallaischros 1",
     "previous": "Kalk",
     "next": "Kallaischros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1609,
-        "author": "Kirchner"
+        "end": 1609,
+        "author": "Kirchner."
       }
     ]
   },
@@ -5250,10 +5299,12 @@
     "lemma": "Kallaneus",
     "previous": "Kallaischros 2",
     "next": "Kallas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1609,
-        "author": "Kroll"
+        "end": 1609,
+        "author": "Kroll."
       }
     ]
   },
@@ -5307,10 +5358,12 @@
     "lemma": "Kalleas",
     "previous": "Kallatis",
     "next": "Kalliades 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1612,
-        "author": "Kirchner"
+        "end": 1612,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7859,9 +7912,12 @@
     "lemma": "Kallistratos 5",
     "previous": "Kallistratos 4",
     "next": "Kallistratos 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1735
+        "start": 1735,
+        "end": 1735,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7879,9 +7935,12 @@
     "lemma": "Kallistratos 7",
     "previous": "Kallistratos 6",
     "next": "Kallistratos 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1735
+        "start": 1735,
+        "end": 1735,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7889,9 +7948,12 @@
     "lemma": "Kallistratos 8",
     "previous": "Kallistratos 7",
     "next": "Kallistratos 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1735
+        "start": 1735,
+        "end": 1735,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7899,9 +7961,12 @@
     "lemma": "Kallistratos 9",
     "previous": "Kallistratos 8",
     "next": "Kallistratos 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1735
+        "start": 1735,
+        "end": 1735,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7909,9 +7974,12 @@
     "lemma": "Kallistratos 10",
     "previous": "Kallistratos 9",
     "next": "Kallistratos 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1735
+        "start": 1735,
+        "end": 1735,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7919,9 +7987,12 @@
     "lemma": "Kallistratos 11",
     "previous": "Kallistratos 10",
     "next": "Kallistratos 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1735
+        "start": 1735,
+        "end": 1735,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7940,9 +8011,12 @@
     "lemma": "Kallistratos 13",
     "previous": "Kallistratos 12",
     "next": "Kallistratos 14",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1736
+        "start": 1736,
+        "end": 1736,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7960,9 +8034,12 @@
     "lemma": "Kallistratos 15",
     "previous": "Kallistratos 14",
     "next": "Kallistratos 16",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1736
+        "start": 1736,
+        "end": 1736,
+        "author": "Stähelin."
       }
     ]
   },
@@ -7990,9 +8067,12 @@
     "lemma": "Kallistratos 18",
     "previous": "Kallistratos 17",
     "next": "Kallistratos 19",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1736
+        "start": 1736,
+        "end": 1736,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8000,9 +8080,12 @@
     "lemma": "Kallistratos 19",
     "previous": "Kallistratos 18",
     "next": "Kallistratos 20",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1736
+        "start": 1736,
+        "end": 1736,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8050,9 +8133,12 @@
     "lemma": "Kallistratos 24",
     "previous": "Kallistratos 23",
     "next": "Kallistratos 25",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1736
+        "start": 1736,
+        "end": 1736,
+        "author": "Stähelin."
       }
     ]
   },
@@ -8060,9 +8146,12 @@
     "lemma": "Kallistratos 25",
     "previous": "Kallistratos 24",
     "next": "Kallistratos 26",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1736
+        "start": 1736,
+        "end": 1736,
+        "author": "Stähelin."
       }
     ]
   },
