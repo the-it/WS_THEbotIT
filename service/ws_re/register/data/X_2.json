@@ -4205,7 +4205,7 @@
     "lemma": "Kalakta, Kalakte, Kale Akte",
     "previous": "Kalakagathios",
     "next": "Kalakta, Kalakte, Kale Akte 1",
-    "sort_key": "Kalakta, Kalakte, kale akte",
+    "sort_key": "Kalakta,kalakte, kale akte",
     "proof_read": 2,
     "chapters": [
       {
@@ -5371,10 +5371,12 @@
     "lemma": "Kalliades 1",
     "previous": "Kalleas",
     "next": "Kalliades 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1612,
-        "author": "Kirchner"
+        "end": 1612,
+        "author": "Kirchner."
       }
     ]
   },
@@ -5382,10 +5384,12 @@
     "lemma": "Kalliades 2",
     "previous": "Kalliades 1",
     "next": "Kalliades 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1612,
-        "author": "Kroll"
+        "end": 1612,
+        "author": "Kroll."
       }
     ]
   },
@@ -5393,10 +5397,12 @@
     "lemma": "Kalliades 3",
     "previous": "Kalliades 2",
     "next": "Kalliades 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1612,
-        "author": "Kroll"
+        "end": 1612,
+        "author": "Kroll."
       }
     ]
   },
@@ -5697,10 +5703,12 @@
     "lemma": "Kallias 18",
     "previous": "Kallias 17",
     "next": "Kallias 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1627,
-        "author": "Kirchner"
+        "end": 1627,
+        "author": "Kirchner."
       }
     ]
   },
@@ -5708,10 +5716,12 @@
     "lemma": "Kallias 19",
     "previous": "Kallias 18",
     "next": "Kallias 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1627,
-        "author": "Münzer"
+        "end": 1627,
+        "author": "Münzer."
       }
     ]
   },
@@ -5788,9 +5798,12 @@
     "lemma": "Kallias 26",
     "previous": "Kallias 25",
     "next": "Kallias 27",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1630
+        "start": 1630,
+        "end": 1630,
+        "author": "Weicker."
       }
     ]
   },
@@ -5798,9 +5811,12 @@
     "lemma": "Kallias 27",
     "previous": "Kallias 26",
     "next": "Kallias 28",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1631
+        "start": 1631,
+        "end": 1631,
+        "author": "Weicker."
       }
     ]
   },
@@ -5808,10 +5824,12 @@
     "lemma": "Kallias 28",
     "previous": "Kallias 27",
     "next": "Kallibios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1631,
-        "author": "Weicker"
+        "end": 1631,
+        "author": "Weicker."
       }
     ]
   },
@@ -5919,10 +5937,12 @@
     "lemma": "Kallidike 2",
     "previous": "Kallidike 1",
     "next": "Kallidike 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1632,
-        "author": "Weicker"
+        "end": 1632,
+        "author": "Weicker."
       }
     ]
   },
@@ -5954,10 +5974,12 @@
     "lemma": "Kallidromos 1",
     "previous": "Kallidromon",
     "next": "Kallidromos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1634,
-        "author": "Bischoff, [Ernst]"
+        "end": 1634,
+        "author": "Bischoff."
       }
     ]
   },
@@ -5987,17 +6009,19 @@
     "lemma": "Kalliergos",
     "previous": "Kalliena",
     "next": "Kallietes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1634,
-        "author": "Adler"
+        "end": 1634,
+        "author": "Adler."
       }
     ]
   },
   {
     "lemma": "Kallietes",
     "previous": "Kalliergos",
-    "next": "Kallieus",
+    "next": "Καλλιεύς",
     "chapters": [
       {
         "start": 1634,
@@ -6006,18 +6030,22 @@
     ]
   },
   {
-    "lemma": "Kallieus",
+    "lemma": "Καλλιεύς",
     "previous": "Kallietes",
     "next": "Kalliga",
+    "sort_key": "Kallieus",
+    "redirect": "Kallipolis 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1634
+        "start": 1634,
+        "end": 1634
       }
     ]
   },
   {
     "lemma": "Kalliga",
-    "previous": "Kallieus",
+    "previous": "Καλλιεύς",
     "next": "Kalligeneia",
     "chapters": [
       {
@@ -6041,7 +6069,7 @@
   {
     "lemma": "Kalligeris",
     "previous": "Kalligeneia",
-    "next": "Kalligikon akron",
+    "next": "Καλλιγικὸν ἄκρον",
     "redirect": "Kalliena",
     "proof_read": 2,
     "chapters": [
@@ -6052,23 +6080,29 @@
     ]
   },
   {
-    "lemma": "Kalligikon akron",
+    "lemma": "Καλλιγικὸν ἄκρον",
     "previous": "Kalligeris",
     "next": "Kallignotos",
+    "sort_key": "Kalligikonakron",
+    "redirect": "Kory",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1635
+        "start": 1635,
+        "end": 1635
       }
     ]
   },
   {
     "lemma": "Kallignotos",
-    "previous": "Kalligikon akron",
+    "previous": "Καλλιγικὸν ἄκρον",
     "next": "Kallikarpos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1635,
-        "author": "Gossen"
+        "end": 1635,
+        "author": "Gossen."
       }
     ]
   },
@@ -6087,10 +6121,12 @@
     "lemma": "Kallikles 1",
     "previous": "Kallikarpos",
     "next": "Kallikles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1635,
-        "author": "Kroll"
+        "end": 1635,
+        "author": "Kroll."
       }
     ]
   },
@@ -6177,10 +6213,12 @@
     "lemma": "Kallikolonos",
     "previous": "Kallikolone",
     "next": "Kallikrates 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1637,
-        "author": "Bürchner"
+        "end": 1637,
+        "author": "Bürchner."
       }
     ]
   },
@@ -6188,10 +6226,12 @@
     "lemma": "Kallikrates 1",
     "previous": "Kallikolonos",
     "next": "Kallikrates 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1637,
-        "author": "Oldfather"
+        "end": 1637,
+        "author": "Oldfather."
       }
     ]
   },
@@ -6381,10 +6421,12 @@
     "lemma": "Kallikratides 1",
     "previous": "Kallikratidas 2",
     "next": "Kallikratides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1643,
-        "author": "Kirchner"
+        "end": 1643,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6392,10 +6434,12 @@
     "lemma": "Kallikratides 2",
     "previous": "Kallikratides 1",
     "next": "Kallikritos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1643,
-        "author": "Kirchner"
+        "end": 1643,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6403,10 +6447,12 @@
     "lemma": "Kallikritos",
     "previous": "Kallikratides 2",
     "next": "Kallikter",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1643,
-        "author": "Lippold, Georg"
+        "end": 1643,
+        "author": "Lippold."
       }
     ]
   },
@@ -6463,10 +6509,12 @@
     "lemma": "Kallimachos 2",
     "previous": "Kallimachos 1",
     "next": "Kallimachos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1645,
-        "author": "Kirchner"
+        "end": 1645,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6496,10 +6544,12 @@
     "lemma": "Kallimachos 5",
     "previous": "Kallimachos 4",
     "next": "Kallimachos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1645,
-        "author": "Stenzel"
+        "end": 1645,
+        "author": "Stenzel."
       }
     ]
   },
@@ -6541,10 +6591,12 @@
     "lemma": "Kallimedes 1",
     "previous": "Kallimachos 8",
     "next": "Kallimedes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1647,
-        "author": "Kirchner"
+        "end": 1647,
+        "author": "Kirchner."
       }
     ]
   },
@@ -6552,10 +6604,12 @@
     "lemma": "Kallimedes 2",
     "previous": "Kallimedes 1",
     "next": "Kallimedon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1647,
-        "author": "Kirchner"
+        "end": 1647,
+        "author": "Kirchner."
       }
     ]
   },
