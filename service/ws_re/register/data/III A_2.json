@@ -624,7 +624,7 @@
   {
     "lemma": "Spelaïtai",
     "previous": "Spelaeum",
-    "next": "Spelonka",
+    "next": "Σπέλογκα",
     "chapters": [
       {
         "start": 1599,
@@ -633,19 +633,22 @@
     ]
   },
   {
-    "lemma": "Spelonka",
+    "lemma": "Σπέλογκα",
     "previous": "Spelaïtai",
     "next": "Spelt",
+    "sort_key": "Spelonka",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1600,
-        "author": "Fluss"
+        "end": 1600,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Spelt",
-    "previous": "Spelonka",
+    "previous": "Σπέλογκα",
     "next": "Spelunca 1",
     "chapters": [
       {
@@ -691,10 +694,12 @@
     "lemma": "Speluncae 2",
     "previous": "Speluncae 1",
     "next": "Spendius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1610,
-        "author": "Ruge"
+        "end": 1610,
+        "author": "Ruge."
       }
     ]
   },
@@ -713,10 +718,12 @@
     "lemma": "Spendon",
     "previous": "Spendius",
     "next": "Spendophoros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1610,
-        "author": "Abert"
+        "end": 1610,
+        "author": "Abert."
       }
     ]
   },
@@ -735,10 +742,12 @@
     "lemma": "Spendusa",
     "previous": "Spendophoros",
     "next": "Spennella",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1610,
-        "author": "Kind"
+        "end": 1610,
+        "author": "Kind."
       }
     ]
   },
@@ -746,10 +755,12 @@
     "lemma": "Spennella",
     "previous": "Spendusa",
     "next": "Speo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1611,
-        "author": "Keune"
+        "end": 1611,
+        "author": "Keune."
       }
     ]
   },
@@ -781,10 +792,12 @@
     "lemma": "Sperantius 1",
     "previous": "Speos",
     "next": "Sperantius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1613,
-        "author": "Seeck"
+        "end": 1613,
+        "author": "Seeck."
       }
     ]
   },
@@ -792,10 +805,12 @@
     "lemma": "Sperantius 2",
     "previous": "Sperantius 1",
     "next": "Speratus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1613,
-        "author": "Seeck"
+        "end": 1613,
+        "author": "Seeck."
       }
     ]
   },
@@ -857,7 +872,7 @@
   {
     "lemma": "Sperchius",
     "previous": "Sperchios",
-    "next": "Speretion",
+    "next": "Σπερέτιον",
     "chapters": [
       {
         "start": 1628,
@@ -866,19 +881,22 @@
     ]
   },
   {
-    "lemma": "Speretion",
+    "lemma": "Σπερέτιον",
     "previous": "Sperchius",
     "next": "Sperling",
+    "sort_key": "Speretion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1628,
-        "author": "Fluss"
+        "end": 1628,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Sperling",
-    "previous": "Speretion",
+    "previous": "Σπερέτιον",
     "next": "Spermatophagoi",
     "chapters": [
       {
@@ -959,10 +977,12 @@
     "lemma": "Spernius",
     "previous": "Spernacus",
     "next": "Sperthias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1634,
-        "author": "Keune"
+        "end": 1634,
+        "author": "Keune."
       }
     ]
   },
@@ -1092,7 +1112,7 @@
   {
     "lemma": "Sphairia 1",
     "previous": "Σφαῖρα",
-    "next": "Sphairia 2",
+    "next": "Σφαιρία 2",
     "chapters": [
       {
         "start": 1680,
@@ -1101,19 +1121,22 @@
     ]
   },
   {
-    "lemma": "Sphairia 2",
+    "lemma": "Σφαιρία 2",
     "previous": "Sphairia 1",
     "next": "Sphairisterion",
+    "sort_key": "Sphairia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1680,
-        "author": "Bürchner"
+        "end": 1680,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Sphairisterion",
-    "previous": "Sphairia 2",
+    "previous": "Σφαιρία 2",
     "next": "Σφαιρίστρα",
     "chapters": [
       {
@@ -1173,10 +1196,12 @@
     "lemma": "Sphairos 2",
     "previous": "Sphairos 1",
     "next": "Sphairos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1683,
-        "author": "Obst"
+        "end": 1683,
+        "author": "Obst."
       }
     ]
   },
@@ -1195,10 +1220,12 @@
     "lemma": "Sphairos 4",
     "previous": "Sphairos 3",
     "next": "Sphakteria 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1693,
-        "author": "Münzer"
+        "end": 1693,
+        "author": "Münzer."
       }
     ]
   },
@@ -1326,7 +1353,7 @@
   {
     "lemma": "Sphettos 2",
     "previous": "Sphettos 1",
-    "next": "Sphingion horos",
+    "next": "Σφίγγιον ὄρος",
     "chapters": [
       {
         "start": 1701,
@@ -1335,19 +1362,22 @@
     ]
   },
   {
-    "lemma": "Sphingion horos",
+    "lemma": "Σφίγγιον ὄρος",
     "previous": "Sphettos 2",
     "next": "Sphingios",
+    "sort_key": "Sphingionoros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1701,
-        "author": "Bölte"
+        "end": 1701,
+        "author": "Bölte."
       }
     ]
   },
   {
     "lemma": "Sphingios",
-    "previous": "Sphingion horos",
+    "previous": "Σφίγγιον ὄρος",
     "next": "Sphinkter",
     "chapters": [
       {
@@ -1590,10 +1620,12 @@
     "lemma": "Spilas",
     "previous": "Spielzeug",
     "next": "Spilonstoma",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1778,
-        "author": "Türk"
+        "end": 1778,
+        "author": "Türk."
       }
     ]
   },
@@ -1655,10 +1687,13 @@
     "lemma": "Spines potamos",
     "previous": "Spindel",
     "next": "Spineticum ostium",
+    "sort_key": "Spinespotamos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1784,
-        "author": "Philipp"
+        "end": 1784,
+        "author": "Philipp."
       }
     ]
   },
@@ -1722,7 +1757,7 @@
   {
     "lemma": "Spino",
     "previous": "Spinnerei",
-    "next": "Spinoeis",
+    "next": "Σπινόεις",
     "chapters": [
       {
         "start": 1813,
@@ -1731,20 +1766,23 @@
     ]
   },
   {
-    "lemma": "Spinoeis",
+    "lemma": "Σπινόεις",
     "previous": "Spino",
     "next": "Spinogelus, Spinogilus",
+    "sort_key": "Spinoeis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1813,
-        "author": "Bürchner"
+        "end": 1813,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Spinogelus, Spinogilus",
-    "previous": "Spinoeis",
-    "next": "Spinos potamos",
+    "previous": "Σπινόεις",
+    "next": "Σπῖνος ποταμός",
     "chapters": [
       {
         "start": 1813,
@@ -1753,19 +1791,22 @@
     ]
   },
   {
-    "lemma": "Spinos potamos",
+    "lemma": "Σπῖνος ποταμός",
     "previous": "Spinogelus, Spinogilus",
     "next": "Spinsia",
+    "sort_key": "Spinospotamos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1813,
-        "author": "Philipp"
+        "end": 1813,
+        "author": "Philipp."
       }
     ]
   },
   {
     "lemma": "Spinsia",
-    "previous": "Spinos potamos",
+    "previous": "Σπῖνος ποταμός",
     "next": "Spintharos 1",
     "redirect": "Spissia",
     "proof_read": 2,
@@ -1813,10 +1854,12 @@
     "lemma": "Spintharos 4",
     "previous": "Spintharos 3",
     "next": "Spinther",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1814,
-        "author": "Münzer"
+        "end": 1814,
+        "author": "Münzer."
       }
     ]
   },
@@ -1846,10 +1889,12 @@
     "lemma": "Spira 1",
     "previous": "Spintria",
     "next": "Spira 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1814,
-        "author": "Wackernagel"
+        "end": 1814,
+        "author": "H. G. Wackernagel."
       }
     ]
   },
@@ -1942,10 +1987,12 @@
     "lemma": "Spitakes 2",
     "previous": "Spitakes 1",
     "next": "Spitamas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1815,
-        "author": "Obst"
+        "end": 1815,
+        "author": "Obst."
       }
     ]
   },
@@ -1953,10 +2000,12 @@
     "lemma": "Spitamas",
     "previous": "Spitakes 2",
     "next": "Spitamenes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1815,
-        "author": "Kahrstedt"
+        "end": 1815,
+        "author": "Kahrstedt."
       }
     ]
   },
@@ -2041,10 +2090,12 @@
     "lemma": "Splattius",
     "previous": "Splanchnotomos",
     "next": "Σπλαῦνον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1841,
-        "author": "Fluss"
+        "end": 1841,
+        "author": "Fluss."
       }
     ]
   },
@@ -2066,9 +2117,13 @@
     "lemma": "Splonistae",
     "previous": "Σπλαῦνον",
     "next": "Splonum",
+    "sort_key": "Splonistae",
+    "redirect": "Splonum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1841
+        "start": 1841,
+        "end": 1841
       }
     ]
   },
@@ -2186,10 +2241,12 @@
     "lemma": "Spondolici",
     "previous": "Sponde",
     "next": "Spondophoroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1847,
-        "author": "Herrmann"
+        "end": 1847,
+        "author": "Herrmann."
       }
     ]
   },
@@ -2243,10 +2300,12 @@
     "lemma": "Sponsae",
     "previous": "Spongia 2",
     "next": "Sponsalia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1850,
-        "author": "Philipp"
+        "end": 1850,
+        "author": "Philipp."
       }
     ]
   },
@@ -2331,10 +2390,12 @@
     "lemma": "Sporakios 3",
     "previous": "Sporakios 2",
     "next": "Sporakios 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1875,
-        "author": "Seeck"
+        "end": 1875,
+        "author": "Seeck."
       }
     ]
   },
@@ -2342,10 +2403,12 @@
     "lemma": "Sporakios 4",
     "previous": "Sporakios 3",
     "next": "Sporn",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1875,
-        "author": "Seeck"
+        "end": 1875,
+        "author": "Seeck."
       }
     ]
   },
@@ -2375,10 +2438,12 @@
     "lemma": "Sporgilos",
     "previous": "Soroi",
     "next": "Sporoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1878,
-        "author": "Meyer, Ernst"
+        "end": 1878,
+        "author": "Ernst Meyer."
       }
     ]
   },
@@ -2476,10 +2541,12 @@
     "lemma": "Spudasius 1",
     "previous": "Spudaion",
     "next": "Spudasius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1888,
-        "author": "Seeck"
+        "end": 1888,
+        "author": "Seeck."
       }
     ]
   },
@@ -2487,10 +2554,12 @@
     "lemma": "Spudasius 2",
     "previous": "Spudasius 1",
     "next": "Spudias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1888,
-        "author": "Seeck"
+        "end": 1888,
+        "author": "Seeck."
       }
     ]
   },
@@ -2713,10 +2782,12 @@
     "lemma": "Staberianus",
     "previous": "Stabelacus",
     "next": "Staberius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1923,
-        "author": "Groag"
+        "end": 1923,
+        "author": "Groag."
       }
     ]
   },
@@ -2746,10 +2817,12 @@
     "lemma": "Staberius 3",
     "previous": "Staberius 2",
     "next": "Staberius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1924,
-        "author": "Münzer"
+        "end": 1924,
+        "author": "Münzer."
       }
     ]
   },
@@ -2790,10 +2863,12 @@
     "lemma": "Stabium",
     "previous": "Stabiae",
     "next": "Stablesianoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1925,
-        "author": "Ruge"
+        "end": 1925,
+        "author": "Ruge."
       }
     ]
   },
@@ -2893,10 +2968,12 @@
     "lemma": "Stabulum 2",
     "previous": "Stabulum 1",
     "next": "Stabulum 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1926,
-        "author": "Honigmann"
+        "end": 1926,
+        "author": "Honigmann."
       }
     ]
   },
@@ -2917,10 +2994,13 @@
     "lemma": "Stabulum novum",
     "previous": "Stabulum 3",
     "next": "Stachao",
+    "sort_key": "Stabulumnovum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1927,
-        "author": "Schulten"
+        "end": 1927,
+        "author": "Schulten."
       }
     ]
   },
@@ -3120,10 +3200,12 @@
     "lemma": "Stageirios",
     "previous": "Stagabaza",
     "next": "Stageiros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2125,
-        "author": "Seeck"
+        "end": 2125,
+        "author": "Seeck."
       }
     ]
   },
@@ -3152,7 +3234,7 @@
   {
     "lemma": "Stagion",
     "previous": "Stages",
-    "next": "Stagnon",
+    "next": "Στάγνον",
     "chapters": [
       {
         "start": 2126,
@@ -3161,19 +3243,22 @@
     ]
   },
   {
-    "lemma": "Stagnon",
+    "lemma": "Στάγνον",
     "previous": "Stagion",
     "next": "Stahl",
+    "sort_key": "Stagnon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2126,
-        "author": "Dessau"
+        "end": 2126,
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Stahl",
-    "previous": "Stagnon",
+    "previous": "Στάγνον",
     "next": "Staiedius",
     "chapters": [
       {
@@ -3252,10 +3337,12 @@
     "lemma": "Staius 3",
     "previous": "Staius 2",
     "next": "Staius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2139,
-        "author": "Stein, [Arthur]"
+        "end": 2139,
+        "author": "Stein."
       }
     ]
   },
@@ -3288,7 +3375,7 @@
   {
     "lemma": "Stalai",
     "previous": "Staius 5",
-    "next": "Staliokanos limen",
+    "next": "Σταλιοκανὸς λιμήν",
     "chapters": [
       {
         "start": 2139,
@@ -3297,18 +3384,23 @@
     ]
   },
   {
-    "lemma": "Staliokanos limen",
+    "lemma": "Σταλιοκανὸς λιμήν",
     "previous": "Stalai",
     "next": "Stallius 1-2",
+    "sort_key": "Staliokanoslimen",
+    "redirect": "Saliokanos limen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2139
+        "start": 2139,
+        "end": 2139,
+        "author": "Keune."
       }
     ]
   },
   {
     "lemma": "Stallius 1-2",
-    "previous": "Staliokanos limen",
+    "previous": "Σταλιοκανὸς λιμήν",
     "next": "Stallius 3",
     "chapters": [
       {
@@ -3321,10 +3413,12 @@
     "lemma": "Stallius 3",
     "previous": "Stallius 1-2",
     "next": "Stallius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2140,
-        "author": "Münzer"
+        "end": 2140,
+        "author": "Münzer."
       }
     ]
   },
@@ -3343,10 +3437,12 @@
     "lemma": "Stamazo",
     "previous": "Stallius 4",
     "next": "Stamene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2140,
-        "author": "Fluss"
+        "end": 2140,
+        "author": "Fluss."
       }
     ]
   },
@@ -3354,10 +3450,12 @@
     "lemma": "Stamene",
     "previous": "Stamazo",
     "next": "Σταμίν",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2140,
-        "author": "Ruge"
+        "end": 2140,
+        "author": "Ruge."
       }
     ]
   },
@@ -3526,10 +3624,12 @@
     "lemma": "Staphylos 2",
     "previous": "Staphylos 1",
     "next": "Staphylos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2149,
-        "author": "Bürchner"
+        "end": 2149,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3548,10 +3648,12 @@
     "lemma": "Staphylos 4",
     "previous": "Staphylos 3",
     "next": "Star",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2149,
-        "author": "Seeck"
+        "end": 2150,
+        "author": "Seeck."
       }
     ]
   },
@@ -3625,10 +3727,12 @@
     "lemma": "Stasias",
     "previous": "Staseas",
     "next": "Stasikrates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2158,
-        "author": "Oldfather"
+        "end": 2158,
+        "author": "Oldfather."
       }
     ]
   },
@@ -3692,7 +3796,7 @@
   {
     "lemma": "Stasippos",
     "previous": "Stasioikos 2",
-    "next": "Stasis",
+    "next": "Στάσις",
     "chapters": [
       {
         "start": 2166,
@@ -3701,19 +3805,22 @@
     ]
   },
   {
-    "lemma": "Stasis",
+    "lemma": "Στάσις",
     "previous": "Stasippos",
     "next": "Stata Mater",
+    "sort_key": "Stasis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2167,
-        "author": "Weissbach"
+        "end": 2167,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Stata Mater",
-    "previous": "Stasis",
+    "previous": "Στάσις",
     "next": "Statala",
     "chapters": [
       {
@@ -3726,10 +3833,13 @@
     "lemma": "Statala",
     "previous": "Stata Mater",
     "next": "Statanus",
+    "sort_key": "Statala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2168,
-        "author": "Bürchner"
+        "end": 2168,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4022,10 +4132,12 @@
     "lemma": "Statilius 1",
     "previous": "Statilius",
     "next": "Statilius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2184,
-        "author": "Münzer"
+        "end": 2184,
+        "author": "Münzer."
       }
     ]
   },
@@ -4165,10 +4277,12 @@
     "lemma": "Statilius 14",
     "previous": "Statilius 13",
     "next": "Statilius 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2190,
-        "author": "Stein, [Arthur]"
+        "end": 2190,
+        "author": "Stein."
       }
     ]
   },
@@ -4231,10 +4345,12 @@
     "lemma": "Statilius 20",
     "previous": "Statilius 19",
     "next": "Statilius 21",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2192,
-        "author": "Stein, [Arthur]"
+        "end": 2192,
+        "author": "Stein."
       }
     ]
   },
@@ -4352,10 +4468,12 @@
     "lemma": "Statilius 31",
     "previous": "Statilius 30",
     "next": "Statilius 32",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2195,
-        "author": "Fluss"
+        "end": 2195,
+        "author": "Fluss."
       }
     ]
   },
