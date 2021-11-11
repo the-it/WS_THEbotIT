@@ -389,10 +389,12 @@
     "lemma": "Epibaterios",
     "previous": "Ἐπιβάται 3",
     "next": "Epibates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 28,
-        "author": "Jessen"
+        "end": 28,
+        "author": "Jessen."
       }
     ]
   },
@@ -516,10 +518,12 @@
     "lemma": "Epichares 2",
     "previous": "Epichares 1",
     "next": "Epichares 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 34,
-        "author": "Kirchner"
+        "end": 34,
+        "author": "Kirchner."
       }
     ]
   },
@@ -1287,10 +1291,12 @@
     "lemma": "Epigenes 11",
     "previous": "Epigenes 10",
     "next": "Epigenes 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 64,
-        "author": "Seeck"
+        "end": 64,
+        "author": "Seeck."
       }
     ]
   },
@@ -1332,10 +1338,12 @@
     "lemma": "Epigenes 15",
     "previous": "Epigenes 14",
     "next": "Epigenes 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 64,
-        "author": "Natorp"
+        "end": 64,
+        "author": "Natorp."
       }
     ]
   },
@@ -1367,9 +1375,13 @@
     "lemma": "Epigenes 18",
     "previous": "Epigenes 17",
     "next": "Epigenes 19",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 66
+        "start": 66,
+        "end": 66,
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -1403,10 +1415,12 @@
     "lemma": "Epigenes 21",
     "previous": "Epigenes 20",
     "next": "Epigenes 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 66,
-        "author": "Wellmann, M[ax]"
+        "end": 66,
+        "author": "M. Wellmann."
       }
     ]
   },
@@ -1425,11 +1439,12 @@
     "lemma": "Epigenes 23",
     "previous": "Epigenes 22",
     "next": "Epigonoi 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 66,
         "end": 67,
-        "author": "Robert"
+        "author": "C. Robert."
       }
     ]
   },
@@ -1524,10 +1539,12 @@
     "lemma": "Epigonos 6",
     "previous": "Epigonos 5",
     "next": "Epigonos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 69,
-        "author": "Reitzenstein"
+        "end": 69,
+        "author": "Reitzenstein."
       }
     ]
   },
@@ -1606,10 +1623,12 @@
     "lemma": "Epikaste 1",
     "previous": "Epikarpios",
     "next": "Epikaste 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 112,
-        "author": "Bethe"
+        "end": 112,
+        "author": "Bethe."
       }
     ]
   },
@@ -1656,10 +1675,12 @@
     "lemma": "Epikaste 5",
     "previous": "Epikaste 4",
     "next": "Epikedeion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 112,
-        "author": "Bethe"
+        "end": 112,
+        "author": "Bethe."
       }
     ]
   },
@@ -1679,10 +1700,12 @@
     "lemma": "Epikephisia",
     "previous": "Epikedeion",
     "next": "Epikerdes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 113,
-        "author": "Milchhöfer"
+        "end": 113,
+        "author": "Milchhöfer."
       }
     ]
   },
@@ -1690,10 +1713,12 @@
     "lemma": "Epikerdes",
     "previous": "Epikephisia",
     "next": "Epikichradas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 114,
-        "author": "Kirchner"
+        "end": 114,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3228,7 +3253,7 @@
   {
     "lemma": "Epiodoros",
     "previous": "Epiocheir",
-    "next": "Epiodorou nesos",
+    "next": "Ἠπιοδώρου νῆσος",
     "chapters": [
       {
         "start": 186,
@@ -3237,19 +3262,22 @@
     ]
   },
   {
-    "lemma": "Epiodorou nesos",
+    "lemma": "Ἠπιοδώρου νῆσος",
     "previous": "Epiodoros",
     "next": "Epion, Epeion, Aipion",
+    "sort_key": "Epiodorounesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 186,
-        "author": "Kiessling, Max"
+        "end": 186,
+        "author": "Kiessling."
       }
     ]
   },
   {
     "lemma": "Epion, Epeion, Aipion",
-    "previous": "Epiodorou nesos",
+    "previous": "Ἠπιοδώρου νῆσος",
     "next": "Epione",
     "chapters": [
       {
@@ -3365,10 +3393,12 @@
     "lemma": "Epiphaneia 6",
     "previous": "Epiphaneia 5",
     "next": "Epiphaneia 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 193,
-        "author": "Weissbach"
+        "end": 193,
+        "author": "Weissbach."
       }
     ]
   },
@@ -3402,10 +3432,12 @@
     "lemma": "Epiphanes 2",
     "previous": "Epiphanes 1",
     "next": "Epiphanes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 193,
-        "author": "Jülicher"
+        "end": 193,
+        "author": "Jülicher."
       }
     ]
   },
@@ -3620,10 +3652,12 @@
     "lemma": "Epiphron",
     "previous": "Epiphrades",
     "next": "Epipola",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 196,
-        "author": "Waser"
+        "end": 196,
+        "author": "Waser."
       }
     ]
   },
@@ -3655,10 +3689,12 @@
     "lemma": "Epipole",
     "previous": "Epipolai",
     "next": "Epipoliaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 197,
-        "author": "Knaack"
+        "end": 197,
+        "author": "Knaack."
       }
     ]
   },
@@ -3677,10 +3713,12 @@
     "lemma": "Epiponos",
     "previous": "Epipoliaios",
     "next": "Epipontia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 197,
-        "author": "Jessen"
+        "end": 197,
+        "author": "Jessen."
       }
     ]
   },
@@ -3688,10 +3726,12 @@
     "lemma": "Epipontia",
     "previous": "Epiponos",
     "next": "Epipotamides, Epipotamioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 197,
-        "author": "Jessen"
+        "end": 197,
+        "author": "Jessen."
       }
     ]
   },
@@ -3699,10 +3739,13 @@
     "lemma": "Epipotamides, Epipotamioi",
     "previous": "Epipontia",
     "next": "Epipsephizein",
+    "sort_key": "Epipotamides,epipotamioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 197,
-        "author": "Jessen"
+        "end": 197,
+        "author": "Jessen."
       }
     ]
   },
@@ -3733,10 +3776,12 @@
     "lemma": "Epipyrgitis",
     "previous": "Epipyrgidia",
     "next": "Epirnytios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 198,
-        "author": "Jessen"
+        "end": 198,
+        "author": "Jessen."
       }
     ]
   },
@@ -3744,10 +3789,12 @@
     "lemma": "Epirnytios",
     "previous": "Epipyrgitis",
     "next": "Epirota",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 198,
-        "author": "Jessen"
+        "end": 198,
+        "author": "Jessen."
       }
     ]
   },
