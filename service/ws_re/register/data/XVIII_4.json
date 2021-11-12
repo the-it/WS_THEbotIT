@@ -982,7 +982,7 @@
   {
     "lemma": "Paris 7",
     "previous": "Paris 6",
-    "next": "Parisiene",
+    "next": "Παρισιηνή",
     "chapters": [
       {
         "start": 1538,
@@ -991,19 +991,22 @@
     ]
   },
   {
-    "lemma": "Parisiene",
+    "lemma": "Παρισιηνή",
     "previous": "Paris 7",
     "next": "Parisii",
+    "sort_key": "Parisiene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1538,
-        "author": "Herrmann"
+        "end": 1538,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Parisii",
-    "previous": "Parisiene",
+    "previous": "Παρισιηνή",
     "next": "Parma 1",
     "chapters": [
       {
