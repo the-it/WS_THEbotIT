@@ -2935,10 +2935,12 @@
     "lemma": "Pamphilos 1",
     "previous": "Pamphilidas 3",
     "next": "Pamphilos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
-        "author": "Kirchner"
+        "end": 331,
+        "author": "Johannes Kirchner."
       }
     ]
   },
@@ -2957,10 +2959,12 @@
     "lemma": "Pamphilos 3",
     "previous": "Pamphilos 2",
     "next": "Pamphilos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 331,
-        "author": "Lenschau"
+        "end": 331,
+        "author": "Th. Lenschau."
       }
     ]
   },
@@ -3078,10 +3082,12 @@
     "lemma": "Pamphilos 14",
     "previous": "Pamphilos 13",
     "next": "Pamphilos 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
-        "author": "Münzer"
+        "end": 333,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -3243,10 +3249,12 @@
     "lemma": "Pamphilos 29",
     "previous": "Pamphilos 28",
     "next": "Pamphilos 30",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 351,
-        "author": "Kroll"
+        "end": 351,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -3466,10 +3474,12 @@
     "lemma": "Pampos 2",
     "previous": "Pampos 1",
     "next": "Pamprepios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 409,
-        "author": "Enßlin"
+        "end": 409,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3957,10 +3967,12 @@
     "lemma": "Panathenaia 3",
     "previous": "Panathenaia 2",
     "next": "Panathenaia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 492,
-        "author": "Ziehen"
+        "end": 492,
+        "author": "L. Ziehen."
       }
     ]
   },
@@ -3968,10 +3980,12 @@
     "lemma": "Panathenaia 4",
     "previous": "Panathenaia 3",
     "next": "Panathenaia 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 492,
-        "author": "Ziehen"
+        "end": 492,
+        "author": "L. Ziehen."
       }
     ]
   },
@@ -3979,10 +3993,12 @@
     "lemma": "Panathenaia 5",
     "previous": "Panathenaia 4",
     "next": "Panathenaia 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 492,
-        "author": "Ziehen"
+        "end": 492,
+        "author": "L. Ziehen."
       }
     ]
   },
@@ -4074,10 +4090,13 @@
     "lemma": "Panchariana statio",
     "previous": "Panchaïa",
     "next": "Pancharios 1",
+    "sort_key": "Pancharianastatio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 495,
-        "author": "Ziegler"
+        "end": 495,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -4223,10 +4242,12 @@
     "lemma": "Pancratius 3",
     "previous": "Pancratius 2",
     "next": "Pancratius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 496,
-        "author": "Enßlin"
+        "end": 496,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4300,10 +4321,12 @@
     "lemma": "Pancratius 10",
     "previous": "Pancratius 9",
     "next": "Pancratius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 497,
-        "author": "Enßlin"
+        "end": 497,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4346,10 +4369,12 @@
     "lemma": "Pancratius 14",
     "previous": "Pancratius 13",
     "next": "Pancratius 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 498,
-        "author": "Enßlin"
+        "end": 498,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4676,10 +4701,12 @@
     "lemma": "Pandion 9",
     "previous": "Pandion 8",
     "next": "Pandion 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 518,
-        "author": "Hanslik"
+        "end": 518,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -4687,10 +4714,12 @@
     "lemma": "Pandion 10",
     "previous": "Pandion 9",
     "next": "Pandionis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 518,
-        "author": "Stein, [Arthur]"
+        "end": 518,
+        "author": "Stein."
       }
     ]
   },
@@ -5087,7 +5116,7 @@
   {
     "lemma": "Panellenes",
     "previous": "Paneides",
-    "next": "Panelos",
+    "next": "Πάνελος",
     "chapters": [
       {
         "start": 583,
@@ -5096,19 +5125,22 @@
     ]
   },
   {
-    "lemma": "Panelos",
+    "lemma": "Πάνελος",
     "previous": "Panellenes",
     "next": "Panemos",
+    "sort_key": "Panelos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 584,
-        "author": "Ruge"
+        "end": 584,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Panemos",
-    "previous": "Panelos",
+    "previous": "Πάνελος",
     "next": "Panemoteichos",
     "chapters": [
       {
