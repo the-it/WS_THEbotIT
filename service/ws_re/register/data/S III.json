@@ -18787,10 +18787,12 @@
     "lemma": "Egnatius 7a",
     "previous": "Egirca",
     "next": "Eirenarchai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 418,
-        "author": "Münzer"
+        "end": 418,
+        "author": "Münzer."
       }
     ]
   },
@@ -18810,10 +18812,12 @@
     "lemma": "Eirenis",
     "previous": "Eirenarchai",
     "next": "Ἐἰρηνοφύλακες",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 423,
-        "author": "Gerth"
+        "end": 423,
+        "author": "Gerth."
       }
     ]
   },
@@ -18849,10 +18853,12 @@
     "lemma": "Eisdikaia",
     "previous": "Eisagogion",
     "next": "Eitrizene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 428,
-        "author": "Kazarow"
+        "end": 428,
+        "author": "Kazarow."
       }
     ]
   },
@@ -18860,10 +18866,12 @@
     "lemma": "Eitrizene",
     "previous": "Eisdikaia",
     "next": "Eleasibos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 428,
-        "author": "Kazarow"
+        "end": 428,
+        "author": "Kazarow."
       }
     ]
   },
@@ -18893,17 +18901,29 @@
   {
     "lemma": "Helenius",
     "previous": "Elenius, Helenius",
+    "next": "Elenius oder Helenius",
+    "redirect": "Elenius, Helenius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 428,
-        "end": 429,
-        "author": "Hähnle"
+        "end": 429
       }
     ]
   },
   {
     "lemma": "Elenius oder Helenius",
-    "next": "Elis 4a"
+    "previous": "Helenius",
+    "next": "Elis 4a",
+    "sort_key": "Eleniusoder helenius",
+    "redirect": "Elenius, Helenius",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 429,
+        "end": 429
+      }
+    ]
   },
   {
     "lemma": "Elis 4a",
@@ -18921,29 +18941,40 @@
   {
     "lemma": "Elius oder Helius",
     "previous": "Elis 4a",
+    "next": "Eluissa",
+    "sort_key": "Eliusoder helius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 429,
-        "author": "Hähnle"
+        "end": 429,
+        "author": "Hähnle."
       }
     ]
   },
   {
     "lemma": "Eluissa",
+    "previous": "Elius oder Helius",
+    "next": "Elpinike 1a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 429,
-        "author": "Hähnle"
+        "end": 429,
+        "author": "Hähnle."
       }
     ]
   },
   {
     "lemma": "Elpinike 1a",
+    "previous": "Eluissa",
     "next": "Emeia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 429,
-        "author": "Oldfather"
+        "end": 429,
+        "author": "Oldfather."
       }
     ]
   },
@@ -19003,10 +19034,12 @@
     "lemma": "Entribae",
     "previous": "Ennius 3a",
     "next": "Epagathiane",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 430,
-        "author": "Kazarow"
+        "end": 430,
+        "author": "Kazarow."
       }
     ]
   },
@@ -19038,10 +19071,12 @@
     "lemma": "Eparmostos",
     "previous": "Epaphroditos 6a",
     "next": "Ephedros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 430,
-        "author": "Oldfather"
+        "end": 430,
+        "author": "Oldfather."
       }
     ]
   },
@@ -19049,10 +19084,12 @@
     "lemma": "Ephedros 2",
     "previous": "Eparmostos",
     "next": "Epidamiorgos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 430,
-        "author": "Lippold, Georg"
+        "end": 430,
+        "author": "Lippold."
       }
     ]
   },
@@ -19082,7 +19119,7 @@
   {
     "lemma": "Epi tes dioikeseos tetagmenos (ho)",
     "previous": "Epidiana",
-    "next": "Epi tes eirenes, hoi",
+    "next": "Ἐπὶ τῆς εἰρήνης, οἱ",
     "chapters": [
       {
         "start": 431,
@@ -19092,19 +19129,22 @@
     ]
   },
   {
-    "lemma": "Epi tes eirenes, hoi",
+    "lemma": "Ἐπὶ τῆς εἰρήνης, οἱ",
     "previous": "Epi tes dioikeseos tetagmenos (ho)",
     "next": "Epi ton prosodon (ho)",
-    "redirect": true,
+    "sort_key": "Epi tes eirenes, hoi",
+    "redirect": "Ἐἰρηνοφύλακες",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 432
+        "start": 432,
+        "end": 432
       }
     ]
   },
   {
     "lemma": "Epi ton prosodon (ho)",
-    "previous": "Epi tes eirenes, hoi",
+    "previous": "Ἐπὶ τῆς εἰρήνης, οἱ",
     "next": "Epigonos 9",
     "chapters": [
       {
@@ -19118,10 +19158,12 @@
     "lemma": "Epigonos 9",
     "previous": "Epi ton prosodon (ho)",
     "next": "Epigonos 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 434,
-        "author": "Gerth"
+        "end": 434,
+        "author": "Gerth."
       }
     ]
   },
@@ -19151,10 +19193,12 @@
     "lemma": "Epikados 2",
     "previous": "Epikados 1",
     "next": "Epikles 4a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 434,
-        "author": "Stähelin"
+        "end": 434,
+        "author": "Stähelin."
       }
     ]
   },
@@ -19239,6 +19283,7 @@
   {
     "lemma": "Epistula 1",
     "previous": "Ἐπιστάτης εἰρήνης",
+    "next": "Epona",
     "chapters": [
       {
         "start": 435,
@@ -19249,7 +19294,6 @@
   },
   {
     "lemma": "Epistula",
-    "previous": "Ἐπιστάτης ἐιρήνης",
     "next": "Epona",
     "redirect": true,
     "chapters": [
