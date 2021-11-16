@@ -957,7 +957,7 @@
   {
     "lemma": "Epidemos 2",
     "previous": "Epidemos 1",
-    "next": "Epidiatheke 1",
+    "next": "Ἐπιδιαθήκη 1",
     "proof_read": 2,
     "chapters": [
       {
@@ -968,7 +968,7 @@
     ]
   },
   {
-    "lemma": "Epidiatheke 1",
+    "lemma": "Ἐπιδιαθήκη 1",
     "previous": "Epidemos 2",
     "next": "Ἐπιδιαθήκη 2",
     "sort_key": "Epidiatheke 1",
@@ -983,7 +983,7 @@
   },
   {
     "lemma": "Ἐπιδιαθήκη 2",
-    "previous": "Epidiatheke 1",
+    "previous": "Ἐπιδιαθήκη 1",
     "next": "Epidikos",
     "sort_key": "Epidiatheke 2",
     "proof_read": 2,
@@ -1201,12 +1201,12 @@
     "lemma": "Epigenes 4",
     "previous": "Epigenes 3",
     "next": "Epigenes 5",
-    "redirect": true,
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 63,
-        "end": 63
+        "end": 63,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13789,7 +13789,7 @@
   },
   {
     "lemma": "Euaratos",
-    "previous": "Euarane",
+    "previous": "Euanthius 2",
     "next": "Euarchidas",
     "proof_read": 2,
     "chapters": [
@@ -13803,7 +13803,7 @@
   {
     "lemma": "Euarane",
     "previous": "Euanthius 2",
-    "next": "Euarchidas",
+    "next": "Euaratos",
     "sort_key": "Euarane",
     "proof_read": 2,
     "chapters": [

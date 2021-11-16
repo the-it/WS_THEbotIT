@@ -4164,10 +4164,12 @@
     "lemma": "Moses 4",
     "previous": "Moses 3",
     "next": "Moses 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 375,
-        "author": "Enßlin"
+        "end": 375,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4175,10 +4177,12 @@
     "lemma": "Moses 5",
     "previous": "Moses 4",
     "next": "Moses 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 375,
-        "author": "Enßlin"
+        "end": 375,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4219,10 +4223,12 @@
     "lemma": "Moses 9",
     "previous": "Moses 8",
     "next": "Moses 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 375,
-        "author": "Enßlin"
+        "end": 375,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4230,10 +4236,12 @@
     "lemma": "Moses 10",
     "previous": "Moses 9",
     "next": "Moses 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 375,
-        "author": "Enßlin"
+        "end": 375,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4310,7 +4318,7 @@
   {
     "lemma": "Μοσφοθά",
     "previous": "Mosoritae",
-    "next": "Mosseis",
+    "next": "Μωσσεῖς",
     "sort_key": "Mosphotha",
     "redirect": true,
     "proof_read": 2,
@@ -4322,19 +4330,22 @@
     ]
   },
   {
-    "lemma": "Mosseis",
+    "lemma": "Μωσσεῖς",
     "previous": "Μοσφοθά",
     "next": "Mosses",
+    "sort_key": "Mosseis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 376,
-        "author": "Ruge"
+        "end": 376,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Mosses",
-    "previous": "Mosseis",
+    "previous": "Μωσσεῖς",
     "next": "Mos(s)yna",
     "chapters": [
       {
