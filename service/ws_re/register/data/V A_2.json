@@ -12551,10 +12551,12 @@
     "lemma": "Therasius 1",
     "previous": "Therasia 3",
     "next": "Therasius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2367,
-        "author": "Enßlin"
+        "end": 2367,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12572,28 +12574,33 @@
   {
     "lemma": "Therasius 3",
     "previous": "Therasius 2",
-    "next": "Theraspis",
+    "next": "Θερασπις",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2367,
-        "author": "Enßlin"
+        "end": 2367,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
-    "lemma": "Theraspis",
+    "lemma": "Θερασπις",
     "previous": "Therasius 3",
     "next": "Thereitas",
+    "sort_key": "Theraspis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2367,
-        "author": "Hölscher"
+        "end": 2367,
+        "author": "G. Hölscher."
       }
     ]
   },
   {
     "lemma": "Thereitas",
-    "previous": "Theraspis",
+    "previous": "Θερασπις",
     "next": "Therelimios",
     "redirect": "Theritas",
     "proof_read": 2,
@@ -12654,10 +12661,12 @@
     "lemma": "Thereus",
     "previous": "Therephone",
     "next": "Theridius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2367,
-        "author": "Modrze"
+        "end": 2367,
+        "author": "Anneliese Modrze."
       }
     ]
   },
@@ -12676,10 +12685,12 @@
     "lemma": "Therikles 1",
     "previous": "Theridius",
     "next": "Therikles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2367,
-        "author": "Kirchner"
+        "end": 2367,
+        "author": "J. Kirchner."
       }
     ]
   },
