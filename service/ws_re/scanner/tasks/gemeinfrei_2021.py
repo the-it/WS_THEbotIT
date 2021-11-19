@@ -17,6 +17,7 @@ class GF21Task(ReScannerTask):
                 authors = self.authors.get_author_by_mapping(re_article.author[0], re_article["BAND"].value)
                 for author in authors:
                     if author.death == 1950:
-                        if re_article["KEINE_SCHÖPFUNGSHÖHE"].value:
-                            re_article["TODESJAHR"].value = ""
+                        # if re_article["KEINE_SCHÖPFUNGSHÖHE"].value:
+                        #     re_article["TODESJAHR"].value = ""
+                        re_article["TODESJAHR"].value = ""
                         re_article["KEINE_SCHÖPFUNGSHÖHE"].value = False
