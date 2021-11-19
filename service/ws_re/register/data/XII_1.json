@@ -2346,10 +2346,12 @@
     "lemma": "L. 2a",
     "previous": "L. 2",
     "next": "L. 2b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 235,
-        "author": "Keune"
+        "end": 235,
+        "author": "Keune."
       }
     ]
   },
@@ -2357,10 +2359,12 @@
     "lemma": "L. 2b",
     "previous": "L. 2a",
     "next": "L. 2c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 235,
-        "author": "Keune"
+        "end": 236,
+        "author": "Keune."
       }
     ]
   },
@@ -5185,10 +5189,12 @@
     "lemma": "Laecanius 7",
     "previous": "Laecanius 6",
     "next": "Laecanius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 398,
-        "author": "Miltner, Franz"
+        "end": 398,
+        "author": "Miltner."
       }
     ]
   },
@@ -5207,10 +5213,12 @@
     "lemma": "Laecanius 9",
     "previous": "Laecanius 8",
     "next": "Laecanius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 398,
-        "author": "Stein, [Arthur]"
+        "end": 398,
+        "author": "Stein."
       }
     ]
   },
@@ -5229,10 +5237,12 @@
     "lemma": "Laecanius 11",
     "previous": "Laecanius 10",
     "next": "Laecanius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 398,
-        "author": "Stein, [Arthur]"
+        "end": 398,
+        "author": "Stein."
       }
     ]
   },
@@ -5240,10 +5250,12 @@
     "lemma": "Laecanius 12",
     "previous": "Laecanius 11",
     "next": "Laecanius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 398,
-        "author": "Stein, [Arthur]"
+        "end": 398,
+        "author": "Stein."
       }
     ]
   },
@@ -5251,10 +5263,12 @@
     "lemma": "Laecanius 13",
     "previous": "Laecanius 12",
     "next": "Laecanius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 398,
-        "author": "Keune"
+        "end": 398,
+        "author": "Keune."
       }
     ]
   },
@@ -5262,10 +5276,12 @@
     "lemma": "Laecanius 14",
     "previous": "Laecanius 13",
     "next": "Laecanius 14a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 398,
-        "author": "Keune"
+        "end": 398,
+        "author": "Keune."
       }
     ]
   },
@@ -7654,7 +7670,7 @@
   {
     "lemma": "Lakisthenes",
     "previous": "Lakistenes",
-    "next": "Lakkobourgo",
+    "next": "Λακκοβοῦργο",
     "chapters": [
       {
         "start": 527,
@@ -7663,19 +7679,22 @@
     ]
   },
   {
-    "lemma": "Lakkobourgo",
+    "lemma": "Λακκοβοῦργο",
     "previous": "Lakisthenes",
     "next": "Lakkoi",
+    "sort_key": "Lakkobourgo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 527,
-        "author": "Fluss"
+        "end": 527,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Lakkoi",
-    "previous": "Lakkobourgo",
+    "previous": "Λακκοβοῦργο",
     "next": "Lakon 1",
     "chapters": [
       {
@@ -7710,10 +7729,12 @@
     "lemma": "Lakon 3",
     "previous": "Lakon 2",
     "next": "Lakon 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 528,
-        "author": "Kirchner"
+        "end": 528,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7721,10 +7742,12 @@
     "lemma": "Lakon 4",
     "previous": "Lakon 3",
     "next": "Lakon 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 528,
-        "author": "Obst"
+        "end": 528,
+        "author": "Obst."
       }
     ]
   },
@@ -7813,10 +7836,12 @@
     "lemma": "Lakrateides",
     "previous": "Lakotena",
     "next": "Lakrates 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Kirchner"
+        "end": 529,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7824,10 +7849,12 @@
     "lemma": "Lakrates 1",
     "previous": "Lakrateides",
     "next": "Lakrates 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Lenschau"
+        "end": 529,
+        "author": "Lenschau."
       }
     ]
   },
@@ -7835,10 +7862,12 @@
     "lemma": "Lakrates 2",
     "previous": "Lakrates 1",
     "next": "Lakrates 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Lenschau"
+        "end": 529,
+        "author": "Lenschau."
       }
     ]
   },
@@ -7857,10 +7886,12 @@
     "lemma": "Lakrates 4",
     "previous": "Lakrates 3",
     "next": "Lakrates 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Kahrstedt"
+        "end": 529,
+        "author": "Kahrstedt."
       }
     ]
   },
@@ -7868,10 +7899,12 @@
     "lemma": "Lakrates 5",
     "previous": "Lakrates 4",
     "next": "Lakrates 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Kahrstedt"
+        "end": 529,
+        "author": "Kahrstedt."
       }
     ]
   },
@@ -7879,10 +7912,12 @@
     "lemma": "Lakrates 6",
     "previous": "Lakrates 5",
     "next": "Lakratidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Kahrstedt"
+        "end": 529,
+        "author": "Kahrstedt."
       }
     ]
   },
@@ -7901,10 +7936,12 @@
     "lemma": "Lakriassos",
     "previous": "Lakratidas",
     "next": "Lakrines",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Ruge"
+        "end": 529,
+        "author": "Ruge."
       }
     ]
   },
@@ -7934,10 +7971,12 @@
     "lemma": "Lakydas",
     "previous": "Lakritos",
     "next": "Lakydes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 530,
-        "author": "Kahrstedt"
+        "end": 530,
+        "author": "Kahrstedt."
       }
     ]
   },
@@ -18161,10 +18200,12 @@
     "lemma": "Lebisinia",
     "previous": "Lebinthos",
     "next": "Lebona 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1055,
-        "author": "Stein, [Arthur]"
+        "end": 1055,
+        "author": "Stein."
       }
     ]
   },
@@ -18220,10 +18261,12 @@
     "lemma": "Lebriemelus",
     "previous": "Leboriae",
     "next": "Leburini",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1055,
-        "author": "Philipp"
+        "end": 1055,
+        "author": "Philipp."
       }
     ]
   },

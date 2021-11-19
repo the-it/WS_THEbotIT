@@ -4817,7 +4817,7 @@
   {
     "lemma": "Moza",
     "previous": "Moystius mons",
-    "next": "Moziata",
+    "next": "Μοζιάτα",
     "chapters": [
       {
         "start": 409,
@@ -4826,19 +4826,22 @@
     ]
   },
   {
-    "lemma": "Moziata",
+    "lemma": "Μοζιάτα",
     "previous": "Moza",
     "next": "Mozota(?)",
+    "sort_key": "Moziata",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 410,
-        "author": "Herrmann"
+        "end": 410,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Mozota(?)",
-    "previous": "Moziata",
+    "previous": "Μοζιάτα",
     "next": "Mozotcori",
     "redirect": "Mopta",
     "proof_read": 2,
@@ -4853,10 +4856,12 @@
     "lemma": "Mozotcori",
     "previous": "Mozota(?)",
     "next": "Mu...",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 410,
-        "author": "Kroll"
+        "end": 410,
+        "author": "W. Kroll."
       }
     ]
   },

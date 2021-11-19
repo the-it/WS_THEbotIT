@@ -6323,7 +6323,7 @@
   {
     "lemma": "Kremniskoi",
     "previous": "Kremnia",
-    "next": "Krenai 1",
+    "next": "Κρῆναι 1",
     "chapters": [
       {
         "start": 1709,
@@ -6332,20 +6332,23 @@
     ]
   },
   {
-    "lemma": "Krenai 1",
+    "lemma": "Κρῆναι 1",
     "previous": "Kremniskoi",
     "next": "Krenai 2",
+    "sort_key": "Krenai 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
-        "author": "Bürchner"
+        "end": 1709,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Krenai 2",
-    "previous": "Krenai 1",
-    "next": "Krenai 3",
+    "previous": "Κρῆναι 1",
+    "next": "Κρῆναι 3",
     "chapters": [
       {
         "start": 1709,
@@ -6354,19 +6357,22 @@
     ]
   },
   {
-    "lemma": "Krenai 3",
+    "lemma": "Κρῆναι 3",
     "previous": "Krenai 2",
     "next": "Krenaiai pylai",
+    "sort_key": "Krenai 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
-        "author": "Bürchner"
+        "end": 1709,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Krenaiai pylai",
-    "previous": "Krenai 3",
+    "previous": "Κρῆναι 3",
     "next": "Krenides",
     "chapters": [
       {
@@ -6390,10 +6396,12 @@
     "lemma": "Kreon 1",
     "previous": "Krenides",
     "next": "Kreon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
-        "author": "Bürchner"
+        "end": 1709,
+        "author": "Bürchner."
       }
     ]
   },
