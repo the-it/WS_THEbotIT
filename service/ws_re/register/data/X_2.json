@@ -4191,7 +4191,7 @@
   {
     "lemma": "Kalakagathios",
     "previous": "Kalais",
-    "next": "Kalakta, Kalakte, Kale Akte",
+    "next": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "redirect": "Kallokagathios",
     "proof_read": 2,
     "chapters": [
@@ -4202,8 +4202,20 @@
     ]
   },
   {
+    "lemma": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
+    "previous": "Kalakagathios",
+    "sort_key": "Kalakta, Kalakte, kale akte 0",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1530,
+        "end": 1530,
+        "author": "Bürchner."
+      }
+    ]
+  },
+  {
     "lemma": "Kalakta, Kalakte, Kale Akte",
-    "previous": "Καλάκτα, Καλάκτη, Κᾱλή Ἀκτή",
     "next": "Kalakta, Kalakte, Kale Akte 1",
     "sort_key": "Kalakta,kalakte, kale akte",
     "proof_read": 2,
