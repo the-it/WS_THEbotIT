@@ -36,7 +36,7 @@
   {
     "lemma": "Stobi",
     "previous": "Stobaeus",
-    "next": "Stoborron akron",
+    "next": "Στόβορρον ἄκρον",
     "chapters": [
       {
         "start": 47,
@@ -45,19 +45,22 @@
     ]
   },
   {
-    "lemma": "Stoborron akron",
+    "lemma": "Στόβορρον ἄκρον",
     "previous": "Stobi",
     "next": "Stock",
+    "sort_key": "Stoborronakron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 54,
-        "author": "Dessau"
+        "end": 54,
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Stock",
-    "previous": "Stoborron akron",
+    "previous": "Στόβορρον ἄκρον",
     "next": "Stodmenos",
     "redirect": "Stab",
     "proof_read": 2,
@@ -83,10 +86,12 @@
     "lemma": "Stodoion",
     "previous": "Stodmenos",
     "next": "Stoechades insulae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 54,
-        "author": "MacDonald"
+        "end": 54,
+        "author": "Macdonald."
       }
     ]
   },
@@ -115,7 +120,7 @@
   {
     "lemma": "Stör",
     "previous": "Stoeni",
-    "next": "Stoiai",
+    "next": "Στοῖαι",
     "sort_key": "Stoer",
     "redirect": "Γαλεός",
     "proof_read": 2,
@@ -127,19 +132,22 @@
     ]
   },
   {
-    "lemma": "Stoiai",
+    "lemma": "Στοῖαι",
     "previous": "Stör",
     "next": "Stoichadeus",
+    "sort_key": "Stoiai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 55,
-        "author": "Schwabe"
+        "end": 55,
+        "author": "Schwabe."
       }
     ]
   },
   {
     "lemma": "Stoichadeus",
-    "previous": "Stoiai",
+    "previous": "Στοῖαι",
     "next": "Stoichaios",
     "chapters": [
       {
@@ -265,10 +273,12 @@
     "lemma": "Stolo",
     "previous": "Stolistes",
     "next": "Stolos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 62,
-        "author": "Fluss"
+        "end": 62,
+        "author": "Fluss."
       }
     ]
   },
@@ -412,10 +422,12 @@
     "lemma": "Storacianus",
     "previous": "Stonychia",
     "next": "Storacius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 64,
-        "author": "Keune"
+        "end": 64,
+        "author": "Keune."
       }
     ]
   },
@@ -500,10 +512,12 @@
     "lemma": "Stortyke",
     "previous": "Storpaos",
     "next": "Stotzas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 74,
-        "author": "Oberhummer"
+        "end": 74,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -728,10 +742,12 @@
     "lemma": "Stramentias",
     "previous": "Stramentarius",
     "next": "Stramimenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Fluss"
+        "end": 170,
+        "author": "Fluss."
       }
     ]
   },
@@ -739,10 +755,12 @@
     "lemma": "Stramimenos",
     "previous": "Stramentias",
     "next": "Stranbasta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Gebhard"
+        "end": 170,
+        "author": "Gebhard."
       }
     ]
   },
@@ -750,10 +768,12 @@
     "lemma": "Stranbasta",
     "previous": "Stramimenos",
     "next": "Strangulatio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Fluss"
+        "end": 170,
+        "author": "Fluss."
       }
     ]
   },
@@ -818,9 +838,13 @@
     "lemma": "Straßenraub II",
     "previous": "Straßenraub",
     "next": "Strata chora",
+    "sort_key": "Straßenraubii",
+    "redirect": "Latrocinium",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 173
+        "start": 173,
+        "end": 173
       }
     ]
   },

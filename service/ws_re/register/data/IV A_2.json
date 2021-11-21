@@ -1880,10 +1880,12 @@
     "lemma": "Syrmaion",
     "previous": "Συρμαίη",
     "next": "Syrmatae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1787,
-        "author": "Moritz, [Bernhard]"
+        "end": 1787,
+        "author": "Moritz."
       }
     ]
   },
@@ -1891,10 +1893,12 @@
     "lemma": "Syrmatae",
     "previous": "Syrmaion",
     "next": "Syrmus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1787,
-        "author": "Herrmann"
+        "end": 1787,
+        "author": "Herrmann."
       }
     ]
   },
@@ -1913,17 +1917,19 @@
     "lemma": "Syrna",
     "previous": "Syrmus",
     "next": "Syrnides",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1787,
-        "author": "Ruge"
+        "end": 1787,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Syrnides",
     "previous": "Syrna",
-    "next": "Syrnisika",
+    "next": "Συρνίσικα",
     "redirect": "Stirnides",
     "proof_read": 2,
     "chapters": [
@@ -1934,19 +1940,22 @@
     ]
   },
   {
-    "lemma": "Syrnisika",
+    "lemma": "Συρνίσικα",
     "previous": "Syrnides",
     "next": "Syrnos",
+    "sort_key": "Syrnisika",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1787,
-        "author": "Herrmann"
+        "end": 1787,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Syrnos",
-    "previous": "Syrnisika",
+    "previous": "Συρνίσικα",
     "next": "Syrnota",
     "chapters": [
       {
@@ -6211,10 +6220,12 @@
     "lemma": "Tancus",
     "previous": "Tancila",
     "next": "Tandasis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2174,
-        "author": "Enßlin"
+        "end": 2174,
+        "author": "Enßlin."
       }
     ]
   },
@@ -6222,10 +6233,12 @@
     "lemma": "Tandasis",
     "previous": "Tancus",
     "next": "Tanetum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2174,
-        "author": "Stein, [Arthur]"
+        "end": 2174,
+        "author": "Stein."
       }
     ]
   },
@@ -11024,7 +11037,7 @@
     "lemma": "Taurinum 3",
     "previous": "Taurinum 2",
     "next": "Taurinus 1",
-    "redirect": "Ravennas Geographus",
+    "redirect": "Taurinum 1",
     "proof_read": 2,
     "chapters": [
       {
