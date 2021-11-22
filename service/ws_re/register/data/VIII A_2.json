@@ -96,10 +96,12 @@
     "lemma": "Verginius 2a",
     "previous": "Verginius 2",
     "next": "Verginius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1509,
-        "author": "Gundel, Hans [Georg]"
+        "end": 1509,
+        "author": "Hans Gundel."
       }
     ]
   },
@@ -209,9 +211,12 @@
     "lemma": "Verginius 7a",
     "previous": "Verginius 7",
     "next": "Verginius 8",
+    "redirect": "Verginius 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1516
+        "start": 1516,
+        "end": 1516
       }
     ]
   },
@@ -582,9 +587,14 @@
     "lemma": "Veria Liceria",
     "previous": "Vergunni",
     "next": "Verianus 1",
+    "sort_key": "Verialiceria",
+    "redirect": "Liceria",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1545
+        "start": 1545,
+        "end": 1545,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -592,10 +602,12 @@
     "lemma": "Verianus 1",
     "previous": "Veria Liceria",
     "next": "Verianus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1545,
-        "author": "Enßlin"
+        "end": 1545,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -627,10 +639,12 @@
     "lemma": "Verianus 4",
     "previous": "Verianus 3",
     "next": "Veriaraca",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1546,
-        "author": "Enßlin"
+        "end": 1546,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -715,10 +729,12 @@
     "lemma": "Verinus 1",
     "previous": "Verinianus 3",
     "next": "Verinus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1549,
-        "author": "Enßlin"
+        "end": 1549,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -808,10 +824,12 @@
     "lemma": "Verius",
     "previous": "Veriugodumnus",
     "next": "Verlucio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1552,
-        "author": "Enßlin"
+        "end": 1552,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -1016,10 +1034,12 @@
     "lemma": "Veronicianus 2",
     "previous": "Veronicianus 1",
     "next": "Veronicianus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1560,
-        "author": "Enßlin"
+        "end": 1560,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -1027,9 +1047,13 @@
     "lemma": "Veronicianus 3",
     "previous": "Veronicianus 2",
     "next": "Veronius",
+    "redirect": "Beronikianos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1560
+        "start": 1560,
+        "end": 1560,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -1037,10 +1061,12 @@
     "lemma": "Veronius",
     "previous": "Veronicianus 3",
     "next": "Verora",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1560,
-        "author": "Ziegler"
+        "end": 1560,
+        "author": "Konrat Ziegler."
       }
     ]
   },
