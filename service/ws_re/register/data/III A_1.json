@@ -10628,7 +10628,7 @@
   {
     "lemma": "Soanos",
     "previous": "Soanoi",
-    "next": "Soaoneis",
+    "next": "Σοαωνεῖς",
     "chapters": [
       {
         "start": 769,
@@ -10637,19 +10637,22 @@
     ]
   },
   {
-    "lemma": "Soaoneis",
+    "lemma": "Σοαωνεῖς",
     "previous": "Soanos",
     "next": "Soara",
+    "sort_key": "Soaoneis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 769,
-        "author": "Bürchner"
+        "end": 770,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Soara",
-    "previous": "Soaoneis",
+    "previous": "Σοαωνεῖς",
     "next": "Soas",
     "chapters": [
       {
@@ -10696,7 +10699,7 @@
   {
     "lemma": "Sobagena",
     "previous": "Soatris",
-    "next": "Sobala",
+    "next": "Σώβαλα",
     "chapters": [
       {
         "start": 770
@@ -10704,20 +10707,23 @@
     ]
   },
   {
-    "lemma": "Sobala",
+    "lemma": "Σώβαλα",
     "previous": "Sobagena",
     "next": "Sobanos",
+    "sort_key": "Sobala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 770,
-        "author": "Bürchner"
+        "end": 770,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Sobanos",
-    "previous": "Sobala",
-    "next": "Sobara",
+    "previous": "Σώβαλα",
+    "next": "Σόβαρα",
     "chapters": [
       {
         "start": 770,
@@ -10726,19 +10732,22 @@
     ]
   },
   {
-    "lemma": "Sobara",
+    "lemma": "Σόβαρα",
     "previous": "Sobanos",
     "next": "Sobidai",
+    "sort_key": "Sobara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 770,
-        "author": "Ruge"
+        "end": 770,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Sobidai",
-    "previous": "Sobara",
+    "previous": "Σόβαρα",
     "next": "Σοβορίδαι",
     "chapters": [
       {
@@ -10765,10 +10774,12 @@
     "lemma": "Sobrica",
     "previous": "Σοβορίδαι",
     "next": "Sobura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 770,
-        "author": "MacDonald"
+        "end": 770,
+        "author": "Macdonald."
       }
     ]
   },
@@ -10776,10 +10787,12 @@
     "lemma": "Sobura",
     "previous": "Sobrica",
     "next": "Soc.",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 770,
-        "author": "Wecker"
+        "end": 770,
+        "author": "Wecker."
       }
     ]
   },
@@ -10798,10 +10811,12 @@
     "lemma": "Socco",
     "previous": "Soc.",
     "next": "Soccus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 771,
-        "author": "Keune"
+        "end": 771,
+        "author": "Keune."
       }
     ]
   },
@@ -11008,10 +11023,12 @@
     "lemma": "Sodinus",
     "previous": "Sodii",
     "next": "Sodisium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 786,
-        "author": "Wecker"
+        "end": 786,
+        "author": "Wecker."
       }
     ]
   },
@@ -11064,7 +11081,7 @@
   {
     "lemma": "Sodrai",
     "previous": "Sodoukene",
-    "next": "Soeita",
+    "next": "Σόειτα",
     "chapters": [
       {
         "start": 787,
@@ -11073,19 +11090,22 @@
     ]
   },
   {
-    "lemma": "Soeita",
+    "lemma": "Σόειτα",
     "previous": "Sodrai",
     "next": "Sofonius Tigellinus",
+    "sort_key": "Soeita",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 787,
-        "author": "Weissbach"
+        "end": 787,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Sofonius Tigellinus",
-    "previous": "Soeita",
+    "previous": "Σόειτα",
     "next": "Sogane 1",
     "redirect": "Ofonius Tigellinus",
     "proof_read": 2,
@@ -11166,10 +11186,12 @@
     "lemma": "Sogenes 2",
     "previous": "Sogenes 1",
     "next": "Sogenes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 794,
-        "author": "Körte"
+        "end": 794,
+        "author": "Körte."
       }
     ]
   },
@@ -11198,7 +11220,7 @@
   {
     "lemma": "Sogiontii",
     "previous": "Sogiontense",
-    "next": "Sogokara",
+    "next": "Σογοκάρα",
     "chapters": [
       {
         "start": 794,
@@ -11207,24 +11229,29 @@
     ]
   },
   {
-    "lemma": "Sogokara",
+    "lemma": "Σογοκάρα",
     "previous": "Sogiontii",
     "next": "Sohaemias",
+    "sort_key": "Sogokara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 795,
-        "author": "Weissbach"
+        "end": 795,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Sohaemias",
-    "previous": "Sogokara",
+    "previous": "Σογοκάρα",
     "next": "Sohaemus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 795,
-        "author": "Stein, [Arthur]"
+        "end": 795,
+        "author": "Stein."
       }
     ]
   },
@@ -11309,10 +11336,12 @@
     "lemma": "Soïdas",
     "previous": "Soiacus",
     "next": "Soiellus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 799,
-        "author": "Lippold, Georg"
+        "end": 799,
+        "author": "Lippold."
       }
     ]
   },
@@ -11523,7 +11552,7 @@
   {
     "lemma": "Sokos 3",
     "previous": "Sokos 2",
-    "next": "Sokossioi",
+    "next": "Σοκόσσιοι",
     "chapters": [
       {
         "start": 803,
@@ -11532,19 +11561,22 @@
     ]
   },
   {
-    "lemma": "Sokossioi",
+    "lemma": "Σοκόσσιοι",
     "previous": "Sokos 3",
     "next": "Sokrates",
+    "sort_key": "Sokossioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 803,
-        "author": "Dessau"
+        "end": 803,
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Sokrates",
-    "previous": "Sokossioi",
+    "previous": "Σοκόσσιοι",
     "next": "Sokrates 1",
     "redirect": "Socrates",
     "proof_read": 2,
@@ -11631,10 +11663,12 @@
     "lemma": "Sokrates 7",
     "previous": "Sokrates 6",
     "next": "Sokrates 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 891,
-        "author": "Arnim"
+        "end": 891,
+        "author": "v. Arnim."
       }
     ]
   },
@@ -11697,10 +11731,12 @@
     "lemma": "Sokratides 1",
     "previous": "Sokrates Scholasticus",
     "next": "Sokratides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 901,
-        "author": "Kirchner"
+        "end": 901,
+        "author": "Kirchner."
       }
     ]
   },
@@ -11708,10 +11744,12 @@
     "lemma": "Sokratides 2",
     "previous": "Sokratides 1",
     "next": "Sokratikos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 901,
-        "author": "Arnim"
+        "end": 901,
+        "author": "v. Arnim."
       }
     ]
   },
@@ -11741,10 +11779,12 @@
     "lemma": "Sokration 2",
     "previous": "Sokration 1",
     "next": "Sokratus nesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 901,
-        "author": "Kind"
+        "end": 901,
+        "author": "Kind."
       }
     ]
   },
@@ -11752,10 +11792,13 @@
     "lemma": "Sokratus nesos",
     "previous": "Sokration 2",
     "next": "Sol 1",
+    "sort_key": "Sokratusnesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 901,
-        "author": "Moritz, [Bernhard]"
+        "end": 901,
+        "author": "Moritz."
       }
     ]
   },
@@ -11826,10 +11869,12 @@
     "lemma": "Solanon",
     "previous": "Solanades",
     "next": "Solanus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 914,
-        "author": "Fluss"
+        "end": 914,
+        "author": "Fluss."
       }
     ]
   },
@@ -11958,7 +12003,7 @@
   {
     "lemma": "Solasus",
     "previous": "Solarium 4",
-    "next": "Solbanu",
+    "next": "Σολβανοῦ",
     "chapters": [
       {
         "start": 915,
@@ -11967,19 +12012,22 @@
     ]
   },
   {
-    "lemma": "Solbanu",
+    "lemma": "Σολβανοῦ",
     "previous": "Solasus",
     "next": "Soldurii",
+    "sort_key": "Solbanu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 915,
-        "author": "Fluss"
+        "end": 915,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Soldurii",
-    "previous": "Solbanu",
+    "previous": "Σολβανοῦ",
     "next": "Sole",
     "chapters": [
       {
@@ -11992,10 +12040,12 @@
     "lemma": "Sole",
     "previous": "Soldurii",
     "next": "Solea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 916,
-        "author": "Herrmann"
+        "end": 916,
+        "author": "Herrmann."
       }
     ]
   },

@@ -5073,7 +5073,7 @@
     "lemma": "Kalliopios 3",
     "previous": "Kalliopios 2",
     "next": "Kalliopios 4",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 863,
@@ -5086,7 +5086,7 @@
     "lemma": "Kalliopios 4",
     "previous": "Kalliopios 3",
     "next": "Kalliopios 5",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 863,
@@ -5098,7 +5098,6 @@
   {
     "lemma": "Kalliopios 5",
     "previous": "Kalliopios 4",
-    "next": "Kallipolis 7a",
     "chapters": [
       {
         "start": 863,
@@ -5108,9 +5107,8 @@
   },
   {
     "lemma": "Kallipolis 7a",
-    "previous": "Kalliopios 5",
-    "next": "Kallippio",
-    "proof_read": 2,
+    "previous": "Kallippio",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5121,9 +5119,9 @@
   },
   {
     "lemma": "Kallippio",
-    "previous": "Kallipolis 7a",
-    "next": "Kallirrhoë 14",
-    "proof_read": 2,
+    "previous": "Kalliopios 5",
+    "next": "Kallipolis 7a",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5133,10 +5131,14 @@
     ]
   },
   {
+    "lemma": "Kallipolis 14a",
+    "next": "Kallirrhoë 14"
+  },
+  {
     "lemma": "Kallirrhoë 14",
-    "previous": "Kallippio",
+    "previous": "Kallipolis 14a",
     "next": "Kallisthenes 5",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5149,7 +5151,7 @@
     "lemma": "Kallisthenes 5",
     "previous": "Kallirrhoë 14",
     "next": "Kallistio",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5173,7 +5175,8 @@
     "lemma": "Kallistus 1",
     "previous": "Kallistio",
     "next": "Kallistus 2",
-    "proof_read": 2,
+    "redirect": "Kallistio",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5186,7 +5189,7 @@
     "lemma": "Kallistus 2",
     "previous": "Kallistus 1",
     "next": "Kallixeine",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5199,7 +5202,7 @@
     "lemma": "Kallixeine",
     "previous": "Kallistus 2",
     "next": "Καλοὶ κἀγαθοί",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5226,7 +5229,9 @@
     "lemma": "Kalokairos 1",
     "previous": "Καλοὶ κἀγαθοί",
     "next": "Kalykios",
-    "proof_read": 2,
+    "proof_read": 3,
+    "wp_link": "w:de:Calocaerus",
+    "wd_link": "d:Q578338",
     "chapters": [
       {
         "start": 864,
@@ -5271,8 +5276,11 @@
   {
     "lemma": "Kamenios 2",
     "previous": "Kamenios 1",
-    "next": "Kamma",
-    "proof_read": 2,
+    "next": "Kamiris",
+    "redirect": "Ceionius 31",
+    "proof_read": 3,
+    "wp_link": "w:it:Alfenio Ceionio Giuliano Camenio",
+    "wd_link": "d:Q100791999",
     "chapters": [
       {
         "start": 865,
@@ -5282,8 +5290,11 @@
     ]
   },
   {
+    "lemma": "Kamiris",
+    "previous": "Kamenios 2"
+  },
+  {
     "lemma": "Kamma",
-    "previous": "Kamenios 2",
     "next": "Kandasa",
     "chapters": [
       {
