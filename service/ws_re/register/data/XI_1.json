@@ -725,10 +725,12 @@
     "lemma": "Kausios",
     "previous": "Kausia",
     "next": "Kaustis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 93,
-        "author": "Adler"
+        "end": 93,
+        "author": "Adler."
       }
     ]
   },
@@ -736,10 +738,12 @@
     "lemma": "Kaustis",
     "previous": "Kausios",
     "next": "Kauter",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 93,
-        "author": "Adler"
+        "end": 93,
+        "author": "Adler."
       }
     ]
   },
@@ -1581,10 +1585,12 @@
     "lemma": "Keladeine",
     "previous": "Kela",
     "next": "Keladeine 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 131,
-        "author": "Adler"
+        "end": 131,
+        "author": "Adler."
       }
     ]
   },
@@ -1629,10 +1635,12 @@
     "lemma": "Keladon 2",
     "previous": "Keladon 1",
     "next": "Keladon 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 132,
-        "author": "Capelle"
+        "end": 132,
+        "author": "Capelle."
       }
     ]
   },
@@ -1651,10 +1659,12 @@
     "lemma": "Keladon 4",
     "previous": "Keladon 3",
     "next": "Keladone",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 132,
-        "author": "Capelle"
+        "end": 132,
+        "author": "Capelle."
       }
     ]
   },
@@ -1687,28 +1697,33 @@
   {
     "lemma": "Keladusa",
     "previous": "Kelados",
-    "next": "Keladussai",
+    "next": "Κελαδοῦσσαι",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 133,
-        "author": "Bürchner"
+        "end": 133,
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Keladussai",
+    "lemma": "Κελαδοῦσσαι",
     "previous": "Keladusa",
     "next": "Kelainai",
+    "sort_key": "Keladussai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 133,
-        "author": "Bürchner"
+        "end": 133,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kelainai",
-    "previous": "Keladussai",
+    "previous": "Κελαδοῦσσαι",
     "next": "Kelaineus",
     "chapters": [
       {
@@ -1721,7 +1736,7 @@
   {
     "lemma": "Kelaineus",
     "previous": "Kelainai",
-    "next": "Kelainidion",
+    "next": "Κελαινίδιον",
     "chapters": [
       {
         "start": 134,
@@ -1730,19 +1745,22 @@
     ]
   },
   {
-    "lemma": "Kelainidion",
+    "lemma": "Κελαινίδιον",
     "previous": "Kelaineus",
     "next": "Kelaino 1",
+    "sort_key": "Kelainidion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 134,
-        "author": "Oberhummer"
+        "end": 134,
+        "author": "Oberhummer."
       }
     ]
   },
   {
     "lemma": "Kelaino 1",
-    "previous": "Kelainidion",
+    "previous": "Κελαινίδιον",
     "next": "Kelaino 2",
     "chapters": [
       {
@@ -1767,10 +1785,12 @@
     "lemma": "Kelaino 3",
     "previous": "Kelaino 2",
     "next": "Kelaino 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 135,
-        "author": "Capelle"
+        "end": 135,
+        "author": "Capelle."
       }
     ]
   },
@@ -1778,10 +1798,12 @@
     "lemma": "Kelaino 4",
     "previous": "Kelaino 3",
     "next": "Kelaino 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 135,
-        "author": "Capelle"
+        "end": 135,
+        "author": "Capelle."
       }
     ]
   },
@@ -1822,10 +1844,12 @@
     "lemma": "Kelainos 3",
     "previous": "Kelainos 2",
     "next": "Kelaithra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 136,
-        "author": "Kern"
+        "end": 136,
+        "author": "Kern."
       }
     ]
   },
@@ -1855,10 +1879,12 @@
     "lemma": "Kelbianon",
     "previous": "Kelathara",
     "next": "Kelbidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 136,
-        "author": "Bürchner"
+        "end": 136,
+        "author": "Bürchner."
       }
     ]
   },
@@ -1946,10 +1972,12 @@
     "lemma": "Keleris",
     "previous": "Keleos 2",
     "next": "Keles",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 142,
-        "author": "Bürchner"
+        "end": 142,
+        "author": "Bürchner."
       }
     ]
   },
@@ -1967,7 +1995,7 @@
   {
     "lemma": "Kelesine",
     "previous": "Keles",
-    "next": "Keletra",
+    "next": "Κελέτρα",
     "chapters": [
       {
         "start": 142,
@@ -1976,19 +2004,22 @@
     ]
   },
   {
-    "lemma": "Keletra",
+    "lemma": "Κελέτρα",
     "previous": "Kelesine",
     "next": "Keletron",
+    "sort_key": "Keletra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 142,
-        "author": "Geisau"
+        "end": 142,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Keletron",
-    "previous": "Keletra",
+    "previous": "Κελέτρα",
     "next": "Keleustes",
     "chapters": [
       {
@@ -2024,7 +2055,7 @@
   {
     "lemma": "Keleutor",
     "previous": "Keleutheia",
-    "next": "Kelida",
+    "next": "Κέλιδα",
     "chapters": [
       {
         "start": 147,
@@ -2033,19 +2064,22 @@
     ]
   },
   {
-    "lemma": "Kelida",
+    "lemma": "Κέλιδα",
     "previous": "Keleutor",
     "next": "Kelkaia",
+    "sort_key": "Kelida",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 147,
-        "author": "Fischer"
+        "end": 147,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Kelkaia",
-    "previous": "Kelida",
+    "previous": "Κέλιδα",
     "next": "Kelle",
     "chapters": [
       {
@@ -2080,28 +2114,33 @@
   {
     "lemma": "Kellibaroi",
     "previous": "Kellia",
-    "next": "Kellios",
+    "next": "Κήλλιος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 148,
-        "author": "Bürchner"
+        "end": 148,
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Kellios",
+    "lemma": "Κήλλιος",
     "previous": "Kellibaroi",
     "next": "Kelliriana",
+    "sort_key": "Kellios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 148,
-        "author": "Bürchner"
+        "end": 148,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kelliriana",
-    "previous": "Kellios",
+    "previous": "Κήλλιος",
     "next": "Kellmünz",
     "chapters": [
       {
@@ -2245,10 +2284,12 @@
     "lemma": "Kema",
     "previous": "Kelynia",
     "next": "Kemel",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 157,
-        "author": "Ruge"
+        "end": 157,
+        "author": "Ruge."
       }
     ]
   },
@@ -2341,10 +2382,12 @@
     "lemma": "Kenaios 1",
     "previous": "Kenaios",
     "next": "Kenchramos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 164,
-        "author": "Adler"
+        "end": 164,
+        "author": "Adler."
       }
     ]
   },
@@ -2398,10 +2441,12 @@
     "lemma": "Kenchreai 4",
     "previous": "Kenchreai 3",
     "next": "Kenchreai 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Bürchner"
+        "end": 170,
+        "author": "Bürchner."
       }
     ]
   },
@@ -2409,10 +2454,12 @@
     "lemma": "Kenchreai 5",
     "previous": "Kenchreai 4",
     "next": "Kenchreai 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Bürchner"
+        "end": 170,
+        "author": "Bürchner."
       }
     ]
   },
@@ -2420,38 +2467,45 @@
     "lemma": "Kenchreai 6",
     "previous": "Kenchreai 5",
     "next": "Kenchreïs",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Bürchner"
+        "end": 170,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kenchreïs",
     "previous": "Kenchreai 6",
-    "next": "Kenchreon",
+    "next": "Κεγχρεών",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Bürchner"
+        "end": 170,
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Kenchreon",
+    "lemma": "Κεγχρεών",
     "previous": "Kenchreïs",
     "next": "Kenchrios",
+    "sort_key": "Kenchreon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Bürchner"
+        "end": 170,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kenchrios",
-    "previous": "Kenchreon",
+    "previous": "Κεγχρεών",
     "next": "Kendreiseiai",
     "chapters": [
       {
