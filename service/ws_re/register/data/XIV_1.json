@@ -51,10 +51,12 @@
     "lemma": "Lysimachos 5",
     "previous": "Lysimachos 4",
     "next": "Lysimachos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 31,
-        "author": "Stähelin"
+        "end": 31,
+        "author": "Stähelin."
       }
     ]
   },
@@ -600,10 +602,12 @@
     "lemma": "Lysippos 7",
     "previous": "Lysippos 6",
     "next": "Lysippos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 64,
-        "author": "Lippold, Georg"
+        "end": 64,
+        "author": "Lippold."
       }
     ]
   },
@@ -800,10 +804,12 @@
     "lemma": "Lysistratos 9",
     "previous": "Lysistratos 8",
     "next": "Lysistratos 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 66,
-        "author": "Obst"
+        "end": 66,
+        "author": "Obst."
       }
     ]
   },
@@ -1127,7 +1133,7 @@
   {
     "lemma": "Λύτρον",
     "previous": "Lyterios",
-    "next": "Lyttos",
+    "next": "Λύττος",
     "chapters": [
       {
         "start": 72,
@@ -1136,21 +1142,21 @@
     ]
   },
   {
-    "lemma": "Lyttos",
+    "lemma": "Λύττος",
     "previous": "Λύτρον",
     "next": "Lyzeia",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
-        "start": 72,
-        "end": 72,
+        "start": 76,
+        "end": 76,
         "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Lyzeia",
-    "previous": "Lyttos",
+    "previous": "Λύττος",
     "next": "Ma",
     "proof_read": 2,
     "chapters": [
@@ -1263,10 +1269,12 @@
     "lemma": "Maarath",
     "previous": "Μααφά",
     "next": "Μααρσάρης",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 92,
-        "author": "Hölscher"
+        "end": 92,
+        "author": "Hölscher."
       }
     ]
   },
@@ -1478,10 +1486,12 @@
     "lemma": "Macarius 9",
     "previous": "Macarius 8",
     "next": "Macarius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 94,
-        "author": "Enßlin"
+        "end": 95,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1744,10 +1754,12 @@
     "lemma": "Macedonius 3",
     "previous": "Macedonius 2",
     "next": "Macedonius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 128,
-        "author": "Enßlin"
+        "end": 128,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1849,10 +1861,12 @@
     "lemma": "Macedonius 12",
     "previous": "Macedonius 11",
     "next": "Macedonius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 129,
-        "author": "Enßlin"
+        "end": 129,
+        "author": "Enßlin."
       }
     ]
   },
@@ -1860,10 +1874,12 @@
     "lemma": "Macedonius 13",
     "previous": "Macedonius 12",
     "next": "Macedonius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 129,
-        "author": "Enßlin"
+        "end": 129,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2295,10 +2311,12 @@
     "lemma": "Machatas 3",
     "previous": "Machatas 2",
     "next": "Machatas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 153,
-        "author": "Kroll"
+        "end": 153,
+        "author": "Kroll."
       }
     ]
   },
@@ -2352,10 +2370,12 @@
     "lemma": "Macherathiter",
     "previous": "Machelones",
     "next": "Machia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 154,
-        "author": "Hölscher"
+        "end": 154,
+        "author": "Hölscher."
       }
     ]
   },
@@ -2363,10 +2383,12 @@
     "lemma": "Machia",
     "previous": "Macherathiter",
     "next": "Machimoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 154,
-        "author": "Bürchner"
+        "end": 154,
+        "author": "Bürchner."
       }
     ]
   },
@@ -2444,10 +2466,12 @@
     "lemma": "Machona",
     "previous": "Machon",
     "next": "Machorbe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 159,
-        "author": "Hölscher"
+        "end": 159,
+        "author": "Hölscher."
       }
     ]
   },
@@ -2516,10 +2540,12 @@
     "lemma": "Macolicum",
     "previous": "Machynoi",
     "next": "Macomada, Macomades 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 161,
-        "author": "MacDonald"
+        "end": 161,
+        "author": "Macdonald."
       }
     ]
   },
@@ -2560,10 +2586,13 @@
     "lemma": "Macomadia Rusticana",
     "previous": "Macomada, Macomades 3",
     "next": "Maconia Severiana",
+    "sort_key": "Macomadiarusticana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 161,
-        "author": "Dessau"
+        "end": 161,
+        "author": "Dessau."
       }
     ]
   },
@@ -2604,10 +2633,12 @@
     "lemma": "Macrianus 1",
     "previous": "Macri",
     "next": "Macrianus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Stein, [Arthur]"
+        "end": 162,
+        "author": "Stein."
       }
     ]
   },
@@ -2681,10 +2712,12 @@
     "lemma": "Macrinius 5",
     "previous": "Macrinius 4",
     "next": "Macrinius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 166,
-        "author": "Enßlin"
+        "end": 166,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2769,10 +2802,12 @@
     "lemma": "Macrinus 4",
     "previous": "Macrinus 3",
     "next": "Macrinus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 168,
-        "author": "Stein, [Arthur]"
+        "end": 168,
+        "author": "Stein."
       }
     ]
   },
@@ -2780,10 +2815,12 @@
     "lemma": "Macrinus 5",
     "previous": "Macrinus 4",
     "next": "Macrinus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 168,
-        "author": "Enßlin"
+        "end": 168,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2837,10 +2874,12 @@
     "lemma": "Ma(c)rius",
     "previous": "Macrinus 9",
     "next": "Macro",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 169,
-        "author": "Stein, [Arthur]"
+        "end": 169,
+        "author": "Stein."
       }
     ]
   },
@@ -2848,10 +2887,12 @@
     "lemma": "Macro",
     "previous": "Ma(c)rius",
     "next": "Macrobius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 169,
-        "author": "Münzer"
+        "end": 169,
+        "author": "Münzer."
       }
     ]
   },
@@ -2859,10 +2900,12 @@
     "lemma": "Macrobius 1",
     "previous": "Macro",
     "next": "Macrobius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 169,
-        "author": "Stein, [Arthur]"
+        "end": 169,
+        "author": "Stein."
       }
     ]
   },
@@ -2870,10 +2913,12 @@
     "lemma": "Macrobius 2",
     "previous": "Macrobius 1",
     "next": "Macrobius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 169,
-        "author": "Enßlin"
+        "end": 169,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2881,10 +2926,12 @@
     "lemma": "Macrobius 3",
     "previous": "Macrobius 2",
     "next": "Macrobius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 169,
-        "author": "Enßlin"
+        "end": 169,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2940,10 +2987,12 @@
     "lemma": "Macrobius 6",
     "previous": "Macrobius 5bis",
     "next": "Macrobius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 170,
-        "author": "Enßlin"
+        "end": 170,
+        "author": "Enßlin."
       }
     ]
   },
@@ -3323,10 +3372,12 @@
     "lemma": "Madmen",
     "previous": "Madmanna",
     "next": "Madmena",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Hölscher"
+        "end": 203,
+        "author": "Hölscher."
       }
     ]
   },
@@ -3334,10 +3385,12 @@
     "lemma": "Madmena",
     "previous": "Madmen",
     "next": "Μάδνασα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Hölscher"
+        "end": 204,
+        "author": "Hölscher."
       }
     ]
   },
@@ -3571,10 +3624,12 @@
     "lemma": "Maecianus 2",
     "previous": "Maecianus 1",
     "next": "Maecianus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 230,
-        "author": "Stein, [Arthur]"
+        "end": 230,
+        "author": "Stein."
       }
     ]
   },
@@ -3595,10 +3650,12 @@
     "lemma": "Maecilius",
     "previous": "Maecianus 3",
     "next": "Maecilius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 230,
-        "author": "Münzer"
+        "end": 230,
+        "author": "Münzer."
       }
     ]
   },
@@ -3641,10 +3698,12 @@
     "lemma": "Maecilius 4",
     "previous": "Maecilius 3",
     "next": "Maecilius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 231,
-        "author": "Fluss"
+        "end": 231,
+        "author": "Fluss."
       }
     ]
   },
@@ -3720,10 +3779,12 @@
     "lemma": "Maecius 3",
     "previous": "Maecius 2",
     "next": "Maecius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 233,
-        "author": "Fluss"
+        "end": 233,
+        "author": "Fluss."
       }
     ]
   },
@@ -3731,10 +3792,12 @@
     "lemma": "Maecius 4",
     "previous": "Maecius 3",
     "next": "Maecius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 233,
-        "author": "Kroll"
+        "end": 233,
+        "author": "Kroll."
       }
     ]
   },
@@ -3742,10 +3805,12 @@
     "lemma": "Maecius 5",
     "previous": "Maecius 4",
     "next": "Maecius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 233,
-        "author": "Stein, [Arthur]"
+        "end": 234,
+        "author": "Stein."
       }
     ]
   },
