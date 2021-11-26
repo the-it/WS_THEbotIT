@@ -1667,7 +1667,7 @@
   {
     "lemma": "Olympos 26-33",
     "previous": "Olympos 25",
-    "next": "Olympos 26",
+    "next": "Olympos 27",
     "sort_key": "Olympos 25z",
     "redirect": true,
     "proof_read": 2,
@@ -3047,10 +3047,12 @@
     "lemma": "Onesiphoros 1",
     "previous": "Onesimos 11",
     "next": "Onesiphoros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 470,
-        "author": "Enßlin"
+        "end": 470,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3093,10 +3095,12 @@
     "lemma": "Onesippos",
     "previous": "Onesiphoros 4",
     "next": "Onestes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 470,
-        "author": "Göber"
+        "end": 470,
+        "author": "Willi Göber."
       }
     ]
   },
@@ -3115,10 +3119,12 @@
     "lemma": "Onetor 1",
     "previous": "Onestes",
     "next": "Onetor 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 471,
-        "author": "Kolf"
+        "end": 471,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -3126,10 +3132,12 @@
     "lemma": "Onetor 2",
     "previous": "Onetor 1",
     "next": "Onetor 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 471,
-        "author": "Kolf"
+        "end": 471,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -3159,10 +3167,12 @@
     "lemma": "Onetorides 1",
     "previous": "Onetor 4",
     "next": "Onetorides 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 472,
-        "author": "Kroll"
+        "end": 472,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -3170,10 +3180,12 @@
     "lemma": "Onetorides 2",
     "previous": "Onetorides 1",
     "next": "Onetorides 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 472,
-        "author": "Lippold, Georg"
+        "end": 473,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -3353,10 +3365,12 @@
     "lemma": "Onites 1",
     "previous": "Onisia",
     "next": "Onites 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 477,
-        "author": "Scherling"
+        "end": 477,
+        "author": "Karl Scherling."
       }
     ]
   },
@@ -3491,9 +3505,12 @@
     "lemma": "Onkos 2",
     "previous": "Onkos 1",
     "next": "Onna",
+    "redirect": "Maske",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 482
+        "start": 482,
+        "end": 482
       }
     ]
   },
@@ -3501,10 +3518,12 @@
     "lemma": "Onna",
     "previous": "Onkos 2",
     "next": "Onne",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 482,
-        "author": "MacDonald"
+        "end": 482,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -3556,10 +3575,12 @@
     "lemma": "Onno",
     "previous": "Onnes 2",
     "next": "Onnophris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 483,
-        "author": "MacDonald"
+        "end": 483,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -3578,10 +3599,12 @@
     "lemma": "Onoadas",
     "previous": "Onnophris",
     "next": "Onoba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 484,
-        "author": "Sturm"
+        "end": 484,
+        "author": "J. Sturm."
       }
     ]
   },
@@ -3712,10 +3735,12 @@
     "lemma": "Onomarchos 2",
     "previous": "Onomarchos 1",
     "next": "Onomarchos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 505,
-        "author": "Kroll"
+        "end": 505,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -3789,10 +3814,12 @@
     "lemma": "Onomastos 3",
     "previous": "Onomastos 2",
     "next": "Onomatomanteia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 517,
-        "author": "Stein, [Arthur]"
+        "end": 517,
+        "author": "Stein."
       }
     ]
   },
@@ -3835,10 +3862,12 @@
     "lemma": "Onos",
     "previous": "Onorion",
     "next": "Onosandros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 521,
-        "author": "Lullies"
+        "end": 521,
+        "author": "R. Lullies."
       }
     ]
   },
@@ -3891,7 +3920,7 @@
   {
     "lemma": "Onthyrion",
     "previous": "Onoulf",
-    "next": "Ontossyasos",
+    "next": "Ὠντωσσυασος",
     "chapters": [
       {
         "start": 527,
@@ -3900,19 +3929,22 @@
     ]
   },
   {
-    "lemma": "Ontossyasos",
+    "lemma": "Ὠντωσσυασος",
     "previous": "Onthyrion",
     "next": "Onu gnathos 1",
+    "sort_key": "Ontossyasos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 527,
-        "author": "Ruge"
+        "end": 527,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Onu gnathos 1",
-    "previous": "Ontossyasos",
+    "previous": "Ὠντωσσυασος",
     "next": "Onu gnathos 2",
     "chapters": [
       {
@@ -3924,7 +3956,7 @@
   {
     "lemma": "Onu gnathos 2",
     "previous": "Onu gnathos 1",
-    "next": "Onu Ota",
+    "next": "Ὄνου Ὦτα",
     "chapters": [
       {
         "start": 528,
@@ -3933,19 +3965,22 @@
     ]
   },
   {
-    "lemma": "Onu Ota",
+    "lemma": "Ὄνου Ὦτα",
     "previous": "Onu gnathos 2",
     "next": "Onuava",
+    "sort_key": "Onu ota",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 528,
-        "author": "Ruge"
+        "end": 528,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Onuava",
-    "previous": "Onu Ota",
+    "previous": "Ὄνου Ὦτα",
     "next": "Onuba 1",
     "chapters": [
       {
@@ -3969,10 +4004,12 @@
     "lemma": "Onuba 2",
     "previous": "Onuba 1",
     "next": "Onulf",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Schulten"
+        "end": 529,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -4142,10 +4179,12 @@
     "lemma": "Opellius",
     "previous": "Opaon",
     "next": "Opellius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 539,
-        "author": "Münzer"
+        "end": 539,
+        "author": "F. Münzer."
       }
     ]
   },

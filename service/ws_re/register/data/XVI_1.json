@@ -1103,7 +1103,7 @@
   {
     "lemma": "Monate",
     "previous": "Monat",
-    "next": "Monaulis",
+    "next": "Μόναυλις",
     "chapters": [
       {
         "start": 74,
@@ -1112,19 +1112,22 @@
     ]
   },
   {
-    "lemma": "Monaulis",
+    "lemma": "Μόναυλις",
     "previous": "Monate",
     "next": "Monaulos",
+    "sort_key": "Monaulis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 74,
-        "author": "Ruge"
+        "end": 74,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Monaulos",
-    "previous": "Monaulis",
+    "previous": "Μόναυλις",
     "next": "Monaxius",
     "chapters": [
       {
@@ -1205,7 +1208,7 @@
   {
     "lemma": "Mondu nesos",
     "previous": "Μόνδου",
-    "next": "Monduttu",
+    "next": "Μονδούττου",
     "chapters": [
       {
         "start": 113,
@@ -1214,19 +1217,22 @@
     ]
   },
   {
-    "lemma": "Monduttu",
+    "lemma": "Μονδούττου",
     "previous": "Mondu nesos",
     "next": "Monedes",
+    "sort_key": "Monduttu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 113,
-        "author": "Herrmann"
+        "end": 113,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Monedes",
-    "previous": "Monduttu",
+    "previous": "Μονδούττου",
     "next": "Moneres",
     "redirect": "Monaedes",
     "proof_read": 2,
@@ -1241,10 +1247,12 @@
     "lemma": "Moneres",
     "previous": "Monedes",
     "next": "Monesi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 113,
-        "author": "Miltner, Franz"
+        "end": 113,
+        "author": "Franz Miltner."
       }
     ]
   },
@@ -1300,10 +1308,12 @@
     "lemma": "Moniarius",
     "previous": "Monetium",
     "next": "Monile",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 120,
-        "author": "Enßlin"
+        "end": 120,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1322,10 +1332,13 @@
     "lemma": "ad Monilia",
     "previous": "Monile",
     "next": "Monime",
+    "sort_key": "admonilia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 125,
-        "author": "Philipp"
+        "end": 125,
+        "author": "Hans Philipp."
       }
     ]
   },
@@ -1379,10 +1392,12 @@
     "lemma": "Monimos 4",
     "previous": "Monimos 3",
     "next": "Monimos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 126,
-        "author": "Enßlin"
+        "end": 126,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1390,10 +1405,12 @@
     "lemma": "Monimos 5",
     "previous": "Monimos 4",
     "next": "Monimos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 126,
-        "author": "Enßlin"
+        "end": 126,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1401,10 +1418,12 @@
     "lemma": "Monimos 6",
     "previous": "Monimos 5",
     "next": "Monimos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 126,
-        "author": "Enßlin"
+        "end": 126,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1412,10 +1431,12 @@
     "lemma": "Monimos 7",
     "previous": "Monimos 6",
     "next": "Monimos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 126,
-        "author": "Enßlin"
+        "end": 126,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1466,7 +1487,7 @@
   {
     "lemma": "Monitorium",
     "previous": "Moninas",
-    "next": "Monnara",
+    "next": "Μόνναρα",
     "redirect": "Callistratus",
     "proof_read": 2,
     "chapters": [
@@ -1477,19 +1498,22 @@
     ]
   },
   {
-    "lemma": "Monnara",
+    "lemma": "Μόνναρα",
     "previous": "Monitorium",
     "next": "Monnitios",
+    "sort_key": "Monnara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 127,
-        "author": "Ruge"
+        "end": 127,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Monnitios",
-    "previous": "Monnara",
+    "previous": "Μόνναρα",
     "next": "Monnius",
     "chapters": [
       {
@@ -1502,10 +1526,12 @@
     "lemma": "Monnius",
     "previous": "Monnitios",
     "next": "Monnulus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 128,
-        "author": "Münzer"
+        "end": 128,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1513,10 +1539,12 @@
     "lemma": "Monnulus",
     "previous": "Monnius",
     "next": "Monnus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 128,
-        "author": "Enßlin"
+        "end": 128,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1557,10 +1585,12 @@
     "lemma": "Monobazos 3",
     "previous": "Monobazos 2",
     "next": "Monobolon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 129,
-        "author": "Geyer"
+        "end": 129,
+        "author": "Fritz Geyer."
       }
     ]
   },
@@ -1579,10 +1609,12 @@
     "lemma": "Monocaleni",
     "previous": "Monobolon",
     "next": "Monochromata",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 129,
-        "author": "Fluss"
+        "end": 129,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -1646,7 +1678,7 @@
   {
     "lemma": "Monogisene",
     "previous": "Monoecus",
-    "next": "Monogis(s)a",
+    "next": "Μονόγισ(σ)α",
     "chapters": [
       {
         "start": 133,
@@ -1655,30 +1687,36 @@
     ]
   },
   {
-    "lemma": "Monogis(s)a",
+    "lemma": "Μονόγισ(σ)α",
     "previous": "Monogisene",
-    "next": "Monoglosson",
+    "next": "Μονογλῶσσον",
+    "sort_key": "Monogissa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 133,
-        "author": "Ruge"
+        "end": 133,
+        "author": "W. Ruge."
       }
     ]
   },
   {
-    "lemma": "Monoglosson",
-    "previous": "Monogis(s)a",
+    "lemma": "Μονογλῶσσον",
+    "previous": "Μονόγισ(σ)α",
     "next": "Monogramm",
+    "sort_key": "Monoglosson",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 133,
-        "author": "Herrmann"
+        "end": 133,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Monogramm",
-    "previous": "Monoglosson",
+    "previous": "Μονογλῶσσον",
     "next": "Monographos",
     "chapters": [
       {
@@ -1713,10 +1751,12 @@
     "lemma": "Monoikos 2",
     "previous": "Monoikos 1",
     "next": "Monokaminon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 144,
-        "author": "Ruge"
+        "end": 144,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -1770,10 +1810,12 @@
     "lemma": "Monokoloi",
     "previous": "Monokleros",
     "next": "Monoleus lacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 145,
-        "author": "Herrmann"
+        "end": 145,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -1803,10 +1845,12 @@
     "lemma": "Monophilus",
     "previous": "Monolykos",
     "next": "Monophthalmoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 145,
-        "author": "Enßlin"
+        "end": 145,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -1814,10 +1858,12 @@
     "lemma": "Monophthalmoi",
     "previous": "Monophilus",
     "next": "Monopodaria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 145,
-        "author": "Kroll"
+        "end": 145,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -1941,10 +1987,13 @@
     "lemma": "Mons Iovis",
     "previous": "Mons gaudii",
     "next": "Mons Mariorum",
+    "sort_key": "Monsiovis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 200,
-        "author": "Schulten"
+        "end": 200,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -1963,10 +2012,13 @@
     "lemma": "Mons Pinguis",
     "previous": "Mons Mariorum",
     "next": "Mons sacer",
+    "sort_key": "Monspinguis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 200,
-        "author": "Kroll"
+        "end": 200,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -2147,10 +2199,12 @@
     "lemma": "Montanus 6",
     "previous": "Montanus 5",
     "next": "Montanus 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 205,
-        "author": "Stein, [Arthur]"
+        "end": 205,
+        "author": "Stein."
       }
     ]
   },
@@ -2158,10 +2212,12 @@
     "lemma": "Montanus 7",
     "previous": "Montanus 6",
     "next": "Montanus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 205,
-        "author": "Stein, [Arthur]"
+        "end": 205,
+        "author": "Stein."
       }
     ]
   },
@@ -2191,10 +2247,12 @@
     "lemma": "Montanus 10",
     "previous": "Montanus 9",
     "next": "Montanus 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 205,
-        "author": "Enßlin"
+        "end": 205,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2202,10 +2260,12 @@
     "lemma": "Montanus 11",
     "previous": "Montanus 10",
     "next": "Montanus 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 205,
-        "author": "Enßlin"
+        "end": 205,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2246,10 +2306,12 @@
     "lemma": "Montanus 15",
     "previous": "Montanus 14",
     "next": "Montanus 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 205,
-        "author": "Enßlin"
+        "end": 205,
+        "author": "W. Enßlin."
       }
     ]
   },
