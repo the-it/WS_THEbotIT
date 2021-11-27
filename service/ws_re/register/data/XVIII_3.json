@@ -6898,7 +6898,7 @@
   {
     "lemma": "Panthoides",
     "previous": "Panthoidas",
-    "next": "Panthois, phyle",
+    "next": "φυλὴ Πανθωΐς",
     "chapters": [
       {
         "start": 777,
@@ -6907,19 +6907,22 @@
     ]
   },
   {
-    "lemma": "Panthois, phyle",
+    "lemma": "φυλὴ Πανθωΐς",
     "previous": "Panthoides",
     "next": "Panthoos, Panthus",
+    "sort_key": "Panthois phyle",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 778,
-        "author": "Ruge"
+        "end": 778,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Panthoos, Panthus",
-    "previous": "Panthois, phyle",
+    "previous": "φυλὴ Πανθωΐς",
     "next": "Pantias 1",
     "chapters": [
       {
@@ -6932,10 +6935,12 @@
     "lemma": "Pantias 1",
     "previous": "Panthoos, Panthus",
     "next": "Pantias 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 779,
-        "author": "Kirchner"
+        "end": 779,
+        "author": "Johannes Kirchner."
       }
     ]
   },
@@ -7033,10 +7038,12 @@
     "lemma": "Pantilius",
     "previous": "Pantikapes 3-4",
     "next": "Pantimathoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 828,
-        "author": "Münzer"
+        "end": 828,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -7112,10 +7119,12 @@
     "lemma": "Pantolabus",
     "previous": "Pantokrator",
     "next": "Pantoleon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 830,
-        "author": "Münzer"
+        "end": 830,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -7123,10 +7132,12 @@
     "lemma": "Pantoleon 1",
     "previous": "Pantolabus",
     "next": "Pantoleon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 830,
-        "author": "Kroll"
+        "end": 830,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -7145,10 +7156,12 @@
     "lemma": "Pantoleon 3",
     "previous": "Pantoleon 2",
     "next": "Pantomatrion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 830,
-        "author": "Enßlin"
+        "end": 830,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -7178,10 +7191,12 @@
     "lemma": "Pantuleius 1",
     "previous": "Pantomimus",
     "next": "Pantuleius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 869,
-        "author": "Stein, [Arthur]"
+        "end": 869,
+        "author": "Stein."
       }
     ]
   },
@@ -7200,10 +7215,12 @@
     "lemma": "Pantuleius 3",
     "previous": "Pantuleius 2",
     "next": "Pantuleius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 870,
-        "author": "Stein, [Arthur]"
+        "end": 870,
+        "author": "Stein."
       }
     ]
   },
@@ -7211,10 +7228,12 @@
     "lemma": "Pantuleius 4",
     "previous": "Pantuleius 3",
     "next": "Pantuleius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 870,
-        "author": "Münzer"
+        "end": 870,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -7393,10 +7412,13 @@
     "lemma": "Pap, Papa 3",
     "previous": "Pap, Papa 2",
     "next": "Pap, Papa 4",
+    "sort_key": "Pap,papa 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 924,
-        "author": "Enßlin"
+        "end": 924,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -7448,10 +7470,13 @@
     "lemma": "Pap, Papa 8",
     "previous": "Pap, Papa 7",
     "next": "Pap, Papa 9",
+    "sort_key": "Pap,papa 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 925,
-        "author": "Enßlin"
+        "end": 925,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -7529,7 +7554,7 @@
   {
     "lemma": "Papanios",
     "previous": "Papak",
-    "next": "Paparionos",
+    "next": "Παπαριωνος",
     "redirect": "Psilis",
     "proof_read": 2,
     "chapters": [
@@ -7540,19 +7565,22 @@
     ]
   },
   {
-    "lemma": "Paparionos",
+    "lemma": "Παπαριωνος",
     "previous": "Papanios",
     "next": "Papas",
+    "sort_key": "Paparionos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 935,
-        "author": "Ruge"
+        "end": 935,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Papas",
-    "previous": "Paparionos",
+    "previous": "Παπαριωνος",
     "next": "Paperius",
     "redirect": "Papaeus, Papas",
     "proof_read": 2,
@@ -7603,7 +7631,7 @@
   {
     "lemma": "Paphia",
     "previous": "Paphara",
-    "next": "Paphies",
+    "next": "Παφίης",
     "chapters": [
       {
         "start": 935,
@@ -7612,19 +7640,22 @@
     ]
   },
   {
-    "lemma": "Paphies",
+    "lemma": "Παφίης",
     "previous": "Paphia",
     "next": "Paphios",
+    "sort_key": "Paphies",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 935,
-        "author": "Ruge"
+        "end": 935,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Paphios",
-    "previous": "Paphies",
+    "previous": "Παφίης",
     "next": "Paphius",
     "chapters": [
       {
@@ -7705,10 +7736,13 @@
     "lemma": "Paphnutios, Papnūte 6",
     "previous": "Paphnutios, Papnūte 5",
     "next": "Paphnutios, Papnūte 7",
+    "sort_key": "Paphnutios,papnūte 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 937,
-        "author": "Enßlin"
+        "end": 937,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -7760,10 +7794,13 @@
     "lemma": "Paphnutios, Papnūte 11",
     "previous": "Paphnutios, Papnūte 10",
     "next": "Paphnutios, Papnūte 12",
+    "sort_key": "Paphnutios,papnūte 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 937,
-        "author": "Enßlin"
+        "end": 937,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -7771,10 +7808,13 @@
     "lemma": "Paphnutios, Papnūte 12",
     "previous": "Paphnutios, Papnūte 11",
     "next": "Paphos 1",
+    "sort_key": "Paphnutios,papnūte 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 937,
-        "author": "Enßlin"
+        "end": 937,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -7797,10 +7837,12 @@
     "lemma": "Paphos 2",
     "previous": "Paphos 1",
     "next": "Papia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 964,
-        "author": "Türk"
+        "end": 964,
+        "author": "G. Türk."
       }
     ]
   },
@@ -7988,13 +8030,12 @@
     "lemma": "Papinianus",
     "previous": "Papimos",
     "next": "Papinius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 980,
-        "author": "Enßlin"
-      },
-      {
-        "start": 980
+        "end": 980,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8002,10 +8043,12 @@
     "lemma": "Papinius 1",
     "previous": "Papinianus",
     "next": "Papinius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 980,
-        "author": "Stein, [Arthur]"
+        "end": 980,
+        "author": "Stein."
       }
     ]
   },
@@ -8156,10 +8199,12 @@
     "lemma": "Papirius 6",
     "previous": "Papirius 1-5",
     "next": "Papirius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1007,
-        "author": "Stein, [Arthur]"
+        "end": 1007,
+        "author": "Stein."
       }
     ]
   },
@@ -8200,10 +8245,12 @@
     "lemma": "Papirius 10",
     "previous": "Papirius 9",
     "next": "Papirius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1008,
-        "author": "Münzer"
+        "end": 1008,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -8321,10 +8368,12 @@
     "lemma": "Papirius 21",
     "previous": "Papirius 20",
     "next": "Papirius 22",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1011,
-        "author": "Münzer"
+        "end": 1012,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -8420,10 +8469,12 @@
     "lemma": "Papirius 30",
     "previous": "Papirius 29",
     "next": "Papirius 31",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1014,
-        "author": "Münzer"
+        "end": 1014,
+        "author": "F. Münzer."
       }
     ]
   },

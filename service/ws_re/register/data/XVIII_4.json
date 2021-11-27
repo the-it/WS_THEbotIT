@@ -704,10 +704,12 @@
     "lemma": "Parhedros",
     "previous": "Pargyetai",
     "next": "Paria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1472,
-        "author": "Münzer"
+        "end": 1472,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1186,10 +1188,12 @@
     "lemma": "Parmeno",
     "previous": "Parmeniskos 3",
     "next": "Parmenon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1572,
-        "author": "Münzer"
+        "end": 1572,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1208,10 +1212,12 @@
     "lemma": "Parmenon 2",
     "previous": "Parmenon 1",
     "next": "Parmenon 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1572,
-        "author": "Kroll"
+        "end": 1572,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -1219,10 +1225,12 @@
     "lemma": "Parmenon 3",
     "previous": "Parmenon 2",
     "next": "Parmensis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1572,
-        "author": "Wendel"
+        "end": 1572,
+        "author": "Carl Wendel."
       }
     ]
   },
@@ -1243,10 +1251,12 @@
     "lemma": "Parnasse",
     "previous": "Parmensis",
     "next": "Parnassios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1572,
-        "author": "Türk"
+        "end": 1572,
+        "author": "G. Türk."
       }
     ]
   },
@@ -1276,10 +1286,12 @@
     "lemma": "Parnassos 2",
     "previous": "Parnassos 1",
     "next": "Parnes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1663,
-        "author": "Türk"
+        "end": 1663,
+        "author": "G. Türk."
       }
     ]
   },
@@ -1322,10 +1334,12 @@
     "lemma": "Parnoi",
     "previous": "Parnethios",
     "next": "Parnon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1665,
-        "author": "Herrmann"
+        "end": 1665,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -1482,10 +1496,12 @@
     "lemma": "Paron 2",
     "previous": "Paron 1",
     "next": "Paron 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1778,
-        "author": "Lenschau"
+        "end": 1778,
+        "author": "Thomas Lenschau."
       }
     ]
   },
@@ -1493,10 +1509,12 @@
     "lemma": "Paron 3",
     "previous": "Paron 2",
     "next": "Paronna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1778,
-        "author": "Lenschau"
+        "end": 1778,
+        "author": "Thomas Lenschau."
       }
     ]
   },
@@ -1627,10 +1645,12 @@
     "lemma": "Parospus",
     "previous": "Paroreia 4",
     "next": "Parosta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1872,
-        "author": "Herrmann"
+        "end": 1872,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -1721,10 +1741,12 @@
     "lemma": "Parrasios 2",
     "previous": "Parrhasini",
     "next": "Parrasios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1874,
-        "author": "Münzer"
+        "end": 1874,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -1756,10 +1778,12 @@
     "lemma": "Parsiana",
     "previous": "Parricida",
     "next": "Parsidai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
-        "author": "Herrmann"
+        "end": 1880,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -1767,17 +1791,19 @@
     "lemma": "Parsidai",
     "previous": "Parsiana",
     "next": "Parsietai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
-        "author": "Herrmann"
+        "end": 1880,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Parsietai",
     "previous": "Parsidai",
-    "next": "Parsika ore",
+    "next": "Παρσικὰ ὄρη",
     "chapters": [
       {
         "start": 1880,
@@ -1786,19 +1812,22 @@
     ]
   },
   {
-    "lemma": "Parsika ore",
+    "lemma": "Παρσικὰ ὄρη",
     "previous": "Parsietai",
     "next": "Parsioi 1",
+    "sort_key": "Parsikaore",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
-        "author": "Herrmann"
+        "end": 1880,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Parsioi 1",
-    "previous": "Parsika ore",
+    "previous": "Παρσικὰ ὄρη",
     "next": "Parsioi 2",
     "redirect": "Paropamisadai",
     "proof_read": 2,
@@ -1824,10 +1853,12 @@
     "lemma": "Parsondas",
     "previous": "Parsioi 2",
     "next": "Parsyetai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
-        "author": "Miller"
+        "end": 1880,
+        "author": "J. Miller."
       }
     ]
   },
@@ -1905,10 +1936,12 @@
     "lemma": "Parthenes",
     "previous": "Parthax",
     "next": "Parthenia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1884,
-        "author": "Dörner"
+        "end": 1884,
+        "author": "F. K. Dörner."
       }
     ]
   },
@@ -2065,10 +2098,12 @@
     "lemma": "Parthenion 7",
     "previous": "Parthenion 6",
     "next": "Parthenios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1891,
-        "author": "Keil"
+        "end": 1891,
+        "author": "J. Keil."
       }
     ]
   },

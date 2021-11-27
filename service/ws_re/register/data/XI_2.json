@@ -746,10 +746,12 @@
     "lemma": "Konon 7",
     "previous": "Konon 6",
     "next": "Konon 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1335,
-        "author": "Stein, [Arthur]"
+        "end": 1335,
+        "author": "Stein."
       }
     ]
   },
@@ -832,10 +834,13 @@
     "lemma": "Κόνωνος βωμοί",
     "previous": "Kononeia",
     "next": "Konope",
+    "sort_key": "Kononosbomoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1341,
-        "author": "Fischer"
+        "end": 1341,
+        "author": "Fischer."
       }
     ]
   },
@@ -1145,10 +1150,12 @@
     "lemma": "Kophaios",
     "previous": "Kopfsteuer",
     "next": "Kophanta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1361,
-        "author": "Wecker"
+        "end": 1361,
+        "author": "Wecker."
       }
     ]
   },
@@ -1227,7 +1234,7 @@
   {
     "lemma": "Kopis",
     "previous": "Kophos limen 2",
-    "next": "Koplanion pedion",
+    "next": "Κοπλάνιον πεδίον",
     "proof_read": 3,
     "chapters": [
       {
@@ -1238,19 +1245,22 @@
     ]
   },
   {
-    "lemma": "Koplanion pedion",
+    "lemma": "Κοπλάνιον πεδίον",
     "previous": "Kopis",
     "next": "Koponios",
+    "sort_key": "Koplanionpedion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1363,
-        "author": "Schulten"
+        "end": 1363,
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Koponios",
-    "previous": "Koplanion pedion",
+    "previous": "Κοπλάνιον πεδίον",
     "next": "Κωποξύσται",
     "proof_read": 3,
     "chapters": [
@@ -1747,10 +1757,13 @@
     "lemma": "Κόραμα κώμη",
     "previous": "Koralloi",
     "next": "Korankaloi",
+    "sort_key": "Koramakome",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1377,
-        "author": "Honigmann"
+        "end": 1377,
+        "author": "Honigmann."
       }
     ]
   },
@@ -2204,7 +2217,7 @@
   {
     "lemma": "Κορησός 1",
     "previous": "Κορησός",
-    "next": "Koresos 2",
+    "next": "Κορησός 2",
     "chapters": [
       {
         "start": 1392,
@@ -2213,24 +2226,28 @@
     ]
   },
   {
-    "lemma": "Koresos 2",
+    "lemma": "Κορησός 2",
     "previous": "Κορησός 1",
     "next": "Koretos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1392,
-        "author": "Bürchner"
+        "end": 1392,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Koretos",
-    "previous": "Koresos 2",
+    "previous": "Κορησός 2",
     "next": "Koreur",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1392,
-        "author": "Herrmann"
+        "end": 1392,
+        "author": "Herrmann."
       }
     ]
   },
