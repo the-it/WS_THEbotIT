@@ -470,7 +470,7 @@
   {
     "lemma": "Metanoia",
     "previous": "Metaneira 3",
-    "next": "Metaon",
+    "next": "Μέταον",
     "proof_read": 3,
     "chapters": [
       {
@@ -481,19 +481,22 @@
     ]
   },
   {
-    "lemma": "Metaon",
+    "lemma": "Μέταον",
     "previous": "Metanoia",
     "next": "Metapa",
+    "sort_key": "Metaon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1325,
-        "author": "Zschietzschmann"
+        "end": 1325,
+        "author": "Zschietzschmann."
       }
     ]
   },
   {
     "lemma": "Metapa",
-    "previous": "Metaon",
+    "previous": "Μέταον",
     "next": "Metaphretor",
     "proof_read": 3,
     "chapters": [
@@ -611,7 +614,7 @@
   {
     "lemma": "Metas",
     "previous": "Μεταρὶς εἴσχυσις",
-    "next": "Metasoris",
+    "next": "Μετάσωρις",
     "chapters": [
       {
         "start": 1368,
@@ -620,19 +623,22 @@
     ]
   },
   {
-    "lemma": "Metasoris",
+    "lemma": "Μετάσωρις",
     "previous": "Metas",
     "next": "Metator",
+    "sort_key": "Metasoris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1368,
-        "author": "Herrmann"
+        "end": 1368,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Metator",
-    "previous": "Metasoris",
+    "previous": "Μετάσωρις",
     "next": "Metaur(ius)",
     "proof_read": 3,
     "chapters": [
@@ -830,10 +836,12 @@
     "lemma": "Meterius 2",
     "previous": "Meterius 1",
     "next": "Meterius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1375,
-        "author": "Enßlin"
+        "end": 1375,
+        "author": "Enßlin."
       }
     ]
   },
@@ -912,10 +920,13 @@
     "lemma": "Methen, Mithne",
     "previous": "Methe",
     "next": "Methodios",
+    "sort_key": "Methen,mithne",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1380,
-        "author": "Hölscher"
+        "end": 1380,
+        "author": "Hölscher."
       }
     ]
   },
@@ -934,10 +945,12 @@
     "lemma": "Methon",
     "previous": "Methodios",
     "next": "Methone 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1381,
-        "author": "Becher"
+        "end": 1381,
+        "author": "Becher."
       }
     ]
   },
@@ -1059,10 +1072,12 @@
     "lemma": "Methydotes",
     "previous": "Methurides",
     "next": "Methydrion 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1387,
-        "author": "Kruse"
+        "end": 1387,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -1276,10 +1291,12 @@
     "lemma": "Metilius 4",
     "previous": "Metilius 3",
     "next": "Metilius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1398,
-        "author": "Stein, [Arthur]"
+        "end": 1398,
+        "author": "Stein."
       }
     ]
   },
@@ -1457,10 +1474,12 @@
     "lemma": "Metilius 18",
     "previous": "Metilius 17",
     "next": "Metilius 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1400,
-        "author": "Stein, [Arthur]"
+        "end": 1400,
+        "author": "Stein."
       }
     ]
   },
@@ -1693,10 +1712,12 @@
     "lemma": "Metion 2",
     "previous": "Metion 1",
     "next": "Metiosedum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1409,
-        "author": "Burckhardt"
+        "end": 1409,
+        "author": "Burckhardt."
       }
     ]
   },
@@ -1827,10 +1848,12 @@
     "lemma": "Meton 4",
     "previous": "Meton 3",
     "next": "Metopa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1466,
-        "author": "Münzer"
+        "end": 1466,
+        "author": "Münzer."
       }
     ]
   },
@@ -2021,10 +2044,12 @@
     "lemma": "Metrobios 1",
     "previous": "Metridatis regnum",
     "next": "Metrobios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1474,
-        "author": "Münzer"
+        "end": 1474,
+        "author": "Münzer."
       }
     ]
   },
@@ -2248,10 +2273,12 @@
     "lemma": "Metrodoros 17",
     "previous": "Metrodoros 16",
     "next": "Metrodoros 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1480,
-        "author": "Kroll"
+        "end": 1480,
+        "author": "Kroll."
       }
     ]
   },
@@ -2270,10 +2297,12 @@
     "lemma": "Metrodoros 19",
     "previous": "Metrodoros 18",
     "next": "Metrodoros 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1480,
-        "author": "Fritz"
+        "end": 1480,
+        "author": "K. v. Fritz."
       }
     ]
   },
@@ -2281,10 +2310,12 @@
     "lemma": "Metrodoros 20",
     "previous": "Metrodoros 19",
     "next": "Metrodoros 21",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1480,
-        "author": "Fritz"
+        "end": 1480,
+        "author": "K. v. Fritz."
       }
     ]
   },
@@ -2336,10 +2367,12 @@
     "lemma": "Metrodoros 25",
     "previous": "Metrodoros 24",
     "next": "Metrodoros 25a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1482,
-        "author": "Kroll"
+        "end": 1482,
+        "author": "Kroll."
       }
     ]
   },
@@ -2347,10 +2380,12 @@
     "lemma": "Metrodoros 25a",
     "previous": "Metrodoros 25",
     "next": "Metrodoros 26",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1482,
-        "author": "Kroll"
+        "end": 1482,
+        "author": "Kroll."
       }
     ]
   },
@@ -2391,10 +2426,12 @@
     "lemma": "Metrodoros 29",
     "previous": "Metrodoros 28",
     "next": "Metrodoros 30",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1483,
-        "author": "Kroll"
+        "end": 1483,
+        "author": "Kroll."
       }
     ]
   },
@@ -2457,10 +2494,12 @@
     "lemma": "Metronax",
     "previous": "Metron 2",
     "next": "Metronius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1485,
-        "author": "Kroll"
+        "end": 1485,
+        "author": "Kroll."
       }
     ]
   },
@@ -2468,10 +2507,12 @@
     "lemma": "Metronius",
     "previous": "Metronax",
     "next": "Metronomoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1485,
-        "author": "Enßlin"
+        "end": 1485,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2534,10 +2575,12 @@
     "lemma": "Metrophanes 2",
     "previous": "Metrophanes 1",
     "next": "Metrophanes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1491,
-        "author": "Enßlin"
+        "end": 1491,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2545,10 +2588,12 @@
     "lemma": "Metrophanes 3",
     "previous": "Metrophanes 2",
     "next": "Metrophanes 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1491,
-        "author": "Enßlin"
+        "end": 1491,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2655,10 +2700,12 @@
     "lemma": "Metropolis 6",
     "previous": "Metropolis 5",
     "next": "Metropolis 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1496,
-        "author": "Kroll"
+        "end": 1496,
+        "author": "Kroll."
       }
     ]
   },
@@ -2688,10 +2735,12 @@
     "lemma": "Metropolis 9",
     "previous": "Metropolis 8",
     "next": "Metropolis 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1497,
-        "author": "Fiehn"
+        "end": 1497,
+        "author": "Fiehn."
       }
     ]
   },
@@ -2721,10 +2770,12 @@
     "lemma": "Mettius 1",
     "previous": "Mettius",
     "next": "Mettius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1498,
-        "author": "Münzer"
+        "end": 1498,
+        "author": "Münzer."
       }
     ]
   },
@@ -2857,10 +2908,12 @@
     "lemma": "Mettius 12",
     "previous": "Mettis",
     "next": "Metturicum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1503,
-        "author": "Enßlin"
+        "end": 1503,
+        "author": "Enßlin."
       }
     ]
   },
@@ -2868,10 +2921,12 @@
     "lemma": "Metturicum",
     "previous": "Mettius 12",
     "next": "Metubarbis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1503,
-        "author": "Schulten"
+        "end": 1503,
+        "author": "Schulten."
       }
     ]
   },
@@ -3016,10 +3071,12 @@
     "lemma": "Mevius 3",
     "previous": "Mevius 2",
     "next": "Mevius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1508,
-        "author": "Stein, [Arthur]"
+        "end": 1508,
+        "author": "Stein."
       }
     ]
   },
@@ -3027,10 +3084,12 @@
     "lemma": "Mevius 4",
     "previous": "Mevius 3",
     "next": "Mevius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1508,
-        "author": "Münzer"
+        "end": 1508,
+        "author": "Münzer."
       }
     ]
   },
@@ -3126,10 +3185,12 @@
     "lemma": "Mevius 13",
     "previous": "Mevius 12",
     "next": "Mevius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1511,
-        "author": "Stein, [Arthur]"
+        "end": 1511,
+        "author": "Stein."
       }
     ]
   },
@@ -3954,10 +4015,12 @@
     "lemma": "Migdal 8",
     "previous": "Migdal 7",
     "next": "Migdal 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1550,
-        "author": "Hölscher"
+        "end": 1550,
+        "author": "Hölscher."
       }
     ]
   },
@@ -3965,10 +4028,12 @@
     "lemma": "Migdal 9",
     "previous": "Migdal 8",
     "next": "Migdal 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1550,
-        "author": "Hölscher"
+        "end": 1550,
+        "author": "Hölscher."
       }
     ]
   },
@@ -4044,10 +4109,12 @@
     "lemma": "Miggin 3",
     "previous": "Miggin 2",
     "next": "Miggin 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1550,
-        "author": "Enßlin"
+        "end": 1550,
+        "author": "Enßlin."
       }
     ]
   },
@@ -4144,7 +4211,7 @@
   {
     "lemma": "Mikatanoi",
     "previous": "Mihrnarse",
-    "next": "Mikinas",
+    "next": "Μικίνας",
     "chapters": [
       {
         "start": 1553,
@@ -4153,19 +4220,22 @@
     ]
   },
   {
-    "lemma": "Mikinas",
+    "lemma": "Μικίνας",
     "previous": "Mikatanoi",
     "next": "Mikines",
+    "sort_key": "Mikinas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1553,
-        "author": "Modrze"
+        "end": 1553,
+        "author": "Modrze."
       }
     ]
   },
   {
     "lemma": "Mikines",
-    "previous": "Mikinas",
+    "previous": "Μικίνας",
     "next": "Mikinnas",
     "chapters": [
       {
@@ -4178,10 +4248,12 @@
     "lemma": "Mikinnas",
     "previous": "Mikines",
     "next": "Mikinos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1554,
-        "author": "Oldfather"
+        "end": 1554,
+        "author": "Oldfather."
       }
     ]
   },
@@ -4313,10 +4385,12 @@
     "lemma": "Mikkion 1",
     "previous": "Mikkiades",
     "next": "Mikkion 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1557,
-        "author": "Oldfather"
+        "end": 1557,
+        "author": "Oldfather."
       }
     ]
   },
@@ -4381,10 +4455,12 @@
     "lemma": "Mikkylos",
     "previous": "Mikkylion",
     "next": "Mikolito",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1557,
-        "author": "Kroll"
+        "end": 1557,
+        "author": "Kroll."
       }
     ]
   },
@@ -4405,10 +4481,12 @@
     "lemma": "Mikon 1",
     "previous": "Mikolito",
     "next": "Mikon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1557,
-        "author": "Kolf"
+        "end": 1557,
+        "author": "van der Kolf."
       }
     ]
   },
@@ -4449,10 +4527,12 @@
     "lemma": "Mikon 5",
     "previous": "Mikon 4",
     "next": "Mikra Thalassa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1561,
-        "author": "Kroll"
+        "end": 1561,
+        "author": "Kroll."
       }
     ]
   },
@@ -4460,10 +4540,13 @@
     "lemma": "Mikra Thalassa",
     "previous": "Mikon 5",
     "next": "Mikrinas",
+    "sort_key": "Mikrathalassa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1561,
-        "author": "Ruge"
+        "end": 1561,
+        "author": "Ruge."
       }
     ]
   },
@@ -4471,10 +4554,12 @@
     "lemma": "Mikrinas",
     "previous": "Mikra Thalassa",
     "next": "Miktion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1561,
-        "author": "Oldfather"
+        "end": 1561,
+        "author": "Oldfather."
       }
     ]
   },
@@ -4508,10 +4593,12 @@
     "lemma": "Mikylion",
     "previous": "Miktis",
     "next": "Mikythion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1561,
-        "author": "Münzer"
+        "end": 1561,
+        "author": "Münzer."
       }
     ]
   },
@@ -4541,10 +4628,12 @@
     "lemma": "Mikythos 2",
     "previous": "Mikythos 1",
     "next": "Mikythos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1563,
-        "author": "Becher"
+        "end": 1563,
+        "author": "Becher."
       }
     ]
   },
@@ -4585,10 +4674,12 @@
     "lemma": "Milanion 2",
     "previous": "Milanion 1",
     "next": "Milanion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Burckhardt"
+        "end": 1568,
+        "author": "Burckhardt."
       }
     ]
   },
@@ -4596,10 +4687,12 @@
     "lemma": "Milanion 3",
     "previous": "Milanion 2",
     "next": "Milatis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Burckhardt"
+        "end": 1568,
+        "author": "Burckhardt."
       }
     ]
   },
@@ -4769,10 +4862,12 @@
     "lemma": "Miletis",
     "previous": "Miletes",
     "next": "Mileto",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1583,
-        "author": "Oberhummer"
+        "end": 1583,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -4815,10 +4910,12 @@
     "lemma": "Miletopolis 3",
     "previous": "Miletopolis 2",
     "next": "Miletopolitis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1585,
-        "author": "Kroll"
+        "end": 1585,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -4892,10 +4989,12 @@
     "lemma": "Miletuteichos",
     "previous": "Miletos 5",
     "next": "Mileu(m)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1659,
-        "author": "Ruge"
+        "end": 1659,
+        "author": "Ruge."
       }
     ]
   },
@@ -4975,10 +5074,12 @@
     "lemma": "Miliccenus",
     "previous": "Miliarius",
     "next": "Milichia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1664,
-        "author": "Enßlin"
+        "end": 1664,
+        "author": "Enßlin."
       }
     ]
   },
@@ -4999,10 +5100,12 @@
     "lemma": "Milichie",
     "previous": "Milichia",
     "next": "Milichius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1664,
-        "author": "Kroll"
+        "end": 1664,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -5010,10 +5113,12 @@
     "lemma": "Milichius",
     "previous": "Milichie",
     "next": "Milichus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1664,
-        "author": "Enßlin"
+        "end": 1664,
+        "author": "Enßlin."
       }
     ]
   },
@@ -5045,10 +5150,12 @@
     "lemma": "Milidunum",
     "previous": "Milicus",
     "next": "Milienus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1664,
-        "author": "MacDonald"
+        "end": 1664,
+        "author": "Macdonald."
       }
     ]
   },
@@ -5067,10 +5174,12 @@
     "lemma": "Milinus",
     "previous": "Milienus",
     "next": "Milionia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1664,
-        "author": "Enßlin"
+        "end": 1664,
+        "author": "Enßlin."
       }
     ]
   },
@@ -5262,10 +5371,12 @@
     "lemma": "Milo 3",
     "previous": "Milo 2",
     "next": "Milogonis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1672,
-        "author": "Fluss"
+        "end": 1672,
+        "author": "Fluss."
       }
     ]
   },
@@ -5387,10 +5498,12 @@
     "lemma": "Milon 9",
     "previous": "Milon 8",
     "next": "Milonia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1678,
-        "author": "Nachod"
+        "end": 1678,
+        "author": "Nachod."
       }
     ]
   },
@@ -5398,10 +5511,12 @@
     "lemma": "Milonia 1",
     "previous": "Milon 9",
     "next": "Milonia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1678,
-        "author": "Kroll"
+        "end": 1678,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -5433,10 +5548,12 @@
     "lemma": "Milonius 1",
     "previous": "Milonidas",
     "next": "Milonius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1678,
-        "author": "Stein, [Arthur]"
+        "end": 1678,
+        "author": "A. Stein."
       }
     ]
   },
@@ -5455,10 +5572,12 @@
     "lemma": "Milonius 3",
     "previous": "Milonius 2",
     "next": "Miltas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1678,
-        "author": "Stein, [Arthur]"
+        "end": 1678,
+        "author": "A. Stein."
       }
     ]
   },
@@ -5552,10 +5671,12 @@
     "lemma": "Miltiades 7",
     "previous": "Miltiades 6",
     "next": "Miltiades 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1705,
-        "author": "Deichgräber"
+        "end": 1705,
+        "author": "Deichgräber."
       }
     ]
   },
@@ -5610,10 +5731,12 @@
     "lemma": "Milto",
     "previous": "Miltine",
     "next": "Miltodes Mons",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1707,
-        "author": "Fiehn"
+        "end": 1707,
+        "author": "Fiehn."
       }
     ]
   },

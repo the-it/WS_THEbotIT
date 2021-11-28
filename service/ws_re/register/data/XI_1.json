@@ -2530,10 +2530,12 @@
     "lemma": "Kendriseis",
     "previous": "Kendreiseiai",
     "next": "Kendrisos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 171,
-        "author": "Adler"
+        "end": 171,
+        "author": "Adler."
       }
     ]
   },
@@ -2587,10 +2589,12 @@
     "lemma": "Kentauropolis",
     "previous": "Kentauren",
     "next": "Kentauros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 178,
-        "author": "Geisau"
+        "end": 178,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2609,7 +2613,7 @@
   {
     "lemma": "Kentenarion 1",
     "previous": "Kentauros",
-    "next": "Kentenarion 2",
+    "next": "Κεντηνάριον 2",
     "chapters": [
       {
         "start": 179,
@@ -2618,19 +2622,22 @@
     ]
   },
   {
-    "lemma": "Kentenarion 2",
+    "lemma": "Κεντηνάριον 2",
     "previous": "Kentenarion 1",
     "next": "Kentoripa",
+    "sort_key": "Kentenarion 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 179,
-        "author": "Regling"
+        "end": 179,
+        "author": "Regling."
       }
     ]
   },
   {
     "lemma": "Kentoripa",
-    "previous": "Kentenarion 2",
+    "previous": "Κεντηνάριον 2",
     "next": "Kentriadai",
     "chapters": [
       {
@@ -2654,7 +2661,7 @@
   {
     "lemma": "Kentrites",
     "previous": "Kentriadai",
-    "next": "Keondai",
+    "next": "Κεῶνδαι",
     "chapters": [
       {
         "start": 181,
@@ -2663,19 +2670,22 @@
     ]
   },
   {
-    "lemma": "Keondai",
+    "lemma": "Κεῶνδαι",
     "previous": "Kentrites",
     "next": "Keos 1",
+    "sort_key": "Keondai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 181,
-        "author": "Geisau"
+        "end": 181,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Keos 1",
-    "previous": "Keondai",
+    "previous": "Κεῶνδαι",
     "next": "Keos 2",
     "chapters": [
       {
@@ -2748,10 +2758,12 @@
     "lemma": "Kephalen",
     "previous": "Kephale 2",
     "next": "Kephalion 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 190,
-        "author": "Adler"
+        "end": 190,
+        "author": "Adler."
       }
     ]
   },
@@ -2770,10 +2782,12 @@
     "lemma": "Kephalion 2",
     "previous": "Kephalion 1",
     "next": "Kephalion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 191,
-        "author": "Kroll"
+        "end": 191,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -2839,10 +2853,12 @@
     "lemma": "Kephallenia 3",
     "previous": "Kephallenia 2",
     "next": "Kephalleniai Nesoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 216,
-        "author": "Bürchner"
+        "end": 216,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3048,10 +3064,12 @@
     "lemma": "Kephisodoros 1",
     "previous": "Kephisis limen",
     "next": "Kephisodoros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 226,
-        "author": "Kirchner"
+        "end": 226,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3150,10 +3168,12 @@
     "lemma": "Kephisodoros 10",
     "previous": "Kephisodoros 9",
     "next": "Kephisodotos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 230,
-        "author": "Lippold, Georg"
+        "end": 230,
+        "author": "Lippold."
       }
     ]
   },
@@ -3229,10 +3249,12 @@
     "lemma": "Kephisodotos 7",
     "previous": "Kephisodotos 6",
     "next": "Kephisodotos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 232,
-        "author": "Gerth"
+        "end": 232,
+        "author": "Gerth."
       }
     ]
   },
