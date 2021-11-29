@@ -8882,10 +8882,12 @@
     "lemma": "Papirius 64",
     "previous": "Papirius 63",
     "next": "Papirius 65",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1065,
-        "author": "Hanslik"
+        "end": 1065,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -8926,10 +8928,12 @@
     "lemma": "Papirius 67",
     "previous": "Papirius 66",
     "next": "Papirius 68",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1069,
-        "author": "Hanslik"
+        "end": 1069,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -8992,10 +8996,12 @@
     "lemma": "Papirius 73",
     "previous": "Papirius 72",
     "next": "Papirius 74",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1074,
-        "author": "Stein, [Arthur]"
+        "end": 1074,
+        "author": "Stein."
       }
     ]
   },
@@ -9046,10 +9052,12 @@
     "lemma": "Papirius 77",
     "previous": "Papirius 76",
     "next": "Papirius 78",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1075,
-        "author": "Lippold, Georg"
+        "end": 1075,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -9147,10 +9155,12 @@
     "lemma": "Papius 7",
     "previous": "Papius 6",
     "next": "Papius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1077,
-        "author": "Münzer"
+        "end": 1077,
+        "author": "Münzer."
       }
     ]
   },
@@ -9301,10 +9311,12 @@
     "lemma": "Pappos 3",
     "previous": "Pappos 2",
     "next": "Pappos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1106,
-        "author": "Enßlin"
+        "end": 1106,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -9367,9 +9379,12 @@
     "lemma": "Papus",
     "previous": "Papstbriefe",
     "next": "Papylos 1",
+    "redirect": "Aemilius 107",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1115
+        "start": 1115,
+        "end": 1115
       }
     ]
   },
@@ -9445,10 +9460,12 @@
     "lemma": "Paquius",
     "previous": "Papyrus",
     "next": "Paquius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1118,
-        "author": "Münzer"
+        "end": 1119,
+        "author": "Münzer."
       }
     ]
   },
@@ -9456,10 +9473,12 @@
     "lemma": "Paquius 1",
     "previous": "Paquius",
     "next": "Paquius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1119,
-        "author": "Münzer"
+        "end": 1119,
+        "author": "Münzer."
       }
     ]
   },
@@ -9489,10 +9508,12 @@
     "lemma": "Paquius 4",
     "previous": "Paquius 3",
     "next": "Parabasis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1124,
-        "author": "Münzer"
+        "end": 1124,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -9669,7 +9690,7 @@
   {
     "lemma": "Paradeisos 3",
     "previous": "Paradeisos 2",
-    "next": "Paradene",
+    "next": "Παραδηνή",
     "chapters": [
       {
         "start": 1134,
@@ -9678,19 +9699,22 @@
     ]
   },
   {
-    "lemma": "Paradene",
+    "lemma": "Παραδηνή",
     "previous": "Paradeisos 3",
     "next": "Paradoxa",
+    "sort_key": "Paradene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1134,
-        "author": "Herrmann"
+        "end": 1134,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Paradoxa",
-    "previous": "Paradene",
+    "previous": "Παραδηνή",
     "next": "Paradoxographoi",
     "chapters": [
       {
@@ -9724,7 +9748,7 @@
   {
     "lemma": "Paragenitae",
     "previous": "Paragauda",
-    "next": "Paragogion",
+    "next": "Παραγώγιον",
     "chapters": [
       {
         "start": 1169,
@@ -9733,19 +9757,22 @@
     ]
   },
   {
-    "lemma": "Paragogion",
+    "lemma": "Παραγώγιον",
     "previous": "Paragenitae",
     "next": "Paragraphe",
+    "sort_key": "Paragogion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1169,
-        "author": "Ziebarth"
+        "end": 1169,
+        "author": "E. Ziebarth."
       }
     ]
   },
   {
     "lemma": "Paragraphe",
-    "previous": "Paragogion",
+    "previous": "Παραγώγιον",
     "next": "Paragraphos",
     "chapters": [
       {
@@ -9793,10 +9820,13 @@
     "lemma": "Παραιπαφῖτις",
     "previous": "Paraibios",
     "next": "Paraisos",
+    "sort_key": "Paraipaphitis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1182,
-        "author": "Herrmann"
+        "end": 1182,
+        "author": "Albert Herrmann."
       }
     ]
   },

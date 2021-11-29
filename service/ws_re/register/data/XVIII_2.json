@@ -38,7 +38,7 @@
   {
     "lemma": "Orra",
     "previous": "Orphne",
-    "next": "Ὄρρεα 1",
+    "next": "Orrea 1",
     "redirect": "Hyria 2",
     "proof_read": 2,
     "chapters": [
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "lemma": "Ὄρρεα 1",
+    "lemma": "Orrea 1",
     "previous": "Orra",
     "next": "Ὄρρεα 2",
     "sort_key": "Orrea 1",
@@ -64,7 +64,7 @@
   },
   {
     "lemma": "Ὄρρεα 2",
-    "previous": "Ὄρρεα 1",
+    "previous": "Orrea 1",
     "next": "Orretum",
     "sort_key": "Orrea 2",
     "redirect": "Horreum 3",
@@ -470,10 +470,12 @@
     "lemma": "Orsobia",
     "previous": "Orsoaltios",
     "next": "Orsodates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1422,
-        "author": "Türk"
+        "end": 1422,
+        "author": "G. Türk."
       }
     ]
   },
@@ -492,10 +494,12 @@
     "lemma": "Orsolla",
     "previous": "Orsodates",
     "next": "Orsologiacum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1423,
-        "author": "Ruge"
+        "end": 1423,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -2062,10 +2066,12 @@
     "lemma": "Osroës 4",
     "previous": "Osroës 3",
     "next": "Osroës 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1591,
-        "author": "Junge"
+        "end": 1591,
+        "author": "P. J. Junge."
       }
     ]
   },
@@ -3141,10 +3147,12 @@
     "lemma": "Otacilius 13",
     "previous": "Otacilius 12",
     "next": "Otacilius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1865,
-        "author": "Groag"
+        "end": 1865,
+        "author": "Groag."
       }
     ]
   },
@@ -3200,10 +3208,12 @@
     "lemma": "Otacilius 18",
     "previous": "Otacilius 17",
     "next": "Otacilius 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1866,
-        "author": "Münzer"
+        "end": 1866,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -3454,10 +3464,12 @@
     "lemma": "Othona",
     "previous": "Othoca",
     "next": "Othone",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1870,
-        "author": "MacDonald"
+        "end": 1870,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -3572,10 +3584,12 @@
     "lemma": "Otilius",
     "previous": "Othrys",
     "next": "Otingis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1876,
-        "author": "Münzer"
+        "end": 1876,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -3796,10 +3810,12 @@
     "lemma": "Otreus 2",
     "previous": "Otreus 1",
     "next": "Otris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1883,
-        "author": "Scherling"
+        "end": 1883,
+        "author": "Karl Scherling."
       }
     ]
   },
