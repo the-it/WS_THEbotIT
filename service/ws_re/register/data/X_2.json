@@ -8622,10 +8622,12 @@
     "lemma": "Kallokissos",
     "previous": "Kallokagathios",
     "next": "Kallon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1754,
-        "author": "Stein, [Arthur]"
+        "end": 1754,
+        "author": "Stein."
       }
     ]
   },
@@ -8633,10 +8635,12 @@
     "lemma": "Kallon 1",
     "previous": "Kallokissos",
     "next": "Kallon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1754,
-        "author": "Oberhummer"
+        "end": 1754,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -8656,10 +8660,12 @@
     "lemma": "Kallon 3",
     "previous": "Kallon 2",
     "next": "Kallon 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1755,
-        "author": "Oldfather"
+        "end": 1755,
+        "author": "Oldfather."
       }
     ]
   },
@@ -8713,10 +8719,12 @@
     "lemma": "Kallos(?)",
     "previous": "Kallonitis",
     "next": "Kallydion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1755,
-        "author": "Bürchner"
+        "end": 1755,
+        "author": "Bürchner."
       }
     ]
   },
@@ -10907,7 +10915,7 @@
   {
     "lemma": "Kandyba",
     "previous": "Kandulos",
-    "next": "Kandys 1",
+    "next": "Κανδύς 1",
     "chapters": [
       {
         "start": 1861,
@@ -10916,29 +10924,36 @@
     ]
   },
   {
-    "lemma": "Kandys 1",
+    "lemma": "Κανδύς 1",
     "previous": "Kandyba",
-    "next": "Kandys 2",
+    "next": "Κανδύς 2",
+    "sort_key": "Kandys 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1861,
-        "author": "Weissbach"
+        "end": 1861,
+        "author": "Weissbach."
       }
     ]
   },
   {
-    "lemma": "Kandys 2",
-    "previous": "Kandys 1",
+    "lemma": "Κανδύς 2",
+    "previous": "Κανδύς 1",
     "next": "Kane",
+    "sort_key": "Kandys 2",
+    "redirect": "Χειριδωτὸς χιτών",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1861
+        "start": 1861,
+        "end": 1861
       }
     ]
   },
   {
     "lemma": "Kane",
-    "previous": "Kandys 2",
+    "previous": "Κανδύς 2",
     "next": "Kanebion",
     "chapters": [
       {
@@ -10987,10 +11002,12 @@
     "lemma": "Kanethos 2",
     "previous": "Kanethos 1",
     "next": "Kanethos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1867,
-        "author": "Latte"
+        "end": 1867,
+        "author": "Latte."
       }
     ]
   },
@@ -10998,10 +11015,12 @@
     "lemma": "Kanethos 3",
     "previous": "Kanethos 2",
     "next": "Kanethos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1867,
-        "author": "Latte"
+        "end": 1867,
+        "author": "Latte."
       }
     ]
   },
@@ -11009,10 +11028,12 @@
     "lemma": "Kanethos 4",
     "previous": "Kanethos 3",
     "next": "Kanetonnessis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1867,
-        "author": "Latte"
+        "end": 1867,
+        "author": "Latte."
       }
     ]
   },
@@ -11054,9 +11075,12 @@
     "lemma": "Kanis 1",
     "previous": "Kanipta",
     "next": "Kanis 2",
+    "redirect": "Kanaia",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1868
+        "start": 1868,
+        "end": 1868
       }
     ]
   },
@@ -11109,10 +11133,12 @@
     "lemma": "Kano",
     "previous": "Kannokos",
     "next": "Kanobus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1869,
-        "author": "Bürchner"
+        "end": 1869,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15613,10 +15639,12 @@
     "lemma": "Kassiope 4",
     "previous": "Kassiope 3",
     "next": "Kassiopeia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2315,
-        "author": "Bürchner"
+        "end": 2315,
+        "author": "Bürchner."
       }
     ]
   },
@@ -15671,10 +15699,13 @@
     "lemma": "Kassopas",
     "previous": "Kassopa",
     "next": "Kassoper",
+    "sort_key": "Kassopas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2334,
-        "author": "Fluss"
+        "end": 2334,
+        "author": "Fluss."
       }
     ]
   },
@@ -15730,10 +15761,12 @@
     "lemma": "Kassotis 2",
     "previous": "Kassotis 1",
     "next": "Kastabala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2335,
-        "author": "Geisau"
+        "end": 2335,
+        "author": "v. Geisau."
       }
     ]
   },

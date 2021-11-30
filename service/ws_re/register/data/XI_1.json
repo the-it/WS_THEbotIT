@@ -3422,10 +3422,12 @@
     "lemma": "Kephisos 7",
     "previous": "Kephisos 6",
     "next": "Kephisos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 248,
-        "author": "Bölte"
+        "end": 248,
+        "author": "Bölte."
       }
     ]
   },
@@ -3534,17 +3536,19 @@
     "lemma": "Kepoi 2",
     "previous": "Kepoi 1",
     "next": "Kepoi 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 251,
-        "author": "Bürchner"
+        "end": 251,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kepoi 3",
     "previous": "Kepoi 2",
-    "next": "Kepos",
+    "next": "Κῆπος",
     "chapters": [
       {
         "start": 251,
@@ -3554,19 +3558,23 @@
     ]
   },
   {
-    "lemma": "Kepos",
+    "lemma": "Κῆπος",
     "previous": "Kepoi 3",
     "next": "Kepouroi",
+    "sort_key": "Kepos",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 252
+        "start": 252,
+        "end": 252
       }
     ]
   },
   {
     "lemma": "Kepouroi",
-    "previous": "Kepos",
-    "next": "Kepranos",
+    "previous": "Κῆπος",
+    "next": "Κεπρανός",
     "chapters": [
       {
         "start": 252,
@@ -3575,19 +3583,22 @@
     ]
   },
   {
-    "lemma": "Kepranos",
+    "lemma": "Κεπρανός",
     "previous": "Kepouroi",
     "next": "Κεπρήλων Νέων",
+    "sort_key": "Kepranos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 252,
-        "author": "Bürchner"
+        "end": 252,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Κεπρήλων Νέων",
-    "previous": "Kepranos",
+    "previous": "Κεπρανός",
     "next": "Keraeitai",
     "sort_key": "Keprelon Neon",
     "redirect": "Kestroi",
@@ -3636,10 +3647,12 @@
     "lemma": "Keraïnes",
     "previous": "Keraia, Kerea, Kereai, Kereia 2",
     "next": "Keraites",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 253,
-        "author": "Bürchner"
+        "end": 253,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3727,9 +3740,12 @@
     "lemma": "Keramik",
     "previous": "Keramidas",
     "next": "Keramion",
+    "redirect": "Terrakotten",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 254
+        "start": 254,
+        "end": 254
       }
     ]
   },
@@ -3794,10 +3810,12 @@
     "lemma": "Keramyntes",
     "previous": "Keramos 3",
     "next": "Keraon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 256,
-        "author": "Adler"
+        "end": 256,
+        "author": "Adler."
       }
     ]
   },
@@ -3888,10 +3906,12 @@
     "lemma": "Kerasos",
     "previous": "Kerasia",
     "next": "Kerassai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
-        "author": "Kroll"
+        "end": 264,
+        "author": "Kroll."
       }
     ]
   },
@@ -3899,10 +3919,12 @@
     "lemma": "Kerassai",
     "previous": "Kerasos",
     "next": "Kerasus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
-        "author": "Bürchner"
+        "end": 264,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3910,10 +3932,12 @@
     "lemma": "Kerasus 1",
     "previous": "Kerassai",
     "next": "Kerasus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 264,
-        "author": "Ruge"
+        "end": 264,
+        "author": "Ruge."
       }
     ]
   },
@@ -3967,10 +3991,12 @@
     "lemma": "Kerauge",
     "previous": "Keration",
     "next": "Keraunia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
-        "author": "Wecker"
+        "end": 266,
+        "author": "Wecker."
       }
     ]
   },
@@ -3978,10 +4004,12 @@
     "lemma": "Keraunia 1",
     "previous": "Kerauge",
     "next": "Keraunia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
-        "author": "Wecker"
+        "end": 266,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3989,38 +4017,45 @@
     "lemma": "Keraunia 2",
     "previous": "Keraunia 1",
     "next": "Keraunia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
-        "author": "Fischer"
+        "end": 266,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Keraunia 3",
     "previous": "Keraunia 2",
-    "next": "Keraunie Hals",
+    "next": "Κεραυνίη Ἅλς",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
-        "author": "Adler"
+        "end": 266,
+        "author": "Adler."
       }
     ]
   },
   {
-    "lemma": "Keraunie Hals",
+    "lemma": "Κεραυνίη Ἅλς",
     "previous": "Keraunia 3",
     "next": "Keraunilia",
+    "sort_key": "Kerauniehals",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 266,
-        "author": "Bürchner"
+        "end": 266,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Keraunilia",
-    "previous": "Keraunie Hals",
+    "previous": "Κεραυνίη Ἅλς",
     "next": "Keraunioi",
     "chapters": [
       {
@@ -4033,29 +4068,34 @@
   {
     "lemma": "Keraunioi",
     "previous": "Keraunilia",
-    "next": "Keraunion oros",
+    "next": "Κεραύνιον ὄρος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
-        "author": "Oberhummer"
+        "end": 267,
+        "author": "Oberhummer."
       }
     ]
   },
   {
-    "lemma": "Keraunion oros",
+    "lemma": "Κεραύνιον ὄρος",
     "previous": "Keraunioi",
     "next": "Keraunios",
+    "sort_key": "Keraunionoros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
-        "author": "Ruge"
+        "end": 267,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Keraunios",
-    "previous": "Keraunion oros",
-    "next": "Keraunios lophos",
+    "previous": "Κεραύνιον ὄρος",
+    "next": "Κεραύνιος λόφος",
     "chapters": [
       {
         "start": 267,
@@ -4064,20 +4104,22 @@
     ]
   },
   {
-    "lemma": "Keraunios lophos",
+    "lemma": "Κεραύνιος λόφος",
     "previous": "Keraunios",
     "next": "Keraunische Berge 1",
+    "sort_key": "Keraunioslophos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 267,
         "end": 268,
-        "author": "Bölte"
+        "author": "Bölte."
       }
     ]
   },
   {
     "lemma": "Keraunische Berge 1",
-    "previous": "Keraunios lophos",
+    "previous": "Κεραύνιος λόφος",
     "next": "Keraunische Berge 2",
     "chapters": [
       {
@@ -4102,10 +4144,13 @@
     "lemma": "Keraunische Berge 3",
     "previous": "Keraunische Berge 2",
     "next": "Keraunobolos",
+    "sort_key": "Keraunischeberge 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 269,
-        "author": "Oberhummer"
+        "end": 269,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -4215,10 +4260,12 @@
     "lemma": "Kerbesier",
     "previous": "Kerbes",
     "next": "Kerbonios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 284,
-        "author": "Ruge"
+        "end": 284,
+        "author": "Ruge."
       }
     ]
   },
@@ -4263,10 +4310,12 @@
     "lemma": "Kerdemporos",
     "previous": "Kerchnis",
     "next": "Kerdeon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 284,
-        "author": "Adler"
+        "end": 284,
+        "author": "Adler."
       }
     ]
   },
@@ -4274,10 +4323,12 @@
     "lemma": "Kerdeon",
     "previous": "Kerdemporos",
     "next": "Kerdie",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 284,
-        "author": "Adler"
+        "end": 284,
+        "author": "Adler."
       }
     ]
   },
@@ -4285,10 +4336,12 @@
     "lemma": "Kerdie",
     "previous": "Kerdeon",
     "next": "Kerdo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 284,
-        "author": "Adler"
+        "end": 284,
+        "author": "Adler."
       }
     ]
   },
@@ -5186,29 +5239,33 @@
   {
     "lemma": "Kesbedion",
     "previous": "Kesareon",
-    "next": "Kesiana",
+    "next": "Κεσίανα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 357,
         "end": 358,
-        "author": "Ruge"
+        "author": "Ruge."
       }
     ]
   },
   {
-    "lemma": "Kesiana",
+    "lemma": "Κεσίανα",
     "previous": "Kesbedion",
     "next": "Keskos",
+    "sort_key": "Kesiana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 358,
-        "author": "Ruge"
+        "end": 358,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Keskos",
-    "previous": "Kesiana",
+    "previous": "Κεσίανα",
     "next": "Kesselstadt",
     "chapters": [
       {
@@ -5254,10 +5311,12 @@
     "lemma": "Kestria 2",
     "previous": "Kestria 1",
     "next": "Kestria 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 358,
-        "author": "Bürchner"
+        "end": 358,
+        "author": "Bürchner."
       }
     ]
   },
@@ -5309,7 +5368,7 @@
   {
     "lemma": "Kestros",
     "previous": "Kestroi",
-    "next": "Kesuna",
+    "next": "Κέσουνα",
     "chapters": [
       {
         "start": 359,
@@ -5318,24 +5377,29 @@
     ]
   },
   {
-    "lemma": "Kesuna",
+    "lemma": "Κέσουνα",
     "previous": "Kestros",
     "next": "Kestaion",
+    "sort_key": "Kesuna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 359,
-        "author": "Fluss"
+        "end": 359,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Kestaion",
-    "previous": "Kesuna",
+    "previous": "Κέσουνα",
     "next": "Ketamba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 360,
-        "author": "Kroll"
+        "end": 360,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -5343,10 +5407,13 @@
     "lemma": "Ketamba",
     "previous": "Kestaion",
     "next": "Ketaria",
+    "sort_key": "Ketamba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 360,
-        "author": "Bürchner"
+        "end": 360,
+        "author": "Bürchner."
       }
     ]
   },
@@ -7482,7 +7549,7 @@
   {
     "lemma": "Kiphison",
     "previous": "Kios 3",
-    "next": "Kipipene",
+    "next": "Κιπίπενε",
     "chapters": [
       {
         "start": 488,
@@ -7491,19 +7558,22 @@
     ]
   },
   {
-    "lemma": "Kipipene",
+    "lemma": "Κιπίπενε",
     "previous": "Kiphison",
     "next": "Kirbiaion",
+    "sort_key": "Kipipene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 488,
-        "author": "Fluss"
+        "end": 488,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Kirbiaion",
-    "previous": "Kipipene",
+    "previous": "Κιπίπενε",
     "next": "Kirchenordnungen",
     "chapters": [
       {
@@ -7683,10 +7753,12 @@
     "lemma": "Kisamos 2",
     "previous": "Kisamos 1",
     "next": "Kisamos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 516,
-        "author": "Bürchner"
+        "end": 516,
+        "author": "Bürchner."
       }
     ]
   },
@@ -7727,10 +7799,12 @@
     "lemma": "Kissa 2",
     "previous": "Kissa 1",
     "next": "Kissa 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 516,
-        "author": "Capelle"
+        "end": 516,
+        "author": "Capelle."
       }
     ]
   },
@@ -7738,10 +7812,12 @@
     "lemma": "Kissa 3",
     "previous": "Kissa 2",
     "next": "Kissa 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 516,
-        "author": "Capelle"
+        "end": 516,
+        "author": "Capelle."
       }
     ]
   },
@@ -7772,10 +7848,12 @@
     "lemma": "Kissa 6",
     "previous": "Kissa 5",
     "next": "Kissa 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 517,
-        "author": "Oberhummer"
+        "end": 517,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -8684,7 +8762,7 @@
   {
     "lemma": "Klaseas",
     "previous": "Klasa",
-    "next": "Klastanis",
+    "next": "Κλαστάνις",
     "chapters": [
       {
         "start": 553,
@@ -8693,19 +8771,22 @@
     ]
   },
   {
-    "lemma": "Klastanis",
+    "lemma": "Κλαστάνις",
     "previous": "Klaseas",
     "next": "Klauda",
+    "sort_key": "Klastanis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 553,
-        "author": "Bürchner"
+        "end": 553,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Klauda",
-    "previous": "Klastanis",
+    "previous": "Κλαστάνις",
     "next": "Klaudianos",
     "chapters": [
       {
@@ -8741,10 +8822,12 @@
     "lemma": "Klaudios 1",
     "previous": "Klaudieos",
     "next": "Klaudios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 554,
-        "author": "Kirchner"
+        "end": 554,
+        "author": "Kirchner."
       }
     ]
   },
@@ -8763,7 +8846,7 @@
     "lemma": "Klaudiunion",
     "previous": "Klaudios 2",
     "next": "Klaundes",
-    "redirect": "Ptolemaios 66",
+    "redirect": "Claudia 1",
     "proof_read": 2,
     "chapters": [
       {
@@ -8933,10 +9016,12 @@
     "lemma": "Kleandros 5",
     "previous": "Kleandros 4",
     "next": "Kleandros 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 558,
-        "author": "Kroll"
+        "end": 558,
+        "author": "Kroll."
       }
     ]
   },
@@ -12169,10 +12254,12 @@
     "lemma": "Kleosthenes 1",
     "previous": "Kleora",
     "next": "Kleosthenes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
-        "author": "Kroll"
+        "end": 806,
+        "author": "Kroll."
       }
     ]
   },
@@ -12180,10 +12267,12 @@
     "lemma": "Kleosthenes 2",
     "previous": "Kleosthenes 1",
     "next": "Kleosthenes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
-        "author": "Kroll"
+        "end": 806,
+        "author": "Kroll."
       }
     ]
   },
@@ -12191,10 +12280,12 @@
     "lemma": "Kleosthenes 3",
     "previous": "Kleosthenes 2",
     "next": "Kleostratos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
-        "author": "Gerth"
+        "end": 806,
+        "author": "Gerth."
       }
     ]
   },
@@ -12202,10 +12293,12 @@
     "lemma": "Kleostratos 1",
     "previous": "Kleosthenes 3",
     "next": "Kleostratos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
-        "author": "Kroll"
+        "end": 806,
+        "author": "Kroll."
       }
     ]
   },
@@ -12213,10 +12306,12 @@
     "lemma": "Kleostratos 2",
     "previous": "Kleostratos 1",
     "next": "Kleostratos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
-        "author": "Kroll"
+        "end": 806,
+        "author": "Kroll."
       }
     ]
   },
@@ -12224,10 +12319,12 @@
     "lemma": "Kleostratos 3",
     "previous": "Kleostratos 2",
     "next": "Kleostratos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 806,
-        "author": "Kroll"
+        "end": 806,
+        "author": "Kroll."
       }
     ]
   },
@@ -12259,10 +12356,12 @@
     "lemma": "Kleotimos",
     "previous": "Kleostratos 5",
     "next": "Kleoxenos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 807,
-        "author": "Kroll"
+        "end": 807,
+        "author": "Kroll."
       }
     ]
   },
@@ -12372,7 +12471,7 @@
   {
     "lemma": "Klerotai, klerotoi",
     "previous": "Kleros orines, politikes",
-    "next": "Klerotas",
+    "next": "Κληρωτὰς",
     "chapters": [
       {
         "start": 813,
@@ -12382,19 +12481,22 @@
     ]
   },
   {
-    "lemma": "Klerotas",
+    "lemma": "Κληρωτὰς",
     "previous": "Klerotai, klerotoi",
     "next": "Klerotoi Pythaistai",
+    "sort_key": "Klerotas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 814,
-        "author": "Oehler, J[ohann]"
+        "end": 814,
+        "author": "J. Oehler."
       }
     ]
   },
   {
     "lemma": "Klerotoi Pythaistai",
-    "previous": "Klerotas",
+    "previous": "Κληρωτὰς",
     "next": "Kleruchoi",
     "chapters": [
       {
@@ -15860,10 +15962,12 @@
     "lemma": "Kolarina",
     "previous": "Kolakretai",
     "next": "Kolax",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1069,
-        "author": "Moritz, [Bernhard]"
+        "end": 1069,
+        "author": "Moritz."
       }
     ]
   },
@@ -15917,10 +16021,12 @@
     "lemma": "Kolchis 2",
     "previous": "Kolchis 1",
     "next": "Kolchoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1071,
-        "author": "Weissbach"
+        "end": 1071,
+        "author": "Weissbach."
       }
     ]
   },
