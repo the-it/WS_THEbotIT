@@ -5360,7 +5360,7 @@
   {
     "lemma": "Laeetani",
     "previous": "Laederata",
-    "next": "Laeia",
+    "next": "Λαεία",
     "chapters": [
       {
         "start": 399,
@@ -5369,19 +5369,22 @@
     ]
   },
   {
-    "lemma": "Laeia",
+    "lemma": "Λαεία",
     "previous": "Laeetani",
     "next": "Laelia",
+    "sort_key": "Laeia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
-        "author": "Bürchner"
+        "end": 399,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Laelia",
-    "previous": "Laeia",
+    "previous": "Λαεία",
     "next": "Laeliacus",
     "chapters": [
       {
@@ -5407,10 +5410,12 @@
     "lemma": "Laeliana",
     "previous": "Laeliacus",
     "next": "Laelianus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
-        "author": "Stein, [Arthur]"
+        "end": 399,
+        "author": "Stein."
       }
     ]
   },
@@ -5418,10 +5423,12 @@
     "lemma": "Laelianus 1",
     "previous": "Laeliana",
     "next": "Laelianus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 399,
-        "author": "Groag"
+        "end": 399,
+        "author": "Groag."
       }
     ]
   },
@@ -5581,10 +5588,12 @@
     "lemma": "Laelius 12",
     "previous": "Laelius 11",
     "next": "Laelius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 414,
-        "author": "Lieben"
+        "end": 414,
+        "author": "Lieben."
       }
     ]
   },
@@ -5603,10 +5612,12 @@
     "lemma": "Laelius 14",
     "previous": "Laelius 13",
     "next": "Laelius 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 414,
-        "author": "Münzer"
+        "end": 414,
+        "author": "Münzer."
       }
     ]
   },
@@ -5701,10 +5712,12 @@
     "lemma": "Laelius 23",
     "previous": "Laelius 22",
     "next": "Laelius 24a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 417,
-        "author": "Münzer"
+        "end": 417,
+        "author": "Münzer."
       }
     ]
   },
@@ -5723,10 +5736,12 @@
     "lemma": "Laelius 24b",
     "previous": "Laelius 24a",
     "next": "Laelius 24c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 417,
-        "author": "Keune"
+        "end": 417,
+        "author": "Keune."
       }
     ]
   },
@@ -5734,10 +5749,12 @@
     "lemma": "Laelius 24c",
     "previous": "Laelius 24b",
     "next": "Laelius 24d",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 417,
-        "author": "Keune"
+        "end": 417,
+        "author": "Keune."
       }
     ]
   },
@@ -10001,10 +10018,12 @@
     "lemma": "Lampsilii",
     "previous": "Lampsakos",
     "next": "Lampsus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 592,
-        "author": "Dessau"
+        "end": 592,
+        "author": "Dessau."
       }
     ]
   },
@@ -10012,10 +10031,12 @@
     "lemma": "Lampsus 1",
     "previous": "Lampsilii",
     "next": "Lampsus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 592,
-        "author": "Stählin"
+        "end": 592,
+        "author": "Stählin."
       }
     ]
   },
@@ -10023,10 +10044,12 @@
     "lemma": "Lampsus 2",
     "previous": "Lampsus 1",
     "next": "Lampter",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 592,
-        "author": "Bürchner"
+        "end": 592,
+        "author": "Bürchner."
       }
     ]
   },
@@ -10045,10 +10068,12 @@
     "lemma": "Lampteria",
     "previous": "Lampter",
     "next": "Lamptrai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 592,
-        "author": "Kroll"
+        "end": 592,
+        "author": "Kroll."
       }
     ]
   },
@@ -10172,10 +10197,12 @@
     "lemma": "Lamyron",
     "previous": "Lamyra",
     "next": "Lamyros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 594,
-        "author": "Ruge"
+        "end": 594,
+        "author": "Ruge."
       }
     ]
   },
@@ -11085,10 +11112,12 @@
     "lemma": "Laodamas 2",
     "previous": "Laodamas 1",
     "next": "Laodamas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 697,
-        "author": "Meuli"
+        "end": 697,
+        "author": "Meuli."
       }
     ]
   },
@@ -11107,10 +11136,12 @@
     "lemma": "Laodamas 4",
     "previous": "Laodamas 3",
     "next": "Laodamas 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 698,
-        "author": "Meuli"
+        "end": 698,
+        "author": "Meuli."
       }
     ]
   },
@@ -11118,10 +11149,12 @@
     "lemma": "Laodamas 5",
     "previous": "Laodamas 4",
     "next": "Laodameia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 698,
-        "author": "Meuli"
+        "end": 698,
+        "author": "Meuli."
       }
     ]
   },
@@ -11173,10 +11206,12 @@
     "lemma": "Laodameia 5",
     "previous": "Laodameia 4",
     "next": "Laodameia 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 698,
-        "author": "Schmidt, M[agdalena]"
+        "end": 698,
+        "author": "M. Schmidt."
       }
     ]
   },
@@ -11184,10 +11219,12 @@
     "lemma": "Laodameia 6",
     "previous": "Laodameia 5",
     "next": "Laodameia 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 698,
-        "author": "Schmidt, M[agdalena]"
+        "end": 698,
+        "author": "M. Schmidt."
       }
     ]
   },
@@ -11228,10 +11265,12 @@
     "lemma": "Laodicius",
     "previous": "Laodameia 9",
     "next": "Laodike",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 699,
-        "author": "Seeck"
+        "end": 699,
+        "author": "Seeck."
       }
     ]
   },
@@ -11283,10 +11322,12 @@
     "lemma": "Laodike 4",
     "previous": "Laodike 3",
     "next": "Laodike 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 700,
-        "author": "Kroll"
+        "end": 700,
+        "author": "Kroll."
       }
     ]
   },
@@ -11294,10 +11335,12 @@
     "lemma": "Laodike 5",
     "previous": "Laodike 4",
     "next": "Laodike 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 700,
-        "author": "Kroll"
+        "end": 700,
+        "author": "Kroll."
       }
     ]
   },
@@ -11305,10 +11348,12 @@
     "lemma": "Laodike 6",
     "previous": "Laodike 5",
     "next": "Laodike 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 700,
-        "author": "Kroll"
+        "end": 700,
+        "author": "Kroll."
       }
     ]
   },
@@ -11316,10 +11361,12 @@
     "lemma": "Laodike 7",
     "previous": "Laodike 6",
     "next": "Laodike 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 700,
-        "author": "Kroll"
+        "end": 700,
+        "author": "Kroll."
       }
     ]
   },
@@ -11327,10 +11374,12 @@
     "lemma": "Laodike 8",
     "previous": "Laodike 7",
     "next": "Laodike 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 700,
-        "author": "Kroll"
+        "end": 700,
+        "author": "Kroll."
       }
     ]
   },
@@ -11338,10 +11387,12 @@
     "lemma": "Laodike 9",
     "previous": "Laodike 8",
     "next": "Laodike 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 700,
-        "author": "Kroll"
+        "end": 700,
+        "author": "Kroll."
       }
     ]
   },
@@ -11349,10 +11400,12 @@
     "lemma": "Laodike 10",
     "previous": "Laodike 9",
     "next": "Laodike 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 700,
-        "author": "Kroll"
+        "end": 700,
+        "author": "Kroll."
       }
     ]
   },
@@ -12270,10 +12323,12 @@
     "lemma": "Laophon",
     "previous": "Laonytos",
     "next": "Laophonte 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 759,
-        "author": "Obst"
+        "end": 759,
+        "author": "Obst."
       }
     ]
   },
@@ -12292,10 +12347,12 @@
     "lemma": "Laophonte 2",
     "previous": "Laophonte 1",
     "next": "Laophoon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 760,
-        "author": "Meuli"
+        "end": 760,
+        "author": "Meuli."
       }
     ]
   },
@@ -12303,10 +12360,12 @@
     "lemma": "Laophoon",
     "previous": "Laophonte 2",
     "next": "Laos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 760,
-        "author": "Meuli"
+        "end": 760,
+        "author": "Meuli."
       }
     ]
   },
@@ -12338,10 +12397,12 @@
     "lemma": "Laossos",
     "previous": "Laossoos",
     "next": "Laosthenidas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 760,
-        "author": "Obst"
+        "end": 760,
+        "author": "Obst."
       }
     ]
   },
@@ -12393,10 +12454,12 @@
     "lemma": "Laothoe 4",
     "previous": "Laothoe 3",
     "next": "Laothoe 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 761,
-        "author": "Scherling"
+        "end": 761,
+        "author": "Scherling."
       }
     ]
   },
@@ -12404,10 +12467,12 @@
     "lemma": "Laothoe 5",
     "previous": "Laothoe 4",
     "next": "Laothoes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 761,
-        "author": "Scherling"
+        "end": 761,
+        "author": "Scherling."
       }
     ]
   },
@@ -12415,10 +12480,12 @@
     "lemma": "Laothoes",
     "previous": "Laothoe 5",
     "next": "Lapathos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 761,
-        "author": "Scherling"
+        "end": 761,
+        "author": "Scherling."
       }
     ]
   },
@@ -12426,10 +12493,12 @@
     "lemma": "Lapathos",
     "previous": "Laothoes",
     "next": "Lapathus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 761,
-        "author": "Oberhummer"
+        "end": 761,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -13335,10 +13404,12 @@
     "lemma": "Larcius 7",
     "previous": "Larcius 6",
     "next": "Larcius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 799,
-        "author": "Fluss"
+        "end": 799,
+        "author": "Fluss."
       }
     ]
   },
@@ -13346,10 +13417,12 @@
     "lemma": "Larcius 8",
     "previous": "Larcius 7",
     "next": "Larcius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 799,
-        "author": "Fluss"
+        "end": 799,
+        "author": "Fluss."
       }
     ]
   },
@@ -13445,10 +13518,12 @@
     "lemma": "Larcius 17",
     "previous": "Larcius 16",
     "next": "Larcius 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 803,
-        "author": "Stein, [Arthur]"
+        "end": 803,
+        "author": "Stein."
       }
     ]
   },
@@ -13499,10 +13574,12 @@
     "lemma": "Larcius 22",
     "previous": "Larcius 21",
     "next": "Larcius 23",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 805,
-        "author": "Stein, [Arthur]"
+        "end": 805,
+        "author": "Stein."
       }
     ]
   },
@@ -13736,10 +13813,12 @@
     "lemma": "Largus 4",
     "previous": "Largus 3",
     "next": "Largus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 837,
-        "author": "Seeck"
+        "end": 837,
+        "author": "Seeck."
       }
     ]
   },
@@ -13769,10 +13848,12 @@
     "lemma": "Larichos",
     "previous": "Larice",
     "next": "Larides limen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 837,
-        "author": "Obst"
+        "end": 837,
+        "author": "Obst."
       }
     ]
   },
@@ -13791,10 +13872,12 @@
     "lemma": "Larignum",
     "previous": "Larides limen",
     "next": "Larike",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 837,
-        "author": "Philipp"
+        "end": 837,
+        "author": "Philipp."
       }
     ]
   },
@@ -13813,10 +13896,12 @@
     "lemma": "Larine 1",
     "previous": "Larike",
     "next": "Larine 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 838,
-        "author": "Kock"
+        "end": 838,
+        "author": "Kock."
       }
     ]
   },
@@ -13824,10 +13909,12 @@
     "lemma": "Larine 2",
     "previous": "Larine 1",
     "next": "Larinos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 838,
-        "author": "Kock"
+        "end": 838,
+        "author": "Kock."
       }
     ]
   },

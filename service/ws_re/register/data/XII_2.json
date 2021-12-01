@@ -4062,10 +4062,12 @@
     "lemma": "Lesbos 2",
     "previous": "Lesbos 1",
     "next": "Lesbos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2133,
-        "author": "Bürchner"
+        "end": 2133,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4172,10 +4174,12 @@
     "lemma": "Lesis",
     "previous": "Leschides",
     "next": "Lesora",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2136,
-        "author": "Philipp"
+        "end": 2136,
+        "author": "Philipp."
       }
     ]
   },
@@ -4455,10 +4459,12 @@
     "lemma": "Letoa 1",
     "previous": "Letinno",
     "next": "Letoa 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2145,
-        "author": "Bürchner"
+        "end": 2145,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4466,10 +4472,12 @@
     "lemma": "Letoa 2",
     "previous": "Letoa 1",
     "next": "Letoa 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2145,
-        "author": "Bürchner"
+        "end": 2145,
+        "author": "Bürchner."
       }
     ]
   },
@@ -4499,10 +4507,12 @@
     "lemma": "Letocetum",
     "previous": "Letoce",
     "next": "Leton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2145,
-        "author": "MacDonald"
+        "end": 2145,
+        "author": "Macdonald."
       }
     ]
   },
@@ -4554,10 +4564,12 @@
     "lemma": "Letopolis 2",
     "previous": "Letopolis 1",
     "next": "Letopolites nomos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2147,
-        "author": "Kees"
+        "end": 2147,
+        "author": "Kees."
       }
     ]
   },
@@ -4653,10 +4665,12 @@
     "lemma": "Leuca 2",
     "previous": "Leuca 1",
     "next": "Leucada",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2149,
-        "author": "MacDonald"
+        "end": 2149,
+        "author": "Macdonald."
       }
     ]
   },
@@ -5089,7 +5103,7 @@
   {
     "lemma": "Leukai Kaminoi",
     "previous": "Leukai 1",
-    "next": "Leukai Nampai",
+    "next": "Λευχαὶ Νάπαι",
     "chapters": [
       {
         "start": 2210,
@@ -5098,20 +5112,23 @@
     ]
   },
   {
-    "lemma": "Leukai Nampai",
+    "lemma": "Λευχαὶ Νάπαι",
     "previous": "Leukai Kaminoi",
     "next": "Leukaios",
+    "sort_key": "Leukai Napai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2211,
-        "author": "Fischer"
+        "end": 2211,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Leukaios",
-    "previous": "Leukai Nampai",
-    "next": "Leukai Stelai",
+    "previous": "Λευχαὶ Νάπαι",
+    "next": "Λευκαὶ Στῆλαι",
     "chapters": [
       {
         "start": 2211,
@@ -5120,19 +5137,22 @@
     ]
   },
   {
-    "lemma": "Leukai Stelai",
+    "lemma": "Λευκαὶ Στῆλαι",
     "previous": "Leukaios",
     "next": "Leukaithiopes",
+    "sort_key": "Leukaistelai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2211,
-        "author": "Bürchner"
+        "end": 2211,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Leukaithiopes",
-    "previous": "Leukai Stelai",
+    "previous": "Λευκαὶ Στῆλαι",
     "next": "Leukane",
     "chapters": [
       {
@@ -5200,10 +5220,12 @@
     "lemma": "Leukas 2",
     "previous": "Leukas 1",
     "next": "Leukas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2257,
-        "author": "Bürchner"
+        "end": 2257,
+        "author": "Bürchner."
       }
     ]
   },
@@ -5211,10 +5233,12 @@
     "lemma": "Leukas 3",
     "previous": "Leukas 2",
     "next": "Leukas 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2257,
-        "author": "Bürchner"
+        "end": 2257,
+        "author": "Bürchner."
       }
     ]
   },
@@ -5233,10 +5257,12 @@
     "lemma": "Leukas 5",
     "previous": "Leukas 4",
     "next": "Leukasia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2257,
-        "author": "Bürchner"
+        "end": 2257,
+        "author": "Bürchner."
       }
     ]
   },
@@ -5299,10 +5325,12 @@
     "lemma": "Leukatas",
     "previous": "Leukaspis 3",
     "next": "Leukates, -as 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2259,
-        "author": "Geiger"
+        "end": 2259,
+        "author": "Geiger."
       }
     ]
   },
@@ -5321,10 +5349,13 @@
     "lemma": "Leukates, -as 2",
     "previous": "Leukates, -as 1",
     "next": "Leukates, -as 3",
+    "sort_key": "Leukates,-as 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2259,
-        "author": "Ruge"
+        "end": 2260,
+        "author": "Ruge."
       }
     ]
   },
@@ -5389,10 +5420,12 @@
     "lemma": "Leuke 1",
     "previous": "Leukathion",
     "next": "Leuke 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2260,
-        "author": "Geiger"
+        "end": 2260,
+        "author": "Geiger."
       }
     ]
   },
@@ -5480,18 +5513,21 @@
   {
     "lemma": "Leuke nesos 4",
     "previous": "Leuke nesos 3",
-    "next": "Leuke kome 3",
+    "next": "Leuke 5",
+    "sort_key": "Leuke 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2261,
-        "author": "Kroll"
+        "end": 2261,
+        "author": "Kroll."
       }
     ]
   },
   {
     "lemma": "Leuke kome 3",
     "previous": "Leuke nesos 4",
-    "next": "Leuke nesos",
+    "next": "Λευκὴ νῆσος",
     "chapters": [
       {
         "start": 2262,
@@ -5500,7 +5536,7 @@
     ]
   },
   {
-    "lemma": "Leuke nesos",
+    "lemma": "Λευκὴ νῆσος",
     "previous": "Leuke kome 3",
     "next": "Leukiane",
     "sort_key": "Leuke nesos",
@@ -5515,7 +5551,7 @@
   },
   {
     "lemma": "Leukiane",
-    "previous": "Leuke nesos",
+    "previous": "Λευκὴ νῆσος",
     "next": "Leukimma",
     "chapters": [
       {
@@ -5539,10 +5575,12 @@
     "lemma": "Leukios 1",
     "previous": "Leukimma",
     "next": "Leukios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2262,
-        "author": "Gunning"
+        "end": 2262,
+        "author": "Gunning."
       }
     ]
   },

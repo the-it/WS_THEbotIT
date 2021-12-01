@@ -2229,6 +2229,7 @@
     "lemma": "Κορησός 2",
     "previous": "Κορησός 1",
     "next": "Koretos",
+    "sort_key": "Koresos 2",
     "proof_read": 2,
     "chapters": [
       {
@@ -4408,7 +4409,7 @@
   {
     "lemma": "Kosymbe",
     "previous": "Kostos",
-    "next": "Kota",
+    "next": "Κότα",
     "chapters": [
       {
         "start": 1507,
@@ -4418,19 +4419,22 @@
     ]
   },
   {
-    "lemma": "Kota",
+    "lemma": "Κότα",
     "previous": "Kosymbe",
     "next": "Kotaina",
+    "sort_key": "Kota",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1514,
-        "author": "Bürchner"
+        "end": 1514,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kotaina",
-    "previous": "Kota",
+    "previous": "Κότα",
     "next": "Kotarchos",
     "proof_read": 2,
     "chapters": [
@@ -4490,10 +4494,12 @@
     "lemma": "Kothelas",
     "previous": "Kotes akron",
     "next": "Kothokidai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1516,
-        "author": "Kroll"
+        "end": 1516,
+        "author": "Kroll."
       }
     ]
   },
@@ -4524,10 +4530,12 @@
     "lemma": "Kothon 2",
     "previous": "Kothon 1",
     "next": "Kothon 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1517,
-        "author": "Oehler, J[ohann]"
+        "end": 1517,
+        "author": "J. Oehler."
       }
     ]
   },
@@ -4546,10 +4554,12 @@
     "lemma": "Kothon 4",
     "previous": "Kothon 3",
     "next": "Kothon 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1517,
-        "author": "Oehler, R[aimund]"
+        "end": 1517,
+        "author": "R. Oehler."
       }
     ]
   },
@@ -4638,10 +4648,12 @@
     "lemma": "Kotilos",
     "previous": "Kotilon",
     "next": "Kotinoussa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1528,
-        "author": "Stein, [Arthur]"
+        "end": 1528,
+        "author": "Stein."
       }
     ]
   },
@@ -5303,7 +5315,7 @@
   {
     "lemma": "Krapatalos",
     "previous": "Kranz",
-    "next": "Krapathos",
+    "next": "Κράπᾰθος",
     "chapters": [
       {
         "start": 1607,
@@ -5312,30 +5324,36 @@
     ]
   },
   {
-    "lemma": "Krapathos",
+    "lemma": "Κράπᾰθος",
     "previous": "Krapatalos",
-    "next": "Krasos 1",
+    "next": "Κρασός 1",
+    "sort_key": "Krapathos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1607,
-        "author": "Bürchner"
+        "end": 1607,
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Krasos 1",
-    "previous": "Krapathos",
+    "lemma": "Κρασός 1",
+    "previous": "Κράπᾰθος",
     "next": "Krasos 2",
+    "sort_key": "Krasos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1607,
-        "author": "Bürchner"
+        "end": 1607,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Krasos 2",
-    "previous": "Krasos 1",
+    "previous": "Κρασός 1",
     "next": "Krasos 3",
     "chapters": [
       {
@@ -5381,10 +5399,12 @@
     "lemma": "Krataia",
     "previous": "Krastos",
     "next": "Krataiis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1608,
-        "author": "Prehn"
+        "end": 1608,
+        "author": "Prehn."
       }
     ]
   },
@@ -5485,10 +5505,12 @@
     "lemma": "Krateros 2",
     "previous": "Krateros 1",
     "next": "Krateros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1622,
-        "author": "Stein, [Arthur]"
+        "end": 1622,
+        "author": "Stein."
       }
     ]
   },
@@ -5540,10 +5562,12 @@
     "lemma": "Krates 1",
     "previous": "Krateros 6",
     "next": "Krates 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1622,
-        "author": "Kirchner"
+        "end": 1622,
+        "author": "Kirchner."
       }
     ]
   },
@@ -5551,11 +5575,12 @@
     "lemma": "Krates 2",
     "previous": "Krates 1",
     "next": "Krates 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1622,
         "end": 1623,
-        "author": "Honigmann"
+        "author": "Honigmann."
       }
     ]
   },
@@ -5563,10 +5588,12 @@
     "lemma": "Krates 3",
     "previous": "Krates 2",
     "next": "Krates 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1623,
-        "author": "Honigmann"
+        "end": 1623,
+        "author": "Honigmann."
       }
     ]
   },
@@ -5611,10 +5638,12 @@
     "lemma": "Krates 7",
     "previous": "Krates 6",
     "next": "Krates 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1631,
-        "author": "Arnim"
+        "end": 1631,
+        "author": "v. Arnim."
       }
     ]
   },
@@ -5656,10 +5685,12 @@
     "lemma": "Krates 11",
     "previous": "Krates 10",
     "next": "Krates 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1633,
-        "author": "Gerth"
+        "end": 1633,
+        "author": "Gerth."
       }
     ]
   },
@@ -5679,10 +5710,12 @@
     "lemma": "Krates 13",
     "previous": "Krates 12",
     "next": "Krates 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1634,
-        "author": "Jacoby, [Felix]"
+        "end": 1634,
+        "author": "F. Jacoby."
       }
     ]
   },
@@ -5690,10 +5723,12 @@
     "lemma": "Krates 14",
     "previous": "Krates 13",
     "next": "Krates 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1634,
-        "author": "Jacoby, [Felix]"
+        "end": 1634,
+        "author": "F. Jacoby."
       }
     ]
   },
@@ -5701,10 +5736,12 @@
     "lemma": "Krates 15",
     "previous": "Krates 14",
     "next": "Krates 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1634,
-        "author": "Kroll"
+        "end": 1634,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -7657,10 +7694,12 @@
     "lemma": "Kritodamos 2",
     "previous": "Kritodamos 1",
     "next": "Kritodamos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1928,
-        "author": "Oldfather"
+        "end": 1928,
+        "author": "Oldfather."
       }
     ]
   },
@@ -7668,10 +7707,12 @@
     "lemma": "Kritodamos 3",
     "previous": "Kritodamos 2",
     "next": "Kritodamos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1928,
-        "author": "Kind"
+        "end": 1928,
+        "author": "Kind."
       }
     ]
   },
@@ -8775,7 +8816,7 @@
   {
     "lemma": "Kryassos",
     "previous": "Krya",
-    "next": "Kryassos 1",
+    "next": "Κρυασσός 1",
     "chapters": [
       {
         "start": 2031,
@@ -8784,30 +8825,36 @@
     ]
   },
   {
-    "lemma": "Kryassos 1",
+    "lemma": "Κρυασσός 1",
     "previous": "Kryassos",
-    "next": "Kryassos 2",
+    "next": "Κρυασσός 2",
+    "sort_key": "Kryassos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2031,
-        "author": "Bürchner"
+        "end": 2031,
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Kryassos 2",
-    "previous": "Kryassos 1",
+    "lemma": "Κρυασσός 2",
+    "previous": "Κρυασσός 1",
     "next": "Kryeon Nesoi",
+    "sort_key": "Kryassos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2031,
-        "author": "Bürchner"
+        "end": 2031,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kryeon Nesoi",
-    "previous": "Kryassos 2",
+    "previous": "Κρυασσός 2",
     "next": "Kryos",
     "chapters": [
       {
@@ -9935,10 +9982,12 @@
     "lemma": "Kusea",
     "previous": "Kusas",
     "next": "Κουσινᾶς",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2232,
-        "author": "Ruge"
+        "end": 2232,
+        "author": "Ruge."
       }
     ]
   },
@@ -9959,7 +10008,7 @@
   {
     "lemma": "Κούσινες",
     "previous": "Κουσινᾶς",
-    "next": "Kuskauri",
+    "next": "Κούσκαυρι",
     "sort_key": "Kusines",
     "redirect": "Prokopios 21",
     "proof_read": 2,
@@ -9971,42 +10020,50 @@
     ]
   },
   {
-    "lemma": "Kuskauri",
+    "lemma": "Κούσκαυρι",
     "previous": "Κούσινες",
-    "next": "Kuskula",
+    "next": "Κούσκουλα",
+    "sort_key": "Kuskauri",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2232,
-        "author": "Fluss"
+        "end": 2232,
+        "author": "Fluss."
       }
     ]
   },
   {
-    "lemma": "Kuskula",
-    "previous": "Kuskauri",
+    "lemma": "Κούσκουλα",
+    "previous": "Κούσκαυρι",
     "next": "Kuslanki",
+    "sort_key": "Kuskula",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2233,
-        "author": "Fluss"
+        "end": 2233,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Kuslanki",
-    "previous": "Kuskula",
+    "previous": "Κούσκουλα",
     "next": "Kyadra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2233,
-        "author": "Ruge"
+        "end": 2233,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Kyadra",
     "previous": "Kuslanki",
-    "next": "Kyalos",
+    "next": "Κύαλος",
     "chapters": [
       {
         "start": 2233,
@@ -10015,19 +10072,22 @@
     ]
   },
   {
-    "lemma": "Kyalos",
+    "lemma": "Κύαλος",
     "previous": "Kyadra",
     "next": "Kyamites",
+    "sort_key": "Kyalos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2233,
-        "author": "Bürchner"
+        "end": 2233,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kyamites",
-    "previous": "Kyalos",
+    "previous": "Κύαλος",
     "next": "Kyamon",
     "chapters": [
       {
