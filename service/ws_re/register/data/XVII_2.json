@@ -5402,10 +5402,12 @@
     "lemma": "Octavius 70",
     "previous": "Octavius 69",
     "next": "Octavius 71",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1851,
-        "author": "Hoffmann"
+        "end": 1851,
+        "author": "W. Hoffmann."
       }
     ]
   },
@@ -5446,9 +5448,12 @@
     "lemma": "Octavius 74",
     "previous": "Octavius 73",
     "next": "Octavius 75",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1852
+        "start": 1852,
+        "end": 1852,
+        "author": "Münzer."
       }
     ]
   },
@@ -5467,10 +5472,12 @@
     "lemma": "Octavius 76",
     "previous": "Octavius 75",
     "next": "Octavius 77",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1852,
-        "author": "Groag"
+        "end": 1852,
+        "author": "Groag."
       }
     ]
   },
@@ -5621,10 +5628,12 @@
     "lemma": "Octavius 90",
     "previous": "Octavius 89",
     "next": "Octavius 91",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1856,
-        "author": "Münzer"
+        "end": 1856,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -5632,10 +5641,12 @@
     "lemma": "Octavius 91",
     "previous": "Octavius 90",
     "next": "Octavius 92",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1856,
-        "author": "Hoffmann"
+        "end": 1856,
+        "author": "W. Hoffmann."
       }
     ]
   },
@@ -5643,10 +5654,12 @@
     "lemma": "Octavius 92",
     "previous": "Octavius 91",
     "next": "Octavius 94",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1856,
-        "author": "Münzer"
+        "end": 1856,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -5698,10 +5711,13 @@
     "lemma": "Octavius Campus",
     "previous": "Octavius 97",
     "next": "Ad octavum",
+    "sort_key": "Octaviuscampus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1868,
-        "author": "Kroll"
+        "end": 1868,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -9571,10 +9587,12 @@
     "lemma": "Okonenos",
     "previous": "Okolon",
     "next": "Okos (-on?",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2386,
-        "author": "Kazarow"
+        "end": 2386,
+        "author": "Gawril Kazarow."
       }
     ]
   },
@@ -9614,7 +9632,7 @@
   {
     "lemma": "Okrinon",
     "previous": "Okridion",
-    "next": "Oktabia Apollonia",
+    "next": "Ὀκταβία Ἀπολλωνία",
     "redirect": "Ocrion",
     "proof_read": 2,
     "chapters": [
@@ -9625,19 +9643,22 @@
     ]
   },
   {
-    "lemma": "Oktabia Apollonia",
+    "lemma": "Ὀκταβία Ἀπολλωνία",
     "previous": "Okrinon",
     "next": "Oktabios",
+    "sort_key": "Oktabiaapollonia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2386,
-        "author": "Ruge"
+        "end": 2386,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Oktabios",
-    "previous": "Oktabia Apollonia",
+    "previous": "Ὀκταβία Ἀπολλωνία",
     "next": "Oktadrachmon",
     "chapters": [
       {
