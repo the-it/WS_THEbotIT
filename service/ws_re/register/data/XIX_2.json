@@ -6602,10 +6602,12 @@
     "lemma": "Phasiane 2",
     "previous": "Phasiane 1",
     "next": "Phasianoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1885,
-        "author": "Schmidt"
+        "end": 1885,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -6624,10 +6626,12 @@
     "lemma": "Phasileus",
     "previous": "Phasianoi",
     "next": "Phasis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1886,
-        "author": "Enßlin"
+        "end": 1886,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -6736,10 +6740,12 @@
     "lemma": "Phassos",
     "previous": "Phason",
     "next": "Phasydes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1900,
-        "author": "Meyer, Herbert"
+        "end": 1900,
+        "author": "Herbert Meyer."
       }
     ]
   },
@@ -6759,7 +6765,7 @@
   {
     "lemma": "Phathasuarsan",
     "previous": "Phasydes",
-    "next": "Phathura",
+    "next": "Φαθουρά",
     "chapters": [
       {
         "start": 1900,
@@ -6768,19 +6774,22 @@
     ]
   },
   {
-    "lemma": "Phathura",
+    "lemma": "Φαθουρά",
     "previous": "Phathasuarsan",
     "next": "Phatnios",
+    "sort_key": "Phathura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1900,
-        "author": "Hölscher"
+        "end": 1900,
+        "author": "G. Hölscher."
       }
     ]
   },
   {
     "lemma": "Phatnios",
-    "previous": "Phathura",
+    "previous": "Φαθουρά",
     "next": "Phatnitikon",
     "chapters": [
       {
@@ -6818,9 +6827,13 @@
     "lemma": "Phaturites",
     "previous": "Phatores",
     "next": "Φαύδα",
+    "redirect": "Pathures",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1901
+        "start": 1901,
+        "end": 1901,
+        "author": "H. Kees."
       }
     ]
   },
@@ -6863,7 +6876,7 @@
   {
     "lemma": "Phaunitis",
     "previous": "Phaun",
-    "next": "Phauonai",
+    "next": "Φαυόνai",
     "chapters": [
       {
         "start": 1901,
@@ -6872,18 +6885,22 @@
     ]
   },
   {
-    "lemma": "Phauonai",
+    "lemma": "Φαυόνai",
     "previous": "Phaunitis",
     "next": "Phausia",
+    "sort_key": "Phauonai",
+    "redirect": "Favonae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1902
+        "start": 1902,
+        "end": 1902
       }
     ]
   },
   {
     "lemma": "Phausia",
-    "previous": "Phauonai",
+    "previous": "Φαυόνai",
     "next": "Phausterios",
     "chapters": [
       {
@@ -6895,28 +6912,33 @@
   {
     "lemma": "Phausterios",
     "previous": "Phausia",
-    "next": "Phausya",
+    "next": "Φαύσυα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1902,
-        "author": "Schmidt"
+        "end": 1902,
+        "author": "Johanna Schmidt."
       }
     ]
   },
   {
-    "lemma": "Phausya",
+    "lemma": "Φαύσυα",
     "previous": "Phausterios",
     "next": "Phayllos 1",
+    "sort_key": "Phausya",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1902,
-        "author": "Sturm"
+        "end": 1902,
+        "author": "J. Sturm."
       }
     ]
   },
   {
     "lemma": "Phayllos 1",
-    "previous": "Phausya",
+    "previous": "Φαύσυα",
     "next": "Phayllos 2",
     "chapters": [
       {
@@ -7780,10 +7802,12 @@
     "lemma": "Pher",
     "previous": "Φενοῦτος",
     "next": "Pherai 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1980,
-        "author": "Voigt"
+        "end": 1980,
+        "author": "Voigt."
       }
     ]
   },
@@ -7921,10 +7945,12 @@
     "lemma": "Pherekles 1",
     "previous": "Phereboia",
     "next": "Pherekles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1984,
-        "author": "Kirchner"
+        "end": 1984,
+        "author": "Johannes Kirchner."
       }
     ]
   },
@@ -12239,10 +12265,12 @@
     "lemma": "Philistides 2",
     "previous": "Philistides 1",
     "next": "Philistides 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2402,
-        "author": "Kroll"
+        "end": 2402,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -12250,10 +12278,12 @@
     "lemma": "Philistides 3",
     "previous": "Philistides 2",
     "next": "Philistinae fossae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2402,
-        "author": "Lippold, Georg"
+        "end": 2402,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -12285,10 +12315,12 @@
     "lemma": "Philistion 2",
     "previous": "Philistion 1",
     "next": "Philistion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2402,
-        "author": "Oldfather"
+        "end": 2402,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -12351,10 +12383,12 @@
     "lemma": "Philistos 1",
     "previous": "Philistis",
     "next": "Philistos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2409,
-        "author": "Oldfather"
+        "end": 2409,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -12362,10 +12396,12 @@
     "lemma": "Philistos 2",
     "previous": "Philistos 1",
     "next": "Philistos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2409,
-        "author": "Kroll"
+        "end": 2409,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -12443,10 +12479,12 @@
     "lemma": "Phillidas",
     "previous": "Philliades",
     "next": "Phillis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2429,
-        "author": "Oldfather"
+        "end": 2430,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -12465,10 +12503,12 @@
     "lemma": "Phillos",
     "previous": "Phillis",
     "next": "Phillyra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2430,
-        "author": "Oldfather"
+        "end": 2430,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -12498,10 +12538,12 @@
     "lemma": "Philo...",
     "previous": "Philo",
     "next": "Philoboiotos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2431,
-        "author": "Oldfather"
+        "end": 2431,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -12555,10 +12597,12 @@
     "lemma": "Philochares 2",
     "previous": "Philochares 1",
     "next": "Philochares 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2433,
-        "author": "Fiehn"
+        "end": 2433,
+        "author": "Fiehn."
       }
     ]
   },
@@ -12667,10 +12711,12 @@
     "lemma": "Philodamos 2",
     "previous": "Philodamos 1",
     "next": "Philodamos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2443,
-        "author": "Oldfather"
+        "end": 2443,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -12700,10 +12746,12 @@
     "lemma": "Philodemos 1",
     "previous": "Philodamos 4",
     "next": "Philodemos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2443,
-        "author": "Geisau"
+        "end": 2443,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -12722,10 +12770,12 @@
     "lemma": "Philodemos 3",
     "previous": "Philodemos 2",
     "next": "Philodemos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2444,
-        "author": "Schoch"
+        "end": 2444,
+        "author": "Paul Schoch."
       }
     ]
   },
@@ -13346,10 +13396,12 @@
     "lemma": "Philomathius 2",
     "previous": "Philomathius 1",
     "next": "Philomathius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2514,
-        "author": "Enßlin"
+        "end": 2514,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -13552,10 +13604,12 @@
     "lemma": "Philomelos 5",
     "previous": "Philomelos 4",
     "next": "Philomelos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Fiehn"
+        "end": 2525,
+        "author": "Fiehn."
       }
     ]
   },
@@ -13563,10 +13617,12 @@
     "lemma": "Philomelos 6",
     "previous": "Philomelos 5",
     "next": "Philomelos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2525,
-        "author": "Stein, [Arthur]"
+        "end": 2525,
+        "author": "Stein."
       }
     ]
   },
@@ -13596,10 +13652,12 @@
     "lemma": "Philometor 2",
     "previous": "Philometor 1",
     "next": "Philomnestos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Enßlin"
+        "end": 2526,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -13618,10 +13676,12 @@
     "lemma": "Philomusos 1",
     "previous": "Philomnestos",
     "next": "Philomusos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Enßlin"
+        "end": 2526,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -13629,10 +13689,12 @@
     "lemma": "Philomusos 2",
     "previous": "Philomusos 1",
     "next": "Philon 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Lippold, Georg"
+        "end": 2526,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -13640,10 +13702,12 @@
     "lemma": "Philon 1",
     "previous": "Philomusos 2",
     "next": "Philon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2526,
-        "author": "Kirchner"
+        "end": 2526,
+        "author": "Johannes Kirchner."
       }
     ]
   },
@@ -13662,10 +13726,12 @@
     "lemma": "Philon 3",
     "previous": "Philon 2",
     "next": "Philon 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2527,
-        "author": "Lenschau"
+        "end": 2527,
+        "author": "Th. Lenschau."
       }
     ]
   },
@@ -13695,10 +13761,12 @@
     "lemma": "Philon 6",
     "previous": "Philon 5",
     "next": "Philon 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2527,
-        "author": "Lenschau"
+        "end": 2528,
+        "author": "Th. Lenschau."
       }
     ]
   },
@@ -13706,10 +13774,12 @@
     "lemma": "Philon 7",
     "previous": "Philon 6",
     "next": "Philon 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2528,
-        "author": "Lenschau"
+        "end": 2528,
+        "author": "Th. Lenschau."
       }
     ]
   },
@@ -13849,10 +13919,12 @@
     "lemma": "Philon 19",
     "previous": "Philon 18",
     "next": "Philon 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2530,
-        "author": "Oldfather"
+        "end": 2530,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -14003,10 +14075,12 @@
     "lemma": "Philon 33",
     "previous": "Philon 32",
     "next": "Philon 34",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2532,
-        "author": "Peek"
+        "end": 2532,
+        "author": "W. Peek."
       }
     ]
   },
@@ -14091,9 +14165,12 @@
     "lemma": "Phasael 1",
     "previous": "Philon 40",
     "next": "Phasael 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2545
+        "start": 2545,
+        "end": 2545,
+        "author": "Stein."
       }
     ]
   },
