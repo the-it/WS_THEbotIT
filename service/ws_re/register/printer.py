@@ -1,3 +1,5 @@
+import datetime
+
 from pywikibot import Site, Page
 
 from service.ws_re.register.registers import Registers
@@ -12,10 +14,11 @@ class ReRegisterPrinter(CanonicalBot):
 
     def task(self):
         self._print_volume()
-        self._print_alphabetic()
-        self._print_author()
-        self._print_short()
-        self._print_pd()
+        if datetime.datetime.now().weekday() == 0:
+            self._print_alphabetic()
+            self._print_author()
+            self._print_short()
+            self._print_pd()
         return True
 
     def _print_author(self):
