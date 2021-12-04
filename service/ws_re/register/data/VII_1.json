@@ -18499,9 +18499,12 @@
     "lemma": "Genialis 1",
     "previous": "Geneva",
     "next": "Genialis 2",
+    "redirect": "Cocceius 6",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1151
+        "start": 1151,
+        "end": 1151
       }
     ]
   },
@@ -18509,10 +18512,12 @@
     "lemma": "Genialis 2",
     "previous": "Genialis 1",
     "next": "Genialis 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1151,
-        "author": "Oxé"
+        "end": 1151,
+        "author": "Oxé."
       }
     ]
   },
