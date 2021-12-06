@@ -5379,7 +5379,7 @@
   {
     "lemma": "Κέσουνα",
     "previous": "Kestros",
-    "next": "Kestaion",
+    "next": "Ketaion",
     "sort_key": "Kesuna",
     "proof_read": 2,
     "chapters": [
@@ -5391,9 +5391,9 @@
     ]
   },
   {
-    "lemma": "Kestaion",
+    "lemma": "Ketaion",
     "previous": "Κέσουνα",
-    "next": "Ketamba",
+    "next": "Κέταμβα",
     "proof_read": 2,
     "chapters": [
       {
@@ -5404,8 +5404,8 @@
     ]
   },
   {
-    "lemma": "Ketamba",
-    "previous": "Kestaion",
+    "lemma": "Κέταμβα",
+    "previous": "Ketaion",
     "next": "Ketaria",
     "sort_key": "Ketamba",
     "proof_read": 2,
@@ -5419,7 +5419,7 @@
   },
   {
     "lemma": "Ketaria",
-    "previous": "Ketamba",
+    "previous": "Κέταμβα",
     "next": "Keteioi",
     "chapters": [
       {
@@ -6227,7 +6227,7 @@
   {
     "lemma": "Kilikia",
     "previous": "Kilikes",
-    "next": "Kilikiai pylai 1",
+    "next": "Κιλίκιαι πύλαι 1",
     "chapters": [
       {
         "start": 385,
@@ -6237,31 +6237,36 @@
     ]
   },
   {
-    "lemma": "Kilikiai pylai 1",
+    "lemma": "Κιλίκιαι πύλαι 1",
     "previous": "Kilikia",
-    "next": "Kilikiai pylai 2",
-    "chapters": [
-      {
-        "start": 389,
-        "author": "Ruge"
-      }
-    ]
-  },
-  {
-    "lemma": "Kilikiai pylai 2",
-    "previous": "Kilikiai pylai 1",
-    "next": "Kilix 1",
+    "next": "Κιλίκιαι πύλαι 2",
+    "sort_key": "Kilikiaipylai 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 389,
         "end": 390,
-        "author": "Ruge"
+        "author": "Ruge."
+      }
+    ]
+  },
+  {
+    "lemma": "Κιλίκιαι πύλαι 2",
+    "previous": "Κιλίκιαι πύλαι 1",
+    "next": "Kilix 1",
+    "sort_key": "Kilikiaipylai 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 390,
+        "end": 390,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Kilix 1",
-    "previous": "Kilikiai pylai 2",
+    "previous": "Κιλίκιαι πύλαι 2",
     "next": "Kilikios Aulon",
     "chapters": [
       {

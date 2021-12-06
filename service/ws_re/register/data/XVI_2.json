@@ -4547,11 +4547,13 @@
   {
     "lemma": "Naso 3",
     "previous": "Naso 2",
-    "next": "Nasoi 1",
+    "next": "...ale... Naso",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1793,
-        "author": "Stein, [Arthur]"
+        "end": 1793,
+        "author": "Stein."
       }
     ]
   },
@@ -10190,33 +10192,40 @@
   {
     "lemma": "Neoterius 4",
     "previous": "Neoterius 3",
-    "next": "Neotes",
+    "next": "Νεότης",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2480,
-        "author": "Enßlin"
+        "end": 2480,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
-    "lemma": "Neotes",
+    "lemma": "Νεότης",
     "previous": "Neoterius 4",
     "next": "Neothalides",
+    "sort_key": "Neotes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2480,
-        "author": "Hölscher"
+        "end": 2480,
+        "author": "G. Hölscher."
       }
     ]
   },
   {
     "lemma": "Neothalides",
-    "previous": "Neotes",
-    "next": "Nepe",
+    "previous": "Νεότης",
+    "next": "Νεούτ",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2480,
-        "author": "Kroll"
+        "end": 2480,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -10271,7 +10280,7 @@
   },
   {
     "lemma": "Nepete",
-    "previous": "Νεούτ",
+    "previous": "Nepet",
     "next": "Nephalia 1",
     "redirect": "Nepet",
     "proof_read": 2,

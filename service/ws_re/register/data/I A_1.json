@@ -8429,7 +8429,7 @@
   },
   {
     "lemma": "Ripari",
-    "previous": "Ripaia ore",
+    "previous": "Ripanus",
     "next": "Riparienses milites",
     "redirect": "Iordanis",
     "proof_read": 2,
@@ -8455,11 +8455,13 @@
   {
     "lemma": "Ripanus",
     "previous": "Riparienses milites",
-    "next": "Ripa Thraciae",
+    "next": "Ripari",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 916,
-        "author": "Oxé"
+        "end": 916,
+        "author": "Oxé."
       }
     ]
   },
@@ -13548,10 +13550,12 @@
     "lemma": "Rufinus 5",
     "previous": "Rufinus 4",
     "next": "Rufinus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1185,
-        "author": "Stein, [Arthur]"
+        "end": 1185,
+        "author": "Stein."
       }
     ]
   },
@@ -13559,18 +13563,19 @@
     "lemma": "Rufinus 6",
     "previous": "Rufinus 5",
     "next": "Ῥουφινιαναί, αἱ",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1185,
         "end": 1186,
-        "author": "Stein, [Arthur]"
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Ῥουφινιαναί, αἱ",
     "previous": "Rufinianae 2",
-    "next": "Ῥουφίνου",
+    "next": "Rufinianus 1",
     "sort_key": "Rufinianai hai",
     "redirect": "Rufinianae 1",
     "proof_read": 3,
@@ -17219,11 +17224,14 @@
   {
     "lemma": "Ῥύγχος",
     "previous": "Ῥύγχιον",
-    "next": "Rymmoi",
+    "next": "Rygmanoi",
+    "sort_key": "Rynchos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1284,
-        "author": "Bölte"
+        "end": 1284,
+        "author": "Bölte."
       }
     ]
   },

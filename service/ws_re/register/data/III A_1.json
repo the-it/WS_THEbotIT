@@ -10823,7 +10823,7 @@
   {
     "lemma": "Soccus",
     "previous": "Socco",
-    "next": "Socha",
+    "next": "Σῶχα",
     "chapters": [
       {
         "start": 771,
@@ -10832,9 +10832,10 @@
     ]
   },
   {
-    "lemma": "Socha",
+    "lemma": "Σῶχα",
     "previous": "Soccus",
     "next": "Σόχχορ",
+    "sort_key": "Socha",
     "proof_read": 2,
     "chapters": [
       {
@@ -10846,7 +10847,7 @@
   },
   {
     "lemma": "Σόχχορ",
-    "previous": "Socha",
+    "previous": "Σῶχα",
     "next": "Sonchor",
     "sort_key": "Sochchor",
     "redirect": "Sonchar, Sonchor",
@@ -10875,10 +10876,12 @@
     "lemma": "Sociacus",
     "previous": "Soci",
     "next": "Societas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 772,
-        "author": "Keune"
+        "end": 772,
+        "author": "Keune."
       }
     ]
   },
@@ -10895,7 +10898,7 @@
   },
   {
     "lemma": "Sonchor",
-    "previous": "Σόχχορ",
+    "previous": "Societas",
     "next": "Soci",
     "sort_key": "Sochchor 2",
     "redirect": "Sonchar, Sonchor",
