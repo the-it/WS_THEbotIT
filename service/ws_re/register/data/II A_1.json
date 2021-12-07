@@ -1330,7 +1330,7 @@
   {
     "lemma": "Satala 2",
     "previous": "Satala 1",
-    "next": "Satalka",
+    "next": "Σάταλκα",
     "chapters": [
       {
         "start": 59,
@@ -1339,20 +1339,23 @@
     ]
   },
   {
-    "lemma": "Satalka",
+    "lemma": "Σάταλκα",
     "previous": "Satala 2",
     "next": "Satanacus",
+    "sort_key": "Satalka",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 59,
-        "author": "Weissbach"
+        "end": 59,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Satanacus",
-    "previous": "Satalka",
-    "next": "Sataphara",
+    "previous": "Σάταλκα",
+    "next": "Σαταφάρα",
     "chapters": [
       {
         "start": 59,
@@ -1361,19 +1364,22 @@
     ]
   },
   {
-    "lemma": "Sataphara",
+    "lemma": "Σαταφάρα",
     "previous": "Satanacus",
     "next": "Satarcha",
+    "sort_key": "Sataphara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 59,
-        "author": "Baumgartner"
+        "end": 59,
+        "author": "Baumgartner."
       }
     ]
   },
   {
     "lemma": "Satarcha",
-    "previous": "Sataphara",
+    "previous": "Σαταφάρα",
     "next": "Satarchae",
     "chapters": [
       {
@@ -1476,17 +1482,32 @@
   {
     "lemma": "Sation",
     "previous": "Saticula",
-    "next": "Satipreiza (?)",
+    "next": "Satipisixene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 63,
-        "author": "Oberhummer"
+        "end": 63,
+        "author": "Oberhummer."
+      }
+    ]
+  },
+  {
+    "lemma": "Satipisixene",
+    "previous": "Sation",
+    "next": "Satipreiza (?)",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 63,
+        "end": 63,
+        "author": "Adler."
       }
     ]
   },
   {
     "lemma": "Satipreiza (?)",
-    "previous": "Sation",
+    "previous": "Satipisixene",
     "next": "Satira",
     "chapters": [
       {
@@ -2487,10 +2508,12 @@
     "lemma": "Satyros 6",
     "previous": "Satyros 5",
     "next": "Satyros 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 226,
-        "author": "Fluss"
+        "end": 226,
+        "author": "Fluss."
       }
     ]
   },
@@ -2518,11 +2541,13 @@
   {
     "lemma": "Satyros 9",
     "previous": "Satyros 8",
-    "next": "Satyros 11",
+    "next": "Satyrus 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 226,
-        "author": "Münzer"
+        "end": 226,
+        "author": "Münzer."
       }
     ]
   },
@@ -2573,10 +2598,12 @@
     "lemma": "Satyros 14",
     "previous": "Satyros 13",
     "next": "Satyros 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
-        "author": "Fluss"
+        "end": 227,
+        "author": "Fluss."
       }
     ]
   },
@@ -2725,7 +2752,7 @@
   {
     "lemma": "Savara",
     "previous": "Sauadai",
-    "next": "Sauara",
+    "next": "Σαυάρα",
     "chapters": [
       {
         "start": 248,
@@ -2735,19 +2762,22 @@
     ]
   },
   {
-    "lemma": "Sauara",
+    "lemma": "Σαυάρα",
     "previous": "Savara",
     "next": "Savaria",
+    "sort_key": "Savara 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 249,
-        "author": "Weissbach"
+        "end": 249,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Savaria",
-    "previous": "Sauara",
+    "previous": "Σαυάρα",
     "next": "Savarias",
     "chapters": [
       {
@@ -2829,10 +2859,12 @@
     "lemma": "Saudonium",
     "previous": "Sauconna",
     "next": "Saue 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
-        "author": "Haverfield"
+        "end": 255,
+        "author": "Haverfield."
       }
     ]
   },
@@ -2840,10 +2872,12 @@
     "lemma": "Saue 1",
     "previous": "Saudonium",
     "next": "Saue 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
-        "author": "Moritz, [Bernhard]"
+        "end": 255,
+        "author": "Moritz."
       }
     ]
   },
@@ -2862,10 +2896,12 @@
     "lemma": "Saue 3",
     "previous": "Saue 2",
     "next": "Saue 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
-        "author": "Moritz, [Bernhard]"
+        "end": 255,
+        "author": "Moritz."
       }
     ]
   },
@@ -2873,10 +2909,12 @@
     "lemma": "Saue 4",
     "previous": "Saue 3",
     "next": "Sauendenon Katoikia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
-        "author": "Weissbach"
+        "end": 255,
+        "author": "Weissbach."
       }
     ]
   },
@@ -3203,10 +3241,12 @@
     "lemma": "Sauna",
     "previous": "Saumur",
     "next": "Saunium 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 260,
-        "author": "Moritz, [Bernhard]"
+        "end": 260,
+        "author": "Moritz."
       }
     ]
   },
@@ -3286,7 +3326,7 @@
   {
     "lemma": "Saur(...)",
     "previous": "Savonnière",
-    "next": "Saura",
+    "next": "Σαύρα",
     "chapters": [
       {
         "start": 261,
@@ -3295,18 +3335,22 @@
     ]
   },
   {
-    "lemma": "Saura",
+    "lemma": "Σαύρα",
     "previous": "Saur(...)",
     "next": "Saurania",
+    "sort_key": "Saura",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 261
+        "start": 261,
+        "end": 261,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Saurania",
-    "previous": "Saura",
+    "previous": "Σαύρα",
     "next": "Sauras",
     "chapters": [
       {
