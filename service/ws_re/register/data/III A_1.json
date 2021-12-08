@@ -1883,10 +1883,12 @@
     "lemma": "Silvinus 1",
     "previous": "Silvinianus",
     "next": "Silvinus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 128,
-        "author": "Stein, [Arthur]"
+        "end": 128,
+        "author": "Stein."
       }
     ]
   },
@@ -1929,10 +1931,12 @@
     "lemma": "Silvinus 4b",
     "previous": "Silvinus 4a",
     "next": "Silvinus 4c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 129,
-        "author": "Keune"
+        "end": 129,
+        "author": "Keune."
       }
     ]
   },
@@ -1988,10 +1992,12 @@
     "lemma": "Silvium 2",
     "previous": "Silvium 1",
     "next": "Silvius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 130,
-        "author": "Philipp"
+        "end": 130,
+        "author": "Philipp."
       }
     ]
   },
@@ -2021,10 +2027,12 @@
     "lemma": "Silvius 3",
     "previous": "Silvius 2",
     "next": "Silvius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 132,
-        "author": "Stein, [Arthur]"
+        "end": 132,
+        "author": "Stein."
       }
     ]
   },
@@ -2123,7 +2131,7 @@
   {
     "lemma": "Simalos",
     "previous": "Simalis",
-    "next": "Simana",
+    "next": "Σίμανα",
     "chapters": [
       {
         "start": 135,
@@ -2132,19 +2140,22 @@
     ]
   },
   {
-    "lemma": "Simana",
+    "lemma": "Σίμανα",
     "previous": "Simalos",
     "next": "Simaristos",
+    "sort_key": "Simana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 135,
-        "author": "Ruge"
+        "end": 135,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Simaristos",
-    "previous": "Simana",
+    "previous": "Σίμανα",
     "next": "Simas",
     "chapters": [
       {
@@ -2211,7 +2222,7 @@
   {
     "lemma": "Simena",
     "previous": "Simea, Simios",
-    "next": "Simenoi",
+    "next": "Σιμενοί",
     "chapters": [
       {
         "start": 140,
@@ -2220,19 +2231,22 @@
     ]
   },
   {
-    "lemma": "Simenoi",
+    "lemma": "Σιμενοί",
     "previous": "Simena",
     "next": "Simenus",
+    "sort_key": "Simenoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 140,
-        "author": "MacDonald"
+        "end": 140,
+        "author": "Macdonald."
       }
     ]
   },
   {
     "lemma": "Simenus",
-    "previous": "Simenoi",
+    "previous": "Σιμενοί",
     "next": "Simeon Stylites",
     "redirect": "Symenos 1",
     "proof_read": 2,
@@ -2257,7 +2271,7 @@
   {
     "lemma": "Simi",
     "previous": "Simeon Stylites",
-    "next": "Simiadai",
+    "next": "Σιμιάδαι",
     "redirect": "Simoi",
     "proof_read": 2,
     "chapters": [
@@ -2268,19 +2282,22 @@
     ]
   },
   {
-    "lemma": "Simiadai",
+    "lemma": "Σιμιάδαι",
     "previous": "Simi",
     "next": "Simiades",
+    "sort_key": "Simiadai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 142,
-        "author": "Bürchner"
+        "end": 142,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Simiades",
-    "previous": "Simiadai",
+    "previous": "Σιμιάδαι",
     "next": "Simias 1",
     "chapters": [
       {
@@ -2537,10 +2554,12 @@
     "lemma": "Simoeis 2",
     "previous": "Simoeis 1",
     "next": "Simoeis 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 161,
-        "author": "Ziegler"
+        "end": 161,
+        "author": "Ziegler."
       }
     ]
   },
@@ -2548,10 +2567,12 @@
     "lemma": "Simoeis 3",
     "previous": "Simoeis 2",
     "next": "Simoeis 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 161,
-        "author": "Bürchner"
+        "end": 161,
+        "author": "Bürchner."
       }
     ]
   },
@@ -2559,10 +2580,12 @@
     "lemma": "Simoeis 4",
     "previous": "Simoeis 3",
     "next": "Simoeision pedion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 161,
-        "author": "Fluss"
+        "end": 161,
+        "author": "Fluss."
       }
     ]
   },
@@ -2614,10 +2637,12 @@
     "lemma": "Simon 2",
     "previous": "Simon 1",
     "next": "Simon 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Zwicker"
+        "end": 162,
+        "author": "Zwicker."
       }
     ]
   },
@@ -2625,10 +2650,12 @@
     "lemma": "Simon 3",
     "previous": "Simon 2",
     "next": "Simon 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Zwicker"
+        "end": 162,
+        "author": "Zwicker."
       }
     ]
   },
@@ -2636,10 +2663,12 @@
     "lemma": "Simon 4",
     "previous": "Simon 3",
     "next": "Simon 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Zwicker"
+        "end": 162,
+        "author": "Zwicker."
       }
     ]
   },
@@ -2647,10 +2676,12 @@
     "lemma": "Simon 5",
     "previous": "Simon 4",
     "next": "Simon 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 162,
-        "author": "Kirchner"
+        "end": 162,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2691,10 +2722,12 @@
     "lemma": "Simon 9",
     "previous": "Simon 8",
     "next": "Simon 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 175,
-        "author": "Wickert"
+        "end": 175,
+        "author": "Wickert."
       }
     ]
   },
@@ -2748,10 +2781,12 @@
     "lemma": "Simon 14",
     "previous": "Simon 13",
     "next": "Simon 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 180,
-        "author": "Gossen"
+        "end": 180,
+        "author": "Gossen."
       }
     ]
   },
@@ -2759,10 +2794,12 @@
     "lemma": "Simon 15",
     "previous": "Simon 14",
     "next": "Simon 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 180,
-        "author": "Gossen"
+        "end": 180,
+        "author": "Gossen."
       }
     ]
   },
@@ -3045,10 +3082,12 @@
     "lemma": "Simpiacus",
     "previous": "Simos 9",
     "next": "Simplex",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Keune"
+        "end": 203,
+        "author": "Keune."
       }
     ]
   },
@@ -3056,9 +3095,12 @@
     "lemma": "Simplex",
     "previous": "Simpiacus",
     "next": "Simpliciacus",
+    "redirect": "Caecilius 118",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 203
+        "start": 203,
+        "end": 203
       }
     ]
   },
@@ -3088,10 +3130,12 @@
     "lemma": "Simplicius 2",
     "previous": "Simplicius 1",
     "next": "Simplicius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 203,
-        "author": "Seeck"
+        "end": 203,
+        "author": "Seeck."
       }
     ]
   },
@@ -8870,10 +8914,12 @@
     "lemma": "Skopelos 3",
     "previous": "Skopelos 2",
     "next": "Skopelos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 582,
-        "author": "Bürchner"
+        "end": 582,
+        "author": "Bürchner."
       }
     ]
   },
@@ -8881,10 +8927,12 @@
     "lemma": "Skopelos 4",
     "previous": "Skopelos 3",
     "next": "Skopelos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 582,
-        "author": "Bürchner"
+        "end": 582,
+        "author": "Bürchner."
       }
     ]
   },
@@ -8892,10 +8940,12 @@
     "lemma": "Skopelos 5",
     "previous": "Skopelos 4",
     "next": "Skopelos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 582,
-        "author": "Bürchner"
+        "end": 582,
+        "author": "Bürchner."
       }
     ]
   },
@@ -8973,7 +9023,7 @@
   {
     "lemma": "Skopias akra",
     "previous": "Σκοπιαί",
-    "next": "Skopion",
+    "next": "Σκόπιον",
     "chapters": [
       {
         "start": 583,
@@ -8982,19 +9032,22 @@
     ]
   },
   {
-    "lemma": "Skopion",
+    "lemma": "Σκόπιον",
     "previous": "Skopias akra",
     "next": "Σκόπις",
+    "sort_key": "Skopion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 583,
-        "author": "Stählin"
+        "end": 583,
+        "author": "Stählin."
       }
     ]
   },
   {
     "lemma": "Σκόπις",
-    "previous": "Skopion",
+    "previous": "Σκόπιον",
     "next": "Σκοπόλουρα",
     "sort_key": "Skopis",
     "redirect": "Scupi",
@@ -10848,7 +10901,7 @@
   {
     "lemma": "Σόχχορ",
     "previous": "Σῶχα",
-    "next": "Sonchor",
+    "next": "Soci",
     "sort_key": "Sochchor",
     "redirect": "Sonchar, Sonchor",
     "proof_read": 2,
@@ -10861,7 +10914,7 @@
   },
   {
     "lemma": "Soci",
-    "previous": "Sonchor",
+    "previous": "Σόχχορ",
     "next": "Sociacus",
     "redirect": "Soc.",
     "proof_read": 2,
@@ -10898,10 +10951,8 @@
   },
   {
     "lemma": "Sonchor",
-    "previous": "Societas",
-    "next": "Soci",
     "sort_key": "Sochchor 2",
-    "redirect": "Sonchar, Sonchor",
+    "redirect": "löschen",
     "proof_read": 2,
     "chapters": [
       {
