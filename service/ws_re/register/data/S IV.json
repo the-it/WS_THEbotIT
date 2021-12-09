@@ -5126,7 +5126,7 @@
   {
     "lemma": "Kallippio",
     "previous": "Kalliopios 5",
-    "next": "Kallipolis 7a",
+    "next": "Kallipolis 14a",
     "proof_read": 3,
     "chapters": [
       {
@@ -5137,11 +5137,22 @@
     ]
   },
   {
-    "lemma": "Kallipolis 14a"
+    "lemma": "Kallipolis 14a",
+    "previous": "Kallippio",
+    "next": "Kallirrhoë 14",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 864,
+        "end": 864,
+        "author": "v. Geisau."
+      }
+    ]
   },
   {
     "lemma": "Kallirrhoë 14",
-    "previous": "Kallipolis 7a",
+    "previous": "Kallipolis 14a",
     "next": "Kallisthenes 5",
     "proof_read": 3,
     "chapters": [
@@ -5169,10 +5180,12 @@
     "lemma": "Kallistio",
     "previous": "Kallisthenes 5",
     "next": "Kallistus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
-        "author": "Seeck"
+        "end": 864,
+        "author": "Seeck."
       }
     ]
   },
@@ -5249,10 +5262,12 @@
     "lemma": "Kalykios",
     "previous": "Kalokairos 1",
     "next": "Kambylos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
-        "author": "Seeck"
+        "end": 864,
+        "author": "Seeck."
       }
     ]
   },
@@ -5411,10 +5426,12 @@
     "lemma": "Karzenos",
     "previous": "Karthasis",
     "next": "Kaseera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 876,
-        "author": "Adler"
+        "end": 876,
+        "author": "Adler."
       }
     ]
   },
@@ -5422,10 +5439,13 @@
     "lemma": "Kaseera",
     "previous": "Karzenos",
     "next": "Kassandreia",
+    "sort_key": "Kaseera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 877,
-        "author": "Oberhummer"
+        "end": 877,
+        "author": "Oberhummer."
       }
     ]
   },

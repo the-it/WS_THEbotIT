@@ -3821,7 +3821,7 @@
   {
     "lemma": "Stata Mater",
     "previous": "Στάσις",
-    "next": "Statala",
+    "next": "Στάταλα",
     "chapters": [
       {
         "start": 2167,
@@ -3830,7 +3830,7 @@
     ]
   },
   {
-    "lemma": "Statala",
+    "lemma": "Στάταλα",
     "previous": "Stata Mater",
     "next": "Statanus",
     "sort_key": "Statala",
@@ -3845,7 +3845,7 @@
   },
   {
     "lemma": "Statanus",
-    "previous": "Statala",
+    "previous": "Στάταλα",
     "next": "Statanus ager",
     "chapters": [
       {
@@ -3913,10 +3913,12 @@
     "lemma": "Stateira 4",
     "previous": "Stateira 3",
     "next": "Statellates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2172,
-        "author": "Fiehn"
+        "end": 2172,
+        "author": "Fiehn."
       }
     ]
   },
@@ -4053,10 +4055,12 @@
     "lemma": "Statianus 3",
     "previous": "Statianus 2",
     "next": "Statiellae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2182,
-        "author": "Stein, [Arthur]"
+        "end": 2182,
+        "author": "Stein."
       }
     ]
   },
@@ -4211,10 +4215,12 @@
     "lemma": "Statilius 8",
     "previous": "Statilius 7",
     "next": "Statilius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2186,
-        "author": "Fluss"
+        "end": 2186,
+        "author": "Fluss."
       }
     ]
   },
@@ -4244,10 +4250,12 @@
     "lemma": "Statilius 11",
     "previous": "Statilius 10",
     "next": "Statilius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2186,
-        "author": "Kind"
+        "end": 2186,
+        "author": "Kind."
       }
     ]
   },
@@ -4993,10 +5001,12 @@
     "lemma": "Statius 22",
     "previous": "Statius 21",
     "next": "Statius 23",
-    "redirect": true,
+    "redirect": "Caesernius 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2223
+        "start": 2223,
+        "end": 2223
       }
     ]
   },
@@ -5004,10 +5014,12 @@
     "lemma": "Statius 23",
     "previous": "Statius 22",
     "next": "Statius 24",
-    "redirect": true,
+    "redirect": "Caesernius 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2223
+        "start": 2223,
+        "end": 2223
       }
     ]
   },
@@ -5015,10 +5027,12 @@
     "lemma": "Statius 24",
     "previous": "Statius 23",
     "next": "Statius 25",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2223,
-        "author": "Groag"
+        "end": 2223,
+        "author": "Groag."
       }
     ]
   },
@@ -5026,10 +5040,12 @@
     "lemma": "Statius 25",
     "previous": "Statius 24",
     "next": "Statius 26",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2223,
-        "author": "Stein, [Arthur]"
+        "end": 2223,
+        "author": "Stein."
       }
     ]
   },
@@ -5037,9 +5053,12 @@
     "lemma": "Statius 26",
     "previous": "Statius 25",
     "next": "Statius 27",
+    "redirect": "Calpetanus 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2223
+        "start": 2223,
+        "end": 2223
       }
     ]
   },
@@ -5047,10 +5066,12 @@
     "lemma": "Statius 27",
     "previous": "Statius 26",
     "next": "Statius 28",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2223,
-        "author": "Stein, [Arthur]"
+        "end": 2223,
+        "author": "Stein."
       }
     ]
   },
@@ -5091,10 +5112,12 @@
     "lemma": "Statius 30",
     "previous": "Stativa",
     "next": "Statius 31",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2224,
-        "author": "Stein, [Arthur]"
+        "end": 2224,
+        "author": "Stein."
       }
     ]
   },
@@ -5225,9 +5248,12 @@
     "lemma": "Statorius 2",
     "previous": "Statorius 1",
     "next": "Statorius 3",
+    "redirect": "Statorius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2230
+        "start": 2230,
+        "end": 2230
       }
     ]
   },
@@ -6169,10 +6195,12 @@
     "lemma": "Stephanon 1",
     "previous": "Stephanites agon",
     "next": "Stephanon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2351,
-        "author": "Bölte"
+        "end": 2351,
+        "author": "Bölte."
       }
     ]
   },
@@ -6270,10 +6298,12 @@
     "lemma": "Stephanos 8",
     "previous": "Stephanos 7",
     "next": "Stephanos 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2364,
-        "author": "Stein, [Arthur]"
+        "end": 2364,
+        "author": "Stein."
       }
     ]
   },
@@ -6281,10 +6311,12 @@
     "lemma": "Stephanos 9",
     "previous": "Stephanos 8",
     "next": "Stephanos 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2364,
-        "author": "Seeck"
+        "end": 2364,
+        "author": "Seeck."
       }
     ]
   },
@@ -6355,10 +6387,12 @@
     "lemma": "Stephanos 16",
     "previous": "Stephanos 14-15",
     "next": "Stephanos 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2402,
-        "author": "Kroll"
+        "end": 2402,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -6388,10 +6422,12 @@
     "lemma": "Stephanos 19",
     "previous": "Stephanos 18",
     "next": "Stephanos 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2404,
-        "author": "Kind"
+        "end": 2404,
+        "author": "Kind."
       }
     ]
   },
@@ -6453,7 +6489,7 @@
   {
     "lemma": "Stephon",
     "previous": "Stephinates",
-    "next": "Steptikon",
+    "next": "Στεπτικόν",
     "chapters": [
       {
         "start": 2411,
@@ -6462,19 +6498,22 @@
     ]
   },
   {
-    "lemma": "Steptikon",
+    "lemma": "Στεπτικόν",
     "previous": "Stephon",
     "next": "Ster.",
+    "sort_key": "Steptikon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2411,
-        "author": "Kießling, Emil"
+        "end": 2411,
+        "author": "E. Kießling."
       }
     ]
   },
   {
     "lemma": "Ster.",
-    "previous": "Steptikon",
+    "previous": "Στεπτικόν",
     "next": "Sterbeverein",
     "chapters": [
       {
@@ -6500,10 +6539,12 @@
     "lemma": "Stercorius",
     "previous": "Sterbeverein",
     "next": "Sterculus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2412,
-        "author": "Seeck"
+        "end": 2412,
+        "author": "Seeck."
       }
     ]
   },
@@ -6558,10 +6599,12 @@
     "lemma": "Sternops",
     "previous": "Sternbilder und Sternglaube",
     "next": "Sternschnuppen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2439,
-        "author": "Türk"
+        "end": 2439,
+        "author": "Türk."
       }
     ]
   },
@@ -6591,10 +6634,12 @@
     "lemma": "Sterope 2",
     "previous": "Sterope 1",
     "next": "Sterope 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2447,
-        "author": "Türk"
+        "end": 2447,
+        "author": "Türk."
       }
     ]
   },
@@ -6646,10 +6691,12 @@
     "lemma": "Sterope 7",
     "previous": "Sterope 6",
     "next": "Sterope 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2448,
-        "author": "Türk"
+        "end": 2448,
+        "author": "Türk."
       }
     ]
   },
@@ -6657,10 +6704,12 @@
     "lemma": "Sterope 8",
     "previous": "Sterope 7",
     "next": "Sterope 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2448,
-        "author": "Türk"
+        "end": 2448,
+        "author": "Türk."
       }
     ]
   },
@@ -6668,10 +6717,12 @@
     "lemma": "Sterope 9",
     "previous": "Sterope 8",
     "next": "Sterope 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2448,
-        "author": "Türk"
+        "end": 2448,
+        "author": "Türk."
       }
     ]
   },
@@ -6690,10 +6741,12 @@
     "lemma": "Sterope 11",
     "previous": "Sterope 10",
     "next": "Steropegereta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2448,
-        "author": "Türk"
+        "end": 2448,
+        "author": "Türk."
       }
     ]
   },
@@ -6789,10 +6842,12 @@
     "lemma": "Stertinius 4",
     "previous": "Stertinius 3",
     "next": "Stertinius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2451,
-        "author": "Münzer"
+        "end": 2451,
+        "author": "Münzer."
       }
     ]
   },
@@ -6866,10 +6921,12 @@
     "lemma": "Stertinius 11",
     "previous": "Stertinius 10",
     "next": "Stertinius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2453,
-        "author": "Stein, [Arthur]"
+        "end": 2453,
+        "author": "Stein."
       }
     ]
   },

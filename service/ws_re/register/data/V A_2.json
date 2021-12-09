@@ -1915,10 +1915,12 @@
     "lemma": "Theium",
     "previous": "Theiu kome",
     "next": "Theius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1613,
-        "author": "Meyer, Ernst"
+        "end": 1613,
+        "author": "Eugen Oberhummer."
       }
     ]
   },
@@ -2007,10 +2009,12 @@
     "lemma": "Thelamuza",
     "previous": "Thela",
     "next": "Thelaphius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1615,
-        "author": "Grohmann"
+        "end": 1615,
+        "author": "Adolf Grohmann."
       }
     ]
   },
@@ -2018,10 +2022,12 @@
     "lemma": "Thelaphius",
     "previous": "Thelamuza",
     "next": "Thelbalane",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1615,
-        "author": "Enßlin"
+        "end": 1615,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -2050,29 +2056,34 @@
   {
     "lemma": "Thelbon",
     "previous": "Thelbenkane",
-    "next": "Thelcheir",
+    "next": "Θελχείρ",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1616,
-        "author": "Weissbach"
+        "end": 1616,
+        "author": "F. H. Weissbach."
       }
     ]
   },
   {
-    "lemma": "Thelcheir",
+    "lemma": "Θελχείρ",
     "previous": "Thelbon",
     "next": "Thelchios",
+    "sort_key": "Thelcheir",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1616,
-        "author": "Herrmann"
+        "end": 1616,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Thelchios",
-    "previous": "Thelcheir",
-    "next": "Thelda",
+    "previous": "Θελχείρ",
+    "next": "Θέλδα",
     "redirect": "Telchios",
     "proof_read": 2,
     "chapters": [
@@ -2083,19 +2094,22 @@
     ]
   },
   {
-    "lemma": "Thelda",
+    "lemma": "Θέλδα",
     "previous": "Thelchios",
     "next": "Thelde",
+    "sort_key": "Thelda",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1616,
-        "author": "Weissbach"
+        "end": 1616,
+        "author": "F. H. Weissbach."
       }
     ]
   },
   {
     "lemma": "Thelde",
-    "previous": "Thelda",
+    "previous": "Θέλδα",
     "next": "Theleda",
     "chapters": [
       {
@@ -2155,7 +2169,7 @@
   {
     "lemma": "Theline",
     "previous": "Thelia",
-    "next": "Thella",
+    "next": "Θελλα",
     "chapters": [
       {
         "start": 1617,
@@ -2164,30 +2178,36 @@
     ]
   },
   {
-    "lemma": "Thella",
+    "lemma": "Θελλα",
     "previous": "Theline",
-    "next": "Thelme",
+    "next": "Θέλμη",
+    "sort_key": "Thella",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1617,
-        "author": "Hölscher"
+        "end": 1617,
+        "author": "G. Hölscher."
       }
     ]
   },
   {
-    "lemma": "Thelme",
-    "previous": "Thella",
+    "lemma": "Θέλμη",
+    "previous": "Θελλα",
     "next": "Thelmenissos",
+    "sort_key": "Thelme",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1617,
-        "author": "Weissbach"
+        "end": 1617,
+        "author": "F. H. Weissbach."
       }
     ]
   },
   {
     "lemma": "Thelmenissos",
-    "previous": "Thelme",
+    "previous": "Θέλμη",
     "next": "Thelmisa",
     "chapters": [
       {
@@ -2200,10 +2220,12 @@
     "lemma": "Thelmisa",
     "previous": "Thelmenissos",
     "next": "Thelphusa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1618,
-        "author": "Weissbach"
+        "end": 1618,
+        "author": "F. H. Weissbach."
       }
     ]
   },
@@ -2222,10 +2244,13 @@
     "lemma": "Thelsee 1",
     "previous": "Thelphusa",
     "next": "Thelsee 2",
+    "sort_key": "Thelsee",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1621,
-        "author": "Honigmann"
+        "end": 1621,
+        "author": "Ernst Honigmann."
       }
     ]
   },
@@ -5226,9 +5251,13 @@
     "lemma": "Theodoros 104",
     "previous": "Theodoros 103",
     "next": "Theodoros 105",
+    "redirect": "Bassus 35",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1906
+        "start": 1906,
+        "end": 1906,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5247,10 +5276,12 @@
     "lemma": "Theodoros 106",
     "previous": "Theodoros 105",
     "next": "Theodoros 107",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1906,
-        "author": "Enßlin"
+        "end": 1906,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5269,10 +5300,12 @@
     "lemma": "Theodoros 108",
     "previous": "Theodoros 107",
     "next": "Theodoros 109",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1906,
-        "author": "Enßlin"
+        "end": 1906,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5324,9 +5357,12 @@
     "lemma": "Theodoros 113",
     "previous": "Theodoros 112",
     "next": "Theodoros 114",
+    "redirect": "Gregorios 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1907
+        "start": 1907,
+        "end": 1907
       }
     ]
   },
@@ -5345,10 +5381,12 @@
     "lemma": "Theodoros 115",
     "previous": "Theodoros 114",
     "next": "Theodoros 116",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1907,
-        "author": "Enßlin"
+        "end": 1907,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5356,10 +5394,12 @@
     "lemma": "Theodoros 116",
     "previous": "Theodoros 115",
     "next": "Theodoros 117",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1907,
-        "author": "Enßlin"
+        "end": 1907,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5367,10 +5407,12 @@
     "lemma": "Theodoros 117",
     "previous": "Theodoros 116",
     "next": "Theodoros 118",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1907,
-        "author": "Enßlin"
+        "end": 1907,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5536,10 +5578,12 @@
     "lemma": "Theodoros 132",
     "previous": "Theodoros 131",
     "next": "Theodoros 133",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1910,
-        "author": "Enßlin"
+        "end": 1910,
+        "author": "W. Enßlin."
       }
     ]
   },

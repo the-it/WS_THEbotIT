@@ -196,28 +196,33 @@
   {
     "lemma": "Synalos 3",
     "previous": "Synalos 2",
-    "next": "Synangos",
+    "next": "Σύναγγος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1326,
-        "author": "Ehrenberg"
+        "end": 1326,
+        "author": "Ehrenberg."
       }
     ]
   },
   {
-    "lemma": "Synangos",
+    "lemma": "Σύναγγος",
     "previous": "Synalos 3",
     "next": "Synanubiastai",
+    "sort_key": "Synangos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1326,
-        "author": "Honigmann"
+        "end": 1326,
+        "author": "Honigmann."
       }
     ]
   },
   {
     "lemma": "Synanubiastai",
-    "previous": "Synangos",
+    "previous": "Σύναγγος",
     "next": "Synaos",
     "chapters": [
       {

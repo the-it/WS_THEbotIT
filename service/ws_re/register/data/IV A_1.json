@@ -2635,10 +2635,12 @@
     "lemma": "Strongyle 3",
     "previous": "Strongyle 2",
     "next": "Strongyle 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 372,
-        "author": "Creutzburg"
+        "end": 372,
+        "author": "Creutzburg."
       }
     ]
   },
@@ -2657,17 +2659,19 @@
     "lemma": "Strongyle 5",
     "previous": "Strongyle 4",
     "next": "Strongylion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 372,
-        "author": "Schulten"
+        "end": 372,
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Strongylion",
     "previous": "Strongyle 5",
-    "next": "Strongylon oros",
+    "next": "Στρογγύλον ὄρος",
     "chapters": [
       {
         "start": 372,
@@ -2676,20 +2680,23 @@
     ]
   },
   {
-    "lemma": "Strongylon oros",
+    "lemma": "Στρογγύλον ὄρος",
     "previous": "Strongylion",
     "next": "Strophades",
+    "sort_key": "Strongylonoros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 374,
-        "author": "Weissbach"
+        "end": 374,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Strophades",
-    "previous": "Strongylon oros",
-    "next": "Strophai",
+    "previous": "Στρογγύλον ὄρος",
+    "next": "Στρόφαί",
     "chapters": [
       {
         "start": 374,
@@ -2698,19 +2705,22 @@
     ]
   },
   {
-    "lemma": "Strophai",
+    "lemma": "Στρόφαί",
     "previous": "Strophades",
     "next": "Strophaia",
+    "sort_key": "Strophai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 376,
-        "author": "Weissbach"
+        "end": 376,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Strophaia",
-    "previous": "Strophai",
+    "previous": "Στρόφαί",
     "next": "Strophaios",
     "chapters": [
       {
@@ -2745,10 +2755,12 @@
     "lemma": "Strophios 2",
     "previous": "Strophios 1",
     "next": "Strophios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 378,
-        "author": "Türk"
+        "end": 378,
+        "author": "Türk."
       }
     ]
   },
@@ -2756,10 +2768,12 @@
     "lemma": "Strophios 3",
     "previous": "Strophios 2",
     "next": "Strophios 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 378,
-        "author": "Türk"
+        "end": 378,
+        "author": "Türk."
       }
     ]
   },
@@ -2767,10 +2781,12 @@
     "lemma": "Strophios 4",
     "previous": "Strophios 3",
     "next": "Strophios 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 378,
-        "author": "Türk"
+        "end": 378,
+        "author": "Türk."
       }
     ]
   },
@@ -2778,10 +2794,12 @@
     "lemma": "Strophios 5",
     "previous": "Strophios 4",
     "next": "Strophium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 378,
-        "author": "Türk"
+        "end": 378,
+        "author": "Türk."
       }
     ]
   },
@@ -2800,10 +2818,12 @@
     "lemma": "Strota",
     "previous": "Strophium",
     "next": "Stroton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 381,
-        "author": "Creutzburg"
+        "end": 381,
+        "author": "Creutzburg."
       }
     ]
   },
@@ -3731,7 +3751,7 @@
   {
     "lemma": "Styx 3",
     "previous": "Styx 2",
-    "next": "Souabastos",
+    "next": "Σουάβαστος",
     "chapters": [
       {
         "start": 464,
@@ -3740,19 +3760,22 @@
     ]
   },
   {
-    "lemma": "Souabastos",
+    "lemma": "Σουάβαστος",
     "previous": "Styx 3",
     "next": "Sua",
+    "sort_key": "Souabastos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 465,
-        "author": "Fluss"
+        "end": 465,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Sua",
-    "previous": "Souabastos",
+    "previous": "Σουάβαστος",
     "next": "Suadere legem, rogationem",
     "chapters": [
       {
@@ -3776,10 +3799,12 @@
     "lemma": "Suae",
     "previous": "Suadere legem, rogationem",
     "next": "Suaeuconi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 466,
-        "author": "Weissbach"
+        "end": 466,
+        "author": "Weissbach."
       }
     ]
   },
@@ -3901,10 +3926,12 @@
     "lemma": "Suari",
     "previous": "Suardones",
     "next": "Suarines",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 468,
-        "author": "Herrmann"
+        "end": 468,
+        "author": "Herrmann."
       }
     ]
   },
@@ -3991,10 +4018,12 @@
     "lemma": "Suastene",
     "previous": "Suasoria",
     "next": "Suastos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 471,
-        "author": "Herrmann"
+        "end": 471,
+        "author": "Herrmann."
       }
     ]
   },
@@ -4002,10 +4031,12 @@
     "lemma": "Suastos",
     "previous": "Suastene",
     "next": "Suavi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 471,
-        "author": "Herrmann"
+        "end": 471,
+        "author": "Herrmann."
       }
     ]
   },
@@ -4025,7 +4056,7 @@
   {
     "lemma": "Subaeratus",
     "previous": "Suavi",
-    "next": "Soubaras",
+    "next": "Σούβαρας",
     "chapters": [
       {
         "start": 471,
@@ -4034,24 +4065,29 @@
     ]
   },
   {
-    "lemma": "Soubaras",
+    "lemma": "Σούβαρας",
     "previous": "Subaeratus",
     "next": "Subas",
+    "sort_key": "Soubaras",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 474,
-        "author": "Fluss"
+        "end": 474,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Subas",
-    "previous": "Soubaras",
+    "previous": "Σούβαρας",
     "next": "Subasani",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 474,
-        "author": "Münzer"
+        "end": 474,
+        "author": "Münzer."
       }
     ]
   },
@@ -4228,10 +4264,12 @@
     "lemma": "Subil",
     "previous": "Subigus",
     "next": "Subinates",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 479,
-        "author": "Ruge"
+        "end": 479,
+        "author": "Ruge."
       }
     ]
   },
@@ -4239,10 +4277,12 @@
     "lemma": "Subinates",
     "previous": "Subil",
     "next": "Sublanuvio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 480,
-        "author": "Philipp"
+        "end": 480,
+        "author": "Philipp."
       }
     ]
   },
@@ -4316,10 +4356,12 @@
     "lemma": "Sublucu",
     "previous": "Subligar, -is n.",
     "next": "Sublupatia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 483,
-        "author": "Dessau"
+        "end": 483,
+        "author": "Dessau."
       }
     ]
   },
@@ -4327,10 +4369,12 @@
     "lemma": "Sublupatia",
     "previous": "Sublucu",
     "next": "Submissio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 483,
-        "author": "Philipp"
+        "end": 483,
+        "author": "Philipp."
       }
     ]
   },
@@ -5992,10 +6036,12 @@
     "lemma": "Suillius 6",
     "previous": "Suillius 5",
     "next": "Suismontium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 722,
-        "author": "Stein, [Arthur]"
+        "end": 722,
+        "author": "Stein."
       }
     ]
   },
@@ -6014,10 +6060,12 @@
     "lemma": "Suissa",
     "previous": "Suismontium",
     "next": "Suitilenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 722,
-        "author": "Ruge"
+        "end": 723,
+        "author": "Ruge."
       }
     ]
   },
@@ -6058,10 +6106,12 @@
     "lemma": "Sulcia",
     "previous": "Sulci",
     "next": "Sulciacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 724,
-        "author": "Keune"
+        "end": 724,
+        "author": "Keune."
       }
     ]
   },
@@ -6095,10 +6145,12 @@
     "lemma": "Sulciacus 2",
     "previous": "Sulciacus 1",
     "next": "Sulcitani",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 724,
-        "author": "Keune"
+        "end": 724,
+        "author": "Keune."
       }
     ]
   },
@@ -6106,10 +6158,12 @@
     "lemma": "Sulcitani",
     "previous": "Sulciacus 2",
     "next": "Sulcius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 724,
-        "author": "Philipp"
+        "end": 724,
+        "author": "Philipp."
       }
     ]
   },
@@ -6117,10 +6171,12 @@
     "lemma": "Sulcius",
     "previous": "Sulcitani",
     "next": "Sulcus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 724,
-        "author": "Stein, [Arthur]"
+        "end": 724,
+        "author": "Stein."
       }
     ]
   },
@@ -6128,10 +6184,12 @@
     "lemma": "Sulcus",
     "previous": "Sulcius",
     "next": "Sulevia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 724,
-        "author": "Keune"
+        "end": 724,
+        "author": "Keune."
       }
     ]
   },
@@ -6161,10 +6219,12 @@
     "lemma": "Sulfius",
     "previous": "Suleviae",
     "next": "Sulga(s)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 727,
-        "author": "Münzer"
+        "end": 727,
+        "author": "Münzer."
       }
     ]
   },
@@ -6216,10 +6276,12 @@
     "lemma": "Sulla",
     "previous": "Sulinus",
     "next": "Sulloniacae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 728,
-        "author": "Stein, [Arthur]"
+        "end": 728,
+        "author": "Stein."
       }
     ]
   },
@@ -6227,10 +6289,12 @@
     "lemma": "Sulloniacae",
     "previous": "Sulla",
     "next": "Sullucum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 728,
-        "author": "MacDonald"
+        "end": 728,
+        "author": "Macdonald."
       }
     ]
   },
@@ -6328,10 +6392,12 @@
     "lemma": "Sulpicius 2",
     "previous": "Sulpicius 1",
     "next": "Sulpicius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 733,
-        "author": "Münzer"
+        "end": 733,
+        "author": "Münzer."
       }
     ]
   },

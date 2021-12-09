@@ -15669,9 +15669,12 @@
     "lemma": "Sosipatros 3",
     "previous": "Sosipatros 2",
     "next": "Sosipatros 4",
+    "redirect": "Clusinius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1167
+        "start": 1167,
+        "end": 1167
       }
     ]
   },
@@ -15679,10 +15682,12 @@
     "lemma": "Sosipatros 4",
     "previous": "Sosipatros 3",
     "next": "Sosipatros 5",
-    "redirect": true,
+    "redirect": "Charisios 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1167
+        "start": 1167,
+        "end": 1167
       }
     ]
   },
@@ -15745,10 +15750,12 @@
     "lemma": "Sosippos 2",
     "previous": "Sosippos 1",
     "next": "Sosippos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1173,
-        "author": "Münzer"
+        "end": 1173,
+        "author": "Münzer."
       }
     ]
   },
@@ -15756,10 +15763,12 @@
     "lemma": "Sosippos 3",
     "previous": "Sosippos 2",
     "next": "Sosippu limen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1173,
-        "author": "Münzer"
+        "end": 1173,
+        "author": "Münzer."
       }
     ]
   },
@@ -15767,10 +15776,13 @@
     "lemma": "Sosippu limen",
     "previous": "Sosippos 3",
     "next": "Sosirate",
+    "sort_key": "Sosippulimen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1173,
-        "author": "Moritz, [Bernhard]"
+        "end": 1173,
+        "author": "Moritz."
       }
     ]
   },
@@ -15813,10 +15825,12 @@
     "lemma": "Sosistratos 1",
     "previous": "Sosis 2",
     "next": "Sosistratos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1173,
-        "author": "Kirchner"
+        "end": 1173,
+        "author": "Kirchner."
       }
     ]
   },
@@ -15824,10 +15838,12 @@
     "lemma": "Sosistratos 2",
     "previous": "Sosistratos 1",
     "next": "Sosistratos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1173,
-        "author": "Kirchner"
+        "end": 1173,
+        "author": "Kirchner."
       }
     ]
   },
@@ -15835,10 +15851,12 @@
     "lemma": "Sosistratos 3",
     "previous": "Sosistratos 2",
     "next": "Sosistratos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1173,
-        "author": "Obst"
+        "end": 1173,
+        "author": "Obst."
       }
     ]
   },
@@ -15879,10 +15897,12 @@
     "lemma": "Sosistratos 7",
     "previous": "Sosistratos 6",
     "next": "Sositheos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1175,
-        "author": "Oldfather"
+        "end": 1175,
+        "author": "Oldfather."
       }
     ]
   },
@@ -15890,10 +15910,12 @@
     "lemma": "Sositheos 1",
     "previous": "Sosistratos 7",
     "next": "Sositheos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1175,
-        "author": "Schoch"
+        "end": 1175,
+        "author": "Schoch."
       }
     ]
   },
@@ -15912,10 +15934,12 @@
     "lemma": "Sositheos 3",
     "previous": "Sositheos 2",
     "next": "Sositheos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1176,
-        "author": "Münzer"
+        "end": 1176,
+        "author": "Münzer."
       }
     ]
   },
@@ -15923,10 +15947,12 @@
     "lemma": "Sositheos 4",
     "previous": "Sositheos 3",
     "next": "Sositheos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1176,
-        "author": "Münzer"
+        "end": 1176,
+        "author": "Münzer."
       }
     ]
   },
@@ -15945,10 +15971,12 @@
     "lemma": "Sosius 1",
     "previous": "Sositheos 5",
     "next": "Sosius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1176,
-        "author": "Stein, [Arthur]"
+        "end": 1176,
+        "author": "Stein."
       }
     ]
   },
@@ -15967,10 +15995,12 @@
     "lemma": "Sosius 3",
     "previous": "Sosius 2",
     "next": "Sosius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1180,
-        "author": "Münzer"
+        "end": 1180,
+        "author": "Münzer."
       }
     ]
   },
@@ -15978,10 +16008,12 @@
     "lemma": "Sosius 4",
     "previous": "Sosius 3",
     "next": "Sosius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1180,
-        "author": "Groag"
+        "end": 1180,
+        "author": "Groag."
       }
     ]
   },
@@ -15989,10 +16021,12 @@
     "lemma": "Sosius 5",
     "previous": "Sosius 4",
     "next": "Sosius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1180,
-        "author": "Groag"
+        "end": 1180,
+        "author": "Groag."
       }
     ]
   },
@@ -16000,10 +16034,12 @@
     "lemma": "Sosius 6",
     "previous": "Sosius 5",
     "next": "Sosius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1180,
-        "author": "Groag"
+        "end": 1180,
+        "author": "Groag."
       }
     ]
   },
@@ -16011,10 +16047,12 @@
     "lemma": "Sosius 7",
     "previous": "Sosius 6",
     "next": "Sosius 8",
-    "redirect": true,
+    "redirect": "Senecio 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1180
+        "start": 1180,
+        "end": 1180
       }
     ]
   },
@@ -16022,10 +16060,12 @@
     "lemma": "Sosius 8",
     "previous": "Sosius 7",
     "next": "Sosius 9",
-    "redirect": true,
+    "redirect": "Pompeius 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1180
+        "start": 1180,
+        "end": 1180
       }
     ]
   },
@@ -16033,10 +16073,12 @@
     "lemma": "Sosius 9",
     "previous": "Sosius 8",
     "next": "Sosius 10",
-    "redirect": true,
+    "redirect": "Pompeius 77",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1180
+        "start": 1180,
+        "end": 1180
       }
     ]
   },
@@ -16044,10 +16086,12 @@
     "lemma": "Sosius 10",
     "previous": "Sosius 9",
     "next": "Sosius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1180,
-        "author": "Groag"
+        "end": 1180,
+        "author": "Groag."
       }
     ]
   },

@@ -11871,7 +11871,7 @@
   {
     "lemma": "Thais",
     "previous": "Thainata",
-    "next": "Thakkona",
+    "next": "Θακκόνα",
     "chapters": [
       {
         "start": 1184,
@@ -11880,19 +11880,22 @@
     ]
   },
   {
-    "lemma": "Thakkona",
+    "lemma": "Θακκόνα",
     "previous": "Thais",
     "next": "Thala",
+    "sort_key": "Thakkona",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1185,
-        "author": "Weissbach"
+        "end": 1185,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Thala",
-    "previous": "Thakkona",
+    "previous": "Θακκόνα",
     "next": "Thala 1",
     "chapters": [
       {
@@ -11927,10 +11930,12 @@
     "lemma": "Thala 3",
     "previous": "Thala 2",
     "next": "Thalai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1187,
-        "author": "Hölscher"
+        "end": 1187,
+        "author": "G. Hölscher."
       }
     ]
   },
@@ -11949,10 +11954,12 @@
     "lemma": "Thalama",
     "previous": "Thalai",
     "next": "Thalamai 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1187,
-        "author": "Weissbach"
+        "end": 1187,
+        "author": "F. H. Weissbach."
       }
     ]
   },
@@ -11981,7 +11988,7 @@
   {
     "lemma": "Thalamos 1",
     "previous": "Thalamai 2",
-    "next": "Thalamos 2",
+    "next": "Θάλαμος 2",
     "chapters": [
       {
         "start": 1193,
@@ -11990,19 +11997,22 @@
     ]
   },
   {
-    "lemma": "Thalamos 2",
+    "lemma": "Θάλαμος 2",
     "previous": "Thalamos 1",
     "next": "Thalamos 3",
+    "sort_key": "Thalamos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1197,
-        "author": "Stein, [Arthur]"
+        "end": 1197,
+        "author": "Stein."
       }
     ]
   },
   {
     "lemma": "Thalamos 3",
-    "previous": "Thalamos 2",
+    "previous": "Θάλαμος 2",
     "next": "Thalapio",
     "chapters": [
       {
@@ -12015,10 +12025,12 @@
     "lemma": "Thalapio",
     "previous": "Thalamos 3",
     "next": "Thalassios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1198,
-        "author": "Lippold, Georg"
+        "end": 1198,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -12103,10 +12115,12 @@
     "lemma": "Thalassius 7",
     "previous": "Thalassius 6",
     "next": "Thalassius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1202,
-        "author": "Enßlin"
+        "end": 1202,
+        "author": "W. Enßlin."
       }
     ]
   },

@@ -843,10 +843,12 @@
     "lemma": "Hestiaios 7a",
     "previous": "Herpyllis",
     "next": "Hierastamnai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 232,
-        "author": "Lippold, Georg"
+        "end": 232,
+        "author": "Lippold."
       }
     ]
   },
@@ -898,10 +900,12 @@
     "lemma": "Hippokles 4",
     "previous": "Hippasini",
     "next": "Hippomachos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 235,
-        "author": "Kroll"
+        "end": 235,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -909,10 +913,12 @@
     "lemma": "Hippomachos 4",
     "previous": "Hippokles 4",
     "next": "Hippus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 235,
-        "author": "Lippold, Georg"
+        "end": 235,
+        "author": "Lippold."
       }
     ]
   },
@@ -941,7 +947,7 @@
   {
     "lemma": "Humanitas",
     "previous": "Hostia",
-    "next": "Hyamion",
+    "next": "Ύάμιον",
     "chapters": [
       {
         "start": 282,
@@ -950,19 +956,22 @@
     ]
   },
   {
-    "lemma": "Hyamion",
+    "lemma": "Ύάμιον",
     "previous": "Humanitas",
     "next": "Hypokrites",
+    "sort_key": "Hyamion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 309,
-        "author": "Bürchner"
+        "end": 309,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Hypokrites",
-    "previous": "Hyamion",
+    "previous": "Ύάμιον",
     "next": "Hythmitae",
     "chapters": [
       {
@@ -1137,15 +1146,19 @@
   },
   {
     "lemma": "Kalanos",
-    "previous": "Iunius 75a"
+    "previous": "Iunius 75a",
+    "next": "Kallias 29"
   },
   {
     "lemma": "Kallias 29",
+    "previous": "Kalanos",
     "next": "Kallikles 6a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 385,
-        "author": "Lippold, Georg"
+        "end": 386,
+        "author": "Lippold."
       }
     ]
   },
@@ -1185,7 +1198,7 @@
   {
     "lemma": "Kambaioi",
     "previous": "Kallimachos 6",
-    "next": "Kelkeas",
+    "next": "Κελκέας",
     "chapters": [
       {
         "start": 452,
@@ -1194,19 +1207,22 @@
     ]
   },
   {
-    "lemma": "Kelkeas",
+    "lemma": "Κελκέας",
     "previous": "Kambaioi",
     "next": "Kinambroi",
+    "sort_key": "Kelkeas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 453,
-        "author": "Bürchner"
+        "end": 453,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kinambroi",
-    "previous": "Kelkeas",
+    "previous": "Κελκέας",
     "next": "Koinon 1a",
     "chapters": [
       {
@@ -2912,7 +2928,6 @@
   {
     "lemma": "Maximinus 25f",
     "previous": "Maximinus 25e",
-    "next": "Maximinus 25g",
     "proof_read": 2,
     "chapters": [
       {
@@ -2924,6 +2939,8 @@
   },
   {
     "lemma": "Maximina",
+    "previous": "Maximinus 34",
+    "next": "Maximius",
     "sort_key": "Maximinus 35",
     "proof_read": 2,
     "chapters": [
@@ -2936,7 +2953,6 @@
   },
   {
     "lemma": "Maximinus 25g",
-    "previous": "Maximinus 25f",
     "next": "Maximinus 26",
     "proof_read": 2,
     "chapters": [
