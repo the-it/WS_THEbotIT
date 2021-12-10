@@ -2643,10 +2643,12 @@
     "lemma": "Teisis 4",
     "previous": "Teisis 3",
     "next": "Teisis 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 153,
-        "author": "Fiehn"
+        "end": 153,
+        "author": "Fiehn."
       }
     ]
   },
@@ -2654,10 +2656,12 @@
     "lemma": "Teisis 5",
     "previous": "Teisis 4",
     "next": "Teison",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 153,
-        "author": "Fiehn"
+        "end": 153,
+        "author": "Fiehn."
       }
     ]
   },
@@ -2720,10 +2724,12 @@
     "lemma": "Teium",
     "previous": "Teithras 2",
     "next": "Tekelia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 156,
-        "author": "Ruge"
+        "end": 156,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -2829,10 +2835,12 @@
     "lemma": "Tektaphos 3",
     "previous": "Tektaphos 2",
     "next": "Tekton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 171,
-        "author": "Kolf"
+        "end": 171,
+        "author": "van der Kolf."
       }
     ]
   },
@@ -2866,10 +2874,13 @@
     "lemma": "Τεκτόσακες",
     "previous": "Tektosagen",
     "next": "Tela 1",
+    "sort_key": "Tektosakes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 173,
-        "author": "Herrmann"
+        "end": 173,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -2898,7 +2909,7 @@
   {
     "lemma": "Telada",
     "previous": "Tela 2",
-    "next": "Telaiba",
+    "next": "Τέλαιβα",
     "chapters": [
       {
         "start": 185,
@@ -2907,19 +2918,22 @@
     ]
   },
   {
-    "lemma": "Telaiba",
+    "lemma": "Τέλαιβα",
     "previous": "Telada",
     "next": "Τελάμ",
+    "sort_key": "Telaiba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 187,
-        "author": "Herrmann"
+        "end": 187,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Τελάμ",
-    "previous": "Telaiba",
+    "previous": "Τέλαιβα",
     "next": "Telames",
     "sort_key": "Telam",
     "redirect": "Telem",
@@ -3001,17 +3015,19 @@
     "lemma": "Telandria 2",
     "previous": "Telandria 1",
     "next": "Telandros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 193,
-        "author": "Ruge"
+        "end": 193,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Telandros",
     "previous": "Telandria 2",
-    "next": "Telane",
+    "next": "Τελάνη",
     "chapters": [
       {
         "start": 193,
@@ -3020,7 +3036,7 @@
     ]
   },
   {
-    "lemma": "Telane",
+    "lemma": "Τελάνη",
     "previous": "Telandros",
     "next": "Telanissos",
     "sort_key": "Telane",
@@ -3035,7 +3051,7 @@
   },
   {
     "lemma": "Telanissos",
-    "previous": "Telane",
+    "previous": "Τελάνη",
     "next": "Telauges",
     "chapters": [
       {
@@ -3103,9 +3119,12 @@
     "lemma": "Telchinia 2",
     "previous": "Telchinia 1",
     "next": "Telchinios",
+    "redirect": "Telchinen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
@@ -3126,16 +3145,19 @@
     "lemma": "Telchinis",
     "previous": "Telchinios",
     "next": "Telchios",
+    "redirect": "Telchinen",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 225
+        "start": 225,
+        "end": 225
       }
     ]
   },
   {
     "lemma": "Telchios",
     "previous": "Telchinis",
-    "next": "Telchis 1",
+    "next": "Τελχίς 1",
     "chapters": [
       {
         "start": 225,
@@ -3144,19 +3166,22 @@
     ]
   },
   {
-    "lemma": "Telchis 1",
+    "lemma": "Τελχίς 1",
     "previous": "Telchios",
     "next": "Τελχίς 2",
+    "sort_key": "Telchis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 226,
-        "author": "Treidler"
+        "end": 226,
+        "author": "Hans Treidler."
       }
     ]
   },
   {
     "lemma": "Τελχίς 2",
-    "previous": "Telchis 1",
+    "previous": "Τελχίς 1",
     "next": "Telda",
     "sort_key": "Telchis 2",
     "redirect": "Telchios",
@@ -3260,10 +3285,12 @@
     "lemma": "Teleboas 2",
     "previous": "Teleboas 1",
     "next": "Teleboas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 313,
-        "author": "Türk"
+        "end": 313,
+        "author": "G. Türk."
       }
     ]
   },
@@ -3315,10 +3342,12 @@
     "lemma": "Teledamos 4",
     "previous": "Teledamos 3",
     "next": "Teledike",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 314,
-        "author": "Scherling"
+        "end": 314,
+        "author": "Scherling."
       }
     ]
   },
@@ -3359,10 +3388,12 @@
     "lemma": "Telegonos 2",
     "previous": "Telegonos 1",
     "next": "Telegraphie",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 320,
-        "author": "Scherling"
+        "end": 320,
+        "author": "Scherling."
       }
     ]
   },
@@ -3438,10 +3469,12 @@
     "lemma": "Telekleas",
     "previous": "Teleios",
     "next": "Telekleia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 322,
-        "author": "Oldfather"
+        "end": 322,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -3493,10 +3526,12 @@
     "lemma": "Telekles 3",
     "previous": "Telekles 2",
     "next": "Teleklos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 324,
-        "author": "Lippold, Georg"
+        "end": 324,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -3570,10 +3605,12 @@
     "lemma": "Telemachos 4",
     "previous": "Telemachos 3",
     "next": "Telemachos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 358,
-        "author": "Fiehn"
+        "end": 358,
+        "author": "Fiehn."
       }
     ]
   },
@@ -3592,10 +3629,12 @@
     "lemma": "Telemachos 6",
     "previous": "Telemachos 5",
     "next": "Telemachos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 358,
-        "author": "Enßlin"
+        "end": 358,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3603,10 +3642,12 @@
     "lemma": "Telemachos 7",
     "previous": "Telemachos 6",
     "next": "Telemachus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 358,
-        "author": "Enßlin"
+        "end": 358,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3649,10 +3690,12 @@
     "lemma": "Telemos 2",
     "previous": "Telemos 1",
     "next": "Telendos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 359,
-        "author": "Modrze"
+        "end": 359,
+        "author": "Anneliese Modrze."
       }
     ]
   },
@@ -3660,10 +3703,12 @@
     "lemma": "Telendos",
     "previous": "Telemos 2",
     "next": "Telenikos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 359,
-        "author": "Ruge"
+        "end": 359,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -3671,10 +3716,12 @@
     "lemma": "Telenikos",
     "previous": "Telendos",
     "next": "Teleon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 359,
-        "author": "Bernert"
+        "end": 359,
+        "author": "Bernert."
       }
     ]
   },
@@ -3717,10 +3764,12 @@
     "lemma": "Telepatra",
     "previous": "Teleos",
     "next": "Telephanes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 359,
-        "author": "Tambornino"
+        "end": 359,
+        "author": "J. Tambornino."
       }
     ]
   },
@@ -3782,7 +3831,7 @@
   {
     "lemma": "Telephe",
     "previous": "Telephassa",
-    "next": "Telephios demos, Telephu krene",
+    "next": "Τηλέφιος δῆμος, Τηλέφου κρήνη",
     "chapters": [
       {
         "start": 361,
@@ -3791,24 +3840,29 @@
     ]
   },
   {
-    "lemma": "Telephios demos, Telephu krene",
+    "lemma": "Τηλέφιος δῆμος, Τηλέφου κρήνη",
     "previous": "Telephe",
     "next": "Telephius",
+    "sort_key": "Telephios demos, Telephu krene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 361,
-        "author": "Ruge"
+        "end": 361,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Telephius",
-    "previous": "Telephios demos, Telephu krene",
+    "previous": "Τηλέφιος δῆμος, Τηλέφου κρήνη",
     "next": "Telephos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 361,
-        "author": "Enßlin"
+        "end": 361,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3873,10 +3927,12 @@
     "lemma": "Teles 1",
     "previous": "Telepte",
     "next": "Teles 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 375,
-        "author": "Türk"
+        "end": 375,
+        "author": "G. Türk."
       }
     ]
   },
@@ -3917,10 +3973,12 @@
     "lemma": "Telesarchos 2",
     "previous": "Telesarchos 1",
     "next": "Telesaura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 382,
-        "author": "Oldfather"
+        "end": 382,
+        "author": "Wm. A. Oldfather."
       }
     ]
   },
@@ -3998,10 +4056,12 @@
     "lemma": "Telesinos 1",
     "previous": "Telesilla",
     "next": "Telesinos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 385,
-        "author": "Kirchner"
+        "end": 385,
+        "author": "Johann Kirchner."
       }
     ]
   },
@@ -7211,10 +7271,12 @@
     "lemma": "Terentius 51",
     "previous": "Terentius 50",
     "next": "Terentius 52",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 663,
-        "author": "Münzer"
+        "end": 663,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -7389,10 +7451,12 @@
     "lemma": "Terentius 67",
     "previous": "Terentius 66",
     "next": "Terentius 68",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 669,
-        "author": "Stein, [Arthur]"
+        "end": 669,
+        "author": "Stein."
       }
     ]
   },
@@ -7455,10 +7519,12 @@
     "lemma": "Terentius 73",
     "previous": "Terentius 72",
     "next": "Terentius 74",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 676,
-        "author": "Münzer"
+        "end": 676,
+        "author": "Münzer."
       }
     ]
   },
@@ -7477,10 +7543,12 @@
     "lemma": "Terentius 75",
     "previous": "Terentius 74",
     "next": "Terentius 76ff.",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 676,
-        "author": "Münzer"
+        "end": 676,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -7532,10 +7600,12 @@
     "lemma": "Terentius 79",
     "previous": "Terentius 78",
     "next": "Terentius 80",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 677,
-        "author": "Münzer"
+        "end": 678,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -7604,10 +7674,12 @@
     "lemma": "Terentius 85",
     "previous": "Terentius 84",
     "next": "Terentius 86",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 690,
-        "author": "Fluss"
+        "end": 690,
+        "author": "F. Münzer."
       }
     ]
   },

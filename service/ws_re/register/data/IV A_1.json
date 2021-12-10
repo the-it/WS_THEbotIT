@@ -6405,10 +6405,12 @@
     "lemma": "Sulpicius 3",
     "previous": "Sulpicius 2",
     "next": "Sulpicius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 733,
-        "author": "Münzer"
+        "end": 733,
+        "author": "Münzer."
       }
     ]
   },
@@ -6493,10 +6495,12 @@
     "lemma": "Sulpicius 11",
     "previous": "Sulpicius 10",
     "next": "Sulpicius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 735,
-        "author": "Münzer"
+        "end": 735,
+        "author": "Münzer."
       }
     ]
   },
@@ -6515,10 +6519,12 @@
     "lemma": "Sulpicius 13",
     "previous": "Sulpicius 12",
     "next": "Sulpicius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 735,
-        "author": "Münzer"
+        "end": 735,
+        "author": "Münzer."
       }
     ]
   },
@@ -6658,10 +6664,12 @@
     "lemma": "Sulpicius 26",
     "previous": "Sulpicius 25",
     "next": "Sulpicius 27",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 744,
-        "author": "Stein, [Arthur]"
+        "end": 744,
+        "author": "Stein."
       }
     ]
   },
@@ -9520,10 +9528,13 @@
     "lemma": "Sutronia Valentina",
     "previous": "Sutrius",
     "next": "Suttunius",
+    "sort_key": "Sutroniavalentina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 996,
-        "author": "Stein, [Arthur]"
+        "end": 996,
+        "author": "Stein."
       }
     ]
   },
@@ -9597,10 +9608,12 @@
     "lemma": "Syagra",
     "previous": "Suzaioi",
     "next": "Syagrius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 997,
-        "author": "Ruge"
+        "end": 997,
+        "author": "Ruge."
       }
     ]
   },
@@ -9630,10 +9643,12 @@
     "lemma": "Syagrius 3",
     "previous": "Syagrius 2",
     "next": "Syagrius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 998,
-        "author": "Seeck"
+        "end": 998,
+        "author": "Seeck."
       }
     ]
   },
@@ -9652,10 +9667,12 @@
     "lemma": "Syagrius 5",
     "previous": "Syagrius 4",
     "next": "Syagros 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 998,
-        "author": "Seeck"
+        "end": 998,
+        "author": "Seeck."
       }
     ]
   },
@@ -9674,10 +9691,12 @@
     "lemma": "Syagros 2",
     "previous": "Syagros 1",
     "next": "Syagros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Eitrem"
+        "end": 999,
+        "author": "Eitrem."
       }
     ]
   },
@@ -9742,10 +9761,12 @@
     "lemma": "Syassos",
     "previous": "Syangela",
     "next": "Syba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Ruge"
+        "end": 999,
+        "author": "Ruge."
       }
     ]
   },
@@ -9832,10 +9853,12 @@
     "lemma": "Sybaris 6",
     "previous": "Sybaris 5",
     "next": "Sybaris 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1005,
-        "author": "Eitrem"
+        "end": 1005,
+        "author": "Eitrem."
       }
     ]
   },
@@ -9843,10 +9866,12 @@
     "lemma": "Sybaris 7",
     "previous": "Sybaris 6",
     "next": "Sybaris 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1005,
-        "author": "Eitrem"
+        "end": 1005,
+        "author": "Eitrem."
       }
     ]
   },
@@ -9854,10 +9879,12 @@
     "lemma": "Sybaris 8",
     "previous": "Sybaris 7",
     "next": "Sybaris 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1005,
-        "author": "Eitrem"
+        "end": 1005,
+        "author": "Eitrem."
       }
     ]
   },
@@ -9865,10 +9892,12 @@
     "lemma": "Sybaris 9",
     "previous": "Sybaris 8",
     "next": "Sybaris 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1005,
-        "author": "Eitrem"
+        "end": 1005,
+        "author": "Eitrem."
       }
     ]
   },
@@ -9930,7 +9959,7 @@
   {
     "lemma": "Sybene",
     "previous": "Sybas",
-    "next": "Syberios, -reus, -rites",
+    "next": "Συβέριος, -ρεύς, -ρίτης",
     "chapters": [
       {
         "start": 1011,
@@ -9939,19 +9968,22 @@
     ]
   },
   {
-    "lemma": "Syberios, -reus, -rites",
+    "lemma": "Συβέριος, -ρεύς, -ρίτης",
     "previous": "Sybene",
     "next": "Syberos",
+    "sort_key": "Syberios,-reus, -rites",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1012,
-        "author": "Fluss"
+        "end": 1012,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Syberos",
-    "previous": "Syberios, -reus, -rites",
+    "previous": "Συβέριος, -ρεύς, -ρίτης",
     "next": "Sybillates",
     "chapters": [
       {

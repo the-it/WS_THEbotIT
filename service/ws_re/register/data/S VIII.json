@@ -3672,13 +3672,25 @@
     "lemma": "L. (Iulius) Caesar"
   },
   {
-    "lemma": "Korobios"
+    "lemma": "Korobios",
+    "next": "Kybos"
   },
   {
-    "lemma": "Kybos"
+    "lemma": "Kybos",
+    "previous": "Korobios",
+    "next": "Laconius",
+    "redirect": "Psegas",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 921,
+        "end": 921
+      }
+    ]
   },
   {
     "lemma": "Laconius",
+    "previous": "Kybos",
     "next": "Laelianus 2a",
     "chapters": [
       {
