@@ -2913,7 +2913,16 @@
   },
   {
     "lemma": "Tisidium",
-    "previous": "Tisiaus"
+    "previous": "Tisiaus",
+    "next": "Tisidium 1",
+    "redirect": true,
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1478,
+        "end": 1478
+      }
+    ]
   },
   {
     "lemma": "Tisidium 1",
@@ -2963,10 +2972,12 @@
     "lemma": "Tisis",
     "previous": "Tisiphonos, Teisiphonos",
     "next": "Tisna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1481,
-        "author": "Kees"
+        "end": 1481,
+        "author": "Herm. Kees."
       }
     ]
   },
@@ -3174,10 +3185,12 @@
     "lemma": "Titaresios 2",
     "previous": "Titaresios 1",
     "next": "Titarissos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1510,
-        "author": "Kruse"
+        "end": 1510,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -3185,10 +3198,12 @@
     "lemma": "Titarissos",
     "previous": "Titaresios 2",
     "next": "Titaros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1510,
-        "author": "Ruge"
+        "end": 1510,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -3217,7 +3232,7 @@
   {
     "lemma": "Titeiphyta",
     "previous": "Titedius Labeo",
-    "next": "Titen",
+    "next": "Τίτην",
     "chapters": [
       {
         "start": 1511,
@@ -3226,24 +3241,29 @@
     ]
   },
   {
-    "lemma": "Titen",
+    "lemma": "Τίτην",
     "previous": "Titeiphyta",
     "next": "Titensianus",
+    "sort_key": "Titen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1511,
-        "author": "Herrmann"
+        "end": 1511,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Titensianus",
-    "previous": "Titen",
+    "previous": "Τίτην",
     "next": "Tithenidia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1511,
-        "author": "Philipp"
+        "end": 1511,
+        "author": "Hans Philipp."
       }
     ]
   },
@@ -3440,10 +3460,12 @@
     "lemma": "Titianus 2",
     "previous": "Titianus 1",
     "next": "Titianus 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1532,
-        "author": "Stein, [Arthur]"
+        "end": 1532,
+        "author": "Stein."
       }
     ]
   },
@@ -3583,10 +3605,12 @@
     "lemma": "Titianus 15",
     "previous": "Titianus 14",
     "next": "Titianus 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1535,
-        "author": "Enßlin"
+        "end": 1535,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3594,10 +3618,12 @@
     "lemma": "Titianus 16",
     "previous": "Titianus 15",
     "next": "Titianus 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1535,
-        "author": "Enßlin"
+        "end": 1535,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3739,10 +3765,12 @@
     "lemma": "Titinius 5",
     "previous": "Titinius 4",
     "next": "Titinius 6",
-    "redirect": true,
+    "redirect": "Titinius 20",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1547
+        "start": 1547,
+        "end": 1547
       }
     ]
   },
@@ -3792,10 +3820,12 @@
     "lemma": "Titinius 10",
     "previous": "Titinius 9",
     "next": "Titinius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1548,
-        "author": "Münzer"
+        "end": 1548,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -3825,10 +3855,12 @@
     "lemma": "Titinius 13",
     "previous": "Titinius 12",
     "next": "Titinius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1548,
-        "author": "Münzer"
+        "end": 1548,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -3934,10 +3966,12 @@
     "lemma": "Titinius 23",
     "previous": "Titinius 22",
     "next": "Titinius 24",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1552,
-        "author": "Stein, [Arthur]"
+        "end": 1552,
+        "author": "Stein."
       }
     ]
   },
@@ -3976,9 +4010,12 @@
     "lemma": "Titinius 27",
     "previous": "Titinius 26",
     "next": "Titinius 28",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1553
+        "start": 1553,
+        "end": 1553,
+        "author": "Stein."
       }
     ]
   },
@@ -3986,10 +4023,12 @@
     "lemma": "Titinius 28",
     "previous": "Titinius 27",
     "next": "Titinus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1553,
-        "author": "Stein, [Arthur]"
+        "end": 1553,
+        "author": "Stein."
       }
     ]
   },
@@ -4010,10 +4049,12 @@
     "lemma": "Tition",
     "previous": "Titinus",
     "next": "Titiopolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1553,
-        "author": "Ruge"
+        "end": 1553,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -4085,9 +4126,12 @@
     "lemma": "Titius 4",
     "previous": "Titius 3",
     "next": "Titius 5",
+    "redirect": "Tychios 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1555
+        "start": 1555,
+        "end": 1555
       }
     ]
   },
@@ -4095,10 +4139,12 @@
     "lemma": "Titius 5",
     "previous": "Titius 4",
     "next": "Titius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1555,
-        "author": "Enßlin"
+        "end": 1555,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4126,9 +4172,12 @@
     "lemma": "Titius 8",
     "previous": "Titius 7",
     "next": "Titius 9",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1556
+        "start": 1556,
+        "end": 1556,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4156,9 +4205,12 @@
     "lemma": "Titius 11",
     "previous": "Titius 10",
     "next": "Titius 12",
+    "redirect": "Titius 21",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1556
+        "start": 1556,
+        "end": 1556
       }
     ]
   },
@@ -4298,9 +4350,12 @@
     "lemma": "Titius 25",
     "previous": "Titius 24",
     "next": "Titius 26",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1565
+        "start": 1565,
+        "end": 1565,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -4330,10 +4385,12 @@
     "lemma": "Titius 28",
     "previous": "Titius 27",
     "next": "Titius 29",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1567,
-        "author": "Stein, [Arthur]"
+        "end": 1567,
+        "author": "Stein."
       }
     ]
   },
@@ -4373,10 +4430,12 @@
     "lemma": "Titius 32",
     "previous": "Titius 31",
     "next": "Titius 33",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Stein, [Arthur]"
+        "end": 1568,
+        "author": "Stein."
       }
     ]
   },
@@ -4394,10 +4453,12 @@
     "lemma": "Titius 34",
     "previous": "Titius 33",
     "next": "Titius 35",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Münzer"
+        "end": 1568,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -4405,10 +4466,12 @@
     "lemma": "Titius 35",
     "previous": "Titius 34",
     "next": "Titius 36",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Stein, [Arthur]"
+        "end": 1568,
+        "author": "Stein."
       }
     ]
   },
@@ -4437,10 +4500,12 @@
     "lemma": "Titius 38",
     "previous": "Titius 37",
     "next": "Titius 39",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1569,
-        "author": "Münzer"
+        "end": 1569,
+        "author": "Münzer."
       }
     ]
   },
@@ -4556,10 +4621,12 @@
     "lemma": "Titos 2",
     "previous": "Titos 1",
     "next": "Titos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1572,
-        "author": "Lippold, Georg"
+        "end": 1572,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -4579,7 +4646,7 @@
   {
     "lemma": "Titrai",
     "previous": "Titos 3",
-    "next": "Tittai",
+    "next": "Τίτται",
     "chapters": [
       {
         "start": 1572,
@@ -4588,19 +4655,22 @@
     ]
   },
   {
-    "lemma": "Tittai",
+    "lemma": "Τίτται",
     "previous": "Titrai",
     "next": "Titter",
+    "sort_key": "Tittai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1572,
-        "author": "Honigmann"
+        "end": 1572,
+        "author": "Ernst Honigmann."
       }
     ]
   },
   {
     "lemma": "Titter",
-    "previous": "Tittai",
+    "previous": "Τίτται",
     "next": "Titthion",
     "chapters": [
       {
@@ -4670,10 +4740,13 @@
     "lemma": "Titucius Roburrus",
     "previous": "Titua",
     "next": "Titulcia",
+    "sort_key": "Tituciusroburrus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1574,
-        "author": "Fluss"
+        "end": 1574,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -4692,10 +4765,12 @@
     "lemma": "Titulenus 1",
     "previous": "Titulcia",
     "next": "Titulenus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1574,
-        "author": "Stein, [Arthur]"
+        "end": 1574,
+        "author": "Stein."
       }
     ]
   },
