@@ -1607,9 +1607,12 @@
     "lemma": "Inatos",
     "previous": "Idus",
     "next": "Inkrustation",
+    "redirect": "Einatos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 285
+        "start": 285,
+        "end": 285
       }
     ]
   },
@@ -1628,10 +1631,12 @@
     "lemma": "Isidoros 3a",
     "previous": "Inkrustation",
     "next": "Isonomia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 293,
-        "author": "Heichelheim"
+        "end": 293,
+        "author": "Fritz Heichelheim."
       }
     ]
   },
@@ -2030,10 +2035,12 @@
     "lemma": "Korax 6",
     "previous": "Korax 5",
     "next": "Korax 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
-        "author": "Diehl, Erich"
+        "end": 335,
+        "author": "Erich Diehl."
       }
     ]
   },
@@ -2217,10 +2224,12 @@
     "lemma": "Leontios 9",
     "previous": "Leontios 8",
     "next": "Leptines 6a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 376,
-        "author": "Berger"
+        "end": 376,
+        "author": "Adolf Berger."
       }
     ]
   },
@@ -2250,10 +2259,13 @@
     "lemma": "Leukos a",
     "previous": "Leukai Korai",
     "next": "Lex Acilia de intercalando",
+    "sort_key": "Leukosa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 378,
-        "author": "Oberhummer"
+        "end": 378,
+        "author": "E. Oberhummer."
       }
     ]
   },
@@ -2294,10 +2306,13 @@
     "lemma": "Lex Aemilia 4",
     "previous": "Lex Aebutia 2",
     "next": "Lex Antistia",
+    "sort_key": "Lexaemilia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 382,
-        "author": "Berger"
+        "end": 382,
+        "author": "Adolf Berger."
       }
     ]
   },
@@ -2338,10 +2353,13 @@
     "lemma": "Lex Antonia 3",
     "previous": "Lex Antonia 1.7",
     "next": "Lex Antonia 4",
+    "sort_key": "Lexantonia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 382,
-        "author": "Berger"
+        "end": 382,
+        "author": "Adolf Berger."
       }
     ]
   },
@@ -2349,10 +2367,13 @@
     "lemma": "Lex Antonia 4",
     "previous": "Lex Antonia 3",
     "next": "Lex Aternia Tarpeia",
+    "sort_key": "Lexantonia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 382,
-        "author": "Berger"
+        "end": 382,
+        "author": "Adolf Berger."
       }
     ]
   },
@@ -2404,10 +2425,13 @@
     "lemma": "Lex Cicereia de sponsu",
     "previous": "Lex Canuleia 1.2",
     "next": "Lex Clodia de victoriato",
+    "sort_key": "Lexcicereia de sponsu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 383,
-        "author": "Berger"
+        "end": 383,
+        "author": "Adolf Berger."
       }
     ]
   },
@@ -2437,10 +2461,13 @@
     "lemma": "Leges Corneliae 4",
     "previous": "Lex de clavo pangendo",
     "next": "Leges Corneliae Pompeiae 1",
+    "sort_key": "Legescorneliae 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 384,
-        "author": "Berger"
+        "end": 384,
+        "author": "Adolf Berger."
       }
     ]
   },
@@ -4264,10 +4291,12 @@
     "lemma": "Nymphidius 5a",
     "previous": "Nyktophylax 2",
     "next": "Oageis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 680,
-        "author": "Berger"
+        "end": 680,
+        "author": "Adolf Berger."
       }
     ]
   },
@@ -4275,10 +4304,12 @@
     "lemma": "Oageis",
     "previous": "Nymphidius 5a",
     "next": "Oamer",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 680,
-        "author": "Enßlin"
+        "end": 680,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4286,10 +4317,12 @@
     "lemma": "Oamer",
     "previous": "Oageis",
     "next": "Oaxios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 680,
-        "author": "Enßlin"
+        "end": 680,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4297,10 +4330,12 @@
     "lemma": "Oaxios",
     "previous": "Oamer",
     "next": "Obadus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 680,
-        "author": "Kruse"
+        "end": 680,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -4308,10 +4343,12 @@
     "lemma": "Obadus",
     "previous": "Oaxios",
     "next": "Obbanes chorion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 680,
-        "author": "Enßlin"
+        "end": 680,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4341,10 +4378,12 @@
     "lemma": "Obrimoderkes",
     "previous": "Obodianos",
     "next": "Obrimopatre",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 681,
-        "author": "Kruse"
+        "end": 681,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -4352,10 +4391,12 @@
     "lemma": "Obrimopatre",
     "previous": "Obrimoderkes",
     "next": "Obrimos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 681,
-        "author": "Kruse"
+        "end": 681,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -4374,10 +4415,12 @@
     "lemma": "Obrimos 4",
     "previous": "Obrimos 3",
     "next": "Obrimothymos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 681,
-        "author": "Kruse"
+        "end": 681,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -4385,10 +4428,12 @@
     "lemma": "Obrimothymos",
     "previous": "Obrimos 4",
     "next": "Obrimotoxos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 681,
-        "author": "Kruse"
+        "end": 681,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -4396,10 +4441,12 @@
     "lemma": "Obrimotoxos",
     "previous": "Obrimothymos",
     "next": "Occaraba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 681,
-        "author": "Kruse"
+        "end": 681,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -4473,10 +4520,12 @@
     "lemma": "Octacuscum",
     "previous": "Ochyroma",
     "next": "Octar",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 693,
-        "author": "Honigmann"
+        "end": 693,
+        "author": "E. Honigmann."
       }
     ]
   },
@@ -4506,10 +4555,12 @@
     "lemma": "Octavianus 4",
     "previous": "Octaviana",
     "next": "Octavianus 5",
-    "redirect": true,
+    "redirect": "Cornelius 277",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 693
+        "start": 693,
+        "end": 693
       }
     ]
   },
@@ -4517,10 +4568,12 @@
     "lemma": "Octavianus 5",
     "previous": "Octavianus 4",
     "next": "Octavianus 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 693,
-        "author": "Enßlin"
+        "end": 693,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4539,10 +4592,12 @@
     "lemma": "Octavianus 7",
     "previous": "Octavianus 6",
     "next": "Octavianus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 694,
-        "author": "Enßlin"
+        "end": 694,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4561,10 +4616,12 @@
     "lemma": "Octavianus 9",
     "previous": "Octavianus 8",
     "next": "Octavianus 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 694,
-        "author": "Enßlin"
+        "end": 694,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5253,10 +5310,12 @@
     "lemma": "Pelops 1b",
     "previous": "Pelops 1a",
     "next": "Pelops 1c",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 865,
-        "author": "Scherling"
+        "end": 865,
+        "author": "Karl Scherling."
       }
     ]
   },
@@ -5264,10 +5323,12 @@
     "lemma": "Pelops 1c",
     "previous": "Pelops 1b",
     "next": "Penthesileia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 866,
-        "author": "Scherling"
+        "end": 866,
+        "author": "Karl Scherling."
       }
     ]
   },
@@ -5308,10 +5369,12 @@
     "lemma": "Pergusta",
     "previous": "Pereia",
     "next": "Peridobonum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 892,
-        "author": "Goessler"
+        "end": 892,
+        "author": "P. Goessler."
       }
     ]
   },
@@ -5420,15 +5483,19 @@
   },
   {
     "lemma": "Petra 8",
-    "previous": "Petra 7a"
+    "previous": "Petra 7a",
+    "next": "Petra 8a"
   },
   {
     "lemma": "Petra 8a",
+    "previous": "Petra 8",
     "next": "Pfandrecht",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 981,
-        "author": "Herrmann"
+        "end": 981,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -5469,10 +5536,12 @@
     "lemma": "Phekidas 1",
     "previous": "Pharmakussai",
     "next": "Phekidas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 984,
-        "author": "Enßlin"
+        "end": 984,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5524,10 +5593,12 @@
     "lemma": "Phigia",
     "previous": "Phigaleia (ON",
     "next": "Philanthropon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1032,
-        "author": "Grohmann"
+        "end": 1032,
+        "author": "Adolf Grohmann."
       }
     ]
   },
@@ -5590,10 +5661,12 @@
     "lemma": "Rhapsos",
     "previous": "Rhapso",
     "next": "Rhetorik",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1037,
-        "author": "Walter"
+        "end": 1037,
+        "author": "Otto Walter."
       }
     ]
   },
@@ -5710,7 +5783,7 @@
   {
     "lemma": "R(h)ymmoi",
     "previous": "Rufus 8a",
-    "next": "sakkegia",
+    "next": "σακκηγία",
     "chapters": [
       {
         "start": 1198,
@@ -5719,19 +5792,22 @@
     ]
   },
   {
-    "lemma": "sakkegia",
+    "lemma": "σακκηγία",
     "previous": "R(h)ymmoi",
     "next": "sakkophoros",
+    "sort_key": "sakkegia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1200,
-        "author": "Ziebarth"
+        "end": 1200,
+        "author": "Erich Ziebarth."
       }
     ]
   },
   {
     "lemma": "sakkophoros",
-    "previous": "sakkegia",
+    "previous": "σακκηγία",
     "next": "Sanktionsklausel",
     "chapters": [
       {
@@ -5787,10 +5863,12 @@
     "lemma": "Saulios",
     "previous": "Saulakes",
     "next": "Scrutarius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1201,
-        "author": "Kroll"
+        "end": 1201,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -5853,10 +5931,12 @@
     "lemma": "Skopas 5",
     "previous": "Semiramis 1",
     "next": "Skopas 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1211,
-        "author": "Dumrese"
+        "end": 1211,
+        "author": "Dumrese."
       }
     ]
   },
@@ -5875,10 +5955,12 @@
     "lemma": "Sempronius 60a",
     "previous": "Skopas 6",
     "next": "Severinius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1212,
-        "author": "Stein, [Arthur]"
+        "end": 1212,
+        "author": "Stein."
       }
     ]
   },
@@ -5941,10 +6023,12 @@
     "lemma": "Sositeles",
     "previous": "Sosibios 2a",
     "next": "Sostratos 4a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1220,
-        "author": "Heichelheim"
+        "end": 1220,
+        "author": "Fritz Heichelheim."
       }
     ]
   },
@@ -6029,10 +6113,12 @@
     "lemma": "Statius 4a",
     "previous": "Spithame",
     "next": "Stiela oder Stiala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1232,
-        "author": "Groag"
+        "end": 1232,
+        "author": "Groag."
       }
     ]
   },
@@ -6133,10 +6219,12 @@
     "lemma": "Tampium",
     "previous": "Synoikesion",
     "next": "Taschentuch",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1276,
-        "author": "MacDonald"
+        "end": 1276,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -6210,10 +6298,12 @@
     "lemma": "Teres 1c",
     "previous": "Teres 1b",
     "next": "Tergilla",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1295,
-        "author": "Kroll"
+        "end": 1295,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -6265,10 +6355,12 @@
     "lemma": "Theodorides 2",
     "previous": "Themistokleia, Theokleia",
     "next": "Theodotos 56",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1352,
-        "author": "Heichelheim"
+        "end": 1353,
+        "author": "Fritz Heichelheim."
       }
     ]
   },
@@ -6287,10 +6379,12 @@
     "lemma": "Theon 1a",
     "previous": "Theodotos 56",
     "next": "Theophrastos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1354,
-        "author": "Heichelheim"
+        "end": 1354,
+        "author": "Fritz Heichelheim."
       }
     ]
   },
@@ -6329,10 +6423,12 @@
     "lemma": "Thrasippos 4",
     "previous": "Thoas 6b",
     "next": "Thugga",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1567,
-        "author": "Schoch"
+        "end": 1567,
+        "author": "Paul Schoch."
       }
     ]
   },
@@ -6439,10 +6535,13 @@
     "lemma": "Thyne 2",
     "previous": "Thymiaterion 2",
     "next": "Thyraia",
+    "sort_key": "Thyne 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1573,
-        "author": "Treidler"
+        "end": 1573,
+        "author": "Hans Treidler."
       }
     ]
   },

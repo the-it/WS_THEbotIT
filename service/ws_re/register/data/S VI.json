@@ -2498,7 +2498,7 @@
   {
     "lemma": "Karische Sprache",
     "previous": "Kaprion",
-    "next": "Karkinoi",
+    "next": "Καρκῖνοι",
     "chapters": [
       {
         "start": 140,
@@ -2508,20 +2508,23 @@
     ]
   },
   {
-    "lemma": "Karkinoi",
+    "lemma": "Καρκῖνοι",
     "previous": "Karische Sprache",
     "next": "Katharsis",
+    "sort_key": "Karkinoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 146,
-        "author": "Geisau"
+        "end": 146,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Katharsis",
-    "previous": "Karkinoi",
-    "next": "Kaukasion",
+    "previous": "Καρκῖνοι",
+    "next": "Καυκάσιον",
     "chapters": [
       {
         "start": 146,
@@ -2531,19 +2534,22 @@
     ]
   },
   {
-    "lemma": "Kaukasion",
+    "lemma": "Καυκάσιον",
     "previous": "Katharsis",
     "next": "Kauliakoio skopelos",
+    "sort_key": "Kaukasion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 161,
-        "author": "Geisau"
+        "end": 161,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Kauliakoio skopelos",
-    "previous": "Kaukasion",
+    "previous": "Καυκάσιον",
     "next": "Kenchreis 2",
     "chapters": [
       {
@@ -2556,33 +2562,40 @@
   {
     "lemma": "Kenchreis 2",
     "previous": "Kauliakoio skopelos",
-    "next": "Kerameia",
+    "next": "Κεραμεία",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 163,
-        "author": "Geisau"
+        "end": 163,
+        "author": "v. Geisau."
       }
     ]
   },
   {
-    "lemma": "Kerameia",
+    "lemma": "Κεραμεία",
     "previous": "Kenchreis 2",
     "next": "Kerdon 2",
+    "sort_key": "Kerameia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 163,
-        "author": "Geisau"
+        "end": 163,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Kerdon 2",
-    "previous": "Kerameia",
+    "previous": "Κεραμεία",
     "next": "Kestros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 163,
-        "author": "Geisau"
+        "end": 163,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2612,10 +2625,12 @@
     "lemma": "Kinyras 2",
     "previous": "Kiborion",
     "next": "Kinyras 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 164,
-        "author": "Geisau"
+        "end": 164,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2623,10 +2638,12 @@
     "lemma": "Kinyras 3",
     "previous": "Kinyras 2",
     "next": "Kinyras 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 164,
-        "author": "Geisau"
+        "end": 164,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2644,7 +2661,7 @@
   {
     "lemma": "Kladaos (Kladeos",
     "previous": "Kinyras 4",
-    "next": "Klatioi",
+    "next": "Κλατίοι",
     "chapters": [
       {
         "start": 164,
@@ -2653,19 +2670,22 @@
     ]
   },
   {
-    "lemma": "Klatioi",
+    "lemma": "Κλατίοι",
     "previous": "Kladaos (Kladeos",
     "next": "Kleinasiatische Ursprachen",
+    "sort_key": "Klatioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 164,
-        "author": "Geisau"
+        "end": 164,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Kleinasiatische Ursprachen",
-    "previous": "Klatioi",
+    "previous": "Κλατίοι",
     "next": "Kleisas",
     "chapters": [
       {
@@ -2679,10 +2699,12 @@
     "lemma": "Kleisas",
     "previous": "Kleinasiatische Ursprachen",
     "next": "Knidos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 181,
-        "author": "Geisau"
+        "end": 181,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2701,10 +2723,13 @@
     "lemma": "Koaioi",
     "previous": "Knidos 5",
     "next": "Kokelonaioi",
+    "sort_key": "Koaioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 182,
-        "author": "Geisau"
+        "end": 182,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2734,10 +2759,13 @@
     "lemma": "Korio...",
     "previous": "Kolymbethra",
     "next": "Kranae 2",
+    "sort_key": "Korio...",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 199,
-        "author": "Geisau"
+        "end": 199,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2745,10 +2773,12 @@
     "lemma": "Kranae 2",
     "previous": "Korio...",
     "next": "Kratanion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 199,
-        "author": "Geisau"
+        "end": 199,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -2766,7 +2796,7 @@
   {
     "lemma": "Kreophagoi",
     "previous": "Kratanion",
-    "next": "Kresion oros",
+    "next": "Κρήσιον ὄρος",
     "chapters": [
       {
         "start": 199,
@@ -2776,19 +2806,22 @@
     ]
   },
   {
-    "lemma": "Kresion oros",
+    "lemma": "Κρήσιον ὄρος",
     "previous": "Kreophagoi",
     "next": "Kreta",
+    "sort_key": "Kresion oros",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 200,
-        "author": "Geisau"
+        "end": 200,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Kreta",
-    "previous": "Kresion oros",
+    "previous": "Κρήσιον ὄρος",
     "next": "Kritasiros",
     "chapters": [
       {
@@ -2835,7 +2868,7 @@
   {
     "lemma": "Kruneion",
     "previous": "Krossos",
-    "next": "Kyl...",
+    "next": "Κυλ...",
     "chapters": [
       {
         "start": 207,
@@ -2845,19 +2878,22 @@
     ]
   },
   {
-    "lemma": "Kyl...",
+    "lemma": "Κυλ...",
     "previous": "Kruneion",
     "next": "Kylichnis",
+    "sort_key": "Kyl...",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 208,
-        "author": "Geisau"
+        "end": 208,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Kylichnis",
-    "previous": "Kyl...",
+    "previous": "Κυλ...",
     "next": "Kylikes",
     "chapters": [
       {
@@ -2940,7 +2976,7 @@
   {
     "lemma": "Kypsele",
     "previous": "Kypsela 2",
-    "next": "Kyrsilis",
+    "next": "Κυρσιλίς",
     "chapters": [
       {
         "start": 216,
@@ -2949,19 +2985,22 @@
     ]
   },
   {
-    "lemma": "Kyrsilis",
+    "lemma": "Κυρσιλίς",
     "previous": "Kypsele",
     "next": "Lagynos",
+    "sort_key": "Kyrsilis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 216,
-        "author": "Geisau"
+        "end": 216,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Lagynos",
-    "previous": "Kyrsilis",
+    "previous": "Κυρσιλίς",
     "next": "Lalaikos",
     "chapters": [
       {
@@ -3080,10 +3119,12 @@
     "lemma": "Letoïos 3",
     "previous": "Letoïos 2",
     "next": "Letoïos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
-        "author": "Wüst"
+        "end": 227,
+        "author": "Ernst Wüst."
       }
     ]
   },
@@ -3091,10 +3132,12 @@
     "lemma": "Letoïos 4",
     "previous": "Letoïos 3",
     "next": "Letoïos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
-        "author": "Wüst"
+        "end": 227,
+        "author": "Ernst Wüst."
       }
     ]
   },
@@ -3102,10 +3145,12 @@
     "lemma": "Letoïos 5",
     "previous": "Letoïos 4",
     "next": "Letoïos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
-        "author": "Wüst"
+        "end": 227,
+        "author": "Ernst Wüst."
       }
     ]
   },
@@ -3113,10 +3158,12 @@
     "lemma": "Letoïos 6",
     "previous": "Letoïos 5",
     "next": "Letoïos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
-        "author": "Wüst"
+        "end": 227,
+        "author": "Ernst Wüst."
       }
     ]
   },
@@ -3124,10 +3171,12 @@
     "lemma": "Letoïos 7",
     "previous": "Letoïos 6",
     "next": "Letoïos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
-        "author": "Wüst"
+        "end": 227,
+        "author": "Ernst Wüst."
       }
     ]
   },
@@ -3135,10 +3184,12 @@
     "lemma": "Letoïos 8",
     "previous": "Letoïos 7",
     "next": "Leuke akte 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 227,
-        "author": "Wüst"
+        "end": 227,
+        "author": "Ernst Wüst."
       }
     ]
   },
@@ -3797,10 +3848,12 @@
     "lemma": "Molaria",
     "previous": "Moireas",
     "next": "Molibodes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 508,
-        "author": "Andrée[-Hanslik]"
+        "end": 508,
+        "author": "Judith Andrée."
       }
     ]
   },
@@ -3844,10 +3897,12 @@
     "lemma": "Moo",
     "previous": "Monnica",
     "next": "Mopti (K",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 530,
-        "author": "Preisendanz"
+        "end": 530,
+        "author": "Preisendanz."
       }
     ]
   },
@@ -3923,10 +3978,12 @@
     "lemma": "Muabis",
     "previous": "Moymis",
     "next": "Multa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 542,
-        "author": "Ruge"
+        "end": 542,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -4027,7 +4084,7 @@
   {
     "lemma": "Myrina 1",
     "previous": "Mylai 5",
-    "next": "Myrs(inusa?)",
+    "next": "Μυρσ(ινουσα?)",
     "chapters": [
       {
         "start": 615,
@@ -4037,19 +4094,22 @@
     ]
   },
   {
-    "lemma": "Myrs(inusa?)",
+    "lemma": "Μυρσ(ινουσα?)",
     "previous": "Myrina 1",
     "next": "Myrto 4",
+    "sort_key": "Myrs(inusa?)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 621,
-        "author": "Ruge"
+        "end": 621,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Myrto 4",
-    "previous": "Myrs(inusa?)",
+    "previous": "Μυρσ(ινουσα?)",
     "next": "Myrtuntion 2",
     "chapters": [
       {
@@ -4121,10 +4181,12 @@
     "lemma": "Ranio",
     "previous": "Narke 1",
     "next": "Raparia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 643,
-        "author": "Fluss"
+        "end": 643,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -4154,10 +4216,12 @@
     "lemma": "Rhamnusium",
     "previous": "Regio Scodrihe(n)sis",
     "next": "Rhyton",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 643,
-        "author": "Fluss"
+        "end": 643,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -4177,10 +4241,12 @@
     "lemma": "Rinubio",
     "previous": "Rhyton",
     "next": "Rocobae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 646,
-        "author": "Fluss"
+        "end": 646,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -4231,7 +4297,7 @@
   {
     "lemma": "Sandanos",
     "previous": "Rusbeas",
-    "next": "Sannakra",
+    "next": "Σαννάκρα",
     "chapters": [
       {
         "start": 647,
@@ -4240,19 +4306,22 @@
     ]
   },
   {
-    "lemma": "Sannakra",
+    "lemma": "Σαννάκρα",
     "previous": "Sandanos",
     "next": "Sapaioi",
+    "sort_key": "Sannakra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 647,
-        "author": "Lorentz"
+        "end": 647,
+        "author": "F. v. Lorentz."
       }
     ]
   },
   {
     "lemma": "Sapaioi",
-    "previous": "Sannakra",
+    "previous": "Σαννάκρα",
     "next": "Sardelle",
     "chapters": [
       {
@@ -4506,10 +4575,12 @@
     "lemma": "Sesarethus",
     "previous": "Sesarethii",
     "next": "Skaptopara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 820,
-        "author": "Fluss"
+        "end": 820,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -4563,10 +4634,12 @@
     "lemma": "Smikythos 1",
     "previous": "Skyrmiadai (Kyrmianai, Skymniadai",
     "next": "Smikythos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1068,
-        "author": "Becher"
+        "end": 1068,
+        "author": "Wilhelm Becher."
       }
     ]
   },
@@ -4574,10 +4647,12 @@
     "lemma": "Smikythos 2",
     "previous": "Smikythos 1",
     "next": "Smikythos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1068,
-        "author": "Becher"
+        "end": 1068,
+        "author": "Wilhelm Becher."
       }
     ]
   },
@@ -4585,10 +4660,12 @@
     "lemma": "Smikythos 3",
     "previous": "Smikythos 2",
     "next": "Stat(io) Maien(sis)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1068,
-        "author": "Becher"
+        "end": 1068,
+        "author": "Wilhelm Becher."
       }
     ]
   },
@@ -4632,10 +4709,12 @@
     "lemma": "Teitha",
     "previous": "Syntheke",
     "next": "Tastris",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1169,
-        "author": "Stählin"
+        "end": 1169,
+        "author": "Friedrich Stählin."
       }
     ]
   },
