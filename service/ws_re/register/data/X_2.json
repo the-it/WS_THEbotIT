@@ -15352,10 +15352,12 @@
     "lemma": "Kaspia",
     "previous": "Kaspeiraioi",
     "next": "Kaspiane",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2272,
-        "author": "Herrmann"
+        "end": 2272,
+        "author": "Herrmann."
       }
     ]
   },
@@ -15458,10 +15460,12 @@
     "lemma": "Kassandros 3",
     "previous": "Kassandros 2",
     "next": "Kassandros 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2313,
-        "author": "Stähelin"
+        "end": 2313,
+        "author": "Stähelin."
       }
     ]
   },
@@ -15469,10 +15473,12 @@
     "lemma": "Kassandros 4",
     "previous": "Kassandros 3",
     "next": "Kassandros 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2313,
-        "author": "Stähelin"
+        "end": 2313,
+        "author": "Stähelin."
       }
     ]
   },
@@ -15514,10 +15520,12 @@
     "lemma": "Kassandros 8",
     "previous": "Kassandros 7",
     "next": "Kassandros 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2314,
-        "author": "Stähelin"
+        "end": 2314,
+        "author": "Stähelin."
       }
     ]
   },
@@ -15536,10 +15544,12 @@
     "lemma": "Kassel",
     "previous": "Kassandros 9",
     "next": "Kassera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2314,
-        "author": "Keune"
+        "end": 2314,
+        "author": "Keune."
       }
     ]
   },
@@ -15547,17 +15557,19 @@
     "lemma": "Kassera",
     "previous": "Kassel",
     "next": "Κάσσητα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2314,
-        "author": "Bürchner"
+        "end": 2314,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Κάσσητα",
     "previous": "Kassera",
-    "next": "Kassia",
+    "next": "Κασσία",
     "sort_key": "Kasseta",
     "redirect": true,
     "proof_read": 2,
@@ -15569,19 +15581,22 @@
     ]
   },
   {
-    "lemma": "Kassia",
+    "lemma": "Κασσία",
     "previous": "Κάσσητα",
     "next": "Kassiopaia",
+    "sort_key": "Kassia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2314,
-        "author": "Fluss"
+        "end": 2314,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Kassiopaia",
-    "previous": "Kassia",
+    "previous": "Κασσία",
     "next": "Kassiope",
     "chapters": [
       {

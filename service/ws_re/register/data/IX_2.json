@@ -4854,10 +4854,13 @@
     "lemma": "Iovis pagus",
     "previous": "Iovis Oppidum",
     "next": "Iovis Palene",
+    "sort_key": "Iovispagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2014,
-        "author": "Vulić"
+        "end": 2014,
+        "author": "Vulić."
       }
     ]
   },
@@ -4879,10 +4882,13 @@
     "lemma": "Iovis Tifatinus",
     "previous": "Iovis Palene",
     "next": "Iovis Vicus",
+    "sort_key": "Iovistifatinus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2014,
-        "author": "Philipp"
+        "end": 2014,
+        "author": "Philipp."
       }
     ]
   },
@@ -4935,10 +4941,12 @@
     "lemma": "Iovius 4",
     "previous": "Iovius 3",
     "next": "Iovius compagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2016,
-        "author": "Seeck"
+        "end": 2016,
+        "author": "Seeck."
       }
     ]
   },

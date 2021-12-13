@@ -5178,7 +5178,7 @@
     "lemma": "Kallistio",
     "previous": "Kallisthenes 5",
     "next": "Kallistus 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5260,7 +5260,7 @@
     "lemma": "Kalykios",
     "previous": "Kalokairos 1",
     "next": "Kambylos",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 864,
@@ -5273,10 +5273,12 @@
     "lemma": "Kambylos",
     "previous": "Kalykios",
     "next": "Kamenios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 864,
-        "author": "Schoch"
+        "end": 864,
+        "author": "Schoch."
       }
     ]
   },
@@ -5423,7 +5425,7 @@
   {
     "lemma": "Karzenos",
     "previous": "Karthasis",
-    "next": "Kaseera",
+    "next": "Κασεήρα",
     "proof_read": 2,
     "chapters": [
       {
@@ -5434,7 +5436,7 @@
     ]
   },
   {
-    "lemma": "Kaseera",
+    "lemma": "Κασεήρα",
     "previous": "Karzenos",
     "next": "Kassandreia",
     "sort_key": "Kaseera",
@@ -5449,7 +5451,7 @@
   },
   {
     "lemma": "Kassandreia",
-    "previous": "Kaseera",
+    "previous": "Κασεήρα",
     "next": "Kassandros 7a",
     "chapters": [
       {

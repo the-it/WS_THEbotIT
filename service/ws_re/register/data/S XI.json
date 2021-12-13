@@ -1162,10 +1162,12 @@
     "lemma": "Illustris 2",
     "previous": "Hierokles 19a",
     "next": "Immurium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 845,
-        "author": "Diesner"
+        "end": 845,
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -1231,10 +1233,12 @@
     "lemma": "Kauaroi",
     "previous": "Iucundus 3a",
     "next": "Kleotimos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 855,
-        "author": "Heichelheim"
+        "end": 855,
+        "author": "F. M. Heichelheim."
       }
     ]
   },
@@ -1418,10 +1422,12 @@
     "lemma": "Marivadus",
     "previous": "Magnum",
     "next": "Maximus 134",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 932,
-        "author": "Diesner"
+        "end": 932,
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -1544,7 +1550,7 @@
   {
     "lemma": "Oaxus lacus",
     "previous": "Nymphodoros 7",
-    "next": "Parka",
+    "next": "Πάρκα",
     "chapters": [
       {
         "start": 1022,
@@ -1554,13 +1560,16 @@
     ]
   },
   {
-    "lemma": "Parka",
+    "lemma": "Πάρκα",
     "previous": "Oaxus lacus",
     "next": "Parrhasia",
+    "sort_key": "Parka",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1029,
-        "author": "Mócsy"
+        "end": 1029,
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -1653,10 +1662,12 @@
     "lemma": "Patrokleides 3",
     "previous": "Patrokleides 2",
     "next": "Patrokleides 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1050,
-        "author": "Volkmann"
+        "end": 1050,
+        "author": "Hans Volkmann."
       }
     ]
   },
@@ -1664,10 +1675,12 @@
     "lemma": "Patrokleides 4",
     "previous": "Patrokleides 3",
     "next": "Pelva",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1050,
-        "author": "Volkmann"
+        "end": 1050,
+        "author": "Hans Volkmann."
       }
     ]
   },
@@ -1711,10 +1724,12 @@
     "lemma": "Philagrios 1a",
     "previous": "Periskythismos",
     "next": "Philogelos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1061,
-        "author": "Thierfelder"
+        "end": 1061,
+        "author": "Andreas Thierfelder."
       }
     ]
   },
@@ -1794,10 +1809,12 @@
     "lemma": "Populi",
     "previous": "Poliarchos",
     "next": "Posthumianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1111,
-        "author": "Mócsy"
+        "end": 1111,
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -1805,10 +1822,12 @@
     "lemma": "Posthumianus",
     "previous": "Populi",
     "next": "Primasius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1111,
-        "author": "Diesner"
+        "end": 1111,
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -1941,10 +1960,12 @@
     "lemma": "Saturianus",
     "previous": "Salvium",
     "next": "Scamarae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1239,
-        "author": "Diesner"
+        "end": 1239,
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -1988,10 +2009,12 @@
     "lemma": "Septimius 48,3",
     "previous": "Septimius 48,2",
     "next": "Sersao",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1246,
-        "author": "Volkmann"
+        "end": 1246,
+        "author": "Hans Volkmann."
       }
     ]
   },
@@ -2021,10 +2044,12 @@
     "lemma": "Silvester 2",
     "previous": "Sibaris",
     "next": "Sophokles 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1247,
-        "author": "Diesner"
+        "end": 1247,
+        "author": "H.-J. Diesner."
       }
     ]
   },
@@ -2056,10 +2081,12 @@
     "lemma": "Suneate",
     "previous": "Stratios 5a",
     "next": "Tharseas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1258,
-        "author": "Mócsy"
+        "end": 1258,
+        "author": "Andreas Mócsy."
       }
     ]
   },
@@ -2216,10 +2243,12 @@
     "lemma": "Zeitha 2",
     "previous": "Zeitha 1",
     "next": "Zella",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1364,
-        "author": "Treidler"
+        "end": 1364,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -2248,15 +2277,19 @@
   {
     "lemma": "Zengisa",
     "previous": "Zenertis",
-    "redirect": true,
+    "next": "Zeugisa",
+    "redirect": "Zangenae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1364
+        "start": 1364,
+        "end": 1364
       }
     ]
   },
   {
     "lemma": "Zeugisa",
+    "previous": "Zengisa",
     "next": "Cornelius 395"
   },
   {
