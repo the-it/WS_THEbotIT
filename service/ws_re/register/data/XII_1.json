@@ -14265,7 +14265,7 @@
   {
     "lemma": "Larnakios",
     "previous": "Larnacus",
-    "next": "Larnassos",
+    "next": "Λαρνασσός",
     "chapters": [
       {
         "start": 875,
@@ -14274,19 +14274,22 @@
     ]
   },
   {
-    "lemma": "Larnassos",
+    "lemma": "Λαρνασσός",
     "previous": "Larnakios",
     "next": "Laromos",
+    "sort_key": "Larnassos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 875,
-        "author": "Geiger"
+        "end": 875,
+        "author": "Geiger."
       }
     ]
   },
   {
     "lemma": "Laromos",
-    "previous": "Larnassos",
+    "previous": "Λαρνασσός",
     "next": "Laron nesia dyo",
     "redirect": "Lanotros",
     "proof_read": 2,
@@ -14312,10 +14315,12 @@
     "lemma": "Laronius 1",
     "previous": "Laron nesia dyo",
     "next": "Laronius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 876,
-        "author": "Münzer"
+        "end": 876,
+        "author": "Münzer."
       }
     ]
   },
@@ -14389,10 +14394,12 @@
     "lemma": "Lartidius 4",
     "previous": "Lartidius 3",
     "next": "Lartidius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 877,
-        "author": "Stein, [Arthur]"
+        "end": 877,
+        "author": "Stein."
       }
     ]
   },
@@ -14411,10 +14418,12 @@
     "lemma": "Lartidius 6",
     "previous": "Lartidius 5",
     "next": "Lartidius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 877,
-        "author": "Keune"
+        "end": 877,
+        "author": "Keune."
       }
     ]
   },

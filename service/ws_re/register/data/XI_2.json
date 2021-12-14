@@ -2740,10 +2740,12 @@
     "lemma": "Korok",
     "previous": "Koroibos 8",
     "next": "Korollu phyle",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1422,
-        "author": "Herrmann"
+        "end": 1422,
+        "author": "Herrmann."
       }
     ]
   },
@@ -2809,10 +2811,12 @@
     "lemma": "Korone 2",
     "previous": "Korone 1",
     "next": "Korone 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1425,
-        "author": "Pieske"
+        "end": 1425,
+        "author": "Pieske."
       }
     ]
   },
@@ -2820,10 +2824,12 @@
     "lemma": "Korone 3",
     "previous": "Korone 2",
     "next": "Koronea",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1425,
-        "author": "Bürchner"
+        "end": 1425,
+        "author": "Bürchner."
       }
     ]
   },
@@ -2876,10 +2882,12 @@
     "lemma": "Koroneia 3",
     "previous": "Koroneia 2",
     "next": "Koroneia 4",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1431,
-        "author": "Pieske"
+        "end": 1431,
+        "author": "Pieske."
       }
     ]
   },
@@ -2887,10 +2895,12 @@
     "lemma": "Koroneia 4",
     "previous": "Koroneia 3",
     "next": "Koroneia 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1431,
-        "author": "Pieske"
+        "end": 1431,
+        "author": "Pieske."
       }
     ]
   },
@@ -5053,7 +5063,7 @@
   {
     "lemma": "Kragos 3",
     "previous": "Kragos 2",
-    "next": "Krambis",
+    "next": "Κράμβις",
     "chapters": [
       {
         "start": 1567,
@@ -5063,19 +5073,22 @@
     ]
   },
   {
-    "lemma": "Krambis",
+    "lemma": "Κράμβις",
     "previous": "Kragos 3",
     "next": "Krambusa 1",
+    "sort_key": "Krambis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Tambornino"
+        "end": 1568,
+        "author": "Tambornino."
       }
     ]
   },
   {
     "lemma": "Krambusa 1",
-    "previous": "Krambis",
+    "previous": "Κράμβις",
     "next": "Krambusa 2",
     "chapters": [
       {
@@ -5088,10 +5101,12 @@
     "lemma": "Krambusa 2",
     "previous": "Krambusa 1",
     "next": "Krambusa 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Ruge"
+        "end": 1568,
+        "author": "Ruge."
       }
     ]
   },
@@ -5099,10 +5114,12 @@
     "lemma": "Krambusa 3",
     "previous": "Krambusa 2",
     "next": "Kranae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1568,
-        "author": "Ruge"
+        "end": 1568,
+        "author": "Ruge."
       }
     ]
   },
@@ -5155,10 +5172,12 @@
     "lemma": "Kranaos 2",
     "previous": "Kranaos 1",
     "next": "Kranaos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1569,
-        "author": "Bürchner"
+        "end": 1569,
+        "author": "Bürchner."
       }
     ]
   },
@@ -6192,28 +6211,33 @@
   {
     "lemma": "Krauxidas",
     "previous": "Krausindon",
-    "next": "Kreas",
+    "next": "Κρέας",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1663,
-        "author": "Honigmann"
+        "end": 1663,
+        "author": "Honigmann."
       }
     ]
   },
   {
-    "lemma": "Kreas",
+    "lemma": "Κρέας",
     "previous": "Krauxidas",
     "next": "Krebs 1",
+    "sort_key": "Kreas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1663,
-        "author": "Fluss"
+        "end": 1663,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Krebs 1",
-    "previous": "Kreas",
+    "previous": "Κρέας",
     "next": "Krebs 2",
     "chapters": [
       {
@@ -6400,7 +6424,7 @@
   {
     "lemma": "Κρῆναι 1",
     "previous": "Kremniskoi",
-    "next": "Krenai 2",
+    "next": "Κρῆναι 2",
     "sort_key": "Krenai 1",
     "proof_read": 2,
     "chapters": [
@@ -6412,19 +6436,22 @@
     ]
   },
   {
-    "lemma": "Krenai 2",
+    "lemma": "Κρῆναι 2",
     "previous": "Κρῆναι 1",
     "next": "Κρῆναι 3",
+    "sort_key": "Krenai 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
-        "author": "Bürchner"
+        "end": 1709,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Κρῆναι 3",
-    "previous": "Krenai 2",
+    "previous": "Κρῆναι 2",
     "next": "Krenaiai pylai",
     "sort_key": "Krenai 3",
     "proof_read": 2,
@@ -6665,10 +6692,12 @@
     "lemma": "Kressidas",
     "previous": "Kressa 2",
     "next": "Kreston",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1718,
-        "author": "Lippold, Georg"
+        "end": 1718,
+        "author": "Lippold."
       }
     ]
   },
@@ -8458,10 +8487,12 @@
     "lemma": "Kronion 2",
     "previous": "Kronion 1",
     "next": "Kronion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1977,
-        "author": "Pieske"
+        "end": 1977,
+        "author": "Pieske."
       }
     ]
   },
@@ -8505,10 +8536,12 @@
     "lemma": "Kronios 2",
     "previous": "Kronios 1",
     "next": "Kronios 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1978,
-        "author": "Stein, [Arthur]"
+        "end": 1978,
+        "author": "Stein."
       }
     ]
   },
@@ -8528,17 +8561,19 @@
     "lemma": "Kronios 4",
     "previous": "Kronios 3",
     "next": "Kronos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1982,
-        "author": "Sieveking"
+        "end": 1982,
+        "author": "Sieveking."
       }
     ]
   },
   {
     "lemma": "Kronos",
     "previous": "Kronios 4",
-    "next": "Kronu akroterion",
+    "next": "Κρόνου ἀκρωτήριον",
     "chapters": [
       {
         "start": 1982,
@@ -8548,19 +8583,22 @@
     ]
   },
   {
-    "lemma": "Kronu akroterion",
+    "lemma": "Κρόνου ἀκρωτήριον",
     "previous": "Kronos",
     "next": "Krophi",
+    "sort_key": "Kronu akroterion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2018,
-        "author": "Fischer"
+        "end": 2018,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Krophi",
-    "previous": "Kronu akroterion",
+    "previous": "Κρόνου ἀκρωτήριον",
     "next": "Kropia",
     "chapters": [
       {
@@ -8585,10 +8623,12 @@
     "lemma": "Krossaia",
     "previous": "Kropia",
     "next": "Krotalon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2019,
-        "author": "Oberhummer"
+        "end": 2019,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -8655,10 +8695,12 @@
     "lemma": "Krotopiades",
     "previous": "Kroton 2",
     "next": "Krotopos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2027,
-        "author": "Eitrem"
+        "end": 2027,
+        "author": "Eitrem."
       }
     ]
   },

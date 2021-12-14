@@ -5448,7 +5448,7 @@
   {
     "lemma": "Pentagramma",
     "previous": "Pentadrachmon",
-    "next": "Pentakomia 1",
+    "next": "Πεντακωμία 1",
     "chapters": [
       {
         "start": 504,
@@ -5457,19 +5457,22 @@
     ]
   },
   {
-    "lemma": "Pentakomia 1",
+    "lemma": "Πεντακωμία 1",
     "previous": "Pentagramma",
     "next": "Pentakomia 2",
+    "sort_key": "Pentakomia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 504,
-        "author": "Hölscher"
+        "end": 504,
+        "author": "G. Hölscher."
       }
     ]
   },
   {
     "lemma": "Pentakomia 2",
-    "previous": "Pentakomia 1",
+    "previous": "Πεντακωμία 1",
     "next": "Pentakomia 3",
     "chapters": [
       {

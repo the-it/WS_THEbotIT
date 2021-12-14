@@ -11269,28 +11269,33 @@
   {
     "lemma": "Mynichos",
     "previous": "Mynes 2",
-    "next": "Mynis",
+    "next": "Μύνις",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
-        "author": "Nachod"
+        "end": 1080,
+        "author": "Hans Nachod."
       }
     ]
   },
   {
-    "lemma": "Mynis",
+    "lemma": "Μύνις",
     "previous": "Mynichos",
     "next": "Mynnion",
+    "sort_key": "Mynis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1080,
-        "author": "Stählin"
+        "end": 1080,
+        "author": "Friedr. Stählin."
       }
     ]
   },
   {
     "lemma": "Mynnion",
-    "previous": "Mynis",
+    "previous": "Μύνις",
     "next": "Mynniskos",
     "chapters": [
       {
@@ -11494,10 +11499,12 @@
     "lemma": "Myrike 3",
     "previous": "Myrike 2",
     "next": "Myrikion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1092,
-        "author": "Grohmann"
+        "end": 1092,
+        "author": "Adolf Grohmann."
       }
     ]
   },
@@ -11571,10 +11578,12 @@
     "lemma": "Myrinus 1",
     "previous": "Myrinos 2",
     "next": "Myrioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1097,
-        "author": "Stein, [Arthur]"
+        "end": 1097,
+        "author": "Stein."
       }
     ]
   },
@@ -11722,10 +11731,12 @@
     "lemma": "Myrmex 3",
     "previous": "Myrmex 2",
     "next": "Myrmex 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1105,
-        "author": "Schmidt"
+        "end": 1105,
+        "author": "J. Schmidt."
       }
     ]
   },
@@ -11832,10 +11843,12 @@
     "lemma": "Myrmissos",
     "previous": "Myrmidones",
     "next": "Myro 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1111,
-        "author": "Ruge"
+        "end": 1111,
+        "author": "W. Ruge."
       }
     ]
   },

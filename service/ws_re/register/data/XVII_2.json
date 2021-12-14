@@ -10416,10 +10416,12 @@
     "lemma": "Olenios 2",
     "previous": "Olenios 1",
     "next": "Olennius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2435,
-        "author": "Keyßner"
+        "end": 2435,
+        "author": "Karl Keyßner."
       }
     ]
   },
@@ -10507,10 +10509,12 @@
     "lemma": "Olenos 7",
     "previous": "Olenos 6",
     "next": "Olenus Calenus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2445,
-        "author": "Ruge"
+        "end": 2445,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -10641,10 +10645,13 @@
     "lemma": "Olibera",
     "previous": "Oliba",
     "next": "Olicana",
+    "sort_key": "Olibera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2476,
-        "author": "Sturm"
+        "end": 2476,
+        "author": "J. Sturm."
       }
     ]
   },
@@ -10685,10 +10692,12 @@
     "lemma": "Oligaithos",
     "previous": "Olienus, L.",
     "next": "Oligas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2477,
-        "author": "Schmidt"
+        "end": 2477,
+        "author": "Johanna Schmidt."
       }
     ]
   },
@@ -10742,10 +10751,12 @@
     "lemma": "Olina",
     "previous": "Oliman(a)reus",
     "next": "Olina(s",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
-        "author": "Schulten"
+        "end": 2479,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -10919,28 +10930,33 @@
   {
     "lemma": "Olliculani",
     "previous": "Olla",
-    "next": "Ollina",
+    "next": "Ὤλλινα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2487,
-        "author": "Philipp"
+        "end": 2487,
+        "author": "Hans Philipp."
       }
     ]
   },
   {
-    "lemma": "Ollina",
+    "lemma": "Ὤλλινα",
     "previous": "Olliculani",
     "next": "Ollius 1",
+    "sort_key": "Ollina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2487,
-        "author": "Herrmann"
+        "end": 2487,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Ollius 1",
-    "previous": "Ollina",
+    "previous": "Ὤλλινα",
     "next": "Ollevico",
     "chapters": [
       {
@@ -10986,10 +11002,12 @@
     "lemma": "Ollix",
     "previous": "Ollius 3",
     "next": "Ollogabiae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2489,
-        "author": "Lullies"
+        "end": 2489,
+        "author": "Reinhard Lullies."
       }
     ]
   },
@@ -10997,10 +11015,12 @@
     "lemma": "Ollogabiae",
     "previous": "Ollix",
     "next": "Ollototae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2489,
-        "author": "Heichelheim"
+        "end": 2489,
+        "author": "Fritz Heichelheim."
       }
     ]
   },

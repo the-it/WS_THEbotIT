@@ -8454,7 +8454,7 @@
   {
     "lemma": "Kithibanitai",
     "previous": "Κιθαρῳδία",
-    "next": "Kithinas",
+    "next": "Κιθινάς",
     "chapters": [
       {
         "start": 534,
@@ -8464,24 +8464,29 @@
     ]
   },
   {
-    "lemma": "Kithinas",
+    "lemma": "Κιθινάς",
     "previous": "Kithibanitai",
     "next": "Kithonea",
+    "sort_key": "Kithinas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 535,
-        "author": "Bürchner"
+        "end": 535,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kithonea",
-    "previous": "Kithinas",
+    "previous": "Κιθινάς",
     "next": "Kithos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 535,
-        "author": "Adler"
+        "end": 535,
+        "author": "Adler."
       }
     ]
   },
@@ -8747,7 +8752,7 @@
   {
     "lemma": "Klarotai",
     "previous": "Klaros",
-    "next": "Klasa",
+    "next": "Κλάσα",
     "chapters": [
       {
         "start": 553,
@@ -8756,19 +8761,22 @@
     ]
   },
   {
-    "lemma": "Klasa",
+    "lemma": "Κλάσα",
     "previous": "Klarotai",
     "next": "Klaseas",
+    "sort_key": "Klasa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 553,
-        "author": "Bürchner"
+        "end": 553,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Klaseas",
-    "previous": "Klasa",
+    "previous": "Κλάσα",
     "next": "Κλαστάνις",
     "chapters": [
       {
@@ -8842,10 +8850,12 @@
     "lemma": "Klaudios 2",
     "previous": "Klaudios 1",
     "next": "Klaudiunion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 554,
-        "author": "Kirchner"
+        "end": 554,
+        "author": "Kirchner."
       }
     ]
   },
@@ -8933,10 +8943,12 @@
     "lemma": "Kleainetos 2",
     "previous": "Kleainetos 1",
     "next": "Kleandria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 556,
-        "author": "Kroll"
+        "end": 556,
+        "author": "Kroll."
       }
     ]
   },
@@ -9012,10 +9024,12 @@
     "lemma": "Kleandros 4",
     "previous": "Kleandros 3",
     "next": "Kleandros 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 558,
-        "author": "Kroll"
+        "end": 558,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -10788,10 +10802,12 @@
     "lemma": "Kleogenes",
     "previous": "Kleodoxa",
     "next": "Kleoitas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 675,
-        "author": "Stein, [Arthur]"
+        "end": 675,
+        "author": "Stein."
       }
     ]
   },
@@ -10811,10 +10827,12 @@
     "lemma": "Kleokritos 1",
     "previous": "Kleoitas",
     "next": "Kleokritos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 676,
-        "author": "Kirchner"
+        "end": 676,
+        "author": "Kirchner."
       }
     ]
   },
@@ -10833,10 +10851,12 @@
     "lemma": "Kleolaos 1",
     "previous": "Kleokritos 2",
     "next": "Kleolaos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 676,
-        "author": "Capelle"
+        "end": 676,
+        "author": "Capelle."
       }
     ]
   },
@@ -10856,10 +10876,12 @@
     "lemma": "Kleolas 1",
     "previous": "Kleolaos 2",
     "next": "Kleolas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 676,
-        "author": "Capelle"
+        "end": 676,
+        "author": "Capelle."
       }
     ]
   },
@@ -10867,10 +10889,12 @@
     "lemma": "Kleolas 2",
     "previous": "Kleolas 1",
     "next": "Kleolas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 676,
-        "author": "Capelle"
+        "end": 676,
+        "author": "Capelle."
       }
     ]
   },
@@ -10878,10 +10902,12 @@
     "lemma": "Kleolas 3",
     "previous": "Kleolas 2",
     "next": "Kleolaos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 676,
-        "author": "Capelle"
+        "end": 676,
+        "author": "Capelle."
       }
     ]
   },
@@ -10900,10 +10926,12 @@
     "lemma": "Kleolaos 4",
     "previous": "Kleolaos 3",
     "next": "Kleolaos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 677,
-        "author": "Capelle"
+        "end": 677,
+        "author": "Capelle."
       }
     ]
   },
@@ -10911,10 +10939,12 @@
     "lemma": "Kleolaos 5",
     "previous": "Kleolaos 4",
     "next": "Kleomachos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 677,
-        "author": "Capelle"
+        "end": 677,
+        "author": "Capelle."
       }
     ]
   },
@@ -10922,10 +10952,12 @@
     "lemma": "Kleomachos 1",
     "previous": "Kleolaos 5",
     "next": "Kleomachos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 677,
-        "author": "Kirchner"
+        "end": 677,
+        "author": "Kirchner."
       }
     ]
   },
@@ -10933,9 +10965,12 @@
     "lemma": "Kleomachos 2",
     "previous": "Kleomachos 1",
     "next": "Kleomachos 3",
+    "redirect": "Gnaesippos, Nothippos",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 677
+        "start": 677,
+        "end": 677
       }
     ]
   },
@@ -15488,7 +15523,7 @@
   {
     "lemma": "Koinos Theos",
     "previous": "Koinos 6",
-    "next": "Kointos 1",
+    "next": "Κόιντος 1",
     "chapters": [
       {
         "start": 1058,
@@ -15497,19 +15532,22 @@
     ]
   },
   {
-    "lemma": "Kointos 1",
+    "lemma": "Κόιντος 1",
     "previous": "Koinos Theos",
     "next": "Kointos 2",
+    "sort_key": "Kointos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1058,
-        "author": "Kirchner"
+        "end": 1058,
+        "author": "Kirchner."
       }
     ]
   },
   {
     "lemma": "Kointos 2",
-    "previous": "Kointos 1",
+    "previous": "Κόιντος 1",
     "next": "Koinyra",
     "chapters": [
       {
@@ -15619,10 +15657,12 @@
     "lemma": "Koiranos 2",
     "previous": "Koiranos 1",
     "next": "Koiranos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1060,
-        "author": "Eitrem"
+        "end": 1060,
+        "author": "Eitrem."
       }
     ]
   },
@@ -15642,10 +15682,12 @@
     "lemma": "Koiranos 4",
     "previous": "Koiranos 3",
     "next": "Koiranos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1061,
-        "author": "Eitrem"
+        "end": 1061,
+        "author": "Eitrem."
       }
     ]
   },
