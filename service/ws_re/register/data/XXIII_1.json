@@ -6577,28 +6577,33 @@
   {
     "lemma": "Propes",
     "previous": "Propertius 4",
-    "next": "Propetes",
+    "next": "Προπέτης",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 796,
-        "author": "Miltner, Franz"
+        "end": 796,
+        "author": "F. Miltner."
       }
     ]
   },
   {
-    "lemma": "Propetes",
+    "lemma": "Προπέτης",
     "previous": "Propes",
     "next": "Prophantos 1",
+    "sort_key": "Propetes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 797,
-        "author": "Geisau"
+        "end": 797,
+        "author": "Hans v. Geisau."
       }
     ]
   },
   {
     "lemma": "Prophantos 1",
-    "previous": "Propetes",
+    "previous": "Προπέτης",
     "next": "Prophantos 2",
     "chapters": [
       {
@@ -6611,10 +6616,12 @@
     "lemma": "Prophantos 2",
     "previous": "Prophantos 1",
     "next": "Prophasis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 797,
-        "author": "Geisau"
+        "end": 797,
+        "author": "Marie C. van der Kolf."
       }
     ]
   },

@@ -4155,38 +4155,45 @@
     "lemma": "Poimes",
     "previous": "Poimenis",
     "next": "Poimnios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1211,
-        "author": "Ziegler"
+        "end": 1211,
+        "author": "Konrat Ziegler."
       }
     ]
   },
   {
     "lemma": "Poimnios",
     "previous": "Poimes",
-    "next": "Poinai theon",
+    "next": "Ποιναὶ θεῶν",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1211,
-        "author": "Kruse"
+        "end": 1211,
+        "author": "gr. Kruse."
       }
     ]
   },
   {
-    "lemma": "Poinai theon",
+    "lemma": "Ποιναὶ θεῶν",
     "previous": "Poimnios",
     "next": "Poine 1",
+    "sort_key": "Poinaitheon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1211,
-        "author": "Treidler"
+        "end": 1211,
+        "author": "Hans Treidler."
       }
     ]
   },
   {
     "lemma": "Poine 1",
-    "previous": "Poinai theon",
+    "previous": "Ποιναὶ θεῶν",
     "next": "Poine 2",
     "chapters": [
       {
@@ -4293,10 +4300,12 @@
     "lemma": "Pokios",
     "previous": "Poitropios",
     "next": "Pola",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1217,
-        "author": "Ziegler"
+        "end": 1217,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -4416,10 +4425,12 @@
     "lemma": "Polematokos",
     "previous": "Polemarios",
     "next": "Polemius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1259,
-        "author": "Ziegler"
+        "end": 1259,
+        "author": "Konrat Ziegler."
       }
     ]
   },

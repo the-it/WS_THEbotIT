@@ -639,7 +639,7 @@
   {
     "lemma": "Synetheia",
     "previous": "Synesius 6",
-    "next": "Syneunomiotai",
+    "next": "Συνευνομιωταί",
     "chapters": [
       {
         "start": 1366,
@@ -648,19 +648,22 @@
     ]
   },
   {
-    "lemma": "Syneunomiotai",
+    "lemma": "Συνευνομιωταί",
     "previous": "Synetheia",
     "next": "Συγγένεια 1",
+    "sort_key": "Syneunomiotai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1368,
-        "author": "Poland"
+        "end": 1368,
+        "author": "Poland."
       }
     ]
   },
   {
     "lemma": "Συγγένεια 1",
-    "previous": "Syneunomiotai",
+    "previous": "Συνευνομιωταί",
     "next": "Syngeneia 2",
     "sort_key": "Syngeneia 1",
     "redirect": true,
@@ -731,10 +734,12 @@
     "lemma": "Synges",
     "previous": "Syngeouchoi",
     "next": "Syngnomon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1369,
-        "author": "Stein, [Arthur]"
+        "end": 1369,
+        "author": "Stein."
       }
     ]
   },
@@ -797,38 +802,45 @@
     "lemma": "Synhietae",
     "previous": "Syngraphophylax",
     "next": "Synhorium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1388,
-        "author": "Herrmann"
+        "end": 1388,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Synhorium",
     "previous": "Synhietae",
-    "next": "Synke",
+    "next": "Σύγκη",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1388,
-        "author": "Herrmann"
+        "end": 1388,
+        "author": "Herrmann."
       }
     ]
   },
   {
-    "lemma": "Synke",
+    "lemma": "Σύγκη",
     "previous": "Synhorium",
     "next": "Synkellos 1",
+    "sort_key": "Synke",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1388,
-        "author": "Weissbach"
+        "end": 1388,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Synkellos 1",
-    "previous": "Synke",
+    "previous": "Σύγκη",
     "next": "Synkellos 2",
     "chapters": [
       {
@@ -841,10 +853,12 @@
     "lemma": "Synkellos 2",
     "previous": "Synkellos 1",
     "next": "Synkletios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1410,
-        "author": "Ræder"
+        "end": 1410,
+        "author": "Raeder."
       }
     ]
   },

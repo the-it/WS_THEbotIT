@@ -3895,10 +3895,12 @@
     "lemma": "Sinera 3",
     "previous": "Sinera 2",
     "next": "Sinethandos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 231,
-        "author": "Ruge"
+        "end": 231,
+        "author": "Ruge."
       }
     ]
   },
@@ -3917,10 +3919,12 @@
     "lemma": "Sinetriadum",
     "previous": "Sinethandos",
     "next": "Singa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 231,
-        "author": "MacDonald"
+        "end": 231,
+        "author": "Macdonald."
       }
     ]
   },
@@ -3949,7 +3953,7 @@
   {
     "lemma": "Singara",
     "previous": "Singae",
-    "next": "Singaras",
+    "next": "Σιγγάρας",
     "chapters": [
       {
         "start": 232,
@@ -3958,20 +3962,23 @@
     ]
   },
   {
-    "lemma": "Singaras",
+    "lemma": "Σιγγάρας",
     "previous": "Singara",
     "next": "Singas potamos",
+    "sort_key": "Singaras",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 233,
-        "author": "Weissbach"
+        "end": 233,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Singas potamos",
-    "previous": "Singaras",
-    "next": "Singedon",
+    "previous": "Σιγγάρας",
+    "next": "Σιγγηδών",
     "chapters": [
       {
         "start": 233,
@@ -3980,18 +3987,22 @@
     ]
   },
   {
-    "lemma": "Singedon",
+    "lemma": "Σιγγηδών",
     "previous": "Singas potamos",
     "next": "Singerichos",
+    "sort_key": "Singedon",
+    "redirect": "Singidunum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 234
+        "start": 234,
+        "end": 234
       }
     ]
   },
   {
     "lemma": "Singerichos",
-    "previous": "Singedon",
+    "previous": "Σιγγηδών",
     "next": "Singidaua",
     "redirect": "Segericus",
     "proof_read": 2,
@@ -4005,7 +4016,7 @@
   {
     "lemma": "Singidaua",
     "previous": "Singerichos",
-    "next": "Singidon",
+    "next": "Σιγγιδών",
     "chapters": [
       {
         "start": 234,
@@ -4014,18 +4025,22 @@
     ]
   },
   {
-    "lemma": "Singidon",
+    "lemma": "Σιγγιδών",
     "previous": "Singidaua",
     "next": "Singidunum",
+    "sort_key": "Singidon",
+    "redirect": "Singidunum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 234
+        "start": 234,
+        "end": 234
       }
     ]
   },
   {
     "lemma": "Singidunum",
-    "previous": "Singidon",
+    "previous": "Σιγγιδών",
     "next": "Singilis 1",
     "chapters": [
       {
@@ -6162,10 +6177,12 @@
     "lemma": "Sissiones",
     "previous": "Sissiacus",
     "next": "Sissus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 369,
-        "author": "Keune"
+        "end": 369,
+        "author": "Keune."
       }
     ]
   },
@@ -6276,17 +6293,19 @@
     "lemma": "Sisyphos 2",
     "previous": "Sisyphos 1",
     "next": "Sisyra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 376,
-        "author": "Münzer"
+        "end": 376,
+        "author": "Münzer."
       }
     ]
   },
   {
     "lemma": "Sisyra",
     "previous": "Sisyphos 2",
-    "next": "Sisyrba",
+    "next": "Σίσυρβα",
     "chapters": [
       {
         "start": 376,
@@ -6295,19 +6314,22 @@
     ]
   },
   {
-    "lemma": "Sisyrba",
+    "lemma": "Σίσυρβα",
     "previous": "Sisyra",
     "next": "Sita",
+    "sort_key": "Sisyrba",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 377,
-        "author": "Bürchner"
+        "end": 377,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Sita",
-    "previous": "Sisyrba",
+    "previous": "Σίσυρβα",
     "next": "Sitagertai",
     "chapters": [
       {
@@ -6367,10 +6389,12 @@
     "lemma": "Sitalkas 2",
     "previous": "Sitalkas 1",
     "next": "Sitalkes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 377,
-        "author": "Schoch"
+        "end": 377,
+        "author": "Schoch."
       }
     ]
   },
@@ -6411,10 +6435,12 @@
     "lemma": "Sitalus",
     "previous": "Sitalkes 3",
     "next": "Sitarion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 382,
-        "author": "Keune"
+        "end": 382,
+        "author": "Keune."
       }
     ]
   },
@@ -6432,7 +6458,7 @@
   {
     "lemma": "Sitas",
     "previous": "Sitarion",
-    "next": "Sitea",
+    "next": "Σιτέα",
     "chapters": [
       {
         "start": 382,
@@ -6441,19 +6467,22 @@
     ]
   },
   {
-    "lemma": "Sitea",
+    "lemma": "Σιτέα",
     "previous": "Sitas",
     "next": "Siteresion",
+    "sort_key": "Sitea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 382,
-        "author": "Bürchner"
+        "end": 382,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Siteresion",
-    "previous": "Sitea",
+    "previous": "Σιτέα",
     "next": "Sitesis",
     "chapters": [
       {
@@ -10951,6 +10980,7 @@
   },
   {
     "lemma": "Sonchor",
+    "previous": "Societas",
     "sort_key": "Sochchor 2",
     "redirect": "löschen",
     "proof_read": 2,
