@@ -5443,9 +5443,12 @@
     "lemma": "Navimago",
     "previous": "Navilubio",
     "next": "Navius 1",
+    "redirect": "Noviomagus 11",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1933
+        "start": 1933,
+        "end": 1933
       }
     ]
   },
@@ -5587,10 +5590,12 @@
     "lemma": "Naukratios",
     "previous": "Naukrates 4",
     "next": "Naukratis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1954,
-        "author": "Enßlin"
+        "end": 1954,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5668,10 +5673,12 @@
     "lemma": "Naulobatus",
     "previous": "Naulibus",
     "next": "Naulochoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1968,
-        "author": "Stein, [Arthur]"
+        "end": 1968,
+        "author": "Stein."
       }
     ]
   },
@@ -5747,10 +5754,12 @@
     "lemma": "Nauloi",
     "previous": "Naulochum",
     "next": "Naumachaeorum promunturium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1970,
-        "author": "Ruge"
+        "end": 1970,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -7808,10 +7817,12 @@
     "lemma": "Nedymnos",
     "previous": "Nedusia",
     "next": "Nee",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2176,
-        "author": "Gebhard"
+        "end": 2176,
+        "author": "V. Gebhard."
       }
     ]
   },
@@ -7967,10 +7978,12 @@
     "lemma": "Neia 1",
     "previous": "Neho",
     "next": "Neia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2182,
-        "author": "Wüst"
+        "end": 2182,
+        "author": "Ernst Wüst."
       }
     ]
   },
@@ -8023,7 +8036,7 @@
   {
     "lemma": "Neikos",
     "previous": "Neikaia 2",
-    "next": "Neikostratianos",
+    "next": "Νεικοστρατιανός",
     "chapters": [
       {
         "start": 2183,
@@ -8032,19 +8045,22 @@
     ]
   },
   {
-    "lemma": "Neikostratianos",
+    "lemma": "Νεικοστρατιανός",
     "previous": "Neikos",
     "next": "Neileos",
+    "sort_key": "Neikostratianos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2183,
-        "author": "Ruge"
+        "end": 2183,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Neileos",
-    "previous": "Neikostratianos",
+    "previous": "Νεικοστρατιανός",
     "next": "Neileus",
     "chapters": [
       {
@@ -8123,10 +8139,12 @@
     "lemma": "Neilotis",
     "previous": "Neilos 2",
     "next": "Neiloxenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2187,
-        "author": "Kruse"
+        "end": 2187,
+        "author": "gr. Kruse."
       }
     ]
   },

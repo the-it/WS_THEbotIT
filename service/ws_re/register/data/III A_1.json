@@ -6142,7 +6142,7 @@
     "lemma": "Sissa 2",
     "previous": "Sissa 1",
     "next": "Sisserus",
-    "redirect": "Tabula Peutingeriana",
+    "redirect": "Gissa",
     "proof_read": 2,
     "chapters": [
       {
@@ -10980,7 +10980,6 @@
   },
   {
     "lemma": "Sonchor",
-    "previous": "Societas",
     "sort_key": "Sochchor 2",
     "redirect": "löschen",
     "proof_read": 2,
@@ -12150,10 +12149,12 @@
     "lemma": "Soleadae",
     "previous": "Solea",
     "next": "Solemium, Solemnium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 916,
-        "author": "Wecker"
+        "end": 916,
+        "author": "Wecker."
       }
     ]
   },
@@ -12242,10 +12243,12 @@
     "lemma": "Solia",
     "previous": "Soletum",
     "next": "Soliacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 917,
-        "author": "Schulten"
+        "end": 917,
+        "author": "Schulten."
       }
     ]
   },
@@ -12297,10 +12300,12 @@
     "lemma": "Soliciacus",
     "previous": "Solicia",
     "next": "Solicinium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 920,
-        "author": "Keune"
+        "end": 920,
+        "author": "Keune."
       }
     ]
   },
@@ -12398,10 +12403,12 @@
     "lemma": "Solinates",
     "previous": "Solimnia",
     "next": "Solinienses",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 928,
-        "author": "Fluss"
+        "end": 928,
+        "author": "Fluss."
       }
     ]
   },
@@ -12409,10 +12416,12 @@
     "lemma": "Solinienses",
     "previous": "Solinates",
     "next": "Solinus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 928,
-        "author": "Keune"
+        "end": 928,
+        "author": "Keune."
       }
     ]
   },
@@ -12488,10 +12497,13 @@
     "lemma": "Solis Portus",
     "previous": "Solis insula",
     "next": "Solitaurilia",
+    "sort_key": "Solisportus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 929,
-        "author": "Wecker"
+        "end": 929,
+        "author": "Wecker."
       }
     ]
   },

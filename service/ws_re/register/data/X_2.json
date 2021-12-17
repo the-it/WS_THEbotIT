@@ -12022,10 +12022,12 @@
     "lemma": "Kapys 3",
     "previous": "Kapys 2",
     "next": "Kapys 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1923,
-        "author": "Scherling"
+        "end": 1923,
+        "author": "Scherling."
       }
     ]
   },
@@ -12184,10 +12186,12 @@
     "lemma": "Karandra",
     "previous": "Karandai",
     "next": "Karanis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1928,
-        "author": "Kees"
+        "end": 1928,
+        "author": "Kees."
       }
     ]
   },
@@ -12232,7 +12236,7 @@
   {
     "lemma": "Karanos",
     "previous": "Kar(an)nios",
-    "next": "Karape",
+    "next": "Καράπη",
     "chapters": [
       {
         "start": 1928,
@@ -12242,19 +12246,22 @@
     ]
   },
   {
-    "lemma": "Karape",
+    "lemma": "Καράπη",
     "previous": "Karanos",
     "next": "Karasthyra",
+    "sort_key": "Karape",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1929,
-        "author": "Weissbach"
+        "end": 1929,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Karasthyra",
-    "previous": "Karape",
+    "previous": "Καράπη",
     "next": "Karatai",
     "chapters": [
       {
@@ -12289,10 +12296,12 @@
     "lemma": "Karbana",
     "previous": "Karbala",
     "next": "Karbasos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1929,
-        "author": "Ruge"
+        "end": 1929,
+        "author": "Ruge."
       }
     ]
   },
@@ -12312,7 +12321,7 @@
   {
     "lemma": "Karbatine 1",
     "previous": "Karbasos",
-    "next": "Karbatine 2",
+    "next": "Καρβατίνη 2",
     "chapters": [
       {
         "start": 1929,
@@ -12322,9 +12331,23 @@
     ]
   },
   {
-    "lemma": "Karbatine 2",
+    "lemma": "Καρβατίνη 2",
     "previous": "Karbatine 1",
-    "next": "Karbatine 3",
+    "next": "Καρβατίνη 3",
+    "sort_key": "Karbatine 2",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 1930,
+        "end": 1930,
+        "author": "K. Schneider."
+      }
+    ]
+  },
+  {
+    "lemma": "Καρβατίνη 3",
+    "previous": "Καρβατίνη 2",
+    "next": "Κάρβερος",
     "chapters": [
       {
         "start": 1930,
@@ -12333,35 +12356,29 @@
     ]
   },
   {
-    "lemma": "Karbatine 3",
-    "previous": "Karbatine 2",
-    "next": "Karbesos",
-    "chapters": [
-      {
-        "start": 1930,
-        "author": "Schneider, K[arl]"
-      }
-    ]
-  },
-  {
-    "lemma": "Karbesos",
-    "previous": "Karbatine 3",
+    "lemma": "Κάρβερος",
+    "previous": "Καρβατίνη 3",
     "next": "Karbilesoi",
+    "sort_key": "Karbesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1930,
-        "author": "Fluss"
+        "end": 1930,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Karbilesoi",
-    "previous": "Karbesos",
+    "previous": "Κάρβερος",
     "next": "Karbiletai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1930,
-        "author": "Oberhummer"
+        "end": 1930,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -12369,10 +12386,12 @@
     "lemma": "Karbiletai",
     "previous": "Karbilesoi",
     "next": "Karbina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1930,
-        "author": "Oberhummer"
+        "end": 1930,
+        "author": "Oberhummer."
       }
     ]
   },

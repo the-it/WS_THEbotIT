@@ -12136,10 +12136,12 @@
     "lemma": "Laomedes 1",
     "previous": "Laomeda",
     "next": "Laomedes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 747,
-        "author": "Gunning"
+        "end": 747,
+        "author": "Gunning."
       }
     ]
   },
@@ -12191,10 +12193,12 @@
     "lemma": "Laomedon 4",
     "previous": "Laomedon 3",
     "next": "Laomedon 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 755,
-        "author": "Gunning"
+        "end": 755,
+        "author": "Gunning."
       }
     ]
   },
@@ -12202,10 +12206,12 @@
     "lemma": "Laomedon 5",
     "previous": "Laomedon 4",
     "next": "Laomedon 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 755,
-        "author": "Gunning"
+        "end": 755,
+        "author": "Gunning."
       }
     ]
   },
@@ -12223,7 +12229,7 @@
   {
     "lemma": "Laomedon 7",
     "previous": "Laomedon 6",
-    "next": "Laomedonteia",
+    "next": "Λαομεδόντεια",
     "chapters": [
       {
         "start": 756,
@@ -12232,19 +12238,22 @@
     ]
   },
   {
-    "lemma": "Laomedonteia",
+    "lemma": "Λαομεδόντεια",
     "previous": "Laomedon 7",
     "next": "Laomedontiades",
+    "sort_key": "Laomedonteia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 757,
-        "author": "Bürchner"
+        "end": 757,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Laomedontiades",
-    "previous": "Laomedonteia",
+    "previous": "Λαομεδόντεια",
     "next": "Laon 1",
     "chapters": [
       {
@@ -12257,10 +12266,12 @@
     "lemma": "Laon 1",
     "previous": "Laomedontiades",
     "next": "Laon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 758,
-        "author": "Obst"
+        "end": 758,
+        "author": "Obst."
       }
     ]
   },

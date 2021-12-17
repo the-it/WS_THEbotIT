@@ -6776,15 +6776,19 @@
   {
     "lemma": "Timesios 2",
     "previous": "Thoas 11",
+    "next": "Thukydides 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 769,
-        "author": "Demandt"
+        "start": 796,
+        "end": 796,
+        "author": "Alexander Demandt."
       }
     ]
   },
   {
     "lemma": "Thukydides 1",
+    "previous": "Timesios 2",
     "next": "Tiara"
   },
   {
@@ -6897,11 +6901,12 @@
     "lemma": "Trebonius 12a",
     "previous": "Torquata 2",
     "next": "Troia 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 809,
         "end": 810,
-        "author": "Eck"
+        "author": "Werner Eck."
       }
     ]
   },
@@ -7112,11 +7117,13 @@
     "lemma": "Uliades 6",
     "previous": "Uliades 5",
     "next": "Uliades II. 3",
+    "sort_key": "Vliades 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 915,
         "end": 916,
-        "author": "Benedum"
+        "author": "Jost Benedum."
       }
     ]
   },
@@ -7313,10 +7320,13 @@
     "lemma": "Uliades 19",
     "previous": "Uliades 18",
     "next": "Uliades 20",
+    "sort_key": "Vliades 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 919,
-        "author": "Benedum"
+        "end": 919,
+        "author": "Jost Benedum."
       }
     ]
   },
@@ -7506,10 +7516,13 @@
     "lemma": "Uliades 36",
     "previous": "Uliades 35",
     "next": "Uliades 37",
+    "sort_key": "Vliades 36",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 922,
-        "author": "Benedum"
+        "end": 922,
+        "author": "Jost Benedum."
       }
     ]
   },

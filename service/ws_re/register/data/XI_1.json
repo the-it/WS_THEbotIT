@@ -15717,10 +15717,12 @@
     "lemma": "Koiranos 7",
     "previous": "Koiranos 6",
     "next": "Koite",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1061,
-        "author": "Seeck"
+        "end": 1061,
+        "author": "Seeck."
       }
     ]
   },
@@ -15773,17 +15775,19 @@
     "lemma": "Kokalia",
     "previous": "Kokala",
     "next": "Kokalos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1062,
-        "author": "Ruge"
+        "end": 1062,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Kokalos",
     "previous": "Kokalia",
-    "next": "Kokkologos",
+    "next": "Κοκκολόγος",
     "chapters": [
       {
         "start": 1062,
@@ -15792,19 +15796,22 @@
     ]
   },
   {
-    "lemma": "Kokkologos",
+    "lemma": "Κοκκολόγος",
     "previous": "Kokalos",
     "next": "Kokkonagai",
+    "sort_key": "Kokkologos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1063,
-        "author": "Bürchner"
+        "end": 1063,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kokkonagai",
-    "previous": "Kokkologos",
+    "previous": "Κοκκολόγος",
     "next": "Kokkonagara 1",
     "chapters": [
       {
@@ -15887,10 +15894,12 @@
     "lemma": "Kokkynos",
     "previous": "Kokondrios",
     "next": "Koktemalikai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1064,
-        "author": "Ziegler"
+        "end": 1064,
+        "author": "Konrat Ziegler."
       }
     ]
   },
