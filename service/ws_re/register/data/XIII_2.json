@@ -3354,10 +3354,12 @@
     "lemma": "Lucius 8",
     "previous": "Lucius 7",
     "next": "Lucius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1653,
-        "author": "Kind"
+        "end": 1653,
+        "author": "Kind."
       }
     ]
   },
@@ -3365,10 +3367,12 @@
     "lemma": "Lucius 9",
     "previous": "Lucius 8",
     "next": "Lucius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1653,
-        "author": "Lippold, Georg"
+        "end": 1653,
+        "author": "Lippold."
       }
     ]
   },
@@ -3477,10 +3481,12 @@
     "lemma": "Lucretius 2",
     "previous": "Lucretius 1",
     "next": "Lucretius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1656,
-        "author": "Kind"
+        "end": 1656,
+        "author": "Kind."
       }
     ]
   },
@@ -3521,10 +3527,12 @@
     "lemma": "Lucretius 6",
     "previous": "Lucretius 5",
     "next": "Lucretius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1657,
-        "author": "Münzer"
+        "end": 1657,
+        "author": "Münzer."
       }
     ]
   },
@@ -3565,10 +3573,12 @@
     "lemma": "Lucretius 10",
     "previous": "Lucretius 9",
     "next": "Lucretius 11",
-    "redirect": true,
+    "redirect": "Lucretius 27",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1657
+        "start": 1657,
+        "end": 1657
       }
     ]
   },
@@ -3631,10 +3641,12 @@
     "lemma": "Lucretius 16",
     "previous": "Lucretius 15",
     "next": "Lucretius 17",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1659,
-        "author": "Münzer"
+        "end": 1659,
+        "author": "Münzer."
       }
     ]
   },
@@ -3956,10 +3968,12 @@
     "lemma": "Lucul(lanus)",
     "previous": "Lucullanum castellum",
     "next": "Lucullea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1705,
-        "author": "Philipp"
+        "end": 1705,
+        "author": "Philipp."
       }
     ]
   },
@@ -4041,10 +4055,12 @@
     "lemma": "Lucunanta",
     "previous": "Lucumo 3",
     "next": "Lucurgentum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1708,
-        "author": "Fluss"
+        "end": 1708,
+        "author": "Fluss."
       }
     ]
   },
@@ -4164,10 +4180,13 @@
     "lemma": "Lucus Iovis Indigetia",
     "previous": "Lucus Fucens",
     "next": "Lucusta",
+    "sort_key": "Lucusiovis indigetia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1710,
-        "author": "Philipp"
+        "end": 1710,
+        "author": "Philipp."
       }
     ]
   },
@@ -6605,10 +6624,12 @@
     "lemma": "Luza 2",
     "previous": "Luza 1",
     "next": "Luza 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2110,
-        "author": "Hölscher"
+        "end": 2110,
+        "author": "Hölscher."
       }
     ]
   },
@@ -6670,7 +6691,7 @@
   {
     "lemma": "Lyanter",
     "previous": "Lyandros 2",
-    "next": "Lycha(ios)",
+    "next": "Λυχα(ῖος)",
     "chapters": [
       {
         "start": 2111,
@@ -6679,19 +6700,22 @@
     ]
   },
   {
-    "lemma": "Lycha(ios)",
+    "lemma": "Λυχα(ῖος)",
     "previous": "Lyanter",
     "next": "Lychnidus 1",
+    "sort_key": "Lycha(ios)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2111,
-        "author": "Stählin"
+        "end": 2111,
+        "author": "Stählin."
       }
     ]
   },
   {
     "lemma": "Lychnidus 1",
-    "previous": "Lycha(ios)",
+    "previous": "Λυχα(ῖος)",
     "next": "Lychnidus 2",
     "chapters": [
       {
@@ -6703,7 +6727,7 @@
   {
     "lemma": "Lychnidus 2",
     "previous": "Lychnidus 1",
-    "next": "Lychnitis",
+    "next": "Λυχνῖτις",
     "chapters": [
       {
         "start": 2115,
@@ -6712,20 +6736,23 @@
     ]
   },
   {
-    "lemma": "Lychnitis",
+    "lemma": "Λυχνῖτις",
     "previous": "Lychnidus 2",
     "next": "Lychnomanteia",
+    "sort_key": "Lychnitis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2115,
-        "author": "Weissbach"
+        "end": 2115,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Lychnomanteia",
-    "previous": "Lychnitis",
-    "next": "Lychnopolis",
+    "previous": "Λυχνῖτις",
+    "next": "Λυχνόπολις",
     "chapters": [
       {
         "start": 2115,
@@ -6734,19 +6761,22 @@
     ]
   },
   {
-    "lemma": "Lychnopolis",
+    "lemma": "Λυχνόπολις",
     "previous": "Lychnomanteia",
     "next": "Lychnos",
+    "sort_key": "Lychnopolis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2119,
-        "author": "Bürchner"
+        "end": 2119,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Lychnos",
-    "previous": "Lychnopolis",
+    "previous": "Λυχνόπολις",
     "next": "Lyco",
     "redirect": "Lucerna",
     "proof_read": 2,
@@ -6805,10 +6835,12 @@
     "lemma": "Lyde",
     "previous": "Lydda",
     "next": "Λυδεα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2122,
-        "author": "Kruse"
+        "end": 2122,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -6841,10 +6873,12 @@
     "lemma": "Lydia 2",
     "previous": "Lydia 1",
     "next": "Lydia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2202,
-        "author": "Kruse"
+        "end": 2202,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -6863,10 +6897,12 @@
     "lemma": "Lydia 4",
     "previous": "Lydia 3",
     "next": "Lydiadas 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2202,
-        "author": "Stein, [Arthur]"
+        "end": 2202,
+        "author": "Stein."
       }
     ]
   },
@@ -6962,10 +6998,12 @@
     "lemma": "Lydos 4",
     "previous": "Lydos 3",
     "next": "Lydos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2209,
-        "author": "Lamer"
+        "end": 2209,
+        "author": "Lamer."
       }
     ]
   },
@@ -6984,10 +7022,12 @@
     "lemma": "Lydos 5a",
     "previous": "Lydos 5",
     "next": "Lydos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2209,
-        "author": "Lamer"
+        "end": 2209,
+        "author": "Lamer."
       }
     ]
   },
@@ -7744,10 +7784,12 @@
     "lemma": "Lykios 4",
     "previous": "Lykios 3",
     "next": "Lykios 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2293,
-        "author": "Obst"
+        "end": 2293,
+        "author": "Obst."
       }
     ]
   },
@@ -7766,10 +7808,12 @@
     "lemma": "Lykios 6",
     "previous": "Lykios 5",
     "next": "Lykis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2294,
-        "author": "Lippold, Georg"
+        "end": 2294,
+        "author": "Lippold."
       }
     ]
   },
@@ -7788,10 +7832,12 @@
     "lemma": "Lykiska",
     "previous": "Lykis",
     "next": "Lykiskos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2295,
-        "author": "Stein, [Arthur]"
+        "end": 2295,
+        "author": "Stein."
       }
     ]
   },
@@ -7799,10 +7845,12 @@
     "lemma": "Lykiskos 1",
     "previous": "Lykiska",
     "next": "Lykiskos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2295,
-        "author": "Kirchner"
+        "end": 2295,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7810,10 +7858,12 @@
     "lemma": "Lykiskos 2",
     "previous": "Lykiskos 1",
     "next": "Lykiskos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2295,
-        "author": "Kirchner"
+        "end": 2295,
+        "author": "Kirchner."
       }
     ]
   },
@@ -7864,7 +7914,7 @@
   {
     "lemma": "Lykiskos 7",
     "previous": "Lykiskos 6",
-    "next": "Lykkos",
+    "next": "Λυκκος",
     "chapters": [
       {
         "start": 2296,
@@ -7873,19 +7923,22 @@
     ]
   },
   {
-    "lemma": "Lykkos",
+    "lemma": "Λυκκος",
     "previous": "Lykiskos 7",
     "next": "Lyko 1",
+    "sort_key": "Lykkos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2296,
-        "author": "Bürchner"
+        "end": 2296,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Lyko 1",
-    "previous": "Lykkos",
+    "previous": "Λυκκος",
     "next": "Lyko 2",
     "chapters": [
       {
@@ -7898,10 +7951,12 @@
     "lemma": "Lyko 2",
     "previous": "Lyko 1",
     "next": "Lykoa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2297,
-        "author": "Kock"
+        "end": 2297,
+        "author": "Kock."
       }
     ]
   },

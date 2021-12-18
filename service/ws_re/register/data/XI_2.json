@@ -2435,7 +2435,7 @@
   {
     "lemma": "Korios",
     "previous": "Korion 2",
-    "next": "Korkura",
+    "next": "Κόρκουρα",
     "chapters": [
       {
         "start": 1400,
@@ -2444,19 +2444,22 @@
     ]
   },
   {
-    "lemma": "Korkura",
+    "lemma": "Κόρκουρα",
     "previous": "Korios",
     "next": "Korkyra, Kerkyra",
+    "sort_key": "Korkura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1400,
-        "author": "Weissbach"
+        "end": 1400,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Korkyra, Kerkyra",
-    "previous": "Korkura",
+    "previous": "Κόρκουρα",
     "next": "Korkyra, Kerkyra 1",
     "chapters": [
       {
@@ -2516,10 +2519,12 @@
     "lemma": "Kormalos",
     "previous": "Korkyraia",
     "next": "Kormasa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1417,
-        "author": "Bürchner"
+        "end": 1417,
+        "author": "Bürchner."
       }
     ]
   },
@@ -2583,10 +2588,12 @@
     "lemma": "Kornelianos",
     "previous": "Korne",
     "next": "Kornelios Hagios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1418,
-        "author": "Kirchner"
+        "end": 1418,
+        "author": "Kirchner."
       }
     ]
   },
@@ -2627,10 +2634,12 @@
     "lemma": "Kornopion",
     "previous": "Korniatas",
     "next": "Korodabon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1418,
-        "author": "Kroll"
+        "end": 1418,
+        "author": "Kroll."
       }
     ]
   },
@@ -10672,10 +10681,12 @@
     "lemma": "Kydas 1",
     "previous": "Kydantidai",
     "next": "Kydas 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2302,
-        "author": "Münzer"
+        "end": 2302,
+        "author": "Münzer."
       }
     ]
   },
@@ -10746,10 +10757,12 @@
     "lemma": "Kydippos",
     "previous": "Kydippe",
     "next": "Kydoimos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2303,
-        "author": "Kroll"
+        "end": 2303,
+        "author": "Kroll."
       }
     ]
   },
@@ -10781,10 +10794,12 @@
     "lemma": "Kydon 2",
     "previous": "Kydon 1",
     "next": "Kydones, hoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2305,
-        "author": "Lippold, Georg"
+        "end": 2305,
+        "author": "Lippold."
       }
     ]
   },
@@ -10849,7 +10864,7 @@
   {
     "lemma": "Kyeneion",
     "previous": "Kydrai, Kydriai",
-    "next": "Kyintu",
+    "next": "Κυίντου",
     "chapters": [
       {
         "start": 2308,
@@ -10858,24 +10873,29 @@
     ]
   },
   {
-    "lemma": "Kyintu",
+    "lemma": "Κυίντου",
     "previous": "Kyeneion",
     "next": "Kyiza",
+    "sort_key": "Kyintu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2308,
-        "author": "Fluss"
+        "end": 2308,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Kyiza",
-    "previous": "Kyintu",
+    "previous": "Κυίντου",
     "next": "Kykala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2308,
-        "author": "Herrmann"
+        "end": 2308,
+        "author": "Herrmann."
       }
     ]
   },
@@ -10906,10 +10926,12 @@
     "lemma": "Kykladen 2",
     "previous": "Kykladen 1",
     "next": "Kyklaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2320,
-        "author": "Bürchner"
+        "end": 2320,
+        "author": "Bürchner."
       }
     ]
   },
@@ -10963,7 +10985,7 @@
   {
     "lemma": "Kykloi",
     "previous": "Kyklios, Kykleion",
-    "next": "Kyklopeion",
+    "next": "Κυκλώπειον",
     "chapters": [
       {
         "start": 2321,
@@ -10973,19 +10995,22 @@
     ]
   },
   {
-    "lemma": "Kyklopeion",
+    "lemma": "Κυκλώπειον",
     "previous": "Kykloi",
     "next": "Kyklopen",
+    "sort_key": "Kyklopeion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2328,
-        "author": "Bürchner"
+        "end": 2328,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kyklopen",
-    "previous": "Kyklopeion",
+    "previous": "Κυκλώπειον",
     "next": "Kyklopenfelsen",
     "chapters": [
       {
@@ -10998,7 +11023,7 @@
   {
     "lemma": "Kyklopenfelsen",
     "previous": "Kyklopen",
-    "next": "Kyklopis",
+    "next": "Κυκλωπίς",
     "chapters": [
       {
         "start": 2347,
@@ -11007,19 +11032,21 @@
     ]
   },
   {
-    "lemma": "Kyklopis",
+    "lemma": "Κυκλωπίς",
     "previous": "Kyklopenfelsen",
     "next": "Kyklos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2347,
-        "author": "Bürchner"
+        "end": 2347,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kyklos",
-    "previous": "Kyklopis",
+    "previous": "Κυκλωπίς",
     "next": "Kyknos 1",
     "chapters": [
       {
@@ -11033,10 +11060,12 @@
     "lemma": "Kyknos 1",
     "previous": "Kyklos",
     "next": "Kyknos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2435,
-        "author": "Kroll"
+        "end": 2435,
+        "author": "Kroll."
       }
     ]
   },
