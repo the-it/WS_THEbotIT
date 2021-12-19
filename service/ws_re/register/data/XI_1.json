@@ -5812,11 +5812,12 @@
     "lemma": "Kichyros 2",
     "previous": "Kichyros 1",
     "next": "Kichyros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 377,
         "end": 378,
-        "author": "Meyer, Herbert"
+        "author": "Herb. Meyer."
       }
     ]
   },
@@ -6090,10 +6091,12 @@
     "lemma": "Kikonion",
     "previous": "Kikones",
     "next": "Kikynethos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 382,
-        "author": "Ruge"
+        "end": 382,
+        "author": "Ruge."
       }
     ]
   },
@@ -6146,10 +6149,12 @@
     "lemma": "Kilarios",
     "previous": "Kilarazos",
     "next": "Kilbianoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 383,
-        "author": "Adler"
+        "end": 383,
+        "author": "Adler."
       }
     ]
   },
@@ -6290,7 +6295,7 @@
   {
     "lemma": "Kilikios Aulon",
     "previous": "Kilix 1",
-    "next": "Kilikon nesos",
+    "next": "Κιλίκων νῆσος",
     "chapters": [
       {
         "start": 390,
@@ -6299,19 +6304,22 @@
     ]
   },
   {
-    "lemma": "Kilikon nesos",
+    "lemma": "Κιλίκων νῆσος",
     "previous": "Kilikios Aulon",
     "next": "Kilistra",
+    "sort_key": "Kilikon nesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 390,
-        "author": "Ruge"
+        "end": 390,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Kilistra",
-    "previous": "Kilikon nesos",
+    "previous": "Κιλίκων νῆσος",
     "next": "Kilix 2",
     "chapters": [
       {
@@ -6324,10 +6332,12 @@
     "lemma": "Kilix 2",
     "previous": "Kilistra",
     "next": "Killa 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 391,
-        "author": "Stein, [Arthur]"
+        "end": 391,
+        "author": "Stein."
       }
     ]
   },
@@ -6450,7 +6460,7 @@
   {
     "lemma": "Killuta",
     "previous": "Κιλλικύριοι",
-    "next": "Kimaion",
+    "next": "Κίμαιον",
     "chapters": [
       {
         "start": 396,
@@ -6459,19 +6469,22 @@
     ]
   },
   {
-    "lemma": "Kimaion",
+    "lemma": "Κίμαιον",
     "previous": "Killuta",
     "next": "Kimaros",
+    "sort_key": "Kimaion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 396,
-        "author": "Bürchner"
+        "end": 396,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kimaros",
-    "previous": "Kimaion",
+    "previous": "Κίμαιον",
     "next": "Kimiata",
     "chapters": [
       {
@@ -6518,10 +6531,12 @@
     "lemma": "Kimistenos",
     "previous": "Kiminas",
     "next": "Kimmerier",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 397,
-        "author": "Adler"
+        "end": 397,
+        "author": "Adler."
       }
     ]
   },
@@ -6541,10 +6556,12 @@
     "lemma": "Kimmerike",
     "previous": "Kimmerier",
     "next": "Kimmerikos Bosporos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 434,
-        "author": "Kroll"
+        "end": 434,
+        "author": "W. Kroll."
       }
     ]
   },

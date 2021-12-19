@@ -9670,9 +9670,12 @@
     "lemma": "Kamara 3",
     "previous": "Kamara 2",
     "next": "Kamareites",
+    "redirect": "Camarae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1801
+        "start": 1801,
+        "end": 1801
       }
     ]
   },
@@ -9724,7 +9727,7 @@
   {
     "lemma": "Kambadene",
     "previous": "Kamaroi",
-    "next": "Kambe",
+    "next": "Κάμβη",
     "chapters": [
       {
         "start": 1807,
@@ -9734,24 +9737,29 @@
     ]
   },
   {
-    "lemma": "Kambe",
+    "lemma": "Κάμβη",
     "previous": "Kambadene",
     "next": "Kamberichon",
+    "sort_key": "Kambe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1808,
-        "author": "Viedebantt"
+        "end": 1808,
+        "author": "Viedebantt."
       }
     ]
   },
   {
     "lemma": "Kamberichon",
-    "previous": "Kambe",
+    "previous": "Κάμβη",
     "next": "Kambles",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1808,
-        "author": "Herrmann"
+        "end": 1808,
+        "author": "Herrmann."
       }
     ]
   },

@@ -5198,10 +5198,12 @@
     "lemma": "Penii",
     "previous": "Peniculus",
     "next": "Penius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 497,
-        "author": "Schulten"
+        "end": 497,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -5303,10 +5305,12 @@
     "lemma": "Pennus",
     "previous": "Pennolucos",
     "next": "Pensum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 498,
-        "author": "Münzer"
+        "end": 498,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -5372,10 +5376,12 @@
     "lemma": "Pentadia 2",
     "previous": "Pentadia 1",
     "next": "Pentadius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 500,
-        "author": "Enßlin"
+        "end": 500,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5416,10 +5422,12 @@
     "lemma": "Pentadius 4",
     "previous": "Pentadius 3",
     "next": "Pentadius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 501,
-        "author": "Enßlin"
+        "end": 501,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -5459,7 +5467,7 @@
   {
     "lemma": "Πεντακωμία 1",
     "previous": "Pentagramma",
-    "next": "Pentakomia 2",
+    "next": "Πεντακωμία 2",
     "sort_key": "Pentakomia 1",
     "proof_read": 2,
     "chapters": [
@@ -5471,19 +5479,22 @@
     ]
   },
   {
-    "lemma": "Pentakomia 2",
+    "lemma": "Πεντακωμία 2",
     "previous": "Πεντακωμία 1",
     "next": "Pentakomia 3",
+    "sort_key": "Pentakomia 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 504,
-        "author": "Hölscher"
+        "end": 504,
+        "author": "G. Hölscher."
       }
     ]
   },
   {
     "lemma": "Pentakomia 3",
-    "previous": "Pentakomia 2",
+    "previous": "Πεντακωμία 2",
     "next": "Pentakosiomedimnoi",
     "chapters": [
       {
@@ -5573,10 +5584,12 @@
     "lemma": "Pentapolis 4",
     "previous": "Pentapolis 3",
     "next": "Pentapolis 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 510,
-        "author": "Honigmann"
+        "end": 511,
+        "author": "Honigmann."
       }
     ]
   },
@@ -5852,15 +5865,19 @@
   {
     "lemma": "Pentobolon",
     "previous": "Penthilos 2",
+    "next": "Pentonkion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 550,
-        "author": "Schwabacher"
+        "end": 550,
+        "author": "Schwabacher."
       }
     ]
   },
   {
     "lemma": "Pentonkion",
+    "previous": "Pentobolon",
     "next": "Pentri",
     "chapters": [
       {
@@ -5911,10 +5928,13 @@
     "lemma": "Peos Artemidos",
     "previous": "Χωρίον Πεῶν",
     "next": "Peparethos 1",
+    "sort_key": "Peosartemidos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 551,
-        "author": "Kees"
+        "end": 551,
+        "author": "Herm. Kees."
       }
     ]
   },
@@ -5944,10 +5964,12 @@
     "lemma": "Peparethos 3",
     "previous": "Peparethos 2",
     "next": "Peperine",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 559,
-        "author": "Herbst"
+        "end": 559,
+        "author": "Rudolf Herbst."
       }
     ]
   },
@@ -6034,10 +6056,12 @@
     "lemma": "Pepuza 2",
     "previous": "Pepuza 1",
     "next": "Pepylychnos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 563,
-        "author": "Ruge"
+        "end": 563,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -6058,10 +6082,12 @@
     "lemma": "Pera 1",
     "previous": "Pepylychnos",
     "next": "Pera 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 563,
-        "author": "Ruge"
+        "end": 563,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -6124,10 +6150,12 @@
     "lemma": "Peraia 3-6",
     "previous": "Peraia 3",
     "next": "Peraia 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 582,
-        "author": "Ruge"
+        "end": 582,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -6223,10 +6251,12 @@
     "lemma": "Perceiana",
     "previous": "Peratos",
     "next": "Percennius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 588,
-        "author": "Schulten"
+        "end": 588,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -6256,10 +6286,12 @@
     "lemma": "Percennius 3",
     "previous": "Percennius 2",
     "next": "Percennius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 588,
-        "author": "Stein, [Arthur]"
+        "end": 588,
+        "author": "Stein."
       }
     ]
   },
@@ -8592,10 +8624,12 @@
     "lemma": "Perirrheusa",
     "previous": "Perirrhanteria",
     "next": "Perisadies",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 857,
-        "author": "Herbst"
+        "end": 857,
+        "author": "Rudolf Herbst."
       }
     ]
   },
@@ -8660,10 +8694,12 @@
     "lemma": "Peristerides",
     "previous": "Peristeria",
     "next": "Peristerius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 859,
-        "author": "Burr"
+        "end": 859,
+        "author": "V. Burr."
       }
     ]
   },
@@ -8684,10 +8720,12 @@
     "lemma": "Peristhenes 1",
     "previous": "Peristerius",
     "next": "Peristhenes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 859,
-        "author": "Treidler"
+        "end": 859,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -8695,10 +8733,12 @@
     "lemma": "Peristhenes 2",
     "previous": "Peristhenes 1",
     "next": "Peristiarchos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 859,
-        "author": "Treidler"
+        "end": 859,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -8811,10 +8851,12 @@
     "lemma": "Perius",
     "previous": "Periurium",
     "next": "Perkalon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 862,
-        "author": "Treidler"
+        "end": 862,
+        "author": "Hans Treidler."
       }
     ]
   },
@@ -8945,10 +8987,12 @@
     "lemma": "Perne 1",
     "previous": "Perna",
     "next": "Perne 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 875,
-        "author": "Oberhummer"
+        "end": 875,
+        "author": "Eugen Oberhummer."
       }
     ]
   },
@@ -9055,10 +9099,13 @@
     "lemma": "Perokia (?)",
     "previous": "Peroe",
     "next": "Perontikon",
+    "sort_key": "Perokia(?)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 879,
-        "author": "Ruge"
+        "end": 879,
+        "author": "W. Ruge."
       }
     ]
   },

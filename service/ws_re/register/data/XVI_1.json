@@ -3032,7 +3032,7 @@
   {
     "lemma": "Morgantina",
     "previous": "Moretum",
-    "next": "Morgention",
+    "next": "Μοργέντιον",
     "chapters": [
       {
         "start": 299,
@@ -3041,19 +3041,22 @@
     ]
   },
   {
-    "lemma": "Morgention",
+    "lemma": "Μοργέντιον",
     "previous": "Morgantina",
     "next": "Morges 1",
+    "sort_key": "Morgention",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 301,
-        "author": "Philipp"
+        "end": 301,
+        "author": "Hans Philipp."
       }
     ]
   },
   {
     "lemma": "Morges 1",
-    "previous": "Morgention",
+    "previous": "Μοργέντιον",
     "next": "Morges 2",
     "chapters": [
       {
@@ -3112,10 +3115,12 @@
     "lemma": "Morgyna",
     "previous": "Morgos",
     "next": "Moria 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 302,
-        "author": "Ziegler"
+        "end": 302,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -3155,7 +3160,7 @@
   {
     "lemma": "Moridunum",
     "previous": "Moriath",
-    "next": "Morieis",
+    "next": "Μοριεῖς",
     "chapters": [
       {
         "start": 303,
@@ -3164,19 +3169,22 @@
     ]
   },
   {
-    "lemma": "Morieis",
+    "lemma": "Μοριεῖς",
     "previous": "Moridunum",
     "next": "Moriêl",
+    "sort_key": "Morieis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 303,
-        "author": "Herrmann"
+        "end": 303,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Moriêl",
-    "previous": "Morieis",
+    "previous": "Μοριεῖς",
     "next": "Morifanum",
     "chapters": [
       {
@@ -3244,10 +3252,12 @@
     "lemma": "Morionio",
     "previous": "Morini",
     "next": "Morios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 307,
-        "author": "MacDonald"
+        "end": 307,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -3277,10 +3287,12 @@
     "lemma": "Moriseni",
     "previous": "Morios 2",
     "next": "Moritasgus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 308,
-        "author": "Oberhummer"
+        "end": 308,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -3356,10 +3368,12 @@
     "lemma": "Morogis",
     "previous": "Mormonda, Mormonda mikra",
     "next": "Moroica",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 312,
-        "author": "Schulten"
+        "end": 312,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -3367,10 +3381,12 @@
     "lemma": "Moroica",
     "previous": "Morogis",
     "next": "Moron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 312,
-        "author": "Schulten"
+        "end": 312,
+        "author": "A. Schulten."
       }
     ]
   },
@@ -3433,10 +3449,12 @@
     "lemma": "Morpho",
     "previous": "Morpheus",
     "next": "Morphos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 313,
-        "author": "Kruse"
+        "end": 313,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -3444,10 +3462,12 @@
     "lemma": "Morphos",
     "previous": "Morpho",
     "next": "Morraphios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 313,
-        "author": "Kroll"
+        "end": 313,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -3499,10 +3519,12 @@
     "lemma": "Morsa",
     "previous": "Mors litis",
     "next": "Morsimos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 318,
-        "author": "Fluss"
+        "end": 318,
+        "author": "Max Fluss."
       }
     ]
   },
@@ -3660,10 +3682,12 @@
     "lemma": "Morychides",
     "previous": "Morunda 2",
     "next": "Morychos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 325,
-        "author": "Kirchner"
+        "end": 325,
+        "author": "Johann Kirchner."
       }
     ]
   },
@@ -3715,10 +3739,12 @@
     "lemma": "Morys 2",
     "previous": "Morys 1",
     "next": "Morzios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
-        "author": "Scherling"
+        "end": 327,
+        "author": "Scherling."
       }
     ]
   },
@@ -3805,10 +3831,12 @@
     "lemma": "Moscharus",
     "previous": "Moscha",
     "next": "Moschianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 344,
-        "author": "Enßlin"
+        "end": 344,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3860,10 +3888,12 @@
     "lemma": "Moschion 2",
     "previous": "Moschion 1",
     "next": "Moschion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 345,
-        "author": "Kroll"
+        "end": 345,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -3959,10 +3989,12 @@
     "lemma": "Moschis",
     "previous": "Moschion 10",
     "next": "Moschius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 350,
-        "author": "Kroll"
+        "end": 350,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -4003,10 +4035,12 @@
     "lemma": "Moschos 1",
     "previous": "Moschophagoi",
     "next": "Moschos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 355,
-        "author": "Stein, [Arthur]"
+        "end": 355,
+        "author": "Stein."
       }
     ]
   },
