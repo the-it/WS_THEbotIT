@@ -9365,10 +9365,12 @@
     "lemma": "Skudris",
     "previous": "Skuanes",
     "next": "Skulkoburgo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 617,
-        "author": "Ruge"
+        "end": 617,
+        "author": "Ruge."
       }
     ]
   },
@@ -9451,10 +9453,12 @@
     "lemma": "Skybros",
     "previous": "Skurio",
     "next": "Skydis(s)es",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 617,
-        "author": "Oberhummer"
+        "end": 617,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -9472,7 +9476,7 @@
   {
     "lemma": "Skydra",
     "previous": "Skydis(s)es",
-    "next": "Skydreon polis",
+    "next": "Σκυδρέων πόλις",
     "chapters": [
       {
         "start": 618,
@@ -9481,19 +9485,22 @@
     ]
   },
   {
-    "lemma": "Skydreon polis",
+    "lemma": "Σκυδρέων πόλις",
     "previous": "Skydra",
     "next": "Skylake 1",
+    "sort_key": "Skydreon polis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 618,
-        "author": "Fluss"
+        "end": 618,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Skylake 1",
-    "previous": "Skydreon polis",
+    "previous": "Σκυδρέων πόλις",
     "next": "Skylake 2",
     "chapters": [
       {
@@ -9583,10 +9590,12 @@
     "lemma": "Skylax 1",
     "previous": "Skylakotrophos",
     "next": "Skylax 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 619,
-        "author": "Schoch"
+        "end": 619,
+        "author": "Schoch."
       }
     ]
   },
@@ -9627,10 +9636,12 @@
     "lemma": "Skylax 5",
     "previous": "Skylax 4",
     "next": "Skyletria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 646,
-        "author": "Ruge"
+        "end": 646,
+        "author": "Ruge."
       }
     ]
   },
@@ -9754,10 +9765,12 @@
     "lemma": "Skyllia",
     "previous": "Σκυλλητῖνος κόλπος",
     "next": "Skyllios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 660,
-        "author": "Bürchner"
+        "end": 660,
+        "author": "Bürchner."
       }
     ]
   },
@@ -12820,17 +12833,19 @@
     "lemma": "Solobriasae",
     "previous": "Solo",
     "next": "Solocense",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 935,
-        "author": "Wecker"
+        "end": 935,
+        "author": "Wecker."
       }
     ]
   },
   {
     "lemma": "Solocense",
     "previous": "Solobriasae",
-    "next": "Soloeis",
+    "next": "Σολοεῖς",
     "chapters": [
       {
         "start": 935,
@@ -12839,19 +12854,22 @@
     ]
   },
   {
-    "lemma": "Soloeis",
+    "lemma": "Σολοεῖς",
     "previous": "Solocense",
     "next": "Soloeis 1",
+    "sort_key": "Soloeis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 935,
-        "author": "Bürchner"
+        "end": 935,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Soloeis 1",
-    "previous": "Soloeis",
+    "previous": "Σολοεῖς",
     "next": "Soloeis 2",
     "chapters": [
       {
@@ -13096,10 +13114,12 @@
     "lemma": "Solonenica",
     "previous": "Solonees",
     "next": "Solonianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 981,
-        "author": "Ruge"
+        "end": 981,
+        "author": "Ruge."
       }
     ]
   },
@@ -13118,9 +13138,12 @@
     "lemma": "Solonium 1",
     "previous": "Solonianus",
     "next": "Solonium 2",
+    "redirect": "Solonius ager",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 981
+        "start": 981,
+        "end": 981
       }
     ]
   },
@@ -13161,10 +13184,13 @@
     "lemma": "Solorius mons",
     "previous": "Solonius ager",
     "next": "Solothurn",
+    "sort_key": "Soloriusmons",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 982,
-        "author": "Schulten"
+        "end": 983,
+        "author": "Schulten."
       }
     ]
   },
@@ -13172,10 +13198,12 @@
     "lemma": "Solothurn",
     "previous": "Solorius mons",
     "next": "Solouentioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 983,
-        "author": "Keune"
+        "end": 983,
+        "author": "Keune."
       }
     ]
   },
@@ -13282,10 +13310,12 @@
     "lemma": "Solymnia",
     "previous": "Solymeus",
     "next": "Solymos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 990,
-        "author": "Bürchner"
+        "end": 990,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13304,10 +13334,12 @@
     "lemma": "Solymos 2",
     "previous": "Solymos 1",
     "next": "Solymos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 990,
-        "author": "Türk"
+        "end": 990,
+        "author": "G. Türk."
       }
     ]
   },
@@ -13315,10 +13347,12 @@
     "lemma": "Solymos 3",
     "previous": "Solymos 2",
     "next": "Solymos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 991,
-        "author": "Türk"
+        "end": 991,
+        "author": "G. Türk."
       }
     ]
   },
@@ -13411,9 +13445,12 @@
     "lemma": "Sona 2",
     "previous": "Somnialis",
     "next": "Sonarciaga",
+    "redirect": "Suna 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 992
+        "start": 993,
+        "end": 993
       }
     ]
   },
@@ -13432,10 +13469,12 @@
     "lemma": "Sonautes",
     "previous": "Sonarciaga",
     "next": "Somis",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 992,
-        "author": "Ruge"
+        "start": 993,
+        "end": 993,
+        "author": "Ruge."
       }
     ]
   },
@@ -13478,10 +13517,12 @@
     "lemma": "Sonceium",
     "previous": "Soncat, Soncta",
     "next": "Sonchar, Sonchor",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 994,
-        "author": "Keune"
+        "end": 994,
+        "author": "Keune."
       }
     ]
   },
@@ -13511,9 +13552,12 @@
     "lemma": "Sondrae",
     "previous": "Sonchis",
     "next": "Sondros",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 994
+        "start": 994,
+        "end": 994,
+        "author": "Wecker."
       }
     ]
   },
@@ -13565,10 +13609,12 @@
     "lemma": "Sonikos 1",
     "previous": "Soniacus",
     "next": "Sonikos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 994,
-        "author": "Kirchner"
+        "end": 994,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13657,9 +13703,13 @@
     "lemma": "Sontiates",
     "previous": "Sonos",
     "next": "Sontini",
+    "redirect": "Sotiates",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 995
+        "start": 995,
+        "end": 995,
+        "author": "Keune."
       }
     ]
   },
@@ -13667,10 +13717,12 @@
     "lemma": "Sontini",
     "previous": "Sontiates",
     "next": "Sontius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 995,
-        "author": "Mittelhaus"
+        "end": 995,
+        "author": "Mittelhaus."
       }
     ]
   },

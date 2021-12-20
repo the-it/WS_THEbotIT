@@ -13034,10 +13034,12 @@
     "lemma": "Sappo",
     "previous": "Sappinates",
     "next": "Sapra limen 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2385,
-        "author": "Seeck"
+        "end": 2385,
+        "author": "Seeck."
       }
     ]
   },
@@ -13066,10 +13068,12 @@
     "lemma": "Sapricius 1",
     "previous": "Sapra limen 2",
     "next": "Sapricius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2385,
-        "author": "Seeck"
+        "end": 2385,
+        "author": "Seeck."
       }
     ]
   },
@@ -13077,10 +13081,12 @@
     "lemma": "Sapricius 2",
     "previous": "Sapricius 1",
     "next": "Sapua",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2385,
-        "author": "Seeck"
+        "end": 2385,
+        "author": "Seeck."
       }
     ]
   },
@@ -13099,10 +13105,12 @@
     "lemma": "Sapyle",
     "previous": "Sapua",
     "next": "Sara 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2385,
-        "author": "Bürchner"
+        "end": 2385,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13148,9 +13156,12 @@
     "lemma": "Sara 4",
     "previous": "Sara 3",
     "next": "Saraballa",
+    "redirect": "Sarapion 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2386
+        "start": 2386,
+        "end": 2386
       }
     ]
   },
@@ -13168,7 +13179,7 @@
   {
     "lemma": "Sarabastrae",
     "previous": "Saraballa",
-    "next": "Sarabis",
+    "next": "Σαραβίς",
     "redirect": "Plinius 5",
     "proof_read": 2,
     "chapters": [
@@ -13179,20 +13190,22 @@
     ]
   },
   {
-    "lemma": "Sarabis",
+    "lemma": "Σαραβίς",
     "previous": "Sarabastrae",
     "next": "Sarabos",
+    "sort_key": "Sarabis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2386,
         "end": 2387,
-        "author": "Schulten"
+        "author": "Schulten."
       }
     ]
   },
   {
     "lemma": "Sarabos",
-    "previous": "Sarabis",
+    "previous": "Σαραβίς",
     "next": "Sarabraka",
     "chapters": [
       {
@@ -13205,10 +13218,12 @@
     "lemma": "Sarabraka",
     "previous": "Sarabos",
     "next": "Saraburgum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2387,
-        "author": "Ruge"
+        "end": 2387,
+        "author": "Ruge."
       }
     ]
   },
@@ -13260,11 +13275,12 @@
     "lemma": "Saraka 1",
     "previous": "Saragina",
     "next": "Sarangai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2387,
         "end": 2388,
-        "author": "Moritz, [Bernhard]"
+        "author": "Moritz."
       }
     ]
   },
@@ -13295,10 +13311,12 @@
     "lemma": "Saraka 3",
     "previous": "Saraka 2",
     "next": "Σαρακαύρακοι",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2390,
-        "author": "Weissbach"
+        "end": 2390,
+        "author": "Weissbach."
       }
     ]
   },
@@ -13403,7 +13421,7 @@
   {
     "lemma": "Saramanne",
     "previous": "Σάραλος 2",
-    "next": "Saramene",
+    "next": "Σαραμηνή",
     "chapters": [
       {
         "start": 2391,
@@ -13413,19 +13431,22 @@
     ]
   },
   {
-    "lemma": "Saramene",
+    "lemma": "Σαραμηνή",
     "previous": "Saramanne",
     "next": "Saranga",
+    "sort_key": "Saramene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2392,
-        "author": "Ruge"
+        "end": 2392,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Saranga",
-    "previous": "Saramene",
+    "previous": "Σαραμηνή",
     "next": "Saranges",
     "chapters": [
       {
