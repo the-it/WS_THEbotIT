@@ -1856,10 +1856,12 @@
     "lemma": "Nautius 12",
     "previous": "Nauplia 2",
     "next": "Nikanor 24a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 362,
-        "author": "Volkmann"
+        "end": 362,
+        "author": "Hans Volkmann."
       }
     ]
   },
@@ -1970,10 +1972,12 @@
     "lemma": "Olympos 34",
     "previous": "Oinoe 4a",
     "next": "Ophiussa 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 371,
-        "author": "Lippold, Georg"
+        "end": 371,
+        "author": "Lippold."
       }
     ]
   },
@@ -1992,10 +1996,12 @@
     "lemma": "Orothophanitae",
     "previous": "Ophiussa 8",
     "next": "Paideas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 373,
-        "author": "Krückmann"
+        "end": 373,
+        "author": "O. Krückmann."
       }
     ]
   },
@@ -3237,7 +3243,6 @@
   {
     "lemma": "Sokrates 12",
     "previous": "Severus 36a",
-    "next": "Sikon 2",
     "chapters": [
       {
         "start": 717,
@@ -3248,8 +3253,8 @@
   },
   {
     "lemma": "Sikon 2",
-    "previous": "Sokrates 12",
-    "next": "Die Zweite oder Neue Sophistik",
+    "previous": "Severus 36a",
+    "next": "Sokrates 12",
     "proof_read": 2,
     "chapters": [
       {
@@ -3261,7 +3266,6 @@
   },
   {
     "lemma": "Die Zweite oder Neue Sophistik",
-    "previous": "Sikon 2",
     "next": "Sosibios 5a",
     "chapters": [
       {
@@ -4677,10 +4681,12 @@
     "lemma": "Leodefridus",
     "previous": "Leo 7m",
     "next": "Leonas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 933,
-        "author": "Enßlin"
+        "end": 933,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -4700,10 +4706,12 @@
     "lemma": "Leonianus 1",
     "previous": "Leonas",
     "next": "Leonianus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 934,
-        "author": "Enßlin"
+        "end": 934,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -4711,10 +4719,12 @@
     "lemma": "Leonianus 2",
     "previous": "Leonianus 1",
     "next": "Leonides 4a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 934,
-        "author": "Enßlin"
+        "end": 934,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -4755,9 +4765,12 @@
     "lemma": "Leonides 19",
     "previous": "Leonides 7",
     "next": "Leonides 20-21",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 934
+        "start": 934,
+        "end": 934
       }
     ]
   },

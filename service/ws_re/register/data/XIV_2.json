@@ -9862,7 +9862,7 @@
   {
     "lemma": "Markupolis 1",
     "previous": "Marktanlagen",
-    "next": "Markupolis 2",
+    "next": "Μαρκούπολις 2",
     "chapters": [
       {
         "start": 1880,
@@ -9871,19 +9871,22 @@
     ]
   },
   {
-    "lemma": "Markupolis 2",
+    "lemma": "Μαρκούπολις 2",
     "previous": "Markupolis 1",
     "next": "Marma",
+    "sort_key": "Markupolis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
-        "author": "Honigmann"
+        "end": 1880,
+        "author": "Honigmann."
       }
     ]
   },
   {
     "lemma": "Marma",
-    "previous": "Markupolis 2",
+    "previous": "Μαρκούπολις 2",
     "next": "Marmakes",
     "chapters": [
       {
@@ -9896,10 +9899,12 @@
     "lemma": "Marmakes",
     "previous": "Marma",
     "next": "Marmantarum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
-        "author": "Kroll"
+        "end": 1880,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -9907,10 +9912,12 @@
     "lemma": "Marmantarum",
     "previous": "Marmakes",
     "next": "Marmara 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1880,
-        "author": "Honigmann"
+        "end": 1880,
+        "author": "Honigmann."
       }
     ]
   },
@@ -9918,10 +9925,12 @@
     "lemma": "Marmara 1",
     "previous": "Marmantarum",
     "next": "Marmara 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1881,
-        "author": "Ruge"
+        "end": 1881,
+        "author": "Ruge."
       }
     ]
   },
@@ -9962,10 +9971,12 @@
     "lemma": "Marmarinos",
     "previous": "Marmarica",
     "next": "Marmarion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1883,
-        "author": "Kruse"
+        "end": 1883,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -9983,7 +9994,7 @@
   {
     "lemma": "Marmax",
     "previous": "Marmarion",
-    "next": "Marme",
+    "next": "Μάρμη",
     "chapters": [
       {
         "start": 1884,
@@ -9992,19 +10003,22 @@
     ]
   },
   {
-    "lemma": "Marme",
+    "lemma": "Μάρμη",
     "previous": "Marmax",
     "next": "Marmessos",
+    "sort_key": "Marme",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1884,
-        "author": "Honigmann"
+        "end": 1884,
+        "author": "Honigmann."
       }
     ]
   },
   {
     "lemma": "Marmessos",
-    "previous": "Marme",
+    "previous": "Μάρμη",
     "next": "Marmis",
     "redirect": "Marpessos",
     "proof_read": 2,
@@ -11573,7 +11587,7 @@
       {
         "start": 2020,
         "end": 2020,
-        "author": "W. Enßlin."
+        "author": "Enßlin."
       }
     ]
   },
@@ -11608,7 +11622,7 @@
       {
         "start": 2022,
         "end": 2022,
-        "author": "W. Enßlin."
+        "author": "Enßlin."
       }
     ]
   },
@@ -11632,7 +11646,7 @@
       {
         "start": 2022,
         "end": 2022,
-        "author": "W. Enßlin."
+        "author": "Enßlin."
       }
     ]
   },
@@ -11645,7 +11659,7 @@
       {
         "start": 2022,
         "end": 2022,
-        "author": "W. Enßlin."
+        "author": "Enßlin."
       }
     ]
   },
@@ -11658,7 +11672,7 @@
       {
         "start": 2022,
         "end": 2022,
-        "author": "W. Enßlin."
+        "author": "Enßlin."
       }
     ]
   },
@@ -11671,7 +11685,7 @@
       {
         "start": 2022,
         "end": 2022,
-        "author": "W. Enßlin."
+        "author": "Enßlin."
       }
     ]
   },

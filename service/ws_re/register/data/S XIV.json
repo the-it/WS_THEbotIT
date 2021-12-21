@@ -4755,10 +4755,12 @@
     "lemma": "Phintias 6",
     "previous": "Petronius 49a",
     "next": "Pinarius 10a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 383,
-        "author": "Brommer"
+        "end": 383,
+        "author": "Frank Brommer."
       }
     ]
   },
@@ -4786,6 +4788,7 @@
   {
     "lemma": "Plancius 8",
     "previous": "Plancius 7",
+    "next": "Plautius 64a",
     "chapters": [
       {
         "start": 386,
@@ -4795,11 +4798,14 @@
   },
   {
     "lemma": "Plautius 64a",
+    "previous": "Plancius 8",
     "next": "Plorucensis statio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 385,
-        "author": "Eck"
+        "end": 385,
+        "author": "Werner Eck."
       }
     ]
   },
@@ -4913,10 +4919,12 @@
     "lemma": "Pollenius 6",
     "previous": "Polemonion",
     "next": "Polybos 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 428,
-        "author": "Hanslik"
+        "end": 428,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -4958,10 +4966,12 @@
     "lemma": "Pomponius 28a",
     "previous": "Pompeius 114a",
     "next": "Pomponius 31a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 438,
-        "author": "Eck"
+        "end": 438,
+        "author": "Werner Eck."
       }
     ]
   },

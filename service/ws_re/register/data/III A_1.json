@@ -4053,10 +4053,12 @@
     "lemma": "Singilis 1",
     "previous": "Singidunum",
     "next": "Singilis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 235,
-        "author": "Schulten"
+        "end": 235,
+        "author": "Schulten."
       }
     ]
   },
@@ -4129,7 +4131,7 @@
   {
     "lemma": "Singulator",
     "previous": "Singulares",
-    "next": "Singya",
+    "next": "Σίγγυα",
     "chapters": [
       {
         "start": 237,
@@ -4138,19 +4140,22 @@
     ]
   },
   {
-    "lemma": "Singya",
+    "lemma": "Σίγγυα",
     "previous": "Singulator",
     "next": "Sini.",
+    "sort_key": "Singya",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 238,
-        "author": "Ruge"
+        "end": 238,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Sini.",
-    "previous": "Singya",
+    "previous": "Σίγγυα",
     "next": "Siniacus",
     "chapters": [
       {
@@ -4268,10 +4273,12 @@
     "lemma": "Sinitense",
     "previous": "Sinistus",
     "next": "Sinkar",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 245,
-        "author": "Dessau"
+        "end": 245,
+        "author": "Dessau."
       }
     ]
   },
@@ -4479,10 +4486,12 @@
     "lemma": "Sinops",
     "previous": "Sinopites",
     "next": "Sinoria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 255,
-        "author": "Ruge"
+        "end": 255,
+        "author": "Ruge."
       }
     ]
   },
@@ -4594,10 +4603,12 @@
     "lemma": "Sintanius",
     "previous": "Sintae",
     "next": "Sinteis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 257,
-        "author": "Keune"
+        "end": 257,
+        "author": "Keune."
       }
     ]
   },
@@ -7458,7 +7469,7 @@
   {
     "lemma": "Skaperda",
     "previous": "Skapaneus 2",
-    "next": "Skaphathon ktema",
+    "next": "Σκαφαθῶν κτῆμα",
     "chapters": [
       {
         "start": 439,
@@ -7467,19 +7478,22 @@
     ]
   },
   {
-    "lemma": "Skaphathon ktema",
+    "lemma": "Σκαφαθῶν κτῆμα",
     "previous": "Skaperda",
     "next": "Skaphe 1",
+    "sort_key": "Skaphathon ktema",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 439,
-        "author": "Honigmann"
+        "end": 439,
+        "author": "Honigmann."
       }
     ]
   },
   {
     "lemma": "Skaphe 1",
-    "previous": "Skaphathon ktema",
+    "previous": "Σκαφαθῶν κτῆμα",
     "next": "Skaphe 2",
     "chapters": [
       {
@@ -7503,10 +7517,12 @@
     "lemma": "Skaphe 3",
     "previous": "Skaphe 2",
     "next": "Skaphephoroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 443,
-        "author": "Weissbach"
+        "end": 443,
+        "author": "Weissbach."
       }
     ]
   },
@@ -7597,7 +7613,7 @@
   {
     "lemma": "Skarabäen",
     "previous": "Skapte hyle",
-    "next": "Skardon",
+    "next": "Σκάρδων",
     "chapters": [
       {
         "start": 447,
@@ -7606,18 +7622,22 @@
     ]
   },
   {
-    "lemma": "Skardon",
+    "lemma": "Σκάρδων",
     "previous": "Skarabäen",
     "next": "Skardon oros",
+    "sort_key": "Skardon",
+    "redirect": "Scardona",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 459
+        "start": 459,
+        "end": 459
       }
     ]
   },
   {
     "lemma": "Skardon oros",
-    "previous": "Skardon",
+    "previous": "Σκάρδων",
     "next": "Skardona nesos",
     "chapters": [
       {
@@ -7651,10 +7671,12 @@
     "lemma": "Skaroi",
     "previous": "Skardone",
     "next": "Σκάρος",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 460,
-        "author": "Ruge"
+        "end": 460,
+        "author": "Ruge."
       }
     ]
   },
@@ -7700,10 +7722,12 @@
     "lemma": "Skarpheia 2",
     "previous": "Skarpheia",
     "next": "Skarpheia 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 465,
-        "author": "Geyer"
+        "end": 465,
+        "author": "Geyer."
       }
     ]
   },
@@ -7711,10 +7735,12 @@
     "lemma": "Skarpheia 3",
     "previous": "Skarpheia 2",
     "next": "Skarsene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 465,
-        "author": "Bürchner"
+        "end": 465,
+        "author": "Bürchner."
       }
     ]
   },
