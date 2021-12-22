@@ -100,16 +100,6 @@ class TestP6216CopyrightStatus(BaseTestClaimFactory):
         compare(HUNDRED_YEARS_OR_MORE_AFTER_AUTHORS_DEATH,
                 claim_100["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
 
-    def test_min_years_since_death_pma_100(self):
-        re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Sauer.}}", title="RE:Bla")
-        factory = P6216CopyrightStatus(re_page, self.logger)
-        claim_100 = factory.min_years_since_death
-        compare(COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER,
-                claim_100["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
-        compare(HUNDRED_YEARS_OR_MORE_AFTER_AUTHORS_DEATH,
-                claim_100["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
-
-
     def test_min_years_since_death_multiple_authors(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Sauer.}}\n"
                                               "{{REAbschnitt}}\ntext\n{{REAutor|Boethius}}\n"

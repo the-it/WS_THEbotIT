@@ -6,15 +6,15 @@
 #
 beautifulsoup4==4.10.0
     # via -r requirements.in
-boto3==1.20.8
+boto3==1.20.26
     # via -r requirements.in
-botocore==1.23.9
+botocore==1.23.26
     # via
     #   boto3
     #   s3transfer
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.7
+charset-normalizer==2.0.9
     # via requests
 defusedxml==0.7.1
     # via -r requirements.in
@@ -36,7 +36,7 @@ oauthlib==3.1.1
     #   requests-oauthlib
 python-dateutil==2.8.2
     # via botocore
-pywikibot==6.6.2
+pywikibot==6.6.3
     # via -r requirements.in
 regex==2021.11.10
     # via wikitextparser
@@ -57,7 +57,7 @@ smmap==5.0.0
     # via gitdb
 soupsieve==2.3.1
     # via beautifulsoup4
-typing-extensions==4.0.0
+typing-extensions==4.0.1
     # via gitpython
 urllib3==1.26.7
     # via
@@ -65,7 +65,7 @@ urllib3==1.26.7
     #   requests
 wcwidth==0.2.5
     # via wikitextparser
-wikitextparser==0.47.8
+wikitextparser==0.47.9
     # via -r requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
