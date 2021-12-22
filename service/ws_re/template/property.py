@@ -29,10 +29,9 @@ class Property:
 
     @property
     def value(self) -> PropertyValueType:
+        ret: PropertyValueType = self._default
         if self._value:
             ret = self._value
-        else:
-            ret = self._default
         return ret
 
     @value.setter

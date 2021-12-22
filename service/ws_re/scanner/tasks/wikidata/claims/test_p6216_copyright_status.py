@@ -5,6 +5,15 @@ from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P
 from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
     BaseTestClaimFactory
 
+COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER = 59621182
+FIFTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH = 29870405
+COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER = 59542795
+SEVENTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH = 29870196
+COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER = 61830521
+EIGHTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH = 29940641
+COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER = 60332278
+HUNDRED_YEARS_OR_MORE_AFTER_AUTHORS_DEATH = 29940705
+
 
 class TestP6216CopyrightStatus(BaseTestClaimFactory):
     PMA_CLAIM_50 = {'mainsnak':
@@ -59,29 +68,37 @@ class TestP6216CopyrightStatus(BaseTestClaimFactory):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Boethius}}", title="RE:Bla")
         factory = P6216CopyrightStatus(re_page, self.logger)
         claim_50 = factory.min_years_since_death
-        compare(59621182, claim_50["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
-        compare(29870405, claim_50["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
+        compare(COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER,
+                claim_50["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
+        compare(FIFTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH,
+                claim_50["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
 
     def test_min_years_since_death_pma_70(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Eger.}}", title="RE:Bla")
         factory = P6216CopyrightStatus(re_page, self.logger)
         claim_70 = factory.min_years_since_death
-        compare(59542795, claim_70["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
-        compare(29870196, claim_70["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
+        compare(COUNTRIES_WITH_70_YEARS_PMA_OR_SHORTER,
+                claim_70["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
+        compare(SEVENTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH,
+                claim_70["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
 
     def test_min_years_since_death_pma_80(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Klingmüller.}}", title="RE:Bla")
         factory = P6216CopyrightStatus(re_page, self.logger)
         claim_80 = factory.min_years_since_death
-        compare(61830521, claim_80["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
-        compare(29940641, claim_80["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
+        compare(COUNTRIES_WITH_80_YEARS_PMA_OR_SHORTER,
+                claim_80["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
+        compare(EIGHTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH,
+                claim_80["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
 
     def test_min_years_since_death_pma_100(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Sauer.}}", title="RE:Bla")
         factory = P6216CopyrightStatus(re_page, self.logger)
         claim_100 = factory.min_years_since_death
-        compare(60332278, claim_100["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
-        compare(29940705, claim_100["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
+        compare(COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER,
+                claim_100["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
+        compare(HUNDRED_YEARS_OR_MORE_AFTER_AUTHORS_DEATH,
+                claim_100["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
 
     def test_min_years_since_death_multiple_authors(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Sauer.}}\n"
@@ -91,8 +108,10 @@ class TestP6216CopyrightStatus(BaseTestClaimFactory):
                                          title="RE:Bla")
         factory = P6216CopyrightStatus(re_page, self.logger)
         claim_boethius = factory.min_years_since_death
-        compare(59621182, claim_boethius["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
-        compare(29870405, claim_boethius["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
+        compare(COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER,
+                claim_boethius["qualifiers"]["P1001"][0]["datavalue"]["value"]["numeric-id"])
+        compare(FIFTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH,
+                claim_boethius["qualifiers"]["P459"][0]["datavalue"]["value"]["numeric-id"])
 
     def test_min_years_since_death_no_death(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Stiglitz}}",

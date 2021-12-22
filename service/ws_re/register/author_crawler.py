@@ -122,7 +122,7 @@ class AuthorCrawler:
 
     @classmethod
     def _get_author(cls, author_lines: str) -> Dict[str, AuthorDict]:
-        lines = cls._split_author(author_lines)
+        lines = cls._split_author(re.sub(r"<!--.*?-->", "", author_lines, flags=re.DOTALL))
         author_tuple = cls._extract_author_infos(lines[0])
         years = cls._extract_years(lines[1])
         wp_lemma = cls._extract_wp_lemma(lines[3])
