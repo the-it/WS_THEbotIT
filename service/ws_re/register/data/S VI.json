@@ -2327,7 +2327,6 @@
   {
     "lemma": "Ira 4",
     "previous": "Ionnaria",
-    "next": "Isamnus",
     "proof_read": 3,
     "chapters": [
       {
@@ -2339,6 +2338,8 @@
   },
   {
     "lemma": "Iulius 552a",
+    "previous": "Istros 1a",
+    "next": "Iulianum",
     "proof_read": 2,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
     "wd_link": "d:Q239314",
@@ -2352,7 +2353,6 @@
   },
   {
     "lemma": "Isamnus",
-    "previous": "Ira 4",
     "next": "Istris",
     "proof_read": 3,
     "chapters": [
@@ -2381,7 +2381,6 @@
   {
     "lemma": "Istros 1a",
     "previous": "Istris",
-    "next": "Iulius 552a",
     "proof_read": 2,
     "chapters": [
       {
@@ -2393,6 +2392,7 @@
   },
   {
     "lemma": "Iulianum",
+    "previous": "Iulius 552a",
     "next": "Iunius 183a",
     "proof_read": 3,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
@@ -3413,7 +3413,7 @@
   {
     "lemma": "Marcianus 27a",
     "previous": "Manichäismus",
-    "next": "Mathalis",
+    "next": "Μαθαλίς",
     "chapters": [
       {
         "start": 271,
@@ -3423,19 +3423,22 @@
     ]
   },
   {
-    "lemma": "Mathalis",
+    "lemma": "Μαθαλίς",
     "previous": "Marcianus 27a",
     "next": "Matisa(?), Matisona(?), Matrona(?)",
+    "sort_key": "Mathalis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 283,
-        "author": "Lorentz"
+        "end": 283,
+        "author": "F. v. Lorentz."
       }
     ]
   },
   {
     "lemma": "Matisa(?), Matisona(?), Matrona(?)",
-    "previous": "Mathalis",
+    "previous": "Μαθαλίς",
     "next": "Matisonenses",
     "chapters": [
       {
@@ -3459,10 +3462,12 @@
     "lemma": "Matoas",
     "previous": "Matisonenses",
     "next": "Maximinus 21a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 283,
-        "author": "Fluss"
+        "end": 283,
+        "author": "Fluss."
       }
     ]
   },
@@ -3524,10 +3529,12 @@
     "lemma": "Meidylides 2",
     "previous": "Meidylides 1",
     "next": "Mekistis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 291,
-        "author": "Fiehn"
+        "end": 291,
+        "author": "Fiehn."
       }
     ]
   },
@@ -3602,10 +3609,12 @@
     "lemma": "Menesthes 2",
     "previous": "Menandros 20a",
     "next": "Menestho 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 297,
-        "author": "Geisau"
+        "end": 297,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -3613,10 +3622,12 @@
     "lemma": "Menestho 2",
     "previous": "Menesthes 2",
     "next": "Merusion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 297,
-        "author": "Geisau"
+        "end": 297,
+        "author": "v. Geisau."
       }
     ]
   },

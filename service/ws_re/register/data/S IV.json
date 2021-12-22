@@ -6015,10 +6015,12 @@
     "lemma": "Kleoxenos 3",
     "previous": "Kleostratos 7",
     "next": "Koës",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 913,
-        "author": "Schoch"
+        "end": 913,
+        "author": "Schoch."
       }
     ]
   },
@@ -6036,7 +6038,6 @@
   {
     "lemma": "Koinon 1",
     "previous": "Koës",
-    "next": "Koiranos 11",
     "chapters": [
       {
         "start": 914,
@@ -6046,18 +6047,19 @@
   },
   {
     "lemma": "Koiranos 11",
-    "previous": "Koinon 1",
-    "next": "Koios 2a",
+    "previous": "Koiranos 10",
+    "next": "Kolaios",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 924,
-        "author": "Schoch"
+        "start": 942,
+        "end": 942,
+        "author": "Schoch."
       }
     ]
   },
   {
     "lemma": "Koios 2a",
-    "previous": "Koiranos 11",
     "next": "Koiranos 8",
     "chapters": [
       {
@@ -6081,10 +6083,12 @@
     "lemma": "Koiranos 9",
     "previous": "Koiranos 8",
     "next": "Koiranos 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 942,
-        "author": "Schoch"
+        "end": 942,
+        "author": "Schoch."
       }
     ]
   },
@@ -6202,10 +6206,12 @@
     "lemma": "Korabos",
     "previous": "Koptites",
     "next": "Korinthos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 991,
-        "author": "Schoch"
+        "end": 991,
+        "author": "Schoch."
       }
     ]
   },

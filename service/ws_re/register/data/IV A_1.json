@@ -10613,10 +10613,12 @@
     "lemma": "Sylea",
     "previous": "Sylax",
     "next": "Syleos pedion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1039,
-        "author": "Türk"
+        "end": 1039,
+        "author": "Türk."
       }
     ]
   },
@@ -10646,10 +10648,12 @@
     "lemma": "Sylinancis",
     "previous": "Syleus",
     "next": "Syliones",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1040,
-        "author": "MacDonald"
+        "end": 1040,
+        "author": "Macdonald."
       }
     ]
   },
@@ -10657,10 +10661,12 @@
     "lemma": "Syliones",
     "previous": "Sylinancis",
     "next": "Syllae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1040,
-        "author": "Oberhummer"
+        "end": 1040,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -10700,7 +10706,7 @@
   {
     "lemma": "Syllas",
     "previous": "Syllania",
-    "next": "Syllektes",
+    "next": "Συλλέκτης",
     "chapters": [
       {
         "start": 1044,
@@ -10709,19 +10715,22 @@
     ]
   },
   {
-    "lemma": "Syllektes",
+    "lemma": "Συλλέκτης",
     "previous": "Syllas",
     "next": "Sylleptor",
+    "sort_key": "Syllektes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1044,
-        "author": "Seidl"
+        "end": 1044,
+        "author": "Seidl."
       }
     ]
   },
   {
     "lemma": "Sylleptor",
-    "previous": "Syllektes",
+    "previous": "Συλλέκτης",
     "next": "Syllion",
     "chapters": [
       {
@@ -10802,10 +10811,12 @@
     "lemma": "Syllos 1",
     "previous": "Syllogos",
     "next": "Syllos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1070,
-        "author": "Schoch"
+        "end": 1070,
+        "author": "Schoch."
       }
     ]
   },
@@ -10846,10 +10857,12 @@
     "lemma": "Sylo",
     "previous": "Syllukianistes",
     "next": "Syloson 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1071,
-        "author": "Gebhard"
+        "end": 1071,
+        "author": "Gebhard."
       }
     ]
   },
@@ -10878,7 +10891,7 @@
   {
     "lemma": "Συμ-",
     "previous": "Syloson 2",
-    "next": "Symaitha",
+    "next": "Σύμαιθα",
     "sort_key": "Sym",
     "redirect": true,
     "proof_read": 2,
@@ -10890,19 +10903,22 @@
     ]
   },
   {
-    "lemma": "Symaitha",
+    "lemma": "Σύμαιθα",
     "previous": "Συμ-",
     "next": "Symaithos",
+    "sort_key": "Symaitha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1072,
-        "author": "Stählin"
+        "end": 1072,
+        "author": "Stählin."
       }
     ]
   },
   {
     "lemma": "Symaithos",
-    "previous": "Symaitha",
+    "previous": "Σύμαιθα",
     "next": "Symbake",
     "chapters": [
       {

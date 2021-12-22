@@ -5261,7 +5261,7 @@
   {
     "lemma": "Thule, Thyle",
     "previous": "Thukydides 5",
-    "next": "Thulubana",
+    "next": "Θουλουβάνα",
     "chapters": [
       {
         "start": 627,
@@ -5270,19 +5270,22 @@
     ]
   },
   {
-    "lemma": "Thulubana",
+    "lemma": "Θουλουβάνα",
     "previous": "Thule, Thyle",
     "next": "Thumata",
+    "sort_key": "Thulubana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 630,
-        "author": "Herrmann"
+        "end": 630,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Thumata",
-    "previous": "Thulubana",
+    "previous": "Θουλουβάνα",
     "next": "Thumelicus",
     "chapters": [
       {
@@ -5353,7 +5356,7 @@
   {
     "lemma": "Thurae",
     "previous": "Thunfisch",
-    "next": "Thuras",
+    "next": "Θούρας",
     "chapters": [
       {
         "start": 633,
@@ -5362,7 +5365,7 @@
     ]
   },
   {
-    "lemma": "Thuras",
+    "lemma": "Θούρας",
     "previous": "Thurae",
     "next": "Thuria",
     "sort_key": "Thuras",
@@ -5377,7 +5380,7 @@
   },
   {
     "lemma": "Thuria",
-    "previous": "Thuras",
+    "previous": "Θούρας",
     "next": "Thuriel",
     "chapters": [
       {
@@ -5493,10 +5496,12 @@
     "lemma": "Thuris",
     "previous": "Thurios 3",
     "next": "Thurisind",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 653,
-        "author": "Grohmann"
+        "end": 653,
+        "author": "Adolf Grohmann."
       }
     ]
   },

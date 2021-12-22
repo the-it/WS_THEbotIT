@@ -8729,10 +8729,12 @@
     "lemma": "Krotos",
     "previous": "Krotopos",
     "next": "Krotus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2028,
-        "author": "Stein, [Arthur]"
+        "end": 2028,
+        "author": "Stein."
       }
     ]
   },
@@ -8775,10 +8777,12 @@
     "lemma": "Krunoi 3",
     "previous": "Krunoi 2",
     "next": "Krunoi 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2030,
-        "author": "Kroll"
+        "end": 2030,
+        "author": "Lackeit."
       }
     ]
   },
@@ -8786,10 +8790,12 @@
     "lemma": "Krunoi 4",
     "previous": "Krunoi 3",
     "next": "Krupeza",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2030,
-        "author": "Kroll"
+        "end": 2030,
+        "author": "Kroll."
       }
     ]
   },
@@ -8952,10 +8958,12 @@
     "lemma": "Krystallos",
     "previous": "Kryptoi",
     "next": "Kteatos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2032,
-        "author": "Ruge"
+        "end": 2032,
+        "author": "Ruge."
       }
     ]
   },
@@ -8999,10 +9007,12 @@
     "lemma": "Ktesias 2",
     "previous": "Ktesias 1",
     "next": "Ktesibios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2073,
-        "author": "Lippold, Georg"
+        "end": 2073,
+        "author": "Lippold."
       }
     ]
   },
@@ -9128,10 +9138,12 @@
     "lemma": "Ktesion",
     "previous": "Ktesiochos",
     "next": "Ktesios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2078,
-        "author": "Bürchner"
+        "end": 2078,
+        "author": "Bürchner."
       }
     ]
   },
@@ -9218,10 +9230,12 @@
     "lemma": "Ktesippos 3",
     "previous": "Ktesippos 2",
     "next": "Ktesippos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2080,
-        "author": "Scherling"
+        "end": 2080,
+        "author": "Scherling."
       }
     ]
   },
@@ -9347,10 +9361,12 @@
     "lemma": "Kuadatra",
     "previous": "Κτυλινδρίνη",
     "next": "Kuarios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2087,
-        "author": "Ruge"
+        "end": 2087,
+        "author": "Ruge."
       }
     ]
   },
@@ -9369,7 +9385,7 @@
   {
     "lemma": "Kuartiana",
     "previous": "Kuarios",
-    "next": "Kuas",
+    "next": "Κούας",
     "chapters": [
       {
         "start": 2088,
@@ -9378,19 +9394,22 @@
     ]
   },
   {
-    "lemma": "Kuas",
+    "lemma": "Κούας",
     "previous": "Kuartiana",
     "next": "Kuba",
+    "sort_key": "Kuas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2088,
-        "author": "Fluss"
+        "end": 2088,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Kuba",
-    "previous": "Kuas",
+    "previous": "Κούας",
     "next": "Kubinos",
     "chapters": [
       {
@@ -9403,10 +9422,13 @@
     "lemma": "Kubinos",
     "previous": "Kuba",
     "next": "Kuchen",
+    "sort_key": "Kubinos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2088,
-        "author": "Fluss"
+        "end": 2088,
+        "author": "Fluss."
       }
     ]
   },
@@ -11035,6 +11057,7 @@
     "lemma": "Κυκλωπίς",
     "previous": "Kyklopenfelsen",
     "next": "Kyklos",
+    "sort_key": "Kyklopis",
     "proof_read": 2,
     "chapters": [
       {
