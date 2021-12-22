@@ -228,6 +228,15 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
                                             "wp_lemma": "Kenneth Morgan Abbott"}}
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "")))
 
+    def test_get_author_mapping_bug_meyer(self):
+        author_sub_table = """|Meyer, Herbert
+|1890 ||
+|VIII,2–IX,2, X,2–XII,1, XVII,2, XIX,1–XX,1
+|<!-- Verzeichnis von 1913: "Dr. Herbert Meyer, Königsberg." Möglicherweise identisch mit dem Verfasser der Dissertation "De Anthologiae Palatinae epigrammatis Cyzicensis", Königsberg 1911 [Herbert Meyer aus Klausthal]. Kein passender Personalbogen in der Datenbank der BBF-DIPF
+nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
+        expect = {"Herbert Meyer": {"birth": 1890, "first_name": "Herbert", "last_name": "Meyer"}}
+        compare(expect, self.crawler._get_author(author_sub_table))
+
     def test_get_complete_authors(self):
         author_mapping = self.crawler.get_authors(self.author_table)
         expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988, "first_name": "Kenneth Morgan",
