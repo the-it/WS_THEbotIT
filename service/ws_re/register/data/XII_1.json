@@ -10018,7 +10018,7 @@
     "lemma": "Lampsilii",
     "previous": "Lampsakos",
     "next": "Lampsus 1",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 592,
@@ -12675,10 +12675,12 @@
     "lemma": "Laphias",
     "previous": "Laphanes",
     "next": "Laphilos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 766,
-        "author": "Ruge"
+        "end": 766,
+        "author": "Ruge."
       }
     ]
   },
@@ -12686,10 +12688,12 @@
     "lemma": "Laphilos",
     "previous": "Laphias",
     "next": "Laphra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 766,
-        "author": "Lenschau"
+        "end": 766,
+        "author": "Lenschau."
       }
     ]
   },
@@ -12697,10 +12701,12 @@
     "lemma": "Laphra",
     "previous": "Laphilos",
     "next": "Laphrenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 766,
-        "author": "Ruge"
+        "end": 766,
+        "author": "Ruge."
       }
     ]
   },
@@ -12708,10 +12714,12 @@
     "lemma": "Laphrenos",
     "previous": "Laphra",
     "next": "Laphria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 766,
-        "author": "Obst"
+        "end": 766,
+        "author": "Obst."
       }
     ]
   },
@@ -12840,10 +12848,12 @@
     "lemma": "Laphystios 3",
     "previous": "Laphystios 2",
     "next": "Laphystra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 774,
-        "author": "Obst"
+        "end": 774,
+        "author": "Obst."
       }
     ]
   },
@@ -12864,17 +12874,19 @@
     "lemma": "Lapicini",
     "previous": "Laphystra",
     "next": "Lapidaria",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 774,
-        "author": "Philipp"
+        "end": 774,
+        "author": "Philipp."
       }
     ]
   },
   {
     "lemma": "Lapidaria",
     "previous": "Lapicini",
-    "next": "Lapidarias",
+    "next": "Λαπιδαρίας",
     "chapters": [
       {
         "start": 774,
@@ -12883,24 +12895,30 @@
     ]
   },
   {
-    "lemma": "Lapidarias",
+    "lemma": "Λαπιδαρίας",
     "previous": "Lapidaria",
     "next": "Lapidariorum Castra",
+    "sort_key": "Lapidarias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 774,
-        "author": "Fluss"
+        "end": 774,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Lapidariorum Castra",
-    "previous": "Lapidarias",
+    "previous": "Λαπιδαρίας",
     "next": "Lapidarius",
+    "sort_key": "Lapidariorumcastra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 774,
-        "author": "Kees"
+        "end": 774,
+        "author": "Kees."
       }
     ]
   },

@@ -8087,7 +8087,7 @@
   {
     "lemma": "Maiozomalcha",
     "previous": "Maiotis 1",
-    "next": "Maipa",
+    "next": "Μαῖπα",
     "redirect": "Maozamalcha",
     "proof_read": 2,
     "chapters": [
@@ -8098,19 +8098,22 @@
     ]
   },
   {
-    "lemma": "Maipa",
+    "lemma": "Μαῖπα",
     "previous": "Maiozomalcha",
     "next": "Maipha metropolis",
+    "sort_key": "Maipa",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 592,
-        "author": "Weissbach"
+        "end": 592,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Maipha metropolis",
-    "previous": "Maipa",
+    "previous": "Μαῖπα",
     "next": "Maiphath",
     "chapters": [
       {
@@ -8145,10 +8148,12 @@
     "lemma": "Maira 2",
     "previous": "Maira 1",
     "next": "Maira 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 604,
-        "author": "Kolf"
+        "end": 604,
+        "author": "v. d. Kolf."
       }
     ]
   },
@@ -8178,10 +8183,12 @@
     "lemma": "Maira 5",
     "previous": "Maira 4",
     "next": "Maira 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 605,
-        "author": "Kolf"
+        "end": 605,
+        "author": "v. d. Kolf."
       }
     ]
   },
@@ -8189,10 +8196,12 @@
     "lemma": "Maira 6",
     "previous": "Maira 5",
     "next": "Maira 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 605,
-        "author": "Kolf"
+        "end": 605,
+        "author": "v. d. Kolf."
       }
     ]
   },
@@ -8233,10 +8242,12 @@
     "lemma": "Mais",
     "previous": "Mairo",
     "next": "Maisaimaneis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 606,
-        "author": "Herrmann"
+        "end": 606,
+        "author": "Herrmann."
       }
     ]
   },
@@ -8277,10 +8288,12 @@
     "lemma": "Maisoka",
     "previous": "Maisis",
     "next": "Maisolia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 608,
-        "author": "Herrmann"
+        "end": 608,
+        "author": "Herrmann."
       }
     ]
   },
@@ -8331,7 +8344,7 @@
   {
     "lemma": "Maithat",
     "previous": "Maison",
-    "next": "Maitona",
+    "next": "Μαίτονα",
     "redirect": "Maiphath",
     "proof_read": 2,
     "chapters": [
@@ -8342,24 +8355,29 @@
     ]
   },
   {
-    "lemma": "Maitona",
+    "lemma": "Μαίτονα",
     "previous": "Maithat",
     "next": "Maitonion",
+    "sort_key": "Maitona",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 609,
-        "author": "Weissbach"
+        "end": 609,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Maitonion",
-    "previous": "Maitona",
+    "previous": "Μαίτονα",
     "next": "Maitores",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 609,
-        "author": "Herrmann"
+        "end": 609,
+        "author": "Herrmann."
       }
     ]
   },

@@ -9303,10 +9303,12 @@
     "lemma": "Skotios 1",
     "previous": "Skotia 2",
     "next": "Skotios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 612,
-        "author": "Ruge"
+        "end": 612,
+        "author": "Ruge."
       }
     ]
   },
@@ -9368,7 +9370,7 @@
   {
     "lemma": "Skotussa 2",
     "previous": "Skotussa 1",
-    "next": "Skuanes",
+    "next": "Σκουάνες",
     "chapters": [
       {
         "start": 617,
@@ -9377,20 +9379,23 @@
     ]
   },
   {
-    "lemma": "Skuanes",
+    "lemma": "Σκουάνες",
     "previous": "Skotussa 2",
     "next": "Skudris",
+    "sort_key": "Skuanes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 617,
-        "author": "Fluss"
+        "end": 617,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Skudris",
-    "previous": "Skuanes",
-    "next": "Skulkoburgo",
+    "previous": "Σκουάνες",
+    "next": "Σκουλκόβουργο",
     "proof_read": 2,
     "chapters": [
       {
@@ -9401,19 +9406,22 @@
     ]
   },
   {
-    "lemma": "Skulkoburgo",
+    "lemma": "Σκουλκόβουργο",
     "previous": "Skudris",
     "next": "Skumbro",
+    "sort_key": "Skulkoburgo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 617,
-        "author": "Fluss"
+        "end": 617,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Skumbro",
-    "previous": "Skulkoburgo",
+    "previous": "Σκουλκόβουργο",
     "next": "Σκουπηνός",
     "chapters": [
       {

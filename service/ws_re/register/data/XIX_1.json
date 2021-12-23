@@ -7345,10 +7345,12 @@
     "lemma": "Peridea 2",
     "previous": "Peridea 1",
     "next": "Perideipnon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 720,
-        "author": "Andrée[-Hanslik]"
+        "end": 720,
+        "author": "Judith Andrée-Hanslik."
       }
     ]
   },
@@ -7399,7 +7401,7 @@
   {
     "lemma": "Periepios",
     "previous": "Perieget",
-    "next": "Perierbidoi",
+    "next": "Περιέρβιδοι",
     "chapters": [
       {
         "start": 742,
@@ -7408,19 +7410,22 @@
     ]
   },
   {
-    "lemma": "Perierbidoi",
+    "lemma": "Περιέρβιδοι",
     "previous": "Periepios",
     "next": "Perieres 1",
+    "sort_key": "Perierbidoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 743,
-        "author": "Herrmann"
+        "end": 743,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Perieres 1",
-    "previous": "Perierbidoi",
+    "previous": "Περιέρβιδοι",
     "next": "Perieres 2",
     "chapters": [
       {
@@ -7466,10 +7471,12 @@
     "lemma": "Perieres 5",
     "previous": "Perieres 4",
     "next": "Periergos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 744,
-        "author": "Göber"
+        "end": 744,
+        "author": "Willi Göber."
       }
     ]
   },
@@ -7510,10 +7517,12 @@
     "lemma": "Perigenes 3",
     "previous": "Perigenes 2",
     "next": "Perigenes 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 745,
-        "author": "Enßlin"
+        "end": 745,
+        "author": "W. Enßlin."
       }
     ]
   },

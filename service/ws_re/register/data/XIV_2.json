@@ -1317,17 +1317,19 @@
     "lemma": "Marathe",
     "previous": "Maratha",
     "next": "Marathesion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1425,
-        "author": "Bürchner"
+        "end": 1425,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Marathesion",
     "previous": "Marathe",
-    "next": "Marathias",
+    "next": "Μαραθίας",
     "chapters": [
       {
         "start": 1425,
@@ -1336,19 +1338,22 @@
     ]
   },
   {
-    "lemma": "Marathias",
+    "lemma": "Μαραθίας",
     "previous": "Marathesion",
     "next": "Marathon 1",
+    "sort_key": "Marathias",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1426,
-        "author": "Honigmann"
+        "end": 1426,
+        "author": "Honigmann."
       }
     ]
   },
   {
     "lemma": "Marathon 1",
-    "previous": "Marathias",
+    "previous": "Μαραθίας",
     "next": "Marathon 2",
     "chapters": [
       {
@@ -1361,10 +1366,12 @@
     "lemma": "Marathon 2",
     "previous": "Marathon 1",
     "next": "Marathonius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1430,
-        "author": "Ruge"
+        "end": 1430,
+        "author": "Bölte."
       }
     ]
   },
@@ -1416,10 +1423,12 @@
     "lemma": "Marathus(s)a",
     "previous": "Marathos 2",
     "next": "Maratocupreni",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
-        "author": "Ruge"
+        "end": 1435,
+        "author": "Ruge."
       }
     ]
   },
@@ -8415,10 +8424,12 @@
     "lemma": "Marinus 27",
     "previous": "Marinus 26",
     "next": "Marinus 28",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1801,
-        "author": "Enßlin"
+        "end": 1801,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8426,10 +8437,12 @@
     "lemma": "Marinus 28",
     "previous": "Marinus 27",
     "next": "Marinus 29",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1801,
-        "author": "Enßlin"
+        "end": 1801,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8437,10 +8450,12 @@
     "lemma": "Marinus 29",
     "previous": "Marinus 28",
     "next": "Marinus 30",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1801,
-        "author": "Enßlin"
+        "end": 1801,
+        "author": "W. Enßlin."
       }
     ]
   },

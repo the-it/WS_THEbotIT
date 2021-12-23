@@ -2274,7 +2274,7 @@
     "lemma": "Sabostius",
     "previous": "Sabos 2",
     "next": "Sabota",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1607,
@@ -2422,7 +2422,7 @@
     "lemma": "Saburius",
     "previous": "Saburbures",
     "next": "Saburra",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1610,
@@ -2682,10 +2682,12 @@
     "lemma": "Sacer 3",
     "previous": "Sacer 2",
     "next": "Sacer 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1629,
-        "author": "Oxé"
+        "end": 1629,
+        "author": "Oxé."
       }
     ]
   },
@@ -2693,10 +2695,12 @@
     "lemma": "Sacer 4",
     "previous": "Sacer 3",
     "next": "Sacerdos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1629,
-        "author": "Keune"
+        "end": 1629,
+        "author": "Keune."
       }
     ]
   },
@@ -2833,10 +2837,12 @@
     "lemma": "Sachalitis",
     "previous": "Sachalites",
     "next": "Sachle",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1655,
-        "author": "Moritz, [Bernhard]"
+        "end": 1655,
+        "author": "Moritz."
       }
     ]
   },
@@ -2855,10 +2861,12 @@
     "lemma": "Saci",
     "previous": "Sachle",
     "next": "Saciacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1655,
-        "author": "Vulić"
+        "end": 1655,
+        "author": "Vulić."
       }
     ]
   },
@@ -2946,10 +2954,12 @@
     "lemma": "Sacra 2",
     "previous": "Sacra 1",
     "next": "Sacramentarium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1664,
-        "author": "Vulić"
+        "end": 1664,
+        "author": "Vulić."
       }
     ]
   },
@@ -10231,7 +10241,7 @@
   },
   {
     "lemma": "Σαμικεύς",
-    "previous": "Samiatores",
+    "previous": "Σαμιακός",
     "next": "Σαμικός",
     "sort_key": "Samikeus",
     "redirect": "Samos 5",
@@ -13180,7 +13190,7 @@
     "lemma": "Sarabastrae",
     "previous": "Saraballa",
     "next": "Σαραβίς",
-    "redirect": "Plinius 5",
+    "redirect": "Arabastrae",
     "proof_read": 2,
     "chapters": [
       {

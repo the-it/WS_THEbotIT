@@ -7549,12 +7549,15 @@
   },
   {
     "lemma": "Nikostrates 25",
-    "previous": "Nikostratos 21",
+    "previous": "Nikostratos 24",
     "next": "Nikostratos 22",
+    "sort_key": "Nikostratos 25",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 546,
-        "author": "Philippson"
+        "end": 547,
+        "author": "Philippson."
       }
     ]
   },
@@ -7573,17 +7576,19 @@
     "lemma": "Nikostratos 23",
     "previous": "Nikostratos 22",
     "next": "Nikostratos 24",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 546,
-        "author": "Kroll"
+        "end": 546,
+        "author": "W. Kroll."
       }
     ]
   },
   {
     "lemma": "Nikostratos 24",
     "previous": "Nikostratos 23",
-    "next": "Nikostrates 26",
+    "next": "Nikostrates 25",
     "proof_read": 2,
     "chapters": [
       {
@@ -7895,10 +7900,12 @@
     "lemma": "Nimbus 1",
     "previous": "Nimbus",
     "next": "Nimbus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 591,
-        "author": "Keyßner"
+        "end": 591,
+        "author": "Karl Keyßner."
       }
     ]
   },
@@ -7949,7 +7956,7 @@
   {
     "lemma": "Nimrod 2",
     "previous": "Nimrod 1",
-    "next": "Nimouzan",
+    "next": "Νιμουζᾶν",
     "chapters": [
       {
         "start": 627,
@@ -7958,19 +7965,22 @@
     ]
   },
   {
-    "lemma": "Nimouzan",
+    "lemma": "Νιμουζᾶν",
     "previous": "Nimrod 2",
     "next": "Nimrod 3",
+    "sort_key": "Nimouzan",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 628,
-        "author": "Honigmann"
+        "end": 628,
+        "author": "Honigmann."
       }
     ]
   },
   {
     "lemma": "Nimrod 3",
-    "previous": "Nimouzan",
+    "previous": "Νιμουζᾶν",
     "next": "Nimrod 4",
     "chapters": [
       {
@@ -7983,10 +7993,12 @@
     "lemma": "Nimrod 4",
     "previous": "Nimrod 3",
     "next": "Nimrod 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 628,
-        "author": "Preisendanz"
+        "end": 628,
+        "author": "Karl Preisendanz."
       }
     ]
   },
@@ -12058,10 +12070,12 @@
     "lemma": "Novana",
     "previous": "Novaesium",
     "next": "Novanensis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1134,
-        "author": "Philipp"
+        "end": 1134,
+        "author": "Hans Philipp."
       }
     ]
   },
@@ -12080,10 +12094,12 @@
     "lemma": "Novanius",
     "previous": "Novanensis",
     "next": "Novantarum Chersonesus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1135,
-        "author": "Stein, O[tto]"
+        "end": 1135,
+        "author": "Stein."
       }
     ]
   },
@@ -12091,10 +12107,13 @@
     "lemma": "Novantarum Chersonesus",
     "previous": "Novanius",
     "next": "Novantarum Promunturium",
+    "sort_key": "Novantarumchersonesus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1135,
-        "author": "MacDonald"
+        "end": 1135,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -12102,10 +12121,13 @@
     "lemma": "Novantarum Promunturium",
     "previous": "Novantarum Chersonesus",
     "next": "Novantes",
+    "sort_key": "Novantarumpromunturium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1135,
-        "author": "MacDonald"
+        "end": 1135,
+        "author": "G. Macdonald."
       }
     ]
   },
