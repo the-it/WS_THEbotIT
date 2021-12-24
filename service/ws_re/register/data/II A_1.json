@@ -1731,10 +1731,12 @@
     "lemma": "Satricanius",
     "previous": "Satrianus",
     "next": "Satricum 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 189,
-        "author": "Münzer"
+        "end": 189,
+        "author": "Münzer."
       }
     ]
   },
@@ -1798,10 +1800,12 @@
     "lemma": "Satrius 2",
     "previous": "Satrius 1",
     "next": "Satrius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 190,
-        "author": "Stein, [Arthur]"
+        "end": 190,
+        "author": "Stein."
       }
     ]
   },
@@ -1891,10 +1895,12 @@
     "lemma": "Satto 2",
     "previous": "Satto 1",
     "next": "Satula",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 192,
-        "author": "Oxé"
+        "end": 192,
+        "author": "Oxé."
       }
     ]
   },
@@ -1902,10 +1908,12 @@
     "lemma": "Satula",
     "previous": "Satto 2",
     "next": "Satur, Saturius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 192,
-        "author": "Moritz, [Bernhard]"
+        "end": 192,
+        "author": "Moritz."
       }
     ]
   },
@@ -1913,10 +1921,13 @@
     "lemma": "Satur, Saturius",
     "previous": "Satula",
     "next": "Satura",
+    "sort_key": "Satur",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 192,
-        "author": "Stein, [Arthur]"
+        "end": 192,
+        "author": "Stein."
       }
     ]
   },

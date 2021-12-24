@@ -5668,10 +5668,12 @@
     "lemma": "Laelius 19",
     "previous": "Laelius 18",
     "next": "Laelius 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 417,
-        "author": "Miltner, Franz"
+        "end": 417,
+        "author": "Miltner."
       }
     ]
   },
@@ -5725,10 +5727,12 @@
     "lemma": "Laelius 24a",
     "previous": "Laelius 23",
     "next": "Laelius 24b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 417,
-        "author": "Keune"
+        "end": 417,
+        "author": "Keune."
       }
     ]
   },
@@ -5805,9 +5809,12 @@
     "lemma": "Laelius 27",
     "previous": "Laelius 26",
     "next": "Laelius 28",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 418
+        "start": 418,
+        "end": 418
       }
     ]
   },
@@ -5826,10 +5833,12 @@
     "lemma": "Laelius 29",
     "previous": "Laelius 28",
     "next": "Laena 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 419,
-        "author": "Lieben"
+        "end": 419,
+        "author": "Lieben."
       }
     ]
   },
@@ -8648,8 +8657,8 @@
     "lemma": "Lamida",
     "previous": "Lamic",
     "next": "Lamidion",
-    "redirect": "Ptolemaios 66",
-    "proof_read": 2,
+    "redirect": "Lambdia",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 560,
