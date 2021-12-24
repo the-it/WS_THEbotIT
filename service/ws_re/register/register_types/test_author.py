@@ -79,8 +79,7 @@ class TestAuthorRegister(BaseTestRegister):
 |Herman Abel
 |style="background:#FFCBCB"|1998
 |}
-[[Kategorie:RE:Register|Abel, Herman]]
-Zahl der Artikel: 4, """
+[[Kategorie:RE:Register|Abel, Herman]]"""
         compare(expected_table, abel_register.get_register_str())
 
     def test_overview_line(self):
