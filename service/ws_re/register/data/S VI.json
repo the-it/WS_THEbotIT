@@ -2327,6 +2327,7 @@
   {
     "lemma": "Ira 4",
     "previous": "Ionnaria",
+    "next": "Isamnus",
     "proof_read": 3,
     "chapters": [
       {
@@ -2338,8 +2339,6 @@
   },
   {
     "lemma": "Iulius 552a",
-    "previous": "Istros 1a",
-    "next": "Iulianum",
     "proof_read": 2,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
     "wd_link": "d:Q239314",
@@ -2353,6 +2352,7 @@
   },
   {
     "lemma": "Isamnus",
+    "previous": "Ira 4",
     "next": "Istris",
     "proof_read": 3,
     "chapters": [
@@ -2381,6 +2381,7 @@
   {
     "lemma": "Istros 1a",
     "previous": "Istris",
+    "next": "Iulius 552a",
     "proof_read": 2,
     "chapters": [
       {
@@ -2392,7 +2393,6 @@
   },
   {
     "lemma": "Iulianum",
-    "previous": "Iulius 552a",
     "next": "Iunius 183a",
     "proof_read": 3,
     "wp_link": "w:de:Iulia (Tochter des Titus)",
@@ -3966,10 +3966,12 @@
     "lemma": "Motene",
     "previous": "Mot",
     "next": "Moymis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 541,
-        "author": "Sturm"
+        "end": 541,
+        "author": "J. Sturm."
       }
     ]
   },
@@ -4074,10 +4076,12 @@
     "lemma": "Mylai 4",
     "previous": "Mykenische Kultur",
     "next": "Mylai 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 615,
-        "author": "Ruge"
+        "end": 615,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -4122,10 +4126,12 @@
     "lemma": "Myrto 4",
     "previous": "Μυρσ(ινουσα?)",
     "next": "Myrtuntion 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 621,
-        "author": "Herbst"
+        "end": 621,
+        "author": "Rudolf Herbst."
       }
     ]
   },
@@ -4265,10 +4271,12 @@
     "lemma": "Rocobae",
     "previous": "Rinubio",
     "next": "Romanianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 646,
-        "author": "Fluss"
+        "end": 646,
+        "author": "Max Fluss."
       }
     ]
   },

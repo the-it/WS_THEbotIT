@@ -1707,11 +1707,12 @@
     "lemma": "Lysithea 2",
     "previous": "Lysithea 1",
     "next": "Macrinius 6a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 395,
         "end": 396,
-        "author": "Geisau"
+        "author": "H. v. Geisau."
       }
     ]
   },
@@ -1921,6 +1922,7 @@
   {
     "lemma": "Nauplia 1",
     "previous": "Munda 3",
+    "next": "Neratius 15a",
     "chapters": [
       {
         "start": 415,
@@ -1930,11 +1932,14 @@
   },
   {
     "lemma": "Neratius 15a",
+    "previous": "Nauplia 1",
     "next": "Nerion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 416,
-        "author": "Thomasson"
+        "end": 416,
+        "author": "Bengt E. Thomasson."
       }
     ]
   },

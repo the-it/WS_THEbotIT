@@ -7816,10 +7816,12 @@
     "lemma": "Skelentene",
     "previous": "Skelenta",
     "next": "Skelerdeia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 469,
-        "author": "Kock"
+        "end": 469,
+        "author": "Kock."
       }
     ]
   },
@@ -8088,7 +8090,7 @@
   {
     "lemma": "Skiastes",
     "previous": "Skias",
-    "next": "Skiathike chora",
+    "next": "Σκιαθικὴ χώρα",
     "chapters": [
       {
         "start": 519,
@@ -8097,19 +8099,22 @@
     ]
   },
   {
-    "lemma": "Skiathike chora",
+    "lemma": "Σκιαθικὴ χώρα",
     "previous": "Skiastes",
     "next": "Skiathis 1",
+    "sort_key": "Skiathike chora",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 519,
-        "author": "Fischer"
+        "end": 519,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Skiathis 1",
-    "previous": "Skiathike chora",
+    "previous": "Σκιαθικὴ χώρα",
     "next": "Skiathis 2",
     "chapters": [
       {
@@ -8177,10 +8182,12 @@
     "lemma": "Skilluntia",
     "previous": "Skilla",
     "next": "Skillus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 526,
-        "author": "Kock"
+        "end": 526,
+        "author": "Kock."
       }
     ]
   },
