@@ -85,7 +85,7 @@ class PublicDomainRegister(Register):
         return "\n".join(table)
 
     def _get_footer(self) -> str:
-        return f"Zahl der Artikel: {len(self._lemmas)}, "
+        return "[[Kategorie:RE:Register|!]]"
 
     def get_register_str(self) -> str:
         return f"{self._get_table()}\n{self._get_footer()}"

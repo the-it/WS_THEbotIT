@@ -160,6 +160,5 @@ class TestAlphabeticRegister(BaseTestRegister):
 |Abert
 |style="background:#B9FFC5"|1927
 |}
-[[Kategorie:RE:Register|!]]
-Zahl der Artikel: 6, """
+[[Kategorie:RE:Register|!]]"""
         compare(expected_table, b_register.get_register_str())

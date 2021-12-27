@@ -100,8 +100,7 @@ class AlphabeticRegister(Register):
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def _get_footer(self) -> str:
-        return "[[Kategorie:RE:Register|!]]\n" \
-               f"Zahl der Artikel: {len(self._lemmas)}, "
+        return "[[Kategorie:RE:Register|!]]"
 
     def get_register_str(self) -> str:
         return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"

@@ -92,5 +92,5 @@ class TestPublicDomainRegister(BaseTestRegister):
 |Herman Abel
 |style="background:#B9FFC5"|1950
 |}
-Zahl der Artikel: 6, """
+[[Kategorie:RE:Register|!]]"""
         compare(expected_table, pd_2021_register.get_register_str())
