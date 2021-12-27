@@ -2784,10 +2784,12 @@
     "lemma": "Kadena",
     "previous": "Kadasenoi",
     "next": "Kadia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
-        "author": "Ruge"
+        "end": 1457,
+        "author": "Ruge."
       }
     ]
   },
@@ -2795,10 +2797,12 @@
     "lemma": "Kadia",
     "previous": "Kadena",
     "next": "Kadiskoi, kadoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1457,
-        "author": "Ruge"
+        "end": 1457,
+        "author": "Ruge."
       }
     ]
   },
@@ -2840,9 +2844,13 @@
     "lemma": "Kadme",
     "previous": "Kadiston 2",
     "next": "Kadmeia",
+    "redirect": "Kadmos 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1458
+        "start": 1458,
+        "end": 1458,
+        "author": "Bürchner."
       }
     ]
   },
@@ -3001,10 +3009,12 @@
     "lemma": "Kados(s)ia",
     "previous": "Kados",
     "next": "Kadrema",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1477,
-        "author": "Ruge"
+        "end": 1477,
+        "author": "Ruge."
       }
     ]
   },
@@ -6311,10 +6321,12 @@
     "lemma": "Kallikrates 7",
     "previous": "Kallikrates 6",
     "next": "Kallikrates 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1638,
-        "author": "Swoboda, [Heinrich]"
+        "end": 1638,
+        "author": "Swoboda."
       }
     ]
   },
@@ -6322,10 +6334,12 @@
     "lemma": "Kallikrates 8",
     "previous": "Kallikrates 7",
     "next": "Kallikrates 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1638,
-        "author": "Körte"
+        "end": 1638,
+        "author": "A. Körte."
       }
     ]
   },
@@ -6390,10 +6404,12 @@
     "lemma": "Kallikrates 14",
     "previous": "Kallikrates 13",
     "next": "Kallikrates 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1640,
-        "author": "Lippold, Georg"
+        "end": 1640,
+        "author": "Lippold."
       }
     ]
   },
@@ -10978,7 +10994,7 @@
   {
     "lemma": "Kane",
     "previous": "Κανδύς 2",
-    "next": "Kanebion",
+    "next": "Κανήβιον",
     "chapters": [
       {
         "start": 1861,
@@ -10988,19 +11004,22 @@
     ]
   },
   {
-    "lemma": "Kanebion",
+    "lemma": "Κανήβιον",
     "previous": "Kane",
     "next": "Kanephoroi",
+    "sort_key": "Kanebion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1862,
-        "author": "Bürchner"
+        "end": 1862,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kanephoroi",
-    "previous": "Kanebion",
+    "previous": "Κανήβιον",
     "next": "Kanethos 1",
     "chapters": [
       {
@@ -11088,10 +11107,12 @@
     "lemma": "Kanipta",
     "previous": "Kaninchen",
     "next": "Kanis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1868,
-        "author": "Moritz, [Bernhard]"
+        "end": 1868,
+        "author": "Moritz."
       }
     ]
   },
@@ -11146,10 +11167,12 @@
     "lemma": "Kannokos",
     "previous": "Kanner",
     "next": "Kano",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1869,
-        "author": "Adler"
+        "end": 1869,
+        "author": "Adler."
       }
     ]
   },
@@ -11257,10 +11280,12 @@
     "lemma": "Kanos",
     "previous": "Kanopos, Kanobos",
     "next": "Kanotala",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1883,
-        "author": "Kroll"
+        "end": 1883,
+        "author": "Kroll."
       }
     ]
   },
@@ -11279,10 +11304,13 @@
     "lemma": "Kantabaza",
     "previous": "Kanotala",
     "next": "Kantanos",
+    "sort_key": "Kantabaza",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1883,
-        "author": "Fluss"
+        "end": 1883,
+        "author": "Fluss."
       }
     ]
   },
@@ -11312,10 +11340,12 @@
     "lemma": "Kantharolethron",
     "previous": "Kantharios",
     "next": "Kantharos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1883,
-        "author": "Oberhummer"
+        "end": 1883,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -11335,10 +11365,12 @@
     "lemma": "Kantharos 2",
     "previous": "Kantharos 1",
     "next": "Kantharos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1884,
-        "author": "Stein, [Arthur]"
+        "end": 1884,
+        "author": "Stein."
       }
     ]
   },
@@ -11369,10 +11401,12 @@
     "lemma": "Kanthi",
     "previous": "Kantharos 4",
     "next": "Kanthos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1885,
-        "author": "Herrmann"
+        "end": 1885,
+        "author": "Herrmann."
       }
     ]
   },
@@ -11392,10 +11426,12 @@
     "lemma": "Kanthos 2",
     "previous": "Kanthos 1",
     "next": "Kanytelis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1886,
-        "author": "Scherling"
+        "end": 1886,
+        "author": "Scherling."
       }
     ]
   },
@@ -11425,10 +11461,12 @@
     "lemma": "Kapai",
     "previous": "Kanzaras",
     "next": "Kapaneus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1886,
-        "author": "Bürchner"
+        "end": 1886,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13323,10 +13361,12 @@
     "lemma": "Karmina",
     "previous": "Karmel 2",
     "next": "Karmo",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1960,
-        "author": "Bürchner"
+        "end": 1960,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13410,10 +13450,12 @@
     "lemma": "Karnalis",
     "previous": "Karnaim",
     "next": "Karnasier",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1964,
-        "author": "Ruge"
+        "end": 1964,
+        "author": "Ruge."
       }
     ]
   },
@@ -13421,10 +13463,12 @@
     "lemma": "Karnasier",
     "previous": "Karnalis",
     "next": "Karnasion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1964,
-        "author": "Bürchner"
+        "end": 1964,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13456,10 +13500,12 @@
     "lemma": "Karne 2",
     "previous": "Karne 1",
     "next": "Karneades 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1964,
-        "author": "Bürchner"
+        "end": 1964,
+        "author": "Bürchner."
       }
     ]
   },

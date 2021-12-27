@@ -2936,10 +2936,12 @@
     "lemma": "Kephalos 2",
     "previous": "Kephalos 1",
     "next": "Kephalos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 221,
-        "author": "Kroll"
+        "end": 221,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -3005,10 +3007,12 @@
     "lemma": "Kepheus 3",
     "previous": "Kepheus 2",
     "next": "Kephisia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 224,
-        "author": "Latte"
+        "end": 224,
+        "author": "Latte."
       }
     ]
   },
@@ -3077,10 +3081,12 @@
     "lemma": "Kephisodoros 2",
     "previous": "Kephisodoros 1",
     "next": "Kephisodoros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 226,
-        "author": "Kirchner"
+        "end": 226,
+        "author": "Kirchner."
       }
     ]
   },
@@ -3297,10 +3303,12 @@
     "lemma": "Kephisophon 1",
     "previous": "Kephisodotos 10",
     "next": "Kephisophon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 240,
-        "author": "Kirchner"
+        "end": 240,
+        "author": "Kirchner."
       }
     ]
   },
@@ -8858,10 +8866,12 @@
     "lemma": "Klaudieos",
     "previous": "Klaudianos",
     "next": "Klaudios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 554,
-        "author": "Bischoff, [Ernst]"
+        "end": 554,
+        "author": "Bischoff."
       }
     ]
   },
@@ -8894,7 +8904,7 @@
   {
     "lemma": "Klaudiunion",
     "previous": "Klaudios 2",
-    "next": "Klaundes",
+    "next": "Κλαυνδῆς",
     "redirect": "Claudia 1",
     "proof_read": 2,
     "chapters": [
@@ -8905,19 +8915,22 @@
     ]
   },
   {
-    "lemma": "Klaundes",
+    "lemma": "Κλαυνδῆς",
     "previous": "Klaudiunion",
     "next": "Klazomenai",
+    "sort_key": "Klaundes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 554,
-        "author": "Bürchner"
+        "end": 554,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Klazomenai",
-    "previous": "Klaundes",
+    "previous": "Κλαυνδῆς",
     "next": "Klazomenia he chora",
     "chapters": [
       {
@@ -9086,10 +9099,12 @@
     "lemma": "Kleandros 6",
     "previous": "Kleandros 5",
     "next": "Kleandros 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 558,
-        "author": "Kroll"
+        "end": 558,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -9108,10 +9123,12 @@
     "lemma": "Kleanthes 1",
     "previous": "Kleandros 7",
     "next": "Kleanthes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 558,
-        "author": "Münzer"
+        "end": 558,
+        "author": "Münzer."
       }
     ]
   },
@@ -11115,10 +11132,12 @@
     "lemma": "Kleomedes 1",
     "previous": "Kleombrotos 5",
     "next": "Kleomedes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 679,
-        "author": "Kroll"
+        "end": 679,
+        "author": "Kroll."
       }
     ]
   },
@@ -11126,10 +11145,12 @@
     "lemma": "Kleomedes 2",
     "previous": "Kleomedes 1",
     "next": "Kleomedes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 679,
-        "author": "Kroll"
+        "end": 679,
+        "author": "Kroll."
       }
     ]
   },
@@ -11160,10 +11181,12 @@
     "lemma": "Kleomedon",
     "previous": "Kleomedes von Astypalaia 4",
     "next": "Kleomelos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 694,
-        "author": "Kroll"
+        "end": 694,
+        "author": "Kroll."
       }
     ]
   },
@@ -11183,10 +11206,12 @@
     "lemma": "Kleomenes 1",
     "previous": "Kleomelos",
     "next": "Kleomenes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 695,
-        "author": "Prehn"
+        "end": 695,
+        "author": "Prehn."
       }
     ]
   },
@@ -11217,10 +11242,12 @@
     "lemma": "Kleomenes 4",
     "previous": "Kleomenes 3",
     "next": "Kleomenes 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 702,
-        "author": "Lenschau"
+        "end": 702,
+        "author": "Lenschau."
       }
     ]
   },
@@ -11251,10 +11278,12 @@
     "lemma": "Kleomenes 7",
     "previous": "Kleomenes 6",
     "next": "Kleomenes 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 710,
-        "author": "Lenschau"
+        "end": 710,
+        "author": "Lenschau."
       }
     ]
   },
@@ -13320,7 +13349,7 @@
     "lemma": "Kludros",
     "previous": "Κλουάκα",
     "next": "Klutius",
-    "redirect": "Plinius 5",
+    "redirect": "Klydros",
     "proof_read": 2,
     "chapters": [
       {
@@ -17357,7 +17386,7 @@
   {
     "lemma": "Komastos",
     "previous": "Komazon 2",
-    "next": "Komazon 1",
+    "next": "Komba",
     "proof_read": 3,
     "chapters": [
       {

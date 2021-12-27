@@ -2987,10 +2987,12 @@
     "lemma": "Koronos 2",
     "previous": "Koronos 1",
     "next": "Koronos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
-        "author": "Quandt"
+        "end": 1435,
+        "author": "Quandt."
       }
     ]
   },
@@ -2998,10 +3000,12 @@
     "lemma": "Koronos 3",
     "previous": "Koronos 2",
     "next": "Koronos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
-        "author": "Quandt"
+        "end": 1435,
+        "author": "Quandt."
       }
     ]
   },
@@ -3009,10 +3013,12 @@
     "lemma": "Koronos 4",
     "previous": "Koronos 3",
     "next": "Koronos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
-        "author": "Quandt"
+        "end": 1435,
+        "author": "Quandt."
       }
     ]
   },
@@ -3020,10 +3026,12 @@
     "lemma": "Koronos 5",
     "previous": "Koronos 4",
     "next": "Koronos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
-        "author": "Quandt"
+        "end": 1435,
+        "author": "Quandt."
       }
     ]
   },
@@ -3031,10 +3039,12 @@
     "lemma": "Koronos 6",
     "previous": "Koronos 5",
     "next": "Koronos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
-        "author": "Quandt"
+        "end": 1435,
+        "author": "Quandt."
       }
     ]
   },
@@ -3042,10 +3052,12 @@
     "lemma": "Koronos 7",
     "previous": "Koronos 6",
     "next": "Koronta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1435,
-        "author": "Weissbach"
+        "end": 1435,
+        "author": "Weissbach."
       }
     ]
   },
@@ -6546,10 +6558,12 @@
     "lemma": "Kreon 5",
     "previous": "Kreon 4",
     "next": "Kreon 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
-        "author": "Schoch"
+        "end": 1709,
+        "author": "Schoch."
       }
     ]
   },
@@ -6557,10 +6571,12 @@
     "lemma": "Kreon 6",
     "previous": "Kreon 5",
     "next": "Kreon 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1709,
-        "author": "Jacoby, [Felix]"
+        "end": 1709,
+        "author": "F. Jacoby."
       }
     ]
   },
@@ -6714,10 +6730,12 @@
     "lemma": "Kreston",
     "previous": "Kressidas",
     "next": "Krestoner",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1718,
-        "author": "Oberhummer"
+        "end": 1718,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -6735,7 +6753,7 @@
   {
     "lemma": "Kreta, Krete",
     "previous": "Krestoner",
-    "next": "Kretaieon Koinon",
+    "next": "Κρηταιέων Κοινόν",
     "chapters": [
       {
         "start": 1718,
@@ -6755,19 +6773,22 @@
     ]
   },
   {
-    "lemma": "Kretaieon Koinon",
+    "lemma": "Κρηταιέων Κοινόν",
     "previous": "Kreta, Krete",
     "next": "Krete",
+    "sort_key": "Kretaieon Koinon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1822,
-        "author": "Bürchner"
+        "end": 1822,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Krete",
-    "previous": "Kretaieon Koinon",
+    "previous": "Κρηταιέων Κοινόν",
     "next": "Kretea",
     "chapters": [
       {
@@ -6779,7 +6800,7 @@
   {
     "lemma": "Kretea",
     "previous": "Krete",
-    "next": "Kretenia",
+    "next": "Κρητηνία",
     "chapters": [
       {
         "start": 1822,
@@ -6788,19 +6809,22 @@
     ]
   },
   {
-    "lemma": "Kretenia",
+    "lemma": "Κρητηνία",
     "previous": "Kretea",
     "next": "Kretheus 1",
+    "sort_key": "Kretenia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1822,
-        "author": "Bürchner"
+        "end": 1822,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kretheus 1",
-    "previous": "Kretenia",
+    "previous": "Κρητηνία",
     "next": "Kretheus 2",
     "chapters": [
       {
@@ -6814,10 +6838,12 @@
     "lemma": "Kretheus 2",
     "previous": "Kretheus 1",
     "next": "Kretia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1823,
-        "author": "Latte"
+        "end": 1823,
+        "author": "Latte."
       }
     ]
   },
@@ -6928,10 +6954,13 @@
     "lemma": "Kreusa, Kreusis 2-6",
     "previous": "Kreusa, Kreusis 2",
     "next": "Kreusa, Kreusis 3",
+    "sort_key": "Kreusa,kreusis 2-6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1825,
-        "author": "Kock"
+        "end": 1825,
+        "author": "Kock."
       }
     ]
   },
