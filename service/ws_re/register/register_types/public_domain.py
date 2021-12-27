@@ -84,8 +84,5 @@ class PublicDomainRegister(Register):
         table.append("|}")
         return "\n".join(table)
 
-    def _get_footer(self) -> str:
-        return "[[Kategorie:RE:Register|!]]"
-
     def get_register_str(self) -> str:
-        return f"{self._get_table()}\n{self._get_footer()}"
+        return f"{self._get_table()}\n[[Kategorie:RE:Register|!]]"

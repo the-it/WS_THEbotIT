@@ -96,7 +96,7 @@ mccabe==0.6.1
     # via
     #   flake8
     #   pylint
-moto==2.2.19
+moto==2.3.0
     # via -r requirements-dev.in
 mypy==0.930
     # via -r requirements-dev.in
@@ -126,7 +126,7 @@ patool==1.12
     # via -r requirements-dev.in
 pbr==5.8.0
     # via stevedore
-platformdirs==2.4.0
+platformdirs==2.4.1
     # via pylint
 pycodestyle==2.8.0
     # via flake8
