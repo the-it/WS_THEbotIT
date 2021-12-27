@@ -99,8 +99,5 @@ class AlphabeticRegister(Register):
         header.append(f"FER={fer}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
-    def _get_footer(self) -> str:
-        return "[[Kategorie:RE:Register|!]]"
-
     def get_register_str(self) -> str:
-        return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"
+        return f"{self._get_header()}\n{self._get_table()}\n[[Kategorie:RE:Register|!]]"
