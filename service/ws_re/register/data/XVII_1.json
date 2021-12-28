@@ -8146,9 +8146,12 @@
     "lemma": "Ninnius 2",
     "previous": "Ninnius 1",
     "next": "Ninnius 3",
+    "redirect": "Nunnius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 632
+        "start": 632,
+        "end": 632
       }
     ]
   },
@@ -8200,10 +8203,12 @@
     "lemma": "Ninoë",
     "previous": "Ninnius 6",
     "next": "Ninos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 634,
-        "author": "Ruge"
+        "end": 634,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -8255,10 +8260,12 @@
     "lemma": "Ninus",
     "previous": "Ninos archaia",
     "next": "Ninyas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 643,
-        "author": "Enßlin"
+        "end": 643,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8287,28 +8294,33 @@
   {
     "lemma": "Niobe 2",
     "previous": "Niobe 1",
-    "next": "Niosson",
+    "next": "Νίοσσον",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 706,
-        "author": "Meyer, Ernst"
+        "end": 706,
+        "author": "Ernst Meyer."
       }
     ]
   },
   {
-    "lemma": "Niosson",
+    "lemma": "Νίοσσον",
     "previous": "Niobe 2",
     "next": "Niphanda",
+    "sort_key": "Niosson",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 706,
-        "author": "Herrmann"
+        "end": 706,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Niphanda",
-    "previous": "Niosson",
+    "previous": "Νίοσσον",
     "next": "Niphates 1",
     "chapters": [
       {
@@ -8331,28 +8343,33 @@
   {
     "lemma": "Niphates 2",
     "previous": "Niphates 1",
-    "next": "Niphauanda",
+    "next": "Νιφαύανδα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 707,
-        "author": "Berve"
+        "end": 707,
+        "author": "Helmut Berve."
       }
     ]
   },
   {
-    "lemma": "Niphauanda",
+    "lemma": "Νιφαύανδα",
     "previous": "Niphates 2",
     "next": "Nipista",
+    "sort_key": "Niphauanda",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 707,
-        "author": "Weidner"
+        "end": 707,
+        "author": "E. F. Weidner."
       }
     ]
   },
   {
     "lemma": "Nipista",
-    "previous": "Niphauanda",
+    "previous": "Νιφαύανδα",
     "next": "Nipius",
     "chapters": [
       {
@@ -8365,10 +8382,12 @@
     "lemma": "Nipius",
     "previous": "Nipista",
     "next": "Nipparene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 707,
-        "author": "Stein, [Arthur]"
+        "end": 707,
+        "author": "Stein."
       }
     ]
   },
@@ -8422,10 +8441,12 @@
     "lemma": "Nipsus",
     "previous": "Nipsaioi",
     "next": "Niraemius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 707,
-        "author": "Fabricius"
+        "end": 707,
+        "author": "E. Fabricius."
       }
     ]
   },
@@ -8433,10 +8454,12 @@
     "lemma": "Niraemius",
     "previous": "Nipsus",
     "next": "Nireus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 707,
-        "author": "Münzer"
+        "end": 707,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -12807,10 +12830,12 @@
     "lemma": "Novitia",
     "previous": "Novis Aquilianis",
     "next": "Novius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1214,
-        "author": "MacDonald"
+        "end": 1214,
+        "author": "G. Macdonald."
       }
     ]
   },
@@ -12851,10 +12876,12 @@
     "lemma": "Novius 3",
     "previous": "Novius 2",
     "next": "Novius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1215,
-        "author": "Stein, [Arthur]"
+        "end": 1215,
+        "author": "Stein."
       }
     ]
   },
@@ -12862,10 +12889,12 @@
     "lemma": "Novius 4",
     "previous": "Novius 3",
     "next": "Novius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1215,
-        "author": "Stein, [Arthur]"
+        "end": 1215,
+        "author": "Stein."
       }
     ]
   },
@@ -12928,10 +12957,12 @@
     "lemma": "Novius 10",
     "previous": "Novius 9",
     "next": "Novius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1218,
-        "author": "Stein, [Arthur]"
+        "end": 1218,
+        "author": "Stein."
       }
     ]
   },
@@ -12939,10 +12970,12 @@
     "lemma": "Novius 11",
     "previous": "Novius 10",
     "next": "Novius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1218,
-        "author": "Stein, [Arthur]"
+        "end": 1218,
+        "author": "Stein."
       }
     ]
   },
@@ -13016,10 +13049,12 @@
     "lemma": "Novius 18",
     "previous": "Novius 17",
     "next": "Novius 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1220,
-        "author": "Münzer"
+        "end": 1220,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -13071,10 +13106,12 @@
     "lemma": "Novius 23",
     "previous": "Novius 22",
     "next": "Novius 24",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1221,
-        "author": "Swoboda, E[rich]"
+        "end": 1221,
+        "author": "E. Swoboda."
       }
     ]
   },

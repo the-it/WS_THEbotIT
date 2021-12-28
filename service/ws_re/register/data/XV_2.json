@@ -5957,10 +5957,12 @@
     "lemma": "Mimallis",
     "previous": "Mimaithos",
     "next": "Mimallones",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1713,
-        "author": "Zschietzschmann"
+        "end": 1713,
+        "author": "Zschietzschmann."
       }
     ]
   },
@@ -5979,9 +5981,13 @@
     "lemma": "Mimallonides",
     "previous": "Mimallones",
     "next": "Mimas 1",
+    "redirect": "Mimallones",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1713
+        "start": 1713,
+        "end": 1713,
+        "author": "Kern."
       }
     ]
   },
@@ -6033,10 +6039,12 @@
     "lemma": "Mimas 5",
     "previous": "Mimas 4",
     "next": "Mimas 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1714,
-        "author": "Pley"
+        "end": 1714,
+        "author": "Pley."
       }
     ]
   },
@@ -6044,10 +6052,12 @@
     "lemma": "Mimas 6",
     "previous": "Mimas 5",
     "next": "Mimas 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
-        "author": "Pley"
+        "end": 1715,
+        "author": "Pley."
       }
     ]
   },
@@ -6055,10 +6065,12 @@
     "lemma": "Mimas 7",
     "previous": "Mimas 6",
     "next": "Mimate",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1715,
-        "author": "Pley"
+        "end": 1715,
+        "author": "Pley."
       }
     ]
   },
@@ -12914,10 +12926,12 @@
     "lemma": "Modius 6",
     "previous": "Modius 5",
     "next": "Modius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2331,
-        "author": "Münzer"
+        "end": 2331,
+        "author": "Münzer."
       }
     ]
   },
@@ -12947,10 +12961,12 @@
     "lemma": "Modius 9",
     "previous": "Modius 8",
     "next": "Modius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2332,
-        "author": "Stein, [Arthur]"
+        "end": 2332,
+        "author": "Stein."
       }
     ]
   },
@@ -12980,10 +12996,12 @@
     "lemma": "Modius 12",
     "previous": "Modius 11",
     "next": "Modius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2332,
-        "author": "Stein, [Arthur]"
+        "end": 2332,
+        "author": "Stein."
       }
     ]
   },
@@ -12991,10 +13009,12 @@
     "lemma": "Modius 13",
     "previous": "Modius 12",
     "next": "Modius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2332,
-        "author": "Stein, [Arthur]"
+        "end": 2332,
+        "author": "Stein."
       }
     ]
   },
@@ -13014,28 +13034,33 @@
   {
     "lemma": "Modogalingae",
     "previous": "Modius 14",
-    "next": "Modogulla",
+    "next": "Μοδογούλλα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2332,
-        "author": "Herrmann"
+        "end": 2332,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
-    "lemma": "Modogulla",
+    "lemma": "Μοδογούλλα",
     "previous": "Modogalingae",
     "next": "Modokai",
+    "sort_key": "Modogulla",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2332,
-        "author": "Herrmann"
+        "end": 2332,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Modokai",
-    "previous": "Modogulla",
+    "previous": "Μοδογούλλα",
     "next": "Modomastike",
     "chapters": [
       {
