@@ -1105,7 +1105,7 @@
   {
     "lemma": "Synsarapiastai",
     "previous": "Συνσ-",
-    "next": "Synscholastai",
+    "next": "Συνσχολασταί",
     "chapters": [
       {
         "start": 1452,
@@ -1114,19 +1114,22 @@
     ]
   },
   {
-    "lemma": "Synscholastai",
+    "lemma": "Συνσχολασταί",
     "previous": "Synsarapiastai",
     "next": "Syntaktikos",
+    "sort_key": "Synscholastai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1452,
-        "author": "Poland"
+        "end": 1452,
+        "author": "Poland."
       }
     ]
   },
   {
     "lemma": "Syntaktikos",
-    "previous": "Synscholastai",
+    "previous": "Συνσχολασταί",
     "next": "Syntaxei",
     "chapters": [
       {
@@ -1160,7 +1163,7 @@
   {
     "lemma": "Syntechnia",
     "previous": "Syntaxis",
-    "next": "Syntechnitai",
+    "next": "Συντεχνῖται",
     "chapters": [
       {
         "start": 1456,
@@ -1169,19 +1172,22 @@
     ]
   },
   {
-    "lemma": "Syntechnitai",
+    "lemma": "Συντεχνῖται",
     "previous": "Syntechnia",
     "next": "Synteleia, synteleis 1",
+    "sort_key": "Syntechnitai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1456,
-        "author": "Poland"
+        "end": 1456,
+        "author": "Poland."
       }
     ]
   },
   {
     "lemma": "Synteleia, synteleis 1",
-    "previous": "Syntechnitai",
+    "previous": "Συντεχνῖται",
     "next": "Synteleia, synteleis 2",
     "chapters": [
       {
@@ -1306,7 +1312,7 @@
   {
     "lemma": "Syntipas",
     "previous": "Syntimesis",
-    "next": "Syntrikleinoi",
+    "next": "Συντρίκλεινοι",
     "chapters": [
       {
         "start": 1463,
@@ -1315,19 +1321,22 @@
     ]
   },
   {
-    "lemma": "Syntrikleinoi",
+    "lemma": "Συντρίκλεινοι",
     "previous": "Syntipas",
     "next": "Syntrips",
+    "sort_key": "Syntrikleinoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1471,
-        "author": "Poland"
+        "end": 1471,
+        "author": "Poland."
       }
     ]
   },
   {
     "lemma": "Syntrips",
-    "previous": "Syntrikleinoi",
+    "previous": "Συντρίκλεινοι",
     "next": "Synymnodoi",
     "chapters": [
       {
@@ -1350,10 +1359,12 @@
     "lemma": "Syopii",
     "previous": "Synymnodoi",
     "next": "Sypalettos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1471,
-        "author": "Fluss"
+        "end": 1471,
+        "author": "Fluss."
       }
     ]
   },
@@ -1444,10 +1455,12 @@
     "lemma": "Syrades",
     "previous": "Syracusanus portus",
     "next": "Syrako",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1478,
-        "author": "Türk"
+        "end": 1478,
+        "author": "Türk."
       }
     ]
   },
@@ -1455,9 +1468,13 @@
     "lemma": "Syrako",
     "previous": "Syrades",
     "next": "Syrakusai",
+    "redirect": "Lysimeleia Limne",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1478
+        "start": 1478,
+        "end": 1478,
+        "author": "E. Honigmann."
       }
     ]
   },
@@ -3426,10 +3443,12 @@
     "lemma": "Taburnius",
     "previous": "Taboulas",
     "next": "Taburnus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1984,
-        "author": "Enßlin"
+        "end": 1984,
+        "author": "Enßlin."
       }
     ]
   },
@@ -3461,10 +3480,12 @@
     "lemma": "Tacanus",
     "previous": "Tacaccia",
     "next": "Tacape",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1985,
-        "author": "Enßlin"
+        "end": 1985,
+        "author": "Enßlin."
       }
     ]
   },
@@ -3506,7 +3527,7 @@
   {
     "lemma": "Tacfarinas",
     "previous": "Tacatua",
-    "next": "Tachasara",
+    "next": "Ταχασάρα",
     "chapters": [
       {
         "start": 1985,
@@ -3515,20 +3536,23 @@
     ]
   },
   {
-    "lemma": "Tachasara",
+    "lemma": "Ταχασάρα",
     "previous": "Tacfarinas",
     "next": "Tachompso, Takompsos",
+    "sort_key": "Tachasara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1987,
-        "author": "Weissbach"
+        "end": 1987,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Tachompso, Takompsos",
-    "previous": "Tachasara",
-    "next": "Tachoroi",
+    "previous": "Ταχασάρα",
+    "next": "Τάχοροί",
     "chapters": [
       {
         "start": 1987,
@@ -3537,19 +3561,22 @@
     ]
   },
   {
-    "lemma": "Tachoroi",
+    "lemma": "Τάχοροί",
     "previous": "Tachompso, Takompsos",
     "next": "Tachorsa",
+    "sort_key": "Tachoroi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1989,
-        "author": "Weissbach"
+        "end": 1989,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Tachorsa",
-    "previous": "Tachoroi",
+    "previous": "Τάχοροί",
     "next": "Tachos 1",
     "chapters": [
       {

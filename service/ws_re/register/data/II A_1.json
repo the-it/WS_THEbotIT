@@ -12023,9 +12023,12 @@
     "lemma": "Seius 5",
     "previous": "Seius 4",
     "next": "Seius 6",
+    "redirect": "Seius 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1122
+        "start": 1122,
+        "end": 1122
       }
     ]
   },
@@ -12033,10 +12036,12 @@
     "lemma": "Seius 6",
     "previous": "Seius 5",
     "next": "Seius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1122,
-        "author": "Stein, [Arthur]"
+        "end": 1122,
+        "author": "Stein."
       }
     ]
   },
@@ -12090,9 +12095,12 @@
     "lemma": "Seius 11",
     "previous": "Seius 10",
     "next": "Seius 12",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1124
+        "start": 1124,
+        "end": 1124,
+        "author": "Stein."
       }
     ]
   },
@@ -12100,10 +12108,12 @@
     "lemma": "Seius 12",
     "previous": "Seius 11",
     "next": "Seius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1124,
-        "author": "Münzer"
+        "end": 1124,
+        "author": "Münzer."
       }
     ]
   },
@@ -12144,9 +12154,12 @@
     "lemma": "Seius 16",
     "previous": "Seius 15",
     "next": "Seius 17",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1126
+        "start": 1126,
+        "end": 1126,
+        "author": "Fluß."
       }
     ]
   },

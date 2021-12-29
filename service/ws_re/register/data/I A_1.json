@@ -8429,7 +8429,7 @@
   },
   {
     "lemma": "Ripari",
-    "previous": "Ripaia ore",
+    "previous": "Ripanus",
     "next": "Riparienses milites",
     "redirect": "Iordanis",
     "proof_read": 2,
@@ -8454,7 +8454,7 @@
   },
   {
     "lemma": "Ripanus",
-    "previous": "Ripaia ore",
+    "previous": "Riparienses milites",
     "next": "Ripari",
     "proof_read": 2,
     "chapters": [
@@ -9452,39 +9452,48 @@
   {
     "lemma": "Ῥοδόη",
     "previous": "Ῥοδοδένδρον",
-    "next": "Rodogune",
+    "next": "Ῥοδογούνη",
+    "sort_key": "Rodoe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 956,
-        "author": "Kiessling, Max"
+        "end": 956,
+        "author": "Kiessling."
       }
     ]
   },
   {
-    "lemma": "Rodogune",
+    "lemma": "Ῥοδογούνη",
     "previous": "Ῥοδόη",
-    "next": "Rodogune 1",
+    "next": "Ῥοδογούνη 1",
+    "sort_key": "Rodogune",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 956,
-        "author": "Plaumann"
+        "end": 956,
+        "author": "Plaumann."
       }
     ]
   },
   {
-    "lemma": "Rodogune 1",
-    "previous": "Rodogune",
+    "lemma": "Ῥοδογούνη 1",
+    "previous": "Ῥοδογούνη",
     "next": "Rodogune 2",
+    "sort_key": "Rodogune 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 956,
-        "author": "Plaumann"
+        "end": 956,
+        "author": "Plaumann."
       }
     ]
   },
   {
     "lemma": "Rodogune 2",
-    "previous": "Rodogune 1",
+    "previous": "Ῥοδογούνη 1",
     "next": "Rodogune 3",
     "chapters": [
       {
@@ -9667,7 +9676,7 @@
   {
     "lemma": "Rodussa, Rodussai 3",
     "previous": "Rodussa, Rodussai 2",
-    "next": "Roe",
+    "next": "Ῥόη",
     "chapters": [
       {
         "start": 960,
@@ -9676,19 +9685,22 @@
     ]
   },
   {
-    "lemma": "Roe",
+    "lemma": "Ῥόη",
     "previous": "Rodussa, Rodussai 3",
     "next": "Roedias",
+    "sort_key": "Roe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 960,
-        "author": "Ruge"
+        "end": 960,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Roedias",
-    "previous": "Roe",
+    "previous": "Ῥόη",
     "next": "Roeites",
     "chapters": [
       {
@@ -13584,8 +13596,8 @@
   },
   {
     "lemma": "Ῥουφινιαναί, αἱ",
-    "previous": "Rufinus 6",
-    "next": "Ruphinu",
+    "previous": "Rufinianae 2",
+    "next": "Rufinianus 1",
     "sort_key": "Rufinianai hai",
     "redirect": "Rufinianae 1",
     "proof_read": 3,

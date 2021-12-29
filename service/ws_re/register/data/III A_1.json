@@ -6531,10 +6531,12 @@
     "lemma": "Sithenoi",
     "previous": "Σίθα",
     "next": "Sithiu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 391,
-        "author": "Moritz, [Bernhard]"
+        "end": 391,
+        "author": "Moritz."
       }
     ]
   },
@@ -6575,10 +6577,12 @@
     "lemma": "Sithone",
     "previous": "Sithon",
     "next": "Sithones",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 393,
-        "author": "Oberhummer"
+        "end": 393,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -6597,10 +6601,12 @@
     "lemma": "Sithonia",
     "previous": "Sithones",
     "next": "Siticines",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 393,
-        "author": "Oberhummer"
+        "end": 393,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -6618,7 +6624,7 @@
   {
     "lemma": "Sitifis",
     "previous": "Siticines",
-    "next": "Sitikon",
+    "next": "Σιτικόν",
     "chapters": [
       {
         "start": 393,
@@ -6627,20 +6633,23 @@
     ]
   },
   {
-    "lemma": "Sitikon",
+    "lemma": "Σιτικόν",
     "previous": "Sitifis",
     "next": "Sitillia",
+    "sort_key": "Sitikon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 394,
-        "author": "Philipp"
+        "end": 394,
+        "author": "Philipp."
       }
     ]
   },
   {
     "lemma": "Sitillia",
-    "previous": "Sitikon",
-    "next": "Sitioenta",
+    "previous": "Σιτικόν",
+    "next": "Σιτιόεντα",
     "chapters": [
       {
         "start": 394,
@@ -6649,19 +6658,22 @@
     ]
   },
   {
-    "lemma": "Sitioenta",
+    "lemma": "Σιτιόεντα",
     "previous": "Sitillia",
     "next": "Sitioganus",
+    "sort_key": "Sitioenta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 394,
-        "author": "Fluss"
+        "end": 394,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Sitioganus",
-    "previous": "Sitioenta",
+    "previous": "Σιτιόεντα",
     "next": "Sitmica",
     "redirect": "Sitakos",
     "proof_read": 2,
