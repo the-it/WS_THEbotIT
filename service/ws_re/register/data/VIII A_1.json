@@ -8486,10 +8486,12 @@
     "lemma": "Velisci",
     "previous": "Veliocasses",
     "next": "Velites",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 627,
-        "author": "Courtois"
+        "end": 627,
+        "author": "Ch. Courtois."
       }
     ]
   },
@@ -8510,10 +8512,12 @@
     "lemma": "Velius 1",
     "previous": "Velites",
     "next": "Velius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 627,
-        "author": "Hanslik"
+        "end": 627,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -8598,10 +8602,12 @@
     "lemma": "Velius 9",
     "previous": "Velius 8",
     "next": "Velius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 632,
-        "author": "Hanslik"
+        "end": 632,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -8772,10 +8778,12 @@
     "lemma": "Velleius 2",
     "previous": "Velleius 1",
     "next": "Velleius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 637,
-        "author": "Ziegler"
+        "end": 637,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -8783,10 +8791,13 @@
     "lemma": "Velleius 3",
     "previous": "Velleius 2",
     "next": "Velleius 4",
+    "redirect": "Velleius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 637,
-        "author": "Ziegler"
+        "end": 637,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -8794,10 +8805,12 @@
     "lemma": "Velleius 4",
     "previous": "Velleius 3",
     "next": "Velleius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 637,
-        "author": "Ziegler"
+        "end": 637,
+        "author": "Konrat Ziegler."
       }
     ]
   },
@@ -10778,7 +10791,7 @@
   },
   {
     "lemma": "Fundus Ver...",
-    "previous": "Ver sacrum",
+    "previous": "Vera 2",
     "next": "Vera 1",
     "sort_key": "Ver z",
     "proof_read": 2,
@@ -10849,10 +10862,12 @@
     "lemma": "Veranius 4",
     "previous": "Veranius 3",
     "next": "Veranius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 959,
-        "author": "Gordon"
+        "end": 959,
+        "author": "A. E. Gordon."
       }
     ]
   },
@@ -10860,10 +10875,12 @@
     "lemma": "Veranius 5",
     "previous": "Veranius 4",
     "next": "Veranius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 959,
-        "author": "Gordon"
+        "end": 959,
+        "author": "A. E. Gordon."
       }
     ]
   },
@@ -10915,10 +10932,12 @@
     "lemma": "Veranius 10",
     "previous": "Veranius 9",
     "next": "Veranius 11",
-    "redirect": true,
+    "redirect": "Veranius 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 961
+        "start": 961,
+        "end": 961
       }
     ]
   },
@@ -10970,10 +10989,12 @@
     "lemma": "Veranius 15",
     "previous": "Veranius 14",
     "next": "Veranius 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 964,
-        "author": "Gordon"
+        "end": 964,
+        "author": "A. E. Gordon."
       }
     ]
   },
@@ -11003,10 +11024,12 @@
     "lemma": "Veranius 18",
     "previous": "Veranius 17",
     "next": "Veranius 19",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 966,
-        "author": "Gordon"
+        "end": 966,
+        "author": "A. E. Gordon."
       }
     ]
   },
@@ -11102,10 +11125,12 @@
     "lemma": "Verbalis",
     "previous": "Verax",
     "next": "Verbannus lacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 970,
-        "author": "Courtois"
+        "end": 970,
+        "author": "Ch. Courtois."
       }
     ]
   },
@@ -11167,7 +11192,7 @@
   {
     "lemma": "Verbigenus pagus",
     "previous": "Verbenaca",
-    "next": "Uerbikiai",
+    "next": "Οὐέρβικαι",
     "chapters": [
       {
         "start": 978,
@@ -11176,19 +11201,22 @@
     ]
   },
   {
-    "lemma": "Uerbikiai",
+    "lemma": "Οὐέρβικαι",
     "previous": "Verbigenus pagus",
     "next": "Verbinum",
+    "sort_key": "Uerbikiai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 978,
-        "author": "Courtois"
+        "end": 978,
+        "author": "Ch. Courtois."
       }
     ]
   },
   {
     "lemma": "Verbinum",
-    "previous": "Uerbikiai",
+    "previous": "Οὐέρβικαι",
     "next": "Vercana",
     "chapters": [
       {
@@ -11380,10 +11408,12 @@
     "lemma": "Verentanum",
     "previous": "Vereis",
     "next": "Verestis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1012,
-        "author": "Radke"
+        "end": 1012,
+        "author": "Gerhard Radke."
       }
     ]
   },
@@ -11391,10 +11421,12 @@
     "lemma": "Verestis",
     "previous": "Verentanum",
     "next": "Veresvos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1013,
-        "author": "Radke"
+        "end": 1013,
+        "author": "Gerhard Radke."
       }
     ]
   },
@@ -11402,10 +11434,12 @@
     "lemma": "Veresvos",
     "previous": "Verestis",
     "next": "Veretum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1013,
-        "author": "Courtois"
+        "end": 1013,
+        "author": "Ch. Courtois."
       }
     ]
   },
@@ -11435,10 +11469,12 @@
     "lemma": "Vergellae",
     "previous": "Vergae",
     "next": "Vergellus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1014,
-        "author": "Radke"
+        "end": 1014,
+        "author": "Gerhard Radke."
       }
     ]
   },
@@ -11457,10 +11493,12 @@
     "lemma": "Vergilia",
     "previous": "Vergellus",
     "next": "Vergiliae",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1014,
-        "author": "Schulten"
+        "end": 1014,
+        "author": "P. Schulten."
       }
     ]
   },

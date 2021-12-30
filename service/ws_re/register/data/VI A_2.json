@@ -8578,10 +8578,12 @@
     "lemma": "Tragia(i) 2",
     "previous": "Tragia(i) 1",
     "next": "Tragicomoedia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1895,
-        "author": "Herbst"
+        "end": 1895,
+        "author": "Rudolf Herbst."
       }
     ]
   },
@@ -8635,10 +8637,12 @@
     "lemma": "Tragios 2",
     "previous": "Tragios 1",
     "next": "Tragiskos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1896,
-        "author": "Sontheimer"
+        "end": 1896,
+        "author": "Walther Sontheimer."
       }
     ]
   },
@@ -8646,10 +8650,12 @@
     "lemma": "Tragiskos",
     "previous": "Tragios 2",
     "next": "Tragodia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1896,
-        "author": "Münzer"
+        "end": 1896,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -8667,7 +8673,7 @@
   {
     "lemma": "Tragoedia",
     "previous": "Tragodia",
-    "next": "Tragonike",
+    "next": "Τραγονίκη",
     "chapters": [
       {
         "start": 1899,
@@ -8676,19 +8682,22 @@
     ]
   },
   {
-    "lemma": "Tragonike",
+    "lemma": "Τραγονίκη",
     "previous": "Tragoedia",
     "next": "Tragos",
+    "sort_key": "Tragonike",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2075,
-        "author": "Sturm"
+        "end": 2075,
+        "author": "J. Sturm."
       }
     ]
   },
   {
     "lemma": "Tragos",
-    "previous": "Tragonike",
+    "previous": "Τραγονίκη",
     "next": "Tragurium",
     "chapters": [
       {
@@ -8734,10 +8743,13 @@
     "lemma": "Traiana Augusta",
     "previous": "Traia Capita",
     "next": "Traiana colonia",
+    "sort_key": "Traianaaugusta",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2078,
-        "author": "Oberhummer"
+        "end": 2078,
+        "author": "Eugen Oberhummer."
       }
     ]
   },
@@ -8883,10 +8895,12 @@
     "lemma": "Traianus 4",
     "previous": "Traianus 3",
     "next": "Traianus 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2090,
-        "author": "Enßlin"
+        "end": 2090,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8905,10 +8919,12 @@
     "lemma": "Traianus 6",
     "previous": "Traianus 5",
     "next": "Traianus 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2090,
-        "author": "Enßlin"
+        "end": 2090,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8916,10 +8932,12 @@
     "lemma": "Traianus 7",
     "previous": "Traianus 6",
     "next": "Traianus 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2090,
-        "author": "Enßlin"
+        "end": 2090,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -8986,16 +9004,18 @@
   {
     "lemma": "Trakana",
     "previous": "ἡ Τραϊνοῦ γέφυρα",
-    "next": "trakteutai",
+    "next": "τρακτευταί",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2091,
-        "author": "Diehl, Erich"
+        "end": 2091,
+        "author": "Erich Diehl."
       }
     ]
   },
   {
-    "lemma": "trakteutai",
+    "lemma": "τρακτευταί",
     "previous": "Trakana",
     "next": "Tralitai",
     "sort_key": "Trakteutai",
@@ -9010,7 +9030,7 @@
   },
   {
     "lemma": "Tralitai",
-    "previous": "trakteutai",
+    "previous": "τρακτευταί",
     "next": "Tralla",
     "chapters": [
       {
@@ -9023,10 +9043,12 @@
     "lemma": "Tralla",
     "previous": "Tralitai",
     "next": "Tralleis, -i 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2091,
-        "author": "Oppermann"
+        "end": 2091,
+        "author": "Hans Oppermann."
       }
     ]
   },
@@ -9080,10 +9102,12 @@
     "lemma": "Trallion",
     "previous": "Trallikon",
     "next": "Trama",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2128,
-        "author": "Ruge"
+        "end": 2128,
+        "author": "W. Ruge."
       }
     ]
   },

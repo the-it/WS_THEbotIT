@@ -9334,10 +9334,13 @@
     "lemma": "Uranios 6",
     "previous": "Uranios 5",
     "next": "Uranios 7",
+    "sort_key": "Vranios 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 947,
-        "author": "Lippold, Adolf"
+        "end": 947,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -9378,10 +9381,13 @@
     "lemma": "Uranios 10",
     "previous": "Uranios 9",
     "next": "Uranios 11",
+    "sort_key": "Vranios 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 948,
-        "author": "Lippold, Adolf"
+        "end": 948,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -9444,10 +9450,13 @@
     "lemma": "Uranios 16",
     "previous": "Uranios 15",
     "next": "Uranios 17",
+    "sort_key": "Vranios 16",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 949,
-        "author": "Lippold, Adolf"
+        "end": 949,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -9466,10 +9475,13 @@
     "lemma": "Uranios 18",
     "previous": "Uranios 17",
     "next": "Uranios 19",
+    "sort_key": "Vranios 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 950,
-        "author": "Lippold, Adolf"
+        "end": 950,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -9543,10 +9555,13 @@
     "lemma": "Uranios 25",
     "previous": "Uranios 24",
     "next": "Uranios 26",
+    "sort_key": "Vranios 25",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 951,
-        "author": "Lippold, Adolf"
+        "end": 951,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -9554,10 +9569,13 @@
     "lemma": "Uranios 26",
     "previous": "Uranios 25",
     "next": "Uranios 27",
+    "sort_key": "Vranios 26",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 951,
-        "author": "Lippold, Adolf"
+        "end": 951,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -9565,10 +9583,13 @@
     "lemma": "Uranios 27",
     "previous": "Uranios 26",
     "next": "uraniskos",
+    "sort_key": "Vranios 27",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 952,
-        "author": "Lippold, Adolf"
+        "end": 952,
+        "author": "Adolf Lippold."
       }
     ]
   },
@@ -11463,7 +11484,7 @@
     "lemma": "Οὐσάδιον ἄκρον",
     "previous": "Urzan",
     "next": "Usaepo",
-    "sort_key": "Usadion akron",
+    "sort_key": "Vsadion akron",
     "proof_read": 2,
     "chapters": [
       {
@@ -11637,7 +11658,7 @@
     "lemma": "Οὐσιανά",
     "previous": "Usês",
     "next": "Usibalchi",
-    "sort_key": "Usiana",
+    "sort_key": "Vsiana",
     "proof_read": 2,
     "chapters": [
       {
@@ -11799,7 +11820,7 @@
   {
     "lemma": "Uspe",
     "previous": "-usnehae",
-    "next": "Ussara",
+    "next": "Οὐσσάρα",
     "chapters": [
       {
         "start": 1092,
@@ -11808,19 +11829,22 @@
     ]
   },
   {
-    "lemma": "Ussara",
+    "lemma": "Οὐσσάρα",
     "previous": "Uspe",
     "next": "-ussia",
+    "sort_key": "Ussara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1093,
-        "author": "Leglay"
+        "end": 1093,
+        "author": "M. Leglay."
       }
     ]
   },
   {
     "lemma": "-ussia",
-    "previous": "Ussara",
+    "previous": "Οὐσσάρα",
     "next": "Ussubium",
     "chapters": [
       {
@@ -11877,10 +11901,13 @@
     "lemma": "Ustichos",
     "previous": "Ustica 2",
     "next": "Ustus",
+    "sort_key": "Vstichos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1094,
-        "author": "Wesener"
+        "end": 1094,
+        "author": "Karl Preisendanz."
       }
     ]
   },
@@ -11902,6 +11929,7 @@
     "lemma": "usuarius 1",
     "previous": "Ustus",
     "next": "usuarius 2",
+    "sort_key": "vsuarius 1",
     "proof_read": 2,
     "chapters": [
       {
@@ -11915,6 +11943,7 @@
     "lemma": "usuarius 2",
     "previous": "usuarius 1",
     "next": "usucapio",
+    "sort_key": "vsuarius 2",
     "proof_read": 2,
     "chapters": [
       {
@@ -12014,9 +12043,13 @@
     "lemma": "usus 1",
     "previous": "usurpatio",
     "next": "usus 2",
+    "sort_key": "vsus 1",
+    "redirect": "Mores",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1133
+        "start": 1133,
+        "end": 1133
       }
     ]
   },
@@ -12024,9 +12057,13 @@
     "lemma": "usus 2",
     "previous": "usus 1",
     "next": "usus 3",
+    "sort_key": "Vsus 2",
+    "redirect": "Possessio, possessor, possidere",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1133
+        "start": 1133,
+        "end": 1133
       }
     ]
   },
@@ -12034,9 +12071,13 @@
     "lemma": "usus 3",
     "previous": "usus 2",
     "next": "usus 4",
+    "sort_key": "Vsus 3",
+    "redirect": "Manus",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1133
+        "start": 1133,
+        "end": 1133
       }
     ]
   },
