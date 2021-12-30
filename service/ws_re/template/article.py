@@ -21,8 +21,6 @@ class Article(collections.Mapping):
         "KOR": "KORREKTURSTAND",
         "WS": "WIKISOURCE",
         "WP": "WIKIPEDIA",
-        "XS": "EXTSCAN_START",
-        "XE": "EXTSCAN_END",
         "GND": "GND",
         "KSCH": "KEINE_SCHÖPFUNGSHÖHE",
         "TJ": "TODESJAHR",
@@ -51,8 +49,6 @@ class Article(collections.Mapping):
                             Property("KORREKTURSTAND", ""),
                             Property("WIKIPEDIA", ""),
                             Property("WIKISOURCE", ""),
-                            Property("EXTSCAN_START", ""),
-                            Property("EXTSCAN_END", ""),
                             Property("GND", ""),
                             Property("KEINE_SCHÖPFUNGSHÖHE", False),
                             Property("TODESJAHR", ""),
@@ -230,6 +226,9 @@ class Article(collections.Mapping):
                     if keyword in full_keyword:
                         keyword = full_keyword
                         break
+            elif keyword in ("EXTSCAN_START", "EXTSCAN_END"):
+                # this keyword fades out
+                pass
             else:
                 raise ReDatenException(f"REDaten has wrong key word. --> {template_property}")
         else:

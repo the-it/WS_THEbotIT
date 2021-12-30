@@ -60,12 +60,12 @@ class TestReArticle(TestCase):
         for _ in range(5):
             next(iterator)
         self.assertEqual(next(iterator).name, "WIKISOURCE")
-        for _ in range(6):
+        for _ in range(4):
             next(iterator)
         self.assertEqual(next(iterator).name, "NACHTRAG")
         self.assertEqual(next(iterator).name, "ÜBERSCHRIFT")
         self.assertEqual(next(iterator).name, "VERWEIS")
-        self.assertEqual(len(self.article), 18)
+        self.assertEqual(len(self.article), 16)
 
     def test_properties_init(self):
         article = Article(re_daten_properties={"BAND": "I 1", "NACHTRAG": True})
@@ -104,7 +104,7 @@ class TestReArticle(TestCase):
 
     def test_from_text_short_keywords(self):
         article_text = "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB" \
-                       "|XS={{START}}|XE={{END}}|GND=1234|KSCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
+                       "|GND=1234|KSCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
                        "\ntext\n{{REAutor|Some Author.}}"
         article = Article.from_text(article_text)
         self.assertEqual("I", article["BAND"].value)
@@ -116,8 +116,6 @@ class TestReArticle(TestCase):
         self.assertEqual("fertig", article["KORREKTURSTAND"].value)
         self.assertEqual("BLUB", article["WIKISOURCE"].value)
         self.assertEqual("BLAB", article["WIKIPEDIA"].value)
-        self.assertEqual("{{START}}", article["EXTSCAN_START"].value)
-        self.assertEqual("{{END}}", article["EXTSCAN_END"].value)
         self.assertEqual("1234", article["GND"].value)
         self.assertEqual("1949", article["TODESJAHR"].value)
         self.assertFalse(article["KEINE_SCHÖPFUNGSHÖHE"].value)
@@ -235,8 +233,6 @@ text
 |TJ=1950
 |WIKIPEDIA=
 |WIKISOURCE=
-|EXTSCAN_START={{REIA|IV,1|607}}
-|EXTSCAN_END=
 |VW=
 }}
 '''24)''' ''L. Cominius Vipsanius Salutaris, domo Roma, subproc(urator) ludi magni, proc(urator) alimentor(um) per Apuliam Calabriam Lucaniam Bruttios, proc. prov(inciae) Sicil(iae), proc. capiend(orum) vec(tigalium) (?), proc. prov. Baet(icae), a cognitionib(us) domini n(ostri) Imp(eratoris) etc. etc. <!-- L. Septimi Severi Pertinac(is) Augusti, p(erfectissimus) v(ir), optimus vir et integrissimus'', CIL II 1085 = [[Hermann Dessau|{{SperrSchrift|Dessau}}]] 1406 (Ilipa); die Ehrung durch einen Untergebenen in der Baetica erfolgte bei seinem Abgang aus der Provinz, als er zu den Cognitiones des Kaisers berufen wurde. Die ''Cominia L. fil. Vipsania Dignitas c(larissima)f(emina)'', CIL IX 2336, könnte seine Tochter sein. -->
@@ -257,8 +253,6 @@ text
 |TJ=1962
 |WIKIPEDIA=
 |WIKISOURCE=
-|EXTSCAN_START={{REWL|XIV,1|45}}
-|EXTSCAN_END=
 |GND=
 }}
 '''Lysippos. 1)''' Spartaner, führt unter König Agis und als sein Nachfolger Truppen gegen Elis (400/399): Xen. hell. IH 2 29f.
@@ -349,3 +343,15 @@ text
         article = Article()
         article["TODESJAHR"].value = "bla1234"
         self.assertTrue(article.common_free)
+
+    def test_remove_two_properties(self):
+        test_string = """{{REDaten
+|BAND=V,1
+|SPALTE_START=1128
+}}
+blub
+{{REAutor|Bla.}}"""
+        article = Article.from_text(test_string)
+        back_to_text = article.to_text()
+        self.assertFalse("EXTSCAN_START" in back_to_text)
+        self.assertFalse("EXTSCAN_END" in back_to_text)
