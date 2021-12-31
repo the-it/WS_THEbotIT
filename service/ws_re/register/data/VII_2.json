@@ -6068,10 +6068,12 @@
     "lemma": "Guntharius 2",
     "previous": "Guntharius 1",
     "next": "Gunthchramnus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1943,
-        "author": "Benjamin"
+        "end": 1943,
+        "author": "Benjamin."
       }
     ]
   },
@@ -6090,10 +6092,12 @@
     "lemma": "Guntheuka",
     "previous": "Gunthchramnus",
     "next": "Guntia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1943,
-        "author": "Benjamin"
+        "end": 1943,
+        "author": "Benjamin."
       }
     ]
   },
@@ -6117,10 +6121,12 @@
     "lemma": "Guntiarius",
     "previous": "Guntia",
     "next": "Gunugu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1943,
-        "author": "Seeck"
+        "end": 1943,
+        "author": "Seeck."
       }
     ]
   },
@@ -6150,7 +6156,7 @@
   {
     "lemma": "Guraios",
     "previous": "Guraioi",
-    "next": "Gouranioi",
+    "next": "Γουράνιοι",
     "chapters": [
       {
         "start": 1944,
@@ -6160,24 +6166,29 @@
     ]
   },
   {
-    "lemma": "Gouranioi",
+    "lemma": "Γουράνιοι",
     "previous": "Guraios",
     "next": "Guras",
+    "sort_key": "Gouranioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1945,
-        "author": "Weissbach"
+        "end": 1945,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Guras",
-    "previous": "Gouranioi",
+    "previous": "Γουράνιοι",
     "next": "Gurasium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1945,
-        "author": "Willrich"
+        "end": 1945,
+        "author": "Willrich."
       }
     ]
   },
@@ -6185,10 +6196,12 @@
     "lemma": "Gurasium",
     "previous": "Guras",
     "next": "Gurbatha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1945,
-        "author": "Weiss, J[akob]"
+        "end": 1945,
+        "author": "Weiss."
       }
     ]
   },
@@ -6209,10 +6222,12 @@
     "lemma": "Gurbicum",
     "previous": "Gurbatha",
     "next": "Gurgenes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1945,
-        "author": "Patsch"
+        "end": 1945,
+        "author": "Patsch."
       }
     ]
   },
@@ -6231,10 +6246,12 @@
     "lemma": "Gurgites",
     "previous": "Gurgenes",
     "next": "Gurgos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1945,
-        "author": "Dessau"
+        "end": 1945,
+        "author": "Dessau."
       }
     ]
   },
@@ -6242,10 +6259,12 @@
     "lemma": "Gurgos",
     "previous": "Gurgites",
     "next": "Gurgures(?) montes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1945,
-        "author": "Robert"
+        "end": 1945,
+        "author": "C. Robert."
       }
     ]
   },
@@ -6263,7 +6282,7 @@
   {
     "lemma": "Guriane",
     "previous": "Gurgures(?) montes",
-    "next": "Gouriauna",
+    "next": "Γουριαύνα",
     "chapters": [
       {
         "start": 1945,
@@ -6273,19 +6292,22 @@
     ]
   },
   {
-    "lemma": "Gouriauna",
+    "lemma": "Γουριαύνα",
     "previous": "Guriane",
     "next": "Gurke",
+    "sort_key": "Gouriauna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1946,
-        "author": "Weissbach"
+        "end": 1946,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Gurke",
-    "previous": "Gouriauna",
+    "previous": "Γουριαύνα",
     "next": "Gurra",
     "chapters": [
       {

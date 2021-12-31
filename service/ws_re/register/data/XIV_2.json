@@ -8678,10 +8678,12 @@
     "lemma": "Maris 5",
     "previous": "Maris 4",
     "next": "Mariscianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1807,
-        "author": "Enßlin"
+        "end": 1807,
+        "author": "Enßlin."
       }
     ]
   },
@@ -8700,10 +8702,12 @@
     "lemma": "Mariscus",
     "previous": "Mariscianus",
     "next": "Marisia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1808,
-        "author": "Fluss"
+        "end": 1808,
+        "author": "Fluss."
       }
     ]
   },
@@ -8711,9 +8715,13 @@
     "lemma": "Marisia",
     "previous": "Mariscus",
     "next": "Maris(s)a",
+    "redirect": "Maris 3",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1808
+        "start": 1808,
+        "end": 1808,
+        "author": "Fluss."
       }
     ]
   },
@@ -8732,7 +8740,7 @@
     "lemma": "Marisus",
     "previous": "Maris(s)a",
     "next": "Maritaios",
-    "redirect": "Strabon 3",
+    "redirect": "Maris 3",
     "proof_read": 2,
     "chapters": [
       {
@@ -8780,7 +8788,7 @@
     "lemma": "Mariva",
     "previous": "Maritima 2",
     "next": "Marius",
-    "redirect": "Plinius 5",
+    "redirect": "Marsyaba",
     "proof_read": 2,
     "chapters": [
       {
@@ -8859,10 +8867,12 @@
     "lemma": "Marius 6",
     "previous": "Marius 5",
     "next": "Marius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1810,
-        "author": "Stein, [Arthur]"
+        "end": 1810,
+        "author": "Stein."
       }
     ]
   },
@@ -8870,10 +8880,12 @@
     "lemma": "Marius 7",
     "previous": "Marius 6",
     "next": "Marius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1810,
-        "author": "Stein, [Arthur]"
+        "end": 1810,
+        "author": "Stein."
       }
     ]
   },
@@ -8914,10 +8926,12 @@
     "lemma": "Marius 11",
     "previous": "Marius 10",
     "next": "Marius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1811,
-        "author": "Enßlin"
+        "end": 1811,
+        "author": "Enßlin."
       }
     ]
   },
@@ -8925,10 +8939,12 @@
     "lemma": "Marius 12",
     "previous": "Marius 11",
     "next": "Marius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1811,
-        "author": "Enßlin"
+        "end": 1811,
+        "author": "Enßlin."
       }
     ]
   },
@@ -8936,10 +8952,12 @@
     "lemma": "Marius 13",
     "previous": "Marius 12",
     "next": "Marius 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1811,
-        "author": "Enßlin"
+        "end": 1811,
+        "author": "Enßlin."
       }
     ]
   },
@@ -15724,9 +15742,12 @@
     "lemma": "Mattitae",
     "previous": "Mattiobarbuli",
     "next": "Mattium",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2324
+        "start": 2324,
+        "end": 2324
       }
     ]
   },
@@ -15824,10 +15845,12 @@
     "lemma": "Maturius 1",
     "previous": "Matunus",
     "next": "Maturius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2325,
-        "author": "Enßlin"
+        "end": 2325,
+        "author": "Enßlin."
       }
     ]
   },
@@ -15835,10 +15858,12 @@
     "lemma": "Maturius 2",
     "previous": "Maturius 1",
     "next": "Maturus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2325,
-        "author": "Stein, [Arthur]"
+        "end": 2325,
+        "author": "Stein."
       }
     ]
   },
@@ -15858,28 +15883,33 @@
   {
     "lemma": "Matusarum",
     "previous": "Maturus",
-    "next": "Matustana",
+    "next": "Ματουστάνα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2325,
-        "author": "Schulten"
+        "end": 2325,
+        "author": "Schulten."
       }
     ]
   },
   {
-    "lemma": "Matustana",
+    "lemma": "Ματουστάνα",
     "previous": "Matusarum",
     "next": "Matuta",
+    "sort_key": "Matustana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2325,
-        "author": "Weissbach"
+        "end": 2325,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Matuta",
-    "previous": "Matustana",
+    "previous": "Ματουστάνα",
     "next": "Matutinus 1",
     "chapters": [
       {

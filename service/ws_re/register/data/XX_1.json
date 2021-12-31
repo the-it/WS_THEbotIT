@@ -3429,10 +3429,12 @@
     "lemma": "Phoibos 3",
     "previous": "Phoibos 2",
     "next": "Phoibos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 348,
-        "author": "Enßlin"
+        "end": 348,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -3440,17 +3442,19 @@
     "lemma": "Phoibos 4",
     "previous": "Phoibos 3",
     "next": "Phoibos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 348,
-        "author": "Enßlin"
+        "end": 348,
+        "author": "W. Enßlin."
       }
     ]
   },
   {
     "lemma": "Phoibos 5",
     "previous": "Phoibos 4",
-    "next": "Phoinikaion",
+    "next": "Φοινίκαιον",
     "chapters": [
       {
         "start": 348,
@@ -3459,19 +3463,22 @@
     ]
   },
   {
-    "lemma": "Phoinikaion",
+    "lemma": "Φοινίκαιον",
     "previous": "Phoibos 5",
     "next": "Phoinikaios",
+    "sort_key": "Phoinikaion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 348,
-        "author": "Meyer, Ernst"
+        "end": 348,
+        "author": "Ernst Meyer."
       }
     ]
   },
   {
     "lemma": "Phoinikaios",
-    "previous": "Phoinikaion",
+    "previous": "Φοινίκαιον",
     "next": "Phoinike 1",
     "chapters": [
       {
@@ -3587,10 +3594,12 @@
     "lemma": "Phoinike 10",
     "previous": "Phoinike 9",
     "next": "Phoiniker, Phoinikia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 350,
-        "author": "Ruge"
+        "end": 350,
+        "author": "W. Ruge."
       }
     ]
   },

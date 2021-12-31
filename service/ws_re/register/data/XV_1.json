@@ -12852,10 +12852,12 @@
     "lemma": "Menodoros 2",
     "previous": "Menodoros 1",
     "next": "Menodoros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 900,
-        "author": "Enßlin"
+        "end": 900,
+        "author": "Enßlin."
       }
     ]
   },
@@ -12863,10 +12865,12 @@
     "lemma": "Menodoros 3",
     "previous": "Menodoros 2",
     "next": "Menodoros 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 900,
-        "author": "Ræder"
+        "end": 900,
+        "author": "Raeder."
       }
     ]
   },
@@ -12940,10 +12944,12 @@
     "lemma": "Menodotos 4",
     "previous": "Menodotos 3",
     "next": "Menodotos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 916,
-        "author": "Kroll"
+        "end": 916,
+        "author": "Kroll."
       }
     ]
   },
@@ -13006,10 +13012,12 @@
     "lemma": "Menogenes 3",
     "previous": "Menogenes 2",
     "next": "Menogenes 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 917,
-        "author": "Stein, [Arthur]"
+        "end": 917,
+        "author": "Stein."
       }
     ]
   },
@@ -13061,10 +13069,12 @@
     "lemma": "Menoikeus 3",
     "previous": "Menoikeus 2",
     "next": "Menois",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 918,
-        "author": "Kroll"
+        "end": 918,
+        "author": "Kroll."
       }
     ]
   },
@@ -16366,10 +16376,12 @@
     "lemma": "Mesicum",
     "previous": "Mesiates 2",
     "next": "Mesidios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1096,
-        "author": "Schulten"
+        "end": 1096,
+        "author": "Schulten."
       }
     ]
   },
@@ -16388,10 +16400,12 @@
     "lemma": "Mesites 1",
     "previous": "Mesidios",
     "next": "Mesites 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1097,
-        "author": "Kolf"
+        "end": 1097,
+        "author": "v. d. Kolf."
       }
     ]
   },
@@ -16445,10 +16459,12 @@
     "lemma": "Mesochora",
     "previous": "Mesoboa",
     "next": "Mesochorum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1100,
-        "author": "Philipp"
+        "end": 1100,
+        "author": "Philipp."
       }
     ]
   },
@@ -16456,10 +16472,12 @@
     "lemma": "Mesochorum",
     "previous": "Mesochora",
     "next": "Mesodme",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1100,
-        "author": "Philipp"
+        "end": 1100,
+        "author": "Philipp."
       }
     ]
   },
@@ -16554,7 +16572,7 @@
   {
     "lemma": "Mesopotamien",
     "previous": "Mesopontios",
-    "next": "Mesoraktion",
+    "next": "Μεσοράκτιον",
     "chapters": [
       {
         "start": 1105,
@@ -16563,24 +16581,29 @@
     ]
   },
   {
-    "lemma": "Mesoraktion",
+    "lemma": "Μεσοράκτιον",
     "previous": "Mesopotamien",
     "next": "Mesorome",
+    "sort_key": "Mesoraktion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1163,
-        "author": "Stählin"
+        "end": 1163,
+        "author": "F. Stählin."
       }
     ]
   },
   {
     "lemma": "Mesorome",
-    "previous": "Mesoraktion",
+    "previous": "Μεσοράκτιον",
     "next": "Mesos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1163,
-        "author": "Ruge"
+        "end": 1163,
+        "author": "Ruge."
       }
     ]
   },
@@ -16588,10 +16611,12 @@
     "lemma": "Mesos",
     "previous": "Mesorome",
     "next": "Mesostrophoniai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1163,
-        "author": "Kroll"
+        "end": 1163,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -16623,10 +16648,12 @@
     "lemma": "Mesphe",
     "previous": "Mesotylos",
     "next": "Mespila",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1163,
-        "author": "Schwabe"
+        "end": 1163,
+        "author": "Schwabe."
       }
     ]
   },

@@ -9934,10 +9934,12 @@
     "lemma": "Neopolis 1",
     "previous": "Neopoioi",
     "next": "Neopolis 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2440,
-        "author": "Schober"
+        "end": 2440,
+        "author": "F. Schober."
       }
     ]
   },
@@ -9945,10 +9947,12 @@
     "lemma": "Neopolis 2",
     "previous": "Neopolis 1",
     "next": "Neopolis 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2440,
-        "author": "Oberhummer"
+        "end": 2440,
+        "author": "Eugen Oberhummer."
       }
     ]
   },
@@ -9969,10 +9973,13 @@
     "lemma": "Neoptana",
     "previous": "Neopolis 3",
     "next": "Neoptolemos 1",
+    "sort_key": "Neoptana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2440,
-        "author": "Herrmann"
+        "end": 2440,
+        "author": "Albert Herrmann."
       }
     ]
   },
@@ -10024,10 +10031,12 @@
     "lemma": "Neoptolemos 5",
     "previous": "Neoptolemos 4",
     "next": "Neoptolemos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2464,
-        "author": "Berve"
+        "end": 2464,
+        "author": "Helmut Berve."
       }
     ]
   },
@@ -10079,10 +10088,12 @@
     "lemma": "Neoptolemos 10",
     "previous": "Neoptolemos 9",
     "next": "Neoptolemos 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2465,
-        "author": "Enßlin"
+        "end": 2465,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -10101,17 +10112,19 @@
     "lemma": "Neoptolemos 12",
     "previous": "Neoptolemos 11",
     "next": "Neoptolemos 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2470,
-        "author": "Kroll"
+        "end": 2470,
+        "author": "Wilhelm Kroll."
       }
     ]
   },
   {
     "lemma": "Neoptolemos 13",
     "previous": "Neoptolemos 12",
-    "next": "Neoptolemu pyrgos",
+    "next": "Νεοπτολέμου πύργος",
     "chapters": [
       {
         "start": 2470,
@@ -10120,19 +10133,22 @@
     ]
   },
   {
-    "lemma": "Neoptolemu pyrgos",
+    "lemma": "Νεοπτολέμου πύργος",
     "previous": "Neoptolemos 13",
     "next": "Neorion",
+    "sort_key": "Neoptolemu pyrgos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2470,
-        "author": "Herrmann"
+        "end": 2470,
+        "author": "Albert Herrmann."
       }
     ]
   },
   {
     "lemma": "Neorion",
-    "previous": "Neoptolemu pyrgos",
+    "previous": "Νεοπτολέμου πύργος",
     "next": "Neoriophylax",
     "chapters": [
       {
