@@ -2814,10 +2814,13 @@
     "lemma": "Sacer mons 3",
     "previous": "Sacer mons 2",
     "next": "Sachalites",
+    "sort_key": "Sacermons 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1654,
-        "author": "Schulten"
+        "end": 1654,
+        "author": "Schulten."
       }
     ]
   },
@@ -2931,10 +2934,12 @@
     "lemma": "Sacoena",
     "previous": "Sacis",
     "next": "Sacra 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1656,
-        "author": "Ruge"
+        "end": 1656,
+        "author": "Ruge."
       }
     ]
   },
@@ -3087,10 +3092,13 @@
     "lemma": "Sacria Iucunda",
     "previous": "Sacraviensis",
     "next": "Sacrificia",
+    "sort_key": "Sacriaiucunda",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1678,
-        "author": "Stein, [Arthur]"
+        "end": 1678,
+        "author": "Stein."
       }
     ]
   },
@@ -3182,10 +3190,13 @@
     "lemma": "Sacrum flumen 1",
     "previous": "Sacrovir",
     "next": "Sacrum flumen 2",
+    "sort_key": "Sacrumflumen 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1688,
-        "author": "Philipp"
+        "end": 1688,
+        "author": "Philipp."
       }
     ]
   },
@@ -3193,10 +3204,13 @@
     "lemma": "Sacrum flumen 2",
     "previous": "Sacrum flumen 1",
     "next": "Sacrum promuntorium 1",
+    "sort_key": "Sacrumflumen 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1688,
-        "author": "Philipp"
+        "end": 1688,
+        "author": "Philipp."
       }
     ]
   },
@@ -3215,10 +3229,13 @@
     "lemma": "Sacrum promuntorium 3",
     "previous": "Sacrum promuntorium 1",
     "next": "Sacrum promuntorium 4",
+    "sort_key": "Sacrumpromuntorium 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1688,
-        "author": "Haverfield"
+        "end": 1688,
+        "author": "Haverfield."
       }
     ]
   },
@@ -3260,10 +3277,12 @@
     "lemma": "Saculio",
     "previous": "Sactnos",
     "next": "Sacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1689,
-        "author": "Münzer"
+        "end": 1689,
+        "author": "Münzer."
       }
     ]
   },
@@ -3283,7 +3302,7 @@
   {
     "lemma": "Sada",
     "previous": "Sacus",
-    "next": "Sadagena",
+    "next": "Σαδάγηνα",
     "chapters": [
       {
         "start": 1689,
@@ -3293,20 +3312,23 @@
     ]
   },
   {
-    "lemma": "Sadagena",
+    "lemma": "Σαδάγηνα",
     "previous": "Sada",
     "next": "Sadagolthina",
+    "sort_key": "Sadagena",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1690,
-        "author": "Ruge"
+        "end": 1690,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Sadagolthina",
-    "previous": "Sadagena",
-    "next": "Sadakora",
+    "previous": "Σαδάγηνα",
+    "next": "Σαδάκορα",
     "chapters": [
       {
         "start": 1690,
@@ -3315,19 +3337,22 @@
     ]
   },
   {
-    "lemma": "Sadakora",
+    "lemma": "Σαδάκορα",
     "previous": "Sadagolthina",
     "next": "Sadambal",
+    "sort_key": "Sadakora",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1690,
-        "author": "Ruge"
+        "end": 1690,
+        "author": "Ruge."
       }
     ]
   },
   {
     "lemma": "Sadambal",
-    "previous": "Sadakora",
+    "previous": "Σαδάκορα",
     "next": "Sadame",
     "redirect": "Salambo",
     "proof_read": 2,
@@ -3342,10 +3367,12 @@
     "lemma": "Sadame",
     "previous": "Sadambal",
     "next": "Sadasara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1690,
-        "author": "Oberhummer"
+        "end": 1690,
+        "author": "Oberhummer."
       }
     ]
   },
@@ -13368,10 +13395,12 @@
     "lemma": "Sarake",
     "previous": "Σαρακαύρακοι",
     "next": "Sarakon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2390,
-        "author": "Herrmann"
+        "end": 2390,
+        "author": "Herrmann."
       }
     ]
   },
@@ -13478,10 +13507,12 @@
     "lemma": "Saranga",
     "previous": "Σαραμηνή",
     "next": "Saranges",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2392,
-        "author": "Herrmann"
+        "end": 2392,
+        "author": "Herrmann."
       }
     ]
   },
@@ -13511,10 +13542,12 @@
     "lemma": "Saransos",
     "previous": "Saranicus",
     "next": "Sarapana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2392,
-        "author": "Bürchner"
+        "end": 2392,
+        "author": "Bürchner."
       }
     ]
   },
@@ -13579,10 +13612,12 @@
     "lemma": "Sarapion 2",
     "previous": "Sarapion 1",
     "next": "Sarapion 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2394,
-        "author": "Münzer"
+        "end": 2394,
+        "author": "Münzer."
       }
     ]
   },

@@ -1270,10 +1270,12 @@
     "lemma": "Innocentius 2",
     "previous": "Innocentius 1",
     "next": "Innocentius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1559,
-        "author": "Seeck"
+        "end": 1559,
+        "author": "Seeck."
       }
     ]
   },
@@ -1281,10 +1283,12 @@
     "lemma": "Innocentius 3",
     "previous": "Innocentius 2",
     "next": "Innocentius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1559,
-        "author": "Seeck"
+        "end": 1559,
+        "author": "Seeck."
       }
     ]
   },
@@ -1470,10 +1474,12 @@
     "lemma": "Insteius 5",
     "previous": "Insteius 4",
     "next": "Insteius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1562,
-        "author": "Riba"
+        "end": 1562,
+        "author": "Riba."
       }
     ]
   },
@@ -1548,10 +1554,12 @@
     "lemma": "Insteius 12",
     "previous": "Insteius 11",
     "next": "Insteius (Insteianus) Vicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1563,
-        "author": "Riba"
+        "end": 1563,
+        "author": "Riba."
       }
     ]
   },
@@ -1669,10 +1677,13 @@
     "lemma": "Insula Arriana Polliana",
     "previous": "Insula",
     "next": "Insula Bolaniana",
+    "sort_key": "Insulaarriana polliana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1594,
-        "author": "Gall"
+        "end": 1594,
+        "author": "Gall."
       }
     ]
   },
@@ -1691,10 +1702,13 @@
     "lemma": "Insula Cuminiana",
     "previous": "Insula Bolaniana",
     "next": "Insula Felicles",
+    "sort_key": "Insulacuminiana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1594,
-        "author": "Gall"
+        "end": 1594,
+        "author": "Gall."
       }
     ]
   },
