@@ -106,10 +106,12 @@
     "lemma": "Spartianus",
     "previous": "Sparthon",
     "next": "Spartiatikos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1537,
-        "author": "Seeck"
+        "end": 1537,
+        "author": "Seeck."
       }
     ]
   },
@@ -349,10 +351,12 @@
     "lemma": "Spatana",
     "previous": "Spatale 2",
     "next": "Spatha",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1544,
-        "author": "Wecker"
+        "end": 1544,
+        "author": "Wecker."
       }
     ]
   },
@@ -370,7 +374,7 @@
   {
     "lemma": "Spatharios",
     "previous": "Spatha",
-    "next": "Spathizos",
+    "next": "Σπαθιζός",
     "chapters": [
       {
         "start": 1545,
@@ -379,19 +383,22 @@
     ]
   },
   {
-    "lemma": "Spathizos",
+    "lemma": "Σπαθιζός",
     "previous": "Spatharios",
     "next": "Σπαῦτα",
+    "sort_key": "Spathizos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1546,
-        "author": "Fluss"
+        "end": 1546,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Σπαῦτα",
-    "previous": "Spathizos",
+    "previous": "Σπαθιζός",
     "next": "Specht",
     "sort_key": "Spauta",
     "redirect": "Kapauta",
@@ -537,10 +544,12 @@
     "lemma": "Speculum 2",
     "previous": "Speculum 1",
     "next": "Spedotenus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1586,
-        "author": "Dessau"
+        "end": 1586,
+        "author": "Dessau."
       }
     ]
   },
@@ -548,10 +557,12 @@
     "lemma": "Spedotenus",
     "previous": "Speculum 2",
     "next": "Speio",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1586,
-        "author": "Keune"
+        "end": 1586,
+        "author": "Keune."
       }
     ]
   },
@@ -614,10 +625,12 @@
     "lemma": "Spelaeum",
     "previous": "Speirarches",
     "next": "Spelaïtai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1599,
-        "author": "Oberhummer"
+        "end": 1599,
+        "author": "Oberhummer."
       }
     ]
   },

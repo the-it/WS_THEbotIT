@@ -1021,10 +1021,12 @@
     "lemma": "Gareas 2",
     "previous": "Fliegenfänger",
     "next": "Glaukos 48a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 177,
-        "author": "Lippold, Georg"
+        "end": 177,
+        "author": "Lippold."
       }
     ]
   },
@@ -1056,15 +1058,19 @@
   },
   {
     "lemma": "Hegetorides",
-    "previous": "Gorgias 13"
+    "previous": "Gorgias 13",
+    "next": "Hegetorides 3"
   },
   {
     "lemma": "Hegetorides 3",
+    "previous": "Hegetorides",
     "next": "Herakleides 61b",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 178,
-        "author": "Keil"
+        "end": 178,
+        "author": "J. Keil."
       }
     ]
   },
@@ -1085,10 +1091,13 @@
     "lemma": "Herculea aqua",
     "previous": "Herakleides 61b",
     "next": "Hermeias 15",
+    "sort_key": "Herculeaaqua",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 179,
-        "author": "Buren"
+        "end": 179,
+        "author": "A. W. Van Buren."
       }
     ]
   },
@@ -1107,10 +1116,12 @@
     "lemma": "Hermippos 13",
     "previous": "Hermeias 15",
     "next": "Hilaon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 179,
-        "author": "Lippold, Georg"
+        "end": 179,
+        "author": "Lippold."
       }
     ]
   },

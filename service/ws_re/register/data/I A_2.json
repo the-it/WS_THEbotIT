@@ -3328,7 +3328,7 @@
   {
     "lemma": "Sadagolthina",
     "previous": "Σαδάγηνα",
-    "next": "Σαδάκορα",
+    "next": "Sadakora",
     "chapters": [
       {
         "start": 1690,
@@ -3337,7 +3337,7 @@
     ]
   },
   {
-    "lemma": "Σαδάκορα",
+    "lemma": "Sadakora",
     "previous": "Sadagolthina",
     "next": "Sadambal",
     "sort_key": "Sadakora",
@@ -3352,7 +3352,7 @@
   },
   {
     "lemma": "Sadambal",
-    "previous": "Σαδάκορα",
+    "previous": "Sadakora",
     "next": "Sadame",
     "redirect": "Salambo",
     "proof_read": 2,
@@ -7679,10 +7679,12 @@
     "lemma": "Salma 1",
     "previous": "Sallyes",
     "next": "Salma 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1976,
-        "author": "Moritz, [Bernhard]"
+        "end": 1976,
+        "author": "Moritz."
       }
     ]
   },
@@ -7690,10 +7692,12 @@
     "lemma": "Salma 2",
     "previous": "Salma 1",
     "next": "Salma 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1976,
-        "author": "Moritz, [Bernhard]"
+        "end": 1976,
+        "author": "Moritz."
       }
     ]
   },
@@ -7701,10 +7705,12 @@
     "lemma": "Salma 3",
     "previous": "Salma 2",
     "next": "Salmaces",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1976,
-        "author": "Moritz, [Bernhard]"
+        "end": 1976,
+        "author": "Moritz."
       }
     ]
   },
@@ -7712,10 +7718,12 @@
     "lemma": "Salmaces",
     "previous": "Salma 3",
     "next": "Salmakis 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1976,
-        "author": "Seeck"
+        "end": 1976,
+        "author": "Seeck."
       }
     ]
   },
@@ -7769,10 +7777,12 @@
     "lemma": "Salmanassar 2",
     "previous": "Salmanassar 1",
     "next": "Salmanassar 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1979,
-        "author": "Weissbach"
+        "end": 1979,
+        "author": "Weissbach."
       }
     ]
   },
@@ -7839,10 +7849,12 @@
     "lemma": "Salmania",
     "previous": "Salmani 2",
     "next": "Salmantica",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1985,
-        "author": "Ruge"
+        "end": 1985,
+        "author": "Ruge."
       }
     ]
   },
@@ -7874,10 +7886,12 @@
     "lemma": "Salmon 1",
     "previous": "Salmeni",
     "next": "Salmon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1986,
-        "author": "Stählin"
+        "end": 1986,
+        "author": "Stählin."
       }
     ]
   },
@@ -7964,10 +7978,12 @@
     "lemma": "Salmonis",
     "previous": "Salmonia",
     "next": "Salmorudis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1990,
-        "author": "Nawrath"
+        "end": 1990,
+        "author": "Nawrath."
       }
     ]
   },
@@ -13658,7 +13674,7 @@
   {
     "lemma": "Sarapis 2",
     "previous": "Sarapis 1",
-    "next": "Sararra",
+    "next": "Σαράρρα",
     "chapters": [
       {
         "start": 2426,
@@ -13667,19 +13683,22 @@
     ]
   },
   {
-    "lemma": "Sararra",
+    "lemma": "Σαράρρα",
     "previous": "Sarapis 2",
     "next": "Saraucae",
+    "sort_key": "Sararra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2426,
-        "author": "Weissbach"
+        "end": 2426,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Saraucae",
-    "previous": "Sararra",
+    "previous": "Σαράρρα",
     "next": "Saraucus vicus",
     "redirect": "Sacaraucae",
     "proof_read": 2,
@@ -13694,10 +13713,13 @@
     "lemma": "Saraucus vicus",
     "previous": "Saraucae",
     "next": "Saravene",
+    "sort_key": "Saraucusvicus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2426,
-        "author": "Keune"
+        "end": 2426,
+        "author": "Keune."
       }
     ]
   },
@@ -13727,7 +13749,7 @@
   {
     "lemma": "Sarbakon",
     "previous": "Saravus",
-    "next": "Sarbana",
+    "next": "Σάρβανα",
     "chapters": [
       {
         "start": 2433,
@@ -13736,19 +13758,22 @@
     ]
   },
   {
-    "lemma": "Sarbana",
+    "lemma": "Σάρβανα",
     "previous": "Sarbakon",
     "next": "Sarbane",
+    "sort_key": "Sarbana",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2433,
-        "author": "Herrmann"
+        "end": 2433,
+        "author": "Herrmann."
       }
     ]
   },
   {
     "lemma": "Sarbane",
-    "previous": "Sarbana",
+    "previous": "Σάρβανα",
     "next": "Sarbanissa",
     "chapters": [
       {
@@ -13760,7 +13785,7 @@
   {
     "lemma": "Sarbanissa",
     "previous": "Sarbane",
-    "next": "Sarbina",
+    "next": "Σάρβινα",
     "redirect": "Barbanissa",
     "proof_read": 2,
     "chapters": [
@@ -13771,19 +13796,22 @@
     ]
   },
   {
-    "lemma": "Sarbina",
+    "lemma": "Σάρβινα",
     "previous": "Sarbanissa",
     "next": "Sarbiniacum",
+    "sort_key": "Sarbina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2433,
-        "author": "Weissbach"
+        "end": 2433,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Sarbiniacum",
-    "previous": "Sarbina",
+    "previous": "Σάρβινα",
     "next": "Sarbis",
     "chapters": [
       {
@@ -13820,10 +13848,12 @@
     "lemma": "Sarcavis",
     "previous": "Sarcapos",
     "next": "Sarciacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2434,
-        "author": "Keune"
+        "end": 2434,
+        "author": "Keune."
       }
     ]
   },
@@ -13831,10 +13861,12 @@
     "lemma": "Sarciacus",
     "previous": "Sarcavis",
     "next": "Sarcina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2434,
-        "author": "Keune"
+        "end": 2434,
+        "author": "Keune."
       }
     ]
   },
@@ -13910,10 +13942,12 @@
     "lemma": "Sardabale",
     "previous": "Sarculum",
     "next": "Sardanapal",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2436,
-        "author": "Dessau"
+        "end": 2436,
+        "author": "Dessau."
       }
     ]
   },

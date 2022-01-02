@@ -7269,7 +7269,7 @@
   {
     "lemma": "Uddita",
     "previous": "Udakespes",
-    "next": "Udenoe",
+    "next": "Οὐδενόη",
     "chapters": [
       {
         "start": 554,
@@ -7278,19 +7278,22 @@
     ]
   },
   {
-    "lemma": "Udenoe",
+    "lemma": "Οὐδενόη",
     "previous": "Uddita",
     "next": "Udenoi",
+    "sort_key": "Udenoe",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 554,
-        "author": "Courtois"
+        "end": 554,
+        "author": "Ch. Courtois."
       }
     ]
   },
   {
     "lemma": "Udenoi",
-    "previous": "Udenoe",
+    "previous": "Οὐδενόη",
     "next": "Udiastes",
     "chapters": [
       {
@@ -7347,10 +7350,13 @@
     "lemma": "Udura",
     "previous": "Uduba",
     "next": "Ve... Iustus, Q.",
+    "sort_key": "Vdura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 556,
-        "author": "Schulten"
+        "end": 556,
+        "author": "Ad. Schulten."
       }
     ]
   },
@@ -7380,10 +7386,12 @@
     "lemma": "Vascium",
     "previous": "Veminii",
     "next": "Vecellanus pagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 558,
-        "author": "Radke"
+        "end": 558,
+        "author": "Gerhard Radke."
       }
     ]
   },
@@ -7391,10 +7399,13 @@
     "lemma": "Vecellanus pagus",
     "previous": "Vascium",
     "next": "Vecellinus",
+    "sort_key": "Vecellanuspagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 558,
-        "author": "Radke"
+        "end": 558,
+        "author": "Gerhard Radke."
       }
     ]
   },

@@ -2576,10 +2576,12 @@
     "lemma": "Vetranio 2",
     "previous": "Vetranio 1",
     "next": "Vetranio 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1840,
-        "author": "Enßlin"
+        "end": 1840,
+        "author": "Wilh. Enßlin."
       }
     ]
   },
@@ -2769,10 +2771,12 @@
     "lemma": "Vettius 5",
     "previous": "Vettius 4",
     "next": "Vettius 5a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1844,
-        "author": "Gundel, Hans [Georg]"
+        "end": 1844,
+        "author": "Hans Gundel."
       }
     ]
   },
@@ -2962,10 +2966,12 @@
     "lemma": "Vettius 19",
     "previous": "Vettius 18",
     "next": "Vettius 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1857,
-        "author": "Hanslik"
+        "end": 1857,
+        "author": "Hans Gundel."
       }
     ]
   },
@@ -3043,10 +3049,14 @@
     "lemma": "Vettius 26",
     "previous": "Vettius 25",
     "next": "Vettius 27",
+    "proof_read": 2,
+    "wp_link": "w:en:Marcus Vettius Bolanus (consul 111)",
+    "wd_link": "d:Q11980948",
     "chapters": [
       {
         "start": 1858,
-        "author": "Sattmann"
+        "end": 1858,
+        "author": "E. Sattmann."
       }
     ]
   },
@@ -9730,9 +9740,12 @@
     "lemma": "Velia 4",
     "previous": "Velia 3",
     "next": "Velitrae",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2406
+        "start": 2406,
+        "end": 2406,
+        "author": "Gerhard Radke."
       }
     ]
   },
@@ -9812,10 +9825,12 @@
     "lemma": "Vennicnii",
     "previous": "Venneianus",
     "next": "Venno",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2412,
-        "author": "Richmond"
+        "end": 2412,
+        "author": "Ian A. Richmond."
       }
     ]
   },
@@ -9833,9 +9848,13 @@
     "lemma": "Venox",
     "previous": "Venno",
     "next": "Venonae",
+    "redirect": "Plautius 31",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2412
+        "start": 2412,
+        "end": 2412,
+        "author": "H. Gundel."
       }
     ]
   },
