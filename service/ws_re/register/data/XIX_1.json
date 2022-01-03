@@ -7616,7 +7616,7 @@
   {
     "lemma": "Perikleides 2",
     "previous": "Perikleides 1",
-    "next": "Perikleidon 1",
+    "next": "Περικλειδῶν 1",
     "chapters": [
       {
         "start": 747,
@@ -7625,19 +7625,22 @@
     ]
   },
   {
-    "lemma": "Perikleidon 1",
+    "lemma": "Περικλειδῶν 1",
     "previous": "Perikleides 2",
     "next": "Perikleidon 2",
+    "sort_key": "Perikleidon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 748,
-        "author": "Ruge"
+        "end": 748,
+        "author": "W. Ruge."
       }
     ]
   },
   {
     "lemma": "Perikleidon 2",
-    "previous": "Perikleidon 1",
+    "previous": "Περικλειδῶν 1",
     "next": "Perikleitos 1",
     "chapters": [
       {
@@ -7755,10 +7758,12 @@
     "lemma": "Perikles 7",
     "previous": "Perikles 6",
     "next": "Periklos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 792,
-        "author": "Enßlin"
+        "end": 792,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -7788,10 +7793,12 @@
     "lemma": "Periklymenos 1",
     "previous": "Periklymene",
     "next": "Periklymenos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 792,
-        "author": "Scherling"
+        "end": 792,
+        "author": "K. Scherling."
       }
     ]
   },
@@ -7799,10 +7806,12 @@
     "lemma": "Periklymenos 2",
     "previous": "Periklymenos 1",
     "next": "Periklymenos 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 792,
-        "author": "Scherling"
+        "end": 792,
+        "author": "K. Scherling."
       }
     ]
   },
@@ -7948,10 +7957,12 @@
     "lemma": "Perilaos 6",
     "previous": "Perilaos 5",
     "next": "Perilaos 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 796,
-        "author": "Kroll"
+        "end": 796,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -8027,10 +8038,12 @@
     "lemma": "Perimede 1",
     "previous": "Perillos 2",
     "next": "Perimede 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 798,
-        "author": "Kolf"
+        "end": 798,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8038,10 +8051,12 @@
     "lemma": "Perimede 2",
     "previous": "Perimede 1",
     "next": "Perimede 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 798,
-        "author": "Kolf"
+        "end": 798,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8062,10 +8077,12 @@
     "lemma": "Perimede 4",
     "previous": "Perimede 3",
     "next": "Perimede 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 798,
-        "author": "Kolf"
+        "end": 798,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8084,10 +8101,12 @@
     "lemma": "Perimede 6",
     "previous": "Perimede 5",
     "next": "Perimedes 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 798,
-        "author": "Kolf"
+        "end": 798,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8106,10 +8125,12 @@
     "lemma": "Perimedes 2",
     "previous": "Perimedes 1",
     "next": "Perimedes 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 798,
-        "author": "Kolf"
+        "end": 798,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8128,10 +8149,12 @@
     "lemma": "Perimedes 4",
     "previous": "Perimedes 3",
     "next": "Perimedes 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 799,
-        "author": "Kolf"
+        "end": 799,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8139,10 +8162,12 @@
     "lemma": "Perimedes 5",
     "previous": "Perimedes 4",
     "next": "Perimedes 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 799,
-        "author": "Kolf"
+        "end": 799,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8150,10 +8175,12 @@
     "lemma": "Perimedes 6",
     "previous": "Perimedes 5",
     "next": "Perimedes 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 799,
-        "author": "Kolf"
+        "end": 799,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -8161,10 +8188,12 @@
     "lemma": "Perimedes 7",
     "previous": "Perimedes 6",
     "next": "Perimele 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 799,
-        "author": "Kolf"
+        "end": 799,
+        "author": "M. C. van der Kolf."
       }
     ]
   },
@@ -12097,9 +12126,12 @@
     "lemma": "Petronius 19",
     "previous": "Petronius 18",
     "next": "Petronius 20",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1197
+        "start": 1197,
+        "end": 1197,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12107,10 +12139,12 @@
     "lemma": "Petronius 20",
     "previous": "Petronius 19",
     "next": "Petronius 21",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1197,
-        "author": "Enßlin"
+        "end": 1197,
+        "author": "W. Enßlin."
       }
     ]
   },
@@ -12140,9 +12174,12 @@
     "lemma": "Petronius 23",
     "previous": "Petronius 22",
     "next": "Petronius 23a",
+    "redirect": "Peducaeus 4",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1199
+        "start": 1199,
+        "end": 1199
       }
     ]
   },
@@ -12150,10 +12187,12 @@
     "lemma": "Petronius 23a",
     "previous": "Petronius 23",
     "next": "Petronius 24",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1199,
-        "author": "Lippold, Georg"
+        "end": 1199,
+        "author": "G. Lippold."
       }
     ]
   },
@@ -12182,10 +12221,12 @@
     "lemma": "Petronius 26",
     "previous": "Petronius 25",
     "next": "Petronius 27",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1201,
-        "author": "Stein, [Arthur]"
+        "end": 1201,
+        "author": "Stein."
       }
     ]
   },
@@ -12204,10 +12245,12 @@
     "lemma": "Petronius 28",
     "previous": "Petronius 27",
     "next": "Petronius 29",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1201,
-        "author": "Enßlin"
+        "end": 1201,
+        "author": "W. Enßlin."
       }
     ]
   },
