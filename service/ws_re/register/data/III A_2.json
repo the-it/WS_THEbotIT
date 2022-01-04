@@ -4423,10 +4423,12 @@
     "lemma": "Statilius 25",
     "previous": "Statilius 24",
     "next": "Statilius 26",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2194,
-        "author": "Stein, [Arthur]"
+        "end": 2194,
+        "author": "Stein."
       }
     ]
   },
@@ -4445,10 +4447,12 @@
     "lemma": "Statilius 27",
     "previous": "Statilius 26",
     "next": "Statilius 28",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2195,
-        "author": "Fluss"
+        "end": 2195,
+        "author": "Fluss."
       }
     ]
   },
@@ -4478,10 +4482,12 @@
     "lemma": "Statilius 30",
     "previous": "Statilius 29",
     "next": "Statilius 31",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2195,
-        "author": "Fluss"
+        "end": 2195,
+        "author": "Fluss."
       }
     ]
   },
@@ -4624,10 +4630,12 @@
     "lemma": "Statilius 42",
     "previous": "Statilius 41",
     "next": "Statilius 43",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2208,
-        "author": "Nagl"
+        "end": 2208,
+        "author": "Nagl."
       }
     ]
   },
@@ -4668,10 +4676,12 @@
     "lemma": "Statilius 46",
     "previous": "Statilius 45",
     "next": "Statina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2210,
-        "author": "Stein, [Arthur]"
+        "end": 2210,
+        "author": "Stein."
       }
     ]
   },
@@ -5611,10 +5621,12 @@
     "lemma": "Steiritis",
     "previous": "Steiria",
     "next": "Steius",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2306,
-        "author": "Gebhard"
+        "end": 2306,
+        "author": "Gebhard."
       }
     ]
   },
@@ -5622,17 +5634,19 @@
     "lemma": "Steius",
     "previous": "Steiritis",
     "next": "Stektorion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2306,
-        "author": "Fluss"
+        "end": 2306,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Stektorion",
     "previous": "Steius",
-    "next": "Stelai",
+    "next": "Στῆλαι",
     "chapters": [
       {
         "start": 2306,
@@ -5641,19 +5655,22 @@
     ]
   },
   {
-    "lemma": "Stelai",
+    "lemma": "Στῆλαι",
     "previous": "Stektorion",
     "next": "Stelatesa",
+    "sort_key": "Stelai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2306,
-        "author": "Bürchner"
+        "end": 2306,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Stelatesa",
-    "previous": "Stelai",
+    "previous": "Στῆλαι",
     "next": "Stele",
     "chapters": [
       {
@@ -5765,10 +5782,12 @@
     "lemma": "Stemmatios",
     "previous": "Stemmatias",
     "next": "Stena",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2332,
-        "author": "Seeck"
+        "end": 2332,
+        "author": "Seeck."
       }
     ]
   },

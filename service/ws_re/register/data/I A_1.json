@@ -8429,7 +8429,7 @@
   },
   {
     "lemma": "Ripari",
-    "previous": "Ripanus",
+    "previous": "Ripaia ore",
     "next": "Riparienses milites",
     "redirect": "Iordanis",
     "proof_read": 2,
@@ -12541,10 +12541,12 @@
     "lemma": "Rubicaria",
     "previous": "Rubi",
     "next": "Rubico",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1162,
-        "author": "Dessau"
+        "end": 1162,
+        "author": "Dessau."
       }
     ]
   },
@@ -12624,10 +12626,12 @@
     "lemma": "Rubrae 1",
     "previous": "Rubra 3",
     "next": "Rubrae 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1166,
-        "author": "Schulten"
+        "end": 1166,
+        "author": "Schulten."
       }
     ]
   },
@@ -12646,10 +12650,12 @@
     "lemma": "Rubraesus",
     "previous": "Rubrae 2",
     "next": "ad Rubras",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1167,
-        "author": "Haug"
+        "end": 1167,
+        "author": "Haug."
       }
     ]
   },
@@ -12729,10 +12735,12 @@
     "lemma": "Rubricata",
     "previous": "Rubrica",
     "next": "Rubricatus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1168,
-        "author": "Schulten"
+        "end": 1168,
+        "author": "Schulten."
       }
     ]
   },
@@ -12740,10 +12748,12 @@
     "lemma": "Rubricatus 1",
     "previous": "Rubricata",
     "next": "Rubricatus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1168,
-        "author": "Schulten"
+        "end": 1168,
+        "author": "Schulten."
       }
     ]
   },
@@ -12787,9 +12797,12 @@
     "lemma": "Rubrius 1",
     "previous": "Rubrius",
     "next": "Rubrius 2",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1169
+        "start": 1169,
+        "end": 1169
       }
     ]
   },
@@ -12838,10 +12851,12 @@
     "lemma": "Rubrius 6",
     "previous": "Rubrius 5",
     "next": "Rubrius 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1170,
-        "author": "Münzer"
+        "end": 1170,
+        "author": "Münzer."
       }
     ]
   },
@@ -12849,9 +12864,12 @@
     "lemma": "Rubrius 7",
     "previous": "Rubrius 6",
     "next": "Rubrius 8",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1170
+        "start": 1170,
+        "end": 1170,
+        "author": "Stein."
       }
     ]
   },
@@ -12859,10 +12877,12 @@
     "lemma": "Rubrius 8",
     "previous": "Rubrius 7",
     "next": "Rubrius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1170,
-        "author": "Stein, [Arthur]"
+        "end": 1170,
+        "author": "Stein."
       }
     ]
   },
@@ -12870,9 +12890,12 @@
     "lemma": "Rubrius 9",
     "previous": "Rubrius 8",
     "next": "Rubrius 10",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1170
+        "start": 1170,
+        "end": 1170,
+        "author": "Münzer."
       }
     ]
   },

@@ -9008,10 +9008,12 @@
     "lemma": "Surdinus",
     "previous": "Surdinius Gallus",
     "next": "Suregethes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 965,
-        "author": "Kroll"
+        "end": 965,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -9087,38 +9089,45 @@
     "lemma": "Suriates",
     "previous": "Suriacus",
     "next": "Suricinium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 968,
-        "author": "Philipp"
+        "end": 968,
+        "author": "Philipp."
       }
     ]
   },
   {
     "lemma": "Suricinium",
     "previous": "Suriates",
-    "next": "Suriga",
+    "next": "Σούριγα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 968,
-        "author": "Keune"
+        "end": 968,
+        "author": "Keune."
       }
     ]
   },
   {
-    "lemma": "Suriga",
+    "lemma": "Σούριγα",
     "previous": "Suricinium",
     "next": "Surikon",
+    "sort_key": "Suriga",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 968,
-        "author": "Dessau"
+        "end": 968,
+        "author": "Dessau."
       }
     ]
   },
   {
     "lemma": "Surikon",
-    "previous": "Suriga",
+    "previous": "Σούριγα",
     "next": "Surillius",
     "chapters": [
       {

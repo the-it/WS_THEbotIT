@@ -11926,10 +11926,12 @@
     "lemma": "Sanigai",
     "previous": "Sanideia",
     "next": "Saniglon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2282,
-        "author": "Herrmann"
+        "end": 2282,
+        "author": "Herrmann."
       }
     ]
   },
@@ -11937,10 +11939,12 @@
     "lemma": "Saniglon",
     "previous": "Sanigai",
     "next": "Sanina 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2283,
-        "author": "Vulić"
+        "end": 2283,
+        "author": "Vulić."
       }
     ]
   },
@@ -11948,10 +11952,12 @@
     "lemma": "Sanina 1",
     "previous": "Saniglon",
     "next": "Sanina 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2283,
-        "author": "Moritz, [Bernhard]"
+        "end": 2283,
+        "author": "Moritz."
       }
     ]
   },
@@ -11959,10 +11965,12 @@
     "lemma": "Sanina 2",
     "previous": "Sanina 1",
     "next": "Sanis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2283,
-        "author": "Weissbach"
+        "end": 2283,
+        "author": "Weissbach."
       }
     ]
   },
@@ -11983,10 +11991,12 @@
     "lemma": "Sanisene",
     "previous": "Sanis",
     "next": "Sanisera",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2283,
-        "author": "Ruge"
+        "end": 2283,
+        "author": "Ruge."
       }
     ]
   },
@@ -11994,10 +12004,12 @@
     "lemma": "Sanisera",
     "previous": "Sanisene",
     "next": "Sanisium",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2283,
-        "author": "Schulten"
+        "end": 2283,
+        "author": "Schulten."
       }
     ]
   },
@@ -12051,9 +12063,12 @@
     "lemma": "Sannat",
     "previous": "Sannaba",
     "next": "Sanni",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2284
+        "start": 2284,
+        "end": 2284,
+        "author": "Keune."
       }
     ]
   },
@@ -12156,10 +12171,12 @@
     "lemma": "Sanos",
     "previous": "Sanona",
     "next": "Sanquinius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2286,
-        "author": "Philipp"
+        "end": 2286,
+        "author": "Philipp."
       }
     ]
   },
@@ -12212,10 +12229,12 @@
     "lemma": "Sansat",
     "previous": "Sanquinius 4",
     "next": "Sansiacus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2287,
-        "author": "Keune"
+        "end": 2287,
+        "author": "Keune."
       }
     ]
   },
@@ -12236,10 +12255,12 @@
     "lemma": "Santelec",
     "previous": "Sansiacus",
     "next": "Santen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2287,
-        "author": "Keune"
+        "end": 2287,
+        "author": "Keune."
       }
     ]
   },
@@ -12270,10 +12291,12 @@
     "lemma": "Santiacus",
     "previous": "Santerus",
     "next": "Santicum, Sianticum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2288,
-        "author": "Keune"
+        "end": 2288,
+        "author": "Keune."
       }
     ]
   },
@@ -13022,28 +13045,33 @@
   {
     "lemma": "Sapothrenai",
     "previous": "Sapores",
-    "next": "Sappharitai",
+    "next": "Σαπφαρῖται",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2356,
-        "author": "Herrmann"
+        "end": 2356,
+        "author": "Herrmann."
       }
     ]
   },
   {
-    "lemma": "Sappharitai",
+    "lemma": "Σαπφαρῖται",
     "previous": "Sapothrenai",
     "next": "Sapphinios",
+    "sort_key": "Sappharitai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2356,
-        "author": "Moritz, [Bernhard]"
+        "end": 2356,
+        "author": "Moritz."
       }
     ]
   },
   {
     "lemma": "Sapphinios",
-    "previous": "Sappharitai",
+    "previous": "Σαπφαρῖται",
     "next": "Sapphir",
     "chapters": [
       {
@@ -13119,7 +13147,7 @@
   {
     "lemma": "Sapra limen 1",
     "previous": "Sappo",
-    "next": "Sapra limen 2",
+    "next": "Σαπρὰ λίμνη 2",
     "chapters": [
       {
         "start": 2385,
@@ -13128,18 +13156,22 @@
     ]
   },
   {
-    "lemma": "Sapra limen 2",
+    "lemma": "Σαπρὰ λίμνη 2",
     "previous": "Sapra limen 1",
     "next": "Sapricius 1",
+    "sort_key": "Sapralimen 2",
+    "redirect": "Byke",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2385
+        "start": 2385,
+        "end": 2385
       }
     ]
   },
   {
     "lemma": "Sapricius 1",
-    "previous": "Sapra limen 2",
+    "previous": "Σαπρὰ λίμνη 2",
     "next": "Sapricius 2",
     "proof_read": 3,
     "chapters": [
@@ -13218,10 +13250,12 @@
     "lemma": "Sara 3",
     "previous": "Sara 2",
     "next": "Sara 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2386,
-        "author": "Keune"
+        "end": 2386,
+        "author": "Keune."
       }
     ]
   },
@@ -13325,7 +13359,7 @@
   {
     "lemma": "Saraciacus",
     "previous": "Sarachero",
-    "next": "Saragina",
+    "next": "Σαραγίνα",
     "chapters": [
       {
         "start": 2387,
@@ -13334,19 +13368,22 @@
     ]
   },
   {
-    "lemma": "Saragina",
+    "lemma": "Σαραγίνα",
     "previous": "Saraciacus",
     "next": "Saraka 1",
+    "sort_key": "Saragina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2387,
-        "author": "Fischer"
+        "end": 2387,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Saraka 1",
-    "previous": "Saragina",
+    "previous": "Σαραγίνα",
     "next": "Sarangai",
     "proof_read": 2,
     "chapters": [
@@ -13458,10 +13495,12 @@
     "lemma": "Saralium",
     "previous": "Saralapis",
     "next": "Σάραλος 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2391,
-        "author": "Ruge"
+        "end": 2391,
+        "author": "Ruge."
       }
     ]
   },
@@ -13640,7 +13679,7 @@
   {
     "lemma": "Sarapion 3",
     "previous": "Sarapion 2",
-    "next": "Sarapionos hormos",
+    "next": "Σαραπίωνος ὅρμος",
     "chapters": [
       {
         "start": 2394,
@@ -13649,19 +13688,22 @@
     ]
   },
   {
-    "lemma": "Sarapionos hormos",
+    "lemma": "Σαραπίωνος ὅρμος",
     "previous": "Sarapion 3",
     "next": "Sarapis 1",
+    "sort_key": "Sarapionos hormos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2394,
-        "author": "Fischer"
+        "end": 2394,
+        "author": "Fischer."
       }
     ]
   },
   {
     "lemma": "Sarapis 1",
-    "previous": "Sarapionos hormos",
+    "previous": "Σαραπίωνος ὅρμος",
     "next": "Sarapis 2",
     "chapters": [
       {
@@ -13750,10 +13792,12 @@
     "lemma": "Sarbakon",
     "previous": "Saravus",
     "next": "Σάρβανα",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2433,
-        "author": "Herrmann"
+        "end": 2433,
+        "author": "Herrmann."
       }
     ]
   },
@@ -13824,10 +13868,12 @@
     "lemma": "Sarbis",
     "previous": "Sarbiniacum",
     "next": "Sarcapos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2434,
-        "author": "Zwicker"
+        "end": 2434,
+        "author": "Zwicker."
       }
     ]
   },
@@ -13886,10 +13932,13 @@
     "lemma": "Sarcinium, Sarcingus",
     "previous": "Sarcina",
     "next": "Sarcinium, Sarcingus 1",
+    "sort_key": "Sarcinium,sarcingus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2435,
-        "author": "Keune"
+        "end": 2435,
+        "author": "Keune."
       }
     ]
   },
@@ -13920,10 +13969,12 @@
     "lemma": "Sarclitas",
     "previous": "Sarcinium, Sarcingus 2",
     "next": "Sarculum",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2436,
-        "author": "Keune"
+        "end": 2436,
+        "author": "Keune."
       }
     ]
   },
@@ -13982,10 +14033,12 @@
     "lemma": "Sardemisus",
     "previous": "Sardeis",
     "next": "Sardendenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
-        "author": "Ruge"
+        "end": 2479,
+        "author": "Ruge."
       }
     ]
   },
@@ -13993,10 +14046,12 @@
     "lemma": "Sardendenos",
     "previous": "Sardemisus",
     "next": "Sardene",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
-        "author": "Adler"
+        "end": 2479,
+        "author": "Adler."
       }
     ]
   },
@@ -14026,10 +14081,12 @@
     "lemma": "Sardessios",
     "previous": "Sardenus",
     "next": "Sardessos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
-        "author": "Adler"
+        "end": 2479,
+        "author": "Adler."
       }
     ]
   },
@@ -14037,10 +14094,12 @@
     "lemma": "Sardessos",
     "previous": "Sardessios",
     "next": "Sardiane",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2479,
-        "author": "Bürchner"
+        "end": 2479,
+        "author": "Bürchner."
       }
     ]
   },
@@ -14082,10 +14141,12 @@
     "lemma": "Sardiates",
     "previous": "Sardiane 2",
     "next": "Sardica",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2480,
-        "author": "Vulić"
+        "end": 2480,
+        "author": "Vulić."
       }
     ]
   },
@@ -14167,10 +14228,12 @@
     "lemma": "Sardones",
     "previous": "Sardona",
     "next": "Sardonyx horos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2496,
-        "author": "Keune"
+        "end": 2496,
+        "author": "Keune."
       }
     ]
   },
