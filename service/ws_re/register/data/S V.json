@@ -1329,10 +1329,12 @@
     "lemma": "Lachmas",
     "previous": "Kylix",
     "next": "Lairbenos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 521,
-        "author": "Hölscher"
+        "end": 521,
+        "author": "Hölscher."
       }
     ]
   },
@@ -1351,10 +1353,12 @@
     "lemma": "Laischa",
     "previous": "Lairbenos",
     "next": "Laistrygonen",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 536,
-        "author": "Hölscher"
+        "end": 537,
+        "author": "Hölscher."
       }
     ]
   },
@@ -1384,10 +1388,12 @@
     "lemma": "Lakkum",
     "previous": "Lakkos Asphar",
     "next": "Lampitos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
-        "author": "Hölscher"
+        "end": 540,
+        "author": "Hölscher."
       }
     ]
   },
@@ -1522,10 +1528,12 @@
     "lemma": "Lecho",
     "previous": "Lechaion",
     "next": "Legeon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 546,
-        "author": "Kroll"
+        "end": 546,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -1616,10 +1624,12 @@
     "lemma": "Leprea",
     "previous": "Lepavist",
     "next": "Lepreon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 550,
-        "author": "Fiehn"
+        "end": 550,
+        "author": "Fiehn."
       }
     ]
   },
@@ -1660,10 +1670,12 @@
     "lemma": "Leuciana",
     "previous": "Leges Corneliae 2",
     "next": "Leuke 4a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 576,
-        "author": "Schulten"
+        "end": 576,
+        "author": "Schulten."
       }
     ]
   },
@@ -1671,10 +1683,12 @@
     "lemma": "Leuke 4a",
     "previous": "Leuciana",
     "next": "Lex Glitia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 576,
-        "author": "Hölscher"
+        "end": 576,
+        "author": "Hölscher."
       }
     ]
   },
@@ -1781,10 +1795,12 @@
     "lemma": "Licirrus",
     "previous": "Licinium",
     "next": "Lictia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 594,
-        "author": "Philipp"
+        "end": 594,
+        "author": "Philipp."
       }
     ]
   },
@@ -1792,10 +1808,12 @@
     "lemma": "Lictia",
     "previous": "Licirrus",
     "next": "Lidus oder Ledus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 594,
-        "author": "Philipp"
+        "end": 594,
+        "author": "Philipp."
       }
     ]
   },
@@ -1836,10 +1854,12 @@
     "lemma": "Liliacus",
     "previous": "Ligeia (K) 2",
     "next": "Limendas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 594,
-        "author": "Keune"
+        "end": 594,
+        "author": "Keune."
       }
     ]
   },
@@ -1847,10 +1867,12 @@
     "lemma": "Limendas",
     "previous": "Liliacus",
     "next": "Limen(ius) a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 594,
-        "author": "Lippold, Georg"
+        "end": 594,
+        "author": "Lippold."
       }
     ]
   },
@@ -1904,10 +1926,12 @@
     "lemma": "Lotodos",
     "previous": "Livius 10a",
     "next": "Luccius 2a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 607,
-        "author": "Fluss"
+        "end": 607,
+        "author": "Fluss."
       }
     ]
   },
@@ -2941,7 +2965,6 @@
   {
     "lemma": "Maximinus 25f",
     "previous": "Maximinus 25e",
-    "next": "Maximinus 25g",
     "proof_read": 2,
     "chapters": [
       {
@@ -2953,6 +2976,8 @@
   },
   {
     "lemma": "Maximina",
+    "previous": "Maximinus 34",
+    "next": "Maximius",
     "sort_key": "Maximinus 35",
     "proof_read": 2,
     "chapters": [
@@ -2965,7 +2990,6 @@
   },
   {
     "lemma": "Maximinus 25g",
-    "previous": "Maximinus 25f",
     "next": "Maximinus 26",
     "proof_read": 2,
     "chapters": [
