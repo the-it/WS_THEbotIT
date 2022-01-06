@@ -21157,10 +21157,12 @@
     "lemma": "Eunomos 4",
     "previous": "Eunomos 3",
     "next": "Eunomos 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1132,
-        "author": "Kirchner"
+        "end": 1132,
+        "author": "Kirchner."
       }
     ]
   },
@@ -21168,11 +21170,12 @@
     "lemma": "Eunomos 5",
     "previous": "Eunomos 4",
     "next": "Eunomos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1132,
         "end": 1133,
-        "author": "Kirchner"
+        "author": "Kirchner."
       }
     ]
   },
@@ -21252,10 +21255,12 @@
     "lemma": "Eunosta",
     "previous": "Eunones",
     "next": "Eunostidai 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1133,
-        "author": "Waser"
+        "end": 1133,
+        "author": "Waser."
       }
     ]
   },
@@ -21432,10 +21437,12 @@
     "lemma": "Euodianos",
     "previous": "Euodia 2",
     "next": "Euodios 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1153,
-        "author": "Schmid"
+        "end": 1153,
+        "author": "W. Schmid."
       }
     ]
   },
@@ -21514,10 +21521,12 @@
     "lemma": "Euodos 5",
     "previous": "Euodos 4",
     "next": "Euodos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
-        "author": "Reitzenstein"
+        "end": 1155,
+        "author": "Reitzenstein."
       }
     ]
   },
@@ -21536,38 +21545,45 @@
     "lemma": "Euoia",
     "previous": "Euodos 6",
     "next": "Euoinos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
-        "author": "Tümpel"
+        "end": 1155,
+        "author": "Tümpel."
       }
     ]
   },
   {
     "lemma": "Euoinos",
     "previous": "Euoia",
-    "next": "Euonaktideioi",
+    "next": "Εὐωνακτίδειοι",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
-        "author": "Bürchner"
+        "end": 1155,
+        "author": "Bürchner."
       }
     ]
   },
   {
-    "lemma": "Euonaktideioi",
+    "lemma": "Εὐωνακτίδειοι",
     "previous": "Euoinos",
     "next": "Euonios",
+    "sort_key": "Euonaktideioi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1155,
-        "author": "Hiller von Gaertringen"
+        "end": 1155,
+        "author": "Hiller v. Gaertringen."
       }
     ]
   },
   {
     "lemma": "Euonios",
-    "previous": "Euonaktideioi",
+    "previous": "Εὐωνακτίδειοι",
     "next": "Euonyme",
     "chapters": [
       {
@@ -21592,10 +21608,12 @@
     "lemma": "Euonymeia",
     "previous": "Euonyme",
     "next": "Euonymianos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1156,
-        "author": "Bürchner"
+        "end": 1156,
+        "author": "Bürchner."
       }
     ]
   },
@@ -21603,10 +21621,12 @@
     "lemma": "Euonymianos",
     "previous": "Euonymeia",
     "next": "Euonymitai",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1156,
-        "author": "Robert"
+        "end": 1156,
+        "author": "C. Robert."
       }
     ]
   },
@@ -21670,10 +21690,12 @@
     "lemma": "Euope 1",
     "previous": "Euonymos 3",
     "next": "Euope 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1158,
-        "author": "Tümpel"
+        "end": 1158,
+        "author": "Tümpel."
       }
     ]
   },
@@ -21681,10 +21703,12 @@
     "lemma": "Euope 2",
     "previous": "Euope 1",
     "next": "Euopis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1158,
-        "author": "Tümpel"
+        "end": 1158,
+        "author": "Tümpel."
       }
     ]
   },
@@ -21726,10 +21750,12 @@
     "lemma": "Euormidas",
     "previous": "Euoras",
     "next": "Eupalamos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1159,
-        "author": "Kirchner"
+        "end": 1159,
+        "author": "Kirchner."
       }
     ]
   },
@@ -21804,10 +21830,12 @@
     "lemma": "Eupaterius",
     "previous": "Eupatereia",
     "next": "Eupator 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1160,
-        "author": "Seeck"
+        "end": 1160,
+        "author": "Seeck."
       }
     ]
   },
@@ -21815,10 +21843,12 @@
     "lemma": "Eupator 1",
     "previous": "Eupaterius",
     "next": "Eupator 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1160,
-        "author": "Willrich"
+        "end": 1160,
+        "author": "Willrich."
       }
     ]
   },

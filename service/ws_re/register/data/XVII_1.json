@@ -5044,10 +5044,12 @@
     "lemma": "Nikias 8",
     "previous": "Nikias 7",
     "next": "Nikias 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
-        "author": "Stier"
+        "end": 333,
+        "author": "H. E. Stier."
       }
     ]
   },
@@ -5055,10 +5057,12 @@
     "lemma": "Nikias 9",
     "previous": "Nikias 8",
     "next": "Nikias 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 333,
-        "author": "Berve"
+        "end": 333,
+        "author": "Helmut Berve."
       }
     ]
   },
@@ -5147,10 +5151,12 @@
     "lemma": "Nikias 17",
     "previous": "Nikias 16",
     "next": "Nikias 18",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 335,
-        "author": "Münzer"
+        "end": 335,
+        "author": "F. Münzer."
       }
     ]
   },
@@ -5158,9 +5164,13 @@
     "lemma": "Nikias 18",
     "previous": "Nikias 17",
     "next": "Nikias 19",
+    "redirect": "Curtius 22",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 335
+        "start": 335,
+        "end": 335,
+        "author": "F. Münzer."
       }
     ]
   },

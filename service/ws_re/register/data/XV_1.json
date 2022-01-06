@@ -2920,10 +2920,12 @@
     "lemma": "Megaris 1",
     "previous": "Megarikoi",
     "next": "Megaris 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 220,
-        "author": "Ruge"
+        "end": 220,
+        "author": "Ruge."
       }
     ]
   },
@@ -3016,10 +3018,12 @@
     "lemma": "Megas 2",
     "previous": "Megas",
     "next": "Megas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 230,
-        "author": "Kroll"
+        "end": 230,
+        "author": "Kroll."
       }
     ]
   },
@@ -3040,10 +3044,12 @@
     "lemma": "Megasthenes 1",
     "previous": "Megas 3",
     "next": "Megasthenes 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 230,
-        "author": "Obst"
+        "end": 230,
+        "author": "Obst."
       }
     ]
   },
@@ -3097,10 +3103,12 @@
     "lemma": "Megentira",
     "previous": "Megeda",
     "next": "Megerthis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 327,
-        "author": "Enßlin"
+        "end": 327,
+        "author": "Enßlin."
       }
     ]
   },
@@ -3130,10 +3138,12 @@
     "lemma": "Meges 2",
     "previous": "Meges 1",
     "next": "Meges 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
-        "author": "Kruse"
+        "end": 328,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -3141,10 +3151,12 @@
     "lemma": "Meges 3",
     "previous": "Meges 2",
     "next": "Meges 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 328,
-        "author": "Kruse"
+        "end": 328,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -6533,10 +6545,12 @@
     "lemma": "Melias 1",
     "previous": "Meliades 2",
     "next": "Melias 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 507,
-        "author": "Modrze"
+        "end": 507,
+        "author": "Modrze."
       }
     ]
   },
@@ -6554,7 +6568,7 @@
   {
     "lemma": "Melias 3",
     "previous": "Melias 2",
-    "next": "Melias kolpos",
+    "next": "Μελίας κόλπος",
     "chapters": [
       {
         "start": 507,
@@ -6563,19 +6577,22 @@
     ]
   },
   {
-    "lemma": "Melias kolpos",
+    "lemma": "Μελίας κόλπος",
     "previous": "Melias 3",
     "next": "Meliastai",
+    "sort_key": "Melias kolpos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 507,
-        "author": "Oberhummer"
+        "end": 507,
+        "author": "Oberhummer."
       }
     ]
   },
   {
     "lemma": "Meliastai",
-    "previous": "Melias kolpos",
+    "previous": "Μελίας κόλπος",
     "next": "Meliasten",
     "chapters": [
       {
@@ -6680,10 +6697,12 @@
     "lemma": "Meligedius",
     "previous": "Melides",
     "next": "Meligunis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 514,
-        "author": "Enßlin"
+        "end": 514,
+        "author": "Enßlin."
       }
     ]
   },
@@ -6724,10 +6743,12 @@
     "lemma": "Melinaia",
     "previous": "Melina",
     "next": "Melinianus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 521,
-        "author": "Kruse"
+        "end": 521,
+        "author": "gr. Kruse."
       }
     ]
   },
@@ -6735,10 +6756,12 @@
     "lemma": "Melinianus",
     "previous": "Melinaia",
     "next": "Melinno",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 521,
-        "author": "Enßlin"
+        "end": 521,
+        "author": "Enßlin."
       }
     ]
   },
@@ -6779,10 +6802,12 @@
     "lemma": "Melior",
     "previous": "Meliodunum",
     "next": "Melios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 524,
-        "author": "Enßlin"
+        "end": 524,
+        "author": "Enßlin."
       }
     ]
   },
@@ -6801,10 +6826,12 @@
     "lemma": "Meliphron",
     "previous": "Melios",
     "next": "Meliphthongos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 524,
-        "author": "Enßlin"
+        "end": 524,
+        "author": "Enßlin."
       }
     ]
   },
@@ -6880,10 +6907,12 @@
     "lemma": "Melissa 6",
     "previous": "Melissa 5",
     "next": "Melissaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 528,
-        "author": "Enßlin"
+        "end": 528,
+        "author": "Enßlin."
       }
     ]
   },
@@ -6924,10 +6953,12 @@
     "lemma": "Melisseus 3",
     "previous": "Melisseus 2",
     "next": "Melisseus 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Kolf"
+        "end": 529,
+        "author": "Van der Kolf."
       }
     ]
   },
@@ -7036,10 +7067,12 @@
     "lemma": "Melistion",
     "previous": "Melissus",
     "next": "Melitaia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 534,
-        "author": "Fabricius"
+        "end": 534,
+        "author": "Fabricius."
       }
     ]
   },
@@ -7069,10 +7102,12 @@
     "lemma": "Melite 1",
     "previous": "Melitara 1",
     "next": "Melite 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
-        "author": "Kolf"
+        "end": 540,
+        "author": "Van der Kolf."
       }
     ]
   },
@@ -7102,10 +7137,12 @@
     "lemma": "Melite 4",
     "previous": "Melite 3",
     "next": "Melite 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 540,
-        "author": "Kolf"
+        "end": 540,
+        "author": "Van der Kolf."
       }
     ]
   },
@@ -7124,10 +7161,12 @@
     "lemma": "Melite 6",
     "previous": "Melite 5",
     "next": "Melite 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 541,
-        "author": "Kolf"
+        "end": 541,
+        "author": "Van der Kolf."
       }
     ]
   },
@@ -7146,10 +7185,12 @@
     "lemma": "Melite 8",
     "previous": "Melite 7",
     "next": "Melite 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 541,
-        "author": "Honigmann"
+        "end": 541,
+        "author": "Honigmann."
       }
     ]
   },
@@ -7201,10 +7242,12 @@
     "lemma": "Melite 13",
     "previous": "Melite 12",
     "next": "Melite 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 547,
-        "author": "Kroll"
+        "end": 547,
+        "author": "Kroll."
       }
     ]
   },
@@ -7248,7 +7291,7 @@
   {
     "lemma": "Melitene",
     "previous": "Melite 16",
-    "next": "Melitenoi",
+    "next": "Μελιτηνοί",
     "chapters": [
       {
         "start": 548,
@@ -7257,19 +7300,22 @@
     ]
   },
   {
-    "lemma": "Melitenoi",
+    "lemma": "Μελιτηνοί",
     "previous": "Melitene",
     "next": "Meliteus",
+    "sort_key": "Melitenoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 549,
-        "author": "Fluss"
+        "end": 549,
+        "author": "Fluss."
       }
     ]
   },
   {
     "lemma": "Meliteus",
-    "previous": "Melitenoi",
+    "previous": "Μελιτηνοί",
     "next": "Melitida",
     "chapters": [
       {
@@ -7350,10 +7396,12 @@
     "lemma": "Melitius 4",
     "previous": "Melitius 3",
     "next": "Melitius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 552,
-        "author": "Enßlin"
+        "end": 552,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14600,10 +14648,13 @@
     "lemma": "Mercurialis pagus",
     "previous": "Mercuriales",
     "next": "Mercurianus",
+    "sort_key": "Mercurialispagus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 974,
-        "author": "Philipp"
+        "end": 974,
+        "author": "Philipp."
       }
     ]
   },
@@ -14648,9 +14699,12 @@
     "lemma": "Mercurios",
     "previous": "Mercurinus",
     "next": "Mercurium 1",
+    "redirect": "Mercuri 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 975
+        "start": 975,
+        "end": 975
       }
     ]
   },
@@ -14658,10 +14712,12 @@
     "lemma": "Mercurium 1",
     "previous": "Mercurios",
     "next": "Mercurium 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 975,
-        "author": "Treidler"
+        "end": 975,
+        "author": "Treidler."
       }
     ]
   },
@@ -14669,10 +14725,12 @@
     "lemma": "Mercurium 2",
     "previous": "Mercurium 1",
     "next": "Mercurium 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 975,
-        "author": "Treidler"
+        "end": 975,
+        "author": "Treidler."
       }
     ]
   },
@@ -14724,10 +14782,12 @@
     "lemma": "Mercurius 3",
     "previous": "Mercurius 2",
     "next": "Mercurius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1016,
-        "author": "Enßlin"
+        "end": 1016,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14735,10 +14795,12 @@
     "lemma": "Mercurius 4",
     "previous": "Mercurius 3",
     "next": "Mercurius 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1016,
-        "author": "Enßlin"
+        "end": 1016,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14746,10 +14808,12 @@
     "lemma": "Mercurius 5",
     "previous": "Mercurius 4",
     "next": "Mercurius 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1016,
-        "author": "Enßlin"
+        "end": 1016,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14768,10 +14832,12 @@
     "lemma": "Mercurius 7",
     "previous": "Mercurius 6",
     "next": "Mercurius 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1017,
-        "author": "Enßlin"
+        "end": 1017,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14779,10 +14845,12 @@
     "lemma": "Mercurius 8",
     "previous": "Mercurius 7",
     "next": "Mercurius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1017,
-        "author": "Enßlin"
+        "end": 1017,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14790,10 +14858,12 @@
     "lemma": "Mercurius 9",
     "previous": "Mercurius 8",
     "next": "Mercurius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1017,
-        "author": "Enßlin"
+        "end": 1017,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14801,10 +14871,12 @@
     "lemma": "Mercurius 10",
     "previous": "Mercurius 9",
     "next": "Mercurius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1017,
-        "author": "Enßlin"
+        "end": 1017,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14812,10 +14884,12 @@
     "lemma": "Mercurius 11",
     "previous": "Mercurius 10",
     "next": "Mercurius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1017,
-        "author": "Enßlin"
+        "end": 1017,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14872,10 +14946,12 @@
     "lemma": "Merenas",
     "previous": "Merdoi",
     "next": "Merenda",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1017,
-        "author": "Enßlin"
+        "end": 1017,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14977,10 +15053,12 @@
     "lemma": "Meribanes",
     "previous": "Meriba",
     "next": "Meribaudes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1028,
-        "author": "Enßlin"
+        "end": 1028,
+        "author": "Enßlin."
       }
     ]
   },
@@ -14988,10 +15066,12 @@
     "lemma": "Meribaudes",
     "previous": "Meribanes",
     "next": "Meribriga",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1028,
-        "author": "Enßlin"
+        "end": 1028,
+        "author": "Enßlin."
       }
     ]
   },

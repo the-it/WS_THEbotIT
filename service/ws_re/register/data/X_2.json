@@ -12485,7 +12485,7 @@
   {
     "lemma": "Karbones",
     "previous": "Karbokome",
-    "next": "Karchoi",
+    "next": "Κάρχοι",
     "chapters": [
       {
         "start": 1930,
@@ -12494,19 +12494,22 @@
     ]
   },
   {
-    "lemma": "Karchoi",
+    "lemma": "Κάρχοι",
     "previous": "Karbones",
     "next": "Kardamine",
+    "sort_key": "Karchoi",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1931,
-        "author": "Weissbach"
+        "end": 1931,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Kardamine",
-    "previous": "Karchoi",
+    "previous": "Κάρχοι",
     "next": "Kardamyle 1",
     "chapters": [
       {
@@ -12531,10 +12534,12 @@
     "lemma": "Kardamyle 2",
     "previous": "Kardamyle 1",
     "next": "Kardamylessos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1932,
-        "author": "Geisau"
+        "end": 1932,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -12542,10 +12547,12 @@
     "lemma": "Kardamylessos",
     "previous": "Kardamyle 2",
     "next": "Kardamylites",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1932,
-        "author": "Geisau"
+        "end": 1932,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -12553,10 +12560,12 @@
     "lemma": "Kardamylites",
     "previous": "Kardamylessos",
     "next": "Kardia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1932,
-        "author": "Geisau"
+        "end": 1932,
+        "author": "v. Geisau."
       }
     ]
   },
@@ -12640,7 +12649,7 @@
   {
     "lemma": "Kardys",
     "previous": "Κάρδυνον ὄρος",
-    "next": "Karea",
+    "next": "Καρέα",
     "chapters": [
       {
         "start": 1938,
@@ -12649,19 +12658,22 @@
     ]
   },
   {
-    "lemma": "Karea",
+    "lemma": "Καρέα",
     "previous": "Kardys",
     "next": "Kareios",
+    "sort_key": "Karea",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1938,
-        "author": "Bürchner"
+        "end": 1938,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Kareios",
-    "previous": "Karea",
+    "previous": "Καρέα",
     "next": "Karenitis",
     "chapters": [
       {
@@ -12696,28 +12708,33 @@
   {
     "lemma": "Kareotai",
     "previous": "Karensis",
-    "next": "Kareotis",
+    "next": "Καρεῶτις",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1940,
-        "author": "Herrmann"
+        "end": 1940,
+        "author": "Herrmann."
       }
     ]
   },
   {
-    "lemma": "Kareotis",
+    "lemma": "Καρεῶτις",
     "previous": "Kareotai",
     "next": "Karer",
+    "sort_key": "Kareotis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1940,
-        "author": "Bürchner"
+        "end": 1940,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Karer",
-    "previous": "Kareotis",
+    "previous": "Καρεῶτις",
     "next": "Kargiana",
     "chapters": [
       {
