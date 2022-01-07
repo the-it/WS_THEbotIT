@@ -1050,7 +1050,7 @@
   {
     "lemma": "Semilibral",
     "previous": "Semias",
-    "next": "Semina",
+    "next": "Σήμινα",
     "proof_read": 2,
     "chapters": [
       {
@@ -1061,19 +1061,22 @@
     ]
   },
   {
-    "lemma": "Semina",
+    "lemma": "Σήμινα",
     "previous": "Semilibral",
     "next": "Semiramel",
+    "sort_key": "Semina",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1347,
-        "author": "Weissbach"
+        "end": 1347,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Semiramel",
-    "previous": "Semina",
+    "previous": "Σήμινα",
     "next": "Semiramidos oros",
     "chapters": [
       {
@@ -1111,10 +1114,12 @@
     "lemma": "Semiramis 2",
     "previous": "Semiramis 1",
     "next": "Semirus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1348,
-        "author": "Bürchner"
+        "end": 1348,
+        "author": "Bürchner."
       }
     ]
   },
@@ -1122,10 +1127,12 @@
     "lemma": "Semirus",
     "previous": "Semiramis 2",
     "next": "Semis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1348,
-        "author": "Philipp"
+        "end": 1348,
+        "author": "Philipp."
       }
     ]
   },
@@ -1183,10 +1190,12 @@
     "lemma": "Semivictoriatus",
     "previous": "Semitatrices",
     "next": "Σεμναί, Σεμνοί",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1354,
-        "author": "Regling"
+        "end": 1354,
+        "author": "Regling."
       }
     ]
   },
@@ -1208,10 +1217,12 @@
     "lemma": "Semne 1",
     "previous": "Σεμναί, Σεμνοί",
     "next": "Semne 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1354,
-        "author": "Fischer"
+        "end": 1354,
+        "author": "Fischer."
       }
     ]
   },
@@ -1373,27 +1384,33 @@
   {
     "lemma": "Sempronianus 2",
     "previous": "Sempronianus 1",
-    "next": "Semproniu",
+    "next": "Σεμπρωνίου",
+    "redirect": "Antonius 61",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 1359
+        "start": 1359,
+        "end": 1359
       }
     ]
   },
   {
-    "lemma": "Semproniu",
+    "lemma": "Σεμπρωνίου",
     "previous": "Sempronianus 2",
     "next": "Sempronius",
+    "sort_key": "Semproniu",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1359,
-        "author": "Bürchner"
+        "end": 1359,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Sempronius",
-    "previous": "Semproniu",
+    "previous": "Σεμπρωνίου",
     "next": "Sempronius 1",
     "chapters": [
       {
@@ -1485,10 +1502,12 @@
     "lemma": "Sempronius 8",
     "previous": "Sempronius 7",
     "next": "Sempronius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1361,
-        "author": "Münzer"
+        "end": 1361,
+        "author": "Münzer."
       }
     ]
   },
@@ -1496,10 +1515,12 @@
     "lemma": "Sempronius 9",
     "previous": "Sempronius 8",
     "next": "Sempronius 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1361,
-        "author": "Münzer"
+        "end": 1361,
+        "author": "Münzer."
       }
     ]
   },
@@ -1507,10 +1528,12 @@
     "lemma": "Sempronius 10",
     "previous": "Sempronius 9",
     "next": "Sempronius 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1361,
-        "author": "Münzer"
+        "end": 1361,
+        "author": "Münzer."
       }
     ]
   },
@@ -1518,10 +1541,12 @@
     "lemma": "Sempronius 11",
     "previous": "Sempronius 10",
     "next": "Sempronius 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1361,
-        "author": "Münzer"
+        "end": 1361,
+        "author": "Münzer."
       }
     ]
   },
@@ -1529,10 +1554,12 @@
     "lemma": "Sempronius 12",
     "previous": "Sempronius 11",
     "next": "Sempronius 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1361,
-        "author": "Münzer"
+        "end": 1361,
+        "author": "Münzer."
       }
     ]
   },
@@ -1609,10 +1636,12 @@
     "lemma": "Sempronius 19",
     "previous": "Sempronius 18",
     "next": "Sempronius 20",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1364,
-        "author": "Groag"
+        "end": 1364,
+        "author": "Groag."
       }
     ]
   },
@@ -8138,10 +8167,12 @@
     "lemma": "Sergius 45",
     "previous": "Sergius 44",
     "next": "Sergius 46",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1720,
-        "author": "Keune"
+        "end": 1720,
+        "author": "Keune."
       }
     ]
   },
@@ -8205,10 +8236,12 @@
     "lemma": "Sergius 51",
     "previous": "Sergius 50",
     "next": "Sergius 52",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1721,
-        "author": "Münzer"
+        "end": 1721,
+        "author": "Münzer."
       }
     ]
   },
