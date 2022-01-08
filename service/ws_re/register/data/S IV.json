@@ -4417,10 +4417,12 @@
     "lemma": "Ioannes 16c",
     "previous": "Ioannes 16b",
     "next": "Iolaos 5a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 791,
-        "author": "Kletzel"
+        "end": 791,
+        "author": "Kletzel."
       }
     ]
   },
@@ -4461,10 +4463,13 @@
     "lemma": "Jonathan 3",
     "previous": "Jonathan 2",
     "next": "Ionische Aufstandsmünze",
+    "sort_key": "Ionathan 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 797,
-        "author": "Kletzel"
+        "end": 797,
+        "author": "Kletzel."
       }
     ]
   },
@@ -4494,10 +4499,13 @@
     "lemma": "Joseph 1",
     "previous": "Iontora",
     "next": "Joseph 2",
+    "sort_key": "Ioseph 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 798,
-        "author": "Kletzel"
+        "end": 798,
+        "author": "Kletzel."
       }
     ]
   },
@@ -4560,10 +4568,12 @@
     "lemma": "Itanes",
     "previous": "Italiotikos nomos",
     "next": "Judas 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 800,
-        "author": "Berve"
+        "end": 800,
+        "author": "Berve."
       }
     ]
   },
@@ -4571,10 +4581,13 @@
     "lemma": "Judas 1",
     "previous": "Itanes",
     "next": "Judas 2",
+    "sort_key": "Iudas 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 800,
-        "author": "Kletzel"
+        "end": 800,
+        "author": "Kletzel."
       }
     ]
   },
@@ -4603,7 +4616,7 @@
   {
     "lemma": "Kadiskos",
     "previous": "Kaballarios",
-    "next": "Kadmu pus",
+    "next": "Κάδμου πούς",
     "chapters": [
       {
         "start": 801,
@@ -4612,19 +4625,22 @@
     ]
   },
   {
-    "lemma": "Kadmu pus",
+    "lemma": "Κάδμου πούς",
     "previous": "Kadiskos",
     "next": "Kaiserkult",
+    "sort_key": "Kadmu pus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 803,
-        "author": "Geisau"
+        "end": 803,
+        "author": "v. Geisau."
       }
     ]
   },
   {
     "lemma": "Kaiserkult",
-    "previous": "Kadmu pus",
+    "previous": "Κάδμου πούς",
     "next": "Kalanos 2",
     "chapters": [
       {
@@ -4637,10 +4653,12 @@
     "lemma": "Kalanos 2",
     "previous": "Kaiserkult",
     "next": "Kalas 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 854,
-        "author": "Schoch"
+        "end": 854,
+        "author": "Schoch."
       }
     ]
   },
@@ -4659,10 +4677,12 @@
     "lemma": "Kalas 2",
     "previous": "Kalas 1",
     "next": "Kalas 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 854,
-        "author": "Berve"
+        "end": 854,
+        "author": "Berve."
       }
     ]
   },

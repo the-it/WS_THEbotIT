@@ -1771,10 +1771,12 @@
     "lemma": "Manlius 47a",
     "previous": "Maiandros 1a",
     "next": "Manlius 67a",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 397,
-        "author": "Thomasson"
+        "end": 397,
+        "author": "Bengt E. Thomasson."
       }
     ]
   },
@@ -1828,10 +1830,12 @@
     "lemma": "Menedemos 13",
     "previous": "Meles 5b",
     "next": "Menedemos 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 401,
-        "author": "Schmitt"
+        "end": 401,
+        "author": "Hatto H. Schmitt."
       }
     ]
   },
@@ -1897,9 +1901,12 @@
     "lemma": "Mnaseas 9",
     "previous": "Monsunschiffahrt nach Indien",
     "next": "Munda a",
+    "redirect": true,
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 404
+        "start": 404,
+        "end": 404
       }
     ]
   },

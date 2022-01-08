@@ -8079,7 +8079,7 @@
   {
     "lemma": "Skiapodes",
     "previous": "Skiaditis",
-    "next": "Skiara",
+    "next": "Σκιάρα",
     "chapters": [
       {
         "start": 517,
@@ -8088,19 +8088,22 @@
     ]
   },
   {
-    "lemma": "Skiara",
+    "lemma": "Σκιάρα",
     "previous": "Skiapodes",
     "next": "Skias",
+    "sort_key": "Skiara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 518,
-        "author": "Bürchner"
+        "end": 518,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Skias",
-    "previous": "Skiara",
+    "previous": "Σκιάρα",
     "next": "Skiastes",
     "chapters": [
       {
@@ -8238,7 +8241,7 @@
   {
     "lemma": "Skimpous",
     "previous": "Skiluros",
-    "next": "Skion",
+    "next": "Σκίον",
     "chapters": [
       {
         "start": 527,
@@ -8247,19 +8250,22 @@
     ]
   },
   {
-    "lemma": "Skion",
+    "lemma": "Σκίον",
     "previous": "Skimpous",
     "next": "Skione",
+    "sort_key": "Skion",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 529,
-        "author": "Bürchner"
+        "end": 529,
+        "author": "Bürchner."
       }
     ]
   },
   {
     "lemma": "Skione",
-    "previous": "Skion",
+    "previous": "Σκίον",
     "next": "Skira",
     "chapters": [
       {
@@ -15022,10 +15028,12 @@
     "lemma": "Sorites",
     "previous": "Sornatius",
     "next": "Soritis",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1137,
-        "author": "Kroll"
+        "end": 1137,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -15033,10 +15041,12 @@
     "lemma": "Soritis",
     "previous": "Sorites",
     "next": "Sorna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1137,
-        "author": "Kroll"
+        "end": 1137,
+        "author": "W. Kroll."
       }
     ]
   },
@@ -15044,10 +15054,12 @@
     "lemma": "Sorna",
     "previous": "Soritis",
     "next": "Sornag (Sornax)",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1137,
-        "author": "Keune"
+        "end": 1137,
+        "author": "Keune."
       }
     ]
   },
@@ -15112,10 +15124,12 @@
     "lemma": "Sorobis",
     "previous": "Soroadeios",
     "next": "Soron",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1138,
-        "author": "Schulten"
+        "end": 1138,
+        "author": "Schulten."
       }
     ]
   },
@@ -15134,10 +15148,13 @@
     "lemma": "Sorores, ad",
     "previous": "Soron",
     "next": "Sororia",
+    "sort_key": "Sorores,ad",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1138,
-        "author": "Schulten"
+        "end": 1138,
+        "author": "Schulten."
       }
     ]
   },
@@ -15167,10 +15184,12 @@
     "lemma": "Sorothensis",
     "previous": "Sororia tigillum",
     "next": "Sorpara",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1139,
-        "author": "Dessau"
+        "end": 1139,
+        "author": "Dessau."
       }
     ]
   },
@@ -15178,17 +15197,19 @@
     "lemma": "Sorpara",
     "previous": "Sorothensis",
     "next": "Sortes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1139,
-        "author": "Weissbach"
+        "end": 1139,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Sortes",
     "previous": "Sorpara",
-    "next": "Sorthida",
+    "next": "Σορθίδα",
     "redirect": "Losung",
     "proof_read": 2,
     "chapters": [
@@ -15199,19 +15220,22 @@
     ]
   },
   {
-    "lemma": "Sorthida",
+    "lemma": "Σορθίδα",
     "previous": "Sortes",
     "next": "Sorviodunum",
+    "sort_key": "Sorthida",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1139,
-        "author": "Weissbach"
+        "end": 1139,
+        "author": "Weissbach."
       }
     ]
   },
   {
     "lemma": "Sorviodunum",
-    "previous": "Sorthida",
+    "previous": "Σορθίδα",
     "next": "Sorviodurum",
     "chapters": [
       {
