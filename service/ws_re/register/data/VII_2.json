@@ -9575,7 +9575,7 @@
   {
     "lemma": "Halieis",
     "previous": "Halieion",
-    "next": "Halieuma Theu, alsos",
+    "next": "Ἁλίευμα Θεοῦ, ἄλσος",
     "chapters": [
       {
         "start": 2246,
@@ -9585,24 +9585,29 @@
     ]
   },
   {
-    "lemma": "Halieuma Theu, alsos",
+    "lemma": "Ἁλίευμα Θεοῦ, ἄλσος",
     "previous": "Halieis",
     "next": "Halieus 1",
+    "sort_key": "Halieuma Theu, alsos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2252,
-        "author": "Kiessling, Max"
+        "end": 2252,
+        "author": "Kiessling."
       }
     ]
   },
   {
     "lemma": "Halieus 1",
-    "previous": "Halieuma Theu, alsos",
+    "previous": "Ἁλίευμα Θεοῦ, ἄλσος",
     "next": "Halieus 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2252,
-        "author": "Jessen"
+        "end": 2252,
+        "author": "Jessen."
       }
     ]
   },
@@ -9683,10 +9688,12 @@
     "lemma": "Halimede",
     "previous": "Halikyas",
     "next": "Halimetus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2266,
-        "author": "Eitrem"
+        "end": 2266,
+        "author": "Eitrem."
       }
     ]
   },
@@ -9694,10 +9701,12 @@
     "lemma": "Halimetus",
     "previous": "Halimede",
     "next": "Halimus",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2266,
-        "author": "Münzer"
+        "end": 2266,
+        "author": "Münzer."
       }
     ]
   },
@@ -9730,10 +9739,12 @@
     "lemma": "Halios 1",
     "previous": "Halion",
     "next": "Halios 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2267,
-        "author": "Friedländer"
+        "end": 2267,
+        "author": "P. Friedländer."
       }
     ]
   },
@@ -9764,10 +9775,12 @@
     "lemma": "Halios 4",
     "previous": "Halios 3",
     "next": "Halios 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2268,
-        "author": "Friedländer"
+        "end": 2268,
+        "author": "P. Friedländer."
       }
     ]
   },
@@ -9788,10 +9801,12 @@
     "lemma": "Haliotropios",
     "previous": "Halios 5",
     "next": "Halipedon",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2268,
-        "author": "Bischoff, [Ernst]"
+        "end": 2268,
+        "author": "Bischoff."
       }
     ]
   },
@@ -9844,10 +9859,12 @@
     "lemma": "Halisarna 2",
     "previous": "Halisarna 1",
     "next": "Halitaia",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2270,
-        "author": "Bürchner"
+        "end": 2270,
+        "author": "Bürchner."
       }
     ]
   },
@@ -9855,10 +9872,12 @@
     "lemma": "Halitaia",
     "previous": "Halisarna 2",
     "next": "Halitherses 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2270,
-        "author": "Bürchner"
+        "end": 2270,
+        "author": "Bürchner."
       }
     ]
   },
@@ -9866,10 +9885,12 @@
     "lemma": "Halitherses 1",
     "previous": "Halitaia",
     "next": "Halitherses 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2271,
-        "author": "Friedländer"
+        "end": 2271,
+        "author": "P. Friedländer."
       }
     ]
   },
@@ -9922,10 +9943,12 @@
     "lemma": "Halizones",
     "previous": "Haliussa",
     "next": "Halkyone 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2273,
-        "author": "Ruge"
+        "end": 2273,
+        "author": "Ruge."
       }
     ]
   },
@@ -9944,10 +9967,12 @@
     "lemma": "Halkyone 2",
     "previous": "Halkyone 1",
     "next": "Halkyoneus 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2273,
-        "author": "Stählin"
+        "end": 2273,
+        "author": "Stählin."
       }
     ]
   },
@@ -10015,9 +10040,12 @@
     "lemma": "Halmos",
     "previous": "Halmonia",
     "next": "Halmydessos",
+    "redirect": "Almos 1",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2276
+        "start": 2276,
+        "end": 2276
       }
     ]
   },
@@ -13248,10 +13276,12 @@
     "lemma": "Haterius 2",
     "previous": "Haterius 1",
     "next": "Haterius 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2513,
-        "author": "Stein, [Arthur]"
+        "end": 2513,
+        "author": "Stein."
       }
     ]
   },
@@ -13259,10 +13289,12 @@
     "lemma": "Haterius 3",
     "previous": "Haterius 2",
     "next": "Haterius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2513,
-        "author": "Stein, [Arthur]"
+        "end": 2513,
+        "author": "Stein."
       }
     ]
   },
@@ -13459,10 +13491,12 @@
     "lemma": "Hebata",
     "previous": "He...",
     "next": "Hebdomas",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2547,
-        "author": "Streck"
+        "end": 2547,
+        "author": "Streck."
       }
     ]
   },
@@ -13504,10 +13538,12 @@
     "lemma": "Hebdomiskos",
     "previous": "Hebdomeios",
     "next": "Hebe 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2579,
-        "author": "Sundwall"
+        "end": 2579,
+        "author": "Sundwall."
       }
     ]
   },
@@ -13607,10 +13643,12 @@
     "lemma": "Hebon",
     "previous": "Hebeterion 5",
     "next": "Hebraei",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2584,
-        "author": "Neustadt"
+        "end": 2584,
+        "author": "Neustadt."
       }
     ]
   },
@@ -13729,10 +13767,12 @@
     "lemma": "Hediste",
     "previous": "Hedas",
     "next": "Hedius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2592,
-        "author": "Leonhard"
+        "end": 2592,
+        "author": "Leonhard."
       }
     ]
   },
@@ -13740,9 +13780,12 @@
     "lemma": "Hedius 1",
     "previous": "Hediste",
     "next": "Hedius 2",
+    "redirect": "Lollianus 2",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2592
+        "start": 2592,
+        "end": 2592
       }
     ]
   },
@@ -13750,9 +13793,12 @@
     "lemma": "Hedius 2",
     "previous": "Hedius 1",
     "next": "Hedius 3",
+    "redirect": "Lollianus 5",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2592
+        "start": 2592,
+        "end": 2592
       }
     ]
   },
@@ -13760,10 +13806,12 @@
     "lemma": "Hedius 3",
     "previous": "Hedius 2",
     "next": "Hedna",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2592,
-        "author": "Münzer"
+        "end": 2592,
+        "author": "Münzer."
       }
     ]
   },
@@ -13832,10 +13880,12 @@
     "lemma": "Hedylos 1",
     "previous": "Hedylion",
     "next": "Hedylos 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2592,
-        "author": "Sundwall"
+        "end": 2592,
+        "author": "Sundwall."
       }
     ]
   },
@@ -13855,10 +13905,12 @@
     "lemma": "Hedyphon",
     "previous": "Hedylos 2",
     "next": "Hedyto",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2594,
-        "author": "Weissbach"
+        "end": 2594,
+        "author": "Weissbach."
       }
     ]
   },
@@ -13877,10 +13929,12 @@
     "lemma": "Hegeas",
     "previous": "Hedyto",
     "next": "Hegeleos",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2594,
-        "author": "Münzer"
+        "end": 2594,
+        "author": "Münzer."
       }
     ]
   },
@@ -13922,10 +13976,12 @@
     "lemma": "Hegemon 1",
     "previous": "Hegelochos 2",
     "next": "Hegemon 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2595,
-        "author": "Kirchner"
+        "end": 2595,
+        "author": "Kirchner."
       }
     ]
   },
@@ -13933,10 +13989,12 @@
     "lemma": "Hegemon 2",
     "previous": "Hegemon 1",
     "next": "Hegemon 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2595,
-        "author": "Sundwall"
+        "end": 2595,
+        "author": "Sundwall."
       }
     ]
   },
@@ -13956,10 +14014,12 @@
     "lemma": "Hegemon 4",
     "previous": "Hegemon 3",
     "next": "Hegemon 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2596,
-        "author": "Radinger"
+        "end": 2596,
+        "author": "v. Radinger."
       }
     ]
   },
@@ -14046,10 +14106,12 @@
     "lemma": "Hegemonides",
     "previous": "Hegemonia dikasterion",
     "next": "Hegemonios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2598,
-        "author": "Otto, Walter"
+        "end": 2598,
+        "author": "Walter Otto."
       }
     ]
   },
@@ -14094,10 +14156,12 @@
     "lemma": "Hegesagoras 2",
     "previous": "Hegesagoras 1",
     "next": "Hegesaios",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2599,
-        "author": "Gossen"
+        "end": 2599,
+        "author": "Gossen."
       }
     ]
   },
@@ -14105,10 +14169,12 @@
     "lemma": "Hegesaios",
     "previous": "Hegesagoras 2",
     "next": "Hegesandros 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2599,
-        "author": "Arnim"
+        "end": 2599,
+        "author": "v. Arnim."
       }
     ]
   },
@@ -14116,10 +14182,12 @@
     "lemma": "Hegesandros 1",
     "previous": "Hegesaios",
     "next": "Hegesandros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2599,
-        "author": "Sundwall"
+        "end": 2599,
+        "author": "Sundwall."
       }
     ]
   },
@@ -14127,10 +14195,12 @@
     "lemma": "Hegesandros 2",
     "previous": "Hegesandros 1",
     "next": "Hegesandros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2599,
-        "author": "Sundwall"
+        "end": 2599,
+        "author": "Sundwall."
       }
     ]
   },

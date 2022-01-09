@@ -4874,7 +4874,7 @@
   {
     "lemma": "Hipparis u. Oanis",
     "previous": "Hipparinos 3",
-    "next": "Hipparmostes",
+    "next": "Ἱππαρμοστής",
     "chapters": [
       {
         "start": 1685,
@@ -4884,19 +4884,22 @@
     ]
   },
   {
-    "lemma": "Hipparmostes",
+    "lemma": "Ἱππαρμοστής",
     "previous": "Hipparis u. Oanis",
     "next": "Hippas, he",
+    "sort_key": "Hipparmostes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1686,
-        "author": "Lammert, E[dmund]"
+        "end": 1686,
+        "author": "Lammert."
       }
     ]
   },
   {
     "lemma": "Hippas, he",
-    "previous": "Hipparmostes",
+    "previous": "Ἱππαρμοστής",
     "next": "Hippasios",
     "chapters": [
       {
@@ -4909,10 +4912,12 @@
     "lemma": "Hippasios",
     "previous": "Hippas, he",
     "next": "Hippasos 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1686,
-        "author": "Gossen"
+        "end": 1686,
+        "author": "Gossen."
       }
     ]
   },
@@ -4942,10 +4947,12 @@
     "lemma": "Hippasos 3",
     "previous": "Hippasos 2",
     "next": "Hippasos 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1686,
-        "author": "Gundel, Wilhelm"
+        "end": 1686,
+        "author": "Gundel."
       }
     ]
   },
@@ -4964,10 +4971,12 @@
     "lemma": "Hippasos 5",
     "previous": "Hippasos 4",
     "next": "Hippasos 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1686,
-        "author": "Gundel, Wilhelm"
+        "end": 1686,
+        "author": "Gundel."
       }
     ]
   },
@@ -4998,10 +5007,12 @@
     "lemma": "Hippasos 8",
     "previous": "Hippasos 7",
     "next": "Hippasos 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1687,
-        "author": "Gundel, Wilhelm"
+        "end": 1687,
+        "author": "Gundel."
       }
     ]
   },
@@ -5009,10 +5020,12 @@
     "lemma": "Hippasos 9",
     "previous": "Hippasos 8",
     "next": "Hippasos 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1687,
-        "author": "Gundel, Wilhelm"
+        "end": 1687,
+        "author": "Gundel."
       }
     ]
   },
@@ -5020,10 +5033,12 @@
     "lemma": "Hippasos 10",
     "previous": "Hippasos 9",
     "next": "Hippasos 11",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1687,
-        "author": "Gundel, Wilhelm"
+        "end": 1687,
+        "author": "Gundel."
       }
     ]
   },
@@ -5031,10 +5046,12 @@
     "lemma": "Hippasos 11",
     "previous": "Hippasos 10",
     "next": "Hippasos 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1687,
-        "author": "Gundel, Wilhelm"
+        "end": 1687,
+        "author": "Gundel."
       }
     ]
   },
@@ -5042,10 +5059,12 @@
     "lemma": "Hippasos 12",
     "previous": "Hippasos 11",
     "next": "Hippasos 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1687,
-        "author": "Gundel, Wilhelm"
+        "end": 1687,
+        "author": "Gundel."
       }
     ]
   },
@@ -5053,10 +5072,12 @@
     "lemma": "Hippasos 13",
     "previous": "Hippasos 12",
     "next": "Hippasos 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1687,
-        "author": "Gundel, Wilhelm"
+        "end": 1687,
+        "author": "Gundel."
       }
     ]
   },
@@ -5064,10 +5085,12 @@
     "lemma": "Hippasos 14",
     "previous": "Hippasos 13",
     "next": "Hippasos 15",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1687,
-        "author": "Gundel, Wilhelm"
+        "end": 1687,
+        "author": "Gundel."
       }
     ]
   },
@@ -11983,10 +12006,12 @@
     "lemma": "Hosidius 1",
     "previous": "Horus",
     "next": "Hosidius 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2489,
-        "author": "Oxé"
+        "end": 2489,
+        "author": "Oxé."
       }
     ]
   },
@@ -12135,10 +12160,12 @@
     "lemma": "Hosioi 4",
     "previous": "Hosioi 3",
     "next": "Hosius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2492,
-        "author": "Malten"
+        "end": 2492,
+        "author": "Malten."
       }
     ]
   },
@@ -12238,10 +12265,13 @@
     "lemma": "Hostilia cura",
     "previous": "Hostilia basilica",
     "next": "Hostilianus 1",
+    "sort_key": "Hostiliacura",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2500,
-        "author": "Gall"
+        "end": 2500,
+        "author": "Gall."
       }
     ]
   },
@@ -12349,10 +12379,12 @@
     "lemma": "Hostilius 8",
     "previous": "Hostilius 7",
     "next": "Hostilius 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2504,
-        "author": "Stein, [Arthur]"
+        "end": 2504,
+        "author": "Stein."
       }
     ]
   },
@@ -12429,10 +12461,12 @@
     "lemma": "Hostilius 15",
     "previous": "Hostilius 14",
     "next": "Hostilius 16ff.",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2506,
-        "author": "Kadlec"
+        "end": 2506,
+        "author": "Kadleč."
       }
     ]
   },
@@ -12558,10 +12592,12 @@
     "lemma": "Hostilius 24",
     "previous": "Hostilius 23",
     "next": "Hostilius 25",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2514,
-        "author": "Münzer"
+        "end": 2514,
+        "author": "Münzer."
       }
     ]
   },
@@ -12615,10 +12651,12 @@
     "lemma": "Hostius",
     "previous": "Hostis",
     "next": "Hostius 1",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2516,
-        "author": "Münzer"
+        "end": 2516,
+        "author": "Münzer."
       }
     ]
   },
@@ -12653,10 +12691,12 @@
     "lemma": "Hostius 3",
     "previous": "Hostius 2",
     "next": "Hostius 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2517,
-        "author": "Stein, [Arthur]"
+        "end": 2517,
+        "author": "Stein."
       }
     ]
   },
@@ -12701,9 +12741,12 @@
     "lemma": "Hostus 1",
     "previous": "Hostius 6",
     "next": "Hostus 2",
+    "redirect": "Hampsicora",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2517
+        "start": 2517,
+        "end": 2517
       }
     ]
   },
@@ -12722,10 +12765,12 @@
     "lemma": "Hosuerbae",
     "previous": "Hostus 2",
     "next": "Hucumbra",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 2517,
-        "author": "Haug"
+        "end": 2517,
+        "author": "Haug."
       }
     ]
   },
