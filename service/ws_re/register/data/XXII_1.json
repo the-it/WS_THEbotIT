@@ -3735,7 +3735,10 @@
     "lemma": "Porticus",
     "previous": "Porticenses",
     "next": "Portikanos",
-    "proof_read": 2,
+    "redirect": "Stoa I",
+    "proof_read": 3,
+    "wp_link": "w:de:Portikus",
+    "wd_link": "d:Q185600",
     "chapters": [
       {
         "start": 346,
@@ -3929,10 +3932,11 @@
   },
   {
     "lemma": "Portus Ae(E)patiaci",
-    "previous": "Portus Achaeorum 2",
-    "next": "Portus Aemines",
-    "sort_key": "Portusae(e)patiaci",
-    "proof_read": 2,
+    "previous": "Portus Aemines",
+    "next": "Portus Aggasus",
+    "sort_key": "Portusaepatiaci",
+    "redirect": "Epatiaci portus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 405,
@@ -3943,10 +3947,11 @@
   },
   {
     "lemma": "Portus Aemines",
-    "previous": "Portus Ae(E)patiaci",
-    "next": "Portus Aggasus",
+    "previous": "Portus Achaeorum 2",
+    "next": "Portus Ae(E)patiaci",
     "sort_key": "Portusaemines",
-    "proof_read": 2,
+    "redirect": "Aemines portus",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 405,
