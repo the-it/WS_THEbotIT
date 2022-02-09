@@ -95,7 +95,6 @@
   {
     "lemma": "Acilius 42",
     "previous": "Achaios 6",
-    "next": "Acilius 52",
     "proof_read": 3,
     "wp_link": "w:de:Manius Acilius Glabrio (Konsul 152)",
     "wd_link": "d:Q1237530",
@@ -109,7 +108,7 @@
   },
   {
     "lemma": "Acilius 52",
-    "previous": "Acilius 42",
+    "previous": "Achaios 6",
     "next": "Ad Malum",
     "wp_link": "w:de:Lucius Acilius Rufus",
     "wd_link": "d:Q343799",
@@ -767,12 +766,14 @@
     "lemma": "Antistius 52",
     "previous": "Antistius 41",
     "next": "Antius 10",
+    "proof_read": 2,
     "wp_link": "w:de:Lucius Antistius Vetus (Konsul 28)",
     "wd_link": "d:Q1873542",
     "chapters": [
       {
         "start": 88,
-        "end": 88
+        "end": 88,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
@@ -780,12 +781,14 @@
     "lemma": "Antius 10",
     "previous": "Antistius 52",
     "next": "Antonius 35a",
+    "proof_read": 2,
     "wp_link": "w:de:Aulus Iulius Quadratus",
     "wd_link": "d:Q772809",
     "chapters": [
       {
         "start": 88,
-        "end": 88
+        "end": 88,
+        "author": "Rudolf Hanslik."
       }
     ]
   },
